@@ -10,10 +10,10 @@ ms.assetid: f93c4b7d-74fc-4856-bf42-035289918e83
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 29669535f3544dafea58e7064e6d2c5281f6102f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989702"
 ---
 # <a name="edit-type-mapping-db2tosql"></a>编辑类型映射（DB2ToSQL）
@@ -33,7 +33,7 @@ ms.locfileid: "67989702"
   
 如果数据类型的长度可变，以下字段将显示在 "**源类型**" 下：  
   
-**从**  
+**From**  
 指定此映射的最小长度。 例如，对于**nchar**数据类型，可以输入10来指定此映射适用于从**nchar （10）** 开始的范围。  
   
 **自**  

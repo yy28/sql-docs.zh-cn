@@ -28,10 +28,10 @@ ms.assetid: 99d45b9c-e3b9-4d56-8c25-b594b887ace1
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2cc48fa530730beec07aaca4bfb933c9ff8fb2b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67986353"
 ---
 # <a name="incompatible-access-features-accesstosql"></a>不兼容的访问功能（AccessToSQL）
@@ -53,6 +53,6 @@ ms.locfileid: "67986353"
 |默认或验证规则表达式包含无法转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 的访问函数。|Access 默认表达式或验证规则可能包括不映射到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 的访问系统函数或用户定义函数。 使用不映射到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 的函数会阻止你将默认表达式或验证规则加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 中。|  
   
 ## <a name="see-also"></a>另请参阅  
-[为迁移准备 Access 数据库](preparing-access-databases-for-migration-accesstosql.md)  
+[准备要迁移的 Access 数据库](preparing-access-databases-for-migration-accesstosql.md)  
 [将 Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

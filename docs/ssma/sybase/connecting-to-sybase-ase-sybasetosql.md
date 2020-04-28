@@ -12,10 +12,10 @@ ms.assetid: a45a2330-9175-4c9e-af38-ef920e350614
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e1debb31cd70c73e3fecd569a58534377742a9a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67948526"
 ---
 # <a name="connecting-to-sybase-ase-sybasetosql"></a>连接到 Sybase ASE (SybaseToSQL)
@@ -26,7 +26,7 @@ ms.locfileid: "67948526"
 自适应服务器的元数据不会自动更新。 相反，如果要更新 Sybase 元数据资源管理器中的元数据，则必须手动更新元数据，如本主题后面的 "刷新 Sybase ASE 元数据" 一节中所述。  
   
 ## <a name="required-ase-permissions"></a>需要 ASE 权限  
-用于连接到 ASE 的帐户必须至少具有对 master 数据库以及**** 要迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 的任何源数据库的公共访问权限。 此外，若要选择要迁移的表的权限，用户必须对以下系统表具有 SELECT 权限：  
+用于连接到 ASE 的帐户必须至少具有对 master 数据库以及**public**要迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 的任何源数据库的公共访问权限。 此外，若要选择要迁移的表的权限，用户必须对以下系统表具有 SELECT 权限：  
   
 -   [source_db] sysobjects  
   

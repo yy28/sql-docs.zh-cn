@@ -21,10 +21,10 @@ ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5e967ae5b46ec703da4e8b1fff64f298fdf8a081
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942047"
 ---
 # <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup sp_get_backup_diagnostics （Transact-sql）
@@ -42,7 +42,7 @@ ms.locfileid: "67942047"
 managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@begin_time = ] 'time1' ] [, [@end_time = ] 'time2'VARCHAR(255) = 'Xevent',@begin_time DATETIME = NULL,@end_time DATETIME = NULL  
 ```  
   
-##  <a name="Arguments"></a> 参数  
+##  <a name="arguments"></a><a name="Arguments"></a>形参  
  @xevent_channel  
  扩展事件的类型。 默认值设置为返回之前 30 分钟内记录的所有事件。 记录的事件取决于所启用扩展事件的类型。 您可以使用此参数对存储过程进行筛选，仅显示特定类型的事件。 可以指定完整的事件名称，也可以指定一个子字符串，例如： **"admin**"、 **"分析"**、 **"操作"** 和 **"调试"**。 @event_channel为**VARCHAR （255）**。  
   

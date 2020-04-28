@@ -22,10 +22,10 @@ ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 07058816406ef6ac0d5a3356423e231a10ce6165
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946485"
 ---
 # <a name="path-expressions---specifying-axis"></a>路径表达式 - 指定轴
@@ -41,17 +41,16 @@ ms.locfileid: "67946485"
   
  有关详细信息，请参阅[路径表达式 &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)。  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 XQuery 实现支持以下轴步骤：  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 XQuery 实现支持以下轴步骤：  
   
 |轴|说明|  
 |----------|-----------------|  
-|**子代**|返回上下文节点的子级。|  
-|**子项**|返回上下文节点的所有后代。|  
+|**child**|返回上下文节点的子级。|  
+|**descendant**|返回上下文节点的所有后代。|  
 |**上层**|返回上下文节点的父级。|  
 |**attribute**|返回上下文节点的属性。|  
 |**解压**|返回上下文节点本身。|  
-|**子代或自助**|返回上下文节点及其所有后代。|  
+|**descendant-or-self**|返回上下文节点及其所有后代。|  
   
  所有这些轴（**父**轴除外）都是向前轴。 **父**轴是反向轴，因为它在文档层次结构中向后搜索。 例如，相对路径表达式 `child::ProductDescription/child::Summary` 包含两个步骤，每个步骤均指定一个 `child` 轴。 第一步将检索\<上下文节点的 ProductDescription> 元素子级。 对于每\<个 ProductDescription> 元素节点，第二步检索\<摘要> 元素节点子级。  
   
@@ -73,7 +72,7 @@ WHERE ProductModelID=19
   
  请注意上述查询的以下方面：  
   
--   Xml `query()`数据类型的**** 方法指定路径表达式。  
+-   Xml `query()`数据类型的**xml**方法指定路径表达式。  
   
 -   路径表达式中的两个步骤都指定一个 `child` 轴和节点名称（`ProductDescription` 和 `Features`）作为节点测试。 有关节点测试的信息，请参阅[在路径表达式步骤中指定节点测试](../xquery/path-expressions-specifying-node-test.md)。  
   

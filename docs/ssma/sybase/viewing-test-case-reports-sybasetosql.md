@@ -12,10 +12,10 @@ ms.assetid: cb75d281-43ef-4f4a-b754-2c4ee3b62ae7
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 8a6d45f7e621f9b6516d4cc1211a8627174ae9b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67944600"
 ---
 # <a name="viewing-test-case-reports-sybasetosql"></a>查看测试用例报表 (SybaseToSQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67944600"
 **先决条件错误**  
 显示在**先决条件**步骤中发生的任何错误。 通常情况下，会跳过它。  
   
-**起始**  
+**初始化**。  
 显示**成功**或**失败**的执行状态。  
   
 **测试对象结果**  

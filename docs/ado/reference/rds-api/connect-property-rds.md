@@ -14,10 +14,10 @@ ms.assetid: dbad5e77-b213-4eb8-aecf-d60f203fdb59
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ba8b5aa1f59fbb161da878f5930f83d2f6ff0bdd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964568"
 ---
 # <a name="connect-property-rds"></a>Connect 属性 (RDS)
@@ -36,7 +36,7 @@ Design time: <PARAM NAME="Connect" VALUE="ConnectionString">
 Run time: DataControl.Connect = "ConnectionString"  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *ConnectionString*  
  有效的连接字符串。 有关连接字符串的更多常规信息，请参阅[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性或提供程序文档。  
   

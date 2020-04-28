@@ -18,10 +18,10 @@ ms.assetid: 06d54ff5-4d29-4eeb-b8be-64d032e53134
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7d56debf540de7b1e7f33f741fdd4c3f52d3f04a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67984888"
 ---
 # <a name="msmerge_past_partition_mappings-transact-sql"></a>MSmerge_past_partition_mappings (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67984888"
 |**rowguid**|**uniqueidentifier**|给定行的行标识符。|  
 |**partition_id**|**int**|该行所属分区的 ID。 如果行更改与所有订阅服务器相关，则值为-1。|  
 |**产生**|**bigint**|发生分区更改的生成的值。|  
-|**在于**|**tinyint**|仅供内部使用。|  
+|**reason**|**tinyint**|仅供内部使用。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

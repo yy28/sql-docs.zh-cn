@@ -13,16 +13,16 @@ ms.assetid: 808e50ae-ff6e-4520-9ce2-530591d3d59b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 49eb0906a9a5af1fec2abfeec3ef58845b605e69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67941825"
 ---
 # <a name="sp_delete_backup-transact-sql"></a>sp_delete_backup （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  从指定数据库中删除构成快照备份集的所有快照和备份文件。 仅建议使用此系统存储过程来管理快照备份集。 有关详细信息，请参阅[Azure 中数据库文件的文件快照备份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
+  从指定数据库中删除构成快照备份集的所有快照和备份文件。 仅建议使用此系统存储过程来管理快照备份集。 有关详细信息，请参阅 [Azure 中数据库文件的文件快照备份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,6 +47,6 @@ sys.sp_delete_backup
   
 ## <a name="see-also"></a>另请参阅  
  [sys. fn_db_backup_file_snapshots &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)   
- [sp_delete_backup_file_snapshot &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)  
+ [sp_delete_backup_file_snapshot (Transact-SQL)](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)  
   
   

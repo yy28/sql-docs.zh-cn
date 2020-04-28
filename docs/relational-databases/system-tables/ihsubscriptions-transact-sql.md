@@ -18,10 +18,10 @@ ms.assetid: 9ec21119-35f1-4e39-abaa-b2c790c485b1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b677e0f6c9be058650a46aee3465811b8f3eecc7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990145"
 ---
 # <a name="ihsubscriptions-transact-sql"></a>IHsubscriptions (Transact-SQL)
@@ -37,10 +37,10 @@ ms.locfileid: "67990145"
 |**srvid**|**smallint**|订阅服务器的服务器 ID。|  
 |**dest_db**|**sysname**|目标数据库的名称|  
 |**login_name**|**sysname**|添加订阅时所使用的登录名。|  
-|**distribution_jobid**|**binary （16）**|分发代理的作业 ID|  
-|**标志**|**标志**|创建订阅的日期和时间。|  
+|**distribution_jobid**|**binary(16)**|分发代理的作业 ID|  
+|**timestamp**|**timestamp**|创建订阅的日期和时间。|  
 |**queued_reinit**|**bit**|指定是否将项目标记为初始化或重新初始化。 如果值为**1** ，则指定订阅的项目已标记为进行初始化或重新初始化。|  
-|**状态值**|**tinyint**|订阅的状态：<br /><br /> **0** = 非活动。<br /><br /> **1** = 已订阅。<br /><br /> **2** = 活动。|  
+|**status**|**tinyint**|订阅的状态：<br /><br /> **0** = 非活动。<br /><br /> **1** = 已订阅。<br /><br /> **2** = 活动。|  
 |**sync_type**|**tinyint**|初始同步的类型：<br /><br /> **1** = 自动。<br /><br /> **2** = 无。|  
 |**subscription_type**|**int**|订阅的类型：<br /><br /> **0** = 推送-分发代理在订阅服务器上运行。<br /><br /> **1** = 请求-分发代理在分发服务器上运行。|  
 |**update_mode**|**tinyint**|更新模式：<br /><br /> **0** = 只读。<br /><br /> **1** = 立即更新。|  

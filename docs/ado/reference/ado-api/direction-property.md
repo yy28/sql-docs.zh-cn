@@ -16,10 +16,10 @@ ms.assetid: d5732578-3434-4dcd-a9f7-db1abd1b3b94
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6135650d3b5cb015fad21d1eac7b350827965ca1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933079"
 ---
 # <a name="direction-property"></a>Direction 属性
@@ -34,7 +34,7 @@ ms.locfileid: "67933079"
  并非所有提供程序都可以确定其存储过程中的参数的方向。 在这些情况下，必须在执行查询之前设置 "**方向**" 属性。  
   
 ## <a name="applies-to"></a>应用于  
- [Parameter 对象](../../../ado/reference/ado-api/parameter-object.md)  
+ [参数对象](../../../ado/reference/ado-api/parameter-object.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 属性示例（VB）](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   

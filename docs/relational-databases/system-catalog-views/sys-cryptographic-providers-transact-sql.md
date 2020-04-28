@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 27a8f2ddee2e0ff0839317cf1652bcf353c0b66b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67940290"
 ---
 # <a name="syscryptographic_providers-transact-sql"></a>sys.cryptographic_providers (Transact-SQL)
@@ -35,9 +35,9 @@ ms.locfileid: "67940290"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**provider_id**|**int**|加密提供程序的标识号。|  
-|**路径名**|**sysname**|加密提供程序的名称。|  
-|**guid**|**uniqueidentifier**|唯一的提供程序 GUID。|  
-|**版本**|**nvarchar(50)**|格式为 "*aa.bb.cccc.dd*" 的提供程序版本。|  
+|**name**|**sysname**|加密提供程序的名称。|  
+|**guid.empty**|**uniqueidentifier**|唯一的提供程序 GUID。|  
+|**version**|**nvarchar(50)**|格式为 "*aa.bb.cccc.dd*" 的提供程序版本。|  
 |**dll_path**|**nvarchar(512)**|实现可扩展密钥管理 (EKM) 应用程序编程接口 (API) 的 DLL 的路径。|  
 |**is_enabled**|**bit**|服务器上是否启用了此提供程序。<br /><br /> 0 = 未启用（默认值）<br /><br /> 1 = 已启用|  
   

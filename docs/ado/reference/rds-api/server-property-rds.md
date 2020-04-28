@@ -16,10 +16,10 @@ ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9d196a60986734c5717be9711af1fa28accee414
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963474"
 ---
 # <a name="server-property-rds"></a>Server 属性 (RDS)
@@ -106,7 +106,7 @@ DataControl.Server="computername"
 DataControl.Server=""  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  *awebsrvr*或*computername*  
  如果服务器位于远程计算机上，则为包含 Internet 或 intranet 路径或计算机名称的**字符串**值;或者，如果服务器在本地计算机上，则为空字符串。  
   

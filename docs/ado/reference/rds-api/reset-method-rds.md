@@ -14,10 +14,10 @@ ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 416aaefa95871e909a12117756ea59747c555650
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963496"
 ---
 # <a name="reset-method-rds"></a>Reset 方法 (RDS)
@@ -33,11 +33,11 @@ ms.locfileid: "67963496"
 DataControl.Reset(value)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *DataControl*  
  表示 RDS 的对象变量[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
   
- *负值*  
+ *value*  
  可选。 如果要对当前 "筛选的" 行集进行筛选，则为**True**的**布尔**值（默认值）。 **False**表示对原始行集进行筛选，删除所有以前的筛选选项。  
   
 ## <a name="remarks"></a>备注  

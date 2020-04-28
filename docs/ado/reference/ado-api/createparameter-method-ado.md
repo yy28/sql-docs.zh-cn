@@ -17,10 +17,10 @@ ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: af796c36bd2960730536ec07ac49614876311e84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933290"
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter 方法 (ADO)
@@ -36,14 +36,14 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
 ## <a name="return-value"></a>返回值  
  返回一个**参数**对象。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *名称*  
  可选。 一个包含**参数**对象名称的**字符串**值。  
   
- 类型   
+ *类型*  
  可选。 指定**参数**对象的数据类型的[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)值。  
   
- *方向键*  
+ *方向*  
  可选。 指定**参数**对象类型的[ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md)值。  
   
  *大小*  

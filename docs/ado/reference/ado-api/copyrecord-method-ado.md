@@ -17,10 +17,10 @@ ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aaabb32234cefe2e3c3727ce5a18dd2d98549a77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933419"
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord 方法 (ADO)
@@ -33,8 +33,8 @@ ms.locfileid: "67933419"
 Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- *数据源*  
+#### <a name="parameters"></a>参数  
+ *源*  
  可选。 一个**字符串**值，该值包含指定要复制的实体的 URL （例如，文件或目录）。 如果省略了*Source*或指定了空字符串，则将复制当前[记录](../../../ado/reference/ado-api/record-object-ado.md)所表示的文件或目录。  
   
  *目标*  
@@ -43,7 +43,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  *用户名*  
  可选。 一个**字符串**值，该值包含用户 ID，该 ID 在需要时授予访问*目标*的权限。  
   
- *权限*  
+ *密码*  
  可选。 一个包含密码的**字符串**值，如果需要，将验证*用户名*。  
   
  *选项*  

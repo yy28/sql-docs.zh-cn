@@ -17,10 +17,10 @@ ms.assetid: 36b754b4-6b17-4dd1-a925-bca46938b7c4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 690c81a46c62c8844780e82b5c82a0ff7301105d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949765"
 ---
 # <a name="getschemaobject-method-ado-md"></a>GetSchemaObject 方法 (ADO MD)
@@ -33,7 +33,7 @@ ms.locfileid: "67949765"
 Set object = CubeDef.GetSchemaObject (ObjType, UniqueName)  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *ObjType*  
  一个[SchemaObjectTypeEnum](../../../ado/reference/ado-md-api/schemaobjecttypeenum.md)值，指定要检索的架构对象类型（维度、层次结构、级别或成员）。  
   

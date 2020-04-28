@@ -17,10 +17,10 @@ ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e885b537fbc86f3b70a8142c5513dbf16cb1c158
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67945997"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>针对 xml 数据类型的 XQuery 函数
@@ -55,11 +55,11 @@ ms.locfileid: "67945997"
 |[&#40;XQuery 的聚合函数&#41;](https://msdn.microsoft.com/library/be647ef1-291e-4a5d-ab18-07c759efe176)|[计数](../xquery/aggregate-functions-count.md)|  
 ||[avg](../xquery/aggregate-functions-avg.md)|  
 ||[min](../xquery/aggregate-functions-min.md)|  
-||[数量](../xquery/aggregate-functions-max.md)|  
+||max |  
 ||[长度](../xquery/aggregate-functions-sum.md)|  
 |[构造函数 &#40;XQuery&#41;](../xquery/constructor-functions-xquery.md)|[构造函数](../xquery/constructor-functions-xquery.md)|  
-|[数据取值函数](../xquery/data-accessor-functions.md)|[类似](../xquery/data-accessor-functions-string-xquery.md)|  
-||[data](../xquery/data-accessor-functions-data-xquery.md)|  
+|[数据取值函数](../xquery/data-accessor-functions.md)|[string](../xquery/data-accessor-functions-string-xquery.md)|  
+||[数据](../xquery/data-accessor-functions-data-xquery.md)|  
 |[布尔构造函数 &#40;XQuery&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)|[true 函数 (XQuery)](../xquery/boolean-constructor-functions-true-xquery.md)|  
 ||[false 函数 (XQuery)](../xquery/boolean-constructor-functions-false-xquery.md)|  
 |[与 QNames &#40;XQuery 相关的函数&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)|[expanded-QName (XQuery)](../xquery/functions-related-to-qnames-expanded-qname.md)|  
@@ -70,7 +70,7 @@ ms.locfileid: "67945997"
   
 ## <a name="see-also"></a>另请参阅  
  [xml 数据类型方法](../t-sql/xml/xml-data-type-methods.md)   
- [XQuery 语言参考 (SQL Server)](../xquery/xquery-language-reference-sql-server.md)   
+ [XQuery 语言参考 &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
  [XML 数据 (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)  
   
   

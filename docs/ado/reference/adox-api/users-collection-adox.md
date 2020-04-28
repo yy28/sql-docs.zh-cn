@@ -18,10 +18,10 @@ ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2a6146a942e572e28692ceaafd77d6958cdab9dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964954"
 ---
 # <a name="users-collection-adox"></a>用户集合 (ADOX)
@@ -30,11 +30,11 @@ ms.locfileid: "67964954"
 ## <a name="remarks"></a>备注  
  [目录](../../../ado/reference/adox-api/catalog-object-adox.md)的**用户**集合表示所有目录的用户。 [组](../../../ado/reference/adox-api/group-object-adox.md)的**用户**集合仅表示在特定组中具有成员身份的用户。  
   
- **用户**集合的[APPEND](../../../ado/reference/adox-api/append-method-adox-users.md)方法对于 ADOX 是唯一的。 可以：  
+ **用户**集合的[APPEND](../../../ado/reference/adox-api/append-method-adox-users.md)方法对于 ADOX 是唯一的。 你可以：  
   
 -   使用**Append**方法将新用户添加到集合。  
   
- 其余属性和方法对于 ADO 集合是标准的。 可以：  
+ 其余属性和方法对于 ADO 集合是标准的。 你可以：  
   
 -   使用[Item](../../../ado/reference/ado-api/item-property-ado.md)属性访问集合中的用户。  
   

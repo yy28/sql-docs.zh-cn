@@ -16,19 +16,19 @@ ms.assetid: 5d8132c0-7ca2-4f86-8336-1b34213869ad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da396bd71e64925bcd8fb74f71f8e334bf7f1d7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949401"
 ---
 # <a name="membertypeenum"></a>MemberTypeEnum
 指定[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)对象的[Type](../../../ado/reference/ado-md-api/type-property-ado-md.md)属性的设置。  
   
-|一直|值|说明|  
+|Constant|值|说明|  
 |--------------|-----------|-----------------|  
 |**adMemberAll**|4|指示**成员**对象表示级别的所有成员。|  
 |**adMemberFormula**|3|指示使用公式表达式计算**成员**对象。|  
 |**adMemberMeasure**|2|指示**成员**对象属于度量值维度，并表示定量属性。|  
-|**adMemberRegular**|1|默认值。 指示**成员**对象表示业务实体的实例。|  
+|**adMemberRegular**|1|默认。 指示**成员**对象表示业务实体的实例。|  
 |**adMemberUnknown**|0|无法确定成员的类型。|

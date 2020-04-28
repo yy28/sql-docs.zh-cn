@@ -14,10 +14,10 @@ ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c6b50714cdff536418e759828d972c16abd7d7a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964548"
 ---
 # <a name="createobject-method-rds"></a>CreateObject 方法 (RDS)
@@ -36,8 +36,8 @@ ms.locfileid: "67964548"
 |DCOM|Set object = DataSpace.CreateObject("ProgId", "computername")|  
 |进程内|Set object = DataSpace.CreateObject("ProgId", "")|  
   
-## <a name="parameters"></a>parameters  
- *Object*  
+## <a name="parameters"></a>参数  
+ *对象*  
  一个对象变量，其计算结果为作为*ProgID*中指定的类型的对象。  
   
  *空间*  

@@ -18,10 +18,10 @@ ms.assetid: 4b5d6790-6c29-42aa-bf78-d9cfb8ad7965
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 48b3a6987e6c7b6c3754f5041d90d248520345ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933080"
 ---
 # <a name="description-property"></a>Description 属性
@@ -36,7 +36,7 @@ ms.locfileid: "67933080"
  提供程序负责向 ADO 传递特定的错误文本。 ADO 将[错误](../../../ado/reference/ado-api/error-object.md)对象添加到每个提供程序错误或它收到的警告的**错误**集合中。 枚举**errors**集合以跟踪提供程序传递的错误。  
   
 ## <a name="applies-to"></a>应用于  
- [错误对象](../../../ado/reference/ado-api/error-object.md)  
+ [Error 对象](../../../ado/reference/ado-api/error-object.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [Description、HelpContext、帮助，NativeError、Number、Source 和 SQLState 属性示例（VB）](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   

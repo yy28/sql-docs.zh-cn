@@ -18,10 +18,10 @@ ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7b60f4929bd537089c05211cc3ecc548b82b6307
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67943499"
 ---
 # <a name="sp_helpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
@@ -48,11 +48,11 @@ sp_helpfile [ [ @filename= ] 'name' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**路径名**|**sysname**|逻辑文件名。|  
+|name |**sysname**|逻辑文件名。|  
 |**fileid**|**smallint**|文件的数字标识符。 如果指定了*名称*，则不会返回 *。*|  
 |**名字**|**nchar （260）**|物理文件名。|  
 |**文件**|**sysname**|文件所属的文件组。<br /><br /> NULL = 文件为日志文件。 它决不是文件组的一部分。|  
-|**规格**|**nvarchar （15）**|文件大小 (KB)。|  
+|size |**nvarchar （15）**|文件大小 (KB)。|  
 |**maxsize**|**nvarchar （15）**|文件大小可达到的最大值。 此字段中的 UNLIMITED 值表示文件可以一直增长到磁盘变满为止。|  
 |**growth**|**nvarchar （15）**|文件的增量。 表示每次需要新空间时为文件增加的空间大小。<br /><br /> 0 = 文件的大小是固定的，不会增长。|  
 |**使用情况**|**varchar （9）**|对于数据文件，该值为 **"仅数据"** ; 对于日志文件，该值为 **"仅记录"**。|  
@@ -73,10 +73,10 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [数据库引擎存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_helpfilegroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
- [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys. database_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys. master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [数据库文件和文件组](../../relational-databases/databases/database-files-and-filegroups.md)  
   
   

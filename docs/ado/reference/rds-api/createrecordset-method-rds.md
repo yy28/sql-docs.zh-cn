@@ -20,10 +20,10 @@ ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c65f7d415864b169b683e0c9ab858506d31783b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964514"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 方法 (RDS)
@@ -39,14 +39,14 @@ ms.locfileid: "67964514"
 object.CreateRecordset(ColumnInfos)  
 ```  
   
-#### <a name="parameters"></a>parameters  
- *Object*  
+#### <a name="parameters"></a>参数  
+ *对象*  
  一个对象变量，它表示[RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)或[RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
   
  *ColumnsInfos*  
  特性的一个**变量**数组，用于定义创建的**记录集中**的每一列。 每个列定义都包含一个包含四个必需属性和一个可选属性的数组。  
   
-|Attribute|说明|  
+|特性|说明|  
 |---------------|-----------------|  
 |名称|列标题的名称。|  
 |类型|数据类型的整数。|  
@@ -65,7 +65,7 @@ object.CreateRecordset(ColumnInfos)
   
  对于某些可变数据类型，可以将类型强制转换为替换列中所述的类型。 在创建并填充**记录集**之前，你将看不到替换项。 如果需要，可以检查实际数据类型。  
   
-|长度|一直|Number|替换字符|  
+|长度|Constant|数字|Substitution|  
 |------------|--------------|------------|------------------|  
 |已修复|**adTinyInt**|16||  
 |已修复|**adSmallInt**|2||  

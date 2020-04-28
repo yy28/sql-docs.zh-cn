@@ -19,10 +19,10 @@ ms.assetid: df201c1f-c76a-465d-98f0-83b7fc36e6e3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5f5b2a5170b499f5e88d4caac4822d2998691eea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966223"
 ---
 # <a name="getpermissions-method-adox"></a>GetPermissions 方法 (ADOX)
@@ -38,7 +38,7 @@ ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])
 ## <a name="return-value"></a>返回值  
  返回一个**长整型**值，该值指定包含组或用户对对象的权限的位掩码。 此值可以是一个或多个[RightsEnum](../../../ado/reference/adox-api/rightsenum.md)常量。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *名称*  
  一个**变量**值，指定要为其设置权限的对象的名称。 如果要获取对象容器的权限，请将 "*名称*" 设置为 null 值。  
   

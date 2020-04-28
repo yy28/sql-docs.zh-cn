@@ -18,10 +18,10 @@ ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5a94299b1411cdb53a47c773330773ce7209fbf2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990333"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
@@ -32,9 +32,9 @@ ms.locfileid: "67990333"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**pubid**|**int**|为发布提供唯一 ID 的标识列。|  
-|**路径名**|**sysname**|与发布关联的唯一名称。|  
+|**name**|**sysname**|与发布关联的唯一名称。|  
 |**repl_freq**|**tinyint**|复制频率：<br /><br /> **0** = 基于事务。<br /><br /> **1** = 计划的表刷新。|  
-|**状态值**|**tinyint**|发布的状态，可以是以下状态之一。<br /><br /> **0** = 非活动。<br /><br /> **1** = 活动。|  
+|**status**|**tinyint**|发布的状态，可以是以下状态之一。<br /><br /> **0** = 非活动。<br /><br /> **1** = 活动。|  
 |**sync_method**|**tinyint**|同步方法包括：<br /><br /> **1** = 字符大容量复制。<br /><br /> **4** = Concurrent_c，这意味着将使用字符大容量复制，但在快照过程中不锁定表。|  
 |**snapshot_jobid**|**binary**|预定任务 ID。|  
 |**enabled_for_internet**|**bit**|指示是否通过 FTP 和其他服务向 Internet 公开发布的同步文件，其中， **1**表示可以从 internet 访问。|  
@@ -56,10 +56,10 @@ ms.locfileid: "67990333"
 |**allow_anonymous**|**bit**|指示是否允许对发布使用匿名订阅，其中**1**表示允许使用匿名订阅。|  
 |**centralized_conflicts**|**bit**|指定冲突记录是否存储在发布服务器上：<br /><br /> **0** = 在导致冲突的发布服务器和订阅服务器上存储冲突记录。<br /><br /> **1** = 冲突记录存储在发布服务器上。<br /><br /> *非 SQL 发布服务器不支持此列。*|  
 |**conflict_retention**|**int**|指定冲突保持期（天）。 *非 SQL 发布服务器不支持此列。*|  
-|**conflict_policy**|**int**|指定使用排队更新订阅服务器选项时遵循的冲突解决策略。 可以是以下值之一：<br /><br /> **1** = 发布服务器入选冲突。<br /><br /> **2** = 订阅服务器入选冲突。<br /><br /> **3** = 重新初始化订阅。<br /><br /> *非 SQL 发布服务器不支持此列。*|  
-|**queue_type**|**int**|指定所使用的队列类型。 可以是以下值之一：<br /><br /> **1** = msmq，使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]消息队列存储事务。<br /><br /> **2** = 使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]来存储事务的 sql。<br /><br /> 非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器不使用此列。<br /><br /> 注意：使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]消息队列已弃用，不再受支持。<br /><br /> *非 SQL 发布服务器不支持此列。*|  
+|**conflict_policy**|**int**|指定使用排队更新订阅服务器选项时遵循的冲突解决策略。 可以是下列值之一：<br /><br /> **1** = 发布服务器入选冲突。<br /><br /> **2** = 订阅服务器入选冲突。<br /><br /> **3** = 重新初始化订阅。<br /><br /> *非 SQL 发布服务器不支持此列。*|  
+|**queue_type**|**int**|指定所使用的队列类型。 可以是下列值之一：<br /><br /> **1** = msmq，使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]消息队列存储事务。<br /><br /> **2** = 使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]来存储事务的 sql。<br /><br /> 非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器不使用此列。<br /><br /> 注意：使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]消息队列已弃用，不再受支持。<br /><br /> *非 SQL 发布服务器不支持此列。*|  
 |**ad_guidname**|**sysname**|指定是否在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中发布该发布。 有效的全局唯一标识符（GUID）指定发布在[!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中发布，GUID 是对应的 Active Directory 发布对象**objectGUID**。 如果为 NULL，则不在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中发布该发布。 *非 SQL 发布服务器不支持此列。*|  
-|**backward_comp_level**|**int**|数据库兼容性级别，可以是以下值之一：<br /><br /> **** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。<br /><br /> **** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。<br /><br /> *非 SQL 发布服务器不支持此列。*|  
+|**backward_comp_level**|**int**|数据库兼容性级别，可以是以下值之一：<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。<br /><br /> *非 SQL 发布服务器不支持此列。*|  
 |**2008**|**nvarchar(255)**|发布的说明性条目。|  
 |**independent_agent**|**bit**|指定此发布是否有独立的分发代理。<br /><br /> **0** = 发布使用共享分发代理，每个发布服务器数据库/订阅服务器数据库对都有一个共享代理。<br /><br /> **1** = 此发布有独立的分发代理。|  
 |**immediate_sync**|**bit**|指示每次运行快照代理时是创建还是重新创建同步文件，其中**1**表示每次运行代理时都创建同步文件。|  

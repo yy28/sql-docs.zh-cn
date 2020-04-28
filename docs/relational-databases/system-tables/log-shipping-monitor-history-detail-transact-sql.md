@@ -18,10 +18,10 @@ ms.assetid: 7080c888-323b-4206-a1ab-e6c51f9e2579
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0f0a304020b972b29d521bd32da3f98b8d3fdfc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989991"
 ---
 # <a name="log_shipping_monitor_history_detail-transact-sql"></a>log_shipping_monitor_history_detail (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "67989991"
 |**session_status**|**tinyint**|会话的状态。<br /><br /> 0 = 正在启动。<br /><br /> 1 = 正在运行。<br /><br /> 2 = 成功。<br /><br /> 3 = 错误。<br /><br /> 4 = 警告。|  
 |**log_time**|**datetime**|创建记录的日期和时间。|  
 |**log_time_utc**|**datetime**|创建记录的日期和时间，使用通用协调时间表示。|  
-|**消息**|**nvarchar(max)**|消息正文。|  
+|**message**|**nvarchar(max)**|消息正文。|  
   
 ## <a name="remarks"></a>备注  
  此表包含日志传送代理的历史记录详细信息。 若要标识代理会话，请使用列**agent_id**、 **agent_type**和**session_id**。 若要查看代理会话的历史记录详细信息，请按**log_time**排序。  
@@ -48,7 +48,7 @@ ms.locfileid: "67989991"
  除了存储在远程监视服务器上外，与主服务器有关的信息存储在主服务器上的**log_shipping_monitor_history_detail**表中，与辅助服务器相关的信息也存储在辅助服务器上的**log_shipping_monitor_history_detail**表中。  
   
 ## <a name="see-also"></a>另请参阅  
- [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [关于 &#40;SQL Server 的日志传送&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [sp_delete_log_shipping_primary_database &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
  [sp_cleanup_log_shipping_history &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
  [sp_refresh_log_shipping_monitor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   

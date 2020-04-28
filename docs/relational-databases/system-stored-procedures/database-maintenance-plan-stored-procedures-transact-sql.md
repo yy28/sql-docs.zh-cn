@@ -17,10 +17,10 @@ ms.assetid: f5f658e3-417e-4286-9213-5738266f3b28
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6b06a0bdbb0cfa7e80d30128ccce71661edde219
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942309"
 ---
 # <a name="database-maintenance-plan-stored-procedures-transact-sql"></a>数据库维护计划存储过程 (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "67942309"
 |[sp_delete_maintenance_plan](../../relational-databases/system-stored-procedures/sp-delete-maintenance-plan-transact-sql.md)||  
   
 ## <a name="see-also"></a>另请参阅  
- [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [维护计划](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

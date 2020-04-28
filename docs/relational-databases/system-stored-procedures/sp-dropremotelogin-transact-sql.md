@@ -18,10 +18,10 @@ ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: c316f48f3e590fcba419e125f8e327b25ee1ede6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933825"
 ---
 # <a name="sp_dropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
@@ -46,7 +46,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ## <a name="arguments"></a>参数  
 `[ @remoteserver = ] 'remoteserver'`远程服务器的名称，该远程服务器映射到要删除的远程登录名。 *remoteserver*的值为**sysname**，无默认值。 *remoteserver*必须已存在。  
   
-`[ @loginame = ] 'login'`与远程服务器相关联的本地服务器上的可选登录名。 *login*的值为**sysname**，默认值为 NULL。 如果指定，则必须已经存在*登录名*。  
+`[ @loginame = ] 'login'`与远程服务器相关联的本地服务器上的可选登录名。 login 的数据类型为 sysname，默认值为 NULL******。 如果指定，则必须已经存在*登录名*。  
   
 `[ @remotename = ] 'remote_name'`在从远程服务器登录时映射到*登录名*的远程登录名的可选名称。 *remote_name*的默认值为**sysname**，默认值为 NULL。  
   
@@ -58,8 +58,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
   
  若要添加本地服务器用户，请使用**sp_addlogin**。 若要删除本地服务器用户，请使用**sp_droplogin**。  
   
- 仅当使用早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时才需要远程登录。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 及更高版本改用链接服务器登录。 使用**sp_addlinkedsrvlogin**和**sp_droplinkedsrvlogin**添加和删除链接服务器登录名。  
+ 仅当使用早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时才需要远程登录。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 及更高版本改用链接服务器登录。 使用**sp_addlinkedsrvlogin**和**sp_droplinkedsrvlogin**添加和删除链接服务器登录名。  
   
  不能在用户定义的事务中执行**sp_dropremotelogin** 。  
   

@@ -19,10 +19,10 @@ ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4dda607ace977be539dbed096a3d83ac5f220ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67950984"
 ---
 # <a name="sysdm_filestream_non_transacted_handles-transact-sql"></a>sys.dm_filestream_non_transacted_handles (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67950984"
   
  有关详细信息，请参阅 [管理 FileTables](../../relational-databases/blob/manage-filetables.md)。  
   
-|**列**|类型 |**说明**|  
+|**列**|**类型**|**说明**|  
 |----------------|--------------|---------------------|  
 |database_id|int|与句柄关联的数据库的 ID。|  
 |object_id|int|与句柄关联的 FileTable 的对象 ID。|  

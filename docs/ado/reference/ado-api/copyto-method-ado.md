@@ -17,10 +17,10 @@ ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25d57116e1fa24658d62a0c9083e00a3e320d2a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933373"
 ---
 # <a name="copyto-method-ado"></a>CopyTo 方法 (ADO)
@@ -33,7 +33,7 @@ ms.locfileid: "67933373"
 Stream.CopyTo DestStream, NumChars  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *DestStream*  
  一个对象变量值，该值包含对打开的**流**对象的引用。 当前**流**将复制到由*DestStream*指定的目标**流**中。 目标**流**必须已打开。 否则，将发生运行时错误。  
   
@@ -48,7 +48,7 @@ Stream.CopyTo DestStream, NumChars
   
  如果目标流中存在现有字符或字节，则不会保留副本结束点之外的所有内容，并且不会被截断。 **位置**成为紧接最后复制的字节之后的字节。 如果要截断这些字节，请调用[SetEOS](../../../ado/reference/ado-api/seteos-method.md)。  
   
- **CopyTo**应用于将数据复制到与源**流**具有相同类型的目标**流**（其**type**属性设置同时为**adTypeText**或 both）。 **** 对于文本**流**对象，可以更改目标**流**的[字符集](../../../ado/reference/ado-api/charset-property-ado.md)属性设置，以将其从一个字符集转换到另一个字符集。 此外，文本**流**对象可以成功复制到二进制**流**对象，但不能将二进制**流**对象复制到文本**流**对象中。  
+ **CopyTo**应用于将数据复制到与源**流**具有相同类型的目标**流**（其**type**属性设置同时为**adTypeText**或 both）。 **adTypeBinary** 对于文本**流**对象，可以更改目标**流**的[字符集](../../../ado/reference/ado-api/charset-property-ado.md)属性设置，以将其从一个字符集转换到另一个字符集。 此外，文本**流**对象可以成功复制到二进制**流**对象，但不能将二进制**流**对象复制到文本**流**对象中。  
   
 ## <a name="applies-to"></a>应用于  
  [流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

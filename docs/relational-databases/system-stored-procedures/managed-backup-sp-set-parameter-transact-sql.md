@@ -21,10 +21,10 @@ ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 838a8b0d998476a37b0dd4d30cab5041ad4276a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942035"
 ---
 # <a name="managed_backupsp_set_parameter-transact-sql"></a>managed_backup sp_set_parameter （Transact-sql）
@@ -45,7 +45,7 @@ EXEC managed_backup.sp_set_parameter
     ,[@parameter_value = ] 'parameter_value'  
 ```  
   
-##  <a name="Arguments"></a> 参数  
+##  <a name="arguments"></a><a name="Arguments"></a>形参  
  @parameter_name  
  要设置值的参数的名称。 @parameter_name为 NVARCHAR （128）。 可用的参数名称为**SSMBackup2WANotificationEmailIds**、 **SSMBackup2WADebugXevent**、 **SSMBackup2WAEnableUserDefinedPolicy**、 **FileRetentionDebugXevent**和**StorageOperationDebugXevent**。  
   
@@ -65,7 +65,7 @@ EXEC managed_backup.sp_set_parameter
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="best-practices"></a>最佳实践  
+## <a name="best-practices"></a>最佳方案  
  可选部分，介绍用户在执行语句或例程时应了解的最佳实践。  
   
 ## <a name="security"></a>安全性  

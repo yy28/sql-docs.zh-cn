@@ -18,10 +18,10 @@ ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3dcbe6d187b56b0b15ae829eeecf1811b02dfee7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67943509"
 ---
 # <a name="sp_helpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
@@ -51,8 +51,8 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**路径名**|**sysname**|扩展存储过程的名称。|  
-|**dll**|**nvarchar(255)**|DLL 的名称。|  
+|name |**sysname**|扩展存储过程的名称。|  
+|**.dll**|**nvarchar(255)**|DLL 的名称。|  
   
 ## <a name="remarks"></a>备注  
  指定*procedure*时， **sp_helpextendedproc**有关指定扩展存储过程的报表。 如果未提供此参数， **sp_helpextendedproc**将返回所有扩展存储过程名称以及每个扩展存储过程所属的 DLL 名称。  

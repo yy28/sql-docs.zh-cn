@@ -17,16 +17,15 @@ ms.assetid: 2ce018e9-1a3b-4530-a87d-842456a555ad
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 40548043b601d2a2309d9d5180f1200228f11bb4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942417"
 ---
 # <a name="database-engine-stored-procedures-transact-sql"></a>数据库引擎存储过程 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持用于对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例进行常规维护的以下系统存储过程。  
   
 |||  

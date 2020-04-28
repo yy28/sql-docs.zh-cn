@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c928d4c96917479f8c37415d5ebe2db9b7f9eb98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938117"
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;源数据查询&gt; -形状
@@ -20,7 +20,7 @@ ms.locfileid: "67938117"
 
   将多个数据源中的查询合并到一个层次结构表中（即具有嵌套表的表），该表将成为挖掘模型的事例表。  
   
- 数据访问组件（MDAC）软件开发工具包（SDK）中介绍了 SHAPE 命令的完整语法。 **** [!INCLUDE[msCoName](../includes/msconame-md.md)]  
+ 数据访问组件（MDAC）软件开发工具包（SDK）中介绍了 SHAPE 命令的完整语法。 **SHAPE** [!INCLUDE[msCoName](../includes/msconame-md.md)]  
   
 ## <a name="syntax"></a>语法  
   
@@ -74,6 +74,6 @@ SHAPE {
  [&#60;源数据查询&#62;](../dmx/source-data-query.md)   
  [数据挖掘扩展插件 &#40;DMX&#41; 数据定义语句](../dmx/dmx-statements-data-definition.md)   
  [数据挖掘扩展插件 &#40;DMX&#41; 数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展插件 &#40;DMX&#41; 语句参考](../dmx/data-mining-extensions-dmx-statements.md)  
+ [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

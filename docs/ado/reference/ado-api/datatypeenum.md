@@ -16,16 +16,16 @@ ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27386894ce6d1d393505d49b4863a0ba9bf3320b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933224"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 指定[字段](../../../ado/reference/ado-api/field-object.md)、[参数](../../../ado/reference/ado-api/parameter-object.md)或[属性](../../../ado/reference/ado-api/property-object-ado.md)的数据类型。 下表的 "说明" 列中的括号内显示了相应的 OLE DB 类型指示器。  
   
-|一直|值|说明|  
+|Constant|值|说明|  
 |--------------|-----------|-----------------|  
 |**AdArray**|0x2000|标志值始终与另一个数据类型常量合并，指示另一个数据类型的数组。 不适用于 ADOX。|  
 |**adBigInt**|20|指示八字节有符号整数（DBTYPE_I8）。|  
@@ -71,7 +71,7 @@ ms.locfileid: "67933224"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
   
-|一直|  
+|Constant|  
 |--------------|  
 |AdoEnums|  
 |AdoEnums|  

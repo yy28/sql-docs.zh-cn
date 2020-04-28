@@ -21,10 +21,10 @@ ms.assetid: 1ed2b2b2-c897-41cc-bed5-1c6bc47b9dd2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bb151279d1435c544de406e67384ce9ca1fdd11e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942067"
 ---
 # <a name="managed_backupsp_backup_master_switch-transact-sql"></a>managed_backup sp_backup_master_switch （Transact-sql）
@@ -45,7 +45,7 @@ EXEC managed_backup.sp_backup_master_switch
                      [@new_state = ] { 0 | 1}  
 ```  
   
-##  <a name="Arguments"></a> 参数  
+##  <a name="arguments"></a><a name="Arguments"></a>形参  
  @state  
  设置 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的状态。 @state参数为**BIT**。 将其值设置为 0 时，操作暂停；将其值设置为 1 时，操作继续进行。  
   
@@ -80,6 +80,6 @@ Go
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Microsoft Azure 的 SQL Server 托管备份](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [SQL Server 托管备份到 Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

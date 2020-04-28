@@ -19,10 +19,10 @@ ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 21e5230e4f3efd86fe90382202f0b21a0187a214
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67937064"
 ---
 # <a name="stretch-database---sysdm_db_rda_migration_status"></a>Stretch Database-sys. dm_db_rda_migration_status
@@ -36,8 +36,8 @@ ms.locfileid: "67937064"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|table_id |**int**|从中迁移行的表的 ID。|  
-|database_id |**int**|从中迁移行的数据库的 ID。|  
+|table_id****|**int**|从中迁移行的表的 ID。|  
+|**database_id**|**int**|从中迁移行的数据库的 ID。|  
 |**migrated_rows**|**bigint**|在此批处理中迁移的行数。|  
 |**start_time_utc**|**datetime**|批处理开始时的 UTC 时间。|  
 |**end_time_utc**|**datetime**|批处理完成时的 UTC 时间。|  
@@ -46,6 +46,6 @@ ms.locfileid: "67937064"
 |**error_state**|**int**|如果批失败，则为发生的错误的状态;否则为 null。<br /><br /> **Error_state**指示发生错误的条件或位置。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
+ [Stretch 数据库](../../sql-server/stretch-database/stretch-database.md)  
   
   

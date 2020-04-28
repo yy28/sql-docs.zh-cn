@@ -16,16 +16,16 @@ ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 233b2f84b6a60c7b5162edce6c1b76b63946ae81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931287"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
 指定有关批更新和其他批量操作的记录的[状态](../../../ado/reference/ado-api/status-property-ado-recordset.md)。  
   
-|一直|值|说明|  
+|Constant|值|说明|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|指示未保存记录，因为该操作已取消。|  
 |**adRecCantRelease**|0x400|指示未保存新记录，因为现有记录已锁定。|  
@@ -51,7 +51,7 @@ ms.locfileid: "67931287"
   
  Package： **.com. 数据**  
   
-|一直|  
+|Constant|  
 |--------------|  
 |AdoEnums.RecordStatus.CANCELED|  
 |AdoEnums.RecordStatus.CANTRELEASE|  
@@ -73,4 +73,4 @@ ms.locfileid: "67931287"
 |AdoEnums.RecordStatus.UNMODIFIED|  
   
 ## <a name="applies-to"></a>应用于  
- [Status 属性（ADO 记录集）](../../../ado/reference/ado-api/status-property-ado-recordset.md)
+ [Status 属性 （ADO 记录集）](../../../ado/reference/ado-api/status-property-ado-recordset.md)

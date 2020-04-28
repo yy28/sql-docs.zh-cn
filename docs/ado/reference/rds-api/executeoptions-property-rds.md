@@ -14,10 +14,10 @@ ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2ae55ec1fccbd491854fb8bff2daa215d38b20ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964187"
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions 属性 (RDS)
@@ -29,10 +29,10 @@ ms.locfileid: "67964187"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回以下值之一。  
   
-|一直|说明|  
+|Constant|说明|  
 |--------------|-----------------|  
 |**adcExecSync**|同步执行[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的下一次刷新。|  
-|**adcExecAsync**|默认值。 异步执行**记录集**的下一次刷新。|  
+|**adcExecAsync**|默认。 异步执行**记录集**的下一次刷新。|  
   
 > [!NOTE]
 >  使用这些常量的每个可执行文件都必须为其提供声明。 你可以从文件 Adcvbs 中剪切并粘贴所需的常量声明，该文件位于 RDS 库的默认安装文件夹中。  

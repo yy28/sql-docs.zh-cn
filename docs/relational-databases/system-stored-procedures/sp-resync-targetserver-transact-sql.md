@@ -18,10 +18,10 @@ ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 20eab8076d88941080898a21cb0d82cc1c667359
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67995485"
 ---
 # <a name="sp_resync_targetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
@@ -40,7 +40,7 @@ sp_resync_targetserver
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @server_name = ] 'server'`要重新同步的服务器的名称。 *服务器*的值为**sysname**，无默认值。 如果指定**all** ，则会重新同步所有目标服务器。  
+`[ @server_name = ] 'server'`要重新同步的服务器的名称。 *server* 的数据类型为 **sysname**，无默认值。 如果指定**all** ，则会重新同步所有目标服务器。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  

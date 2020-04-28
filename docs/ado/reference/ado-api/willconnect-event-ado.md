@@ -17,10 +17,10 @@ ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9fc1ac74e7e3d521bae587957f5f95771e5a5268
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67945850"
 ---
 # <a name="willconnect-event-ado"></a>WillConnect 事件 (ADO)
@@ -35,14 +35,14 @@ ms.locfileid: "67945850"
 WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *ConnectionString*  
  一个**字符串**，其中包含挂起连接的连接信息。  
   
  *Id*  
  包含挂起连接的用户名的**字符串**。  
   
- *权限*  
+ *密码*  
  一个**字符串**，其中包含挂起的连接的密码。  
   
  *选项*  

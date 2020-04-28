@@ -18,10 +18,10 @@ ms.assetid: a5347750-224c-40d9-ae12-57e7213b7db9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a5e2f64294652586a87fcd25fda3c29517dc295d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990266"
 ---
 # <a name="ihpublishercolumns-transact-sql"></a>IHpublishercolumns (Transact-SQL)
@@ -34,14 +34,14 @@ ms.locfileid: "67990266"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**publishercolumn_id**|**int**|标识已发布列。|  
-|table_id |**int**|标识列所属的[IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md)中的源表。|  
+|table_id****|**int**|标识列所属的[IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md)中的源表。|  
 |**publisher_id**|**smallint**|标识正在发布该列的非 SQL Server 发布服务器。|  
-|**路径名**|**sysname**|已发布列的名称。|  
+|**name**|**sysname**|已发布列的名称。|  
 |**column_ordinal**|**int**|按顺序标识列。|  
-|type |**varchar （255）**|发布服务器上源列的列数据类型。|  
-|**长短**|**bigint**|发布服务器上源列的长度。|  
+|**type**|**varchar(255)**|发布服务器上源列的列数据类型。|  
+|**length**|**bigint**|发布服务器上源列的长度。|  
 |**prec**|**int**|发布服务器上源列的精度。|  
-|**纵向**|**int**|发布服务器上源列的小数位数。|  
+|**scale**|**int**|发布服务器上源列的小数位数。|  
 |**isnullable**|**bit**|指示列是否接受 NULL 值，其中**1**表示接受 null 值。|  
 |**iscaptured**|**bit**|指示列上是否存在触发器，即使列没有在项目中发布，该列也可能存在。 如果值为**1** ，则表示该触发器存在于列上。|  
   

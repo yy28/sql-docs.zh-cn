@@ -16,10 +16,10 @@ ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 164092d91a6450815662c5022ac6eb62941e3b16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946227"
 ---
 # <a name="type-system---sequence-type-matching"></a>类型系统 - 序列类型匹配
@@ -102,8 +102,7 @@ SELECT @var.query('data((/root/@a)[1]) instance of xs:decimal')
 GO  
 ```  
   
- 现在，将属性 `a` 的值更改为字符串类型。 
-  `instance of xs:string` 将返回 True。  
+ 现在，将属性 `a` 的值更改为字符串类型。 `instance of xs:string` 将返回 True。  
   
 ```  
 DECLARE @var XML(SC)  
@@ -292,16 +291,14 @@ GO
   
  您也可以使用下列内容：  
   
--   
-  `element(ElementName, ElementType?)` 序列类型语法，如以下查询中所示。 它将与名为 `firstName`、类型为 `xs:string` 的空元素节点或非空元素节点进行匹配。  
+-   `element(ElementName, ElementType?)` 序列类型语法，如以下查询中所示。 它将与名为 `firstName`、类型为 `xs:string` 的空元素节点或非空元素节点进行匹配。  
   
     ```  
     SELECT @var.query('declare namespace x="myNS";   
     (/x:customer/*)[1] instance of element (firstName, xs:string?)')  
     ```  
   
--   
-  `element(*, type?)` 序列类型语法，如以下查询中所示。 它将与类型为 `xs:string`（名称不限）的元素节点进行匹配。  
+-   `element(*, type?)` 序列类型语法，如以下查询中所示。 它将与类型为 `xs:string`（名称不限）的元素节点进行匹配。  
   
     ```  
     SELECT @var.query('declare namespace x="myNS"; (/x:customer/*)[1] instance of element (*, xs:string?)')  

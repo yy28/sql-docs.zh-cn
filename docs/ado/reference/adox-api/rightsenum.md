@@ -16,16 +16,16 @@ ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f6db3d1fecd8a2670a81fb239cb1a100389be21a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965274"
 ---
 # <a name="rightsenum"></a>RightsEnum
 指定组或用户对对象的权限。  
   
-|一直|值|说明|  
+|Constant|值|说明|  
 |--------------|-----------|-----------------|  
 |**adRightCreate**|16384（&H4000）|用户或组具有创建此类型的新对象的权限。|  
 |**adRightDelete**|65536（&H10000）|用户或组有权删除对象中的数据。 对于**表**等对象，用户有权从记录中删除数据值。|  

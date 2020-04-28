@@ -17,16 +17,15 @@ ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7fa45029557cc217b89293fa7963bf29b39f373f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946305"
 ---
 # <a name="sequence-expressions-xquery"></a>序列表达式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持用于对项序列进行构造、筛选和组合的 XQuery 运算符。 项可以是原子值，也可以是节点。  
   
 ## <a name="constructing-sequences"></a>构造序列  
@@ -188,8 +187,7 @@ set @x = '
 '  
 ```  
   
- 
-  `(/a, /b)` 中的表达式构造具有子树 `/a` 和 `/b` 的序列，并且该表达式将从得到的序列中筛选元素 `<c>`。  
+ `(/a, /b)` 中的表达式构造具有子树 `/a` 和 `/b` 的序列，并且该表达式将从得到的序列中筛选元素 `<c>`。  
   
 ```  
 SELECT @x.query('  

@@ -18,10 +18,10 @@ ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9985b0587316641955219eb5179ffd6ed07916d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990395"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-SQL)
@@ -33,9 +33,9 @@ ms.locfileid: "67990395"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|column_id |**int**|标识已发布列。|  
+|**column_id**|**int**|标识已发布列。|  
 |**publishercolumn_id**|**int**|将已发布的列与存储在[IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md)系统表中的列元数据相关联。|  
-|**路径名**|**sysname**|指定列名。|  
+|**name**|**sysname**|指定列名。|  
 |**article_id**|**int**|标识列所属的项目。|  
 |**column_ordinal**|**int**|按顺序标识列。|  
 |**mapped_type**|**tinyint**|订阅服务器中目标列的列数据类型。|  

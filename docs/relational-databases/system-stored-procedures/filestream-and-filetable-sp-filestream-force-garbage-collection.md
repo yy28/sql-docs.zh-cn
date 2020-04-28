@@ -19,10 +19,10 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e836fb2bd64a4fb0be15288322aa8fee30dc763e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942286"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
@@ -46,11 +46,10 @@ sp_filestream_force_garbage_collection
  指示要运行垃圾回收器的数据库的名称。  
   
 > [!NOTE]  
-> `@dbname`为**sysname**。 如果未指定，则假定为当前数据库。  
+>  的数据类型为 sysname`@dbname`****。 如果未指定，则假定为当前数据库。  
   
  `[ @filename = ] 'logical_file_name'`  
- 指定要运行垃圾回收器的 FILESTREAM 容器的逻辑名称。 
-  `@filename` 是可选项。 如果未指定逻辑文件名，垃圾回收器将清除指定数据库中的所有 FILESTREAM 容器。  
+ 指定要运行垃圾回收器的 FILESTREAM 容器的逻辑名称。 `@filename` 是可选项。 如果未指定逻辑文件名，垃圾回收器将清除指定数据库中的所有 FILESTREAM 容器。  
   
 ## <a name="return-code-values"></a>返回代码值  
   
@@ -64,7 +63,7 @@ sp_filestream_force_garbage_collection
   
 |值|说明|  
 |-----------|-----------------|  
-|file_name |指示 FILESTREAM 容器名称|  
+|*file_name*|指示 FILESTREAM 容器名称|  
 |*num_collected_items*|指示此容器中已回收（删除）的 FILESTREAM 项目（文件/目录）数。|  
 |*num_marked_for_collection_items*|指示此容器中已标记为回收（删除）的 FILESTREAM 项目（文件/目录）数。 尚未删除这些项，但可以在垃圾回收阶段后删除这些项。|  
 |*num_unprocessed_items*|指示此 FILESTREAM 容器中符合条件但未进行垃圾回收处理的 FILESTREAM 项目（文件或目录）数。 可能由于各种原因而未处理项目，其中包括：<br /><br /> 由于尚未执行日志备份或检查点操作，需要暂时锁定文件。<br /><br /> 文件处于 FULL 或 BULK_LOGGED 恢复模式。<br /><br /> 有长时间运行的活动事务。<br /><br /> 复制日志读取器作业尚未运行。 有关详细信息，请参阅[SQL Server 2008 中的白皮书 FILESTREAM 存储](https://go.microsoft.com/fwlink/?LinkId=209156)。|  

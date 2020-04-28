@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 303ceed8cc7078e4025f160d25ce1474d1be6aed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67936789"
 ---
 # <a name="sysdm_exec_xml_handles-transact-sql"></a>sys.dm_exec_xml_handles (Transact-SQL)
@@ -52,7 +52,7 @@ dm_exec_xml_handles (session_id | 0 )
 |**session_id**|**int**|持有 XML 文档句柄的会话的会话 ID。|  
 |**document_id**|**int**|**Sp_xml_preparedocument**返回的 XML 文档句柄 ID。|  
 |**namespace_document_id**|**int**|用于关联命名空间文档的内部句柄 ID，已作为第三个参数传递给**sp_xml_preparedocument**。 如果没有命名空间文档，则为 NULL。|  
-|**sql_handle**|**varbinary （64）**|定义句柄所在的 SQL 代码的文本句柄。|  
+|**sql_handle**|**varbinary(64)**|定义句柄所在的 SQL 代码的文本句柄。|  
 |**statement_start_offset**|**int**|在当前正在执行的批处理或存储过程中， **sp_xml_preparedocument**调用发生的字符数。 可以与**sql_handle**、 **statement_end_offset**和**sys.databases dm_exec_sql_text**动态管理函数一起使用，以检索请求的当前正在执行的语句。|  
 |**statement_end_offset**|**int**|在当前正在执行的批处理或存储过程中， **sp_xml_preparedocument**调用发生的字符数。 可以与**sql_handle**、 **statement_start_offset**和**sys.databases dm_exec_sql_text**动态管理函数一起使用，以检索请求的当前正在执行的语句。|  
 |**creation_time**|**datetime**|调用**sp_xml_preparedocument**时的时间戳。|  

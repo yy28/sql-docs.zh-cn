@@ -18,10 +18,10 @@ ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e441e5165262a4455e34cb9a0adb55b9679578f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990053"
 ---
 # <a name="log_shipping_monitor_error_detail-transact-sql"></a>log_shipping_monitor_error_detail (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "67990053"
 |**sequence_number**|**int**|一个增量数字，指示跨多个记录的错误信息的正确顺序。|  
 |**log_time**|**datetime**|创建记录的日期和时间。|  
 |**log_time_utc**|**datetime**|创建记录的日期和时间，使用通用协调时间表示。|  
-|**消息**|**nvarchar**|消息正文。|  
+|**message**|**nvarchar**|消息正文。|  
 |**源程序**|**nvarchar**|错误消息或事件的源。|  
 |**help_url**|**nvarchar**|可从中找到更多错误信息的 URL（如果有）。|  
   
@@ -52,7 +52,7 @@ ms.locfileid: "67990053"
  若要标识代理会话，请使用列**agent_id**、 **agent_type**和**session_id**。 按**log_time**排序以便按记录的顺序查看错误。  
   
 ## <a name="see-also"></a>另请参阅  
- [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [关于 &#40;SQL Server 的日志传送&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [log_shipping_monitor_history_detail &#40;Transact-sql&#41;](../../relational-databases/system-tables/log-shipping-monitor-history-detail-transact-sql.md)   
  [sp_cleanup_log_shipping_history &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
  [sp_delete_log_shipping_primary_database &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   

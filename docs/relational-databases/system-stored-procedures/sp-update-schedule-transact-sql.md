@@ -18,10 +18,10 @@ ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 51e21d189a9302c2dc7b74a013846460e9cb7bc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946645"
 ---
 # <a name="sp_update_schedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
@@ -68,9 +68,9 @@ sp_update_schedule
 |值|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
-|**4**|每天一次|  
+|**4**|每日|  
 |**8**|每周|  
-|**16**|每月|  
+|**超过**|每月一次|  
 |**32**|每月，相对于*频率间隔*|  
 |**64**|SQLServerAgent 服务启动时运行|  
 |**128**|计算机空闲时运行|  
@@ -106,7 +106,7 @@ sp_update_schedule
 |**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**16**|最后一个|  
+|**超过**|最后一个|  
   
 `[ @freq_recurrence_factor = ] freq_recurrence_factor`作业的计划执行之间的周数或月数。 仅当*freq_type*为**8**、 **16**或**32**时才使用*freq_recurrence_factor* 。 *freq_recurrence_factor*的值为**int**，默认值为**0**。  
   
@@ -131,7 +131,7 @@ sp_update_schedule
  所有使用该计划的作业将立即使用新设置。 但是，更改计划不会停止当前正在运行的作业。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下， **sysadmin**固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   

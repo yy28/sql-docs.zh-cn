@@ -17,10 +17,10 @@ ms.assetid: 8965adf0-9075-4125-8142-73eb700029c3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ff85491cf7ca30e3f95526aa7043f321a65cccc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966277"
 ---
 # <a name="getobjectowner-method-adox"></a>GetObjectOwner 方法 (ADOX)
@@ -36,7 +36,7 @@ Owner = Catalog.GetObjectOwner(ObjectName, ObjectType [,ObjectTypeId])
 ## <a name="return-value"></a>返回值  
  返回一个**字符串**值，该值指定拥有对象的[用户](../../../ado/reference/adox-api/user-object-adox.md)或[组](../../../ado/reference/adox-api/group-object-adox.md)的[名称](../../../ado/reference/adox-api/name-property-adox.md)。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *ObjectName*  
  一个**字符串**值，该值指定要为其返回所有者的对象的名称。  
   

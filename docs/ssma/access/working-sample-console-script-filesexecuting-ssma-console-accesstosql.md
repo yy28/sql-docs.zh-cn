@@ -10,10 +10,10 @@ ms.assetid: ad75b648-d119-4119-98f0-d18f058be68d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d6fea9a78928e2944cba1571737008965d679759
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938387"
 ---
 # <a name="working-with-the-sample-console-script-filesexecuting-the-ssma-console-accesstosql"></a>使用示例控制台脚本 FilesExecuting SSMA 控制台（AccessToSQL）
@@ -56,7 +56,7 @@ ms.locfileid: "67938387"
   
 -   **ConversionAndDataMigrationSample：** 使用此示例，用户可以执行端到端迁移，从转换到数据迁移。 下面列出了需要更改的必需属性值的列表：  
   
-    |命令名称|说明|Attribute|  
+    |命令名：|说明|特性|  
     |----------------|---------------|-------------|  
     |`map-schema`|将源数据库映射到目标架构的架构。|`source-schema:`指定需要转换的源数据库。<br /><br />`sql-server-schema`：指定要迁移到的目标数据库|  
     |`convert-schema`|执行从源到目标架构的架构转换。<br /><br />如果用户必须评估多个对象/数据库，他可以指定多`metabase-object`个节点，如示例`convert-schema`控制台脚本文件的命令示例4中所示。|`object-name`：指定需要转换的源数据库/对象名称。 确保根据在中`object-type`指定的对象类型更改相应的`object-name`|  

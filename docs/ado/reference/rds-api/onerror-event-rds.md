@@ -14,10 +14,10 @@ ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f6a1a532b092acb6c23faf4282d40100cc579c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963846"
 ---
 # <a name="onerror-event-rds"></a>onError 事件 (RDS)
@@ -33,14 +33,14 @@ ms.locfileid: "67963846"
 onError SCode, Description, Source, CancelDisplay  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *SCode*  
  一个整数，指示错误的状态代码。  
   
  *说明*  
  指示错误说明的**字符串**。  
   
- *数据源*  
+ *源*  
  一个**字符串**，指示导致错误的查询或命令。  
   
  *CancelDisplay*  

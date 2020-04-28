@@ -14,10 +14,10 @@ ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d1a5fa5c9002d4a27490dfc98fb79f482539f042
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964319"
 ---
 # <a name="execute-method-rds"></a>Execute 方法 (RDS)
@@ -33,14 +33,14 @@ ms.locfileid: "67964319"
 object.Execute(ConnectionString As String, HandlerString As String, QueryString As String, lFetchOptions As Long, Properties, TableId, lExecuteOptions As Long, pParameters, [lcid As Long], [pInformation])  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *ConnectionString*  
  一个字符串，用于连接到将发送请求以执行的 OLE DB 提供程序。 如果使用*HandlerString*指定处理程序，则它可以编辑或替换连接字符串。  
   
  *HandlerString*  
  一个由两部分组成的字符串，用于标识要与此执行一起使用的处理程序。 该字符串包含两个部分。 第一部分包含要使用的处理程序的名称（ProgID）。 第二部分包含要传递到处理程序的参数。 如何解释参数字符串的详细信息特定于每个处理程序。 这两个部分由字符串中逗号的第一个实例分隔。 参数字符串可以包含其他逗号。 这些参数是可选的。  
   
- *字符串*  
+ *QueryString*  
  在连接字符串中标识的 OLE DB 提供程序支持的命令语言中的命令。 对于基于 SQL 的访问接口，*查询字符串*可能包含 transact-sql 命令语句，但对于非 SQL 提供程序（例如，MSDataShape），这可能不是[!INCLUDE[tsql](../../../includes/tsql-md.md)]查询语句。  
   
  如果正在使用处理程序，则该处理程序可以更改或替换此处指定的值。 例如，处理程序通常将*QueryString*替换为其 .ini 文件中的查询字符串。 默认情况下，使用 Msdfmap 文件。  

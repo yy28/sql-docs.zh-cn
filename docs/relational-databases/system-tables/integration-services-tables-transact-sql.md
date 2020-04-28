@@ -18,10 +18,10 @@ ms.assetid: 683b181b-0091-4a9c-86db-bc577af43cec
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 61379adc04eddaf276fae37879674b63833b76e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990134"
 ---
 # <a name="integration-services-tables-transact-sql"></a>Integration Services 表 (Transact-SQL)
@@ -31,14 +31,12 @@ ms.locfileid: "67990134"
   
 ## <a name="in-this-section"></a>本节内容  
  [sysssislog](../../relational-databases/system-tables/sysssislog-transact-sql.md)  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包在运行时生成的每个日志条目在表中各占一行。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包在运行时生成的每个日志条目在表中各占一行。  
   
  仅当包使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志提供程序时，才会使用此表。  
   
  [sysssispackagefolders](../../relational-databases/system-tables/sysssispackagefolders-transact-sql.md)  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务用于组织包的每个逻辑文件夹在表中各占一行。 列值定义嵌套文件夹之间的父/子关系。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务用于组织包的每个逻辑文件夹在表中各占一行。 列值定义嵌套文件夹之间的父/子关系。  
   
 > [!NOTE]  
 >  当连接到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 服务时，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 以层次结构视图显示存储的包。  

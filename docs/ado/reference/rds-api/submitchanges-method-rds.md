@@ -14,10 +14,10 @@ ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 783ad55a2355759f7625d536272f5243cd1c61c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963282"
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges 方法 (RDS)
@@ -33,7 +33,7 @@ ms.locfileid: "67963282"
 DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *DataControl*  
  表示 RDS 的对象变量[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
   
@@ -43,7 +43,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  *连接*  
  一个**字符串**值，该值表示使用 RDS 创建的连接 **。DataControl**对象的[连接](../../../ado/reference/rds-api/connect-property-rds.md)属性。  
   
- *记录集*  
+ *Recordset*  
  表示**Recordset**对象的对象变量。  
   
 ## <a name="remarks"></a>备注  

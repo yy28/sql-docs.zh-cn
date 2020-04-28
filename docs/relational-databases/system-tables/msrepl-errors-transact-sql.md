@@ -18,10 +18,10 @@ ms.assetid: c6e023c1-2c32-4269-8d76-e442ea309e4b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 70d737e8c73d3e5b6876c2669fbafbc71bea66e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67986466"
 ---
 # <a name="msrepl_errors-transact-sql"></a>MSrepl_errors (Transact-SQL)
@@ -31,14 +31,14 @@ ms.locfileid: "67986466"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**识别**|**int**|错误的 ID。|  
+|**id**|**int**|错误的 ID。|  
 |**time**|**datetime**|出现错误的时间。|  
 |**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**source_type_id**|**int**|错误源类型 ID。|  
 |**source_name**|**nvarchar （100）**|错误源名称。|  
 |**error_code**|**sysname**|错误代码。|  
 |**error_text**|**ntext**|错误消息。|  
-|**xact_seqno**|**varbinary （16）**|执行失败的批次的起始事务日志序列号。 仅由分发代理使用，是失败的执行批处理中第一个事务的日志序列号。|  
+|**xact_seqno**|**varbinary(16)**|执行失败的批次的起始事务日志序列号。 仅由分发代理使用，是失败的执行批处理中第一个事务的日志序列号。|  
 |**command_id**|**int**|执行失败的批次的命令 ID。 仅由分发代理使用，是执行失败的批次中的第一个命令的 ID。|  
 |**session_id**|**int**|出现错误的代理会话 ID。|  
   

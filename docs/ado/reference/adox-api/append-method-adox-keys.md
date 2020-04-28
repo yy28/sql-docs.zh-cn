@@ -17,10 +17,10 @@ ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd66edb75bec4f4b7e35c53c9ebeabd9b3c75d83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967299"
 ---
 # <a name="append-method-adox-keys"></a>Append 方法（ADOX 项）
@@ -33,8 +33,8 @@ ms.locfileid: "67967299"
 Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]  
 ```  
   
-#### <a name="parameters"></a>parameters  
- *Key*  
+#### <a name="parameters"></a>参数  
+ *密钥*  
  要追加的**密钥**对象或要创建和追加的密钥的名称。  
   
  *KeyType*  

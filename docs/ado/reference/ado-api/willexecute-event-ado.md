@@ -17,10 +17,10 @@ ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0e7c29be102e9c5c7709816895a6647c95337c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67936617"
 ---
 # <a name="willexecute-event-ado"></a>WillExecute 事件 (ADO)
@@ -33,8 +33,8 @@ ms.locfileid: "67936617"
 WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordset, pConnection  
 ```  
   
-#### <a name="parameters"></a>parameters  
- *数据源*  
+#### <a name="parameters"></a>参数  
+ *源*  
  包含 SQL 命令或存储过程名称的**字符串**。  
   
  *CursorType*  

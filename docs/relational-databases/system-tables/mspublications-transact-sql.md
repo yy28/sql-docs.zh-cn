@@ -18,10 +18,10 @@ ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: de4970e82155454b3d05d6200bc7413baca97aef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67939014"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67939014"
 |**发布**|**sysname**|发布的名称。|  
 |**publication_id**|**int**|发布 ID。|  
 |**publication_type**|**int**|发布类型：<br /><br /> **0** = 事务性。<br /><br /> **1** = 快照。<br /><br /> **2** = 合并。|  
-|**thirdparty_flag**|**bit**|指示发布是否为[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库：<br /><br /> **** = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。<br /><br /> **1** = 之外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的数据源。|  
+|**thirdparty_flag**|**bit**|指示发布是否为[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库：<br /><br /> **0** = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。<br /><br /> **1** = 之外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的数据源。|  
 |**independent_agent**|**bit**|表明该发布是否有独立的分发代理。|  
 |**immediate_sync**|**bit**|指示每次运行快照代理时是否创建或重新创建同步文件。|  
 |**allow_push**|**bit**|指示是否可为给定发布创建推送订阅。|  

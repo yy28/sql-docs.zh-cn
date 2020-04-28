@@ -18,10 +18,10 @@ ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 84f4093fe9c4693c50d6ae89c7b2ba111191db9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946607"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>模块和 Prolog - XQuery Prolog
@@ -29,7 +29,7 @@ ms.locfileid: "67946607"
 
   XQuery 查询由一个 prolog 和一个主体组成。 XQuery prolog 是一系列声明和定义，它们共同创建所需的查询处理环境。 在 SQL Server 中，XQuery prolog 可以包含命名空间声明。 XQuery 主体由指定预期查询结果的一些表达式组成。  
   
- 例如，对**xml**类型的说明列指定了以下 XQuery，该指令将生产说明存储为 xml。 该查询将检索生产车间 `10` 的生产说明。 Xml `query()`数据类型的**** 方法用于指定 XQuery。  
+ 例如，对**xml**类型的说明列指定了以下 XQuery，该指令将生产说明存储为 xml。 该查询将检索生产车间 `10` 的生产说明。 Xml `query()`数据类型的**xml**方法用于指定 XQuery。  
   
 ```  
 SELECT Instructions.query('declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
@@ -43,11 +43,9 @@ WHERE ProductModelID=7
   
 -   XQuery 序言包含命名空间前缀（AWMI）声明`(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`。  
   
--   
-  `declare namespace` 关键字定义查询主体随后使用的命名空间前缀。  
+-   `declare namespace` 关键字定义查询主体随后使用的命名空间前缀。  
   
--   
-  `/AWMI:root/AWMI:Location[@LocationID="10"]` 是查询主体。  
+-   `/AWMI:root/AWMI:Location[@LocationID="10"]` 是查询主体。  
   
 ## <a name="namespace-declarations"></a>命名空间声明  
  命名空间声明定义前缀并将其与命名空间 URI 相关联，如下面的查询所示。 在查询中， `CatalogDescription`是一个**xml**类型列。  

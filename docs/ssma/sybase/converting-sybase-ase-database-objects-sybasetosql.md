@@ -12,10 +12,10 @@ ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 507ac2a61043260435a18c90fb473130988e7f35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67948516"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>转换 SAP ASE 数据库对象（SybaseToSQL）
@@ -72,7 +72,7 @@ SSMA for SAP ASE 在转换为本地 SQL Server 时使用以下 T-sql 关键字�
 |CHECKPOINT|CREATE/ALTER/DROP DEFAULT|CREATE/DROP RULE|  
 |DBCC TRACEOFF|DBCC TRACEON|GRANT/REVOKE/DENY ALL|  
 |KILL|READTEXT|SELECT INTO|  
-|SET OFFSETS|SETUSER|关机|  
+|SET OFFSETS|SETUSER|SHUTDOWN|  
 |WRITETEXT|||  
   
 ## <a name="viewing-conversion-problems"></a>查看转换问题  

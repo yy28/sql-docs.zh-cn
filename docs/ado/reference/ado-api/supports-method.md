@@ -17,10 +17,10 @@ ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cce5ab3b735d3c641da4a6234e860d0528f107c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67936703"
 ---
 # <a name="supports-method"></a>Supports 方法
@@ -36,7 +36,7 @@ boolean = recordset.Supports(CursorOptions )
 ## <a name="return-value"></a>返回值  
  返回一个**布尔**值，该值指示提供程序是否支持由*CursorOptions*参数标识的所有功能。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *CursorOptions*  
  包含一个或多个[CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md)值的**长**表达式。  
   

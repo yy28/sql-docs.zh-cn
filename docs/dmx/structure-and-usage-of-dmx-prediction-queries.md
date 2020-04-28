@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 99d8ef98ad4e86bce0e1beff819a8d140662aaf7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938062"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>DMX 预测查询的结构和用法
@@ -42,9 +42,9 @@ ms.locfileid: "67938062"
   
 -   **SELECT [平展]**  
   
--   **返回页首**  
+-   **TOP**  
   
--   *****从\<模型>***预测联接**      
+-   **FROM***从\<模型>***预测联接**      
   
 -   **ON**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67938062"
   
 -   可以返回一列数据的函数。  
   
- **** *FROM \<model>* **预测联接**元素定义要用于创建预测的源数据。 对于单独查询，即为分配给列的一系列值。 对于空预测联接，该项将保留为空。  
+ **FROM** *FROM \<model>* **预测联接**元素定义要用于创建预测的源数据。 对于单独查询，即为分配给列的一系列值。 对于空预测联接，该项将保留为空。  
   
  **ON**元素将挖掘模型中定义的列映射到外部数据集中的列。 如果要创建空预测联接查询或自然预测联接，则不必包括该元素。  
   

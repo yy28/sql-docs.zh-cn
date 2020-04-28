@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2212ebe8551f27c880ebf0c674f4b8d134617b07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942509"
 ---
 # <a name="syscheck_constraints-transact-sql"></a>sys.check_constraints (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "67942509"
 |**is_not_for_replication**|**bit**|创建 CHECK 约束且使用 NOT FOR REPLICATION 选项。|  
 |**is_not_trusted**|**bit**|系统未针对所有行验证 CHECK 约束。|  
 |**parent_column_id**|**int**|0 表示表级 CHECK 约束。<br /><br /> 非零值表示这是针对具有指定 ID 值的列定义的列级 CHECK 约束。|  
-|**定义**|**nvarchar(max)**|定义该 CHECK 约束的 SQL 表达式。|  
+|**definition**|**nvarchar(max)**|定义该 CHECK 约束的 SQL 表达式。|  
 |**uses_database_collation**|**bit**|1 = 约束定义依赖数据库的默认排序规则进行正确计算；否则为 0。 这种依赖关系可防止更改数据库的默认排序规则。|  
 |**is_system_named**|**bit**|1 = 名称由系统生成。<br /><br /> 0 = 名称由用户提供。|  
   

@@ -10,10 +10,10 @@ ms.assetid: f245c017-023e-4880-8721-8908d339525e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: fbb0a90d9cfd628e9251a55de3df8b66a22f1ef7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989656"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>与 SSMA for DB2 控制台入门（DB2ToSQL）
@@ -57,7 +57,7 @@ ms.locfileid: "67989656"
 |Red|执行过程中出现错误|  
 |灰色|日期和时间戳，向用户发送消息|  
 |白色|脚本文件命令，消息类型|  
-|独︹|警告|  
+|Yellow|警告|  
 |绿色|提示输入用户-输入|  
 |蓝|操作的开始、完成和结果|  
   

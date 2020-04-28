@@ -10,23 +10,23 @@ ms.assetid: 46ebada7-db36-4ae9-b7ae-baa4b854b237
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2fb50ca8cab409e117becdc1335d956d05cb818b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989754"
 ---
 # <a name="data-migration-report-db2tosql"></a>数据迁移报表（DB2ToSQL）
 在将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之后，将显示 "**数据迁移报表**" 对话框。  
   
 ## <a name="options"></a>选项  
-**Status**  
+**状态**  
 显示从源数据库到目标数据库的数据迁移状态。  
   
-**从**  
+**From**  
 源表。  
   
-**自**  
+**功能**  
 目标表。  
   
 **总行数**  

@@ -18,10 +18,10 @@ ms.assetid: 537b1e1a-7228-4680-aa27-5ad7072ea01e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 44987e1b610483e6ce3cbca26c1efb8a1ef4c241
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990261"
 ---
 # <a name="ihpublisherconstraints-transact-sql"></a>IHpublisherconstraints (Transact-SQL)
@@ -32,10 +32,10 @@ ms.locfileid: "67990261"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**publisherconstraint_id**|**int**|标识所发布的约束。|  
-|table_id |**int**|标识约束所属的[IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md)中的表。|  
+|table_id****|**int**|标识约束所属的[IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md)中的表。|  
 |**publisher_id**|**smallint**|标识正在发布该列的非 SQL Server 发布服务器。|  
 |**名称**|**Sysname**|所发布的约束的名称。|  
-|类型 |**nvarchar(255)**|[IHconstrainttypes](../../relational-databases/system-tables/ihconstrainttypes-transact-sql.md)系统表中受支持的约束类型。|  
+|**类型**|**nvarchar(255)**|[IHconstrainttypes](../../relational-databases/system-tables/ihconstrainttypes-transact-sql.md)系统表中受支持的约束类型。|  
   
 ## <a name="see-also"></a>另请参阅  
  [异类数据库复制](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

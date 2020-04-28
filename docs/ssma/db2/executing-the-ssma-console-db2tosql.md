@@ -10,10 +10,10 @@ ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 64348e33502e8407e567b8901890246344765f4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989679"
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>执行 SSMA 控制台（DB2ToSQL）
@@ -22,7 +22,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSM
 ## <a name="project-script-file-commands"></a>项目脚本文件命令  
 项目命令用于处理创建项目、打开、保存和退出项目。  
   
-**Command**  
+**命令**  
   
 create-new-project  
   
@@ -38,7 +38,7 @@ create-new-project
   
 -   `project-type:`可选的特性。 指示项目类型，即 "sql-server-2005" 项目或 "sql-server-2008" 项目或 "sql-server 2012" 项目或 "sql-2014" 项目或 "sql-azure"。 默认值为 "sql-server-2014"。  
   
-**实例**  
+**示例：**  
   
 ```xml  
 <create-new-project  
@@ -57,7 +57,7 @@ create-new-project
   
 默认情况下，属性 "项目类型" 为**sql-server-2008** 。  
   
-**Command**  
+**命令**  
   
 打开-项目  
   
@@ -82,7 +82,7 @@ create-new-project
 ```  
 SSMA for DB2 控制台应用程序支持向后兼容性。 你将能够打开以前版本的 SSMA 创建的项目。  
   
-**Command**  
+**命令**  
   
 save-project  
   
@@ -95,7 +95,7 @@ save-project
 ```xml  
 <save-project/>  
 ```  
-**Command**  
+**命令**  
   
 关闭项目  
   
@@ -120,7 +120,7 @@ save-project
   
 -   有关 "创建脚本文件" 的详细信息，请参阅[创建脚本文件 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md)。  
   
-**Command**  
+**命令**  
   
 连接-源-数据库  
   
@@ -137,7 +137,7 @@ save-project
 ```xml  
 <connect-source-database  server="<server-unique-name>"/>  
 ```  
-**Command**  
+**命令**  
   
 强制加载-源/目标-数据库  
   
@@ -167,7 +167,7 @@ save-project
   
 </force-load>  
 ```  
-**Command**  
+**命令**  
   
 重新连接-源-数据库  
   
@@ -182,7 +182,7 @@ save-project
 ```xml  
 <reconnect-source-database  server="<server-unique-name>"/>  
 ```  
-**Command**  
+**命令**  
   
 连接目标-数据库  
   
@@ -199,7 +199,7 @@ save-project
 ```xml  
 <connect-target-database  server="<server-unique-name>"/>  
 ```  
-**Command**  
+**命令**  
   
 重新连接-目标-数据库  
   
@@ -218,7 +218,7 @@ save-project
 ## <a name="report-script-file-commands"></a>报表脚本文件命令  
 报表命令生成各种 SSMA 控制台活动的性能报告。  
   
-**Command**  
+**命令**  
   
 生成-评估-报表  
   
@@ -292,7 +292,7 @@ save-project
 ## <a name="migration-script-file-commands"></a>迁移脚本文件命令  
 迁移命令将目标数据库架构转换为源架构，并将数据迁移到目标服务器。 迁移命令的默认控制台输出设置为 "完全" 输出报告，没有详细的错误报告：仅限源对象树根节点上的 "摘要"。  
   
-**Command**  
+**命令**  
   
 转换-架构  
   
@@ -358,7 +358,7 @@ save-project
   
 </convert-schema>  
 ```  
-**Command**  
+**命令**  
   
 迁移-数据：将源数据迁移到目标。  
   
@@ -428,7 +428,7 @@ save-project
 ## <a name="migration-preparation-script-file-commands"></a>迁移准备脚本文件命令  
 迁移准备命令启动源数据库和目标数据库之间的架构映射。  
   
-**Command**  
+**命令**  
   
 映射架构  
   
@@ -449,7 +449,7 @@ save-project
   
    sql-server-schema="<target-schema>"/>  
 ```  
-**Command**  
+**命令**  
   
 映射架构  
   
@@ -476,7 +476,7 @@ save-project
   
 迁移命令的默认控制台输出设置为 "完全" 输出报告，没有详细的错误报告：仅限源对象树根节点上的 "摘要"。  
   
-**Command**  
+**命令**  
   
 同步-目标  
   
@@ -541,7 +541,7 @@ save-project
   
 </synchronize-target>  
 ```  
-**Command**  
+**命令**  
   
 从数据库刷新  
   
@@ -606,7 +606,7 @@ save-project
 ## <a name="script-generation-script-file-commands"></a>脚本生成脚本文件命令  
 脚本生成命令执行双重任务：它们有助于将控制台输出保存到脚本文件中;并根据指定的参数将 T-sql 输出记录到控制台或文件中。  
   
-**Command**  
+**命令**  
   
 另存为脚本  
   
@@ -658,7 +658,7 @@ save-project
   
 </save-as-script>  
 ```  
-**Command**  
+**命令**  
   
 convert-sql 语句  
   

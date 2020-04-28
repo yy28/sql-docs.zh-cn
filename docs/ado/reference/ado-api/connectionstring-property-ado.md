@@ -16,10 +16,10 @@ ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e391ad7c61bd6c303b0558892435af344a2768fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933491"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString 属性 (ADO)
@@ -58,7 +58,7 @@ ms.locfileid: "67933491"
   
 |默认 ADO 提供程序|Windows 操作系统|  
 |--------------------------|------------------------------|  
-|MSDASQL<br /><br /> （为了提高源代码的可读性，请在连接字符串中显式指定提供程序名称。）|Windows 2000 （32）<br /><br /> Windows XP （32位）<br /><br /> Windows 2003 服务器（32位）<br /><br /> Windows Vista （32位）<br /><br /> Windows Vista Service Pack 1 或更高版本（32位和64位）<br /><br /> Windows Vista 之后的 windows 版本（32位和64位）|  
+|MSDASQL<br /><br /> （为了提高源代码的可读性，请在连接字符串中显式指定提供程序名称。）|Windows 2000 （32）<br /><br /> Windows XP（32 位）<br /><br /> Windows 2003 服务器（32位）<br /><br /> Windows Vista（32 位）<br /><br /> Windows Vista Service Pack 1 或更高版本（32位和64位）<br /><br /> Windows Vista 之后的 windows 版本（32位和64位）|  
 |无默认设置。<br /><br /> 当 ADO 应用程序在以下操作系统上运行且未显式指定提供程序时，ADO 将返回以下错误： "ADODB.RECORDSET"。连接：未指定提供程序，并且没有指定的默认提供程序|Windows 2000 （64）<br /><br /> Windows XP（64 位）<br /><br /> Windows 2003 服务器（64位）<br /><br /> Windows Vista（64 位）|  
   
 ## <a name="applies-to"></a>应用于  

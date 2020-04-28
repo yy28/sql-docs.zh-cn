@@ -17,10 +17,10 @@ ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dd64ba8119db1ecf2d2b621cd202c9f700b53475
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967281"
 ---
 # <a name="append-method-adox-procedures"></a>Append 方法（ADOX 过程）
@@ -33,11 +33,11 @@ ms.locfileid: "67967281"
 Procedures.Append Name, Command  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *名称*  
  一个**字符串**值，该值指定要创建并追加的过程的名称。  
   
- *Command*  
+ *命令*  
  一个 ADO[命令](../../../ado/reference/ado-api/command-object-ado.md)对象，表示要创建和追加的过程。  
   
 ## <a name="remarks"></a>备注  

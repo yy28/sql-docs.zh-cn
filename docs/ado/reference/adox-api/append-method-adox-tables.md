@@ -17,10 +17,10 @@ ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8c16ac4d18806b670c8b3e27dc09c9019d7ecdeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967246"
 ---
 # <a name="append-method-adox-tables"></a>Append 方法（ADOX 表）
@@ -33,8 +33,8 @@ ms.locfileid: "67967246"
 Tables.Append Table  
 ```  
   
-#### <a name="parameters"></a>parameters  
- *表*  
+#### <a name="parameters"></a>参数  
+ *数据表*  
  一个包含对要追加的**表**的引用的**变量**值，或者是要创建并追加的表的名称。  
   
 ## <a name="remarks"></a>备注  

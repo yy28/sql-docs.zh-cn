@@ -24,10 +24,10 @@ ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0736bc39ceaa6d9a0aa541d2af3b2b784614322b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946205"
 ---
 # <a name="type-system-xquery"></a>类型系统 (XQuery)
@@ -72,8 +72,7 @@ WHERE ProductModelID=7
   
 -   不支持**xdt： dayTimeDuration**和**xdt： yearMonthDuration**类型。  
   
- 在下面的示例中，针对非类型化的 XML 变量指定了查询。 表达式 `data(/a[1]`) 返回一个原子值序列。 
-  `data()` 函数返回元素 `<a>` 的类型化值。 由于被查询的 XML 是非类型化的，因此返回值的类型是 `xdt:untypedAtomic`。 因此，`instance of` 将返回 True。  
+ 在下面的示例中，针对非类型化的 XML 变量指定了查询。 表达式 `data(/a[1]`) 返回一个原子值序列。 `data()` 函数返回元素 `<a>` 的类型化值。 由于被查询的 XML 是非类型化的，因此返回值的类型是 `xdt:untypedAtomic`。 因此，`instance of` 将返回 True。  
   
 ```  
 DECLARE @x xml  
@@ -81,8 +80,7 @@ SET @x='<a>20</a>'
 SELECT @x.query( 'data(/a[1]) instance of xdt:untypedAtomic' )  
 ```  
   
- 在下面的示例中，表达式 (`/a[1]`) 返回元素 `<a>` 的序列，而不是检索类型化值。 
-  `instance of` 表达式使用元素测试来验证由此表达式返回的值是 `xdt:untyped type` 的元素节点。  
+ 在下面的示例中，表达式 (`/a[1]`) 返回元素 `<a>` 的序列，而不是检索类型化值。 `instance of` 表达式使用元素测试来验证由此表达式返回的值是 `xdt:untyped type` 的元素节点。  
   
 ```  
 DECLARE @x xml  

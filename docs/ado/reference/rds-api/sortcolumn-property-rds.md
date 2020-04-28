@@ -14,10 +14,10 @@ ms.assetid: f6f80f67-f0fb-4e63-a5f5-8fdf312aac63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b5a9c3f9f50968f3b5e8085052917397bcd90226
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963395"
 ---
 # <a name="sortcolumn-property-rds"></a>SortColumn 属性 (RDS)
@@ -33,7 +33,7 @@ ms.locfileid: "67963395"
 DataControl.SortColumn = String  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *DataControl*  
  表示 RDS 的对象变量[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
   

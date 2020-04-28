@@ -18,16 +18,15 @@ ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5ad42a174f558202544650fb1580574f290d4466
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946085"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery 与静态类型化
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 XQuery 是一种静态类型化的语言。 即，在查询编译期间，如果特定函数或运算符不接受表达式返回的值的类型或基数，则会出现类型错误。 此外，静态类型检查还可以检测类型化的 XML 文档的路径表达式是否已正确类型化。 XQuery 编译器首先应用添加隐式运算（例如原子化）的规范化阶段，然后执行静态类型推导和静态类型检查。  
   
 ## <a name="static-type-inference"></a>静态类型推导  
@@ -87,8 +86,7 @@ ms.locfileid: "67946085"
  在 XQuery 上下文内，"average" 函数`fn:avg (//r)`将返回静态错误，因为 XQuery 编译器无法为**fn： avg （）** 的参数中的 <`r`> 元素添加不同类型的值（**xs： int**、 **xs： float**或**xs： double**）。 若要解决此问题，请将函数调用重写为 `fn:avg(for $r in //r return $r cast as xs:double ?)`。  
   
 ### <a name="example-operator-over-union-type"></a>示例：联合类型的运算符  
- 加法运算（“+”）要求使用精确类型的操作数。 因此，该表达式`(//r)[1] + 1`将返回一个静态错误，该错误具有前面描述的元素 <`r`> 的类型定义。 一种解决办法是将其重写为 `(//r)[1] cast as xs:int? +1`，其中“?”表示取 0 或 1 值。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 要求带有“?”的“cast as”，这是因为任何转换都可能由于运行时错误而导致产生空序列。  
+ 加法运算（“+”）要求使用精确类型的操作数。 因此，该表达式`(//r)[1] + 1`将返回一个静态错误，该错误具有前面描述的元素 <`r`> 的类型定义。 一种解决办法是将其重写为 `(//r)[1] cast as xs:int? +1`，其中“?”表示取 0 或 1 值。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 要求带有“?”的“cast as”，这是因为任何转换都可能由于运行时错误而导致产生空序列。  
   
 ## <a name="see-also"></a>另请参阅  
  [XQuery 语言参考 (SQL Server)](../xquery/xquery-language-reference-sql-server.md)  

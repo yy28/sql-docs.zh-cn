@@ -17,10 +17,10 @@ ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ee1058299becb4a7a4234debc097516cb02dd41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67937865"
 ---
 # <a name="type-property-ado"></a>Type 属性 (ADO)
@@ -38,7 +38,7 @@ ms.locfileid: "67937865"
   
 ||||  
 |-|-|-|  
-|[字段对象](../../../ado/reference/ado-api/field-object.md)|[Parameter 对象](../../../ado/reference/ado-api/parameter-object.md)|[属性对象 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
+|[字段对象](../../../ado/reference/ado-api/field-object.md)|[参数对象](../../../ado/reference/ado-api/parameter-object.md)|[属性对象 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [Type 属性示例（字段）（VB）](../../../ado/reference/ado-api/type-property-example-field-vb.md)   

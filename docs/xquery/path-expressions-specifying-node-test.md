@@ -16,10 +16,10 @@ ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 28ac10e211d57fc9e118f47ccb9d506d6cb846e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946438"
 ---
 # <a name="path-expressions---specifying-node-test"></a>路径表达式 - 指定节点测试
@@ -71,7 +71,7 @@ child::ProductDescription
   
  因此，在对**ProductModel**表中的产品目录 XML 文档执行此表达式时，它将检索\< \<ProductDescription> 元素的所有元素节点子级> 元素节点子级。  
   
- 路径表达式`/child::PD:ProductDescription/attribute::ProductModelID`由两个步骤组成。 这两个步骤都指定节点名作为节点测试。 此外，第二个步骤将使用 attribute 轴。 因此，每个步骤都将选择属于其轴的主要节点类型的、具有指定名称的节点来作为节点测试。 因此，该表达式将**** 返回\<ProductDescription> 元素节点的 ProductModelID 属性节点。  
+ 路径表达式`/child::PD:ProductDescription/attribute::ProductModelID`由两个步骤组成。 这两个步骤都指定节点名作为节点测试。 此外，第二个步骤将使用 attribute 轴。 因此，每个步骤都将选择属于其轴的主要节点类型的、具有指定名称的节点来作为节点测试。 因此，该表达式将**ProductModelID**返回\<ProductDescription> 元素节点的 ProductModelID 属性节点。  
   
  指定节点名作为节点测试时，还可以使用通配符 (*) 来指定节点的本地名称或作为其命名空间前缀，如以下示例所示：  
   
@@ -94,14 +94,10 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
   
 |节点类型|返回|示例|  
 |---------------|-------------|-------------|  
-|`comment()`|如果是注释节点，则返回 True。|
-  `following::comment()` 将选择显示在上下文节点之后的所有注释节点。|  
-|`node()`|无论是任何类型的节点，都返回 True。|
-  `preceding::node()` 将选择显示在上下文节点之前的所有节点。|  
-|`processing-instruction()`|如果是处理指令节点，则返回 True。|
-  `self::processing instruction()` 将选择上下文节点内的所有处理指令节点。|  
-|`text()`|如果是文本节点，则返回 True。|
-  `child::text()` 将选择作为上下文节点的子级的文本节点。|  
+|`comment()`|如果是注释节点，则返回 True。|`following::comment()` 将选择显示在上下文节点之后的所有注释节点。|  
+|`node()`|无论是任何类型的节点，都返回 True。|`preceding::node()` 将选择显示在上下文节点之前的所有节点。|  
+|`processing-instruction()`|如果是处理指令节点，则返回 True。|`self::processing instruction()` 将选择上下文节点内的所有处理指令节点。|  
+|`text()`|如果是文本节点，则返回 True。|`child::text()` 将选择作为上下文节点的子级的文本节点。|  
   
  如果指定节点类型（例如 text() 或 comment() 等）作为节点测试，则该步骤将仅返回指定类型的节点，而不考虑轴的主要节点类型。 例如，以下路径表达式将仅返回上下文节点的注释节点子级：  
   

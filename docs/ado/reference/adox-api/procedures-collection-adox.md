@@ -17,21 +17,21 @@ ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 693029bf83fe28343b450906da3e16e2665819d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965433"
 ---
 # <a name="procedures-collection-adox"></a>过程集合 (ADOX)
 包含目录的所有[过程](../../../ado/reference/adox-api/procedure-object-adox.md)对象。  
   
 ## <a name="remarks"></a>备注  
- **过程**集合的[APPEND](../../../ado/reference/adox-api/append-method-adox-procedures.md)方法对于 ADOX 是唯一的。 可以：  
+ **过程**集合的[APPEND](../../../ado/reference/adox-api/append-method-adox-procedures.md)方法对于 ADOX 是唯一的。 你可以：  
   
 -   使用**Append**方法向集合中添加一个新过程。  
   
- 其余属性和方法对于 ADO 集合是标准的。 可以：  
+ 其余属性和方法对于 ADO 集合是标准的。 你可以：  
   
 -   使用[Item](../../../ado/reference/ado-api/item-property-ado.md)属性访问集合中的过程。  
   

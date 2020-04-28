@@ -17,10 +17,10 @@ ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 611fe9d5bea47204b655f2defe5072d2dd17be92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67937017"
 ---
 # <a name="stretch-database---sysdm_db_rda_schema_update_status"></a>Stretch Database-sys. dm_db_rda_schema_update_status
@@ -32,8 +32,8 @@ ms.locfileid: "67937017"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|table_id |**int**|正在更新其远程数据存档架构的本地 Stretch 已启用表的 ID。|  
-|database_id |**int**|包含启用了延伸的本地表的数据库的 ID。|  
+|table_id****|**int**|正在更新其远程数据存档架构的本地 Stretch 已启用表的 ID。|  
+|**database_id**|**int**|包含启用了延伸的本地表的数据库的 ID。|  
 |**task_id**|**bigint**|远程数据存档架构更新任务的 ID。|  
 |**task_type**|**int**|远程数据存档架构更新任务的类型。|  
 |**task_type_desc**|**nvarchar**|远程数据存档架构更新任务的类型说明。|  
@@ -46,6 +46,6 @@ ms.locfileid: "67937017"
 |**error_state**|**int**|如果远程数据存档架构更新失败，则表明出现了错误的状态;否则为 null。 Error_state 指示发生错误的条件或位置。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
+ [Stretch 数据库](../../sql-server/stretch-database/stretch-database.md)  
   
   

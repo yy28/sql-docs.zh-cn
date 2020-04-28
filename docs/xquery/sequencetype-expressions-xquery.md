@@ -18,10 +18,10 @@ ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e7c3cdf33b0765ba50e5553f3bc31fd5c69312e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946280"
 ---
 # <a name="sequencetype-expressions-xquery"></a>SequenceType 表达式 (XQuery)
@@ -138,7 +138,7 @@ where ProductModelID=19
  该查询返回 True。  
   
 ### <a name="example-c"></a>示例 C  
- 使用联合类型时，`instance of` 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表达式有一个限制：具体来说，当某个元素或属性的类型为联合类型时，`instance of` 可能无法确定其准确的类型。 因此，查询将返回 False，除非用于 SequenceType 中的原子类型在简单类型层次结构中是表达式的实际类型的最高父级。 即以 SequenceType 指定的原子类型必须是任意简单类型的直接子级。 有关类型层次结构的信息，请参阅[XQuery 中的类型转换规则](../xquery/type-casting-rules-in-xquery.md)。  
+ 使用联合类型时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 `instance of` 表达式有一个限制：具体来说，当某个元素或属性的类型为联合类型时，`instance of` 可能无法确定其准确的类型。 因此，查询将返回 False，除非用于 SequenceType 中的原子类型在简单类型层次结构中是表达式的实际类型的最高父级。 即以 SequenceType 指定的原子类型必须是任意简单类型的直接子级。 有关类型层次结构的信息，请参阅[XQuery 中的类型转换规则](../xquery/type-casting-rules-in-xquery.md)。  
   
  下一个查询示例将执行以下操作：  
   
@@ -351,8 +351,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 在此查询中不需要显式使用**data （）** 。 
-  `cast as` 表达式在输入表达式中执行隐式原子化。  
+ 在此查询中不需要显式使用**data （）** 。 `cast as` 表达式在输入表达式中执行隐式原子化。  
   
 ### <a name="constructor-functions"></a>构造函数  
  您可以使用原子类型来构造函数。 例如，可以使用`cast as` **xs： integer （）** 构造函数，而不是使用运算符`"2" cast as xs:integer?`，如以下示例中所示：  

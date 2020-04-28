@@ -20,10 +20,10 @@ ms.assetid: a73da875-be22-45fc-b5e2-ea7ebd48e2d6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1dd486757a912d8f0364f55570a368292cf39ab7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67984902"
 ---
 # <a name="dbosysproxies-transact-sql"></a>dbo.sysproxies (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67984902"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|代理帐户的 ID。|  
-|**路径名**|**sysname**|代理帐户的名称。|  
+|**name**|**sysname**|代理帐户的名称。|  
 |**credential_id**|**int**|代理帐户使用的凭证的 ID。|  
 |**能够**|**tinyint**|代理帐户的状态。<br /><br /> **0** = 禁用。 **1** = 已启用。|  
 |**2008**|**nvarchar(512)**|创建代理帐户时用户输入的说明。|  

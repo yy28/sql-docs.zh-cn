@@ -18,10 +18,10 @@ ms.assetid: d325288d-47ae-4488-8799-122f7ab43459
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: db034831d9c8a85285ae1ec99263496170fab655
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67948624"
 ---
 # <a name="msrepl_transactions-transact-sql"></a>MSrepl_transactions (Transact-SQL)
@@ -32,8 +32,8 @@ ms.locfileid: "67948624"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|发布服务器数据库的 ID。|  
-|**xact_id**|**varbinary （16）**|事务的 ID。|  
-|**xact_seqno**|**varbinary （16）**|事务的序列号。|  
+|**xact_id**|**varbinary(16)**|事务的 ID。|  
+|**xact_seqno**|**varbinary(16)**|事务的序列号。|  
 |**entry_time**|**datetime**|事务进入分发数据库的时间。|  
   
 ## <a name="see-also"></a>另请参阅  

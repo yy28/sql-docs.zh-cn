@@ -16,10 +16,10 @@ ms.assetid: 39554188-20fe-42ec-a53f-35e1dc98c274
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0a081fd1d3cebb7d5d83362d2cf5af700f75da09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942175"
 ---
 # <a name="log-shipping-stored-procedures-transact-sql"></a>日志传送存储过程 (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "67942175"
 |[sp_delete_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md)||  
   
 ## <a name="see-also"></a>另请参阅  
- [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [关于 &#40;SQL Server 的日志传送&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

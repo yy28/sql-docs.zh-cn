@@ -16,10 +16,10 @@ ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: df46abb8efdd5761797a599cf5a8cdebe02e5158
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946011"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>XQuery 扩展函数 - sql:column()
@@ -132,7 +132,7 @@ select @x
 ## <a name="see-also"></a>另请参阅  
  [SQL Server XQuery 扩展函数](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
  [类型化的 XML 与非类型化的 XML 的比较](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [XML 数据 (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)   
+ [XML Data &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [创建 XML 数据的实例](../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml 数据类型方法](../t-sql/xml/xml-data-type-methods.md)   
  [XML 数据修改语言 (XML DML)](../t-sql/xml/xml-data-modification-language-xml-dml.md)  

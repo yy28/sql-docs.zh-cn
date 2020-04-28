@@ -16,14 +16,14 @@ ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 278e2d90ed20b99706f00acf72e2892941c42865
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933565"
 ---
 # <a name="connection-object-ado"></a>连接对象 (ADO)
-表示与数据源的打开的连接。  
+表示到数据源的连接是打开的。  
   
 ## <a name="remarks"></a>备注  
  **Connection**对象表示与数据源的唯一会话。 在客户端/服务器数据库系统中，它可能等效于到服务器的实际网络连接。 根据提供程序支持的功能，**连接**对象的某些集合、方法或属性可能不可用。  

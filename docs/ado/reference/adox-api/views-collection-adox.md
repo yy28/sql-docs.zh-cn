@@ -17,21 +17,21 @@ ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0cec2462f8726e7c580a7d6755394c6c3f07c85b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964773"
 ---
 # <a name="views-collection-adox"></a>视图集合 (ADOX)
 包含目录的所有[视图](../../../ado/reference/adox-api/view-object-adox.md)对象。  
   
 ## <a name="remarks"></a>备注  
- **Views**集合的[APPEND](../../../ado/reference/adox-api/append-method-adox-views.md)方法对于 ADOX 是唯一的。 可以：  
+ **Views**集合的[APPEND](../../../ado/reference/adox-api/append-method-adox-views.md)方法对于 ADOX 是唯一的。 你可以：  
   
 -   使用**Append**方法将新视图添加到集合。  
   
- 其余属性和方法对于 ADO 集合是标准的。 可以：  
+ 其余属性和方法对于 ADO 集合是标准的。 你可以：  
   
 -   使用[Item](../../../ado/reference/ado-api/item-property-ado.md)属性访问集合中的视图。  
   

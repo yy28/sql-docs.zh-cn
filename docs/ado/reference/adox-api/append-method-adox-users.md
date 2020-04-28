@@ -17,10 +17,10 @@ ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 99a21cd5dd32af9e84877865cfe7c0fc92f6c087
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967226"
 ---
 # <a name="append-method-adox-users"></a>Append 方法（ADOX 用户）
@@ -33,11 +33,11 @@ ms.locfileid: "67967226"
 Users.Append User[,Password]  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *用户*  
  一个**变量**值，其中包含要追加的**用户**对象或要创建和追加的用户的名称。  
   
- *权限*  
+ *密码*  
  可选。 一个包含用户密码的**字符串**值。 *Password*参数与**User**对象的[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)方法所指定的值相对应。  
   
 ## <a name="remarks"></a>备注  

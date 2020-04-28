@@ -21,10 +21,10 @@ ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a840c749222cc7c01fa1b1ff5a27489e0e9d322a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942460"
 ---
 # <a name="coresp_update_data_source-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
@@ -93,8 +93,8 @@ EXEC core.sp_update_data_source
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [数据收集器存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的数据收集器存储过程](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [管理数据仓库](../../relational-databases/data-collection/management-data-warehouse.md)  
   
   
