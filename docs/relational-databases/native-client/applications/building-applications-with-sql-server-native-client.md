@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fffae7ea51d75f54cb87a17c433df935de3139b7
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388244"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>使用 SQL Server Native Client 生成应用程序
@@ -43,7 +43,7 @@ ms.locfileid: "81388244"
  [将应用程序从 MDAC 更新到 SQL Server Native Client](../../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)  
  讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和 MDAC 之间的区别，以及从 MDAC 升级到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 时应考虑的问题。  
   
- [从 SQL Server 2005 本机客户端更新应用程序](../../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md)  
+ [从 SQL Server 2005 Native Client 更新应用程序](../../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md)  
  讨论从 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client 升级到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client 时应该考虑的问题。  
   
  [将 ADO 用于 SQL Server Native Client](../../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md)  
@@ -56,8 +56,8 @@ ms.locfileid: "81388244"
  讨论如何使用 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] Native Client 连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL 服务器本机客户端编程](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
- [ODBC 的"使用方式"主题](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
+ [SQL Server Native Client 编程](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
+ [ODBC 操作指南主题](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
  [OLE DB 操作指南主题](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

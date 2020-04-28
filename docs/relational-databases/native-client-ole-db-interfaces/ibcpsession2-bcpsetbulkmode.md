@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a69eec3bd515ae82cf6d23fc37da9226800349ed
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307324"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
@@ -72,7 +72,7 @@ HRESULT BCPSetBulkMode (
   
  下表列出了 property 参数的常量**。  
   
-|Property|描述|  
+|properties|说明|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|指定字符输出模式。<br /><br /> 对应于 BCP.EXE 和 IBCPSession::BCPColFmt 中的 -c 选项，同时将 eUserDataType** 属性设置为 BCP_TYPE_SQLCHARACTER****。|  
 |BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 输出模式。<br /><br /> 对应于 BCP.EXE 和 IBCPSession::BCPColFmt 中的 -w 选项，同时将 eUserDataType** 属性设置为 BCP_TYPE_SQLNCHAR****。|  

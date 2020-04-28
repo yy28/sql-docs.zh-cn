@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c233a5e9755e910a53a53fa1366faef733370474
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487152"
 ---
 # <a name="permissions-database-engine"></a>权限（数据库引擎）
@@ -32,7 +32,7 @@ ms.locfileid: "81487152"
   
 -   [与特定的安全对象相关的权限](#_securables)  
   
--   [SQL 服务器权限](#_permissions)  
+-   [SQL Server 权限](#_permissions)  
   
 -   [权限检查算法](#_algorithm)  
   
@@ -65,19 +65,19 @@ ms.locfileid: "81487152"
   
      允许被授权者模拟该登录名。  
   
--   \<模拟*用户*>  
+-   模拟\<*用户*>  
   
      允许被授权者模拟该用户。  
   
--   创建\<*服务器可安全保护*>  
+-   创建\<*服务器安全*对象>  
   
      授予被授权者创建“服务器安全对象” ** 的权限。  
   
--   创建\<*数据库可安全保护*>  
+-   创建\<*数据库安全*对象>  
   
      授予被授权者创建“数据库安全对象” ** 的权限。  
   
--   创建\<*包含架构的可安全保护*>  
+-   创建\<*包含架构的安全*对象>  
   
      授予创建包含在架构中的安全对象的权限。 但是，若要在特定架构中创建安全对象，必须对该架构具有 ALTER 权限。  
   
@@ -92,12 +92,12 @@ ms.locfileid: "81487152"
      对象的 REFERENCES 权限是使用引用该对象的 `WITH SCHEMABINDING` 子句创建 FUNCTION 或 VIEW 时所必需的。  
   
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 权限图表  
- 有关 pdf 格式所有[!INCLUDE[ssDE](../../includes/ssde-md.md)]权限的海报大小图表，请参阅。 [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)  
+ 有关 pdf 格式的所有[!INCLUDE[ssDE](../../includes/ssde-md.md)]权限的海报大小的图表，请[https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)参阅。  
   
-##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a>适用于特定安全可保护的权限  
+##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a>适用于特定安全对象的权限  
  下表列出了主要的权限类别以及可应用这些权限的安全对象的种类。  
   
-|权限|适用对象|  
+|权限|适用于|  
 |----------------|----------------|  
 |SELECT|同义词<br /><br /> 表和列<br /><br /> 表值函数（ [!INCLUDE[tsql](../../includes/tsql-md.md)] 和公共语言运行时 (CLR)）和列<br /><br /> 视图和列|  
 |VIEW CHANGE TRACKING|表<br /><br /> 架构|  
@@ -116,7 +116,7 @@ ms.locfileid: "81487152"
 > [!CAUTION]  
 >  安装期间授予系统对象的默认权限已针对可能的威胁进行了仔细评估，并且作为强化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的一部分，无需进行更改。 对系统对象权限的任何更改都可能限制或破坏功能，并且可能让你的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装处于不受支持的状态。  
   
-##  <a name="sql-server-and-sql-database-permissions"></a><a name="_permissions"></a>SQL 服务器和 SQL 数据库权限  
+##  <a name="sql-server-and-sql-database-permissions"></a><a name="_permissions"></a>SQL Server 和 SQL 数据库权限  
  下表提供了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 权限的完整列表。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 权限仅适用于受支持的基本安全对象。 不能在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中授予服务器级别权限，但是在某些情况下，可改为授予数据库权限。  
   
 |基础安全对象|对基础安全对象的粒度权限|权限类型代码|包含基础安全对象的安全对象|对容器安全对象的权限隐含着对基础安全对象的粒度权限|  
@@ -433,7 +433,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [权限层次结构&#40;数据库引擎&#41;](permissions-hierarchy-database-engine.md)   
+ [权限层次结构 &#40;数据库引擎&#41;](permissions-hierarchy-database-engine.md)   
  [sys.database_permissions (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql)  
   
   

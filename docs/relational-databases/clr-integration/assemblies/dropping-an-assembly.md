@@ -1,6 +1,6 @@
 ---
-title: 丢弃程序集 |微软文档
-description: 当不再需要 SQL Server 时，可以删除或删除该程序集。 使用 DROP 程序集删除程序集及其关联文件。
+title: 删除程序集 |Microsoft Docs
+description: 当不再需要某个程序集时，可以将其删除 SQL Server 中。 使用 DROP ASSEMBLY 删除程序集及其关联文件。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 03481034-dc91-4488-ab24-ba44243e2690
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 48fca2d5a255193800fed39e9869e1be231229a9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81485523"
 ---
 # <a name="dropping-an-assembly"></a>删除程序集
@@ -44,7 +44,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   在数据库中使用 WITH SCHEMABINDING 子句创建了使用 UDT 变量或参数的函数、存储过程或触发器。  
   
 ### <a name="finding-udt-dependencies"></a>查找 UDT 依赖关系  
- 在执行 DROP TYPE 语句之前，首先必须删除所有依赖对象。 以下[!INCLUDE[tsql](../../../includes/tsql-md.md)]查询定位**在 AdventureWorks**数据库中使用 UDT 的所有列和参数。  
+ 在执行 DROP TYPE 语句之前，首先必须删除所有依赖对象。 下面[!INCLUDE[tsql](../../../includes/tsql-md.md)]的查询查找使用**AdventureWorks**数据库中的 UDT 的所有列和参数。  
   
 ```  
 USE Adventureworks;  
@@ -68,9 +68,9 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  [管理 CLR 集成程序集](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
  [更改程序集](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
  [创建程序集](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
- [&#40;转算-SQL&#41;](../../../t-sql/statements/drop-aggregate-transact-sql.md)   
- [&#40;转算-SQL&#41;](../../../t-sql/statements/drop-function-transact-sql.md)   
- [处理程序&#40;处理-SQL&#41;](../../../t-sql/statements/drop-procedure-transact-sql.md)   
+ [DROP &#40;Transact-sql&#41;](../../../t-sql/statements/drop-aggregate-transact-sql.md)   
+ [DROP FUNCTION &#40;Transact-sql&#41;](../../../t-sql/statements/drop-function-transact-sql.md)   
+ [DROP PROCEDURE &#40;Transact-sql&#41;](../../../t-sql/statements/drop-procedure-transact-sql.md)   
  [DROP TRIGGER (Transact-SQL)](../../../t-sql/statements/drop-trigger-transact-sql.md)   
  [DROP TYPE (Transact-SQL)](../../../t-sql/statements/drop-type-transact-sql.md)  
   

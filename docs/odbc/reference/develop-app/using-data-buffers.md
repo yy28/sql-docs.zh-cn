@@ -1,5 +1,5 @@
 ---
-title: 使用数据缓冲区 |微软文档
+title: 使用数据缓冲区 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 06b9f603-b395-497c-979b-d3ec3d6db375
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 510d3a6728efb63c3c352e5215e54d1bf7c4e025
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306768"
 ---
 # <a name="using-data-buffers"></a>使用数据缓冲区
-数据缓冲区由三条信息描述：其类型、地址和字节长度。 每当函数需要这些信息之一，但不知道它时，它都有一个参数，应用程序通过它。  
+数据缓冲区由三部分信息描述：其类型、地址和字节长度。 每当函数需要这些信息的其中一项并且尚不知道该函数时，它就会提供应用程序将其传递到的参数。  
   
  本部分包含以下主题。  
   

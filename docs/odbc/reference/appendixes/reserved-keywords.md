@@ -1,5 +1,5 @@
 ---
-title: 保留关键字 |微软文档
+title: 保留关键字 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ed8056d6c9645a211f1413a1b280426925dd538e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307988"
 ---
 # <a name="reserved-keywords"></a>保留关键字
-保留了下列关键字以用于 ODBC 函数调用。 这些单词不限制最低 SQL 语法;因此，这些单词不会限制这些单词。但是，为了确保与支持核心 SQL 语法的驱动程序兼容，应用程序应避免使用这些关键字中的任何一个。 #**定义**值SQL_ODBC_KEYWORDS包含这些关键字的逗号分隔列表。  
+保留了下列关键字以用于 ODBC 函数调用。 这些词不会限制最低 SQL 语法;但是，为了确保与支持核心 SQL 语法的驱动程序兼容，应用程序应避免使用这些关键字中的任何一个。 #**Define**值 SQL_ODBC_KEYWORDS 包含这些关键字的以逗号分隔的列表。  
   
 |||  
 |-|-|  

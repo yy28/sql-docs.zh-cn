@@ -1,6 +1,6 @@
 ---
-title: CLR 集成安全性 |微软文档
-description: SQL 服务器与 .NET 框架 CLR 安全性的集成管理对象之间的访问。 对对象执行的安全检查取决于所涉及的调用。
+title: CLR 集成安全性 |Microsoft Docs
+description: 与 .NET Framework CLR 安全 SQL Server 的集成管理对象之间的访问。 对对象执行的安全检查取决于涉及的调用。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 561ba77b01af31c30341c5af7fa22b68ede413f6
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487104"
 ---
 # <a name="clr-integration-security"></a>CLR 集成安全性

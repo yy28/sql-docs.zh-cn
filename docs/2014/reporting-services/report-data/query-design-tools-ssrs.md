@@ -1,5 +1,5 @@
 ---
-title: 报表设计器 SQL 服务器数据工具 （SSRS） 中的查询设计工具 |微软文档
+title: 报表设计器 SQL Server Data Tools 中的查询设计工具（SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1179f4e5a6c8be90b5bc52b814ae49c96a3a39aa
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388625"
 ---
 # <a name="query-design-tools-in-report-designer-sql-server-data-tools-ssrs"></a>SQL Server Data Tools 的报表设计中的查询设计工具 (SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "81388625"
  使用报表服务器项目模板或报表服务器向导项目模板时，所有查询设计工具都在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的数据设计环境中运行。 有关使用查询设计器的详细信息，请参阅 [Reporting Services Query Designers](../reporting-services-query-designers.md)。
 
 ##  <a name="text-based-query-designer"></a><a name="Textbased"></a>基于文本的查询设计器
- 基于文本的查询设计器是大多数受支持的关系数据源（包括[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Oracle、Teradata、OLE DB、XML 和 ODBC）的默认查询构建工具。 与图形查询设计器相比，此查询设计工具无法在查询设计过程中验证查询语法。 下图显示了基于文本的查询设计器。
+ 基于文本的查询设计器是大多数支持的关系数据源的默认查询生成工具，包括[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Oracle、Teradata、OLE DB、XML 和 ODBC。 与图形查询设计器相比，此查询设计工具无法在查询设计过程中验证查询语法。 下图显示了基于文本的查询设计器。
 
  ![用于关系数据查询的通用查询设计器](../../analysis-services/media/rsqd-dsaw-sql-generic.gif "用于关系数据查询的通用查询设计器")
 
@@ -86,7 +86,7 @@ ms.locfileid: "81388625"
 
  ![在设计模式下使用 MDX 的查询设计器](../media/rsqd-dssapbw-mdx-designmode.gif "在设计模式下使用 MDX 的查询设计器")
 
-##  <a name="hyperion-essbase-query-designer"></a><a name="Hyperion"></a>Hyperion Esbase 查询设计器
+##  <a name="hyperion-essbase-query-designer"></a><a name="Hyperion"></a>Hyperion Essbase 查询设计器
  [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] 查询设计器用于在 [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] 数据库和应用程序中检索数据。 下图显示了 [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] 查询设计器。
 
  ![用于 Hyperion Essbase 数据源的查询设计器](../media/rsqd-dshyperionessbase-mdx-designmode.gif "用于 Hyperion Essbase 数据源的查询设计器")
@@ -94,6 +94,6 @@ ms.locfileid: "81388625"
  若要使用此查询设计器，必须具有至少包含一个数据库的 [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] 数据源。 有关详细信息，请参阅 [SAP NetWeaver BI Query Designer User Interface](sap-netweaver-bi-query-designer-user-interface.md)。
 
 ## <a name="see-also"></a>另请参阅
- [报告服务工具](../tools/reporting-services-tools.md)[将数据添加到报表&#40;报表生成器和 SSRS&#41;](report-datasets-ssrs.md)[报告服务、数据源和连接字符串的报告](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)服务[，报告服务&#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md) [SSRS &#40;支持的数据源，&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)[创建嵌入式或共享数据源&#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)
+ [Reporting Services 工具](../tools/reporting-services-tools.md)[将数据添加到报表中 &#40;报表生成器和 SSRS&#41;](report-datasets-ssrs.md) [中的数据连接、数据源和连接字符串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) [Reporting Services Tutorials &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md) Reporting Services Reporting Services &#40;&#41;ssrs Reporting Services[支持的数据源](../create-deploy-and-manage-mobile-and-paginated-reports.md)&#40;ssrs&#41;[创建嵌入数据源或共享数据源 &#40;ssrs](../create-an-embedded-or-shared-data-source-ssrs.md)&#41;
 
 

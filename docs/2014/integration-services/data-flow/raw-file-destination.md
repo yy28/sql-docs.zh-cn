@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6a4610a5f0963cbe94c82c33a63f08490cec36d9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487007"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
@@ -113,7 +113,7 @@ ms.locfileid: "81487007"
   
 1.  将 WriteOption 属性设置为 **CreateOnce** 或 **CreateAlways**并运行循环的一次迭代过程。 此时将创建文件。 这可确保追加数据的元数据与文件匹配。  
   
-2.  将 WriteOption 属性重置为 **"追加"，** 并将验证外部元数据`False`属性设置为 。  
+2.  将 WriteOption 属性重置为**Append** ，并将 ValidateExternalMetadata 属性`False`设置为。  
   
  如果使用 **TruncateAppend** 选项而不是 **“追加”** 选项，此操作将截断以前的任何迭代过程中所添加的行，然后追加新行。 使用 **TruncateAppend** 选项也要求数据与文件格式相匹配。  
   

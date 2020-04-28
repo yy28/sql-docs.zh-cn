@@ -1,5 +1,5 @@
 ---
-title: 伪类型标识符 |微软文档
+title: 伪类型标识符 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: 8fa365d2-9de0-40c6-bcd2-a85613061baf
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 3fb8b89b3a4acf979a1cb67621b2223d22d303c8
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307978"
 ---
 # <a name="pseudo-type-identifiers"></a>伪类型标识符
-为方便应用程序编程，ODBC 定义了许多伪类型标识符。 这些标识符实际上不对应于实际数据类型，而是根据情况解析为现有数据类型。  
+为了方便应用程序编程，ODBC 定义了多个伪类型标识符。 这些标识符实际上并不对应于实际数据类型，而是根据具体的情况，解析为现有数据类型。  
   
  本部分包含以下主题。  
   

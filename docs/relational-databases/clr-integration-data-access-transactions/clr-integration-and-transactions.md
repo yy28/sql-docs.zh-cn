@@ -1,6 +1,6 @@
 ---
-title: CLR 集成和事务 |微软文档
-description: System.事务命名空间提供了一个与ADO.NET和 SQL Server CLR 集成完全集成的事务框架。
+title: CLR 集成和事务 |Microsoft Docs
+description: System.web 命名空间提供与 ADO.NET 和 SQL Server CLR 集成完全集成的事务框架。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 3d7e4ac0e338ac556c88c8cc22d6a87a53c67d51
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487464"
 ---
 # <a name="clr-integration-and-transactions"></a>CLR 集成和事务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **System.事务**命名空间提供了一个事务框架，该框架与ADO.NET和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通用语言运行时 （CLR） 集成完全集成。 **系统.事务**和ADO.NET协同工作，以扩展和简化托管应用程序中本地和分布式事务的使用。  
+  **System.web**命名空间提供与 ADO.NET 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]公共语言运行时（CLR）集成完全集成的事务框架。 **System.web**和 ADO.NET 一起使用来扩展和简化托管应用程序中本地事务和分布式事务的使用。  
   
 > [!NOTE]  
 >  CLR 用户定义过程 (UDP) 不能与运行此过程的同一服务器建立连接（即环回连接），并且不能在同一事务中登记。 如果尝试上述操作，连接尝试将被阻止，并且无法将控制权传递回 UDP。 这将导致 UDP 发生超时错误（消息 1206）。  
@@ -41,7 +41,7 @@ ms.locfileid: "81487464"
  介绍如何访问当前在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上以进程内方式运行的事务。  
   
  [使用 System.Transactions](../../relational-databases/clr-integration-data-access-transactions/using-system-transactions.md)  
- 描述如何在托管应用程序中使用**System.事务**应用程序编程接口 （API）。  
+ 介绍如何在托管应用程序中使用**system.exception 应用程序编程**接口（API）。  
   
  [事务生存期](../../relational-databases/clr-integration-data-access-transactions/transaction-lifetimes.md)  
  介绍分别在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程和 CLR 应用程序中启动的事务生存期的差异。  

@@ -20,14 +20,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ce63eeebcee247f5bccb3c68bce24d325c44fe2d
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388548"
 ---
 # <a name="graphical-query-designer-user-interface"></a>图形查询设计器用户界面
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 同时提供了图形查询设计器和基于文本的查询设计器，用于创建在报表设计器中为报表数据集检索关系数据库中的数据的查询。 使用图形查询设计器能够以交互方式生成查询并查看数据源类型 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、Oracle、OLE DB 和 ODBC 的结果。 使用基于文本的查询设计器可以指定多个 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句、复杂的查询或命令语句以及基于表达式的查询。 有关详细信息，请参阅 [基于文本的查询设计器用户界面](../text-based-query-designer-user-interface.md)。 有关使用特定数据源类型的详细信息，请参阅将数据[添加到报表&#40;报表生成器和 SSRS&#41;](report-datasets-ssrs.md)。
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 同时提供了图形查询设计器和基于文本的查询设计器，用于创建在报表设计器中为报表数据集检索关系数据库中的数据的查询。 使用图形查询设计器能够以交互方式生成查询并查看数据源类型 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、Oracle、OLE DB 和 ODBC 的结果。 使用基于文本的查询设计器可以指定多个 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句、复杂的查询或命令语句以及基于表达式的查询。 有关详细信息，请参阅 [基于文本的查询设计器用户界面](../text-based-query-designer-user-interface.md)。 有关使用特定数据源类型的详细信息，请参阅[将数据添加到报表 &#40;报表生成器和 SSRS&#41;](report-datasets-ssrs.md)。
 
  。
 
@@ -144,6 +144,6 @@ EXEC uspGetEmployeeManagers '1';
  `uspGetEmployeeManagers '1';`
 
 ## <a name="see-also"></a>另请参阅
- [报表设计器 SQL 服务器数据工具中的查询设计工具&#40;SSRS&#41;](query-design-tools-ssrs.md)[将数据添加到报表&#40;报表生成器和 SSRS&#41;](report-datasets-ssrs.md) [SQL 服务器连接类型&#40;SSRS&#41;](sql-server-connection-type-ssrs.md) OLE DB[连接类型&#40;SSRS&#41;](ole-db-connection-type-ssrs.md)[将数据添加到报表&#40;报表生成器和 SSRS&#41;](report-datasets-ssrs.md) Oracle[连接类型 &#40;SSRS&#41;](oracle-connection-type-ssrs.md) RS[报告设计器配置文件](../report-server/rsreportdesigner-configuration-file.md)[设计查询和查看如何操作主题&#40;可视化数据库工具&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)
+ [报表设计器 SQL Server Data Tools 中的查询设计工具 &#40;SSRS&#41;](query-design-tools-ssrs.md) [将数据添加到报表 &#40;报表生成器和 ssrs](report-datasets-ssrs.md)&#41;SQL Server ssrs [&#40;](sql-server-connection-type-ssrs.md)&#41;ssrs OLE DB &#40;ssrs&#41;&#40;ssrs 报表生成器[&#41;](ole-db-connection-type-ssrs.md) [的](report-datasets-ssrs.md)&#40;&#41;&#40;的&#41;的的[Oracle Connection Type &#40;SSRS&#41;](oracle-connection-type-ssrs.md)的[配置文件](../report-server/rsreportdesigner-configuration-file.md)[设计查询和视图](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)操作指南主题
 
 

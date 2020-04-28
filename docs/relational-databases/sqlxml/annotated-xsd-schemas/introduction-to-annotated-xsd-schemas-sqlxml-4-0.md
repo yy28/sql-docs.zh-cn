@@ -1,6 +1,6 @@
 ---
-title: 注释 XSD 架构 （SQLXML） 简介
-description: 了解如何使用 XML 架构定义 （XSD） 语言 （SQLXML 4.0） 创建关系数据的 XML 视图。
+title: 带批注的 XSD 架构（SQLXML）简介
+description: 了解如何使用 XML 架构定义（XSD）语言（SQLXML 4.0）创建关系数据的 XML 视图。
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -24,21 +24,21 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c165ca271c3230399d54363f22d2b220e5427830
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388658"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>带批注的 XSD 架构简介 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  您可以通过使用 XML 架构定义 (XSD) 语言创建关系数据的 XML 视图。 然后可通过使用 XML Path 语言 (XPath) 查询对这些视图进行查询。 这类似于通过使用 CREATE VIEW 语句创建视图，然后针对视图指定 SQL 查询。  
+  您可以通过使用 XML 架构定义 (XSD) 语言创建关系数据的 XML 视图。 然后可通过使用 XML Path 语言 (XPath) 查询对这些视图进行查询。 这类似于使用 CREATE VIEW 语句创建视图，然后针对视图指定 SQL 查询。  
   
  XML 架构描述了 XML 文档的结构并且还描述了对文档中数据的各种约束。 针对该架构指定 XPath 查询时，返回的 XML 文档的结构由对其执行 XPath 查询的架构确定。  
   
- 在 XSD 架构中**\<，xsd：架构>** 元素包含整个架构;所有元素声明必须包含在**\<xsd：schema>** 元素中。 可以描述定义架构所在的命名空间的属性以及架构中用作**\<xsd：schema>** 元素属性的命名空间。  
+ 在 xsd 架构中， ** \<xsd： schema>** 元素包含整个架构;所有元素声明都必须包含在** \<xsd： schema>** 元素中。 您可以描述定义架构所在的命名空间的属性，以及将架构中使用的命名空间作为** \<xsd： schema>** 元素的属性。  
   
- 有效的 XSD 架构必须包含**\<xsd：schema>** 元素定义如下：  
+ 有效的 xsd 架构必须包含如下所定义的** \<xsd： schema>** 元素：  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -47,7 +47,7 @@ ms.locfileid: "81388658"
 </xsd:schema>  
 ```  
   
- xsd：schema>元素派生自 中的http://www.w3.org/2001/XMLSchemaXML 架构命名空间规范。 ** \<**  
+ Xsd： schema>元素派生自中的 XML 架构命名空间规范http://www.w3.org/2001/XMLSchema。 ** \<**  
   
 ## <a name="annotations-to-the-xsd-schema"></a>XSD 架构的批注  
  您可以对 XSD 架构使用批注来描述数据库映射、查询数据库并返回 XML 文档形式的结果。 使用批注可将 XSD 架构映射到数据库表和列。 可以对 XSD 架构创建的 XML 视图指定 XPath 查询来查询数据库并获取 XML 形式的结果。  
@@ -55,10 +55,10 @@ ms.locfileid: "81388658"
 > [!NOTE]  
 >  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 中，XSD 架构语言支持随 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 中带批注的 XML-Data Reduced (XDR) 架构语言引入的批注。 SQLXML 4.0 中不推荐使用带批注的 XDR。  
   
- 在关系数据库上下文中，将任意 XSD 架构映射到关系存储区很有用。 实现这种映射的一种方法是对 XSD 架构进行批注。 带有注释的 XSD 架构称为*映射架构*，它提供有关如何将 XML 数据映射到关系存储的信息。 实际上，映射架构是关系数据的 XML 视图。 使用这些映射能够以 XML 文档形式检索关系数据。  
+ 在关系数据库上下文中，将任意 XSD 架构映射到关系存储区很有用。 实现这种映射的一种方法是对 XSD 架构进行批注。 带有批注的 XSD 架构称为*映射架构*，它提供有关如何将 XML 数据映射到关系存储区的信息。 实际上，映射架构是关系数据的 XML 视图。 使用这些映射能够以 XML 文档形式检索关系数据。  
   
 ## <a name="namespace-for-annotations"></a>批注的命名空间  
- 在 XSD 架构中，注释通过使用命名空间**urn：架构-microsoft-com：映射架构**来指定。 如以下示例所示，指定命名空间的最简单方法是在**\<xsd：schema>** 标记中指定命名空间。  
+ 在 XSD 架构中，批注通过使用命名空间**urn： schema-microsoft-com： mapping-schema**来指定。 如下面的示例中所示，指定命名空间的最简单方法是在** \<xsd： schema>** 标记中指定该命名空间。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -67,10 +67,10 @@ ms.locfileid: "81388658"
 </xsd:schema>  
 ```  
   
- 命名空间可采用任意前缀。 在本文档中 **，sql**前缀用于表示注释命名空间，并区分此命名空间中的注释与其他命名空间中的注释。  
+ 命名空间可采用任意前缀。 在本文档中， **sql**前缀用于表示批注命名空间，并将此命名空间中的批注与其他命名空间中的批注区分开来。  
   
 ## <a name="example-of-an-annotated-xsd-schema"></a>带批注的 XSD 架构的示例  
- 在下面的示例中，XSD 架构由**\<Person.Contact.>** 元素组成。 **\<员工>** 元素具有**ContactID**属性和**\<Name name>** 和**\<姓氏>** 子元素：  
+ 在下面的示例中，XSD 架构包含** \<Person。请联系>** 元素。 Employee>元素具有**ContactID**属性， ** \<FirstName>** ， ** \<LastName>** 子元素： ** \<**  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
@@ -111,7 +111,7 @@ ms.locfileid: "81388658"
 </xsd:schema>  
 ```  
   
- 在映射架构中，**\<使用** **sql：关系**注释将联系人>元素映射到示例 AdventureWorks 数据库中的 Person.联系人表。 属性 ConID、FName 和 LName 通过使用**sql：字段**注释映射到"联系人"中的联系人 ID、Name 和姓氏列。  
+ 在映射架构中， ** \<Contact>** 元素通过使用**sql： relation**批注映射到示例 AdventureWorks 数据库中的 contact 表。 属性 ConID、FName 和 LName 映射到 Person 中的 ContactID、FirstName 和 LastName 列。请通过使用**sql： field**批注来联系表。  
   
  此带有批注的 XSD 架构提供了关系数据的 XML 视图。 可使用 XPath 语言查询此 XML 视图。 XPath 查询返回的结果是一个 XML 文档，而 SQL 查询返回的结果是行集。  
   
@@ -121,18 +121,18 @@ ms.locfileid: "81388658"
 ## <a name="other-resources"></a>其他资源  
  有关 XML 架构定义语言 (XSD)、XML Path 语言 (XPath) 和可扩展样式表语言转换 (XSLT) 的详细信息，请访问以下网站：  
   
--   XML 架构第 0 部分：引瑟、W3C 建议 （https://www.w3.org/TR/xmlschema-0/)  
+-   XML 架构第0部分：入门、W3C 建议（https://www.w3.org/TR/xmlschema-0/)  
   
--   XML 架构第 1 部分：结构，W3C 建议（https://www.w3.org/TR/xmlschema-1/)  
+-   XML 架构第1部分：结构，W3C 建议（https://www.w3.org/TR/xmlschema-1/)  
   
--   XML 架构第 2 部分：数据类型，W3C 建议（https://www.w3.org/TR/xmlschema-2/)  
+-   XML 架构第2部分：数据类型，W3C 建议（https://www.w3.org/TR/xmlschema-2/)  
   
--   XML 路径语言 （XPath） （https://www.w3.org/TR/xpath)  
+-   XML 路径语言（XPath）（https://www.w3.org/TR/xpath)  
   
--   XSL 转换 （XSLT） （https://www.w3.org/TR/xslt)  
+-   XSL 转换（XSLT）（https://www.w3.org/TR/xslt)  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;SQLXML 4.0&#41;注释的架构安全注意事项](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
- [在 SQLXML 4.0&#41;中&#40;弃用注释的 XDR 架构](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0 的批注的架构安全注意事项&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
+ [SQLXML 4.0 中 &#40;弃用的带批注 XDR 架构&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
   
   

@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a32000dbe2cd4a01b544bd11f6c5b282933dc013
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307409"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
@@ -77,7 +77,7 @@ HRESULT BCPColFmt(
  用户的数据文件中字段的索引。  
   
  eUserDataType[in]**  
- 用户的数据文件中字段的数据类型。 可用的数据类型列在具有BCP_TYPE_XXX格式的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端头文件 （sqlncli.h） 中，例如BCP_TYPE_SQLINT4。 如果指定 BCP_TYPE_DEFAULT 值，则访问接口将尝试使用与表或视图列相同的类型。 当 eUserDataType 参数是 BCP_TYPE_SQLDECIMAL 或 BCP_TYPE_SQLNUMERIC 时，对于源为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和目标为文件的大容量复制操作****：  
+ 用户的数据文件中字段的数据类型。 可用的数据类型在带有 BCP_TYPE_XXX 格式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 Native Client 头文件（sqlncli.msi）中列出，如 BCP_TYPE_SQLINT4。 如果指定 BCP_TYPE_DEFAULT 值，则访问接口将尝试使用与表或视图列相同的类型。 当 eUserDataType 参数是 BCP_TYPE_SQLDECIMAL 或 BCP_TYPE_SQLNUMERIC 时，对于源为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和目标为文件的大容量复制操作****：  
   
 -   如果源列的数据类型不是 decimal 或 numeric，则使用默认的精度和小数位数。  
   
@@ -117,7 +117,7 @@ HRESULT BCPColFmt(
  方法成功。  
   
  E_FAIL  
- 发生提供程序特定的错误，有关详细信息，请使用[ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)界面。  
+ 出现特定于提供程序的错误，有关详细信息，请使用[ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)接口。  
   
  E_UNEXPECTED  
  意外调用了该方法。 例如，在调用该方法之前，未调用 [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法。  
@@ -129,7 +129,7 @@ HRESULT BCPColFmt(
  内存不足错误。  
   
 ## <a name="see-also"></a>另请参阅  
- [IBCP会话&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [执行大容量复制操作](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

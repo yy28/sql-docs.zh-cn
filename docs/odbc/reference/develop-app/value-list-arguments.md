@@ -1,5 +1,5 @@
 ---
-title: 值列表参数 |微软文档
+title: 值列表参数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ ms.assetid: 863837be-603b-4c7a-8b96-b71014037ee5
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: fd655bd745c3bb06923e047d4134b286cf64703e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306738"
 ---
 # <a name="value-list-arguments"></a>值列表自变量
-值列表参数由用于匹配的逗号分隔值列表组成。 ODBC 目录函数中只有一个值列表参数 **：SQLTables**中的*表类型*参数。 将*表类型*设置为空指针与将其设置为SQL_ALL_TABLE_TYPES相同，后者枚举值列表的所有可能成员。 此参数不受SQL_ATTR_METADATA_ID语句属性的影响。 有关详细信息，请参阅[SQLTables](../../../odbc/reference/syntax/sqltables-function.md)函数说明。
+值列表参数由逗号分隔值列表组成，这些值用于匹配。 ODBC 目录函数中只有一个值列表参数： **SQLTables**中的*TableType*参数。 如果将*TableType*设置为 null 指针，则将其设置为与 SQL_ALL_TABLE_TYPES （枚举值列表中所有可能的成员）的值相同。 此参数不受 SQL_ATTR_METADATA_ID 语句特性的影响。 有关详细信息，请参阅[SQLTables](../../../odbc/reference/syntax/sqltables-function.md)函数说明。

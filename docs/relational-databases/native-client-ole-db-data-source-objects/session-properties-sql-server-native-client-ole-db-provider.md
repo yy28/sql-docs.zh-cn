@@ -15,23 +15,23 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 799d007dea8063486e836f47032fc3177c890168
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388598"
 ---
 # <a name="session-properties---sql-server-native-client-ole-db-provider"></a>会话属性 - SQL Server Native Client OLE DB 提供程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端 OLE 数据库提供程序解释 OLE DB 会话属性，如下所示。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序按如下方式解释 OLE DB 的会话属性。  
   
 |属性 ID|说明|  
 |-----------------|-----------------|  
-|DBPROP_SESS_AUTOCOMMITISOLEVELS|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序支持所有自动提交事务隔离级别，但混沌级别DBPROPVAL_TI_CHAOS除外。|  
+|DBPROP_SESS_AUTOCOMMITISOLEVELS|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持所有的自动提交事务隔离级别，但 DBPROPVAL_TI_CHAOS 的混乱级别除外。|  
 |||
 
- 在特定于提供程序的属性集中DBPROPSET_SQLSERVERSESSION，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE DB 提供程序定义以下附加会话属性。  
+ 在特定于访问接口的属性集中 DBPROPSET_SQLSERVERSESSION， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序定义以下附加的会话属性。  
   
 |属性 ID|说明|  
 |-----------------|-----------------|  

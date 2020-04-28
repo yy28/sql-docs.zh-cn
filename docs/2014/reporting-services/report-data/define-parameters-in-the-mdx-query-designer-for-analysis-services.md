@@ -1,5 +1,5 @@
 ---
-title: 在 MDX 查询设计器中定义分析服务（报表生成器和 SSRS）中的参数 |微软文档
+title: 在 MDX 查询设计器中定义用于 Analysis Services （报表生成器和 SSRS）的参数 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39f94bc7fd247a1608385f009fcb8d117b8c628f
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388536"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>在 Analysis Services 的 MDX 查询设计器中定义参数（报表生成器和 SSRS）
@@ -82,6 +82,6 @@ ms.locfileid: "81388536"
      若要查看为报表参数提供可用值的数据集，请右键单击“报表数据”窗格中的任意空白区域，然后单击“ **显示隐藏的数据集**”。 此时“报表数据”窗格将显示报表中的所有数据集。
 
 ## <a name="see-also"></a>另请参阅
- [MDX 分析服务连接类型 &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)[分析服务 MDX 查询设计器用户界面](analysis-services-mdx-query-designer-user-interface.md)
+ [Mdx &#40;SSRS&#41;Analysis Services 连接类型](analysis-services-connection-type-for-mdx-ssrs.md) [Analysis Services Mdx 查询设计器用户界面](analysis-services-mdx-query-designer-user-interface.md)
 
 

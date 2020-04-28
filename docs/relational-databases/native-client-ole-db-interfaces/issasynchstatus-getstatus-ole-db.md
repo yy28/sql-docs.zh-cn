@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 90ddf4e4617e1182e50979f051fa6ee2657166ba
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306683"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
@@ -67,16 +67,16 @@ HRESULT GetStatus(
   
  DBASYNCHPHASE_POPULATION - 对象处于填充阶段。 尽管已完全初始化行集，并且可针对该对象使用整套接口，但是可能还有其他行尚未填充到行集中。 虽然 pulProgress 和 pulProgressMax 可以基于填充的行数，但它们通常基于填充行集所需的时间和工作****。 因此，调用方应将此信息用作对此过程所需时间的粗略估计，而不是最终的行计数。 此阶段仅在填充行集期间返回；它永远不会在数据源对象初始化期间返回，也不会因执行更新、删除或插入行的命令而返回。  
   
- DBASYNCHPHASE_COMPLETE - 已完成对象的所有异步处理。 **ISSAsynch状态：获取状态**返回指示操作结果的 HRESULT。 通常，如果已同步调用操作，则将返回 HRESULT。 如果异步操作是因调用更新、删除或插入行的命令的 ICommand::Execute 而引起的，pulProgress 和 pulProgressMax 则等于该命令所影响的总行数********。 如果 cParamSets 大于 1，则等于执行过程中指定的所有参数集所影响的总行数**。 如果 peAsynchPhase 为空指针，则不返回状态代码**。  
+ DBASYNCHPHASE_COMPLETE - 已完成对象的所有异步处理。 **ISSAsynchStatus：： GetStatus**返回一个 HRESULT，指示操作的结果。 通常，如果已同步调用操作，则将返回 HRESULT。 如果异步操作是因调用更新、删除或插入行的命令的 ICommand::Execute 而引起的，pulProgress 和 pulProgressMax 则等于该命令所影响的总行数********。 如果 cParamSets 大于 1，则等于执行过程中指定的所有参数集所影响的总行数**。 如果 peAsynchPhase 为空指针，则不返回状态代码**。  
   
- DBASYNCHPHASE_CANCELED - 已中止对象的异步处理。 **ISSSynch 状态：获取状态**返回DB_E_CANCELED。 如果异步操作是因调用更新、删除或插入行的命令的 ICommand::Execute 而引起的，pulProgress 则等于取消之前该命令所影响的所有参数集的总行数******。  
+ DBASYNCHPHASE_CANCELED - 已中止对象的异步处理。 **ISSAsynchStatus：： GetStatus**返回 DB_E_CANCELED。 如果异步操作是因调用更新、删除或插入行的命令的 ICommand::Execute 而引起的，pulProgress 则等于取消之前该命令所影响的所有参数集的总行数******。  
   
  ppwszStatusText[in/out]**  
  指向包含有关操作的其他信息的内存的指针。 提供程序可以使用此值来区分不同的操作元素（例如，要访问的不同资源）。 该字符串的本地化形式基于数据源对象的 DBPROP_INIT_LCID 属性。  
   
  如果 ppwszStatusText 在输入时为非 Null，提供程序则返回与 ppwszStatusText 标识的特定元素相关联的状态****。 如果 ppwszStatusText 未指示 eOperation 的元素，提供程序则返回 S_OK，并将 pulProgress 和 pulProgressMax 设置为相同的值********。 如果提供程序不能基于文本标识符区分各元素，则会将 ppwszStatusText 设置为 NULL，并返回有关整个操作的信息；否则，如果 ppwszStatusText 在输入时为非 Null，提供程序将使 ppwszStatusText 保持不变******。  
   
- 如果*ppwszStatusText*在输入时为空，则提供程序将*ppwszStatusText*设置为指示有关操作的详细信息的值，或者将"无此类信息可用"或**ISSAsynchStatus：getStatus**返回错误时设置为 NULL。 如果 ppwszStatusText 在输入时为 Null，提供程序将为状态字符串分配内存，并返回此内存的地址**。 如果不再需要此字符串，使用者可以使用 IMalloc::Free 释放此内存****。  
+ 如果*ppwszStatusText*在输入时为 null，则提供程序将*ppwszStatusText*设置为一个值，指示有关操作的详细信息; 如果没有此类信息，则为 null; 如果**ISSAsynchStatus：： GetStatus**返回错误，则为 null。 如果 ppwszStatusText 在输入时为 Null，提供程序将为状态字符串分配内存，并返回此内存的地址**。 如果不再需要此字符串，使用者可以使用 IMalloc::Free 释放此内存****。  
   
  如果 ppwszStatusText 在输入时为 NULL，则不会返回状态字符串，提供程序将返回有关操作的任一元素的信息或有关操作的总体信息**。  
   
@@ -99,11 +99,11 @@ HRESULT GetStatus(
  hChapter** 参数不正确。  
   
  E_UNEXPECTED  
- **ISSAsynchStatus：getStatus**在数据源对象上调用，**并且 IDB 初始化：：** 尚未在数据源对象上调用初始化。  
+ 已对数据源对象调用**ISSAsynchStatus：： GetStatus** ，但未对数据源对象调用**IDBInitialize：： Initialize** 。  
   
- **ISSAsynchStatus：getStatus**在行集 **"I事务：提交**"或 **"I事务：：已调用中止**"，并且对象处于僵尸状态。  
+ 在行集上调用了**ISSAsynchStatus：： GetStatus** ， **ITransaction：： Commit**或**ITransaction：： Abort**调用了，并且该对象处于僵停状态。  
   
- **ISSAsynchStatus：GetStatus**被调用在初始化阶段异步取消的行集上。 该行集处于僵停状态。  
+ 在异步取消的行集的初始化阶段中调用了**ISSAsynchStatus：： GetStatus** 。 该行集处于僵停状态。  
   
  E_FAIL  
  发生了特定于访问接口的错误。  
@@ -121,7 +121,7 @@ HRESULT GetStatus(
   
  访问接口不必保证任何进一步的准确性，但是对于可以对完成情况进行合理估计的情况，建议执行此工作。 这一工作将改进用户界面的质量，因为此函数的主要用途是向用户提供进度反馈。 由于改善了长期运行的不可见任务的反馈质量，用户的满意度也随之提高。  
   
- 对已初始化的数据源对象或已填充的行集调用 ISSAsynchStatus::GetStatus，或者传递除 DBASYNCHOP_OPEN 以外的 eOperation 值将返回 S_OK，并将 pulProgress 和 pulProgressMax 设置为相同的值**********。 如果在执行更新、删除或插入行的命令时创建的对象上调用**ISSAsynchStatus：GetStatus，** 则 pulProgress 和*pulProgressMax*都表示受*pulProgressMax*该命令影响的行总数。  
+ 对已初始化的数据源对象或已填充的行集调用 ISSAsynchStatus::GetStatus，或者传递除 DBASYNCHOP_OPEN 以外的 eOperation 值将返回 S_OK，并将 pulProgress 和 pulProgressMax 设置为相同的值**********。 如果对通过执行用于更新、删除或插入行的命令而创建的对象调用**ISSAsynchStatus：： GetStatus** ，则*pulProgress*和*pulProgressMax*都指示受该命令影响的总行数。  
   
 ## <a name="see-also"></a>另请参阅  
  [执行异步操作](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   

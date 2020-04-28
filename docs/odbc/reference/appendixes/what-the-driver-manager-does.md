@@ -1,5 +1,5 @@
 ---
-title: 驱动程序管理器的作用 |微软文档
+title: 驱动程序管理器的作用 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,25 +16,25 @@ ms.assetid: 57f65c38-d9ee-46c8-9051-128224a582c6
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 07ab0784e6f6ad4487a02a179a5fa3be2617c930
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306558"
 ---
 # <a name="what-the-driver-manager-does"></a>驱动程序管理器的用途
-下表总结了 ODBC *3.x*驱动程序管理器如何将调用映射到 ODBC *2.x*和 ODBC *3.x*驱动程序。  
+下表总结了 ODBC 2.x*驱动程序管理*器如何映射*对 odbc 2.x* *驱动程序和*odbc 2.x 驱动程序的调用。  
   
-|功能或<br /><br /> 语句属性|注释|  
+|函数或<br /><br /> 语句特性|说明|  
 |-----------------------------------------|--------------|  
-|SQL_ATTR_FETCH_BOOKMARK_PTR|指向书签以与**SQLFetchScroll**一起使用。 以下是实现详细信息：<br /><br /> - 当应用程序在 ODBC *2.x*驱动程序中设置此参数时，ODBC *3.x*驱动程序管理器会缓存它。 它引用指针并将值传递给**SQL 扩展提取***的 Fetch 偏移*参数中的 ODBC *2.x*驱动程序，而稍后应用程序调用**SQLFetchScroll。**<br />- 当应用程序在 ODBC *3.x*驱动程序中设置此驱动程序时，ODBC *3.x*驱动程序管理器将呼叫传递给驱动程序。|  
-|SQL_ATTR_ROW_STATUS_PTR|指向由**SQLFetch、SQLFetchScroll、SQLBulk****操作**和**SQLSetPos**填充的行状态数组。 **SQLFetch** 以下是实现详细信息：<br /><br /> - 当应用程序在 ODBC *2.x*驱动程序中设置此值时，ODBC *3.x*驱动程序管理器缓存其值。 当调用**SQLFetchScroll 或** **SQLFetch**时，它将此值传递给**SQLAa 的 SQLAa** *参数*中的 ODBC *2.x*驱动程序。<br />- 当应用程序在 ODBC *3.x*驱动程序中设置此驱动程序时，ODBC *3.x*驱动程序管理器将呼叫传递给驱动程序。<br />- 在状态 S6 中，如果应用程序设置SQL_ATTR_ROW_STATUS_PTR，然后调用**SQLBulk 操作**（操作SQL_ADD）或**SQLSetPos，** 而无需首先调用**SQLFetch**或**SQLFetchScroll，** 则返回 SQLSTATE HY011（现在无法设置属性）。 *Operation*|  
-|SQL_ATTR_ROWS_FETCHED_PTR|指向**SQLFetch**和**SQLFetchScroll**返回提取的行数的缓冲区。 以下是实现详细信息：<br /><br /> - 当应用程序在 ODBC *2.x*驱动程序中设置此值时，ODBC *3.x*驱动程序管理器缓存其值。 当应用程序调用**SQLFetch**或**SQLFetchScroll**时，它将此值传递给**SQL 扩展提取**的*RowCountPtr*参数中的 ODBC *2.x*驱动程序。<br />- 当应用程序在 ODBC *3.x*驱动程序中设置此驱动程序时，ODBC *3.x*驱动程序管理器将呼叫传递给驱动程序。|  
-|SQL_ATTR_ROW_ARRAY_SIZE|设置行集大小。 以下是实现详细信息：<br /><br /> - 当应用程序在 ODBC *2.x*驱动程序中设置此驱动程序时，ODBC *3.x*驱动程序管理器将其映射到SQL_ROWSET_SIZE语句属性。<br />- 当应用程序在 ODBC *3.x*驱动程序中设置此驱动程序时，ODBC *3.x*驱动程序管理器将呼叫传递给驱动程序。<br />- 当使用 ODBC *3.x*驱动程序的应用程序调用**SQLSetScrollOptions**时，如果基础驱动程序不支持**SQLSetScrollOptions，** 则SQL_ROWSET_SIZE设置为*RowsetSize*参数中的值。|  
-|SQL_ROWSET_SIZE|设置**SQL 扩展提取**在 ODBC *2.x*应用程序调用**SQL 扩展时**使用的行集大小。 以下是实现详细信息：<br /><br /> - 当应用程序设置此设置时，ODBC *3.x*驱动程序管理器将呼叫传递给驱动程序，而不考虑驱动程序版本。<br />- 当使用 ODBC *2.x*驱动程序的应用程序调用**SQLSetScrollOptions**时，SQL_ROWSET_SIZE设置为**RowsetSize**参数中的值。|  
-|**SQLBulk 操作**|执行插入操作，或通过书签操作更新、删除或提取。 以下是实现详细信息：<br /><br /> - 当应用程序在 ODBC *2.x*驱动程序中调用**具有**SQL_ADD*操作时*，ODBC *3.x*驱动程序管理器将其映射到具有SQL_ADD*操作*的**SQLSetPos。**<br />- 当使用不支持**SQLSetPos**的 ODBC *2.x*驱动程序*Operation*操作SQL_ADD时，ODBC *3.x*驱动程序管理器不会将**SQLSetPos**具有SQL_ADD*操作*映射到具有SQL_ADD*操作*的**SQLBulk 操作**。 这是因为**SQLBulk 操作**不能在状态 S7 中调用，在 ODBC *2.x*中，这是可以调用**SQLSetPos**的唯一状态。<br />- 如果应用程序在调用**SQLFetchScroll**之前在 ODBC *2.x*驱动程序中调用**SQLBulk 操作**，操作SQL_ADD，则 ODBC *3.x*驱动程序管理器将返回错误。 *Operation*|  
-|**SQL 扩展获取**|返回指定的行集。 除了刚才注意到的限制之外，ODBC *3.x*驱动程序管理器将呼叫传递给**SQLExtendedFetch**的驱动程序，而不管驱动程序版本如何。|  
-|**SQLFetch**|返回下一个行集。 以下是实现详细信息：<br /><br /> - 当应用程序在 ODBC *2.x*驱动程序中调用**SQLFetch**时，ODBC *3.x*驱动程序管理器将其映射到**SQL 扩展获取**。 **SQL 扩展获取**的*提取方向*参数设置为SQL_FETCH_NEXT。 驱动程序管理器使用*rowStatusArray*参数的SQL_ATTR_ROW_STATUS_PTR语句属性的缓存值和*RowCountPtr*参数SQL_ATTR_ROWS_FETCHED_PTR语句属性的缓存值。<br />- ODBC *3.x*应用程序可以在 ODBC *2.x*驱动程序中混合对**SQLFetch**和**SQLFetchScroll**的调用，因为当应用程序在 ODBC *2.x*驱动程序中调用 SQLFetch 时，ODBC *3.x*驱动程序管理器将**SQLFetch**映射到**SQLExtendedFetch。**<br />- 如果 ODBC *2.x*驱动程序不支持**SQLExtendedFetch，** 则当应用程序在该驱动程序中调用 SQL 提取时，ODBC *3.x*驱动程序管理器不会将**SQLFetch**或**SQLFetchScroll**映射到**SQL 扩展获取**。 如果应用程序尝试将SQL_ATTR_ROW_ARRAY_SIZE设置为大于 1 的值，则返回 SQLSTATE HYC00（未实现可选功能）。<br />- 除了刚才注意到的限制之外，ODBC *3.x*驱动程序管理器将呼叫传递给**SQLFetch**的驱动程序，而不管驱动程序版本如何。|  
-|**SQLFetchScroll**|返回指定的行集。 以下是实现详细信息：<br /><br /> - 当应用程序在 ODBC *2.x*驱动程序中调用**SQLFetchScroll**时，ODBC *3.x*驱动程序管理器将其映射到**SQL 扩展获取**。 它使用*rowStatusArray*参数的 SQL_ATTR_ROW_STATUS_PTR 语句属性的缓存值和*RowCountPtr*参数的SQL_ATTR_ROWS_FETCHED_PTR语句属性的缓存值。 如果*SQLFetchScroll* **SQLFetchScroll**中的 Fetch 方向参数SQL_FETCH_BOOKMARK，它将使用*fetchOffset*参数的SQL_ATTR_FETCH_BOOKMARK_PTR语句属性的缓存值，如果**SQLFetchScroll**的*FetchOffset*参数不是 0，则返回错误。<br />- 当应用程序在 ODBC *3.x*驱动程序中调用此呼叫时，ODBC *3.x*驱动程序管理器将呼叫传递给驱动程序。|  
-|**SQLSetPos**|执行各种定位操作。 无论驱动程序版本如何，ODBC *3.x*驱动程序管理器都会将对**SQLSetPos**的调用传递给驱动程序。|  
-|**SQLSetScroll 选项**|当驱动程序管理器映射**SQLSetScrollOption 的应用程序 SQLSetScrollOption**时，使用不支持**SQLSetScrollOption**的 ODBC *3.x*驱动程序时，驱动程序管理器将SQL_ROWSET_SIZE语句选项（而不是SQL_ATTR_ROW_ARRAY_SIZE语句属性）设置为**SQLSetScrollOption**中的*RowsetSize*参数。 因此，当调用**SQLFetch**或**SQLFetchScroll**获取多行时，应用程序无法使用**SQLSetScrollOptions。** 它只能在调用**SQLExtendedFetch**获取多行时使用。|
+|SQL_ATTR_FETCH_BOOKMARK_PTR|指向要用于**SQLFetchScroll**的书签。 下面是实现的详细信息：<br /><br /> -当应用程序在 ODBC 2.x 驱动程序中设置此项时 *，odbc 1.X*驱动程序管理器将缓存该*驱动程序。* 当应用程序稍后调用**SQLFetchScroll**时，它将取消引用指针并将值传递给**SQLExtendedFetch**的*FetchOffset*参数中的 ODBC 2.x 驱动*程序。*<br />-当应用程序在 ODBC 1.x*驱动程序*中设置此项时，odbc *3.X 驱动程序*管理器会将该调用传递给驱动程序。|  
+|SQL_ATTR_ROW_STATUS_PTR|指向由**SQLFetch**、 **SQLFetchScroll**、 **SQLBulkOperations**和**SQLSetPos**填充的行状态数组。 下面是实现的详细信息：<br /><br /> -当应用程序在 ODBC 2.x 驱动程序中设置此值时 *，odbc 2.X* *驱动程序管理*器会缓存其值。 调用**SQLFetchScroll**或**SQLFetch**时，它会将此值传递到**SQLExtendedFetch**的*RowStatusArray*参数中*的 ODBC 2.x 驱动程序。*<br />-当应用程序在 ODBC 1.x*驱动程序*中设置此项时，odbc *3.X 驱动程序*管理器会将该调用传递给驱动程序。<br />-在状态 S6 中，如果应用程序 SQL_ATTR_ROW_STATUS_PTR 设置，然后调用**SQLBulkOperations** （*操作*SQL_ADD）或**SQLSetPos** ，而不先调用**SQLFetch**或**SQLFetchScroll**，则将返回 SQLSTATE HY011 （现在不能设置特性）。|  
+|SQL_ATTR_ROWS_FETCHED_PTR|指向缓冲区，其中**SQLFetch**和**SQLFetchScroll**返回提取的行数。 下面是实现的详细信息：<br /><br /> -当应用程序在 ODBC 2.x 驱动程序中设置此值时 *，odbc 2.X* *驱动程序管理*器会缓存其值。 当应用程序调用**SQLFetch**或**SQLFetchScroll**时，它会将此值传递到**SQLExtendedFetch**的*RowCountPtr*参数中*的 ODBC 2.x 驱动程序。*<br />-当应用程序在 ODBC 1.x*驱动程序*中设置此项时，odbc *3.X 驱动程序*管理器会将该调用传递给驱动程序。|  
+|SQL_ATTR_ROW_ARRAY_SIZE|设置行集大小。 下面是实现的详细信息：<br /><br /> -当应用程序在 ODBC 2.x 驱动程序中设置此项时 *，odbc 1.X* *驱动程序管理*器会将其映射到 SQL_ROWSET_SIZE 语句属性。<br />-当应用程序在 ODBC 1.x*驱动程序*中设置此项时，odbc *3.X 驱动程序*管理器会将该调用传递给驱动程序。<br />-当*使用 ODBC 1.x 驱动程序的*应用程序调用**SQLSetScrollOptions**时，如果基础驱动程序不支持**SQLSetScrollOptions**，则会将 SQL_ROWSET_SIZE 设置为*RowsetSize*参数中的值。|  
+|SQL_ROWSET_SIZE|设置*ODBC 2.x*应用程序调用**SQLExtendedFetch**时**SQLExtendedFetch**使用的行集大小。 下面是实现的详细信息：<br /><br /> -当应用程序设置此项时，无论驱动程序版本如何，ODBC 3.x 驱动程序管理器都将传递对*驱动程序的*调用。<br />-当*使用 ODBC 2.x 驱动程序的*应用程序调用**SQLSetScrollOptions**时，SQL_ROWSET_SIZE 设置为**RowsetSize**参数中的值。|  
+|**SQLBulkOperations**|执行插入操作，或更新、删除或通过书签操作提取。 下面是实现的详细信息：<br /><br /> -当应用程序在 ODBC 2.x 驱动程序中使用 SQL_ADD 的*操作*调用**SQLBULKOPERATIONS**时 *，Odbc* *3.x 驱动程序*管理器会将其映射到**SQLSetPos** ，*操作*为 SQL_ADD。<br />-在使用不支持**SQLSetPos** SQL_ADD*操作*的 odbc 2.x 驱动程序时， *Odbc 3.x 驱动**程序管理*器不会将**SQLSetPos**的 SQL_ADD*操作*映射到**SQLBulkOperations** *，操作的*操作为 SQL_ADD。 这是因为不能在 S7 中调用**SQLBulkOperations** ，因为*在 ODBC 2.x*中只能调用**SQLSetPos** 。<br />-如果应用程序在调用**SQLFetchScroll**之前*使用 ODBC 2.x 驱动程序**中的 SQL_ADD*调用**SQLBulkOperations** ，*则 odbc 1.x*驱动程序管理器将返回错误。|  
+|**SQLExtendedFetch**|返回指定的行集。 除了刚才提到的限制之外，ODBC 3.x 驱动程序管理器会将对**SQLExtendedFetch**的调用传递给*驱动程序，* 而不考虑驱动程序版本。|  
+|**SQLFetch**|返回下一个行集。 下面是实现的详细信息：<br /><br /> -当应用程序在 ODBC 2.x 驱动程序中调用**SQLFetch**时 *，odbc* *1.x 驱动程序*管理器会将其映射到**SQLExtendedFetch**。 **SQLExtendedFetch**的*FetchOrientation*参数设置为 SQL_FETCH_NEXT。 驱动程序管理器使用*RowStatusArray*参数的 SQL_ATTR_ROW_STATUS_PTR 语句特性的缓存值，并为*RowCountPtr*参数使用已缓存的 SQL_ATTR_ROWS_FETCHED_PTR 语句特性值。<br />-ODBC 2.x 应用程序可以在 ODBC *2.x 驱动程序*中混合对**SQLFetch**和**SQLFetchScroll**的调用，因为当应用程序*在 odbc* 2.X 驱动程序中调用 SQLFetch 时 *，odbc 2.x* *驱动程序管理*器会将**SQLFetch**映射到**SQLExtendedFetch** 。<br />-如果 ODBC 2.x*驱动程序*不支持**SQLExtendedFetch**，则在应用程序在该驱动程序中调用*该驱动程序*时，它不会将**SQLFetch**或**SQLFetchScroll**映射到**SQLExtendedFetch** 。 如果应用程序尝试将 SQL_ATTR_ROW_ARRAY_SIZE 设置为大于1的值，则返回 SQLSTATE HYC00 （未实现的可选功能）。<br />-除了上面所述的限制之外，ODBC 3.x 驱动程序管理器将对**SQLFetch**的调用传递给*驱动程序，* 而不考虑驱动程序版本。|  
+|**SQLFetchScroll**|返回指定的行集。 下面是实现的详细信息：<br /><br /> -当应用程序在 ODBC 2.x 驱动程序中调用**SQLFetchScroll**时 *，odbc* *1.x 驱动程序*管理器会将其映射到**SQLExtendedFetch**。 它使用*RowStatusArray*参数的 SQL_ATTR_ROW_STATUS_PTR 语句特性的缓存值，并为*RowCountPtr*参数使用已缓存的 SQL_ATTR_ROWS_FETCHED_PTR 语句特性的值。 如果**SQLFetchScroll**中的*FetchOrientation*参数 SQL_FETCH_BOOKMARK，它将使用*FetchOffset*参数的 SQL_ATTR_FETCH_BOOKMARK_PTR 语句特性的缓存值，并在**SQLFetchScroll**的*FetchOffset*参数不为0时返回错误。<br />-当应用程序在 ODBC 1.x 驱动程序中调用此项时 *，odbc 3.X*驱动程序管理器会将调用传递到该*驱动程序。*|  
+|**SQLSetPos**|执行各种定位操作。 ODBC 2.x 驱动程序管理器将对**SQLSetPos**的调用传递给*驱动程序，* 而不考虑驱动程序版本。|  
+|**SQLSetScrollOptions**|当驱动程序管理器为使用不支持**SQLSetScrollOptions***的 ODBC 1.x 驱动程序的*应用程序映射**SQLSetScrollOptions**时，驱动程序管理器会将 SQL_ROWSET_SIZE 语句选项，而不是 SQL_ATTR_ROW_ARRAY_SIZE 语句特性）设置为**SQLSetScrollOption**中的*RowsetSize*参数。 因此，在通过调用**SQLFetch**或**SQLFetchScroll**提取多行时，应用程序不能使用**SQLSetScrollOptions** 。 它只能在通过调用**SQLExtendedFetch**提取多行时使用。|

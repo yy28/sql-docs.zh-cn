@@ -1,5 +1,5 @@
 ---
-title: 连接到数据源或驱动程序 |微软文档
+title: 连接到数据源或驱动程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: e93027ab-9e60-47b7-ba96-8289dae32a22
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 48015cf134b71eb96bd19cdcf61ec2d7fcc04fcc
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307459"
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>连接数据源或驱动程序
-应用程序可以连接到任意数量的驱动程序和数据源。 这些可以是各种驱动程序和数据源、相同的驱动程序和各种数据源，甚至可以是到同一驱动程序和数据源的多个连接。  
+应用程序可以连接到任意数量的驱动程序和数据源。 这些驱动程序和数据源可以是各种驱动程序和数据源、同一驱动程序和各种数据源，甚至是与同一驱动程序和数据源的多个连接。  
   
  本部分包含以下主题。  
   
@@ -38,4 +38,4 @@ ms.locfileid: "81307459"
   
 -   [从数据源或驱动程序断开连接](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md)  
   
--   [驱动程序管理器在连接过程中的角色](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)
+-   [连接过程中的驱动程序管理器的角色](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)

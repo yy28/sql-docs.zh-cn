@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f26fb42531635fd6e5791fbad0cba94f980f23e
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388336"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface"></a>SAP NetWeaver BI 查询设计器用户界面
@@ -104,6 +104,6 @@ ms.locfileid: "81388336"
 -   **删除**（![删除](../../analysis-services/media/rsqdicon-delete.gif "删除")）
 
 ## <a name="see-also"></a>另请参阅
- [创建共享数据集或嵌入式数据集&#40;报表生成器和 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) [RS 报告设计器配置文件](../report-server/rsreportdesigner-configuration-file.md)
+ [创建共享数据集或嵌入数据集 &#40;报表生成器和 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) [rsreportdesigner.config 配置文件](../report-server/rsreportdesigner-configuration-file.md)
 
 

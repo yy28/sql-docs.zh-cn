@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e500d746f3ef0cdfc2d48037467f2ab6ce376d3f
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388327"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>基于文本的查询设计器用户界面（报表生成器）
@@ -56,7 +56,7 @@ ms.locfileid: "81388327"
 |结果|显示查询的结果。 若要运行查询，请右键单击任意窗格，然后单击“运行”，或者单击工具栏中的“运行”按钮********。|
 
 #### <a name="example"></a>示例
- 以下查询`ContactType`返回`Person`架构的**2008** [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]数据库表中的姓氏列表。
+ 下面的[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]查询将返回该`Person`架构的**2008**数据库`ContactType`表中的姓氏列表。
 
 ```
 SELECT Name FROM Person.ContactType
@@ -79,7 +79,7 @@ SELECT Name FROM Person.ContactType
 |结果|显示查询的结果。 若要运行查询，请右键单击任意窗格，然后单击“运行”，或者单击工具栏中的“运行”按钮********。|
 
 #### <a name="example"></a>示例
- 以下查询调用[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008**存储过程`uspGetWhereUsedProductID`。 在运行查询时，您必须为产品标识号参数输入一个值。
+ 下面的查询将调用[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008**存储过程`uspGetWhereUsedProductID`。 在运行查询时，您必须为产品标识号参数输入一个值。
 
 ```
 uspGetWhereUsedProductID
@@ -98,13 +98,13 @@ uspGetWhereUsedProductID
  选择“Command typeTableDirect”时，基于文本的查询设计器将显示两个窗格：“查询”窗格和“结果”窗格****。 如果输入一个表并单击 **“运行”** 按钮，则将返回该表的所有列。
 
 #### <a name="example"></a>示例
- 对于数据源类型 OLE DB，以下数据集查询将返回[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]**2008**数据库中所有联系人类型的结果集。
+ 对于数据源类型 OLE DB，以下数据集查询将为[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008**数据库中的所有联系人类型返回结果集。
 
  `Person.ContactType`
 
  如果输入表名 Person.ContactType，则等同于创建 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句 `SELECT * FROM Person.ContactType`。
 
 ## <a name="see-also"></a>另请参阅
- [关系查询设计器用户界面&#40;报表生成器&#41;](relational-query-designer-user-interface-report-builder.md)[查询设计器&#40;报表生成器&#41;](../query-designers-report-builder.md)
+ [关系查询设计器用户界面 &#40;报表生成器&#41;](relational-query-designer-user-interface-report-builder.md) [查询设计器 &#40;报表生成器](../query-designers-report-builder.md)&#41;
 
 

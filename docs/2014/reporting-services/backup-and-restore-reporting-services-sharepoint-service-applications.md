@@ -1,5 +1,5 @@
 ---
-title: 备份和恢复报告服务 共享点服务应用程序 |微软文档
+title: 备份和还原 Reporting Services SharePoint 服务应用程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59e0de9e8ee6882b19939ef116ef4ac8023782ed
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487546"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>备份和还原 Reporting Services SharePoint 服务应用程序
@@ -75,7 +75,7 @@ ms.locfileid: "81487546"
 ### <a name="verify-execution-account-and-database-authentication"></a>验证执行帐户和数据库身份验证  
  **执行帐户** ：验证您的服务应用程序是否正在使用执行帐户：  
   
-1.  在 SharePoint 管理中心中，单击 **"在应用程序管理**组中**管理服务应用程序**"。  
+1.  在 SharePoint 管理中心的 "**应用程序管理**" 组中，单击 "**管理服务应用程序**"。  
   
 2.  单击您的服务应用程序的名称，然后单击 SharePoint 功能区中的 **“管理”** 。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "81487546"
   
  **数据库身份验证** ：验证您的服务应用程序是否正在使用 Windows 身份验证来进行数据库身份验证：  
   
-1.  在 SharePoint 管理中心中，单击 **"在应用程序管理**组中**管理服务应用程序**"。  
+1.  在 SharePoint 管理中心的 "**应用程序管理**" 组中，单击 "**管理服务应用程序**"。  
   
 2.  单击您的服务应用程序的名称，然后单击 SharePoint 功能区中的 **“属性”** 。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "81487546"
 ### <a name="configure-the-execution-account-and-database-authentication"></a>配置执行帐户和数据库身份验证  
  **执行帐户** ：如果您的服务应用程序正在使用执行帐户，请完成一些步骤对它进行配置：  
   
-1.  在 SharePoint 管理中心中，单击 **"在应用程序管理**组中**管理服务应用程序**"。  
+1.  在 SharePoint 管理中心的 "**应用程序管理**" 组中，单击 "**管理服务应用程序**"。  
   
 2.  单击您的服务应用程序的名称，然后单击 SharePoint 功能区中的 **“管理”** 。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "81487546"
   
  **数据库身份验证** ：如果您的服务应用程序正在使用 Windows 身份验证来进行数据库身份验证，请完成以下步骤：  
   
-1.  在 SharePoint 管理中心中，单击 **"在应用程序管理**组中**管理服务应用程序**"。  
+1.  在 SharePoint 管理中心中，单击 "管理**应用程序管理**" 组中的 "**服务应用程序**"。  
   
 2.  单击您的服务应用程序的名称，然后单击 SharePoint 功能区中的 **“属性”** 。  
   
@@ -152,6 +152,6 @@ ms.locfileid: "81487546"
   
 5.  键入帐户和密码。 如果适当，请选择 **“用作 Windows 凭据”** 。  
   
-6.  单击 **"确定"**  
+6.  单击“确定”   
   
   

@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b5aec5d77f7355b601644907034bce0996080ab
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388375"
 ---
 # <a name="sql-server-native-client-odbc"></a>SQL Server Native Client (ODBC)
@@ -41,15 +41,15 @@ ms.locfileid: "81388375"
   
 -   [创建 SQL Server Native Client ODBC 驱动程序应用程序](../../../relational-databases/native-client/odbc/creating-a-driver-application.md)  
   
--   [与 SQL 服务器通信 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
+-   [与 SQL Server &#40;ODBC&#41;通信](../../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
--   [执行查询&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+-   [&#40;ODBC&#41;执行查询](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
--   [处理结果&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+-   [&#40;ODBC&#41;处理结果](../../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
--   [使用光标&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+-   [使用游标 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
--   [执行交易&#40;ODBC&#41;](https://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
+-   [&#40;ODBC&#41;执行事务](https://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
   
 -   [处理错误和消息](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
@@ -57,30 +57,30 @@ ms.locfileid: "81388375"
   
 -   [使用目录函数](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
   
--   [&#40;ODBC&#41;执行批量复制操作](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+-   [&#40;ODBC&#41;执行大容量复制操作](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
 -   [管理 Text 和 Image 列](../../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  
   
 -   [ODBC 驱动程序性能事件探查](../../../relational-databases/native-client/odbc/profiling-odbc-driver-performance.md)  
   
--   [&#40;ODBC&#41;的表值参数](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+-   [ODBC&#41;&#40;表值参数](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
--   [日期和时间改进&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+-   [ODBC&#41;&#40;的日期和时间改进](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
--   [大型 CLR 用户定义类型&#40;ODBC&#41;](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)  
+-   [&#40;ODBC&#41;的大型 CLR 用户定义类型](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)  
   
--   [文件流支持&#40;ODBC&#41;](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
+-   [FILESTREAM 支持 &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
   
 -   [客户端连接中的服务主体名称 (SPN) (ODBC)](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
   
--   [稀疏列支持&#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)  
+-   [稀疏列支持 &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)  
   
--   [SQL 服务器本机客户端&#40;ODBC&#41; 参考](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)  
+-   [SQL Server Native Client &#40;ODBC&#41; 引用](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)  
   
 -   [ODBC 操作指南主题](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL 服务器本机客户端编程](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
+ [SQL Server Native Client 编程](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [安装 SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
   
   

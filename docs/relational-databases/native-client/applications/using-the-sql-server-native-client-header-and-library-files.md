@@ -1,5 +1,5 @@
 ---
-title: 标题和库文件
+title: 标头和库文件
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,20 +23,20 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 57e4b7c27ed32beaa1139300fdb83c4fb79583df
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388466"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>使用 SQL Server Native Client 头文件和库文件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件和库文件随 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一起安装。 开发应用程序时，应将开发所需的所有文件复制到开发环境并进行安装，这一点非常重要。 有关安装和重新分发[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端的详细信息，请参阅安装[SQL Server 本机客户端](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件和库文件随 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一起安装。 开发应用程序时，应将开发所需的所有文件复制到开发环境并进行安装，这一点非常重要。 有关安装和重新分发[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的详细信息，请参阅[安装 SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件和库文件安装在以下位置：  
   
- *%程序文件%*[微软 SQL 服务器]110_SDK  
+ *% PROGRAM FILES%* \Microsoft SQL Server\110\SDK  
   
  可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件 (sqlncli.h) 向自定义应用程序添加 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 数据访问功能。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件包含利用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的新功能所需的所有定义、特性、属性和接口。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "81388466"
  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口的 OLE DB 应用程序只需引用 sqlncli.h。 如果应用程序使用 MDAC (SQLOLEDB) 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口，则可以同时引用 sqloledb.h 和 sqlncli.h，但必须先引用 sqloledb.h。  
   
 ## <a name="using-the-sql-server-native-client-header-file"></a>使用 SQL Server Native Client 头文件  
- 要使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端标头文件，必须在 C/C++编程代码中使用**include**语句。 以下部分说明如何在 OLE DB 和 ODBC 应用程序中使用该头文件。  
+ 若要使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件，必须在 C/c + + 编程代码中使用**include**语句。 以下部分说明如何在 OLE DB 和 ODBC 应用程序中使用该头文件。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件和库文件只能使用 Visual Studio C++ 2002 或更高版本编译。  
@@ -63,7 +63,7 @@ include "sqlncli.h";
 ```  
   
 > [!NOTE]  
->  如果应用程序同时使用 OLE DB 和 ODBC API，应省略上面显示的第一行代码。 此外，如果应用程序具有 sqloledb.h 的**包含**语句，则 sqlncli.h 的**包含**语句必须位于它之后。  
+>  如果应用程序同时使用 OLE DB 和 ODBC API，应省略上面显示的第一行代码。 此外，如果应用程序具有 sqloledb 的**include**语句，则 sqlncli.msi 的**include**语句必须位于它后面。  
   
  当通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 创建与数据源的连接时，请将“SQLNCLI11”用作访问接口名称字符串。  
   
@@ -76,7 +76,7 @@ include "sqlncli.h";
 ```  
   
 > [!NOTE]  
->  如果应用程序同时使用 OLE DB 和 ODBC API，则应省略上面显示的第一行代码。 此外，如果应用程序的 odbcss.h 具有 `#include` 语句，则应删除该语句。  
+>  如果应用程序使用 OLE DB 和 ODBC Api，则应该省略上面显示的第一行代码。 此外，如果应用程序的 odbcss.h 具有 `#include` 语句，则应删除该语句。  
   
  当通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 创建与数据源的连接时，请将“SQL Server Native Client 11.0”用作驱动程序名称字符串。  
   

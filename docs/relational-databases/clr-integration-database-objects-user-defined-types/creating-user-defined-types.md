@@ -1,6 +1,6 @@
 ---
-title: 创建用户定义类型 |微软文档
-description: 要创建要在 SQL Server 中安装的 UDT，请先使用 .NET 框架编程语言创建类，该语言符合创建 UDT 的规范。
+title: 创建用户定义类型 |Microsoft Docs
+description: 若要创建要在 SQL Server 中安装的 UDT，请先在 .NET Framework 编程语言中创建一个类，这符合创建 Udt 的规范。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,17 +16,17 @@ ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 09480763fe03e5191fdaaf778e2490988a3e334e
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81486945"
 ---
 # <a name="creating-user-defined-types"></a>创建用户定义类型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   若要创建能够在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中安装的用户定义类型 (UDT)，必须首先用一种支持的 .NET Framework 编程语言（例如 Visual C# 或 Visual Basic，该语言符合创建 UDT 的规范）创建一个类。 然后，可以将该类编译为可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中加载的动态链接库 (DLL)。 还可以使用 Visual Studio 创建和部署 UDT。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，能否执行公共语言运行时 (CLR) 代码默认设置为 OFF。 可以使用**sp_configure**系统存储过程启用 CLR，如以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句所示：  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，能否执行公共语言运行时 (CLR) 代码默认设置为 OFF。 可以使用**sp_configure**系统存储过程来启用 CLR，如以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句中所示：  
   
 ```  
 sp_configure 'clr enabled', 1  
@@ -41,7 +41,7 @@ Reconfigure
  演示在创建用户定义类型的过程中涉及的编码方法。  
   
 ## <a name="example"></a>示例  
- 以下代码列表定义了点 UDT，这在[编码用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)中进行了详细介绍。  
+ 下面的代码列表定义了 Point UDT，详细介绍了如何[编码用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)。  
   
  通过安装 CLR 示例，可以获得在本节中讨论的其他示例的完整代码列表。 有关安装这些示例的说明，请参阅[SQL Server 数据库引擎示例](https://msftengprodsamples.codeplex.com/)。  
   

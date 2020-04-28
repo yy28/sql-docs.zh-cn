@@ -1,5 +1,5 @@
 ---
-title: 支持的数据类型 |微软文档
+title: 支持的数据类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,11 +14,11 @@ ms.assetid: a89d4bab-ef3c-45c2-aa72-2639b3e0f856
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: d19cde2d531819a60229dd7a780181571e169503
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307778"
 ---
 # <a name="supported-data-types"></a>支持的数据类型
-DBMS 支持的数据类型差异很大。 应用程序可以通过调用**SQLGetTypeInfo**来确定受支持的数据类型的名称和特征。 由于数据类型名称差异很大，应用程序必须在**CREATE TABLE**语句中使用**SQLGetTypeInfo**返回的数据类型名称。 有关详细信息，请参阅[ODBC 中的数据类型](../../../odbc/reference/develop-app/data-types-in-odbc.md)。
+Dbms 支持的数据类型差别很大。 应用程序可以通过调用**SQLGetTypeInfo**来确定支持的数据类型的名称和特性。 由于数据类型名称的变化很大，因此应用程序必须使用**SQLGetTypeInfo**在**CREATE TABLE**语句中返回的数据类型名称。 有关详细信息，请参阅[ODBC 中的数据类型](../../../odbc/reference/develop-app/data-types-in-odbc.md)。

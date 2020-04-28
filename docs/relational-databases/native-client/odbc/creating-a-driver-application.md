@@ -25,10 +25,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e65eaac59bcc16e123bda3e47af29dc4a836ce5
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388391"
 ---
 # <a name="creating-a-driver-application"></a>创建驱动程序应用程序
@@ -43,7 +43,7 @@ ms.locfileid: "81388391"
 |驱动程序|处理来自应用程序的所有 ODBC 函数调用、连接到数据源、将 SQL 语句从应用程序传递到数据源以及将结果返回给应用程序。 必要时，驱动程序将来自应用程序的 ODBC SQL 转换为数据源使用的本机 SQL。|  
 |数据源|包含驱动程序访问 DBMS 中数据的特定实例所需的所有信息。|  
   
- 使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端 ODBC 驱动程序与 执行[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]以下任务的实例通信的应用程序：  
+ 使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序与实例通信的应用程序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]执行以下任务：  
   
 -   与数据源连接  
   
@@ -55,7 +55,7 @@ ms.locfileid: "81388391"
   
 -   终止与数据源的连接  
   
- 为[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端 ODBC 驱动程序编写的更复杂的应用程序也可能执行以下任务：  
+ 为[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序编写的更复杂的应用程序也可能执行以下任务：  
   
 -   使用游标控制在结果集中的位置  
   
@@ -67,9 +67,9 @@ ms.locfileid: "81388391"
   
 -   调用目录函数来查询有关结果集的属性  
   
--   执行批量复制操作  
+-   执行大容量复制操作  
   
--   管理大型数据（**万字符（最大值****），nvarchar（最大值）** 和**varbinary（最大）** 列操作  
+-   管理大型数据（**varchar （max）**、 **nvarchar （max）** 和**varbinary （max）** 列）操作  
   
 -   在配置数据库镜像时使用重新连接逻辑以便于故障转移  
   
@@ -77,21 +77,21 @@ ms.locfileid: "81388391"
   
  若要进行 ODBC 函数调用，C 或 C++ 应用程序必须包括 sql.h、sqlext.h 和 sqltypes.h 头文件。 若要进行 ODBC 安装程序 API 函数调用，应用程序必须包括 odbcinst.h 头文件。 Unicode ODBC 应用程序必须包括 sqlucode.h 头文件。 ODBC 应用程序必须与 odbc32.lib 文件链接。 调用 ODBC 安装程序 API 函数的 ODBC 应用程序必须与 odbccp32.lib 文件链接。 这些文件包括在 Windows 平台 SDK 中。  
   
- 许多 ODBC 驱动程序（[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]包括本机客户端 ODBC 驱动程序）都提供特定于驱动程序的 ODBC 扩展。 要利用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端 ODBC 特定于驱动程序的扩展，应用程序应包括 sqlncli.h 标头文件。 此头文件包含：  
+ 许多 ODBC 驱动程序（包括[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client odbc 驱动程序）提供特定于驱动程序的 odbc 扩展。 若要利用特定[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]于 NATIVE Client ODBC 驱动程序的扩展插件，应用程序应包含 sqlncli.msi 头文件。 此头文件包含：  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端 ODBC 特定于驱动程序的连接属性。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序特定的连接属性。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端 ODBC 特定于驱动程序的语句属性。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序特定的语句属性。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端 ODBC 特定于驱动程序的列属性。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序特定的列属性。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定的数据类型。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定的用户定义数据类型。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端 ODBC 特定于驱动程序的[SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md)类型。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序特定的[SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md)类型。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端 ODBC 驱动程序诊断字段。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序诊断字段。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定的诊断动态函数代码。  
   
@@ -103,14 +103,14 @@ ms.locfileid: "81388391"
   
 -   调用分布式查询元数据 API 函数，以获取链接服务器及其目录的列表。  
   
- 使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端 ODBC 驱动程序的批量复制功能的任何 C 或 C++ ODBC 应用程序都必须与 sqlncli11.lib 文件链接。 调用分布式查询元数据 API 函数的应用程序也必须与 sqlncli11.lib 文件链接。 sqlncli.h 和 sqlncli11.lib 文件作为[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]开发人员工具的一部分分发。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Include 和 Lib 目录应在编译器的 INCLUDE 和 LIB 路径中，具体如下所示：  
+ 使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序的大容量复制功能的任何 C 或 c + + ODBC 应用程序必须与 sqlncli11 文件链接。 调用分布式查询元数据 API 函数的应用程序也必须与 sqlncli11.lib 文件链接。 Sqlncli.msi 和 sqlncli11 文件作为[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]开发人员工具的一部分进行分发。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Include 和 Lib 目录应在编译器的 INCLUDE 和 LIB 路径中，具体如下所示：  
   
 ```  
 LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Lib;  
 INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Include;  
 ```  
   
- 在生成应用程序过程的早期所做的一个设计决策是应用程序是否需要同时进行多个 ODBC 调用。 有两种方法可支持多个并发 ODBC 调用，将在本节的其余主题中介绍。 有关详细信息，请参阅[ODBC 程序员的参考](https://go.microsoft.com/fwlink/?LinkId=45250)。  
+ 在生成应用程序过程的早期所做的一个设计决策是应用程序是否需要同时进行多个 ODBC 调用。 有两种方法可支持多个并发 ODBC 调用，将在本节的其余主题中介绍。 有关详细信息，请参阅[ODBC 程序员参考](https://go.microsoft.com/fwlink/?LinkId=45250)。  
   
 ## <a name="in-this-section"></a>本节内容  
   

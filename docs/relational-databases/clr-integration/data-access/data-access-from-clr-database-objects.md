@@ -1,6 +1,6 @@
 ---
-title: 来自 CLR 数据库对象的数据访问 |微软文档
-description: CLR 例程可以使用 SQL Server 的 .NET 框架数据提供程序（也称为 SqlClient）从 CLR 数据库对象中访问数据。
+title: 从 CLR 数据库对象进行数据访问 |Microsoft Docs
+description: CLR 例程可以使用 SQL Server 的 .NET Framework 数据提供程序（也称为 "SqlClient"）从 CLR 数据库对象中访问数据。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,18 +24,18 @@ ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5fdd552b0954f0eda838743530ab94e73aa27067
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81485135"
 ---
 # <a name="data-access-from-clr-database-objects"></a>从 CLR 数据库对象进行数据访问
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  通用语言运行时 （CLR） 例程可能轻松访问存储在其运行实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的数据，以及存储在远程实例中的数据。 该例程可以访问的特定数据由代码正在其中运行的用户上下文确定。 使用 .NET 框架数据提供程序从 CLR 数据库对象中访问数据[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，也称为**SqlClient**。 这是由从托管客户端和中间层应用程序访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据的开发人员使用的相同访问接口。 因此，您可以在客户端和中间层应用程序中利用ADO.NET和**SqlClient**的知识。  
+  公共语言运行时（CLR）例程可以轻松地访问存储在其中运行的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例中的数据，以及存储在远程实例中的数据。 该例程可以访问的特定数据由代码正在其中运行的用户上下文确定。 使用的 .NET Framework 数据提供程序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]（也称为**SQLCLIENT**）从 CLR 数据库对象中访问数据。 这是由从托管客户端和中间层应用程序访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据的开发人员使用的相同访问接口。 因此，你可以在客户端和中间层应用程序中利用 ADO.NET 和**SqlClient**的知识。  
   
 > [!NOTE]  
->  默认情况下，不允许用户定义类型方法和用户定义函数执行数据访问。 您必须将**SqlMethodAttribute**或**Sql功能属性****的数据访问**属性设置为**DataAccessKind.Read，** 以启用用户定义类型 （UDT） 方法或用户定义的函数的只读数据访问。 不允许从 UDT 或用户定义函数执行数据修改操作，否则，将在执行时引发异常。  
+>  默认情况下，不允许用户定义类型方法和用户定义函数执行数据访问。 必须将**SqlMethodAttribute**或**SqlFunctionAttribute**的**DataAccess**属性设置为**dataaccesskind.read** ，才能启用从用户定义类型（UDT）方法或用户定义函数的只读数据访问。 不允许从 UDT 或用户定义函数执行数据修改操作，否则，将在执行时引发异常。  
   
  本节只讨论当从 CLR 数据库对象中访问数据时特定的功能差异和行为差异。 有关 ADO.NET 的特性和功能的详细信息，请参阅 .NET Framework SDK 随附的 ADO.NET 文档。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "81485135"
  介绍模拟连接和连接凭据。  
   
  [SQL Server 进程内专用的 ADO.NET 扩展](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  
- 讨论进程内特定的 SqlPipe、SqlContext、SqlTriggerContext 和**SqlDataRecord**对象。 **SqlPipe** **SqlContext** **SqlTriggerContext**  
+ 讨论进程内特定**SqlPipe**、 **SqlContext**、 **SqlTriggerContext**和**SqlDataRecord**对象。  
   
  [CLR 集成和事务](../../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
  介绍 System.Transactions 命名空间中提供的新事务框架如何与 ADO.NET 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR 集成相集成。  

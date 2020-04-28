@@ -16,16 +16,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cf15d32e162dfd7881e6d0418a28e1f10212a44d
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388563"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>创建 SQL Server Native Client OLE DB 访问接口应用程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序应用程序涉及以下步骤：  
+  创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE DB 提供程序应用程序涉及以下步骤：  
   
 1.  建立与数据源的连接。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "81388563"
   
 -   [处理结果](../../relational-databases/native-client-ole-db-provider/processing-results.md)  
   
--   [关于 OLE 数据库属性](../../relational-databases/native-client-ole-db-provider/about-ole-db-properties.md)  
+-   [关于 OLE DB 属性](../../relational-databases/native-client-ole-db-provider/about-ole-db-properties.md)  
   
 -   [在 SQL Server Native Client 中使用 OUTPUT 子句 (OLE DB)](../../relational-databases/native-client-ole-db-provider/using-the-output-clause-with-ole-db-in-sql-server-native-client.md)  
   

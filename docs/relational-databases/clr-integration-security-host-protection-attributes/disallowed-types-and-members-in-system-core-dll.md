@@ -1,6 +1,6 @@
 ---
-title: 系统中的禁止类型和成员。微软文档
-description: SQL Server CLR 编程不允许具有主机保护资源枚举某些值的类型或成员。 本文列出了 System.Core.dll 不允许的值。
+title: 不允许的类型和成员Microsoft Docs
+description: SQL Server CLR 编程不允许使用 HostProtectionResource 枚举的某些值的类型或成员。 本文列出了 System.web 不允许的值。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,18 +11,18 @@ ms.assetid: dcd24cd6-f4ab-42cc-9786-a1604e8a4b4e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e89af3c6f93fb6c8576a6e627eed8e984fb0f0ae
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81486841"
 ---
 # <a name="disallowed-types-and-members-in-systemcoredll"></a>System.Core.dll 中禁用的类型和成员
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通用语言集成 （CLR） 编程不允许使用具有**指定** **System.Security.security.security.Host 保护资源**（具有**外部进程Mgmt、****外部线程****、MayLeakOnAbort、****安全基础结构**、**自影响进程Mgmnt、****自影响线程**、**共享状态**、**同步**或**UI）** 的值的类型或成员。 下表列出了宿主保护属性 (HPA) 值被禁用的 System.Core.dll 程序集的成员和类型。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]公共语言集成（CLR）编程不允许使用具有指定**HostProtectionAttribute**的类型或成员，其值为**ExternalProcessMgmt**、 **ExternalThreading**、 **MayLeakOnAbort**、 **SecurityInfrastructure**、 **SelfAffectingProcessMgmnt**、 **SelfAffectingThreading**、 **SharedState**、**同步**或**UI** **。** 下表列出了宿主保护属性 (HPA) 值被禁用的 System.Core.dll 程序集的成员和类型。  
   
 > [!NOTE]  
->  此列表是通过支持的程序集生成的。 有关详细信息，请参阅支持的[.NET 框架库](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)。  
+>  此列表是通过支持的程序集生成的。 有关详细信息，请参阅[支持的 .NET Framework 库](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)。  
   
 |类型或成员|HPA 值|  
 |--------------------|--------------------|  
@@ -129,10 +129,10 @@ ms.locfileid: "81486841"
 |System.Threading.ReaderWriterLockSlim|MayLeakOnAbort|  
   
 ## <a name="see-also"></a>另请参阅  
- [主机保护属性和 CLR 集成编程](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
- [微软中不允许的类型和成员。](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
- [在 mscorlib.dll 中禁止的类型和成员](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)   
- [系统中的禁止类型和成员。](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
+ [宿主保护属性和 CLR 集成编程](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
+ [不允许的类型和成员在](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
+ [Mscorlib.dll 中禁用的类型和成员](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)   
+ [系统中不允许的类型和成员](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
  [System.Data.dll 中禁用的类型和成员](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)  
   
   
