@@ -1,5 +1,5 @@
 ---
-title: 列-威斯绑定 |微软文档
+title: 按列绑定 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,20 +15,20 @@ ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 538f225de2e08adcd7fea8a27edea35dc4b4e17f
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299147"
 ---
 # <a name="column-wise-binding"></a>按列绑定
-使用按列绑定时，应用程序将一个或两个数组绑定，或者在某些情况下将三个数组绑定到要为其返回数据的每列。 第一个数组保存数据值，第二个数组保存长度/指示器缓冲区。 指标和长度值可以通过将SQL_DESC_INDICATOR_PTR和SQL_DESC_OCTET_LENGTH_PTR描述符字段设置为不同的值存储在单独的缓冲区中;如果完成此操作，则绑定第三个数组。 每个数组包含的元素数与行集中的行数相同。  
+使用按列绑定时，应用程序绑定一个或两个，或在某些情况下绑定到要为其返回数据的每个列的数组。 第一个数组保存数据值，第二个数组保存长度/指示器缓冲区。 可以通过将 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 描述符字段设置为不同的值，将指示器和长度值存储在单独的缓冲区中;如果完成此操作，将绑定第三个数组。 每个数组包含的元素数量与行集中的行数相同。  
   
- 应用程序声明它使用SQL_ATTR_ROW_BIND_TYPE语句属性的按列绑定，该属性确定行集缓冲区的绑定类型，而不是参数集缓冲区。 驱动程序返回每个数组的连续元素中每行的数据。 下图显示了按列绑定的工作原理。  
+ 应用程序声明它将使用按列绑定与 SQL_ATTR_ROW_BIND_TYPE 语句特性，该特性决定行集缓冲区的绑定类型，而不是参数集缓冲区。 驱动程序返回每个数组连续元素中每一行的数据。 下图显示了按列绑定的工作方式。  
   
- ![列&#45;三列的明智绑定](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
+ ![三列的列&#45;明智绑定](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
   
- 例如，以下代码将 10 个元素数组绑定到 OrderID、销售人员和状态列：  
+ 例如，以下代码将10元素数组绑定到 "订单 Id"、"销售人员" 和 "状态" 列：  
   
 ```  
 #define ROW_ARRAY_SIZE 10  

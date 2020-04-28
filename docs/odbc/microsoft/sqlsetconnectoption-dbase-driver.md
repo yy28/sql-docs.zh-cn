@@ -1,5 +1,5 @@
 ---
-title: SQLSet连接选项（dBASE 驱动程序） |微软文档
+title: SQLSetConnectOption （dBASE 驱动程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ ms.assetid: b1924c33-6820-4566-b716-6897807edd0f
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 32bfb4755d308706372c0d863f8246631c122f21
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301518"
 ---
 # <a name="sqlsetconnectoption-dbase-driver"></a>SQLSetConnectOption（dBASE 驱动程序）
 > [!NOTE]  
->  本主题提供特定于 dBASE 驱动程序的信息。 有关此功能的一般信息，请参阅[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)下的相应主题。  
+>  本主题提供了特定于 dBASE 驱动程序的信息。 有关此函数的常规信息，请参阅[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
   
 |fOption|注释|  
 |-------------|-------------|  
-|SQL_ACCESS_MODE|SQL_ACCESS_MODE fOption 可以设置为SQL_MODE_READ_ONLY或SQL_MODE_READ_WRITE。 但是，如果SQL_ACCESS_MODE设置为SQL_MODE_READ_ONLY，则驱动程序不会阻止更新。|  
-|SQL_AUTOCOMMIT|dBASE 驱动程序仅支持SQL_AUTOCOMMIT设置为 ON（默认状态），因为它不支持事务。|  
+|SQL_ACCESS_MODE|SQL_ACCESS_MODE fOption 可以设置为 SQL_MODE_READ_ONLY 或 SQL_MODE_READ_WRITE。 但是，如果 SQL_ACCESS_MODE 设置为 SQL_MODE_READ_ONLY，驱动程序不会阻止更新。|  
+|SQL_AUTOCOMMIT|DBASE 驱动程序只支持将 SQL_AUTOCOMMIT 设置为 ON （默认状态），因为它不支持事务。|  
 |SQL_CURRENT_QUALIFIER|支持。|  
 |SQL_LOGIN_TIMEOUT|不支持。|  
 |SQL_OPT_TRACE|支持。|  

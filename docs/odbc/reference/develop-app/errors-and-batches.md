@@ -1,5 +1,5 @@
 ---
-title: 错误和批次 |微软文档
+title: 错误和批处理 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ ms.assetid: 6debd41d-9f4c-4f4c-a44b-2993da5306f0
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 36a402686a695a08748df24a7b40a228d7a2ca7f
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300427"
 ---
 # <a name="errors-and-batches"></a>错误和批处理
-当执行一批 SQL 语句时发生错误时，可能会出现以下四个结果之一。 （每个可能的结果都是特定于数据源的，甚至可能取决于批处理中包含的语句。  
+当执行一批 SQL 语句时出错时，可能会出现以下四种结果之一。 （每个可能的结果都是特定于数据源，甚至可能依赖于批中包含的语句。）  
   
--   未执行批处理中的语句。  
+-   不执行批处理中的任何语句。  
   
--   未执行批处理中的语句，并且事务将回滚。  
+-   不会执行批处理中的任何语句，并回滚事务。  
   
--   执行错误语句之前的所有语句。  
+-   执行 error 语句之前的所有语句。  
   
--   除错误语句之外的所有语句都执行。  
+-   执行除 error 语句以外的所有语句。  
   
- 在前两种情况下 **，SQLExecute**和**SQLExecDirect**返回SQL_ERROR。 在后两种情况下，它们可能返回SQL_SUCCESS_WITH_INFO或SQL_SUCCESS，具体取决于实现。 在所有情况下，可以使用**SQLGetDiagField、SQLGetDiagRec**或**SQLGetDiagRec** **SQLError**检索进一步的错误信息。 但是，此信息的性质和深度是特定于数据源的。 此外，此信息不可能准确识别错误语句。
+ 在前两种情况下， **SQLExecute**和**SQLExecDirect**返回 SQL_ERROR。 在后两种情况下，它们可能会返回 SQL_SUCCESS_WITH_INFO 或 SQL_SUCCESS，具体取决于实现。 在所有情况下，都可以通过**SQLGetDiagField**、 **SQLGetDiagRec**或**SQLError**检索更多错误信息。 但是，此信息的性质和深度是特定于数据源的。 此外，此信息不可能准确地识别出错的语句。

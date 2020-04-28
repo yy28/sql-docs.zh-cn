@@ -18,16 +18,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fde7a3fd5dadb59895c2edc643d7d482b89370ab
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297620"
 ---
 # <a name="setting-large-data"></a>设置大型数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序，可以通过将指针传递给使用者存储对象来设置 BLOB 数据。  
+  使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序，可以通过将指针传递到使用者存储对象来设置 BLOB 数据。  
   
  使用者创建包含数据的存储对象，并将指向此存储对象的指针传递给访问接口。 然后，访问接口从使用者存储对象读取数据，并将其写入 BLOB 列中。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "81297620"
 ## <a name="how-to-set-large-data"></a>如何设置大型数据  
  为了将指针传递给它自己的存储对象，使用者创建一个绑定 BLOB 列的值的取值函数，然后调用 IRowsetChange::SetData 或 IRowsetChange::InsertRow 方法********。 若要设置 BLOB 数据，请：  
   
-1.  创建一个描述应如何访问 BLOB 列的 DBOBJECT 结构。 将 DBOBJECT 结构的*dwFlag*元素设置为STGM_READ并将*iid*元素设置为IID_ISequentialStream（要公开的接口）。  
+1.  创建一个描述应如何访问 BLOB 列的 DBOBJECT 结构。 将 DBOBJECT 结构的*dwFlag*元素设置为 STGM_READ，并将*iid*元素设置为 IID_ISequentialStream （要公开的接口）。  
   
 2.  设置 DBPROPSET_ROWSET 属性组中的属性，以使行集可更新。  
   
@@ -721,7 +721,7 @@ Exit:
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [BLOB 和 OLE 对象](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+ [Blob 和 OLE 对象](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [使用大值类型](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

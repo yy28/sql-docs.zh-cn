@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo 返回的 Excel 值 |微软文档
+title: SQLGetInfo 返回 Excel 的值 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,24 +17,24 @@ ms.assetid: a0f4c3e4-5906-4ab3-ad34-c606f173169a
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 5e285e8978ae357201458ca9289616df7d404811
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298537"
 ---
 # <a name="sqlgetinfo-returned-values-for-excel"></a>Excel 的 SQLGetInfo 返回值
-下表列出了*fInfoType*参数的 C 语言#defines以及**SQLGetInfo**返回的相应值。 可以通过将列出的 C 语言#defines传递给*fInfoType*参数中的**SQLGetInfo**来检索此信息。 有关**SQLGetInfo**返回的值的详细信息，请参阅*ODBC 程序员的参考*。  
+下表列出了*fInfoType*参数的 C 语言 #defines 和**SQLGetInfo**返回的相应值。 可以通过将列出的 C 语言 #defines 传递到*fInfoType*参数中的**SQLGetInfo**来检索此信息。 有关**SQLGetInfo**返回的值的详细信息，请参阅*ODBC 程序员参考*。  
   
 > [!NOTE]  
->  在**SQLGetInfo**返回 32 位位掩码的位置时，垂直条（&#124;）表示一点或。  
+>  其中**SQLGetInfo**返回32位位掩码，竖线（&#124;）表示按位 or。  
   
-|信息类型|返回值|  
+|InfoType|返回值|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|全部设置|  
+|SQL_AGGREGATE_FUNCTIONS|全部集|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|0|  
 |SQL_ASYNC_MODE|0|  
@@ -81,11 +81,11 @@ ms.locfileid: "81298537"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|如果 ODbc.ini 中使用 DRIVER 关键字，则来自 Odbc.ini 的 DSN 或""，|  
+|SQL_DATA_SOURCE_NAME|来自 Odbc 的 DSN，或 "" （如果在 Odbc 中使用驱动程序关键字）|  
 |SQL_DATA_SOURCE_READ_ONLY|"Y"|  
 |SQL_DATABASE_NAME|当前数据库目录|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|"EXCEL"|  
+|SQL_DBMS_NAME|EXCEL|  
 |SQL_DBMS_VER|多个值|  
 |SQL_DDL_INDEX|0|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
@@ -94,9 +94,9 @@ ms.locfileid: "81298537"
 |SQL_DRIVER_HENV|由驱动程序管理器处理。|  
 |SQL_DRIVER_HLIB|由驱动程序管理器处理。|  
 |SQL_DRIVER_HSTMT|由驱动程序管理器处理。|  
-|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
+|SQL_DRIVER_NAME|"OdbcJt32"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00.nnnn"*（nnnn*指定生成日期）*nnnn*|  
+|SQL_DRIVER_VER|*"4.00" （**nnnn*指定生成日期）|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -111,7 +111,7 @@ ms.locfileid: "81298537"
 |SQL_GETDATA_EXTENSIONS|多个值|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"\`""（回引）|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`" （后引号）|  
 |SQL_KEYWORDS|多个值|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -122,7 +122,7 @@ ms.locfileid: "81298537"
 |SQL_MAX_COLUMNS_IN_INDEX|0|  
 |SQL_MAX_COLUMNS_IN_ORDER_BY|10|  
 |SQL_MAX_COLUMNS_IN_SELECT|255|  
-|SQL_MAX_COLUMNS_IN_TABLE|255<br /><br /> 使用 Microsoft Excel 驱动程序时，CREATE TABLE 语句可能允许 256 列，但 255 列限制仍然有效，插入列 256 将失败。|  
+|SQL_MAX_COLUMNS_IN_TABLE|255<br /><br /> 使用 Microsoft Excel 驱动程序时，CREATE TABLE 语句可能会允许256列，但255列限制仍有效，且 insert into 列256将失败。|  
 |SQL_MAX_CONCURRENT_ACTIVITIES|0|  
 |SQL_MAX_CURSOR_NAME_LEN|64|  
 |SQL_MAX_DRIVER_CONNECTIONS|64|  
@@ -141,7 +141,7 @@ ms.locfileid: "81298537"
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|多个值|  
-|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ 一致性|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|从驱动程序管理器|  
 |SQL_OJ_CAPABILITIES|多个值|  
@@ -155,12 +155,12 @@ ms.locfileid: "81298537"
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|多个值|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|"EXCEL"|  
-|SQL_SPECIAL_CHARACTERS|\`\@#$%^&\*"\""""？：？/><,.!"\_-+=\\[&#124;"|  
+|SQL_SERVER_NAME|EXCEL|  
+|SQL_SPECIAL_CHARACTERS|"\`\@#$%^&~\*\_} {" ";：？/><,.!"-+=\\[] &#124; "|  
 |SQL_STRING_FUNCTIONS|多个值|  
 |SQL_SUBQUERIES|多个值|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|"表"|  
+|SQL_TABLE_TERM|数据表|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|多个值|  

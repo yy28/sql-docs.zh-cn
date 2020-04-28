@@ -1,5 +1,5 @@
 ---
-title: 安装和配置 |微软文档
+title: 安装和配置 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: 4202165e-b89c-47a5-ae59-0c98988caad5
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 0184bc84a2a633b5c5b702a8f445615113a0614b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299987"
 ---
 # <a name="installing-and-configuring"></a>安装和配置
-要下载可视化福克斯Pro ODBC驱动程序，请参阅[可视化福克斯Pro ODBC驱动程序下载网站](https://go.microsoft.com/fwlink/?LinkId=121318)。  
+若要下载 Visual FoxPro ODBC 驱动程序，请参阅[Visual FOXPRO Odbc 驱动程序下载站点](https://go.microsoft.com/fwlink/?LinkId=121318)。  
   
- 本节包含以下主题，以帮助您安装和配置 Microsoft Visual FoxPro ODBC 驱动程序：  
+ 本部分包含以下主题，可帮助你安装和配置 Microsoft Visual FoxPro ODBC 驱动程序：  
   
 -   [系统要求](../../odbc/microsoft/system-requirements-visual-foxpro-odbc-driver.md)  
   
@@ -37,4 +37,4 @@ ms.locfileid: "81299987"
   
 -   [ODBC Visual FoxPro 设置对话框](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)  
   
- 要下载驱动程序，请参阅[可视化福克斯Pro ODBC驱动程序下载网站](https://go.microsoft.com/fwlink/?LinkId=121318)。
+ 若要下载驱动程序，请参阅[Visual FOXPRO ODBC 驱动程序下载站点](https://go.microsoft.com/fwlink/?LinkId=121318)。

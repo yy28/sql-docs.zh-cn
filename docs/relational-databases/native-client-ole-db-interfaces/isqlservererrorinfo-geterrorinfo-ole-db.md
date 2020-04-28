@@ -17,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 69ba76725f5a5d3b21224495554cc2a419265f7e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299917"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  返回指向[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序 SSERRORINFO 结构的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指针，其中包含错误详细信息。  
+  返回一个指针，该[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指针指向包含[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]错误详细信息的 NATIVE Client OLE DB provider SSERRORINFO 结构。  
   
- 本机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端 OLE 数据库提供程序定义**ISQLServer 错误信息**错误接口。 此接口从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误返回详细信息，包括其严重性和状态。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序定义**ISQLServerErrorInfo**错误接口。 此接口从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误返回详细信息，包括其严重性和状态。  
 
   
 ## <a name="syntax"></a>语法  
@@ -55,10 +55,10 @@ HRESULT GetErrorInfo(
  ppSSErrorInfo** 或 ppErrorStrings** 参数为 NULL。  
   
  E_OUTOFMEMORY  
- 本机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端 OLE 数据库提供程序无法分配足够的内存来完成请求。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序无法分配足够的内存来完成请求。  
   
 ## <a name="remarks"></a>备注  
- 本机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端 OLE 数据库提供程序为通过使用者传递的指针返回的 SSERRORINFO 和 OLECHAR 字符串分配内存。 当使用者不再需要访问错误数据时，使用者必须使用 IMalloc::Free 方法释放该内存****。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序为通过使用者传递的指针返回的 SSERRORINFO 和 OLECHAR 字符串分配内存。 当使用者不再需要访问错误数据时，使用者必须使用 IMalloc::Free 方法释放该内存****。  
   
  SSERRORINFO 结构的定义如下所示：  
   
@@ -76,7 +76,7 @@ typedef struct tagSSErrorInfo
 SSERRORINFO;  
 ```  
   
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |pwszMessage**|来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的错误消息。 消息是通过 IErrorInfo::GetDescription 方法返回的****。|  
 |pwszServer**|在其上发生了该错误的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|  
@@ -89,7 +89,7 @@ SSERRORINFO;
  结构中的指针引用在 ppErrorStrings 参数中返回的字符串中的地址**。  
   
 ## <a name="see-also"></a>另请参阅  
- [ISQLServer错误信息&#40;OLE DB&#41;](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
+ [ISQLServerErrorInfo &#40;OLE DB&#41;](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

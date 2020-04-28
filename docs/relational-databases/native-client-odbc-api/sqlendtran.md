@@ -1,5 +1,5 @@
 ---
-title: SQLEndTran |微软文档
+title: SQLEndTran |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f2c4851b4cbb88c0d927aa4739e06501ce5ca1b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298507"
 ---
 # <a name="sqlendtran"></a>SQLEndTran
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]当**SQLEndTran**提交或回滚操作时，本机客户端 ODBC 驱动程序将关闭语句的关联游标。 服务器游标将关闭，除非它们是静态的。 当**SQLEndTran**提交或回滚操作时，语句关联游标的行为由特定于驱动程序的 ODBC 连接属性的值SQL_COPT_SS_PRESERVE_CURSORS由[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)设置。  
+  默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在**SQLEndTran**提交或回滚操作时，Native Client ODBC 驱动程序会关闭语句的关联游标。 服务器游标将关闭，除非它们是静态的。 当**SQLEndTran**提交或回滚操作时，语句的关联游标的行为取决于驱动程序特定的 ODBC 连接属性的值，SQL_COPT_SS_PRESERVE_CURSORS，由[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)设置。  
   
 ## <a name="see-also"></a>另请参阅  
- [ODBC API 实施详细信息](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
+ [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [SQLEndTran 函数](https://go.microsoft.com/fwlink/?LinkId=59342)  
   
   

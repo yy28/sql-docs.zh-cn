@@ -1,5 +1,5 @@
 ---
-title: 批量复制来自程序变量 （ODBC） 的数据 |微软文档
+title: 从程序变量大容量复制数据（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ebabedb2c801881a4dc908ead93515dc9119fc3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299600"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>从程序变量大容量复制数据 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  此示例演示如何使用批量复制函数使用**bcp_bind**和**bcp_sendrow**将数据从程序变量批量复制到 SQL Server。 （为简化此示例，已删除错误检查代码。）  
+  此示例演示如何使用大容量复制函数将数据从程序变量大容量复制到使用**bcp_bind**和**bcp_sendrow**的 SQL Server。 （为简化此示例，已删除错误检查代码。）  
   
  此示例是面向 ODBC 3.0 版或更高版本开发的。  
   
@@ -48,28 +48,28 @@ ms.locfileid: "81299600"
   
     -   副本的方向：DB_IN 从应用程序到视图或表，或 DB_OUT 从表或视图到应用程序。  
   
-5.  对批量副本中的每个列调用[bcp_bind](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)以将列绑定到程序变量。  
+5.  为大容量复制中的每个列调用[bcp_bind](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) ，以将列绑定到程序变量。  
   
-6.  用数据填充程序变量，并调用[bcp_sendrow](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)发送一行数据。  
+6.  使用数据填充程序变量，并调用[bcp_sendrow](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)发送一行数据。  
   
-7.  发送几行后[，bcp_batch调用](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)已发送的行检查点。 最好每 1000 行至少调用[一次bcp_batch。](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)  
+7.  在发送若干行后，调用[bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)以检查已发送行的检查点。 最好至少为每1000行调用一次[bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) 。  
   
-8.  发送所有行后[，bcp_done调用](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)以完成该操作。  
+8.  发送完所有行后，调用[bcp_done](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)以完成操作。  
 
- 在批量复制操作期间，可以通过调用[bcp_colptr](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md)和[bcp_collen](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)来更改程序变量的位置和长度。 使用[bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)设置各种批量复制选项。 使用[bcp_moretext](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)向服务器发送段中**的文本****、ntext**和**图像**数据。  
+ 在大容量复制操作期间，可以通过调用[bcp_colptr](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md)和[bcp_collen](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)，改变程序变量的位置和长度。 使用[bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)设置各种大容量复制选项。 使用[bcp_moretext](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)将段中的**text**、 **ntext**和**image**数据发送到服务器。  
   
 ## <a name="example"></a>示例  
  IA64 平台不支持此示例。  
   
- 需要一个名为 AdventureWorks 的 ODBC 数据源，其默认数据库是 AdventureWorks 示例数据库。 （可以从[Microsoft SQL 服务器示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页下载 AdventureWorks 示例数据库。此数据源必须基于操作系统提供的 ODBC 驱动程序（驱动程序名称为"SQL Server"）。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
+ 需要一个名为 AdventureWorks 的 ODBC 数据源，其默认数据库是 AdventureWorks 示例数据库。 （您可以从 " [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)" 主页下载 AdventureWorks 示例数据库。）此数据源必须基于操作系统提供的 ODBC 驱动程序（驱动程序名称为 "SQL Server"）。 如果您要将此示例构建为在 64 位操作系统上运行的 32 位应用程序并运行该示例，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  
   
  此示例连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 若要连接到命名实例，请更改 ODBC 数据源的定义以使用以下格式指定实例：server\namedinstance。 默认情况下，[!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] 将安装在命名实例中。  
   
- 执行第一个[!INCLUDE[tsql](../../../includes/tsql-md.md)]（ ） 代码列表以创建示例将使用的表。  
+ 执行第一个（ [!INCLUDE[tsql](../../../includes/tsql-md.md)]）代码列表，以创建此示例将使用的表。  
   
  使用 odbc32.lib 和 odbcbcp.lib 编译第二个 (C++) 代码列表。 如果用 MSBuild.exe 生成示例，请先将 Bcpfmt.fmt 和 Bcpodbc.bcp 从项目目录复制到 .exe 文件所在的目录，然后调用 .exe。  
   
- 执行第三个[!INCLUDE[tsql](../../../includes/tsql-md.md)]（ ） 代码列表以删除示例使用的表。  
+ 执行第三个[!INCLUDE[tsql](../../../includes/tsql-md.md)]（）代码列表，以删除该示例使用的表。  
   
 ```  
 // compile with: odbc32.lib odbcbcp.lib  
@@ -304,7 +304,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [使用 SQL Server ODBC 驱动程序"如何"主题进行批量复制&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [SQL Server ODBC 驱动程序的大容量复制操作指南主题 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [从程序变量执行大容量复制](../../../relational-databases/native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md)  
   
   

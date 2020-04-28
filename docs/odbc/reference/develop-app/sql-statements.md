@@ -1,5 +1,5 @@
 ---
-title: SQL 语句 |微软文档
+title: SQL 语句 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: 78133ee0-1e2f-4dc8-81f6-3bac8eb21332
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: bda24e8d22bda3a692237215b9d5f1904f5903a4
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299777"
 ---
 # <a name="sql-statements"></a>SQL 语句
-ODBC 应用程序通过执行 SQL 语句执行几乎所有数据库访问。 这些语句的形式 - 硬编码或构造在运行时，可互操作或数据源特定，等等 - 取决于应用程序的需求。  
+ODBC 应用程序通过执行 SQL 语句来执行几乎所有数据库访问。 这些语句的形式（在运行时硬编码或构造、互操作或特定于数据源等）取决于应用程序的需求。  
   
  本部分包含以下主题。  
   

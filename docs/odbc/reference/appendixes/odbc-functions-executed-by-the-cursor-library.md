@@ -1,5 +1,5 @@
 ---
-title: 光标库执行的 ODBC 函数 |微软文档
+title: 游标库执行的 ODBC 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,17 +16,17 @@ ms.assetid: 2f1d3386-7e59-4d55-a5b4-3440b61343a3
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 70fb48a8764a913ea4c2376c1a44bcd8712e7d29
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298227"
 ---
 # <a name="odbc-functions-executed-by-the-cursor-library"></a>由游标库执行的 ODBC 函数
 > [!IMPORTANT]  
->  此功能将在将来版本的 Windows 中删除。 避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的光标功能。  
+>  此功能将在 Windows 的将来版本中删除。 避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
   
- 游标库执行以下函数。 当应用程序调用此列表中的函数时，驱动程序管理器调用游标库，而不是驱动程序。 请注意，在执行函数时，游标库可能会调用驱动程序。  
+ 游标库执行以下函数。 当应用程序调用此列表中的函数时，驱动程序管理器将调用游标库，而不是驱动程序。 请注意，在执行函数时，游标库可能会调用该驱动程序。  
   
 |||  
 |-|-|  
@@ -35,12 +35,12 @@ ms.locfileid: "81298227"
 |**SQLBindParameter**|**SQLNumParams**|  
 |**SQLCloseCursor**|**SQLParamOptions**|  
 |**SQLEndTran**|**SQLRowCount**|  
-|**SQL 扩展获取**|**SQLSetConnectAttr**|  
-|**SQLFetchScroll**|**SQLSet 连接选项**|  
+|**SQLExtendedFetch**|**SQLSetConnectAttr**|  
+|**SQLFetchScroll**|**SQLSetConnectOption**|  
 |**SQLFreeHandle**|**SQLSetDescField**|  
 |**SQLFreeStmt**|**SQLSetDescRec**|  
 |**SQLGetData**|**SQLSetPos**|  
-|**SQLGetDescField**|**SQLSetScroll 选项**|  
+|**SQLGetDescField**|**SQLSetScrollOptions**|  
 |**SQLGetDescRec**|**SQLSetStmtAttr**|  
 |**SQLGetFunctions**|**SQLSetStmtOption**|  
 |**SQLGetInfo**|**SQLTransact**|  

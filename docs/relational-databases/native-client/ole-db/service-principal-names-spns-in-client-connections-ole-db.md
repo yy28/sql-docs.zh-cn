@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: de214361ce06c6f0ff103c4e591ff4e5e53d887c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81295601"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>客户端连接中的服务主体名称 (SPN) (OLE DB)
@@ -26,7 +26,7 @@ ms.locfileid: "81295601"
 ## <a name="provider-initialization-string-keywords"></a>访问接口初始化字符串关键字  
  以下访问接口初始化字符串关键字支持 OLE DB 应用程序中的 SPN。 在下表中，关键字列中的值用于 IDBInitialize::Initialize 的访问接口字符串。 使用 ADO 或 IDataInitialize::GetDataSource 建立连接时，在初始化字符串中使用说明列中的值。  
   
-|关键字|描述|“值”|  
+|关键字|说明|值|  
 |-------------|-----------------|-----------|  
 |ServerSPN|服务器 SPN|服务器的 SPN。 默认值为空字符串，这会使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用访问接口生成的默认 SPN。|  
 |FailoverPartnerSPN|故障转移伙伴 SPN|故障转移伙伴的 SPN。 默认值为空字符串，这会使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用访问接口生成的默认 SPN。|  
@@ -50,7 +50,7 @@ ms.locfileid: "81295601"
 ## <a name="ole-db-api-support-for-spns"></a>OLE DB API 对 SPN 的支持  
  下表对支持客户端连接中的 SPN 的 OLE DB 成员函数进行了说明：  
   
-|成员函数|描述|  
+|成员函数|说明|  
 |---------------------|-----------------|  
 |IDataInitialize::GetDataSource|pwszInitializationString 可以包含新关键字 ServerSPN 和 FailoverPartnerSPN**********。|  
 |IDataInitialize::GetInitializationString|如果 SSPROP_INIT_SERVERSPN 和 SSPROP_INIT_FAILOVERPARTNERSPN 没有默认值，将通过 ppwszInitString 将它们包括在初始化字符串中，作为 ServerSPN 和 FailoverPartnerSPN 的关键字值**********。 如果有默认值，这些关键字将不包括在初始化字符串中。|  

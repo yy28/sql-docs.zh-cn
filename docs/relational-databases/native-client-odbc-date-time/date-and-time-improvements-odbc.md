@@ -1,5 +1,5 @@
 ---
-title: 日期和时间改进 （ODBC） |微软文档
+title: 日期和时间改进（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 94a9b8517ebd2539250995fea896c53a376fc65d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301745"
 ---
 # <a name="date-and-time-improvements-odbc"></a>日期和时间改进 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]引入了新的日期和时间数据类型。 本节介绍这些新类型如何作为本机客户端中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]扩展公开。 有关新日期和时间数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的本机客户端支持的概述，请参阅[日期和时间改进](../../relational-databases/native-client/features/date-and-time-improvements.md)。 有关演示 ODBC 日期/时间支持的示例，请参阅[使用日期和时间类型](../../relational-databases/native-client-odbc-how-to/use-date-and-time-types.md)。  
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]引入了新的日期和时间数据类型。 本部分介绍如何将这些新类型作为本机客户端[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的扩展公开。 有关对新日期[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和时间数据类型的 Native Client 支持的概述，请参阅[日期和时间改进](../../relational-databases/native-client/features/date-and-time-improvements.md)。 有关演示 ODBC 日期/时间支持的示例，请参阅[使用日期和时间类型](../../relational-databases/native-client-odbc-how-to/use-date-and-time-types.md)。  
   
  有关日期和时间数据类型的更多常规信息，请参阅 [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md)。  
   
@@ -32,19 +32,19 @@ ms.locfileid: "81301745"
  [针对 ODBC 日期/时间改进的数据类型支持](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)  
  提供有关支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期和时间数据类型的 ODBC 类型的信息。  
   
- [元数据&#40;ODBC&#41;](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
- 描述在实现参数描述符 （IPD） 和实现行描述符 （IRD） 字段中返回的信息，以及**SQLColumn**和**SQLAAColumn**返回的列元数据。 还描述了**SQLGetTypeInfo**返回的数据类型元数据。  
+ [Metadata &#40;ODBC&#41;](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
+ 描述在实现参数描述符（IPD）和实现行描述符（IRD）字段中返回的信息，以及**SQLColumns**和**SQLProcedureColumns**返回的列元数据。 还介绍**SQLGetTypeInfo**返回的数据类型元数据。  
   
- [日期时间数据类型转换&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-odbc.md)  
+ [datetime 数据类型转换 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-odbc.md)  
  描述如何在 datetime 值和 datetimeoffset 值之间进行转换。  
   
  [sql_variant 对日期和时间类型的支持](../../relational-databases/native-client-odbc-date-time/sql-variant-support-for-date-and-time-types.md)  
  描述用于获得增强的日期和时间功能的 SQL_VARIANT 函数支持。  
   
- [用于增强日期和时间类型的批量复制更改，&#40;OLE DB 和 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)  
+ [&#40;OLE DB 和 ODBC 的增强日期和时间类型的大容量复制&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)  
  描述支持大容量复制操作的日期/时间增强功能。  
   
- [具有早期 SQL 服务器版本的增强的日期和时间类型行为&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc.md)  
+ [早期 SQL Server 版本的增强日期和时间类型行为 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc.md)  
  描述使用日期和时间增强功能的客户端应用程序与早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通信时的预期行为，以及使用早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 编译的客户端向支持日期和时间增强功能的服务器发送命令时的预期行为。  
   
  [ODBC API 对日期和时间增强功能的支持](../../relational-databases/native-client-odbc-date-time/odbc-api-support-for-enhanced-date-and-time-features.md)  

@@ -1,5 +1,5 @@
 ---
-title: 删除数据源 （ODBC） |微软文档
+title: 删除数据源（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 93ea12968c92f7849876d29d31207b8028714482
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81294460"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>配置 SQL Server ODBC 驱动程序 - 删除数据源
@@ -25,20 +25,20 @@ ms.locfileid: "81294460"
 
   将 ODBC 应用程序用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本之前，必须了解如何升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本上的目录存储过程的版本，以及如何添加、删除和测试数据源。  
   
-  您可以通过使用 ODBC 管理员以编程方式（通过使用[SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)）或删除文件（如果文件数据源名称）来删除数据源。  
+  您可以使用 ODBC 管理器、以编程方式（通过使用[SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)）或通过删除文件（如果是文件数据源名称）来删除数据源。  
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>通过使用 ODBC 管理器删除数据源  
   
-1.  在**控制面板**中，打开**管理工具**，然后双击**ODBC 数据源（64 位）** 或**ODBC 数据源 （32 位）。** 或者，也可以从命令提示符处运行 odbcad32.exe。  
+1.  在 "**控制面板**" 中，打开 "**管理工具**"，然后双击 " **odbc 数据源（64位）** " 或 " **odbc 数据源（32位）**"。 或者，也可以从命令提示符处运行 odbcad32.exe。  
   
-2.  单击**用户 DSN、****系统 DSN**或**文件 DSN**选项卡。  
+2.  单击 "**用户 dsn**"、"**系统 dsn**" 或 "**文件 dsn** " 选项卡。  
   
 3.  选择要删除的数据源。  
   
-4.  单击 **"删除**"，然后确认删除。  
+4.  单击 "**删除**"，然后确认删除。  
 
 ## <a name="example"></a>示例  
- 要以编程方式删除数据源，请使用ODBC_REMOVE_DSN或ODBC_REMOVE_SYS_DSN作为第二个参数调用[SQLConfigDataSource。](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)  
+ 若要以编程方式删除数据源，请使用 ODBC_REMOVE_DSN 或 ODBC_REMOVE_SYS_DSN 作为第二个参数来调用[SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md) 。  
   
  以下示例显示如何以编程方式删除数据源。  
   
@@ -60,6 +60,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [添加数据源&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
+ [&#40;ODBC 添加数据源&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
   
   

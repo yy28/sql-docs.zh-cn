@@ -1,5 +1,5 @@
 ---
-title: 甲骨文程序员的ODBC驱动程序&#39;参考 |微软文档
+title: 用于 Oracle 程序员&#39;s 参考的 ODBC 驱动程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ ms.assetid: d70e79a1-6403-49ad-8713-eda6e8aa287e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 763c9892836b262f308b82ef96794a03dc33fd12
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298117"
 ---
-# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>Oracle 程序员&#39;参考的 ODBC 驱动程序
+# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>用于 Oracle 程序员&#39;s 参考的 ODBC 驱动程序
 > [!IMPORTANT]  
->  此功能将在将来版本的 Windows 中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 而是使用 Oracle 提供的 ODBC 驱动程序。  
+>  此功能将在 Windows 的将来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 请改用 Oracle 提供的 ODBC 驱动程序。  
   
  本部分包括以下主题：  
   
@@ -41,14 +41,14 @@ ms.locfileid: "81298117"
   
 -   [使用由键集驱动的游标的限制](../../odbc/microsoft/limitations-of-using-keyset-driven-cursors.md)  
   
--   [适用于 Oracle 存储过程的 ODBC 驱动程序](../../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md)  
+-   [Oracle 存储过程的 ODBC 驱动程序](../../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md)  
   
--   [甲骨文错误消息的 ODBC 驱动程序](../../odbc/microsoft/error-messages-odbc-driver-for-oracle.md)  
+-   [用于 Oracle 的 ODBC 驱动程序错误消息](../../odbc/microsoft/error-messages-odbc-driver-for-oracle.md)  
   
--   [ODBC 符合性级别](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md)  
+-   [ODBC 一致性级别](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md)  
   
--   [API 功能](../../odbc/microsoft/api-functions-odbc-driver-for-oracle.md)  
+-   [API 函数](../../odbc/microsoft/api-functions-odbc-driver-for-oracle.md)  
   
--   [支持数据类型](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)  
+-   [支持的数据类型](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)  
   
 -   [映射数据类型](../../odbc/microsoft/mapping-data-types-odbc-driver-for-oracle.md)

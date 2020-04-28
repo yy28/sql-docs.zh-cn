@@ -1,5 +1,5 @@
 ---
-title: 更新数据概述 |微软文档
+title: 更新数据概述 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 062036a4-cda6-4aaa-9765-f1ec3e0b31b1
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9972ab61f041385ae4ca616df093ae63ad7a47d9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300383"
 ---
 # <a name="updating-data-overview"></a>更新数据概述
-应用程序可以通过执行 SQL 语句或调用**SQLSetPos**或**SQLBulk 操作**来更新数据。 **更新**、**删除**和**插入**语句直接作用于数据源，通常由驱动程序支持。 搜索的更新和删除语句包含要更改的行的规范。 定位的更新和删除语句和**SQLSetPos**通过游标对数据源执行操作，并且不太广泛支持。  
+应用程序可以通过执行 SQL 语句或通过调用**SQLSetPos**或**SQLBulkOperations**来更新数据。 **UPDATE**、 **DELETE**和**INSERT**语句直接对数据源执行操作，并且通常由驱动程序支持。 搜索的 update 和 delete 语句包含要更改的行的规范。 定位的 update 和 delete 语句和**SQLSetPos**通过游标对数据源执行操作，但不受广泛支持。  
   
- 游标能否使用本节中描述的方法检测对结果集所做的更改取决于游标的类型及其实现方式。 仅转发游标不会重新访问行，因此不会检测到任何更改。 有关可滚动游标是否可以检测更改的信息，请参阅[可滚动游标](../../../odbc/reference/develop-app/scrollable-cursors.md)。  
+ 如果游标能检测到对结果集所做的更改，则此部分中所述的方法取决于游标的类型和实现方式。 只进游标不会重新访问行，因此将不会检测到任何更改。 有关可滚动游标能否检测更改的信息，请参阅可[滚动游标](../../../odbc/reference/develop-app/scrollable-cursors.md)。  
   
  本部分包含以下主题。  
   

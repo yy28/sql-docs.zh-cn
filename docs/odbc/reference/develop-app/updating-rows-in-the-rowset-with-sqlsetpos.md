@@ -1,5 +1,5 @@
 ---
-title: 使用 SQLSetPos 更新行 |微软文档
+title: 用 SQLSetPos 更新行集中的行 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,32 +15,32 @@ ms.assetid: d83a8c2a-5aa8-4f19-947c-79a817167ee1
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 4851d4ba741379fc188b2b88c895a378ef3bb80d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298967"
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>使用 SQLSetPos 更新行集中的行
-**SQLSetPos**的更新操作使数据源使用每个绑定列的应用程序缓冲区中的数据更新表的一个或多个选定行（除非长度/指示器缓冲区中的值SQL_COLUMN_IGNORE）。 未绑定的列将不会更新。  
+**SQLSetPos**的更新操作使数据源可以更新表中的一个或多个选定行，并使用应用程序缓冲区中的数据作为每个绑定列（除非长度/指示器缓冲区中的值 SQL_COLUMN_IGNORE）。 不会更新未绑定的列。  
   
- 要使用**SQLSetPos**更新行，应用程序执行以下操作：  
+ 若要更新**SQLSetPos**的行，应用程序执行以下操作：  
   
-1.  将新的数据值放在行集缓冲区中。 有关如何使用**SQLSetPos**发送长数据的信息，请参阅[长数据和 SQLSetPos 和 SQLBulk 操作](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md)。  
+1.  将新数据值置于行集缓冲区中。 有关如何通过**SQLSetPos**发送长数据的信息，请参阅[Long data And SQLSetPos and SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md)。  
   
-2.  根据需要设置每列的长度/指示器缓冲区中的值。 这是数据或SQL_NTS的字节长度，用于绑定到字符串缓冲区的列、绑定到二进制缓冲区的列的数据字节长度，以及要设置为 NULL 的任何列SQL_NULL_DATA。  
+2.  根据需要设置每列的长度/指示器缓冲区中的值。 这是绑定到字符串缓冲区的列的数据或 SQL_NTS 的字节长度、绑定到二进制缓冲区的列的数据字节长度，以及要设置为 NULL 的所有列的 SQL_NULL_DATA。  
   
-3.  设置不更新为SQL_COLUMN_IGNORE列的长度/指示器缓冲区中的值。 尽管应用程序可以跳过此步骤并重新发送现有数据，但这效率低下，并且可能会将值发送到读取时被截断的数据源。  
+3.  设置那些列的长度/指示器缓冲区中的值，这些列不会更新为 SQL_COLUMN_IGNORE。 尽管应用程序可以跳过此步骤并重新发送现有数据，但这种情况很低效，将值发送到数据源（在读取时被截断）。  
   
-4.  将**SQLSetPos**设置为SQL_UPDATE，*Operation**行号*设置为要更新的行数。 如果*RowNumber*为 0，则将更新行集中的所有行。  
+4.  调用**SQLSetPos** SQL_UPDATE SQLSetPos *，并将* *RowNumber*设置为要更新的行号。 如果*RowNumber*为0，则行集中的所有行都将被更新。  
   
- **SQLSetPos**返回后，当前行将设置为更新的行。  
+ **SQLSetPos**返回后，将当前行设置为更新的行。  
   
- 更新行集的所有行（*行数*等于 0）时，应用程序可以通过将行操作数组的相应元素（由SQL_ATTR_ROW_OPERATION_PTR语句属性指向）设置为SQL_ROW_IGNORE来禁用某些行的更新。 行操作数组的大小和元素数对应于行状态数组（由SQL_ATTR_ROW_STATUS_PTR语句属性指向）。 要仅更新结果集中成功提取且尚未从行集中删除的行，应用程序使用从将行集作为行操作数组获取为**SQLSetPos**的函数中的行状态数组。  
+ 更新行集的所有行（*RowNumber*等于0）时，应用程序可以通过将行操作数组（由 SQL_ATTR_ROW_OPERATION_PTR 语句特性指向）的相应元素设置为 SQL_ROW_IGNORE 来禁用特定行的更新。 行操作数组对应于行状态数组的元素的大小和数量（由 SQL_ATTR_ROW_STATUS_PTR 语句特性指向）。 若要仅更新结果集中已成功获取并且尚未从行集中删除的那些行，应用程序将使用从提取行集的函数中的行状态数组作为行操作数组到**SQLSetPos**。  
   
- 对于作为更新发送到数据源的每一行，应用程序缓冲区应具有有效的行数据。 如果应用程序缓冲区是通过提取填充的，并且已维护行状态数组，则不应SQL_ROW_DELETED、SQL_ROW_ERROR或SQL_ROW_NOROW这些行位置的值。  
+ 对于作为更新发送到数据源的每一行，应用程序缓冲区应具有有效的行数据。 如果已通过提取填充应用程序缓冲区，并且已维护行状态数组，则在这些行位置的每个位置上的值不应为 SQL_ROW_DELETED、SQL_ROW_ERROR 或 SQL_ROW_NOROW。  
   
- 例如，以下代码允许用户滚动浏览"客户"表并更新、删除或添加新行。 在调用**SQLSetPos**更新或添加新行之前，它会将新数据放在行集缓冲区中。 在行集缓冲区的末尾分配一个额外的行以容纳新行;这样可以防止将新行的数据放置在缓冲区中时覆盖现有数据。  
+ 例如，以下代码允许用户滚动浏览 Customers 表，并更新、删除或添加新行。 它将新数据置于行集缓冲区中，然后再调用**SQLSetPos**以更新或添加新行。 在行集缓冲区末尾分配一个额外的行，以便保存新行;这可以防止在将新行的数据放置到缓冲区中时覆盖现有数据。  
   
 ```  
 #define UPDATE_ROW   100  

@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2f15092bd515ed16a470c854168b228d5445e3d6
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300947"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>枚举 OLE DB 数据源 (OLE DB)
@@ -25,7 +25,7 @@ ms.locfileid: "81300947"
 
   此示例显示如何使用枚举器对象列出可用数据源。  
   
- 要列出 SQLOLEDB 枚举器可见的数据源，使用者调用[ISourcesRowset：：getSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312)方法。 此方法返回与当前可见数据源有关的信息的行集。  
+ 若要列出对 SQLOLEDB 枚举器可见的数据源，使用者将调用[ISourcesRowset：： GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312)方法。 此方法返回与当前可见数据源有关的信息的行集。  
   
  根据所使用的网络库，将搜索相应的域以找到数据源。 对于命名管道，将搜索客户端登录到的域。 对于 AppleTalk，将搜索默认区域。 对于 SPX/IPX，将搜索在平构数据库中找到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的列表。 对于 Banyan VINES，将搜索在本地网络中找到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装。 不支持多协议和 TCP/IP 套接字。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "81300947"
  此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保留凭据，则应使用[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)对其进行加密。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，则应通过[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)对其进行加密。  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>枚举 OLE DB 数据源  
   
@@ -51,7 +51,7 @@ ms.locfileid: "81300947"
 6.  通过调用 IRowset::GetData 从行集中该行的副本检索数据，然后处理这些数据****。  
   
 ## <a name="example"></a>示例  
- 使用 ole32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 确保 INCLUDE 环境变量包含包含 sqlncli.h 的目录。  
+ 使用 ole32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。  
   
 ```  
 // compile with: ole32.lib  

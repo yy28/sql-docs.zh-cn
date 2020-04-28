@@ -1,5 +1,5 @@
 ---
-title: 使用 SQLDriverConnect 连接 |微软文档
+title: 与 SQLDriverConnect 连接 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,14 +21,14 @@ ms.assetid: e46e959f-d3c5-4ddb-810a-107bfcb83fd2
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6cd95364d8a5316a50d9f55616236a8677bf99e4
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299067"
 ---
 # <a name="connecting-with-sqldriverconnect"></a>使用 SQLDriverConnect 连接
-**SQLDriverConnect**用于使用连接字符串连接到数据源。 **SQLDriverConnect**的使用而不是**SQLConnect，** 原因如下：  
+**SQLDriverConnect**用于连接到使用连接字符串的数据源。 使用**SQLDriverConnect**而不是**SQLConnect** ，原因如下：  
   
 -   让应用程序使用特定于驱动程序的连接信息。  
   

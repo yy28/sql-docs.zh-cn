@@ -1,5 +1,5 @@
 ---
-title: Oracle 用户&#39;指南的 ODBC 驱动程序 |微软文档
+title: Oracle User&#39;的 ODBC 驱动程序指南 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 09eed63bec2a7dd7ff361a1407159977a3a84b4d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81293148"
 ---
-# <a name="odbc-driver-for-oracle-user39s-guide"></a>Oracle 用户&#39;指南的 ODBC 驱动程序
+# <a name="odbc-driver-for-oracle-user39s-guide"></a>Oracle User&#39;指南的 ODBC 驱动程序
 > [!IMPORTANT]  
->  此功能将在将来版本的 Windows 中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 而是使用 Oracle 提供的 ODBC 驱动程序。  
+>  此功能将在 Windows 的将来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 请改用 Oracle 提供的 ODBC 驱动程序。  
   
- Oracle用户指南的 ODBC 驱动程序旨在补充可通过[ODBC 数据源管理员](../../odbc/admin/odbc-data-source-administrator.md)访问的设置帮助。  
+ 用于 Oracle 的 ODBC 驱动程序用户指南旨在补充可通过[ODBC 数据源管理器](../../odbc/admin/odbc-data-source-administrator.md)访问的设置帮助。  
   
  本部分包含以下主题。  
   

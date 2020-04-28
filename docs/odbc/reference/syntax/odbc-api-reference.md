@@ -1,5 +1,5 @@
 ---
-title: ODBC API 参考 |微软文档
+title: ODBC API 参考 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,20 +12,20 @@ ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6065db0ea99efaec11190902ec9268db63a6d255
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298931"
 ---
 # <a name="odbc-api-reference"></a>ODBC API 参考
-本节中的主题按字母顺序描述每个 ODBC 函数。 每个函数被定义为 C 编程语言函数。 描述包括以下内容：  
+本节中的主题按字母顺序描述每个 ODBC 函数。 每个函数都定义为 C 编程语言函数。 说明包括：  
   
--   目标  
+-   目的  
   
 -   ODBC 版本  
   
--   标准 CLI 符合性级别  
+-   标准 CLI 一致性级别  
   
 -   语法  
   
@@ -35,20 +35,20 @@ ms.locfileid: "81298931"
   
 -   诊断  
   
--   关于使用和实现的评论  
+-   有关使用情况和实现的注释  
   
 -   代码示例  
   
 -   对相关函数的引用  
   
- 标准 CLI 符合性级别可以是以下级别之一：ISO 92、开放组、ODBC 或已弃用。 标记为 ISO 92 符合项的函数也出现在 Open Group 版本 1 中，因为 Open Group 是 ISO 92 的纯超级集。 在 ODBC 3 中也会显示标记为"符合开放组"的函数。*x*，因为 ODBC 3.*x*是开放组版本 1 的纯超级集。 标记为符合 ODBC 的函数在这两个标准中都显示。 在 ODBC 3 中已弃用标记为弃用的函数。*x*. .  
+ 标准 CLI 一致性级别可以是下列其中一项： ISO 92、开放式组、ODBC 或已弃用。 标记为符合 ISO 92 的函数也会显示在打开的组版本1中，因为打开的组是 ISO 92 的纯粹超集。 标记为符合打开组的函数也会显示在 ODBC 3 中。*x*，因为 ODBC 3。*x*是开放组版本1的纯超集。 标记为符合 ODBC 标准的函数会出现在标准中。 ODBC 3 中弃用了标记为已弃用的函数。*x*。  
   
- 诊断信息的处理在[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)函数描述中描述。 包含与 SQLSTATE 值关联的文本是为了提供条件的描述，但不打算规定特定文本。  
+ [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)函数说明中描述了诊断信息的处理。 包含与 SQLSTATE 值相关联的文本用于提供条件说明，但并不用于规定特定文本。  
   
 > [!NOTE]  
->  有关 ODBC 函数的特定于驱动程序的信息，请参阅驱动程序的部分。  
+>  有关 ODBC 函数的特定于驱动程序的信息，请参阅驱动程序部分。  
   
- 本节包含以下功能的主题：  
+ 本部分包含以下功能的主题：  
   
 -   [SQLAllocConnect 函数](../../../odbc/reference/syntax/sqlallocconnect-function.md)  
   

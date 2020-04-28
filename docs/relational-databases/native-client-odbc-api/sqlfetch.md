@@ -1,5 +1,5 @@
 ---
-title: SQLFetch |微软文档
+title: SQLFetch |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 20aa5cf9e5b157324336db4a6ebb200a6fd151ae
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300256"
 ---
 # <a name="sqlfetch"></a>SQLFetch
@@ -25,10 +25,10 @@ ms.locfileid: "81300256"
 
   SQLFetch 支持增强的日期和时间功能。  
   
- 有关如何转换日期/时间类型的结果列值的信息，请参阅从 SQL[转换到 C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)。  
+ 有关如何转换日期/时间类型的结果列值的信息，请参阅[从 SQL 转换为 C](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)。  
   
 ## <a name="sqlfetch-support-for-large-clr-udts"></a>SQLFetch 对大型 CLR UDT 的支持  
- **SQLFetch**支持大型 CLR 用户定义类型 （UDT）。 有关详细信息，请参阅[&#40;ODBC&#41;的大型 CLR 用户定义类型](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLFetch**支持大型 CLR 用户定义类型（udt）。 有关详细信息，请参阅[&#40;ODBC&#41;的大型 CLR 用户定义类型](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=80703)   
