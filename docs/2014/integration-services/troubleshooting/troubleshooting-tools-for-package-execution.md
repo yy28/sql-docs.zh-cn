@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8293e8bb7cfcc941c952ddaed25907ef2eec7371
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82087057"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>对包执行进行故障排除的工具
@@ -52,7 +52,7 @@ ms.locfileid: "82087057"
   
 -   **向错误输出添加易于理解的信息**。 除了由错误输出提供的两个数字标识符外，您还可以添加说明性信息以便更容易分析错误输出。  
   
-     **添加错误的说明**。 使用脚本组件查找错误说明是很容易的。 有关详细信息，请参阅[增强脚本组件的错误输出](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)。  
+     **添加错误说明**。 使用脚本组件查找错误说明是很容易的。 有关详细信息，请参阅[增强脚本组件的错误输出](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)。  
   
      **添加错误列的名称**。 在脚本组件中无法轻易查找与错误输出保存的列 ID 对应的列名，需要其他的步骤。 数据流中的每个列 ID 在该数据流任务中都是唯一的，并且设计时在包中保持不变。 建议采用下列方法向错误输出中添加列名。 
   

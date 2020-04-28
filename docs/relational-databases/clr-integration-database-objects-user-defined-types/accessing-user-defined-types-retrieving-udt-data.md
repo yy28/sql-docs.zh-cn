@@ -1,6 +1,6 @@
 ---
-title: 检索 UDT 数据 |微软文档
-description: 本文介绍如何在 SQL Server 数据库中访问 UDT。
+title: 正在检索 UDT 数据 |Microsoft Docs
+description: 本文介绍如何访问 SQL Server 数据库中的 Udt。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,10 @@ ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e3d14c6d24d6db5d27b12bcc3f28c1b6ba383442
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488216"
 ---
 # <a name="accessing-user-defined-types---retrieving-udt-data"></a>访问用户定义类型 - 检索 UDT 数据
@@ -34,28 +34,28 @@ ms.locfileid: "81488216"
   若要在客户端上创建用户定义类型 (UDT)，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中作为 UDT 注册的程序集必须可供客户端应用程序使用。 UDT 程序集可位于该应用程序的相同目录中，也可以位于全局程序集缓存 (GAC) 中。 还可以在项目中设置对该程序集的引用。  
   
 ## <a name="requirements-for-using-udts-in-adonet"></a>在 ADO.NET 中使用 UDT 的要求  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中加载的程序集和客户端上的程序集必须兼容，以便在该客户端上创建 UDT。 对于使用**本机**序列化格式定义的 UDT，程序集必须在结构上兼容。 对于使用**用户定义**格式定义的程序集，程序集必须在客户端上可用。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中加载的程序集和客户端上的程序集必须兼容，以便在该客户端上创建 UDT。 对于定义为**本机**序列化格式的 udt，程序集必须与结构兼容。 对于使用**用户**定义格式定义的程序集，该程序集必须在客户端上可用。  
   
  您无需在客户端上复制 UDT 程序集即可检索表中 UDT 列的原始数据。  
   
 > [!NOTE]  
->  如果 UDT 版本不匹配或其他问题 **，SqlClient**可能无法加载 UDT。 在这种情况下，请使用常规故障排除机制确定调用应用程序无法找到包含 UDT 的程序集的原因。 有关详细信息，请参阅 .NET Framework 文档中的“使用托管调试助手诊断错误”主题。  
+>  当 UDT 版本不匹配或其他问题时， **SqlClient**可能无法加载 udt。 在这种情况下，请使用常规故障排除机制确定调用应用程序无法找到包含 UDT 的程序集的原因。 有关详细信息，请参阅 .NET Framework 文档中的“使用托管调试助手诊断错误”主题。  
   
 ## <a name="accessing-udts-with-a-sqldatareader"></a>通过 SqlDataReader 访问 UDT  
- **System.Data.SqlClient.SqlDataReader**可以从客户端代码中检索包含 UDT 列的结果集，该列作为对象的实例公开。  
+ 可以从客户端代码中使用**SqlClient SqlDataReader**来检索包含 UDT 列的结果集，该结果集公开为对象的实例。  
   
 ### <a name="example"></a>示例  
  此示例演示如何使用**Main**方法创建新的**SqlDataReader**对象。 下面的操作是在代码示例中执行的：  
   
-1.  Main 方法创建新的**SqlDataReader**对象，并从"点"表中检索值，该表具有名为 Point 的 UDT 列。  
+1.  Main 方法创建一个新的**SqlDataReader**对象，并从 Point 表中检索值，该点表具有一个名为 POINT 的 UDT 列。  
   
 2.  该 Point UDT 公开定义为整数的 X 和 Y 坐标。  
   
-3.  UDT 定义**距离**方法和**获取距离XY**方法。  
+3.  UDT 定义**距离**方法和**GetDistanceFromXY**方法。  
   
 4.  示例代码检索主键列和 UDT 列的值，以便显示 UDT 的功能。  
   
-5.  示例代码调用**点.距离**和**点.获取距离XY**方法。  
+5.  示例代码调用**GetDistanceFromXY**方法**和点。**  
   
 6.  结果将显示在控制台窗口中。  
   
@@ -158,10 +158,10 @@ static void Main()
 ```  
   
 ## <a name="binding-udts-as-bytes"></a>以字节形式绑定 UDT  
- 在某些情况下，您可能希望检索 UDT 列中的原始数据。 本地可能没有可用类型，或者您可能不希望实例化 UDT 实例。 您可以使用**SqlDataReader**的**GetBytes**方法将原始字节读取到字节数组中。 该方法从指定的列偏移量将字节流作为数组从指定缓冲区偏移量开始读入缓冲区。 另一个选项是使用**GetSqlBytes**或**GetSqlBinary**方法之一，并在单个操作中读取所有内容。 无论何种情况，永远不会实例化 UDT 对象，因此，您无需在客户端程序集中设置对 UDT 的引用。  
+ 在某些情况下，您可能希望检索 UDT 列中的原始数据。 本地可能没有可用类型，或者您可能不希望实例化 UDT 实例。 可以使用**SqlDataReader**的**GetBytes**方法将原始字节读入字节数组。 该方法从指定的列偏移量将字节流作为数组从指定缓冲区偏移量开始读入缓冲区。 另一种方法是使用**GetSqlBytes**或**GetSqlBinary**方法之一，并在一次操作中读取所有内容。 无论何种情况，永远不会实例化 UDT 对象，因此，您无需在客户端程序集中设置对 UDT 的引用。  
   
 ### <a name="example"></a>示例  
- 此示例演示如何使用**SqlDataReader**将**Point**数据作为原始字节检索到字节数组中。 该代码使用**System.Text.StringBuilder**将原始字节转换为要显示在控制台窗口中的字符串表示形式。  
+ 此示例演示如何使用**SqlDataReader**将**点**数据作为原始字节检索到字节数组中。 此代码使用**system.web**将原始字节转换为要在控制台窗口中显示的字符串表示形式。  
   
 ```vb  
 Option Explicit On  
@@ -267,7 +267,7 @@ class GetRawBytes
 ```  
   
 ### <a name="example-using-getsqlbytes"></a>使用 GetSqlBytes 的示例  
- 此示例演示如何使用**GetSqlBytes**方法在单个操作中检索**点**数据作为原始字节。 代码使用**StringBuilder**将原始字节转换为要在控制台窗口中显示的字符串表示形式。  
+ 此示例显示了如何使用**GetSqlBytes**方法在一次操作中使用原始字节检索**点**数据。 此代码使用**StringBuilder**将原始字节转换为要在控制台窗口中显示的字符串表示形式。  
   
 ```vb  
 Option Explicit On  
@@ -375,13 +375,13 @@ class GetRawBytes
  可以在 ADO.NET 代码中将 UDT 作为输入参数和输出参数使用。  
   
 ## <a name="using-udts-in-query-parameters"></a>在查询参数中使用 UDT  
- 在为**系统**设置**Sql 参数**时，UDT 可用作参数值。 **SqlParameter 对象的** **SqlDbType.Udt**枚举用于指示参数在将**Add**方法调用**参数**集合时是 UDT。 **SqlCommand**对象的**UdtTypeName**属性用于使用数据库指定数据库中 UDT 的完全限定名称 *. schema_name.object_name*语法。 虽然这不是必需的，但使用完全限定名称可以避免代码出现混乱。  
+ 为**SqlClient**对象设置**SqlParameter**时，可以将 udt 用作参数值。 **SqlParameter**对象的**SqlDbType**枚举用于指示在**将 Add**方法调用到**Parameters**集合时参数为 Udt。 **SqlCommand**对象的**UdtTypeName**属性用于在数据库中*schema_name 使用 object_name*语法来指定 UDT 的完全限定名称。 虽然这不是必需的，但使用完全限定名称可以避免代码出现混乱。  
   
 > [!NOTE]  
 >  UDT 程序集的本地副本必须对客户端项目可用。  
   
 ### <a name="example"></a>示例  
- 此示例中的代码创建**SqlCommand**和**SqlParameter**对象，将数据插入到表中的 UDT 列中。 代码使用**SqlDbType.Udt**枚举来指定数据类型，以及**SqlParameter 对象的** **UdtTypeName**属性来指定数据库中 UDT 的完全限定名称。  
+ 此示例中的代码创建了**SqlCommand**和**SqlParameter**对象，用于将数据插入表中的 UDT 列。 该代码使用**SqlDbType**枚举来指定数据类型，并使用**SqlParameter**对象的**UdtTypeName**属性来指定数据库中 Udt 的完全限定名称。  
   
 ```vb  
 Option Explicit On  

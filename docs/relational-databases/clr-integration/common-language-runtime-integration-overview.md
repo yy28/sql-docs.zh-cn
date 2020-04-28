@@ -1,6 +1,6 @@
 ---
-title: 通用语言运行时 （CLR） 概述
-description: CLR 与 SQL Server 集成允许您使用任何 .NET 框架语言作为 SQL Server 端模块实现某些功能。
+title: 公共语言运行时（CLR）概述
+description: CLR 与 SQL Server 的集成允许使用任何 .NET Framework 语言作为 SQL Server 服务器端模块来实现某些功能。
 ms.custom: seo-lt-2019
 ms.date: 06/20/2017
 ms.prod: sql
@@ -19,21 +19,21 @@ ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 768ef9a74a7d7856533fa3ace09e25fee9e36c0b
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488388"
 ---
-# <a name="common-language-runtime-integration"></a>通用语言运行时集成
+# <a name="common-language-runtime-integration"></a>公共语言运行时集成
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure [SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)使您能够使用 .Net 语言使用本机通用语言运行时 （CLR） 集成作为 SQL Server 端模块（过程、函数和触发器）实现某些功能。 CLR 为托管代码提供服务，例如跨语言集成、代码访问安全性、对象生存期管理以及调试和分析支持。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户和应用程序开发人员来说，CLR 集成意味着您现在可以使用任何 .NET Framework 语言（包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#）编写存储过程、触发器、用户定义类型、用户定义函数（标量函数和表值函数）以及用户定义的聚合函数。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括预安装的 .NET Framework 版本 4。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]并且[Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)使你能够使用本机公共语言运行时（CLR）集成作为 SQL Server 服务器端模块（过程、函数和触发器）来实现某些功能。 CLR 为托管代码提供服务，例如跨语言集成、代码访问安全性、对象生存期管理以及调试和分析支持。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户和应用程序开发人员来说，CLR 集成意味着您现在可以使用任何 .NET Framework 语言（包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#）编写存储过程、触发器、用户定义类型、用户定义函数（标量函数和表值函数）以及用户定义的聚合函数。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括预安装的 .NET Framework 版本 4。  
 
 > [!WARNING]
 >  CLR 在 .NET Framework 中使用代码访问安全性 (CAS)（不可再作为安全边界）。 使用 `PERMISSION_SET = SAFE` 创建的 CLR 程序集可以访问外部系统资源、调用非托管代码以及获取 sysadmin 特权。 从 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 开始，引入了名为 `clr strict security` 的 `sp_configure` 选项，以增强 CLR 程序集的安全性。 默认启用 `clr strict security`，并将 `SAFE` 和 `EXTERNAL_ACCESS` 程序集与标记为 `UNSAFE` 的程序集同等对待。 可禁用 `clr strict security` 选项以实现后向兼容性，但不建议这样做。 Microsoft 建议所有程序集都通过证书或非对称密钥进行签名，且该证书或非对称密钥具有已在主数据库中获得 `UNSAFE ASSEMBLY` 权限的相应登录名。 有关详细信息，请参阅 [CLR 严格安全性](../../database-engine/configure-windows/clr-strict-security.md)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员还可以将程序集添加到数据库引擎应信任的程序集列表。 有关详细信息，请参阅 [sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)。
 
-您还可以观看此 6 分钟视频，该视频演示如何在 Azure SQL 数据库托管实例中使用 CLR：
+还可以观看此6分钟的视频，其中演示了如何在 Azure SQL 数据库托管实例中使用 CLR：
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Its-just-SQL-CLR-in-Azure-SQL-Database-Managed-Instance/player?WT.mc_id=dataexposed-c9-niner]
 
@@ -41,7 +41,7 @@ ms.locfileid: "81488388"
 
 ## <a name="when-to-use-clr-modules"></a>何时使用 CLR 模块？
 
-CLR 集成使您能够实现 .Net Framework 中提供的复杂功能，如正则表达式、用于访问外部资源的代码（服务器、Web 服务、数据库）、自定义加密等。服务器端 CLR 集成的一些好处包括：
+通过 CLR 集成，你可以实现 .Net Framework 中可用的复杂功能，例如正则表达式、用于访问外部资源（服务器、web 服务、数据库）、自定义加密等的代码。服务器端 CLR 集成的一些优点包括：
   
 -   **更好的编程模型。** .NET Framework 语言在许多方面都比 Transact-SQL 丰富，它为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 开发人员提供了以前没有的构造和功能。 开发人员还可以利用 .NET Framework 库的功能，它提供了大量可用于快速有效地解决编程问题的类。  
   
@@ -68,7 +68,7 @@ CLR 集成使您能够实现 .Net Framework 中提供的复杂功能，如正则
  介绍如何启用 CLR 集成。  
   
 ## <a name="see-also"></a>另请参阅  
- [安装 .NET](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)框架[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（仅）   
+ [安装 .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx) （[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]仅限）   
  [CLR 集成的性能](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
   
   

@@ -15,10 +15,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5ce830c3fcd5661a01ecc0ad3ad84bed420be2e0
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82107979"
 ---
 # <a name="automatic-tuning"></a>自动优化
@@ -90,7 +90,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 在[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]中，可以使用查询存储系统视图查找计划选择回归。 在[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]中， [!INCLUDE[ssde_md](../../includes/ssde_md.md)]会检测并显示潜在的计划选择回归，并显示应在[&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)视图中应用 dm_db_tuning_recommendations 的推荐操作。 此视图显示有关问题的信息、问题的重要性，以及详细信息，如标识的查询、回归计划的 ID、用作比较基线的计划的 ID 以及可以执行以修复问题的[!INCLUDE[tsql_md](../../includes/tsql-md.md)]语句。
 
-| type | description | 日期/时间 | score | 详细信息 | ... |
+| type | description | datetime | score | 详细信息 | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | CPU 时间从4毫秒更改为14毫秒 | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | CPU 时间从 37 ms 更改为84毫秒 | 2017 年 3 月 16 日 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |

@@ -13,10 +13,10 @@ ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a98dd5e9ac6c3f343e0d91edbb3137e5d1c01c5c
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487861"
 ---
 # <a name="learn-sql-server-master-data-services"></a>了解 SQL Server Master Data Services
@@ -26,8 +26,8 @@ ms.locfileid: "81487861"
   
   
 ## <a name="training"></a>培训  
-* 要探索 在[!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]中引入的新功能和功能，请尝试[自定进度的实验室](https://www.microsoft.com/handsonlabs/selfpacedlabs)（需要使用 Microsoft 帐户登录）。  
-* 要开发一[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]个解决方案来存储和管理地理数据的主列表，请使用 Excel 和[!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]的外接程序，尝试[自定进度的实验室](https://www.microsoft.com/handsonlabs/selfpacedlabs)。 你将创建实体和层次结构，并使用 [!INCLUDE[ssIS_md](../includes/ssis-md.md)] 来填充维度表。  
+* 若要探索中[!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]引入的新特性和功能，请尝试执行[自进度实验室](https://www.microsoft.com/handsonlabs/selfpacedlabs)（需要使用你的 Microsoft 帐户登录）。  
+* 若要开发[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]解决方案来存储和管理地理数据的主列表（使用 Excel 外接程序和[!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]），请尝试执行自控进度的[实验室](https://www.microsoft.com/handsonlabs/selfpacedlabs)。 你将创建实体和层次结构，并使用 [!INCLUDE[ssIS_md](../includes/ssis-md.md)] 来填充维度表。  
   
 ## <a name="videos"></a>视频  
 * 若要了解 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 版本 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]中的新功能，请 [**观看此视频**](https://www.youtube.com/watch?v=cKA72FpOVxI)。  

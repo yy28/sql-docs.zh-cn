@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb77d8abdc0b4a8ca67996433e5399740c7bdc0c
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82086877"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教程：创建钻取报表和主报表（报表生成器）
@@ -22,7 +22,7 @@ ms.locfileid: "82086877"
   
  ![rs_DrillthroughCubeTutorial](../../2014/tutorials/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
   
- 下图显示了主报表中的字段值"游戏"和"玩具"如何显示在演练报表的标题中。 钻取报表中的数据与“游戏和玩具”产品类别有关。  
+ 下图显示了主报表中的字段值 "游戏和玩具" 如何在钻取报表的标题中显示。 钻取报表中的数据与“游戏和玩具”产品类别有关。  
   
  ![rs_DrillthroughCubeTutorialParmExpr](../../2014/tutorials/media/rs-drillthroughcubetutorialparmexpr.gif "rs_DrillthroughCubeTutorialParmExpr")  
   
@@ -43,7 +43,7 @@ ms.locfileid: "82086877"
   
 2.  [将数据格式设置为货币](#DFormat)  
   
-3.  [添加列以在 Sparklines 中显示销售值](#DSparkline)  
+3.  [添加用于在迷你图中显示销售值的列](#DSparkline)  
   
 4.  [添加包含产品类别名称的报表标题](#DReportTitle)  
   
@@ -84,14 +84,14 @@ ms.locfileid: "82086877"
 ## <a name="requirements"></a>要求  
  本教程需要访问 Contoso Sales 多维数据集。 此要求同样适用于钻取报表和主报表。 有关要求的详细信息，请参阅[教程先决条件（报表生成器）](../reporting-services/report-builder-tutorials.md)。  
   
-##  <a name="1-create-a-drillthrough-report-from-the-table-or-matrix-wizard"></a><a name="DMatrixAndDataset"></a>1. 从表或矩阵向导创建钻取报表  
+##  <a name="1-create-a-drillthrough-report-from-the-table-or-matrix-wizard"></a><a name="DMatrixAndDataset"></a>1. 使用表或矩阵向导创建钻取报表  
  使用“表或矩阵向导”从“入门”对话框创建一个矩阵报表****。 该向导提供两种模式：报表设计模式和共享数据集设计模式。 在本教程中，您将使用报表设计模式。  
   
 #### <a name="to-create-a-new-report"></a>创建新的报表  
   
-1.  单击 **"开始**"，指向**程序**，指向[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**报表生成器**，然后单击 **"报表生成器**"。  
+1.  单击 "**开始**"，指向 "**程序**" [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] ，指向 "**报表生成器**"，然后单击 "**报表生成器**"。  
   
-     随即将打开“入门”**** 对话框。 如果未显示，请从 **"报表生成器"** 按钮中单击 **"新建**"。  
+     随即将打开“入门”**** 对话框。 如果未显示，请在 "**报表生成器**" 按钮中单击 "**新建**"。  
   
 2.  在左窗格中，确认已选中 **“新建报表”** 。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "82086877"
   
 #### <a name="to-create-query-filters"></a>创建查询筛选器  
   
-1.  在"**设计查询**"页上，在"元数据"窗格中，单击按钮 **（...）**。  
+1.  在 "**设计查询**" 页上的 "元数据" 窗格中，单击按钮 **（...）**。  
   
 2.  在“选择多维数据集”**** 对话框中，依次单击“Sales”和“确定”****。  
   
@@ -208,7 +208,7 @@ ms.locfileid: "82086877"
   
 5.  将“Sales Amount”度量值拖到数据窗格，然后将它放到“Product Subcategory Name”的右侧。  
   
-6.  在查询设计器工具栏上，单击"**运行 （！）**"。  
+6.  在查询设计器工具栏上，单击 "**运行（！）**"。  
   
 7.  单击“下一步”。   
   
@@ -254,15 +254,15 @@ ms.locfileid: "82086877"
   
 #### <a name="to-specify-a-style"></a>指定样式  
   
-1.  在"**选择样式"** 页上，在"样式"窗格中，选择"板条"。  
+1.  在 "**选择样式**" 页的 "样式" 窗格中，选择 "石板"。  
   
-2.  单击“完成”  。  
+2.  单击 **“完成”** 。  
   
      表将添加到设计图面中。  
   
 3.  若要预览报表，请单击“运行 (!)”****。  
   
-##  <a name="2-format-data-as-currency"></a><a name="DFormat"></a>2. 将数据格式化为货币  
+##  <a name="2-format-data-as-currency"></a><a name="DFormat"></a>2. 将数据格式设置为货币  
  将货币格式应用到钻取报表中的销售额字段。  
   
 #### <a name="to-format-data-as-currency"></a>将数据格式设置为货币格式  
@@ -273,7 +273,7 @@ ms.locfileid: "82086877"
   
 3.  在“主文件夹”**** 选项卡上的“数字”**** 组中，单击“货币”****。  
   
-##  <a name="3-add-columns-to-show-sales-values-in-sparklines"></a><a name="DSparkline"></a>3. 添加列以在火花线中显示销售值  
+##  <a name="3-add-columns-to-show-sales-values-in-sparklines"></a><a name="DSparkline"></a>3. 添加要在迷你图中显示销售值的列  
  报表不将销售额和销售退货额显示为货币值，而是在迷你图中显示这些值。  
   
 #### <a name="to-add-sparklines-to-columns"></a>将迷你图添加到列  
@@ -306,7 +306,7 @@ ms.locfileid: "82086877"
   
 13. 若要预览报表，请单击“运行”****。  
   
-##  <a name="4-add-report-title-with-product-category-name"></a><a name="DReportTitle"></a>4. 添加带有产品类别名称的报告标题  
+##  <a name="4-add-report-title-with-product-category-name"></a><a name="DReportTitle"></a>4. 添加包含产品类别名称的报表标题  
  报表标题将出现在报表的顶部。 可以将报表标题置于报表表头中或置于表体顶部的文本框中（如果报表未使用表头）。 在本教程中，您将使用自动放置在表体顶部的文本框。  
   
 #### <a name="to-add-a-report-title"></a>添加报表标题  
@@ -389,12 +389,12 @@ ms.locfileid: "82086877"
   
 7.  单击“ **保存**”。  
   
-##  <a name="1-create-a-new-report-from-the-table-or-matrix-wizard"></a><a name="MMatrixAndDataset"></a>1. 从表或矩阵向导创建新报表  
+##  <a name="1-create-a-new-report-from-the-table-or-matrix-wizard"></a><a name="MMatrixAndDataset"></a>1. 使用表或矩阵向导创建新报表  
  使用“表或矩阵向导”从“入门”对话框创建一个矩阵报表********。  
   
 #### <a name="to-create-a-new-report"></a>创建新的报表  
   
-1.  单击 **"开始**"，指向**程序**，指向[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**报表生成器**，然后单击 **"报表生成器**"。  
+1.  单击 "**开始**"，指向 "**程序**" [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] ，指向 "**报表生成器**"，然后单击 "**报表生成器**"。  
   
 2.  在“入门”**** 对话框中，确认已选中“新建报表”****，然后单击“表或矩阵向导”****。  
   
@@ -413,7 +413,7 @@ ms.locfileid: "82086877"
   
 5.  在“数据源”**** 中，确认数据源是“Microsoft SQL Server Analysis Services (AdomdClient)”****。  
   
-6.  在 **"服务器"名称**中，键入安装 实例[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的服务器的名称。  
+6.  在 "**服务器名称**" 中，键入安装了实例的[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]服务器的名称。  
   
 7.  在“选择或输入数据库名称”**** 中，选择 Contoso 多维数据集。  
   
@@ -442,7 +442,7 @@ ms.locfileid: "82086877"
   
 #### <a name="to-create-query-filters"></a>创建查询筛选器  
   
-1.  在"**设计查询**"页上，在"元数据"窗格中，在多维数据集部分中，单击省略号 **（...）。**  
+1.  在 "**设计查询**" 页上的 "元数据" 窗格的 "多维数据集" 部分中，单击省略号 **（...）**。  
   
 2.  在“选择多维数据集”**** 对话框中，依次单击“Sales”和“确定”****。  
   
@@ -463,7 +463,7 @@ ms.locfileid: "82086877"
   
      查询现在包含一个筛选器以只包括这些渠道：“在线”和“分销商”。  
   
-6.  展开"销售区域"维度，然后将"销售区域"组拖动到 **"渠道名称**"下面的 **"层次结构**"列。  
+6.  展开 "销售区域" 维度，然后将 "销售区域" 组拖动到 "**通道名称**" 下方的 "**层次结构**" 列。  
   
 7.  打开“筛选表达式”列表，展开“所有销售区域”，单击“北美洲”，然后单击“确定”****************。  
   
@@ -491,7 +491,7 @@ ms.locfileid: "82086877"
   
 1.  将光标置于“计算成员”窗格内，右键单击，然后单击“新建计算成员”****。  
   
-2.  在"元数据"窗格中，展开 **"度量值"，** 然后展开销售。  
+2.  在 "元数据" 窗格中，展开 "**度量值**"，然后展开 "销售额"。  
   
 3.  将“Sales Quantity”度量值拖到“表达式”框，键入减号字符 (-)，然后将“Sales Return Quantity”度量值拖到“表达式”框；将它放到减号字符后面********。  
   
@@ -529,7 +529,7 @@ ms.locfileid: "82086877"
   
 4.  从“计算成员”，将“Net Sales”拖到数据窗格，然后将它放到“ `Net QTY`”的右侧。  
   
-5.  在查询设计器工具栏上，单击"**运行 （！）**"。  
+5.  在查询设计器工具栏上，单击 "**运行（！）**"。  
   
      查看查询结果集。  
   
@@ -570,9 +570,9 @@ ms.locfileid: "82086877"
   
 #### <a name="to-specify-a-style"></a>指定样式  
   
-1.  在"**选择样式"** 页上，在"样式"窗格中，选择"板条"。  
+1.  在 "**选择样式**" 页的 "样式" 窗格中，选择 "石板"。  
   
-2.  单击“完成”  。  
+2.  单击 **“完成”** 。  
   
 3.  若要预览报表，请单击“运行”****。  
   
@@ -587,7 +587,7 @@ ms.locfileid: "82086877"
   
 3.  若要预览报表，请单击“运行”****。  
   
-##  <a name="3-configure-text-box-action-for-drillthrough"></a><a name="MDrillthrough"></a>3. 为钻取配置文本框操作  
+##  <a name="3-configure-text-box-action-for-drillthrough"></a><a name="MDrillthrough"></a>3. 配置用于钻取的文本框操作  
  若要启用钻取，请在主报表中指定文本框的操作。  
   
 #### <a name="to-enable-an-action"></a>启用操作  
@@ -598,7 +598,7 @@ ms.locfileid: "82086877"
   
 3.  单击“操作”**** 选项卡。  
   
-4.  选择 **"转到报告"。**  
+4.  选择 "**转向报表"。**  
   
 5.  在“指定报表”中，单击“浏览”，然后查找名为 ResellerVSOnlineDrillthrough 的钻取报表********。  
   
@@ -631,7 +631,7 @@ ms.locfileid: "82086877"
   
  这些产品类别名称采用常见的链接格式（蓝色带下划线）。  
   
-##  <a name="4-replace-numeric-values-with-indicators"></a><a name="MIndicators"></a>4. 用指标替换数值  
+##  <a name="4-replace-numeric-values-with-indicators"></a><a name="MIndicators"></a>4. 将数值替换为指示器  
  使用指示器显示“在线”和“分销商”渠道的数量和销售额的情况。  
   
 #### <a name="to-add-an-indicator-for-net-qty-values"></a>添加 Net QTY 值的指示器  
@@ -677,7 +677,7 @@ ms.locfileid: "82086877"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="6-add-a-report-title"></a><a name="MTitle"></a>6. 添加报告标题  
+##  <a name="6-add-a-report-title"></a><a name="MTitle"></a>6. 添加报表标题  
  将标题添加到主报表。  
   
 #### <a name="to-add-a-report-title"></a>添加报表标题  
@@ -718,7 +718,7 @@ ms.locfileid: "82086877"
   
 7.  单击“ **保存**”。  
   
-##  <a name="8-run-the-main-and-drillthrough-reports"></a><a name="MRunReports"></a>8. 运行主和演练报告  
+##  <a name="8-run-the-main-and-drillthrough-reports"></a><a name="MRunReports"></a>8. 运行主报表和钻取报表  
  运行主报表，然后单击产品类别列中的值以运行钻取报表。  
   
 #### <a name="to-run-the-reports"></a>运行报表  
@@ -738,6 +738,6 @@ ms.locfileid: "82086877"
 5.  也可以通过单击其名称来浏览其他产品类别（可选）。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;报表生成器&#41;教程](report-builder-tutorials.md)  
+ [教程 &#40;报表生成器&#41;](report-builder-tutorials.md)  
   
   

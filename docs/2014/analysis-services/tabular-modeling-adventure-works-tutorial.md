@@ -1,5 +1,5 @@
 ---
-title: 表格建模（探险作品教程） |微软文档
+title: 表格建模（艾德 Works 教程） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27ac17469a96213bdd39cbf2bee5a343d117e6f0
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487626"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>表格建模（Adventure Works 教程）
@@ -58,7 +58,7 @@ ms.locfileid: "81487626"
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
--   AdventureWorksDW 示例数据库。 此示例数据库包括完成本教程所需的数据。 要下载示例数据库，请参阅[https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)。  
+-   AdventureWorksDW 示例数据库。 此示例数据库包括完成本教程所需的数据。 若要下载示例数据库，请[https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)参阅。  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 或更高版本（与课程 11 中的“在 Excel 中分析”功能结合使用）  
   
@@ -90,7 +90,7 @@ ms.locfileid: "81487626"
 |课程|估计完成时间|  
 |------------|--------------------------------|  
 |[通过使用行筛选器实现动态安全性](../tutorials/implement-dynamic-security-by-using-row-filters.md)|30 分钟|  
-|[为电源视图报告配置报告属性](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)为电源视图报告配置报告属性|30 分钟|  
+|[为 Power View 报表配置报表属性](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)为 Power View 报表配置报表属性|30 分钟|  
   
 ## <a name="next-step"></a>下一步  
  若要开始学习本教程，请继续第一课： [第 1 课：创建新的表格模型项目](lesson-1-create-a-new-tabular-model-project.md)。  

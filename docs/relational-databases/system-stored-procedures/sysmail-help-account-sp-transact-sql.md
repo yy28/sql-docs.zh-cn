@@ -1,5 +1,5 @@
 ---
-title: sysmail_help_account_sp（转算-SQL） |微软文档
+title: sysmail_help_account_sp （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ccb5cfd245148c97288a34b1857955f48f3efc73
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81528405"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
@@ -39,12 +39,12 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @account_id = ] account_id`要列出其信息的帐户 ID。 *account_id* **为 int，** 默认值为 NULL。  
+`[ @account_id = ] account_id`要列出其信息的帐户的帐户 ID。 *account_id*的值为**int**，默认值为 NULL。  
   
-`[ @account_name = ] 'account_name'`要为其列出信息的帐户的名称。 *account_name*是**sysname，** 默认值为 NULL。  
+`[ @account_name = ] 'account_name'`要列出其信息的帐户的名称。 *account_name*的默认值为**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **0（** 成功）或**1（** 失败）  
+ **0** （成功）或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
  返回包含下面列出的列的结果集。  
@@ -53,25 +53,25 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |-|-|-|  
 |列名称|数据类型|说明|  
 |**account_id**|**int**|帐户 ID。|  
-|name |**sysname**|帐户名称。|  
-|**描述**|**nvarchar(256)**|对帐户的说明。|  
+|**name**|**sysname**|帐户名称。|  
+|**2008**|**nvarchar(256)**|对帐户的说明。|  
 |**email_address**|**nvarchar(128)**|发送消息的电子邮件地址。|  
 |**display_name**|**nvarchar(128)**|帐户的显示名称。|  
 |**replyto_address**|**nvarchar(128)**|对于来自此帐户的消息发送答复的地址。|  
-|**服务器类型**|**sysname**|用于此帐户的电子邮件服务器的类型。|  
-|**服务器名称**|**sysname**|用于此帐户的电子邮件服务器的名称。|  
-|**港口**|**int**|电子邮件服务器使用的端口号。|  
-|**用户**|**nvarchar(128)**|登录电子邮件服务器所用的用户名（如果电子邮件服务器使用身份验证）。 当**用户名**为 NULL 时，数据库邮件不会为此帐户使用身份验证。|  
-|**use_default_credentials**|**bit**|指定是否使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的凭据将邮件发送到 SMTP 服务器。 **use_default_credentials**位，没有默认值。 当此参数为 1 时，数据库邮件使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服务的凭据。 当此参数为 0 时，数据库**\@** 邮件使用**\@用户名和密码**在 SMTP 服务器上进行身份验证。 如果**\@用户名和密码****\@为**NULL，则数据库邮件使用匿名身份验证。 在指定此参数之前，请咨询您的 SMTP 管理员。|  
-|**enable_ssl**|**bit**|指定数据库邮件是否使用传输层安全 （TLS）加密通信，以前称为安全套接字层 （SSL）。 如果您的 SMTP 服务器上需要 TLS，请使用此选项。 **enable_ssl**位，没有默认值。 1 指示数据库邮件使用 TLS 加密通信。 0 指示数据库邮件发送邮件时没有 TLS 加密。|  
+|**servertype**|**sysname**|用于此帐户的电子邮件服务器的类型。|  
+|**服务器**|**sysname**|用于此帐户的电子邮件服务器的名称。|  
+|**口**|**int**|电子邮件服务器使用的端口号。|  
+|**用户名**|**nvarchar(128)**|登录电子邮件服务器所用的用户名（如果电子邮件服务器使用身份验证）。 当**username**为 NULL 时，数据库邮件不对此帐户使用身份验证。|  
+|**use_default_credentials**|**bit**|指定是否使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的凭据将邮件发送到 SMTP 服务器。 **use_default_credentials**是 bit，无默认值。 当此参数为 1 时，数据库邮件使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服务的凭据。 当此参数为0时，数据库邮件使用** \@用户名**和** \@密码**在 SMTP 服务器上进行身份验证。 如果** \@用户名**和** \@密码**为空，则数据库邮件使用匿名身份验证。 在指定此参数之前，请咨询您的 SMTP 管理员。|  
+|**enable_ssl**|**bit**|指定数据库邮件是否使用传输层安全性（TLS）（以前称为安全套接字层（SSL））对通信进行加密。 如果 SMTP 服务器需要 TLS，请使用此选项。 **enable_ssl**是 bit，无默认值。 1指示数据库邮件使用 TLS 加密通信。 0指示数据库邮件发送没有 TLS 加密的邮件。|  
   
 ## <a name="remarks"></a>备注  
- 当未提供*account_id*或*account_name*时 **，sysmail_help_account**列出 Microsoft SQL Server 实例中所有数据库邮件帐户的信息。  
+ 如果未提供*account_id*或*account_name* ，则**sysmail_help_account**会列出 Microsoft SQL Server 实例中所有数据库邮件帐户的信息。  
   
- 存储过程**sysmail_help_account_sp**位于**msdb**数据库中，由**dbo**架构所有。 如果当前数据库不是**msdb，** 则必须使用三部分名称执行该过程。  
+ 存储过程**sysmail_help_account_sp**在**msdb**数据库中，由**dbo**架构拥有。 如果当前数据库不是**msdb**，则必须使用由三部分组成的名称来执行该过程。  
   
 ## <a name="permissions"></a>权限  
- 将此过程的权限默认为**sysadmin**固定服务器角色的成员。  
+ 此过程的执行权限默认授予**sysadmin**固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
  **A. 列出所有帐户的信息**  
@@ -111,6 +111,6 @@ account_id  name                         description                            
 ## <a name="see-also"></a>另请参阅  
  [数据库邮件](../../relational-databases/database-mail/database-mail.md)   
  [创建数据库邮件帐户](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [数据库邮件存储过程&#40;处理-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [数据库邮件存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

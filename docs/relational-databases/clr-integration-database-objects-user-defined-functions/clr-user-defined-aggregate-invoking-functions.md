@@ -1,6 +1,6 @@
 ---
-title: 调用 CLR 用户定义的聚合函数 |微软文档
-description: 在 SQL Server CLR 集成中，使用 Transact-SQL SELECT 调用 CLR 用户定义的聚合，但须遵守适用于系统聚合函数的规则。
+title: 调用 CLR 用户定义聚合函数 |Microsoft Docs
+description: 在 SQL Server CLR 集成中，使用 Transact-sql SELECT 调用 CLR 用户定义的聚合，但要遵守适用于系统聚合函数的规则。
 ms.custom: ''
 ms.date: 01/15/2019
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 286967567a48b35252f097ce6b88193c4e3bcb95
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488406"
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>CLR 用户定义聚合 - 调用函数
@@ -31,13 +31,13 @@ ms.locfileid: "81488406"
   
  应遵循下列附加规则：  
   
--   当前用户必须具有用户定义的聚合的**EXECUTE**权限。  
+-   当前用户必须对用户定义聚合具有**EXECUTE**权限。  
   
--   必须使用*schema_name.udagg_name*形式的两部分名称调用用户定义的聚合。  
+-   用户定义聚合必须使用由两部分组成的名称来调用，格式为*schema_name. udagg_name*。  
   
--   用户定义的聚合的参数类型必须匹配或隐式转换为聚合*input_type，* 如**CREATE 聚合**语句中定义的。  
+-   用户定义聚合的参数类型必须匹配或可隐式转换为聚合的*input_type* ，如**CREATE aggregate**语句中所定义。  
   
--   用户定义的聚合的返回类型必须与**CREATE 聚合**语句中的*return_type*匹配。  
+-   用户定义聚合的返回类型必须与**CREATE aggregate**语句中的*return_type*匹配。  
   
 ## <a name="example-1"></a>示例 1  
  以下是一个用户定义聚合函数的示例，该函数从某个表的一列中获取一组字符串值，然后将这些值连接起来：  
@@ -197,7 +197,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- 将代码编译到**MyAgg.dll 后**，可以[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]按照如下方式注册聚合：  
+ 将代码编译到**MyAgg**中后，可以按如下所示在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]注册聚合：  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -209,7 +209,7 @@ EXTERNAL NAME MyAgg.Concatenate;
 > [!NOTE]  
 >  不支持在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中执行已使用 /clr:pure 编译器选项编译的 Visual C++ 数据库对象，例如标量值函数。  
   
- 与大多数聚合一样，逻辑的大部分位于**累积**方法中。 在这里，作为参数传入的字符串将追加到**Init**方法中初始化的**StringBuilder**对象。 **Accumulate** 假设这不是第一次调用 **"累积"** 方法，则在追加传入字符串之前，还会将逗号追加到**StringBuilder**中。 在计算任务结束时，调用**终止**方法，该方法将**StringBuilder**作为字符串返回。  
+ 与大多数聚合一样，大部分逻辑都在**累积**方法中。 此处，作为**累积**方法的参数传入的字符串将追加到在**Init**方法中初始化的**StringBuilder**对象。 假定这不是第一次调用**累积**方法，则在追加传入的字符串之前，还会向**StringBuilder**追加一个逗号。 计算任务结束时，将调用**Terminate**方法，该方法将**StringBuilder**作为字符串返回。  
   
  例如，请考虑具有以下架构的表：  
   
@@ -242,7 +242,7 @@ GROUP BY BookID;
 |3|Roberts, Michaels, Steven|  
   
 ## <a name="example-2"></a>示例 2  
- 下面的示例显示了在 **"累积"** 方法上具有两个参数的聚合。  
+ 下面的示例演示一个聚合，该聚合对**累积**方法具有两个参数。  
   
  [C#]  
   

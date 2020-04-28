@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3f736d03a573f61ed31e0cb95c1768907f8a9560
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82087155"
 ---
 # <a name="excel-destination"></a>Excel 目标
@@ -48,7 +48,7 @@ ms.locfileid: "82087155"
   
      有关如何避免包括单引号的信息，请参阅 msdn.com 上的博客文章： [在 SSIS 包中使用 Excel 目标数据流组件时，单引号会在数据转换成 Excel 时追加到所有字符串](https://go.microsoft.com/fwlink/?LinkId=400876)。  
   
--   **保存 memo (ntext) 数据**。 若要将大于 255 个字符的字符串成功地保存到 Excel 列中，驱动程序必须将该目标列的数据类型识别为 **memo** ，而不是 **string**。 如果目标表中已存在数据行，则由驱动程序抽样的前几行的 memo 列中必须至少包含一个长度大于 255 个字符的值的实例。 如果目标表是在包设计期间或在运行时创建的，则 CREATE TABLE 语句必须使用 LONGTEXT（或其同义词之一）作为备忘录列的数据类型。  
+-   **保存 memo (ntext) 数据**。 若要将大于 255 个字符的字符串成功地保存到 Excel 列中，驱动程序必须将该目标列的数据类型识别为 **memo** ，而不是 **string**。 如果目标表中已存在数据行，则由驱动程序抽样的前几行的 memo 列中必须至少包含一个长度大于 255 个字符的值的实例。 如果目标表是在包设计或运行时创建的，则 CREATE TABLE 语句必须使用 LONGTEXT （或其同义词之一）作为 memo 列的数据类型。  
   
 -   **数据类型**。 Excel 驱动程序只识别有限的一组数据类型。 例如，所有数值列均解释为双精度 (DT_R8)，并且所有字符串列（除了 memo 列）均解释为 255 个字符的 Unicode 字符串 (DT_WSTR)。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 按如下所示方式映射 Excel 数据类型：  
   
@@ -58,7 +58,7 @@ ms.locfileid: "82087155"
   
     -   布尔     布尔 (DT_BOOL)  
   
-    -   日期/时间`datetime`（DT_DATE）  
+    -   日期/时间`datetime` （DT_DATE）  
   
     -   字符串     Unicode 字符串，长度为 255 (DT_WSTR)  
   
@@ -105,7 +105,7 @@ ms.locfileid: "82087155"
   
 ## <a name="see-also"></a>另请参阅  
  [Excel 源](excel-source.md)   
- [集成服务&#40;SSIS&#41;变量](../integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; 变量](../integration-services-ssis-variables.md)   
  [数据流](data-flow.md)   
  [使用脚本任务处理 Excel 文件](../extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   

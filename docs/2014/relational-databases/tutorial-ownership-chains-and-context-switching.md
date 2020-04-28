@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 37b267c22458442e3c1c1572c2740b6595918fca
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487726"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
@@ -48,7 +48,7 @@ ms.locfileid: "81487726"
  本示例中的每个代码块都将逐一加以说明。 若要复制完整的示例，请参阅本教程结尾部分的 [完整示例](#CompleteExample) 。  
   
 ## <a name="1-configure-the-environment"></a>1.配置环境  
- 使用[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]和以下代码打开`AdventureWorks2012`数据库，并使用 语句`CURRENT_USER`[!INCLUDE[tsql](../includes/tsql-md.md)]检查 dbo 用户是否显示为上下文。  
+ 使用[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]和以下代码打开`AdventureWorks2012`数据库，然后使用`CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)]语句检查 dbo 用户是否显示为上下文。  
   
 ```  
 USE AdventureWorks2012;  
@@ -322,6 +322,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 数据库引擎和 Azure SQL 数据库的安全中心](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [SQL Server 数据库引擎和 Azure SQL Database 的安全中心](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

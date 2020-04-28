@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c6d2c689689cde5c6c5ef4ffa8ab5c0e8737078
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82086958"
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>针对 DMX 的 Analysis Services 连接类型 (SSRS)
@@ -48,7 +48,7 @@ ms.locfileid: "82086958"
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘解决方案](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)   
- [报表设计器 SQL 服务器数据工具中的查询设计工具&#40;SSRS&#41;](query-design-tools-ssrs.md)   
+ [查询设计工具报表设计器 SQL Server Data Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)   
  [Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   
