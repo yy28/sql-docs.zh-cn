@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 26c95c64f0f2922ef11946841b160879f001e358
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81290067"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
@@ -41,13 +41,13 @@ HRESULT GetParameterProperties(
  一个指向内存的指针，该内存包含 prgParamProperties 中返回的 SSPARAMPROPS 结构数量**。  
   
  prgParamProperties[out]**  
- 指向内存中将返回 SSPARAMPROPS 结构数组的位置的指针。 提供程序为结构分配内存，并将地址返回到此内存;使用者使用**IMalloc 释放此内存：：** 当它不再需要结构时，它是免费的。 在调用**IMalloc：：对** *prgParamProperties*免费之前，使用者还必须为每个 DBPROP 结构的*vValue*属性调用**VariantClear，** 以防止在变体包含引用类型（如 BSTR）的情况下出现内存泄漏。如果*pcParams*在输出时为零或发生DB_E_ERRORSOCCURRED以外的错误，则提供程序不会分配任何内存，并确保*prgParamProperties*是输出上的空指针。  
+ 指向内存中将返回 SSPARAMPROPS 结构数组的位置的指针。 提供程序为结构分配内存并返回此内存的地址;当使用者不再需要结构时，将使用**IMalloc：： Free**释放此内存。 在调用**IMalloc：： Free** for *prgParamProperties*之前，使用者还必须为每个 DBPROP 结构的*vValue*属性调用**VariantClear** ，以便在变体包含引用类型（如 BSTR）的情况下防止内存泄漏。如果*pcParams*在输出时为零，或发生除 DB_E_ERRORSOCCURRED 以外的错误，则提供程序不会分配任何内存，并确保*prgParamProperties*在输出时为空指针。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **Get参数属性**方法返回与核心 OLE DB **ICommand属性相同的错误代码：：getProperties**方法，但无法引发DB_S_ERRORSOCCURRED和DB_E_ERRORSOCCURED。  
+ **GetParameterProperties**方法返回与 Core OLE DB **ICommandProperties：： GetProperties**方法相同的错误代码，但不能引发 DB_S_ERRORSOCCURRED 和 DB_E_ERRORSOCCURED。  
   
 ## <a name="remarks"></a>备注  
- **ISS命令与参数：：获取参数属性**在**Get参数信息**方面的行为一致。 如果[ISSCommand 与参数：：设置参数属性](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)或**Set 参数信息**尚未调用或已调用 cParams 等于零 **，Getparameterinfo**将派生参数信息并返回此信息。 如果**ISSCommand 与参数：：设置参数属性**或**设置参数信息**已至少调用一个参数，**则 ISSCommand 与参数：get 参数属性**仅返回已为其调用**ISSCommand 与参数：：set 参数属性**的参数的属性。 如果**ISSCommand 与参数：：set 参数属性**在**ISSCommand 与参数：：获取参数属性**或**Getparameterinfo**之后调用，则随后对**ISSCommand 与参数的调用：get 参数属性**返回已调用**ISSCommand 与参数：：set 参数属性**的参数的重写值。  
+ 对于**GetParameterInfo**， **ISSCommandWithParameters：： GetParameterProperties**的行为一致。 如果未调用[ISSCommandWithParameters：： SetParameterProperties](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)或**SetParameterInfo** cParams 等于零，则**GetParameterInfo**将派生参数信息并返回 this。 如果已为至少一个参数调用了**ISSCommandWithParameters：： SetParameterProperties**或**SetParameterInfo** ，则**ISSCommandWithParameters：： GetParameterProperties**仅返回已调用**ISSCommandWithParameters：： SetParameterProperties**的那些参数的属性。 如果在**ISSCommandWithParameters：： GetParameterProperties**或**GetParameterInfo**后调用**ISSCommandWithParameters：： SetParameterProperties** ，则对**ISSCommandWithParameters：： GetParameterProperties**的后续调用将返回为其调用**ISSCommandWithParameters：： SetParameterProperties**的那些参数的重写值。  
   
  SSPARAMPROPS 结构的定义如下所示：  
 
@@ -59,7 +59,7 @@ struct SSPARAMPROPS {
 };
 ```
 
-|成员|描述|  
+|成员|说明|  
 |------------|-----------------|  
 |iOrdinal**|所传递参数的序号。|  
 |cPropertySets**|rgPropertySets 中 DBPROPSET 结构的数量**。|  

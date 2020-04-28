@@ -1,5 +1,5 @@
 ---
-title: 其他访问驱动程序编程详细信息 |微软文档
+title: 其他访问驱动程序编程详细信息 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ ms.assetid: cbd46df1-cc6d-4fd4-b401-c68ca85e15c6
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 1cb186d262114e46a98a2ad72f9707e682b7b5bf
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81291087"
 ---
 # <a name="other-access-driver-programming-details"></a>其他 Access 驱动程序的编程详细信息
 > [!NOTE]  
->  本节提供有关 ODBC 函数和其他编程详细信息的访问驱动程序特定信息。 有关函数的一般信息，请参阅[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)下的相应主题。  
+>  本部分提供有关 ODBC 函数和其他编程详细信息的访问驱动程序特定信息。 有关函数的常规信息，请参阅[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)中的相应主题。  
   
  本部分包含以下主题。  
   

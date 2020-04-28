@@ -1,5 +1,5 @@
 ---
-title: 支持的Scalar功能（视觉福克斯Pro ODBC驱动程序） |微软文档
+title: 支持的标量函数（Visual FoxPro ODBC 驱动程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 6541192e-e562-4de0-9f20-40afa41fb84a
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 8da1011fca453be6b1b677ca4bda84fee29b2a81
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81284787"
 ---
 # <a name="supported-scalar-functions-visual-foxpro-odbc-driver"></a>支持的标量函数（Visual FoxPro ODBC 驱动程序）
-Visual FoxPro ODBC 驱动程序支持 ODBC SQL 语法中定义的三种类型的标量函数：字符串、数字以及时间和日期函数。  
+Visual FoxPro ODBC 驱动程序支持以下三种类型的标量函数： ODBC SQL 语法： string、numeric 和 time 和 date 函数中定义的。  
   
  本部分包含以下主题。  
   

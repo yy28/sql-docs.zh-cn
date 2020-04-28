@@ -1,5 +1,5 @@
 ---
-title: SQLMore 结果 |微软文档
+title: SQLMoreResults |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f22112f57bbb38873956f17189169a4d66efe019
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81289104"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **SQLMore 结果**允许应用程序检索多组结果行。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句包含 COMPUTE 子句，或是提交了一批 ODBC 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，将导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序生成多个结果集。 在任一种情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都不允许通过创建服务器游标来处理结果。 因此，开发人员必须确保 ODBC 语句具有阻塞作用。 开发人员必须用完返回的数据或者取消 ODBC 语句，然后才能处理来自连接中其他活动语句的数据。  
+  **SQLMoreResults**允许应用程序检索多个结果行集。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句包含 COMPUTE 子句，或是提交了一批 ODBC 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，将导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序生成多个结果集。 在任一种情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都不允许通过创建服务器游标来处理结果。 因此，开发人员必须确保 ODBC 语句具有阻塞作用。 开发人员必须用完返回的数据或者取消 ODBC 语句，然后才能处理来自连接中其他活动语句的数据。  
   
 > [!NOTE]  
 >  在连接到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 之前的服务器版本时，仅支持包含 COMPUTE 子句的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SELECT 语句。  
   
- 开发人员可以确定由 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句的 COMPUTE 子句生成的结果集行列的属性。 有关详细信息，请参阅[SQLColattribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)。  
+ 开发人员可以确定由 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句的 COMPUTE 子句生成的结果集行列的属性。 有关更多详细信息，请参阅[SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)。  
   
- 当使用结果集中未提取的数据行调用**SQLMore 结果**时，这些行将丢失，并且下一个结果行集中的行数据可用。  
+ 当使用结果集中的 unfetched 数据行调用**SQLMoreResults**时，这些行将丢失，并使下一个结果行集中的行数据可用。  
   
 ## <a name="examples"></a>示例  
   
@@ -163,7 +163,7 @@ EXIT:
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [SQLMore结果函数](https://go.microsoft.com/fwlink/?LinkId=59357)   
+ [SQLMoreResults 函数](https://go.microsoft.com/fwlink/?LinkId=59357)   
  [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

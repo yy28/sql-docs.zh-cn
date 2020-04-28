@@ -1,5 +1,5 @@
 ---
-title: 日期、时间和时间戳转义序列 |微软文档
+title: 日期、时间和时间戳转义序列 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: 67b7dee0-e5b1-4469-a626-0c7767852b80
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: e6cbcdac00b4cd7497f53c9f3a13f4f7303b5154
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81284339"
 ---
 # <a name="date-time-and-timestamp-escape-sequences"></a>日期、时间和时间戳转义序列
-ODBC 为日期、时间和时间戳文本定义转义序列。 这些转义序列的语法如下：  
+ODBC 定义日期、时间和时间戳文本的转义序列。 这些转义序列的语法如下所示：  
   
 ```  
   
@@ -32,7 +32,7 @@ ODBC 为日期、时间和时间戳文本定义转义序列。 这些转义序�
 {ts 'value'}  
 ```  
   
- 在 BNF 符号中，语法如下所示：  
+ 在 BNF 表示法中，语法如下：  
   
 ```  
   
@@ -53,4 +53,4 @@ timestamp-separator ::=
 ```  
   
 ## <a name="remarks"></a>备注  
- 如果数据源支持日期、时间和时间戳数据类型，则支持日期、时间和时间戳文本转义序列。 应用程序应调用**SQLGetTypeInfo**以确定是否支持这些数据类型。
+ 如果数据源支持日期、时间和时间戳数据类型，则支持日期、时间和时间戳文本转义序列。 应用程序应调用**SQLGetTypeInfo** ，以确定是否支持这些数据类型。

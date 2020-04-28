@@ -1,5 +1,5 @@
 ---
-title: 批处理 |微软文档
+title: 批处理 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,11 +14,11 @@ ms.assetid: 3fa4eca8-691c-467d-bfa7-39c59cdb9c8d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: eed0eeee58bb7462d639d9f99ce4e9c0afb2d07f
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81285027"
 ---
 # <a name="batch-processing"></a>批处理
-对批处理 SQL 语句的支持并不普遍，因此可互操作的应用程序应该有条件地使用它们，或者根本不使用它们。 有关详细信息，请参阅[执行批处理](../../../odbc/reference/develop-app/executing-batches.md)。
+对批处理 SQL 语句的支持不是很大范围，因此可互操作的应用程序应有条件地使用它们。 有关详细信息，请参阅[执行批处理](../../../odbc/reference/develop-app/executing-batches.md)。

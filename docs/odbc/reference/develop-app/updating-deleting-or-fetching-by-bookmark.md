@@ -1,5 +1,5 @@
 ---
-title: 按书签更新、删除或提取 |微软文档
+title: 使用书签更新、删除或获取 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ ms.assetid: e2ee58d7-c28f-435f-b537-06207215dd2f
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 5e94a98bb577ef906afbb04539761fd07d15f772
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81286147"
 ---
 # <a name="updating-deleting-or-fetching-by-bookmark"></a>按书签更新、删除或提取
-书签可用于标识要在结果集中更新、从结果集中删除或从结果集提取到行集缓冲区的数据。 这些操作通过调用**SQLBulk 操作**执行，*选项*参数为 SQL_UPDATE_BY_BOOKMARK、SQL_DELETE_BY_BOOKMARK 或SQL_FETCH_BY_BOOKMARK。 这些操作中使用的书签存储在行集缓冲区的第 0 列中。 按书签更新时，将更新结果集列的数据从行集缓冲区检索到。 有关详细信息，请参阅使用[SQLBulk 操作更新数据](../../../odbc/reference/develop-app/updating-data-with-sqlbulkoperations.md)。
+书签可用于标识要在结果集中更新、从结果集删除或从结果集提取到行集缓冲区的数据。 这些操作通过使用 SQL_UPDATE_BY_BOOKMARK、SQL_DELETE_BY_BOOKMARK 或 SQL_FETCH_BY_BOOKMARK 的*选项*参数调用**SQLBulkOperations**来执行。 这些操作中使用的书签存储在行集缓冲区的第0列中。 如果按书签进行更新，则会从行集缓冲区中检索结果集列更新为的数据。 有关详细信息，请参阅[更新数据和 SQLBulkOperations](../../../odbc/reference/develop-app/updating-data-with-sqlbulkoperations.md)。

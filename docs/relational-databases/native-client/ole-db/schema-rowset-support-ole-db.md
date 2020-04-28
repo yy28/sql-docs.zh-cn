@@ -18,21 +18,21 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e54a81cf47804e1cf4568e739bb2c4cf83b9fe25
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81288547"
 ---
 # <a name="schema-rowset-support-ole-db"></a>架构行集支持 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本机[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端 OLE 数据库提供程序还支持在处理[!INCLUDE[tsql](../../../includes/tsql-md.md)]分布式查询时从链接服务器返回架构信息。  
+  在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]处理[!INCLUDE[tsql](../../../includes/tsql-md.md)]分布式查询时，Native Client OLE DB 提供程序还支持从链接服务器返回架构信息。  
   
 > [!NOTE]  
 >  尽管 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持同义词，但 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 不返回同义词的元数据。  
   
- 下表列出了[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]架构行集和本机客户端 OLE 数据库提供程序支持的限制列。  
+ 下表列出了[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]架构行集以及 Native Client OLE DB 提供程序支持的限制列。  
   
 |架构行集|限制列|  
 |-------------------|-------------------------|  
@@ -58,7 +58,7 @@ ms.locfileid: "81288547"
  [LINKEDSERVERS 行集 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL 服务器本机客户端&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
+ [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
  [使用用户定义类型](../../../relational-databases/native-client/features/using-user-defined-types.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 连接转换 |微软文档
+title: 连接转换 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,159 +15,159 @@ ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 225f8517a78f8e9d4d765163649da174d72e490c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81284767"
 ---
 # <a name="connection-transitions"></a>连接转换
 ODBC 连接具有以下状态。  
   
-|状态|描述|  
+|状态|说明|  
 |-----------|-----------------|  
-|C0|未分配的环境，未分配的连接|  
-|C1|已分配的环境，未分配的连接|  
-|C2|已分配的环境，已分配的连接|  
+|C0|未分配环境，未分配的连接|  
+|C1|已分配环境，未分配连接|  
+|C2|已分配环境，已分配连接|  
 |C3|连接函数需要数据|  
-|C4|连接连接|  
-|C5|连接连接，已分配语句|  
-|C6|连接连接，事务正在进行中。 连接可能处于状态 C6，连接上未分配语句。 例如，假设连接处于手动提交模式，并且处于状态 C4。 如果分配、执行（启动事务），然后释放，则事务将保持活动状态，但连接上没有语句。|  
+|C4|连接的连接|  
+|C5|已连接的连接，已分配语句|  
+|C6|连接的连接，事务正在进行。 连接可能处于非 C6 状态，并且不会在该连接上分配语句。 例如，假设连接处于手动提交模式，并且处于 state。 如果分配了语句并执行（启动事务），然后释放了该事务，则该事务将保持活动状态，但不会在该连接上使用任何语句。|  
   
  下表显示了每个 ODBC 函数如何影响连接状态。  
   
 ## <a name="sqlallochandle"></a>SQLAllocHandle  
   
-|C0<br /><br /> 没有恩夫|C1 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
+|C0<br /><br /> 无 Env。|C1 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
 |--------------------|--------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|C1[1]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
-|（IH）[2]|C2|--[5]|--[5]|--[5]|--[5]|--[5]|  
-|（IH）[3]|（IH）|(08003)|(08003)|C5|--[5]|--[5]|  
-|（IH）[4]|（IH）|(08003)|(08003)|--[5]|--[5]|--[5]|  
+|C1 [1]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
+|IHpps-2|C2|--[5]|--[5]|--[5]|--[5]|--[5]|  
+|IH三维空间|IH|（08003）|（08003）|C5|--[5]|--[5]|  
+|IH4|IH|（08003）|（08003）|--[5]|--[5]|--[5]|  
   
- [1] 此行显示*HandleType* SQL_HANDLE_ENV时的过渡。  
+ [1] 此行显示 SQL_HANDLE_ENV *HandleType*时的转换。  
   
- [2] 此行显示*HandleType* SQL_HANDLE_DBC时的过渡。  
+ [2] 在 SQL_HANDLE_DBC *HandleType*时，该行显示转换。  
   
- [3] 此行显示*HandleType* SQL_HANDLE_STMT时的过渡。  
+ [3] 此行显示*HandleType* SQL_HANDLE_STMT 时的转换。  
   
- [4] 此行显示*handleType* SQL_HANDLE_DESC时的过渡。  
+ [4] 此行显示*HandleType* SQL_HANDLE_DESC 时的转换。  
   
- [5] 使用*OutputHandlePtr*调用**SQLAllocHandle，** 指向一个有效的句柄，该句柄在不考虑该句柄的先前内容的情况下进行处理，并且可能会给 ODBC 驱动程序带来问题。 使用为*\*OutputHandlePtr*定义的相同应用程序变量调用**SQLAllocHandle**两次，而不调用**SQLFreeHandle**以释放句柄，然后再重新分配该句柄，这是不正确的 ODBC 应用程序编程。 以这种方式覆盖 ODBC 句柄可能会导致 ODBC 驱动程序的行为不一致或错误。  
+ [5] 调用**SQLAllocHandle**时，如果*OutputHandlePtr*指向有效的句柄，则会覆盖该句柄，而不考虑以前的内容 ofthat 句柄，并可能会导致 ODBC 驱动程序出现问题。 这是不正确的 ODBC 应用程序编程，用为* \*OutputHandlePtr*定义的同一个应用程序变量来调用**SQLAllocHandle**两次，而不调用**SQLFreeHandle**来释放该句柄，然后再重新分配它。 以这种方式覆盖 ODBC 句柄可能会导致 ODBC 驱动程序部分出现不一致的行为或错误。  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
   
-|C0<br /><br /> 没有恩夫|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
+|C0<br /><br /> 无 Env。|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|（IH）|（IH）|C3 [d] C4 [s]|-- [d] C2 [e] C4 [s]|(08002)|(08002)|(08002)|  
+|IH|IH|C3 [d] C4 [s]|--[d] C2 [e] C4 [s]|（08002）|（08002）|（08002）|  
   
 ## <a name="sqlclosecursor"></a>SQLCloseCursor  
   
-|C0<br /><br /> 没有恩夫|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
+|C0<br /><br /> 无 Env。|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|（IH）|（IH）|（IH）|（IH）|（IH）|--|--[1] C5[2]|  
+|IH|IH|IH|IH|IH|--|--[1] C5 [2]|  
   
  [1] 连接处于手动提交模式。  
   
  [2] 连接处于自动提交模式。  
   
-## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables"></a>SQLColumn 特权、SQLColumn、SQL 外键、SQLGetTypeInfo、SQL 主键、SQL过程列、SQL 过程程序、SQL 特殊列、SQLStatistics、SQLTable 特权和 SQLTables  
+## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables"></a>SQLColumnPrivileges、SQLColumns、SQLForeignKeys、SQLGetTypeInfo、SQLPrimaryKeys、SQLProcedureColumns、SQLProcedures、SQLSpecialColumns、SQLStatistics、SQLTablePrivileges 和 SQLTables  
   
-|C0<br /><br /> 没有恩夫|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
+|C0<br /><br /> 无 Env。|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|（IH）|（IH）|（IH）|（IH）|（IH）|--[1] C6[2]|--|  
+|IH|IH|IH|IH|IH|--[1] C6 [2]|--|  
   
- [1] 连接处于自动提交模式，或者数据源未开始事务。  
+ [1] 连接处于自动提交模式，或数据源未开始事务。  
   
- [2] 连接处于手动提交模式，数据源开始事务。  
+ [2] 连接处于手动提交模式，并且数据源开始了一个事务。  
   
 ## <a name="sqlconnect"></a>SQLConnect  
   
-|C0<br /><br /> 没有恩夫|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
+|C0<br /><br /> 无 Env。|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|（IH）|（IH）|C4|(08002)|(08002)|(08002)|(08002)|  
+|IH|IH|C4|（08002）|（08002）|（08002）|（08002）|  
   
 ## <a name="sqlcopydesc-sqlgetdescfield-sqlgetdescrec-sqlsetdescfield-and-sqlsetdescrec"></a>SQLCopyDesc、SQLGetDescField、SQLGetDescRec、SQLSetDescField 和 SQLSetDescRec  
   
-|C0<br /><br /> 没有恩夫|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
+|C0<br /><br /> 无 Env。|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|（IH）|（IH）|（IH）|（IH）|--[1]|--|--|  
+|IH|IH|IH|IH|--[1]|--|--|  
   
- [1] 在此状态下，应用程序唯一可用的描述符被显式分配描述符。  
+ [1] 在此状态下，可用于应用程序的唯一描述符是显式分配的描述符。  
   
-## <a name="sqldatasources-and-sqldrivers"></a>SQLData 源和 SQL 驱动程序  
+## <a name="sqldatasources-and-sqldrivers"></a>SQLDataSources 和 SQLDrivers  
   
-|C0<br /><br /> 没有恩夫|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
+|C0<br /><br /> 无 Env。|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|（IH）|--|--|--|--|--|--|  
+|IH|--|--|--|--|--|--|  
   
-## <a name="sqldisconnect"></a>SQL 断开  
+## <a name="sqldisconnect"></a>SQLDisconnect  
   
-|C0<br /><br /> 没有恩夫|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
+|C0<br /><br /> 无 Env。|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|（IH）|（IH）|(08003)|C2|C2|C2|25000|  
+|IH|IH|（08003）|C2|C2|C2|25000|  
   
 ## <a name="sqldriverconnect"></a>SQLDriverConnect  
   
-|C0<br /><br /> 没有恩夫|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
+|C0<br /><br /> 无 Env。|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|（IH）|（IH）|C4 s -- n[f]|(08002)|(08002)|(08002)|(08002)|  
+|IH|IH|C4 s--n [f]|（08002）|（08002）|（08002）|（08002）|  
   
 ## <a name="sqlendtran"></a>SQLEndTran  
   
-|C0<br /><br /> 没有恩夫|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
+|C0<br /><br /> 无 Env。|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|（IH）[1]|--[3]|--[3]|--[3]|--|--|--[4] 或（[5]、[6]和[8]）C4[5]和[7]C5[5]、[6]和[9]|  
-|（IH）[2]|（IH）|(08003)|(08003)|--|--|C5|  
+|IH2|--[3]|--[3]|--[3]|--|--|--[4] 或（[5]，[6]，[8]） C4 [5] 和 [7] C5 [5]，[6]，和 [9]|  
+|IHpps-2|IH|（08003）|（08003）|--|--|C5|  
   
- [1] 此行显示*HandleType* SQL_HANDLE_ENV时的过渡。  
+ [1] 此行显示 SQL_HANDLE_ENV *HandleType*时的转换。  
   
- [2] 此行显示*HandleType* SQL_HANDLE_DBC时的过渡。  
+ [2] 在 SQL_HANDLE_DBC *HandleType*时，该行显示转换。  
   
- [3] 由于连接未处于连接状态，因此不受事务的影响。  
+ [3] 因为连接未处于连接状态，所以它不受事务的影响。  
   
- [4] 连接上的提交或回滚失败。 在这种情况下，函数返回SQL_ERROR。  
+ [4] 连接上的提交或回滚失败。 在这种情况下，函数将返回 SQL_ERROR。  
   
- [5] 在连接上成功提交或回滚。 如果另一个连接上的提交或回滚失败，则函数返回SQL_ERROR，或者如果所有连接上提交或回滚成功，则函数返回SQL_SUCCESS。  
+ [5] 在连接上成功提交或回滚。 如果提交或回滚在另一个连接上失败，则函数将返回 SQL_ERROR; 如果在所有连接上完成提交或回滚，则函数返回 SQL_SUCCESS。  
   
  [6] 连接上至少分配了一个语句。  
   
- [7] 连接上未分配任何语句。  
+ [7] 没有在连接上分配语句。  
   
- [8] 连接至少有一个语句，其中存在打开的游标，并且数据源在提交或回滚事务时保留游标，以适用者为准（取决于*完成类型*是SQL_COMMIT还是SQL_ROLLBACK）。 有关详细信息，请参阅[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)中SQL_CURSOR_COMMIT_BEHAVIOR和SQL_CURSOR_ROLLBACK_BEHAVIOR属性。  
+ [8] 连接至少具有一个已打开的游标的语句，在提交或回滚事务时，数据源会保留游标，无论应用*的是 SQL_COMMIT*还是 SQL_ROLLBACK。 有关详细信息，请参阅 SQL_CURSOR_COMMIT_BEHAVIOR 和 SQL_CURSOR_ROLLBACK_BEHAVIOR [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)中的属性。  
   
- [9] 如果连接具有任何具有打开游标的语句，则在提交或回滚事务时不会保留游标。  
+ [9] 如果连接的所有语句都有打开的游标，则提交或回滚事务时，不会保留游标。  
   
 ## <a name="sqlexecdirect-and-sqlexecute"></a>SQLExecDirect 和 SQLExecute  
   
-|C0<br /><br /> 没有恩夫|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
+|C0<br /><br /> 无 Env。|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|（IH）|（IH）|（IH）|（IH）|（IH）|--[1] C6[2] C6[3]|--|  
+|IH|IH|IH|IH|IH|--[1] C6 [2] C6 [3]|--|  
   
- [1] 连接处于自动提交模式，所执行的语句不是*游标**规范*（如 SELECT 语句）;或连接处于手动提交模式，并且执行的语句未开始事务。  
+ [1] 连接处于自动提交模式，而执行的语句不是*游标**规范*（如 SELECT 语句）;或者连接处于手动提交模式，而执行的语句未开始事务。  
   
- [2] 连接处于自动提交模式，所执行的语句是*游标**规范*（如 SELECT 语句）。  
+ [2] 连接处于自动提交模式，而执行的语句是*游标**规范*（如 SELECT 语句）。  
   
- [3] 连接处于手动提交模式，数据源开始事务。  
+ [3] 连接处于手动提交模式，并且数据源开始了一个事务。  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
-|C0<br /><br /> 没有恩夫|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
+|C0<br /><br /> 无 Env。|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|（IH）[1]|C0|（HY010）|（HY010）|（HY010）|（HY010）|（HY010）|  
-|（IH）[2]|（IH）|（C1）|（HY010）|（HY010）|（HY010）|（HY010）|  
-|（IH）[3]|（IH）|（IH）|（IH）|（IH）|C4[5] --[6]|--[7] C4[5]和[8]C5[6]和[8]|  
-|（IH）[4]|（IH）|（IH）|（IH）|--|--|--|  
+|IH2|C0|HY010|HY010|HY010|HY010|HY010|  
+|IHpps-2|IH|低耗|HY010|HY010|HY010|HY010|  
+|IH三维空间|IH|IH|IH|IH|C4 [5]--[6]|--[7] C4 [5] 和 [8] C5 [6] 和 [8]|  
+|IH4|IH|IH|IH|--|--|--|  
   
- [1] 此行显示*HandleType* SQL_HANDLE_ENV时的过渡。  
+ [1] 此行显示 SQL_HANDLE_ENV *HandleType*时的转换。  
   
- [2] 此行显示*HandleType* SQL_HANDLE_DBC时的过渡。  
+ [2] 在 SQL_HANDLE_DBC *HandleType*时，该行显示转换。  
   
- [3] 此行显示*HandleType* SQL_HANDLE_STMT时的过渡。  
+ [3] 此行显示*HandleType* SQL_HANDLE_STMT 时的转换。  
   
- [4] 此行显示*handleType* SQL_HANDLE_DESC时的过渡。  
+ [4] 此行显示*HandleType* SQL_HANDLE_DESC 时的转换。  
   
- [5] 连接上只分配了一个语句。  
+ [5] 连接上只分配有一个语句。  
   
  [6] 连接上分配了多个语句。  
   
@@ -177,126 +177,126 @@ ODBC 连接具有以下状态。
   
 ## <a name="sqlfreestmt"></a>SQLFreeStmt  
   
-|C0<br /><br /> 没有恩夫|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
+|C0<br /><br /> 无 Env。|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|（IH）[1]|（IH）|（IH）|（IH）|（IH）|--|C5[3] --[4]|  
-|（IH）[2]|（IH）|（IH）|（IH）|（IH）|--|--|  
+|IH2|IH|IH|IH|IH|--|C5 [3]--[4]|  
+|IHpps-2|IH|IH|IH|IH|--|--|  
   
- [1] 当*option*参数SQL_CLOSE时，此行显示事务。  
+ [1] 在 SQL_CLOSE*选项*参数时，该行显示事务。  
   
- [2] 当*Option*参数SQL_UNBIND或SQL_RESET_PARAMS时，此行显示事务。  
+ [2] 当*选项*参数 SQL_UNBIND 或 SQL_RESET_PARAMS 时，该行显示事务。  
   
- [3] 连接处于自动提交模式，除此语句外，任何语句上未打开任何游标。  
+ [3] 连接处于自动提交模式，并且除此外的任何语句上都未打开任何游标。  
   
- [4] 连接处于手动提交模式，或者处于自动提交模式，并且至少在其他一个语句上打开了游标。  
+ [4] 连接处于手动提交模式，或处于自动提交模式，并且至少在一个其他语句上打开了游标。  
   
 ## <a name="sqlgetconnectattr"></a>SQLGetConnectAttr  
   
-|C0<br /><br /> 没有恩夫|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
+|C0<br /><br /> 无 Env。|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|Ih|Ih|--[1] 08003[2]|HY010|--|--|--|  
+|IH|IH|--[1] 08003 [2]|HY010|--|--|--|  
   
- [1]*属性*参数SQL_ATTR_ACCESS_MODE、SQL_ATTR_AUTOCOMMIT、SQL_ATTR_LOGIN_TIMEOUT、SQL_ATTR_ODBC_CURSORS、SQL_ATTR_TRACE 或SQL_ATTR_TRACEFILE，或者已为连接属性设置了值。  
+ [1]*属性*参数 SQL_ATTR_ACCESS_MODE、SQL_ATTR_AUTOCOMMIT、SQL_ATTR_LOGIN_TIMEOUT、SQL_ATTR_ODBC_CURSORS、SQL_ATTR_TRACE 或 SQL_ATTR_TRACEFILE 或已为连接属性设置的值。  
   
- [2]*属性*参数不是SQL_ATTR_ACCESS_MODE、SQL_ATTR_AUTOCOMMIT、SQL_ATTR_LOGIN_TIMEOUT、SQL_ATTR_ODBC_CURSORS、SQL_ATTR_TRACE或SQL_ATTR_TRACEFILE，并且尚未为连接属性设置值。  
+ [2]*属性*参数不是 SQL_ATTR_ACCESS_MODE、SQL_ATTR_AUTOCOMMIT、SQL_ATTR_LOGIN_TIMEOUT、SQL_ATTR_ODBC_CURSORS、SQL_ATTR_TRACE 或 SQL_ATTR_TRACEFILE，并且没有为连接属性设置值。  
   
 ## <a name="sqlgetdiagfield-and-sqlgetdiagrec"></a>SQLGetDiagField 和 SQLGetDiagRec  
   
-|C0<br /><br /> 没有恩夫|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
+|C0<br /><br /> 无 Env。|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|（IH）[1]|--|--|--|--|--|--|  
-|（IH）[2]|（IH）|--|--|--|--|--|  
-|（IH）[3]|（IH）|（IH）|（IH）|（IH）|--|--|  
-|（IH）[4]|（IH）|（IH）|（IH）|--|--|--|  
+|IH2|--|--|--|--|--|--|  
+|IHpps-2|IH|--|--|--|--|--|  
+|IH三维空间|IH|IH|IH|IH|--|--|  
+|IH4|IH|IH|IH|--|--|--|  
   
- [1] 此行显示*HandleType* SQL_HANDLE_ENV时的过渡。  
+ [1] 此行显示 SQL_HANDLE_ENV *HandleType*时的转换。  
   
- [2] 此行显示*HandleType* SQL_HANDLE_DBC时的过渡。  
+ [2] 在 SQL_HANDLE_DBC *HandleType*时，该行显示转换。  
   
- [3] 此行显示*HandleType* SQL_HANDLE_STMT时的过渡。  
+ [3] 此行显示*HandleType* SQL_HANDLE_STMT 时的转换。  
   
- [4] 此行显示*handleType* SQL_HANDLE_DESC时的过渡。  
+ [4] 此行显示*HandleType* SQL_HANDLE_DESC 时的转换。  
   
 ## <a name="sqlgetenvattr"></a>SQLGetEnvAttr  
   
-|C0<br /><br /> 没有恩夫|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
+|C0<br /><br /> 无 Env。|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|Ih|--|--|--|--|--|--|  
+|IH|--|--|--|--|--|--|  
   
 ## <a name="sqlgetfunctions"></a>SQLGetFunctions  
   
-|C0<br /><br /> 没有恩夫|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
+|C0<br /><br /> 无 Env。|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|Ih|Ih|HY010|HY010|--|--|--|  
+|IH|IH|HY010|HY010|--|--|--|  
   
 ## <a name="sqlgetinfo"></a>SQLGetInfo  
   
-|C0<br /><br /> 没有恩夫|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
+|C0<br /><br /> 无 Env。|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|Ih|Ih|--[1] 08003[2]|08003|--|--|--|  
+|IH|IH|--[1] 08003 [2]|08003|--|--|--|  
   
- [1]*信息类型*参数SQL_ODBC_VER。  
+ [1] *InfoType*参数 SQL_ODBC_VER。  
   
- [2]*信息类型*参数未SQL_ODBC_VER。  
+ [2] *InfoType*参数未 SQL_ODBC_VER。  
   
 ## <a name="sqlmoreresults"></a>SQLMoreResults  
   
-|C0<br /><br /> 没有恩夫|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
+|C0<br /><br /> 无 Env。|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|（IH）|（IH）|（IH）|（IH）|（IH）|--[1] C6[2]|--[3] C5[1]|  
+|IH|IH|IH|IH|IH|--[1] C6 [2]|--[3] C5 [1]|  
   
- {1} 连接处于自动提交模式，并且对**SQLMoreResult 的**调用尚未初始化了游标规范的结果集的处理。  
+ [1] 连接处于自动提交模式，并且对**SQLMoreResults**的调用未初始化对游标规范的结果集的处理。  
   
- [2] 连接处于自动提交模式，对**SQLMore结果**的调用已初始化了游标规范的结果集的处理。  
+ [2] 连接处于自动提交模式，并且对**SQLMoreResults**的调用已经初始化了游标规范的结果集的处理。  
   
  [3] 连接处于手动提交模式。  
   
 ## <a name="sqlnativesql"></a>SQLNativeSql  
   
-|C0<br /><br /> 没有恩夫|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
+|C0<br /><br /> 无 Env。|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|（IH）|（IH）|(08003)|(08003)|--|--|--|  
+|IH|IH|（08003）|（08003）|--|--|--|  
   
 ## <a name="sqlprepare"></a>SQLPrepare  
   
-|C0<br /><br /> 没有恩夫|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
+|C0<br /><br /> 无 Env。|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|（IH）|（IH）|（IH）|（IH）|（IH）|--[1] C6[2]|--|  
+|IH|IH|IH|IH|IH|--[1] C6 [2]|--|  
   
- [1] 连接处于自动提交模式，或者数据源未开始事务。  
+ [1] 连接处于自动提交模式，或数据源未开始事务。  
   
- [2] 连接处于手动提交模式，数据源开始事务。  
+ [2] 连接处于手动提交模式，并且数据源开始了一个事务。  
   
 ## <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
   
-|C0<br /><br /> 没有恩夫|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
+|C0<br /><br /> 无 Env。|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|Ih|Ih|--[1] 08003[2]|HY010|--[3] 08002[4] HY011[5]|--[3] 08002[4] HY011[5]|--[3] 和 [6] C5[8] 08002[4] HY011[5] 或 [7]|  
+|IH|IH|--[1] 08003 [2]|HY010|--[3] 08002 [4] HY011 [5]|--[3] 08002 [4] HY011 [5]|--[3] 和 [6] C5 [8] 08002 [4] HY011 [5] 或 [7]|  
   
- [1]*属性*参数未SQL_ATTR_TRANSLATE_LIB或SQL_ATTR_TRANSLATE_OPTION。  
+ [1]*特性*参数不是 SQL_ATTR_TRANSLATE_LIB 或 SQL_ATTR_TRANSLATE_OPTION。  
   
- [2]*属性*参数SQL_ATTR_TRANSLATE_LIB或SQL_ATTR_TRANSLATE_OPTION。  
+ [2]*特性*参数 SQL_ATTR_TRANSLATE_LIB 或 SQL_ATTR_TRANSLATE_OPTION。  
   
- [3]*属性*参数未SQL_ATTR_ODBC_CURSORS或SQL_ATTR_PACKET_SIZE。  
+ [3]*特性*参数不是 SQL_ATTR_ODBC_CURSORS 或 SQL_ATTR_PACKET_SIZE。  
   
- [4]*属性*参数SQL_ATTR_ODBC_CURSORS。  
+ [4]*特性*参数 SQL_ATTR_ODBC_CURSORS。  
   
- [5]*属性*参数SQL_ATTR_PACKET_SIZE。  
+ [5]*特性*参数 SQL_ATTR_PACKET_SIZE。  
   
- {6}*属性*参数未SQL_ATTR_AUTOCOMMIT，或者*属性*参数SQL_ATTR_AUTOCOMMIT，并且设置此属性未提交事务。  
+ [6] 找不到*属性*参数 SQL_ATTR_AUTOCOMMIT，或*属性*参数 SQL_ATTR_AUTOCOMMIT 并且设置此属性未提交事务。  
   
- [7]*属性*参数SQL_ATTR_TXN_ISOLATION。  
+ [7]*特性*参数 SQL_ATTR_TXN_ISOLATION。  
   
- [8]*属性*参数SQL_ATTR_AUTOCOMMIT，设置此属性已提交事务。  
+ [8]*特性*参数 SQL_ATTR_AUTOCOMMIT，并设置此特性已提交事务。  
   
 ## <a name="sqlsetenvattr"></a>SQLSetEnvAttr  
   
-|C0<br /><br /> 没有恩夫|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
+|C0<br /><br /> 无 Env。|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|（IH）|--|--|（HY010）|--|--|--|  
+|IH|--|--|HY010|--|--|--|  
   
-## <a name="all-other-odbc-functions"></a>所有其他 ODBC 功能  
+## <a name="all-other-odbc-functions"></a>所有其他 ODBC 函数  
   
-|C0<br /><br /> 没有恩夫|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
+|C0<br /><br /> 无 Env。|C1<br /><br /> 未分配|C2<br /><br /> 已分配|C3<br /><br /> 需要数据|C4<br /><br /> 连续|C5<br /><br /> 语句|C6<br /><br /> 事务|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|（IH）|（IH）|（IH）|（IH）|（IH）|--|--|
+|IH|IH|IH|IH|IH|--|--|

@@ -1,5 +1,5 @@
 ---
-title: SQLTable 特权 |微软文档
+title: SQLTablePrivileges |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d7a77eb5ea151c3a85f2235f48bb03d0e98dd9ce
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81291897"
 ---
 # <a name="sqltableprivileges"></a>SQLTablePrivileges
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **SQLTable 特权**可以在静态游标上执行。 尝试在可提升的（键集驱动或动态）上执行**SQLTable 特权**，SQL_SUCCESS_WITH_INFO指示游标类型已更改。  
+  可以对静态游标执行**SQLTablePrivileges** 。 尝试对可更新的（键集驱动或动态）执行**SQLTablePrivileges**将返回 SQL_SUCCESS_WITH_INFO 指示游标类型已更改。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 ODBC 驱动程序通过接受*目录名称*参数的两部分名称 *（Linked_Server_Name.Catalog_Name*）支持报告链接服务器上的表的信息。  
+ Native Client ODBC 驱动程序通过接受由两部分组成的*CatalogName*参数的名称来支持链接服务器上表的报告信息： *Linked_Server_Name。 Catalog_Name。* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ## <a name="see-also"></a>另请参阅  
- [SQLTable 特权函数](https://go.microsoft.com/fwlink/?LinkId=59373\)   
+ [SQLTablePrivileges 函数](https://go.microsoft.com/fwlink/?LinkId=59373\)   
  [ODBC API 实现细节](~/relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

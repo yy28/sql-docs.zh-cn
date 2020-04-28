@@ -1,5 +1,5 @@
 ---
-title: ODBC 子键 |微软文档
+title: ODBC 子项 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,28 +15,28 @@ ms.assetid: f9534144-8f42-4946-b0fb-638e9dcde9c8
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 96e9a5f4c3cdac5097686528d3c089d9ec5826f7
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81287437"
 ---
 # <a name="odbc-subkey"></a>ODBC 子项
-ODBC 子键下的值指定 ODBC 跟踪选项。 这些选项通过**SQLManageDataSource**显示的 ODBC 数据源管理员对话框的"跟踪"选项卡进行设置。 ODBC 子密钥本身是可选的。 这些值的格式如下表所示。  
+ODBC 子项下的值指定 ODBC 跟踪选项。 通过**SQLManageDataSources**显示的 "ODBC 数据源管理器" 对话框中的 "跟踪" 选项卡设置这些选项。 ODBC 子项本身是可选的。 这些值的格式如下表中所示。  
   
 |名称|数据类型|数据|  
 |----------|---------------|----------|  
 |跟踪|REG_SZ|**0** &#124; **1**|  
-|TraceFile|REG_SZ|*跟踪文件路径*|  
+|TraceFile|REG_SZ|*tracefile-路径*|  
   
- 这些值具有下表中描述的含义。  
+ 这些值的含义如下表所述。  
   
-|“值”|含义|  
+|值|含义|  
 |-----------|-------------|  
-|跟踪|如果使用SQL_HANDLE_ENV选项调用**SQLAllocHandle**时跟踪值设置为 1，则为调用应用程序启用跟踪。<br /><br /> 如果跟踪关键字在应用程序使用SQL_HANDLE_ENV选项调用**SQLAllocHandle**时设置为 0，则禁用调用应用程序的跟踪。 这是默认值。<br /><br /> 应用程序可以使用SQL_ATTR_TRACE连接属性启用或禁用跟踪。 但是，这样做不会更改此值的数据。|  
-|TraceFile|如果启用了跟踪，驱动程序管理器将写入跟踪文件值指定的跟踪文件。<br /><br /> 如果未指定跟踪文件，驱动程序管理器将写入当前驱动器上的 Sql.log 文件。 这是默认值。<br /><br /> 跟踪应仅用于单个应用程序，或者每个应用程序应指定不同的跟踪文件。 否则，两个或多个应用程序将尝试同时打开同一跟踪文件，从而导致错误。<br /><br /> 应用程序可以使用SQL_ATTR_TRACEFILE连接属性指定新的跟踪文件。 但是，这样做不会更改此值的数据。|  
+|跟踪|当应用程序使用 SQL_HANDLE_ENV 选项调用**SQLAllocHandle**时，如果跟踪值设置为1，则为调用应用程序启用跟踪。<br /><br /> 当应用程序使用 SQL_HANDLE_ENV 选项调用**SQLAllocHandle**时，如果 Trace 关键字设置为0，则对调用应用程序禁用跟踪。 这是默认值。<br /><br /> 应用程序可以使用 SQL_ATTR_TRACE 连接属性启用或禁用跟踪。 但这样做不会更改此值的数据。|  
+|TraceFile|如果启用跟踪，驱动程序管理器会写入由 TraceFile 值指定的跟踪文件。<br /><br /> 如果未指定任何跟踪文件，则驱动程序管理器将写入当前驱动器上的 Sql .log 文件。 这是默认值。<br /><br /> 跟踪只应用于单个应用程序，或每个应用程序应指定一个不同的跟踪文件。 否则，两个或多个应用程序将尝试同时打开同一跟踪文件，从而导致错误。<br /><br /> 应用程序可以使用 SQL_ATTR_TRACEFILE 连接属性指定新的跟踪文件。 但这样做不会更改此值的数据。|  
   
- 例如，假设已启用跟踪，并且跟踪文件为 C：_Odbc.log。 ODBC 子键下的值如下所示：  
+ 例如，假设已启用跟踪并且跟踪文件为 C:\Odbc.log。 ODBC 子项下的值如下所示：  
   
 ```  
 Trace : REG_SZ : 1  

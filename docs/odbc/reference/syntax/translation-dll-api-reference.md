@@ -1,5 +1,5 @@
 ---
-title: 翻译 DLL API 参考 |微软文档
+title: 翻译 DLL API 参考 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 69033376-c315-4f52-8ee5-f23f07694bf8
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 11889082fd9eb989f696520ef19749aff2be9f75
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81286825"
 ---
 # <a name="translation-dll-api-reference"></a>转换 DLL API 参考
-本节介绍翻译 DLL API 的语法，它由两个函数组成 **：SQLDriverToDataSource 和** **SQLDataSourceToDriver**。 这些函数必须包含在执行驱动程序转换的 DLL 中。  
+本部分介绍翻译 DLL API 的语法，其中包含两个函数： **SQLDriverToDataSource**和**SQLDataSourceToDriver**。 这些函数必须包括在执行驱动程序转换的 DLL 中。  
   
  本部分包含以下主题。  
   

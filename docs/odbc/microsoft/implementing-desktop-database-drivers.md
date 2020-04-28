@@ -1,5 +1,5 @@
 ---
-title: 实现桌面数据库驱动程序 |微软文档
+title: 实现桌面数据库驱动程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 0b25a5e8ed7a39a11b207c185f47855c7670473e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81290607"
 ---
 # <a name="implementing-desktop-database-drivers"></a>实现桌面数据库驱动程序
-有关如何实现和设置 Microsoft ODBC 桌面数据库驱动程序的说明和技术说明可在 ODBC 数据源管理员联机帮助中找到。 此文件可以从[Microsoft ODBC 数据源管理员](../../odbc/admin/odbc-data-source-administrator.md)的驱动程序设置例程期间访问。  
+有关如何实现和设置 Microsoft ODBC 桌面数据库驱动程序的说明和技术说明，可参阅 ODBC 数据源管理器联机帮助。 在驱动程序安装例程期间，可以从[MICROSOFT ODBC 数据源管理器](../../odbc/admin/odbc-data-source-administrator.md)访问此文件。  
   
  本部分包含以下主题。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "81290607"
   
 -   [硬件和软件要求](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
   
--   [具有桌面数据库驱动程序的描述符](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
+-   [带有桌面数据库驱动程序的描述符](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
   
 -   [桌面数据库驱动程序的诊断](../../odbc/microsoft/diagnostics-for-desktop-database-drivers.md)  
   

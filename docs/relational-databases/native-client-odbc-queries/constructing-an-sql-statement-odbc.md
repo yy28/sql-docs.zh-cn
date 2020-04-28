@@ -1,5 +1,5 @@
 ---
-title: 构造 SQL 语句 （ODBC） |微软文档
+title: 构造 SQL 语句（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eab0db859bbecea43d19b012a56b2e491b4ecfcf
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81291422"
 ---
 # <a name="constructing-an-sql-statement-odbc"></a>构造 SQL 语句 (ODBC)
@@ -35,19 +35,19 @@ ms.locfileid: "81291422"
   
      运行时构造的 SQL 语句使用户可以通过使用常用子句（如 SELECT、WHERE 和 ORDER BY）来调整语句。 这包括用户输入的即席查询。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端 ODBC 驱动程序仅针对 ODBC 和 ISO 语法解析 SQL[!INCLUDE[ssDE](../../includes/ssde-md.md)]语句，驱动程序不会直接支持该[!INCLUDE[tsql](../../includes/tsql-md.md)]语法转换为 。 其他所有 SQL 语法将按原样传递给[!INCLUDE[ssDE](../../includes/ssde-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在此确定该语法是否为有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这种方法具有两个好处：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端 ODBC 驱动程序仅对不受支持的 ODBC 和 ISO 语法[!INCLUDE[ssDE](../../includes/ssde-md.md)]（驱动程序转换为[!INCLUDE[tsql](../../includes/tsql-md.md)]）分析 SQL 语句。 其他所有 SQL 语法将按原样传递给[!INCLUDE[ssDE](../../includes/ssde-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在此确定该语法是否为有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这种方法具有两个好处：  
   
--   减少开销  
+-   降低开销  
   
      由于驱动程序只需扫描较少的 ODBC 和 ISO 子句，因而最大程度地减少了其处理开销。  
   
 -   灵活性  
   
-     程序员可以调整其应用程序的可移植性。 若要增强针对多个数据库的可移植性，可优先使用 ODBC 和 ISO 语法。 若要使用特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的增强功能，可使用相应的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 ODBC 驱动程序支持完整的[!INCLUDE[tsql](../../includes/tsql-md.md)]语法，因此基于 ODBC 的应用程序可以利用 中的所有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能。  
+     程序员可以调整其应用程序的可移植性。 若要增强针对多个数据库的可移植性，可优先使用 ODBC 和 ISO 语法。 若要使用特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的增强功能，可使用相应的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序支持完整[!INCLUDE[tsql](../../includes/tsql-md.md)]的语法，因此基于 ODBC 的应用程序可以利用中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有功能。  
   
  SELECT 语句中的列列表应当只包含执行当前任务所需的列。 这样做不仅可减少通过网络发送的数据量，还可降低数据库更改对应用程序的影响。 如果应用程序未引用表中的列，则应用程序不受对该列所做任何更改的影响。  
   
 ## <a name="see-also"></a>另请参阅  
- [执行查询&#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [&#40;ODBC&#41;执行查询](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 使用语句 （ODBC） |微软文档
+title: 使用语句（ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 62c422e0fb5c5afe481b2d11a477523ca1466df3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81284327"
 ---
 # <a name="use-a-statement-odbc"></a>使用语句 (ODBC)
@@ -73,6 +73,6 @@ ms.locfileid: "81284327"
 8.  调用 [SQLFreeHandle](../../../relational-databases/native-client-odbc-api/sqlfreehandle.md)，同时将 *HandleType* 设置为 SQL_HANDLE_STMT，以释放语句句柄。  
   
 ## <a name="see-also"></a>另请参阅  
- [执行查询"如何"主题&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [&#40;ODBC&#41;执行查询操作指南主题](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   
