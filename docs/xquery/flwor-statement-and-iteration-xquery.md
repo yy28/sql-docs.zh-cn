@@ -24,10 +24,10 @@ ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9deb87d506e167d3de3439e0a07cfbb8bc040fac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038903"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>FLWOR 语句和迭代 (XQuery)
@@ -49,9 +49,7 @@ ms.locfileid: "68038903"
   
 -   可选的 `order by` 子句。  
   
--   
-  `return` 表达式。 
-  `return` 子句中的表达式用于构造 FLWOR 语句的结果。  
+-   `return` 表达式。 `return` 子句中的表达式用于构造 FLWOR 语句的结果。  
   
  例如，下面的查询将在第一个制造`Step`位置上循环访问 <> 元素，并返回 <`Step`> 节点的字符串值：  
   
@@ -96,8 +94,7 @@ where ProductModelID=7
   
  请注意上述查询的以下方面：  
   
--   
-  `$Step` 是迭代器变量。  
+-   `$Step` 是迭代器变量。  
   
 -   [路径表达式](../xquery/path-expressions-xquery.md) `//AWMI:root/AWMI:Location[1]/AWMI:step`生成输入序列。 此顺序是第一个 <`step` `Location`> 元素节点 <> 元素节点子项的顺序。  
   
@@ -251,8 +248,7 @@ where ProductModelID=7
   
 -   关键字使用**count （）** 函数来计算每个工作中心位置中`step`> 子元素的 <数量。 `where`  
   
--   
-  `return` 表达式将构造您希望从迭代结果生成的 XML。  
+-   `return` 表达式将构造您希望从迭代结果生成的 XML。  
   
  结果如下：  
   
@@ -260,8 +256,7 @@ where ProductModelID=7
 <Location LocationID="30"/>   
 ```  
   
- 
-  `where` 子句中的表达式的结果使用下列规则按指定的顺序转换为布尔值。 这些规则与路径表达式中的谓词规则相同，只不过不允许使用整数：  
+ `where` 子句中的表达式的结果使用下列规则按指定的顺序转换为布尔值。 这些规则与路径表达式中的谓词规则相同，只不过不允许使用整数：  
   
 1.  如果 `where` 表达式返回一个空序列，则其有效的布尔值为 False。  
   
@@ -300,13 +295,11 @@ SELECT @x.query('
   
 -   `for`表达式定义`$Loc`和 $`FirstStep`变量。  
   
--   
-  `two` 和 `/ManuInstructions/Location``$FirstStep in $Loc/Step[1]` 表达式相互关联，`$FirstStep` 的值取决于 `$Loc` 的值。  
+-   `two` 和 `/ManuInstructions/Location``$FirstStep in $Loc/Step[1]` 表达式相互关联，`$FirstStep` 的值取决于 `$Loc` 的值。  
   
 -   与`$Loc`相关联的表达式将生成 <`Location`> 元素的序列。 对于每个`Location` <> 元素`$FirstStep` ，将生成一个 <`Step`> 元素的序列，即单一实例。  
   
--   
-  `$Loc` 在与 `$FirstStep` 变量相关联的表达式中指定。  
+-   `$Loc` 在与 `$FirstStep` 变量相关联的表达式中指定。  
   
  结果如下：  
   
@@ -333,8 +326,7 @@ WHERE ProductModelID=7
   
  请注意上述查询的以下方面：  
   
--   
-  `for` 子句定义了两个变量：`$WC` 和 `$S`。 在生产某个自行车产品型号时，与 `$WC` 相关联的表达式将生成一系列生产车间。 分配给 `$S` 变量的路径表达式将为 `$WC` 中的每个生产车间序列生成一个相应的步骤序列。  
+-   `for` 子句定义了两个变量：`$WC` 和 `$S`。 在生产某个自行车产品型号时，与 `$WC` 相关联的表达式将生成一系列生产车间。 分配给 `$S` 变量的路径表达式将为 `$WC` 中的每个生产车间序列生成一个相应的步骤序列。  
   
 -   Return 语句构造了包含 <`Step`> 元素的 XML，该元素包含生产步骤和**LocationID**作为其属性。  
   
@@ -460,8 +452,7 @@ where ProductModelID=19;
   
 -   `/p1:ProductDescription/p1:Specifications/*`表达式返回 <`Specifications`> 的元素子级。  
   
--   
-  `order by (local-name($a))` 表达式将按元素名称的本地部分对序列进行排序。  
+-   `order by (local-name($a))` 表达式将按元素名称的本地部分对序列进行排序。  
   
  结果如下：  
   

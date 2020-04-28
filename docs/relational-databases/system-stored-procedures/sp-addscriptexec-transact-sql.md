@@ -16,10 +16,10 @@ ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e8ae792ba7f8422e841abbbe2f80b096497df993
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022449"
 ---
 # <a name="sp_addscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
@@ -53,7 +53,7 @@ sp_addscriptexec [ @publication = ] publication
 `[ @publisher = ] 'publisher'`指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  ** 在从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器进行发布时，不应使用 publisher。  
+>  *publisher*在从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器进行发布时，不应使用 publisher。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

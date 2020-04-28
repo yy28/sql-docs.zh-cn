@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 339d960a136e9cf939032068c21ec737f4d37ceb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018205"
 ---
 # <a name="stretch-database-catalog-views---sysremote_data_archive_databases"></a>Stretch Database 目录视图-sys. remote_data_archive_databases
@@ -37,6 +37,6 @@ ms.locfileid: "68018205"
 |**data_source_id**|**int**|用于连接到远程服务器的数据源|  
   
 ## <a name="see-also"></a>另请参阅  
- [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
+ [Stretch 数据库](../../sql-server/stretch-database/stretch-database.md)  
   
   

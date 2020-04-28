@@ -18,10 +18,10 @@ ms.assetid: d6f71a12-f7b1-4a1c-9639-a533b8287b0c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8276a23224495b7bcc69721fd5317d0b2b87821a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68009176"
 ---
 # <a name="sp_delete_log_shipping_primary_secondary-transact-sql"></a>sp_delete_log_shipping_primary_secondary (Transact-SQL)
@@ -72,7 +72,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [关于 &#40;SQL Server 的日志传送&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

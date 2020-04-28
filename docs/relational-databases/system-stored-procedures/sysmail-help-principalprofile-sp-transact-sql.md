@@ -18,10 +18,10 @@ ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5bc48bb3edbeaad5593f574676e61ab2ca7f727f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68044518"
 ---
 # <a name="sysmail_help_principalprofile_sp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
@@ -59,7 +59,7 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 |-|-|-|  
 |列名称|数据类型|说明|  
 |**principal_id**|**int**|数据库用户的 ID。|  
-|principal_name |**sysname**|数据库用户的名称。|  
+|**principal_name**|**sysname**|数据库用户的名称。|  
 |**profile_id**|**int**|数据库邮件配置文件的 ID 号。|  
 |**profile_name**|**sysname**|数据库邮件配置文件的名称。|  
 |**is_default**|**bit**|声明配置文件是否为用户的默认配置文件的标志。|  

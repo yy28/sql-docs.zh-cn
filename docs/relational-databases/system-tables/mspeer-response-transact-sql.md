@@ -18,10 +18,10 @@ ms.assetid: 510e24cf-0292-47a9-b1d9-71a30fef030f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c930a5eeae8bfdb7d952610fadc0b7d779033435
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026674"
 ---
 # <a name="mspeer_response-transact-sql"></a>MSpeer_response (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68026674"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|request_id |**int**|标识[MSpeer_request](../../relational-databases/system-tables/mspeer-request-transact-sql.md)表中的状态请求条目。|  
+|**request_id**|**int**|标识[MSpeer_request](../../relational-databases/system-tables/mspeer-request-transact-sql.md)表中的状态请求条目。|  
 |**对等**|**sysname**|生成响应的对等方。|  
 |**peer_db**|**sysname**|生成响应的对等方的订阅数据库。|  
 |**received_date**|**datetime**|收到对等请求的日期和时间。|  

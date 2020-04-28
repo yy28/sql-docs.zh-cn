@@ -17,10 +17,10 @@ ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 07158d4131c60cf46f49a860721333c78213c982
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004529"
 ---
 # <a name="handling-namespaces-in-xquery"></a>处理 XQuery 中的命名空间
@@ -146,8 +146,8 @@ where ProductModelID=19
  请注意，通过覆盖元素的默认命名空间（空命名空间），XML 构造中的所有本地命名元素随后将被绑定到覆盖的默认命名空间。 因此，如果在构造 XML 时需要灵活利用空命名空间，则不要覆盖元素的默认命名空间。  
   
 ## <a name="see-also"></a>另请参阅  
- [使用 WITH XMLNAMESPACES 将命名空间添加到查询](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
- [XML 数据 (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)   
+ [用 WITH XMLNAMESPACES 将命名空间添加到查询](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
+ [XML Data &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 语言参考 (SQL Server)](../xquery/xquery-language-reference-sql-server.md)  
   
   

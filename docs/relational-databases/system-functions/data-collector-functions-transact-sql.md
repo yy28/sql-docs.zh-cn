@@ -15,10 +15,10 @@ ms.assetid: 8efe8bb4-face-4608-83f4-cc7c6e9faf31
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d6098b0a94947ddca1c35f91ed02469c7d23d3be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68042893"
 ---
 # <a name="data-collector-functions--transact-sql"></a>数据收集器函数（Transact-sql）
@@ -30,12 +30,12 @@ ms.locfileid: "68042893"
   
 |||  
 |-|-|  
-|[fn_syscollector_get_execution_details &#40;Transact-sql&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)|[fn_syscollector_get_execution_stats &#40;Transact-sql&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md)|  
-|[fn_trace_getdata &#40;Transact-sql&#41;](../../relational-databases/system-functions/snapshots-fn-trace-getdata-transact-sql.md)||  
+|[fn_syscollector_get_execution_details (Transact-SQL)](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)|[fn_syscollector_get_execution_stats (Transact-SQL)](../../relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql.md)|  
+|[snapshots.fn_trace_getdata (Transact-SQL)](../../relational-databases/system-functions/snapshots-fn-trace-getdata-transact-sql.md)||  
   
 ## <a name="see-also"></a>另请参阅  
  [数据收集](../../relational-databases/data-collection/data-collection.md)   
- [数据收集器存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的数据收集器存储过程](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [&#40;Transact-sql&#41;的数据收集器视图](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [管理数据仓库存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)  
   

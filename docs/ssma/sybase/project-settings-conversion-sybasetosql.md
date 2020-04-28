@@ -10,10 +10,10 @@ ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5d4936638fc9e283caafffc2f2a7cfdbed396920
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028766"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>项目设置（转换）(SybaseToSQL)
@@ -421,7 +421,7 @@ Sybase 中的左函数和右函数对于负值长度参数的行为有所不同�
 **SUBSTRING 函数**  
 在 ASE 中，如果`SUBSTRING(expression, start, length)`指定的起始值大于表达式中的字符数，或者长度等于零，则函数返回 NULL。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure 中，等效表达式返回空字符串。  
   
--   若要使用 ASE 行为，请选择 " **Replace function**"。 对 SUBSTRING 函数的所有调用都将替换为基于传递的参数类型（在2ss 中的用户数据库中创建），对 SUBSTRING_VARCHAR 或 SUBSTRING_NVARCHAR 或 SUBSTRING_VARBINARY 用户定义函数进行调用，以模拟Sybase ASE 行为。  
+-   若要使用 ASE 行为，请选择 " **Replace function**"。 对 SUBSTRING 函数的所有调用都将替换为对 SUBSTRING_VARCHAR 或 SUBSTRING_NVARCHAR 或 SUBSTRING_VARBINARY 用户定义函数的调用，该函数基于传递的参数类型（在架构名称 2ss "下的用户数据库中创建）来模拟 Sybase ASE 行为。  
   
 -   若要使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure 行为，请选择 "**保留当前的语法**"。  
   

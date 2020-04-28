@@ -18,10 +18,10 @@ ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6cbeab4c673390cb80300eb5ced2b4cb5c1bcf1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029746"
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68029746"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|警报的 ID。|  
-|**状态值**|**int**|用户定义的值：<br /><br /> **0** = 通往。<br /><br /> **1** = 服务。|  
+|**status**|**int**|用户定义的值：<br /><br /> **0** = 通往。<br /><br /> **1** = 服务。|  
 |**agent_type**|**int**|代理类型：<br /><br /> **1** = 快照代理。<br /><br /> **2** = 日志读取器代理。<br /><br /> **3** = 分发代理。<br /><br /> **4** = 合并代理。|  
 |**agent_id**|**int**|表中的代理 ID **MSsnapshot_agents**、 **MSlogreader_agents**、 **MSdistribution_agents**或**MSmerge_agents**。|  
 |**error_id**|**int**|存储在**MSrepl_errors**中的错误的 ID。|  

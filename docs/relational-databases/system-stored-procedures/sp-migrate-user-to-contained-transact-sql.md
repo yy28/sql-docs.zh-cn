@@ -18,16 +18,16 @@ ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d5bcafb24313851f58fd18fc19ebabd0ee98f6dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022331"
 ---
 # <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  将映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的数据库用户转换为具有密码的包含数据库用户。 在包含的数据库中，请使用此过程删除安装了该数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的依赖项。 **sp_migrate_user_to_contained**将用户与原始[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名分开，以便为包含的数据库单独管理密码和默认语言等设置。 **** 在将包含的数据库移动到的[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]其他实例之前，可以使用 sp_migrate_user_to_contained，以消除当前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例登录名的依赖项。  
+  将映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的数据库用户转换为具有密码的包含数据库用户。 在包含的数据库中，请使用此过程删除安装了该数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的依赖项。 **sp_migrate_user_to_contained**将用户与原始[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名分开，以便为包含的数据库单独管理密码和默认语言等设置。 **sp_migrate_user_to_contained**在将包含的数据库移动到的[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]其他实例之前，可以使用 sp_migrate_user_to_contained，以消除当前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例登录名的依赖项。  
   
 > [!NOTE]
 > 使用**sp_migrate_user_to_contained**时要小心，因为您将无法撤消该效果。 此过程仅在包含的数据库中使用。 有关详细信息，请参阅[包含的数据库](../../relational-databases/databases/contained-databases.md)。  
@@ -80,7 +80,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ## <a name="examples"></a>示例  
   
 ### <a name="a-migrating-a-single-user"></a>A. 迁移单个用户  
- 以下示例将名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `Barry` 登录名迁移到具有密码的包含数据库用户。 该示例不更改用户名，并将登录名保留为 "已启用"。  
+ 以下示例将名为 `Barry` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名迁移到具有密码的包含数据库用户。 该示例不更改用户名，并将登录名保留为 "已启用"。  
   
 ```sql  
 sp_migrate_user_to_contained   

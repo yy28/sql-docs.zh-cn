@@ -18,10 +18,10 @@ ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c02b9327dbff75e3c0816bb3eec19e3cb3135d50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008918"
 ---
 # <a name="sp_password-transact-sql"></a>sp_password (Transact-SQL)
@@ -49,9 +49,9 @@ sp_password [ [ @old = ] 'old_password' , ]
 `[ @new = ] 'new_password'`新密码。 *new_password* **sysname**，无默认值。 如果未使用命名参数，则必须指定*old_password* 。  
   
 > [!IMPORTANT]  
->  不要使用空密码。 请使用强密码。 有关详细信息，请参阅[强密码](../../relational-databases/security/strong-passwords.md)。  
+>  不要使用空密码。 请使用强密码。 有关详细信息，请参阅 [Strong Passwords](../../relational-databases/security/strong-passwords.md)。  
   
-`[ @loginame = ] 'login'`受密码更改影响的登录名。 *login*的值为**sysname**，默认值为 NULL。 *登录名*必须已经存在，并且只能由**sysadmin**或**securityadmin**固定服务器角色的成员指定。  
+`[ @loginame = ] 'login'`受密码更改影响的登录名。 login 的数据类型为 sysname，默认值为 NULL******。 *登录名*必须已经存在，并且只能由**sysadmin**或**securityadmin**固定服务器角色的成员指定。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -88,7 +88,7 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [安全存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
+ [ALTER LOGIN &#40;Transact-sql&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-sql&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_addlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_adduser &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   

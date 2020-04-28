@@ -18,10 +18,10 @@ ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8711190a6d3cbae0c716f7f62af478b70b9473e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038911"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>基于布尔值的函数 - not Function 
@@ -72,7 +72,7 @@ WHERE CatalogDescription.exist('
 ### <a name="b-using-the-not-xquery-function-to-retrieve-work-center-locations-that-do-not-have-a-machinehours-attribute"></a>B. 使用 not() XQuery 函数检索没有 MachineHours 属性的生产车间  
  对 Instructions 列指定以下查询。 此列将存储产品型号的生产说明。  
   
- 对于特殊的产品型号，查询将检索未指定 MachineHours 的生产车间。 也就是说，> 元素的**** \<位置未指定属性 MachineHours。  
+ 对于特殊的产品型号，查询将检索未指定 MachineHours 的生产车间。 也就是说，> 元素的**MachineHours** \<位置未指定属性 MachineHours。  
   
 ```  
 SELECT ProductModelID, Instructions.query('  

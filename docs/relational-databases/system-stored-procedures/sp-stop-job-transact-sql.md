@@ -18,10 +18,10 @@ ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9a0549d247078634feadced301570e00746d5ba7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032723"
 ---
 # <a name="sp_stop_job-transact-sql"></a>sp_stop_job (Transact-SQL)
@@ -67,7 +67,7 @@ sp_stop_job
  如果作业当前正在执行**CmdExec**或**PowerShell**类型的步骤，则强制提前结束正在运行的进程（例如 myprogram.exe）。 提前结束可能导致不可预知的行为，如进程正在使用的文件保持为打开状态。 因此，如果作业包含**CmdExec**或**PowerShell**类型的步骤，则只能在极极端情况下使用**sp_stop_job** 。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下， **sysadmin**固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   

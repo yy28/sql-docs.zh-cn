@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4ab1797fabd8fb7d77eab85c97604b77e72f25c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68042759"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
@@ -56,16 +56,16 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
 ```  
   
 ## <a name="arguments"></a>参数  
- *数据表*  
+ *table*  
  表的名称，该表已标记为全文查询。 *表*或*视图*可以是由一个、两个或三个部分组成的数据库对象名称。 查询视图时，仅能涉及一个全文索引的基表。  
   
  *表*不能指定服务器名称，并且不能用于对链接服务器的查询。  
   
  column_name   
- FROM 子句中指定表的一个或多个全文索引列的名称。 列可以是 char、varchar、nchar、nvarchar、text、ntext、image、xml、varbinary 或 varbinary(max) 类型****************************************。  
+ FROM 子句中指定表的一个或多个全文索引列的名称。 列可以是 char、varchar、nchar、nvarchar、text、ntext、image、xml、varbinary 或 varbinary(max) 类型           。  
   
  column_list   
- 指示可以指定多个列（以逗号分隔）。 必须将*column_list*括在括号中。 除非指定 language_term，否则 column_list 中所有列的语言必须相同****。  
+ 指示可以指定多个列（以逗号分隔）。 column_list 必须用括号括起来  。 除非指定 language_term，否则 column_list 中所有列的语言必须相同   。  
   
  \*  
  指定所有注册全文搜索的列均应用于搜索给定的 freetext_string**。 除非指定*language_term* ，否则表中所有全文索引列的语言都必须相同。  
@@ -75,18 +75,18 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
   
  与 in 包含搜索条件，其中和是关键字，当*freetext_string*在中使用时，单词 "AND" 被视为干扰词[非索引字](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)，将被丢弃。  
   
- 不允许使用 WEIGHT、FORMSOF、通配符、NEAR 和其他语法。 *freetext_string*是 wordbroken、词干和通过同义词库传递的。  
+ 不允许使用 WEIGHT、FORMSOF、通配符、NEAR 和其他语法。 系统将通过同义词库对 freetext_string 进行断字处理、词干分析，然后执行同义词库查询**。  
   
- LANGUAGE language_term**  
+ LANGUAGE language_term   
  特定的语言，查询时，其资源将用于断字、词干分析、同义词库查询以及非索引字删除。 此参数是可选的，可以将其指定为与语言区域设置标识符 (LCID) 对应的字符串、整数或十六进制值。 如果指定了 language_term，则它表示的语言将应用于搜索条件的所有元素**。 如果未指定值，则使用该列的全文语言。  
   
- 如果将不同语言的文档一起作为二进制大型对象 (BLOB) 存储在单个列中，则指定文档的区域设置标识符 (LCID) 将决定对其内容编制索引时使用哪种语言。 在对这种列进行查询时，指定 LANGUAGElanguage_term 可增大找到有效匹配项的可能性**。  
+ 如果将不同语言的文档一起作为二进制大型对象 (BLOB) 存储在单个列中，则指定文档的区域设置标识符 (LCID) 将决定对其内容编制索引时使用哪种语言。 查询此类列时，指定*语言 language_term*可能会增加匹配的概率。  
   
- 如果指定为字符串，language_term 将对应于 *sys.syslanguages (Transact-SQL)* 兼容性视图中的 alias 列值****[](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)。  字符串必须用单引号引起来，如 "*language_term*" 中所示。 如果指定为整数，则 language_term 就是标识该语言的实际 LCID**。 如果指定为十六进制值，则 language_term 将以 0x 开头，后跟 LCID 的十六进制值**。 十六进制值不能超过八位（包括前导零在内）。  
+ 如果指定为字符串，language_term 将对应于 [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 兼容性视图中的 alias 列值   。  字符串必须用单引号引起来，如 'language_term'  。 如果指定为整数，则 language_term 就是标识该语言的实际 LCID  。 如果指定为十六进制值，则 language_term 将以 0x 开头，后跟 LCID 的十六进制值  。 十六进制值不能超过八位（包括前导零在内）。  
   
- 如果该值是双字节字符集 (DBCS) 格式，则 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将其转换为 Unicode 格式。  
+ 如果值是双字节字符集（DBCS）格式， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]则会将其转换为 Unicode。  
   
- 如果指定的语言无效，或者未安装对应于该语言的资源，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。 若要使用非特定语言资源，请将 0x0 指定为 language_term**。  
+ 如果指定的语言无效，或者未安装对应于该语言的资源，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。 若要使用非特定语言资源，请将 0x0 指定为 language_term  。  
   
  *top_n_by_rank*  
  指定仅返回*n*个排名最高的匹配项（降序）。 仅当指定了整数值*n*时才适用。 如果 *top_n_by_rank* 与其他参数组合使用，则查询返回的行数可能会少于实际与所有谓词都匹配的行数。 *top_n_by_rank*允许通过只调用最相关的命中来提高查询性能。  
@@ -167,17 +167,17 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [全文搜索入门](../../relational-databases/search/get-started-with-full-text-search.md)   
  [创建和管理全文目录](../../relational-databases/search/create-and-manage-full-text-catalogs.md)   
- [&#40;Transact-sql&#41;创建全文目录](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG (Transact-SQL)](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [创建和管理全文索引](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
- [查询与全文搜索](../../relational-databases/search/query-with-full-text-search.md)   
- [&#40;Visual Database Tools 创建全文搜索查询&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
- [CONTAINS (Transact-SQL)](../../t-sql/queries/contains-transact-sql.md)   
+ [使用全文搜索查询](../../relational-databases/search/query-with-full-text-search.md)   
+ [创建全文搜索查询 (Visual Database Tools)](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
+ [包含 &#40;Transact-sql&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE (Transact-SQL)](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [FREETEXT (Transact-SQL)](../../t-sql/queries/freetext-transact-sql.md)   
  [行集函数 &#40;Transact-sql&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
- [WHERE &#40;Transact-sql&#41;](../../t-sql/queries/where-transact-sql.md)   
+ [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)   
  [precompute rank 服务器配置选项](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md)  
   
   

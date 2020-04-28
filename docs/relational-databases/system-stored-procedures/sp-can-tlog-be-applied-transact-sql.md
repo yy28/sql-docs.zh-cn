@@ -18,10 +18,10 @@ ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 279492503ba8ce31e3c5d4027d8fd184c4a81587
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68045957"
 ---
 # <a name="sp_can_tlog_be_applied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
@@ -43,7 +43,7 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ## <a name="arguments"></a>参数  
 `[ @backup_file_name = ] 'backup_file_name'`备份文件的名称。 *backup_file_name*为**nvarchar （128）**。  
   
-`[ @database_name = ] 'database_name'`数据库的名称。 database_name 的数据类型为 sysname   。  
+`[ @database_name = ] 'database_name'`数据库的名称。 database_name 的数据类型为 sysname******。  
   
 `[ @result = ] _result_ OUTPUT`指示事务日志是否可应用于数据库。 *结果*为**bit**。  
   

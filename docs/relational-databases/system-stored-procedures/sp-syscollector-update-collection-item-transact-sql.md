@@ -19,10 +19,10 @@ ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 791c20214ff3eda4b5bb1f2bd3214b25ea972d74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68010557"
 ---
 # <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
@@ -138,9 +138,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [数据收集](../../relational-databases/data-collection/data-collection.md)   
  [sp_syscollector_create_collection_item &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
- [syscollector_collection_items &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
+ [syscollector_collection_items (Transact-SQL)](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   
   

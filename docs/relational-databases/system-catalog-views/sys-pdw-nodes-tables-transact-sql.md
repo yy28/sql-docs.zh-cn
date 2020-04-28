@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 5fa2412e61e30852497ffa00493ea6dbe244989a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68001111"
 ---
 # <a name="syspdw_nodes_tables-transact-sql"></a>sys. pdw_nodes_tables （Transact-sql）
@@ -41,7 +41,7 @@ ms.locfileid: "68001111"
 |large_value_types_out_of_row|**bit**|1 = 在行外存储大值类型。|始终为 0。|  
 |is_tracked_by_cdc|**bit**|1 = 已为表启用变更数据捕获|始终为 0;无 CDC 支持。|  
 |lock_escalation|**tinyint**|表的 LOCK_ESCALATION 选项的值： 2 = 自动|始终为2。|  
-|lock_escalation_desc|**nvarchar （60）**|Lock_escalation 选项的文本说明。|始终 "自动"。|  
+|lock_escalation_desc|**nvarchar(60)**|Lock_escalation 选项的文本说明。|始终 "自动"。|  
 |pdw_node_id|**int**|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]节点的唯一标识符。|NOT NULL|  
   
 ## <a name="see-also"></a>另请参阅  

@@ -19,10 +19,10 @@ ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 625c6134c91a9b452b8df2b7e235b78126c1354e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026917"
 ---
 # <a name="sysdm_db_uncontained_entities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
@@ -34,13 +34,13 @@ ms.locfileid: "68026917"
   
 ||||  
 |-|-|-|  
-|**列名**|类型 |**说明**|  
-|*班级*|**int**|1 = 对象或列（包括模块、XP、视图、同义词和表）。<br /><br /> 4 = 数据库主体<br /><br /> 5 = 程序集<br /><br /> 6 = 类型<br /><br /> 7 = 索引（全文索引）<br /><br /> 12 = 数据库 DDL 触发器<br /><br /> 19 = 路由<br /><br /> 30 = 审核规范|  
-|*class_desc*|**nvarchar （120）**|对实体的类的说明。 以下项之一用于匹配类：<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **类型**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
+|**列名**|**类型**|**说明**|  
+|*class*|**int**|1 = 对象或列（包括模块、XP、视图、同义词和表）。<br /><br /> 4 = 数据库主体<br /><br /> 5 = 程序集<br /><br /> 6 = 类型<br /><br /> 7 = 索引（全文索引）<br /><br /> 12 = 数据库 DDL 触发器<br /><br /> 19 = 路由<br /><br /> 30 = 审核规范|  
+|*class_desc*|**nvarchar(120)**|对实体的类的说明。 以下项之一用于匹配类：<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **类型**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
 |*major_id*|**int**|实体的 ID。<br /><br /> 如果*类*= 1，则 object_id<br /><br /> 如果*类*= 4，则为 database_principals principal_id。<br /><br /> 如果*类*= 5，则 assembly_id。<br /><br /> 如果*类*= 6，则为 user_type_id。<br /><br /> 如果*类*= 7，则为 index_id。<br /><br /> 如果*类*= 12，则为 object_id。<br /><br /> 如果*类*= 19，则 route_id。<br /><br /> 如果*class* = 30，则 sys。 database_audit_specifications. database_specification_id。|  
 |*statement_line_number*|**int**|如果此类是一个模块，则返回找到非包含使用所在的行号。  否则，值为 Null。|  
 |*statement_ offset_begin*|**int**|如果此类是一个模块，则指示非包含使用开始的起始位置（以字节表示，从 0 开始）。 否则，返回值为 Null。|  
-|*statement_ offset_end*|**int**|如果此类是一个模块，则指示非包含使用的结束位置（以字节表示，从 0 开始）。 值-1 指示模块的结尾。 否则，返回值为 Null。|  
+|*statement_ offset_end*|**int**|如果此类是一个模块，则指示非包含使用的结束位置（以字节表示，从 0 开始）。 值为 -1 指示模块的结尾。 否则，返回值为 Null。|  
 |*statement_type*|**nvarchar(512)**|语句的类型。|  
 |*feature_ 名称*|**nvarchar(256)**|返回对象的外部名称。|  
 |*feature_type_name*|**nvarchar(256)**|返回功能的类型。|  
@@ -68,10 +68,7 @@ ms.locfileid: "68026917"
  sys.dm_db_uncontained_entities 仅返回用户对其具有某种权限的对象。 若要完全评估数据库的包含情况，应由高特权用户（如**sysadmin**固定服务器角色的成员或**db_owner**角色的成员）使用此函数。  
   
 ## <a name="examples"></a>示例  
- 
-  `sys.dm_db_uncontained_entities`下面的示例创建一个名为 P1 的过程，然后查询 。 
-  **
-  ** 此查询报告 P1 使用数据库之外的 sys.endpoints。  
+ `sys.dm_db_uncontained_entities`下面的示例创建一个名为 P1 的过程，然后查询 。 **** 此查询报告 P1 使用数据库之外的 sys.endpoints。  
   
 ```sql  
 CREATE DATABASE Test;  

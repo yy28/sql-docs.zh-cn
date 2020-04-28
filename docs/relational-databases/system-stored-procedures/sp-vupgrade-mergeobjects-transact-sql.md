@@ -16,10 +16,10 @@ ms.assetid: 73257c2e-cc4c-48e7-9d66-7ef045bdd4f5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ed0992ff1b6b7de6f93213b612ff05ebcbdb3df5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68042705"
 ---
 # <a name="sp_vupgrade_mergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects (Transact-SQL)
@@ -45,11 +45,11 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @login = ] 'login'`在分发数据库中创建新的系统对象时要使用的系统管理员登录名。 *login*的值为**sysname**，默认值为 NULL。 如果*security_mode*设置为**1**（这是 Windows 身份验证），则不需要此参数。  
+`[ @login = ] 'login'`在分发数据库中创建新的系统对象时要使用的系统管理员登录名。 login 的数据类型为 sysname，默认值为 NULL******。 如果*security_mode*设置为**1**（这是 Windows 身份验证），则不需要此参数。  
   
 `[ @password = ] 'password'`在分发数据库中创建新的系统对象时要使用的系统管理员密码。 *password*的值为**sysname**，默认值为 **' '** （空字符串）。 如果*security_mode*设置为**1**（这是 Windows 身份验证），则不需要此参数。  
   
-`[ @security_mode = ] 'security_mode'`在分发数据库中创建新的系统对象时要使用的登录安全模式。 *security_mode*为**bit** ，默认值为**1**。 如果**** 为 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则使用身份验证。 如果为**1**，则将使用 Windows 身份验证。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] 'security_mode'`在分发数据库中创建新的系统对象时要使用的登录安全模式。 *security_mode*为**bit** ，默认值为**1**。 如果**0**为 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则使用身份验证。 如果为**1**，则将使用 Windows 身份验证。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
@@ -61,7 +61,7 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="see-also"></a>另请参阅  
- [复制存储过程 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [复制存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [升级复制数据库](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
   

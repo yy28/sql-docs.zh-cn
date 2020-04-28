@@ -16,10 +16,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1737ae8427df8d6d9bd6dbb9dea359da09f0c657
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68035876"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>使用 T-sql 创建图形数据库并运行一些模式匹配查询
@@ -165,7 +165,7 @@ go
 ## <a name="script-explanation"></a>脚本说明  
 此脚本使用新的 T-sql 语法来创建节点和边缘表。 演示如何使用`INSERT`语句将数据插入到节点和边缘表中，并说明如何将`MATCH`子句用于模式匹配和导航。
 
-|Command    |说明
+|命令    |说明
 |---  |---  |
 |[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-sql-graph.md)  |创建关系图节点或边缘表  |
 |[INSERT (Transact-SQL)](../../t-sql/statements/insert-sql-graph.md)  |插入到节点或边缘表中  |

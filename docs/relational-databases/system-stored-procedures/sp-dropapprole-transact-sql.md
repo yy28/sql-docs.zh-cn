@@ -18,10 +18,10 @@ ms.assetid: ea1aefe6-8f7d-46e9-a3cb-7b037b393e73
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: 36c3aaf72390ac5005ff5577000820f07ac5856d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68001035"
 ---
 # <a name="sp_dropapprole-transact-sql"></a>sp_dropapprole (Transact-SQL)
@@ -65,9 +65,9 @@ EXEC sp_dropapprole 'SalesApp';
 ## <a name="see-also"></a>另请参阅  
  [安全存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addapprole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
- [DROP APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/drop-application-role-transact-sql.md)   
+ [DROP &#40;Transact-sql&#41;的应用程序角色](../../t-sql/statements/drop-application-role-transact-sql.md)   
  [sp_changeobjectowner &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changeobjectowner-transact-sql.md)   
- [sp_setapprole (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
+ [sp_setapprole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

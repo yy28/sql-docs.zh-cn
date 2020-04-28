@@ -18,10 +18,10 @@ ms.assetid: de06c349-82a8-48c6-b602-b5d6938514f6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a1f22edf81e5e5e8ac7e2d9b44ce26e6b1f8bad2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032511"
 ---
 # <a name="msrepl_backup_lsns-transact-sql"></a>MSrepl_backup_lsns (Transact-SQL)
@@ -32,10 +32,10 @@ ms.locfileid: "68032511"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|发布服务器数据库的 ID。|  
-|**valid_xact_id**|**varbinary （16）**|发送到发布服务器用以标记日志截断点的事务 ID。 仅当分发数据库处于 "与备份同步" 模式时使用。 包含已备份分发数据库中最新复制事务的 ID。 它将被发送到发布服务器以标记日志读取器所做的日志截断点。|  
-|**valid_xact_seqno**|**varbinary （16）**|发送到发布服务器用以标记日志截断点的事务序列号。 仅当分发数据库处于“sync with backup”模式时使用。 它是已备份分发数据库中最新复制事务的日志序列号。 它将被发送到发布服务器以标记日志读取器所做的日志截断点。|  
-|**next_xact_id**|**varbinary （16）**|备份操作使用的临时日志序列号。|  
-|**nextx_xact_seqno**|**varbinary （16）**|备份操作使用的临时日志序列号。|  
+|**valid_xact_id**|**varbinary(16)**|发送到发布服务器用以标记日志截断点的事务 ID。 仅当分发数据库处于 "与备份同步" 模式时使用。 包含已备份分发数据库中最新复制事务的 ID。 它将被发送到发布服务器以标记日志读取器所做的日志截断点。|  
+|**valid_xact_seqno**|**varbinary(16)**|发送到发布服务器用以标记日志截断点的事务序列号。 仅当分发数据库处于“sync with backup”模式时使用。 它是已备份分发数据库中最新复制事务的日志序列号。 它将被发送到发布服务器以标记日志读取器所做的日志截断点。|  
+|**next_xact_id**|**varbinary(16)**|备份操作使用的临时日志序列号。|  
+|**nextx_xact_seqno**|**varbinary(16)**|备份操作使用的临时日志序列号。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

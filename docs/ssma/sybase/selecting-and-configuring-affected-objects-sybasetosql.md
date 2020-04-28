@@ -12,10 +12,10 @@ ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3aa7ccc8d559f7017fd2a9bf0bc20bc7ae191c46
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68020987"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>选择并配置受影响的对象 (SybaseToSQL)
@@ -48,7 +48,7 @@ ms.locfileid: "68020987"
 ## <a name="sql"></a>Sql  
 SQL 选项卡包含所选表的 "创建表" SQL。  
   
-## <a name="data"></a>data  
+## <a name="data"></a>数据  
 "数据" 选项卡显示所选表中的数据。  
   
 ## <a name="properties"></a>属性  

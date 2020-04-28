@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b4e3e25dbab53f31e354dcff537b6bfb9a6b433d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032746"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
@@ -79,9 +79,8 @@ sp_statistics [ @table_name = ] 'table_name'
 |**COLUMN_NAME**|**sysname**|返回的每个**TABLE_NAME**列的列名。 该列始终返回值。|  
 |**归类**|**char （1）**|在排序规则中使用的顺序。 可以是：<br /><br /> A = 升序<br /><br /> D = 降序<br /><br /> NULL = 不适用|  
 |**基数**|**int**|表中的行数或索引中的唯一值。|  
-|**页**|**int**|用于存储索引或表的页数。|  
-|**FILTER_CONDITION**|**varchar（128**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不返回值。|  
+|**PAGES**|**int**|用于存储索引或表的页数。|  
+|**FILTER_CONDITION**|**varchar（128**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不返回值。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  无  
@@ -98,7 +97,7 @@ sp_statistics [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>权限  
  需要对架构的 SELECT 权限。  
   
-## <a name="example-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="example-sssdwfull-and-sspdw"></a>示例： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下面的示例返回有关表的`DimEmployee`信息。  
   
 ```  

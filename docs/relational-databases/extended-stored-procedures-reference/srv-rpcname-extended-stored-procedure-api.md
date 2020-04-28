@@ -20,10 +20,10 @@ ms.assetid: 0a1424e4-3319-4836-b8d8-5e0344cc683f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 48ff48b18cc945754b91dc14294569040b1e73fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005533"
 ---
 # <a name="srv_rpcname-extended-stored-procedure-api"></a>srv_rpcname（扩展存储过程 API）
@@ -48,7 +48,7 @@ len
 ```  
   
 ## <a name="arguments"></a>参数  
- *srvproc*  
+ srvproc**  
  指向作为特定客户端连接句柄（在这里为接收远程存储过程的句柄）的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 库用于管理应用程序和客户端之间的通信和数据的信息。  
   
  *长度*  

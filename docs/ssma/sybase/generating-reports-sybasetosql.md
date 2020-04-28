@@ -14,10 +14,10 @@ ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: a63ad1dad1a1dcab28e2a8ffb5c96d9564210475
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029134"
 ---
 # <a name="generating-reports-sybasetosql"></a>生成报告 (SybaseToSQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68029134"
   
     ||||  
     |-|-|-|  
-    |**Sl。**|**Command**|**报表标题**|  
+    |**Sl。**|**命令**|**报表标题**|  
     |1|生成-评估-报表|AssessmentReport&lt;n&gt;。XML|  
     |2|转换-架构|SchemaConversionReport&lt;n&gt;。XML|  
     |3|迁移-数据|DataMigrationReport&lt;n&gt;。XML|  
@@ -42,7 +42,7 @@ ms.locfileid: "68029134"
     > [!IMPORTANT]  
     > 输出报告不同于评估报告。 前者是有关执行的命令的性能报告，后者是用于编程的 XML 报告。  
   
-    对于输出报表的命令选项（从 Sl 开始）。 不是。 2-4），请参阅[执行 SSMA 控制台 &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)部分。  
+    对于输出报表的命令选项（从 Sl 开始）。 否。 2-4），请参阅[执行 SSMA 控制台 &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)部分。  
   
 2.  使用报表详细级别设置指示输出报表中所需的详细信息的范围：  
   

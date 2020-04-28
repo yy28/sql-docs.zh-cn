@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 311a71926aa2eacae9aa7754b778c037b69d35e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008121"
 ---
 # <a name="operators---unary"></a>运算符 - 一元
@@ -22,7 +22,7 @@ ms.locfileid: "68008121"
   
  下表列出了 DMX 支持的一元运算符。  
   
-|操作员|说明|  
+|运算符|说明|  
 |--------------|-----------------|  
 |[-&#40;消极&#41; &#40;MDX&#41;](../mdx/negative-mdx.md)|返回数值表达式的负值。|  
 |[+ &#40;正值&#41; &#40;MDX&#41;](../mdx/positive-mdx.md)|返回数值表达式的正值。|  

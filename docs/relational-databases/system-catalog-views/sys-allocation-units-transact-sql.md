@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 73ee5d7ac8bd512b69cc187f9860b9e7f2c38a78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68001295"
 ---
 # <a name="sysallocation_units-transact-sql"></a>sys.allocation_units (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68001295"
 |-----------------|---------------|-----------------|  
 |allocation_unit_id|**bigint**|分配单元的 ID。 在数据库中是唯一的。|  
 |type|**tinyint**|分配单元的类型：<br /><br /> 0 = 已删除<br /><br /> 1 = 行内数据（所有数据类型，但 LOB 数据类型除外）<br /><br /> 2 = 大型对象（LOB）数据（**text**、 **ntext**、 **image**、 **xml**、大值类型和 CLR 用户定义类型）<br /><br /> 3 = 行溢出数据|  
-|type_desc|**nvarchar （60）**|对分配单元类型的说明：<br /><br /> **删除**<br /><br /> **IN_ROW_DATA**<br /><br /> **LOB_DATA**<br /><br /> **ROW_OVERFLOW_DATA**|  
+|type_desc|**nvarchar(60)**|对分配单元类型的说明：<br /><br /> **删除**<br /><br /> **IN_ROW_DATA**<br /><br /> **LOB_DATA**<br /><br /> **ROW_OVERFLOW_DATA**|  
 |container_id|**bigint**|与分配单元关联的存储容器的 ID。<br /><br /> 如果 type = 1 或 3，则 container_id = sys.partitions.hobt_id。<br /><br /> 如果 type 为 2，则 container_id = sys.partitions.partition_id。<br /><br /> 0 = 标记为要延迟删除的分配单元|  
 |data_space_id|**int**|此分配单元所在文件组的 ID。|  
 |total_pages|**bigint**|此分配单元分配或保留的总页数。|  
@@ -47,7 +47,7 @@ ms.locfileid: "68001295"
 >  在删除或重新生成大型索引时，或者在删除或截断大型表时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将延迟实际页释放及其关联锁，直至事务提交完毕为止。 延迟的删除操作不会立即释放已分配的空间。 因此，删除或截断大型对象之后立即由 sys.allocation_units 返回的值可能不会反映实际可用的磁盘空间。  
   
 ## <a name="permissions"></a>权限  
- 要求 **公共** 角色具有成员身份。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 要求 **公共** 角色具有成员身份。  有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   

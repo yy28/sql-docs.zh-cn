@@ -10,10 +10,10 @@ ms.assetid: 4cb4da20-3b99-4aae-8c80-329ee23e796e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 26e24bc55df7eef0af34f9cd23215f27ba314700
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029049"
 ---
 # <a name="global-settings-logging-sybasetosql"></a>全局设置（日志记录）(SybaseToSQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68029049"
 |**收集器**|收集有关源架构的元数据并将其保存到项目中。|  
 |**转换器**|将源数据库对象（如表和存储过程）的结构转换为相应[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的结构。|  
 |**数据迁移**|将源数据库中的数据迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到中。|  
-|**格式化**|为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]架构生成脚本的转换器的子组件。|  
+|**格式化程序**|为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]架构生成脚本的转换器的子组件。|  
 |**图形用户界面**|使用 SSMA 工具时显示的消息。|  
 |**链接器**|解析 SQL 标识符并向其他组件提供信息。|  
 |**其他**|所有不在任何其他类别的消息。|  

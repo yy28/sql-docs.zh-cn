@@ -18,10 +18,10 @@ ms.assetid: 045ee36f-5bf0-4626-b5ee-e84db06ce16f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 753375d139a03d5c0cec20dc994d83399e04f094
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037404"
 ---
 # <a name="sysmail_stop_sp-transact-sql"></a>sysmail_stop_sp (Transact-SQL)
@@ -51,7 +51,7 @@ sysmail_stop_sp
   
  当队列停止后，数据库邮件外部程序将不会处理消息。 通过此存储过程可以停止数据库邮件，以进行故障排除或维护。  
   
- 若要开始数据库邮件，请使用**sysmail_start_sp**。 请注意**** ，当[!INCLUDE[ssSB](../../includes/sssb-md.md)]对象停止时，sp_send_dbmail 仍接受 mail。  
+ 若要开始数据库邮件，请使用**sysmail_start_sp**。 请注意**sp_send_dbmail** ，当[!INCLUDE[ssSB](../../includes/sssb-md.md)]对象停止时，sp_send_dbmail 仍接受 mail。  
   
 > [!NOTE]  
 >  此存储过程只停止用于数据库邮件的队列， 它不会停用数据库中的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 消息传递功能。 此存储过程不会禁用数据库邮件扩展存储过程以减少外围应用。 若要禁用扩展存储过程，请参阅**sp_configure**系统存储过程的[数据库邮件 XPs 选项](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)。  

@@ -10,10 +10,10 @@ ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d7b16bdf3717fa14f91af41663cbd65365eac52a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028658"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>项目设置（类型映射）(SybaseToSQL)
@@ -57,7 +57,7 @@ ms.locfileid: "68028658"
 |**binary [8001\*]**|**varbinary(max)**|  
 |**bit**|**bit**|  
 |**char**|**char**|  
-|**char 可变**|**varchar**|  
+|**char varying**|**varchar**|  
 |**char 改变 [\*.。8000]**|**varchar [\*]**|  
 |**char 改变 [8001\*]**|**varchar(max)**|  
 |**char [\*.。8000]**|**char [\*]**|  
@@ -70,10 +70,10 @@ ms.locfileid: "68028658"
 |**字符 [8001\*]**|**varchar(max)**|  
 |**date**|**date**|  
 |**datetime**|**datetime2 [3]**|  
-|**十进制**|**Decimal**|  
+|**十进制**|**decimal**|  
 |**dec [\*.。。\*]**|**decimal [\*]**|  
 |**dec [\*.。。\*][\*..\*]**|**decimal [\*] [\*]**|  
-|**Decimal**|**Decimal**|  
+|**decimal**|**decimal**|  
 |**decimal [\*.。\*]**|**decimal [\*]**|  
 |**decimal [\*.。\*][\*..\*]**|**decimal [\*] [\*]**|  
 |**双精度**|**float [53]**|  
@@ -82,7 +82,7 @@ ms.locfileid: "68028658"
 |**float [16 ...\*]**|**float [53]**|  
 |**图像**|**图像**|  
 |**int**|**int**|  
-|**整数**|**int**|  
+|**integer**|**int**|  
 |**longsysname**|**nvarchar [255]**|  
 |**money**|**money**|  
 |**国家字符**|**nchar**|  
@@ -106,13 +106,13 @@ ms.locfileid: "68028658"
 |**nchar 不同 [4001 ...\*]**|**nvarchar(max)**|  
 |**nchar [\*.。。4000]**|**nchar [\*]**|  
 |**nchar [4001 ...\*]**|**nvarchar(max)**|  
-|**加法**|**加法**|  
+|**numeric**|**numeric**|  
 |**数值 [\*。\*]**|**数值 [\*]**|  
 |**数值 [\*。\*][\*..\*]**|**numeric [\*] [\*]**|  
 |**nvarchar**|**nvarchar**|  
 |**nvarchar [\*.。4000]**|**nvarchar [\*]**|  
 |**nvarchar [4001 ...\*]**|**nvarchar(max)**|  
-|**实际上**|**float [24]**|  
+|**real**|**float [24]**|  
 |**smalldatetime**|**smalldatetime**|  
 |**smallint**|**smallint**|  
 |**smallmoney**|**smallmoney**|  
@@ -120,7 +120,7 @@ ms.locfileid: "68028658"
 |**sysname [\*.。\*]**|**nvarchar [255]**|  
 |**text**|**text**|  
 |**time**|**时间 [3]**|  
-|**标志**|**rowversion**|  
+|**timestamp**|**rowversion**|  
 |**tinyint**|**tinyint**|  
 |**unichar**|**nchar**|  
 |**unichar**|**nvarchar**|  

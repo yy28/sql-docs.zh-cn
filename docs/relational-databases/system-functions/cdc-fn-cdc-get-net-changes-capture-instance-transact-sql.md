@@ -17,10 +17,10 @@ ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 77fb03c71bd0773cc8f004a89c28c1925284876b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68043042"
 ---
 # <a name="cdcfn_cdc_get_net_changes_ltcapture_instancegt-transact-sql"></a>cdc fn_cdc_get_net_changes_&lt;capture_instance&gt; （transact-sql）
@@ -65,7 +65,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  *<row_filter_option>* ：： = {all | all with mask | all with merge}  
  控制元数据列的内容和结果集中所返回的行的选项。 可以是下列选项之一：  
   
- 本应返回的所有记录的总数，  
+ all  
  返回对行所做的最终更改的 LSN 以及应用元数据列 __ $ start_lsn 和\_ \_$operation 所需的操作。 列\_ \_$update _mask 始终为 NULL。  
   
  all with mask  
@@ -80,7 +80,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|__$start_lsn|**binary （10）**|与更改的提交事务关联的 LSN。<br /><br /> 在同一事务中提交的所有更改将共享同一个提交 LSN。 例如，如果对源表的更新操作在两行中修改了两列，则更改表将包含四行，每一行都具有相同的 __ $ start_lsnvalue。|  
+|__$start_lsn|**binary(10)**|与更改的提交事务关联的 LSN。<br /><br /> 在同一事务中提交的所有更改将共享同一个提交 LSN。 例如，如果对源表的更新操作在两行中修改了两列，则更改表将包含四行，每一行都具有相同的 __ $ start_lsnvalue。|  
 |__$operation|**int**|标识将更改数据行应用到目标数据源所需的数据操作语言 (DML) 操作。<br /><br /> 如果 row_filter_option 参数的值为 all 或 all with mask，则此列中的值可以是以下值之一：<br /><br /> 1 = 删除<br /><br /> 2 = 插入<br /><br /> 4 = 更新<br /><br /> 如果 row_filter_option 参数的值为 all with merge，则此列中的值可以是以下值之一：<br /><br /> 1 = 删除|  
 |__$update_mask|**varbinary(128)**|位掩码，为捕获实例标识的每个已捕获列均对应于一个位。 如果 __$operation = 1 或 2，该值将所有已定义的位设置为 1。 如果\_ \_$operation = 3 或4，则仅将对应于已更改列的位设置为1。|  
 |*\<捕获的源表列>*|多种多样|函数返回的其余列是在创建捕获实例时源表中标识为已捕获列的那些列。 如果已捕获列的列表中未指定任何列，则将返回源表中的所有列。|  

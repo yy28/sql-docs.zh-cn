@@ -21,10 +21,10 @@ ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: be0f8e7b410abb2e9027ce0b773d1a1ad5a14465
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68040997"
 ---
 # <a name="syssp_xtp_unbind_db_resource_pool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
@@ -44,7 +44,7 @@ sys.sp_xtp_unbind_db_resource_pool 'database_name'
  database_name  
  启用了 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的现有数据库的名称。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
   
 ## <a name="messages"></a>消息  
  如果数据库绑定到指定资源池，则该过程成功返回。 但是，您必须重新启动该数据库，绑定才能生效。  
@@ -70,7 +70,7 @@ sys.sp_xtp_unbind_db_resource_pool 'Hekaton_DB'
 -   需要 CONTROL SERVER 权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据库与资源池绑定的指南，请参阅主题](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [将具有内存优化表的数据库绑定到资源池](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [sys.sp_xtp_bind_db_resource_pool (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)  
   
   

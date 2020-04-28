@@ -10,10 +10,10 @@ ms.assetid: c1224e88-af74-4c99-ae32-d5d2c552a1f5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f522fde05ce951575d3e02b3cdc4d3336056bd4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026804"
 ---
 # <a name="sysdm_db_xtp_merge_requests-transact-sql"></a>sys.dm_db_xtp_merge_requests (Transact-SQL)

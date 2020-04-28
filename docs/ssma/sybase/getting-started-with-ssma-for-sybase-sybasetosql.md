@@ -10,10 +10,10 @@ ms.assetid: c4098516-f0fc-4690-97bb-3766dfd43156
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: f07f230f52fee5707084c01060e92220b35cb75c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029121"
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE 的入门（SybaseToSQL）
@@ -82,21 +82,21 @@ SSMA 有两个工具栏：项目工具栏和迁移工具栏。
 #### <a name="the-migration-toolbar"></a>迁移工具栏  
 迁移工具栏包含以下命令：  
   
-|按钮|函数|  
+|Button|函数|  
 |----------|------------|  
 |**创建报表**|将所选 SAP ASE 对象转换[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为语法，然后创建显示转换成功的报告。<br /><br />仅当在 Sybase 元数据资源管理器中选择对象时，此命令才可用。|  
 |**转换架构**|将所选 SAP ASE 对象转换[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为或 Azure SQL 数据库对象。<br /><br />仅当在 Sybase 元数据资源管理器中选择对象时，此命令才可用。|  
 |**迁移数据**|将数据从 SAP ASE 数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL 数据库。 在运行此命令之前，必须将 SAP ASE 架构转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure sql 数据库架构，然后将对象加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 azure sql 数据库。<br /><br />仅当在 Sybase 元数据资源管理器中选择对象时，此命令才可用。|  
-|**Stop**|停止当前进程，如将对象转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL Database 语法。|  
+|**停止**|停止当前进程，如将对象转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL Database 语法。|  
   
 ### <a name="menus"></a>菜单  
 SSMA 包含以下菜单：  
   
 |菜单|说明|  
 |--------|---------------|  
-|**文件**|包含用于处理项目、连接到 SAP ASE 以及连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL 数据库的命令。|  
+|**File**|包含用于处理项目、连接到 SAP ASE 以及连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL 数据库的命令。|  
 |**编辑**|包含用于查找和处理详细信息页中的文本（例如从 SQL 详细[!INCLUDE[tsql](../../includes/tsql-md.md)]信息窗格复制）的命令。 还包含 "**管理书签**" 选项，您可以在其中查看现有书签的列表。 您可以使用对话框右侧的按钮来管理书签。|  
-|**视图**|包含**同步元数据**资源管理器命令。 这会使 Sybase 元数据资源管理器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和或 SQL Azure 元数据资源管理器之间的对象同步。 还包含用于显示和隐藏 "**输出**" 和 "**错误列表**" 窗格以及用于管理布局的选项**布局**的命令。|  
+|**查看**|包含**同步元数据**资源管理器命令。 这会使 Sybase 元数据资源管理器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和或 SQL Azure 元数据资源管理器之间的对象同步。 还包含用于显示和隐藏 "**输出**" 和 "**错误列表**" 窗格以及用于管理布局的选项**布局**的命令。|  
 |**工具**|包含用于创建报表、导出数据以及迁移对象和数据的命令。 还提供对 "**全局设置**" 和 "**项目设置**" 对话框的访问。|  
 |**测试人员**|包含用于创建测试用例、查看测试结果和数据库备份管理命令的命令。|  
 |**帮助**|提供对 SSMA 帮助和的 "**关于**" 对话框的访问。|  

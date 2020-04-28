@@ -11,10 +11,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: c2bca7f0deef9a5cb137525e165670404cad65ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68016549"
 ---
 # <a name="syspdw_health_component_properties-transact-sql"></a>sys. pdw_health_component_properties （Transact-sql）
@@ -27,7 +27,7 @@ ms.locfileid: "68016549"
 |property_id|**int**|组件的属性的唯一标识符。<br /><br /> property_id 和 component_id 构成此视图的键。|NOT NULL|  
 |component_id|**int**|组件的 ID。 请参阅[sys.databases &#40;transact-sql&#41;pdw_health_components ](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md)。<br /><br /> property_id 和 component_id 构成此视图的键。|NOT NULL|  
 |property_name|**nvarchar(255)**|属性的名称。|NOT NULL|  
-|physical_name|**nvarchar （32）**|制造商定义的属性名称。|NOT NULL|  
+|physical_name|**nvarchar(32)**|制造商定义的属性名称。|NOT NULL|  
 |is_key|**bit**|确定设备实例是否唯一。|NOT NULL<br /><br /> 0-设备实例是唯一的。<br /><br /> 1-设备实例不唯一。|  
   
 ## <a name="see-also"></a>另请参阅  

@@ -18,10 +18,10 @@ ms.assetid: f91d1c6c-3132-47f6-926c-88f56848cafe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 84f9e2ce3026792b768d353e05b9e2299cf7ca5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029760"
 ---
 # <a name="sysmergesubsetfilters-transact-sql"></a>sysmergesubsetfilters (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68029760"
 |**join_nickname**|**int**|表的别名，要联接该表以确定行是否属于该表。|  
 |**join_unique_key**|**int**|指示**join_tablename**的唯一键的联接：<br /><br /> 0 = 不是唯一键。<br /><br /> 1 = 是唯一键。|  
 |**expand_proc**|**sysname**|存储过程名，合并代理使用该存储过程识别需要向订阅服务器发送或从订阅服务器中删除的行。|  
-|**join_filterclause**|**nvarchar （1000）**|用于联接的筛选子句。|  
+|**join_filterclause**|**nvarchar(1000)**|用于联接的筛选子句。|  
 |**filter_type**|**tinyint**|指定筛选器类型，可以为下面的一种：<br /><br /> 1 = 联接筛选器。<br /><br /> 2 = 逻辑记录链接。<br /><br /> 3 = 同时为联接筛选器和逻辑记录链接。|  
   
 ## <a name="see-also"></a>另请参阅  

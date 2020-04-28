@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 15fac5b2449e90fe7d6500bca383a71bc73954f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68025791"
 ---
 # <a name="sysevents-transact-sql"></a>sys.events (Transact-SQL)
@@ -35,11 +35,11 @@ ms.locfileid: "68025791"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|触发器或事件通知的 ID。 此值与**类型**一起唯一标识行。|  
-|type |**int**|导致触发器激发的事件。|  
-|**type_desc**|**nvarchar （60）**|导致触发器激发的事件的说明。|  
+|**type**|**int**|导致触发器激发的事件。|  
+|**type_desc**|**nvarchar(60)**|导致触发器激发的事件的说明。|  
 |**is_trigger_event**|**bit**|1 = 触发器事件。<br /><br /> 0 = 通知事件。|  
 |**event_group_type**|**int**|要对其创建触发器或事件通知的事件组，如果未对事件组中创建触发器或事件通知，则为 Null。|  
-|**event_group_type_desc**|**nvarchar （60）**|创建触发器或事件通知的事件组的说明，如果未在事件组中创建触发器或事件通知，则为 Null。|  
+|**event_group_type_desc**|**nvarchar(60)**|创建触发器或事件通知的事件组的说明，如果未在事件组中创建触发器或事件通知，则为 Null。|  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;Transact-sql&#41;的对象目录视图](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

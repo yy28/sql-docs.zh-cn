@@ -10,10 +10,10 @@ ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 051ded7d675f81998718b858c71488ba968ec680
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006602"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>创建变量值文件（AccessToSQL）
@@ -26,7 +26,7 @@ ms.locfileid: "68006602"
   
 **示例：**  
   
-**示例1：**  
+**示例 1：**  
   
 ```xml  
 <!--Sample of variable value file commands-->  
@@ -90,7 +90,7 @@ ms.locfileid: "68006602"
 ## <a name="variable-value-file-validation"></a>变量值文件验证  
 用户可以根据 "架构" 文件夹中提供的架构定义文件 ConsoleScriptVariablesSchema 来轻松地验证其变量值文件 **。**  
   
-## <a name="next-step"></a>后续步骤  
+## <a name="next-step"></a>下一步  
 操作控制台的下一步是[&#40;AccessToSQL 创建服务器连接文件&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
 ## <a name="see-also"></a>另请参阅  

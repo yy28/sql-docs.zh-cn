@@ -18,10 +18,10 @@ ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 21487ba46e53997ebb50403cc4eaf1ae54f0a103
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029640"
 ---
 # <a name="sysssispackages-transact-sql"></a>sysssispackages (Transact-SQL)
@@ -32,8 +32,8 @@ ms.locfileid: "68029640"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**路径名**|**sysname**|包的唯一标识符。|  
-|**识别**|**uniqueidentifier**|包的 GUID。|  
+|name |**sysname**|包的唯一标识符。|  
+|**id**|**uniqueidentifier**|包的 GUID。|  
 |**2008**|**nvarchar**|包的可选说明。|  
 |**createdate**|**datetime**|包的创建日期。|  
 |**folderid**|**uniqueidentifier**|逻辑文件夹的 GUID，[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在该文件夹中列出包。|  

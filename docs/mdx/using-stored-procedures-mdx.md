@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4daa38f185569e1579413870cc929a8b1b3b6570
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038004"
 ---
 # <a name="using-stored-procedures-mdx"></a>使用存储过程 (MDX)
@@ -35,8 +35,7 @@ WHERE [Measures].[Reseller Freight Cost]
 >  *存储过程*是用于这些类型的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]函数的术语。 的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]早期版本称为*用户定义函数*的函数类型。  
   
 ## <a name="types-of-stored-procedures"></a>存储过程的类型  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持 COM 程序集和 CLR 程序集。 建议使用 CLR 程序集，因为 CLR 程序集具有增强的安全性。 如果服务器上安装了 Microsoft Office Excel，也可以使用 Excel 功能。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持 COM 程序集和 CLR 程序集。 建议使用 CLR 程序集，因为 CLR 程序集具有增强的安全性。 如果服务器上安装了 Microsoft Office Excel，也可以使用 Excel 功能。  
   
 > [!NOTE]  
 >  Microsoft Visual Basic for Applications (VBA) COM 程序集是自动注册的。  

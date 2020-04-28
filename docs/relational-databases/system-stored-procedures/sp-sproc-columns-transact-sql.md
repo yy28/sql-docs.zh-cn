@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6739d9bcff2639b4b4f3562624beaf2cb3a76507
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032822"
 ---
 # <a name="sp_sproc_columns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
@@ -75,12 +75,11 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**DATA_TYPE**|**smallint**|ODBC 数据类型的整数代码。 如果此数据类型无法映射到 ISO 类型，则值为 NULL。 本机数据类型名称在**TYPE_NAME**列中返回。|  
 |**TYPE_NAME**|**sysname**|数据类型的字符串表示形式。 这是由基础 DBMS 表示的数据类型名称。|  
 |**PRECISION**|**int**|有效数字位数。 **PRECISION**列的返回值以10为底。|  
-|**长短**|**int**|数据的传输大小。|  
+|**LENGTH**|**int**|数据的传输大小。|  
 |**纵向**|**smallint**|小数点右边的数字位数。|  
 |**RADIX**|**smallint**|数值类型的基数。|  
 |**可以为 NULL**|**smallint**|指定为空性：<br /><br /> 1 = 可创建允许空值的数据类型。<br /><br /> 0 = 不允许空值。|  
-|**标记**|**varchar （** 254 **）**|对过程列的说明。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不为此列返回值。|  
+|**备注**|**varchar （** 254 **）**|对过程列的说明。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不为此列返回值。|  
 |**COLUMN_DEF**|**nvarchar （** 4000 **）**|列的默认值。|  
 |**SQL_DATA_TYPE**|**smallint**|SQL 数据类型在描述符的**type**字段中显示的值。 除了**datetime**和 ISO **interval**数据类型之外，此列与**DATA_TYPE**列相同。 该列始终返回值。|  
 |**SQL_DATETIME_SUB**|**smallint**|如果 SQL_DATA_TYPE 的值为 SQL_DATETIME 或 SQL_INTERVAL，则为 datetime ISO interval 子代码********************。 对于**日期时间**和 ISO**间隔**以外的数据类型，此字段为 NULL。|  

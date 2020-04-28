@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4e3aa00334d98af02521005679174feb3b28c55f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68001513"
 ---
 # <a name="comparison-operators"></a>比较运算符
@@ -26,14 +26,14 @@ ms.locfileid: "68001513"
   
  MDX 支持下表中列出的比较运算符。  
   
-|操作员|说明|  
+|运算符|说明|  
 |--------------|-----------------|  
 |[=（等于）](../mdx/equal-to-mdx.md)|对于非空的参数，如果左边的参数等于右边的参数，则返回 TRUE；否则返回 FALSE。<br /><br /> 如果任一参数的计算结果等于空值或两个参数的计算结果都等于空值，此运算符将返回空值，除非进行了 `0=null` 比较，在这种情况下，布尔值中将包含 TRUE。|  
-|[<>（不等于）](../mdx/not-equal-to-mdx.md)|对于非空的参数，如果左边的参数不等于右边的参数，则返回 TRUE；否则返回 FALSE。<br /><br /> 如果其中一个参数的计算结果为空值或这两个参数的计算结果均为空值，则该运算符返回空值。|  
-|[>（大于）](../mdx/greater-than-mdx.md)|对于非空的参数，如果左边的参数值大于右边的参数，则返回 TRUE；否则返回 FALSE。<br /><br /> 如果其中一个参数的计算结果为空值或这两个参数的计算结果均为空值，则该运算符返回空值。|  
-|[>=（大于或等于）](../mdx/greater-than-or-equal-to-mdx.md)|对于非空的参数，如果左边的参数值大于或等于右边的参数，则返回 TRUE；否则返回 FALSE。<br /><br /> 如果其中一个参数的计算结果为空值或这两个参数的计算结果均为空值，则该运算符返回空值。|  
-|[<（小于）](../mdx/less-than-mdx.md)|对于非 null 参数，如果左侧参数的值小于右参数，则返回 TRUE;否则为 FALSE。<br /><br /> 如果其中一个参数的计算结果为空值或这两个参数的计算结果均为空值，则该运算符返回空值。|  
-|[<=（小于或等于）](../mdx/less-than-or-equal-to-mdx.md)|对于非空的参数，如果左边的参数值小于或等于右边的参数，则返回 TRUE；否则返回 FALSE。<br /><br /> 如果其中一个参数的计算结果为空值或这两个参数的计算结果均为空值，则该运算符返回空值。|  
+|[<>  （不等于）](../mdx/not-equal-to-mdx.md)|对于非空的参数，如果左边的参数不等于右边的参数，则返回 TRUE；否则返回 FALSE。<br /><br /> 如果其中一个参数的计算结果为空值或这两个参数的计算结果均为空值，则该运算符返回空值。|  
+|[> （大于）](../mdx/greater-than-mdx.md)|对于非空的参数，如果左边的参数值大于右边的参数，则返回 TRUE；否则返回 FALSE。<br /><br /> 如果其中一个参数的计算结果为空值或这两个参数的计算结果均为空值，则该运算符返回空值。|  
+|[>= （大于或等于）](../mdx/greater-than-or-equal-to-mdx.md)|对于非空的参数，如果左边的参数值大于或等于右边的参数，则返回 TRUE；否则返回 FALSE。<br /><br /> 如果其中一个参数的计算结果为空值或这两个参数的计算结果均为空值，则该运算符返回空值。|  
+|[< （小于）](../mdx/less-than-mdx.md)|对于非 null 参数，如果左侧参数的值小于右参数，则返回 TRUE;否则为 FALSE。<br /><br /> 如果其中一个参数的计算结果为空值或这两个参数的计算结果均为空值，则该运算符返回空值。|  
+|[<= （小于或等于）](../mdx/less-than-or-equal-to-mdx.md)|对于非空的参数，如果左边的参数值小于或等于右边的参数，则返回 TRUE；否则返回 FALSE。<br /><br /> 如果其中一个参数的计算结果为空值或这两个参数的计算结果均为空值，则该运算符返回空值。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Mdx 运算符引用 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   

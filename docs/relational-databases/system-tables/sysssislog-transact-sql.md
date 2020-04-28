@@ -18,10 +18,10 @@ ms.assetid: 7fa288a1-81e3-42a0-82f6-8a59019693d0
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d837049f36e4f7925f8e62a18987f51235f19c14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029616"
 ---
 # <a name="sysssislog-transact-sql"></a>sysssislog (Transact-SQL)
@@ -35,18 +35,18 @@ ms.locfileid: "68029616"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|id|**int**|日志记录项的唯一标识符。|  
+|ID|**int**|日志记录项的唯一标识符。|  
 |event|**sysname**|生成日志记录项的事件的名称。|  
 |computer|**nvarchar**|生成日志记录条目时运行包的计算机。|  
 |运算符后的表达式|**nvarchar**|运行生成日志记录条目的包的用户的名称。|  
 |source|**nvarchar**|包中生成日志记录条目的可执行文件的名称。|  
 |sourceid|**uniqueidentifier**|包中生成日志记录条目的可执行文件的 GUID。|  
 |executionid|**uniqueidentifier**|生成日志记录条目的可执行文件的执行实例的 GUID。|  
-|开始时间|**datetime**|包开始运行的时间。|  
+|starttime|**datetime**|包开始运行的时间。|  
 |endtime|**datetime**|包的完成时间。<br /><br /> 此功能尚未实现。 endtime 列中的值始终与 starttime 列中的值相同。|  
 |datacode|**int**|一个可选的整数值，它通常表示运行容器或任务的结果。|  
 |databytes|**图像**|包含附加信息的可选字节数组。|  
-|message|**nvarchar**|事件以及与事件关联的信息的说明。|  
+|消息|**nvarchar**|事件以及与事件关联的信息的说明。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)   

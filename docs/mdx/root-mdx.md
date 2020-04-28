@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: be687d5cbfd4fdbb706ef5c10778a4f3e3f93197
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037038"
 ---
 # <a name="root-mdx"></a>Root (MDX)
@@ -68,7 +68,7 @@ FROM [Adventure Works]
 WHERE [Measures].[Order Count]  
 ```  
   
- 下面的示例将返回包含指定元组成员的元组（2001年7月1日），以及从 Date 维度艾德**** 工作多维数据**集中的每**个非指定层次结构，以及与这些成员相交的度量值维度的指定成员的值。  
+ 下面的示例将返回包含指定元组成员的元组（2001年7月1日），以及从 Date 维度艾德**All**工作多维数据**集中的每**个非指定层次结构，以及与这些成员相交的度量值维度的指定成员的值。  
   
 ```  
 SELECT Root([Date].[July 1, 2001]) ON 0  
@@ -77,6 +77,6 @@ WHERE [Measures].[Order Count]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

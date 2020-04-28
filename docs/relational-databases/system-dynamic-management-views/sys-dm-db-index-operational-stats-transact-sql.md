@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b8222454d5e016733abef3c086e38add777cd304
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004893"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
@@ -60,7 +60,7 @@ sys.dm_db_index_operational_stats (
  可以指定内置函数 [DB_ID](../../t-sql/functions/db-id-transact-sql.md)。    
     
  *object_id* |NULL |0 |缺省值    
- 索引所基于的表或视图的对象 ID。 *object_id*是**int**。    
+ 索引所基于的表或视图的对象 ID。 *object_id* 是 **int**。    
     
  有效的输入包括表和视图的 ID 号、NULL、0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。    
     
@@ -82,7 +82,7 @@ sys.dm_db_index_operational_stats (
     
 |列名称|数据类型|说明|    
 |-----------------|---------------|-----------------|    
-|database_id |**smallint**|数据库 ID。|    
+|**database_id**|**smallint**|数据库 ID。|    
 |**object_id**|**int**|表或视图的 ID。|    
 |**index_id**|**int**|索引或堆的 ID。<br /><br /> 0 = 堆| 
 |**partition_number**|**int**|索引或堆中从 1 开始的分区号。| 
@@ -110,35 +110,21 @@ sys.dm_db_index_operational_stats (
 |**column_value_push_off_row_count**|**bigint**|已推出行外以使插入或更新的行可容纳在页中的 LOB 数据和行溢出数据的列值累积计数。|    
 |**column_value_pull_in_row_count**|**bigint**|已请求到行内的 LOB 数据和行溢出数据的列值的累积计数。 当更新操作释放记录中的空间，并提供将一个或多个行外值从 LOB_DATA 或 ROW_OVERFLOW_DATA 分配单元请求到 IN_ROW_DATA 分配单元中的机会时，就会出现此计数。|    
 |**row_lock_count**|**bigint**|请求的行锁的累积数量。|    
-|**row_lock_wait_count**|**bigint**|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]等待行锁的累积次数。|    
-|**row_lock_wait_in_ms**|**bigint**|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]等待行锁的总毫秒数。|    
+|**row_lock_wait_count**|**bigint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]等待行锁的累积次数。|    
+|**row_lock_wait_in_ms**|**bigint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]等待行锁的总毫秒数。|    
 |**page_lock_count**|**bigint**|请求的页锁的累积数量。|    
-|**page_lock_wait_count**|**bigint**|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]等待页锁的累积次数。|    
-|**page_lock_wait_in_ms**|**bigint**|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]等待页锁的总毫秒数。|    
-|**index_lock_promotion_attempt_count**|**bigint**|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]尝试升级锁的累积次数。|    
-|**index_lock_promotion_count**|**bigint**|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]升级锁的累积次数。|    
-|**page_latch_wait_count**|**bigint**|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]由于闩锁争用而等待的累积次数。|    
-|**page_latch_wait_in_ms**|**bigint**|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]由于闩锁争用而等待的累积毫秒数。|    
-|**page_io_latch_wait_count**|**bigint**|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]等待 I/O 页闩锁的累积次数。|    
-|**page_io_latch_wait_in_ms**|**bigint**|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]等待页 I/O 闩锁的累积毫秒数。|    
-|**tree_page_latch_wait_count**|**bigint**|
-  **page_latch_wait_count** 的子集，仅包括较高级别的 B 树页。 对堆或列存储索引始终为 0。|    
-|**tree_page_latch_wait_in_ms**|**bigint**|
-  **page_latch_wait_in_ms** 的子集，仅包括较高级别的 B 树页。 对堆或列存储索引始终为 0。|    
-|**tree_page_io_latch_wait_count**|**bigint**|
-  **page_io_latch_wait_count** 的子集，仅包括较高级别的 B 树页。 对堆或列存储索引始终为 0。|    
-|**tree_page_io_latch_wait_in_ms**|**bigint**|
-  **page_io_latch_wait_in_ms** 的子集，仅包括较高级别的 B 树页。 对堆或列存储索引始终为 0。|    
+|**page_lock_wait_count**|**bigint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]等待页锁的累积次数。|    
+|**page_lock_wait_in_ms**|**bigint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]等待页锁的总毫秒数。|    
+|**index_lock_promotion_attempt_count**|**bigint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]尝试升级锁的累积次数。|    
+|**index_lock_promotion_count**|**bigint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]升级锁的累积次数。|    
+|**page_latch_wait_count**|**bigint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]由于闩锁争用而等待的累积次数。|    
+|**page_latch_wait_in_ms**|**bigint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]由于闩锁争用而等待的累积毫秒数。|    
+|**page_io_latch_wait_count**|**bigint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]等待 I/O 页闩锁的累积次数。|    
+|**page_io_latch_wait_in_ms**|**bigint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]等待页 I/O 闩锁的累积毫秒数。|    
+|**tree_page_latch_wait_count**|**bigint**|**page_latch_wait_count** 的子集，仅包括较高级别的 B 树页。 对堆或列存储索引始终为 0。|    
+|**tree_page_latch_wait_in_ms**|**bigint**|**page_latch_wait_in_ms** 的子集，仅包括较高级别的 B 树页。 对堆或列存储索引始终为 0。|    
+|**tree_page_io_latch_wait_count**|**bigint**|**page_io_latch_wait_count** 的子集，仅包括较高级别的 B 树页。 对堆或列存储索引始终为 0。|    
+|**tree_page_io_latch_wait_in_ms**|**bigint**|**page_io_latch_wait_in_ms** 的子集，仅包括较高级别的 B 树页。 对堆或列存储索引始终为 0。|    
 |**page_compression_attempt_count**|**bigint**|对于表、索引或索引视图的特定分区，针对 PAGE 级压缩计算的页数。 因为未能极大地节省空间，所以将包括未压缩的页。 对列存储索引始终为 0。|    
 |**page_compression_success_count**|**bigint**|对于表、索引或索引视图的特定分区，使用 PAGE 压缩功能压缩的数据页数。 对列存储索引始终为 0。|    
     
@@ -149,7 +135,7 @@ sys.dm_db_index_operational_stats (
     
  使用以下各列可标识争用区。    
     
- **若要分析表或索引分区的通用访问模式**，请使用这些列：    
+ 若要分析表或索引分区的通用访问模式，请使用这些列：****    
     
 -   **leaf_insert_count**    
     
@@ -165,27 +151,26 @@ sys.dm_db_index_operational_stats (
     
  若要标识闩锁和锁争用，请使用这些列：    
     
--   **page_latch_wait_count**和**page_latch_wait_in_ms**    
+-   **page_latch_wait_count** 和 **page_latch_wait_in_ms**    
     
      这些列指示索引或堆上是否存在闩锁争用以及争用的意义。    
     
--   **row_lock_count**和**page_lock_count**    
+-   **row_lock_count** 和 **page_lock_count**    
     
      这些列指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]尝试获取行锁和页锁的次数。    
     
--   **row_lock_wait_in_ms**和**page_lock_wait_in_ms**    
+-   **row_lock_wait_in_ms** 和 **page_lock_wait_in_ms**    
     
      这些列指示索引或堆上是否存在锁争用以及争用的意义。    
     
  **分析索引或堆分区的物理 I/O 的统计信息**    
     
--   **page_io_latch_wait_count**和**page_io_latch_wait_in_ms**    
+-   **page_io_latch_wait_count** 和 **page_io_latch_wait_in_ms**    
     
      这些列指示是否已发出物理 I/O 以便将索引或堆页载入内存以及发出的 I/O 数。    
     
 ## <a name="column-remarks"></a>列备注    
- 
-  **lob_orphan_create_count** 和 **lob_orphan_insert_count** 中的值应始终相等。    
+ **lob_orphan_create_count** 和 **lob_orphan_insert_count** 中的值应始终相等。    
     
  对于包含一个或多个 LOB 列作为包含列的非聚集索引，**lob_fetch_in_pages** 和 **lob_fetch_in_bytes** 列中的值可以大于零。 有关详细信息，请参阅 [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md)。 同样，对于非聚集索引，如果索引包含可推送到行外的列，则 **row_overflow_fetch_in_pages** 和 **row_overflow_fetch_in_bytes** 列中的值也可以大于 0。    
     
@@ -215,11 +200,10 @@ sys.dm_db_index_operational_stats (
 ## <a name="examples"></a>示例    
     
 ### <a name="a-returning-information-for-a-specified-table"></a>A. 返回指定表的信息    
- 下面的示例返回 `Person.Address` 数据库中 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表的所有索引和分区的信息。 执行此查询至少需要对 `Person.Address` 表具有 CONTROL 权限。    
+ 下面的示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `Person.Address` 表的所有索引和分区的信息。 执行此查询至少需要对 `Person.Address` 表具有 CONTROL 权限。    
     
 > [!IMPORTANT]    
->  在使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数 DB_ID 和 OBJECT_ID 返回参数值时，请始终确保返回了有效的 ID。 如果找不到数据库或对象的名称，例如相应名称不存在或拼写不正确，则两个函数都会返回 NULL。 
-  **sys.dm_db_index_operational_stats** 函数将 NULL 解释为指定所有数据库或所有对象的通配符值。 由于这可能是无心之举，所以此部分中的示例说明了确定数据库 ID 和对象 ID 的安全方法。    
+>  在使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数 DB_ID 和 OBJECT_ID 返回参数值时，请始终确保返回了有效的 ID。 如果找不到数据库或对象的名称，例如相应名称不存在或拼写不正确，则两个函数都会返回 NULL。 **sys.dm_db_index_operational_stats** 函数将 NULL 解释为指定所有数据库或所有对象的通配符值。 由于这可能是无心之举，所以此部分中的示例说明了确定数据库 ID 和对象 ID 的安全方法。    
     
 ```    
 DECLARE @db_id int;    
@@ -252,7 +236,7 @@ GO
 ```    
     
 ## <a name="see-also"></a>另请参阅    
- [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
+ [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
  [与索引相关的动态管理视图和函数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
  [监视和优化性能](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)     

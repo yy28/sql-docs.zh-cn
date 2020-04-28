@@ -16,10 +16,10 @@ ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d0c750fd35dce98c1d754f192214cd96cfc56143
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032891"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
@@ -54,8 +54,8 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |-----------------|---------------|-----------------|  
 |server_name |**sysname**|承载生成行版本项目的数据库的服务器名称。|  
 |**db_name**|**sysname**|生成此项目的数据库的名称。|  
-|**db_nickname**|**binary （6）**|生成此项目的数据库的别名。|  
-|**版本**|**int**|项的版本。|  
+|**db_nickname**|**binary(6)**|生成此项目的数据库的别名。|  
+|**version**|**int**|项的版本。|  
 |**current_state**|**nvarchar （9）**|返回有关行的当前状态的信息。<br /><br /> **y**行数据表示行的当前状态。<br /><br /> **n**行数据不表示行的当前状态。<br /><br /> 不适用>-不适用。 ** \<**<br /><br /> 未知>-无法确定当前状态。 ** \<**|  
 |**rowversion_table**|**nchar （17）**|指示是否将行版本存储在[MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)表或[MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)表中。|  
 |**条**|**nvarchar(255)**|有关此行版本项目的附加信息。 通常，该字段为空。|  
@@ -66,8 +66,8 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |-----------------|---------------|-----------------|  
 |server_name |**sysname**|承载生成列版本项目的数据库的服务器名称。|  
 |**db_name**|**sysname**|生成此项目的数据库的名称。|  
-|**db_nickname**|**binary （6）**|生成此项目的数据库的别名。|  
-|**版本**|**int**|项的版本。|  
+|**db_nickname**|**binary(6)**|生成此项目的数据库的别名。|  
+|**version**|**int**|项的版本。|  
 |**colname**|**sysname**|列版本项目表示的项目列的名称。|  
 |**条**|**nvarchar(255)**|有关此列版本项目的附加信息。 通常，该字段为空。|  
   

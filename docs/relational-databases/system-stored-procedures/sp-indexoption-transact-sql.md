@@ -18,10 +18,10 @@ ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6d1231b4411e11de65cfe99d209ed231db79b5db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68030905"
 ---
 # <a name="sp_indexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
@@ -29,8 +29,7 @@ ms.locfileid: "68030905"
 
   为用户定义的聚集索引和非聚集索引或没有聚集索引的表设置锁选项值。  
   
- 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 自动从页级锁、行级锁或表级锁中进行选择。 您不必手动设置这些选项。 为知道特定类型的锁定始终合适的专家用户提供**sp_indexoption** 。  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 自动从页级锁、行级锁或表级锁中进行选择。 您不必手动设置这些选项。 为知道特定类型的锁定始终合适的专家用户提供**sp_indexoption** 。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]请改用[ALTER INDEX &#40;transact-sql&#41;](../../t-sql/statements/alter-index-transact-sql.md)。  
@@ -140,8 +139,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [INDEXPROPERTY (Transact-SQL)](../../t-sql/functions/indexproperty-transact-sql.md)   
- [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [INDEXPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   

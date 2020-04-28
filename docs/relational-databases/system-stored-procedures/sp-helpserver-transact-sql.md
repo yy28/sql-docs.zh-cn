@@ -18,10 +18,10 @@ ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 844e96d765f9ed06f88b140b906b78eb4ea16ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997441"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
@@ -52,11 +52,11 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**dist**|分发服务器。|  
 |**dpub**|到该分发服务器的远程发布服务器。|  
 |**惰性架构验证**|在查询开始跳过远程表的架构检查。|  
-|**酒馆**|发行者。|  
+|**pub**|发行者。|  
 |**rpc**|从指定的服务器启用 RPC。|  
 |**rpc 输出**|对指定的服务器启用 RPC。|  
 |**该子**|订阅服务器.|  
-|**主板**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**系统**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**使用远程排序规则**|使用远程列的排序规则而不使用本地服务器的排序规则。|  
   
 `[ @show_topology = ] 'show_topology'`指定服务器与其他服务器的关系。 *show_topology*为**varchar （** 1 **）**，默认值为 NULL。 如果*show_topology*不等于**t**或为 NULL，则**sp_helpserver**返回 "结果集" 部分中列出的列。 如果*show_topology*等于**t**，则除了结果集中列出的列外， **sp_helpserver**还返回**topx**和**topy**信息。  
@@ -68,10 +68,10 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**路径名**|**sysname**|服务器名称。|  
+|name |**sysname**|服务器名称。|  
 |**network_name**|**sysname**|服务器的网络名称。|  
-|**状态值**|**varchar （** 70 **）**|服务器状态。|  
-|**识别**|**char （** 4 **）**|服务器的标识号。|  
+|**status**|**varchar （** 70 **）**|服务器状态。|  
+|**id**|**char （** 4 **）**|服务器的标识号。|  
 |**collation_name**|**sysname**|服务器的排序规则。|  
 |**connect_timeout**|**int**|连接到链接服务器的超时值。|  
 |**query_timeout**|**int**|查询链接服务器的超时值。|  
@@ -113,7 +113,7 @@ EXEC sp_helpserver 'SEATTLE2';
  [sp_helpdistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [sp_helpremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
  [sp_helpsubscriberinfo &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
- [sp_serveroption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [sp_serveroption &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

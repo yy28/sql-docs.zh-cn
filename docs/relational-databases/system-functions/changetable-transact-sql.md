@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 11295f953e2f3e4e237838dfdb158fd01c9fa645
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68042898"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
@@ -49,7 +49,7 @@ CHANGETABLE (
  更改*表*， *last_sync_version*  
  返回自*last_sync_version*指定的版本以来对某个表进行的所有更改的跟踪信息。  
   
- *数据表*  
+ *table*  
  是要从中获取跟踪的更改的用户定义表。 必须对表启用更改跟踪。 可以使用由一部分、两部分、三部分或四部分构成的表名。 表名可以是表的同义词。  
   
  *last_sync_version*  
@@ -68,7 +68,7 @@ CHANGETABLE (
  版本*表*{<primary_key_values>}  
  返回指定行的最新更改跟踪信息。 主键值必须标识该行。 <primary_key_values> 标识主键列并指定值。 可以按任意顺序指定主键列名称。  
   
- *表*  
+ *数据表*  
  是用户定义的从中获取更改跟踪信息的表。 必须对表启用更改跟踪。 可以使用由一部分、两部分、三部分或四部分构成的表名。 表名可以是表的同义词。  
   
  column_name   
@@ -80,14 +80,14 @@ CHANGETABLE (
  方式*table_alias* [（*column_alias* [,.。。*n* ]）]  
  为 CHANGETABLE 返回的结果提供名称。  
   
- *table_alias*  
+ table_alias   
  是 CHANGETABLE 返回的表的别名。 *table_alias*是必需的，并且必须是有效的[标识符](../../relational-databases/databases/database-identifiers.md)。  
   
- *column_alias*  
+ column_alias**  
  是由 CHANGETABLE 返回的列的可选列别名或列别名列表。 这使得在结果中存在重复的名称时可以自定义列名。  
   
 ## <a name="return-types"></a>返回类型  
- **数据表**  
+ **table**  
   
 ## <a name="return-values"></a>返回值  
   
@@ -98,8 +98,8 @@ CHANGETABLE (
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|与上次对行的更改关联的版本值|  
 |SYS_CHANGE_CREATION_VERSION|**bigint**|与上次插入操作关联的版本值。|  
-|SYS_CHANGE_OPERATION|**nchar （1）**|指定更改的类型：<br /><br /> **U** = 更新<br /><br /> **I** = 插入<br /><br /> **D** = 删除|  
-|SYS_CHANGE_COLUMNS|**varbinary （4100）**|列出自 last_sync_version（基准版本）以后发生了更改的列。 请注意，计算列永远不会列出为已更改。<br /><br /> 以下任何一个条件为真时，值为 NULL：<br /><br /> 未启用列更改跟踪。<br /><br /> 操作是插入操作或删除操作。<br /><br /> 在一个操作中更新了所有非主键列。 不应直接解释此二进制值。 相反，若要对其进行解释，请使用[CHANGE_TRACKING_IS_COLUMN_IN_MASK （）](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)。|  
+|SYS_CHANGE_OPERATION|**nchar(1)**|指定更改的类型：<br /><br /> **U** = 更新<br /><br /> **I** = 插入<br /><br /> **D** = 删除|  
+|SYS_CHANGE_COLUMNS|**varbinary(4100)**|列出自 last_sync_version（基准版本）以后发生了更改的列。 请注意，计算列永远不会列出为已更改。<br /><br /> 以下任何一个条件为真时，值为 NULL：<br /><br /> 未启用列更改跟踪。<br /><br /> 操作是插入操作或删除操作。<br /><br /> 在一个操作中更新了所有非主键列。 不应直接解释此二进制值。 相反，若要对其进行解释，请使用[CHANGE_TRACKING_IS_COLUMN_IN_MASK （）](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)。|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|可以通过使用[WITH](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md)子句作为 INSERT、UPDATE 或 DELETE 语句的一部分来更改上下文信息。|  
 |\<主键列值>|与用户表列相同|被跟踪表的主键值。 这些值在用户表中唯一标识各行。|  
   
@@ -210,10 +210,10 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [变更跟踪函数 (Transact-SQL)](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
- [跟踪数据更改 (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
+ [更改跟踪函数 &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
+ [跟踪 SQL Server &#40;的数据更改&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
- [CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
+ [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
  [CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
   
   

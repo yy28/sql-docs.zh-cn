@@ -18,10 +18,10 @@ ms.assetid: da04df2a-f7a1-41e7-a1ef-2d5d68919892
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 73638d41c7a24a37c068d365771b4d0469a174d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68041021"
 ---
 # <a name="syssp_xtp_merge_checkpoint_files-transact-sql"></a>sys.sp_xtp_merge_checkpoint_files (Transact-SQL)
@@ -68,7 +68,7 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
  将有效范围内的所有数据和差异文件合并，以生成单个数据文件和差异文件。 此过程不支持合并策略。  
   
 ## <a name="see-also"></a>另请参阅  
- [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [内存中 OLTP（内存中优化）](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

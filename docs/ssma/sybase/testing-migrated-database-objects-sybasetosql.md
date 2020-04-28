@@ -10,10 +10,10 @@ ms.assetid: 4937f6b4-86bd-4070-88df-3d216306c33a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 6fb469dfcaaec33a03681bfb64f411851df0400e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68020911"
 ---
 # <a name="testing-migrated-database-objects-sybasetosql"></a>测试迁移的数据库对象 (SybaseToSQL)
@@ -45,7 +45,7 @@ SSMA 测试人员执行选择用于在 Sybase 上测试的对象及其在 SQL Se
 > [!NOTE]  
 > 注重! 切勿在生产系统上使用 SSMA 测试人员。 在测试执行过程中，将修改源架构和数据。 同时，对于某些类型的已测试代码，完全还原原始状态可能是不可能的。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
 如果要使用 SSMA 测试器，请在打开 "**安装测试人员数据库**" 选项的情况下安装 SSMA Sybase 扩展包。  
   
 此外，请验证以下各项：  

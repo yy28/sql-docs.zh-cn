@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d88e78e49a52919ff710cd123ab2b25022aa5d1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037057"
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>保留关键字（MDX 语法）
@@ -29,6 +29,6 @@ ms.locfileid: "68037057"
 -   请使用能避免使用保留关键字的命名约定。 如果对象名称必须与某个保留关键字类似，则可以删除辅音或元音。  
   
 ## <a name="see-also"></a>另请参阅  
- [Mdx 语法元素 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX 语法元素 (MDX)](../mdx/mdx-syntax-elements-mdx.md)  
   
   

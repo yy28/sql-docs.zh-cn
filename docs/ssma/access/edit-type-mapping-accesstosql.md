@@ -10,10 +10,10 @@ ms.assetid: 7f9d9530-6c04-41d9-bbe7-d91820a30066
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7d41fc2f01e2cfbc2b20c58ea9be640f2afd8ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006580"
 ---
 # <a name="edit-type-mapping-accesstosql"></a>编辑类型映射（AccessToSQL）
@@ -33,10 +33,10 @@ ms.locfileid: "68006580"
   
 如果数据类型的长度可变，以下字段将显示在 "**源类型**" 下：  
   
-**从**  
+**From**  
 指定此映射的最小长度。 例如，对于**文本**数据类型，可以输入10来指定此映射适用于从**文本（10）** 开始的范围。  
   
-**自**  
+**功能**  
 指定此映射的最大长度。 例如，对于**文本**数据类型，可以输入20来指定此映射适用于以**文本（20）** 结束的范围。  
   
 **目标类型**  

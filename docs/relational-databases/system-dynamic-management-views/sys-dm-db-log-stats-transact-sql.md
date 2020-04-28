@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b23eea391c7de1f02eacec7f8c8625211dfeea3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004833"
 ---
 # <a name="sysdm_db_log_stats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
@@ -43,8 +43,7 @@ ms.locfileid: "68004833"
 
 *database_id* |NULL |**默认值**
 
-数据库的 ID。 
-  `database_id` 为 `int`。 有效的输入包括数据库的 ID 号、 `NULL`或。 `DEFAULT` 默认为 `NULL`。 `NULL`和`DEFAULT`在当前数据库的上下文中是等效值。  
+数据库的 ID。 `database_id` 为 `int`。 有效的输入包括数据库的 ID 号、 `NULL`或。 `DEFAULT` 默认值为 `NULL`。 `NULL`和`DEFAULT`在当前数据库的上下文中是等效值。  
 可以指定内置函数 [DB_ID](../../t-sql/functions/db-id-transact-sql.md)。 如果在`DB_ID`不指定数据库名称的情况下使用，则当前数据库的兼容级别必须为90或更高。
 
   
@@ -53,7 +52,7 @@ ms.locfileid: "68004833"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |database_id    |**int**    |数据库 ID |  
-|recovery_model |**nvarchar （60）**   |   数据库的恢复模式。 可能的值包括： <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  
+|recovery_model |**nvarchar(60)**   |   数据库的恢复模式。 可能的值包括： <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  
 |log_min_lsn    |**nvarchar(24)**   |   事务日志中的当前开始[日志序列号（LSN）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 。|  
 |log_end_lsn    |**nvarchar(24)**   |   事务日志中最后一个日志记录的[日志序列号（LSN）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 。|  
 |current_vlf_sequence_number    |**bigint** |   执行时的当前[虚拟日志文件（VLF）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)序列号。|  
@@ -62,7 +61,7 @@ ms.locfileid: "68004833"
 |total_log_size_mb  |**float**  |   总事务日志大小（MB）。 |  
 |active_vlf_count   |**bigint** |   事务日志中活动[虚拟日志文件（vlf）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)的总数。|  
 |active_log_size_mb |**float**  |   活动事务日志总大小（MB）。|  
-|log_truncation_holdup_reason   |**nvarchar （60）**   |   日志截断暂留原因。 该值与的`log_reuse_wait_desc` `sys.databases`列相同。  （有关这些值的更详细说明，请参阅[事务日志](../../relational-databases/logs/the-transaction-log-sql-server.md)）。 <br />可能的值包括： <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />复制<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />其他暂时性 |  
+|log_truncation_holdup_reason   |**nvarchar(60)**   |   日志截断暂留原因。 该值与的`log_reuse_wait_desc` `sys.databases`列相同。  （有关这些值的更详细说明，请参阅[事务日志](../../relational-databases/logs/the-transaction-log-sql-server.md)）。 <br />可能的值包括： <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />复制<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />其他暂时性 |  
 |log_backup_time    |**datetime**   |   上次事务日志备份时间。|   
 |log_backup_lsn |**nvarchar(24)**   |   上次事务日志备份[日志序列号（LSN）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)。|   
 |log_since_last_log_backup_mb   |**float**  |   自上次事务日志备份[日志序列号（LSN）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)以来的日志大小（MB）。|  
@@ -81,7 +80,7 @@ ms.locfileid: "68004833"
   
 ## <a name="examples"></a>示例  
 
-### <a name="a-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-high-number-of-vlfs"></a>A. 确定包含大量 Vlf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例中的数据库   
+### <a name="a-determining-databases-in-a-ssnoversion-instance-with-high-number-of-vlfs"></a>A. 确定包含大量 Vlf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例中的数据库   
 下面的查询在日志文件中返回 Vlf 超过100的数据库。 大量 Vlf 可能会影响数据库的启动、还原和恢复时间。
 
 ```sql  
@@ -91,7 +90,7 @@ CROSS APPLY sys.dm_db_log_stats(s.database_id)
 WHERE total_vlf_count  > 100;
 ```   
 
-### <a name="b-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-transaction-log-backups-older-than-4-hours"></a>B. 使用超过4小时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的事务日志备份确定实例中的数据库   
+### <a name="b-determining-databases-in-a-ssnoversion-instance-with-transaction-log-backups-older-than-4-hours"></a>B. 使用超过4小时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的事务日志备份确定实例中的数据库   
 下面的查询确定实例中数据库的最后一次日志备份时间。
 
 ```sql  
@@ -101,8 +100,8 @@ CROSS APPLY sys.dm_db_log_stats(s.database_id);
 ```
 
 ## <a name="see-also"></a>另请参阅  
-[动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[动态管理视图和函数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [与数据库相关的动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys. dm_db_log_space_usage &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
-[sys. dm_db_log_info &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
+[sys.dm_db_log_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
   

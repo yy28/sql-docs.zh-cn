@@ -19,10 +19,10 @@ ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 602bc0ac1584f9ff369efa8a2484a16a97a92285
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029151"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>执行 SSMA 控制台 (SybaseToSQL)
@@ -178,7 +178,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令来执行和控制 SSM
 <reconnect-target-database  server="<server-unique-name>"/>  
 ```  
   
-## <a name="report-commands"></a>报表命令  
+## <a name="report-commands"></a>报告命令  
 报表命令生成各种 SSMA 控制台活动的性能报告。  
   
 ### <a name="generate-assessment-report"></a>生成-评估-报表  

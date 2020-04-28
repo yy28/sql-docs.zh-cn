@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c9e0d3152c6d60faff4c1c42410374287bd7d111
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68030903"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
@@ -78,7 +78,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
  下面的示例将 Windows 登录名`Contoso\Mary5`作为用户`AdventureWorks2012` `Mary5`添加到数据库中。 用户 `Mary5` 随即被添加到 `Production` 角色中。  
   
 > [!NOTE]  
->  因为 `Contoso\Mary5` 在 `Mary5` 数据库中被识别为数据库用户 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]，所以必须指定用户名 `Mary5`。 如果没有 `Contoso\Mary5` 登录名存在，语句将失败。 请通过使用您的域中的登录名进行测试。  
+>  因为 `Contoso\Mary5` 在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中被识别为数据库用户 `Mary5`，所以必须指定用户名 `Mary5`。 如果没有 `Contoso\Mary5` 登录名存在，语句将失败。 请通过使用您的域中的登录名进行测试。  
   
 ```  
 USE AdventureWorks2012;  
@@ -94,7 +94,7 @@ GO
 EXEC sp_addrolemember 'Production', 'Mary5';  
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sspdw"></a>示例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-adding-a-windows-login"></a>C. 添加 Windows 登录名  
  下面的示例将登录名`LoginMary`作为用户`AdventureWorks2008R2` `UserMary`添加到数据库中。 用户 `UserMary` 随即被添加到 `Production` 角色中。  
@@ -122,7 +122,7 @@ EXEC sp_addrolemember 'Production', 'UserMary'
  [sp_addsrvrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
  [sp_droprolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [数据库级角色](../../relational-databases/security/authentication-access/database-level-roles.md)  
+ [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [数据库级别的角色](../../relational-databases/security/authentication-access/database-level-roles.md)  
   
   

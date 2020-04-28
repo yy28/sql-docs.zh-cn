@@ -18,10 +18,10 @@ ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ecbfba038b1954565839a3d931ef96431b77f50b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008933"
 ---
 # <a name="sp_oasetproperty-transact-sql"></a>sp_OASetProperty (Transact-SQL)
@@ -42,13 +42,13 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
  *objecttoken*  
  是先前由**sp_OACreate**创建的 OLE 对象的对象标记。  
   
- *propertyname*  
+ propertyname   
  要设置新值的 OLE 对象的属性名。  
   
  *newvalue*  
  属性的新值，并且必须是适当数据类型的值。  
   
- 索引   
+ *index*  
  索引参数。 如果已指定，则*index*必须为适当数据类型的值。  
   
  有些属性包含参数。 这些属性称为索引化属性，相应的参数被称为索引参数。 一个属性可有多个索引参数。  

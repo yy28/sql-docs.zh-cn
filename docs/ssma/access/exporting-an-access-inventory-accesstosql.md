@@ -19,10 +19,10 @@ ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0c05eafd1fb58b6ece15f5ad8721228d9d4beab6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006557"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>导出访问清单（AccessToSQL）
@@ -55,9 +55,9 @@ SSMA 导出有关访问数据库、表、列、索引、外键、查询、报表
   
 1.  打开 SSMA 以进行访问。  
   
-2.  在“文件”菜单中，选择“新建项目”。    
+2.  在“文件”菜单中，选择“新建项目”。********  
   
-    将显示“新建项目”对话框  。  
+    此时将出现“新建项目”  对话框。  
   
 3.  在 "**名称**" 框中，输入项目的名称。  
   
@@ -90,7 +90,7 @@ SSMA 导出有关访问数据库、表、列、索引、外键、查询、报表
   
     您可以使用列表顶部的 "**全选**" 和 "**全部清除**" 按钮来选择或清除所有数据库。 还可以按住 CTRL 键来选择多个行，或按住 SHIFT 键以选择某一范围的行。  
   
-7.  单击“下一步”。   
+7.  单击“下一步”  。  
   
 8.  在 "验证" 页上，单击 "**完成**"。  
   
@@ -227,5 +227,5 @@ WHERE ColumnName LIKE '%salary%';
 如果您不知道列名称，则可以编写查询以返回所有列。 为此，请从前面的查询中删除 WHERE 子句。  
   
 ## <a name="see-also"></a>另请参阅  
-[为迁移准备 Access 数据库](preparing-access-databases-for-migration-accesstosql.md)  
+[准备要迁移的 Access 数据库](preparing-access-databases-for-migration-accesstosql.md)  
   

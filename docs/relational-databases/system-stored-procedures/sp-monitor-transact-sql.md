@@ -18,10 +18,10 @@ ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d91f774973588096ea73675d9b0e9ebf6368f1ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022324"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor (Transact-SQL)
@@ -47,29 +47,20 @@ sp_monitor
 |-----------------|-----------------|  
 |**last_run**|上次运行时间**sp_monitor** 。|  
 |**current_run**|正在运行的时间**sp_monitor** 。|  
-|**seconds**|自运行**sp_monitor**以来经过的秒数。|  
+|**计算**|自运行**sp_monitor**以来经过的秒数。|  
 |**cpu_busy**|服务器计算机的 CPU 处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作所用的秒数。|  
-|**io_busy**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在输入和输出操作上花费的秒数。|  
-|**时间**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已空闲的秒数。|  
-|**packets_received**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 读取的输入数据包数。|  
-|**packets_sent**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已写入的输出数据包数。|  
-|**packet_errors**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在读取和写入数据包时遇到的错误数。|  
-|**total_read**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 读取的次数。|  
-|**total_write**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 写入的次数。|  
-|**total_errors**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在读取和写入时遇到的错误数。|  
+|**io_busy**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在输入和输出操作上花费的秒数。|  
+|**时间**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已空闲的秒数。|  
+|**packets_received**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 读取的输入数据包数。|  
+|**packets_sent**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已写入的输出数据包数。|  
+|**packet_errors**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在读取和写入数据包时遇到的错误数。|  
+|**total_read**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 读取的次数。|  
+|**total_write**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 写入的次数。|  
+|**total_errors**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在读取和写入时遇到的错误数。|  
 |**网卡**|登录或尝试登录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的次数。|  
   
 ## <a name="remarks"></a>备注  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过一系列函数跟踪其完成的工作量。 执行**sp_monitor**显示这些函数返回的当前值，并显示自上次运行该过程以来它们的更改量。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过一系列函数跟踪其完成的工作量。 执行**sp_monitor**显示这些函数返回的当前值，并显示自上次运行该过程以来它们的更改量。  
   
  对于每一列，统计信息将按*数字*（*number*）-*数字*% 或*数字*（*数字*）的形式进行打印。 第一个*数字*是指[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在重启后的秒数（对于**cpu_busy**、 **io_busy**和**空闲**）或总数目（对于其他变量）。 括号中的*数字*是指自上次运行**sp_monitor**以来的秒数或总数。 百分比是自上次运行**sp_monitor**以来的时间百分比。 例如，如果报表显示**cpu_busy**为4250（215）-68%，则 cpu 在上一次启动时会忙于 4250 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]秒，自上次运行**sp_monitor**以来215秒，最后一次运行**sp_monitor**以来的总时间的68%。  
   
@@ -88,7 +79,7 @@ EXEC sp_monitor
   
 ||||  
 |-|-|-|  
-|**last_run**|**current_run**|**seconds**|  
+|**last_run**|**current_run**|**计算**|  
 |Mar 29 1998 11:55AM|Apr 4 1998 2:22 PM|561|  
   
 ||||  
@@ -107,7 +98,7 @@ EXEC sp_monitor
 |141（0）|54920（127）|0（0）|4（0）|  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
+ [sp_who &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

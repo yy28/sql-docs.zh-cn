@@ -18,10 +18,10 @@ author: mashamsft
 ms.author: mathoma
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 6e768f447cd53321861eae91bbe40e2e34ad12f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68043159"
 ---
 # <a name="sysgeo_replication_links-azure-sql-database"></a>sys.geo_replication_links（Azure SQL 数据库）
@@ -43,7 +43,7 @@ ms.locfileid: "68043159"
 |角色 (role)|**tinyint**|异地复制角色，如下所示：<br /><br /> 0 = 主要。 Database_id 指的是异地复制合作关系中的主数据库。<br /><br /> 1 = 辅助。  Database_id 指的是异地复制合作关系中的主数据库。|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|辅助类型，为以下类型之一：<br /><br /> 0 = 否。 在故障转移之前，辅助数据库不可访问。<br /><br /> 1 = 只读。 只有 ApplicationIntent = ReadOnly 的客户端连接才能访问辅助数据库。<br /><br /> 2 = 全部。 任何客户端连接都可以访问辅助数据库。|  
-|secondary_allow_connections _desc|**nvarchar(256)**|否<br /><br /> All<br /><br /> 只读|  
+|secondary_allow_connections _desc|**nvarchar(256)**|否<br /><br /> 全部<br /><br /> 只读|  
   
 ## <a name="permissions"></a>权限
 

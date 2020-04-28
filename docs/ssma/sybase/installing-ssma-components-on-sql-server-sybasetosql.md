@@ -10,10 +10,10 @@ ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 1fbc3a8f74b21bd5a53bdd874b5c41ef522e29f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029007"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>在 SQL Server 上安装 SSMA 组件 (SybaseToSQL)
@@ -36,7 +36,7 @@ SSMA 扩展包将数据库、 **sysdb**和**ssmatesterdb_syb**添加到指定的
   
 2.  双击 "SSMA for Sybase Extension Pack"。*n*。安装 .exe。  
   
-3.  在“欢迎”页面上，单击“**下一步**”。  
+3.  在欢迎页上，单击 "**下一步**"。  
   
 4.  在 "最终用户许可协议" 页上，阅读许可协议。 如果同意，请选中 "**我接受许可协议中的条款**" 复选框，然后单击 "**下一步**"。  
   

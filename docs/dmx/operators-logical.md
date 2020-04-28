@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 947e9a26f697a4b6a62d2153afc882c68c3066dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008155"
 ---
 # <a name="operators---logical"></a>运算符 - 逻辑
@@ -22,7 +22,7 @@ ms.locfileid: "68008155"
   
  下表标识了 DMX 支持的逻辑运算符。  
   
-|操作员|说明|  
+|运算符|说明|  
 |--------------|-----------------|  
 |[和 &#40;DMX&#41;](../dmx/and-dmx.md)|对两个数值表达式执行逻辑与运算。|  
 |[不 &#40;DMX&#41;](../dmx/not-dmx.md)|对数值表达式执行逻辑非运算。|  

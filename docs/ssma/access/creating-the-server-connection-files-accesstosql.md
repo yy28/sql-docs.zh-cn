@@ -10,10 +10,10 @@ ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 03d622c50a8760bbf1767bc8a4f79e215773695f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006603"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>创建服务器连接文件（AccessToSQL）
@@ -63,7 +63,7 @@ ms.locfileid: "68006603"
 ## <a name="server-connection-file-validation"></a>服务器连接文件验证  
 用户可以根据 "架构" 文件夹中提供的架构定义文件 **"A2SSConsoleScriptServersSchema"** 轻松地验证其服务器连接文件。  
   
-## <a name="next-step"></a>后续步骤  
+## <a name="next-step"></a>下一步  
 操作控制台的下一步是[执行 SSMA 控制台 &#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
 ## <a name="see-also"></a>另请参阅  

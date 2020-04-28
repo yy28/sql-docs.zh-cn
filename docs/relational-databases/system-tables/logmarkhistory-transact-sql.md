@@ -18,10 +18,10 @@ ms.assetid: 5c1becc5-f34e-4869-bf69-dfafab684540
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0674bf993087b349d4e8b6f9947c65167e94df8e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68001801"
 ---
 # <a name="logmarkhistory-transact-sql"></a>logmarkhistory (Transact-SQL)
@@ -36,12 +36,12 @@ ms.locfileid: "68001801"
 |**mark_name**|**nvarchar(128)**|用户提供的标记事务名。|  
 |**2008**|**nvarchar(255)**|用户提供的标记事务说明。 可以为 NULL。|  
 |**user_name**|**nvarchar(128)**|执行标记事务的数据库用户名。 可以为 NULL。|  
-|**lsn**|**数值（25，0）**|出现标记的事务记录的日志序列号。|  
+|**lsn**|**numeric(25,0)**|出现标记的事务记录的日志序列号。|  
 |**mark_time**|**datetime**|提交标记事务的时间（本地时间）。|  
   
 ## <a name="see-also"></a>另请参阅  
  [将数据库还原到标记的事务 &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)   
- [使用标记的事务一致地恢复相关的数据库的事务（完全恢复模式）](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)   
+ [使用标记的事务一致地恢复相关数据库 &#40;完整恢复模式&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)   
  [系统表 (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

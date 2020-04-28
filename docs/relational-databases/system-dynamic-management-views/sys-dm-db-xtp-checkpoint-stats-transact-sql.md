@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 84cbfafdba3bca9b06f250ed9996f0a87e71a18c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026865"
 ---
 # <a name="sysdm_db_xtp_checkpoint_stats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
@@ -41,7 +41,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
   
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]与更新的版本有很大差异，在[SQL Server 2014](#bkmk_2014)的主题中对此进行了深入讨论。**
   
-## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]及更高版本  
+## <a name="sssql15-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]及更高版本  
  下表对中`sys.dm_db_xtp_checkpoint_stats`的列进行**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** 了说明，从开始。  
   
 |列名称|类型|说明|  
@@ -83,7 +83,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |internal_error_code|**bigint**|任何控制器、序列化程序、关闭和合并线程均出现错误。|
 |bytes_of_large_data_serialized|**bigint**|已序列化的数据量。 |  
   
-##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  下表对中`sys.dm_db_xtp_checkpoint_stats`的列进行**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 了说明。  
   
 |列名称|类型|说明|  
@@ -108,6 +108,6 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
  要求具有对服务器的 `VIEW DATABASE STATE` 权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;的内存优化表动态管理视图](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [内存优化表动态管理视图 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

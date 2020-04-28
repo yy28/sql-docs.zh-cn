@@ -20,10 +20,10 @@ ms.assetid: 898f2d76-9e63-45ef-94da-8034e86004ab
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 506dae205356504c76d47ffe324b82f9f34665f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018000"
 ---
 # <a name="change-data-capture---sysdm_cdc_errors"></a>Change Data Capture-sys. dm_cdc_errors
@@ -40,7 +40,7 @@ ms.locfileid: "68018000"
 |**error_number**|**int**|错误消息的 ID。|  
 |**error_severity**|**int**|消息的严重级别，在 1 到 25 之间。|  
 |**error_state**|**int**|错误的状态号。|  
-|**error_message**|**nvarchar （1024）**|错误的消息正文。|  
+|**error_message**|**nvarchar(1024)**|错误的消息正文。|  
 |**start_lsn**|**nvarchar （23）**|发生错误时正在处理的行的起始 LSN 值。<br /><br /> 0 = 在日志扫描会话中未发生错误。|  
 |**begin_lsn**|**nvarchar （23）**|发生错误时正在处理的事务的起始 LSN 值。<br /><br /> 0 = 在日志扫描会话中未发生错误。|  
 |**sequence_value**|**nvarchar （23）**|发生错误时正在处理的行的 LSN 值。<br /><br /> 0 = 在日志扫描会话中未发生错误。|  

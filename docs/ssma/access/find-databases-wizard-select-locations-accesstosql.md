@@ -12,10 +12,10 @@ ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 82558c7839263a777a15d374acff28b4c40103d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68024756"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>查找数据库向导（选择位置）（AccessToSQL）
@@ -24,7 +24,7 @@ ms.locfileid: "68024756"
 若要打开 "查找数据库向导"，请在 "**文件**" 菜单上单击 "**查找数据库**"。 有关如何使用此对话框的详细信息，请参阅[添加和删除 Access 数据库文件](adding-and-removing-access-database-files-accesstosql.md)  
   
 ## <a name="options"></a>选项  
-**“浏览”**  
+**浏览**  
 单击浏览计算机或网络。 选择要搜索的文件夹或位置，然后单击 **"确定"**。 单击 "**添加**" 将此位置添加到列表。  
   
 **路径框**  

@@ -18,10 +18,10 @@ ms.assetid: c644814b-4e40-44d7-b6b4-5954b0d4db7c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 29ea5e7e78d274eaf289afbd6ca73f97cd479679
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026658"
 ---
 # <a name="mspeer_topologyrequest-transact-sql"></a>MSpeer_topologyrequest (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68026658"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|id|**int**|标识拓扑状态请求。 [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md)中的 request_id 列使用此值。|  
+|ID|**int**|标识拓扑状态请求。 [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md)中的 request_id 列使用此值。|  
 |publication|**sysname**|发起拓扑状态请求的发布的名称。|  
 |sent_date|**datetime**|发起拓扑状态请求的日期和时间。|  
   

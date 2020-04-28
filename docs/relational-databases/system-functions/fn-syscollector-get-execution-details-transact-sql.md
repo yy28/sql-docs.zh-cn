@@ -18,10 +18,10 @@ ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b2ed385026d2bd47912a1a95d237b2adedafa26d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68042819"
 ---
 # <a name="fn_syscollector_get_execution_details-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
@@ -46,18 +46,18 @@ fn_syscollector_get_execution_details ( log_id )
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|id|**int**|日志记录项的唯一标识符。|  
+|ID|**int**|日志记录项的唯一标识符。|  
 |event|**sysname**|生成日志记录项的事件的名称。|  
 |computer|**nvarchar**|生成日志记录条目时运行包的计算机。|  
 |运算符后的表达式|**nvarchar**|运行生成日志记录项的包的人员或代理的用户名。|  
 |source|**nvarchar**|生成日志记录项的可执行文件的名称。|  
 |sourceid|**uniqueidentifier**|生成日志记录项的可执行文件的 GUID。|  
 |executionid|**uniqueidentifier**|生成日志记录条目的可执行文件的执行实例的 GUID。|  
-|开始时间|**datetime**|包开始运行的时间。|  
+|starttime|**datetime**|包开始运行的时间。|  
 |endtime|**datetime**|包完成的时间。|  
 |datacode|**int**|用于标识与日志项关联的事件的整数值。 “0”指示事件未提供标识符。|  
 |databytes|**图像**|用于标识返回值的字节数组。|  
-|message|**nvarchar**|事件以及与事件关联的信息的说明。|  
+|消息|**nvarchar**|事件以及与事件关联的信息的说明。|  
   
 ## <a name="permissions"></a>权限  
  需要**dc_operator**的 SELECT 权限。  

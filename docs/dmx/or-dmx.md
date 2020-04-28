@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 76b1f8ac9a5f7ad584f42110f2c3b22e5c1918ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008143"
 ---
 # <a name="or-dmx"></a>OR (DMX)
@@ -27,11 +27,11 @@ ms.locfileid: "68008143"
 Expression1 OR Expression2  
 ```  
   
-#### <a name="parameters"></a>parameters  
- Expression1   
+#### <a name="parameters"></a>参数  
+ *Expression1*  
  一个返回数值的有效数据挖掘扩展 (DMX) 表达式。  
   
- Expression2   
+ Expression2**  
  一个返回数值的有效 DMX 表达式。  
   
 ## <a name="return-value"></a>返回值  

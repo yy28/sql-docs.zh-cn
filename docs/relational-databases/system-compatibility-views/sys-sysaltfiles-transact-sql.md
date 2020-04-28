@@ -21,10 +21,10 @@ ms.assetid: 698dec23-5336-4108-87a5-f8e407f8da09
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 891e88761cac47be83fb69debbbc5e4cb6c401c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006973"
 ---
 # <a name="syssysaltfiles-transact-sql"></a>sys.sysaltfiles (Transact-SQL)
@@ -39,17 +39,17 @@ ms.locfileid: "68006973"
 |-----------------|---------------|-----------------|  
 |**fileid**|**smallint**|文件标识号。 它对每个数据库都是唯一的。|  
 |**groupid**|**smallint**|文件组标识号。|  
-|**规格**|**int**|文件大小（以 8 KB 页为单位）。|  
+|size |**int**|文件大小（以 8 KB 页为单位）。|  
 |**maxsize**|**int**|最大文件大小（以 8 KB 为单位的页）。<br /><br /> 0 = 无增长。<br /><br /> -1 = 文件将一直增长到磁盘充满为止。<br /><br /> 268435456 = 日志文件将增长到最大大小 2 TB。<br /><br /> 注意：如果使用无限制的日志文件大小升级的数据库，日志文件的最大大小将报告为-1。|  
 |**growth**|**int**|数据库的增长大小。<br /><br /> 0 = 无增长。 根据状态的值，可以是页数或文件大小的百分比。 如果**status**为0x100000，则**增长**是文件大小的百分比;否则，为页数。|  
-|**状态值**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**性能**|**int**|保留。|  
 |**dbid**|**smallint**|该文件所属数据库的数据库标识号。|  
-|**路径名**|**sysname**|文件的逻辑名称。|  
+|**name**|**sysname**|文件的逻辑名称。|  
 |**名字**|**nvarchar(260)**|物理设备的名称。 这包括文件的完整路径。|  
   
 ## <a name="see-also"></a>另请参阅  
  [将系统表映射到系统视图 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Transact-sql&#41;的兼容性视图 &#40;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [兼容性视图 (Transact SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

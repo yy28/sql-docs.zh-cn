@@ -16,10 +16,10 @@ ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 27a7f35a915e2bff62932124aef64984a63cbd0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68021082"
 ---
 # <a name="sp_setsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
@@ -55,8 +55,8 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**ORIGINAL XACT_SEQNO**|**varbinary （16）**|要应用于订阅服务器的下一个事务的原始 LSN。|  
-|**UPDATED XACT_SEQNO**|**varbinary （16）**|要应用于订阅服务器的下一个事务的更新后的 LSN。|  
+|**ORIGINAL XACT_SEQNO**|**varbinary(16)**|要应用于订阅服务器的下一个事务的原始 LSN。|  
+|**UPDATED XACT_SEQNO**|**varbinary(16)**|要应用于订阅服务器的下一个事务的更新后的 LSN。|  
 |**SUBSCRIPTION STREAM COUNT**|**int**|上次同步期间使用的订阅流数。|  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -78,6 +78,6 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>权限  
  只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_setsubscriptionxactseqno**。  
   
-## <a name="see-more"></a>查看详细信息
+## <a name="see-more"></a>查看更多
 
 [博客：如何跳过事务](https://repltalk.com/2019/05/28/how-to-skip-a-transaction/)  

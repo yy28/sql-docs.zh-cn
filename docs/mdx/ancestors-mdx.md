@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8551e6fdac54b3eb4c20f13f6722936df1c92feb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017100"
 ---
 # <a name="ancestors-mdx"></a>Ancestors (MDX)
@@ -38,7 +38,7 @@ Ancestors(Member_Expression, Distance)
  *Level_Expression*  
  返回级别的有效多维表达式 (MDX)。  
   
- *长途*  
+ *距离*  
  指定与指定成员距离的有效数值表达式。  
   
 ## <a name="remarks"></a>备注  
@@ -98,6 +98,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

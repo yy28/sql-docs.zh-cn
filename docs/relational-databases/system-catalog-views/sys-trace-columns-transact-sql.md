@@ -20,10 +20,10 @@ ms.assetid: 5c48eb09-9e9b-45dd-b151-ca39b026ece5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bda45d55505356594f23a8bb1ece2e95153206a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022651"
 ---
 # <a name="systrace_columns-transact-sql"></a>sys.trace_columns (Transact-SQL)
@@ -34,14 +34,13 @@ ms.locfileid: "68022651"
  有关支持的跟踪事件的完整列表，请参阅[SQL Server 事件类引用](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 请改用扩展事件目录视图。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 请改用扩展事件目录视图。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**trace_column_id**|**smallint**|该列的唯一 ID。|  
-|**路径名**|**nvarchar(128)**|该列的唯一名称。 此参数未本地化。|  
-|type_name |**nvarchar(128)**|该列的数据类型名称。|  
+|**name**|**nvarchar(128)**|该列的唯一名称。 此参数未本地化。|  
+|**type_name**|**nvarchar(128)**|该列的数据类型名称。|  
 |**max_size**|**int**|该列数据的最大大小，以字节表示。|  
 |**is_filterable**|**bit**|指示是否可在筛选器说明中使用该列。<br /><br /> 0 = false<br /><br /> 1 = true|  
 |**is_repeatable**|**bit**|指示是否可以在“重复列”数据中引用该列。<br /><br /> 0 = false<br /><br /> 1 = true|  

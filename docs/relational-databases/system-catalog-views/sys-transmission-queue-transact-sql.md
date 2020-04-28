@@ -20,10 +20,10 @@ ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7bd461a677a7bfab145846baaf09c0a8a62d6f8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022605"
 ---
 # <a name="systransmission_queue-transact-sql"></a>sys.transmission_queue (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68022605"
 |**service_contract_name**|**nvarchar(256)**|此消息的会话所遵循的约定名称。 可以为 null.|  
 |**enqueue_time**|**datetime**|消息进入队列的时间。 无论实例的本地时区如何，该值都使用 UTC。 不可为 NULL。|  
 |**message_sequence_number**|**bigint**|消息的序列号。 不可为 NULL。|  
-|message_type_name |**nvarchar(256)**|消息的消息类型名称。 可以为 null.|  
+|**message_type_name**|**nvarchar(256)**|消息的消息类型名称。 可以为 null.|  
 |**is_conversation_error**|**bit**|此消息是否是错误消息。<br /><br /> 0 = 不是错误消息。<br /><br /> 1 = 是错误消息。<br /><br /> 不可为 NULL。|  
 |**is_end_of_dialog**|**bit**|此消息是否是会话消息的结尾。 不可为 NULL。<br /><br /> 0 = 不是会话消息的结尾。<br /><br /> 1 = 是会话消息的结尾。<br /><br /> 不可为 NULL。|  
 |**message_body**|**varbinary(max)**|此消息的正文。 可以为 null.|  

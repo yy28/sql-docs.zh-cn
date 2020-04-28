@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: fcbfb95070783db002d34870e5508df5322210d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008197"
 ---
 # <a name="operators---comparison"></a>运算符 - 比较
@@ -22,7 +22,7 @@ ms.locfileid: "68008197"
   
  下表标识了 DMX 支持的比较运算符。  
   
-|操作员|说明|  
+|运算符|说明|  
 |--------------|-----------------|  
 |[&#60; &#40;低于&#41; &#40;DMX&#41;](../dmx/less-than-dmx.md)|对于计算结果为非 Null 值的参数，如果左侧的参数值小于右侧的参数值，则返回 TRUE；否则返回 FALSE。 如果其中一个参数的计算结果为 Null 值或这两个参数的计算结果均为 Null 值，则该运算符返回 Null 值。|  
 |[&#62; &#40;大于&#41; &#40;DMX&#41;](../dmx/greater-than-dmx.md)|对于计算结果为非 null 值的参数，如果左侧的参数值大于右侧的参数值，则返回 TRUE;否则，返回 FALSE。 如果其中一个参数的计算结果为 Null 值或这两个参数的计算结果均为 Null 值，则该运算符返回 Null 值。|  

@@ -20,10 +20,10 @@ ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 52abdd077d892982c7fb63a34cec8bbdbd973379
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017991"
 ---
 # <a name="change-data-capture---sysdm_cdc_log_scan_sessions"></a>Change Data Capture-sys. dm_cdc_log_scan_sessions
@@ -36,8 +36,8 @@ ms.locfileid: "68017991"
 |**session_id**|**int**|会话的 ID。<br /><br /> 0 = 此行中返回的数据是自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上次启动以来所有会话的聚合。|  
 |**start_time**|**datetime**|会话的开始时间。<br /><br /> 当**session_id** = 0 时，将开始聚合数据收集时间。|  
 |**end_time**|**datetime**|会话结束的时间。<br /><br /> NULL = 会话处于活动状态。<br /><br /> 当**session_id** = 0 时，为最后一个会话的结束时间。|  
-|**持续时间**|**bigint**|会话的持续时间（以秒为单位）。<br /><br /> 0 = 会话不包含变更数据捕获事务。<br /><br /> 当**session_id** = 0 时，为包含变更数据捕获事务的所有会话的持续时间（以秒为单位）。|  
-|**scan_phase**|**nvarchar （200）**|会话的当前阶段。 下面是可能的值及其说明：<br /><br /> 1：正在读取配置<br />2：首次扫描，生成哈希表<br />3：第二次扫描<br />4：第二次扫描<br />5：第二次扫描<br />6：架构版本控制<br />7：上次扫描<br />8：完成<br /><br /> 当**session_id** = 0 时，此值始终为 "Aggregate"。|  
+|**duration**|**bigint**|会话的持续时间（以秒为单位）。<br /><br /> 0 = 会话不包含变更数据捕获事务。<br /><br /> 当**session_id** = 0 时，为包含变更数据捕获事务的所有会话的持续时间（以秒为单位）。|  
+|**scan_phase**|**nvarchar(200)**|会话的当前阶段。 下面是可能的值及其说明：<br /><br /> 1：正在读取配置<br />2：首次扫描，生成哈希表<br />3：第二次扫描<br />4：第二次扫描<br />5：第二次扫描<br />6：架构版本控制<br />7：上次扫描<br />8：完成<br /><br /> 当**session_id** = 0 时，此值始终为 "Aggregate"。|  
 |**error_count**|**int**|遇到的错误数。<br /><br /> 当**session_id** = 0 时，为所有会话中的错误总数。|  
 |**start_lsn**|**nvarchar （23）**|会话的起始 LSN。<br /><br /> 当**session_id** = 0 时，为最后一个会话的起始 LSN。|  
 |**current_lsn**|**nvarchar （23）**|当前正在扫描的 LSN。<br /><br /> 当**session_id** = 0 时，当前 LSN 为0。|  

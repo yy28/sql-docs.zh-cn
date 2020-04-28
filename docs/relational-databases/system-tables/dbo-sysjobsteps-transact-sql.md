@@ -20,10 +20,10 @@ ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 13cf57e181c3fbb1371c10b554eb9da344a951d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004731"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
@@ -36,10 +36,9 @@ ms.locfileid: "68004731"
 |**job_id**|**uniqueidentifier**|作业的 ID。|  
 |**step_id**|**int**|作业中步骤的 ID。|  
 |**step_name**|**sysname**|作业步骤的名称。|  
-|**适用**|**nvarchar （40）**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理用于执行作业步骤的子系统的名称。|  
+|**适用**|**nvarchar(40)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理用于执行作业步骤的子系统的名称。|  
 |**command**|**nvarchar(max)**|要由**子系统**执行的命令。|  
-|**随意**|**int**|保留。|  
+|**flag**|**int**|保留。|  
 |**additional_parameters**|**ntext**|保留。|  
 |**cmdexec_success_code**|**int**|**CmdExec**子系统步骤返回的错误级别值指示成功。|  
 |**on_success_action**|**tinyint**|成功执行了某个步骤时将要执行的操作。|  
@@ -52,7 +51,7 @@ ms.locfileid: "68004731"
 |**retry_attempts**|**int**|步骤失败时的重试次数。|  
 |**retry_interval**|**int**|每次重试间的等待时间。|  
 |**os_run_priority**|**int**|保留。|  
-|**output_file_name**|**nvarchar （200）**|**子系统**为 TSQL、PowerShell 或**CmdExec**时，在其中保存步骤输出的文件的名称 _。_|  
+|**output_file_name**|**nvarchar(200)**|**子系统**为 TSQL、PowerShell 或**CmdExec**时，在其中保存步骤输出的文件的名称 _。_|  
 |**last_run_outcome**|**int**|前一次执行作业步骤的结果。<br /><br /> **0** = 失败<br /><br /> **1** = 成功<br /><br /> **2** = 重试<br /><br /> **3** = 已取消<br /><br /> **5** = 未知|  
 |**last_run_duration**|**int**|该步骤上次运行时的持续时间 (hhmmss)。|  
 |**last_run_retries**|**int**|上一次执行作业步骤时的重试次数。|  

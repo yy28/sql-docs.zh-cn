@@ -17,10 +17,10 @@ ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0a4e0e62121d289f9eb897c79abb2991a57890a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68043048"
 ---
 # <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>cdc fn_cdc_get_all_changes_&lt;capture_instance&gt; （transact-sql）
@@ -60,7 +60,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
  可以是下列选项之一：  
   
- 本应返回的所有记录的总数，  
+ all  
  返回指定 LSN 范围内的所有更改。 对于由更新操作导致的更改，此选项只返回在应用更新之后包含新值的行。  
   
  all update old  
@@ -70,9 +70,9 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**__ $ start_lsn**|**binary （10）**|与更改关联的提交 LSN，用于保留更改的提交顺序。 在同一事务中提交的更改将共享同一个提交 LSN 值。|  
-|**__ $ seqval**|**binary （10）**|用于对某事务内的行更改进行排序的序列值。|  
-|**__ $ 操作**|**int**|标识将更改数据行应用到目标数据源所需的数据操作语言 (DML) 操作。 可以是以下值之一：<br /><br /> 1 = 删除<br /><br /> 2 = 插入<br /><br /> 3 = 更新（捕获的列值是执行更新操作前的值）。 仅当指定了行筛选选项“all update old”时才应用此值。<br /><br /> 4 = 更新（捕获的列值是执行更新操作后的值）。|  
+|**__$start_lsn**|**binary(10)**|与更改关联的提交 LSN，用于保留更改的提交顺序。 在同一事务中提交的更改将共享同一个提交 LSN 值。|  
+|**__$seqval**|**binary(10)**|用于对某事务内的行更改进行排序的序列值。|  
+|**__ $ 操作**|**int**|标识将更改数据行应用到目标数据源所需的数据操作语言 (DML) 操作。 可以是以下其中一个值：<br /><br /> 1 = 删除<br /><br /> 2 = 插入<br /><br /> 3 = 更新（捕获的列值是执行更新操作前的值）。 仅当指定了行筛选选项“all update old”时才应用此值。<br /><br /> 4 = 更新（捕获的列值是执行更新操作后的值）。|  
 |**__ $ update_mask**|**varbinary(128)**|位掩码，为捕获实例标识的每个已捕获列均对应于一个位。 当 **__ $ operation** = 1 或2时，该值将所有已定义的位设置为1。 当 **__ $ operation** = 3 或4时，只有与更改的列相对应的位设置为1。|  
 |**\<捕获的源表列>**|多种多样|函数返回的其余列是在创建捕获实例时标识的已捕获列。 如果已捕获列的列表中未指定任何列，则将返回源表中的所有列。|  
   

@@ -13,16 +13,16 @@ ms.assetid: 35ef396f-9f98-429d-9fc5-4f413d08fb37
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ece41e157ddad4f62a041d8e06dde073f681d274
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029361"
 ---
 # <a name="creating-the-server-connection-files-sybasetosql"></a>创建服务器连接文件 (SybaseToSQL)
 服务器信息可以在脚本文件的 "服务器" 部分中指定，也可以在单独的服务器连接文件中指定。 服务器连接文件的命令行参数为， `-c <serverconnectionfile>`。 如果脚本文件和服务器连接文件中同时存在相同的服务器 id，则考虑脚本文件中的服务器定义。  
   
-**实例**  
+**示例：**  
   
 ```  
 1.<!--Sample of server connection file commands -->  

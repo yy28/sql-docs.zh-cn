@@ -20,10 +20,10 @@ ms.assetid: d1fe92ff-cad6-4396-8216-125e5642e81e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5c89a9ddc1020f29bbcd661ec4c9672ba37f7770
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005704"
 ---
 # <a name="srv_paramlen-extended-stored-procedure-api"></a>srv_paramlen（扩展存储过程 API）
@@ -48,7 +48,7 @@ n
 ```  
   
 ## <a name="arguments"></a>参数  
- *srvproc*  
+ srvproc**  
  指向作为特定客户端连接句柄（在这里为接收远程存储过程调用的句柄）的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 库用于管理应用程序和客户端之间的通信和数据的信息。  
   
  *n*  
@@ -62,26 +62,26 @@ n
 |新数据类型|输入数据长度|  
 |--------------------|-----------------------|  
 |**BITN**|**NULL：** 1<br /><br /> **零：** 1<br /><br /> **>= 255：** 不适用<br /><br /> **<255：** 不适用|  
-|**BIGVARCHAR**|**NULL：** 0<br /><br /> **零：** 1<br /><br /> **>= 255：** 255<br /><br /> **<255：** 实际*长度*|  
-|**BIGCHAR**|**NULL：** 0<br /><br /> **零：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255：** 255|  
-|**BIGBINARY**|**NULL：** 0<br /><br /> **零：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255：** 255|  
-|**BIGVARBINARY**|**NULL：** 0<br /><br /> **零：** 1<br /><br /> **>= 255：** 255<br /><br /> **<255：** 实际*长度*|  
-|**NCHAR**|**NULL：** 0<br /><br /> **零：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255：** 255|  
-|**NVARCHAR**|**NULL：** 0<br /><br /> **零：** 1<br /><br /> **>= 255：** 255<br /><br /> **<255：** 实际*长度*|  
-|**NTEXT**|**NULL：** -1<br /><br /> **零：** -1<br /><br /> **>= 255：** -1<br /><br /> 255：-1 ** \<**|  
+|**BIGVARCHAR**|**NULL：** 0<br /><br /> **零：** 1<br /><br /> **>= 255：** 255<br /><br /> <255：实际长度******|  
+|**BIGCHAR**|**NULL：** 0<br /><br /> **ZERO：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255：** 255|  
+|**BIGBINARY**|**NULL：** 0<br /><br /> **ZERO：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255：** 255|  
+|**BIGVARBINARY**|**NULL：** 0<br /><br /> **零：** 1<br /><br /> **>= 255：** 255<br /><br /> <255：实际长度******|  
+|**NCHAR**|**NULL：** 0<br /><br /> **ZERO：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255：** 255|  
+|**NVARCHAR**|**NULL：** 0<br /><br /> **零：** 1<br /><br /> **>= 255：** 255<br /><br /> <255：实际长度******|  
+|**NTEXT**|**NULL：** -1<br /><br /> **ZERO：**-1<br /><br /> **>= 255：** -1<br /><br /> 255：-1 ** \<**|  
   
- \*实际*长度*= 多字节字符串（cch）的长度  
+ \*   实际长度  = 多字节字符串 (cch) 的长度**  
   
 ## <a name="remarks"></a>备注  
  每个远程存储过程参数都具有实际数据长度和最大数据长度。 对于不允许使用 Null 值的标准固定长度数据类型，实际长度和最大长度相同。 对于可变长度数据类型，长度可以变化。 例如，声明为 varchar(30) 的参数可以具有长度仅为 10 个字节的数据****。 该参数的实际长度为 10，最大长度为 30。 srv_paramlen 函数获取远程存储过程的实际数据长度（以字节为单位）****。 要获取参数的最大数据长度，请使用 srv_parammaxlen****。  
   
- 使用参数调用远程存储过程时，可以按名称或位置（未命名）传递参数。 如果使用部分按名称传递，部分按位置传递的参数调用远程存储过程，则会发生错误。 仍然会调用 SRV_RPC 处理程序，但是它看起来没有参数并且 srv_rpcparams 返回 0****。  
+ 使用参数调用远程存储过程时，可以按名称或位置（未命名）传递参数。 如果使用部分按名称传递，部分按位置传递的参数调用远程存储过程，则会发生错误。 仍调用 SRV_RPC 处理程序，但它似乎没有参数并且**srv_rpcparams**返回0。  
   
 > [!IMPORTANT]  
 >  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
 ## <a name="see-also"></a>另请参阅  
  [扩展存储过程 API srv_paraminfo &#40;&#41;](../../relational-databases/extended-stored-procedures-reference/srv-paraminfo-extended-stored-procedure-api.md)   
- [扩展存储过程 API srv_rpcparams &#40;&#41;](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
+ [srv_rpcparams（扩展存储过程 API）](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: a86eb4f5-1f7b-493e-af55-3d15cf878228
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6d7fb57743726a59c0b501544802ecc7c701da20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029753"
 ---
 # <a name="syspublications-transact-sql"></a>syspublications (Transact-SQL)
@@ -32,12 +32,12 @@ ms.locfileid: "68029753"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**2008**|**nvarchar(255)**|发布的说明项。|  
-|**路径名**|**sysname**|与发布关联的唯一名称。|  
+|**name**|**sysname**|与发布关联的唯一名称。|  
 |**pubid**|**int**|为发布提供唯一 ID 的标识列。|  
 |**repl_freq**|**tinyint**|复制频率：<br /><br /> **0** = 基于事务。<br /><br /> **1** = 计划的表刷新。|  
-|**状态值**|**tinyint**|状态：<br /><br /> **0** = 非活动。<br /><br /> **1** = 活动。|  
+|**status**|**tinyint**|状态：<br /><br /> **0** = 非活动。<br /><br /> **1** = 活动。|  
 |**sync_method**|**tinyint**|同步方法包括：<br /><br /> **0** = 本机模式大容量复制程序实用工具（**BCP**）。<br /><br /> **1** = 字符模式 BCP。<br /><br /> **3** = 并发，表示使用纯模式 BCP，但在快照期间不锁定表。<br /><br /> **4** = Concurrent_c，这意味着将使用字符模式 BCP，但在快照过程中不锁定表。|  
-|**snapshot_jobid**|**binary （16）**|预定任务 ID。|  
+|**snapshot_jobid**|**binary(16)**|预定任务 ID。|  
 |**independent_agent**|**bit**|指定此发布是否有独立的分发代理。<br /><br /> **0** = 发布使用共享分发代理，每个发布服务器数据库/订阅服务器数据库对都有一个共享代理。<br /><br /> **1** = 此发布有独立的分发代理。|  
 |**immediate_sync**|**bit**|指示每次运行快照代理时是创建还是重新创建同步文件，其中**1**表示每次运行代理时都创建同步文件。|  
 |**enabled_for_internet**|**bit**|指示是否通过文件传输协议（FTP）和其他服务向 Internet 公开发布的同步文件，其中， **1**表示可以从 internet 访问它们。|  
@@ -63,10 +63,10 @@ ms.locfileid: "68029753"
 |**allow_subscription_copy**|**bit**|指定是否已启用复制订阅该发布的订阅数据库的功能。 **1**表示允许复制。|  
 |**centralized_conflicts**|**bit**|指定冲突记录是否存储在发布服务器上：<br /><br /> **0** = 在导致冲突的发布服务器和订阅服务器上存储冲突记录。<br /><br /> **1** = 冲突记录存储在发布服务器上。|  
 |**conflict_retention**|**int**|指定冲突保持期（天）。|  
-|**conflict_policy**|**int**|指定使用排队更新订阅服务器选项时遵循的冲突解决策略。 可以是以下值之一：<br /><br /> **1** = 发布服务器入选冲突。<br /><br /> **2** = 订阅服务器入选冲突。<br /><br /> **3** = 重新初始化订阅。|  
-|**queue_type**|**int**|指定所使用的队列类型。 可以是以下值之一：<br /><br /> **1** = msmq，使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]消息队列存储事务。<br /><br /> **2** = 使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]来存储事务的 sql。<br /><br /> 注意：使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]消息队列已弃用，不再可用。|  
+|**conflict_policy**|**int**|指定使用排队更新订阅服务器选项时遵循的冲突解决策略。 可以是下列值之一：<br /><br /> **1** = 发布服务器入选冲突。<br /><br /> **2** = 订阅服务器入选冲突。<br /><br /> **3** = 重新初始化订阅。|  
+|**queue_type**|**int**|指定所使用的队列类型。 可以是下列值之一：<br /><br /> **1** = msmq，使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]消息队列存储事务。<br /><br /> **2** = 使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]来存储事务的 sql。<br /><br /> 注意：使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]消息队列已弃用，不再可用。|  
 |**ad_guidname**|**sysname**|指定是否在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中发布该发布。 有效的全局唯一标识符（GUID）指定发布在 Active Directory 中发布，GUID 是对应的 Active Directory 发布对象**objectGUID**。 如果为 NULL，则将不在 Active Directory 中发布该发布。|  
-|**backward_comp_level**|**int**|数据库兼容性级别，可以是以下值之一：<br /><br /> **** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。<br /><br /> **** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。<br /><br /> **** = 110[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。<br /><br /> **** = 120[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。|  
+|**backward_comp_level**|**int**|数据库兼容性级别，可以是以下值之一：<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。<br /><br /> **110** = 110[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。<br /><br /> **120** = 120[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。|  
 |**allow_initialize_from_backup**|**bit**|指示订户是否可以从备份而非初始快照中初始化对此发布的订阅。 **1**表示可以从备份中初始化订阅， **0**表示不能。 有关详细信息，请参阅 [初始化事务订阅（不使用快照）](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。|  
 |**min_autonosync_lsn**|**binary**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**int**|指示发布是否支持架构复制。 **1**指示复制在发布服务器上执行的数据定义语言（DDL）语句， **0**指示不复制 DDL 语句。 有关详细信息，请参阅[对发布数据库进行架构更改](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。|  
@@ -78,6 +78,6 @@ ms.locfileid: "68029753"
  [Transact-sql&#41;&#40;复制视图](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addpublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_helppublication &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
+ [sp_helppublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
   
   

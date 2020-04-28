@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 020d75e780dcc2036b70348fa57cf1007ce0e401
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037318"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>系统存储过程 (Transact-SQL)
@@ -79,8 +79,7 @@ ms.locfileid: "68037318"
   
  下列表中的系统存储过程只在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中使用或通过客户端 API 使用，不适于一般客户使用。 随时可能对其进行更改，不保证兼容性。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书介绍了下列存储过程：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书介绍了下列存储过程：  
   
 |||  
 |-|-|  
@@ -173,7 +172,7 @@ ms.locfileid: "68037318"
 |sp_xml_schema_rowset2||  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;创建过程](../../t-sql/statements/create-procedure-transact-sql.md)   
+ [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)   
  [存储过程 &#40;数据库引擎&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
  [&#40;OLE DB 运行存储过程&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)   
  [运行存储过程](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   

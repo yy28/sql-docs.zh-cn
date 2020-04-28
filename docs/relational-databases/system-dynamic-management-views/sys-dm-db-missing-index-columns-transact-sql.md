@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 38d21e20ec158ea316caf6acd17f7225c8d3a49d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68002651"
 ---
 # <a name="sysdm_db_missing_index_columns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
@@ -52,7 +52,7 @@ sys.dm_db_missing_index_columns(index_handle)
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|column_id |**int**|列的 ID。|  
+|**column_id**|**int**|列的 ID。|  
 |column_name |**sysname**|表列的名称。|  
 |**column_usage**|**varchar （20）**|查询使用列的方式。 可能的值及其说明如下：<br /><br /> 相等性：列分配给表达相等性的谓词，格式为： <br />                        *表列* = *constant_value*<br /><br /> 不等：列分配给表达不相等的谓词，例如，形式*为：* > *constant_value*的谓词。 “=”之外的任何比较运算符都表示不相等。<br /><br /> INCLUDE：列不用于计算谓词，但用于其他原因，例如，用于覆盖查询。|  
   

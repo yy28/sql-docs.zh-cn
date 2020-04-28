@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c7a6008129d6b0a4c59412428c31f6e5de625f1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005904"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
@@ -41,7 +41,7 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *String_Expression*  
  通常为指定集中每个元组当前成员名称 (CurrentMember.Name) 的有效字符串表达式。  
   
- *后面*  
+ *分隔符*  
  以字符串表达式表示的有效分隔符。  
   
 ## <a name="remarks"></a>备注  
@@ -104,7 +104,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>String  
+### <a name="string"></a>字符串  
  下面的示例演示如何使用 "**生成**" 来返回字符串：  
   
 ```  
@@ -127,6 +127,6 @@ FROM [Adventure Works]
 >  此形式的**生成**函数在调试计算时非常有用，因为这样可以返回一个字符串，其中显示了集中所有成员的名称。 对于[SetToStr &#40;MDX&#41;](../mdx/settostr-mdx.md)函数返回的集，这可能更易于读取。  
   
 ## <a name="see-also"></a>另请参阅  
- [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -10,10 +10,10 @@ ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 97425a6795889f72b329280ff70f9638378e7799
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006567"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>执行 SSMA 控制台（AccessToSQL）
@@ -22,7 +22,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
 ## <a name="project--script-file-commands"></a>项目脚本文件命令  
 项目命令用于处理创建项目、打开、保存和退出项目。  
   
-**Command**  
+**命令**  
   
 创建-新建-项目：创建新的 SSMA 项目。  
   
@@ -50,7 +50,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
   
     默认值为 "sql-server-2008"。  
   
-**实例**  
+**示例：**  
   
 ```xml  
 <create-new-project  
@@ -69,7 +69,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
   
 默认情况下，属性 "项目类型" 为**sql-server-2008** 。  
   
-**Command**  
+**命令**  
   
 打开项目：打开现有项目。  
   
@@ -92,7 +92,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
 ```  
 **注意：** SSMA For Access Console 应用程序支持向后兼容性。 你将能够打开以前版本的 SSMA 创建的项目。  
   
-**Command**  
+**命令**  
   
 保存-项目：保存迁移项目。  
   
@@ -103,7 +103,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
 ```xml  
 <save-project/>  
 ```  
-**Command**  
+**命令**  
   
 关闭项目：关闭迁移项目。  
   
@@ -129,7 +129,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
   
 有关 "创建脚本文件" 的详细信息，请参阅[创建脚本文件 &#40;AccessToSQL&#41;](../../ssma/access/creating-script-files-accesstosql.md)。  
   
-**Command**  
+**命令**  
   
 连接-源-数据库  
   
@@ -146,7 +146,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
 ```xml  
 <connect-source-database  server="<server-unique-name>"/>  
 ```  
-**Command**  
+**命令**  
   
 负载访问-数据库：用于加载 access 数据库文件  
   
@@ -168,7 +168,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
   
 </load-access-database>  
 ```  
-**Command**  
+**命令**  
   
 强制加载-源/目标-数据库  
   
@@ -200,7 +200,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
   
 </force-load>  
 ```  
-**Command**  
+**命令**  
   
 重新连接-源-数据库  
   
@@ -215,7 +215,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
 ```xml  
 <reconnect-source-database  server="<server-unique-name>"/>  
 ```  
-**Command**  
+**命令**  
   
 连接目标-数据库  
   
@@ -232,7 +232,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
 ```xml  
 <connect-target-database  server="<server-unique-name>"/>  
 ```  
-**Command**  
+**命令**  
   
 重新连接-目标-数据库  
   
@@ -251,7 +251,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
 ## <a name="report-script-file-commands"></a>报表脚本文件命令  
 报表命令生成各种 SSMA 控制台活动的性能报告。  
   
-**Command**  
+**命令**  
   
 生成-评估-报表  
   
@@ -326,7 +326,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
   
 迁移命令的默认控制台输出设置为 "完全" 输出报告，没有详细的错误报告：仅限源对象树根节点上的 "摘要"。  
   
-**Command**  
+**命令**  
   
 转换-架构  
   
@@ -391,7 +391,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
   
 </convert-schema>  
 ```  
-**Command**  
+**命令**  
   
 迁移-数据  
   
@@ -449,7 +449,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
   
   report-errors="true" verbose="true"/>  
 ```  
-**Command**  
+**命令**  
   
 链接表：此命令将源（访问）表链接到目标表。  
   
@@ -475,7 +475,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
   
 </link-tables>  
 ```  
-**Command**  
+**命令**  
   
 取消链接表：此命令从目标表中断开源（访问）表的链接。  
   
@@ -505,7 +505,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
 ## <a name="migration-preparation-script-file-commands"></a>迁移准备脚本文件命令  
 迁移准备命令启动源数据库和目标数据库之间的架构映射。  
   
-**Command**  
+**命令**  
   
 映射架构：从源数据库到目标架构的架构映射。  
   
@@ -528,7 +528,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
   
 迁移命令的默认控制台输出设置为 "完全" 输出报告，没有详细的错误报告：仅限源对象树根节点上的 "摘要"。  
   
-**Command**  
+**命令**  
   
 同步-目标  
   
@@ -593,7 +593,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
   
 </synchronize-target>  
 ```  
-**Command**  
+**命令**  
   
 从数据库刷新  
   
@@ -658,7 +658,7 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
 ## <a name="script-generation-script-file-commands"></a>脚本生成脚本文件命令  
 脚本生成命令有助于将控制台输出保存到脚本文件中。  
   
-**Command**  
+**命令**  
   
 另存为脚本  
   

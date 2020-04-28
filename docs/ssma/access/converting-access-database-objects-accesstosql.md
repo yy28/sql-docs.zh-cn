@@ -30,10 +30,10 @@ ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 56c55dbc5df61bfdb9013e505335af16fccbeecd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006628"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>转换 Access 数据库对象（AccessToSQL）
@@ -59,11 +59,11 @@ ms.locfileid: "68006628"
 |列|列|  
 |索引|索引|  
 |外键 (foreign key)|外键 (foreign key)|  
-|查询|view<br /><br />大多数 SELECT 查询都转换为视图。 其他查询（如更新查询）不会迁移。<br /><br />不会转换带参数的 SELECT 查询，也不会进行交叉选项卡查询。|  
+|query|view<br /><br />大多数 SELECT 查询都转换为视图。 其他查询（如更新查询）不会迁移。<br /><br />不会转换带参数的 SELECT 查询，也不会进行交叉选项卡查询。|  
 |report|未转换|  
-|form|未转换|  
+|表单|未转换|  
 |宏|未转换|  
-|module|未转换|  
+|name|未转换|  
 |默认值|默认值|  
 |允许零长度列属性|check 约束|  
 |列验证规则|check 约束|  

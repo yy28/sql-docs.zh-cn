@@ -19,10 +19,10 @@ ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0a351eaa746654d26d7f51536a41fc2677a2f67e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68010565"
 ---
 # <a name="sp_syscollector_update_collection_set-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
@@ -179,7 +179,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [数据收集](../../relational-databases/data-collection/data-collection.md)   
  [syscollector_collection_sets &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
  [sysschedules 引用 &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  

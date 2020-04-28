@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8f5a0707c599b70ec3c006b00eacb5f8c1a8a87b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018340"
 ---
 # <a name="schemas-catalog-views---sysschemas"></a>架构目录视图-sys.databases
@@ -37,7 +37,7 @@ ms.locfileid: "68018340"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**路径名**|**sysname**|架构的名称。 在该数据库中是唯一的。|  
+|name |**sysname**|架构的名称。 在该数据库中是唯一的。|  
 |**schema_id**|**int**|架构的 ID。 在该数据库中是唯一的。|  
 |**principal_id**|**int**|此架构所属的主体数据库的 ID。|  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68018340"
 每个架构都有一个所有者。 所有者为安全[主体](../../relational-databases/security/authentication-access/principals-database-engine.md)。
   
 ## <a name="permissions"></a>权限  
- 要求 **公共** 角色具有成员身份。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 要求 **公共** 角色具有成员身份。  有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
 [主体](../../relational-databases/security/authentication-access/principals-database-engine.md)
@@ -56,6 +56,6 @@ ms.locfileid: "68018340"
 
 [&#40;Transact-sql&#41;的架构目录视图](https://msdn.microsoft.com/library/c516fb1c-b6ed-48ae-99c7-a78bc4336c8e)   
 
-[sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+[sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   

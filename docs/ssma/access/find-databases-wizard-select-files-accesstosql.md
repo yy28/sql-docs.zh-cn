@@ -12,10 +12,10 @@ ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c084db939482fe57e150d4beb22eab4d5e6decb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006547"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>查找数据库向导（选择文件）（AccessToSQL）
@@ -32,7 +32,7 @@ ms.locfileid: "68006547"
 **全部不选**  
 选中此复选框可取消选择列表中的所有数据库。  
   
-**文件名**  
+**文件名称**  
 显示要添加到 SSMA 的 Access 数据库文件的名称。  
   
 **所有者**  
@@ -44,7 +44,7 @@ ms.locfileid: "68006547"
 **大小**  
 数据库的大小（以字节为单位）。  
   
-**创建时间**  
+**建立**  
 创建数据库的日期和时间。  
   
 **修改时间**  

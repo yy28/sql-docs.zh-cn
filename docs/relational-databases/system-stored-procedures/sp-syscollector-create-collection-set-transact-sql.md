@@ -19,10 +19,10 @@ ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e859ed97afdc3dfbb4e39a93b8691d044ceca37d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032642"
 ---
 # <a name="sp_syscollector_create_collection_set-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
@@ -121,8 +121,7 @@ sp_syscollector_create_collection_set
 ## <a name="examples"></a>示例  
   
 ### <a name="a-creating-a-collection-set-by-using-default-values"></a>A. 使用默认值创建收集组  
- 下面的示例通过仅指定所需参数来创建收集组。 
-  `@collection_mode` 不是必需的，但默认收集模式（缓存）要求指定计划 ID 或计划名称。  
+ 下面的示例通过仅指定所需参数来创建收集组。 `@collection_mode` 不是必需的，但默认收集模式（缓存）要求指定计划 ID 或计划名称。  
   
 ```  
 USE msdb;  
@@ -158,8 +157,8 @@ EXEC dbo.sp_syscollector_create_collection_set
   
 ## <a name="see-also"></a>另请参阅  
  [数据收集](../../relational-databases/data-collection/data-collection.md)   
- [创建使用一般 T-SQL 查询收集器类型的自定义收集组 (Transact-SQL)](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
- [数据收集器存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [syscollector_collection_sets &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
+ [创建在 Transact-sql 中使用一般 T-sql 查询收集器类型的自定义收集组 &#40;&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
+ [&#40;Transact-sql&#41;的数据收集器存储过程](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [syscollector_collection_sets (Transact-SQL)](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   
   

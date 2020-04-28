@@ -18,10 +18,10 @@ ms.assetid: ed048c46-7a2f-4ad0-bc7c-c2d65e83b4fb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 25e9a7f2e13af0aafacdfa1882bb6ac5da37b91c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026716"
 ---
 # <a name="mspeer_request-transact-sql"></a>MSpeer_request (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68026716"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|id|**int**|标识一个请求。|  
+|ID|**int**|标识一个请求。|  
 |publication|**sysname**|为其发起状态请求的发布的名称。|  
 |sent_date|**datetime**|发起状态请求的日期和时间。|  
 |description|**nvarchar(4000)**|可用于标识各个状态请求的用户定义信息。|  

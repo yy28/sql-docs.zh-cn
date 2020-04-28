@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: eb939c45d298117fa81b05d6188aa3a4c5cd7c4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008160"
 ---
 # <a name="predict-dmx"></a>Predict (DMX)
@@ -79,7 +79,7 @@ FROM     [Association]
   
  虽然此查询返回的单个数据行 `Expression` 仅有一列，但该列包含下面的嵌套表。  
   
-|模型|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|型号|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291283016331743|0.252695851192499|  
 |Water Bottle|2866|0.192620471805901|0.175205052318795|  

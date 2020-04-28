@@ -12,16 +12,16 @@ ms.assetid: fa0e0797-d1fb-4e56-a5da-8458cc2d2401
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 56d5426b0b05793106724b576f9f012938393d58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028996"
 ---
 # <a name="initializing-test-cases-sybasetosql"></a>初始化测试用例 (SybaseToSQL)
 在此步骤中，您将为新的测试用例指定初始信息。  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
 **测试用例名称**  
 输入名称以标识测试用例。  
   

@@ -16,10 +16,10 @@ ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0e5f044482d3e46e4e20279a437b8d9459d1d3bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68002639"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
@@ -73,18 +73,18 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**publisher_db**|**sysname**|发布服务器数据库名。|  
 |**订阅服务器**|**sysname**|订阅服务器的名称。|  
 |**subscriber_db**|**sysname**|订阅数据库的名称。|  
-|**状态值**|**int**|订阅状态：<br /><br /> **0** = 所有作业都在等待启动<br /><br /> **1** = 一个或多个作业正在启动<br /><br /> **2** = 所有作业都已成功执行<br /><br /> **3** = 至少有一个作业正在执行<br /><br /> **4** = 所有作业都已计划且空闲<br /><br /> **5** = 在上次失败后至少有一个作业正在尝试执行<br /><br /> **6** = 至少有一个作业无法成功执行|  
+|**status**|**int**|订阅状态：<br /><br /> **0** = 所有作业都在等待启动<br /><br /> **1** = 一个或多个作业正在启动<br /><br /> **2** = 所有作业都已成功执行<br /><br /> **3** = 至少有一个作业正在执行<br /><br /> **4** = 所有作业都已计划且空闲<br /><br /> **5** = 在上次失败后至少有一个作业正在尝试执行<br /><br /> **6** = 至少有一个作业无法成功执行|  
 |**subscriber_type**|**int**|订阅服务器的类型。|  
 |**subscription_type**|**int**|订阅的类型：<br /><br /> **0** = 推送<br /><br /> **1** = 请求<br /><br /> **2** = 两者|  
 |**大事**|**float （8）**|指示订阅优先级的数字。|  
 |**sync_type**|**tinyint**|订阅同步类型。|  
 |**2008**|**nvarchar(255)**|对该合并订阅的简短说明。|  
-|**merge_jobid**|**binary （16）**|合并代理的作业 ID。|  
+|**merge_jobid**|**binary(16)**|合并代理的作业 ID。|  
 |**full_publication**|**tinyint**|指定订阅是完全发布还是筛选发布。|  
 |**offload_enabled**|**bit**|指定复制代理的卸载执行是否设置为在订阅服务器上运行。 如果为 NULL，则执行将在发布服务器上运行。|  
 |**offload_server**|**sysname**|运行代理的服务器名。|  
 |**use_interactive_resolver**|**int**|返回在调节过程中是否使用交互式冲突解决程序。 如果为**0**，则不使用交互式冲突解决程序。|  
-|**段**|**sysname**|按[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)函数的值筛选订阅时提供的值。|  
+|**hostname**|**sysname**|按[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)函数的值筛选订阅时提供的值。|  
 |**subscriber_security_mode**|**smallint**|订阅服务器上的安全模式，其中**1**表示 Windows 身份验证， **0**表示[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。|  
 |**subscriber_login**|**sysname**|在订阅服务器上的登录名。|  
 |**subscriber_password**|**sysname**|永远不会返回实际的订阅服务器密码。 结果由**\*\*\*"\*" 字符串屏蔽。\***|  

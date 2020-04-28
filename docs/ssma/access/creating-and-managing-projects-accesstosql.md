@@ -18,10 +18,10 @@ ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: abbe0746193df3fe341b4f66086291dc1055e11b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006617"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>创建和管理项目（AccessToSQL）
@@ -59,9 +59,9 @@ SSMA 在不加载默认项目的情况下启动。 若要将数据从 Access 数
   
 **创建新项目的步骤**  
   
-1.  在“文件”菜单中，选择“新建项目”。    
+1.  在“文件”菜单中，选择“新建项目”。********  
   
-    将显示“新建项目”对话框  。  
+    此时将出现“新建项目”  对话框。  
   
 2.  在 "**名称**" 框中，输入项目的名称。  
   

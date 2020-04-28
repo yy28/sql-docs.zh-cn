@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0f9b72c1a97c17f975144ad0fd364260afab1fb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68002562"
 ---
 # <a name="sp_recompile-transact-sql"></a>sp_recompile (Transact-SQL)
@@ -52,8 +52,7 @@ sp_recompile [ @objname = ] 'object'
  存储过程或触发器和用户定义函数使用的查询仅在编译时优化。 对数据库进行了索引或其他会影响数据库统计的更改后，已编译的存储过程、触发器和用户定义函数可能会失去效率。 通过对作用于表上的存储过程和触发器进行重新编译，可以重新优化查询。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会在便利时自动对存储过程、触发器和用户定义函数进行重新编译。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会在便利时自动对存储过程、触发器和用户定义函数进行重新编译。  
   
 ## <a name="permissions"></a>权限  
  需要具有对指定对象的 ALTER 权限。  
@@ -69,7 +68,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;创建过程](../../t-sql/statements/create-procedure-transact-sql.md)   
+ [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

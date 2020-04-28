@@ -12,10 +12,10 @@ ms.assetid: 62e20e03-50cc-4ac8-8072-524d194d2ec3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2edf02c31b8b52d6743113e6c6c5878bf5180a83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68024741"
 ---
 # <a name="find-databases-wizard-verify-selection-accesstosql"></a>查找数据库向导（验证所选内容）（AccessToSQL）
@@ -24,7 +24,7 @@ ms.locfileid: "68024741"
 若要打开 "查找数据库向导"，请在 "**文件**" 菜单上单击 "**查找数据库**"。  
   
 ## <a name="options"></a>选项  
-**文件名**  
+**文件名称**  
 显示要添加到 SSMA 的 Access 数据库文件的名称。  
   
 **文件路径**  

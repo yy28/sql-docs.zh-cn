@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b4122c13a5371cc0ffe1c5c6235ad750e7fdadad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68020699"
 ---
 # <a name="parallelperiod-mdx"></a>ParallelPeriod (MDX)
@@ -31,7 +31,7 @@ ParallelPeriod( [ Level_Expression [ ,Index [ , Member_Expression ] ] ] )
  *Level_Expression*  
  返回级别的有效多维表达式 (MDX)。  
   
- *编入*  
+ *索引*  
  指定要滞后的并行期间数的有效数值表达式。  
   
  *Member_Expression*  
@@ -76,6 +76,6 @@ SELECT ParallelPeriod ([Date].[Calendar].[Calendar Semester]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

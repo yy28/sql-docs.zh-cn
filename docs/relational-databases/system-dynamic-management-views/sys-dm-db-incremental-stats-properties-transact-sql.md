@@ -19,10 +19,10 @@ ms.assetid: aa0db893-34d1-419c-b008-224852e71307
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 17ef15033281f040e00444dfbfc2e739bfa7a338
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004924"
 ---
 # <a name="sysdm_db_incremental_stats_properties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
@@ -40,10 +40,10 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
   
 ## <a name="arguments"></a>参数  
  *object_id*  
- 当前数据库中要请求其某个增量统计信息属性的对象的 ID。 *object_id*是**int**。  
+ 当前数据库中要请求其某个增量统计信息属性的对象的 ID。 *object_id* 是 **int**。  
   
  *stats_id*  
- 指定 *object_id*的统计信息 ID。 可以从 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 动态管理视图获取该统计信息 ID。 *stats_id*是**int**。  
+ 指定 *object_id*的统计信息 ID。 可以从 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 动态管理视图获取该统计信息 ID。 *stats_id* 是 **int**。  
   
 ## <a name="table-returned"></a>返回的表  
   
@@ -59,19 +59,17 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
 |unfiltered_rows|**bigint**|应用筛选表达式（用于筛选的统计信息）之前表中的总行数。 如果未筛选统计信息，则 unfiltered_rows 等于行列中返回的值。|  
 |modification_counter|**bigint**|自上次更新统计信息以来前导统计信息列（构建直方图的列）的总修改次数。<br /><br /> 此列不包含有关内存优化表的信息。|  
   
-## <a name="Remarks"></a> 备注  
- 
-  `sys.dm_db_incremental_stats_properties` 在满足以下任一条件时将返回空的行集：  
+## <a name="remarks"></a><a name="Remarks"></a> 备注  
+ `sys.dm_db_incremental_stats_properties` 在满足以下任一条件时将返回空的行集：  
   
--   
-  `object_id` 或 `stats_id` 为 NULL。   
+-   `object_id` 或 `stats_id` 为 NULL。   
 -   指定的对象未找到或不对应于具有增量统计信息的某个表。  
 -   指定的统计信息 ID 不对应于指定对象 ID 的现有统计信息。  
 -   当前用户没有权限查看统计信息对象。
  
  此行为在如 `sys.dm_db_incremental_stats_properties` 和 `sys.objects` 等视图中交叉应用于行时，允许安全使用 `sys.stats`。 此方法可返回对应于每个分区的统计信息的属性。 若要查看跨所有分区组合的合并统计信息的属性，请改为使用 sys.dm_db_stats_properties。 
 
-统计信息更新日期连同[直方图](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)和[密度矢量](../../relational-databases/statistics/statistics.md#histogram)一起存储在[统计信息 blob 对象](../../relational-databases/statistics/statistics.md#density)中，而不是存储在元数据中。 如果未读取任何数据来生成统计数据，则不会创建统计信息 blob，该日期不可用，并且*last_updated*列为 NULL。 针对谓词不返回任何行或新的空表，筛选的统计信息便是这种情况。
+统计信息更新日期连同[直方图](../../relational-databases/statistics/statistics.md#histogram)和[密度矢量](../../relational-databases/statistics/statistics.md#density)一起存储在[统计信息 blob 对象](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)中，而不是存储在元数据中。 如果未读取任何数据来生成统计数据，则不会创建统计信息 blob，该日期不可用，并且*last_updated*列为 NULL。 针对谓词不返回任何行或新的空表，筛选的统计信息便是这种情况。
 
 ## <a name="permissions"></a>权限  
  要求用户对统计信息列拥有 select 权限，或用户拥有表，或用户是 `sysadmin` 固定服务器角色、`db_owner` 固定数据库角色或 `db_ddladmin` 固定数据库角色的成员。  
@@ -88,9 +86,9 @@ SELECT * FROM sys.dm_db_incremental_stats_properties (object_id('PartitionTable'
 有关其他使用建议，请参阅  [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)。
   
 ## <a name="see-also"></a>另请参阅  
- [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [sys.stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
+ [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+ [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
  [与对象相关的动态管理视图和函数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
  [sys. dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
- [sys. dm_db_stats_histogram （Transact-sql）](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
+ [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 

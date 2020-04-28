@@ -18,10 +18,10 @@ ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9a5b4ac7c5e1e8d3c136f99475fa7a17ebd8b002
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68001817"
 ---
 # <a name="sp_batch_params-transact-sql"></a>sp_batch_params (Transact-SQL)
@@ -48,19 +48,17 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**PARAMETER_NAME**|**sysname**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在批处理中找到的参数的名称。|  
+|**PARAMETER_NAME**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在批处理中找到的参数的名称。|  
 |**COLUMN_TYPE**|**smallint**|此字段返回下列值之一：<br /><br /> 0 = SQL_PARAM_TYPE_UNKNOWN<br /><br /> 1 = SQL_PARAM_TYPE_INPUT<br /><br /> 2 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 3 = SQL_RESULT_COL<br /><br /> 4 = SQL_PARAM_OUTPUT<br /><br /> 5 = SQL_RETURN_VALUE<br /><br /> 此列始终为 0。|  
 |**DATA_TYPE**|**smallint**|参数的数据类型（ODBC 数据类型的整数代码）。 如果此数据类型无法映射到 ISO 类型，则值为 NULL。 本机数据类型名称在**TYPE_NAME**列中返回。 此值始终为 NULL。|  
 |**TYPE_NAME**|**sysname**|数据类型的字符串表示形式，通过基础 DBMS 提供。 此值为 NULL。|  
 |**PRECISION**|**int**|有效数字位数。 **PRECISION**列的返回值以10为底。|  
-|**长短**|**int**|数据的传输大小。 此值为 NULL。|  
+|**LENGTH**|**int**|数据的传输大小。 此值为 NULL。|  
 |**纵向**|**smallint**|小数点右边的数字位数。 此值为 NULL。|  
 |**RADIX**|**smallint**|数值类型的基数。 此值为 NULL。|  
 |**可以为 NULL**|**smallint**|指定为空性：<br /><br /> 1 = 可以将参数数据类型创建为允许空值。<br /><br /> 0 = 不允许空值。<br /><br /> 此值为 NULL。|  
-|**SQL_DATA_TYPE**|**smallint**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型的值，在说明符的 TYPE 字段中显示。 除了**datetime**和 ISO **interval**数据类型之外，此列与**DATA_TYPE**列相同。 该列始终返回值。 此值为 NULL。|  
-|**SQL_DATETIME_SUB**|**smallint**|如果**SQL_DATA_TYPE**的值 SQL_DATETIME 或 SQL_INTERVAL，则为**datetime**或 ISO **interval**子代码。 对于**datetime**和 ISO **interval**以外的数据类型，此列为 NULL。 此值为 NULL。|  
+|**SQL_DATA_TYPE**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型的值，在说明符的 TYPE 字段中显示。 除了**datetime**和 ISO **interval**数据类型之外，此列与**DATA_TYPE**列相同。 该列始终返回值。 此值为 NULL。|  
+|**SQL_DATETIME_SUB**|**smallint**|如果**SQL_DATA_TYPE**的值 SQL_DATETIME 或 SQL_INTERVAL，则为**datetime**或 ISO **interval**子代码。 对于 datetime**** 和 ISO interval**** 以外的数据类型，该列为 NULL。 此值为 NULL。|  
 |**CHAR_OCTET_LENGTH**|**int**|**字符**或**二进制**数据类型参数的最大长度（以字节为单位）。 对于所有其他数据类型，此列返回 NULL。 此值始终为 NULL。|  
 |**ORDINAL_POSITION**|**int**|参数在批处理中的顺序位置。 如果参数名称重复多次，则此列使用第一次出现的序号。 第一个参数的序号为 1。 该列始终返回值。|  
   
@@ -82,6 +80,6 @@ EXECUTE sp_batch_params @SQLString;
 ## <a name="see-also"></a>另请参阅  
  [运行存储过程](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [运行存储过程操作指南主题 &#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)   
- [&#40;OLE DB 运行存储过程&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)  
+ [运行存储过程 &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0dcbcbc0cd6c0cf479aee7a7c3fd8c5e53a53d28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004616"
 ---
 # <a name="functions-on-string-values---upper-case"></a>基于字符串值的函数 - upper-case
@@ -34,7 +34,7 @@ ms.locfileid: "68004616"
 fn:upper-case($arg as xs:string?) as xs:string  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
   
 |||  
 |-|-|  

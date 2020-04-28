@@ -18,10 +18,10 @@ ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8901c46c5654b6c633e03d62e8eaec2a3e903e02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022268"
 ---
 # <a name="sp_revoke_proxy_from_subsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
@@ -59,8 +59,8 @@ sp_revoke_proxy_from_subsystem
 |**7**|Replication Merge Agent|  
 |**8**|复制队列读取器代理|  
 |**900**|Analysis Services 命令|  
-|**万**|Analysis Services 查询|  
-|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)]包执行|  
+|**10**|Analysis Services 查询|  
+|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] 包执行|  
 |**12**|PowerShell 脚本|  
   
 `[ @subsystem_name = ] 'subsystem_name'`要撤消对其访问权限的子系统的名称。 *Subsystem_name*的值为**sysname**，默认值为 NULL。 必须指定*subsystem_id*或*subsystem_name* ，但不能同时指定两者。 下表列出了每个子系统的值。  
@@ -76,7 +76,7 @@ sp_revoke_proxy_from_subsystem
 |QueueReader|复制队列读取器代理|  
 |ANALYSISQUERY|Analysis Services 命令|  
 |ANALYSISCOMMAND|Analysis Services 查询|  
-|Dts|[!INCLUDE[ssIS](../../includes/ssis-md.md)]包执行|  
+|Dts|[!INCLUDE[ssIS](../../includes/ssis-md.md)] 包执行|  
 |PowerShell|PowerShell 脚本|  
   
 ## <a name="remarks"></a>备注  
@@ -89,7 +89,7 @@ sp_revoke_proxy_from_subsystem
  只有**sysadmin**固定服务器角色的成员才能**sp_revoke_proxy_from_subsystem**执行。  
   
 ## <a name="examples"></a>示例  
- 以下示例撤消代理 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 对 `Catalog application proxy` 子系统的访问权限。  
+ 以下示例撤消代理 `Catalog application proxy` 对 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 子系统的访问权限。  
   
 ```  
 USE msdb ;  

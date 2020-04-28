@@ -18,10 +18,10 @@ ms.assetid: 124756a4-463a-4a81-bf5b-de7e8ffc7a62
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8f080f5defd5143d3822e86eeeb3c7242b51d08d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029582"
 ---
 # <a name="ihextendedsubscriptionview-transact-sql"></a>IHextendedSubscriptionView (Transact-SQL)
@@ -39,15 +39,15 @@ ms.locfileid: "68029582"
 |**publisher_database_id**|**int**|标识发布数据库。|  
 |**subscription_type**|**int**|订阅的类型：<br /><br /> **0** = 推送-分发代理在订阅服务器上运行。<br /><br /> **1** = 请求-分发代理在分发服务器上运行。|  
 |**sync_type**|**tinyint**|初始同步的类型：<br /><br /> **1** = 自动<br /><br /> **2** = 无|  
-|**状态值**|**tinyint**|订阅的状态：<br /><br /> **0** = 非活动<br /><br /> **1** = 已订阅<br /><br /> **2** = 活动|  
+|**status**|**tinyint**|订阅的状态：<br /><br /> **0** = 非活动<br /><br /> **1** = 已订阅<br /><br /> **2** = 活动|  
 |**snapshot_seqno_flag**|**bit**|指示是否使用快照序列号。|  
 |**independent_agent**|**bit**|指定此发布是否有独立的分发代理。<br /><br /> **0** = 发布使用共享分发代理，每个发布服务器数据库/订阅服务器数据库对都有一个共享代理。<br /><br /> **1** = 此发布有独立的分发代理。|  
 |**subscription_time**|**datetime**|仅限内部使用。|  
 |**loopback_detection**|**bit**|适用于作为双向事务复制拓扑的一部分的订阅。 环回检测将确定分发代理是否将在订阅服务器上发起的事务发送回订阅服务器：<br /><br /> **1** = 不发送回。<br /><br /> **0** = 发送回。|  
 |**agent_id**|**int**|分发代理的唯一标识符。|  
 |**update_mode**|**tinyint**|指示更新模式的类型，可以为下列值之一：<br /><br /> **0** = 只读。<br /><br /> **1** = 立即更新。<br /><br /> **2** = 使用消息队列的排队更新。<br /><br /> **3** = 使用消息队列作为故障转移的立即更新和排队更新。<br /><br /> **4** = 使用 SQL Server 队列的排队更新。<br /><br /> **5** = 使用 SQL Server 队列进行排队更新故障转移的立即更新。|  
-|**publisher_seqno**|**varbinary （16）**|该订阅在发布服务器上的事务序列号。|  
-|**ss_cplt_seqno**|**varbinary （16）**|用于表示并发快照处理已完成的序列号。|  
+|**publisher_seqno**|**varbinary(16)**|该订阅在发布服务器上的事务序列号。|  
+|**ss_cplt_seqno**|**varbinary(16)**|用于表示并发快照处理已完成的序列号。|  
   
 ## <a name="see-also"></a>另请参阅  
  [异类数据库复制](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

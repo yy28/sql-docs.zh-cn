@@ -18,10 +18,10 @@ ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1cd32e7224b66c012d3422a3754cb0b4e0ca325b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029767"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68029767"
 |subscriber_server|**sysname**|服务器的 ID。 将订阅数据库的复本迁移到其他服务器时，用于将 srvid 字段映射到服务器特定的值。|  
 |db_name|**sysname**|订阅数据库的名称。|  
 |pubid|**uniqueidentifier**|从中创建当前订阅的发布 ID。|  
-|datasource_type|**int**|数据源的类型：<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **2** = Jet OLE DB。|  
+|datasource_type|**int**|数据源的类型：<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **2** = Jet OLE DB。|  
 |subid|**uniqueidentifier**|订阅的唯一标识号。|  
 |replnickname|**binary**|复制的压缩别名。|  
 |replicastate|**uniqueidentifier**|一个唯一标识符，它通过将发布服务器中的值与订阅服务器中的值进行比较来确定以前的同步是否成功。|  
@@ -43,7 +43,7 @@ ms.locfileid: "68029767"
 |subscription_type|**int**|订阅的类型：<br /><br /> **0** = 推送。<br /><br /> **1** = 请求。<br /><br /> **2** = 匿名。|  
 |sync_type|**tinyint**|同步类型：<br /><br /> **1** = 自动。<br /><br /> **2** = 不同步。|  
 |description|**nvarchar(255)**|对订阅的简短说明。|  
-|priority|**实际上**|指定订阅优先级并允许实现基于优先级的冲突解决。 对于所有本地或匿名订阅，等于**0.00** 。|  
+|priority|**real**|指定订阅优先级并允许实现基于优先级的冲突解决。 对于所有本地或匿名订阅，等于**0.00** 。|  
 |recgen|**bigint**|上次接收的生成的编号。|  
 |recguid|**uniqueidentifier**|上次接收的生成的唯一 ID。|  
 |sentgen|**bigint**|上次发送的生成的编号。|  

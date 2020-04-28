@@ -18,10 +18,10 @@ ms.assetid: 4ab1b2ae-b6d9-42b7-9b31-98547dbb7f99
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5147ef1f482850b55a5d01a476b1981dfa012e5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68021064"
 ---
 # <a name="msagent_profiles-transact-sql"></a>MSagent_profiles (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68021064"
 |**profile_id**|**int**|配置文件 ID。|  
 |**profile_name**|**sysname**|代理类型的唯一配置文件名。|  
 |**agent_type**|**int**|代理的类型：<br /><br /> **1** = 快照代理<br /><br /> **2** = 日志读取器代理<br /><br /> **3** = 分发代理<br /><br /> **4** = 合并代理<br /><br /> **9** = 队列读取器代理|  
-|type |**int**|配置文件的类型：<br /><br /> **0** = 系统**1** = 自定义|  
+|**type**|**int**|配置文件的类型：<br /><br /> **0** = 系统**1** = 自定义|  
 |**2008**|**nvarchar （3000）**|配置文件的说明。|  
 |**def_profile**|**bit**|指定该配置文件是否是该代理类型的默认值。|  
   

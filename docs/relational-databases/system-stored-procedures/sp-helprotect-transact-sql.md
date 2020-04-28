@@ -18,10 +18,10 @@ ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7db43df5d500e56e58e3e8465ac03158fe7e4d21
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997476"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
@@ -65,11 +65,11 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**所有者**|**sysname**|对象所有者的名称。|  
-|**Object**|**sysname**|对象的名称。|  
+|**对象**|**sysname**|对象的名称。|  
 |**被授权者**|**sysname**|被授予权限的主体的名称。|  
 |**授权者**|**sysname**|向指定的被授权者进行授权的主体的名称。|  
 |**ProtectType**|**nvarchar （10）**|保护类型的名称：<br /><br /> GRANT REVOKE|  
-|**Action**|**nvarchar （60）**|权限的名称。 依赖于对象类型的有效的权限语句。|  
+|**操作**|**nvarchar(60)**|权限的名称。 依赖于对象类型的有效的权限语句。|  
 |**列**|**sysname**|权限的类型：<br /><br /> All = 权限适用于对象所有的当前列。<br /><br /> New = 权限适用于任何以后可以在对象上进行更改（使用 ALTER 语句）的新列。<br /><br /> All+New = All 和 New 的组合。<br /><br /> 如果权限类型不适用于列，则返回一个期间。|  
   
 ## <a name="remarks"></a>备注  
@@ -92,7 +92,7 @@ EXEC sp_helprotect @grantorname = 'dbo';
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
   
- 返回的信息取决于对元数据的访问权限的限制。 主体对其不具有权限的实体将不会显示。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 返回的信息取决于对元数据的访问权限的限制。 主体对其不具有权限的实体将不会显示。  有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>示例  
   
@@ -124,7 +124,7 @@ EXEC sp_helprotect NULL, NULL, 'Judy';
 EXEC sp_helprotect NULL, NULL, NULL, 's';   
 ```  
   
-### <a name="e-listing-the-permissions-for-a-create-statement"></a>e.在“新建 MySQL 数据库”边栏选项卡中，接受法律条款，然后单击“确定”。 列出 CREATE 语句的权限  
+### <a name="e-listing-the-permissions-for-a-create-statement"></a>e. 列出 CREATE 语句的权限  
  下面的示例列出授予了 CREATE TABLE 权限的所有用户。  
   
 ```  
@@ -134,7 +134,7 @@ EXEC sp_helprotect @name = 'CREATE TABLE';
 ## <a name="see-also"></a>另请参阅  
  [安全存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [DENY &#40;Transact-sql&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
+ [GRANT &#40;Transact-sql&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE &#40;Transact-sql&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

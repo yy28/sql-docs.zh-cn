@@ -18,10 +18,10 @@ ms.assetid: 19ef0a12-3214-4bb0-9c25-a665897e65a2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0abca8ca826ec986a9cbf71f4fb577291e095e39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029541"
 ---
 # <a name="ihextendedarticleview-transact-sql"></a>IHextendedArticleView (Transact-SQL)
@@ -44,8 +44,8 @@ ms.locfileid: "68029541"
 |**filter_clause**|**ntext**|用于水平筛选项目的 WHERE 子句。|  
 |**ins_cmd**|**nvarchar(255)**|执行 INSERT 的命令。|  
 |**pre_creation_cmd**|**tinyint**|DROP TABLE、DELETE TABLE 或 TRUNCATE 的预创建命令：<br /><br /> **0** = 无。<br /><br /> **1** = 删除。<br /><br /> **2** = 删除。<br /><br /> **3** = 截断。|  
-|**状态值**|**tinyint**|项目选项和状态的位掩码，可以是对以下一个或多个值执行逻辑位或运算的结果：<br /><br /> **1** = 项目处于活动状态。<br /><br /> **8** = 在 INSERT 语句中包括列名称。<br /><br /> **16** = 使用参数化语句。<br /><br /> **24** = 在 INSERT 语句中包括列名称，并使用参数化语句。<br /><br /> 例如，使用参数化语句的活动项目在此列中的值为**17** 。 如果值为**0** ，则表示项目处于非活动状态，而且未定义其他属性。|  
-|type |**tinyint**|项目的类型：<br /><br /> **1** = 基于日志的项目。<br /><br /> **3** = 具有手动筛选器的基于日志的项目。<br /><br /> **5** = 具有手动视图的基于日志的项目。<br /><br /> **7** = 具有手动筛选器和手动视图的基于日志的项目。|  
+|**status**|**tinyint**|项目选项和状态的位掩码，可以是对以下一个或多个值执行逻辑位或运算的结果：<br /><br /> **1** = 项目处于活动状态。<br /><br /> **8** = 在 INSERT 语句中包括列名称。<br /><br /> **16** = 使用参数化语句。<br /><br /> **24** = 在 INSERT 语句中包括列名称，并使用参数化语句。<br /><br /> 例如，使用参数化语句的活动项目在此列中的值为**17** 。 如果值为**0** ，则表示项目处于非活动状态，而且未定义其他属性。|  
+|**type**|**tinyint**|项目的类型：<br /><br /> **1** = 基于日志的项目。<br /><br /> **3** = 具有手动筛选器的基于日志的项目。<br /><br /> **5** = 具有手动视图的基于日志的项目。<br /><br /> **7** = 具有手动筛选器和手动视图的基于日志的项目。|  
 |**upd_cmd**|**nvarchar(255)**|执行 UPDATE 的命令。|  
 |**schema_option**|**binary**|指示要编写脚本的内容。有关支持的架构选项的列表，请参阅[sp_addarticle &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 。|  
 |**dest_owner**|**sysname**|在目标数据库中已发布对象的所有者。|  

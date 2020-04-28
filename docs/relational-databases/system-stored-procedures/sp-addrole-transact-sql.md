@@ -18,10 +18,10 @@ ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1711ec3941a5fced5ef9e0c32808d6153b673e2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68030920"
 ---
 # <a name="sp_addrole-transact-sql"></a>sp_addrole (Transact-SQL)
@@ -50,8 +50,7 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>备注  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库角色的名称可以包含 1 到 128 个字符，包括字母、符号和数字。 数据库角色的名称不能：包含反斜杠字符（\\）、为 NULL 或空字符串（**""**）。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库角色的名称可以包含 1 到 128 个字符，包括字母、符号和数字。 数据库角色的名称不能：包含反斜杠字符（\\）、为 NULL 或空字符串（**""**）。  
   
  添加数据库角色后，请使用[sp_addrolemember &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)将主体添加到角色。 当使用 GRANT、DENY 或 REVOKE 语句将权限应用于数据库角色时，数据库角色的成员将继承这些权限，就好像将权限直接应用于其帐户一样。  
   
@@ -71,7 +70,7 @@ EXEC sp_addrole 'Managers';
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [安全存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE ROLE (Transact-SQL)](../../t-sql/statements/create-role-transact-sql.md)  
   

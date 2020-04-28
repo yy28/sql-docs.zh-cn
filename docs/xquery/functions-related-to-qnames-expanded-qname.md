@@ -16,10 +16,10 @@ ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7c50409ea35809c52de718a8281bf76f75a5a0e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004582"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>与 QName 相关的函数 - expanded-QName

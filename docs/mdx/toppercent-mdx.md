@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7a8c92a4b6a76cb9d15048d6f058038363970cb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036591"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
@@ -69,10 +69,10 @@ WHERE([Product].[Product Categories].[Bikes])
   
 ||Reseller Sales Amount|  
 |-|---------------------------|  
-|多伦多|$3508904.84|  
-|伦敦|$1521530.09|  
-|西雅图|$1209418.16|  
-|巴黎|$1170425.18|  
+|Toronto|$3508904.84|  
+|London|$1521530.09|  
+|Seattle|$1209418.16|  
+|Paris|$1170425.18|  
   
  使用下面的查询可以获取原始数据集，并返回 588 行：  
   
@@ -127,6 +127,6 @@ FROM [Adventure Works]
 |Touring-2000 Blue, 50|$157444.56|$163112.57|（$5668.01）|  
   
 ## <a name="see-also"></a>另请参阅  
- [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   
