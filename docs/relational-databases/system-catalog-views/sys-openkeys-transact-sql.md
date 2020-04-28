@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f1ef2a7b5bdff79c3d12441f09ab2a05439f7a61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68125379"
 ---
 # <a name="sysopenkeys-transact-sql"></a>sys.openkeys (Transact-SQL)
@@ -34,13 +34,13 @@ ms.locfileid: "68125379"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|database_id |**int**|包含密钥的数据库的 ID。|  
+|**database_id**|**int**|包含密钥的数据库的 ID。|  
 |**database_name**|**sysname**|包含密钥的数据库的名称。|  
 |**key_id**|**int**|密钥的 ID。 该 ID 在数据库中是唯一的。|  
-|key_name |**sysname**|密钥的名称。 在数据库中是唯一的。|  
+|**key_name**|**sysname**|密钥的名称。 在数据库中是唯一的。|  
 |**key_guid**|**varbinary**|密钥的 GUID。 在数据库中是唯一的。|  
 |**opened_date**|**datetime**|打开密钥的日期和时间。|  
-|**状态值**|**int**|如果密钥在元数据中有效，则为 1。 如果在元数据中找不到密钥，则为 0。|  
+|**status**|**int**|如果密钥在元数据中有效，则为 1。 如果在元数据中找不到密钥，则为 0。|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

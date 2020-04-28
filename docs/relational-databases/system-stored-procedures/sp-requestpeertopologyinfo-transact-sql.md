@@ -16,10 +16,10 @@ ms.assetid: 15cd28bd-5a72-41fb-ae1b-726baaa6fad5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d137706da49f666ce66abea52249796a0094c7e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68129664"
 ---
 # <a name="sp_requestpeertopologyinfo-transact-sql"></a>sp_requestpeertopologyinfo (Transact-SQL)
@@ -54,7 +54,7 @@ sp_requestpeertopologyinfo [ @publication = ] 'publication'
  要求具有 sysadmin 固定服务器角色或 db_owner 固定数据库角色的成员身份。  
   
 ## <a name="see-also"></a>另请参阅  
- [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [对等事务复制](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

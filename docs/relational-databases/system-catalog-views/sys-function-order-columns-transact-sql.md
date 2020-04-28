@@ -20,10 +20,10 @@ ms.assetid: 29287973-3125-4d35-8ca9-92cb45828854
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a2a51cc56b37325d760ca77f014594496c8ab6b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122750"
 ---
 # <a name="sysfunction_order_columns-transact-sql"></a>sys.function_order_columns (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68122750"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|要定义其顺序的对象（CLR 表值函数）的 ID。|  
 |**order_column_id**|**int**|排序列的 ID。 **order_column_id**仅在**object_id**中是唯一的。<br /><br /> **order_column_id**表示此列在排序中的位置。|  
-|column_id |**int**|**Object_id**中的列的 ID。<br /><br /> **column_id**仅在**object_id**中是唯一的。|  
+|**column_id**|**int**|**Object_id**中的列的 ID。<br /><br /> **column_id**仅在**object_id**中是唯一的。|  
 |**is_descending**|**bit**|1 = 排序列采用降序排序。<br /><br /> 0 = 排序列采用升序排序。|  
   
 ## <a name="permissions"></a>权限  

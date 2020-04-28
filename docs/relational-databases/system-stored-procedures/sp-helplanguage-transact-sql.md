@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d46e178fc1872a84bb573f16629803c59f2fb6c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122513"
 ---
 # <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
@@ -51,17 +51,16 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**langid**|**smallint**|语言标识号。|  
-|**dateformat**|**nchar （3）**|日期的格式。|  
+|**dateformat**|**nchar(3)**|日期的格式。|  
 |**datefirst**|**tinyint**|每周的第一天：1 代表星期一，2 代表星期二，依此类推，直到 7 代表星期日。|  
 |**升级**|**int**|最后一次升级此语言的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。|  
-|**路径名**|**sysname**|语言名称。|  
-|**a**|**sysname**|语言的替代名称。|  
-|**个月**|**nvarchar （372）**|月份名称。|  
-|**shortmonths**|**nvarchar （132）**|月份简称。|  
-|**天数**|**nvarchar （217）**|日期名称。|  
+|**name**|**sysname**|语言名称。|  
+|**alias**|**sysname**|语言的替代名称。|  
+|**months**|**nvarchar(372)**|月份名称。|  
+|**shortmonths**|**nvarchar(132)**|月份简称。|  
+|**天数**|**nvarchar(217)**|日期名称。|  
 |**lcid**|**int**|语言的 Windows 区域设置 ID。|  
-|**msglangid**|**smallint**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]消息组 ID。|  
+|**msglangid**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]消息组 ID。|  
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
@@ -85,7 +84,7 @@ sp_helplanguage;
 ## <a name="see-also"></a>另请参阅  
  [数据库引擎存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [@@LANGUAGE (Transact-SQL)](../../t-sql/functions/language-transact-sql.md)   
- [SET LANGUAGE (Transact-SQL)](../../t-sql/statements/set-language-transact-sql.md)   
+ [将 LANGUAGE &#40;Transact-sql&#41;](../../t-sql/statements/set-language-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

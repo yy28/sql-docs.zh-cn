@@ -18,10 +18,10 @@ ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 041b8a9123781ca270c3970a04c620b691e85230
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106354"
 ---
 # <a name="msmerge_sessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
@@ -35,13 +35,13 @@ ms.locfileid: "68106354"
 |**agent_id**|**int**|合并代理的 ID。|  
 |**start_time**|**datetime**|作业开始执行的时间。|  
 |**end_time**|**datetime**|结束执行作业的时间。|  
-|**持续时间**|**int**|此作业会话的累计持续时间（以秒为单位）。|  
+|**duration**|**int**|此作业会话的累计持续时间（以秒为单位）。|  
 |**delivery_time**|**int**|应用一批更改所花费的秒数。|  
 |**upload_time**|**int**|向发布服务器上载更改所花费的秒数。|  
 |**download_time**|**int**|将更改下载到订阅服务器所花费的秒数。|  
 |**delivery_rate**|**float**|每秒传递的平均命令数。|  
 |**time_remaining**|**int**|活动会话中估计的剩余秒数。|  
-|**percent_complete**|**Decimal**|活动的会话中已传递的全部更改的估计百分比。|  
+|**percent_complete**|**decimal**|活动的会话中已传递的全部更改的估计百分比。|  
 |**upload_inserts**|**int**|发布服务器上应用的插入数。|  
 |**upload_updates**|**int**|发布服务器上应用的更新数。|  
 |**upload_deletes**|**int**|发布服务器上应用的删除数。|  
@@ -60,7 +60,7 @@ ms.locfileid: "68106354"
 |**estimated_upload_changes**|**int**|需要在发布服务器上应用的估计更改数。|  
 |**estimated_download_changes**|**int**|需要在订阅服务器上应用的估计更改数。|  
 |**connection_type**|**int**|上载过程中使用的连接：<br /><br /> **1** = 局域网（LAN）。<br /><br /> **2** = 拨号网络连接。<br /><br /> **3** = Web 同步。|  
-|**标志**|**标志**|该表的时间戳列。|  
+|**timestamp**|**timestamp**|该表的时间戳列。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

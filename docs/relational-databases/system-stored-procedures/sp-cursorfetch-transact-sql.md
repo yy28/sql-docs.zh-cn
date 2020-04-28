@@ -18,10 +18,10 @@ ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4635bffa5b5b681d0ff202c4231c4d8b8d10ae26
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108512"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
@@ -40,7 +40,7 @@ sp_cursorfetch cursor
 ```  
   
 ## <a name="arguments"></a>参数  
- *游标*  
+ *cursor*  
  是由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]生成并由 sp_cursoropen 返回的*句柄*值。 *cursor*是为**int**输入值调用的必需参数。 有关详细信息，请参阅本主题后面的 "备注" 部分。  
   
  *fetchtype*  
@@ -126,7 +126,7 @@ sp_cursorfetch cursor
   
  如果指定的*fetchtype*值为*nrow* ，则值为0时，游标将位于当前提取缓冲区中没有行的结果集之后。  
   
- 对于 "下一步"、"上一个"、"绝对"、"fetchtype" 和 "PREV_NOADJUST" 的 " ** " 值，" *nrow* " 值无效。  
+ 对于 "下一步"、"上一个"、"绝对"、"fetchtype" 和 "PREV_NOADJUST" 的 " *fetchtype* " 值，" *nrow* " 值无效。  
   
 ## <a name="rpc-considerations"></a>RPC 注意事项  
  RPC 返回状态指示键集大小参数是否为最终的（也即，键集表或临时表是否异步填充）。  

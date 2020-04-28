@@ -29,10 +29,10 @@ ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 39df13a3cab2d842a313ca37fc4a98d0c331ba83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68104216"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>添加和删除 Access 数据库文件（AccessToSQL）
@@ -84,7 +84,7 @@ ms.locfileid: "68104216"
   
     您可以使用列表顶部的 "**全选**" 和 "**全部清除**" 按钮来选择或清除所有数据库。 您可以按住 CTRL 键来选择多个数据库，或按住 SHIFT 键以选择数据库的范围。  
   
-7.  单击“下一步”。   
+7.  单击“下一步”  。  
   
 8.  在 "验证" 页上，单击 "**完成**"。  
   

@@ -16,10 +16,10 @@ ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 63916a86757877dc6ae601c798ba7a987256580c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124120"
 ---
 # <a name="sp_get_distributor-transact-sql"></a>sp_get_distributor (Transact-SQL)
@@ -40,7 +40,7 @@ sp_get_distributor
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**已安装**|**int**|**0** = 否;**1** = 是|  
+|**随**|**int**|**0** = 否;**1** = 是|  
 |**分发服务器**|**sysname**|分发服务器名|  
 |**已安装分发数据库**|**int**|**0** = 否;**1** = 是|  
 |**is distribution publisher**|**int**|**0** = 否;**1** = 是|  

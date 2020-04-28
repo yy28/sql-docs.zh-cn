@@ -20,10 +20,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 9ff85273a1e970b3bb891d1816a96019dd4f3ae5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68135194"
 ---
 # <a name="sysselective_xml_index_paths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
@@ -48,8 +48,8 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**object_id**|**int**|包含 XML 列的表 ID。|  
 |**index_id**|**int**|选择性 xml 索引的唯一 ID。|  
 |**path_id**|**int**|提升的 XML 路径 ID。|  
-|**路径**|**nvarchar(4000)**|提升的路径。 例如，“/a/b/c/d/e”。|  
-|**路径名**|**sysname**|路径名称。|  
+|**path**|**nvarchar(4000)**|提升的路径。 例如，“/a/b/c/d/e”。|  
+|**name**|**sysname**|路径名称。|  
 |**path_type**|**tinyint**|0 = XQUERY<br /><br /> 1 = SQL|  
 |**path_type_desc**|**sysname**|基于**path_type**值 "XQUERY" 或 "SQL"。|  
 |**xml_component_id**|**int**|数据库中 XML 架构组件的唯一 ID。|  
@@ -62,7 +62,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**user_type_id**|**tinyint**|列的用户类型的 ID。|  
 |**max_length**|**smallint**|类型的最大长度（以字节为单位）。<br /><br /> -1 = 列数据类型为 varchar(max)、nvarchar(max)、varbinary(max) 或 xml。|  
 |**精度**|**tinyint**|如果类型基于数值，则表示类型的最大精度。 否则为0。|  
-|**纵向**|**tinyint**|如果类型基于数值，则表示类型的最大小数位数。 否则为 0。|  
+|**scale**|**tinyint**|如果类型基于数值，则表示类型的最大小数位数。 否则为 0。|  
 |**collation_name**|**sysname**|如果类型基于字符，则表示类型排序规则的名称。 否则为 NULL。|  
 |**is_singleton**|**bit**|0 = SINGLETON 提示不存在。<br /><br /> 1 = 应用 SINGLETON 优化提示。|  
   
@@ -70,7 +70,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [XML 架构 &#40;XML 类型系统&#41; 目录视图 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

@@ -22,10 +22,10 @@ ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b846ff31d4acbc9d87f66a76a19f688384c88982
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106461"
 ---
 # <a name="syssp_cdc_enable_table-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68106461"
 
   为当前数据库中指定的源表启用变更数据捕获。 对表启用变更数据捕获时，应用于此表的每个数据操纵语言 (DML) 操作的记录都将写入事务日志中。 变更数据捕获进程将从日志中检索此信息，并将其写入可通过使用一组函数访问的更改表中。  
   
- 并非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供变更数据捕获功能。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+ 并非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供变更数据捕获功能。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2016 的各个[版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -70,7 +70,7 @@ sys.sp_cdc_enable_table
   
  源表最多可以有两个捕获实例。 有关详细信息，请参阅[&#40;transact-sql&#41;sp_cdc_help_change_data_capture ](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)。  
   
-`[ @supports_net_changes = ] supports_net_changes`指示是否为此捕获实例启用用于查询净更改的支持。 如果表**** 具有主键或表具有使用@index_name参数标识的唯一索引，则*supports_net_changes*为 bit，默认值为1。 否则，该参数默认为 0。  
+`[ @supports_net_changes = ] supports_net_changes`指示是否为此捕获实例启用用于查询净更改的支持。 如果表**bit**具有主键或表具有使用@index_name参数标识的唯一索引，则*supports_net_changes*为 bit，默认值为1。 否则，该参数默认为 0。  
   
  如果为 0，则只生成查询所有更改的支持函数。  
   

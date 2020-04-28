@@ -16,10 +16,10 @@ ms.assetid: 3eebb485-8a53-4a79-82a9-57b8de9f8e84
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 297dd5ca109e7b35d8d74d5daf1f8b1c7fd06703
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68126942"
 ---
 # <a name="localdbcreateinstance-function"></a>LocalDBCreateInstance 函数
@@ -38,14 +38,14 @@ HRESULT LocalDBCreateInstance(
 );  
 ```  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
  *wszVersion*  
  [输入] LocalDB 版本，例如 11.0 或 11.0.1094.2。  
   
  *pInstanceName*  
  [输入] 要创建的 LocalDB 实例的名称。  
   
- *dwFlags*  
+ dwFlags**  
  [输入] 保留供将来使用。 当前应设置为 0。  
   
 ## <a name="returns"></a>返回  

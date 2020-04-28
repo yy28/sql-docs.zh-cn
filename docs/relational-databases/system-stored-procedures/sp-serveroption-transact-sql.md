@@ -19,10 +19,10 @@ ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1fcd6f158908893ce5eb86c24a3bb3882867bc2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68104384"
 ---
 # <a name="sp_serveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
@@ -42,7 +42,7 @@ sp_serveroption [@server = ] 'server'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @server = ] 'server'`要为其设置选项的服务器的名称。 *服务器*的值为**sysname**，无默认值。  
+`[ @server = ] 'server'`要为其设置选项的服务器的名称。 *server* 的数据类型为 **sysname**，无默认值。  
   
 `[ @optname = ] 'option_name'`为指定的服务器设置的选项。 *option_name*为**varchar （** 35 **）**，无默认值。 *option_name*可以是以下值之一。  
   
@@ -54,13 +54,13 @@ sp_serveroption [@server = ] 'server'
 |**数据访问**|启用和禁用链接服务器以进行分布式查询访问。 仅可用于通过**sp_addlinkedserver**添加的**sys.databases。**|  
 |**dist**|分发服务器。|  
 |**惰性架构验证**|确定是否检查远程表的架构。<br /><br /> 如果**为 true**，则在查询开始时跳过远程表的架构检查。|  
-|**酒馆**|发行者。|  
+|**pub**|发行者。|  
 |**查询超时值**|链接服务器上的查询超时值。<br /><br /> 如果为**0**，则使用**sp_configure**默认值。|  
 |**rpc**|从给定的服务器启用 RPC。|  
 |**rpc 输出**|对给定的服务器启用 RPC。|  
 |**该子**|订阅服务器.|  
-|**主板**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**使用远程排序规则**|确定是使用远程列的排序规则还是使用本地服务器的排序规则。<br /><br /> 如果**为 true**，则远程列的排序规则用于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据源，而在 "**排序规则名称**" 中指定的排序规则[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用于非数据源。<br /><br /> 如果**为 false**，则分布式查询将始终使用本地服务器的默认排序规则，而**排序规则名称**和远程列的排序规则将被忽略。 默认值为**false**。 （ **False**值与7.0 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的排序规则语义兼容。）|  
+|**系统**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**使用远程排序规则**|确定是使用远程列的排序规则还是使用本地服务器的排序规则。<br /><br /> 如果**为 true**，则远程列的排序规则用于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据源，而在 "**排序规则名称**" 中指定的排序规则[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用于非数据源。<br /><br /> 如果**为 false**，则分布式查询将始终使用本地服务器的默认排序规则，而**排序规则名称**和远程列的排序规则将被忽略。 默认值为 **false**。 （ **False**值与7.0 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的排序规则语义兼容。）|  
 |**remote proc transaction promotion**|使用该选项可通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC) 事务保护服务器到服务器的操作过程。 如果该选项为 TRUE（或 ON），则调用远程存储过程启动分布式事务，并向 MS DTC 登记该事务。 调用远程存储过程的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例是事务创建者，负责控制事务的完成。 当为连接发出后续 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION 语句时，主控实例请求 MS DTC 在所涉及的计算机间管理分布式事务的完成。<br /><br /> 在启动 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分布式事务后，可以对已定义为链接服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例调用远程存储过程。 链接服务器全部登记在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分布式事务中，而 MS DTC 确保对每台链接服务器完成该事务。<br /><br /> 如果此选项设置为 FALSE（或 OFF），则对链接服务器调用远程存储过程时将不会把本地事务提升为分布式事务。<br /><br /> 如果进行服务器对服务器过程调用前，事务已是分布式事务，则该选项不起作用。 对链接服务器进行的过程调用将在同一分布式事务下运行。<br /><br /> 如果进行服务器对服务器过程调用前，连接中不存在活动事务，则该选项不起作用。 然后，将对没有活动事务的链接服务器运行此过程。<br /><br /> 该选项的默认值为 TRUE（或 ON）。|  
   
 `[ @optvalue = ] 'option_value'`指定*option_name*应启用（**TRUE**或**On**）还是禁用（**FALSE**或**off**）。 *option_value*为**varchar （** 10 **）**，无默认值。  
@@ -87,7 +87,7 @@ EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';
 ## <a name="see-also"></a>另请参阅  
  [分布式查询存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [sp_adddistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [sp_addlinkedserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

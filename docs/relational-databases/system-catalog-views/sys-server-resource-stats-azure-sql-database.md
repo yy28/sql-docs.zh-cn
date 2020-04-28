@@ -20,10 +20,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
 ms.openlocfilehash: 72e363b05e8f14dda535abd70e4218c949c42c91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133074"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>sys. server_resource_stats （Azure SQL Database）
@@ -40,7 +40,7 @@ ms.locfileid: "68133074"
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|指示15秒报表间隔开始时间的 UTC 时间|  
 |end_time|**datetime**|指示15秒报表间隔结束的 UTC 时间|
-|resource_type|Nvarchar （128）|为其提供指标的资源的类型|
+|resource_type|Nvarchar(128)|为其提供指标的资源的类型|
 |resource_name|nvarchar(128)|资源的名称。|
 |sku|nvarchar(128)|托管实例实例的服务层。 下面是可能的值： <br><ul><li>常规用途</li></ul><ul><li>业务关键</li></ul>|
 |hardware_generation|nvarchar(128)|硬件生成标识符：例如 Gen 4 或 Gen 5|
@@ -78,4 +78,4 @@ HAVING AVG(avg_cpu_percent) >= 80
 ```  
     
 ## <a name="see-also"></a>另请参阅  
- [托管实例的服务层](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)
+ [“托管实例”服务层级](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)

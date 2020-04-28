@@ -20,10 +20,10 @@ ms.assetid: 1ead375e-f662-4837-903f-8947496c51e4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5dc3ff14375d0e07a1235f0ba79ed36e3e084e58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139989"
 ---
 # <a name="syscolumn_type_usages-transact-sql"></a>sys.column_type_usages (Transact-SQL)
@@ -34,15 +34,15 @@ ms.locfileid: "68139989"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|此列所属对象的 ID。|  
-|column_id |**int**|列的 ID。 在对象中是唯一的。|  
+|**column_id**|**int**|列的 ID。 在对象中是唯一的。|  
 |**user_type_id**|**int**|用户定义类型的 ID。<br /><br /> 若要返回类型的名称，请在此列上联接到[sys.databases](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)目录视图。|  
   
 ## <a name="permissions"></a>权限  
- 要求 **公共** 角色具有成员身份。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 要求 **公共** 角色具有成员身份。  有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;Transact-sql&#41;的标量类型目录视图](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)   
- [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 639d2ebb-2c37-4fe0-b14b-1637bc5fc221
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 980ecd00a07e1119a64552a3f4c903434fd09029
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106445"
 ---
 # <a name="msmerge_agents-transact-sql"></a>MSmerge_agents (Transact-SQL)
@@ -31,15 +31,15 @@ ms.locfileid: "68106445"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**识别**|**int**|合并代理的 ID。|  
-|**路径名**|**nvarchar （100）**|合并代理的名称。|  
+|**id**|**int**|合并代理的 ID。|  
+|**name**|**nvarchar （100）**|合并代理的名称。|  
 |**publisher_id**|**smallint**|发布服务器的 ID。|  
 |**publisher_db**|**sysname**|发布服务器数据库的名称。|  
 |**发布**|**sysname**|发布的名称。|  
 |**subscriber_id**|**smallint**|订阅服务器 ID。|  
 |**subscriber_db**|**sysname**|订阅数据库的名称。|  
 |**local_job**|**bit**|指示在本地分发服务器上是否有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。|  
-|**job_id**|**binary （16）**|作业标识号。|  
+|**job_id**|**binary(16)**|作业标识号。|  
 |**profile_id**|**int**|**MSagent_profiles**表中的配置 ID。|  
 |**anonymous_subid**|**uniqueidentifier**|匿名代理的 ID。|  
 |**subscriber_name**|**sysname**|订阅服务器的名称。|  
@@ -47,10 +47,10 @@ ms.locfileid: "68106445"
 |**offload_enabled**|**bit**|指定可远程激活代理。<br /><br /> **0**指定不能远程激活代理。<br /><br /> **1**指定将远程激活代理，并指定在 offload_server 属性中指定的远程计算机上。|  
 |**offload_server**|**sysname**|指定用于远程代理激活的服务器网络名称。|  
 |**sid**|**varbinary （85）**|分发代理或合并代理第一次执行时的安全标识号 (SID)。|  
-|**subscriber_security_mode**|**smallint**|代理在连接订阅服务器时所使用的安全模式，可以是下列模式之一：<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)]身份[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]验证。<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)]个 Windows 身份验证。|  
+|**subscriber_security_mode**|**smallint**|代理在连接订阅服务器时所使用的安全模式，可以是下列模式之一：<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)]身份[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]验证。<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)]个 Windows 身份验证。|  
 |**subscriber_login**|**sysname**|连接订阅服务器时所使用的登录名。|  
 |**subscriber_password**|**nvarchar （524）**|在连接到订阅服务器时所使用的密码加密值。|  
-|**publisher_security_mode**|**smallint**|代理在连接到发布服务器时使用的安全模式，可以是以下项之一：<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)]身份[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]验证。<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)]个 Windows 身份验证。|  
+|**publisher_security_mode**|**smallint**|代理在连接到发布服务器时使用的安全模式，可以是以下项之一：<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)]身份[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]验证。<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)]个 Windows 身份验证。|  
 |**publisher_login**|**sysname**|连接发布服务器时所使用的登录名。|  
 |**publisher_password**|**nvarchar （524）**|连接发布服务器时所使用的密码的加密值。|  
 |**job_step_uid**|**uniqueidentifier**|启动代理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤的唯一 ID。|  

@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5d10a3bcbf02e88e054c12060299e9462af3004d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127445"
 ---
 # <a name="syspdw_loader_run_stages-transact-sql"></a>sys. pdw_loader_run_stages （Transact-sql）
@@ -28,8 +28,8 @@ ms.locfileid: "68127445"
 |-|-|-|-|  
 |列名|数据类型|说明|范围|  
 |run_id|**int**|运行时加载程序的唯一标识符。||  
-|阶段 (stage)|**nvarchar （30）**|运行的当前阶段。|"CREATE_STAGING"、"DMS_LOAD"、"LOAD_INSERT"、"LOAD_CLEANUP"|  
-|request_id|**nvarchar （32）**|运行此阶段的请求的 ID。||  
+|阶段 (stage)|**nvarchar(30)**|运行的当前阶段。|"CREATE_STAGING"、"DMS_LOAD"、"LOAD_INSERT"、"LOAD_CLEANUP"|  
+|request_id|**nvarchar(32)**|运行此阶段的请求的 ID。||  
 |status|**nvarchar （16）**|此阶段的状态。||  
 |start_time|**datetime**|阶段开始的时间。||  
 |end_time|**datetime**|阶段结束的时间（如果有）。|如果未开始或正在进行，则为 NULL。|  

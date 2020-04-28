@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6cf464370c5c2ca3f5075205c6783e9332309f12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68135216"
 ---
 # <a name="syssecurity_predicates-transact-sql"></a>sys. security_predicates （Transact-sql）
@@ -40,19 +40,19 @@ ms.locfileid: "68135216"
 |target_object_id|**int**|安全性谓词所绑定的对象的 ID。|  
 |predicate_definition|**nvarchar(max)**|将用作安全性谓词的函数的完全限定名称，包括参数。 请注意，`schema.function` 名称可以规范化（即转义），也可以是一致性文本中的任何其他元素。 例如：<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
 |predicate_type|**int**|安全策略使用的谓词类型：<br /><br /> 0 = 筛选器谓词<br /><br /> 1 = 阻止谓词|  
-|predicate_type_desc|**nvarchar （60）**|安全策略使用的谓词类型：<br /><br /> FILTER<br /><br /> 阻止|  
+|predicate_type_desc|**nvarchar(60)**|安全策略使用的谓词类型：<br /><br /> FILTER<br /><br /> 阻止|  
 |operation|**int**|为谓词指定的操作类型：<br /><br /> NULL = 所有适用的操作<br /><br /> 1 = 插入后<br /><br /> 2 = 更新后<br /><br /> 3 = 更新之前<br /><br /> 4 = 删除之前|  
-|operation_desc|**nvarchar （60）**|为谓词指定的操作类型：<br /><br /> Null<br /><br /> 插入后<br /><br /> AFTER UPDATE<br /><br /> 更新前<br /><br /> 删除之前|  
+|operation_desc|**nvarchar(60)**|为谓词指定的操作类型：<br /><br /> Null<br /><br /> 插入后<br /><br /> AFTER UPDATE<br /><br /> 更新前<br /><br /> 删除之前|  
   
 ## <a name="permissions"></a>权限  
  具有 "**更改任意安全策略**" 权限的主体有权访问此目录视图中的所有对象以及对该对象具有**view DEFINITION**的任何人。  
   
 ## <a name="see-also"></a>另请参阅  
- [行级安全性](../../relational-databases/security/row-level-security.md)   
- [sys.security_policies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   
- [CREATE SECURITY POLICY (Transact-SQL)](../../t-sql/statements/create-security-policy-transact-sql.md)   
+ [行级别安全性](../../relational-databases/security/row-level-security.md)   
+ [sys. security_policies &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   
+ [&#40;Transact-sql&#41;创建安全策略](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [Transact-sql&#41;&#40;安全目录视图](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

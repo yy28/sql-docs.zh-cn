@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fe249cd389e71fa5565e2877fba46b47cf0a4f38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108786"
 ---
 # <a name="syssystem_sql_modules-transact-sql"></a>sys.system_sql_modules (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68108786"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|该包含对象的对象标识号，在数据库中是唯一的。|  
-|**定义**|**nvarchar(max)**|定义此模块的 SQL 文本。|  
+|**definition**|**nvarchar(max)**|定义此模块的 SQL 文本。|  
 |**uses_ansi_nulls**|**bit**|1 = 创建模块时 SET ANSI_NULLS 数据库选项的设置为 ON。<br /><br /> 始终返回1。|  
 |**uses_quoted_identifier**|**bit**|1 = 创建模块时 SET QUOTED_IDENTIFIER 选项的设置为 ON。<br /><br /> 始终返回1。|  
 |**is_schema_bound**|**bit**|0 = 创建模块时未使用 SCHEMABINDING 选项。<br /><br /> 始终返回 0。|  
@@ -48,9 +48,9 @@ ms.locfileid: "68108786"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [sys. sql_modules &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
+ [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys. all_sql_modules &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql.md)   
- [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [&#40;Transact-sql&#41;的对象目录视图](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
+ [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: d9b7b44d-cdff-456e-97df-7031a3b9beb6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 543e8c0b41000ec2afe9ab07aef08aa86967c2ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108555"
 ---
 # <a name="sp_cursorclose-transact-sql"></a>sp_cursorclose (Transact-SQL)
@@ -39,7 +39,7 @@ sp_cursorclose cursor
 ```  
   
 ## <a name="arguments"></a>参数  
- *游标*  
+ *cursor*  
  是由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]生成并由 sp_cursoropen 过程返回的游标*句柄*值。 *cursor*是为**int**输入值调用的必需参数。  
   
 > [!NOTE]  

@@ -18,10 +18,10 @@ ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2ad8059466ac520b6f9f793af7670cbd73b96b38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68107933"
 ---
 # <a name="sp_oacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
@@ -54,7 +54,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
  _objecttoken_ **输出**  
  返回的对象标记，必须是数据类型为**int**的局部变量。此对象标记标识创建的 OLE 对象，并用于对其他 OLE 自动化存储过程的调用。  
   
- *快捷*  
+ *上下文*  
  指定要运行新创建的 OLE 对象的执行上下文。 如果指定，则该值必须为下列值之一：  
   
  **1** = 仅限进程内（.DLL） OLE 服务器。  

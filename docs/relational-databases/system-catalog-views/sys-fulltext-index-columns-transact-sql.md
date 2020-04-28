@@ -23,10 +23,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9c139a45df1031ac47750d995780f8e13ea64f2c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133805"
 ---
 # <a name="sysfulltext_index_columns-transact-sql"></a>sys.fulltext_index_columns (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68133805"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|此对象所属对象的 ID。|  
-|column_id |**int**|构成全文索引的列的 ID。|  
+|**column_id**|**int**|构成全文索引的列的 ID。|  
 |**type_column_id**|**int**|类型列的 ID，它将用户提供的文档文件扩展名（".doc"、".xls" 等）存储在给定行中的文档中。 类型列仅针对全文索引期间需要筛选其数据的列指定。 如果不适用，则为 NULL。 有关详细信息，请参阅 [配置和管理搜索筛选器](../../relational-databases/search/configure-and-manage-filters-for-search.md)。|  
 |**language_id**|**int**|其断字符用于对该全文列创建索引的语言 LCID。<br /><br /> 0 = 非特定语言。<br /><br /> 有关详细信息，请参阅[sys.databases&#41;fulltext_languages &#40;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。|  
 |**statistical_semantics**|**int**|1 = 此列在全文索引之外还启用了统计语义索引。|  

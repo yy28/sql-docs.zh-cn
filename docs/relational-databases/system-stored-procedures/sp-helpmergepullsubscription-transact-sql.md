@@ -16,10 +16,10 @@ ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c92ea8e2f172d9cb5b40559c2a7b77a60153065b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137714"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
@@ -52,28 +52,28 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**subscription_name**|**nvarchar （1000）**|订阅的名称。|  
+|**subscription_name**|**nvarchar(1000)**|订阅的名称。|  
 |**发布**|**sysname**|发布的名称。|  
 |**器**|**sysname**|发布服务器的名称。|  
 |**publisher_db**|**sysname**|发布服务器数据库名。|  
 |**订阅服务器**|**sysname**|订阅服务器的名称。|  
 |**subscription_db**|**sysname**|订阅数据库的名称。|  
-|**状态值**|**int**|订阅状态：<br /><br /> **0** = 非活动订阅<br /><br /> **1** = 有效订阅<br /><br /> **2** = 已删除订阅<br /><br /> **3** = 已分离订阅<br /><br /> **4** = 附加订阅<br /><br /> **5** = 已将订阅标记为重新初始化并上传<br /><br /> **6** = 附加订阅失败<br /><br /> **7** = 从备份还原的订阅|  
+|**status**|**int**|订阅状态：<br /><br /> **0** = 非活动订阅<br /><br /> **1** = 有效订阅<br /><br /> **2** = 已删除订阅<br /><br /> **3** = 已分离订阅<br /><br /> **4** = 附加订阅<br /><br /> **5** = 已将订阅标记为重新初始化并上传<br /><br /> **6** = 附加订阅失败<br /><br /> **7** = 从备份还原的订阅|  
 |**subscriber_type**|**int**|订阅服务器的类型：<br /><br /> **1** = 全局<br /><br /> **2** = 本地<br /><br /> **3** = 匿名|  
 |**subscription_type**|**int**|订阅的类型：<br /><br /> **0** = 推送<br /><br /> **1** = 请求<br /><br /> **2** = 匿名|  
 |**大事**|**float （8）**|订阅优先级。 该值必须小于**100.00**。|  
 |**sync_type**|**tinyint**|订阅同步类型：<br /><br /> **1** = 自动<br /><br /> **2** = 不使用快照。|  
 |**2008**|**nvarchar(255)**|对请求订阅的简短说明。|  
-|**merge_jobid**|**binary （16）**|合并代理的作业 ID。|  
+|**merge_jobid**|**binary(16)**|合并代理的作业 ID。|  
 |**enabled_for_syncmgr**|**int**|指示是否可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 同步管理器同步订阅。|  
 |**last_updated**|**nvarchar （26）**|合并代理上次成功同步订阅的时间。|  
 |**publisher_login**|**sysname**|发布服务器登录名。|  
 |**publisher_password**|**sysname**|发布者密码。|  
-|**publisher_security_mode**|**int**|指定发布服务器的安全模式：<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** = Windows 身份验证|  
+|**publisher_security_mode**|**int**|指定发布服务器的安全模式：<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** = Windows 身份验证|  
 |**发行人**|**sysname**|分发服务器的名称。|  
 |**distributor_login**|**sysname**|分发服务器登录名。|  
 |**distributor_password**|**sysname**|分发服务器密码。|  
-|**distributor_security_mode**|**int**|指定分发服务器的安全模式：<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** = Windows 身份验证|  
+|**distributor_security_mode**|**int**|指定分发服务器的安全模式：<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** = Windows 身份验证|  
 |**ftp_address**|**sysname**|仅为向后兼容而提供。 是分发服务器的文件传输协议 (FTP) 服务的网络地址。|  
 |**ftp_port**|**int**|仅为向后兼容而提供。 分发服务器 FTP 服务的端口号。|  
 |**ftp_login**|**sysname**|仅为向后兼容而提供。 用于连接到 FTP 服务的用户名。|  
@@ -94,7 +94,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**internet_password**|**nvarchar （524）**|在使用基本身份验证连接到承载 Web 同步的 Web 服务器时，合并代理所使用的登录密码。|  
 |**internet_security_mode**|**int**|连接到承载 Web 同步的 Web 服务器时使用的身份验证模式。 值**1**表示 Windows 身份验证，值**0**表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。|  
 |**internet_timeout**|**int**|Web 同步请求过期之前的时间长度（秒）。|  
-|**段**|**nvarchar(128)**|指定在参数化行筛选器的 WHERE 子句中使用此函数时[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)的重载值。|  
+|**hostname**|**nvarchar(128)**|指定在参数化行筛选器的 WHERE 子句中使用此函数时[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)的重载值。|  
 |**job_login**|**nvarchar(512)**|是运行合并代理时所用的 Windows 帐户，它以 "*域*\\*用户名*" 的格式返回。|  
 |**job_password**|**sysname**|出于安全原因，始终返回值**\*\*\*\*\*\*\*\*"\***"。|  
   

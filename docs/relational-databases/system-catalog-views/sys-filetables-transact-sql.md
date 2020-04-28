@@ -20,10 +20,10 @@ ms.assetid: a740be59-cd52-4707-9ad2-5203669a63ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 791bba2f5ec1830e343acff24fd55628a3f13d2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133999"
 ---
 # <a name="sysfiletables-transact-sql"></a>sys.filetables (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68133999"
 |-----------------|---------------|-----------------|  
 |**object_id**||对象标识号。 在数据库中是唯一的。<br /><br /> 有关详细信息，请[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |**is_enabled**|**bit**|1 = FileTable 处于“已启用”状态。|  
-|**directory_name**|**varchar （255）**|FileTable 的根目录名称。|  
+|**directory_name**|**varchar(255)**|FileTable 的根目录名称。|  
 |**filename_collation_id**||为 FileTable 定义的排序规则标识符|  
 |**filename_collation_name**||为 FileTable 定义的排序规则名称。|  
   

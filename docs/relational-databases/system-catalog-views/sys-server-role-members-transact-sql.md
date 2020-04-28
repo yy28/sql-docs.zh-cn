@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 11f39b29817716799ec693d6161135010c35a233
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133026"
 ---
 # <a name="sysserver_role_members-transact-sql"></a>sys.server_role_members (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68133026"
 ## <a name="permissions"></a>权限  
  登录名可以查看自己的服务器角色成员身份，并且可以查看 principal_id 的固定服务器角色成员。 若要查看所有服务器角色成员身份，需要具有**服务器角色的 VIEW DEFINITION**权限或**securityadmin**固定服务器角色的成员身份。  
   
- 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+  有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>示例  
  下面的示例返回角色和其成员的名称和 ID。  
@@ -58,7 +58,7 @@ JOIN sys.server_principals AS member
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Transact-sql&#41;&#40;安全目录视图](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [服务器级别角色](../../relational-databases/security/authentication-access/server-level-roles.md)   
  [主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)  

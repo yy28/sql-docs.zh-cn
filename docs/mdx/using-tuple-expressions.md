@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 55b55f2104e900104c051021fc02761d32c63e5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68135133"
 ---
 # <a name="using-tuple-expressions"></a>使用元组表达式
@@ -45,6 +45,6 @@ ms.locfileid: "68135133"
   
 ## <a name="see-also"></a>另请参阅  
  [MDX&#41;&#40;表达式](../mdx/expressions-mdx.md)   
- [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

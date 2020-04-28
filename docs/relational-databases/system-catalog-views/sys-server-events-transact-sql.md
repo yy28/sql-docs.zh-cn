@@ -20,10 +20,10 @@ ms.assetid: 996f6c9b-6426-4847-95d9-6b77541422be
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3613c3da1138a6ec17394a5b6615d78d0a941e56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133152"
 ---
 # <a name="sysserver_events-transact-sql"></a>sys.server_events (Transact-SQL)
@@ -35,10 +35,10 @@ ms.locfileid: "68133152"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|要激发的服务器级事件通知或服务器级 DDL 触发器的 ID。|  
-|type |**int**|导致激发事件通知或 DDL 触发器的事件的类型。|  
-|**type_desc**|**nvarchar （60）**|对导致激发 DDL 触发器或事件通知的事件的说明。|  
+|**type**|**int**|导致激发事件通知或 DDL 触发器的事件的类型。|  
+|**type_desc**|**nvarchar(60)**|对导致激发 DDL 触发器或事件通知的事件的说明。|  
 |**event_group_type**|**int**|要对其创建触发器或事件通知的事件组，如果未对事件组中创建触发器或事件通知，则为 Null。|  
-|**event_group_type_desc**|**nvarchar （60）**|要对其创建触发器或事件通知的事件组的说明，如果未对事件组创建触发器或事件通知，则为 Null。|  
+|**event_group_type_desc**|**nvarchar(60)**|要对其创建触发器或事件通知的事件组的说明，如果未对事件组创建触发器或事件通知，则为 Null。|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

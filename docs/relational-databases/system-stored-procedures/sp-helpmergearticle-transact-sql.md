@@ -16,10 +16,10 @@ ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e1c297e050121c3013242c40938fdd4c0ba8b936
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122347"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
@@ -46,21 +46,21 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**识别**|**int**|项目标识符。|  
-|**路径名**|**sysname**|项目的名称。|  
+|**id**|**int**|项目标识符。|  
+|**name**|**sysname**|项目的名称。|  
 |**source_owner**|**sysname**|源对象所有者的名称。|  
 |**source_object**|**sysname**|从其中添加项目的源对象的名称。|  
 |**sync_object_owner**|**sysname**|定义发布项目的视图所有者的名称。|  
 |**sync_object**|**sysname**|用于建立分区初始数据的自定义对象的名称。|  
 |**2008**|**nvarchar(255)**|对项目的说明。|  
-|**状态值**|**tinyint**|项目的状态，可以为以下值之一：<br /><br /> **1** = 非活动<br /><br /> **2** = 活动<br /><br /> **5** = 数据定义语言（DDL）操作挂起<br /><br /> **6** = 使用新生成的快照的 DDL 操作<br /><br /> 注意：在重新初始化项目时，值**5**和**6**将更改为**2**。|  
+|**status**|**tinyint**|项目的状态，可以为以下值之一：<br /><br /> **1** = 非活动<br /><br /> **2** = 活动<br /><br /> **5** = 数据定义语言（DDL）操作挂起<br /><br /> **6** = 使用新生成的快照的 DDL 操作<br /><br /> 注意：在重新初始化项目时，值**5**和**6**将更改为**2**。|  
 |**creation_script**|**nvarchar(255)**|用于在订阅数据库中创建项目的可选项目架构脚本的路径和名称。|  
 |**conflict_table**|**nvarchar （270）**|存储插入或更新冲突的表的名称。|  
 |**article_resolver**|**nvarchar(255)**|项目的自定义冲突解决程序。|  
-|**subset_filterclause**|**nvarchar （1000）**|用于指定水平筛选的 WHERE 子句。|  
+|**subset_filterclause**|**nvarchar(1000)**|用于指定水平筛选的 WHERE 子句。|  
 |**pre_creation_command**|**tinyint**|预创建方法，可以为以下值之一：<br /><br /> **0** = 无<br /><br /> **1** = 删除<br /><br /> **2** = 删除<br /><br /> **3** = 截断|  
 |**schema_option**|**binary （8）**|项目的架构生成选项位图。 有关此位图选项的信息，请参阅[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)或[sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。|  
-|type |**smallint**|项目类型，可以为以下值之一：<br /><br /> **10** = 表<br /><br /> **32** = 存储过程<br /><br /> **64** = 视图或索引视图<br /><br /> **128** = 用户定义函数<br /><br /> **160** = 仅限同义词架构|  
+|**type**|**smallint**|项目类型，可以为以下值之一：<br /><br /> **10** = 表<br /><br /> **32** = 存储过程<br /><br /> **64** = 视图或索引视图<br /><br /> **128** = 用户定义函数<br /><br /> **160** = 仅限同义词架构|  
 |**column_tracking**|**int**|列级跟踪的设置;其中， **1**表示列级跟踪处于开启状态， **0**表示列级跟踪处于关闭状态。|  
 |**resolver_info**|**nvarchar(255)**|项目冲突解决程序名。|  
 |**vertical_partition**|**bit**|如果项目已垂直分区，则为;其中， **1**表示项目已垂直分区， **0**表示不表示项目。|  

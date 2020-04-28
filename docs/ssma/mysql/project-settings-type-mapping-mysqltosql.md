@@ -10,10 +10,10 @@ ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: beb82f2fd894af71bb6f291dcc6f86a995f8dd85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138329"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>项目设置（类型映射）(MySQLToSQL)
@@ -65,11 +65,11 @@ ms.locfileid: "68138329"
 |位 [49. 56]|二进制 [7]|  
 |位 [57. 64]|二进制 [8]|  
 |位 [9. 16]|二进制 [2]|  
-|Blob|varbinary(max)|  
+|blob|varbinary(max)|  
 |blob [0 .0]|varbinary [1]|  
 |blob [2. 8000]|varbinary [*]|  
 |blob [8001]|varbinary(max)|  
-|布尔|bit|  
+|bool|bit|  
 |boolean|bit|  
 |char|nchar [1]|  
 |char 字节|binary [1]|  
@@ -101,7 +101,7 @@ ms.locfileid: "68138329"
 |float [*。53]|float [53]|  
 |int|int|  
 |int [*。255]|int|  
-|integer|int|  
+|整数|int|  
 |integer [*。255]|int|  
 |longblob|varbinary(max)|  
 |longtext|nvarchar(max)|  

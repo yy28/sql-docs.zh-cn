@@ -16,10 +16,10 @@ ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d84d366483cd5a887eb299b0f8d9208998e835c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124593"
 ---
 # <a name="sp_enumdsn-transact-sql"></a>sp_enumdsn (Transact-SQL)
@@ -44,9 +44,9 @@ sp_enumdsn
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**数据源名称**|**sysname**|数据源的名称。|  
-|**说明**|**varchar （255）**|对数据源的说明。|  
-|类型 |**int**|数据源类型：<br /><br /> **1** = ODBC DSN<br /><br /> **3** = OLE DB 数据源|  
-|**提供程序名称**|**varchar （255）**|OLE DB 访问接口的名称。 ODBC DSN 的值为 NULL。|  
+|**说明**|**varchar(255)**|对数据源的说明。|  
+|**类型**|**int**|数据源类型：<br /><br /> **1** = ODBC DSN<br /><br /> **3** = OLE DB 数据源|  
+|提供者名称 |**varchar(255)**|OLE DB 访问接口的名称。 ODBC DSN 的值为 NULL。|  
   
 ## <a name="remarks"></a>备注  
  每[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]个服务都有一个用户上下文。 用户上下文是一组注册表项，其中包含用户的 ODBC 数据源定义。 用户上下文由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在其下运行的用户名提供。  

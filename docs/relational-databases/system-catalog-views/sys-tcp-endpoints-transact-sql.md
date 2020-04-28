@@ -20,10 +20,10 @@ ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7e4b711a7d36e7677f6f32b87ff4c696db231730
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68116733"
 ---
 # <a name="systcp_endpoints-transact-sql"></a>sys.tcp_endpoints (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68116733"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**< 继承列>**||继承[sys.databases](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)中的列。|  
-|**口**|int|端点正在侦听的端口号。 不可为 null。|  
+|**port**|int|端点正在侦听的端口号。 不可为 null。|  
 |**is_dynamic_port**|bit|1 = 动态分配端口号。<br /><br /> 不可为 null。|  
 |**ip_address**|**nvarchar （45）**|LISTENER_IP 子句指定的侦听器 IP 地址。 可以为 Null。|  
   
@@ -59,7 +59,7 @@ LEFT JOIN sys.dm_exec_connections AS dec
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [终结点目录视图 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
+ [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [终结点目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
   
   

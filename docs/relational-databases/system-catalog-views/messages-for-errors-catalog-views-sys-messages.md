@@ -22,10 +22,10 @@ ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 44ab2e3106610f7b7130f997e9641e4aba685fd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127934"
 ---
 # <a name="messages-for-errors-catalog-views---sysmessages"></a>（错误）消息目录视图 - sys.messages
@@ -37,16 +37,16 @@ ms.locfileid: "68127934"
 |-----------------|---------------|-----------------|  
 |**message_id**|**int**|消息的 ID。 此 ID 在服务器中是唯一的。 编号在 50000 以下的消息 ID 是系统消息。|  
 |**language_id**|**smallint**|用于**文本**的语言 ID，如**sys.syslanguages**中所定义。 这对于指定**message_id**是唯一的。|  
-|**对应**|**tinyint**|消息的严重级别，在 1 到 25 之间。 这对于**message_id**中的所有消息语言都是相同的。|  
+|severity |**tinyint**|消息的严重级别，在 1 到 25 之间。 这对于**message_id**中的所有消息语言都是相同的。|  
 |**is_event_logged**|**bit**|1 = 出现错误时将消息记入事件日志。 这对于**message_id**中的所有消息语言都是相同的。|  
-|**text**|**nvarchar （2048）**|对应的**language_id**处于活动状态时使用的消息文本。|  
+|**text**|**nvarchar(2048)**|对应的**language_id**处于活动状态时使用的消息文本。|  
   
 ## <a name="permissions"></a>权限  
- 要求 **公共** 角色具有成员身份。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 要求 **公共** 角色具有成员身份。  有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [THROW (Transact-SQL)](../../t-sql/language-elements/throw-transact-sql.md)   
- [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [消息 &#40;&#41; 目录视图的错误 &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/8ac78c53-7b97-41b3-9cbd-5f97c179f1f2)   
  [异常消息框编程](https://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)   
  [错误消息](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   

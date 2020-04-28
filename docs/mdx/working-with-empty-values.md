@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ae8d6262f6502add09376b76a767a3076c830cb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68125849"
 ---
 # <a name="working-with-empty-values"></a>使用空值
@@ -120,18 +120,18 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  下表显示了对两个布尔操作数应用 AND 运算符的结果。  
   
-|和|TRUE|EMPTY|FALSE|  
+|AND|TRUE|EMPTY|FALSE|  
 |---------|----------|-----------|-----------|  
 |**TRUE**|TRUE|FALSE|FALSE|  
-|**EMPTY**|FALSE|EMPTY|FALSE|  
+|**空白处**|FALSE|EMPTY|FALSE|  
 |**FALSE**|FALSE|FALSE|FALSE|  
   
  下表显示了对两个布尔操作数应用 OR 运算符的结果。  
   
-|或|TRUE|FALSE|  
+|OR|TRUE|FALSE|  
 |--------|----------|-----------|  
 |**TRUE**|TRUE|TRUE|  
-|**EMPTY**|TRUE|TRUE|  
+|**空白处**|TRUE|TRUE|  
 |**FALSE**|TRUE|FALSE|  
   
  下表显示了 NOT 运算符如何求反或反转布尔运算符的结果。  

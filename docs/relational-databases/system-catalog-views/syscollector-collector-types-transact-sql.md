@@ -19,10 +19,10 @@ ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1d232d602f2496fff03ed050a8faf11b53e718b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124922"
 ---
 # <a name="syscollector_collector_types-transact-sql"></a>syscollector_collector_types (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68124922"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**collector_type_uid**|**uniqueidentifer**|收集类型的 GUID。 不可为 null。|  
-|**路径名**|**sysname**|收集类型的名称。 不可为 null。|  
+|**name**|**sysname**|收集类型的名称。 不可为 null。|  
 |**parameter_schema**|**xml**|描述指定收集器类型的配置情况的 XML 架构。 此 XML 架构用于验证与特定收集项实例相关联的实际 XML 配置。 可以为 Null。|  
 |**parameter_formatter**|**xml**|确定用于转换 XML 的模板，以便在收集组属性页中使用。 可以为 Null。|  
 |**collection_package_id**|**uniqueidentifer**|收集包的 GUID。 不可为 null。|  
@@ -58,7 +58,7 @@ ms.locfileid: "68124922"
 |更正了**upload_package_path**列的数据类型，并更新了说明以指示该值可以为 null。|  
   
 ## <a name="see-also"></a>另请参阅  
- [数据收集器存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的数据收集器存储过程](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [&#40;Transact-sql&#41;的数据收集器视图](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [数据收集](../../relational-databases/data-collection/data-collection.md)  
   

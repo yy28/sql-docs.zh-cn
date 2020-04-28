@@ -21,10 +21,10 @@ ms.assetid: 7109f9fb-8a1f-432c-92d1-6f8af3e96af1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 81d66f177c230d406fac9dae9373cf85da1837e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133224"
 ---
 # <a name="sysserver_event_session_fields-transact-sql"></a>sys.server_event_session_fields (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68133224"
 |event_session_id|**int**|事件会话的 ID。 不可为 null。|  
 |object_id|**int**|此字段所关联的对象的 ID。 不可为 null。|  
 |name|**sysname**|字段的名称。 不可为 null。|  
-|值|**sql_variant**|字段的值。 不可为 null。|  
+|value|**sql_variant**|字段的值。 不可为 null。|  
   
 ## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
@@ -47,14 +47,14 @@ ms.locfileid: "68133224"
   
 ||||  
 |-|-|-|  
-|从|目标|关系|  
+|From|到|关系|  
 |sys.server_event_session_actions.event_session_id|sys. server_event_sessions event_session_id|多对一|  
 |sys.server_event_session_actions.event_id<br /><br /> sys.server_event_session_actions.object_id<br /><br /> sys.server_event_session_actions.event_session_id|sys.server_event_session_events.event_session_id<br /><br /> sys.server_event_session_events.event_id|多对一|  
 |sys.server_event_session_actions.event_session_id<br /><br /> sys.server_event_session_actions.object_id|sys.server_event_session_targets.event_session_id<br /><br /> sys.server_event_session_targets.target_id|多对一|  
   
 ## <a name="see-also"></a>另请参阅  
- [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [扩展事件目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的扩展事件目录视图](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [扩展事件](../../relational-databases/extended-events/extended-events.md)  
   
   

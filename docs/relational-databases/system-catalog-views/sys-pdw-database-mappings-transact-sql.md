@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 46474439474f8a38ba016b16e323b0cb92afe39e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139935"
 ---
 # <a name="syspdw_database_mappings-transact-sql"></a>sys. pdw_database_mappings （Transact-sql）
@@ -29,7 +29,7 @@ ms.locfileid: "68139935"
 |physical_name|**nvarchar （36）**|计算节点上数据库的物理名称。<br /><br /> **physical_name**和**database_id**构成此视图的键。||  
 |database_id|**int**|数据库的对象 ID。 请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。<br /><br /> **physical_name**和**database_id**构成此视图的键。||  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sspdw"></a>示例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下面的示例将 pdw_database_mappings sys.databases 联接到其他系统表，以显示数据库的映射方式。  
   
 ```  

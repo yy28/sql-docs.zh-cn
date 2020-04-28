@@ -18,10 +18,10 @@ ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd5cae24b30840ea08ec2ae025b021fcf70f2dc6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108576"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
@@ -44,7 +44,7 @@ sp_cursor  cursor, optype, rownum, table
 ```  
   
 ## <a name="arguments"></a>参数  
- *游标*  
+ *cursor*  
  游标句柄。 *cursor*是为**int**输入值调用的必需参数。 *cursor*是由 SQL Server 生成并由 sp_cursoropen 过程返回的*句柄*值。  
   
  *optype*  
@@ -86,10 +86,10 @@ sp_cursor  cursor, optype, rownum, table
 > [!NOTE]  
 >  仅适用于更新、删除、刷新或锁定*optype*值。  
   
- *数据表*  
+ *table*  
  当游标定义涉及联接或*值*参数返回不明确的列名时，用于标识*optype*适用的表的表名。 如果未指定特定的表，则默认为 FROM 子句中的第一个表。 *table*是一个可选参数，它需要字符串输入值。 可以将此字符串指定为任何字符或 UNICODE 数据类型。 *表*可以是由多个部分组成的表名。  
   
- *负值*  
+ *value*  
  用于插入或更新值。 *值*string 参数仅与 UPDATE 和 INSERT *optype*值一起使用。 可以将此字符串指定为任何字符或 UNICODE 数据类型。  
   
 > [!NOTE]  

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ef8bd6cfbcc10fa0625b4925da618ab275331a32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124241"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
@@ -41,14 +41,14 @@ ms.locfileid: "68124241"
 sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }  
 ```  
   
-#### <a name="parameters"></a>parameters  
- table_id   
+#### <a name="parameters"></a>参数  
+ table_id**  
  全文索引表的对象 ID。 如果指定的*table_id*无效，则会返回错误。 有关获取表的对象 ID 的信息，请参阅[&#40;transact-sql&#41;OBJECT_ID ](../../t-sql/functions/object-id-transact-sql.md)。  
   
  *docid*  
  与键值相对应的内部文档标识符 (DocId)。 无效的 *docid* 值不会返回任何结果。  
   
- *按键*  
+ *键*  
  指定表中的全文键值。 无效的 *key* 值不会返回任何结果。 有关全文键值的信息，请参阅[管理全文索引](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
   
 > [!IMPORTANT]  
@@ -74,7 +74,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 |此参数列表 .。。|具有此结果 .。。|  
 |--------------------------|----------------------|  
-|table_id |当只调用*table_id*参数时，sp_fulltext_keymappings 将返回指定基表中的所有全文键（key）值，以及与每个键对应的 DocId。 包括挂起删除的键。<br /><br /> 此函数对于排除各种问题十分有用。 如果所选的全文键不是整数数据类型，它对于查看全文索引内容尤为有用。 这需要将 sp_fulltext_keymappings 的结果与**sys. dm_fts_index_keywords_by_document**的结果联接在一起。 有关详细信息，请参阅[sys.databases&#41;dm_fts_index_keywords_by_document &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)。<br /><br /> 但是，我们通常建议在可能的情况下使用指定了特定全文键或 DocID 的参数执行 sp_fulltext_keymappings。 与返回完整的键映射相比，这种方法要高效许多，尤其是在处理超大表的时候，对于这些表，返回整个键映射的性能开销可能过于巨大。|  
+|table_id**|当只调用*table_id*参数时，sp_fulltext_keymappings 将返回指定基表中的所有全文键（key）值，以及与每个键对应的 DocId。 包括挂起删除的键。<br /><br /> 此函数对于排除各种问题十分有用。 如果所选的全文键不是整数数据类型，它对于查看全文索引内容尤为有用。 这需要将 sp_fulltext_keymappings 的结果与**sys. dm_fts_index_keywords_by_document**的结果联接在一起。 有关详细信息，请参阅[sys.databases&#41;dm_fts_index_keywords_by_document &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)。<br /><br /> 但是，我们通常建议在可能的情况下使用指定了特定全文键或 DocID 的参数执行 sp_fulltext_keymappings。 与返回完整的键映射相比，这种方法要高效许多，尤其是在处理超大表的时候，对于这些表，返回整个键映射的性能开销可能过于巨大。|  
 |*table_id*， *docid*|如果仅指定了*table_id*和*docid* ，则*docid*必须为非空，并在指定的表中指定有效的 docid。 若要隔离基表中与特定全文索引的 DocID 对应的自定义全文键，此函数十分有用。|  
 |*table_id*，NULL，*键*|如果有三个参数，则第二个参数必须为 NULL，并且*key*必须为非空，并从指定的表中指定有效的全文键值。 若要隔离基表中与特定全文键对应的 DocID，此函数十分有用。|  
   

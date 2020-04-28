@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 32fe257f14c1e085a43b4150ee933888a83d5d14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68125343"
 ---
 # <a name="syspartition_parameters-transact-sql"></a>sys.partition_parameters (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68125343"
 |**system_type_id**|**tinyint**|参数的系统类型的 ID。 对应于**sys.databases**目录视图的**system_type_id**列。|  
 |**max_length**|**smallint**|参数的最大长度（字节）。|  
 |**精度**|**tinyint**|如果参数是基于数值的，则表示参数的精度；否则为 0。|  
-|**纵向**|**tinyint**|如果参数是基于数值的，则表示参数的小数位数；否则为 0。|  
+|**scale**|**tinyint**|如果参数是基于数值的，则表示参数的小数位数；否则为 0。|  
 |**collation_name**|**sysname**|如果参数基于字符，则为参数的排序规则名称；否则为 NULL。|  
 |**user_type_id**|**int**|类型的 ID。 在该数据库中是唯一的。 对于系统数据类型， **user_type_id** = **system_type_id**。|  
   
@@ -48,8 +48,8 @@ ms.locfileid: "68125343"
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-sql&#41;&#40;分区函数目录视图](../../relational-databases/system-catalog-views/partition-function-catalog-views-transact-sql.md)   
- [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys. partition_functions &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)   
- [sys. partition_range_values &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)  
+ [sys.partition_range_values (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)  
   
   

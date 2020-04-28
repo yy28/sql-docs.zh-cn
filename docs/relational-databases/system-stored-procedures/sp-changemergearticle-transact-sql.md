@@ -16,10 +16,10 @@ ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 35d1ef721df6f67e4cd5c0f993458238394ac0e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68104514"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
@@ -52,7 +52,7 @@ sp_changemergearticle [ @publication = ] 'publication'
   
  下表说明项目的属性和这些属性的值。  
   
-|properties|值|说明|  
+|属性|值|说明|  
 |--------------|------------|-----------------|  
 |**allow_interactive_resolver**|**true**|允许对项目使用交互式冲突解决程序。|  
 ||**false**|不允许对项目使用交互式冲突解决程序。|  
@@ -72,7 +72,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**destination_owner**||订阅数据库中对象的所有者的名称（如果不是**dbo**）。|  
 |**identity_range**||**用于指定**在分配新标识值时要使用的范围大小（如果项目的**identityrangemanagementoption**设置为**auto**或**auto_identity_range**设置为**true**。 仅适用于表项目。 有关详细信息，请参阅[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)的 "合并复制" 部分。|  
 |**identityrangemanagementoption**|**手动**|禁用自动标识范围管理。 使用 NOT FOR REPLICATION 标记标识列，启用手动标识范围处理。 有关详细信息，请参阅[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
-||**内容**|禁用所有标识范围管理。|  
+||**无**|禁用所有标识范围管理。|  
 |**logical_record_level_conflict_detection**|**true**|如果逻辑记录中发生了更改，则将检测到冲突。 要求将**logical_record_level_conflict_resolution**设置为**true**。|  
 ||**false**|**Column_tracking**使用指定的默认冲突检测。|  
 |**logical_record_level_conflict_resolution**|**true**|整个入选逻辑记录覆盖落选逻辑记录。|  
@@ -81,7 +81,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**1**|分区是重叠的，订阅服务器上执行的 DML 更新无法更改行所属的分区。|  
 ||**2**|对项目的筛选将生成不重叠分区，但多个订阅服务器可以接收到相同的分区。|  
 ||**3**|对项目的筛选将为每个订阅生成唯一的不重叠分区。<br /><br /> 注意：如果为**partition_options**指定值**3** ，则该项目中每个数据分区只能有一个订阅。 如果创建了另一个订阅，而这个新订阅的筛选条件解析到的分区与现有订阅的分区相同，则会删除现有订阅。|  
-|**pre_creation_command**|**内容**|如果订阅服务器上已存在该表，则不执行任何操作。|  
+|**pre_creation_command**|**无**|如果订阅服务器上已存在该表，则不执行任何操作。|  
 ||**delete**|根据子集筛选器中的 WHERE 子句发出 delete 命令。|  
 ||**击落**|删除该表，然后重新创建一个表。|  
 ||**去**|截断目标表。|  
@@ -122,7 +122,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x40000000**|复制权限。|  
 ||**0x80000000**|尝试删除不属于发布一部分的任何对象的依赖项。|  
 ||**0x100000000**|如果 FILESTREAM 属性是在**varbinary （max）** 列上指定的，则使用此选项复制该属性。 如果要将表复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 订阅服务器，请勿指定此选项。 不管如何设置此架构选项， [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]都不支持将包含 FILESTREAM 列的表复制到订阅服务器。 请参阅相关选项**0x800000000**。|  
-||**0x200000000**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]将中引入的日期和时间数据类型（**date**、 **time**、 **datetimeoffset**和 datetime2）转换为早期版本支持的数据类型。 **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+||**0x200000000**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]将中引入的日期和时间数据类型（**date**、 **time**、 **datetimeoffset**和 datetime2）转换为早期版本支持的数据类型。 **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 ||**0x400000000**|复制数据和索引的压缩选项。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。|  
 ||**0x800000000**|设置此选项可将 FILESTREAM 数据存储到订阅服务器上其自身的文件组中。 如果不设置此选项，FILESTREAM 数据将存储在默认文件组中。 由于复制操作不创建文件组，因此如果您设置此选项，您必须先创建文件组，然后在订阅服务器上应用快照。 有关如何在应用快照之前创建对象的详细信息，请参阅[在应用快照之前和之后执行脚本](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。<br /><br /> 请参阅相关选项**0x100000000**。|  
 ||**0x1000000000**|将公共语言运行时（CLR）用户定义类型（Udt）转换为**varbinary （max）** ，以使类型为 UDT 的列能够复制到运行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的订阅服务器。|  
@@ -131,7 +131,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x8000000000**|将**geography**和**geometry**数据类型转换为**varbinary （max）** ，以便可以将这些类型的列复制到运行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的订阅服务器。|  
 ||**0x10000000000**|复制**地域**和**几何图形**类型的列上的索引。|  
 ||Null|系统自动为项目生成一个有效的架构选项。|  
-|**状态值**|**正在**|用于发布表的初始处理脚本已运行。|  
+|**status**|**正在**|用于发布表的初始处理脚本已运行。|  
 ||**unsynced**|用于发布表的初始处理脚本在下一次运行快照代理时运行。|  
 |**stream_blob_columns**|**true**|复制二进制大型对象列时使用数据流优化。 但是，某些合并复制功能（如逻辑记录）仍可阻止使用流优化。 启用 FILESTREAM 时， *stream_blob_columns*设置为 true。 这使复制 FILESTREAM 数据的性能达到最佳并减少内存使用率。 若要强制 FILESTREAM 表项目不使用 blob 流式处理，请将*stream_blob_columns*设置为 false。<br /><br /> ** \* \*重要\*提示**在同步过程中，启用此内存优化可能会损害合并代理的性能。 仅当复制包含数兆字节数据的列时，才应使用此选项。|  
 ||**false**|复制二进制大型对象列时不使用优化。|  
@@ -227,7 +227,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**func schema only**|**0x01**和**0x2000**|  
 |**indexed view schema only**|**0x01**、 **0x040**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x1000000**和**0x200000**|  
 |**proc schema only**|**0x01**和**0x2000**|  
-|**数据表**|所有选项。|  
+|**table**|所有选项。|  
 |**view schema only**|**0x01**、 **0x040**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x1000000**和**0x200000**|  
   
 ## <a name="example"></a>示例  

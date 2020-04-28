@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 298a24276ff9c1d73a7b15ddc977d0623af70af3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127475"
 ---
 # <a name="syspdw_index_mappings-transact-sql"></a>sys. pdw_index_mappings （Transact-sql）
@@ -27,7 +27,7 @@ ms.locfileid: "68127475"
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|此索引所在的逻辑表的对象 ID。 请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。<br /><br /> **physical_name**和**object_id**构成此视图的键。||  
-|index_id|**nvarchar （32）**|索引的 ID。 请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。||  
+|index_id|**nvarchar(32)**|索引的 ID。 请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。||  
 |physical_name|**nvarchar （36）**|计算节点上的数据库中的索引名称。<br /><br /> **physical_name**和**object_id**构成此视图的键。||  
   
 ## <a name="see-also"></a>另请参阅  

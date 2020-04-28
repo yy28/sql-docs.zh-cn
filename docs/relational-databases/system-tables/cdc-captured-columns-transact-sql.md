@@ -18,10 +18,10 @@ ms.assetid: 7bb4d408-d764-4ef6-802c-f271c8d39c2a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 96927e2c0a773674cbc4b8dabee804870d6559e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68119260"
 ---
 # <a name="cdccaptured_columns-transact-sql"></a>cdc.captured_columns (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68119260"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|捕获的列所属的源表 ID。|  
 |column_name |**sysname**|捕获的列的名称。|  
-|column_id |**int**|捕获的列在源表内的 ID。|  
+|**column_id**|**int**|捕获的列在源表内的 ID。|  
 |**column_type**|**sysname**|捕获的列的类型。|  
 |**column_ordinal**|**int**|更改表中的列序号（从 1 开始）。 将排除更改表中的元数据列。 序号 1 将分配给捕获到的第一个列。|  
 |**is_computed**|**bit**|表示捕获到的列是源表中计算所得的列。|  

@@ -18,10 +18,10 @@ ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 625b1b5bca3c76a0433e0b887d2c291a714c6f54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139922"
 ---
 # <a name="sp_indexes-transact-sql"></a>sp_indexes (Transact-SQL)
@@ -78,15 +78,13 @@ sp_indexes [ @table_server = ] 'table_server'
 |NON_UNIQUE|**smallint**|指示索引是否唯一：<br /><br /> 0 = 唯一<br /><br /> 1 = 不唯一|  
 |INDEX_QUALIFER|**sysname**|索引所有者的名称。 某些 DBMS 产品允许表所有者之外的用户创建索引。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，此列始终与**TABLE_NAME**相同。|  
 |INDEX_NAME|**sysname**|索引的名称。|  
-|类型|**smallint**|索引的类型：<br /><br /> 0 = 表的统计信息<br /><br /> 1 = 聚集<br /><br /> 2 = 哈希<br /><br /> 3 = 其他|  
+|TYPE|**smallint**|索引的类型：<br /><br /> 0 = 表的统计信息<br /><br /> 1 = 聚集<br /><br /> 2 = 哈希<br /><br /> 3 = 其他|  
 |ORDINAL_POSITION|**int**|列在索引中的序号位置。 索引中的第一列为 1。 该列始终返回值。|  
 |COLUMN_NAME|**sysname**|返回的 TABLE_NAME 中每个列的对应列名。|  
-|ASC_OR_DESC|**varchar**|排序规则中使用的顺序：<br /><br /> A = 升序<br /><br /> D = 降序<br /><br /> NULL = 不适用<br /><br /> 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 始终返回 A。|  
+|ASC_OR_DESC|**varchar**|排序规则中使用的顺序：<br /><br /> A = 升序<br /><br /> D = 降序<br /><br /> NULL = 不适用<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 始终返回 A。|  
 |CARDINALITY|**int**|表中的行数或索引中唯一值的数目。|  
 |PAGES|**int**|存储索引或表的页数。|  
-|FILTER_CONDITION|**nvarchar （** 4000 **）**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不返回值。|  
+|FILTER_CONDITION|**nvarchar （** 4000 **）**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不返回值。|  
   
 ## <a name="permissions"></a>权限  
  需要对架构的 SELECT 权限。  

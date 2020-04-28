@@ -10,10 +10,10 @@ ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2a14b3a5de4292b01fd6fdb2df67bd4839d1a8d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68141085"
 ---
 # <a name="connect-to-db2-db2tosql"></a>连接到 DB2 （DB2ToSQL）
@@ -58,7 +58,7 @@ ms.locfileid: "68141085"
 **用户名**  
 输入 SSMA 将用于连接到 DB2 数据库的用户名。  
   
-**权限**  
+**密码**  
 输入用户名的密码。  
   
 **连接字符串**  

@@ -20,10 +20,10 @@ ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4645b586c07635a405b2e678b84c4846762f7582
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084677"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
@@ -33,13 +33,13 @@ ms.locfileid: "68084677"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**识别**|**int**|警报 ID。|  
-|**路径名**|**sysname**|警报名称。|  
+|**id**|**int**|警报 ID。|  
+|**name**|**sysname**|警报名称。|  
 |**event_source**|**nvarchar （100）**|事件源：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |**event_category_id**|**int**|保留供将来使用。|  
 |**event_id**|**int**|保留供将来使用。|  
 |**message_id**|**int**|用户定义的消息 ID 或对触发此警报的**sysmessages**消息的引用。|  
-|**对应**|**int**|触发此警报的严重级别。|  
+|severity |**int**|触发此警报的严重级别。|  
 |**能够**|**tinyint**|警报的状态：<br /><br /> **0** = 禁用。<br /><br /> **1** = 已启用。|  
 |**delay_between_responses**|**int**|此警报的两个通知间的等待时间（以秒为单位）。|  
 |**last_occurrence_date**|**int**|警报的上次发生（日期）。|  
@@ -55,7 +55,7 @@ ms.locfileid: "68084677"
 |**count_reset_time**|**int**|时间计数将重置为**0**。|  
 |**job_id**|**uniqueidentifier**|此警报发生时执行的任务的 ID。|  
 |**has_notification**|**int**|警报发生时接收电子邮件通知的操作员数。|  
-|**随意**|**int**|保留。|  
+|**flag**|**int**|保留。|  
 |**performance_condition**|**nvarchar(512)**|保留。|  
 |**category_id**|**int**|保留。|  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68084677"
 |0 |0000 |无消息 |
 |1 |0001 |电子邮件 |
 |2 |0010 |pager |
-|3 |myhpccn-0011 |寻呼和电子邮件 |
+|3 |0011 |寻呼和电子邮件 |
 |4 |0100 |Net send |
 |5 |0101 |网络发送和电子邮件 |
 |6 |0110 |网络发送和寻呼 |

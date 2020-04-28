@@ -16,10 +16,10 @@ ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ad7521eed3cd25d067e3ea253ff2a4362350c889
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68123943"
 ---
 # <a name="sp_getqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
@@ -53,7 +53,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**Action**|**nvarchar （10）**|同步发生时采取的操作类型。<br /><br /> INS= 插入 <br /><br /> DEL = 删除<br /><br /> UPD = 更新|  
+|**操作**|**nvarchar （10）**|同步发生时采取的操作类型。<br /><br /> INS= 插入 <br /><br /> DEL = 删除<br /><br /> UPD = 更新|  
 |**Tranid**|**nvarchar （70）**|执行命令的事务 ID。|  
 |**table column1...n**||*Tablename*中指定的表的每一列的值。|  
 |**msrepl_tran_version**|**uniqueidentifier**|该列用于跟踪对已复制数据的更改以及在发布服务器上执行冲突检测。 该列自动添加到表中。|  

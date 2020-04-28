@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 0155b154a1d63343c157bc2eca6e5cbd7c1b8968
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124828"
 ---
 # <a name="sp_dropserver-transact-sql"></a>sp_dropserver (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68124828"
 
   从本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的已知远程服务器和链接服务器的列表中删除服务器。  
   
- ![link 图标](../../database-engine/configure-windows/media/topic-link.gif "“链接”图标") [transact-sql 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![链接图标](../../database-engine/configure-windows/media/topic-link.gif "“链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
@@ -41,7 +41,7 @@ sp_dropserver [ @server = ] 'server'
   
 ## <a name="arguments"></a>参数  
  *服务*  
- 要删除的服务器。 *服务器*的值为**sysname**，无默认值。 *服务器*必须存在。  
+ 要删除的服务器。 *server* 的数据类型为 **sysname**，无默认值。 *服务器*必须存在。  
   
  *droplogins*  
  指示如果指定了**droplogins** ，则还必须删除*服务器*的相关远程服务器和链接服务器登录名。 **`@droplogins`** 为**char （10）**，默认值为 NULL。  
@@ -58,7 +58,7 @@ sp_dropserver [ @server = ] 'server'
  要求对服务器拥有 ALTER ANY LINKED SERVER 权限。  
   
 ## <a name="examples"></a>示例  
- 以下示例从本地 `ACCOUNTS` 实例删除远程服务器 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以及所有关联的远程登录名。  
+ 以下示例从本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例删除远程服务器 `ACCOUNTS` 以及所有关联的远程登录名。  
   
 ```  
 sp_dropserver 'ACCOUNTS', 'droplogins';  

@@ -18,10 +18,10 @@ ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 96e044b94244492202058d6dc2b2f048a9c1db6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68123823"
 ---
 # <a name="sp_grant_proxy_to_subsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
@@ -49,17 +49,16 @@ sp_grant_proxy_to_subsystem
   
 |值|说明|  
 |-----------|-----------------|  
-|**2**|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX 脚本<br /><br /> ** \* \*重要\*提示**在的未来版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，将从代理中删除 ActiveX 脚本编写子系统。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。|  
-|**3**|操作系统（**CmdExec**）|  
+|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX 脚本<br /><br /> ** \* \*重要\*提示**在的未来版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，将从代理中删除 ActiveX 脚本编写子系统。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。|  
+|**3**|操作系统 (**CmdExec**)|  
 |**4**|复制快照代理|  
 |**5**|复制日志读取器代理|  
 |**6**|复制分发代理|  
 |**7**|Replication Merge Agent|  
 |**8**|复制队列读取器代理|  
 |**900**|Analysis Services 查询|  
-|**万**|Analysis Services 命令|  
-|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)]包执行|  
+|**10**|Analysis Services 命令|  
+|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] 包执行|  
 |**12**|PowerShell 脚本|  
 | &nbsp; | &nbsp; |
   
@@ -68,11 +67,11 @@ sp_grant_proxy_to_subsystem
 |值|说明|  
 |-----------|-----------------|  
 |**ActiveScripting**|ActiveX 脚本|  
-|**CmdExec**|操作系统（**CmdExec**）|  
+|**CmdExec**|操作系统 (**CmdExec**)|  
 |**快照**|复制快照代理|  
 |**异类**|复制日志读取器代理|  
 |**分发**|复制分发代理|  
-|**合并**|Replication Merge Agent|  
+|**Merge**|Replication Merge Agent|  
 |**QueueReader**|复制队列读取器代理|  
 |**ANALYSISQUERY**|Analysis Services 查询|  
 |**ANALYSISCOMMAND**|Analysis Services 命令|  

@@ -24,10 +24,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 295d924422410bbf247d9b96d27b705fdfe3b5d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133821"
 ---
 # <a name="sysfulltext_index_fragments-transact-sql"></a>sys.fulltext_index_fragments (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "68133821"
 |table_id|**int**|包含全文索引片断的表的对象 ID。|  
 |fragment_object_id|**int**|与片断关联的内部表的对象 ID。|  
 |fragment_id|**int**|全文索引片断的逻辑 ID。 它在该表的所有片断中是唯一的。|  
-|timestamp|**标志**|与片断创建关联的时间戳。 较新片断的时间戳大于较早片断的时间戳。|  
+|timestamp|**timestamp**|与片断创建关联的时间戳。 较新片断的时间戳大于较早片断的时间戳。|  
 |data_size|**int**|片断的逻辑大小（以字节为单位）。|  
 |row_count|**int**|片断中的行数。|  
 |status|**int**|片断状态，其中包括：<br /><br /> 0 = 新创建，尚未使用<br /><br /> 1 = 在全文索引填充或合并过程中正在用于插入<br /><br /> 4 = 关闭。 准备用于查询<br /><br /> 6 = 正在用于合并输入并准备用于查询<br /><br /> 8 = 标记为删除。 将不会用于查询和合并源。<br /><br /> 状态为4或6表示片断是逻辑全文索引的一部分，并且可以进行查询;也就是说，它是一个可*查询*片段。|  

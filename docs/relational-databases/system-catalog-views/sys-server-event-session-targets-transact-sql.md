@@ -21,10 +21,10 @@ ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d9d3000b38f8cc59ef1349a1e0cd9219a3eb385f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133193"
 ---
 # <a name="sysserver_event_session_targets-transact-sql"></a>sys.server_event_session_targets (Transact-SQL)
@@ -37,8 +37,8 @@ ms.locfileid: "68133193"
 |event_session_id|**int**|事件会话的 ID。 不可为 null。|  
 |target_id|**int**|目标的 ID。 ID 在事件会话对象中是唯一的。 不可为 null。|  
 |name|**sysname**|事件目标的名称。 不可为 null。|  
-|程序包|**sysname**|包含事件目标的事件包的名称。 不可为 null。|  
-|module|**sysname**|包含事件目标的模块的名称。 不可为 null。|  
+|包|**sysname**|包含事件目标的事件包的名称。 不可为 null。|  
+|name|**sysname**|包含事件目标的模块的名称。 不可为 null。|  
   
 ## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
@@ -48,12 +48,12 @@ ms.locfileid: "68133193"
   
 ||||  
 |-|-|-|  
-|从|目标|关系|  
+|From|到|关系|  
 |sys.server_event_session_targets.event_session_id|sys. server_event_sessions event_session_id|多对一|  
   
 ## <a name="see-also"></a>另请参阅  
- [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [扩展事件目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [&#40;Transact-sql&#41;的扩展事件目录视图](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [扩展事件](../../relational-databases/extended-events/extended-events.md)  
   
   

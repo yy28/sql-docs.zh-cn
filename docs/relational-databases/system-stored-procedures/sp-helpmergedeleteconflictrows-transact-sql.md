@@ -16,10 +16,10 @@ ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 86e8d3d21246cbb308db5b698a29f2b02ce45ac3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137749"
 ---
 # <a name="sp_helpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
@@ -55,9 +55,9 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 |**source_object**|**nvarchar （386）**|删除冲突的源对象。|  
 |**rowguid**|**uniqueidentifier**|删除冲突的行标识符。|  
 |**conflict_type**|**int**|指示冲突类型的代码：<br /><br /> **1** = UpdateConflict：在行级别上检测到冲突。<br /><br /> **2** = ColumnUpdateConflict：在列级别上检测到冲突。<br /><br /> **3** = UpdateDeleteWinsConflict：删除入选冲突。<br /><br /> **4** = UpdateWinsDeleteConflict：丢失冲突的已删除 rowguid 记录在此表中。<br /><br /> **5** = UploadInsertFailed：无法在发布服务器上应用订阅服务器中的 Insert。<br /><br /> **6** = DownloadInsertFailed：无法在订阅服务器上应用发布服务器中的 Insert。<br /><br /> **7** = UploadDeleteFailed：无法将订阅服务器上的删除操作上载到发布服务器。<br /><br /> **8** = DownloadDeleteFailed：无法将发布服务器上的删除操作下载到订阅服务器。<br /><br /> **9** = Uploadinsertfailed：订阅服务器上的更新无法在发布服务器上应用。<br /><br /> **10** = DownloadUpdateFailed：无法将发布服务器上的更新应用于订阅服务器。|  
-|**reason_code**|**整形**|与上下文相关的错误代码。|  
+|**reason_code**|**Int**|与上下文相关的错误代码。|  
 |**reason_text**|**varchar （720）**|与上下文相关的错误说明。|  
-|**origin_datasource**|**varchar （255）**|冲突的起源。|  
+|**origin_datasource**|**varchar(255)**|冲突的起源。|  
 |**pubid**|**uniqueidentifier**|发布标识符。|  
 |**MSrepl_create_time**|**datetime**|添加冲突信息的时间。|  
   

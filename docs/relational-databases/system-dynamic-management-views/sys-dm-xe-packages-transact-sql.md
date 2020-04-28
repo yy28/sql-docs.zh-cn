@@ -20,10 +20,10 @@ ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 065625fdaca015de9c445e6e6f0e1ad0013f38e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090261"
 ---
 # <a name="sysdm_xe_packages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68090261"
 |description|**nvarchar （3072）**|包说明。 包作者设置的 descriptionis 不能为 null。|  
 |capabilities|**int**|说明此包的功能的位图。 可以为 Null。|  
 |capabilities_desc|**nvarchar(256)**|此包可能具有的所有功能的列表。 可以为 Null。|  
-|module_guid|**nvarchar （60）**|公开此包的模块的 GUID。 不可为 null。|  
+|module_guid|**nvarchar(60)**|公开此包的模块的 GUID。 不可为 null。|  
 |module_address|**varbinary(8)**|用于加载包含此包的模块的基址。 单个模块可以公开多个包。 不可为 null。|  
   
 ## <a name="permissions"></a>权限  
@@ -54,7 +54,7 @@ ms.locfileid: "68090261"
   
 ||||  
 |-|-|-|  
-|从|目标|关系|  
+|From|到|关系|  
 |sys.dm_xe_packages.module_address|sys.dm_os_loaded_modules.base_address|多对一|  
   
 ## <a name="see-also"></a>另请参阅  

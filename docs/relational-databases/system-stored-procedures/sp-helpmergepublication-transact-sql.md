@@ -16,10 +16,10 @@ ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d291288c44341c3a707696b0b3baecdcd15779ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137652"
 ---
 # <a name="sp_helpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
@@ -64,7 +64,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|id|**int**|发布在结果集列表中的连续顺序。|  
+|ID|**int**|发布在结果集列表中的连续顺序。|  
 |name|**sysname**|发布的名称。|  
 |description|**nvarchar(255)**|对发布的说明。|  
 |status|**tinyint**|指示发布数据何时可用。|  
@@ -78,7 +78,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |snapshot_ready|**tinyint**|指示该发布的快照是否可以使用：<br /><br /> **0** = 快照已准备就绪，可供使用。<br /><br /> **1** = 快照尚不可用。|  
 |publication_type|**int**|发布的类型：<br /><br /> **0** = Snapshot。<br /><br /> **1** = 事务性。<br /><br /> **2** = 合并。|  
 |pubid|**uniqueidentifier**|该发布的唯一标识符。|  
-|snapshot_jobid|**binary （16）**|快照代理的作业 ID。 若要获取[sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)系统表中快照作业的条目，必须将此十六进制值转换为**uniqueidentifier**。|  
+|snapshot_jobid|**binary(16)**|快照代理的作业 ID。 若要获取[sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)系统表中快照作业的条目，必须将此十六进制值转换为**uniqueidentifier**。|  
 |enabled_for_internet|**int**|确定是否为 Internet 启用发布。 如果为**1**，则将发布的同步文件放在`C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp`目录中。 用户必须创建文件传输协议 (FTP) 目录。 如果为**0**，则不启用发布以进行 Internet 访问。|  
 |dynamic_filter|**int**|指示是否使用参数化行筛选器。 **0**表示不使用参数化行筛选器。|  
 |has_subscription|**bit**|指示发布是否具有任何订阅。 **0**表示当前没有对此发布的订阅。|  
@@ -96,7 +96,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |allow_subscription_copy|**int**|指定是否已启用复制订阅该发布的订阅数据库的功能。 如果值为**0** ，则表示不允许复制。|  
 |allow_synctoalternate|**int**|指定是否允许备用同步伙伴与该发布服务器同步。 值**0**表示不允许同步伙伴。|  
 |validate_subscriber_info|**nvarchar （500）**|列出用于检索订阅服务器信息和验证订阅服务器上的参数化行筛选条件的函数。 有助于验证信息分区是否与每个合并一致。|  
-|backward_comp_level|**int**|数据库兼容级别，可以为下列值之一：<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level|**int**|数据库兼容级别，可以为下列值之一：<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_activedirectory|**bit**|指定是否将发布信息发布到 Active Directory。 值为**0**表示无法从 Active Directory 获取发布信息。<br /><br /> 已不推荐使用该参数，支持该参数只是为了让脚本能够向后兼容。 您不再能够向 Active Directory 中添加发布信息。|  
 |max_concurrent_merge|**int**|并发合并进程数。 如果为**0**，则在任意给定时间运行的并发合并进程数没有限制。|  
 |max_concurrent_dynamic_snapshots|**int**|针对合并发布可以运行的最大并发已筛选数据快照会话数。 如果为**0**，则在任意给定时间，可同时对发布运行的并发筛选数据快照会话的最大数量没有限制。|  

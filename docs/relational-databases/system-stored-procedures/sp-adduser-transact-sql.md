@@ -18,10 +18,10 @@ ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a2984479c8a1be35f8ccfa63d14b3250939f56c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68117895"
 ---
 # <a name="sp_adduser-transact-sql"></a>sp_adduser (Transact-SQL)
@@ -79,7 +79,7 @@ GO
 ## <a name="examples"></a>示例  
   
 ### <a name="a-adding-a-database-user"></a>A. 添加数据库用户  
- 以下示例使用现有的 `Vidur` 登录名 `Recruiting`，将数据库用户 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 添加到当前数据库中的现有 `Vidur` 角色。  
+ 以下示例使用现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `Vidur`，将数据库用户 `Recruiting` 添加到当前数据库中的现有 `Vidur` 角色。  
   
 ```  
 EXEC sp_adduser 'Vidur', 'Vidur', 'Recruiting';  
@@ -101,7 +101,7 @@ EXEC sp_adduser 'BjornR', 'Bjorn', 'Production';
   
 ## <a name="see-also"></a>另请参阅  
  [安全存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [sys. server_principals &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sp_addrole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
  [CREATE USER &#40;Transact-sql&#41;](../../t-sql/statements/create-user-transact-sql.md)   
  [sp_dropuser &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   

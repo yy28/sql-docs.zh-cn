@@ -20,10 +20,10 @@ ms.assetid: 787dd47e-4210-439d-9c4a-57a727a0dbd8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 28339ce24b1398ce2645e04b8a6352f2b4f598d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68132864"
 ---
 # <a name="sysservice_contracts-transact-sql"></a>sys.service_contracts (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68132864"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**路径名**|**sysname**|约定名称，在数据库中唯一。 不可为 NULL。|  
+|name |**sysname**|约定名称，在数据库中唯一。 不可为 NULL。|  
 |**service_contract_id**|**int**|约定标识符。 不可为 NULL。|  
 |**principal_id**|**int**|拥有此约定的数据库主体的标识符。 可以为 null.|  
   

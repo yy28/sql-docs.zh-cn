@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d4d8cbd7082a3ec8d19ccc6df7212a70b101e6b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124216"
 ---
 # <a name="sp_fulltext_pendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (Transact-SQL)
@@ -40,16 +40,16 @@ sp_fulltext_pendingchanges table_id
 ```  
   
 ## <a name="arguments"></a>参数  
- table_id   
+ table_id**  
  表的 ID。 如果该表未进行全文索引，或未对该表启用更改跟踪，则将返回错误。  
   
 ## <a name="result-sets"></a>结果集  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**Key**|*|指定表中的全文键值。|  
+|**密钥**|*|指定表中的全文键值。|  
 |**DocId**|**bigint**|与键值相对应的内部文档标识符 (DocId) 列。|  
-|**Status**|**int**|0 = 将从全文索引中删除行。<br /><br /> 1 = 将对行进行全文索引。<br /><br /> 2 = 行是最新的。<br /><br /> -1 = 行处于过渡（进行了批处理，但未提交）状态或错误状态。|  
+|**状态**|**int**|0 = 将从全文索引中删除行。<br /><br /> 1 = 将对行进行全文索引。<br /><br /> 2 = 行是最新的。<br /><br /> -1 = 行处于过渡（进行了批处理，但未提交）状态或错误状态。|  
 |**DocState**|**tinyint**|内部文档标识符 (DocId) 映射状态列的原始转储。|  
   
  <sup>* Key 的数据类型与基表中全文键列的数据类型相同。</sup>  

@@ -18,10 +18,10 @@ ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: aa33e418b81cb2f77a39f20d36bba7a25caffb4c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68104583"
 ---
 # <a name="sp_add_maintenance_plan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
@@ -47,7 +47,7 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ## <a name="arguments"></a>参数  
 `[ @plan_name = ] 'plan_name'`指定要添加的维护计划的名称。 *plan_name*为**varchar （128）**。  
   
- ** ** @plan_id = '** plan_id **'**  
+ *plan_id* ** @plan_id = '** plan_id **'**  
  指定维护计划的 ID。 *plan_id*是**uniqueidentifier**。  
   
 ## <a name="return-code-values"></a>返回代码值  

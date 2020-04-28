@@ -10,10 +10,10 @@ ms.assetid: bc14a072-8949-4ee0-a4b4-ada55fe8df5c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3d96be29aa74d3903e47f20ec6841b4a20135727
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68141079"
 ---
 # <a name="connect-to-sql-server-db2tosql"></a>连接到 SQL Server （DB2ToSQL）
@@ -41,7 +41,7 @@ ms.locfileid: "68141079"
 **用户名**  
 如果使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的是身份验证，请输入该实例的登录[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]名。 如果使用的是 Windows 身份验证，则此选项不可用。  
   
-**权限**  
+**密码**  
 如果使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的是身份验证，请输入该实例上的登录名的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]密码。 如果使用的是 Windows 身份验证，则此选项不可用。  
   
 **加密连接**  

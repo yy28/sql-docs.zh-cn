@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e0bb7d109323f4eb4a33181ab45b4b17d15faf54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108614"
 ---
 # <a name="sp_createstats-transact-sql"></a>sp_createstats (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68108614"
   
  在查询执行时间很重要并且不能等待查询优化器以生成单列统计信息时，sp_createstats 对于基准确定之类的应用程序十分有用。 在大多数情况下，无需使用 sp_createstats;查询优化器根据需要生成单列统计信息，以便在**AUTO_CREATE_STATISTICS**选项打开时改进查询计划。  
   
- 有关统计信息的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。 有关生成单列统计信息的详细信息，请参阅[ALTER DATABASE SET Options 中 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)的**AUTO_CREATE_STATISTICS**选项。  
+ 有关统计信息的详细信息，请参阅[统计](../../relational-databases/statistics/statistics.md)信息。 有关生成单列统计信息的详细信息，请参阅[ALTER DATABASE SET Options 中 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)的**AUTO_CREATE_STATISTICS**选项。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -89,12 +89,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [统计信息](../../relational-databases/statistics/statistics.md)   
+ [标识](../../relational-databases/statistics/statistics.md)   
  [&#40;Transact-sql&#41;创建统计信息](../../t-sql/statements/create-statistics-transact-sql.md)   
- [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [DROP STATISTICS (Transact-SQL)](../../t-sql/statements/drop-statistics-transact-sql.md)   
- [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)   
+ [ALTER DATABASE SET Options &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+ [Transact-sql&#41;&#40;DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md)   
+ [&#40;Transact-sql&#41;更新统计信息](../../t-sql/statements/update-statistics-transact-sql.md)   
  [数据库引擎存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

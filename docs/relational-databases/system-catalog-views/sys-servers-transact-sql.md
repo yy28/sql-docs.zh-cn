@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: b17296d558c078d3f580e63bf662bb975615ad94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68132952"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
@@ -35,11 +35,11 @@ ms.locfileid: "68132952"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|链接服务器的本地 ID。|  
-|**路径名**|**sysname**|当**server_id** = 0 时，返回的值是服务器名称。<br /><br /> 如果**server_id** > 0，则返回的值为链接服务器的本地名称。|  
-|**产品**|**sysname**|链接服务器的产品名。 值 "SQL Server" 指示的另一个实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|**name**|**sysname**|当**server_id** = 0 时，返回的值是服务器名称。<br /><br /> 如果**server_id** > 0，则返回的值为链接服务器的本地名称。|  
+|**product**|**sysname**|链接服务器的产品名。 值 "SQL Server" 指示的另一个实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |**程序**|**sysname**|用于连接到链接服务器的 OLE DB 访问接口名称。|  
 |**data_source**|**nvarchar(4000)**|OLE DB 数据源连接属性。|  
-|**位置**|**nvarchar(4000)**|OLE DB 位置连接属性。 如果没有，则为 NULL。|  
+|**location**|**nvarchar(4000)**|OLE DB 位置连接属性。 如果没有，则为 NULL。|  
 |**provider_string**|**nvarchar(4000)**|OLE DB 访问接口字符串连接属性。<br /><br /> 除非调用方拥有 ALTER ANY LINKED SERVER 权限，否则为 NULL。|  
 |**分类**|**sysname**|OLEDB 目录连接属性。 如果没有，则为 NULL。|  
 |**connect_timeout**|**int**|以秒为单位的连接超时，0 表示没有超时。|  
@@ -69,13 +69,13 @@ ms.locfileid: "68132952"
   
  如果删除了默认登录映射，则只有已作为链接登录名或远程登录名显式添加的用户才能查看其拥有登录名的链接服务器或远程服务器。  在默认的登录映射之后，查看所有链接服务器和远程服务器需要以下权限：  
   
-- `ALTER ANY LINKED SERVER`或`ALTER ANY LOGIN ON SERVER`  
+- `ALTER ANY LINKED SERVER` 或 `ALTER ANY LOGIN ON SERVER`  
 - **Setupadmin**或**sysadmin**固定服务器角色的成员身份  
   
 ## <a name="see-also"></a>另请参阅  
- [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [链接服务器目录视图 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [sp_addremotelogin &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
+ [sp_addremotelogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
   

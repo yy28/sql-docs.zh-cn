@@ -18,10 +18,10 @@ ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 03282ae181ec9fc032e5f64549840d3d292b385e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68104402"
 ---
 # <a name="sp_setnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
@@ -41,10 +41,10 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>参数  
- ** ** @server = "** server **"**  
- 在用户编码的远程存储过程调用语法中引用的远程服务器名。 **Sys.** server 中必须已有一行才能使用此*服务器*。 *服务器*的值为**sysname**，无默认值。  
+ *server* ** @server = "** server **"**  
+ 在用户编码的远程存储过程调用语法中引用的远程服务器名。 **Sys.** server 中必须已有一行才能使用此*服务器*。 *server* 的数据类型为 **sysname**，无默认值。  
   
- ** ** @netname = '** network_name **'**  
+ *network_name* ** @netname = '** network_name **'**  
  对其执行远程存储过程调用的计算机网络名。 *network_name* **sysname**，无默认值。  
   
  该名称必须与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 计算机名相匹配，并且该名称可以包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符中不允许使用的字符。  
@@ -89,7 +89,7 @@ EXEC Win_1.master.dbo.sp_who;
   
 ## <a name="see-also"></a>另请参阅  
  [数据库引擎存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [sp_addlinkedserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_addserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

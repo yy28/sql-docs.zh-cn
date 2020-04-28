@@ -16,10 +16,10 @@ ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: acbbd043080b107a5d545408fabe271d62015e54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68105078"
 ---
 # <a name="sp_articlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
@@ -94,7 +94,7 @@ sp_articlecolumn [ @publication = ] 'publication'
  只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_articlecolumn**。  
   
 ## <a name="see-also"></a>另请参阅  
- [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
+ [定义项目](../../relational-databases/replication/publish/define-an-article.md)   
  [定义和修改列筛选器](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   
  [筛选已发布数据](../../relational-databases/replication/publish/filter-published-data.md)   
  [sp_addarticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   

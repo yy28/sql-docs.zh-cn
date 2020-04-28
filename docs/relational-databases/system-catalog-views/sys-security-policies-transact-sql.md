@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d6eec5c523e2bdd321af145f19d0b5e7e7cba39b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68135313"
 ---
 # <a name="syssecurity_policies-transact-sql"></a>sys. security_policies （Transact-sql）
@@ -41,7 +41,7 @@ ms.locfileid: "68135313"
 |schema_id|**int**|对象所在架构的 ID。|  
 |parent_object_id|**int**|策略所属对象的 ID。 必须为 0。|  
 |type|**vachar （2）**|必须为**SP**。|  
-|type_desc|**nvarchar （60）**|**SECURITY_POLICY**。|  
+|type_desc|**nvarchar(60)**|**SECURITY_POLICY**。|  
 |create_date|**datetime**|所创建的安全策略的 UTC 日期。|  
 |modify_date|**datetime**|最近一次修改的安全策略的 UTC 日期。|  
 |is_ms_shipped|**bit**|始终为 false。|  
@@ -54,11 +54,11 @@ ms.locfileid: "68135313"
  具有 "**更改任意安全策略**" 权限的主体有权访问此目录视图中的所有对象以及对该对象具有**view DEFINITION**的任何人。  
   
 ## <a name="see-also"></a>另请参阅  
- [行级安全性](../../relational-databases/security/row-level-security.md)   
+ [行级别安全性](../../relational-databases/security/row-level-security.md)   
  [sys. security_predicates &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)   
- [CREATE SECURITY POLICY (Transact-SQL)](../../t-sql/statements/create-security-policy-transact-sql.md)   
+ [&#40;Transact-sql&#41;创建安全策略](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [Transact-sql&#41;&#40;安全目录视图](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

@@ -21,10 +21,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b78466b0c2c20bc3b59fb372870bbad87aef0e74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133892"
 ---
 # <a name="sysforeign_keys-transact-sql"></a>sys.foreign_keys (Transact-SQL)
@@ -41,16 +41,16 @@ ms.locfileid: "68133892"
 |**is_not_for_replication**|**bit**|FOREIGN KEY 约束通过 NOT FOR REPLICATION 选项创建。|  
 |**is_not_trusted**|**bit**|系统尚未验证 FOREIGN KEY 约束。|  
 |**delete_referential_action**|**tinyint**|执行删除时为此 FOREIGN KEY 声明的引用操作。<br /><br /> 0 = 不执行任何操作<br /><br /> 1 = 级联<br /><br /> 2 = 设置 Null<br /><br /> 3 = 设置默认值|  
-|**delete_referential_action_desc**|**nvarchar （60）**|执行删除时为此 FOREIGN KEY 声明的引用操作的说明：<br /><br /> NO_ACTION<br /><br /> CASCADE<br /><br /> SET_NULL<br /><br /> SET_DEFAULT|  
+|**delete_referential_action_desc**|**nvarchar(60)**|执行删除时为此 FOREIGN KEY 声明的引用操作的说明：<br /><br /> NO_ACTION<br /><br /> CASCADE<br /><br /> SET_NULL<br /><br /> SET_DEFAULT|  
 |**update_referential_action**|**tinyint**|执行更新时为此 FOREIGN KEY 声明的引用操作。<br /><br /> 0 = 不执行任何操作<br /><br /> 1 = 级联<br /><br /> 2 = 设置 Null<br /><br /> 3 = 设置默认值|  
-|**update_referential_action_desc**|**nvarchar （60）**|执行更新时为此 FOREIGN KEY 声明的引用操作的说明：<br /><br /> NO_ACTION<br /><br /> CASCADE<br /><br /> SET_NULL<br /><br /> SET_DEFAULT|  
+|**update_referential_action_desc**|**nvarchar(60)**|执行更新时为此 FOREIGN KEY 声明的引用操作的说明：<br /><br /> NO_ACTION<br /><br /> CASCADE<br /><br /> SET_NULL<br /><br /> SET_DEFAULT|  
 |**is_system_named**|**bit**|1 = 名称由系统生成。<br /><br /> 0 = 名称由用户提供。|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [&#40;Transact-sql&#41;的对象目录视图](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   

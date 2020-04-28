@@ -16,10 +16,10 @@ ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: da2eec998176dfd46ab261fa405ecaa4b6e90044
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68126444"
 ---
 # <a name="sp_helpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
@@ -46,7 +46,7 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|column_id |**sysname**|标识列。|  
+|**column_id**|**sysname**|标识列。|  
 |column_name |**sysname**|表或视图的列名。|  
 |**发布**|**bit**|指定是否发布列名称。<br /><br /> **1**指定正在发布列。<br /><br /> **0**指定不发布。|  
   

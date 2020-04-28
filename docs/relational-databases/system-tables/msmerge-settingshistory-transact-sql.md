@@ -18,10 +18,10 @@ ms.assetid: 0bdf2d5f-5502-44cd-aa9d-2d5006ad20ce
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d8cb78229ea20d5b4c1b01b17c9fef1d85ca83b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106324"
 ---
 # <a name="msmerge_settingshistory-transact-sql"></a>MSmerge_settingshistory (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68106324"
 |**pubid**|**uniqueidentifier**|给定发布的唯一标识号。|  
 |**artid**|**uniqueidentifier**|给定项目的唯一标识号。|  
 |**eventtype**|**tinyint**|指定要记录的事件类型，可以是下列类型之一：<br /><br /> **1** -初始发布级别属性设置。<br /><br /> **2** -更改发布属性。<br /><br /> **101** -初始项目属性设置。<br /><br /> **102** -项目属性中的更改。|  
-|**propertyname**|**sysname**|设置或更改的属性的名称|  
+|propertyname |**sysname**|设置或更改的属性的名称|  
 |**previousvalue**|**sysname**|被更改的属性的以前的属性值。|  
 |**newvalue**|**sysname**|更改后或创建时的属性值。|  
 |**eventtext**|**nvarchar （2000）**|说明事件的字符串。|  

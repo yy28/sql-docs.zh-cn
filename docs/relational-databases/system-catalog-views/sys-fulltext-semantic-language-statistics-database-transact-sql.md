@@ -20,10 +20,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: e1d2e60ce41cd3c57af209123471696cf02a03ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133793"
 ---
 # <a name="sysfulltext_semantic_language_statistics_database-transact-sql"></a>sys.fulltext_semantic_language_statistics_database (Transact-SQL)
@@ -36,11 +36,11 @@ ms.locfileid: "68133793"
   
 ||||  
 |-|-|-|  
-|**列名**|类型 |**说明**|  
-|database_id |**int**|数据库 ID（在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中唯一）。|  
+|**列名**|**类型**|**说明**|  
+|**database_id**|**int**|数据库 ID（在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中唯一）。|  
 |**register_date**|**datetime**|注册数据库进行语义处理的日期。|  
 |**registered_by**|**int**|注册数据库进行语义处理的服务器主体的 ID。|  
-|**版本**|**nvarchar(128)**|针对语义语言统计数据库的最新版本信息。|  
+|**version**|**nvarchar(128)**|针对语义语言统计数据库的最新版本信息。|  
   
 ## <a name="general-remarks"></a>一般备注  
  有关详细信息，请参阅 [安装和配置语义搜索](../../relational-databases/search/install-and-configure-semantic-search.md)。  

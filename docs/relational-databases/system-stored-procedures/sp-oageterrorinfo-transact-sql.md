@@ -18,10 +18,10 @@ ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68107916"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
@@ -72,7 +72,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |列名|数据类型|说明|  
 |------------------|---------------|-----------------|  
 |**错误**|**binary （4）**|错误号的二进制表示形式。|  
-|**数据源**|**nvarchar （nn）**|错误的源。|  
+|**源**|**nvarchar （nn）**|错误的源。|  
 |**说明**|**nvarchar （nn）**|错误的说明。|  
 |**帮助**|**nvarchar （nn）**|错误源的帮助文件。|  
 |**HelpID**|**int**|错误源帮助文件中的帮助上下文 ID。|  

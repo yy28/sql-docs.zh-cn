@@ -19,10 +19,10 @@ ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1456ff13c32b8b1f0eb8185693000507ffa401e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122915"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
@@ -36,11 +36,11 @@ ms.locfileid: "68122915"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|包含该文件组的备份集。|  
-|**路径名**|**sysname**|文件组的名称。|  
+|**name**|**sysname**|文件组的名称。|  
 |**filegroup_id**|**int**|文件组的 ID；在数据库中唯一。 对应于**sys.databases**中的**data_space_id** 。|  
 |**filegroup_guid**|**uniqueidentifier**|文件组的全局唯一标识符。 可以为 NULL。|  
-|type |**char （2）**|内容类型，可为下列类型之一：<br /><br /> FG =“行”文件组<br /><br /> SL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志文件组|  
-|**type_desc**|**nvarchar （60）**|函数类型的说明，可为下列值之一：<br /><br /> ROWS_FILEGROUP<br /><br /> SQL_LOG_FILEGROUP |  
+|**type**|**char(2)**|内容类型，可为下列类型之一：<br /><br /> FG =“行”文件组<br /><br /> SL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志文件组|  
+|**type_desc**|**nvarchar(60)**|函数类型的说明，可为下列值之一：<br /><br /> ROWS_FILEGROUP<br /><br /> SQL_LOG_FILEGROUP |  
 |**is_default**|**bit**|默认文件组，在 CREATE TABLE 或 CREATE INDEX 中未指定文件组时使用。|  
 |**is_readonly**|**bit**|1 = 文件组为只读文件组。|  
 |**log_filegroup_guid**|**uniqueidentifier**|可以为 NULL。|  
@@ -56,10 +56,10 @@ ms.locfileid: "68122915"
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;Transact-sql&#41;备份和还原表](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
- [backupfile (Transact-SQL)](../../relational-databases/system-tables/backupfile-transact-sql.md)   
- [backupmediafamily (Transact-SQL)](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
- [backupmediaset (Transact-SQL)](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
- [backupset (Transact-SQL)](../../relational-databases/system-tables/backupset-transact-sql.md)   
+ [backupfile &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
+ [backupmediafamily &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
+ [backupmediaset &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
+ [backupset &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
  [系统表 (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

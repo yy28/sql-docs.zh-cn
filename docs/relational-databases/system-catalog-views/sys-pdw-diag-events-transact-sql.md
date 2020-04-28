@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4aa83c4931e1cce4b4b813baa489ae43798db594
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127555"
 ---
 # <a name="syspdw_diag_events-transact-sql"></a>sys. pdw_diag_events （Transact-sql）
@@ -26,7 +26,7 @@ ms.locfileid: "68127555"
   
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|**路径名**|**nvarchar(255)**|特定诊断事件的名称。||  
+|**name**|**nvarchar(255)**|特定诊断事件的名称。||  
 |**源程序**|**nvarchar(255)**|事件源（引擎、常规、dms 等）||  
 |**is_enabled**|**bit**|事件是否正在发布。||  
   

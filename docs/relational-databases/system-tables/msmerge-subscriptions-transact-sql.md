@@ -18,10 +18,10 @@ ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b00a2e83839724c2b6e5193e2ca08d5c6d3eced9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106314"
 ---
 # <a name="msmerge_subscriptions-transact-sql"></a>MSmerge_subscriptions (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68106314"
 |**subscriber_db**|**sysname**|订阅数据库的名称。|  
 |**subscription_type**|**int**|订阅的类型：<br /><br /> 0 = 推送。<br /><br /> 1 = 请求。<br /><br /> 2 = 匿名。|  
 |**sync_type**|**tinyint**|同步类型：<br /><br /> 1 = 自动。<br /><br /> 2 = 不同步。|  
-|**状态值**|**tinyint**|订阅的状态。|  
+|**status**|**tinyint**|订阅的状态。|  
 |**subscription_time**|**datetime**|添加订阅的时间。|  
   
 ## <a name="see-also"></a>另请参阅  

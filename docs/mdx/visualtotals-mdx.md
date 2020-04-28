@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a5becd3382f07a9adc89055a253235495a7e50a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68125842"
 ---
 # <a name="visualtotals-mdx"></a>VisualTotals (MDX)
@@ -31,7 +31,7 @@ VisualTotals(Set_Expression[,Pattern])
  *Set_Expression*  
  返回集的有效多维表达式 (MDX)。  
   
- *化*  
+ *模式*  
  集中父成员的有效字符串表达式，包含星号 (*) 作为父名称的替代字符。  
   
 ## <a name="remarks"></a>备注  
@@ -67,6 +67,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Mdx 函数引用 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cb5f684321a11d56a419ae73be0bfb2950fb9939
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124402"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
@@ -84,10 +84,8 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
 |KEY_SEQ|**smallint**|多列主键中列的序列号。 此字段始终返回值。|  
 |UPDATE_RULE|**smallint**|当 SQL 操作是更新操作时应用于外键的操作。  可能的值：<br /> 0=对外键的 CASCADE 更改。<br /> 1=NO ACTION 更改（如果有外键）。<br />   2 = 设置 null <br /> 3 = 设置默认值 |  
 |DELETE_RULE|**smallint**|当 SQL 操作是删除操作时应用于外键的操作。 可能的值：<br /> 0=对外键的 CASCADE 更改。<br /> 1=NO ACTION 更改（如果有外键）。<br />   2 = 设置 null <br /> 3 = 设置默认值 |  
-|FK_NAME|**sysname**|外键标识符。 如果不适用于数据源，则为 NULL。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回 FOREIGN KEY 约束名称。|  
-|PK_NAME|**sysname**|主键标识符。 如果不适用于数据源，则为 NULL。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回 PRIMARY KEY 约束名称。|  
+|FK_NAME|**sysname**|外键标识符。 如果不适用于数据源，则为 NULL。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回 FOREIGN KEY 约束名称。|  
+|PK_NAME|**sysname**|主键标识符。 如果不适用于数据源，则为 NULL。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回 PRIMARY KEY 约束名称。|  
   
  返回的结果集按 FKTABLE_QUALIFIER、FKTABLE_OWNER、FKTABLE_NAME 以及 KEY_SEQ 排序。  
   
@@ -115,7 +113,7 @@ EXEC sp_fkeys @pktable_name = N'Department'
     ,@pktable_owner = N'HumanResources';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  以下示例将为 `DimDate` 数据库中的 `AdventureWorksPDW2012` 表检索一个外键的列表。 不返回任何行， [!INCLUDE[ssDW](../../includes/ssdw-md.md)]因为不支持外键。  
   
 ```sql  
@@ -124,7 +122,7 @@ EXEC sp_fkeys @pktable_name = N'DimDate;
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;Transact-sql&#41;的目录存储过程](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
- [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_pkeys &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)  
   
   

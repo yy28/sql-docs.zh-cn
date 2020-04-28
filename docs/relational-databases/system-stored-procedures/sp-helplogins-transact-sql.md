@@ -18,10 +18,10 @@ ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b4c3d6ded5d85e5d38556792aaa7ea71dd9f42fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122454"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
@@ -39,7 +39,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @LoginNamePattern = ] 'login'`是登录名。 *login*的值为**sysname**，默认值为 NULL。 如果指定，则必须存在*登录名*。 如果未指定*login* ，则返回有关所有登录名的信息。  
+`[ @LoginNamePattern = ] 'login'`是登录名。 login 的数据类型为 sysname，默认值为 NULL******。 如果指定，则必须存在*登录名*。 如果未指定*login* ，则返回有关所有登录名的信息。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

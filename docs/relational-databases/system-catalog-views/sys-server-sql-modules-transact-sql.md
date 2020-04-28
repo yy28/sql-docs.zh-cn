@@ -20,10 +20,10 @@ ms.assetid: 9ef9a8b9-c470-4a61-b0c4-ee24ad871d63
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 254be7cdd5e26422a27262b963d48908777d616b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133022"
 ---
 # <a name="sysserver_sql_modules-transact-sql"></a>sys.server_sql_modules (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68133022"
 |列名|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|这是返回给定义该模块的服务器级别触发器的 FOREIGN KEY 引用。|  
-|**定义**|**nvarchar(max)**|定义此模块的 SQL 文本。<br /><br /> NULL = 已加密。|  
+|**definition**|**nvarchar(max)**|定义此模块的 SQL 文本。<br /><br /> NULL = 已加密。|  
 |**uses_ansi_nulls**|**bit**|模块是通过将 ANSI NULLS 设置选项设置为 ON 而创建的。|  
 |**uses_quoted_identifier**|**bit**|模块是通过将 QUOTED IDENTIFIER 设置选项设置为 ON 而创建的。|  
 |**execute_as_principal_id**|**int**|EXECUTE AS 服务器主体的 ID。<br /><br /> 默认情况下或在 EXECUTE AS CALLER 情况下，值为 NULL。<br /><br /> 指定主体的 ID （如果 EXECUTE AS principal execute as principal-2 = 作为所有者执行）。|  

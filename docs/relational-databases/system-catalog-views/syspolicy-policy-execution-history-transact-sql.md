@@ -18,10 +18,10 @@ ms.assetid: b13c44a7-6d49-4d50-abe1-e657fc52bb05
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2dc0b47ce2723215d03886f7dfc5dab3f121e617
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68121105"
 ---
 # <a name="syspolicy_policy_execution_history-transact-sql"></a>syspolicy_policy_execution_history (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68121105"
 |policy_id|**int**|策略标识符。|  
 |start_date|**datetime**|尝试运行此策略的日期和时间。|  
 |end_date|**datetime**|运行完此策略的时间。|  
-|结果|**bit**|策略成功或失败。 0 = 失败，1 = 成功。|  
+|result|**bit**|策略成功或失败。 0 = 失败，1 = 成功。|  
 |exception_message|**nvarchar(max)**|发生的异常所生成的消息。|  
 |exception|**nvarchar(max)**|发生的异常的说明。|  
   
@@ -47,6 +47,6 @@ ms.locfileid: "68121105"
   
 ## <a name="see-also"></a>另请参阅  
  [使用基于策略的管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
- [基于策略的管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ [基于策略的管理视图 (Transact-SQL)](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

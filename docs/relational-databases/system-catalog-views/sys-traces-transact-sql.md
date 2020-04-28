@@ -20,10 +20,10 @@ ms.assetid: 4a03be22-b7da-4e2a-97ff-94bed890a620
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 147c080df688ff02d133e725b1ac310439a68eb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68126678"
 ---
 # <a name="systraces-transact-sql"></a>sys.traces (Transact-SQL)
@@ -34,14 +34,13 @@ ms.locfileid: "68126678"
  有关支持的跟踪事件的完整列表，请参阅[SQL Server 事件类引用](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 请改用扩展事件目录视图。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 请改用扩展事件目录视图。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**识别**|**int**|跟踪 ID。|  
-|**状态值**|**int**|跟踪状态：<br /><br /> 0 = 停止<br /><br /> 1 = 正在运行|  
-|**路径**|**nvarchar(260)**|跟踪文件的路径。 如果跟踪为行集跟踪，则此值为空值。|  
+|**id**|**int**|跟踪 ID。|  
+|**status**|**int**|跟踪状态：<br /><br /> 0 = 停止<br /><br /> 1 = 正在运行|  
+|**path**|**nvarchar(260)**|跟踪文件的路径。 如果跟踪为行集跟踪，则此值为空值。|  
 |**max_size**|**bigint**|跟踪文件的最大大小限制，以兆字节 (MB) 表示。 如果跟踪为行集跟踪，则此值为空值。|  
 |**stop_time**|**datetime**|停止运行跟踪的时间。|  
 |**max_files**|**int**|滚动更新文件的最大数目。 如果未设置最大数目，则此值是零。|  

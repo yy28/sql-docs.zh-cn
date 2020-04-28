@@ -18,10 +18,10 @@ ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c338fb8057c2d58727f18e0bb69e2fa825e71559
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108327"
 ---
 # <a name="sp_databases-transact-sql"></a>sp_databases (Transact-SQL)
@@ -47,7 +47,7 @@ sp_databases
 |-----------------|---------------|-----------------|  
 |**DATABASE_NAME**|**sysname**|数据库的名称。 在中[!INCLUDE[ssDE](../../includes/ssde-md.md)]，此列表示存储在**sys.databases**目录视图中的数据库名称。|  
 |**DATABASE_SIZE**|**int**|数据库的大小（以 KB 计）。|  
-|**标记**|**varchar （254）**|对于[!INCLUDE[ssDE](../../includes/ssde-md.md)]，此字段始终返回 NULL。|  
+|**备注**|**varchar （254）**|对于[!INCLUDE[ssDE](../../includes/ssde-md.md)]，此字段始终返回 NULL。|  
   
 ## <a name="remarks"></a>备注  
  所返回的数据库名称可以作为 USE 语句的参数，用来更改当前数据库上下文。  
@@ -67,7 +67,7 @@ EXEC sp_databases;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [HAS_DBACCESS &#40;Transact-sql&#41;](../../t-sql/functions/has-dbaccess-transact-sql.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b72a821c56f35e1ea7f3542b5746c234012c2da0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137774"
 ---
 # <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
@@ -56,7 +56,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**origin_datasource**|**varchar （255）**|冲突的起源。|  
+|**origin_datasource**|**varchar(255)**|冲突的起源。|  
 |**conflict_type**|**int**|表示冲突类型的代码：<br /><br /> **1** = 更新冲突：在行级别上检测到冲突。<br /><br /> **2** = 列更新冲突：在列级别上检测到冲突。<br /><br /> **3** = 更新删除 wins 冲突：删除入选冲突。<br /><br /> **4** = 更新 Wins 删除冲突：此表中记录了丢失冲突的已删除 rowguid。<br /><br /> **5** = 上载插入失败：无法在发布服务器中应用来自订阅服务器的插入。<br /><br /> **6** = 下载插入失败：无法在订阅服务器上应用从发布服务器进行的插入。<br /><br /> **7** = 上载删除失败：无法将订阅服务器上的删除内容上载到发布服务器。<br /><br /> **8** = 下载删除失败：无法将在发布服务器上删除操作下载到订阅服务器。<br /><br /> **9** = 上载更新失败：订阅服务器上的更新无法在发布服务器上应用。<br /><br /> **10** = 下载更新失败：发布服务器上的更新无法应用于订阅服务器。<br /><br /> **12** = 逻辑记录更新 Wins 删除：此表中记录了丢失冲突的已删除逻辑记录。<br /><br /> **13** = 逻辑记录冲突插入更新：插入到逻辑记录与更新冲突。<br /><br /> **14** = 逻辑记录删除 Wins 更新冲突：此表中记录了丢失冲突的更新逻辑记录。|  
 |**reason_code**|**int**|与上下文相关的错误代码。|  
 |**reason_text**|**varchar （720）**|与上下文相关的错误说明。|  

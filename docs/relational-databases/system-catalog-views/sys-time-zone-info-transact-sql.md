@@ -19,13 +19,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 69bfcbb7e1eeaf6b456a2e10d1f3bfcc581c3d76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106706"
 ---
-# <a name="systime_zone_info-transact-sql"></a>sys. time_zone_info （Transact-sql）
+# <a name="systime_zone_info-transact-sql"></a>sys.time_zone_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   返回有关支持的时区的信息。 计算机上安装的所有时区都存储在以下注册表配置单元中：  
@@ -33,7 +33,7 @@ ms.locfileid: "68106706"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**路径名**|**sysname**|采用 Windows 标准格式的时区的名称。 例如，**中部澳大利亚标准时间**或**中欧标准时间**。|  
+|name |**sysname**|采用 Windows 标准格式的时区的名称。 例如，**中部澳大利亚标准时间**或**中欧标准时间**。|  
 |**current_utc_offset**|**nvarchar （12）**|当前与 UTC 的偏移量。 例如， **+ 01:00**或 **-07:00**。|  
 |**is_currently_dst**|**bit**|如果当前观察到夏令时，则为 True。|  
   

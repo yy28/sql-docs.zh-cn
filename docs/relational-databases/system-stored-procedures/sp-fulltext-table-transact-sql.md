@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1db3a16b8072df38937bb482ac85a75dec6e83b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124138"
 ---
 # <a name="sp_fulltext_table-transact-sql"></a>sp_fulltext_table (Transact-SQL)
@@ -57,8 +57,8 @@ sp_fulltext_table
 |-----------|-----------------|  
 |**创建**|为*qualified_table_name*引用的表创建全文索引的元数据，并指定此表的全文索引数据应驻留在*fulltext_catalog_name*中。 此操作还将*unique_index_name*的用法指定为全文键列。 这个唯一的索引必须已经存在，并且必须已在表的某个列上定义。<br /><br /> 完成了全文目录填充后，才能对该表执行全文检索。|  
 |**击落**|删除*qualified_table_name*的全文索引的元数据。 如果全文索引是活动的，则将自动停用该全文索引，然后将其删除。 在删除全文索引之前，不必删除列。|  
-|**启用**|激活在停用后，为*qualified_table_name*收集全文索引数据的功能。 在激活全文索引之前，应该至少有一列参与了全文索引。<br /><br /> 只要添加了第一个要编制索引的列，便会自动激活全文索引（进行填充）。 如果从索引中删除最后一个列，该索引便成为非活动索引。 如果启用了更改跟踪，则激活非活动索引时将启动一个新填充。<br /><br /> 请注意，这实际上并不是填充全文索引，而只是将表注册到文件系统中的全文目录中，以便可以在下一次全文索引填充期间检索*qualified_table_name*中的行。|  
-|**禁止**|停用*qualified_table_name*的全文索引，以便无法再为*qualified_table_name*收集全文索引数据。 全文索引元数据依然保留，该表可以被重新激活。<br /><br /> 如果启用了更改跟踪，停用一个活动索引将冻结索引的状态：停止正在进行的所有填充，不再向索引传播更改。|  
+|**激活**|激活在停用后，为*qualified_table_name*收集全文索引数据的功能。 在激活全文索引之前，应该至少有一列参与了全文索引。<br /><br /> 只要添加了第一个要编制索引的列，便会自动激活全文索引（进行填充）。 如果从索引中删除最后一个列，该索引便成为非活动索引。 如果启用了更改跟踪，则激活非活动索引时将启动一个新填充。<br /><br /> 请注意，这实际上并不是填充全文索引，而只是将表注册到文件系统中的全文目录中，以便可以在下一次全文索引填充期间检索*qualified_table_name*中的行。|  
+|**停用**|停用*qualified_table_name*的全文索引，以便无法再为*qualified_table_name*收集全文索引数据。 全文索引元数据依然保留，该表可以被重新激活。<br /><br /> 如果启用了更改跟踪，停用一个活动索引将冻结索引的状态：停止正在进行的所有填充，不再向索引传播更改。|  
 |**start_change_tracking**|启动全文索引的增量填充。 如果表没有时间戳，则启动全文索引的完全填充。 开始跟踪对表所做的更改。<br /><br /> 全文更改跟踪不跟踪对类型为**image**、 **text**或**ntext**的全文索引列执行的任何 WRITETEXT 或 UPDATETEXT 操作。|  
 |**stop_change_tracking**|停止对表更改的跟踪。|  
 |**update_index**|将当前的一组跟踪的更改传播给全文索引。|  
@@ -66,7 +66,7 @@ sp_fulltext_table
 |**stop_background_updateindex**|一旦发生更改，就停止将被跟踪的更改传播给全文索引。|  
 |**start_full**|启动表的全文索引的完全填充。|  
 |**start_incremental**|启动表的全文索引的增量填充。|  
-|**Stop**|停止完全填充或增量填充。|  
+|**停止**|停止完全填充或增量填充。|  
   
 `[ @ftcat = ] 'fulltext_catalog_name'`是一个有效的现有全文目录名称，用于**创建**操作。 对于其他所有操作，此参数必须为 NULL。 *fulltext_catalog_name*的默认值为**sysname**，默认值为 NULL。  
   
@@ -93,9 +93,7 @@ sp_fulltext_table
 ## <a name="examples"></a>示例  
   
 ### <a name="a-enabling-a-table-for-full-text-indexing"></a>A. 启用要进行全文索引的表  
- 以下示例将为 `Document` 数据库的 `AdventureWorks` 表创建全文索引元数据。 
-  `Cat_Desc` 是一个全文目录。 
-  `PK_Document_DocumentID` 是针对 `Document` 的唯一单列索引。  
+ 以下示例将为 `Document` 数据库的 `AdventureWorks` 表创建全文索引元数据。 `Cat_Desc` 是一个全文目录。 `PK_Document_DocumentID` 是针对 `Document` 的唯一单列索引。  
   
 ```  
 USE AdventureWorks2012;  
@@ -130,12 +128,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [INDEXPROPERTY (Transact-SQL)](../../t-sql/functions/indexproperty-transact-sql.md)   
+ [INDEXPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [sp_help_fulltext_tables &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
  [sp_help_fulltext_tables_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [sp_helpindex &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
- [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [&#40;Transact-sql&#41;的全文搜索和语义搜索存储过程](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

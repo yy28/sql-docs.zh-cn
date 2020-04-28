@@ -18,10 +18,10 @@ ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: dce66e74f7415a8ff5ac6de4505d8a1f0632391b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108448"
 ---
 # <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
@@ -39,10 +39,10 @@ sp_cursoroption cursor, code, value
 ```  
   
 ## <a name="arguments"></a>参数  
- *游标*  
+ *cursor*  
  是由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]生成并由 sp_cursoropen 存储过程返回的*句柄*值。 *游标*需要用于执行的**int**输入值。  
   
- *编写*  
+ *code*  
  用于规定游标返回值的不同因素。 *代码*需要以下**int**输入值之一：  
   
 |值|名称|说明|  
@@ -54,7 +54,7 @@ sp_cursoroption cursor, code, value
 |0x0005|CCOPT|并发控制选项。 有关其他信息，请参阅本主题后面的“返回代码值”。|  
 |0x0006|ROWCOUNT|结果集中的当前行数。<br /><br /> 注意：如果正在使用异步填充，则在 sp_cursoropen 返回的值之后，行计数可能已更改。 如果行数未知，则返回值-1。|  
   
- *负值*  
+ *value*  
  指定由*代码*返回的值。 *值*是一个必需参数，它调用0x0001、0x0002 或 0x0003*代码*输入值。  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ sp_cursoroption cursor, code, value
 |0x0004 或 0x0008|OPTIMISTIC|  
   
 ## <a name="see-also"></a>另请参阅  
- [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursor-transact-sql.md)   
  [sp_cursoropen &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)  
   

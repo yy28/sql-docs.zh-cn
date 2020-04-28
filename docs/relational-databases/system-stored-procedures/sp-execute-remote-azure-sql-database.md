@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 021a6e689dfc109f8a58ca080956aec7efc49291
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124466"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote（Azure SQL 数据库）
@@ -43,7 +43,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ```  
   
 ## <a name="arguments"></a>参数  
- [ \@data_source_name =]** 个  
+ [ \@data_source_name =]*datasourcename*个  
  标识执行语句的外部数据源。 请参阅[CREATE EXTERNAL DATA SOURCE &#40;transact-sql&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)。 外部数据源的类型可以是 "RDBMS" 或 "SHARD_MAP_MANAGER"。  
   
  [ \@stmt =]*语句*  
@@ -104,5 +104,5 @@ EXEC sp_execute_remote @data_source_name  = N'PointToMaster',
 ## <a name="see-also"></a>另请参阅：
 
 [创建数据库范围的凭据](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
-[CREATE EXTERNAL DATA SOURCE （Transact-sql）](../../t-sql/statements/create-external-data-source-transact-sql.md)  
+[CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
     

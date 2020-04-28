@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 201580b71086dfe39e669966070dae2dca72e3eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68105304"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
@@ -36,7 +36,7 @@ InStr([start, ]searched_string, search_string[, compare])
  *search_string*  
  要对其进行搜索的字符串表达式。  
   
- *并排*  
+ *比较*  
  （可选）一个整数值。 始终忽略此参数。 定义它是为了与其他语言中的其他**Instr**函数兼容。  
   
 ## <a name="return-value"></a>返回值  

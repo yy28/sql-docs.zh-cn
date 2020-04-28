@@ -20,10 +20,10 @@ ms.assetid: f6a86766-e2a9-4d9f-a073-1b59e888ba7d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c9685b9733c1d13b79ef2a19ee2f19bbe3130426
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106672"
 ---
 # <a name="systrace_categories-transact-sql"></a>sys.trace_categories (Transact-SQL)
@@ -33,14 +33,13 @@ ms.locfileid: "68106672"
   
  有关支持的跟踪事件的完整列表，请参阅[SQL Server 事件类引用](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
   
-> **无关紧要!** 
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 请改用扩展事件目录视图。  
+> **重要说明！** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 请改用扩展事件目录视图。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**smallint**|此类别的唯一 ID。 此列也位于**trace_events sys.databases**目录视图中。|  
-|**路径名**|**nvarchar(128)**|此类别的唯一名称。 此参数未本地化。|  
-|type |**tinyint**|类别类型：<br /><br /> 0 = 正常<br /><br /> 1 = 连接<br /><br /> 2 = 错误|  
+|**name**|**nvarchar(128)**|此类别的唯一名称。 此参数未本地化。|  
+|**type**|**tinyint**|类别类型：<br /><br /> 0 = 正常<br /><br /> 1 = 连接<br /><br /> 2 = 错误|  
   
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

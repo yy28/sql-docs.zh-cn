@@ -19,10 +19,10 @@ ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ccd72de184115929483a43fd69d133abe0e195af
-ms.sourcegitcommit: a17245869c2d3df97ec8cf083608f754f4b2f40f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68117906"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
@@ -52,8 +52,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 |值|说明|  
 |-----------|-----------------|  
 |**磁盘**|硬盘文件作为备份设备。|  
-|**磁盘**|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 支持的任何磁带设备。<br /><br /> 注意：在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中将不再支持磁带备份设备。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。|  
+|**磁盘**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 支持的任何磁带设备。<br /><br /> 注意：在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中将不再支持磁带备份设备。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。|  
   
 `[ @logicalname = ] 'logical_name'`Backup 和 RESTORE 语句中使用的备份设备的逻辑名称。 *logical_name* **sysname**，无默认值，且不能为 NULL。  
   
@@ -81,8 +80,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
  所有权和权限问题可能干扰磁盘或文件备份设备的使用。 请确保已将相应的文件权限授予用于启动[!INCLUDE[ssDE](../../includes/ssde-md.md)]的 Windows 帐户。  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]支持将磁带备份到 Windows 支持的磁带设备上。 有关 Windows 支持的磁带设备的详细信息，请参阅 Windows 的硬件兼容性列表。 若要查看计算机上可用的磁带设备，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]支持将磁带备份到 Windows 支持的磁带设备上。 有关 Windows 支持的磁带设备的详细信息，请参阅 Windows 的硬件兼容性列表。 若要查看计算机上可用的磁带设备，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
  对于特定的磁带机，请仅使用驱动器厂商建议的推荐磁带。 如果您使用的是数字音频磁带 (DAT) 驱动器，请使用计算机级的 DAT 磁带（数字数据存储 (DDS)）。  
   
@@ -141,13 +139,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
+ [备份设备 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
- [为磁盘文件定义逻辑备份设备 (SQL Server)](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
- [为磁带驱动器定义逻辑备份设备 (SQL Server)](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
+ [为磁盘文件定义逻辑备份设备 &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
+ [定义磁带驱动器 &#40;SQL Server 的逻辑备份设备&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- [sp_dropdevice (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
- [sys.backup_devices (Transact-SQL)](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
+ [sp_dropdevice &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
+ [sys. backup_devices &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

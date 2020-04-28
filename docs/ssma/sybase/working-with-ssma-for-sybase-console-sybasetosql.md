@@ -10,10 +10,10 @@ ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: fcc1543a26c179ae6a775b6d735283ba068312ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68112875"
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>使用 SSMA for Sybase 控制台 (SybaseToSQL)
@@ -25,7 +25,7 @@ ms.locfileid: "68112875"
   
 |||  
 |-|-|  
-|**本节**|**说明**|  
+|**主题**|**说明**|  
 |[入门，用于 Sybase 控制台 &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-console-sybasetosql.md)|说明执行控制台应用程序的过程。|  
 |[SSMA 控制台中的命令行选项 &#40;SybaseToSQL&#41;](../../ssma/sybase/command-line-options-in-ssma-console-sybasetosql.md)|描述用于操作 SSMA 控制台应用程序的命令行选项和参数。|  
 |[&#40;SybaseToSQL&#41;创建脚本文件](../../ssma/sybase/creating-script-files-sybasetosql.md)|说明如何创建脚本文件。|  

@@ -18,10 +18,10 @@ ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6efc0b620dcec300b5342ea5a0f63358fcdfadc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68107882"
 ---
 # <a name="sp_oagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
@@ -44,7 +44,7 @@ sp_OAGetProperty objecttoken , propertyname
  *objecttoken*  
  是先前使用**sp_OACreate**创建的 OLE 对象的对象标记。  
   
- *propertyname*  
+ propertyname   
  要返回的 OLE 对象的属性名。  
   
  *propertyvalue* **输出**  
@@ -58,7 +58,7 @@ sp_OAGetProperty objecttoken , propertyname
   
  如果指定了*propertyvalue* ，但属性未返回值，则会发生错误。 如果属性返回二维以上的数组，也将出现错误。  
   
- 索引   
+ *index*  
  索引参数。 如果已指定，则*index*必须为适当数据类型的值。  
   
  有些属性包含参数。 这些属性称为索引化属性，相应的参数被称为索引参数。 一个属性可有多个索引参数。  

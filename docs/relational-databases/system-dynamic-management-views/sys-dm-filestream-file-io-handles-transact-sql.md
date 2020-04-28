@@ -19,10 +19,10 @@ ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a96bcedaa3922ebb0691ac949f9eb15ed28336b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103298"
 ---
 # <a name="sysdm_filestream_file_io_handles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68103298"
 |**creation_client_thread_id**|**varbinary(8)**|显示来自 REQ_PRE_CREATE I/O 请求的用于创建此句柄的字段。 可以为 Null。|  
 |**creation_client_process_id**|**varbinary(8)**|显示来自 REQ_PRE_CREATE I/O 请求的用于创建此句柄的字段。 可以为 Null。|  
 |**filestream_transaction_id**|**varbinary(128)**|显示与给定句柄相关联的事务的 ID。 这是**get_filestream_transaction_context**函数返回的值。 使用此字段可以联接到**sys.databases. dm_filestream_file_io_requests**视图。 可以为 Null。|  
-|**access_type**|**nvarchar （60）**|不可为 null。|  
+|**access_type**|**nvarchar(60)**|不可为 null。|  
 |**logical_path**|**nvarchar(256)**|显示此句柄打开的文件的逻辑路径名。 这与返回的路径相同 **。** **Varbinary**（**Max**） filestream 的 PathName 方法。 可以为 Null。|  
 |**physical_path**|**nvarchar(256)**|显示文件的实际 NTFS 路径名。 这与返回的路径相同 **。** **Varbinary**（**Max**） filestream 的 .physicalpathname 方法。 它由跟踪标志 5556 启用。 可以为 Null。|  
   

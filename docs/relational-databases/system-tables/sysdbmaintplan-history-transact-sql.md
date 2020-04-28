@@ -18,10 +18,10 @@ ms.assetid: 02d36f08-ac93-4463-bb59-284c5cd6ed04
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4470b6b5d1b30f5698bf588a04066c50bb4c7197
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130452"
 ---
 # <a name="sysdbmaintplan_history-transact-sql"></a>sysdbmaintplan_history (Transact-SQL)
@@ -39,12 +39,12 @@ ms.locfileid: "68130452"
 |**plan_name**|**sysname**|数据库维护计划名称。|  
 |**database_name**|**sysname**|与数据库维护计划关联的数据库的名称。|  
 |server_name |**sysname**|系统名称。|  
-|**活动**|**nvarchar(128)**|数据库维护计划执行的活动（例如备份事务日志等）。|  
+|**activity**|**nvarchar(128)**|数据库维护计划执行的活动（例如备份事务日志等）。|  
 |**成功**|**bit**|**0** = 成功**1** = 失败|  
 |**end_time**|**datetime**|完成操作的时间。|  
-|**持续时间**|**int**|完成数据库维护计划操作所需的时间。|  
+|**duration**|**int**|完成数据库维护计划操作所需的时间。|  
 |**start_time**|**datetime**|操作开始的时间。|  
 |**error_number**|**int**|失败时报告的错误号。|  
-|**消息**|**nvarchar(512)**|**Sqlmaint**生成的消息。|  
+|**message**|**nvarchar(512)**|**Sqlmaint**生成的消息。|  
   
   

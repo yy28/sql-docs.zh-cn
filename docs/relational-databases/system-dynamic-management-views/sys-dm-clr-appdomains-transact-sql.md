@@ -19,10 +19,10 @@ ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3ebcda61d95cc5131048ab32701d9d68228646ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138413"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
@@ -42,11 +42,11 @@ ms.locfileid: "68138413"
 |**creation_time**|**datetime**|创建**AppDomain**的时间。 由于**appdomain**已缓存并可重复使用以提高性能，因此**creation_time**不一定是代码的执行时间。|  
 |**db_id**|**int**|在其中创建此**AppDomain**的数据库的 ID。 存储在两个不同数据库中的代码不能共享一个**AppDomain**。|  
 |**user_id**|**int**|其对象可以在此**AppDomain**中执行的用户的 ID。|  
-|**状态**|**nvarchar(128)**|**AppDomain**的当前状态的描述符。 AppDomain 可以处于从创建到删除的不同状态中。 有关详细信息，请参阅本主题的“备注”部分。|  
+|**state**|**nvarchar(128)**|**AppDomain**的当前状态的描述符。 AppDomain 可以处于从创建到删除的不同状态中。 有关详细信息，请参阅本主题的“备注”部分。|  
 |**strong_refcount**|**int**|对此**AppDomain**的强引用数。 这反映了使用此**AppDomain**的当前正在执行的批处理的数目。 请注意，此视图的执行将创建一个**强引用计数**;即使当前没有正在执行的代码， **strong_refcount**的值也为1。|  
 |**weak_refcount**|**int**|对此**AppDomain**的弱引用的数目。 这表示将缓存**AppDomain**中的对象数。 当你执行托管数据库对象时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]会将其缓存在**AppDomain**内以备将来重复使用。 从而可以提高性能。|  
-|**低廉**|**int**|**AppDomain**的成本。 成本越高，在内存压力下卸载该**AppDomain**的可能性就越大。 开销通常取决于重新创建此**AppDomain**所需的内存量。|  
-|**负值**|**int**|**AppDomain**的值。 值越低，则在内存压力下卸载该**AppDomain**的可能性就越大。 值通常取决于使用此**AppDomain**的连接数或批处理数。|  
+|**cost**|**int**|**AppDomain**的成本。 成本越高，在内存压力下卸载该**AppDomain**的可能性就越大。 开销通常取决于重新创建此**AppDomain**所需的内存量。|  
+|**value**|**int**|**AppDomain**的值。 值越低，则在内存压力下卸载该**AppDomain**的可能性就越大。 值通常取决于使用此**AppDomain**的连接数或批处理数。|  
 |**total_processor_time_ms**|**bigint**|自进程启动后在当前应用程序域中执行的过程中所有线程所用的处理器总时间（毫秒）。 这等效于**MonitoringTotalProcessorTime**。|  
 |**total_allocated_memory_kb**|**bigint**|应用程序域自创建以来进行的所有内存分配的总大小 (KB)（不减去已收集的内存大小）。 这等效于**MonitoringTotalAllocatedMemorySize**。|  
 |**survived_memory_kb**|**bigint**|在已知当前应用程序域所引用的最近一次全面的阻塞收集之后仍剩余的字节数 (KB)。 这等效于**MonitoringSurvivedMemorySize**。|  
@@ -58,13 +58,13 @@ ms.locfileid: "68138413"
   
 ## <a name="appdomain-initialization"></a>AppDomain 初始化  
   
-|状态|说明|  
+|State|说明|  
 |-----------|-----------------|  
 |E_APPDOMAIN_CREATING|正在创建**AppDomain** 。|  
   
 ## <a name="appdomain-usage"></a>AppDomain 使用情况  
   
-|状态|说明|  
+|State|说明|  
 |-----------|-----------------|  
 |E_APPDOMAIN_SHARED|运行时**AppDomain**已准备就绪，可供多个用户使用。|  
 |E_APPDOMAIN_SINGLEUSER|**AppDomain**可以在 DDL 操作中使用。 此行为不同于 E_APPDOMAIN_SHARED，在后者中，共享的 AppDomain 用于 CLR 集成执行，而非 DDL 操作。 此类 AppDomain 独立于其他并发操作。|  
@@ -72,7 +72,7 @@ ms.locfileid: "68138413"
   
 ## <a name="appdomain-cleanup"></a>AppDomain 的清除  
   
-|状态|说明|  
+|State|说明|  
 |-----------|-----------------|  
 |E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已请求 CLR 卸载**AppDomain**，通常是因为包含托管数据库对象的程序集已更改或删除。|  
 |E_APPDOMAIN_UNLOADED|CLR 已卸载**AppDomain**。 这通常是由于**ThreadAbort**、 **OutOfMemory**或用户代码中未经处理的异常导致的升级过程的结果。|  
