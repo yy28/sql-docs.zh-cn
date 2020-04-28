@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d993cd06d555a9d4136274b35242477df1b304e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262601"
 ---
 # <a name="sysdm_tran_version_store-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
@@ -49,14 +49,14 @@ sys.dm_tran_version_store
 |-----------------|---------------|-----------------|  
 |**transaction_sequence_num**|**bigint**|生成该记录版本的事务的序列号。|  
 |**version_sequence_num**|**bigint**|版本记录序列号。 此值在生成事务的版本中是唯一的。|  
-|database_id |**int**|有版本控制的记录的数据库 ID。|  
+|**database_id**|**int**|有版本控制的记录的数据库 ID。|  
 |**rowset_id**|**bigint**|记录的行集 ID。|  
-|**状态值**|**tinyint**|指示有版本控制的记录是否已拆分为两个记录。 如果此值为 0，则记录存储在一页中。 如果此值为 1，则记录拆分为两个记录，且存储在两个不同页上。|  
+|**status**|**tinyint**|指示有版本控制的记录是否已拆分为两个记录。 如果此值为 0，则记录存储在一页中。 如果此值为 1，则记录拆分为两个记录，且存储在两个不同页上。|  
 |**min_length_in_bytes**|**smallint**|记录的最小长度（字节）。|  
 |**record_length_first_part_in_bytes**|**smallint**|有版本控制的记录的第一部分的长度（字节）。|  
-|**record_image_first_part**|**varbinary （8000）**|版本记录的第一部分的二进制图像。|  
+|**record_image_first_part**|varbinary(8000)****|版本记录的第一部分的二进制图像。|  
 |**record_length_second_part_in_bytes**|**smallint**|版本记录的第二部分的长度（字节）。|  
-|**record_image_second_part**|**varbinary （8000）**|版本记录的第二部分的二进制图像。|  
+|**record_image_second_part**|varbinary(8000)****|版本记录的第二部分的二进制图像。|  
   
 ## <a name="permissions"></a>权限
 
@@ -132,7 +132,7 @@ record_length_second_part_in_bytes record_image_second_part
  输出显示 XSN-57 从一个表创建了三个行版本，XSN-58 从另一个表创建了一个行版本。  
   
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与事务相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

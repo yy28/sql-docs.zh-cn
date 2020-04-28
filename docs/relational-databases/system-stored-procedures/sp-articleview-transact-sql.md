@@ -16,10 +16,10 @@ ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7cc40187ccafebee672214a0926a3ca0d0bc4176
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768995"
 ---
 # <a name="sp_articleview-transact-sql"></a>sp_articleview (Transact-SQL)
@@ -71,7 +71,7 @@ sp_articleview [ @publication = ] 'publication'
 `[ @publisher = ] 'publisher'`指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  ** 在从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器进行发布时，不应使用 publisher。  
+>  *publisher*在从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器进行发布时，不应使用 publisher。  
   
 `[ @refreshsynctranprocs = ] refreshsynctranprocs`是否自动重新创建用于同步复制的存储过程。 *refreshsynctranprocs*的值为**bit**，默认值为1。  
   
@@ -104,7 +104,7 @@ sp_articleview [ @publication = ] 'publication'
  只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_articleview**。  
   
 ## <a name="see-also"></a>另请参阅  
- [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
+ [定义项目](../../relational-databases/replication/publish/define-an-article.md)   
  [定义和修改静态行筛选器](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
  [sp_addarticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   

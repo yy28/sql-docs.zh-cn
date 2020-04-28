@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 14eff405fd4eb1b96f4f5e5b50624d2c1251d546
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70148756"
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>连接到 SQL Server 实例
@@ -40,8 +40,7 @@ ms.locfileid: "70148756"
   
  **在服务器对象构造函数中提供 SQL Server 实例名称**  
   
- 声明 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象变量并将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例名称作为字符串参数传递到构造函数中。 
-  <xref:Microsoft.SqlServer.Management.Smo.Server> 对象使用默认的连接设置建立与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例的连接。  
+ 声明 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象变量并将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例名称作为字符串参数传递到构造函数中。 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象使用默认的连接设置建立与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例的连接。  
   
 ## <a name="connection-pooling"></a>连接池  
  通常不要求调用 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> 对象的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 方法。 在需要时，SMO 会自动建立连接，并在操作完成后，将连接发布到连接池。 在调用 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> 方法时，不释放与池的连接。 若要释放与池的连接，需要显式调用 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> 方法。 此外，您可以通过设置 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.NonPooledConnection%2A> 对象的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 属性，请求非池的连接。  

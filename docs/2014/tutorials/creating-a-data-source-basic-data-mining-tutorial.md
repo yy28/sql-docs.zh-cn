@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3f85320a99c901a2fd71c9048750825569559099
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69494022"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>创建数据源（数据挖掘基础教程）
@@ -50,7 +50,7 @@ ms.locfileid: "69494022"
   
      在 "**完成向导**" 页上，请注意，默认情况下，数据源名为 "艾德作品 DW 2012"。  
   
-10. 单击“完成”  。  
+10. 单击 **“完成”** 。  
   
      新数据源（艾德公司 DW 2012）出现在解决方案资源管理器的 "**数据源**" 文件夹中。  
   
@@ -63,6 +63,6 @@ ms.locfileid: "69494022"
 ## <a name="see-also"></a>另请参阅  
  [&#40;SSAS 多维&#41;创建数据源](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
  [定义数据源](../analysis-services/lesson-1-2-defining-a-data-source.md)   
- [设置 &#40;SSAS 的模拟选项-多维&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
+ [设置模拟选项（SSAS - 多维）](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
   
   

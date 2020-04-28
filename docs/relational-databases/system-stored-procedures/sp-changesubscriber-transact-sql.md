@@ -16,10 +16,10 @@ ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 42b56712e8b441184d55bf12ce16dbcb55930374
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68762781"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
@@ -60,7 +60,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @type = ] type`订阅服务器类型。 *类型*为**tinyint**，默认值为 NULL。 **0**表示[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器。 **1**指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或其他 ODBC 数据源服务器订阅服务器。  
   
-`[ @login = ] 'login'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证登录 ID。 *login*的值为**sysname**，默认值为 NULL。  
+`[ @login = ] 'login'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证登录 ID。 login 的数据类型为 sysname，默认值为 NULL******。  
   
 `[ @password = ] 'password'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证密码。 *password*的值为**sysname**，默认值**%** 为。 **%** 指示密码属性未更改。  
   
@@ -76,9 +76,9 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |-----------|-----------------|  
 |**1**|一次性|  
 |**2**|按需|  
-|**4**|每天一次|  
+|**4**|每日|  
 |**8**|每周|  
-|**16**|每月|  
+|**超过**|每月一次|  
 |**32**|与“每月”选项相关|  
 |**64**|自动启动|  
 |**128**|重复执行|  
@@ -93,7 +93,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**16**|最后一个|  
+|**超过**|最后一个|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`分发任务在定义的*frequency_type*期间应定期发生的频率。 *frequency_recurrence_factor*的值为**int**，默认值为 NULL。  
   
@@ -103,7 +103,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|秒|  
-|**4**|分钟|  
+|**4**|Minute|  
 |**8**|Hour|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequence_subday*的间隔。 *frequency_subday_interval*的值为**int**，默认值为 NULL。  
@@ -128,7 +128,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 `[ @publisher = ] 'publisher'`指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  ** 更改[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器上的项目属性时，不应使用 publisher。  
+>  *publisher*更改[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器上的项目属性时，不应使用 publisher。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  

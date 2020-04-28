@@ -16,10 +16,10 @@ ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8fe752b17af683f59078bd7c37eb702a9408a530
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771404"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
@@ -53,7 +53,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  下表说明项目的属性和这些属性的值。  
   
-|properties|值|说明|  
+|属性|值|说明|  
 |--------------|------------|-----------------|  
 |**creation_script**||用于创建目标表的项目架构脚本的路径和名称。 默认值为 NULL。|  
 |**del_cmd**||要执行的 DELETE 语句，否则从日志构造。|  
@@ -67,7 +67,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**identity_range**||控制在订阅服务器中分配的标识范围的大小。 对等复制不支持此属性。|  
 |**ins_cmd**||要执行的 INSERT 语句，否则从日志构造。|  
 |**pre_creation_cmd**||可以在应用同步之前除去、删除或截断目标表的预创建命令。|  
-||**内容**|不使用命令。|  
+||**无**|不使用命令。|  
 ||**击落**|删除目标表。|  
 ||**delete**|删除目标表。|  
 ||**去**|截断目标表。|  
@@ -107,7 +107,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x40000000**|复制权限。|  
 ||**0x80000000**|尝试删除不属于发布一部分的任何对象的依赖项。|  
 ||**0x100000000**|如果 FILESTREAM 属性是在**varbinary （max）** 列上指定的，则使用此选项复制该属性。 如果要将表复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 订阅服务器，请勿指定此选项。 不管如何设置此架构选项， [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]都不支持将包含 FILESTREAM 列的表复制到订阅服务器。<br /><br /> 请参阅相关选项**0x800000000**。|  
-||**0x200000000**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]将中引入的日期和时间数据类型（**date**、 **time**、 **datetimeoffset**和 datetime2）转换为早期版本支持的数据类型。 **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+||**0x200000000**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]将中引入的日期和时间数据类型（**date**、 **time**、 **datetimeoffset**和 datetime2）转换为早期版本支持的数据类型。 **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 ||**0x400000000**|复制数据和索引的压缩选项。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。|  
 ||**0x800000000**|设置此选项可将 FILESTREAM 数据存储到订阅服务器上其自身的文件组中。 如果不设置此选项，FILESTREAM 数据将存储在默认文件组中。 由于复制操作不创建文件组，因此如果您设置此选项，您必须先创建文件组，然后在订阅服务器上应用快照。 有关如何在应用快照之前创建对象的详细信息，请参阅[在应用快照之前和之后执行脚本](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。<br /><br /> 请参阅相关选项**0x100000000**。|  
 ||**0x1000000000**|将大于8000字节的公共语言运行时（CLR）用户定义类型（Udt）转换为**varbinary （max）** ，以使类型为 UDT 的列能够复制到运行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的订阅服务器。|  
@@ -118,18 +118,18 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x20000000000**|复制列的 SPARSE 属性。 有关此属性的详细信息，请参阅[使用稀疏列](../../relational-databases/tables/use-sparse-columns.md)。|  
 ||**0x40000000000**|允许快照代理编写脚本，以便在订阅服务器上创建内存优化表。|  
 ||**0x80000000000**|将聚集索引转换为内存优化项目的非聚集索引。|  
-|**状态值**||指定属性的新状态。|  
+|**status**||指定属性的新状态。|  
 ||**dts horizontal partitions**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 ||**include column names**|复制的 INSERT 语句中包括列名。|  
 ||**no column names**|复制的 INSERT 语句中不包括列名。|  
 ||**no dts horizontal partitions**|项目的水平分区不由可转换的订阅定义。|  
-||**内容**|清除[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)表中的所有状态选项，并将项目标记为非活动。|  
+||**无**|清除[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)表中的所有状态选项，并将项目标记为非活动。|  
 ||**parameters**|使用参数化命令将更改传播给订阅服务器。 这是新项目的默认设置。|  
 ||**字符串文本**|使用字符串文字值将更改传播给订阅服务器。|  
 |**sync_object**||用于生成同步输出文件的表或视图的名称。 默认值为 NULL。 Oracle 发布服务器不支持。|  
-|**tablespace**||标识从 Oracle 数据库发布的项目的日志记录表所使用的表空间。 有关详细信息，请参阅[管理 Oracle 表空间](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)。|  
+|**表空间**||标识从 Oracle 数据库发布的项目的日志记录表所使用的表空间。 有关详细信息，请参阅[管理 Oracle 表空间](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)。|  
 |**阀**||用于控制分发代理何时分配新标识范围的百分比值。 对等复制不支持此属性。|  
-|type ||Oracle 发布服务器不支持。|  
+|**type**||Oracle 发布服务器不支持。|  
 ||**logbased**|基于日志的项目。|  
 ||**logbased manualboth**|具有手动筛选器和手动视图并且基于日志的项目。 此选项要求同时设置 " *sync_object* " 和 "*筛选器*" 属性。 Oracle 发布服务器不支持。|  
 ||**logbased manualfilter**|具有手动筛选器并且基于日志的项目。 此选项要求同时设置 " *sync_object* " 和 "*筛选器*" 属性。 Oracle 发布服务器不支持。|  
@@ -160,7 +160,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 `[ @publisher = ] 'publisher'`指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  ** 更改[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器上的项目属性时，不应使用 publisher。  
+>  *publisher*更改[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器上的项目属性时，不应使用 publisher。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
@@ -198,7 +198,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 -   **ins_cmd**  
   
--   **状态值**  
+-   **status**  
   
 -   **upd_cmd**  
   

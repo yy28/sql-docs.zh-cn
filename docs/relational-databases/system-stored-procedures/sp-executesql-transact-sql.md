@@ -20,17 +20,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a548597b42bacdf5afaf7a2dc024156bd4ec3ad3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68290356"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  执行可多次重复使用或动态生成的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或批处理。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或批处理可以包含嵌入参数。  
+  执行可多次重复使用或动态生成的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或批处理。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或批处理可以包含嵌入参数。  
   
 > [!IMPORTANT]  
 >  运行时编译的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可能会使应用程序受到恶意攻击。  
@@ -131,8 +130,7 @@ SELECT @max_title;
   
 -   因为在 sp_executesql 字符串中，[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的实际文本在两次执行之间并未改变，所以查询优化器应该能将第二次执行中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句与第一次执行时生成的执行计划匹配。 因此，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不必编译第二条语句。  
   
--   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 字符串只生成一次。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] 字符串只生成一次。  
   
 -   整数参数按其本身格式指定。 不需要转换为 Unicode。  
   
@@ -236,7 +234,7 @@ FROM Sales.SalesOrderHeader
 WHERE SalesOrderNumber = @SalesOrderNumber;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-executing-a-simple-select-statement"></a>D. 执行简单的 SELECT 语句  
  以下示例创建并执行一个简单的 `SELECT` 语句，其中包含名为 `@level` 的嵌入参数。  

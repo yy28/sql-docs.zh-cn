@@ -19,10 +19,10 @@ ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4b6e5b28612efccafa9e2de0606eef821e341081
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68255603"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
@@ -47,12 +47,12 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |属性|**varchar（128**|与此计划关联的属性的名称。 紧靠此的下表列出了可能的属性、数据类型及其说明。|  
-|值|**sql_variant**|与此计划关联的属性的值。|  
+|value|**sql_variant**|与此计划关联的属性的值。|  
 |is_cache_key|**bit**|指示此属性是否用作计划的缓存查找密钥的一部分。|  
 
 在上表中，**属性**可具有以下值：
 
-|Attribute|数据类型|说明|  
+|特性|数据类型|说明|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|指示编译计划所使用的选项值。|  
 |objectid|**int**|用于在缓存中查找对象的主键之一。 这是存储在数据库对象（过程、视图、触发器等）的[sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)中的对象 ID。 对于类型为“即席”或“已准备好”的计划，它是批处理文本的内部哈希。|  
@@ -167,11 +167,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与执行相关的动态管理视图和函数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_cached_plans (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+ [sys. dm_exec_cached_plans &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   
 

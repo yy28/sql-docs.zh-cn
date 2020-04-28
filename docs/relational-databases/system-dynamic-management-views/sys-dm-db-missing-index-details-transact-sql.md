@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8218ff5c92613b0f152c699a81314cb6a3530885
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68263791"
 ---
 # <a name="sysdm_db_missing_index_details-transact-sql"></a>sys.dm_db_missing_index_details (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68263791"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**index_handle**|**int**|标识特定的缺失索引。 该标识符在服务器中是唯一的。 **index_handle**是此表的键。|  
-|database_id |**smallint**|标识带有缺失索引的表所驻留的数据库。|  
+|**database_id**|**smallint**|标识带有缺失索引的表所驻留的数据库。|  
 |**object_id**|**int**|标识索引缺失的表。|  
 |**equality_columns**|**nvarchar(4000)**|构成相等谓词的列的逗号分隔列表，谓词的形式如下：<br /><br /> *表列* =*constant_value*|  
 |**inequality_columns**|**nvarchar(4000)**|构成不等谓词的列的逗号分隔列表，例如以下形式的谓词：<br /><br /> *表列* > *constant_value*<br /><br /> “=”之外的任何比较运算符都表示不相等。|  

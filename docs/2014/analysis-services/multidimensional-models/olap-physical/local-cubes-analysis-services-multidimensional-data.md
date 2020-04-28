@@ -12,11 +12,11 @@ ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8c67150d5345b95b025e4005642ebccac63f86f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 52770f78381da2eb686aa445d19e6923f0f0a275
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889501"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>本地多维数据集（Analysis Services - 多维数据）
@@ -24,7 +24,7 @@ ms.locfileid: "68889501"
   
  本地多维数据集和本地挖掘模型允许在客户端工作站与网络的连接断开时对该工作站进行分析。 例如，客户端应用程序可能调用 OLE DB for OLAP 9.0 访问接口 (MSOLAP.3)，该接口将加载本地多维数据集引擎以创建和查询本地多维数据集，如下图所示：  
   
- ![本地多维数据集和模型的客户端体系结构](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-localcubearch9.gif "本地多维数据集和模型的客户端体系结构")  
+ ![本地多维数据集和模型的客户端体系结构](../../../analysis-services/dev-guide/media/as-localcubearch9.gif "本地多维数据集和模型的客户端体系结构")  
   
  在与本地多维数据集进行交互时，ADMOD.NET 和 Analysis Management Objects (AMO) 也将加载本地多维数据集引擎。 只有一个进程可以访问本地多维数据集文件，这是因为本地多维数据集引擎建立到本地多维数据集的连接时将以独占方式锁定本地多维数据集文件。 对于一个进程，最多允许同时有五个连接。  
   

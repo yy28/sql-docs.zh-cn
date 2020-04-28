@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b91ac554186c37b2e074dd3faded49a01259222e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262691"
 ---
 # <a name="sysdm_tran_transactions_snapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot (Transact-SQL)
@@ -52,9 +52,7 @@ transaction_sequence_num snapshot_id snapshot_sequence_num
 60                       3           60  
 ```  
   
- 
-  `transaction_sequence_num` 列标识当前快照事务的事务序列 (XSN) 号。 该输出显示两个序列号：`59` 和 `60`。 
-  `snapshot_sequence_num` 列标识在每个快照事务启动时处于活动状态的事务的事务序列号。  
+ `transaction_sequence_num` 列标识当前快照事务的事务序列 (XSN) 号。 该输出显示两个序列号：`59` 和 `60`。 `snapshot_sequence_num` 列标识在每个快照事务启动时处于活动状态的事务的事务序列号。  
   
  该输出显示，在两个活动事务 XSN-57 和 XSN-58 运行时，快照事务 XSN-59 启动。 如果 XSN-57 或 XSN-58 进行了数据修改，XSN-59 将忽略这些修改，并使用行版本控制来维护数据库的事务一致视图。  
   
@@ -86,7 +84,7 @@ dm_tran_transactions_snapshot
  每个事务都由事务开始时分配的事务序列号标识。 在执行 BEGIN TRANSACTION 或 BEGIN WORK 语句时事务启动。 但是，[!INCLUDE[ssDE](../../includes/ssde-md.md)]通过执行 BEGIN TRANSACTION 或 BEGIN WORK 语句后第一个访问数据的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句来分配事务序列号。 事务序列号以一为增量递增。  
   
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与事务相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

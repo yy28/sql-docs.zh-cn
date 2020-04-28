@@ -18,10 +18,10 @@ ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 660a75f1e6fea9b5a825372501c2e65f2dd3874b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69652438"
 ---
 # <a name="sp_cursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "69652438"
 
   为提交的游标语句或批处理编译计划，然后创建并填充游标。 sp_cursorprepexec 结合了 sp_cursorprepare 和 sp_cursorexecute 的函数。 此过程通过在表格格式数据流（TDS）包中指定 ID = 5 来调用。  
   
- ![link 图标](../../database-engine/configure-windows/media/topic-link.gif "“链接”图标") [transact-sql 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![链接图标](../../database-engine/configure-windows/media/topic-link.gif "“链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,10 +44,10 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  *准备的句柄*  
  是生成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的已准备的*句柄*标识符。 需要*准备的句柄*并返回**int**。  
   
- *游标*  
+ *cursor*  
  是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的游标标识符。 *cursor*是必需的参数，必须在对此游标执行操作的所有后续过程（例如 sp_cursorfetch）上提供。  
   
- *化*  
+ *params*  
  标识参数化语句。 变量的参数定义将替换为语句*中的参数*标记。 *params*是调用**ntext**、 **nchar**或**nvarchar**输入值的必需参数。  
   
 > [!NOTE]  

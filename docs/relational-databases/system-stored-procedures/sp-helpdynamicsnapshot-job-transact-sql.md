@@ -22,10 +22,10 @@ ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 55d7ad0dfd941102cfeb6661e65980f980fa8b2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770980"
 ---
 # <a name="sp_helpdynamicsnapshot_job-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
@@ -59,7 +59,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**识别**|**int**|标识已筛选的数据快照作业。|  
+|**id**|**int**|标识已筛选的数据快照作业。|  
 |**job_name**|**sysname**|已筛选数据快照作业的名称。|  
 |**job_id**|**uniqueidentifier**|标识分发[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务器上的代理作业。|  
 |**dynamic_filter_login**|**sysname**|用于计算为发布定义的参数化行筛选器中的[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)函数的值。|  

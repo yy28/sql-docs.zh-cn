@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5c7b4d78f73af003e93bc662f10f1f95acda2b6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265713"
 ---
 # <a name="sysdm_os_performance_counters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
@@ -37,12 +37,12 @@ ms.locfileid: "68265713"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**object_name**|**nchar （128）**|该计数器所属的类别。|  
-|**counter_name**|**nchar （128）**|计数器的名称。 若要获取有关计数器的详细信息，这是要从[使用 SQL Server 对象](../../relational-databases/performance-monitor/use-sql-server-objects.md)的计数器列表中选择的主题的名称。 |  
-|**instance_name**|**nchar （128）**|计数器特定实例的名称。 通常包含数据库名称。|  
+|**object_name**|**nchar(128)**|该计数器所属的类别。|  
+|**counter_name**|**nchar(128)**|计数器的名称。 若要获取有关计数器的详细信息，这是要从[使用 SQL Server 对象](../../relational-databases/performance-monitor/use-sql-server-objects.md)的计数器列表中选择的主题的名称。 |  
+|**instance_name**|**nchar(128)**|计数器特定实例的名称。 通常包含数据库名称。|  
 |**cntr_value**|**bigint**|计数器的当前值。<br /><br /> **注意：** 对于每秒计数器，此值为累积值。 速率值必须通过对离散时间间隔的值抽样来进行计算。 任何两个连续抽样值之间的差等于针对所使用时间间隔的速率。|  
 |**cntr_type**|**int**|Windows 性能体系结构定义的计数器类型。 有关性能计数器类型的详细信息，请参阅文档中的[WMI 性能计数器类型](https://docs.microsoft.com/windows/desktop/WmiSdk/wmi-performance-counter-types)或 Windows Server 文档。|  
-|pdw_node_id |**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|**pdw_node_id**|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="remarks"></a>备注  
  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安装实例无法显示 Windows 操作系统的性能计数器，请使用以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询来确定性能计数器是否已被禁用。  

@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb5dec821d69066ce0a24c4e104f5f2be3ef905a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530946"
 ---
 # <a name="developer39s-guide-database-engine"></a>开发人员&#39;指南（数据库引擎）
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]提供了一组丰富的用于开发、管理和控制数据库应用程序的工具。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供了大量用于开发、管理和控制数据库应用程序的工具。  
   
 ## <a name="in-this-section"></a>本节内容  
- [公共语言运行时 &#40;CLR&#41; 集成编程概念](clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
+ [公共语言运行时 (CLR) 集成编程概念](clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
  说明 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows .NET Framework 的公共语言运行时 (CLR) 组件如何与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 集成。 这表示您可以使用任何 .NET Framework 语言（包括 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic .NET 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#）编写存储过程、触发器、用户定义类型、用户定义函数、用户定义聚合和流式表值函数。  
   
  [SQL Server Native Client 编程](native-client/sql-server-native-client-programming.md)  

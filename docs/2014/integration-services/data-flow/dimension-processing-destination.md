@@ -18,14 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3f4aaaef619e0f8ae5810e70e9a6707c6213268d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890568"
 ---
 # <a name="dimension-processing-destination"></a>维度处理目标
-  维度处理目标加载并处理[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]维度。 有关维度的详细信息，请参阅[维度（Analysis Services - 多维数据）](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data)。  
+  维度处理目标加载并处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 维度。 有关维度的详细信息，请参阅[维度（Analysis Services - 多维数据）](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data)。  
   
  维度处理目标包含下列功能：  
   
@@ -46,15 +46,15 @@ ms.locfileid: "68890568"
   
  有关可在 **“维度处理目标编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
--   [维度处理目标编辑器 &#40;连接管理器页&#41;](../dimension-processing-destination-editor-connection-manager-page.md)  
+-   [维度处理目标编辑器（“连接管理器”页）](../dimension-processing-destination-editor-connection-manager-page.md)  
   
--   [维度处理目标编辑器 &#40;映射 "页面&#41;](../dimension-processing-destination-editor-mappings-page.md)  
+-   [维度处理目标编辑器（“映射”页）](../dimension-processing-destination-editor-mappings-page.md)  
   
--   [维度处理目标编辑器 &#40;高级页面&#41;](../dimension-processing-destination-editor-advanced-page.md)  
+-   [维度处理目标编辑器（“高级”页）](../dimension-processing-destination-editor-advanced-page.md)  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [Common Properties](../common-properties.md)  
+-   [通用属性](../common-properties.md)  
   
  有关如何设置属性的详细信息，请参阅 [设置数据流组件的属性](set-the-properties-of-a-data-flow-component.md)。  
   

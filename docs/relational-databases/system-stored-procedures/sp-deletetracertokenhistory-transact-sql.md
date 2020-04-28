@@ -16,10 +16,10 @@ ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cf591964e5dfef0536c79b0b35e5918d4f46d972
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771143"
 ---
 # <a name="sp_deletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
@@ -49,10 +49,10 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 要删除的跟踪令牌的 ID。 数据类型为**int**。默认值为*null*。 如果*为 null*，则删除属于该发布的所有跟踪令牌。
 
 `[ @cutoff_date= ] cutoff_date`  
-删除此日期之前插入到发布中的跟踪令牌。 数据类型为**datetime**。 默认值为*null*。
+删除此日期之前插入到发布中的跟踪令牌。 数据类型为**datetime**。 默认值为 *null*。
 
 `[ @publisher= ] 'publisher'`  
-发布服务器的名称。 数据类型为**sysname**。 默认值为*null*。
+发布服务器的名称。 数据类型为**sysname**。 默认值为 *null*。
 
 > [!NOTE]
 > 只应为非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器或从分发服务器执行存储过程时指定此参数。

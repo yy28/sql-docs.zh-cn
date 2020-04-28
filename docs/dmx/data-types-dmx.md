@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 3f1c43ad454f499429a151dc23177e380f4eac88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892864"
 ---
 # <a name="data-types-dmx"></a>数据类型 (DMX)
@@ -22,7 +22,7 @@ ms.locfileid: "68892864"
   
  数据类型取决于算法。 每种算法决定了受支持的数据类型及其使用方式。 Microsoft 算法支持下列数据类型：  
   
--   文本  
+-   Text  
   
 -   Long  
   
@@ -30,7 +30,7 @@ ms.locfileid: "68892864"
   
 -   Double  
   
--   Date  
+-   日期  
   
  有关[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支持的数据类型的详细信息，请参阅数据[挖掘&#41;&#40;数据类型](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)。  
   

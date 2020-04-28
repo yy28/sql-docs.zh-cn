@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b528a7a9efb91bb99cb7c2b0a32c71dc0de7785b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811267"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>对 SQL Server 对象和版本的 DAC 支持
@@ -31,10 +31,10 @@ ms.locfileid: "68811267"
   
 -   [数据部署限制](#DeploymentLimitations)  
   
--   [有关部署操作的其他注意事项](#Considerations)  
+-   [部署操作的其他注意事项](#Considerations)  
   
-##  <a name="SupportedObjects"></a>支持的 SQL Server 对象  
- 当编写或编辑数据层应用程序时，只能在其中指定支持的对象。 对于包含在 DAC 中不支持的对象的现有数据库，无法从其提取、注册或导入 DAC。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]支持 DAC 中的以下对象。  
+##  <a name="supported-sql-server-objects"></a><a name="SupportedObjects"></a> 支持的 SQL Server 对象  
+ 当编写或编辑数据层应用程序时，只能在其中指定支持的对象。 对于包含在 DAC 中不支持的对象的现有数据库，无法从其提取、注册或导入 DAC。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持 DAC 中的以下对象。  
   
 |||  
 |-|-|  
@@ -54,27 +54,24 @@ ms.locfileid: "68811267"
 |TYPE：用户定义表类型|USER|  
 |VIEW||  
   
-##  <a name="SupportByVersion"></a>数据层应用程序支持的版本 SQL Server  
+##  <a name="data-tier-application-support-by-the-versions-of-sql-server"></a><a name="SupportByVersion"></a>数据层应用程序支持的版本 SQL Server  
  各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本具有针对 DAC 操作的不同级别的支持。 某一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支持的所有 DAC 操作均受到该版本的所有次级版本的支持。  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例支持以下 DAC 操作：  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例支持以下 DAC 操作：  
   
 -   所有支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都支持导出和提取。  
   
--   
-  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和所有版本的 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]都支持所有操作。  
+-   [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和所有版本的 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]都支持所有操作。  
   
 -   在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Service Pack 2 (SP2) 或更高版本以及 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 或更高版本上支持所有操作。  
   
  DAC Framework 包含用于生成和处理 DAC 包和导出文件的客户端工具。 以下产品包括 DAC Framework  
   
--   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]和[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]包括 dac Framework 3.0，它支持所有 DAC 操作。  
+-   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 包括 DAC Framework 3.0，它支持所有 DAC 操作。  
   
--   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]SP1 和 Visual Studio 2010 SP1 包括了 DAC Framework 1.1，它支持除了导出和导入之外的所有 DAC 操作。  
+-   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP1 和 Visual Studio 2010 SP1 包括了 DAC Framework 1.1，它支持除了导出和导入之外的所有 DAC 操作。  
   
--   
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 和 Visual Studio 2010 包括了 DAC Framework 1.0，它支持除了导出、导入和就地升级之外的所有 DAC 操作。  
+-   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 和 Visual Studio 2010 包括了 DAC Framework 1.0，它支持除了导出、导入和就地升级之外的所有 DAC 操作。  
   
 -   来自 SQL Server 或 Visual Studio 的早期版本的客户端工具不支持 DAC 操作。  
   
@@ -82,7 +79,7 @@ ms.locfileid: "68811267"
   
  使用某一 DAC Framework 版本生成的 DAC 包或导出文件可由任何更高版本的 DAC Framework 处理。 例如，使用 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 客户端工具提取的 DAC 包可使用 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP1 或更高版本客户端工具进行部署。  
   
-##  <a name="DeploymentLimitations"></a>数据部署限制  
+##  <a name="data-deployment-limitations"></a><a name="DeploymentLimitations"></a>数据部署限制  
  请注意 SQL Server 2012 SP1 中 DAC Framework 数据部署引擎的以下这些保真度限制。 这些限制适用于以下 DAC Framework 操作：部署或发布 .dacpac 文件，以及导入 .bacpac 文件。  
   
 1.  sql_variant 列中特定条件和基类型的元数据丢失。 在受影响的情况下，你将会看到一条包含以下消息的警告：  **由 DAC Framework 部署时不保留 sql_variant 列中使用的特定数据类型的特定属性。**  
@@ -107,12 +104,12 @@ ms.locfileid: "68811267"
   
     -   DECIMAL、NUMERIC 基类型：值的精度大于 28。  
   
-##  <a name="Considerations"></a>部署操作的其他注意事项  
+##  <a name="additional-considerations-for-deployment-actions"></a><a name="Considerations"></a> 有关部署操作的其他注意事项  
  请注意以下有关 DAC Framework 数据部署操作的注意事项：  
   
 -   **提取/导出**使用 DAC 框架从数据库创建包的操作-例如，提取 .dacpac 文件，导出 bacpac 文件-这些限制并不适用。 该包中的数据是源数据库中数据的完全保真表示形式。 如果该包中存在其中任意条件，则提取/导出日志将包含通过上述消息所提供问题的摘要。 这将向用户警告他们所创建的包存在潜在数据部署问题。 用户也将会在日志中看到以下摘要消息：  **这些限制不影响 DAC Framework 创建的 DAC 包中存储的数据类型和值的保真度; 它们只适用于因将 DAC 包部署到数据库而产生的数据类型和值。有关受影响的数据以及如何绕开此限制的详细信息，请参阅** [此主题](https://go.microsoft.com/fwlink/?LinkId=267086)。  
   
--   **部署/发布/导入**操作，这些操作使用 DAC Framework 将包部署到数据库（如部署或发布 .dacpac 文件），并导入 bacpac 文件，这些限制都适用。 目标数据库中生成的数据不能包含包中数据的完全保真表示形式。 部署/导入日志将对出现问题的每个实例都显示一条上述消息。 操作将因错误而被阻止 - 请参阅上述类别 3 - 但将继续显示其他警告。  
+-   **部署/发布/导入** - 对于使用 DAC Framework 将包部署到数据库的操作（例如，部署或发布 .dacpac 文件，以及导入 .bacpac 文件），这些限制适用。 目标数据库中生成的数据不能包含包中数据的完全保真表示形式。 部署/导入日志将对出现问题的每个实例都显示一条上述消息。 操作将因错误而被阻止 - 请参阅上述类别 3 - 但将继续显示其他警告。  
   
      有关此情况下受影响的数据以及如何在部署/发布/导入操作中绕开此限制的详细信息，请参阅 [此主题](https://go.microsoft.com/fwlink/?LinkId=267087)。  
   

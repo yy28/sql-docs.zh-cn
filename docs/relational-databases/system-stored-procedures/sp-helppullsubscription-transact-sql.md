@@ -16,10 +16,10 @@ ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1ab2afba10ff754b5bd99d36df02d642cc5c6bb0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771437"
 ---
 # <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
@@ -61,20 +61,20 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**publication description**|**nvarchar(255)**|对发布的说明。|  
 |**last updating time**|**date**|订阅信息上次更新的时间。 这是由 ISO 日期 (114) 和 ODBC 时间 (121) 组成的 UNICODE 字符串。 格式为 yyyymmdd hh:mi:sss.mmm，其中“yyyy”表示年，“mm”表示月，“dd”表示日，“hh”表示小时，“mi”表示分钟，“sss”表示秒，“mmm”表示毫秒。|  
 |**订阅名称**|**varchar （386）**|订阅的名称。|  
-|**上一个事务时间戳**|**varbinary （16）**|上一个复制的事务的时间戳。|  
+|**上一个事务时间戳**|**varbinary(16)**|上一个复制的事务的时间戳。|  
 |**update mode**|**tinyint**|允许的更新类型。|  
 |**distribution agent job_id**|**int**|分发代理的作业 ID。|  
 |**enabled_for_synmgr**|**int**|指示是否可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 同步管理器同步订阅。|  
-|**subscription guid**|**binary （16）**|发布上订阅版本的全局标识符。|  
-|**subid**|**binary （16）**|匿名订阅的全局标识符。|  
+|**subscription guid**|**binary(16)**|发布上订阅版本的全局标识符。|  
+|**subid**|**binary(16)**|匿名订阅的全局标识符。|  
 |**immediate_sync**|**bit**|表示是否在每次快照代理运行时创建或重新创建同步文件。|  
 |**publisher login**|**sysname**|在发布服务器上用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录 ID。|  
 |**publisher password**|**nvarchar （524）**|在发布服务器上用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的密码（加密）。|  
-|**publisher security_mode**|**int**|在发布服务器上实现的安全模式：<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** = Windows 身份验证<br /><br /> **2** = 同步触发器使用静态**sysservers**项执行远程过程调用（RPC），并且*发布*服务器必须在**sysservers**表中定义为远程服务器或链接服务器。|  
+|**publisher security_mode**|**int**|在发布服务器上实现的安全模式：<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** = Windows 身份验证<br /><br /> **2** = 同步触发器使用静态**sysservers**项执行远程过程调用（RPC），并且*发布*服务器必须在**sysservers**表中定义为远程服务器或链接服务器。|  
 |**发行人**|**sysname**|分发服务器的名称。|  
 |**distributor_login**|**sysname**|在分发服务器上用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录 ID。|  
 |**distributor_password**|**nvarchar （524）**|在分发服务器上用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的密码（加密）。|  
-|**distributor_security_mode**|**int**|在分发服务器上实施的安全模式：<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** = Windows 身份验证|  
+|**distributor_security_mode**|**int**|在分发服务器上实施的安全模式：<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** = Windows 身份验证|  
 |**ftp_address**|**sysname**|仅为保持向后兼容。|  
 |**ftp_port**|**int**|仅为保持向后兼容。|  
 |**ftp_login**|**sysname**|仅为保持向后兼容。|  

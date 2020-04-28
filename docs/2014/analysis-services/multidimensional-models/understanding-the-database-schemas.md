@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5aebada2f962e2b90f96a9822dbbe76e796f23e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811054"
 ---
 # <a name="understanding-the-database-schemas"></a>了解数据库架构
@@ -82,8 +82,7 @@ ms.locfileid: "68811054"
  向导会生成一个单独的表以保存度量值组中需要翻译列的任意属性的翻译值。 向导还会为每种所需的语言创建一个单独的列。  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>数据类型转换和默认长度  
- 架构生成向导会在所有情况下忽略数据类型，但使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar`数据类型的列除外。 
-  `wchar` 数据大小直接翻译为 `nvarchar` 数据类型。 但是，如果使用 `wchar` 大小的列的指定长度大于 4000 字节，则架构生成向导会生成一个错误。  
+ 架构生成向导会在所有情况下忽略数据类型，但使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar`数据类型的列除外。 `wchar` 数据大小直接翻译为 `nvarchar` 数据类型。 但是，如果使用 `wchar` 大小的列的指定长度大于 4000 字节，则架构生成向导会生成一个错误。  
   
  如果数据项（如属性的绑定）没有指定的长度，则针对该列使用下表中列出的默认长度。  
   

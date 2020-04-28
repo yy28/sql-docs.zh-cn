@@ -16,10 +16,10 @@ ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a47a81b2b19ceccf76a031e298ab60cf4a6f8c9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770954"
 ---
 # <a name="sp_helpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
@@ -46,15 +46,15 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**路径名**|**sysname**|发布者的名称。|  
+|name |**sysname**|发布者的名称。|  
 |**distribution_db**|**sysname**|指定的发布服务器的分发数据库。|  
-|**security_mode**|**int**|复制代理连接到发布服务器进行排队更新订阅时所用的安全模式，或者用于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器的安全模式。<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** = Windows 身份验证|  
+|**security_mode**|**int**|复制代理连接到发布服务器进行排队更新订阅时所用的安全模式，或者用于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器的安全模式。<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** = Windows 身份验证|  
 |**id**|**sysname**|复制代理连接到发布服务器进行排队更新订阅时的登录名，或者用于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器的登录名。|  
 |password |**nvarchar （524）**|返回的密码（采用简单加密格式）。 对于除**sysadmin**以外的用户，密码为 NULL。|  
 |**正在**|**bit**|指示远程发布服务器是否将本地服务器用作分发服务器：<br /><br /> **0** = 否<br /><br /> **1** = 是|  
 |**working_directory**|**nvarchar(255)**|工作目录的名称。|  
 |**受信任**|**bit**|指示发布服务器连接到分发服务器时是否需要密码。 对于[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]及更高版本，这应该始终返回**0**，这意味着密码是必需的。|  
-|**thirdparty_flag**|**bit**|指示发布是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启用还是由第三方应用程序启用：<br /><br /> **** = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、oracle 或 oracle 网关发布服务器。<br /><br /> **1** = 发布服务器已与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用第三方应用程序集成。|  
+|**thirdparty_flag**|**bit**|指示发布是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启用还是由第三方应用程序启用：<br /><br /> **0** = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、oracle 或 oracle 网关发布服务器。<br /><br /> **1** = 发布服务器已与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用第三方应用程序集成。|  
 |**publisher_type**|**sysname**|发布服务器的类型；可以为下列值之一：<br /><br /> **MSSQLSERVER**<br /><br /> **联手**<br /><br /> **ORACLE GATEWAY**|  
 |**publisher_data_source**|**nvarchar(4000)**|发布服务器中 OLE DB 数据源的名称。|  
 |**storage_connection_string**|**nvarchar(4000)**|适用于 Azure SQL 数据库中的分发服务器或发布服务器的工作目录的存储访问密钥。|  

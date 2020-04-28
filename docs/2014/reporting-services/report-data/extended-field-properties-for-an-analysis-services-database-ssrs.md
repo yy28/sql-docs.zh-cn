@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b05d670e7873cab5b44c1bce0c62c716809af476
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892025"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services 数据库的扩展字段属性 (SSRS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据处理扩展插件支持扩展字段[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]属性。 扩展字段属性是除字段属性 `Value` 和 `IsMissing` 之外的属性，可用于数据源并受数据处理扩展插件支持。 扩展属性并不作为报表数据集的字段集合的一部分显示在“报表数据”窗格中。 您可以通过编写通过使用内置`Fields`集合按名称指定扩展字段属性值的表达式，在报表中包含这些值。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件支持扩展字段属性。 扩展字段属性是除字段属性 `Value` 和 `IsMissing` 之外的属性，可用于数据源并受数据处理扩展插件支持。 扩展属性并不作为报表数据集的字段集合的一部分显示在“报表数据”窗格中。 您可以通过编写通过使用内置`Fields`集合按名称指定扩展字段属性值的表达式，在报表中包含这些值。  
   
  扩展属性包括预定义属性和自定义属性。 预定义属性是多个数据源中通用的属性，它们映射到特定字段属性名称并可通过内置 `Fields` 集合按名称进行访问。 自定义属性是特定于每个数据访问接口的属性，只能通过内置 `Fields` 集合，使用将扩展属性名称用作字符串的语法进行访问。  
   
@@ -29,20 +29,20 @@ ms.locfileid: "68892025"
   
  若要引用未预定义的扩展属性，请在表达式中使用以下语法：  
   
--   *区域!FieldName （"PropertyName"）*  
+-   *Fields!FieldName("PropertyName")*  
   
 ## <a name="predefined-field-properties"></a>预定义的字段属性  
  在大多数情况下，预定义的字段属性应用于度量值、级别或维度。 预定义的字段属性必须在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源中存储相应的值。 如果值不存在，或者（例如）对某个级别指定了仅适用于度量值的字段属性，则该属性将返回空值。  
   
  可以使用以下任一语法引用表达式中的预定义属性：  
   
--   *区域!FieldName. PropertyName*  
+-   *Fields!FieldName.PropertyName*  
   
--   *区域!FieldName （"PropertyName"）*  
+-   *Fields!FieldName("PropertyName")*  
   
  下表提供了您可以使用的预定义字段属性的列表：  
   
-|**属性**|类型 |**Description 或预期值**|  
+|**属性**|类型 |**说明或所需的值**|  
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|指定字段的数据值。|  
 |`IsMissing`|`Boolean`|指示是否在结果数据集中找到了该字段。|  
@@ -123,12 +123,12 @@ CELL PROPERTIES
 |-------------------|-----------------|  
 |1 月|2,481|  
 |February|2,684|  
-|March|2,749|  
+|3 月|2,749|  
 |April|2,739|  
   
  即使属性是 MDX 选择语句的一部分，它们也不会显示在结果集列中。 尽管如此，使用扩展属性功能仍可将这些数据用于报表。 在的 MDX 查询结果窗格[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，如果在多维数据集中设置了单元属性值，则可以双击该单元格并查看单元属性值。 如果双击第一个包含 1,379 的 Order Count 单元，则会看到一个包含以下单元属性的弹出窗口：  
   
-|properties|值|  
+|属性|值|  
 |--------------|-----------|  
 |CellOrdinal|0|  
 |值|2481|  
@@ -150,7 +150,7 @@ CELL PROPERTIES
   
 ## <a name="see-also"></a>另请参阅  
  [表达式（报表生成器和 SSRS）](../report-design/expressions-report-builder-and-ssrs.md)   
- [表达式中的内置集合（报表生成器和 SSRS）](../report-design/built-in-collections-in-expressions-report-builder.md)   
+ [表达式中的内置集合 &#40;报表生成器和 SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
  [数据集字段集合（报表生成器和 SSRS）](dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

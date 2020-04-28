@@ -16,10 +16,10 @@ ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ea01bd3eb765a0a5f7a85245090b79579f347b3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771424"
 ---
 # <a name="sp_helpqreader_agent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
@@ -43,8 +43,8 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**识别**|**int**|代理的 ID。|  
-|**路径名**|**nvarchar （100）**|代理的名称。|  
+|**id**|**int**|代理的 ID。|  
+|**name**|**nvarchar （100）**|代理的名称。|  
 |**job_id**|**uniqueidentifier**|代理作业的唯一 ID。|  
 |**job_login**|**nvarchar(512)**|用于运行分发代理的 Windows 帐户，以*域*\\*用户名*的格式返回。|  
 |**job_password**|**sysname**|出于安全原因，始终返回值** \* \* \* \* \* \* \* 。 \* \* **|  
@@ -59,6 +59,6 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
  当*frompublisher*的值为**1**时，只有发布服务器上的**sysadmin**固定服务器角色的成员或发布数据库上**db_owner**固定数据库角色的成员才能执行**sp_helpqreader_agent**。 否则，只有分发服务器上**sysadmin**固定服务器角色的成员或分发数据库上**db_owner**固定数据库角色的成员才能执行**sp_helpqreader_agent**。  
   
 ## <a name="see-also"></a>另请参阅  
- [为事务发布启用更新订阅](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
+ [允许更新事务发布的订阅](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
   

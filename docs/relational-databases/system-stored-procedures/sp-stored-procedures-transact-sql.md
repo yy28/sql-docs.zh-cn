@@ -18,10 +18,10 @@ ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 554b9317d6b474b23e9dbbc10dea03156ccc6287
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68702785"
 ---
 # <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
@@ -55,7 +55,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   当前数据库中的 **dbo** 架构。  
   
-`[ @qualifier = ] 'qualifier'`过程限定符的名称。 *限定符*的值为**sysname**，默认值为 NULL。 各种 DBMS 产品支持表的三部分命名方式（限定符形式）__**。**_架构_**。**_名称_。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，*限定符*表示数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  
+`[ @qualifier = ] 'qualifier'`过程限定符的名称。 *限定符*的值为**sysname**，默认值为 NULL。 各种 DBMS 产品支持表的三部分命名方式（限定符形式）_qualifier_**。**_架构_**。**_名称_。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，*限定符*表示数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  
   
 `[ @fUsePattern = ] 'fUsePattern'`确定下划线（_）、百分比（%）或方括号 [] 是否解释为通配符。 *fUsePattern*的值为**bit**，默认值为1。  
   
@@ -76,10 +76,8 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 |**NUM_INPUT_PARAMS**|**int**|保留供将来使用。|  
 |**NUM_OUTPUT_PARAMS**|**int**|保留供将来使用。|  
 |**NUM_RESULT_SETS**|**int**|保留供将来使用。|  
-|**标记**|**varchar （254）**|对过程的说明。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不为此列返回值。|  
-|**PROCEDURE_TYPE**|**smallint**|过程类型。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 始终返回 2.0。 此值可以为下列值之一：<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
+|**备注**|**varchar （254）**|对过程的说明。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不为此列返回值。|  
+|**PROCEDURE_TYPE**|**smallint**|过程类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 始终返回 2.0。 此值可以为下列值之一：<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
 ## <a name="remarks"></a>备注  
  为了获得最大互操作性，网关客户端应只采用 SQL 标准模式匹配（百分号 (%) 和下划线 (_) 通配符）。  

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 148cab2122a907c138a2bd74c5f3403d231e2793
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262673"
 ---
 # <a name="sysdm_tran_session_transactions-transact-sql"></a>sys.dm_tran_session_transactions (Transact-SQL)
@@ -39,8 +39,7 @@ ms.locfileid: "68262673"
 |-----------------|---------------|-----------------|  
 |session_id|**int**|正在运行事务的会话的 ID。|  
 |transaction_id|**bigint**|事务的 ID。|  
-|transaction_descriptor|**binary （8）**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在与客户端驱动程序通信时使用的事务标识符。|  
+|transaction_descriptor|**binary （8）**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在与客户端驱动程序通信时使用的事务标识符。|  
 |enlist_count|**int**|正在处理事务的会话中的活动请求数。|  
 |is_user_transaction|**bit**|1 = 事务由用户请求启动。<br /><br /> 0 = 系统事务。|  
 |is_local|**bit**|1 = 本地事务。<br /><br /> 0 = 分布式事务或登记的绑定会话事务。|  
@@ -60,7 +59,7 @@ ms.locfileid: "68262673"
  通过使用多个活动的结果集 (MARS) 以自动提交模式执行多个请求，一个会话中可以有多个活动事务。 在这种情况下，sys.dm_tran_session_transactions 将对同一 session_id 显示多个行，在该会话中运行的每个事务对应一行。  
   
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与事务相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

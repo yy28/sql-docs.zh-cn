@@ -24,10 +24,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9532ee19ec8489caa51d090feaff464e030a0da0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68670549"
 ---
 # <a name="system-catalog-views-transact-sql"></a>系统目录视图（Transact-sql）
@@ -47,20 +47,20 @@ ms.locfileid: "68670549"
 > [!IMPORTANT]
 > 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 可能会通过在列列表的末尾添加列来扩充任何系统目录视图的定义。 建议你不要在生产代码中\*使用语法 SELECT *catalog_view_name* FROM，因为返回的列数可能会更改并中断你的应用程序。
 
-中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的目录视图已划分为以下类别：
+ 中的目录视图具有如下类别：
 
 |||
 |-|-|
-|[Always On 可用性组目录视图 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)|[消息 &#40;&#41; 目录视图的错误 &#40;transact-sql&#41;](../system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)）|
-|[Azure SQL Database 目录视图](../../relational-databases/system-catalog-views/azure-sql-database-catalog-views.md)|[&#40;Transact-sql&#41;的对象目录视图](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)|
+|[AlwaysOn 可用性组目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)|[消息 &#40;&#41; 目录视图的错误 &#40;transact-sql&#41;](../system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)）|
+|[Azure SQL Database 目录视图](../../relational-databases/system-catalog-views/azure-sql-database-catalog-views.md)|[对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)|
 |[更改跟踪目录视图 &#40;Transact-sql&#41;](../system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)|[Transact-sql&#41;&#40;分区函数目录视图](../../relational-databases/system-catalog-views/partition-function-catalog-views-transact-sql.md)|
-|[&#40;Transact-sql&#41;的 CLR 程序集目录视图](../../relational-databases/system-catalog-views/clr-assembly-catalog-views-transact-sql.md)|[基于策略的管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)|
-|[&#40;Transact-sql&#41;的数据收集器视图](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)|[Resource Governor 目录视图 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)|
+|[&#40;Transact-sql&#41;的 CLR 程序集目录视图](../../relational-databases/system-catalog-views/clr-assembly-catalog-views-transact-sql.md)|[基于策略的管理视图 (Transact-SQL)](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)|
+|[数据收集器视图 (Transact-SQL)](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)|[Resource Governor 目录视图 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)|
 |[数据空间 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/data-spaces-transact-sql.md)|[查询存储目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)|
 |[&#40;Transact-sql 的数据库邮件视图&#41;](../../relational-databases/system-catalog-views/database-mail-views-transact-sql.md)|[&#40;Transact-sql&#41;的标量类型目录视图](../../relational-databases/system-catalog-views/scalar-types-catalog-views-transact-sql.md)|
 |[&#40;Transact-sql&#41;的数据库镜像见证服务器目录视图](../system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)|[&#40;Transact-sql&#41;的架构目录视图](../system-catalog-views/schemas-catalog-views-sys-schemas.md)|
 |[数据库和文件目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)|[安全性目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)|
-|[终结点目录视图 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)|[Service Broker 目录视图 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/service-broker-catalog-views-transact-sql.md)|
+|[终结点目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)|[Service Broker 目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/service-broker-catalog-views-transact-sql.md)|
 |[扩展事件目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)|[服务器范围内的配置目录视图 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)|
 |[扩展属性目录视图 (Transact-SQL)](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)|[空间数据目录视图](../../relational-databases/system-catalog-views/spatial-data-catalog-views.md)|
 |[外部操作目录视图 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/external-operations-catalog-views-transact-sql.md)|[SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)|

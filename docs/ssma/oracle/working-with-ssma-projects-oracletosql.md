@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: b96aba990231225516a7ba8ccf1523b91cb56c86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266362"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>处理 SSMA 项目 (OracleToSQL)
@@ -62,9 +62,9 @@ SSMA 包含一些设置，用于转换和加载数据库对象、迁移数据以
   
 **创建项目**  
   
-1.  在 "**文件**" 菜单上，单击 "**新建项目**"。  
+1.  在“文件”菜单上，单击“新建项目”。********  
   
-    将显示“新建项目”对话框  。  
+    此时将出现“新建项目”  对话框。  
   
 2.  在 "**名称**" 框中，输入项目的名称。  
   
@@ -72,9 +72,9 @@ SSMA 包含一些设置，用于转换和加载数据库对象、迁移数据以
   
 4.  在 "**迁移到**" 下拉菜单中，选择用于迁移的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目标版本。 可用选项包括：  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
@@ -100,7 +100,7 @@ SSMA 包含一些设置，用于转换和加载数据库对象、迁移数据以
   
         保存元数据可能需要几分钟时间。 如果你不想保存元数据，请不要选中任何复选框。  
   
-    2.  单击“保存”**** 按钮。  
+    2.  单击“保存”按钮  。  
   
         SSMA 将分析 Oracle 架构，并将元数据保存到项目文件。  
   

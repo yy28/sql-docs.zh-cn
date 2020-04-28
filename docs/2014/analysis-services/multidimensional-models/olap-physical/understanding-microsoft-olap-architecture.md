@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b29a31acb4e3dad83c760c27a9591cac026e0ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530905"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>了解 Microsoft OLAP 体系结构
@@ -39,9 +39,9 @@ ms.locfileid: "69530905"
  [更多 .。。](understanding-microsoft-olap-physical-architecture.md)  
   
  ![小文件文件夹图标](../../../integration-services/media/filefolder-small.gif "小文件文件夹图标")**编程体系结构**  
- [利用分析管理对象 &#40;AMO 进行开发&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
+ [使用分析管理对象 (AMO) 进行开发](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
- [Analysis Services 脚本语言开发 &#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [使用 Analysis Services 脚本语言 (ASSL) 开发](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
  [使用 ADOMD.NET 进行开发](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   

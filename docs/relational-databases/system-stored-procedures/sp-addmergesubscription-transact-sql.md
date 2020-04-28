@@ -16,10 +16,10 @@ ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b501a2c06a6d9e8e3573ef5d5814c3318c4e623b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769127"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
@@ -77,7 +77,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |值|说明|  
 |-----------|-----------------|  
 |**local** （默认值）|订阅服务器仅对发布服务器是已知的。|  
-|**全局**|订阅服务器对所有服务器都是已知的。|  
+|**global**|订阅服务器对所有服务器都是已知的。|  
   
  在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本中，本地订阅称为客户端订阅，全局订阅称为服务器订阅  
   
@@ -93,9 +93,9 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |值|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
-|**4**|每天一次|  
+|**4**|每日|  
 |**8**|每周|  
-|**万**|每月|  
+|**10**|每月一次|  
 |**0.2**|每月，相对于频率间隔|  
 |**40**|当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理启动时|  
 |NULL（默认值）||  
@@ -113,7 +113,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**7**|星期六|  
 |**8**|日期|  
 |**900**|工作日|  
-|**万**|周末|  
+|**10**|周末|  
 |NULL（默认值）||  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`每月计划合并频率间隔。 *frequency_relative_interval*为**int**，可以是下列值之一。  
@@ -124,7 +124,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**16**|最后一个|  
+|**超过**|最后一个|  
 |NULL（默认值）||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*使用的重复因子。 *frequency_recurrence_factor*的值为**int**，默认值为 NULL。  
@@ -135,7 +135,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|秒|  
-|**4**|分钟|  
+|**4**|Minute|  
 |**8**|Hour|  
 |NULL（默认值）||  
   
@@ -186,9 +186,9 @@ sp_addmergesubscription [ @publication= ] 'publication'
  只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_addmergesubscription**。  
   
 ## <a name="see-also"></a>另请参阅  
- [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
+ [创建推送订阅](../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [交互式冲突解决方法](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
+ [交互式冲突解决](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_changemergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
  [sp_dropmergesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   

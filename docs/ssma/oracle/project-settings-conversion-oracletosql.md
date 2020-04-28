@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 5de646d21ddd9255b1b5bd72794635a1da37ef6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266624"
 ---
 # <a name="project-settings-conversion-oracletosql"></a>项目设置（转换）(OracleToSQL)
@@ -61,8 +61,8 @@ ms.locfileid: "68266624"
 |**针对 ROWID 列生成唯一索引**|指定 SSMA 是否在 ROWID 生成的列上生成唯一索引列。 如果将此选项设置为 "是"，则将生成唯一索引，并且如果将其设置为 "否"，则不会对 ROWID 列生成唯一索引。<br /><br />在 "**模式**" 框中选择转换模式时，SSMA 将应用以下设置：<br /><br />**默认/乐观/完整模式：** 是的|  
 |**本地模块转换**|定义 oracle 嵌套 subprogram 的类型（在单独的存储过程或函数中声明）。<br /><br />如果选择 "**内联**"，则嵌套的 subprogram 调用将替换为其正文。<br /><br />如果选择 "**存储过程**"，嵌套的 subprogram 将转换为 SQL Server 存储过程，并且在此过程调用中将替换其调用。<br /><br />在 "**模式**" 框中选择转换模式时，SSMA 将应用以下设置：<br /><br />**默认/乐观/完整模式：** 内|  
 |**在字符串串联中使用 ISNULL**|Oracle 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回不同的结果（当字符串串联包含空值时）。 Oracle 将空值视为空字符集。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回 NULL。<br /><br />如果选择 **"是"**，则 SSMA 会将 Oracle 串联字符（&#124;&#124;） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]替换为串联字符（+）。 SSMA 还会检查连接两侧的表达式是否为 NULL 值。<br /><br />如果选择 "**否**"，则 SSMA 将替换串联字符，但不会检查是否存在 NULL 值。<br /><br />在 "**模式**" 框中选择转换模式时，SSMA 将应用以下设置：<br /><br />**默认/乐观/完整模式：** 是的|  
-|**在 REPLACE 函数调用中使用 ISNULL**|在 REPLACE 函数调用中使用 ISNULL 语句来模拟 Oracle 行为。 此设置具有以下选项：<br /><br />是<br /><br />否<br /><br />在 "**模式**" 框中选择转换模式时，SSMA 将应用以下设置：<br /><br />**默认/乐观模式：** 不<br /><br />**完整模式：** 是的|  
-|**在 CONCAT 函数调用中使用 ISNULL**|在 CONCAT 函数调用中使用 ISNULL 语句来模拟 Oracle 行为。 此设置具有以下选项：<br /><br />是<br /><br />否<br /><br />在 "**模式**" 框中选择转换模式时，SSMA 将应用以下设置：<br /><br />**默认/乐观模式：** 不<br /><br />**完整模式：** 是的|  
+|**在 REPLACE 函数调用中使用 ISNULL**|在 REPLACE 函数调用中使用 ISNULL 语句来模拟 Oracle 行为。 此设置具有以下选项：<br /><br />YES<br /><br />是<br /><br />在 "**模式**" 框中选择转换模式时，SSMA 将应用以下设置：<br /><br />**默认/乐观模式：** 不<br /><br />**完整模式：** 是的|  
+|**在 CONCAT 函数调用中使用 ISNULL**|在 CONCAT 函数调用中使用 ISNULL 语句来模拟 Oracle 行为。 此设置具有以下选项：<br /><br />YES<br /><br />是<br /><br />在 "**模式**" 框中选择转换模式时，SSMA 将应用以下设置：<br /><br />**默认/乐观模式：** 不<br /><br />**完整模式：** 是的|  
 |**尽可能使用本机转换函数**|如果选择 **"是"**，则在可能的情况下，SSMA 会将 TO_CHAR （日期，格式）转换为本机转换函数。<br /><br />如果选择 "**否**"，则 SSMA 会将 TO_CHAR （日期、格式）转换为 TO_CHAR_DATE 或 TO_CHAR_DATE_LS （它由 "转换 TO_CHAR （日期，格式）" 选项定义。<br /><br />在 "**模式**" 框中选择转换模式时，SSMA 将应用以下设置：<br /><br />**默认/乐观模式：** 是的<br /><br />**完整模式：** 不|  
 |**使用 SELECT .。。如果在转换 SELECT .。。INTO for record 变量**|指定在选择到记录变量时是否生成 XML 结果集。<br /><br />如果选择 **"是"**，则 select 语句返回 XML。<br /><br />如果选择 "**否**"，则 select 语句返回一个结果集。<br /><br />在 "**模式**" 框中选择转换模式时，SSMA 将应用以下设置：<br /><br />**默认/乐观/完整模式：** 不|  
   

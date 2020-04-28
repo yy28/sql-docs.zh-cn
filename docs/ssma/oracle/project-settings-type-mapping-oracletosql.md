@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 4551181da22af1244f8083f6df5ea00f63e00e69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266582"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>项目设置（类型映射）(OracleToSQL)
@@ -63,7 +63,7 @@ ms.locfileid: "68266582"
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |binary_integer|int|  
-|Blob|varbinary(max)|  
+|blob|varbinary(max)|  
 |boolean|bit|  
 |char|varchar(max)|  
 |char varying|varchar(max)|  
@@ -76,7 +76,7 @@ ms.locfileid: "68266582"
 |双精度|float [53]|  
 |FLOAT|float [53]|  
 |int|int|  
-|integer|int|  
+|整数|int|  
 |long|varchar(max)|  
 |长整型|varbinary(max)|  
 |长整型 [\*。8000]<sup>*</sup>|varbinary [*]|  
@@ -118,7 +118,7 @@ ms.locfileid: "68266582"
 |bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|Blob|varbinary(max)|  
+|blob|varbinary(max)|  
 |char|char|  
 |char 改变 [*。\*]|varchar [*]|  
 |char [*。\*]|char [*]|  
@@ -138,7 +138,7 @@ ms.locfileid: "68266582"
 |float [*。53]|float [*]|  
 |float [54 ...]|float [53]|  
 |int|int|  
-|integer|int|  
+|整数|int|  
 |long|varchar(max)|  
 |长整型|varbinary(max)|  
 |long raw [* .。。8000]|varbinary [*]|  
@@ -194,7 +194,7 @@ ms.locfileid: "68266582"
 |char 改变 [8001]|varchar(max)|  
 |char [*。8000]|char [*]|  
 |char [8001]|varchar(max)|  
-|Character|char|  
+|字符|char|  
 |字符变化 [*。8000]|varchar [*]|  
 |字符变化 [8001]|varchar(max)|  
 |字符 [*。8000]|char [*]|  
@@ -234,7 +234,7 @@ ms.locfileid: "68266582"
 |nchar 不同 [*。4000]|nvarchar [*]|  
 |nchar 不同 [4001 ...]|nvarchar(max)|  
 |Nclob|nvarchar(max)|  
-|Number|float [53]|  
+|数字|float [53]|  
 |number [*。\*]|数值 [*]|  
 |number [*。\*][\*..\*]|数值 [*] [\*]|  
 |Numeric|数值 [38] [0]|  

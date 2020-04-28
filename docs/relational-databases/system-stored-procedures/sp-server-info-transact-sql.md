@@ -18,10 +18,10 @@ ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7409dcee64c7867b8811a282be71070923d48aa1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68702854"
 ---
 # <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-SQL)
@@ -59,18 +59,18 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |-------------------|---------------------------------|----------------------|  
 |**1**|DBMS_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**2**|DBMS_VER|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] - *x xx*|  
-|**万**|OWNER_TERM|owner|  
+|**10**|OWNER_TERM|owner|  
 |**11**|TABLE_TERM|表|  
 |**12**|MAX_OWNER_NAME_LENGTH|128|  
 |**9**|TABLE_LENGTH<br /><br /> 指定表名的最大字符数。|128|  
 |**14**|MAX_QUAL_LENGTH<br /><br /> 指定表限定符（由三部分组成的表名的第一部分）名称的最大长度。|128|  
 |**15**|COLUMN_LENGTH<br /><br /> 指定列名的最大字符数。|128|  
-|**16**|IDENTIFIER_CASE<br /><br /> 在数据库（系统目录中对象的事例）中指定用户定义的名称（表名、列名、存储过程名）。|SENSITIVE|  
-|**17**|TX_ISOLATION<br /><br /> 指定服务器所采用的初始事务隔离级别，此级别与 SQL-92 中定义的隔离级别相对应。|2|  
+|**超过**|IDENTIFIER_CASE<br /><br /> 在数据库（系统目录中对象的事例）中指定用户定义的名称（表名、列名、存储过程名）。|SENSITIVE|  
+|**11x17**|TX_ISOLATION<br /><br /> 指定服务器所采用的初始事务隔离级别，此级别与 SQL-92 中定义的隔离级别相对应。|2|  
 |**18**|COLLATION_SEQ<br /><br /> 指定该服务器的字符集排序。|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
 |**19**|SAVEPOINT_SUPPORT<br /><br /> 指定基础 DBMS 是否支持命名保存点。|Y|  
 |**0.2**|MULTI_RESULT_SETS<br /><br /> 指定基础数据库或网关本身是否支持多个结果集（通过网关可以将多个语句与返回给客户端的多个结果集一起发送）。|Y|  
-|**22**|ACCESSIBLE_TABLES<br /><br /> 指定在**sp_tables**中，网关是否只返回当前用户可访问的表、视图等（即至少具有表的 SELECT 权限的用户）。|Y|  
+|22 |ACCESSIBLE_TABLES<br /><br /> 指定在**sp_tables**中，网关是否只返回当前用户可访问的表、视图等（即至少具有表的 SELECT 权限的用户）。|Y|  
 |**100**|USERID_LENGTH<br /><br /> 指定用户名的最大字符数。|128|  
 |**101**|QUALIFIER_TERM<br /><br /> 指定表限定符（由三部分组成的名称的第一部分）的 DBMS 供应商术语。|database|  
 |**102**|NAMED_TRANSACTIONS<br /><br /> 指定基础 DBMS 是否支持命名事务。|Y|  

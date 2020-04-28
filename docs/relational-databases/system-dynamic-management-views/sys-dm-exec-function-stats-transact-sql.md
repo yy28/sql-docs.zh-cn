@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 89d66217536d5cd552eb11de67d6d97d21ec9f6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68742833"
 ---
 # <a name="sysdm_exec_function_stats-transact-sql"></a>sys. dm_exec_function_stats （Transact-sql）
@@ -38,12 +38,12 @@ ms.locfileid: "68742833"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|database_id |**int**|函数所在的数据库 ID。|  
+|**database_id**|**int**|函数所在的数据库 ID。|  
 |**object_id**|**int**|函数的对象标识号。|  
-|type |**char （2）**|对象的类型： FN = 标量值函数|  
-|**type_desc**|**nvarchar （60）**|对象类型的说明： SQL_SCALAR_FUNCTION|  
-|**sql_handle**|**varbinary （64）**|这可用于与在此函数中执行的**dm_exec_query_stats**中的查询相关联。|  
-|**plan_handle**|**varbinary （64）**|内存中计划的标识符。 该标识符是瞬态的，仅当计划保留在缓存中时，它才保持不变。 此值可用于**sys.databases dm_exec_cached_plans**动态管理视图。<br /><br /> 当本机编译的函数查询内存优化表时，将始终为0x000。|  
+|**type**|**char(2)**|对象的类型： FN = 标量值函数|  
+|**type_desc**|**nvarchar(60)**|对象类型的说明： SQL_SCALAR_FUNCTION|  
+|**sql_handle**|**varbinary(64)**|这可用于与在此函数中执行的**dm_exec_query_stats**中的查询相关联。|  
+|**plan_handle**|**varbinary(64)**|内存中计划的标识符。 该标识符是瞬态的，仅当计划保留在缓存中时，它才保持不变。 此值可用于**sys.databases dm_exec_cached_plans**动态管理视图。<br /><br /> 当本机编译的函数查询内存优化表时，将始终为0x000。|  
 |**cached_time**|**datetime**|将函数添加到缓存的时间。|  
 |**last_execution_time**|**datetime**|上次执行函数的时间。|  
 |**execution_count**|**bigint**|函数自上次编译以来已执行的次数。|  

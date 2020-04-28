@@ -21,10 +21,10 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cdd9e34e57694efc1234a2f0245833596644cb73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889187"
 ---
 # <a name="upgrade-analysis-services"></a>升级 Analysis Services
@@ -40,9 +40,9 @@ ms.locfileid: "68889187"
 ## <a name="pre-upgrade-checklist"></a>升级准备一览表  
  升级之前，请先查看以下信息：  
   
--   [支持的版本升级](supported-version-and-edition-upgrades.md)  
+-   [支持的版本和版本升级](supported-version-and-edition-upgrades.md)  
   
--   [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [安装 SQL Server 2014 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [系统配置检查器的检查参数](check-parameters-for-the-system-configuration-checker.md)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68889187"
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 2014 的各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
- [计划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)   
+ [规划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)   
  [了解 Microsoft OLAP 体系结构](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture)   
  [升级 PowerPivot for SharePoint](upgrade-power-pivot-for-sharepoint.md)   
  [在多维和数据挖掘模式下安装 Analysis Services](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   

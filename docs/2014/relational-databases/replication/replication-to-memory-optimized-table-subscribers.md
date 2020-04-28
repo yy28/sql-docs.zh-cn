@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811227"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>复制到内存优化表订阅服务器
@@ -303,7 +303,7 @@ GO
   
 -   在内存优化表中不支持外键、唯一约束、触发器、架构修改、ROWGUIDCOL、计算列、数据压缩、别名数据类型、版本化和锁。 有关信息，请参阅 [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) 。  
   
-##  <a name="Schema"></a>修改架构文件  
+##  <a name="modifying-a-schema-file"></a><a name="Schema"></a>修改架构文件  
   
 -   不支持聚集索引。 将所有聚集索引更改为非聚集索引。  
   
@@ -313,7 +313,7 @@ GO
   
 -   ANSI_PADDING 必须为 ON。  
   
-##  <a name="PrimaryKey"></a>将更改复制到主键  
+##  <a name="replicating-changes-to-a-primary-key"></a><a name="PrimaryKey"></a>将更改复制到主键  
  内存优化表的主键无法更新。 若要复制订阅服务器上的主键更新，请修改更新存储过程以便将该更新作为删除和插入对提供。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 65e54b90fa036e738f2e1e6a28498559051011a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262215"
 ---
 # <a name="sysdm_exec_trigger_stats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
@@ -34,12 +34,12 @@ ms.locfileid: "68262215"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|database_id |**int**|触发器所在的数据库 ID。|  
+|**database_id**|**int**|触发器所在的数据库 ID。|  
 |**object_id**|**int**|触发器的对象标识号。|  
-|type |**char （2）**|对象的类型：<br /><br /> TA = 程序集 (CLR) 触发器<br /><br /> TR = SQL 触发器|  
-|**Type_desc**|**nvarchar （60）**|对对象类型的说明：<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
-|**sql_handle**|**varbinary （64）**|这可以用来与从该触发器内执行的**dm_exec_query_stats**中的查询相关联。|  
-|**plan_handle**|**varbinary （64）**|内存中计划的标识符。 该标识符是瞬态的，仅当计划保留在缓存中时，它才保持不变。 此值可用于**sys.databases dm_exec_cached_plans**动态管理视图。|  
+|**type**|**char(2)**|对象的类型：<br /><br /> TA = 程序集 (CLR) 触发器<br /><br /> TR = SQL 触发器|  
+|**Type_desc**|**nvarchar(60)**|对对象类型的说明：<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
+|**sql_handle**|**varbinary(64)**|这可以用来与从该触发器内执行的**dm_exec_query_stats**中的查询相关联。|  
+|**plan_handle**|**varbinary(64)**|内存中计划的标识符。 该标识符是瞬态的，仅当计划保留在缓存中时，它才保持不变。 此值可用于**sys.databases dm_exec_cached_plans**动态管理视图。|  
 |**cached_time**|**datetime**|触发器添加到缓存的时间。|  
 |**last_execution_time**|**datetime**|上次执行触发器的时间。|  
 |**execution_count**|**bigint**|触发器自上次编译以来所执行的次数。|  

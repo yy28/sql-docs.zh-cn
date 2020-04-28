@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 479c22747f640a9ccfff43534571dabfcd2717a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266965"
 ---
 # <a name="user-interface-reference-accesstosql"></a>用户界面参考（AccessToSQL）
@@ -52,6 +52,6 @@ ms.locfileid: "68266965"
   
 ## <a name="see-also"></a>另请参阅  
 [使用 SQL Server 迁移助手入门访问 &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
-[为迁移准备 Access 数据库](preparing-access-databases-for-migration-accesstosql.md)  
+[准备要迁移的 Access 数据库](preparing-access-databases-for-migration-accesstosql.md)  
 [将 Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

@@ -16,10 +16,10 @@ ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bf7712ceb55fc368d493be9999cd0b8d4d9f474c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771570"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
@@ -75,7 +75,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**full subscription**|**bit**|指示是否订阅发布中的所有项目：<br /><br /> **0** = 否<br /><br /> **1** = 是|  
 |**订阅名称**|**nvarchar(255)**|订阅的名称。|  
 |**update mode**|**int**|**0** = 只读<br /><br /> **1** = 立即更新订阅|  
-|**distribution job id**|**binary （16）**|分发代理的作业 ID。|  
+|**distribution job id**|**binary(16)**|分发代理的作业 ID。|  
 |**loopback_detection**|**bit**|环回检测将确定分发代理是否将在订阅服务器上发起的事务发送回订阅服务器：<br /><br /> **0** = 发送回。<br /><br /> **1** = 不发送回。<br /><br /> 与双向事务复制一起使用。 有关详细信息，请参阅[双向事务复制](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)。|  
 |**offload_enabled**|**bit**|指定复制代理的卸载执行是否已设置为在订阅服务器上运行。<br /><br /> 如果为**0**，则在发布服务器上运行代理。<br /><br /> 如果为**1**，则在订阅服务器上运行代理。|  
 |**offload_server**|**sysname**|启用了远程代理激活的服务器的名称。 如果为 NULL，则使用[MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md)表中列出的当前 offload_server。|  

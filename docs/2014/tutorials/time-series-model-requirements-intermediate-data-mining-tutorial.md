@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8e46d7fc8a0c214501841de448a94d1211b95fa1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892962"
 ---
 # <a name="understanding-the-requirements-for-a-time-series-model-intermediate-data-mining-tutorial"></a>了解时序模型的要求（数据挖掘中级教程）
@@ -24,8 +24,7 @@ ms.locfileid: "68892962"
   
  对于本教程，每天都在销售事务数据库中收集销售数据；但对于数据挖掘，则使用一个视图按月预先聚合数据。  
   
- 另外，为提高分析的准确性，数据中的空白越少越好。 如果计划分析多个数据序列，所有序列的开始和结束日期应尽量保持相同。 如果序列在其起始位置和结束位置之外的地方存在空白，则可以使用 MISSING_VALUE_SUBSTITUTION 参数来填充该序列。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 还提供了多个选项，用来以均值或常量之类的值来替换缺失数据。  
+ 另外，为提高分析的准确性，数据中的空白越少越好。 如果计划分析多个数据序列，所有序列的开始和结束日期应尽量保持相同。 如果序列在其起始位置和结束位置之外的地方存在空白，则可以使用 MISSING_VALUE_SUBSTITUTION 参数来填充该序列。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 还提供了多个选项，用来以均值或常量之类的值来替换缺失数据。  
   
 > [!WARNING]  
 >  PivotChart 和 PivotTable 工具原来包括在较早版本的数据源视图设计器中，现已不再提供。 我们建议您事先使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中附带的数据事件探查器之类的工具标识时序数据中的空白。  

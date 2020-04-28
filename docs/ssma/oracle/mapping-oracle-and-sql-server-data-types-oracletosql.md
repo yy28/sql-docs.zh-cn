@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: e5f14f79c355317f5e5d7a047b2d2c1ca71a4acb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262960"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>映射 Oracle 和 SQL Server 数据类型 (OracleToSQL)
@@ -51,7 +51,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
 2.  若要添加新映射，请执行以下操作：  
   
-    1.  单击“添加”  。  
+    1.  单击 **“添加”** 。  
   
     2.  在 "**源类型**" 下，选择要映射的 Oracle 数据类型。  
   
@@ -83,7 +83,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
     1.  在 "类型映射" 列表中选择包含要删除的数据类型映射的行。  
   
-    2.  单击 **“删除”** 。  
+    2.  单击 **“删除”**。  
   
         不能删除继承的映射。 但是，在特定对象或对象类别上，自定义映射会重写继承的映射。  
   

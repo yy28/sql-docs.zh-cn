@@ -11,16 +11,16 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: ae6a7bbeb70ae53280877a1f88a006743eea0655
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264372"
 ---
 # <a name="initializing-test-cases-oracletosql"></a>初始化测试用例 (OracleToSQL)
 在此步骤中，您将为新的测试用例指定初始信息。  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
 **测试用例名称**  
 输入名称以标识测试用例。  
   

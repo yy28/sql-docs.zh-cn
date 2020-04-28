@@ -16,10 +16,10 @@ ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2fe01c857d8a9e27de56538d0e595f3ad89f4d96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771523"
 ---
 # <a name="sp_helpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors (Transact-SQL)
@@ -55,14 +55,14 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**识别**|**int**|错误 ID。|  
+|**id**|**int**|错误 ID。|  
 |**time**|**datetime**|发生错误的时间。|  
 |**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**source_type_id**|**int**|错误源类型 ID。|  
 |**source_name**|**nvarchar （100）**|错误源的名称。|  
 |**error_code**|**sysname**|错误代码。|  
 |**error_text**|**ntext**|错误消息。|  
-|**xact_seqno**|**varbinary （16）**|失败的执行批处理的起始事务日志序列号。 仅由分发代理使用，是失败的执行批处理中第一个事务的日志序列号。|  
+|**xact_seqno**|**varbinary(16)**|失败的执行批处理的起始事务日志序列号。 仅由分发代理使用，是失败的执行批处理中第一个事务的日志序列号。|  
 |**command_id**|**int**|失败的执行批处理的命令 ID。 仅由分发代理使用，是执行失败的批次中的第一个命令的 ID。|  
 |**session_id**|**int**|发生了错误的代理会话的 ID。|  
   
@@ -77,6 +77,6 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
   
 ## <a name="see-also"></a>另请参阅  
  [sp_helpsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+ [sp_helpsubscription_properties (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

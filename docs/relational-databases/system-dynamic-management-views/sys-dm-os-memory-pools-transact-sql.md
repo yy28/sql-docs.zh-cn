@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dbd5ce36c9d83eb6347bcba71c26c3fd71c4513d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265740"
 ---
 # <a name="sysdm_os_memory_pools-transact-sql"></a>sys.dm_os_memory_pools (Transact-SQL)
@@ -39,12 +39,12 @@ ms.locfileid: "68265740"
 |-----------------|---------------|-----------------|  
 |**memory_pool_address**|**varbinary(8)**|代表内存池的项的内存地址。 不可为 null。|  
 |**pool_id**|**int**|在一组池中的特定池的 ID。 不可为 null。|  
-|type |**nvarchar （60）**|对象池的类型。 不可为 null。 有关详细信息，请参阅[sys.databases&#41;dm_os_memory_clerks &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)。|  
-|**路径名**|**nvarchar(256)**|系统为此内存对象分配的名称。 不可为 null。|  
+|**type**|**nvarchar(60)**|对象池的类型。 不可为 null。 有关详细信息，请参阅[sys.databases&#41;dm_os_memory_clerks &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)。|  
+|**name**|**nvarchar(256)**|系统为此内存对象分配的名称。 不可为 null。|  
 |**max_free_entries_count**|**bigint**|池可以拥有的最大可用项的个数。 不可为 null。|  
 |**free_entries_count**|**bigint**|池中当前可用项的个数。 不可为 null。|  
 |**removed_in_all_rounds_count**|**bigint**|自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启动以来从池中删除的项数。 不可为 null。|  
-|pdw_node_id |**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|**pdw_node_id**|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限
 
@@ -52,8 +52,7 @@ ms.locfileid: "68265740"
 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层上，需要`VIEW DATABASE STATE`具有数据库中的权限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
 ## <a name="remarks"></a>备注  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件有时使用公用池框架来缓存同种、无状态类型的数据。 池框架比缓存框架更简单。 池中的所有项都被视为是等同的。 在内部，池是内存分配器，并且可以用在使用内存分配器的地方。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件有时使用公用池框架来缓存同种、无状态类型的数据。 池框架比缓存框架更简单。 池中的所有项都被视为是等同的。 在内部，池是内存分配器，并且可以用在使用内存分配器的地方。  
   
 ## <a name="see-also"></a>另请参阅  
  

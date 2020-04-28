@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 523c57811ca29956edc3c18b8143844732c163b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892394"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
@@ -36,7 +36,7 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="remarks"></a>备注  
  **ClusterDistance**函数返回输入事例与该输入事例的概率最高的分类之间的距离。  
   
- 在 K-Means 聚类分析中，由于所有事例只能属于一个分类，并且成员身份权值为 1.0，因此分类距离始终是 0。 但是，在 K-Means 中，假定每个分类有一个中点。 您可以通过查询或浏览挖掘模型内容中的 NODE_DISTRIBUTION 嵌套表来获取中点的值。 有关详细信息，请参阅[聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)。  
+ 在 K-Means 聚类分析中，由于所有事例只能属于一个分类，并且成员身份权值为 1.0，因此分类距离始终是 0。 但是，在 K-Means 中，假定每个分类有一个中点。 您可以通过查询或浏览挖掘模型内容中的 NODE_DISTRIBUTION 嵌套表来获取中点的值。 有关详细信息，请参阅 [聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)。  
   
  在默认的 EM 聚类分析方法中，分类中的所有点都被视为具有均等的可能性；因此，分类就没有中点。 特定情况下的**ClusterDistance**的值和特定的分类*N*的计算方式如下：  
   
@@ -47,8 +47,7 @@ ClusterDistance([<ClusterID expression>])
  ClusterDistance （N） = 1-ClusterProbability （N））  
   
 ## <a name="related-prediction-functions"></a>相关预测函数  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供了以下可用于查询聚类分析模型的函数：  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供了以下可用于查询聚类分析模型的函数：  
   
 -   使用[群集 &#40;DMX&#41;](../dmx/cluster-dmx.md)函数返回最可能的分类。  
   
@@ -129,6 +128,6 @@ NATURAL PREDICTION JOIN
  [群集 &#40;DMX&#41;](../dmx/cluster-dmx.md)   
  [数据挖掘扩展插件 &#40;DMX&#41; 函数参考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [&#40;Analysis Services 数据挖掘的聚类分析模型的挖掘模型内容&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
+ [聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
   
   

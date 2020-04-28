@@ -11,20 +11,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 0d58f07f4e9d43f78c9c8990d174030cce484781
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264254"
 ---
 # <a name="data-migration-report--oracletosql"></a>数据迁移报表 (OracleToSQL)
 在将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之后，将显示 "**数据迁移报表**" 对话框。  
   
 ## <a name="options"></a>选项  
-**Status**  
+**状态**  
 显示从源数据库到目标数据库的数据迁移状态。  
   
-**从**  
+**From**  
 源表。  
   
 **自**  

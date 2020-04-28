@@ -16,10 +16,10 @@ ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 845b9bc59b2232dfa6760087c4a18af84a3c65b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68764354"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
@@ -89,7 +89,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**publisher_db**|**sysname**|发布数据库的名称。|  
 |**发布**|**sysname**|发布的名称。|  
 |**publication_type**|**int**|发布的类型，可以是下列值之一：<br /><br /> **0** = 事务发布<br /><br /> **1** = 快照发布<br /><br /> **2** = 合并发布|  
-|**类型**|**int**|订阅类型，可以是下列值之一：<br /><br /> **0** = 推送<br /><br /> **1** = 请求<br /><br /> **2** = 匿名|  
+|**subtype**|**int**|订阅类型，可以是下列值之一：<br /><br /> **0** = 推送<br /><br /> **1** = 请求<br /><br /> **2** = 匿名|  
 |**延迟**|**int**|在事务发布中，由日志读取器代理或分发代理传播的数据更改的最长滞后时间（以秒为单位）。|  
 |**latencythreshold**|**int**|事务发布的最长滞后时间，高于此时间即产生警告。|  
 |**agentnotrunning**|**int**|代理未运行的时间长度，以小时为单位。|  
@@ -106,8 +106,8 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**mergerunspeed**|**float**|订阅的上次同步的传递速率。|  
 |**mergerunduration**|**int**|完成订阅的上次同步的时间长度。|  
 |**monitorranking**|**int**|用于对结果集中的订阅进行排序的排名值，可以是下列值之一：<br /><br /> 对于事务发布：<br /><br /> **60** = 错误<br /><br /> **56** = 警告：性能严重<br /><br /> **52** = 警告：即将过期或已过期<br /><br /> **50** = 警告：订阅未初始化<br /><br /> **40** = 正在重试失败的命令<br /><br /> **30** = 未运行（成功）<br /><br /> **20** = 正在运行（正在启动、正在运行或空闲）<br /><br /> 对于合并发布：<br /><br /> **60** = 错误<br /><br /> **56** = 警告：性能严重<br /><br /> **54** = 警告：长时间运行的合并<br /><br /> **52** = 警告：即将过期<br /><br /> **50** = 警告：订阅未初始化<br /><br /> **40** = 正在重试失败的命令<br /><br /> **30** = 正在运行（正在启动、正在运行或空闲）<br /><br /> **20** = 未运行（成功）|  
-|**distributionagentjobid**|**binary （16）**|事务发布订阅的分发代理作业的 ID。|  
-|**mergeagentjobid**|**binary （16）**|合并发布订阅的合并代理作业的 ID。|  
+|**distributionagentjobid**|**binary(16)**|事务发布订阅的分发代理作业的 ID。|  
+|**mergeagentjobid**|**binary(16)**|合并发布订阅的合并代理作业的 ID。|  
 |**distributionagentid**|**int**|订阅的分发代理作业的 ID。|  
 |**distributionagentprofileid**|**int**|分发代理使用的代理配置文件的 ID。|  
 |**mergeagentid**|**int**|订阅的合并代理作业的 ID。|  

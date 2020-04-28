@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: cd8f0e57554f32d3b02a6e0e98d3a3645d683bac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266163"
 ---
 # <a name="connecting-to-sql-server-oracletosql"></a>连接到 SQL Server (OracleToSQL)
@@ -83,10 +83,10 @@ ms.locfileid: "68266163"
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-|**项目类型 Vs 目标服务器版本**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005<br /> （版本：1.x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008<br /> （版本：8.x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 <br />（版本： 11. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />（版本： 12. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />（版本： 13. x）|Azure SQL DB|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005|是|是|是|是|是||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008||是|是|是|是||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012|||是|是|是||
+|**项目类型 Vs 目标服务器版本**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> （版本：1.x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> （版本：8.x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />（版本： 11. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />（版本： 12. x）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />（版本： 13. x）|Azure SQL DB|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|是|是|是|是|是||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||是|是|是|是||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||是|是|是||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||是|是||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||是||
 |Azure SQL DB||||||是|

@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9a254f685f83e97b14c78c7d6c4c21e2737b636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493778"
 ---
 # <a name="defining-and-browsing-translations"></a>定义和浏览翻译
-  翻译是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象的名称在特定语言中的表示形式。 对象包括度量值组、度量值、维度、属性、层次结构、KPI、操作和计算成员。 翻译为可支持多种语言的客户端应用程序提供了服务器支持。 通过使用这样的客户端，客户端就可以将区域设置标识符 (LCID) 传递给 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例，该实例则使用 LCID 来确定在为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象提供元数据时要使用哪一组翻译。 如果 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象不包含该语言的翻译或不包含指定对象的翻译，则在将该对象元数据返回给客户端时使用默认语言。 例如，如果一个法国的业务用户从使用法语区域设置的工作站访问多维数据集，则存在法语翻译时，此业务用户将看到法语的成员标题和成员属性值。 但是，如果一个德国的业务用户从使用德语区域设置的工作站上访问同一个多维数据集，则此业务用户将看到德语的成员标题和成员属性值。 有关详细信息，请参阅[维度翻译](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)、[多维数据集翻译](multidimensional-models-olap-logical-cube-objects/cube-translations.md)、[翻译 &#40;Analysis Services&#41;](translations-analysis-services.md)。  
+  翻译是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象的名称在特定语言中的表示形式。 对象包括度量值组、度量值、维度、属性、层次结构、KPI、操作和计算成员。 翻译为可支持多种语言的客户端应用程序提供了服务器支持。 通过使用这样的客户端，客户端就可以将区域设置标识符 (LCID) 传递给 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例，该实例则使用 LCID 来确定在为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象提供元数据时要使用哪一组翻译。 如果 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象不包含该语言的翻译或不包含指定对象的翻译，则在将该对象元数据返回给客户端时使用默认语言。 例如，如果一个法国的业务用户从使用法语区域设置的工作站访问多维数据集，则存在法语翻译时，此业务用户将看到法语的成员标题和成员属性值。 但是，如果一个德国的业务用户从使用德语区域设置的工作站上访问同一个多维数据集，则此业务用户将看到德语的成员标题和成员属性值。 有关详细信息，请参阅[维度翻译](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)、[多维数据集翻译](multidimensional-models-olap-logical-cube-objects/cube-translations.md)、[翻译 &#40;Analysis Services&#41;](translations-analysis-services.md)。  
   
  在本主题的任务中，您将为“日期”维度中的一组有限的维度对象和 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集中的多维数据集对象定义元数据翻译。 然后浏览这些维度和多维数据集对象，以检查元数据翻译。  
   
@@ -26,8 +26,7 @@ ms.locfileid: "69493778"
   
 1.  打开“日期”**** 维度的维度设计器，然后单击“翻译”**** 选项卡。  
   
-     每个维度对象的元数据将以默认语言显示。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集中的默认语言为英语。  
+     每个维度对象的元数据将以默认语言显示。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集中的默认语言为英语。  
   
 2.  在“翻译”**** 选项卡的工具栏上，单击“新建翻译”**** 按钮。  
   
@@ -65,8 +64,7 @@ ms.locfileid: "69493778"
   
 1.  请切换到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器，然后切换到“翻译”**** 选项卡。  
   
-     每个多维数据集对象的元数据将以默认语言显示，如下图所示。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集中的默认语言为英语。  
+     每个多维数据集对象的元数据将以默认语言显示，如下图所示。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集中的默认语言为英语。  
   
      ![“翻译”选项卡中的默认语言](../../2014/tutorials/media/l9-translations-5.gif "“翻译”选项卡中的默认语言")  
   
@@ -96,7 +94,7 @@ ms.locfileid: "69493778"
   
 2.  成功完成部署后，请切换到“浏览器”**** 选项卡，然后单击“重新连接”****。  
   
-3.  从“数据”**** 窗格中删除所有层次结构和度量值，然后从“透视”[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]**列表中选择“** Tutorial”。  
+3.  从“数据”**** 窗格中删除所有层次结构和度量值，然后从“透视”**** 列表中选择“[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial”。  
   
 4.  在“元数据”窗格中，展开“度量值”****，然后展开“Internet Sales”****。  
   

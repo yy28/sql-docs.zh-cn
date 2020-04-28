@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 31dd240f15d9d778cbab43f6b4b1bfda2e4e1857
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265970"
 ---
 # <a name="sysdm_fts_active_catalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
@@ -38,15 +38,15 @@ ms.locfileid: "68265970"
  
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|database_id |**int**|包含活动全文目录的数据库的 ID。|  
+|**database_id**|**int**|包含活动全文目录的数据库的 ID。|  
 |**catalog_id**|**int**|活动的全文目录的 ID。|  
 |**memory_address**|**varbinary(8)**|为与此全文目录相关的填充活动所分配的内存缓冲区的地址。|  
-|**路径名**|**nvarchar(128)**|活动的全文目录的名称。|  
+|**name**|**nvarchar(128)**|活动的全文目录的名称。|  
 |**is_paused**|**bit**|指示活动全文目录的填充是否已暂停。|  
-|**状态值**|**int**|全文目录的当前状态。 下列类型作之一：<br /><br /> 0 = 正在初始化<br /><br /> 1 = 就绪<br /><br /> 2 = 已暂停<br /><br /> 3 = 暂时错误<br /><br /> 4 = 需要重新装入<br /><br /> 5 = 关闭<br /><br /> 6 = 停止以备份<br /><br /> 7 = 已完成目录备份<br /><br /> 8 = 目录已损坏|  
-|**status_description**|**nvarchar （120）**|对活动全文目录的当前状态的说明。|  
+|**status**|**int**|全文目录的当前状态。 下列类型作之一：<br /><br /> 0 = 正在初始化<br /><br /> 1 = 就绪<br /><br /> 2 = 已暂停<br /><br /> 3 = 暂时错误<br /><br /> 4 = 需要重新装入<br /><br /> 5 = 关闭<br /><br /> 6 = 停止以备份<br /><br /> 7 = 已完成目录备份<br /><br /> 8 = 目录已损坏|  
+|**status_description**|**nvarchar(120)**|对活动全文目录的当前状态的说明。|  
 |**previous_status**|**int**|全文目录的前面状态。 下列类型作之一：<br /><br /> 0 = 正在初始化<br /><br /> 1 = 就绪<br /><br /> 2 = 已暂停<br /><br /> 3 = 暂时错误<br /><br /> 4 = 需要重新装入<br /><br /> 5 = 关闭<br /><br /> 6 = 停止以备份<br /><br /> 7 = 已完成目录备份<br /><br /> 8 = 目录已损坏|  
-|**previous_status_description**|**nvarchar （120）**|对活动全文目录的前面状态的说明。|  
+|**previous_status_description**|**nvarchar(120)**|对活动全文目录的前面状态的说明。|  
 |**worker_count**|**int**|当前正在处理此全文目录的线程数。|  
 |**active_fts_index_count**|**int**|所填充的全文索引数。|  
 |**auto_population_count**|**int**|正在对此全文目录进行自动填充的表数。|  
@@ -68,7 +68,7 @@ ms.locfileid: "68265970"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|从|目标|关系|  
+|From|到|关系|  
 |----------|--------|------------------|  
 |dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|一对一|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|一对一|  

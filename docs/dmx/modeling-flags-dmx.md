@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a610f3aed7f520163dc4e2b30651d8b0397ef644
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893933"
 ---
 # <a name="modeling-flags-dmx"></a>建模标志 (DMX)
@@ -20,15 +20,13 @@ ms.locfileid: "68893933"
 
   可以在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中使用建模标志，为数据挖掘算法提供有关事例表中定义的数据的附加信息。 该算法可以使用该附加信息生成更精确的数据挖掘模型。 可以同时在挖掘结构列和挖掘模型列中定义建模标志。  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持下列建模标志：  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持下列建模标志：  
   
  **NOT NULL**  
  属性列的值不应包含 Null 值。 如果 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在模型定型过程中发现该属性列的值为 Null 值，则将出现错误。 该标志是在挖掘结构列中定义的。  
   
  **回归量**  
- 指示该算法可以在回归算法的回归公式中使用指定列。 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 线性回归算法和 [!INCLUDE[msCoName](../includes/msconame-md.md)] 决策树算法支持该标志，并在挖掘模型列中定义该标志。  
+ 指示该算法可以在回归算法的回归公式中使用指定列。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 线性回归算法和 [!INCLUDE[msCoName](../includes/msconame-md.md)] 决策树算法支持该标志，并在挖掘模型列中定义该标志。  
   
  **MODEL_EXISTENCE_ONLY**  
  是否存在特性比特性列值更重要。 该标志是在挖掘模型列中定义的。  

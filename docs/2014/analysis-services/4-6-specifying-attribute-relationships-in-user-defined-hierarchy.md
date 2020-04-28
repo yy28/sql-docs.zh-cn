@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 838185def1d562f51d810cebdf79684f341a5903
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493851"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>指定用户定义层次结构中属性之间的属性关系
   您已了解本教程中的内容，现在可以将属性层次结构组织到用户层次结构内的级别中，以便在多维数据集中为用户提供导航路径。 用户层次结构可以表示自然层次结构（如市/县、州/省/自治区和国家/地区），或者可以只表示导航路径（如雇员姓名、职务和部门名称）。 对于在层次结构中导航的用户而言，这两类用户层次结构应相同。  
   
- 使用自然层次结构时，如果定义了组成级别的属性之间的属性关系，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可以使用某个属性的聚合来获取相关属性的结果。 如果属性之间没有定义的关系，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将根据键属性聚合所有非键属性。 因此，如果基础数据支持，则应定义属性间的属性关系。 定义属性关系可改进维度、分区和查询处理性能。 有关详细信息，请参阅[定义属性关系](multidimensional-models/attribute-relationships-define.md)和[属性关系](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)。  
+ 使用自然层次结构时，如果定义了组成级别的属性之间的属性关系，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可以使用某个属性的聚合来获取相关属性的结果。 如果属性之间没有定义的关系，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将根据键属性聚合所有非键属性。 因此，如果基础数据支持，则应定义属性间的属性关系。 定义属性关系可改进维度、分区和查询处理性能。 有关详细信息，请参阅 [定义属性关系](multidimensional-models/attribute-relationships-define.md) 和 [属性关系](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)。  
   
  在定义属性关系时，可以指定此关系是弹性的还是刚性的。 如果您将关系定义为刚性，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 会在更新维度时保留聚合。 如果实际过程更改了定义为刚性的关系，那么除非维度得到完全处理，否则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将在处理过程中生成错误。 指定适当的关系和关系属性，可提高查询和处理性能。 有关详细信息，请参阅[定义属性关系](multidimensional-models/attribute-relationships-define.md)和[用户层次结构属性](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "69493851"
   
      因为此关系是冗余关系，所以在关系图中会显示警告图标。 关系**全名** -> **地理位置**-> **代码**已存在，您刚刚创建了关系**全名** -> **邮政编码**。 此关系**地理位置**-> **邮政编码**现在是冗余的，因此我们将其删除。  
   
-6.  在“属性关系”窗格中，右键单击“地域”**“邮政编码”，然后单击“删除”******-> ********。  
+6.  在“属性关系”窗格中，右键单击“地域”-> “邮政编码”，然后单击“删除”****************。  
   
 7.  显示“删除对象”对话框时，单击“确定”********。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "69493851"
   
      请注意，在你删除“地域”和其他属性之间的最后一个属性关系后，“地域”本身也将被删除********。 这是因为不再使用该属性。  
   
-24. 在“文件”菜单上，单击“全部保存”  。  
+24. 在“文件”  菜单上，单击“全部保存” ****。  
   
 ## <a name="defining-attribute-relationships-for-attributes-in-the-sales-territory-hierarchy"></a>为“销售区域”层次结构中的属性定义属性关系  
   
@@ -96,7 +96,7 @@ ms.locfileid: "69493851"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     **销售区域组**现在已链接到 "销售区域"**国家/** 地区，**销售区域 "国家/地区**" 现在已链接到 "**销售区域" 区域**。 因为一个国家/地区内的区域分组以及国家/地区的分组都可能会随着时间的推移而更改，所以每种关系的 **RelationshipType** 属性都设置为“柔性”****。  
+     “销售区域组”现已链接到“销售区域所属国家”，而“销售区域所属国家”现已链接到“销售区域所属地区”****************。 因为一个国家/地区内的区域分组以及国家/地区的分组都可能会随着时间的推移而更改，所以每种关系的 **RelationshipType** 属性都设置为“柔性”****。  
   
 ## <a name="defining-attribute-relationships-for-attributes-in-the-product-model-lines-hierarchy"></a>为“产品型号系列”层次结构中的属性定义属性关系  
   
@@ -110,7 +110,7 @@ ms.locfileid: "69493851"
   
 ## <a name="defining-attribute-relationships-for-attributes-in-the-fiscal-date-hierarchy"></a>为“会计日期”层次结构中的属性定义属性关系  
   
-1.  切换到“日期”维度的“维度设计器”****，然后单击“属性关系”**** 选项卡。  
+1.  切换到“日期”维度的维度设计器，然后单击“属性关系”选项卡********。  
   
 2.  在关系图中，右键单击“月份名称”属性，然后选择“新建属性关系”********。  
   
@@ -174,11 +174,11 @@ ms.locfileid: "69493851"
   
 11. 在关系图中，右键单击“地域关键字”特性，然后选择“属性”********。  
   
-12. 将**AttributeHierarchyOptimizedState** 属性设置为 **NotOptimized**，将 **AttributeHierarchyOrdered** 属性设置为 **False**，并将 **AttributeHierarchyVisible** 属性设置为 **False**。  
+12. 将 **AttributeHierarchyOptimizedState** 属性设置为 **NotOptimized**，将 **AttributeHierarchyOrdered** 属性设置为 **False**，并将 **AttributeHierarchyVisible** 属性设置为 **False**。  
   
-13. 在“文件”  菜单上，单击“全部保存”  。  
+13. 在“文件” **** 菜单上，单击“全部保存” ****。  
   
-14. 在 ** 的“生成”菜单上，单击“部署 Analysis Services 教程”**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]****。  
+14. 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的“生成”菜单上，单击“部署 Analysis Services 教程”********。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [定义未知成员和 Null 处理属性](lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  

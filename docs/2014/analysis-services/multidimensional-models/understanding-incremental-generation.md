@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ace9bbbbbc023d14dbce91a176f7d05ad19d699b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811057"
 ---
 # <a name="understanding-incremental-generation"></a>了解增量生成
@@ -85,6 +85,6 @@ ms.locfileid: "68811057"
   
 ## <a name="see-also"></a>另请参阅  
  [管理对数据源视图和数据源所做的更改](manage-changes-to-data-source-views-and-data-sources.md)   
- [架构生成向导 &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
+ [架构生成向导 (Analysis Services)](schema-generation-wizard-analysis-services.md)  
   
   

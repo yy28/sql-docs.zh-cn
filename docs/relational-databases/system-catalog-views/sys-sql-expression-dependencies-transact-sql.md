@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ade6ffc213d570fcb7da965cf73f43e2db335d17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69561133"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
@@ -51,10 +51,10 @@ ms.locfileid: "69561133"
 |referencing_id|**int**|引用实体的 ID。 不可为 null。|  
 |referencing_minor_id|**int**|引用实体为列时的列 ID；否则为 0。 不可为 null。|  
 |referencing_class|**tinyint**|引用实体的类。<br /><br /> 1 = 对象或列<br /><br /> 12 = 数据库 DDL 触发器<br /><br /> 13 = 服务器 DDL 触发器<br /><br /> 不可为 null。|  
-|referencing_class_desc|**nvarchar （60）**|对引用实体的类的说明。<br /><br /> OBJECT_OR_COLUMN<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER<br /><br /> 不可为 null。|  
+|referencing_class_desc|**nvarchar(60)**|对引用实体的类的说明。<br /><br /> OBJECT_OR_COLUMN<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER<br /><br /> 不可为 null。|  
 |is_schema_bound_reference|**bit**|1 = 被引用的实体绑定到架构。<br /><br /> 0 = 被引用的实体未绑定到架构。<br /><br /> 不可为 null。|  
 |referenced_class|**tinyint**|被引用的实体的类。<br /><br /> 1 = 对象或列<br /><br /> 6 = 类型<br /><br /> 10 = XML 架构集合<br /><br /> 21 = 分区函数<br /><br /> 不可为 null。|  
-|referenced_class_desc|**nvarchar （60）**|对被引用的实体的类的说明。<br /><br /> OBJECT_OR_COLUMN<br /><br /> 类型<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> 不可为 null。|  
+|referenced_class_desc|**nvarchar(60)**|对被引用的实体的类的说明。<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> 不可为 null。|  
 |referenced_server_name|**sysname**|被引用的实体的服务器的名称。<br /><br /> 此列是为通过指定由四个部分组成的有效名称所生成的跨服务器依赖关系填充的。 有关多部分名称的信息，请参阅[Transact-sql 语法约定 &#40;transact-sql&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。<br /><br /> 对于非绑定到架构的实体，如果实体被引用时没有指定由四个部分组成的名称，此列为 NULL。<br /><br /> 对于绑定到架构的实体，此值为 NULL，因为它们必须位于同一个数据库中，因此只能使用由两个部分组成的名称（*schema*）来定义它们。|  
 |referenced_database_name|**sysname**|被引用的实体的数据库的名称。<br /><br /> 此列是为通过指定由三个部分或四个部分组成的有效名称生成的跨数据库或跨服务器引用填充的。<br /><br /> 对于非绑定到架构的引用，当使用由一个部分或两个部分组成的名称指定时，此列为 NULL。<br /><br /> 对于绑定到架构的实体，此值为 NULL，因为它们必须位于同一个数据库中，因此只能使用由两个部分组成的名称（*schema*）来定义它们。|  
 |referenced_schema_name|**sysname**|被引用的实体所属的架构。<br /><br /> 对于非绑定到架构的引用，如果实体被引用时没有指定架构名称，此列为 NULL。<br /><br /> 对于绑定到架构的引用，此列永不为 NULL，原因在于必须使用由两部分组成的名称来定义和引用绑定到架构的实体。|  
@@ -76,17 +76,14 @@ ms.locfileid: "69561133"
 |查看|是|是|  
 |筛选索引|是**|否|  
 |筛选统计信息|是**|否|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]存储过程 * * *|是|是|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程***|是|是|  
 |CLR 存储过程|否|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]用户定义函数|是|是|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数|是|是|  
 |CLR 用户定义函数|否|是|  
 |CLR 触发器（DML 和 DDL）|否|否|  
-|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器|是|否|  
-|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库级 DDL 触发器|是|否|  
-|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器级 DDL 触发器|是|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器|是|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库级 DDL 触发器|是|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器级 DDL 触发器|是|否|  
 |扩展的存储过程|否|是|  
 |队列|否|是|  
 |同义词|否|是|  
@@ -127,8 +124,7 @@ GO
 ```  
   
 ### <a name="b-returning-entities-that-reference-another-entity"></a>B. 返回引用其他实体的实体  
- 下面的示例返回引用表 `Production.Product` 的实体。 
-  `referencing_entity_name` 列中返回的实体依赖于 `Product` 表。  
+ 下面的示例返回引用表 `Production.Product` 的实体。 `referencing_entity_name` 列中返回的实体依赖于 `Product` 表。  
   
 ```  
 USE AdventureWorks2012;  
@@ -176,7 +172,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys. dm_sql_referenced_entities &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
+ [sys.dm_sql_referenced_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.dm_sql_referencing_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   
   

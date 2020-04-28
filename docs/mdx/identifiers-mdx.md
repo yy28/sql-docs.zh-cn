@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c11561ac71aa72469a809ea25297d62133aa93da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891212"
 ---
 # <a name="identifiers-mdx"></a>标识符 (MDX)
@@ -83,8 +83,7 @@ ms.locfileid: "68891212"
   
 -   当对象的名称使用未被列为限定标识符的字符时。  
   
-     
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 允许分隔标识符使用当前代码页中的任意字符。 但是，不加选择地在对象名称中使用特殊字符会使 MDX 语句和脚本难以读取和维护。  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 允许分隔标识符使用当前代码页中的任意字符。 但是，不加选择地在对象名称中使用特殊字符会使 MDX 语句和脚本难以读取和维护。  
   
 ### <a name="formatting-rules-for-delimited-identifiers"></a>分隔标识符的格式规则  
  分隔标识符的主体可以包含当前代码页中的字符（包括分隔符本身）的任意组合。 如果分隔标识符的主体包含分隔符，则需进行特殊处理：  
@@ -126,6 +125,6 @@ ms.locfileid: "68891212"
 ## <a name="see-also"></a>另请参阅  
  [Mdx 语言参考 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
  [MDX 查询基础知识 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
- [Mdx 语法元素 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX 语法元素 (MDX)](../mdx/mdx-syntax-elements-mdx.md)  
   
   

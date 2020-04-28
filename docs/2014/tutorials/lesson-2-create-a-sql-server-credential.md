@@ -11,14 +11,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: baa337d33173f292145d92b60d6192af2a716c5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154327"
 ---
-# <a name="lesson-2-create-a-sql-server-credential"></a>Lesson 2: Create a SQL Server Credential
-  **凭据：**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]凭据是用于存储连接到 SQL Server 以外的资源所需的身份验证信息的对象。  在这里[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，备份和还原进程使用凭据对 Azure Blob 存储服务进行身份验证。 凭据存储着存储帐户的名称和存储帐户的 **access key** 值。 创建凭据后，在发出 BACKUP/RESTORE 命令时必须在 WITH CREDENTIAL 选项中指定它。 有关如何查看、复制或重新生成存储帐户**访问密钥**的详细信息，请参阅[存储帐户访问密钥](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)。  
+# <a name="lesson-2-create-a-sql-server-credential"></a>第 2 课：创建 SQL Server 凭据
+  **凭据：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 凭据是用于存储连接到 SQL Server 外部资源所需的身份验证信息的对象。  在这里[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，备份和还原进程使用凭据对 Azure Blob 存储服务进行身份验证。 凭据存储着存储帐户的名称和存储帐户的 **access key** 值。 创建凭据后，在发出 BACKUP/RESTORE 命令时必须在 WITH CREDENTIAL 选项中指定它。 有关如何查看、复制或重新生成存储帐户**访问密钥**的详细信息，请参阅[存储帐户访问密钥](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)。  
   
  有关凭据的一般信息，请参阅[凭据](../relational-databases/security/authentication-access/credentials-database-engine.md)。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "70154327"
   
 2.  在对象资源管理器中，连接到已安装 AdventureWorks2012 数据库的数据库引擎实例，或使用计划用于本教程的自己的数据库。  
   
-3.  在**标准**工具栏上，单击 "**新建查询**"。  
+3.  在 **“标准”** 工具栏上，单击 **“新建查询”**。  
   
 4.  将以下示例复制并粘贴到查询窗口中，并根据需要进行修改。  
   

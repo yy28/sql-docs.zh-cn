@@ -16,10 +16,10 @@ ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5c10e05098a611e51583b2b1132f811d36b0f20a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771331"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
@@ -76,7 +76,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |-----------|-----------------|  
 |**正在**|订阅服务器已被同步并且正在接收数据。|  
 |**不用**|存在订阅服务器项，但没有订阅。|  
-|**订购**|订阅服务器正在请求数据，但尚未同步。|  
+|**subscribed**|订阅服务器正在请求数据，但尚未同步。|  
   
 `[ @previous_status = ] 'previous_status'`订阅的前一状态。 *previous_status*的默认值为**sysname**，默认值为 NULL。 此参数允许你更改当前具有该状态的所有订阅，从而允许组在一组特定订阅上运行（例如，将所有活动订阅设置回**订阅**）。  
   
@@ -94,7 +94,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**16**|最后一个|  
+|**超过**|最后一个|  
 |NULL（默认值）||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*使用的重复因子。 *frequency_recurrence_factor*的值为**int**，默认值为 NULL。  
@@ -105,7 +105,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|秒|  
-|**4**|分钟|  
+|**4**|Minute|  
 |**8**|Hour|  
 |NULL（默认值）||  
   
@@ -151,7 +151,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 `[ @publisher = ] 'publisher'`指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  ** 更改[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器上的项目属性时，不应使用 publisher。  
+>  *publisher*更改[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器上的项目属性时，不应使用 publisher。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  

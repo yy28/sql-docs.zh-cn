@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 39d0d92d83a41970dcddae54d74aca3d118dcf6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530876"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>通过使用行筛选器实现动态安全性
@@ -22,13 +22,13 @@ ms.locfileid: "69530876"
   
  若要实现动态安全性，您必须向模型中添加一个表，该表中包含那些可以创建与模型的连接作为数据源并可浏览模型对象和数据的用户的 Windows 用户名。 您使用本教程创建的模型位于 Adventure Works Corp. 上下文中；但是，若要完成本课程，您必须添加一个表，其中包含来自您自己域的用户。 您不需要将添加的用户名的密码。 若要使用您自己域中的少量示例用户创建一个 Employee Security 表，您需要使用粘贴功能，从 Excel 电子表格中粘贴员工数据。 在实际应用场景中，包含添加到模型中的用户名的表通常将使用实际数据库中的表作为数据源；例如，实际的 dimEmployee 表。  
   
- 为了实现动态安全性，你将使用两个新的 DAX 函数： [USERNAME 函数 &#40;dax&#41;](/dax/username-function-dax)和[LOOKUPVALUE function &#40;dax&#41;](/dax/lookupvalue-function-dax)。 在行筛选器公式中应用的这些函数在新角色中定义。 该公式使用 LOOKUPVALUE 函数从 Employee Security 表指定一个值，然后将该值传递给 USERNAME 函数，后者指定登录用户的用户名属于此角色。 然后，用户可以仅浏览该角色的行筛选器指定的数据。 在这种情况下，您将指定销售员工只能浏览自己为其中成员的销售区域的 Internet 销售数据。  
+ 为了实现动态安全性，你将使用两个新的 DAX 函数： [USERNAME 函数 &#40;dax&#41;](/dax/username-function-dax)和[LOOKUPVALUE function &#40;dax&#41;](/dax/lookupvalue-function-dax)。 在行筛选器公式中应用的这些函数在新角色中定义。 该公式使用 LOOKUPVALUE 函数从 Employee Security 表指定一个值，然后将该值传递给 USERNAME 函数，后者指定登录用户的用户名属于此角色。 然后，用户可以只浏览角色的行筛选器指定的数据。 在这种情况下，您将指定销售员工只能浏览自己为其中成员的销售区域的 Internet 销售数据。  
   
  若要完成本补充课程，您将需要完成一系列任务。 本 Adventure Works 表格模型方案特有的、但不一定适用于真实方案的任务就是以这种形式确定的。 每个任务包括附加的信息用于描述任务的目的。  
   
  学完本课的估计时间： **30 分钟**  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  本补充课程主题是表格建模教程的一部分，应当按顺序完成。 在执行本补充课程中的任务之前，应已完成前面的课程。  
   
 ## <a name="add-the-dimsalesterritory-table-to-the-aw-internet-sales-tabular-model-project"></a>将 dimSalesTerritory 表添加到 AW Internet Sales 表格模型项目中  
@@ -65,7 +65,7 @@ ms.locfileid: "69530876"
   
 -   在模型设计器中，重命名“Sales Territory”**** 表中的列：  
   
-     **Sales Territory**  
+     **销售区域**  
   
     |源名称|友好名称|  
     |-----------------|-------------------|  

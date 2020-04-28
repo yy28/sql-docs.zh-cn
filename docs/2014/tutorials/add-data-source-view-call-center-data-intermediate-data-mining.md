@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 04f930c42b0e41a9f10b35d10295a38e8dac7490
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68888678"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>为呼叫中心数据添加数据源视图（数据挖掘中级教程）
@@ -32,7 +32,7 @@ ms.locfileid: "68888678"
   
 2.  在“欢迎使用数据源视图向导”**** 页上，单击“下一步”****。  
   
-3.  在 "**选择数据源**" 页的 "**关系数据源**" 下， [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]选择数据源。 如果您没有此数据源，请参阅[数据挖掘基础教程](../../2014/tutorials/basic-data-mining-tutorial.md)。 单击“下一步”。   
+3.  在 "**选择数据源**" 页的 "**关系数据源**" 下， [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]选择数据源。 如果您没有此数据源，请参阅[数据挖掘基础教程](../../2014/tutorials/basic-data-mining-tutorial.md)。 单击“下一步”  。  
   
 4.  在 "**选择表和视图**" 页上，选择下表，然后单击右箭头将其添加到数据源视图：  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68888678"
   
     -   **DimDate**  
   
-5.  单击“下一步”。   
+5.  单击“下一步”  。  
   
 6.  在 "**完成向导**" 页上，默认将数据源视图命名为[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]。 将名称更改为**CallCenter**，然后单击 "**完成**"。  
   
@@ -69,11 +69,11 @@ ms.locfileid: "68888678"
 |FactCallCenterID|数据导入到数据仓库中时创建的一个任意键。<br /><br /> 此列标识唯一的记录并应作为数据挖掘模型的事例键。|  
 |日期键|呼叫中心运营的日期，以整数表示。 整数日期键在数据仓库中经常用到，但是如果要按日期值分组，您可能要获取日期/时间格式的日期。<br /><br /> 请注意由于供应商为每个运营日中的每个班次都提供了一个单独的报表，因此日期不是唯一的。|  
 |WageType|指示日期是工作日、周末还是假日。<br /><br /> 与工作日相比，客户服务质量存在差异，因此，你将使用此列作为输入。|  
-|Shift|指示为其记录呼叫的轮班时间。 此呼叫中心将工作日划分为四个轮班时间：AM、PM1、PM2 和 Midnight。<br /><br /> 班次可能影响客户服务质量，因此您将使用此列作为输入。|  
+|移位|指示为其记录呼叫的轮班时间。 此呼叫中心将工作日划分为四个轮班时间：AM、PM1、PM2 和 Midnight。<br /><br /> 班次可能影响客户服务质量，因此您将使用此列作为输入。|  
 |LevelOneOperators|指示值班的一级接线员的数量。<br /><br /> 呼叫中心的员工最低级别为 l 级，因此这些员工经验不足。|  
 |LevelTwoOperators|指示值班的二级接线员的数量。<br /><br /> 员工必须记录一定数量的服务小时才能限定为级别2操作员。|  
 |TotalOperators|此轮班时间内存在的接线员的总数。|  
-|Calls|此轮班时间内收到的呼叫数。|  
+|Calls（调用次数）|此轮班时间内收到的呼叫数。|  
 |AutomaticResponses|完全通过自动呼叫处理（交互式语音应答，即 IVR）来处理的呼叫数。|  
 |订单|由呼叫产生的订单数。|  
 |IssuesRaised|由呼叫产生的需要后续操作的问题的数量。|  

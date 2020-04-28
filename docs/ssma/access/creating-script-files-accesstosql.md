@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 9d888fa133e6cb1026ae23486dfabfc5e0b13b57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68259828"
 ---
 # <a name="creating-script-files-accesstosql"></a>创建脚本文件（AccessToSQL）
@@ -45,7 +45,7 @@ ms.locfileid: "68259828"
   
     -   抑制消息：抑制控制台上的消息。 默认情况下，此值为 "false"。  
   
-    **实例**  
+    **示例：**  
   
     ```xml  
     <output-providers>  
@@ -88,7 +88,7 @@ ms.locfileid: "68259828"
   
     - 目标-使用-上次使用 = "true" （默认值）或目标-服务器 = "target_servername"  
   
-    **实例**  
+    **示例：**  
   
     ```xml  
     <output-providers>  
@@ -123,7 +123,7 @@ ms.locfileid: "68259828"
   
     默认模式为 "**错误**"。  
   
-    **实例**  
+    **示例：**  
   
     ```xml  
     <output-providers>  
@@ -154,7 +154,7 @@ ms.locfileid: "68259828"
   
     默认模式为 "**生成-错误**"。  
   
-    **实例**  
+    **示例：**  
   
     ```xml  
     <output-providers>  
@@ -202,7 +202,7 @@ ms.locfileid: "68259828"
   
     -   ask-user：提示用户输入（"是"/"否"）  
   
-    **实例**  
+    **示例：**  
   
     ```xml  
     <output-providers>  
@@ -223,7 +223,7 @@ ms.locfileid: "68259828"
   
 6.  **必备组件提供程序：** 这使用户能够处理处理命令所需的任何先决条件。 默认情况下，严格模式为 "false"。 如果设置为 "true"，则会生成异常以满足先决条件。  
   
-    **实例**  
+    **示例：**  
   
     ```xml  
     <output-providers>  
@@ -251,7 +251,7 @@ ms.locfileid: "68259828"
   
     -   每隔20%  
   
-    **实例**  
+    **示例：**  
   
     ```xml  
     <output-providers>  
@@ -297,7 +297,7 @@ ms.locfileid: "68259828"
     > [!NOTE]  
     > 必需的消息记录在任何级别。  
   
-    **实例**  
+    **示例：**  
   
     ```xml  
     <output-providers>  
@@ -324,7 +324,7 @@ ms.locfileid: "68259828"
   
     2.  如果 override 选项为**true**，则搜索顺序为 "脚本文件-&gt;服务器连接文件-&gt;提示用户"。  
   
-    **实例**  
+    **示例：**  
   
     ```xml  
     <output-providers>  
@@ -348,7 +348,7 @@ ms.locfileid: "68259828"
   
 成功执行脚本文件中的所有命令后，SSMA 控制台应用程序将退出并将控件返回给用户。 脚本文件的内容具有更多或更少的静态，其中的变量信息包含在[变量值文件](creating-variable-value-files-accesstosql.md)中，或在脚本文件的单独节中用于变量值。  
   
-**实例**  
+**示例：**  
   
 ```xml  
 <!--Sample of script file commands -->  
@@ -390,7 +390,7 @@ ms.locfileid: "68259828"
 ## <a name="script-file-validation"></a>脚本文件验证  
 用户可以根据 "架构" 文件夹中提供的架构定义文件 **"A2SSConsoleScriptSchema"** 轻松地对其脚本文件进行验证。  
   
-## <a name="next-step"></a>后续步骤
+## <a name="next-step"></a>下一步
 操作控制台的下一步是[&#40;AccessToSQL&#41;创建变量值文件](../../ssma/access/creating-variable-value-files-accesstosql.md)。  
   
 ## <a name="see-also"></a>另请参阅  

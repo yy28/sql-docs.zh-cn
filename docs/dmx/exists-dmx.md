@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0197417dfef604f3cb90b5fa032dae892de272c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889051"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
@@ -28,7 +28,7 @@ EXISTS(<subquery>)
 ```  
   
 ## <a name="arguments"></a>参数  
- subquery   
+ *量子*  
  Select 语句，格式为 SELECT * FROM \<列名> [WHERE \<谓词 list>]。  
   
 ## <a name="result-type"></a>结果类型  
@@ -57,6 +57,6 @@ WHERE [[Model] = 'Patch kit'
   
 ## <a name="see-also"></a>另请参阅  
  [函数 &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [模型筛选器语法和示例 &#40;Analysis Services 数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
+ [模型筛选器语法和示例（Analysis Services – 数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c32ea67eef368a17b129989e3f05c29ab0533d72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769114"
 ---
 # <a name="sp_addpublication_snapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68769114"
   为指定的发布创建快照代理。 此存储过程在发布服务器上对发布数据库执行。  
   
 > [!IMPORTANT]  
->  使用远程分发服务器配置发布服务器时，为所有参数提供的值（包括 *job_login* 和 *job_password*）都会以纯文本方式发送到该分发服务器。 在执行此存储过程之前，应该对发布服务器及其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用到数据库引擎 &#40;的加密连接 SQL Server 配置管理器&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
+>  使用远程分发服务器配置发布服务器时，为所有参数提供的值（包括 *job_login* 和 *job_password*）都会以纯文本方式发送到该分发服务器。 在执行此存储过程之前，应该对发布服务器及其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -66,10 +66,9 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**1**|一次。|  
 |**4** （默认值）|每天。|  
 |**8**|每周。|  
-|**16**|每月。|  
+|**超过**|每月。|  
 |**32**|每月，相对于频率间隔。|  
-|**64**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理启动时。|  
+|**64**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理启动时。|  
 |**128**|计算机空闲时运行|  
   
 `[ @frequency_interval = ] frequency_interval`要应用于*frequency_type*设置的频率的值。 *frequency_interval*为**int**，可以是下列值之一。  
@@ -79,7 +78,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**1**|*frequency_interval*未使用。|  
 |**4** （默认值）|每*frequency_interval*天，默认为每天。|  
 |**8**|*frequency_interval*为以下一个或多个（与[&#124; （位或）](../../t-sql/language-elements/bitwise-or-transact-sql.md)逻辑运算符结合使用：<br /><br /> **1** = 星期日 &#124;<br /><br /> **2** = 星期一 &#124;<br /><br /> **4** = 星期二 &#124;<br /><br /> **8** = 星期三 &#124;<br /><br /> **16** = 星期四 &#124;<br /><br /> **32** = 星期五 &#124;<br /><br /> **64** = 星期六|  
-|**16**|*Frequency_interval*月中的第几天。|  
+|**超过**|*Frequency_interval*月中的第几天。|  
 |**32**|*frequency_interval*是以下项之一：<br /><br /> **1** = 星期日 &#124;<br /><br /> **2** = 星期一 &#124;<br /><br /> **3** = 星期二 &#124;<br /><br /> **4** = 星期三 &#124;<br /><br /> **5** = 星期四 &#124;<br /><br /> **6** = 星期五 &#124;<br /><br /> **7** = 星期六 &#124;<br /><br /> **8** = 日 &#124;<br /><br /> **9** = 工作日 &#124;<br /><br /> **10** = 周末|  
 |**64**|*frequency_interval*未使用。|  
 |**128**|*frequency_interval*未使用。|  
@@ -90,7 +89,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|秒|  
-|**4** （默认值）|分钟|  
+|**4** （默认值）|Minute|  
 |**8**|Hour|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*的间隔。 *frequency_subday_interval*的值为**int**，默认值为5，表示每5分钟一次。  
@@ -131,7 +130,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 `[ @publisher = ] 'publisher'`指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  ** 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器上创建快照代理时，不应使用 publisher。  
+>  *publisher*在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器上创建快照代理时，不应使用 publisher。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  

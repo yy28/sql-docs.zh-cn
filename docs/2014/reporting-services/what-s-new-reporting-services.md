@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 968c7bab8d0ef0d57336491c7975f0f3006be108
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892359"
 ---
 # <a name="what39s-new-reporting-services"></a>新增功能&#39;（Reporting Services）
@@ -27,8 +27,7 @@ ms.locfileid: "68892359"
   
 ||  
 |-|  
-|
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 版本添加了对 Google Chrome 浏览器的支持。 有关支持的浏览器的详细信息，请参阅[规划 Reporting Services 和 Power View 浏览器支持 &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)。|  
+|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 版本添加了对 Google Chrome 浏览器的支持。 有关支持的浏览器的详细信息，请参阅[规划 Reporting Services 和 Power View 浏览器支持 &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)。|  
   
  有关其他[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]产品和技术的信息，请参阅[SQL Server 2014 中的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)。  
   

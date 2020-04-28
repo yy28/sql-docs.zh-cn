@@ -16,10 +16,10 @@ ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: c1aafa1736ff626f7b0bea9bea8753ae2c509ac4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770962"
 ---
 # <a name="sp_add_agent_parameter-transact-sql"></a>sp_add_agent_parameter (Transact-SQL)
@@ -53,11 +53,11 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
   
 `[ @parameter_name = ] 'parameter_name'`参数的名称。 *parameter_name* **sysname**，无默认值。 有关已在系统配置文件中定义的参数的列表，请参阅[复制代理配置文件](../../relational-databases/replication/agents/replication-agent-profiles.md)。 若要查看每个代理的有效参数的完整列表，请参阅下列主题：  
   
--   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+-   [复制快照代理](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
 -   [复制日志读取器代理](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
--   [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
+-   [复制分发代理](../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
 -   [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)  
   

@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: c06fb621cab581e934ba4655ed6507149d109c60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266497"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>选择并配置受影响的对象 (OracleToSQL)
@@ -50,7 +50,7 @@ ms.locfileid: "68266497"
 ## <a name="sql"></a>Sql  
 SQL 选项卡包含所选表的 "创建表" SQL。  
   
-## <a name="data"></a>data  
+## <a name="data"></a>数据  
 "数据" 选项卡显示所选表中的数据。  
   
 ## <a name="properties"></a>属性  

@@ -16,10 +16,10 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1e5b128a38fc32b16cca9d0a8e59f09aef88676c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68762416"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
@@ -49,7 +49,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   
  下表说明了可以更改的发布属性以及对这些属性值的限制。  
   
-|properties|值|说明|  
+|属性|值|说明|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|可以为给定发布创建匿名订阅，还必须为**true** *immediate_sync* 。 对于对等发布，无法更改此属性。|  
 ||**false**|不能为给定发布创建匿名订阅。 对于对等发布，无法更改此属性。|  
@@ -94,7 +94,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**pre_snapshot_script**||指定在初始同步过程中应用其他所有复制对象脚本和数据之前，分发代理所运行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本文件的位置。|  
 |**publish_to_ActiveDirectory**|**true**|已不推荐使用该参数，支持该参数只是为了让脚本能够向后兼容。 不能再向 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中添加发布信息。|  
 ||**false**|将发布信息从 Active Directory 上删除。|  
-|**queue_type**|**sql**|使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储事务。 只有在没有活动订阅时才能更改该属性。<br /><br /> 注意：不再支持使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]消息队列。 为 "*值*" 指定**msmq**值将导致错误。|  
+|**queue_type**|**transact-sql**|使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储事务。 只有在没有活动订阅时才能更改该属性。<br /><br /> 注意：不再支持使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]消息队列。 为 "*值*" 指定**msmq**值将导致错误。|  
 |**repl_freq**|**持续**|发布所有基于日志的事务的输出。|  
 ||**概述**|仅发布计划的同步事件。|  
 |**replicate_ddl**|**1**|复制在发布服务器上执行的数据定义语言 (DDL) 语句。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布，无法更改此属性。|  
@@ -104,9 +104,9 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**保留**||**整数**，表示订阅活动的保持期（小时）。 如果订阅在保持期内不活动，则将其删除。|  
 |**snapshot_in_defaultfolder**|**true**|在默认快照文件夹中存储快照文件。 如果同时指定了*alt_snapshot_folder*，则快照文件将同时存储在默认位置和备用位置。|  
 ||**false**|快照文件存储在*alt_snapshot_folder*指定的备用位置。|  
-|**状态值**|**正在**|发布创建后，发布数据立即可用于订阅服务器。 Oracle 发布服务器不支持。|  
+|**status**|**正在**|发布创建后，发布数据立即可用于订阅服务器。 Oracle 发布服务器不支持。|  
 ||**不用**|发布创建后，发布数据不可用于订阅服务器。 Oracle 发布服务器不支持。|  
-|**sync_method**|**本机**|同步订阅时，使用所有表的本机模式大容量复制输出。|  
+|**sync_method**|**native**|同步订阅时，使用所有表的本机模式大容量复制输出。|  
 ||**字符**|同步订阅时，使用所有表的字符模式大容量复制输出。|  
 ||**发出**|在快照生成期间生成所有表的本机模式大容量复制程序输出，但不锁定表。 对快照复制无效。|  
 ||**concurrent_c**|在快照生成期间生成所有表的字符模式大容量复制程序输出，但不锁定表。 对快照复制无效。|  
@@ -128,7 +128,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 `[ @publisher = ] 'publisher'`指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
   
   > [!NOTE]  
-  >  ** 更改[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器上的项目属性时，不应使用 publisher。  
+  >  *publisher*更改[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器上的项目属性时，不应使用 publisher。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  

@@ -1,5 +1,5 @@
 ---
-title: 定义和浏览透视 |微软文档
+title: 定义和浏览透视 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493776"
 ---
 # <a name="defining-and-browsing-perspectives"></a>定义和浏览透视
@@ -52,7 +52,7 @@ ms.locfileid: "69493776"
   
 5.  请清除下列对象的复选框：  
   
-    -   `Reseller Sales`度量组  
+    -   `Reseller Sales`度量值组  
   
     -   “销售配额”**** 度量值组  
   
@@ -93,7 +93,7 @@ ms.locfileid: "69493776"
   
 1.  在“透视”**** 选项卡的工具栏上，单击“新建透视”**** 按钮。  
   
-2.  将新透视图的名称更改为`Reseller Sales`。  
+2.  将新透视的名称更改为`Reseller Sales`。  
   
 3.  将“分销商销售额”**** 设置为默认度量值。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "69493776"
   
 4.  请清除下列对象的复选框：  
   
-    -   `Internet Sales`度量组  
+    -   `Internet Sales`度量值组  
   
     -   “Internet 销售原因”**** 度量值组  
   
@@ -131,16 +131,16 @@ ms.locfileid: "69493776"
   
 1.  在“透视”**** 选项卡的工具栏上，单击“新建透视”**** 按钮。  
   
-2.  将新透视图的名称更改为`Sales Summary`。  
+2.  将新透视的名称更改为`Sales Summary`。  
   
     > [!NOTE]  
     >  不能将计算度量值指定为默认度量值。  
   
 3.  请清除下列对象的复选框：  
   
-    -   `Internet Sales`度量组  
+    -   `Internet Sales`度量值组  
   
-    -   `Reseller Sales`度量组  
+    -   `Reseller Sales`度量值组  
   
     -   “Internet 销售原因”**** 度量值组  
   
@@ -176,13 +176,13 @@ ms.locfileid: "69493776"
   
      ![Excel 中的“数据连接”向导](../../2014/tutorials/media/l9-perspectives-3b.gif "Excel 中的“数据连接”向导")  
   
-6.  在`Internet Sales`**"透视"** 列表中选择，然后查看元数据窗格中的度量值和维度。  
+6.  在`Internet Sales` **透视**列表中选择，然后在 "元数据" 窗格中查看度量值和维度。  
   
      请注意，只那些为“Internet 销售”透视指定的对象才会出现。  
   
 7.  在元数据窗格中，展开“度量值”****。  
   
-     请注意，只显示`Internet Sales`度量值组，以及**Internet GPM**和**Internet 销售比率到所有产品**计算成员。  
+     请注意，只有`Internet Sales`度量值组显示为 "所有产品的**GPM**和**internet 销售比率**" 计算成员。  
   
 8.  在模型中，再次选择 Excel。 选择 `Sales Summary`。  
   
@@ -194,7 +194,7 @@ ms.locfileid: "69493776"
  [定义和浏览翻译](lesson-9-2-defining-and-browsing-translations.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [观点](multidimensional-models-olap-logical-cube-objects/perspectives.md)   
+ [视角](multidimensional-models-olap-logical-cube-objects/perspectives.md)   
  [多维模型中的透视](multidimensional-models/perspectives-in-multidimensional-models.md)  
   
   

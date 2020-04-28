@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c1a701f1e63877c807964a8d81a829afdc9f7b81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891617"
 ---
 # <a name="securing-sql-server"></a>保护 SQL Server
@@ -121,7 +121,7 @@ GO
 ### <a name="sql-server-security-tools-and-utilities"></a>SQL Server 安全性工具和实用工具  
  下表包含有关可用来配置和管理安全的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具与实用工具的信息。  
   
-|有关以下方面的信息|请参阅|  
+|有关以下方面的信息|查看|  
 |---------------------------|---------|  
 |连接、配置和控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[使用 SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md)|  
 |连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并在命令提示符下运行查询|[sqlcmd 实用工具](../../tools/sqlcmd-utility.md)|  
@@ -132,7 +132,7 @@ GO
 ### <a name="sql-server-security-catalog-views-and-functions"></a>SQL Server 安全性目录视图和函数  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在若干视图和函数（已为性能和效用进行了优化）中显示安全信息。 下表包含有关安全性视图和函数的信息。  
   
-|有关以下方面的信息|请参阅|  
+|有关以下方面的信息|查看|  
 |---------------------------|---------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性目录视图，可返回有关数据库级别和服务器级别权限、主体、角色等的信息。 此外，还有提供加密密钥、证书和凭据相关信息的目录视图。|[安全性目录视图 (Transact-SQL)](/sql/relational-databases/system-catalog-views/security-catalog-views-transact-sql)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全函数。|[安全函数 (Transact-SQL)](/sql/t-sql/functions/security-functions-transact-sql)|  

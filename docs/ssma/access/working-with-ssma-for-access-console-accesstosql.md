@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 6366ed7d6346fb6240a5d56ae6cc4d91575f2ed0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68259785"
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>使用 SSMA for Access Console （AccessToSQL）
@@ -26,7 +26,7 @@ ms.locfileid: "68259785"
   
 |||  
 |-|-|  
-|**本节**|**说明**|  
+|**主题**|**说明**|  
 |[SSMA for Access Console &#40;AccessToSQL&#41;入门](../../ssma/access/getting-started-with-ssma-for-access-console-accesstosql.md)|说明执行控制台应用程序的过程。|  
 |[SSMA 控制台中的命令行选项 &#40;AccessToSQL&#41;](../../ssma/access/command-line-options-in-ssma-console-accesstosql.md)|描述用于操作 SSMA 控制台应用程序的命令行选项和参数。|  
 |[&#40;AccessToSQL&#41;创建脚本文件](../../ssma/access/creating-script-files-accesstosql.md)|说明如何创建脚本文件。|  
@@ -39,5 +39,5 @@ ms.locfileid: "68259785"
 |[&#40;AccessToSQL 的疑难解答&#41;](../../ssma/access/troubleshooting-accesstosql.md)|提供有关修复迁移问题的简要信息。|  
   
 ## <a name="see-also"></a>另请参阅  
-[SSMA for Access 控制台入门](getting-started-with-ssma-for-access-console-accesstosql.md)  
+[使用 SSMA 访问控制台入门](getting-started-with-ssma-for-access-console-accesstosql.md)  
   

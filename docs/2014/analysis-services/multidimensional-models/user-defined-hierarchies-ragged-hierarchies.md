@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 533abbb47db40f16c0d7d5e4d85851975c89e23d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889324"
 ---
 # <a name="ragged-hierarchies"></a>不规则层次结构
@@ -36,7 +36,7 @@ ms.locfileid: "68889324"
   
 -   [设置 MDX 兼容性以确定如何在客户端应用程序中表示占位符](#bkmk_Mdx)  
   
-##  <a name="bkmk_approach"></a>修改不规则层次结构中的深化导航的方法  
+##  <a name="approaches-for-modifying-drilldown-navigation-in-a-ragged-hierarchy"></a><a name="bkmk_approach"></a> 修改不规则层次结构中的深化导航的方法  
  当深化导航不返回预期值或被视为难以使用时，不规则层次结构的存在将成为问题。 若要解决不规则层次结构产生的导航问题，请考虑下列选项：  
   
 -   使用不规则层次结构，但在每个级别上设置 `HideMemberIf` 属性以指定是否对用户可视化缺失级别。 设置 `HideMemberIf` 时，还应对连接字符串设置 `MDXCompatibility` 以覆盖默认导航行为。 本主题中提供用于设置这些属性的说明。  
@@ -45,7 +45,7 @@ ms.locfileid: "68889324"
   
  如果您的维度中包含一个以上不规则层次结构，则应使用第一种方法，设置 `HideMemberIf`。 拥有使用不规则层次结构方面实际经验的 BI 开发人员可以更进一步，在物理数据表中进行其他更改，从而为每个级别创建单独的表。 有关此技术的详细信息，请参阅[圣马丁 Mason 的 SSAS 财务多维数据集-第1A 部分-不规则层次结构（博客）](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) 。  
   
-##  <a name="bkmk_Hide"></a>设置 HideMemberIf 以隐藏规则层次结构中的成员  
+##  <a name="set-hidememberif-to-hide-members-in-a-regular-hierarchy"></a><a name="bkmk_Hide"></a> 设置 HideMemberIf 以隐藏规则层次结构中的成员  
  在不规则维度的表中，逻辑上缺少的成员可以用其他方式表示。 表单元可以为空或包含空字符串，也可以包含与它们父级相同的值作为占位符。 占位符的表示形式由子成员的占位符状态（由 `HideMemberIf` 属性确定）和客户端应用程序的 `MDX Compatibility` 连接字符串属性确定。  
   
  对于支持显示不规则层次结构的客户端应用程序，可以使用这些属性隐藏逻辑上缺少的成员。  
@@ -62,21 +62,18 @@ ms.locfileid: "68889324"
     |**NoName**|如果级别成员的名称为空，则隐藏该级别成员。|  
     |**ParentName**|如果级别成员的名称与其父级的名称相同，则隐藏该级别成员。|  
   
-##  <a name="bkmk_Mdx"></a>设置 MDX 兼容性以确定如何在客户端应用程序中表示占位符  
- 在层次结构级别上设置 `HideMemberIf` 后，您还应在发送自客户端应用程序的连接字符串中设置 `MDX Compatibility` 属性。 
-  `MDX Compatibility` 设置确定是否使用 `HideMemberIf`。  
+##  <a name="set-mdx-compatibility-to-determine-how-placeholders-are-represented-in-client-applications"></a><a name="bkmk_Mdx"></a>设置 MDX 兼容性以确定如何在客户端应用程序中表示占位符  
+ 在层次结构级别上设置 `HideMemberIf` 后，您还应在发送自客户端应用程序的连接字符串中设置 `MDX Compatibility` 属性。 `MDX Compatibility` 设置确定是否使用 `HideMemberIf`。  
   
 |MDX Compatibility 设置|说明|使用情况|  
 |-------------------------------|-----------------|-----------|  
 |**1**|显示占位符值。|这是 Excel、SSDT 和 SSMS 使用的默认值。 它指示服务器在深化不规则层次结构中的空级别时返回占位符值。 如果单击占位符值，则可继续深化直到到达子（叶）节点。<br /><br /> Excel 拥有用于连接到 Analysis Services 的连接字符串，并且它始终在每个新连接上将 `MDX Compatibility` 设置为 1。 此行为将保留向后兼容性。|  
-|**2**|隐藏占位符值（null 值或父级别的重复项），但显示具有相关值的其他级别和节点。|
-  `MDX Compatibility`=2 通常被视为与不规则层次结构相关的首选设置。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表和一些第三方客户端应用程序可保留此设置。|  
+|**2**|隐藏占位符值（null 值或父级别的重复项），但显示具有相关值的其他级别和节点。|`MDX Compatibility`=2 通常被视为与不规则层次结构相关的首选设置。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表和一些第三方客户端应用程序可保留此设置。|  
   
 ## <a name="see-also"></a>另请参阅  
  [创建用户定义的层次结构](user-defined-hierarchies-create.md)   
  [用户层次结构](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [父子层次结构](parent-child-dimension.md)   
- [连接字符串属性 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/connection-string-properties-analysis-services)  
+ [连接字符串属性 (Analysis Services)](https://docs.microsoft.com/analysis-services/instances/connection-string-properties-analysis-services)  
   
   

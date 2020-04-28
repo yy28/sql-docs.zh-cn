@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0354c73a14b249065b69f41d5f7534fd97de5081
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890713"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>数据挖掘查询任务编辑器（“查询”选项卡）
@@ -40,12 +40,12 @@ ms.locfileid: "68890713"
  **数据挖掘查询**  
  键入数据挖掘查询。  
   
- **相关主题：**  [数据挖掘扩展插件 &#40;DMX&#41; 参考](/sql/dmx/data-mining-extensions-dmx-reference)  
+ **相关主题：**  [数据挖掘扩展插件 (DMX) 参考](/sql/dmx/data-mining-extensions-dmx-reference)  
   
  **生成新查询**  
  使用图形工具创建数据挖掘查询。  
   
- **相关主题：** [数据挖掘查询](control-flow/data-mining-query.md)  
+ **相关主题：** [Data Mining Query](control-flow/data-mining-query.md)  
   
 ## <a name="parameter-mapping-tab-options"></a>“参数映射”选项卡选项  
  **参数名称**  

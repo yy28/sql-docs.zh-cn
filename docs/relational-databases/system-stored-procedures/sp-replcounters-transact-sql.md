@@ -16,10 +16,10 @@ ms.assetid: fe585b1f-edda-421f-81d6-8a03a3a535d2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 12ddbfe11a2b1a29dadaacde845f96e70959bebb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771003"
 ---
 # <a name="sp_replcounters-transact-sql"></a>sp_replcounters (Transact-SQL)
@@ -45,8 +45,8 @@ sp_replcounters
 |**Replicated transactions**|**int**|日志中等待传送到分发数据库的事务数。|  
 |**Replication rate trans/sec**|**float**|平均每秒传送到分发数据库的事务数。|  
 |**复制延迟**|**float**|事务在分发前位于日志中的平均时间（秒）。|  
-|**Replbeginlsn**|**binary （10）**|日志中当前截断点的日志序列号 (LSN)。|  
-|**Replnextlsn**|**binary （10）**|等待传送到分发数据库的下一个提交记录的 LSN。|  
+|**Replbeginlsn**|**binary(10)**|日志中当前截断点的日志序列号 (LSN)。|  
+|**Replnextlsn**|**binary(10)**|等待传送到分发数据库的下一个提交记录的 LSN。|  
   
 ## <a name="remarks"></a>备注  
  **sp_replcounters**用于事务复制。  
@@ -55,7 +55,7 @@ sp_replcounters
  需要**db_owner**固定数据库角色或**sysadmin**固定服务器角色的成员身份。  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_replcmds (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [sp_replcmds &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_repldone &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
  [sp_replflush &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

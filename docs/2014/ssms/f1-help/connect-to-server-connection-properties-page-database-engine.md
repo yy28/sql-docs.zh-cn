@@ -13,20 +13,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 30382bcb0c70fb985c88866602cb997988b88569
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70153754"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>连接到服务器（“连接属性”页）（数据库引擎）
-  使用此选项卡可在连接[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]到实例或在**已注册的服务器**中[!INCLUDE[ssDE](../../includes/ssde-md.md)]注册时查看或指定选项。 **连接**和**选项**仅在连接到实例时显示在此对话框中[!INCLUDE[ssDE](../../includes/ssde-md.md)]。 注册**并仅**在注册**** [!INCLUDE[ssDE](../../includes/ssde-md.md)]时显示在此对话框中。  
+  使用此选项卡可在连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例或在“已注册的服务器”  中注册 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 时查看或指定选项。 只有在连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例时，此对话框中才显示“连接”  和“选项”  。 注册 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 时，此对话框中仅显示“测试”  和“保存”  。  
   
 ## <a name="options"></a>选项  
  **连接到数据库**  
  从列表中选择要连接到的数据库。 如果选择** \<默认>**，将连接到服务器的默认数据库。 如果选择** \<"浏览服务器>**，则可以浏览服务器以查找要连接到的数据库。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]连接到数据库引擎的实例时，必须使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证，并在 "连接**到服务器**" 对话框的 "**连接属性**" 选项卡上指定数据库。请确保选中 "**加密连接**" 复选框。  
+ 在通过 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎的一个实例时，必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，并且必须在“连接到服务器”  对话框的“连接属性”  选项卡上指定一个数据库。请确保选中“加密连接”  复选框。  
   
  默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将连接到 **master**。 如果您指定一个用户数据库，在对象资源管理器中将只会看到该数据库及其对象。 如果连接到 **master**，可以看到所有数据库。 有关详细信息，请参阅[AZURE SQL 数据库概述](/azure/sql-database/sql-database-technical-overview)。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "70153754"
  **网络数据包大小**  
  输入要发送的网络数据包的大小。 默认值为 4096 字节。  
   
- **连接超时**  
+ **连接超时值**  
  输入在超时之前等待建立连接的秒数。默认值为15秒。  
   
  **执行超时**  
@@ -57,16 +57,16 @@ ms.locfileid: "70153754"
  **全部重置**  
  将所有手动输入的连接属性值替换为默认值。  
   
- **连接**  
+ **“连接”**  
  使用列出的值尝试连接。  
   
  **选项**  
  单击此选项更改对话框并隐藏其他服务器连接选项，例如记住密码。  
   
- **考试**  
- 在“已注册的服务器”[!INCLUDE[ssDE](../../includes/ssde-md.md)]**中注册 ** 时，单击此选项可以测试连接。  
+ **测试**  
+ 在“已注册的服务器”**** 中注册 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 时，单击此选项可以测试连接。  
   
- **把**  
+ **保存**  
  保存“已注册的服务器”**** 中的设置。  
   
 ## <a name="see-also"></a>另请参阅  

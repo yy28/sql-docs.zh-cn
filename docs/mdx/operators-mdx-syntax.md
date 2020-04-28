@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5067793ae0f5533a889973e18f7b300914df9092
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892116"
 ---
 # <a name="operators-mdx-syntax"></a>运算符（MDX 语法）
@@ -30,11 +30,11 @@ ms.locfileid: "68892116"
   
  MDX 支持下表中列出的运算符：  
   
-|若要执行这种运算|用途|  
+|若要执行这种运算|使用|  
 |---------------------------------------|---------|  
 |将一个值赋给变量，或将结果集列与别名相关联。|[赋值运算符](../mdx/assignment-operators.md)|  
 |加法、减法、乘法、除法。|[算术运算符](../mdx/arithmetic-operators.md)|  
-|测试某个条件（如 AND、OR、NOT 和 XOR）的真实性。|[位运算符](../mdx/bitwise-operators.md)|  
+|测试某个条件（如 AND、OR、NOT 和 XOR）的真实性。|[按位运算符](../mdx/bitwise-operators.md)|  
 |将一个值与另一个值或表达式进行比较。|[比较运算符](../mdx/comparison-operators.md)|  
 |永久或临时将两个字符串合并成一个字符串。|[串联运算符](../mdx/concatenation-operators.md)|  
 |永久或临时将两个集表达式合并成一个集。|[集运算符](../mdx/set-operators.md)|  
@@ -71,11 +71,11 @@ ms.locfileid: "68892116"
   
 -   NOT  
   
--   和  
+-   AND  
   
 -   XOR  
   
--   或  
+-   OR  
   
  有关 MDX 中的运算符的详细信息，请参阅 mdx[运算符引用 &#40;mdx&#41;](../mdx/mdx-operator-reference-mdx.md)。  
   
@@ -99,6 +99,6 @@ ms.locfileid: "68892116"
   
 ## <a name="see-also"></a>另请参阅  
  [Mdx 运算符引用 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Mdx 语法元素 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX 语法元素 (MDX)](../mdx/mdx-syntax-elements-mdx.md)  
   
   

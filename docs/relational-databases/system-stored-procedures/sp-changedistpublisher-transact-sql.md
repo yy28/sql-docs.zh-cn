@@ -16,10 +16,10 @@ ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 80eb30fc6b6b2cea9fc058780831af3915fd9007
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771356"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
@@ -53,7 +53,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
  
  下表说明了发布服务器的属性和这些属性的值。  
   
-|properties|值|说明|  
+|属性|值|说明|  
 |--------------|------------|-----------------|  
 |**正在**|**true**|激活发布服务器。|  
 ||**false**|停用发布服务器|  

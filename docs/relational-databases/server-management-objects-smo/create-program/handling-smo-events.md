@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 893fb08f2d32c7ae9d80321c1d849010660cc308
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70148725"
 ---
 # <a name="handling-smo-events"></a>处理 SMO 事件
@@ -33,8 +33,7 @@ ms.locfileid: "70148725"
  通过设置事件处理程序并订阅相关事件，可以以编程方式对这些事件进行处理。 这种事件处理只是暂时性的，因为当 SMO 客户端程序退出时会删除所有的订阅。  
   
 ## <a name="connectioncontext-event-handling"></a>ConnectionContext 事件处理  
- 
-  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象支持若干种事件类型。 事件属性必须设置为相应事件处理程序的实例，且必须将事件处理程序对象定义为用于处理事件的受保护函数。  
+ <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象支持若干种事件类型。 事件属性必须设置为相应事件处理程序的实例，且必须将事件处理程序对象定义为用于处理事件的受保护函数。  
   
 ## <a name="event-subscription"></a>事件订阅  
  您可以通过以下方法处理事件：编写事件处理程序类，创建该类的实例，将事件处理程序分配给父对象，然后订阅事件。  

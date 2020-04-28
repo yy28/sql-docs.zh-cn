@@ -16,10 +16,10 @@ ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1781e22e97870e7b9c26e7de397d77600ecbe1ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771240"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
@@ -70,15 +70,15 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**Session_id**|**int**|代理作业会话的 ID。|  
-|**Status**|**int**|代理运行状态：<br /><br /> **1** = 启动<br /><br /> **2** = 成功<br /><br /> **3** = 正在进行<br /><br /> **4** = 空闲<br /><br /> **5** = 重试<br /><br /> **6** = 失败|  
+|**状态**|**int**|代理运行状态：<br /><br /> **1** = 启动<br /><br /> **2** = 成功<br /><br /> **3** = 正在进行<br /><br /> **4** = 空闲<br /><br /> **5** = 重试<br /><br /> **6** = 失败|  
 |**StartTime**|**datetime**|时间代理作业会话开始。|  
-|**EndTime**|**datetime**|时间代理作业会话已完成。|  
+|**结束**|**datetime**|时间代理作业会话已完成。|  
 |**Duration**|**int**|此作业会话的累计时间（以秒为单位）。|  
 |**UploadedCommands**|**int**|在代理会话过程中上载的命令的数目。|  
 |**DownloadedCommands**|**int**|在代理会话过程中下载的命令的数目。|  
 |**ErrorMessages**|**int**|在代理会话过程中生成的错误消息的数目。|  
 |**ErrorID**|**int**|发生的错误的 ID。|  
-|**PercentageDone**|**Decimal**|已经在活动会话中传递的全部更改的估计百分比。|  
+|**PercentageDone**|**decimal**|已经在活动会话中传递的全部更改的估计百分比。|  
 |**TimeRemaining**|**int**|估计的活动会话所剩秒数。|  
 |**CurrentPhase**|**int**|活动会话的当前阶段，可以是以下内容之一。<br /><br /> **1** = 上载<br /><br /> **2** = 下载|  
 |**LastMessage**|**nvarchar （500）**|合并代理在会话过程中记录的最后一个消息。|  

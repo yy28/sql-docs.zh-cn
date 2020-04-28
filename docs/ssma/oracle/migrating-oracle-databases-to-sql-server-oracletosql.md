@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: e1021643d503e1ca77f120b81046b3773f8ff458
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68259103"
 ---
 # <a name="migrating-oracle-databases-to-sql-server-oracletosql"></a>将 Oracle 数据库迁移到 SQL Server (OracleToSQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68259103"
   
 7.  [将转换后的数据库对象加载到 SQL Server 中](loading-converted-database-objects-into-sql-server-oracletosql.md)。  
   
-    可以通过以下方式之一执行此操作：  
+    可通过以下方式之一执行此操作：  
   
     -   保存并在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]运行脚本。  
   

@@ -16,10 +16,10 @@ ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7aa68b2ee2e592f264f5a64c4c675103253da495
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771532"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
@@ -55,8 +55,8 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**路径名**|**sysname**|数据库的名称。|  
-|**识别**|**int**|数据库标识符。|  
+|name |**sysname**|数据库的名称。|  
+|**id**|**int**|数据库标识符。|  
 |**transpublish**|**bit**|如果已为快照或事务发布启用了数据库，则为;如果值为**1** ，则表示启用了快照或事务发布。|  
 |**mergepublish**|**bit**|如果数据库已启用合并发布，则为; 否则为。如果值为**1** ，则表示启用了合并发布。|  
 |**dbowner**|**bit**|如果用户是**db_owner**固定数据库角色的成员，则为; 否则为。如果值为**1** ，则表示该用户是此角色的成员。|  

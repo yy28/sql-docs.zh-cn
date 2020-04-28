@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 53ef09d19b62c0e6ce7742c41581d3cdefdfc374
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890554"
 ---
 # <a name="partition-processing-destination"></a>分区处理目标
-  分区处理目标加载并处理[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]分区。 有关分区的详细信息，请参阅[分区（Analysis Services - 多维数据）](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data)。  
+  分区处理目标加载并处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 分区。 有关分区的详细信息，请参阅[分区（Analysis Services - 多维数据）](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data)。  
   
  分区处理目标包含下列功能：  
   
@@ -48,15 +48,15 @@ ms.locfileid: "68890554"
   
  有关可在 **“分区处理目标编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
--   [分区处理目标编辑器 &#40;连接管理器页&#41;](../partition-processing-destination-editor-connection-manager-page.md)  
+-   [分区处理目标编辑器（“连接管理器”页）](../partition-processing-destination-editor-connection-manager-page.md)  
   
--   [分区处理目标编辑器 &#40;映射 "页面&#41;](../partition-processing-destination-editor-mappings-page.md)  
+-   [分区处理目标编辑器（“映射”页）](../partition-processing-destination-editor-mappings-page.md)  
   
--   [分区处理目标编辑器 &#40;高级页面&#41;](../partition-processing-destination-editor-advanced-page.md)  
+-   [分区处理目标编辑器（“高级”页）](../partition-processing-destination-editor-advanced-page.md)  
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [Common Properties](../common-properties.md)  
+-   [通用属性](../common-properties.md)  
   
 -   [分区处理目标自定义属性](partition-processing-destination-custom-properties.md)  
   

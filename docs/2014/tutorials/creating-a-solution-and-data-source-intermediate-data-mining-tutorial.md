@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 21bedc825f5890e3eb6551818dc5dc10724d2bf8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891441"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>创建解决方案和数据源（数据挖掘中级教程）
@@ -28,7 +28,7 @@ ms.locfileid: "68891441"
   
 1.  打开 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   
-2.  在 **“文件”** 菜单上，指向 **“新建”** ，再单击 **“项目”** 。  
+2.  在 **“文件”** 菜单上，指向 **“新建”**，再单击 **“项目”**。  
   
 3.  从 **“已安装的模板”** 窗格中选择 **“Analysis Services 多维和数据挖掘项目”** 。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68891441"
   
 1.  在解决方案资源管理器中，右键单击该项目，然后选择 **“属性”**。  
   
-     \- 或 -  
+     - 或 -  
   
      在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，选择 **“项目”** 菜单中的 **“属性”**。  
   
@@ -67,12 +67,12 @@ ms.locfileid: "68891441"
   
  在下一课中，您将添加数据源视图以便支持每个新方案。 只有市场篮以及顺序分析和聚类分析课程使用相同的数据源视图；别的每个方案使用不同的数据源视图，因此各课程彼此是独立的，可以单独完成。  
   
-|场景|包括在数据源视图中的数据|  
+|方案|包括在数据源视图中的数据|  
 |--------------|-------------------------------------------|  
 |[第2课： &#40;中级数据挖掘教程构建预测方案&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)|不同区域的自行车型号的每月销售报表，收集为单一视图形式。|  
-|[第3课：生成市场篮方案 &#40;中级数据挖掘教程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)|一个包含客户订单列表的表，和一个显示每个客户的单独购买情况的嵌套表。|  
+|[第 3 课：生成市场篮方案（数据挖掘中级教程）](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)|一个包含客户订单列表的表，和一个显示每个客户的单独购买情况的嵌套表。|  
 |[第4课：生成顺序分析和聚类分析方案 &#40;中级数据挖掘教程&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)|用于市场篮分析的相同数据，添加了显示产品购买订单的标识符。|  
-|[第5课：生成神经网络和逻辑回归模型 &#40;中级数据挖掘教程&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)|包含来自呼叫中心的一些初步性能跟踪数据的单一表。|  
+|[第 5 课：生成神经网络模型和逻辑回归模型（数据挖掘中级教程）](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)|包含来自呼叫中心的一些初步性能跟踪数据的单一表。|  
   
 ## <a name="next-lesson"></a>下一课  
  [第2课： &#40;中级数据挖掘教程构建预测方案&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  

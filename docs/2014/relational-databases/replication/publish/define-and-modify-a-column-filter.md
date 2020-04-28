@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7e00ceeae68ccc791c3680e029e13844fa6ec683
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68731072"
 ---
 # <a name="define-and-modify-a-column-filter"></a>定义和修改列筛选器
@@ -37,13 +37,13 @@ ms.locfileid: "68731072"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   某些列无法筛选；有关详细信息，请参阅[筛选已发布数据](filter-published-data.md)。 如果在初始化订阅之后修改了列筛选器，则必须在更改后生成新的快照并重新初始化所有订阅。 有关属性更改要求的详细信息，请参阅[更改发布和项目属性](change-publication-and-article-properties.md)。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  可以在新建发布向导的 **“项目”** 页上定义列筛选器。 有关使用新建发布向导的详细信息，请参阅[创建发布](create-a-publication.md)。  
   
  在“发布属性 - **发布>”对话框的“项目”页上定义和修改列筛选器。** **\<** 有关发布和项目属性的详细信息，请参阅[查看和修改发布属性](view-and-modify-publication-properties.md)。  
@@ -62,7 +62,7 @@ ms.locfileid: "68731072"
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  在创建表项目时，您可以定义要在项目中包含的列以及在定义项目后更改列。 您可以使用复制存储过程以编程的方式创建和修改已筛选的列。  
   
 > [!NOTE]  
@@ -126,7 +126,7 @@ ms.locfileid: "68731072"
   
 3.  重新初始化订阅。 有关详细信息，请参阅 [重新初始化订阅](../reinitialize-subscriptions.md)。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  在此事务复制示例中， `DaysToManufacture` 列将从基于 `Product` 表的项目中删除。  
   
  [!code-sql[HowTo#sp_AddTranArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpub.sql#sp_addtranarticle)]  

@@ -17,10 +17,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 959af9bcb1879dc19d2bfb99253b4c40d637fd1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68260236"
 ---
 # <a name="migrating-access-databases-to-sql-server---azure-sql-db-accesstosql"></a>将 Access 数据库迁移到 SQL Server-Azure SQL DB （AccessToSQL）
@@ -60,4 +60,4 @@ ms.locfileid: "68260236"
   
 ## <a name="see-also"></a>另请参阅  
 [使用 SQL Server 迁移助手进行访问的入门](getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
-[为迁移准备 Access 数据库](preparing-access-databases-for-migration-accesstosql.md)
+[准备要迁移的 Access 数据库](preparing-access-databases-for-migration-accesstosql.md)

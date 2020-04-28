@@ -16,10 +16,10 @@ ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e6e7232d718d5cf6cb1791783f105f31dc2f4ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769100"
 ---
 # <a name="sp_addpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
@@ -93,12 +93,12 @@ sp_addpublication [ @publication = ] 'publication'
   
 |值|说明|  
 |-----------|-----------------|  
-|**本机**|生成所有表的本机模式大容量复制程序输出。 *对于 Oracle 发布服务器不支持*。|  
+|**native**|生成所有表的本机模式大容量复制程序输出。 *对于 Oracle 发布服务器不支持*。|  
 |**字符**|生成所有表的字符模式大容量复制程序输出。 _对于 Oracle 发布服务器，_ **字符**_仅对快照复制有效_。|  
 |**发出**|生成所有表的本机模式大容量复制程序输出，但在快照过程中并不锁定表。 只有事务发布支持该值。 *对于 Oracle 发布服务器不支持*。|  
 |**concurrent_c**|生成所有表的字符模式大容量复制程序输出，但在快照过程中并不锁定表。 只有事务发布支持该值。|  
-|**数据库快照**|从数据库快照生成所有表的本机模式大容量复制程序输出。 并非在的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]每个版本中都提供了数据库快照。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。|  
-|**database snapshot character**|从数据库快照生成所有表的字符模式大容量复制程序输出。 并非在的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]每个版本中都提供了数据库快照。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。|  
+|**数据库快照**|从数据库快照生成所有表的本机模式大容量复制程序输出。 并非在的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]每个版本中都提供了数据库快照。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2016 的各个[版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。|  
+|**database snapshot character**|从数据库快照生成所有表的字符模式大容量复制程序输出。 并非在的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]每个版本中都提供了数据库快照。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2016 的各个[版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。|  
 |NULL（默认值）|[!INCLUDE[msCoName](../../includes/msconame-md.md)]对于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器，默认为**本机**。 对于非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器，当*repl_freq*的值为**Snapshot** ，并为所有其他情况**concurrent_c**时，默认为**字符**。|  
   
 `[ \@repl_freq = ] 'repl_freq'`复制频率的类型， *repl_freq*为**nvarchar （10）**，可以是下列值之一。  
@@ -114,7 +114,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 |值|说明|  
 |-----------|-----------------|  
-|**正在**|发布数据可立即用于订阅服务器。|  
+|**活动**|发布数据可立即用于订阅服务器。|  
 |**非活动**（默认值）|首次创建发布时，发布数据不能由订阅服务器使用（订阅服务器可以订阅，但这些订阅不被处理）。|  
   
  *对于 Oracle 发布服务器不支持*。  
@@ -193,7 +193,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 |值|说明|  
 |-----------|-----------------|  
-|**sql**|使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储事务。|  
+|**transact-sql**|使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储事务。|  
 |NULL（默认值）|默认为**sql**，它指定使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]来存储事务。|  
   
 > [!NOTE]  
@@ -210,7 +210,7 @@ sp_addpublication [ @publication = ] 'publication'
 `[ \@publisher = ] 'publisher'`指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  ** 将发布添加到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器时，不应使用 publisher。  
+>  *publisher*将发布添加到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器时，不应使用 publisher。  
   
 `[ \@allow_initialize_from_backup = ] 'allow_initialize_from_backup'`指示订户是否可以从备份而非初始快照中初始化对此发布的订阅。 *allow_initialize_from_backup*为**nvarchar （5）**，可以是下列值之一：  
   

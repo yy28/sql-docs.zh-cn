@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cbd8a79bf9d881d2d4c9055531bac2e290f202a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811006"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>估算内存优化表的内存需求
@@ -34,9 +34,9 @@ ms.locfileid: "68811006"
   
 -   [表变量占用的内存](#bkmk_TableVariables)  
   
--   [表增长占用的内存](#bkmk_MemoryForGrowth)  
+-   [表增长所需的内存](#bkmk_MemoryForGrowth)  
   
-##  <a name="bkmk_ExampleTable"></a> 内存优化表示例  
+##  <a name="example-memory-optimized-table"></a><a name="bkmk_ExampleTable"></a>内存优化表示例  
  考虑以下内存优化的表架构：  
   
 ```sql  
@@ -61,10 +61,10 @@ GO
   
  我们将使用该架构来确定此内存优化表所需的最低内存。  
   
-##  <a name="bkmk_MemoryForTable"></a> 表占用的内存  
+##  <a name="memory-for-the-table"></a><a name="bkmk_MemoryForTable"></a>表的内存  
  内存优化表行包含三个部分：  
   
--   **时间戳**   
+-   **加**   
     行标题/时间戳 = 24 个字节。  
   
 -   **索引指针**   
@@ -79,7 +79,7 @@ GO
   
  根据上述计算，内存优化表中每行的大小为 24 + 32 + 200，即 256 个字节。  总共有 5 百万行，则表将占用 5,000,000 * 256 字节，共 1,280,000,000 字节 - 大约 1.28 GB。  
   
-##  <a name="bkmk_IndexMeemory"></a> 索引占用的内存  
+##  <a name="memory-for-indexes"></a><a name="bkmk_IndexMeemory"></a>索引内存  
  **每个哈希索引占用的内存**  
   
  每个哈希索引是一个由 8 字节地址指针组成的哈希数组。  该数组的大小最好通过索引中唯一索引键的数目确定，例如：使用唯一 Col2 键的个数作为 t1c2_index 的数组大小。 哈希数组太大，浪费内存。  哈希数组太小，又会降低性能（许多索引键经哈希操作后映射至同一索引，导致冲突过多）。  
@@ -127,7 +127,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  有三个哈希索引，所以哈希索引占用的内存为 3 * 64MB = 192MB。  
   
- **非聚集索引占用的内存**  
+ **非聚集索引的内存**  
   
  非聚集索引采用 B 树实现，其内部节点包含索引键和指向后续节点的指针。  叶节点包含索引键和指向内存中表行的指针。  
   
@@ -135,10 +135,10 @@ SELECT COUNT(DISTINCT [Col2])
   
  可按如下方式计算非聚集索引占用的内存：  
   
--   **为非叶节点分配的内存**   
+-   **分配给非叶节点的内存**   
     对于典型配置，分配给非叶节点的内存只占索引所占用的整个内存的很小的百分比。 其占用的内存少到可以安全地忽略。  
   
--   **叶节点占用的内存**   
+-   **叶节点的内存**   
     叶节点对于表中的每个唯一键都具有 1 行，并且指向具有该唯一键的数据行。  如果多行具有相同的键（即，存在不唯一的非聚集索引），则索引页节点中只有一行指向其中某一行，其他行则相互链接在一起。  因此，可通过下面的公式估算所需的总内存：   
     非聚集索引所需内存 = （指针大小 + Sum (键列数据类型大小))* 唯一键行数  
   
@@ -150,7 +150,7 @@ SELECT * FROM t_hk
    WHERE c2 > 5  
 ```  
   
-##  <a name="bkmk_MemoryForRowVersions"></a> 行版本控制占用的内存  
+##  <a name="memory-for-row-versioning"></a><a name="bkmk_MemoryForRowVersions"></a>用于行版本控制的内存  
  为避免锁定，内存 OLTP 在更新或删除行时采用乐观并发策略。 也就是说，对某行进行更新时，将额外创建一个该行的版本。 系统将保持旧版本可用，直至可能会用到该版本的所有事务执行完毕为止。 在删除某行时，系统按与更新操作类似的方式操作，即：保持版本可用，直至不再需要为止。 读取和插入操作不会创建额外的行版本。  
   
  在任意时刻，内存中都可能存在一定数量的额外行等待垃圾回收周期释放其内存，因此，必须具有足够的内存来容纳这些额外的行。  
@@ -165,12 +165,12 @@ SELECT * FROM t_hk
   
  `memoryForRowVersions = rowVersions * rowSize`  
   
-##  <a name="bkmk_TableVariables"></a> 表变量占用的内存  
+##  <a name="memory-for-table-variables"></a><a name="bkmk_TableVariables"></a>表变量的内存  
  只有在表变量超出范围时，才能释放表变量占用的内存。 来自表变量的行（包括作为更新的一部分删除的行）不会进行垃圾回收。 在表变量退出作用域之前不会释放内存。  
   
  与过程作用域相反，用于许多事务的在大型 SQL 批处理中定义的表变量可能会占用大量内存。 因为不对它们进行垃圾回收，所以，表变量中已删除的行可能会使用大量内存并且降低性能，这是因为读取操作需要扫描已删除的行。  
   
-##  <a name="bkmk_MemoryForGrowth"></a> 表增长占用的内存  
+##  <a name="memory-for-growth"></a><a name="bkmk_MemoryForGrowth"></a>内存增长  
  上述计算结果为表当前所需的内存。 除该内存大小外，还需对表的增长作出预测并提供充足的内存来满足增长所需。  例如，如预测表会有 10% 的增长，则需将上述结果乘以 1.1 来算出表所需的总内存。  
   
 ## <a name="see-also"></a>另请参阅  

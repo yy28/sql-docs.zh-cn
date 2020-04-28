@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5535428d89a0d14b60e3ac79d281f63b4c69bfb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889866"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
@@ -39,7 +39,7 @@ USING <algorithm> [(<parameter list>)]
  *构造*  
  要向其中添加挖掘模型的挖掘结构的名称。  
   
- *model*  
+ *模型*  
  挖掘模型的唯一名称。  
   
  *列定义列表*  
@@ -74,7 +74,7 @@ USING <algorithm> [(<parameter list>)]
   
 -   添加**钻取**关键字，使挖掘模型的用户可以从模型结果深化到事例数据。 在数据挖掘扩展插件 (DMX) 中，仅当创建模型时才能启用钻取功能。  
   
- 若要同时使用大小写筛选和钻取，可使用以下示例**** 中所示的语法组合关键字：  
+ 若要同时使用大小写筛选和钻取，可使用以下示例**WITH**中所示的语法组合关键字：  
   
  `WITH DRILLTHROUGH, FILTER(Gender = 'Male')`  
   
@@ -103,8 +103,7 @@ USING <algorithm> [(<parameter list>)]
  可以通过在嵌套表列定义后附上一个筛选条件表达式，来定义应用于嵌套表的筛选表达式。  
   
 ### <a name="modeling-flags"></a>建模标志  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持将下列建模标志用在挖掘模型列中：  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持将下列建模标志用在挖掘模型列中：  
   
 > [!NOTE]  
 >  NOT_NULL 建模标志应用于挖掘结构列。 有关详细信息，请参阅 [CREATE MINING STRUCTURE (DMX)](../dmx/create-mining-structure-dmx.md)。  
@@ -204,6 +203,6 @@ USING Microsoft_Decision Trees
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘扩展插件 &#40;DMX&#41; 数据定义语句](../dmx/dmx-statements-data-definition.md)   
  [数据挖掘扩展插件 &#40;DMX&#41; 数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展插件 &#40;DMX&#41; 语句参考](../dmx/data-mining-extensions-dmx-statements.md)  
+ [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: ef71a9355bc11c4d377f00a44b2b8cd2958f8656
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264447"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>SSMA for Oracle 入门 (OracleToSQL)
@@ -84,21 +84,21 @@ SSMA 有两个工具栏：项目工具栏和迁移工具栏。
 #### <a name="migration-toolbar"></a>迁移工具栏  
 下表显示了迁移工具栏命令：  
   
-|按钮|函数|  
+|Button|函数|  
 |------|--------|  
 |**创建报表**|将选定的 Oracle 对象转换[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为语法，然后创建显示转换成功的报表。<br /><br />除非在 Oracle 元数据资源管理器中选择了对象，否则将禁用此命令。|  
 |**转换架构**|将选定的 Oracle 对象转换[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为对象。<br /><br />除非在 Oracle 元数据资源管理器中选择了对象，否则将禁用此命令。|  
 |**迁移数据**|将数据从 Oracle 数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在运行此命令之前，必须将 Oracle 架构转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]架构，然后将对象加载到中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br />除非在 Oracle 元数据资源管理器中选择了对象，否则将禁用此命令。|  
-|**Stop**|停止当前进程。|  
+|**停止**|停止当前进程。|  
   
 ### <a name="menus"></a>菜单  
 下表显示了 SSMA 菜单。  
   
 |菜单|说明|  
 |----|-----------|  
-|**文件**|包含用于处理项目、连接到 Oracle 和连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的命令。|  
+|**File**|包含用于处理项目、连接到 Oracle 和连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的命令。|  
 |**编辑**|包含用于查找和处理详细信息页中的文本（例如从 SQL 详细[!INCLUDE[tsql](../../includes/tsql-md.md)]信息窗格复制）的命令。 还包含 "**管理书签**" 选项，您可以在其中查看现有书签的列表。 您可以使用对话框右侧的按钮来管理书签。|  
-|**视图**|包含**同步元数据**资源管理器命令。 用于在 Oracle 元数据资源管理器和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据资源管理器之间同步对象的。 还包含用于显示和隐藏 "**输出**" 和 "**错误列表**" 窗格以及用于管理布局的选项**布局**的命令。|  
+|**查看**|包含**同步元数据**资源管理器命令。 用于在 Oracle 元数据资源管理器和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据资源管理器之间同步对象的。 还包含用于显示和隐藏 "**输出**" 和 "**错误列表**" 窗格以及用于管理布局的选项**布局**的命令。|  
 |**工具**|包含用于创建报表以及迁移对象和数据的命令。 还提供对 "**全局设置**" 和 "**项目设置**" 对话框的访问。|  
 |**测试人员**|包含用于创建和使用测试用例、存储库和备份管理系统的命令。|  
 |**帮助**|提供对 SSMA 帮助和的 "**关于**" 对话框的访问。|  

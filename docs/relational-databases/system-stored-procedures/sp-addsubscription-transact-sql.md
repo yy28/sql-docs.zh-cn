@@ -16,10 +16,10 @@ ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c57822529290a6ae4c3e1b5c96f712dbd626d04d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769030"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
@@ -123,7 +123,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |read only（默认值）|该订阅是只读的。 在订阅服务器上所做的更改不会发送到发布服务器。|  
 |sync tran|支持立即更新订阅。 Oracle 发布服务器不支持。|  
 |queued tran|支持订阅进行排队更新。 可以在订阅服务器上进行数据修改，将其存储在队列中，然后传播到发布服务器。 Oracle 发布服务器不支持。|  
-|故障转移|将排队更新作为故障转移的情况下启用用于即时更新的订阅。 可以在订阅服务器上进行数据修改并立即传播到发布服务器。 如果发布服务器与订阅服务器未连接在一起，则可以更改更新模式以便将在订阅服务器上所做的数据修改存储在队列中，直到订阅服务器与发布服务器重新连接在一起。 Oracle 发布服务器不支持。|  
+|failover|将排队更新作为故障转移的情况下启用用于即时更新的订阅。 可以在订阅服务器上进行数据修改并立即传播到发布服务器。 如果发布服务器与订阅服务器未连接在一起，则可以更改更新模式以便将在订阅服务器上所做的数据修改存储在队列中，直到订阅服务器与发布服务器重新连接在一起。 Oracle 发布服务器不支持。|  
 |queued failover|支持将订阅作为排队更新订阅，并允许更改为立即更新模式。 在订阅服务器和发布服务器之间建立连接之前，可以在订阅服务器上修改数据，并将数据修改存储在队列中。 建立起持续连接后，即可将更新模式更改为立即更新。 Oracle 发布服务器不支持。|  
   
  请注意，如果要订阅的发布允许 DTS，则不允许值同步事务和排队事务。  
@@ -144,9 +144,9 @@ sp_addsubscription [ @publication = ] 'publication'
 |-----------|-----------------|  
 |1|一次性|  
 |2|按需|  
-|4|每天一次|  
+|4|每日|  
 |8|每周|  
-|16|每月|  
+|16|每月一次|  
 |32|与“每月”选项相关|  
 |64（默认值）|自动启动|  
 |128|重复执行|  
@@ -176,7 +176,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |-----------|-----------------|  
 |1|一次|  
 |2|秒|  
-|4|分钟|  
+|4|Minute|  
 |8|Hour|  
 |Null||  
   
@@ -270,8 +270,7 @@ sp_addsubscription [ @publication = ] 'publication'
  每个分发代理允许的连接数，用于将成批更改并行应用于订阅服务器，同时保留在使用单线程时具有的多种事务特征。 *subscriptionstreams*的值为**tinyint**，默认值为 NULL。 支持使用 1 到 64 之间的值。 对于非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器、Oracle 发布服务器或对等订阅，不支持此参数。 每当使用订阅流时，都会在 msreplication_subscriptions 表中添加附加行（每个流一行），且 agent_id 设置为 NULL。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[tsql](../../includes/tsql-md.md)]订阅流不适用于配置为传递  的项目。 若要使用订阅流，请改将项目配置为传递存储过程调用。  
+>  [!INCLUDE[tsql](../../includes/tsql-md.md)]订阅流不适用于配置为传递  的项目。 若要使用订阅流，请改将项目配置为传递存储过程调用。  
   
  [ @subscriber_type=]*subscriber_type*  
  订阅服务器的类型。 *subscriber_type*为**tinyint**，可以是下列值之一。  
@@ -280,8 +279,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |-----------|-----------------|  
 |0（默认值）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器|  
 |1|ODBC 数据源服务器|  
-|2|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet 数据库|  
+|2|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet 数据库|  
 |3|OLE DB 访问接口|  
   
  [ @memory_optimized=]*memory_optimized*  
@@ -318,8 +316,8 @@ sp_addsubscription [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/sp-addsubscription-trans_1.sql)]  
   
 ## <a name="see-also"></a>另请参阅  
- [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
- [为非 SQL Server 订阅服务器创建订阅](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
+ [创建推送订阅](../../relational-databases/replication/create-a-push-subscription.md)   
+ [创建非 SQL Server 订阅服务器的订阅](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpushsubscription_agent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
  [sp_changesubstatus &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   

@@ -21,10 +21,10 @@ ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 333be9cb6c86c1db3801ac50159610c6d19d1611
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68941103"
 ---
 # <a name="syssysservers-transact-sql"></a>sys.sysservers (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "68941103"
 |**srvproduct**|**sysname**|远程服务器的产品名称。|  
 |**providername**|**nvarchar(128)**|用于访问此服务器的 OLE DB 访问接口名称。|  
 |**datasource**|**nvarchar(4000)**|OLE DB 数据源值。|  
-|**位置**|**nvarchar(4000)**|OLE DB 位置值。|  
+|**location**|**nvarchar(4000)**|OLE DB 位置值。|  
 |**providerstring**|**nvarchar(4000)**|OLE DB 访问接口字符串值。|  
 |**schemadate**|**datetime**|此行上次更新的日期。|  
 |**topologyx**|**int**|未使用。|  
@@ -52,17 +52,17 @@ ms.locfileid: "68941103"
 |**srvcollation**|**sysname**|服务器的排序规则。|  
 |**connecttimeout**|**int**|服务器连接的超时设置。|  
 |**querytimeout**|**int**|对服务器进行查询的超时设置。|  
-|**srvnetname**|**char （30）**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**srvnetname**|**char(30)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**isremote**|**bit**|1 = 服务器为远程服务器。<br /><br /> 0 = 服务器为链接服务器。|  
 |**rpc**|**bit**|1 = **sp_serveroption\@rpc**设置为**true**或**on**。<br /><br /> 0 = **sp_serveroption\@rpc**设置为**false**或**off**。|  
-|**酒馆**|**bit**|1 = **sp_serveroption\@pub**设置为**true**或**on**。<br /><br /> 0 = **sp_serveroption\@pub**设置为**false**或**off**。|  
+|**pub**|**bit**|1 = **sp_serveroption\@pub**设置为**true**或**on**。<br /><br /> 0 = **sp_serveroption\@pub**设置为**false**或**off**。|  
 |**该子**|**bit**|1 = **sp_serveroption\@子项**设置为**true**或**on**。<br /><br /> 0 = **sp_serveroption\@sub**设置为**false**或**off**。|  
 |**dist**|**bit**|1 = **sp_serveroption\@dist**设置为**true**或**on**。<br /><br /> 0 = **sp_serveroption\@dist**设置为**false**或**off**。|  
 |**dpub**|**bit**|1 = **sp_serveroption\@** 设置为**true**或**on 的**dpub。<br /><br /> 0 = **sp_serveroption\@dpub**设置为**false**或**off**。|  
 |**rpcout**|**bit**|1 = **sp_serveroption\@rpc out**设置为**true**或**on**。<br /><br /> 0 = **sp_serveroption\@rpc out**设置为**false**或**off**。|  
 |**dataaccess**|**bit**|1 = **sp_serveroption\@的数据访问**设置为**true**或**on**。<br /><br /> 0 = **sp_serveroption\@数据访问**设置为**false**或**off**。|  
 |**collationcompatible**|**bit**|1 = **sp_serveroption\@排序规则兼容性**设置为**true**或**on**。<br /><br /> 0 = **sp_serveroption\@排序规则兼容性**设置为**false**或**off**。|  
-|**主板**|**bit**|1 = **sp_serveroption\@系统**设置为**true**或**on**。<br /><br /> 0 = **sp_serveroption\@系统**设置为**false**或**off**。|  
+|**系统**|**bit**|1 = **sp_serveroption\@系统**设置为**true**或**on**。<br /><br /> 0 = **sp_serveroption\@系统**设置为**false**或**off**。|  
 |**useremotecollation**|**bit**|1 = **sp_serveroption\@远程排序规则**设置为**true**或**on**。<br /><br /> 0 = **sp_serveroption\@远程排序规则**设置为**false**或**off**。|  
 |**lazyschemavalidation**|**bit**|1 = **sp_serveroption\@延迟架构验证**设置为**true**或**on**。<br /><br /> 0 = **sp_serveroption\@延迟架构验证**设置为**false**或**off**。|  
 |**归类**|**sysname**|按**sp_serveroption\@排序规则名称**设置的服务器排序规则。|  
@@ -70,6 +70,6 @@ ms.locfileid: "68941103"
   
 ## <a name="see-also"></a>另请参阅  
  [将系统表映射到系统视图 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Transact-sql&#41;的兼容性视图 &#40;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [兼容性视图 (Transact SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

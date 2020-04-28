@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c47514f551ec07a8c8837533cb38c0e6283645cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892886"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>数据挖掘扩展插件 (DMX) 参考
@@ -33,7 +33,7 @@ ms.locfileid: "68892886"
   
  **有关详细信息，请执行以下操作：** [挖掘结构 &#40;Analysis Services 数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining)  
   
-##  <a name="BKMK_DMXStatements"></a>DMX 语句  
+##  <a name="dmx-statements"></a><a name="BKMK_DMXStatements"></a>DMX 语句  
  可以使用 DMX 语句创建、处理、删除、复制、浏览和预测数据挖掘模型。 DMX 中有两种类型的语句：数据定义语句和数据操作语句。 可以使用每种类型的语句执行各种不同的任务。  
   
  有关使用 DMX 语句的详细信息，请参考以下部分的内容：  
@@ -44,7 +44,7 @@ ms.locfileid: "68892886"
   
 -   [查询基础知识](#BKMK_Queries)  
   
-###  <a name="BKMK_DDL"></a>数据定义语句  
+###  <a name="data-definition-statements"></a><a name="BKMK_DDL"></a>数据定义语句  
  使用 DMX 中的数据定义语句可以创建和定义新的挖掘结构和模型，导入和导出挖掘模型和挖掘结构，以及从数据库中删除现有模型。 DMX 中的数据定义语句属于数据定义语言 (DDL)。  
   
  使用 DMX 中的数据定义语句可以执行下列任务：  
@@ -63,7 +63,7 @@ ms.locfileid: "68892886"
   
  [返回到 DMX 语句](#BKMK_DMXStatements)  
   
-###  <a name="BKMK_DML"></a>数据操作语句  
+###  <a name="data-manipulation-statements"></a><a name="BKMK_DML"></a>数据操作语句  
  使用 DMX 中的数据操作语句可以处理现有挖掘模型、浏览模型以及对模型创建预测。 DMX 中的数据操作语句属于数据操作语言 (DML)。  
   
  使用 DMX 中的数据操作语句可以执行下列任务：  
@@ -90,7 +90,7 @@ ms.locfileid: "68892886"
   
  [返回到 DMX 语句](#BKMK_DMXStatements)  
   
-###  <a name="BKMK_Queries"></a>DMX 查询基础知识  
+###  <a name="dmx-query-fundamentals"></a><a name="BKMK_Queries"></a>DMX 查询基础知识  
  SELECT 语句是大多数 DMX 查询的基础。 通过将各种子句与此类语句组合使用，可以浏览、复制或预测挖掘模型。 预测查询使用 SELECT 窗体根据现有挖掘模型创建预测。 函数在数据挖掘模型的固有功能的基础上，扩展了您浏览和查询挖掘模型的能力。  
   
  使用 DMX 函数可以获取在模型定型过程中发现的信息，并且还可以计算新的信息。 这些函数可用于多种用途，包括返回说明基础数据或预测精确性的统计信息，或返回预测的详细说明。  

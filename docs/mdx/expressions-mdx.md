@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a1dfcdc52bb52652c204e31c28ccf5ec48ca7a00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893588"
 ---
 # <a name="expressions-mdx"></a>表达式 (MDX)
@@ -25,7 +25,7 @@ ms.locfileid: "68893588"
   
  简单表达式可以是下列几种表达式之一：  
   
- 一直  
+ Constant  
  在 MDX 中，常量是表示单个特定值的符号。 字符串、数字和日期值可以呈现为常量。 与数值常量不同，字符串和日期常量必须用单引号 (') 字符分隔开。  
   
  标量函数  
@@ -85,6 +85,6 @@ WHERE [Product].[Category].[Bikes]
   
 ## <a name="see-also"></a>另请参阅  
  [Mdx 语言参考 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX 查询基础知识 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
+ [MDX 查询基础知识 (Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
   
   

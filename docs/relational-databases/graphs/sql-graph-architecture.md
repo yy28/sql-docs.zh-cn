@@ -15,10 +15,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79a85515322d492d4356d47f78da4b79489a223e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811107"
 ---
 # <a name="sql-graph-architecture"></a>SQL Graph 体系结构  
@@ -141,7 +141,7 @@ ms.locfileid: "68811107"
 |ALTER TABLE    |[ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)|节点和边缘表可以通过与关系表相同的方式进行更改，使用`ALTER TABLE`。 用户可以添加或修改用户定义的列、索引或约束。 但是，更改内部图形列（如`$node_id`或`$edge_id`）将导致错误。  |
 |CREATE INDEX   |[CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  |用户可以对节点和边缘表中的伪列和用户定义列创建索引。 支持所有索引类型，包括聚集列存储索引和非聚集列存储索引。  |
 |创建边缘约束    |[Transact-sql&#41;的边缘约束 &#40;](../../relational-databases/tables/graph-edge-constraints.md)  |用户现在可以对边缘表创建边缘约束，以强制实施特定的语义，还可以保持数据完整性  |
-|DROP TABLE |[DROP TABLE &#40;Transact-sql&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |可以使用与关系表相同的方式删除节点和边缘表`DROP TABLE`。 但在此版本中，不支持在删除节点或节点表时，不会有任何边界指向已删除的节点和边缘的级联删除。 建议在删除节点表后，用户会手动删除连接到该节点表中节点的任何边缘以维护关系图的完整性。  |
+|DROP TABLE |[DROP TABLE (Transact-SQL)](../../t-sql/statements/drop-table-transact-sql.md)  |可以使用与关系表相同的方式删除节点和边缘表`DROP TABLE`。 但在此版本中，不支持在删除节点或节点表时，不会有任何边界指向已删除的节点和边缘的级联删除。 建议在删除节点表后，用户会手动删除连接到该节点表中节点的任何边缘以维护关系图的完整性。  |
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>数据操作语言 (DML) 语句

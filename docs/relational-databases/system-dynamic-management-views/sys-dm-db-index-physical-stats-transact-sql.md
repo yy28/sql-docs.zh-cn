@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d7fe788192aac7f7bd3e4723b615391c5d8c6e86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811519"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
@@ -63,14 +63,14 @@ sys.dm_db_index_physical_stats (
  可以指定内置函数 [DB_ID](../../t-sql/functions/db-id-transact-sql.md)。 如果在不指定数据库名称的情况下使用 DB_ID，则当前数据库的兼容级别必须是 90 或更高。  
   
  *object_id* |NULL |0 |缺省值  
- 索引所在的表或视图的对象 ID。 *object_id*是**int**。  
+ 索引所在的表或视图的对象 ID。 *object_id* 是 **int**。  
   
  有效的输入包括表和视图的 ID 号、NULL、0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。 在[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中，有效输入还包括 service broker 队列名称或队列内部表名称。 当应用默认参数（即所有对象、所有索引等）时，所有队列的碎片信息都将包含在结果集中。  
   
  指定 NULL 可返回指定数据库中的所有表和视图的信息。 如果为*object_id*指定 null，则还必须为*index_id*和*partition_number*指定 null。  
   
  *index_id* |0 |NULL |-1 |缺省值  
- 索引的 ID。 *index_id*是**int**。有效输入包括索引的 ID 号、0（如果*object_id*为堆）、NULL、-1 或默认值。 默认值为-1。 在此上下文中，NULL、-1 和 DEFAULT 是等效值。  
+ 索引的 ID。 *index_id*是**int**。有效输入包括索引的 ID 号、0（如果*object_id*为堆）、NULL、-1 或默认值。 默认值为 -1。 在此上下文中，NULL、-1 和 DEFAULT 是等效值。  
   
  指定 NULL 可返回基表或视图的所有索引的信息。 如果为*index_id*指定 null，则还必须为*partition_number*指定 null。  
   
@@ -92,9 +92,9 @@ sys.dm_db_index_physical_stats (
 |object_id|**int**|索引所在的表或视图的对象 ID。|  
 |index_id|**int**|索引的索引 ID。<br /><br /> 0 = 堆。|  
 |partition_number|**int**|所属对象内从 1 开始的分区号；表、视图或索引。<br /><br /> 1 = 未分区的索引或堆。|  
-|index_type_desc|**nvarchar （60）**|索引类型的说明：<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> EXTENDED INDEX<br /><br /> XML INDEX<br /><br /> 列存储映射索引（内部）<br /><br /> 列存储 DELETEBUFFER 索引（内部）<br /><br /> 列存储 DELETEBITMAP 索引（内部）|  
+|index_type_desc|**nvarchar(60)**|索引类型的说明：<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> EXTENDED INDEX<br /><br /> XML INDEX<br /><br /> 列存储映射索引（内部）<br /><br /> 列存储 DELETEBUFFER 索引（内部）<br /><br /> 列存储 DELETEBITMAP 索引（内部）|  
 |hobt_id|**bigint**|索引或分区的堆或 B 树 ID。<br /><br /> 除了返回用户定义索引的 hobt_id，这还会返回内部列存储索引的 hobt_id。|  
-|alloc_unit_type_desc|**nvarchar （60）**|对分配单元类型的说明：<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> LOB_DATA 分配单元包含存储在类型为**text**、 **ntext**、 **image**、 **varchar （max）**、 **nvarchar （max）**、 **varbinary （max）** 和**xml**的列中的数据。 有关详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。<br /><br /> ROW_OVERFLOW_DATA 分配单元包含存储在数据类型为**varchar （n）**、 **nvarchar （n）**、 **varbinary （n）** 和**sql_variant**的数据，这些列已被推送到行外。|  
+|alloc_unit_type_desc|**nvarchar(60)**|对分配单元类型的说明：<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> LOB_DATA 分配单元包含存储在类型为**text**、 **ntext**、 **image**、 **varchar （max）**、 **nvarchar （max）**、 **varbinary （max）** 和**xml**的列中的数据。 有关详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。<br /><br /> ROW_OVERFLOW_DATA 分配单元包含存储在数据类型为**varchar （n）**、 **nvarchar （n）**、 **varbinary （n）** 和**sql_variant**的数据，这些列已被推送到行外。|  
 |index_depth|**tinyint**|索引级别数。<br /><br /> 1 = 堆，或 LOB_DATA 或 ROW_OVERFLOW_DATA 分配单元。|  
 |index_level|**tinyint**|索引的当前级别。<br /><br /> 0 表示索引叶级别、堆以及 LOB_DATA 或 ROW_OVERFLOW_DATA 分配单元。<br /><br /> 大于 0 的值表示非叶索引级别。 *index_level*将在索引的根级别最高。<br /><br /> 仅当*mode* = 详细时才处理非叶级别的索引。|  
 |avg_fragmentation_in_percent|**float**|索引的逻辑碎片，或 IN_ROW_DATA 分配单元中堆的区碎片。<br /><br /> 此值按百分比计算，并将考虑多个文件。 有关逻辑碎片和区碎片的定义，请参阅“注释”。<br /><br /> 0 表示 LOB_DATA 和 ROW_OVERFLOW_DATA 分配单元。<br /><br /> 如果*模式*= 采样，则为 NULL。|  
@@ -194,7 +194,7 @@ GO
   
 -   使用 ALTER INDEX REORGANIZE（代替 DBCC INDEXDEFRAG）按逻辑顺序重新排序索引的叶级页。 由于这是联机操作，因此在语句运行时仍可使用索引。 中断此操作时不会丢失已经完成的任务。 此方法的缺点是在重新组织数据方面不如索引重新生成操作的效果好，而且不更新统计信息。  
   
--   使用 ALTER INDEX REBUILD（代替 DBCC DBREINDEX）联机或脱机重新生成索引。 有关详细信息，请参阅[ALTER INDEX &#40;transact-sql&#41;](../../t-sql/statements/alter-index-transact-sql.md)。  
+-   使用 ALTER INDEX REBUILD（代替 DBCC DBREINDEX）联机或脱机重新生成索引。 有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)。  
   
  不需要仅因为碎片的原因而重新组织或重新生成索引。 碎片的主要影响是，在索引扫描过程中会降低页的预读吞吐量。 这将导致响应时间变长。 如果含有碎片的表或索引中的查询工作负荷不涉及扫描（因为工作负荷主要是单独查找），则删除碎片可能不起作用。
   
@@ -265,7 +265,7 @@ GO
 ```  
   
 ### <a name="b-returning-information-about-a-heap"></a>B. 返回关于堆的信息  
- 以下示例将返回有关 `dbo.DatabaseLog` 数据库中 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 堆的所有统计信息。 由于表包含 LOB 数据，因此除了对存储堆的数据页的 `LOB_DATA` 返回与其对应的一行外，还对 `IN_ROW_ALLOCATION_UNIT` 分配单元返回与其对应的一行。 执行此查询至少需要对 `dbo.DatabaseLog` 表拥有 CONTROL 权限。  
+ 以下示例将返回有关 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `dbo.DatabaseLog` 堆的所有统计信息。 由于表包含 LOB 数据，因此除了对存储堆的数据页的 `LOB_DATA` 返回与其对应的一行外，还对 `IN_ROW_ALLOCATION_UNIT` 分配单元返回与其对应的一行。 执行此查询至少需要对 `dbo.DatabaseLog` 表拥有 CONTROL 权限。  
   
 ```  
 DECLARE @db_id SMALLINT;  
@@ -285,7 +285,7 @@ GO
 ```  
   
 ### <a name="c-returning-information-for-all-databases"></a>C. 返回所有数据库的信息  
- 下面的示例通过为所有参数指定通配符 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，返回有关 `NULL` 实例中所有表和索引的所有统计信息。 执行此查询需要 VIEW SERVER STATE 权限。  
+ 下面的示例通过为所有参数指定通配符 `NULL`，返回有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所有表和索引的所有统计信息。 执行此查询需要 VIEW SERVER STATE 权限。  
   
 ```  
 SELECT * FROM sys.dm_db_index_physical_stats (NULL, NULL, NULL, NULL, NULL);  
@@ -410,7 +410,7 @@ FROM sys.dm_db_index_physical_stats (db_id(),
   
 ||  
 |-|  
-|**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
   
  下面的示例演示如何查询服务器代理队列的碎片。  
   
@@ -424,7 +424,7 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与索引相关的动态管理视图和函数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. dm_db_index_operational_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [sys. dm_db_index_usage_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   

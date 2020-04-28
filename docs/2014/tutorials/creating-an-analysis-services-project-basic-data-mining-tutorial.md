@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a7fcece285a17e158fcdfe77ef00004afe637541
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69494034"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>创建 Analysis Services 项目（数据挖掘基础教程）
@@ -28,7 +28,7 @@ ms.locfileid: "69494034"
   
  请注意您 **不** 需要有多维数据集就可以进行数据挖掘。 如果您需要对现有多维数据集执行数据挖掘，应将数据挖掘模型添加到用于生成多维数据集的同一项目。 但是，对于大多数用途，您可以针对关系数据源（如数据仓库）生成模型，如果不涉及多维数据集，将获得更好的性能。  
   
- 在本教程中，您将使用一个关系数据仓库 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]作为数据源。 你将所有数据挖掘对象部署到名为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的 `BasicDataMining` 数据库，它仅用于数据挖掘。  
+ 在本教程中，您将使用一个关系数据仓库 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]作为数据源。 你将所有数据挖掘对象部署到名为 `BasicDataMining` 的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库，它仅用于数据挖掘。  
   
  默认情况下， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用新项目的“localhost” **** 实例。 如果使用命名实例或者另一台服务器，则必须首先创建和打开该项目，然后更改实例名称。  
   
@@ -61,6 +61,6 @@ ms.locfileid: "69494034"
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;SSDT 生成 Analysis Services 项目&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/build-analysis-services-projects-ssdt)   
- [&#40;SSDT 创建 Analysis Services 项目&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt)  
+ [创建 Analysis Services 项目 (SSDT)](https://docs.microsoft.com/analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt)  
   
   

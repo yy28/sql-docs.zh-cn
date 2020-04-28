@@ -16,10 +16,10 @@ ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 96a32ea04fc53f1a0bf3a842a5e68cde5586ac29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770883"
 ---
 # <a name="sp_replshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
@@ -44,12 +44,12 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**xact_seqno**|**binary （10）**|命令的序列号。|  
+|**xact_seqno**|**binary(10)**|命令的序列号。|  
 |**originator_id**|**int**|命令发起方的 ID，始终为**0**。|  
 |**publisher_database_id**|**int**|发布服务器数据库的 ID，始终为**0**。|  
 |**article_id**|**int**|项目的 ID。|  
-|type |**int**|命令的类型。|  
-|**command**|**nvarchar （1024）**|[!INCLUDE[tsql](../../includes/tsql-md.md)]command.|  
+|**type**|**int**|命令的类型。|  
+|**command**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]command.|  
   
 ## <a name="remarks"></a>备注  
  **sp_replshowcmds**用于事务复制。  
@@ -68,7 +68,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
   
 ## <a name="see-also"></a>另请参阅  
  [错误消息](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
- [sp_replcmds (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [sp_replcmds &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_repldone &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
  [sp_replflush &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
  [sp_repltrans &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   

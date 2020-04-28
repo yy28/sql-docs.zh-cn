@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 59220dd32388eed75ed725e7a8b5956394ae575d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890370"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Analysis Services 处理任务编辑器（Analysis Services 页）
@@ -43,13 +43,13 @@ ms.locfileid: "68890370"
  **新建**  
  创建新的 Analysis Services 连接管理器。  
   
- **相关主题：** [Analysis Services 连接管理器](connection-manager/analysis-services-connection-manager.md)、"[添加 Analysis Services 连接管理器" 对话框 UI 参考](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **相关主题：** [Analysis Services 连接管理器](connection-manager/analysis-services-connection-manager.md)、[“添加 Analysis Services 连接管理器”对话框 UI 参考](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **对象列表**  
- |properties|说明|  
+ |属性|说明|  
 |--------------|-----------------|  
 |**Object Name**|列出指定对象的名称。|  
-|类型 |列出指定对象的类型。|  
+|**类型**|列出指定对象的类型。|  
 |**处理选项**|从列表中选择处理选项。<br /><br /> **相关主题**：[多维模型对象处理](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**设置**|列出指定对象的处理设置。|  
   
@@ -62,10 +62,10 @@ ms.locfileid: "68890370"
  **影响分析**  
  对所选对象进行影响分析。  
   
- **相关主题：** [Analysis Services 多维数据 &#40;的 "影响分析" 对话框&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
+ **相关主题：** [“影响分析”对话框（Analysis Services - 多维数据）](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
   
  **批设置摘要**  
- |properties|说明|  
+ |属性|说明|  
 |--------------|-----------------|  
 |**处理顺序**|指定是按顺序处理对象还是按批处理对象；如果使用并行处理，则指定要并发处理的对象数。|  
 |**事务模式**|指定按顺序处理时的事务模式。|  
@@ -76,7 +76,7 @@ ms.locfileid: "68890370"
  **更改设置**  
  更改处理选项以及对维度键中错误的处理方式。  
   
- **相关主题：** ["更改设置" 对话框 &#40;Analysis Services 多维数据&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
+ **相关主题：** [“更改设置”对话框（Analysis Services - 多维数据）](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   

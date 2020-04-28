@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d835269f77e563b94c89c3a68c5c82844edc773
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493973"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>配置 PowerPivot 和部署解决方案 (SharePoint 2013)
@@ -36,15 +36,15 @@ ms.locfileid: "69493973"
   
  [解决问题](#bkmk_troubleshoot_issues)  
   
-##  <a name="bkmk_run_configuration_tool"></a>运行 PowerPivot for SharePoint 2013 配置  
- **注意：** 安装[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]向导将为安装两个不同的[!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]配置工具。 这两个工具均支持不同版本的 SharePoint。  
+##  <a name="run-powerpivot-for-sharepoint-2013-configuration"></a><a name="bkmk_run_configuration_tool"></a>运行 PowerPivot for SharePoint 2013 配置  
+ **注意：**[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安装向导将为 [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)] 安装两个不同的配置工具。 这两个工具均支持不同版本的 SharePoint。  
   
 |名称|说明|  
 |----------|-----------------|  
 |PowerPivot for SharePoint 2013 配置|SharePoint 2013|  
 |PowerPivot 配置工具|具有 SharePoint 2010 Service Pack 1 (SP1) 的 SharePoint 2010|  
   
- **注意：** 若要完成以下步骤，你必须是场管理员。 如果您看到与以下内容类似的错误消息：  
+ **注意：** 若要完成下列步骤，您必须是场管理员。 如果您看到与以下内容类似的错误消息：  
   
 -   "该用户不是场管理员。 请解决验证问题并重试。”  
   
@@ -60,11 +60,11 @@ ms.locfileid: "69493973"
   
     1.  **默认帐户用户名**：输入默认帐户的域用户帐户。 此帐户将用于设置服务，包括 PowerPivot 服务应用程序池。 不要指定 Network Service 或 Local System 之类的内置帐户。 该工具将阻止指定内置帐户的配置。  
   
-    2.  **数据库服务器**：可以使用 SharePoint 场支持 SQL Server 数据库引擎。  
+    2.  **数据库服务器**：您可以使用 SharePoint 场支持的 SQL Server 数据库引擎。  
   
-    3.  **通行短语**：输入通行短语。 如果您在创建新的 SharePoint 场，则在您向该 SharePoint 场中添加新的服务器或应用程序时，将使用该通行短语。 如果该场已存在，则输入允许您向该场添加服务器应用程序的通行短语。  
+    3.  **通行短语**：输入密码。 如果您在创建新的 SharePoint 场，则在您向该 SharePoint 场中添加新的服务器或应用程序时，将使用该通行短语。 如果该场已存在，则输入允许您向该场添加服务器应用程序的通行短语。  
   
-    4.  **PowerPivot server For Excel Services**：键入[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint 模式服务器的名称。 在单服务器部署中，它与数据库服务器相同。 `[ServerName]\powerpivot`  
+    4.  **PowerPivot Server for Excel Services**：键入 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint 模式服务器的名称。 在单服务器部署中，它与数据库服务器相同。 `[ServerName]\powerpivot`  
   
     5.  在左窗口中单击 **“创建网站集”** 。 请注意 **“网址 URL”** ，以便您可以在后面的步骤中引用它。 如果 SharePoint 服务器尚未配置，则配置向导默认使用 Web 应用程序，并且将网站集 URL 默认为 `http://[ServerName]`的根。 若要修改这些默认设置，请在左窗口中查看以下页： **“创建默认的 Web 应用程序”** 和 **“部署 Web 应用程序解决方案”**。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "69493973"
   
  有关详细信息，请参阅[配置或修复 PowerPivot for SharePoint 2010 &#40;PowerPivot 配置工具&#41;](../../configure-repair-powerpivot-sharepoint-2010.md)  
   
-##  <a name="bkmk_verify_powerpivot"></a>验证 PowerPivot 配置  
+##  <a name="verify-powerpivot-configuration"></a><a name="bkmk_verify_powerpivot"></a>验证 PowerPivot 配置  
  **服务器**  
   
 1.  在管理中心的 "系统设置" 中，单击 "**管理服务器上的服务**"。  
@@ -111,7 +111,7 @@ ms.locfileid: "69493973"
   
  有关详细信息，请参阅 [Verify a PowerPivot for SharePoint Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation)。  
   
-##  <a name="bkmk_troubleshoot_issues"></a>解决问题  
+##  <a name="troubleshoot-issues"></a><a name="bkmk_troubleshoot_issues"></a>解决问题  
  为了协助解决问题，最好验证诊断日志记录已启用。  
   
 1.  在 SharePoint 管理中心中，单击 **“监视”** ，然后单击 **“配置使用情况和运行状况数据收集”**。  

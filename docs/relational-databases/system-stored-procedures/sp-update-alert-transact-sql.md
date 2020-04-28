@@ -18,10 +18,10 @@ ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2856f89264994b9f1812653450d94e2cb2e2b0c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69890848"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
@@ -84,7 +84,7 @@ sp_update_alert
 |**1**|电子邮件|  
 |**2**|寻呼机|  
 |**4**|**net send**|  
-|**7**|All|  
+|**7**|全部|  
   
 `[ @database_name = ] 'database'`必须发生错误才能触发警报的数据库的名称。 *数据库*为**sysname。** 不允许用方括号 ([ ]) 将名称括起来。 默认值为 NULL。  
   
@@ -128,7 +128,7 @@ sp_update_alert
  **0** （成功）或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
- 只有**** 写入到 Windows 应用[!INCLUDE[msCoName](../../includes/msconame-md.md)]程序日志的 sysmessages 才会触发警报。  
+ 只有**sysmessages**写入到 Windows 应用[!INCLUDE[msCoName](../../includes/msconame-md.md)]程序日志的 sysmessages 才会触发警报。  
   
  **sp_update_alert**仅更改为其提供参数值的警报设置。 如果省略某一参数，则保留其当前设置。  
   
@@ -149,7 +149,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_add_alert (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
+ [sp_add_alert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
  [sp_help_alert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

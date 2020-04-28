@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6f1cba6a6a20fc804d29aeb0dbf43d7bebfbb225
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154448"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 概念
   本文简要概括知识管理、数据质量项目和数据质量管理中的 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 概念。  
   
-##  <a name="Knowledge"></a>知识管理概念  
+##  <a name="knowledge-management-concepts"></a><a name="Knowledge"></a> 知识管理概念  
  DQS 知识库是一种元数据存储库，它由数据专员或 IT 专业人员创建，旨在通过数据清理或数据匹配提高数据质量。 DQS 知识管理包括用于在计算机辅助方式和交互式方式中创建和管理知识库的过程。  
   
  **知识发现**  
@@ -41,14 +41,14 @@ ms.locfileid: "70154448"
   
  有关 DQS 中的知识管理的详细信息，请参阅 [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)。  
   
-##  <a name="Projects"></a>数据质量项目概念  
+##  <a name="data-quality-project-concepts"></a><a name="Projects"></a> 数据质量项目概念  
  数据专员在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序中使用数据质量项目来执行数据质量操作（清理和匹配）。  
   
- **Data Cleansing**  
+ **数据清理**  
   
  DQS 中的数据清理需要根据 DQS 知识库中的知识来执行。 DQS 中的数据清理是一个两步过程：  
   
--   **计算机辅助清理**： DQS 对清理项目使用所选知识库中的知识来向数据源中的值提出更正/建议。  
+-   **计算机辅助清理**：DQS 对清理项目使用所选知识库中的知识，用来对数据源中的值提出更正/建议。  
   
 -   **交互式清理**：数据专员可以执行交互式清理过程，以更改或增强由计算机辅助数据清理过程提出的数据更正。 为此，数据专员将使用由数据清理过程确定的置信度和统计信息，或在项目中手动输入自己的更改。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "70154448"
   
  有关 DQS 中的数据质量项目的详细信息，请参阅[数据质量项目 (DQS)](../../2014/data-quality-services/data-quality-projects-dqs.md)。  
   
-##  <a name="Admin"></a>数据质量管理概念  
+##  <a name="data-quality-administration-concepts"></a><a name="Admin"></a> 数据质量管理概念  
  DQS 管理员可以使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序执行各种管理任务。  
   
  **活动监视**  
@@ -90,6 +90,6 @@ ms.locfileid: "70154448"
  有关 DQS 管理的详细信息，请参阅 [DQS Administration](../../2014/data-quality-services/dqs-administration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [“数据库引擎服务”](../../2014/data-quality-services/data-quality-services.md)  
+ [数据库引擎服务](../../2014/data-quality-services/data-quality-services.md)  
   
   

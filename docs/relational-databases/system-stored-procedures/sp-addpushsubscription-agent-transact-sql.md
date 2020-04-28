@@ -16,10 +16,10 @@ ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8073d51fb4376acbdc19724422f6ef7543e3c403
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68894042"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68894042"
   添加新的预定代理作业，以使推送订阅与事务发布同步。 此存储过程在发布服务器上对发布数据库执行。  
   
 > [!IMPORTANT]  
->  使用远程分发服务器配置发布服务器时，为所有参数提供的值（包括 *job_login* 和 *job_password*）都会以纯文本方式发送到该分发服务器。 在执行此存储过程之前，应该对发布服务器及其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用到数据库引擎 &#40;的加密连接 SQL Server 配置管理器&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
+>  使用远程分发服务器配置发布服务器时，为所有参数提供的值（包括 *job_login* 和 *job_password*）都会以纯文本方式发送到该分发服务器。 在执行此存储过程之前，应该对发布服务器及其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -102,9 +102,9 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |-----------|-----------------|  
 |**1**|一次性|  
 |**2**|按需|  
-|**4**|每天一次|  
+|**4**|每日|  
 |**8**|每周|  
-|**16**|每月|  
+|**超过**|每月一次|  
 |**32**|与“每月”选项相关|  
 |**64** （默认值）|自动启动|  
 |**128**|重复执行|  
@@ -122,7 +122,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**16**|最后一个|  
+|**超过**|最后一个|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*使用的重复因子。 *frequency_recurrence_factor*的值为**int**，默认值为0。  
   
@@ -132,7 +132,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|秒|  
-|**4** （默认值）|分钟|  
+|**4** （默认值）|Minute|  
 |**8**|Hour|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*的间隔。 *frequency_subday_interval*的值为**int**，默认值为5。  
@@ -160,15 +160,15 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**，默认值为 NULL。  
   
-`[ @subscriber_provider = ] 'subscriber_provider'`用于注册非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据源的 OLE DB 提供程序的唯一编程标识符（PROGID）。 *subscriber_provider*的值为**sysname**，默认值为 NULL。 对于分发服务器上安装的 OLE DB 提供程序， *subscriber_provider*必须是唯一的。 ** 只有非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器才支持 subscriber_provider。  
+`[ @subscriber_provider = ] 'subscriber_provider'`用于注册非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据源的 OLE DB 提供程序的唯一编程标识符（PROGID）。 *subscriber_provider*的值为**sysname**，默认值为 NULL。 对于分发服务器上安装的 OLE DB 提供程序， *subscriber_provider*必须是唯一的。 *subscriber_provider*只有非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器才支持 subscriber_provider。  
   
-`[ @subscriber_datasrc = ] 'subscriber_datasrc'`OLE DB 提供程序理解的数据源的名称。 *subscriber_datasrc*为**nvarchar （4000）**，默认值为 NULL。 *subscriber_datasrc*作为 DBPROP_INIT_DATASOURCE 属性传递以初始化 OLE DB 提供程序。 ** 只有非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器才支持 subscriber_datasrc。  
+`[ @subscriber_datasrc = ] 'subscriber_datasrc'`OLE DB 提供程序理解的数据源的名称。 *subscriber_datasrc*为**nvarchar （4000）**，默认值为 NULL。 *subscriber_datasrc*作为 DBPROP_INIT_DATASOURCE 属性传递以初始化 OLE DB 提供程序。 *subscriber_datasrc*只有非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器才支持 subscriber_datasrc。  
   
-`[ @subscriber_location = ] 'subscriber_location'`OLE DB 提供程序理解的数据库位置。 *subscriber_location*为**nvarchar （4000）**，默认值为 NULL。 *subscriber_location*作为 DBPROP_INIT_LOCATION 属性传递以初始化 OLE DB 提供程序。 ** 只有非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器才支持 subscriber_location。  
+`[ @subscriber_location = ] 'subscriber_location'`OLE DB 提供程序理解的数据库位置。 *subscriber_location*为**nvarchar （4000）**，默认值为 NULL。 *subscriber_location*作为 DBPROP_INIT_LOCATION 属性传递以初始化 OLE DB 提供程序。 *subscriber_location*只有非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器才支持 subscriber_location。  
   
-`[ @subscriber_provider_string = ] 'subscriber_provider_string'`标识数据源 OLE DB 特定于提供程序的连接字符串。 *subscriber_provider_string*为**nvarchar （4000）**，默认值为 NULL。 *subscriber_provider_string*传递给 IDataInitialize，或设置为 DBPROP_INIT_PROVIDERSTRING 属性以初始化 OLE DB 提供程序。 ** 只有非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器才支持 subscriber_provider_string。  
+`[ @subscriber_provider_string = ] 'subscriber_provider_string'`标识数据源 OLE DB 特定于提供程序的连接字符串。 *subscriber_provider_string*为**nvarchar （4000）**，默认值为 NULL。 *subscriber_provider_string*传递给 IDataInitialize，或设置为 DBPROP_INIT_PROVIDERSTRING 属性以初始化 OLE DB 提供程序。 *subscriber_provider_string*只有非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器才支持 subscriber_provider_string。  
   
-`[ @subscriber_catalog = ] 'subscriber_catalog'`与 OLE DB 提供程序建立连接时要使用的目录。 *subscriber_catalog*的值为**sysname**，默认值为 NULL。 *subscriber_catalog*作为 DBPROP_INIT_CATALOG 属性传递以初始化 OLE DB 提供程序。 ** 只有非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器才支持 subscriber_catalog。  
+`[ @subscriber_catalog = ] 'subscriber_catalog'`与 OLE DB 提供程序建立连接时要使用的目录。 *subscriber_catalog*的值为**sysname**，默认值为 NULL。 *subscriber_catalog*作为 DBPROP_INIT_CATALOG 属性传递以初始化 OLE DB 提供程序。 *subscriber_catalog*只有非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器才支持 subscriber_catalog。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
@@ -183,10 +183,10 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_addpushsubscription_agent**。  
   
 ## <a name="see-also"></a>另请参阅  
- [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
- [为非 SQL Server 订阅服务器创建订阅](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
+ [创建推送订阅](../../relational-databases/replication/create-a-push-subscription.md)   
+ [创建非 SQL Server 订阅服务器的订阅](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
- [复制存储过程 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [复制存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_addsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_changesubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   

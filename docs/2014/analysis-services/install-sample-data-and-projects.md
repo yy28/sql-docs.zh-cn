@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530817"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>安装 Analysis Services 多维建模教程的示例数据和项目
@@ -29,7 +29,7 @@ ms.locfileid: "69530817"
   
      Analysis Services 仅在以下版本中提供：Evaluation、Enterprise、Business Intelligence、Standard。  
   
-     请注意，SQL Server Express 版本不包括 Analysis Services。 如果要免费试用软件，请[下载评估版](https://go.microsoft.com/fwlink/?LinkId=392824)。  
+     请注意，SQL Server Express 版本不包括 Analysis Services。 如果要免费试用此软件，[请下载 Evaluation Edition](https://go.microsoft.com/fwlink/?LinkId=392824) 。  
   
      默认情况下，Analysis Services 将作为多维实例安装，您可以通过在安装向导的“服务器配置”页中选择“表格服务器模式”来覆盖此实例。 如果要同时运行两种服务器模式，请在同一台计算机上重新运行 SQL Server 安装程序，以在另一模式中再安装一个 Analysis Services 实例。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "69530817"
 ## <a name="step-2-download-sql-server-data-tools---business-intelligence-for-visual-studio-2012"></a>步骤2：下载 SQL Server Data Tools-适用于 Visual Studio 2012 的商业智能  
  在此版本中，SQL Server Data Tools 和其他 SQL Server 功能将分开下载与安装。 用于创建 BI 模型和报表的设计器与项目模板现在作为免费 Web 下载提供。  
   
--   [下载 SQL Server Data Tools 的商业智能版本](https://go.microsoft.com/fwlink/p/?LinkID=322038)。 文件将保存到 Downloads 文件夹。 运行安装程序以安装此工具。  
+-   [下载 SQL Server Data Tools 的 Business Intelligence 版本](https://go.microsoft.com/fwlink/p/?LinkID=322038)。 文件将保存到 Downloads 文件夹。 运行安装程序以安装此工具。  
   
      重新启动计算机以完成安装。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "69530817"
   
 4.  右键单击“数据库”，然后单击“附加”****。  
   
-5.  单击“添加”  。  
+5.  单击 **“添加”** 。  
   
 6.  选择 **AdventureWorksDW2012_Data.mdf** 数据库文件，并单击“确定”****。 如果未列出该文件，请检查 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data 文件夹，以便确保该文件在该路径下存在。  
   
@@ -150,6 +150,6 @@ ms.locfileid: "69530817"
 ## <a name="see-also"></a>另请参阅  
  [从安装向导安装 SQL Server 2014 &#40;安装程序&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
  [将 Windows 防火墙配置为允许 Analysis Services 访问](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
- [配置 Windows 防火墙以允许 SQL Server 访问](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
+ [Configure the Windows Firewall to Allow SQL Server Access](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   
   

@@ -20,10 +20,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 863e62dc9e2970f7531bba15f7242c73c5b0f9e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68259925"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server 迁移助手访问入门（AccessToSQL）
@@ -56,7 +56,7 @@ ms.locfileid: "68259925"
   
 有关这些任务以及如何执行这些任务的详细信息，请参阅以下主题：  
   
--   [为迁移准备 Access 数据库](preparing-access-databases-for-migration-accesstosql.md)  
+-   [准备要迁移的 Access 数据库](preparing-access-databases-for-migration-accesstosql.md)  
   
 -   [将 Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   
@@ -105,22 +105,22 @@ SSMA 有两个工具栏：项目工具栏和迁移工具栏。
 #### <a name="the-migration-toolbar"></a>迁移工具栏  
 迁移工具栏包含以下命令：  
   
-|按钮|函数|  
+|Button|函数|  
 |----------|------------|  
 |**转换、加载和迁移**|转换 Access 数据库，将转换后的对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]加载到或 AZURE sql 数据库，并将[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据迁移到或 azure sql db 中，只是一步。|  
 |**创建报表**|将所选访问架构转换[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为或 AZURE SQL DB 语法，然后创建显示转换成功的报表。<br /><br />仅当在 "访问元数据资源管理器" 中选择了对象时，此命令才可用。|  
 |**转换架构**|将所选访问架构转换[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为或 AZURE SQL 数据库架构。<br /><br />仅当在 "访问元数据资源管理器" 中选择了对象时，此命令才可用。|  
 |**迁移数据**|将数据从 Access 数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 AZURE SQL DB。 在运行此命令之前，必须将访问架构转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 AZURE sql 数据库架构，然后将对象加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 azure sql db 中。<br /><br />仅当在 "访问元数据资源管理器" 中选择了对象时，此命令才可用。|  
-|**Stop**|停止当前进程，如将对象转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 AZURE SQL DB 语法。|  
+|**停止**|停止当前进程，如将对象转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 AZURE SQL DB 语法。|  
   
 ### <a name="menus"></a>菜单  
 SSMA 包含以下菜单：  
   
 |菜单|说明|  
 |--------|---------------|  
-|**文件**|包含迁移向导的命令、使用项目、添加和删除 Access 数据库文件以及连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 AZURE SQL DB。|  
+|**File**|包含迁移向导的命令、使用项目、添加和删除 Access 数据库文件以及连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 AZURE SQL DB。|  
 |**编辑**|包含用于查找和处理详细信息页中的文本（例如从 SQL 详细[!INCLUDE[tsql](../../includes/tsql-md.md)]信息窗格复制）的命令。 若要打开 "**管理书签**" 对话框，请在 "编辑" 菜单上单击 "管理书签"。 在对话框中，您将看到现有书签的列表。 您可以使用对话框右侧的按钮来管理书签。|  
-|**视图**|包含**同步元数据**资源管理器命令。 这会同步 Access 元数据资源管理器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和或 AZURE SQL DB 元数据资源管理器之间的对象。 还包含用于显示和隐藏 "**输出**" 和 "**错误列表**" 窗格以及用于管理布局的选项**布局**的命令。|  
+|**查看**|包含**同步元数据**资源管理器命令。 这会同步 Access 元数据资源管理器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和或 AZURE SQL DB 元数据资源管理器之间的对象。 还包含用于显示和隐藏 "**输出**" 和 "**错误列表**" 窗格以及用于管理布局的选项**布局**的命令。|  
 |**工具**|包含用于创建报表、导出数据、迁移对象和数据、链接表，并提供对 "全局" 和 "项目设置" 对话框的访问的命令。|  
 |**帮助**|提供对 SSMA 帮助和的 "**关于**" 对话框的访问。|  
   

@@ -23,10 +23,10 @@ ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
 ms.openlocfilehash: eae0057441fe6bc356c7cea6c1e6ded829bbb9e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265691"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "68265691"
 |name|**nvarchar(256)**|旋转锁类型的名称。|  
 |冲突|**bigint**|由于另一个线程当前包含旋转锁，线程尝试获取旋转锁并被阻止的次数。|  
 |旋转|**bigint**|线程在尝试获取旋转锁时执行循环的次数。|  
-|spins_per_collision|**实际上**|每个冲突的旋转比例。|  
+|spins_per_collision|**real**|每个冲突的旋转比例。|  
 |sleep_time|**bigint**|发生回退事件时线程所用的时间（以毫秒为单位）。|  
 |几率|**int**|"旋转" 线程无法获取旋转锁并生成计划程序的次数。|  
 
@@ -67,7 +67,7 @@ GO
 >  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新启动，则这些统计信息不会持久化。 自从上次统计信息重置以来，或自从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动以来，所有数据都是累积的。  
   
 ## <a name="spinlocks"></a>自旋锁  
- 旋转锁是一种轻型同步对象，用于序列化对通常长时间保存的数据结构的访问。 当某个线程尝试访问由另一个线程所持有的旋转锁保护的资源时，该线程将执行循环或 "自旋"，并再次尝试访问该资源，而不是像使用闩锁或其他资源立即生成计划程序一样再. 线程将继续旋转，直到资源可用或循环完成，此时线程将生成计划程序并返回到可运行队列。 这种做法有助于减少过度线程上下文切换，但当旋转锁的争用较高时，可能会发现大量的 CPU 利用率。
+ 旋转锁是一种轻型同步对象，用于序列化对通常长时间保存的数据结构的访问。 当某个线程尝试访问由另一个线程所持有的旋转锁保护的资源时，该线程将执行循环或 "自旋"，尝试再次访问该资源，而不是像闩锁或其他资源等待那样立即生成计划程序。 线程将继续旋转，直到资源可用或循环完成，此时线程将生成计划程序并返回到可运行队列。 这种做法有助于减少过度线程上下文切换，但当旋转锁的争用较高时，可能会发现大量的 CPU 利用率。
    
  下表包含一些最常见的旋转锁类型的简要说明。  
   
@@ -84,7 +84,7 @@ GO
 |ASYNC_OP_ADMIN_CLIENT_REGISTRATION_LIST|仅限内部使用。|
 |ASYNC_OP_ADMIN_WORK_REGISTRATION_HASH_TABLE|仅限内部使用。|
 |ASYNCSTATSLIST|仅限内部使用。|
-|备份|仅限内部使用。|
+|BACKUP|仅限内部使用。|
 |BACKUP_COPY_CONTEXT|仅限内部使用。|
 |BACKUP_CTX|仅限内部使用。|
 |BASE_XACT_HASH|仅限内部使用。|
@@ -177,7 +177,7 @@ GO
 |HTTP|仅限内部使用。|
 |HTTP_CONNCACHE|仅限内部使用。|
 |HTTP_ENDPOINT|仅限内部使用。|
-|标识|仅限内部使用。|
+|IDENTITY|仅限内部使用。|
 |INDEX_CREATE|仅限内部使用。|
 |IO_DISPENSER_PAUSE|仅限内部使用。|
 |IO_RG_VOLUME_HASHTABLE|仅限内部使用。|
@@ -406,7 +406,7 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  
- [DBCC SQLPERF &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
+ [DBCC SQLPERF (Transact-SQL)](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  
  [&#40;Transact-sql 的与操作系统相关的动态管理视图 SQL Server&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
 

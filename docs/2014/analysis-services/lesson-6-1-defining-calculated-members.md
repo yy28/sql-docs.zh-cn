@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ede0a23a6e37c47a1af242748233ca49b0cdfab7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493886"
 ---
 # <a name="defining-calculated-members"></a>定义计算成员
   计算成员是基于多维数据集数据、算术运算符、数字和函数组合定义的维度或度量值组成员。 例如，可以创建用于计算多维数据集中的两个物理度量值之和的计算成员。 计算成员定义将存储在多维数据集中，但它们的值将在查询时计算。  
   
- 若要创建计算成员，请在多维数据集设计器的“计算”**** 选项卡上使用“新建计算成员”**** 命令。 您可以在包括度量值维度在内的任意维度中创建计算成员。 还可以将计算成员放在“计算属性”**** 对话框的显示文件夹内。 有关详细信息，请参阅[计算](multidimensional-models-olap-logical-cube-objects/calculations.md)、[多维模型中的计算](multidimensional-models/calculations-in-multidimensional-models.md)和[创建计算成员](multidimensional-models/create-calculated-members.md)。  
+ 若要创建计算成员，请在多维数据集设计器的“计算”**** 选项卡上使用“新建计算成员”**** 命令。 您可以在包括度量值维度在内的任意维度中创建计算成员。 还可以将计算成员放在“计算属性”**** 对话框的显示文件夹内。 有关详细信息，请参阅 [计算](multidimensional-models-olap-logical-cube-objects/calculations.md)、 [多维模型中的计算](multidimensional-models/calculations-in-multidimensional-models.md)和 [创建计算成员](multidimensional-models/create-calculated-members.md)。  
   
  在此主题的任务中，将定义计算度量值，以便让用户查看 Internet 销售、分销商销售和所有销售的毛利润率百分比和销售率。  
   
@@ -53,15 +53,15 @@ ms.locfileid: "69493886"
      可以将元数据元素从“计算工具”**** 窗格拖到“表达式”**** 框中，然后添加运算符和其他元素，创建多维表达式 (MDX) 表达式。 或者，可以直接在“表达式”**** 框中键入 MDX 表达式。  
   
     > [!NOTE]  
-    >  如果无法在“计算工具”**** 窗格中查看任何元数据，请在工具栏上单击“重新连接”****。 如果该操作失败，则可能必须处理多维数据集，或启动 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例。  
+    >  如果无法在“计算工具”**** 窗格中查看任何元数据，请在工具栏上单击“重新连接”****。 如果该操作失败，则可能必须处理多维数据集，或启动 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例。  
   
 5.  将“Internet Sales-Sales Amount”**** 从“计算工具”**** 窗格中的“元数据”**** 选项卡拖到“计算表达式”**** 窗格中的“表达式”**** 框中。  
   
-6.  在“表达式”**** 框中，在 [Measures].[Internet Sales-Sales Amount] 后键入加号 (`+`****)。  
+6.  在“表达式”**** 框中，在 **[Measures].[Internet Sales-Sales Amount]** 后键入加号 (`+`)。  
   
 7.  在“计算工具”**** 窗格中的“元数据”**** 选项卡上，展开“Reseller Sales”****，然后将“Reseller Sales-Sales Amount”**** 拖到“计算表达式”**** 窗格的“表达式”**** 框中的加号 (+) 后面。  
   
-8.  在“格式字符串”**** 列表中，选择“Currency”****。  
+8.  在 "**格式字符串**" 列表中，选择 **"Currency"。**  
   
 9. 在“非空行为”**** 列表中，选中“Internet Sales-Sales Amount”**** 和“Reseller Sales-Sales Amount”**** 的复选框，然后单击“确定”****。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "69493886"
     [Measures].[Internet Sales-Total Product Cost] + [Measures].[Reseller Sales-Total Product Cost]  
     ```  
   
-14. 在 "**格式字符串**" 列表中，选择 **"Currency"**。  
+14. 在“格式字符串”**** 列表中，选择“Currency”****。  
   
 15. 在“非空行为”**** 列表中，选中“Internet Sales-Total Product Cost”**** 和“Reseller Sales-Total Product Cost”**** 的复选框，然后单击“确定”****。  
   
@@ -246,7 +246,7 @@ ms.locfileid: "69493886"
   
 ## <a name="browsing-the-new-calculated-members"></a>浏览新计算成员  
   
-1.  在 ** 的“生成”菜单上，单击“部署 Analysis Services 教程”**[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]****。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的“生成”菜单上，单击“部署 Analysis Services 教程”********。  
   
 2.  成功完成部署后，请切换到“浏览器”**** 选项卡，然后单击“重新连接”****。  
   

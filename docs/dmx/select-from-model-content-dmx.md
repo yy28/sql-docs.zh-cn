@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 61cbacee45147b7b6203e9cb2164c02cdc2c7453
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892833"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>选择 " &lt;从&gt;模型"。内容（DMX）
@@ -36,13 +36,13 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  *表达式列表*  
  从内容架构行集派生的一组列，各列间以逗号分隔。  
   
- *model*  
+ *模型*  
  模型标识符。  
   
  *条件表达式*  
  可选。 一个限制条件，用于限制从列列表返回的值。  
   
- *表达式*  
+ *expression*  
  可选。 一个返回标量值的表达式。  
   
 ## <a name="remarks"></a>备注  
@@ -136,7 +136,7 @@ WHERE NODE_TYPE = 26
   
  示例结果：  
   
-|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
+|MODEL_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
 |-----------------|-----------------------|------------------------|---------------|  
 |TM_NaiveBayes|Bike Buyer|Missing|0|  
 |TM_NaiveBayes|Bike Buyer|0|6556|  
@@ -145,6 +145,6 @@ WHERE NODE_TYPE = 26
 ## <a name="see-also"></a>另请参阅  
  [选择 &#40;DMX&#41;](../dmx/select-dmx.md)   
  [数据挖掘扩展插件 &#40;DMX&#41; 数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
- [数据挖掘扩展插件 &#40;DMX&#41; 语句参考](../dmx/data-mining-extensions-dmx-statements.md)  
+ [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

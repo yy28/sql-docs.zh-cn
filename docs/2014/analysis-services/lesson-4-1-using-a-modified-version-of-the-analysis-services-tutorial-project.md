@@ -11,20 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f8a31fd2e6659f4d971ebb30bad7b2876dafa6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493943"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>使用 Analysis Services Tutorial 项目的修改版本
-  本教程中的其余几节课基于您已在前三课中完成的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目的增强版本。 已向 **Adventure Works DW 2012** 数据源视图中添加了额外的表和命名计算；已向该项目添加了额外的维度，并且已将这些新维度添加到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集内。 此外，还添加了另一个度量值组，该组包含另一个事实数据表中的度量值。 这一增强项目使您无需重复学习前面已了解的技能，即可继续学习如何在商业智能应用程序中添加功能。  
+  本教程中的其余几节课基于您已在前三课中完成的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目的增强版本。 已向 **Adventure Works DW 2012[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据源视图中添加了额外的表和命名计算；已向该项目添加了额外的维度，并且已将这些新维度添加到 ** Tutorial 多维数据集内。 此外，还添加了另一个度量值组，该组包含另一个事实数据表中的度量值。 这一增强项目使您无需重复学习前面已了解的技能，即可继续学习如何在商业智能应用程序中添加功能。  
   
  在继续本教程之前，必须下载、解压缩、加载和处理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目的增强版本。  请使用本课程中的说明以确保您已执行了所有步骤。  
   
 ## <a name="downloading-and-extracting-the-project-file"></a>下载并解压缩项目文件  
   
-1.  [单击此处](https://go.microsoft.com/fwlink/?LinkID=221866)以切换到提供本教程附带的示例项目的下载页面。 教程项目包括在 **Analysis Services 教程 SQL Server 2012** 下载中。  
+1.  [单击此处](https://go.microsoft.com/fwlink/?LinkID=221866) 可以转到下载页，此页提供本教程随附的示例项目。 教程项目包括在 **Analysis Services 教程 SQL Server 2012** 下载中。  
   
 2.  单击“Analysis Services 教程 SQL Server 2012”可下载包含此教程项目的包。****  
   
@@ -42,13 +42,13 @@ ms.locfileid: "69493943"
   
 1.  在[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]的 "**文件**" 菜单上，单击 "**关闭解决方案**" 关闭不使用的文件。  
   
-2.  在“文件”  菜单中，指向“打开”  ，然后单击“项目”/“解决方案”  。  
+2.  在“文件”**** 菜单中，指向“打开”****，然后单击“项目”/“解决方案”****。  
   
 3.  浏览到将教程项目文件解压缩到的位置。  
   
-     找到名为 **Lesson 4 Start** 的文件夹，双击 Analysis Services Tutorial.sln。  
+     找到名为 **Lesson 4 Start**的文件夹，双击 Analysis Services Tutorial.sln。  
   
-4.  将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目的增强版本部署到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的本地实例或其他实例，并确认处理已成功完成。  
+4.  将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目的增强版本部署到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的本地实例或其他实例，并确认处理已成功完成。  
   
 ## <a name="understanding-the-enhancements-to-the-project"></a>了解该项目的增强功能  
  该项目的增强版本与前三节课程中所完成 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目的版本不同。 下面几节说明了具体的差异。 在继续学习本教程的其余课程之前，请查看此信息。  
@@ -59,20 +59,20 @@ ms.locfileid: "69493943"
  请注意，数据源视图中包含十个表， \<"所有表"> 关系图变得很拥挤。 因此很难轻松理解各表之间的关系并找到特定表。 为了解决这一问题，将这些表组织为两个逻辑关系图：“Internet 销售”关系图和“分销商销售”关系图。******** 这两个关系图均围绕一个事实数据表进行组织。 通过创建逻辑关系图，您可以在数据源视图中查看和使用表的特定子集，而无需始终在一个关系图中查看所有表及其关系。  
   
 #### <a name="internet-sales-diagram"></a>“Internet 销售”关系图  
- “Internet 销售”关系图包含与直接通过 Internet 向客户销售 ** 产品相关的表。**[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 该关系图包含四个维度表和一个事实表，在第 1 课中已经将这些表添加到 **Adventure Works DW 2012** 数据源视图。 这些表包括：  
+ “Internet 销售”关系图包含与直接通过 Internet 向客户销售 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 产品相关的表。**** 该关系图包含四个维度表和一个事实表，在第 1 课中已经将这些表添加到 **Adventure Works DW 2012** 数据源视图。 这些表包括：  
   
--   **Geography**  
+-   **地域**  
   
 -   **客户**  
   
--   **Date**  
+-   **日期**  
   
--   **Products**  
+-   **产品**  
   
 -   **InternetSales**  
   
 #### <a name="reseller-sales-diagram"></a>“分销商销售”关系图  
- “分销商销售”关系图包含与分销商销售 ** 产品相关的表。**[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 该关系图包含来自 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 数据库的下列七个维度表和一个事实数据表：  
+ “分销商销售”关系图包含与分销商销售 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 产品相关的表。**** 该关系图包含来自 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 数据库的下列七个维度表和一个事实数据表：  
   
 -   **Reseller**  
   
@@ -80,11 +80,11 @@ ms.locfileid: "69493943"
   
 -   **SalesTerritory**  
   
--   **Geography**  
+-   **地域**  
   
--   **Date**  
+-   **日期**  
   
--   **Products**  
+-   **产品**  
   
 -   **Employee**  
   
@@ -93,8 +93,7 @@ ms.locfileid: "69493943"
  请注意，“Internet 销售”关系图和“分销商销售”关系图中都使用了 **DimGeography**、**DimDate** 和 **DimProduct** 表。******** 维度表可链接到多个事实数据表。  
   
 ### <a name="database-and-cube-dimensions"></a>数据库和多维数据集维度  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目包含五个新数据库维度，而 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集包含与此相同的五个维度作为多维数据集维度。 这些维度已定义为具有通过使用命名计算、组合成员键和显示文件夹修改过的用户层次结构和属性。 下面的列表对这些新维度进行了说明。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目包含五个新数据库维度，而 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集包含与此相同的五个维度作为多维数据集维度。 这些维度已定义为具有通过使用命名计算、组合成员键和显示文件夹修改过的用户层次结构和属性。 下面的列表对这些新维度进行了说明。  
   
  “分销商”维度  
  “分销商”维度基于 **Adventure Works DW 2012** 数据源视图中的 **Reseller** 表。  
@@ -112,7 +111,7 @@ ms.locfileid: "69493943"
  “地域”维度基于 **Adventure Works DW 2012** 数据源视图中的 **Geography** 表。  
   
 #### <a name="analysis-services-cube"></a>Analysis Services 多维数据集  
- 现在，**Analysis Services Tutorial** 多维数据集包含两个度量值组：原始度量值组和另一个度量值组；前者基于 **InternetSales** 表，后者基于 **Adventure Works DW 2012** 数据源视图中的 **ResellerSales** 表。  
+ 现在， **Analysis Services Tutorial** 多维数据集包含两个度量值组：原始度量值组和另一个度量值组；前者基于 **InternetSales** 表，后者基于 **Adventure Works DW 2012** 数据源视图中的 **ResellerSales** 表。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [定义父子层次结构中的父特性属性](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md) 

@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6ffcdda8e1c6a3c85703ad7f3d6ed94ca0ca91fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70148718"
 ---
 # <a name="setting-properties---smo"></a>设置属性 - SMO
@@ -55,8 +55,7 @@ ms.locfileid: "70148718"
   
  除在部分加载状态中提供的属性之外，如果应用程序的确还需要提取额外属性，则会提交检索这些额外属性的查询，并向上扩展到完全加载状态。 这可能会在客户端和服务器之间造成不必要的通信流量。 调用 <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> 方法可以实现更多优化。 使用 <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> 方法可以指定在初始化对象时加载的属性。  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> 方法设置其余应用程序或重置应用程序后的属性加载行为。 您可以使用 <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A> 方法保存原始行为，并根据需要还原。  
+ <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> 方法设置其余应用程序或重置应用程序后的属性加载行为。 您可以使用 <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A> 方法保存原始行为，并根据需要还原。  
   
 ## <a name="examples"></a>示例  
 若要使用所提供的任何代码示例，您必须选择创建应用程序所需的编程环境、编程模板和编程语言。 有关详细信息，请参阅[在 Visual Studio .net 中创建 Visual C&#35; SMO 项目](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
@@ -155,7 +154,7 @@ tb.Create();
 ```  
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-basic"></a>在 Visual Basic 中遍历对象的所有属性  
- 此代码示例将循环访问**** <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>对象的 Properties 集合，并将[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]其显示在输出屏幕上。  
+ 此代码示例将循环访问**Properties** <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>对象的 Properties 集合，并将[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]其显示在输出屏幕上。  
   
  在本示例中，由于 <xref:Microsoft.SqlServer.Management.Smo.Property> 对象同时也是 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 关键字，因此将该对象置于方括号中。  
   
@@ -179,7 +178,7 @@ Next
 ```
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-c"></a>在 Visual C# 中遍历对象的所有属性  
- 此代码示例将循环访问**** <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>对象的 Properties 集合，并将[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]其显示在输出屏幕上。  
+ 此代码示例将循环访问**Properties** <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>对象的 Properties 集合，并将[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]其显示在输出屏幕上。  
   
 ```csharp  
 {   
@@ -204,8 +203,7 @@ sp.QuotedIdentifierStatus = false;
 ## <a name="setting-default-initialization-fields-in-visual-basic"></a>在 Visual Basic 中设置默认的初始化字段  
  此代码示例演示如何使 SMO 程序中初始化的对象属性的数目降到最低。 您必须包括 `using System.Collections.Specialized`; 语句，以便使用 <xref:System.Collections.Specialized.StringCollection> 对象。  
   
- 
-  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 可用于将发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的语句的数目和此优化进行比较。  
+ [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 可用于将发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的语句的数目和此优化进行比较。  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -237,8 +235,7 @@ srv.SetDefaultInitFields(typ, sc)
 ## <a name="setting-default-initialization-fields-in-visual-c"></a>在 Visual C# 中设置默认的初始化字段  
  此代码示例演示如何使 SMO 程序中初始化的对象属性的数目降到最低。 您必须包括 `using System.Collections.Specialized`; 语句，以便使用 <xref:System.Collections.Specialized.StringCollection> 对象。  
   
- 
-  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 可用于将发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的语句的数目和此优化进行比较。  
+ [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 可用于将发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的语句的数目和此优化进行比较。  
   
 ```csharp  
 {   

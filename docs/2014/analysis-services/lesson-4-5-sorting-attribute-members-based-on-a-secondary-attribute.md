@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 067348432bc7a460b4dbf39444852e14c7ef2ce5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493904"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>根据辅助属性对属性成员进行排序
@@ -22,7 +22,7 @@ ms.locfileid: "69493904"
   
  属性关系定义属性之间的关系或依赖关系。 在基于单个关系表的维度中，通常所有属性都通过键属性彼此相关。 这是因为维度的所有属性均提供有关成员的信息，这些成员通过键属性链接到每个相关度量值组的事实数据表中的事实数据。 在基于多个表的维度中，属性通常根据表之间的联接键进行链接。 如果基础数据支持，则可以使用相关属性来指定排序顺序。 例如，您可以创建为相关属性提供排序逻辑的新属性。  
   
- 通过维度设计器，您可以定义属性之间的其他关系，也可以更改默认关系以提高性能。 创建属性关系时的主要约束是，确保引用的属性对于与其相关的属性中的任何成员均只包含一个值。 定义两个属性之间的关系时，可以根据成员之间的关系是否会随时间更改而将关系定义为刚性关系或灵活关系。 例如，雇员可能移动到不同的销售区域，而市县不会移动到不同的州/省/自治区。 如果将关系定义为刚性关系，则每次增量处理维度时不会重新计算属性聚合。 但如果成员之间的关系确实发生更改，则必须对维度进行完全处理。 有关详细信息，请参阅[属性关系](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)、[定义属性关系](multidimensional-models/attribute-relationships-define.md)、[配置特性关系属性](multidimensional-models/attribute-relationships-configure-attribute-properties.md)和[指定用户定义层次结构中属性之间的属性关系](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)。  
+ 通过维度设计器，您可以定义属性之间的其他关系，也可以更改默认关系以提高性能。 创建属性关系时的主要约束是，确保引用的属性对于与其相关的属性中的任何成员均只包含一个值。 定义两个属性之间的关系时，可以根据成员之间的关系是否会随时间更改而将关系定义为刚性关系或灵活关系。 例如，雇员可能移动到不同的销售区域，而市县不会移动到不同的州/省/自治区。 如果将关系定义为刚性关系，则每次增量处理维度时不会重新计算属性聚合。 但如果成员之间的关系确实发生更改，则必须对维度进行完全处理。 有关详细信息，请参阅 [属性关系](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)、 [定义属性关系](multidimensional-models/attribute-relationships-define.md)、 [配置特性关系属性](multidimensional-models/attribute-relationships-configure-attribute-properties.md)和 [指定用户定义层次结构中属性之间的属性关系](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)。  
   
  在本主题的任务中，将根据基础维度表中的现有列在“日期”**** 维度中定义一个新属性。 您将使用这一新属性按时间顺序而不是字母顺序对日历月份成员进行排序。 还将根据命名计算在“客户”**** 维度中定义一个新属性，该新属性用于对“上下班路程”**** 属性成员进行排序。 在下一个主题的任务中，您将了解如何使用属性关系提高查询性能。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "69493904"
   
 1.  切换到“客户”维度的维度设计器的“浏览器”**** 选项卡，然后浏览“上下班路程”**** 属性层次结构的成员。  
   
-     注意，该属性层次结构的成员基于成员键的 ASCII 值排序。 在此情况下，按属性名称或键排序不会按从小到大的顺序对通勤距离进行排序。 在此任务中，根据 **CommuteDistanceSort** 命名计算（将相应的排序号分配给列中的不同值）对属性层次结构的成员进行排序。 为了节省时间，已将此命名计算添加到 **DW 数据源视图的** Customer [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 表中。 可以切换到此数据源视图中，以查看在此命名计算中使用的 SQL 脚本。 有关详细信息，请参阅[在数据源视图中定义命名计算 (Analysis Services)](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)。  
+     注意，该属性层次结构的成员基于成员键的 ASCII 值排序。 在此情况下，按属性名称或键排序不会按从小到大的顺序对通勤距离进行排序。 在此任务中，根据 **CommuteDistanceSort** 命名计算（将相应的排序号分配给列中的不同值）对属性层次结构的成员进行排序。 为了节省时间，已将此命名计算添加到 **DW 数据源视图的** Customer [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 表中。 可以切换到此数据源视图中，以查看在此命名计算中使用的 SQL 脚本。 有关详细信息，请参阅[在数据源视图中定义命名计算 &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)。  
   
      下图显示了“上下班路程”**** 属性层次结构的成员，这些成员按成员键的 ASCII 值进行排序。  
   

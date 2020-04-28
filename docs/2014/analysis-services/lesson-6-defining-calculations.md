@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f61e0e04c5ca96da69098b58c38b1ef73eba206
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530838"
 ---
 # <a name="lesson-6-defining-calculations"></a>第 6 课：定义计算
@@ -41,7 +41,7 @@ ms.locfileid: "69530838"
  有关详细信息，请参阅 [计算](multidimensional-models-olap-logical-cube-objects/calculations.md)和 [多维模型中的计算](multidimensional-models/calculations-in-multidimensional-models.md)。  
   
 > [!NOTE]  
->  本教程的所有课程中的已完成项目均可以从网上获得。 您可以通过将前一课程的已完成项目作为起始点，跳转到后面的任何课程。 [单击此处](https://go.microsoft.com/fwlink/?LinkID=221866)下载本教程中的示例项目。  
+>  本教程的所有课程中的已完成项目均可以从网上获得。 您可以通过将前一课程的已完成项目作为起始点，跳转到后面的任何课程。 [单击此处](https://go.microsoft.com/fwlink/?LinkID=221866) 可以下载本教程随附的示例项目。  
   
  本课程包含以下任务：  
   
@@ -52,7 +52,7 @@ ms.locfileid: "69530838"
  在此任务中，将了解定义命名集。  
   
 ## <a name="next-lesson"></a>下一课  
- [第7课：定义关键绩效指标 &#40;Kpi&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
+ [第 7 课：定义关键绩效指标 (KPI)](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [Analysis Services 教程方案](analysis-services-tutorial-scenario.md)   

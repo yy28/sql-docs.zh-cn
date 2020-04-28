@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6bcc8e830c682c800f7dbdd586b25b88ca8577f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530938"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>用于处理的工具和方法 (Analysis Services)
@@ -84,21 +84,21 @@ ms.locfileid: "69530938"
   
 2.  在解决方案资源管理器中，在已部署项目下，展开 **“维度”** 文件夹。  
   
-3.  右键单击某个维度，然后单击“处理”****。 您可以右键单击多个维度，以便一次处理多个对象。 有关详细信息，请参阅[批处理 (Analysis Services)](batch-processing-analysis-services.md)。  
+3.  右键单击某个维度，然后单击“处理”****。 您可以右键单击多个维度，以便一次处理多个对象。 有关详细信息，请参阅 [批处理 (Analysis Services)](batch-processing-analysis-services.md)。  
   
 4.  在 **“处理维度”** 对话框的 **“对象列表”** 下的 **“处理选项”** 列中，验证此列的选项是否为 **“处理全部”**。 如果不是，则在“处理选项”中单击选项，并从下拉列表中选择“处理全部”********。  
   
-5.  单击 **“运行”** 。  
+5.  单击“运行”****。  
   
 6.  处理结束时，单击 **“关闭”**。  
   
-##  <a name="bkmk_impactanalysis"></a>运行影响分析，以确定对象依赖关系和操作的作用域  
+##  <a name="run-impact-analysis-to-identify-object-dependencies-and-scope-of-operations"></a><a name="bkmk_impactanalysis"></a>运行影响分析，以确定对象依赖关系和操作的作用域  
   
 1.  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中处理 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]对象之前，可以通过单击 **“处理对象”** 对话框之一中的 **“影响分析”** 来分析对相关对象的影响。  
   
 2.  右键单击某个维度、多维数据集、度量值组或分区，打开“处理对象”**** 对话框。  
   
-3.  单击 **“影响分析”**。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]扫描模型并报告与您为处理的对象相关的对象的重新处理要求。  
+3.  单击 **“影响分析”**。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将为与选定要处理的对象相关的对象扫描模型并报告重新处理要求。  
   
 ### <a name="processing-objects-using-xmla"></a>使用 XMLA 处理对象  
   
@@ -122,13 +122,13 @@ ms.locfileid: "69530938"
   
 1.  从本版本的 SQL Server 开始，您可以使用 Analysis Services PowerShell cmdlet 来处理对象。 可以通过交互方式或在脚本中运行以下 cmdlet：  
   
-    -   [Invoke-processcube cmdlet](/powershell/module/sqlserver/invoke-processcube)  
+    -   [Invoke-ProcessCube cmdlet](/powershell/module/sqlserver/invoke-processcube)  
   
-    -   [Invoke-processdimension cmdlet](/powershell/module/sqlserver/invoke-processdimension)  
+    -   [Invoke-ProcessDimension cmdlet](/powershell/module/sqlserver/invoke-processdimension)  
   
-    -   [ProcessPartition cmdlet](/powershell/module/sqlserver/invoke-processpartition)  
+    -   [Invoke-ProcessPartition cmdlet](/powershell/module/sqlserver/invoke-processpartition)  
   
-    -   [Invoke-ascmd cmdlet](/powershell/module/sqlserver/invoke-ascmd)，可用于执行包含处理命令的 XMLA、MDX 或 DMX 脚本。  
+    -   [Invoke-ASCmd cmdlet](/powershell/module/sqlserver/invoke-ascmd)可用于执行包含处理命令的 XMLA、MDX 或 DMX 脚本。  
   
 ### <a name="monitoring-object-processing-using-sql-server-profiler"></a>使用 SQL Server Profiler 监视对象处理  
   
@@ -138,13 +138,13 @@ ms.locfileid: "69530938"
   
 3.  选择以下事件：  
   
-    -   开始和停止处理时要显示的**命令开始**和**命令结束**  
+    -   **“命令开始”** 和 **“命令结束”** ，显示处理启动和停止的时间  
   
-    -   捕获任何错误**时出错**  
+    -   **“错误”** ，捕获任何错误  
   
-    -   **进度报告开始**、**进度报告当前**和**进度报告结束**，以报告处理状态并显示用于检索数据的 SQL 查询  
+    -   **“进度报告开始”**、 **“进度报告当前状态”** 和 **“进度报告结束”** ，报告处理状态并显示用于检索数据的 SQL 查询  
   
-    -   **执行 Mdx 脚本开始**并**执行 mdx 脚本结束**以显示多维数据集计算  
+    -   **“开始执行 MDX 脚本”** 和 **“结束执行 MDX 脚本”** ，显示多维数据集的计算  
   
     -   或者，如果您在诊断与处理相关的性能问题，则可以添加锁事件  
   

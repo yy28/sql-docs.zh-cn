@@ -22,10 +22,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 77bf96ee1cea4356e26d33fab9ab519e99ae0a60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265963"
 ---
 # <a name="sysdm_fts_fdhosts-transact-sql"></a>sys.dm_fts_fdhosts (Transact-SQL)
@@ -37,9 +37,9 @@ ms.locfileid: "68265963"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**fdhost_id**|**int**|筛选器后台程序宿主的 ID。|  
-|**fdhost_name**|**nvarchar （120）**|筛选器后台程序宿主的名称。|  
+|**fdhost_name**|**nvarchar(120)**|筛选器后台程序宿主的名称。|  
 |**fdhost_process_id**|**int**|筛选器后台程序宿主的 Windows 进程 ID。|  
-|**fdhost_type**|**nvarchar （120）**|筛选器后台程序宿主正在处理的文档的类型，为如下类型之一：<br /><br /> 单线程<br /><br /> 多线程<br /><br /> 大文档|  
+|**fdhost_type**|**nvarchar(120)**|筛选器后台程序宿主正在处理的文档的类型，为如下类型之一：<br /><br /> 单线程<br /><br /> 多线程<br /><br /> 大文档|  
 |**max_thread**|**int**|筛选器后台程序宿主中线程的最大数。|  
 |**batch_count**|**int**|筛选器后台程序宿主中要处理的批次的数量。|  
   

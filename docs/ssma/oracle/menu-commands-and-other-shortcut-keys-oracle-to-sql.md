@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 723f9c644d0e327919134baee5267197bb0f71b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264565"
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>菜单命令和其他快捷键 (Oracle To SQL)
@@ -55,7 +55,7 @@ ms.locfileid: "68264565"
 |查找上一个。|ALT + E + F + P 或 CTRL + SHIFT + F3|  
 |查找下一个|ALT + E + F + N 或 CTRL + F3|  
   
-## <a name="view-menu-commands"></a>"查看" 菜单命令  
+## <a name="view-menu-commands"></a>“视图”菜单命令  
 若要访问 "查看" 菜单，使用的键盘快捷方式是 ALT + V。下表描述了用于访问 "查看" 菜单中的菜单项的键盘快捷方式。  
   
 |要执行此操作|长|  
@@ -105,7 +105,7 @@ ms.locfileid: "68264565"
 |显示 "从备份还原表" SQL Server 对话框。|ALT + S + M + R|  
 |显示 "管理 SQL Server 的备份内容" 对话框。|ALT + S + M + C|  
   
-## <a name="help-menu-commands"></a>"帮助" 菜单命令  
+## <a name="help-menu-commands"></a>“帮助”菜单命令  
 若要访问 "帮助" 菜单，使用的键盘快捷方式是 ALT + H。下表描述了用于访问 "帮助" 菜单中的菜单项的键盘快捷方式。  
   
 |要执行此操作|长|  

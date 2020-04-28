@@ -10,10 +10,10 @@ ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 899070b1405b031e919f50a6d16bc5d6df3adf3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68222218"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>使用 SSMA for Access Console 入门（AccessToSQL）
@@ -57,7 +57,7 @@ ms.locfileid: "68222218"
 |Red|执行过程中出现错误|  
 |灰色|日期和时间戳，向用户发送消息|  
 |白色|脚本文件命令，消息类型|  
-|独︹|警告|  
+|Yellow|警告|  
 |绿色|提示输入用户-输入|  
 |蓝|操作的开始、完成和结果|  
   

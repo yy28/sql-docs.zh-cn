@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f104f7a6395442484be15f1e72c849edbf11e74f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70152681"
 ---
 # <a name="sql-server-http_storage_object"></a>SQL Server，HTTP_STORAGE_OBJECT
@@ -31,9 +31,9 @@ ms.locfileid: "70152681"
 |**平均字节数/读取**|每次读取从 HTTP 存储传输的平均字节数。|  
 |**平均字节数/写入**|每次写入从 HTTP 存储传输的平均字节数。|  
 |**平均字节数/传输**|读取或写入操作过程中从 HTTP 存储传输的平均字节数。|  
-|**平均毫秒/读取**|每次从 HTTP 存储读取所用的平均微秒数。|  
-|**平均毫秒/写入**|每次向 HTTP 存储写入所用的平均微秒数。|  
-|**平均毫秒/传输**|每次向 HTTP 存储传输所用的平均微秒数。|  
+|**Avg. microsec/Read**|每次从 HTTP 存储读取所用的平均微秒数。|  
+|**Avg. microsec/Write**|每次向 HTTP 存储写入所用的平均微秒数。|  
+|**Avg. microsec/Transfer**|每次向 HTTP 存储传输所用的平均微秒数。|  
 |**Outstanding HTTP Storage I/O**|通往 HTTP 存储的待定 I/O 总数。|  
 |**HTTP 存储 i/o 重试次数/秒**|每秒发送到 HTTP 存储的重试请求数。|  
   

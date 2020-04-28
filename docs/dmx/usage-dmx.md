@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b961282ba6bc25caa260a3e156f843a413a5ef1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893115"
 ---
 # <a name="usage-dmx"></a>用法 (DMX)
@@ -20,7 +20,7 @@ ms.locfileid: "68893115"
 
   使用数据挖掘扩展插件（DMX）在中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]定义新的数据挖掘模型时，必须指定生成模型的数据挖掘算法将如何使用每个列。 可以将列指定为下列类型之一：  
   
--   **Key**  
+-   **密钥**  
   
 -   **键序列**  
   

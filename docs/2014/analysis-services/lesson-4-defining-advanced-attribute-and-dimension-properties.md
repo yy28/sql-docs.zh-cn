@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11d566c029491378a5e0e091e0803cdf5616e637
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493997"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>第 4 课：定义高级属性和维度属性
@@ -41,7 +41,7 @@ ms.locfileid: "69493997"
  在该任务中，将了解如何基于辅助属性对维度成员排序，以获得所需的排序顺序。  
   
  [指定用户定义层次结构中属性之间的属性关系](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
- 在该任务中，将了解如何定义属性的成员属性和指定它们之间的聚合关系。 有关详细信息，请参阅[定义属性关系](multidimensional-models/attribute-relationships-define.md)和[用户层次结构属性](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)。  
+ 在该任务中，将了解如何定义属性的成员属性和指定它们之间的聚合关系。 有关详细信息，请参阅 [定义属性关系](multidimensional-models/attribute-relationships-define.md) 和 [用户层次结构属性](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)。  
   
  [定义未知成员和 Null 处理属性](lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
  在此任务中，将配置 UnknownMember 和 UnknownMemberName 属性，以处理由 null 维度成员所导致的错误情况。  

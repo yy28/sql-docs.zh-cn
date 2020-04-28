@@ -16,10 +16,10 @@ ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d8909396e7a7da39ed2ae27c475a154c58bad090
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771505"
 ---
 # <a name="sp_helppublication_snapshot-transact-sql"></a>sp_helppublication_snapshot (Transact-SQL)
@@ -43,15 +43,15 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 `[ @publisher = ] 'publisher'`指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  ** 在将项目添加到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器时，不应使用 publisher。  
+>  *publisher*在将项目添加到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器时，不应使用 publisher。  
   
 ## <a name="result-sets"></a>结果集  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**识别**|**int**|快照代理的 ID。|  
-|**路径名**|**nvarchar （100）**|快照代理的名称。|  
-|**publisher_security_mode**|**smallint**|代理在连接发布服务器时所使用的安全模式，可以是下列模式之一：<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** = Windows 身份验证。|  
+|**id**|**int**|快照代理的 ID。|  
+|**name**|**nvarchar （100）**|快照代理的名称。|  
+|**publisher_security_mode**|**smallint**|代理在连接发布服务器时所使用的安全模式，可以是下列模式之一：<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** = Windows 身份验证。|  
 |**publisher_login**|**sysname**|连接到发布服务器时使用的登录名。|  
 |**publisher_password**|**nvarchar （524）**|出于安全原因，始终返回值** \* \* \* \* \* \* \* 。 \* \* **|  
 |**job_id**|**uniqueidentifier**|代理作业的唯一 ID。|  

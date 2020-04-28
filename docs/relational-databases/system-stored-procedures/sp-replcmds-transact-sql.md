@@ -16,10 +16,10 @@ ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d60de0f459ec1224f6023e8ee848227fdc17ece
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771010"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
@@ -49,8 +49,8 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**文章 id**|**int**|项目的 ID。|  
 |**partial_command**|**bit**|指示这是否为部分命令。|  
 |**command**|**varbinary （1024）**|命令值。|  
-|**xactid**|**binary （10）**|事务 ID。|  
-|**xact_seqno**|**varbinary （16）**|事务序列号。|  
+|**xactid**|**binary(10)**|事务 ID。|  
+|**xact_seqno**|**varbinary(16)**|事务序列号。|  
 |**publication_id**|**int**|发布 ID。|  
 |**command_id**|**int**|[MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)中的命令 ID。|  
 |**command_type**|**int**|命令的类型。|  
@@ -59,7 +59,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**pkHash**|**int**|仅限内部使用。|  
 |**originator_publication_id**|**int**|发起事务的发布的 ID。|  
 |**originator_db_version**|**int**|发起事务的数据库的版本。|  
-|**originator_lsn**|**varbinary （16）**|标识初始发布中命令的日志序列号 (LSN)。|  
+|**originator_lsn**|**varbinary(16)**|标识初始发布中命令的日志序列号 (LSN)。|  
   
 ## <a name="remarks"></a>备注  
  **sp_replcmds**由日志读取器进程在事务复制中使用。  
@@ -73,7 +73,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
  在第一个客户端断开连接之前，尝试在同一数据库内运行**sp_replcmds**的客户端将收到错误18752。 第一个客户端断开连接后，其他客户端可以**sp_replcmds**运行，并成为新的日志读取器。  
   
- 如果 sp_replcmds 无法复制文本命令，则会向[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]错误日志和[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 应用程序日志添加**** 警告消息编号18759，因为不会在同一事务中检索文本指针。  
+ 如果 sp_replcmds 无法复制文本命令，则会向[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]错误日志和[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 应用程序日志添加**sp_replcmds**警告消息编号18759，因为不会在同一事务中检索文本指针。  
   
 ## <a name="permissions"></a>权限  
  只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_replcmds**。  

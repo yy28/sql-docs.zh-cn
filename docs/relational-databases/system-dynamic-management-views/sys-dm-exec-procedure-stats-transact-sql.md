@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4ff5a1f816d0ade76ed6e39db3e8cfc3048ba632
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68742903"
 ---
 # <a name="sysdm_exec_procedure_stats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
@@ -41,12 +41,12 @@ ms.locfileid: "68742903"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------| 
-|database_id |**int**|存储过程所在的数据库 ID。|  
+|**database_id**|**int**|存储过程所在的数据库 ID。|  
 |**object_id**|**int**|存储过程的对象标识号。|  
-|type |**char （2）**|对象的类型：<br /><br /> P = SQL 存储过程<br /><br /> PC = 程序集 (CLR) 存储过程<br /><br /> X = 扩展存储过程|  
-|**type_desc**|**nvarchar （60）**|对对象类型的说明：<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
-|**sql_handle**|**varbinary （64）**|这可以用来与从该存储过程中执行的**dm_exec_query_stats**中的查询相关联。|  
-|**plan_handle**|**varbinary （64）**|内存中计划的标识符。 该标识符是瞬态的，仅当计划保留在缓存中时，它才保持不变。 此值可用于**sys.databases dm_exec_cached_plans**动态管理视图。<br /><br /> 当本机编译的存储过程查询内存优化的表时，此项将始终为 0x000。|  
+|**type**|**char(2)**|对象的类型：<br /><br /> P = SQL 存储过程<br /><br /> PC = 程序集 (CLR) 存储过程<br /><br /> X = 扩展存储过程|  
+|**type_desc**|**nvarchar(60)**|对对象类型的说明：<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
+|**sql_handle**|**varbinary(64)**|这可以用来与从该存储过程中执行的**dm_exec_query_stats**中的查询相关联。|  
+|**plan_handle**|**varbinary(64)**|内存中计划的标识符。 该标识符是瞬态的，仅当计划保留在缓存中时，它才保持不变。 此值可用于**sys.databases dm_exec_cached_plans**动态管理视图。<br /><br /> 当本机编译的存储过程查询内存优化的表时，此项将始终为 0x000。|  
 |**cached_time**|**datetime**|存储过程添加到缓存的时间。|  
 |**last_execution_time**|**datetime**|上次执行存储过程的时间。|  
 |**execution_count**|**bigint**|存储过程自上次编译以来所执行的次数。|  
@@ -74,7 +74,7 @@ ms.locfileid: "68742903"
 |**last_spills**|**bigint**|上次执行存储过程时溢出的页数。<br /><br /> **适用**于：从[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
 |**min_spills**|**bigint**|此存储过程在单次执行期间所溢出的最小页数。<br /><br /> **适用**于：从[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
 |**max_spills**|**bigint**|此存储过程在单次执行期间所用的最大页数。<br /><br /> **适用**于：从[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
-|pdw_node_id |**int**|此分发所在的节点的标识符。<br /><br />**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|**pdw_node_id**|**int**|此分发所在的节点的标识符。<br /><br />**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
 |**total_page_server_reads**|**bigint**|此存储过程自编译以来执行的页服务器读取的总次数。<br /><br /> **适用**于： Azure SQL 数据库超大规模|  
 |**last_page_server_reads**|**bigint**|上次执行存储过程时所执行的页服务器读取次数。<br /><br /> **适用**于： Azure SQL 数据库超大规模|  
 |**min_page_server_reads**|**bigint**|此存储过程在单次执行期间所执行的最少页面服务器读取次数。<br /><br /> **适用**于： Azure SQL 数据库超大规模|  

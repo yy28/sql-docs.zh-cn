@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 263238a0d8430928fad99042dfa0ffd06921a33b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893322"
 ---
 # <a name="mdx-syntax-elements-mdx"></a>MDX 语法元素 (MDX)
@@ -27,11 +27,11 @@ ms.locfileid: "68893322"
 |[MDX&#41;&#40;表达式](../mdx/expressions-mdx.md)|表达式是 Analysis Services 可以解析为单个（标量）值或对象的语法单元。 表达式包含返回单个值、集表达式等的函数。|  
 |[运算符](../mdx/operators-mdx-syntax.md)|运算符是与一个或多个简单的 MDX 表达式一起使用、以构成更复杂的 MDX 表达式的语法元素。|  
 |[函数](../mdx/functions-mdx-syntax.md)|函数是可以接受零个、一个或多个输入值并返回一个标量值或对象的语法元素。 示例包括用于添加几个值的[Sum](../mdx/sum-mdx.md)函数、用于从维度或级别返回一组成员的[成员](../mdx/members-set-mdx.md)函数等。|  
-|[注释](../mdx/comments-mdx-syntax.md)|注释是插入到 MDX 语句或脚本中，用来说明语句用途的文本段。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]不执行注释。|  
+|[备注](../mdx/comments-mdx-syntax.md)|注释是插入到 MDX 语句或脚本中，用来说明语句用途的文本段。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]不执行注释。|  
 |[保留关键字](../mdx/reserved-keywords-mdx-syntax.md)|保留关键字是保留起来供 MDX 使用，且不应用作 MDX 语句中使用的对象名称的关键字。|  
 |[成员、元组和集](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)|成员、元组和集是创建 MDX 查询之前必须了解的多维数据的核心概念。|  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX&#41; 引用 &#40;多维表达式](../mdx/multidimensional-expressions-mdx-reference.md)  
+ [多维表达式 (MDX) 参考](../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

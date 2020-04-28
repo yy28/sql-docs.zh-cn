@@ -16,10 +16,10 @@ ms.assetid: 8fb4a9c3-19af-4a34-8004-572729ba3d15
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 398e1eebbb269fa1f1507725fefff820c5174f58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771513"
 ---
 # <a name="sp_help_agent_parameter-transact-sql"></a>sp_help_agent_parameter (Transact-SQL)
@@ -45,7 +45,7 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
 |-----------------|---------------|-----------------|  
 |**profile_id**|**int**|代理配置文件的 ID。|  
 |**parameter_name**|**sysname**|参数的名称。|  
-|**负值**|**nvarchar(255)**|参数的值。|  
+|**value**|**nvarchar(255)**|参数值。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  

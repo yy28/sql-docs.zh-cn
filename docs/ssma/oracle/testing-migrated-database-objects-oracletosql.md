@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 858c564c965fe7105c86a3087923887097e4ddac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266483"
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>测试迁移的数据库对象 (OracleToSQL)
@@ -45,7 +45,7 @@ SSMA 测试人员在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 > [!NOTE]  
 > 注重! 切勿在生产系统上使用 SSMA 测试人员。 在测试执行过程中，将修改源架构和数据。 同时，对于某些类型的已测试代码，完全还原原始状态可能是不可能的。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
 如果要使用 SSMA 测试器，请在打开 "**安装测试人员数据库**" 选项的情况下安装 SSMA Oracle 扩展包。  
   
 若要对生成的表数据进行比较，请将 "**生成 ROWID 列**" 选项设置为 **"是"** ，然后将架构转换启动。 在执行**转换架构**命令的过程中，SSMA 会将 ROWID 列添加到所有表中。  

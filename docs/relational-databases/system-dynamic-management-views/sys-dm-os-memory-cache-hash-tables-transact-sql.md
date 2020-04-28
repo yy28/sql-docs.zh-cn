@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d5a52fc7c614752cde43a1670f2fb299b35aa0ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265767"
 ---
 # <a name="sysdm_os_memory_cache_hash_tables-transact-sql"></a>sys.dm_os_memory_cache_hash_tables (Transact-SQL)
@@ -38,8 +38,8 @@ ms.locfileid: "68265767"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary(8)**|缓存条目的地址（主键）。 不可为 null。|  
-|**路径名**|**nvarchar(256)**|缓存的名称。 不可为 null。|  
-|type |**nvarchar （60）**|缓存类型。 不可为 null。|  
+|**name**|**nvarchar(256)**|缓存的名称。 不可为 null。|  
+|**type**|**nvarchar(60)**|缓存类型。 不可为 null。|  
 |**table_level**|**int**|哈希表编号。 某个特定缓存可能有多个对应于不同哈希函数的哈希表。 不可为 null。|  
 |**buckets_count**|**int**|哈希表中的存储桶数。 不可为 null。|  
 |**buckets_in_use_count**|**int**|当前使用的存储桶数。 不可为 null。|  
@@ -51,7 +51,7 @@ ms.locfileid: "68265767"
 |**misses_count**|**bigint**|缓存未命中次数。 不可为 null。|  
 |**buckets_avg_scan_hit_length**|**int**|在找到搜索项之前，存储桶中已检查条目的平均数。 不可为 null。|  
 |**buckets_avg_scan_miss_length**|**int**|在搜索未成功结束之前，存储桶中已检查条目的平均数。 不可为 null。|  
-|pdw_node_id |**int**|此分发所在的节点的标识符。<br /><br /> **适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|**pdw_node_id**|**int**|此分发所在的节点的标识符。<br /><br /> **适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
 ## <a name="permissions"></a>权限 
 

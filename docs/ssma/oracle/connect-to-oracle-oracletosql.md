@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 42ab1e77dbdb7cee237a9ec22c49a725a64390c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264483"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>连接到 Oracle (OracleToSQL)
@@ -59,7 +59,7 @@ ms.locfileid: "68264483"
 **用户名**  
 输入 SSMA 将用于连接到 Oracle 数据库的用户名。  
   
-**权限**  
+**密码**  
 输入用户名的密码。  
   
 **连接字符串**  

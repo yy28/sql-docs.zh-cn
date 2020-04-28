@@ -31,10 +31,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8c1c78e1d126420b17a1b8de0499c432059b25ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811031"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>重新组织和重新生成索引
@@ -64,12 +64,12 @@ ms.locfileid: "68811031"
   
      [Transact-SQL](#TsqlProcedureReorg)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Fragmentation"></a>检测碎片  
+###  <a name="detecting-fragmentation"></a><a name="Fragmentation"></a>检测碎片  
  决定使用哪种碎片整理方法的第一步是分析索引以确定碎片程度。 通过使用系统函数 [sys.dm_db_index_physical_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql)，你可以检测特定索引中的碎片、表或索引视图的所有索引、某个数据库中的所有索引或所有数据库中的所有索引。 对于已分区索引， **sys.dm_db_index_physical_stats** 还提供每个分区的碎片信息。  
   
- **Dm_db_index_physical_stats**函数返回的结果集包含以下列。  
+ 由 **sys.dm_db_index_physical_stats** 函数返回的结果集包含以下列。  
   
 |列|说明|  
 |------------|-----------------|  
@@ -79,12 +79,12 @@ ms.locfileid: "68811031"
   
  知道碎片程度后，可以使用下表确定修复碎片的最佳方法。  
   
-|**avg_fragmentation_in_percent**值|修复语句|  
+|**avg_fragmentation_in_percent** 值|修复语句|  
 |-----------------------------------------------|--------------------------|  
 |> 5%， \< = 30%|ALTER INDEX REORGANIZE|  
 |> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>1</sup>|
 
-<sup>1</sup>重新生成索引可以联机执行，也可以脱机执行。 重新组织索引始终联机执行。 若要获得与重新组织选项相似的可用性，应联机重新生成索引。  
+<sup>1</sup> 重新生成索引可以联机执行，也可以脱机执行。 重新组织索引始终联机执行。 若要获得与重新组织选项相似的可用性，应联机重新生成索引。  
   
 > [!TIP]
 > 这些值提供了一个大致指导原则，用于确定应在 `ALTER INDEX REORGANIZE` 和 `ALTER INDEX REBUILD` 之间进行切换的点。 不过，实际值可能会随情况而变化。 必须要通过试验来确定最适合您环境的阈值。 例如，如果给定索引主要用于扫描操作，则删除碎片可以提高这些操作的性能。 对于主要用于查找操作的索引，性能优势不太明显。 同样，删除堆中的碎片（不包含聚集索引的表）对于非聚集索引扫描操作特别有用，但在查找操作中不起作用。
@@ -109,23 +109,22 @@ ms.locfileid: "68811031"
 -  重新生成非唯一聚集索引
 -  更改索引架构，例如将分区方案应用于聚集索引或将聚集索引移到其他文件组
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 带有多于 128 个区的索引通过两个单独的阶段重新生成：逻辑阶段和物理阶段。 在逻辑阶段，将把由索引使用的现有分配单元标记为释放，对数据行进行复制并排序，然后将它们移到为存储重新生成的索引而创建的新分配单元。 在物理阶段，先前标记为取消分配的分配单元在发生在后台的短事务中被物理删除，而且不需要很多锁。 有关区的详细信息，请参考[页和区体系结构指南](https://docs.microsoft.com/sql/relational-databases/pages-and-extents-architecture-guide)。
 
-
-  `ALTER INDEX REORGANIZE` 语句要求包含索引的数据文件具有可用的空间，因为该操作仅可在同一文件中分配临时工作，而不能在文件组内的另一个文件中进行分配。 因此，尽管文件组可能有可用的空闲页，用户仍可能会遇到错误 1105：`Could not allocate space for object '###' in database '###' because the '###' filegroup is full. Create disk space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.`
+`ALTER INDEX REORGANIZE` 语句要求包含索引的数据文件具有可用的空间，因为该操作仅可在同一文件中分配临时工作，而不能在文件组内的另一个文件中进行分配。 因此，尽管文件组可能有可用的空闲页，用户仍可能会遇到错误 1105：`Could not allocate space for object '###' in database '###' because the '###' filegroup is full. Create disk space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.`
 
 对超过 1,000 个分区的表创建和重新生成非对齐索引是可能的，但不推荐。 这样做可能会导致性能下降，或在执行这些操作的过程中占用过多内存。
 
 如果索引所在的文件组脱机或设置为只读，则无法重新组织或重新生成索引。 如果指定了关键字 `ALL`，但有一个或多个索引位于脱机文件组或只读文件组中，该语句将失败。
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求具有对表或视图的 `ALTER` 权限。 用户必须是 **sysadmin** 固定服务器角色的成员，或者是 **db_ddladmin** 和 **db_owner** 固定数据库角色的成员。  
   
-##  <a name="SSMSProcedureFrag"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedureFrag"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-check-the-fragmentation-of-an-index"></a>检查索引的碎片  
   
@@ -141,8 +140,7 @@ ms.locfileid: "68811031"
   
 6.  在 **“选择页”** 下，选择 **“碎片”**。  
   
-     
-  **“碎片”** 页将提供以下信息：  
+     **“碎片”** 页将提供以下信息：  
   
      **页填充度**  
      指示索引页的平均填充率（以百分比表示）。 100% 表示索引页完全填充。 50% 表示每个索引页平均填充一半。  
@@ -153,13 +151,13 @@ ms.locfileid: "68811031"
      **平均行大小**  
      叶级行的平均大小。  
   
-     **长度**  
+     **深度**  
      索引中的级别数（包括叶级别）。  
   
-     **转发的记录**  
+     **前推记录数**  
      堆中具有指向另一个数据位置的转向指针的记录数。 （在更新过程中，如果在原始位置存储新行的空间不足，将会出现此状态。）  
   
-     **虚影行**  
+     **虚影行数**  
      标记为已删除，但尚未移除的行数。 当服务器不忙时，将通过清除线程移除这些行。 此值不包括由于某个快照隔离事务未完成而保留的行。  
   
      **索引类型**  
@@ -180,10 +178,10 @@ ms.locfileid: "68811031"
      **Partition ID**  
      包含该索引的 B 树的分区 ID。  
   
-     **版本虚影行**  
+     **建立虚影行版本**  
      由于某个快照隔离事务未完成而保留的虚影记录的数目。  
   
-##  <a name="TsqlProcedureFrag"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedureFrag"></a> 使用 Transact-SQL  
   
 #### <a name="to-check-the-fragmentation-of-an-index"></a>检查索引的碎片  
   
@@ -221,7 +219,7 @@ ms.locfileid: "68811031"
   
  有关详细信息，请参阅[sys.databases&#41;dm_db_index_physical_stats &#40;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql)。  
   
-##  <a name="SSMSProcedureReorg"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedureReorg"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-reorganize-or-rebuild-an-index"></a>重新组织或重新生成索引  
   
@@ -275,7 +273,7 @@ ms.locfileid: "68811031"
   
 8.  单击“确定”****。  
   
-##  <a name="TsqlProcedureReorg"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedureReorg"></a> 使用 Transact-SQL  
   
 #### <a name="to-reorganize-a-defragmented-index"></a>重新组织碎片索引  
   
@@ -332,7 +330,7 @@ ms.locfileid: "68811031"
   
      [!code-sql[IndexDDL#AlterIndex2](../../snippets/tsql/SQL14/tsql/indexddl/transact-sql/alterindex.sql#alterindex2)]  
   
- 有关详细信息，请参阅[ALTER INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)。  
+ 有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)。  
   
 ## <a name="see-also"></a>另请参阅  
  [Microsoft SQL Server 2000 索引碎片整理最佳实践](https://technet.microsoft.com/library/cc966523.aspx)  

@@ -21,10 +21,10 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7cb87d2d5677085edc8e6bd998f20c3c45013823
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262083"
 ---
 # <a name="sysdm_db_log_info-transact-sql"></a>sys. dm_db_log_info （Transact-sql）
@@ -60,7 +60,7 @@ sys.dm_db_log_info ( database_id )
 |vlf_parity|**tinyint** |[虚拟日志文件（VLF）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)的奇偶校验。用于在 VLF 中确定日志的结尾。|
 |vlf_first_lsn|**nvarchar （48）** |[虚拟日志文件（VLF）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)中第一个日志记录的[日志序列号（LSN）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 。|
 |vlf_create_lsn|**nvarchar （48）** |创建[虚拟日志文件（VLF）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)的日志记录的[日志序列号（LSN）](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 。|
-|vlf_encryptor_thumbprint|**varbinary （20）**| **适用于：** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> 如果使用[透明数据加密](../../relational-databases/security/encryption/transparent-data-encryption.md)对 VLF 进行了加密，则显示 VLF 的加密程序的指纹，否则为 NULL。 |
+|vlf_encryptor_thumbprint|**varbinary(20)**| **适用对象：** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> 如果使用[透明数据加密](../../relational-databases/security/encryption/transparent-data-encryption.md)对 VLF 进行了加密，则显示 VLF 的加密程序的指纹，否则为 NULL。 |
 
 ## <a name="remarks"></a>备注
 `sys.dm_db_log_info`动态管理函数将替换`DBCC LOGINFO`语句。    
@@ -110,8 +110,8 @@ GO
 ```
 
 ## <a name="see-also"></a>另请参阅  
-[动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [与数据库相关的动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys. dm_db_log_space_usage &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
-[sys. dm_db_log_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
+[sys.dm_db_log_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
 

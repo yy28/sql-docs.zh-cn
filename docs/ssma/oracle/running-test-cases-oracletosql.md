@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 79d3905c130e37c973a79a40369f97ae8f30ac5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266550"
 ---
 # <a name="running-test-cases-oracletosql"></a>运行测试用例 (OracleToSQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68266550"
   
 ## <a name="test-case-execution-steps"></a>测试用例执行步骤  
   
-### <a name="prerequisites"></a>必备条件  
+### <a name="prerequisites"></a>先决条件  
 SSMA 测试人员检查测试开始之前是否满足所有先决条件。 如果未满足某些条件，则会显示错误消息。  
   
 ### <a name="initialization"></a>初始化  

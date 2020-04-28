@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ac7730e8437eaed304ed69c40e45fc93ee9b5531
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68888649"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>创建数据源视图（数据挖掘基础教程）
@@ -26,7 +26,7 @@ ms.locfileid: "68888649"
   
 2.  在“欢迎使用数据源视图向导”**** 页上，单击“下一步”****。  
   
-3.  在 "**选择数据源**" 页的 "**关系数据源**" 下，选择在上一个任务中创建的艾德公司 DW 2012 数据源。 单击“下一步”。   
+3.  在 "**选择数据源**" 页的 "**关系数据源**" 下，选择在上一个任务中创建的艾德公司 DW 2012 数据源。 单击“下一步”  。  
   
     > [!NOTE]  
     >  如果要创建数据源，请右键单击 "**数据源**"，然后单击 "**新建数据源**" 以启动 "数据源向导"。  
@@ -37,7 +37,7 @@ ms.locfileid: "68888649"
   
     -   **vTargetMail （dbo）** -有关过去自行车购买者的历史数据的视图  
   
-5.  单击“下一步”。   
+5.  单击“下一步”  。  
   
 6.  在 "**完成向导**" 页上，默认情况下将数据源视图命名为 "艾德作品 DW 2012"。 将名称更改为`Targeted Mailing`，然后单击 "**完成**"。  
   
@@ -50,6 +50,6 @@ ms.locfileid: "68888649"
  [第2课： &#40;基本数据挖掘教程生成目标邮件结构&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [定义数据源视图 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services)  
+ [定义数据源视图 (Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services)  
   
   

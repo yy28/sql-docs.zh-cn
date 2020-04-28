@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7705aa50b488971b1c5aaf6e043ccf2dfd9103f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70148658"
 ---
 # <a name="overview-smo"></a>概述 (SMO)
@@ -33,8 +33,7 @@ ms.locfileid: "70148658"
   
 -   成批执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 对语句执行批处理以提高网络性能。  
   
--   捕获 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 允许将任意操作捕获到脚本中。 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 使用此功能编写操作脚本，而不立即执行该操作。  
+-   捕获 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 允许将任意操作捕获到脚本中。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 使用此功能编写操作脚本，而不立即执行该操作。  
   
 -   使用 WMI 提供程序管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。 可以通过编程方式启动、停止和暂停 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
   
@@ -75,11 +74,11 @@ ms.locfileid: "70148658"
   
  **实例类**  
   
- 实例类表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象，如服务器、数据库、表、触发器和存储过程。 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>类用于建立与实例的连接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并控制发送给它的命令的捕获模式。  
+ 实例类表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象，如服务器、数据库、表、触发器和存储过程。  类用于与  实例建立连接，并且控制发送到它的命令的捕获模式。  
   
  SMO 实例对象所构成的层次结构代表了数据库服务器的层次结构。 顶部为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，其下为数据库，再下面是表、列、触发器等。 如果存在一个父级对多个子级的关系（如某个表具有一个或多个列）是符合逻辑的，那么子级将由对象集合来表示。 否则子级仅由对象来表示。  
   
- **实用程序类**  
+ **实用工具类**  
   
  实用工具类是为执行特定任务而显式创建的一组对象。 根据功能将它们划分为不同的对象层次结构：  
   
@@ -92,7 +91,7 @@ ms.locfileid: "70148658"
 ## <a name="smo-features"></a>SMO 功能  
  **优化性能**  
   
- SMO 体系结构的工作效率非常高，因为对象首先仅部分实例化，并从服务器请求最小属性信息。 直到显式引用对象时才将对象完全实例化。 当请求在最初检索的属性集中不存在的某个属性或者调用的方法需要这样的属性时，才将对象完全实例化。 从部分实例化对象到完全实例化对象的转换对用户是透明的。 此外，从不检索某些占用大量内存空间的属性，除非显式引用该属性。 <xref:Microsoft.SqlServer.Management.Smo.Database>对象属性的<xref:Microsoft.SqlServer.Management.Smo.Database.Size%2A>属性就是这样的一个示例。 不过，部分实例化确实需要更多的网络往返时间，所以可能对您的应用程序而言不是最佳执行选项。  
+ SMO 体系结构的工作效率非常高，因为对象首先仅部分实例化，并从服务器请求最小属性信息。 直到显式引用对象时才将对象完全实例化。 当请求在最初检索的属性集中不存在的某个属性或者调用的方法需要这样的属性时，才将对象完全实例化。 从部分实例化对象到完全实例化对象的转换对用户是透明的。 此外，从不检索某些占用大量内存空间的属性，除非显式引用该属性。  对象属性的  属性就是这样的例子。 不过，部分实例化确实需要更多的网络往返时间，所以可能对您的应用程序而言不是最佳执行选项。  
   
  您可以对实例化进行控制以适应系统环境。 尽管依赖延迟实例化可能在引用属性时触发许多服务器请求，但它将应用程序所需的内存空间降至最低。  
   
@@ -108,7 +107,7 @@ ms.locfileid: "70148658"
   
  WMI 提供程序对象由 SMO 包装。 这为 SMO 编程人员提供了与 SMO 类极为相似的简单对象模型，而无需了解命名空间所表示的编程模型以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] WMI 提供程序的详细信息。 WMI 提供程序支持您配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务、别名以及客户端和服务器网络库。  
   
- **脚本编写**  
+ **脚本**  
   
  在 SMO 中，脚本编写已经过增强，并移**到了脚本编写类**中。 **脚本编写**类可以发现依赖关系，了解对象之间的关系，并允许操作依赖关系层次结构。 主要脚本对象是脚本**编写**对象。 还有若干支持对象用于处理依赖关系并响应进度或错误事件。  
   
@@ -157,10 +156,9 @@ ms.locfileid: "70148658"
   
  SMO 中提供了新对象，这些对象表示针对全文搜索的增强。  
   
- **页面验证**  
+ **页验证**  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.DatabaseOptions.PageVerify%2A> 对象表示数据库页验证选项。  
+ <xref:Microsoft.SqlServer.Management.Smo.DatabaseOptions.PageVerify%2A> 对象表示数据库页验证选项。  
   
  **快照数据库**  
   
@@ -168,13 +166,11 @@ ms.locfileid: "70148658"
   
  **Service Broker**  
   
- 
-  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 及其功能由一组对象表示  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] 及其功能由一组对象表示  
   
  **索引增强功能**  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 索引增强功能由 <xref:Microsoft.SqlServer.Management.Smo.Index> 对象中的新增属性表示。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 索引增强功能由 <xref:Microsoft.SqlServer.Management.Smo.Index> 对象中的新增属性表示。  
   
 ## <a name="see-also"></a>另请参阅  
  [复制管理对象概念](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  

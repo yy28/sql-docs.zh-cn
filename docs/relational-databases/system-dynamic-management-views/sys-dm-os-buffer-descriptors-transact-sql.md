@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7395d52b7c91678f11a37a4da32877f31e5780bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265856"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "68265856"
 |page_id|**int**|文件中页面的 ID。 可以为 Null。|  
 |page_level|**int**|页的索引级别。 可以为 Null。|  
 |allocation_unit_id|**bigint**|页的分配单元的 ID。 可使用此值联接 sys.allocation_units。 可以为 Null。|  
-|page_type|**nvarchar （60）**|页类型，例如数据页或索引页。 可以为 Null。|  
+|page_type|**nvarchar(60)**|页类型，例如数据页或索引页。 可以为 Null。|  
 |row_count|**int**|页中的行数。 可以为 Null。|  
 |free_space_in_bytes|**int**|页中的可用空间（字节）。 可以为 Null。|  
 |is_modified|**bit**|1 = 从磁盘读取页后已对其进行修改。 可以为 Null。|  
@@ -60,7 +60,7 @@ ms.locfileid: "68265856"
 ## <a name="remarks"></a>备注  
  sys. dm_os_buffer_descriptors 返回资源数据库正在使用的页。 sys. dm_os_buffer_descriptors 不返回有关免费或被盗页面的信息，也不返回有关在读取时出错的页的信息。  
   
-|从|目标|启用|关系|  
+|From|到|启用|关系|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|多对一|  
 |sys.dm_os_buffer_descriptors|\<userdb> allocation_units|allocation_unit_id|多对一|  
@@ -113,11 +113,11 @@ ORDER BY cached_pages_count DESC;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sys. allocation_units &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  
  [&#40;Transact-sql 的与操作系统相关的动态管理视图 SQL Server&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [资源数据库](../../relational-databases/databases/resource-database.md)   
- [sys. dm_os_buffer_pool_extension_configuration &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
+ [sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
   
   
 

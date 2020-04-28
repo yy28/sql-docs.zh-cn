@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493826"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>定义和使用钻取操作
@@ -64,7 +64,7 @@ ms.locfileid: "69493826"
   
 1.  在“生成”**** 菜单上，单击“部署 Analysis Services 教程”****。  
   
-2.  在部署成功完成后，在 ** 教程多维数据集的多维数据集设计器中单击“浏览器”**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]选项卡，再单击“重新连接”**** 按钮。  
+2.  在部署成功完成后，在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器中单击“浏览器”**** 选项卡，再单击“重新连接”**** 按钮。  
   
 3.  启动 Excel。  
   
@@ -74,8 +74,7 @@ ms.locfileid: "69493826"
   
 6.  在数据透视表上的“客户所在地域”**** 中，添加选择单个客户的筛选器。 依次展开“全部客户”****、**Australia**、**Queensland**、**Brisbane**、**4000**，然后选中“Adam Powell”**** 复选框，再单击“确定”****。  
   
-     
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 对 Adam Powell 的产品销售总额显示在数据区域中。  
+     [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 对 Adam Powell 的产品销售总额显示在数据区域中。  
   
 7.  右键单击销售额，指向“其他操作”****，然后单击“钻取订单详细信息”****。  
   
@@ -111,7 +110,7 @@ ms.locfileid: "69493826"
   
 8.  将 "**发货日期键**" 特性的 "**名称**" `Ship Date`属性更改为，然后将此属性的 "**名称列**" 属性更改为**SimpleDate （WChar）**。  
   
-9. 切换到 ** 教程多维数据集的多维数据集设计器的“操作”**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]选项卡。  
+9. 切换到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器的“操作”**** 选项卡。  
   
 10. 在“钻取列”**** 框中，选择各复选框以将以下列添加到“返回列”**** 列表，再单击“确定”****：  
   
@@ -129,7 +128,7 @@ ms.locfileid: "69493826"
   
 1.  在“生成”**** 菜单上，单击“部署 Analysis Services 教程”****。  
   
-2.  在成功完成部署后，切换到 ** 教程多维数据集的多维数据集设计器中的“浏览器”**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]选项卡，然后单击“重新连接”**** 按钮。  
+2.  在成功完成部署后，切换到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器中的“浏览器”**** 选项卡，然后单击“重新连接”**** 按钮。  
   
 3.  启动 Excel。  
   

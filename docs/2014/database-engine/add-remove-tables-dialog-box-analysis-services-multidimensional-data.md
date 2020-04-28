@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0c0ad4d5c375b537f4bc0fd4efb820395a8d6e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889217"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>"添加/删除表" 对话框（Analysis Services 多维数据）
-  可以使用 ** 中的“添加/删除表”**[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]对话框，在数据源视图中添加或删除数据源中的表。 可以通过执行以下操作之一显示“添加/删除表”**** 对话框：  
+  可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的“添加/删除表”**** 对话框，在数据源视图中添加或删除数据源中的表。 可以通过执行以下操作之一显示“添加/删除表”**** 对话框：  
   
 -   在“数据源视图设计器”**** 的“工具栏”**** 窗格中，单击“添加/删除对象”****。  
   
@@ -53,6 +53,6 @@ ms.locfileid: "68889217"
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;多维数据的 Analysis Services 设计器和对话框&#41;](../analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [数据源视图设计器 &#40;Analysis Services 多维数据&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [数据源视图设计器（Analysis Services - 多维数据）](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d049a5e96d9c7212467595aa70cd44db727bdf6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768999"
 ---
 # <a name="sp_browsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
@@ -67,17 +67,17 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**xact_seqno**|**varbinary （16）**|命令的序列号。|  
+|**xact_seqno**|**varbinary(16)**|命令的序列号。|  
 |**originator_srvname**|**sysname**|发起事务的服务器。|  
 |**originator_db**|**sysname**|发起事务的数据库。|  
 |**article_id**|**int**|项目的 ID。|  
-|type |**int**|命令的类型。|  
+|**type**|**int**|命令的类型。|  
 |**partial_command**|**bit**|指示是否为部分命令。|  
 |**hashkey**|**int**|仅限内部使用。|  
 |**originator_publication_id**|**int**|发起事务的发布的 ID。|  
 |**originator_db_version**|**int**|发起事务的数据库的版本。|  
-|**originator_lsn**|**varbinary （16）**|标识初始发布中命令的日志序列号 (LSN)。 在对等事务复制中使用。|  
-|**command**|**nvarchar （1024）**|[!INCLUDE[tsql](../../includes/tsql-md.md)]command.|  
+|**originator_lsn**|**varbinary(16)**|标识初始发布中命令的日志序列号 (LSN)。 在对等事务复制中使用。|  
+|**command**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]command.|  
 |**command_id**|**int**|[MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)中的命令 ID。|  
   
  在结果集中，长命令可以拆分为若干行。  
@@ -89,7 +89,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
  只有**sysadmin**固定服务器角色的成员或分发数据库上的**db_owner**或**replmonitor**固定数据库角色的成员才能执行**sp_browsereplcmds**。  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_replcmds (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [sp_replcmds &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_replshowcmds &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

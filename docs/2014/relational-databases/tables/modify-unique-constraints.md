@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8bb3daf170e25abc9b346aeaedb4b835cae2dfdd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68809926"
 ---
 # <a name="modify-unique-constraints"></a>修改唯一约束
@@ -37,35 +37,35 @@ ms.locfileid: "68809926"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要对表的 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-modify-a-unique-constraint"></a>修改唯一约束  
   
-1.  在“对象资源管理器”**** 中，右键单击包含唯一约束的表，然后选择“设计”****。  
+1.  在“对象资源管理器”  中，右键单击包含唯一约束的表，然后选择“设计”  。  
   
-2.  在“表设计器”菜单上，单击“索引/键...”********。  
+2.  在“表设计器”菜单上，单击“索引/键...”   。  
   
-3.  在“索引/键”**** 对话框中的“选定的主/唯一键或索引”**** 下，选择要编辑的约束。  
+3.  在“索引/键”  对话框中的“选定的主/唯一键或索引”  下，选择要编辑的约束。  
   
 4.  完成下表中的相应操作：  
   
     |目标|需要遵循的步骤|  
     |--------|------------------------|  
-    |更改与约束关联的列|1) 在“(常规)”下的网格中，单击“列”，再单击属性右侧的省略号 (…)************。<br /><br /> 2) 在“索引列”**** 对话框中，为索引指定新列和/或排序顺序。|  
+    |更改与约束关联的列|1) 在“(常规)”下的网格中，单击“列”，再单击属性右侧的省略号 (…)    。<br /><br /> 2) 在“索引列”  对话框中，为索引指定新列和/或排序顺序。|  
     |重命名约束|在 **“标识”** 下的网格中，在 **“名称”** 框中键入新名称。 确保新名称不与“选定的主/唯一键或索引”  列表中的名称重复。|  
-    |设置聚集选项|在“表设计器”**** 下的网格中，选择“创建为群集索引”****，并从下拉列表中选择“是”创建群集索引，或选择“否”创建非聚集索引。 对于每个表，只允许存在一个聚集索引。 如果此表中已经存在聚集索引，则您必须首先对原始索引清除此设置。|  
+    |设置聚集选项|在“表设计器”  下的网格中，选择“创建为群集索引”  ，并从下拉列表中选择“是”创建群集索引，或选择“否”创建非聚集索引。 对于每个表，只允许存在一个聚集索引。 如果此表中已经存在聚集索引，则您必须首先对原始索引清除此设置。|  
     |定义填充因子|在 **“表设计器”** 下的网格中，展开 **“填充规范”** 类别，然后在 **“填充因子”** 框中键入一个 0 到 100 之间的整数。|  
   
 5.  在“文件”  菜单上，单击“保存”  以保存表名  。  
   
-##  <a name="TsqlProcedure"></a> **修改唯一约束**  
+##  <a name="to-modify-a-unique-constraint"></a><a name="TsqlProcedure"></a> **修改唯一约束**  
   
  若要使用 Transact-SQL 修改 UNIQUE 约束，必须首先删除现有的 UNIQUE 约束，然后用新定义重新创建。 有关详细信息，请参阅 [Delete Unique Constraints](delete-unique-constraints.md) 和 [Create Unique Constraints](create-unique-constraints.md)。  
   
