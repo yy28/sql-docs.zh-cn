@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ef8eeeaaf59934d6c3307641b6c93f110ab5738f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982542"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
@@ -50,9 +50,9 @@ ms.locfileid: "73982542"
 |stack_bytes_committed|**int**|在堆栈中提交的字节数。|  
 |stack_bytes_used|**int**|线程目前使用的字节数。|  
 |affinity|**bigint**|该线程运行时使用的 CPU 掩码。 这取决于**ALTER SERVER CONFIGURATION SET PROCESS 地缘**语句配置的值。 在软关联的情况下，可能与计划程序不同。|  
-|优先度|**int**|该线程的优先级值。|  
+|Priority|**int**|该线程的优先级值。|  
 |Locale|**int**|线程的缓存区域设置 LCID。|  
-|令牌|**varbinary(8)**|线程的缓存模拟令牌句柄。|  
+|标记|**varbinary(8)**|线程的缓存模拟令牌句柄。|  
 |is_impersonating|**int**|指示该线程是否使用 Win32 模拟。<br /><br /> 1 = 该线程使用与进程默认的安全凭据不同的安全凭据。 这表明线程正在模拟创建该进程的实体以外的其他实体。|  
 |is_waiting_on_loader_lock|**int**|指示线程是否正在等待加载程序锁的操作系统状态。|  
 |fiber_data|**varbinary(8)**|线程当前运行的 Win32 纤程。 只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置了轻型池时，这才适用。|  
@@ -75,9 +75,7 @@ ms.locfileid: "73982542"
 由于 SQL 引擎在 Linux 中的工作原理，某些信息与 Linux 诊断数据不匹配。 例如， `os_thread_id`与工具（如`ps`）`top`或 procfs （/proc/`pid`）的结果不匹配。  这是由于平台抽象层（SQLPAL）、SQL Server 组件和操作系统之间的一层。
 
 ## <a name="examples"></a>示例  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在启动时将启动线程，然后将工作与这些线程进行关联。 但是，外部组件（如扩展存储过程）可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程中启动线程。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法控制这些线程。 sys. dm_os_threads 可以提供有关使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]进程中的资源的恶意线程的信息。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在启动时将启动线程，然后将工作与这些线程进行关联。 但是，外部组件（如扩展存储过程）可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程中启动线程。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法控制这些线程。 sys. dm_os_threads 可以提供有关使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]进程中的资源的恶意线程的信息。  
   
  下面的查询用于查找正在运行非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动的线程的工作以及执行的时间。  
   

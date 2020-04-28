@@ -19,10 +19,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
 ms.openlocfilehash: 9318a34b4853937983b107491c9210de80e5506c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056404"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH （Transact-sql）
@@ -85,7 +85,7 @@ STRING_AGG 函数采用表达式和分隔符作为输入并返回一个字符串
 ### <a name="last_value"></a>LAST_VALUE
 若要从遍历的路径的最后一个节点投影属性，可以使用 LAST_VALUE 聚合函数。 将边缘表别名作为此函数的输入提供是错误的，只能使用节点表名称或别名。
 
-**最后一个节点**：最后一个节点引用在遍历的路径中最后显示的节点，而不考虑匹配谓词中的箭头方向。 例如： `MATCH(SHORTEST_PATH(n(-(e)->p)+) )` 。 此处，路径中的最后一个节点将是最后访问的 P 节点。 
+**最后一个节点**：最后一个节点引用在遍历的路径中最后显示的节点，而不考虑匹配谓词中的箭头方向。 例如： `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`。 此处，路径中的最后一个节点将是最后访问的 P 节点。 
 
 相反，最后一个节点是此模式的输出关系图路径中的最后一个第 n 个节点：`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
@@ -98,10 +98,10 @@ STRING_AGG 函数采用表达式和分隔符作为输入并返回一个字符串
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 
 
-### <a name="avg"></a>平均值
+### <a name="avg"></a>AVG
 返回在所遍历的路径中出现的所提供的节点/边缘属性值或表达式的平均值。
 
-### <a name="min"></a>最小值
+### <a name="min"></a>MIN
 返回所提供的节点/边缘属性值或所遍历路径中出现的表达式的最小值。
 
 ### <a name="max"></a>MAX

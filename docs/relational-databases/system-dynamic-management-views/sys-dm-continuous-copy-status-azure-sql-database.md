@@ -21,10 +21,10 @@ ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6d0bda2d1851d7ec7900a23ad6203d4f85beb73f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73844504"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status（Azure SQL 数据库）
@@ -52,7 +52,7 @@ ms.locfileid: "73844504"
  若要检索数据，需要**db_owner**数据库角色的成员身份。 Dbo 用户、 **dbmanager**数据库角色的成员以及 sa 登录名也可以查询此视图。  
   
 ## <a name="remarks"></a>备注  
- **Sys. dm_continuous_copy_status**视图在**资源**数据库中创建，并在所有数据库（包括逻辑 master）中可见。 但是，在逻辑 master 中查询此视图会返回空集。  
+ **Sys. dm_continuous_copy_status**视图在**资源**数据库中创建，并在所有数据库（包括逻辑 master）中可见。 但是，在主数据库中查询此视图将返回空集合。  
   
  如果在数据库中终止了连续复制关系，则**sys.databases dm_continuous_copy_status**视图中该数据库的行将会消失。  
   

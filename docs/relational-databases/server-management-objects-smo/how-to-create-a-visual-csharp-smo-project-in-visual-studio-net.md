@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 53ab22f96020080e28a92975c4d78d6ca3215d57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74095965"
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>如何在 Visual Studio .NET 中创建 Visual C# SMO 项目
@@ -31,7 +31,7 @@ ms.locfileid: "74095965"
   
 1. 启动 Visual Studio
   
-2. 在 "**文件**" 菜单上，单击 "**新建**"，然后单击 "**项目**"。  将显示“新建项目”对话框  。   
+2. 在 "**文件**" 菜单上，单击 "**新建**"，然后单击 "**项目**"。  此时将出现“新建项目”  对话框。   
   
 3. 在 " [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **已安装**" 窗格中，导航到 "**模板**\\" "**Visual c #**\\**Windows** "，然后选择 "**控制台应用**  
   
@@ -41,7 +41,7 @@ ms.locfileid: "74095965"
 
 6. 按照[安装 SMO](installing-smo.md)上的说明安装要引用的项目包。
   
-7. 在 **“视图”** 菜单上，单击 **“代码”** 。
+7. 在 **“视图”** 菜单上，单击 **“代码”**。
     
 8. 在代码的命名空间语句前，键入以下**using**语句以限定 SMO 命名空间中的类型：
   

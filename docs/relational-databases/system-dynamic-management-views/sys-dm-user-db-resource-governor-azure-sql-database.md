@@ -21,10 +21,10 @@ author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
 ms.openlocfilehash: aa7c7e7a7c510f797377c3cbbceb7c2751418da3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74165917"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys. dm_user_db_resource_governance （Transact-sql）
@@ -35,7 +35,7 @@ ms.locfileid: "74165917"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|database_id |int|数据库的 ID，在 Azure SQL 数据库服务器中是唯一的。|
+|**database_id**|int|数据库的 ID，在 Azure SQL 数据库服务器中是唯一的。|
 |**logical_database_guid**|uniqueidentifier|用户数据库的逻辑 GUID，用于保持用户数据库的使用。  重命名数据库或更改其服务级别目标将不会更改此值。|
 |**physical_database_guid**|uniqueidentifier|用户数据库的物理 GUID，该 GUID 贯穿用户数据库的物理实例。 更改数据库服务级别目标将导致此值更改。|
 |server_name |nvarchar|逻辑服务器名称。|
@@ -122,6 +122,6 @@ ORDER BY database_name;
 - [sys.dm_resource_governor_workload_groups (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql)
 - [sys. dm_resource_governor_resource_pools_history_ex （Transact-sql）](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-history-ex-azure-sql-database)
 - [sys.dm_resource_governor_workload_groups_history_ex（Azure SQL 数据库）](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-history-ex-azure-sql-database)
-- [事务日志速率管理](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [单个数据库 DTU 资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-single-databases)
+- [事务日志速率调控](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
+- [单一数据库 DTU 资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-single-databases)
 - [单一数据库 vCore 资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-single-databases)

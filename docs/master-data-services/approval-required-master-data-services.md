@@ -11,10 +11,10 @@ ms.assetid: b475a53d-269d-49f3-bb42-965c555f80be
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 61d03410e5217175335caf0ca37241b28c887989
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729755"
 ---
 # <a name="approval-required-master-data-services"></a>需要审批 (Master Data Services)
@@ -30,12 +30,12 @@ ms.locfileid: "73729755"
 >   
 >  由业务规则所做的更改不需要进行审批。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   你必须有权访问“系统管理”功能区域  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 -   实体必须存在。 有关详细信息，请参阅[Create a Entity &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
   
@@ -50,6 +50,6 @@ ms.locfileid: "73729755"
 4.  单击“编辑” ****，选择“需要审批” ****，然后单击“保存” ****。  
   
 ## <a name="see-also"></a>另请参阅  
- [变更集 &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md)  
+ [变更集 (Master Data Services)](../master-data-services/changesets-master-data-services.md)  
   
   

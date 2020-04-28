@@ -11,10 +11,10 @@ ms.assetid: 9adbd5e1-f28c-4fb5-afa7-082de2831f3e
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: abf900f8eea0e64ed8e541ee7cd94c63834fbb48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729742"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>自动创建代码 (Master Data Services)
@@ -37,15 +37,15 @@ ms.locfileid: "73729742"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|自动为 Code 属性生成值。|[自动生成 Master Data Services &#40;的代码属性值&#41;](../master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
-|自动为其他属性生成值。|[自动生成代码 &#40;Master Data Services 之外的属性值&#41;](../master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
+|自动为 Code 属性生成值。|[自动生成 Code 属性值 (Master Data Services)](../master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
+|自动为其他属性生成值。|[自动生成 Code 之外的属性值 (Master Data Services)](../master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
--   [MDS &#40;Master Data Services 概述&#41;](../master-data-services/master-data-services-overview-mds.md)  
+-   [Master Data Services 概述 (MDS)](../master-data-services/master-data-services-overview-mds.md)  
   
--   [业务规则 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)  
   
--   [实体 &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
+-   [实体 (Master Data Services)](../master-data-services/entities-master-data-services.md)  
   
   

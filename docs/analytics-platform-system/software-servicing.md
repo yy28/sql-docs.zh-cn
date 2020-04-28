@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4325dfa9c16edba12c2bba694b47c1b0875c7c6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400317"
 ---
 # <a name="software-servicing-in-analytics-platform-system"></a>分析平台系统中的软件服务
 本部分汇总了针对分析平台系统设备（包括 WSUS 和分析平台系统修补程序）的软件服务要求。  
   
-## <a name="Basics"></a>软件维护基础知识  
+## <a name="software-servicing-basics"></a><a name="Basics"></a>软件维护基础知识  
 **WSUS：** 需要将分析平台系统设备配置为接收来自 Windows Server Update Services （WSUS）的更新。 这些更新包括对设备软件的重要更改。 配置完成后，许多更新会自动安装，不需要进行动手管理。 通常，WSUS 更新在[配置 Windows Server Update Services &#40;wsus&#41; &#40;分析平台系统](configure-windows-server-update-services-wsus.md)在安装新设备期间执行&#41;步骤的过程中进行配置。 如果不是，则可以在以后执行此配置步骤。 有关 WSUS 的信息，请参阅[wsus 网站指南](https://go.microsoft.com/fwlink/?LinkId=202417)。  
   
 **修补程序：** 此外，可能还需要应用分析平台系统修补程序。 *修补程序*是为特定客户创建的软件更新，用来解决分析平台系统软件的问题。 每个修补程序都是可执行文件，用于安装客户特定问题的修补程序。 每个修补程序还包含以前发布的适用于 Windows、SQL Server 和分析平台系统的所有软件更新。 如果需要安装修补程序，Microsoft 支持人员将为你提供修补程序和说明。  

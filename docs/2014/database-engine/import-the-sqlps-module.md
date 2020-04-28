@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1916be8c443799fa41680341e72889bd10551b4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74200427"
 ---
 # <a name="import-the-sqlps-module"></a>导入 SQLPS 模块
@@ -22,7 +22,7 @@ ms.locfileid: "74200427"
   
 1.  **开始之前：**  [安全性](#Security)  
   
-2.  **加载模块：**  [加载 sqlps 模块](#LoadSqlps)  
+2.  **若要加载模块，请执行以下操作：**  [加载 sqlps 模块](#LoadSqlps)  
   
 ## <a name="before-you-begin"></a>开始之前  
  在将 `sqlps` 模块导入到 Windows PowerShell 后，您可以：  
@@ -40,10 +40,10 @@ ms.locfileid: "74200427"
 > [!NOTE]  
 >  在两个 SQL Server cmdlet（`Encode-Sqlname` 和 `Decode-Sqlname`）的名称中使用的动词与 Windows PowerShell 2.0 的批准的动词不匹配。 这对其操作没有影响，但在将 `sqlps` 模块导入到某一会话时 Windows PowerShell 将引发警告。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  默认情况下，Windows PowerShell 会在脚本执行策略设置为 **Restricted**（即，禁止运行任何 Windows PowerShell 脚本）的情况下运行。 若要加载 `sqlps` 模块，您可以使用 `Set-ExecutionPolicy` cmdlet 来运行已签名脚本或任意脚本。 请仅运行来自受信任源的脚本，并通过使用适当的 NTFS 权限来保证所有输入和输出文件的安全。 有关启用 Windows PowerShell 脚本的详细信息，请参阅 [Running Windows PowerShell Scripts](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell?view=powershell-6#how-to-enable-windows-powershell-ise-on-earlier-releases-of-windows)（运行 Windows PowerShell 脚本）。  
   
-##  <a name="LoadSqlps"></a>加载 sqlps 模块  
+##  <a name="load-the-sqlps-module"></a><a name="LoadSqlps"></a> 加载 sqlps 模块  
 
 ### <a name="to-load-the-sqlps-module-in-windows-powershell"></a>加载 Windows PowerShell 中的 sqlps 模块
   

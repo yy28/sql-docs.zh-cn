@@ -13,10 +13,10 @@ ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: aaedf62b9702d5cec44116cb906acdf9aa415c39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729811"
 ---
 # <a name="add-members-to-a-collection-master-data-services"></a>将成员添加到集合 (Master Data Services)
@@ -25,10 +25,10 @@ ms.locfileid: "73729811"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以将叶成员和合并成员添加到集合中。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
--   您必须有权访问 "**资源管理器**" 功能区域。  
+-   **** 您必须有权访问“资源管理器”功能区域。  
   
 -   对于您要将成员添加到的集合模型对象，您必须至少具有 **“更新”** 权限。  
   
@@ -36,15 +36,11 @@ ms.locfileid: "73729811"
   
 ### <a name="to-add-members-to-a-collection"></a>将成员添加到集合  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，从“模型” **** 列表中选择模型。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 在 **** 主页上，从“模型”列表中，选择模型。  
   
-2.  
-  **
-  ** 从“版本”列表中，选择某一版本。  
+2.  **** 从“版本”列表中，选择某一版本。  
   
-3.  
-  **
-  **单击“资源管理器”。  
+3.  单击 **“资源管理器”**。  
   
 4.  从菜单栏中，指向“集合”****，然后单击“entity_name”**。  
   
@@ -63,6 +59,6 @@ ms.locfileid: "73729811"
 11. 或者，单击 **“权重”** 列中的值设置权重值。  
   
 ## <a name="see-also"></a>另请参阅  
- [集合 &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
+ [集合 (Master Data Services)](../master-data-services/collections-master-data-services.md)  
   
   

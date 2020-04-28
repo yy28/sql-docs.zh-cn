@@ -11,10 +11,10 @@ ms.assetid: 113069c5-12e6-48ec-b443-b42e14f77308
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4bc3d2a084f7f1ec3abcf9e3d3bbcaf82e4749e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729108"
 ---
 # <a name="member-revision-history-master-data-services"></a>成员修订历史记录 (Master Data Services)
@@ -68,7 +68,7 @@ ms.locfileid: "73729108"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|回退成员修订历史记录|[回退成员修订历史记录 &#40;Master Data Services&#41;](../master-data-services/rollback-member-revision-history-master-data-services.md)|  
+|回退成员修订历史记录|[回退成员修订历史记录 (Master Data Services)](../master-data-services/rollback-member-revision-history-master-data-services.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [创建模型 &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)   

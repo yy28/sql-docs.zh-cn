@@ -10,19 +10,19 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 977e38016fbb58356d22ccfc5f783539e5f852d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400946"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>用管理控制台分析平台系统监视设备
 管理控制台是一个 SQL Server PDW web 应用程序，用于显示设备状态、运行状况和性能信息。 用户通过 Internet Explorer 连接到管理控制台。  
   
-## <a name="About"></a>关于管理控制台  
+## <a name="about-the-admin-console"></a><a name="About"></a>关于管理控制台  
 ![工具控制台主页](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
-**本**  
+**家用电器**  
 主页  
 提供设备状态的快速摘要。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "74400946"
 查询  
 显示正在运行的查询和最近完成的查询的列表。 它显示相关错误（如果有）。 还可以查看查询执行计划和节点执行信息的详细信息。  
   
-加载  
+负载  
 显示加载计划、PDW 加载的当前状态以及相关错误（如果有）。  
   
 备份/还原  
@@ -67,7 +67,7 @@ ms.locfileid: "74400946"
 > [!NOTE]  
 > 管理控制台的屏幕分辨率为1024x768。 使用 1280 X 1024 或更高版本的屏幕分辨率时，管理控制台显示最佳。  
   
-## <a name="Connect"></a>连接到管理控制台  
+## <a name="connect-to-the-admin-console"></a><a name="Connect"></a>连接到管理控制台  
 若要连接到管理控制台，需要：  
   
 -   至少为 Internet Explorer 版本10。  
@@ -78,7 +78,7 @@ ms.locfileid: "74400946"
   
 若要连接到管理控制台，请使用 Internet Explorer 和 https 浏览到控件节点群集的 IP 地址。 例如，如果控制节点群集的 IP 地址为`10.192.63.102`，则在浏览器`https://10.192.63.102`地址栏中输入。 第一个屏幕将请求您的**登录名**和**密码**。 提供 SQL Server 身份验证登录名和密码，或 Windows 身份验证登录名和 Windows 密码。 如果使用 Windows 身份验证登录名，管理控制台将使用模拟。  
   
-## <a name="RelatedTasks"></a>管理控制台任务  
+## <a name="admin-console-tasks"></a><a name="RelatedTasks"></a>管理控制台任务  
 管理员控制台提供了以下功能：  
   
 |||  

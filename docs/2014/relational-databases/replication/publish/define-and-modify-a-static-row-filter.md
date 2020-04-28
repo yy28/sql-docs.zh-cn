@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7bb7aebed25c571108e4b0d7e7366fc52c45e3c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882307"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>定义和修改静态行筛选器
@@ -38,19 +38,19 @@ ms.locfileid: "73882307"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   如果在初始化对发布的订阅后添加、修改或删除静态行筛选器，则必须在更改后生成新的快照并重新初始化所有订阅。 有关属性更改要求的详细信息，请参阅[更改发布和项目属性](change-publication-and-article-properties.md)。  
   
 -   如果为对等事务复制启用了发布，则不能筛选表。  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   由于这些筛选器是静态的，因此所有订阅服务器都将接收到相同的数据子集。 如果您需要在属于合并发布的表项目中动态筛选行，以使每一订阅服务器都能接收到不同的数据分区，请参阅 [定义和修改合并项目的参数化行筛选器](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。 您还可使用合并复制基于现有的行筛选器筛选相关的行。 有关详细信息，请参阅 [定义和修改合并项目间的联接筛选器](define-and-modify-a-join-filter-between-merge-articles.md)。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  可在新建发布向导的“筛选表行”页或“发布属性 - **发布>”对话框的“筛选行”页上定义、修改和删除静态行筛选器。**  **\<** 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](create-a-publication.md)和[查看和修改发布属性](view-and-modify-publication-properties.md)。  
   
 #### <a name="to-define-a-static-row-filter"></a>定义静态行筛选器  
@@ -102,7 +102,7 @@ ms.locfileid: "73882307"
   
 1.  在新建发布向导的“筛选表行”页或“发布属性 - **发布>”对话框的“筛选行”页上，在“筛选的表”窗格中选择筛选器，然后单击“删除”。**  **\<**    
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  在创建表项目时，可以定义 WHERE 子句以筛选项目中的行。 定义行筛选器后，还可以对其进行更改。 可使用复制存储过程以编程的方式创建和修改静态行筛选器。  
   
 #### <a name="to-define-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>为快照发布或事务发布定义静态行筛选器  
@@ -145,7 +145,7 @@ ms.locfileid: "73882307"
   
 3.  重新初始化订阅。 有关详细信息，请参阅 [重新初始化订阅](../reinitialize-subscriptions.md)。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  在此事务复制示例中，对项目进行水平筛选以删除所有停产的产品。  
   
  [!code-sql[HowTo#sp_AddTranArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpub.sql#sp_addtranarticle)]  

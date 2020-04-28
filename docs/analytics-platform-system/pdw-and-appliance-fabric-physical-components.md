@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5cbed66f53189668518e04848002ae69adb8c614
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400921"
 ---
 # <a name="appliance-physical-components---analytics-platform-system"></a>设备物理组件-分析平台系统
@@ -21,7 +21,7 @@ PDW 和设备结构物理组件的名称和描述。
   
 <!-- MISSING LINKS See also [HDInsight Physical Components &#40;Analytics Platform System&#41;](hdinsight-physical-components.md).  -->  
   
-## <a name="diagrams"></a>组件图  
+## <a name="component-diagrams"></a><a name="diagrams"></a>组件图  
 这会显示物理组件的名称，以及它们位于6计算节点设备的第一个机架中的位置。  
   
 ![PDW 区域组件名称 - HP](./media/pdw-and-appliance-fabric-physical-components/APS_HW_ComponentNames-HP.png "APS_HW_ComponentNames-HP")  
@@ -34,7 +34,7 @@ PDW 组件的实际名称是 PDW 区域名称，后跟一个破折号，再后�
   
 ![PDW 组件名称](./media/pdw-and-appliance-fabric-physical-components/APS_HW_Names.png "APS_HW_Names")  
   
-## <a name="pdw"></a>PDW 组件  
+## <a name="pdw-components"></a><a name="pdw"></a>PDW 组件  
 PDW 虚拟机是 PDW 区域的一部分。  
   
 *PDW_region*-CTL01  
@@ -46,7 +46,7 @@ PDW 虚拟机是 PDW 区域的一部分。
 通过*PDW_Region* *PDW_region*-pqth4a-cmp01-CMP06  
 运行计算节点的虚拟机。 在此6计算节点图中，主机 HSA01 到 HSA06 分别运行计算节点 Vm PQTH4A-CMP01 到 CMP06。  
   
-## <a name="fabric"></a>设备结构组件  
+## <a name="appliance-fabric-components"></a><a name="fabric"></a>设备结构组件  
 这些组件是设备结构的一部分。  
   
 ### <a name="virtual-machines"></a>虚拟机  

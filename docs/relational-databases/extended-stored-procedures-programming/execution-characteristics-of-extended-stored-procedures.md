@@ -14,17 +14,17 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 74ecd20f28e58e133b5710d3cbd9d18b27ca7756
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74095990"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>扩展存储过程的执行特征
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 CLR 集成。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 请改用 CLR 集成。  
   
  执行扩展存储过程具有以下特征：  
   
@@ -47,8 +47,8 @@ ms.locfileid: "74095990"
 EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT  
 ```  
   
-## <a name="parameters"></a>parameters  
- \@*retval*  
+## <a name="parameters"></a>参数  
+ \@ *retval*  
  为返回值。  
   
  \@*param1*  
@@ -62,6 +62,6 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
   
 ## <a name="see-also"></a>另请参阅  
  [扩展存储过程编程](../../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)   
- [查询在 SQL Server 中安装的扩展存储过程](../../relational-databases/extended-stored-procedures-programming/querying-extended-stored-procedures-installed-in-sql-server.md)  
+ [查询 SQL Server 中安装的扩展存储过程](../../relational-databases/extended-stored-procedures-programming/querying-extended-stored-procedures-installed-in-sql-server.md)  
   
   

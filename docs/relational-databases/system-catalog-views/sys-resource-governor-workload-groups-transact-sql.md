@@ -20,10 +20,10 @@ ms.assetid: 619ba4b7-868f-4784-b527-ec1dfd703c4f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 785062784aa465c438ab842a642d09cad03c799b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982965"
 ---
 # <a name="sysresource_governor_workload_groups-transact-sql"></a>sys.resource_governor_workload_groups (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "73982965"
 |request_max_cpu_time_sec|**int**|针对单个请求的最大 CPU 使用限制（以秒为单位）。 默认值为 0，指定没有限制。 不可为 null。<br /><br /> **注意：** 有关详细信息，请参阅[CPU 阈值超出事件类别](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。|  
 |request_memory_grant_timeout_sec|**int**|针对单个请求的内存授予超时（以秒为单位）。 默认值为 0，表示使用基于查询开销的内部计算。 不可为 null。|  
 |max_dop|**int**|工作负荷组的最大并行度。 默认值为 0，表示使用全局设置。 不可为 null。<br /><br /> **Node：** 此设置将替代查询选项**maxdop**。|  
-|group_max_requests|**int**|最大并发请求数。 默认值为 0，指定没有限制。 不可为 null。|  
+|group_max_requests|**int**|并发请求的最大数目。 默认值为 0，指定没有限制。 不可为 null。|  
 |pool_id|**int**|此工作负荷组使用的资源池的 ID。|  
 |external_pool_id|**int**|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。<br /><br /> 此工作负荷组使用的外部资源池的 ID。|  
   
@@ -54,7 +54,7 @@ ms.locfileid: "73982965"
   
 ## <a name="see-also"></a>另请参阅  
  [sys. dm_resource_governor_workload_groups &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
- [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Resource Governor 目录视图 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)  
   
   

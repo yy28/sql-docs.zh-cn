@@ -14,10 +14,10 @@ ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: e8deee97bd80404df5851f0845aa02b51bfe0cfc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729451"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>创建和发布业务规则 (Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "73729451"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，创建业务规则以便确保您的主数据的精确性。 创建规则后，必须首先发布它，然后才能将该规则应用于数据。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-create-and-publish-a-business-rule"></a>创建和发布业务规则  
   
@@ -41,11 +41,11 @@ ms.locfileid: "73729451"
   
 3.  在“业务规则”页上，从“模型”下拉列表中选择一个模型。********  
   
-4.  从“实体”**** 下拉列表中选择一个实体。  
+4.  从 **** “实体”下拉列表中选择一个实体。  
   
 5.  从“成员类型” **** 下拉列表中，选择要应用业务规则的成员类型。  
   
-6.  单击“添加”  。  
+6.  单击 **“添加”** 。  
   
 7.  在“名称” **** 框中，键入业务规则的名称。  
   
@@ -56,24 +56,24 @@ ms.locfileid: "73729451"
     > [!NOTE]  
     >  仅针对包括验证操作的规则发送通知。  
   
-10. 在“If” **** 块下，单击“添加” ****。 此时，系统会显示一个面板。  
+10. 在“If” **** 块下，单击“添加” ****。 此时将显示一个面板。  
   
-11. 从“属性”**** 下拉列表中选择一个属性。  
+11. 从 **** “属性”下拉列表中选择一个属性。  
   
 12. 从“运算符”**** 下拉列表中选择一个条件。  
   
 13. 填写所有必填字段。  
   
-14. 单击“保存”按钮。**** 此时，系统会在“If” **** 网格中新添加一行。  
+14. 单击“保存”按钮****。 此时，系统会在“If” **** 网格中新添加一行。  
   
     > [!TIP]  
     >  可以通过右键单击各项并选择“删除”，从业务规则中删除相应项。****  
   
-15. 也可以向规则添加多个条件。 有关详细信息，请参阅[向业务规则添加多个条件 (Master Data Services)](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)。  
+15. 也可以向规则添加多个条件。 有关详细信息，请参阅 [向业务规则添加多个条件 (Master Data Services)](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)。  
   
-16. 在“Then” **** 块下，单击“添加” **** 。 此时，系统会显示一个面板。  
+16. 在“Then” **** 块下，单击“添加” **** 。 此时将显示一个面板。  
   
-17. 从“属性”**** 下拉列表中选择一个属性。  
+17. 从 **** “属性”下拉列表中选择一个属性。  
   
 18. 从“运算符”下拉列表中，选择一个操作。****  
   
@@ -83,9 +83,9 @@ ms.locfileid: "73729451"
   
 21. （可选）若要添加“Else” **** 操作，请完成以下步骤。  
   
-    1.  在“Else” **** 块下，单击“添加” ****。 此时，系统会显示一个面板。  
+    1.  在“Else” **** 块下，单击“添加” ****。 此时将显示一个面板。  
   
-    2.  从“属性”**** 下拉列表中选择一个属性。  
+    2.  从 **** “属性”下拉列表中选择一个属性。  
   
     3.  从“运算符”下拉列表中，选择一个操作。****  
   
@@ -115,9 +115,9 @@ ms.locfileid: "73729451"
   
 -   通过以下过程之一将业务规则应用到数据：  
   
-    -   [根据业务规则验证特定成员 &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+    -   [针对业务规则验证特定成员 (Master Data Services)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
-    -   [针对业务规则验证版本 &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+    -   [针对业务规则验证版本 (Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [配置业务规则以发送通知 &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   

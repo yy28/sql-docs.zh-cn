@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 92ef8c4583db152b2f81a574010a12030680704f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983070"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-SQL)
@@ -67,7 +67,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 |DATABASE|用户定义数据库。 重命名数据库时需要此对象类型。|  
 |INDEX|用户定义索引。 重命名带统计信息的索引时，也会自动重命名统计信息。|  
 |OBJECT|在[sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)中跟踪的类型的项。 例如，OBJECT 可用于重命名包含约束（CHECK、FOREIGN KEY、PRIMARY/UNIQUE KEY）、用户表和规则的对象。|  
-|STATISTICS|**适用**于： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和更高[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]版本。<br /><br /> 由用户显式创建的统计信息或使用索引隐式创建的统计信息。 重命名索引的统计信息时，也会自动重命名索引。|  
+|STATISTICS|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 由用户显式创建的统计信息或使用索引隐式创建的统计信息。 重命名索引的统计信息时，也会自动重命名索引。|  
 |USERDATATYPE|通过执行[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)或[Sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)添加的[CLR 用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。|  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -205,8 +205,8 @@ sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
   
 ## <a name="see-also"></a>另请参阅  
  [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
- [sys. sql_modules &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [数据库引擎存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

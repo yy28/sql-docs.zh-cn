@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056544"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>为数据迁移助手配置设置
@@ -41,7 +41,7 @@ ms.locfileid: "74056544"
 
 数据迁移助手并行评估多个数据库。 在评估期间数据迁移助手提取数据层应用程序（dacpac）以了解数据库架构。如果在同一台服务器上并行评估了多个数据库，则此操作可能会超时。 
 
-从数据迁移助手 v2.0 开始，可以通过设置 parallelDatabases 配置值进行控制。 默认值为8。
+从数据迁移助手 v2.0 开始，可以通过设置 parallelDatabases 配置值进行控制。 默认值为 8。
 
 ```
 <advisorGroup>

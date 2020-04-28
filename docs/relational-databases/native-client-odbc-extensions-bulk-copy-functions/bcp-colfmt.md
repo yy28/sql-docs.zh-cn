@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 857022f04047178f9eaf2db2c59d2d99987afbaa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73783148"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
@@ -67,7 +67,7 @@ RETCODE bcp_colfmt (
   
 -   如果源列为**decimal**或**numeric**，则使用源列的精度和小数位数。  
   
- *cbIndicator*  
+ cbIndicator**  
  列数据中的长度/Null 指示器的长度（字节）。 有效指示器长度值是 0（不使用任何指示器时）、1、2、4 或 8。  
   
  若要指定默认的大容量复制指示器用法，请将此参数设置为 SQL_VARLEN_DATA。  

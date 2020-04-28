@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 60e27e2251cd2f613ca00266d76d4aaaf3b5c442
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401127"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-aps-appliance"></a>用于分析平台系统（AP）设备的硬件安装
 本文介绍如何为 SQL Server PDW 设备移动、解包和安装硬件。 本文仅提供信息，旨在帮助你了解该过程。 在将你的设备转到你之前，应该先对其进行解压缩、安装和验证。 对于数据中心访问、电源和以太网连接等项目，需要客户参与。  
   
-## <a name="BeforeMoving"></a>在从加载停靠移动任何组件之前  
+## <a name="before-you-move-any-components-from-the-loading-dock"></a><a name="BeforeMoving"></a>在从加载停靠移动任何组件之前  
 在移动、解包或机架上移动任何设备组件之前，请执行以下任务。  
   
 |任务|说明|  
@@ -32,7 +32,7 @@ ms.locfileid: "74401127"
 |保护数据中心机架|使用你的数据中心位置所需的其他设备来保护数据中心货架，如可用于地震的地理区域中的地震母线。|  
 |准备好如何传输组件|事先确定你需要安全地处理每个组件，而不会造成损害。|  
   
-## <a name="Moving"></a>将机架从装货 Dock 移到数据中心  
+## <a name="move-the-racks-from-the-loading-dock-into-the-data-center"></a><a name="Moving"></a>将机架从装货 Dock 移到数据中心  
 每个托盘都包含一个设备机架的所有组件，包括节点、电缆、电缆等。  
   
 使用以下核对清单将每个设备机架从装货中心处的托盘移至数据中心的机架位置。 首先移动控制机架，然后移动其他设备数据机架。  
@@ -51,7 +51,7 @@ ms.locfileid: "74401127"
 |保护数据中心机架中的节点|保护数据中心机架中的节点。|  
 |对下一个节点或组件重复这些步骤|重复上述步骤，将下一个节点或其他设备组件移到数据中心。|  
   
-## <a name="AfterMoving"></a>安装其他组件  
+## <a name="install-additional-components"></a><a name="AfterMoving"></a>安装其他组件  
 使用以下清单来安装其他组件。  
   
 |任务|说明||  

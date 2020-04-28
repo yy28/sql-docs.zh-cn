@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d1a6d6be7a51cf03442bb5576556b10c5c099ab0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983311"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
@@ -49,21 +49,21 @@ ms.locfileid: "73983311"
 |large_value_types_out_of_row|**bit**|1 = 在行外存储大值类型。 有关详细信息，请参阅 [sp_tableoption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)。|  
 |is_tracked_by_cdc|**bit**|1 = 为表启用变更数据捕获。 有关详细信息，请参阅[sys.databases&#41;sp_cdc_enable_table &#40;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)。|  
 |lock_escalation|**tinyint**|表的 LOCK_ESCALATION 选项的值如下：<br /><br /> 0 = TABLE<br /><br /> 1 = DISABLE<br /><br /> 2 = AUTO|  
-|lock_escalation_desc|**nvarchar （60）**|表的 lock_escalation 选项的文本说明。 可能的值有：TABLE、AUTO 和 DISABLE。|  
-|is_filetable|**bit**|**适用**于： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和更高[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]版本。<br /><br /> 1 = 表是 FileTable。<br /><br /> 有关 FileTable 的详细信息，请参阅 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)。|  
-|耐用性|**tinyint**|**适用**于： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]和更高[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]版本。<br /><br /> 以下列出的是可能的值：<br /><br /> 0 = SCHEMA_AND_DATA<br /><br /> 1 = SCHEMA_ONLY<br /><br /> 值0是默认值。|  
-|durability_desc|**nvarchar （60）**|**适用**于： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]和更高[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]版本。<br /><br /> 下面是可能的值：<br /><br /> SCHEMA_ONLY<br /><br /> SCHEMA_AND_DATA<br /><br /> SCHEMA_AND_DATA 的值指示表是持久内存中表。 SCHEMA_AND_DATA 是内存优化表的默认值。 SCHEMA_ONLY 的值指示，在重新启动包含内存优化对象的数据库后，表数据将不会持久化。|  
-|is_memory_optimized|**bit**|**适用**于： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]和更高[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]版本。<br /><br /> 下面是可能的值：<br /><br /> 0 = 非内存优化。<br /><br /> 1 = 内存优化。<br /><br /> 值 0 为默认值。<br /><br /> 内存优化表是内存中的用户表，其架构与其他用户表保留在磁盘上。 可从本机编译的存储过程访问内存优化表。|  
-|temporal_type|**tinyint**|**适用**于： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]和更高[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]版本。<br /><br /> 表示表类型的数值：<br /><br /> 0 = NON_TEMPORAL_TABLE<br /><br /> 1 = HISTORY_TABLE<br /><br /> 2 = SYSTEM_VERSIONED_TEMPORAL_TABLE|  
-|temporal_type_desc|**nvarchar （60）**|**适用**于： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]和更高[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]版本。<br /><br /> 表类型的文本说明：<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
-|history_table_id|**int**|**适用**于： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]和更高[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]版本。<br /><br /> 当中 temporal_type （2，4）时，将返回维护历史数据的表 object_id，否则返回 NULL。|  
+|lock_escalation_desc|**nvarchar(60)**|表的 lock_escalation 选项的文本说明。 可能的值有：TABLE、AUTO 和 DISABLE。|  
+|is_filetable|**bit**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 1 = 表是 FileTable。<br /><br /> 有关 FileTable 的详细信息，请参阅 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)。|  
+|耐用性|**tinyint**|**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 以下列出的是可能的值：<br /><br /> 0 = SCHEMA_AND_DATA<br /><br /> 1 = SCHEMA_ONLY<br /><br /> 值0是默认值。|  
+|durability_desc|**nvarchar(60)**|**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 下面是可能的值：<br /><br /> SCHEMA_ONLY<br /><br /> SCHEMA_AND_DATA<br /><br /> SCHEMA_AND_DATA 的值指示表是持久内存中表。 SCHEMA_AND_DATA 是内存优化表的默认值。 SCHEMA_ONLY 的值指示，在重新启动包含内存优化对象的数据库后，表数据将不会持久化。|  
+|is_memory_optimized|**bit**|**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 下面是可能的值：<br /><br /> 0 = 非内存优化。<br /><br /> 1 = 内存优化。<br /><br /> 值 0 为默认值。<br /><br /> 内存优化表是内存中的用户表，其架构与其他用户表保留在磁盘上。 可从本机编译的存储过程访问内存优化表。|  
+|temporal_type|**tinyint**|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 表示表类型的数值：<br /><br /> 0 = NON_TEMPORAL_TABLE<br /><br /> 1 = HISTORY_TABLE<br /><br /> 2 = SYSTEM_VERSIONED_TEMPORAL_TABLE|  
+|temporal_type_desc|**nvarchar(60)**|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 表类型的文本说明：<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
+|history_table_id|**int**|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 当中 temporal_type （2，4）时，将返回维护历史数据的表 object_id，否则返回 NULL。|  
 |is_remote_data_archive_enabled|**bit**|**适用**于： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]和更高版本和[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> 指示该表是否已启用延伸。<br /><br /> 0 = 该表未启用延伸。<br /><br /> 1 = 表启用 Stretch。<br /><br /> 有关详细信息，请参阅 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。|  
 |is_external|**bit**|**适用**于： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]和更高[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]版本、 [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)]和。<br /><br /> 指示表为外部表。<br /><br /> 0 = 该表不是外部表。<br /><br /> 1 = 该表是外部表。| 
-|history_retention_period|**int**|**适用**于： [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>表示时态历史记录保持期持续时间（以 history_retention_period_unit 指定的单位）的数字值。 |  
-|history_retention_period_unit|**int**|**适用**于： [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>表示临时历史记录保持期单位类型的数值。 <br /><br />-1：无限大 <br /><br />3：日 <br /><br />4：周 <br /><br />5：月 <br /><br />6：年 |  
-|history_retention_period_unit_desc|**nvarchar （10）**|**适用**于： [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>临时历史记录保持期单位类型的文本说明。 <br /><br />INFINITE <br /><br />DAY <br /><br />周日 <br /><br />月 <br /><br />年 |  
-|is_node|**bit**|**适用**于： [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)]和[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>1 = 这是一个图形节点表。 <br /><br />0 = 这不是图形节点表。 |  
-|is_edge|**bit**|**适用**于： [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)]和[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>1 = 这是一个图形边缘表。 <br /><br />0 = 这不是图形边缘表。 |  
+|history_retention_period|**int**|**适用于**： [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>表示时态历史记录保持期持续时间（以 history_retention_period_unit 指定的单位）的数字值。 |  
+|history_retention_period_unit|**int**|**适用于**： [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>表示临时历史记录保持期单位类型的数值。 <br /><br />-1：无限大 <br /><br />3：日 <br /><br />4：周 <br /><br />5：月 <br /><br />6：年 |  
+|history_retention_period_unit_desc|**nvarchar （10）**|**适用于**： [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>临时历史记录保持期单位类型的文本说明。 <br /><br />INFINITE <br /><br />DAY <br /><br />WEEK <br /><br />MONTH <br /><br />YEAR |  
+|is_node|**bit**|适用范围：[!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] 和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]  。 <br/><br/>1 = 这是一个图形节点表。 <br /><br />0 = 这不是图形节点表。 |  
+|is_edge|**bit**|适用范围：[!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] 和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]  。 <br/><br/>1 = 这是一个图形边缘表。 <br /><br />0 = 这不是图形边缘表。 |  
 
 ## <a name="permissions"></a>权限  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
@@ -83,7 +83,7 @@ GO
   
 下面的示例演示如何公开相关的临时数据。  
    
-**适用**于： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]和更高[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]版本。
+**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。
   
 ```  
 SELECT T1.object_id, T1.name as TemporalTableName, SCHEMA_NAME(T1.schema_id) AS TemporalTableSchema,  
@@ -97,7 +97,7 @@ ORDER BY T1.temporal_type desc
 
 下面的示例演示如何公开有关临时历史记录保留的信息。  
 
-**适用**于： [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。  
+**适用于**： [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。  
   
 ```  
 SELECT DB.is_temporal_history_retention_enabled, SCHEMA_NAME(T1.schema_id) AS TemporalTableSchema, 
@@ -111,7 +111,7 @@ ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;Transact-sql&#41;的对象目录视图](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [DBCC CHECKDB &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   
  [DBCC CHECKTABLE &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)   
  [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   

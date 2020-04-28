@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 669e65a7d27b208d861a33618d889707134dfefa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400510"
 ---
 # <a name="certificate-provisioning-in-analytics-platform-system"></a>分析平台系统中的证书预配
@@ -21,7 +21,7 @@ ms.locfileid: "74400510"
 
 使用，用于加密连接的证书可通过 SQL Server 客户端、使用 SQL Server PDW 驱动程序的工具、[管理控制台](monitor-the-appliance-by-using-the-admin-console.md)和 Integration Services 负载来帮助保护与控制节点的通信。 
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
 在安装证书之前，请执行以下操作：  
   
 1.  获取安全证书。 如果需要有关如何获取安全证书的详细信息，请联系 Microsoft 支持部门。  

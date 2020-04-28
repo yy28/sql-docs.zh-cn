@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b0bcb5cfe1ec4111aaea7153f35bca084df62b76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401015"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>将 Integration Services 中的数据加载到并行数据仓库
@@ -33,7 +33,7 @@ For general information about developing Integration Services packages, see [Des
 
 -->
   
-## <a name="Basics"></a>传授  
+## <a name="basics"></a><a name="Basics"></a>基础知识  
 Integration Services 是对数据进行高性能提取、转换和加载（ETL）的 SQL Server 组件，通常用于填充和更新数据仓库。  
   
 PDW 目标适配器是 Integration Services 组件，可让你使用 Integration Services .dtsx 包将数据加载到 PDW。 在 SQL ServerPDW 的包工作流中，可以从多个源加载和合并数据，并将数据加载到多个目标。 加载将在包内和同时运行的多个包中并行发生，直到在同一工具上并行运行最多 10 个加载。  
@@ -42,7 +42,7 @@ PDW 目标适配器是 Integration Services 组件，可让你使用 Integration
   
 有关 Integration Services 的完整文档，请参阅[SQL Server Integration Services](../integration-services/sql-server-integration-services.md)。  
   
-## <a name="HowToDeployPackage"></a>用于运行 Integration Services 包的方法  
+## <a name="methods-for-running-an-integration-services-package"></a><a name="HowToDeployPackage"></a>用于运行 Integration Services 包的方法  
 使用以下方法之一运行 Integration Services 包。  
   
 ### <a name="run-from-sql-server-2008-r2-business-intelligence-development-studio-bids"></a>从 SQL Server 2008 R2 Business Intelligence Development Studio （投标）运行  
@@ -63,7 +63,7 @@ PDW 目标适配器是 Integration Services 组件，可让你使用 Integration
   
 例如： `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
-## <a name="DataTypes"></a>数据类型  
+## <a name="data-types"></a><a name="DataTypes"></a>数据类型  
 使用 Integration Services 将数据从数据源加载到 SQL Server PDW 数据库时，会首先将数据从源数据映射到 Integration Services 数据类型。 这允许来自多个数据源的数据映射到一组通用的数据类型。  
   
 然后，将数据从 Integration Services 映射到 SQL Server PDW 数据类型。 对于每个 SQL Server PDW 数据类型，下表列出了可转换为 SQL Server PDW 数据类型的 Integration Services 数据类型。  
@@ -126,10 +126,10 @@ SQL Server PDW 不支持以下 Integration Services 数据类型：
   
 -   如果未使用任何临时数据库，则在目标数据库上创建权限。 这适用于创建临时表。  
   
-## <a name="GenRemarks"></a>一般备注  
+## <a name="general-remarks"></a><a name="GenRemarks"></a>一般备注  
 如果 Integration Services 包具有多个正在运行的 SQL Server PDW 目标，其中一个连接被终止，Integration Services 将停止向所有 SQL Server PDW 目标推送数据。  
   
-## <a name="Limits"></a>限制和限制  
+## <a name="limitations-and-restrictions"></a><a name="Limits"></a>限制和限制  
 对于 Integration Services 包，相同数据源的 SQL Server PDW 目标数受最大活动负载的数目的限制。 该最大值是预先配置的，用户不可配置。 
 
 <!-- MISSING LINKS
@@ -146,12 +146,12 @@ For the maximum number of loads and queued loads per appliance, see [Minimum and
 > 如果源表包含带有 SQL 排序规则的 char 和 varchar 列，则在 SSIS 中使用 OLE DB 数据源与 PDW 目标适配器，可能会导致数据损坏。 如果源表包含带有 SQL 排序规则的 char 或 varchar 列，我们建议使用 ADO.NET 源。 
 
   
-## <a name="Locks"></a>锁定行为  
+## <a name="locking-behavior"></a><a name="Locks"></a>锁定行为  
 使用 Integration Services 加载数据时，SQL ServerPDW 使用行级锁来更新目标表中的数据。 这意味着，在更新每一行时，对于读取和写入操作，将锁定每一行。 在数据加载到临时表中时，将不锁定目标表中的行。  
   
-## <a name="Examples"></a>示例  
+## <a name="examples"></a><a name="Examples"></a>示例  
   
-### <a name="Walkthrough"></a>的. 平面文件的简单加载  
+### <a name="a-simple-load-from-flat-file"></a><a name="Walkthrough"></a>A. 平面文件的简单加载  
 以下演练演示了使用 Integration Services 将平面文件数据加载到 SQL Server PDW 设备的简单数据加载。  此示例假设已在客户端计算机上安装了 Integration Services，并且已安装了 SQL Server PDW 目标，如上所述。  
   
 在此示例中，我们将加载`Orders`到表中，该表具有以下 DDL。 `Orders`该表是`LoadExampleDB`数据库的一部分。  
@@ -216,7 +216,7 @@ id,city,lastUpdateDate,orderDate
   
 4.  选择 "**创建新连接**"。  
   
-5.  为服务器、用户、密码和目标数据库填写信息，其中包含特定于设备的信息。 （示例如下所示）。 然后单击“确定”  。  
+5.  为服务器、用户、密码和目标数据库填写信息，其中包含特定于设备的信息。 （示例如下所示）。  。  
   
     对于 "未实现连接"，**服务器名称**：输入 <设备名称>-SQLCTL01、17001。  
   
@@ -236,7 +236,7 @@ id,city,lastUpdateDate,orderDate
   
 1.  在 "**数据流" 窗格上**，将绿色箭头从 "**平面文件源**" 框拖到 " **SQL Server PDW 目标**" 框。  
   
-2.  双击 " **SQL Server PDW 目标**" 框，以便再次看到 " **SQL Server PDW 目标编辑器**"。 你应在 "未**映射的输入列**" 下的左侧平面文件中看到列名。 应会在右侧的 "未**映射的目标列**" 下看到目标表中的列名称。 拖动或双击 "未**映射的输入列**"**和 "未**映射的**目标列**" 列表中的匹配列名称，以映射列。 单击 **"确定"** 以保存设置。  
+2.  双击 " **SQL Server PDW 目标**" 框，以便再次看到 " **SQL Server PDW 目标编辑器**"。 你应在 "未**映射的输入列**" 下的左侧平面文件中看到列名。 应会在右侧的 "未**映射的目标列**" 下看到目标表中的列名称。 拖动或双击 "未**映射的输入列**"**和 "未**映射的**目标列**" 列表中的匹配列名称，以映射列。 单击“确定” **** 保存设置。  
   
 3.  通过单击 "**文件**" 菜单中的 "**保存**" 来保存包。  
   

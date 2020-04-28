@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: e6e2247cd3648e78df0349ec8de2b63f29e52e94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729344"
 ---
 # <a name="deprecated-master-data-services-features"></a>弃用的 Master Data Services 功能
@@ -41,9 +41,9 @@ ms.locfileid: "73729344"
   
  有关显式层次结构、集合和合并成员的信息，请参阅以下主题。  
   
--   [显式层次结构 &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
+-   [显式层次结构 (Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
--   [集合 &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
+-   [集合 (Master Data Services)](../master-data-services/collections-master-data-services.md)  
   
 -   [成员 &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
@@ -56,6 +56,6 @@ ms.locfileid: "73729344"
  msdn.com 上的博客文章 [Deprecated: Explicit Hierarchies and Collections](https://go.microsoft.com/fwlink/p/?LinkId=615373)（已弃用：显式层次结构和集合）。  
   
 ## <a name="see-also"></a>另请参阅  
- [废止 Master Data Services 功能](../master-data-services/discontinued-master-data-services-features.md)  
+ [弃用的 Master Data Services 功能](../master-data-services/discontinued-master-data-services-features.md)  
   
   

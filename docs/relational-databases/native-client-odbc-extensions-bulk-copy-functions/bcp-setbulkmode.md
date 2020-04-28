@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 46da93307d28b5be6aec3fbcbff31322e96ea634
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73782395"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
@@ -43,10 +43,10 @@ RETCODE bcp_setbulkmode (
  *hdbc*  
  支持大容量复制的 ODBC 连接句柄。  
   
- *知识产权*  
+ *property*  
  类型为 BYTE 的常量。 相关的常量列表，请参阅“备注”部分中的表。  
   
- *pField*  
+ pField**  
  指向字段终止符值的指针。  
   
  *cbField*  
@@ -81,7 +81,7 @@ RETCODE bcp_setbulkmode (
   
  如果尝试使用包含 bcp_setcolfmt、bcp_control 和 bcp_readfmt 的函数调用序列 bcp_setbulkmode，其中一个函数调用将返回序列错误失败。 如果选择更正失败，请调用 bcp_init 以重置所有设置并重新开始。  
   
- 下面是导致函数序列错误的函数调用的一些示例：  
+ 下面提供了会造成函数序列错误的函数调用的一些示例：  
   
 ```  
 bcp_init("table", DB_IN);  

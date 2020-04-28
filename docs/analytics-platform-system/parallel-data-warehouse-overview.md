@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5e609585e464cb52b996f45c7d8c57aaffcd79fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400934"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>并行数据仓库组件-分析平台系统
@@ -40,11 +40,11 @@ To learn more about Analytics Platform System, see:
   
 ![并行数据仓库软件](media/parallel-data-warehouse-software.png "并行数据仓库软件")  
   
-## <a name="sec1"></a>设备软件-查询处理和用户数据存储  
+## <a name="appliance-software---query-processing-and-user-data-storage"></a><a name="sec1"></a>设备软件-查询处理和用户数据存储  
   
 ### <a name="control-node"></a>控制节点  
 MPP 引擎  
-MPP 引擎是大规模并行处理（MPP）系统的大脑。 此选项将执行以下操作：  
+MPP 引擎是大规模并行处理（MPP）系统的大脑。 它执行以下操作：  
   
 -   在计算节点上创建并行查询计划并协调并行查询执行。  
   
@@ -55,7 +55,7 @@ MPP 引擎是大规模并行处理（MPP）系统的大脑。 此选项将执行
 -   跟踪硬件和软件状态。  
   
 ### <a name="data-movement-service-dms"></a>数据移动服务（DMS）  
-数据移动服务（DMS）是 PDW "secret 酱" 的一部分。 此选项将执行以下操作：  
+数据移动服务（DMS）是 PDW "secret 酱" 的一部分。 它执行以下操作：  
   
 -   在 SQL Server PDW 节点之间传输数据。  
   
@@ -66,7 +66,7 @@ MPP 引擎是大规模并行处理（MPP）系统的大脑。 此选项将执行
 ### <a name="admin-console"></a>管理控制台  
 管理控制台是一个 web 应用程序，用于显示设备状态、运行状况和性能信息。  
   
-### <a name="configuration-manager"></a>配置管理器  
+### <a name="configuration-manager"></a>Configuration Manager  
 Configuration Manager （dwconfig）是设备管理员用于配置分析平台系统的工具。  
   
 ### <a name="control-node-databases"></a>控制节点数据库  
@@ -110,7 +110,7 @@ Windows 部署服务（WDS）将 Windows Server 操作系统部署到设备上�
   
 DHCP 服务将创建 IP 地址，以便设备域中的主机无需预配置的 IP 地址即可加入设备网络。  
   
-### <a name="virtual-machine-manager"></a>虚拟机管理器  
+### <a name="virtual-machine-manager"></a>Virtual Machine Manager  
 分析平台系统使用虚拟化实现高可用性。 Virtual Machine Manager 托管 System Center，以将操作系统部署到物理主机上。  
   
 Windows Server Update Services （WSUS）在所有主机和虚拟机中应用或删除 Windows 更新。  
@@ -127,7 +127,7 @@ Windows 存储空间将用户数据管理为一小组计算节点的存储池。
 ### <a name="hyper-v"></a>Hyper-V  
 Microsoft Hyper-V Server 提供简单且可靠的虚拟化解决方案。 分析平台系统使用 virtualizations 来平衡 CPU 资源并为 PDW 节点和设备 fabric 组件提供高可用性。  
   
-## <a name="sec2"></a>非关系数据
+## <a name="non-relational-data"></a><a name="sec2"></a>非关系数据
 PolyBase 技术将 SQL Server PDW 数据与外部 Hadoop 数据集成。 Hadoop 数据可存储在任何这些 Hadoop 数据源中：  
   
 -   Hortonworks Hadoop 分发  

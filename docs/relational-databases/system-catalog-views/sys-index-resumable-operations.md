@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d33b78710605841e4559f9c402a18210e25b2daa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73980305"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>sys. index_resumable_operations （Transact-sql）
@@ -36,16 +36,16 @@ ms.locfileid: "73980305"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|此索引所属的对象的 ID （不可为 null）。|  
 |**index_id**|**int**|索引的 ID （不可为 null）。 **index_id**仅在对象中是唯一的。|
-|**路径名**|**sysname**|索引的名称。 **名称**仅在对象中是唯一的。|  
+|**name**|**sysname**|索引的名称。 **名称**仅在对象中是唯一的。|  
 |**sql_text**|**nvarchar(max)**|DDL T-sql 语句文本|
 |**last_max_dop**|**smallint**|上次使用的 MAX_DOP （默认值 = 0）|
 |**partition_number**|**int**|所属索引或堆中的分区号。 对于未分区的表和索引，或者如果正在重新生成所有分区，则此列的值为 NULL。|
-|**状态**|**tinyint**|可恢复索引的操作状态：<br /><br />0 = 正在运行<br /><br />1 = 暂停|
-|**state_desc**|**nvarchar （60）**|可恢复索引的操作状态的说明（正在运行或已暂停）|  
+|**state**|**tinyint**|可恢复索引的操作状态：<br /><br />0 = 正在运行<br /><br />1 = 暂停|
+|**state_desc**|**nvarchar(60)**|可恢复索引的操作状态的说明（正在运行或已暂停）|  
 |**start_time**|**datetime**|索引操作开始时间（不可为 null）|
 |**last_pause_time**|**datatime**| 索引操作上次暂停时间（可以为 null）。 如果操作正在运行且从未暂停，则为 NULL。|
 |**total_execution_time**|**int**|开始时间的总执行时间（分钟）（不可为 null）|
-|**percent_complete**|**实际上**|索引操作进度完成百分比（不可为 null）。|
+|**percent_complete**|**real**|索引操作进度完成百分比（不可为 null）。|
 |**page_count**|**bigint**|索引生成操作为新索引和映射索引（不可为 null）分配的索引页的总数。
 
 ## <a name="permissions"></a>权限
@@ -63,7 +63,7 @@ SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;
 ## <a name="see-also"></a>另请参阅
 
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
-- [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
+- [创建索引](../../t-sql/statements/create-index-transact-sql.md)
 - [目录视图](catalog-views-transact-sql.md)
 - [对象目录视图](object-catalog-views-transact-sql.md)
 - [sys.indexes](sys-xml-indexes-transact-sql.md)

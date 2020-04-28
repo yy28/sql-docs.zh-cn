@@ -14,10 +14,10 @@ ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6b366c29412a3a698e793d3153784a8d1450bc81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729517"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>创建显式层次结构 (Master Data Services)
@@ -28,12 +28,12 @@ ms.locfileid: "73729517"
   
  创建显式层次结构后，可以在 **“资源管理器”** 功能区域中为该层次结构添加成员。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   必须为显式层次结构和集合启用了实体。  
   
@@ -45,13 +45,13 @@ ms.locfileid: "73729517"
   
 3.  在“管理实体” **** 页上，从网格中选择要为其创建显式层次结构的实体所在的行。  
   
-4.  单击“显式层次结构” ****。  
+4.  单击 "**显式层次结构**"。  
   
 5.  在“管理显式层次结构” **** 页上，单击“添加” ****。  
   
 6.  在“名称” **** 框中，键入层次结构的名称。  
   
-7.  也可以取消选中“强制的层次结构”**** 复选框，以便将层次结构创建为非强制的层次结构。 有关层次结构类型的详细信息，请参阅[显式层次结构 (Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)。  
+7.  也可以取消选中“强制的层次结构”**** 复选框，以便将层次结构创建为非强制的层次结构。 有关层次结构类型的详细信息，请参阅 [显式层次结构 (Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)。  
   
 8.  单击“保存”  。  
   
@@ -70,14 +70,14 @@ ms.locfileid: "73729517"
   
 ## <a name="next-steps"></a>后续步骤  
   
--   [Master Data Services 创建合并成员 &#40;&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)  
+-   [创建合并成员 (Master Data Services)](../master-data-services/create-a-consolidated-member-master-data-services.md)  
   
   
   
 ## <a name="see-also"></a>另请参阅  
  [显式层次结构 &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [具有显式大写字母 &#40;Master Data Services 的派生层次结构&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
- [更改显式层次结构名称 &#40;Master Data Services&#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)  
+ [更改显式层次结构名称 (Master Data Services)](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)  
   
   
 

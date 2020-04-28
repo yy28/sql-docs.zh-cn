@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 639eb4e9e5c531e154b9eb7f91165af365bc519f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400364"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>将遥测反馈发送给 Microsoft for Analytics 平台系统
@@ -22,10 +22,10 @@ ms.locfileid: "74400364"
 > [!NOTE]  
 > 在此版本中，Microsoft 不主动监视遥测数据。 出于分析目的，将收集数据。  
   
-## <a name="privacy"></a>隐私  
+## <a name="privacy"></a><a name="privacy"></a>隐私  
 为了提供最大的隐私保护，不启用遥测就提供了 AP。 在启用此功能之前，请先查看[Microsoft Analytics Platform System 隐私声明](https://go.microsoft.com/fwlink/?LinkId=400902)。 若要选择加入，请运行下面所述的 PowerShell 脚本。  
   
-## <a name="enable"></a>启用遥测  
+## <a name="enable-telemetry"></a><a name="enable"></a>启用遥测  
 **DNS 转发：** 向 Microsoft 发送遥测数据需要分析平台系统通过 DNS 转发器连接到 internet。 若要启用此功能，必须在所有主机和工作负荷 Vm 上启用 DNS 转发。 使用`SetupDnsForwarder`选项`Enable-RemoteMonitoring`调用命令以正确配置 DNS 转发并启用遥测。 如果已`Enable-RemoteMonitoring`配置 DNS 转发`SetupDnsForwarder`并且你只希望启用检测信号监视，请在不使用选项的情况下调用命令。  
   
 > [!IMPORTANT]  
@@ -42,7 +42,7 @@ ms.locfileid: "74400364"
     > [!NOTE]  
     > 若要导入，必须在命令中使用两个句点。  
   
-    **实例**  
+    **示例：**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -75,7 +75,7 @@ ms.locfileid: "74400364"
   
 多次运行此`Enable-RemoteMonitoring`命令不会有任何损害。 如果已设置 DNS 转发器，将收到一条警告消息，指示这种情况。  
   
-## <a name="disable"></a>禁用遥测  
+## <a name="disable-telemetry"></a><a name="disable"></a>禁用遥测  
 禁用遥测将停止所有操作，这些操作将有关设备状态的信息传递到云中的 "AP 监视" 服务。  
   
 > [!IMPORTANT]  
@@ -92,7 +92,7 @@ ms.locfileid: "74400364"
     > [!NOTE]  
     > 若要导入，必须在命令中使用两个句点。  
   
-    **实例**  
+    **示例：**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -100,7 +100,7 @@ ms.locfileid: "74400364"
   
 4.  调用不`Disable-RemoteMonitoring`带参数的命令。 此命令将停止发送反馈。 （这不会影响本地监视。）但是，该命令不会禁用 DNS 转发器和/或禁用任何 internet 连接。 成功禁用反馈后必须手动完成此操作。  
   
-    **实例**  
+    **示例：**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Disable-RemoteMonitoring  
@@ -111,7 +111,7 @@ ms.locfileid: "74400364"
 多次运行此`Disable-RemoteMonitoring`命令不会有任何损害。  
   
 ## <a name="next-steps"></a>后续步骤
-有关详细信息，请参阅：
+有关详细信息，请参见:
 - [使用管理控制台 &#40;分析平台系统来监视设备&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
 - [使用系统视图 &#40;分析平台系统来监视设备&#41;](monitor-the-appliance-by-using-system-views.md)  
 - [使用 System Center Operations Manager &#40;Analytics 平台系统来监视设备&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  

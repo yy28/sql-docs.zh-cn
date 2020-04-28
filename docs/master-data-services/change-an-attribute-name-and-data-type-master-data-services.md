@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: c5885c2aebb718f212ac22bee8773ceab2df2f6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729676"
 ---
 # <a name="change-an-attribute-name-and-data-type-master-data-services"></a>更改属性名称和数据类型 (Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "73729676"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，可以更改属性的名称。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-change-an-attribute-name-and-type"></a>更改属性名称和类型  
   
@@ -49,7 +49,7 @@ ms.locfileid: "73729676"
   
     -   如果属性是针对合并成员，则从“成员类型” **** 列表框中选择“合并” **** 。  
   
-    -   如果是集合的属性，请从“成员类型” **** 列表框中选择“集合” **** 。  
+    -   如果属性是针对集合，则从“成员类型” **** 列表框中选择“集合” **** 。  
   
 6.  选择要编辑的属性所在的行，然后单击“编辑” ****。  
   
@@ -62,6 +62,6 @@ ms.locfileid: "73729676"
 ## <a name="see-also"></a>另请参阅  
  [Master Data Services 创建文本属性 &#40;&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
  [删除属性 &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)   
- [属性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
+ [属性 (Master Data Services)](../master-data-services/attributes-master-data-services.md)  
   
   

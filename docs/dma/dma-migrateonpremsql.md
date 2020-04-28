@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: fc78354e3b422342e376bd7ebe75233dcd3ffaee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056533"
 ---
 # <a name="upgrade-sql-server-using-the-data-migration-assistant"></a>使用数据迁移助手 SQL Server 升级
@@ -41,7 +41,7 @@ ms.locfileid: "74056533"
 
 1. 对于 "源"，请在 "**源服务器详细信息**" 部分的 "**服务器名称**" 字段中输入 SQL Server 实例名称。 
 
-2. 选择源 SQL Server 实例支持的**身份验证类型**。
+2. 选择源 SQL Server 实例支持的“身份验证类型”****。
 
 3. 对于目标，请在 "**目标服务器详细信息**" 部分的 "**服务器名称**" 字段中输入 SQL Server 实例名称。 
 
@@ -91,7 +91,7 @@ ms.locfileid: "74056533"
 
    默认情况下，将为迁移选择符合迁移条件的所有 SQL Server 和 Windows 登录名。
 
-2. 选择 "**开始迁移**"。
+2. 选择“开始迁移”。****
 
    ![选择登录名并开始迁移](../dma/media/SelectLogins.png)
 

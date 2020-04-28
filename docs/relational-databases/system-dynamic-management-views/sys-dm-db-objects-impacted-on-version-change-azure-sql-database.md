@@ -21,24 +21,24 @@ ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 0255f7260044ee5c09d020f3ba6310d24bc8cb74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73843862"
 ---
-# <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
+# <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   此数据库范围内的系统视图旨在提供一个早期警告系统，以确定 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的主要版本升级所影响的对象。 可以在升级之前或之后使用此视图以获得受影响对象的完整枚举。 您需要在每个数据库中查询此视图，以获取有关整个服务器的完整帐户信息。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|类|**int**NOT NULL|将受影响的对象的类：<br /><br /> **1** = 约束<br /><br /> **7** = 索引和堆|  
+|class|**int**NOT NULL|将受影响的对象的类：<br /><br /> **1** = 约束<br /><br /> **7** = 索引和堆|  
 |class_desc|**nvarchar （60）** NOT NULL|类的说明：<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
 |major_id|**int**NOT NULL|约束的对象 ID，或包含索引或堆的表的对象 ID。|  
-|minor_id|**int**无效|对于约束为**NULL**<br /><br /> 索引和堆的 Index_id|  
-|dependency|**nvarchar （60）** NOT NULL|导致约束或索引受影响的依赖项的说明。 同一值也用于在升级期间生成的警告。<br /><br /> 示例：<br /><br /> **space** （适用于内部）<br /><br /> **geometry** （用于系统 UDT）<br /><br /> **geography：:P arse** （用于系统 UDT 方法）|  
+|minor_id|**int**无效|对于约束为 **NULL**<br /><br /> 索引和堆的 Index_id|  
+|dependency|**nvarchar （60）** NOT NULL|导致约束或索引受影响的依赖项的说明。 同一值也用于在升级期间生成的警告。<br /><br /> 示例：<br /><br /> **space**（用于内部）<br /><br /> **geometry**（用于系统 UDT）<br /><br /> **geography::Parse**（用于系统 UDT 方法）|  
   
 ## <a name="permissions"></a>权限  
  需要拥有 VIEW DATABASE STATE 权限。  
@@ -68,6 +68,6 @@ class  class_desc        major_id    minor_id    dependency
 |订单|受影响的对象|纠正措施|  
 |-----------|---------------------|-----------------------|  
 |1|**索引**|重新生成由 sys.databases 标识的任何索引**dm_db_objects_impacted_on_version_change**例如：`ALTER INDEX ALL ON <table> REBUILD`<br />或<br />`ALTER TABLE <table> REBUILD`|  
-|2|**Object**|在重新计算基础表中的 geometry 和 geography 数据后，必须重新验证 **sys.dm_db_objects_impacted_on_version_change** 标识的所有约束。 对于约束，使用 ALTER TABLE 进行重新验证。 <br />例如： <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />或<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
+|2|**对象**|在重新计算基础表中的 geometry 和 geography 数据后，必须重新验证 **sys.dm_db_objects_impacted_on_version_change** 标识的所有约束。 对于约束，使用 ALTER TABLE 进行重新验证。 <br />例如： <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />或<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3772e2b4cabac84c00854eba85f7a0c2a33d48bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400143"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>并行数据仓库中的 tempdb 数据库
@@ -21,7 +21,7 @@ ms.locfileid: "74400143"
   
 有关系统数据库的详细信息，请参阅[系统数据库](system-databases.md)。  
   
-## <a name="Basics"></a>关键术语和概念  
+## <a name="key-terms-and-concepts"></a><a name="Basics"></a>关键术语和概念  
 *本地临时表*  
 *本地临时表*在表名称前使用 # 前缀，并且是由本地用户会话创建的临时表。 每个会话仅可访问本地临时表中的数据以供其自己的会话使用。  
   
@@ -51,7 +51,7 @@ tempdb
 ## <a name="general-remarks"></a>一般备注  
 除非明确声明，否则 SQL Server PDW 对临时表和永久表执行相同的操作。 例如，本地临时表中的数据与永久表一样，都是在计算节点之间进行分布或复制。  
   
-## <a name="LimitationsRestrictions"></a>限制和限制  
+## <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a>限制和局限  
 SQL Server PDW**tempdb**数据库的限制和限制。 *不能：*  
   
 -   创建一个以 # # 开头的全局临时表。  
@@ -82,7 +82,7 @@ SQL Server PDW**tempdb**数据库的限制和限制。 *不能：*
 ## <a name="permissions"></a>权限  
 任何用户都可以在 tempdb 中创建临时对象。 用户只能访问自己的对象，除非他们获得更多的权限。 可以撤消对 tempdb 的连接权限以阻止用户使用 tempdb，但是不建议这样做，因为一些例行操作需要使用 tempdb。  
   
-## <a name="RelatedTasks"></a>相关任务  
+## <a name="related-tasks"></a><a name="RelatedTasks"></a>Related Tasks  
   
 |任务|说明|  
 |---------|---------------|  

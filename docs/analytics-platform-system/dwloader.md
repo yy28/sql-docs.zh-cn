@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401169"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>并行数据仓库的 dwloader 命令行加载器
@@ -222,9 +222,9 @@ For more information about this install option, see [Install dwloader Command-Li
 **-t** *field_delimiter*  
 行中每个字段（列）的分隔符。 字段分隔符是其中一个或多个 ASCII 转义符或 ASCII 十六进制值。  
   
-|名称|转义符|十六进制字符|  
+|名称|转义字符|十六进制字符|  
 |--------|--------------------|-----------------|  
-|Tab|\t|0x09|  
+|选项卡|\t|0x09|  
 |回车符（CR）|\r|0x0d|  
 |换行符（LF）|\n|0x0a|  
 |CRLF|！|0x0d0x0a|  
@@ -398,7 +398,7 @@ append
 fastappend  
 加载程序直接将行插入到目标表中的现有行的末尾，而不是使用临时表。 fastappend 需要多事务（-m）选项。 使用 fastappend 时，不能指定临时数据库。 没有 fastappend 的回滚，这意味着从失败或中止的负载中进行的恢复必须由您自己的加载进程处理。  
   
-upsert *****merge_column* [,.。。*n* ]    
+upsert **-K***merge_column* [,.。。*n* ]    
 加载器使用 SQL Server Merge 语句来更新现有行和插入新行。  
   
 -K 选项指定合并时所基于的一个或多个列。 这些列构成一个合并关键字，它应表示唯一行。 如果目标表中存在合并关键字，则更新该行。 如果目标表中不存在合并关键字，则追加行。  
@@ -419,7 +419,7 @@ upsert *****merge_column* [,.。。*n* ]
   
 从 SQL Server 2012 PDW 开始，默认情况下，控件节点会动态计算每个负载的批大小。 此自动计算基于几个参数，如内存大小、目标表类型、目标表架构、加载类型、文件大小以及用户的资源类。  
   
-例如，如果加载模式为 FASTAPPEND，并且该表具有聚集列存储索引，则默认情况下，SQL Server PDW 将尝试使用批大小1048576，以便行组将变为闭合并直接加载到列存储中，而无需经过增量存储区。 如果内存不允许批大小1048576，dwloader 将选择较小的 batchsize。  
+例如，如果加载模式为 FASTAPPEND，并且该表具有聚集列存储索引，则默认情况下，SQL Server PDW 将尝试使用批大小1048576，以便行组将变为关闭状态并直接加载到列存储中，而无需通过增量存储区。 如果内存不允许批大小1048576，dwloader 将选择较小的 batchsize。  
   
 如果负载类型为 FASTAPPEND，则*batchsize*适用于将数据加载到表中，否则*batchsize*适用于将数据加载到临时表中。  
   
@@ -552,7 +552,7 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
   
 追加模式分两个阶段加载数据。 阶段一阶段将数据从源文件同时加载到临时表中（可能会发生碎片）。 阶段2：将数据从临时表加载到最终表。 第二个阶段执行**INSERT INTO .。。选择 WITH （TABLOCK）** 操作。 下表显示了对最终表的锁定行为以及使用追加模式时的日志记录行为：  
   
-|表类型|多事务<br />模式（-m）|表为空|支持并发|日志记录|  
+|表类型|多事务<br />模式（-m）|表为空|支持并发|Logging|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
 |堆|是|是|是|轻微|  
 |堆|是|否|是|轻微|  

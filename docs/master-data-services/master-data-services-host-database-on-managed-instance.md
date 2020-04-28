@@ -14,10 +14,10 @@ ms.author: lle
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: b4bb1a89e997486e88b6d4ca48a9a550d1c552b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729017"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>在托管实例上托管 MDS 数据库
@@ -78,7 +78,7 @@ ms.locfileid: "73729017"
      - WCF Services
      - HTTP 激活（必需）
      - TCP 端口共享
-     - Windows 进程激活服务
+     - Windows Process Activation Service
      - 进程模型
      - .NET 环境
      - 配置 API
@@ -94,7 +94,7 @@ ms.locfileid: "73729017"
 
 1. 打开`Setup.exe`，然后按照安装向导中的步骤进行操作。
 
-2. 在“功能选择”[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]**页的“共享功能”****下，选择 **。
+2. 在“功能选择”**** 页的“共享功能”**** 下，选择 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]。
 此操作安装：
    - [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]
    - 程序集
@@ -170,7 +170,7 @@ ms.locfileid: "73729017"
 
    ![mds-SQLServer2019-WebConfigSelectDB](../master-data-services/media/mds-sqlserver2019-config-mi-webconfigselectdb.png "mds-SQLServer2019-MI_WebConfigSelectDB")
 
-1. 选择“应用”。**** 你将看到 "**配置完成**" 消息。 在消息框中选择 **"确定"** 以启动 web 应用程序。 网站地址为`http://server name/web application/`。
+1. 选择“应用”。  你将看到 "**配置完成**" 消息。 在消息框中选择 **"确定"** 以启动 web 应用程序。 网站地址为`http://server name/web application/`。
 
 ## <a name="configure-authentication"></a>配置身份验证
 
@@ -198,9 +198,9 @@ MDS 还支持 Active Directory 密码身份验证和 SQL Server 身份验证，�
    <add name="MDS1" connectionString="Data Source=*****.*****.database.windows.net;Initial Catalog=MasterDataServices;Integrated Security=False;Connect Timeout=60;User ID=UserName;Password=MyPassword!;" />
    ```
 
-## <a name="upgrade-includessmdsshort_mdincludesssmdsshort-mdmd-and-sql-database-version"></a>升级[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]和 SQL 数据库版本
+## <a name="upgrade-ssmdsshort_md-and-sql-database-version"></a>升级[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]和 SQL 数据库版本
 
-### <a name="upgrade-includessmdsshort_mdincludesssmdsshort-mdmd"></a>升级[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
+### <a name="upgrade-ssmdsshort_md"></a>升级[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
 
 安装**SQL Server 2019 累积更新**。 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]将自动更新。
 
@@ -233,5 +233,5 @@ MDS 还支持 Active Directory 密码身份验证和 SQL Server 身份验证，�
 
 - [Master Data Services 数据库](../master-data-services/master-data-services-database.md)
 - [主数据管理器 Web 应用程序](../master-data-services/master-data-manager-web-application.md)
-- ["数据库配置" 页 &#40;Master Data Services 配置管理器&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)
-- [MDS&#41;Master Data Services &#40;的新增功能](../master-data-services/what-s-new-in-master-data-services-mds.md)
+- [“数据库配置”页（Master Data Services 配置管理器）](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)
+- [Master Data Services (MDS) 中的新增功能](../master-data-services/what-s-new-in-master-data-services-mds.md)

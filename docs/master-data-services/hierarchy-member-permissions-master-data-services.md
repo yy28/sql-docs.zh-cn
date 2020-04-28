@@ -14,10 +14,10 @@ ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 41fe545d2a70ea1cbe3ccd05bbbd06174552d3b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729235"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>层次结构成员权限 (Master Data Services)
@@ -41,11 +41,11 @@ ms.locfileid: "73729235"
 |----------------|-----------------|  
 |**读取**|显示成员。<br /><br /> <br /><br /> 注意：如果仅将“读取”权限分配给“根”，则“根”下的成员为只读的；但是，在显式层次结构和集合中，用户可以将成员移到“根”并可以将新成员添加到“根”。********************|  
 |**创建**|层次结构成员权限中不提供创建权限。|  
-|**时更新**|显示成员，用户可以更改它们。 用户还可以在成员所属的任何显式层次结构或集合中移动成员。|  
+|**Update**|显示成员，用户可以更改它们。 用户还可以在成员所属的任何显式层次结构或集合中移动成员。|  
 |**删除**|显示成员，用户可以删除它们。|  
-|**拒绝**|不显示成员。|  
+|**注销**|不显示成员。|  
   
- 在 **“层次结构成员”** 选项卡上，分配的权限不立即生效。 应用该权限的频率取决于 **数据库中“系统设置”表的** “成员安全处理间隔设置” [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 。 可以按照[立即应用成员权限 & #40;Master Data Services & #41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)中的以下步骤立即应用成员权限。  
+ 在 **“层次结构成员”** 选项卡上，分配的权限不立即生效。 应用该权限的频率取决于 **数据库中“系统设置”表的** “成员安全处理间隔设置” [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 。 可以按照 [立即应用成员权限 (Master Data Services)](../master-data-services/immediately-apply-member-permissions-master-data-services.md)中的以下步骤立即应用成员权限。  
   
 > [!NOTE]  
 >  不能将层次结构成员权限分配给递归层次结构、具有显式顶端的派生层次结构和具有隐藏级别的层次结构。  
@@ -70,6 +70,6 @@ ms.locfileid: "73729235"
  [如何 Master Data Services &#40;确定权限&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
  [成员 &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
  [层次结构 &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md)   
- [立即 &#40;Master Data Services 应用成员权限&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)  
+ [立即应用成员权限 (Master Data Services)](../master-data-services/immediately-apply-member-permissions-master-data-services.md)  
   
   

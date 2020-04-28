@@ -15,20 +15,20 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: ec8ededac012ccb2b3d4b62fc40d84132a6fb882
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056651"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>使用 DMA 评估企业和合并评估报告
 
 以下分步说明可帮助你使用数据迁移助手来执行用于升级本地 SQL Server 或 SQL Server 在 Azure Vm 上运行或迁移到 Azure SQL 数据库的已成功缩放评估。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 - 指定网络上的工具计算机，DMA 将从该计算机启动。 确保此计算机已连接到 SQL Server 目标。
-- 下载并安装：
+- 下载和安装：
   - [数据迁移助手](https://www.microsoft.com/download/details.aspx?id=53595)3.6 或更高版本。
   - [PowerShell](https://aka.ms/wmf5download) 5.0 或更高版本。
   - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) 4.5 或更高版本。
@@ -64,7 +64,7 @@ ms.locfileid: "74056651"
 
     PowerShell 现在应在新的 PowerShell 会话启动时自动加载这些模块。
 
-## <a name="create-inventory"></a>创建 SQL Server 清单
+## <a name="create-an-inventory-of-sql-servers"></a><a name="create-inventory"></a>创建 SQL Server 清单
 
 在运行 PowerShell 脚本以评估你的 SQL Server 之前，你需要生成要评估的 SQL 服务器的清单。
 
@@ -263,7 +263,7 @@ Power BI 报表中显示的详细信息如以下部分所示。
 
 - InstanceDatabase
 - ChangeCategory
-- 标题
+- Title
 - ObjectType
 - ImpactedObjectName
 

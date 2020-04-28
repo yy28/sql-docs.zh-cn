@@ -14,10 +14,10 @@ ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d6af3aac4ac8e2a1a4026162eb6ab5f6038b5eed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729403"
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>删除业务规则 (Master Data Services)
@@ -27,14 +27,14 @@ ms.locfileid: "73729403"
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当不再需要某个业务规则时，可以删除它。  
   
 > [!NOTE]  
->  您可以通过排除业务规则而不是删除它来防止针对业务规则验证数据。 有关详细信息，请参阅[排除业务规则 (Master Data Services)](../master-data-services/exclude-a-business-rule-master-data-services.md)。  
+>  您可以通过排除业务规则而不是删除它来防止针对业务规则验证数据。 有关详细信息，请参阅 [排除业务规则 (Master Data Services)](../master-data-services/exclude-a-business-rule-master-data-services.md)。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-delete-a-business-rule"></a>删除业务规则  
   
@@ -42,9 +42,9 @@ ms.locfileid: "73729403"
   
 2.  从菜单栏中，指向 **“管理”** ，然后单击 **“业务规则”**。  
   
-3.  在“业务规则” **** 页上，从“模型” **** 下拉列表中选择一个模型。  
+3.  在 "**业务规则**" 页上，从 "**模型**" 下拉列表中选择一个模型。  
   
-4.  从“实体”**** 下拉列表中选择一个实体。  
+4.  从 **** “实体”下拉列表中选择一个实体。  
   
 5.  从“成员类型” **** 下拉列表中，选择要应用业务规则的成员类型。  
   
@@ -61,6 +61,6 @@ ms.locfileid: "73729403"
 ## <a name="see-also"></a>另请参阅  
  [排除业务规则 &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)   
  [创建和发布业务规则 &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
- [业务规则 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+ [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)  
   
   

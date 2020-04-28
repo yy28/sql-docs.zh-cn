@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f3ecf5cf783b707b75c90dfa70d502e3c81d28c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401000"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>并行数据仓库中的锁定行为
 了解当多个用户同时访问数据时，并行数据仓库如何使用锁定来确保事务的完整性和保持数据库的一致性。  
   
-## <a name="Basics"></a>锁定基础知识  
+## <a name="locking-basics"></a><a name="Basics"></a>锁定基础知识  
 **交货**  
   
 SQL Server PDW 支持四种锁定模式：  
@@ -27,7 +27,7 @@ SQL Server PDW 支持四种锁定模式：
 排他  
 独占锁定禁止对锁定的对象进行写入或读取，直到持有排他锁的事务完成。 在排他锁生效时，不允许任何模式的其他锁。 例如，DROP TABLE 和 CREATE DATABASE 使用排他锁。  
   
-共享  
+Shared  
 共享锁禁止对受影响的对象启动排他锁，但允许所有其他锁模式。 例如，SELECT 语句会启动共享锁，因而允许多个查询同时访问所选数据，但在 SELECT 语句完成之前，将阻止对读取记录进行更新。  
   
 ExclusiveUpdate  
@@ -38,9 +38,9 @@ SharedUpdate 锁禁止 "独占" 和 "ExclusiveUpdate" 锁模式，并允许对�
   
 **资源类**  
   
-锁包含在以下对象类中：数据库、架构、对象（表、视图或过程）、应用程序（内部使用）、EXTERNALDATASOURCE、EXTERNALFILEFORMAT 和 SCHEMARESOLUTION （创建、更改或删除架构对象或数据库用户）。 这些对象类可以出现在[sys. dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)的 object_type 列中。  
+锁包含在以下对象类中：数据库、架构、对象（表、视图或过程）、应用程序（在内部使用）、EXTERNALDATASOURCE、EXTERNALFILEFORMAT 和 SCHEMARESOLUTION （创建、更改或删除架构对象或数据库用户时所执行的数据库级别锁）。 这些对象类可以出现在[sys. dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)的 object_type 列中。  
   
-## <a name="Remarks"></a>一般备注  
+## <a name="general-remarks"></a><a name="Remarks"></a>一般备注  
 锁定可以应用于数据库、表或视图。  
   
 SQL Server PDW 不实现任何可配置的隔离级别。 它支持 ANSI 标准定义的 READ_UNCOMMITTED 隔离级别。 不过，由于读取操作是在 READ_UNCOMMITTED 下运行，因此非常少的阻塞操作实际上会发生，或者系统中会导致争用。  

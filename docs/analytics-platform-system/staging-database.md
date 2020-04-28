@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: dcd7f95833695cc5f9f791d83a6221c35e88f58e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400283"
 ---
 # <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>在并行数据仓库（PDW）中使用临时数据库
 SQL Server 并行数据仓库（PDW）在加载过程中使用临时数据库临时存储数据。 默认情况下，SQL Server PDW 使用目标数据库作为临时数据库，这可能会导致表碎片。 若要减少表碎片，可以创建用户定义的临时数据库。 或者，如果不考虑从负载故障中回滚，则可以使用 fastappend 加载模式来提高性能，方法是跳过临时表并直接加载到目标表中。  
   
-## <a name="StagingDatabase"></a>临时数据库基础知识  
+## <a name="staging-database-basics"></a><a name="StagingDatabase"></a>临时数据库基础知识  
 *临时数据库*是用户创建的 PDW 数据库，用于在将数据加载到设备时暂时存储数据。 如果为负载指定了临时数据库，则设备首先将数据复制到临时数据库，然后将临时数据库中的临时表中的数据复制到目标数据库中的永久表中。  
   
 如果没有为负载指定暂存数据库，SQL ServerPDW 将在目标数据库中创建临时表，并使用这些表存储加载的数据，然后将加载的数据插入到永久目标表中。  
@@ -38,7 +38,7 @@ SQL Server 并行数据仓库（PDW）在加载过程中使用临时数据库临
   
 -   对于加载到行存储聚集索引中的临时表，临时表是一个行存储聚集索引。  
   
-## <a name="Permissions"></a>权限  
+## <a name="permissions"></a><a name="Permissions"></a>权限  
 需要对临时数据库具有 CREATE 权限（用于创建临时表）。 
 
 <!-- MISSING LINKS
@@ -47,7 +47,7 @@ For more information, see [Grant Permissions to load data](grant-permissions-to-
 
 -->
   
-## <a name="CreatingStagingDatabase"></a>创建临时数据库的最佳做法  
+## <a name="best-practices-for-creating-a-staging-database"></a><a name="CreatingStagingDatabase"></a>创建临时数据库的最佳做法  
   
 1.  每个设备只能有一个临时数据库。 所有目标数据库的所有加载作业都可以共享临时数据库。  
   
@@ -61,7 +61,7 @@ For more information, see [Grant Permissions to load data](grant-permissions-to-
   
     -   日志大小通常类似于复制的表大小。  
   
-## <a name="Examples"></a>示例  
+## <a name="examples"></a><a name="Examples"></a>示例  
   
 ### <a name="a-create-a-staging-database"></a>A. 创建临时数据库 
 以下示例创建一个临时数据库 Stagedb，用于设备上的所有负载。 假设你估计每5个复制表的大小为 5 GB，每个表都将同时加载。 此并发会导致为复制的大小分配至少 25 GB。 假设你预计有六个大小为100、200、400、500、500和 550 GB 的分布式表将同时加载。 这种并发会导致为分布式表大小分配至少 2250 GB。  

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 216504cc6145a60e8b7d4996d29f46cb9d08458d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882149"
 ---
 # <a name="optimize-parameterized-row-filters"></a>优化参数化行筛选器
@@ -37,15 +37,15 @@ ms.locfileid: "73882149"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   当使用参数化筛选器时，可通过在创建发布时指定 **use partition groups** 或 **keep partition changes** 选项来控制合并复制处理筛选器的方式。 通过将其他元数据存储在发布数据库中，上述选项可提高具有已筛选项目的发布的同步性能。 通过在创建项目时设置 **partition options** ，您可以控制在订阅服务器之间共享数据的方式。 有关这些要求的详细信息，请参阅 [参数化行筛选器](../merge/parameterized-filters-parameterized-row-filters.md)。  
   
      使用 [!INCLUDE[ssEW](../../../includes/ssew-md.md)]SQL Server Compact 订阅服务器时，keep_partition_changes 必须设置为 true 以确保正确传播删除操作。 设置为 false 时，订阅服务器可能有比预期更多的行。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  以下设置可用于优化参数化行筛选器：  
   
  **Partition Options**  
@@ -111,11 +111,11 @@ ms.locfileid: "73882149"
   
 #### <a name="to-set-optimize-synchronization"></a>设置优化同步  
   
-1.  在“发布属性 - **发布>”对话框的“订阅选项”页上，为“优化同步”选项选择值“True”。****\<**********  
+1.  在“发布属性 - \<发布>”对话框的“订阅选项”页上，为“优化同步”选项选择值“True”。****************  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  有关** \@keep_partition_changes**和** \@use_partition_groups**的筛选选项的定义，请参阅[sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)。  
   
 #### <a name="to-specify-merge-filter-optimizations-when-creating-a-new-publication"></a>创建新发布时指定合并筛选器的优化  
@@ -155,7 +155,7 @@ ms.locfileid: "73882149"
     > [!NOTE]  
     >  启用**keep_partition_changes**时，必须首先禁用**use_partition_groups**并将** \@force_reinit_subscription**的值指定为**1** 。  
   
-4.  （可选）在发布服务器上，对发布数据库执行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 ** \@** **** **为\@"属性**" 指定 partition_options 的值，并为 "值" 指定相应的值。 有关以上筛选选项的定义，请参阅 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 。  
+4.  （可选）在发布服务器上，对发布数据库执行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 ** \@** **partition_options** **为\@"属性**" 指定 partition_options 的值，并为 "值" 指定相应的值。 有关以上筛选选项的定义，请参阅 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 。  
   
 5.  （可选）启动快照代理以重新生成快照（如果需要）。 有关哪些更改需要生成新快照的信息，请参阅[更改发布和项目属性](change-publication-and-article-properties.md)。  
   

@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65512a212290db4cc9a470402e2ae75175c23cb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882320"
 ---
 # <a name="define-an-article"></a>定义项目
@@ -36,7 +36,7 @@ ms.locfileid: "73882320"
   
      [安全性](#Security)  
   
--   **若要定义项目，请使用：**  
+-   **定义项目，使用：**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -44,25 +44,25 @@ ms.locfileid: "73882320"
   
      [复制管理对象 (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   项目名称不能包含以下任何字符：%、*、[、]、|、:、"、? 、'、\、/、 \< 、>。 如果数据库中的对象包括任意上述字符，并且您希望复制它们，那么必须指定一个不同于相应对象名称的项目名称。  
   
-##  <a name="Security"></a> Security  
+##  <a name="security"></a><a name="Security"></a> Security  
  如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) Cryptographic Services [!INCLUDE[msCoName](../../../includes/msconame-md.md)] （加密服务）。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  可以使用新建发布向导创建发布和定义项目。 创建发布之后，可在“发布属性 - **发布>”\<** 对话框中查看和修改发布属性。 有关从 Oracle 数据库创建发布的信息，请参阅[从 Oracle 数据库创建发布](create-a-publication-from-an-oracle-database.md)。  
   
 #### <a name="to-create-a-publication-and-define-articles"></a>创建发布和定义项目  
   
-1.  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中连接到发布服务器，然后展开服务器节点。  
+1.  在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中连接到发布服务器，然后展开服务器节点。  
   
 2.  展开 **“复制”** 文件夹，再右键单击 **“本地发布”** 文件夹。  
   
-3.  单击 **“新建发布”**。  
+3.  单击 **“新建发布”** 。  
   
 4.  按照新建发布向导中的页完成以下任务：  
   
@@ -86,14 +86,11 @@ ms.locfileid: "73882320"
   
     -   指定运行下列复制代理和进行连接的凭证：  
   
-         
-  \- 用于所有发布的快照代理。  
+         \- 用于所有发布的快照代理。  
   
-         
-  \- 用于所有事务发布的日志读取器代理。  
+         \- 用于所有事务发布的日志读取器代理。  
   
-         
-  \- 用于允许更新订阅的事务发布的队列读取器代理。  
+         \- 用于允许更新订阅的事务发布的队列读取器代理。  
   
          有关详细信息，请参阅 [Replication Agent Security Model](../security/replication-agent-security-model.md) 和 [Replication Security Best Practices](../security/replication-security-best-practices.md)。  
   
@@ -101,8 +98,8 @@ ms.locfileid: "73882320"
   
     -   指定发布的名称。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- 在创建发布后，可以使用复制存储过程以编程方式创建项目。 用于创建项目的存储过程取决于要为其定义项目的发布的类型。 有关详细信息，请参阅[创建发布](create-a-publication.md)。  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
+ 在创建发布后，可以使用复制存储过程以编程方式创建项目。 用于创建项目的存储过程取决于要为其定义项目的发布的类型。 有关详细信息，请参阅 [Create a Publication](create-a-publication.md)。  
   
 #### <a name="to-define-an-article-for-a-snapshot-or-transactional-publication"></a>为快照发布或事务发布定义项目  
   
@@ -129,7 +126,7 @@ ms.locfileid: "73882320"
   
 3.  （可选）在发布服务器上的发布数据库中，执行 [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) 可筛选表列。 有关详细信息，请参阅 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  本例为某个事务发布定义了一个基于 `Product` 表的项目，其中项目在水平和垂直两个方向上进行了筛选。  
   
  [!code-sql[HowTo#sp_AddTranArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpub.sql#sp_addtranarticle)]  
@@ -138,10 +135,10 @@ ms.locfileid: "73882320"
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergearticle)]  
   
-##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
  可以使用复制管理对象 (RMO) 以编程方式定义项目。 用来定义项目的 RMO 类取决于要为其定义项目的发布的类型。  
   
-###  <a name="PShellExample"></a> 示例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 示例 (RMO)  
  下例向一个事务发布添加一个带有行和列筛选器的项目。  
   
  [!code-csharp[HowTo#rmo_CreateTranArticles](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createtranarticles)]  

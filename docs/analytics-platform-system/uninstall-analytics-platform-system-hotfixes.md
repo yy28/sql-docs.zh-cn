@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef6929aeb06c9472eb3ff210de016117a9636ded
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399767"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>卸载分析平台系统修补程序 
@@ -21,7 +21,7 @@ ms.locfileid: "74399767"
   
 ## <a name="before-you-begin"></a>开始之前  
   
-### <a name="prerequisites"></a>必备条件  
+### <a name="prerequisites"></a>先决条件  
 若要执行这些步骤，你将需要：  
   
 -   一个分析平台系统登录，有权访问管理控制台来监视设备。  
@@ -30,7 +30,7 @@ ms.locfileid: "74399767"
   
 -   要卸载的修补程序的知识库文章编号。  
   
-## <a name="HowToUninstallPDW"></a>卸载 SQL Server PDW 修补程序  
+## <a name="to-uninstall-a-sql-server-pdw-hotfix"></a><a name="HowToUninstallPDW"></a>卸载 SQL Server PDW 修补程序  
   
 1.  以 Fabric 域管理员身份登录到<em><appliance_domain></em> **-HST01**节点。  
   

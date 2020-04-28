@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 663de184c811291c4b583ddbaf2fb6862097c54f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882179"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>设置订阅的过期期限
@@ -37,9 +37,9 @@ ms.locfileid: "73882179"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   订阅过期期限也称为“发布保持期”  。 合并复制元数据的清除依赖于此设置：  
   
@@ -49,7 +49,7 @@ ms.locfileid: "73882179"
   
     -   可以指定订阅永不过期，但是强烈建议您不要使用此值，因为这样将无法清除元数据。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  可在“发布属性 - **发布>”** **对话框的“常规”\<** 页上设置订阅的过期期限。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](view-and-modify-publication-properties.md)。  
   
 #### <a name="to-set-the-expiration-period-for-subscriptions"></a>设置订阅的过期期限  
@@ -58,7 +58,7 @@ ms.locfileid: "73882179"
   
 2.  如果它们应该过期，请指定一个过期时间段。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  您可以使用复制存储过程在创建发布时设置此值或以后修改此值。  
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>为快照或事务发布设置订阅过期时间  

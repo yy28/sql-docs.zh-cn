@@ -11,10 +11,10 @@ ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 1036d8b05bf3dfca825f88d562c89dbce7f6b538
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729531"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>创建和执行实体同步关系（主数据服务）
@@ -23,20 +23,20 @@ ms.locfileid: "73729531"
 
   实体同步是实体版本间的单向可重复同步。 它提供了一种在不同模型间共享实体数据的方法。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  创建实体同步关系的先决条件：  
   
--   你必须有权访问“系统管理”功能区域。 有关详细信息，请参阅[功能区域权限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
+-   你必须有权访问“系统管理”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   你必须是目标模型的模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   你必须是目标模型的模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   至少需要拥有对源实体及其所有属性和成员的读取访问权限。  
   
  执行实体同步关系的先决条件：  
   
--   你必须有权访问“系统管理”功能区域。 有关详细信息，请参阅[功能区域权限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
+-   你必须有权访问“系统管理”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
--   你必须是目标模型的模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   你必须是目标模型的模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
  在创建实体同步关系时，请注意以下事项。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "73729531"
   
 10. 选择“按需同步” ****，或选择“自动同步” **** 并设置频率。  
   
-11. 单击“保存”  。  
+11. 单击“ **保存**”。  
   
  **执行实体同步关系**  
   
@@ -90,7 +90,7 @@ ms.locfileid: "73729531"
   
 3.  在“实体同步维护” **** 页上，选择网格中的同步关系。  
   
-4.  单击“执行”  。  
+4.  单击“执行” ****。  
   
 ## <a name="sync-relationship-information"></a>同步关系信息  
  对于创建的每个同步关系，系统都会在网格中添加一行（其中包含十列）。 下表对这些列进行了说明。  
@@ -110,17 +110,17 @@ ms.locfileid: "73729531"
   
  单击索引后可看到以下信息：  
   
--   **上次尝试错误**：显示有关上次同步尝试的错误信息。  
+-   “上次尝试错误”****：显示有关上次同步尝试的错误信息。  
   
--   **创建者**：创建同步的用户的名称。  
+-   “创建者”****：创建同步的用户的用户名。  
   
--   **日期：创建**同步的日期和时间。  
+-   “创建时间”****：创建同步的日期和时间。  
   
--   **更新者**：上次更新同步的用户的名称。  
+-   “更新者”****：上次更新同步的用户的用户名。  
   
--   **日期：上次**更新同步的日期和时间。  
+-   “更新时间”****：上次更新同步的日期和时间。  
   
 ## <a name="next-steps"></a>后续步骤  
- [编辑和删除实体同步关系 &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  
+ [编辑和删除实体同步关系 (Master Data Services)](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  
   
   

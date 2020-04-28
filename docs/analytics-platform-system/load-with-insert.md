@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: bbcf1a8bd16d7446841bb6d7dd86bd1ad350280d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401022"
 ---
 # <a name="load-data-with-insert-into-parallel-data-warehouse"></a>加载包含 INSERT into Parallel 数据仓库的数据
@@ -21,14 +21,14 @@ ms.locfileid: "74401022"
 您可以使用 tsql INSERT 语句将数据加载到 SQL Server 并行数据仓库（PDW）分布式或复制的表中。 有关 INSERT 的详细信息，请参阅[insert](../t-sql/statements/insert-transact-sql.md)。 对于分布式表中的复制表和所有非分布列，PDW 使用 SQL Server 将语句中指定的数据值隐式转换为目标列的数据类型。 有关 SQL Server 数据转换规则的详细信息，请参阅[SQL 数据类型转换](../t-sql/data-types/data-type-conversion-database-engine.md)。 但对于分布列，PDW 仅支持 SQL Server 支持的隐式转换的子集。 因此，当您使用 INSERT 语句将数据加载到分布列时，必须使用下表中定义的格式之一来指定源数据。  
   
   
-## <a name="InsertingLiteralsBinary"></a>在二进制类型中插入文本  
+## <a name="insert-literals-into-binary-types"></a><a name="InsertingLiteralsBinary"></a>在二进制类型中插入文本  
 下表定义了用于将文本值插入到类型为**binary** （*n*）或**varbinary**（*n*）的分布列中的接受文字类型、格式和转换规则。  
   
 |文本类型|格式|转换规则|  
 |----------------|----------|--------------------|  
 |二进制文本|0x*hexidecimal_string*<br /><br />示例：0x12Ef|二进制文本必须以0x 开头。<br /><br />数据源长度不能超过为数据类型指定的字节数。<br /><br />如果数据源长度小于**binary**数据类型的大小，则会将数据填充到右侧，使其达到数据类型大小。|  
   
-## <a name="InsertingLiteralsDateTime"></a>将文本插入日期和时间类型  
+## <a name="insert-literals-into-date-and-time-types"></a><a name="InsertingLiteralsDateTime"></a>将文本插入日期和时间类型  
 日期和时间文本是使用特定格式的字符值表示的，并用单引号引起来。 下表定义了允许的文字类型、格式和转换规则，以便将日期或时间文字插入到类型为**datetime**、 **smalldatetime**、 **date**、 **time**、 **datetimeoffset**或**datetime2**的 SQL Server PDW 分布列。  
   
 ### <a name="datetime-data-type"></a>datetime 数据类型  
@@ -84,7 +84,7 @@ ms.locfileid: "74401022"
 |**日期**格式的字符串文字|"YYYY-MM-DD"<br /><br />示例： "2007-05-08"|在插入值时，时间值（小时、分钟、秒和小数）设置为0。 例如，文本 "2007-05-08" 插入为 "2007-05-08 12：00： 00.0000000"。|  
 |**Datetime2**格式的字符串文本|"YYYY-MM-DD hh： MM： ss： nnnnnnn"<br /><br />示例： "2007-05-08 12：35： 29.1234567"|如果数据源包含的数据和时间部分小于或等于**datetime2**（*n*）中指定的值，则插入数据;否则，会生成错误。|  
   
-## <a name="InsertLiteralsNumeric"></a>将文本插入数值类型  
+## <a name="insert-literals-into-numeric-types"></a><a name="InsertLiteralsNumeric"></a>将文本插入数值类型  
 下表定义了可接受的格式和转换规则，用于将文本值插入到使用数值类型的 SQL Server PDW 分布列。  
   
 ### <a name="bit-data-type"></a>bit 数据类型  
@@ -140,7 +140,7 @@ Money 文本值表示为数字，其中包含可选的小数点和货币符号�
 |Decimal 文本|nnnnnn<br /><br />示例：123344.34455|如果小数点后的位数超过4，则该值向上舍入到最接近的值。 例如，将值123344.34455 插入为123344.3446。|  
 |Money 文本|$nnnnnn nnnn<br /><br />示例： $123456.7890|可选的货币符号不会插入值。<br /><br />如果小数点后的位数超过4，则该值向上舍入到最接近的值。|  
   
-## <a name="InsertLiteralsString"></a>将文本插入字符串类型  
+## <a name="inserting-literals-into-string-types"></a><a name="InsertLiteralsString"></a>将文本插入字符串类型  
 下表定义了用于将文本值插入到使用字符串类型的 SQL Server PDW 列中的接受格式和转换规则。  
   
 ### <a name="char-varchar-nchar-and-nvarchar-data-types"></a>char、varchar、nchar 和 nvarchar 数据类型  

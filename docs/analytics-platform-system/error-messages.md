@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2d89e80a89df53e85ef8d2bf53c369d9e4dc0d49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401165"
 ---
 # <a name="error-messages-in-parallel-data-warehouse"></a>并行数据仓库中的错误消息
 
 并行数据仓库（PDW）错误消息会报告 PDW 组件遇到的错误和问题，还可能包括通过 PDW 出现 SQL Server 错误。 这些错误消息使用一致的语法来显示信息。 了解此语法将允许您确定并更正 SQL Server PDW 上的问题。  
   
-## <a name="Basics"></a>错误消息基础  
+## <a name="error-message-basics"></a><a name="Basics"></a>错误消息基础  
 返回的错误消息遵循相同的语法。  
   
 `Error_Indicator [SQL_State_Code] [Driver_Details] [QueryID] Message_String`  

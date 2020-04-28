@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e258badbcf304fddbaf7575269194bd409ec8645
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982233"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
@@ -58,7 +58,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
 `[ @stmttype = ] 'statement_type'`指定触发触发器的 SQL 语句。 *statement_type*为**varchar （50）** ，可以是 INSERT、UPDATE、DELETE、LOGON 或[!INCLUDE[tsql](../../includes/tsql-md.md)] [DDL 事件](../../relational-databases/triggers/ddl-events.md)中列出的任何语句事件。 不能指定事件组。  
   
- 只有在将触发器定义为该语句类型的触发器之后，才能将该触发器指定为语句类型的**第一个**或**最后**一个触发器。 例如，如果**TR1**定义为 insert 触发器，则可以**先**将 trigger **TR1**指定为 table **T1**上的 insert。 如果仅将**TR1**定义为 INSERT 触发器，则会将设置为 UPDATE 语句的**第一个**或最后一个触发器。 **** [!INCLUDE[ssDE](../../includes/ssde-md.md)] 有关详细信息，请参见“备注”部分。  
+ 只有在将触发器定义为该语句类型的触发器之后，才能将该触发器指定为语句类型的**第一个**或**最后**一个触发器。 例如，如果**TR1**定义为 insert 触发器，则可以**先**将 trigger **TR1**指定为 table **T1**上的 insert。 如果仅将**TR1**定义为 INSERT 触发器，则会将设置为 UPDATE 语句的**第一个**或最后一个触发器。 **Last** [!INCLUDE[ssDE](../../includes/ssde-md.md)] 有关详细信息，请参见“备注”部分。  
   
  namespace = { **' 数据库 '** | **"SERVER"** | ** \@** 无效  
  当*triggername*是 DDL 触发器时， ** \@命名空间**指定是使用数据库作用域还是服务器作用域创建*triggername* 。 如果*triggername*是 logon 触发器，则必须指定服务器。 有关 DDL 触发器作用域的详细信息，请参阅[Ddl 触发器](../../relational-databases/triggers/ddl-triggers.md)。 如果未指定或指定 NULL，则*triggername*是 DML 触发器。  
@@ -118,7 +118,7 @@ sp_settriggerorder @triggername= 'Sales.uSalesOrderHeader', @order='First', @stm
 ```  
   
 ### <a name="b-setting-the-firing-order-for-a-ddl-trigger"></a>B. 设置 DDL 触发器的触发顺序  
- 以下示例指定触发器 `ddlDatabaseTriggerLog` 是对 `ALTER_TABLE` 数据库执行 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 操作后触发的第一个触发器。  
+ 以下示例指定触发器 `ddlDatabaseTriggerLog` 是对 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库执行 `ALTER_TABLE` 操作后触发的第一个触发器。  
   
 ```  
 USE AdventureWorks2012;  
@@ -127,7 +127,7 @@ sp_settriggerorder @triggername= 'ddlDatabaseTriggerLog', @order='First', @stmtt
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [数据库引擎存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER (Transact-SQL)](../../t-sql/statements/alter-trigger-transact-sql.md)  
   

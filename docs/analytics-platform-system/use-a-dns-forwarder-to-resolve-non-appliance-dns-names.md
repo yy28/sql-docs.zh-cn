@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3d1d0d9428138da615fad7ff5745c758d9fcd3b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399436"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>使用 DNS 转发器解析分析平台系统中的非设备 DNS 名称
 可以在分析平台系统设备的 Active Directory 域服务节点（**_设备\_域_-AD01**和**_设备\_域_-AD02**）上配置 DNS 转发器，以允许脚本和软件应用程序访问外部服务器。  
   
-## <a name="ResolveDNS"></a>使用 DNS 转发器  
+## <a name="using-a-dns-forwarder"></a><a name="ResolveDNS"></a>使用 DNS 转发器  
 分析平台系统设备配置为阻止解析不在设备中的服务器的 DNS 名称。 某些进程（如 Windows 软件更新服务（WSUS））将需要访问设备之外的服务器。 若要支持此使用方案，可将分析平台系统 DNS 配置为支持外部名称转发器，这将允许分析平台系统主机和虚拟机（Vm）使用外部 DNS 服务器来解析设备之外的名称。 不支持 DNS 后缀的自定义配置，这意味着必须使用完全限定的域名来解析非设备服务器名称。  
   
 **使用 DNS GUI 创建 DNS 转发器**  

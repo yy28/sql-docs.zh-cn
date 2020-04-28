@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8c32df055ea1330fb0d1bdd32b2a3860519d2575
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73782723"
 ---
 # <a name="bcp_getcolfmt"></a>bcp_getcolfmt
@@ -47,10 +47,10 @@ RETCODE bcp_getcolfmt (
  *hdbc*  
  是启用大容量复制的 ODBC 连接句柄。  
   
- *定义域*  
+ *field*  
  要检索其属性的列编号。  
   
- *知识产权*  
+ *property*  
  属性常量之一。  
   
  *pValue*  

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 148dc3033fdcf0fe9b5e86f4e3efa69717c32dfd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399834"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>并行数据仓库的 t-sql 语言元素
@@ -27,10 +27,10 @@ ms.locfileid: "74399834"
 * [提出](../t-sql/language-elements/comment-transact-sql.md)
 * [称作](../t-sql/data-types/constants-transact-sql.md)
 * [数据类型](../t-sql/data-types/data-types-transact-sql.md)
-* [在运行 CREATE 语句前执行](../t-sql/language-elements/execute-transact-sql.md)
+* [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
 * [表达](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
-* [标识属性解决方法](../t-sql/statements/create-table-transact-sql-identity-property.md)
+* [IDENTITY 属性解决方法](../t-sql/statements/create-table-transact-sql-identity-property.md)
 * [PRINT](../t-sql/language-elements/print-transact-sql.md)
 * [USE](../t-sql/language-elements/use-transact-sql.md)
 
@@ -46,23 +46,23 @@ ms.locfileid: "74399834"
 * [WHILE](../t-sql/language-elements/while-transact-sql.md)
 
 ## <a name="operators"></a>运算符
-* [+ （添加）](../t-sql/language-elements/add-transact-sql.md)
-* [+（字符串串联）](../t-sql/language-elements/string-concatenation-transact-sql.md)
+* [+（加）](../t-sql/language-elements/add-transact-sql.md)
+* [+ （字符串串联）](../t-sql/language-elements/string-concatenation-transact-sql.md)
 * [-（负）](../t-sql/language-elements/unary-operators-negative.md)
 * [-（减）](../t-sql/language-elements/subtract-transact-sql.md)
-* [* （乘）](../t-sql/language-elements/multiply-transact-sql.md)
-* [/（除）](../t-sql/language-elements/divide-transact-sql.md)
-* [模](../t-sql/language-elements/modulo-transact-sql.md)
+* [*（乘）](../t-sql/language-elements/multiply-transact-sql.md)
+* [/（相除）](../t-sql/language-elements/divide-transact-sql.md)
+* [取模](../t-sql/language-elements/modulo-transact-sql.md)
 
 ## <a name="wildcard-characters-to-match"></a>要匹配的通配符
 * [=（等于）](../t-sql/language-elements/equals-transact-sql.md)
-* [> （大于）](../t-sql/language-elements/greater-than-transact-sql.md)
-* [< （小于）](../t-sql/language-elements/less-than-transact-sql.md)
-* [>= （优秀于或等于）](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
-* [<= （小于或等于）](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
+* [>（大于）](../t-sql/language-elements/greater-than-transact-sql.md)
+* [<（小于）](../t-sql/language-elements/less-than-transact-sql.md)
+* [>=（大于或等于）](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
+* [<=（小于或等于）](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
 * [<>  （不等于）](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
 * [\!= （不等于）](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
-* [和](../t-sql/language-elements/and-transact-sql.md)
+* [AND](../t-sql/language-elements/and-transact-sql.md)
 * [BETWEEN](../t-sql/language-elements/between-transact-sql.md)
 * [EXISTS](../t-sql/language-elements/exists-transact-sql.md)
 * [IN](../t-sql/language-elements/in-transact-sql.md)
@@ -72,13 +72,13 @@ ms.locfileid: "74399834"
 * [或](../t-sql/language-elements/or-transact-sql.md)
 
 ### <a name="bitwise-operators"></a>位运算符
-* [& （位与）](../t-sql/language-elements/bitwise-and-transact-sql.md)
+* [&（位与）](../t-sql/language-elements/bitwise-and-transact-sql.md)
 * [|（位或）](../t-sql/language-elements/bitwise-or-transact-sql.md)
 * [^ （位异或）](../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)
 * [~（位非）](../t-sql/language-elements/bitwise-not-transact-sql.md)
-* [^ = （位异或等于）](../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)
-* [| = （位或等于）](../t-sql/language-elements/bitwise-or-equals-transact-sql.md)
-* [&= （位与等于）](../t-sql/language-elements/bitwise-and-equals-transact-sql.md)
+* [^=（位异或等于）](../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)
+* [|=（位或等于）](../t-sql/language-elements/bitwise-or-equals-transact-sql.md)
+* [&=（位与等于）](../t-sql/language-elements/bitwise-and-equals-transact-sql.md)
 
 ## <a name="functions"></a>函数
 * [@@DATEFIRST](../t-sql/functions/datefirst-transact-sql.md)
@@ -95,7 +95,7 @@ ms.locfileid: "74399834"
 * [ATN2](../t-sql/functions/atn2-transact-sql.md)
 * [BINARY_CHECKSUM](../t-sql/functions/binary-checksum-transact-sql.md)
 * [CASE](../t-sql/language-elements/case-transact-sql.md)
-* [强制转换和转换](../t-sql/functions/cast-and-convert-transact-sql.md)
+* [CAST 和 CONVERT](../t-sql/functions/cast-and-convert-transact-sql.md)
 * [CEILING](../t-sql/functions/ceiling-transact-sql.md)
 * [CHAR](../t-sql/functions/char-transact-sql.md)
 * [CHARINDEX](../t-sql/functions/charindex-transact-sql.md)
@@ -154,8 +154,8 @@ ms.locfileid: "74399834"
 * [LOWER](../t-sql/functions/lower-transact-sql.md)
 * [LTRIM](../t-sql/functions/ltrim-transact-sql.md)
 * [MAX](../t-sql/functions/max-transact-sql.md)
-* [最小值](../t-sql/functions/min-transact-sql.md)
-* [月](../t-sql/functions/month-transact-sql.md)
+* [MIN](../t-sql/functions/min-transact-sql.md)
+* [MONTH](../t-sql/functions/month-transact-sql.md)
 * [NCHAR](../t-sql/functions/nchar-transact-sql.md)
 * [NTILE](../t-sql/functions/ntile-transact-sql.md)
 * [NULLIF](../t-sql/language-elements/nullif-transact-sql.md)
@@ -217,11 +217,11 @@ ms.locfileid: "74399834"
 * [TYPEPROPERTY](../t-sql/functions/typeproperty-transact-sql.md)
 * [UNICODE](../t-sql/functions/unicode-transact-sql.md)
 * [UPPER](../t-sql/functions/upper-transact-sql.md)
-* [USER](../t-sql/functions/user-transact-sql.md)
+* [用户](../t-sql/functions/user-transact-sql.md)
 * [USER_NAME](../t-sql/functions/user-name-transact-sql.md)
 * [VAR](../t-sql/functions/var-transact-sql.md)
 * [VARP](../t-sql/functions/varp-transact-sql.md)
-* [年](../t-sql/functions/year-transact-sql.md)
+* [YEAR](../t-sql/functions/year-transact-sql.md)
 * [XACT_STATE](../t-sql/functions/xact-state-transact-sql.md)
 
 ## <a name="transactions"></a>事务
@@ -254,26 +254,26 @@ ms.locfileid: "74399834"
 * [sp_unprepare](../relational-databases/system-stored-procedures/sp-unprepare-transact-sql.md)
 
 ## <a name="set-statements"></a>SET 语句
-* [设置 ANSI_DEFAULTS](../t-sql/statements/set-ansi-defaults-transact-sql.md)
-* [设置 ANSI_NULL_DFLT_OFF](../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)
+* [SET ANSI_DEFAULTS](../t-sql/statements/set-ansi-defaults-transact-sql.md)
+* [SET ANSI_NULL_DFLT_OFF](../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)
 * [SET ANSI_NULL_DFLT_ON](../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)
 * [SET ANSI_NULLS](../t-sql/statements/set-ansi-nulls-transact-sql.md)
 * [SET ANSI_PADDING](../t-sql/statements/set-ansi-padding-transact-sql.md)
 * [SET ANSI_WARNINGS](../t-sql/statements/set-ansi-warnings-transact-sql.md)
-* [设置 ARITHABORT](../t-sql/statements/set-arithabort-transact-sql.md)
-* [设置 ARITHIGNORE](../t-sql/statements/set-arithignore-transact-sql.md)
-* [设置 CONCAT_NULL_YIELDS_NULL](../t-sql/statements/set-concat-null-yields-null-transact-sql.md)
-* [设置 DATEFIRST](../t-sql/statements/set-datefirst-transact-sql.md)
-* [设置 DATEFORMAT](../t-sql/statements/set-dateformat-transact-sql.md)
-* [设置 FMTONLY](../t-sql/statements/set-fmtonly-transact-sql.md)
-* [设置 IMPLICIT_TRANSACITONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)
-* [设置 LOCK_TIMEOUT](../t-sql/statements/set-lock-timeout-transact-sql.md)
-* [设置 NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
+* [SET ARITHABORT](../t-sql/statements/set-arithabort-transact-sql.md)
+* [SET ARITHIGNORE](../t-sql/statements/set-arithignore-transact-sql.md)
+* [SET CONCAT_NULL_YIELDS_NULL](../t-sql/statements/set-concat-null-yields-null-transact-sql.md)
+* [SET DATEFIRST](../t-sql/statements/set-datefirst-transact-sql.md)
+* [SET DATEFORMAT](../t-sql/statements/set-dateformat-transact-sql.md)
+* [SET FMTONLY](../t-sql/statements/set-fmtonly-transact-sql.md)
+* [SET IMPLICIT_TRANSACITONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)
+* [SET LOCK_TIMEOUT](../t-sql/statements/set-lock-timeout-transact-sql.md)
+* [SET NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
 * [SET QUOTED_IDENTIFIER](../t-sql/statements/set-quoted-identifier-transact-sql.md)
-* [设置行计数](../t-sql/statements/set-rowcount-transact-sql.md)
-* [设置 TEXTSIZE](../t-sql/statements/set-textsize-transact-sql.md)
+* [SET ROWCOUNT](../t-sql/statements/set-rowcount-transact-sql.md)
+* [SET TEXTSIZE](../t-sql/statements/set-textsize-transact-sql.md)
 * [SET TRANSACTION ISOLATION LEVEL](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
-* [设置 XACT_ABORT](../t-sql/statements/set-xact-abort-transact-sql.md)
+* [SET XACT_ABORT](../t-sql/statements/set-xact-abort-transact-sql.md)
 
 ## <a name="next-steps"></a>后续步骤
 有关更多参考信息，请参阅[t-sql 语句](tsql-statements.md)和[t-sql 系统视图](tsql-system-views.md)。

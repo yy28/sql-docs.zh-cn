@@ -20,10 +20,10 @@ ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f689541d455f4f7e6da4cc68742519a74f671506
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73981838"
 ---
 # <a name="sysdm_db_persisted_sku_features-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73981838"
 
   的[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]某些功能改变了在数据库文件[!INCLUDE[ssDE](../../includes/ssde-md.md)]中存储信息的方式。 这些功能仅限于特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本。 不能将包含这些功能的数据库移到不支持这些功能的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 使用 sys. dm_db_persisted_sku_features 动态管理视图可列出当前数据库中启用的特定于版本的功能。
   
-**适用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本）。
+**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）。
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -50,7 +50,7 @@ ms.locfileid: "73981838"
   
 -   **ColumnStoreIndex**：指示至少有一个表具有列存储索引。 若要使数据库移到不支持此功能的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本，请使用[DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)或[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)语句删除列存储索引。 有关详细信息，请参阅[列存储索引](../../relational-databases/indexes/columnstore-indexes-overview.md)。  
   
-    **适用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]及更高版本）。  
+    **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）。  
   
 -   **压缩**：指示至少一个表或索引使用数据压缩或 vardecimal 存储格式。 若要使数据库移到不支持此功能的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本，请使用[Alter TABLE](../../t-sql/statements/alter-table-transact-sql.md)或[alter INDEX](../../t-sql/statements/alter-index-transact-sql.md)语句删除数据压缩。 若要删除 vardecimal 存储格式，请使用 sp_tableoption 语句。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "73981838"
   
 -   **InMemoryOLTP**：指示数据库使用内存中 OLTP。 数据库具有 MEMORY_OPTIMIZED_DATA 文件组。 有关详细信息，请参阅[内存中 OLTP&#40;内存中优化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
-  **适用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]及更高版本）。 
+  **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本）。 
   
 -   **分割.** 指示数据库包含已分区表、已分区索引、分区方案或分区函数。 若要使数据库能够移动到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 或 Developer 以外的版本，将表修改到单个分区上是不够的。 必须删除相应的已分区表。 如果该表包含数据，请使用 SWITCH PARTITION 将每个分区转换成无分区表。 然后删除已分区表、分区方案和分区函数。  
   
@@ -75,8 +75,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与数据库相关的动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
  [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md)   
- [SQL Server 2017 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)  
+ [版本和 SQL Server 2017 支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)  
   

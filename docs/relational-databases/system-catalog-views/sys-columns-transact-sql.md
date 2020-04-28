@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 64b4d3e1eb464481b076af86dbc018be72e93a6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73981967"
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns (Transact-SQL)
@@ -74,7 +74,7 @@ ms.locfileid: "73981967"
 |is_sparse|**bit**|1 = 列为稀疏列。 有关详细信息，请参阅 [使用稀疏列](../../relational-databases/tables/use-sparse-columns.md)。|  
 |is_column_set|**bit**|1 = 列为列集。 有关详细信息，请参阅 [使用稀疏列](../../relational-databases/tables/use-sparse-columns.md)。|  
 |generated_always_type|**tinyint**|**适用**于： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]和更高[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]版本。<br /><br /> 标识列值的生成时间（对于系统表中的列，将始终为0）：<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END<br /><br /> 有关详细信息，请参阅[&#40;关系数据库&#41;的临时表](../../relational-databases/tables/temporal-tables.md)。|  
-|generated_always_type_desc|**nvarchar （60）**|**适用**于： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]和更高[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]版本。<br /><br /> 值的文本`generated_always_type`说明（对于系统表中的列始终 NOT_APPLICABLE） <br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
+|generated_always_type_desc|**nvarchar(60)**|**适用**于： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]和更高[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]版本。<br /><br /> 值的文本`generated_always_type`说明（对于系统表中的列始终 NOT_APPLICABLE） <br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
 |encryption_type|**int**|**适用**于： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]和更高[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]版本。<br /><br /> 加密类型：<br /><br /> 1 = 确定性加密<br /><br /> 2 = 随机加密|  
 |encryption_type_desc|**nvarchar （64）**|**适用**于： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]和更高[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]版本。<br /><br /> 加密类型说明：<br /><br /> 随机化<br /><br /> DETERMINISTIC|  
 |encryption_algorithm_name|**sysname**|**适用**于： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]和更高[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]版本。<br /><br /> 加密算法的名称。<br /><br /> 仅支持 AEAD_AES_256_CBC_HMAC_SHA_512。|  
@@ -91,7 +91,7 @@ ms.locfileid: "73981967"
 ## <a name="see-also"></a>另请参阅  
  [Transact-sql&#41;的系统视图 &#40;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [&#40;Transact-sql&#41;的对象目录视图](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys. all_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys. system_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-system-columns-transact-sql.md)  

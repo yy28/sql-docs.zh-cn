@@ -14,10 +14,10 @@ ms.assetid: e1b8b46a-7cd1-4a7d-9345-dd7df081e145
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 9a725ec385d72ea3719e215ea9b01c1565aadecc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729772"
 ---
 # <a name="assign-hierarchy-member-permissions-master-data-services"></a>分配层次结构成员权限 (Master Data Services)
@@ -28,12 +28,12 @@ ms.locfileid: "73729772"
   
  层次结构成员权限是可选的。 它们增加了模型对象权限所需的粒度。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“用户和组权限”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-assign-hierarchy-member-permissions"></a>分配层次结构成员权限  
   
@@ -47,9 +47,7 @@ ms.locfileid: "73729772"
   
 5.  从 **“模型”** 列表中，选择某一模型。  
   
-6.  
-  **
-  ** 从“版本”列表中，选择某一版本。  
+6.  **** 从“版本”列表中，选择某一版本。  
   
 7.  从 **“层次结构”** 列表中，选择某一层次结构。  
   
@@ -67,6 +65,6 @@ ms.locfileid: "73729772"
 ## <a name="see-also"></a>另请参阅  
  [Master Data Services &#40;删除层次结构成员权限&#41;](../master-data-services/delete-hierarchy-member-permissions-master-data-services.md)   
  [&#40;Master Data Services 分配模型对象权限&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [层次结构成员权限 &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
+ [层次结构成员权限 (Master Data Services)](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
   
   

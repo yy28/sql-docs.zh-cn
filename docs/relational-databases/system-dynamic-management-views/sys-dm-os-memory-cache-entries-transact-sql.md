@@ -19,10 +19,10 @@ ms.assetid: dd32be6b-10d1-4059-b4fd-0bf817f40d54
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 737de971ca39cdf8c164787ff7703b87c38e92e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983124"
 ---
 # <a name="sysdm_os_memory_cache_entries-transact-sql"></a>sys.dm_os_memory_cache_entries (Transact-SQL)
@@ -36,8 +36,8 @@ ms.locfileid: "73983124"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary(8)**|缓存的地址。 不可为 null。|  
-|**路径名**|**nvarchar(256)**|缓存的名称。 不可为 null。|  
-|type |**varchar(60)**|缓存类型。 不可为 null。|  
+|**name**|**nvarchar(256)**|缓存的名称。 不可为 null。|  
+|**type**|**varchar(60)**|缓存类型。 不可为 null。|  
 |**entry_address**|**varbinary(8)**|缓存条目的描述符地址。 不可为 null。|  
 |**entry_data_address**|**varbinary(8)**|缓存条目中用户数据的地址。<br /><br /> 0x00000000 = 条目数据地址不可用。<br /><br /> 不可为 null。|  
 |**in_use_count**|**int**|同时使用此缓存条目的用户数。 不可为 null。|  
@@ -47,11 +47,11 @@ ms.locfileid: "73983124"
 |**original_cost**|**int**|此条目的原始开销。 此值是引发的 I/O 数、CPU 指令开销以及条目占用的内存量等的近似值。 开销越大，从缓存中删除此条目的机会越小。 不可为 null。|  
 |**current_cost**|**int**|缓存条目的当前开销。 此值将在条目清除过程中更新。 重用条目时，当前开销将重置为原始值。 不可为 null。|  
 |**memory_object_address**|**varbinary(8)**|关联内存对象的地址。 可以为 Null。|  
-|**pages_allocated_count**|**bigint**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]到[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。<br /><br /> 存储此缓存条目的 8 KB 页的数目。 不可为 null。|  
+|**pages_allocated_count**|**bigint**|**适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。<br /><br /> 存储此缓存条目的 8 KB 页的数目。 不可为 null。|  
 |**pages_kb**|**bigint**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 此缓存条目使用的内存量 (KB)。  不可为 null。|  
-|**entry_data**|**nvarchar （2048）**|缓存条目的序列化表示形式。 此信息与缓存存储相关。 可以为 Null。|  
+|**entry_data**|**nvarchar(2048)**|缓存条目的序列化表示形式。 此信息与缓存存储相关。 可以为 Null。|  
 |**pool_id**|**int**|**适用于**：[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 及更高版本。<br /><br /> 与条目关联的资源池 ID。 可以为 Null。<br /><br /> 不是 katmai|  
-|pdw_node_id |**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|**pdw_node_id**|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限 
 

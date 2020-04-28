@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b99123f81fcdddd74dc72d485d97e428ca59ed84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400990"
 ---
 # <a name="monitor-appliance-health-state"></a>监视设备运行状况状态
@@ -75,13 +75,13 @@ ORDER BY
   
 -   严重  
   
--   未知  
+-   Unknown  
   
 -   不支持  
   
 -   不可访问  
   
--   Mmpc  
+-   无法恢复  
   
 若要查看所有组件的所有属性，请删除`WHERE  p.property_name = 'Status'`子句。  
   

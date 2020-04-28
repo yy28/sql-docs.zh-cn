@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 ms.openlocfilehash: 3fbf2429a384ad64b1b416e3920a193d92a6c387
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056618"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>从命令行运行数据迁移助手
@@ -259,7 +259,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 |`/SkuRecommendationCurrencyCode` | 显示价格的货币（例如 "USD"） | Y <br> （适用于最新价格）
 |`/SkuRecommendationOfferName` | 产品/服务名称（例如，"BC-OP-NT-AZR-Ms-azr-0003p"）。 有关详细信息，请参阅[Microsoft Azure 产品/服务详细](https://azure.microsoft.com/support/legal/offer-details/)信息页。 | Y <br> （适用于最新价格）
 |`/SkuRecommendationRegionName` | 区域名称（例如 "WestUS"） | Y <br> （适用于最新价格）
-|`/SkuRecommendationSubscriptionId` | 订阅 ID。 | Y <br> （适用于最新价格）
+|`/SkuRecommendationSubscriptionId` | 订阅的 ID。 | Y <br> （适用于最新价格）
 |`/SkuRecommendationDatabasesToRecommend` | 要为其建议的数据库的以空格分隔的列表（例如，"Database1" "Database2" "Database3"）。 名称区分大小写，必须用双引号括起来。 如果省略，则提供所有数据库的建议。 | N
 |`/AzureAuthenticationTenantId` | 身份验证租户。 | Y <br> （适用于最新价格）
 |`/AzureAuthenticationClientId` | 用于身份验证的 AAD 应用的客户端 ID。 | Y <br> （适用于最新价格）

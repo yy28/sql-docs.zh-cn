@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 0b244d85e601e46fe778298e723c0a7d01e669bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400973"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>监视 System Center Operations Manager 分析平台系统
@@ -21,7 +21,7 @@ ms.locfileid: "74400973"
   
 ## <a name="before-you-begin"></a>开始之前  
   
-### <a name="prerequisites"></a>必备条件  
+### <a name="prerequisites"></a>先决条件  
   
 1.  System Center Operations Manager 2007 R2、2012或 2012 SP1 必须安装并运行。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "74400973"
   
 ![警报](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
   
-### <a name="appliances"></a>3400  
+### <a name="appliances"></a>电器  
 设备是在你的环境中查找当前发现和监视 SQL Server PDW 设备的位置。 如果设备未显示在此处，并且你已为其创建了 ODBC 连接，则你的 PDWWatcher 帐户可能有问题。 如果它们显示为 "未监视"，则你的 PDWMonitor 帐户可能有问题。 请耐心等待，因为 SCOM 不会实时进行更改，而是定期检查是否有新的设备监视并定期将查询发送到设备进行监视。  
   
 ![3400](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
@@ -56,10 +56,10 @@ ms.locfileid: "74400973"
   
 ![工具关系图](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM3.png "SCOM_SCOM3")  
   
-### <a name="nodes"></a>Nodes  
+### <a name="nodes"></a>节点  
 最后，"节点" 视图允许您通过每个节点查看设备的运行状况：  
   
-![结点](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
+![节点](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
   
 ## <a name="see-also"></a>另请参阅  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

@@ -14,10 +14,10 @@ ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 608bdd69396f63fdd0389b43e27bacbab0e763f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729584"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>创建数字属性 (Master Data Services)
@@ -27,14 +27,14 @@ ms.locfileid: "73729584"
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，在您希望用户输入数字作为属性值时创建数字属性。  
   
 > [!NOTE]  
->  数字属性存在一些限制。 有关详细信息，请参阅[属性 (Master Data Services)](../master-data-services/attributes-master-data-services.md)。  
+>  数字属性存在一些限制。 有关详细信息，请参阅 [属性 (Master Data Services)](../master-data-services/attributes-master-data-services.md)。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   要为其创建属性的实体必须存在。 有关详细信息，请参阅[创建实体 (Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)。  
   
@@ -53,13 +53,13 @@ ms.locfileid: "73729584"
   
  单击属性后可看到以下信息。  
   
--   **创建者**：创建属性的用户的名称。  
+-   **创建者**：创建属性的用户的用户名。  
   
--   **日期：创建**属性的日期和时间。  
+-   **创建时间**：创建属性的日期和时间。  
   
--   **更新者**：上次更新属性的用户的名称。  
+-   **更新者**：上次更新属性的用户的用户名。  
   
--   **日期：上次**更新属性的日期和时间。  
+-   **创建时间**：上次更新属性的日期和时间。  
   
 ### <a name="to-create-a-numeric-attribute"></a>创建数字属性  
   
@@ -77,7 +77,7 @@ ms.locfileid: "73729584"
   
     -   如果属性是针对合并成员，则从“成员类型” **** 列表框中选择“合并” **** 。  
   
-    -   如果是集合的属性，请从“成员类型” **** 列表框中选择“集合” **** 。  
+    -   如果属性是针对集合，则从“成员类型” **** 列表框中选择“集合” **** 。  
   
 6.  在 **“名称”** 框中，键入属性的名称。 有关不可用作属性名称的单词列表，请参阅[保留字 (Master Data Services)](../master-data-services/reserved-words-master-data-services.md)。  
   
@@ -101,6 +101,6 @@ ms.locfileid: "73729584"
  [属性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
  [更改属性名称和数据类型 &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [创建基于域的属性 &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [创建文件属性 &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
+ [创建文件属性 (Master Data Services)](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2c72d07873e2e07ee7f6f095f677625a18cdb5a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982267"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
@@ -83,13 +83,11 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
 -   数据行中有足够的可用空间。  
   
- 在数据行中存储 BLOB 字符串时，读取和写入**文本**、 **ntext**或**图像**字符串的速度与读取或写入字符和二进制字符串的速度相同。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不必访问不同的页就可读取或写入 BLOB 字符串。  
+ 在数据行中存储 BLOB 字符串时，读取和写入**文本**、 **ntext**或**图像**字符串的速度与读取或写入字符和二进制字符串的速度相同。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不必访问不同的页就可读取或写入 BLOB 字符串。  
   
  如果**text**、 **ntext**或**image**字符串大于指定的限制或行中的可用空间，则指针将存储在行中。 不过在行中存储 BLOB 字符串的条件依然适用：数据行中必须有足够的空间来存放指针。  
   
- 存储在表行中的 BLOB 字符串和指针被视为类似于可变长度字符串。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅使用存储字符串或指针所需的字节数。  
+ 存储在表行中的 BLOB 字符串和指针被视为类似于可变长度字符串。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅使用存储字符串或指针所需的字节数。  
   
  如果先启用了 text in row，则不会立即转换现有的 BLOB 字符串。 仅当字符串被更新时才将其转换。 同样，当 text in row 选项的限制增加时，数据行中已有的**text**、 **ntext**或**image**字符串将不会转换为符合新的限制，直到更新它们为止。  
   
@@ -138,7 +136,7 @@ EXEC sp_tableoption 'Production.WorkOrderRouting',
 ## <a name="see-also"></a>另请参阅  
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [数据库引擎存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

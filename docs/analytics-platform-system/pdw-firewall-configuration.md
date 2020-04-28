@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4ed739ce12170aa6d0ab79b996de0075cd6723ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400884"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>分析平台系统中的并行数据仓库防火墙配置
@@ -35,7 +35,7 @@ ms.locfileid: "74400884"
 ## <a name="external-ports"></a>外部端口  
 对于来自 PDW 之外的客户端连接，将打开以下端口。  
   
-|目的|口#|Nodes|  
+|用途|口#|节点|  
 |-----------|-----------|---------|  
 |PDW 的 SQL 客户端访问（TDS）|17001|CTL|  
 |加载程序客户端访问（dwloader & SSIS）|8001|CTL|  
@@ -51,7 +51,7 @@ ms.locfileid: "74400884"
 ## <a name="internal-ports"></a>内部端口  
 PDW 使用以下端口进行内部通信，但不会为来自 PDW 设备之外的连接打开。  
   
-|目的|口#|Nodes|  
+|用途|口#|节点|  
 |-----------|-----------|---------|  
 |DMS 控制通道流量|16450|CTL、CMP|  
 |DMS 数据通道流量|16550|CTL、CMP|  

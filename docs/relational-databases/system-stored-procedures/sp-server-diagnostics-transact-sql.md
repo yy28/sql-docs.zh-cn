@@ -18,10 +18,10 @@ ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d150d9b027b9a2c4d309ca2055722bb47ba092a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982109"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "73982109"
 
 捕获有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的诊断数据和运行状况信息，以检测潜在故障。 该过程以重复模式运行，并定期发送结果。 可通过常规连接或 DAC 连接调用该过程。  
   
-**适用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]及更高版本）。  
+**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）。  
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,11 +59,11 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |列|数据类型|说明|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|指示行创建的时间戳。 单个行集中的每一行都具有相同的时间戳。|  
-|**component_type**|**sysname**|指示行是否包含[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例级组件或 Always On 可用性组的信息：<br /><br /> instance<br /><br /> Always On： AvailabilityGroup|  
+|**component_type**|**sysname**|指示行是否包含[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例级组件或 Always On 可用性组的信息：<br /><br /> 实例<br /><br /> Always On： AvailabilityGroup|  
 |**component_name**|**sysname**|指示组件的名称或可用性组的名称：<br /><br /> system<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> 活动<br /><br /> *\<可用性组的名称>*|  
-|**状态**|**int**|指示组件的运行状况状态：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
+|**state**|**int**|指示组件的运行状况状态：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|描述状态列。 与状态列中的值对应的说明：<br /><br /> 0：未知<br /><br /> 1：清理<br /><br /> 2：警告<br /><br /> 3：错误|  
-|**data**|**varchar （max）**|指定特定于组件的数据。|  
+|**数据**|**varchar （max）**|指定特定于组件的数据。|  
   
  下面是对五个组件的说明：  
   

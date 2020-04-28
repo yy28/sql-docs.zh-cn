@@ -18,10 +18,10 @@ ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2719e330ec2fde61b91ca11ef93784983c6c418c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74165910"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
@@ -46,7 +46,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 > [!NOTE]  
 >  *prepared_handle*随后提供给 sp_cursorexecute 过程，以打开游标。 一旦创建了句柄，它就一直存在，直到您注销或通过 sp_cursorunprepare 过程显式删除它。  
   
- *化*  
+ *params*  
  标识参数化语句。 变量的参数定义将替换为语句*中的参数*标记。 *params*是调用**ntext**、 **nchar**或**nvarchar**输入值的必需参数。 如果语句未参数化，则输入一个 NULL 值。  
   
 > [!NOTE]  
@@ -111,7 +111,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
   
 |值|说明|  
 |-----------|-----------------|  
-|0|Success|  
+|0|成功|  
 |0x0001|失败|  
 |1FF6|无法返回元数据。<br /><br /> 注意：此操作的原因是语句不生成结果集;例如，它是 INSERT 或 DDL 语句。|  
   

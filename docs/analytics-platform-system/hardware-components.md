@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: db9966315d60fd4de1de7ae6805620d3f2144e6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401144"
 ---
 # <a name="hardware-components-for-analytics-platform-system"></a>用于分析平台系统的硬件组件
@@ -21,13 +21,13 @@ ms.locfileid: "74401144"
 分析平台系统（AP）使用可缩放的组件，因此你可以根据业务需求购买适当数量的处理和存储。 订购 AP 时，需要结合使用这些核心硬件组件。 特定硬件供应商可能使用不同的命名约定，或者有其他组件。  
  
   
-## <a name="rackandnetwork"></a>机架和网络 
+## <a name="rack-and-network"></a><a name="rackandnetwork"></a>机架和网络 
  
 AP 组件都存储在适合你的数据中心的一个或多个机架中。 每个机架附带了配电装置（Pdu）、两个掉电交换机和两个以太网交换机。  
   
 ![机架和网络](media/rack-and-network.png "AP 和网络")  
   
-## <a name="datascaleunit"></a>数据缩放单位
+## <a name="data-scale-unit"></a><a name="datascaleunit"></a>数据缩放单位
  
 数据缩放单位包含数据主机和直连存储（DAS）用于处理和存储用户数据。 若要添加容量，请根据硬件供应商支持的配置添加数据缩放单位。 随着数据缩放单位数量的增加，需要根据需要添加其他机架 & 网络组件，以提供更多的电源、网络和机架基础结构。  
   
@@ -65,7 +65,7 @@ AP 组件都存储在适合你的数据中心的一个或多个机架中。 每�
   
 **对于磁盘大小**，直连存储可以有1个、2个或 3 tb 的磁盘驱动器。 所有数据缩放单位的磁盘大小必须相同。  
   
-## <a name="basescaleunit"></a>基本缩放单位 
+## <a name="base-scale-unit"></a><a name="basescaleunit"></a>基本缩放单位 
  
 基本缩放单位包含设备所需的大脑动力主机、数据主机和直连存储的最小数目。 它包括以下组件。 
   

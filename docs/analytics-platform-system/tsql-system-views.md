@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: a7e6a0bda01de76787033607fbf35a0ca123ef95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399801"
 ---
 # <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>用于分析平台系统并行数据仓库的系统视图
@@ -61,7 +61,7 @@ ms.locfileid: "74399801"
 以下 Dmv 适用于并行数据仓库，但必须通过连接到**master**数据库来执行。
 
 * [sys.database_service_objectives](../relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database.md)
-* [sys. dm_operation_status](../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
+* [sys.dm_operation_status](../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
 * [sys. fn_helpcollations （）](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)
 
 ## <a name="sql-server-catalog-views"></a>SQL Server 目录视图
@@ -105,7 +105,7 @@ ms.locfileid: "74399801"
 * [sys.partition_schemes](https://msdn.microsoft.com/library/ms189752.aspx)
 * [sys.partitions](https://msdn.microsoft.com/library/ms175012.aspx)
 * [sys.procedures](https://msdn.microsoft.com/library/ms188737.aspx)
-* [sys.databases](https://msdn.microsoft.com/library/ms176011.aspx)
+* [sys.schemas](https://msdn.microsoft.com/library/ms176011.aspx)
 * [sys.securable_classes](https://msdn.microsoft.com/library/ms408301.aspx)
 * [sys.sql_expression_dependencies](https://msdn.microsoft.com/library/bb677315.aspx)
 * [sys.sql_modules](https://msdn.microsoft.com/library/ms175081.aspx)
@@ -136,7 +136,7 @@ ms.locfileid: "74399801"
 其中每个 DMV 都有一个名为 pdw_node_id 的特定列。 这是计算节点的标识符。 
 
 > [!NOTE]
-> 若要使用这些视图，请在名称中插入 "pdw_nodes_"，如下表所示。
+> 若要使用这些视图，请在名称中插入“pdw_nodes_”，如下表所示。
 > 
 > 
 
@@ -216,7 +216,7 @@ ms.locfileid: "74399801"
 ## <a name="sql-server-information_schema-views"></a>SQL Server INFORMATION_SCHEMA 视图
 * [CHECK_CONSTRAINTS](../relational-databases/system-information-schema-views/check-constraints-transact-sql.md)
 * [COLUMNS](../relational-databases/system-information-schema-views/columns-transact-sql.md)
-* [PARAMETERS](../relational-databases/system-information-schema-views/parameters-transact-sql.md)
+* [参数](../relational-databases/system-information-schema-views/parameters-transact-sql.md)
 * [ROUTINES](../relational-databases/system-information-schema-views/routines-transact-sql.md)
 * [SCHEMATA](../relational-databases/system-information-schema-views/schemata-transact-sql.md)
 * [TABLES](../relational-databases/system-information-schema-views/tables-transact-sql.md)

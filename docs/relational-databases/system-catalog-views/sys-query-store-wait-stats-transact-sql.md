@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6bff80fbe2b5022e12eca58de42192a3a1bb18d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74190374"
 ---
 # <a name="sysquery_store_wait_stats-transact-sql"></a>sys. query_store_wait_stats （Transact-sql）
@@ -37,7 +37,7 @@ ms.locfileid: "74190374"
 |**wait_stats_id**|**bigint**|表示 plan_id、runtime_stats_interval_id、execution_type 和 wait_category 的等待统计信息的行的标识符。 只有过去运行时统计信息间隔才是唯一的。 对于当前处于活动状态的时间间隔，可能有多个行表示 plan_id 引用的计划的等待统计信息，并且执行类型由 execution_type 表示，而等待类别由 wait_category 表示。 通常，一行表示刷新到磁盘的等待统计信息，而其他行表示内存中状态。 因此，若要获取每个间隔的实际状态，需要聚合指标，按 plan_id、runtime_stats_interval_id、execution_type 和 wait_category 进行分组。 |  
 |**plan_id**|**bigint**|外键。 联接到[sys.databases&#41;的 query_store_plan &#40;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)。|  
 |**runtime_stats_interval_id**|**bigint**|外键。 联接到[sys.databases&#41;的 query_store_runtime_stats_interval &#40;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)。|  
-|**wait_category**|**tinyint**|使用下表对等待类型进行分类，然后在这些等待类别中聚合等待时间。 不同的等待类别需要不同的跟进分析来解决该问题，但等待相同类别的类型会导致类似的故障排除体验，并提供受影响的查询（除了等待）是完成大多数此类调查已成功完成。|
+|**wait_category**|**tinyint**|使用下表对等待类型进行分类，然后在这些等待类别中聚合等待时间。 不同的等待类别需要不同的跟进分析来解决该问题，但在同一类别中等待的类型会导致类似的故障排除体验，并且除了等待外，还提供受影响的查询。|
 |**wait_category_desc**|**nvarchar(128)**|有关 "等待类别" 字段的文本说明，请查看下表。|
 |**execution_type**|**tinyint**|确定查询执行的类型：<br /><br /> 0-常规执行（已成功完成）<br /><br /> 3-客户端启动的已中止执行<br /><br /> 4-异常中止执行|  
 |**execution_type_desc**|**nvarchar(128)**|执行类型字段的文本说明：<br /><br /> 0-常规<br /><br /> 3-已中止<br /><br /> 4-异常|  
@@ -54,8 +54,8 @@ ms.locfileid: "74190374"
   
 |整数值|等待类别|等待类型包括在类别中|  
 |-----------------|---------------|-----------------|  
-|**0**|**未知**|未知 |  
-|**1**|**CPU**|SOS_SCHEDULER_YIELD|
+|**0**|**Unknown**|Unknown |  
+|**1**|CPU****|SOS_SCHEDULER_YIELD|
 |**2**|**工作线程**|THREADPOOL|
 |**3**|**住**|LCK_M_%|
 |**4**|**曾**|LATCH_%|
@@ -64,20 +64,20 @@ ms.locfileid: "74190374"
 |**7**|**汇编***|RESOURCE_SEMAPHORE_QUERY_COMPILE|
 |**8**|**SQL CLR**|CLR%，SQLCLR%|
 |**900**|**镜像**|DBMIRROR%|
-|**万**|**事务所**|事务%，DTC%，TRAN_MARKLATCH_%，MSQL_XACT_%，TRANSACTION_MUTEX|
-|**11**|**空闲**|SLEEP_%、LAZYWRITER_SLEEP、SQLTRACE_BUFFER_FLUSH、SQLTRACE_INCREMENTAL_FLUSH_SLEEP、SQLTRACE_WAIT_ENTRIES、FT_IFTS_SCHEDULER_IDLE_WAIT、XE_DISPATCHER_WAIT、REQUEST_FOR_DEADLOCK_SEARCH、LOGMGR_QUEUE、ONDEMAND_TASK_QUEUE、CHECKPOINT_队列，XE_TIMER_EVENT|
+|**10**|**事务**|事务%，DTC%，TRAN_MARKLATCH_%，MSQL_XACT_%，TRANSACTION_MUTEX|
+|**11**|**空闲**|SLEEP_%、LAZYWRITER_SLEEP、SQLTRACE_BUFFER_FLUSH、SQLTRACE_INCREMENTAL_FLUSH_SLEEP、SQLTRACE_WAIT_ENTRIES、FT_IFTS_SCHEDULER_IDLE_WAIT、XE_DISPATCHER_WAIT、REQUEST_FOR_DEADLOCK_SEARCH、LOGMGR_QUEUE、ONDEMAND_TASK_QUEUE、CHECKPOINT_QUEUE、XE_TIMER_EVENT|
 |**12**|**预防**|PREEMPTIVE_%|
 |**9**|**Service Broker**|BROKER_% **（但不 BROKER_RECEIVE_WAITFOR）**|
 |**14**|**事务日志 IO**|数据库准备、LOGBUFFER、LOGMGR_RESERVE_APPEND、LOGMGR_FLUSH、LOGMGR_PMM_LOG、CHKPT.、WRITELOG|
 |**15**|**网络 IO**|ASYNC_NETWORK_IO、NET_WAITFOR_PACKET、PROXY_NETWORK_IO EXTERNAL_SCRIPT_NETWORK_IOF|
-|**16**|**并行度**|CXPACKET、EXCHANGE、HT%、BMP%、BP%|
-|**17**|**内存**|RESOURCE_SEMAPHORE、CMEMTHREAD、CMEMPARTITIONED、EE_PMOLOCK、MEMORY_ALLOCATION_EXT、RESERVED_MEMORY_ALLOCATION_EXT、MEMORY_GRANT_UPDATE|
+|**超过**|**度**|CXPACKET、EXCHANGE、HT%、BMP%、BP%|
+|**11x17**|**内存**|RESOURCE_SEMAPHORE、CMEMTHREAD、CMEMPARTITIONED、EE_PMOLOCK、MEMORY_ALLOCATION_EXT、RESERVED_MEMORY_ALLOCATION_EXT、MEMORY_GRANT_UPDATE|
 |**18**|**用户等待**|WAITFOR、WAIT_FOR_RESULTS、BROKER_RECEIVE_WAITFOR|
 |**19**|**跟踪**|TRACEWRITE、SQLTRACE_LOCK、SQLTRACE_FILE_BUFFER、SQLTRACE_FILE_WRITE_IO_COMPLETION、SQLTRACE_FILE_READ_IO_COMPLETION、SQLTRACE_PENDING_BUFFER_WRITERS、SQLTRACE_SHUTDOWN、QUERY_TRACEOUT、TRACE_EVTNOTIFF|
 |**0.2**|**全文搜索**|FT_RESTART_CRAWL、全文收集、MSSEARCH、FT_METADATA_MUTEX、FT_IFTSHC_MUTEX、FT_IFTSISM_MUTEX、FT_IFTS_RWLOCK、FT_COMPROWSET_RWLOCK、FT_MASTER_MERGE、FT_PROPERTYLIST_CACHE、FT_MASTER_MERGE_COORDINATOR、PWAIT_RESOURCE_SEMAPHORE_FT_PARALLEL_QUERY_SYNC|
 |**21**|**其他磁盘 IO**|ASYNC_IO_COMPLETION、IO_COMPLETION、BACKUPIO、WRITE_COMPLETION、IO_QUEUE_LIMIT、IO_RETRY|
-|**22**|**复制**|SE_REPL_%，REPL_%，HADR_% **（但不 HADR_THROTTLE_LOG_RATE_GOVERNOR）**，PWAIT_HADR_%，REPLICA_WRITES，FCB_REPLICA_WRITE，FCB_REPLICA_READ，PWAIT_HADRSIM|
-|**23**|**日志速率调控器**|LOG_RATE_GOVERNOR、POOL_LOG_RATE_GOVERNOR、HADR_THROTTLE_LOG_RATE_GOVERNOR INSTANCE_LOG_RATE_GOVERNOR|
+|22 |**复制**|SE_REPL_%，REPL_%，HADR_% **（但不 HADR_THROTTLE_LOG_RATE_GOVERNOR）**，PWAIT_HADR_%，REPLICA_WRITES，FCB_REPLICA_WRITE，FCB_REPLICA_READ，PWAIT_HADRSIM|
+|23 |**日志速率调控器**|LOG_RATE_GOVERNOR、POOL_LOG_RATE_GOVERNOR、HADR_THROTTLE_LOG_RATE_GOVERNOR INSTANCE_LOG_RATE_GOVERNOR|
 
 当前不支持**编译**等待类别。
 
@@ -87,12 +87,12 @@ ms.locfileid: "74190374"
   
 ## <a name="see-also"></a>另请参阅
 
-- [sys. database_query_store_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
-- [sys. query_context_settings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)
-- [sys. query_store_plan &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)
-- [sys. query_store_query &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)
-- [sys. query_store_query_text &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)
-- [sys. query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)
-- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [sys.database_query_store_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
+- [sys.query_context_settings (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)
+- [sys.query_store_plan (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)
+- [sys.query_store_query (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)
+- [sys.query_store_query_text (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)
+- [sys.query_store_runtime_stats_interval (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)
+- [使用查询存储来监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
 - [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
 - [查询存储存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  

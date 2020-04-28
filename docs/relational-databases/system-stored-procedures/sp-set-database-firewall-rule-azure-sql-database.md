@@ -22,13 +22,13 @@ ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
 ms.openlocfilehash: dfe41ee68412414df24bc7f0bd583bbb0109b3db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74055091"
 ---
-# <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL Database)
+# <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   创建或更新的数据库级防火墙规则[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 可以为**master**数据库和上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]的用户数据库配置数据库防火墙规则。 使用包含的数据库用户时，数据库防火墙规则特别有用。 有关详细信息，请参阅 [包含的数据库用户 - 使你的数据库可移植](../../relational-databases/security/contained-database-users-making-your-database-portable.md)。  
@@ -61,7 +61,7 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
  如果添加的数据库级防火墙设置的起始和结束 IP 地址等于`0.0.0.0`，则可以从任何 Azure 资源中启用对[!INCLUDE[ssSDS](../../includes/sssds-md.md)]服务器中数据库的访问。 为*name*参数提供一个值，以帮助你记住防火墙设置的用途。  
   
 ## <a name="permissions"></a>权限  
- 需要针对数据库的 CONTROL 权限  。  
+ 需要对数据库具有**CONTROL**权限。  
   
 ## <a name="examples"></a>示例  
  以下代码创建了支持从 Azure 访问数据库的名为 `Allow Azure` 的数据库级防火墙设置。  

@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 143c37b6b55b96f8a0225c98db2212f07b2cd3a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400547"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>分析平台系统中的处理和存储容量
 你的业务要求确定了在分析平台系统（AP）设备中需要的数据缩放单位数和计算节点磁盘的大小。 使用这些处理和存储计算来指导你的容量采购和规划决策。  
   
   
-## <a name="section1"></a>规划处理能力  
+## <a name="planning-for-processing-capacity"></a><a name="section1"></a>规划处理能力  
 SQL Server 并行数据仓库（PDW）的查询性能很大程度上取决于并行处理数据的 CPU 内核数。 在限制范围内，增加并行度可提高大规模并行处理（MPP）查询性能。 即使您的数据大小相对较小，也通过具有更大的并行性来增强了 MPP 查询引擎的强大功能。  
   
 例如，具有12个计算节点的设备具有192个可并行处理数据的 CPU 内核。 这是192的并行度！ 具有56计算节点的设备有896个核心，它们都是并行运行的。 如果没有 MPP 计算，则无法实现这种并行度。  
@@ -48,7 +48,7 @@ SQL Server 并行数据仓库（PDW）的查询性能很大程度上取决于并
 |24|48|768|12288|20%|  
 |28|56|896|14336|17%|  
   
-做出  
+解释：  
   
 -   每个设备的**数据缩放单位**。 若要了解数据缩放单位，请参阅[分析平台系统硬件组件](hardware-components.md)。  
   
@@ -72,13 +72,13 @@ SQL Server 并行数据仓库（PDW）的查询性能很大程度上取决于并
 |5|15|240|3840|25%|  
 |6|18|288|4608|20%|  
 |7|21|336|5376|17%|  
-|8|24|384|6,144|毫米|  
+|8|24|384|6,144|14%|  
 |9|27|432|6912|13%|  
 |12|36|576|9216|33%|  
 |15|45|720|11520|25%|  
 |18|54|864|13824|20%|  
   
-## <a name="section2"></a>规划存储容量  
+## <a name="planning-for-storage-capacity"></a><a name="section2"></a>规划存储容量  
 此表估计，你可以将最多 6 pb 的未压缩数据加载并存储到完全构建的分析平台系统设备上。 
   
 |供应商|驱动器大小|每个计算节点的物理数据存储|每机架最大计算节点数|每机架的物理最大数据存储|估计每机架最大用户数据存储|最大机架|估计每个设备的最大用户数据存储|  
@@ -86,11 +86,11 @@ SQL Server 并行数据仓库（PDW）的查询性能很大程度上取决于并
 |HPE|1 TB|16 TB|8|128 TB|320 TB|7|2240 TB|  
 |HPE|2 TB|32 TB|8|256 TB|640 TB|7|4480 TB|  
 |HPE|4 TB|64 TB|8|512 TB|1280 TB|7|8960 TB|  
-|诊断|1 TB|16 TB|9|144 TB|360 TB|6|2160 TB|  
-|诊断|2 TB|32 TB|9|288 TB|720 TB|6|4320 TB|  
-|诊断|4 TB|64 TB|9|576 TB|1440 TB|6|8640 TB|   
+|DELL|1 TB|16 TB|9|144 TB|360 TB|6|2160 TB|  
+|DELL|2 TB|32 TB|9|288 TB|720 TB|6|4320 TB|  
+|DELL|4 TB|64 TB|9|576 TB|1440 TB|6|8640 TB|   
   
-做出  
+解释：  
   
 -   对于每个硬件供应商，**驱动器大小**为1、2或 4 TB。  
   

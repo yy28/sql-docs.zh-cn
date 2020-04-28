@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 457cc9b1aa1055992322fb34ccc95b042f167604
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74318986"
 ---
 # <a name="sql-samples"></a>SQL 示例
@@ -52,7 +52,7 @@ WideWorldImporters （WWI）是一个示例数据库，它使用当前功能、�
 在 Github 上的 .NET、Java、Python、node.js、PHP 和 Ruby 中提供了许多 Microsoft Azure 代码示例和示例。 此外，Azure 资源管理器允许使用声明性模板预配应用程序。 在单个模板中，可以部署多个服务及其依赖项。 在应用程序生命周期的每个阶段，可使用相同模板重复部署应用程序。
 
 - [Azure 示例](https://github.com/Azure-Samples)
-- [Azure 快速入门模板](https://azure.microsoft.com/resources/templates/)
+- [Azure 快速启动模板](https://azure.microsoft.com/resources/templates/)
 
 
 

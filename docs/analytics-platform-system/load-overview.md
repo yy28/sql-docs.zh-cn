@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd161820fd53d45642848697bce9589a98dec4ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401041"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>将数据加载到并行数据仓库
@@ -25,7 +25,7 @@ ms.locfileid: "74401041"
 ## <a name="load-with-dwloader"></a>用 dwloader 加载  
 使用[Dwloader 命令行加载程序](dwloader.md)是将数据加载到 PDW 的最快方法。  
   
-![加载进程](media/loading-process.png "加载进程")  
+![正在加载进程](media/loading-process.png "加载进程")  
   
 dwloader 将数据直接加载到计算节点，而无需通过控制节点传递数据。 若要加载数据，dwloader 首先与控制节点进行通信，以获取计算节点的联系信息。 dwloader 设置每个计算节点的通信通道，然后以循环方式将256KB 数据块发送到计算节点。  
   

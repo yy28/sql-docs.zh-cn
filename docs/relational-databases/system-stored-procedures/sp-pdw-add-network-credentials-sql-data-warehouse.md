@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 88ddae78b3c866556edbd9e3026e3cb86c747f51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73844412"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials （SQL 数据仓库）
@@ -62,7 +62,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
 ## <a name="general-remarks"></a>一般备注  
  此存储过程将向的 NetworkService 帐户添加网络凭据[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。 NetworkService 帐户在控制节点和计算节点[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上运行 SMP 的每个实例。 例如，在运行备份操作时，控制节点和每个计算节点将使用 NetworkService 帐户凭据获取目标服务器的读取和写入权限。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-add-credentials-for-performing-a-database-backup"></a>A. 添加用于执行数据库备份的凭据  
  下面的示例将域用户 seattle\david 的用户名和密码凭据与 IP 地址为10.172.63.255 的目标服务器相关联。 用户 seattle\david 对目标服务器具有读/写权限。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]将存储这些凭据，并根据备份和还原操作的需要，使用这些凭据在目标服务器上进行读取和写入。  

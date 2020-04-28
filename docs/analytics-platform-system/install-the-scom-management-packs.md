@@ -10,21 +10,21 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f3652b767f4628b61f5dd363999838418ff933aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401075"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>为分析平台系统安装 SQL Server Operations Manager （SCOM）管理包
 按照以下步骤下载并安装适用于 SQL Server PDW 的 System Center Operations Manager （SCOM）管理包。 从 SCOM 监视 SQL Server PDW 需要管理包。  
   
-## <a name="BeforeBegin"></a>开始之前  
+## <a name="before-you-begin"></a><a name="BeforeBegin"></a>开始之前  
 **先决条件**  
   
 必须安装并运行 System Center Operations Manager。 SQL Server PDW 2012 需要 System Center Operations Manager 2007 R2、System Center Operations Manager 2012 或 System Center Operations Manager 2012 Service Pack 1。  
   
-## <a name="Step1"></a>步骤1：下载管理包  
+## <a name="step-1-download-the-management-packs"></a><a name="Step1"></a>步骤1：下载管理包  
 对于 "AP PDW" 工作负荷，下载[适用于 Microsoft Analytics Platform System 的 System Center 管理包](https://go.microsoft.com/fwlink/?LinkId=396857)。  
   
 对于设备管理，请下载[SQL Server 设备基本管理包](https://docs.microsoft.com/previous-versions/system-center/packs/gg602398(v=technet.10))。  
@@ -33,7 +33,7 @@ ms.locfileid: "74401075"
   
 <!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
-## <a name="Step2"></a>步骤2：安装管理包  
+## <a name="step-2-install-the-management-packs"></a><a name="Step2"></a>步骤2：安装管理包  
   
 ### <a name="install-the-sql-server-appliance-base-management-pack"></a>安装 SQL Server 设备基本管理包  
   
@@ -47,11 +47,11 @@ ms.locfileid: "74401075"
   
     ![选择安装文件夹](./media/install-the-scom-management-packs/SCOM_licnse_agrmt2.png "SCOM_licnse_agrmt2")  
   
-4.  单击 **“安装”**。  
+4.  单击“安装”  。  
   
     ![确认安装](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
-5.  单击“关闭”  。  
+5.  单击“**关闭**”。  
   
     ![单击 "关闭"](./media/install-the-scom-management-packs/SCOM_licnse_agrmt4.png "SCOM_licnse_agrmt4")  
   
@@ -67,11 +67,11 @@ ms.locfileid: "74401075"
   
     ![选择安装文件夹](./media/install-the-scom-management-packs/SCOM_licnse_agmtB1.png "SCOM_licnse_agmtB1")  
   
-4.  单击 **“安装”**。  
+4.  单击“安装”  。  
   
     ![确认安装](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
-5.  单击“关闭”  。  
+5.  单击“**关闭**”。  
   
     ![安装完成](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   

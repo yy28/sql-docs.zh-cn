@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bcd980bb7fe77e2d207e568802dfd7e69e9a1484
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882119"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>指定项目类型（复制 Transact-SQL 编程）
@@ -34,7 +34,7 @@ ms.locfileid: "73882119"
   
 1.  在发布服务器上，对发布数据库执行 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)。 为 " ** \@类型**" 指定以下值之一以定义项目类型：  
   
-    -   **logbased** -基于日志的表项目，是事务复制和快照复制的默认值。 复制会自动生成用于水平筛选的存储过程和定义垂直筛选项目的视图。  
+    -   **logbased** - 基于日志的表项目，是事务复制和快照复制的默认值。 复制会自动生成用于水平筛选的存储过程和定义垂直筛选项目的视图。  
   
     -   **logbased manualfilter** -基于日志的水平筛选项目，其中用于水平筛选的存储过程由用户手动创建和定义，并指定为** \@filter**。 有关详细信息，请参阅 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "73882119"
      这样便为发布定义了一个新项目。 有关详细信息，请参阅 [定义项目](define-an-article.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+ [复制系统存储过程概念](../concepts/replication-system-stored-procedures-concepts.md)   
  [发布数据和数据库对象](publish-data-and-database-objects.md)  
   
   

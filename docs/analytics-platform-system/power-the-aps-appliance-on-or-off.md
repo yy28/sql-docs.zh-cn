@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ee70338b5a46ec60d808e489d982fd80692c5d1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400619"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>为分析平台系统开启或关闭设备
@@ -25,9 +25,9 @@ ms.locfileid: "74400619"
   
 可以使用分配给节点的 IP 地址，或通过使用**故障转移群集管理器**（**Cluadmin.msc**）或**hyper-v 管理器**（**virtmgmt**）应用程序的**HST01**计算机连接到 SQL Server PDW 节点，并右键单击节点名称。  
   
-## <a name="PowerOff"></a>关闭设备电源  
+## <a name="power-off-the-appliance"></a><a name="PowerOff"></a>关闭设备电源  
   
-### <a name="before-you-begin"></a>开始之前  
+### <a name="before-you-begin"></a>在开始之前  
 在关闭设备之前，应结束设备上的所有活动。 结束所有活动：  
   
 -   使用管理控制台的 "**会话**" 页可以识别当前用户。 与他们联系并要求他们注销。  
@@ -61,7 +61,7 @@ ms.locfileid: "74400619"
   
 9. 关闭配电装置（Pdu）。  
   
-## <a name="PowerOn"></a>开启设备  
+## <a name="power-on-the-appliance"></a><a name="PowerOn"></a>开启设备  
   
 ### <a name="to-power-on-the-appliance"></a>启用设备电源  
   

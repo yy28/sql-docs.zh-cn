@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f0abc089809e6b811f0ff64684bdaeed742ebcae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74190347"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "74190347"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar （60）**|等待类型的名称。 有关详细信息，请参阅本主题后面[等待类型](#WaitTypes)部分的内容。|  
+|wait_type|**nvarchar(60)**|等待类型的名称。 有关详细信息，请参阅本主题后面[等待类型](#WaitTypes)部分的内容。|  
 |waiting_tasks_count|**bigint**|该等待类型的等待数。 该计数器在每开始一个等待时便会增加。|  
 |wait_time_ms|**bigint**|该等待类型的总等待时间（毫秒）。 该时间包括 signal_wait_time_ms。|  
 |max_wait_time_ms|**bigint**|该等待类型的最长等待时间。|  
@@ -49,7 +49,7 @@ ms.locfileid: "74190347"
 在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要权限。   
 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层上，需要`VIEW DATABASE STATE`具有数据库中的权限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
-##  <a name="WaitTypes"></a>等待类型  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a>等待类型  
  **资源等待**当某个工作线程请求访问不可用的资源（因为该资源正在由其他某个工作线程使用，或者该资源尚不可用）时，便会发生资源等待。 资源等待的示例包括锁等待、闩锁等待、网络等待以及磁盘 I/O 等待。 锁等待和闩锁等待是指等待同步对象  
   
 **队列等待**  
@@ -58,8 +58,7 @@ ms.locfileid: "74190347"
  **外部等待**  
  当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作线程正在等待外部事件（如扩展存储过程调用或链接服务器查询）完成时，便会发生外部等待。 当诊断有妨碍的问题时，请记住，外部等待不会始终表示工作线程处于空闲状态，因为工作线程可能处于活动状态且正在运行某些外部代码。  
   
- 
-  `sys.dm_os_wait_stats` 显示已完成的等待时间。 此动态管理视图不显示当前等待。  
+ `sys.dm_os_wait_stats` 显示已完成的等待时间。 此动态管理视图不显示当前等待。  
   
  如果出现下列任一情况，则不认为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作线程处于等待状态：  
   
@@ -107,7 +106,7 @@ GO
 |AUDIT_LOGINCACHE_LOCK |当等待控制对某个特殊缓存的访问的锁时出现。 该缓存包含正在使用哪些审核来审核登录审核操作组的相关信息。| 
 |AUDIT_ON_DEMAND_TARGET_LOCK |当等待用于确保扩展事件目标相关审核的单一初始化的锁时出现。| 
 |AUDIT_XE_SESSION_MGR |当等待用于同步扩展事件会话相关审核的启动和停止的锁时出现。| 
-|备份 |当任务作为备份处理的一部分被阻止时出现。| 
+|BACKUP |当任务作为备份处理的一部分被阻止时出现。| 
 |BACKUP_OPERATOR |当任务正在等待磁带装入时出现。 若要查看磁带状态，请查询 sys.dm_io_backup_tapes。 如果装入操作没有挂起，则该等待类型可能指示磁带机发生硬件问题。| 
 |BACKUPBUFFER |在备份任务等待数据或等待用来存储数据的缓冲区时发生。 此类型不常见，只有当任务等待装入磁带时才会出现。| 
 |BACKUPIO |在备份任务等待数据或等待用来存储数据的缓冲区时发生。 此类型不常见，只有当任务等待装入磁带时才会出现。| 
@@ -183,7 +182,7 @@ GO
 |DBSEEDING_OPERATION |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |DEADLOCK_ENUM_MUTEX |在死锁监视器和 sys. dm_os_waiting_tasks 尝试确保 SQL Server 不同时运行多个死锁搜索时出现。| 
 |DEADLOCK_TASK_SEARCH |长时间等待此资源指示服务器正在 sys.dm_os_waiting_tasks 之上执行查询，并且这些查询正在阻止死锁监视器运行死锁搜索。 该等待类型仅供死锁监视器使用。 sys.dm_os_waiting_tasks 之上的查询使用 DEADLOCK_ENUM_MUTEX。| 
-|调试 |在 Transact-sql 和 CLR 调试内部同步期间出现。| 
+|DEBUG |在 Transact-sql 和 CLR 调试内部同步期间出现。| 
 |DIRECTLOGCONSUMER_LIST |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
 |DIRTY_PAGE_POLL |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |DIRTY_PAGE_SYNC |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
@@ -669,7 +668,7 @@ GO
 |PREEMPTIVE_OS_SETFILEVALIDDATA |仅限内部使用。| 
 |PREEMPTIVE_OS_SETNAMEDSECURITYINFO |仅限内部使用。| 
 |PREEMPTIVE_OS_SQLCLROPS |仅限内部使用。| 
-|PREEMPTIVE_OS_SQMLAUNCH |仅限内部使用。 <br /> **适用范围**： [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)]到[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]。 |  
+|PREEMPTIVE_OS_SQMLAUNCH |仅限内部使用。 <br /> **适用范围**： [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 到 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]。 |  
 |PREEMPTIVE_OS_VERIFYSIGNATURE |仅限内部使用。| 
 |PREEMPTIVE_OS_VERIFYTRUST |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
 |PREEMPTIVE_OS_VSSOPS |仅限内部使用。| 
@@ -835,7 +834,7 @@ GO
 |SERVER_RECONFIGURE |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 及更高版本。| 
 |SESSION_WAIT_STATS_CHILDREN |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
 |SHARED_DELTASTORE_CREATION |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
-|关机 |在关闭语句等待活动连接退出时出现。| 
+|SHUTDOWN |在关闭语句等待活动连接退出时出现。| 
 |SLEEP_BPOOL_FLUSH |当检查点为了避免磁盘子系统泛滥而中止新 I/O 的发布时出现。| 
 |SLEEP_BUFFERPOOL_HELPLW |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 及更高版本。| 
 |SLEEP_DBSTARTUP |在等待所有数据库恢复时数据库的启动期间出现。| 
@@ -936,7 +935,7 @@ GO
 |VIA_ACCEPT |当在启动过程中完成虚拟接口适配器 (VIA) 提供程序连接时出现。| 
 |VIEW_DEFINITION_MUTEX |在同步访问已缓存的视图定义期间出现。| 
 |WAIT_FOR_RESULTS |在等待查询通知触发时出现。| 
-|WAIT_ON_SYNC_STATISTICS_REFRESH |在等待同步统计信息更新完成后，查询编译和执行才能恢复之前发生。<br /> **适用**于：始于[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
+|WAIT_ON_SYNC_STATISTICS_REFRESH |在等待同步统计信息更新完成后，查询编译和执行才能恢复之前发生。<br /> **适用对象**：自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起|
 |WAIT_SCRIPTDEPLOYMENT_REQUEST |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |WAIT_SCRIPTDEPLOYMENT_WORKER |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。| 
 |WAIT_XLOGREAD_SIGNAL |仅限内部使用。 <br /> **适用于**：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 及更高版本。| 

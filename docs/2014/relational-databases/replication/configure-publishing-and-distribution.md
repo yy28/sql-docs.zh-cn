@@ -15,33 +15,33 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 905b1ceed2df8afc854ad38ee07d2b21596530f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882256"
 ---
 # <a name="configure-publishing-and-distribution"></a>配置发布和分发
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中配置发布和分发。  
   
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
  有关详细信息，请参阅[安全复制部署](security/view-and-modify-replication-security-settings.md)。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 可以使用新建发布向导或配置分发向导配置分发。 配置分发服务器后，在 "**分发服务器属性- \<分发服务器>** " 对话框中查看和修改属性。 如果要配置分发服务器以使 **db_owner** 固定数据库角色的成员可以创建发布，或者要配置一个非发布服务器的远程分发服务器，请使用配置分发向导。  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+ 可以使用新建发布向导或配置分发向导配置分发。 配置分发服务器后，查看并修改“分发服务器属性 - **分发服务器>”\<** 对话框中的属性。 如果要配置分发服务器以使 **db_owner** 固定数据库角色的成员可以创建发布，或者要配置一个非发布服务器的远程分发服务器，请使用配置分发向导。  
   
 #### <a name="to-configure-distribution"></a>配置分发  
   
-1.  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到将作为分发服务器的服务器（许多情况下，发布服务器和分发服务器是同一服务器），然后展开服务器节点。  
+1.  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，连接到将要作为分发服务器的服务器（许多情况下，发布服务器和分发服务器是同一服务器），然后展开该服务器节点。  
   
-2.  右键单击 **“复制”** 文件夹，然后单击 **“配置分发”**。  
+2.  右键单击 **“复制”** 文件夹，然后单击 **“配置分发”** 。  
   
 3.  随着配置分发向导执行下列操作：  
   
-    -   选择分发服务器。 若要使用本地分发服务器，请选择 **"\<ServerName>" 将充当自己的分发服务器;SQL Server 将创建分发数据库和日志**。 若要使用远程分发服务器，请选择 **“使用以下服务器作为分发服务器”**，再选择一个服务器。 该服务器必须已配置为分发服务器，并且启用发布服务器使用此分发服务器。 有关详细信息，请参阅[在分发服务器上启用远程发布服务器 (SQL Server Management Studio)](enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md)。  
+    -   选择分发服务器。 若要使用本地分发服务器，请选择 **"\<ServerName>" 将充当自己的分发服务器;SQL Server 将创建分发数据库和日志**。 若要使用远程分发服务器，请选择 **“使用以下服务器作为分发服务器”** ，再选择一个服务器。 该服务器必须已配置为分发服务器，并且启用发布服务器使用此分发服务器。 有关详细信息，请参阅[在分发服务器上启用远程发布服务器 (SQL Server Management Studio)](enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md)。  
   
          如果选择远程分发服务器，则必须在 **“管理密码”** 页上输入从发布服务器连接到分发服务器的密码。 此密码必须与在远程分发服务器上启用发布服务器时所指定的密码相匹配。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "73882256"
   
     -   还可以为配置设置编写脚本（可选）。 有关详细信息，请参阅 [Scripting Replication](scripting-replication.md)。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用复制存储过程以编程方式配置复制发布和分发。  
   
 #### <a name="to-configure-publishing-using-a-local-distributor"></a>使用本地分发服务器配置发布  
@@ -82,12 +82,12 @@ ms.locfileid: "73882256"
   
 4.  在发布服务器上执行 [sp_replicationdboption (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql)。 为 "数据库类型" 指定要** \@发布的数据库，为** ** \@optname**指定复制的类型，并将 " ** \@值**" 的值指定为 "true"。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  下面的示例说明了如何以编程方式配置发布和分发。 在本示例中，使用脚本变量提供要配置为发布服务器和本地分发服务器的服务器的名称。 可以使用复制存储过程以编程方式配置复制发布和分发。  
   
  [!code-sql[HowTo#AddDistPub](../../snippets/tsql/SQL15/replication/howto/tsql/adddistpub.sql#adddistpub)]  
   
-##  <a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> 使用复制管理对象 (RMO)  
   
 #### <a name="to-configure-publishing-and-distribution-on-a-single-server"></a>在单个服务器上配置发布和分发  
   
@@ -105,19 +105,15 @@ ms.locfileid: "73882256"
   
 7.  设置 <xref:Microsoft.SqlServer.Replication.DistributionPublisher>的以下属性：  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A>-发布服务器的名称。  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> - 发布服务器的名称。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> - 在步骤 5 中创建的数据库的名称。  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> - 在步骤 5 中创建的数据库的名称。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> - 用于访问快照文件的共享目录。  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> - 用于访问快照文件的共享目录。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> - 连接到发布服务器时使用的安全模式。 建议使用<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 。  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> - 连接到发布服务器时使用的安全模式。 建议使用<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 。  
   
 8.  调用 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A> 方法。  
   
@@ -134,26 +130,21 @@ ms.locfileid: "73882256"
 5.  通过调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 方法安装分布服务器。 指定安全密码（在连接到远程分发服务器时由发布服务器使用）和步骤 3 中的 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 对象。 有关详细信息，请参阅[保护分发服务器的安全](security/secure-the-distributor.md)。  
   
     > [!IMPORTANT]  
-    >  如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) Cryptographic Services [!INCLUDE[msCoName](../../includes/msconame-md.md)] （加密服务）。  
+    >  如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework 提供的[加密服务](https://go.microsoft.com/fwlink/?LinkId=34733)。  
   
 6.  创建的 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 类的实例。  
   
 7.  设置 <xref:Microsoft.SqlServer.Replication.DistributionPublisher>的以下属性：  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> - 本地发布服务器的名称。  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> - 本地发布服务器的名称。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> - 在步骤 5 中创建的数据库的名称。  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> - 在步骤 5 中创建的数据库的名称。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> - 用于访问快照文件的共享目录。  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> - 用于访问快照文件的共享目录。  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> - 连接到发布服务器时使用的安全模式。 建议使用<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 。  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> - 连接到发布服务器时使用的安全模式。 建议使用<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 。  
   
 8.  调用 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A> 方法。  
   
@@ -164,9 +155,9 @@ ms.locfileid: "73882256"
 11. 调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> 方法。 传递远程分发服务器的名称和在步骤 5 中指定的远程分发服务器的密码。  
   
     > [!IMPORTANT]  
-    >  如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 Windows .NET Framework 提供的[加密服务](https://go.microsoft.com/fwlink/?LinkId=34733)。  
+    >  如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 Windows .NET Framework 提供的 [Cryptographic Services](https://go.microsoft.com/fwlink/?LinkId=34733) （加密服务）。  
   
-###  <a name="PShellExample"></a> 示例 (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a>示例（RMO）  
  可以通过使用复制管理对象 (RMO) 以编程方式配置复制发布和分发。  
   
  [!code-csharp[HowTo#rmo_AddDistPub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_adddistpub)]  
@@ -175,9 +166,9 @@ ms.locfileid: "73882256"
   
 ## <a name="see-also"></a>另请参阅  
  [查看和修改分发服务器和发布服务器属性](view-and-modify-distributor-and-publisher-properties.md)   
- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
- [“配置分发”](configure-distribution.md)   
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
+ [复制系统存储过程概念](concepts/replication-system-stored-procedures-concepts.md)   
+ [配置分发](configure-distribution.md)   
+ [复制管理对象概念](concepts/replication-management-objects-concepts.md)   
  [为 AlwaysOn 可用性组 &#40;SQL Server 配置复制&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) 
   
   

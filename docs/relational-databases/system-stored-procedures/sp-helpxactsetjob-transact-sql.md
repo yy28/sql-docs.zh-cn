@@ -16,10 +16,10 @@ ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0fdd70480a63e334aa3e178d19287b30937e2f53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056787"
 ---
 # <a name="sp_helpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
@@ -48,7 +48,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 |**thisdate**|**varchar （22）**|更改的时间。|  
 |**nextdate**|**varchar （22）**|作业将要运行的下一个日期。|  
 |**broken**|**varchar(1)**|指示作业是否中断的标志。|  
-|**间隔**|**varchar （200）**|作业的间隔。|  
+|**interval**|**varchar （200）**|作业的间隔。|  
 |**故障**|**int**|作业失败的次数。|  
 |**xactsetjobwhat**|**varchar （200）**|作业执行的过程的名称。|  
 |**xactsetjob**|**varchar(1)**|作业的状态，可以是以下状态之一：<br /><br /> **1** -作业已启用。<br /><br /> **0** -作业已禁用。|  

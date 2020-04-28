@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d14714cb23a9f6b0d6cc63ddca5049cb6741017c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399447"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>分析平台系统中的工作负荷管理
@@ -28,7 +28,7 @@ SQL Server PDW 的工作负荷管理功能，用户和管理员可以将请求�
   
 -   排查速度较慢的哈希联接的问题，以查看它是否需要更多内存，并为其分配更多内存。  
   
-## <a name="Basics"></a>工作负荷管理基础知识  
+## <a name="workload-management-basics"></a><a name="Basics"></a>工作负荷管理基础知识  
   
 ### <a name="key-terms"></a>主要术语  
 工作负荷管理  
@@ -55,13 +55,13 @@ For examples, see [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../s
 ALTER SERVER ROLE largerc ADD MEMBER Anna;  
 ```  
   
-## <a name="RC"></a>资源类说明  
+## <a name="resource-class-descriptions"></a><a name="RC"></a>资源类说明  
 下表描述了资源类及其系统资源分配。  
   
 |资源类|请求重要性|最大内存使用量 *|并发槽（最大 = 32）|说明|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
-|default|中型|400 MB|1|默认情况下，每个登录名都允许使用少量的内存和并发资源来处理其请求。<br /><br />将登录名添加到资源类后，新类优先。 从所有资源类中删除某个登录名后，该登录名将恢复为默认的资源分配。|  
-|MediumRC|中型|1200 MB|3|可能需要中型资源类的请求示例：<br /><br />具有大型哈希联接的 CTAS 操作。<br /><br />选择需要更多内存以避免缓存到磁盘的操作。<br /><br />将数据加载到聚集列存储索引。<br /><br />为包含10-15 列的较小表生成、重新生成和重新组织聚集列存储索引。|  
+|default|中|400 MB|1|默认情况下，每个登录名都允许使用少量的内存和并发资源来处理其请求。<br /><br />将登录名添加到资源类后，新类优先。 从所有资源类中删除某个登录名后，该登录名将恢复为默认的资源分配。|  
+|MediumRC|中|1200 MB|3|可能需要中型资源类的请求示例：<br /><br />具有大型哈希联接的 CTAS 操作。<br /><br />选择需要更多内存以避免缓存到磁盘的操作。<br /><br />将数据加载到聚集列存储索引。<br /><br />为包含10-15 列的较小表生成、重新生成和重新组织聚集列存储索引。|  
 |Largerc|高|2.8 GB|7|可能需要大型资源类的请求示例：<br /><br />非常大的 CTAS 操作，这些操作具有巨大的哈希联接，或包含大型聚合，如大的 ORDER BY 或 GROUP BY 子句。<br /><br />选择需要大量内存来执行哈希联接或聚合（如 ORDER BY 或 GROUP BY 子句）的操作<br /><br />将数据加载到聚集列存储索引。<br /><br />为包含10-15 列的较小表生成、重新生成和重新组织聚集列存储索引。|  
 |xlargerc|高|8.4 GB|22|特大资源类适用于在运行时可能需要额外大资源消耗的请求。|  
   
@@ -98,7 +98,7 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
   
 在每个资源类中，请求先以先进先出（FIFO）的顺序运行。  
   
-## <a name="GeneralRemarks"></a>一般备注  
+## <a name="general-remarks"></a><a name="GeneralRemarks"></a>一般备注  
 如果登录名是多个资源类的成员，则具有最多资源的类优先。  
   
 当向资源类添加登录名或从中删除登录名时，更改会立即对所有将来的请求生效;当前正在运行或等待的请求不受影响。 登录无需断开连接和重新连接才能发生更改。  
@@ -137,10 +137,10 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
   
 -   选择，排除仅 DMV 查询  
   
-## <a name="Limits"></a>限制和限制  
+## <a name="limitations-and-restrictions"></a><a name="Limits"></a>限制和局限  
 资源类控制内存和并发分配。  它们不管理输入/输出操作。  
   
-## <a name="Metadata"></a>元数据  
+## <a name="metadata"></a><a name="Metadata"></a>元数据  
 Dmv，其中包含有关资源类和资源类成员的信息。  
   
 -   [sys.server_role_members](../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
@@ -177,7 +177,7 @@ Dmv，其中包含请求的状态及其所需资源的信息：
   
 -   sys.dm_pdw_nodes_exec_cached_plans  
   
-## <a name="RelatedTasks"></a>相关任务  
+## <a name="related-tasks"></a><a name="RelatedTasks"></a>Related Tasks  
 [工作负荷管理任务](workload-management-tasks.md)  
   
 <!-- MISSING LINKS
