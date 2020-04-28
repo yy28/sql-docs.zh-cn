@@ -16,17 +16,17 @@ ms.assetid: 4dd7e82a-8da5-4a4e-b439-11a29286fa0e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c0288dde74d2a172c9b0f8bdb865f4467fb0f637
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919729"
 ---
 # <a name="commandtext-property-ado"></a>CommandText 属性 (ADO)
 指示要对提供程序发出的命令的文本。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 获取或设置一个**字符串**值，该值包含提供程序命令，如 SQL 语句、表名、相对 URL 或存储过程调用。 默认值为空字符串（""）。  
+ 获取或设置一个**字符串**值，该值包含提供程序命令，如 SQL 语句、表名、相对 URL 或存储过程调用。 默认为空字符串 ("")。  
   
 ## <a name="remarks"></a>备注  
  使用**CommandText**属性可以设置或返回[命令](../../../ado/reference/ado-api/command-object-ado.md)对象表示的命令的文本。 通常，这将是一条 SQL 语句，但也可以是提供程序所识别的任何其他类型的命令语句，如存储过程调用。 SQL 语句必须是提供程序的查询处理器支持的特定方言或版本。  

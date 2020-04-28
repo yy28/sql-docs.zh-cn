@@ -18,10 +18,10 @@ ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b744dbd464aedbd9b87d22aa74277787fcc3c7a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925040"
 ---
 # <a name="how-event-handlers-work-together"></a>事件处理程序的协同工作原理
@@ -30,7 +30,7 @@ ms.locfileid: "67925040"
 ## <a name="paired-event-handlers"></a>配对事件处理程序  
  每个都将有一个关联的**完整**事件处理程序。 例如，当应用程序更改字段的值时，将调用**WillChangeField**事件处理程序。 如果更改是可接受的，则应用程序保持**adStatus**参数不变，并执行操作。 操作完成后， **FieldChangeComplete**事件会通知应用程序操作已完成。 如果成功完成， **adStatus**将包含**adStatusOK**;否则， **adStatus**将包含**adStatusErrorsOccurred** ，必须检查**错误**对象以确定错误的原因。  
   
- 调用**WillChangeField**时，你可能会确定不应进行此更改。 在这种情况下，将**adStatus**设置为**adStatusCancel。** 操作已取消， **FieldChangeComplete**事件接收到**adStatusErrorsOccurred**的**adStatus**值。 **Error**对象包含**AdErrOperationCancelled** ，以便**FieldChangeComplete**处理程序知道该操作已取消。 但是，您需要在更改**adStatus**参数之前检查其值，因为如果将**adStatus** **设置为 "** adStatusCantDeny"，则将该参数设置为 " **** " 时，不会产生任何影响。  
+ 调用**WillChangeField**时，你可能会确定不应进行此更改。 在这种情况下，将**adStatus**设置为**adStatusCancel。** 操作已取消， **FieldChangeComplete**事件接收到**adStatusErrorsOccurred**的**adStatus**值。 **Error**对象包含**AdErrOperationCancelled** ，以便**FieldChangeComplete**处理程序知道该操作已取消。 但是，您需要在更改**adStatus**参数之前检查其值，因为如果将**adStatus** **设置为 "** adStatusCantDeny"，则将该参数设置为 " **adStatusCantDeny** " 时，不会产生任何影响。  
   
  有时操作可能会引发多个事件。 例如， **Recordset**对象具有对**字段**更改和**记录**更改的成对事件。 当应用程序更改**字段**的值时，将调用**WillChangeField**事件处理程序。 如果它确定操作可以继续，则也会引发**WillChangeRecord**事件处理程序。 如果此处理程序还允许事件继续，则会进行更改并调用**FieldChangeComplete**和**RecordChangeComplete**事件处理程序。 为特定操作调用事件处理程序的顺序未定义，因此应避免编写依赖于按特定顺序调用处理程序的代码。  
   

@@ -15,10 +15,10 @@ ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 19d719ddb4e5a2f7851a1d12dc4abe69069a354f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926755"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>用于 Internet 发布的 Microsoft OLE DB 提供程序概述
@@ -40,7 +40,7 @@ MSDAIPP.DSO
 "Provider=MSDAIPP.DSO;Data Source=ResourceURL;User ID=MyUserID;Password=MyPassword;"
 ```
 
- -或-
+ \- 或 -
 
 ```vb
 "URL=ResourceURL;User ID=MyUserID;Password=MyPassword;"
@@ -53,7 +53,7 @@ MSDAIPP.DSO
 |**提供程序**|指定用于 Internet 发布的 OLE DB 提供程序。|
 |**数据源**或- **URL**|指定在 Web 文件夹中发布的文件或目录的 URL。|
 |**用户 ID**|指定用户名。|
-|**权限**|指定用户密码。|
+|**密码**|指定用户密码。|
 
 > [!NOTE]
 >  如果要连接到支持 Windows 身份验证的数据源提供程序，应在连接字符串中指定**Trusted_Connection = yes**或**集成安全性 = SSPI**而不是用户 ID 和密码信息。

@@ -14,10 +14,10 @@ ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5ecc6de67defb2366bf208c38bd2de5bff643e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920901"
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO 对象和接口
@@ -31,15 +31,15 @@ ms.locfileid: "67920901"
 |[ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md)|从 C/c + + 应用程序中的 OLE DB**行**对象构造 ADO**记录**对象。|  
 |[ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)|从 C/c + + 应用程序中的 OLE DB**行**集对象构造 ADO**记录集**对象。|  
 |[ADOStreamConstruction 接口](../../../ado/reference/ado-api/adostreamconstruction-interface.md)|从 C/c + + 应用程序中的 OLE DB **IStream**对象构造 ADO**流**对象。|  
-|[Command](../../../ado/reference/ado-api/command-object-ado.md)|定义要对数据源执行的特定命令。<br /><br /> **命令**对象对于脚本编写是不安全的。|  
-|[连接](../../../ado/reference/ado-api/connection-object-ado.md)|表示与数据源的打开的连接。<br /><br /> **连接**对象对于脚本是安全的。|  
+|[命令](../../../ado/reference/ado-api/command-object-ado.md)|定义要对数据源执行的特定命令。<br /><br /> **命令**对象对于脚本编写是不安全的。|  
+|[连接](../../../ado/reference/ado-api/connection-object-ado.md)|表示到数据源的连接是打开的。<br /><br /> **连接**对象对于脚本是安全的。|  
 |[IDSOShapeExtensions 接口](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)|获取形状提供程序的基础 OLEDB 数据源对象。|  
 |[错误](../../../ado/reference/ado-api/error-object.md)|包含有关与涉及提供程序的单个操作相关的数据访问错误的详细信息。<br /><br /> **错误**对象对于脚本编写是不安全的。|  
 |[字段](../../../ado/reference/ado-api/field-object.md)|表示数据类型为通用数据类型的列。|  
 |[参数](../../../ado/reference/ado-api/parameter-object.md)|表示基于参数化查询或存储过程与**命令**对象关联的参数或参数。<br /><br /> **参数**对象对于脚本编写是不安全的。|  
 |[属性](../../../ado/reference/ado-api/property-object-ado.md)|表示由提供程序定义的 ADO 对象的动态特性。|  
-|[Record](../../../ado/reference/ado-api/record-object-ado.md)|表示**记录集**的一行或文件系统中的目录或文件。 **记录**对象对于脚本是安全的。|  
-|[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)|表示基表中的记录集或执行的命令的结果。 **记录集**对象随时仅指集内的单个记录作为当前记录。<br /><br /> 对于脚本编写， **Recordset**对象是安全的。|  
+|[记录](../../../ado/reference/ado-api/record-object-ado.md)|表示**记录集**的一行或文件系统中的目录或文件。 **记录**对象对于脚本是安全的。|  
+|[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|表示基表中的记录集或执行的命令的结果。 **记录集**对象随时仅指集内的单个记录作为当前记录。<br /><br /> 对于脚本编写， **Recordset**对象是安全的。|  
 |[流](../../../ado/reference/ado-api/stream-object-ado.md)|表示数据的二进制流。<br /><br /> **流式**处理对象是安全的。|  
   
 ## <a name="see-also"></a>另请参阅  

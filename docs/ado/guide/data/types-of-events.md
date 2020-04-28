@@ -17,14 +17,14 @@ ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c02d8d115a4336470c0e0d32aebabea63c05ab0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923816"
 ---
 # <a name="types-of-events"></a>事件类型
-事件有两种基本类型。 "将在操作开始之前调用的" 事件 "，通常在其名称中包括" WillChangeRecordset "，例如，" **** "或" **WillConnect**"。 在事件完成后调用的事件通常会在其名称中包括 "Complete" （例如， **RecordChangeComplete**或**ConnectComplete**）。 存在异常（如**InfoMessage** ），但会在关联的操作完成后发生。  
+事件有两种基本类型。 "将在操作开始之前调用的" 事件 "，通常在其名称中包括" WillChangeRecordset "，例如，" **WillChangeRecordset** "或" **WillConnect**"。 在事件完成后调用的事件通常会在其名称中包括 "Complete" （例如， **RecordChangeComplete**或**ConnectComplete**）。 存在异常（如**InfoMessage** ），但会在关联的操作完成后发生。  
   
 ## <a name="will-events"></a>将事件  
  在操作开始之前调用的事件处理程序提供了检查或修改操作参数的机会，然后取消操作或允许其完成。 这些事件处理程序例程通常具有形式为<strong>*事件*</strong>的名称。  

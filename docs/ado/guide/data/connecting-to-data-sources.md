@@ -13,10 +13,10 @@ ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 000302715e7ce7d3a8ae53f06d61f54e98cbd883
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925790"
 ---
 # <a name="connecting-to-data-sources"></a>连接到数据源
@@ -26,7 +26,7 @@ ADO**连接**对象表示与数据源的唯一会话，包括 DBMS、文件存�
   
  您可以通过使用**连接**对象或通过使用**记录集**对象来连接到数据源。  
   
- 本部分包含下列主题。  
+ 本部分包含以下主题。  
   
 -   [使用连接对象](../../../ado/guide/data/using-a-connection-object.md)  
   

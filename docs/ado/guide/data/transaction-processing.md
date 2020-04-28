@@ -16,10 +16,10 @@ ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cab6638704856baf873274807c0e2eff9a1f92d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923863"
 ---
 # <a name="transaction-processing"></a>事务处理
@@ -44,4 +44,4 @@ ms.locfileid: "67923863"
  使用**IsolationLevel**属性可以设置**连接**对象上事务的隔离级别。 直到下一次调用[BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法时，此设置才会生效。 如果请求的隔离级别不可用，则提供程序可能返回下一个更高的隔离级别。 有关有效值的详细信息，请参阅 ADO 程序员参考中的**IsolationLevel**属性。  
   
 ## <a name="nested-transactions"></a>嵌套事务  
- 对于支持嵌套事务的提供程序，在打开的事务内调用**BeginTrans**方法将启动一个新的嵌套事务。 返回值指示嵌套的级别：返回值为 "1" 表示已打开顶级事务（也就是说，事务未嵌套在另一个事务中），"2" 表示已打开二级事务（嵌套在顶级事务中的事务等。 调用**CommitTrans**或**RollbackTrans**只会影响最近打开的事务;必须先关闭或回滚当前事务，然后才能解析任何更高级别的事务。
+ 对于支持嵌套事务的提供程序，在打开的事务内调用**BeginTrans**方法将启动一个新的嵌套事务。 返回值指示嵌套的级别：返回值为 "1" 表示已打开顶级事务（也就是说，事务未嵌套在另一个事务中），"2" 表示您已经打开了二级事务（嵌套在顶级事务中的事务）等。 调用**CommitTrans**或**RollbackTrans**只会影响最近打开的事务;必须先关闭或回滚当前事务，然后才能解析任何更高级别的事务。

@@ -16,10 +16,10 @@ ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71bc18b13061b844b35314239ffe4973155a0c87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920726"
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>Append 和 CreateParameter 方法示例（JScript）
@@ -146,4 +146,4 @@ body {
  [CreateParameter 方法（ADO）](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Field 对象](../../../ado/reference/ado-api/field-object.md)   
  [Fields 集合（ADO）](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Parameter 对象](../../../ado/reference/ado-api/parameter-object.md)
+ [参数对象](../../../ado/reference/ado-api/parameter-object.md)

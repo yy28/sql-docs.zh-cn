@@ -15,10 +15,10 @@ ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924147"
 ---
 # <a name="shape-compute-clause"></a>Shape COMPUTE 子句
@@ -69,7 +69,7 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders
   
  不管父**记录集**的构成方式（使用计算或使用追加），它都将包含一个用于将其与子**记录集**相关联的章节列。 如果需要，父**记录集**还可以包含子行中包含聚合（SUM、MIN、MAX 等）的列。 父**记录集和子记录集**都可能包含列，这些列包含**记录集中**行的表达式，还包含新的和初始为空的列。  
   
-## <a name="operation"></a>Operation  
+## <a name="operation"></a>操作  
  向提供程序发送*子命令*，后者返回子**记录集**。  
   
  COMPUTE 子句指定父**记录集**的列，可能是对子**记录集**的引用、一个或多个聚合、一个计算表达式或新列。 如果有 BY 子句，则它定义的列也会附加到父**记录集**。 BY 子句指定如何对子**记录集**的行进行分组。  
@@ -78,13 +78,13 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders
   
 |状态|城市|人口数|  
 |-----------|----------|----------------|  
-|WA|西雅图|700000|  
-|或|Medford|200,000|  
-|或|Portland|400,000|  
-|CA|洛杉矶|800000|  
+|WA|Seattle|700000|  
+|OR|Medford|200,000|  
+|OR|Portland|400,000|  
+|CA|Los Angeles|800000|  
 |CA|San Diego|600000|  
 |WA|Tacoma|500,000|  
-|或|Corvallis|300,000|  
+|OR|Corvallis|300,000|  
   
  现在，请发出以下 shape 命令：  
   
@@ -108,29 +108,29 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |---------------------------|--------|-----------|  
 |1300000|对 child1 的引用|CA|  
 |1200000|对 child2 的引用|WA|  
-|1100000|对 child3 的引用|或|  
+|1100000|对 child3 的引用|OR|  
   
 ## <a name="child1"></a>Child1  
   
 |状态|城市|人口数|  
 |-----------|----------|----------------|  
-|CA|洛杉矶|800000|  
+|CA|Los Angeles|800000|  
 |CA|San Diego|600000|  
   
-## <a name="child2"></a>Child2 的子磁盘）  
+## <a name="child2"></a>Child2  
   
 |状态|城市|人口数|  
 |-----------|----------|----------------|  
-|WA|西雅图|700000|  
+|WA|Seattle|700000|  
 |WA|Tacoma|500,000|  
   
 ## <a name="child3"></a>Child3  
   
 |状态|城市|人口数|  
 |-----------|----------|----------------|  
-|或|Medford|200,000|  
-|或|Portland|400,000|  
-|或|Corvallis|300,000|  
+|OR|Medford|200,000|  
+|OR|Portland|400,000|  
+|OR|Corvallis|300,000|  
   
 ## <a name="see-also"></a>另请参阅  
  [访问分层记录集中的行](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   

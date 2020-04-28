@@ -16,10 +16,10 @@ ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63323fd8ed18f57a68633dce0525d1d37e4978ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924709"
 ---
 # <a name="persisting-data"></a>保留数据
@@ -113,7 +113,7 @@ Destination, PersistFormat
 ```  
   
 ## <a name="remarks"></a>备注  
- 本部分包含下列主题。  
+ 本部分包含以下主题。  
   
 -   [更多有关记录集暂留的信息](../../../ado/guide/data/more-about-recordset-persistence.md)  
   

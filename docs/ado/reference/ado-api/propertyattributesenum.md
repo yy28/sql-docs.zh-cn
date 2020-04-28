@@ -16,16 +16,16 @@ ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 624fa1976792a700342a114f82aa5ca6b75c70ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931560"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
 指定[属性](../../../ado/reference/ado-api/property-object-ado.md)对象的特性。  
   
-|一直|值|说明|  
+|Constant|值|说明|  
 |--------------|-----------|-----------------|  
 |**adPropNotSupported**|0|指示该提供程序不支持该属性。|  
 |**adPropRequired**|1|指示在初始化数据源之前，用户必须为此属性指定一个值。|  
@@ -36,7 +36,7 @@ ms.locfileid: "67931560"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
   
-|一直|  
+|Constant|  
 |--------------|  
 |AdoEnums. PropertyAttributes. NOTSUPPORTED|  
 |AdoEnums. PropertyAttributes. 必需|  

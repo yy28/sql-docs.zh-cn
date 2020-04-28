@@ -14,26 +14,26 @@ ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 16ff3c926b1c0457f0f0dda382881aad45fb4efd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928504"
 ---
 # <a name="adox-objects"></a>ADOX 对象
 ## <a name="adox-object-summary"></a>ADOX 对象摘要  
   
-|Object|说明|  
+|对象|说明|  
 |------------|-----------------|  
 |[目录](../../../ado/reference/adox-api/catalog-object-adox.md)|包含描述数据源的架构目录的集合。|  
 |[列](../../../ado/reference/adox-api/column-object-adox.md)|表示表、索引或键中的列。|  
 |[组](../../../ado/reference/adox-api/group-object-adox.md)|表示在受保护的数据库中具有访问权限的组帐户。|  
-|[编入](../../../ado/reference/adox-api/index-object-adox.md)|表示数据库表中的索引。|  
-|[Key](../../../ado/reference/adox-api/key-object-adox.md)|表示数据库表中的主键或唯一键字段。|  
+|[索引](../../../ado/reference/adox-api/index-object-adox.md)|表示数据库表中的索引。|  
+|[密钥](../../../ado/reference/adox-api/key-object-adox.md)|表示数据库表中的主键或唯一键字段。|  
 |[方法](../../../ado/reference/adox-api/procedure-object-adox.md)|表示存储过程。|  
-|[表](../../../ado/reference/adox-api/table-object-adox.md)|表示数据库表，其中包括列、索引和键。|  
+|[数据表](../../../ado/reference/adox-api/table-object-adox.md)|表示数据库表，其中包括列、索引和键。|  
 |[用户](../../../ado/reference/adox-api/user-object-adox.md)|表示在受保护的数据库中具有访问权限的用户帐户。|  
-|[视图](../../../ado/reference/adox-api/view-object-adox.md)|表示一组筛选的记录或虚拟表。|  
+|[查看](../../../ado/reference/adox-api/view-object-adox.md)|表示一组筛选的记录或虚拟表。|  
   
  [ADOX 对象模型](../../../ado/reference/adox-api/adox-object-model.md)中阐释了这些对象之间的关系。  
   

@@ -14,10 +14,10 @@ ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e7e5b9a973e5ccf04f92a2162d88ee25b7fa5242
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926796"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>OLE DB 的 Microsoft 游标服务概述
@@ -63,7 +63,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 |缓存子行（DBPROP_ADC_CACHECHILDROWS）|对于使用数据定形服务创建的记录集，此值指示子记录集是否存储在缓存中供以后使用。|
 |游标引擎版本（DBPROP_ADC_CEVER）|指示所使用的游标服务的版本。|
 |维护更改状态（DBPROP_ADC_MAINTAINCHANGESTATUS）|指示用于在多表联接中重新同步一个或多个行的命令文本。|
-|[平台](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|指示是否应创建索引。 如果设置为**True**，则会授权创建索引的临时创建，以改进特定操作的执行。|
+|[优化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|指示是否应创建索引。 如果设置为**True**，则会授权创建索引的临时创建，以改进特定操作的执行。|
 |[调整名称](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|指示**记录集**的名称。 可在当前的或后续的数据定形命令内引用。|
 |[重新同步命令](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|指示当[Unique Table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)属性有效时， [Resync](../../../ado/reference/ado-api/resync-method.md)方法使用的自定义命令字符串。|
 |[唯一目录](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|指示包含**唯一表**属性中引用的表的数据库的名称。|

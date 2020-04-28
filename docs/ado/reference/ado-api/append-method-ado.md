@@ -16,10 +16,10 @@ ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 17fa0ff30e8dcdbf7ea67080f17c3e066bba8605
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920675"
 ---
 # <a name="append-method-ado"></a>Append 方法 (ADO)
@@ -33,26 +33,26 @@ collection.Append object
 fields.Append Name, Type, DefinedSize, Attrib, FieldValue  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *集合*  
  集合对象。  
   
- *区域*  
+ *字段*  
  **字段**集合。  
   
- *对象*  
+ *object*  
  一个对象变量，表示要追加的对象。  
   
  *名称*  
  一个包含新**字段**对象名称的**字符串**值，不能与*字段*中的任何其他对象同名。  
   
- 类型   
+ *类型*  
  一个[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)值，其默认值为**adEmpty**，指定新字段的数据类型。 ADO 不支持以下数据类型，在将新字段追加到[Recordset 对象（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)时不应使用这些数据类型： **adIDispatch**、 **adIUnknown**、 **adVariant**。  
   
  *DefinedSize*  
  可选。 一个**长整型**值，表示新字段的定义的大小（以字符或字节为单位）。 此参数的默认值是从*类型*派生的。 具有大于255字节的*DefinedSize*的字段将被视为可变长度列。 未指定*DefinedSize*的默认值。  
   
- *Attrib*  
+ *恶性*  
  可选。 一个[FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md)值，其默认值为**adFldDefault**，用于指定新字段的特性。 如果未指定此值，则字段将包含派生自*类型*的特性。  
   
  *FieldValue*  

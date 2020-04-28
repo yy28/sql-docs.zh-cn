@@ -14,10 +14,10 @@ ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d568ca20cca6c12a04c0f3d54a2c134d59a0d7fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67930577"
 ---
 # <a name="ado-md-objects"></a>ADO MD 对象
@@ -26,20 +26,20 @@ ms.locfileid: "67930577"
 |-|-|  
 |[轴](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|表示单元集的位置或筛选轴，其中包含一个或多个维度的选定成员。|  
 |[目录](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|包含特定于多维数据访问接口（MDP）的多维架构信息（即多维数据集和基础维度、层次结构、级别和成员）。|  
-|[单元](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|表示轴坐标相交处的数据，该数据集包含在单元集中。|  
+|[芯](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|表示轴坐标相交处的数据，该数据集包含在单元集中。|  
 |[格](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|表示多维查询的结果。 它是从多维数据集或其他单元集选择的单元的集合。|  
 |[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|表示多维架构中的一个多维数据集，其中包含一组相关的维度。|  
 |[维度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|表示多维数据集的一个维度，其中包含一个或多个成员的层次结构。|  
 |[层次结构](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|表示一个维度成员可以聚合或 "汇总" 的方式。 可以在一个或多个层次结构上聚合维度。|  
-|[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)|包含一组成员，其中每个成员在层次结构中具有相同的级别。|  
-|[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)|表示多维数据集中某一级别的成员、某一级别的某个成员的子级或沿某个单元集的一个位置的成员。|  
-|[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)|表示一个或多个不同维度的成员的集合，这些成员定义沿轴的点。|  
+|[Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)|包含一组成员，其中每个成员在层次结构中具有相同的级别。|  
+|[职员](../../../ado/reference/ado-md-api/member-object-ado-md.md)|表示多维数据集中某一级别的成员、某一级别的某个成员的子级或沿某个单元集的一个位置的成员。|  
+|[置于](../../../ado/reference/ado-md-api/position-object-ado-md.md)|表示一个或多个不同维度的成员的集合，这些成员定义沿轴的点。|  
   
  此外，**目录**对象还连接到 ado**连接**对象，该对象包含在标准 ADO 库中：  
   
-|Object|说明|  
+|对象|说明|  
 |------------|-----------------|  
-|[连接](../../../ado/reference/ado-api/connection-object-ado.md)|表示与数据源的打开的连接。|  
+|[连接](../../../ado/reference/ado-api/connection-object-ado.md)|表示到数据源的连接是打开的。|  
   
  这些对象之间的关系如[ADO MD 对象模型](../../../ado/reference/ado-md-api/ado-md-object-model.md)中所示。  
   

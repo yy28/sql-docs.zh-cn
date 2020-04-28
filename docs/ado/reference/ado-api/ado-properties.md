@@ -14,10 +14,10 @@ ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3ddf4e26d015067c0b5bf06f6e2adeecd39f041
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920897"
 ---
 # <a name="ado-properties"></a>ADO 属性
@@ -29,7 +29,7 @@ ms.locfileid: "67920897"
 |[ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)|指示创建关联**记录集**对象的**命令**对象。|  
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|指示指定的**命令**、**记录集**或**记录**对象当前属于哪个**连接**对象。|  
 |[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)|指示字段值的实际长度。|  
-|[属性](../../../ado/reference/ado-api/attributes-property-ado.md)|指示对象的一个或多个特征。|  
+|[特性](../../../ado/reference/ado-api/attributes-property-ado.md)|指示对象的一个或多个特征。|  
 |[BOF 和 EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|**BOF**指示当前记录位置位于记录集对象中的第一条记录之前。<br /><br /> **EOF**指示当前记录位置在 Recordset 对象的最后一条记录之后。|  
 |[书签](../../../ado/reference/ado-api/bookmark-property-ado.md)|指示一个书签，该书签唯一标识**recordset**对象中的当前记录，或将**记录集**对象中的当前记录设置为有效书签标识的记录。|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|指示**记录集中**缓存到内存中的记录集的记录数。|  
@@ -45,17 +45,17 @@ ms.locfileid: "67920897"
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|指示游标服务的位置。|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|指示**记录集**对象中使用的游标的类型。|  
 |[DataMember](../../../ado/reference/ado-api/datamember-property.md)|指示将从**DataSource**属性所引用的对象中检索的数据成员的名称。|  
-|[DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)|指示包含要表示为**记录集**对象的数据的对象。|  
+|[数据源](../../../ado/reference/ado-api/datasource-property-ado.md)|指示包含要表示为**记录集**对象的数据的对象。|  
 |[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)|指示**连接**对象的默认数据库。|  
 |[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)|指示**Field**对象的数据容量。|  
 |[说明](../../../ado/reference/ado-api/description-property.md)|描述**错误**对象。|  
 |[Dialect-p](../../../ado/reference/ado-api/dialect-property.md)|指示提供程序将用于分析**CommandText**或**CommandStream**属性的语法和一般规则。|  
-|[方向键](../../../ado/reference/ado-api/direction-property.md)|指示**参数**是表示输入参数和/或输出参数，还是如果参数是来自存储过程的返回值，则为。|  
+|[方向](../../../ado/reference/ado-api/direction-property.md)|指示**参数**是表示输入参数和/或输出参数，还是如果参数是来自存储过程的返回值，则为。|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|指示当前记录的编辑状态。|  
 |[EOS](../../../ado/reference/ado-api/eos-property.md)|指示当前位置是否在流的末尾。|  
 |[筛选器](../../../ado/reference/ado-api/filter-property.md)|指示**记录集中**数据的筛选器。|  
 |[HelpContext 和帮助](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|指示与**错误**对象关联的帮助文件和主题。<br /><br /> "上下文 ID" 为帮助文件中的**主题返回一个**上下文 ID，作为一个**长**值。<br /><br /> "**帮助文件" 返回一个****字符串**值，该值的计算结果为帮助文件的完全解析路径。|  
-|[编入](../../../ado/reference/ado-api/index-property.md)|指示当前对**记录集**对象有效的索引的名称。|  
+|[索引](../../../ado/reference/ado-api/index-property.md)|指示当前对**记录集**对象有效的索引的名称。|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|指示**连接**对象的隔离级别。|  
 |[项](../../../ado/reference/ado-api/item-property-ado.md)|按名称或序号指示集合中的特定成员。|  
 |[LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)|指示要在文本**流**对象中用作行分隔符的二进制字符。|  
@@ -65,15 +65,15 @@ ms.locfileid: "67920897"
 |[模式](../../../ado/reference/ado-api/mode-property-ado.md)|指示用于修改**连接**、**记录**或**流**对象中的数据的可用权限。|  
 |[名称](../../../ado/reference/ado-api/name-property-ado.md)|指示对象的名称。|  
 |[NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)|指示特定**错误**对象的特定于提供程序的错误代码。|  
-|[多种](../../../ado/reference/ado-api/number-property-ado.md)|指示唯一标识**错误**对象的数字。|  
+|[数字](../../../ado/reference/ado-api/number-property-ado.md)|指示唯一标识**错误**对象的数字。|  
 |[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)|指示**参数**或**字段**对象中数值的小数位数。|  
 |[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)|指示在进行任何更改之前，记录中是否存在**字段**的值。|  
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|指示**Recordset**对象包含多少页数据。|  
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|指示记录**集中**的一页的记录数。|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|设置**ADORecordConstruction**对象上 OLE DB**行**对象的容器，使该行的父对象变为 ADO**记录**对象。|  
 |[ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md)|指示指向当前**记录**对象的父**记录**的绝对 URL 字符串。|  
-|[位置](../../../ado/reference/ado-api/position-property-ado.md)|指示**流**对象内的当前位置。|  
-|[Precision](../../../ado/reference/ado-api/precision-property-ado.md)|指示**参数**对象或数值**字段**对象中数值的精度度。|  
+|[置于](../../../ado/reference/ado-api/position-property-ado.md)|指示**流**对象内的当前位置。|  
+|[精度](../../../ado/reference/ado-api/precision-property-ado.md)|指示**参数**对象或数值**字段**对象中数值的精度度。|  
 |[Prepared](../../../ado/reference/ado-api/prepared-property-ado.md)|指示是否在执行前保存命令的已编译版本。|  
 |[提供程序](../../../ado/reference/ado-api/provider-property-ado.md)|指示**连接**对象的访问接口的名称。|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|指示**记录集**对象中的记录数。|  
@@ -90,11 +90,11 @@ ms.locfileid: "67920897"
 |[状态（ADO 记录集）](../../../ado/reference/ado-api/status-property-ado-recordset.md)|指示当前记录的有关批更新或其他大容量操作的状态。|  
 |[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)|指示在分层**记录集**对象中，对基础子记录（即*章节*）的引用是否在父行位置发生更改时更改。|  
 |[Stream 属性](../../../ado/reference/ado-api/stream-property.md)|获取或设置**ADOStreamConstruction**对象上/的 OLE DB**流**对象。|  
-|类型 |指示**参数**、**字段**或**属性**对象的操作类型或数据类型。|  
+|[类型](../../../ado/reference/ado-api/type-property-ado.md)|指示**参数**、**字段**或**属性**对象的操作类型或数据类型。|  
 |[类型（ADO 流）](../../../ado/reference/ado-api/type-property-ado-stream.md)|指示**流**中包含的数据的类型（二进制或文本）。|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|指示数据库中**字段**对象的当前值。|  
 |[值](../../../ado/reference/ado-api/value-property-ado.md)|指示赋给**字段**、**参数**或**属性**对象的值。|  
-|[版本](../../../ado/reference/ado-api/version-property-ado.md)|指示 ADO 版本号。|  
+|[Version](../../../ado/reference/ado-api/version-property-ado.md)|指示 ADO 版本号。|  
   
 ## <a name="see-also"></a>另请参阅  
  [ADO API 参考](../../../ado/reference/ado-api/ado-api-reference.md)   

@@ -18,10 +18,10 @@ ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 626cad2e57a725ac953b678e648e7e3f4ac21cf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920967"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO for Visual C++ 语法索引与 #import
@@ -39,11 +39,11 @@ ms.locfileid: "67920967"
   
 -   [连接对象](../../../ado/reference/ado-api/connection-visual-c-syntax-index-with-sharpimport.md)  
   
--   [错误对象](../../../ado/reference/ado-api/error-visual-c-syntax-index-with-sharpimport.md)  
+-   [Error 对象](../../../ado/reference/ado-api/error-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [字段对象](../../../ado/reference/ado-api/field-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Parameter 对象](../../../ado/reference/ado-api/parameter-visual-c-syntax-index-with-sharpimport.md)  
+-   [参数对象](../../../ado/reference/ado-api/parameter-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [Property 对象](../../../ado/reference/ado-api/property-visual-c-syntax-index-with-sharpimport.md)  
   

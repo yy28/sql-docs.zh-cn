@@ -15,10 +15,10 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f15c5890300687a2d587a58a586d00bf2c8d0fd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926365"
 ---
 # <a name="absolute-and-relative-urls"></a>绝对和相对 URL
@@ -38,7 +38,7 @@ URL 指定本地计算机或联网计算机上存储的目标位置。 目标可
  *服务*  
  指定*资源*所在的计算机的名称。  
   
- *路径*  
+ *path*  
  指定通向目标的目录的序列。 如果省略了*资源*，则目标是*路径*中的最后一个目录。  
   
  *资源*  

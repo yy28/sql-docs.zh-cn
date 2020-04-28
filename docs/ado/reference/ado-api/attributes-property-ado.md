@@ -18,10 +18,10 @@ ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b40b71dee32608756721d84a2e13f5f54f7bcbfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920546"
 ---
 # <a name="attributes-property-ado"></a>Attributes 属性 (ADO)
@@ -34,7 +34,7 @@ ms.locfileid: "67920546"
   
  对于[参数](../../../ado/reference/ado-api/parameter-object.md)对象，"**属性**" 属性是 "读/写"，其值可以是任何一个或多个[ParameterAttributesEnum](../../../ado/reference/ado-api/parameterattributesenum.md)值的总和。 默认值为**adParamSigned**。  
   
- 对于[字段](../../../ado/reference/ado-api/field-object.md)对象，"**属性**" 属性可以是一个或多个[FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md)值的总和。 它通常是只读的。 但是，对于已附加到[记录](../../../ado/reference/ado-api/record-object-ado.md)的[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合的新**字段**对象，仅在指定了**字段**的[值](../../../ado/reference/ado-api/value-property-ado.md)属性并且数据访问接口已成功添加新**字段**之后，**属性**才是可读/**写的。** [](../../../ado/reference/ado-api/update-method.md)  
+ 对于[字段](../../../ado/reference/ado-api/field-object.md)对象，"**属性**" 属性可以是一个或多个[FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md)值的总和。 它通常是只读的。 但是，对于已附加到[记录](../../../ado/reference/ado-api/record-object-ado.md)的[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合的新**字段**对象，仅在指定了**字段**的[值](../../../ado/reference/ado-api/value-property-ado.md)属性并且数据访问接口已成功添加新**字段**之后，**属性**才是可读/**写的。** [Update](../../../ado/reference/ado-api/update-method.md)  
   
  对于[属性](../../../ado/reference/ado-api/property-object-ado.md)对象，"**属性**" 属性是只读的，它的值可以是任何一个或多个[PropertyAttributesEnum](../../../ado/reference/ado-api/propertyattributesenum.md)值的总和。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "67920546"
 |||  
 |-|-|  
 |[连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[字段对象](../../../ado/reference/ado-api/field-object.md)|  
-|[Parameter 对象](../../../ado/reference/ado-api/parameter-object.md)|[属性对象 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
+|[参数对象](../../../ado/reference/ado-api/parameter-object.md)|[属性对象 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [特性和名称属性示例（VB）](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   

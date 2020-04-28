@@ -13,16 +13,16 @@ ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 00c89272d121898b6ac5af75022344acf1dceb28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923858"
 ---
 # <a name="types-of-cursors-ado"></a>游标类型 (ADO)
 通常，应用程序应使用提供所需数据访问的最简单的游标。 除基础知识（只进、只读、静态、滚动、无缓冲）之外的每个附加游标特征都具有客户端内存、网络负载或性能方面的价格。 在许多情况下，默认游标选项生成的游标比应用程序实际需要的更复杂。  
   
- 游标类型的选择取决于应用程序使用结果集的方式，还取决于多个设计注意事项，包括结果集的大小、可能使用的数据百分比、数据更改的敏感度和应用程序性能要求.  
+ 游标类型的选择取决于应用程序使用结果集的方式，还取决于多个设计注意事项，包括结果集的大小、可能使用的数据百分比、数据更改的敏感度和应用程序性能要求。  
   
  光标的最基本选择取决于你是需要更改数据还是仅查看数据：  
   
@@ -34,7 +34,7 @@ ms.locfileid: "67923858"
   
  尽管每个游标类型看起来都是不同的，但请记住，这些游标类型的不同之处不只是重叠特性和选项的结果。  
   
- 本部分包含下列主题。  
+ 本部分包含以下主题。  
   
 -   [只进游标](../../../ado/guide/data/forward-only-cursors.md)  
   

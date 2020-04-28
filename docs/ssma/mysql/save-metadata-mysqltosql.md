@@ -10,10 +10,10 @@ ms.assetid: 9bc6273f-e8b1-430b-81a5-14330a783562
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 549c4b88e7ca75ce86c8a4e2ddd3eba25f138583
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67929360"
 ---
 # <a name="save-metadata--mysqltosql"></a>保存元数据 (MySQLToSQL)
@@ -25,7 +25,7 @@ ms.locfileid: "67929360"
 **名称**  
 项目中每个数据库的名称。  
   
-**Status**  
+**状态**  
 指示元数据是否已加载到 SSMA 项目中，或元数据是否缺失。  
   
 SSMA 根据需要将元数据加载到项目中。 浏览元数据和转换架构时，会自动加载元数据。  
@@ -36,7 +36,7 @@ SSMA 根据需要将元数据加载到项目中。 浏览元数据和转换架�
 **清除**  
 清除缺少元数据的所有数据库的复选框。 如果已加载元数据，则不能清除此复选框。  
   
-**把**  
+**保存**  
 保存项目，为缺少元数据的所选数据库加载元数据。  
   
 **取消**  

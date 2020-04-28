@@ -19,10 +19,10 @@ ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 998794fd2e5fe5521587ebbb2a88c61c80cff39e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927826"
 ---
 # <a name="sp_dropdevice-transact-sql"></a>sp_dropdevice (Transact-SQL)
@@ -58,16 +58,16 @@ sp_dropdevice [ @logicalname = ] 'device'
  要求具有 **diskadmin** 固定服务器角色中的成员身份。  
   
 ## <a name="examples"></a>示例  
- 下面的示例从`tapedump1`中除去 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 磁带转储设备。  
+ 下面的示例从[!INCLUDE[ssDE](../../includes/ssde-md.md)]中除去 `tapedump1` 磁带转储设备。  
   
 ```  
 EXEC sp_dropdevice 'tapedump1';  
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
+ [备份设备 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [删除备份设备 &#40;SQL Server&#41;](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)   
- [sp_addumpdevice (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
+ [sp_addumpdevice &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [sp_helpdb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
  [sp_helpdevice &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdevice-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

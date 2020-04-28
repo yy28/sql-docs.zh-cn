@@ -14,10 +14,10 @@ ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8df204daeda82f809cf50246590141729e3608e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920927"
 ---
 # <a name="ado-methods"></a>ADO 方法
@@ -50,7 +50,7 @@ ms.locfileid: "67920927"
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|返回一个**记录集**，其行表示此**记录**所表示的目录中的文件和子目录。|  
 |[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)|返回大文本或二进制数据**字段**对象的全部或部分内容。|  
 |[GetDataProviderDSO 方法](../../../ado/reference/ado-api/getdataproviderdso-method.md)|从形状提供程序中检索基础 OLEDB 数据源对象。|  
-|[赋值](../../../ado/reference/ado-api/getrows-method-ado.md)|将**记录集**对象的多个记录检索到一个数组中。|  
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|将**记录集**对象的多个记录检索到一个数组中。|  
 |[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)|以字符串的形式返回**记录集**。|  
 |[LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)|将现有文件的内容加载到**流**中。|  
 |[移动](../../../ado/reference/ado-api/move-method-ado.md)|移动**记录集**对象中的当前记录的位置。|  
@@ -65,17 +65,17 @@ ms.locfileid: "67920927"
 |[put_OLEDBCommand 方法](../../../ado/reference/ado-api/put-oledbcommand-method.md)|此方法不执行任何操作-始终返回 S_OK。|  
 |[读取](../../../ado/reference/ado-api/read-method.md)|从**流**对象中读取指定数目的字节。|  
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|从文本**流**对象中读取指定数目的字符。|  
-|[“刷新”](../../../ado/reference/ado-api/refresh-method-ado.md)|更新集合中的对象，以反映提供程序提供的和特定于提供程序的对象。|  
+|[全部](../../../ado/reference/ado-api/refresh-method-ado.md)|更新集合中的对象，以反映提供程序提供的和特定于提供程序的对象。|  
 |[重新](../../../ado/reference/ado-api/requery-method.md)|通过重新执行对象所基于的查询来更新**记录集**对象中的数据。|  
 |[重新同步](../../../ado/reference/ado-api/resync-method.md)|刷新当前**记录集**对象中的数据，或从基础数据库刷新**记录**对象的**字段**集合中的数据。|  
-|[把](../../../ado/reference/ado-api/save-method.md)|将**记录集**保存到文件或**流**对象中。|  
+|[保存](../../../ado/reference/ado-api/save-method.md)|将**记录集**保存到文件或**流**对象中。|  
 |[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)|将**流**的二进制内容保存到文件。|  
 |[Seek](../../../ado/reference/ado-api/seek-method.md)|搜索**记录集**的索引以快速找到与指定值匹配的行，并将当前行的位置更改为该行。|  
 |[SetEOS](../../../ado/reference/ado-api/seteos-method.md)|设置流的结束位置。|  
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|读取文本流时，跳过整行。|  
 |[Stat](../../../ado/reference/ado-api/stat-method.md)|获取有关打开的流的统计信息。|  
 |[支持](../../../ado/reference/ado-api/supports-method.md)|确定指定的**记录集**对象是否支持特定类型的功能。|  
-|[时更新](../../../ado/reference/ado-api/update-method.md)|保存对记录**集**对象的当前行所做的任何更改，或**记录**对象的**字段**集合。|  
+|[Update](../../../ado/reference/ado-api/update-method.md)|保存对记录**集**对象的当前行所做的任何更改，或**记录**对象的**字段**集合。|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|将所有挂起的批更新写入磁盘。|  
 |[写入](../../../ado/reference/ado-api/write-method.md)|向**Stream**对象写入二进制数据。|  
 |[WriteText](../../../ado/reference/ado-api/writetext-method.md)|向**Stream**对象写入指定的文本字符串。|  

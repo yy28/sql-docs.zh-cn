@@ -13,10 +13,10 @@ ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e260ba5e9bfa4cc0d55187dff09072dd5842828
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927016"
 ---
 # <a name="products-and-technologies-table"></a>产品和技术表

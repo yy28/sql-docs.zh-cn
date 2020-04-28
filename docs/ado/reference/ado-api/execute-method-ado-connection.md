@@ -17,10 +17,10 @@ ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4999b1e21ec145713cadae28ff7ee8a64dd460b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932895"
 ---
 # <a name="execute-method-ado-connection"></a>Execute 方法（ADO 连接）
@@ -37,7 +37,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
 ## <a name="return-value"></a>返回值  
  返回[Recordset 对象（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)对象引用。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *CommandText*  
  一个**字符串**值，该值包含要执行的 SQL 语句、存储过程、URL 或特定于提供程序的文本。 **或者**，仅当提供程序可以识别 SQL 时，才可以使用表名。 例如，如果使用了表名 "Customers"，则 ADO 将自动预置标准 SQL Select 语法来形成，并将 "SELECT * FROM Customers" 作为[!INCLUDE[tsql](../../../includes/tsql-md.md)]语句传递给提供程序。  
   

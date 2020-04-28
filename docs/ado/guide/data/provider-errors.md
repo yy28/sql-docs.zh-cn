@@ -17,10 +17,10 @@ ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85d4a7607fae1df7dfb6ec62b8a3bfae8f58001b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924548"
 ---
 # <a name="provider-errors"></a>提供程序错误
@@ -64,13 +64,13 @@ End Function
 ## <a name="the-error-object"></a>Error 对象  
  通过检查**错误**对象，您可以确定发生了什么错误，更重要的是哪个应用程序或哪个对象导致了该错误。 **错误**对象具有以下属性：  
   
-|属性名称|说明|  
+|属性名称|描述|  
 |-------------------|-----------------|  
 |**说明**|发生的错误的文本说明。|  
 |**HelpContext、帮助**|引用包含所发生错误的说明的帮助主题和帮助文件。|  
 |**NativeError**|特定于提供程序的错误号。|  
-|**多种**|一个长整型，表示发生的错误的数字（在**ErrorValueEnum**中列出）。|  
-|**数据源**|指示生成错误的对象或应用程序的名称。|  
+|**数字**|一个长整型，表示发生的错误的数字（在**ErrorValueEnum**中列出）。|  
+|**源**|指示生成错误的对象或应用程序的名称。|  
 |**SQLState**|提供程序在 SQL 语句过程中返回的五个字符的错误代码。|  
   
  ADO**错误**对象与标准 Visual Basic **Err**对象非常类似。 其属性描述发生的错误。 除了错误编号，还会收到两个相关的信息片段。 **NativeError**属性包含特定于所使用的提供程序的错误号。 在上面的示例中，提供程序是用于 SQL Server 的 Microsoft OLE DB 提供程序，因此**NativeError**将包含特定于 SQL Server 的错误。 **SQLState**属性包含一个由五个字母组成的代码，用于描述 SQL 语句中的错误。  

@@ -15,10 +15,10 @@ ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4cb3213b6a4c5711ccb8d6f9243047d8361a6e37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925428"
 ---
 # <a name="error-handling"></a>错误处理
@@ -39,7 +39,7 @@ ADO 使用多种不同的方法来通知应用程序发生的错误。 本部分
   
 -   与当前记录中的特定**字段**相关的问题也由**记录**或**记录集**的**字段**集合中每个**字段**的**Status**属性来指示。 例如，无法完成的更新或不兼容的数据类型可以通过**FieldStatusEnum**值来指定。  
   
- 本部分包含下列主题。  
+ 本部分包含以下主题。  
   
 -   [ADO 错误](../../../ado/guide/data/ado-errors.md)  
   

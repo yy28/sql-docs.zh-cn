@@ -12,10 +12,10 @@ ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9eb88905f56abf9c1c702f5fd73cbe61a1bcde3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921084"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO 动态属性索引
@@ -38,7 +38,7 @@ ms.locfileid: "67921084"
 |列定义|DBPROP_COLUMNDEFINITION|  
 |连接超时值|DBPROP_INIT_TIMEOUT|  
 |当前目录|DBPROP_CURRENTCATALOG|  
-|数据源|DBPROP_INIT_DATASOURCE|  
+|“数据源”|DBPROP_INIT_DATASOURCE|  
 |数据源名称|DBPROP_DATASOURCENAME|  
 |数据源对象线程模型|DBPROP_DSOTHREADMODEL|  
 |DBMS 名称|DBPROP_DBMSNAME|  
@@ -56,7 +56,7 @@ ms.locfileid: "67921084"
 |最大行大小|DBPROP_MAXROWSIZE|  
 |最大行大小包括 BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|  
 |选择中的最大表数|DBPROP_MAXTABLESINSELECT|  
-|模式|DBPROP_INIT_MODE|  
+|“模式”|DBPROP_INIT_MODE|  
 |多个参数集|DBPROP_MULTIPLEPARAMSETS|  
 |多个结果|DBPROP_MULTIPLERESULTS|  
 |多个存储对象|DBPROP_MULTIPLESTORAGEOBJECTS|  
@@ -76,7 +76,7 @@ ms.locfileid: "67921084"
 |准备中止行为|DBPROP_PREPAREABORTBEHAVIOR|  
 |准备提交行为|DBPROP_PREPARECOMMITBEHAVIOR|  
 |过程术语|DBPROP_PROCEDURETERM|  
-|提示|DBPROP_INIT_PROMPT|  
+|Prompt|DBPROP_INIT_PROMPT|  
 |提供程序友好名称|DBPROP_PROVIDERFRIENDLYNAME|  
 |Provider Name|DBPROP_PROVIDERFILENAME|  
 |提供程序版本|DBPROP_PROVIDERVER|  

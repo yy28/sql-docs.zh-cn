@@ -17,10 +17,10 @@ ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b2080145e00c658288f9d34e3fa42ed335e0c1d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931864"
 ---
 # <a name="openschema-method"></a>OpenSchema 方法
@@ -36,11 +36,11 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 ## <a name="return-value"></a>返回值  
  返回一个包含架构信息的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 **记录集**将作为只读静态游标打开。 *QueryType*确定在**记录集中**显示的列。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *QueryType*  
  表示要运行的架构查询类型的任何[SchemaEnum](../../../ado/reference/ado-api/schemaenum.md)值。  
   
- *条件*  
+ *据*  
  可选。 每个*QueryType*选项的查询约束数组，如[SchemaEnum](../../../ado/reference/ado-api/schemaenum.md)中所列。  
   
  *SchemaID*  

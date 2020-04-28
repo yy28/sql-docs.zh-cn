@@ -16,16 +16,16 @@ ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8883679a85d1e134b1759c90cde524bb97995130
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932867"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 指定事件的当前执行状态。  
   
-|一直|值|说明|  
+|Constant|值|说明|  
 |--------------|-----------|-----------------|  
 |**adStatusCancel**|4|请求取消导致事件发生的操作。|  
 |**adStatusCantDeny**|3|指示操作无法请求取消挂起的操作。|  
@@ -36,7 +36,7 @@ ms.locfileid: "67932867"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
   
-|一直|  
+|Constant|  
 |--------------|  
 |AdoEnums. EventStatus|  
 |AdoEnums. EventStatus. CANTDENY|  

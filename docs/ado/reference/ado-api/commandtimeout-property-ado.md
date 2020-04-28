@@ -16,17 +16,17 @@ ms.assetid: c611f857-d6b0-4dca-8925-f4a02e769eb0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7c8c6b10e63e4cacce0124eb11102db796168d9b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919701"
 ---
 # <a name="commandtimeout-property-ado"></a>CommandTimeout 属性 (ADO)
 指示在终止尝试并生成错误之前执行命令时等待的时间。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置或返回一个**长整型**值，该值指示等待命令执行所用的时间（以秒为单位）。 默认值为30。  
+ 设置或返回一个**长整型**值，该值指示等待命令执行所用的时间（以秒为单位）。 默认值为 30。  
   
 ## <a name="remarks"></a>备注  
  使用[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象或[命令](../../../ado/reference/ado-api/command-object-ado.md)对象上的**CommandTimeout**属性，以允许取消[执行](../../../ado/reference/ado-api/execute-method-ado-command.md)方法调用，因为网络流量或服务器使用的时间延迟。 如果在命令完成执行之前， **CommandTimeout**属性中设置的时间间隔已过，则会发生错误并且 ADO 将取消该命令。 如果将属性设置为零，则 ADO 将无限期等待，直到执行完成为止。 请确保编写代码的访问接口和数据源支持**CommandTimeout**功能。  

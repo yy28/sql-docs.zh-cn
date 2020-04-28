@@ -15,10 +15,10 @@ ms.assetid: 877b9f25-60c4-4ab6-8052-2c28a3849e89
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 40506ec971782c5e9108a34fd240faabcc2756b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925658"
 ---
 # <a name="data-providers"></a>数据提供程序
@@ -26,4 +26,4 @@ ms.locfileid: "67925658"
   
  ADO 的功能强大且灵活，因为它可以连接到多个不同的数据访问接口中的任何一种，并且仍公开相同的编程模型，而与任何给定提供程序的特定功能无关。 但是，由于每个数据提供程序都是唯一的，因此，应用程序与 ADO 交互的方式将因数据访问接口而异。  
   
- 例如，用于访问 Microsoft SQL Server 数据库的 SQL Server 的 OLE DB 提供程序的功能和功能明显不同于用于访问文件的 Microsoft OLE DB 提供程序的 Internet 发布功能存储在 Web 服务器上。
+ 例如，用于访问 Microsoft SQL Server 数据库的 SQL Server 的 OLE DB 提供程序的功能和功能与用于访问 Web 服务器上的文件存储的 Microsoft OLE DB 提供程序的功能和用于 Internet 发布的提供程序的功能大不相同。

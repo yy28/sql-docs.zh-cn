@@ -16,10 +16,10 @@ ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db11e86ab479ad0df4224d59c3408729fa9903ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926372"
 ---
 # <a name="visual-c-extensions-for-ado"></a>ADO 的 Visual C++ 扩展
@@ -40,4 +40,4 @@ Visual C++ 使用 **#import**指令编程 ado 的首选方法，如[Microsoft Vi
 -   [带有 Visual C++ 扩展的 ADO 示例](../../../ado/guide/appendixes/visual-c-extensions-example.md)
 
 ## <a name="see-also"></a>另请参阅
- [用于 COM Visual C++ 扩展的 Visual C++ 语法索引的 ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) [](../../../ado/guide/appendixes/visual-c-extensions-example.md) [Visual C++ 扩展](../../../ado/guide/appendixes/using-visual-c-extensions.md) [Visual C++ 扩展标头](../../../ado/guide/appendixes/visual-c-extensions-header.md)
+ [用于 COM Visual C++ 扩展的 Visual C++ 语法索引的 ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) [Visual C++ Extensions Example](../../../ado/guide/appendixes/visual-c-extensions-example.md) [Visual C++ 扩展](../../../ado/guide/appendixes/using-visual-c-extensions.md) [Visual C++ 扩展标头](../../../ado/guide/appendixes/visual-c-extensions-header.md)

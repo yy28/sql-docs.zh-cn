@@ -14,10 +14,10 @@ ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c9d81ef7be98f3c65167de24b3ff59ac6f05df5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925764"
 ---
 # <a name="creating-a-connection-string"></a>创建连接字符串
@@ -35,7 +35,7 @@ ms.locfileid: "67925764"
 |--------------|-----------------|  
 |*提供程序*|指定要用于连接的访问接口的名称。|  
 |*文件名*|指定包含预设连接信息的特定于提供程序的文件的名称（例如，持久化数据源对象）。|  
-|*链接*|将连接字符串指定为标识资源的绝对 URL，如文件或目录。|  
+|*URL*|将连接字符串指定为标识资源的绝对 URL，如文件或目录。|  
 |*远程提供程序*|指定打开客户端连接时要使用的提供程序的名称。 （仅限远程数据服务。）|  
 |*远程服务器*|指定打开客户端连接时要使用的服务器的路径名称。 （仅限远程数据服务。）|  
   

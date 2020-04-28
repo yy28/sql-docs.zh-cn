@@ -16,10 +16,10 @@ ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a862a244f06c64767f41529b4fff36881895a0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925555"
 ---
 # <a name="deleting-records-using-the-delete-method"></a>使用 Delete 方法删除记录
@@ -35,7 +35,7 @@ ms.locfileid: "67925555"
   
  如果设置了 "**唯一表**动态" 属性，并且**记录集**是对多个表执行联接操作的结果，则**delete**方法将仅删除 "**唯一表**" 属性中命名的表中的行。  
   
- **Delete**方法采用一个可选参数，该参数可用于指定哪些记录受**删除**操作的影响。 此参数的有效值只有下面的一个： ****  
+ **Delete**方法采用一个可选参数，该参数可用于指定哪些记录受**删除**操作的影响。 此参数的有效值只有下面的一个： **AffectEnum**  
   
 -   **adAffectCurrent**仅影响当前记录。  
   

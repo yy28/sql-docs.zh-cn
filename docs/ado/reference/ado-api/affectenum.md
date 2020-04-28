@@ -16,16 +16,16 @@ ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a936eb39583afff34dd317b85bc4198022b15e7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920759"
 ---
 # <a name="affectenum"></a>AffectEnum
 指定哪些记录受操作影响。  
   
-|一直|值|说明|  
+|Constant|值|说明|  
 |--------------|-----------|-----------------|  
 |**adAffectAll**|3|如果没有应用于**记录集**的[筛选器](../../../ado/reference/ado-api/filter-property.md)，则会影响所有记录。<br /><br /> 如果 "**筛选器**" 属性设置为字符串条件（如 "Author = ' Smith '"），则操作会影响当前章节中的可见记录。<br /><br /> 如果 "**筛选器**" 属性设置为[FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md)或书签数组的成员，则该操作将影响**记录集**的所有行。 **注意： adAffectAll**在 Visual Basic 对象浏览器中处于隐藏状态。|  
 |**adAffectAllChapters**|4|影响**记录集**的所有同级章节中的所有记录，包括那些通过当前应用的任何**筛选器**看不到的记录。|  
@@ -35,7 +35,7 @@ ms.locfileid: "67920759"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
   
-|一直|  
+|Constant|  
 |--------------|  
 |AdoEnums。所有|  
 |AdoEnums. ALLCHAPTERS|  

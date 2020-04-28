@@ -14,10 +14,10 @@ ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 197a57b8a9b9ea2927a057733992a02c731a335a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923939"
 ---
 # <a name="the-fields-collection"></a>字段集合
@@ -66,7 +66,7 @@ objField = objRecordset.Fields.Item(0)
 objField = objRecordset.Fields(0)  
 ```  
   
- 如果这两种方法是等效的，最好这样做？ 视情况而定。 使用索引从集合中检索**字段**的速度更快，因为它直接访问**字段**，而无需执行字符串查找。 另一方面，集合中**字段**的顺序必须是已知的，并且如果顺序发生更改，则在任何情况下都必须更改对**字段的**索引的引用。 虽然稍微慢一些，但使用**字段**的名称更灵活，因为它不依赖于集合中**字段**的顺序。  
+ 如果这两种方法是等效的，最好这样做？ 不一定。 使用索引从集合中检索**字段**的速度更快，因为它直接访问**字段**，而无需执行字符串查找。 另一方面，集合中**字段**的顺序必须是已知的，并且如果顺序发生更改，则在任何情况下都必须更改对**字段的**索引的引用。 虽然稍微慢一些，但使用**字段**的名称更灵活，因为它不依赖于集合中**字段**的顺序。  
   
 ## <a name="using-the-refresh-method"></a>使用 Refresh 方法  
  与其他一些 ADO 集合不同，对**字段**集合使用**Refresh**方法不会产生任何效果。 若要从基础数据库结构中检索更改，必须使用**Requery**方法，或者如果**记录集**对象不支持书签，则为**MoveFirst**方法，这将导致再次对提供程序执行该命令。  

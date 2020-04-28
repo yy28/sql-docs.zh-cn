@@ -17,10 +17,10 @@ ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6ec1601749b6537484cead17c50492de131932ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931174"
 ---
 # <a name="save-method"></a>Save 方法
@@ -33,7 +33,7 @@ ms.locfileid: "67931174"
 recordset.Save Destination, PersistFormat  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *目标*  
  可选。 一个**变量**，表示要保存**记录集**的文件的完整路径名称，或者是对**流**对象的引用。  
   

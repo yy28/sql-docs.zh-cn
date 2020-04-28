@@ -14,10 +14,10 @@ ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2a06e51f5c5077a70f9b5a76ecdf4922d8e006f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921100"
 ---
 # <a name="ado-collections"></a>ADO 集合
@@ -28,8 +28,8 @@ ms.locfileid: "67921100"
 |||  
 |-|-|  
 |[错误](../../../ado/reference/ado-api/errors-collection-ado.md)|包含为响应单个提供程序相关的失败而创建的所有**错误**对象。|  
-|[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)|包含**Recordset**对象的所有**字段**对象。|  
-|[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)|包含**Command**对象的所有**参数**对象。|  
+|[字段](../../../ado/reference/ado-api/fields-collection-ado.md)|包含**Recordset**对象的所有**字段**对象。|  
+|[Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)|包含**Command**对象的所有**参数**对象。|  
 |[属性](../../../ado/reference/ado-api/properties-collection-ado.md)|包含对象的特定实例的所有**属性**对象。|  
   
 ## <a name="see-also"></a>另请参阅  

@@ -18,10 +18,10 @@ ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c7af4f5d217670ab23e71a3c53ccd5cf7944b0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932038"
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset 方法 (ADO)
@@ -37,7 +37,7 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
 ## <a name="return-value"></a>返回值  
  返回**记录集**对象。 在语法模型中， *recordset1*和*recordset2*可以是同一**Recordset**对象，也可以使用单独的对象。 使用单独的**记录集**对象时，在调用**NextRecordset**后重置原始**记录集**（*recordset1*）上的**ActiveConnection**属性将生成错误。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *RecordsAffected*  
  可选。 一个**长整型**变量，提供程序返回当前操作影响的记录数。  
   

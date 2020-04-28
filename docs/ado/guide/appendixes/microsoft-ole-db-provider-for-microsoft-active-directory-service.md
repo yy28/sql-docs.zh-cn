@@ -16,10 +16,10 @@ ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e204a4f6f7f395ca93198bc560f4a216d5a70673
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926676"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB Provider for Microsoft Active Directory 服务
@@ -47,7 +47,7 @@ ADSDSOObject
 |-------------|-----------------|  
 |**提供程序**|指定 Active Directory 服务的 OLE DB 提供程序。|  
 |**用户 ID**|指定用户名。 如果省略此关键字，则使用当前登录名。|  
-|**权限**|指定用户密码。 如果省略此关键字，则为。 则使用当前登录名。|  
+|**密码**|指定用户密码。 如果省略此关键字，则为。 则使用当前登录名。|  
   
 > [!NOTE]
 >  如果要连接到支持 Windows 身份验证的数据源提供程序，应在连接字符串中指定**Trusted_Connection = yes**或**集成安全性 = SSPI**而不是用户 ID 和密码信息。  
@@ -63,8 +63,8 @@ ADSDSOObject
 |-----------|-----------------|  
 |*Root*|指示从其开始搜索的**ADsPath**对象（即，搜索的根目录）。|  
 |*筛选器*|指示 RFC 1960 格式的搜索筛选器。|  
-|*属性*|指示要返回的属性的逗号分隔列表。|  
-|*范围*|可选。 指定搜索范围的**字符串**。 可以是以下值之一：<br /><br /> -仅搜索基本对象（搜索的根目录）。<br />-OneLevel-仅搜索一级。<br />-子树-搜索整个子树。|  
+|*特性*|指示要返回的属性的逗号分隔列表。|  
+|*Scope*|可选。 指定搜索范围的**字符串**。 可以是以下其中一个值：<br /><br /> -仅搜索基本对象（搜索的根目录）。<br />-OneLevel-仅搜索一级。<br />-子树-搜索整个子树。|  
   
  例如：  
   
@@ -89,7 +89,7 @@ objectClass='user' AND objectCategory='Person'"
   
  **标准 ADO 记录集属性的可用性：**  
   
-|properties|可用性|  
+|属性|可用性|  
 |--------------|------------------|  
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|读/写|  
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|读/写|  
@@ -108,13 +108,13 @@ objectClass='user' AND objectCategory='Person'"
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|只读|  
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|读/写|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|只读|  
-|[数据源](../../../ado/reference/ado-api/source-property-ado-recordset.md)|读/写|  
+|[源](../../../ado/reference/ado-api/source-property-ado-recordset.md)|读/写|  
 |[状态](../../../ado/reference/ado-api/state-property-ado.md)|只读|  
-|[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|只读|  
+|[状态](../../../ado/reference/ado-api/status-property-ado-recordset.md)|只读|  
   
  **标准 ADO 记录集方法的可用性：**  
   
-|方法|即可?|  
+|方法|是否可用？|  
 |------------|----------------|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|否|  
 |[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|否|  
@@ -123,7 +123,7 @@ objectClass='user' AND objectCategory='Person'"
 |[克隆](../../../ado/reference/ado-api/clone-method-ado.md)|是|  
 |[关闭](../../../ado/reference/ado-api/close-method-ado.md)|是|  
 |[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|否|  
-|[赋值](../../../ado/reference/ado-api/getrows-method-ado.md)|是|  
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|是|  
 |[移动](../../../ado/reference/ado-api/move-method-ado.md)|是|  
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|  
 |[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|  
@@ -134,7 +134,7 @@ objectClass='user' AND objectCategory='Person'"
 |[重新](../../../ado/reference/ado-api/requery-method.md)|是|  
 |[重新同步](../../../ado/reference/ado-api/resync-method.md)|是|  
 |[支持](../../../ado/reference/ado-api/supports-method.md)|是|  
-|[时更新](../../../ado/reference/ado-api/update-method.md)|否|  
+|[Update](../../../ado/reference/ado-api/update-method.md)|否|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|否|  
   
  有关 ADSI 的详细信息以及提供程序的具体信息，请参阅 Active Directory 服务接口文档或访问 ADSI 网页。  

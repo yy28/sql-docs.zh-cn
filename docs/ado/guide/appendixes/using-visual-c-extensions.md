@@ -16,10 +16,10 @@ ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a9d60695bd033bfc83e3a091490f27f9432782c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926453"
 ---
 # <a name="visual-c-extensions"></a>Visual C++ 扩展
@@ -114,12 +114,12 @@ Update(CADORecordBinding *binding)
 |---------------|-----------------|
 |*类*|定义绑定项和 C/c + + 变量的类。|
 |*Ordinal*|对应于 C/c + + 变量的**记录集**字段的序号（从1开始）。|
-|*数据类型*|C/c + + 变量的等效 ADO 数据类型（有关有效数据类型的列表，请参阅[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) ）。 如有必要，**记录集**字段的值将转换为该数据类型。|
-|*Buffer*|将存储**记录集**字段的 C/c + + 变量的名称。|
+|*DataType*|C/c + + 变量的等效 ADO 数据类型（有关有效数据类型的列表，请参阅[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) ）。 如有必要，**记录集**字段的值将转换为该数据类型。|
+|*宽限*|将存储**记录集**字段的 C/c + + 变量的名称。|
 |*大小*|*缓冲区*的最大大小（以字节为单位）。 如果*Buffer*包含可变长度字符串，则允许用于终止零的空间。|
-|*Status*|变量的名称，该变量指示*缓冲区*的内容是否有效，以及字段是否成功转换为*数据类型*。<br /><br /> 此变量的两个最重要的值是**adFldOK**，这意味着转换成功;和**adFldNull**，这意味着该字段的值将是 VT_NULL 类型的变体，而不只是空的。<br /><br /> 下表 "Status Values" 中列出了可能的*状态*值。|
+|*状态*|变量的名称，该变量指示*缓冲区*的内容是否有效，以及字段是否成功转换为*数据类型*。<br /><br /> 此变量的两个最重要的值是**adFldOK**，这意味着转换成功;和**adFldNull**，这意味着该字段的值将是 VT_NULL 类型的变体，而不只是空的。<br /><br /> 下表 "Status Values" 中列出了可能的*状态*值。|
 |*修改*|布尔标志;如果为 TRUE，则表示允许 ADO 使用*Buffer*中包含的值更新相应的**记录集**字段。<br /><br /> 将 "布尔*修改*" 参数设置为 "TRUE" 以启用 ADO 以更新绑定字段，如果要检查字段而不进行更改，则设置为 FALSE。|
-|*Precision*|数值变量中可表示的位数。|
+|*精度*|数值变量中可表示的位数。|
 |*缩放*|数值变量中的小数位数。|
 |*长度*|包含*缓冲区*中数据的实际长度的四字节变量的名称。|
 
@@ -128,7 +128,7 @@ Update(CADORecordBinding *binding)
 
  设置数据时，可以将*Status*设置为**adFldNull** ，以指示**记录集**字段应设置为 null。
 
-|一直|值|说明|
+|Constant|值|描述|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|返回的字段值为非 null。|
 |**adFldBadAccessor**|1|绑定无效。|

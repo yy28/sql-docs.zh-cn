@@ -14,16 +14,16 @@ ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b59f0f98122d37447e2e702304a31c44073bacfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926846"
 ---
 # <a name="datacontrol-object-error-codes"></a>DataControl 对象错误代码
 下表列出了[RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象错误代码。 低2字节的正十进制转换、完整错误代码的负小数转换以及十六进制值。
 
-|RDS.DataControl 错误代码|Number|说明|
+|RDS.DataControl 错误代码|数字|说明|
 |---------------------------------|------------|-----------------|
 |**IDS_AsyncPending**|4107-2146824175 0x800A1011|异步操作挂起时，无法执行操作。|
 |**IDS_BadInlineTablegram**|4105-2146824183 0x800A1009|错误的内联 tablegram。|

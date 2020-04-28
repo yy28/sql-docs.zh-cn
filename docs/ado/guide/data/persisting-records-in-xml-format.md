@@ -17,10 +17,10 @@ ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 263f83093c46f4265559fe0b1844112687d4fc67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924596"
 ---
 # <a name="persisting-records-in-xml-format"></a>以 XML 格式保留记录
@@ -68,7 +68,7 @@ rs.Save "btitles.sav", adPersistXML
   
  ADO 始终使用客户端游标引擎行集在永久性提供程序生成的只进数据上生成可滚动的 bookmarkable**记录集**对象。  
   
- 本部分包含下列主题。  
+ 本部分包含以下主题。  
   
 -   [XML 暂留格式](../../../ado/guide/data/xml-persistence-format.md)  
   

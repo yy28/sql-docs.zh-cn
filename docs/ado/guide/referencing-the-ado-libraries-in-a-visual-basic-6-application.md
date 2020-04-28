@@ -17,10 +17,10 @@ ms.assetid: cfd37a82-aad2-41cd-8d13-1566c43d95f0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25ea858995c884af202d3d80f4de675c9f4cda27
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923051"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>在 Visual Basic 6 应用程序中引用 ADO 库
@@ -34,9 +34,9 @@ ms.locfileid: "67923051"
   
 3.  在 "**可用引用**" 中，选中 " **Microsoft ActiveX 数据对象*n. n* " 库**的框，其中***n. n***表示最新版本号。 以下**位置**字段应将你的选择标识为 *$installDir \msado15.dll*，其中 *$installDir*表示已安装 ADO 库的目录的路径。  
   
-4.  如果要使用 ADO MD，请重复步骤3以选择 " **Microsoft ActiveX 数据对象（多维） ** **" "**位置**" 字段应将此选项标识为 *$installDir \msadomd.dll*"。  
+4.  如果要使用 ADO MD，请重复步骤3以选择 " **Microsoft ActiveX 数据对象（多维） *n.n* **" "**位置**" 字段应将此选项标识为 *$installDir \msadomd.dll*"。  
   
-5.  如果要使用 ADOX，请重复步骤3以选择**用于 DDL 和安全性的** Microsoft ADO Ext.** n. n。 "**位置**" 字段应将此选项标识为 *$installDir \msadox.dll*"。  
+5.  如果要使用 ADOX，请重复步骤3以选择**用于 DDL 和安全性的*n.n* Microsoft ADO Ext.** n. n。 "**位置**" 字段应将此选项标识为 *$installDir \msadox.dll*"。  
   
 6.  单击 **"确定"** 完成设置引用。  
   

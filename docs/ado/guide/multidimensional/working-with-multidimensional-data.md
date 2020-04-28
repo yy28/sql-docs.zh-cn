@@ -13,10 +13,10 @@ ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61f3e34af2a9331118b41657cf958021b972b04a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923135"
 ---
 # <a name="working-with-multidimensional-data"></a>使用多维数据
@@ -30,7 +30,7 @@ ms.locfileid: "67923135"
   
  例如，多维数据集具有以下六个维度（请注意，此多维数据集架构与[多维架构和数据概述](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)中给定的示例略有不同）：  
   
--   人  
+-   销售人员  
   
 -   地域（自然层次结构）-大陆、国家/地区、州等  
   

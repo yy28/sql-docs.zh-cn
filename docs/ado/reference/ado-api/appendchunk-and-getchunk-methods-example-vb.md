@@ -16,10 +16,10 @@ ms.assetid: c07862b5-e466-46bd-910b-59ac96709cb9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f7183dbc6b54e5560784e5de602a45da8e5a235a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920627"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vb"></a>AppendChunk 和 GetChunk 方法示例（VB）
@@ -151,4 +151,4 @@ End Sub
  [AppendChunk 方法（ADO）](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
  [Field 对象](../../../ado/reference/ado-api/field-object.md)   
  [GetChunk 方法（ADO）](../../../ado/reference/ado-api/getchunk-method-ado.md)   
- [Parameter 对象](../../../ado/reference/ado-api/parameter-object.md)
+ [参数对象](../../../ado/reference/ado-api/parameter-object.md)

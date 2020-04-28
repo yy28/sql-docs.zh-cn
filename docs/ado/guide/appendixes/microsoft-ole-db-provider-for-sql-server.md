@@ -15,10 +15,10 @@ ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd28ece0e82c4551409920c876d54fbd7dc501ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926618"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>适用于 SQL Server 的 Microsoft OLE DB 提供程序概述
@@ -68,10 +68,10 @@ User ID=MyUserID;Password=MyPassword;"
 |网络地址|指示**Location**属性指定的 SQL Server 的网络地址。|
 |Network Library|指示用于与 SQL Server 进行通信的网络库（DLL）的名称。 该名称不应当包含路径或 .dll 文件扩展名。 默认值由 SQL Server 客户端配置提供。|
 |使用准备过程|确定在准备命令时 SQL Server 是否创建临时存储过程（由**预定义**的属性）。|
-|自动翻译|指示是否转换 OEM/ANSI 字符。 此属性可以设置为**True**或**False**。 默认值是 **True**秒。 如果将此属性设置为**True**，则当从 SQL Server 检索多字节字符字符串或将其发送到时，SQLOLEDB 将执行 OEM/ANSI 字符转换。 如果将此属性设置为**False**，则 SQLOLEDB 不会对多字节字符字符串数据执行 OEM/ANSI 字符转换。|
+|自动翻译|指示是否转换 OEM/ANSI 字符。 此属性可以设置为**True**或**False**。 默认值为 **True**。 如果将此属性设置为**True**，则当从 SQL Server 检索多字节字符字符串或将其发送到时，SQLOLEDB 将执行 OEM/ANSI 字符转换。 如果将此属性设置为**False**，则 SQLOLEDB 不会对多字节字符字符串数据执行 OEM/ANSI 字符转换。|
 |Packet Size|指示网络数据包大小（以字节为单位）。 "数据包大小" 属性值必须介于512到32767之间。 默认的 SQLOLEDB 网络数据包大小为4096。|
 |应用程序名称|指示客户端应用程序的名称。|
-|工作站 ID|标识工作站的字符串。|
+|工作站 ID|用于标识工作站的字符串。|
 
 ## <a name="command-object-usage"></a>命令对象使用情况
  SQLOLEDB 接受使用 ODBC、ANSI 和 SQL Server 特定的 Transact-sql 作为有效语法的综合。 例如，以下 SQL 语句使用 ODBC SQL 转义序列指定 LCASE 字符串函数：
@@ -151,7 +151,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |列定义|DBPROP_COLUMNDEFINITION|
 |连接超时值|DBPROP_INIT_TIMEOUT|
 |当前目录|DBPROP_CURRENTCATALOG|
-|数据源|DBPROP_INIT_DATASOURCE|
+|“数据源”|DBPROP_INIT_DATASOURCE|
 |数据源名称|DBPROP_DATASOURCENAME|
 |数据源对象线程模型|DBPROP_DSOTHREADMODEL|
 |DBMS 名称|DBPROP_DBMSNAME|
@@ -186,7 +186,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |准备中止行为|DBPROP_PREPAREABORTBEHAVIOR|
 |准备提交行为|DBPROP_PREPARECOMMITBEHAVIOR|
 |过程术语|DBPROP_PROCEDURETERM|
-|提示|DBPROP_INIT_PROMPT|
+|Prompt|DBPROP_INIT_PROMPT|
 |提供程序友好名称|DBPROP_PROVIDERFRIENDLYNAME|
 |Provider Name|DBPROP_PROVIDERFILENAME|
 |提供程序版本|DBPROP_PROVIDERVER|

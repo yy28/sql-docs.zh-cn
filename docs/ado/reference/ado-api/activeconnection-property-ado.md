@@ -18,10 +18,10 @@ ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8dabf974e36b1f6beaff36f3a4888c128d7dfe1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921511"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection 属性 (ADO)
@@ -33,7 +33,7 @@ ms.locfileid: "67921511"
 ## <a name="remarks"></a>备注  
  使用**ActiveConnection**属性可确定要对其执行指定**命令**对象的**连接**对象，或者将打开指定的**记录集**。  
   
-## <a name="command"></a>Command  
+## <a name="command"></a>命令  
  对于**Command**对象， **ActiveConnection**属性是可读/写的。  
   
  如果尝试在将此属性设置为打开的**连接**对象或有效连接字符串之前对**命令**对象调用[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)方法，则会发生错误。  

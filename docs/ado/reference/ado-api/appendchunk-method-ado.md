@@ -17,10 +17,10 @@ ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f9d575460daf0f801f6d6dd2e80b0c67f4886dc7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920564"
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk 方法 (ADO)
@@ -33,8 +33,8 @@ ms.locfileid: "67920564"
 object.AppendChunk Data  
 ```  
   
-#### <a name="parameters"></a>parameters  
- *对象*  
+#### <a name="parameters"></a>参数  
+ *object*  
  一个**字段**或**参数**对象。  
   
  *数据*  
@@ -62,7 +62,7 @@ object.AppendChunk Data
   
 |||  
 |-|-|  
-|[字段对象](../../../ado/reference/ado-api/field-object.md)|[Parameter 对象](../../../ado/reference/ado-api/parameter-object.md)|  
+|[字段对象](../../../ado/reference/ado-api/field-object.md)|[参数对象](../../../ado/reference/ado-api/parameter-object.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [AppendChunk 和 GetChunk 方法示例（VB）](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   

@@ -13,10 +13,10 @@ ms.assetid: 5a4c6bd5-0c79-4f81-a977-0561392d8d50
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b2b5fbe59ab58b31cd0b796cbe46963683aa890b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932493"
 ---
 # <a name="getdataproviderdso-method"></a>GetDataProviderDSO 方法
@@ -31,7 +31,7 @@ HRESULT GetDataProviderDSO(
 );  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *ppDataProviderDSOIUnknown*  
  弄 指向指针的指针，该指针返回基础 OLE DB 数据源对象的 IUnknown。  
   

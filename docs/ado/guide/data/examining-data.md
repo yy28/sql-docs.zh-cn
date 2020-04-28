@@ -16,10 +16,10 @@ ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0245d492b7014b2dfc0097a9d3f2c9a7098eae51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925359"
 ---
 # <a name="examining-data"></a>检查数据
@@ -27,7 +27,7 @@ ms.locfileid: "67925359"
   
  **记录集**支持用于导航和检查中包含的数据的各种[属性和方法](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md)。 这些功能与提供程序相关。 某些提供程序可能不支持某些属性或方法。  
   
- 本部分包含下列主题。  
+ 本部分包含以下主题。  
   
 -   [当前记录和记录集的大小](../../../ado/guide/data/current-record-and-size-of-recordset.md)  
   

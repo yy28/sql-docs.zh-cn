@@ -18,10 +18,10 @@ ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0d737c2f031fa3ba630eabb7e52dff0e056c3390
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919591"
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks 方法 (ADO)
@@ -37,7 +37,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
 ## <a name="return-value"></a>返回值  
  返回一个[CompareEnum](../../../ado/reference/ado-api/compareenum.md)值，该值指示由其书签表示的两个记录的相对行位置。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *Bookmark1*  
  第一行的书签。  
   

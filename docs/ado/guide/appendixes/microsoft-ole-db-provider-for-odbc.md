@@ -14,10 +14,10 @@ ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25db7fdb20ceb2dd24f819e1db7077d40f7e7e3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926639"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>适用于 ODBC 的 Microsoft OLE DB 提供程序概述
@@ -55,7 +55,7 @@ MSDASQL
 |**DSN**|指定数据源名称。|
 |**UID**|指定用户名。|
 |**PWD**|指定用户密码。|
-|**链接**|指定在 Web 文件夹中发布的文件或目录的 URL。|
+|**URL**|指定在 Web 文件夹中发布的文件或目录的 URL。|
 
  由于这是 ADO 的默认提供程序，如果从连接字符串中省略**provider =** 参数，则 ADO 将尝试与此提供程序建立连接。
 
@@ -172,7 +172,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  标准 ADO**记录集**属性的可用性：
 
-|properties|ForwardOnly|动态|Keyset|静态|
+|属性|ForwardOnly|动态|Keyset|Static|
 |--------------|-----------------|-------------|------------|------------|
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|不可用|不可用|读/写|读/写|
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|不可用|不可用|读/写|读/写|
@@ -190,15 +190,15 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|读/写|不可用|只读|只读|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|读/写|读/写|读/写|读/写|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|读/写|不可用|只读|只读|
-|[数据源](../../../ado/reference/ado-api/source-property-ado-recordset.md)|读/写|读/写|读/写|读/写|
+|[源](../../../ado/reference/ado-api/source-property-ado-recordset.md)|读/写|读/写|读/写|读/写|
 |[状态](../../../ado/reference/ado-api/state-property-ado.md)|只读|只读|只读|只读|
-|[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|只读|只读|只读|只读|
+|[状态](../../../ado/reference/ado-api/status-property-ado-recordset.md)|只读|只读|只读|只读|
 
  当使用 ADO 与适用于 ODBC 的 Microsoft OLE DB Provider 版本1.0 一起使用时， [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)和[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)属性是只写的。
 
  标准 ADO**记录集**方法的可用性：
 
-|方法|ForwardOnly|动态|Keyset|静态|
+|方法|ForwardOnly|动态|Keyset|Static|
 |------------|-----------------|-------------|------------|------------|
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|是|是|是|是|
 |[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|是|是|是|是|
@@ -207,7 +207,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[克隆](../../../ado/reference/ado-api/clone-method-ado.md)|否|否|是|是|
 |[关闭](../../../ado/reference/ado-api/close-method-ado.md)|是|是|是|是|
 |[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|是|是|是|是|
-|[赋值](../../../ado/reference/ado-api/getrows-method-ado.md)|是|是|是|是|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|是|是|是|是|
 |[移动](../../../ado/reference/ado-api/move-method-ado.md)|是|是|是|是|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|是|是|是|
 |[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|否|是|是|是|
@@ -218,7 +218,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[重新](../../../ado/reference/ado-api/requery-method.md)|是|是|是|是|
 |[重新同步](../../../ado/reference/ado-api/resync-method.md)|否|否|是|是|
 |[支持](../../../ado/reference/ado-api/supports-method.md)|是|是|是|是|
-|[时更新](../../../ado/reference/ado-api/update-method.md)|是|是|是|是|
+|[Update](../../../ado/reference/ado-api/update-method.md)|是|是|是|是|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|是|是|是|是|
 
  * 不支持 Microsoft Access 数据库。
@@ -242,7 +242,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |列定义|DBPROP_COLUMNDEFINITION|
 |连接超时值|DBPROP_INIT_TIMEOUT|
 |当前目录|DBPROP_CURRENTCATALOG|
-|数据源|DBPROP_INIT_DATASOURCE|
+|“数据源”|DBPROP_INIT_DATASOURCE|
 |数据源名称|DBPROP_DATASOURCENAME|
 |数据源对象线程模型|DBPROP_DSOTHREADMODEL|
 |DBMS 名称|DBPROP_DBMSNAME|
@@ -260,7 +260,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |最大行大小|DBPROP_MAXROWSIZE|
 |最大行大小包括 BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |选择中的最大表数|DBPROP_MAXTABLESINSELECT|
-|模式|DBPROP_INIT_MODE|
+|“模式”|DBPROP_INIT_MODE|
 |多个参数集|DBPROP_MULTIPLEPARAMSETS|
 |多个结果|DBPROP_MULTIPLERESULTS|
 |多个存储对象|DBPROP_MULTIPLESTORAGEOBJECTS|
@@ -280,7 +280,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |准备中止行为|DBPROP_PREPAREABORTBEHAVIOR|
 |准备提交行为|DBPROP_PREPARECOMMITBEHAVIOR|
 |过程术语|DBPROP_PROCEDURETERM|
-|提示|DBPROP_INIT_PROMPT|
+|Prompt|DBPROP_INIT_PROMPT|
 |提供程序友好名称|DBPROP_PROVIDERFRIENDLYNAME|
 |Provider Name|DBPROP_PROVIDERFILENAME|
 |提供程序版本|DBPROP_PROVIDERVER|

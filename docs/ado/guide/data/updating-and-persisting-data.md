@@ -15,10 +15,10 @@ ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26fabdc205018b8e94575cfb5bd5e945a8fb28ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923727"
 ---
 # <a name="updating-and-persisting-data"></a>更新和保留数据
@@ -32,7 +32,7 @@ ms.locfileid: "67923727"
   
  在即时模式下，**更新**方法的每个调用都会将更改传播到数据源。 在批处理模式下，当前行位置的**更新**或移动的每次调用都会将更改保存到复制缓冲区，但只有**UpdateBatch**方法才能将更改传播到数据源。  
   
- 本部分包含下列主题。  
+ 本部分包含以下主题。  
   
 -   [更新数据](../../../ado/guide/data/updating-data.md)  
   

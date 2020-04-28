@@ -14,10 +14,10 @@ ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1de3710590cf49de30ff8e79a6ff829b124c42dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922806"
 ---
 # <a name="customization-file-connect-section"></a>自定义文件 Connect 部分
@@ -53,11 +53,11 @@ connectionString
   
 ## <a name="remarks"></a>备注  
   
-|部分|说明|  
+|组成部分|说明|  
 |----------|-----------------|  
-|**连接**|指示这是一个连接字符串项的文字字符串。|  
+|**“连接”**|指示这是一个连接字符串项的文字字符串。|  
 |**_connectionString_**|替换整个客户端连接字符串的字符串。|  
-|**Access**|指示这是一个访问项的文字字符串。|  
+|**访问**|指示这是一个访问项的文字字符串。|  
 |**_accessRight_**|以下访问权限之一：<br /><br /> -   **NoAccess** -用户无法访问数据源。<br />-   **ReadOnly** -用户可以读取数据源。<br />-   **ReadWrite** -用户可以读取或写入数据源。|  
   
  如果要允许任何连接（有效地禁用默认处理程序行为），请将 "**连接默认值**" 部分中的 "访问" `Access=ReadWrite`项设置为，并删除或注释掉任何其他**连接**_标识符_部分。  

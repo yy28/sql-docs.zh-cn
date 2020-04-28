@@ -13,10 +13,10 @@ ms.assetid: 7a745aae-9372-49b6-8dae-b9c93e5f3216
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 89093367532177ec87fb3a5fd86e38e98345962c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926044"
 ---
 # <a name="ado-objects-and-collections"></a>ADO 对象和集合
@@ -25,7 +25,7 @@ ADO 包含以下九个对象和四个集合。
 |对象或集合|说明|  
 |--------------------------|-----------------|  
 |**Connection**对象|表示与某一数据源的唯一会话。 对于客户端/服务器数据库系统，它可能等效于到服务器的实际网络连接。 根据提供程序支持的功能，**连接**对象的某些集合、方法或属性可能不可用。|  
-|**Command**对象|用于定义要针对数据源运行的特定命令，如 SQL 查询。|  
+|**Command** 对象|用于定义要针对数据源运行的特定命令，如 SQL 查询。|  
 |**Recordset**对象|表示基表中的整个记录集或执行的命令的结果。 所有**记录集**对象均由记录（行）和字段（列）组成。|  
 |**Record**对象|表示单个数据行，从**记录集**或从提供程序中。 此记录可以表示数据库记录或某些其他类型的对象（如文件或目录），这取决于您的提供程序。|  
 |**Stream**对象|表示二进制或文本数据的流。 例如，可以将 XML 文档加载到流中以执行命令输入，或者将其作为查询结果从特定提供程序返回。 **流**对象可用于操作包含这些数据流的字段或记录。|  

@@ -15,10 +15,10 @@ ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e09113b42f655a3b94ab3877ff81f2553a363931
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924184"
 ---
 # <a name="shape-append-clause"></a>Shape APPEND 子句
@@ -110,7 +110,7 @@ SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO 
   
  形状执行`select * from t1; drop table t1`和（`select * from t2 RELATE k1 TO k2),`在此示例`drop table t1`中，不认识到是一个单独的，而是危险的提供程序命令。 应用程序必须始终验证用户输入，以防发生此类潜在的黑客攻击。  
   
- 本部分包含下列主题。  
+ 本部分包含以下主题。  
   
 -   [操作非参数化命令](../../../ado/guide/data/operation-of-non-parameterized-commands.md)  
   

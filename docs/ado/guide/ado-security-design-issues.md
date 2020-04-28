@@ -13,10 +13,10 @@ ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f638f6e48dccccd91849f02c65331d9212f9bbb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927039"
 ---
 # <a name="ado-security-design-features"></a>ADO 安全设计功能
@@ -93,7 +93,7 @@ This Website is using your identity to access a data source. If you trust this W
  前面的消息使用户能够做出更明智的决策并进行相应的处理。
 
 > [!NOTE]
->  对于不受信任的站点（即未在 "受信任的站点区域列表" 中列出的站点），如果提供程序也不受信任（如本部分前面所述），则用户可能会在一行中看到两个安全警告，有关安全提供程序的警告和有关尝试使用其标识。 如果用户在第一个警告中单击 "确定"，则会执行上表中所述的 Internet Explorer 设置和响应行为代码。
+>  对于不受信任的站点（即未在 "受信任的站点区域列表" 中列出的站点），如果提供程序也不受信任（如本部分前面所述），则用户可能会在一行中看到两个安全警告，有关安全提供程序的警告和有关尝试使用其标识的第二条警告。 如果用户在第一个警告中单击 "确定"，则会执行上表中所述的 Internet Explorer 设置和响应行为代码。
 
 ## <a name="controlling-whether-password-text-is-returned-in-ado-connection-strings"></a>控制是否在 ADO 连接字符串中返回密码文本
  尝试获取 ADO**连接**对象的[ConnectionString](../../ado/reference/ado-api/connectionstring-property-ado.md)属性值时，将发生以下事件：

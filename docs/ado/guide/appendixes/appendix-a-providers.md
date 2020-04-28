@@ -17,10 +17,10 @@ ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4ffecfc87ec23fc4d62174dae31220511c9f72d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926971"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>附录 A：数据和服务提供商
@@ -73,4 +73,4 @@ ms.locfileid: "67926971"
  对于此处列出的每个提供程序，如果你的应用程序允许用户输入 SQL 语句作为提供程序命令，则必须始终验证用户输入，并使用潜在的危险 SQL 语句（如`DROP TABLE t1`）作为用户输入的一部分来警惕可能的黑客攻击。
 
 ## <a name="see-also"></a>另请参阅
- [用于 Internet 发布的 microsoft OLE DB 提供程序的](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)[命令对象（Ado）](../../../ado/reference/ado-api/command-object-ado.md) [连接对象（ado）](../../../ado/reference/ado-api/connection-object-ado.md) Microsoft [OLE DB Provider for microsoft Active Directory Service](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) [microsoft OLE DB PROVIDER for microsoft 索引服务](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md)microsoft OLE DB provider For [ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [Oracle 的 Microsoft OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) [microsoft OLE DB](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) provider for microsoft [Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [Properties Collection （ADO）](../../../ado/reference/ado-api/properties-collection-ado.md) [记录集Object （ADO）](../../../ado/reference/ado-api/recordset-object-ado.md) [Refresh 方法（RDS）](../../../ado/reference/rds-api/refresh-method-rds.md)
+ [用于 Internet 发布的 microsoft OLE DB 提供程序的](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)[命令对象（Ado）](../../../ado/reference/ado-api/command-object-ado.md) [连接对象（ado）](../../../ado/reference/ado-api/connection-object-ado.md) Microsoft [OLE DB Provider for microsoft Active Directory Service](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) [Microsoft OLE DB PROVIDER for microsoft 索引服务](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md)microsoft [OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [Oracle 的 Microsoft OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) [microsoft OLE DB](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) provider FOR microsoft [Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [Properties Collection （ado](../../../ado/reference/ado-api/properties-collection-ado.md) ） [Recordset 对象（ado）](../../../ado/reference/ado-api/recordset-object-ado.md) [Refresh 方法（RDS）](../../../ado/reference/rds-api/refresh-method-rds.md)

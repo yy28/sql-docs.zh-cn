@@ -15,16 +15,16 @@ ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da9d7d2374f8e3410598bfdfbd97e59eb505b255
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926247"
 ---
 # <a name="ado-errors"></a>ADO 错误
 **ErrorValueEnum**常数描述 ADO 错误值。 有关这些枚举常量（包括值）的完整列表，请参阅[附录 B： ADO 错误](../../../ado/guide/appendixes/appendix-b-ado-errors.md)。 本部分将介绍一些更有趣的错误，并说明一些可能引发这些错误的特定情况，或解决问题的解决方案。 同时列出了**ErrorValueEnum**常量和短的十进制数字。
 
-|Number|ErrorValueEnum 常量|说明/可能的原因|
+|数字|ErrorValueEnum 常量|说明/可能的原因|
 |------------|-----------------------------|----------------------------------|
 |**3000**|**adErrProviderFailed**|提供程序无法执行所请求的操作。|
 |**3001**|**adErrInvalidArgument**|参数的类型错误，不在可接受的范围内，或者相互冲突。 此错误通常是由 SQL SELECT 语句中的打字错误引起的。 例如，拼写错误的字段名称或表名称可能会生成此错误。 当在 SELECT 语句中指定的字段或表在数据存储中不存在时，也会发生此错误。|

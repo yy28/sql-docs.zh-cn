@@ -14,10 +14,10 @@ ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6163a5b5fd0999e17e17961639e0a1fee3e8fa4c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922787"
 ---
 # <a name="customization-file-sql-section"></a>自定义文件 SQL 部分
@@ -45,9 +45,9 @@ SQL = " "
  **SQL =**   
  ***sqlString***  
   
-|部分|说明|  
+|组成部分|说明|  
 |----------|-----------------|  
-|**TRANSACT-SQL**|指示这是一个 SQL 节条目的文字字符串。|  
+|**SQL**|指示这是一个 SQL 节条目的文字字符串。|  
 |***sqlString***|替换客户端字符串的 SQL 字符串。|  
   
 ## <a name="see-also"></a>另请参阅  

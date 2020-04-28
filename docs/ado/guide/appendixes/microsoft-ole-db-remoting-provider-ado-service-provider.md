@@ -15,10 +15,10 @@ ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5c60567da677564c168f0601625686bdfb8b3d67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926590"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB 远程处理提供程序概述
@@ -49,7 +49,7 @@ Microsoft OLE DB 远程处理提供程序允许客户端计算机上的本地用
 |**DFMode**|指示 DataFactory 模式。 一个字符串，指定服务器上的[DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)对象的所需版本。 在打开连接之前设置此属性，以请求**DataFactory**的特定版本。 如果请求的版本不可用，则将尝试使用上述版本。 如果没有以前的版本，则会出现错误。 如果**DFMode**小于可用版本，则会出现错误。 建立连接后，此属性是只读的。<br /><br /> 可以是以下有效的字符串值之一：<br /><br /> -"25"-版本2.5 （默认值）<br />-"21"-版本2。1<br />-"20"-版本2。0<br />-"15"-版本1。5|
 |**命令属性**|指示将添加到由 MS 远程提供程序发送到服务器的命令（行集）属性字符串的值。 此字符串的默认值为 vt_empty。|
 |**当前 DFMode**|指示服务器上的**DataFactory**的实际版本号。 检查此属性以查看**DFMode**属性中请求的版本是否有效。<br /><br /> 可以是以下有效的长整数值之一：<br /><br /> -25-版本2.5 （默认值）<br />-21 版本2。1<br />-20-版本2。0<br />-15-版本1。5<br /><br /> 使用**MSRemote**提供程序时，在连接字符串中添加 "DFMode = 20;" 可以提高服务器在更新数据时的性能。 使用此设置时，服务器上的**RDSServer DataFactory**对象使用的资源占用资源更少。 但是，以下功能在此配置中不可用：<br /><br /> -使用参数化查询。<br />-在调用**Execute**方法前获取参数或列信息。<br />-将 " **Transact-sql 更新**" 设置为 " **True**"。<br />-获取行状态。<br />-调用**Resync**方法。<br />-通过**更新重新同步**属性进行显式或自动刷新。<br />-设置**命令**或**记录集**属性。<br />-使用**adCmdTableDirect**。|
-|**Handler**|指示用于扩展[RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)的功能的服务器端自定义项（或处理程序）的名称，以及由逗号（"，"）分隔的所有参数的参数。 一个字符串值  。|
+|**Handler**|指示用于扩展[RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)的功能的服务器端自定义项（或处理程序）的名称，以及由逗号（"，"）分隔的所有参数的参数。 一个字符串值****。|
 |**Internet 超时**|指示等待请求传输到服务器以及从服务器传递的最大毫秒数。 （默认值为5分钟。）|
 |**远程提供程序**|指示要在远程服务器上使用的数据提供程序的名称。|
 |**远程服务器**|指示此连接要使用的服务器名称和通信协议。 此属性等效于[RDS。DataContro](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象[服务器](../../../ado/reference/rds-api/server-property-rds.md)属性。|

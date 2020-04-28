@@ -17,10 +17,10 @@ ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72526eca57d08152d7eaa773be50d68d4b3688e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932461"
 ---
 # <a name="getstring-method-ado"></a>GetString 方法 (ADO)
@@ -36,7 +36,7 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
 ## <a name="return-value"></a>返回值  
  以字符串值**变量**（BSTR）的形式返回**记录集**。  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *StringFormat*  
  一个[StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md)值，指定应如何将**记录集**转换为字符串。 *RowDelimiter*、 *ColumnDelimiter*和*NullExpr*参数仅用于**adClipString**的*StringFormat* 。  
   

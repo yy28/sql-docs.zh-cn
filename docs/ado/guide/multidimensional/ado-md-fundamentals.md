@@ -13,10 +13,10 @@ ms.assetid: f6a20d9f-c1ab-474c-b9f3-82277e2a126d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 690c7b58c336596485b9ade77f0c02928853cd2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923205"
 ---
 # <a name="ado-md-fundamentals"></a>ADO MD 基础知识
@@ -26,7 +26,7 @@ Microsoft® ActiveX®数据对象（多维）（ADO MD）提供了从 Microsoft 
   
  本文档假定你了解 Visual Basic 的编程语言和 ADO 和 OLAP 的一般知识。 有关详细信息，请参阅[用于联机分析处理（OLAP）](https://msdn.microsoft.com/library/windows/desktop/ms717005.aspx)的[ADO 程序员指南](../../../ado/guide/ado-programmer-s-guide.md)和 OLE DB。  
   
- 本部分包含下列主题。  
+ 本部分包含以下主题。  
   
 -   [多维架构和数据的概述](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)  
   

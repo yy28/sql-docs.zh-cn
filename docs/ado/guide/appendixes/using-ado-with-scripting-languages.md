@@ -14,10 +14,10 @@ ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b322dacbf85ec24b58e315ecbbf9d547d1481f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926480"
 ---
 # <a name="using-ado-with-scripting-languages"></a>配合使用 ADO 与脚本语言
@@ -25,7 +25,7 @@ ms.locfileid: "67926480"
   
  在网页中使用 ActiveX 对象之前，请务必了解该对象是否对脚本是安全的。 如果对象被视为脚本编写安全，则表示该控件不能在用户的计算机上执行任何有害操作，因此可以在不请求用户批准的情况下执行。 下表列出了 ADO 对象，并指示它们是否对脚本是安全的。  
   
-|Object|脚本安全？|  
+|对象|脚本安全？|  
 |------------|-------------------------|  
 |ADO 连接|是|  
 |ADO 命令|否|  
@@ -45,8 +45,8 @@ ms.locfileid: "67926480"
 |提供程序|脚本安全？|  
 |--------------|-------------------------|  
 |形状|是|  
-|Persist|是|  
-|Remote|是|  
+|保留|是|  
+|远程|是|  
 |SQL Server 的 OLE DB 提供程序（SQLOLEDB）|否|  
 |ODBC 的 OLE DB 提供程序（MSDASQL）|否|  
   

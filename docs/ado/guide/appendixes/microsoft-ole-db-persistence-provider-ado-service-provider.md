@@ -15,10 +15,10 @@ ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2bd341a3af2d1fdb076312b4c0993184fb4fae39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926768"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Microsoft OLE DB 永久性提供程序概述
@@ -36,7 +36,7 @@ ms.locfileid: "67926768"
 ## <a name="errors"></a>错误
  可以在应用程序中检测到此提供程序发出的以下错误。
 
-|一直|说明|
+|Constant|说明|
 |--------------|-----------------|
 |E_BADSTREAM|打开的文件没有有效的格式（即，格式不是 ADTG 或 XML）。|
 |E_CANTPERSISTROWSET|保存的**记录集**对象具有防止其被存储的特征。|

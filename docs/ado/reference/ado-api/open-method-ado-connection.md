@@ -18,10 +18,10 @@ ms.assetid: 663defab-5545-4973-9036-24d5882c9737
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 15115313613ea8f86dd2267c6be3c231cab92503
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931934"
 ---
 # <a name="open-method-ado-connection"></a>Open 方法（ADO 连接）
@@ -34,14 +34,14 @@ ms.locfileid: "67931934"
 connection.Open ConnectionString, UserID, Password, Options  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  *ConnectionString*  
  可选。 一个包含连接信息的**字符串**值。 有关有效设置的详细信息，请参阅[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性。  
   
  *Id*  
  可选。 一个**字符串**值，该值包含建立连接时要使用的用户名。  
   
- *权限*  
+ *密码*  
  可选。 一个**字符串**值，该值包含建立连接时要使用的密码。  
   
  *选项*  

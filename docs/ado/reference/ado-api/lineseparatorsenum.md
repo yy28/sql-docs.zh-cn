@@ -16,19 +16,19 @@ ms.assetid: 0440b793-99c7-49a2-b3e2-ec5b1a7e3e60
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c966e2ac972fbc613c3938e95e458786c399bc08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932329"
 ---
 # <a name="lineseparatorsenum"></a>LineSeparatorsEnum
 指定在文本[流](../../../ado/reference/ado-api/stream-object-ado.md)对象中用作行分隔符的字符。  
   
-|一直|值|说明|  
+|Constant|值|说明|  
 |--------------|-----------|-----------------|  
 |**adCR**|13|指示回车符。|  
-|**adCRLF**|-1|默认值。 指示回车换行符。|  
+|**adCRLF**|-1|默认。 指示回车换行符。|  
 |**adLF**|10|指示换行。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  

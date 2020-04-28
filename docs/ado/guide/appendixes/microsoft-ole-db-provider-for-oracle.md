@@ -15,10 +15,10 @@ ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 60510302525562d9c3007a6ef57213fc261b4c60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926621"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Oracle 的 Microsoft OLE DB 提供程序概述
@@ -52,7 +52,7 @@ MSDAORA
 |**提供程序**|指定 Oracle 的 OLE DB 提供程序。|
 |**数据源**|指定服务器的名称。|
 |**用户 ID**|指定用户名。|
-|**权限**|指定用户密码。|
+|**密码**|指定用户密码。|
 
 > [!NOTE]
 >  如果要连接到支持 Windows 身份验证的数据源提供程序，应在连接字符串中指定**Trusted_Connection = yes**或**集成安全性 = SSPI**而不是用户 ID 和密码信息。
@@ -67,7 +67,7 @@ MSDAORA
 |**窗口句柄**|指示用于提示输入其他信息的窗口句柄。|
 |**区域设置标识符**|指示一个唯一的32位数字（例如，1033），指定与用户语言相关的首选项。 这些首选项指示如何设置日期和时间的格式、按字母顺序对项进行排序、比较字符串，等等。|
 |**OLE DB 服务**|指示一个位掩码，该位掩码指定要启用或禁用 OLE DB 服务。|
-|**处**|指示在建立连接时是否提示用户。|
+|**提示**|指示在建立连接时是否提示用户。|
 |**扩展属性**|包含特定于提供程序的扩展连接信息的字符串。 此属性仅用于特定于提供程序的连接信息，不能通过属性机制进行描述。|
 
 ## <a name="see-also"></a>另请参阅

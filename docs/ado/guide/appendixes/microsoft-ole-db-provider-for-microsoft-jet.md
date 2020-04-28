@@ -15,10 +15,10 @@ ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69d88aebe25f6cfa5490cce736c05780b87eee6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926646"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft Jet 的 microsoft OLE DB 提供程序概述
@@ -47,7 +47,7 @@ Microsoft.Jet.OLEDB.4.0
 |**提供程序**|指定 Microsoft Jet 的 OLE DB 提供程序。|
 |**数据源**|指定数据库路径和文件名（例如`c:\Northwind.mdb`）。|
 |**用户 ID**|指定用户名。 如果未指定此关键字，则默认情况下使用`admin`字符串 ""。|
-|**权限**|指定用户密码。 如果未指定此关键字，则默认情况下使用空字符串（""）。|
+|**密码**|指定用户密码。 如果未指定此关键字，则默认情况下使用空字符串（""）。|
 
 > [!NOTE]
 >  如果要连接到支持 Windows 身份验证的数据源提供程序，应在连接字符串中指定**Trusted_Connection = yes**或**集成安全性 = SSPI**而不是用户 ID 和密码信息。
@@ -131,7 +131,7 @@ Microsoft.Jet.OLEDB.4.0
 |目录术语|DBPROP_CATALOGTERM|
 |列定义|DBPROP_COLUMNDEFINITION|
 |当前目录|DBPROP_CURRENTCATALOG|
-|数据源|DBPROP_INIT_DATASOURCE|
+|“数据源”|DBPROP_INIT_DATASOURCE|
 |数据源名称|DBPROP_DATASOURCENAME|
 |数据源对象线程模型|DBPROP_DSOTHREADMODEL|
 |DBMS 名称|DBPROP_DBMSNAME|
@@ -146,7 +146,7 @@ Microsoft.Jet.OLEDB.4.0
 |最大行大小|DBPROP_MAXROWSIZE|
 |最大行大小包括 BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |选择中的最大表数|DBPROP_MAXTABLESINSELECT|
-|模式|DBPROP_INIT_MODE|
+|“模式”|DBPROP_INIT_MODE|
 |多个参数集|DBPROP_MULTIPLEPARAMSETS|
 |多个结果|DBPROP_MULTIPLERESULTS|
 |多个存储对象|DBPROP_MULTIPLESTORAGEOBJECTS|
@@ -164,7 +164,7 @@ Microsoft.Jet.OLEDB.4.0
 |准备中止行为|DBPROP_PREPAREABORTBEHAVIOR|
 |准备提交行为|DBPROP_PREPARECOMMITBEHAVIOR|
 |过程术语|DBPROP_PROCEDURETERM|
-|提示|DBPROP_INIT_PROMPT|
+|Prompt|DBPROP_INIT_PROMPT|
 |提供程序友好名称|DBPROP_PROVIDERFRIENDLYNAME|
 |Provider Name|DBPROP_PROVIDERFILENAME|
 |提供程序版本|DBPROP_PROVIDERVER|

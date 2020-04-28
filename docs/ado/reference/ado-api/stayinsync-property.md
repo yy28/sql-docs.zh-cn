@@ -20,17 +20,17 @@ ms.assetid: 502d69b5-dc9a-455d-b115-a03bd39a552b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18d17e0a761fe03053ba90b8ff1ef87f3067df76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67930749"
 ---
 # <a name="stayinsync-property"></a>StayInSync 属性
 指示在分层[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象中，对基础子记录（即*章节*）的引用是否在父行位置发生更改时更改。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置或返回一个**布尔**值。 默认值是 **True**秒。 如果**为 True**，则当父**记录集**对象更改行位置时，将更新该章节;如果**为 False**，则即使父**记录集**对象已更改行位置，本章仍将继续引用前一章节中的数据。  
+ 设置或返回一个**布尔**值。 默认值为 **True**。 如果**为 True**，则当父**记录集**对象更改行位置时，将更新该章节;如果**为 False**，则即使父**记录集**对象已更改行位置，本章仍将继续引用前一章节中的数据。  
   
 ## <a name="remarks"></a>备注  
  此属性适用于分层记录集（例如[OLE DB 的 Microsoft 数据定形服务](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)支持的层次记录集），并且必须在检索子**记录集**之前对父**记录**集进行设置。 此属性可简化层次记录集导航。  

@@ -14,10 +14,10 @@ ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71396a071a42d7dd40a6537a2834541aab2b6bad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921097"
 ---
 # <a name="ado-dynamic-properties"></a>ADO 动态属性
@@ -29,8 +29,8 @@ ms.locfileid: "67921097"
   
 |||  
 |-|-|  
-|[平台](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|指定是否应在此字段上创建索引。|  
-|[处](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|指定 OLE DB 提供程序是否应提示用户提供初始化信息。|  
+|[优化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|指定是否应在此字段上创建索引。|  
+|[提示](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|指定 OLE DB 提供程序是否应提示用户提供初始化信息。|  
 |[调整名称](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|指定**记录集**对象的名称。|  
 |[重新同步命令](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|指定一个用户提供的命令字符串，重新**同步**方法发出此命令以刷新 "**唯一表**动态" 属性中命名的表中的数据。|  
 |[唯一表、唯一架构、唯一目录](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**唯一表**指定允许更新、插入和删除的基表的名称。<br /><br /> **唯一架构**指定表所有者的架构或名称。<br /><br /> **唯一目录**指定包含表的数据库的目录或名称。|  

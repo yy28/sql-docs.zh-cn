@@ -14,10 +14,10 @@ ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 09fec8bd07d036fd6a93b8f6bcb54a51a68150fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924178"
 ---
 # <a name="shape-commands-in-general"></a>常用 Shape 命令
@@ -31,7 +31,7 @@ ms.locfileid: "67924178"
 |段|对另一**记录集**的引用，称为*章节*。 通过章节列可以定义*父子关系，* 其中的*父*项是包含章列的**记录集**，而*子级*是本章表示的**记录集**。|  
 |aggregate|通过对子**记录集**的所有行的所有行或列执行*聚合函数*来派生列的值。 （请参阅以下主题中的聚合函数、[聚合函数、CALC 函数和新关键字](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)。）|  
 |计算表达式|列的值是通过对**记录集**的同一行中的列计算 Visual Basic for Applications 表达式来派生的。 表达式是 CALC 函数的参数。 （请参阅以下主题中的计算表达式：[聚合函数、CALC 函数、NEW 关键字](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)和[Visual Basic for Applications 函数](../../../ado/guide/data/visual-basic-for-applications-functions.md)。）|  
-|新的|空的制造字段，可以在以后使用数据进行填充。 列是用 NEW 关键字定义的。 （请参阅以下主题中的 NEW 关键字：[聚合函数、CALC 函数和 New 关键字](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)。）|  
+|new|空的制造字段，可以在以后使用数据进行填充。 列是用 NEW 关键字定义的。 （请参阅以下主题中的 NEW 关键字：[聚合函数、CALC 函数和 New 关键字](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)。）|  
   
  Shape 命令可以包含一个子句，该子句指定对将返回**Recordset**对象的基础数据提供程序的查询命令。 查询的语法取决于基础数据提供程序的要求。 这通常是 SQL，尽管 ADO 不需要使用任何特定的查询语言。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "67924178"
   
  有关语法正确的形状命令的详细信息，请参阅[正式的形状语法](../../../ado/guide/data/formal-shape-grammar.md)。  
   
- 本部分包含下列主题。  
+ 本部分包含以下主题。  
   
 -   [聚合函数、CALC 函数和 NEW 关键字](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)  
   

@@ -14,10 +14,10 @@ ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e666f479d95e3915703dc539ba2731e95175488b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925130"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData：简单的 ADO 应用程序
@@ -42,19 +42,19 @@ ms.locfileid: "67925130"
   
  ![显示 HelloData VB 应用程序的 Form1](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|控件类型|properties|值|  
+|控件类型|属性|值|  
 |------------------|--------------|-----------|  
-|表单|名称|Form1|  
+|窗体|名称|Form1|  
 ||高度|6500|  
 ||宽度|6500|  
 |MS DataGrid|名称|grdDisplay1|  
-|TextBox|名称|txtDisplay1|  
-||Multiline|true|  
+|文本框|名称|txtDisplay1|  
+||多行|true|  
 |命令按钮|名称|cmdGetData|  
 ||Caption|获取数据|  
 |命令按钮|名称|cmdExamineData|  
 ||Caption|检查数据|  
 |命令按钮|名称|cmdEditData|  
-||Caption|编辑数据|  
+||Caption| 编辑数据|  
 |命令按钮|名称|cmdUpdateData|  
 ||Caption|更新数据|

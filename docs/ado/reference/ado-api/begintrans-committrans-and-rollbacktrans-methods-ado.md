@@ -23,10 +23,10 @@ ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c3a8bc22e57d91ab64bdbbc5fc694575a8aa8ff9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920529"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>BeginTrans、CommitTrans 和 RollbackTrans 方法 (ADO)
@@ -51,8 +51,8 @@ object.RollbackTrans
 ## <a name="return-value"></a>返回值  
  **BeginTrans**可作为一个函数调用，该函数返回一个指示事务的嵌套级别的**长**变量。  
   
-#### <a name="parameters"></a>parameters  
- *对象*  
+#### <a name="parameters"></a>参数  
+ *object*  
  **连接**对象。  
   
 ## <a name="connection"></a>连接  
@@ -63,7 +63,7 @@ object.RollbackTrans
   
  调用**BeginTrans**方法后，该提供程序将不会立即提交所做的更改，直到调用**CommitTrans**或**RollbackTrans**结束该事务为止。  
   
- 对于支持嵌套事务的提供程序，在打开的事务内调用**BeginTrans**方法将启动一个新的嵌套事务。 返回值指示嵌套的级别：返回值为 "1" 表示已打开顶级事务（也就是说，事务未嵌套在另一个事务中），"2" 表示已打开二级事务（嵌套在顶级事务中的事务等。 调用**CommitTrans**或**RollbackTrans**只会影响最近打开的事务;必须先关闭或回滚当前事务，然后才能解析任何更高级别的事务。  
+ 对于支持嵌套事务的提供程序，在打开的事务内调用**BeginTrans**方法将启动一个新的嵌套事务。 返回值指示嵌套的级别：返回值为 "1" 表示已打开顶级事务（也就是说，事务未嵌套在另一个事务中），"2" 表示您已经打开了二级事务（嵌套在顶级事务中的事务）等。 调用**CommitTrans**或**RollbackTrans**只会影响最近打开的事务;必须先关闭或回滚当前事务，然后才能解析任何更高级别的事务。  
   
  调用**CommitTrans**方法将保存在连接上打开的事务中所做的更改并结束该事务。 调用**RollbackTrans**方法会反转在打开的事务中所做的任何更改，并结束该事务。 如果没有任何打开的事务，则调用任一方法都会生成错误。  
   

@@ -13,10 +13,10 @@ ms.assetid: 3931e7ec-f66b-4d5d-aad3-c4bf12e8b154
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72e24c8c68a8042cda83c6fa5e448fafcaed1607
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925251"
 ---
 # <a name="getting-data"></a>获取数据
@@ -24,7 +24,7 @@ ms.locfileid: "67925251"
   
  在基本级别上，有几个 ADO 对象有助于获取数据。 首先，必须使用 ADO**连接**对象连接到数据源。 然后，使用 ADO**命令**对象将指令传递到数据源。 最后，最常在 ADO**记录集**对象中接收数据。  
   
- 本部分包含下列主题。  
+ 本部分包含以下主题。  
   
 -   [连接到数据源](../../../ado/guide/data/connecting-to-data-sources.md)  
   

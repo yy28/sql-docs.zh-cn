@@ -16,10 +16,10 @@ ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25cac9bffce7602ce211be7f83c7e55239061282
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923464"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications 函数
@@ -28,24 +28,24 @@ ms.locfileid: "67923464"
 |||||||  
 |-|-|-|-|-|-|  
 |Abs|Asc|Atn|CBool|CByte|CCur|  
-|CDate|CDbl|Chr|ChrB|ChrW|Chr$|  
+|Cdate|CDbl|Chr|ChrB|ChrW|Chr$|  
 |ChrB $|CInt|CLng|Cos|CSng|CStr|  
-|Cvar|CVDate|CVErr|Date|Date$|DateAdd|  
+|Cvar|CVDate|CVErr|日期|Date$|DateAdd|  
 |DateDiff|DatePart|DateSerial|DateValue|日期|DDB|  
-|错误|Error$|Exp|解决方法|格式|Format$|  
+|错误|Error$|Exp|Fix|格式|Format$|  
 |FV|Hex|Hex$|Hour|IIF|InStr|  
 |Int|IPmt|IRR|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|LCase|LCase$|Left|  
 |Leftb 将|Left$|Leftb 将 $|Len|日志|LTrim|  
-|LTrim$|Mid|Mid$|分钟|MIRR|月份|  
-|Now|NPer|NPV|10 月|Oct$|Pmt|  
+|LTrim$|Mid|Mid$|Minute|MIRR|月份|  
+|现在|NPer|NPV|Oct|Oct$|Pmt|  
 |PPmt|PV|QBColor|费率|RGB|Right|  
 |Rightb 将|Right$|Rightb 将 $|Rnd|RTrim|RTrim $|  
-|秒|Sgn|Sin|SLN|空格|Space$|  
-|Sqr|Str|Str$|StrComp|StrConv|String|  
-|String$|SYD|Tan|时间|Time$|计时器|  
+|秒|Sgn|Sin|SLN|Space|Space$|  
+|Sqr|Str|Str$|StrComp|StrConv|字符串|  
+|String$|SYD|Tan|时间|Time$|Timer|  
 |TimeSerial|TimeValue|Trim|Trim$|TypeName|UCase|  
-|UCase$|Val|VarType|星期|年龄||  
+|UCase$|Val|VarType|星期|年||  
   
 ## <a name="see-also"></a>另请参阅  
  [访问分层记录集中的行](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   

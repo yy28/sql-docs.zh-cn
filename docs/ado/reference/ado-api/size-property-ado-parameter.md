@@ -16,10 +16,10 @@ ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3796f772dedb961ec34eb0639034350989f99142
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931057"
 ---
 # <a name="size-property-ado-parameter"></a>Size 属性（ADO 参数）
@@ -40,7 +40,7 @@ ms.locfileid: "67931057"
  **Size**属性是可读/写的。  
   
 ## <a name="applies-to"></a>应用于  
- [Parameter 对象](../../../ado/reference/ado-api/parameter-object.md)  
+ [参数对象](../../../ado/reference/ado-api/parameter-object.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [ActiveConnection、CommandText、CommandTimeout、CommandType、Size 和 Direction 属性示例（VB）](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   

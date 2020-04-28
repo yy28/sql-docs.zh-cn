@@ -13,17 +13,17 @@ ms.assetid: 92905044-579f-4c38-bca6-f8bd5b239c20
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c580006938c4180ccd0f575af81f687de5d6a630
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922015"
 ---
 # <a name="troubleshooting-rds"></a>RDS 故障排除
 > [!IMPORTANT]
 >  从 Windows 8 和 Windows Server 2012 开始，Windows 操作系统中不再包含 RDS 服务器组件（有关详细信息，请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)）。 在 Windows 的未来版本中将删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 有关特定错误或 RDS 问题的解决方案，请参阅此部分。 本部分包含下列主题。  
+ 有关特定错误或 RDS 问题的解决方案，请参阅此部分。 本部分包含以下主题。  
   
 -   [在 Windows 2000 上配置 RDS](../../../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md)  
   

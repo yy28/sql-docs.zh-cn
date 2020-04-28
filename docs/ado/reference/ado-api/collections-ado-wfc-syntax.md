@@ -16,16 +16,16 @@ ms.assetid: 073f9a0e-c755-42dd-9f71-4647d68e331a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b26c78f514ef6786f642c534b2621d0c81c71e51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919906"
 ---
 # <a name="collections-ado---wfc-syntax"></a>集合（ADO - WFC 语法）
 **包 .com. 数据**  
   
-## <a name="parameters"></a>parameters  
+## <a name="parameters"></a>参数  
   
 ### <a name="methods"></a>方法  
   

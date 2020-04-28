@@ -17,10 +17,10 @@ ms.assetid: 29a02992-64be-4fcd-be13-445cba205893
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 38d283e8fedb90ed5a99143090bc6a077efa8512
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932109"
 ---
 # <a name="numericscale-property-ado"></a>NumericScale 属性 (ADO)
@@ -40,7 +40,7 @@ ms.locfileid: "67932109"
   
 |||  
 |-|-|  
-|[Parameter 对象](../../../ado/reference/ado-api/parameter-object.md)|[字段对象](../../../ado/reference/ado-api/field-object.md)|  
+|[参数对象](../../../ado/reference/ado-api/parameter-object.md)|[字段对象](../../../ado/reference/ado-api/field-object.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [NumericScale 和 Precision 属性示例（VB）](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   

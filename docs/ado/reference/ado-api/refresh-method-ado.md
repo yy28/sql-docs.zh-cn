@@ -18,10 +18,10 @@ ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a676bf5eb3d8d98f1b2eb9367aa8ad56f0da209d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931255"
 ---
 # <a name="refresh-method-ado"></a>Refresh 方法 (ADO)
@@ -37,7 +37,7 @@ collection.Refresh
 ## <a name="remarks"></a>备注  
  **Refresh**方法完成不同的任务，具体取决于调用该方法的集合。  
   
-### <a name="parameters"></a>parameters  
+### <a name="parameters"></a>参数  
  对[command](../../../ado/reference/ado-api/command-object-ado.md)对象的[Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)集合使用**Refresh**方法将检索在**命令**对象中指定的存储过程或参数化查询的提供程序端参数信息。 对于不支持存储过程调用或参数化查询的访问接口，该集合将为空。  
   
  在调用**Refresh**方法之前，应将**命令**对象的[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)属性设置为有效的[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象，将[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)属性设置为有效的命令，并将[CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)属性设置为**adCmdStoredProc** 。  

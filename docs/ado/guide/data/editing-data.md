@@ -15,10 +15,10 @@ ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8e8fd90849b8e046a7f4fe5d158d4594e612c91f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925494"
 ---
 # <a name="editing-data"></a>编辑数据
@@ -81,7 +81,7 @@ End Function
 'EndNewConnection  
 ```  
   
- 本部分包含下列主题。  
+ 本部分包含以下主题。  
   
 -   [编辑现有记录](../../../ado/guide/data/editing-existing-records.md)  
   

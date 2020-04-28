@@ -14,10 +14,10 @@ ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bce9917f144e8c63160f571a986263d8d7e97b21
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925567"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>检测和解决冲突
@@ -30,7 +30,7 @@ ms.locfileid: "67925567"
   
  调用 BatchUpdate 时，ADO 和提供程序正在生成 SQL 语句，以便对数据源执行更新。 请记住，某些数据源对于 WHERE 子句中可以使用哪些类型的列有限制。  
   
- 接下来，在 AffectRecords 参数设置为 adAffectGroup 且 ResyncValues 参数设置等于 adResyncUnderlyingValues 的记录集中调用 Resync 方法。 Resync 方法从基础数据库更新当前记录集对象中的数据。 通过使用 adAffectGroup，你可以确保只有与当前筛选器设置一起显示的记录才会与数据库重新同步。 如果正在处理大型记录集，这可能会显著提高性能。 通过将 ResyncValues 参数设置为 adResyncUnderlyingValues （调用重新同步时），可以确保 UnderlyingValue 属性将包含数据库中的（冲突）值，该值属性将保留用户输入的值，并且OriginalValue 属性将保留该字段的原始值（进行上次成功的 UpdateBatch 调用之前的值）。 然后，你可以使用这些值以编程方式解决冲突，或者要求用户选择将使用的值。  
+ 接下来，在 AffectRecords 参数设置为 adAffectGroup 且 ResyncValues 参数设置等于 adResyncUnderlyingValues 的记录集中调用 Resync 方法。 Resync 方法从基础数据库更新当前记录集对象中的数据。 通过使用 adAffectGroup，你可以确保只有与当前筛选器设置一起显示的记录才会与数据库重新同步。 如果正在处理大型记录集，这可能会显著提高性能。 通过将 ResyncValues 参数设置为 adResyncUnderlyingValues 时，在调用重新同步时，你可以确保 UnderlyingValue 属性包含数据库中的（冲突）值，该值属性将保留用户输入的值，并且 OriginalValue 属性将保留该字段的原始值（在进行上一次成功的 UpdateBatch 调用之前的值）。 然后，你可以使用这些值以编程方式解决冲突，或者要求用户选择将使用的值。  
   
  下面的代码示例演示了此方法。 示例人为在调用 UpdateBatch 之前，通过使用单独的记录集更改基础表中的值来创建冲突。  
   

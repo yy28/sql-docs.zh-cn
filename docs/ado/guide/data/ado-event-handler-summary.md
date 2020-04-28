@@ -14,10 +14,10 @@ ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4fef63ff610ad85e353c2ef1dc0f8e5987c74ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926201"
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO 连接和记录集事件
@@ -45,4 +45,4 @@ ms.locfileid: "67926201"
 |[WillChangeRecordset, RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|**记录集更改管理**-通知当前**记录集中**的某些内容将发生更改或已更改。|
 
 ## <a name="see-also"></a>另请参阅
- [按语言 ado 事件实例化的 ado](../../../ado/guide/data/ado-event-instantiation-by-language.md) [](../../../ado/reference/ado-api/ado-events.md)事件[事件参数](../../../ado/guide/data/event-parameters.md)[事件处理程序如何协同工作](../../../ado/guide/data/how-event-handlers-work-together.md)事件[类型](../../../ado/guide/data/types-of-events.md)
+ [按语言 ado 事件实例化的 ado](../../../ado/guide/data/ado-event-instantiation-by-language.md) [ADO Events](../../../ado/reference/ado-api/ado-events.md)事件[事件参数](../../../ado/guide/data/event-parameters.md)[事件处理程序如何协同工作](../../../ado/guide/data/how-event-handlers-work-together.md)事件[类型](../../../ado/guide/data/types-of-events.md)
