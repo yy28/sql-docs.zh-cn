@@ -1,5 +1,5 @@
 ---
-title: 异步模式和 SQL 取消 |微软文档
+title: 异步模式和 SQLCancel |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 014314eebdeabc137f9f1735e899f7d111105ed4
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303744"
 ---
 # <a name="creating-a-driver-application---asynchronous-mode-and-sqlcancel"></a>创建驱动程序应用程序 - 异步模式和 SQLCancel
@@ -48,7 +48,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ASYNC_ENABLE,
   
  当应用程序测试命令是否完成时，它会向驱动程序发出带有相同参数的相同函数调用。 如果驱动程序尚未从服务器接收到回复，它将再次返回 SQL_STILL_EXECUTING。 应用程序必须定期测试该命令，直到返回 SQL_STILL_EXECUTING 之外的代码。 当应用程序收到其他任何返回代码（甚至是 SQL_ERROR）后，它可以确定命令是否已完成。  
   
- 有时某个命令长时间未完成。 如果应用程序需要取消该命令而不等待答复，则可以使用与未执行命令相同的语句句柄调用**SQLCancel**来执行此操作。 这是**SQLCancel**的唯一时间。 某些程序员在通过结果集处理部分方式并希望取消结果集的其余部分时使用**SQLCancel。** [SQLMore 结果](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md)或[SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md)应用于取消未完成的结果集的剩余部分，而不是**SQLCancel**。  
+ 有时某个命令长时间未完成。 如果应用程序需要在不等待答复的情况下取消命令，则可以通过使用与未完成的命令相同的语句句柄调用**SQLCancel**来执行此操作。 这是唯一应该使用的**SQLCancel** 。 某些程序员在通过结果集处理部分方法时使用**SQLCancel** ，并希望取消结果集的其余部分。 应使用[SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md)或[SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md)来取消未完成的结果集的剩余部分，而不是**SQLCancel**。  
   
 ## <a name="see-also"></a>另请参阅  
  [创建 SQL Server Native Client ODBC 驱动程序应用程序](../../../relational-databases/native-client/odbc/creating-a-driver-application.md)  

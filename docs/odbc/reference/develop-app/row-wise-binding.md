@@ -1,5 +1,5 @@
 ---
-title: 行-威斯绑定 |微软文档
+title: 按行绑定 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,26 +15,26 @@ ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 3a63565590bbafc6f3a8740dd7cf7d4acbfd4f80
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304268"
 ---
 # <a name="row-wise-binding"></a>按行绑定
-使用逐行绑定时，应用程序定义包含一个或两个或在某些情况下包含要为其返回数据的每列的元素的结构。 第一个元素保存数据值，第二个元素包含长度/指示器缓冲区。 指标和长度值可以通过将SQL_DESC_INDICATOR_PTR和SQL_DESC_OCTET_LENGTH_PTR描述符字段设置为不同的值存储在单独的缓冲区中;如果这样做，则结构包含第三个元素。 然后，应用程序分配这些结构的数组，该数组包含与行集中的行一样多的元素。  
+使用按行绑定时，应用程序将定义一个结构，该结构包含一个或两个，或在某些情况下为要为其返回数据的每个列的元素。 第一个元素保存数据值，第二个元素保存长度/指示器缓冲区。 可以通过将 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 描述符字段设置为不同的值，将指示器和长度值存储在单独的缓冲区中;如果完成此操作，该结构包含第三个元素。 然后，应用程序分配这些结构的数组，其中包含的元素数量与行集中的行数相同。  
   
- 应用程序使用SQL_ATTR_ROW_BIND_TYPE语句属性向驱动程序声明结构的大小，并将数组第一个元素中每个成员的地址绑定。 因此，驱动程序可以计算特定行的数据地址，并将该列计算为  
+ 应用程序将结构的大小声明为带有 SQL_ATTR_ROW_BIND_TYPE 语句特性的驱动程序，并将每个成员的地址绑定到数组的第一个元素中。 因此，驱动程序可以将特定行和列的数据地址计算为  
   
 ```  
 Address = Bound Address + ((Row Number - 1) * Structure Size)  
 ```  
   
- 其中行编号从 1 到行集的大小。 （从行号中减去一个，因为 C 中的数组索引是基于零的。下图显示了行绑定的工作原理。 通常，结构中仅包含将绑定的列。 结构可以包含与结果集列无关的字段。 列可以按任意顺序放置在结构中，但为了清楚起见，按顺序显示。  
+ 其中，行从1到行集的大小进行编号。 （从行号中减去1，因为 C 中的数组索引从零开始。）下图显示了按行绑定的工作方式。 通常，结构中只包含将绑定的列。 结构可以包含与结果集列无关的字段。 列可以按任何顺序放置在结构中，但会按顺序显示，以便清楚地显示。  
   
- ![显示行&#45;明智的绑定](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
+ ![显示行&#45;明智绑定](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
   
- 例如，以下代码创建一个包含要返回 OrderID、SalesPerson 和状态列的数据以及"销售人员"和"状态"列的长度/指示器的元素的结构。 它分配其中 10 个结构，并将它们绑定到 OrderID、销售人员和状态列。  
+ 例如，下面的代码创建一个结构，其中包含要为 "订单 Id"、"销售人员" 和 "状态" 列返回数据的元素，以及 "销售人员" 和 "状态" 列的长度/指示器。 它将分配其中10个结构，并将它们绑定到 "订单 Id"、"销售人员" 和 "状态" 列。  
   
 ```  
 #define ROW_ARRAY_SIZE 10  

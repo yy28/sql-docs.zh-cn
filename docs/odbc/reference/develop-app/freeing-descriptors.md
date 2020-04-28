@@ -1,5 +1,5 @@
 ---
-title: 释放描述符 |微软文档
+title: 释放描述符 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ ms.assetid: 317213f4-0ebb-4bf8-a37a-4d6b1313823f
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: af30ceb29e032764b89aa2069086aa898a7d35db
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305598"
 ---
 # <a name="freeing-descriptors"></a>释放描述符
-显式分配的描述符可以通过使用*SQL_HANDLE_DESC 的 HandleType*调用**SQLFreeHandle**或隐式释放连接句柄时显式释放。 释放显式分配的描述符时，释放的描述符应用的所有语句句柄将自动还原到隐式为其分配的描述符。  
+显式分配的描述符可以通过以下方式释放：使用*HandleType*的 SQL_HANDLE_DESC 调用**SQLFreeHandle** ，或在释放连接句柄时隐式释放。 释放显式分配的描述符后，所应用的已释放说明符的所有语句句柄都会自动还原为为它们隐式分配的说明符。  
   
- 隐式分配的描述符只能通过调用**SQLDisconnect**（它丢弃连接上打开的任何语句或描述符）来释放，或者使用*handletype* SQL_HANDLE_STMT 调用**SQLFreeHandle**以释放语句句柄以及与语句关联的所有隐式分配的描述符。 无法通过使用*SQL_HANDLE_DESC的句柄类型*调用**SQLFreeHandle**来释放隐式分配的描述符。  
+ 隐式分配的描述符只能通过调用**SQLDisconnect**来释放，后者会删除在连接上打开的任何语句或说明符，或通过使用 SQL_HANDLE_STMT 的*HandleType*调用**SQLFreeHandle**来释放语句句柄和与该语句关联的所有隐式分配的说明符。 不能通过使用 SQL_HANDLE_DESC 的*HandleType*调用**SQLFreeHandle**来释放隐式分配的描述符。  
   
- 即使释放，隐式分配的描述符仍然有效 **，SQLGetDescField**也可以在其字段上调用。
+ 即使在释放时，隐式分配的描述符仍有效，并且可以对其字段调用**SQLGetDescField** 。

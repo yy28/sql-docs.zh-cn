@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 396d70beabab15d715a99cfd9df074fd75091ca2
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302298"
 ---
 # <a name="errors"></a>错误
@@ -33,7 +33,7 @@ ms.locfileid: "81302298"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以返回多个错误。 通过调用 [IMultipleResults::GetResult](https://go.microsoft.com/fwlink/?LinkId=129630) 并结合 ISQLErrorInfo 和 IErrorRecords，应用程序可以一次检索一个服务器错误。  
   
- 本机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端 OLE 数据库提供程序公开 OLE DB 记录增强的**IErrorInfo、** 自定义**ISQLErrorInfo**和特定于提供程序的[ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)错误对象接口。  
+ Native Client OLE DB 提供程序公开了 OLE DB 记录增强的**IErrorInfo**、自定义的**ISQLErrorInfo**，以及特定于提供程序的 ISQLServerErrorInfo 错误对象接口。 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
  有关跟踪错误的详细信息，请参阅[数据访问跟踪](https://go.microsoft.com/fwlink/?LinkId=125805)。 有关 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中添加的错误跟踪的增强功能的信息，请参阅[访问扩展事件日志中的诊断信息](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "81302298"
   
 -   [返回代码](../../relational-databases/native-client-ole-db-errors/return-codes.md)  
   
--   [错误界面中的信息](../../relational-databases/native-client-ole-db-errors/information-in-error-interfaces.md)  
+-   [错误接口中的信息](../../relational-databases/native-client-ole-db-errors/information-in-error-interfaces.md)  
   
 -   [SQL Server 错误详细信息](../../relational-databases/native-client-ole-db-errors/sql-server-error-detail.md)  
   

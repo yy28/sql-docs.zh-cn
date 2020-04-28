@@ -1,5 +1,5 @@
 ---
-title: 基本 ODBC 应用步骤 |微软文档
+title: 基本 ODBC 应用程序步骤 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: a92d1f78-c669-47ad-88c4-0b1a93503dfc
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 29abb0ec5bbfa9b423290e3354d9455b639f8f59
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306048"
 ---
 # <a name="basic-odbc-application-steps"></a>基本 ODBC 应用程序步骤
-本节介绍 ODBC 应用程序的一般流。 任何应用程序都不可能按此顺序调用所有这些函数。 但是，大多数应用程序使用这些步骤的某些变体。 基本应用步骤如下图所示。  
+本部分介绍 ODBC 应用程序的常规流程。 任何应用程序不太可能会完全按此顺序调用所有这些函数。 但是，大多数应用程序都使用这些步骤的一些变化形式。 下图显示了基本应用程序步骤。  
   
  ![ODBC 应用程序的基本步骤](../../../odbc/reference/develop-app/media/pr10.gif "pr10")  
   

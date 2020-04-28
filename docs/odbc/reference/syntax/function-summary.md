@@ -1,5 +1,5 @@
 ---
-title: 功能摘要 |微软文档
+title: 函数摘要 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: e7fc96e3-3f16-4799-b70f-49febed53a44
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: b14480c2621a77472da78382082ec6d7a89c2f67
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306018"
 ---
 # <a name="function-summary"></a>函数摘要
-以下各节总结了支持 ODBC 的应用程序和相关软件所使用的功能。  
+以下部分汇总了启用了 ODBC 的应用程序和相关软件所使用的功能。  
   
 -   [ODBC 函数摘要](../../../odbc/reference/syntax/odbc-function-summary.md)  
   

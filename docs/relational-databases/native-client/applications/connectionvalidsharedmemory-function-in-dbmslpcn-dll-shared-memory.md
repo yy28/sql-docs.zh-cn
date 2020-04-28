@@ -1,5 +1,5 @@
 ---
-title: 连接有效共享内存 dbmslpcn.dll
+title: ConnectionValidSharedMemory dbmslpcn
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1f3bb097965563afb458b4529676d1e9967e4899
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303874"
 ---
 # <a name="connectionvalidsharedmemory-function-in-dbmslpcndll-shared-memory"></a>Dbmslpcn.dll 共享内存中的 ConnectionValidSharedMemory 函数
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  该函数确定是否安装 SQL Server 共享内存并处于活动状态。  
+  函数确定是否已安装并激活 SQL Server 共享内存。  
   
 ## <a name="syntax"></a>语法  
   
@@ -29,15 +29,15 @@ BOOL ConnectionValidSharedMemory(char * szServerName);
 ```  
   
 ## <a name="parameters"></a>参数  
- *szServer名称*  
+ *szServerName*  
   
--   类型： **\*字符**  
+-   类型： **char\* **  
   
--   SQL 服务器的名称。  
+-   SQL server 的名称。  
   
 ## <a name="return-value"></a>返回值  
  类型： **BOOL**  
   
- 返回 0（如果无效）;否则返回非零。  
+ 如果无效，则返回 0;否则返回非零值。  
   
   

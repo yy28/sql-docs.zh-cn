@@ -19,23 +19,23 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2cbdba7e16240b5adfd14c43a5916aaaf8cf0400
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304478"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>生成多个行集结果的命令
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端 OLE 数据库提供程序可以从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句返回多个行集。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句在以下条件下返回具有多个行集的结果：  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序可以从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句返回多个行集。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句在以下条件下返回具有多个行集的结果：  
   
 -   以单个命令的形式提交成批的 SQL 语句。  
   
 -   存储过程实现一批 SQL 语句。  
   
 ## <a name="batches"></a>批处理  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE 数据库提供程序将分号字符识别为 SQL 语句的批处理分隔符：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将分号字符识别为 SQL 语句的批处理分隔符：  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  

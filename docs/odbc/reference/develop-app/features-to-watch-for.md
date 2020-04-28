@@ -1,5 +1,5 @@
 ---
-title: 要观看的功能 |微软文档
+title: 要监视的功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 10fa5df8a47837e92d4215f558d52711a0df3440
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305678"
 ---
 # <a name="features-to-watch-for"></a>要监视的功能
-本节介绍应用程序开发人员通常认为理所当然的一些功能。 事实上，这些功能在 DBMS 中的支持和支持方式方面差异很大;未能为其编写代码可能会导致可互操作应用程序中出现问题。  
+本部分介绍应用程序开发人员经常获得的一些功能。 事实上，这些功能在 Dbms 之间的支持和方式方面有所不同;对它们的代码失败可能会导致互操作应用程序出现问题。  
   
- 本节不列出应用程序开发人员需要考虑的所有功能。 有关该信息，请参阅[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) [、SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)和[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)函数说明，[附录 C：SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)，以及本手册中讨论每个功能的部分。  
+ 本部分未列出应用程序开发人员需要考虑的所有功能。 有关此信息，请参阅[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)、 [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)和[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)函数说明，[附录 C： SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)，以及本手册中讨论每项功能的部分。  
   
  本部分包含以下主题。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "81305678"
   
 -   [CREATE TABLE 语句中的 NOT NULL](../../../odbc/reference/develop-app/not-null-in-create-table-statements.md)  
   
--   [支持数据类型](../../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)  
+-   [支持的数据类型](../../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)  
   
 -   [ODBC SQL 语法](../../../odbc/reference/develop-app/odbc-sql-grammar.md)  
   

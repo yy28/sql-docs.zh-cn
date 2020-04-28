@@ -1,5 +1,5 @@
 ---
-title: 分配环境句柄 |微软文档
+title: 分配环境句柄 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: e33b850b2786960a368720deaf89a2203c7dd159
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303000"
 ---
 # <a name="allocating-the-environment-handle"></a>分配环境句柄
-任何 ODBC 应用程序的第一个任务是加载驱动程序管理器;如何做到这一点取决于操作系统。 例如，在运行 Microsoft ® Windows NT® 服务器/Windows 2000 服务器、Windows NT 工作站/Windows 2000 专业版或 Microsoft Windows ® 95/98 的计算机上，应用程序要么链接到驱动程序管理器库，要么调用**LoadLibrary**来加载驱动程序管理器 DLL。  
+任何 ODBC 应用程序的第一个任务是加载驱动程序管理器;完成此操作的方式取决于操作系统。 例如，在运行 Microsoft® Windows NT® Server/Windows 2000 Server、Windows NT 工作站/Windows 2000 Professional 或 Microsoft Windows®95/98 的计算机上，应用程序将链接到驱动程序管理器库，或调用**LoadLibrary**以加载驱动程序管理器 DLL。  
   
- 下一个任务，必须在应用程序调用任何其他 ODBC 函数之前完成，是初始化 ODBC 环境并分配环境句柄，如下所示：  
+ 在应用程序可以调用任何其他 ODBC 函数之前，必须执行的下一个任务是初始化 ODBC 环境并分配环境句柄，如下所示：  
   
-1.  应用程序声明 SQLHENV 类型的变量。 然后，它调用**SQLAllocHandle**并传递此变量的地址和SQL_HANDLE_ENV选项。 例如：  
+1.  应用程序声明类型为 SQLHENV 的变量。 然后，它调用**SQLAllocHandle**并传递此变量的地址和 SQL_HANDLE_ENV 选项。 例如：  
   
     ```  
     SQLHENV henv1;  
@@ -38,12 +38,12 @@ ms.locfileid: "81303000"
     SQLAllocHandle(SQL_HANDLE_ENV, SQL_NULL_HANDLE, &henv1);  
     ```  
   
-2.  驱动程序管理器分配一个结构，用于存储有关环境的信息，并在变量中返回环境句柄。  
+2.  驱动程序管理器分配用于存储有关环境的信息的结构，并返回变量中的环境句柄。  
   
- 驱动程序管理器此时不会在驱动程序中调用**SQLAllocHandle，** 因为它不知道要调用哪个驱动程序。 它会延迟在驱动程序中调用**SQLAllocHandle，** 直到应用程序调用函数以连接到数据源。 有关详细信息，请参阅[驱动程序管理器在连接过程中的角色](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)，请参阅本节后面的部分。  
+ 目前，驱动程序管理器不会调用驱动程序中的**SQLAllocHandle** ，因为它不知道要调用哪个驱动程序。 在应用程序调用函数以连接到数据源之前，它会延迟在驱动程序中调用**SQLAllocHandle** 。 有关详细信息，请参阅本部分后面的[连接过程中的驱动程序管理器角色](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)。  
   
- 当应用程序完成使用 ODBC 后，它将使用**SQLFreeHandle**释放环境句柄。 释放环境后，在调用 ODBC 函数时使用环境的句柄是一种应用程序编程错误;这样做有未定义，但可能是致命的后果。  
+ 当应用程序使用完 ODBC 后，就可以使用**SQLFreeHandle**释放环境句柄。 释放环境后，在对 ODBC 函数的调用中使用环境的句柄时，会出现应用程序编程错误;这样做没有定义，但可能会产生严重后果。  
   
- 调用**SQLFreeHandle**时，驱动程序将释放用于存储有关环境的信息的结构。 请注意，在释放该环境句柄上的所有连接句柄之前，无法为环境句柄调用**SQLFreeHandle。**  
+ 调用**SQLFreeHandle**时，驱动程序将释放用于存储有关环境的信息的结构。 请注意，只有在释放了该环境句柄上的所有连接句柄之后，才能为环境句柄调用**SQLFreeHandle** 。  
   
  有关环境句柄的详细信息，请参阅[环境句柄](../../../odbc/reference/develop-app/environment-handles.md)。

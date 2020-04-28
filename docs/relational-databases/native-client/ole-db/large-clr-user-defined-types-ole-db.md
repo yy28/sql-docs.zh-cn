@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5de109f0f26dcc8b892f7856f889ea93089c1205
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304368"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 用户定义类型 (OLE DB)
@@ -25,14 +25,14 @@ ms.locfileid: "81304368"
 
   本主题讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中为支持大型公共语言运行时 (CLR) 用户定义类型 (UDT) 而对 OLE DB 进行的更改。  
   
- 有关本机客户端中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]对大型 CLR UDT 的支持的详细信息，请参阅[大型 CLR 用户定义类型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)。 有关示例，请参阅[使用大型 CLR UDT (OLE DB)](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)。  
+ 有关 Native Client 中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]对大型 clr udt 的支持的详细信息，请参阅[大型 Clr 用户定义类型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)。 有关示例，请参阅[使用大型 CLR UDT (OLE DB)](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)。  
   
 ## <a name="data-format"></a>数据格式  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用 ~0 表示其大小对于大型对象 (LOB) 类型不受限制的值的长度。 ~0 还表示大于 8,000 个字节的 CLR UDT 的大小。  
   
  下表显示了参数和行集中的数据类型映射：  
   
-|SQL Server 数据类型|OLE DB 数据类型|内存布局|“值”|  
+|SQL Server 数据类型|OLE DB 数据类型|内存布局|值|  
 |--------------------------|----------------------|-------------------|-----------|  
 |CLR UDT|DBTYPE_UDT|BYTE[]（字节数组\)|132 (oledb.h)|  
   
@@ -121,13 +121,13 @@ ms.locfileid: "81304368"
 |绑定数据类型|UDT 到服务器|非 UDT 到服务器|UDT 来自服务器|非 UDT 来自服务器|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|支持 (5)|错误 (1)|支持 (5)|错误 (4)|  
-|DBTYPE_BYTES|支持 (5)|空值|支持 (5)|空值|  
-|DBTYPE_WSTR|支持 (2)、(5)|空值|支持 (3)、(5)、(6)|空值|  
-|DBTYPE_BSTR|支持 (2)、(5)|空值|支持 (3)、(5)|空值|  
-|DBTYPE_STR|支持 (2)、(5)|空值|支持 (3)、(5)|空值|  
-|DBTYPE_IUNKNOWN|支持 (6)|空值|支持 (6)|空值|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支持 (5)|空值|支持 (3)、(5)|空值|  
-|DBTYPE_VARIANT (VT_BSTR)|支持 (2)、(5)|空值|空值|空值|  
+|DBTYPE_BYTES|支持 (5)|不适用|支持 (5)|不适用|  
+|DBTYPE_WSTR|支持 (2)、(5)|不适用|支持 (3)、(5)、(6)|不适用|  
+|DBTYPE_BSTR|支持 (2)、(5)|不适用|支持 (3)、(5)|不适用|  
+|DBTYPE_STR|支持 (2)、(5)|不适用|支持 (3)、(5)|不适用|  
+|DBTYPE_IUNKNOWN|支持 (6)|不适用|支持 (6)|不适用|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支持 (5)|不适用|支持 (3)、(5)|不适用|  
+|DBTYPE_VARIANT (VT_BSTR)|支持 (2)、(5)|不适用|空值|空值|  
   
 ### <a name="key-to-symbols"></a>符号含义  
   
@@ -138,7 +138,7 @@ ms.locfileid: "81304368"
 |3|数据从二进制数据转换为十六进制字符串。|  
 |4|在使用 CreateAccessor 或 GetNextRows 时进行验证********。 错误为 DB_E_ERRORSOCCURRED 错误。 绑定状态设置为 DBBINDSTATUS_UNSUPPORTEDCONVERSION。|  
 |5|可能会使用 BY_REF。|  
-|6|UDT 参数可以绑定为 DBBINDING 中的 DBTYPE_IUNKNOWN。 如果绑定到 DBTYPE_IUNKNOWN，则表示应用程序要使用 ISequentialStream 接口将数据作为流进行处理。 当使用者在绑定中指定*wType*为类型DBTYPE_IUNKNOWN，并且存储过程的相应列或输出参数为 UDT 时，SQL Server 本机客户端将返回 ITt。 对于输入参数，SQL Server 本机客户端将查询 I顺序流接口的 。<br /><br /> 如果是大型 UDT，可以选择不绑定 UDT 数据的长度，而是使用 DBTYPE_IUNKNOWN 绑定。 但是，对于小型 UDT，必须绑定长度。 如果满足以下一个或多个条件，可以将 DBTYPE_UDT 参数指定为大型 UDT：<br />ulParamParamSize** 为 ~0。<br />在 DBPARAMBINDINFO 结构中设置了 DBPARAMFLAGS_ISLONG。<br /><br /> 对于行数据，仅允许对大型 UDT 进行 DBTYPE_IUNKNOWN 绑定。 可以通过对 Rowset 或 Command 对象的 IColumnsInfo 接口使用 IColumnsInfo::GetColumnInfo 方法来了解列是否为大型 UDT 类型。 如果满足以下一个或多个条件，DBTYPE_UDT 列即为大型 UDT 列：<br />DBCOLUMNFLAGS_ISLONG 标记是在 DBCOLUMNINFO 结构的 dwFlags 成员上设置的**。 <br />DBCOLUMNINFO 的 ulColumnSize** 成员为 ~0。|  
+|6|UDT 参数可以绑定为 DBBINDING 中的 DBTYPE_IUNKNOWN。 如果绑定到 DBTYPE_IUNKNOWN，则表示应用程序要使用 ISequentialStream 接口将数据作为流进行处理。 当使用者在绑定中将*wType*指定为类型 DBTYPE_IUNKNOWN，并且该存储过程的相应列或输出参数为 UDT 时，SQL Server Native Client 将返回 ISequentialStream。 对于输入参数，SQL Server Native Client 将查询 ISequentialStream 接口的。<br /><br /> 如果是大型 UDT，可以选择不绑定 UDT 数据的长度，而是使用 DBTYPE_IUNKNOWN 绑定。 但是，对于小型 UDT，必须绑定长度。 如果满足以下一个或多个条件，可以将 DBTYPE_UDT 参数指定为大型 UDT：<br />ulParamParamSize** 为 ~0。<br />在 DBPARAMBINDINFO 结构中设置了 DBPARAMFLAGS_ISLONG。<br /><br /> 对于行数据，仅允许对大型 UDT 进行 DBTYPE_IUNKNOWN 绑定。 可以通过对 Rowset 或 Command 对象的 IColumnsInfo 接口使用 IColumnsInfo::GetColumnInfo 方法来了解列是否为大型 UDT 类型。 如果满足以下一个或多个条件，DBTYPE_UDT 列即为大型 UDT 列：<br />DBCOLUMNFLAGS_ISLONG 标记是在 DBCOLUMNINFO 结构的 dwFlags 成员上设置的**。 <br />DBCOLUMNINFO 的 ulColumnSize** 成员为 ~0。|  
   
  可以绑定 DBTYPE_NULL 和 DBTYPE_EMPTY 用于输入参数，但不能用于输出参数或结果。 当绑定用于输入参数时，对于 DBTYPE_NULL，状态必须设置为 DBSTATUS_S_ISNULL，对于 DBTYPE_EMPTY 则必须设置为 DBSTATUS_S_DEFAULT。 DBTYPE_BYREF 不能与 DBTYPE_NULL 或 DBTYPE_EMPTY 一起使用。  
   

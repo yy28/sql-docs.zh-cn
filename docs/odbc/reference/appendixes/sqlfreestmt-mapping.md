@@ -1,5 +1,5 @@
 ---
-title: SQLFreeStmt 映射 |微软文档
+title: SQLFreeStmt 映射 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: 267d95f2-4f0c-47ab-9411-5afe105215a2
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9d187db4d40132385b9ae4564fddbf89987e3e97
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302008"
 ---
 # <a name="sqlfreestmt-mapping"></a>SQLFreeStmt 映射
-当应用程序通过 ODBC *3.x*驱动程序调用**SQLFreeStmt** *选项参数SQL_DROP*时，调用  
+当应用程序*通过 ODBC 1.x*驱动程序调用带有 SQL_DROP*选项*参数的**SQLFreeStmt**时，调用  
   
 ```  
 SQLFreeStmt(hstmt, SQL_DROP)   
@@ -33,4 +33,4 @@ SQLFreeStmt(hstmt, SQL_DROP)
 SQLFreeHandle(SQL_HANDLE_STMT,Handle)  
 ```  
   
- 将*Handle*参数设置为*hstmt*中的值。
+ 如果将*Handle*参数设置为*hstmt*中的值，则为。

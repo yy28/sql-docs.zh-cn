@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f2e0a2f1a5c17ff5dcbf48b414517e15129570cb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303185"
 ---
 # <a name="using-encryption-without-validation"></a>使用不带验证的加密
@@ -30,9 +30,9 @@ ms.locfileid: "81303185"
 
 自签名证书不能保证安全性。 加密握手基于 NT LAN Manager (NTLM)。 强烈建议在 SQL Server 上预配可验证的证书，以实现连接安全性。 传输安全性层 (TLS) 只能通过证书验证来确保安全。
 
-应用程序还可以通过使用连接字符串关键字或连接属性请求对所有网络流量加密。 当使用具有**IDb初始化的**提供程序字符串时，这些关键字是 ODBC 和 OLE DB 的"加密"：初始化，或者使用初始化字符串与**IData 初始化**时对 ADO 和 OLE DB 使用"数据加密"。 这也可以由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器使用“强制协议加密”**** 选项进行配置，并通过将客户端配置为请求加密连接。 默认情况下，对某一连接的所有网络流量加密要求在服务器上设置证书。 通过将客户端设置为信任服务器上的证书，可能会容易受到中间人攻击。 如果在服务器上部署可验证的证书，请务必将客户端关于信任证书的设置更改为 FALSE。
+应用程序还可以通过使用连接字符串关键字或连接属性请求对所有网络流量加密。 当使用包含**IDbInitialize：： Initialize**的提供程序字符串或在 OLE DB 将初始化字符串与**IDataInitialize**结合使用时，这些关键字对 ODBC 和 OLE DB 使用提供程序字符串。 这也可以由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器使用“强制协议加密”**** 选项进行配置，并通过将客户端配置为请求加密连接。 默认情况下，对某一连接的所有网络流量加密要求在服务器上设置证书。 通过将客户端设置为信任服务器上的证书，可能会容易受到中间人攻击。 如果在服务器上部署可验证的证书，请务必将客户端关于信任证书的设置更改为 FALSE。
 
-有关连接字符串关键字的信息，请参阅[使用与 SQL Server 本机客户端的连接字符串关键字](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
+有关连接字符串关键字的详细信息，请参阅将[连接字符串关键字用于 SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
  若要在服务器上未设置证书时启用加密，可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器设置“强制协议加密”和“信任服务器证书”选项********。 在这种情况下，如果服务器上未设置可验证的证书，加密将使用不带验证的自签名服务器证书。  
   
@@ -40,9 +40,9 @@ ms.locfileid: "81303185"
   
 |“强制协议加密”客户端设置|“信任服务器证书”客户端设置|连接字符串/连接属性加密/对数据使用加密|连接字符串/连接属性信任服务器证书|结果|  
 |----------------------------------------------|---------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------|------------|  
-|否|空值|否（默认值）|忽略|无加密。|  
-|否|空值|是|否（默认值）|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
-|否|空值|是|是|始终加密，但可能使用自签名的服务器证书。|  
+|否|不适用|否（默认值）|忽略|无加密。|  
+|否|不适用|是|否（默认值）|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
+|否|不适用|是|是|始终加密，但可能使用自签名的服务器证书。|  
 |是|否|忽略|忽略|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
 |是|是|否（默认值）|忽略|始终加密，但可能使用自签名的服务器证书。|  
 |是|是|是|否（默认值）|仅当存在可验证的服务器证书时才加密，否则连接尝试将失败。|  
@@ -53,12 +53,12 @@ ms.locfileid: "81303185"
 > 上表只提供了不同配置下系统行为的指南。 为了实现连接安全性，请确保客户端和服务器都需要加密。 另请确保，服务器有可验证的证书，且客户端上的 TrustServerCertificate**** 设置设为 FALSE。
 
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 访问接口  
- 本机[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端 OLE DB 提供程序通过添加SSPROP_INIT_TRUST_SERVER_CERTIFICATE数据源初始化属性（在DBPROPSET_SQLSERVERDBINIT属性集中实现）支持未经验证的加密。 此外，还添加了新的连接字符串关键字“TrustServerCertificate”。 它接受值 yes 或 no；默认值为 no。 使用服务组件时，它接受值 true 或 false；默认值为 false。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序通过添加 SSPROP_INIT_TRUST_SERVER_CERTIFICATE 数据源初始化属性（在 DBPROPSET_SQLSERVERDBINIT 属性集中实现）来支持未经验证的加密。 此外，还添加了新的连接字符串关键字“TrustServerCertificate”。 它接受值 yes 或 no；默认值为 no。 使用服务组件时，它接受值 true 或 false；默认值为 false。  
   
  若要详细了解 DBPROPSET_SQLSERVERDBINIT 属性集的增强，请参阅[初始化和授权属性](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 驱动程序  
- 本机[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端 ODBC 驱动程序通过添加[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)和[SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)函数支持无需验证的加密。 添加了 SQL_COPT_SS_TRUST_SERVER_CERTIFICATE 以接受 SQL_TRUST_SERVER_CERTIFICATE_YES 或 SQL_TRUST_SERVER_CERTIFICATE_NO，默认值为 SQL_TRUST_SERVER_CERTIFICATE_NO。 此外，还添加了新的连接字符串关键字 "TrustServerCertificate"。 它接受值 yes 或 no；默认值为 no。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序通过向[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)和[SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)函数添加内容来支持未经验证的加密。 添加了 SQL_COPT_SS_TRUST_SERVER_CERTIFICATE 以接受 SQL_TRUST_SERVER_CERTIFICATE_YES 或 SQL_TRUST_SERVER_CERTIFICATE_NO，默认值为 SQL_TRUST_SERVER_CERTIFICATE_NO。 此外，还添加了新的连接字符串关键字 "TrustServerCertificate"。 它接受值 yes 或 no；默认值为 no。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client 功能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

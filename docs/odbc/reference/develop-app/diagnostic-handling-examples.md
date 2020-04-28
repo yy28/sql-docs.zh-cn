@@ -1,5 +1,5 @@
 ---
-title: 诊断处理示例 |微软文档
+title: 诊断处理示例 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 57f88c22-e7fa-4270-a0bf-443a2684cf6e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ddb833e133ddc6f1e0b959b3da5b8ec464826ed2
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305848"
 ---
 # <a name="diagnostic-handling-examples"></a>诊断处理示例
-以下示例显示了 ODBC 连接中的各种组件如何生成诊断消息，以及各种驱动程序如何使用**SQLGetDiagRec**将诊断返回给应用程序。  
+下面的示例演示了 ODBC 连接中的各种组件如何生成诊断消息，以及各种驱动程序如何使用**SQLGetDiagRec**将诊断返回到应用程序。  
   
 -   [基于文件的驱动程序诊断示例](../../../odbc/reference/develop-app/file-based-driver-diagnostic-example.md)  
   

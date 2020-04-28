@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0f86c41fb3884494f38f0b7817ff0eabe2d4dfcb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302258"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>集成的 Kerberos 身份验证 (OLE DB)
@@ -30,7 +30,7 @@ ms.locfileid: "81302258"
   
  此外，还必须指定一个客户提供的 SPN。 在 .cpp 文件 中，将“CPSPN”更改为客户提供的 SPN。  
   
- 确保 INCLUDE 环境变量包含包含 sqlncli.h 的目录。 使用 ole32.lib 和 oleaut32.lib 进行编译。  
+ 请确保 INCLUDE 环境变量包含包含 sqlncli.msi 的目录。 使用 ole32.lib 和 oleaut32.lib 进行编译。  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

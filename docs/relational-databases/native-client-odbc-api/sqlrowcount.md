@@ -1,5 +1,5 @@
 ---
-title: SQLRowCount |微软文档
+title: SQLRowCount |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3cfb76dbd1732e32238c484f589d3b4696ff89d2
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302295"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  当参数值数组绑定为语句执行时，如果任何参数值行在语句执行中生成错误条件 **，SQLRowCount**将返回SQL_ERROR。 不通过函数的*RowCountPtr*参数返回任何值。  
+  当参数值的数组绑定到语句执行时，如果参数值的任意行在语句执行中生成错误条件，则**SQLRowCount**将返回 SQL_ERROR。 不通过函数的*RowCountPtr*参数返回值。  
   
  应用程序可以利用 SQL_ATTR_PARAMS_PROCESSED_PTR 语句属性捕获在错误发生之前已处理的参数个数。  
   
  此外，应用程序还可以使用由状态值构成的数组（通过使用 SQL_ATTR_PARAM_STATUS_PTR 语句属性进行绑定），来捕获生成错误的参数行的数组偏移量。 应用程序可以遍历状态数组以确定已处理的实际行数。  
   
- 执行具有[!INCLUDE[tsql](../../includes/tsql-md.md)]OUTPUT 子句的插入、更新、删除或 MERGE 语句时，SQLRowCount 不会返回受影响的行计数，直到使用 OUTPUT 子句生成的结果集中的所有行。 要消耗这些行，请致电 SQLFetch 或 SQLFetchScroll。 SQLResultCols 将返回 -1，直到使用所有结果行。 在 SQLFetch 或 SQLFetch 返回SQL_NO_DATA后，应用程序必须调用 SQLRowCount 以确定受影响的行数，然后再调用 SQLMoreResult 移动到下一个结果。  
+ 当执行[!INCLUDE[tsql](../../includes/tsql-md.md)]包含 output 子句的 INSERT、UPDATE、DELETE 或 MERGE 语句时，SQLRowCount 将不会返回受影响的行数，直到输出子句生成的结果集中的所有行都已被使用。 若要要使用这些行，请调用 SQLFetch 或 SQLFetchScroll。 SQLResultCols 将返回-1，直到使用完所有结果行为止。 在 SQLFetch 或 SQLFetchScroll 返回 SQL_NO_DATA 之后，应用程序必须调用 SQLRowCount 来确定受影响的行数，然后再调用 SQLMoreResults 以移到下一个结果。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLRowCount 函数](https://go.microsoft.com/fwlink/?LinkId=59367)   

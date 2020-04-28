@@ -1,5 +1,5 @@
 ---
-title: 诊断 |微软文档
+title: 诊断 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: 450abd88-90a1-4fbc-b417-8efbdd8e1dea
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: a09f46d3fd6aa2f9b9c7310af6d3ddc90f78389f
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305148"
 ---
 # <a name="diagnostics"></a>诊断
-ODBC 中的函数以两种方式返回诊断信息。 返回代码指示函数的总体成功或失败，而诊断记录提供有关该函数的详细信息。 即使函数成功，也至少返回一个诊断记录 - 标头记录。  
+ODBC 中的函数以两种方式返回诊断信息。 返回代码指示函数的总体成功或失败，而诊断记录则提供有关函数的详细信息。 至少要返回一条诊断记录-标头记录-即使函数成功也是如此。  
   
- 诊断信息在开发时用于捕获编程错误，如硬编码 SQL 语句中的无效句柄和语法错误。 它在运行时用于捕获运行时错误和警告，如用户输入的 SQL 语句中的数据截断、访问冲突以及语法错误。  
+ 在开发时使用诊断信息来捕获编程错误，如硬编码的 SQL 语句中的无效句柄和语法错误。 它用于在运行时捕获用户输入的 SQL 语句中的运行时错误和警告，如数据截断、访问冲突和语法错误。  
   
  本部分包含以下主题。  
   

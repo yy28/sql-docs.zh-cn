@@ -16,10 +16,10 @@ ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 01fdd3727c25df2985009936c742bc20265f8f74
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304388"
 ---
 # <a name="conversions-ole-db"></a>转换 (OLE DB)
@@ -31,7 +31,7 @@ ms.locfileid: "81304388"
   
 -   datetime**** 和 datetimeoffset**** 字符串的格式为：  
   
-     *yyyymm*-*mm*-*dd*= *hh*：*mm*：*ss*[.*999999*[ *hh*：*mm*]  
+     *yyyy*-*mm*mm-*dd*[ *hh*：*mm*：*ss*[。*9999999*] [± *hh*：*mm*]]  
   
 -   时间字符串的格式为****：  
   
@@ -39,12 +39,12 @@ ms.locfileid: "81304388"
   
 -   date**** 字符串的格式为：  
   
-     *yyyy*-*mm*-*dd*  
+     *yyyy*-*mm*mm-*dd*  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 和 SQLOLEDB 的早期版本实现了 OLE 转换，以防标准转换失败。 因此，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 和更高版本执行的某些转换不同于 OLE DB 规范。  
   
- 从字符串转换允许更灵活处理空格和字段宽度。 有关详细信息，请参阅[OLE DB 日期和时间改进的数据类型支持](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)中的"数据格式：字符串和文本"部分。  
+ 从字符串转换允许更灵活处理空格和字段宽度。 有关详细信息，请参阅[数据类型支持 OLE DB 日期和时间改进](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)中的 "数据格式：字符串和文字" 部分。  
   
  下面是一般的转换规则：  
   

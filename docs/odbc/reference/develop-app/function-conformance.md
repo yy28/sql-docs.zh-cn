@@ -1,5 +1,5 @@
 ---
-title: 功能一致性 |微软文档
+title: 函数一致性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,40 +16,40 @@ ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 33cd0ad4269ed59e31c8ab343ddbb01806afce04
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305588"
 ---
 # <a name="function-conformance"></a>函数一致性
-下表指示每个 ODBC 函数的一致性级别，其中定义良好。  
+下表指明了每个 ODBC 函数的一致性级别，其中定义正确。  
   
 |函数|一致性级别|  
 |--------------|-----------------------|  
 |**SQLAllocHandle**|核心|  
 |**SQLBindCol**|核心|  
-|**SQLBindParameter**|核心[1]|  
+|**SQLBindParameter**|Core [1]|  
 |**SQLBrowseConnect**|级别 1|  
-|**SQLBulk 操作**|级别 1|  
-|**SQLCancel**|核心[1]|  
+|**SQLBulkOperations**|级别 1|  
+|**SQLCancel**|Core [1]|  
 |**SQLCloseCursor**|核心|  
-|**SQLColAttribute**|核心[1]|  
+|**SQLColAttribute**|Core [1]|  
 |**SQLColumnPrivileges**|级别 2|  
 |**SQLColumns**|核心|  
 |**SQLConnect**|核心|  
 |**SQLCopyDesc**|核心|  
-|**SQLData源**|核心|  
-|**SQLDescribeCol**|核心[1]|  
+|**SQLDataSources**|核心|  
+|**SQLDescribeCol**|Core [1]|  
 |**SQLDescribeParam**|级别 2|  
-|**SQL 断开**|核心|  
+|**SQLDisconnect**|核心|  
 |**SQLDriverConnect**|核心|  
 |**SQLDrivers**|核心|  
-|**SQLEndTran**|核心[1]|  
+|**SQLEndTran**|Core [1]|  
 |**SQLExecDirect**|核心|  
 |**SQLExecute**|核心|  
 |**SQLFetch**|核心|  
-|**SQLFetchScroll**|核心[1]|  
+|**SQLFetchScroll**|Core [1]|  
 |**SQLForeignKeys**|级别 2|  
 |**SQLFreeHandle**|核心|  
 |**SQLFreeStmt**|核心|  
@@ -76,18 +76,18 @@ ms.locfileid: "81305588"
 |**SQLProcedures**|级别 1|  
 |**SQLPutData**|核心|  
 |**SQLRowCount**|核心|  
-|**SQLSetConnectAttr**|核心[2]|  
-|**SQLSetCursor 名称**|核心|  
-|**SQLSetDescField**|核心[1]|  
+|**SQLSetConnectAttr**|核心 [2]|  
+|**SQLSetCursorName**|核心|  
+|**SQLSetDescField**|Core [1]|  
 |**SQLSetDescRec**|核心|  
-|**SQLSetEnvAttr**|核心[2]|  
-|**SQLSetPos**|级别 1[1]|  
-|**SQLSetStmtAttr**|核心[2]|  
-|**SQLSpecialColumns**|核心[1]|  
+|**SQLSetEnvAttr**|核心 [2]|  
+|**SQLSetPos**|级别 1 [1]|  
+|**SQLSetStmtAttr**|核心 [2]|  
+|**SQLSpecialColumns**|Core [1]|  
 |**SQLStatistics**|核心|  
 |**SQLTablePrivileges**|级别 2|  
 |**SQLTables**|核心|  
   
- [1] 此功能的重要功能仅在较高的一致性级别可用。  
+ [1] 此函数的重要功能只能在更高的一致性级别上使用。  
   
- [2] 将某些属性设置为非默认值取决于一致性级别。 有关详细信息，请参阅下一节"[属性一致性](../../../odbc/reference/develop-app/attribute-conformance.md)"。
+ [2] 将某些属性设置为非默认值取决于一致性级别。 有关详细信息，请参阅下一节 "[属性一致性](../../../odbc/reference/develop-app/attribute-conformance.md)"。

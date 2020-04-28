@@ -1,5 +1,5 @@
 ---
-title: 选择互操作性级别 |微软文档
+title: 选择互操作性级别 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 1f915832-a7c1-41cd-8c4f-bf6d976951b0
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: aa04eea9821b024f9e8dadc8ad09f449d4fb14b5
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303353"
 ---
 # <a name="choosing-a-level-of-interoperability"></a>选择互操作性的级别
-假设应用程序将使用 ODBC，下一步是确定需要何种级别的互操作性。 互操作性的基本级别通常是应用程序类型的函数：自定义应用程序往往不可互操作，垂直应用程序往往在数量有限的 DBMS 之间可互操作，通用应用程序往往在所有 DBMS 之间可互操作。  
+假设应用程序将使用 ODBC，下一步是确定所需的互操作级别。 基本的互操作性通常是应用程序类型的一个功能：自定义应用程序往往不会互操作，而垂直应用程序在有限数量的 Dbms 上可互操作，并且一般应用程序在所有 Dbms 上都可互操作。  
   
  本部分包含以下主题。  
   
