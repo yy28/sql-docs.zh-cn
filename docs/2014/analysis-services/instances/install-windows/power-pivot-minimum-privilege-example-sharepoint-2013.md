@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 147664030dd6e52c4bfaf17efd6fa7aea35d53ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782780"
 ---
 # <a name="example-of-a-minimum-privilege-configuration-for-powerpivot-for-sharepoint-2013"></a>PowerPivot for SharePoint 2013 最低权限的配置示例
@@ -32,10 +32,10 @@ ms.locfileid: "72782780"
 |Analysis Services 服务帐户|**SPsvc**|  
   
 ### <a name="the-sharepoint-administrator-account-spadmin"></a>SharePoint 管理员帐户 (SpAdmin)  
- **SPAdmin**是用来安装和配置场的域帐户。 它是用于运行 SharePoint 配置向导的帐户和用于 SharePoint 2013 的 PowerPivot 配置工具。 **SPAdmin**帐户是唯一需要本地管理员权限的帐户。 在运行 PowerPivot 配置工具之前，请将**SPAdmin**帐户权限授予 SharePoint 在其中创建内容和配置数据库的 SQL Server 数据库实例。 若要在最低权限情况下配置 SPAdmin 帐户，该帐户应该是角色 **securityadmin** 和 **dbcreator**的成员。  
+ **SPAdmin** 是您用来安装和配置场的域帐户。 它是用于运行 SharePoint 配置向导的帐户和用于 SharePoint 2013 的 PowerPivot 配置工具。 **SPAdmin**帐户是唯一需要本地管理员权限的帐户。 在运行 PowerPivot 配置工具之前，请将**SPAdmin**帐户权限授予 SharePoint 在其中创建内容和配置数据库的 SQL Server 数据库实例。 若要在最低权限情况下配置 SPAdmin 帐户，该帐户应该是角色 **securityadmin** 和 **dbcreator**的成员。  
   
 ### <a name="the-farm-account-spfarm"></a>场帐户 (SPFarm)  
- **SPFarm**是 sharepoint Timer 服务以及用于管理中心的 web 应用程序用来访问 SharePoint 内容数据库的域帐户。 该帐户无需是本地管理员。 SharePoint 配置向导在后端 SQL Server 数据库中授予正确的最低权限。最低 SQL Server 权限配置是角色 **securityadmin** 和 **dbcreator**中的成员身份。  
+ **SPFarm** 是 SharePoint Timer 服务以及用于管理中心的 Web 应用程序用来访问 SharePoint 内容数据库的域帐户。 该帐户无需是本地管理员。 SharePoint 配置向导在后端 SQL Server 数据库中授予正确的最低权限。最低 SQL Server 权限配置是角色 **securityadmin** 和 **dbcreator**中的成员身份。  
   
 ### <a name="the-service-account-for-powerpivot-service-spsvc"></a>用于 PowerPivot 服务的服务帐户 (SPsvc)  
  如果在运行 PowerPivot 配置工具前未配置新的 SharePoint 场，则默认情况下 PowerPivot 配置工具将创建以下内容：  
@@ -56,8 +56,7 @@ ms.locfileid: "72782780"
   
 3.  单击 "**注册新的托管帐户**"。  
   
- 
-  **SPSvc** 帐户没有本地管理员权限，并且 SPsvc 在 SharePoint 数据库中将不具有任何权限。 SPsvc 要求的仅有的权限就是针对 Analysis Services 的 PowerPivot 实例的管理权限。  
+ **SPSvc** 帐户没有本地管理员权限，并且 SPsvc 在 SharePoint 数据库中将不具有任何权限。 SPsvc 要求的仅有的权限就是针对 Analysis Services 的 PowerPivot 实例的管理权限。  
   
  **将相应的应用程序池配置为使用 SPsvc 帐户：**  
   

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: efbd01499940490fd85dfaf1e0786d26b722749c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782735"
 ---
 # <a name="delete-a-data-tier-application"></a>删除数据层应用程序
@@ -43,7 +43,7 @@ ms.locfileid: "72782735"
 |分离数据库|关联的数据库被分离。 数据库引擎的实例无法引用该数据库，但数据和日志文件保持不变。|  
 |删除数据库|关联的数据库被删除。 数据和日志文件被删除。|  
   
-###  <a name="LimitationsRestrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制和局限  
  在删除某一 DAC 后，没有自动的机制可以还原该 DAC 的定义元数据或数据库。 您可以手动重新生成 DAC 实例的方式取决于删除选项。  
   
 |选项|如何重新生成 DAC 实例|  
@@ -55,10 +55,10 @@ ms.locfileid: "72782735"
 > [!WARNING]  
 >  通过从还原或重新连接的数据库注册 DAC 重新生成一个 DAC 实例时，将不会重新创建该原始 DAC 的某些部分，例如服务器选择策略。  
   
-###  <a name="Permissions"></a> 权限  
+###  <a name="permissions"></a><a name="Permissions"></a> 权限  
  只能由 **sysadmin** 或 **serveradmin** 固定服务器角色的成员删除 DAC，或者由数据库所有者删除。 名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **的内置** 系统管理员帐户也可以启动该向导。  
   
-##  <a name="UsingDeleteDACWizard"></a> 使用“删除数据层应用程序向导”  
+##  <a name="using-the-delete-data-tier-application-wizard"></a><a name="UsingDeleteDACWizard"></a> 使用“删除数据层应用程序向导”  
  **使用向导删除 DAC**  
   
 1.  在 **“对象资源管理器”** 中，展开包含要删除的 DAC 的实例的节点。  
@@ -79,7 +79,7 @@ ms.locfileid: "72782735"
   
     4.  [删除数据层应用程序](#Delete_datatier_application)  
   
-##  <a name="Introduction"></a> “简介”页  
+##  <a name="introduction-page"></a><a name="Introduction"></a> “简介”页  
  此页描述用于删除数据层应用程序的各个步骤。  
   
  **不再显示此页。** - 选中该复选框可以停止在将来显示此页。  
@@ -88,46 +88,46 @@ ms.locfileid: "72782735"
   
  **取消** - 结束向导且不删除数据层应用程序或数据库。  
   
-##  <a name="Choose_method"></a>选择方法页  
+##  <a name="choose-method-page"></a><a name="Choose_method"></a>选择方法页  
  使用此页可以指定用于处理与要删除的 DAC 关联的数据库的选项。  
   
- **删除注册**-删除用于定义数据层应用程序的元数据，但保持关联的数据库不变。  
+ **删除注册** - 删除用于定义数据层应用程序的元数据，但保持关联的数据库不变。  
   
- **分离数据库**-删除用于定义数据层应用程序的元数据，并分离关联的数据库。  
+ **分离数据库** - 删除用于定义数据层应用程序的元数据并且分离关联的数据库。  
   
  数据库不再被 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的该实例引用，但数据和日志文件保持不变。  
   
- **删除数据库**-删除定义 DAC 的元数据，并删除关联的数据库。  
+ **删除数据库** - 删除用于定义 DAC 的元数据并且删除关联的数据库。  
   
  数据库的数据和日志文件被永久删除。  
   
- "上**** **一步"-返回到 "简介" \< **页。  
+ "上**Introduction** **一步"-返回到 "简介" \< **页。  
   
- **下一步 >** -继续到 "**摘要**" 页。  
+ “下一步 >”****- 继续到“摘要”**** 页。  
   
- **取消**-结束向导且不删除 DAC 或数据库。  
+ **取消** - 结束向导且不删除 DAC 或数据库。  
   
-##  <a name="Summary"></a> 摘要页  
+##  <a name="summary-page"></a><a name="Summary"></a> 摘要页  
  使用此页可以查看在删除 DAC 实例时向导将执行的操作。  
   
- **查看选择摘要**-查看框中显示的 DAC、数据库和删除方法。 如果信息正确，则选择 **“下一步”** 或者 **“完成”** 以便删除 DAC。 如果 DAC 和数据库信息不正确，则选择 **“取消”** 并且选择正确的 DAC。 如果删除方法不正确，则选择 **“上一步”** 返回到 **“选择方法”** 页并且选择其他方法。  
+ **查看选择摘要** - 查看在该框中显示的 DAC、数据库和删除方法。 如果信息正确，则选择 **“下一步”** 或者 **“完成”** 以便删除 DAC。 如果 DAC 和数据库信息不正确，则选择 **“取消”** 并且选择正确的 DAC。 如果删除方法不正确，则选择 **“上一步”** 返回到 **“选择方法”** 页并且选择其他方法。  
   
  "上一步"-返回到 "**选择方法**" 页以选择其他删除方法。 ** \< **  
   
- **下一步 >** -使用您在前一页上选择的方法删除 DAC 实例，然后转到 "**删除数据层应用程序**" 页。  
+ **下一步 >** - 使用你在上一页中选择的方法删除 DAC 实例，并且继续到“删除数据层应用程序”**** 页。  
   
- **取消**-结束向导且不删除 DAC 实例。  
+ **取消** - 结束向导且不删除 DAC 实例。  
   
-##  <a name="Delete_datatier_application"></a>"删除数据层应用程序" 页  
+##  <a name="delete-data-tier-application-page"></a><a name="Delete_datatier_application"></a>"删除数据层应用程序" 页  
  此页报告删除操作是成功还是失败。  
   
- **删除 dac** -报告为删除 dac 实例而执行的每个操作是成功还是失败。 查看信息以便确定每个操作是成功还是失败。 遇到了错误的任何操作都将在 **“结果”** 列中具有一个链接。 选择该链接可以查看针对该操作的错误报告。  
+ **删除 DAC** - 报告为删除 DAC 实例而执行的每个操作是成功还是失败。 查看信息以便确定每个操作是成功还是失败。 遇到了错误的任何操作都将在 **“结果”** 列中具有一个链接。 选择该链接可以查看针对该操作的错误报告。  
   
- **保存报表**-选择此按钮可以将删除报表保存到 HTML 文件中。 该文件报告每个操作的状态，并且包括任何操作生成的所有错误。 默认文件夹是您的 Windows 帐户的 Documents 文件夹中的 SQL Server Management Studio\DAC Packages 文件夹。  
+ **保存报表** - 选择此按钮可以将删除报表保存到某一 HTML 文件。 该文件报告每个操作的状态，并且包括任何操作生成的所有错误。 默认文件夹是您的 Windows 帐户的 Documents 文件夹中的 SQL Server Management Studio\DAC Packages 文件夹。  
   
- **完成**-结束向导。  
+ **完成** - 结束向导。  
   
-##  <a name="DeleteDACPowerShell"></a>使用 PowerShell 删除 DAC  
+##  <a name="delete-a-dac-using-powershell"></a><a name="DeleteDACPowerShell"></a>使用 PowerShell 删除 DAC  
  **使用 PowerShell 脚本删除 DAC**  
   
 1.  创建一个 SMO Server 对象，并且将该对象设置为包含要删除的 DAC 的实例。  
@@ -223,5 +223,5 @@ $dacName  = "MyApplication"
  [数据层应用程序](data-tier-applications.md)   
  [部署数据层应用程序](deploy-a-data-tier-application.md)   
  [将数据库注册为 DAC](register-a-database-as-a-dac.md)   
- [SQL Server 数据库的备份和还原](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [备份和还原 SQL Server 数据库](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [数据库分离和附加 (SQL Server)](../databases/database-detach-and-attach-sql-server.md)  

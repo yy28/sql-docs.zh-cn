@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c320db0f568b7182a48e5b1719f68d17ade11629
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72688899"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>内存优化表中的表和行大小
@@ -70,7 +70,7 @@ ms.locfileid: "72688899"
   
  下表介绍行正文大小的计算，公式为 [实际行正文大小] = SUM([浅表类型的大小]) + 2 + 2 * [深表类型列数]。  
   
-|部分|大小|注释|  
+|节|大小|说明|  
 |-------------|----------|--------------|  
 |浅表类型列|SUM([浅表类型的大小])<br /><br /> **各类型的大小如下：**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> Numeric （精度 <= 18） &#124; 8<br /><br /> Time &#124; 8<br /><br /> Numeric （精度>18） &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
 |浅表列填充|可能的值为：<br /><br /> 如果存在深表类型列并且浅表列的总数据大小是奇数，则为 1。<br /><br /> 否则为 0|深表类型为类型 (var)binary 和 (n)(var)char。|  
@@ -82,7 +82,7 @@ ms.locfileid: "72688899"
 |可变长度深表类型列 [计算大小]|SUM([可变长度深表类型列的计算大小])<br /><br /> 各列的计算大小如下：<br /><br /> 对于 varchar(i) 和 varbinary(i)，为 i<br /><br /> 对于 nvarchar(i)，为 2 * i|此行仅适用于 [计算行正文大小]。<br /><br /> 可变长度的深表类型列是类型为 varchar(i)、nvarchar(i) 或 varbinary(i) 的列。 计算大小由列的最大长度 (i) 决定。|  
 |可变长度深表类型列 [实际大小]|SUM([可变长度深表类型列的实际大小])<br /><br /> 各列的实际大小如下：<br /><br /> 对于 varchar(i) 为 n，其中 n 是列中存储的字符数。<br /><br /> 对于 nvarchar(i) 为 2 * n，其中 n 是列中存储的字符数。<br /><br /> 对于 varbinary(i) 为 n，其中 n 是列中存储的字节数。|此行仅适用于 [实际行正文大小]。<br /><br /> 实际大小由相应行中各列存储的数据决定。|  
   
-##  <a name="bkmk_RowStructure"></a>行结构  
+##  <a name="row-structure"></a><a name="bkmk_RowStructure"></a> 行结构  
  内存优化表中的行包含以下组成部分：  
   
 -   行标题，包含实现行版本控制所必需的时间戳。 此外，行标题还包含索引指针，以实现哈希 Bucket 中的行链（如上所述）。  
@@ -126,11 +126,11 @@ ms.locfileid: "72688899"
   
 |名称|城市|  
 |----------|----------|  
-|John|巴黎|  
+|John|Paris|  
 |Jane|Prague|  
 |Susan|Bogata|  
   
-##  <a name="bkmk_ExampleComputation"></a>示例：表和行大小计算  
+##  <a name="example-table-and-row-size-computation"></a><a name="bkmk_ExampleComputation"></a>示例：表和行大小计算  
  对于哈希索引，实际 Bucket 计数舍入为最近的 2 次幂。 例如，如果指定的 bucket_count 为 100000，则索引的实际 Bucket 计数为 131072。  
   
  考虑具有以下定义的 Orders 表：  
@@ -223,6 +223,6 @@ where object_id = object_id('dbo.Orders')
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [Memory-Optimized Tables](memory-optimized-tables.md)  
+ [内存优化表](memory-optimized-tables.md)  
   
   

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c686e5eb9bb44517aa1636dc28c972f6782f8bfe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782751"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>备份文件和文件组 (SQL Server)
@@ -44,9 +44,9 @@ ms.locfileid: "72782751"
   
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   不允许在显式或隐式事务中使用 BACKUP 语句。  
   
@@ -54,24 +54,24 @@ ms.locfileid: "72782751"
   
 -   有关限制的详细信息，请参阅 [备份概述 (SQL Server)](backup-overview-sql-server.md)。  
   
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   默认情况下，每个成功的备份操作都会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志和系统事件日志中添加一个条目。 如果非常频繁地备份日志，这些成功消息会迅速累积，从而产生一个巨大的错误日志，这样会使查找其他消息变得非常困难。 在这些情况下，如果任何脚本均不依赖于这些日志条目，则可以使用跟踪标志 3226 取消这些条目。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  默认情况下，为 **sysadmin** 固定服务器角色以及 **db_owner** 和 **db_backupoperator** 固定数据库角色的成员授予 BACKUP DATABASE 和 BACKUP LOG 权限。  
   
- 备份设备的物理文件的所有权和权限问题可能会妨碍备份操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须能够读取和写入设备；运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户必须具有写入权限。 但是，用于在系统表中为备份设备添加项目的 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)不检查文件访问权限。 备份设备物理文件的这些问题可能直到为备份或还原而访问物理资源时才会出现。  
+ 备份设备的物理文件的所有权和权限问题可能会妨碍备份操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须能够读取和写入设备；运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的帐户必须具有写入权限。 但是，用于在系统表中为备份设备添加项目的 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)不 检查文件访问权限。 备份设备物理文件的这些问题可能直到为备份或还原而访问物理资源时才会出现。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-back-up-database-files-and-filegroups"></a>备份数据库文件和文件组  
   
 1.  连接到相应的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
-2.  展开 "**数据库**"，根据数据库的不同，选择用户数据库，或展开 "**系统**数据库" 并选择一个系统数据库。  
+2.  展开 **“数据库”**，然后根据数据库的不同，选择用户数据库，或展开 **“系统数据库”** ，再选择系统数据库。  
   
 3.  右键单击该数据库，指向 **“任务”**，然后单击 **“备份”**。 此时将出现 **“备份数据库”** 对话框。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "72782751"
   
          如果将介质名称保留空白，并选中该框以便与介质进行核对，则只有当介质上的介质名称也是空白时才能成功。  
   
-    -   **备份到新介质集，并清除所有现有备份集**  
+    -   **备份到新介质集并清除所有现有备份集**  
   
          对于该选项，请在 **“新建介质集名称”** 文本框中输入名称，并在 **“新建介质集说明”** 文本框中描述介质集（可选）。 有关创建新媒体集的详细信息，请参阅[媒体集、媒体簇和备份集 (SQL Server)](media-sets-media-families-and-backup-sets-sql-server.md)。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "72782751"
   
     -   **完成后验证备份**。  
   
-    -   **在写入媒体之前，请执行校验**和，还可以选择**在出现校验和错误时继续**。 有关校验和的详细信息，请参阅[在备份和还原期间可能的媒体错误 (SQL Server)](possible-media-errors-during-backup-and-restore-sql-server.md)。  
+    -   **“写入介质前检查校验和”** 和 **“出现校验和错误时继续”**（可选）。 有关校验和的详细信息，请参阅[在备份和还原期间可能的媒体错误 (SQL Server)](possible-media-errors-during-backup-and-restore-sql-server.md)。  
   
 15. 如果备份到磁带驱动器（如同 **“常规”** 页的 **“目标”** 部分指定的一样），则 **“备份后卸载磁带”** 选项处于活动状态。 单击此选项可以启用 **“卸载前倒带”** 选项。  
   
@@ -135,11 +135,11 @@ ms.locfileid: "72782751"
   
     -   [查看或配置 backup compression default 服务器配置选项](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-back-up-files-and-filegroups"></a>备份文件和文件组  
   
-1.  若要创建文件或文件组备份，请使用 [BACKUP DATABASE <file_or_filegroup>](/sql/t-sql/statements/backup-transact-sql) 语句。 此语句至少必须指定以下各项：  
+1.  若要创建文件或文件组备份，请使用[<file_or_filegroup>语句的备份数据库](/sql/t-sql/statements/backup-transact-sql)。 此语句至少必须指定以下各项：  
   
     -   数据库名称。  
   
@@ -159,16 +159,16 @@ ms.locfileid: "72782751"
   
     |选项|说明|  
     |------------|-----------------|  
-    |*数据*|备份事务日志、部分数据库或完整的数据库时所用的源数据库。|  
+    |*database*|备份事务日志、部分数据库或完整的数据库时所用的源数据库。|  
     |文件**=** _logical_file_name_|指定要包含在文件备份中的文件的逻辑名称。|  
     |文件**=** 组_logical_filegroup_name_|指定要包含在文件备份中的文件组的逻辑名称。 在简单恢复模式下，只允许对只读文件组执行文件组备份。|  
     |[ **,**...*f* ]|表示可以指定多个文件和文件组的占位符。 不限制文件或文件组的数量。|  
-    |*backup_device* [ **，**.。。*n* ]|指定一个列表，它包含 1 至 64 个用于备份操作的备份设备。 您可以指定物理备份设备，也可以指定对应的逻辑备份设备（如果已定义）。 若要指定物理备份设备，请使用 DISK 或 TAPE 选项：<br /><br /> {DISK &#124; 磁带}**=** _physical_backup_device_name_<br /><br /> 有关详细信息，请参阅 [备份设备 (SQL Server)](backup-devices-sql-server.md)。|  
+    |*backup_device* [ **,**...*n* ]|指定一个列表，它包含 1 至 64 个用于备份操作的备份设备。 您可以指定物理备份设备，也可以指定对应的逻辑备份设备（如果已定义）。 若要指定物理备份设备，请使用 DISK 或 TAPE 选项：<br /><br /> {DISK &#124; 磁带}**=** _physical_backup_device_name_<br /><br /> 有关详细信息，请参阅 [备份设备 (SQL Server)](backup-devices-sql-server.md)。|  
     |WITH with_options** [ **,**...*o* ]|您也可以指定一个或多个附加选项，如 DIFFERENTIAL。<br /><br /> 注意：差异文件备份需要以完整文件备份为基础。 有关详细信息，请参阅[创建差异数据库备份 (SQL Server)](create-a-differential-database-backup-sql-server.md)。|  
   
-2.  在完整恢复模式下，还必须备份事务日志。 若要使用一整套文件的完整备份来还原数据库，您还必须拥有足够的日志备份，以便涵盖从第一个文件备份开始的所有文件备份。 有关详细信息，请参阅 [备份事务日志 (SQL Server)](back-up-a-transaction-log-sql-server.md)），然后才能还原数据库。  
+2.  在完整恢复模式下，还必须备份事务日志。 若要使用一整套文件的完整备份来还原数据库，您还必须拥有足够的日志备份，以便涵盖从第一个文件备份开始的所有文件备份。 有关详细信息，请参阅 [备份事务日志 (SQL Server)](back-up-a-transaction-log-sql-server.md)数据库还原到一个新位置并且可以选择重命名该数据库。  
   
-###  <a name="TsqlExample"></a> 示例 (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  下面的示例备份了 `Sales` 数据库的辅助文件组的一个或多个文件。 此数据库使用完整恢复模式并且包含以下辅助文件组：  
   
 -   名为 `SalesGroup1` 的文件组，它包含文件 `SGrp1Fi1` 和 `SGrp1Fi2`。  
@@ -213,7 +213,7 @@ BACKUP DATABASE Sales
 GO  
 ```  
   
-##  <a name="PowerShellProcedure"></a>使用 PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> 使用 PowerShell  
   
 使用 `Backup-SqlDatabase` cmdlet 并且为 `Files` 参数的值指定 `-BackupAction`。 此外，还指定下列参数之一：  
   
@@ -236,9 +236,9 @@ GO
  [备份历史记录和标头信息 &#40;SQL Server&#41;](backup-history-and-header-information-sql-server.md)   
  [备份数据库 &#40;常规页&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)   
  [备份数据库 &#40;备份选项 "页&#41;](back-up-database-backup-options-page.md)   
- [完整文件备份 (SQL Server)](full-file-backups-sql-server.md)   
- [差异备份 (SQL Server)](differential-backups-sql-server.md)   
- [文件还原（完整恢复模式）](file-restores-full-recovery-model.md)   
+ [完整文件备份 &#40;SQL Server&#41;](full-file-backups-sql-server.md)   
+ [差异备份 &#40;SQL Server&#41;](differential-backups-sql-server.md)   
+ [文件还原 &#40;完整恢复模式&#41;](file-restores-full-recovery-model.md)   
  [文件还原（简单恢复模式）](file-restores-simple-recovery-model.md)  
   
   

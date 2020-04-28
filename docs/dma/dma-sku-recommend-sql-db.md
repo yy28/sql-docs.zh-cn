@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: d6d329b97946d9d8042641653ed0167510a19b17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72586739"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>确定本地数据库的正确的 Azure SQL 数据库/托管实例 SKU
@@ -38,7 +38,7 @@ ms.locfileid: "72586739"
 
 以下说明可帮助你在 Azure 中使用 DMA 来确定 Azure SQL 数据库 SKU 建议并设置相应的单一数据库或托管实例。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 - 下载并安装最新版本的[DMA](https://aka.ms/get-dma)。 如果你已经具有该工具的早期版本，请将其打开，系统会提示你升级 DMA。
 - 确保你的计算机具有[PowerShell 版本 5.1](https://www.microsoft.com/download/details.aspx?id=54616)或更高版本，以便运行所有脚本。 有关 findoug 安装在计算机上的 PowerShell 版本的信息，请参阅[下载并安装 Windows PowerShell 5.1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)一文。
@@ -102,7 +102,7 @@ ms.locfileid: "72586739"
     - **/AzureAuthenticationTenantId**：身份验证租户。
     - **/AzureAuthenticationClientId**：用于身份验证的 AAD 应用的客户端 ID。
     - 以下身份验证选项之一：
-      - 交互
+      - Interactive (交互)
         - **AzureAuthenticationInteractiveAuthentication**：对于身份验证弹出窗口，将设置为 true。
       - 基于证书
         - **AzureAuthenticationCertificateStoreLocation**：设置为证书存储位置（例如，"CurrentUser"）。

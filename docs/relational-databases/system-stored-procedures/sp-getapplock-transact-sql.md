@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fee963f1b026090a84e58a9b0844fe040f9e9793
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72717252"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
@@ -55,10 +55,10 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  一旦获取应用程序锁之后，则只能检索纯文本中的前 32 个字符；对剩余的字符执行哈希运算。  
   
  [ @LockMode= ]"*lock_mode*"  
- 要为特定资源获取的锁模式。 *lock_mode*为**nvarchar （32）** ，且没有默认值。 该值可以是下列任意值： **Shared**、 **Update**、 **IntentShared**、 **IntentExclusive**或**Exclusive**。 有关详细信息，请参阅[锁模式](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes)。
+ 要为特定资源获取的锁模式。 lock_mode 是 nvarchar(32)，且无默认值******。 该值可以是下列任意值： **Shared**、 **Update**、 **IntentShared**、 **IntentExclusive**或**Exclusive**。 有关详细信息，请参阅[锁模式](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes)。
   
  [ @LockOwner= ]"*lock_owner*"  
- 锁的所有者，它是请求锁时所指定的 lock_owner 值**。 *lock_owner*为**nvarchar （32）**。 该值可以是 Transaction（默认值）或 Session********。 默认情况下， *lock_owner*值为**transaction**时，sp_getapplock 必须从事务内执行。  
+ 锁的所有者，它是请求锁时所指定的 lock_owner 值**。 lock_owner 是 nvarchar(32)******。 该值可以是 Transaction（默认值）或 Session********。 默认情况下， *lock_owner*值为**transaction**时，sp_getapplock 必须从事务内执行。  
   
  [ @LockTimeout= ]"*value*"  
  锁超时值（毫秒）。 默认值与 @@LOCK_TIMEOUT返回的值相同。 若要指示锁请求应返回的返回代码为-1，而不是在不能立即授予请求时等待锁，请指定0。  
@@ -69,7 +69,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ## <a name="return-code-values"></a>返回代码值  
  \>= 0 （成功）或 < 0 （失败）  
   
-|值|结果|  
+|“值”|结果|  
 |-----------|------------|  
 |0|锁已同时成功授予。|  
 |1|在等待释放其他不兼容锁后成功授予锁。|  
@@ -85,11 +85,9 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
 -   包含锁资源的数据库的数据库 ID。  
   
--   
-  @DbPrincipal 参数中指定的数据库主体。  
+-   @DbPrincipal 参数中指定的数据库主体。  
   
--   
-  @Resource 参数中指定的锁名。  
+-   @Resource 参数中指定的锁名。  
   
  只有 @DbPrincipal 参数中指定的数据库主体成员才能获取指定该主体的应用程序锁。 dbo 和 db_owner 角色成员被隐式视为所有角色成员。  
   
@@ -113,7 +111,7 @@ GO
   
  如果应用程序锁发生死锁，则该死锁不会回滚请求此应用程序锁的事务。 必须手动完成任何可能需要作为返回值结果的回滚。 因此，建议在代码中使用错误检查，如果返回某些值（例如 -3），则启动 ROLLBACK TRANSACTION 或替代操作。  
   
- 下面是一个示例：  
+ 以下是示例：  
   
 ```  
 USE AdventureWorks2012;  
@@ -134,8 +132,7 @@ END;
 GO  
 ```  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用当前数据库 ID 来限定资源。 因此，如果在不同数据库中执行 sp_getapplock，即便使用了相同的参数值，结果仍然是对单独资源使用单独锁。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用当前数据库 ID 来限定资源。 因此，如果在不同数据库中执行 sp_getapplock，即便使用了相同的参数值，结果仍然是对单独资源使用单独锁。  
   
  使用 sys.dm_tran_locks 动态管理视图或 sp_lock 系统存储过程检查锁信息，或使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 监视锁。  
   
@@ -169,6 +166,6 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [APPLOCK_MODE &#40;Transact-sql&#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
  [APPLOCK_TEST &#40;Transact-sql&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
- [sp_releaseapplock &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
+ [sp_releaseapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
   
   

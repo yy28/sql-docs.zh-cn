@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fec86c0f732a4f47d3132be51226b877c428d5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782754"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>查询表达式和统一资源名称
@@ -41,7 +41,7 @@ ms.locfileid: "72782754"
 ```  
   
 ## <a name="arguments"></a>参数  
- *Object*  
+ *对象*  
  指定在表达式字符串的节点表示的对象的类型。 每个对象表示那些 SMO 对象模型名称空间中的一个集合类：  
   
  <xref:Microsoft.SqlServer.Management.Smo>  
@@ -63,22 +63,22 @@ ms.locfileid: "72782754"
  例如，为 **ServerCollection** 类指定“服务器”，为 **DatabaseCollection** 类指定“数据库”。  
   
  \@*PropertyName*  
- 指定与**“对象”中指定的对象相关联的类的其中一个属性的名称。 属性名必须以字符 \@ 为前缀。 例如，对 Database\@** 类的 IsAnsiNull**** 属性指定 **IsAnsiNull。  
+ 指定与**“对象”中指定的对象相关联的类的其中一个属性的名称。 属性名必须以字符 \@ 为前缀。 例如，对 Database**** 类的 IsAnsiNull**** 属性指定 \@IsAnsiNull。  
   
- \@*布尔属性名称*= true （）  
+ \@*BooleanPropertyName*=true()  
  枚举指定的布尔属性设置为 TRUE 的所有对象。  
   
- \@*布尔属性名称*= false （）  
+ \@*BooleanPropertyName*=false()  
  枚举指定的布尔属性设置为 FALSE 的所有对象。  
   
  contains(\@StringPropertyName**, 'PatternString**')  
  枚举指定的字符串属性中包含“*PatternString*”中指定的一组字符（至少出现一次）的所有对象。  
   
- \@*字符串属性名称*= '*模式字符串*'  
+ \@*StringPropertyName*='*PatternString*'  
  枚举指定字符串属性的值与在“*PatternString*”中指定的字符模式完全相同的所有对象。  
   
- \@*日期属性名称*= datetime （'*日期字符串*'）  
- 枚举指定日期属性的值与在“*DateString*”中指定的日期相匹配的所有对象。 *日期字符串*的格式必须为 yyyy-mm-dd hh： mi： ss  
+ \@*DatePropertyName*= datetime('*DateString*')  
+ 枚举指定日期属性的值与在“*DateString*”中指定的日期相匹配的所有对象。 *DateString* 必须遵循格式 yyyy-mm-dd hh:mi:ss.mmm  
   
 |||  
 |-|-|  

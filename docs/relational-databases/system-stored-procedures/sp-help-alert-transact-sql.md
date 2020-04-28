@@ -18,10 +18,10 @@ ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a4b430884a497d9a8926f16f387b3608300f037c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304832"
 ---
 # <a name="sp_help_alert-transact-sql"></a>sp_help_alert (Transact-SQL)
@@ -61,13 +61,13 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**识别**|**int**|系统分配的唯一整数标识符。|  
-|**路径名**|**sysname**|警报名称（例如，Demo：完整的**msdb**日志）。|  
+|**id**|**int**|系统分配的唯一整数标识符。|  
+|**name**|**sysname**|警报名称（例如，Demo：完整的**msdb**日志）。|  
 |**event_source**|**nvarchar （100）**|事件源。 [!INCLUDE[msCoName](../../includes/msconame-md.md)]对于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本7.0，它将始终**MSSQLServer**|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|定义警报的消息错误号。 （通常与**sysmessages**表中的错误号相对应）。 如果使用严重性来定义警报，则**message_id**为**0**或 NULL。|  
-|**对应**|**int**|定义警报的严重级别（从**9**到**25**、 **110**、 **120**、 **130**或**140**）。|  
+|severity |**int**|定义警报的严重级别（从**9**到**25**、 **110**、 **120**、 **130**或**140**）。|  
 |**能够**|**tinyint**|警报当前是否已启用（**1**）或不是（**0**）的状态。 不发送未启用的警报。|  
 |**delay_between_responses**|**int**|警报两次响应之间的等待间隔（秒）。|  
 |**last_occurrence_date**|**int**|上次出现警报的日期。|  
@@ -84,25 +84,24 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**job_id**|**uniqueidentifier**|为了响应警报而执行的作业的标识号。|  
 |**job_name**|**sysname**|为了响应警报而执行的作业的名称。|  
 |**has_notification**|**int**|如果将这个警报通知给一个或多个操作员，则为非零。 该值是下列值中的一个或多个（运算）：<br /><br /> **1**= 具有电子邮件通知<br /><br /> **2**= 具有寻呼通知<br /><br /> **4**= 具有**net send**通知。|  
-|**随意**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**flag**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**performance_condition**|**nvarchar(512)**|如果**type**为**2**，则此列将显示性能条件的定义;否则，此列为 NULL。|  
-|**category_name**|**sysname**|
-  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0，将始终为“[Uncategorized]”。|  
+|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0，将始终为“[Uncategorized]”。|  
 |**wmi_namespace**|**sysname**|如果**type**为**3**，则此列显示 WMI 事件的命名空间。|  
 |**wmi_query**|**nvarchar(512)**|如果**type**为**3**，则此列显示 WMI 事件的查询。|  
-|type |**int**|事件类型：<br /><br /> **** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件警报<br /><br /> **** =  2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]性能警报<br /><br /> **3** = WMI 事件警报|  
+|**type**|**int**|事件类型：<br /><br /> **1** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件警报<br /><br /> **2** =  2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]性能警报<br /><br /> **3** = WMI 事件警报|  
   
  当** \@legacy_format**为**1**时， **sp_help_alert**将生成以下结果集。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**识别**|**int**|系统分配的唯一整数标识符。|  
-|**路径名**|**sysname**|警报名称（例如，Demo：完整的**msdb**日志）。|  
+|**id**|**int**|系统分配的唯一整数标识符。|  
+|**name**|**sysname**|警报名称（例如，Demo：完整的**msdb**日志）。|  
 |**event_source**|**nvarchar （100）**|事件源。 对于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本7.0，它将始终**MSSQLServer**|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|定义警报的消息错误号。 （通常与**sysmessages**表中的错误号相对应）。 如果使用严重性来定义警报，则**message_id**为**0**或 NULL。|  
-|**对应**|**int**|定义警报的严重级别（从**9**到**25**、 **110**、 **120**、 **130**或 1**40**）。|  
+|severity |**int**|定义警报的严重级别（从**9**到**25**、 **110**、 **120**、 **130**或 1**40**）。|  
 |**能够**|**tinyint**|警报当前是否已启用（**1**）或不是（**0**）的状态。 不发送未启用的警报。|  
 |**delay_between_responses**|**int**|警报两次响应之间的等待间隔（秒）。|  
 |**last_occurrence_date**|**int**|上次出现警报的日期。|  
@@ -119,16 +118,16 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**job_id**|**uniqueidentifier**|作业标识号。|  
 |**job_name**|**sysname**|为了响应警报而执行的按需作业。|  
 |**has_notification**|**int**|如果将这个警报通知给一个或多个操作员，则为非零。 该值是下列值中的一个或多个（用 OR 连起来）：<br /><br /> **1**= 具有电子邮件通知<br /><br /> **2**= 具有寻呼通知<br /><br /> **4**= 具有**net send**通知。|  
-|**随意**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
+|**flag**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
 |**performance_condition**|**nvarchar(512)**|如果**type**为**2**，则此列将显示性能条件的定义。 如果**type**为**3**，则此列显示 WMI 事件的查询。 否则，此列为 NULL。|  
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]对于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0，将始终为 "**[未分类]**"。|  
-|type |**int**|警报类型：<br /><br /> **** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件警报<br /><br /> **** =  2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]性能警报<br /><br /> **3** = WMI 事件警报|  
+|**type**|**int**|警报类型：<br /><br /> **1** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件警报<br /><br /> **2** =  2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]性能警报<br /><br /> **3** = WMI 事件警报|  
   
 ## <a name="remarks"></a>备注  
  必须从**msdb**数据库运行**sp_help_alert** 。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下， **sysadmin**固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 **msdb** 数据库中的 **SQLAgentOperatorRole** 固定数据库角色的权限。  
+ 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 **msdb** 数据库中的 **SQLAgentOperatorRole** 固定数据库角色的权限。  
   
  有关**SQLAgentOperatorRole**的详细信息，请参阅[SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
@@ -144,7 +143,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_add_alert (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
+ [sp_add_alert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
  [sp_update_alert &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

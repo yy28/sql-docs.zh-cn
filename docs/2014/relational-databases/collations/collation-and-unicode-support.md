@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c63b7c0d1acad34bb273e4a49921d55818965e80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72688727"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
@@ -42,7 +42,7 @@ ms.locfileid: "72688727"
  为了充分利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的排序规则支持，您必须了解本主题中所定义的术语以及这些术语与您的数据的特征之间的关系。  
   
   
-###  <a name="Collation_Defn"></a> 排序规则  
+###  <a name="collation"></a><a name="Collation_Defn"></a>归类  
  排序规则指定表示数据集中每个字符的位模式。 排序规则还确定数据的排序和比较规则。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持在单个数据库中存储具有不同排序规则的对象。 对于非 Unicode 列，排序规则设置指定数据的代码页以及可以表示哪些字符。 必须将在非 Unicode 列间移动的数据从源代码页转换到目标代码页。  
   
  当[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在具有不同排序规则设置的不同数据库上下文中运行时，其运行结果可能会不同。 如果可能，请为您的组织使用标准化排序规则。 这样就不必显式指定每个字符或 Unicode 表达式中的排序规则。 如果必须使用具有不同排序规则和代码页设置的对象，请对查询进行编码，以考虑排序规则的优先顺序规则。 有关详细信息，请参阅 [排序规则优先顺序 (Transact-SQL)](/sql/t-sql/statements/collation-precedence-transact-sql)。  
@@ -62,14 +62,12 @@ ms.locfileid: "72688727"
  Windows 排序规则根据关联的 Windows 系统区域设置来定义字符数据的存储规则。 在 Windows 排序规则中，使用与 Unicode 数据相同的算法实现非 Unicode 数据的比较。 Windows 基本排序规则指定应用字典排序时所用的字母表或语言，以及用于存储非 Unicode 字符数据的代码页。 Unicode 排序和非 Unicode 排序都与特定 Windows 版本中的字符串比较相兼容。 这保证了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中所有数据类型的一致性，还使开发人员能够使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所使用的相同规则对应用程序中的字符串排序。 有关详细信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](/sql/t-sql/statements/windows-collation-name-transact-sql)。  
   
  二进制排序规则  
- 二进制排序规则基于区域设置和数据类型定义的编码值顺序来对数据进行排序。 它们是区分大小写的。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的二进制排序规则定义了将使用的区域设置和 ANSI 代码页。 这将强制使用二进制排序顺序。 由于它们相对简单，因此二进制排序规则有助于提高应用程序性能。 对于非 Unicode 数据类型，数据比较将基于 ANSI 代码页中定义的码位。 对于 Unicode 数据类型，数据比较将基于 Unicode 码位。 对于 Unicode 数据类型的二进制排序规则，数据排序将不考虑区域设置。 例如，对 Unicode 数据应用 Latin_1_General_BIN 和 Japanese_BIN，会得到完全相同的排序结果。  
+ 二进制排序规则基于区域设置和数据类型定义的编码值顺序来对数据进行排序。 它们是区分大小写的。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的二进制排序规则定义了将使用的区域设置和 ANSI 代码页。 这将强制使用二进制排序顺序。 由于它们相对简单，因此二进制排序规则有助于提高应用程序性能。 对于非 Unicode 数据类型，数据比较将基于 ANSI 代码页中定义的码位。 对于 Unicode 数据类型，数据比较将基于 Unicode 码位。 对于 Unicode 数据类型的二进制排序规则，数据排序将不考虑区域设置。 例如，对 Unicode 数据应用 Latin_1_General_BIN 和 Japanese_BIN，会得到完全相同的排序结果。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中有两种二进制排序规则：较早的 `BIN` 排序规则和较新的 `BIN2` 排序规则。 在 `BIN2` 排序规则中，所有字符根据其码位排序。 在 `BIN` 排序规则中，仅首字符按照码位排序，其余字符根据其字节值排序。 （由于 Intel 平台是一个 little endian 体系结构，因此 Unicode 码字符始终以字节对调的形式存储。）  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中有两种二进制排序规则：较早的 `BIN` 排序规则和较新的 `BIN2` 排序规则。 在 `BIN2` 排序规则中，所有字符根据其码位排序。 在 `BIN` 排序规则中，仅首字符按照码位排序，其余字符根据其字节值排序。 （由于 Intel 平台是一个 little endian 体系结构，因此 Unicode 码字符始终以字节对调的形式存储。）  
   
  SQL Server 排序规则  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]排序规则（SQL_ *）提供与早期版本兼容的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]排序顺序。 非 Unicode 数据的字典排序规则与 Windows 操作系统提供的任何排序例程都不兼容。 但是，Unicode 数据的排序与特定版本的 Windows 排序规则兼容。 由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则对非 Unicode 数据和 Unicode 数据使用不同的比较规则，因此对于相同数据的比较将会看到不同的结果，具体取决于基本数据类型。 有关详细信息，请参阅 [SQL Server 排序规则名称 (Transact-SQL)](/sql/t-sql/statements/sql-server-collation-name-transact-sql)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则 (SQL_*) 提供与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早期版本兼容的排序顺序。 非 Unicode 数据的字典排序规则与 Windows 操作系统提供的任何排序例程都不兼容。 但是，Unicode 数据的排序与特定版本的 Windows 排序规则兼容。 由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则对非 Unicode 数据和 Unicode 数据使用不同的比较规则，因此对于相同数据的比较将会看到不同的结果，具体取决于基本数据类型。 有关详细信息，请参阅 [SQL Server 排序规则名称 (Transact-SQL)](/sql/t-sql/statements/sql-server-collation-name-transact-sql)。  
   
 > [!NOTE]
 >  升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的英文实例时可以指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 排序规则 (SQL_*)，以便与现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例兼容。 由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的默认排序规则是在安装过程中定义的，因此在以下情况下确保慎重指定排序规则设置：  
@@ -102,19 +100,19 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ```  
   
   
-###  <a name="Locale_Defn"></a> 区域设置  
+###  <a name="locale"></a><a name="Locale_Defn"></a>本地  
  区域设置是与位置或区域性相关联的一组信息。 它可以包括所用语言的名称和标识符、用于书写该语言的文字以及文化习俗。 排序规则可以与一个或多个区域设置相关联。 有关详细信息，请参阅 [Microsoft 分配的区域设置 ID](https://msdn.microsoft.com/goglobal/bb964664.aspx)。  
   
   
-###  <a name="Code_Page_Defn"></a>代码页  
+###  <a name="code-page"></a><a name="Code_Page_Defn"></a>代码页  
  代码页是给定脚本的有序字符集，其中数值索引（即码位值）与每个字符相关联。 Windows 代码页通常被称为“字符集”****。 代码页用于支持不同的 Windows 系统区域设置所使用的字符集和键盘布局。  
   
   
-###  <a name="Sort_Order_Defn"></a>排序顺序  
+###  <a name="sort-order"></a><a name="Sort_Order_Defn"></a>排序顺序  
  排序顺序指定数据值的排序方式。 它影响数据比较的结果。 数据的排序通过使用排序规则而实现，且可使用索引对排序进行优化。  
   
   
-##  <a name="Unicode_Defn"></a>Unicode 支持  
+##  <a name="unicode-support"></a><a name="Unicode_Defn"></a> Unicode 支持  
  Unicode 是一种将码位映射到字符的标准。 由于它旨在涵盖全球所有语言的所有字符，因此，无需使用不同代码页来处理不同字符集。 如果存储的字符数据反映多种语言，则应始终使用 Unicode 数据类型（`nchar`、`nvarchar` 和 `ntext`），而不要使用非 Unicode 数据类型（`char`、`varchar` 和 `text`）。  
   
  非 Unicode 数据类型有明显的局限性， 这是因为非 Unicode 计算机只能使用单个代码页。 通过使用 Unicode 您可能会体验到性能提升，因为需要较少的代码页转换。 必须在数据库级、列级或表达式级单独选择 Unicode 排序规则，因为在服务器级不支持 Unicode 排序规则。  
@@ -131,13 +129,13 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
  在许多情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将与其他服务器或客户端交互，您的组织可能会使用应用程序和服务器实例之间的多种数据访问标准。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端是两种主要类型之一：  
   
--   使用 OLE DB 和开放式数据库连接（ODBC）3.7 版或更高版本的**Unicode 客户端**。  
+-   使用 OLE DB 和开放式数据库连接 (ODBC) 3.7 版或更高版本的**Unicode 客户端** 。  
   
--   使用 DB-LIBRARY 和 ODBC 3.6 版或更低版本的**非 Unicode 客户端**。  
+-   使用 DB-Library 和 ODBC 3.6 版或更低版本的**非 Unicode 客户端** 。  
   
  下表提供有关以 Unicode 和非 Unicode 服务器的各种组合使用多语言数据的信息。  
   
-|服务器|Client|优点或局限性|  
+|Server (服务器)|客户端|优点或局限性|  
 |------------|------------|-----------------------------|  
 |Unicode|Unicode|因为 Unicode 数据将在整个系统中使用，所以此方案可提供最佳的性能并可保护检索到的数据免受破坏。 ActiveX 数据对象 (ADO)、OLE DB 和 ODBC 3.7 版或更高版本都采用这样的配置。|  
 |Unicode|非 Unicode|在这种情况下，尤其对于正在运行新操作系统的服务器与正在运行旧版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或基于旧操作系统的客户端之间的连接，当您向客户端计算机移动数据时，会受到限制或出现错误。 服务器上的 Unicode 数据会尝试映射到非 Unicode 客户端的对应代码页，以转换数据。|  
@@ -145,7 +143,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |非 Unicode|非 Unicode|这是对多语言数据有极大局限性的方案。 您只可使用一个代码页。|  
   
   
-##  <a name="Supplementary_Characters"></a>补充字符  
+##  <a name="supplementary-characters"></a><a name="Supplementary_Characters"></a> 增补字符  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供数据类型（例如`nchar`和`nvarchar` ）来存储 Unicode 数据。 这些数据类型使用名为 *UTF-16*的格式对文本进行编码。 Unicode 协会为每个字符分配一个唯一码位，码位是一个介于 0x0000 和 0x10FFFF 之间的值。 最常用字符的码位值在内存和磁盘上的 16 位字的范围内，但码位值大于 0xFFFF 的字符需要使用两个连续的 16 位字。 这些字符称为“增补字符” **，两个连续的 16 位字称为“代理项对” **。  
   
  如果使用增补字符：  
@@ -183,11 +181,11 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |[匹配一个通配符](/sql/t-sql/language-elements/wildcard-match-one-character-transact-sql)<br /><br /> [通配符 - 无需匹配的字符](/sql/t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql)|增补字符支持所有通配符操作。|增补字符不支持这些通配符操作。 支持其他通配符运算符。|  
   
   
-##  <a name="GB18030"></a>GB18030 支持  
+##  <a name="gb18030-support"></a><a name="GB18030"></a>GB18030 支持  
  GB18030 是在中华人民共和国用于对中文字符进行编码的一个单独标准。 在 GB18030 中，字符长度可以是 1 个字节、2 个字节或 4 个字节。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过对从客户端应用程序进入服务器的 GB18030 编码字符进行确认，然后在本机将其转换并存储为 Unicode 字符，来对这些字符提供支持。 这些字符存储在服务器中后，在所有后续操作中均视为 Unicode 字符。 可以使用任何中文排序规则，最好使用最新的 100 版本。 所有 _100 级排序规则均支持使用 GB18030 字符进行语言排序。 如果数据中包含增补字符（代理项对），您可以使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中提供的 SC 排序规则来改进搜索和排序操作。  
   
   
-##  <a name="Complex_script"></a>复杂脚本支持  
+##  <a name="complex-script-support"></a><a name="Complex_script"></a>复杂脚本支持  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可支持输入、存储、更改和显示复杂文种。 复杂文种包括下列几种情况：  
   
 -   脚本包括从右到左和从左到右两种文字组合，如阿拉伯语和英语文字的组合。  
@@ -199,7 +197,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
  与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交互的数据库应用程序必须使用支持复杂文种的控件。 在托管代码中创建的标准 Windows 窗体控件支持复杂文种。  
   
   
-##  <a name="Related_Tasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="Related_Tasks"></a> 相关任务  
   
 |任务|主题|  
 |----------|-----------|  
@@ -211,15 +209,15 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |介绍如何更改有关日期、时间和货币数据的使用和显示方式的错误消息和首选项的语言。|[设置会话语言](set-a-session-language.md)|  
   
   
-##  <a name="Related_Content"></a> 相关内容  
+##  <a name="related-content"></a><a name="Related_Content"></a> 相关内容  
  [SQL Server Best Practices Collation Change](https://go.microsoft.com/fwlink/?LinkId=113891)  
   
- ["SQL Server 迁移到 Unicode 的最佳做法"](https://go.microsoft.com/fwlink/?LinkId=113890)  
+ ["SQL Server Best Practices Migration to Unicode"](https://go.microsoft.com/fwlink/?LinkId=113890)  
   
- [Unicode 联合会网站](https://go.microsoft.com/fwlink/?LinkId=48619)  
+ [Unicode Consortium 网站](https://go.microsoft.com/fwlink/?LinkId=48619)  
   
 ## <a name="see-also"></a>另请参阅  
- [包含数据库的排序规则](../databases/contained-database-collations.md)   
+ [包含的数据库排序规则](../databases/contained-database-collations.md)   
  [创建全文索引时选择语言](../search/choose-a-language-when-creating-a-full-text-index.md)   
  [sys.fn_helpcollations (Transact-SQL)](https://msdn.microsoft.com/library/ms187963(SQL.130).aspx)  
   

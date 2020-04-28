@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43ff94bf10dee2bda0a61b573b87621fa5d3256b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72781801"
 ---
 # <a name="using-messages"></a>使用消息
-  在 SMO 中，系统消息由属于 <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> 对象的 `Server` 对象表示。 因为无法修改系统消息，所以 `SystemMessage` 对象属性为只读属性。  
+  在 SMO 中，系统消息由属于 `Server` 对象的 <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> 对象表示。 因为无法修改系统消息，所以 `SystemMessage` 对象属性为只读属性。  
   
  用户定义的消息在 SMO 中由 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> 对象以编程方式表示。 可通过循环访问该集合来发现现有的用户定义的消息。 可以通过实例化新的 `UserDefinedMessage` 对象并设置其相应的属性来创建新的用户定义的消息。  
   

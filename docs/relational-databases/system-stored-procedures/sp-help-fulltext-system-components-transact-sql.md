@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98e360887d63db59e1e61bf5c52928e9626b0f39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304881"
 ---
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
@@ -47,7 +47,7 @@ sp_help_fulltext_system_components
   
 `[ @component_type = ] component_type`指定组件的类型。 *component_type*可以是以下项之一：  
   
--   **断字符**  
+-   **断字器**  
   
 -   **筛选器**  
   
@@ -68,10 +68,10 @@ sp_help_fulltext_system_components
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**componenttype**|**sysname**|组件的类型。 下列类型作之一：<br /><br /> filter<br /><br /> 协议处理程序<br /><br /> 断字符|  
-|**componentname**|**sysname**|组件名称。|  
+|**componentname**|**sysname**|组件的名称。|  
 |**clsid**|**uniqueidentifier**|组件的类标识符。|  
 |**fullpath**|**nvarchar(256)**|指向组件位置的路径。<br /><br /> NULL = 调用方不是**serveradmin**固定服务器角色的成员。|  
-|**版本**|**nvarchar （30）**|组件的版本。|  
+|**version**|**nvarchar(30)**|组件的版本。|  
 |**制造商**|**sysname**|组件制造商的名称。|  
   
  仅当存在使用*component_type*的一个或多个全文目录时，才返回下面的结果集。  
@@ -126,7 +126,7 @@ GO
  默认情况下，未安装此筛选器，所以结果集为空。  
   
 ### <a name="e-listing-a-specific-dll-file"></a>E. 列出特定 .dll 文件  
- 下面的示例列出了默认情况下安装的`nlhtml.dll`特定 ddl 文件。  
+ 下面的示例列出了特定的 .ddl 文件 ，默认情况下会安装该文件。  
   
 ```  
 EXEC sp_help_fulltext_system_components 'fullpath',   

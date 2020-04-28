@@ -18,10 +18,10 @@ ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7752b8fcb453f545c357c529774d570e41201ed1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72381913"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
@@ -112,8 +112,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  如果作业将在多服务器环境中的一个或多个目标服务器上执行，请使用**sp_apply_job_to_targets**来设置作业的目标服务器或目标服务器组。 若要从目标服务器或目标服务器组中删除作业，请使用**sp_remove_job_from_targets**。  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为管理作业提供了一种图形化的简便方法，建议使用此方法来创建和管理作业基础结构。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为管理作业提供了一种图形化的简便方法，建议使用此方法来创建和管理作业基础结构。  
   
 ## <a name="permissions"></a>权限  
  若要运行此存储过程，用户必须是**sysadmin**固定服务器角色的成员，或者被授予以下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理固定数据库角色之一，这些角色驻留在**msdb**数据库中：  

@@ -20,29 +20,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 233f5bc9decf5e8246f2aba6836ec5ecb650283b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72781847"
 ---
 # <a name="using-encryption"></a>使用加密
   在 SMO 中，服务主密钥由 <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> 对象表示。 它是由 <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Server> 属性引用的。 可以通过使用 <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> 方法重新生成服务主密钥。  
   
- 数据库主密钥由 <xref:Microsoft.SqlServer.Management.Smo.MasterKey> 对象表示。 
-  <xref:Microsoft.SqlServer.Management.Smo.MasterKey.IsEncryptedByServer%2A> 属性指示是否通过服务主密钥对数据库主密钥进行加密。 数据库主密钥发生变化时，主数据库中的加密副本会自动进行更新。  
+ 数据库主密钥由 <xref:Microsoft.SqlServer.Management.Smo.MasterKey> 对象表示。 <xref:Microsoft.SqlServer.Management.Smo.MasterKey.IsEncryptedByServer%2A> 属性指示是否通过服务主密钥对数据库主密钥进行加密。 数据库主密钥发生变化时，主数据库中的加密副本会自动进行更新。  
   
  可以采用 <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> 方法删除服务密钥加密，并使用密码加密数据库主密钥。 在这种情况下，您必须显式打开数据库主密钥，然后才能访问已受到安全保护的私钥。  
   
  如果数据库已附加到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，则必须为数据库主密钥提供密码或执行 <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> 方法，才能生成一个未加密的数据库主密钥的副本，以便使用服务主密钥进行加密。 建议执行此步骤，从而无需显式打开数据库主密钥。  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.MasterKey.Regenerate%2A> 方法将重新生成数据库主密钥。 当重新生成数据库主密钥时，会对所有使用该数据库主密钥加密的密钥进行解密，然后使用新的数据库主密钥对其进行加密。 
-  <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> 方法将通过服务主密钥删除对数据库主密钥的加密。 
-  <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> 可以通过服务主密钥对主密钥的副本进行加密，然后将副本存储在当前数据库和主数据库中。  
+ <xref:Microsoft.SqlServer.Management.Smo.MasterKey.Regenerate%2A> 方法将重新生成数据库主密钥。 当重新生成数据库主密钥时，会对所有使用该数据库主密钥加密的密钥进行解密，然后使用新的数据库主密钥对其进行加密。 <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> 方法将通过服务主密钥删除对数据库主密钥的加密。 <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> 可以通过服务主密钥对主密钥的副本进行加密，然后将副本存储在当前数据库和主数据库中。  
   
- 在 SMO 中，证书由 <xref:Microsoft.SqlServer.Management.Smo.Certificate> 对象表示。 
-  <xref:Microsoft.SqlServer.Management.Smo.Certificate> 对象具有指定公钥、主题名称、有效期以及有关颁发者的信息的属性。 可采用 `Grant`、`Revoke` 和 `Deny` 方法控制对证书的访问权限。  
+ 在 SMO 中，证书由 <xref:Microsoft.SqlServer.Management.Smo.Certificate> 对象表示。 <xref:Microsoft.SqlServer.Management.Smo.Certificate> 对象具有指定公钥、主题名称、有效期以及有关颁发者的信息的属性。 可采用 `Grant`、`Revoke` 和 `Deny` 方法控制对证书的访问权限。  
   
 ## <a name="example"></a>示例  
  对于下面的代码示例，您必须选择编程环境、编程模板和编程语言才能创建应用程序。 有关详细信息，请参阅[在 Visual studio .net 中创建 VISUAL BASIC SMO 项目](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)和[在 visual Studio .Net 中创建 VISUAL C&#35; smo 项目](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  

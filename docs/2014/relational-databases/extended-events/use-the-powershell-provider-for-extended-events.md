@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ea4432b07007ce1bbc4ec5b944594b204a7ad808
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782908"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>对扩展事件使用 PowerShell 提供程序
@@ -26,12 +26,12 @@ ms.locfileid: "72782908"
   
 -   在命令提示符处，键入 `sqlps`，然后按 Enter。 键入 `cd xevent`，然后按 Enter。 在此处，你可以使用**cd**和`dir`命令（或**get-childitem** cmdlet）导航到服务器**名称和实例**名称。  
   
--   在对象资源管理器中，展开实例名称，展开“管理”  ，右键单击“扩展事件”  ，然后单击“启动 PowerShell”  。 这将在以下路径中启动 PowerShell：  
+-   在对象资源管理器中，展开实例名称，展开“管理”****，右键单击“扩展事件”****，然后单击“启动 PowerShell”****。 这将在以下路径中启动 PowerShell：  
   
-     PS SQLSERVER:\XEvent\\*ServerName*\\*InstanceName*>  
+     PS SQLSERVER： \ XEvent\\*ServerName*\\*InstanceName*>  
   
     > [!NOTE]  
-    >  您可以从 **“扩展事件”** 下的任意节点启动 PowerShell。 例如，你可以右键单击“会话”  ，然后单击“启动 PowerShell”  。 这将在下一级别（即“会话”文件夹）启动 PowerShell。  
+    >  您可以从 **“扩展事件”** 下的任意节点启动 PowerShell。 例如，你可以右键单击“会话”****，然后单击“启动 PowerShell”****。 这将在下一级别（即“会话”文件夹）启动 PowerShell。  
   
  您可以浏览 XEvent 文件夹树以查看现有的扩展事件会话及其关联的事件、目标和谓词。 例如，从 PS SQLSERVER： \ XEvent\\*ServerName*\\*InstanceName*> 路径中，如果键入`cd sessions`，请按 enter，键入`dir`，然后按 enter，可以看到该实例上存储的会话的列表。 您还可以查看会话是否正在运行（如果正在运行，那么可以查看运行了多长时间），以及会话是否配置为在实例启动时启动。  
   

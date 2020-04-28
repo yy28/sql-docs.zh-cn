@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56655f7d75635668d266b44853fc29969fd741ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782672"
 ---
 # <a name="validate-a-dac-package"></a>验证 DAC 包
@@ -31,10 +31,10 @@ ms.locfileid: "72782672"
   
 2.  若要升级 DAC，请使用：  [查看 DAC 的内容](#ViewDACContents)、[查看数据库更改](#ViewDBChanges)、[查看升级操作](#ViewUpgradeActions)、[比较 DAC](#CompareDACs)  
   
-##  <a name="Prerequisites"></a>先决条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  建议您不要从未知或不可信源部署 DAC 包。 此类 DAC 可能包含恶意代码，这些代码可能会执行非预期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码，或者通过修改架构导致错误。 使用来自未知源或不可信源的 DAC 前，请在[!INCLUDE[ssDE](../../includes/ssde-md.md)]的独立测试实例上部署它，对数据库运行 [DBCC CHECKDB (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)，然后检查数据库中的代码，例如存储过程或其他用户定义的代码。  
   
-##  <a name="ViewDACContents"></a> 查看 DAC 的内容  
+##  <a name="view-the-contents-of-a-dac"></a><a name="ViewDACContents"></a> 查看 DAC 的内容  
  有两种机制可用于查看数据层应用程序 (DAC) 包的内容。 您可以在 SQL Server 开发工具中将 DAC 包导入到某一 DAC 项目。 您可以将该包的内容解压缩到一个文件夹中。  
   
  **在 SQL Server 开发工具中查看 DAC**  
@@ -61,7 +61,7 @@ ms.locfileid: "72782672"
   
 -   在记事本等工具中查看文本文件的内容。  
   
-##  <a name="ViewDBChanges"></a> 查看数据库更改  
+##  <a name="view-database-changes"></a><a name="ViewDBChanges"></a> 查看数据库更改  
  将 DAC 的当前版本部署到生产后，可能已直接对关联的数据库进行了更改，这些更改可能与新版本 DAC 中定义的架构相冲突。 升级到新版本的 DAC 之前，检查是否已对数据库进行了此类更改。  
   
  **使用向导查看数据库更改**  
@@ -105,7 +105,7 @@ $dacName  = "MyApplication"
 $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DACScripts\MyApplicationChanges.txt  
 ```  
   
-##  <a name="ViewUpgradeActions"></a>查看升级操作  
+##  <a name="view-upgrade-actions"></a><a name="ViewUpgradeActions"></a> 查看升级操作  
  在使用新版本的 DAC 包升级从早期的 DAC 包部署的 DAC 之前，您可以生成一个报告，该报告包含在升级期间将运行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，然后查看该语句。  
   
  **使用向导报告升级操作**  
@@ -161,7 +161,7 @@ $dacstore.GetIncrementalUpgradeScript($dacName, $dacType) | Out-File -Filepath C
 $fileStream.Close()  
 ```  
   
-##  <a name="CompareDACs"></a>比较 Dac  
+##  <a name="compare-dacs"></a><a name="CompareDACs"></a>比较 Dac  
  在升级 DAC 之前，最好检查当前 DAC 和新 DAC 之间数据库和实例级别对象中的差别。 如果您对于当前 DAC 没有该包的副本，则可以从当前数据库中提取一个包。  
   
  如果您在 SQL Server 开发工具中将两个 DAC 包都导入 DAC 项目中，则可以使用架构比较工具来分析这两个 DAC 之间的差别。  

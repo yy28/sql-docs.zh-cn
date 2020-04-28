@@ -18,10 +18,10 @@ ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ab825ce5eb1310f3ff502965e409731b8741932e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305134"
 ---
 # <a name="sp_addtype-transact-sql"></a>sp_addtype (Transact-SQL)
@@ -51,10 +51,10 @@ sp_addtype [ @typename = ] type,
 ||||  
 |-|-|-|  
 |**bigint**|**binary(n)**|**bit**|  
-|**char(n)**|**datetime**|**Decimal**|  
+|**char(n)**|**datetime**|**decimal**|  
 |**float**|**图像**|**int**|  
-|**money**|**nchar(n)**|**ntext**|  
-|**加法**|**nvarchar(n)**|**实际上**|  
+|**money**|**nchar （n）**|**ntext**|  
+|**numeric**|**nvarchar （n）**|**real**|  
 |**smalldatetime**|**smallint**|**smallmoney**|  
 |**sql_variant**|**text**|**tinyint**|  
 |**uniqueidentifier**|**varbinary(n)**|**varchar(n)**|  
@@ -64,7 +64,7 @@ sp_addtype [ @typename = ] type,
  *n*  
  非负整数，指示所选数据类型的长度。  
   
- *H-p*  
+ *P*  
  非负整数，指示可保留的最大十进制位数，包括小数点前面和后面的数字。 有关详细信息，请参阅 [decimal 和 numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)。  
   
  *些*  
@@ -99,8 +99,7 @@ sp_addtype [ @typename = ] type,
 ## <a name="examples"></a>示例  
   
 ### <a name="a-creating-an-alias-data-type-that-does-not-allow-for-null-values"></a>A. 创建不允许空值的别名数据类型  
- 下面的示例创建一个名为`ssn`的别名数据类型（社会安全号码），该类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]基于提供的**varchar**数据类型。 
-  `ssn` 数据类型用于那些保存 11 位数字的社会保障号 (999-99-9999) 的列。 该列不能为 NULL。  
+ 下面的示例创建一个名为`ssn`的别名数据类型（社会安全号码），该类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]基于提供的**varchar**数据类型。 `ssn` 数据类型用于那些保存 11 位数字的社会保障号 (999-99-9999) 的列。 该列不能为 NULL。  
   
  请注意，`varchar(11)` 由单引号引了起来，这是因为它包含了标点符号（括号）。  
   
@@ -135,12 +134,12 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [数据库引擎存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE TYPE &#40;Transact-sql&#41;](../../t-sql/statements/create-type-transact-sql.md)   
- [CREATE DEFAULT &#40;Transact-sql&#41;](../../t-sql/statements/create-default-transact-sql.md)   
- [&#40;Transact-sql&#41;创建规则](../../t-sql/statements/create-rule-transact-sql.md)   
+ [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md)   
+ [CREATE RULE (Transact-SQL)](../../t-sql/statements/create-rule-transact-sql.md)   
  [sp_bindefault &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
  [sp_bindrule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
  [sp_droptype &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)   
- [sp_rename &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
+ [sp_rename (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
  [sp_unbindefault &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
  [sp_unbindrule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

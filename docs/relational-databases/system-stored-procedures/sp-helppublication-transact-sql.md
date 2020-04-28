@@ -16,10 +16,10 @@ ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1f7f75d37762f5e6df971f3139eea118c6a3fdf2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72689053"
 ---
 # <a name="sp_helppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
@@ -69,7 +69,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |immediate_sync_ready|**bit**|表示快照代理是否生成了准备由新订阅使用的快照。 只有当发布被设置为始终有可用于新订阅或重新初始化订阅的快照，才定义此参数。|  
 |allow_sync_tran|**bit**|表示是否允许对发布使用立即更新订阅。|  
 |autogen_sync_procs|**bit**|表示是否自动生成存储过程以支持立即更新订阅。|  
-|snapshot_jobid|**binary （16）**|已计划任务 ID。|  
+|snapshot_jobid|**binary(16)**|已计划任务 ID。|  
 |retention|**int**|为给定的发布保存的更改量（小时）。|  
 |has subscription|**bit**|表示发布是否具有活动订阅。 **1**表示发布具有活动订阅， **0**表示发布没有订阅。|  
 |allow_queued_tran|**bit**|指定是否已启用在订阅服务器上禁用更改排队直到这些更改可以应用到发布服务器。 如果为**0**，则不会对订阅服务器上的更改进行排队。|  
@@ -86,9 +86,9 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |allow_subscription_copy|**bit**|指定是否已启用复制订阅该发布的订阅数据库的功能。 **0**表示不允许复制。|  
 |centralized_conflicts|**bit**|指定冲突记录是否存储在发布服务器上：<br /><br /> **0** = 在导致冲突的发布服务器和订阅服务器上存储冲突记录。<br /><br /> **1** = 冲突记录存储在发布服务器上。|  
 |conflict_retention|**int**|指定冲突保持期（天）。|  
-|conflict_policy|**int**|指定使用排队更新订阅服务器选项时遵循的冲突解决策略。 可以是以下值之一：<br /><br /> **1** = 发布服务器入选冲突。<br /><br /> **2** = 订阅服务器入选冲突。<br /><br /> **3** = 重新初始化订阅。|  
-|queue_type||指定所使用的队列类型。 可以是以下值之一：<br /><br /> **msmq** = 使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]消息队列存储事务。<br /><br /> **sql** = 用于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储事务。<br /><br /> 注意：消息队列的支持已停止使用。|  
-|backward_comp_level||数据库兼容级别，可以为下列值之一：<br /><br /> **** =  90[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **** =  100[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|conflict_policy|**int**|指定使用排队更新订阅服务器选项时遵循的冲突解决策略。 可以是下列值之一：<br /><br /> **1** = 发布服务器入选冲突。<br /><br /> **2** = 订阅服务器入选冲突。<br /><br /> **3** = 重新初始化订阅。|  
+|queue_type||指定所使用的队列类型。 可以是下列值之一：<br /><br /> **msmq** = 使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]消息队列存储事务。<br /><br /> **sql** = 用于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储事务。<br /><br /> 注意：消息队列的支持已停止使用。|  
+|backward_comp_level||数据库兼容级别，可以为下列值之一：<br /><br /> **90** =  90[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** =  100[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_AD|**bit**|指定是否在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中发布该发布。 如果值为**1** ，则表示它已发布，值为**0**时表示未发布该值。|  
 |allow_initialize_from_backup|**bit**|指示订阅服务器是否能够从备份而不是从初始快照来初始化对此发布的订阅。 **1**表示可以从备份中初始化订阅， **0**表示不能。 有关详细信息，请参阅在没有快照的情况下[初始化事务订阅（不使用快照](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)）。|  
 |replicate_ddl|**int**|指示发布是否支持架构复制。 **1**指示复制在发布服务器上执行的数据定义语言（DDL）语句， **0**指示不复制 DDL 语句。 有关详细信息，请参阅[对发布数据库进行架构更改](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。|  

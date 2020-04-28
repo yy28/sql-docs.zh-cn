@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: d0fc42e1ce8d15498caf89582b66549f4e083130
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305225"
 ---
 # <a name="syspdw_nodes_partitions-transact-sql"></a>sys. pdw_nodes_partitions （Transact-sql）
@@ -33,13 +33,13 @@ ms.locfileid: "72305225"
 |hobt_id|**bigint**|包含此分区的行的数据堆或B 树（HoBT）的 ID。|  
 |行|**bigint**|此分区中的大约行数。 |  
 |data_compression|**int**|指示每个分区的压缩状态：<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE<br /><br /> 3 = COLUMNSTORE|  
-|data_compression_desc|**nvarchar （60）**|指示每个分区的压缩状态。 可能的值为 NONE、ROW 和 PAGE。|  
+|data_compression_desc|**nvarchar(60)**|指示每个分区的压缩状态。 可能的值为 NONE、ROW 和 PAGE。|  
 |pdw_node_id|**int**|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]节点的唯一标识符。|  
   
 ## <a name="permissions"></a>权限  
  需要 `CONTROL SERVER` 权限。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 ### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>示例 A：显示每个分布区中每个分区的行 
 
@@ -49,7 +49,7 @@ ms.locfileid: "72305225"
 
 ### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>示例 B：使用系统视图查看表的每个分布区中每个分区的行
 
-**适用于：** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
+**适用对象：** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
  
 此查询返回表`myTable`的每个分布区中每个分区的行数。  
  
