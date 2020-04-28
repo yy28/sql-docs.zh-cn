@@ -22,23 +22,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 838e3a8d2df72d1589fdf76198671fee571e2e62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75229415"
 ---
 # <a name="calculations-in-multidimensional-models"></a>多维模型中的计算
   可以使用多维数据集设计器的“计算”选项卡创建计算成员、命名集和其他多维表达式 (MDX) 计算。****  
   
- 
-  **“计算”** 选项卡有以下三个窗格：  
+ **“计算”** 选项卡有以下三个窗格：  
   
--   
-  **“脚本组织程序”** 窗格列出了多维数据集中的计算。 使用此窗格可以创建、组织和选择计算，以便进行编辑。  
+-   **“脚本组织程序”** 窗格列出了多维数据集中的计算。 使用此窗格可以创建、组织和选择计算，以便进行编辑。  
   
--   
-  **“计算工具”** 窗格提供了创建计算所需的元数据、函数和模板。  
+-   **“计算工具”** 窗格提供了创建计算所需的元数据、函数和模板。  
   
 -   “计算表达式”窗格支持窗体视图和脚本视图。  
   

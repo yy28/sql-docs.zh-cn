@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd62413ec8542aba9f3973d0e8483cb9c5c9128a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401373"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>应用 Analytics Platform System 修补程序
@@ -27,14 +27,14 @@ ms.locfileid: "74401373"
 > [!WARNING]  
 > 请勿在设备使用时应用分析平台系统修补程序。 应用修补程序可能会导致设备节点重新启动。 如果未使用设备，则应在维护时段内应用此修补程序。  
   
-### <a name="prerequisites"></a>必备条件  
+### <a name="prerequisites"></a>先决条件  
 若要执行这些步骤，你将需要：  
   
 -   一个分析平台系统登录，有权访问管理控制台来监视设备状态。 <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
   
 -   了解用于连接到 _<domain_name>_**节点的**Fabric 域管理员帐户。  
   
-## <a name="HowToInstallPDW"></a>应用分析平台系统修补程序  
+## <a name="to-apply-a-analytics-platform-system-hotfix"></a><a name="HowToInstallPDW"></a>应用分析平台系统修补程序  
 与 Microsoft 更新不同，分析平台系统软件的修补程序不会通过 WSUS 进行处理。 它们具有不同的工作流，并通过运行修补程序包来安装。  
   
 1.  **验证设备状态指示器。**  

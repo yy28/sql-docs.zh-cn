@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 22b8ed87ea78424049f1dc42513826ef032b3654
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74685347"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>配置和管理报表服务器（Reporting Services SharePoint 模式）
@@ -33,28 +33,28 @@ ms.locfileid: "74685347"
   
     -   [管理共享数据集](report-data/manage-shared-datasets.md)  
   
-    -   [在 SharePoint 集成模式下 &#40;Reporting Services 上设置已发布报表的参数&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)  
+    -   [设置已发布报表的参数（SharePoint 集成模式下的 Reporting Services）](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)  
   
     -   [设置处理选项（SharePoint 集成模式下的 Reporting Services）](../../2014/reporting-services/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
-    -   [缓存刷新选项 &#40;报表管理器&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)  
+    -   [缓存刷新选项（报表管理器）](../../2014/reporting-services/cache-refresh-options-report-manager.md)  
   
 -   [Reporting Services 网站集功能](../../2014/reporting-services/reporting-services-site-collection-features.md)  
   
 -   [在 SharePoint 中激活报表服务器和 Power View 集成功能](activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)  
   
--   [SharePoint 模式&#40;Reporting Services 网站设置和网站功能&#41;](../../2014/reporting-services/reporting-services-site-settings-and-site-features-sharepoint-mode.md)  
+-   [Reporting Services 网站设置和网站功能（SharePoint 模式）](../../2014/reporting-services/reporting-services-site-settings-and-site-features-sharepoint-mode.md)  
   
 -   [在 SharePoint 管理中心中激活报表服务器文件同步功能](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)  
   
 -   [将报表服务器内容类型添加到 SharePoint 集成模式下的库 &#40;Reporting Services&#41;](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
--   [在 SharePoint 模式下，报表查看器中的本地模式和连接模式报表 &#40;Reporting Services&#41;](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
+-   [报表查看器中的本地模式和报表查看器中的连接模式报表（SharePoint 模式下的 Reporting Services）](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
   
--   [在 SharePoint 模式下将文档上传到 SharePoint 库 &#40;Reporting Services&#41;](../../2014/reporting-services/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
+-   [将文档上传到 SharePoint 库（SharePoint 模式下的 Reporting Services）](../../2014/reporting-services/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
   
 -   [设置处理选项（SharePoint 集成模式下的 Reporting Services）](../../2014/reporting-services/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
- 有关 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的一般信息，请参阅 [ 联机丛书中的 ](create-deploy-and-manage-mobile-and-paginated-reports.md) Reporting Services (SSRS) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 有关其他 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件、工具和资源的信息，请参阅 [SQL Server 联机丛书](../2014-toc/index.yml)。  
+ 有关 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的一般信息，请参阅 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书中的 [ Reporting Services (SSRS) ](create-deploy-and-manage-mobile-and-paginated-reports.md)。 有关其他 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件、工具和资源的信息，请参阅 [SQL Server 联机丛书](../2014-toc/index.yml)。  
   
   

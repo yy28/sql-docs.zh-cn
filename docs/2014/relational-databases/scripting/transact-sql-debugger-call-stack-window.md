@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e6707dc2e3c317c8b573eada62b2db07adbfa9d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243101"
 ---
 # <a name="call-stack-window"></a>“调用堆栈”窗口
@@ -66,6 +66,6 @@ ms.locfileid: "75243101"
  如果是 **，则显示** Transact-SQL [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-SQL 调试器](transact-sql-debugger.md)   
- [Transact-SQL 调试器信息](transact-sql-debugger-information.md)   
+ [Transact-sql 调试器](transact-sql-debugger.md)   
+ [Transact-sql 调试器信息](transact-sql-debugger-information.md)   
  [逐句通过 Transact-SQL 代码](step-through-transact-sql-code.md)  

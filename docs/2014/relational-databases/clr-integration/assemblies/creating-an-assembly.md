@@ -18,17 +18,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1883e88b03b205a2fb272a7cb890c79c607b29fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232295"
 ---
 # <a name="creating-an-assembly"></a>创建程序集
   托管数据库对象（如存储过程或触发器）先经过编译，然后部署到称为程序集的单元中。 托管 DLL 程序集必须在中[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]注册，然后才能使用程序集提供的功能。 若要在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中注册程序集，请使用 CREATE ASSEMBLY 语句。 本主题讨论如何使用 CREATE ASSEMBLY 语句在数据库中注册程序集，以及如何为程序集指定安全设置。  
   
 ## <a name="the-create-assembly-statement"></a>CREATE ASSEMBLY 语句  
- CREATE ASSEMBLY 语句用于在数据库中创建程序集。 下面是一个示例：  
+ CREATE ASSEMBLY 语句用于在数据库中创建程序集。 以下是示例：  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
@@ -37,8 +37,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  FROM 子句指定要创建的程序集的路径名。 此路径既可以是通用命名约定 (UNC) 路径，也可以是计算机本地的物理文件路径。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不允许使用相同的名称、区域性和公钥来注册程序集的不同版本。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不允许使用相同的名称、区域性和公钥来注册程序集的不同版本。  
   
  可以创建引用其他程序集的程序集。 当在中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]创建程序集时，如果未在数据库中创建引用的程序集，则还会创建根级别程序集所引用的程序集。  
   
@@ -53,8 +52,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 ## <a name="specifying-security-when-creating-assemblies"></a>创建程序集时指定安全性  
  当在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中创建程序集时，可以指定您的代码可在以下三种安全级别的哪一种下运行：`SAFE`、`EXTERNAL_ACCESS` 或 `UNSAFE`。 当运行 `CREATE ASSEMBLY` 语句时，会对代码程序集执行某些检查，看看是否存在可能导致程序集无法在服务器上注册的问题。 有关详细信息，请参阅[CodePlex](https://msftengprodsamples.codeplex.com/)上的模拟示例。  
   
- 
-  `SAFE` 是默认的权限集，适用于绝大多数应用场景。 若要指定给定的安全级别，您可以按如下所示修改 CREATE ASSEMBLY 语句的语法：  
+ `SAFE` 是默认的权限集，适用于绝大多数应用场景。 若要指定给定的安全级别，您可以按如下所示修改 CREATE ASSEMBLY 语句的语法：  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
@@ -72,13 +70,11 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
  当程序集中的代码在 `SAFE` 权限集下运行时，它只能通过进程中的托管提供程序在服务器内执行计算和数据访问。  
   
 ### <a name="creating-external_access-and-unsafe-assemblies"></a>创建 EXTERNAL_ACCESS 和 UNSAFE 程序集  
- 
-  `EXTERNAL_ACCESS` 适用于代码需要访问服务器之外的资源（如文件、网络、注册表和环境变量）的应用场景。 只要服务器访问外部资源，它就会模拟调用托管代码的用户的安全上下文。  
+ `EXTERNAL_ACCESS` 适用于代码需要访问服务器之外的资源（如文件、网络、注册表和环境变量）的应用场景。 只要服务器访问外部资源，它就会模拟调用托管代码的用户的安全上下文。  
   
- 
-  `UNSAFE` 代码权限适用的场合为：程序集并非可验证为安全的，或程序集要求进一步访问受限资源（如 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Win32 API）。  
+ `UNSAFE` 代码权限适用的场合为：程序集并非可验证为安全的，或程序集要求进一步访问受限资源（如 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Win32 API）。  
   
- 为了在 `EXTERNAL_ACCESS` 中创建 `UNSAFE` 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 程序集，必须满足以下两个条件：  
+ 为了在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中创建 `EXTERNAL_ACCESS` 或 `UNSAFE` 程序集，必须满足以下两个条件：  
   
 1.  程序集经过了强名称签名或使用证书进行了 Authenticode 签名。 此强名称（或证书）在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内部作为非对称密钥（或证书）创建，它具有对应的带有 `EXTERNAL ACCESS ASSEMBLY` 权限（对于外部访问程序集）或 `UNSAFE ASSEMBLY` 权限（对于不安全的程序集）的登录名。  
   

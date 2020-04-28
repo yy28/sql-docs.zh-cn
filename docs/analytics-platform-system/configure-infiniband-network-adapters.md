@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 583d7617c0620d5d1ec24d60fbf10435a547616d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401295"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>为分析平台系统配置无线网络适配器
 描述如何在非设备客户端服务器上配置不使用的网络适配器以连接到并行数据仓库（PDW）上的控制节点。 对于基本连接和高可用性，请使用这些说明，以便加载、备份和其他进程自动连接到活动的未占用网络。  
   
-## <a name="Basics"></a>说明  
+## <a name="description"></a><a name="Basics"></a>说明  
 这些说明显示了如何查找并在未连接的服务器上设置正确的可操作 IP 地址和子网掩码。 它们还介绍了如何将服务器设置为使用 AP 设备 DNS，以便将连接解析为活动的未占用网络。  
   
 为实现高可用性，AP 有两个未经过的网络，一个处于活动状态，一个是被动网络。 每个未使用的网络对于控制节点具有不同的 IP 地址。 如果处于活动状态的网络中断，则被动的 "停止" 网络将成为活动网络。 如果出现这种情况，则脚本或进程会自动连接到活动的自动连接网络，而不会更改脚本参数。  
@@ -32,7 +32,7 @@ ms.locfileid: "74401295"
   
     1.  如果有两个不符合要求的网络适配器，则可以在第一次不使用的网络（称为 TeamIB1）中配置一个具有可用 ip 地址的适配器，在第二个未处理的网络（称为 TeamIB2）中配置另一个适配器。 使用 appliance_domain-AD01 TeamIB1 IP 地址作为首选 DNS 服务器，并 appliance_domain-AD02 TeamIB1 IP 地址作为 TeamIB1 网络适配器的备用 DNS 服务器。 使用 appliance_domain-AD01 TeamIB2 IP 地址作为首选 DNS 服务器，并 appliance_domain-AD02 TeamIB2 IP 地址作为 TeamIB2 网络适配器的备用 DNS 服务器。  
   
-    2.  如果只有一个未受支持的网络适配器，则可以使用其中一个不受阻止的网络来配置具有可用 IP 地址的适配器。 然后，使用 appliance_domain-AD01 TeamIB1 和 appliance_domain-AD02 TeamIB1 或使用 appliance_domain-AD01 TeamIB2 和 appliance_domain-AD02 TeamIB2 （无论哪个相同）在此适配器上配置首选和备用 DNS 服务器作为首选和备用 DNS 服务器的网络作为配置的适配器。  
+    2.  如果只有一个未受支持的网络适配器，则可以使用其中一个不受阻止的网络来配置具有可用 IP 地址的适配器。 然后，使用 appliance_domain-AD01 TeamIB1 和 appliance_domain-AD02 TeamIB1 或使用 appliance_domain-AD01 TeamIB2 和 appliance_domain-AD02 TeamIB2 （与配置的适配器在同一网络上分别作为首选和备用 DNS 服务器）配置此适配器上的首选和备用 DNS 服务器。  
   
 3.  配置不使用的网络适配器，以使用接入点 DNS 服务器来解析到活动的未占用网络的连接。  
   
@@ -46,14 +46,14 @@ ms.locfileid: "74401295"
   
 -   `dwloader -S MYPDW-SQLCTL01`  
   
-## <a name="BeforeBegin"></a>开始之前  
+## <a name="before-you-begin"></a><a name="BeforeBegin"></a>开始之前  
   
 ### <a name="requirements"></a>要求  
 需要使用一个 AP 设备帐户登录到 AD01 节点。 例如，F12345 * \Administrator。  
   
 你需要客户端服务器上有权配置网络适配器的 Windows 帐户。  
   
-### <a name="prerequisites"></a>必备条件  
+### <a name="prerequisites"></a>先决条件  
 这些说明假定已经装好客户端服务器并将其连接到设备的 "无线网络"。 有关搭架和布线的说明，请参阅[获取和配置加载服务器](acquire-and-configure-loading-server.md)。  
   
 ### <a name="general-remarks"></a>一般备注  
@@ -61,7 +61,7 @@ ms.locfileid: "74401295"
   
 为了满足你自己的业务要求，你还可以将客户端服务器加入你自己的非设备工作组或 Windows 域。  
   
-## <a name="Sec1"></a>步骤1：获取设备不会的网络设置  
+## <a name="step-1-obtain-the-appliance-infiniband-network-settings"></a><a name="Sec1"></a>步骤1：获取设备不会的网络设置  
 *获取设备不会的网络设置*  
   
 1.  使用 appliance_domain \Administrator 帐户登录到装置 AD01 节点。  
@@ -78,7 +78,7 @@ ms.locfileid: "74401295"
   
     ![PDW 管理节点无限1属性](media/network-ip1-properties.png "PDW 管理节点无限1属性")  
   
-6.  单击 "取消" 关闭窗口。  
+6.  单击“取消”可关闭窗口。  
   
 7.  在 TeamIB1 网络上查找未使用的 IP 地址，并将其记下。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "74401295"
   
     若要查找未使用的 IP 地址，请打开命令窗口，尝试对设备的地址范围内的 IP 地址进行 ping 操作。 在此示例中，TeamIB2 网络的 IP 地址为172.16.18.30。 查找以 "172.16.18" 开头但未使用的 IP 地址。 例如，在命令行中输入 "ping 172.16.18.254"。 如果 ping 请求失败，则 IP 地址可用。  
   
-## <a name="Sec2"></a>步骤2：在客户端服务器上配置不工作网络适配器设置  
+## <a name="step-2-configure-the-infiniband-network-adapter-settings-on-your-client-server"></a><a name="Sec2"></a>步骤2：在客户端服务器上配置不工作网络适配器设置  
 
 ### <a name="notes"></a>说明  
   

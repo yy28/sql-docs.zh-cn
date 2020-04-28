@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 80f8f63b4ddb3e8641ef503a615d57c63be35164
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243269"
 ---
 # <a name="start-the-sqlcmd-utility"></a>启动 sqlcmd 实用工具
@@ -30,9 +30,9 @@ ms.locfileid: "75243269"
   
 ### <a name="to-start-the-sqlcmd-utility-and-connect-to-a-default-instance-of-sql-server"></a>启动 sqlcmd 实用工具并连接到 SQL Server 的默认实例  
   
-1.  在 "**开始**" 菜单上单击 "**运行**"。 在 **“打开”** 框中，键入 **cmd**，然后单击 **“确定”** 打开命令提示符窗口。  
+1.  在 **“开始”** 菜单上，单击 **“运行”**。 在 **“打开”** 框中，键入 **cmd**，然后单击 **“确定”** 打开命令提示符窗口。  
   
-2.  在命令提示符处，键入：`sqlcmd`。  
+2.  在命令提示符下键入 `sqlcmd`。  
   
 3.  按 Enter。  
   

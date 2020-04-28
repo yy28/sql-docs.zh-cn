@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 75399480879623a39da542c68f036389c645f6ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401352"
 ---
 # <a name="backup-and-restore"></a>备份和还原
 
 介绍数据备份和还原如何适用于并行数据仓库（PDW）。 备份和还原操作用于灾难恢复。 还可以使用备份和还原将数据库从一个设备复制到另一台设备。  
     
-## <a name="BackupRestoreBasics"></a>备份和还原基础知识
+## <a name="backup-and-restore-basics"></a><a name="BackupRestoreBasics"></a>备份和还原基础知识
 
 PDW*数据库备份*是设备数据库的副本，以格式存储，以便可以使用它将原始数据库还原到设备。  
   
@@ -36,7 +36,7 @@ PDW 使用 SQL Server 备份技术来备份和还原设备数据库。 SQL Serve
   
 备份在备份服务器上存储为 Windows 文件系统中的一组文件。 PDW 数据库备份只能还原到 PDW。 但是，可以使用标准的 Windows 文件备份过程将数据库备份从备份服务器存档到另一个位置。 有关备份服务器的详细信息，请参阅[获取和配置备份服务器](acquire-and-configure-backup-server.md)。  
   
-## <a name="BackupTypes"></a>数据库备份类型
+## <a name="database-backup-types"></a><a name="BackupTypes"></a>数据库备份类型
 
 需要备份的数据类型有两种：用户数据库和系统数据库（例如 master 数据库）。 PDW 不会备份事务日志。  
   
@@ -50,7 +50,7 @@ PDW 使用 SQL Server 备份技术来备份和还原设备数据库。 SQL Serve
   
 若要备份整个设备，需要对所有用户数据库和 master 数据库的备份进行备份。  
   
-## <a name="BackupProc"></a>数据库备份过程
+## <a name="database-backup-process"></a><a name="BackupProc"></a>数据库备份过程
 
 下图显示了数据库备份过程中的数据流。  
   
@@ -82,9 +82,9 @@ PDW 使用 SQL Server 备份技术来备份和还原设备数据库。 SQL Serve
   
     -   只能将备份还原到具有相等或更多计算节点的 PDW 设备。  
   
-    -   在执行还原之前，无法更改备份的名称。 备份目录的名称必须与该备份的原始名称的名称匹配。 备份的原始名称位于 backup 目录中的 backup .xml 文件中。 若要将数据库还原为其他名称，可以在 restore 命令中指定新名称。 例如： `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ` 。  
+    -   在执行还原之前，无法更改备份的名称。 备份目录的名称必须与该备份的原始名称的名称匹配。 备份的原始名称位于 backup 目录中的 backup .xml 文件中。 若要将数据库还原为其他名称，可以在 restore 命令中指定新名称。 例如：`RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`。  
   
-## <a name="RestoreModes"></a>数据库还原模式
+## <a name="database-restore-modes"></a><a name="RestoreModes"></a>数据库还原模式
 
 完整数据库还原使用数据库备份中的数据重新创建 PDW 数据库。 数据库还原是通过首先还原完整备份来执行的，并可以选择还原一个差异备份。 数据库还原包括数据库用户和数据库角色。  
   
@@ -92,7 +92,7 @@ PDW 使用 SQL Server 备份技术来备份和还原设备数据库。 SQL Serve
   
 设备还原是整个设备的还原。 这包括还原所有用户数据库和 master 数据库。  
   
-## <a name="RestoreProc"></a>还原过程
+## <a name="restore-process"></a><a name="RestoreProc"></a>还原过程
 
 下图显示了数据库还原过程中的数据流。  
   

@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 843bd1c4213b6cb50c843b846cd9f5d95529b4b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243695"
 ---
 # <a name="run-the-transact-sql-debugger"></a>运行 Transact-SQL 调试器
@@ -103,9 +103,9 @@ ms.locfileid: "75243695"
 |不可用|**添加监视**|不可用|不可用|将选定的表达式添加到 **“监视”** 窗口中。|  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-SQL 调试器](transact-sql-debugger.md)   
+ [Transact-sql 调试器](transact-sql-debugger.md)   
  [单步执行 Transact-sql 代码](step-through-transact-sql-code.md)   
- [Transact-SQL 调试器信息](transact-sql-debugger-information.md)   
+ [Transact-sql 调试器信息](transact-sql-debugger-information.md)   
  [数据库引擎查询编辑器 (SQL Server Management Studio)](database-engine-query-editor-sql-server-management-studio.md)  
   
   

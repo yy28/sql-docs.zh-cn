@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9858638287876d31733035d1a6bb6d95705708f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228722"
 ---
 # <a name="creation-and-configuration-of-availability-groups-sql-server"></a>创建和配置可用性组 (SQL Server)
@@ -34,8 +34,8 @@ ms.locfileid: "75228722"
   
  
   
-##  <a name="RelatedTasks"></a> 相关任务  
- **为配置服务器实例[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]**  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
+ **配置 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]**  
   
 -   [启用和禁用 AlwaysOn 可用性组 (SQL Server)](enable-and-disable-always-on-availability-groups-sql-server.md)  
   
@@ -53,13 +53,13 @@ ms.locfileid: "75228722"
   
 -   [使用可用性组向导 (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)  
   
--   [&#40;Transact-sql 创建可用性组&#41;](create-an-availability-group-transact-sql.md)  
+-   [创建可用性组 (Transact-SQL)](create-an-availability-group-transact-sql.md)  
   
--   [创建可用性组 &#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md)  
+-   [创建可用性组 (SQL Server PowerShell)](../../../powershell/sql-server-powershell.md)  
   
 -   [使用“新建可用性组”对话框 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [在添加或修改可用性副本时指定终结点 URL &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [在添加或修改可用性副本时指定终结点 URL (SQL Server)](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
 -   [创建或配置可用性组侦听程序 (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "75228722"
   
 -   [将辅助数据库联接到可用性组 (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
--   [管理可用性组数据库的登录名和作业 &#40;SQL Server&#41;](../../logins-and-jobs-for-availability-group-databases.md)  
+-   [管理可用性组中数据库的登录名和作业 (SQL Server)](../../logins-and-jobs-for-availability-group-databases.md)  
   
  **排查问题**  
   
@@ -87,13 +87,13 @@ ms.locfileid: "75228722"
   
 -   [排除失败的添加文件操作 &#40;AlwaysOn 可用性组&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
--   **博客**  
+-   **博客：**  
   
      [AlwaysON - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 官方团队博客](https://blogs.msdn.com/b/sqlalwayson/)  
   
      [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
   
@@ -103,11 +103,11 @@ ms.locfileid: "75228722"
   
      [Microsoft SQL Server Code-Named "Denali" AlwaysOn 系列，第二部分：使用 AlwaysOn 生成关键任务高可用性解决方案](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
--   **白皮书**  
+-   **白皮书：**  
   
      [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [SQL Server 2012 的 Microsoft 白皮书](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [针对 SQL Server 2012 的 Microsoft 白皮书](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server 客户咨询团队白皮书](http://sqlcat.com/)  
   
@@ -115,6 +115,6 @@ ms.locfileid: "75228722"
  [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [管理可用性组 &#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)   
  [AlwaysOn 可用性组（SQL Server）的操作问题的 AlwaysOn 策略](always-on-policies-for-operational-issues-always-on-availability.md)   
- [监视可用性组 &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
+ [监视可用性组 (SQL Server)](monitoring-of-availability-groups-sql-server.md)   
  [AlwaysOn 可用性组：互操作性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)  
   

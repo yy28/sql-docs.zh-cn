@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e3cce22873b00e47c5d03d18cbcd58c29399afc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243109"
 ---
 # <a name="breakpoints-window"></a>“断点”窗口
@@ -25,7 +25,7 @@ ms.locfileid: "75243109"
 ## <a name="task-list"></a>任务列表  
  **访问“断点”窗口**  
   
--   在 **“调试”** 菜单上单击 **“窗口”** ，然后单击 **“断点”** 。  
+-   在 **“调试”** 菜单上单击 **“窗口”**，然后单击 **“断点”**。  
   
 ## <a name="breakpoints-window-columns"></a>“断点”窗口中包含的列  
  默认情况下， **“断点”** 窗口列出以下列。  
@@ -34,8 +34,7 @@ ms.locfileid: "75243109"
  显示断点名称。 断点名称是由调试器提供的。 该名称含有包含此断点的数据库引擎查询编辑器窗口的名称和查询编辑器中设有此断点的行的行号。  
   
  **条件**  
- 显示“(无条件)”  。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器不支持设置断点条件。  
+ 显示“(无条件)”  。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器不支持设置断点条件。  
   
  **命中计数**  
  显示“始终中断”****。  
@@ -43,8 +42,7 @@ ms.locfileid: "75243109"
  在 **“列”** 列表中选择以下列后，可以添加或删除这些列。  
   
  **筛选器**  
- 显示“(无)”  。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器不支持设置断点筛选器。  
+ 显示“(无)”  。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器不支持设置断点筛选器。  
   
  **命中条件**  
  显示“中断”  。  
@@ -59,8 +57,7 @@ ms.locfileid: "75243109"
  显示包含断点的源文件的名称和设有此断点的行的行号。  
   
  **Address**  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器不支持此功能。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器不支持此功能。  
   
  **处理**  
  显示“[SQL]”  ，则表明这是一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 进程。 后面跟随代码在其中执行的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例的名称。  

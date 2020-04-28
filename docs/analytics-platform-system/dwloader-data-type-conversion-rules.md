@@ -10,24 +10,24 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fe5d8790b5adb8477c994d265f458cdb1ceda61a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401183"
 ---
 # <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>Dwloader 数据仓库的数据类型转换规则
 本主题介绍[Dwloader 命令行加载程序](dwloader.md)在 PDW 中加载数据时支持的输入数据格式和隐式数据类型转换。 当输入数据与 SQL Server PDW 目标表中的数据类型不匹配时，将发生隐式数据转换。 在设计加载过程时使用此信息，以确保将数据成功加载到 SQL Server PDW 中。  
    
   
-## <a name="InsertBinaryTypes"></a>将文本插入二进制类型  
+## <a name="inserting-literals-into-binary-types"></a><a name="InsertBinaryTypes"></a>将文本插入二进制类型  
 下表定义了用于将文本值加载到类型为**binary** （*n*）或**varbinary**（*n*）的 SQL Server PDW 列中的接受文字类型、格式和转换规则。  
   
 |输入数据类型|输入数据示例|转换为 binary 或 varbinary 数据类型|  
 |-------------------|-----------------------|-----------------------------------------------|  
 |二进制文本|0x*hexidecimal_string*<br /><br />示例：12Ef 或0x12Ef|0x 前缀是可选的。<br /><br />数据源长度不能超过为数据类型指定的字节数。<br /><br />如果数据源长度小于**binary**数据类型的大小，则会将数据填充到右侧，使其达到数据类型大小。|  
   
-## <a name="InsertDateTimeTypes"></a>将文本插入日期和时间类型  
+## <a name="inserting-literals-into-date-and-time-types"></a><a name="InsertDateTimeTypes"></a>将文本插入日期和时间类型  
 日期和时间文本是使用特定格式的字符串文本表示的，并用单引号括起来。 下表定义允许的文本类型、格式和转换规则，以便将日期或时间文本加载到类型为**datetime**、 **smalldatetime**、 **date**、 **time**、 **datetimeoffset**或**datetime2**的列中。 表定义给定数据类型的默认格式。 可以指定的其他格式在 "[日期时间格式](#DateFormats)" 部分中定义。 日期和时间文字不能包含前导空格或尾随空格。 无法在固定宽度模式下加载**date**、 **smalldatetime**和 null 值。  
   
 ### <a name="datetime-data-type"></a>datetime 数据类型  
@@ -83,7 +83,7 @@ ms.locfileid: "74401183"
 |**日期**格式的字符串文字|"yyyy-mm-dd"<br /><br />示例： "2007-05-08"|在插入值时，时间值（小时、分钟、秒和小数）设置为0。 例如，文本 "2007-05-08" 插入为 "2007-05-08 12：00： 00.0000000"。|  
 |**Datetime2**格式的字符串文本|"yyyy-mm-dd hh： MM： ss： fffffff"<br /><br />示例： "2007-05-08 12：35： 29.1234567"|如果数据源包含的数据和时间部分小于或等于**datetime2**（*n*）中指定的值，则插入数据;否则，会生成错误。|  
   
-### <a name="DateFormats"></a>Datetime 格式  
+### <a name="datetime-formats"></a><a name="DateFormats"></a>Datetime 格式  
 对于正在加载到 SQL Server PDW 中的输入数据，Dwloader 支持以下数据格式。 表中列出了更多详细信息。  
   
 |datetime|smalldatetime|date|datetime2|datetimeoffset|  
@@ -115,7 +115,7 @@ ms.locfileid: "74401183"
   
 -   字母“zzz”以格式 {+|-}HH:ss] 为系统的当前时区指定时区偏移。  
   
-## <a name="InsertNumerictypes"></a>将文本插入数值类型  
+## <a name="inserting-literals-into-numeric-types"></a><a name="InsertNumerictypes"></a>将文本插入数值类型  
 下表定义了用于将文本值加载到使用数值类型的 SQL Server PDW 列的默认格式和转换规则。  
   
 ### <a name="bit-data-type"></a>bit 数据类型  
@@ -162,7 +162,7 @@ Money 文本值使用可选的小数点和可选的货币符号作为前缀来�
 |Decimal 文本|123344.34455|如果小数点后的位数超过4，则该值向上舍入到最接近的值。 例如，将值123344.34455 插入为123344.3446。|  
 |Money 文本|$123456.7890|货币符号不是以值插入的。<br /><br />如果小数点后的位数超过4，则该值向上舍入到最接近的值。|  
   
-## <a name="InsertStringTypes"></a>将文本插入字符串类型  
+## <a name="inserting-literals-into-string-types"></a><a name="InsertStringTypes"></a>将文本插入字符串类型  
 下表定义了用于将文本值加载到使用字符串类型 SQL Server PDW 列的默认格式和转换规则。  
   
 ### <a name="char-varchar-nchar-and-nvarchar-data-types"></a>char、varchar、nchar 和 nvarchar 数据类型  

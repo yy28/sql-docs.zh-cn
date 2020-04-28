@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 86f74710e99079d0acd28db09bcf1e4ba7c57865
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957241"
 ---
 # <a name="create-a-database-master-key"></a>创建数据库主密钥
@@ -31,21 +31,21 @@ ms.locfileid: "74957241"
 
 - [使用 Transact-SQL 创建数据库主密钥](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> 开始之前
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前
 
-### <a name="Security"></a> Security
+### <a name="security"></a><a name="Security"></a> Security
 
-#### <a name="Permissions"></a> 权限
+#### <a name="permissions"></a><a name="Permissions"></a> 权限
 
 要求对数据库具有 CONTROL 权限。
 
-## <a name="TsqlProcedure"></a> 使用 Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL
 
 ### <a name="to-create-a-database-master-key"></a>创建数据库主密钥
 
 1. 选择密码来对存储于该数据库中的主密钥副本进行加密。
 2. 在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。
-3. 展开“系统数据库”，右键单击 **，然后单击“新建查询”** `master`  。
+3. 展开“系统数据库”，右键单击 `master`，然后单击“新建查询”********。
 4. 将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。
 
   ```sql

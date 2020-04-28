@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e160c606b19933934ec844b477ffec08475307d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401496"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>为并行数据仓库获取和配置备份服务器
 本文介绍如何将非设备 Windows 系统配置为备份服务器，以与分析平台系统（AP）和并行数据仓库（PDW）中的备份和还原功能配合使用。  
   
   
-## <a name="Basics"></a>备份服务器基础知识  
+## <a name="backup-server-basics"></a><a name="Basics"></a>备份服务器基础知识  
 备份服务器：  
   
 -   由你自己的 IT 团队提供和管理。  
@@ -35,12 +35,12 @@ ms.locfileid: "74401496"
   
 -   承载备份文件共享，这是一个使用服务器消息块（SMB）应用程序级网络协议的 Windows 文件共享。 "备份文件共享" 权限向 Windows 域用户（通常是专用备份用户）授予对共享执行备份和还原操作的能力。 Windows 域用户的用户名和密码凭据存储在 PDW 中，以便 PDW 可以对备份文件共享执行备份和还原操作。  
   
-## <a name="Step1"></a>步骤1：确定容量要求  
+## <a name="step-1-determine-capacity-requirements"></a><a name="Step1"></a>步骤1：确定容量要求  
 备份服务器的系统要求几乎完全取决于您自己的工作负载。 在购买或预配备份服务器之前，需要确定容量需求。 备份服务器不必专用于备份，前提是它将处理工作负荷的性能和存储要求。 你还可以有多个备份服务器，以将每个数据库备份并还原到多个服务器中的一个。  
   
 使用[备份服务器容量规划工作表](backup-capacity-planning-worksheet.md)来帮助确定容量需求。  
   
-## <a name="Step2"></a>步骤2：获取备份服务器  
+## <a name="step-2-acquire-the-backup-server"></a><a name="Step2"></a>步骤2：获取备份服务器  
 既然您更好地了解了容量要求，您可以规划需要购买或预配的服务器和网络组件。 将以下要求列表纳入购买计划，然后购买服务器或预配现有服务器。  
   
 ### <a name="software-requirements"></a>软件要求  
@@ -61,7 +61,7 @@ ms.locfileid: "74401496"
   
 3.  为双端口卡购买2个 FDR 的，或者为单端口卡购买1个 FDR 的电源线。 FDR 的无线电缆会将加载服务器连接到设备的 "无线网络"。 缆线长度取决于负载服务器与设备不会的交换机之间的距离，取决于您的环境。  
   
-## <a name="Step3"></a>步骤3：将服务器连接到不工作网络  
+## <a name="step-3-connect-the-server-to-the-infiniband-networks"></a><a name="Step3"></a>步骤3：将服务器连接到不工作网络  
 使用以下步骤将加载服务器连接到 "未占用网络"。 如果服务器未使用 "未使用" 网络，请跳过此步骤。  
   
 1.  使服务器接近于设备，以便可以将其连接到设备的 "无线网络"。  
@@ -76,7 +76,7 @@ ms.locfileid: "74401496"
   
 5.  为网络适配器配置 "未设置" 和 "DNS" 设置。 有关配置说明，请参阅[配置无线网络适配器](configure-infiniband-network-adapters.md)。  
   
-## <a name="Step4"></a>步骤4：配置备份文件共享  
+## <a name="step-4-configure-the-backup-file-share"></a><a name="Step4"></a>步骤4：配置备份文件共享  
 PDW 通过 UNC 文件共享来访问备份服务器。 若要设置文件共享：  
   
 1.  在备份服务器上创建一个用于存储备份的文件夹。  
@@ -101,7 +101,7 @@ PDW 通过 UNC 文件共享来访问备份服务器。 若要设置文件共享�
   
     -   [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
-## <a name="Step5"></a>步骤5：开始备份数据  
+## <a name="step-5-start-backing-up-your-data"></a><a name="Step5"></a>步骤5：开始备份数据  
 你现在已准备好开始将数据备份到备份服务器。  
   
 若要备份数据，请使用查询客户端连接到 SQL Server PDW，然后提交备份数据库或还原数据库命令。 使用 DISK = 子句来指定备份服务器和备份位置。  
@@ -118,13 +118,13 @@ RESTORE DATABASE Invoices2013Full
 FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'  
 ```  
   
-有关详细信息，请参阅： 
+有关详细信息，请参见: 
   
 -   [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
   
 -   [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
-## <a name="Security"></a>安全通知  
+## <a name="security-notices"></a><a name="Security"></a>安全通知  
 备份服务器未加入设备的专用域。 它位于你自己的网络中，你自己的域和专用设备域之间没有信任关系。  
   
 由于 PDW 备份并未存储在设备上，因此 IT 团队负责管理备份安全性的所有方面。 例如，这包括管理备份数据的安全性、用于存储备份的服务器的安全性以及将备份服务器连接到 AP 设备的网络基础结构的安全性。  

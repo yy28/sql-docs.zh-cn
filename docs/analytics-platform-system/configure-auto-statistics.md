@@ -11,10 +11,10 @@ ms.reviewer: martinle
 ms.custom: seo-dt-2019
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
 ms.openlocfilehash: 7071c9cb46bde6e2d353293cec9f01451c0b4f67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401286"
 ---
 # <a name="configure-auto-statistics"></a>配置自动统计信息
@@ -55,7 +55,7 @@ ALTER DATABASE myPDW SET AUTO_UPDATE_STATISTICS_ASYNC ON
  
 仅当 AUTO_UPDATE_STATISTICS 为 ON 时，AUTO_UPDATE STATISTICS_ASYNC 选项才起作用。  因此，AUTO_UPDATE_STATISTICS 关闭并且 AUTO_UPDATE_STATISTICS_ASYNC 处于打开状态时，不会更新统计信息。 
 
-### <a name="error-messages"></a>错误消息
+### <a name="error-messages"></a>Error messages
 你可能会收到错误消息 "PDW 中不支持此选项"。  当系统管理员尚未启用自动统计信息，并且您尝试在 ALTER DATABASE 中设置任一自动统计信息选项时，会出现此错误。 
 
 ### <a name="limitations-and-restrictions"></a>限制和局限

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7b09bb2f08095af33f80fe4161032036482f835
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228793"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>创建可用性组 (Transact-SQL)
@@ -28,47 +28,47 @@ ms.locfileid: "75228793"
 > [!NOTE]  
 >  除了使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]之外，您还可以使用“创建可用性组”向导或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell cmdlet。 有关详细信息，请参阅 [使用可用性组向导 (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)、 [使用“新建可用性组”对话框 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)或 [创建可用性组 (SQL Server PowerShell)](../../../powershell/sql-server-powershell.md)。  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
  我们强烈建议您首先阅读此部分，再尝试创建您的第一个可用性组。  
   
-###  <a name="PrerequisitesRestrictions"></a>先决条件、限制和建议  
+###  <a name="prerequisites-restrictions-and-recommendations"></a><a name="PrerequisitesRestrictions"></a>先决条件、限制和建议  
   
 -   创建可用性组之前，请先验证承载可用性副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例位于同一 WSFC 故障转移群集内的不同 Windows Server 故障转移群集 (WSFC) 节点上。 此外，还请验证每个服务器实例是否都满足所有其他 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 先决条件。 有关详细信息，我们强烈建议你参阅[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](prereqs-restrictions-recommendations-always-on-availability.md)。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要 **sysadmin** 固定服务器角色的成员资格，以及 CREATE AVAILABILITY GROUP 服务器权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
-###  <a name="SummaryTsqlStatements"></a>任务和相应 Transact-sql 语句摘要  
+###  <a name="summary-of-tasks-and-corresponding-transact-sql-statements"></a><a name="SummaryTsqlStatements"></a>任务和相应 Transact-sql 语句摘要  
  下表列出了涉及创建和配置可用性组的基本任务，并且指出了要用于这些任务的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句。 必须按照任务在表中出现的顺序执行 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 任务。  
   
 |任务|Transact-SQL 语句|执行任务的位置**<sup>*</sup>**|  
 |----------|----------------------------------|-------------------------------------------|  
 |创建数据库镜像端点（每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例一次）|[创建终结点终结点](/sql/t-sql/statements/create-endpoint-transact-sql) *...* 对于 DATABASE_MIRRORING|在缺少数据库镜像端点的每个服务器实例上执行。|  
-|创建可用性组|[CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql)|在要承载初始主副本的服务器实例上执行。|  
-|将辅助副本联接到可用性组|[更改可用性组](join-a-secondary-replica-to-an-availability-group-sql-server.md) *group_name*联接|在承载辅助副本的各服务器实例上执行。|  
+|创建可用性组|[创建可用性组](/sql/t-sql/statements/create-availability-group-transact-sql)|在要承载初始主副本的服务器实例上执行。|  
+|将辅助副本联接到可用性组|[ALTER AVAILABILITY GROUP](join-a-secondary-replica-to-an-availability-group-sql-server.md) *group_name* JOIN|在承载辅助副本的各服务器实例上执行。|  
 |准备辅助数据库|[备份](/sql/t-sql/statements/backup-transact-sql)和[还原](/sql/t-sql/statements/restore-statements-transact-sql)。|在承载主副本的服务器实例上创建备份。<br /><br /> 使用 RESTORE WITH NORECOVERY 在承载辅助副本的各服务器实例上还原备份。|  
-|通过将各辅助数据库联接到可用性组，开始数据同步|[更改数据库](/sql/t-sql/statements/alter-database-transact-sql-set-hadr) *DATABASE_NAME*设置 HADR 可用性组 = *group_name*|在承载辅助副本的各服务器实例上执行。|  
+|通过将各辅助数据库联接到可用性组，开始数据同步|[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-hadr) *database_name* SET HADR AVAILABILITY GROUP = *group_name*|在承载辅助副本的各服务器实例上执行。|  
   
  **<sup>*</sup>** 若要执行给定任务，请连接到指示的服务器实例。  
   
-##  <a name="TsqlProcedure"></a>使用 Transact-sql 创建和配置可用性组  
+##  <a name="using-transact-sql-to-create-and-configure-an-availability-group"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL 创建和配置可用性组  
   
 > [!NOTE]  
->  有关包含上述各 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句的代码示例的配置过程示例，请参阅 [示例：配置使用 Windows 身份验证的可用性组](#ExampleConfigAGWinAuth)。  
+>   有关包含上述各 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句的代码示例的配置过程示例，请参阅 [示例：配置使用 Windows 身份验证的可用性组](#ExampleConfigAGWinAuth)。  
   
 1.  连接到要承载主副本的服务器实例。  
   
 2.  使用[create availability group](/sql/t-sql/statements/create-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]语句创建可用性组。  
   
-3.  将新的辅助副本联接到可用性组。 有关详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md)。  
+3.  将新的辅助副本联接到可用性组。 有关详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md)或 PowerShell 将辅助数据库联接到 Always On 可用性组。  
   
 4.  对于可用性组中的每个数据库，通过使用 RESTORE WITH NORECOVERY 还原主数据库的最近的备份，创建辅助数据库。 有关详细信息，请参阅 [示例：使用 Windows 身份验证设置可用性组 (Transact-SQL)](create-an-availability-group-transact-sql.md)，从还原数据库备份的步骤开始。  
   
-5.  将每个新的辅助数据库联接到可用性组。 有关详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md)。  
+5.  将每个新的辅助数据库联接到可用性组。 有关详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md)或 PowerShell 将辅助数据库联接到 Always On 可用性组。  
   
-##  <a name="ExampleConfigAGWinAuth"></a>示例：配置使用 Windows 身份验证的可用性组  
+##  <a name="example-configuring-an-availability-group-that-uses-windows-authentication"></a><a name="ExampleConfigAGWinAuth"></a>示例：配置使用 Windows 身份验证的可用性组  
  此示例创建一个示例 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 配置过程，该过程使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 设置使用 Windows 身份验证的数据库镜像端点并且创建和配置一个可用性组及其辅助数据库。  
   
  此示例包含以下部分：  
@@ -79,10 +79,10 @@ ms.locfileid: "75228793"
   
 -   [示例配置过程的完整代码示例](#CompleteCodeExample)  
   
-###  <a name="PrerequisitesForExample"></a>使用示例配置过程的先决条件  
+###  <a name="prerequisites-for-using-the-sample-configuration-procedure"></a><a name="PrerequisitesForExample"></a>使用示例配置过程的先决条件  
  此示例过程具有以下要求：  
   
--   服务器实例必须支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 有关详细信息，请参阅[AlwaysOn 可用性组 &#40;SQL Server&#41;的先决条件、限制和建议](prereqs-restrictions-recommendations-always-on-availability.md)。  
+-   服务器实例必须支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 有关详细信息，请参阅[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](prereqs-restrictions-recommendations-always-on-availability.md)。  
   
 -   两个示例数据库 *MyDb1* 和 *MyDb2*必须在将承载主副本的服务器实例上存在。 下面的代码示例创建和配置这两个数据库，并且创建这两个数据库的完整备份。 在您想要创建示例可用性组的服务器实例上执行这些代码示例。 此服务器实例将承载示例可用性组的初始主副本。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "75228793"
         GO
         ```  
   
-###  <a name="SampleProcedure"></a> 示例配置过程  
+###  <a name="sample-configuration-procedure"></a><a name="SampleProcedure"></a> 示例配置过程  
  在这个示例配置中，将在两个独立服务器实例上创建可用性副本，这些服务器实例的服务帐户在不同的可信域（`DOMAIN1` 和 `DOMAIN2`）下运行。  
   
  下表总结了此示例配置中使用的值。  
@@ -282,7 +282,7 @@ ms.locfileid: "75228793"
     GO
     ```  
   
-###  <a name="CompleteCodeExample"></a> 示例配置过程的完整代码示例  
+###  <a name="complete-code-example-for-sample-configuration-procedure"></a><a name="CompleteCodeExample"></a> 示例配置过程的完整代码示例  
  下面的示例合并了示例配置过程的所有步骤中的代码示例。 下表总结了此代码示例中使用的占位符值。 有关此代码示例中的步骤的详细信息，请参阅本主题中前面的 [使用示例配置过程的先决条件](#PrerequisitesForExample) 和 [示例配置过程](#SampleProcedure)。  
   
 |占位符|说明|  
@@ -437,7 +437,7 @@ ALTER DATABASE MyDb2 SET HADR AVAILABILITY GROUP = MyAG;
 GO
 ```  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **配置可用性组和副本属性**  
   
 -   [更改可用性副本的可用性模式 (SQL Server)](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
@@ -496,13 +496,13 @@ GO
   
 -   [排除失败的添加文件操作 &#40;AlwaysOn 可用性组&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
 -   **博客：**  
   
      [AlwaysON - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 官方团队博客](https://blogs.msdn.com/b/sqlalwayson/)  
   
      [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
   

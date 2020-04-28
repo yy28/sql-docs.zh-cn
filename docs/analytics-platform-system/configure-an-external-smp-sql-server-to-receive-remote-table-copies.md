@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3e5475e86582ede2e6fa7ca5a302bba7ee74faa3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401318"
 ---
 # <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>配置外部 SMP SQL Server 以接收远程表副本-并行数据仓库
@@ -30,7 +30,7 @@ ms.locfileid: "74401318"
   
 -   SQL Server 的登录帐户（如果已安装 SQL Server），并且能够创建登录名并授予对目标数据库的权限。  
   
-## <a name="HowToSQLServer"></a>配置外部 SMP SQL Server 以接收远程表副本  
+## <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies"></a><a name="HowToSQLServer"></a>配置外部 SMP SQL Server 以接收远程表副本  
 "远程表复制" 功能将表从 SQL Server PDW 设备复制到在 Windows 系统上运行的外部 SMP SQL Server 数据库。 在将外部 Windows 系统配置为接收远程表副本后，下一步是在 Windows 系统上安装和配置 SQL Server。  
   
 若要配置 SQL Server，请使用以下步骤：  
@@ -45,7 +45,7 @@ ms.locfileid: "74401318"
   
 5.  确定将用于身份验证的 SMP SQL Server 上的 SQL Server 帐户。 为并行数据导出操作授予该帐户在目标数据库的表中创建、删除和插入数据的权限。  
   
-## <a name="BPSQLConfig"></a>远程表复制的 SMP SQL Server 配置的最佳实践  
+## <a name="best-practices-for-smp-sql-server-configuration-for-remote-table-copy"></a><a name="BPSQLConfig"></a>远程表复制的 SMP SQL Server 配置的最佳实践  
 配置 SMP SQL Server 以接收远程表副本时，请使用以下最佳做法来提高性能。  
   
 1.  按照 SQL Server 产品文档中所述的最佳实践进行操作。 例如，启用数据加密。 有关保护 SQL Server 的详细信息，请参阅 MSDN 上的[保护 SQL Server](../relational-databases/security/securing-sql-server.md) 。  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef00476e7c469a98532e58302c560c805669421d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74683590"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot for SharePoint (SSAS)
@@ -53,7 +53,7 @@ ms.locfileid: "74683590"
   
  SharePoint 集成模式下的 Analysis Service 服务器实例完成该部署。 它加载、查询和卸载数据。 如果工作簿配置用于 PowerPivot 数据刷新，它还可以处理数据。  每个实例都与属于同一安装的本地 PowerPivot 系统服务紧密结合。  
   
-##  <a name="bkmk_RelatedContent"></a> 本节内容  
+##  <a name="in-this-section"></a><a name="bkmk_RelatedContent"></a>本节内容  
  [在管理中心中管理和配置 PowerPivot 服务器](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
  [使用 Windows PowerShell 配置 PowerPivot](power-pivot-configuration-using-windows-powershell.md)  

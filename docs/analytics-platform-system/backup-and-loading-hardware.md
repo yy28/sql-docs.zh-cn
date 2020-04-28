@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4dd4fba91b1507f711a66a88f40b2fa2ea35e1ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401362"
 ---
 # <a name="backup-and-loading-hardware-overview---parallel-data-warehouse"></a>备份和加载硬件概述-并行数据仓库
@@ -25,7 +25,7 @@ ms.locfileid: "74401362"
 若要备份 PDW 数据库，需要一个或多个备份服务器。 你可以使用自己的现有硬件或购买新硬件。 有关详细信息，请参阅[获取和配置备份服务器](acquire-and-configure-backup-server.md)。 这些说明包括[备份服务器容量规划工作表](backup-capacity-planning-worksheet.md)，可帮助你规划正确的备份解决方案。  
   
 ## <a name="acquire-and-configure-loading-servers"></a>获取和配置加载服务器  
-![加载进程](media/loading-process.png "加载进程")  
+![正在加载进程](media/loading-process.png "加载进程")  
   
 若要加载数据，需要一个或多个加载服务器。 你可以使用自己的现有 ETL 或其他服务器，也可以购买新服务器。 有关详细信息，请参阅[获取和配置加载服务器](acquire-and-configure-loading-server.md)。 这些说明包括[负载服务器容量规划工作表](loading-server-capacity-planning-worksheet.md)，可帮助你规划正确的加载解决方案。  
   

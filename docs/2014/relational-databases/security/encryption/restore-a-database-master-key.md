@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 3b05177fb6cf11d6224d760f2d301212d58307d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957151"
 ---
 # <a name="restore-a-database-master-key"></a>还原数据库主密钥
@@ -32,9 +32,9 @@ ms.locfileid: "74957151"
   
 -   [使用 Transact-SQL 还原数据库主密钥](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   还原主密钥之后， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 会对使用当前活动的主密钥加密的所有密钥进行解密，然后使用还原后的主密钥对这些密钥进行加密。 这种大量消耗资源的操作应当安排在资源需求较低的时段执行。 如果当前的数据库主密钥未打开或无法打开，或者无法对任何使用该主密钥加密的密钥进行解密，则还原操作将失败。  
   
@@ -44,12 +44,12 @@ ms.locfileid: "74957151"
   
 -   如果当前数据库中没有主密钥，则 RESTORE MASTER KEY 将创建一个主密钥。 新的主密钥不会自动使用服务主密钥进行加密。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求对数据库具有 CONTROL 权限。  
   
-##  <a name="SSMSProcedure"></a>将 SQL Server Management Studio 与 Transact-sql 一起使用  
+##  <a name="using-sql-server-management-studio-with-transact-sql"></a><a name="SSMSProcedure"></a>将 SQL Server Management Studio 与 Transact-sql 一起使用  
   
 #### <a name="to-restore-the-database-master-key"></a>还原数据库主密钥  
   

@@ -10,23 +10,23 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 67029d235a1bc65b5ee0ab6f01f51dea42ebcc8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401301"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>配置 System Center Operations Manager （SCOM）以监视分析平台系统
 按照以下步骤配置用于分析平台系统的 System Center Operations Manager （SCOM）管理包。 管理包是从 SCOM 监视分析平台系统所需的。  
   
-## <a name="BeforeBegin"></a>开始之前  
+## <a name="before-you-begin"></a><a name="BeforeBegin"></a>开始之前  
 **先决条件**  
   
 必须安装并运行 System Center Operations Manager 2007 R2。  
   
 必须安装和配置管理包。 请参阅[安装 Scom 管理包 &#40;Analytics Platform system&#41;](install-the-scom-management-packs.md)并[导入用于 PDW &#40;Analytics 平台系统&#41;的 scom 管理包](import-the-scom-management-pack-for-pdw.md)。  
   
-## <a name="ConfigureRunAsProfile"></a>在 System Center 中配置运行方式配置文件  
+## <a name="configure-run-as-profile-in-system-center"></a><a name="ConfigureRunAsProfile"></a>在 System Center 中配置运行方式配置文件  
 若要配置 System Center，必须执行以下步骤：  
   
 -   为**Ap 观察**程序域用户创建运行方式帐户，并将其映射到**Microsoft Ap 观察程序帐户。**  
@@ -71,7 +71,7 @@ ms.locfileid: "74401301"
   
     3.  将打开 "**运行方式配置文件向导**" 对话框。 单击 "**下一步**"，跳过 "**简介**" 页。  
   
-    4.  在 "**常规属性**" 页上，单击 "**下一步**"。  
+    4.  在“常规属性” **** 页上，单击“下一步” ****。  
   
     5.  在 "**运行方式帐户**" 页上，单击 "**添加 ...** " 按钮，然后选择以前创建的 " **Ap 观察**程序" 运行方式帐户。  
   

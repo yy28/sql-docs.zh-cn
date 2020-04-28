@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: adb411df9f1a67b3c8963382f0c907e04c395b5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75241335"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>注册连接的服务器 (SQL Server Management Studio)
@@ -31,7 +31,7 @@ ms.locfileid: "75241335"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-register-a-connected-server"></a>注册连接的服务器  
   
@@ -49,7 +49,7 @@ ms.locfileid: "75241335"
      **新建组**  
      单击此项可启动“新建组”**** 对话框，使用该对话框可以为已注册的服务器创建新的服务器组。  
   
-     **把**  
+     **保存**  
      单击此项可保存已输入的信息并创建已注册的服务器。  
   
   

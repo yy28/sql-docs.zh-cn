@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07c5118c654faccea2d9bab01040ce17b1d5699a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232473"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>步骤 2：添加和配置 Foreach 循环容器
@@ -24,7 +24,7 @@ ms.locfileid: "75232473"
   
  目前，第 1 课中的平面文件连接管理器只连接一个特定的平面文件。 若要循环地连接该文件夹中的每个平面文件，必须同时对 Foreach 循环容器和平面文件连接管理器进行如下配置：  
   
--   **Foreach 循环容器：** 将容器的枚举值映射到用户定义的包变量。 然后，该容器将使用此用户定义变量来动态修改平面文件连接管理器的 `ConnectionString` 属性，并循环连接该文件夹中的每个平面文件。  
+-   **Foreach 循环容器** ：将该容器的枚举值映射为用户定义的包变量。 然后，该容器将使用此用户定义变量来动态修改平面文件连接管理器的 `ConnectionString` 属性，并循环连接该文件夹中的每个平面文件。  
   
 -   **平面文件连接管理器：** 您将修改在第1课中创建的连接管理器，方法是使用用户定义的变量填充连接管理器`ConnectionString`的属性。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "75232473"
   
 3.  右键单击新添加的“Foreach 循环容器”****，然后选择“编辑”****。  
   
-4.  在 " **Foreach 循环编辑器**" 对话框的 "**常规**" 页上， **** 对于 "名称`Foreach File in Folder`"，输入。 单击“确定”。   
+4.  在 " **Foreach 循环编辑器**" 对话框的 "**常规**" 页上， **Name**对于 "名称`Foreach File in Folder`"，输入。 单击“确定”。   
   
 5.  右键单击 "Foreach 循环容器"，单击 "**属性**"，然后在 "属性窗口中， `LocaleID`验证属性是否设置为"**英语（美国）**"。  
   
@@ -61,9 +61,9 @@ ms.locfileid: "75232473"
   
      此示例数据与 [!INCLUDE[ssIS](../includes/ssis-md.md)] 课程包一起提供。 要下载示例数据和课程包，请执行以下操作：  
   
-    1.  导航到[Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  导航到 [Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
-    2.  单击 **“下载”** 选项卡。  
+    2.  单击 "**下载**" 选项卡。  
   
     3.  单击超链接 "https://msftisprodsamples.codeplex.com/downloads/get/578097" SQL2012。Integration_Services. Create_Simple_ETL_Tutorial .zip 文件。  
   
@@ -73,9 +73,9 @@ ms.locfileid: "75232473"
   
 1.  单击“变量映射”****。  
   
-2.  在“变量映射”页的“变量”列中，单击空单元格，然后选择“**新建变量…>”********\<**。  
+2.  在 "**变量映射**" 页上的 "**变量**" 列中，单击空单元格，然后选择** \<"新建变量 ..." >**。  
   
-3.  在 "**添加变量**" 对话框中， **** 为 "名称`varFileName`" 键入。  
+3.  在 "**添加变量**" 对话框中， **Name**为 "名称`varFileName`" 键入。  
   
     > [!IMPORTANT]  
     >  变量名称区分大小写。  

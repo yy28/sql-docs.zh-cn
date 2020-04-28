@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2db2ac49f1caa455c8c05529437a385d360ecaf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75242995"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense 支持的 Transact-SQL 语法
@@ -51,10 +51,10 @@ ms.locfileid: "75242995"
 |[UPDATE](/sql/t-sql/queries/update-transact-sql)|所有语法。|  
 |[DELETE](/sql/t-sql/statements/delete-transact-sql)|所有语法。|  
 |[把@local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|所有语法。|  
-|[SET @local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|所有语法。|  
-|[在运行 CREATE 语句前执行](/sql/t-sql/language-elements/execute-transact-sql)|执行用户定义的存储过程、系统存储过程、用户定义函数和系统函数。|  
+|[字符集@local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|所有语法。|  
+|[EXECUTE](/sql/t-sql/language-elements/execute-transact-sql)|执行用户定义的存储过程、系统存储过程、用户定义函数和系统函数。|  
 |[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)|所有语法。|  
-|[CREATE VIEW](/sql/t-sql/statements/create-view-transact-sql)|所有语法。|  
+|[创建视图](/sql/t-sql/statements/create-view-transact-sql)|所有语法。|  
 |[CREATE PROCEDURE](/sql/t-sql/statements/create-procedure-transact-sql)|所有语法，以下情况除外：<br /><br /> 对 EXTERNAL NAME 子句不提供 IntelliSense 支持。<br /><br /> 在 AS 子句中，IntelliSense 仅支持本主题中列出的语句和语法。|  
 |[ALTER PROCEDURE](/sql/t-sql/statements/alter-procedure-transact-sql)|所有语法，以下情况除外：<br /><br /> 对 EXTERNAL NAME 子句不提供 IntelliSense 支持。<br /><br /> 在 AS 子句中，IntelliSense 仅支持本主题中列出的语句和语法。|  
 |[USE](/sql/t-sql/language-elements/use-transact-sql)|所有语法。|  

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70227f556ae268144549616dab0895e70ff39de8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228744"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>使用可用性组向导 (SQL Server Management Studio)
@@ -36,15 +36,15 @@ ms.locfileid: "75228744"
   
      [安全性](#Security)  
   
--   **若要创建和配置可用性组，请使用：**  [新建可用性组向导（SQL Server Management Studio）](#RunAGwiz)  
+-   **创建和配置可用性组，使用：**  [新建可用性组向导 (SQL Server Management Studio)](#RunAGwiz)  
   
 > [!NOTE]  
 >  除了使用新建可用性组向导之外，您还可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell cmdlet。 有关详细信息，请参阅 [创建可用性组 (Transact-SQL)](create-an-availability-group-transact-sql.md) 或 [创建可用性组 (SQL Server PowerShell)](../../../powershell/sql-server-powershell.md)中创建和配置 AlwaysOn 可用性组。  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
  我们强烈建议您首先阅读此部分，再尝试创建您的第一个可用性组。  
   
-###  <a name="PrerequisitesRestrictions"></a>先决条件、限制和建议  
+###  <a name="prerequisites-restrictions-and-recommendations"></a><a name="PrerequisitesRestrictions"></a>先决条件、限制和建议  
  在大多数情况下，可以使用新建可用性组向导来完成创建和配置可用性组所需的所有任务。 但是，您可能需要手动完成一些任务。  
   
 -   创建可用性组之前，请先验证承载可用性副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例位于同一 WSFC 故障转移群集内的不同 Windows Server 故障转移群集 (WSFC) 节点上。 此外，还请验证每个服务器实例是否都满足所有其他 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 先决条件。 有关详细信息，我们强烈建议你参阅[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](prereqs-restrictions-recommendations-always-on-availability.md)。  
@@ -84,16 +84,16 @@ ms.locfileid: "75228744"
         > [!IMPORTANT]  
         >  日志备份将是您的日志备份链的一部分。 适当地存储日志备份文件。  
   
-     如果您无法使用该向导执行完全初始数据同步，则需要手动准备您的辅助数据库。 您可以在运行该向导之前或之后进行准备。 有关详细信息，请参阅 [为可用性组手动准备辅助数据库 (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)。  
+     如果您无法使用该向导执行完全初始数据同步，则需要手动准备您的辅助数据库。 您可以在运行该向导之前或之后进行准备。 有关详细信息，请参阅 [为可用性组手动准备辅助数据库 (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)或 PowerShell 将辅助数据库联接到 Always On 可用性组。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  需要 **sysadmin** 固定服务器角色的成员资格，以及 CREATE AVAILABILITY GROUP 服务器权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。  
   
  如果要允许可用性组向导管理数据库镜像端点，还需要 CONTROL ON ENDPOINT 权限。  
   
-##  <a name="RunAGwiz"></a>使用新建可用性组向导  
+##  <a name="using-the-new-availability-group-wizard"></a><a name="RunAGwiz"></a> 使用新建可用性组向导  
   
 1.  在对象资源管理器中，连接到承载主副本的服务器实例。  
   
@@ -113,22 +113,22 @@ ms.locfileid: "75228744"
   
 7.  在 **“指定副本”** 页上，为新的可用性组指定和配置一个或多个副本。 此页包含四个选项卡。 下表介绍了这些选项卡。 有关详细信息，请参阅[“指定副本”页（新建可用性组向导：添加副本向导）](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)主题。  
   
-    |Tab|简要说明|  
+    |选项卡|简要说明|  
     |---------|-----------------------|  
     |**副本**|使用此选项卡可以指定将承载辅助副本的每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 请注意，您当前连接的服务器实例必须承载主副本。|  
-    |**端点**|使用此选项卡可以验证任何现有数据库镜像端点，此外，如果在其服务帐户使用 Windows 身份验证的服务器实例上缺少该端点，则会自动创建该端点。 **注意：** 如果任何服务器实例在非域用户帐户下运行，则需要先对服务器实例进行手动更改，然后才能在向导中继续操作。 有关详细信息，请参阅本主题前面的 [先决条件](#PrerequisitesRestrictions)。|  
+    |**终结点**|使用此选项卡可以验证任何现有数据库镜像端点，此外，如果在其服务帐户使用 Windows 身份验证的服务器实例上缺少该端点，则会自动创建该端点。 **注意：** 如果任何服务器实例在非域用户帐户下运行，则需要先对服务器实例进行手动更改，然后才能在向导中继续操作。 有关详细信息，请参阅本主题前面的 [先决条件](#PrerequisitesRestrictions)。|  
     |**备份首选项**|使用此选项卡可以整体为可用性组指定您的备份首选项，并为各个可用性副本指定备份优先级。|  
-    |**监听**|使用此选项卡可以创建可用性组侦听器。 默认情况下，该向导不创建侦听器。|  
+    |**侦听器**|使用此选项卡可以创建可用性组侦听器。 默认情况下，该向导不创建侦听器。|  
   
 8.  在 **“选择初始数据同步”** 页上，选择如何创建新的辅助数据库并将其联接到可用性组。 选择以下选项之一：  
   
-    -   **完全**  
+    -   **达到**  
   
          如果你的环境满足自动启动初始数据同步的要求，则选择此选项（有关详细信息，请参阅本主题前面的 [先决条件、限制和建议](#PrerequisitesRestrictions)）。  
   
          如果选择 **“完全”**，则在创建可用性组后，向导会将每个主数据库及其事务日志备份到网络共享，并在每个承载辅助副本的服务器实例上还原备份。 然后，该向导将每个辅助数据库联接到可用性组。  
   
-         在 **“指定可由所有副本访问的共享网络位置”** 字段中，指定承载副本的所有服务器都具有读写访问权限的备份共享。 有关详细信息，请参阅本主题前面的 [先决条件](#PrerequisitesRestrictions)。  
+         在“指定可由所有副本访问的共享网络位置”**** 字段中，指定承载副本的所有服务器都具有读写访问权限的备份共享。 有关详细信息，请参阅本主题前面的 [先决条件](#PrerequisitesRestrictions)。  
   
     -   **仅联接**  
   
@@ -138,23 +138,22 @@ ms.locfileid: "75228744"
   
          如果要使用您自己的数据库和主数据库的日志备份，请选择此选项。 有关详细信息，请参阅[启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)](start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
-9. 
-  **“验证”** 页验证在此向导中指定的值是否满足新建可用性组向导的要求。 若要进行更改，请单击 **“上一页”** 以返回前面的向导页，更改一个或多个值。 单击“下一步”**** 返回到“验证”**** 页，然后单击“重新运行验证”****。  
+9. **“验证”** 页验证在此向导中指定的值是否满足新建可用性组向导的要求。 若要进行更改，请单击 **“上一页”** 以返回前面的向导页，更改一个或多个值。 单击 **“下一步”** 返回到 **“验证”** 页，然后单击 **“重新运行验证”**。  
   
 10. 在 **“摘要”** 页上，查看您为新的可用性组进行的选择。 若要进行更改，请单击 **“上一步”** 以返回到相应页。 在进行更改后，单击 **“下一步”** 以返回到 **“摘要”** 页。  
   
     > [!IMPORTANT]  
     >  如果将要承载新的可用性副本的服务器实例的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务帐户未作为登录名存在，则新建可用性组向导需要创建一个登录名。 在 **“摘要”** 页上，该向导将显示要创建的登录名的信息。 如果单击 **“完成”**，则该向导将为 SQL Server 服务帐户创建该登录名，并授予该登录名 CONNECT 权限。  
   
-     如果您满意所做的选择，可以选择单击 **“脚本”** 以创建向导将执行的步骤的脚本。 然后，若要创建和配置新的可用性组，请单击 **“完成”**。  
+     如果你对选择满意，则可以选择单击 "**脚本**" 以创建向导将执行的步骤的脚本。 然后，若要创建和配置新的可用性组，请单击 **“完成”**。  
   
-11. “进度”**** 页将显示创建可用性组的各步骤（配置端点、创建可用性组和将次要副本联接到该组）的进度。  
+11. **“进度”** 页将显示创建可用性组的各步骤（配置端点、创建可用性组和将辅助副本联接到该组）的进度。  
   
 12. 在这些步骤完成后， **“结果”** 页将显示各步骤的结果。 如果所有这些步骤都成功，则新的可用性组得到了完全配置。 如果任何步骤导致错误，您可能需要手动完成配置或对失败的步骤使用向导。 有关给定错误的原因的信息，请单击 **“结果”** 列中关联的“错误”链接。  
   
      完成向导后，单击 **“关闭”** 以退出安装向导。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **完成可用性组配置**  
   
 -   [将辅助副本联接到可用性组 (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
@@ -165,13 +164,13 @@ ms.locfileid: "75228744"
   
 -   [创建或配置可用性组侦听程序 (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md)  
   
- **创建可用性组的替代方法**  
+ **用于创建可用性组的其他方法**  
   
 -   [使用“新建可用性组”对话框 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [&#40;Transact-sql 创建可用性组&#41;](create-an-availability-group-transact-sql.md)  
+-   [创建可用性组 (Transact-SQL)](create-an-availability-group-transact-sql.md)  
   
--   [创建可用性组 &#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md)  
+-   [创建可用性组 (SQL Server PowerShell)](../../../powershell/sql-server-powershell.md)  
   
  **启用 AlwaysOn 可用性组**  
   
@@ -185,7 +184,7 @@ ms.locfileid: "75228744"
   
 -   [使用数据库镜像终结点证书 (Transact-SQL)](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
--   [在添加或修改可用性副本时指定终结点 URL &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [在添加或修改可用性副本时指定终结点 URL (SQL Server)](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **解决 AlwaysOn 可用性组配置问题**  
   
@@ -193,13 +192,13 @@ ms.locfileid: "75228744"
   
 -   [排除失败的添加文件操作 &#40;AlwaysOn 可用性组&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
--   **博客**  
+-   **博客：**  
   
      [AlwaysON - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 官方团队博客](https://blogs.msdn.com/b/sqlalwayson/)  
   
      [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
   
@@ -209,16 +208,16 @@ ms.locfileid: "75228744"
   
      [Microsoft SQL Server Code-Named "Denali" AlwaysOn 系列，第二部分：使用 AlwaysOn 生成关键任务高可用性解决方案](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
--   **白皮书**  
+-   **白皮书：**  
   
      [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [SQL Server 2012 的 Microsoft 白皮书](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [针对 SQL Server 2012 的 Microsoft 白皮书](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server 客户咨询团队白皮书](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>另请参阅  
- [数据库镜像终结点 (SQL Server)](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [数据库镜像端点 &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性组 &#40;SQL Server 的先决条件、限制和建议&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   

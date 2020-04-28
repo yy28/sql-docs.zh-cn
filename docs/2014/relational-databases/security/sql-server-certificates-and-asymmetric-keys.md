@@ -13,16 +13,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ddb7e84f69f501a7857b0d55b1b8a14d11a85694
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244512"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server 证书和非对称密钥
-  公钥加密（PKI）是一种消息保密形式，用户可在其中创建*公钥*和*私钥*。 私钥是保密的，而公钥可以分发给其他人。 虽然密钥之间具有数学关系，但要想通过公钥推导出私钥却并不容易。 公钥用于加密数据，私钥用于解密数据。 使用公钥加密的消息只能使用正确的私钥来解密。 
-  *
-  *由于存在两个不同的密钥，因而这些密钥是“非对称的”。  
+  公钥加密 (PKI) 是一种消息保密方式，在使用这种方式时用户将创建一个“公钥”和一个“私钥”****。 私钥是保密的，而公钥可以分发给其他人。 虽然密钥之间具有数学关系，但要想通过公钥推导出私钥却并不容易。 公钥用于加密数据，私钥用于解密数据。 使用公钥加密的消息只能使用正确的私钥来解密。 ** 由于存在两个不同的密钥，因而这些密钥是“非对称的”。  
   
  证书和非对称密钥都属于非对称加密的使用方式。 证书通常用作非对称密钥的容器，因为它们可以包含更多信息，例如过期日期和颁发者。 这两种机制的加密算法之间存在差异，但相同密钥长度的加密强度是相同的。 通常，可以使用证书来加密数据库中其他类型的加密密钥，或者为代码模块签名。  
   
@@ -31,16 +29,13 @@ ms.locfileid: "75244512"
  公钥不像证书那样具有特定格式，并且不能将其导出到文件中。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含多种功能，可用于创建和管理与服务器和数据库一起使用的证书和密钥。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法用于创建和管理与其他应用程序或操作系统一起使用的证书和密钥。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含多种功能，可用于创建和管理与服务器和数据库一起使用的证书和密钥。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法用于创建和管理与其他应用程序或操作系统一起使用的证书和密钥。  
   
 ## <a name="certificates"></a>证书  
  证书是一个数字签名的安全对象，其中包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的公钥（还可以选择包含私钥）。 您可以使用外部生成的证书，也可以由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成证书。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 证书符合 IETF X.509v3 证书标准。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 证书符合 IETF X.509v3 证书标准。  
   
  证书非常有用，因为它具有将密钥导出和导入 X.509 证书文件的选项。 用于创建证书的语法允许为证书使用创建选项，例如过期日期。  
   
@@ -67,12 +62,11 @@ ms.locfileid: "75244512"
 |[SIGNBYASYMKEY (Transact-SQL)](/sql/t-sql/functions/signbyasymkey-transact-sql)|显示用于为对象签名的选项。|  
   
 ## <a name="tools"></a>工具  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 提供了用于生成证书和强名称密钥文件的工具和实用工具。 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语法相比，这些工具在密钥生成过程中提供了更加丰富的灵活选择。 您可以使用这些工具创建具有更复杂的密钥长度的 RSA 密钥，然后将其导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 下表介绍了在哪里可以找到这些工具。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 提供了用于生成证书和强名称密钥文件的工具和实用工具。 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语法相比，这些工具在密钥生成过程中提供了更加丰富的灵活选择。 您可以使用这些工具创建具有更复杂的密钥长度的 RSA 密钥，然后将其导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 下表介绍了在哪里可以找到这些工具。  
   
 |||  
 |-|-|  
-|工具|目的|  
+|工具|用途|  
 |[makecert](https://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|创建证书。|  
 |[sn.exe](https://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|创建对称密钥的强名称。|  
   

@@ -22,10 +22,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4feb8e282390b4808b69493a299cbad990f1e91b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243570"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>在 updategram 中指定带批注的映射架构 (SQLXML 4.0)
@@ -236,11 +236,9 @@ ms.locfileid: "75243570"
   
  此示例假设以下表位于**tempdb**数据库中：  
   
--   
-  `Cust (CustomerID, CompanyName)`，其中 `CustomerID` 为主键。  
+-   `Cust (CustomerID, CompanyName)`，其中 `CustomerID` 为主键。  
   
--   
-  `Ord (OrderID, CustomerID)`，其中 `CustomerID` 是引用 `CustomerID` 表中的 `Cust` 主键的外键。  
+-   `Ord (OrderID, CustomerID)`，其中 `CustomerID` 是引用 `CustomerID` 表中的 `Cust` 主键的外键。  
   
  updategram 使用以下 XSD 架构将记录插入到 Cust 和 Ord 表中：  
   

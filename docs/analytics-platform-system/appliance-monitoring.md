@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: cec604ff1a93213fc6308455cadda90e6efa2d61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401427"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>分析平台系统的设备监视
 此设备监视指南介绍了用于监视分析平台系统设备的工具和任务。  
   
-## <a name="Basics"></a>监视基础知识和工具  
+## <a name="monitoring-basics-and-tools"></a><a name="Basics"></a>监视基础知识和工具  
 可在 SQL Server PDW 设备上监视的值和信息广泛。 例如，下面是典型的监视任务。  
   
 -   检查 SQL Server PDW 发出的任何警报。  
@@ -38,7 +38,7 @@ ms.locfileid: "74401427"
 有多种工具可用于监视设备。  
   
 管理控制台  
-SQL Server PDW 具有管理控制台。 这是一种基于 web 的工具，用于显示有关查询、加载、备份和还原、锁、会话、警报和设备状态的信息。 管理控制台在设备上运行;用户通过 Internet Explorer 连接到管理控制台。 有关详细信息，请参阅：  
+SQL Server PDW 具有管理控制台。 这是一种基于 web 的工具，用于显示有关查询、加载、备份和还原、锁、会话、警报和设备状态的信息。 管理控制台在设备上运行;用户通过 Internet Explorer 连接到管理控制台。 有关详细信息，请参见:  
   
 -   [使用管理控制台 &#40;分析平台系统来监视设备&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   
@@ -49,7 +49,7 @@ SQL Server PDW 包括可让你获取有关设备运行状况、状态和性能�
   
 -   [使用系统视图 &#40;分析平台系统来监视设备&#41;](monitor-the-appliance-by-using-system-views.md)  
   
-System Center Operations Manager （SCOM）  
+System Center Operations Manager (SCOM)  
 SQL Server PDW 与系统中心 Operations Manager 的广泛集成。 SQL Server PDW 的管理包可免费下载。 有关使用 System Center 监视 SQL Server PDW 的详细信息，请参阅以下内容：  
   
 -   [使用 System Center Operations Manager &#40;Analytics 平台系统来监视设备&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
@@ -61,7 +61,7 @@ SQL Server PDW 与系统中心 Operations Manager 的广泛集成。 SQL Server 
   
 -   [SQL Server PDW 的 Power Shell 监视示例](https://go.microsoft.com/fwlink/?LinkId=248020)  
    
-## <a name="Tasks"></a>相关监视任务  
+## <a name="related-monitoring-tasks"></a><a name="Tasks"></a>相关监视任务  
   
 |监视任务|说明|  
 |-------------------|---------------|  

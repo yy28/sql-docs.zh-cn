@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 711d9d5bf7a3268b400eae4b1b117b4034133f5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228073"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>SQL Server 2014 混合云简介
@@ -39,7 +39,7 @@ ms.locfileid: "75228073"
  
 ### <a name="hybrid-cloud-scenarios-for-sql-server-and-microsoft-azure"></a>SQL Server 和 Microsoft Azure 的混合云方案 
  
-#### <a name="backup"></a>在 Azure 存储中备份和还原数据库 
+#### <a name="backup-and-restore-databases-tofrom-azure-storage"></a><a name="backup"></a>在 Azure 存储中备份和还原数据库 
  最基本的管理任务之一是备份和还原数据库。 利用 SQL Server 和 Azure，可以安全地在云中备份数据库。 
  
  将 SQL Server 的备份和还原功能作为备份目标使用 Azure 存储的主要好处包括： 
@@ -64,7 +64,7 @@ ms.locfileid: "75228073"
  
 -  [SQL Server 备份到 azure 的工具](https://www.microsoft.com/download/details.aspx?id=40740)可用于备份到 Azure Blob 存储，并可加密和压缩存储在本地或云中的 SQL Server 备份。 通过此工具可以对多个版本的 SQL Server（如 SQL Server 2005、2008、2008 R2 和 2014）使用单个云备份策略。 
  
-#### <a name="replica"></a>在 Azure 虚拟机上维护数据库副本 
+#### <a name="maintain-database-replicas-on-azure-virtual-machines"></a><a name="replica"></a>在 Azure 虚拟机上维护数据库副本 
  为数据库提供稳定的灾难恢复解决方案对于企业的成功至关重要。 大多数客户需要配置灾难恢复站点和购买其他硬件来制作数据库副本。 利用 SQL Server 和 Azure，你可以在云中维护数据库的一个或多个副本。 
  
  在 Azure 中维护辅助副本的主要好处包括： 
@@ -81,7 +81,7 @@ ms.locfileid: "75228073"
  
 -  AlwaysOn 可用性组、数据库镜像和日志传送是最常用的技术，可用于满足应用程序的高可用性和灾难恢复需求。 有关信息，请参阅[Azure 虚拟机中 SQL Server 的高可用性和灾难恢复](https://msdn.microsoft.com/library/azure/jj870962.aspx)。 
  
-#### <a name="store"></a>在 Azure 存储中存储 SQL Server 数据文件 
+#### <a name="store-sql-server-data-files-in-azure-storage"></a><a name="store"></a>在 Azure 存储中存储 SQL Server 数据文件 
  在 Azure 存储中存储本地 SQL Server 数据文件可为数据库提供灵活、可靠和无限制的站点外存储。 从 SQL Server 2014 开始，可以使用[Miceosoft azure 中 SQL Server 的数据文件](https://docs.microsoft.com/sql/relational-databases/databases/sql-server-data-files-in-microsoft-azure)在 azure 存储中存储 SQL Server 数据库文件。 利用此功能，你可以将数据和日志文件从本地数据库移动到 Azure 存储中，同时保持 SQL Server 在本地运行的计算节点。 此功能可让你在 Azure 存储中具有无限的存储容量。 
  
  存储 SQL Server 数据文件的主要好处 Azure 存储包括： 
@@ -92,7 +92,7 @@ ms.locfileid: "75228073"
  
 -  通过分离计算实例（SQL Server 实例）和数据（SQL Server 数据文件）简化灾难恢复。 这使你可以轻松地将数据库附加到本地环境中的另一个 SQL Server 实例，或在发生灾难的情况下将数据库附加到 Azure 虚拟机中。 
  
-#### <a name="migrate"></a>将现有 SQL Server 数据库迁移到 Azure 虚拟机 
+#### <a name="migrate-existing-sql-server-databases-to-azure-virtual-machines"></a><a name="migrate"></a>将现有 SQL Server 数据库迁移到 Azure 虚拟机 
  对企业而言，云计算具备一些重要优势，如按使用付费的无限虚拟资源，您可以利用公共可用的云数据中心而不是自己构建和管理数据中心，从而降低 IT 和硬件成本。 
  
  利用[Azure 虚拟机中的 SQL Server](https://msdn.microsoft.com/library/azure/jj823132.aspx)，你可以将现有的本地应用程序移动到 azure，只需进行少量更改或无需更改代码。 管理员和开发人员仍然可以使用本地可用的开发和管理工具。 
@@ -105,7 +105,7 @@ ms.locfileid: "75228073"
  
 -  **移动整个虚拟机：** 你可以将自己的 SQL Server 虚拟机带入 Azure，或者使用平台映像创建一个虚拟机。 然后，您可以将已经包含数据的数据磁盘上载并附加到虚拟机或向虚拟机附加空磁盘。 具有附加数据磁盘的 Azure 虚拟机上的 SQL Server 数据实例为你的数据文件和应用程序数据提供另一个持久存储。 有关全面的信息和操作方法，请参阅[Azure 虚拟机中的 SQL Server 部署](https://msdn.microsoft.com/library/dn133141.aspx)。 
  
- 如果你计划将应用程序层（如表示层、业务层和数据库层）移到 Azure 虚拟机，我们建议你查看[Azure 虚拟机中 SQL Server 的应用程序模式和开发策略](https://msdn.microsoft.com/library/dn574746.aspx)中提供的建议。 本文旨在为解决方案架构师和开发者构建良好的应用程序体系结构和进行设计奠定基础，在将现有应用程序迁移到 Azure 和开发 Azure 中的新应用程序时，他们可以遵循其中的模式。 对于每个应用程序模式，这篇文章都介绍了一个本地方案、相应的云解决方案以及相关的技术建议。 此外，还讨论了 Azure 特定开发策略以便你可以正确设计应用程序。 
+ 如果你计划将应用程序层（如表示层、业务层和数据库层）移到 Azure 虚拟机，我们建议你查看[Azure 虚拟机中 SQL Server 的应用程序模式和开发策略](https://msdn.microsoft.com/library/dn574746.aspx)中提供的建议。 本文旨在为解决方案架构师和开发者构建良好的应用程序体系结构和进行设计奠定基础，在将现有应用程序迁移到 Azure 和开发 Azure 中的新应用程序时，他们可以遵循其中的模式。 对于每个应用程序模式，这篇文章都介绍了一个本地方案、相应的云解决方案以及相关的技术建议。 此外，本文还讨论了 Azure 特定开发策略以便可以正确设计应用程序。 
  
 ## <a name="see-also"></a>另请参阅 
  [SQL Server 2014 CTP2 产品指南](https://www.microsoft.com/download/details.aspx?id=39269)  

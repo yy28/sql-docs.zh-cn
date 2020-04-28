@@ -10,16 +10,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2299b7c281183998ec36bd14b82af1fb2dde7c95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75238654"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQL Server 共享管理对象 (SMO) 许可条款
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-## <a name="microsoft-software-license-terms"></a>Microsoft 软件许可条款
+## <a name="microsoft-software-license-terms"></a>MICROSOFT 软件许可条款
 **MICROSOFT SQL SERVER 2017 共享管理对象**
 
 ---
@@ -85,7 +85,7 @@ ms.locfileid: "75238654"
 
 **10. 适用的法律。**
 
-&nbsp;&nbsp;**美国。**  如果您在美国购买本软件，则对本协议的解释以及由于违反本协议而引起的索赔均以华盛顿州法律为准并受其管辖，而不考虑法律冲突原则。 您所居住的州的法律管辖所有其他索赔项目，包括根据州消费者保护法、不正当竞争法、以及侵权法提出的相关索赔。
+&nbsp;&nbsp;**美国。** 如果您在美国购买本软件，则对本协议的解释以及由于违反本协议而引起的索赔均以华盛顿州法律为准并受其管辖，而不考虑法律冲突原则。 您所居住的州的法律管辖所有其他索赔项目，包括根据州消费者保护法、不正当竞争法、以及侵权法提出的相关索赔。
 
 &nbsp;&nbsp;**b. 美国之外。** 如果您在任何其他国家/地区购买该软件，则您所在国家/地区的法律适用。
 

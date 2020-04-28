@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8d826201f44bb666050f5229b4824b5c2198dc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228996"
 ---
 # <a name="administration-of-an-availability-group-sql-server"></a>管理可用性组 (SQL Server)
@@ -43,7 +43,7 @@ ms.locfileid: "75228996"
 -   针对操作系统升级的 AlwaysOn 可用性组的跨群集迁移  
   
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **配置现有的可用性组**  
   
 -   [将辅助副本添加到可用性组 (SQL Server)](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
@@ -106,18 +106,18 @@ ms.locfileid: "75228996"
   
 -   [监视可用性组 (SQL Server)](monitoring-of-availability-groups-sql-server.md)  
   
- **支持将可用性组迁移到新的 WSFC 群集（跨群集迁移）**  
+ **为了支持将可用性组迁移到新的 WSFC 群集（跨群集迁移）**  
   
 -   [更改服务器实例的 HADR 群集上下文 (SQL Server)](change-the-hadr-cluster-context-of-server-instance-sql-server.md)  
   
 -   [使可用性组脱机 (SQL Server)](../../take-an-availability-group-offline-sql-server.md)  
   
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
 -   **博客：**  
   
-     [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 官方团队博客](https://blogs.msdn.com/b/sqlalwayson/)  
   
      [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
   
@@ -129,7 +129,7 @@ ms.locfileid: "75228996"
   
 -   **白皮书：**  
   
-     [SQL Server 2012 的 Microsoft 白皮书](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [针对 SQL Server 2012 的 Microsoft 白皮书](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server 客户咨询团队白皮书](http://sqlcat.com/)  
   

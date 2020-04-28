@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 55b77ddf4284dc4f06e8036d0ae1b0c86b3544f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244644"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously-sql-server-management-studio"></a>Execute Statements Against Multiple Servers Simultaneously (SQL Server Management Studio)
@@ -37,20 +37,20 @@ ms.locfileid: "75244644"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  由于中央管理服务器维护的连接是在用户的上下文中通过使用 Windows 身份验证执行的，因此它们在各个已注册的服务器上的有效权限可能有所不同。 例如，用户可能是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A 实例上 sysadmin 固定服务器角色的成员，但仅具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] B 实例的有限权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-execute-statements-against-multiple-configuration-targets-simultaneously"></a>同时对多个配置目标执行语句  
   
-1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 **“视图”** 菜单上，单击 **“已注册的服务器”** 。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 **“视图”** 菜单上，单击 **“已注册的服务器”**。  
   
-2.  展开一个中央管理服务器，右键单击某个服务器组，指向“连接”  ，然后单击“新建查询”  。  
+2.  展开一个中央管理服务器，右键单击某个服务器组，指向“连接”****，然后单击“新建查询”****。  
   
 3.  在查询编辑器中，键入并执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，例如：  
   
@@ -65,11 +65,11 @@ ms.locfileid: "75244644"
   
 #### <a name="to-change-the-multiserver-results-options"></a>更改多服务器结果选项  
   
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的 **“工具”** 菜单中，单击 **“选项”** 。  
+1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的 **“工具”** 菜单中，单击 **“选项”**。  
   
-2.  依次展开 **“查询结果”** 和 **“SQL Server”** ，然后单击 **“多服务器结果”** 。  
+2.  依次展开 **“查询结果”** 和 **“SQL Server”**，然后单击 **“多服务器结果”**。  
   
-3.  在 **“多服务器结果”** 页上，指定所需的选项设置，然后单击 **“确定”** 。  
+3.  在 **“多服务器结果”** 页上，指定所需的选项设置，然后单击 **“确定”**。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用中央管理服务器管理多台服务器](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  

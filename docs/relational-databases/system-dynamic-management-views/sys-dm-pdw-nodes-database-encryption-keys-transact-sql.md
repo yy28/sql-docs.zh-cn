@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c319259d8997db2ff39d90b408056d03eb008782
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401642"
 ---
 # <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>sys. dm_pdw_nodes_database_encryption_keys （Transact-sql）
@@ -36,13 +36,13 @@ ms.locfileid: "74401642"
 |key_algorithm|**varchar （？）**|显示用于密钥的算法。|  
 |key_length|**int**|显示密钥的长度。|  
 |encryptor_thumbprint|**varbin**|显示加密程序的指纹。|  
-|percent_complete|**实际上**|数据库加密状态更改的完成百分比。 如果未发生状态更改，则为 0。|  
+|percent_complete|**real**|数据库加密状态更改的完成百分比。 如果未发生状态更改，则为 0。|  
 |node_id|**int**|与节点关联的唯一数字 id。|  
   
 ## <a name="permissions"></a>权限  
  要求对服务器拥有 VIEW SERVER STATE 权限。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下面的示例联接`sys.dm_pdw_nodes_database_encryption_keys`到其他系统表，以指示 TDE 保护数据库的每个节点的加密状态。  
   
 ```  
@@ -63,7 +63,7 @@ ORDER BY D.database_id, PD.pdw_node_ID;
  [SQL 数据仓库和并行数据仓库动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
  [&#40;Transact-sql&#41;创建数据库加密密钥](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
  [ALTER DATABASE ENCRYPTION KEY &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
- [DROP DATABASE ENCRYPTION KEY &#40;Transact-sql&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
+ [DROP DATABASE ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
   
   
 

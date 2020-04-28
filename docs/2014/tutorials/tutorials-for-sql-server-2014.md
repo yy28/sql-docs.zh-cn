@@ -11,14 +11,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be20c79c4c44d65b4d6b1177d06cea5ef66c164b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75242059"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>SQL Server 2014 教程
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]引入了许多新的技术和功能。  
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 引入了很多新技术和新功能。  
   
  我们计划在未来提供更多的教程。 同时，您可以继续学习 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 教程。 在某些情况下，您可能会发现 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 与 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 的用户界面之间存在很小的差异，而教程必备条件也存在细微的差异。 如果教程使用 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 数据库之一，则应下载和使用 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "75242059"
   
 |技术|说明|  
 |----------------|-----------------|  
-|[SSAS&#41;Analysis Services 教程 &#40;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|了解如何开发和部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 表格或多维模型。 还了解如何使用 PowerPivot 之类的工具来分析模型中的数据。|  
+|[Analysis Services 教程 (SSAS)](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|了解如何开发和部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 表格或多维模型。 还了解如何使用 PowerPivot 之类的工具来分析模型中的数据。|  
 |[Reporting Services 教程 (SSRS)](../reporting-services/reporting-services-tutorials-ssrs.md)|了解如何创建基本报表和订阅。|  
 |[Integration Services 教程](../integration-services/integration-services-tutorials.md)|了解如何创建和部署 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包。|  
 |[数据库引擎教程](../relational-databases/database-engine-tutorials.md)|了解如何连接到数据库引擎实例并生成和运行 Transact-SQL 语句。|  

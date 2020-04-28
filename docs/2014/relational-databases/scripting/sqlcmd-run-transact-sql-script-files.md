@@ -13,19 +13,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d9fb152507979232d27308d107278d4b6d3bccb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243200"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>使用 sqlcmd 运行 Transact-SQL 脚本文件
-  您可以使用 `sqlcmd` 运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本文件。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本文件是一个文本文件，它可以包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、`sqlcmd` 命令以及脚本变量的组合。  
+  您可以使用 `sqlcmd` 运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本文件。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本文件是一个文本文件，它可以包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、`sqlcmd` 命令以及脚本变量的组合。  
   
  若要使用记事本创建一个简单的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本文件，请执行下列操作：  
   
-1.  单击 **“开始”** ，依次指向 **“所有程序”** 、 **“附件”** ，再单击 **“记事本”** 。  
+1.  单击 **“开始”**，依次指向 **“所有程序”**、 **“附件”**，再单击 **“记事本”**。  
   
 2.  复制以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码并将其粘贴到记事本：  
   

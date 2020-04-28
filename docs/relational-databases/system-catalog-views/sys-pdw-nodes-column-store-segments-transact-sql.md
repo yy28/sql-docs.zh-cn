@@ -14,10 +14,10 @@ ms.author: jrasnick
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: bea8e0d51b2918d7280f4afdb8b9d02f6b757827
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401673"
 ---
 # <a name="syspdw_nodes_column_store_segments-transact-sql"></a>sys. pdw_nodes_column_store_segments （Transact-sql）
@@ -30,9 +30,9 @@ ms.locfileid: "74401673"
 | :-------------------------- | :--------- | :----------------------------------------------------------- |
 | **partition_id**            | **bigint** | 指示分区 ID。 在数据库中是唯一的。     |
 | **hobt_id**                 | **bigint** | 具有此 columnstore 索引的表的堆或 B 树 (hobt) 的 ID。 |
-| column_id                | **int**    | 列存储列的 ID。                                |
+| **column_id**               | **int**    | 列存储列的 ID。                                |
 | **segment_id**              | **int**    | 列段的 ID。 为实现向后兼容性，即使这是行组 ID，列名仍将继续 segment_id 调用。 您可以使用 <hobt_id，partition_id column_id> <segment_id> 来唯一标识段。 |
-| **版本**                 | **int**    | 列段格式的版本。                        |
+| **version**                 | **int**    | 列段格式的版本。                        |
 | **encoding_type**           | **int**    | 用于该段的编码类型：<br /><br /> 1 = 不带字典的 VALUE_BASED 非字符串/二进制（类似于4，具有一些内部变体）<br /><br /> 2 = 在字典中具有通用值的 VALUE_HASH_BASED 非字符串/二进制列<br /><br /> 3 = STRING_HASH_BASED 字典中包含通用值的字符串/二进制列<br /><br /> 4 = 不带字典的 STORE_BY_VALUE_BASED 非字符串/二进制<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED 字符串/二进制，无字典<br /><br /> 如果可能，所有编码都利用位打包和长度为长度的编码。 |
 | **row_count**               | **int**    | 行组中的行数。                             |
 | **has_nulls**               | **int**    | 1 如果列段具有 Null 值。                     |
@@ -44,10 +44,10 @@ ms.locfileid: "74401673"
 | **max_data_id**             | **bigint** | 列段中的最大数据 ID。                       |
 | **null_value**              | **bigint** | 用于表示 Null 的值。                               |
 | **on_disk_size**            | **bigint** | 段大小（字节）。                                    |
-| pdw_node_id              | **int**    | [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]节点的唯一标识符。 |
+| **pdw_node_id**             | **int**    | [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]节点的唯一标识符。 |
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 与其他系统表联接 pdw_nodes_column_store_segments sys.databases，以确定每个逻辑表的列存储段的数量。
 
@@ -82,11 +82,11 @@ ORDER BY    table_nm
 
 ## <a name="permissions"></a>权限
 
-需要**VIEW SERVER STATE**权限。
+需要 VIEW SERVER STATE 权限****。
 
 ## <a name="see-also"></a>另请参阅
 
 [SQL 数据仓库和并行数据仓库目录视图](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
-[&#40;Transact-sql&#41;创建列存储索引](../../t-sql/statements/create-columnstore-index-transact-sql.md)  
+[CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)  
 [sys. pdw_nodes_column_store_row_groups &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
 [sys. pdw_nodes_column_store_dictionaries &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)

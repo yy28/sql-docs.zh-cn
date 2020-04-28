@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 5435b9056d98a5b2dc0835bfcd0e60865c1686b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957261"
 ---
 # <a name="back-up-a-database-master-key"></a>备份数据库主密钥
@@ -32,20 +32,20 @@ ms.locfileid: "74957261"
   
 -   [使用 Transact-SQL 备份数据库主密钥](#Procedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   主密钥必须为打开状态，因此在备份主密钥之前应对其进行解密。 如果主密钥使用服务主密钥进行加密，则不必显式打开。 但如果主密钥仅使用密码进行加密，则必须显式打开。  
   
 -   我们建议您在创建主密钥之后立即对其进行备份，并存储于另外一个安全的位置中。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求对数据库具有 CONTROL 权限。  
   
-##  <a name="Procedure"></a>将 SQL Server Management Studio 与 Transact-sql 一起使用  
+##  <a name="using-sql-server-management-studio-with-transact-sql"></a><a name="Procedure"></a>将 SQL Server Management Studio 与 Transact-sql 一起使用  
   
 #### <a name="to-back-up-the-database-master-key"></a>备份数据库主密钥  
   

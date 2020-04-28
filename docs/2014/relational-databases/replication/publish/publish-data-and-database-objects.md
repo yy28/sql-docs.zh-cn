@@ -42,10 +42,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70e31ec60f8f47dfbc0a4761357c99a42623c6eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74479325"
 ---
 # <a name="publish-data-and-database-objects"></a>发布数据和数据库对象
@@ -197,7 +197,7 @@ ms.locfileid: "74479325"
   
 -   对于使用字符模式快照（用于非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器以及 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 订阅服务器）的发布中的项目：默认情况下，所有者保留为空。 所有者默认为与分发代理或合并代理连接到订阅服务器所使用的帐户关联的所有者。  
   
- 可通过“项目属性 - \<项目>” **** 对话框和以下存储过程更改对象所有者：sp_addarticle  、sp_addmergearticle  、sp_changearticle  和 sp_changemergearticle  。 有关详细信息，请参阅[查看和修改发布属性](view-and-modify-publication-properties.md)、[定义项目](define-an-article.md)和[查看和修改项目属性](view-and-modify-article-properties.md)。  
+ 可通过“项目属性 - \<项目>” ********** 对话框和以下存储过程更改对象所有者：sp_addarticle****、sp_addmergearticle****、sp_changearticle**** 和 sp_changemergearticle****。 有关详细信息，请参阅[查看和修改发布属性](view-and-modify-publication-properties.md)、[定义项目](define-an-article.md)和[查看和修改项目属性](view-and-modify-article-properties.md)。  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>将数据发布到运行 SQL Server 早期版本的订阅服务器  
   

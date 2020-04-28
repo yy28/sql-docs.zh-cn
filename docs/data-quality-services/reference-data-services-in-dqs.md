@@ -10,10 +10,10 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 6d3c4f15dcb62e36918c81baa5f2bd40c38b7c6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244140"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS 中的 Reference Data Services
@@ -32,7 +32,7 @@ ms.locfileid: "75244140"
   
 -   支持使用来自 Azure Marketplace 的引用数据，以及直接来自第三方引用数据提供程序的引用数据。  
   
-##  <a name="Marketplace"></a>使用 Azure Marketplace 中的引用数据  
+##  <a name="using-reference-data-from-azure-marketplace"></a><a name="Marketplace"></a>使用 Azure Marketplace 中的引用数据  
  DQS 支持使用来自 Azure Marketplace 的引用数据，使内容提供程序能够通过 Marketplace 提供引用数据服务。 Marketplace 是 Microsoft 的一项服务，它为高质量数据和应用程序提供单一市场和交付渠道来作为云服务。 有关 Marketplace 的详细信息，请参阅[了解 Microsoft Azure 市场](https://azuremarketplace.microsoft.com/about)（https://azuremarketplace.microsoft.com/about)。
   
  市场和 DQS 之间的无缝集成简化了与从 DQS 中发现、浏览和获取数据质量项目的信息相关的步骤。 从 DQS 中使用数据，并通过使用一种创新方法将 DQS、市场和引用数据服务提供程序结合起来，帮助 DQS 用户获得高数据质量。  
@@ -49,13 +49,13 @@ ms.locfileid: "75244140"
   
  您可以在 **的** “配置” **屏幕的** “引用数据” [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]选项卡中执行这些活动。  
   
-##  <a name="Direct"></a>直接从第三方引用数据提供程序使用引用数据  
+##  <a name="using-reference-data-directly-from-the-third-party-reference-data-providers"></a><a name="Direct"></a> 使用直接来自第三方引用数据提供程序的引用数据  
  如果没有连接到 Internet 并由此无法使用市场，DQS 也支持直接连接到组织的网络中提供的数据提供程序。 若要使用来自直接联机第三方引用数据提供程序的引用数据，您必须在 DQS 中为此数据提供程序创建一条记录。  
   
-##  <a name="HowToCleanse"></a>如何使用引用数据清理数据  
+##  <a name="how-to-cleanse-data-by-using-the-reference-data"></a><a name="HowToCleanse"></a> 如何使用引用数据清理数据  
  在 DQS 中使用引用数据清理您的数据包括以下这些步骤：  
   
-1.  **在 dqs 中配置引用数据提供程序详细信息**：在 dqs 中使用引用数据之前，必须在 dqs 中配置引用数据服务详细信息。  
+1.  **在 DQS 中配置引用数据提供程序详细信息**：您必须在 DQS 中配置引用数据服务详细信息，才能在 DQS 中使用引用数据。  
   
     1.  如果你使用的是 Marketplace，请提供有效的 Marketplace 帐户密钥，浏览到 Marketplace 中的[数据服务](https://azuremarketplace.microsoft.com/marketplace/apps/category/azure-active-directory-apps?page=1&subcategories=data-services)数据类别，并订阅所需的提供程序。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "75244140"
   
      对于特定数据提供程序，在 DQS 中配置引用数据提供程序详细信息是一个一次性活动。 在 DQS 中，只有 DQS 管理员才能配置引用数据设置。  
   
-2.  将**知识库中的域/复合域映射到引用数据服务**：将域/复合域映射到在步骤1中订阅/添加的相应引用数据服务。  
+2.  **将知识库中的域/复合域映射到引用数据服务**：将域/复合域映射到在步骤 1 中订阅/添加的相应引用数据服务。  
   
-3.  **使用映射域在数据质量项目中进行清理活动**：在为 "**清理**" 活动创建数据质量项目时，选择包含在步骤2中映射到引用数据服务的域/复合域的知识库，然后执行清理活动。  
+3.  **使用映射域在数据质量项目中进行清理活动**：在为 **“清理”** 活动创建数据质量项目时，选择包含在步骤 2 中映射到引用数据服务的域/复合域的知识库，然后执行清理活动。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -73,6 +73,6 @@ ms.locfileid: "75244140"
 |----------------------|-----------|  
 |介绍如何配置 DQS 以使用来自 市场或直接第三方联机数据提供程序的引用数据服务。|[将 DQS 配置为使用引用数据](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
 |介绍如何将知识库中的域/复合域映射到引用数据服务。|[将域或复合域附加到引用数据](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
-|介绍如何使用引用数据服务清理数据。|[使用引用数据清理数据 &#40;外部&#41; 知识](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
+|介绍如何使用引用数据服务清理数据。|[使用引用数据（外部）知识清理数据](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
   
   

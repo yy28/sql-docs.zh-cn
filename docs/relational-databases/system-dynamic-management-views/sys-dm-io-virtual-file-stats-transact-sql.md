@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0ad2d38c031f97e46ef36f33f5e7a0fc82bcb5e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74412842"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
@@ -57,7 +57,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  *database_id* |无效
 
- 适用范围：SQL Server（从 2008 版开始）和 Azure SQL Database 
+ 适用范围：SQL Server（从 2008 版开始）和 Azure SQL Database****
 
  数据库 ID。 *database_id*为 int，没有默认值。 有效的输入包括数据库的 ID 号或 NULL。 如果指定 NULL，则返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的所有数据库。  
   
@@ -65,7 +65,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 *file_id* |无效
 
-适用范围：SQL Server（从 2008 版开始）和 Azure SQL Database 
+适用范围：SQL Server（从 2008 版开始）和 Azure SQL Database****
  
 文件的 ID。 *file_id*为 int，没有默认值。 有效输入为文件 ID 号或为 NULL。 如果指定 NULL，则返回数据库中的所有文件。  
   
@@ -76,9 +76,9 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|数据库名称。</br></br>对于 SQL 数据仓库，这是节点上存储的数据库的名称，由 pdw_node_id 标识。 每个节点都有一个包含13个文件的 tempdb 数据库。 每个节点在每个分发中也有一个数据库，每个分发数据库都有5个文件。 例如，如果每个节点都包含4个分布区，则结果将显示每个 pdw_node_id 20 个分发数据库文件。 
-|database_id |**smallint**|数据库的 ID。|  
-|file_id |**smallint**|文件的 ID。|  
-|**sample_ms**|**bigint**|自从计算机启动以来的毫秒数。 可以使用此列来比较该函数的不同输出。</br></br>数据类型的数据**** 类型为[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] int[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|**database_id**|**smallint**|数据库的 ID。|  
+|**file_id**|**smallint**|文件的 ID。|  
+|**sample_ms**|**bigint**|自从计算机启动以来的毫秒数。 可以使用此列来比较该函数的不同输出。</br></br>数据类型的数据**int**类型为[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] int[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |**num_of_reads**|**bigint**|对文件发出的读取次数。|  
 |**num_of_bytes_read**|**bigint**|在此文件中读取的总字节数。|  
 |**io_stall_read_ms**|**bigint**|用户等待文件中发出读取所用的总时间（毫秒）。|  
@@ -90,7 +90,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**file_handle**|**varbinary**|用于此文件的 Windows 文件句柄。|  
 |**io_stall_queued_read_ms**|**bigint**|不适**用于：**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]到[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]。<br /><br /> 针对读的 IO 资源调控所引入的总 IO 延迟。 不可为 null。 有关详细信息，请参阅[sys.databases&#41;dm_resource_governor_resource_pools &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。|  
 |**io_stall_queued_write_ms**|**bigint**|不适**用于：**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]到[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]。<br /><br />  针对写的 IO 资源调控所引入的总 IO 延迟。 不可为 null。|
-|pdw_node_id |**int**|**适用于：** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>分布的节点的标识符。
+|**pdw_node_id**|**int**|**适用对象：** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>分布的节点的标识符。
  
 ## <a name="remarks"></a>备注
 只要启动 SQL Server （MSSQLSERVER）服务，计数器就会初始化为空。
@@ -122,9 +122,9 @@ WHERE database_name = 'tempdb' AND file_id = 2;
 ```
 
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与 SQL&#41;相关的动态管理视图和函数 &#40;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys. database_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
   

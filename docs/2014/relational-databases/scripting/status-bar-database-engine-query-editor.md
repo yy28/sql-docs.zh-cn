@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5fe864d5f4f622237c5c7b92e5a1e717c26692ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243150"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>状态栏（数据库引擎查询编辑器）
@@ -26,12 +26,12 @@ ms.locfileid: "75243150"
   
 3.  **使用状态颜色的具体步骤：** [使用服务器颜色打开查询编辑器](#OpenServerColor)、[打开指定状态颜色的查询编辑器](#OpenSpecColor)  
   
-##  <a name="StatusBarColors"></a> 状态栏颜色  
+##  <a name="status-bar-colors"></a><a name="StatusBarColors"></a> 状态栏颜色  
  您可以在 **“对象资源管理器”** 或 **“已注册服务器”** 中将状态栏颜色与特定的服务器节点相关联。 只能为连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的服务器节点指定颜色，不能为针对其他 SQL Server 技术的服务器节点指定颜色。 您还可以在每次将新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例时，指定自定义状态栏颜色。 然后，您可以使用为服务器节点定义的状态颜色打开查询编辑器窗口，或者为该编辑器窗口指定唯一颜色。  
   
  在对象资源管理器中为服务器节点设置自定义的状态栏颜色必须在进行连接时完成。 若要更改与某一现有服务器节点相关联的颜色，您必须首先断开连接，然后重新连接并且指定新颜色。  
   
-##  <a name="SetOEServerColor"></a> 在对象资源管理器中为服务器设置状态颜色  
+##  <a name="set-the-status-color-for-a-server-in-object-explorer"></a><a name="SetOEServerColor"></a> 在对象资源管理器中为服务器设置状态颜色  
  **在对象资源管理器中设置服务器状态颜色**  
   
 1.  在“对象资源管理器”中，选择“连接”按钮，然后选择“数据库引擎…”    。  
@@ -46,7 +46,7 @@ ms.locfileid: "75243150"
   
 6.  填写其余连接信息，然后选择 **“连接”** 按钮。  
   
-##  <a name="SetRegServerColor"></a> 为已注册服务器设置状态颜色  
+##  <a name="set-the-status-color-for-a-registered-server"></a><a name="SetRegServerColor"></a> 为已注册服务器设置状态颜色  
  **为已注册服务器设置服务器颜色**  
   
 1.  在“已注册服务器”中，右键单击服务器节点，然后选择“属性…”   。  
@@ -61,7 +61,7 @@ ms.locfileid: "75243150"
   
 6.  在 **“编辑服务器注册属性”** 对话框中，选择 **“保存”** 按钮。  
   
-##  <a name="OpenServerColor"></a> 使用服务器颜色打开编辑器  
+##  <a name="open-an-editor-using-a-server-color"></a><a name="OpenServerColor"></a> 使用服务器颜色打开编辑器  
  **使用服务器颜色打开编辑器窗口**  
   
 -   右键单击“对象资源管理器”或“已注册服务器”中的服务器节点，然后选择“新建查询”    。  
@@ -70,7 +70,7 @@ ms.locfileid: "75243150"
   
 -   编辑器窗口中的状态栏将使用为关联服务器定义的颜色。  
   
-##  <a name="OpenSpecColor"></a> 打开编辑器并且指定状态颜色  
+##  <a name="open-an-editor-specifying-a-status-color"></a><a name="OpenSpecColor"></a> 打开编辑器并且指定状态颜色  
  **打开编辑器窗口并且指定状态颜色**  
   
 -   打开 **“文件”** 菜单，选择 **“新建”** ，然后选择 **“数据库引擎查询”** 。  

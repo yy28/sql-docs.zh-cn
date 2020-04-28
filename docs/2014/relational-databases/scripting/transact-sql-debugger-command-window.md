@@ -13,24 +13,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26306f8ad2adf01ebdcbf1b52169f1c2ec964920
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243082"
 ---
 # <a name="command-window"></a>“命令”窗口
-  使用**命令**可以针对当前正在调试的[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]查询编辑器窗口中的代码运行命令，例如调试和编辑命令。 只有在调试模式下才可以使用 **“命令窗口”**。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器支持许多在 “命令”[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **** 窗口中支持的命令。 有关详细信息，请参阅 [Visual Studio“命令”窗口](https://go.microsoft.com/fwlink/?LinkId=112007)。  
+  使用“命令窗口”  可以对“[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 查询编辑器”窗口中当前所调试的代码运行命令，例如调试和编辑命令。 只有在调试模式下才可以使用 **“命令窗口”** 。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器支持许多在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]“命令”  窗口中支持的命令。 有关详细信息，请参阅 [Visual Studio“命令”窗口](https://go.microsoft.com/fwlink/?LinkId=112007)。  
   
 ## <a name="task-list"></a>任务列表  
- **访问 "命令" 窗口**  
+ **访问“命令”窗口**  
   
 -   在 **“调试”** 菜单中，单击 **“启动调试”** 。  
   
  **打印变量的值**  
   
--   在**命令**中，键入**Debug. Print \<VARIABLENAME>**，然后按 enter。  
+-   在“命令窗口”  中，键入 **Debug.Print \<VariableName>** ，然后按 Enter 键。  
   
  **列出有关当前线程的信息**  
   
@@ -38,7 +37,7 @@ ms.locfileid: "75243082"
   
  **将变量添加到“快速监视”窗口**  
   
--   在**命令**中，键入**Debug. 快速\<VARIABLENAME>**，然后按 enter。  
+-   在“命令窗口”  中，键入 **Debug.QuickWatch \<VariableName>** ，然后按 Enter 键。  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-SQL 调试器](transact-sql-debugger.md)  

@@ -17,21 +17,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caeda52d612f4df6672f686e06834de6fef0cc67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243279"
 ---
 # <a name="search-text-with-wildcards"></a>使用通配符搜索文本
-  以下表达式可以替换 " [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **查找和替换**" 对话框的 "**查找内容**" 字段中的字符或数字。  
+  以下表达式可以替换 **“查找和替换”对话框的“查找内容”字段中的字符或数字**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  。  
   
 #### <a name="to-search-using-wildcards"></a>使用通配符进行搜索  
   
-1.  若要在“快速查找”、 **“在文件中查找”** 、 **“快速替换”** 或 **“在文件中替换”** 操作过程中在 **“查找内容”** 字段中使用通配符，请选择 **“查找选项”** 下的 **“使用”** 选项，然后选择 **“通配符”**。  
+1.  若要在“快速查找”、 **“在文件中查找”** 、 **“快速替换”** 或 **“在文件中替换”** 操作过程中在 **“查找内容”** 字段中使用通配符，请选择 **“查找选项”** 下的 **“使用”** 选项，然后选择 **“通配符”** 。  
   
-2.  
-  **“查找内容”** 字段旁边的 **“引用列表”** 三角形按钮将变为可用状态。 单击此按钮以显示可用通配符列表。 从 **“引用列表”** 中选择任意项后，便会将该项插入到 **“查找内容”** 字符串中。  
+2.  **“查找内容”** 字段旁边的 **“引用列表”** 三角形按钮将变为可用状态。 单击此按钮以显示可用通配符列表。 从 **“引用列表”** 中选择任意项后，便会将该项插入到 **“查找内容”** 字符串中。  
   
  下表介绍了 **“引用列表”** 中可用的通配符。  
   

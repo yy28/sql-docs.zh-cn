@@ -27,10 +27,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 17eeefbe125722c666f9f56394028da8c66a66b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232283"
 ---
 # <a name="mapping-clr-parameter-data"></a>映射 CLR 参数数据
@@ -59,11 +59,9 @@ ms.locfileid: "75232283"
 |`nchar`|`SqlChars, SqlString`|`String, Char[]`|  
 |`ntext`|无|无|  
 |`numeric`|`SqlDecimal`|**十进制，可以\<为 null 的十进制>**|  
-|`nvarchar`|`SqlChars, SqlString`<br /><br /> 
-  `SQLChars` 更适用于数据传输和访问，而 `SQLString` 更适用于执行字符串运算。|`String, Char[]`|  
+|`nvarchar`|`SqlChars, SqlString`<br /><br /> `SQLChars` 更适用于数据传输和访问，而 `SQLString` 更适用于执行字符串运算。|`String, Char[]`|  
 |`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char、String、Char []、可以\<为 null 的 char>**|  
-|`real`|
-  `SqlSingle`（`SqlSingle` 的范围，但大于 `real`）|**单个、可以\<为 null 的单一>**|  
+|`real`|`SqlSingle`（`SqlSingle` 的范围，但大于 `real`）|**单个、可以\<为 null 的单一>**|  
 |`rowversion`|无|`Byte[]`|  
 |`smallint`|`SqlInt16`|**Int16，可\<为 null 的 int16>**|  
 |`smallmoney`|`SqlMoney`|**十进制，可以\<为 null 的十进制>**|  

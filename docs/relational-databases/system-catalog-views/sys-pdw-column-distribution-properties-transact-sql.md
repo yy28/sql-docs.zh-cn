@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 5b71df1a25a9cd8480f23dc104792ad8f3e70f35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401694"
 ---
 # <a name="syspdw_column_distribution_properties-transact-sql"></a>sys. pdw_column_distribution_properties （Transact-sql）
@@ -27,7 +27,7 @@ ms.locfileid: "74401694"
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |**object_id**|**int**|列所属对象的 ID。||  
-|column_id |**int**|列的 ID。||  
+|**column_id**|**int**|列的 ID。||  
 |**distribution_ordinal**|**tinyint**|一组分布中的序号（从1开始）。|0 = 不是分布列。 1 = [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]使用此列来分布父表。|  
   
 ## <a name="see-also"></a>另请参阅  

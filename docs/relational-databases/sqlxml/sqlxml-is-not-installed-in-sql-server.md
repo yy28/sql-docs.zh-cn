@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c666d02449190ca6a88ac43c96ab7aee9676be4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75242647"
 ---
 # <a name="sqlxml-is-not-installed-in-sql-server"></a>SQL Server 中未安装 SQLXML
@@ -27,9 +27,9 @@ ms.locfileid: "75242647"
 ## <a name="sqlxml-40-sp1-behavior-with-new-data-types-using-sqloledb-and-sql-server-native-client-ole-db-provider"></a>在使用 SQLOLEDB 和 SQL Server Native Client OLE DB 访问接口的新数据类型时 SQLXML 4.0 SP1 的行为  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]引入了以下数据类型，使用 SQLXML 的开发人员可能需要使用：  
   
--   **Date**  
+-   **日期**  
   
--   **时间**  
+-   **阶段**  
   
 -   **DateTime2**  
   

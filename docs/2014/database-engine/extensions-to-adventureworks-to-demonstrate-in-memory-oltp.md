@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4b317ffdb38c06cafe09ff786004b7ac144d0b18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228467"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>演示内存中 OLTP 的 AdventureWorks 扩展
@@ -33,8 +33,7 @@ ms.locfileid: "75228467"
   
 -   安装示例和运行演示工作负荷的[先决条件](#Prerequisites)  
   
--   
-  [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的说明  
+-   [基于 AdventureWorks 安装内存中 OLTP 示例](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的说明  
   
 -   [示例表和过程的说明](#Descriptionofthesampletablesandprocedures)-这包括通过[!INCLUDE[hek_2](../includes/hek-2-md.md)]示例添加到 AdventureWorks 的表和过程的说明，以及将一些原始 AdventureWorks 表迁移到内存优化的注意事项  
   
@@ -42,13 +41,13 @@ ms.locfileid: "75228467"
   
 -   [示例中的内存和磁盘空间利用率](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a>先决条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]RTM-评估版、开发人员版或企业版  
   
 -   对于性能测试，服务器的规格类似于生产环境。 对于此特定示例，应至少有 16 GB 内存可供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用。 有关硬件的[!INCLUDE[hek_2](../includes/hek-2-md.md)]一般指导原则，请参阅以下博客文章：[https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
-##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>基于 AdventureWorks [!INCLUDE[hek_2](../includes/hek-2-md.md)]安装示例  
+##  <a name="installing-the-hek_2-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>基于 AdventureWorks 安装 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 示例  
  请按照以下步骤安装示例：  
   
 1.  下载用于 AdventureWorks2014 数据库完整备份的存档：  
@@ -122,7 +121,7 @@ ms.locfileid: "75228467"
   
         4.  单击按钮 "执行" 以运行脚本  
   
-##  <a name="Descriptionofthesampletablesandprocedures"></a>示例表和过程的说明  
+##  <a name="description-of-the-sample-tables-and-procedures"></a><a name="Descriptionofthesampletablesandprocedures"></a>示例表和过程的说明  
  示例基于 AdventureWorks 中的现有表为产品和销售订单创建新表。 新表的架构类似于现有表，不过有几个区别，如下所述。  
   
  新的内存优化表带有后缀“_inmem”。 示例还包括带有后缀“_ondisk”的对应表 - 这些表可以用于在系统上进行内存优化表与基于磁盘的表性能之间的一对一比较。  
@@ -181,38 +180,37 @@ ms.locfileid: "75228467"
   
  Sales.SalesOrderHeader_inmem  
   
--   内存优化表支持*默认约束*，并按原样迁移大多数默认约束。 但是，原始表 Sales.SalesOrderHeader 包含两个为列 OrderDate 和 ModifiedDate 检索当前日期的默认约束。 在具有大量并发的高吞吐量订单处理工作负荷中，任何全局资源都可能成为争用点。 系统时间就是全局资源，我们观察到，它可能在运行插入销售订单的 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 工作负荷时成为瓶颈，特别是如果需要为销售订单表头中的多列以及销售订单详细信息检索系统时间。 此示例中解决问题的方式是仅为插入的每个销售订单检索系统时间一次，然后将该值用于 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 中的 datetime 列以及存储过程 Sales.usp_InsertSalesOrder_inmem。  
+-   内存优化表支持*默认约束* ，大多数默认约束按原样迁移。 但是，原始表 Sales.SalesOrderHeader 包含两个为列 OrderDate 和 ModifiedDate 检索当前日期的默认约束。 在具有大量并发的高吞吐量订单处理工作负荷中，任何全局资源都可能成为争用点。 系统时间就是全局资源，我们观察到，它可能在运行插入销售订单的 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 工作负荷时成为瓶颈，特别是如果需要为销售订单表头中的多列以及销售订单详细信息检索系统时间。 此示例中解决问题的方式是仅为插入的每个销售订单检索系统时间一次，然后将该值用于 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 中的 datetime 列以及存储过程 Sales.usp_InsertSalesOrder_inmem。  
   
--   *别名 udt* -原始表使用两个别名用户定义数据类型（udt） dbo。OrderNumber 和 dbo。AccountNumber，分别用于列 PurchaseOrderNumber 和 AccountNumber。 
-  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 在内存优化表中不支持别名 UDT，因而新表分别使用系统数据类型 nvarchar(25) 和 nvarchar(15)。  
+-   *别名 UDT* - 原始表将两个别名用户定义数据类型 (UDT) dbo.OrderNumber 和 dbo.AccountNumber 分别用于列 PurchaseOrderNumber 和 AccountNumber。 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 在内存优化表中不支持别名 UDT，因而新表分别使用系统数据类型 nvarchar(25) 和 nvarchar(15)。  
   
--   *索引键中可以为 null 的列*-在原始表中，列 SalesPersonID 可以为 null，而在新表中，该列不可为 null，并且具有值为（-1）的默认约束。 这是因为内存优化表中的索引不能在索引键中具有可以为 Null 的列；-1 是这种情况下 NULL 的代理项。  
+-   *索引键中可以为 Null 的列* - 在原始表中，列 SalesPersonID 可以为 Null，而在新表中，该列不可为 Null，并且默认约束值为 -1。 这是因为内存优化表中的索引不能在索引键中具有可以为 Null 的列；-1 是这种情况下 NULL 的代理项。  
   
--   *计算列*-省略了计算列 SalesOrderNumber 和 TotalDue，因为[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]在内存优化表中不支持计算列。 新视图 Sales.vSalesOrderHeader_extended_inmem 反映了列 SalesOrderNumber and TotalDue。 因此，如果需要这些列，可以使用此视图。  
+-   计算列** - 省略了计算列 SalesOrderNumber 和 TotalDue，因为 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 在内存优化表中不支持计算列。 新视图 Sales.vSalesOrderHeader_extended_inmem 反映了列 SalesOrderNumber and TotalDue。 因此，如果需要这些列，可以使用此视图。  
   
--   中[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]的内存优化表不支持*外键约束*。 此外，SalesOrderHeader_inmem 是示例工作负荷中的热表，并且外键约束需要对所有 DML 操作进行附加处理，因为它需要在这些约束引用的所有其他表中进行查找。 因此，假设应用程序可确保引用完整性，从而在插入行时不验证引用完整性。 可以使用以下脚本，通过存储过程 dbo.usp_ValidateIntegrity 验证此表中数据的引用完整性：  
-  
-    ```  
-    DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
-    EXEC dbo.usp_ValidateIntegrity @o  
-    ```  
-  
--   SQ 服务器2014中的内存优化表不支持*检查约束*。 使用以下脚本可随引用完整性一起验证域完整性：  
+-   在*中，内存优化表不支持* 外键约束 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。 此外，SalesOrderHeader_inmem 是示例工作负荷中的热表，并且外键约束需要对所有 DML 操作进行附加处理，因为它需要在这些约束引用的所有其他表中进行查找。 因此，假设应用程序可确保引用完整性，从而在插入行时不验证引用完整性。 可以使用以下脚本，通过存储过程 dbo.usp_ValidateIntegrity 验证此表中数据的引用完整性：  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
     EXEC dbo.usp_ValidateIntegrity @o  
     ```  
   
--   *Rowguid* -省略 rowguid 列。 虽然内存优化表支持 uniqueidentifier，但是 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]中不支持选项 ROWGUIDCOL。 这种列通常用于合并复制或具有文件流列的表。 此示例不包括其中任何一种。  
+-   在 SQL Server 2014 中，内存优化表不支持*检查约束* 。 使用以下脚本可随引用完整性一起验证域完整性：  
+  
+    ```  
+    DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
+    EXEC dbo.usp_ValidateIntegrity @o  
+    ```  
+  
+-   *Rowguid* - 省略了 rowguid 列。 虽然内存优化表支持 uniqueidentifier，但是 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]中不支持选项 ROWGUIDCOL。 这种列通常用于合并复制或具有文件流列的表。 此示例不包括其中任何一种。  
   
  Sales.SalesOrderDetail  
   
--   *默认约束*-类似于 SalesOrderHeader，不迁移需要系统日期/时间的默认约束，而是插入销售订单的存储过程负责在第一次插入时插入当前系统日期/时间。  
+-   *默认约束* - 类似于 SalesOrderHeader，未迁移需要系统时间/时间的默认约束，而是由插入销售订单的存储过程负责在第一次插入时插入当前系统日期/时间。  
   
--   *计算列*-如果中[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]的内存优化表不支持计算列，则未迁移计算列 LineTotal。 若要访问此列，请使用视图 Sales.vSalesOrderDetail_extended_inmem。  
+-   *计算列* - 在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中，内存优化表不支持未作为计算列迁移的计算列 LineTotal。 若要访问此列，请使用视图 Sales.vSalesOrderDetail_extended_inmem。  
   
--   *Rowguid* -省略 rowguid 列。 有关详细信息，请参见表 SalesOrderHeader 的说明。  
+-   *Rowguid* - 省略了 rowguid 列。 有关详细信息，请参见表 SalesOrderHeader 的说明。  
   
 -   对于 *检查* 和 *外键* 约束，请参见 SalesOrderHeader 的说明。 以下脚本可用于验证此表的域和引用完整性：  
   
@@ -223,13 +221,13 @@ ms.locfileid: "75228467"
   
  Production.Product  
   
--   *别名 udt* -原始表使用用户定义的数据类型 dbo。标志，它等效于系统数据类型位。 迁移的表改用位数据类型。  
+-   *别名 UDT* - 原始表使用等效于系统数据类型位的用户定义数据类型 dbo.Flag。 迁移的表改用位数据类型。  
   
 -   *BIN2 排序规则*-列 Name 和 ProductNumber 包含在索引键中，因此必须在中[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]具有 BIN2 排序规则。 这里假设应用程序不依赖于排序规则具体内容（如区分大小写）。  
   
--   *Rowguid* -省略 rowguid 列。 有关详细信息，请参见表 SalesOrderHeader 的说明。  
+-   *Rowguid* - 省略了 rowguid 列。 有关详细信息，请参见表 SalesOrderHeader 的说明。  
   
--   *唯一*约束** 、Check*约束和外键约束*通过两种方式进行：存储过程 Product. usp_InsertProduct_inmem 和 product. usp_DeleteProduct_inmem 可用于插入和删除产品;这些过程用于验证域和引用完整性，如果违反了完整性，将会失败。 此外，以下脚本还可用于按原样验证域和引用完整性：  
+-   *唯一*、 *检查* 和 *外键约束* 通过两种方式实现：存储过程 Product.usp_InsertProduct_inmem 和 Product.usp_DeleteProduct_inmem 可以用于插入和删除产品；这些过程验证域和引用完整性，在违反完整性时会失败。 此外，以下脚本还可用于按原样验证域和引用完整性：  
   
     ```  
     DECLARE @o int = object_id(N'Production.Product')  
@@ -240,25 +238,25 @@ ms.locfileid: "75228467"
   
  Sales.SpecialOffer  
   
--   *检查*和*外键约束*通过两种方式进行： "存储过程" usp_InsertSpecialOffer_inmem 和 "销售" usp_DeleteSpecialOffer_inmem 可用于插入和删除特别优惠;这些过程用于验证域和引用完整性，如果违反了完整性，将会失败。 此外，以下脚本还可用于按原样验证域和引用完整性：  
+-   *检查* 和 *外键约束* 通过两种方式实现：存储过程 Sales.usp_InsertSpecialOffer_inmem 和 Sales.usp_DeleteSpecialOffer_inmem 可用于插入和删除特价商品；这些过程验证域和引用完整性，在违反完整性时会失败。 此外，以下脚本还可用于按原样验证域和引用完整性：  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SpecialOffer_inmem')  
     EXEC dbo.usp_ValidateIntegrity @o  
     ```  
   
--   *Rowguid* -省略 rowguid 列。 有关详细信息，请参见表 SalesOrderHeader 的说明。  
+-   *Rowguid* - 省略了 rowguid 列。 有关详细信息，请参见表 SalesOrderHeader 的说明。  
   
  Sales.SpecialOfferProduct  
   
--   *外键约束*通过两种方式进行操作：存储过程的 usp_InsertSpecialOfferProduct_inmem 可用于插入特殊产品和产品之间的关系;此过程验证引用完整性，如果违反了完整性，将会失败。 此外，以下脚本还可用于按原样验证引用完整性：  
+-   *外键约束* 通过两种方式实现：存储过程 Sales.usp_InsertSpecialOfferProduct_inmem 可用于插入和删除特价商品与产品之间的关系；此过程验证引用完整性，在违反完整性时会失败。 此外，以下脚本还可用于按原样验证引用完整性：  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SpecialOfferProduct_inmem')  
     EXEC dbo.usp_ValidateIntegrity @o  
     ```  
   
--   *Rowguid* -省略 rowguid 列。 有关详细信息，请参见表 SalesOrderHeader 的说明。  
+-   *Rowguid* - 省略了 rowguid 列。 有关详细信息，请参见表 SalesOrderHeader 的说明。  
   
 #### <a name="considerations-for-indexes-on-memory-optimized-tables"></a>有关内存优化表的索引的注意事项  
  内存优化表的基线索引是 NONCLUSTERED 索引，该索引支持点查找（采用相等谓词的索引查找）、范围扫描（采用不相等谓词的索引查找）、全文索引扫描和有序扫描。 此外，NONCLUSTERED 索引还支持对索引键的前导列进行搜索。 事实上，内存优化 NONCLUSTERED 索引支持基于磁盘的 NONCLUSTERED 索引支持的所有操作，唯一的例外是向后扫描。 因此，使用 NONCLUSTERED 索引是针对索引的安全选择。  
@@ -311,46 +309,43 @@ ms.locfileid: "75228467"
   
     -   输出参数：  
   
-        -   @SalesOrderIDint-刚刚插入的销售订单的 SalesOrderID  
+        -   @SalesOrderID int - 刚插入的销售订单的 SalesOrderID  
   
     -   输入参数（必需）：  
   
-        -   @DueDatedatetime2  
+        -   @DueDate datetime2  
   
-        -   @CustomerID整形  
+        -   @CustomerID int  
   
-        -   @BillToAddressID整形  
+        -   @BillToAddressID [int]  
   
-        -   @ShipToAddressID整形  
+        -   @ShipToAddressID [int]  
   
-        -   @ShipMethodID整形  
+        -   @ShipMethodID [int]  
   
-        -   @SalesOrderDetailsTVP，包含订单的行项 SalesOrderDetailType_inmem  
+        -   @SalesOrderDetails Sales.SalesOrderDetailType_inmem - 包含订单行项的 TVP  
   
     -   输入参数（可选）：  
   
-        -   @Statustinyint  
+        -   @Status [tinyint]  
   
-        -   @OnlineOrderFlag小段  
+        -   @OnlineOrderFlag [bit]  
   
-        -   
-  @PurchaseOrderNumber [nvarchar](25\)  
+        -   @PurchaseOrderNumber [nvarchar](25\)  
   
-        -   
-  @AccountNumber [nvarchar](15\)  
+        -   @AccountNumber [nvarchar](15\)  
   
-        -   @SalesPersonID整形  
+        -   @SalesPersonID [int]  
   
-        -   @TerritoryID整形  
+        -   @TerritoryID [int]  
   
-        -   @CreditCardID整形  
+        -   @CreditCardID [int]  
   
-        -   
-  @CreditCardApprovalCode [varchar](15\)  
+        -   @CreditCardApprovalCode [varchar](15\)  
   
-        -   @CurrencyRateID整形  
+        -   @CurrencyRateID [int]  
   
-        -   @Commentnvarchar  
+        -   @Comment nvarchar(128)  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_inmem  
   
@@ -390,7 +385,7 @@ ms.locfileid: "75228467"
   
     -   它依赖于帮助器过程 dbo.usp_GenerateCKCheck、dbo.usp_GenerateFKCheck 和 dbo.GenerateUQCheck 来生成执行完整性检查所需的 T-SQL。  
   
-##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a>使用演示工作负荷的性能度量  
+##  <a name="performance-measurements-using-the-demo-workload"></a><a name="PerformanceMeasurementsusingtheDemoWorkload"></a> 使用演示工作负荷执行度量  
  Ostress 是由 [!INCLUDE[msCoName](../includes/msconame-md.md)] CSS [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持团队开发的命令行工具。 此工具可以用于并行执行查询或运行存储过程。 可以配置线程数来并行运行给定 T-SQL 语句，并且可以指定应对此线程执行语句的次数；Ostress 会加快线程，对所有线程并行执行语句。 对所有线程完成执行之后，Ostress 会报告所有线程完成执行所花费的时间。  
   
 ### <a name="installing-ostress"></a>安装 Ostress  
@@ -492,7 +487,7 @@ ostress.exe -n10 -r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od S
 ```  
   
 #### <a name="running-the-workload"></a>运行工作负荷  
- 为了进行大规模测试，我们使用 100 个连接插入 1000 万个销售订单。 此测试适合在中等服务器（例如，8 个物理核心、16 个逻辑核心以及用于日志的基本 SSD 存储）上执行。 如果测试在硬件上性能不佳，请查看[解决运行缓慢的测试](#Troubleshootingslow-runningtests)的部分。如果要降低此测试的压力级别，请通过更改参数 "-n" 减少连接数。 例如，若要将连接计数减少为 40，请将参数“-n100”更改为“-n40”。  
+ 为了进行大规模测试，我们使用 100 个连接插入 1000 万个销售订单。 此测试适合在中等服务器（例如，8 个物理核心、16 个逻辑核心以及用于日志的基本 SSD 存储）上执行。 如果该测试在你的硬件上性能不佳，请查看[解决测试运行缓慢的问题](#Troubleshootingslow-runningtests)一节。如果要降低此测试的压力级别，请通过更改参数“-n”减少连接数。 例如，若要将连接计数减少为 40，请将参数“-n100”更改为“-n40”。  
   
  作为工作负荷的性能度量，我们使用 ostress.exe 在运行工作负荷之后报告的占用时间。  
   
@@ -524,8 +519,7 @@ ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @
   
  在一台共有 8 个物理（16 个逻辑）核心的测试服务器上，需要 41 分 25 秒。 在另一台有 24 个物理（48 个逻辑）核心的测试服务器上，需要 52 分 16 秒。  
   
- 此测试中内存优化表与基于磁盘的表之间存在性能差异的主要因素在于，使用基于磁盘的表时， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 无法完全利用 CPU。 原因在于闩锁争用：并发事务尝试写入相同数据页；闩锁用于确保一次只有一个事务才能写入页。 
-  [!INCLUDE[hek_2](../includes/hek-2-md.md)] 引擎没有闩锁，数据行不是按页组织。 因而，并发事务不会阻塞彼此的插入，从而[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]能够完全利用 CPU。  
+ 此测试中内存优化表与基于磁盘的表之间存在性能差异的主要因素在于，使用基于磁盘的表时， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 无法完全利用 CPU。 原因在于闩锁争用：并发事务尝试写入相同数据页；闩锁用于确保一次只有一个事务才能写入页。 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 引擎没有闩锁，数据行不是按页组织。 因而，并发事务不会阻塞彼此的插入，从而[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]能够完全利用 CPU。  
   
  在工作负荷运行期间可以观察 CPU 利用率（例如使用任务管理器）。 对于基于磁盘的表，可以看到 CPU 利用率远低于 100%。 在有 16 个逻辑处理器的测试配置中，利用率保持在 24% 左右。  
   
@@ -542,7 +536,7 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
   
  我们建议在每次演示运行之后重置。 因为此工作负荷仅涉及插入，所以每次运行将占用更多内存，因而需要重置来防止内存不足。 运行之后占用的内存量在 [运行工作负荷之后的内存利用率](#Memoryutilizationafterrunningtheworkload)一节中进行了讨论。  
   
-###  <a name="Troubleshootingslow-runningtests"></a>排查运行缓慢的测试问题  
+###  <a name="troubleshooting-slow-running-tests"></a><a name="Troubleshootingslow-runningtests"></a>排查运行缓慢的测试问题  
  测试结果通常因硬件而异，也因测试运行中使用的并发级别而异。 结果与预期不符时要了解的几个方面有：  
   
 -   并发事务数：对单个线程运行工作负荷时，通过 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 获得的性能提升可能小于 2 倍。 如果并发级别较高，则闩锁争用是唯一的大问题。  
@@ -555,10 +549,10 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
   
     -   症状：如果对内存优化表运行工作负荷时 CPU 利用率不接近于 100% 或是非常尖峰，则可能存在日志 IO 瓶颈。 这可以通过打开资源监视器查看日志驱动器的队列长度来进行确认。  
   
-##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a>示例中的内存和磁盘空间利用率  
+##  <a name="memory-and-disk-space-utilization-in-the-sample"></a><a name="MemoryandDiskSpaceUtilizationintheSample"></a>示例中的内存和磁盘空间利用率  
  下面我们讨论示例数据库的内存和磁盘空间利用率方面的情况。 我们还会介绍在有 16 个逻辑核心的测试服务器上看到的结果。  
   
-###  <a name="Memoryutilizationforthememory-optimizedtables"></a>内存优化表的内存利用率  
+###  <a name="memory-utilization-for-the-memory-optimized-tables"></a><a name="Memoryutilizationforthememory-optimizedtables"></a>内存优化表的内存利用率  
   
 #### <a name="overall-utilization-of-the-database"></a>数据库的总体利用率  
  以下查询可用于获取系统中 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 的总体内存利用率。  
@@ -574,7 +568,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|type |**路径名**|**pages_MB**|  
+|**type**|**name**|**pages_MB**|  
 |MEMORYCLERK_XTP|默认|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
 |MEMORYCLERK_XTP|默认|0|  
@@ -598,7 +592,7 @@ WHERE t.type='U'
   
 ||||  
 |-|-|-|  
-|**表名**|**memory_allocated_for_table_kb**|**memory_allocated_for_indexes_kb**|  
+|**表名称**|**memory_allocated_for_table_kb**|**memory_allocated_for_indexes_kb**|  
 |SpecialOfferProduct_inmem|64|3840|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
 |SalesOrderDetail_inmem|15316|663552|  
@@ -611,7 +605,7 @@ WHERE t.type='U'
   
  此处比较显著的是为索引分配的内存大小（与表数据大小相比）。 这是因为示例中的哈希索引针对较大数据大小预设了大小。 请注意，哈希索引有固定大小，因而其大小不会随表中的数据大小而增大。  
   
-####  <a name="Memoryutilizationafterrunningtheworkload"></a>运行工作负荷之后的内存利用率  
+####  <a name="memory-utilization-after-running-the-workload"></a><a name="Memoryutilizationafterrunningtheworkload"></a> 运行工作负荷之后的内存利用率  
  插入 1000 万个销售订单之后，总体内存利用率类似于下面这样：  
   
 ```  
@@ -623,7 +617,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|type |**路径名**|**pages_MB**|  
+|**type**|**name**|**pages_MB**|  
 |MEMORYCLERK_XTP|默认|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
 |MEMORYCLERK_XTP|默认|0|  
@@ -644,7 +638,7 @@ WHERE t.type='U'
   
 ||||  
 |-|-|-|  
-|**表名**|**memory_allocated_for_table_kb**|**memory_allocated_for_indexes_kb**|  
+|**表名称**|**memory_allocated_for_table_kb**|**memory_allocated_for_indexes_kb**|  
 |SalesOrderDetail_inmem|5113761|663552|  
 |DemoSalesOrderDetailSeed|64|10368|  
 |SpecialOffer_inmem|2|8192|  
@@ -658,8 +652,7 @@ WHERE t.type='U'
 #### <a name="after-demo-reset"></a>演示重置之后  
  存储过程 Demo.usp_DemoReset 可以用于重置演示。 它删除表 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 中的数据，并对原始表 SalesOrderHeader 和 SalesOrderDetail 中的数据重设种子。  
   
- 现在，即使表中的行已删除，这也不意味着会立即回收内存。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 根据需要在后台从内存优化表中的已删除行回收内存。 可以看到，在演示重置之后（系统上没有事务工作负荷），尚未立即回收已删除行的内存：  
+ 现在，即使表中的行已删除，这也不意味着会立即回收内存。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 根据需要在后台从内存优化表中的已删除行回收内存。 可以看到，在演示重置之后（系统上没有事务工作负荷），尚未立即回收已删除行的内存：  
   
 ```  
 SELECT type  
@@ -670,7 +663,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|type |**路径名**|**pages_MB**|  
+|**type**|**name**|**pages_MB**|  
 |MEMORYCLERK_XTP|默认|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
 |MEMORYCLERK_XTP|默认|0|  
@@ -689,7 +682,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|type |**路径名**|**pages_MB**|  
+|**type**|**name**|**pages_MB**|  
 |MEMORYCLERK_XTP|默认|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
 |MEMORYCLERK_XTP|默认|0|  
@@ -720,7 +713,7 @@ WHERE f.type=N'FX'
   
 ||  
 |-|  
-|**磁盘上大小（MB）**|  
+|**磁盘上大小（以 MB 为单位）**|  
 |2312|  
   
  可以看到，检查点文件的磁盘上大小 (2.3GB) 与实际数据大小（接近 30MB）之间存在巨大差异。  
@@ -746,14 +739,13 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**计数**|**磁盘大小 MB**|  
+|**state_desc**|**file_type_desc**|**计数**|**磁盘上大小 (MB)**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
   
- 可以看到，大部分空间由预先创建的数据和差异文件使用。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 为每个逻辑处理器预先创建一对（数据、差异）文件。 此外，数据文件的预设大小为 128MB，差异文件的预设大小为 8MB，以便更高效地向这些文件插入数据。  
+ 可以看到，大部分空间由预先创建的数据和差异文件使用。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 为每个逻辑处理器预先创建一对（数据、差异）文件。 此外，数据文件的预设大小为 128MB，差异文件的预设大小为 8MB，以便更高效地向这些文件插入数据。  
   
  内存优化表中的实际数据在单个数据文件中。  
   
@@ -769,7 +761,7 @@ WHERE f.type=N'FX'
   
 ||  
 |-|  
-|**磁盘上大小（MB）**|  
+|**磁盘上大小（以 MB 为单位）**|  
 |8828|  
   
  磁盘上大小接近 9GB，这接近于数据的内存中大小。  
@@ -793,7 +785,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**计数**|**磁盘大小 MB**|  
+|**state_desc**|**file_type_desc**|**计数**|**磁盘上大小 (MB)**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
@@ -817,7 +809,7 @@ WHERE f.type=N'FX'
   
 ||  
 |-|  
-|**磁盘上大小（MB）**|  
+|**磁盘上大小（以 MB 为单位）**|  
 |11839|  
   
  差不多 12GB，这显著大于演示重置之前的 9GB。 这是因为某些检查点文件合并已启动，但是某些合并目标尚未安装，某些合并源文件尚未清理，如下所示：  
@@ -839,7 +831,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**计数**|**磁盘大小 MB**|  
+|**state_desc**|**file_type_desc**|**计数**|**磁盘上大小 (MB)**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |ACTIVE|DATA|38|5152|  
@@ -872,7 +864,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**计数**|**磁盘大小 MB**|  
+|**state_desc**|**file_type_desc**|**计数**|**磁盘上大小 (MB)**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|2|268|  

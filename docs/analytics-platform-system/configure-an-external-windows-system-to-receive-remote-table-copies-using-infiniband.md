@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 837d41cc929d90b2494682645127f985b5768546
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401316"
 ---
 # <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>将外部 Windows 系统配置为使用 "无带宽并行" 数据仓库接收远程表副本
@@ -33,7 +33,7 @@ ms.locfileid: "74401316"
   
 3.  从你的设备硬件供应商处购买无工作电缆和不受阻止的网络适配器。 在接收导出的数据时，我们建议购买包含两个端口的网络适配器以实现容错。 建议使用两个端口网络适配器，但这不是必需的。  
   
-## <a name="HowToWindows"></a>配置外部 Windows 系统以接收远程表副本  
+## <a name="configure-an-external-windows-system-to-receive-remote-table-copies"></a><a name="HowToWindows"></a>配置外部 Windows 系统以接收远程表副本  
 若要配置外部 Windows 系统，请执行以下步骤：  
   
 1.  将 "无线网络适配器" 安装到 Windows 系统。  

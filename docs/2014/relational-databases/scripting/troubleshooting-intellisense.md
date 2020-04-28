@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7088bee1d78efdc6051bf58d174b7ea503362831
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75242984"
 ---
 # <a name="troubleshooting-intellisense-sql-server-management-studio"></a>IntelliSense 故障排除 (SQL Server Management Studio)
@@ -49,11 +49,9 @@ ms.locfileid: "75242984"
      即使禁用了自动结束语句功能，仍可以使用 IntelliSense 功能。 有关详细信息，请参阅[配置 IntelliSense (SQL Server Management Studio)](configure-intellisense-sql-server-management-studio.md)。  
   
 ## <a name="database-engine-query-intellisense"></a>数据库引擎查询 IntelliSense  
- 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 查询编辑器会出现以下问题：  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 查询编辑器会出现以下问题：  
   
--   
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器的 IntelliSense 功能不支持所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法元素。 参数帮助不支持某些对象（例如扩展存储过程）中的参数。 有关详细信息，请参阅 [IntelliSense 支持的 Transact-SQL 语法](transact-sql-syntax-supported-by-intellisense.md)。  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器的 IntelliSense 功能不支持所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法元素。 参数帮助不支持某些对象（例如扩展存储过程）中的参数。 有关详细信息，请参阅 [IntelliSense 支持的 Transact-SQL 语法](transact-sql-syntax-supported-by-intellisense.md)。  
   
 -   仅当 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器从 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或更高版本连接到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 实例时，才可以使用 IntelliSense。 如果查询编辑器连接到以前版本的 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，将无法使用 Intellisense。  
   

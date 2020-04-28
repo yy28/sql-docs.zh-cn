@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: bd0b5824abfc36923909ce37866b221c0bc830d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957195"
 ---
 # <a name="encrypt-a-column-of-data"></a>加密数据列
@@ -29,13 +29,13 @@ ms.locfileid: "74957195"
   
      [安全性](#Security)  
   
--   [使用 Transact-sql 对数据列进行加密](#TsqlProcedure)  
+-   [使用 Transact-SQL 对数据列进行加密](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  下面的权限是执行以下步骤所必需的：  
   
 -   针对数据库的 CONTROL 权限。  
@@ -46,7 +46,7 @@ ms.locfileid: "74957195"
   
 -   针对密钥的某些权限，并且必须未被拒绝授予 VIEW DEFINITION 权限。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>使用简单对称加密对数据列进行加密  
   

@@ -18,10 +18,10 @@ ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c312f8798ba4ad42eed327123c9adc5feacba8a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74412853"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
@@ -86,16 +86,16 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |'**QueueReader**'|复制队列读取器代理作业|  
 |'**ANALYSISQUERY**'|Analysis Services 查询 (MDX、DMX)。|  
 |'**ANALYSISCOMMAND**'|Analysis Services 命令 (XMLA)。|  
-|"**Dts**"|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包执行|  
+|"**Dts**"|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包执行|  
 |"**PowerShell**"|PowerShell 脚本|  
-|"**TSQL**" （默认值）|[!INCLUDE[tsql](../../includes/tsql-md.md)]损益|  
+|"**TSQL**" （默认值）|[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句|  
   
 `[ @command = ] 'command'`由**SQLServerAgent**服务通过*子系统*执行的命令。 *command*的值为**nvarchar （max）**，默认值为 NULL。 SQL Server 代理提供标记替换功能；在编写软件程序时，它可提供与变量相同的灵活性。  
   
 > [!IMPORTANT]  
 >  作业步骤中使用的所有标记现在必须附带转义宏，否则，这些作业步骤将会失败。 此外，您现在还必须用括号将标记名称括起来，并在标记语法开头加上美元符号 (`$`)。 例如：  
 >   
->  `$(ESCAPE_`*宏名*`(DATE))`  
+>  `$(ESCAPE_` *宏名* `(DATE))`  
   
  有关这些令牌并更新作业步骤以使用新令牌语法的详细信息，请参阅[在作业步骤中使用令牌](../../ssms/agent/use-tokens-in-job-steps.md)。  
   
@@ -152,7 +152,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**2**|追加到输出文件|  
 |**4**|将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤输出写入步骤历史记录|  
 |**8**|将日志写入表（覆盖现有的历史记录）|  
-|**16**|将日志写入表（追加到现有的历史记录）|  
+|**超过**|将日志写入表（追加到现有的历史记录）|  
 |**32**|将所有输出写入作业历史记录|  
 |**64**|创建一个 Windows 事件以便用作 Cmd jobstep 要中止的信号|  
   
@@ -176,7 +176,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  代理可以通过*proxy_name*或*proxy_id*来识别。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下， **sysadmin**固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   

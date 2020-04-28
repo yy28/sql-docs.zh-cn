@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6c9a0a29b543eb287c7e233d6b1ea77bb2a0d45c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401267"
 ---
 # <a name="configure-parallel-data-warehouse-for-remote-table-copies"></a>为远程表副本配置并行数据仓库
@@ -28,7 +28,7 @@ ms.locfileid: "74401267"
   
 -   了解目标服务器的主机名或 IP 名称。  
   
-## <a name="HowToPDW"></a>配置远程表复制 SQL Server PDW：更新 DNS 中的主机名  
+## <a name="configure-sql-server-pdw-for-remote-table-copy-update-host-names-in-dns"></a><a name="HowToPDW"></a>配置远程表复制 SQL Server PDW：更新 DNS 中的主机名  
 **CREATE REMOTE table**语句用于远程表复制，使用 SMP Windows 系统的 ip 地址或 ip 名称指定目标服务器。 若要使用 IP 名称，需要将成功的名称解析条目添加到 DNS 服务器。  
   
 以下步骤概述了如何更新 DNS 服务器。  

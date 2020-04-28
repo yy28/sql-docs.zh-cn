@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b0ba7eecc8e117e429f6992622d0c7bb2073f86a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74834327"
 ---
 # <a name="sysdm_exec_external_work-transact-sql"></a>sys.dm_exec_external_work (Transact-SQL)
@@ -47,7 +47,7 @@ ms.locfileid: "74834327"
 |input_name|`nvarchar(4000)`|要读取的输入的名称|使用 Hadoop 时的文件名。|  
 |read_location|`bigint`|偏移或读取位置。|要读取的文件的偏移量。|  
 |bytes_processed|`bigint`|此辅助进程分配用于处理数据的总字节数。 这不一定表示查询返回的总数据 |大于或等于0。|  
-|length|`bigint`|Hadoop 或 HDFS 块的长度（如果为 Hadoop）|用户可定义的。 默认值为 Ed-64m|  
+|长度|`bigint`|Hadoop 或 HDFS 块的长度（如果为 Hadoop）|用户可定义的。 默认值为 Ed-64m|  
 |status|`nvarchar(32)`|辅助进程的状态|挂起，处理，已完成，失败，已中止|  
 |start_time|`datetime`|工作开始||  
 |end_time|`datetime`|工作结束||  
@@ -56,7 +56,7 @@ ms.locfileid: "74834327"
 
 ## <a name="see-also"></a>另请参阅  
  [通过动态管理视图进行 PolyBase 故障排除](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与数据库相关的动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

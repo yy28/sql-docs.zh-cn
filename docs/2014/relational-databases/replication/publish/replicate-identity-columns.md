@@ -18,14 +18,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c6410e6b21ec3ebbb3cfb01fa78ffe80b2196a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74479253"
 ---
 # <a name="replicate-identity-columns"></a>复制标识列
-  将 identity 属性分配给某一列时， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]会自动为在包含标识列的表中插入的新行生成顺序编号。 有关详细信息，请参阅 [IDENTITY（属性）&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)。 因为包含的标识列可能是主键的一部分，所以请务必避免在标识列中出现重复值。 若要在多个节点上都有更新的复制拓扑中使用标识列，复制拓扑中的每个节点都必须使用不同范围的标识值，以避免出现重复。  
+  将 IDENTITY 属性分配到列时，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将为在包含标识列的表中插入的新行自动生成顺序编号。 有关详细信息，请参阅 [IDENTITY（属性）&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)。 因为包含的标识列可能是主键的一部分，所以请务必避免在标识列中出现重复值。 若要在多个节点上都有更新的复制拓扑中使用标识列，复制拓扑中的每个节点都必须使用不同范围的标识值，以避免出现重复。  
   
  例如，可以为发布服务器分配范围 1-100，为订阅服务器 A 分配范围 101-200，为订阅服务器 B 分配范围 201-300。 如果在发布服务器中插入行，例如标识值是 65，则将该值复制到每个订阅服务器。 复制在每个订阅服务器上插入数据时，不会增加订阅服务器表中的标识列值，而是插入文字值 65。 仅用户插入，而复制代理不插入，将导致标识列值增加。  
   
@@ -125,8 +125,8 @@ ms.locfileid: "74479253"
 ## <a name="see-also"></a>另请参阅  
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [DBCC CHECKIDENT &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)   
- [IDENT_CURRENT &#40;Transact-SQL&#41;](/sql/t-sql/functions/ident-current-transact-sql)   
- [&#41; &#40;Transact-sql 的标识 &#40;属性&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)   
- [sp_adjustpublisheridentityrange &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql)  
+ [IDENT_CURRENT &#40;Transact-sql&#41;](/sql/t-sql/functions/ident-current-transact-sql)   
+ [IDENTITY（属性）&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)   
+ [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql)  
   
   

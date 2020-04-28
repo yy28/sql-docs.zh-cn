@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c5dd66b72ff280431d29ae292af8fa1402095dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74684085"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Create a trusted location for PowerPivot sites in Central Administration
@@ -22,19 +22,19 @@ ms.locfileid: "74684085"
   
   
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  您必须是场或服务管理员才能将某一 URL 指定为受信任位置。  
   
  您必须知道包含 PowerPivot 库或用于存储工作簿的其他库的 SharePoint 站点的 URL 地址。 若要获取该地址，请打开包含库的站点，右键单击**PowerPivot 库**，选择 "**属性**"，然后复制包含服务器名称和站点路径的 "地址（URL）" 的第一部分。  
   
-##  <a name="overview"></a>叙述  
+##  <a name="overview"></a><a name="overview"></a> 概述  
  初次安装 Excel Services 时会将“http://”指定为其受信任位置，这意味着可以在服务器上打开场中任何站点上的工作簿。 如果您需要更紧密地控制哪些位置被视为可信的，则可以创建新的受信任位置（这些位置映射到场中的特定站点），然后，改变每个位置的设置和权限。  
   
  如果对于场的其余部分您想要保留默认值，同时应用最适合进行 PowerPivot 数据访问的其他设置，则为承载 PowerPivot 工作簿的站点创建新的受信任位置尤其有用。 例如，针对 PowerPivot 工作簿进行优化的受信任位置可能具有的最大工作簿大小为 50 MB，而场的其他部分使用默认值 10MB。  
   
  如果您正在使用 PowerPivot 库来预览已发布工作簿，并且遇到数据刷新警告而不是所期望的预览图像，则建议创建受信任位置。 PowerPivot 库使用文档内的数据和展示信息呈现报表和工作簿的缩略图。 如果为受信任位置启用了“数据刷新时警告”，则 PowerPivot 库可能没有足够的权限来执行刷新，这会导致出现错误，而不是显示缩略图。 将包含 PowerPivot 库的站点添加为新的受信任位置可以消除此问题。  
   
-##  <a name="create"></a>为 PowerPivot 数据访问创建受信任位置  
+##  <a name="create-a-trusted-location-for-powerpivot-data-access"></a><a name="create"></a>为 PowerPivot 数据访问创建受信任位置  
   
 1.  在管理中心的 "应用程序管理" 中，单击 "**管理服务应用程序**"。  
   

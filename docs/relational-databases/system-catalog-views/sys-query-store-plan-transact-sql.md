@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1d1137aab32a98a4699e95b7138bb333f63c65e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74479463"
 ---
 # <a name="sysquery_store_plan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "74479463"
 |**plan_id**|**bigint**|主密钥。|  
 |**query_id**|**bigint**|外键。 联接到[sys.databases&#41;的 query_store_query &#40;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)。|  
 |**plan_group_id**|**bigint**|计划组的 ID。 游标查询通常需要多个（填充和提取）计划。 填充和提取一起编译的计划位于同一个组中。<br /><br /> 0表示计划不在组中。|  
-|**engine_version**|**nvarchar （32）**|用于以 **"主版本. 内部版本. 修订版本"** 格式编译计划的引擎版本。|  
+|**engine_version**|**nvarchar(32)**|用于以 **"主版本. 内部版本. 修订版本"** 格式编译计划的引擎版本。|  
 |**compatibility_level**|**smallint**|查询中引用的数据库的数据库兼容级别。|  
 |**query_plan_hash**|**binary （8）**|单个计划的 MD5 哈希。|  
 |**query_plan**|**nvarchar(max)**|查询计划的显示计划 XML。|  
@@ -57,7 +57,7 @@ ms.locfileid: "74479463"
 |**avg_compile_duration**|**float**|规划编译统计信息。 <br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|  
 |**last_compile_duration**|**bigint**|规划编译统计信息。 <br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|  
 |**plan_forcing_type**|**int**|计划强制类型。<br /><br />0：无<br /><br />1：手动<br /><br />2：自动|  
-|**plan_forcing_type_desc**|**nvarchar （60）**|Plan_forcing_type 的文本说明。<br /><br />无：无计划强制<br /><br />手动：由用户强制执行的计划<br /><br />自动：由自动优化强制执行计划|  
+|**plan_forcing_type_desc**|**nvarchar(60)**|Plan_forcing_type 的文本说明。<br /><br />无：无计划强制<br /><br />手动：由用户强制执行的计划<br /><br />自动：由自动优化强制执行计划|  
 
 ## <a name="plan-forcing-limitations"></a>计划强制限制
 查询存储中具有一种可用于强制查询优化器使用特定执行计划的机制。 但是，有些限制可能会阻止计划强制执行。 
@@ -91,10 +91,10 @@ ms.locfileid: "74479463"
  [sys. query_store_query &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
  [sys. query_store_query_text &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
  [sys. query_store_runtime_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
- [sys. query_store_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
+ [sys.query_store_wait_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [sys. query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [相关视图、函数和过程](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [使用查询存储监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查询存储存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

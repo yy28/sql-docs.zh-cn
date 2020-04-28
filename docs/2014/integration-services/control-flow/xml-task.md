@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e89f4835b95b1fe497df32ad9f773be84ccb161b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232730"
 ---
 # <a name="xml-task"></a>XML 任务
@@ -46,7 +46,7 @@ ms.locfileid: "75232730"
   
  如果源是变量，则该指定的变量包含 XML 文档的路径。  
   
- 如果源是文件连接管理器，则该指定的文件连接管理器提供源信息。 文件连接管理器与 XML 任务分开配置，并在 XML 任务中被引用。 文件连接管理器的连接字符串可指定 XML 文件的路径。 有关详细信息，请参阅[文件连接管理器](../connection-manager/file-connection-manager.md)。  
+ 如果源是文件连接管理器，则该指定的文件连接管理器提供源信息。 文件连接管理器与 XML 任务分开配置，并在 XML 任务中被引用。 文件连接管理器的连接字符串可指定 XML 文件的路径。 有关详细信息，请参阅 [File Connection Manager](../connection-manager/file-connection-manager.md)。  
   
  XML 任务可以设置为将运算结果保存到变量或文件。 如果要保存到文件中，XML 任务将使用文件连接管理器访问该文件。 您也可以将 Diff 运算生成的 Diffgram 结果保存到文件和变量中。  
   
@@ -84,11 +84,11 @@ ms.locfileid: "75232730"
 ### <a name="xpath-operation"></a>XPath 运算  
  可将 XPath 运算配置为使用不同类型的 XPath 功能。  
   
--   选择“计算”**** 选项，以实现各种 XPath 函数，如 sum()。  
+-   选择“计算”  选项，以实现各种 XPath 函数，如 sum()。  
   
 -   选择 **“结点列表”** 选项，将选定节点以 XML 片段方式返回。  
   
--   选择“值” **** 选项，以返回所有选定节点的内部文本值，这些值串联为一个字符串。  
+-   选择“值”  选项，以返回所有选定节点的内部文本值，这些值串联为一个字符串。  
   
 ### <a name="validation-operation"></a>Validation 运算  
  可以将 Validation 运算配置为使用文档类型定义 (DTD) 架构或 XML 架构定义 (XSD) 架构。  
@@ -119,9 +119,9 @@ ms.locfileid: "75232730"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [XML 任务编辑器 &#40;常规 "页面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [XML 任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
   
--   [Validate XML with the XML Task](xml-task.md)  
+-   [使用 XML 任务验证 XML](xml-task.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   

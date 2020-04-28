@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 08df1a4c00bf3b019cf45f168aeeaaf27fdb751c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243237"
 ---
 # <a name="specify-a-breakpoint-action"></a>指定断点操作
   断点 **“命中条件”** 操作指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器针对某个断点执行的自定义任务。 如果达到指定的命中计数并满足所有指定的断点条件，则调试器将执行为断点指定的操作。  
   
-##  <a name="BKMK_ActionConsiderations"></a> 操作注意事项  
+##  <a name="action-considerations"></a><a name="BKMK_ActionConsiderations"></a> 操作注意事项  
  当命中计数和断点条件都得到满足时，断点的默认操作为中断执行。 **调试器中** “命中条件” [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作的主要用途是通过指定打印消息，将信息打印到调试器的 **“输出”** 窗口。  
   
  打印消息在 **“打印消息”** 选项中指定并被指定为一个文本字符串，其中包含的表达式包括正在调试的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的信息。 表达式包括：  

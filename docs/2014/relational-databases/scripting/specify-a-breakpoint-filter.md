@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a9759134504c7b55f5008783a2e6c3bd9ebf1755
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243222"
 ---
 # <a name="specify-a-breakpoint-filter"></a>指定断点筛选器
   断点筛选器对断点进行限制，使其仅对指定的计算机、操作系统进程和线程执行操作。 断点筛选器通常在调试并行应用程序时使用。  
   
-##  <a name="BKMK_ActionConsiderations"></a> 筛选器注意事项  
+##  <a name="filter-considerations"></a><a name="BKMK_ActionConsiderations"></a> 筛选器注意事项  
  断点筛选器通常不与 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器结合使用，因为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本和存储过程不是并行应用程序。  
   
 #### <a name="to-specify-a-breakpoint-filter"></a>指定断点筛选器  
@@ -35,14 +35,11 @@ ms.locfileid: "75243222"
   
 2.  在 **“断点筛选器”** 对话框中，使用 **“筛选器”** 框按名称指定计算机，或者按名称或 ID 编号指定操作系统进程和线程：  
   
-    -   
-  `MachineName` 是运行数据库引擎实例的计算机。  
+    -   `MachineName` 是运行数据库引擎实例的计算机。  
   
-    -   
-  `ProcessID` 和 `ProcessName` 是运行数据库引擎实例的操作系统进程。  
+    -   `ProcessID` 和 `ProcessName` 是运行数据库引擎实例的操作系统进程。  
   
-    -   
-  `ThreadID` 和 `ThreadName` 是在数据库引擎实例中运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理、过程或功能的操作系统线程。  
+    -   `ThreadID` 和 `ThreadName` 是在数据库引擎实例中运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理、过程或功能的操作系统线程。  
   
 3.  单击 **“确定”** 实施更改，或单击 **“取消”** 退出而不应用更改。  
   

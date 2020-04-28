@@ -14,19 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3d58ac84e394d7b8dfe342430991f2ddefa678be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74684460"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio 中的用户帮助
-  
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 通过“帮助”菜单和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书提供用户帮助。 
-  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中的“帮助”菜单以几种不同的途径提供有关 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的信息。 它还提供了对以前无法在“帮助”环境中使用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 社区和 MSDN 在线资源的访问。 此外，现在可以将“帮助”环境配置为在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 环境中启动或在其自身的关联外部窗口中启动。  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 通过“帮助”菜单和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书提供用户帮助。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中的“帮助”菜单以几种不同的途径提供有关 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的信息。 它还提供了对以前无法在“帮助”环境中使用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 社区和 MSDN 在线资源的访问。 此外，现在可以将“帮助”环境配置为在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 环境中启动或在其自身的关联外部窗口中启动。  
   
 ## <a name="the-help-interface"></a>“帮助”界面  
- “目录”**** 和“索引”**** 提供了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用户熟悉的功能和界面。 其他选项有：  
+ “目录”  和“索引”  提供了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用户熟悉的功能和界面。 其他选项有：  
   
 -   **如何实现**  
   
@@ -34,8 +32,7 @@ ms.locfileid: "74684460"
   
 -   **搜索**  
   
-     使用或不使用预定义的筛选器来搜索主题。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的“搜索”是一个单独的选项卡式页。 用户可以使用一个或多个预定义的主题类型、语言或技术筛选器来限定搜索。 默认情况下，“搜索”不使用任何预定义的筛选器，并且只搜索已安装集合中的主题。  
+     使用或不使用预定义的筛选器来搜索主题。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的“搜索”是一个单独的选项卡式页。 用户可以使用一个或多个预定义的主题类型、语言或技术筛选器来限定搜索。 默认情况下，“搜索”不使用任何预定义的筛选器，并且只搜索已安装集合中的主题。  
   
      用户可以启用联机帮助，以在搜索中包括在线资源。 有关详细信息，请参阅本主题后面的“MSDN Online 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 社区”。  
   
@@ -47,11 +44,10 @@ ms.locfileid: "74684460"
   
      存储用户主题书签，以便于以后访问。  
   
- 对“帮助”的帮助（[!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer 帮助）可将用户链接到有关帮助查看器的文档，但这些主题位于一个独立于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书的集合中。 有关帮助查看器的信息，请从 ** 联机丛书的“帮助”菜单上选择“帮助之帮助”**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 有关将帮助主题帮助集合添加到联机丛书集的信息，请参阅[添加或删除 SQL Server 的产品文档](../2014-toc/index.yml)。  
+ 对“帮助”的帮助（[!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer 帮助）可将用户链接到有关帮助查看器的文档，但这些主题位于一个独立于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书的集合中。 有关帮助查看器的信息，请从  **联机丛书的“帮助”菜单上选择“帮助之帮助”** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 有关将帮助主题帮助集合添加到联机丛书集的信息，请参阅[添加或删除 SQL Server 的产品文档](../2014-toc/index.yml)。  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN Online 和 SQL Server 社区  
- 
-  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中的“帮助”还允许用户通过访问网站上的 MSDN Online 和专门针对于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的社区两种途径来获取信息。 可以：  
+ [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中的“帮助”还允许用户通过访问网站上的 MSDN Online 和专门针对于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的社区两种途径来获取信息。 你可以：  
   
 -   从“如何实现”页访问 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 社区。  
   
@@ -61,7 +57,7 @@ ms.locfileid: "74684460"
   
 1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“帮助”**** 菜单上，单击“如何实现”****。  
   
-2.  此时会打开 “操作方法”[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **** 页。 在“社区链接”侧栏中，单击要访问的社区站点的名称。  
+2.  此时会打开“操作方法[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ****”页。 在“社区链接”侧栏中，单击要访问的社区站点的名称。  
   
     > [!NOTE]  
     >  运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的计算机必须直接连接到 Web。  
@@ -70,7 +66,7 @@ ms.locfileid: "74684460"
   
 #### <a name="to-enable-online-search"></a>启用联机搜索  
   
-1.  在“工具”  菜单上，单击“选项”  。 在“选项”**** 对话框中，展开“环境”**** 和“帮助”**** 节点（如有必要），然后单击“联机”****。  
+1.  在“工具” **** 菜单上，单击“选项” ****。 在“选项”**** 对话框中，展开“环境”**** 和“帮助”**** 节点（如有必要），然后单击“联机”****。  
   
 2.  在“当载入帮助内容时”**** 区域中，选择一个联机选项。  
   
@@ -89,13 +85,12 @@ ms.locfileid: "74684460"
  无论是否使用可用的筛选器（技术、语言和主题类型）执行搜索，搜索都将立即对选择的所有搜索提供程序执行。  
   
 ## <a name="launching-help"></a>启动帮助  
- 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中有两种可以显示帮助的方法。 默认情况下，从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中打开 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]联机丛书时，该丛书将从 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 环境以外的文档窗口中打开。 此窗口仍与 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]相关联；它可以对一些 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 事件做出响应；当您关闭 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]时，联机丛书也会关闭。 当您使用两台监视器时，以这种方式“打开联机丛书”特别有用；您可以将联机丛书窗口拖到第二台监视器中，不干扰您在第一台监视器中所进行的工作，并且便于引用。  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中有两种可以显示帮助的方法。 默认情况下，从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中打开 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]联机丛书时，该丛书将从 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 环境以外的文档窗口中打开。 此窗口仍与 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]相关联；它可以对一些 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 事件做出响应；当您关闭 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]时，联机丛书也会关闭。 当您使用两台监视器时，以这种方式“打开联机丛书”特别有用；您可以将联机丛书窗口拖到第二台监视器中，不干扰您在第一台监视器中所进行的工作，并且便于引用。  
   
  还可以在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中将联机丛书作为文档窗口打开。 当屏幕空间有限，并且要使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 及其隐藏窗口的功能时，最好使用这种方法。  
   
 > [!NOTE]  
->  若要使联机丛书完全独立于 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，请从“开始”[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]**菜单打开 ** 联机丛书，这样它便不再响应你在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 环境中执行的操作，也不会在你退出 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 时关闭。  
+>  若要使联机丛书完全独立于 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，请从“开始”**** 菜单打开 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书，这样它便不再响应你在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 环境中执行的操作，也不会在你退出 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 时关闭。  
   
 #### <a name="to-configure-help-and-sql-server-books-online-to-launch-inside-the-management-studio-window"></a>将帮助和 SQL Server 联机丛书配置为在 Management Studio 窗口中启动  
   

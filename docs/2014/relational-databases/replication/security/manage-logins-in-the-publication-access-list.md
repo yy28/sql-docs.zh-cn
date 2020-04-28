@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4ce984303ea0a9e9a85f20e7d921a720be6ef299
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74479237"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>管理发布访问列表中的登录名
@@ -38,13 +38,13 @@ ms.locfileid: "74479237"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   
 -   在将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名添加到 PAL 前，必须将该登录名与发布数据库中的数据库用户关联。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  可以使用“发布属性 - **发布>”** **对话框的“发布访问列表”\<** 页上的发布访问列表 (PAL) 管理登录名。 有关如何访问此对话框的详细信息，请参阅[查看和修改发布属性](../publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-manage-logins-in-the-pal"></a>管理 PAL 中的登录名  
@@ -56,7 +56,7 @@ ms.locfileid: "74479237"
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-view-groups-and-logins-that-belong-to-the-pal"></a>查看属于 PAL 的组和登录名  
   

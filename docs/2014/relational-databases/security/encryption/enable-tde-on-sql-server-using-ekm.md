@@ -16,10 +16,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 8b3f046017aa54f5db96878f8bfb6c435409d839
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957225"
 ---
 # <a name="enable-tde-using-ekm"></a>使用 EKM 启用 TDE
@@ -37,9 +37,9 @@ ms.locfileid: "74957225"
   
 -   [使用 EKM 和 Transact-SQL 启用 TDE](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   必须是高特权用户（如系统管理员）才能创建数据库加密密钥以及加密数据库。 该用户必须能够通过 EKM 模块进行身份验证。  
   
@@ -49,9 +49,9 @@ ms.locfileid: "74957225"
   
 -   您的 EKM 提供程序所需的选项和参数可能与下面的代码示例中所提供的选项和参数不同。 有关详细信息，请参阅 EKM 提供程序。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  本主题使用了以下权限：  
   
 -   若要更改配置选项以及运行 RECONFIGURE 语句，您必须具有 ALTER SETTINGS 服务器级别权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
@@ -64,7 +64,7 @@ ms.locfileid: "74957225"
   
 -   需要拥有对数据库的 CONTROL 权限才能加密该数据库。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-enable-tde-using-ekm"></a>使用 EKM 启用 TDE  
   

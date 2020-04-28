@@ -17,23 +17,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e040fb9c05683be9d737ea134710c03d36317cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75229012"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>AlwaysOn 可用性组 (SQL Server)
-  
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能是一个提供替代数据库镜像的企业级方案的高可用性和灾难恢复解决方案。 
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中引入了 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]功能，此功能可最大程度地提高一组用户数据库对企业的可用性。 *可用性组*支持故障转移的一组离散的用户数据库（称为*可用性数据库*）的故障转移环境。 一个可用性组支持一组读写主数据库以及一至八组对应的辅助数据库。 （可选）可使辅助数据库能进行只读访问和/或某些备份操作。  
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能是一个提供替代数据库镜像的企业级方案的高可用性和灾难恢复解决方案。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中引入了 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]功能，此功能可最大程度地提高一组用户数据库对企业的可用性。 “可用性组” ** 针对一组离散的用户数据库（称为“可用性数据库” **，它们共同实现故障转移）支持故障转移环境。 一个可用性组支持一组读写主数据库以及一至八组对应的辅助数据库。 （可选）可使辅助数据库能进行只读访问和/或某些备份操作。  
   
  可用性组在可用性副本级别进行故障转移。 故障转移不是由诸如因数据文件丢失而使数据库成为可疑数据库、删除数据库或事务日志损坏等此类数据库问题导致的。  
   
   
-##  <a name="Benefits"></a> 优势  
- 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 提供了一组丰富的选项来提高数据库的可用性并改进资源使用情况。 主要组件如下：  
+##  <a name="benefits"></a><a name="Benefits"></a>便利  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 提供了一组丰富的选项来提高数据库的可用性并改进资源使用情况。 主要组件如下：  
   
 -   支持最多九个可用性副本。 “可用性副本” ** 是可用性组的实例化，此可用性组由特定的 SQL Server 实例承载，该实例维护属于此可用性组的每个可用性数据库的本地副本。 每个可用性组都支持一个主副本和最多八个辅助副本。 有关详细信息，请参阅： [AlwaysOn 可用性组概述 (SQL Server)](overview-of-always-on-availability-groups-sql-server.md)。  
   
@@ -68,32 +65,25 @@ ms.locfileid: "75229012"
   
 -   提供了一组集成的工具来简化部署和管理可用性组，这些工具包括：  
   
-    -   
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)] DDL 语句。 有关详细信息，请参阅[Always On 可用性组的 Transact-sql 语句概述;SQL Server;](transact-sql-statements-for-always-on-availability-groups.md)。  
+    -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] DDL 语句。 有关详细信息，请参阅[Always On 可用性组的 Transact-sql 语句概述;SQL Server;](transact-sql-statements-for-always-on-availability-groups.md)。  
   
-    -   
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 工具，如下所示：  
+    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 工具，如下所示：  
   
-        -   
-  [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 创建和配置可用性组。 在某些环境中，此向导还可以自动准备辅助数据库并且为每个数据库启动数据同步。 有关详细信息，请参阅[使用 "新建可用性组" 对话框。SQL Server Management Studio;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)。  
+        -   [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 创建和配置可用性组。 在某些环境中，此向导还可以自动准备辅助数据库并且为每个数据库启动数据同步。 有关详细信息，请参阅[使用 "新建可用性组" 对话框。SQL Server Management Studio;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)。  
   
-        -   
-  [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 向现有可用性组添加一个或多个主数据库。 在某些环境中，此向导还可以自动准备辅助数据库并且为每个数据库启动数据同步。 有关详细信息，请参阅 [使用“将数据库添加到可用性组向导”(SQL Server)](availability-group-add-database-to-group-wizard.md)。  
+        -   [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 向现有可用性组添加一个或多个主数据库。 在某些环境中，此向导还可以自动准备辅助数据库并且为每个数据库启动数据同步。 有关详细信息，请参阅 [使用“将数据库添加到可用性组向导”(SQL Server)](availability-group-add-database-to-group-wizard.md)。  
   
-        -   
-  [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 向现有可用性组添加一个或多个辅助副本。 在某些环境中，此向导还可以自动准备辅助数据库并且为每个数据库启动数据同步。 有关详细信息，请参阅[使用 "将副本添加到可用性组向导";SQL Server Management Studio;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)。  
+        -   [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 向现有可用性组添加一个或多个辅助副本。 在某些环境中，此向导还可以自动准备辅助数据库并且为每个数据库启动数据同步。 有关详细信息，请参阅[使用 "将副本添加到可用性组向导";SQL Server Management Studio;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)。  
   
-        -   
-  [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 启动对可用性组的手动故障转移。 根据您指定为故障转移目标的辅助副本的配置和状态，该向导可以指定计划的手动故障转移或强制手动故障转移。 有关详细信息，请参阅[使用故障转移可用性组向导;SQL Server Management Studio;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)。  
+        -   [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 启动对可用性组的手动故障转移。 根据您指定为故障转移目标的辅助副本的配置和状态，该向导可以指定计划的手动故障转移或强制手动故障转移。 有关详细信息，请参阅[使用故障转移可用性组向导;SQL Server Management Studio;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)。  
   
-    -   
-  [!INCLUDE[ssAoDash](../../../includes/ssaodash-md.md)] 监视 AlwaysOn 可用性组、可用性副本和可用性数据库，并且评估 AlwaysOn 策略的结果。 有关详细信息，请参阅[使用 AlwaysOn 仪表板;SQL Server Management Studio;](use-the-always-on-dashboard-sql-server-management-studio.md)。  
+    -   [!INCLUDE[ssAoDash](../../../includes/ssaodash-md.md)] 监视 AlwaysOn 可用性组、可用性副本和可用性数据库，并且评估 AlwaysOn 策略的结果。 有关详细信息，请参阅[使用 AlwaysOn 仪表板;SQL Server Management Studio;](use-the-always-on-dashboard-sql-server-management-studio.md)。  
   
     -   “对象资源管理器详细信息”窗格显示有关现有可用性组的基本信息。 有关详细信息，请参阅[使用对象资源管理器详细信息监视可用性组;SQL Server Management Studio;](use-object-explorer-details-to-monitor-availability-groups.md)。  
   
     -   PowerShell cmdlet。 有关详细信息，请参阅[Always On 可用性组的 PowerShell Cmdlet 概述;SQL 服务](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)。  
   
-##  <a name="TermsAndDefinitions"></a>术语和定义  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a>术语和定义  
  可用性组 (availability group)  
  一个容器，用于一组共同实现故障转移的数据库（“可用性数据库”**）。  
   
@@ -121,9 +111,8 @@ ms.locfileid: "75229012"
 > [!NOTE]  
 >  有关详细信息，请参阅[AlwaysOn 可用性组概述;SQL 服务](overview-of-always-on-availability-groups-sql-server.md)。  
   
-##  <a name="Interoperability"></a>互操作性和与其他数据库引擎功能共存  
- 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 可与以下 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]功能和组件一起使用：  
+##  <a name="interoperability-and-coexistence-with-other-database-engine-features"></a><a name="Interoperability"></a>互操作性和与其他数据库引擎功能共存  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 可与以下 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]功能和组件一起使用：  
   
 -   [关于变更数据捕获;SQL Server;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
@@ -154,13 +143,13 @@ ms.locfileid: "75229012"
 > [!WARNING]  
 >  有关使用的其他功能的限制和限制的信息[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，请参阅[Always On 可用性组：互操作性;SQL Server;](always-on-availability-groups-interoperability-sql-server.md)。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [Always On 可用性组的入门;SQL Server;](getting-started-with-always-on-availability-groups-sql-server.md)  
   
-##  <a name="RelatedContent"></a> 相关内容  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
--   **博客**  
+-   **博客：**  
   
      [SQL Server Always On 团队博客：官方 SQL Server AlwaysOn 团队博客](https://blogs.msdn.com/b/sqlalwayson/)  
   
@@ -168,11 +157,11 @@ ms.locfileid: "75229012"
   
 -   **视频**  
   
-     [Microsoft SQL Server 名为 "Denali" Always On 系列的第1部分：介绍下一代高可用性解决方案](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named "Denali" AlwaysOn 系列，第一部分：介绍下一代高可用性解决方案](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Microsoft SQL Server 名为 "Denali" Always On 系列，第2部分：使用 AlwaysOn 生成关键任务高可用性解决方案](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
--   **白皮书**  
+-   **白皮书：**  
   
      [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
@@ -184,7 +173,7 @@ ms.locfileid: "75229012"
  [为 Always On 可用性组配置服务器实例;SQL Server;](always-on-availability-groups-sql-server.md)   
  [创建和配置可用性组;SQL Server;](creation-and-configuration-of-availability-groups-sql-server.md)   
  [管理可用性组;SQL Server;](administration-of-an-availability-group-sql-server.md)   
- [监视可用性组 &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
+ [监视可用性组 (SQL Server)](monitoring-of-availability-groups-sql-server.md)   
  [Always On 可用性组的 Transact-sql 语句概述;SQL Server;](transact-sql-statements-for-always-on-availability-groups.md)   
  [AlwaysOn 可用性组的 PowerShell Cmdlet 概述;SQL Server;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   

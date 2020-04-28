@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef49bb86c8e16600f2ff1bf2d1c7a92ecc5af964
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401479"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>为并行数据仓库获取和配置加载服务器
 本文介绍如何将加载服务器作为非设备 Windows 系统获取和配置，以便将数据加载到并行数据仓库（PDW）。  
   
-## <a name="Basics"></a>传授  
+## <a name="basics"></a><a name="Basics"></a>基础知识  
 加载服务器：  
   
 -   不必是单一服务器。 可以同时加载多个加载服务器。  
@@ -32,15 +32,15 @@ ms.locfileid: "74401479"
   
 -   位于你自己的客户域中，而不是设备域。 你的客户域与设备域之间没有信任关系。  
   
-## <a name="Step1"></a>步骤1：确定容量要求  
+## <a name="step-1-determine-capacity-requirements"></a><a name="Step1"></a>步骤1：确定容量要求  
 加载系统可设计为执行并发加载的一个或多个加载服务器。 每个加载服务器不必专用于加载，只要它将处理工作负荷的性能和存储要求。  
   
 加载服务器的系统要求几乎完全取决于您自己的工作负载。 使用[加载服务器容量规划工作表](loading-server-capacity-planning-worksheet.md)来帮助确定容量需求。  
   
-## <a name="Step2"></a>步骤2：获取 Server  
+## <a name="step-2-acquire-the-sserver"></a><a name="Step2"></a>步骤2：获取 Server  
 既然您更好地了解了容量要求，您可以规划需要购买或预配的服务器和网络组件。 将以下要求列表纳入购买计划，然后购买服务器或预配现有服务器。  
   
-### <a name="R"></a>软件要求  
+### <a name="software-requirements"></a><a name="R"></a>软件要求  
 支持的操作系统：  
   
 -   Windows Server 2012 或 Windows Server 2012 R2。 这些操作系统需要 FDR 网络适配器。  
@@ -60,7 +60,7 @@ ms.locfileid: "74401479"
   
 3.  为双端口卡购买2个 FDR 的，或者为单端口卡购买1个 FDR 的电源线。 FDR 的无线电缆会将加载服务器连接到设备的 "无线网络"。 缆线长度取决于负载服务器与设备不会的交换机之间的距离，取决于您的环境。  
   
-## <a name="Step3"></a>步骤3：将服务器连接到不工作网络  
+## <a name="step-3-connect-the-server-to-the-infiniband-networks"></a><a name="Step3"></a>步骤3：将服务器连接到不工作网络  
 使用以下步骤将加载服务器连接到 "未占用网络"。 如果服务器未使用 "未使用" 网络，请跳过此步骤。  
   
 1.  使服务器接近于设备，以便可以将其连接到设备的 "无线网络"。  
@@ -75,7 +75,7 @@ ms.locfileid: "74401479"
   
 5.  为网络适配器配置 "未设置" 和 "DNS" 设置。 有关配置说明，请参阅[配置无线网络适配器](configure-infiniband-network-adapters.md)。  
   
-## <a name="Step4"></a>步骤4：安装加载工具  
+## <a name="step-4-install-the-loading-tools"></a><a name="Step4"></a>步骤4：安装加载工具  
 可从 Microsoft 下载中心下载客户端工具。 
 
 若要安装 dwloader，请从客户端工具运行 dwloader 安装。
@@ -85,8 +85,8 @@ ms.locfileid: "74401479"
 <!-- To install the des[Install Integration Services Destination Adapters](install-integration-services-destination-adapters.md). 
 --> 
   
-## <a name="Step5"></a>步骤5：开始加载  
-你现在已准备好开始加载数据。 有关详细信息，请参阅：  
+## <a name="step-5-start-loading"></a><a name="Step5"></a>步骤5：开始加载  
+你现在已准备好开始加载数据。 有关详细信息，请参见:  
   
 1.  [dwloader 命令行加载工具](dwloader.md)  
   
@@ -95,7 +95,7 @@ ms.locfileid: "74401479"
 ## <a name="performance"></a>性能  
 若要在 Windows Server 2012 和更高版本中获得最佳加载性能，请打开即时文件初始化，以便在覆盖数据时，操作系统将不会用零覆盖现有数据。 如果这是安全风险，因为以前的数据仍存在于磁盘上，请确保关闭即时文件初始化。  
   
-## <a name="Security"></a>安全通知  
+## <a name="security-notices"></a><a name="Security"></a>安全通知  
 由于要加载的数据未存储在设备上，因此你的 IT 团队负责管理要加载的数据的安全的所有方面。 例如，这包括管理要加载的数据的安全、用于存储负载的服务器的安全性，以及将加载服务器连接到 SQL Server PDW 设备的网络基础结构的安全性。  
   
 > [!IMPORTANT]  

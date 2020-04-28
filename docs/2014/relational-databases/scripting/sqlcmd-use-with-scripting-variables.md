@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6893d00a1fa7fb0986be2eb6241c596160085e2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243170"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>将 sqlcmd 与脚本变量结合使用
@@ -33,8 +33,7 @@ ms.locfileid: "75243170"
  本主题还包含有关使用 **SET**在 Cmd.exe 命令提示符下定义环境变量的示例。  
   
 ## <a name="setting-scripting-variables-by-using-the-setvar-command"></a>使用 setvar 命令设置脚本变量  
- 
-  **setvar** 命令用于定义脚本变量。 内部存储使用 **setvar** 命令定义的变量。 不应将脚本变量与使用 **SET**在命令提示符下定义的环境变量相混淆。 如果脚本引用的变量不是环境变量，或不是使用 **setvar**定义的变量，则会返回错误消息，并将停止执行脚本。 有关详细信息，请参阅 **sqlcmd 实用工具** 中的 [-b](../../tools/sqlcmd-utility.md)选项。  
+ **setvar** 命令用于定义脚本变量。 内部存储使用 **setvar** 命令定义的变量。 不应将脚本变量与使用 **SET**在命令提示符下定义的环境变量相混淆。 如果脚本引用的变量不是环境变量，或不是使用 **setvar**定义的变量，则会返回错误消息，并将停止执行脚本。 有关详细信息，请参阅 **sqlcmd 实用工具** 中的 [-b](../../tools/sqlcmd-utility.md)选项。  
   
 ## <a name="variable-precedence-low-to-high"></a>变量优先级（从低到高）  
  如果有多类变量具有相同的名称，则使用优先级最高的变量。  
@@ -45,19 +44,19 @@ ms.locfileid: "75243170"
   
 3.  启动**SET X=Y**之前在命令提示符下设置的命令 shell ( **SET X=Y**)  
   
-4.  **sqlcmd-v**X = Y  
+4.  **sqlcmd-v** X=Y  
   
-5.  **： Setvar**X Y  
+5.  **:Setvar** X Y  
   
 > [!NOTE]  
->  若要查看环境变量，请在“控制面板”**** 中打开“系统”****，然后单击“高级”**** 选项卡。  
+>  若要查看环境变量，请在“控制面板”  中打开“系统”  ，然后单击“高级”  选项卡。  
   
 ## <a name="implicitly-setting-scripting-variables"></a>隐式设置脚本变量  
  使用具有相关 **sqlcmd** 变量的选项启动 **sqlcmd** 时， **sqlcmd** 变量将被隐式设置为使用该选项指定的值。 在下面的示例中，启动 `sqlcmd` 时使用了 `-l` 选项。 这会隐式设置 SQLLOGINTIMEOUT 变量。  
   
  `c:\> sqlcmd -l 60`  
   
- 你还可以使用 **-v** 选项对脚本中的脚本变量进行设置。 在下面的脚本（文件名为 `testscript.sql`）中，`ColumnName` 是一个脚本变量。  
+ 你还可以使用 **-v** 选项对脚本中的脚本变量进行设置。 在下面的脚本（文件名为 `testscript.sql`）中， `ColumnName` 是一个脚本变量。  
   
  `USE AdventureWorks2012;`  
   
@@ -65,8 +64,7 @@ ms.locfileid: "75243170"
   
  `FROM Person.Person x`  
   
- 
-  `WHERE c.` BusinessEntityID `< 5;`  
+ `WHERE c.` BusinessEntityID `< 5;`  
   
  然后，您可以使用 `-v` 选项指定要返回的列名称：  
   
@@ -108,16 +106,16 @@ ms.locfileid: "75243170"
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER*|-U|R|""|  
 |SQLCMDPASSWORD*|-P|--|""|  
-|SQLCMDSERVER*|-S|R|"DefaultLocalInstance"|  
-|SQLCMDWORKSTATION|-h|R|"ComputerName"|  
+|SQLCMDSERVER*|sqlcmd|R|"DefaultLocalInstance"|  
+|SQLCMDWORKSTATION|-H|R|"ComputerName"|  
 |SQLCMDDBNAME|-d|R|""|  
 |SQLCMDLOGINTIMEOUT|-l|R/W|"8"（秒）|  
 |SQLCMDSTATTIMEOUT|-t|R/W|"0" = 无限期等待|  
-|SQLCMDHEADERS|-h|R/W|"0"|  
-|SQLCMDCOLSEP|-s|R/W|" "|  
-|SQLCMDCOLWIDTH|-w|R/W|"0"|  
+|SQLCMDHEADERS|-H|R/W|“0”|  
+|SQLCMDCOLSEP|-S|R/W|" "|  
+|SQLCMDCOLWIDTH|-w|R/W|“0”|  
 |SQLCMDPACKETSIZE|-a|R|"4096"|  
-|SQLCMDERRORLEVEL|-M|R/W|"0"|  
+|SQLCMDERRORLEVEL|-M|R/W|“0”|  
 |SQLCMDMAXVARTYPEWIDTH|-y|R/W|"256"|  
 |SQLCMDMAXFIXEDTYPEWIDTH|-y|R/W|"0" = 无限制|  
 |SQLCMDEDITOR||R/W|"edit.com"|  
@@ -189,7 +187,7 @@ ms.locfileid: "75243170"
  `4> GO`  
   
 ### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>D. 在 sqlcmd 中使用用户级环境变量  
- 在下面的示例中，在命令提示符下设置了用户级环境变量 `%Temp%` ，并将其传递给了 `sqlcmd` 输入文件。 若要获取用户级环境变量，请在“控制面板”**** 中双击“系统”****。 单击 **“高级”** 选项卡，再单击 **“环境变量”**。  
+ 在下面的示例中，在命令提示符下设置了用户级环境变量 `%Temp%` ，并将其传递给了 `sqlcmd` 输入文件。 若要获取用户级环境变量，请在“控制面板”  中双击“系统”  。 单击 **“高级”** 选项卡，再单击 **“环境变量”** 。  
   
  下列代码位于输入文件 `c:\testscript.txt`:  
   
@@ -269,8 +267,7 @@ ms.locfileid: "75243170"
  `>1 < user > is connected to < server > (9.00.2047.00)`  
   
 > [!NOTE]  
->  
-  **-X** 选项禁用启动脚本功能。  
+>  **-X** 选项禁用启动脚本功能。  
   
 ### <a name="f-variable-expansion"></a>F. 变量扩展  
  下面的示例演示了以 **sqlcmd** 变量的形式处理数据。  
@@ -346,6 +343,6 @@ ms.locfileid: "75243170"
 ## <a name="see-also"></a>另请参阅  
  [使用 sqlcmd 实用工具](sqlcmd-use-the-utility.md)   
  [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)   
- [命令提示实用工具引用 &#40;数据库引擎&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+ [命令提示实用工具参考（数据库引擎）](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

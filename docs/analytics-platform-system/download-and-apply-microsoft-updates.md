@@ -10,23 +10,23 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2b24d55720d6db5997bfa85c2621f0e8d58c5f95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401195"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>下载并应用 Microsoft 更新以进行分析平台系统
 本主题讨论如何将更新从 Microsoft 更新目录下载到 Windows Server Update Services （WSUS），并将这些更新应用到分析平台系统设备服务器。 Microsoft 更新将安装适用于 Windows 和 SQL Server 的所有适用更新。 WSUS 安装在设备的 VMM 虚拟机上。  
   
-## <a name="TOP"></a>开始之前  
+## <a name="before-you-begin"></a><a name="TOP"></a>开始之前  
   
 > [!WARNING]  
 > 如果设备或任何设备组件关闭或处于故障转移状态，请不要尝试应用更新。 在这种情况下，请联系支持人员获取帮助。  
 >   
 > 请勿在设备使用时应用 Microsoft 更新。 应用更新可能会导致装置节点重新启动。 如果未使用设备，则应在维护时段内应用这些更新。  
   
-### <a name="prerequisites"></a>必备条件  
+### <a name="prerequisites"></a>先决条件  
 执行这些步骤之前，需要：  
   
 -   按照[配置 Windows Server Update Services &#40;wsus&#41; &#40;分析平台系统&#41;](configure-windows-server-update-services-wsus.md)中的说明，在设备上配置 wsus。  
@@ -35,9 +35,9 @@ ms.locfileid: "74401195"
   
 -   具有一个登录名，该登录名具有访问分析平台系统管理控制台的权限并查看设备状态信息。  
   
--   在大多数情况下，WSUS 需要访问设备之外的服务器。 若要支持此使用方案，可将分析平台系统 DNS 配置为支持外部名称转发器，这将允许分析平台系统主机和虚拟机（Vm）使用外部 DNS 服务器来解析本. 有关详细信息，请参阅[使用 DNS 转发器解析非设备 DNS 名称 &#40;分析平台系统&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)。  
+-   在大多数情况下，WSUS 需要访问设备之外的服务器。 若要支持此使用方案，可将分析平台系统 DNS 配置为支持外部名称转发器，使分析平台系统主机和虚拟机（Vm）可以使用外部 DNS 服务器来解析设备之外的名称。 有关详细信息，请参阅[使用 DNS 转发器解析非设备 DNS 名称 &#40;分析平台系统&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)。  
   
-## <a name="bkmk_ImportUpdates"></a>下载并应用 Microsoft 更新  
+## <a name="to-download-and-apply-microsoft-updates"></a><a name="bkmk_ImportUpdates"></a>下载并应用 Microsoft 更新  
   
 #### <a name="verify-the-appliance-state-indicators"></a>验证设备状态指示器  
   
@@ -65,7 +65,7 @@ ms.locfileid: "74401195"
   
 1.  在 WSUS 控制台的左窗格中，单击 "**所有更新**"。  
   
-2.  在 "**所有更新**" 窗格中，单击 "**审批**" 下拉菜单，将 "**批准**" 设置为 "已**拒绝**"。 单击 "**状态**" 下拉菜单，将 "**状态**" 设置为 "**任何**"。 单击“刷新”。   
+2.  在 "**所有更新**" 窗格中，单击 "**审批**" 下拉菜单，将 "**批准**" 设置为 "已**拒绝**"。 单击 "**状态**" 下拉菜单，将 "**状态**" 设置为 "**任何**"。 单击“刷新”。****  
   
     右键单击 "**标题**" 列，然后选择 "**文件状态**" 以在下载完成后验证文件状态。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "74401195"
   
 4.  选择在 "[配置 Windows Server Update Services &#40;WSUS&#41; &#40;Analytics 平台系统"&#41;](configure-windows-server-update-services-wsus.md)中创建的设备服务器组。  
   
-5.  单击 **“批准安装”**，然后单击 **“确定”**。  
+5.  单击 **“批准安装”** ，然后单击 **“确定”** 。  
   
     ![批准为您的计算机组更新。](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprovalType.png "SQL_Server_PDW_WSUSSelectApprovalType")  
   
@@ -129,7 +129,7 @@ ms.locfileid: "74401195"
   
 8.  在 "**所有更新**" 窗口中，将 "**状态**" 设置为 "**失败或需要**"。  
   
-9. 单击“刷新”。   
+9. 单击“刷新”。****  
   
 10. 如果**需要的更新**大于零，请联系支持人员以获得帮助。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "74401195"
   
 2.  验证所有节点的 "**群集**" 和 "**网络**" 列都显示为绿色（或 NA）。 如果任一列中存在任何警报，则设备可能无法正确安装更新。 如果有任何严重警报，请联系支持人员。  
   
-## <a name="RunUpdateWizard"></a>运行更新程序  
+## <a name="run-the-update-program"></a><a name="RunUpdateWizard"></a>运行更新程序  
 按照以下说明运行分析平台系统更新程序。  
   
 > [!NOTE]  

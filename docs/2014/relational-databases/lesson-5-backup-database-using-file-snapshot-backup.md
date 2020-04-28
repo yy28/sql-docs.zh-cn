@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 689c3a734a5b4eb424511da52032dc348b5757ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75231796"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>第 6 课：将数据库从本地源计算机迁移至 Azure 中的目标计算机
@@ -48,7 +48,7 @@ ms.locfileid: "75231796"
   
         1.  在源计算机中通过 SQL Server Management Studio 连接到目标计算机。  或者，直接在目标计算机中启动 SQL Server Management Studio。  
   
-        2.  在标准工具栏上，单击 "**新建查询**"。  
+        2.  在 “标准” 工具栏上，单击 **“新建查询”**。  
   
         3.  将以下示例复制并粘贴到查询窗口中，并根据需要进行修改。 以下语句将创建一个 SQL Server 凭据来存储存储容器的共享访问证书。  
   
@@ -126,9 +126,9 @@ ms.locfileid: "75231796"
   
  若要使用 SQL Server Management Studio 用户界面创建包含指向 Azure 存储中现有文件的数据和日志文件的数据库，请执行以下步骤：  
   
-1.  在“对象资源管理器”**** 中，连接到一个 SQL Server 数据库引擎实例，然后展开该实例。  
+1.  在“对象资源管理器”  中，连接到一个 SQL Server 数据库引擎实例，然后展开该实例。  
   
-2.  右键单击“数据库”  ，然后单击“新建数据库”  。 然后，右键单击“TestDB1”。 单击“任务”，然后单击“分离”。 在“分离”对话框窗口中，选中“删除连接”。 单击“确定”。   
+2.  右键单击 "**数据库**"，然后单击 "**新建数据库**"。 然后，右键单击“TestDB1”。 单击“任务”，然后单击“分离”。 在“分离”对话框窗口中，选中“删除连接”。 单击“确定”。   
   
 3.  连接到目标计算机，该计算机具有 SQL Server 2014 CTP2 或更高版本。 若要准备目标计算机，需要在目标计算机中创建一个 SQL Server 凭据，使其指向将 TestDB1 放入的同一容器。 如果要在同一个计算机上重新附加，则不需要创建另一个凭据。  
   

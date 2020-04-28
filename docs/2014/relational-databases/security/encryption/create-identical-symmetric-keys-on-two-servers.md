@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 1ff075880833be8179697cb4047babee67cfe61e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957221"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>在两个服务器上创建相同的对称密钥
@@ -32,20 +32,20 @@ ms.locfileid: "74957221"
   
 -   [使用 Transact-SQL 在两台不同的服务器上创建相同的对称密钥](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   创建对称密钥时，必须至少使用以下项之一来对该对称密钥进行加密：证书、密码、对称密钥、非对称密钥或 PROVIDER。 可使用上述每种类型中的多项对密钥进行加密。 换言之，可以同时使用多个证书、密码、对称密钥以及非对称密钥对单个对称密钥进行加密。  
   
 -   当使用密码（而不是数据库主密钥的公钥）对对称密钥进行加密时，便会使用 TRIPLE DES 加密算法。 因此，用强加密算法（如 AES）创建的密钥本身受较弱算法的保护。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  要求对数据库具有 ALTER ANY SYMMETRIC KEY 权限。 如果指定了 AUTHORIZATION，则要求对数据库用户具有 IMPERSONATE 权限，或者对应用程序角色具有 ALTER 权限。 如果使用证书或非对称密钥进行加密，则要求对证书或非对称密钥具有 VIEW DEFINITION 权限。 只有 Windows 登录名、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名和应用程序角色才能拥有对称密钥。 其他组和角色不能拥有对称密钥。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-identical-symmetric-keys-on-two-different-servers"></a>在两台不同的服务器上创建相同的对称密钥  
   

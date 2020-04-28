@@ -15,15 +15,15 @@ author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 1652d5eec9d6419e7b39f96a8b854eef8651bf26
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74687161"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>使用数据迁移助手执行 SQL Server Integration Service 迁移评估
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 若要评估 SQL Server Integration Service （SSIS）包，需要通过数据迁移助手安装以下组件：
 
@@ -44,7 +44,7 @@ DMA 需要使用**管理员**访问权限来评估包存储区中的 SSIS 包。
 
     选择 "源" 作为 " **SQL Server**"，并将 "目标服务器类型" 设置为 " **azure sql 数据库**" 或 " **azure sql 数据库托管实例**"。
 
-1. 单击 **“创建”**。
+1. 单击“创建”。 
 
     ![创建评估](media/dma-assess-ssis/dma-assess-ssis-create.png)
 
