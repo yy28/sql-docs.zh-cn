@@ -15,10 +15,10 @@ ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e04b5308aeca5881f624122c70ad74c27417a46b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75258336"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>托管数据库对象监视和故障排除
@@ -26,8 +26,7 @@ ms.locfileid: "75258336"
   本主题提供的信息介绍用于对正在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中运行的托管数据库对象和程序集进行监视和故障排除的工具。  
   
 ## <a name="profiler-trace-events"></a>事件探查器跟踪事件  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 SQL 跟踪和事件通知来监视数据库引擎中发生的事件。 通过记录指定事件，SQL 跟踪可以帮助您解决性能问题、审核数据库活动、收集用于测试环境的示例数据、调试 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和存储过程以及为性能分析工具收集数据。 有关详细信息，请参阅[SQL 跟踪](../../relational-databases/sql-trace/sql-trace.md)和[扩展事件](../../relational-databases/extended-events/extended-events.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 SQL 跟踪和事件通知来监视数据库引擎中发生的事件。 通过记录指定事件，SQL 跟踪可以帮助您解决性能问题、审核数据库活动、收集用于测试环境的示例数据、调试 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和存储过程以及为性能分析工具收集数据。 有关详细信息，请参阅[SQL 跟踪](../../relational-databases/sql-trace/sql-trace.md)和[扩展事件](../../relational-databases/extended-events/extended-events.md)。  
   
 |事件|说明|  
 |-----------|-----------------|  
@@ -37,10 +36,9 @@ ms.locfileid: "75258336"
 |[Sql： StmtStarting 事件类](../../relational-databases/event-classes/sql-stmtstarting-event-class.md)， [Sql： StmtCompleted 事件类](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|用于监视 CLR 和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 例程的执行。|  
   
 ## <a name="performance-counters"></a>性能计数器  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了对象和计数器，系统监视器可以使用它们监视运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机中的活动。 对象可以是任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁或 Windows 进程。 每个对象有一个或多个计数器，用于确定所要监视对象的各方面信息。 有关详细信息，请参阅 [使用 SQL Server 对象](../../relational-databases/performance-monitor/use-sql-server-objects.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了对象和计数器，系统监视器可以使用它们监视运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机中的活动。 对象可以是任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁或 Windows 进程。 每个对象有一个或多个计数器，用于确定所要监视对象的各方面信息。 有关详细信息，请参阅 [使用 SQL Server 对象](../../relational-databases/performance-monitor/use-sql-server-objects.md)。  
   
-|Object|说明|  
+|对象|说明|  
 |------------|-----------------|  
 |[SQL Server CLR 对象](../../relational-databases/performance-monitor/sql-server-clr-object.md)|CLR 执行所花的总时间。|  
   
@@ -66,7 +64,7 @@ ms.locfileid: "75258336"
 |[sys. assembly_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)|返回有关在数据库中注册的程序集文件的信息。|  
 |[sys. assembly_types &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)|标识由程序集定义的用户定义类型 (UDT)。|  
 |[sys. module_assembly_usages &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-module-assembly-usages-transact-sql.md)|标识在其中定义 CLR 模块的程序集。|  
-|[sys. parameter_type_usages &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md)|返回有关属于用户定义类型的参数的信息。|  
+|[sys.parameter_type_usages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md)|返回有关属于用户定义类型的参数的信息。|  
 |[sys.server_assembly_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql.md)|标识在其中定义 CLR 触发器的程序集。|  
 |[sys.server_triggers (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)|标识服务器上的服务器级别 DDL 触发器，包括 CLR 触发器。|  
 |[sys. type_assembly_usages &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-type-assembly-usages-transact-sql.md)|标识在其中定义用户定义类型的程序集。|  
@@ -83,10 +81,10 @@ ms.locfileid: "75258336"
 |[sys. dm_clr_tasks &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-tasks-transact-sql.md)|标识当前正在运行的所有 CLR 任务。|  
 |[sys.dm_exec_cached_plans (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)|返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为加快查询执行而缓存的查询执行计划的信息。|  
 |[sys.dm_exec_query_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)|返回缓存查询计划的聚合性能统计信息。|  
-|[sys. dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|返回有关在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中正在执行的每个请求的信息。|  
+|[sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|返回有关在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中正在执行的每个请求的信息。|  
 |[sys. dm_os_memory_clerks &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)|返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中当前处于活动状态的所有内存分配器，包括 CLR 内存分配器。|  
   
 ## <a name="see-also"></a>另请参阅  
- [公共语言运行时 &#40;CLR&#41; 集成编程概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
+ [公共语言运行时 (CLR) 集成编程概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

@@ -30,10 +30,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 02872a037e60fa3af58a70d3599b03c61d0cfb5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257342"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>使用 sql:relationship 指定关系 (SQLXML 4.0)
@@ -61,13 +61,13 @@ ms.locfileid: "75257342"
  **parent-key**  
  指定父项的父键。 如果父键由多列组成，则指定值时应在各值之间使用空格。 在为多列键指定的值与为对应的子键指定的值之间存在位置映射。  
   
- **子**  
+ **子代**  
  指定子关系（表）。  
   
  **child-key**  
  在引用父项中父键的子项中指定子键。 如果子键由多个属性（列）组成，则指定子键值时应在各值之间使用空格。 在为多列键指定的值与为对应的父键指定的值之间存在位置映射。  
   
- **Inverse**  
+ **反转**  
  在** \<sql： relationship>** 上指定的此属性由 updategram 使用。 有关详细信息，请参阅[在 sql： relationship 上指定 sql：反向特性](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)。  
   
  必须在包含子元素的元素中指定**sql：键字段**批注，该元素具有一个在元素和子元素之间定义的** \<sql： relationship>** ，且不提供父元素中指定的表的主键。 即使架构未指定** \<sql： relationship>**，也必须指定**sql： key-字段**以生成适当的层次结构。 有关详细信息，请参阅[使用 sql： key-字段标识键列](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)。  

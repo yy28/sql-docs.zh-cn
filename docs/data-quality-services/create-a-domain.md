@@ -12,10 +12,10 @@ ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: d39f86d2efa18c385f2aafd8b3e4cb7de9975b06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75252263"
 ---
 # <a name="create-a-domain"></a>创建域
@@ -26,17 +26,17 @@ ms.locfileid: "75252263"
   
  可以通过两种方法创建新的域。 第一种方法是在知识发现活动的“映射”步骤期间，当您正在分析数据示例以便将知识添加到新的或现有的知识库中时。 第二种方法是在域管理活动中，当您创建新域（而非更改现有域）时。  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  若要创建域，您必须已创建并打开了知识库。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能创建域。  
   
-##  <a name="Discovery"></a>在知识发现活动中创建域  
+##  <a name="create-a-domain-in-the-knowledge-discovery-activity"></a><a name="Discovery"></a> 在知识发现活动中创建域  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "75252263"
   
 5.  在 **“映射”** 表中，从某个空行的 **“源列”** 列的下拉列表中选择一个源列。 如果相应的域不存在，请单击 **“创建域”** 图标。  
   
-##  <a name="DomainManagement"></a>在域管理活动中创建域  
+##  <a name="create-a-domain-in-the-domain-management-activity"></a><a name="DomainManagement"></a> 在域管理活动中创建域  
   
 1.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，单击 **“打开知识库”** ，然后选择知识库；或单击 **“新建知识库”** 并输入新知识库的属性。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "75252263"
   
 3.  在 **“域管理”** 页上，单击域列表上方的 **“创建域”** 图标。  
   
-##  <a name="Properties"></a>设置域属性  
+##  <a name="set-domain-properties"></a><a name="Properties"></a>设置域属性  
   
 1.  在 **“创建域”** 对话框中，输入名称（对知识库唯一）以及说明（可多达 256 个字符）。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "75252263"
   
 10. 单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)中所述。  
   
-##  <a name="FollowUp"></a>跟进：在创建域后  
+##  <a name="follow-up-after-creating-a-domain"></a><a name="FollowUp"></a> 跟进：创建域后  
  在创建域后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
   
   

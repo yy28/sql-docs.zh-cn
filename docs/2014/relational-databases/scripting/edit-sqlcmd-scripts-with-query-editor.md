@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 224fcd5f6b4c15a492be6aa6d893a4a4e5625b08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245184"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>使用查询编辑器编辑 SQLCMD 脚本
@@ -49,9 +49,9 @@ ms.locfileid: "75245184"
   
 #### <a name="to-switch-a-database-engine-query-editor-window-to-sqlcmd-mode"></a>将数据库引擎查询编辑器窗口切换到 SQLCMD 模式  
   
-1.  在“对象资源管理器”中，右键单击服务器，再单击“新建查询”**** 以打开新的[!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口。  
+1.  在“对象资源管理器”中，右键单击服务器，再单击“新建查询”  以打开新的[!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口。  
   
-2.  在 **“查询”** 菜单中，单击 **“SQLCMD 模式”**。  
+2.  在 **“查询”** 菜单中，单击 **“SQLCMD 模式”** 。  
   
      查询编辑器将在其上下文中执行 **sqlcmd** 语句。  
   
@@ -76,8 +76,7 @@ ms.locfileid: "75245184"
   
     -   （6 行受影响）  
   
-    -   
-  \<目录信息>  
+    -   \<目录信息>  
   
     -   (4 row(s) affected)  
   
@@ -87,7 +86,7 @@ ms.locfileid: "75245184"
  有关如何运行 SQLCMD 的详细信息，请参阅 [sqlcmd Utility](../../tools/sqlcmd-utility.md)或学习 SQLCMD 教程。  
   
 ## <a name="enable-sqlcmd-scripting-by-default"></a>默认启用 SQLCMD 脚本撰写  
- 若要默认启用 SQLCMD 脚本撰写，请在 **“工具”** 菜单中选择 **“选项”**，展开 **“查询执行”** 和 **SQL Server**，单击 **“常规”** 页面，然后选中 **“默认情况下，在 SQLCMD 模式下打开新查询”** 框。  
+ 若要默认启用 SQLCMD 脚本撰写，请在 **“工具”** 菜单中选择 **“选项”** ，展开 **“查询执行”** 和 **SQL Server**，单击 **“常规”** 页面，然后选中 **“默认情况下，在 SQLCMD 模式下打开新查询”** 框。  
   
 ## <a name="writing-and-editing-sqlcmd-scripts"></a>编写和编辑 SQLCMD 脚本  
  启用脚本撰写模式后，可以编写 SQLCMD 命令和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 下列规则适用：  
@@ -102,24 +101,19 @@ ms.locfileid: "75245184"
   
 -   单行注释字符是两个连字符 (`--)` ，必须位于一行的开头。  
   
--   操作系统命令前面必须具有两个感叹号 (`!!`)。 两个感叹号命令使其后的语句通过 `cmd.exe` 命令处理器来执行。 
-  `!!` 后面的文本作为一个参数传递到 `cmd.exe`，因此最终的命令行将如此执行： `"%SystemRoot%\system32\cmd.exe /c <text after !!>"`。  
+-   操作系统命令前面必须具有两个感叹号 (`!!`)。 两个感叹号命令使其后的语句通过 `cmd.exe` 命令处理器来执行。 `!!` 后面的文本作为一个参数传递到 `cmd.exe`，因此最终的命令行将如此执行： `"%SystemRoot%\system32\cmd.exe /c <text after !!>"`。  
   
 -   为了清楚地区分 SQLCMD 命令和 [!INCLUDE[tsql](../../includes/tsql-md.md)]，所有的 SQLCMD 命令都需要在前面添加冒号 (`:`)。  
   
--   
-  `GO` 命令可以直接使用，无需在其前面加 `!!:`  
+-   `GO` 命令可以直接使用，无需在其前面加 `!!:`  
   
--   
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器支持环境变量和定义为 SQLCMD 脚本的一部分的变量，但不支持内置的 SQLCMD 或 **osql** 变量。 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 处理的 SQLCMD 变量区分大小写。 例如，PRINT '$(COMPUTERNAME)' 会生成正确的结果，而 PRINT '$(ComputerName)' 则返回错误。  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器支持环境变量和定义为 SQLCMD 脚本的一部分的变量，但不支持内置的 SQLCMD 或 **osql** 变量。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 处理的 SQLCMD 变量区分大小写。 例如，PRINT '$(COMPUTERNAME)' 会生成正确的结果，而 PRINT '$(ComputerName)' 则返回错误。  
   
 > [!CAUTION]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient 在常规模式和 SQLCMD 模式下执行。 从命令行运行时，SQLCMD 将使用 OLE DB 访问接口。 由于可以应用不同的默认选项，因此在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] SQLCMD 模式下以及在 SQLCMD 实用工具中执行相同的查询时，可能会获得不同的行为。  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在常规模式和 SQLCMD 模式下，使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient 来执行。 从命令行运行时，SQLCMD 将使用 OLE DB 访问接口。 由于可以应用不同的默认选项，因此在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] SQLCMD 模式下以及在 SQLCMD 实用工具中执行相同的查询时，可能会获得不同的行为。  
   
 ## <a name="supported-sqlcmd-syntax"></a>支持的 SQLCMD 语法  
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器支持以下 SQLCMD 脚本关键字：  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器支持以下 SQLCMD 脚本关键字：  
   
  `[!!:]GO[count]`  
   
@@ -144,14 +138,13 @@ ms.locfileid: "75245184"
 > [!NOTE]  
 >  对于 `:error` 和 `:out`， `stderr` 和 `stdout` 将向消息选项卡发送输出。  
   
- 查询编辑器不支持上面未列出的 SQLCMD 命令。 当执行包含不支持的 SQLCMD 关键字的脚本时，查询编辑器将为每个不支持的关键字向目标发送一条 "忽略命令* \<忽略命令*>" 消息。 脚本将成功执行，但同时忽略不支持的命令。  
+ 查询编辑器不支持上面未列出的 SQLCMD 命令。 执行包含不支持的 SQLCMD 关键字的脚本时，查询编辑器会为每个不支持的关键字向目标发送一条“忽略命令 *\<ignored command>* ”消息。 脚本将成功执行，但同时忽略不支持的命令。  
   
 > [!CAUTION]  
 >  因为不是从命令行启动 SQLCMD，所以在 SQLCMD 模式下运行查询编辑器时会有一些限制。 不能传入命令行参数（如变量），而且，由于查询编辑器无法响应操作系统提示，因此必须注意不要执行交互语句。  
   
 ## <a name="color-coding-in-sqlcmd-scripts"></a>SQLCMD 脚本中的颜色编码  
- 启用 SQLCMD 脚本撰写后，脚本将进行颜色编码。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 关键字的颜色编码将保持不变。 SQLCMD 命令用阴影背景来表示。  
+ 启用 SQLCMD 脚本撰写后，脚本将进行颜色编码。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 关键字的颜色编码将保持不变。 SQLCMD 命令用阴影背景来表示。  
   
 ## <a name="example"></a>示例  
  下面的示例使用 **sqlcmd** 语句创建名为 testoutput.txt 的输出文件，并将两个 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句与一个操作系统命令一起执行（以输出当前目录）。 结果文件包含 `DIR` 语句的消息输出，后面跟有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的结果输出。  

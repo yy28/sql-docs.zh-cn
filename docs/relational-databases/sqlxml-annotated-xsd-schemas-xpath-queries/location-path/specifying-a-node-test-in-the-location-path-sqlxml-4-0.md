@@ -17,10 +17,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f94f155ee86df6daf0c039a18f27c30e294d57df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75254741"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>在位置路径中指定节点测试 (SQLXML 4.0)
@@ -46,8 +46,7 @@ ms.locfileid: "75254741"
 ## <a name="abbreviated-syntax-for-the-axes"></a>轴的缩写语法  
  支持以下位置路径的缩写语法：  
   
--   
-  `attribute::` 可缩写为 `@`。  
+-   `attribute::` 可缩写为 `@`。  
   
      位置路径 `Customer[@CustomerID="ALFKI"]` 与 `child::Customer[attribute::CustomerID="ALFKI"]` 相同。  
   
@@ -55,7 +54,6 @@ ms.locfileid: "75254741"
   
      因此，**子级**为默认轴。 位置路径 `Customer/Order` 与 `child::Customer/child::Order` 相同。  
   
--   
-  `self::node()` 可缩写为一个句点 (.)，`parent::node()` 可缩写为两个句点 (..)。  
+-   `self::node()` 可缩写为一个句点 (.)，`parent::node()` 可缩写为两个句点 (..)。  
   
   

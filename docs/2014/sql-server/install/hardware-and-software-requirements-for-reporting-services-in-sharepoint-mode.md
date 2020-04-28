@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 56ddfce4fc1812e99870c22eeb0e15be64c5decb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245626"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>SharePoint 模式下的 Reporting Services 的硬件和软件要求
@@ -27,15 +27,15 @@ ms.locfileid: "75245626"
   
 -   [Power View 要求](#bkmk_powerview)  
   
--   [更多信息](#bkmk_more_information)  
+-   [详细信息](#bkmk_more_information)  
   
-##  <a name="bkmk_prereq"></a>先决条件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a>先决条件  
   
 -   对于本地安装，在安装 SharePoint 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 期间登录的帐户需要是本地操作系统 administrators 组的成员。 该安装帐户不需要是 SharePoint 场 administrators 组的成员。  
   
      有关详细信息，请参阅 [SharePoint 2013 中的帐户权限和安全设置](https://technet.microsoft.com/library/cc678863.aspx)。  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]在 SharePoint 模式下运行需要 SharePoint Server。 有关 SharePoint 要求和配置的详细信息，请参阅以下文章：  
+-   在 SharePoint 模式下运行的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 要求 SharePoint Server。 有关 SharePoint 要求和配置的详细信息，请参阅以下文章：  
   
     -   [硬件和软件要求（SharePoint 2013）](https://go.microsoft.com/fwlink/p/?LinkId=256365) （https://go.microsoft.com/fwlink/p/?LinkId=256365)  
   
@@ -51,22 +51,21 @@ ms.locfileid: "75245626"
   
 -   验证是否已在 Windows 服务器管理器中启动 **“SharePoint 2013 管理”** 服务。  
   
-###  <a name="bkmk_report_server_database"></a>报表服务器数据库要求  
+###  <a name="report-server-database-requirements"></a><a name="bkmk_report_server_database"></a>报表服务器数据库要求  
   
--   
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 SharePoint 产品及技术均使用 SQL Server 关系数据库来存储应用程序数据。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 SharePoint 产品及技术均使用 SQL Server 关系数据库来存储应用程序数据。  
   
--   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]需要兼容 SQL Server 版本的[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例。 有关硬件和软件要求的详细信息，请参阅 [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)。  
+-   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 需要兼容的 SQL Server 版本的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例。 有关硬件和软件要求的详细信息，请参阅 [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)。  
   
 -   SharePoint 产品可以使用现有的数据库实例。 如果未安装 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，则 SharePoint 产品安装程序将安装 SQL Server Express Edition 以用于 SharePoint 应用程序数据库。  
   
 -   报表服务器实例不能将 SQL Server Express Edition 用于其数据库。 但是，由 SharePoint 产品安装的 SQL Server Express Edition 实例可与其他数据库引擎版本并存。  
   
-##  <a name="bkmk_powerview"></a>[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]要求
+##  <a name="sscrescent-requirements"></a><a name="bkmk_powerview"></a>[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]要求
 
- 查看 Office.Microsoft.com 上的最新 [Power View 文档](https://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx) 。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]是 Microsoft Excel 2013 的一项功能，是 Microsoft SharePoint Server 2010 和[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 2013 Enterprise edition Reporting Services 外接程序的一部分。  
+ 查看 Office.Microsoft.com 上的最新 [Power View 文档](https://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx) 。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 现在是 Microsoft Excel 2013 的一个功能，并且是 Microsoft SharePoint Server 2010 和 2013 Enterprise Edition 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services 外接程序的一部分。  
   
-##  <a name="bkmk_more_information"></a> 详细信息
+##  <a name="more-information"></a><a name="bkmk_more_information"></a> 详细信息
 
  有关 SharePoint 更改的信息，请参阅[从 sharepoint 2010 到 sharepoint 2013 的更改](https://technet.microsoft.com/library/ff607742\(office.15\).aspx)（https://technet.microsoft.com/library/ff607742(office.15).aspx)。  
   

@@ -13,10 +13,10 @@ ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 070ef5db87ac28b59f01e3927f876f9c757e6caa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245474"
 ---
 # <a name="create-a-cross-domain-rule"></a>创建跨域规则
@@ -33,17 +33,17 @@ ms.locfileid: "75245474"
   
  应首先考虑仅影响单一域的所有简单规则，之后才考虑跨域规则。 只有在某个值通过单一域规则（如果它们存在）之后，才会应用跨域规则。 对其运行某个规则的复合域和单一域必须全都定义后，才能执行该规则。  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  若要创建一个跨域规则，必须已创建并打开了一个复合域。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能创建跨域规则。  
   
-##  <a name="Create"></a>创建跨域规则  
+##  <a name="create-cross-domain-rules"></a><a name="Create"></a> 创建跨域规则  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "75245474"
   
 9. 继续执行下面的测试过程。  
   
-##  <a name="Test"></a>测试跨域规则  
+##  <a name="test-cross-domain-rules"></a><a name="Test"></a> 测试跨域规则  
   
 1.  按如下所示测试跨域规则：  
   
@@ -90,13 +90,13 @@ ms.locfileid: "75245474"
   
     4.  再次单击 **“为域规则添加新的测试字词”** 图标以便添加另一组测试值。  
   
-    5.  单击 **“对所有字词测试域规则”** 图标。 如果一组测试值有效，则 DQS 将在 **“有效性”** 列中为该行输入一个复选标记。 如果该组测试值无效，则 DQS 将在“有效性”列中为该行输入一个内含惊叹号的三角形。  
+    5.  单击 "对**所有字词测试域规则**" 图标。 如果一组测试值有效，则 DQS 将在 **“有效性”** 列中为该行输入一个复选标记。 如果该组测试值无效，则 DQS 将在“有效性”列中为该行输入一个内含惊叹号的三角形。  
   
     6.  完成测试后，在 **“测试复合域规则”** 对话框中单击 **“关闭”** 。  
   
 2.  在完成了您的跨域规则后，单击 **“完成”** 以完成域管理活动，如 [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)中所述。  
   
-##  <a name="FollowUp"></a>跟进：在创建跨域规则后  
+##  <a name="follow-up-after-creating-a-cross-domain-rule"></a><a name="FollowUp"></a> 跟进：创建跨域规则后  
  在创建跨域规则后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
   
   

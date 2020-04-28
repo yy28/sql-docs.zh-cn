@@ -22,18 +22,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60d5af2752a426faca3069541deeae3a6aa4f495
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245193"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>配置 Transact-SQL 调试器
   必须配置 Windows 防火墙规则，以便在连接到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 实例（运行该实例的计算机不同于运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器的计算机）时启用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 调试。  
   
 ## <a name="configuring-the-transact-sql-debugger"></a>配置 Transact-SQL 调试器  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器包括服务器端和客户端组件。 服务器端调试器组件与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) 或更高版本中的每个数据库引擎实例一起安装。 包括客户端调试器组件：  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器包括服务器端和客户端组件。 服务器端调试器组件与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) 或更高版本中的每个数据库引擎实例一起安装。 包括客户端调试器组件：  
   
 -   在从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本安装客户端工具时。  
   
@@ -151,21 +150,19 @@ ms.locfileid: "75245193"
 ## <a name="requirements-for-starting-the-debugger"></a>启动调试器的要求  
  启动 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器的所有尝试还必须满足以下要求：  
   
-* [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]必须在作为 sysadmin 固定服务器滚动更新成员的 Windows 帐户下运行。  
+* [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 必须在作为 sysadmin 固定服务器角色成员的 Windows 帐户下运行。  
   
-* 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口必须使用 Windows 身份验证来连接，或使用作为 sysadmin 固定服务器角色成员的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录名来连接。  
+* [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口必须使用 Windows 身份验证来连接，或使用作为 sysadmin 固定服务器角色成员的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录名来连接。  
   
-* 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口必须从 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 2 (SP2) 或更高版本连接到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 实例。 如果查询编辑器窗口连接到处于单用户模式下的实例，您将无法运行调试器。
+* [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口必须从 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 2 (SP2) 或更高版本连接到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 实例。 如果查询编辑器窗口连接到处于单用户模式下的实例，您将无法运行调试器。
 
 * 服务器需要通过 RPC 回复客户端通信。 运行 SQL Server 服务的帐户应具有对客户端的身份验证权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-SQL 调试器](transact-sql-debugger.md)   
+ [Transact-sql 调试器](transact-sql-debugger.md)   
  [运行 Transact-sql 调试器](run-the-transact-sql-debugger.md)   
  [单步执行 Transact-sql 代码](step-through-transact-sql-code.md)   
- [Transact-SQL 调试器信息](transact-sql-debugger-information.md)   
+ [Transact-sql 调试器信息](transact-sql-debugger-information.md)   
  [数据库引擎查询编辑器 (SQL Server Management Studio)](database-engine-query-editor-sql-server-management-studio.md)  
   
   

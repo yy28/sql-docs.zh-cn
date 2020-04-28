@@ -17,10 +17,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 817c8c4d0ff2a140033e99879c0720a63f81e5f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75252529"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>大容量加载安全性注意事项 (SQLXML 4.0)
@@ -56,6 +56,6 @@ ms.locfileid: "75252529"
 -   如果用户设置错误日志文件以便让 SQLXML 将错误写入其中，则在每次执行大容量加载时将以来自最后一个大容量加载进程的数据覆盖该文件。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;SQLXML 4.0&#41;执行 XML 数据的大容量加载](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [对 XML 数据执行大容量加载 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

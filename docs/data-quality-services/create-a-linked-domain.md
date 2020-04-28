@@ -12,10 +12,10 @@ ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 3ebd6ca2702c902d25f7a73539017bd0540cc3d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75252246"
 ---
 # <a name="create-a-linked-domain"></a>创建链接域
@@ -35,17 +35,17 @@ ms.locfileid: "75252246"
   
  例如，一条包含以下字段的记录：Customer First Name、Customer Last Name 和 Father’s First Name。 假设同时将客户的名字和父亲的名字映射到 First Name 域，并使 First Name 域和 Last Name 域成为 Full Name 复合域的组成部分。 问题是父亲的名字将添加到复合域，但没有姓氏。 但是，如果将这两个名字字段链接到一个域并链接这两个域，则可以将 Customer First Name 域链接到 Full Name 复合域，但不将 Father’s First Name 字段添加到复合域；从而防止将 Father’s First Name 添加到复合域。  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  若要创建链接域，您必须具有知识库和要链接到的现有域。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能创建链接域。  
   
-##  <a name="Create"></a>创建链接域  
+##  <a name="create-a-linked-domain"></a><a name="Create"></a>创建链接域  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "75252246"
   
 7.  单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)中所述。  
   
-##  <a name="Map"></a>将两个字段映射到链接域  
+##  <a name="map-two-fields-to-linked-domains"></a><a name="Map"></a>将两个字段映射到链接域  
   
 1.  为知识发现活动打开一个知识库，并将此知识库映射到数据库以及表或视图。  
   
@@ -74,10 +74,10 @@ ms.locfileid: "75252246"
   
 4.  在“创建域”对话框中，输入名称和说明，然后单击“确定”。  
   
-##  <a name="FollowUp"></a>跟进：在创建链接域后  
+##  <a name="follow-up-after-creating-a-linked-domain"></a><a name="FollowUp"></a>跟进：在创建链接域后  
  在创建链接域后，您可以对域执行其他域管理任务，可以执行知识发现以便向域添加知识，或者可以向域添加匹配策略。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)或[创建匹配策略](../data-quality-services/create-a-matching-policy.md)。  
   
-##  <a name="Behavior"></a>链接域的行为  
+##  <a name="behavior-of-a-linked-domain"></a><a name="Behavior"></a>链接域的行为  
  可以更改链接域的设置，如下所示：  
   
 -   您可以更改链接域的名称和说明。  

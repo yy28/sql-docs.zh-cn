@@ -20,10 +20,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8b582b9f31245c13ec2c20e91736f794f19efd53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75252599"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定轴 (SQLXML 4.0)
@@ -43,8 +43,7 @@ ms.locfileid: "75252599"
   
  在查询中， `child`是`Contact`轴，是节点测试（如果`Contact`是** \<元素>** 节点，则为 TRUE，因为\<元素> 是与`child`轴关联的主节点类型）。  
   
- 
-  `child` 轴为默认轴。 因此，可以将该查询编写为：  
+ `child` 轴为默认轴。 因此，可以将该查询编写为：  
   
 ```  
 /Contact  

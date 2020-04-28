@@ -15,10 +15,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: acd1dc15531f2e4830993eed1404db4d7205feef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75246801"
 ---
 # <a name="xsd-annotations-sqlxml-40"></a>XSD 批注 (SQLXML 4.0)
@@ -39,7 +39,7 @@ ms.locfileid: "75246801"
 |**sql:max-depth**|允许您指定在架构中指定的递归关系的深度。|[使用 sql:max-depth 指定递归关系中的深度](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-depth-in-recursive-relationships-by-using-sql-max-depth.md)|不支持|  
 |**sql:overflow-field**|标识包含溢出数据的数据库列。|[使用 sql：溢出字段检索未用完的数据 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/retrieving-unconsumed-data-using-the-sql-overflow-field-sqlxml-4-0.md)|相同|  
 |**sql:prefix**|创建有效的 XML ID、IDREF 和 IDREFS。 将某一字符串置于 ID、IDREF 和 IDREFS 的值之前。|[使用 sql： prefix 创建有效的 ID、IDREF 和 IDREFS 类型属性 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md)|相同|  
-|**sql:relationship**|指定 XML 元素之间的关系。 **父**、**子**、**父键**和**子键**特性用于建立关系。|[使用 sql： relationship 指定关系 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md)|属性名称不同：<br /><br /> **键关系**<br /><br /> **外部关系**<br /><br /> **按键**<br /><br /> **外键**|  
+|**sql:relationship**|指定 XML 元素之间的关系。 **父**、**子**、**父键**和**子键**特性用于建立关系。|[使用 sql： relationship 指定关系 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md)|属性名称不同：<br /><br /> **键关系**<br /><br /> **外部关系**<br /><br /> **键**<br /><br /> **外键**|  
 |**sql:use-cdata**|允许指定要用于 XML 文档中的某些元素的 CDATA 部分。|[使用 sql： use-CDATA 创建 CDATA 节 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md)|相同|  
   
 > [!NOTE]  

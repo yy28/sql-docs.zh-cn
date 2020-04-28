@@ -20,10 +20,10 @@ ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c3ec0de44aacbcfb2d4e6b96d7525da900017e01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75253554"
 ---
 # <a name="srv_paramset-extended-stored-procedure-api"></a>srv_paramset（扩展存储过程 API）
@@ -54,13 +54,13 @@ len
 ```  
   
 ## <a name="arguments"></a>参数  
- *srvproc*  
+ srvproc**  
  指向作为特定客户端连接句柄（在这里为接收远程存储过程调用的句柄）的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 库用于管理应用程序和客户端之间的通信和数据的信息。  
   
  *n*  
  指示要设置的参数的编号。 第一个参数是 1。  
   
- *data*  
+ *数据*  
  是指向要发送回客户端的数据值的指针，该数据值将作为远程存储过程返回参数。  
   
  *长度*  
@@ -75,14 +75,14 @@ len
   
 |新数据类型|返回数据长度|  
 |--------------------|------------------------|  
-|**BITN**|**NULL：** _len_ = 0，DATA = IG，RET = 0<br /><br /> **零：** 不适用<br /><br /> **>= 255：** 不适用<br /><br /> **<255：** 不适用|  
-|**BIGVARCHAR**|**NULL：** _len_ = 0，DATA = IG，RET = 1<br /><br /> **零：** _len_ = IG，DATA = IG，RET = 0<br /><br /> **>= 255：** _len_ = max8k，DATA = valid，RET = 0<br /><br /> **<255：** _len_ = <8k，DATA = valid，RET = 1|  
-|**BIGCHAR**|**NULL：** _len_ = 0，DATA = IG，RET = 1<br /><br /> **零：** _len_ = IG，DATA = IG，RET = 0<br /><br /> **>= 255：** _len_ = max8k，DATA = valid，RET = 0<br /><br /> **<255：** _len_ = <8k，DATA = valid，RET = 1|  
-|**BIGBINARY**|**NULL：** _len_ = 0，DATA = IG，RET = 1<br /><br /> **零：** _len_ = IG，DATA = IG，RET = 0<br /><br /> **>= 255：** _len_ = max8k，DATA = valid，RET = 0<br /><br /> **<255：** _len_ = <8k，DATA = valid，RET = 1|  
-|**BIGVARBINARY**|**NULL：** _len_ = 0，DATA = IG，RET = 1<br /><br /> **零：** _len_ = IG，DATA = IG，RET = 0<br /><br /> **>= 255：** _len_ = max8k，DATA = valid，RET = 0<br /><br /> **<255：** _len_ = <8k，DATA = valid，RET = 1|  
-|NCHAR|**NULL：** _len_ = 0，DATA = IG，RET = 1<br /><br /> **零：** _len_ = IG，DATA = IG，RET = 0<br /><br /> **>= 255：** _len_ = max8k，DATA = valid，RET = 0<br /><br /> **<255：** _len_ = <8k，DATA = valid，RET = 1|  
-|NVARCHAR|**NULL：** _len_ = 0，DATA = IG，RET = 1<br /><br /> **零：** _len_ = IG，DATA = IG，RET = 0<br /><br /> **>= 255：** _len_ = max8k，DATA = valid，RET = 0<br /><br /> **<255：** _len_ = <8k，DATA = valid，RET = 1|  
-|**NTEXT**|**NULL：** _len_ = IG，DATA = IG，RET = 0<br /><br /> **零：** _len_ = IG，DATA = IG，RET = 0<br /><br /> **>= 255：** _len_ = IG，DATA = IG，RET = 0<br /><br /> 255： _len_ = IG，data = IG，RET = 0 ** \<**|  
+|**BITN**|**NULL：** _len_ = 0, data = IG, RET = 0<br /><br /> **ZERO：** N/A<br /><br /> **>= 255：** 不适用<br /><br /> **<255：** 不适用|  
+|**BIGVARCHAR**|**NULL：** _len_ = 0, data = IG, RET = 1<br /><br /> **ZERO：** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255：** _len_ = max8k, data = valid, RET = 0<br /><br /> **<255：** _len_ = <8k, data = valid, RET = 1|  
+|**BIGCHAR**|**NULL：** _len_ = 0, data = IG, RET = 1<br /><br /> **ZERO：** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255：** _len_ = max8k, data = valid, RET = 0<br /><br /> **<255：** _len_ = <8k, data = valid, RET = 1|  
+|**BIGBINARY**|**NULL：** _len_ = 0, data = IG, RET = 1<br /><br /> **ZERO：** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255：** _len_ = max8k, data = valid, RET = 0<br /><br /> **<255：** _len_ = <8k, data = valid, RET = 1|  
+|**BIGVARBINARY**|**NULL：** _len_ = 0, data = IG, RET = 1<br /><br /> **ZERO：** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255：** _len_ = max8k, data = valid, RET = 0<br /><br /> **<255：** _len_ = <8k, data = valid, RET = 1|  
+|NCHAR|**NULL：** _len_ = 0, data = IG, RET = 1<br /><br /> **ZERO：** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255：** _len_ = max8k, data = valid, RET = 0<br /><br /> **<255：** _len_ = <8k, data = valid, RET = 1|  
+|NVARCHAR|**NULL：** _len_ = 0, data = IG, RET = 1<br /><br /> **ZERO：** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255：** _len_ = max8k, data = valid, RET = 0<br /><br /> **<255：** _len_ = <8k, data = valid, RET = 1|  
+|**NTEXT**|**NULL：** _len_ = IG, data = IG, RET = 0<br /><br /> **ZERO：** _len_ = IG, data = IG, RET = 0<br /><br /> **>=255：** _len_ = IG, data = IG, RET = 0<br /><br /> 255： _len_ = IG，data = IG，RET = 0 ** \<**|  
 |RET = srv_paramset 的返回值||  
 |IG = 将忽略值||  
 |valid = 任何有效的数据指针||  
@@ -94,12 +94,12 @@ len
   
  此函数会为参数设置返回值，但它不会向客户端实际发送返回值。 在设置了状态标记 SRV_DONE_FINAL 的情况下调用 srv_senddone 时，所有返回参数（无论是否使用 srv_paramset 设置了返回值）都会自动发送到客户端********。  
   
- 使用参数调用远程存储过程时，可以按名称或位置（未命名）传递参数。 如果使用部分按名称传递，部分按位置传递的参数调用远程存储过程，则会发生错误。 仍会调用 SRV_RPC 处理程序，但它似乎没有参数， **srv_rpcparams**返回0。  
+ 使用参数调用远程存储过程时，可以按名称或位置（未命名）传递参数。 如果使用部分按名称传递，部分按位置传递的参数调用远程存储过程，则会发生错误。 仍然会调用 SRV_RPC 处理程序，但是它看起来没有参数并且 srv_rpcparams 返回 0****。  
   
 > [!IMPORTANT]  
 >  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://www.microsoft.com/msrc?rtc=1)。  
   
 ## <a name="see-also"></a>另请参阅  
- [扩展存储过程 API srv_paramsetoutput &#40;&#41;](../../relational-databases/extended-stored-procedures-reference/srv-paramsetoutput-extended-stored-procedure-api.md)  
+ [srv_paramsetoutput（扩展存储过程 API）](../../relational-databases/extended-stored-procedures-reference/srv-paramsetoutput-extended-stored-procedure-api.md)  
   
   

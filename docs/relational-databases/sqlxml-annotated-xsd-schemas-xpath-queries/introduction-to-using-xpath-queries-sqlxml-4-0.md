@@ -16,10 +16,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f82c330e2d18f05d0f358171a4ffeabc63ac9c3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75246585"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath 查询使用简介 (SQLXML 4.0)
@@ -91,7 +91,7 @@ ms.locfileid: "75246585"
 ## <a name="supported-functionality"></a>支持的功能  
  下表显示了 SQLXML 4.0 中实现的 XPath 语言功能。  
   
-|Feature|Item|示例查询链接|  
+|功能|项|示例查询链接|  
 |-------------|----------|----------------------------|  
 |Axes|**attribute**、 **child**、 **parent**和**self**轴|[&#40;SQLXML 4.0&#41;在 XPath 查询中指定轴](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |包含连续谓词和嵌套谓词的布尔值谓词||[&#40;SQLXML 4.0&#41;在 XPath 查询中指定算术运算符](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
@@ -105,7 +105,7 @@ ms.locfileid: "75246585"
 ## <a name="unsupported-functionality"></a>不支持的功能  
  下表显示了 SQLXML 4.0 中未实现的 XPath 语言功能。  
   
-|Feature|Item|  
+|功能|项|  
 |-------------|----------|  
 |Axes|**祖先**、**祖先或-self**、**子代**、**子代-或-self （//）**，**后面**是**后同辈**、**命名空间**、**前面**和**同级**|  
 |数值谓词||  

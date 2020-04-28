@@ -10,10 +10,10 @@ ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 06f4b140ef90eb3d1ed942e5374643e80fb1b24e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75254813"
 ---
 # <a name="importing-and-exporting-knowledge"></a>导入和导出知识
@@ -36,7 +36,7 @@ ms.locfileid: "75254813"
 |将整个知识库导入到 .dqs 数据文件中|[从 .dqs 文件导入知识库](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
 |将值从 Excel 文件导入到域|[将值从 Excel 文件导入到域](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)|  
 |将域从 Excel 文件中导入到知识库中|[在知识发现中从 Excel 文件中导入域](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)|  
-|将在清理过程中收集的知识导入到知识库中|[将清理项目值导入域](../data-quality-services/import-cleansing-project-values-into-a-domain.md)|  
+|将在清理过程中收集的知识导入到知识库中|[将清理项目值导入到域中](../data-quality-services/import-cleansing-project-values-into-a-domain.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

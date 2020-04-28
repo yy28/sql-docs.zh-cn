@@ -10,10 +10,10 @@ ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: f2775969aa22b580d40ecd6f8065deb2ed3472c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251697"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Data Quality Services 功能和任务
@@ -27,9 +27,9 @@ ms.locfileid: "75251697"
   
  [DQS 知识库和域](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
- [&#40;DQS&#41;的数据质量项目](../data-quality-services/data-quality-projects-dqs.md)  
+ [数据质量项目 (DQS)](../data-quality-services/data-quality-projects-dqs.md)  
   
- [Data Cleansing](../data-quality-services/data-cleansing.md)  
+ [数据清理](../data-quality-services/data-cleansing.md)  
   
  [数据匹配](../data-quality-services/data-matching.md)  
   

@@ -21,10 +21,10 @@ author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
 ms.openlocfilehash: ae34c89fd570921bec26d8a11537c58b6bba2302
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75247307"
 ---
 # <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys. dm_resource_governor_resource_pools_history_ex （Transact-sql）
@@ -36,7 +36,7 @@ ms.locfileid: "75247307"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|int|资源池的 ID。 不可为 null。
-|**路径名**|sysname|资源池的名称。 不可为 null。|
+|**name**|sysname|资源池的名称。 不可为 null。|
 |**snapshot_time**|datetime2|拍摄的资源池统计信息快照的日期时间|
 |**duration_ms**|int|当前快照与前一个快照之间的持续时间|
 |**statistics_start_time**|datetime2|为该池重置统计信息的时间。 不可为 null。|

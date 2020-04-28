@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: caae0e0b81c29454a8d7825e8077690369c76805
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75254464"
 ---
 # <a name="remove-a-registered-server-sql-server-management-studio"></a>删除已注册的服务器 (SQL Server Management Studio)
@@ -28,7 +28,7 @@ ms.locfileid: "75254464"
   
 #### <a name="to-remove-a-registered-server"></a>删除已注册的服务器  
   
-1.  在“已注册的服务器”上，右键单击某个服务器，再单击“删除”****。  
+1.  在“已注册的服务器”上，右键单击某个服务器，再单击“删除”  。  
   
 2.  在 **“确认删除”** 对话框中，单击 **“是”** 。  
   

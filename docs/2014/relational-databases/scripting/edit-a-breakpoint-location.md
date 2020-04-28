@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2b5bb55452333014aa3ccf5a797d19667dca753
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244889"
 ---
 # <a name="edit-a-breakpoint-location"></a>编辑断点位置
@@ -38,7 +38,7 @@ ms.locfileid: "75244889"
      **“允许源代码与原始版本不同”** 选项在调试 [!INCLUDE[tsql](../../includes/tsql-md.md)]时不起作用。  
   
 ## <a name="see-also"></a>另请参阅  
- [指定命中计数](specify-a-hit-count.md)   
+ [指定命中次数](specify-a-hit-count.md)   
  [指定断点操作](specify-a-breakpoint-action.md)   
  [指定断点条件](specify-a-breakpoint-condition.md)   
  [指定断点筛选器](specify-a-breakpoint-filter.md)  

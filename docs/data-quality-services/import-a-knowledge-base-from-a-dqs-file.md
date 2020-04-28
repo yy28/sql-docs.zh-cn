@@ -10,10 +10,10 @@ ms.assetid: 9b9786fe-9e80-429a-afcb-dc3b3dd6f0b0
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: cd001817ccb5906905db1b0623d2491dd0463c07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251567"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>从 .dqs 文件导入知识库
@@ -28,17 +28,17 @@ ms.locfileid: "75251567"
   
  在导入知识库时，您可以使用相同的名称，除非客户端应用程序中已存在该知识库名称，在这种情况下，您必须重新命名知识库。  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  若要从 .dqs 文件中导入知识库，您必须已将该知识库导出到 .dqs 文件。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  您必须对 DQS_MAIN 数据库具有 dqs_kb_editor 或 dqs_administrator 角色，才能从 .dqs 数据文件导入知识库。  
   
-##  <a name="Import"></a>从 dqs 文件导入知识库  
+##  <a name="import-a-knowledge-base-from-a-dqs-file"></a><a name="Import"></a>从 dqs 文件导入知识库  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "75251567"
   
 5.  对于 **“选择数据文件”**，单击 **“浏览”**。  
   
-6.  在 **“从数据文件导入”** 对话框中，转到包含要导入的 .dqs 文件的文件夹，然后单击该文件的名称。 单击 **“打开”** 。  
+6.  在 **“从数据文件导入”** 对话框中，转到包含要导入的 .dqs 文件的文件夹，然后单击该文件的名称。 单击“打开”  。  
   
 7.  验证 **“域”** 列表中显示正确的知识库和域。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "75251567"
   
 13. 在 Data Quality Services 主页中，验证该知识库是否列在 **“最近的知识库”** 下。  
   
-##  <a name="FollowUp"></a>跟进：在从 dqs 文件导入知识库之后  
+##  <a name="follow-up-after-importing-a-knowledge-base-from-a-dqs-file"></a><a name="FollowUp"></a> 跟进：从 .dqs 文件导入知识库后  
  在从 .dqs 文件导入知识库之后，您可以将知识添加到知识库，或在清理或匹配项目中使用此知识库，具体取决于知识库的内容。 有关详细信息，请参阅[执行知识发现](../data-quality-services/perform-knowledge-discovery.md)、[管理域](../data-quality-services/managing-a-domain.md)、[管理复合域](../data-quality-services/managing-a-composite-domain.md)、[创建匹配策略](../data-quality-services/create-a-matching-policy.md)、[数据清理](../data-quality-services/data-cleansing.md)或[数据匹配](../data-quality-services/data-matching.md)。  
   
   

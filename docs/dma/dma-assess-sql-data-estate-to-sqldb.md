@@ -17,10 +17,10 @@ ms.author: rajpo
 manager: jroth
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 6f9d3d97d939586683015f38ab17c00dd03ca122
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75253513"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>使用数据迁移助手评估迁移到 Azure SQL 数据库的 SQL Server 数据空间的准备情况
@@ -39,7 +39,7 @@ ms.locfileid: "75253513"
 Azure Migrate 项目用于存储从正在评估或迁移的环境中收集的发现、评估和迁移元数据。 你还可以使用项目跟踪发现的资产并安排评估和迁移。
 
 1. 登录到 Azure 门户，选择 "**所有服务**"，然后搜索 Azure Migrate。
-2. 在“服务”下选择“Azure Migrate”。********
+2. 在“服务”下选择“Azure Migrate”。  
 
    ![Azure Migrate-选择服务](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-services.png)
 
@@ -58,12 +58,12 @@ Azure Migrate 项目用于存储从正在评估或迁移的环境中收集的发
 
     可在下述任一地理位置创建 Azure Migrate 项目。
 
-    | **Geography**  | **存储位置区域** |
+    | **地域**  | **存储位置区域** |
     | ------------- | ------------- |
     | 亚洲 | 东南亚或东亚 |
     | 欧洲 | 欧洲南部或西欧 |
-    | 英国 | 英国南部或英国西部 |
-    | 美国 | 美国中部或美国西部2 |
+    | United Kingdom | 英国南部或英国西部 |
+    | United States | 美国中部或美国西部2 |
 
     为项目指定的地理位置仅用于存储从本地 VM 中收集的元数据。 可为实际迁移选择任一目标区域。
 
@@ -72,11 +72,11 @@ Azure Migrate 项目用于存储从正在评估或迁移的环境中收集的发
    > [!NOTE]
    > 创建项目时，必须至少添加一个评估或迁移工具。
 
-8. 在 "**选择评估工具**" 选项卡上， **Azure Migrate：数据库评估**显示为要添加的评估工具。 如果当前不需要评估工具，请选中 "**立即跳过添加评估工具**" 复选框。 选择“**下一页**”。
+8. 在 "**选择评估工具**" 选项卡上， **Azure Migrate：数据库评估**显示为要添加的评估工具。 如果当前不需要评估工具，请选中 "**立即跳过添加评估工具**" 复选框。 选择“**下一步**”。
 
     ![Azure Migrate-选择评估工具选项卡](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-select-assessment-tool.png)
 
-9. 在 "**选择迁移工具**" 选项卡上， **Azure Migrate：数据库迁移**显示为要添加的迁移工具。 如果当前不需要迁移工具，请选择 "**立即跳过添加迁移工具**"。 选择“**下一页**”。
+9. 在 "**选择迁移工具**" 选项卡上， **Azure Migrate：数据库迁移**显示为要添加的迁移工具。 如果当前不需要迁移工具，请选择 "**立即跳过添加迁移工具**"。 选择“**下一步**”。
 
     ![Azure Migrate-选择迁移工具选项卡](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-select-migration-tool.png)
 
@@ -93,7 +93,7 @@ Azure Migrate 项目用于存储从正在评估或迁移的环境中收集的发
    ![添加 Azure Migrate-评估工具](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-assessment-tool-added.png)
 
 1. 使用提供的链接下载数据迁移助手，并将其安装在可访问源 SQL Server 实例的计算机上。
-2. 开始数据迁移助手。
+2. 启动数据迁移助手。
 
 ### <a name="create-an-assessment"></a>创建评估
 
@@ -116,7 +116,7 @@ Azure Migrate 项目用于存储从正在评估或迁移的环境中收集的发
 
    ![Azure Migrate 数据迁移助手评估选项屏幕](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-options-screen.png)
 
-2. 选择“**下一页**”。
+2. 选择“**下一步**”。
 
 ### <a name="add-databases-to-assess"></a>添加要评估的数据库
 
@@ -135,7 +135,7 @@ Azure Migrate 项目用于存储从正在评估或迁移的环境中收集的发
 
    ![Azure Migrate 数据迁移助手-查看结果屏幕](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-review-results-screen.png)
 
-6. 登录到 Azure 门户。  
+6. 登录到 Azure 门户。
 
    ![Azure Migrate 数据迁移助手-查看结果屏幕](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-signin.png)
 

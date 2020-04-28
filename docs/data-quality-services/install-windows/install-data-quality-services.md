@@ -10,10 +10,10 @@ ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: b7a9d9ce36a3419883adae9050ffabd0d1f9b012
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75252191"
 ---
 # <a name="install-data-quality-services"></a>安装 Data Quality Services
@@ -24,8 +24,8 @@ ms.locfileid: "75252191"
   
 |DQS 组件|说明|  
 |-------------------|-----------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]安装在[!INCLUDE[ssNoversion](../../includes/ssNoVersion-md.md)]数据库引擎之上，并包括三个数据库： DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA。 DQS_MAIN 包含 DQS 存储过程、DQS 引擎和已发布的知识库。 DQS_PROJECTS 包含数据质量项目信息。 DQS_STAGING_DATA 是临时区域，您可以从中复制源数据来执行 DQS 操作，然后导出已处理的数据。|  
-|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]是一个独立的应用程序，它使你[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]能够连接到，并提供一个高度直观的图形用户界面来执行数据质量操作以及与 DQS 相关的其他管理任务。|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 在 [!INCLUDE[ssNoversion](../../includes/ssNoVersion-md.md)] 数据库引擎的基础上安装，包括三个数据库：DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA。 DQS_MAIN 包含 DQS 存储过程、DQS 引擎和已发布的知识库。 DQS_PROJECTS 包含数据质量项目信息。 DQS_STAGING_DATA 是临时区域，您可以从中复制源数据来执行 DQS 操作，然后导出已处理的数据。|  
+|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 是一个独立的应用程序，使你可以连接到 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]，并提供一个高度直观的图形用户界面来执行数据质量操作以及与 DQS 相关的其他管理任务。|  
   
 > [!IMPORTANT]  
 >  除了以上两个 DQS 组件外，您还可以：  
@@ -38,24 +38,23 @@ ms.locfileid: "75252191"
   
 -   [安装前任务](#PreInstallationTasks)：在安装 DQS 前验证系统要求。  
   
--   [Data Quality Services 安装任务](#DQSInstallation)：使用 SQL Server 安装程序安装 DQS。  
+-   [Data Quality Services 安装任务](#DQSInstallation)：通过使用 SQL Server 安装程序安装 DQS。  
   
--   [安装后任务](#PostInstallationTasks)：完成后，请执行这些任务，SQL Server 安装程序完成 DQS 安装。  
+-   [安装后任务](#PostInstallationTasks)：使用 SQL Server 安装程序完成安装 DQS 后执行这些任务。  
   
 > [!NOTE]  
 >  本主题不包括有关从命令行运行安装程序的说明。 若要了解用于安装[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]和客户端的命令行选项，请参阅[从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Feature) 中的[功能参数](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
-##  <a name="PreInstallationTasks"></a>预安装任务  
+##  <a name="pre-installation-tasks"></a><a name="PreInstallationTasks"></a>预安装任务  
  在安装 DQS 之前，确保您的计算机满足最低系统要求。 下表提供有关 DQS 组件的最低系统要求的信息：  
   
 |DQS 组件|最低系统要求|  
 |-------------------|---------------------------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|内存 (RAM)：最小值：2 GB/建议：4 GB 或更多<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]数据库引擎。 有关详细信息，请参阅 [安装 SQL Server 数据库引擎](../../database-engine/install-windows/install-sql-server-database-engine.md)。|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|内存 (RAM)：最小值：2 GB/建议：4 GB 或更多<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 数据库引擎。 有关详细信息，请参阅 [安装 SQL Server 数据库引擎](../../database-engine/install-windows/install-sql-server-database-engine.md)。|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|.NET Framework 4.0（如果尚未安装，则在 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 安装期间安装）<br /><br /> Internet Explorer 6.0 SP1 或更高版本|  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 和 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 既可安装在同一台计算机上，也可以安装在不同计算机上。 这两个组件可以彼此独立并按任何顺序进行安装。 但是，要使用 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]，您将需要安装 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 以进行连接。  
+>  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 和 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 既可安装在同一台计算机上，也可以安装在不同计算机上。 这两个组件可以彼此独立并按任何顺序进行安装。 但是，要使用 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]，您将需要安装 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 以进行连接。  
 >   
 >  使用当前或以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 和 DQS 清除转换，您可以连接到 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 版本的 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 。 有关升级现有 DQS 版本到 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]的信息，请参阅 [升级 Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)。  
 >   
@@ -63,15 +62,15 @@ ms.locfileid: "75252191"
   
  若要详细了解安装 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 所需满足的最低系统要求，请参阅[安装 SQL Server 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
   
-##  <a name="DQSInstallation"></a>Data Quality Services 安装任务  
+##  <a name="data-quality-services-installation-tasks"></a><a name="DQSInstallation"></a> Data Quality Services 安装任务  
  您必须使用 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 安装程序安装 DQS 组件。 运行 SQL Server 安装程序时，必须完成一系列的安装向导页面，以根据您的要求选择适当的选项。 下表仅列出了安装向导页面中供选择的选项将对 DQS 安装产生影响的那些页面：  
   
 |页|操作|  
 |----------|------------|  
-|功能选择|选择：<br /><br /> **数据库引擎 Services**下的[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] **Data Quality services**安装。 <br />如果你选中 **“数据库引擎服务”** 复选框，SQL Server 安装程序会将安装程序文件 DQSInstaller.exe 复制到你的计算机上的 SQL Server 实例目录下。 在完成 SQL Server 安装程序以 *完成*[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装后，您必须运行此文件。 此外，您必须执行一些附加步骤来配置 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，然后才能使用它。 有关详细信息，请参阅 [安装后任务](#PostInstallationTasks)。<br /><br /> **** 要安装[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]的 Data Quality Client。<br /><br /> （建议）选择“管理工具 - 基本”之下的“管理工具 - 完整”以安装 ********[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 它为您提供一个图形用户界面来管理您的 SQL Server 实例，并将帮助您执行在下一部分中列出的其他安装后任务。|  
+|功能选择|选择：<br /><br /> **“数据库引擎服务”** 下的 **“Data Quality Services”** 以安装 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]。 <br />如果你选中 **“数据库引擎服务”** 复选框，SQL Server 安装程序会将安装程序文件 DQSInstaller.exe 复制到你的计算机上的 SQL Server 实例目录下。 在完成 SQL Server 安装程序以 *完成*[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装后，您必须运行此文件。 此外，您必须执行一些附加步骤来配置 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ，然后才能使用它。 有关详细信息，请参阅 [安装后任务](#PostInstallationTasks)。<br /><br /> **“数据质量客户端”** 以安装 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]。<br /><br /> 您**管理工具-** 在 "**管理工具-基本**" 下[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]进行安装。 它为您提供一个图形用户界面来管理您的 SQL Server 实例，并将帮助您执行在下一部分中列出的其他安装后任务。|  
 |数据库引擎配置|单击 **“添加当前用户”** 以便将您的用户 Windows 帐户添加到 sysadmin 固定服务器角色。 若要能在稍后运行 DQSInstaller.exe 文件以完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装，则必须执行此操作。|  
   
-##  <a name="PostInstallationTasks"></a>安装后任务  
+##  <a name="post-installation-tasks"></a><a name="PostInstallationTasks"></a> 安装后任务  
  在您完成 SQL Server 安装向导之后，您必须执行此部分中提到的额外步骤来完成您的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装、对其进行配置，然后使用该服务器。  
   
 1.  若要完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装，必须运行 DQSInstaller.exe 文件。 在运行 DQSInstaller.exe 文件后：  
@@ -123,6 +122,6 @@ ms.locfileid: "75252191"
  [安装 SQL Server 商业智能功能](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
  [卸载 SQL Server](../../sql-server/install/uninstall-sql-server.md)   
  [Data Quality Services](../../data-quality-services/data-quality-services.md)   
- [排查 DQS 中的安装和配置问题](https://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
+ [解决 DQS 中的安装和配置问题](https://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
   
   

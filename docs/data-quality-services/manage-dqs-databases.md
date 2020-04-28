@@ -1,5 +1,5 @@
 ---
-title: Manage DQS Databases
+title: 管理 DQS 数据库
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,21 +10,20 @@ ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: ce7b0239168a0a85e5d0f559b042dac0562ead94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75246977"
 ---
-# <a name="manage-dqs-databases"></a>Manage DQS Databases
+# <a name="manage-dqs-databases"></a>管理 DQS 数据库
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   本节提供了有关可在 DQS 数据库上执行的数据库管理活动（例如备份/还原或分离/附加）的信息。  
   
-##  <a name="BackupRestore"></a>备份和还原 DQS 数据库  
- SQL Server 数据库的备份和还原是数据库管理员经常要执行的操作，以便通过从备份数据库恢复数据在出现灾难时避免数据丢失。 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]主要由两个 SQL Server 数据库实现： DQS_MAIN 和 DQS_PROJECTS。 
-  [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 数据库的备份和还原过程与其他 SQL Server 数据库相似。有三个与 DQS 数据库的备份和还原相关联的挑战：  
+##  <a name="backup-and-restore-the-dqs-databases"></a><a name="BackupRestore"></a> 备份和还原 DQS 数据库  
+ SQL Server 数据库的备份和还原是数据库管理员经常要执行的操作，以便通过从备份数据库恢复数据在出现灾难时避免数据丢失。 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 主要由两个 SQL Server 数据库实现：DQS_MAIN 和 DQS_PROJECTS。 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 数据库的备份和还原过程与其他 SQL Server 数据库相似。有三个与 DQS 数据库的备份和还原相关联的挑战：  
   
 -   DQS 数据库的备份和还原操作必须同步。 否则，还原的 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 将不会正常工作。  
   
@@ -45,7 +44,7 @@ ms.locfileid: "75246977"
 >  -   在“简单”恢复模式中，日志记录长时间处于活动状态时（例如，占用时间很长的事务），日志截断可能被延迟，因此可能填满事务日志。 此外，日志截断并不减小物理日志文件（.ldf 文件）的大小。 若要减少物理日志文件的大小，需要收缩日志文件。 有关如何解决涉及事务日志的问题的信息，请参阅[事务日志 &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) 或 [https://go.microsoft.com/fwlink/?LinkId=237446](https://go.microsoft.com/fwlink/?LinkId=237446) 上的 Microsoft 技术支持文章。  
 > -   必须定期执行 DQS 数据库的完整或差异备份，同时备份事务日志以执行时间点数据恢复。 有关详细信息，请参阅[完整数据库备份 (SQL Server)](../relational-databases/backup-restore/full-database-backups-sql-server.md) 和 [备份事务日志 (SQL Server)](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)。  
   
-##  <a name="DetachAttach"></a>分离/附加 DQS 数据库  
+##  <a name="detachattach-the-dqs-databases"></a><a name="DetachAttach"></a> 分离/附加 DQS 数据库  
  如果您想要将 DQS 数据库更改到同一台计算机上的其他 SQL Server 实例或移动数据库，则可以分离 DQS 数据库的数据和事务日志文件，然后将这些数据库重新附加到 SQL Server 的同一个实例或其他实例。  
   
  有关在 SQL Server 中分离和附加数据库之前或在此过程中要考虑的事项的详细信息，请参阅[数据库分离和附加 (SQL Server)](../relational-databases/databases/database-detach-and-attach-sql-server.md)。  

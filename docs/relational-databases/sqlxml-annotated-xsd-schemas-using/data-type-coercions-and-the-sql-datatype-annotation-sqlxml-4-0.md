@@ -23,10 +23,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98f2ee047bccf7cd3843fe34aaf8f5caec0dc11a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257469"
 ---
 # <a name="data-type-conversions-and-the-sqldatatype-annotation-sqlxml-40"></a>数据类型转换和 sql： datatype 批注（SQLXML 4.0）
@@ -43,7 +43,7 @@ ms.locfileid: "75257469"
 |XSD 数据类型|SQL Server 转换|  
 |-------------------|---------------------------|  
 |Boolean|CONVERT(bit, COLUMN)|  
-|Date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
+|日期|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
 |Decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
@@ -58,32 +58,32 @@ ms.locfileid: "75257469"
   
 |SQL Server 数据类型|XSD 数据类型|  
 |--------------------------|-------------------|  
-|**bigint**|**漫长**|  
+|**bigint**|**long**|  
 |**binary**|**base64Binary**|  
-|**bit**|**变量**|  
-|**char**|**类似**|  
+|**bit**|**boolean**|  
+|**char**|**string**|  
 |**datetime**|**型**|  
-|**Decimal**|**Decimal**|  
+|**decimal**|**decimal**|  
 |**float**|**double**|  
 |**图像**|**base64Binary**|  
 |**int**|**int**|  
-|**money**|**Decimal**|  
-|**nchar**|**类似**|  
-|**ntext**|**类似**|  
-|**nvarchar**|**类似**|  
-|**加法**|**Decimal**|  
-|**实际上**|**float**|  
+|**money**|**decimal**|  
+|**nchar**|**string**|  
+|**ntext**|**string**|  
+|**nvarchar**|**string**|  
+|**numeric**|**decimal**|  
+|**real**|**float**|  
 |**smalldatetime**|**型**|  
 |**smallint**|**short**|  
-|**smallmoney**|**Decimal**|  
-|**sql_variant**|**类似**|  
-|**sysname**|**类似**|  
-|**text**|**类似**|  
-|**标志**|**型**|  
+|**smallmoney**|**decimal**|  
+|**sql_variant**|**string**|  
+|**sysname**|**string**|  
+|**text**|**string**|  
+|**timestamp**|**型**|  
 |**tinyint**|**unsignedByte**|  
 |**varbinary**|**base64Binary**|  
-|**varchar**|**类似**|  
-|**uniqueidentifier**|**类似**|  
+|**varchar**|**string**|  
+|**uniqueidentifier**|**string**|  
   
 ## <a name="sqldatatype-annotation"></a>sql:datatype 批注  
  **Sql： datatype**批注用于指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型;在以下情况下，必须指定此批注：  

@@ -10,22 +10,19 @@ ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: ba4c9b9693fa595f9b5f01f81689a3577f7d9fb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251688"
 ---
-# <a name="data-quality-services"></a>“数据库引擎服务”
+# <a name="data-quality-services"></a>数据库引擎服务
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-
-  [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) 是知识驱动型数据质量产品。 DQS 使您可以生成知识库，然后使用它执行各种关键数据质量任务，包括数据的更正、充实、标准化和消除重复。 DQS 通过使用引用数据访问接口提供的基于云的 Reference Data Services，使您可以执行数据清理。 DQS 还可以提供集成到数据质量任务的事件探查功能，使您可以分析数据的完整性。  
+[!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) 是知识驱动型数据质量产品。 DQS 使您可以生成知识库，然后使用它执行各种关键数据质量任务，包括数据的更正、充实、标准化和消除重复。 DQS 通过使用引用数据访问接口提供的基于云的 Reference Data Services，使您可以执行数据清理。 DQS 还可以提供集成到数据质量任务的事件探查功能，使您可以分析数据的完整性。  
   
- DQS 由 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 和 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]组成，它们都作为 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]的一部分安装。 
-  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]是一个 SQL Server 实例功能，它包含具有数据质量功能和存储的三个 SQL Server 目录。 
-  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]是一个 SQL Server 共享功能，企业用户、信息工作者和 IT 专业人员可以使用它执行计算机辅助的数据质量分析和以交互方式管理其数据质量。 您还可以使用 [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] 和 Master Data Services (MDS) 数据质量功能（它们都基于 DQS）来执行数据质量过程。  
+ DQS 由 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 和 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]组成，它们都作为 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]的一部分安装。 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]是一个 SQL Server 实例功能，它包含具有数据质量功能和存储的三个 SQL Server 目录。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]是一个 SQL Server 共享功能，企业用户、信息工作者和 IT 专业人员可以使用它执行计算机辅助的数据质量分析和以交互方式管理其数据质量。 您还可以使用 [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] 和 Master Data Services (MDS) 数据质量功能（它们都基于 DQS）来执行数据质量过程。  
   
  有关安装 DQS 的信息，请参阅 [Install Data Quality Services](../data-quality-services/install-windows/install-data-quality-services.md)。 如果想要从当前 DQS 版本升级到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，请参阅[升级 Data Quality Services](../database-engine/install-windows/upgrade-data-quality-services.md)。  
   

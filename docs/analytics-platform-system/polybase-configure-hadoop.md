@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
 ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245385"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>配置 PolyBase 以访问 Hadoop 中的外部数据
 
 本文介绍如何在 AP 设备上使用 PolyBase 查询 Hadoop 中的外部数据。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 Cloudera 分布式 Hadoop (CDH)。 Hadoop 遵循其新版本的“Major.Minor.Version”模式，且主要和次要版本中支持的所有版本均受支持。 支持以下 Hadoop 提供程序：
  - Linux/Windows Server 上的 Hortonworks HDP 1.3  
@@ -49,7 +49,7 @@ PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 C
 
 2. 使用[设备 Configuration Manager](launch-the-configuration-manager.md)上的 "服务状态" 页重新启动 ap 区域。
   
-## <a id="pushdown"></a>启用下推计算  
+## <a name="enable-pushdown-computation"></a><a id="pushdown"></a> 启用下推计算  
 
 若要提高查询性能，请对 Hadoop 群集启用下推计算：  
   
