@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: efa15bffc3b00dfce2c1c5d11bc3705f2b6f677e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78180122"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
@@ -63,7 +63,7 @@ sp_describe_undeclared_parameters
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int NOT NULL**|在结果集中包含参数的序号位置。 第一个参数的位置将指定为 1。|  
-|**路径名**|**sysname 不为 NULL**|包含参数的名称。|  
+|**name**|**sysname 不为 NULL**|包含参数的名称。|  
 |**suggested_system_type_id**|**int NOT NULL**|包含 sys.databases 中指定的参数数据类型的**system_type_id** 。<br /><br /> 对于 CLR 类型，即使**system_type_name**列返回 NULL，该列也会返回值240。|  
 |**suggested_system_type_name**|**nvarchar （256） NULL**|包含数据类型名称。 包含为参数数据类型指定的参数（例如，length、precision、scale）。 如果数据类型是用户定义的别名类型，则会在此处指定基本系统类型。 如果数据类型是 CLR 用户定义数据类型，则在此列中返回 NULL。 如果无法推断参数类型，则返回 NULL。|  
 |**suggested_max_length**|**smallint NOT NULL**|请参阅 sys.databases。 对于**max_length**列说明。|  
@@ -111,7 +111,7 @@ sp_describe_undeclared_parameters
 ## <a name="parameter-selection-algorithm"></a>参数选择算法  
  对于具有未声明的参数的查询，将通过三个步骤推断未声明的参数的数据类型。  
   
- **步骤1**  
+ **步骤 1**  
   
  要推断具有未声明的参数的查询的数据类型，第一步骤是查找数据类型不依赖于未声明的参数的所有子表达式的数据类型。 可以确定以下表达式的类型：  
   
@@ -137,7 +137,7 @@ SELECT * FROM t1 WHERE @p1 = SUBSTRING(@p2, 2, 3)
 SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)  
 ```
   
- **步骤2**  
+ **步骤 2**  
   
  对于给定的未声明\@参数 p，类型推导算法将查找包含\@ \@p 并且是以下各项之一的最内层表达式 E （p）：  
   
@@ -163,7 +163,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  如果\@p 不包含在步骤2开头列出的任何表达式中，则类型推导算法将确定 e\@（p）是包含\@p 的最大标量表达式，而类型推导算法不会计算 e （\@\@p）的目标数据类型 TT （p）。 例如，如果查询为`@p + 2` SELECT，则 E （\@p） = \@p + 2，并且没有 TT （\@p）。  
   
- **步骤3**  
+ **步骤 3**  
   
  现在已标识 E\@（p）和 TT\@（p），类型推导算法使用以下两种方法之一为\@p 推导数据类型：  
   
@@ -223,9 +223,9 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  
     ```  
   
-     在这种情况下，\@E （p） Col_Int \@+ p，TT\@（p）是**Int**。**** 为\@p 选择 int，因为它不生成隐式转换。 选择任何其他数据类型都会产生至少一次隐式转换。  
+     在这种情况下，\@E （p） Col_Int \@+ p，TT\@（p）是**Int**。**int**为\@p 选择 int，因为它不生成隐式转换。 选择任何其他数据类型都会产生至少一次隐式转换。  
   
-2.  如果多种数据类型都产生次数最少的转换，则使用具有较高优先级的数据类型。 例如：  
+2.  如果多种数据类型都产生次数最少的转换，则使用具有较高优先级的数据类型。 例如  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  

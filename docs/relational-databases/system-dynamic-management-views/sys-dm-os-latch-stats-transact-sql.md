@@ -19,10 +19,10 @@ ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1a8480b7e512c697f3645006d453866963b81aa
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289905"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "79289905"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|latch_class|**nvarchar （120）**|闩锁类的名称。|  
+|latch_class|**nvarchar(120)**|闩锁类的名称。|  
 |waiting_requests_count|**bigint**|此类中的闩锁等待的个数。 此计数器在闩锁等待启动时递增。|  
 |wait_time_ms|**bigint**|此类中闩锁的总计等待时间（毫秒）。<br /><br /> **注意：** 此列每五分钟更新一次，在闩锁等待期间，在闩锁等待结束时进行更新。|  
 |max_wait_time_ms|**bigint**|内存对象已等待此闩锁的最大时间。 如果此值异常高，则可能指示有内部死锁。|  
@@ -60,7 +60,7 @@ GO
 > [!NOTE]  
 >  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新启动，则这些统计信息不会持久化。 自从上次统计信息重置以来，或自从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动以来，所有数据都是累积的。  
   
-## <a name="latches"></a>栓  
+## <a name="latches"></a><a name="latches"></a>栓  
  闩锁是类似于锁的内部轻型同步对象，由各种[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]组件使用。 闩锁主要用于在操作（如缓冲区或文件访问）期间同步数据库页。 每个闩锁与单个分配单元关联。 
   
  由于闩锁由冲突模式中的另一个线程持有，所以当无法立即满足闩锁请求时，就会发生闩锁等待。 与锁不同，在操作之后，甚至在写入操作中，会立即释放闩锁。  

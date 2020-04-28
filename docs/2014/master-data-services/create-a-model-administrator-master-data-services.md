@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 464e82ea23aa724d84af25c69a7168f95d09afe1
-ms.sourcegitcommit: 39d8d2d504d0ab70bac5ae3e981657e15dfb7bee
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78964372"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>创建模型管理员 (Master Data Services)
@@ -30,7 +30,7 @@ ms.locfileid: "78964372"
   
 -   您必须有权访问 **“用户和组权限”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](administrators-master-data-services.md)。  
   
 ### <a name="to-create-a-model-administrator"></a>创建模型管理员  
   
@@ -52,7 +52,7 @@ ms.locfileid: "78964372"
   
 9. 对希望组或用户成为其管理员的每个模型，完成步骤 7 和 8。  
   
-10. 单击“保存”  。  
+10. 单击“ **保存**”。  
   
 ## <a name="remarks"></a>备注  
  不要分配对模型对象或层次结构成员的任何其他权限。 如果执行此操作，用户将不再是管理员，并且不能在**资源管理器**之外的任何功能区域中查看模型。  
@@ -64,6 +64,6 @@ ms.locfileid: "78964372"
  [&#40;Master Data Services 分配模型对象权限&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
  [将层次结构成员权限分配 &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
  [&#40;Master Data Services 的模型对象权限&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
- [层次结构成员权限 &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)  
+ [层次结构成员权限 (Master Data Services)](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)  
   
   

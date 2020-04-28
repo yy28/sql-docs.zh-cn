@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e75230ed175c6fbf1b0a2492265bbe12067060ca
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289745"
 ---
 # <a name="transparent-data-encryption"></a>透明数据加密
@@ -37,7 +37,7 @@ ms.locfileid: "79289745"
   
 ![显示层次结构](media/tde-architecture.png "TDE_Architecture")  
   
-## <a name="using-tde"></a>使用透明数据加密  
+## <a name="using-transparent-data-encryption"></a><a name="using-tde"></a>使用透明数据加密  
 若要使用 TDE，请按以下步骤操作。 在准备 SQL Server PDW 来支持 TDE 时，前三个步骤只执行一次。  
   
 1.  在 master 数据库中创建一个主密钥。  
@@ -121,9 +121,9 @@ TDE 证书必须使用数据库主密钥加密才能被下列语句接受。
 |命令或函数|目的|  
 |-----------------------|-----------|  
 |[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)|创建一个用于加密数据库的密钥。|  
-|[更改数据库加密密钥](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|更改用于加密数据库的密钥。|  
-|[删除数据库加密密钥](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|删除用于加密数据库的密钥。|  
-|[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|介绍用来启用 TDE 的 **ALTER DATABASE** 选项。|  
+|[ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|更改用于加密数据库的密钥。|  
+|[DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|删除用于加密数据库的密钥。|  
+|[更改数据库](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|介绍用来启用 TDE 的 **ALTER DATABASE** 选项。|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>目录视图和动态管理视图  
 下表显示了 TDE 目录视图和动态管理视图。  
@@ -278,7 +278,7 @@ TDE 对性能的影响取决于你拥有的数据类型、存储方式以及 SQL
 
   
 ## <a name="see-also"></a>另请参阅  
-[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
+[更改数据库](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
 [CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)  
 [CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
 [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  

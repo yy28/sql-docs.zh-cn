@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0348c262453d2de8e4db0c379b5bf70a2d7d7977
-ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79525448"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>用于商业智能的 CSDL 批注 (CSDLBI)
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持以 XML 格式（称为带商业智能注释的概念性架构定义语言 (CSDLBI)）来表示表格模型定义。  
   
  本主题概要介绍了 CSDLBI 以及如何将其与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据模型结合使用。  
@@ -28,9 +27,9 @@ ms.locfileid: "79525448"
   
  尽管 CSDL 符合实体数据框架，但您无需理解实体关系模型或具有用于基于模型生成表格模型或报表的任何特殊工具。 您可以使用客户端工具（如 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]）或 API（如 AMO）来生成模型，并将模型部署到服务器。 客户端通过使用模型定义文件连接到模型，模型定义文件通常发布到报表设计人员和报表使用者可以使用该文件的 SharePoint 库。 有关详细信息，请参阅以下链接：  
   
--   [&#40;SSAS 表格&#41;的表格模型解决方案](../tabular-model-solutions-ssas-tabular.md)  
+-   [表格模型解决方案（SSAS 表格）](../tabular-model-solutions-ssas-tabular.md)  
   
--   [&#40;SSAS 表格部署的表格模型解决方案部署&#41;](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
+-   [表格模型解决方案部署（SSAS 表格）](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
 -   [PowerPivot BI 语义模型连接 &#40; bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
   

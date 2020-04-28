@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: 167b9d1d9990c20be8c01a3407a5423644e524f8
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112432"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW 数据库目录
@@ -48,7 +48,7 @@ WideWorldImportersDW 具有以下维度表。 说明包括与 WideWorldImporters
 |-----------------------------|---------------------|
 |城市|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |客户|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
-|Date|新表，其中包含有关日期的信息，包括财政年度（基于财政年度的11月1日开始）。|
+|日期|新表，其中包含有关日期的信息，包括财政年度（基于财政年度的11月1日开始）。|
 |Employee|`Application.People`.|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |供应商|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
@@ -65,7 +65,7 @@ WideWorldImportersDW 具有以下事实数据表。 说明包括与 WideWorldImp
 |Sale|`Sales.Invoices` 和 `Sales.InvoiceLines`|销售日期、交付日期、随时间推移而盈利率，按销售人员盈利。|
 |购买|`Purchasing.PurchaseOrderLines`|预期与实际提前期|
 |事务|`Sales.CustomerTransactions` 和 `Purchasing.SupplierTransactions`|衡量问题日期与终止日期和金额。|
-|搬家|`Warehouse.StockTransactions`|随着时间的推移而移动。|
+|移动|`Warehouse.StockTransactions`|随着时间的推移而移动。|
 |股票控股|`Warehouse.StockItemHoldings`|现有库存水平和值。|
 
 ## <a name="stored-procedures"></a>存储过程

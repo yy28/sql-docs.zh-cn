@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 033999701141387ee63712a8a9ce055ad3f55cb1
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289525"
 ---
 # <a name="specify-merge-replication-properties"></a>指定合并复制属性
@@ -33,21 +33,21 @@ ms.locfileid: "79289525"
 -   如果在初始化订阅后指定项目仅用于下载，则所有收到该项目的客户端订阅必须重新初始化。 服务器订阅不必重新初始化。 有关属性更改的影响的详细信息，请参阅[更改发布和项目属性](change-publication-and-article-properties.md)。  
   
 ### <a name="using-sql-server-management-studio"></a>使用 SQL Server Management Studio  
- 在新建发布向导的“项目”**** 页或“项目属性 - **项目>”****对话框的“属性”\<** 选项卡上指定项目仅用于下载。 新建发布向导和“发布属性 - **发布>”\<** 对话框中提供了该对话框。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../publish/create-a-publication.md)和[查看和修改发布属性](../publish/view-and-modify-publication-properties.md)。  
+ 在新建发布向导的“项目”**** 页或“项目属性 - \<项目>”**** 对话框的“属性”**** 选项卡上指定项目仅用于下载。 新建发布向导和“发布属性 - \<发布>”**** 对话框中提供了该对话框。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../publish/create-a-publication.md)和[查看和修改发布属性](../publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-that-an-article-is-download-only-on-the-articles-page"></a>在“项目”页上指定项目仅用于下载  
   
--   在新建发布向导的 **“项目”** 页上，选择一个表，然后选中复选框 **“已选中的表仅用于下载”** 。 
+-   在新建发布向导的 **“项目”** 页上，选择一个表，然后选中复选框 **“已选中的表仅用于下载”**。 
   
 #### <a name="to-specify-that-an-article-is-download-only-on-the-properties-tab-of-the-article-properties---article-dialog-box"></a>在“项目属性 - \<项目>”对话框的“属性”选项卡上指定项目仅用于下载  
   
-1.  在新建发布向导或“发布属性 - **发布>”对话框的“项目”页上，选择一个表，然后单击“项目属性”。** **\<**     
+1.  在新建发布向导或“发布属性 - \<发布>”对话框的“项目”页上，选择一个表，然后单击“项目属性”。       
 2.  单击 **“设置突出显示的表项目的属性”** 或 **“设置所有表项目的属性”** 。    
-3.  在“项目属性 - **项目>”** **对话框的“属性”** **选项卡的“目标对象”\<** 部分中，为“同步方向”  指定以下值之一：    
+3.  在“项目属性 - \<项目>”**** 对话框的“属性”**** 选项卡的“目标对象”**** 部分中，为“同步方向”**** 指定以下值之一：    
     -   **下载到订阅服务器，禁止订阅服务器更改**    
     -   **下载到订阅服务器，允许订阅服务器更改**  
   
-4.  如果处于“发布属性 - **发布>”对话框中，请单击“确定”以保存并关闭该对话框。\<**     
+4.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。      
 
 ###  <a name="using-transact-sql"></a>“使用 Transact-SQL”  
   
@@ -72,11 +72,11 @@ ms.locfileid: "79289525"
         > [!NOTE]  
         >  如果某个项目的源表已经在另一个发布中发布，则两个项目的仅用于下载行为必须相同。  
  
-## <a name="interactive-conflict-resolution">交互式冲突解决</a>
+## <a name=""></a><a name="interactive-conflict-resolution">交互式冲突解决</a>
 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]复制提供交互式冲突解决程序，使您可以在 Windows 同步管理器中[!INCLUDE[msCoName](../../../includes/msconame-md.md)]按需同步过程中手动解决冲突。 启用交互式冲突解决方法后，在同步过程中即可使用交互式冲突解决程序来交互式解决冲突。 交互式冲突解决程序可以通过 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 同步管理器获取。 有关详细信息，请参阅[使用 Windows 同步管理器同步订阅（Windows 同步管理器）](../synchronize-a-subscription-using-windows-synchronization-manager.md)。  
   
     
-###  <a name="Recommendations"></a> 建议  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   
 -   如果在 Windows 同步管理器以外执行同步（如 SQL Server Management Studio 或复制监视器中的计划同步或按需同步），则会使用为项目指定的默认冲突解决方法自动解决冲突，而无需用户干预。 有关详细信息，请参阅 [Interactive Conflict Resolution](../merge/advanced-merge-replication-conflict-interactive-resolution.md)。  
   
@@ -84,16 +84,16 @@ ms.locfileid: "79289525"
   
 #### <a name="enable-interactive-conflict-resolution-for-an-article"></a>为项目启用交互式冲突解决方法  
   
-1.  在新建发布向导或“发布属性 - **发布>”** **对话框的“项目”\<** 页上，选择一个表。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](create-a-publication.md)和[查看和修改发布属性](view-and-modify-publication-properties.md)。    
-2.  单击 **“项目属性”** ，然后单击 **“设置突出显示的表项目的属性”** 或 **“设置所有表项目的属性”** 。    
-3.  在“项目属性 - **项目>”\<** 或“项目属性 - **项目类型>”\<** 页上，单击“冲突解决程序”  选项卡。    
-4.  选择 **“允许订阅服务器在按需同步时交互式解决冲突”** 。    
+1.  在新建发布向导或“发布属性 - \<发布>”**** 对话框的“项目”**** 页上，选择一个表。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](create-a-publication.md)和[查看和修改发布属性](view-and-modify-publication-properties.md)。    
+2.  单击 **“项目属性”**，然后单击 **“设置突出显示的表项目的属性”** 或 **“设置所有表项目的属性”**。    
+3.  在“项目属性 - \<项目>”**** 或“项目属性 - \<项目类型>”**** 页上，单击“冲突解决程序”**** 选项卡。    
+4.  选择 **“允许订阅服务器在按需同步时交互式解决冲突”**。    
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]    
-6.  如果处于“发布属性 - **发布>”对话框中，请单击“确定”以保存并关闭该对话框。\<**   
+6.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。    
   
 #### <a name="to-specify-that-a-subscription-should-use-interactive-conflict-resolution"></a>指定订阅应使用交互式冲突解决方法  
   
-1.  在“订阅属性 - **订阅服务器>: \<订阅数据库>”\<** 对话框中，为“交互式解决冲突”  选项指定“True”  值。 有关访问此对话框的详细信息，请参阅 [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) 和 [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md)。 
+1.  在“订阅属性 - \<订阅服务器>: \<订阅数据库>”**** 对话框中，为“交互式解决冲突”**** 选项指定“True”**** 值。 有关访问此对话框的详细信息，请参阅 [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) 和 [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md)。 
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="using-transact-sql"></a>“使用 Transact-SQL”  
@@ -122,20 +122,20 @@ ms.locfileid: "79289525"
   
 
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   如果在初始化订阅后修改跟踪级别，必须重新初始化这些订阅。 有关属性更改的影响的详细信息，请参阅[更改发布和项目属性](../publish/change-publication-and-article-properties.md)。    
 -   对于行级和列级跟踪，始终在行级执行冲突解决：入选行将覆盖落选行。 合并复制还允许您指定在逻辑记录级跟踪和解决冲突，但 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]没有提供这些选项。 有关在复制存储过程中设置这些选项的信息，请参阅 [定义合并表项目间的逻辑记录关系](../publish/define-a-logical-record-relationship-between-merge-table-articles.md)。  
   
-###  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 在“项目属性”  对话框的“属性“  选项卡上指定合并项目的行级或列级跟踪，该对话框可以在新发布向导和“发布属性 - **发布>”\<** 对话框中找到。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](create-a-publication.md)和[查看和修改发布属性](../publish/view-and-modify-publication-properties.md)。  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+ 在“项目属性”**** 对话框的“属性“**** 选项卡上指定合并项目的行级或列级跟踪，该对话框可以在新发布向导和“发布属性 - \<发布>”**** 对话框中找到。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](create-a-publication.md)和[查看和修改发布属性](../publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="specify-row--or-column-level-tracking"></a>指定行级别或列级别跟踪  
   
-1.  在新建发布向导或“发布属性 - **发布>”** **对话框的“项目”\<** 页上，选择一个表。    
-2.  单击 **“项目属性”** ，然后单击 **“设置突出显示的表项目的属性”** 或 **“设置所有表项目的属性”** 。   
-3.  在“项目属性 **项目>”** **对话框的“属性”\<** 选项卡上，为“跟踪级别”  属性选择以下值之一：“行级跟踪”  或“列级跟踪”  。    
-4.  如果处于“发布属性 - **发布>”对话框中，请单击“确定”以保存并关闭该对话框。\<**   
+1.  在新建发布向导或“发布属性 - \<发布>”**** 对话框的“项目”**** 页上，选择一个表。    
+2.  单击 **“项目属性”**，然后单击 **“设置突出显示的表项目的属性”** 或 **“设置所有表项目的属性”**。   
+3.  在“项目属性 \<项目>”**** 对话框的“属性”**** 选项卡上，为“跟踪级别”**** 属性选择以下值之一：“行级跟踪”**** 或“列级跟踪”****。    
+4.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。    
   
 ###  <a name="using-transact-sql"></a>“使用 Transact-SQL”  
   
@@ -210,10 +210,10 @@ ms.locfileid: "79289525"
 
 
 ## <a name="see-also"></a>另请参阅  
- [使用条件性删除跟踪优化合并复制性能](../merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
+ [用条件性删除跟踪优化合并复制的性能](../merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
  [检测并解决逻辑记录中的冲突](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
- [定义合并表项目间的逻辑记录关系](define-a-logical-record-relationship-between-merge-table-articles.md)   
+ [定义合并表项目之间的逻辑记录关系](define-a-logical-record-relationship-between-merge-table-articles.md)   
  [检测并解决合并复制冲突](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [使用仅下载项目优化合并复制性能](../merge/optimize-merge-replication-performance-with-download-only-articles.md)   
- [Define an Article](define-an-article.md)   
+ [利用仅下载项目优化合并复制性能](../merge/optimize-merge-replication-performance-with-download-only-articles.md)   
+ [定义项目](define-an-article.md)   
  [查看和修改项目属性](view-and-modify-article-properties.md)  

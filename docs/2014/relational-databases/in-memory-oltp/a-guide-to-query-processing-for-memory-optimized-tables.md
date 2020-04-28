@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 34fdc72cfbb341e7b7d998a76036e6e2b060e7d8
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112240"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>内存优化表查询处理指南
@@ -79,8 +79,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
 -   Order 表的数据是使用 CustomerID 列的非聚集索引检索的。 此索引包含 CustomerID 列（用于联接）和主键列 OrderID（返回给用户）。 返回 Order 表的其他列需要查找 Order 表的聚集索引。  
   
--   逻辑运算符 `Inner Join` 是通过物理运算符 `Merge Join` 实现的。 其他物理联接类型为 `Nested Loops` 和 `Hash Join`。 
-  `Merge Join` 运算符利用两个索引都按联接列 CustomerID 排序这一事实。  
+-   逻辑运算符 `Inner Join` 是通过物理运算符 `Merge Join` 实现的。 其他物理联接类型为 `Nested Loops` 和 `Hash Join`。 `Merge Join` 运算符利用两个索引都按联接列 CustomerID 排序这一事实。  
   
  考虑一个与此查询稍有不同的查询，它返回 Order 表的所有行，而不仅是 OrderID：  
   
@@ -93,8 +92,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
  ![哈希联接基于磁盘的表的查询计划。](../../database-engine/media/hekaton-query-plan-2.gif "哈希联接基于磁盘的表的查询计划。")  
 哈希联接基于磁盘的表的查询计划。  
   
- 在此查询中，Order 表的行是使用聚集索引检索的。 
-  `Hash Match` 物理运算符现在用于 `Inner Join`。 Order 的聚集索引不是按 CustomerID 排序的，因此 `Merge Join` 需要一个排序运算符，这会影响性能。 请注意 `Hash Match` 运算符的相对开销 (75%) 和上一示例中 `Merge Join` 运算符的开销 (46%)。 优化器在上一示例中也考虑了 `Hash Match` 运算符，但结论是 `Merge Join` 运算符可以提供更好的性能。  
+ 在此查询中，Order 表的行是使用聚集索引检索的。 `Hash Match` 物理运算符现在用于 `Inner Join`。 Order 的聚集索引不是按 CustomerID 排序的，因此 `Merge Join` 需要一个排序运算符，这会影响性能。 请注意 `Hash Match` 运算符的相对开销 (75%) 和上一示例中 `Merge Join` 运算符的开销 (46%)。 优化器在上一示例中也考虑了 `Hash Match` 运算符，但结论是 `Merge Join` 运算符可以提供更好的性能。  
   
 ## <a name="ssnoversion-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 基于磁盘的表的查询处理  
  下图显示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中针对即席查询的查询处理流程：  
@@ -172,8 +170,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
     -   内存优化表不支持聚集索引。 相反，每个内存优化表必须至少有一个非聚集索引，因此内存优化表上的所有索引可高效访问表中的所有列，而不必将其存储在索引中或引用聚集索引。  
   
--   此计划包含 `Hash Match` 而不是 `Merge Join`。 Order 和 Customer 表的索引均为哈希索引，因此没有顺序。 
-  `Merge Join` 会要求排序运算符，这会降低性能。  
+-   此计划包含 `Hash Match` 而不是 `Merge Join`。 Order 和 Customer 表的索引均为哈希索引，因此没有顺序。 `Merge Join` 会要求排序运算符，这会降低性能。  
   
 ## <a name="natively-compiled-stored-procedures"></a>本机编译的存储过程  
  本机编译存储过程是编译为机器代码的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 存储过程，而不是由查询执行引擎解释。 以下脚本创建一个本机编译存储过程来运行示例查询（来自“示例查询”部分）。  
@@ -198,7 +195,7 @@ END
 |-|-----------------------|-----------------|  
 |初始编译|创建时。|首次执行时。|  
 |自动重新编译|在数据库或服务器重新启动后首次执行该过程时。|服务器重新启动时。 或者从计划高速缓存中逐出时（通常是由于架构或状态更改，或者内存压力）。|  
-|手动重新编译|不支持。 解决方法是删除并重新创建存储过程。|使用 `sp_recompile`。 您可以手动将计划逐出高速缓存，例如通过 DBCC FREEPROCCACHE。 也可以创建存储过程 WITH RECOMPILE，存储过程将在每次执行时重新编译。|  
+|手动重新编译|不支持。 解决方法是删除并重新创建存储过程。|改用 `sp_recompile` 您可以手动将计划逐出高速缓存，例如通过 DBCC FREEPROCCACHE。 也可以创建存储过程 WITH RECOMPILE，存储过程将在每次执行时重新编译。|  
   
 ### <a name="compilation-and-query-processing"></a>编译和查询处理  
  下图说明本机编译存储过程的编译流程：  
@@ -208,7 +205,7 @@ END
   
  该过程如下，  
   
-1.  用户向 `CREATE PROCEDURE` 发出一条 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 语句。  
+1.  用户向 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发出一条 `CREATE PROCEDURE` 语句。  
   
 2.  分析器和 algebrizer 为该过程创建处理流程，并为存储过程中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查询创建查询树。  
   
@@ -268,8 +265,7 @@ GO
 |Nested Loops Join|Nested Loops 是本机编译存储过程内唯一支持的联接运算符。 所有包含联接的计划都将使用 Nested Loops 运算符，即使以解释型 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 执行的同一查询计划包含哈希或合并联接也是如此。<br /><br /> `SELECT o.OrderID, c.CustomerID`  <br /> `FROM dbo.[Order] o INNER JOIN dbo.[Customer] c`|  
 |排序|`SELECT ContactName FROM dbo.Customer`  <br /> `ORDER BY ContactName`|  
 |TOP|`SELECT TOP 10 ContactName FROM dbo.Customer`|  
-|Top-sort|
-  `TOP` 表达式（要返回的行的数量）不能超过 8,000 行。 如果查询中还有联接和聚合运算符，数量会更少。 与基表的行数相比，联接和聚合通常可减少要排序的行数。<br /><br /> `SELECT TOP 10 ContactName FROM dbo.Customer`  <br /> `ORDER BY ContactName`|  
+|Top-sort|`TOP` 表达式（要返回的行的数量）不能超过 8,000 行。 如果查询中还有联接和聚合运算符，数量会更少。 与基表的行数相比，联接和聚合通常可减少要排序的行数。<br /><br /> `SELECT TOP 10 ContactName FROM dbo.Customer`  <br /> `ORDER BY ContactName`|  
 |Stream Aggregate|请注意，聚合不支持 Hash Match 运算符。 因此，本机编译存储过程中的所有聚合都使用 Stream Aggregate 运算符，即使解释型 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中针对同一查询计划使用 Hash Match 运算符也是如此。<br /><br /> `SELECT count(CustomerID) FROM dbo.Customer`|  
   
 ## <a name="column-statistics-and-joins"></a>列统计信息和联接  
@@ -304,10 +300,9 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 -   用索引查找替换了对 IX_CustomerID 的全文检索扫描。 这样只需扫描 5 行，而全文检索扫描需要扫描 830 行。  
   
 ### <a name="statistics-and-cardinality-for-memory-optimized-tables"></a>内存优化表的统计信息和基数  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 保留内存优化表的列级统计信息。 此外，它还保留表的实际行数。 但是，与基于磁盘的表相比，它并不自动更新内存优化表的统计信息。 因此，在表中进行重大更改之后需要手动更新统计信息。 有关详细信息，请参阅 [内存优化表的统计信息](memory-optimized-tables.md)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 保留内存优化表的列级统计信息。 此外，它还保留表的实际行数。 但是，与基于磁盘的表相比，它并不自动更新内存优化表的统计信息。 因此，在表中进行重大更改之后需要手动更新统计信息。 有关详细信息，请参阅 [内存优化表的统计信息](memory-optimized-tables.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Memory-Optimized Tables](memory-optimized-tables.md)  
+ [内存优化表](memory-optimized-tables.md)  
   
   

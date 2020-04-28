@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289265"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 数据库
@@ -73,23 +73,23 @@ ms.locfileid: "79289265"
   
 -   [cdc.xdbcdc_staged_transactions](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_staged_transactions)  
   
-###  <a name="bkmk_change_tables_ct"></a> 更改表 (_CT)  
+###  <a name="change-tables-_ct"></a><a name="bkmk_change_tables_ct"></a> 更改表 (_CT)  
  更改表是从镜像表创建的。 它们包含从 Oracle 数据库捕获的更改数据。 根据以下约定命名这些表：  
   
- [cdc].[\<capture-instance>_CT]   
+ [cdc].[**capture-instance>_CT]\<**  
   
  在最初为表 `<schema-name>.<table-name>`启用捕获时，默认捕获实例名称为 `<schema-name>_<table-name>`。 例如，Oracle HR.EMPLOYEES 表的默认捕获实例名称为 HR_EMPLOYEES，而关联的更改表为 [cdc]。 [HR_EMPLOYEES_CT]。  
   
  捕获表由 Oracle CDC 实例写入。 使用在创建捕获实例时由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的特殊表值函数读取捕获表。 例如，`fn_cdc_get_all_changes_HR_EMPLOYEES` 。 有关这些 CDC 函数的详细信息，请参阅 [变更数据捕获函数 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152)。  
   
-###  <a name="bkmk_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
+###  <a name="cdclsn_time_mapping"></a><a name="bkmk_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  **[cdc].[lsn_time_mapping]** 表由 SQL Server CDC 组件生成。 它在 Oracle CDC 情况下的用法与其常规用法不同。  
   
  对于 Oracle CDC，在此表中存储的 LSN 值基于与更改相关联的 Oracle 系统更改号 (SCN) 值。 该 LSN 值的前 6 个字节是原始 Oracle SCN 号。  
   
  此外，在使用 Oracle CDC 时，时间列（`tran_begin_time` 和 `tran_end_time`）存储更改的 UTC 时间而非本地时间，就像它对待常规 SQL Server CDC 一样。 这可以确保夏时制时间更改不会影响存储在 lsn_time_mapping 中的数据。  
   
-###  <a name="bkmk_cdcxdbcdc_config"></a> cdc.xdbcdc_config  
+###  <a name="cdcxdbcdc_config"></a><a name="bkmk_cdcxdbcdc_config"></a> cdc.xdbcdc_config  
  此表包含 Oracle CDC 实例的配置数据。 它是使用 CDC 设计器控制台更新的。 该表仅具有一行。  
   
  下表介绍了 **cdc.xdbcdc_config** 表的各列。  
@@ -109,7 +109,7 @@ ms.locfileid: "79289265"
   
 |名称|默认|Min|Max|静态|说明|  
 |----------|-------------|---------|---------|------------|-----------------|  
-|跟踪|False|-|-|False|可用值：<br /><br /> **True**<br /><br /> **False**<br /><br /> **on**<br /><br /> **off**|  
+|跟踪|False|-|-|False|可用值：<br /><br /> **True**<br /><br /> **False**<br /><br /> **on**<br /><br /> **非**|  
 |cdc_update_state_interval|10|1|120|False|为某一事务分配的内存块的大小（一个事务可分配多个块）(KB)。 请参阅 [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config) 表中的 memory_limit 列。|  
 |target_max_batched_transactions|100|1|1000|True|可在 SQL Server CT 表更新中作为一个事务处理的 Oracle 事务的最大数目。|  
 |target_idle_lsn_update_interval|10|0|1|False|用于在捕获表没有任何活动时更新 **lsn_time_mapping** 表的时间间隔（秒）。|  
@@ -132,7 +132,7 @@ ms.locfileid: "79289265"
 |CDC_stop_on_breaking_schema_changes|False|-|-|False|布尔值。 **True** 指示当检测到中断的架构更改时停止。<br /><br /> **False** 指示删除镜像表和捕获实例。|  
 |source_oracle_home||-|-|False|可设置为 CDC 实例将用于连接到 Oracle 的特定 Oracle 主页路径或 Oracle 主页名称。|  
   
-###  <a name="bkmk_cdcxdbcdc_state"></a> cdc.xdbcdc_state  
+###  <a name="cdcxdbcdc_state"></a><a name="bkmk_cdcxdbcdc_state"></a> cdc.xdbcdc_state  
  此表包含与 Oracle CDC 实例的持久化状态有关的信息。 该捕获状态用于恢复和故障转移情况以及用于运行状况监视。  
   
  下表介绍了 **cdc.xdbcdc_state** 表的各列。  
@@ -157,7 +157,7 @@ ms.locfileid: "79289265"
 |read_changes|从源 Oracle 事务日志读取的更改记录的数目。|  
 |staged_transactions|**cdc.xdbcdc_staged_transactions** 表中暂存的当前处于活动状态的事务数目。|  
   
-###  <a name="bkmk_cdcxdbcdc_trace"></a> cdc.xdbcdc_trace  
+###  <a name="cdcxdbcdc_trace"></a><a name="bkmk_cdcxdbcdc_trace"></a> cdc.xdbcdc_trace  
  此表包含与 CDC 实例的操作有关的信息。 此表中存储的信息包括错误记录、显著的状态更改和跟踪记录。 错误信息还写入 Windows 事件日志，以便确保在 **cdc.xcbcdc_trace** 表不可用时提供这些信息。  
   
  下表描述 cdc.xdbcdc_trace 表的各列。  
@@ -172,7 +172,7 @@ ms.locfileid: "79289265"
 |status_message|状态表使用的状态消息。|  
 |data|在错误或跟踪记录包含负载（例如，损坏的日志记录）时的附加数据。|  
   
-###  <a name="bkmk_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
+###  <a name="cdcxdbcdc_staged_transactions"></a><a name="bkmk_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
  此表存储在捕获事务提交或回滚事件前大型或长时间运行的事务的更改记录。 Oracle CDC 服务首先按事务提交时间、然后按各事务的时间顺序对捕获的日志记录进行排序。 在事务结束前同一事务的日志记录将存储在内存中，然后写入目标更改表或被放弃（在回滚时）。 因为只有有限的可用内存量，所以，大型事务将在事务完成前写入 **cdc.xdbcdc_staged_transactions** 表。 事务还会在长时间运行时写入临时表。 因此，在 Oracle CDC 实例重新启动时，无需从 Oracle 事务日志重新读取旧的更改。  
   
  下表介绍了 **cdc.xdbcdc_staged_transactions** 表的各列。  

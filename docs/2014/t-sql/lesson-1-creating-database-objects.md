@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a1c05ed678fd0c23fc00466396f306763dfbc54b
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78280918"
 ---
 # <a name="lesson-1-creating-database-objects"></a>第 1 课：创建数据库对象
@@ -34,17 +34,17 @@ ms.locfileid: "78280918"
   
  本课程包含以下主题：  
   
--   [创建数据库 &#40;教程&#41;](lesson-1-1-creating-a-database.md)  
+-   [创建数据库（教程）](lesson-1-1-creating-a-database.md)  
   
--   [创建表 &#40;教程&#41;](lesson-1-2-creating-a-table.md)  
+-   [创建表（教程）](lesson-1-2-creating-a-table.md)  
   
--   [插入和更新表中的数据 &#40;教程&#41;](lesson-1-3-inserting-and-updating-data-in-a-table.md)  
+-   [插入和更新表中的数据（教程）](lesson-1-3-inserting-and-updating-data-in-a-table.md)  
   
--   [读取表中的数据 &#40;教程&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
+-   [读取表中的数据（教程）](lesson-1-4-reading-the-data-in-a-table.md)  
   
 -   [摘要：创建数据库对象](lesson-1-5-summary-creating-database-objects.md)  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
- [创建数据库 &#40;教程&#41;](lesson-1-1-creating-a-database.md)  
+ [创建数据库（教程）](lesson-1-1-creating-a-database.md)  
   
   

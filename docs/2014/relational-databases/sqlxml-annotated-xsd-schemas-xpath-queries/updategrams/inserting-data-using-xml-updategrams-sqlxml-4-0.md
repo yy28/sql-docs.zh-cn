@@ -34,10 +34,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 71aba1741b777a593f951300a975df4736525211
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112190"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML updategram 插入数据 (SQLXML 4.0)
@@ -79,8 +79,7 @@ ms.locfileid: "79112190"
  如果 updategram 要在其中插入记录的表包含一个 IDENTITY 类型的列，则 updategram 可通过使用可选的 `updg:at-identity` 属性捕获系统分配的值。 然后，updategram 可以在后续操作中使用此值。 一旦执行 updategram，即可通过指定 `updg:returnid` 属性返回生成的标识值。  
   
 ## <a name="updgguid-attribute"></a>updg:guid 属性  
- 
-  `updg:guid` 属性是一个生成全局唯一标识符的可选属性。 此值保留在指定它的整个** \<同步>** 块的作用域中。 可以在** \<sync>** 块中的任何位置使用此值。 特性调用`NEWGUID()` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]函数以生成唯一标识符。  
+ `updg:guid` 属性是一个生成全局唯一标识符的可选属性。 此值保留在指定它的整个** \<同步>** 块的作用域中。 可以在** \<sync>** 块中的任何位置使用此值。 特性调用`NEWGUID()` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]函数以生成唯一标识符。  
   
 ## <a name="examples"></a>示例  
  若要创建使用以下示例的工作示例，必须满足[运行 SQLXML 示例的要求](../../sqlxml/requirements-for-running-sqlxml-examples.md)中指定的要求。  
@@ -611,10 +610,9 @@ CustOrder(OrderID, EmployeeID, OrderType)
      有关详细信息，请参阅[使用 ADO 执行 SQLXML 4.0 查询](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
 ### <a name="i-inserting-data-into-an-xml-data-type-column"></a>I. 将数据插入到 XML 数据类型列  
- 在 `xml` 中已引入了 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 数据类型。 可以使用 updategram 插入和更新存储在 `xml` 数据类型列中的数据，但必须遵守以下规定：  
+ 在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中已引入了 `xml` 数据类型。 可以使用 updategram 插入和更新存储在 `xml` 数据类型列中的数据，但必须遵守以下规定：  
   
--   
-  `xml` 列不能用于标识现有行。 因此，它不能包括在 updategram 的 `updg:before` 部分中。  
+-   `xml` 列不能用于标识现有行。 因此，它不能包括在 updategram 的 `updg:before` 部分中。  
   
 -   将保留插入到 `xml` 列的 XML 片段的作用域中的命名空间，并且会将其命名空间声明添加到所插入片段的顶级元素中。  
   

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 891ae8c4f21d0a38302a7213aab22b8a70e855ba
-ms.sourcegitcommit: 7008c7fe451a20d6610e40bb8f61dece86c0f17e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79027949"
 ---
 # <a name="sysdm_os_sys_memory-transact-sql"></a>sys.dm_os_sys_memory (Transact-SQL)
@@ -49,20 +49,20 @@ ms.locfileid: "79027949"
 |**system_high_memory_signal_state**|**bit**|系统内存资源充足的状态通知。 值为 1 指示内存充足信号已由 Windows 设置。 有关详细信息，请参阅 MSDN library 中的[CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) 。|  
 |**system_low_memory_signal_state**|**bit**|系统内存资源不足的状态通知。 值为 1 指示内存不足信号已由 Windows 设置。 有关详细信息，请参阅 MSDN library 中的[CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) 。|  
 |**system_memory_state_desc**|**nvarchar(256)**|内存状态的说明。 请参阅下表。|  
-|pdw_node_id |**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|**pdw_node_id**|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 |条件|值|  
 |---------------|-----------|  
-|system_high_memory_signal_state = 1<br /><br /> and<br /><br /> system_low_memory_signal_state = 0|可用物理内存充足|  
-|system_high_memory_signal_state = 0<br /><br /> and<br /><br /> system_low_memory_signal_state = 1|可用物理内存不足|  
-|system_high_memory_signal_state = 0<br /><br /> and<br /><br /> system_low_memory_signal_state = 0|物理内存使用量稳定|  
-|system_high_memory_signal_state = 1<br /><br /> and<br /><br /> system_low_memory_signal_state = 1|物理内存状态正在转换<br /><br /> 不得同时出现充足和不足两种信号。 但是，在操作系统级别的快速变更可能会导致对某个用户模式应用程序同时显示这两个值。 这两个信号同时出现将解释为转换状态。|  
+|system_high_memory_signal_state = 1<br /><br /> 和<br /><br /> system_low_memory_signal_state = 0|可用物理内存充足|  
+|system_high_memory_signal_state = 0<br /><br /> 和<br /><br /> system_low_memory_signal_state = 1|可用物理内存不足|  
+|system_high_memory_signal_state = 0<br /><br /> 和<br /><br /> system_low_memory_signal_state = 0|物理内存使用量稳定|  
+|system_high_memory_signal_state = 1<br /><br /> 和<br /><br /> system_low_memory_signal_state = 1|物理内存状态正在转换<br /><br /> 不得同时出现充足和不足两种信号。 但是，在操作系统级别的快速变更可能会导致对某个用户模式应用程序同时显示这两个值。 这两个信号同时出现将解释为转换状态。|  
   
 ## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [&#40;Transact-sql 的与操作系统相关的动态管理视图 SQL Server&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

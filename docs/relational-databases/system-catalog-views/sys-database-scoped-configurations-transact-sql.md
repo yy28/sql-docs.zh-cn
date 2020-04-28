@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||= azure-sqldw-latest
 ms.openlocfilehash: a463fea7a70b5e01c26a6ff5e93c1c8c1dab32ea
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78288950"
 ---
 # <a name="sysdatabase_scoped_configurations-transact-sql"></a>sys. database_scoped_configurations （Transact-sql）
@@ -34,13 +34,13 @@ ms.locfileid: "78288950"
 |列名称|数据类型|说明|
 |-----------------|---------------|-----------------|
 |**configuration_id**|**int**|配置选项的 ID。|
-|**路径名**|**nvarchar （60）**|配置选项的名称。 有关可能的配置的信息，请参阅[ALTER DATABASE 作用域配置 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。|
+|**name**|**nvarchar(60)**|配置选项的名称。 有关可能的配置的信息，请参阅[ALTER DATABASE 作用域配置 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。|
 |**value**|**sqlvariant**|为主副本的此配置选项设置的值。|
 |**value_for_secondary**|**sqlvariant**|为辅助副本的此配置选项设置的值。|
 |**is_value_default**|**bit** |指定设置的值是否为默认值。|
 |**dw_compatibility_level**|**int**|数据库的兼容级别（预览版）。  默认值 = 0 （自动）|
 
-## <a name="Permissions"></a> 权限
+## <a name="permissions"></a><a name="Permissions"></a> 权限
 
 要求 **公共** 角色具有成员身份。
 

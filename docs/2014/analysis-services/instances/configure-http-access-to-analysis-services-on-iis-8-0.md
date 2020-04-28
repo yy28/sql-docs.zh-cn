@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8431de73b450179592bda39066c72550991a393c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79217080"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问
@@ -50,9 +50,9 @@ ms.locfileid: "79217080"
   
 -   [编辑 MSMDPUMP.INI 文件以便设置目标服务器](#bkmk_edit)  
   
--   [测试配置](#bkmk_test)  
+-   [测试您的配置](#bkmk_test)  
   
-##  <a name="bkmk_overview"></a> 概述  
+##  <a name="overview"></a><a name="bkmk_overview"></a> 概述  
  MSMDPUMP 是一个 ISAPI 扩展，可加载到 IIS 以及向本地或远程 Analysis Services 实例提供重定向。 配置此 ISAPI 扩展后，即创建 Analysis Services 实例的 HTTP 端点。  
   
  必须为每个 HTTP 端点都创建并配置一个虚拟目录。 对于要连接到的每个 Analysis Services 实例，每个端点都将需要自身的一组 MSMDPUMP 文件。 这组文件中有一个配置文件指定用于每个 HTTP 端点的 Analysis Services 实例的名称。  
@@ -65,13 +65,13 @@ ms.locfileid: "79217080"
   
  下表列出您为不同情形启用 HTTP 访问时需要注意的其他事项。  
   
-|场景|配置|  
+|方案|配置|  
 |--------------|-------------------|  
 |IIS 和 Analysis Services 位于同一台计算机上|这是最简单的配置，因为它允许您使用默认配置（其中，服务器名称为 localhost）、本地 Analysis Services OLE DB 访问接口以及与 NTLM 的 Windows 集成安全性。 假定客户端也在同一域中，用户意识不到身份验证的存在，并且您不需要做其他工作。|  
 |IIS 和 Analysis Services 位于不同计算机上|对于此拓扑，您必须将 Analysis Services OLE DB 访问接口安装在 Web 服务器上。 您还必须编辑 msmdpump.ini 文件，以便指定 Analysis Services 实例在远程计算机上的位置。<br /><br /> 此拓扑添加了双跃点身份验证步骤，其中，凭据必须从客户端流到 Web 服务器，然后流到后端 Analysis Services 服务器上。 如果您在使用 Windows 凭据和 NTLM，系统将会显示错误消息，因为 NTLM 不允许将客户端凭据委托给第二个服务器。 最常见的解决方案是将基本身份验证用于安全套接字层 (SSL)，但是，这就要求用户在访问 MSMDPUMP 虚拟目录时提供用户名和密码。 一个更为直接的方法可能是启用 Kerberos 并且配置 Analysis Services 约束委派，以便用户能够以透明的方式访问 Analysis Services。 有关详细信息，请参阅 [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md) 。<br /><br /> 考虑要在 Windows 防火墙中取消阻止的端口。 您将需要取消阻止这两台服务器上的端口，以便允许访问 IIS 上的 Web 应用程序以及远程服务器上的 Analysis Services。|  
 |客户端连接来自不可信域或 extranet 连接|来自不可信域的客户端连接对身份验证带来进一步的限制。 默认情况下，Analysis Services 使用 Windows 集成身份验证，这要求用户与服务器处于同一域中。 如果您具有从域的外部连接到 IIS 的 Extranet 用户，则在服务器配置为使用默认设置时，这些用户将会收到连接错误。<br /><br /> 解决方法包括让 Extranet 用户使用域凭据通过 VPN 进行连接。 但是，一个更好的方法可能是在您的 IIS 网站上启用基本身份验证和 SSL。|  
   
-##  <a name="bkmk_prereq"></a>先决条件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a>先决条件  
  本文中的说明是假定已配置 IIS 并且已安装 Analysis Services。 Windows Server 2012 附带 IIS 8.x 作为服务器角色，你可以在系统上启用它。  
   
  **IIS 8.0 中的额外配置**  
@@ -107,7 +107,7 @@ ms.locfileid: "79217080"
 > [!NOTE]  
 >  请记住，为了允许与远程 Analysis Services 服务器的客户端连接，需取消阻止 Windows 防火墙中的端口。 有关详细信息，请参阅 [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
-##  <a name="bkmk_copy"></a>步骤1：将 MSMDPUMP 文件复制到 Web 服务器上的文件夹  
+##  <a name="step-1-copy-the-msmdpump-files-to-a-folder-on-the-web-server"></a><a name="bkmk_copy"></a> 第 1 步：将 MSMDPUMP 文件复制到 Web 服务器上的某个文件夹  
  所创建的每个 HTTP 端点均必须有其自身的一组 MSMDPUMP 文件。 在此步骤中，从 Analysis Services 程序文件夹中将 MSMDPUMP 可执行文件、配置文件和资源文件复制到新的虚拟目录文件夹，你将在运行 IIS 的计算机的文件系统上创建此虚拟目录文件夹。  
   
  必须为 NTFS 文件系统格式化该驱动器。 指向您创建的文件夹的路径不得包含任何空格。  
@@ -128,7 +128,7 @@ ms.locfileid: "79217080"
   
     -   \<驱动器>： \inetpub\wwwroot\OLAP\Resources  
   
-##  <a name="bkmk_appPool"></a>步骤2：在 IIS 中创建应用程序池和虚拟目录  
+##  <a name="step-2-create-an-application-pool-and-virtual-directory-in-iis"></a><a name="bkmk_appPool"></a> 第 2 步：在 IIS 中创建应用程序池和虚拟目录  
  接下来，创建应用程序池和抽取端点。  
   
 #### <a name="create-an-application-pool"></a>创建应用程序池  
@@ -164,7 +164,7 @@ ms.locfileid: "79217080"
 > [!NOTE]  
 >  这些说明的先前版本包括用于创建虚拟目录的步骤。 这些步骤已不需要。  
   
-##  <a name="bkmk_auth"></a>步骤3：配置 IIS 身份验证并添加扩展  
+##  <a name="step-3-configure-iis-authentication-and-add-the-extension"></a><a name="bkmk_auth"></a> 第 3 步：配置 IIS 身份验证和添加扩展  
  在这一步中，进一步配置刚刚创建的 SSAS 虚拟目录。 您将指定一个身份验证方法，然后添加脚本映射。 Analysis Services 在 HTTP 上支持的身份验证方法包括：  
   
 -   Windows 身份验证（Kerberos 或 NTLM）  
@@ -173,13 +173,13 @@ ms.locfileid: "79217080"
   
 -   匿名身份验证  
   
- **Windows 身份验证**被认为是最安全的，并利用现有的基础结构来实现使用 Active Directory 的网络。 若要有效地使用 Windows 身份验证，所有浏览器、客户端应用程序和服务器应用程序均必须支持它。 这是最安全的模式，建议您使用，但它要求 IIS 可访问 Windows 域控制器，而后者需要能够验证请求连接的用户的身份。  
+ **Windows 身份验证** 被认为是最安全的身份验证方式，它利用现有使用 Active Directory 的网络基础结构。 若要有效地使用 Windows 身份验证，所有浏览器、客户端应用程序和服务器应用程序均必须支持它。 这是最安全的模式，建议您使用，但它要求 IIS 可访问 Windows 域控制器，而后者需要能够验证请求连接的用户的身份。  
   
  如果拓扑中将 Analysis Services 和 IIS 置于不同的计算机上，则必须解决在需要将用户标识委托给远程计算机上的另一个服务时引发的双跃点问题，而通常是通过允许 Analysis Services 进行 Kerberos 约束委派实现这一点。 有关详细信息，请参阅 [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md)。  
   
- 当你有 Windows 标识时，使用**基本身份验证**，但用户连接来自不受信任的域，禁止使用委托或模拟的连接。 通过基本身份验证，可在连接字符串中指定用户标识和密码。 不使用当前用户的安全上下文，而是使用连接字符串中的凭据连接到 Analysis Services。 由于 Analysis Services 仅支持 Windows 身份验证，因此传递给它的任何凭据都必须是某个 Windows 用户或组，而后者必须是从中托管 Analysis Services 的域的成员。  
+ 当你具有 Windows 身份时，将使用**基本身份验证** ，但由于用户连接来自不可信的域，因此禁止使用委托或模拟的连接。 通过基本身份验证，可在连接字符串中指定用户标识和密码。 不使用当前用户的安全上下文，而是使用连接字符串中的凭据连接到 Analysis Services。 由于 Analysis Services 仅支持 Windows 身份验证，因此传递给它的任何凭据都必须是某个 Windows 用户或组，而后者必须是从中托管 Analysis Services 的域的成员。  
   
- 初始测试期间经常使用**匿名身份验证**，因为它易于配置，有助于快速验证 ANALYSIS SERVICES 的 HTTP 连接性。 只需几步，即可分配唯一用户帐户作为标识，向该帐户授予 Analysis Services 中的权限，使用该帐户验证客户端应用程序中的数据访问，然后在测试完毕后禁用匿名身份验证。  
+ 初始测试期间经常使用**匿名身份验证** ，因为其易于配置，有助于快速验证与 Analysis Services 的 HTTP 连接。 只需几步，即可分配唯一用户帐户作为标识，向该帐户授予 Analysis Services 中的权限，使用该帐户验证客户端应用程序中的数据访问，然后在测试完毕后禁用匿名身份验证。  
   
  如果用户没有 Windows 用户帐户，也可在生产环境中使用匿名身份验证，但要遵守在主机系统上锁定权限的最佳做法，如本文中所注： [启用匿名身份验证 (IIS 7)](https://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx)。 务必对虚拟目录（而不要对父级网站）设置身份验证以进一步降低帐户访问权限的级别。  
   
@@ -200,7 +200,7 @@ ms.locfileid: "79217080"
 4.  或者，如果您的客户端和服务器应用程序处于不同的域中，则启用 **“基本身份验证”** 。 此模式要求用户输入用户名和密码。 该用户名和密码通过 HTTP 连接传输到 IIS。 IIS 在连接到 MSMDPUMP 时将尝试使用所提供的凭据模拟用户的身份，但不会将凭据委托给 Analysis Services。 而是需要由您在连接时传递有效的用户名和密码，如本文中的第 6 步所述。  
   
     > [!IMPORTANT]  
-    >  请注意，构建密码将传输到的系统的任何人都必须设法确保通信渠道的安全。 IIS 提供多种工具来帮助您确保通信渠道的安全。 有关详细信息，请参阅 [如何在 IIS 7 上设置 SSL](https://go.microsoft.com/fwlink/?LinkId=207562)。  
+    >  请注意，构建密码将传输到的系统的任何人都必须设法确保通信渠道的安全。 IIS 提供多种工具来帮助您确保通信渠道的安全。 有关详细信息，请参阅[如何在 IIS 7 上设置 SSL](https://go.microsoft.com/fwlink/?LinkId=207562)。  
   
 5.  如果使用的是 Windows 或基本身份验证，则禁用 **“匿名身份验证”** 。 启用匿名身份验证后，IIS 将始终首先使用该方法，即使启用了其他身份验证方法也是如此。  
   
@@ -223,7 +223,7 @@ ms.locfileid: "79217080"
   
      ![确认添加 ISAPI 扩展插件的屏幕快照](../media/ssas-httpaccess-isapiprompt.png "确认添加 ISAPI 扩展插件的屏幕快照")  
   
-##  <a name="bkmk_edit"></a>步骤4：编辑 MSMDPUMP。用于设置目标服务器的 INI 文件  
+##  <a name="step-4-edit-the-msmdpumpini-file-to-set-the-target-server"></a><a name="bkmk_edit"></a> 第 4 步：编辑 MSMDPUMP.INI 文件以设置目标服务器  
  MSMDPUMP.INI 文件指定 MSMDPUMP.DLL 所连接的 Analysis Services 实例。 此实例可以是本地或远程实例，并可作为默认实例或命名实例安装。  
   
  打开位于 C:\inetpub\wwwroot\OLAP 文件夹中的 msmdpump.ini 文件，查看该文件的内容。 该元素应类似于：  
@@ -258,7 +258,7 @@ ms.locfileid: "79217080"
   
  有关设置权限的详细信息，请参阅 [授予对对象和操作的访问权限&#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)。  
   
-##  <a name="bkmk_test"></a>步骤6：测试您的配置  
+##  <a name="step-6-test-your-configuration"></a><a name="bkmk_test"></a>步骤6：测试您的配置  
  针对 MSMDPUMP 的连接字符串语法是指向 MSMDPUMP.dll 文件的 URL。  
   
  如果 web 应用程序正在侦听固定端口，请将端口号附加到服务器名称或 IP 地址，例如`http://my-web-srv01:8080/OLAP/msmdpump.dll`或。 `http://123.456.789.012:8080/OLAP/msmdpump.dll`  

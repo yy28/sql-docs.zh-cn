@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caae4212e2182ae6afde29b0fed1aaee4f05645a
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289285"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>SQL Server 2014 各个版本支持的功能
@@ -68,7 +68,7 @@ ms.locfileid: "79289285"
   
  [Reporting Services](#Reporting)  
   
- [商业智能客户端](#BIClients)  
+ [Business Intelligence 客户端](#BIClients)  
   
  [空间和位置服务](#Spatial)  
   
@@ -76,20 +76,20 @@ ms.locfileid: "79289285"
   
  [其他组件](#Other_Components)  
   
-##  <a name="CrossBoxScale"></a>跨框规模限制  
+##  <a name="cross-box-scale-limits"></a><a name="CrossBoxScale"></a>转换箱规模限制  
   
 |功能名称|Enterprise|商业智能|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |单个实例使用的最大计算能力（[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据库引擎）<sup>1</sup>|操作系统支持的最大值|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|  
 |单个实例使用的最大计算能力（Analysis Services，Reporting Services） <sup>1</sup>|操作系统支持的最大值|操作系统支持的最大值|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|  
 |利用的最大内存（每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库引擎实例）|操作系统支持的最大值|128 GB|128 GB|64 GB|1 GB|1 GB|1 GB|  
-|利用的最大内存（每个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例）|操作系统支持的最大值|操作系统支持的最大值|64 GB|空值|空值|空值|空值|  
-|利用的最大内存（每个 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]实例）|操作系统支持的最大值|操作系统支持的最大值|64 GB|64 GB|4 GB|空值|空值|  
+|利用的最大内存（每个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例）|操作系统支持的最大值|操作系统支持的最大值|64 GB|不适用|不适用|不适用|不适用|  
+|利用的最大内存（每个 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]实例）|操作系统支持的最大值|操作系统支持的最大值|64 GB|64 GB|4 GB|不适用|不适用|  
 |最大关系数据库大小|524 PB|524 PB|524 PB|524 PB|10 GB|10 GB|10 GB|  
   
- <sup>1</sup>使用基于服务器 + 客户端访问许可证（CAL）的许可（对新协议不可用）的 Enterprise Edition 最多只能为每个[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例20个核心。 基于内核的服务器许可模型没有限制。 有关详细信息，请参阅[按版本 SQL Server 计算容量限制](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
+ <sup>1</sup>使用基于服务器 + 客户端访问许可证（CAL）的许可（对新协议不可用）的 Enterprise Edition 最多只能为每个[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例20个核心。 基于内核的服务器许可模型没有限制。 有关详细信息，请参阅 [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
   
-##  <a name="High_availability"></a> 高可用性  
+##  <a name="high-availability"></a><a name="High_availability"></a>高可用性  
   
 |功能名称|Enterprise|商业智能|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -115,7 +115,7 @@ ms.locfileid: "79289285"
   
  <sup>2</sup>此功能仅适用于64位[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
-##  <a name="Scalability"></a>可伸缩性和性能  
+##  <a name="scalability-and-performance"></a><a name="Scalability"></a>可伸缩性和性能  
   
 |功能名称|Enterprise|商业智能|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -133,7 +133,7 @@ ms.locfileid: "79289285"
   
  <sup>1</sup>此功能仅适用于64位[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
-##  <a name="Enterprise_security"></a> Security  
+##  <a name="security"></a><a name="Enterprise_security"></a> Security  
   
 |功能名称|Enterprise|商业智能|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -145,11 +145,11 @@ ms.locfileid: "79289285"
 |包含的数据库|是|是|是|是|是|是|是|  
 |备份加密|是|是|是|||||  
   
-##  <a name="Replication"></a>副本  
+##  <a name="replication"></a><a name="Replication"></a> Replication  
   
 |功能名称|Enterprise|商业智能|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]更改跟踪|是|是|是|是|是|是|是|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 更改跟踪|是|是|是|是|是|是|是|  
 |合并复制|是|是|是|支持（仅订阅服务器）|支持（仅订阅服务器）|支持（仅订阅服务器）|支持（仅订阅服务器）|  
 |事务复制|是|是|是|支持（仅订阅服务器）|支持（仅订阅服务器）|支持（仅订阅服务器）|支持（仅订阅服务器）|  
 |快照复制|是|是|是|支持（仅订阅服务器）|支持（仅订阅服务器）|支持（仅订阅服务器）|支持（仅订阅服务器）|  
@@ -157,14 +157,14 @@ ms.locfileid: "79289285"
 |Oracle 发布|是|||||||  
 |对等事务复制|是|||||||  
   
-##  <a name="Mgmt_Tools"></a>管理工具  
+##  <a name="management-tools"></a><a name="Mgmt_Tools"></a>管理工具  
   
 |功能名称|Enterprise|商业智能|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |SQL 管理对象 (SMO)|是|是|是|是|是|是|是|  
 |SQL 配置管理器|是|是|是|是|是|是|是|  
 |SQL CMD（命令提示工具）|是|是|是|是|是|是|是|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Management Studio|是|是|是|是|是|是||  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio|是|是|是|是|是|是||  
 |Distributed Replay - 管理工具|是|是|是|是|是|是||  
 |分布式重播 - 客户端|是|否|是|是||||  
 |分布式重播 - 控制器|支持（Enterprise 版支持最多 16 个客户端、Developer 版仅支持 1 个客户端）|否|支持（仅支持 1 个客户端）|支持（仅支持 1 个客户端）||||  
@@ -179,7 +179,7 @@ ms.locfileid: "79289285"
   
  <sup>3</sup>仅对 Standard edition 功能启用优化。  
   
-##  <a name="RDBMS_mgmt"></a>RDBMS 可管理性  
+##  <a name="rdbms-manageability"></a><a name="RDBMS_mgmt"></a>RDBMS 可管理性  
   
 |功能名称|Enterprise|商业智能|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -200,20 +200,19 @@ ms.locfileid: "79289285"
 |并行索引操作|是|||||||  
 |查询优化器自动使用索引视图|是|||||||  
 |并行一致性检查|是|||||||  
-|
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具控制点|是|||||||  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具控制点|是|||||||  
 |包含的数据库|是|是|是|是|是|是|是|  
 |缓冲池扩展<sup>2</sup>|是|是|是|||||  
   
- <sup>1</sup>有关详细信息，请参阅[使用 SysPrep 安装 SQL Server 的注意事项](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)。  
+ <sup>1</sup> 有关详细信息，请参阅 [使用 SysPrep 安装 SQL Server 的注意事项](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)。  
   
  <sup>2</sup>此功能仅适用于64位[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
-##  <a name="Dev_tools"></a>开发工具  
+##  <a name="development-tools"></a><a name="Dev_tools"></a>开发工具  
   
 |功能名称|Enterprise|商业智能|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[msCoName](../includes/msconame-md.md)]Visual Studio 集成|是|是|是|是|是|是|是|  
+|[!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio 集成|是|是|是|是|是|是|是|  
 |Intellisense（[!INCLUDE[tsql](../includes/tsql-md.md)] 和 MDX）|是|是|是|是|是|是|是|  
 |[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|是|是|是|是|是|||  
 |SQL 查询编辑和设计工具<sup>1</sup>|是|是|是|||||  
@@ -222,7 +221,7 @@ ms.locfileid: "79289285"
   
  <sup>1</sup>此功能不适用于64位版本的 Standard edition。  
   
-##  <a name="Programmability"></a> Programmability  
+##  <a name="programmability"></a><a name="Programmability"></a> Programmability  
   
 |功能名称|Enterprise|商业智能|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -237,14 +236,13 @@ ms.locfileid: "79289285"
 |全文和语义搜索|是|是|是|是|是|||  
 |查询中的语言规范|是|是|是|是|是|||  
 |Service Broker（消息传递）|是|是|是|不支持（仅客户端）|不支持（仅客户端）|不支持（仅客户端）|不支持（仅客户端）|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]终结点|是|是|是|是||||  
+|[!INCLUDE[tsql](../includes/tsql-md.md)] 端点|是|是|是|是||||  
   
-##  <a name="SSIS"></a> Integration Services  
+##  <a name="integration-services"></a><a name="SSIS"></a> Integration Services  
   
 |Feature|Enterprise|商业智能|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 导入和导出向导|是|是|是|是|是|是|是|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 导入和导出向导|是|是|是|是|是|是|是|  
 |内置数据源连接器|是|是|是|是|是|是|是|  
 |SSIS 设计器和运行时|是|是|是|||||  
 |基本转换|是|是|是|||||  
@@ -252,7 +250,7 @@ ms.locfileid: "79289285"
 |Change Data Capture Service for Oracle by Attunity|是|||||||  
 |Change Data Capture Designer for Oracle by Attunity|是|||||||  
   
-###  <a name="SSIS_AA"></a>Integration Services-高级适配器  
+###  <a name="integration-services---advanced-adapters"></a><a name="SSIS_AA"></a>Integration Services-高级适配器  
   
 |功能名称|Enterprise|商业智能|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -265,7 +263,7 @@ ms.locfileid: "79289285"
 |Attunity 提供的变更数据捕获组件|是|||||||  
 |Attunity 提供的开放式数据库连接 (ODBC)|是|||||||  
   
-###  <a name="SSIS_AT"></a>Integration Services-高级转换  
+###  <a name="integration-services---advanced-transforms"></a><a name="SSIS_AT"></a>Integration Services-高级转换  
   
 |功能名称|Enterprise|商业智能|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -274,18 +272,17 @@ ms.locfileid: "79289285"
 |模糊分组和查找转换|是|||||||  
 |术语提取和查找转换|是|||||||  
   
-##  <a name="MDS"></a>Master Data Services  
+##  <a name="master-data-services"></a><a name="MDS"></a>Master Data Services  
   
 > [!NOTE]  
->  -   
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 仅适用于 Business Intelligence 版和 Enterprise 版的 64 位版本。  
+>  -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 仅适用于 Business Intelligence 版和 Enterprise 版的 64 位版本。  
   
 |Feature|Enterprise|商业智能|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]数据|是|是||||||  
-|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]web 应用程序|是|是||||||  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库|是|是||||||  
+|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序|是|是||||||  
   
-##  <a name="Data_warehouse"></a>数据仓库  
+##  <a name="data-warehouse"></a><a name="Data_warehouse"></a>数据仓库  
   
 |功能名称|Enterprise|商业智能|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -298,7 +295,7 @@ ms.locfileid: "79289285"
 |xVelocity 内存优化的列存储索引|是|||||||  
 |全局批处理集成|是|||||||  
   
-##  <a name="SSAS"></a>Analysis Services  
+##  <a name="analysis-services"></a><a name="SSAS"></a>Analysis Services  
   
 |功能名称|Enterprise|商业智能|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -308,7 +305,7 @@ ms.locfileid: "79289285"
 |高可用性|是|是|是|||||  
 |可编程性（AMO、ADOMD.Net、OLEDB、XML/A、ASSL）|是|是|是|||||  
   
-###  <a name="BISemModel_multi"></a>BI 语义模型（多维）  
+###  <a name="bi-semantic-model-multidimensional"></a><a name="BISemModel_multi"></a>BI 语义模型（多维）  
   
 |功能名称|Enterprise|商业智能|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -345,7 +342,7 @@ ms.locfileid: "79289285"
   
  <sup>1</sup>Standard edition 支持 LastChild 半累加性度量值，但不支持其他半累加性度量值，例如 None、FirstChild、FirstNonEmpty、LastNonEmpty、AverageOfChildren 和 ByAccount。 在所有版本上都支持累加性度量值（如 Sum、Count、Min 和 Max）和非累加性度量值 (DistinctCount)。  
   
-###  <a name="BISemModel_tabular"></a>BI 语义模型（表格）  
+###  <a name="bi-semantic-model-tabular"></a><a name="BISemModel_tabular"></a>BI 语义模型（表格）  
   
 |功能名称|Enterprise|商业智能|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -355,10 +352,10 @@ ms.locfileid: "79289285"
 |翻译|是|是||||||  
 |DAX 计算、DAX 查询、MDX 查询|是|是||||||  
 |行级安全性|是|是||||||  
-|“度量值组”|是|是||||||  
+|分区|是|是||||||  
 |内存中和 DirectQuery 存储模式（仅限表格）|是|是||||||  
   
-###  <a name="PowerPivot"></a>PowerPivot for SharePoint  
+###  <a name="powerpivot-for-sharepoint"></a><a name="PowerPivot"></a> PowerPivot for SharePoint  
   
 |功能名称|Enterprise|商业智能|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -369,7 +366,7 @@ ms.locfileid: "79289285"
 |PowerPivot 数据刷新|是|是||||||  
 |PowerPivot 数据馈送|是|是||||||  
   
-###  <a name="DataMining"></a>数据挖掘  
+###  <a name="data-mining"></a><a name="DataMining"></a>数据挖掘  
   
 |功能名称|Enterprise|商业智能|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -388,9 +385,9 @@ ms.locfileid: "79289285"
 |序列预测|是|是||||||  
 |Naïve Bayes、神经网络和逻辑回归的多个预测目标|是|是||||||  
   
-##  <a name="Reporting"></a>Reporting Services  
+##  <a name="reporting-services"></a><a name="Reporting"></a>Reporting Services  
   
-###  <a name="Reporting_features"></a>Reporting Services 功能  
+###  <a name="reporting-services-features"></a><a name="Reporting_features"></a>Reporting Services 功能  
   
 |功能名称|Enterprise|商业智能|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -431,26 +428,26 @@ ms.locfileid: "79289285"
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  
 |Enterprise|Standard Edition、Business Intelligence Enterprise Edition（本地或远程）|  
 |商业智能|Standard Edition、Business Intelligence Enterprise Edition（本地或远程）|  
-|Standard|Standard Edition、Enterprise Edition（本地或远程）|  
+|标准|Standard Edition、Enterprise Edition（本地或远程）|  
 |Web|Web Edition（仅用于本地）|  
 |Express with Advanced Services|Express with Advanced Services（仅用于本地）。|  
-|计算|计算|  
+|评估|评估|  
   
-##  <a name="BIClients"></a>商业智能客户端  
+##  <a name="business-intelligence-clients"></a><a name="BIClients"></a>商业智能客户端  
  以下软件客户端应用程序在 Microsoft 下载中心提供，它们旨在帮助您创建在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上运行的商业智能文档。 当您在某一服务器环境中承载这些文档时，请使用支持该文档类型的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 下表标识哪一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本包含承载在这些客户端应用程序中创建的文档所需的服务器功能。  
   
 |功能名称|Enterprise|商业智能|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]|是|是|是|||||  
 |用于 Excel 和 Visio 2010 的数据挖掘外接程序|是|是|是|||||  
-|[!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)]2010|是|是||||||  
+|[!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 2010|是|是||||||  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]|是|是||||||  
   
 > [!NOTE]
 >  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)]是 Excel 外接程序，不依赖于[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 但是，在 SharePoint 中与 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 工作簿共享和协作需要 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 。此功能在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 和 Business Intelligence 版本中提供。  
 > 2.  上表标识了仅启用这些客户端工具所需的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本；但是，这些功能可以访问在任何版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上承载的数据。  
   
-##  <a name="Spatial"></a>空间和位置服务  
+##  <a name="spatial-and-location-services"></a><a name="Spatial"></a>空间和位置服务  
   
 |功能名称|Enterprise|商业智能|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -459,19 +456,18 @@ ms.locfileid: "79289285"
 |高级空间库|是|是|是|是|是|是|是|  
 |导入/导出业界标准的空间数据格式|是|是|是|是|是|是|是|  
   
-##  <a name="Add_DBServices"></a>其他数据库服务  
+##  <a name="additional-database-services"></a><a name="Add_DBServices"></a> Additional Database Services  
   
 |功能名称|Enterprise|商业智能|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 迁移助手|是|是|是|是|是|是|是|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 迁移助手|是|是|是|是|是|是|是|  
 |数据库邮件|是|是|是|是||||  
   
-##  <a name="Other_Components"></a>其他组件  
+##  <a name="other-components"></a><a name="Other_Components"></a>其他组件  
   
 |功能名称|Enterprise|商业智能|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|“数据库引擎服务”|是|是||||||  
+|数据库引擎服务|是|是||||||  
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|StreamInsight Standard Edition||||  
 |StreamInsight HA|StreamInsight Premium Edition|||||||  
   

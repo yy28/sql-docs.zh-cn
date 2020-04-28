@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74f81deb2d9f5e4fcb770217a228a8b081098d89
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289135"
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services 中的日志操作
@@ -32,14 +32,14 @@ ms.locfileid: "79289135"
   
 -   [查询日志](#bkmk_querylog)  
   
--   [小型转储（. .mdmp）文件](#bkmk_mdmp)  
+-   [Mini dump (.mdmp) 文件](#bkmk_mdmp)  
   
 -   [提示和最佳实践](#bkmk_tips)  
   
 > [!NOTE]  
 >  如果你要查找日志记录的信息，你可能也对跟踪显示处理和查询执行路径的操作感兴趣。 临时跟踪目标和持续跟踪目标（例如审核多维数据集访问）以及如何最大程度利用 Flight Recorder、SQL Server Profiler 和 xEvents 的建议可通过此页中的链接找到： [监视 Analysis Services 实例](monitor-an-analysis-services-instance.md)。  
   
-##  <a name="bkmk_location"></a>日志的位置和类型  
+##  <a name="location-and-types-of-logs"></a><a name="bkmk_location"></a>日志的位置和类型  
  Analysis Services 提供有以下所述日志。  
   
 |文件名或位置|类型|用于|在默认情况下启用|  
@@ -50,20 +50,19 @@ ms.locfileid: "79289135"
   
  我们强烈建议使用以下链接查看此主题中未涉及的其他信息资源： [来自 Microsoft 支持的初始数据集合提示](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)。  
   
-##  <a name="bkmk_general"></a>日志文件配置设置的一般信息  
+##  <a name="general-information-on-log-file-configuration-settings"></a><a name="bkmk_general"></a>日志文件配置设置的一般信息  
  你可在 msmdsrv.ini 服务器配置文件中找到每个日志的部分，此文件位于 \Program Files\Microsoft SQL Server\MSAS12.MSSQLSERVER\OLAP\Config 文件夹。 有关编辑文件的说明，请参阅[在 Analysis Services 中配置服务器属性](../server-properties/server-properties-in-analysis-services.md)。  
   
  如有可能，我们建议你在 Management Studio 的服务器属性页设置日志记录属性。 但是在某些情况下，你必须直接编辑 msmdsrv.ini 文件以配置管理工具中不可见的设置。  
   
  ![显示日志设置的配置文件的部分](../media/ssas-logfilesettings.png "显示日志设置的配置文件的部分")  
   
-##  <a name="bkmk_msmdsrv"></a>MSMDSRV.INI 服务日志文件  
+##  <a name="msmdsrv-service-log-file"></a><a name="bkmk_msmdsrv"></a>MSMDSRV.INI 服务日志文件  
  Analysis Services 会将服务器操作记录到 msmdsrv.log 文件中，每个实例一个文件，位于 \program files\Microsoft SQL Server\\<instance\>\Olap\Log。  
   
  此日志文件会在每次重启服务时被清空。 在以前版本中，管理员有时会重启服务，其唯一目的是在其变得过大不能使用前清空日志文件。 现在已没有必要。 SQL Server 2012 SP2 和更高版本中引入的配置设置使你可控制日志文件及其历史记录的大小：  
   
--   
-  `MaxFileSizeMB` 指定最大日志文件大小 (MB)。 默认值为 256。 有效替换值必须是正整数。 达到 `MaxFileSizeMB` 时，Analysis Services 将当前文件重命名为 msmdsrv{current timestamp}.log 文件，然后启动新的 msmdsrv.log 文件。  
+-   `MaxFileSizeMB` 指定最大日志文件大小 (MB)。 默认值为 256。 有效替换值必须是正整数。 达到 `MaxFileSizeMB` 时，Analysis Services 将当前文件重命名为 msmdsrv{current timestamp}.log 文件，然后启动新的 msmdsrv.log 文件。  
   
 -   `MaxNumberFiles`指定旧日志文件的保留期。 默认值为 0（禁用）。 你可将其更改为正整数以保持日志文件的版本。 达到 `MaxNumberFiles` 时，Analysis Services 删除名称具有最旧时间戳的文件。  
   
@@ -97,7 +96,7 @@ ms.locfileid: "79289135"
   
 6.  重启服务。  
   
-##  <a name="bkmk_querylog"></a>查询日志  
+##  <a name="query-logs"></a><a name="bkmk_querylog"></a>查询日志  
  查询日志有一点用词不当，因为它不记录你的用户的 MDX 或 DAX 查询活动。 它收集由 Analysis Services 生成的查询的数据，这些数据后续用作基于使用情况的优化向导中的数据输入。 查询日志中收集的数据不用于直接分析。 具体而言，数据集用比特数组表示，查询中包含指示数据集部分的 0 或 1。 再次说明，此数据用于向导。  
   
  对于查询监控和故障排除，许多开发人员和管理员使用社区工具 **ASTrace**来监控查询。 你还可使用 SQL Server Profiler、xEvents 或 Analysis Services 跟踪。 有关跟踪相关的链接，请参阅 [监视 Analysis Services 实例](monitor-an-analysis-services-instance.md) 。  
@@ -126,7 +125,7 @@ ms.locfileid: "79289135"
   
  有关查询日志配置的详细信息，请参见 [配置 Analysis Services 查询日志](https://technet.microsoft.com/library/Cc917676) 。 虽然文件很旧，但最新版本中的查询日志配置并未改变，其包含的信息仍适用。  
   
-##  <a name="bkmk_mdmp"></a>小型转储（. .mdmp）文件  
+##  <a name="mini-dump-mdmp-files"></a><a name="bkmk_mdmp"></a>小型转储（. .mdmp）文件  
  转储文件捕获数据用于分析异常事件。 Analysis Services 自动生成迷你转储 (.mdmp) 以应对服务器崩溃、异常和一些配置错误。 已启用此功能，但不能自动发送崩溃报告。  
   
  崩溃报告通过 Msmdsrv.ini 文件中的“异常”部分配置。 这些设置可控制内存转储文件生成。 以下片段显示默认值：  
@@ -159,21 +158,19 @@ ms.locfileid: "79289135"
 |1|（默认）启用，但不发送内存转储文件。|  
 |2|启用并自动发送错误报告到 Microsoft。|  
   
- 
-  `CrashReportsFolder` 是转储文件的位置。 默认情况下，可在 \Olap\Log 文件夹找到 .mdmp 文件和相关日志记录。  
+ `CrashReportsFolder` 是转储文件的位置。 默认情况下，可在 \Olap\Log 文件夹找到 .mdmp 文件和相关日志记录。  
   
- 
-  `SQLDumperFlagsOn` 用于生成完全转储。 默认情况下，未启用完全转储。 你可将此属性设置为 `0x34`。  
+ `SQLDumperFlagsOn` 用于生成完全转储。 默认情况下，未启用完全转储。 你可将此属性设置为 `0x34`。  
   
  以下链接提供了更多背景信息：  
   
--   [使用小型转储深入了解 SQL Server](https://blogs.msdn.com/b/sqlcat/archive/2009/09/11/looking-deeper-into-sql-server-using-minidumps.aspx)  
+-   [深入了解使用 Minidumps 的 SQL Server](https://blogs.msdn.com/b/sqlcat/archive/2009/09/11/looking-deeper-into-sql-server-using-minidumps.aspx)  
   
 -   [如何创建用户模式转储文件](https://support.microsoft.com/kb/931673)  
   
--   [如何使用 Sqldumper 实用工具在 SQL Server 中生成转储文件](https://support.microsoft.com/kb/917825)  
+-   [如何使用 Sqldumper.exe 实用工具在 SQL Server 中生成转储文件](https://support.microsoft.com/kb/917825)  
   
-##  <a name="bkmk_tips"></a>提示和最佳做法  
+##  <a name="tips-and-best-practices"></a><a name="bkmk_tips"></a>提示和最佳做法  
  此部分是此文章中提到的提示回顾。  
   
 -   配置 msmdsrv.log 文件以控制 msmdsrv 日志文件的大小和数量。 默认情况下不启用这些设置，请确保将其添加为安装后步骤。 请参阅本主题中的 [MSMDSRV 服务日志文件](#bkmk_msmdsrv) 。  

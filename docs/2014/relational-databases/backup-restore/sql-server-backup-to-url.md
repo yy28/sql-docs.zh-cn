@@ -11,17 +11,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 04f8eaf855d33faf0d2eab8fde718c92f9a24906
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289225"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 备份到 URL
   本主题介绍了使用 Azure Blob 存储服务作为备份目标所需的概念、要求和组件。 备份和还原功能与使用磁盘或磁带时相同，或类似但区别不大。 区别均为显著的例外，并且本主题中包括少量代码示例。  
   
 ## <a name="requirements-components-and-concepts"></a>要求、组件和概念  
- **本节内容：**  
+ **本部分内容：**  
   
 -   [安全性](#security)  
   
@@ -33,7 +33,7 @@ ms.locfileid: "79289225"
   
 -   [限制](#limitations)  
   
--   [对备份/还原语句的支持](#Support)  
+-   [支持备份/还原语句](#Support)  
   
 -   [使用 SQL Server Management Studio 中的备份任务](sql-server-backup-to-url.md#BackupTaskSSMS)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "79289225"
   
 -   [使用 SQL Server Management Studio 从 Azure 存储还原](sql-server-backup-to-url.md#RestoreSSMS)  
   
-###  <a name="security"></a> Security  
+###  <a name="security"></a><a name="security"></a> Security  
  下面是备份到 Azure Blob 存储服务或从中还原时的安全注意事项和要求。  
   
 -   为 Azure Blob 存储服务创建容器时，我们建议你将访问权限设置为 "**专用**"。 将访问权限设置为“私有”后，只允许可提供对 Azure 帐户进行身份验证所需的信息的用户或帐户进行访问。  
@@ -51,20 +51,19 @@ ms.locfileid: "79289225"
   
 -   用于发出 BACKUP 或 RESTORE 命令的用户帐户应属于具有“更改任意凭据”  权限的 **db_backup 操作员**数据库角色。  
   
-###  <a name="intorkeyconcepts"></a> 关键组件和概念简介  
+###  <a name="introduction-to-key-components-and-concepts"></a><a name="intorkeyconcepts"></a>关键组件和概念简介  
  以下两节介绍 Azure Blob 存储服务，以及备份到 Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] blob 存储服务或从中还原时使用的组件。 了解这些组件以及它们之间的交互对备份到 Azure Blob 存储服务或从中进行还原来说至关重要。  
   
  创建 Azure 帐户是这个过程的第一步。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用**Azure 存储帐户名称**及其**访问密钥**值来进行身份验证，并将 blob 写入和读取到存储服务。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据存储此身份验证信息并在备份或还原操作期间使用它。 有关创建存储帐户和执行简单还原的完整演练，请参阅[使用 Azure 存储服务进行 SQL Server 备份和还原教程](https://go.microsoft.com/fwlink/?LinkId=271615)。  
   
  ![将存储帐户映射到 sql 凭据](../../tutorials/media/backuptocloud-storage-credential-mapping.gif "将存储帐户映射到 sql 凭据")  
   
-###  <a name="Blob"></a>Azure Blob 存储服务  
+###  <a name="azure-blob-storage-service"></a><a name="Blob"></a>Azure Blob 存储服务  
  **存储帐户：** 存储帐户是所有存储服务的起始点。 若要访问 Azure Blob 存储服务，请先创建一个 Azure 存储帐户。 **存储帐户名称**及其**访问密钥**属性是对 Azure Blob 存储服务及其组件进行身份验证所必需的。  
   
  **容器：** 容器提供一组 Blob 的分组，并且可以存储无限数量的 Blob。 若要将[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]备份写入 Azure Blob 服务，必须至少创建根容器。  
   
- **Blob：** 任意类型和大小的文件。 可将两类 Blob 存储到 Azure 存储服务中：块 Blob 和页 Blob。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份将页 Blob 作为 Blob 类型。 可以使用以下 URL 格式对 blob 寻址： https://\<存储帐户>. blob.core.windows.net/\<容器>/\<blob>  
+ **Blob：** 任意类型和大小的文件。 可将两类 Blob 存储到 Azure 存储服务中：块 Blob 和页 Blob。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份将页 Blob 作为 Blob 类型。 可以使用以下 URL 格式对 blob 寻址： https://\<存储帐户>. blob.core.windows.net/\<容器>/\<blob>  
   
  ![Azure Blob 存储](../../database-engine/media/backuptocloud-blobarchitecture.gif "Azure Blob 存储")  
   
@@ -72,7 +71,7 @@ ms.locfileid: "79289225"
   
  有关页 Blob 的详细信息，请参阅[了解块和页 Blob](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx)。  
   
-###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件  
+###  <a name="ssnoversion-components"></a><a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件  
  **URL：** URL 指定统一资源标识符 (URI) 来标识唯一备份文件。 URL 用于提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份文件的位置和名称。 在此实现中，唯一有效的 URL 是指向 Azure 存储帐户中的页 Blob 的 URL。 该 URL 必须指向实际 Blob，而不仅仅是容器。 如果 Blob 不存在，则创建它。 如果指定了现有 Blob，BACKUP 将失败，除非指定了 "WITH FORMAT" 选项。  
   
 > [!WARNING]  
@@ -88,7 +87,7 @@ ms.locfileid: "79289225"
   
  有关使用凭据的其他示例的信息，请参阅[创建 SQL Server 代理代理](../../ssms/agent/create-a-sql-server-agent-proxy.md)。  
   
-###  <a name="limitations"></a> 限制  
+###  <a name="limitations"></a><a name="limitations"></a> 限制  
   
 -   不支持备份到高级存储。  
   
@@ -119,12 +118,12 @@ ms.locfileid: "79289225"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要求备份设备名称最多包含 259 个字符。 对于用于指定 URL“https://.blob.core.windows.net//.bak”所需的元素，BACKUP TO URL 占用 36 个字符，其余 223 个字符将用于帐户、容器和 Blob 名称。  
   
-###  <a name="Support"></a> 对备份/还原语句的支持  
+###  <a name="support-for-backuprestore-statements"></a><a name="Support"></a> 对备份/还原语句的支持  
   
 |||||  
 |-|-|-|-|  
 |备份/还原语句|支持|例外|注释|  
-|备份|&#x2713;|不支持 BLOCKSIZE 和 MAXTRANSFERSIZE。|要求指定 WITH CREDENTIAL|  
+|BACKUP|&#x2713;|不支持 BLOCKSIZE 和 MAXTRANSFERSIZE。|要求指定 WITH CREDENTIAL|  
 |RESTORE|&#x2713;||要求指定 WITH CREDENTIAL|  
 |RESTORE FILELISTONLY|&#x2713;||要求指定 WITH CREDENTIAL|  
 |RESTORE HEADERONLY|&#x2713;||要求指定 WITH CREDENTIAL|  
@@ -142,7 +141,7 @@ ms.locfileid: "79289225"
 |-|-|-|-|  
 |参数|支持|异常|注释|  
 |DATABASE|&#x2713;|||  
-|日志|&#x2713;|||  
+|LOG|&#x2713;|||  
 ||  
 |TO (URL)|&#x2713;|与 DISK 和 TAPE 不同，URL 不支持指定或创建逻辑名称。|此参数用于指定备份文件的 URL 路径。|  
 |MIRROR TO|&#x2713;|||  
@@ -178,7 +177,7 @@ ms.locfileid: "79289225"
 |-|-|-|-|  
 |参数|支持|例外|注释|  
 |DATABASE|&#x2713;|||  
-|日志|&#x2713;|||  
+|LOG|&#x2713;|||  
 |FROM (URL)|&#x2713;||FROM URL 参数用于指定备份文件的 URL 路径。|  
 |**WITH Options:**||||  
 |CREDENTIAL|&#x2713;||仅当使用 RESTORE FROM URL 选项从 Azure Blob 存储服务还原时，才支持 WITH CREDENTIAL。|  
@@ -209,7 +208,7 @@ ms.locfileid: "79289225"
   
  有关还原参数的详细信息，请参阅[RESTORE 参数 (Transact-SQL)](/sql/t-sql/statements/restore-statements-arguments-transact-sql)。  
   
-##  <a name="BackupTaskSSMS"></a>在 SQL Server Management Studio 中使用备份任务  
+##  <a name="using-backup-task-in-sql-server-management-studio"></a><a name="BackupTaskSSMS"></a>在 SQL Server Management Studio 中使用备份任务  
  SQL Server Management Studio 中的备份任务已经过增强，其中包括 URL 作为一个目标选项，以及备份到 Azure 存储所需的其他支持对象，例如 SQL 凭据。  
   
  以下步骤描述对 "备份数据库" 任务所做的更改，以允许备份到 Azure 存储空间。：  
@@ -220,7 +219,7 @@ ms.locfileid: "79289225"
   
     1.  **文件名：** 备份文件的名称。  
   
-    2.  **SQL 凭据：** 可以指定现有 SQL Server 凭据，也可以通过单击 "SQL 凭据" 框旁的 "**创建**" 来创建新凭据。  
+    2.  **SQL 凭据：** 可指定现有的 SQL Server 凭据，也可通过单击“SQL 凭据”框旁的 **“创建”** ，新建一个。  
   
         > [!IMPORTANT]  
         >  单击 **“创建”** 打开的对话框需要管理证书或订阅的发布配置文件。 SQL Server 当前支持发布配置文件版本 2.0。 要下载支持的发布配置文件版本，请参阅 [下载发布配置文件 2.0](https://go.microsoft.com/fwlink/?LinkId=396421)。  
@@ -229,7 +228,7 @@ ms.locfileid: "79289225"
   
     3.  **Azure 存储容器：** 用于存储备份文件的 Azure 存储容器的名称。  
   
-    4.  **URL 前缀：** 这是使用前面步骤中所述的字段中指定的信息自动生成的。 如果手动编辑此值，则确保它与以前提供的其他信息相匹配。 例如，如果修改存储 URL，则确保设置 SQL 凭据以向同一存储帐户进行身份验证。  
+    4.  **URL 前缀：** 使用在上一步中所述的字段中指定的信息自动生成此信息。 如果手动编辑此值，则确保它与以前提供的其他信息相匹配。 例如，如果修改存储 URL，则确保设置 SQL 凭据以向同一存储帐户进行身份验证。  
   
  选择 **URL** 作为目标后，将禁用“媒体选项”  页中的某些选项。  以下主题详细介绍“备份数据库”对话框：  
   
@@ -241,10 +240,10 @@ ms.locfileid: "79289225"
   
  [创建凭据 - 向 Azure 存储进行身份验证](create-credential-authenticate-to-azure-storage.md)  
   
-##  <a name="MaintenanceWiz"></a> 使用维护计划向导将 SQL Server 备份到 URL  
+##  <a name="sql-server-backup-to-url-using-maintenance-plan-wizard"></a><a name="MaintenanceWiz"></a>使用维护计划向导 SQL Server 备份到 URL  
  与前面所述的备份任务类似，SQL Server Management Studio 中的维护计划向导已经过增强，其中包括**URL**作为一个目标选项，以及备份到 Azure 存储所需的其他支持对象，例如 SQL 凭据。 有关详细信息，请参阅 **Using Maintenance Plan Wizard** 中的“定义备份任务”部分 [](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)。  
   
-##  <a name="RestoreSSMS"></a>使用 SQL Server Management Studio 从 Azure 存储还原  
+##  <a name="restoring-from-azure-storage-using-sql-server-management-studio"></a><a name="RestoreSSMS"></a>使用 SQL Server Management Studio 从 Azure 存储还原  
  如果要还原数据库，则加入 **URL** 作为要从其进行还原的设备。 以下步骤描述了还原任务中的更改允许从 Azure 存储还原：  
   
 1.  在 SQL Server Management Studio 中还原任务的 **“常规”** 页中选择 **“设备”** 后，将进入 **“选择备份设备”** 对话框，其中包括 **“URL”** 作为备份介质类型。  
@@ -259,7 +258,7 @@ ms.locfileid: "79289225"
   
      [还原数据库（“选项”页）](restore-database-options-page.md)  
   
-##  <a name="Examples"></a> 代码示例  
+##  <a name="code-examples"></a><a name="Examples"></a> 代码示例  
  本节包含以下示例。  
   
 -   [创建凭据](#credential)  
@@ -276,7 +275,7 @@ ms.locfileid: "79289225"
   
 -   [使用 STOPAT 还原到时间点](#PITR)  
   
-###  <a name="credential"></a> 创建凭据  
+###  <a name="create-a-credential"></a><a name="credential"></a> 创建凭据  
  以下示例创建了一个用于存储 Azure 存储身份验证信息的凭据。  
 
    ```sql
@@ -313,7 +312,7 @@ ms.locfileid: "79289225"
    New-SqlCredential -Name $credentialName -Path $srvpath -Identity $storageAccount -Secret $secureString
    ```  
   
-###  <a name="complete"></a>备份整个数据库  
+###  <a name="backing-up-a-complete-database"></a><a name="complete"></a>备份整个数据库  
  下面的示例将 AdventureWorks2012 数据库备份到 Azure Blob 存储服务。
   
    ```sql
@@ -363,7 +362,7 @@ ms.locfileid: "79289225"
    Backup-SqlDatabase -Database AdventureWorks2012 -backupFile $backupFile  -SqlCredential $credentialName -CompressionOption On
    ```  
   
-###  <a name="databaselog"></a>备份数据库和日志  
+###  <a name="backing-up-the-database-and-log"></a><a name="databaselog"></a>备份数据库和日志  
  下面的示例备份 AdventureWorks2012 示例数据库，默认情况下，该数据库使用简单恢复模式。 若要支持日志备份，请将 AdventureWorks2012 数据库改为使用完整恢复模式。 然后，该示例将创建一个完整的数据库备份到 Azure Blob，并在一段更新活动后备份该日志。 此示例将创建具有日期时间戳的备份文件名。  
   
    ```sql
@@ -463,7 +462,7 @@ ms.locfileid: "79289225"
    Backup-SqlDatabase -Database AdventureWorks2012 -backupFile $backupFile  -SqlCredential $credentialName -CompressionOption On -BackupAction Log
    ```  
   
-###  <a name="filebackup"></a>创建主文件组的完整文件备份  
+###  <a name="creating-a-full-file-backup-of-the-primary-filegroup"></a><a name="filebackup"></a>创建主文件组的完整文件备份  
  下面的示例创建主文件组的完整文件备份。
   
    ```sql
@@ -521,7 +520,7 @@ ms.locfileid: "79289225"
    Backup-SqlDatabase -Database AdventureWorks2012 -backupFile $backupFile  -SqlCredential $credentialName -CompressionOption On -BackupAction Files -DatabaseFileGroup Primary
    ```  
   
-###  <a name="differential"></a>创建主文件组的差异文件备份  
+###  <a name="creating-a-differential-file-backup-of-the-primary-filegroup"></a><a name="differential"></a>创建主文件组的差异文件备份  
  下面的示例创建主文件组的差异文件备份。  
   
    ```sql
@@ -581,7 +580,7 @@ ms.locfileid: "79289225"
    Backup-SqlDatabase -Database AdventureWorks2012 -backupFile $backupFile  -SqlCredential $credentialName -CompressionOption On -BackupAction Files -DatabaseFileGroup Primary -Incremental
    ```  
   
-###  <a name="restoredbwithmove"></a>还原数据库并移动文件  
+###  <a name="restore-a-database-and-move-files"></a><a name="restoredbwithmove"></a>还原数据库并移动文件  
  要还原完整数据库备份并将还原的数据库移到 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data 目录，请使用以下步骤。
   
    ```sql
@@ -684,7 +683,7 @@ ms.locfileid: "79289225"
    Restore-SqlDatabase -Database AdventureWorks2012 -SqlCredential $credentialName -BackupFile $backupdbFile -RelocateFile @($newDataFilePath,$newLogFilePath)
    ```  
   
-###  <a name="PITR"></a> 使用 STOPAT 还原到时间点  
+###  <a name="restoring-to-a-point-in-time-using-stopat"></a><a name="PITR"></a> 使用 STOPAT 还原到时间点  
  下面的示例将数据库状态还原到某个时间点并显示一个还原操作。  
   
    ```sql

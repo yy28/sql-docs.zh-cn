@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: b5caa8b63175447daa04198768a67e7fe5e59c81
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78896803"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>数据迁移助手的新增功能
@@ -82,7 +82,7 @@ ms.locfileid: "78896803"
 
 ## <a name="data-migration-assistant-v40"></a>数据迁移助手 v4。0
 
-数据迁移助手的 v2.0 版本引入了 Azure SQL 数据库 SKU 建议功能，该功能允许用户根据从托管你的计算机的计算机上收集的性能计数器数据库. 此功能提供与定价层、计算级别和最大数据大小以及每月估计成本相关的建议。 它还提供将所有数据库批量预配到 Azure 的功能。
+数据迁移助手的 v2.0 版本引入了 Azure SQL 数据库 SKU 建议功能，该功能允许用户根据从承载数据库的计算机收集的性能计数器来识别最低建议的 Azure SQL 数据库 SKU。 此功能提供与定价层、计算级别和最大数据大小以及每月估计成本相关的建议。 它还提供将所有数据库批量预配到 Azure 的功能。
 
 > [!NOTE]
 > 当前只能通过命令行接口（CLI）使用此功能。
@@ -176,8 +176,8 @@ Linux 和 Windows 使用不同的路径格式。 因此，迁移到 Linux 上的
 数据迁移助手的1.0 版是初始版本，它提供了：
 
 - 发现可能影响升级到 SQL Server 本地版本的问题。 任何发现都被描述为兼容性问题，并分为以下几个方面：
-  - 重大更改
-  - 行为更改
+  - 中断性变更
+  - 行为变更
   - 已弃用的功能
 - 发现目标 SQL Server 平台中的新功能，数据库在升级后可从中受益。 任何发现均被描述为功能建议，并分为以下几个方面：
   - 性能

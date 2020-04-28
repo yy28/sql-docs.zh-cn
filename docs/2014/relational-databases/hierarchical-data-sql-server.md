@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289185"
 ---
 # <a name="hierarchical-data-sql-server"></a>层次结构数据 (SQL Server)
@@ -41,10 +41,8 @@ ms.locfileid: "79289185"
   
  使用 [hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) 作为数据类型来创建具有层次结构的表，或描述存储在另一个位置的数据层次结构。 在 [中使用](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) hierarchyid 函数 [!INCLUDE[tsql](../includes/tsql-md.md)] 查询和管理层次结构数据。  
   
-##  <a name="keyprops"></a> hierarchyid 的关键属性  
- 
-  `hierarchyid` 数据类型的值表示树层次结构中的位置。 
-  `hierarchyid` 的值具有以下属性：  
+##  <a name="key-properties-of-hierarchyid"></a><a name="keyprops"></a> hierarchyid 的关键属性  
+ `hierarchyid` 数据类型的值表示树层次结构中的位置。 `hierarchyid` 的值具有以下属性：  
   
 -   非常紧凑  
   
@@ -52,15 +50,14 @@ ms.locfileid: "79289185"
   
 -   按深度优先顺序进行比较  
   
-     假设有`hierarchyid`两个值**a**和**b**， **a<b**表示在树的深度优先遍历中，a 位于 b 之前。 
-  `hierarchyid` 数据类型的索引按深度优先顺序排序，在深度优先遍历中相邻的节点的存储位置也相邻。 例如，一条记录的子级的存储位置与该记录的存储位置是相邻的。  
+     假设有`hierarchyid`两个值**a**和**b**， **a<b**表示在树的深度优先遍历中，a 位于 b 之前。 `hierarchyid` 数据类型的索引按深度优先顺序排序，在深度优先遍历中相邻的节点的存储位置也相邻。 例如，一条记录的子级的存储位置与该记录的存储位置是相邻的。  
   
 -   支持任意插入和删除  
   
      使用 [GetDescendant](/sql/t-sql/data-types/getdescendant-database-engine) 方法，始终可以在任意给定节点的右侧、左侧或任意两个同级节点之间生成同级节点。 在层次结构中插入或删除任意数目的节点时，该比较属性保持不变。 大多数插入和删除操作都保留了紧凑性属性。 但是，对于在两个节点之间执行的插入操作，所产生的 hierarchyid 值的表示形式在紧凑性方面将稍微降低。  
   
   
-##  <a name="limits"></a> hierarchyid 的局限性  
+##  <a name="limitations-of-hierarchyid"></a><a name="limits"></a> hierarchyid 的局限性  
  `hierarchyid`数据类型具有以下限制：  
   
 -   类型为 `hierarchyid` 的列不会自动表示树。 由应用程序来生成和分配 `hierarchyid` 值，使行与行之间的所需关系反映在这些值中。 某些应用程序可能具有 `hierarchyid` 类型的列，该列指示在另一个表中定义的层次结构中的位置。  
@@ -70,15 +67,14 @@ ms.locfileid: "79289185"
 -   由 `hierarchyid` 值表示的层次结构关系不是像外键关系那样强制实现的。 可能会出现下面这种层次结构关系而且有时这种关系是合理的：A 具有子级 B，然后删除了 A，导致 B 与一条不存在的记录之间存在关系。 如果这种行为不可接受，应用程序在删除父级之前必须先查询其是否有后代。  
   
   
-##  <a name="alternatives"></a> 何时使用 hierarchyid 的替代项  
+##  <a name="when-to-use-alternatives-to-hierarchyid"></a><a name="alternatives"></a> 何时使用 hierarchyid 的替代项  
  用于表示层次结构数据的两个 `hierarchyid` 替代项为：  
   
 -   父/子  
   
 -   XML  
   
- 
-  `hierarchyid` 通常优于这些替代项。 但是，在下面详述的特定情况下，使用这些替代项可能更好。  
+ `hierarchyid` 通常优于这些替代项。 但是，在下面详述的特定情况下，使用这些替代项可能更好。  
   
 ### <a name="parentchild"></a>父/子  
  使用父/子方法时，每一行都包含对父级的引用。 下表定义了一个用于在父/子关系中包含父行和子行的典型表：  
@@ -148,7 +144,7 @@ GO
 ```  
   
   
-##  <a name="indexing"></a> 层次结构数据的索引策略  
+##  <a name="indexing-strategies-for-hierarchical-data"></a><a name="indexing"></a> 层次结构数据的索引策略  
  用于对层次结构数据进行索引的策略有两种：  
   
 -   **深度优先**  
@@ -163,7 +159,7 @@ GO
   
      在广度优先索引中，一个节点的所有直属子级存储在一起。 因此，广度优先索引在响应有关直属子级的查询方面效率很高，“查找此经理直属的所有雇员”就属于这类查询。  
   
- 采用深度优先、广度优先还是结合使用这两种索引，以及将哪一种设为聚集键（如果有），取决于上述两种查询类型的相对重要性以及 SELECT 与DML 操作的相对重要性。 有关索引策略的详细示例，请参阅[教程：使用 hierarchyid 数据类型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)的第 1 课。  
+ 采用深度优先、广度优先还是结合使用这两种索引，以及将哪一种设为聚集键（如果有），取决于上述两种查询类型的相对重要性以及 SELECT 与DML 操作的相对重要性。 有关索引策略的详细示例，请参阅 [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)。  
   
   
 ### <a name="creating-indexes"></a>创建索引  
@@ -266,13 +262,13 @@ INSERT SimpleDemo
 VALUES ('/', 'Earth', 'Planet');  
 ```  
   
-##  <a name="tasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="tasks"></a> 相关任务  
   
-###  <a name="migrating"></a> 从父/子迁移到 hierarchyid  
- 大多数树都使用父/子结构来表示。 从父/子结构迁移到使用`hierarchyid`的表的最简单方法是使用临时列或临时表来跟踪层次结构中每个级别的节点数。 有关迁移父/子表的示例，请参阅[教程：使用 hierarchyid 数据类型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)的第 1 课。  
+###  <a name="migrating-from-parentchild-to-hierarchyid"></a><a name="migrating"></a> 从父/子迁移到 hierarchyid  
+ 大多数树都使用父/子结构来表示。 从父/子结构迁移到使用`hierarchyid`的表的最简单方法是使用临时列或临时表来跟踪层次结构中每个级别的节点数。 有关迁移父/子表的示例，请参阅 [教程：使用 hierarchyid 数据类型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)的第 1 课。  
   
   
-###  <a name="BKMK_ManagingTrees"></a> 使用 hierarchyid 管理树  
+###  <a name="managing-a-tree-using-hierarchyid"></a><a name="BKMK_ManagingTrees"></a> 使用 hierarchyid 管理树  
  尽管 `hierarchyid` 列不一定表示树，但应用程序可以很容易地确保此列表示树。  
   
 -   生成新的值时，请执行下列操作之一：  
@@ -374,7 +370,7 @@ EmployeeId LastChild EmployeeName
 ```  
   
   
-###  <a name="BKMK_EnforcingTrees"></a> 强制表示树  
+###  <a name="enforcing-a-tree"></a><a name="BKMK_EnforcingTrees"></a> 强制表示树  
  以上示例说明了应用程序如何确保树得到维护。 若要通过使用约束强制表示树，创建定义各节点父级的计算列时可以为它创建一个反过来约束主键 ID 的外键。  
   
 ```  
@@ -392,7 +388,7 @@ GO
  当用于维护层次结构树的不可信代码对表拥有直接 DML 访问权限时，将优先采用这种强制关系的方法。 但是，这种方法可能会降低性能，因为必须针对每个 DML 操作检查约束。  
   
   
-###  <a name="findclr"></a> 使用 CLR 查找祖先  
+###  <a name="finding-ancestors-by-using-the-clr"></a><a name="findclr"></a> 使用 CLR 查找祖先  
  查找级别最低的共同祖先就是一项涉及层次结构中两个节点的常用操作。 这可以用[!INCLUDE[tsql](../includes/tsql-md.md)]或 CLR 编写，因为这两种`hierarchyid`类型都可用。 建议用 CLR，因为用它时查找速度会更快。  
   
  使用下面的 CLR 代码来列出祖先，并查找级别最低的共同祖先：  
@@ -439,7 +435,7 @@ GO
 ```  
   
   
-###  <a name="ancestors"></a> 列出祖先  
+###  <a name="listing-ancestors"></a><a name="ancestors"></a> 列出祖先  
  创建节点的祖先列表是一项常用操作，例如可用于显示组织中的职位。 此操作的其中一种实现方式就是使用表值函数和上面定义的 **HierarchyId_Operations** 类：  
   
  使用 [!INCLUDE[tsql](../includes/tsql-md.md)]：  
@@ -468,7 +464,7 @@ GO
 ```  
   
   
-###  <a name="lowestcommon"></a> 查找级别最低的共同祖先  
+###  <a name="finding-the-lowest-common-ancestor"></a><a name="lowestcommon"></a> 查找级别最低的共同祖先  
  使用上面定义的 **HierarchyId_Operations** 类创建以下 [!INCLUDE[tsql](../includes/tsql-md.md)] 函数，以便查找涉及层次结构中两个节点的最低级别的共同祖先：  
   
 ```  
@@ -500,7 +496,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
  最终得到的节点为 /1/1/  
   
   
-###  <a name="BKMK_MovingSubtrees"></a> 移动子树  
+###  <a name="moving-subtrees"></a><a name="BKMK_MovingSubtrees"></a> 移动子树  
  另一项常用操作是移动子树。 下面的过程将获取的子**@oldMgr**树，并使其**@oldMgr**（包括）的**@newMgr**子树。  
   
 ```  
@@ -529,7 +525,7 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [hierarchyid 数据类型方法引用](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
- [教程：使用 hierarchyid 数据类型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid (Transact-SQL)](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  
   
   

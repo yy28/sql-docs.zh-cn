@@ -11,10 +11,10 @@ ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a0300b7f613610403970862fe9e5aad594372b27
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289885"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>显示派生层次结构中的多对多关系 (Master Data Services)
@@ -72,11 +72,10 @@ ms.locfileid: "79289885"
   
  正如其他派生层次结构级别一样，也可以隐藏 M2M 级别。  
    
-### <a name="M2MSample"></a>示例模型中的 M2M 关系  
+### <a name="m2m-relationship-in-sample-model"></a><a name="M2MSample"></a> 示例模型中的 M2M 关系  
 有关 M2M 关系的演示，请查看 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]附带的 Customer 示例模型中的 Region Climate 派生层次结构。   
   
-如下图中所示，对此关系进行建模的级别名称是 ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate（通过 RegionClimate.Region 进行映射）**。 
-  ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** 显示按照与区域关联的气候类型分组的区域。 这是 M2M 关系，因为存在与多个气候（父级）关联的区域（子成员）。 例如， ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** 与 ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** 和 ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}** 关联。  
+如下图中所示，对此关系进行建模的级别名称是 ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate（通过 RegionClimate.Region 进行映射）**。 ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** 显示按照与区域关联的气候类型分组的区域。 这是 M2M 关系，因为存在与多个气候（父级）关联的区域（子成员）。 例如， ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** 与 ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** 和 ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}** 关联。  
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   
@@ -91,7 +90,7 @@ ms.locfileid: "79289885"
   
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
-##  <a name="bkmk_member_security"></a>成员安全  
+##  <a name="member-security"></a><a name="bkmk_member_security"></a> 成员安全性  
  允许成员重复（允许成员具有多个父级）的层次结构不能用于分配成员安全权限。 例如：  
   
 -   不能定位 null 递归（递归级别的每个成员都显示在根及其递归父级下）的递归派生层次结构 (RDH)。  
@@ -104,6 +103,6 @@ ms.locfileid: "79289885"
  已弃用集合和显式层次结构。 转换存储过程 (udpConvertCollectionAndConsolidatedMembersToLeaf) 可将集合成员转换为叶成员，并创建多对多派生层次结构以捕获集合成员信息。  
   
 ## <a name="see-also"></a>另请参阅  
- [派生层次结构 &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
+ [派生层次结构 (Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

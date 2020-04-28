@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 499ac56d8a462f62dac92b97654a9ace12bd356e
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289685"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>管理并行数据仓库中的权限
 本文介绍用于管理 SQL Server PDW 的数据库权限的要求和选项。
 
-## <a name="BackupRestoreBasics"></a>数据库引擎权限基础知识
+## <a name="database-engine-permission-basics"></a><a name="BackupRestoreBasics"></a>数据库引擎权限基础知识
 SQL Server PDW 上的数据库引擎权限通过登录名在服务器级别进行管理，并通过数据库用户和用户定义的数据库角色在数据库级别进行管理。
 
 **登录名**登录名是用于登录到 SQL Server PDW 的单个用户帐户。 SQL Server PDW 使用 Windows 身份验证和 SQL Server 身份验证支持登录名。  Windows 身份验证登录名可以是受 SQL Server PDW 信任的任何域中的 Windows 用户或 Windows 组。 SQL Server 通过 SQL Server PDW 定义和验证身份验证登录名，并且必须通过指定密码进行创建。
@@ -52,7 +52,7 @@ SQL Server PDW 上的数据库引擎权限通过登录名在服务器级别进�
 
 用户和数据库角色是数据库级对象，可通过查看 sys.databases 来列出。 [database_principals](../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)。 只能向数据库主体授予数据库级权限。
 
-## <a name="BackupTypes"></a>默认权限
+## <a name="default-permissions"></a><a name="BackupTypes"></a>默认权限
 以下列表对默认权限进行了说明：
 
 -   当使用**CREATE CREATE login**语句创建登录名时，登录名将收到**connect SQL**权限，允许登录名连接到 SQL Server PDW。
@@ -80,7 +80,7 @@ SQL Server PDW 上的数据库引擎权限通过登录名在服务器级别进�
 
 -   公共服务器角色不能继承隐式权限。 授予 PUBLIC 角色的任何权限都必须显式授予。
 
-## <a name="BackupProc"></a>确定权限
+## <a name="determining-permissions"></a><a name="BackupProc"></a>确定权限
 登录名是否具有执行特定操作的权限取决于为用户所属的登录名、用户和角色授予或拒绝的权限。 服务器级别的权限（如**创建登录名**和**查看服务器状态**）可用于服务器级主体（登录名）。 数据库级权限（如 "从表中**选择**" 或 "在过程中**执行**"）可用于数据库级主体（用户和数据库角色）。
 
 ### <a name="implicit-and-explicit-permissions"></a>隐式和显式权限
@@ -165,7 +165,7 @@ SQL Server PDW 上的数据库引擎权限通过登录名在服务器级别进�
         ON DP.grantee_principal_id = DPUsers.principal_id;
     ```
 
-## <a name="RestoreProc"></a>数据库权限最佳做法
+## <a name="database-permissions-best-practices"></a><a name="RestoreProc"></a>数据库权限最佳做法
 
 -   以最精细的级别授予权限。 向表或视图级别授予权限可能会变得不受管理。 但在数据库级别授予权限可能会过于宽松。 如果数据库是使用架构来定义的，则可能是授予架构的权限在表级别和数据库级别之间具有适当的折衷。
 
@@ -234,7 +234,7 @@ GRANT CONTROL SERVER TO Fay;
 ### <a name="fixed-server-roles-vs-granting-permissions"></a>固定服务器角色与授予权限
 固定服务器角色的系统和固定数据库角色的系统是在1980年产生的旧系统。 固定角色仍受支持，并且在具有很少用户和安全需求的环境中非常有用。 从 SQL Server 2005 开始，创建了更详细的授权权限系统。 这个新系统更为精细，提供了更多选项用于授予和拒绝权限。 更精细的系统的额外复杂性使得更难学习，但大多数企业系统应授予权限，而不是使用固定角色。 <!-- MISSING LINKS The permissions are discussed and listed in the topic [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md).  -->
 
-## <a name="related-topics"></a>相关主题
+## <a name="related-topics"></a>“相关主题”
 
 - [授予权限](grant-permissions.md)
 

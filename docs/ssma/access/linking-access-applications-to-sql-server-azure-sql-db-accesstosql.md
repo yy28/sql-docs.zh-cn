@@ -24,10 +24,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 58abfde651fb59bc69207db810324eb4c74b8c26
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112065"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>将访问应用程序链接到 SQL Server-Azure SQL DB （AccessToSQL）
@@ -146,7 +146,7 @@ Recordset.LastModified
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>在迁移数据后，超链接功能丢失  
 **原因：** 迁移数据后，列中的超链接会丢失其功能，并成为简单的**nvarchar （max）** 列。  
   
-**解决方法：** 内容.  
+**解决方法：** 无。  
   
 ### <a name="some-sql-server-data-types-are-not-supported-by-access"></a>Access 不支持某些 SQL Server 数据类型  
 **原因：** 如果以后更新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 表包含 access 不支持的数据类型，则不能在 access 中打开该表。  

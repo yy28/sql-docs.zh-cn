@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b6298020c1aa39f2c5c319efa492f6832c301f9
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289655"
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>在 SQL Server 故障转移群集中添加或删除节点（安装程序）
@@ -43,13 +43,13 @@ ms.locfileid: "79289655"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装位置的操作系统驱动器号在添加到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集的所有节点上必须匹配。  
   
-##  <a name="Add"></a> 添加节点  
+##  <a name="add-node"></a><a name="Add"></a> 添加节点  
   
 #### <a name="to-add-a-node-to-an-existing-ssnoversion-failover-cluster"></a>向现有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集中添加节点  
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装介质，然后双击根文件夹中的 Setup.exe。 若要从网络共享进行安装，请导航到共享中的根文件夹，然后双击 Setup.exe。  
   
-2.  安装向导将启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装中心。 若要向现有故障转移群集实例中添加节点，请单击左窗格中的“安装”  。 然后，选择“向 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集添加节点”  。  
+2.  安装向导将启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装中心。 若要向现有故障转移群集实例中添加节点，请单击左窗格中的“安装”  。 然后，选择“向  **故障转移群集添加节点”[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** 。  
   
 3.  系统配置检查器将在您的计算机上运行发现操作。 若要继续， [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。  
   
@@ -83,13 +83,13 @@ ms.locfileid: "79289655"
   
 15. 如果安装程序指示您重新启动计算机，请立即重新启动。 安装完成后，请务必阅读来自安装向导的消息。 有关安装程序日志文件的详细信息，请参阅 [查看和阅读 SQL Server 安装程序日志文件](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
-##  <a name="Remove"></a> 删除节点  
+##  <a name="remove-node"></a><a name="Remove"></a> 删除节点  
   
 #### <a name="to-remove-a-node-from-an-existing-ssnoversion-failover-cluster"></a>从现有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集中删除节点  
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装介质， 然后双击根文件夹中的 setup.exe。 若要从网络共享进行安装，请导航到共享中的根文件夹，然后双击 Setup.exe。  
   
-2.  安装向导将启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装中心。 若要从现有的故障转移群集实例中删除节点，请单击左窗格中的“维护”  ，然后选择“从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集中删除节点”  。  
+2.  安装向导将启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装中心。 若要从现有的故障转移群集实例中删除节点，请单击左窗格中的“维护”  ，然后选择“从  **故障转移群集中删除节点”[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** 。  
   
 3.  系统配置检查器将在您的计算机上运行发现操作。 若要继续， [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。  
   

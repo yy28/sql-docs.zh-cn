@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289405"
 ---
 # <a name="the-transaction-log-sql-server"></a>事务日志 (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "79289405"
   
 -   [相关任务](#RelatedTasks)  
   
-##  <a name="Benefits"></a>优点：事务日志支持的操作  
+##  <a name="benefits-operations-supported-by-the-transaction-log"></a><a name="Benefits"></a>优点：事务日志支持的操作  
  事务日志支持以下操作：  
   
 -   恢复个别的事务。  
@@ -54,7 +54,7 @@ ms.locfileid: "79289405"
   
 -   支持高可用性和灾难恢复解决方案： [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]、数据库镜像和日志传送。  
   
-##  <a name="Truncation"></a>事务日志截断  
+##  <a name="transaction-log-truncation"></a><a name="Truncation"></a>事务日志截断  
  日志截断将释放日志文件的空间，以便由事务日志重新使用。 日志截断主要用于阻止日志填充。 日志截断可从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的逻辑事务日志中删除不活动的虚拟日志文件，释放逻辑日志中的空间以便物理事务日志重用这些空间。 如果事务日志从不截断，它最终将填满分配给物理日志文件的所有磁盘空间。  
   
  为了避免这个问题，除非由于某些原因延迟日志截断，否则将在以下事件后自动进行截断：  
@@ -63,12 +63,12 @@ ms.locfileid: "79289405"
   
 -   在完整恢复模式或大容量日志恢复模式下，如果自上一次备份后生成检查点，则在日志备份后进行截断（除非是仅复制日志备份）。  
   
- 有关详细信息，请参阅本主题后面的[可能延迟日志截断的因素](#FactorsThatDelayTruncation)。  
+ 有关详细信息，请参阅本主题后面的 [可能延迟日志截断的因素](#FactorsThatDelayTruncation)。  
   
 > [!NOTE]  
 >  日志截断并不减小物理日志文件的大小。 若要减少物理日志文件的物理大小，需要收缩日志文件。 有关收缩物理日志文件大小的信息，请参阅 [管理事务日志文件的大小](manage-the-size-of-the-transaction-log-file.md)。  
   
-##  <a name="FactorsThatDelayTruncation"></a>可能延迟日志截断的因素  
+##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a>可能延迟日志截断的因素  
  在日志记录长时间处于活动状态时，事务日志截断将延迟，事务日志可能填满。  
   
 > [!IMPORTANT]  
@@ -82,7 +82,7 @@ ms.locfileid: "79289405"
 |1|CHECKPOINT|自上次日志截断之后，尚未生成检查点，或者日志头尚未跨一个虚拟日志文件移动。 （所有恢复模式）<br /><br /> 这是日志截断延迟的常见原因。 有关详细信息，请参阅[数据库检查点 (SQL Server)](database-checkpoints-sql-server.md)。|  
 |2|LOG_BACKUP|在截断事务日志前，需要进行日志备份。 （仅限完整恢复模式或大容量日志恢复模式）<br /><br /> 完成下一个日志备份后，一些日志空间可能变为可重复使用。|  
 |3|ACTIVE_BACKUP_OR_RESTORE|数据备份或还原正在进行（所有恢复模式）。<br /><br /> 如果数据备份阻止了日志截断，则取消备份操作可能有助于解决备份直接导致的此问题。|  
-|4|ACTIVE_TRANSACTION|事务处于活动状态（所有恢复模式）。<br /><br /> 一个长时间运行的事务可能存在于日志备份的开头。 在这种情况下，可能需要进行另一个日志备份才能释放空间。 请注意，长时间运行的事务将阻止所有恢复模式下的日志截断，包括简单恢复模式，在该模式下，事务日志通常在每个自动检查点上进行截断。<br /><br /> 延迟事务。 “延迟的事务  ”是有效的活动事务，因为某些资源不可用，其回滚受阻。 有关导致事务延迟的原因以及如何使它们摆脱延迟状态的信息，请参阅[延迟的事务 (SQL Server)](../backup-restore/deferred-transactions-sql-server.md)。 <br /><br />长时间运行的事务也可能会填满 tempdb 的事务日志。 Tempdb 由用户事务隐式用于内部对象，例如用于排序的工作表、用于哈希的工作文件、游标工作表，以及行版本控制。 即使用户事务只包括读取数据（选择查询），也可以在 "用户事务" 下创建和使用内部对象。 然后就会填充 tempdb 事务日志。|  
+|4|ACTIVE_TRANSACTION|事务处于活动状态（所有恢复模式）。<br /><br /> 一个长时间运行的事务可能存在于日志备份的开头。 在这种情况下，可能需要进行另一个日志备份才能释放空间。 请注意，长时间运行的事务将阻止所有恢复模式下的日志截断，包括简单恢复模式，在该模式下，事务日志通常在每个自动检查点上进行截断。<br /><br /> 延迟事务。 “延迟的事务 ** ”是有效的活动事务，因为某些资源不可用，其回滚受阻。 有关导致事务延迟的原因以及如何使它们摆脱延迟状态的信息，请参阅[延迟的事务 (SQL Server)](../backup-restore/deferred-transactions-sql-server.md)。 <br /><br />长时间运行的事务也可能会填满 tempdb 的事务日志。 Tempdb 由用户事务隐式用于内部对象，例如用于排序的工作表、用于哈希的工作文件、游标工作表，以及行版本控制。 即使用户事务只包括读取数据（选择查询），也可以在 "用户事务" 下创建和使用内部对象。 然后就会填充 tempdb 事务日志。|  
 |5|DATABASE_MIRRORING|数据库镜像暂停，或者在高性能模式下，镜像数据库明显滞后于主体数据库。 （仅限完整恢复模式）<br /><br /> 有关详细信息，请参阅[数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。|  
 |6|复制|在事务复制过程中，与发布相关的事务仍未传递到分发数据库。 （仅限完整恢复模式）<br /><br /> 有关事务复制的信息，请参阅 [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md)。|  
 |7|DATABASE_SNAPSHOT_CREATION|正在创建数据库快照。 （所有恢复模式）<br /><br /> 这是日志截断延迟的常见原因，通常也是主要原因。|  
@@ -95,8 +95,8 @@ ms.locfileid: "79289405"
 |14|OTHER_TRANSIENT|当前未使用此值。|  
 |16|XTP_CHECKPOINT|当数据库具有内存优化的文件组时，可能不会截断事务日志，直至触发自动 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 检查点（每当发生 512 MB 的日志增长就会出现这种情况）。<br /><br /> 注意：若要在 512 MB 大小之前截断事务日志，请针对相关数据库手动触发检查点命令。|  
   
-##  <a name="MinimallyLogged"></a>可按最小方式记录的操作  
- 最小日志记录  是指只记录在不支持时间点恢复的情况下恢复事务所需的信息。 本主题介绍在大容量日志恢复模式下（以及简单恢复模式下）按最小方式记录、但在运行备份时例外的操作。  
+##  <a name="operations-that-can-be-minimally-logged"></a><a name="MinimallyLogged"></a>可按最小方式记录的操作  
+ 最小日志记录** 是指只记录在不支持时间点恢复的情况下恢复事务所需的信息。 本主题介绍在大容量日志恢复模式下（以及简单恢复模式下）按最小方式记录、但在运行备份时例外的操作。  
   
 > [!NOTE]  
 >  内存优化表不支持最小日志记录。  
@@ -106,7 +106,7 @@ ms.locfileid: "79289405"
   
  下列操作在完整恢复模式下执行完整日志记录，而在简单和大容量日志恢复模式下按最小方式记录日志：  
   
--   批量导入操作（[bcp](../../tools/bcp-utility.md)、[BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql) 和 [INSERT...SELECT](/sql/t-sql/statements/insert-transact-sql)）。 有关在何时对大容量导入表按最小方式进行记录的详细信息，请参阅 [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
+-   批量导入操作（[bcp](../../tools/bcp-utility.md)、 [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql)和 [INSERT...SELECT](/sql/t-sql/statements/insert-transact-sql)）。 有关在何时对大容量导入表按最小方式进行记录的详细信息，请参阅 [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
   
     > [!NOTE]  
     >  启用事务复制时，将完全记录 BULK INSERT 操作，即使处于大容量日志恢复模式下。  
@@ -135,9 +135,9 @@ ms.locfileid: "79289405"
     -   DROP INDEX 新堆重新生成（如果适用）。  
   
         > [!NOTE]  
-        >  始终完全记录[DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql)操作期间的索引页解除分配。  
+        >  [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql) 操作期间将始终完整记录索引页的释放操作。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  `Managing the transaction log`  
   
 -   [管理事务日志文件的大小](manage-the-size-of-the-transaction-log-file.md)  
@@ -154,9 +154,9 @@ ms.locfileid: "79289405"
   
 ## <a name="see-also"></a>另请参阅  
  [控制事务持续性](control-transaction-durability.md)   
- [在大容量导入中按最小方式记录日志的前提条件](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
- [SQL Server 数据库的备份和还原](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [数据库检查点 (SQL Server)](database-checkpoints-sql-server.md)   
+ [大容量导入中最小日志记录的先决条件](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
+ [备份和还原 SQL Server 数据库](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [数据库检查点 SQL Server &#40;&#41;](database-checkpoints-sql-server.md)   
  [查看或更改数据库的属性](../databases/view-or-change-the-properties-of-a-database.md)   
  [恢复模式 (SQL Server)](../backup-restore/recovery-models-sql-server.md)  
   

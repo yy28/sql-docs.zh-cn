@@ -1,5 +1,5 @@
 ---
-title: SQL程序列 |微软文档
+title: SQLProcedureColumns |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,24 +15,24 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b942126a5ad73d5c41f28f60a63d22ef8584f24
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81279984"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **SQLProcessColumns**返回一行，报告所有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储过程的返回值属性。  
+  **SQLProcedureColumns**返回一个报告所有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储过程的返回值属性的行。  
   
- **SQL程序列**返回SQL_SUCCESS*目录名称*、*架构名称**、ProcName*参数或*列名*参数是否存在值。 当在这些参数中使用无效值时 **，SQLFetch**将返回SQL_NO_DATA。  
+ **SQLProcedureColumns**返回 SQL_SUCCESS *CatalogName*、 *SchemaName*、 *ProcName*或*ColumnName*参数是否存在值。 当在这些参数中使用了无效值时， **SQLFetch**将返回 SQL_NO_DATA。  
   
- **SQL程序列**可以在静态服务器游标上执行。 尝试在可上升（动态或键集）游标上执行**SQLARK**键将返回SQL_SUCCESS_WITH_INFO指示游标类型已更改。  
+ 可以对静态服务器游标执行**SQLProcedureColumns** 。 尝试对可更新的（动态或键集）游标执行**SQLProcedureColumns**时，将返回 SQL_SUCCESS_WITH_INFO，指示游标类型已更改。  
   
- 下表列出了结果集返回的列，以及如何扩展它们，以便通过[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 ODBC 驱动程序处理**udt**和**xml**数据类型：  
+ 下表列出了结果集返回的列，以及如何通过[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序扩展这些列来处理**udt**和**xml**数据类型：  
   
-|列名称|描述|  
+|列名称|说明|  
 |-----------------|-----------------|  
 |SS_UDT_CATALOG_NAME|返回包含 UDT（用户定义类型）的目录的名称。|  
 |SS_UDT_SCHEMA_NAME|返回包含 UDT 的架构的名称。|  
@@ -42,7 +42,7 @@ ms.locfileid: "81279984"
 |SS_XML_SCHEMACOLLECTION_NAME|返回 XML 架构集合的名称。 如果找不到此名称，则此变量包含空字符串。|  
   
 ## <a name="sqlprocedurecolumns-and-table-valued-parameters"></a>SQLProcedureColumns 和表值参数  
- SQL程序列以类似于 CLR 用户定义的类型的方式处理表值参数。 在针对表值参数返回的行中，列具有以下值：  
+ SQLProcedureColumns 以类似于 CLR 用户定义类型的方式处理表值参数。 在针对表值参数返回的行中，列具有以下值：  
   
 |列名称|说明/值|  
 |-----------------|------------------------|  
@@ -66,18 +66,18 @@ ms.locfileid: "81279984"
   
  为了符合 ODBC 规范，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 的显示位置位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本中添加的所有驱动程序特定列之前，ODBC 自身托管的所有列之后。  
   
- 有关表值参数的详细信息，请参阅[&#40;ODBC&#41;的表值参数](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
+ 有关表值参数的详细信息，请参阅[ODBC&#41;&#40;表值参数](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="sqlprocedurecolumns-support-for-enhanced-date-and-time-features"></a>SQLProcedureColumns 对日期和时间增强功能的支持  
- 有关日期/时间类型返回的值，请参阅[目录元数据](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)。  
+ 有关为日期/时间类型返回的值，请参阅[目录元数据](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)。  
   
- 有关更一般的信息，请参阅[ODBC&#41;&#40;日期和时间改进](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 有关更多常规信息，请参阅[ODBC&#41;&#40;日期和时间改进](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlprocedurecolumns-support-for-large-clr-udts"></a>SQLProcedureColumns 对大型 CLR UDT 的支持  
- **SQL程序列**支持大型 CLR 用户定义类型 （UDT）。 有关详细信息，请参阅[&#40;ODBC&#41;的大型 CLR 用户定义类型](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLProcedureColumns**支持大型 CLR 用户定义类型（udt）。 有关详细信息，请参阅[&#40;ODBC&#41;的大型 CLR 用户定义类型](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL程序列函数](https://go.microsoft.com/fwlink/?LinkId=59363)   
+ [SQLProcedureColumns 函数](https://go.microsoft.com/fwlink/?LinkId=59363)   
  [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

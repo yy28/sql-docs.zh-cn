@@ -5,10 +5,10 @@ ms.topic: include
 ms.date: 01/13/2020
 ms.author: mikeray
 ms.openlocfilehash: 0201d8dbf20557b9fc8b7e5856b0e64c85902759
-ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80501874"
 ---
-<Token>**应用到：** ![](media/yes-icon.png)是 SQL 服务器 2017 和![更高版本](media/yes-icon.png)是![Azure](media/no-icon.png)SQL 数据库![（](media/no-icon.png)仅限托管实例） 没有 Azure SQL 数据仓库 没有并行数据仓库</Token>
+<Token>**适用于：** ![是](media/yes-icon.png)SQL Server 2017 和更![高](media/yes-icon.png)版本-azure sql 数据库（仅![托管实例](media/no-icon.png)）不支持 azure ![sql](media/no-icon.png)数据仓库否并行数据仓库</Token>

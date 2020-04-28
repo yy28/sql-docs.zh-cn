@@ -1,6 +1,6 @@
 ---
-title: 配置多边形基础哈达普安全性
-description: 说明如何在并行数据仓库中配置 PolyBase 以连接到外部 Hadoop。
+title: 配置 PolyBase Hadoop 安全性
+description: 介绍如何将 PolyBase 配置为并行数据仓库以连接到外部 Hadoop。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -10,25 +10,25 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f275c77556e8abe8932e241075b9e24e2ae5db77
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289675"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Hadoop 的 PolyBase 配置和安全
 
-本文为影响 APS PolyBase 与 Hadoop 连接的各种配置设置提供了参考。 有关什么是 PolyBase 的演练，请参阅[什么是 PolyBase](configure-polybase-connectivity-to-external-data.md)。
+本文提供了对影响到 Hadoop 的 AP PolyBase 连接的各种配置设置的参考。 有关 PolyBase 的操作实例，请参阅[什么是 polybase](configure-polybase-connectivity-to-external-data.md)。
 
 > [!NOTE]
-> 在 APS 上，所有计算节点和控制节点都需要更改 XML 文件。
+> 在 AP 上，在所有计算节点和控制节点上都需要对 XML 文件进行的更改。
 > 
-> 在 APS 中修改 XML 文件时要特别小心。 任何缺少的标记或不需要的字符都会使阻止该功能的智能化的 xml 文件失效。
+> 修改 AP 中的 XML 文件时要特别小心。 缺少的标记或不需要的字符会使导致功能 usablilty 的 xml 文件无效。
 > Hadoop 配置文件位于以下路径中：  
 > ```  
 > C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf 
 > ``` 
-> 对 xml 文件的任何更改都需要重新启动服务才能有效。
+> 对 xml 文件所做的任何更改都需要重新启动服务才能生效。
 
 ## <a name="hadooprpcprotection-setting"></a><a id="rpcprotection"></a> Hadoop.RPC.Protection 设置
 
@@ -46,9 +46,9 @@ ms.locfileid: "79289675"
 
 请注意，当 PolyBase 向 Kerberos 保护的群集证明身份时，默认情况下需要将 hadoop.rpc.protection 设置设为“身份验证”。 这会使 Hadoop 节点间的数据通信保持非加密状态。 要为 hadoop.rpc.protection 使用“隐私”或“完整性”设置，请在 PolyBase 服务器上更新 core-site.xml 文件。 有关详细信息，请参阅上一节的[使用 Hadoop.rpc.protection 连接到 Hadoop 群集](#rpcprotection)。
 
-要使用 MIT KDC 连接到具有 Kerberos 保护的 Hadoop 群集，所有 APS 计算节点和控制节点都需要进行以下更改：
+若要使用 MIT KDC 连接到 Kerberos 保护的 Hadoop 群集，需要对所有的 AP 计算节点和控制节点进行以下更改：
 
-1. 在 APS 的安装路径中查找 Hadoop 配置目录。 通常情况下，该路径为：  
+1. 在 AP 的安装路径中查找 Hadoop 配置目录。 通常情况下，该路径为：  
 
    ```  
    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf  
@@ -58,7 +58,7 @@ ms.locfileid: "79289675"
    
 3. 将配置值复制到 SQL Server 计算机上对应文件的值属性中。  
    
-   |**#**|**配置文件**|**配置密钥**|**操作**|  
+   |**#**|**配置文件**|**配置密钥**|**Action**|  
    |------------|----------------|---------------------|----------|   
    |1|core-site.xml|polybase.kerberos.kdchost|指定 KDC 主机名。 例如：kerberos.your-realm.com。|  
    |2|core-site.xml|polybase.kerberos.realm|指定 Kerberos 领域。 例如：YOUR-REALM.COM|  
@@ -114,8 +114,8 @@ ms.locfileid: "79289675"
 
 4. 创建数据库范围内的凭据对象，以指定每个 Hadoop 用户的身份验证信息。 请参阅 [PolyBase T-SQL 对象](../relational-databases/polybase/polybase-t-sql-objects.md)。
 
-## <a name="hadoop-encryption-zone-setup"></a><a id="encryptionzone"></a>哈多普加密区域设置
-如果使用 Hadoop 加密区域，请修改核心站点.xml 和 hdfs site.xml，如下所示。 提供使用相应端口号运行 KMS 服务的 ip 地址。 CDH 上的 KMS 的默认端口为 16000。
+## <a name="hadoop-encryption-zone-setup"></a><a id="encryptionzone"></a>Hadoop 加密区域设置
+如果使用 Hadoop 加密区域，请修改 core-site.xml 和 hdfs-site.xml，如下所示。 提供运行 KMS 服务的 ip 地址和相应的端口号。 CDH 上的 KMS 的默认端口为16000。
 
 **core-site.xml**
 ```xml

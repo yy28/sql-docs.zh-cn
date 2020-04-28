@@ -23,10 +23,10 @@ ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: cbbb7ed7a20937d9963af7080fb16be4f6c78da5
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79111905"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>安装访问 SQL Server 迁移助手（AccessToSQL）
@@ -37,8 +37,7 @@ ms.locfileid: "79111905"
   
 -   Windows 7 或更高版本，或者 Windows Server 2008 或更高版本。  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 或更高版本。  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 或更高版本。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework 版本4.0 或更高版本。 .NET Framework 版本4.0 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]产品光盘上提供，并使用[Microsoft .NET 指南](https://docs.microsoft.com/dotnet/framework/)中的信息。
   
@@ -62,7 +61,7 @@ SSMA 是一款可以从 Web 下载的工具。 若要下载最新版本，请参
   
 1.  双击 "SSMA" 以访问 " *n*"，其中*n*是生成号。  
   
-2.  在“欢迎”页面上，单击“**下一步**”。  
+2.  在欢迎页上，单击 "**下一步**"。  
   
     如果未安装必备组件，则会出现一条消息，指示必须首先安装所需的组件。 请确保已安装所有必备组件，然后再次运行安装程序。  
   
@@ -70,7 +69,7 @@ SSMA 是一款可以从 Web 下载的工具。 若要下载最新版本，请参
   
 4.  在 "选择安装类型" 页上，单击 "**典型**"。  
   
-5.  单击 **“安装”**。  
+5.  单击“安装”  。  
   
 默认安装位置为 C:\Program Files\Microsoft SQL Server 迁移助手用于访问。  
   
@@ -89,7 +88,7 @@ SSMA 是一款可以从 Web 下载的工具。 若要下载最新版本，请参
 如果你打开在 SSMA for Access 的早期版本中创建的项目，则 SSMA 会询问你是否要将该项目转换为较新的版本。 单击 **"是"** 以使用 SSMA 的较新版本中的项目。  
   
 ## <a name="see-also"></a>另请参阅  
-[为迁移准备 Access 数据库](preparing-access-databases-for-migration-accesstosql.md)  
+[准备要迁移的 Access 数据库](preparing-access-databases-for-migration-accesstosql.md)  
 [将 Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [将访问应用程序链接到 SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)  
   

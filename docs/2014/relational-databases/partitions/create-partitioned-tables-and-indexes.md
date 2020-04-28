@@ -29,10 +29,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be83b941e5b8000a0a802fbe9fe7254a364d69c9
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289375"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>创建已分区表和已分区索引
@@ -62,17 +62,17 @@ ms.locfileid: "79289375"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="Restrictions"></a> 限制和局限  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
 -   分区函数和方案的作用域被限制为在其中创建它们的数据库。 在该数据库内，分区函数驻留在与其他函数的命名空间不同的一个单独命名空间内。  
   
 -   如果分区函数中的任何行具有带 Null 值的分区列，会将这些行分配到最左侧分区。 但是，如果将 NULL 指定为边界值并指示 RIGHT，则最左侧的分区仍为空，NULL 值位于第二个分区。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  创建已分区表需要在数据库中具有 CREATE TABLE 权限，对在其中创建表的架构具有 ALTER 权限。 创建已分区索引需要对要创建索引的表或视图具有 ALTER 权限。 创建已分区表或索引需要以下附加权限之一：  
   
 -   ALTER ANY DATASPACE 权限。 默认情况下，此权限授予 **sysadmin** 固定服务器角色和 **db_owner** 及 **db_ddladmin** 固定数据库角色的成员。  
@@ -81,7 +81,7 @@ ms.locfileid: "79289375"
   
 -   对在其中创建分区函数和分区方案的数据库所在服务器的 CONTROL SERVER 或 ALTER ANY DATABASE 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  按此过程中的步骤创建一个或多个文件组、相应文件和一个表。 创建已分区表时，您将在下一个过程中引用这些对象。  
   
 #### <a name="to-create-new-filegroups-for-a-partitioned-table"></a>创建已分区表的新文件组  
@@ -201,7 +201,7 @@ ms.locfileid: "79289375"
   
                 -   如果选择 **“天”** ，请输入要运行作业计划的当月日期和作业计划的重复频率（月）。 例如，如果要每隔一个月在当月的 15 日运行计划作业，请选择“天”，在第一个框中输入“15”，在第二个框中输入“2”  。 请注意，第二个框中允许的最大数是“99”。  
   
-                -   如果选择 **“特定日期”** ，请选择要运行作业计划的当月内一周的特定一天和作业计划的重复频率（月）。 例如，如果要每隔一个月在当月的最后一个工作日运行作业计划，请选择“天”，从第一个列表中选择“最后一周”，从第二个列表中选择“工作日”，然后在最后一个框中输入“2”    。 还可以从前两个列表中选择“第一周”  、“第二周”  、“第三周”  或“第四周”  以及特定工作日（例如：星期日或星期三）。 请注意，最后一个框中允许的最大数是“99”。  
+                -   如果选择 **“特定日期”** ，请选择要运行作业计划的当月内一周的特定一天和作业计划的重复频率（月）。 例如，如果要每隔一个月在当月的最后一个工作日运行作业计划，请选择“天”，从第一个列表中选择“最后一周”，从第二个列表中选择“工作日”，然后在最后一个框中输入“2”    。 还可以从前两个列表中选择“第一周”  、“第二周”  、“第三周”  或“第四周”  以及特定工作日（例如星期日或星期三）。 请注意，最后一个框中允许的最大数是“99”。  
   
         2.  在 **“每天频率”** 下，指定作业计划运行的当天作业计划的重复频率。  
   
@@ -258,7 +258,7 @@ ms.locfileid: "79289375"
   
  创建分区向导将创建分区函数和方案，然后将分区应用于指定的表。 若要验证表分区，请在对象资源管理器中，右键单击表，然后选择“属性”  。 单击 **“存储”** 页。 该页面将显示分区函数和方案的名称以及分区数目之类的信息。  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-partitioned-table"></a>创建已分区表  
   

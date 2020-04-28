@@ -1,5 +1,5 @@
 ---
-title: sys. 凭据（转用 SQL） |微软文档
+title: sys.databases （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/06/2020
 ms.prod: sql
@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f87378897256f8b4fae26b30263577bedede6175
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80752892"
 ---
 # <a name="syscredentials-transact-sql"></a>sys.credentials (Transact-SQL)
@@ -34,25 +34,25 @@ ms.locfileid: "80752892"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|credential_id|**Int**|凭据的 ID。 在服务器中是唯一的。|  
+|credential_id|**int**|凭据的 ID。 在服务器中是唯一的。|  
 |name|**sysname**|凭据的名称。 在服务器中是唯一的。|  
-|credential_identity|**恩瓦尔查尔 （4000）**|要使用的标识的名称。 这通常是一个 Windows 用户。 它不必是唯一的。|  
+|credential_identity|**nvarchar(4000)**|要使用的标识的名称。 这通常是一个 Windows 用户。 它不必是唯一的。|  
 |create_date|**datetime**|创建凭据的时间。|  
 |modify_date|**datetime**|上次修改凭据的时间。|  
-|target_type|**恩瓦尔查尔 （100）**|凭据类型。 对于传统凭据，返回 NULL；对于映射到加密提供程序的凭据，返回 CRYPTOGRAPHIC PROVIDER。 有关外部密钥管理提供程序的详细信息，请参阅[可扩展密钥管理&#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。|  
-|target_id|**Int**|该凭据映射到的对象的 ID。 对于传统凭据，返回 0；对于映射到加密提供程序的凭据，返回非 0 值。 有关外部密钥管理提供程序的详细信息，请参阅[可扩展密钥管理&#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。|  
+|target_type|**nvarchar （100）**|凭据类型。 对于传统凭据，返回 NULL；对于映射到加密提供程序的凭据，返回 CRYPTOGRAPHIC PROVIDER。 有关外部密钥管理提供程序的详细信息，请参阅[&#40;EKM&#41;的可扩展密钥管理](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。|  
+|target_id|**int**|该凭据映射到的对象的 ID。 对于传统凭据，返回 0；对于映射到加密提供程序的凭据，返回非 0 值。 有关外部密钥管理提供程序的详细信息，请参阅[&#40;EKM&#41;的可扩展密钥管理](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。|  
 
 ## <a name="remarks"></a>备注  
-有关数据库级凭据，请参阅[sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)。
+有关数据库级凭据，请参阅[sys. database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)。
   
 ## <a name="permissions"></a>权限  
- 需要权限`VIEW ANY DEFINITION`或`ALTER ANY CREDENTIAL`权限。 此外，不得拒绝`VIEW ANY DEFINITION`委托人的权限。  
+ 需要`VIEW ANY DEFINITION`权限或`ALTER ANY CREDENTIAL`权限。 此外，不能拒绝`VIEW ANY DEFINITION`主体权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [系统database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   
- [凭据&#40;数据库引擎&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
- [安全目录视图&#40;交易-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [主体&#40;数据库引擎&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [sys. database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   
+ [凭据 &#40;数据库引擎&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+ [Transact-sql&#41;&#40;安全目录视图](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)  
   
   

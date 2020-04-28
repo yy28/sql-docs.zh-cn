@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1c9b04245e14be67242d5cd1ea6d257ac4fc6038
-ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79525428"
 ---
 # <a name="tabular-model-programming"></a>表格模型编程
@@ -25,11 +25,11 @@ ms.locfileid: "79525428"
  本节提供有关如何以编程方式使用表格模型实体及其属性的详细信息。  
   
 ## <a name="in-this-section"></a>本节内容  
- [用于商业智能的 CSDL 批注 &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
+ [用于商业智能的 CSDL 批注 (CSDLBI)](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
  [了解表格对象模型](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
- [适用于 CSDL 的 BI 注释技术参考](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl)  
+ [用于商业智能的 CSDL 注释技术参考](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl)  
   
  [IMDEmbedded 接口](imdembeddeddata-interface.md)  
   

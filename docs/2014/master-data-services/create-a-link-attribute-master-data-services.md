@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bf324f4e24337503c97e10734f38713ae0f172e6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380728"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>创建链接属性 (Master Data Services)
@@ -31,7 +31,7 @@ ms.locfileid: "80380728"
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员&#40;主数据服务&#41;](administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](administrators-master-data-services.md)。  
   
 -   要为其创建属性的实体必须存在。 有关详细信息，请参阅[创建实体 (Master Data Services)](../../2014/master-data-services/create-an-entity-master-data-services.md)。  
   
@@ -72,9 +72,9 @@ ms.locfileid: "80380728"
 14. 在 **“实体维护”** 页上，单击 **“保存实体”**。  
   
 ## <a name="see-also"></a>另请参阅  
- [属性&#40;主数据服务&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
- [更改属性名称&#40;主数据服务&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
- [创建基于域的属性&#40;主数据服务&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [属性 &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
+ [更改属性名称 &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
+ [创建基于域的属性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
  [创建文件属性 (Master Data Services)](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

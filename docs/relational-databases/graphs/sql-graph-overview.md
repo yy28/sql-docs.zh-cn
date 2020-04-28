@@ -16,10 +16,10 @@ ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2b0934562f2f0ff1a2dd3ec8df1ed15f10d955ee
-ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79428148"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server 和 Azure SQL 数据库中的图形处理
@@ -47,7 +47,7 @@ ms.locfileid: "79428148"
 
 
 ### <a name="create-graph-objects"></a>创建图形对象
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)]扩展将允许用户创建节点或边界表。 节点和边缘都可以有与之关联的属性。 由于，节点和边缘以表的形式存储，因此在节点或边界表上支持对关系表支持的所有操作。 下面是一个示例：  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)]扩展将允许用户创建节点或边界表。 节点和边缘都可以有与之关联的属性。 由于，节点和边缘以表的形式存储，因此在节点或边界表上支持对关系表支持的所有操作。 以下是示例：  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;

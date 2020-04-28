@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a51393748d47159cfc4cf6bf8bd25e50307cfb7
-ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79525438"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI 概念
@@ -29,18 +29,15 @@ ms.locfileid: "79525438"
   
  模型是一个命名空间，其中包含以下主要实体、关联和属性：  
   
--   
-  `EntityContainer` 列出了模型中的表。  
+-   `EntityContainer` 列出了模型中的表。  
   
 -   每个表将与 `EntityContainer` 一起作为 `EntitySet` 列出。  
   
 -   两个表之间的每个关系均被描述为一个 `AssociationSet`，用于定义关系端点和关系角色。  
   
--   
-  `EntityType` 元素针对 BISM 进行了扩展，以提供有关 BISM 中的表和列的其他详细信息，包括用于排序和显示的属性。  
+-   `EntityType` 元素针对 BISM 进行了扩展，以提供有关 BISM 中的表和列的其他详细信息，包括用于排序和显示的属性。  
   
--   
-  `Measure` 元素定义了可在模型中使用的计算。 可通过使用新的 `KPI` 元素添加一组特殊显示属性来将度量值转换为 KPI。  
+-   `Measure` 元素定义了可在模型中使用的计算。 可通过使用新的 `KPI` 元素添加一组特殊显示属性来将度量值转换为 KPI。  
   
 -   没有针对透视的单独表示形式。 虽然透视中未包含的列和表将用 CSDL 表示，但会由 `Hidden` 属性进行标记。  
   
@@ -61,8 +58,7 @@ ms.locfileid: "79525438"
   
 ```  
   
- 
-  `EntitySet` 不包含表中的列或数据的相关信息。 EntityType 元素中提供了列及其属性的详细说明。  
+ `EntitySet` 不包含表中的列或数据的相关信息。 EntityType 元素中提供了列及其属性的详细说明。  
   
  每个实体（表）的 `EntitySet` 元素包括一个属性集合，这些属性定义键列、列的数据类型和长度、为 null 性、排序行为等。 例如，以下 CSDL 摘录描述了 Customer 表中的三列。 第一列是模型在内部使用的特殊隐藏列。  
   
@@ -112,8 +108,7 @@ ms.locfileid: "79525438"
 ### <a name="name-properties-and-naming-conventions"></a>名称属性和命名约定  
  CSDLBI 架构规定每个实体具有一个唯一名称和一个可用作密钥的标识符。 此外，某些实体可具有用于显示的标题和随实体的使用位置的不同而不同的上下文名称。  
   
- 
-  `Documentation` 元素使报表设计人员能够提供实体的说明并帮助业务用户了解数据的含义。 某些实体还允许一个或多个 `Annotation` 属性，这些属性提供可由应用程序或客户端使用的额外元数据。  
+ `Documentation` 元素使报表设计人员能够提供实体的说明并帮助业务用户了解数据的含义。 某些实体还允许一个或多个 `Annotation` 属性，这些属性提供可由应用程序或客户端使用的额外元数据。  
   
  使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 工具生成模型时，为对象创建的名称应遵循对象命名的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 约定和名称唯一性。 但是，由于 CSDLBI 基于实体数据框架 (EDF)，而实体数据框架要求名称遵循 C# 标识符的约定，因此，服务器在为模型创建 CSDLBI 输出时将采用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 架构中使用的名称，并将自动创建符合 EDF 要求的新对象名称。 下表描述了用于生成新名称的操作。  
   
@@ -151,6 +146,6 @@ ms.locfileid: "79525438"
  **限制：** 不支持单元安全性。  
   
 ## <a name="see-also"></a>另请参阅  
- [用于商业智能的 CSDL 批注 &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
+ [用于商业智能的 CSDL 批注 (CSDLBI)](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
   

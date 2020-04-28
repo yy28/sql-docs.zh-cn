@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f5f8840e0204847d447ea794e94312221ec1cc72
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380788"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>用于 XML 报表数据的 XML 查询语法 (SSRS)
-  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，可以为 XML 数据源创建数据集。 定义数据源后，可以为数据集创建查询。 根据数据源所指向的 XML 数据类型，可以通过包括 XML `Query` 或元素路径来创建数据集查询。 XML`Query`以**\<查询>** 标记开头，包括命名空间和 XML 元素，这些元素因数据源而异。 元素路径与命名空间无关，它使用与 XPath 类似的语法指定要使用的来自基础 XML 数据的节点和节点属性。 有关元素路径的详细信息，请参阅[用于 XML 报表数据的元素路径语法 (SSRS)](report-data-ssrs.md)。  
+  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，可以为 XML 数据源创建数据集。 定义数据源后，可以为数据集创建查询。 根据数据源所指向的 XML 数据类型，可以通过包括 XML `Query` 或元素路径来创建数据集查询。 XML `Query`从>标记的** \<查询**开始，并包含不同于数据源的命名空间和 XML 元素。 元素路径与命名空间无关，它使用与 XPath 类似的语法指定要使用的来自基础 XML 数据的节点和节点属性。 有关元素路径的详细信息，请参阅[用于 XML 报表数据的元素路径语法 (SSRS)](report-data-ssrs.md)。  
   
  可以为以下类型的 XML 数据创建 XML 数据源：  
   
@@ -87,8 +87,8 @@ ms.locfileid: "80380788"
   
 |XML 查询元素|数据集中的结果字段|  
 |-----------------------|-------------------------------------|  
-|\<Query/>|值 A： `https://schemas.microsoft.com/..`.<br /><br /> 值 B： `https://schemas.microsoft.com/..`.<br /><br /> 值 C： `https://schemas.microsoft.com/.`. .|  
-|\<xmldp：查询https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQueryxmlns：xmldp_""xmlns：ns="。https://schemas.microsoft.com/..><br /><br /> \<xmldp：元素路径>根{}/ns：元素2/节点\</xmldp：元素路径><br /><br /> \</xmldp：查询>|值 D<br /><br /> 值 E<br /><br /> 值 F|  
+|\<Query/>|值 A： `https://schemas.microsoft.com/..`。<br /><br /> 值 B： `https://schemas.microsoft.com/..`。<br /><br /> 值 C： `https://schemas.microsoft.com/.`。。|  
+|\<xmldp： Query xmlns： xmldp = "https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns： ns = "https://schemas.microsoft.com/..。"><br /><br /> \<xmldp： ElementPath>根{}/Ns： Element2/Node\</xmldp： ElementPath><br /><br /> \</xmldp：查询>|值 D<br /><br /> 值 E<br /><br /> 值 F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>XML 文档：DPNamespace.xml  
  可以复制此 XML 并将其保存到报表设计器可访问的 URL 以用作 XML 数据源：例如 http://localhost/DPNamespace.xml。  
@@ -109,7 +109,7 @@ ms.locfileid: "80380788"
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [XML 连接类型&#40;SSRS&#41;](xml-connection-type-ssrs.md)   
+ [XML 连接类型 &#40;SSRS&#41;](xml-connection-type-ssrs.md)   
  [Reporting Services 教程 (SSRS)](../reporting-services-tutorials-ssrs.md)  
   
   

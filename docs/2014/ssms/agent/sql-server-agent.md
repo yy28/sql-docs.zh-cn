@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289625"
 ---
 # <a name="sql-server-agent"></a>SQL Server 代理
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理是一种 Microsoft Windows 服务，可执行计划的管理任务， *jobs*这些任务[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]在中称为 "作业"。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理是一种 Microsoft Windows 服务，它在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中执行计划的管理任务，即“作业”**。  
   
  **本主题内容**  
   
@@ -31,28 +31,22 @@ ms.locfileid: "79289625"
   
 -   [SQL Server 代理管理的安全性](#Security)  
   
-##  <a name="Benefits"></a>SQL Server 代理的优点  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来存储作业信息。 作业包含一个或多个作业步骤。 每个步骤都有自己的任务。例如，备份数据库。  
+##  <a name="benefits-of-sql-server-agent"></a><a name="Benefits"></a>SQL Server 代理的优点  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来存储作业信息。 作业包含一个或多个作业步骤。 每个步骤都有自己的任务。例如，备份数据库。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可以按照计划运行作业，也可以在响应特定事件时运行作业，还可以根据需要运行作业。 例如，如果希望在每个工作日下班后备份公司的所有服务器，就可以使该任务自动执行。 将备份安排在星期一到星期五的 22:00 之后运行，如果备份出现问题，SQL Server 代理可记录该事件并通知您。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可以按照计划运行作业，也可以在响应特定事件时运行作业，还可以根据需要运行作业。 例如，如果希望在每个工作日下班后备份公司的所有服务器，就可以使该任务自动执行。 将备份安排在星期一到星期五的 22:00 之后运行，如果备份出现问题，SQL Server 代理可记录该事件并通知您。  
   
 > [!NOTE]  
 >  默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装后 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 代理服务处于禁用状态，除非用户明确选择自动启动该服务。  
   
-##  <a name="Components"></a>SQL Server 代理组件  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使用下列组件来定义要执行的任务、执行任务的时间以及报告任务成功或失败的方式。  
+##  <a name="sql-server-agent-components"></a><a name="Components"></a>SQL Server 代理组件  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使用下列组件来定义要执行的任务、执行任务的时间以及报告任务成功或失败的方式。  
   
 ### <a name="jobs"></a>作业  
- “作业” ** 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理执行的一系列指定操作。 使用作业能够定义可一次或多次运行的，并且可以监视其成功或失败状态的管理任务。 一个作业可在一台本地服务器或者多台远程服务器上运行。  
+ *作业*是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理执行的一系列指定操作。 使用作业能够定义可一次或多次运行的，并且可以监视其成功或失败状态的管理任务。 一个作业可在一台本地服务器或者多台远程服务器上运行。  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例上发生故障转移事件时正在运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业在故障转移到其他故障转移群集节点后不恢复。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 Hyper-V 节点暂停时，如果该暂停导致故障转移到其他节点，则正在运行的代理作业不恢复。 已开始但由于故障转移事件而未能完成的作业在日志中记录为已开始，但不提供附加的条目来指明完成或失败。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业好像永远不会结束。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例上发生故障转移事件时正在运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业在故障转移到其他故障转移群集节点后不恢复。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 Hyper-V 节点暂停时，如果该暂停导致故障转移到其他节点，则正在运行的代理作业不恢复。 已开始但由于故障转移事件而未能完成的作业在日志中记录为已开始，但不提供附加的条目来指明完成或失败。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业好像永远不会结束。  
   
  可以通过下列几种方式来运行作业：  
   
@@ -67,7 +61,7 @@ ms.locfileid: "79289625"
  所有作业步骤均在特定的安全上下文中运行。 对于使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]的作业步骤，请使用 EXECUTE AS 语句设置作业步骤的安全上下文。 对于其他类型的作业步骤，请使用代理帐户来设置作业步骤的安全上下文。  
   
 ### <a name="schedules"></a>计划  
- *计划*指定作业运行的时间。 多个作业可按同一计划运行，可将多个计划应用到同一作业。 计划可为作业运行时间定义以下条件：  
+ “计划” ** 指定了作业运行的时间。 多个作业可按同一计划运行，可将多个计划应用到同一作业。 计划可为作业运行时间定义以下条件：  
   
 -   每当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理启动时。  
   
@@ -101,8 +95,7 @@ ms.locfileid: "79289625"
 ### <a name="operators"></a>运算符  
  “操作员” ** 定义的是负责维护一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的个人的联系信息。 在有些企业中，操作员职责被分配给一个人。 在拥有多个服务器的企业中，操作员职责可以由多人分担。 操作员不涉及安全信息，因此不会定义安全主体。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以通过下列一种或多种方式通知操作员有警报出现：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以通过下列一种或多种方式通知操作员有警报出现：  
   
 -   电子邮件  
   
@@ -111,8 +104,7 @@ ms.locfileid: "79289625"
 -   **net send**  
   
 > [!NOTE]  
->  
-  **代理所在的计算机必须启动 Windows Messenger 服务，才能使用**net send [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发送通知。  
+>  **代理所在的计算机必须启动 Windows Messenger 服务，才能使用**net send [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发送通知。  
   
 > [!IMPORTANT]  
 >  在 **的未来版本中，将从** 代理中删除寻呼程序和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net send [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选项。 请避免在新的开发工作中使用这些功能，并考虑修改当前使用这些功能的应用程序。  
@@ -121,45 +113,40 @@ ms.locfileid: "79289625"
   
  可以将操作员定义为一组个人的别名。 这样，该组的所有成员就可以同时收到通知。 有关详细信息，请参阅 [运算符](operators.md)。  
   
-##  <a name="Security"></a>SQL Server 代理管理的安全性  
+##  <a name="security-for-sql-server-agent-administration"></a><a name="Security"></a>SQL Server 代理管理的安全性  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理使用**msdb**数据库中的**SQLAgentUserRole**、 **SQLAgentReaderRole**和**SQLAgentOperatorRole**固定数据库角色来控制对不是`sysadmin`固定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务器角色成员的用户对代理的访问。 除了这些固定数据库角色之外，子系统和代理还有助于数据库管理员确保每个作业步骤运行时都具有执行其任务所需的最低权限。  
   
 ### <a name="roles"></a>角色  
  **Msdb** `sysadmin`中的**SQLAgentUserRole**、 **SQLAgentReaderRole**和**SQLAgentOperatorRole**固定数据库角色的成员以及固定服务器角色的成员都有权访问[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理。 不属于这些角色的用户不能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理。 有关用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的角色的详细信息，请参阅 [实现 SQL Server 代理安全性](implement-sql-server-agent-security.md)。  
   
 ### <a name="subsystems"></a>子系统  
- 子系统是预定义的对象，表示作业步骤可用的功能。 每个代理都可以访问一个或多个子系统。 子系统可以提供安全性，因为它们分隔了对可用于代理的功能的访问。 除了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤，每个作业步骤都在代理的上下文中运行。 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤使用 EXECUTE AS 命令设置安全上下文。  
+ 子系统是预定义的对象，表示作业步骤可用的功能。 每个代理都可以访问一个或多个子系统。 子系统可以提供安全性，因为它们分隔了对可用于代理的功能的访问。 除了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤，每个作业步骤都在代理的上下文中运行。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤使用 EXECUTE AS 命令设置安全上下文。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定义了下表中列出的子系统：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定义了下表中列出的子系统：  
   
 |子系统名称|说明|  
 |--------------------|-----------------|  
 |Microsoft ActiveX 脚本|运行 ActiveX 脚本作业步骤。<br /><br /> ** \* \*重要\*提示**在的未来版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，将从代理中删除 ActiveX 脚本编写子系统。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。|  
-|操作系统（**CmdExec**）|运行可执行程序。|  
+|操作系统 (**CmdExec**)|运行可执行程序。|  
 |PowerShell|运行 PowerShell 脚本作业步骤。|  
 |复制分发服务器|运行激活复制分发服务器代理的作业步骤。|  
 |复制合并|运行激活复制合并代理的作业步骤。|  
 |复制队列读取器|运行激活复制队列读取器代理的作业步骤。|  
 |复制快照|运行激活复制快照代理的作业步骤。|  
 |复制事务日志读取器|运行激活复制日志读取器代理的作业步骤。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Command|运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 命令。|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Query|运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 查询。|  
-|[!INCLUDE[ssIS](../../includes/ssis-md.md)]包执行|运行 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 命令|运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 命令。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Query|运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 查询。|  
+|[!INCLUDE[ssIS](../../includes/ssis-md.md)] 包执行|运行 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包。|  
   
 > [!NOTE]  
 >  因为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤不使用代理，因此没有针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作业步骤的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代理子系统。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理仍将强制限制子系统。 例如，如果一个用户是 sysadmin 固定服务器角色的成员，则即使该用户可以运行 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包，其代理仍将无法运行 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 作业步骤，除非该代理可以访问 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 子系统。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理仍将强制限制子系统。 例如，如果一个用户是 sysadmin 固定服务器角色的成员，则即使该用户可以运行 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包，其代理仍将无法运行 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 作业步骤，除非该代理可以访问 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 子系统。  
   
 ### <a name="proxies"></a>代理  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使用代理管理安全上下文。 一个代理可用于多个作业步骤。 `sysadmin`固定服务器角色的成员可创建代理。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使用代理管理安全上下文。 一个代理可用于多个作业步骤。 `sysadmin`固定服务器角色的成员可创建代理。  
   
- 每个代理对应于一个安全凭据。 每个代理都可与一组子系统和一组登录名相关联。 代理仅可用于使用与该代理相关联的子系统的作业步骤。 若要创建使用特定代理的作业步骤，作业所有者必须使用与此代理相关联的登录名，或者是对代理具有无限访问权限的角色成员。 `sysadmin`固定服务器角色的成员可以无限制地访问代理。 
-  **SQLAgentUserRole**、 **SQLAgentReaderRole**或 **SQLAgentOperatorRole** 的成员仅能使用授予他们特定访问权限的代理。 这些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理固定数据库角色的每个成员用户必须获得访问特定代理的权限，才能创建使用那些代理的作业步骤。  
+ 每个代理对应于一个安全凭据。 每个代理都可与一组子系统和一组登录名相关联。 代理仅可用于使用与该代理相关联的子系统的作业步骤。 若要创建使用特定代理的作业步骤，作业所有者必须使用与此代理相关联的登录名，或者是对代理具有无限访问权限的角色成员。 `sysadmin`固定服务器角色的成员可以无限制地访问代理。 **SQLAgentUserRole**、 **SQLAgentReaderRole**或 **SQLAgentOperatorRole** 的成员仅能使用授予他们特定访问权限的代理。 这些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理固定数据库角色的每个成员用户必须获得访问特定代理的权限，才能创建使用那些代理的作业步骤。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  使用以下步骤来配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理以自动管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：  
@@ -190,6 +177,6 @@ ms.locfileid: "79289625"
 |介绍如何使用 SQL Server 代理将管理任务自动化。|[自动执行管理任务（SQL Server 代理）](automated-administration-tasks-sql-server-agent.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- [外围应用配置器](../../relational-databases/security/surface-area-configuration.md)  
+ [外围应用配置](../../relational-databases/security/surface-area-configuration.md)  
   
   

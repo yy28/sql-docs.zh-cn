@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d4502a64a3822741c1928fcf6faee69d80d893d5
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112401"
 ---
 # <a name="wideworldimporters-database-catalog"></a>WideWorldImporters 数据库目录
@@ -31,7 +31,7 @@ WideWorldImporters 将架构用于不同目的，例如存储数据、定义用�
 
 |架构|说明|
 |-----------------------------|---------------------|
-|Application|应用程序范围内的用户、联系人和参数。 这还包含具有多个架构使用的数据的引用表|
+|应用程序|应用程序范围内的用户、联系人和参数。 这还包含具有多个架构使用的数据的引用表|
 |购买|从供应商处购买的库存项和有关供应商的详细信息。|  
 |Sales|零售客户的股票销售情况以及客户和销售人员的详细信息。 |  
 |Warehouse|库存物料库存和交易。|  

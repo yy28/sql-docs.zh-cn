@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 1146c612225c2f58dd501ce9cba658ca7ca6ba69
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112176"
 ---
 # <a name="install-the-analysis-services-ole-db-provider-on-sharepoint-servers"></a>在 SharePoint 服务器上安装 Analysis Services OLE DB 访问接口
@@ -22,23 +22,20 @@ ms.locfileid: "79112176"
   
  此数据访问接口包含在 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安装包 (spPowerPivot.msi) 中，但可能需要手动安装。 有两个原因您可能需要在 SharePoint 服务器上手动安装客户端库或数据访问接口。  
   
--   **启用向后兼容性**。 
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 工作簿在连接字符串中指定 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版本的 Analysis Services OLE DB 访问接口。 因此，计算机上必须存在此访问接口版本，请求才能成功。  
+-   **允许向后兼容**。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 工作簿在连接字符串中指定 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版本的 Analysis Services OLE DB 访问接口。 因此，计算机上必须存在此访问接口版本，请求才能成功。  
   
--   **在专用 Excel Services 实例上启用数据访问**。 如果 SharePoint 场包含的 Excel Services 位于未安装 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]的服务器上，则可使用 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 安装包安装访问接口的 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 版本和其他客户端连接组件。  
+-   **在专用 Excel Services 实例上允许数据访问**。 如果 SharePoint 场包含的 Excel Services 位于未安装 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]的服务器上，则可使用 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 安装包安装访问接口的 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 版本和其他客户端连接组件。  
   
     > [!NOTE]  
     >  这些方案并不相互冲突。 如果在包含运行 Excel Services 的应用程序服务器的场上承载多个工作簿版本而没有 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 实例，您需要在每个 Excel Services 计算机上同时安装数据访问接口的较旧版本和较新版本。  
   
   
-##  <a name="bkmk_vers"></a>支持 PowerPivot 数据访问的 OLE DB 提供程序的版本  
+##  <a name="versions-of-the-ole-db-provider-supporting-powerpivot-data-access"></a><a name="bkmk_vers"></a>支持 PowerPivot 数据访问的 OLE DB 提供程序的版本  
  SharePoint 场可能会包含 Analysis Services OLE DB 访问接口的多个版本，其中包括不支持 PowerPivot 数据访问的较早版本。  
   
  默认情况下，SharePoint 2010 安装 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本的访问接口。 虽然标识为 MSOLAP.4（与用于 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]的版本号相同），但此版本不能用于 PowerPivot 数据访问。 要确保连接成功，您必须拥有 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的访问接口。  
   
- 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之后的 OLE DB 访问接口版本包括对 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据结构的传输和连接支持。 
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿使用此访问接口的较新版本从场中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器请求查询处理。 若要获取更新后的版本，可以通过“SQL Server 功能包”页下载并安装它。  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之后的 OLE DB 访问接口版本包括对 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据结构的传输和连接支持。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿使用此访问接口的较新版本从场中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器请求查询处理。 若要获取更新后的版本，可以通过“SQL Server 功能包”页下载并安装它。  
   
  下表对有效版本进行了说明：  
   
@@ -49,16 +46,15 @@ ms.locfileid: "79112176"
 |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|在文件系统中为 MSOLAP120.dll<br /><br /> 在文件版本详细信息中为 12.0.20000 或更高版本|用于除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 模型以外的其他数据模型。|  
   
   
-##  <a name="bkmk_why"></a>为什么需要安装 OLE DB 提供程序  
+##  <a name="why-you-need-to-install-the-ole-db-provider"></a><a name="bkmk_why"></a>为什么需要安装 OLE DB 提供程序  
  有两种情况需要在场中的服务器上手动安装 OLE DB 访问接口。  
   
- **最常见的情况**是，在场中的文档库中[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]保存了较旧和较新版本的工作簿。 如果你的组织中的分析人员使用的是 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版本的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel，并已将这些工作簿保存到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安装，则较旧版本的工作簿将无法使用。 它的连接字符串将引用旧版本的访问接口，除非您安装该版本，否则不会在服务器上。 安装两个版本将可以对较旧版本和较新版本的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 中创建的 PowerPivot 工作簿启用数据访问。 
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 安装程序不会安装 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版本的访问接口，因此必须手动安装此版本（如果使用先前版本的工作簿）。  
+ **最常见的情形是** ：较新版本和较旧版本的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿均保存在场的文档库中。 如果你的组织中的分析人员使用的是 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版本的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel，并已将这些工作簿保存到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安装，则较旧版本的工作簿将无法使用。 它的连接字符串将引用旧版本的访问接口，除非您安装该版本，否则不会在服务器上。 安装两个版本将可以对较旧版本和较新版本的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 中创建的 PowerPivot 工作簿启用数据访问。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 安装程序不会安装 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版本的访问接口，因此必须手动安装此版本（如果使用先前版本的工作簿）。  
   
- **第二种情况**是： SharePoint 场中的某个服务器运行的是 Excel Services，而不[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]是。 在这种情况下，必须将运行 Excel Services 的应用程序服务器手动更新为使用访问接口的较新版本。 这对于连接到 PowerPivot for SharePoint 实例是必需的。 如果 Excel Services 使用较旧版本的访问接口，连接请求将失败。 请注意，必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序或 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安装包 (spPowerPivot.msi) 安装访问接口，才能确保安装支持 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 所需的所有组件。  
+ **第二种情形是** ：SharePoint 场中的某个服务器运行的是 Excel Services，而不是 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。 在这种情况下，必须将运行 Excel Services 的应用程序服务器手动更新为使用访问接口的较新版本。 这对于连接到 PowerPivot for SharePoint 实例是必需的。 如果 Excel Services 使用较旧版本的访问接口，连接请求将失败。 请注意，必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序或 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安装包 (spPowerPivot.msi) 安装访问接口，才能确保安装支持 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 所需的所有组件。  
   
   
-##  <a name="bkmk_sql11"></a>使用 SQL Server 安装程序在 Excel Services 服务器上安装 SQL Server 2012 OLE DB 提供程序  
+##  <a name="install-the-sql-server-2012-ole-db-provider-on-an-excel-services-server-by-using-sql-server-setup"></a><a name="bkmk_sql11"></a>使用 SQL Server 安装程序在 Excel Services 服务器上安装 SQL Server 2012 OLE DB 提供程序  
  使用以下指令将 OLE DB 访问接口和其他客户端连接组件添加到尚未安装它们的 SharePoint 服务器（例如运行 Excel Services 但在同一硬件上没有安装 PowerPivot for SharePoint 的应用程序服务器）。  
   
  使用这些指令安装当前的 Analysis Services OLE DB 访问接口并将 **Microsoft.AnalysisServices.Xmla.dll** 添加到全局程序集。  
@@ -110,7 +106,7 @@ ms.locfileid: "79112176"
 5.  在 Windows\assembly 文件夹中，验证 Microsoft.AnalysisServices.Xmla.dll 版本 11.0.0.0 已列出。  
   
   
-##  <a name="bkmk_install2012_from_sppowerpivot_msi"></a>使用 PowerPivot for SharePoint 安装包（Sppowerpivot.msi）安装 SQL Server 2012 OLE DB 提供程序  
+##  <a name="use-the-powerpivot-for-sharepoint-installation-package-sppowerpivotmsi-to-install-the-sql-server-2012-ole-db-provider"></a><a name="bkmk_install2012_from_sppowerpivot_msi"></a>使用 PowerPivot for SharePoint 安装包（Sppowerpivot.msi）安装 SQL Server 2012 OLE DB 提供程序  
  使用 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 安装包 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] (spPowerPivot.msi) **在 Excel Services 服务器上安装**OLE DB 访问接口。  
   
 #### <a name="download-the-msolap5-provider-from-the-sssql11sp1-feature-pack"></a>从 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 功能包下载 MSOLAP.5 访问接口。  
@@ -126,7 +122,7 @@ ms.locfileid: "79112176"
 5.  将 MSOLAP.5 注册为 SharePoint Excel Services 中的受信任数据访问接口。 有关详细信息，请参阅 [将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口](https://technet.microsoft.com/library/hh758436.aspx)。  
   
   
-##  <a name="bkmk_kj"></a>安装 SQL Server 2008 R2 OLE DB 提供程序以承载早期版本的工作簿  
+##  <a name="install-the-sql-server-2008-r2-ole-db-provider-to-host-earlier-version-workbooks"></a><a name="bkmk_kj"></a>安装 SQL Server 2008 R2 OLE DB 提供程序以承载早期版本的工作簿  
  使用以下说明来安装 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版本的 MSOLAP.4 访问接口并注册 Microsoft.AnalysisServices.ChannelTransport.dll 文件。 ChannelTransport 是 Analysis Services OLE DB 访问接口的子组件。 在使用 ChannelTransport 进行连接时， [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版本的访问接口读取注册表。 注册此文件是安装后步骤，仅对于 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 服务器上 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 访问接口处理的连接是必需的。  
   
 #### <a name="step-1-download-and-install-the-client-library"></a>步骤 1：下载并安装客户端库  
@@ -147,7 +143,7 @@ ms.locfileid: "79112176"
   
 3.  转至此文件夹 C:\Windows\assembly\GAC_MSIL\Microsoft.AnalysisServices.ChannelTransport\10.0.0.0__89845dcd8080cc91  
   
-4.  输入以下命令：`regasm microsoft.analysisservices.channeltransport.dll`  
+4.  输入以下命令： `regasm microsoft.analysisservices.channeltransport.dll`  
   
 5.  在手动安装 2008 R2 版本的访问接口的所有计算机上重复以前的步骤。  
   

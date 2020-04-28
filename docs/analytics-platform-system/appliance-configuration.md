@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 80fc899400be167badaae9d617d43a61e0d346b5
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289735"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>用于分析平台系统的设备配置清单
@@ -22,7 +22,7 @@ ms.locfileid: "79289735"
 > [!WARNING]  
 > 使用分析平台系统**Configuration Manager**是执行工具中可用任务的最佳方法，也是唯一受支持的方法。  
   
-## <a name="BeforeTasks"></a>开始之前  
+## <a name="before-you-begin"></a><a name="BeforeTasks"></a>开始之前  
   
 ### <a name="prerequisites"></a>先决条件  
   
@@ -44,7 +44,7 @@ ms.locfileid: "79289735"
   
     2.  从 PDW 控件节点的 "**开始**" 菜单启动**Configuration Manager** 。 Configuration Manager 的第一个屏幕显示由 IHV 创建的设备拓扑。 它是你的设备 SQL Server PDW 软件识别的硬件节点的列表。 你不需要更改 "设备拓扑" 屏幕上的任何设置。  
   
-## <a name="CMTasks"></a>执行 Configuration Manager 任务  
+## <a name="perform-configuration-manager-tasks"></a><a name="CMTasks"></a>执行 Configuration Manager 任务  
 SQL Server PDW**Configuration Manager** （PDWCM）是一种设备管理工具，SQL Server PDW 系统管理员使用该工具执行设备级别的操作并更改设备级别设置。 例如，使用 PDWCM 重置密码，设置时区，更改 IP 地址，配置 SSL 证书，通过防火墙启用远程访问，启动或停止设备，并设置即时文件初始化。  
   
 使用**Configuration Manager**执行以下配置任务。  
@@ -64,7 +64,7 @@ SQL Server PDW**Configuration Manager** （PDWCM）是一种设备管理工具�
 |使用 "**特权**" 对话框查看即时文件初始化选项|即时文件初始化是一项 SQL Server 功能，使数据文件操作能够更快地运行。 仅当已向网络服务帐户授予了 SE_MANAGE_VOLUME_NAME 权限时，才会在 SQL Server PDW 上启用它。 默认情况下，它处于关闭状态。<br /><br />有关详细信息，请参阅[即时文件初始化配置 &#40;分析平台系统&#41;](instant-file-initialization-configuration.md)。|  
 |从备份中还原 master 数据库|删除当前的**master**数据库，并将其替换为备份。 有关详细信息，请参阅[Restore Master Database &#40;Analytics Platform System&#41;](restore-the-master-database.md)。|  
   
-## <a name="AddTasks"></a>执行其他配置任务  
+## <a name="perform-additional-configuration-tasks"></a><a name="AddTasks"></a>执行其他配置任务  
 执行**Configuration Manager**任务后，请执行以下其他配置任务列表。 其中一些任务是可选的。  
   
 |配置任务|说明|  

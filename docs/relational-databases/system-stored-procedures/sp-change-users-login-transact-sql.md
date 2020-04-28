@@ -18,10 +18,10 @@ ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b0c847215d31bd2064467c3edbce42ba957c2e78
-ms.sourcegitcommit: f7af758b353b53ac3b596d79fd6e32ad7e1e61cf
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79448339"
 ---
 # <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login (Transact-SQL)
@@ -53,14 +53,14 @@ sp_change_users_login [ @Action = ] 'action'
 |值|说明|  
 |-----------|-----------------|  
 |**Auto_Fix**|将当前数据库的 sys.database_principals 系统目录视图中的用户项链接到同名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 如果不存在同名的登录名，将会创建一个。 检查**Auto_Fix**语句的结果，以确认确实进行了正确的链接。 避免在安全敏感情况下使用**Auto_Fix** 。<br /><br /> 如果使用**Auto_Fix**，则必须指定 "*用户*" 和 "*密码*" （如果登录名尚不存在）; 否则，必须指定 "*用户*"，但将忽略 "*密码*"。 *登录名*必须为 NULL。 *用户*必须是当前数据库中的有效用户。 不能将另一个用户映射到该登录名。|  
-|**Report**|列出当前数据库中未链接到任何登录名的用户以及相应的安全标识符 (SID)。 *用户*、*登录名*和*密码*必须为 NULL 或未指定。<br /><br /> 若要使用系统表将报表选项替换为查询，请将 sys.databases 中的条目与**database_principals sys.databases**中的条目进行比较**server_prinicpals** 。|  
+|**报告**|列出当前数据库中未链接到任何登录名的用户以及相应的安全标识符 (SID)。 *用户*、*登录名*和*密码*必须为 NULL 或未指定。<br /><br /> 若要使用系统表将报表选项替换为查询，请将 sys.databases 中的条目与**database_principals sys.databases**中的条目进行比较**server_prinicpals** 。|  
 |**Update_One**|将当前数据库中的指定*用户*链接到现有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *登录名*。 必须指定*用户*和*登录名*。 *密码*必须为 NULL 或未指定。|  
   
  [ @UserNamePattern= ]"*用户*"  
  当前数据库中的用户名。 *user*的值为**sysname**，默认值为 NULL。  
   
  [ @LoginName= ]"*login*"  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名。 *login*的值为**sysname**，默认值为 NULL。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名。 login 的数据类型为 sysname，默认值为 NULL******。  
   
  [ @Password= ]'*password*'  
  分配给通过指定**Auto_Fix**创建的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]新登录名的密码。 如果已存在匹配的登录名，则会映射用户和登录名，并忽略*密码*。 如果不存在匹配的登录名，sp_change_users_login 将创建新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的登录名，并为新的登录名分配*密码*作为密码。 *密码*为**sysname**，且不能为 NULL。  
@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="c-automatically-mapping-a-user-to-a-login-creating-a-new-login-if-it-is-required"></a>C. 自动将用户映射到登录名（必要时新建一个登录名）  
- 以下示例显示如何使用 `Auto_Fix` 将现有用户映射到同名的登录名，以及如何在不存在登录名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的情况下，创建密码为 `Mary` 的 `B3r12-3x$098f6` 登录名 `Mary`。  
+ 以下示例显示如何使用 `Auto_Fix` 将现有用户映射到同名的登录名，以及如何在不存在登录名 `Mary` 的情况下，创建密码为 `B3r12-3x$098f6` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `Mary`。  
   
 ```  
 USE AdventureWorks2012;  
@@ -124,10 +124,10 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [安全存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [CREATE LOGIN &#40;Transact-sql&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_adduser &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
  [sp_helplogins &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
- [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
   
   

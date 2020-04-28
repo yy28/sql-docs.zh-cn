@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 53c14ed48d2b95988b1d7d794e4ea711be659dd1
-ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79525458"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>了解多维模型的 Power View
@@ -51,11 +51,11 @@ ms.locfileid: "79525458"
 ## <a name="multidimensional-to-tabular-object-mapping"></a>多维到表格对象映射  
  Analysis Services 提供多维模型的表格模型元数据表示形式。 多维模型中的对象表示为 Power View 和 CSDL out（带 BI 注释）中的表格对象。  
   
- **对象映射摘要**  
+ **对象映射汇总**  
   
 |多维对象|表格对象|  
 |-----------------------------|--------------------|  
-|Cube|模型|  
+|多维数据集|型号|  
 |多维数据集维度|表|  
 |维度属性（键、名称）|列|  
 |度量值组|表|  
@@ -82,26 +82,24 @@ ms.locfileid: "79525458"
   
  为了帮助简化更复杂的多维模型，模型作者可以在多维数据集中定义要位于某个显示文件夹内的一组度量值或 KPI。 Power View 可以显示显示文件夹和其中的度量值以及 KPI。  
   
- **度量值组中的度量值和 Kpi**  
+ **度量值组中的度量值和 KPI**  
   
  ![Power View 字段列表中的度量组](../media/daxmd-fieldlist-group.gif "Power View 字段列表中的度量组")  
   
 ### <a name="measures-as-variants"></a>作为变体的度量值  
  多维模型中的度量值是变体。 这意味着度量值不强类型化，可以具有不同的数据类型。 例如，在下图中，默认情况下，财务报告表中的金额度量值为 Currency 数据类型，但对于 "统计帐户" （字符串数据类型），还具有字符串值 "NA"。 Power View 识别某些作为变体的度量值并在不同可视化对象中显示正确的值和格式。  
   
- **度量值作为变量**  
+ **作为变体的度量值**  
   
- ![Power View 中的不可聚合的层次结构](../media/daxmd-nonaggrattrib.gif "Power View 中不可聚合的层次结构")  
+ ![Power View 中不可聚合的层次结构](../media/daxmd-nonaggrattrib.gif "Power View 中不可聚合的层次结构")  
   
 ### <a name="implicit-measures"></a>隐式度量值  
- 
-  *
-  * 表格模型允许用户创建“隐式”度量值，如对字段的计数、求和或计算平均值。 对于多维模型，因为维度属性数据以不同方式存储，查询隐式度量值可能需要很长时间。 因此，在 Power View 中不提供隐式度量值。  
+ ** 表格模型允许用户创建“隐式”度量值，如对字段的计数、求和或计算平均值。 对于多维模型，因为维度属性数据以不同方式存储，查询隐式度量值可能需要很长时间。 因此，在 Power View 中不提供隐式度量值。  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>维度、属性和层次结构  
  多维数据集维度显示为表格元数据中的表。 在 Power View 字段列表中，维度属性在显示文件夹中显示为列。  其 AttributeHierarchyEnabled 属性设置为 false（例如 Customer 维度中的 Birth Date 属性）或 AttributeHierarchyVisible 属性设置为 false 的维度属性将不显示在 Power View 字段列表中。 多级层次结构或用户层次结构（例如 Customer 维度中的 Customer Geography）显示为 Power View 字段列表中的层次结构。 维度属性的隐藏 UnknownMember 在 DAX 查询和 Power View 中显示。  
   
- **SQL Server Data Tools （SSDT）和 Power View 字段列表中的维度、属性和层次结构**  
+ **SQL Server Data Tools (SSDT) 和 Power View 字段列表中的维度、属性和层次结构**  
   
  ![SSDT 以及 Power View 字段列表中的维度](../media/daxmd-ssdt-dimensions.gif "SSDT 以及 Power View 字段列表中的维度")  
   
@@ -125,7 +123,7 @@ ms.locfileid: "79525458"
   
  下图显示的是一个多维数据集的 Power View 报表，其中包含 Date 维度中维度属性 "会计日期计算" 上的时间智能计算成员。  
   
- **包含计算成员的 Power View 报表**  
+ **具有计算成员的 Power View 报表**  
   
  ![Power View 中的计算成员](../media/daxmd-calcmembersinpowerview.gif "Power View 中的计算成员")  
   
@@ -140,11 +138,11 @@ ms.locfileid: "79525458"
 ### <a name="non-aggregatable-attributeshierarchies"></a>不可聚合的属性/层次结构  
  在多维模型中，维度的属性可能将 IsAggregatable 属性设置为 false。 这意味着模型作者已指定当客户端应用程序查询数据时，不应聚合层次结构（属性或多个级别）上的数据。 在 Power View 中，此维度属性显示为无法计算小计的列。 在下图中，您可以看到一个不可聚合的层次结构的示例：Accounts。 Accounts 父子层次结构的最高级别是不可聚合的，而其他级别则可以聚合。 在 Accounts 层次结构的矩阵可视化对象（前两个级别）中，您看到 Account Level 02 的小计但是看不到最高级别 (Account Level 01) 的小计。  
   
- **Power View 中的不可聚合的层次结构**  
+ **Power View 中不可聚合的层次结构**  
   
- ![Power View 中的不可聚合的层次结构](../media/daxmd-nonaggrattrib.gif "Power View 中不可聚合的层次结构")  
+ ![Power View 中不可聚合的层次结构](../media/daxmd-nonaggrattrib.gif "Power View 中不可聚合的层次结构")  
   
-## <a name="images"></a>映像  
+## <a name="images"></a>图像  
  Power View 可呈现图像。 在多维模型中，您向 Power View 提供图像的方式之一是公开图像的包含 URL（统一资源定位符）的列。 在此版本中，Analysis Services 支持将维度属性标记为类型 ImageURL。 然后通过表格元数据将此数据类型提供给 Power View。 Power View 然后可以下载并在可视化对象内显示 URL 中指定的图像。  
   
  **SSDT 中的 ImageURL 维度属性类型**  
@@ -172,20 +170,18 @@ ms.locfileid: "79525458"
  有关详细信息，请参阅 [Create a Report Data Source](create-a-report-data-source.md)。  
   
 ## <a name="power-view-pinned-filters"></a>Power View 固定的筛选器  
- Power View 报表可以包含多个视图。 
-  *
-  * 在此版本中，用于表格模型和多维模型的“固定筛选器”功能可创建适用于报表中所有视图的筛选器。 下图显示视图筛选器的“固定筛选器”切换按钮。 默认情况下，取消固定视图筛选器，使之仅适用于该视图。 固定视图筛选器会使筛选器适用于所有视图，取消固定它则将该筛选器从其他视图中删除。  
+ Power View 报表可以包含多个视图。 ** 在此版本中，用于表格模型和多维模型的“固定筛选器”功能可创建适用于报表中所有视图的筛选器。 下图显示视图筛选器的“固定筛选器”切换按钮。 默认情况下，取消固定视图筛选器，使之仅适用于该视图。 固定视图筛选器会使筛选器适用于所有视图，取消固定它则将该筛选器从其他视图中删除。  
   
- **固定筛选器**  
+ **固定的筛选器**  
   
  ![固定筛选器](../media/daxmd-pinnedfilterinpowerview.gif "固定筛选器")  
   
 ## <a name="unsupported-features"></a>不支持的功能  
  **Excel 2013 中的 Power View** -不支持连接到多维模型的报表和创建报表。 Power View for Multidimensional Models 仅支持基于浏览器的 Power View 客户端。  
   
- **操作**-在 Power View 报表或针对多维模型的 DAX 查询中不受支持。  
+ **操作** - 在 Power View 报表或针对多维模型的 DAX 查询中不受支持。  
   
- **命名集**-在多维模型中，在 Power View 或针对多维模型的 DAX 查询中不受支持。  
+ **已命名的集** - 在多维模型中，在 Power View 或针对多维模型的 DAX 查询中不支持已命名的集。  
   
 > [!NOTE]  
 >  不支持的操作和已命名的集不阻止用户使用 Power View 连接到多维模型并利用它。  
@@ -221,7 +217,7 @@ ms.locfileid: "79525458"
   
  DISCOVER_CSDL_METADATA 请求具有以下限制：  
   
-|名称|必选|说明|  
+|名称|必需|说明|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|是|目录\数据库名称。|  
 |PERSPECTIVE_NAME|是（如果多维数据集包含多个透视）。 如果只有一个多维数据集或有一个默认透视，则为可选的。|多维数据库中的多维数据集名称或透视名称。|  
@@ -236,5 +232,5 @@ ms.locfileid: "79525458"
   
  [了解 Power View 中的多维模型对象](https://office.microsoft.com/excel-help/understanding-multidimensional-model-objects-in-power-view-HA104018589.aspx)  
   
- [使用 Power View 浏览艾德作品多维模型](https://office.microsoft.com/excel-help/explore-the-adventure-works-multidimensional-model-by-using-power-view-HA104046830.aspx)  
+ [通过使用 Power View 了解 Adventure Works 多维模型](https://office.microsoft.com/excel-help/explore-the-adventure-works-multidimensional-model-by-using-power-view-HA104046830.aspx)  
   
