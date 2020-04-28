@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a15f6735ef0ef79b7eb953445c926f60f6bfb12e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176083"
 ---
 # <a name="tutorial-sql-server-data-files-in-azure-storage-service"></a>教程：Azure 存储服务中的 SQL Server 数据文件
@@ -22,7 +22,7 @@ ms.locfileid: "70176083"
   
  Azure Blob 存储服务 SQL Server 集成支持是一种 SQL Server 2014 增强。 有关使用此功能的功能和优势的概述，请参阅[SQL Server Azure 中的数据文件](databases/sql-server-data-files-in-microsoft-azure.md)。  
   
-## <a name="what-you-will-learn"></a>要学习的知识  
+## <a name="what-you-will-learn"></a>学习内容  
  本教程介绍了如何在 Azure 存储服务中将 SQL Server 的数据文件存储在多个课程中。 每一课都以一个特定任务为重点。 首先，你将学习如何在 Azure 中创建存储帐户和容器。 然后，你将了解如何创建 SQL Server 凭据，以便能够将 SQL Server 与 Azure 存储集成。 然后，将直接在 Azure 存储中创建数据库。 另外，此教程还将演示加密、迁移以及备份和还原方案。  
   
  本教程分为 9 课：  

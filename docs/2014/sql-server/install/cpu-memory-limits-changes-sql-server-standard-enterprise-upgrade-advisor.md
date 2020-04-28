@@ -11,26 +11,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 6564a507b01e45e9808f2efbce79c4b3d07b0680
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952573"
 ---
 # <a name="changes-to-cpu-and-memory-limits-for-sql-server-standard-and-enterprise-upgrade-advisor"></a>对 SQL Server Standard 和 Enterprise 的 CPU 和内存限制的更改（升级顾问）
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard 和 Enterprise 支持最多 64 GB 的系统内存。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]本机模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式。|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式。|  
   
 ## <a name="component"></a>组件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ### <a name="description"></a>说明  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 版支持 128 GB 的系统内存，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 版支持操作系统允许的最大值。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 版支持 128 GB 的系统内存，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 版支持操作系统允许的最大值。  
   
 > [!NOTE]  
 >  您可能需要重新配置您的当前系统设置，以便顺应新的限制。  

@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bc152b8241b775f9fd686f8a31363cb4fca39de4
-ms.sourcegitcommit: a17245869c2d3df97ec8cf083608f754f4b2f40f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874868"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
@@ -36,24 +36,22 @@ ms.locfileid: "70874868"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|唯一语言 ID。|  
-|dateformat|**nchar （3）**|日期顺序，如 DMY。|  
+|dateformat|**nchar(3)**|日期顺序，如 DMY。|  
 |datefirst|**tinyint**|每周的第一天：1 代表星期一，2 代表星期二，依此类推，直到 7 代表星期日。|  
 |升级|**int**|预留给系统使用。|  
 |name|**sysname**|官方语言名称，例如，结算。|  
 |alias|**sysname**|代替语言名称，如 French。|  
-|months|**nvarchar （372）**|以逗号分隔的月份名全称列表，按一月到十二月的顺序排列，每个名称最多可有 20 个字符。|  
-|shortmonths|**nvarchar （132）**|以逗号分隔的月份名简称列表，按一月到十二月的顺序排列，每个名称最多可有 9 个字符。|  
-|days|**nvarchar （217）**|以逗号分隔的星期名称，按星期一到星期日的顺序排列，每个名称最多可有 30 个字符。|  
+|months|**nvarchar(372)**|以逗号分隔的月份名全称列表，按一月到十二月的顺序排列，每个名称最多可有 20 个字符。|  
+|shortmonths|**nvarchar(132)**|以逗号分隔的月份名简称列表，按一月到十二月的顺序排列，每个名称最多可有 9 个字符。|  
+| days|**nvarchar(217)**|以逗号分隔的星期名称，按星期一到星期日的顺序排列，每个名称最多可有 30 个字符。|  
 |lcid|**int**|语言的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 区域设置 ID。|  
-|msglangid|**smallint**|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]消息组 ID。|  
+|msglangid|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]消息组 ID。|  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]包含下列已安装的语言。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]包含下列已安装的语言。  
   
 |用英语表示的名称|Windows LCID|[!INCLUDE[ssDE](../../includes/ssde-md.md)]消息组 ID|  
 |---------------------|------------------|-----------------------------------------|  
-|英语|1033|1033|  
+|英语|2052|2052|  
 |德语|1031|1031|  
 |法语|1036|1036|  
 |日语|1041|1041|  
@@ -76,7 +74,7 @@ ms.locfileid: "70874868"
 |保加利亚语|1026|1026|  
 |俄语|1049|1049|  
 |土耳其语|1055|1055|  
-|英语（英国）|2057|1033|  
+|英语（英国）|2057|2052|  
 |爱沙尼亚语|1061|1061|  
 |拉脱维亚语|1062|1062|  
 |立陶宛语|1063|1063|  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 0eff6dca788744b93d2d6d4a0a7175764e263f71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952537"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>执行帐户（SSRS 本机模式）
@@ -43,10 +43,10 @@ ms.locfileid: "71952537"
  **指定执行帐户**  
  选择此选项可指定一个帐户。  
   
- **账号**  
+ **帐户**  
  输入一个 Windows 域用户帐户。 使用以下格式： * \<域>\\<用户帐户\>*。  
   
- **权限**  
+ **密码**  
  键入密码。  
   
  **确认密码**  
@@ -54,7 +54,7 @@ ms.locfileid: "71952537"
   
 ## <a name="see-also"></a>另请参阅  
  [Reporting Services 配置管理器的 F1 帮助主题 &#40;SSRS 本机模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [将加密的报表服务器数据存储 &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [存储加密的 Report Server 数据（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [配置无人参与的执行帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
   
   

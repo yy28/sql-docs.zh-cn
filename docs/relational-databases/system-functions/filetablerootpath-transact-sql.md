@@ -18,10 +18,10 @@ ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 10b4aa19b86530213f852ea90f959a1d7ef6c74f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72251239"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
@@ -65,7 +65,7 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
   
  有关详细信息，请参阅 [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)。  
   
-## <a name="best-practices"></a>最佳实践  
+## <a name="best-practices"></a>最佳方案  
  若要使代码和应用程序独立于当前的计算机和数据库，应避免编写依赖于绝对文件路径的代码。 相反，在运行时获取文件的完整路径，方法是将**FileTableRootPath**和**GetFileNamespacePath**函数一起使用，如下面的示例中所示。 默认情况下， **GetFileNamespacePath** 函数返回数据库根路径下的文件的相对路径。  
   
 ```sql  

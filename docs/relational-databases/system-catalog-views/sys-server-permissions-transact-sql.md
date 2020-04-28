@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cbfa717aa70bb057734a285e2b6d84fdc6f4961a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71163931"
 ---
 # <a name="sysserver_permissions-transact-sql"></a>sys.server_permissions (Transact-SQL)
@@ -34,16 +34,16 @@ ms.locfileid: "71163931"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**班级**|**tinyint**|标识存在权限的对象的类。<br /><br /> 100 = 服务器<br /><br /> 101 = 服务器主体<br /><br /> 105 = 端点|  
-|**class_desc**|**nvarchar （60）**|权限所针对的类的说明。 以下值之一：<br /><br /> **服务**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
+|**class**|**tinyint**|标识存在权限的对象的类。<br /><br /> 100 = 服务器<br /><br /> 101 = 服务器主体<br /><br /> 105 = 端点|  
+|**class_desc**|**nvarchar(60)**|权限所针对的类的说明。 以下值之一：<br /><br /> **服务**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
 |**major_id**|**int**|存在权限的安全对象的 ID，根据类解释。 通常情况下，这只是一种应用于类表示的内容的 ID。 非标准的解释如下：<br /><br /> 100 = 始终0|  
 |**minor_id**|**int**|存在权限的对象的辅助 ID，根据类进行解释。|  
 |**grantee_principal_id**|**int**|向其授予权限的服务器主体 ID。|  
 |**grantor_principal_id**|**int**|这些权限的授权者的服务器主体 ID。|  
-|type |**char （4）**|服务器权限类型。 有关权限类型的列表，请参阅下一个表。|  
+|**type**|**char （4）**|服务器权限类型。 有关权限类型的列表，请参阅下一个表。|  
 |**permission_name**|**nvarchar(128)**|权限名称。|  
-|**状态**|**char （1）**|权限状态：<br /><br /> D = 拒绝<br /><br /> R = 撤消<br /><br /> G = 授予<br /><br /> W = Grant With Grant 选项|  
-|**state_desc**|**nvarchar （60）**|权限状态的说明：<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
+|**state**|**char （1）**|权限状态：<br /><br /> D = 拒绝<br /><br /> R = 撤消<br /><br /> G = 授予<br /><br /> W = Grant With Grant 选项|  
+|**state_desc**|**nvarchar(60)**|权限状态的说明：<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
   
 |权限类型|权限名称|适用于安全对象|  
 |---------------------|---------------------|--------------------------|  
@@ -78,7 +78,7 @@ ms.locfileid: "71163931"
 |CRTE|CREATE TRACE EVENT NOTIFICATION|SERVER|
 |IAL|IMPERSONATE ANY LOGIN|SERVER|  
 |IM|IMPERSONATE|LOGIN|  
-|SHDN|关机|SERVER|
+|SHDN|SHUTDOWN|SERVER|
 |SUS|SELECT ALL USER SECURABLES|SERVER|
 |TO|TAKE OWNERSHIP|ENDPOINT|  
 |VW|VIEW DEFINITION|ENDPOINT、LOGIN|  
@@ -110,6 +110,6 @@ JOIN sys.server_permissions AS pe
 ## <a name="see-also"></a>另请参阅  
  [Transact-sql&#41;&#40;安全目录视图](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [安全对象](../../relational-databases/security/securables.md)   
- [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [权限 &#40;数据库引擎&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [权限层次结构（数据库引擎）](../../relational-databases/security/permissions-hierarchy-database-engine.md)  

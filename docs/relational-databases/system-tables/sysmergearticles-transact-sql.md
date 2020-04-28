@@ -18,10 +18,10 @@ ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d712f462ebe504df20ded93d6a9730ce31e4d0db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72251947"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-SQL)
@@ -31,8 +31,8 @@ ms.locfileid: "72251947"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**路径名**|**sysname**|项目的名称。|  
-|type |**tinyint**|指示项目类型，可以为下列类型之一：<br /><br /> **10** = 表。<br /><br /> **32** = 存储过程（仅限架构）。<br /><br /> **64** = 视图或索引视图（仅限架构）。<br /><br /> **128** = 用户定义的函数（仅限架构）。<br /><br /> **160** = 同义词（仅限架构）。|  
+|name |**sysname**|项目的名称。|  
+|**type**|**tinyint**|指示项目类型，可以为下列类型之一：<br /><br /> **10** = 表。<br /><br /> **32** = 存储过程（仅限架构）。<br /><br /> **64** = 视图或索引视图（仅限架构）。<br /><br /> **128** = 用户定义的函数（仅限架构）。<br /><br /> **160** = 同义词（仅限架构）。|  
 |**objid**|**int**|对象标识符。|  
 |**sync_objid**|**int**|表示同步数据集的视图的对象 ID。|  
 |**view_type**|**tinyint**|视图类型：<br /><br /> **0** = 不是视图;使用所有基对象。<br /><br /> **1** = 永久视图。<br /><br /> **2** = 临时视图。|  
@@ -42,7 +42,7 @@ ms.locfileid: "72251947"
 |**pubid**|**uniqueidentifier**|当前项目所属发布的 ID。|  
 |**昵称**|**int**|项目标识的别名映射。|  
 |**column_tracking**|**int**|指示是否为项目实现列跟踪。|  
-|**状态值**|**tinyint**|指示项目的状态，可以为下列状态之一：<br /><br /> **1** = 未同步-用于发布表的初始处理脚本将在下一次运行快照代理时运行。<br /><br /> **2** = 活动-已运行发布表的初始处理脚本。<br /><br /> **5** = 要添加 New_inactive。<br /><br /> **6** = New_active。|  
+|**status**|**tinyint**|指示项目的状态，可以为下列状态之一：<br /><br /> **1** = 未同步-用于发布表的初始处理脚本将在下一次运行快照代理时运行。<br /><br /> **2** = 活动-已运行发布表的初始处理脚本。<br /><br /> **5** = 要添加 New_inactive。<br /><br /> **6** = New_active。|  
 |**conflict_table**|**sysname**|包含当前项目冲突记录的本地表的名称。 该表仅用于提供信息，其内容可以由自定义冲突解决例程修改或删除，或直接由系统管理员修改或删除。|  
 |**creation_script**|**nvarchar(255)**|此项目的创建脚本。|  
 |**conflict_script**|**nvarchar(255)**|此项目的冲突脚本。|  
@@ -57,7 +57,7 @@ ms.locfileid: "72251947"
 |**destination_object**|**sysname**|在订阅服务器上创建的表的名称。|  
 |**destination_owner**|**sysname**|目标对象的所有者的名称。|  
 |**resolver_clsid**|**nvarchar(50)**|自定义冲突解决程序的 ID。|  
-|**subset_filterclause**|**nvarchar （1000）**|此项目的筛选子句。|  
+|**subset_filterclause**|**nvarchar(1000)**|此项目的筛选子句。|  
 |**missing_col_count**|**int**|缺少的列数。|  
 |**missing_cols**|**varbinary(128)**|缺少的列的位图。|  
 |**excluded_cols**|**varbinary(128)**|当项目发送到订阅服务器时，从项目中排除的列的位图。|  
@@ -80,7 +80,7 @@ ms.locfileid: "72251947"
 |**upload_options**|**tinyint**|定义对具有客户端订阅的订阅服务器上所进行更新的限制，可以为下列值之一：<br /><br /> **0** = 对于包含客户端订阅的订阅服务器上所做的更新没有限制;所有更改都将上载到发布服务器。<br /><br /> **1** = 允许在具有客户端订阅的订阅服务器上进行更改，但不会将它们上载到发布服务器。<br /><br /> **2** = 不允许在具有客户端订阅的订阅服务器上进行更改。<br /><br /> 有关详细信息，请参阅[使用仅下载项目优化合并复制性能](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)。|  
 |**published_in_tran_pub**|**bit**|指示合并发布中的项目也将在事务发布中发布。<br /><br /> **0** = 项目未在事务项目中发布。<br /><br /> **1** = 本文还在事务项目中发布。|  
 |**轻质**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**procname_postfix**|**nchar （32）**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**procname_postfix**|**nchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**well_partitioned_lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**before_upd_view_objid**|**int**|内容待定。|  
 |**delete_tracking**|**bit**|指示是否复制删除。<br /><br /> **0** = 不复制删除<br /><br /> **1** = 复制删除，这是合并复制的默认行为。<br /><br /> 如果*delete_tracking*的值为**0**，则必须在发布服务器上手动删除订阅服务器上删除的行，并且必须在订阅服务器上手动删除在发布服务器上删除的行。<br /><br /> 注意：值为**0**会导致非收敛。|  
@@ -96,6 +96,6 @@ ms.locfileid: "72251947"
  [Transact-sql&#41;&#40;复制视图](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
- [sp_helpmergearticle &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)  
+ [sp_helpmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)  
   
   

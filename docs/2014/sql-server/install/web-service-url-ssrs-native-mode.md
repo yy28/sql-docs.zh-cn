@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 01e5393ae638ddcecd04211a0a7e01e8116346a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952362"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>Web 服务 URL（SSRS 本机模式）
@@ -41,17 +41,17 @@ ms.locfileid: "71952362"
  **IP 地址**  
  标识 TCP/IP 网络上的报表服务器计算机。 有效值包括：  
   
--   "**所有已分配**的" 指定分配给计算机的任何 IP 地址都可以在指向 Report Server 应用程序的 URL 中使用。 此值还包含友好主机名（如计算机名），域名服务器可将该主机名解析为分配给该计算机的 IP 地址。 此为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 的默认值。  
+-   **“所有已分配的”** 指定分配给计算机的任何 IP 地址均可用在指向报表服务器应用程序的 URL 中。 此值还包含友好主机名（如计算机名），域名服务器可将该主机名解析为分配给该计算机的 IP 地址。 此为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 的默认值。  
   
--   "**所有未分配**的" 指定 Report Server 将接受与 IP 地址或主机名不完全匹配的任何请求。 如果其他 Web 应用程序已在使用此值，请不要再使用它。 如果仍使用此值，将中断其他应用程序的服务。  
+-   **“所有未分配的”** 指定报表服务器将接受任何未完全匹配 IP 地址或主机名的请求。 如果其他 Web 应用程序已在使用此值，请不要再使用它。 如果仍使用此值，将中断其他应用程序的服务。  
   
--   **127.0.0.1**用于访问本地主机。 它支持对报表服务器计算机进行本地管理。 如果仅选择此值，则只有在本地登录到报表服务器计算机的用户可以访问应用程序。  
+-   **127.0.0.1** 用于访问本地主机。 它支持对报表服务器计算机进行本地管理。 如果仅选择此值，则只有在本地登录到报表服务器计算机的用户可以访问应用程序。  
   
--   *Nnn* nnn 是计算机上网络适配器卡的 IPv4 地址。 如果你的网络使用 IPv6 寻址，则 IP 地址将是 8 4 字节字段的128位值，类似于以下格式： \<标头>：*nnnn： nnnn： nnnn： nnnn*  
+-   *Nnn.nnn.nnn.nnn* 是计算机网络适配器的 IPv4 地址。 如果你的网络使用 IPv6 寻址，则 IP 地址将是 8 4 字节字段的128位值，类似于以下格式： \<标头>：*nnnn： nnnn： nnnn： nnnn*  
   
      如果有多个网络适配器，您将看到每个网络适配器都有一个 IP 地址。 如果仅选择此值，它将限制对该 IP 地址（以及域名服务器映射到该地址的任何主机名）的应用程序访问。 您不能使用 localhost 访问报表服务器，也不能使用安装在报表服务器计算机上的其他网络适配器的 IP 地址。  
   
- **“TCP 动态端口”**  
+ **TCP 端口**  
  指定报表服务器为包含报表服务器虚拟目录名称的 URL 监视 HTTP 请求的端口。  
   
  **SSL 证书**  
@@ -62,7 +62,7 @@ ms.locfileid: "71952362"
  **SSL 端口**  
  为 SSL 连接指定端口。  
   
- **Url**  
+ **URL**  
  显示为当前报表服务器实例定义的 URL。  
   
  **高级**  

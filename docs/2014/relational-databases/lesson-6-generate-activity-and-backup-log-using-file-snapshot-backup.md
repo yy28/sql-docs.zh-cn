@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 25ae3cee8e08292297449914bfb6e40dfc1b4b3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175462"
 ---
 # <a name="lesson-7-move-your-data-files-to-azure-storage"></a>第 7 课：将数据文件移动到 Azure 存储
@@ -76,7 +76,7 @@ ms.locfileid: "70175462"
   
 5.  现在，需要使用以下方法之一将数据文件复制到 Azure 存储： [AzCopy 工具](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx)、 [Put 页面](https://msdn.microsoft.com/library/azure/ee691975.aspx)、[存储客户端库参考](https://msdn.microsoft.com/library/azure/dn261237.aspx)或第三方存储资源管理器工具。  
   
-     **重要提示：** 使用此新增强功能时，请始终确保创建的是页 blob 而不是块 blob。  
+     **重要提示：** 使用此新增强功能时，请始终确保创建的是页 Blob 而非块 Blob。  
   
 6.  然后，将数据库设为联机状态。  
   

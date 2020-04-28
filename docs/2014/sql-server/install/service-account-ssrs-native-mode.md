@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: db98f9806f48699af996a33675138150803e8812
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952391"
 ---
 # <a name="service-account-ssrs-native-mode"></a>服务帐户（SSRS 本机模式）
@@ -55,11 +55,11 @@ ms.locfileid: "71952391"
 |帐户|说明|  
 |-------------|-----------------|  
 |域用户帐户|如果您有一个拥有报表服务器操作所需的最小权限的 Windows 域用户帐户，则应使用此帐户。<br /><br /> 之所以建议使用域帐户，是因为这种帐户可以将报表服务器服务与其他应用程序隔离开。 使用共享帐户（如 Network Service）运行多个应用程序会增加恶意用户控制报表服务器的风险，因为在这种情况下，任何一个应用程序的安全漏洞会很容易扩散到使用同一帐户运行的所有其他应用程序。<br /><br /> 如果是为受约束委托或 SharePoint 集成模式（包含的 SharePoint 2010 产品要求使用域用户帐户而非内置的计算机帐户）配置报表服务器，则必须使用域用户帐户。<br /><br /> 请注意，如果您使用域用户帐户，并且您的组织实施了密码过期策略，则您必须定期更改密码。 您可能还需要使用此用户帐户注册服务。 有关详细信息，请参阅[为报表服务器注册服务主体名称 (SPN)](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)。<br /><br /> 避免使用本地 Windows 用户帐户。 本地帐户通常没有足够的权限访问其他计算机上的资源。 有关如何使用本地帐户限制报表服务器功能的详细信息，请参阅本主题中的 [使用本地帐户的注意事项](#localaccounts) 。|  
-|**网络服务**|**Network Service**是一种具有网络登录权限的内置最低特权帐户。 如果没有可用的域用户帐户，或者要避免因密码过期策略而可能导致的任何服务中断，建议使用此帐户。<br /><br /> 如果您选择 **Network Service**，请尝试将使用同一帐户运行的其他服务的数量降到最低。 对于使用同一帐户运行的多个应用程序，如果一个应用程序出现安全漏洞，则所有其他应用程序的安全都会受到影响。|  
-|**本地服务**|**本地服务**是一个内置帐户，与经过身份验证的本地 Windows 用户帐户类似。 以 **“Local Service”** 帐户运行的服务将以一个没有凭据的 Null 会话形式访问网络资源。 此帐户不适合于 Intranet 部署方案。因为在此部署方案下，报表服务器必须连接至远程报表服务器数据库或网络域控制器，以在打开报表或处理订阅之前对用户进行身份验证。|  
-|**本地系统**|**Local System**是一个具有高特权的帐户，运行 Report Server 时不需要此帐户。 请勿将此帐户用于报表服务器的安装。 此时应选择域帐户或 **Network Service** 。|  
+|**网络服务**|**Network Service** 是一个拥有网络登录权限的内置最低特权帐户。 如果没有可用的域用户帐户，或者要避免因密码过期策略而可能导致的任何服务中断，建议使用此帐户。<br /><br /> 如果您选择 **Network Service**，请尝试将使用同一帐户运行的其他服务的数量降到最低。 对于使用同一帐户运行的多个应用程序，如果一个应用程序出现安全漏洞，则所有其他应用程序的安全都会受到影响。|  
+|**本地服务**|**Local Service** 是一个与经过身份验证的本地 Windows 用户帐户类似的内置帐户。 以 **“Local Service”** 帐户运行的服务将以一个没有凭据的 Null 会话形式访问网络资源。 此帐户不适合于 Intranet 部署方案。因为在此部署方案下，报表服务器必须连接至远程报表服务器数据库或网络域控制器，以在打开报表或处理订阅之前对用户进行身份验证。|  
+|**本地系统**|**Local System** 是一个高特权帐户，运行报表服务器时不需要此帐户。 请勿将此帐户用于报表服务器的安装。 此时应选择域帐户或 **Network Service** 。|  
   
-##  <a name="localaccounts"></a>使用本地帐户的注意事项  
+##  <a name="considerations-for-using-local-accounts"></a><a name="localaccounts"></a>使用本地帐户的注意事项  
  使用本地帐户的主要注意事项是报表服务器是否需要访问远程数据库服务器、邮件服务器和域控制器。 如果将报表服务器配置为作为本地 Windows 用户帐户、Local Service 或 Local System 运行，则必须考虑如何设置其他配置设置以及订阅创建和传递方面的注意事项：  
   
 -   如果使用本地帐户运行服务，则以后在配置远程报表服务器数据库的连接时，选项将受到限制。 具体来说，如果您使用的是远程报表服务器数据库，则必须将连接配置为使用有权登录到远程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的域用户帐户或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库用户。  
@@ -72,7 +72,7 @@ ms.locfileid: "71952391"
   
 ## <a name="see-also"></a>另请参阅  
  [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [配置服务帐户（SSRS 配置管理器）](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
+ [&#40;SSRS Configuration Manager 配置服务帐户&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
  [Reporting Services 配置管理器的 F1 帮助主题 &#40;SSRS 本机模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
   
   

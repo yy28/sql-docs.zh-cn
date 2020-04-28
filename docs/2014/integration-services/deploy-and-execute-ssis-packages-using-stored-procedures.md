@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8cc6c9a2961696512c69f9c3e9de6d229eabb509
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72251312"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>使用存储过程部署和执行 SSIS 包
@@ -30,7 +30,7 @@ ms.locfileid: "72251312"
 > 3.  根据需要，设置参数值、连接管理器属性和 **“高级”** 选项卡中的选项（例如，日志记录级别）。  
 > 
 >      有关日志记录级别的详细信息，请参阅 [启用日志记录在 SSIS 服务器上的包执行的](../../2014/integration-services/enable-logging-for-package-execution-on-the-ssis-server.md)。  
-> 4.  在单击 **“确定”** 以便执行该包之前，单击 **“脚本”**。 Transact-SQL 将出现在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的“查询编辑器”窗口中。  
+> 4.  在单击 **“确定”** 以便执行该包之前，单击 **“脚本”**。 Transact-SQL 将出现在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的“查询编辑器”窗口中。  
   
 ## <a name="to-deploy-and-execute-a-package-using-stored-procedures"></a>使用存储过程部署和执行包  
   

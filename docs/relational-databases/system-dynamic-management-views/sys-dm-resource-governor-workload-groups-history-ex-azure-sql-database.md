@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: joesackmsft
 ms.author: josack
 ms.openlocfilehash: 5fea5badf14ce9863f07dff189f1665788ec5fb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70873770"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex（Azure SQL 数据库）
@@ -34,7 +34,7 @@ ms.locfileid: "70873770"
 |-----------------|---------------|-----------------|  
 |**pool_id**| int |资源池的 ID。 不可为 null。|
 |**group_id**| int |工作负荷组的 ID。 不可为 null。|
-|**路径名**| nvarchar(256) |工作负荷组的名称。 不可为 null。|
+|**name**| nvarchar(256) |工作负荷组的名称。 不可为 null。|
 |**snapshot_time**| datetime |拍摄的资源组统计快照的日期时间。|
 |**duration_ms**| int |当前快照与前一个快照之间的持续时间。|
 |**active_worker_count**| int |当前快照中的总工作进程数。|

@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf57adb31330f5b0c0f18fbcccd4d71f47d3c933
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176018"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>SQL Server 的云适配器
@@ -28,8 +28,7 @@ ms.locfileid: "70176018"
 ## <a name="cloud-adapter-requirements"></a>云适配器要求  
  请注意以下安装、启用和运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的云适配器的要求：  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 或更高版本支持云适配器。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 上， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的云适配器需要用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 的 SQL 管理对象。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 或更高版本支持云适配器。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 上， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的云适配器需要用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 的 SQL 管理对象。  
   
 -   云适配器 Web 服务在 **Local System** 帐户下运行并在执行任何任务前验证客户端凭据。 客户端提供的凭据必须属于远程计算机上本地**Administrators**组成员的使用帐户。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "70176018"
   
 -   **配置文件参数** -  
   
-    -   \<配置>  
+    -   \<configuration>  
   
         -   \<appSettings>  
   
@@ -72,7 +71,7 @@ ms.locfileid: "70176018"
   
  **配置文件值**：  
   
-|设置|值|默认|注释|  
+|设置|值|默认|说明|  
 |-------------|------------|-------------|--------------|  
 |WebServicePort|1-65535|11435|如果未指定，请使用 11435。|  
 |WebServiceCertificate|Thumbprint|空|如果为空，则生成新的自签名证书。|  

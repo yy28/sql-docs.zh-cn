@@ -17,14 +17,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 1b54661c47ff40af595be55d444f6c0ffb4bc2cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952117"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>Reporting Services 配置选项 (SSRS)
-  使用 **** 安装向导中的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“Reporting Services 配置”页来指定如何安装和配置报表服务器。 安装选项的可用性取决于您以前在 **“功能选择”** 页选择的选项以及在安装报表服务器的同时是否还安装了 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的本地实例。  
+  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导中的****“Reporting Services 配置”页来指定如何安装和配置报表服务器。 安装选项的可用性取决于您以前在 **“功能选择”** 页选择的选项以及在安装报表服务器的同时是否还安装了 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的本地实例。  
   
  在某些情况下，如果安全套接字层 (SSL) 证书安装在计算机上并绑定到一个强通配符，安装程序将使用 HTTPS 前缀创建 Reporting Services URL。 有关如何将证书映射到 Reporting Services url 的详细信息，请参阅为[安全套接字层（SSL）连接配置报表服务器](https://go.microsoft.com/fwlink/?LinkId=199089)（https://go.microsoft.com/fwlink/?LinkId=199089)在 SQL Server 联机丛书中。  
   

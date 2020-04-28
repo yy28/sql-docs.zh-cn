@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b614a2e405501e2c41cae1add9e8e6b47d372dae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874469"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>可用性副本之间的会话期间的可能故障 (SQL Server)
@@ -59,8 +59,7 @@ ms.locfileid: "70874469"
   
 -   网线被拔掉。  
   
--   
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 防火墙阻止了特定端口。  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 防火墙阻止了特定端口。  
   
 -   监视端口的应用程序出现故障。  
   
@@ -69,8 +68,7 @@ ms.locfileid: "70874469"
 -   重新启动基于 Windows 的服务器。  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)]无法避免与客户端访问服务器相关的问题。 例如，假设由公用网络适配器处理与主副本的客户端连接，而由专用网络接口卡处理承载可用性组的副本的服务器实例之间的所有通信流量。 此时，公用网络适配器的故障将阻止客户端访问数据库。  
+>  [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)]无法避免与客户端访问服务器相关的问题。 例如，假设由公用网络适配器处理与主副本的客户端连接，而由专用网络接口卡处理承载可用性组的副本的服务器实例之间的所有通信流量。 此时，公用网络适配器的故障将阻止客户端访问数据库。  
   
 ## <a name="failures-due-to-soft-errors"></a>软错误导致的故障  
  可能导致会话超时的情况包括（但不限于）下列各项：  
@@ -100,7 +98,7 @@ ms.locfileid: "70874469"
   
  **查看当前超时值**  
   
--   查询 **sys.availability_replicas（Transact-SQL）** 中的 [session_timeout](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)。  
+-   查询 [sys.availability_replicas（Transact-SQL）](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)中的 **session_timeout**。  
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)  

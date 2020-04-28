@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 53fcba3401a6798fb865613470ba78aa05e9b6dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176107"
 ---
 # <a name="lesson-1-create-azure-storage-objects"></a>第 1 课：创建 Azure 存储对象
@@ -29,8 +29,7 @@ ms.locfileid: "70176107"
   
 2.  使用[此处](https://go.microsoft.com/fwlink/?LinkId=271926)详细介绍的分步说明创建存储帐户。  
   
-3.  浏览到您在上一步中创建的存储帐户。 单击网页底部的 "**管理密钥**"。 此时将显示帐户信息。 复制存储帐户名和访问键。 创建 SQL 存储凭据时需要此信息。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用此信息来访问存储帐户并创建备份。  
+3.  浏览到您在上一步中创建的存储帐户。 单击网页底部的 "**管理密钥**"。 此时将显示帐户信息。 复制存储帐户名和访问键。 创建 SQL 存储凭据时需要此信息。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用此信息来访问存储帐户并创建备份。  
   
      ![Azure 存储帐户密钥的屏幕截图](../../2014/tutorials/media/manageaccesskeys-backuptocloud.gif "Azure 存储帐户密钥的屏幕截图")  
   
@@ -38,7 +37,7 @@ ms.locfileid: "70176107"
     >  还可以使用 REST API 以编程方式创建存储帐户。 有关详细信息，请参阅[创建存储帐户](https://go.microsoft.com/fwlink/?LinkId=271928)。  
   
 ### <a name="create-a-blob-container"></a>创建 Blob 容器  
- 一个容器包含一组 Blob 集。 所有 blob 必须位于相应的容器中。 一个帐户可以包含无限数量的容器，但必须至少具有一个容器。 一个容器可以存储无限个 Blob。  
+ 容器对 Blob 集进行分组。 所有 Blob 必须都在一个容器中。 一个帐户可以包含无限数量的容器，但必须至少具有一个容器。 一个容器可以存储无限数量的 Blob。  
   
  若要创建容器，请使用以下步骤：  
   

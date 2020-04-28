@@ -14,17 +14,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 004746516545278470515753361b31a1ac38ef47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70911280"
 ---
 # <a name="smo-object-model-diagram"></a>SMO 对象模型关系图
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  此关系图显示 SMO 对象层次结构以及各对象类型之间的关系。 
-  <xref:Microsoft.SqlServer.Management.Smo.Server> 对象是顶层对象。  
+  此关系图显示 SMO 对象层次结构以及各对象类型之间的关系。 <xref:Microsoft.SqlServer.Management.Smo.Server> 对象是顶层对象。  
   
  ![显示层次结构关系的关系图](../../relational-databases/server-management-objects-smo/media/object-diagram.gif "显示层次结构关系的关系图")  
   

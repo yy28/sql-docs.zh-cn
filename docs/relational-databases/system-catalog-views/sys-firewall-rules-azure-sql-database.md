@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 91c3a4101f19afe4a986514fea8dab207c6d9b48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70155544"
 ---
 # <a name="sysfirewall_rules-azure-sql-database"></a>sys.firewall_rules (Azure SQL Database)
@@ -30,12 +30,11 @@ ms.locfileid: "70155544"
 
   返回与[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]关联的服务器级防火墙设置的相关信息。  
   
- 
-  `sys.firewall_rules` 视图包含以下各列：  
+ `sys.firewall_rules` 视图包含以下各列：  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|id|**整形**|服务器级防火墙设置的标识符。|  
+|ID|**整形**|服务器级防火墙设置的标识符。|  
 |name|**NVARCHAR （128）**|您选择用来描述和区分服务器级防火墙设置的名称。|  
 |start_ip_address|**VARCHAR （45）**|服务器级防火墙设置范围内的最低 IP 地址。 等于或大于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器。 可能的最低 IP 地址为 `0.0.0.0`。|  
 |end_ip_address|**VARCHAR （45）**|服务器级防火墙设置范围内的最高 IP 地址。 等于或小于此值的 IP 地址可能尝试连接到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器。 可能的最高 IP 地址为 `255.255.255.255`。<br /><br /> 注意：如果此字段和**start_ip_address**字段都等于`0.0.0.0`，则允许 Azure 连接尝试。|  
@@ -52,9 +51,9 @@ ms.locfileid: "70155544"
   
 ## <a name="see-also"></a>另请参阅
 
-[Azure SQL Database &#40;sp_set_firewall_rule&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
+[sp_set_firewall_rule（Azure SQL 数据库）](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
 [Azure SQL Database &#40;sp_delete_firewall_rule&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)   
-[Azure SQL Database &#40;sp_set_database_firewall_rule&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
+[sp_set_database_firewall_rule（Azure SQL 数据库）](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
 [Azure SQL Database &#40;sp_delete_database_firewall_rule&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)  
 [database_firewall_rules &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
 [为数据库引擎访问配置 Windows 防火墙](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)     

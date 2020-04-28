@@ -23,23 +23,22 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a94ec756e86cb814d0e3b3f624b4a9b3eb180533
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176023"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 数据库的备份和还原
   本主题介绍备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的优点、基本的备份和还原术语，还介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的备份和还原策略以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原的安全注意事项。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原组件为保护存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的关键数据提供了基本安全保障。 为了尽量降低灾难性数据丢失的风险，需备份数据库，以便定期保存对数据的修改。 计划良好的备份和还原策略有助于保护数据库，使之免受各种故障导致的数据丢失的威胁。 测试策略，方法是先还原一组备份，然后恢复数据库，以便准备好对灾难进行有效的响应。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原组件为保护存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的关键数据提供了基本安全保障。 为了尽量降低灾难性数据丢失的风险，需备份数据库，以便定期保存对数据的修改。 计划良好的备份和还原策略有助于保护数据库，使之免受各种故障导致的数据丢失的威胁。 测试策略，方法是先还原一组备份，然后恢复数据库，以便准备好对灾难进行有效的响应。  
   
  除了在本地存储中存储备份外，SQL Server 还支持备份到 Azure Blob 存储服务和从其还原。 有关详细信息，请参阅[使用 Azure Blob 存储服务执行 SQL Server 备份和还原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
 
   
-##  <a name="Benefits"></a> 优势  
+##  <a name="benefits"></a><a name="Benefits"></a>便利  
   
 -   备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、在备份上运行测试还原过程以及在另一个安全位置存储备份副本可防止可能的灾难性数据丢失。  
   
@@ -56,11 +55,11 @@ ms.locfileid: "70176023"
   
     -   自然灾难。 通过使用 SQL Server 备份到 Azure Blob 存储服务，可以在本地位置之外的其他区域创建一个站外备份，这样在发生影响本地位置的自然灾难时仍可以使用数据库。  
   
--   此外，数据库备份对于进行日常管理（如将数据库从一台服务器复制到另一台服务器、设置 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]或数据库镜像以及进行存档）非常有用。  
+-   此外，数据库备份对于进行日常管理（如将数据库从一台服务器复制到另一台服务器、设置 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 或数据库镜像以及进行存档）非常有用。  
   
 
   
-##  <a name="TermsAndDefinitions"></a>组件和概念  
+##  <a name="components-and-concepts"></a><a name="TermsAndDefinitions"></a> 组件和概念  
  备份 [动词] (back up)  
  从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库或其事务日志中将数据或日志记录复制到备份设备（如磁盘），以创建数据备份或日志备份。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "70176023"
  可用于在出现故障后还原或恢复数据的数据副本。 数据库备份还可用于将数据库副本还原到新位置。  
   
  备份设备 (backup device)  
- 要写入 SQL Server 备份及能从中还原这些备份的磁盘或磁带设备。 SQL Server 备份也可以写入 Azure Blob 存储服务，并且使用 URL**** 格式来指定备份文件的目标和名称。 有关详细信息，请参阅[使用 Azure Blob 存储服务执行 SQL Server 备份和还原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+ 要写入 SQL Server 备份及能从中还原这些备份的磁盘或磁带设备。 SQL Server 备份也可以写入 Azure Blob 存储服务，并且使用 URL  格式来指定备份文件的目标和名称。 有关详细信息，请参阅[使用 Azure Blob 存储服务执行 SQL Server 备份和还原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
  备份介质  
  已写入一个或多个备份的一个或多个磁带或磁盘文件。  
@@ -102,7 +101,7 @@ ms.locfileid: "70176023"
   
 
   
-##  <a name="BnrStrategies"></a>备份和还原策略简介  
+##  <a name="introduction-to-backup-and-restore-strategies"></a><a name="BnrStrategies"></a>备份和还原策略简介  
  备份和还原数据必须根据特定环境进行自定义，并且必须使用可用资源。 因此，可靠使用备份和还原以实现恢复需要有一个备份和还原策略。 设计良好的备份和还原策略在考虑到特定业务要求的同时，可以尽量提高数据的可用性并尽量减少数据的丢失。  
   
 > [!IMPORTANT]  
@@ -126,7 +125,7 @@ ms.locfileid: "70176023"
 ### <a name="impact-of-the-recovery-model-on-backup-and-restore"></a>恢复模式对备份和还原的影响  
  备份和还原操作发生在恢复模式的上下文中。 恢复模式是一种数据库属性，用于控制事务日志的管理方式。 此外，数据库的恢复模式还决定数据库支持的备份类型和还原方案。 通常，数据库使用简单恢复模式或完整恢复模式。 可以在执行大容量操作之前切换到大容量日志恢复模式，以补充完整恢复模式。 有关这些恢复模式以及它们是如何影响事务日志管理方式的说明，请参阅[事务日志 (SQL Server)](../logs/the-transaction-log-sql-server.md)。  
   
- 数据库的最佳恢复模式取决于您的业务要求。 若要免去事务日志管理工作并简化备份和还原，请使用简单恢复模式。 若要在管理开销一定的情况下使工作丢失的可能性降到最低，请使用完整恢复模式。 有关恢复模式对备份和还原存在哪些影响的信息，请参阅[备份概述 (SQL Server)](backup-overview-sql-server.md)。  
+ 数据库的最佳恢复模式取决于您的业务要求。 若要免去事务日志管理工作并简化备份和还原，请使用简单恢复模式。 若要在管理开销一定的情况下使工作丢失的可能性降到最低，请使用完整恢复模式。 有关恢复模式对备份和还原存在哪些影响的信息，请参阅 [备份概述 (SQL Server)](backup-overview-sql-server.md)。  
   
 ### <a name="design-the-backup-strategy"></a>设计备份策略  
  当为特定数据库选择了满足业务要求的恢复模式后，需要计划并实现相应的备份策略。 最佳备份策略取决于各种因素，以下因素尤其重要：  
@@ -151,7 +150,7 @@ ms.locfileid: "70176023"
   
      有关详细信息，请参阅本部分后面的 [估计完整数据库备份的大小](#EstimateDbBuSize)。  
   
-####  <a name="EstimateDbBuSize"></a>估计完整数据库备份的大小  
+####  <a name="estimate-the-size-of-a-full-database-backup"></a><a name="EstimateDbBuSize"></a>估计完整数据库备份的大小  
  在实现备份与还原策略之前，应当估计完整数据库备份将使用的磁盘空间。 备份操作会将数据库中的数据复制到备份文件。 备份仅包含数据库中的实际数据，而不包含任何未使用的空间。 因此，备份通常小于数据库本身。 你可以使用 **sp_spaceused** 系统存储过程估计完整数据库备份的大小。 有关详细信息，请参阅 [sp_spaceused (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql)。  
   
 ### <a name="schedule-backups"></a>计划备份  
@@ -167,7 +166,7 @@ ms.locfileid: "70176023"
   
  建议您为每个数据库维护一个操作手册。 此操作手册应记录备份的位置、备份设备名称（如果有），以及还原测试备份所需的时间。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 ### <a name="scheduling-backup-jobs"></a>计划备份作业  
   
@@ -175,7 +174,7 @@ ms.locfileid: "70176023"
   
 -   [创建作业](../../ssms/agent/create-a-job.md)  
   
--   [Schedule a Job](../../ssms/agent/schedule-a-job.md)  
+-   [安排作业计划](../../ssms/agent/schedule-a-job.md)  
   
 ### <a name="working-with-backup-devices-and-backup-media"></a>使用备份设备和备份介质  
   
@@ -183,19 +182,19 @@ ms.locfileid: "70176023"
   
 -   [为磁带驱动器定义逻辑备份设备 (SQL Server)](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
--   [将磁盘或磁带指定为备份目标 &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [将磁盘或磁带指定为备份目标 (SQL Server)](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
--   [删除备份设备 &#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
+-   [删除备份设备 (SQL Server)](delete-a-backup-device-sql-server.md)  
   
--   [设置备份 &#40;SQL Server 上的过期日期&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
+-   [设置备份的过期日期 (SQL Server)](set-the-expiration-date-on-a-backup-sql-server.md)  
   
 -   [查看备份磁带或文件的内容 (SQL Server)](view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
--   [查看备份集中的数据和日志文件 &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
+-   [查看备份集中的数据文件和日志文件 (SQL Server)](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
 -   [查看逻辑备份设备的属性和内容 (SQL Server)](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
--   [从设备还原备份 &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
+-   [从设备还原备份 (SQL Server)](restore-a-backup-from-a-device-sql-server.md)  
   
 ### <a name="creating-backups"></a>创建备份  
   
@@ -237,7 +236,7 @@ ms.locfileid: "70176023"
   
  **使用 Transact-sql**  
   
--   [&#40;Transact-sql&#41;在简单恢复模式下还原数据库备份](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
+-   [在简单恢复模式下还原数据库备份 (Transact-SQL)](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   
 -   [在完整恢复模式下将数据库还原到故障点 (Transact-SQL)](restore-database-to-point-of-failure-full-recovery.md)  
   
@@ -245,7 +244,7 @@ ms.locfileid: "70176023"
   
 -   [将文件还原到新位置 (SQL Server)](restore-files-to-a-new-location-sql-server.md)  
   
--   [&#40;Transact-sql&#41;还原 master 数据库](restore-the-master-database-transact-sql.md)  
+-   [还原 master 数据库 (Transact-SQL)](restore-the-master-database-transact-sql.md)  
   
 
   
@@ -267,7 +266,7 @@ ms.locfileid: "70176023"
 ### <a name="additional-restore-tasks"></a>其他还原任务  
  **使用 Transact-sql**  
   
--   [&#40;Transact-sql&#41;重启中断的还原操作](restart-an-interrupted-restore-operation-transact-sql.md)  
+-   [重新启动中断的还原操作 (Transact-SQL)](restart-an-interrupted-restore-operation-transact-sql.md)  
   
 -   [恢复数据库但不还原数据 (Transact-SQL)](recover-a-database-without-restoring-data-transact-sql.md)  
   
@@ -282,7 +281,7 @@ ms.locfileid: "70176023"
  [备份和还原全文目录和索引](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  [备份和还原复制的数据库](../replication/administration/back-up-and-restore-replicated-databases.md)   
  [事务日志 (SQL Server)](../logs/the-transaction-log-sql-server.md)   
- [恢复模式 &#40;SQL Server&#41;](recovery-models-sql-server.md)   
+ [恢复模式 (SQL Server)](recovery-models-sql-server.md)   
  [媒体集、媒体簇和备份集 (SQL Server)](media-sets-media-families-and-backup-sets-sql-server.md)  
   
   

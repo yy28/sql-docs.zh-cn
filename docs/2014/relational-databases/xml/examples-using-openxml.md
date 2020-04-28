@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 61c5fc1cb0692d22f110958b894ac2eb7c2af4cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874690"
 ---
 # <a name="examples-using-openxml"></a>示例：使用 OPENXML
@@ -95,8 +95,7 @@ LILAS      Carlos Gonzlez
   
  由于 <`Customer`> 元素没有任何子元素，因而如果在 *flags* 设置为**2** 时（表示以元素为中心的映射）执行上述 SELECT 语句，则两个客户的 **CustomerID** 和 **ContactName** 值将返回 NULL 值。  
   
- 
-  @xmlDocument 也可以是 **xml** 类型或 **(n)varchar(max)** 类型。  
+ @xmlDocument 也可以是 **xml** 类型或 **(n)varchar(max)** 类型。  
   
  如果 XML 文档中的 <`CustomerID`> 和 <`ContactName`> 是子元素，则以元素为中心的映射将检索值。  
   

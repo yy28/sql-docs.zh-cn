@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70d941786fd06e48bf071b8448b84c8f4857f8c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176062"
 ---
 # <a name="sql-server-managed-backup-to-azure-interoperability-and-coexistence"></a>SQL Server 托管备份到 Azure：互操作性和共存
@@ -46,8 +46,7 @@ ms.locfileid: "70176062"
   
 ### <a name="changes-to-recovery-model"></a>对恢复模式的更改  
   
--   如果将数据库的恢复模式从 "**简单**" 更改为 "**完整**" 或 "**大容量日志**"，则可以[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]选择为数据库配置。 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]会将数据库视为新的数据库。  
+-   如果将数据库的恢复模式从 "**简单**" 更改为 "**完整**" 或 "**大容量日志**"，则可以[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]选择为数据库配置。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]会将数据库视为新的数据库。  
   
 -   如果将数据库的恢复模式从**完整**或**大容量日志**更改为**简单**，则已[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]启用，将不再计划备份操作。 保持期设置仍将有效，并且备份文件仍将保留在存储帐户中，直到保持期结束。 如果要保留备份，则我们建议将文件下载到其他存储帐户或本地位置。 如果恢复模式恢复为**完全**或**大容量日志记录**，则会保留配置设置，并可重复使用这些设置。  
   

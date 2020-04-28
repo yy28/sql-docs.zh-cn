@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c500967b83581cc3bc108232f12c9a0f4d008da6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71199332"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
@@ -44,7 +44,7 @@ sys.dm_exec_describe_first_result_set_for_object
   
 ## <a name="arguments"></a>参数  
  *\@object_id*  
- 存储过程或[!INCLUDE[tsql](../../includes/tsql-md.md)]触发器的。 @object_id [!INCLUDE[tsql](../../includes/tsql-md.md)] @object_id的类型为**int**。  
+ 存储过程或[!INCLUDE[tsql](../../includes/tsql-md.md)]触发器的。 @object_id [!INCLUDE[tsql](../../includes/tsql-md.md)]  的类型为 int@object_id****。  
   
  *\@include_browse_information*  
  @include_browse_information的类型为**bit**。 如果设置为 1，则分析每个查询，就好像它在查询中使用 FOR BROWSE 选项。 返回其他键列和源表信息。  
@@ -56,13 +56,13 @@ sys.dm_exec_describe_first_result_set_for_object
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|指定列是否是出于浏览信息的目的而额外添加的，并不会实际出现在结果集中。|  
 |**column_ordinal**|**int**|在结果集中包含列的序号位置。 第一列的位置将指定为 1。|  
-|**路径名**|**sysname**|包含列的名称（如果可以确定名称）。 否则为 NULL。|  
+|**name**|**sysname**|包含列的名称（如果可以确定名称）。 否则为 NULL。|  
 |**is_nullable**|**bit**|如果列允许 NULL，则包含值 1；如果列不允许 NULL，则包含 0；如果不能确定列是否允许 NULL，则为 1。|  
 |**system_type_id**|**int**|包含 sys.databases 中指定的列数据类型的 system_type_id。 对于 CLR 类型，即使 system_type_name 列返回 NULL，该列也会返回值 240。|  
 |**system_type_name**|**nvarchar(256)**|包含数据类型名称。 包含为列数据类型指定的参数（例如，length、precision、scale）。 如果数据类型是用户定义的别名类型，则会在此处指定基本系统类型。 如果数据类型是 CLR 用户定义类型，则在此列中返回 NULL。|  
 |**max_length**|**smallint**|列的最大长度（字节）。<br /><br /> -1 = 列数据类型为**varchar （max）**、 **nvarchar （max）**、 **varbinary （max）** 或**xml**。<br /><br /> 对于**text**列， **max_length**值将是16，或者是**sp_tableoption "text in row"** 设置的值。|  
 |**精度**|**tinyint**|如果为基于数值的列，则为该列的精度。 否则，返回 0。|  
-|**纵向**|**tinyint**|如果基于数值，则为列的小数位数。 否则，返回 0。|  
+|**scale**|**tinyint**|如果基于数值，则为列的小数位数。 否则，返回 0。|  
 |**collation_name**|**sysname**|如果列包含的是字符，则为该列的排序规则的名称。 否则，返回 NULL。|  
 |**user_type_id**|**int**|对于 CLR 和别名类型，包含在 sys.types 中指定的列数据类型的 user_type_id。 否则为 NULL。|  
 |**user_type_database**|**sysname**|对于 CLR 和别名类型，包含在其中定义相应类型的数据库的名称。 否则为 NULL。|  
@@ -93,8 +93,8 @@ sys.dm_exec_describe_first_result_set_for_object
 |**error_severity**|**int**|包含函数返回的严重性。 如果列中未发生错误，则包含 NULL。|  
 |**error_state**|**int**|包含函数返回的状态消息。 如果未发生错误， 则该列包含 NULL。|  
 |**error_message**|**nvarchar （4096）**|包含函数返回的消息。 如果未发生错误，则该列包含 NULL。|  
-|**错误类型**|**int**|包含一个整数，它表示返回的错误。 映射到 error_type_desc。 请参阅“备注”中的列表。|  
-|**error_type_desc**|**nvarchar （60）**|包含一个简短的大写字符串，它表示返回的错误。 映射到 error_type。 请参阅“备注”中的列表。|  
+|**error_type**|**int**|包含一个整数，它表示返回的错误。 映射到 error_type_desc。 请参阅“备注”中的列表。|  
+|**error_type_desc**|**nvarchar(60)**|包含一个简短的大写字符串，它表示返回的错误。 映射到 error_type。 请参阅“备注”中的列表。|  
   
 ## <a name="remarks"></a>备注  
  此函数使用与 **sp_describe_first_result_set** 相同的算法。 有关详细信息，请参阅[&#40;transact-sql&#41;sp_describe_first_result_set ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。  
@@ -104,7 +104,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |错误类型|错误类型|说明|  
 |-----------------|-----------------|-----------------|  
 |1|MISC|未描述的所有错误。|  
-|2|语法|在批处理中发生语法错误。|  
+|2|SYNTAX|在批处理中发生语法错误。|  
 |3|CONFLICTING_RESULTS|由于两个可能的第一个语句之间发生冲突，无法确定结果。|  
 |4|DYNAMIC_SQL|由于动态 SQL 可能会返回第一个结果，无法确定结果。|  
 |5|CLR_PROCEDURE|由于 CLR 存储过程可能会返回第一个结果，无法确定结果。|  

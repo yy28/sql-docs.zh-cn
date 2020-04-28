@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 75c3bda5d15e3930fcdeba9ca73d70128fd90336
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952062"
 ---
 # <a name="reporting-services-upgrade-issues-upgrade-advisor"></a>Reporting Services 升级问题（升级顾问）
@@ -34,8 +34,7 @@ ms.locfileid: "71952062"
  以下主题介绍升级顾问报告的已知问题，并解释可以如何修改现有安装以顺利进行升级。  
   
 > [!IMPORTANT]  
->  若要分析 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例，升级顾问必须安装在报表服务器上。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不支持远程分析。  
+>  若要分析 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例，升级顾问必须安装在报表服务器上。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不支持远程分析。  
 >   
 >  有关详细信息，请参阅[安装升级顾问](../../../2014/sql-server/install/installing-upgrade-advisor.md)。  
   

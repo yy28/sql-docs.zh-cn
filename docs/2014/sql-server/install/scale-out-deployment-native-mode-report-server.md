@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: a9fe82102df73ddfa77b4636dd29793ac2694949
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952418"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>扩展部署（本机模式报表服务器）
@@ -46,13 +46,13 @@ ms.locfileid: "71952418"
  **服务器模式**  
  显示服务器和数据库的模式。 服务器模式为“本机”或“SharePoint 集成”。 这两种模式均支持扩展部署。  
   
- **Server**  
+ **服务器**  
  显示报表服务器名称。 在大多数情况下，此为安装报表服务器的计算机的名称。  
   
  **实例**  
  显示报表服务器实例名称。 报表服务器实例基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
- **Status**  
+ **状态**  
  指示报表服务器是已初始化还是正在等待联接扩展部署：  
   
 -   对于不属于扩展部署的独立报表服务器，此页说明此报表服务器实例已根据其专用报表服务器数据库进行初始化。 “状态”设置为 **“已联接”**。  
@@ -63,7 +63,7 @@ ms.locfileid: "71952418"
   
      对于属于扩展部署的报表服务器，可使用此页来添加或删除节点。  
   
- **初始化**  
+ **Initialize**  
  单击 **“初始化”** 可将报表服务器添加到扩展部署中。 该步骤用于将报表服务器配置为使用共享报表服务器数据库中的对称密钥。 可以使用 **“初始化”** 将报表服务器实例添加到扩展部署中，或者排除迁移或安装故障。  
   
  除非您事先配置了与共享报表服务器数据库的连接，否则报表服务器实例将不可用。 此外，还必须从已初始化为使用报表服务器数据库的报表服务器执行初始化操作。  
@@ -76,8 +76,8 @@ ms.locfileid: "71952418"
  如果不再需要加密数据或者没有密钥的备份副本，则必须删除该加密数据。 有关详细信息，请参阅[&#40;SSRS 本机模式&#41;中的加密密钥](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;SSRS Configuration Manager 初始化报表服务器&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
- [配置和管理加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [初始化 Report Server（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [&#40;SSRS Configuration Manager 中配置和管理加密密钥&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
  [配置本机模式报表服务器扩展部署（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
   
   

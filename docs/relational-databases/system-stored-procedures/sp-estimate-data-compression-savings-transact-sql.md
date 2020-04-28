@@ -19,10 +19,10 @@ ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2ecc9f44e28296b79cc5e1dc9a9c70caa93bd94f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71682134"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "71682134"
   返回所请求对象的当前大小并估算对象在所请求的压缩状态下的大小。 可对所有表或部分表评估压缩。 这包括堆、聚集索引、非聚集索引、列存储索引、索引视图以及表和索引分区。 可以使用 row、page、列存储或列存储存档压缩来压缩这些对象。 如果表、索引或分区已经过压缩，则可使用该过程来估计在重新压缩的情况下该表、索引或分区的大小。  
   
 > [!NOTE]
-> 并非在**** 的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]每个版本中都提供压缩和 sp_estimate_data_compression_savings。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+> 并非在**sp_estimate_data_compression_savings**的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]每个版本中都提供压缩和 sp_estimate_data_compression_savings。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2016 的各个[版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  若要对使用请求的压缩设置的对象进行大小估算，该存储过程将对源对象进行采样并且将此数据加载到在 tempdb 中创建的等效表和索引中。 然后，将按照所请求的设置压缩在 tempdb 中创建的表和索引，并计算出估计的压缩节省量。  
   
@@ -59,7 +59,7 @@ sp_estimate_data_compression_savings
  包含表或索引视图的数据库架构的名称。 *schema_name* **sysname**。 如果*schema_name*为 NULL，则使用当前用户的默认架构。  
   
  [ @object_name= ]"*object_name*"  
- 索引所属的表或索引视图的名称。 *object_name* **sysname**。  
+ 索引所属的表或索引视图的名称。 object_name 为 sysname******。  
   
  [ @index_id= ]*index_id*  
  索引的 ID。 *index_id*为**int**，可以是下列值之一：索引的 id 号、NULL 或0（如果*object_id*为堆）。 若要返回基表或视图的所有索引的信息，请指定 NULL。 如果指定 NULL，则还必须为*partition_number*指定 null 值。  
@@ -123,7 +123,7 @@ sp_estimate_data_compression_savings
  |聚集列存储索引|聚集列存储索引|
 
 > [!NOTE]  
-> 从行存储的源对象（聚集索引、非聚集索引或堆）估算列存储压缩时，如果源对象中的任何列的数据类型在列存储索引中不受支持，则为 sp_estimate_compression_savings将失败并出现错误。
+> 从行存储的源对象（聚集索引、非聚集索引或堆）估算列存储压缩时，如果源对象中的任何列的数据类型在列存储索引中不受支持，则 sp_estimate_compression_savings 将失败并出现错误。
 
  同样， `@data_compression`当参数设置`NONE`为、 `ROW`或`PAGE` ，并且源对象为列存储索引时，下表概述了所使用的引用对象。
 

@@ -13,14 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 111e44275922149949cd7e252e112d95cef65076
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952033"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>还原加密密钥（SSRS 本机模式）
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用加密密钥来保护存储在报表服务器数据库中的敏感数据。 为确保您可以继续访问加密数据，请务必创建加密密钥的备份，以备以后因服务帐户发生变化而需要还原它或需要将它作为计划迁移的一部分还原时使用。 本主题概括了如何使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器来还原密钥。  
   
  [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]本机模式。  
@@ -40,16 +39,15 @@ ms.locfileid: "71952033"
  **文件位置**  
  选择包含对称密钥副本的受密码保护的文件。 默认的文件扩展名为 .snk。  
   
- **权限**  
- 输入用于解锁该文件的密码。 只有知道密码的用户才可还原密钥。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 强制实施强密码策略。 密码必须至少包含 8 个字符，并且应由大小写字母数字字符和至少一个符号字符组合而成。  
+ **密码**  
+ 输入用于解锁该文件的密码。 只有知道密码的用户才可还原密钥。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 强制实施强密码策略。 密码必须至少包含 8 个字符，并且应由大小写字母数字字符和至少一个符号字符组合而成。  
   
 ## <a name="see-also"></a>另请参阅  
  [Reporting Services 配置管理器的 F1 帮助主题 &#40;SSRS 本机模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [备份和还原 Reporting Services 加密密钥](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [删除和重新创建加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [&#40;SSRS Configuration Manager 初始化报表服务器&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
- [将加密的报表服务器数据存储 &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [删除并重新创建 &#40;SSRS Configuration Manager 的加密密钥&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [初始化 Report Server（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [存储加密的 Report Server 数据（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [SSRS 本机模式 &#40;的加密密钥&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)  
   
   

@@ -19,10 +19,10 @@ ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ec7758ad2f9443ad29f0da799e3f286612f95cab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72278182"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
@@ -82,7 +82,7 @@ sp_detach_db [ @dbname= ] 'database_name'
   
 -   数据库中存在数据库快照。  
   
-     必须首先删除所有数据库快照，然后才能分离数据库。 有关详细信息，请参阅 [Drop a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
+     必须首先删除所有数据库快照，然后才能分离数据库。 有关详细信息，请参阅 [删除数据库快照 (Transact-SQL)](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)实例。  
   
     > [!NOTE]  
     >  不能分离或附加数据库快照。  
@@ -135,7 +135,7 @@ exec sp_detach_db @dbname='AdventureWorks2012'
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [ALTER DATABASE &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [数据库分离和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [分离数据库](../../relational-databases/databases/detach-a-database.md)  

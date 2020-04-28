@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d1995ca52507a3027438cac21677517059d3d219
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154830"
 ---
 # <a name="back-up-database-media-options-page"></a>备份数据库（“介质选项”页）
@@ -62,33 +62,31 @@ ms.locfileid: "70154830"
  **介质集名称**  
  如果选中了“检查媒体集名称和备份集过期时间”****，还可以指定用于此备份操作的媒体集的名称。  
   
- **备份到新介质集，并清除所有现有备份集**  
+ **备份到新介质集并清除所有现有备份集**  
  使用新介质集，并清除以前的备份集。  
   
  单击此选项可以激活以下选项：  
   
- **新介质集名称**  
+ **新建介质集名称**  
  根据需要，可以输入介质集的新名称。  
   
- **新介质集说明**  
+ **新建介质集说明**  
  根据需要，可以输入新介质集的贴切说明。 此说明应该足够具体，可以准确地表述内容。  
   
 ### <a name="reliability"></a>可靠性  
- 
-  **“事务日志”** 面板中的选项可以控制备份操作的错误管理。  
+ **“事务日志”** 面板中的选项可以控制备份操作的错误管理。  
   
  **完成后验证备份**  
  验证备份集是否完整以及所有卷是否都可读。  
   
- **写入介质前执行校验和**  
+ **写入介质前检查校验和**  
  在写入备份介质前验证校验和。 选择此选项等效于在 [!INCLUDE[tsql](../../includes/tsql-md.md)]的 BACKUP 语句中指定 CHECKSUM 选项。 选择此选项可能会增大工作负荷，并降低备份操作的备份吞吐量。 有关校验和的详细信息，请参阅[在备份和还原期间可能的媒体错误 (SQL Server)](possible-media-errors-during-backup-and-restore-sql-server.md)。  
   
  **出错时继续**  
  备份操作继续进行，即使在遇到一个或多个错误后。  
   
 ### <a name="transaction-log"></a>事务日志  
- 
-  **“事务日志”** 面板中的选项可以控制事务日志备份的行为。 这些选项只在完整恢复模式或大容量日志恢复模式下相关。 仅在 **“备份数据库”** 对话框的 **“常规”** 页上的 [“备份类型”](../../integration-services/general-page-of-integration-services-designers-options.md) 字段中选中了 **“事务日志”** 时，才会激活这些选项。  
+ **“事务日志”** 面板中的选项可以控制事务日志备份的行为。 这些选项只在完整恢复模式或大容量日志恢复模式下相关。 仅在 **“备份数据库”** 对话框的 **“常规”** 页上的 [“备份类型”](../../integration-services/general-page-of-integration-services-designers-options.md) 字段中选中了 **“事务日志”** 时，才会激活这些选项。  
   
 > [!NOTE]  
 >  有关事务日志备份的信息，请参阅[事务日志备份 (SQL Server)](transaction-log-backups-sql-server.md)。  
@@ -102,8 +100,7 @@ ms.locfileid: "70154830"
  选择此选项等效于在 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 语句 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 中指定“WITH NO_TRUNCATE, NORECOVERY”。 有关详细信息，请参阅[结尾日志备份 (SQL Server)](tail-log-backups-sql-server.md)。  
   
 ### <a name="tape-drive"></a>磁带机  
- 
-  **“磁带机”** 面板中的选项可以控制备份操作期间的磁带管理。 仅在 **“备份数据库”** 对话框的 **“常规”** 页上的 [“目标”](../../integration-services/general-page-of-integration-services-designers-options.md) 面板中选中了 **“磁带”** ，才会激活这些选项。  
+ **“磁带机”** 面板中的选项可以控制备份操作期间的磁带管理。 仅在 **“备份数据库”** 对话框的 **“常规”** 页上的 [“目标”](../../integration-services/general-page-of-integration-services-designers-options.md) 面板中选中了 **“磁带”** ，才会激活这些选项。  
   
 > [!NOTE]  
 >  有关如何使用磁带设备的信息，请参阅[备份设备 (SQL Server)](backup-devices-sql-server.md)。  

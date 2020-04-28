@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: ff0a4f38bf9ee7d9c27fbc07308084ed3272f95d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952104"
 ---
 # <a name="reporting-services-sharepoint-mode-authentication"></a>Reporting Services SharePoint 模式身份验证
@@ -26,14 +26,13 @@ ms.locfileid: "71952104"
   
 ## <a name="options"></a>选项  
   
--   
-  **“SSRS 应用程序池帐户名称:”** 选项是只读的。 系统将自动使用来自您正在升级的现有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装中的当前值填充此值。  
+-   **“SSRS 应用程序池帐户名称:”** 选项是只读的。 系统将自动使用来自您正在升级的现有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装中的当前值填充此值。  
   
 -   如果应用程序池帐户不需要密码，则将禁用 **“SSRS 应用程序池帐户密码:”** 选项。 例如，"NT Authority\NetworkService"。 如果应用程序池帐户的确需要密码，仅当您键入正确的密码，才能继续进行升级。  
   
  有关详细信息，请参阅[升级和迁移 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628) （https://go.microsoft.com/fwlink/?LinkID=245628)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Upgrade and Migrate Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628)  
+ [升级和迁移 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628)  
   
   

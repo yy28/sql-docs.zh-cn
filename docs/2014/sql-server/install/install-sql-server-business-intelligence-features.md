@@ -10,18 +10,17 @@ manager: kfile
 ms.date: 10/24/2018
 ms.technology: install
 ms.openlocfilehash: 93f362adfbc85500854943a479dac01988eb3a01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952564"
 ---
 # <a name="install-sql-server-2014-bi-features"></a>安装 SQL Server 2014 BI 功能
 
-  SQL Server 功能是 Microsoft Business Intelligence 平台的一部分，其中包括： [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]以及用于创建或使用分析数据的若干客户端应用程序。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装文档中的本部分说明如何安装这些功能。  
+  SQL Server 功能是 Microsoft Business Intelligence 平台的一部分，其中包括： [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]以及用于创建或使用分析数据的若干客户端应用程序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装文档中的本部分说明如何安装这些功能。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]和[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]可在扩展配置中作为独立服务器安装，或者作为 SharePoint 场中的共享服务应用程序安装。 在场中安装这些服务会启用仅在 SharePoint 中可用的 BI 功能，其中包括 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 和 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]，后者是在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 表格模型数据库中运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 即席交互报表设计器。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可在扩展配置中作为独立服务器安装，或者在 SharePoint 场中作为共享服务应用程序安装。 在场中安装这些服务会启用仅在 SharePoint 中可用的 BI 功能，其中包括 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 和 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]，后者是在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 表格模型数据库中运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 即席交互报表设计器。  
   
  如果您已经对 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 PowerPivot for SharePoint 的安装步骤比较熟悉，则可以跳过一些步骤，直接转到指导如何启用特定方案的核对清单。 有关详细信息，请参阅[与 SharePoint 一起安装 BI 功能的清单](checklists-for-installing-bi-features-with-sharepoint.md)。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "71952564"
   
 |链接|任务|  
 |----------|----------|  
-|[升级到 SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)<br /><br /> [升级 Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)<br /><br /> [升级 PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)<br /><br /> [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)|使用本节中的指导可以将服务器和内容从以前的版本升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
+|[升级到 SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)<br /><br /> [升级 Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)<br /><br /> [升级 PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)<br /><br /> [升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)|使用本节中的指导可以将服务器和内容从以前的版本升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
 |[卸载 SQL Server 2014](uninstall-sql-server.md)<br /><br /> [卸载 PowerPivot for SharePoint](../../../2014/sql-server/install/uninstall-power-pivot-for-sharepoint.md)<br /><br /> [卸载 Reporting Services](../../../2014/sql-server/install/uninstall-reporting-services.md)|使用本节中的说明可卸载 BI 功能。|  
   
 ## <a name="see-also"></a>另请参阅

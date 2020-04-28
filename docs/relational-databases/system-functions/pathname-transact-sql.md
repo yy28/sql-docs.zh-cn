@@ -18,10 +18,10 @@ ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72251952"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)

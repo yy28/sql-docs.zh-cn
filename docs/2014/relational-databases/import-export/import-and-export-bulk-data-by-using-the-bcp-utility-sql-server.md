@@ -15,10 +15,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/14/2017
 ms.openlocfilehash: 7075bf87ed64686750bc4a267af431268987ff35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71708214"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>使用 bcp 实用工具导入和导出大容量数据 (SQL Server)
@@ -56,21 +56,21 @@ ms.locfileid: "71708214"
   
 -   [批量导入和导出 XML 文档的示例 (SQL Server)](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
--   [大容量导入数据时保留标识值 &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
+-   [批量导入数据时保留标识值 (SQL Server)](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
 -   [在批量导入期间保留 Null 或使用默认值 (SQL Server)](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
--   [指定字段终止符和行终止符 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
+-   [指定字段终止符和行终止符 (SQL Server)](specify-field-and-row-terminators-sql-server.md)  
   
 -   [使用格式化文件批量导入数据 (SQL Server)](use-a-format-file-to-bulk-import-data-sql-server.md)  
   
--   [使用字符格式导入或导出数据 &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [使用字符格式导入或导出数据 (SQL Server)](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [使用本机格式导入或导出数据 &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [使用本机格式导入或导出数据 (SQL Server)](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [使用 Unicode 字符格式导入或导出数据 &#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [使用 Unicode 字符格式导入或导出数据 (SQL Server)](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [使用 Unicode 本机格式导入或导出数据 &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [使用 Unicode 本机格式导入或导出数据 (SQL Server)](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
 
 ## <a name="see-also"></a>另请参阅
 

@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 44cb3f6b8dd16eed44568051e1ef183c0ac8123a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70155049"
 ---
 # <a name="backup-devices-sql-server"></a>备份设备 (SQL Server)
@@ -51,7 +51,7 @@ ms.locfileid: "70155049"
   
 -   [相关任务](#RelatedTasks)  
   
-##  <a name="TermsAndDefinitions"></a>术语和定义  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a>术语和定义  
  备份磁盘 (backup disk)  
  包含一个或多个备份文件的硬盘或其他磁盘存储介质。 备份文件是常规操作系统文件。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "70155049"
   
  除了磁盘或磁带外，还可以将 SQL Server 备份写入 Azure Blob 存储服务。  
   
-##  <a name="DiskBackups"></a>使用磁盘备份设备  
+##  <a name="using-disk-backup-devices"></a><a name="DiskBackups"></a>使用磁盘备份设备  
  **本节内容：**  
   
 -   [使用物理名称指定备份文件 (Transact-SQL)](#BackupFileUsingPhysicalName)  
@@ -76,12 +76,12 @@ ms.locfileid: "70155049"
   
  磁盘备份设备可以是简单的磁盘设备，如 ATA 驱动器。 或者，您可以使用热交换磁盘驱动器，它允许您将驱动器上的已满磁盘透明地替换为空磁盘。 备份磁盘可以是服务器上的本地磁盘，也可以是作为共享网络资源的远程磁盘。 有关如何使用远程磁盘的信息，请参阅本主题后面的 [备份到网络共享文件](#NetworkShare)。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理工具在处理磁盘备份设备时非常灵活，因为它们会自动生成一个带时间戳的磁盘文件名称。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工具在处理磁盘备份设备时非常灵活，因为它们会自动生成标有时间戳的磁盘文件名称。  
   
 > [!IMPORTANT]  
 >  我们建议备份磁盘应不同于数据库数据和日志的磁盘。 这是数据或日志磁盘出现故障时访问备份数据必不可少的。  
   
-###  <a name="BackupFileUsingPhysicalName"></a>使用其物理名称指定备份文件（Transact-sql）  
+###  <a name="specifying-a-backup-file-by-using-its-physical-name-transact-sql"></a><a name="BackupFileUsingPhysicalName"></a>使用其物理名称指定备份文件（Transact-sql）  
  使用物理设备名称指定备份文件的基本 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 语法为：  
   
  BACKUP DATABASE *database_name*  
@@ -109,7 +109,7 @@ RESTORE DATABASE AdventureWorks2012
    FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak';   
 ```  
   
-###  <a name="BackupFileDiskPath"></a>指定磁盘备份文件的路径  
+###  <a name="specifying-the-path-of-a-disk-backup-file"></a><a name="BackupFileDiskPath"></a>指定磁盘备份文件的路径  
  指定备份文件时，应输入其完整路径和文件名。 如果您在备份到文件时仅指定文件名或相对路径，则备份文件将存储到默认备份目录中。 默认备份目录为 C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup，其中 *n* 是服务器实例号。 因此，对于默认服务器实例，默认备份目录为：C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup。  
   
  为防止产生歧义，尤其是在脚本中，我们建议您在每个 DISK 子句中显式指定备份目录的路径。 但是，当您使用查询编辑器时这一点不再那么重要。 此时，如果您确定备份文件位于默认备份目录中，则可以省略 DISK 子句中的路径。 例如，下面的 `BACKUP` 语句将 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库备份到默认的备份目录中。  
@@ -123,7 +123,7 @@ GO
 > [!NOTE]  
 >  默认位置存储在 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer** 下的 **BackupDirectory**注册表项中。  
   
-###  <a name="NetworkShare"></a>备份到网络共享上的文件  
+###  <a name="backing-up-to-a-file-on-a-network-share"></a><a name="NetworkShare"></a>备份到网络共享上的文件  
  要让 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问远程磁盘文件， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户必须有权访问网络共享。 这包括备份操作向网络共享中写入所需的权限以及还原操作从网络共享中读取所需的权限。 网络驱动器和权限的可用性取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务运行的环境：  
   
 -   若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用域用户帐户运行时备份到网络驱动器，共享驱动器必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 运行的会话中作为网络驱动器进行映射。 如果是通过命令行启动 Sqlservr.exe 的，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以看到在登录会话中映射的所有网络驱动器。  
@@ -146,7 +146,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-##  <a name="TapeDevices"></a>使用磁带设备  
+##  <a name="using-tape-devices"></a><a name="TapeDevices"></a>使用磁带设备  
   
 > [!NOTE]  
 >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中将不再支持磁带备份设备。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。  
@@ -155,7 +155,7 @@ GO
   
 -   [使用物理名称指定备份磁带 (Transact-SQL)](#BackupTapeUsingPhysicalName)  
   
--   [磁带专用的 BACKUP 选项和 RESTORE 选项 (Transact-SQL)](#TapeOptions)  
+-   [特定于磁带的备份和还原选项（Transact-sql）](#TapeOptions)  
   
 -   [管理打开的磁带](#OpenTapes)  
   
@@ -169,7 +169,7 @@ GO
   
 -   如果磁带备份设备在备份操作过程中已满，但还必须写入一些数据，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将提示更换新磁带并在加载新磁带后继续备份操作。  
   
-###  <a name="BackupTapeUsingPhysicalName"></a>使用物理名称指定备份磁带（Transact-sql）  
+###  <a name="specifying-a-backup-tape-by-using-its-physical-name-transact-sql"></a><a name="BackupTapeUsingPhysicalName"></a>使用物理名称指定备份磁带（Transact-sql）  
  使用磁带机物理设备名称指定备份磁带的基本 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 语法为：  
   
  BACKUP { DATABASE | LOG } *database_name*  
@@ -190,7 +190,7 @@ GO
   
  从磁带**=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
-###  <a name="TapeOptions"></a>特定于磁带的备份和还原选项（Transact-sql）  
+###  <a name="tape-specific-backup-and-restore-options-transact-sql"></a><a name="TapeOptions"></a>特定于磁带的备份和还原选项（Transact-sql）  
  为了便于磁带管理，BACKUP 语句提供了下列磁带专用的选项：  
   
 -   { NOUNLOAD | **UNLOAD** }  
@@ -204,7 +204,7 @@ GO
 > [!NOTE]  
 >  有关 BACKUP 语法和参数的详细信息，请参阅 [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)。 有关 RESTORE 语法和参数的详细信息，请分别参阅 [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql) 和 [RESTORE 参数 (Transact-SQL)](/sql/t-sql/statements/restore-statements-arguments-transact-sql)。  
   
-###  <a name="OpenTapes"></a>管理打开的磁带  
+###  <a name="managing-open-tapes"></a><a name="OpenTapes"></a>管理打开的磁带  
  若要查看打开的磁带设备列表以及装入请求状态，请查询 [sys.dm_io_backup_tapes](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql) 动态管理视图。 此视图显示了所有打开的磁带。 其中包括正在使用的磁带，它们等待下一个 BACKUP 或 RESTORE 操作时暂时处于空闲状态。  
   
  如果意外使磁带处于打开状态，则释放磁带的最快方法是使用以下命令： RESTORE REWINDONLY FROM 磁带**=** _backup_device_name_。 有关详细信息，请参阅 [RESTORE REWINDONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql)。  
@@ -212,7 +212,7 @@ GO
 ## <a name="using-the-azure-blob-storage-service"></a>使用 Azure Blob 存储服务  
  可以将 SQL Server 备份写入 Azure Blob 存储服务。  有关如何使用 Azure Blob 存储服务进行备份的详细信息，请参阅[使用 Azure Blob 存储服务进行备份和还原 SQL Server](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
-##  <a name="LogicalBackupDevice"></a>使用逻辑备份设备  
+##  <a name="using-a-logical-backup-device"></a><a name="LogicalBackupDevice"></a>使用逻辑备份设备  
  “逻辑备份设备 ** ”是指向特定物理备份设备（磁盘文件或磁带机）的可选用户定义名称。 通过逻辑备份设备，您可以在引用相应的物理备份设备时使用间接寻址。  
   
  定义逻辑备份设备涉及为物理设备分配逻辑名称。 例如，逻辑设备 AdventureWorksBackups 可能被定义为指向 Z:\SQLServerBackups\AdventureWorks2012.bak 文件或 \\\\.\tape0 磁带驱动器。 备份和还原命令随后可以将 AdventureWorksBackups 指定为备份设备，而不是指定 DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak' 或 TAPE = '\\\\.\tape0'。  
@@ -238,25 +238,25 @@ GO
   
 2.  定义新的逻辑备份设备，新设备使用原来的逻辑设备名称，但映射到不同的物理备份设备。 逻辑备份设备对于标识磁带备份设备尤为有用。  
   
-##  <a name="MirroredMediaSets"></a>镜像备份介质集  
+##  <a name="mirrored-backup-media-sets"></a><a name="MirroredMediaSets"></a>镜像备份介质集  
  镜像备份介质集可减小备份设备故障的影响。 由于备份是防止数据丢失的最后防线，因此备份设备出现故障的后果是非常严重的。 随着数据库不断增大，备份设备或介质发生故障致使备份不可还原的可能性也相应增加。 镜像备份介质通过提供物理备份设备冗余来提高备份的可靠性。 有关详细信息，请参阅本主题后面的 [镜像备份媒体集 (SQL Server)](mirrored-backup-media-sets-sql-server.md)不熟悉的读者。  
   
 > [!NOTE]  
 >  只有 [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] 和更高版本支持镜像备份介质集。  
   
-##  <a name="Archiving"></a>存档 SQL Server 备份  
+##  <a name="archiving-sql-server-backups"></a><a name="Archiving"></a>存档 SQL Server 备份  
  建议您使用文件系统备份实用工具对磁盘备份数据进行存档，并将存档存储在另一个位置。 使用磁盘的优点是您可以使用网络将已存档的备份数据写入另一个位置的磁盘。 Azure Blob 存储服务可作为站外存档选项。  可以上载磁盘备份，或直接将备份写入 Azure Blob 存储服务。  
   
  另一个常用的存档方法是将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份写入本地备份磁盘，将备份存档到磁带，然后在将磁带存储在站外位置。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **指定磁盘设备 (SQL Server Management Studio)**  
   
--   [将磁盘或磁带指定为备份目标 &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [将磁盘或磁带指定为备份目标 (SQL Server)](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
- **指定磁带设备（SQL Server Management Studio）**  
+ **指定磁带设备 (SQL Server Management Studio)**  
   
--   [将磁盘或磁带指定为备份目标 &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [将磁盘或磁带指定为备份目标 (SQL Server)](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
  **定义逻辑备份设备**  
   
@@ -270,9 +270,9 @@ GO
   
  **使用逻辑备份设备**  
   
--   [将磁盘或磁带指定为备份目标 &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [将磁盘或磁带指定为备份目标 (SQL Server)](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
--   [从设备还原备份 &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
+-   [从设备还原备份 (SQL Server)](restore-a-backup-from-a-device-sql-server.md)  
   
 -   [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)  
   
@@ -290,17 +290,17 @@ GO
   
 -   [sp_dropdevice (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dropdevice-transact-sql)  
   
--   [删除备份设备 &#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
+-   [删除备份设备 (SQL Server)](delete-a-backup-device-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server，备份设备对象](../performance-monitor/sql-server-backup-device-object.md)   
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [维护计划](../maintenance-plans/maintenance-plans.md)   
- [媒体集、媒体簇和备份集 (SQL Server)](media-sets-media-families-and-backup-sets-sql-server.md)   
+ [介质集、介质簇和备份集 &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [RESTORE LABELONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)   
- [sys.backup_devices (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-backup-devices-transact-sql)   
+ [RESTORE LABELONLY &#40;Transact-sql&#41;](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)   
+ [sys. backup_devices &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-backup-devices-transact-sql)   
  [sys. dm_io_backup_tapes &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql)   
- [镜像备份介质集 &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)  
+ [镜像备份媒体集 (SQL Server)](mirrored-backup-media-sets-sql-server.md)  
   
   

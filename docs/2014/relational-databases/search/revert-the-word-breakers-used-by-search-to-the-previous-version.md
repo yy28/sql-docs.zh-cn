@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9e0eadbbc2d126a001057cf5f9d0e17211c0a93e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874723"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>将搜索功能所使用的断字符还原到以前的版本
@@ -32,7 +32,7 @@ ms.locfileid: "70874723"
   
  有关断字符和词干分析器的一般信息，请参阅 [配置和管理断字符和词干分析器以便搜索](configure-and-manage-word-breakers-and-stemmers-for-search.md)。  
   
-##  <a name="overview"></a> 恢复和还原断字符和词干分析器概述  
+##  <a name="overview-of-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="overview"></a> 恢复和还原断字符和词干分析器概述  
  还原和恢复断字符和词干分析器的说明取决于语言。 下表总结了还原为以前的组件版本可能需要的 3 组操作。  
   
 |当前文件|以前的文件|受影响语言的数目|针对文件的操作|针对注册表项的操作|  
@@ -48,7 +48,7 @@ ms.locfileid: "70874723"
   
  `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn`  
   
-##  <a name="nl6nl6"></a> 当前和以前的断字符的文件名均为 NaturalLanguage6.dll 的语言  
+##  <a name="languages-for-which-the-file-name-of-both-the-current-and-previous-word-breaker-is-naturallanguage6dll"></a><a name="nl6nl6"></a> 当前和以前的断字符的文件名均为 NaturalLanguage6.dll 的语言  
  对于下表中的语言，当前和以前的断字符的文件名均为 NaturalLanguage6.dll。 若要还原或恢复这些组件，您必须使用同一文件的不同版本覆盖 NaturalLanguage6.dll。 您不必更改任何注册表项，因为对于此版本，未更改这些注册表项。  
   
 > [!WARNING]  
@@ -95,7 +95,7 @@ ms.locfileid: "70874723"
   
  前面的表在缩写列上按字母顺序排序。  
   
-###  <a name="nl6nl6revert"></a> 恢复到以前的组件  
+###  <a name="to-revert-to-the-previous-components"></a><a name="nl6nl6revert"></a> 恢复到以前的组件  
   
 1.  导航到上述 Binn 文件夹。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "70874723"
   
 4.  重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-###  <a name="nl6nl6restore"></a> 还原当前组件  
+###  <a name="to-restore-the-current-components"></a><a name="nl6nl6restore"></a> 还原当前组件  
   
 1.  导航到备份了 NaturalLanguage6.dll 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的位置。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "70874723"
   
 3.  重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-##  <a name="newnl6"></a> 仅以前的断字符的文件名为 NaturalLanguage6.dll 的语言  
+##  <a name="languages-for-which-the-file-name-of-the-previous-word-breaker-only-is-naturallanguage6dll"></a><a name="newnl6"></a> 仅以前的断字符的文件名为 NaturalLanguage6.dll 的语言  
  对于下表中的语言，以前的断字符的文件名不同于新版本的文件名。 以前的文件名为 NaturalLanguage6.dll。 若要还原为以前的版本，您必须使用同一文件的以前版本覆盖 NaturalLanguage6.dll 的当前版本。 您还必须更改一组注册表项以便指定组件的以前或当前版本。  
   
 > [!WARNING]  
@@ -139,7 +139,7 @@ ms.locfileid: "70874723"
   
  将以下说明与 [用于恢复和还原断字符和词干分析器的文件名和注册表值](#newnl6values)部分中的值列表一起使用。  
   
-###  <a name="newnl6revert"></a> 恢复到以前的组件  
+###  <a name="to-revert-to-the-previous-components"></a><a name="newnl6revert"></a> 恢复到以前的组件  
   
 1.  导航到上述 Binn 文件夹。  
   
@@ -172,7 +172,7 @@ ms.locfileid: "70874723"
   
 10. 重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-###  <a name="newnl6restore"></a> 还原当前组件  
+###  <a name="to-restore-the-current-components"></a><a name="newnl6restore"></a> 还原当前组件  
   
 1.  导航到备份了 NaturalLanguage6.dll 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的位置。  
   
@@ -201,7 +201,7 @@ ms.locfileid: "70874723"
   
 8.  重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-###  <a name="newnl6values"></a> 用于恢复和还原断字符和词干分析器的文件名和注册表值  
+###  <a name="file-names-and-registry-values-for-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="newnl6values"></a> 用于恢复和还原断字符和词干分析器的文件名和注册表值  
  将文件名和注册表项的以下列表与前一节中的说明一起使用。 使用以前的值恢复到以前的版本，或者使用当前值还原组件的当前版本。  
   
  下表是用于各语言的缩写的按字母顺序排序的列表。  
@@ -251,7 +251,7 @@ ms.locfileid: "70874723"
 |当前的 CLSID|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
 |当前文件名|MSWB7.dll|MSWB7.dll|  
   
-##  <a name="newnew"></a> 当前和以前的文件名均不是 NaturalLanguage6.dll 的语言  
+##  <a name="languages-for-which-neither-the-previous-nor-the-current-file-name-is-naturallanguage6dll"></a><a name="newnew"></a> 当前和以前的文件名均不是 NaturalLanguage6.dll 的语言  
  对于下表中的语言，以前的断字符和词干分析器的文件名不同于新版本的文件名。 当前和以前的文件名均不是 NaturalLanguage6.dll。 您不必替换任何文件，因为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序将组件的当前版本和以前版本都复制到 Binn 文件夹。 但是，您必须更改一组注册表项以便指定组件的以前或当前版本。  
   
  **受影响的语言的列表**  
@@ -269,7 +269,7 @@ ms.locfileid: "70874723"
   
  将以下说明与 [用于恢复和还原断字符和词干分析器的文件名和注册表值](#newnewvalues)部分中的值列表一起使用。  
   
-###  <a name="newnewrevert"></a> 恢复到以前的组件  
+###  <a name="to-revert-to-the-previous-components"></a><a name="newnewrevert"></a> 恢复到以前的组件  
   
 1.  不要从 Binn 文件夹中删除组件的当前版本的文件。  
   
@@ -293,7 +293,7 @@ ms.locfileid: "70874723"
   
 7.  重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-###  <a name="newnewrestore"></a> 还原以前的组件  
+###  <a name="to-restore-the-previous-components"></a><a name="newnewrestore"></a> 还原以前的组件  
   
 1.  不要从 Binn 文件夹中删除组件的以前版本的文件。  
   
@@ -317,7 +317,7 @@ ms.locfileid: "70874723"
   
 7.  重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-###  <a name="newnewvalues"></a> 用于恢复和还原断字符和词干分析器的文件名和注册表值  
+###  <a name="file-names-and-registry-values-for-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="newnewvalues"></a> 用于恢复和还原断字符和词干分析器的文件名和注册表值  
  将文件名和注册表项的以下列表与前一节中的说明一起使用。 使用以前的值恢复到以前的版本，或者使用当前值还原组件的当前版本。  
   
  下表是用于各语言的缩写的按字母顺序排序的列表。  

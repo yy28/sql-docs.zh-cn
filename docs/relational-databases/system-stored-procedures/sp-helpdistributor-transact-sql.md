@@ -16,10 +16,10 @@ ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8333e805c50f4b8084f8463877c361917097b547
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70745385"
 ---
 # <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
@@ -82,7 +82,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |**发行人**|**sysname**|分发服务器的名称。|  
 |**分发数据库**|**sysname**|分发数据库的名称。|  
 |**文件夹**|**nvarchar(255)**|工作目录的名称。|  
-|**账号**|**nvarchar(255)**|Windows 用户帐户的名称。|  
+|**帐户登录**|**nvarchar(255)**|Windows 用户帐户的名称。|  
 |**min distrib retention**|**int**|最小分发保持期。|  
 |**max distrib retention**|**int**|最大分发保持期。|  
 |**history retention**|**int**|历史记录保持期。|  
@@ -105,7 +105,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 |结果集列|Output 参数|  
 |-----------------------|----------------------|  
-|帐户|**\@账号**|  
+|account|**\@账号**|  
 |min distrib retention|**\@min_distretention**|  
 |max distrib retention|**\@max_distretention**|  
 |history retention|**\@history_retention**|  
@@ -115,7 +115,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
  以下结果集列返回给分发服务器上的某个发布的发布访问列表中的用户:  
   
--   目录  
+-   directory  
   
  以下结果集列返回给所有用户。  
   

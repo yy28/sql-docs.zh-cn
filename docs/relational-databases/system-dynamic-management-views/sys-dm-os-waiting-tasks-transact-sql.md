@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c0a89a48fa960812ee955cd3b7ecb30069161f61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72260381"
 ---
 # <a name="sysdm_os_waiting_tasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
@@ -41,13 +41,13 @@ ms.locfileid: "72260381"
 |**session_id**|**smallint**|与任务关联的会话的 ID。|  
 |**exec_context_id**|**int**|与任务关联的执行上下文的 ID。|  
 |**wait_duration_ms**|**bigint**|此等待类型的总等待时间（毫秒）。 此时间包含**signal_wait_time**。|  
-|**wait_type**|**nvarchar （60）**|等待类型的名称。|  
+|**wait_type**|**nvarchar(60)**|等待类型的名称。|  
 |**resource_address**|**varbinary(8)**|任务等待的资源的地址。|  
 |**blocking_task_address**|**varbinary(8)**|当前持有此资源的任务。|  
 |**blocking_session_id**|**smallint**|正在阻塞请求的会话的 ID。 如果此列为 NULL，则表示请求未被阻塞，或锁定会话的会话信息不可用（或无法进行标识）。<br /><br /> -2 = 阻塞资源由孤立的分布式事务拥有。<br /><br /> -3 = 阻塞资源由延迟的恢复事务拥有。<br /><br /> -4 = 由于内部闩锁状态转换而无法确定阻塞闩锁所有者的会话 ID。|  
 |**blocking_exec_context_id**|**int**|正在阻塞的任务的执行上下文 ID。|  
 |**resource_description**|**nvarchar （3072）**|对正在占用的资源的说明。 有关详细信息，请参阅下面的列表。|  
-|pdw_node_id |**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|**pdw_node_id**|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="resource_description-column"></a>resource_description 列  
  resource_description 列具有以下可能值。  

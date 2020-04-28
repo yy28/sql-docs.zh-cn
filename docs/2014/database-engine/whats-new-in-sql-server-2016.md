@@ -14,62 +14,57 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 5e51cda61bb44d1f143cab50901276b927cca73a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176077"
 ---
 # <a name="what39s-new-database-engine"></a>新增功能&#39;（数据库引擎）
   这一最新版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]引入了一些新功能和增强功能，这些功能可以提高设计、开发和维护数据存储系统的架构师、开发人员和管理员的能力和工作效率。 以下是[!INCLUDE[ssDE](../includes/ssde-md.md)]已增强的方面。  
   
-##  <a name="Feature"></a>数据库引擎功能增强  
+##  <a name="database-engine-feature-enhancements"></a><a name="Feature"></a>数据库引擎功能增强  
   
-###  <a name="MemoryOpt"></a>内存优化表  
+###  <a name="memory-optimized-tables"></a><a name="MemoryOpt"></a>内存优化表  
  内存中 OLTP 是一种内存优化的数据库引擎，它集成到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 引擎中。 内存中 OLTP 已针对 OLTP 进行优化。 有关详细信息，请参阅[内存中 OLTP&#40;内存中优化&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
  
   
-###  <a name="DataFiles"></a>SQL Server Azure 中的数据文件  
+###  <a name="sql-server-data-files-in-azure"></a><a name="DataFiles"></a>SQL Server Azure 中的数据文件  
  [Azure 中的 SQL Server 数据文件](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)可为作为[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Azure blob 存储的数据库文件提供本机支持。 利用此功能，可以在本地或 Azure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的虚拟机中创建运行的数据库，并在 Azure Blob 存储中为数据创建专用存储位置。  
   
   
-###  <a name="AzureVM"></a>在 Azure 虚拟机中托管 SQL Server 数据库  
+###  <a name="host-a-sql-server-database-in-an-azure-virtual-machine"></a><a name="AzureVM"></a>在 Azure 虚拟机中托管 SQL Server 数据库  
  使用 "将[SQL Server 数据库部署到 Azure 虚拟机](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx)向导" 可[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]在 azure 虚拟机中的实例中承载数据库。  
   
   
-###  <a name="Backup"></a>备份和还原增强功能  
- 
-  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 包含针对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 备份和还原的以下增强功能：  
+###  <a name="backup-and-restore-enhancements"></a><a name="Backup"></a>备份和还原增强功能  
+ [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 包含针对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 备份和还原的以下增强功能：  
   
--   **SQL Server 的 URL 备份**  
+-   **SQL Server 备份到 URL**  
   
-     
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 备份到 URL 功能是在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP1 CU2 中引入的，只有 [!INCLUDE[tsql](../includes/tsql-md.md)]、PowerShell 和 SMO 支持这一功能。 在[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]中，你[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]可以使用备份到 Azure Blob 存储服务或从中进行还原。 “备份”任务和维护计划都可使用该新选项。 有关详细信息，请参阅[在 SQL Server Management Studio 中使用备份任务](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS)、[使用维护计划向导 SQL SERVER 备份到 URL](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)，以及[使用 SQL Server Management Studio 从 Azure 存储还原](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)。  
+     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 备份到 URL 功能是在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP1 CU2 中引入的，只有 [!INCLUDE[tsql](../includes/tsql-md.md)]、PowerShell 和 SMO 支持这一功能。 在[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]中，你[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]可以使用备份到 Azure Blob 存储服务或从中进行还原。 “备份”任务和维护计划都可使用该新选项。 有关详细信息，请参阅[在 SQL Server Management Studio 中使用备份任务](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS)、[使用维护计划向导 SQL SERVER 备份到 URL](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)，以及[使用 SQL Server Management Studio 从 Azure 存储还原](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)。  
   
--   **针对 Azure 的 SQL Server 托管备份**  
+-   **将托管备份 SQL Server 到 Azure**  
   
-     基于[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]备份到 URL， [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]是一种提供的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]服务，用于管理和计划数据库和日志备份。 在此版本中，仅支持备份到 Azure 存储。 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]可在数据库和实例级别同时进行配置，从而既能实现在数据库级别的精细控制，又能实现实例级别的自动化。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]可在本地运行[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的实例和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Azure 虚拟机上运行的实例上进行配置。 建议用于在 Azure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]虚拟机上运行的实例。 有关详细信息，请参阅[SQL Server 托管备份到 Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)。  
+      是基于  备份到 URL 这一功能构建的服务， 提供这种服务来管理和安排数据库和日志的备份。 在此版本中，仅支持备份到 Azure 存储。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]可在数据库和实例级别同时进行配置，从而既能实现在数据库级别的精细控制，又能实现实例级别的自动化。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]可在本地运行[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的实例和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Azure 虚拟机上运行的实例上进行配置。 建议用于在 Azure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]虚拟机上运行的实例。 有关详细信息，请参阅[SQL Server 托管备份到 Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)。  
   
 -   **备份的加密**  
   
      您现在可以选择在备份过程中对备份文件进行加密。  目前支持的加密算法包括 AES 128、AES 192、AES 256 和 Triple DES。 要在备份过程中执行加密，您必须使用证书或非对称密钥。 有关详细信息，请参阅[备份加密](../relational-databases/backup-restore/backup-encryption.md)。  
   
   
-###  <a name="CE"></a>基数估算的新设计  
+###  <a name="new-design-for-cardinality-estimation"></a><a name="CE"></a>基数估算的新设计  
  称作基数估计器的基数估计逻辑已在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中重新设计，以便改进查询计划的质量，并因此改进查询性能。 新的基数估计器纳入在新型 OLTP 和数据仓库工作负荷中表现优异的假设和算法。 它基于针对新型工作负荷的深入基数估计研究，以及我们在过去 15 年在改进 SQL Server 基数估计器方面的学习。 客户反馈表明，尽管大多数查询将会从更改或保持不更改中受益，但与以前的基数估计器相比，少数查询可能会显得退步。 有关性能优化和测试建议，请参阅[基数估算 &#40;SQL Server&#41;](../relational-databases/performance/cardinality-estimation-sql-server.md)。  
    
   
-###  <a name="Durability"></a>延迟持续性  
- 
-  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 将部分或所有事务指定为延迟持久事务，从而能够缩短延迟。 延迟持久事务在事务日志记录写入磁盘之前将控制权归还给客户端。 持续性可在数据库级别、提交级别或原子块级别进行控制。  
+###  <a name="delayed-durability"></a><a name="Durability"></a>延迟持续性  
+ [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 将部分或所有事务指定为延迟持久事务，从而能够缩短延迟。 延迟持久事务在事务日志记录写入磁盘之前将控制权归还给客户端。 持续性可在数据库级别、提交级别或原子块级别进行控制。  
   
  有关详细信息，请参阅主题[事务持续](../relational-databases/logs/control-transaction-durability.md)性。  
   
   
-###  <a name="AlwaysOn"></a>AlwaysOn 增强功能  
- 
-  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 包含针对 AlwaysOn 故障转移群集实例和 AlwaysOn 可用性组的以下增强功能：  
+###  <a name="alwayson-enhancements"></a><a name="AlwaysOn"></a>AlwaysOn 增强功能  
+ [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 包含针对 AlwaysOn 故障转移群集实例和 AlwaysOn 可用性组的以下增强功能：  
   
 -   “添加 Azure 副本向导”简化了用于 AlwaysOn 可用性组的混合解决方案创建。 有关详细信息，请参阅[使用 "添加 Azure 副本向导" &#40;SQL Server&#41;](availability-groups/windows/use-the-add-azure-replica-wizard-sql-server.md)。  
   
@@ -84,68 +79,64 @@ ms.locfileid: "70176077"
 -   以下 Dmv 已增强，现在返回 FCI 信息： [sys. dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql)、、 [dm_hadr_cluster_members](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql)和[sys.databases。 dm_hadr_cluster_networks](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql)。  
   
   
-###  <a name="OIR"></a>分区切换和索引  
- 现在可以重新生成已分区表的单独分区。 有关详细信息，请参阅[ALTER INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)。  
+###  <a name="partition-switching-and-indexing"></a><a name="OIR"></a>分区切换和索引  
+ 现在可以重新生成已分区表的单独分区。 有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)。  
    
   
-###  <a name="Lock"></a>管理联机操作的锁优先级  
- 
-  `ONLINE = ON` 选项现在包含 `WAIT_AT_LOW_PRIORITY` 选项，该选项允许您指定重新生成过程对于所需锁应等待多长时间。 
-  `WAIT_AT_LOW_PRIORITY` 选项还允许您配置与该重新生成语句相关的阻止过程的终止。 有关详细信息，请参阅 [ALTER TABLE (Transact-SQL) ](/sql/t-sql/statements/alter-table-transact-sql) 和 [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)。 有关新类型锁定状态的故障排除信息，请访问[sys. dm_tran_locks &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)和[sys. dm_os_wait_stats &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql)。  
+###  <a name="managing-the-lock-priority-of-online-operations"></a><a name="Lock"></a>管理联机操作的锁优先级  
+ `ONLINE = ON` 选项现在包含 `WAIT_AT_LOW_PRIORITY` 选项，该选项允许您指定重新生成过程对于所需锁应等待多长时间。 `WAIT_AT_LOW_PRIORITY` 选项还允许您配置与该重新生成语句相关的阻止过程的终止。 有关详细信息，请参阅 [ALTER TABLE (Transact-SQL) ](/sql/t-sql/statements/alter-table-transact-sql) 和 [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)。 有关新类型锁定状态的故障排除信息，请访问[sys. dm_tran_locks &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)和[sys. dm_os_wait_stats &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql)。  
  
   
-###  <a name="CCI"></a>列存储索引  
+###  <a name="columnstore-indexes"></a><a name="CCI"></a>列存储索引  
  这些新功能可供列存储索引使用：  
   
 -   **聚集列存储索引**  
   
      使用聚集列存储索引可提高主要执行大容量加载和只读查询的数据仓库工作负荷的数据压缩和查询性能。 由于聚集列存储索引是可更新的，因此工作负荷可执行许多插入、更新和删除操作。 有关详细信息，请参阅描述和[使用聚集列存储索引](../relational-databases/indexes/indexes.md)的[列存储索引](../relational-databases/indexes/columnstore-indexes-described.md)。  
   
--   **SHOWPLAN**  
+-   **显示**  
   
-     SHOWPLAN 显示有关列存储索引的信息。 **EstimatedExecutionMode**和**ActualExecutionMode**属性具有两个可能的值： **Batch**或**Row**。  
-  **Storage** 属性具有两个可能值：**RowStore** 和 **ColumnStore**。  
+     SHOWPLAN 显示有关列存储索引的信息。 **EstimatedExecutionMode**和**ActualExecutionMode**属性具有两个可能的值： **Batch**或**Row**。  **Storage** 属性具有两个可能值：**RowStore** 和 **ColumnStore**。  
   
 -   **存档的数据压缩**  
   
-     更改索引 .。。重新生成具有新的 COLUMNSTORE_ARCHIVE 数据压缩选项，可进一步压缩列存储索引的指定分区。 这可用于存档，或者用于要求更小数据存储大小并且可以付出更多时间来进行存储和检索的其他情形。 有关详细信息，请参阅[ALTER INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)。  
+     更改索引 .。。重新生成具有新的 COLUMNSTORE_ARCHIVE 数据压缩选项，可进一步压缩列存储索引的指定分区。 这可用于存档，或者用于要求更小数据存储大小并且可以付出更多时间来进行存储和检索的其他情形。 有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)。  
    
   
-###  <a name="Buffer"></a>缓冲池扩展  
+###  <a name="buffer-pool-extension"></a><a name="Buffer"></a>缓冲池扩展  
  [缓冲池扩展](configure-windows/buffer-pool-extension.md)提供固态硬盘（SSD）的无缝集成作为[!INCLUDE[ssDE](../includes/ssde-md.md)]缓冲池的非易失性随机存取内存（NvRAM）扩展，从而显著提高 i/o 吞吐量。  
    
   
-###  <a name="Stats"></a>增量统计信息  
+###  <a name="incremental-statistics"></a><a name="Stats"></a>增量统计信息  
  CREATE STATISTICS 和相关统计信息语句现在允许通过使用 INCREMENTAL 选项创建按分区的统计信息。 相关语句允许或报告增量统计信息。 受影响的语法包括更新统计信息、sp_createstats、CREATE INDEX、ALTER INDEX、ALTER DATABASE SET 选项、DATABASEPROPERTYEX、sys.databases 和 sys.databases。有关详细信息，请参阅[CREATE STATISTICS &#40;transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql)。  
   
   
-###  <a name="RG"></a>物理 IO 控制 Resource Governor 增强功能  
+###  <a name="resource-governor-enhancements-for-physical-io-control"></a><a name="RG"></a>物理 IO 控制 Resource Governor 增强功能  
  通过资源调控器，您可以指定针对传入应用程序请求可在资源池内使用的 CPU、物理 IO 和内存的使用量的限制。 在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中，您可以使用新的 MIN_IOPS_PER_VOLUME 和 MAX_IOPS_PER_VOLUME 设置控制某一给定资源池向用户线程发出的物理 IO 数。 有关详细信息，请参阅[Resource Governor 资源池](../relational-databases/resource-governor/resource-governor-resource-pool.md)和[&#40;TRANSACT-SQL&#41;创建资源池](/sql/t-sql/statements/create-resource-pool-transact-sql)。  
   
  ALTER RESOURCE GOVENOR 的 MAX_OUTSTANDING_IO_PER_VOLUME 设置可设置每个磁盘卷的最大待定 I/O 操作数 (IOPS)。 可以使用此设置根据某一磁盘卷的 IO 特性调整 IO 资源控制，并且可用于在 SQL Server 实例边界限制发出的 IO 数目。 有关详细信息，请参阅 [ALTER RESOURCE GOVERNOR (Transact-SQL)](/sql/t-sql/statements/alter-resource-governor-transact-sql)。  
   
   
-###  <a name="OnlineEvent"></a>Online Index Operation 事件类  
+###  <a name="online-index-operation-event-class"></a><a name="OnlineEvent"></a>Online Index Operation 事件类  
  联机索引操作事件类的进度报告现在具有两个新数据列： **PartitionId**和**PartitionNumber**。 有关详细信息，请参阅[进度报告： Online Index Operation 事件类](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md)。  
   
   
-###  <a name="Compat"></a>数据库兼容性级别  
+###  <a name="database-compatibility-level"></a><a name="Compat"></a>数据库兼容性级别  
  90 兼容性级别在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中无效。 有关详细信息，请参阅[ALTER DATABASE 兼容级别 &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
   
-##  <a name="TSQL"></a>Transact-sql 增强功能  
+##  <a name="transact-sql-enhancements"></a><a name="TSQL"></a>Transact-sql 增强功能  
   
 ### <a name="inline-specification-of-clustered-and-nonclustered"></a>CLUSTERED 和 NONCLUSTERED 的内联规范  
  对于基于磁盘的表，现在允许 `CLUSTERED` 和 `NONCLUSTERED` 索引的内联规范。 创建具有内联索引的表等效于发布一个 create table 命令，后随 `CREATE INDEX` 语句。 内联索引不支持包含列和筛选条件。  
   
 ### <a name="select--into"></a>选择 .。。为  
- 
-  `SELECT ... INTO` 语句得到了改进，现在可以并行操作。 数据库的兼容性级别必须至少为 110。  
+ `SELECT ... INTO` 语句得到了改进，现在可以并行操作。 数据库的兼容性级别必须至少为 110。  
   
-### <a name="includetsqlincludestsql-mdmd-enhancements-for-in-memory-oltp"></a>针对内存中 OLTP 的 [!INCLUDE[tsql](../includes/tsql-md.md)] 增强功能  
+### <a name="tsql-enhancements-for-in-memory-oltp"></a>针对内存中 OLTP 的 [!INCLUDE[tsql](../includes/tsql-md.md)] 增强功能  
  有关支持内存中[!INCLUDE[tsql](../includes/tsql-md.md)] oltp 的更改的信息，请参阅对[内存中 Oltp 的 transact-sql 支持](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)。  
   
   
-##  <a name="SystemTable"></a>系统视图增强功能  
+##  <a name="system-view-enhancements"></a><a name="SystemTable"></a>系统视图增强功能  
   
 ### <a name="sysxml_indexes"></a>sys.xml_indexes  
  [xml_indexes &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-xml-indexes-transact-sql)包含3个新列： `xml_index_type`、 `xml_index_type_description`和。 `path_id`  
@@ -163,7 +154,7 @@ ms.locfileid: "70176077"
  有关支持内存中 OLTP 的系统视图增强功能的信息，请参阅[内存中 oltp 的系统视图、存储过程、dmv 和等待类型](../../2014/database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md)。  
    
   
-##  <a name="Security"></a>安全增强功能  
+##  <a name="security-enhancements"></a><a name="Security"></a> 安全性改进  
   
 ### <a name="connect-any-database-permission"></a>CONNECT ANY DATABASE 权限  
  新的服务器级权限。 将 CONNECT ANY DATABASE 授予某个登录名，该登录名必须连接到当前存在的所有数据库和将来可能创建的任何新数据库。**** 不要在任何数据库中授予超过连接的任何权限。 结合**SELECT ALL USER 安全对象**或`VIEW SERVER STATE` ，以允许审核进程查看实例上的所有数据或所有数据库状态[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
@@ -175,11 +166,11 @@ ms.locfileid: "70176077"
  新的服务器级权限。 授予后，作者等登录名可以查看用户可连接到的所有数据库中的数据。  
   
   
-##  <a name="Deployment"></a>部署增强功能  
+##  <a name="deployment-enhancements"></a><a name="Deployment"></a>部署增强功能  
 ### <a name="azure-vm"></a>Azure VM
 将[SQL Server 数据库部署到 Microsoft Azure 虚拟机](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)，可以将[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据库部署到 Azure VM。  
 
-### <a name="refs"></a>引用
+### <a name="refs"></a>ReFS
 现在支持在 ReFS 上部署数据库。   
   
 ## <a name="see-also"></a>另请参阅  

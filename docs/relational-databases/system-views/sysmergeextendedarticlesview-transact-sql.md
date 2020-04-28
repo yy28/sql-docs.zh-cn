@@ -18,10 +18,10 @@ ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 576fe599772454cb0cc8a01bf28c530f5cdfb13b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72278171"
 ---
 # <a name="sysmergeextendedarticlesview-transact-sql"></a>sysmergeextendedarticlesview (Transact-SQL)
@@ -31,8 +31,8 @@ ms.locfileid: "72278171"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**路径名**|**sysname**|项目的名称。|  
-|type |**tinyint**|指示项目类型，可以为下列类型之一：<br /><br /> **10** = 表。<br /><br /> **32** = 仅处理器架构。<br /><br /> **64** = 仅查看架构或仅索引视图架构。<br /><br /> **128** = 仅函数架构。<br /><br /> **160** = 仅限同义词架构。|  
+|name |**sysname**|项目的名称。|  
+|**type**|**tinyint**|指示项目类型，可以为下列类型之一：<br /><br /> **10** = 表。<br /><br /> **32** = 仅处理器架构。<br /><br /> **64** = 仅查看架构或仅索引视图架构。<br /><br /> **128** = 仅函数架构。<br /><br /> **160** = 仅限同义词架构。|  
 |**objid**|**int**|发布服务器对象的标识符。|  
 |**sync_objid**|**int**|表示同步数据集的视图标识符。|  
 |**view_type**|**tinyint**|视图类型：<br /><br /> **0** = 不是视图;使用所有基对象。<br /><br /> **1** = 永久视图。<br /><br /> **2** = 临时视图。|  
@@ -42,7 +42,7 @@ ms.locfileid: "72278171"
 |**pubid**|**uniqueidentifier**|当前项目所属发布的 ID。|  
 |**昵称**|**int**|项目标识的别名映射。|  
 |**column_tracking**|**int**|指示是否为项目实现列跟踪。|  
-|**状态值**|**tinyint**|指示项目的状态，可以为下列状态之一：<br /><br /> **1** = 未同步-用于发布表的初始处理脚本将在下一次运行快照代理时运行。<br /><br /> **2** = 活动-已运行发布表的初始处理脚本。<br /><br /> **5** = 要添加 New_inactive。<br /><br /> **6** = New_active。|  
+|**status**|**tinyint**|指示项目的状态，可以为下列状态之一：<br /><br /> **1** = 未同步-用于发布表的初始处理脚本将在下一次运行快照代理时运行。<br /><br /> **2** = 活动-已运行发布表的初始处理脚本。<br /><br /> **5** = 要添加 New_inactive。<br /><br /> **6** = New_active。|  
 |**conflict_table**|**sysname**|包含当前项目冲突记录的本地表的名称。 该表仅用于提供信息，其内容可以由自定义冲突解决例程修改或删除，或直接由系统管理员修改或删除。|  
 |**creation_script**|**nvarchar(255)**|此项目的创建脚本。|  
 |**conflict_script**|**nvarchar(255)**|此项目的冲突脚本。|  
@@ -54,7 +54,7 @@ ms.locfileid: "72278171"
 |**schema_option**|**binary （8）**|有关*schema_option*的支持值，请参阅[sp_addmergearticle &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。|  
 |**destination_object**|**sysname**|在订阅服务器上创建的表的名称。|  
 |**resolver_clsid**|**nvarchar(50)**|自定义冲突解决程序的 ID。|  
-|**subset_filterclause**|**nvarchar （1000）**|此项目的筛选子句。|  
+|**subset_filterclause**|**nvarchar(1000)**|此项目的筛选子句。|  
 |**missing_col_count**|**int**|缺少的列数。|  
 |**missing_cols**|**varbinary(128)**|缺少的列的位图。|  
 |**表列**|**varbinary(128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

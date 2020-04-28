@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: d3a5fab0a0502d2e6faba2f66b64ae65b995b48f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952177"
 ---
 # <a name="deployment-checklist-scale-out-by-adding-powerpivot-servers-to-a-sharepoint-2010-farm"></a>部署清单：通过将 PowerPivot 服务器添加到 SharePoint 2010 场进行扩展
@@ -22,7 +22,7 @@ ms.locfileid: "71952177"
   
  安装新的实例后，您就有了额外的容量进行 PowerPivot 数据查询或处理 PowerPivot 数据刷新作业。 此外，您也可以选择将每台服务器配置为只处理一种类型的请求：查询或数据刷新。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  已安装并已配置 SharePoint Server 2010。  
   
  已应用 SharePoint Server 2010 SP1，并且已升级场。  

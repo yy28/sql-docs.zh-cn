@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: dd4ff661a10eca71781aee9d1886e80936f6246d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952414"
 ---
 # <a name="report-manager-url-ssrs-native-mode"></a>报表管理器 URL（SSRS 本机模式）
@@ -35,14 +35,14 @@ ms.locfileid: "71952414"
  **虚拟目录**  
  指定报表管理器的虚拟目录名称。 在同一台计算机上，每个报表管理器实例只能有一个虚拟目录名称。  
   
- **Url**  
+ **URL**  
  显示为当前报表管理器实例定义的 URL。  
   
  **高级**  
  为当前报表管理器实例添加附加 URL。  
   
 ## <a name="see-also"></a>另请参阅  
- [配置 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [&#40;SSRS Configuration Manager 配置 URL&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [&#40;SSRS Configuration Manager 的配置文件中的 Url&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)   
  [配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   

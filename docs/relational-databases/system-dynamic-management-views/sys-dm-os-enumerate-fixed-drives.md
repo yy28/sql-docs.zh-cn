@@ -17,10 +17,10 @@ ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fa5834c14bfb1fafe3123c28a60359d64d059dfc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71342512"
 ---
 # <a name="sysdm_os_enumerate_fixed_drives-transact-sql"></a>sys. dm_os_enumerate_fixed_drives （Transact-sql）
@@ -44,5 +44,5 @@ SQL Server 2019 中引入。
 
 ## <a name="see-also"></a>另请参阅  
 
- [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与 i/o 相关的动态管理视图和函数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  

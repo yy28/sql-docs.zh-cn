@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: f1eb0f6892192e5ed328386e6730ec3b1c41f05b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952554"
 ---
 # <a name="deployment-checklist-reporting-services-power-view-and-powerpivot-for-sharepoint"></a>部署核对清单：Reporting Services、Power View 和 PowerPivot for SharePoint
@@ -24,10 +24,9 @@ ms.locfileid: "71952554"
   
 2.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]数据库引擎  
   
-3.  
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Reporting Services 和 Reporting Services 外接程序  
+3.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Reporting Services 和 Reporting Services 外接程序  
   
-4.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]PowerPivot for SharePoint  
+4.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot for SharePoint  
   
  安装了这些功能后，您将能够执行以下操作。  
   
@@ -42,7 +41,7 @@ ms.locfileid: "71952554"
 >   
 >  在此清单中，假定在使用 SharePoint 配置工具配置 PowerPivot for SharePoint 的过程中执行场配置步骤。 或者，可以使用 SharePoint 产品配置向导进行配置（如果您愿意采用该方法）。 这两种方法都能生成支持 PowerPivot for SharePoint 的正常运行的场。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  您必须是本地管理员才能运行 SQL Server 安装程序。  
   
  SharePoint Server 2010 企业版是 PowerPivot for SharePoint 所必需的。 您也可以使用评估企业版。  
@@ -73,9 +72,9 @@ ms.locfileid: "71952554"
 |验证场是否正常运行。|首先，请启动管理中心并确认它可用。 接下来，通过输入http://localhost打开团队网站。  您应该会看到一个 SharePoint 工作组网站。|  
 |验证 PowerPivot for SharePoint 是否正常运行。|[验证 PowerPivot for SharePoint 安装](https://docs.microsoft.com/analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation)<br /><br /> 此任务确认使用您所上载的示例工作簿进行 PowerPivot 数据访问。|  
 |运行 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 安装程序，以便安装和配置 Reporting Services 和 Reporting Services 外接程序。|[安装 SharePoint 2010 Reporting Services SharePoint 模式](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)<br /><br /> （可选）安装 Reporting Services 时，如果您想让第二个资源来承载表格数据，则可将另外一个 Analysis Services 实例添加到安装功能树中。 另外这个 Analysis Services 实例将用于承载您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中创建的表格模型数据库。 表格数据库是 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 报表的有效数据源。<br /><br /> [在表格模式下安装 Analysis Services](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services)|  
-|验证 Reporting Services 是否正常运行。|[Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)|  
+|验证 Reporting Services 是否正常运行。|[验证 Reporting Services 安装](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)|  
 |（网站管理员）配置 SharePoint 权限。|若要在 SharePoint 库中添加、编辑或删除项，必须具有参与讨论权限。 若要对存在嵌入数据的报表和 PowerPivot 工作簿进行只读访问，拥有查看级别的权限就足够了。<br /><br /> 作为外部数据源（其中，URL 工作簿是另一个工作簿或报表中的连接字符串）访问的 PowerPivot 工作簿要求具有读取权限，这种权限的级别要比查看权限高。<br /><br /> BI 语义模型连接也要求具有读取权限。 您可能需要创建新的权限级别或 SharePoint 组才能拥有正确的权限。|  
-|（网站管理员）扩展文档库|扩展文档库以使用 BI 内容类型：BI 语义模型连接、Reporting Services 共享数据源、报表生成器报表：<br /><br /> 1) <br />                    **启用内容类型管理**。 在 "共享文档" 或其他文档库的 "库" 选项卡中，单击 "**库设置**"。 在 "常规设置" 下，单击 "**高级设置**"。 在 "内容类型" 中，选择 **"是"** 以允许管理内容类型，然后单击 **"确定"**。<br /><br /> 2） <br />                    **选择 BI 内容类型**。 在 "库" 选项卡中，单击 "**库设置**"。 在 "内容类型" 下，单击 "**从现有网站内容类型添加**"。 从 "商业智能内容类型" 组中，添加 " **BI 语义模型连接文件**" 和 "**报表数据源**"。 或者，您也可以添加其他 Reporting Services 内容类型（如报表模型）以启用其他报表生成方案。<br /><br /> <br /><br /> 有关详细信息，请参阅[将 BI 语义模型连接内容类型添加到库 &#40;PowerPivot for SharePoint&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library)并[将报表服务器内容类型添加到库 &#40;Reporting Services SharePoint 集成模式&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)。|  
+|（网站管理员）扩展文档库|扩展文档库以使用 BI 内容类型：BI 语义模型连接、Reporting Services 共享数据源、报表生成器报表：<br /><br /> 1) <br />                    **启用内容类型管理**。 在 "共享文档" 或其他文档库的 "库" 选项卡中，单击 "**库设置**"。 在 "常规设置" 下，单击 "**高级设置**"。 在 "内容类型" 中，选择 **"是"** 以允许管理内容类型，然后单击 **"确定"**。<br /><br /> 2) <br />                    **选择 BI 内容类型**。 在 "库" 选项卡中，单击 "**库设置**"。 在 "内容类型" 下，单击 "**从现有网站内容类型添加**"。 从 "商业智能内容类型" 组中，添加 " **BI 语义模型连接文件**" 和 "**报表数据源**"。 或者，您也可以添加其他 Reporting Services 内容类型（如报表模型）以启用其他报表生成方案。<br /><br /> <br /><br /> 有关详细信息，请参阅[将 BI 语义模型连接内容类型添加到库 &#40;PowerPivot for SharePoint&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library)并[将报表服务器内容类型添加到库 &#40;Reporting Services SharePoint 集成模式&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)。|  
 |（网站管理员）创建用于启动 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 的数据连接文件。|必须创建作为 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 数据源的 BI 语义模型连接 (.bism) 或 Reporting Services 共享数据源 (.rsds)。 创建了数据连接文件后，可以将该数据连接作为其数据源来启动 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]。<br /><br /> [创建与 PowerPivot 工作簿的 BI 语义模型连接](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook)<br /><br /> [Create a BI Semantic Model Connection to a Tabular Model Database](../../relational-databases/databases/model-database.md)<br /><br /> 注意：由于您安装了 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 版本的 Reporting Services 并将服务器配置为共享服务，因此可以使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。 如果您安装了 Reporting Services 并为 SQL Server 2008 级别的集成配置了它，则 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 不可用。|  
   
 ## <a name="see-also"></a>另请参阅  

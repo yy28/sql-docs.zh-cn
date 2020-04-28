@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 1f0cea859e9465eebefebc061ee51107dc7844aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71713313"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>在 SQL Server 上安装 SSMA 组件（OracleToSQL）
@@ -30,14 +30,13 @@ SSMA 扩展包将**sysdb**和**ssmatesterdb**数据库添加到的指定实例[!
   
 此外，在将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]会在服务器端数据迁移引擎用于迁移数据时创建代理作业。  
   
-### <a name="prerequisites"></a>必备条件
+### <a name="prerequisites"></a>先决条件
 
 在上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装用于 Oracle 服务器组件的 SSMA 之前，请确保系统满足以下要求：  
   
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已安装实例。 SSMA 不支持 SQL Server 2008 Express Edition。
   
-- 
-  [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 或更高版本。  
+- [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 或更高版本。  
   
 - Oracle 客户端提供程序或用于 Oracle 的 OLE DB 提供程序，以及与要迁移的 Oracle 数据库的连接。 你可以从 Oracle 产品媒体或 Oracle 网站安装提供程序。  
   
@@ -63,13 +62,13 @@ SSMA 扩展包将**sysdb**和**ssmatesterdb**数据库添加到的指定实例[!
   
 3. 双击 " **SSMA For Oracle Extension Pack"。*n*。安装 .exe**。  
   
-4. 在“欢迎”页上，选择“下一步”。********  
+4. 在“欢迎”页上，选择“下一步”。    
   
 5. 在 "**最终用户许可协议**" 页上，阅读许可协议。 如果同意，请选中 "**我接受许可协议中的条款**" 复选框，然后选择 "**下一步**"。  
   
 6. 在 "**选择安装类型**" 页上，选择 "**典型**"。  
   
-7. 在 "**准备安装**" 页上，选择 "**安装**"。  
+7. 在“准备安装” **** 页上，选择“安装” ****。  
   
 8. 在 "**完成第一步安装**" 页上，选择 "**下一**步"。  
   

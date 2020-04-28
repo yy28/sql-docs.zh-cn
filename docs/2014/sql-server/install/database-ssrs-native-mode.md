@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 7dff59c26c057caec1df1f5850be41dcc6f85711
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952312"
 ---
 # <a name="database-ssrs-native-mode"></a>数据库（SSRS 本机模式）
@@ -49,7 +49,7 @@ ms.locfileid: "71952312"
  **用户名**  
  如果使用的是 Windows 凭据，请指定域用户帐户；如果使用的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据，则指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 如果使用的是 Windows 凭据，请按以下格式指定： * \<domain>\\<帐户\>*。  
   
- **权限**  
+ **密码**  
  指定帐户的密码。  
   
  **更改凭据**  
@@ -58,7 +58,7 @@ ms.locfileid: "71952312"
 ## <a name="see-also"></a>另请参阅  
  [&#40;SSRS Configuration Manager 创建本机模式报表服务器数据库&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
  [Reporting Services 配置管理器的 F1 帮助主题 &#40;SSRS 本机模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [报表服务器数据库（SSRS 本机模式）](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+ [报表服务器数据库 &#40;SSRS 本机模式&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [配置报表服务器数据库连接（SSRS 配置管理器）](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
   

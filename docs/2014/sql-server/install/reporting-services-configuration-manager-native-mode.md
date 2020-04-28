@@ -16,22 +16,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: e7b5e46b90702bf39bf2902eed3e5a6c609757e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952496"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 配置管理器（本机节点）
-  使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器可配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式安装。 如果通过使用仅安装文件选项安装报表服务器，必须使用配置管理器来配置服务器，然后才能使用服务器。 如果使用默认配置安装选项安装了报表服务器，则可以使用配置管理器来验证或修改在安装过程中指定的设置。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器可以用来配置本地或远程报表服务器实例。  
+  使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器可配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式安装。 如果通过使用仅安装文件选项安装报表服务器，必须使用配置管理器来配置服务器，然后才能使用服务器。 如果使用默认配置安装选项安装了报表服务器，则可以使用配置管理器来验证或修改在安装过程中指定的设置。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器可以用来配置本地或远程报表服务器实例。  
   
  [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]本机模式。  
   
 > [!NOTE]  
 >  从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本开始， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理员不设计用来管理 SharePoint 模式报表服务器。 SharePoint 模式通过使用 SharePoint 管理中心和 PowerShell 脚本进行管理和配置。 有关信息，请参阅[sharepoint 2010 和 sharepoint 2013&#41;&#40;Reporting Services Sharepoint 模式安装](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)。  
   
- **本节内容：**  
+ **本部分内容：**  
   
  [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
  提供有关如何修改服务帐户和密码的建议和步骤。  
@@ -67,11 +66,11 @@ ms.locfileid: "71952496"
   
 -   [要使用 Reporting Services 配置管理器的情形](#bkmk_scenarios)  
   
--   [要求](#bkmk_requirements)  
+-   [惠?](#bkmk_requirements)  
   
 -   [启动 Reporting Services 配置管理器](#bkmk_start_configuration_manager)  
   
-##  <a name="bkmk_scenarios"></a>使用方案 Reporting Services 配置管理器  
+##  <a name="scenarios-to-use-reporting-services-configuration-manager"></a><a name="bkmk_scenarios"></a>使用方案 Reporting Services 配置管理器  
  可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器执行下列任务：  
   
 -   配置报表服务器服务帐户。 此帐户最初是在安装过程中配置的，但是，如果需要更新密码或使用其他帐户，则可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器进行修改。  
@@ -80,20 +79,18 @@ ms.locfileid: "71952496"
   
 -   创建和配置报表服务器数据库。 报表服务器是一个无状态服务器，它需要将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库用于内部存储。 可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器来创建报表服务器数据库并配置与该数据库的连接。 还可以选择已包含要使用的内容的现有报表服务器数据库。  
   
--   配置本机模式扩展部署。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]支持允许多个 Report Server 实例使用单个共享 Report Server 数据库的部署拓扑。 若要部署报表服务器扩展部署，请使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器将每个报表服务器连接到共享的报表服务器数据库。  
+-   配置本机模式扩展部署。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持允许多个报表服务器实例使用一个共享报表服务器数据库的部署拓扑。 若要部署报表服务器扩展部署，请使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器将每个报表服务器连接到共享的报表服务器数据库。  
   
 -   备份、还原或替换用于加密存储的连接字符串以及凭据的对称密钥。 如果更改服务帐户或将报表服务器数据库移动到其他计算机上，则必须对对称密钥进行备份。  
   
 -   配置无人参与的执行帐户。 在计划操作过程中或用户凭据不可用时，可以使用此帐户进行远程连接。  
   
--   配置报表服务器电子邮件。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]包含一个 Report Server 电子邮件传递扩展插件，该扩展插件使用简单邮件传输协议（SMTP）将报表或报表处理通知传递到电子邮箱。 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器指定网络中用于电子邮件传递的 SMTP 服务器或网关。  
+-   配置报表服务器电子邮件。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了一个报表服务器电子邮件传递扩展插件，该插件使用简单邮件传输协议 (SMTP) 将报表或报表处理通知传递到电子邮箱。 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器指定网络中用于电子邮件传递的 SMTP 服务器或网关。  
   
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器并不帮助您管理报表服务器内容、启用额外功能或授予服务器的访问权。 完全部署要求你还使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]启用附加功能或修改默认值，并报表管理器向用户授予对服务器的访问权限。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器并不帮助您管理报表服务器内容、启用额外功能或授予服务器的访问权。 完全部署要求你还使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]启用附加功能或修改默认值，并报表管理器向用户授予对服务器的访问权限。  
   
-##  <a name="bkmk_requirements"></a>要求  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器是版本特定的。 随此版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 一起安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器不能用于配置早期版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 如果在同一计算机上并行运行新版本和旧版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，则必须使用随每个版本安装的 Reporting Service 配置管理器来配置每个实例。  
+##  <a name="requirements"></a><a name="bkmk_requirements"></a> 要求  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器是版本特定的。 随此版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 一起安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器不能用于配置早期版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 如果在同一计算机上并行运行新版本和旧版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，则必须使用随每个版本安装的 Reporting Service 配置管理器来配置每个实例。  
   
  若要使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器，必须具有以下权限：  
   
@@ -101,14 +98,13 @@ ms.locfileid: "71952496"
   
 -   您必须有权针对用于承载报表服务器数据库的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 创建数据库。  
   
--   Windows Management Instrumentation (WMI) 服务必须启用并在任何正在配置的报表服务器上运行。 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器使用报表服务器 WMI 提供程序连接至本地和远程报表服务器。 如果您正在配置远程报表服务器，则计算机必须允许远程 WMI 访问。 有关详细信息，请参阅 [配置报表服务器以进行远程管理](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)。  
+-   Windows Management Instrumentation (WMI) 服务必须启用并在任何正在配置的报表服务器上运行。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器使用报表服务器 WMI 提供程序连接至本地和远程报表服务器。 如果您正在配置远程报表服务器，则计算机必须允许远程 WMI 访问。 有关详细信息，请参阅 [配置报表服务器以进行远程管理](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)。  
   
 -   在可以连接到远程报表服务器实例并对其进行配置之前，必须使远程 Windows Management Instrumentation (WMI) 调用能够通过 Windows 防火墙。 有关详细信息，请参阅 [联机丛书中的](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md) 配置报表服务器以进行远程管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  随此版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 时，会自动安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-##  <a name="bkmk_start_configuration_manager"></a>启动 Reporting Services 配置管理器  
+##  <a name="to-start-the-reporting-services-configuration-manager"></a><a name="bkmk_start_configuration_manager"></a>启动 Reporting Services 配置管理器  
   
 #### <a name="to-start-reporting-services-configuration"></a>启动 Reporting Services 配置  
   
@@ -128,7 +124,7 @@ ms.locfileid: "71952496"
   
 4.  如果指定远程计算机，请单击 **“查找”** 以建立一个连接。  
   
-5.  在 **Report Server 在stance**中，选择要配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例。 在列表中只显示此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的报表服务器实例。 不能配置较早版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
+5.  在“报表服务器实例”**** 中，选择要配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例。 在列表中只显示此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的报表服务器实例。 不能配置较早版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
   
 6.  单击“连接”  。  
   

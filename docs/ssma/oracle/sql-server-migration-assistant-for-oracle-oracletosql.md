@@ -11,10 +11,10 @@ author: Jtoland
 ms.author: Jtoland
 manager: murato
 ms.openlocfilehash: d3b9dca69afecc78a680459caf03d085ef17857e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72251338"
 ---
 # <a name="sql-server-migration-assistant-for-oracle-oracletosql"></a>Oracle SQL Server 迁移助手（OracleToSQL）
@@ -24,7 +24,7 @@ ms.locfileid: "72251338"
   
 ## <a name="contents"></a>目录  
   
-|部分|说明|
+|节|说明|
 |-----------|---------------|
 |[SSMA for Oracle 中的新增功能](https://msdn.microsoft.com/f305ebb6-7393-4a43-abb3-6332b739d690)|此版本的 SSMA for Oracle 中的新增功能|  
 |[安装 SSMA for Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)|包含一些文章，这些文章提供了有关在运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的计算机上安装 Oracle 客户端和必备组件的 SSMA 的先决条件和说明。|  

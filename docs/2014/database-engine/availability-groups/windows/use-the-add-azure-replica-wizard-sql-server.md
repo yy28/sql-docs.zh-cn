@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90418193ac869641a20f8b0f684fc43dd46712f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175992"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>使用“添加 Azure 副本向导”(SQL Server)
@@ -28,12 +28,12 @@ ms.locfileid: "70175992"
   
      [安全性](#Security)  
   
--   **若要添加副本，请使用：**  [添加 Azure 副本向导（SQL Server Management Studio）](#SSMSProcedure)  
+-   **要添加副本，请使用：**  [添加 Azure 副本向导 (SQL Server Management Studio)](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
  如果你从未向可用性组添加过任何可用性副本，请参阅[针对 AlwaysOn 可用性组 &#40;SQL Server&#41;的先决条件、限制和建议](prereqs-restrictions-recommendations-always-on-availability.md)中的 "服务器实例" 和 "可用性组和副本" 部分。  
   
-###  <a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   
 -   您必须连接到承载当前主副本的服务器实例。  
   
@@ -43,16 +43,16 @@ ms.locfileid: "70175992"
   
 -   到可用性组侦听器的客户端必须具有 Internet 连接，才能在可用性组故障转移到 Azure 副本时保持与侦听器的连接。  
   
--   **使用完全初始数据同步的先决条件**你需要指定网络共享以便向导创建和访问备份。 对于主副本，用于启动 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的帐户必须对网络共享具有读写文件系统权限。 对于辅助副本，该帐户必须具有对网络共享区的读权限。  
+-   **使用完全初始数据同步的先决条件** 为了使该向导创建并访问备份，需要指定网络共享。 对于主副本，用于启动 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的帐户必须对网络共享具有读写文件系统权限。 对于辅助副本，该帐户必须具有对网络共享区的读权限。  
   
-     如果您无法使用该向导执行完全初始数据同步，则需要手动准备您的辅助数据库。 您可以在运行该向导之前或之后进行准备。 有关详细信息，请参阅 [为可用性组手动准备辅助数据库 (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)。  
+     如果您无法使用该向导执行完全初始数据同步，则需要手动准备您的辅助数据库。 您可以在运行该向导之前或之后进行准备。 有关详细信息，请参阅 [为可用性组手动准备辅助数据库 (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)或 PowerShell 将辅助数据库联接到 Always On 可用性组。  
   
-###  <a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> 权限  
+####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  请参阅 [Security](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md#Security)  
   
-##  <a name="SSMSProcedure"></a>使用 "添加 Azure 副本向导" （SQL Server Management Studio）  
+##  <a name="using-the-add-azure-replica-wizard-sql-server-management-studio"></a><a name="SSMSProcedure"></a>使用 "添加 Azure 副本向导" （SQL Server Management Studio）  
  可以从 [“指定副本”页](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)启动“添加 Azure 副本向导”。 有两种方法可以打开此页：  
   
 -   [使用可用性组向导 (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)  
@@ -69,7 +69,7 @@ ms.locfileid: "70175992"
   
 4.  为将承载新辅助副本的 Azure 虚拟机指定设置：  
   
-     映像  
+     图像  
      要用于 Azure 虚拟机的 SQL Server 映像的名称  
   
      VM 大小  
@@ -90,7 +90,7 @@ ms.locfileid: "70175992"
      虚拟网络子网  
      要放置 Azure 虚拟机的虚拟网络子网  
   
-     域  
+     Domain  
      要联接 Azure 虚拟机的 Active Directory (AD) 域  
   
      域用户名  
@@ -105,13 +105,13 @@ ms.locfileid: "70175992"
   
      完成 "可用性组向导" 或 "将副本添加到可用性组向导" 后，配置过程将在 Azure 中执行所有操作来创建新的 VM，将其加入 AD 域，将其添加到 Windows 群集，启用 AlwaysOn 高可用性，并将新副本添加到可用性组。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
 -   [将辅助副本添加到可用性组 (SQL Server)](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性组 &#40;SQL Server 的先决条件、限制和建议&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
- [将辅助副本添加到可用性组 (SQL Server)](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
+ [将次要副本添加到可用性组 (SQL Server)](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
   

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ee331966984a12d309e71a7040edac6343e296c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175626"
 ---
 # <a name="lesson-4-create-a-database-in-azure-storage"></a>第 4 课：在 Azure 存储中创建数据库
@@ -85,7 +85,7 @@ ms.locfileid: "70175626"
   
  ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2b.gif "SQL 14 CTP2")  
   
- **注意：** 如果对容器中的数据文件有任何活动引用，则删除关联 SQL Server 凭据的任何尝试都会失败。 同样，如果在 blob 中的特定数据库文件上已有租约并且要删除它，则需要先中断 blob 上的租约。 若要中断租约，可以使用 [租约 Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx)。  
+ **注意：** 如果当前引用了容器中的任何数据文件，则尝试删除关联的 SQL Server 凭据总是会失败。 同样，如果在 blob 中的特定数据库文件上已有租约并且要删除它，则需要先中断 blob 上的租约。 若要中断租约，可以使用 [租约 Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx)。  
   
  可使用此项新功能配置 SQL Server，以使任何 CREATE DATABASE 语句都默认使用支持云的数据库。 换句话说，你可以在 SQL Server Management Studio 服务器实例属性中设置默认数据和日志位置，因此，在创建数据库时，所有数据库文件（.mdf，.ldf）都作为页 blob 创建在 Azure 存储中。  
   

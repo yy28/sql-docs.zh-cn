@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: f985f41104dd194d851760c3d1c3e5479a65b7e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952587"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>在报表服务器上检测到自定义扩展插件（升级顾问）
@@ -28,7 +28,7 @@ ms.locfileid: "71952587"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]本机模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式。|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式。|  
   
 ## <a name="component"></a>组件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
@@ -66,7 +66,7 @@ ms.locfileid: "71952587"
   
  如果决定不继续升级，则可能决定转而迁移 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 有关迁移自定义扩展插件的步骤，请参阅本主题中的[迁移自定义扩展](#migrcustext)插件。  
   
-###  <a name="dataprocdeliver"></a>自定义数据处理或传递扩展插件  
+###  <a name="custom-data-processing-or-delivery-extensions"></a><a name="dataprocdeliver"></a>自定义数据处理或传递扩展插件  
  如果升级顾问检测到自定义数据处理或传递扩展插件，则不阻塞升级过程。 但是，在升级完成之后，可能需要先执行其他步骤，然后这些扩展插件提供的自定义功能才能工作。 例如，在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装文件夹中安装自定义扩展插件文件时，必须执行其他步骤。  
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>自定义数据处理或传递扩展插件的升级后步骤  
@@ -75,7 +75,7 @@ ms.locfileid: "71952587"
   
  有关详细信息，请参阅 SQL Server 联机丛书中的“部署数据处理扩展插件”和“实现传递扩展插件”。  
   
-###  <a name="render"></a>自定义呈现扩展插件  
+###  <a name="custom-rendering-extensions"></a><a name="render"></a>自定义呈现扩展插件  
  如果升级顾问检测到自定义呈现扩展插件，则阻塞升级过程。 通过从配置文件中删除自定义扩展插件配置项，可以继续执行升级过程。 但是，这将导致在升级完成之后自定义扩展插件对用户不可用。 如果需要在升级之后自定义呈现扩展插件，必须生成更新的呈现扩展插件，或从自定义扩展插件供应商那里获得更新的呈现扩展插件。  
   
  必须执行相应步骤才能启用升级，否则可能选择迁移 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
@@ -95,7 +95,7 @@ ms.locfileid: "71952587"
   
  有关详细信息，请参阅 SQL Server 联机丛书中的“实现呈现扩展插件”。  
   
-###  <a name="secauth2000"></a>SQL Server 2000 Report Server 上的自定义安全或身份验证扩展插件  
+###  <a name="custom-security-or-authentication-extensions-on-a-sql-server-2000-report-server"></a><a name="secauth2000"></a>SQL Server 2000 Report Server 上的自定义安全或身份验证扩展插件  
  如果升级顾问在 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 报表服务器上检测到自定义安全或身份验证扩展插件，则阻塞升级过程。 必须执行相应步骤才能启用升级，否则可能选择迁移 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 在两种情况下，都必须用 Microsoft.ReportingServices.Interfaces.dll 中的最新接口以更新和重新编译扩展插件，因为此接口已在 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之间发生更改。  
   
 > [!IMPORTANT]  
@@ -115,7 +115,7 @@ ms.locfileid: "71952587"
   
  有关详细信息，请参阅 SQL Server 联机丛书中的“实现安全扩展插件”。  
   
-###  <a name="secauth2005"></a>SQL Server 2005 Report Server 上的自定义安全或身份验证扩展插件  
+###  <a name="custom-security-or-authentication-extensions-on-a-sql-server-2005-report-server"></a><a name="secauth2005"></a>SQL Server 2005 Report Server 上的自定义安全或身份验证扩展插件  
  如果升级顾问在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 报表服务器上检测到自定义安全或身份验证扩展插件，则阻塞升级过程。 必须执行相应步骤才能启用升级，否则可能选择迁移 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
   
 ##### <a name="to-upgrade-custom-security-or-authentication-extensions-from-a-sql-server-2005-report-server"></a>从 SQL Server 2005 报表服务器升级自定义安全或身份验证扩展插件  
@@ -130,7 +130,7 @@ ms.locfileid: "71952587"
   
  有关详细信息，请参阅 SQL Server 联机丛书中的“实现安全扩展插件”。  
   
-###  <a name="migrcustext"></a>迁移自定义扩展插件  
+###  <a name="migrating-custom-extensions"></a><a name="migrcustext"></a>迁移自定义扩展插件  
  如果决定迁移 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 而不执行升级，请执行相应步骤将自定义扩展插件迁移到新 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例。  
   
 ##### <a name="to-migrate-custom-extensions-to-a-new-reporting-services-instance"></a>将自定义扩展插件迁移到新报表服务实例  

@@ -17,10 +17,10 @@ ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 01809f0d4eb494d58f035d23846025578aada7c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72251264"
 ---
 # <a name="syssp_rda_reauthorize_db-transact-sql"></a>sys.sp_rda_reauthorize_db (Transact-SQL)
@@ -71,6 +71,6 @@ EXEC sp_rda_reauthorize_db @credential = @credentialName, @with_copy = 1;
   
 ## <a name="see-also"></a>另请参阅  
  [sys. sp_rda_deauthorize_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
- [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
+ [Stretch 数据库](../../sql-server/stretch-database/stretch-database.md)  
   
   

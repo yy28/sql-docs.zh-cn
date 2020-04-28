@@ -10,10 +10,10 @@ ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Jtoland
 ms.author: Jtoland
 ms.openlocfilehash: fa87f4ac6f5a4caf5da8d5b00200b1dd8c92d53a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252122"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
@@ -43,18 +43,18 @@ SSMA 支持以下目标版本。
 - SQL Server 2016
 - Windows 和 Linux 上的 SQL Server 2017
 - Windows 和 Linux 上的 SQL Server 2019
-- Azure SQL 数据库
+- Azure SQL Database
 - Azure SQL 数据仓库 * *
 
 * * 只有 SSMA for Oracle 支持此目标。
 
 ## <a name="downloads"></a>下载
 
-- [SSMA for Access](https://aka.ms/ssmaforaccess)
-- [SSMA for DB2](https://aka.ms/ssmafordb2)
-- [SSMA for MySql](https://aka.ms/ssmaformysql)
-- [SSMA for Oracle](https://aka.ms/ssmafororacle)
-- [SSMA for SAP ASE](https://aka.ms/ssmaforsybase)
+- [适用于 Access 的 SSMA](https://aka.ms/ssmaforaccess)
+- [适用于 DB2 的 SSMA](https://aka.ms/ssmafordb2)
+- [适用于 MySql 的 SSMA](https://aka.ms/ssmaformysql)
+- [适用于 Oracle 的 SSMA](https://aka.ms/ssmafororacle)
+- [适用于 SAP ASE 的 SSMA](https://aka.ms/ssmaforsybase)
  
 ## <a name="getting-ssma-support"></a>获取 SSMA 支持  
 
@@ -84,7 +84,7 @@ SSMA 支持以下目标版本。
   
 Microsoft 可能拥有本文档中内容的专利、专利申请、商标、版权或其他知识产权。 除非 Microsoft 提供了明确的书面许可协议，否则提供本文档并不意味着赋予您有关这些专利、商标、版权或其他知识产权的任何许可。  
   
-© 2019 Microsoft Corporation。 保留所有权利。  
+© 2019 Microsoft Corporation. 保留所有权利。  
   
 Microsoft、Windows、Windows NT、Windows Server、Active Directory、ActiveX、BackOffice、bCentral、BizTalk、DirectX、Excel、Hotmail、IntelliSense、J/Direct、Jscript、Microsoft Press、MSDN、MS-DOS、Outlook、PivotChart、PivotTable、PowerPoint、SharePoint、SQL Server、Visual Basic、Visual C#、Visual C++、Visual FoxPro、Visual InterDev、Visual J#、Visual J++、Visual SourceSafe、Visual Studio、Win32、Win32s、Windows Mobile、Windows Server System 和 WinFX 是 Microsoft Corporation 在美国和/或其他国家/地区的注册商标或商标。  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1eb30dbddac82db8fb0f6047985ce6fb743042cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874488"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>表格模型中的字符串存储和排序规则
@@ -70,8 +70,7 @@ ms.locfileid: "70874488"
   
 -   排序规则定义字符的顺序及其等效性。  
   
- 特别要注意的是，语言标识符不仅标识语言，还标识使用该语言的国家或地区。 每个语言标识符还具有默认的排序规则规范。 有关语言标识符的详细信息，请参阅 [Microsoft 分配的区域设置 ID](https://msdn.microsoft.com/goglobal/bb964664.aspx)。 您可以使用 LCID Dec 列在手动插入值时获取正确的 ID。 有关排序规则的 SQL 概念的详细信息，请参阅 [COLLATE (Transact-SQL)](/sql/t-sql/statements/collations)。 有关针对 Windows 排序规则名称的排序规则指示符和比较样式的信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](/sql/t-sql/statements/windows-collation-name-transact-sql)。 
-  [SQL Server 排序规则名称 (Transact-SQL)](/sql/t-sql/statements/sql-server-collation-name-transact-sql) 主题介绍了如何将 Windows 排序规则名称映射到用于 SQL 的名称。  
+ 特别要注意的是，语言标识符不仅标识语言，还标识使用该语言的国家或地区。 每个语言标识符还具有默认的排序规则规范。 有关语言标识符的详细信息，请参阅 [Microsoft 分配的区域设置 ID](https://msdn.microsoft.com/goglobal/bb964664.aspx)。 您可以使用 LCID Dec 列在手动插入值时获取正确的 ID。 有关排序规则的 SQL 概念的详细信息，请参阅 [COLLATE (Transact-SQL)](/sql/t-sql/statements/collations)。 有关针对 Windows 排序规则名称的排序规则指示符和比较样式的信息，请参阅 [Windows 排序规则名称 (Transact-SQL)](/sql/t-sql/statements/windows-collation-name-transact-sql)。 [SQL Server 排序规则名称 (Transact-SQL)](/sql/t-sql/statements/sql-server-collation-name-transact-sql) 主题介绍了如何将 Windows 排序规则名称映射到用于 SQL 的名称。  
   
  一旦创建了您的表格模型数据库后，该模型中的所有新对象都将从数据库属性继承语言和排序规则属性。 所有对象都是这样的。 继承路径将从该对象开始，查看父级中是否存在要继承的任何语言和排序规则属性，如果找不到，则继续向上查找到顶部，在数据库级别查找语言和排序规则属性。 换言之，如果您没有为某一对象指定语言和排序规则属性，则默认情况下，对象将继承其最接近的父级的属性。  
   

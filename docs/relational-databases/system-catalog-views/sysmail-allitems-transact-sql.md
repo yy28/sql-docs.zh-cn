@@ -18,10 +18,10 @@ ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: be5c74e58e5c107a804903ab09de38b931f676e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70745456"
 ---
 # <a name="sysmail_allitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
@@ -39,13 +39,13 @@ ms.locfileid: "70745456"
 |**copy_recipients**|**varchar(max)**|接收消息副本的用户的电子邮件地址。|  
 |**blind_copy_recipients**|**varchar(max)**|接收消息副本但其姓名未出现在消息标头中的用户的电子邮件地址。|  
 |**主题**|**nvarchar （510）**|消息的主题行。|  
-|**大量**|**varchar(max)**|消息正文。|  
+|**body**|**varchar(max)**|消息正文。|  
 |**body_format**|**varchar （20）**|消息正文的格式。 可能值为 TEXT 和 HTML。|  
-|**仅次于**|**varchar （6）**|消息的**重要性**参数。|  
+|**importance**|**varchar （6）**|消息的**重要性**参数。|  
 |**程度**|**varchar （12）**|消息的**敏感度**参数。|  
 |**file_attachments**|**varchar(max)**|附加到电子邮件中的文件名列表，以分号分隔。|  
 |**attachment_encoding**|**varchar （20）**|邮件附件的类型。|  
-|**query**|**varchar(max)**|邮件程序所执行的查询。|  
+|**查询**|**varchar(max)**|邮件程序所执行的查询。|  
 |**execute_query_database**|**sysname**|邮件程序在其中执行查询的数据库上下文。|  
 |**attach_query_result_as_file**|**bit**|如果该值为 0，则查询结果包含在电子邮件的正文中，在正文的内容之后。 如果该值为 1，则结果作为附件返回。|  
 |**query_result_header**|**bit**|如果值为1，则查询结果包含列标题。 如果该值为0，则查询结果不包括列标题。|  

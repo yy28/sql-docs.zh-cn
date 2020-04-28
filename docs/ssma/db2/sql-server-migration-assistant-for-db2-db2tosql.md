@@ -11,10 +11,10 @@ author: Jtoland
 ms.author: Jtoland
 manager: murato
 ms.openlocfilehash: 62b4910d6073da7ec845cc5e754a4e005f5d1461
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252163"
 ---
 # <a name="sql-server-migration-assistant-for-db2-db2tosql"></a>DB2 的 SQL Server 迁移助手（DB2ToSQL）
@@ -24,7 +24,7 @@ ms.locfileid: "72252163"
   
 ## <a name="contents"></a>目录  
   
-|部分|说明|  
+|节|说明|  
 |-----------|---------------|
 |[SSMA for DB2 中的新增功能](https://msdn.microsoft.com/1cc38f85-3caa-42d0-8c76-a380c1d15c67)|此版本的 SSMA for DB2 中的新增功能|  
 |[安装 SSMA for DB2 Client &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)|包含一些文章，这些文章提供了在运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的计算机上为 DB2 客户端和所需组件安装 SSMA 的先决条件和说明。|  

@@ -18,10 +18,10 @@ ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 06dbee74cfb3e2d5e697ea9594d46c98557de8ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70810493"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
@@ -70,9 +70,9 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |值|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
-|**4**|每天一次|  
+|**4**|每日|  
 |**8**|每周|  
-|**16**|每月|  
+|**超过**|每月一次|  
 |**32**|每月，相对于*frequency_interval。*|  
 |**64**|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务启动时运行。|  
 |**128**|在计算机空闲时运行。|  
@@ -109,7 +109,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**16**|最后一个|  
+|**超过**|最后一个|  
   
  *frequency_relative_interval*指示间隔的发生次数。 例如，如果*frequency_relative_interval*设置为**2**， *frequency_type*设置为**32**， *frequency_interval*设置为**3**，则计划作业将在每月的第二个星期二发生。  
   
@@ -139,7 +139,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  作业计划现在可以独立于作业进行管理。 若要将计划添加到作业，请使用**sp_add_schedule**创建计划，并**sp_attach_schedule**将计划附加到作业。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下， **sysadmin**固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   

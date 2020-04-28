@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1b2f4b080287dd4481a121def388f327112f21ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154609"
 ---
 # <a name="database-engine-tutorials"></a>数据库引擎教程
@@ -44,7 +44,7 @@ ms.locfileid: "70154609"
  [教程：使用基于策略的管理来管理服务器](policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
  本教程教授如何创建强制执行网站管理标准的策略。  
   
- [教程：使用基于策略的管理来评估最佳实践](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
+ [教程：使用基于策略的管理来评估最佳做法](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
  本教程教授如何创建可用于针对已知问题分析[!INCLUDE[ssDE](../includes/ssde-md.md)]的实例的策略。  
   
  [教程：将 SQL Server 备份和还原到 Azure Blob 存储服务](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
@@ -55,6 +55,6 @@ ms.locfileid: "70154609"
   
 ## <a name="see-also"></a>另请参阅  
  [2014 SQL Server 教程](../tutorials/tutorials-for-sql-server-2014.md)   
- [TechNet WIKI：SQL Server 2012 示例](https://go.microsoft.com/fwlink/?linkID=220734)  
+ [TechNet WIKI： SQL Server 2012 示例](https://go.microsoft.com/fwlink/?linkID=220734)  
   
   

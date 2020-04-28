@@ -11,10 +11,10 @@ author: Jtoland
 ms.author: Jtoland
 manager: murato
 ms.openlocfilehash: 61f1edc662e7b4a510d616dbee47cfaa615b9c0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252151"
 ---
 # <a name="sql-server-migration-assistant-for-mysql-mysqltosql"></a>MySQL SQL Server 迁移助手（MySQLToSQL）
@@ -25,7 +25,7 @@ ms.locfileid: "72252151"
   
 ## <a name="contents"></a>目录  
   
-|部分|说明|
+|节|说明|
 |-----------|---------------|
 |[SSMA for MySQL 中的新增功能](https://msdn.microsoft.com/1451a0b0-6713-4d0c-954f-ea3d8fce1d31)|此版本的 SSMA for MySQL 中的新增功能|  
 |[安装 SSMA for MySQL &#40;MySqlToSql&#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)|包含一些文章，这些文章提供了有关在运行 SQL Server 的计算机上安装 MySQL 客户端和所需组件的先决条件和说明。|  

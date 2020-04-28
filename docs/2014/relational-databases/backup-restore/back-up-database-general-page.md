@@ -13,19 +13,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fc6680702fd32c670d2f3c3861c47bab96c52c47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70155074"
 ---
 # <a name="back-up-database-general-page"></a>备份数据库（“常规”页）
-  使用 "**备份数据库**" 对话框的 "**常规**" 页可以查看或修改数据库备份操作的设置。  
+  使用 **“备份数据库”** 对话框中的 **“常规”** 页可以查看或修改数据库备份操作的设置。  
   
  有关基本备份概念的详细信息，请参阅 [备份概述 (SQL Server)](backup-overview-sql-server.md)。  
   
 > [!NOTE]  
->  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定备份任务时，可以通过单击“脚本”[!INCLUDE[tsql](../../includes/tsql-md.md)][按钮，再为脚本选择一个目标，生成对应的 ](/sql/t-sql/statements/backup-transact-sql)**BACKUP** 脚本。  
+>  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定备份任务时，可以通过单击“脚本”按钮，再为脚本选择一个目标，生成对应的 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) 脚本****。  
   
  **使用 SQL Server Management Studio 创建备份**  
   
@@ -61,10 +61,10 @@ ms.locfileid: "70155074"
 |事务日志|事务日志|事务日志备份不适用于简单恢复模式。|  
   
  **仅复制备份**  
- 选择创建仅复制备份。 *仅复制备份*是独立于常规[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]备份序列的备份。 有关详细信息，请参阅[仅复制备份 (SQL Server)](copy-only-backups-sql-server.md)。  
+ 选择创建仅复制备份。 *仅复制备份*是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]独立于常规备份序列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的备份。 有关详细信息，请参阅[仅复制备份 (SQL Server)](copy-only-backups-sql-server.md)。  
   
 > [!NOTE]  
->  选择“差异”**** 选项时，无法创建仅复制备份。  
+>  选择“差异”  选项时，无法创建仅复制备份。  
   
  **备份组件**  
  选择要备份的数据库组件。 如果在 **“备份类型”** 列表中选择了 **“事务日志”** ，则不会激活此选项。  
@@ -74,10 +74,10 @@ ms.locfileid: "70155074"
 |||  
 |-|-|  
 |**Database**|指定备份整个数据库。|  
-|**文件和文件组**|指定要备份的文件和/或文件组。<br /><br /> 选择此选项，打开 **“选择文件和文件组”** 对话框。 在选择要备份的文件组或文件并单击“确定” **** 后，所选内容将显示在“文件组和文件” **** 框中。|  
+|**文件和文件组**|指定要备份的文件和/或文件组。<br /><br /> 选择此选项，打开 **“选择文件和文件组”** 对话框。 在选择要备份的文件组或文件并单击“确定”  后，所选内容将显示在“文件组和文件”  框中。|  
   
 ### <a name="destination"></a>目标  
- “目标” **** 面板中的选项允许您为备份操作指定备份设备的类型，并查找现有的逻辑或物理备份设备。  
+ “目标”  面板中的选项允许您为备份操作指定备份设备的类型，并查找现有的逻辑或物理备份设备。  
   
 > [!NOTE]  
 >  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份设备的信息，请参阅[备份设备 (SQL Server)](backup-devices-sql-server.md)。  
@@ -89,17 +89,17 @@ ms.locfileid: "70155074"
 |-|-|  
 |**磁盘**|备份到磁盘。 这可能是一个为该数据库创建的系统文件或基于磁盘的逻辑备份设备。 当前所选的磁盘将显示在 **“备份到”** 列表中。 您最多可以为备份操作选择 64 个磁盘设备。|  
 |**磁带**|备份到磁带。 这可能是一个为该数据库创建的本地磁带机或基于磁带的逻辑备份设备。 当前所选的磁带将显示在 **“备份到”** 列表中。 最大数目为 64。 如果服务器没有相连的磁带设备，此选项将停用。 您选择的磁带将列在 **“备份到”** 列表中。<br /><br /> 注意：在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未来版本中将不再支持磁带备份设备。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。|  
-|**链接**|备份到 Azure Blob 存储。|  
+|**URL**|备份到 Azure Blob 存储。|  
   
  显示的下一组选项会取决于所选目标的类型。 如果您选择“磁盘”或“磁带”，则会显示以下选项。  
   
  **添加**  
- 将文件或设备添加到“备份到”**** 列表中。 最多可以同时向本地磁盘或远程磁盘上的 64 个设备进行备份。 若要指定远程磁盘上的文件，请使用完全限定的通用命名约定 (UNC) 名称。 有关详细信息，请参阅 [备份设备 (SQL Server)](backup-devices-sql-server.md)。  
+ 将文件或设备添加到“备份到”  列表中。 最多可以同时向本地磁盘或远程磁盘上的 64 个设备进行备份。 若要指定远程磁盘上的文件，请使用完全限定的通用命名约定 (UNC) 名称。 有关详细信息，请参阅 [备份设备 (SQL Server)](backup-devices-sql-server.md)。  
   
  **删除**  
- 从“备份到”**** 列表中删除一个或多个当前所选的设备。  
+ 从“备份到”  列表中删除一个或多个当前所选的设备。  
   
- **目录**  
+ **Contents**  
  显示所选设备的介质内容。  
   
  如果您选择“URL”作为备份目标，则会显示以下选项：  
@@ -122,8 +122,8 @@ ms.locfileid: "70155074"
 ## <a name="see-also"></a>另请参阅  
  [备份事务日志 &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
  [备份文件和文件组 &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
- [为磁盘文件定义逻辑备份设备 (SQL Server)](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
- [为磁带驱动器定义逻辑备份设备 (SQL Server)](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
+ [为磁盘文件定义逻辑备份设备 &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
+ [定义磁带驱动器 &#40;SQL Server 的逻辑备份设备&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [恢复模式 (SQL Server)](recovery-models-sql-server.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 848f3cffb3c05f16b339233c89892396b5443e4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71174256"
 ---
 # <a name="sp_add_alert-transact-sql"></a>sp_add_alert (Transact-SQL)
@@ -132,19 +132,17 @@ sp_add_alert [ @name = ] 'name'
   
 -   使用**xp_logevent**记录的任何事件  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一种易用的图形方式来管理整个警报系统，这也是配置警报基础结构的推荐方式。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一种易用的图形方式来管理整个警报系统，这也是配置警报基础结构的推荐方式。  
   
  如果一个警报没有正常工作，请检查：  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服务是否正在运行。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服务是否正在运行。  
   
 -   事件是否出现在 Windows 应用程序日志中。  
   
 -   警报是否已被启用。  
   
--   用 **xp_logevent** 生成的事件在 master 数据库中发生。 因此，除非警报的 **database_name**** 为“master”\@** 或 NULL，否则 xp_logevent**** 不会触发警报。  
+-   用 **xp_logevent** 生成的事件在 master 数据库中发生。 因此，除非警报的 \@database_name**** 为“master”**** 或 NULL，否则 xp_logevent**** 不会触发警报。  
   
 ## <a name="permissions"></a>权限  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才能执行 **sp_add_alert**。  

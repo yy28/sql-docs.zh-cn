@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ac34c95e7ee4dc6f57ef7d8806a7db1bb981a944
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175964"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server 备份到 URL 最佳实践和故障排除
@@ -31,7 +31,7 @@ ms.locfileid: "70175964"
   
 -   建议为每个备份使用唯一文件名以防止意外覆盖 blob。  
   
--   创建容器时，建议将访问级别设置为 **“私有”**，这样只有可以提供所需的身份验证信息的用户或帐户可以在容器中读取或写入 blob。  
+-   创建容器时，建议将访问级别设置为 **“私有”** ，这样只有可以提供所需的身份验证信息的用户或帐户可以在容器中读取或写入 blob。  
   
 -   对于在 Azure 虚拟机中运行 SQL Server 实例上的 SQL Server 数据库，请使用虚拟机所在区域中的存储帐户，以避免区域之间的数据传输成本。 使用同一区域还可以确保备份和还原操作具有最佳性能。  
   
@@ -41,10 +41,9 @@ ms.locfileid: "70175964"
   
 ## <a name="handling-large-files"></a>处理大型文件  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份操作使用多个线程来优化与 Azure Blob 存储服务的数据传输。  但是性能取决于各种因素，如 ISV 带宽和数据库的大小。 如果您计划从内部 SQL Server 数据库备份大型数据库或文件组，建议您首先执行某些吞吐量测试。 [Azure 存储 SLA](https://go.microsoft.com/fwlink/?LinkId=271619)具有可考虑的 blob 的最大处理时间。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份操作使用多个线程来优化与 Azure Blob 存储服务的数据传输。  但是性能取决于各种因素，如 ISV 带宽和数据库的大小。 如果您计划从内部 SQL Server 数据库备份大型数据库或文件组，建议您首先执行某些吞吐量测试。 [Azure 存储 SLA](https://go.microsoft.com/fwlink/?LinkId=271619)具有可考虑的 blob 的最大处理时间。  
   
--   使用在`WITH COMPRESSION`管理备份**部分中建议的 ** 选项，在备份大型文件时这一点非常重要。  
+-   使用在**管理备份**部分中建议的 `WITH COMPRESSION` 选项，在备份大型文件时这一点非常重要。  
   
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>备份到 URL 或从 URL 还原故障排除  
  以下内容提供了在备份到 Azure Blob 存储服务或从中还原时出现问题的一些快速解决方法。  
@@ -55,8 +54,7 @@ ms.locfileid: "70175964"
   
 -   WITH CREDENTIAL 是一个新选项，需要备份到 Azure Blob 存储服务或从中进行还原。 与凭据有关的失败可能包括：  
   
-     
-  `BACKUP` 或 `RESTORE` 命令中指定的凭据不存在。 要避免此问题，如果备份语句中没有指定凭据，可以使用 T-SQL 语句来创建凭据。 以下是您可以使用的一个示例：  
+     `BACKUP` 或 `RESTORE` 命令中指定的凭据不存在。 要避免此问题，如果备份语句中没有指定凭据，可以使用 T-SQL 语句来创建凭据。 以下是您可以使用的一个示例：  
   
     ```  
     IF NOT EXISTS  
@@ -104,18 +102,18 @@ ms.locfileid: "70175964"
   
      如果重新尝试执行备份语句，备份操作可能失败，出现类似于以下的错误：  
   
-     **"备份到 URL" 收到来自远程终结点的异常。异常消息：远程服务器返回了错误：（412）当前 blob 上有租约，但请求中未指定任何租约 ID**。  
+     **“备份到 URL”收到来自远程端点的异常。异常消息：远程服务器返回错误：(412) 当前 blob 上有租约，但请求中没有指定租约 ID**。  
   
      如果尝试对具有活动租约的备份 blob 文件执行还原语句，则还原操作失败，出现类似于以下的错误：  
   
-     **异常消息：远程服务器返回了错误：（409）冲突。**  
+     **异常消息：远程服务器返回了错误：(409)。有冲突。**  
   
      发生这种错误时，需要删除 blob 文件。 有关此情形和如何解决此问题的详细信息，请参阅 [Deleting Backup Blob Files with Active Leases](deleting-backup-blob-files-with-active-leases.md)  
   
 ## <a name="proxy-errors"></a>代理错误  
  如果您使用代理服务器访问 Internet，可能会发现以下问题：  
   
- **代理服务器的连接限制：**  
+ **代理服务器限制连接：**  
   
  代理服务器可能具有限制每分钟连接次数的设置。 “备份到 URL”进程是一个多线程进程，因此可能超过此限制。 如果出现此情况，代理服务器将终止连接。 若要解决此问题，请更改代理设置，使 SQL Server 不使用该代理。   下面是一些您可能在错误日志中看到的类型或错误消息的示例：  
   
