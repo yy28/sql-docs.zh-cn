@@ -11,10 +11,10 @@ ms.assetid: 3a6a3cf2-1e77-43d3-a64a-855ae51258e7
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: b0e937ff9222553c42eacefc173dfec90bb6ebc6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728779"
 ---
 # <a name="apply-and-update-a-changeset-master-data-services"></a>应用并更新变更集 (Master Data Services)
@@ -23,9 +23,9 @@ ms.locfileid: "73728779"
 
   变更集是主数据的挂起更改的集合。 可以在本地应用变更集以查看、添加、更新和删除变更集中挂起的更改。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
   
--   您必须有权访问 "**资源管理器**" 功能区域。 有关详细信息，请参阅[功能区域权限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
+-   **** 您必须有权访问“资源管理器”功能区域。 有关详细信息，请参阅[功能区域权限 (Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)。  
   
 -   你必须至少拥有实体或其属性之一的更新访问权限。  
   
@@ -50,10 +50,10 @@ ms.locfileid: "73728779"
 5.  若要还原挂起的更改，右键单击“变更集”**** 窗格中的网格，然后单击“还原”****。  
   
 ## <a name="next-steps"></a>后续步骤  
- [提交或提交变更集 &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
+ [确认或提交变更 (Master Data Services)](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [创建变更集 &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)   
- [批准或拒绝变更集 &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
+ [批准或拒绝变更集 (Master Data Services)](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   
   

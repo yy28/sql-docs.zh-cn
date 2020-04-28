@@ -11,10 +11,10 @@ ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 7c5adbd91f713fabe1e185c51adb28350035bb20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728886"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>订阅视图格式 (Master Data Services)
@@ -44,6 +44,6 @@ ms.locfileid: "73728886"
   
 ## <a name="see-also"></a>另请参阅  
  [概述：将数据导出 &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
- [创建订阅视图以导出数据 &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
+ [创建订阅视图以导出数据 (Master Data Services)](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   
   

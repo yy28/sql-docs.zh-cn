@@ -14,10 +14,10 @@ ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 7ce5d8456d1857c3e62239deadf217e5d9841caa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728898"
 ---
 # <a name="transactions-master-data-services"></a>事务 (Master Data Services)
@@ -77,8 +77,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
 ```  
   
 ## <a name="system-settings"></a>系统设置  
- 
-  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中有一个设置影响在暂存记录时是否记录事务。 可以在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中或直接在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库的“系统设置”表中调整此设置。 有关详细信息，请参阅[系统设置 (Master Data Services)](../master-data-services/system-settings-master-data-services.md)。  
+ [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中有一个设置影响在暂存记录时是否记录事务。 可以在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中或直接在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库的“系统设置”表中调整此设置。 有关详细信息，请参阅[系统设置 (Master Data Services)](../master-data-services/system-settings-master-data-services.md)。  
   
  在将数据导入此版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中时，您可以指定是否在启动存储过程时记录事务。 有关详细信息，请参阅[临时存储过程 (Master Data Services)](../master-data-services/staging-stored-procedure-master-data-services.md)。  
   
@@ -91,15 +90,15 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|通过撤消事务来撤消操作（仅限管理员）。|[撤消事务 &#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)|  
+|通过撤消事务来撤消操作（仅限管理员）。|[撤消事务 (Master Data Services)](../master-data-services/reverse-a-transaction-master-data-services.md)|  
   
 ## <a name="external-resources"></a>外部资源  
  msdn.com 上的博文 [Transactions, Validation Issue and Staging table cleanup（事务、验证问题和临时表清除）](https://go.microsoft.com/fwlink/p/?LinkId=615374)。  
   
 ## <a name="related-content"></a>相关内容  
   
--   [管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
+-   [管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)  
   
--   [批注 &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)  
+-   [批注 (Master Data Services)](../master-data-services/annotations-master-data-services.md)  
   
   

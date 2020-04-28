@@ -11,10 +11,10 @@ ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: e6d5f9fd7dfe49b71424e13818de51d8c323676c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728910"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>升级数据库向导（Master Data Services 配置管理器）
@@ -39,7 +39,7 @@ ms.locfileid: "73728910"
   
 ## <a name="see-also"></a>另请参阅  
  ["数据库配置" 页 &#40;Master Data Services 配置管理器&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
-[Master Data Services 安装和配置](../master-data-services/master-data-services-installation-and-configuration.md)  
+[Master Data Services 的安装和配置](../master-data-services/master-data-services-installation-and-configuration.md)  
  [升级 Master Data Services](../database-engine/install-windows/upgrade-master-data-services.md)  
   
   

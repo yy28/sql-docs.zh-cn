@@ -14,10 +14,10 @@ ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 19a9d925b07b83e5ed26b73484cea955773364c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728601"
 ---
 # <a name="collections-master-data-services"></a>集合 (Master Data Services)
@@ -39,9 +39,7 @@ ms.locfileid: "73728601"
  创建集合时，您将自动作为所有者列出。 如果您是管理员，则可以根据需要为您的集合创建其他属性。  
   
 ## <a name="subscription-views-for-collections"></a>集合的订阅视图  
- 显示集合的订阅视图有两种。 
-  **集合属性** 格式显示集合列表以及与集合相关的任何属性（如说明或所有者）。 
-  **“集合”** 格式显示所有集合中的所有成员以及每个成员权重和排序顺序。 有关详细信息，请参阅[概述：导出数据 (Master Data Services)](../master-data-services/overview-exporting-data-master-data-services.md)。  
+ 显示集合的订阅视图有两种。 **集合属性** 格式显示集合列表以及与集合相关的任何属性（如说明或所有者）。 **“集合”** 格式显示所有集合中的所有成员以及每个成员权重和排序顺序。 有关详细信息，请参阅 [概述：导出数据 (Master Data Services)](../master-data-services/overview-exporting-data-master-data-services.md)。  
   
  如果为集合中的特定成员设置了权重值，则这些值在相关订阅视图中可用。  
   
@@ -49,13 +47,13 @@ ms.locfileid: "73728601"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|创建新集合。|[创建 &#40;Master Data Services 的集合&#41;](../master-data-services/create-a-collection-master-data-services.md)|  
-|向现有集合添加成员。|[将成员添加到集合 &#40;Master Data Services&#41;](../master-data-services/add-members-to-a-collection-master-data-services.md)|  
+|创建新集合。|[创建集合 (Master Data Services)](../master-data-services/create-a-collection-master-data-services.md)|  
+|向现有集合添加成员。|[将成员添加到集合 (Master Data Services)](../master-data-services/add-members-to-a-collection-master-data-services.md)|  
   
 ## <a name="related-content"></a>相关内容  
   
--   [显式层次结构 &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
+-   [显式层次结构 (Master Data Services)](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
--   [概述：将数据导出 &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)  
+-   [概述：导出数据 (Master Data Services)](../master-data-services/overview-exporting-data-master-data-services.md)  
   
   

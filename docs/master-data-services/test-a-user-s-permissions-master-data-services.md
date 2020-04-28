@@ -11,10 +11,10 @@ ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2890487c4bbdf23ca4f1d7fa13aa15764f8029d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728870"
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>测试用户权限 (Master Data Services)
@@ -34,6 +34,6 @@ ms.locfileid: "73728870"
 4.  下次您打开浏览器窗口时，将提示您输入用户名和密码。  
   
 ## <a name="see-also"></a>另请参阅  
- [安全 &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
+ [安全性 (Master Data Services)](../master-data-services/security-master-data-services.md)  
   
   

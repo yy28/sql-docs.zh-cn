@@ -11,10 +11,10 @@ ms.assetid: 3f2ae84c-6666-460b-befe-bd72405c0778
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 7c6236da4a424a3f328671e7a2a3556b47321748
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728712"
 ---
 # <a name="backward-compatibility-master-data-services"></a>向后兼容性 (Master Data Services)
@@ -27,6 +27,6 @@ ms.locfileid: "73728712"
   
 -   [弃用的 Master Data Services 功能](../master-data-services/deprecated-master-data-services-features.md)  
   
--   [废止 Master Data Services 功能](../master-data-services/discontinued-master-data-services-features.md)  
+-   [弃用的 Master Data Services 功能](../master-data-services/discontinued-master-data-services-features.md)  
   
   

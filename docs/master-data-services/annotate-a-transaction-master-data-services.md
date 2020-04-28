@@ -13,10 +13,10 @@ ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 17474c603e437dd0cb2dcfbedf5e444ba50ba3ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728789"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>为事务添加批注 (Master Data Services)
@@ -28,23 +28,19 @@ ms.locfileid: "73728789"
 > [!NOTE]  
 >  您无法删除批注。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
   
 -   若要为创建的事务添加批注，您必须有权访问 **“资源管理器”** 功能区域，并且必须至少对要添加批注的模型对象具有 **“更新”** 权限。  
   
--   若要为所有用户的事务添加批注，您必须有权访问 **“版本管理”** 功能区域并且必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   若要为所有用户的事务添加批注，您必须有权访问 **“版本管理”** 功能区域并且必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 ### <a name="to-annotate-a-transaction-in-explorer"></a>为资源管理器中为事务添加批注  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，从“模型” **** 列表中选择模型。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 在 **** 主页上，从“模型”列表中，选择模型。  
   
-2.  
-  **
-  ** 从“版本”列表中，选择某一版本。  
+2.  **** 从“版本”列表中，选择某一版本。  
   
-3.  
-  **
-  **单击“资源管理器”。  
+3.  单击 **“资源管理器”**。  
   
 4.  从菜单栏中指向 **“实体”** ，然后单击包含具有要添加批注的事务的成员的实体。  
   
@@ -60,7 +56,7 @@ ms.locfileid: "73728789"
   
 ### <a name="to-annotate-a-transaction-in-version-management-administrators-only"></a>在版本管理中为事务添加批注（仅限管理员）  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，单击“版本管理” ****。  
+1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，单击 **“版本管理”**。  
   
 2.  在菜单栏上，单击 **“事务”**。  
   
@@ -72,6 +68,6 @@ ms.locfileid: "73728789"
   
 ## <a name="see-also"></a>另请参阅  
  [批注 &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)   
- [Master Data Services 的事务 &#40;&#41;](../master-data-services/transactions-master-data-services.md)  
+ [事务 (Master Data Services)](../master-data-services/transactions-master-data-services.md)  
   
   

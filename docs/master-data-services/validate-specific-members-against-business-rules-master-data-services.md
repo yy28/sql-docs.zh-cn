@@ -14,10 +14,10 @@ ms.assetid: 2288ef43-5392-47ea-b651-ec25e5692a14
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 885d0c1018c1d30fd4ea5d10276c971dbbf0a114
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728846"
 ---
 # <a name="validate-specific-members-against-business-rules-master-data-services"></a>针对业务规则验证特定成员 (Master Data Services)
@@ -29,10 +29,10 @@ ms.locfileid: "73728846"
 > [!NOTE]  
 >  如果想要将业务规则应用于某个模型版本中的所有成员，请参阅 [针对业务规则验证版本 (Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
--   您必须有权访问 "**资源管理器**" 功能区域。  
+-   **** 您必须有权访问“资源管理器”功能区域。  
   
 -   对于您要将业务规则应用于的模型对象，您必须至少具有 **“更新”** 权限。  
   
@@ -50,6 +50,6 @@ ms.locfileid: "73728846"
   
 ## <a name="see-also"></a>另请参阅  
  [针对业务规则验证版本 &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
- [业务规则 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+ [业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)  
   
   

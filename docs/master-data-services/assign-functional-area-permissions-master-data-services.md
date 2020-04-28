@@ -14,10 +14,10 @@ ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 41ab7567a1037c2f0f625cd977a80e38a591bcee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728758"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>分配功能区域权限 (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "73728758"
 
   分配功能区域权限以便授予用户或组对 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]的功能区域的访问权限。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“用户和组权限”** 功能区域。  
@@ -49,10 +49,10 @@ ms.locfileid: "73728758"
   
 ## <a name="next-steps"></a>后续步骤  
   
--   [&#40;Master Data Services 分配模型对象权限&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
+-   [分配模型对象权限 (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [创建模型管理员 &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
- [安全 &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
+ [安全性 (Master Data Services)](../master-data-services/security-master-data-services.md)  
   
   

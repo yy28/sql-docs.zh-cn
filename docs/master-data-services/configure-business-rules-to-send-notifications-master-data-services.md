@@ -15,10 +15,10 @@ ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4645b9faca312eb5bee12eef1130893785c327d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728563"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>配置业务规则以发送通知 (Master Data Services)
@@ -27,12 +27,12 @@ ms.locfileid: "73728563"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您要向用户通知有关属性值更改时，请配置业务规则以发送通知。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域和 **“用户和组权限”** 功能区域。 如果您对 **“用户和组权限”** 功能区域没有权限，则无法查看要向其发送通知的用户和组的列表。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅[管理员 &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)。  
   
 -   使用验证操作的业务规则必须已经存在。 有关详细信息，请参阅[创建和发布业务规则 (Master Data Services)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "73728563"
   
 3.  在“业务规则” **** 页上，从“模型” **** 列表中选择一个模型。  
   
-4.  从“实体”**** 下拉列表中选择一个实体。  
+4.  从 **** “实体”下拉列表中选择一个实体。  
   
 5.  从“成员类型”**** 列表中选择一个成员类型。  
   
@@ -66,16 +66,16 @@ ms.locfileid: "73728563"
   
 -   通过以下过程之一将业务规则应用到数据：  
   
-    -   [根据业务规则验证特定成员 &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+    -   [针对业务规则验证特定成员 (Master Data Services)](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
-    -   [针对业务规则验证版本 &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+    -   [针对业务规则验证版本 (Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 -   按如下方式配置电子邮件协议：  
   
-    -   [&#40;Master Data Services 配置电子邮件通知&#41;](../master-data-services/configure-email-notifications-master-data-services.md)  
+    -   [配置电子邮件通知 (Master Data Services)](../master-data-services/configure-email-notifications-master-data-services.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [通知 &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)   
- [&#40;Master Data Services 配置电子邮件通知&#41;](../master-data-services/configure-email-notifications-master-data-services.md)  
+ [配置电子邮件通知 (Master Data Services)](../master-data-services/configure-email-notifications-master-data-services.md)  
   
   

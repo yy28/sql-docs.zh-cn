@@ -14,10 +14,10 @@ ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a8a16d3730ea9dba7071403051dfc69d87f74473
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728520"
 ---
 # <a name="create-a-collection-master-data-services"></a>创建集合 (Master Data Services)
@@ -26,24 +26,20 @@ ms.locfileid: "73728520"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您想要创建叶成员和合并成员的平面列表时，可以创建集合。 集合无需包括来自实体的所有成员。  
   
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
  若要执行此过程：  
   
--   您必须有权访问 "**资源管理器**" 功能区域。  
+-   **** 您必须有权访问“资源管理器”功能区域。  
   
 -   对于实体的集合模型对象，您必须至少具有 **“更新”** 权限。  
   
 ### <a name="to-create-a-collection"></a>创建集合  
   
-1.  在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 主页上，从“模型” **** 列表中选择模型。  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 在 **** 主页上，从“模型”列表中，选择模型。  
   
-2.  
-  **
-  ** 从“版本”列表中，选择某一版本。  
+2.  **** 从“版本”列表中，选择某一版本。  
   
-3.  
-  **
-  **单击“资源管理器”。  
+3.  单击 **“资源管理器”**。  
   
 4.  从菜单栏中，指向“集合”****，然后单击“entity_name”**。  
   
@@ -59,11 +55,11 @@ ms.locfileid: "73728520"
   
 ## <a name="next-steps"></a>后续步骤  
   
--   [将成员添加到集合 &#40;Master Data Services&#41;](../master-data-services/add-members-to-a-collection-master-data-services.md)  
+-   [将成员添加到集合 (Master Data Services)](../master-data-services/add-members-to-a-collection-master-data-services.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [集合 &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)   
  [&#40;Master Data Services 中删除成员或集合&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)   
- [创建显式层次结构 &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
+ [创建显式层次结构 (Master Data Services)](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
   
   
