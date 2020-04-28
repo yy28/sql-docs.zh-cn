@@ -10,10 +10,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: ab0d59026bd172cb1e3fd51a92c3e5bb8b83b2e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090375"
 ---
 # <a name="sysdm_xe_database_sessions-azure-sql-database"></a>sys.dm_xe_database_sessions（Azure SQL 数据库）
@@ -28,9 +28,9 @@ ms.locfileid: "68090375"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|事件会话的内存地址。 不可为 null。|  
-|event_name|**nvarchar （60）**|操作绑定到的事件的名称。 不可为 null。|  
+|event_name|**nvarchar(60)**|操作绑定到的事件的名称。 不可为 null。|  
 |event_package_guid|**uniqueidentifier**|包含事件的包的 GUID。 不可为 null。|  
-|event_predicate|**nvarchar （2048）**|应用于事件的谓词树的 XML 表示形式。 可以为 Null。|  
+|event_predicate|**nvarchar(2048)**|应用于事件的谓词树的 XML 表示形式。 可以为 Null。|  
   
 ## <a name="permissions"></a>权限  
  要求拥有 VIEW DATABASE STATE 权限。  
@@ -38,7 +38,7 @@ ms.locfileid: "68090375"
 ### <a name="relationship-cardinalities"></a>关系基数  
 从2015-07-13，dm_xe_objects "XEvents" 是在其名称中不包含 "_database" 的其中一个 Dmv。 不是下表的右侧列中的错误键入或错误。 Microsoft SQL Server 和 Azure SQL 数据库中的名称相同。  
   
-|从|目标|关系|  
+|From|到|关系|  
 |--------|------|----------------|  
 |sys. dm_xe_database_session_events event_session_address|sys. dm_xe_database_sessions|多对一|  
 |sys. dm_xe_database_session_events event_package_guid，dm_xe_database_session_events event_name|sys.dm_xe_objects.name、sys.dm_xe_objects.package_guid|多对一|  

@@ -18,10 +18,10 @@ ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b40f7233bb3c50203a68c0b01cfcbdaf631e0098
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096170"
 ---
 # <a name="sp_table_privileges_ex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
@@ -64,7 +64,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 |**TABLE_SCHEM**|**sysname**|表所有者名称。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，此列表示创建该表的数据库用户的名称。 此字段始终返回值。|  
 |**TABLE_NAME**|**sysname**|表名。 此字段始终返回值。|  
 |**授权者**|**sysname**|已**向列出的**被授权者授予对此**TABLE_NAME**的权限的数据库用户名。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，此列始终与**TABLE_OWNER**相同。 此字段始终返回值。 此外，授权者列可以是数据库所有者（**TABLE_OWNER**）或数据库所有者通过 grant 语句中的 WITH GRANT OPTION 子句授予权限的用户。|  
-|**GRANTEE**|**sysname**|已被列出的**授权**者授予此**TABLE_NAME**的权限的数据库用户名。 此字段始终返回值。|  
+|**被授权者**|**sysname**|已被列出的**授权**者授予此**TABLE_NAME**的权限的数据库用户名。 此字段始终返回值。|  
 |**PRIVILEGE**|**varchar （** 32 **）**|可用的表权限之一。 表权限可以是以下值之一或定义实现时数据源支持的其他值：<br /><br /> SELECT =**被**授权者可以检索一列或多列的数据。<br /><br /> INSERT =**被**授权者可以为一个或多个列的新行提供数据。<br /><br /> UPDATE =**被**授权者可以修改一个或多个列的现有数据。<br /><br /> DELETE =**被**授权者可以从表中删除行。<br /><br /> REFERENCE = 被授权者**可以通过主键**/外键关系引用外表中的列。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，主键/外键关系是使用表约束定义的。<br /><br /> 指定给被特定表权限的**被授权者的**操作的作用域是依赖于数据源的。 例如，"更新" 权限可以使被**授权**者可以更新一个数据源的表中的所有列，并且只**更新对其他**数据源具有 "更新" 权限的那些列。|  
 |**IS_GRANTABLE**|**varchar （** 3 **）**|指示**是否允许被授权**者向其他用户授予权限。 这常常称为“授予再授予”权限。 可以是 YES、NO 或 NULL。 未知的（或 NULL）值指不适用“授予再授予”的数据源。|  
   
@@ -86,7 +86,7 @@ EXEC sp_table_privileges_ex @table_server = 'Seattle1',
   
 ## <a name="see-also"></a>另请参阅  
  [sp_column_privileges_ex &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-ex-transact-sql.md)   
- [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [分布式查询存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: a3ac20a6-73f6-4fdc-ad5f-5f72746c9871
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4e5d98606d14e660b0dcbad43eecf97ce6446767
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079186"
 ---
 # <a name="msrepl_originators-transact-sql"></a>MSrepl_originators (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68079186"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**识别**|**int**|标识正在更新的订阅服务器。|  
+|**id**|**int**|标识正在更新的订阅服务器。|  
 |**publisher_database_id**|**int**|标识发布数据库。|  
 |**srvname**|**sysname**|正在更新的服务器的名称。|  
 |**dbname**|**sysname**|正在更新的数据库的名称。|  

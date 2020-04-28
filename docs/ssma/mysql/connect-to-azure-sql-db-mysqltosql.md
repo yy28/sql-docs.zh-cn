@@ -10,10 +10,10 @@ ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 12da1aa42f468b92e1833410e635183aabf3a384
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103237"
 ---
 # <a name="connect-to-azure-sql-db-mysqltosql"></a>连接到 Azure SQL DB (MySQLToSQL)
@@ -37,11 +37,11 @@ ms.locfileid: "68103237"
   
 输入 SSMA 将用于连接 SQL Azure 数据库的用户名  
   
-**权限**  
+**密码**  
   
 输入用户名的密码。  
   
-**加密**  
+**Encrypt**  
   
 SSMA 建议将加密连接 SQL Azure。  
   

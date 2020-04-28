@@ -21,10 +21,10 @@ ms.assetid: e567fa07-31cd-43cc-b8c7-ba6108baca80
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5388533ed665548eaaac3c25976271750d1348c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053483"
 ---
 # <a name="syssysfilegroups-transact-sql"></a>sys.sysfilegroups (Transact-SQL)
@@ -39,11 +39,11 @@ ms.locfileid: "68053483"
 |-----------------|---------------|-----------------|  
 |**groupid**|**smallint**|每个数据库的唯一组标识号。|  
 |**allocpolicy**|**smallint**|保留|  
-|**状态值**|**int**|0x8 = 只读<br /><br /> 0x10 = 默认|  
+|**status**|**int**|0x8 = 只读<br /><br /> 0x10 = 默认|  
 |**groupname**|**sysname**|文件组的名称。|  
   
 ## <a name="see-also"></a>另请参阅  
  [将系统表映射到系统视图 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Transact-sql&#41;的兼容性视图 &#40;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [兼容性视图 (Transact SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

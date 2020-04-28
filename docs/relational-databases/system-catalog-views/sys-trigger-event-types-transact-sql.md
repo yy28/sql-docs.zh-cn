@@ -20,10 +20,10 @@ ms.assetid: 054aed54-7151-4760-934a-149fa434f1ae
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fb845732f3766e715df0e92d751a18b1aa8f2969
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68091951"
 ---
 # <a name="systrigger_event_types-transact-sql"></a>sys.trigger_event_types (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68091951"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |type |**int**|导致触发触发器的事件或事件组的类型。|  
-|type_name |**nvarchar （64）**|事件或事件组的名称。 可以在[CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)语句的 FOR 子句中指定此项。|  
+|**type_name**|**nvarchar （64）**|事件或事件组的名称。 可以在[CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)语句的 FOR 子句中指定此项。|  
 |**parent_type**|**int**|作为事件或事件组父级的事件组的类型。|  
   
 ## <a name="permissions"></a>权限  

@@ -18,10 +18,10 @@ ms.assetid: be30abc9-c00d-446f-b1b4-1269772f37e6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38c6bb0ae74ffe54e9637610139374e458e3649d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095706"
 ---
 # <a name="msagent_parameters-transact-sql"></a>MSagent_parameters (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68095706"
 |-----------------|---------------|-----------------|  
 |**profile_id**|**int**|**MSagent_profiles**表中的配置文件 ID。|  
 |**parameter_name**|**sysname**|参数的名称。|  
-|**负值**|**nvarchar(255)**|参数值。|  
+|**value**|**nvarchar(255)**|参数值。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

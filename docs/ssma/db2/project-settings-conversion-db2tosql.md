@@ -10,10 +10,10 @@ ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e6918dac33ce0e69116f713cb8906b2774d00575
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084551"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>项目设置（转换）（DB2ToSQL）
@@ -371,9 +371,9 @@ DB2 并[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回不同的�
 ### <a name="use-isnull-in-replace-function-calls"></a>在 REPLACE 函数调用中使用 ISNULL  
 在 REPLACE 函数调用中使用 ISNULL 语句来模拟 DB2 行为。 此设置具有以下选项：  
   
--   是  
+-   YES  
   
--   否  
+-   是  
   
 在 "**模式**" 框中选择转换模式时，SSMA 将应用以下设置：  
   
@@ -384,9 +384,9 @@ DB2 并[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回不同的�
 ### <a name="use-isnull-in-concat-function-calls"></a>在 CONCAT 函数调用中使用 ISNULL  
 在 CONCAT 函数调用中使用 ISNULL 语句来模拟 DB2 行为。 此设置具有以下选项：  
   
--   是  
+-   YES  
   
--   否  
+-   是  
   
 在 "**模式**" 框中选择转换模式时，SSMA 将应用以下设置：  
   

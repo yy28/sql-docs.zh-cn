@@ -18,10 +18,10 @@ ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd4251c4b47f67d348b6978c05c07d0ae64d16c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070361"
 ---
 # <a name="sp_column_privileges_ex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
@@ -63,7 +63,7 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 |**TABLE_NAME**|**sysname**|表名。 此字段始终返回值。|  
 |**COLUMN_NAME**|**sysname**|列名称，为返回的每个列的**TABLE_NAME** 。 此字段始终返回值。|  
 |**授权者**|**sysname**|已**向列出的**被授权者授予对此**COLUMN_NAME**的权限的数据库用户名。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，此列始终与**TABLE_OWNER**相同。 此字段始终返回值。<br /><br /> **授权**者列可以是数据库所有者（**TABLE_OWNER**），也可以是数据库所有者在 GRANT 语句中使用 WITH grant OPTION 子句授予权限的用户。|  
-|**GRANTEE**|**sysname**|已被列出的**授权**者授予此**COLUMN_NAME**的权限的数据库用户名。 此字段始终返回值。|  
+|**被授权者**|**sysname**|已被列出的**授权**者授予此**COLUMN_NAME**的权限的数据库用户名。 此字段始终返回值。|  
 |**PRIVILEGE**|**varchar （** 32 **）**|可用列权限中的一个。 列权限可以是下列值中的一个（或定义实现时数据源支持的其他值）：<br /><br /> SELECT =**被**授权者可以检索列的数据。<br /><br /> INSERT =**当**向表中插入新行**时，被**授权者可以为此列提供数据。<br /><br /> UPDATE =**被**授权者可以修改列中的现有数据。<br /><br /> REFERENCE = 被授权者**可以通过主键**/外键关系引用外表中的列。 主键/外键关系是使用表约束定义的。|  
 |**IS_GRANTABLE**|**varchar （** 3 **）**|指示**是否允许被授权**者向其他用户授予权限（通常称为 "授予 with grant" 权限）。 可以是 YES、NO 或 NULL。 未知值或 NULL 值表示不能使用“授予再授予”(grant with grant) 的数据源。|  
   

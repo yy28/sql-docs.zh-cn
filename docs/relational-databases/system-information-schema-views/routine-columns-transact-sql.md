@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5b0ed500b1217ae70dca72ab6eab64ab661c22ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078528"
 ---
 # <a name="routine_columns-transact-sql"></a>ROUTINE_COLUMNS (Transact-SQL)
@@ -43,26 +43,26 @@ ms.locfileid: "68078528"
 |**COLUMN_DEFAULT**|**nvarchar （** 4000 **）**|列的默认值。|  
 |**IS_NULLABLE**|**varchar （** 3 **）**|如果此列允许 NULL，则返回 YES。 否则，返回 NO。|  
 |**DATA_TYPE**|**nvarchar （** 128 **）**|系统提供的数据类型。|  
-|**CHARACTER_MAXIMUM_LENGTH**|**int**|二进制数据、字符数据或文本和图像数据的最大长度（字符）。<br /><br /> 对于**xml**和大值类型的数据，为-1。 否则，将返回 NULL。 有关详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。|  
-|**CHARACTER_OCTET_LENGTH**|**int**|二进制数据、字符数据或文本和图像数据的最大长度（字节）。<br /><br /> 对于**xml**和大值类型的数据，为-1。 否则，将返回 NULL。|  
-|**NUMERIC_PRECISION**|**tinyint**|近似数字数据、精确数字数据、整数数据或货币数据的精度。 否则，将返回 NULL。|  
-|**NUMERIC_PRECISION_RADIX**|**smallint**|近似数字数据、精确数字数据、整数数据或货币数据的精度基数。 否则，将返回 NULL。|  
-|**NUMERIC_SCALE**|**tinyint**|近似数字数据、精确数字数据、整数数据或货币数据的小数位数。 否则，将返回 NULL。|  
+|**CHARACTER_MAXIMUM_LENGTH**|**int**|二进制数据、字符数据或文本和图像数据的最大长度（字符）。<br /><br /> 对于**xml**和大值类型的数据，为-1。 否则，返回 NULL。 有关详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。|  
+|**CHARACTER_OCTET_LENGTH**|**int**|二进制数据、字符数据或文本和图像数据的最大长度（字节）。<br /><br /> 对于**xml**和大值类型的数据，为-1。 否则，返回 NULL。|  
+|**NUMERIC_PRECISION**|**tinyint**|近似数字数据、精确数字数据、整数数据或货币数据的精度。 否则，返回 NULL。|  
+|**NUMERIC_PRECISION_RADIX**|**smallint**|近似数字数据、精确数字数据、整数数据或货币数据的精度基数。 否则，返回 NULL。|  
+|**NUMERIC_SCALE**|**tinyint**|近似数字数据、精确数字数据、整数数据或货币数据的小数位数。 否则，返回 NULL。|  
 |**DATETIME_PRECISION**|**smallint**|**Datetime**和 ISO**integer**数据类型的子类型代码。 对于其他数据类型，返回 NULL。|  
-|**CHARACTER_SET_CATALOG**|**varchar （** 6 **）**|返回**master**。 如果该列是字符数据或**文本**数据类型，则指示字符集所在的数据库。 否则，将返回 NULL。|  
+|**CHARACTER_SET_CATALOG**|**varchar （** 6 **）**|返回**master**。 如果该列是字符数据或**文本**数据类型，则指示字符集所在的数据库。 否则，返回 NULL。|  
 |**CHARACTER_SET_SCHEMA**|**varchar （** 3 **）**|始终返回 NULL。|  
-|**CHARACTER_SET_NAME**|**nvarchar （** 128 **）**|如果此列为字符数据或**文本**数据类型，则返回字符集的唯一名称。 否则，将返回 NULL。|  
+|**CHARACTER_SET_NAME**|**nvarchar （** 128 **）**|如果此列为字符数据或**文本**数据类型，则返回字符集的唯一名称。 否则，返回 NULL。|  
 |**COLLATION_CATALOG**|**varchar （** 6 **）**|始终返回 NULL。|  
 |**COLLATION_SCHEMA**|**varchar （** 3 **）**|始终返回 NULL。|  
-|**COLLATION_NAME**|**nvarchar （** 128 **）**|如果列为字符数据或**文本**数据类型，则返回排序顺序的唯一名称。 否则，将返回 NULL。|  
-|**DOMAIN_CATALOG**|**nvarchar （** 128 **）**|如果此列是别名数据类型，则此列是在其中创建用户定义数据类型的数据库的名称。 否则，将返回 NULL。|  
-|**DOMAIN_SCHEMA**|**nvarchar （** 128 **）**|如果该列是用户定义的数据类型，则此列是包含用户定义数据类型的架构的名称。 否则，将返回 NULL。<br /><br /> <strong> \* \*重要\*提示</strong>不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
-|**DOMAIN_NAME**|**nvarchar （** 128 **）**|如果列是用户定义数据类型，则此列是该用户定义数据类型的名称。 否则，将返回 NULL。|  
+|**COLLATION_NAME**|**nvarchar （** 128 **）**|如果列为字符数据或**文本**数据类型，则返回排序顺序的唯一名称。 否则，返回 NULL。|  
+|**DOMAIN_CATALOG**|**nvarchar （** 128 **）**|如果此列是别名数据类型，则此列是在其中创建用户定义数据类型的数据库的名称。 否则，返回 NULL。|  
+|**DOMAIN_SCHEMA**|**nvarchar （** 128 **）**|如果该列是用户定义的数据类型，则此列是包含用户定义数据类型的架构的名称。 否则，返回 NULL。<br /><br /> <strong> \* \*重要\*提示</strong>不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
+|**DOMAIN_NAME**|**nvarchar （** 128 **）**|如果列是用户定义数据类型，则此列是该用户定义数据类型的名称。 否则，返回 NULL。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-sql&#41;的系统视图 &#40;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [&#40;Transact-sql&#41;的信息架构视图](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+ [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   

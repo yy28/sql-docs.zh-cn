@@ -10,10 +10,10 @@ ms.assetid: 9a76083e-4902-449e-b125-7e9259fc37f7
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 8fb0c8849ce56fd424a93234d8878b19e19b5bdd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060100"
 ---
 # <a name="save-metadata-db2tosql"></a>保存元数据（DB2ToSQL）
@@ -25,7 +25,7 @@ ms.locfileid: "68060100"
 **名称**  
 项目中每个数据库的名称。  
   
-**Status**  
+**状态**  
 指示元数据是否已加载到 SSMA 项目中，或元数据是否缺失。  
   
 SSMA 根据需要将元数据加载到项目中。 浏览元数据和转换架构时，会自动加载元数据。  
@@ -36,7 +36,7 @@ SSMA 根据需要将元数据加载到项目中。 浏览元数据和转换架�
 **清除**  
 清除缺少元数据的所有数据库的复选框。 如果已加载元数据，则不能清除此复选框。  
   
-**把**  
+**保存**  
 保存项目，为缺少元数据的所选数据库加载元数据。  
   
 **取消**  

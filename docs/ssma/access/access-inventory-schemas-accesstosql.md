@@ -37,10 +37,10 @@ ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c140489877be5f34bc6d7a5b20a4ce36fdb3820f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68068947"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>访问清单架构（AccessToSQL）
@@ -54,7 +54,7 @@ ms.locfileid: "68068947"
 |**DatabaseId**|**uniqueidentifier**|唯一标识每个数据库的 GUID。 此列也是表的主键。|  
 |**DatabaseName**|**nvarchar(4000)**|访问数据库的名称。|  
 |**ExportTime**|**datetime**|此元数据由 SSMA 创建的日期和时间。|  
-|**文件路径**|**nvarchar(4000)**|Access 数据库的完整路径和文件名。|  
+|**FilePath**|**nvarchar(4000)**|Access 数据库的完整路径和文件名。|  
 |**FileSize**|**bigint**|Access 数据库的大小（KB）。|  
 |**FileOwner**|**nvarchar(4000)**|指定为访问数据库的所有者的 Windows 帐户。|  
 |**DateCreated**|**datetime**|创建 Access 数据库的日期和时间。|  
@@ -94,7 +94,7 @@ ms.locfileid: "68068947"
 |**ColumnId**|**int**|用于标识列的递增整数。 **ColumnId**是表的主键。|  
 |**ColumnName**|**nvarchar(4000)**|列的名称。|  
 |**IsNullable**|**bit**|指定列是否可以包含 null 值。 如果值为1，则列可以包含 null 值。 如果该值为0，则列不能包含 null 值。 请注意，验证规则还可用于防止 null 值。|  
-|**数据类型**|**nvarchar(4000)**|列的访问数据类型，例如**文本**或**Long**。|  
+|**DataType**|**nvarchar(4000)**|列的访问数据类型，例如**文本**或**Long**。|  
 |**IsAutoIncrement**|**bit**|指定列是否自动增加整数值。 如果值为1，则整数会自动递增。|  
 |**Ordinal**|**smallint**|表中列的顺序（从零开始）。|  
 |**值**|**nvarchar(4000)**|列的默认值。|  
@@ -114,7 +114,7 @@ ms.locfileid: "68068947"
 |**IsPK**|**bit**|指定在定义主键时是否自动创建索引。|  
 |**IsClustered**|**bit**|指定索引是否为聚集索引。 聚集索引对数据的物理存储重新排序。 一个表只能有一个聚集索引。|  
   
-## <a name="foreign-keys"></a>外键  
+## <a name="foreign-keys"></a>Foreign Keys  
 外键元数据将导出到**SSMA_Access_InventoryForeignKeys**表。 此表包含以下列：  
   
 |列名|数据类型|说明|  
@@ -143,7 +143,7 @@ ms.locfileid: "68068947"
 |**QueryType**|**nvarchar(4000)**|指定查询的类型，例如**Select**或**SetOperation**。|  
 |**ExternalSource**|**nvarchar(4000)**|如果查询引用外部数据源，则这是查询使用的连接字符串。|  
   
-## <a name="forms"></a>域  
+## <a name="forms"></a>表单  
 表单元数据将导出到**SSMA_Access_InventoryForms**表。 此表包含以下列：  
   
 |列名|数据类型|说明|  

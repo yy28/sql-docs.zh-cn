@@ -19,10 +19,10 @@ ms.assetid: a279ecd1-a59c-4315-9f08-bf221f00a465
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 78e8211c10d019c3b2a8c2435c5ddde8f8182a14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060415"
 ---
 # <a name="syscollector_collection_items-transact-sql"></a>syscollector_collection_items (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68060415"
 |**collection_set_id**|**int**|标识收集组。 不可为 null。|  
 |**collection_item_id**|**int**|标识收集组中的项。 不可为 null。|  
 |**collector_type_uid**|**uniqueidentifier**|用于标识收集器类型的 GUID。 不可为 null。|  
-|**路径名**|**nvarchar(4000)**|收集组的名称。 可以为 Null。|  
+|**name**|**nvarchar(4000)**|收集组的名称。 可以为 Null。|  
 |**率**|**int**|收集项收集数据的频率。 不可为 null。|  
 |**parameters**|**xml**|介绍与相应收集项关联的收集器类型的参数化。 将使用存储在特定收集器类型的**parameter_schema**中的 xml 架构（XSD）来验证此收集项的 xml 架构。 可以为 Null。 有关详细信息，请参阅[&#40;transact-sql&#41;syscollector_collector_types ](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)。|  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68060415"
  需要**dc_operator** **dc_proxy**选择。  
   
 ## <a name="see-also"></a>另请参阅  
- [数据收集器存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [&#40;Transact-sql&#41;的数据收集器存储过程](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [&#40;Transact-sql&#41;的数据收集器视图](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [数据收集](../../relational-databases/data-collection/data-collection.md)  
   

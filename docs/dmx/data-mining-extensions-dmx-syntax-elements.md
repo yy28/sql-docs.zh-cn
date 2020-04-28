@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 17d24c6924b03e4ed0415e73bfefc0d372ca45bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070851"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>数据挖掘扩展插件 (DMX) 语法元素
@@ -24,12 +24,11 @@ ms.locfileid: "68070851"
  [&#40;DMX&#41;的标识符](../dmx/identifiers-dmx.md)  
  命名挖掘模型、挖掘结构和列等对象。  
   
- [DMX&#41;的数据类型 &#40;](../dmx/data-types-dmx.md)  
+ [数据类型 (DMX)](../dmx/data-types-dmx.md)  
  定义挖掘类型列包含的数据类型。  
   
  [&#40;DMX&#41;的表达式](../dmx/expressions-dmx.md)  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可以解析为单个（或标量）值、对象或表值的语法单元。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可以解析为单个（或标量）值、对象或表值的语法单元。  
   
  [运算符 &#40;DMX&#41;](../dmx/operators-dmx.md)  
  与一个或多个简单 DMX 表达式一起使用，以构成更复杂的 DMX 表达式。  
@@ -38,22 +37,21 @@ ms.locfileid: "68070851"
  一个表达式，该表达式采用零或者一个或多个输入值并返回标量值或表。  
   
  [DMX&#41;&#40;注释](../dmx/comments-dmx.md)  
- 可以插入到 DMX 语句或脚本中说明语句用途的文本元素。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 不会运行注释。  
+ 可以插入到 DMX 语句或脚本中说明语句用途的文本元素。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 不会运行注释。  
   
  [保留关键字 &#40;DMX&#41;](../dmx/reserved-keywords-dmx.md)  
  保留以供 DMX 使用的单词，不应使用这些单词命名数据库中的对象。  
   
- [内容类型 &#40;DMX&#41;](../dmx/content-types-dmx.md)  
+ [内容类型 (DMX)](../dmx/content-types-dmx.md)  
  定义挖掘结构列包含的内容。  
   
- [DMX&#41;分发 &#40;](../dmx/distributions-dmx.md)  
+ [分布 (DMX)](../dmx/distributions-dmx.md)  
  定义数据在列内的分布。  
   
  [DMX&#41;使用 &#40;](../dmx/usage-dmx.md)  
  定义挖掘模型使用其所包含的列的方式。  
   
- [&#40;DMX&#41;建模标志](../dmx/modeling-flags-dmx.md)  
+ [建模标志 (DMX)](../dmx/modeling-flags-dmx.md)  
  定义算法可用于处理挖掘模型的附加提示。  
   
 ## <a name="see-also"></a>另请参阅  

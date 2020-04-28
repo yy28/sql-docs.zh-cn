@@ -18,10 +18,10 @@ ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7d698932bb7ef7e0fd37a0ced8ab536eeb0d5d68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096034"
 ---
 # <a name="sp_trace_create-transact-sql"></a>sp_trace_create (Transact-SQL)
@@ -82,8 +82,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  如果同时指定了*stop_time*和*max_file_size* ，并且未指定 TRACE_FILE_ROLLOVER，则在达到指定的停止时间或最大文件大小时，跟踪将会超出。 如果指定*stop_time*、 *max_file_size*和 TRACE_FILE_ROLLOVER，则跟踪会在指定的停止时间停止，前提是跟踪未填满驱动器。  
   
-`[ @filecount = ] 'max_rollover_files'`指定要用相同的基准文件名维护的最大数目或跟踪文件。 *max_rollover_files*为**int**，大于1。 此参数仅在指定了 TRACE_FILE_ROLLOVER 选项时有效。 指定*max_rollover_files*时，将[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在打开新的跟踪文件前删除最旧的跟踪文件，以保持不超过*max_rollover_files*的跟踪文件。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过向基准文件名追加数字来跟踪跟踪文件的新旧程度。  
+`[ @filecount = ] 'max_rollover_files'`指定要用相同的基准文件名维护的最大数目或跟踪文件。 *max_rollover_files*为**int**，大于1。 此参数仅在指定了 TRACE_FILE_ROLLOVER 选项时有效。 指定*max_rollover_files*时，将[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在打开新的跟踪文件前删除最旧的跟踪文件，以保持不超过*max_rollover_files*的跟踪文件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过向基准文件名追加数字来跟踪跟踪文件的新旧程度。  
   
  例如，将*trace_file*参数指定为 "c:\mytrace" 时，名为 "mytrace_123 c：\ trace.dat.trc" 的文件早于名为 "c：\ mytrace_124. trace.dat.trc" 的文件。 如果*max_rollover_files*设置为2，则 SQL Server 在创建跟踪文件 "mytrace_125 c：\ trace.dat.trc" 之前删除文件 "c：\ mytrace_123"。  
   
@@ -136,9 +135,9 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
     -   **Batch starting**  
   
-    -   **异常**  
+    -   **Exception**  
   
-    -   **注重**  
+    -   **Attention**  
   
 -   无法在此跟踪中添加或删除事件或列。  
   
@@ -149,9 +148,9 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
 ## <a name="see-also"></a>另请参阅  
  [sp_trace_generateevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setfilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
- [sp_trace_setstatus (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
+ [sp_trace_setevent &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setfilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+ [sp_trace_setstatus &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [SQL 跟踪](../../relational-databases/sql-trace/sql-trace.md)  
   
   

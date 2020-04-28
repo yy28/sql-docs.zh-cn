@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 03687ea50b04c96aa4dbafab9d02d2bbc33a14b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079424"
 ---
 # <a name="sysdatabase_scoped_credentials-transact-sql"></a>sys. database_scoped_credentials （Transact-sql）
@@ -45,11 +45,11 @@ ms.locfileid: "68079424"
  需要对数据库拥有 `CONTROL` 权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [凭据（数据库引擎）](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
- [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
- [ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
- [DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
- [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
+ [凭据 &#40;数据库引擎&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+ [&#40;Transact-sql&#41;创建数据库作用域凭据](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
+ [更改数据库作用域凭据 &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
+ [&#40;Transact-sql&#41;删除数据库范围的凭据](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
+ [&#40;Transact-sql&#41;创建凭据](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials (Transact-SQL)](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   
   

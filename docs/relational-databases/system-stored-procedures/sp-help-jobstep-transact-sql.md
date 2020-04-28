@@ -18,10 +18,10 @@ ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c65498b25bfbe0a5eee38a43ea212e29edc26295
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090055"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
@@ -64,9 +64,9 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|步骤的唯一标识符。|  
 |**step_name**|**sysname**|作业中步骤的名称。|  
-|**适用**|**nvarchar （40）**|执行步骤命令的子系统。|  
+|**适用**|**nvarchar(40)**|执行步骤命令的子系统。|  
 |**command**|**nvarchar(max)**|在步骤中执行的命令。|  
-|**随意**|**int**|控制步骤行为的值的位掩码。|  
+|**flag**|**int**|控制步骤行为的值的位掩码。|  
 |**cmdexec_success_code**|**int**|对于**CmdExec**步骤，这是成功命令的进程退出代码。|  
 |**on_success_action**|**tinyint**|如果步骤成功，则采取下列某个后续操作：<br /><br /> **1** = 退出报告成功的作业。<br /><br /> **2** = 退出报告失败的作业。<br /><br /> **3** = 中转到下一步。<br /><br /> **4** = 跳到步骤。|  
 |**on_success_step_id**|**int**|如果**on_success_action**为4，则指示要执行的下一步。|  
@@ -78,7 +78,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**retry_attempts**|**int**|应该对命令进行重试的最大次数（如果命令没有成功）。|  
 |**retry_interval**|**int**|重试尝试的间隔（以分钟为单位）。|  
 |**os_run_priority**|**int**|保留。|  
-|**output_file_name**|**nvarchar （200）**|命令输出应写入到的文件（[!INCLUDE[tsql](../../includes/tsql-md.md)]仅限**CmdExec**和**PowerShell**步骤）。|  
+|**output_file_name**|**nvarchar(200)**|命令输出应写入到的文件（[!INCLUDE[tsql](../../includes/tsql-md.md)]仅限**CmdExec**和**PowerShell**步骤）。|  
 |**last_run_outcome**|**int**|步骤上一次运行的结果：<br /><br /> **0** = 失败<br /><br /> **1** = 成功<br /><br /> **2** = 重试<br /><br /> **3** = 已取消<br /><br /> **5** = 未知|  
 |**last_run_duration**|**int**|该步骤上次运行时的持续时间 (hhmmss)。|  
 |**last_run_retries**|**int**|步骤上一次运行时，重试命令的次数。|  
@@ -90,7 +90,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  **sp_help_jobstep**在**msdb**数据库中。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下， **sysadmin**固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   

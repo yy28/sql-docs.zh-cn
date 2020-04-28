@@ -18,10 +18,10 @@ ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a7164afe24d15abf195ebff96e4e96a82877deae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079995"
 ---
 # <a name="msreplication_subscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
@@ -37,13 +37,13 @@ ms.locfileid: "68079995"
 |**independent_agent**|**bit**|表明该发布是否有独立的分发代理。|  
 |**subscription_type**|**int**|订阅的类型：<br /><br /> 0 = 推送。<br /><br /> 1 = 请求。<br /><br /> 2 = 匿名。|  
 |**distribution_agent**|**sysname**|分发代理的名称。|  
-|**时间**|**smalldatetime**|分发代理上次更新的时间。|  
+|**阶段**|**smalldatetime**|分发代理上次更新的时间。|  
 |**2008**|**nvarchar(255)**|订阅的说明。|  
-|**transaction_timestamp**|**varbinary （16）**|仅供内部使用。|  
+|**transaction_timestamp**|**varbinary(16)**|仅供内部使用。|  
 |**update_mode**|**tinyint**|更新的类型。|  
-|**agent_id**|**binary （16）**|代理的 ID。|  
-|**subscription_guid**|**binary （16）**|发布上订阅版本的全局标识符。|  
-|**subid**|**binary （16）**|匿名订阅的全局标识符。|  
+|**agent_id**|**binary(16)**|代理的 ID。|  
+|**subscription_guid**|**binary(16)**|发布上订阅版本的全局标识符。|  
+|**subid**|**binary(16)**|匿名订阅的全局标识符。|  
 |**immediate_sync**|**bit**|指示每次运行快照代理时是否创建或重新创建同步文件。|  
   
 ## <a name="see-also"></a>另请参阅  

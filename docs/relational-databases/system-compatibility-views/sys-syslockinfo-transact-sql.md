@@ -21,10 +21,10 @@ ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0c56aa86c20867cfe2cf1da520922d1c74f9c01c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053340"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
@@ -40,9 +40,9 @@ ms.locfileid: "68053340"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**rsc_text**|**nchar （32）**|锁资源的文本化描述。 包含资源名称的一部分。|  
-|**rsc_bin**|**binary （16）**|二进制锁资源。 包含锁管理器中所含的实际锁资源。 对于知道用于生成其自己的格式化锁资源的锁资源格式，以及如何在**syslockinfo**上执行自联接的工具，将包括此列。|  
-|**rsc_valblk**|**binary （16）**|锁值块。 有些资源类型可以在特定的锁资源中包含附加数据，锁管理器不对这类锁资源进行哈希运算以决定具体某个锁资源的所有关系。 例如，页锁不归具体的对象 ID 所有。 但是，对于锁升级和出于其他目的， 页锁的对象 ID 可以包括在锁值块中。|  
+|**rsc_text**|**nchar(32)**|锁资源的文本化描述。 包含资源名称的一部分。|  
+|**rsc_bin**|**binary(16)**|二进制锁资源。 包含锁管理器中所含的实际锁资源。 对于知道用于生成其自己的格式化锁资源的锁资源格式，以及如何在**syslockinfo**上执行自联接的工具，将包括此列。|  
+|**rsc_valblk**|**binary(16)**|锁值块。 有些资源类型可以在特定的锁资源中包含附加数据，锁管理器不对这类锁资源进行哈希运算以决定具体某个锁资源的所有关系。 例如，页锁不归具体的对象 ID 所有。 但是，对于锁升级和出于其他目的， 页锁的对象 ID 可以包括在锁值块中。|  
 |**rsc_dbid**|**smallint**|与资源关联的数据库 ID。|  
 |**rsc_indid**|**smallint**|与资源关联的索引 ID（如果适合）。|  
 |**rsc_objid**|**int**|与资源关联的对象 ID（如果适合）。|  
@@ -64,6 +64,6 @@ ms.locfileid: "68053340"
   
 ## <a name="see-also"></a>另请参阅  
  [将系统表映射到系统视图 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Transact-sql&#41;的兼容性视图 &#40;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [兼容性视图 (Transact SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

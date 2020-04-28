@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a260598d62a3c5fc1304e8b71b8631546731ed07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070868"
 ---
 # <a name="data-mining-extensions-dmx-syntax-conventions"></a>数据挖掘扩展插件 (DMX) 语法约定
@@ -28,11 +28,10 @@ ms.locfileid: "68070868"
 |`[ ]`（方括号）|包含可选语法项。 不要键入方括号。|  
 |{}（大括号）|包含必选的语法项。 不要键入大括号。|  
 |, ...|指示逗号前面的项可重复任意次。 各项用逗号分隔。|  
-|
-  \<label> ::=|语法块的名称。 此约定用于对可在语句中的多个位置使用的过长语法段或语法单元进行分组和标记。 可以在其中使用语法块的每个位置都用括在括号中的标签表示，如> \<标签。|  
+|\<label> ::=|语法块的名称。 此约定用于对可在语句中的多个位置使用的过长语法段或语法单元进行分组和标记。 可以在其中使用语法块的每个位置都用括在括号中的标签表示，如> \<标签。|  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;DMX&#41; 的数据挖掘扩展插件](../dmx/data-mining-extensions-dmx-reference.md)  
+ [数据挖掘扩展插件 (DMX) 参考](../dmx/data-mining-extensions-dmx-reference.md)  
   
   
 

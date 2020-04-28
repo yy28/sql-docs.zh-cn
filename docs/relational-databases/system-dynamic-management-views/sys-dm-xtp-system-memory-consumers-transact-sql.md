@@ -19,10 +19,10 @@ ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 83e9368b562a7ac200171dc814830b21d677770a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090087"
 ---
 # <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
@@ -42,7 +42,7 @@ select * from sys.dm_xtp_system_memory_consumers
 |memory_consumer_id|**bigint**|内存消耗者的内部 ID。|  
 |memory_consumer_type|**int**|一个整数，表示具有以下值之一的内存使用者的类型：<br /><br /> 0-不应显示。 聚合两个或多个使用者的内存使用量。<br /><br /> 1-后备链表：跟踪系统后备链表的内存占用情况。<br /><br /> VARHEAP：跟踪长度可变的堆的内存占用情况。<br /><br /> 4-IO 页池：跟踪用于 IO 操作的系统页池的内存占用情况。|  
 |memory_consumer_type_desc|**nvarchar （16）**|对内存消耗者类型的说明：<br /><br /> 0-不应显示。<br /><br /> 1-后备链表<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
-|memory_consumer_desc|**nvarchar （64）**|对内存消耗者实例的说明：<br /><br /> VARHEAP <br />系统堆。 常规用途。 当前仅用于分配垃圾收集工作项。<br />- 或 -<br />后备链堆。 后备链在后备链表中包含的项目数达到预先确定的上限（通常约 5,000 项）时使用。<br /><br /> PGPOOL：对于 IO 系统池，有三种不同的大小：系统4K 页面池、系统 64 K 页面池和系统 256 K 页池。|  
+|memory_consumer_desc|**nvarchar （64）**|对内存消耗者实例的说明：<br /><br /> VARHEAP <br />系统堆。 通用。 当前仅用于分配垃圾收集工作项。<br />- 或 -<br />后备链堆。 后备链在后备链表中包含的项目数达到预先确定的上限（通常约 5,000 项）时使用。<br /><br /> PGPOOL：对于 IO 系统池，有三种不同的大小：系统4K 页面池、系统 64 K 页面池和系统 256 K 页池。|  
 |lookaside_id|**bigint**|线程本地后备链内存提供程序的 ID。|  
 |pagepool_id|**bigint**|线程本地页池内存提供程序的 ID。|  
 |allocated_bytes|**bigint**|为此消耗者保留的字节数。|  
@@ -105,6 +105,6 @@ total_allocated_MB   total_used_MB
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;Transact-sql&#41;的内存优化表动态管理视图](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [内存优化表动态管理视图 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

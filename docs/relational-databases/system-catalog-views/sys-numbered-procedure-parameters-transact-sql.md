@@ -20,10 +20,10 @@ ms.assetid: a441d46d-1f30-41c2-8d94-e9442f59786e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d07ca74ffb2b793038f230d2b3a5b265101a7eb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68102337"
 ---
 # <a name="sysnumbered_procedure_parameters-transact-sql"></a>sys.numbered_procedure_parameters (Transact-SQL)
@@ -41,13 +41,13 @@ ms.locfileid: "68102337"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|此参数所属对象的 ID。|  
 |**procedure_number**|**smallint**|对象中这种过程的数目（2 或更多）。|  
-|**路径名**|**sysname**|参数的名称。 在**procedure_number**中是唯一的。|  
+|**name**|**sysname**|参数的名称。 在**procedure_number**中是唯一的。|  
 |**parameter_id**|**int**|参数的 ID。 在**procedure_number**中是唯一的。|  
 |**system_type_id**|**tinyint**|参数的系统类型的 ID。|  
 |**user_type_id**|**int**|由用户定义的由参数定义的类型 ID。|  
 |**max_length**|**smallint**|参数的最大长度（字节）。<br /><br /> -1 = 列数据类型为 varchar(max)、nvarchar(max) 或 varbinary(max)。|  
 |**精度**|**tinyint**|如果参数是基于数值的，则表示参数的精度；否则为 0。|  
-|**纵向**|**tinyint**|如果参数是基于数值的，则表示参数的小数位数；否则为 0。|  
+|**scale**|**tinyint**|如果参数是基于数值的，则表示参数的小数位数；否则为 0。|  
 |**is_output**|**bit**|1 = 输出或返回参数；否则为 0|  
 |**is_cursor_ref**|**bit**|1 = 参数是游标引用参数。|  
   

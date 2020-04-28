@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eae119fe16b916f47f1acdcd2ebe15efd96e51e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68048396"
 ---
 # <a name="sysexternal_file_formats-transact-sql"></a>sys. external_file_formats （Transact-sql）
@@ -42,7 +42,7 @@ ms.locfileid: "68048396"
 |data_compression|**nvarchar(255)**|用于外部数据的数据压缩方法。|对于 format_type = DELIMITEDTEXT：<br /><br /> -"org. Org.apache.hadoop.io.compress.defaultcodec"。<br />-"org. Org.apache.hadoop.io.compress.gzipcodec"。<br /><br /> 对于 format_type = RCFILE：<br /><br /> -"org. Org.apache.hadoop.io.compress.defaultcodec"。<br /><br /> 对于 format_type = ORC：<br /><br /> -"org. Org.apache.hadoop.io.compress.defaultcodec"。<br />-"org. 为使用 org.apache.io.compress.snappycodec"。<br /><br /> 对于 format_type = PARQUET：<br /><br /> -"org. Org.apache.hadoop.io.compress.gzipcodec"。<br />-"org. 为使用 org.apache.io.compress.snappycodec"。|  
   
 ## <a name="permissions"></a>权限  
- 目录视图中仅显示用户拥有的安全对象的元数据，或用户对其拥有某些权限的安全对象的元数据。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 目录视图中仅显示用户拥有的安全对象的元数据，或用户对其拥有某些权限的安全对象的元数据。  有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [sys. external_data_sources &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   

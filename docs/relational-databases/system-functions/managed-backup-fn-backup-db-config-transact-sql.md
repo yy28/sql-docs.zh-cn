@@ -21,10 +21,10 @@ ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a23f8eb64ae99b999cdf6b16f1c888383a88c147
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68067783"
 ---
 # <a name="managed_backupfn_backup_db_config-transact-sql"></a>managed_backup fn_backup_db_config （Transact-sql）
@@ -42,7 +42,7 @@ ms.locfileid: "68067783"
 managed_backup.fn_backup_db_config ('database_name' | '' | NULL)  
 ```  
   
-##  <a name="Arguments"></a> 参数  
+##  <a name="arguments"></a><a name="Arguments"></a>形参  
  @db_name  
  数据库的名称。 @db_name参数为**SYSNAME**。 如果传递给此参数的是空字符串或 Null 值，则将返回 SQL Server 实例上所有数据库的有关信息。  
   

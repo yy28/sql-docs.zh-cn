@@ -18,10 +18,10 @@ ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 10033b2525ba28e79bd31a73bd9e71a7cca15e42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054930"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
@@ -82,7 +82,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**2**|重试（只针对步骤）|  
 |**3**|已取消|  
 |**4**|进行中的消息|  
-|**5**|未知|  
+|**5**|Unknown|  
   
 `[ @minimum_retries = ] minimum_retries`作业应重试运行的最少次数。 *minimum_retries*的值为**int**，默认值为 NULL。  
   
@@ -107,7 +107,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**step_name**|**sysname**|步骤名称（对于作业历史记录将为 NULL）。|  
 |**sql_message_id**|**int**|对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步骤，为运行命令时遇到的最近的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 错误号。|  
 |**sql_severity**|**int**|对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步骤，为运行命令时遇到的最高级别的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 错误严重性。|  
-|**消息**|**nvarchar （1024）**|作业或步骤历史记录消息。|  
+|**message**|**nvarchar(1024)**|作业或步骤历史记录消息。|  
 |**run_status**|**int**|作业或步骤的结果。|  
 |**run_date**|**int**|作业或步骤开始执行的日期。|  
 |**run_time**|**int**|作业或步骤开始执行的时间。|  
@@ -116,13 +116,13 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**operator_netsent**|**nvarchar （20）**|接收有关该作业的网络消息的操作员（对于步骤历史记录为 NULL）。|  
 |**operator_paged**|**nvarchar （20）**|接收有关该作业的寻呼的操作员（对于步骤历史记录为 NULL）。|  
 |**retries_attempted**|**int**|步骤的重试次数（对于作业历史记录始终为 0）。|  
-|**服务**|**nvarchar （30）**|执行步骤或作业的服务器。 始终为（**local**）。|  
+|**服务**|**nvarchar(30)**|执行步骤或作业的服务器。 始终为（**local**）。|  
   
 ## <a name="remarks"></a>备注  
  **sp_help_jobhistory**返回一个报表，其中包含指定计划作业的历史记录。 如果没有指定参数，则该报表包含所有预定作业的历史记录。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下， **sysadmin**固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   

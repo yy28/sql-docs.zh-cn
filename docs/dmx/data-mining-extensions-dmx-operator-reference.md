@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4e0dfafb74e6e86185872ea8e736b95dce7d4058
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070914"
 ---
 # <a name="data-mining-extensions-dmx-operator-reference"></a>数据挖掘扩展插件 (DMX) 运算符参考
@@ -20,7 +20,7 @@ ms.locfileid: "68070914"
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的数据挖掘扩展插件（DMX）语言支持算术、赋值、比较、逻辑和一元运算符。 下表列出了 DMX 支持的运算符。  
   
-|操作员|说明|  
+|运算符|说明|  
 |--------------|-----------------|  
 |[+ &#40;添加&#41; &#40;DMX&#41;](../dmx/add-dmx.md)|将两个数相加的算术运算符。|  
 |[-&#40;减去&#41; &#40;DMX&#41;](../dmx/subtract-dmx.md)|从一个数中减去另一个数的算术运算符。|  

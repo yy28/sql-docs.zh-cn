@@ -19,10 +19,10 @@ ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fc4f107ef1c26aa51f3f1d58f910be9721f2a51a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68067836"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
@@ -40,12 +40,12 @@ ms.locfileid: "68067836"
 |**begin_lsn**|**nvarchar （64）**|事务的开始日志记录的日志序列号 (LSN)。|  
 |**commit_lsn**|**nvarchar （64）**|事务的提交日志记录的 LSN。|  
 |**dbid**|**smallint**|数据库 ID。|  
-|**行**|**int**|事务中复制的命令的 ID。|  
+|**各**|**int**|事务中复制的命令的 ID。|  
 |**xdesid**|**nvarchar （64）**|事务 ID。|  
 |**artcache_table_address**|**varbinary(8)**|上次用于该事务的缓存的项目表结构的内存中的地址。|  
 |**服务**|**nvarchar （514）**|服务器名称。|  
 |**server_len_in_bytes**|**smallint**|服务器名称的字符长度（字节）。|  
-|**数据**|**nvarchar （514）**|数据库名称。|  
+|**database**|**nvarchar （514）**|数据库名称。|  
 |**db_len_in_bytes**|**smallint**|数据库名称的字符长度（字节）。|  
 |**发出**|**nvarchar （514）**|发起事务的服务器的名称。|  
 |**originator_len_in_bytes**|**smallint**|发起事务的服务器的字符长度（字节）。|  
@@ -74,7 +74,7 @@ ms.locfileid: "68067836"
  仅为项目缓存中当前加载的复制数据库对象或启用了变更数据捕获的表返回信息。  
   
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与复制相关的动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
  [与变更数据捕获相关的动态管理视图 (Transact-SQL)](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   

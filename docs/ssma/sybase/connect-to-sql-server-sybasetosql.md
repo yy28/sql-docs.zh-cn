@@ -10,10 +10,10 @@ ms.assetid: 30179b25-409b-4e23-bc73-2f226657098f
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ed3ab8f05b9f809df99508163d07cb3e1bededa7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083404"
 ---
 # <a name="connect-to-sql-server-sybasetosql"></a>连接到 SQL Server (SybaseToSQL)
@@ -41,7 +41,7 @@ ms.locfileid: "68083404"
 **用户名**  
 如果使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的是身份验证，请输入该实例的登录[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]名。 如果使用的是 Windows 身份验证，则此选项不可用。  
   
-**权限**  
+**密码**  
 如果使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的是身份验证，请输入该实例上的登录名的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]密码。 如果使用的是 Windows 身份验证，则此选项不可用。  
   
 **加密连接**  

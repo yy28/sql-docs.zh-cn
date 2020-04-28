@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7b75962019d9b39728ceff0b151e770dd0f51a25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68075633"
 ---
 # <a name="sp_releaseapplock-transact-sql"></a>sp_releaseapplock (Transact-SQL)
@@ -47,7 +47,7 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
  由客户端应用程序指定的锁资源名称。 应用程序必须确保该资源是唯一的。 指定的名称经过内部哈希运算后成为可以存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器中的值。 *resource_name*为**nvarchar （255）** ，无默认值。 比较了二进制*resource_name* ，因此无论当前数据库的排序规则设置如何，都是区分大小写的。  
   
  [ @LockOwner= ]"*lock_owner*"  
- 锁的所有者，它是请求锁时所指定的 lock_owner 值**。 *lock_owner*为**nvarchar （32）**。 该值可以是 Transaction（默认值）或 Session********。 默认情况下， *lock_owner*值为**transaction**时，sp_getapplock 必须从事务内执行。  
+ 锁的所有者，它是请求锁时所指定的 lock_owner 值**。 lock_owner 是 nvarchar(32)******。 该值可以是 Transaction（默认值）或 Session********。 默认情况下， *lock_owner*值为**transaction**时，sp_getapplock 必须从事务内执行。  
   
  [ @DbPrincipal= ]"*database_principal*"  
  对数据库中的对象具有权限的用户、角色或应用程序角色。 函数的调用方必须是*database_principal*、dbo 或 db_owner 固定数据库角色的成员，才能成功调用该函数。 默认值为 public。  
@@ -55,7 +55,7 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
 ## <a name="return-code-values"></a>返回代码值  
  \>= 0 （成功）或 < 0 （失败）  
   
-|值|结果|  
+|“值”|结果|  
 |-----------|------------|  
 |0|成功释放锁。|  
 |-999|指示参数验证或其他调用错误。|  
@@ -83,6 +83,6 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [APPLOCK_MODE &#40;Transact-sql&#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
  [APPLOCK_TEST &#40;Transact-sql&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
- [sp_getapplock &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
+ [sp_getapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
   
   

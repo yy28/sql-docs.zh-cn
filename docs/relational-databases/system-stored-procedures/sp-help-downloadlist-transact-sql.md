@@ -18,10 +18,10 @@ ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 40345ed8ad1a10da0088c5c1388c44fa24cad929
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68055189"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
@@ -87,15 +87,15 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|指令的唯一整数标识号。|  
-|**source_server**|**nvarchar （30）**|发出指令的服务器的计算机名。 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本7.0 中，这始终是主服务器（MSX）的计算机名。|  
+|**source_server**|**nvarchar(30)**|发出指令的服务器的计算机名。 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本7.0 中，这始终是主服务器（MSX）的计算机名。|  
 |**operation_code**|**nvarchar(4000)**|指令的操作代码。|  
 |**object_name**|**sysname**|受指令影响的对象。|  
 |**object_id**|**uniqueidentifier**|受指令影响的对象的标识号（对于作业对象为**job_id** ，对于服务器对象则为0x00，或特定于**operation_code**的数据值。|  
-|**target_server**|**nvarchar （30）**|下载此指令的目标服务器。|  
-|**error_message**|**nvarchar （1024）**|目标服务器处理此指令时，遇到问题而发出的错误消息（如果有）。<br /><br /> 注意：任何错误消息会阻止目标服务器进一步下载。|  
+|**target_server**|**nvarchar(30)**|下载此指令的目标服务器。|  
+|**error_message**|**nvarchar(1024)**|目标服务器处理此指令时，遇到问题而发出的错误消息（如果有）。<br /><br /> 注意：任何错误消息会阻止目标服务器进一步下载。|  
 |**date_posted**|**datetime**|指令发布到表的日期。|  
 |**date_downloaded**|**datetime**|目标服务器下载指令的日期。|  
-|**状态值**|**tinyint**|作业的状态：<br /><br /> **0** = 尚未下载<br /><br /> **1** = 已成功下载。|  
+|**status**|**tinyint**|作业的状态：<br /><br /> **0** = 尚未下载<br /><br /> **1** = 已成功下载。|  
   
 ## <a name="permissions"></a>权限  
  默认情况下， **sysadmin**固定服务器角色的成员执行此过程的权限。  

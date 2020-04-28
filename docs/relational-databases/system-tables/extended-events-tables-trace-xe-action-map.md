@@ -19,13 +19,13 @@ ms.assetid: 208a1413-ce7f-4521-b765-d74723627302
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 47931e56759191e8386a6890ec683adf0d5f69c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056271"
 ---
-# <a name="extended-events-tables---trace_xe_action_map"></a>扩展事件表 - trace_xe_action_map
+# <a name="extended-events-tables---trace_xe_action_map"></a>Extended Events Tables - trace_xe_action_map
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   映射到 SQL 跟踪列 ID 的每个扩展事件操作各占一行。 此表存储在 sys 架构中的 master 数据库中。  
@@ -34,8 +34,8 @@ ms.locfileid: "68056271"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |trace_column_id|**smallint**|正在映射的 SQL 跟踪列的 ID。|  
-|package_name|**nvarchar （60）**|映射操作所在的扩展事件包的名称。|  
-|xe_action_name|**nvarchar （60）**|映射到 SQL 跟踪列的扩展事件操作的名称。|  
+|package_name|**nvarchar(60)**|映射操作所在的扩展事件包的名称。|  
+|xe_action_name|**nvarchar(60)**|映射到 SQL 跟踪列的扩展事件操作的名称。|  
   
 ## <a name="remarks"></a>备注  
  您可以使用以下查询确定与 SQL 跟踪列等效的扩展事件操作：  

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 64ddba95ec5c7fb8dfa6e6e685fcf9d5b6846fe9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090676"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
@@ -88,7 +88,7 @@ sys.dm_sql_referenced_entities (
 |referenced_id|**int**|被引用的实体的 ID。 当 referenced_minor_id 不为 0 时，referenced_id 是该列被定义时所在的实体。<br /><br /> 对于跨服务器的引用，此列始终为 NULL。<br /><br /> 对于跨数据库的引用，当由于数据库脱机或实体无法绑定而无法确定 ID 时，此列为 NULL。<br /><br /> 对于数据库内的引用，如果无法确定 ID，则为 NULL。 对于非绑定到架构的引用，如果数据库中不存在被引用的实体或名称解析是依赖于调用方的，则不能解析该 ID。  在后一种情况下，is_caller_dependent 设置为1。<br /><br /> 对于绑定到架构的引用，此列永远不会为 NULL。|  
 |referenced_minor_id|**int**|引用的实体是列时是列 ID；否则是 0。 例如，referenced_minor_is 在列出所引用的实体本身的行中是 0。<br /><br /> 对于非绑定到架构的引用，只有当可以绑定所有被引用的实体时才报告列依赖关系。 如果无法绑定任何被引用的实体，则不报告列级依赖关系，并且 referenced_minor_id 是 0。 请参见示例 D。|  
 |referenced_class|**tinyint**|被引用的实体的类。<br /><br /> 1 = 对象或列<br /><br /> 6 = 类型<br /><br /> 10 = XML 架构集合<br /><br /> 21 = 分区函数|  
-|referenced_class_desc|**nvarchar （60）**|对被引用的实体的类的说明。<br /><br /> OBJECT_OR_COLUMN<br /><br /> 类型<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
+|referenced_class_desc|**nvarchar(60)**|对被引用的实体的类的说明。<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
 |is_caller_dependent|**bit**|指示被引用的实体的架构绑定发生于运行时，因此实体 ID 的解析依赖于调用方的架构。 当被引用的实体为存储过程、扩展存储过程或在 EXECUTE 语句中调用的用户定义函数时，将会出现这种情况。<br /><br /> 1 = 被引用的实体依赖调用方并在运行时解析。 在这种情况下，referenced_id 为 NULL。<br /><br /> 0 = 被引用的实体 ID 不依赖调用方。 对于绑定到架构的引用、显式指定架构名称的跨数据库和跨服务器的引用，始终为 0。 例如，对格式为 `EXEC MyDatabase.MySchema.MyProc` 的实体的引用不依赖于调用方。 但是，格式为 `EXEC MyDatabase..MyProc` 的引用依赖调用方。|  
 |is_ambiguous|**bit**|指示引用不明确，可在运行时解析为用户定义函数、用户定义类型（UDT）或对**xml**类型的列的 xquery 引用。 例如，假定语句 `SELECT Sales.GetOrder() FROM Sales.MySales` 是在存储过程中定义的。 在执行存储过程之前，并不知道 `Sales.GetOrder()` 是 `Sales` 架构中的用户定义函数还是带有名为 `Sales` 的方法、类型为 UDT 且名为 `GetOrder()` 的列。<br /><br /> 1 = 引用的是用户定义函数还是使用用户定义类型 (UDT) 方法的列，这一点是不明确的。<br /><br /> 0 = 引用是明确的，或者在调用函数时可以成功绑定实体。<br /><br /> 对于绑定到架构的引用始终为 0。|  
 |is_selected|**bit**|1 = 选中了对象或列。|  
@@ -123,17 +123,14 @@ sys.dm_sql_referenced_entities (
 |-----------------|------------------------|-----------------------|  
 |表|是*|是|  
 |查看|是|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]存储过程 * *|是|是|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程**|是|是|  
 |CLR 存储过程|否|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]用户定义函数|是|是|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数|是|是|  
 |CLR 用户定义函数|否|是|  
 |CLR 触发器（DML 和 DDL）|否|否|  
-|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器|是|否|  
-|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库级 DDL 触发器|是|否|  
-|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器级 DDL 触发器|是|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 触发器|是|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 数据库级 DDL 触发器|是|否|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器级 DDL 触发器|是|否|  
 |扩展的存储过程|否|是|  
 |队列|否|是|  
 |同义词|否|是|  
@@ -227,8 +224,7 @@ GO
 ```
 
 ### <a name="d-returning-non-schema-bound-column-dependencies"></a>D. 返回非绑定到架构的列依赖关系  
- 下面的示例删除 `Table1` 并创建 `Table2` 和存储过程 `Proc1`。 该过程引用 `Table2` 以及不存在的表 `Table1`。 视图 `sys.dm_sql_referenced_entities` 和指定为引用实体的存储过程一起运行。 结果集对于 `Table1` 显示一行，对于 `Table2` 显示 3 行。 因为 `Table1` 不存在，所以列依赖关系无法解析，并返回错误 2020。 
-  `is_all_columns_found` 列为 `Table1` 返回 0，指示存在无法发现的列。  
+ 下面的示例删除 `Table1` 并创建 `Table2` 和存储过程 `Proc1`。 该过程引用 `Table2` 以及不存在的表 `Table1`。 视图 `sys.dm_sql_referenced_entities` 和指定为引用实体的存储过程一起运行。 结果集对于 `Table1` 显示一行，对于 `Table2` 显示 3 行。 因为 `Table1` 不存在，所以列依赖关系无法解析，并返回错误 2020。 `is_all_columns_found` 列为 `Table1` 返回 0，指示存在无法发现的列。  
   
 ```sql  
 DROP TABLE IF EXISTS dbo.Table1;
@@ -308,8 +304,7 @@ GO
  ```
  
 ### <a name="f-returning-object-or-column-usage"></a>F. 返回对象或列的用法  
- 下面的示例返回存储过程 `HumanResources.uspUpdateEmployeePersonalInfo` 的对象和列依赖关系。 此过程根据`NationalIDNumber`指定`BirthDate,``MaritalStatus` `Gender` `Employee` `BusinessEntityID`的值更新表的列、和。 另一个存储过程`upsLogError`是在 TRY .。。捕获执行错误的 CATCH 块。 
-  `is_selected`、`is_updated` 和 `is_select_all` 列返回与如何在引用对象中使用这些对象和列有关的信息。 进行了修改的表和列由 is_updated 列中的 1 指示。 仅选择 `BusinessEntityID` 列，既不选择、也不修改存储过程 `uspLogError`。  
+ 下面的示例返回存储过程 `HumanResources.uspUpdateEmployeePersonalInfo` 的对象和列依赖关系。 此过程根据`NationalIDNumber`指定`BirthDate,``MaritalStatus` `Gender` `Employee` `BusinessEntityID`的值更新表的列、和。 另一个存储过程`upsLogError`是在 TRY .。。捕获执行错误的 CATCH 块。 `is_selected`、`is_updated` 和 `is_select_all` 列返回与如何在引用对象中使用这些对象和列有关的信息。 进行了修改的表和列由 is_updated 列中的 1 指示。 仅选择 `BusinessEntityID` 列，既不选择、也不修改存储过程 `uspLogError`。  
 
 ```sql  
 USE AdventureWorks2012;
@@ -340,7 +335,7 @@ SELECT
  ```
   
 ## <a name="see-also"></a>另请参阅  
- [sys. dm_sql_referencing_entities &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
+ [sys.dm_sql_referencing_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
  [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   
   

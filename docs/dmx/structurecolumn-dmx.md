@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7b6b436527aa36fb8f048a3b3c8fc55b970ef284
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68065379"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
@@ -55,9 +55,7 @@ StructureColumn('structure column name')
  当前上下文（第% {line/} 行，第% {column/} 列）的 "% {structure/}" 父挖掘结构中找不到 "% {structure-列名/}" 挖掘结构列。  
   
 ## <a name="examples"></a>示例  
- 我们将在这些示例中使用以下挖掘结构。 请注意，该挖掘结构包含两个嵌套表列 `Products` 和 `Hobbies`。 
-  `Hobbies` 列中的嵌套表有一个列用作该嵌套表的键。 
-  `Products` 列中的嵌套表是复杂的嵌套表，其中一个列用作键列，其他列用作输入列。 以下示例说明如何将数据挖掘结构设计为包含许多不同的列，尽管不是所有的列在模型中都能用到。 其中的某些列可能在模型级别对于通用化模式没有用，但可能对于钻取非常有用。  
+ 我们将在这些示例中使用以下挖掘结构。 请注意，该挖掘结构包含两个嵌套表列 `Products` 和 `Hobbies`。 `Hobbies` 列中的嵌套表有一个列用作该嵌套表的键。 `Products` 列中的嵌套表是复杂的嵌套表，其中一个列用作键列，其他列用作输入列。 以下示例说明如何将数据挖掘结构设计为包含许多不同的列，尽管不是所有的列在模型中都能用到。 其中的某些列可能在模型级别对于通用化模式没有用，但可能对于钻取非常有用。  
   
 ```  
 CREATE MINING STRUCTURE [MyStructure]   

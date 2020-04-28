@@ -18,10 +18,10 @@ ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 40b1ebc5319c13b5aa84a28e1a5c5546dd62bd03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68094826"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
@@ -31,8 +31,8 @@ ms.locfileid: "68094826"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**路径名**|**sysname**|项目的名称。|  
-|type |**tinyint**|指示项目类型，可以为下列类型之一：<br /><br /> **0x0a** = Table。<br /><br /> **0x20** = 仅过程架构。<br /><br /> **0x40** = 仅查看架构或仅索引视图架构。<br /><br /> **0x80** = 仅函数架构。|  
+|name |**sysname**|项目的名称。|  
+|**type**|**tinyint**|指示项目类型，可以为下列类型之一：<br /><br /> **0x0a** = Table。<br /><br /> **0x20** = 仅过程架构。<br /><br /> **0x40** = 仅查看架构或仅索引视图架构。<br /><br /> **0x80** = 仅函数架构。|  
 |**objid**|**int**|已发布对象的标识符。|  
 |**sync_objid**|**int**|表示同步数据集的视图的对象 ID。|  
 |**view_type**|**tinyint**|视图类型：<br /><br /> **0** = 不是视图;使用所有基对象。<br /><br /> **1** = 永久视图。<br /><br /> **2** = 临时视图。|  
@@ -42,7 +42,7 @@ ms.locfileid: "68094826"
 |**pubid**|**uniqueidentifier**|当前项目所属发布的 ID。|  
 |**昵称**|**int**|项目标识的别名映射。|  
 |**column_tracking**|**int**|指示是否为项目执行列跟踪。|  
-|**状态值**|**tinyint**|指示项目的状态，可以为下列状态之一：<br /><br /> **1** = 未同步-用于发布表的初始处理脚本将在下一次运行快照代理时运行。<br /><br /> **2** = 活动-已运行发布表的初始处理脚本。|  
+|**status**|**tinyint**|指示项目的状态，可以为下列状态之一：<br /><br /> **1** = 未同步-用于发布表的初始处理脚本将在下一次运行快照代理时运行。<br /><br /> **2** = 活动-已运行发布表的初始处理脚本。|  
 |**conflict_table**|**sysname**|包含当前项目冲突记录的本地表的名称。 该表仅用于提供信息，其内容可以由自定义冲突解决例程修改或删除，或直接由系统管理员修改或删除。|  
 |**creation_script**|**nvarchar(255)**|此项目的创建脚本。|  
 |**conflict_script**|**nvarchar(255)**|此项目的冲突脚本。|  
@@ -57,7 +57,7 @@ ms.locfileid: "68094826"
 |**destination_object**|**sysname**|在订阅服务器上创建的表的名称。|  
 |**destination_owner**|**sysname**|目标对象的所有者的名称。|  
 |**resolver_clsid**|**nvarchar(50)**|自定义冲突解决程序的 ID。 对于业务逻辑处理程序，该值为 NULL。|  
-|**subset_filterclause**|**nvarchar （1000）**|此项目的筛选子句。|  
+|**subset_filterclause**|**nvarchar(1000)**|此项目的筛选子句。|  
 |**missing_col_count**|**int**|项目中缺少的已发布列数。|  
 |**missing_cols**|**varbinary(128)**|用于说明项目中的缺少列的位图。|  
 |**excluded_cols**|**varbinary(128)**|已从项目中排除的列的位图。|  
@@ -80,7 +80,7 @@ ms.locfileid: "68094826"
 |**upload_options**|**tinyint**|定义是否可以在订阅服务器上进行更改或从订阅服务器上载更改，可以为下列值之一：<br /><br /> **0** = 订阅服务器上所做的更新没有任何限制;所有更改都将上载到发布服务器。<br /><br /> **1** = 允许在订阅服务器上进行更改，但不会将它们上载到发布服务器。<br /><br /> **2** = 不允许在订阅服务器上进行更改。|  
 |**published_in_tran_pub**|**bit**|指示合并发布中的项目也将在事务发布中发布。<br /><br /> **0** = 项目未在事务项目中发布。<br /><br /> **1** = 本文还在事务项目中发布。|  
 |**轻质**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**procname_postfix**|**nchar （32）**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**procname_postfix**|**nchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**well_partitioned_lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**before_upd_view_objid**|**int**|更新前表视图的 ID。|  
 |**delete_tracking**|**bit**|指示是否复制删除。<br /><br /> **0** = 不复制删除。<br /><br /> **1** = 复制删除，这是合并复制的默认行为。<br /><br /> 如果*delete_tracking*的值为**0**，则必须在发布服务器上手动删除订阅服务器上删除的行，并且必须在订阅服务器上手动删除在发布服务器上删除的行。<br /><br /> 注意：值为**0**会导致非收敛。|  
@@ -104,7 +104,7 @@ ms.locfileid: "68094826"
 |**logical_record_level_conflict_detection**|**bit**|指示应在逻辑记录级还是行级或列级检测冲突。<br /><br /> **0** = 使用行级或列级冲突检测。<br /><br /> **1** = 使用逻辑记录冲突检测，在这种情况下，发布服务器上的行更改与订阅服务器上的同一逻辑记录在单独的行中更改时，会被视为冲突。<br /><br /> 当该值为 1 时，只能使用逻辑记录级别的冲突解决。|  
 |**logical_record_level_conflict_resolution**|**bit**|指示是否应在逻辑记录级或行级或列级解决冲突。<br /><br /> **0** = 使用行级或列级的解析。<br /><br /> **1** = 如果发生冲突，来自入选方的整个逻辑记录将覆盖失去一方的整个逻辑记录。<br /><br /> 值 1 既可用于逻辑记录级别的检测，也可用于行或列级别的检测。|  
 |**partition_options**|**tinyint**|定义项目数据的分区方式，当所有行只属于一个分区或只属于一个订阅时，这将可以实现性能优化。 *Partition_options*可以是下列值之一。<br /><br /> **0** = 项目的筛选是静态的，或者不为每个分区生成唯一的数据子集，即 "重叠" 分区。<br /><br /> **1** = 分区重叠，在订阅服务器上所做的 DML 更新不能更改行所属的分区。<br /><br /> **2** = 对项目的筛选将生成不重叠分区，但多个订阅服务器可以接收相同的分区。<br /><br /> **3** = 对项目的筛选将生成对每个订阅唯一的非重叠分区。|  
-|**路径名**|**sysname**|分区的名称。|  
+|**name**|**sysname**|分区的名称。|  
   
 ## <a name="see-also"></a>另请参阅  
  [使用参数化筛选器为合并发布管理分区](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   

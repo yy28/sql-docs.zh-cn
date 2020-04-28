@@ -18,10 +18,10 @@ ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c2d0daf21a479bff171f31beb30e9dc188a9c97b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68094834"
 ---
 # <a name="syspolicy_policy_execution_history_details-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68094834"
 |history_id|**bigint**|历史记录事件的标识符。 每个历史记录事件表示尝试执行一次策略。 由于条件可能具有几个条件表达式和几个目标，因此，history_id 可能会创建几条详细记录。 使用 "history_id" 列将此视图联接到 " [syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md) " 视图。|  
 |target_query_expression|**nvarchar(max)**|策略目标和 syspolicy_policy_execution_history 视图。|  
 |execution_date|**datetime**|此详细记录的创建日期和时间。|  
-|结果|**bit**|此目标和条件表达式计算成功或失败：<br /><br /> 0（成功）或 1（失败）。|  
+|result|**bit**|此目标和条件表达式计算成功或失败：<br /><br /> 0（成功）或 1（失败）。|  
 |result_detail|**nvarchar(max)**|结果消息。 仅当由方面提供时才可用。|  
 |exception_message|**nvarchar(max)**|发生的异常所生成的消息。|  
 |exception|**nvarchar(max)**|发生的异常的说明。|  
@@ -70,6 +70,6 @@ WHERE PolHistDet.result = 0 ;
   
 ## <a name="see-also"></a>另请参阅  
  [使用基于策略的管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
- [基于策略的管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ [基于策略的管理视图 (Transact-SQL)](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

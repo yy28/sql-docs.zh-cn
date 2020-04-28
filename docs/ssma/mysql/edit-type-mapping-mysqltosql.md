@@ -10,10 +10,10 @@ ms.assetid: 184f7ab2-725f-491e-a15b-b889f2fb6a68
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d31304dae7246e425ef54af6d1382af7e885696c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103001"
 ---
 # <a name="edit-type-mapping-mysqltosql"></a>编辑类型映射 (MySQLToSQL)
@@ -34,10 +34,10 @@ ms.locfileid: "68103001"
   
 如果数据类型的长度可变，以下字段将显示在**Sourcetype**下：  
   
-##### <a name="from"></a>从  
+##### <a name="from"></a>From  
 指定此映射的最小长度。 例如，对于**nchar**数据类型，可以输入10来指定此映射适用于从**nchar （10）** 开始的范围。  
   
-##### <a name="to"></a>目标  
+##### <a name="to"></a>功能  
 指定此映射的最大长度。 例如，对于**nchar**数据类型，可以输入20来指定此映射适用于以**nchar （20）** 结束的范围。  
   
 ##### <a name="target-type"></a>目标类型  

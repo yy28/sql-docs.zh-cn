@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7736c0001c8e22b6cc7c72b2e721e31519d035b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68068057"
 ---
 # <a name="sysquery_context_settings-transact-sql"></a>sys. query_context_settings （Transact-sql）
@@ -39,7 +39,7 @@ ms.locfileid: "68068057"
 |**language_id**|**smallint**|语言的 id。 有关详细信息，请参阅[sys.syslanguages &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)。|  
 |**date_format**|**smallint**|日期格式。 有关详细信息，请参阅 [SET DATEFORMAT (Transact-SQL)](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |**date_first**|**tinyint**|日期第一个值。 有关详细信息，请参阅 [SET DATEFIRST (Transact-SQL)](../../t-sql/statements/set-datefirst-transact-sql.md).|  
-|**状态值**|**varbinary （2）**|位掩码字段，指示执行查询的查询或上下文的类型。 <br />列值可以组合多个标志（用十六进制表示）：<br /><br /> 0x0-常规查询（无特定标志）<br /><br /> 0x1-通过一个游标 Api 存储过程执行的查询<br /><br /> 0x2-查询通知<br /><br /> 0x4-内部查询<br /><br /> 0x8-无通用参数化的自动参数化查询<br /><br /> 0x10-游标提取刷新查询<br /><br /> 0x20-在游标更新请求中使用的查询<br /><br /> 0x40-打开游标时返回初始结果集（游标自动提取）<br /><br /> 0x80-加密查询<br /><br /> 0x100-查询行级别安全性谓词的上下文|  
+|**status**|**varbinary （2）**|位掩码字段，指示执行查询的查询或上下文的类型。 <br />列值可以组合多个标志（用十六进制表示）：<br /><br /> 0x0-常规查询（无特定标志）<br /><br /> 0x1-通过一个游标 Api 存储过程执行的查询<br /><br /> 0x2-查询通知<br /><br /> 0x4-内部查询<br /><br /> 0x8-无通用参数化的自动参数化查询<br /><br /> 0x10-游标提取刷新查询<br /><br /> 0x20-在游标更新请求中使用的查询<br /><br /> 0x40-打开游标时返回初始结果集（游标自动提取）<br /><br /> 0x80-加密查询<br /><br /> 0x100-查询行级别安全性谓词的上下文|  
 |**required_cursor_options**|**int**|用户指定的游标选项，例如游标类型。|  
 |**acceptable_cursor_options**|**int**|为了支持语句的执行，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以隐式转换采用的游标选项。|  
 |**merge_action_type**|**smallint**|用作**MERGE**语句结果的触发器执行计划的类型。<br /><br /> 0指示非触发器计划、不作为**merge**语句的结果执行的触发器计划，或者作为仅指定了**删除**操作的**MERGE**语句结果执行的触发器计划。<br /><br /> 1表示作为**MERGE**语句结果运行的**插入**触发器计划。<br /><br /> 2表示作为**MERGE**语句结果运行的**UPDATE**触发器计划。<br /><br /> 3指示一个**删除**触发器计划，该计划作为包含相应**插入**或**更新**操作的**MERGE**语句的结果运行。<br /><br /> <br /><br /> 对于由级联操作运行的嵌套触发器，此值是导致级联的**MERGE**语句的操作。|  
@@ -58,9 +58,9 @@ ms.locfileid: "68068057"
  [sys. query_store_runtime_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys. query_store_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)   
  [sys. query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [相关视图、函数和过程](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [查询存储存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
- [sys. fn_stmt_sql_handle_from_sql_stmt &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
+ [使用查询存储监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [查询存储存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
   
   

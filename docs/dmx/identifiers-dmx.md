@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1f72832fd684dd59e27ce58576a7f65fa8796347
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68074814"
 ---
 # <a name="identifiers-dmx"></a>标识符 (DMX)
@@ -28,7 +28,7 @@ ms.locfileid: "68074814"
   
  定义对象时会创建一个对象标识符。 然后，可使用该标识符来引用对象。 标识符包含的字符数必须小于或等于 100。  
   
-##  <a name="RegularIdentifiers"></a>常规标识符  
+##  <a name="regular-identifiers"></a><a name="RegularIdentifiers"></a>常规标识符  
  DMX 中的常规标识符符合 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在标识符格式方面的规则。 DMX 中的常规标识符不需要分隔符。 下面是使用常规的、不带分隔符的标识符的 DMX 语句示例：  
   
 ```  
@@ -58,7 +58,7 @@ SELECT * FROM Clustering.CONTENT;
   
  在 DMX 语句中使用不符合上述规则的标识符时，必须使用方括号分隔这些标识符。  
   
-##  <a name="DelimitedIdentifiers"></a>分隔标识符  
+##  <a name="delimited-identifiers"></a><a name="DelimitedIdentifiers"></a>分隔标识符  
  分隔标识符括在方括号 ([ ]) 中。  下面是一个 DMX 语句示例，其中的分隔标识符符合上述规则。  
   
 ```  

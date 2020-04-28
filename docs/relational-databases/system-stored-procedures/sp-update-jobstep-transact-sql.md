@@ -18,10 +18,10 @@ ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7914e3b56dd02d96c02835bf6b4dcc5eb90e8f4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084878"
 ---
 # <a name="sp_update_jobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
@@ -125,7 +125,7 @@ sp_update_jobstep
 |**2**|追加到输出文件|  
 |**4**|将 Transact-SQL 作业步骤输出写入步骤历史记录|  
 |**8**|将日志写入表（覆盖现有的历史记录）|  
-|**16**|将日志写入表（追加到现有的历史记录）|  
+|**超过**|将日志写入表（追加到现有的历史记录）|  
   
 `[ @proxy_id = ] proxy_id`作业步骤运行时所用代理的 ID 号。 *proxy_id*的类型为**int**，默认值为 NULL。 如果未指定*proxy_id* 、未指定*proxy_name*并且未指定*user_name* ，则作业步骤将作为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理的服务帐户运行。  
   
@@ -140,7 +140,7 @@ sp_update_jobstep
  更新作业步骤将增加作业的版本号。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下， **sysadmin**固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   

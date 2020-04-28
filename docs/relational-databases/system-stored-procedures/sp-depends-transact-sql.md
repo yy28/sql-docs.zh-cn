@@ -18,10 +18,10 @@ ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9ee6b9df37e61dcb4eed45bc11431d49b160cf87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053101"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-SQL)
@@ -67,18 +67,18 @@ sp_depends [ @objname = ] '<object>'
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**路径名**|**nvarchar （257** **）**|存在依赖项的项名称。|  
-|type |**nvarchar （16）**|项的类型。|  
+|name |**nvarchar （257** **）**|存在依赖项的项名称。|  
+|**type**|**nvarchar （16）**|项的类型。|  
 |**时更新**|**nvarchar （7）**|是否更新项。|  
-|**选择**|**nvarchar （8）**|项是否用于 SELECT 语句。|  
+|**已选定**|**nvarchar(8)**|项是否用于 SELECT 语句。|  
 |**该列**|**sysname**|存在依赖项的列或参数。|  
   
  下面的结果集显示依赖于* \<对象>* 的对象。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**路径名**|**nvarchar （257** **）**|存在依赖项的项名称。|  
-|type |**nvarchar （16）**|项的类型。|  
+|name |**nvarchar （257** **）**|存在依赖项的项名称。|  
+|**type**|**nvarchar （16）**|项的类型。|  
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  
@@ -86,7 +86,7 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="examples"></a>示例  
   
 ### <a name="a-listing-dependencies-on-a-table"></a>A. 列出表的依赖关系  
- 以下示例列出在 `Sales.Customer` 数据库中依赖于 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表的数据库对象。 同时指定了架构名和表名。  
+ 以下示例列出在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中依赖于 `Sales.Customer` 表的数据库对象。 同时指定了架构名和表名。  
   
 ```  
 USE AdventureWorks2012;  
@@ -104,8 +104,8 @@ EXEC sp_depends @objname = N'AdventureWorks2012.Production.iWorkOrder' ;
 ## <a name="see-also"></a>另请参阅  
  [数据库引擎存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   
- [sp_help &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
+ [&#40;Transact-sql&#41;系统存储过程](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys. sql_dependencies &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
   
   

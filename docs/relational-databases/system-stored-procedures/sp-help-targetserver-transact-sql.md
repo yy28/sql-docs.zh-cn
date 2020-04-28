@@ -18,10 +18,10 @@ ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1eb9a4d1a19f54f9e57e988b350594ce6031b243
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085072"
 ---
 # <a name="sp_help_targetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
@@ -51,12 +51,12 @@ sp_help_targetserver
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|服务器标识号。|  
-|server_name |**nvarchar （30）**|服务器名称。|  
-|**位置**|**nvarchar （200）**|指定的服务器的位置。|  
+|server_name |**nvarchar(30)**|服务器名称。|  
+|**location**|**nvarchar(200)**|指定的服务器的位置。|  
 |**time_zone_adjustment**|**int**|根据格林尼治标准时间 (GMT) 进行的时区调整，以小时为单位。|  
 |**enlist_date**|**datetime**|指定的服务器的登记日期。|  
 |**last_poll_date**|**datetime**|上一次为作业轮询服务器的日期。|  
-|**状态值**|**int**|指定的服务器的状态。|  
+|**status**|**int**|指定的服务器的状态。|  
 |**unread_instructions**|**int**|指示服务器是否有未读指令。 如果已下载所有行，则此列为**0**。|  
 |**local_time**|**datetime**|目标服务器上的本地日期和时间，基于主服务器上一次轮询时目标服务器上的本地时间。|  
 |**enlisted_by_nt_user**|**nvarchar （100）**|登记了目标服务器的 Microsoft Windows 用户。|  

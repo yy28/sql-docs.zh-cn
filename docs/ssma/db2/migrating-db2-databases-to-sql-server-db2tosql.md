@@ -10,10 +10,10 @@ ms.assetid: 14d2e655-af7e-4aa5-ba28-0e3d0d025518
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 79cc961148add0bf2096a716b669199360a565b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084647"
 ---
 # <a name="migrating-db2-databases-to-sql-server-db2tosql"></a>将 DB2 数据库迁移到 SQL Server （DB2ToSQL）
@@ -38,7 +38,7 @@ ms.locfileid: "68084647"
   
 7.  [将转换后的数据库对象加载到 SQL Server 中](https://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3)。  
   
-    可以通过以下方式之一执行此操作：  
+    可通过以下方式之一执行此操作：  
   
     -   保存并在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]运行脚本。  
   

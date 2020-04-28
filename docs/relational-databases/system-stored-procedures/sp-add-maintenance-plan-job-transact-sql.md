@@ -18,10 +18,10 @@ ms.assetid: 7205855c-964f-4f55-bf75-39a55f6fe7bd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ba27f90c8d2fc4c7e174333080815d56f90e48c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68091924"
 ---
 # <a name="sp_add_maintenance_plan_job-transact-sql"></a>sp_add_maintenance_plan_job (Transact-SQL)
@@ -46,7 +46,7 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
 ## <a name="arguments"></a>参数  
 `[ @plan_id = ] 'plan_id'`指定维护计划的 ID。 *plan_id*是**uniqueidentifier**，并且必须是有效 id。  
   
-`[ @job_id = ] 'job_id'`指定要与维护计划相关联的作业的 ID。 *job_id*是**uniqueidentifier**，并且必须是有效 id。 若要创建一个或一 sp_add_job 作业，请执行**** 或使用 SQL Server Management Studio。  
+`[ @job_id = ] 'job_id'`指定要与维护计划相关联的作业的 ID。 *job_id*是**uniqueidentifier**，并且必须是有效 id。 若要创建一个或一 sp_add_job 作业，请执行**sp_add_job**或使用 SQL Server Management Studio。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

@@ -18,10 +18,10 @@ ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 63a3d9daa48bb98408c3f0d9b8282e8083849cf0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085079"
 ---
 # <a name="sp_help_targetservergroup-transact-sql"></a>sp_help_targetservergroup (Transact-SQL)
@@ -50,7 +50,7 @@ sp_help_targetservergroup
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**servergroup_id**|**int**|服务器组的标识号|  
-|**路径名**|**sysname**|服务器组的名称|  
+|**name**|**sysname**|服务器组的名称|  
   
 ## <a name="permissions"></a>权限  
  默认情况下， **sysadmin**固定服务器角色执行此过程的权限。  

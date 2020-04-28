@@ -18,10 +18,10 @@ ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6a1a2ce1208dcf359bb0586c3de1fe294644e3a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054880"
 ---
 # <a name="sp_help_jobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
@@ -59,7 +59,7 @@ sp_help_jobserver
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|目标服务器的标识号。|  
-|server_name |**nvarchar （30）**|目标服务器的计算机名称。|  
+|server_name |**nvarchar(30)**|目标服务器的计算机名称。|  
 |**enlist_date**|**datetime**|将目标服务器登记到主服务器的日期。|  
 |**last_poll_date**|**datetime**|目标服务器上一次轮询主服务器的日期。|  
   
@@ -70,11 +70,11 @@ sp_help_jobserver
 |**last_run_date**|**int**|作业上一次在此目标服务器上开始执行的日期。|  
 |**last_run_time**|**int**|作业上一次在此服务器上开始执行的时间。|  
 |**last_run_duration**|**int**|作业上一次在此目标服务器上运行所持续的时间（以秒为单位）。|  
-|**last_outcome_message**|**nvarchar （1024）**|说明作业上一次运行的结果。|  
+|**last_outcome_message**|**nvarchar(1024)**|说明作业上一次运行的结果。|  
 |**last_run_outcome**|**int**|作业上一次在此服务器上运行的结果：<br /><br /> **0** = 失败<br /><br /> **1** = 成功<br /><br /> **3** = 已取消<br /><br /> **5** = 未知|  
   
 ## <a name="permissions"></a>权限  
- 默认情况下， **sysadmin**固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   

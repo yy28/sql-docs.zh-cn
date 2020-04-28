@@ -16,10 +16,10 @@ ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8771d7c821a82733b0664f09c5dadf2128baf877
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090851"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
@@ -65,7 +65,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**ftp_login**||仅为向后兼容而提供。 用于连接到 FTP 服务的用户名。|  
 |**ftp_password**||仅为向后兼容而提供。 用于连接到 FTP 服务的用户密码。|  
 |**ftp_port**||仅为向后兼容而提供。 分发服务器 FTP 服务的端口号。|  
-|**段**||在联接筛选器或逻辑记录关系的 WHERE 子句中使用 HOST_NAME() 函数时，指定该函数的值。|  
+|**hostname**||在联接筛选器或逻辑记录关系的 WHERE 子句中使用 HOST_NAME() 函数时，指定该函数的值。|  
 |**internet_login**||在使用基本身份验证连接到承载 Web 同步的 Web 服务器时，合并代理所使用的登录名。|  
 |**internet_password**||在使用基本身份验证连接到承载 Web 同步的 Web 服务器时，合并代理所使用的登录密码。|  
 |**internet_security_mode**|**1**|在连接到承载 Web 同步的 Web 服务器时使用 Windows 身份验证。|  
@@ -81,7 +81,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ||**1**|连接发布服务器时，使用 Windows 身份验证。|  
 ||**2**|同步触发器使用静态**sysservers**项执行远程过程调用（RPC），并且发布服务器必须在**sysservers**表中定义为远程服务器或链接服务器。|  
 |**sync_type**|**自动**|已发布表的架构和初始数据将首先传输到订阅服务器。|  
-||**内容**|订阅服务器已经具有已发布表的架构和初始数据；将始终传输系统表和数据。|  
+||**无**|订阅服务器已经具有已发布表的架构和初始数据；将始终传输系统表和数据。|  
 |**use_ftp**|**true**|使用 FTP 而不是典型协议来检索快照。|  
 ||**false**|使用典型协议来检索快照。|  
 |**use_web_sync**|**true**|可以通过 HTTP 同步订阅。|  

@@ -20,10 +20,10 @@ ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9b42a6808d9cab6a3431a68bff9e29e83354a2af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090225"
 ---
 # <a name="sysdm_xe_sessions-transact-sql"></a>sys.dm_xe_sessions (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68090225"
     
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|地址|**varbinary(8)**|会话的内存地址。 地址在本地系统中是唯一的。 不可为 null。|  
+|address|**varbinary(8)**|会话的内存地址。 地址在本地系统中是唯一的。 不可为 null。|  
 |name|**nvarchar(256)**|会话的名称。 名称在本地系统中是唯一的。 不可为 null。|  
 |pending_buffers|**int**|正在挂起处理的已满缓冲区的数量。 不可为 null。|  
 |total_regular_buffers|**int**|与会话相关联的常规缓冲区的总数。 不可为 null。<br /><br /> 注意：大多数时候都在使用常规缓冲区。 这类缓冲区很大，足以容纳大量事件。 每个会话通常有三个或更多缓冲区。 常规缓冲区的数目由服务器根据通过 MEMORY_PARTITION_MODE 选项设置的内存分区自动确定。 常规缓冲区的大小等于 MAX_MEMORY 选项的值（默认值为 4 MB）除以缓冲区的数目。 有关 MEMORY_PARTITION_MODE 和 MAX_MEMORY 选项的详细信息，请参阅[CREATE EVENT SESSION &#40;transact-sql&#41;](../../t-sql/statements/create-event-session-transact-sql.md)。|  

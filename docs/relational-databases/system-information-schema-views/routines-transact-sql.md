@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1ec3836db241320beabfbd4672ffad9b22ccaf58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078524"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "68078524"
 |SPECIFIC_NAME|**nvarchar （** 128 **）**|特定的目录名称。 该名称与 ROUTINE_NAME 相同。|  
 |ROUTINE_CATALOG|**nvarchar （** 128 **）**|函数的目录名。|  
 |ROUTINE_SCHEMA|**nvarchar （** 128 **）**|包含此函数的架构的名称。<br /><br /> ** \* \*重要\*提示**不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
-|ROUTINE_NAME|**nvarchar （** 128 **）**|函数名称。|  
+|ROUTINE_NAME|**nvarchar （** 128 **）**|函数的名称。|  
 |ROUTINE_TYPE|**nvarchar （** 20 **）**|为存储过程返回 PROCEDURE；为函数返回 FUNCTION。|  
 |MODULE_CATALOG|**nvarchar （** 128 **）**|NULL。 保留供将来使用。|  
 |MODULE_SCHEMA|**nvarchar （** 128 **）**|NULL。 保留供将来使用。|  
@@ -63,7 +63,7 @@ ms.locfileid: "68078524"
 |NUMERIC_PRECISION|**smallint**|返回值的数字精度。 对于非数字类型，返回 NULL。|  
 |NUMERIC_PRECISION_RADIX|**smallint**|返回值的数字精度基数。 对于非数字类型，返回 NULL。|  
 |NUMERIC_SCALE|**smallint**|返回值的小数位数。 对于非数字类型，返回 NULL。|  
-|DATETIME_PRECISION|**smallint**|如果返回值的类型为**datetime**，则为秒的小数精度。 否则，将返回 NULL。|  
+|DATETIME_PRECISION|**smallint**|如果返回值的类型为**datetime**，则为秒的小数精度。 否则，返回 NULL。|  
 |INTERVAL_TYPE|**nvarchar （** 30 **）**|NULL。 保留供将来使用。|  
 |INTERVAL_PRECISION|**smallint**|NULL。 保留供将来使用。|  
 |TYPE_UDT_CATALOG|**nvarchar （** 128 **）**|NULL。 保留供将来使用。|  
@@ -75,7 +75,7 @@ ms.locfileid: "68078524"
 |MAXIMUM_CARDINALITY|**bigint**|NULL。 保留供将来使用。|  
 |DTD_IDENTIFIER|**nvarchar （** 128 **）**|NULL。 保留供将来使用。|  
 |ROUTINE_BODY|**nvarchar （** 30 **）**|对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，返回 SQL；对于外部编写的函数，返回 EXTERNAL。<br /><br /> 函数将始终是 SQL 函数。|  
-|ROUTINE_DEFINITION|**nvarchar （** 4000 **）**|如果函数或存储过程未加密，返回函数或存储过程的定义文本最前面的 4000 字符。 否则，将返回 NULL。<br /><br /> 若要确保获取完整的定义，请在[sys.databases. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目录视图中查询[OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)函数或定义列。|  
+|ROUTINE_DEFINITION|**nvarchar （** 4000 **）**|如果函数或存储过程未加密，返回函数或存储过程的定义文本最前面的 4000 字符。 否则，返回 NULL。<br /><br /> 若要确保获取完整的定义，请在[sys.databases. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目录视图中查询[OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)函数或定义列。|  
 |EXTERNAL_NAME|**nvarchar （** 128 **）**|NULL。 保留供将来使用。|  
 |EXTERNAL_LANGUAGE|**nvarchar （** 30 **）**|NULL。 保留供将来使用。|  
 |PARAMETER_STYLE|**nvarchar （** 30 **）**|NULL。 保留供将来使用。|  

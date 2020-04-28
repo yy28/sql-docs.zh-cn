@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e6ffd36516fecba70618c79a7bbd0415f6bb2cb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68073252"
 ---
 # <a name="sysspatial_reference_systems-transact-sql"></a>sys.spatial_reference_systems (Transact-SQL)
@@ -36,8 +36,7 @@ ms.locfileid: "68073252"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|spatial_reference_id|**int**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的 SRID。|  
+|spatial_reference_id|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的 SRID。|  
 |authority_name|**nvarchar(128)**|SRID 的授权。|  
 |authorized_spatial_reference_id|**int**|**Authority_name**中名为的机构提供的 SRID。|  
 |well_known_text|**nvarchar(4000)**|SRID 的 WKT 表示形式。|  

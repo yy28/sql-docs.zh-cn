@@ -18,10 +18,10 @@ ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 93e9c574346ad57a6947645552616cd8db46fe85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056367"
 ---
 # <a name="sp_post_msx_operation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
@@ -59,7 +59,7 @@ sp_post_msx_operation
   
 `[ @specific_target_server = ] 'target_server'`为其应用指定操作的目标服务器的名称。 如果指定了*job_id* ，但未指定*target_server* ，则将为作业的所有作业服务器发布操作。 *target_server*为**nvarchar （30）**，默认值为 NULL。  
   
-`[ @value = ] value`轮询间隔（以秒为单位）。 *值*为**int**，默认值为 NULL。 仅在**设置**了 "轮询"*时才指定*此参数。  
+`[ @value = ] value`轮询间隔（以秒为单位）。 *value* 的数据类型为 **int**，默认值为 NULL。 仅在**设置**了 "轮询"*时才指定*此参数。  
   
 `[ @schedule_uid = ] schedule_uid`应用操作的计划的唯一标识符。 *schedule_uid*是**uniqueidentifier**，无默认值。  
   

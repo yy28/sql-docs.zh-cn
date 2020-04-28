@@ -20,13 +20,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0c32af194a1e74e0fd11e65a75109165e81cc4c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090867"
 ---
-# <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL Database)
+# <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   返回在操作期间执行的线程所遇到的所有等待的相关信息。 可以使用此聚合视图来诊断 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 以及特定查询和批处理的性能问题。  
@@ -35,7 +35,7 @@ ms.locfileid: "68090867"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar （60）**|等待类型的名称。 有关详细信息，请参阅本主题后面[等待类型](#WaitTypes)部分的内容。|  
+|wait_type|**nvarchar(60)**|等待类型的名称。 有关详细信息，请参阅本主题后面[等待类型](#WaitTypes)部分的内容。|  
 |waiting_tasks_count|**bigint**|该等待类型的等待数。 该计数器在每开始一个等待时便会增加。|  
 |wait_time_ms|**bigint**|该等待类型的总等待时间（毫秒）。 该时间包括 signal_wait_time_ms。|  
 |max_wait_time_ms|**bigint**|该等待类型的最长等待时间。|  
@@ -62,7 +62,7 @@ ms.locfileid: "68090867"
 ## <a name="permissions"></a>权限  
  要求对服务器具有 VIEW DATABASE STATE 权限。  
   
-##  <a name="WaitTypes"></a>等待类型  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a>等待类型  
  资源等待  
  当某个工作线程请求访问某个不可用的资源（因为该资源正在由其他某个工作线程使用，或者该资源尚不可用）时，便会发生资源等待。 资源等待的示例包括锁等待、闩锁等待、网络等待以及磁盘 I/O 等待。 锁等待和闩锁等待是指等待同步对象。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "68090867"
 |AUDIT_LOGINCACHE_LOCK|当等待控制对某个特殊缓存的访问的锁时出现。 该缓存包含正在使用哪些审核来审核登录审核操作组的相关信息。|  
 |AUDIT_ON_DEMAND_TARGET_LOCK|当等待用于确保扩展事件目标相关审核的单一初始化的锁时出现。|  
 |AUDIT_XE_SESSION_MGR|当等待用于同步扩展事件会话相关审核的启动和停止的锁时出现。|  
-|备份|当任务作为备份处理的一部分被阻止时出现。|  
+|BACKUP|当任务作为备份处理的一部分被阻止时出现。|  
 |BACKUP_OPERATOR|当任务正在等待磁带装入时出现。 若要查看磁带状态，请查询 [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md)。 如果装入操作没有挂起，则该等待类型可能指示磁带机发生硬件问题。|  
 |BACKUPBUFFER|在备份任务等待数据或等待用来存储数据的缓冲区时发生。 此类型不常见，只有当任务等待装入磁带时才会出现。|  
 |BACKUPIO|在备份任务等待数据或等待用来存储数据的缓冲区时发生。 此类型不常见，只有当任务等待装入磁带时才会出现。|  
@@ -135,7 +135,7 @@ ms.locfileid: "68090867"
 |DBMIRRORING_CMD|当某任务正在等待日志记录刷新到磁盘时出现。 该等待状态应当保留较长的时间。|  
 |DEADLOCK_ENUM_MUTEX|在死锁监视器和 sys.dm_os_waiting_tasks 尝试确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不同时运行多个死锁搜索时出现。|  
 |DEADLOCK_TASK_SEARCH|长时间等待此资源指示服务器正在 sys.dm_os_waiting_tasks 之上执行查询，并且这些查询正在阻止死锁监视器运行死锁搜索。 该等待类型仅供死锁监视器使用。 sys.dm_os_waiting_tasks 之上的查询使用 DEADLOCK_ENUM_MUTEX。|  
-|调试|在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR 调试内部同步期间出现。|  
+|DEBUG|在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 CLR 调试内部同步期间出现。|  
 |DISABLE_VERSIONING|当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 轮询版本事务管理器，以查看最早的活动事务的时间戳是否晚于状态开始更改时的时间戳时出现。 如果是，则所有在 ALTER DATABASE 语句运行之前启动的快照事务都已完成。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过 ALTER DATABASE 语句禁用版本控制时使用该等待状态。|  
 |DISKIO_SUSPEND|当某任务正在等待访问文件（外部备份处于活动状态）时出现。 针对每个正在等待的用户进程报告该状态。 每个用户进程大于五的计数可能指示外部备份需要太长时间才能完成。|  
 |DISPATCHER_QUEUE_SEMAPHORE|当调度程序池中的线程正在等待更多要处理的工作时出现。 当调度程序处于空闲状态时，此等待类型的等待时间预计要增加。|  
@@ -224,8 +224,7 @@ ms.locfileid: "68090867"
 |MSQL_DQ|当某任务正在等待分布式查询操作完成时出现。 它用于检测潜在的多个活动的结果集 (MARS) 应用程序死锁。 该等待将在分布式查询调用完成时结束。|  
 |MSQL_XACT_MGR_MUTEX|当某任务正在等待获取会话事务管理器的所有权以执行会话级别事务操作时出现。|  
 |MSQL_XACT_MUTEX|在事务使用同步期间出现。 请求必须先获取互斥体才可以使用事务。|  
-|MSQL_XP|当某任务正在等待扩展存储过程结束时出现。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用该等待状态检测潜在的 MARS 应用程序死锁。 该等待将在扩展存储过程调用结束时停止。|  
+|MSQL_XP|当某任务正在等待扩展存储过程结束时出现。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用该等待状态检测潜在的 MARS 应用程序死锁。 该等待将在扩展存储过程调用结束时停止。|  
 |MSSEARCH|在全文搜索调用期间出现。 该等待在全文操作完成时结束。 它不指示争用，而指示全文操作的持续时间。|  
 |NET_WAITFOR_PACKET|在网络读取过程中连接正在等待网络数据包时出现。|  
 |OLEDB|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 调用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口时出现。 该等待类型不用于同步。 而是用于指示调用 OLE DB 访问接口的持续时间。|  
@@ -301,7 +300,7 @@ ms.locfileid: "68090867"
 |SECURITY_MUTEX|当等待互斥体时出现，这些互斥体控制对可扩展的密钥管理 (EKM) 加密提供程序的全局列表以及 EKM 会话的会话作用域列表的访问。|  
 |SEQUENTIAL_GUID|当正在获取新的连续 GUID 时出现。|  
 |SERVER_IDLE_CHECK|当资源监视器正在尝试将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例声明为空闲或正在尝试唤醒时，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例空闲状态的同步期间出现。|  
-|关机|在关闭语句等待活动连接退出时出现。|  
+|SHUTDOWN|在关闭语句等待活动连接退出时出现。|  
 |SLEEP_BPOOL_FLUSH|当检查点为了避免磁盘子系统泛滥而中止新 I/O 的发布时出现。|  
 |SLEEP_DBSTARTUP|在等待所有数据库恢复时数据库的启动期间出现。|  
 |SLEEP_DCOMSTARTUP|通常在等待 DCOM 初始化完成时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的启动期间出现。|  
@@ -325,8 +324,7 @@ ms.locfileid: "68090867"
 |SOS_SCHEDULER_YIELD|在任务自愿为要执行的其他任务生成计划程序时出现。 在该等待期间任务正在等待其量程更新。|  
 |SOS_SMALL_PAGE_ALLOC|在分配和释放由某些内存对象管理的内存时出现。|  
 |SOS_STACKSTORE_INIT_MUTEX|在内部存储初始化同步期间出现。|  
-|SOS_SYNC_TASK_ENQUEUE_EVENT|在任务以同步方式启动时出现。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的大多数任务都以同步方式启动，在此方式中控制权在任务请求放置在工作队列之后立即返回到启动器。|  
+|SOS_SYNC_TASK_ENQUEUE_EVENT|在任务以同步方式启动时出现。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的大多数任务都以同步方式启动，在此方式中控制权在任务请求放置在工作队列之后立即返回到启动器。|  
 |SOS_VIRTUALMEMORY_LOW|在内存分配等待资源管理器释放虚拟内存时出现。|  
 |SOSHOST_EVENT|当宿主组件（如 CLR）在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件同步对象中等待时出现。|  
 |SOSHOST_INTERNAL|在宿主组件（如 CLR）使用的内存管理器回调同步期间出现。|  

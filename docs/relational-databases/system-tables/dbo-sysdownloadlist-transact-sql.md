@@ -20,10 +20,10 @@ ms.assetid: 71087a4c-e829-488e-aa7d-a9476e2b4779
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 03e888cc3d36b909035247d5f1c16dd1ab61e0d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061188"
 ---
 # <a name="dbosysdownloadlist-transact-sql"></a>dbo.sysdownloadlist (Transact-SQL)
@@ -39,10 +39,10 @@ ms.locfileid: "68061188"
 |**object_type**|**tinyint**|对象类型代码。|  
 |**object_id** <sup>1</sup>|**uniqueidentifier**|对象标识号。|  
 |**target_server**|**sysname**|目标服务器的名称。|  
-|**error_message**|**nvarchar （1024）**|目标服务器处理特定行时，遇到错误时出现的错误消息。|  
+|**error_message**|**nvarchar(1024)**|目标服务器处理特定行时，遇到错误时出现的错误消息。|  
 |**date_posted**|**datetime**|将作业发布到目标服务器的日期和时间。|  
 |**date_downloaded**|**datetime**|上次下载作业的日期和时间。|  
-|**状态值**|**tinyint**|作业的状态：<br /><br /> **0** = 尚未下载<br /><br /> **1** = 已成功下载|  
+|**status**|**tinyint**|作业的状态：<br /><br /> **0** = 尚未下载<br /><br /> **1** = 已成功下载|  
 |**deleted_object_name**|**sysname**|删除的对象的名称。|  
   
  <sup>1</sup> **object_id**列的值可以是 **-1**，如果**operation_code**列是 DELETE 值，则对应于值 ALL。  

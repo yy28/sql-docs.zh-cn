@@ -18,10 +18,10 @@ ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5c005ff603f21dca387215cafd9dff572db53960
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053095"
 ---
 # <a name="sp_describe_cursor_tables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
@@ -76,7 +76,7 @@ sp_describe_cursor_tables
 |table owner|**sysname**|表所有者的用户 ID。|  
 |Table_name|**sysname**|对象或基表的名称。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，服务器游标始终返回用户指定的对象，而不是基表。|  
 |Optimizer_hints|**smallint**|由下列一项或多项组成的位图：<br /><br /> 1 = 行级锁定 (ROWLOCK)<br /><br /> 4 = 页级锁定 (PAGELOCK)<br /><br /> 8 = 表锁 (TABLOCK)<br /><br /> 16 = 排他表锁 (TABLOCKX)<br /><br /> 32 = 更新锁 (UPDLOCK)<br /><br /> 64 = 无锁 (NOLOCK)<br /><br /> 128 = 快速第一行选项 (FASTFIRST)<br /><br /> 4096 = 与 DECLARE CURSOR 一起使用时用于读取可重复语义 (HOLDLOCK)<br /><br /> 如果提供多个选项，系统将使用限制性最高的选项。 但是，sp_describe_cursor_tables 将显示在查询中指定的标志。|  
-|lock_type|**smallint**|为该游标的每个基表显式或隐式地请求的滚动锁类型。 该值可以是以下值之一：<br /><br /> 0 = 无<br /><br /> 1 = 共享<br /><br /> 3 = 更新|  
+|lock_type|**smallint**|为该游标的每个基表显式或隐式地请求的滚动锁类型。 值可以是下列任一值：<br /><br /> 0 = 无<br /><br /> 1 = 共享<br /><br /> 3 = 更新|  
 |server_name|**sysname，可以为 null**|驻留表的链接服务器的名称。 如果使用 OPENQUERY 或 OPENROWSET，则为 NULL。|  
 |Objectid|**int**|表的对象 ID。 如果使用 OPENQUERY 或 OPENROWSET，则为 0。|  
 |dbid|**int**|表所在的数据库的 ID。 如果使用 OPENQUERY 或 OPENROWSET，则为 0。|  
@@ -130,9 +130,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [游标](../../relational-databases/cursors.md)   
+ [指针](../../relational-databases/cursors.md)   
  [CURSOR_STATUS &#40;Transact-sql&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
- [DECLARE CURSOR (Transact-SQL)](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
+ [&#40;Transact-sql 声明游标&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [sp_cursor_list &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
  [sp_describe_cursor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
  [sp_describe_cursor_columns &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   

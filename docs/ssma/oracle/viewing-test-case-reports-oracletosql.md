@@ -10,10 +10,10 @@ ms.assetid: 8da14323-9dd6-4019-bf79-3e8b972a9bc0
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 75ce91d7948b53522f6ac861a078f8f902b23ab7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68086792"
 ---
 # <a name="viewing-test-case-reports-oracletosql"></a>查看测试用例报表 (OracleToSQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68086792"
 **先决条件错误**  
 显示在**先决条件步骤**中发生的任何错误。 通常情况下，会跳过它。  
   
-**起始**  
+**初始化**。  
 显示**成功**或**失败**的执行状态。  
   
 **测试对象结果**  

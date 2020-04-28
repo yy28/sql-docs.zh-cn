@@ -20,10 +20,10 @@ ms.assetid: f50dcbfc-02ed-4a19-9c07-c78a5a1b3224
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f7081d96d996d33bbabedd13201d7b0fa2547563
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078674"
 ---
 # <a name="syssoap_endpoints-transact-sql"></a>sys.soap_endpoints (Transact-SQL)
@@ -42,11 +42,11 @@ ms.locfileid: "68078674"
 |**default_database**|**sysname**|在 DATABASE = 选项中给定的默认数据库名称。<br /><br /> NULL = 指定了 DEFAULT。|  
 |**default_namespace**|**nvarchar （384）**|命名空间 = 选项中指定的默认命名空间， `https://tempuri.org`如果改为指定默认命名空间，则为。|  
 |**default_result_schema**|**tinyint**|SCHEMA = 选项的默认值。<br /><br /> 0 = NONE<br /><br /> 1 = STANDARD|  
-|**default_result_schema_desc**|**nvarchar （60）**|对 SCHEMA = 选项的默认值的说明。<br /><br /> 无<br /><br /> 标准|  
+|**default_result_schema_desc**|**nvarchar(60)**|对 SCHEMA = 选项的默认值的说明。<br /><br /> 无<br /><br /> STANDARD|  
 |**is_xml_charset_enforced**|**bit**|0 = 指定了 CHARACTER_SET = SQL 选项。<br /><br /> 1 = 指定了 CHARACTER_SET = XML 选项。|  
 |**is_session_enabled**|**bit**|0 = 指定了 SESSION = DISABLE 选项。<br /><br /> 1 = 指定了 SESSION = ENABLED 选项。|  
 |**session_timeout**|**int**|在 SESSION_TIMEOUT = 选项中指定的值。|  
-|**login_type**|**nvarchar （60）**|此端点允许的身份验证类型。<br /><br /> WINDOWS<br /><br /> MIXED|  
+|**login_type**|**nvarchar(60)**|此端点允许的身份验证类型。<br /><br /> WINDOWS<br /><br /> MIXED|  
 |**header_limit**|**int**|允许的最大 SOAP 标头大小。|  
   
 ## <a name="permissions"></a>权限  

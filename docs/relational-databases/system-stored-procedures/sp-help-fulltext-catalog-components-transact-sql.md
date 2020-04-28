@@ -18,10 +18,10 @@ ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 213cc6ea9be57590d52755fdbba3151882ac0a38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68055171"
 ---
 # <a name="sp_help_fulltext_catalog_components-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
@@ -47,11 +47,11 @@ sp_help_fulltext_catalog_components
 |-----------------|---------------|-----------------|  
 |**全文目录名称**|**int**|全文目录的名称。|  
 |**全文目录 id**|**sysname**|全文目录的 ID。|  
-|**componenttype**|**sysname**|组件的类型。 下列类型作之一：<br /><br /> “筛选器”<br /><br /> 协议处理程序<br /><br /> 断字符|  
-|**componentname**|**sysname**|组件名称。|  
+|**componenttype**|**sysname**|组件的类型。 下列类型作之一：<br /><br /> 筛选器<br /><br /> 协议处理程序<br /><br /> 断字符|  
+|**componentname**|**sysname**|组件的名称。|  
 |**clsid**|**uniqueidentifier**|组件的类标识符。|  
 |**fullpath**|**nvarchar(256)**|指向组件位置的路径。<br /><br /> NULL = 调用方不是**serveradmin**固定服务器角色的成员。|  
-|**版本**|**nvarchar （30）**|组件的版本。|  
+|**version**|**nvarchar(30)**|组件的版本。|  
 |**制造商**|**sysname**|组件制造商的名称。|  
   
 ## <a name="permissions"></a>权限  
@@ -59,7 +59,7 @@ sp_help_fulltext_catalog_components
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;Transact-sql&#41;的全文搜索和语义搜索存储过程](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
- [sys.fulltext_catalogs (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+ [sys. fulltext_catalogs &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [sp_help_fulltext_system_components &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)   
  [全文搜索](../../relational-databases/search/full-text-search.md)  
   

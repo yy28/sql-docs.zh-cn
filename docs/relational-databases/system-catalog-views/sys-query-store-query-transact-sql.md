@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d5b7eea64a807af96094767ef5aca00167d5946c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68067964"
 ---
 # <a name="sysquery_store_query-transact-sql"></a>sys. query_store_query （Transact-sql）
@@ -39,15 +39,15 @@ ms.locfileid: "68067964"
 |**query_text_id**|**bigint**|外键。 联接到[sys.databases query_store_query_text &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
 |**context_settings_id**|**bigint**|外键。 联接到[sys.databases&#41;的 query_context_settings &#40;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)。<br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|  
 |**object_id**|**bigint**|查询所属的数据库对象的 ID （存储过程、触发器、CLR UDF/UDAgg 等）。 如果查询不是作为数据库对象（即席查询）的一部分执行，则为0。<br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|  
-|**batch_sql_handle**|**varbinary （64）**|查询所属的语句批处理的 ID。 仅当查询引用临时表或表变量时才填充。<br/>**注意：** Azure SQL 数据仓库将始终返回*NULL*。|  
+|**batch_sql_handle**|**varbinary(64)**|查询所属的语句批处理的 ID。 仅当查询引用临时表或表变量时才填充。<br/>**注意：** Azure SQL 数据仓库将始终返回*NULL*。|  
 |**query_hash**|**binary （8）**|基于逻辑查询树的单个查询的 MD5 哈希。 包含优化器提示。|  
 |**is_internal_query**|**bit**|查询是在内部生成的。<br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|  
-|**query_parameterization_type**|**tinyint**|参数化类型：<br /><br /> 0 - None<br /><br /> 1-用户<br /><br /> 2-简单<br /><br /> 3-强制<br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|  
-|**query_parameterization_type_desc**|**nvarchar （60）**|参数化类型的文本说明。<br/>**注意：** Azure SQL 数据仓库将始终返回*None*。|  
+|**query_parameterization_type**|**tinyint**|参数化类型：<br /><br /> 0 - 无<br /><br /> 1-用户<br /><br /> 2-简单<br /><br /> 3-强制<br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|  
+|**query_parameterization_type_desc**|**nvarchar(60)**|参数化类型的文本说明。<br/>**注意：** Azure SQL 数据仓库将始终返回*None*。|  
 |**initial_compile_start_time**|**datetimeoffset**|编译开始时间。|  
 |**last_compile_start_time**|**datetimeoffset**|编译开始时间。|  
 |**last_execution_time**|**datetimeoffset**|上次执行时间是指查询/计划的最后结束时间。|  
-|**last_compile_batch_sql_handle**|**varbinary （64）**|上次使用查询的 SQL 批处理的句柄。 可以将其作为输入提供给[sys. dm_exec_sql_text &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) ，以获取该批的完整文本。<br/>**注意：** Azure SQL 数据仓库将始终返回*NULL*。|  
+|**last_compile_batch_sql_handle**|**varbinary(64)**|上次使用查询的 SQL 批处理的句柄。 可以将其作为输入提供给[sys. dm_exec_sql_text &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) ，以获取该批的完整文本。<br/>**注意：** Azure SQL 数据仓库将始终返回*NULL*。|  
 |**last_compile_batch_offset_start**|**bigint**|可提供给 sys.databases dm_exec_sql_text 和 last_compile_batch_sql_handle 的信息。<br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|
 |**last_compile_batch_offset_end**|**bigint**|可提供给 sys.databases dm_exec_sql_text 和 last_compile_batch_sql_handle 的信息。<br/>**注意：** Azure SQL 数据仓库将始终返回零（0）。|  
 |**count_compiles**|**bigint**|编译统计信息。<br/>**注意：** Azure SQL 数据仓库将始终返回一（1）。|  
@@ -74,12 +74,12 @@ ms.locfileid: "68067964"
  [sys. query_context_settings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
  [sys. query_store_plan &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
  [sys. query_store_query_text &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [sys. query_store_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
+ [sys.query_store_wait_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [sys. query_store_runtime_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys. query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [相关视图、函数和过程](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [查询存储存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
- [sys. fn_stmt_sql_handle_from_sql_stmt &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
+ [使用查询存储监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [查询存储存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
   
   

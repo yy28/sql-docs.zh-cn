@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9e5a79a4ab38fd1cb7d118624fd170219aa90a94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096256"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
@@ -43,10 +43,10 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 ## <a name="arguments"></a>参数  
  *object_id*  
- 当前数据库中您要请求其某个统计信息属性的对象的 ID。 *object_id*是**int**。  
+ 当前数据库中您要请求其某个统计信息属性的对象的 ID。 *object_id* 是 **int**。  
   
  *stats_id*  
- 指定 *object_id*的统计信息 ID。 可以从 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 动态管理视图获取该统计信息 ID。 *stats_id*是**int**。  
+ 指定 *object_id*的统计信息 ID。 可以从 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 动态管理视图获取该统计信息 ID。 *stats_id* 是 **int**。  
   
 ## <a name="table-returned"></a>返回的表  
   
@@ -56,10 +56,10 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |stats_id |**int**|统计信息对象的 ID。 在表或索引视图中是唯一的。 有关详细信息，请参阅 [sys.stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)。|  
 |step_number |**int** |直方图中的步骤数。 |
 |range_high_key |**sql_variant** |直方图梯级的上限列值。 列值也称为键值。|
-|range_rows |**实际上** |其列值位于直方图梯级内（不包括上限）的行的估算数目。 |
-|equal_rows |**实际上** |其列值等于直方图梯级的上限的行的估算数目。 |
+|range_rows |**real** |其列值位于直方图梯级内（不包括上限）的行的估算数目。 |
+|equal_rows |**real** |其列值等于直方图梯级的上限的行的估算数目。 |
 |distinct_range_rows |**bigint** |非重复列值位于直方图梯级内（不包括上限）的行的估算数目。 |
-|average_range_rows |**实际上** |直方图步骤中具有重复列值的平均行数，不包括上限（`RANGE_ROWS / DISTINCT_RANGE_ROWS`对于`DISTINCT_RANGE_ROWS > 0`）。 |
+|average_range_rows |**real** |直方图步骤中具有重复列值的平均行数，不包括上限（`RANGE_ROWS / DISTINCT_RANGE_ROWS`对于`DISTINCT_RANGE_ROWS > 0`）。 |
   
  ## <a name="remarks"></a>备注  
  

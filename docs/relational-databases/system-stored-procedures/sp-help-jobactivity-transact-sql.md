@@ -18,10 +18,10 @@ ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 95283eee1a38dbafd9824986188df565103de06c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054985"
 ---
 # <a name="sp_help_jobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
@@ -61,7 +61,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**job_id**|**uniqueidentifier**|作业标识符。|  
 |**job_name**|**sysname**|作业的名称。|  
 |**run_requested_date**|**datetime**|请求运行作业的时间。|  
-|**run_requested_source**|**sysname**|请求运行作业的请求源。 可取值为：<br /><br /> **1** = 按计划运行<br /><br /> **2** = 为响应警报而运行<br /><br /> **3** = 启动时运行<br /><br /> **4** = 按用户运行<br /><br /> **6** = 按 CPU 空闲计划运行|  
+|**run_requested_source**|**sysname**|请求运行作业的请求源。 即以下函数之一：<br /><br /> **1** = 按计划运行<br /><br /> **2** = 为响应警报而运行<br /><br /> **3** = 启动时运行<br /><br /> **4** = 按用户运行<br /><br /> **6** = 按 CPU 空闲计划运行|  
 |**queued_date**|**datetime**|将请求加入队列的时间。 如果直接运行作业，则该值为 NULL。|  
 |**start_execution_date**|**datetime**|将作业分配给可运行线程的时间。|  
 |**last_executed_step_id**|**int**|最近运行的作业步骤的 ID。|  
@@ -69,7 +69,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**stop_execution_date**|**datetime**|作业停止运行的时间。|  
 |**next_scheduled_run_date**|**datetime**|计划下一次作业运行的时间。|  
 |**job_history_id**|**int**|作业历史记录表中作业历史记录的标识符。|  
-|**消息**|**nvarchar （1024）**|上次运行作业期间产生的消息。|  
+|**message**|**nvarchar(1024)**|上次运行作业期间产生的消息。|  
 |**run_status**|**int**|作业上次运行时返回的状态：<br /><br /> **0** = 错误失败<br /><br /> **1** = 成功<br /><br /> **3** = 已取消<br /><br /> **5** = 状态未知|  
 |**operator_id_emailed**|**int**|作业完成时通过电子邮件通知的操作员的 ID 号。|  
 |**operator_id_netsent**|**int**|作业完成时通过**net send**通知的操作员的 ID 号。|  
@@ -78,8 +78,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>备注  
  此过程可提供作业的当前状态快照。 返回的结果表示处理请求时的有关信息。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在每次启动代理服务时都会创建一个会话 ID。 会话 id 存储在**syssessions**表中。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在每次启动代理服务时都会创建一个会话 ID。 会话 id 存储在**syssessions**表中。  
   
  如果未提供*session_id* ，则列出有关最近会话的信息。  
   

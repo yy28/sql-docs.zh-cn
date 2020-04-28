@@ -15,10 +15,10 @@ ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 15c4ff470c78814745be6f3f4c8f898bf4b809ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103064"
 ---
 # <a name="creating-script-files-mysqltosql"></a>创建脚本文件 (MySQLToSQL)
@@ -49,7 +49,7 @@ ms.locfileid: "68103064"
   
     -   抑制消息：抑制控制台上的消息。 默认情况下，此值为 "false"。  
   
-    **实例**  
+    **示例：**  
   
     ```xml  
     <output-providers>  
@@ -92,7 +92,7 @@ ms.locfileid: "68103064"
   
     - 目标-使用-上次使用 = "true" （默认值）或目标-服务器 = "target_servername"  
   
-    **实例**  
+    **示例：**  
   
     ```xml  
     <output-providers>  
@@ -127,7 +127,7 @@ ms.locfileid: "68103064"
   
     默认模式为 "**错误**"。  
   
-    **实例**  
+    **示例：**  
   
     ```xml  
     <output-providers>  
@@ -158,7 +158,7 @@ ms.locfileid: "68103064"
   
     默认模式为 "**生成-错误**"。  
   
-    **实例**  
+    **示例：**  
   
     ```xml  
     <output-providers>  
@@ -206,7 +206,7 @@ ms.locfileid: "68103064"
   
     -   ask-user：提示用户输入（"是"/"否"）  
   
-    **实例**  
+    **示例：**  
   
     ```xml  
     <output-providers>  
@@ -227,7 +227,7 @@ ms.locfileid: "68103064"
   
 6.  **必备组件提供程序：** 这使用户能够处理处理命令所需的任何先决条件。 默认情况下，严格模式为 "false"。 如果设置为 "true"，则会生成异常以满足先决条件。  
   
-    **实例**  
+    **示例：**  
   
     ```xml  
     <output-providers>  
@@ -255,7 +255,7 @@ ms.locfileid: "68103064"
   
     -   每隔20%  
   
-    **实例**  
+    **示例：**  
   
     ```xml  
     <output-providers>  
@@ -301,7 +301,7 @@ ms.locfileid: "68103064"
     > [!NOTE]  
     > 必需的消息记录在任何级别。  
   
-    **实例**  
+    **示例：**  
   
     ```xml  
     <output-providers>  
@@ -328,7 +328,7 @@ ms.locfileid: "68103064"
   
     2.  如果 override 选项为**true**，则搜索顺序为 "脚本文件-&gt;服务器连接文件-&gt;提示用户"。  
   
-    **实例**  
+    **示例：**  
   
     ```xml  
     <output-providers>  
@@ -352,7 +352,7 @@ ms.locfileid: "68103064"
   
 成功执行脚本文件中的所有命令后，SSMA 控制台应用程序将退出并将控件返回给用户。 脚本文件的内容具有更多或更少的静态，其中的变量信息包含在[变量值文件](creating-variable-value-files-mysqltosql.md)中，或在脚本文件的单独节中用于变量值。  
   
-**实例**  
+**示例：**  
   
 ```xml  
 <!--Sample of script file commands -->  

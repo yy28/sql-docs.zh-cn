@@ -19,10 +19,10 @@ ms.assetid: 5a8c1421-c56b-44b5-96e5-4f01782a0c7c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 44ee5c5ff44928c2f2b9e775eae41aea77fed87a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68086218"
 ---
 # <a name="sysdm_cryptographic_provider_keys-transact-sql"></a>sys.dm_cryptographic_provider_keys (Transact-SQL)
@@ -48,11 +48,11 @@ dm_cryptographic_provider_keys ( provider_id )
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**key_id**|**int**|提供程序中密钥的标识号。|  
-|key_name |**nvarchar(512)**|提供程序中密钥的名称。|  
-|**key_thumbprint**|**varbinary （32）**|来自密钥提供程序的指纹。|  
+|**key_name**|**nvarchar(512)**|提供程序中密钥的名称。|  
+|**key_thumbprint**|**varbinary(32)**|来自密钥提供程序的指纹。|  
 |**algorithm_id**|**int**|提供程序中算法的标识号。|  
 |**algorithm_tag**|**int**|提供程序中算法的标记。|  
-|**key_type**|**nchar （256）**|提供程序中密钥的类型。|  
+|**key_type**|**nchar(256)**|提供程序中密钥的类型。|  
 |**key_length**|**int**|提供程序中密钥的长度。|  
   
 ## <a name="permissions"></a>权限  

@@ -18,10 +18,10 @@ ms.assetid: 1cb7aedc-48a4-486e-9b91-d30c4bd4084e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1e89e67b49498320e4500b99332fc5584d5f38d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68066672"
 ---
 # <a name="cdclsn_time_mapping-transact-sql"></a>cdc.lsn_time_mapping (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68066672"
     
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**start_lsn**|**binary （10）**|提交的事务的 LSN。|  
+|**start_lsn**|**binary(10)**|提交的事务的 LSN。|  
 |**tran_begin_time**|**datetime**|与 LSN 关联的事务开始的时间。|  
 |**tran_end_time**|**datetime**|事务结束的时间。|  
 |**tran_id**|**varbinary （10）**|事务的 ID。|  

@@ -19,10 +19,10 @@ ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e0d725d37470f28847feb296194abd98fce9ae4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061923"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>查询通知-sys. dm_qn_subscriptions
@@ -32,19 +32,19 @@ ms.locfileid: "68061923"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**识别**|**int**|订阅的 ID。|  
-|database_id |**int**|执行通知查询所在数据库的 ID。 该数据库存储该订阅的相关信息。|  
+|**id**|**int**|订阅的 ID。|  
+|**database_id**|**int**|执行通知查询所在数据库的 ID。 该数据库存储该订阅的相关信息。|  
 |**sid**|**varbinary （85）**|创建并拥有该订阅的服务器主体的安全 ID。|  
 |**object_id**|**int**|存储有关订阅参数信息的内部表的 ID。|  
-|**建立**|**datetime**|创建订阅的日期和时间。|  
+|**created**|**datetime**|创建订阅的日期和时间。|  
 |**timeout**|**int**|订阅超时（以秒为单位）。 在经过这段时间后，通知将标记为激发。<br /><br /> 注意：实际触发时间可能大于指定的超时时间。但是，如果在指定的超时时间之后但在激发订阅之前发生了无效的更改，则[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可确保在发生更改时进行触发。|  
-|**状态值**|**int**|指示订阅的状态。 有关代码列表，请参阅备注下的表。|  
+|**status**|**int**|指示订阅的状态。 有关代码列表，请参阅备注下的表。|  
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|从|目标|启用|类型|  
+|From|到|开|类型|  
 |----------|--------|--------|----------|  
-|**sys.dm_qn_subscriptions**|**sys.databases**|database_id |多对一|  
+|**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|多对一|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|多对一|  
   
 ## <a name="remarks"></a>备注  
@@ -131,7 +131,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与查询通知相关的动态管理视图 &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
   

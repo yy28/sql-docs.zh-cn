@@ -19,10 +19,10 @@ ms.assetid: 17e6f87f-8f56-489d-9aed-216afc8ef310
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f80ec78e37707058a354a03bb2605a38abdfa803
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68099191"
 ---
 # <a name="sysdm_broker_activated_tasks-transact-sql"></a>sys.dm_broker_activated_tasks (Transact-SQL)
@@ -33,8 +33,8 @@ ms.locfileid: "68099191"
 
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|spid |**int**|已激活存储过程的会话的 ID。 可以为 null.|  
-|database_id |**smallint**|定义队列所用数据库的 ID。 可以为 null.|  
+|**spid**|**int**|已激活存储过程的会话的 ID。 可以为 null.|  
+|**database_id**|**smallint**|定义队列所用数据库的 ID。 可以为 null.|  
 |**queue_id**|**int**|为其激活存储过程的队列的对象 ID。 可以为 null.|  
 |**procedure_name**|**nvarchar （650）**|已激活的存储过程的名称。 可以为 null.|  
 |**execute_as**|**int**|运行存储过程的用户的 ID。 可以为 null.|  
@@ -47,13 +47,13 @@ ms.locfileid: "68099191"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|从|目标|关系|  
+|From|到|关系|  
 |----------|--------|------------------|  
 |dm_broker_activated_tasks.spid|dm_exec_sessions.session_id|一对一|  
   
 ## <a name="see-also"></a>另请参阅  
- [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Service Broker 相关的动态管理视图 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [与 Service Broker 有关的动态管理视图 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

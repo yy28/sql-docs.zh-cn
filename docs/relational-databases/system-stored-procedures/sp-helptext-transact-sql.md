@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 160d52c8c145828f6a63c104aecb17e04867cee8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68048296"
 ---
 # <a name="sp_helptext-transact-sql"></a>sp_helptext (Transact-SQL)
@@ -51,7 +51,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**文本**|**nvarchar(255)**|对象定义|  
+|**Text**|**nvarchar(255)**|对象定义|  
   
 ## <a name="remarks"></a>备注  
  sp_helptext 显示用于在多行中创建对象的定义。 每行包含 255 个字符的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定义。 定义位于[sql_modules sys.databases](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目录视图的**定义**列中。  
@@ -62,7 +62,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 ## <a name="examples"></a>示例  
   
 ### <a name="a-displaying-the-definition-of-a-trigger"></a>A. 显示触发器的定义  
- 以下示例将显示 `dEmployee` 数据库中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 触发器的定义。  
+ 以下示例将显示 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中的 `dEmployee` 触发器的定义。  
   
 ```  
 USE AdventureWorks2012;  
@@ -72,7 +72,7 @@ GO
 ```  
   
 ### <a name="b-displaying-the-definition-of-a-computed-column"></a>B. 显示计算列的定义  
- 以下示例将显示 `TotalDue` 数据库的 `SalesOrderHeader` 表中计算列 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 的定义。  
+ 以下示例将显示 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的 `TotalDue` 表中计算列 `SalesOrderHeader` 的定义。  
   
 ```  
 USE AdventureWorks2012;  
@@ -92,8 +92,8 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [数据库引擎存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [OBJECT_DEFINITION &#40;Transact-sql&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
- [sp_help &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [sys. sql_modules &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
+ [sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
+ [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

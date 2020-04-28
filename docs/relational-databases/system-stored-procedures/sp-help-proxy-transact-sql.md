@@ -18,10 +18,10 @@ ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085280"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
@@ -75,10 +75,10 @@ sp_help_proxy
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|代理服务器标识号。|  
-|**路径名**|**sysname**|代理服务器的名称。|  
+|**name**|**sysname**|代理服务器的名称。|  
 |**credential_identity**|**sysname**|与代理关联的凭据的 Microsoft Windows 域名和用户名。|  
 |**能够**|**tinyint**|是否启用了此代理。 { **0** = 未启用， **1** = 已启用}|  
-|**2008**|**nvarchar （1024）**|对此代理的说明。|  
+|**2008**|**nvarchar(1024)**|对此代理的说明。|  
 |**user_sid**|**varbinary （85）**|此代理的 Windows 用户的 Windows 安全 ID。|  
 |**credential_id**|**int**|与此代理关联的凭据的标识符。|  
 |**credential_identity_exists**|**int**|是否存在 credential_identity。 { 0 = 不存在，1 = 存在 }|  
@@ -89,7 +89,7 @@ sp_help_proxy
  若要确定登录名可用于给定子系统的代理，请指定*name*和*subsystem_name*。 当提供这些参数时， **sp_help_proxy**会列出指定的登录名可以访问并且可用于指定子系统的代理。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下， **sysadmin**固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 **msdb** 数据库中的 **SQLAgentOperatorRole** 固定数据库角色的权限。  
+ 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 **msdb** 数据库中的 **SQLAgentOperatorRole** 固定数据库角色的权限。  
   
  有关**SQLAgentOperatorRole**的详细信息，请参阅[SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   

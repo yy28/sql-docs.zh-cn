@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0e1bd5fa1ba4d4ff8b97436ac6e44b901f578187
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68074842"
 ---
 # <a name="expressions-dmx"></a>表达式 (DMX)
@@ -22,7 +22,7 @@ ms.locfileid: "68074842"
   
  DMX 表达式可能很简单，也可能很复杂。 简单表达式可以是下列几种形式之一：  
   
- 一直  
+ Constant  
  常量是表示单个特定值的符号。 常量可以是字符串、数值或日期值。 必须使用单引号 (') 来分隔字符串和日期常量。  
   
  标量函数  

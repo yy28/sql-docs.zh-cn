@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: bca9930ef51de28c8059223c93ea0bb2651f971d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68089148"
 ---
 # <a name="sysdm_pdw_sql_requests-transact-sql"></a>sys. dm_pdw_sql_requests （Transact-sql）
@@ -26,11 +26,11 @@ ms.locfileid: "68089148"
   
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar （32）**|此 SQL 查询分发所属的查询的唯一标识符。<br /><br /> request_id、step_index 和 distribution_id 构成此视图的键。|请参阅 dm_pdw_exec_requests sys.databases 中的 request_id [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。|  
+|request_id|**nvarchar(32)**|此 SQL 查询分发所属的查询的唯一标识符。<br /><br /> request_id、step_index 和 distribution_id 构成此视图的键。|请参阅 dm_pdw_exec_requests sys.databases 中的 request_id [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。|  
 |step_index|**int**|此分发所属的查询步骤的索引。<br /><br /> request_id、step_index 和 distribution_id 构成此视图的键。|请参阅 dm_pdw_request_steps sys.databases 中的 step_index [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)。|  
 |pdw_node_id|**int**|运行此查询分发的节点的唯一标识符。|请参阅 dm_pdw_nodes sys.databases 中的 node_id [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)。|  
 |distribution_id|**int**|运行此查询分发的分发的唯一标识符。<br /><br /> request_id、step_index 和 distribution_id 构成此视图的键。|请参阅 pdw_distributions sys.databases 中的 distribution_id [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md)。 对于在节点范围内运行的请求，将设置为-1，而不是分布作用域。|  
-|status|**nvarchar （32）**|查询分发的当前状态。|挂起、正在运行、已失败、已取消、完成、已中止、CancelSubmitted|  
+|status|**nvarchar(32)**|查询分发的当前状态。|挂起、正在运行、已失败、已取消、完成、已中止、CancelSubmitted|  
 |error_id|**nvarchar （36）**|与此查询分布关联的错误的唯一标识符（如果有）。|请参阅 dm_pdw_errors sys.databases 中的 error_id [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md)。 如果未发生错误，则设置为 NULL。|  
 |start_time|**datetime**|开始执行查询分发的时间。|小于或等于当前时间，大于或等于此查询分布所属的查询步骤 start_time|  
 |end_time|**datetime**|此查询分发完成执行、已取消或失败的时间。|大于或等于开始时间; 如果查询分发正在进行或排队，则设置为 NULL。|  

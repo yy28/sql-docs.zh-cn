@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e2380f72fe8a5faf9dc5504e56941f724b1bd159
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68098402"
 ---
 # <a name="mdx-data-definition---create-kpi"></a>MDX 数据定义 - CREATE KPI
@@ -87,12 +87,12 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 |状态|反向测量|5|  
 |状态|温度计|3|  
 |状态|柱状|3|  
-|状态|人脸|3|  
+|状态|面|3|  
 |状态|方差箭头|3|  
 |趋势|标准箭头|3|  
 |趋势|状态箭头|3|  
 |趋势|反向状态箭头|5|  
-|趋势|人脸|3|  
+|趋势|面|3|  
   
 ## <a name="see-also"></a>另请参阅  
  [DROP KPI 语句 &#40;MDX&#41;](../mdx/mdx-data-definition-drop-kpi.md)   

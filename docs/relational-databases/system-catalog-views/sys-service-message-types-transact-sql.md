@@ -20,10 +20,10 @@ ms.assetid: 6a38709a-60fe-46f6-89da-718f74f15600
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 560ee8a4ccc03f747df2b475394af092db589e7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078742"
 ---
 # <a name="sysservice_message_types-transact-sql"></a>sys.service_message_types (Transact-SQL)
@@ -33,11 +33,11 @@ ms.locfileid: "68078742"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**路径名**|**sysname**|消息类型的名称，在数据库中是唯一的。 不可为 NULL。|  
+|name |**sysname**|消息类型的名称，在数据库中是唯一的。 不可为 NULL。|  
 |**message_type_id**|**int**|消息类型的标识符，在数据库中是唯一的。 不可为 NULL。|  
 |**principal_id**|**int**|拥有该消息类型的数据库主体的标识符。 可以为 null.|  
-|**检查**|**char （2）**|在发送该类型的消息之前由 Broker 执行的验证。 不可为 NULL。 可取值为：<br /><br /> N = 无<br /><br /> X = XML<br /><br /> E = 空|  
-|**validation_desc**|**nvarchar （60）**|在发送该类型的消息之前由 Broker 执行的验证的说明。 可以为 null. 可取值为：<br /><br /> 无<br /><br /> XML<br /><br /> EMPTY|  
+|**检查**|**char(2)**|在发送该类型的消息之前由 Broker 执行的验证。 不可为 NULL。 即以下函数之一：<br /><br /> N = 无<br /><br /> X = XML<br /><br /> E = 空|  
+|**validation_desc**|**nvarchar(60)**|在发送该类型的消息之前由 Broker 执行的验证的说明。 可以为 null. 即以下函数之一：<br /><br /> 无<br /><br /> XML<br /><br /> EMPTY|  
 |**xml_collection_id**|**int**|对于使用 XML 架构的验证，使用该架构集合的标识符。<br /><br /> 否则为 NULL。|  
   
 ## <a name="permissions"></a>权限  

@@ -18,10 +18,10 @@ ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 886240176188fdcea0c104ca366ec5451528312a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079144"
 ---
 # <a name="msreplication_monitordata-transact-sql"></a>MSreplication_monitordata (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "68079144"
 |**agent_id**|**int**|复制代理的 ID。|  
 |**agent_name**|**sysname**|复制代理作业的名称。|  
 |**job_id**|**uniqueidentifier**|复制代理作业的 GUID 名称。|  
-|**状态值**|**int**|复制代理的状态，可以是下列值之一：<br /><br /> **1** = 已启动<br /><br /> **2** = 成功<br /><br /> **3** = 正在进行<br /><br /> **4** = 空闲<br /><br /> **5** = 正在重试<br /><br /> **6** = 失败|  
+|**status**|**int**|复制代理的状态，可以是下列值之一：<br /><br /> **1** = 已启动<br /><br /> **2** = 成功<br /><br /> **3** = 正在进行<br /><br /> **4** = 空闲<br /><br /> **5** = 正在重试<br /><br /> **6** = 失败|  
 |**isagentrunningnow**|**bit**|一个标志，用于指示代理作业当前是否正在运行，如果值为**1** ，则表示作业正在运行。|  
 |**出现**|**int**|由订阅生成的阈值警告，可以是以下值中一个或多个值的逻辑或结果。<br /><br /> **1** = 过期-对事务发布的订阅已超出保持期超过允许的阈值（以保持期的百分比形式表示）。<br /><br /> **2** = 滞后时间-将数据从事务发布服务器复制到订阅服务器所用的时间超过了阈值（以秒为单位）。<br /><br /> **4** = mergeexpiration-针对合并发布的订阅已超出保持期超过允许的阈值（以保持期的百分比表示）。 8 = mergefastrunduration - 通过快速网络连接完成合并订阅同步所用的时间超出阈值（以秒为单位）。<br /><br /> **16** = mergeslowrunduration-完成合并订阅同步所用的时间超过了慢速或拨号网络连接的阈值（以秒为单位）。<br /><br /> **32** = mergefastrunspeed-合并订阅的同步过程中的行传递速率未能维持快速网络连接上的阈值速率（以每秒行数为单位）。<br /><br /> **64** = mergeslowrunspeed-合并订阅的同步过程中的行传递速率未能维持慢速或拨号网络连接的阈值速率（以每秒行数为单位）。|  
 |**last_distsync**|**datetime**|分发代理的最后日期和时间。|  
@@ -60,7 +60,7 @@ ms.locfileid: "68079144"
 |**average_runspeedPerf**|**int**|合并发布的平均同步时间|  
 |**mergePerformance**|**int**|订阅的上次同步相对于其所有同步而言的性能，用上次同步的传递速率除以之前所有传递速率的平均值。|  
 |**mergelatestsessionrunduration**|**int**|合并代理最近运行的持续时间。|  
-|**mergelatestsessionrunspeed**|**float （53）**|合并代理最近运行的传送速率。|  
+|**mergelatestsessionrunspeed**|**float(53)**|合并代理最近运行的传送速率。|  
 |**mergelatestsessionconnectiontype**|**int**|最近的合并代理会话所用的连接，可以是下列值之一：<br /><br /> **1** = 局域网（LAN）<br /><br /> **2** = 拨号网络连接|  
 |**retention_period_unit**|**tinyint**|定义在定义保持期时使用的单位，可以为下列值之一：<br /><br /> **1** = 周<br /><br /> **2** = 月<br /><br /> **3** = 年|  
   

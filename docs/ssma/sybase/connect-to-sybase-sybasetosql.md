@@ -10,10 +10,10 @@ ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 6cb2f4196737cceec2f60684de1b7409f5e383a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083394"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>连接到 Sybase (SybaseToSQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68083394"
 **用户名**  
 输入用于连接到 ASE 的用户名。 这是一个标准模式选项。  
   
-**权限**  
+**密码**  
 输入用户名的密码。 这是一个标准模式选项。  
   
 **连接字符串**  
@@ -51,7 +51,7 @@ ms.locfileid: "68083394"
   
     |设置|Sybase 12.5 参数|Sybase 15 参数|  
     |-----------|-------------------------|-----------------------|  
-    |服务器名称|服务器名称|服务器|  
+    |服务器名称|服务器名称|Server (服务器)|  
     |端口|服务器端口地址|端口|  
     |用户名|用户 ID|用户 ID|  
     |密码|密码|密码|  
@@ -69,8 +69,8 @@ ms.locfileid: "68083394"
   
     |设置|Sybase 12.5/15 参数|  
     |-----------|-----------------------------|  
-    |驱动程序名称|驱动器|  
-    |服务器名称|服务器|  
+    |驱动程序名称|驱动程序|  
+    |服务器名称|Server (服务器)|  
     |用户名|标识号|  
     |密码|Pwd|  
     |端口号|端口|  
@@ -83,7 +83,7 @@ ms.locfileid: "68083394"
   
     |设置|Sybase 12.5/15 参数|  
     |-----------|-----------------------------|  
-    |服务器名称|服务器|  
+    |服务器名称|Server (服务器)|  
     |用户名|标识号|  
     |密码|Pwd|  
     |端口号|端口|  

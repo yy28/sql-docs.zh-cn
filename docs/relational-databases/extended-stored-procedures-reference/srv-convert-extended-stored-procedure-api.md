@@ -20,10 +20,10 @@ ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b6ba4c356411800dc7c5e52907b0baccd5682f09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68064144"
 ---
 # <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert（扩展存储过程 API）
@@ -63,27 +63,27 @@ destlen
 ```  
   
 ## <a name="arguments"></a>参数  
- *srvproc*  
+ srvproc**  
  指向作为特定客户端连接句柄的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 用于管理应用程序和客户端之间的通信和数据的所有控制信息。 如果提供了 srvproc 句柄，在发生错误时它则会被传递给扩展存储过程 API 错误处理程序函数**。  
   
- *srctype*  
+ srctype**  
  指定要转换的数据的数据类型。 该参数可以为任意一种扩展存储过程 API 数据类型。  
   
- *源*  
+ *src*  
  指向要转换的数据的指针。 该参数可以为任意一种扩展存储过程 API 数据类型。  
   
- *srclen*  
+ srclen**  
  指定要转换的数据的长度（单位为字节）。 如果 srclen 为 0，srv_convert 将向目标变量中放入一个 Null 值******。 除非它为 0，否则对于固定长度数据类型，会忽略该参数，在这种情况下会假定源数据为 NULL。 对于 SRVCHAR 数据类型的数据，长度为 -1 表示字符串以 Null 值结束。  
   
- *desttype*  
+ desttype**  
  指示要将源转换为何种数据类型。 该参数可以为任意一种扩展存储过程 API 数据类型。  
   
- *目的*  
+ dest**  
  指向接收转换后的数据的目标变量的指针。 如果该指针为 NULL，srv_convert 将调用用户提供的错误处理程序（如果有的话），并返回 -1****。  
   
  如果 desttype 为 SRVDECIMAL 或 SRVNUMERIC，则 dest 参数必须为指向 DBNUMERIC 或 DBDECIMAL 结构的指针，并且此结构的精度和小数位数字段必须已设置为所需的值****。 您可以使用 DEFAULTPRECISION 指定一个默认精度，使用 DEFAULTSCALE 指定一个默认小数位数。  
   
- *destlen*  
+ destlen**  
  指定目标变量的长度（单位为字节）。 对于固定长度数据类型，则会忽略该参数。 对于 SRVCHAR 类型的目标变量，destlen 的值必须为目标缓冲区空间的总长度**。 SRVCHAR 或 SRVBINARY 类型的目标变量的长度为 -1 时，表示有足够的可用空间。 对于 srvchar 类型的目标变量，长度为 -1 将使字符串以 Null 值终止**。  
   
 ## <a name="returns"></a>返回  
@@ -115,6 +115,6 @@ destlen
   
 ## <a name="see-also"></a>另请参阅  
  [扩展存储过程 API srv_setutype &#40;&#41;](../../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md)   
- [扩展存储过程 API srv_willconvert &#40;&#41;](../../relational-databases/extended-stored-procedures-reference/srv-willconvert-extended-stored-procedure-api.md)  
+ [srv_willconvert（扩展存储过程 API）](../../relational-databases/extended-stored-procedures-reference/srv-willconvert-extended-stored-procedure-api.md)  
   
   

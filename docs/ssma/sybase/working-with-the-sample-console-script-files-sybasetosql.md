@@ -12,10 +12,10 @@ ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: fe9e05f0078f0d1a9d3ab5ea6e2763ac28207085
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68091793"
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>使用示例控制台脚本文件 (SybaseToSQL)
@@ -73,19 +73,19 @@ ms.locfileid: "68091793"
 -   **ConversionAndDataMigrationSample：**  
      使用此示例，用户可以执行端到端迁移，从转换到数据迁移。 下面列出了需要更改的必需属性值的列表：  
   
-    **命令名称**  
+    **命令名：**  
   
     `map-schema`  
   
     将源数据库映射到目标架构的架构。  
   
-    **Attribute**  
+    **特性**  
   
     -   `source-schema:`指定需要转换的源数据库。  
   
     -   `sql-server-schema`：指定要迁移到的目标数据库  
   
-    **命令名称**  
+    **命令名：**  
   
     `convert-schema`  
   
@@ -93,11 +93,11 @@ ms.locfileid: "68091793"
   
     -   如果用户必须评估多个对象/数据库，他可以指定多`metabase-object`个节点，如示例`convert-schema`控制台脚本文件的命令示例4中所示。  
   
-    **Attribute**  
+    **特性**  
   
     `object-name`：指定需要转换的源数据库/对象名称。 确保根据在中`object-type`指定的对象类型更改相应的`object-name`  
   
-    **命令名称**  
+    **命令名：**  
   
     `synchronize-target`  
   
@@ -105,11 +105,11 @@ ms.locfileid: "68091793"
   
     -   如果用户必须评估多个对象/数据库，他可以指定多`metabase-object`个节点，如示例`synchronize-target`控制台脚本文件的命令示例3中所示。  
   
-    **Attribute**  
+    **特性**  
   
     `object-name:`指定需要创建的 sql server 数据库/对象名称。 确保根据在中`object-type`指定的对象类型更改相应的`object-name`  
   
-    **命令名称**  
+    **命令名：**  
   
     `migrate-data`  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68091793"
   
     -   如果用户必须评估多个对象/数据库，他可以指定多`metabase-object`个节点，如示例`migrate-data`控制台脚本文件的命令示例2中所示。  
   
-    **Attribute**  
+    **特性**  
   
     `object-name:`指定需要迁移的源数据库/表名称。 确保根据在中`object-type`指定的对象类型更改相应的`object-name`  
   

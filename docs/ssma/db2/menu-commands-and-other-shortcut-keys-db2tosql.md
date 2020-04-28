@@ -10,10 +10,10 @@ ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 8937eb796d75afdc404ef4815918245cda7f13a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68074153"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>菜单命令和其他快捷键（DB2ToSQL）
@@ -54,7 +54,7 @@ ms.locfileid: "68074153"
 |查找上一个。|ALT + E + F + P 或 CTRL + SHIFT + F3|  
 |查找下一个|ALT + E + F + N 或 CTRL + F3|  
   
-## <a name="view-menu-commands"></a>"查看" 菜单命令  
+## <a name="view-menu-commands"></a>“视图”菜单命令  
 若要访问 "查看" 菜单，使用的键盘快捷方式是 ALT + V。下表描述了用于访问 "查看" 菜单中的菜单项的键盘快捷方式。  
   
 |要执行此操作|长|  
@@ -87,7 +87,7 @@ ms.locfileid: "68074153"
 |显示 "项目设置" 对话框。|ALT + T + P|  
 |显示 "默认项目设置" 对话框。|ALT + T + J|  
   
-## <a name="help-menu-commands"></a>"帮助" 菜单命令  
+## <a name="help-menu-commands"></a>“帮助”菜单命令  
 若要访问 "帮助" 菜单，使用的键盘快捷方式是 ALT + H。下表描述了用于访问 "帮助" 菜单中的菜单项的键盘快捷方式。  
   
 |要执行此操作|长|  

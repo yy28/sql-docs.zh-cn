@@ -20,10 +20,10 @@ ms.assetid: 76fbc3e1-ad88-4a47-8bf1-471c3bee5ad8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 977a5e0428f59a45a823dd82e30b3f4c63520c0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090217"
 ---
 # <a name="sysdm_xe_session_targets-transact-sql"></a>sys.dm_xe_session_targets (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68090217"
   |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|事件会话的内存地址。 与 sys.dm_xe_sessions.address 之间具有多对一关系。 不可为 null。|  
-|target_name|**nvarchar （60）**|会话中目标的名称。 不可为 null。|  
+|target_name|**nvarchar(60)**|会话中目标的名称。 不可为 null。|  
 |target_package_guid|**uniqueidentifier**|包含目标的包的 GUID。 不可为 null。|  
 |execution_count|**bigint**|已为该会话执行目标的次数。 不可为 null。|  
 |execution_duration_ms|**bigint**|目标已经执行的总时间（以毫秒为单位）。 不可为 null。|  
@@ -45,7 +45,7 @@ ms.locfileid: "68090217"
   
 ### <a name="relationship-cardinalities"></a>关系基数  
   
-|从|目标|关系|  
+|From|到|关系|  
 |----------|--------|------------------|  
 |sys.dm_xe_session_targets.event_session_address|sys.dm_xe_sessions.address|多对一|  
   

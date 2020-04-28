@@ -18,10 +18,10 @@ ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ccae0385ef8c9305f4972ff6dcbd7a7960200370
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056314"
 ---
 # <a name="sp_primarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
@@ -73,7 +73,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
  需要对架构的 SELECT 权限。  
   
 ## <a name="examples"></a>示例  
- 以下示例返回 `LONDON1` 数据库中 `HumanResources.JobCandidate` 表的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 服务器中的主键列。  
+ 以下示例返回 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中 `LONDON1` 表的 `HumanResources.JobCandidate` 服务器中的主键列。  
   
 ```  
 EXEC sp_primarykeys @table_server = N'LONDON1',   

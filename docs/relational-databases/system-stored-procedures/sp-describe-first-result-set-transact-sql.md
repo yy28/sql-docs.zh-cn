@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dc58447e9893647dfa73643f14455d715625478e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053052"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
@@ -66,13 +66,13 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**位非 NULL**|指示列是出于浏览信息目的而额外添加的列，该列不会实际显示在结果集中。|  
 |**column_ordinal**|**int NOT NULL**|在结果集中包含列的序号位置。 第一列的位置将指定为1。|  
-|**路径名**|**sysname NULL**|包含列的名称（如果可以确定名称）。 否则，它将包含 NULL。|  
+|**name**|**sysname NULL**|包含列的名称（如果可以确定名称）。 否则，它将包含 NULL。|  
 |**is_nullable**|**位非 NULL**|如果列允许 NULL，则包含值 1；如果列不允许 NULL，则包含 0；如果不能确定列是否允许 NULL，则为 1。|  
 |**system_type_id**|**int NOT NULL**|包含 sys.databases 中指定的列数据类型的 system_type_id。 对于 CLR 类型，即使 system_type_name 列返回 NULL，该列也会返回值 240。|  
 |**system_type_name**|**nvarchar （256） NULL**|包含为列数据类型指定的名称和参数（例如，length、precision、scale）。 如果数据类型是用户定义的别名类型，则会在此处指定基本系统类型。 如果数据类型是 CLR 用户定义类型，则在此列中返回 NULL。|  
 |**max_length**|**smallint NOT NULL**|列的最大长度（字节）。<br /><br /> -1 = 列数据类型为**varchar （max）**、 **nvarchar （max）**、 **varbinary （max）** 或**xml**。<br /><br /> 对于**text**列， **max_length**值将是16，或者是**sp_tableoption "text in row"** 设置的值。|  
 |**精度**|**tinyint NOT NULL**|如果为基于数值的列，则为该列的精度。 否则，返回 0。|  
-|**纵向**|**tinyint NOT NULL**|如果基于数值，则为列的小数位数。 否则，返回 0。|  
+|**scale**|**tinyint NOT NULL**|如果基于数值，则为列的小数位数。 否则，返回 0。|  
 |**collation_name**|**sysname NULL**|如果列包含的是字符，则为该列的排序规则的名称。 否则，返回 NULL。|  
 |**user_type_id**|**int NULL**|对于 CLR 和别名类型，包含在 sys.types 中指定的列数据类型的 user_type_id。 否则为 NULL。|  
 |**user_type_database**|**sysname NULL**|对于 CLR 和别名类型，包含在其中定义相应类型的数据库的名称。 否则为 NULL。|  

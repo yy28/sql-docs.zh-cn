@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5a833e5d1c3c67e61c4d81b4b575ab90b23f75fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097698"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68097698"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**smallint**|正在运行查询的会话 ID (SPID)。|  
-|request_id |**int**|请求的 ID。 在会话的上下文中是唯一的。|  
+|**request_id**|**int**|请求的 ID。 在会话的上下文中是唯一的。|  
 |**scheduler_id**|**int**|正在计划查询的计划程序的 ID。|  
 |**dop**|**smallint**|查询的并行度。|  
 |**request_time**|**datetime**|查询请求内存授予的日期和时间。|  
@@ -57,13 +57,13 @@ ms.locfileid: "68097698"
 |**wait_order**|**int**|等待查询在指定的 **queue_id** 中的顺序。 如果其他查询获得内存授予或超时，则给定查询的此值可能会发生变化。如果已授予内存，则为 NULL。|  
 |**is_next_candidate**|**bit**|下一个内存授予的候选对象。<br /><br /> 1 = 是<br /><br /> 0 = 否<br /><br /> NULL = 已授予内存。|  
 |**wait_time_ms**|**bigint**|等待时间（毫秒）。 如果已授予内存，则为 NULL。|  
-|**plan_handle**|**varbinary （64）**|查询计划的标识符。 使用 **sys.dm_exec_query_plan** 可提取实际的 XML 计划。|  
-|**sql_handle**|**varbinary （64）**|查询的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 文本标识符。 使用 **sys.dm_exec_sql_text** 可获取实际的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 文本。|  
+|**plan_handle**|**varbinary(64)**|查询计划的标识符。 使用 **sys.dm_exec_query_plan** 可提取实际的 XML 计划。|  
+|**sql_handle**|**varbinary(64)**|查询的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 文本标识符。 使用 **sys.dm_exec_sql_text** 可获取实际的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 文本。|  
 |**group_id**|**int**|在其中运行此查询的工作负荷组的 ID。|  
 |**pool_id**|**int**|该工作负荷组所属的资源池的 ID。|  
 |**is_small**|**tinyint**|如果设置为 1，则指示此授予使用小型资源信号量。 如果设置为 0，则指示使用常规信号量。|  
 |**ideal_memory_kb**|**bigint**|将所有内容存放在物理内存中所需的内存授予的大小（以 KB 为单位）。 这基于基数估计。|  
-|pdw_node_id |**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|**pdw_node_id**|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限  
 
@@ -84,7 +84,7 @@ ms.locfileid: "68097698"
     SELECT * FROM sys.dm_exec_query_memory_grants where grant_time is null  
     ```  
     
-    <sup>1</sup>在此方案中，等待类型通常 RESOURCE_SEMAPHORE。 有关详细信息，请参阅 [sys.dm_os_wait_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。 
+    <sup>1</sup>在此方案中，等待类型通常是 RESOURCE_SEMAPHORE。 有关详细信息，请参阅 [sys.dm_os_wait_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。 
   
 -   使用内存授予的查询的搜索缓存使用[sys. dm_exec_cached_plans &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)和[sys. dm_exec_query_plan &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
   
@@ -117,6 +117,6 @@ ms.locfileid: "68097698"
 ## <a name="see-also"></a>另请参阅  
  [sys. dm_exec_query_resource_semaphores &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
  [sys. dm_os_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
- [与执行相关的动态管理视图和函数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [与执行相关的动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

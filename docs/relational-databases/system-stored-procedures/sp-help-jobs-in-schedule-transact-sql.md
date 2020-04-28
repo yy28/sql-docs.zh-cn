@@ -18,10 +18,10 @@ ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1713974a8ba90474393ff9bb65f6b98a5c74b601
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054905"
 ---
 # <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
@@ -54,14 +54,14 @@ sp_help_jobs_in_schedule
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|作业的唯一 ID。|  
-|**originating_server**|**nvarchar （30）**|作业来自的服务器的名称。|  
-|**路径名**|**sysname**|作业的名称。|  
+|**originating_server**|**nvarchar(30)**|作业来自的服务器的名称。|  
+|**name**|**sysname**|作业的名称。|  
 |**能够**|**tinyint**|指示是否启用要执行的作业。|  
-|**2008**|**nvarchar(512)**|作业的说明。|  
+|**2008**|**nvarchar(512)**|对作业的说明。|  
 |**start_step_id**|**int**|执行作业的起始步骤的 ID。|  
-|**类别**|**sysname**|作业类别。|  
+|**category**|**sysname**|作业类别。|  
 |**owner**|**sysname**|作业所有者。|  
-|**notify_level_eventlog**|**int**|位掩码，它表示在何种情况下通知事件应记录到 Microsoft Windows 应用程序日志中。 可以是以下值之一：<br /><br /> **0** = 从不<br /><br /> **1** = 作业成功时<br /><br /> **2** = 作业失败时<br /><br /> **3** = 每次作业完成时（不管作业结果如何）|  
+|**notify_level_eventlog**|**int**|位掩码，它表示在何种情况下通知事件应记录到 Microsoft Windows 应用程序日志中。 可以是下列值之一：<br /><br /> **0** = 从不<br /><br /> **1** = 作业成功时<br /><br /> **2** = 作业失败时<br /><br /> **3** = 每次作业完成时（不管作业结果如何）|  
 |**notify_level_email**|**int**|位掩码，它指示当作业完成时，在什么情况下应该发送一个通知电子邮件。 可能的值与**notify_level_eventlog**的值相同。|  
 |**notify_level_netsend**|**int**|位掩码，它表示当作业完成时，在什么情况下应该发送一个网络消息。 可能的值与**notify_level_eventlog**的值相同。|  
 |**notify_level_page**|**int**|位掩码，它表示当作业完成时，在什么情况下应该发送一个呼叫。 可能的值与**notify_level_eventlog**的值相同。|  
@@ -71,7 +71,7 @@ sp_help_jobs_in_schedule
 |**delete_level**|**int**|位掩码，它表示当作业完成时，在什么情况下应该删除作业。 可能的值与**notify_level_eventlog**的值相同。|  
 |**date_created**|**datetime**|作业的创建日期。|  
 |**date_modified**|**datetime**|上次修改作业的日期。|  
-|**version_number**|**int**|作业的版本（每次修改作业时自动更新）。|  
+|**version_number**|**int**|作业的版本（每次修改作业时都自动对其进行更新）。|  
 |**last_run_date**|**int**|作业上一次开始执行的日期。|  
 |**last_run_time**|**int**|作业上一次开始执行的时间。|  
 |**last_run_outcome**|**int**|作业上一次运行时所得到的结果：<br /><br /> **0** = 失败<br /><br /> **1** = 成功<br /><br /> **3** = 已取消<br /><br /> **5** = 未知|  
@@ -84,13 +84,13 @@ sp_help_jobs_in_schedule
 |**has_step**|**int**|作业具有的作业步骤数。|  
 |**has_schedule**|**int**|作业具有的作业计划数。|  
 |**has_target**|**int**|作业具有的目标服务器数。|  
-|type |**int**|作业类型：<br /><br /> **1** = 本地作业。<br /><br /> **2** = 多服务器作业。<br /><br /> **0** = 作业没有目标服务器。|  
+|**type**|**int**|作业类型：<br /><br /> **1** = 本地作业。<br /><br /> **2** = 多服务器作业。<br /><br /> **0** = 作业没有目标服务器。|  
   
 ## <a name="remarks"></a>备注  
  此过程列出有关附加到指定计划的作业的信息。  
   
 ## <a name="permissions"></a>权限  
- 默认情况下， **sysadmin**固定服务器角色的成员可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
+ 默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
   

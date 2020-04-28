@@ -20,10 +20,10 @@ ms.assetid: e244a6a5-54c2-47a6-8039-dd1852b0ae59
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3ea2b3196e159b19a1baaa032c622a4cf9132402
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097604"
 ---
 # <a name="dbosysjobs-transact-sql"></a>dbo.sysjobs (Transact-SQL)
@@ -35,9 +35,9 @@ ms.locfileid: "68097604"
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|作业的唯一 ID。|  
 |**originating_server_id**|**int**|发出作业的服务器的 ID。|  
-|**路径名**|**sysname**|作业的名称。|  
+|**name**|**sysname**|作业的名称。|  
 |**能够**|**tinyint**|指示是否启用要执行的作业。|  
-|**2008**|**nvarchar(512)**|作业的说明。|  
+|**2008**|**nvarchar(512)**|对作业的说明。|  
 |**start_step_id**|**int**|执行作业的起始步骤的 ID。|  
 |**category_id**|**int**|作业类别的 ID。|  
 |**owner_sid**|**varbinary （85）**|作业所有者的安全标识号 (SID)。|  

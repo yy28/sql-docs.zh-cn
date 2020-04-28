@@ -16,10 +16,10 @@ ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 063eca49a6a4d69e84e8a3d05221b632d0690bef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68099832"
 ---
 # <a name="functions-on-string-values---concat"></a>基于字符串值的函数 - concat
@@ -83,7 +83,7 @@ WHERE  PD.ProductModelID=28
 <Product ProductModelID="28" ProductModelName="Road-450">1 year-parts and labor</Product>  
 ```  
   
- 上一个查询检索了有关特定产品的信息。 以下查询将针对为其存储了 XML 目录说明的所有产品检索同样的信息。 如果行中的 XML 文档具有**** <`ProductDescription`> 元素，则 WHERE 子句中的 xml 数据类型的**存在（）** 方法将返回 True。  
+ 上一个查询检索了有关特定产品的信息。 以下查询将针对为其存储了 XML 目录说明的所有产品检索同样的信息。 如果行中的 XML 文档具有**xml** <`ProductDescription`> 元素，则 WHERE 子句中的 xml 数据类型的**存在（）** 方法将返回 True。  
   
 ```  
 WITH XMLNAMESPACES (  

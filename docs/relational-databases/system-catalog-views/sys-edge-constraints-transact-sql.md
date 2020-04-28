@@ -21,10 +21,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5dc2e47c49dc9d639489426fceab0b848c9def3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079318"
 ---
 # <a name="sysedge_constraints-transact-sql"></a>sys. edge_constraints （Transact-sql）
@@ -38,7 +38,7 @@ ms.locfileid: "68079318"
 |**is_disabled**|**bit**|1 = Edge 约束为禁用。<br /><br /> 0 = 启用边缘约束。|  
 |**is_not_trusted**|**bit**|1 = 系统未验证边缘约束。<br /><br /> 0 = 边缘约束已由系统验证。|  
 |**delete_referential_action**|**tinyint**|在此边缘约束上定义的引用操作。<br /><br />0 = 不执行任何操作。|  
-|**delete_referential_action_desc**|**nvarchar （60）**|在此边缘约束上定义的引用操作的说明。<br /><br />NO_ACTION|  
+|**delete_referential_action_desc**|**nvarchar(60)**|在此边缘约束上定义的引用操作的说明。<br /><br />NO_ACTION|  
 |**is_system_named**|**bit**|1 = 边缘约束名是由系统生成的。<br /><br />0 = 边缘约束名称由用户提供。|  
   
 ## <a name="permissions"></a>权限  
@@ -46,7 +46,7 @@ ms.locfileid: "68079318"
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;Transact-sql&#41;的对象目录视图](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查询 SQL Server 系统目录常见问题](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

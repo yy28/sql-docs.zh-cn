@@ -20,10 +20,10 @@ ms.assetid: eb2cb75c-dc58-4a5b-b329-664e9fe20ce0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 27056917d828313eaa97ad204d0297cec0fb7995
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084673"
 ---
 # <a name="dbosyscategories-transact-sql"></a>dbo.syscategories (Transact-SQL)
@@ -36,6 +36,6 @@ ms.locfileid: "68084673"
 |**category_id**|**int**|类别的 ID|  
 |**category_class**|**int**|类别中的项目类型：<br /><br /> **1** = 作业<br /><br /> **2** = 警报<br /><br /> **3** = 运算符|  
 |**category_type**|**tinyint**|类别的类型：<br /><br /> **1** = 本地<br /><br /> **2** = 多服务器<br /><br /> **3** = 无|  
-|**路径名**|**sysname**|类别的名称|  
+|**name**|**sysname**|类别的名称|  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4241ac9a457aa51f32ec12e9b1d8b83aa534995e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060218"
 ---
 # <a name="sysmail_event_log-transact-sql"></a>sysmail_event_log (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68060218"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**Log_id**|**int**|日志中项的标识符。|  
-|**event_type**|**varchar （11）**|插入日志中的通告的类型。 可能值为错误、警告、信息性消息、成功消息以及其他内部消息。|  
+|event_type |**varchar （11）**|插入日志中的通告的类型。 可能值为错误、警告、信息性消息、成功消息以及其他内部消息。|  
 |**log_date**|**datetime**|记录日志条目的日期和时间。|  
 |**2008**|**nvarchar(max)**|要记录的消息的文本。|  
 |**process_id**|**int**|数据库邮件外部程序的进程 ID。 每当数据库邮件外部程序启动时，该进程 ID 通常都会更改。|  

@@ -14,10 +14,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 1be02aa5a19e49788aafdfdb9b6f818a66968283
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054841"
 ---
 # <a name="sp_special_columns_100-sql-data-warehouse"></a>sp_special_columns_100 （SQL 数据仓库）
@@ -77,11 +77,10 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 |COLUMN_NAME|**sysname**|返回的*表*中每列的列名。 此字段始终返回值。|  
 |DATA_TYPE|**smallint**|ODBC SQL 数据类型。|  
 |TYPE_NAME|**sysname**|依赖于数据源的数据类型名称;例如， **char**、 **varchar**、 **money**或**text**。|  
-|PRECISION|**整形**|数据源中的列的精度。 此字段始终返回值。|  
-|LENGTH|**整形**|数据源的二进制格式的数据类型所需的长度（以字节为单位），例如，对于**char （** 10 **）**，为10，对于**整数**，则为 2; 对于**smallint**，则为2。|  
+|PRECISION|**Int**|数据源中的列的精度。 此字段始终返回值。|  
+|LENGTH|**Int**|数据源的二进制格式的数据类型所需的长度（以字节为单位），例如，对于**char （** 10 **）**，为10，对于**整数**，则为 2; 对于**smallint**，则为2。|  
 |SCALE|**smallint**|数据源中列的小数位数。 对于不适用小数位数的数据类型，返回 NULL。|  
-|PSEUDO_COLUMN|**smallint**|指示列是否为伪列。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 始终返回 1：<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
+|PSEUDO_COLUMN|**smallint**|指示列是否为伪列。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 始终返回 1：<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   
 ## <a name="remarks"></a>备注  
  sp_special_columns 与 ODBC 中的 SQLSpecialColumns 等效。 返回的结果按 SCOPE 排序。  
@@ -89,7 +88,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>权限  
  需要对架构的 SELECT 权限。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  以下示例将返回有关特定列的信息，该列唯一标识了 `FactFinance` 表中的行。  
   
 ```  

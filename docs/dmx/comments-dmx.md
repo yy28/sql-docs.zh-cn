@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 26a529d6eb15997ccb48ad25d8d4fcb11cd2ddfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68071053"
 ---
 # <a name="comments-dmx"></a>（注释）(DMX)
@@ -24,19 +24,15 @@ ms.locfileid: "68071053"
   
  以下是编写注释的基本指南：  
   
--   您可以在注释中使用任何字母数字字符或符号。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将忽略注释中的所有字符。  
+-   您可以在注释中使用任何字母数字字符或符号。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 将忽略注释中的所有字符。  
   
 -   语句或脚本中的注释没有最大长度限制。 一条注释可由一行或多行组成。  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持下列类型的注释字符：  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持下列类型的注释字符：  
   
--   **（双正斜杠）。** 使用这些注释字符，您既可以在要执行的代码的行上编写注释，也可以在单独的行上编写注释。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 会将从双正斜杠到行尾之间的所有内容均作为注释部分进行处理。 若要创建多行注释，请在每行注释的开头使用双正斜杠。 有关此注释字符的详细信息，请参阅[&#41; &#40;DMX&#41;&#40;注释的双斜杠](../dmx/double-slash-comment-dmx.md)。  
+-   **（双正斜杠）。** 使用这些注释字符，您既可以在要执行的代码的行上编写注释，也可以在单独的行上编写注释。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 会将从双正斜杠到行尾之间的所有内容均作为注释部分进行处理。 若要创建多行注释，请在每行注释的开头使用双正斜杠。 有关此注释字符的详细信息，请参阅[&#41; &#40;DMX&#41;&#40;注释的双斜杠](../dmx/double-slash-comment-dmx.md)。  
   
--   **--（双连字符）。** 使用这些注释字符，您既可以在要执行的代码的行上编写注释，也可以在单独的行上编写注释。 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 会将从双连字符到行尾之间的所有内容均作为注释部分进行处理。 若要创建多行注释，请在每行注释的开头使用双连字符。 有关此注释字符的详细信息，请参阅 " [&#40;注释"&#41; &#40;DMX&#41; 摘要](../dmx/comment-dmx-summary.md)"。  
+-   **--（双连字符）。** 使用这些注释字符，您既可以在要执行的代码的行上编写注释，也可以在单独的行上编写注释。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 会将从双连字符到行尾之间的所有内容均作为注释部分进行处理。 若要创建多行注释，请在每行注释的开头使用双连字符。 有关此注释字符的详细信息，请参阅 " [&#40;注释"&#41; &#40;DMX&#41; 摘要](../dmx/comment-dmx-summary.md)"。  
   
 -   **/\*...\*/（正斜杠-星号字符对）。** 使用这些注释字符，您既可以在要执行的代码的行上编写注释，也可以在单独的行上编写注释，甚至还可以在可执行代码中编写注释。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]将从打开的注释对（/*）到结束注释对（\*/）的所有内容作为注释的一部分进行计算。 若要创建多行注释，请使用打开注释字符对（/\*）开始注释，并使用注释字符对（\*/）结束注释。 该类注释的任何行中都不应包含其他注释字符。 有关此注释字符的详细信息，请参阅[斜线&#41;&#41; &#40;斜线 &#40;注释](../dmx/slash-star-comment-dmx.md)。  
   

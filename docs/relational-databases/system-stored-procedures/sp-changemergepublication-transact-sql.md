@@ -16,10 +16,10 @@ ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7bcedfb666b5fffb2f31b6bf73ee02972ea30067
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097686"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
@@ -103,14 +103,14 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**0**|不复制 DDL 语句。|  
 |**保留**||这是一个**int** ，它表示为给定发布保存更改的*retention_period_unit*单元数。 如果在保持期内没有同步该订阅，并在分发服务器上使用清除操作删除了该订阅本应接收到的挂起更改，则该订阅将过期，必须重新初始化。 允许的最大保持期为当前日期到 9999 年 12 月 31 日之间的天数。<br /><br /> 注意：合并发布的保持期具有24小时的宽限期，以适应不同时区中的订阅者。|  
 |**retention_period_unit**|day |按天指定保持期。|  
-||**周日**|按周指定保持期。|  
+||week |按周指定保持期。|  
 ||month |按月指定保持期。|  
 ||**year**|按年指定保持期。|  
 |**snapshot_in_defaultfolder**|**true**|在默认快照文件夹中存储快照文件。|  
 ||**false**|快照文件存储在*alt_snapshot_folder*指定的备用位置。 此组合指定将快照文件同时存储在默认位置和备用位置中。|  
 |**snapshot_ready**|**true**|用于发布的快照已准备就绪。|  
 ||**false**|用于发布的快照尚未准备就绪。|  
-|**状态值**|**正在**|发布处于活动状态。|  
+|**status**|**活动**|发布处于活动状态。|  
 ||**不用**|发布处于非活动状态。|  
 |**sync_mode**|**本机**或<br /><br /> **bcp 本机**|将所有表的本机模式大容量复制程序输出用于初始快照。|  
 ||**字符**<br /><br /> 或**bcp 字符**|将所有表的字符模式大容量复制程序输出用于初始快照，所有非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器必须执行此操作。|  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 45063e9f2aca6a924289d4d52434535d16c9a08e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68055707"
 ---
 # <a name="or-mdx"></a>OR (MDX)
@@ -27,7 +27,7 @@ ms.locfileid: "68055707"
 Expression1 OR Expression2   
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  Expression1  
  返回数值的有效多维表达式 (MDX) 表达式。  
   
@@ -40,11 +40,11 @@ Expression1 OR Expression2
 ## <a name="remarks"></a>备注  
  在运算符执行逻辑析取之前，**或**运算符将两个参数都视为布尔值（零，0，为**false**; 否则为**true**）。 下表说明了**OR**运算符如何执行逻辑析取。  
   
-|Expression1 |Expression2 |返回值|  
+|*Expression1*|Expression2**|返回值|  
 |-------------------|-------------------|------------------|  
 |**true**|**true**|**true**|  
-|**true**|**false**|**true**|  
-|**false**|**true**|**true**|  
+|true |**false**|true |  
+|**false**|**true**|true |  
 |**false**|**false**|**false**|  
   
 ## <a name="example"></a>示例  

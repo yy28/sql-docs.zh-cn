@@ -19,10 +19,10 @@ ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 658487186924fe5547edee70425524b2b4e3be6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083595"
 ---
 # <a name="migration-wizard-accesstosql"></a>迁移向导（AccessToSQL）
@@ -43,7 +43,7 @@ ms.locfileid: "68083595"
 您可以在 "创建新项目" 页中输入项目文件名、位置和迁移项目类型（用于迁移的目标 SQL Server 的版本）。 有关详细信息，请参阅[新建项目（SSMA）](https://msdn.microsoft.com/ca294f6d-eeb5-42ca-9306-156281a3f0f3)  
   
 ## <a name="add-access-databases-page"></a>"添加 Access 数据库" 页  
-在 "添加访问数据库" 页中，可以将一个或多个 Access 数据库添加到项目。 您可以通过单击 "**添加数据库**"，然后从**打开**的窗口中选择数据库来添加单个数据库。 或者，您可以使用 "**查找数据库**" 按钮查找数据库。 有关详情，请参阅以下主题：  
+在 "添加访问数据库" 页中，可以将一个或多个 Access 数据库添加到项目。 您可以通过单击 "**添加数据库**"，然后从**打开**的窗口中选择数据库来添加单个数据库。 或者，您可以使用 "**查找数据库**" 按钮查找数据库。 有关详细信息，请参阅下列主题：  
   
 -   [添加和删除 Access 数据库文件](adding-and-removing-access-database-files-accesstosql.md)  
   

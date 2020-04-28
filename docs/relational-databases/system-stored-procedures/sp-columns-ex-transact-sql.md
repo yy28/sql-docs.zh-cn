@@ -18,10 +18,10 @@ ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 799c45755d9d3866a1cbe3b61b8582787331123c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070346"
 ---
 # <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex (Transact-SQL)
@@ -74,7 +74,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
 |**DECIMAL_DIGITS**|**smallint**|小数点右边的数字位数。|  
 |**NUM_PREC_RADIX**|**smallint**|数字数据类型的基数。|  
 |**可以为 NULL**|**smallint**|指定为 Null 性。<br /><br /> 1 = 可以为 NULL。<br /><br /> 0 = 不可以为 NULL。|  
-|**标记**|**varchar （** 254 **）**|该字段总是返回 NULL。|  
+|**备注**|**varchar （** 254 **）**|该字段总是返回 NULL。|  
 |**COLUMN_DEF**|**varchar （** 254 **）**|列的默认值。|  
 |**SQL_DATA_TYPE**|**smallint**|SQL 数据类型在描述符的 TYPE 字段中显示的值。 此列与**DATA_TYPE**列相同， **datetime**和 92**间隔**数据类型除外。 该列始终返回值。|  
 |**SQL_DATETIME_SUB**|**smallint**|**Datetime**和 SQL-92**间隔**数据类型的子类型代码。 对于其他数据类型，该列返回 NULL。|  
@@ -97,7 +97,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
  **sp_columns_ex**遵循分隔标识符的要求。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
   
 ## <a name="examples"></a>示例  
- 以下示例返回链接服务器 `JobTitle` 上的 `HumanResources.Employee` 数据库中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表的 `Seattle1` 列的数据类型。  
+ 以下示例返回链接服务器 `JobTitle` 上的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中的 `HumanResources.Employee` 表的 `Seattle1` 列的数据类型。  
   
 ```  
 EXEC sp_columns_ex 'Seattle1',   

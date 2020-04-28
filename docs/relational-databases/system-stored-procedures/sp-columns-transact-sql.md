@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8eb18a81ff7910418e5b3c8a3b36a0e4cd94cc36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070347"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
@@ -72,11 +72,11 @@ sp_columns [ @table_name = ] object
 |**DATA_TYPE**|**smallint**|ODBC 数据类型的整数代码。 如果该数据类型无法映射到 ODBC 类型，则为 NULL。 本机数据类型名称在**TYPE_NAME**列中返回。|  
 |**TYPE_NAME**|**sysname**|表示数据类型的字符串。 基础 DBMS 提供此数据类型的名称。|  
 |**PRECISION**|**int**|有效数字位数。 **PRECISION**列的返回值以10为底。|  
-|**长短**|**int**|数据的传输大小。<sup>1</sup>|  
+|**LENGTH**|**int**|数据的传输大小。<sup>1</sup>|  
 |**纵向**|**smallint**|小数点右边的数字位数。|  
 |**RADIX**|**smallint**|数值数据类型的基数。|  
 |**可以为 NULL**|**smallint**|指定为 Null 性。<br /><br /> 1 = 可以为 NULL。<br /><br /> 0 = 不可以为 NULL。|  
-|**标记**|**varchar （254）**|该字段总是返回 NULL。|  
+|**备注**|**varchar （254）**|该字段总是返回 NULL。|  
 |**COLUMN_DEF**|**nvarchar(4000)**|列的默认值。|  
 |**SQL_DATA_TYPE**|**smallint**|SQL 数据类型在描述符的 TYPE 字段中显示的值。 此列与**DATA_TYPE**列相同， **datetime**和 92**间隔**数据类型除外。 该列始终返回值。|  
 |**SQL_DATETIME_SUB**|**smallint**|**Datetime**和 SQL-92**间隔**数据类型的子类型代码。 对于其他数据类型，该列返回 NULL。|  
@@ -103,7 +103,7 @@ EXEC sp_columns @table_name = N'Department',
    @table_owner = N'HumanResources';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  以下示例返回指定表的列信息。  
   
 ```  

@@ -18,10 +18,10 @@ ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4725da28e9cd83df4979d1cc476cd60a488c0aa4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084772"
 ---
 # <a name="conflict_ltschemagt_lttablegt-transact-sql"></a>conflict_&lt;schema&gt;_&lt;table&gt; （transact-sql）
@@ -39,11 +39,11 @@ ms.locfileid: "68084772"
 |__$conflict_type|**int**|冲突类型，可以是下列值之一：<br /><br /> 1：更新失败，因为另一个更新已更改了本地行，或者删除了本地行并随后重新插入。<br /><br /> 2：更改失败，因为已删除了本地行。<br /><br /> 3：删除失败，因为另一个更新已更改了本地行，或者删除了本地行并随后重新插入。<br /><br /> 4：删除失败，因为已删除了本地行。<br /><br /> 5：插入失败，因为已插入了本地行，或者已插入并随后更新了本地行。|  
 |__$is_winner|**bit**|指示该表中的行是否为冲突入选方，这意味着将其应用于本地节点。|  
 |__$pre_version|**varbinary （32）**|发起冲突更改的数据库的版本。|  
-|__$reason_code|**int**|冲突的解决代码。 可以是以下值之一：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> 有关详细信息，请参阅 **__ $ reason_text**。|  
-|__$reason_text|**nvarchar （720）**|冲突的解决情况。 可以是以下值之一：<br /><br /> 已解决 (1)<br /><br /> 未解决 (2)<br /><br /> 未知（0）|  
+|__$reason_code|**int**|冲突的解决代码。 可以是以下其中一个值：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> 有关详细信息，请参阅 **__ $ reason_text**。|  
+|__$reason_text|**nvarchar （720）**|冲突的解决情况。 可以是以下其中一个值：<br /><br /> 已解决 (1)<br /><br /> 未解决 (2)<br /><br /> 未知（0）|  
 |__$update_bitmap|**varbinary （** *n* **）**。 大小因内容而异。|一个位图，指示在发生更新-更新冲突的情况下更新的列。|  
 |__$inserted_date|**datetime**|将冲突行插入此表中的日期和时间。|  
-|__$row_id|**标志**|与导致冲突的行关联的行版本。|  
+|__$row_id|**timestamp**|与导致冲突的行关联的行版本。|  
 |__$change_id|**binary （8）**|对于本地行，该值等于与本地行发生冲突的传入行的 __$row_id。 对于传入行，该值为 NULL。|  
 |\<基表列名称>|\<基表列类型>|在冲突表中，基表中的每一列都有一个对应的列。|  
   

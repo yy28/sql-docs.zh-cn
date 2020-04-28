@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b723a706521b24c9aa216c46f617d8ff94997137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68098554"
 ---
 # <a name="mdx-data-definition---create-action"></a>MDX 数据定义 - CREATE ACTION
@@ -82,7 +82,7 @@ FOR
   
 |操作类型|说明|  
 |-----------------|-----------------|  
-|**链接**|返回的操作字符串是一个 URL，应使用 Internet 浏览器打开此 URL。<br /><br /> 注意：如果此操作不是`https://`以或`https://`开头的，则浏览器将无法使用此操作，除非**SafetyOptions**设置为**DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**。|  
+|**URL**|返回的操作字符串是一个 URL，应使用 Internet 浏览器打开此 URL。<br /><br /> 注意：如果此操作不是`https://`以或`https://`开头的，则浏览器将无法使用此操作，除非**SafetyOptions**设置为**DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**。|  
 |**HTML**|返回的操作字符串是一个 HTML 脚本。 应将该字符串保存到文件中，并使用 Internet 浏览器来呈现该文件。 在这种情况下，整个脚本会在所生成的 HTML 中运行。|  
 |**损益**|返回的操作字符串是一个语句，需要通过将命令对象的**ICommand：： SetText**方法设置为字符串并调用**ICommand：： Execute**方法来执行此语句。 如果该命令失败，会返回一条错误。|  
 |**集会**|返回的操作字符串是一个 MDX 语句，需要通过将命令对象的**ICommand：： SetText**方法设置为字符串并调用**ICommand：： Execute**方法来运行。 请求的接口 ID （IID）应为**IDataset**。 如果创建了数据集，就说明命令成功了。 客户端应用程序应当允许用户浏览返回的数据集。|  

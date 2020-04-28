@@ -12,10 +12,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 18798dece1c801ad0cc4854b7fccc15529a56d5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056451"
 ---
 # <a name="sp_pdw_log_user_data_masking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking （SQL 数据仓库）
@@ -38,7 +38,7 @@ ms.locfileid: "68056451"
 sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
 `[ @masking_mode = ] masking_mode`确定是否已启用透明数据加密日志用户数据掩码。 *masking_mode*为**int**，可以是下列值之一：  
   
 -   0 = 禁用，用户数据显示在[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活动日志中。  

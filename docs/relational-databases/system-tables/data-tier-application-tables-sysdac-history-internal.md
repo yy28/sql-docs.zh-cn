@@ -18,13 +18,13 @@ ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cc058fea8e2ce86584c19a7a93018734f4782f69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084762"
 ---
-# <a name="data-tier-application-tables---sysdac_history_internal"></a>数据层应用程序表 - sysdac_history_internal
+# <a name="data-tier-application-tables---sysdac_history_internal"></a>Data-tier Application Tables - sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包含为管理数据层应用程序 (DAC) 而执行的操作的相关信息。 该表存储在**msdb**数据库的**dbo**架构中。  
@@ -35,18 +35,17 @@ ms.locfileid: "68084762"
 |**sequence_id**|**int**|标识某一操作内的步骤。|  
 |**instance_id**|**uniqueidentifier**|DAC 实例的标识符。 此列可以联接于[dbo. sysdac_instances&#41;&#40;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)的**instance_id**列。|  
 |**action_type**|**tinyint**|操作类型的标识符：<br /><br /> **0** = 部署<br /><br /> **1** = 创建<br /><br /> **2** = 重命名<br /><br /> **3** = 分离<br /><br /> **4** = 删除|  
-|**action_type_name**|**varchar （19）**|操作类型的名称：<br /><br /> **满怀信心**<br /><br /> **创建**<br /><br /> **重命名**<br /><br /> **取出**<br /><br /> **delete**|  
+|**action_type_name**|**varchar （19）**|操作类型的名称：<br /><br /> **满怀信心**<br /><br /> **创建**<br /><br /> **rename**<br /><br /> **取出**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|受操作影响的对象类型的标识符：<br /><br /> **0** = dacpac<br /><br /> **1** = 登录名<br /><br /> **2** = 数据库|  
-|**dac_object_type_name**|**varchar （8）**|受操作影响的对象类型的名称：<br /><br /> **dacpac** = DAC 实例<br /><br /> **id**<br /><br /> **数据**|  
+|**dac_object_type_name**|**varchar （8）**|受操作影响的对象类型的名称：<br /><br /> **dacpac** = DAC 实例<br /><br /> **id**<br /><br /> **database**|  
 |**action_status**|**tinyint**|标识当前操作状态的代码：<br /><br /> **0** = 挂起<br /><br /> **1** = 成功<br /><br /> **2** = 失败|  
 |**action_status_name**|**varchar （11）**|操作的当前状态：<br /><br /> **未**<br /><br /> **辉煌**<br /><br /> **失败**|  
-|**必选**|**bit**|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]在回滚 DAC 操作时使用。|  
+|**必需**|**bit**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]在回滚 DAC 操作时使用。|  
 |**dac_object_name_pretran**|**sysname**|在提交包含操作的事务前对象的名称。 仅用于数据库和登录名。|  
 |**dac_object_name_posttran**|**sysname**|在提交包含操作的事务后对象的名称。 仅用于数据库和登录名。|  
 |**sqlscript**|**nvarchar(max)**|对数据库或登录名实现操作的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。|  
-|**负载**|**varbinary(max)**|在二进制编码字符串中保存的 DAC 包定义。|  
-|**注释**|**varchar(max)**|记录接受了 DAC 升级中的潜在数据损失的用户的登录名。|  
+|**payload**|**varbinary(max)**|在二进制编码字符串中保存的 DAC 包定义。|  
+|**备注**|**varchar(max)**|记录接受了 DAC 升级中的潜在数据损失的用户的登录名。|  
 |**error_string**|**nvarchar(max)**|在操作遇到错误时生成的错误消息。|  
 |**created_by**|**sysname**|启动了创建此条目的操作的登录名。|  
 |**date_created**|**datetime**|该条目的创建日期和时间。|  

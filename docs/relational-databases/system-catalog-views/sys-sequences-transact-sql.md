@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 410f6dcca93614c42de4a703fd591bb1c9cbc59a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060548"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68060548"
 |-----------------|---------------|-----------------|  
 |\<继承列>||从[sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)继承所有列。|  
 |**start_value**|**sql_variant 不为 NULL**|序列对象的起始值。 如果使用 ALTER SEQUENCE 重新启动序列对象，它将以此值重新启动。 序列对象循环进入**minimum_value**或**maximum_value**，而不是**start_value**。|  
-|**增量**|**sql_variant 不为 NULL**|用于在每个生成值后使序列对象递增的值。|  
+|increment |**sql_variant 不为 NULL**|用于在每个生成值后使序列对象递增的值。|  
 |**minimum_value**|**sql_variant NULL**|序列对象可以生成的最小值。 在达到此值后，序列对象将在尝试生成多个值时返回错误，或在指定 CYCLE 选项时重新启动。 如果未指定 MINVALUE，则此列将返回序列生成器的数据类型支持的最小值。|  
 |**maximum_value**|**sql_variant NULL**|序列对象可以生成的最大值。 在达到此值后，序列对象将在尝试生成多个值时开始返回错误，或在指定 CYCLE 选项时重新启动。 如果未指定任何 MAXVALUE，此列将返回序列对象的数据类型所支持的最大值。|  
 |**is_cycling**|**位非 NULL**|如果为序列对象指定 NO CYCLE，则返回 0；如果指定 CYCLE，则返回 1。|  
@@ -46,13 +46,13 @@ ms.locfileid: "68060548"
 |**system_type_id**|**tinyint NOT NULL**|序列对象的数据类型的系统类型的 ID。|  
 |**user_type_id**|**int NOT NULL**|用作用户定义的序列对象的数据类型的 ID。|  
 |**精度**|**tinyint NOT NULL**|数据类型的最大精度。|  
-|**纵向**|**tinyint NOT NULL**|数据类型的最大小数位数。 小数位数与精度一起返回，以便为用户提供完整的元数据。 由于序列对象只允许使用整数类型，因此其小数位数始终为 0。|  
+|**scale**|**tinyint NOT NULL**|数据类型的最大小数位数。 小数位数与精度一起返回，以便为用户提供完整的元数据。 由于序列对象只允许使用整数类型，因此其小数位数始终为 0。|  
 |**current_value**|**sql_variant 不为 NULL**|强制的最后一个值。 也就是说，从函数的下一个值的最新执行中返回的值或执行**sp_sequence_get_range**过程的最后一个值。 如果从未使用过该序列，则返回 START WITH 值。|  
 |**is_exhausted**|**位非 NULL**|0 表示可从序列中生成多个值。 1 表示序列对象已达到 MAXVALUE 参数，该序列未设置为 CYCLE。 使用 ALTER SEQUENCE 重新启动序列之前，NEXT VALUE FOR 函数将返回错误。|  
 |**last_used_value**|**sql_variant NULL**|返回[Next Value For](../../t-sql/functions/next-value-for-transact-sql.md)函数生成的最后一个值。 适用于 SQL Server 2017 及更高版本。|  
   
 ## <a name="permissions"></a>权限  
- 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本中，目录视图中仅显示用户拥有的安全对象的元数据，或用户对其拥有某些权限的安全对象的元数据。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本中，目录视图中仅显示用户拥有的安全对象的元数据，或用户对其拥有某些权限的安全对象的元数据。  有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)   
@@ -60,6 +60,6 @@ ms.locfileid: "68060548"
  [Transact-sql&#41;&#40;ALTER SEQUENCE](../../t-sql/statements/alter-sequence-transact-sql.md)   
  [Transact-sql&#41;&#40;删除序列](../../t-sql/statements/drop-sequence-transact-sql.md)   
  [&#40;Transact-sql&#41;的下一个值](../../t-sql/functions/next-value-for-transact-sql.md)   
- [sp_sequence_get_range &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md)  
+ [sp_sequence_get_range (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md)  
   
   

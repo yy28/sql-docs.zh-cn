@@ -12,10 +12,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c26dbafb76ecf318fa497e11ccac09e800691900
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054311"
 ---
 # <a name="sysexternal_tables-transact-sql"></a>sys. external_tables （Transact-sql）
@@ -35,13 +35,13 @@ ms.locfileid: "68054311"
 |reject_value|**float**|对于 HADOOP 外部数据源的外部表：<br /><br /> 对于*reject_type =* value，这是在查询失败之前允许的行拒绝次数。<br /><br /> 对于*reject_type* = 百分比，这是在查询失败之前允许的行拒绝百分比。||  
 |reject_sample_value|**int**|对于*reject_type* = 百分比，这是在计算拒绝行的百分比之前，要加载的行数（成功或失败）。|如果 reject_type = VALUE，则为 NULL。|  
 |distribution_type|**int**|对于 SHARD_MAP_MANAGER 外部数据源的外部表，这是基础表中各行的数据分布。|0-分片<br /><br /> 1-已复制<br /><br /> 2轮循机制|  
-|distribution_desc|**nvarchar （120）**|对于 SHARD_MAP_MANAGER 外部数据源的外部表，这是以字符串形式显示的分布类型。||  
+|distribution_desc|**nvarchar(120)**|对于 SHARD_MAP_MANAGER 外部数据源的外部表，这是以字符串形式显示的分布类型。||  
 |sharding_column_id|**int**|对于外部表 SHARD_MAP_MANAGER 外部数据源和分片分布，这是包含分片键值的列的列 ID。||  
 |remote_schema_name|**sysname**|对于 SHARD_MAP_MANAGER 外部数据源的外部表，这是一个架构，其中基表位于远程数据库上（与定义外部表的架构不同）。||  
 |remote_object_name|**sysname**|对于 SHARD_MAP_MANAGER 外部数据源的外部表，这是远程数据库（如果不同于外部表的名称）中基表的名称。||  
   
 ## <a name="permissions"></a>权限  
- 目录视图中仅显示用户拥有的安全对象的元数据，或用户对其拥有某些权限的安全对象的元数据。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 目录视图中仅显示用户拥有的安全对象的元数据，或用户对其拥有某些权限的安全对象的元数据。  有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [sys. external_file_formats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   
