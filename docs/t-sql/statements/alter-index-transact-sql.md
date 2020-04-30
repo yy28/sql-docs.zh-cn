@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aad9f7204073590927cdbecdf237038311bb686d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ad10e1d576d1751de10e433420fe3df6106c7ee4
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81627947"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138278"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -287,11 +287,11 @@ LOB_COMPACTION = OFF
   
 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中的列存储索引，REORGANIZE 联机执行以下额外的碎片整理优化：  
   
--   在逻辑删除了 10% 或更多行时从行组中物理移除行。 删除的字节会在物理媒体上进行回收。 例如，如果具有 100 万行的压缩行组删除了 10 万行，则 SQL Server 会移除已删除的行，并使用 90 万行重新压缩行组。 它通过移除已删除的行来节省存储。  
+-   在逻辑删除了 10% 或更多行时从行组中物理移除行。 删除的字节会在物理媒体上进行回收。 例如，如果具有 100 万行的压缩行组删除了 10 万行，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会移除已删除的行，并使用 90 万行重新压缩行组。 它通过移除已删除的行来节省存储。  
   
--   合并一个或多个压缩行组以将每个行组的行增加到最多为 1,024,576 行。 例如，如果批量导入 5 批 102,400 行，则会获得 5 个压缩行组。 如果运行 REORGANIZE，则这些行组会合并为 1 个大小为 512,000 的压缩行组。 这假定不存在任何字典大小或内存限制。  
+-   合并一个或多个压缩行组，以将每个行组的行增加到最多 1,048,576 行。 例如，如果批量导入 5 批 102,400 行，则会获得 5 个压缩行组。 如果运行 REORGANIZE，则这些行组会合并为 1 个大小为 512,000 的压缩行组。 这假定不存在任何字典大小或内存限制。  
   
--   对于在其中已逻辑删除了 10% 或更多行的行组，SQL Server 会尝试将此行组与一个或多个行组合并。 例如，行组 1 使用 500,000 行进行压缩，行组 21 使用最大值 1,048,576 行进行压缩。  行组 21 删除了 60% 的行，剩下 409,830 行。 SQL Server 会优先合并这两个行组以压缩具有 909,830 行的新行组。  
+-   对于逻辑上已有 10% 或更多行被删除的行组，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会尝试将此行组与一个或多个行组合并。 例如，行组 1 使用 500,000 行进行压缩，行组 21 使用最大值 1,048,576 行进行压缩。 行组 21 删除了 60% 的行，剩下 409,830 行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 倾向于合并这两个行组来压缩一个新行组，这个行组有 909,830 行。  
   
 REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = { ON | **OFF** } )  
  适用于列存储索引。 

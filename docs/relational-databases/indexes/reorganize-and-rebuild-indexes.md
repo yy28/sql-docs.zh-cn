@@ -32,14 +32,14 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 944db91150b932676c9caa1e291ac4f963328580
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: faf62599a54c4c1a58b33066e69cf3b2e8698b70
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80217119"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138135"
 ---
-# <a name="resolve-index-fragmentation-using-by-reorganizing-or-rebuilding-indexes"></a>通过重新组织或重新生成索引解决索引碎片
+# <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>通过重新组织或重新生成索引来解决索引碎片问题
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -50,8 +50,8 @@ ms.locfileid: "80217119"
 什么是索引碎片，为什么我应该关注它：
 
 - 当索引包含的页中，索引中的逻辑排序（基于索引中的键值）与索引页中的物理排序不匹配时，就存在碎片。
-- 无论何时对基础数据执行插入、更新或删除操作，数据库引擎都会自动修改索引。 例如，在表中添加行可能会导致拆分行存储索引中的现有页，以腾出空间来插入新键值。 随着时间的推移，这些修改可能会导致索引中的信息分散在数据库中（含有碎片）。 当索引包含的页中的逻辑排序（基于键值）与数据文件中的物理排序不匹配时，就存在碎片。
-- 大量碎片式索引可能会降低查询性能，因为需要额外 IO 来查找索引所指向的数据。 较多的 IO 会导致应用程序响应缓慢，特别是在涉及扫描操作时。
+- 无论何时对基础数据执行插入、更新或删除操作，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 都会自动修改索引。 例如，在表中添加行可能会导致拆分行存储索引中的现有页，以腾出空间来插入新键值。 随着时间的推移，这些修改可能会导致索引中的信息分散在数据库中（含有碎片）。 当索引包含的页中的逻辑排序（基于键值）与数据文件中的物理排序不匹配时，就存在碎片。
+- 大量碎片式索引可能会降低查询性能，因为需要额外 I/O 来查找索引指向的数据。 较多的 I/O 会导致应用程序响应缓慢，特别是在涉及扫描操作时。
 
 ## <a name="detecting-the-amount-of-fragmentation"></a>检测碎片量
 
@@ -215,12 +215,12 @@ object_id   TableName                   index_id    IndexName                   
 
 重新组织索引使用的系统资源最少，并且是联机操作。 也就是说，不保留长期阻塞性表锁，且对基础表的查询或更新可以在 `ALTER INDEX REORGANIZE` 事务处理期间继续进行。
 
-- 对于[行存储索引](clustered-and-nonclustered-indexes-described.md)，数据库引擎通过以物理方式重新排序叶级别页，以匹配叶节点逻辑顺序（从左到右），从而对表和视图中的聚集索引和非聚集索引的叶级别进行碎片整理。 重新组织还会根据索引的填充因子值压缩索引页。 若要查看填充因子设置，请使用 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。 有关语法示例，请参阅[示例：行存储重新组织](../../t-sql/statements/alter-index-transact-sql.md#examples-rowstore-indexes)。
+- 对于[行存储索引](clustered-and-nonclustered-indexes-described.md)，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 通过以物理方式重新排序叶级别页，以匹配叶节点逻辑顺序（从左到右），从而对表和视图中的聚集索引和非聚集索引的叶级别进行碎片整理。 重新组织还会根据索引的填充因子值压缩索引页。 若要查看填充因子设置，请使用 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。 有关语法示例，请参阅[示例：行存储重新组织](../../t-sql/statements/alter-index-transact-sql.md#examples-rowstore-indexes)。
 - 如果使用[列存储索引](columnstore-indexes-overview.md)，则在一段时间内插入、更新和删除数据后，增量存储可能最终会有多个小行组。 重新组织列存储索引会强制将所有行组转到列存储中，然后将行组合并为行数更多的更少行组。 重新组织操作还将删除已从列存储中删除的行。 重新组织最初需要额外的 CPU 资源来压缩数据，这可能降低整体系统性能。 但是，一旦压缩数据后，查询性能就会提高。 有关语法示例，请参阅[示例：列存储重新组织](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes)。
 
 ### <a name="rebuild-an-index"></a>重新生成索引
 
-重新生成索引将会删除并重新创建索引。 重新生成操作可以联机或脱机执行，具体取决于索引类型和数据库引擎版本。 有关 T-SQL 语法，请参阅 [ALTER INDEX REBUILD](../../t-sql/statements/alter-index-transact-sql.md#rebuilding-indexes)
+重新生成索引将会删除并重新创建索引。 重新生成操作可以联机或脱机执行，具体取决于索引类型和 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 版本。 有关 T-SQL 语法，请参阅 [ALTER INDEX REBUILD](../../t-sql/statements/alter-index-transact-sql.md#rebuilding-indexes)
 
 - 对于[行存储索引](clustered-and-nonclustered-indexes-described.md)，重新生成操作会：删除碎片；根据指定或现有的填充因子设置来压缩页，从而回收磁盘空间；还会在连续页中重新排序索引行。 如果指定 `ALL`，将删除表中的所有索引，然后在一个事务中重新生成。 不必预先删除外键约束。 重新生成具有 128 个区或更多区的索引时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]延迟实际的页释放及其关联的锁，直到事务提交。 有关语法示例，请参阅[示例：行存储重新组织](../../t-sql/statements/alter-index-transact-sql.md#examples-rowstore-indexes)。
 - 对于[列存储索引](columnstore-indexes-overview.md)，重新生成操作会：删除碎片；将所有行移到列存储中；以物理方式删除已在逻辑上从表中删除的行，从而回收磁盘空间。 自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，通常不需要重新生成列存储索引，因为 `REORGANIZE` 以联机操作形式在后台执行重新生成的基本操作。 有关语法示例，请参阅[示例：列存储重新组织](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes)。
@@ -342,13 +342,13 @@ ALTER INDEX ALL ON HumanResources.Employee
 > [!IMPORTANT]
 > 如果索引所在的文件组脱机或设置为只读，则无法重新组织或重新生成索引。 如果指定了关键字 ALL，但有一个或多个索引位于脱机文件组或只读文件组中，该语句将失败。
 >
-> 当索引重新生成发生时，物理介质必须有足够的空间来存储索引的两个副本。 在重新生成完成后，数据库引擎会删除原始索引。
+> 当索引重新生成发生时，物理介质必须有足够的空间来存储索引的两个副本。 在重新生成完成后，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 会删除原始索引。
 
 如果使用 `ALTER INDEX` 语句指定了 `ALL`，表中的关系索引（包括聚集索引和非聚集索引）和 XML 索引都会进行重新组织。
 
 ## <a name="considerations-specific-to-rebuilding-a-columnstore-index"></a>有关重新生成列存储索引的注意事项
 
-重新生成列存储索引时，数据库引擎会从原始列存储索引（包括增量存储）中读取所有数据。 它将数据合并到新的行组中，并且将行组压缩到列存储中。 数据库引擎通过以物理方式删除已在逻辑上从表中删除的行，对列存储进行碎片整理。 删除的字节会在磁盘上回收。
+重新生成列存储索引时，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 会从原始列存储索引（包括增量存储）中读取所有数据。 它将数据合并到新的行组中，并且将行组压缩到列存储中。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 通过以物理方式删除已在逻辑上从表中删除的行，对列存储进行碎片整理。 删除的字节会在磁盘上回收。
 
 ### <a name="rebuild-a-partition-instead-of-the-entire-table"></a>重新生成分区，而不是整个表
 
@@ -365,11 +365,11 @@ ALTER INDEX ALL ON HumanResources.Employee
 
 ## <a name="considerations-specific-to-reorganizing-a-columnstore-index"></a>有关重新组织列存储索引的注意事项
 
-重新组织列存储索引时，数据库引擎会将每个 CLOSED 增量行组作为压缩行组压缩到列存储中。 自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，在 Azure SQL 数据库中，`REORGANIZE` 命令会联机执行以下额外的碎片整理优化：
+重新组织列存储索引时，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 会将每个 CLOSED 增量行组作为压缩行组压缩到列存储中。 自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起以及在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，`REORGANIZE` 命令会联机执行以下额外的碎片整理优化：
 
-- 在逻辑删除了 10% 或更多行时从行组中物理移除行。 删除的字节会在物理媒体上进行回收。 例如，如果具有 100 万行的压缩行组删除了 10 万行，则 SQL Server 会移除已删除的行，并使用 90 万行重新压缩行组。 它通过移除已删除的行来节省存储。
-- 合并一个或多个压缩行组，以将每个行组的行增加到最多 1,024,576 行。 例如，如果批量导入 5 批 102,400 行，则会获得 5 个压缩行组。 如果运行 REORGANIZE，则这些行组会合并为 1 个大小为 512,000 的压缩行组。 这假定不存在任何字典大小或内存限制。
-- 对于逻辑上已有 10% 或更多行遭删除的行组，数据库引擎会尝试将此行组与一个或多个行组合并。 例如，行组 1 使用 500,000 行进行压缩，行组 21 使用最大值 1,048,576 行进行压缩。 行组 21 删除了 60% 的行，剩下 409,830 行。 数据库引擎倾向于合并这两个行组来压缩一个新行组，这个行组有 909,830 行。
+- 在逻辑删除了 10% 或更多行时从行组中物理移除行。 删除的字节会在物理媒体上进行回收。 例如，如果具有 100 万行的压缩行组删除了 10 万行，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会移除已删除的行，并使用 90 万行重新压缩行组。 它通过移除已删除的行来节省存储。
+- 合并一个或多个压缩行组，以将每个行组的行增加到最多 1,048,576 行。 例如，如果批量导入 5 批 102,400 行，则会获得 5 个压缩行组。 如果运行 REORGANIZE，则这些行组会合并为 1 个大小为 512,000 的压缩行组。 这假定不存在任何字典大小或内存限制。
+- 对于逻辑上已有 10% 或更多行被删除的行组，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 会尝试将此行组与一个或多个行组合并。 例如，行组 1 使用 500,000 行进行压缩，行组 21 使用最大值 1,048,576 行进行压缩。 行组 21 删除了 60% 的行，剩下 409,830 行。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 倾向于合并这两个行组来压缩一个新行组，这个行组有 909,830 行。
 
 在数据加载后，增量存储中可能会有多个小型行组。 可以使用 `ALTER INDEX REORGANIZE` 将所有行组强制载入列存储，然后将行组合并成具有更多行的较少行组。 重新组织操作还将删除已从列存储中删除的行。
 
@@ -401,8 +401,8 @@ ALTER INDEX ALL ON HumanResources.Employee
 
 ## <a name="using-index-rebuild-to-recover-from-hardware-failures"></a>使用 INDEX REBUILD 从硬件故障中恢复
 
-在旧版 SQL Server 中，有时可以重新生成行存储非聚集索引，以解决由硬件故障引起的不一致问题。
-自 SQL Server 2008 起，仍可以通过脱机重新生成非聚集索引，修复索引和聚集索引之间的这种不一致问题。 但是，你不能通过联机重新生成索引来纠正非聚集索引的不一致，因为联机重新生成机制会使用现有的非聚集索引作为重新生成的基础，因此仍存在不一致。 脱机重新生成索引有时会强制扫描聚集索引（或堆）并因此删除不一致。 要确保从聚集索引重新生成，请删除并重新创建非聚集索引。 与早期版本一样，建议通过从备份还原受影响的数据来从不一致状态进行恢复；但是，您可以通过脱机重新生成非聚集索引来纠正索引的不一致。 有关详细信息，请参阅 [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)。
+在旧版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，有时可以重新生成行存储非聚集索引，以更正由硬件故障引起的不一致问题。
+自 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 起，仍可以通过脱机重新生成非聚集索引，修复索引和聚集索引之间的这种不一致问题。 但是，你不能通过联机重新生成索引来纠正非聚集索引的不一致，因为联机重新生成机制会使用现有的非聚集索引作为重新生成的基础，因此仍存在不一致。 脱机重新生成索引有时会强制扫描聚集索引（或堆）并因此删除不一致。 要确保从聚集索引重新生成，请删除并重新创建非聚集索引。 与早期版本一样，建议通过从备份还原受影响的数据来从不一致状态进行恢复；但是，您可以通过脱机重新生成非聚集索引来纠正索引的不一致。 有关详细信息，请参阅 [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)。
 
 ## <a name="see-also"></a>另请参阅
 

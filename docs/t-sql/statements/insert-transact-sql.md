@@ -1,7 +1,7 @@
 ---
 title: INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 04/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -32,12 +32,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 327992369ca07d77eb349cb83fb74c4ecd4e622e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a5b98bf8e99d55217fadfd2c1811cb484c3ee3b
+ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982228"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82107980"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "73982228"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
 
 [ WITH <common_table_expression> [ ,...n ] ]  
@@ -90,7 +90,7 @@ INSERT
         [ OPTION ( <query_hint> [ ,...n ] ) ]  
 ```  
   
-```  
+```syntaxsql
 -- External tool only syntax  
 
 INSERT   
@@ -119,7 +119,7 @@ INSERT
     [ ( precision [ , scale ] | max ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | table_name }
@@ -303,37 +303,43 @@ OUTPUT 子句
   
 ### <a name="best-practices-for-bulk-importing-data"></a>大容量导入数据的最佳实践  
   
-#### <a name="using-insert-intoselect-to-bulk-import-data-with-minimal-logging"></a>使用 INSERT INTO…SELECT 进行大容量导入数据并按最小方式记录日志  
- 可以使用 `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` 高效地将大量行从一个表（例如临时表）传输到按最小方式记录日志的其他表中。 按最小方式记录日志可以提高语句的性能，减少在事务期间此操作填充可用事务日志空间的可能性。  
+#### <a name="using-insert-intoselect-to-bulk-import-data-with-minimal-logging-and-parallelism"></a>使用 INSERT INTO…SELECT 进行大容量导入数据并按最小方式记录日志和平行度 
+可以使用 `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` 高效地将大量行从一个表（例如临时表）传输到按最小方式记录日志的其他表中。 按最小方式记录日志可以提高语句的性能，减少在事务期间此操作填充可用事务日志空间的可能性。  
   
- 针对此语句的按最小方式记录日志具有以下要求：  
-  
+针对此语句的按最小方式记录日志具有以下要求：  
 -   数据库的恢复模式设置为简单或大容量日志模式。  
-  
 -   目标表是空或非空堆。  
-  
 -   复制操作未使用目标表。  
-  
--   为目标表指定了 TABLOCK 提示。  
+-   为目标表指定了 `TABLOCK` 提示。  
   
 此外，可能还可以以最小方式记录通过 MERGE 语句中的插入操作插入堆中的行。  
   
- 与持有较少限制性大容量更新锁的 BULK INSERT 语句不同，具有 TABLOCK 提示的 INSERT INTO…SELECT 语句持有一个针对表的排他 (X) 锁。 也就是说您不能使用并行插入操作插入行。  
+与持有较少限制性大容量更新 (BU) 锁的 `BULK INSERT` 语句不同，具有 `TABLOCK` 提示的 `INSERT INTO … SELECT` 语句持有一个针对表的排他 (X) 锁。 也就是说不能使用同时执行的多个插入操作插入行。 
+
+但是，从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和数据库兼容性级别 130 开始，在插入堆或聚集列存储索引 (CCI) 时，可以并行执行单个 `INSERT INTO … SELECT` 语句。 使用 `TABLOCK` 提示时，可能会出现并行插入。  
+
+以上语句的并行度具有以下要求，这类似于针对最小日志记录的要求：  
+-   目标表是空或非空堆。  
+-   目标表具有聚集列存储索引 (CCI)，但没有非聚集索引。  
+-   目标表不包含 IDENTITY_INSERT 设置为 OFF 的标识列。  
+-   为目标表指定了 `TABLOCK` 提示。
+
+在满足最小日志记录和并行插入要求的情况下，将实施这两项改进，这样可以确保数据加载操作的最大吞吐量。
+
+> [!NOTE]
+> 还可以使用 TABLOCK 提示为并行启用到本地临时表（由 # 前缀标识）和全局临时表（由 ## 前缀标识）的插入。
   
 #### <a name="using-openrowset-and-bulk-to-bulk-import-data"></a>使用 OPENROWSET 和 BULK 大容量导入数据  
  OPENROWSET 函数可接受以下表提示，这些表提示使用 INSERT 语句提供大容量加载优化：  
   
--   TABLOCK 提示可以最大限度减少插入操作的日志记录数量。 数据库的恢复模式必须设置为简单或大容量日志模式，并且目标表不能用于复制。 有关详细信息，请参阅[在批量导入中按最小方式记录日志的前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
+-   `TABLOCK` 提示可以最大限度地减少插入操作的日志记录数量。 数据库的恢复模式必须设置为简单或大容量日志模式，并且目标表不能用于复制。 有关详细信息，请参阅[在批量导入中按最小方式记录日志的前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
+-   `TABLOCK` 提示可以启用并行插入操作。 目标表是不包含非聚集索引的堆或聚集列存储索引 (CCI)，并且目标表不能有指定的标识列。  
+-   `IGNORE_CONSTRAINTS` 提示可以暂时禁用 FOREIGN KEY 和 CHECK 约束检查。  
+-   `IGNORE_TRIGGERS` 提示可以暂时禁用触发器执行。  
+-   `KEEPDEFAULTS` 提示允许数据记录在某一表列缺少值时插入此列的默认值（如果有），而不是插入 NULL。  
+-   `KEEPIDENTITY` 提示允许将导入数据文件中的标识值用于目标表中的标识列。  
   
--   IGNORE_CONSTRAINTS 提示可以暂时禁用 FOREIGN KEY 和 CHECK 约束检查。  
-  
--   IGNORE_TRIGGERS 提示可以暂时禁用触发器执行。  
-  
--   KEEPDEFAULTS 提示允许数据记录在某一表列缺少值时插入此列的默认值（如果有），而不是插入 NULL。  
-  
--   KEEPIDENTITY 提示允许导入数据文件中的标识值用于目标表中的标识列。  
-  
-这些优化类似于可与 BULK INSERT 命令一起使用的优化。 有关详细信息，请参阅[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
+这些优化类似于可与 `BULK INSERT` 命令一起使用的优化。 有关详细信息，请参阅[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
   
 ## <a name="data-types"></a>数据类型  
  插入行时，考虑以下数据类型行为：  
@@ -385,7 +391,7 @@ OUTPUT 子句
  如果在表达式计算过程中 INSERT 语句遇到算术错误（溢出、被零除或域错误），则[!INCLUDE[ssDE](../../includes/ssde-md.md)]会处理这些错误，就好像 SET ARITHABORT 设置为 ON 一样。 停止批处理，并返回一条错误消息。 如果 SET ARITHABORT 和 SET ANSI_WARNINGS 为 OFF，并且在对表达式求值的过程中 INSERT、DELETE 或 UPDATE 语句遇到算术错误（溢出、被零除或域错误），[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将插入或更新一个 NULL 值。 如果目标列不可为空，则插入或更新操作将失败，用户将收到错误消息。  
   
 ## <a name="interoperability"></a>互操作性  
- 当为表或视图的 INSERT 操作定义了 INSTEAD OF 触发器时，则执行该触发器而不是 INSERT 语句。 有关 INSTEAD OF 触发器的详细信息，请参阅 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)。  
+ 当为表或视图的 INSERT 操作定义了 `INSTEAD OF` 触发器时，则执行该触发器而不是 INSERT 语句。 有关 `INSTEAD OF` 触发器的详细信息，请参阅 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)。  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  当向远程表中插入值且没有为所有列指定所有值时，用户必须标识将向其中插入指定值的列。  
@@ -407,9 +413,9 @@ OUTPUT 子句
 ### <a name="permissions"></a>权限  
  需要对目标表具有 INSERT 权限。  
   
- 默认情况下，将 INSERT 权限授予 sysadmin 固定服务器角色成员、db_owner 和 db_datawriter 固定数据库角色成员以及表所有者    。 sysadmin、db_owner 和 db_securityadmin 角色成员和表所有者可以将权限转让给其他用户    。  
+ INSERT 权限默认授予 `sysadmin` 固定服务器角色、`db_owner` 和 `db_datawriter` 固定数据库角色以及表所有者的成员。 `sysadmin`、`db_owner` 和 `db_securityadmin` 角色以及表所有者的成员可以将权限转让给其他用户。  
   
- 若要使用 OPENROWSET 函数 BULK 选项执行 INSERT，必须是 sysadmin 固定服务器角色成员或 bulkadmin 固定服务器角色成员   。  
+ 若要使用 OPENROWSET 函数 BULK 选项执行 INSERT，你必须是 `sysadmin` 固定服务器角色成员或 `bulkadmin` 固定服务器角色成员。  
   
 ##  <a name="examples"></a><a name="InsertExamples"></a> 示例  
   
@@ -517,7 +523,6 @@ INSERT INTO T1 DEFAULT VALUES;
 GO  
 SELECT column_1, column_2  
 FROM dbo.T1;  
-  
 ```  
   
 #### <a name="g-inserting-data-into-user-defined-type-columns"></a>G. 将数据插入到用户定义类型列中  

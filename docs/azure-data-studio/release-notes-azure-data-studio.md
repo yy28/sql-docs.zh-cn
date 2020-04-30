@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: seodec18
 ms.date: 03/18/2020
-ms.openlocfilehash: 7a510500d16c29971d1a5263c5138ad1981c9401
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5a6bd8792cd42d34796b36fb18a4d8c551d684f5
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215476"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087327"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 发行说明
 
@@ -87,7 +87,7 @@ ms.locfileid: "80215476"
 | 更改 | 详细信息 |
 | :----- | :------ |
 | 更改了 Notebooks 中的“附加到连接”下拉列表，以仅列出当前的活动连接 | [#8129](https://github.com/microsoft/azuredatastudio/issues/8129) |
-| 添加了 bigdatacluster.ignoreSslVerification 设置，以允许在连接到 BDC 时忽略 SSL 验证错误 | [#8582](https://github.com/microsoft/azuredatastudio/pull/8582) |
+| 添加了 bigdatacluster.ignoreSslVerification 设置，以允许在连接到 BDC 时忽略 TLS/SSL 验证错误 | [#8582](https://github.com/microsoft/azuredatastudio/pull/8582) |
 | 允许更改脱机查询编辑器的默认语言风格 | [#8419](https://github.com/microsoft/azuredatastudio/pull/8419) |
 | 大数据群集/SQL 2019 功能的 GA 状态 | [#8269](https://github.com/microsoft/azuredatastudio/issues/8269) |
 | 解决了 Bug 和问题 | 若要查看完整的修复内容列表，请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/milestone/44?closed=1)。 |
@@ -495,7 +495,7 @@ Azure Data Studio（以前为 SQL Operations Studio）的正式发布版。
 - 修复[问题 #1836](https://github.com/Microsoft/azuredatastudio/issues/1836)：.sql 文件未与 SQL Operations Studio 关联。
 - 修复[问题 #1850](https://github.com/Microsoft/azuredatastudio/issues/1850)：键入“N''”时，系统会自动补充为“N'''”。
 - 修复[问题 #1985](https://github.com/Microsoft/azuredatastudio/issues/1985)：从查询结果网格进行复制时，会有 1 列偏差。
-- 修复[问题 #1998](htpts://github.com/Microsoft/azuredatastudio/pull/1998)：将 VS Code 版本添加到“关于”对话框。
+- 修复[问题 #1998](https://github.com/Microsoft/azuredatastudio/pull/1998)：将 VS Code 版本添加到“关于”对话框。
 - 修复[问题 #2042](https://github.com/Microsoft/azuredatastudio/pull/2042)：代理：启用用于从 sql 文件导入查询的按钮。
 - 修复[问题 #2091](https://github.com/Microsoft/azuredatastudio/issues/2091)：无法使用 Ctrl + C 快捷方式从结果窗格中复制内容。
 - 修复[问题 #2099](https://github.com/Microsoft/azuredatastudio/pull/2099)：添加了更多 saveAsCsv 选项。
