@@ -18,12 +18,12 @@ ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e070cfc4b02ae52ab755306a29eb90c6afc912cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 242ae654ede8a827b89e630369965faee4505840
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075502"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220692"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>使用插入的和删除的表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68075502"
  在设置触发器条件时，应使用激发触发器的操作相应的插入的和删除的表。 尽管在测试 INSERT 时引用删除的表或在测试 DELETE 时引用插入的表不会导致任何错误，但在这些情况下，这些触发器测试表将不包含任何行。  
   
 > [!NOTE]  
->  如果触发器操作取决于数据修改所影响的行数，则应对多行数据修改（基于 SELECT 语句的 INSERT、DELETE 或 UPDATE）使用测试（例如检查 @@ROWCOUNT），然后采取相应的措施。  
+>  如果触发器操作取决于数据修改所影响的行数，则应对多行数据修改（基于 SELECT 语句的 INSERT、DELETE 或 UPDATE）使用测试（例如检查 @@ROWCOUNT），然后采取相应的措施。 有关详细信息，请参阅 [创建 DML 触发器以处理多行数据](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md)。
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不允许在 AFTER 触发器的插入和删除的表中引用 **text**、 **ntext**或 **image** 列。 但会包括这些数据类型，这只是为了向后兼容。 大量数据的首选存储是使用 **varchar(max)** 、 **nvarchar(max)** 和 **varbinary(max)** 数据类型。 AFTER 和 INSTEAD OF 触发器均支持插入和删除的表中的 **varchar(max)** 、 **nvarchar(max)** 和 **varbinary(max)** 数据。 有关详细信息，请参阅 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68075502"
   
  由于 CHECK 约束只能引用定义了列级或表级约束的列，表间的任何约束（在本例中是业务规则）都必须定义为触发器。  
   
- 以下示例将创建一个 DML 触发器。 如果有人试图将一个新采购订单插入到 `PurchaseOrderHeader` 表中，此触发器将进行检查以确保供应商具有良好的信用等级。 若要获取与刚插入的采购订单对应的供应商信用等级，必须引用 `Vendor` 表并将其与插入的表联接。 如果信用等级太低，则显示信息，并且不执行该插入操作。 请注意，此示例不允许进行多行数据修改。 有关详细信息，请参阅 [创建 DML 触发器以处理多行数据](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md)。  
+ 以下示例将创建一个 DML 触发器。 如果有人试图将一个新采购订单插入到 `PurchaseOrderHeader` 表中，此触发器将进行检查以确保供应商具有良好的信用等级。 若要获取与刚插入的采购订单对应的供应商信用等级，必须引用 `Vendor` 表并将其与插入的表联接。 如果信用等级太低，则显示信息，并且不执行该插入操作。
   
  [!code-sql[TriggerDDL#CreateTrigger3](../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql)]  
   

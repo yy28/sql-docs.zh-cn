@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL)（预览版）
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: 在 Azure SQL 数据仓库中使用 COPY 语句从外部存储帐户加载数据。
-ms.date: 12/13/2019
+ms.date: 04/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,18 +18,28 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: f28fced64212c9b7e76989d29fa837d4983cebe2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: cfd9d2b00d1ba7aa1c56b967deb872d3d9bc0190
+ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631959"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619650"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL)（预览版）
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-本文介绍如何在 Azure SQL 数据仓库中使用 COPY 语句从外部存储帐户加载数据。 COPY 语句为 SQL 数据仓库中的高吞吐量数据引入提供了最大的灵活性。
+本文介绍如何在 Azure SQL 数据仓库中使用 COPY 语句从外部存储帐户加载数据。 COPY 语句为 SQL 数据仓库中的高吞吐量数据引入提供了最大的灵活性。 使用 COPY 可以实现以下功能：
+
+- 权限较低的用户在加载时，不需要对数据仓库有严格的控制权限
+- 执行单个 T-SQL 语句，不需要创建任何其他数据库对象
+- 正确分析和加载 CSV 文件，其中分隔符  （字符串、字段、行）  在字符串分隔列中进行转义 
+- 指定更精细的权限模型，无需使用共享访问签名 (SAS) 来公开存储帐户密钥
+- 为 ERRORFILE 位置 (REJECTED_ROW_LOCATION) 使用一个不同的存储帐户
+- 为每个目标列自定义默认值，并指定要加载到特定目标列中的源数据字段
+- 为 CSV 文件指定自定义行终止符
+- 对 CSV 文件使用 SQL Server 日期格式
+- 在存储位置路径中指定通配符和多个文件
 
 > [!NOTE]  
 > COPY 语句目前提供公共预览版。
@@ -130,24 +140,32 @@ WITH
 
 使用 AAD 或公共存储帐户进行身份验证时，无需指定 CREDENTIAL。 
 
-- 使用共享访问签名 (SAS) 进行身份验证 IDENTITY：  一个值为“共享访问签名”的常量
-  *SECRET：* [共享访问签名  ](/azure/storage/common/storage-sas-overview)对存储帐户中的资源提供委托访问  。
-  所需的最低权限：READ 和 LIST
-
+- 使用共享访问签名 (SAS) 进行身份验证
+  
+  - *IDENTITY：一个值为“共享访问签名”的常量*
+  - *SECRET：[共享访问签名](/azure/storage/common/storage-sas-overview)对存储帐户中的资源提供委托访问*   。
+  -  所需的最低权限：READ 和 LIST
+  
 - 使用[*服务主体*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)进行身份验证
 
-  *IDENTITY：<ClientID>@<OAuth_2.0_Token_EndPoint>* 
-  *SECRET：AAD 应用程序服务主体密钥* 所需的最小 RBAC 角色：存储 blob 数据参与者、存储 blob 数据所有者或存储 blob 数据读取者
+  - *IDENTITY：<ClientID>@<OAuth_2.0_Token_EndPoint>*
+  - *SECRET：AAD 应用程序服务主体密钥*
+  -  所需的最小 RBAC 角色：存储 blob 数据参与者、存储 blob 数据所有者或存储 blob 数据读取者
 
-  > [!NOTE]  
-  > 使用 OAuth 2.0 令牌终结点 **V1**
-
-- 使用存储帐户密钥进行身份验证 *IDENTITY：一个值为“存储帐户密钥”的常量*
-  *SECRET：存储帐户密钥*
+- 使用存储帐户密钥进行身份验证
   
-- 使用[托管标识](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional)（VNet 服务终结点）进行身份验证 *IDENTITY：一个值为“托管标识”的常量* 所需的最小 RBAC 角色：已注册 AAD 的 SQL Database 服务器的存储 blob 数据参与者、存储 blob 数据所有者或存储 blob 数据读取者 
+  - *IDENTITY：一个值为“存储帐户密钥”的常量*
+  - *SECRET：存储帐户密钥*
   
-- 使用 AAD 用户进行身份验证 *不需要 CREDENTIAL* 所需的最小 RBAC 角色：AAD 用户的存储 blob 数据参与者、存储 blob 数据所有者或存储 blob 数据读取者
+- 使用[托管标识](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional)（VNet 服务终结点）进行身份验证
+  
+  - *IDENTITY：一个值为“托管标识”的常量*
+  - 所需的最小 RBAC 角色：已注册 AAD 的 SQL Database 服务器的存储 blob 数据参与者或存储 blob 数据所有者
+  
+- 使用 AAD 用户进行身份验证
+  
+  - *不需要 CREDENTIAL*
+  - 所需的最小 RBAC 角色：AAD 用户的存储 blob 数据参与者或存储 blob 数据所有者
 
 *ERRORFILE = Directory Location*</br>
 *ERRORFILE* 仅适用于 CSV。 指定 COPY 语句中的目录，应在该目录中写入被拒绝的行和相应的错误文件。 可以指定存储帐户的完整路径，也可以指定容器的相对路径。 如果指定的路径不存在，系统将代你创建一个。 创建名称为“_rejectedrows”的子目录。除非在位置参数中明确命名，否则，“_ ”字符将确保对该目录转义以进行其他数据处理。 
@@ -208,21 +226,20 @@ WITH
 - .deflate - **DefaultCodec**（仅限 Parquet 和 ORC）
 
  *FIELDQUOTE = 'field_quote'*</br>
-*FIELDQUOTE* 适用于 CSV，它指定一个字符，该字符将用作 CSV 文件中的引号字符（字符串分隔符）。 如果未指定，根据 RFC 4180 标准中的定义，引号字符 (") 将用作引号字符。 FIELDQUOTE 的 UTF-8 不支持扩展的 ASCII 字符。
+*FIELDQUOTE* 适用于 CSV，它指定一个字符，该字符将用作 CSV 文件中的引号字符（字符串分隔符）。 如果未指定，根据 RFC 4180 标准中的定义，引号字符 (") 将用作引号字符。 FIELDQUOTE 的 UTF-8 不支持扩展的 ASCII 和多字节字符。
 
 > [!NOTE]  
 > FIELDQUOTE 字符会在有双 FIELDQUOTE（分隔符）的字符串列中进行转义。 
 
 *FIELDTERMINATOR = 'field_terminator’*</br>
-*FIELDTERMINATOR* 仅适用于 CSV。 指定将在 CSV 文件中使用的字段终止符。 可使用十六进制表示法指定字段终止符。 字段终止符可以是多字符。 默认的字段终止符为 (,)。
-有关详细信息，请参阅[指定字段终止符和行终止符 (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md?view=sql-server-2017)。
+*FIELDTERMINATOR* 仅适用于 CSV。 指定将在 CSV 文件中使用的字段终止符。 可使用十六进制表示法指定字段终止符。 字段终止符可以是多字符。 默认的字段终止符为 (,)。 FIELDTERMINATOR 的 UTF-8 不支持扩展的 ASCII 和多字节字符。
 
 ROW TERMINATOR = 'row_terminator'</br>
 *ROW TERMINATOR* 仅适用于 CSV。 指定将在 CSV 文件中使用的行终止符。 可使用十六进制表示法指定行终止符。 行终止符可以是多字符。 默认情况下，行终止符为 \r\n。 
 
 当指定 \n（换行符）以生成 \r\n 时，COPY 命令会为 \r 字符加上前缀。 要仅指定 \n 字符，请使用十六进制表示法 (0x0A)。 以十六进制指定多字符行终止符时，请勿在每个字符之间指定 0x。
 
-有关如何指定行终止符的其他指导，请查看以下[文档](https://docs.microsoft.com/sql/relational-databases/import-export/specify-field-and-row-terminators-sql-server?view=sql-server-2017#using-row-terminators)。
+ROW TERMINATOR 的 UTF-8 不支持扩展的 ASCII 和多字节字符。
 
 *FIRSTROW  = First_row_int*</br>
 *FIRSTROW* 适用于 CSV，它为 COPY 命令指定在所有文件中最先读取的行号。 值从 1 开始，1 是默认值。 如果值设置为二，则在加载数据时，会跳过每个文件中的第一行（标头行）。 如果有行终止符，则跳过该行。
@@ -361,10 +378,10 @@ WITH (
 ## <a name="faq"></a>常见问题解答
 
 ### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>与 PolyBase 相比，COPY 命令的性能如何？
-COPY 命令功能正式发布后，将具有更高的性能。 为了在公共预览期间获得最佳加载性能，请考虑在加载 CSV 时将你的输入拆分为多个文件。 目前，使用 INSERT SELECT 时，COPY 和 PolyBase 在性能方面不相上下。 
+COPY 命令将具有更好的性能，具体取决于工作负载。 为了在公共预览期间获得最佳加载性能，请考虑在加载 CSV 时将你的输入拆分为多个文件。 在预览期间与我们的团队共享你的性能结果！ sqldwcopypreview@service.microsoft.com
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>加载 CSV 文件时，COPY 命令的文件拆分指导是什么？
-下表概述了文件数量指导。 一旦达到推荐的文件数量，便能获得更大的文件，性能也就越高。 
+下表概述了文件数量指导。 一旦达到推荐的文件数量，便能获得更大的文件，性能也就越高。 对于简单的文件拆分体验，请参阅以下[文档](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474)。 
 
 | **DWU** | **文件数** |
 | :-----: | :--------: |
