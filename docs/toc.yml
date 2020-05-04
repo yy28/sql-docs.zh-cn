@@ -145,7 +145,7 @@
             - name: HDFS 数据
               items:
                 - name: 虚拟化 CSV 数据
-                  href: relational-databases/polybase/data-virtualization-csv.md
+                  href: big-data-cluster/data-virtualization-csv.md
                 - name: 查询 HDFS 数据
                   href: big-data-cluster/tutorial-query-hdfs-storage-pool.md
                 - name: HDFS 分层
@@ -6759,7 +6759,7 @@
               href: relational-databases/partitions/modify-a-partition-function.md
             - name: 修改方案
               href: relational-databases/partitions/modify-a-partition-scheme.md
-            - name: “管理分区向导”的 F1 帮助
+            - name: 管理分区向导
               href: relational-databases/partitions/manage-partition-wizard-f1-help.md
         - name: 计划指南
           href: relational-databases/performance/plan-guides.md
