@@ -1,5 +1,6 @@
 ---
 title: 部署 JDBC 驱动程序
+description: 了解如何对应用程序重新分发和部署 Microsoft JDBC Driver for SQL Server 以及所需的文件。
 ms.custom: ''
 ms.date: 03/13/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 36eb8896a18a6dd87e9b75818f6e4aae2c336905
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7c99a7e4f491f2c00dc860ed85c453415f993593
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922433"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728355"
 ---
 # <a name="deploying-the-jdbc-driver"></a>部署 JDBC 驱动程序
 
@@ -56,4 +57,4 @@ JDBC 驱动程序版本 4.x 是旧的过时版本。 对 4.x 的支持已在 201
 
 ## <a name="see-also"></a>另请参阅
 
-[JDBC 驱动程序概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[JDBC 驱动程序概述](overview-of-the-jdbc-driver.md)  

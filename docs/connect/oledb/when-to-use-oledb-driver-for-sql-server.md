@@ -1,6 +1,6 @@
 ---
-title: 何时使用适用于 SQL Server 的 OLE DB 驱动程序 | Microsoft Docs
-description: 何时使用适用于 SQL Server 的 OLE DB 驱动程序
+title: 何时使用 OLE DB Driver
+description: 了解何时使用 OLE DB Driver for SQL Server，以及将它与其他驱动程序区分开来的高级数据访问概念。
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], about OLE DB Driver for SQL Server
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 74bd79c24b913cd3c3d2f782b77cf2bb4c23e397
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4f3ec9e3eee38b5ba6f2c0140a1f6eb316941a02
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015185"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81727960"
 ---
 # <a name="when-to-use-ole-db-driver-for-sql-server"></a>何时使用适用于 SQL Server 的 OLE DB 驱动程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68015185"
  有关 OLE DB Driver for SQL Server 和 MDAC 之间的区别，请参阅[将应用程序从 MDAC 更新到 OLE DB Driver for SQL Server](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [适用于 SQL Server 的 OLE DB 驱动程序](../oledb/oledb-driver-for-sql-server.md)     
- [OLE DB 操作指南主题](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
+ [适用于 SQL Server 的 OLE DB 驱动程序](oledb-driver-for-sql-server.md)  
+ [OLE DB 操作指南主题](ole-db-how-to/ole-db-how-to-topics.md)  
   
   

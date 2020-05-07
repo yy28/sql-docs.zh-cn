@@ -11,12 +11,12 @@ ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe84e3a8a74f50ffb19efd3bfe62dbd6900be3f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7cd858693ed429fd7b776a20f9300657337fa0f8
+ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165712"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82107968"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>修改由系统控制版本的时态表中的数据
 
@@ -50,7 +50,7 @@ ms.locfileid: "74165712"
          ) ;
    ```
 
-- 如果你确实在你的**INSERT** 语句中的列列表中指定了 **PERIOD** 列，那么你需要指定 **DEFAULT** 作为它们的值。
+- 如果你确实在 INSERT  语句中的列列表中指定了 PERIOD  列，则需要指定 DEFAULT  作为它们的值。
 
   ```sql
   INSERT INTO [dbo].[Department]

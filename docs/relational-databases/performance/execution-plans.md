@@ -16,15 +16,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 81a9f0e52c061ec494143eb4f61158546f5e57f9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 241df9557a141eb45933ced261a7b55f98a6ec8e
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78256921"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087347"
 ---
 # <a name="execution-plans"></a>执行计划
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 若要能够执行查询，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 必须分析语句，以确定访问所需数据的最高效方式。 由名为查询优化器的组件来处理此分析。 查询优化器的输入包括查询、数据库方案（表和索引的定义）以及数据库统计信息。 查询优化器的输出称为“查询执行计划”，有时也称为“查询计划”或为“执行计划”。   
 
@@ -45,9 +45,9 @@ ms.locfileid: "78256921"
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 有三个选项可用于显示执行计划：        
-> -  ***[估计的执行计划](../../relational-databases/performance/display-the-estimated-execution-plan.md)***，该计划是已编译的计划，由查询优化器根据估计得出。        
-> -  ***[实际执行计划](../../relational-databases/performance/display-an-actual-execution-plan.md)***，该计划与编译的计划及其[执行上下文](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)相同。 这包括在执行完成之后可用的实际运行时信息，例如执行警告，或在 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 的较新版本中，在执行过程中使用的时间和 CPU 时间。        
-> -  ***[实时查询统计信息](../../relational-databases/performance/live-query-statistics.md)***，这与编译的计划及其执行上下文相同。 这包括执行过程中的运行时信息，每秒更新一次。 例如，运行时信息包括流经操作符的实际行数。       
+> -  [估计的执行计划](../../relational-databases/performance/display-the-estimated-execution-plan.md)，该计划是已编译的计划，由查询优化器根据估计得出。 这是存储在计划缓存中的查询计划。        
+> -  [实际执行计划](../../relational-databases/performance/display-an-actual-execution-plan.md)，该计划是已编译的计划加上其[执行上下文](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)。 在查询执行完成后  可用。 这包括实际运行时信息，例如执行警告，或在 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 的较新版本中，在执行过程中使用的时间和 CPU 时间。         
+> -  [实时查询统计信息](../../relational-databases/performance/live-query-statistics.md)是已编译的计划加上其执行上下文。 它可用于正在进行的查询执行  ，每隔一秒更新一次。 这包括运行时信息，如通过[运算符](../../relational-databases/showplan-logical-and-physical-operators-reference.md)的实际行数、运行时间和估计的查询进度。
 
 > [!TIP]
 > 有关查询处理和查询执行计划的更多信息，请参阅“查询处理体系结构指南”的[优化 SELECT 语句](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements)和[执行计划缓存和重用](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)部分。

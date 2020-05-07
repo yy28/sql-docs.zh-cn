@@ -1,7 +1,7 @@
 ---
 title: 查询处理体系结构指南 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/14/2020
+ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 57cd755c29262d64d7e5215c0ef053a28c5f3507
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67f0b04b6ac0ce0fc9d8e20ac8b8088061a6ab0a
+ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79510198"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82107998"
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -894,13 +894,13 @@ WHERE ProductID = 63;
 * 应用程序可以控制何时创建和重新使用执行计划。
 * 准备/执行模型可移植到其他数据库，包括早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
-### <a name="parameter-sniffing"></a><a name="ParamSniffing"></a>参数截取
-“参数探查”指 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在编译或重新编译期间“探查”当前参数值，并将其传递给查询优化器，以便将这些参数值用于生成可能更高效的查询执行计划的这一过程。
+### <a name="parameter-sensitivity"></a><a name="ParamSniffing"></a> 参数敏感度
+参数敏感度，也称为“参数探查”，是指 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在编译或重新编译期间“探查”当前参数值，并将其传递给查询优化器，以便将这些参数值用于生成可能更高效的查询执行计划的这一过程。
 
 在编译或重新编译期间，将针对以下类型的批处理对参数值进行探查：
 
 -  存储过程
--  通过 sp_executesql 提交的查询 
+-  通过 `sp_executesql` 提交的查询 
 -  预定义查询
 
 有关对错误参数探查问题进行故障排除的详细信息，请参阅[对具有参数敏感型查询执行计划问题的查询进行故障排除](/azure/sql-database/sql-database-monitor-tune-overview)。
@@ -929,11 +929,35 @@ WHERE ProductID = 63;
 -   **递归查询**        
     有关递归的详细信息，请参阅[定义和使用递归公用表表达式的准则](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions)和 [T-SQL 中的递归](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx)。
 
--   **表值函数 (TVF)**         
-    有关 TVF 的详细信息，请参阅[创建用户定义函数（数据库引擎）](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)。
+-   **多语句表值函数 (MSTVF)**         
+    有关 MSTVF 的详细信息，请参阅[创建用户定义函数（数据库引擎）](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)。
     
 -   **TOP 关键字**        
     有关详细信息，请参阅 [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md)。
+
+查询执行计划可能包含 QueryPlan  元素中的 NonParallelPlanReason  属性，该元素描述未使用并行度的原因。  此属性的值包括：
+
+|NonParallelPlanReason 值|说明|
+|----|----|
+|MaxDOPSetToOne|最大并行度设为 1。|
+|EstimatedDOPIsOne|估计并行度为 1。|
+|NoParallelWithRemoteQuery|远程查询不支持并行度。|
+|NoParallelDynamicCursor|动态游标不支持并行计划。|
+|NoParallelFastForwardCursor|快进游标不支持并行计划。|
+|NoParallelCursorFetchByBookmark|按书签提取的游标不支持并行计划。|
+|NoParallelCreateIndexInNonEnterpriseEdition|非企业版不支持创建并行索引。|
+|NoParallelPlansInDesktopOrExpressEdition|桌面版和 Express 版不支持并行计划。|
+|NonParallelizableIntrinsicFunction|查询引用不可并行的内部函数。|
+|CLRUserDefinedFunctionRequiresDataAccess|需要数据访问的 CLR UDF 不支持并行。|
+|TSQLUserDefinedFunctionsNotParallelizable|查询引用不可并行的 T-SQL 用户定义函数。|
+|TableVariableTransactionsDoNotSupportParallelNestedTransaction|表变量事务不支持并行嵌套事务。|
+|DMLQueryReturnsOutputToClient|DML 查询将输出返回给客户端，它是不可并行的。|
+|MixedSerialAndParallelOnlineIndexBuildNotSupported|单个联机索引生成的串行和并行计划组合不受支持。|
+|CouldNotGenerateValidParallelPlan|验证并行计划失败，故障回复到串行计划。|
+|NoParallelForMemoryOptimizedTables|引用的内存中 OLTP 表不支持并行。|
+|NoParallelForDmlOnMemoryOptimizedTable|内存中 OLTP 表上的 DML 不支持并行。|
+|NoParallelForNativelyCompiledModule|引用的本机编译模块不支持并行。|
+|NoRangesResumableCreate|可恢复的创建操作的范围生成失败。|
 
 插入交换运算符之后，结果便为并行查询执行计划。 并行查询执行计划可以使用多个工作线程。 非并行（串行）查询使用的串行执行计划仅使用一个工作线程来实现执行。 并行查询使用的实际工作线程数在查询计划执行初始化时确定，并由计划的复杂程度和并行度确定。 
 
@@ -963,7 +987,13 @@ WHERE ProductID = 63;
  
 执行时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]将确定当前系统工作负荷和前面介绍的配置信息是否允许并行执行。 如果可以确保并行执行，则[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]将确定最佳工作线程数，并在这些工作线程间分配并行计划的执行。 从查询或索引操作开始在多工作线程上并行执行起，将一直使用相同的工作线程数，直到操作完成。 每次从计划缓存中检索执行计划时，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]都将重新检查最佳工作线程数决策。 例如，第一次执行某个查询时最终采用了串行计划，后来第二次执行相同的查询将使用三个工作线程的并行计划，第三次执行将使用四个工作线程的并行计划。
 
-在并行查询执行计划中，插入、更新和删除运算符是串行执行的。 不过，UPDATE 或 DELETE 语句的 WHERE 子句，或者 INSERT 语句的 SELECT 部分可以并行执行。 之后，实际的数据更改将串行应用到数据库。
+并行查询执行计划中的 update 和 delete 运算符将按顺序执行，但 UPDATE 或 DELETE 语句的 WHERE 子句可以并行执行。 之后，实际的数据更改将串行应用到数据库。
+
+从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始，还会按顺序执行 insert 运算符。 但是，可以并行执行 INSERT 语句的 SELECT 部分。 之后，实际的数据更改将串行应用到数据库。 
+
+从 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 和数据库兼容性级别 110 开始，可以并行执行 `SELECT … INTO` 语句。 其他形式的 insert 运算符的工作方式与 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 的方式相同。
+
+从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 和数据库兼容性级别 130 开始，在插入堆或聚集列存储索引 (CCI)，以及使用 TABLOCK 提示时，可以并行执行 `INSERT … SELECT` 语句。 还可以使用 TABLOCK 提示为并行启用到本地临时表（由 # 前缀标识）和全局临时表（由 ## 前缀标识）的插入。 有关详细信息，请参阅 [INSERT (Transact-SQL)](../t-sql/statements/insert-transact-sql.md#best-practices)。
 
 并行执行计划可以填充静态和由键集驱动的游标。 然而，只有串行执行可以提供动态游标行为。 查询优化器始终为查询生成串行执行计划，这是动态游标的一部分。
 

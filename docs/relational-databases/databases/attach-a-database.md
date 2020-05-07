@@ -1,5 +1,6 @@
 ---
 title: 附加数据库 | Microsoft Docs
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL 在 SQL Server 中附加数据库。 使用此功能来复制、移动或升级数据库。
 ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b58af59da33a2a03627d06a2e461da76d359e28b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a0b99addafecb3567ed6e5bc351681e3318f67a
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76911030"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138171"
 ---
 # <a name="attach-a-database"></a>附加数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -128,7 +129,7 @@ ms.locfileid: "76911030"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  使用带 [ 子句的 ](../../t-sql/statements/create-database-sql-server-transact-sql.md)CREATE DATABASE`FOR ATTACH` 语句。  
+3.  使用带 `FOR ATTACH` 子句的 [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) 语句。  
   
      将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例附加 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的文件并将该数据库重命名为 `MyAdventureWorks`。  
   

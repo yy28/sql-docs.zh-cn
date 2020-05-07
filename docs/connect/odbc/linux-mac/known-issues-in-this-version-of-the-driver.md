@@ -1,5 +1,6 @@
 ---
 title: Linux 和 macOS 上的 ODBC 驱动程序的已知问题
+description: 了解 Linux 和 macOS 上有关 Microsoft ODBC Driver for SQL Server 的已知问题，以及解决连接问题的步骤。
 ms.date: 03/05/2020
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - known issues
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0486cea609f0ab6bcc1261d6cad26f47f123476f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f6e39184b8ba565fed48ba501e2502dad19257ce
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912473"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728418"
 ---
 # <a name="known-issues-for-the-odbc-driver-on-linux-and-macos"></a>Linux 和 macOS 上的 ODBC 驱动程序的已知问题
 
@@ -34,7 +35,7 @@ ms.locfileid: "80912473"
 
 - SQLBindParameter 的 ColumnSize 参数指的是 SQL 类型的字符数，而 BufferLength 是应用程序缓冲区中的字节数    。 但是，如果 SQL 数据类型为 `varchar(n)` 或 `char(n)` 且应用程序将参数绑定为 SQL_C_CHAR 或 SQL_C_VARCHAR 并且客户端的字符编码为 UTF-8，可能会从驱动程序收到“字符串数据，右截断”错误，即使 ColumnSize 的值与服务器上的数据类型大小保持一致  。 出现此错误是因为字符编码之间的转换可能会更改数据的长度。 例如，右单引号字符 (U+2019) 以 CP-1252 编码为单字节 0x92，但以 UTF-8 则编码为 3 个字节序列 - 0xe2 0x80 0x99。
 
-例如，如果采用 UTF-8 编码，并且为 out 参数的 SQLBindParameter 中的 BufferLength 和 ColumnSize 均指定 1，然后尝试检索存储在服务器上的  *列中的前一个字符（使用 CP-1252），则驱动程序会尝试将其转换为 3 个字节的 UTF-8 编码，但无法使结果适合 1 个字节的缓冲区*   `char(1)`。 如果条件相反，它会比较 SQLBindParameter 中的 ColumnSize 和 BufferLength，然后在客户端和服务器上的不同代码页之间进行转换    。 因为 *ColumnSize* 的值 1 小于 *BufferLength* 的值（例如）3，因此驱动程序将生成一个错误。 要避免此错误，请确保转换后的数据长度适合指定的缓冲区或列。 请注意，对于  *类型，ColumnSize 不能大于 8000*`varchar(n)`。
+例如，如果采用 UTF-8 编码，并且为 out 参数的 SQLBindParameter 中的 BufferLength 和 ColumnSize 均指定 1，然后尝试检索存储在服务器上的 `char(1)` 列中的前一个字符（使用 CP-1252），则驱动程序会尝试将其转换为 3 个字节的 UTF-8 编码，但无法使结果适合 1 个字节的缓冲区    。 如果条件相反，它会比较 SQLBindParameter 中的 ColumnSize 和 BufferLength，然后在客户端和服务器上的不同代码页之间进行转换    。 因为 *ColumnSize* 的值 1 小于 *BufferLength* 的值（例如）3，因此驱动程序将生成一个错误。 要避免此错误，请确保转换后的数据长度适合指定的缓冲区或列。 请注意，对于 `varchar(n)` 类型，ColumnSize 不能大于 8000  。
 
 ## <a name="troubleshooting-connection-problems"></a><a id="connectivity"></a> 排查连接问题  
 

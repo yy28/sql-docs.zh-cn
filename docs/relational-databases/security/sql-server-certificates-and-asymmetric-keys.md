@@ -13,12 +13,12 @@ ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99e5f88f730953929115a5b18c00e5d1bb67562e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8b330e97aa006b223120d13433bf2c317205b96c
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68126830"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153128"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server 证书和非对称密钥
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +70,8 @@ ms.locfileid: "68126830"
 |||  
 |-|-|  
 |工具|目的|  
-|[makecert](/windows/desktop/SecCrypto/makecert)|创建证书。|  
+|[New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)|创建自签名证书。|  
+|[makecert](/windows/desktop/SecCrypto/makecert)|创建证书。 已弃用以支持 New-SelfSignedCertificate  。|  
 |[sn](/dotnet/framework/tools/sn-exe-strong-name-tool)|创建对称密钥的强名称。|  
   
 ## <a name="related-tasks"></a>Related Tasks  

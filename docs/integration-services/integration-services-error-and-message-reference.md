@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 53ea3f9eb2704de6c6c2c1ba5237ba96aa10c011
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0f4ca1a9362abb1004829d34a3c7783850b1f3b0
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433824"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087387"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 错误和消息引用
 
@@ -241,9 +241,9 @@ ms.locfileid: "79433824"
 >|0xC0016005|-1073651707|DTS_E_LOGINFAILURE|对“%1”的登录尝试失败。 如果提供的登录凭据不正确，会出现此错误。 请验证登录凭据。|  
 >|0xC0016006|-1073651706|DTS_E_INVALIDSERVERNAME|无法解析 URL %1 中指定的服务器名称。|  
 >|0xC0016007|-1073651705|DTS_E_PROXYAUTH|代理身份验证失败。 如果未提供登录凭据，或凭据不正确，会出现此错误。|  
->|0xC0016008|-1073651704|DTS_E_SECUREFAILURE|从服务器获取的 SSL 证书响应无效。 无法处理请求。|  
+>|0xC0016008|-1073651704|DTS_E_SECUREFAILURE|从服务器获取的 TLS/SSL 证书响应无效。 无法处理请求。|  
 >|0xC0016009|-1073651703|DTS_E_TIMEOUT|请求已超时。如果指定的超时值过小，或者无法建立与服务器或代理的连接，会出现此错误。 请确保服务器和代理 URL 是正确的。|  
->|0xC001600A|-1073651702|DTS_E_CLIENTAUTH|缺少客户端证书。 如果服务器需要 SSL 客户端证书，但用户提供的证书无效或根本未提供证书，会出现此错误。 必须为此连接配置客户端证书。|  
+>|0xC001600A|-1073651702|DTS_E_CLIENTAUTH|缺少客户端证书。 如果服务器需要 TLS/SSL 客户端证书，但用户提供的证书无效或根本未提供证书，则会出现此错误。 必须为此连接配置客户端证书。|  
 >|0xC001600B|-1073651701|DTS_E_REDIRECTFAILURE|指定的服务器(URL 为 %1)包含重定向，但重定向请求失败。|  
 >|0xC001600C|-1073651700|DTS_E_SERVERAUTH|服务器身份验证失败。 如果未提供登录凭据，或凭据不正确，会出现此错误。|  
 >|0xC001600D|-1073651699|DTS_E_WINHTTPUNKNOWNERROR|无法处理请求。 请稍后再试。|  
@@ -1058,7 +1058,7 @@ ms.locfileid: "79433824"
 >|0xC00470AC|-1073450836|DTS_E_EXPREVALINVALIDCASTSCALE|值 %1!d! 在向数据类型“%2”转换时，为小数位数参数指定的值 %1!d! 无效。 小数位数必须在 %3!d! 到 %4!d! 范围内， 但该类型转换的小数位数值超出了此范围。 小数位数不能超过指定的精度且必须为正值。|  
 >|0xC00470AD|-1073450835|DTS_E_NONSORTEDOUTPUTHASSORTKEYPOSITIONS|“%1”的 IsSorted 属性为 False，但其输出列的 SortKeyPositions 的 %2!lu! 为非零值。|  
 >|0xC00470AF|-1073450833|DTS_E_EXPREVALCONDITIONALOPCODEPAGEMISMATCH|对于 %2 类型的条件运算“%1”的操作数，它们的代码页必须匹配。 左操作数的代码页与右操作数的代码页不匹配。 对于指定类型的条件运算符，代码页必须相同。|  
->|0xC00470B1|-1073450831|DTS_E_REFERENCEDMETADATABADCOUNT|输入“%1”(%2!d!)引用了输入“%3”(%4!d!)，但是它们的列数不相同。 输入 %5!d! 有 %6!d! 列，而输入 %7!d! 有 %8!d! 列。|  
+>|0xC00470B1|-1073450831|DTS_E_REFERENCEDMETADATABADCOUNT|输入“%1”(%2!d!)引用了输入“%3”(%4!d!)，但是它们的列数不相同。 输入 %5!d! 有 %6!d! 列，而输入 %7!d! 有 %8!d!  列。|  
 >|0xC00470B2|-1073450830|DTS_E_OBJECTLINEAGEIDNOTFOUND|不存在沿袭 ID 为 %1!d! 的对象。|  
 >|0xC00470B3|-1073450829|DTS_E_FILENAMEOUTPUTCOLUMNOTFOUND|找不到此文件名的输出列。|  
 >|0xC00470B4|-1073450828|DTS_E_FILENAMEOUTPUTCOLUMNINVALIDDATATYPE|此文件名的输出列不是 Null 结束的 Unicode 字符串，其数据类型为 DT_WSTR。|  
@@ -1418,7 +1418,7 @@ ms.locfileid: "79433824"
 >|0xC02020D6|-1071636266|DTS_E_TXSAMPLINGINVALIDROWS|行数 %2!ld! 对于“%1”属性无效。 此值必须大于 0。|  
 >|0xC02020D7|-1071636265|DTS_E_RAWSTRINGINPUTTOOLONG|要求适配器写入的字符串长度为 %1!I64d! 个字节，而所有数据的长度必须小于 4294967295 个字节。|  
 >|0xC02020D9|-1071636263|DTS_E_ATLEASTONEINPUTMUSTBEMAPPEDTOOUTPUT|没有输入映射到输出。 “%1”必须至少有一个输入列映射到输出列。|  
->|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|不支持从“%1”(代码页为 %2!d!) 到“%3”(代码页为 %4!d!) 分层。|  
+>|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|不支持从“%1”(代码页为 %2!d!) 到“%3”(代码页为 %4!d!)  分层。|  
 >|0xC02020DC|-1071636260|DTS_E_COLUMNNOTMAPPEDTOEXTERNALMETADATACOLUMN|%1 的外部元数据列映射无效。  外部元数据列 ID 不能为零。|  
 >|0xC02020DD|-1071636259|DTS_E_COLUMNMAPPEDTONONEXISTENTEXTERNALMETADATACOLUMN|“%1”被映射到不存在的外部元数据列。|  
 >|0xC02020E5|-1071636251|DTS_E_UNABLETOWRITELOBDATATOBUFFER|无法为列“%1”将类型为 DT_TEXT、DT_NTEXT 或 DT_IMAGE 的长对象数据写入数据流任务缓冲区。|  

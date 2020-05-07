@@ -1,5 +1,6 @@
 ---
-title: 为加密配置客户端 | Microsoft Docs
+title: 为加密配置客户端
+description: 了解客户端加密和证书信任，确保使用 Microsoft JDBC Driver for SQL Server 的客户端的安全性。
 ms.custom: ''
 ms.date: 09/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0327a4321b141f0433cd9c6c9554c5a48f7381fb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7265bfb8666d99b8676b4bd4ec221b0a55f47a07
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922488"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728490"
 ---
 # <a name="configuring-the-client-for-encryption"></a>为加密配置客户端
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

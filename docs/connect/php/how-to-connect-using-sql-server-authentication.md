@@ -1,5 +1,6 @@
 ---
-title: 如何：使用 SQL Server 身份验证进行连接 | Microsoft Docs
+title: 如何：使用 SQL Server 身份验证进行连接
+description: 了解使用 SQL Server 身份验证连接到数据库时的重要注意事项。
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 10028beb86526f553a959376804d855513f0336c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 55f87063904a0201b9aa1a98cdb296d27c821083
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916443"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728329"
 ---
-# <a name="how-to-connect-using-sql-server-authentication"></a>How to: Connect Using SQL Server Authentication
+# <a name="how-to-connect-using-sql-server-authentication"></a>如何：使用 SQL Server 身份验证进行连接
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 当连接到 SQL Server 时， [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 支持使用 SQL Server 身份验证。  
   
-应仅在 Windows 身份验证不可用时才使用 SQL Server 身份验证。 有关使用 Windows 身份验证进行连接的信息，请参阅 [How to: Connect Using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md)。  
+应仅在 Windows 身份验证不可用时才使用 SQL Server 身份验证。 有关使用 Windows 身份验证进行连接的信息，请参阅[如何：使用 Windows 身份验证进行连接](../../connect/php/how-to-connect-using-windows-authentication.md)。  
   
 使用 SQL Server 身份验证连接到 SQL Server 时，必须考虑以下几点：  
   

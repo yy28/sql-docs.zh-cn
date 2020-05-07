@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 40e6fc7d5156ebb56266977bf929242db232e3e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a5f36ab7571008b73d90cc337e3fe7f5e5fa8523
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298488"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087427"
 ---
 # <a name="smtp-connection-manager"></a>SMTP 连接管理器
 
@@ -46,7 +46,7 @@ ms.locfileid: "71298488"
     > [!IMPORTANT]  
     >  SMTP 连接管理器仅支持匿名身份验证和 Windows 身份验证， 而不支持基本身份验证。  
   
--   指定在发送电子邮件时是否使用安全套接字层 (SSL) 对通信进行加密。  
+-   指定在发送电子邮件时是否使用传输层安全性 (TLS)（以前称为“安全套接字层 (SSL)”）对通信进行加密。  
   
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   
@@ -79,5 +79,5 @@ ms.locfileid: "71298488"
 >  使用 Microsoft Exchange 作为 SMTP 服务器时，可能需要将 **“使用 Windows 身份验证”** 设置为 **True**。 Exchange 服务器可以配置为不支持未经身份验证的 SMTP 连接。  
   
  **启用安全套接字层 (SSL)**  
- 如果选中此选项，则在发送电子邮件时，将使用安全套接字层 (SSL) 来加密通信。  
+ 如果选中此选项，则在发送电子邮件时，将使用 TLS/SSL 来加密通信。  
   

@@ -12,12 +12,12 @@ ms.manager: jroth
 ms.reviewer: dnethi
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-ms.openlocfilehash: 7abe0347e01ffa922b95b86c71bd3afef7d140ae
-ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
+ms.openlocfilehash: 4379b5aea85bdc3eeeca96d6be690a3fb3c89bcb
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80873103"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82086808"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 发行说明
 
@@ -87,11 +87,11 @@ SSMS 18.5 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 | AlwaysOn | 修复了以下问题：在连接到大数据群集终结点后，如果尝试显示仪表板，会看到错误消息。 |
 | 审核 | 修复了以下问题：如果存储帐户的根文件夹中有名称为空的文件夹，“审核日志合并”窗口发生故障。 |
 | 审核 | 修复了以下问题：如果容器的根目录中的项过多，“审核日志合并”窗口不会显示所有服务器。 |
-| 数据阐明 | 修复了以下问题：对于包含大量表的数据库，“数据分类”  向导不会打开。 |
-| 数据阐明 | 现在，在验证过程中，我们对每个标签/infoType 强制执行不同的 GUID，并强制执行 GUID 的结构。 |
-| 数据阐明 | 删除了 SqlServer2019 中的分类流程。 |
-| 数据阐明 | 更正了旧验证测试（添加了级别、删除了非法属性 InformationTypes  ），并为前两个点添加了新测试。 |
-| 数据阐明 | “已分类列”表正上方的按钮现在按预期最小化建议面板。 |
+| 数据分类 | 修复了以下问题：对于包含大量表的数据库，“数据分类”  向导不会打开。 |
+| 数据分类 | 现在，在验证过程中，我们对每个标签/infoType 强制执行不同的 GUID，并强制执行 GUID 的结构。 |
+| 数据分类 | 删除了 SqlServer2019 中的分类流程。 |
+| 数据分类 | 更正了旧验证测试（添加了级别、删除了非法属性 InformationTypes  ），并为前两个点添加了新测试。 |
+| 数据分类 | “已分类列”表正上方的按钮现在按预期最小化建议面板。 |
 | 常规 SSMS | 更新了 MSODBC 和 MSOLEDB 驱动程序的版本。 |
 | 常规 SSMS | 解决了 SSMS 中至少两个常见源的挂起和故障问题。 |
 | 常规 SSMS | 解决了在选择“浏览”按钮时“还原”  对话框挂起的另一种情况。 |
@@ -593,7 +593,7 @@ SSMS 18.5 是 SSMS 的最新正式发布 (GA) 版本。 如果需要 SSMS 的早
 |“对象资源管理器”|修复了 SSMS 在 OE 中尝试展开“管理”节点（错误配置 DataCollector）时引发“对象无法从 DBNull 转换为其他类型”异常的问题。|
 |“对象资源管理器”|修复了在调用“Edit Top N…”之前 OE 未转义引号会导致设计混淆的问题。|
 |“对象资源管理器”|修复了无法从 Azure 存储树中启动“导入数据层应用程序”向导的问题。|
-|“对象资源管理器”|修复了 SSL 复选框的状态不持久的“数据库邮件配置”问题。 有关详细信息，请参阅 [https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541)。 |
+|“对象资源管理器”|修复了 TLS/SSL 复选框的状态不持久的“数据库邮件配置”问题。 有关详细信息，请参阅 [https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541)。 |
 |“对象资源管理器”|修复了尝试使用 is_auto_update_stats_async_on 还原数据库时 SSMS 灰显选项并关闭现有连接的问题。|
 |“对象资源管理器”|修复了在 OE 中的节点上右键单击的问题（例如，右键单击“表”并希望执行某个操作，比如通过转到“筛选器”>“筛选器设置”筛选表，但筛选器设置窗体可能未显示在 SSMS 当前处于活动状态屏幕上）。 有关详细信息，请参阅 [https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106](https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106)。 |
 |“对象资源管理器”|修复了尝试重命名对象时 Delete 键在对象资源管理器中不工作这一长期未解决的问题。 有关详细信息，请参阅 [https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510](https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510)、[https://feedback.azure.com/forums/908035/suggestions/32910247](https://feedback.azure.com/forums/908035/suggestions/32910247) 和其他重复项。|

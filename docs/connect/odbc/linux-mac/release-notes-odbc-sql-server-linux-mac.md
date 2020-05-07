@@ -1,7 +1,7 @@
 ---
 title: Linux 和 macOS 上的 ODBC Driver for SQL Server 的发行说明
 ms.custom: ''
-ms.date: 03/10/2020
+ms.date: 04/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-jizho2
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: b2adbb0fca6c717a5864570cad40c65d7c332f90
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 36d390bc13924bbedb1d423790127a3d24f9b63e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79090498"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153278"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux 和 macOS 上的 Microsoft ODBC Driver for SQL Server 的发行说明
 
@@ -35,6 +35,13 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+## <a name="17522-april-2020-alpine-linux-only"></a>17.5.2.2，2020 年 4 月（仅限 Alpine Linux）
+
+| 新增功能 | 详细信息 |
+| :------------ | :------ |
+| 已修复 bug。 | 请参阅 [bug 修复](../bug-fixes.md)。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="1752-march-2020"></a>17.5.2，2020 年 3 月
 
@@ -142,9 +149,9 @@ ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)
 
 **支持新分发**：在 macOS 上的 ODBC Driver 的第一个版本中支持 OS X 10.11 和 macOS 10.12。 现在还支持 Ubuntu 16.10、Red Hat 6、7 和 SUSE 12。 每个平台都有与平台相关的包（RPM 或 DEB），用于简化安装和配置。 有关详细信息，请参阅 [Linux ](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) 和 [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md) 的 ODBC 驱动程序安装说明。
 
-**unixODBC 驱动程序管理器 2.3.1 支持更改**ODBC 驱动程序不再依赖于 unixODBC 驱动程序管理器的自定义打包（RedHat 6 除外），而是依赖于分发包管理器来解析分发程序库中的 UnixODBC 依赖项。
+**unixODBC 驱动程序管理器 2.3.1 支持更改**：ODBC 驱动程序不再依赖于 unixODBC 驱动程序管理器的自定义打包（RedHat 6 除外），而是依赖于分发包管理器来解析分发程序库中的 UnixODBC 依赖项。
 
-**BCP API 支持**Linux 和 macOS ODBC 驱动程序现支持使用 [BCP API 函数（bcp_init 等。）  ](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)
+**BCP API 支持**：Linux 和 macOS ODBC 驱动程序现支持使用 [BCP API 函数（bcp_init  等）](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)
 
 ## <a name="130-for-ssnoversion-on-linux"></a>Linux 上的 13.0 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
@@ -166,6 +173,6 @@ SUSE Linux 上的 ODBC 驱动程序（预览版）支持 64 位 SUSE Linux Enter
 
 Linux 上的 ODBC 驱动程序支持 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]。 有关详细信息，请参阅 [Linux 上的 ODBC Driver 对高可用性、灾难恢复的支持](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
 
-Linux 上的 ODBC 驱动程序支持与 Microsoft Azure SQL 数据库的连接。 有关详细信息，请参阅[如何：使用 ODBC 连接到 Azure SQL 数据库](https://msdn.microsoft.com/library/hh974312.aspx)。  
+Linux 上的 ODBC 驱动程序支持与 Microsoft Azure SQL 数据库的连接。 有关详细信息，请参阅[操作说明：使用 ODBC 连接到 Azure SQL 数据库](https://msdn.microsoft.com/library/hh974312.aspx)。  
 
-`-l` 选项（登录超时）已添加到 `bcp` 中。 有关详细信息，请参阅[使用 bcp 连接  ](../../../connect/odbc/linux-mac/connecting-with-bcp.md)。
+`-l` 选项（登录超时）已添加到 `bcp` 中。 有关详细信息，请参阅[使用 bcp 连接](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  。

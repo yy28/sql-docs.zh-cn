@@ -222,6 +222,8 @@
               href: big-data-cluster/troubleshoot-active-directory.md
             - name: Active Directory DNS
               href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
+            - name: Active Directory 登录失败
+              href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
             - name: HDFS 管理权限
               href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
     - name: 参考
@@ -2688,7 +2690,7 @@
               href: relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md
             - name: 属性
               href: relational-databases/native-client-ole-db-provider/about-ole-db-properties.md
-            - name: 启用连接
+            - name: 建立连接
               href: relational-databases/native-client-ole-db-provider/establishing-a-connection-to-a-data-source.md
             - name: 执行命令
               href: relational-databases/native-client-ole-db-provider/executing-a-command.md

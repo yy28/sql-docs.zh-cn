@@ -1,5 +1,5 @@
 ---
-title: 对 Active Directory 模式部署进行故障排除
+title: Active Directory 域组范围故障排除
 titleSuffix: SQL Server Big Data Cluster
 description: 对在 Active Directory 域中部署 SQL Server 大数据群集进行故障排除。
 author: rl-msft
@@ -9,38 +9,94 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5d887eadd021641241516a1478c6ac13e0d0bdec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 69762b5474f72256975af06e6c79d664de283809
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79191208"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153254"
 ---
-# <a name="troubleshoot-sql-server-big-data-cluster-active-directory-mode-deployment"></a>对 SQL Server 大数据群集 Active Directory 模式部署进行故障排除
+# <a name="troubleshoot-sql-server-big-data-cluster-active-directory-integration"></a>对 SQL Server 大数据群集 Active Directory 集成进行故障排除
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本文介绍了如何对在 Active Directory 模式下部署 SQL Server 大数据群集进行故障排除。
 
-## <a name="check-deployment-progress"></a>查看部署进度
+## <a name="symptom"></a>症状
 
-部署可能需要几分钟的时间。 如果在 15 分钟后群集未就绪，请查看控制器日志以了解更多详细信息。
+已开始在 AD 模式下部署 BDC，但部署停滞，无法继续。
 
-部署群集时，请检查 Pod。
+以下示例展示了 bash shell 中的部署结果。
 
-```console
+```
+The privacy statement can be viewed at:
+https://go.microsoft.com/fwlink/?LinkId=853010
+ 
+The license terms for SQL Server Big Data Cluster can be viewed at:
+Enterprise: https://go.microsoft.com/fwlink/?linkid=2104292
+Standard: https://go.microsoft.com/fwlink/?linkid=2104294
+Developer: https://go.microsoft.com/fwlink/?linkid=2104079
+ 
+Cluster deployment documentation can be viewed at:
+https://aka.ms/bdc-deploy
+ 
+NOTE: Cluster creation can take a significant amount of time depending on
+configuration, network speed, and the number of nodes in the cluster.
+ 
+Starting cluster deployment.
+Cluster controller endpoint is available at bdc-control.contoso.com:30080, 193.168.5.14:30080.
+Waiting for control plane to be ready after 5 minutes.
+Waiting for control plane to be ready after 10 minutes.
+Waiting for control plane to be ready after 15 minutes.
+Waiting for control plane to be ready after 20 minutes.
+Waiting for control plane to be ready after 25 minutes.
+```
+
+检查当前已部署的 Pod。
+
+```bash
 kubectl get pods -n mssql-cluster
 ```
 
-验证返回的 Pod 列表是否包括：
+以下列表仅显示已部署且包含在控制器内的 Pod。 没有创建任何计算、数据或存储池 Pod。
 
-- `compute-`$
-- `data-`
-- `storage-`
+```
+NAME              READY   STATUS    RESTARTS   AGE
+appproxy-6q4rm    2/2     Running   0          32m
+compute-0-0       3/3     Running   0          32m
+control-n8jqh     3/3     Running   0          35m
+controldb-0       2/2     Running   0          35m
+controlwd-fgpj8   1/1     Running   0          34m
+data-0-0          3/3     Running   0          32m
+data-0-1          3/3     Running   0          32m
+dns-fjp7n         2/2     Running   0          34m
+gateway-0         2/2     Running   0          32m
+logsdb-0          1/1     Running   0          34m
+logsui-d26c5      1/1     Running   0          34m
+master-0          3/4     Running   0          32m
+master-1          3/4     Running   0          32m
+master-2          3/4     Running   0          32m
+metricsdb-0       1/1     Running   0          34m
+metricsdc-c2kbh   1/1     Running   0          34m
+metricsdc-lmqzx   1/1     Running   0          34m
+metricsdc-r6499   1/1     Running   0          34m
+metricsdc-tj99w   1/1     Running   0          34m
+metricsui-dg8rz   1/1     Running   0          34m
+mgmtproxy-dvzpc   2/2     Running   0          34m
+nmnode-0-0        2/2     Running   0          32m
+nmnode-0-1        2/2     Running   0          32m
+operator-27gt9    1/1     Running   0          32m
+sparkhead-0       4/4     Running   0          31m
+sparkhead-1       4/4     Running   0          31m
+storage-0-0       4/4     Running   0          31m
+storage-0-1       4/4     Running   0          31m
+storage-0-2       4/4     Running   0          31m
+zookeeper-0       2/2     Running   0          32m
+zookeeper-1       2/2     Running   0          32m
+zookeeper-2       2/2     Running   0          32m
+```
 
-如果未创建计算、数据和存储 Pod，请查看日志以找出原因。
-
-## <a name="check-logs"></a>检查日志
+### <a name="check-logs"></a>检查日志
 
 若要确定部署退出而没有创建计算、数据或存储 pod 的原因，请查看以下日志： 
 
@@ -65,9 +121,11 @@ kubectl get pods -n mssql-cluster
   WARNING | Retrying.
   ```
 
-  在上面的示例中，由于域组的范围设置为本地域，因此部署无法为域用户创建登录名。 使用范围设置为全球域或通用域的组。 [在 Active Directory 模式下部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-active-directory.md) 说明了 AD 组范围要求。
+## <a name="cause"></a>原因
 
-## <a name="check-the-scope-of-domain-groups"></a>检查域组的范围。
+在上面的示例中，由于域组的范围设置为本地域，因此部署无法为域用户创建登录名。 使用范围设置为全球域或通用域的组。 [在 Active Directory 模式下部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-active-directory.md) 说明了 AD 组范围要求。
+
+## <a name="resolution"></a>解决方法
 
 检查域组 (<`domain-group`>) 的范围。 使用 [get-adgroup](/powershell/module/addsadministration/get-adgroup/)。
 
@@ -117,56 +175,7 @@ catch {
 $ClusterUsersGroupScope_Result
 ```
 
-## <a name="check-security-support-container"></a>检查安全支持容器 
+## <a name="resolution"></a>解决方法
 
-查看安全支持容器日志。
+若要解决此问题，请创建具有通用范围或全局范围的 AD 组，然后重新运行部署。
 
-以下命令收集命名空间 `mssql-cluster` 的群集中的安全支持日志。
-
-```console
-azdata bdc debug copy-logs -n mssql-cluster -c security-support
-```
-
-提取日志并找到 `\mssql-cluster\control-<identifier>\controller\control-rts5t-controller-stdout.log`。
-
-在日志中查找以下条目：
-
-```
-ERROR    | Failed to create AD user account 'cntrl-controller'. Error code: 53. Message: Failed to create user object: Failed to add object 'CN=cntrl-controller,OU=bdc, DC=CONTOSO, DC=com' to '  <domain>.<top-level-domain>  ': Server is unwilling to perform. 
-ERROR | Failed to create AD user account 'ldap-user'. Error code: 53. Message: Failed to create user object: Failed to add object 'CN=ldap-user,OU=bdc, DC=CONTOSO, DC=com' to '  <domain>.<top-level-domain>  ': Server is unwilling to perform. 
-ERROR | Failed to create AD user account 'nginx-mgmtproxy'. Error code: 53. Message: Failed to create user object: Failed to add object 'CN=nginx-mgmtproxy,OU=bdc, DC=CONTOSO, DC=com' to '  <domain>.<top-level-domain>  ': Server is unwilling to perform.
-```
-
-当域控制器 DNS 服务器缺少反向 DNS 条目（PTR 记录）时，可能会出现这些条目。
-
-## <a name="verify-reverse-lookup-ptr-record"></a>验证反向查找（PTR 记录）
-    
-运行以下 PowerShell 脚本以确认是否配置了反向 DNS 条目（PTR 记录）。
-
-```powershell
-#Domain Controller FQDN 'DCserver01.contoso.local'
-$Domain_controller_FQDN = 'DCserver01.contoso.local'
-
-#Performing Domain Controller DNS record, reverse PTR Checks...
-$DcControllerDnsPtr_Result = New-Object System.Collections.ArrayList
-try {
-    $Domain_controller_DNS_Record = Resolve-DnsName $Domain_controller_FQDN -Type A -Server $Domain_DNS_IP_address -ErrorAction Stop
-    foreach ($ip in $Domain_controller_DNS_Record.IPAddress) {
-        #resolving hostname by IP address to make sure we have reverse PTR record 
-        if ((Resolve-DnsName $ip).NameHost -eq $Domain_controller_FQDN) {
-            [void]$DcControllerDnsPtr_Result.add("OK - $Domain_controller_FQDN has an A record with an IP $ip, Reverse PTR record is in place") 
-        }
-        else {
-            [void]$DcControllerDnsPtr_Result.add("Missing - $Domain_controller_FQDN has an A record with an IP $ip, But no reverse PTR record was found for the host")
-        }
-    }
-}
-catch {
-    [void]$DcControllerDnsPtr_Result.add("Error - " + $_.exception.message)
-}
-
-#show the results 
-$DcControllerDnsPtr_Result
-```
-
-[验证域控制器的反向 DNS 条目（PTR 记录）](deploy-active-directory.md#verify-reverse-dns-entry-for-domain-controller)。
