@@ -1,5 +1,6 @@
 ---
 title: 在数据库损坏时备份事务日志 (SQL Server) | Microsoft Docs
+description: 本主题演示如何使用 SQL Server Management Studio 或 Transact-SQL 在 SQL Server 中当数据库损坏时备份事务日志。
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9b8873cc-df54-4336-ab9b-8f525132c2b0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 66f12768a7fb739125022908d1decb4ef3327a77
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9db020c354212a492d4f41f78df3257a7b8e3fc5
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909183"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220561"
 ---
 # <a name="back-up-the-transaction-log-when-the-database-is-damaged-sql-server"></a>在数据库损坏时备份事务日志 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

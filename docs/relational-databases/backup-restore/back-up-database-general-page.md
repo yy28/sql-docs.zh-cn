@@ -1,5 +1,6 @@
 ---
 title: 备份数据库（“常规”页）| Microsoft Docs
+description: 在 SQL Server 中，使用“备份数据库”对话框中的“常规”页可以查看或修改数据库备份操作的源和目标设置。
 ms.custom: ''
 ms.date: 07/01/2016
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e3bbac9bbdc12e5f2c1a0fb318a91860e44131d0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 97521f50bd002cc67a3d73dbfde3999f4ea3dabc
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940927"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220612"
 ---
 # <a name="back-up-database-general-page"></a>备份数据库（“常规”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

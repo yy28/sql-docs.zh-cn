@@ -1,5 +1,6 @@
 ---
 title: 连接到 Microsoft Azure 存储（还原）| Microsoft Docs
+description: 在 SQL Server 中，通过“Azure 存储帐户”对话框可以指定与 Azure 存储帐户信息的连接，以便获取 Azure 帐户中的文件存储。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 94860f25b8cb53ab3c273da2e020d0d6a506ad0b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c6564d9dc63a4d2e35ac306db91cead15f024c6
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70155621"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220452"
 ---
 # <a name="connect-to-microsoft-azure-storage-restore"></a>连接到 Microsoft Azure 存储（还原）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

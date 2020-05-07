@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: f0c3fe15a46333fad43b72ba3c8040153b9b51a2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0b034a0c0d449bd85afbfd46fa407e34921b8cf2
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80386186"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262126"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe 的发行说明
 
@@ -34,6 +34,45 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+## <a name="185-sqlpackage"></a>18.5 sqlpackage
+
+|平台|下载|发布日期|版本|构建
+|:---|:---|:---|:---|:---|
+|Windows|[MSI 安装程序](https://go.microsoft.com/fwlink/?linkid=2128142)|2020 年 4 月 28 日|18.5|15.0.4769.1|
+|macOS .NET Core |[zip 文件](https://go.microsoft.com/fwlink/?linkid=2128145)|2020 年 4 月 28 日| 18.5|15.0.4769.1|
+|Linux .NET Core |[zip 文件](https://go.microsoft.com/fwlink/?linkid=2128144)|2020 年 4 月 28 日| 18.5|15.0.4769.1|
+|Windows .NET Core |[zip 文件](https://go.microsoft.com/fwlink/?linkid=2128143)|2020 年 4 月 28 日| 18.5|15.0.4769.1|
+
+### <a name="features"></a>功能
+| Feature | 详细信息 |
+| :------ | :------ |
+| 部署 | 现在 SQL Server 2008 及更高版本、Azure SQL 数据库和 Azure SQL 数据仓库支持数据敏感度分类 |
+| 部署 | 针对表约束添加 Azure SQL 数据仓库支持 |
+| 部署 | 针对有序聚集列存储索引添加 Azure SQL 数据仓库支持 |
+| 部署 | 为外部数据源（适用于 Oracle、Teradata、MongoDB/CosmosDB、ODBC、大数据群集）和外部表（适用于 SQL Server 2019 大数据群集）添加支持 |
+| 部署 | 添加 SQL Database Edge 实例作为支持的版本 |
+| 部署 | 支持格式为“\<server>.\<dnszone>.database.windows.net”的托管实例服务器名称 |
+| 部署 | 在 Azure SQL 数据仓库中添加对复制命令的支持 |
+| 部署 | 在发布过程中添加部署选项“IgnoreTablePartitionOptions”，以便在 Azure SQL 数据仓库表的分区功能发生更改时避免重新创建表 |
+| .NET Core | 在 sqlpackage 的 .NET Core 版本中添加对 Microsoft.Data.SqlClient 的支持 |
+| &nbsp; | &nbsp; |
+
+### <a name="fixes"></a>修复项
+| Fix | 详细信息 |
+| :-- | :------ |
+| 部署 | 修复数据库的发布 dacpac，其中包含一个过去会引发错误“对象引用未设置为某个对象的实例”的外部用户。 |
+| 部署 | 修复将 json 路径分析为表达式的问题 |
+| 部署 | 修复为 AlterAnyDatabaseScopedConfiguration 和 AlterAnySensitivityClassification 权限生成 GRANT 语句的问题 |
+| 部署 | 修复无法识别外部脚本权限的问题 |
+| 部署 | 修复内联属性 - 属性的隐式添加不应显示差别，但显式提及应通过脚本显示 |
+| 部署 | 解决了更改具体化视图 (MV) 引用的表会导致生成改变视图语句（Azure SQL 数据仓库的 MV 不支持该语句）的问题 |
+| 部署 | 修复在将列添加到包含 Azure SQL 数据仓库数据的表时发布失败的问题 |
+| 部署 | 修复在为 Azure SQL 数据仓库更改分布列类型（数据丢失方案）时更新脚本应将数据移动到新表的问题 |
+| ScriptDom | 修复无法识别在内联索引之后定义的内联约束的 ScriptDom bug |
+| ScriptDom | 修复 ScriptDom SYSTEM_TIME 在批处理语句中缺少右括号的问题 |
+| Always Encrypted | 修复 #tmpErrors 表在 sqlpackage 重新连接并且临时表已消失时无法删除（因为临时表会在连接终止时消失）的问题 |
+| &nbsp; | &nbsp; |
+
 ## <a name="1841-sqlpackage"></a>18.4.1 sqlpackage
 
 |平台|下载|发布日期|版本|构建
@@ -88,7 +127,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Feature | 详细信息 |
 | :------ | :------ |
-| Import |  对于压缩文件大小超过 4 GB 的 .bacpac 文件，你可能需要使用 sqlpackage 的 .NET Core 版本来执行导入。  此行为由 .NET Core 生成 zip 标头文件的方式导致，虽然 zip 标头文件是有效的，但无法由 sqlpackage 的 .NET Full Framework 版本读取。 | 
+| 导入 |  对于压缩文件大小超过 4 GB 的 .bacpac 文件，你可能需要使用 sqlpackage 的 .NET Core 版本来执行导入。  此行为由 .NET Core 生成 zip 标头文件的方式导致，虽然 zip 标头文件是有效的，但无法由 sqlpackage 的 .NET Full Framework 版本读取。 | 
 | 部署 | 不支持参数 /p:Storage=File。 .NET Core 仅支持 Memory。 | 
 | Always Encrypted | sqlpackage .NET Core 不支持 Always Encrypted 列。 | 
 | 安全性 | sqlpackage .NET Core 不支持多重身份验证的 /ua 参数。 | 
@@ -125,7 +164,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | 生成/部署 | 修复了解析 xml 列集的 nodes() 方法的问题。| 
 | ScriptDom | 修复了“URL”字符串被解释为顶级令牌的其他情况。 | 
 | 图形 | 修复了约束中伪列引用的生成 TSQL 的问题。  | 
-| Export | 生成满足复杂性要求的随机密码。 | 
+| 导出 | 生成满足复杂性要求的随机密码。 | 
 | 部署 | 修复了在检索约束时遵循命令超时的问题。 | 
 | .NET Core（预览版） | 修复了诊断日志记录到文件的问题。 | 
 | .NET Core（预览版） | 使用流式传输来导出表数据，以支持大型表。 | 
@@ -182,7 +221,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | 性能 | 修复了生成脚本时出现的重大架构比较性能问题。 | 
 | 架构比较 | 修复了架构偏差检测逻辑以忽略特定扩展事件 (xevent) 会话。 |
 | 图形 | 修复了图形表的导入顺序。 | 
-| Export | 修复了导出具有对象权限的外部表的问题。 |
+| 导出 | 修复了导出具有对象权限的外部表的问题。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>已知问题
@@ -209,7 +248,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | 部署 | 添加了对托管实例的支持。 | 
 | 性能 | 添加了 MaxParallelism 命令行参数以指定数据库操作的并行度。 | 
 | 安全性 | 添加了 AccessToken 命令行参数以在连接到 SQL Server 时指定身份验证令牌。 | 
-| Import | 添加了对流式传输 BLOB/CLOB 数据类型以进行导入的支持。 | 
+| 导入 | 添加了对流式传输 BLOB/CLOB 数据类型以进行导入的支持。 | 
 | 部署 | 添加了对标量 UDF“INLINE”选项的支持。 | 
 | 图形 | 添加了对图形表“MERGE”语法的支持。 |
 | &nbsp; | &nbsp; |
@@ -261,7 +300,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Fix | 详细信息 |
 | :-- | :------ |
-| Import | 将 Azure SQL 数据库 .bacpac 导入到本地实例时，修复了由于“此版本的 SQL Server 不支持没有密码的数据库主密钥”  而出现的错误。 |
+| 导入 | 将 Azure SQL 数据库 .bacpac 导入到本地实例时，修复了由于“此版本的 SQL Server 不支持没有密码的数据库主密钥”  而出现的错误。 |
 | 图形 | 修复了图形表的未解析伪列错误。 |
 | 架构比较 | 修复了用于比较架构的 SQL 身份验证问题。 | 
 | &nbsp; | &nbsp; |

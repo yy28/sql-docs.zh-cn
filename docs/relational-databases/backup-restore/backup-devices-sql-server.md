@@ -1,5 +1,6 @@
 ---
 title: 备份设备 (SQL Server) | Microsoft Docs
+description: 本文介绍 SQL Server 数据库的备份设备，包括术语和使用备份设备。
 ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b4b67ba15f7660c82da249eadec1f6d0da2f7fb3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1e9bd20f7b0176c3d57bdd032f9c7f47d6729ba6
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909178"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220533"
 ---
 # <a name="backup-devices-sql-server"></a>备份设备 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -212,7 +213,7 @@ GO
 ##  <a name="mirrored-backup-media-sets"></a><a name="MirroredMediaSets"></a> 镜像备份媒体集  
  镜像备份介质集可减小备份设备故障的影响。 由于备份是防止数据丢失的最后防线，因此备份设备出现故障的后果是非常严重的。 随着数据库不断增大，备份设备或介质发生故障致使备份不可还原的可能性也相应增加。 镜像备份介质通过提供物理备份设备冗余来提高备份的可靠性。 有关详细信息，请参阅本主题后面的 [镜像备份媒体集 (SQL Server)](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)不熟悉的读者。  
   
-> **注意：** 只有 [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] 和更高版本支持镜像备份媒体集。  
+> **注意：** 只有 [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] 和更高版本支持镜像备份介质集。  
   
   
 ##  <a name="archive-sql-server-backups"></a><a name="Archiving"></a> 存档 SQL Server 备份  

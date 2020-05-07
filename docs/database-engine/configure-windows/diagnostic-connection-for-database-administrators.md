@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a961dc8923d07b9a3036c38d9e0ae05a6b6a6010
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6123b5259f6927c41281fb99264432062fc252bd
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73983036"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588103"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>用于数据库管理员的诊断连接
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,46 +42,54 @@ ms.locfileid: "73983036"
   
  只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin 角色的成员可以使用 DAC 进行连接。  
   
- 通过使用专用的管理员开关 ( **-A** ) 的**sqlcmd**命令提示实用工具，可以支持和使用 DAC。 有关使用 **sqlcmd** 的详细信息，请参阅[将 sqlcmd 与脚本变量结合使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。 还可以将前缀 **admin:** 连接到格式为 **sqlcmd -S admin:<*instance_name*>** 的实例名。 也可以通过连接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]admin: **\<instance_name  >，从**  查询编辑器启动 DAC。  
-  
+ 通过使用专用的管理员开关 (`-A`) 的 `sqlcmd` 命令提示实用工具，可以支持和使用 DAC。 有关使用 `sqlcmd` 的详细信息，请参阅[将 sqlcmd 与脚本变量结合使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。 还可以将前缀 `admin:` 连接到实例名上，格式为 `sqlcmd -S admin:<*instance_name*>`。 还可以通过连接到 `admin:\<*instance_name*>`，从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器启动 DAC。
+
+> [!Note]  
+> 从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 建立 DAC
+> - 断开与相关 SQL Server 实例的所有连接，包括对象资源管理器和所有打开的查询窗口。
+> - 从菜单中选择“文件”   > “新建”   > “数据库引擎查询” 
+> - 在连接对话框的“服务器名称”字段中，输入 `admin:<server_name>`（如果使用默认实例）或 `admin:<server_name>\<instance_name>`（如果使用命名实例）。
+
 ## <a name="restrictions"></a>限制  
  由于 DAC 仅用于在极少数情况下诊断服务器问题，因此对连接有一些限制：  
   
--   为了保证有可用的连接资源，每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例只允许使用一个 DAC。 如果 DAC 连接已经激活，则通过 DAC 进行连接的任何新请求都将被拒绝，并出现错误 17810。  
+- 为了保证有可用的连接资源，每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例只允许使用一个 DAC。 如果 DAC 连接已经激活，则通过 DAC 进行连接的任何新请求都将被拒绝，并出现错误 17810。  
   
--   为了保留资源， [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不侦听 DAC 端口，除非使用跟踪标志 7806 进行启动。  
+- 为了保留资源， [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不侦听 DAC 端口，除非使用跟踪标志 7806 进行启动。  
   
--   DAC 最初尝试连接到与登录帐户关联的默认数据库。 连接成功后，可以连接到 master 数据库。 如果默认数据库脱机或不可用，则连接返回错误 4060。 但是，如果使用以下命令覆盖默认数据库，改为连接到 master 数据库，则连接会成功：  
+- DAC 最初尝试连接到与登录帐户关联的默认数据库。 连接成功后，可以连接到 master 数据库。 如果默认数据库脱机或不可用，则连接返回错误 4060。 但是，如果使用以下命令覆盖默认数据库，改为连接到 master 数据库，则连接会成功：  
+
+   ```powershell
+   sqlcmd -A -d master 
+   ```
+
+   由于只要启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，就能保证 master 数据库处于可用状态，因此建议使用 DAC 连接到 master 数据库。  
   
-     **sqlcmd -A -d master**  
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 禁止使用 DAC 运行并行查询或命令。 例如，如果使用 DAC 执行下列任何语句，都会生成错误 3637。  
   
-     由于只要启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例，就能保证 master 数据库处于可用状态，因此建议使用 DAC 连接到 master 数据库。  
+  - `RESTORE...`
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 禁止使用 DAC 运行并行查询或命令。 例如，如果使用 DAC 执行下列任何语句，都会生成错误 3637。  
+  - `BACKUP...`
+
+- DAC 只能使用有限的资源。 请勿使用 DAC 运行需要消耗大量资源的查询（例如， 对大型表执行复杂的联接）或可能造成阻塞的查询。 这有助于防止将 DAC 与任何现有的服务器问题混淆。 为了避免发生潜在的阻塞情况，如果必须执行可能会发生阻塞的查询，则尽可能在基于快照的隔离级别下运行查询；或者，将事务隔离级别设置为 READ UNCOMMITTED，将 LOCK_TIMEOUT 值设置为较短的值（如 2000 毫秒），或者同时执行这两种操作。 这可以防止 DAC 会话被阻塞。 但是，根据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所处的状态，DAC 会话可能会在闩锁上被阻塞。 可以使用 CTRL-C 终止 DAC 会话，但不能保证一定成功。 如果失败，唯一的选择是重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-    -   RESTORE  
-  
-    -   备份  
-  
--   DAC 只能使用有限的资源。 请勿使用 DAC 运行需要消耗大量资源的查询（例如， 对大型表执行复杂的联接）或可能造成阻塞的查询。 这有助于防止将 DAC 与任何现有的服务器问题混淆。 为了避免发生潜在的阻塞情况，如果必须执行可能会发生阻塞的查询，则尽可能在基于快照的隔离级别下运行查询；或者，将事务隔离级别设置为 READ UNCOMMITTED，将 LOCK_TIMEOUT 值设置为较短的值（如 2000 毫秒），或者同时执行这两种操作。 这可以防止 DAC 会话被阻塞。 但是，根据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所处的状态，DAC 会话可能会在闩锁上被阻塞。 可以使用 CTRL-C 终止 DAC 会话，但不能保证一定成功。 如果失败，唯一的选择是重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
-  
--   为保证连接成功并排除 DAC 故障， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 保留了一定的资源用于处理 DAC 上运行的命令。 通常这些资源只够执行简单的诊断和故障排除功能，如下所示。  
+- 为保证连接成功并排除 DAC 故障， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 保留了一定的资源用于处理 DAC 上运行的命令。 通常这些资源只够执行简单的诊断和故障排除功能，如下所示。  
   
  虽然理论上可以运行任何不必在 DAC 上并行执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，但极力建议您限制使用下列诊断和故障排除命令：  
   
--   查询动态管理视图以进行基本的诊断，例如查询 [sys.dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) 以了解锁定状态，查询 [sys.dm_os_memory_cache_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) 以检查缓存运行状况，查询 [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) 和 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 以了解活动的会话和请求。 避免使用需要消耗大量资源的动态管理视图（例如，[sys.dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md) 扫描整个版本存储区，并且会导致大量的 I/O）或使用复杂联接的动态管理视图。 有关性能影响的信息，请参阅特定 [动态管理视图](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)的文档。  
+- 查询动态管理视图以进行基本的诊断，例如查询 [sys.dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) 以了解锁定状态，查询 [sys.dm_os_memory_cache_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) 以检查缓存运行状况，查询 [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) 和 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 以了解活动的会话和请求。 避免使用需要消耗大量资源的动态管理视图（例如，[sys.dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md) 扫描整个版本存储区，并且会导致大量的 I/O）或使用复杂联接的动态管理视图。 有关性能影响的信息，请参阅特定 [动态管理视图](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)的文档。  
   
--   查询目录视图。  
+- 查询目录视图。  
   
--   基本 DBCC 命令，例如 [DBCC FREEPROCCACHE](../..//t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)、[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)、[DBCC DROPCLEANBUFFERS](../../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md) 和 [DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)。 请勿运行需要消耗大量资源的命令，如 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)、[DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md) 或 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。  
+- 基本 DBCC 命令，例如 [DBCC FREEPROCCACHE](../..//t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)、[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)、[DBCC DROPCLEANBUFFERS](../../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md) 和 [DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)。 请勿运行需要消耗大量资源的命令，如 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)、[DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md) 或 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)。  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL*spid>\<* 命令。 根据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的状态，KILL 命令并非一定会成功；如果失败，则唯一的选择是重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 下面是一般的指导原则：  
+- [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL\<spid>  命令。 根据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的状态，KILL 命令并非一定会成功；如果失败，则唯一的选择是重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 下面是一般的指导原则：  
   
-    -   请通过查询 `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`来验证 SPID 是否已被实际终止。 如果没有返回任何行，则表明会话已被终止。  
+    - 请通过查询 `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`来验证 SPID 是否已被实际终止。 如果没有返回任何行，则表明会话已被终止。  
   
-    -   如果会话仍在运行，则通过运行查询 `SELECT * FROM sys.dm_os_tasks WHERE session_id = <spid>`来验证是否为此会话分配了任务。 如果发现还有任务，则很可能当前正在终止会话。 注意，此操作可能会持续很长时间，也可能根本不会成功。  
+    - 如果会话仍在运行，则通过运行查询 `SELECT * FROM sys.dm_os_tasks WHERE session_id = <spid>`来验证是否为此会话分配了任务。 如果发现还有任务，则很可能当前正在终止会话。 注意，此操作可能会持续很长时间，也可能根本不会成功。  
   
-    -   如果在与此会话关联的 sys.dm_os_tasks 中没有任何任务，但是在执行 KILL 命令后该会话仍然出现在 sys.dm_exec_sessions 中，则表明没有可用的工作线程。 选择某个当前正在运行的任务（在 sys.dm_os_tasks 视图中列出的 `sessions_id <> NULL`的任务），并终止与其关联的会话以释放工作线程。 请注意，终止单个会话可能不够，可能需要终止多个会话。  
+    - 如果在与此会话关联的 sys.dm_os_tasks 中没有任何任务，但是在执行 KILL 命令后该会话仍然出现在 sys.dm_exec_sessions 中，则表明没有可用的工作线程。 选择某个当前正在运行的任务（在 sys.dm_os_tasks 视图中列出的 `sessions_id <> NULL`的任务），并终止与其关联的会话以释放工作线程。 请注意，终止单个会话可能不够，可能需要终止多个会话。  
   
 ## <a name="dac-port"></a>DAC 端口  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 TCP 端口 1434（如果可用）上侦听 DAC，或者在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 启动时动态分配的 TCP 端口上侦听 DAC。 [错误日志](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)包含所侦听的 DAC 所在的端口号。 默认情况下，DAC 侦听器只接受本地端口上的连接。 有关激活远程管理连接的代码示例的详细信息，请参阅 [remote admin connections 服务器配置选项](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md)。  
@@ -92,7 +100,7 @@ ms.locfileid: "73983036"
   
  DAC 端口由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在启动时动态分配。 当连接到默认实例时，DAC 会避免在连接时对 SQL Server Browser 服务使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 解决协议 (SSRP) 请求。 它先通过 TCP 端口 1434 进行连接。 如果失败，则通过 SSRP 调用来获取端口。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器没有侦听 SSRP 请求，则连接请求将返回错误。 若要了解 DAC 所侦听的端口号，请参阅错误日志。 如果将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为接受远程管理连接，则必须使用显式端口号启动 DAC：  
   
- sqlcmd -S tcp:**server>,** port> _\<\<_  
+ sqlcmd -S tcp:\<server>,\<port>    
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志列出了 DAC 的端口号，默认情况下为 1434。 如果将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为只接受本地 DAC 连接，请使用以下命令和环回适配器进行连接：  
   

@@ -4,16 +4,16 @@ titleSuffix: SQL Server Big Data Clusters
 description: 了解如何通过机器学习服务在 SQL Server 大数据群集的主实例上运行 Python 和 R 脚本。
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 04/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
-ms.openlocfilehash: dd8e1b948d259b4c233aebcb3614dea5b3e72129
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: d105db3da8a6732c2884af7e42a71441eef6f077
+ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664134"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643342"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>通过机器学习服务在 SQL Server 大数据群集上运行 Python 和 R 脚本
 
@@ -36,39 +36,68 @@ RECONFIGURE WITH OVERRIDE
 GO
 ```
 
-## <a name="enable-always-on-availability-groups"></a>启用 AlwaysOn 可用性组
+现在可以在大数据群集的主实例上运行 Python 和 R 脚本。 请参阅[后续步骤](#next-steps)下的快速入门，运行第一个脚本。
 
-如果将 SQL Server 大数据群集与 [Always On 可用性组](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)一起使用，则需要执行一些额外的步骤以启用机器学习服务。
+>[!NOTE]
+>无法在可用性组侦听程序连接上设置配置设置。 如果大数据群集部署了高可用性，则对每个副本设置 `external scripts enabled`。 请参阅[在具有高可用性的群集上启用](#enable-on-cluster-with-high-availability)。
 
-1. 连接到主实例并运行以下语句：
+## <a name="enable-on-cluster-with-high-availability"></a>具有高可用性的群集上启用
 
-    ```sql
-    SELECT @@SERVERNAME
-    ```
+当[部署高可用性 SQL Server 大数据群集](deployment-high-availability.md)时，部署会为主实例创建可用性组。 若要启用机器学习服务，请在可用性组的每个实例上设置 `external scripts enabled`。 对于大数据群集，需要在 SQL Server 主实例的每个副本上运行 `sp_configure`
 
-    记下服务器名称。 在此示例中，主实例的服务器名称为 master-2  。
+以下部分介绍如何在每个实例上启用外部脚本。
 
-1. 在大数据群集中 Always On 可用性组上的每个副本上，运行以下 `kubectl` 命令：
+### <a name="create-an-external-load-balancer-for-each-instance"></a>为每个实例创建外部负载均衡器
 
-    ```
-    kubectl -n bdc expose pod master-0 --port=1533 --name=mymaster-0 --type=LoadBalancer
+对于可用性组上的每个副本，创建负载均衡器以便可以连接到实例。 
 
-    kubectl -n bdc expose pod master-1 --port=1533 --name=mymaster-1 --type=LoadBalancer
+`kubectl expose pod <pod-name> --port=<connection port number> --name=<load-balancer-name> --type=LoadBalancer -n <kubernetes namespace>`
 
-    kubectl -n bdc expose pod master-2 --port=1533 --name=mymaster-2 --type=LoadBalancer
-    ```
+本文中的示例使用以下值：
 
-    应该会看到与下面类似的输出：
-    
-    ```
-    service/mymaster-0 exposed
+- `<pod-name>`: `master-#`
+- `<connection port number>`: `1533`
+- `<load-balancer-name>`: `mymaster-#`
+- `<kubernetes namespace>`: `mssql-cluster`
 
-    service/mymaster-1 exposed
+为环境更新以下脚本，并运行命令：
 
-    service/mymaster-2 exposed
-    ```
+```bash
+kubectl expose pod master-0 --port=1533 --name=mymaster-0 --type=LoadBalancer -n mssql-cluster 
+kubectl expose pod master-1 --port=1533 --name=mymaster-1 --type=LoadBalancer -n mssql-cluster
+kubectl expose pod master-2 --port=1533 --name=mymaster-2 --type=LoadBalancer -n mssql-cluster 
+```
 
-1. 连接到每个主副本终结点并启用脚本执行。
+`kubectl` 会返回以下输出。
+
+```bash
+service/mymaster-0 exposed
+service/mymaster-1 exposed
+service/mymaster-2 exposed
+```
+
+每个负载均衡器都是主副本终结点。
+
+### <a name="enable-script-execution-on-each-replica"></a>对每个副本启用脚本执行
+
+1. 获取主副本终结点的 IP 地址。
+
+   以下命令返回副本终结点的外部 IP 地址。 
+
+   `kubectl get services <load-balancer-name> -n <kubernetes namespace>`
+
+   若要在此方案中获取每个副本的外部 IP 地址，请运行以下命令：
+
+   ```bash
+   kubectl get services mymaster-0 -n mssql-cluster
+   kubectl get services mymaster-1 -n mssql-cluster
+   kubectl get services mymaster-2 -n mssql-cluster
+   ```
+
+   >[!NOTE]
+   > 可能需要一些时间才能获得外部 IP 地址。 定期运行上述脚本，直到每个终结点都返回外部 IP 地址。
+
+1. 连接到主副本终结点并启用脚本执行。
 
     运行以下语句：
 
@@ -78,7 +107,37 @@ GO
     GO
     ```
 
-现在可以在大数据群集的主实例上运行 Python 和 R 脚本。 请参阅下面的快速入门，运行第一个脚本。
+   例如，可以使用 `sqlcmd` 运行上述命令。 下面的示例连接到主副本终结点并启用脚本执行。 将脚本中的值更新为适用于你环境的值。
+
+   ```bash
+   sqlcmd -S <IP address>,1533 -U <user name> -P <password> -Q "EXEC sp_configure 'external scripts enabled', 1; RECONFIGURE WITH OVERRIDE;"
+   ```
+
+   为每个副本重复该步骤。
+
+### <a name="demonstration"></a>演示
+
+下图演示了此过程。
+
+[![](media/machine-learning-services/example-kube-enable-scripts.png "Demonstrate enable feature on Kubernetes")](media/machine-learning-services/example-kube-enable-scripts.png#lightbox)
+
+现在可以在大数据群集的主实例上运行 Python 和 R 脚本。 请参阅[后续步骤](#next-steps)下的快速入门，运行第一个脚本。
+
+### <a name="delete-the-master-replica-endpoints"></a>删除主副本终结点
+
+在 Kubernetes 群集上，删除每个副本的终结点。 终结点在 Kubernetes 中作为负载均衡服务公开。
+
+以下命令删除负载均衡服务。
+
+`kubectl delete svc <load-balancer-name> -n mssql-cluster`
+
+对于本文中的示例，请运行以下命令。
+
+```bash
+kubectl delete svc mymaster-0 -n mssql-cluster
+kubectl delete svc mymaster-1 -n mssql-cluster
+kubectl delete svc mymaster-2 -n mssql-cluster
+```
 
 ## <a name="next-steps"></a>后续步骤
 

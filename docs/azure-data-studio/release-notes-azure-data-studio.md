@@ -8,17 +8,46 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: seodec18
-ms.date: 03/18/2020
-ms.openlocfilehash: 5a6bd8792cd42d34796b36fb18a4d8c551d684f5
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.date: 04/30/2020
+ms.openlocfilehash: d7c54fbbb959085206cb993d4b9e9087ac8c3a50
+ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087327"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619670"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 发行说明
 
 **[下载并安装最新版本！](download.md)**
+
+## <a name="april-2020-hotfix"></a>2020 年 4 月（修补程序）
+
+2020 年 4 月 30 日 &nbsp; / &nbsp; 版本：1.17.1
+
+&nbsp;
+
+| 更改 | 详细信息 |
+| :----- | :------ |
+| 修复 bug #10197 无法通过 MFA 进行连接 | [#10197](https://github.com/microsoft/azuredatastudio/issues/10197)  |
+| &nbsp; | &nbsp; |
+
+## <a name="april-2020"></a>2020 年 4 月
+
+2020 年 4 月 27 日 &nbsp; / &nbsp; 版本：1.17.0
+
+&nbsp;
+
+| 更改 | 详细信息 |
+| :----- | :------ |
+| 改进了欢迎页 | 欢迎页上进行了 UI 更新，可更轻松地查看常见操作和突出显示扩展。 |
+| 新笔记本功能 | &bull; &nbsp; 添加了编辑文本单元格时的 Markdown 工具栏，可帮助使用 Markdown 进行编写 <br/> &bull; &nbsp; 改进了 Jupyter Books viewlet，使之成为笔记本 viewlet，可在其中同时管理 Jupyter Books 和笔记本 <br/>&bull; &nbsp; 添加了对在保存笔记本时保持图表的支持 <br/> &bull; &nbsp; 在 Python 笔记本中添加了对 KQL magic 的支持|
+| 改进了仪表板 | 整个 Azure Data Studio 的仪表板使用最新设计模式（包括操作工具栏）进行了更新。 这也适用于许多扩展。 |
+| Azure 视图中的 Azure Cloud Shell 集成。 | |
+| 对 Always Encrypted 和具有安全 Enclave 的 Always Encrypted 的支持。 | |
+| 解决了 Bug 和问题 | 若要查看完整的修复内容列表，请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2020+Release%22)。 |
+| &nbsp; | &nbsp; |
+| 解决了 Bug 和问题 | 若要查看完整的修复内容列表，请参阅 [GitHub 上的 Bug 和问题](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2020+Release%22)。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="march-2020"></a>2020 年 3 月
 
@@ -50,7 +79,7 @@ ms.locfileid: "82087327"
 
 ## <a name="february-2020"></a>2020 年 2 月
 
-2020 年 2 月 13 日&nbsp; / &nbsp;版本：1.15.0 
+2020 年 2 月 13 日&nbsp; / &nbsp;版本：1.15.0
 
 &nbsp;
 
@@ -302,7 +331,7 @@ ms.locfileid: "82087327"
 | 添加了 PowerShell 扩展  | 通过 VS Code 引入了 [PowerShell 扩展](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)体验。  |
 | 添加了 SQL Server dacpac 扩展  | 从 SQL Server 导入扩展中删除数据层应用程序向导并移至新的扩展中。  |
 | 添加了 Community 扩展 QueryPlan.show | 添加了集成支持以可视化显示查询计划  |
-| 更新了 SQL Server 2019 预览版扩展 | &bull; &nbsp; Jupyter Notebook 支持（特别是 Python3 和 Spark 内核）已移动到核心 Azure Data Studio 工具中。 <br/>&bull; &nbsp; 修复了外部数据向导中的 bug  |
+| 更新了 SQL Server 2019 预览版扩展 | &bull; &nbsp; Jupyter Notebook 支持（特别是 Python3）和 Spark 内核已移动到核心 Azure Data Studio 工具中。 <br/>&bull; &nbsp; 修复了外部数据向导中的 bug  |
 | 解决了 Bug 和问题。 | 请参阅 [GitHub 上的 Bug 和问题](https://github.com/Microsoft/azuredatastudio/milestone/25?closed=1)。 |
 | &nbsp; | &nbsp; |
 

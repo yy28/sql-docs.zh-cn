@@ -1,5 +1,6 @@
 ---
 title: 恢复模式 (SQL Server) | Microsoft Docs
+description: 在 SQL Server 中，恢复模式控制如何记录事务、事务日志是否需要备份以及可以使用哪些还原操作。
 ms.custom: ''
 ms.date: 07/16/2016
 ms.prod: sql
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 8cfea566-8f89-4581-b30d-c53f1f2c79eb
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: aa1521e40df7483c7a4dc336484d6ecf28e909cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c7d04f6a6ed9a1e09c3ca278e1481000abc6cab8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75325441"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180873"
 ---
 # <a name="recovery-models-sql-server"></a>恢复模式 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

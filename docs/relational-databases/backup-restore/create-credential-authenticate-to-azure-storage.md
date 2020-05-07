@@ -1,5 +1,6 @@
 ---
 title: 创建凭据 - 向 Azure 存储进行身份验证 | Microsoft Docs
+description: 在 SQL Server 中，使用“备份数据库”对话框的“创建凭据”页可提供 Azure 管理证书以验证连接。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d22e7dda1575f1861ad5a86d735e26ec0afd7efc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 40ee955b5f8cc683d2ec4f875c688f5575a0a44a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70176242"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179221"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>创建凭据 - 向 Azure 存储进行身份验证
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

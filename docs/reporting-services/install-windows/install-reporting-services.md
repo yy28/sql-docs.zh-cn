@@ -1,18 +1,18 @@
 ---
 title: 安装 SQL Server Reporting Services | Microsoft Docs
-ms.date: 10/02/2019
+ms.date: 05/01/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 37ce1267bd4b83943560183e5628839858d9c5de
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 07669b5c0466c725a271f71ed207c332ffdb5a26
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486816"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693798"
 ---
 # <a name="install-sql-server-reporting-services"></a>安装 SQL Server Reporting Services
 
@@ -32,6 +32,8 @@ SQL Server Reporting Services 安装涉及到用于存储报表项、呈现报�
 
 > [!NOTE]
 > 要查找 Power BI 报表服务器？ 请参阅[安装 Power BI 报表服务器](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/)。
+> 
+> 从 Reporting Services 的 SQL Server 2016 或更早版本进行升级或迁移？ 请参阅[升级和迁移 Reporting Services](upgrade-and-migrate-reporting-services.md)。
 
 ## <a name="before-you-begin"></a>开始之前
 

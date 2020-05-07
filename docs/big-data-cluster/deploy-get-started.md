@@ -9,33 +9,34 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 11bc21819760bebabd12018030c352bd98f79adb
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: 0f6600b6578abe0a9b72dff8fee2d815b0771c0c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531090"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82178128"
 ---
-# <a name="get-started-with-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 入门
+# <a name="get-started-with-big-data-clusters-2019-deployment"></a>开始 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 部署
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文概述了如何部署 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)。
+本文概述了如何部署 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]。 本文向你介绍概念并提供用于理解部署方案的框架。 具体部署步骤因客户端和服务器的平台选择而异。 有关 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 的简介，请参阅 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)
 
-有关其他部署方案，请参阅：
+有关 SQL Server 方案，请参阅：
 
 - [Windows](../database-engine/install-windows/install-sql-server.md)
 - [Linux](../linux/sql-server-linux-setup.md)
 - [Docker 容器](../linux/sql-server-linux-configure-docker.md)
 
-本文旨在使用户熟悉概念并提供用于理解本部分中其他部署文章的框架。 具体部署步骤因客户端和服务器的平台选择而异。
-
-> [!TIP]
-> 要快速获得一个部署了 Kubernetes 和大数据群集的环境以协助增强其功能，请使用[脚本部分](#scripts)中指向的示例脚本之一。 部署后，可使用以下部分中的[客户端工具](#tools)来管理群集。
+## <a name="quick-introduction"></a>快速简介 
 
 观看此 9 分钟的视频，大致了解如何部署大数据群集：
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Clusters-deployment-overview/player?WT.mc_id=dataexposed-c9-niner]
+
+
+> [!TIP]
+> 要快速获得一个部署了 Kubernetes 和大数据群集的环境以协助增强其功能，请使用[脚本部分](#scripts)中指向的示例脚本之一。 部署后，可使用以下部分中的[客户端工具](#tools)来管理群集。
 
 
 ## <a name="client-tools"></a><a id="tools"></a> 客户端工具

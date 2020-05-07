@@ -3,18 +3,18 @@ title: 在 Windows 上安装
 description: 了解如何在 Windows 上安装 SQL Server 机器学习服务。 可使用机器学习服务在数据库中执行 Python 和 R 脚本。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/20/2020
+ms.date: 02/29/2020
 ms.topic: conceptual
 author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 721b6cefdee0a50c79bd2b8a0e3ac4f26202abd5
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a96eb5b8d50102c09ed6343c0f067db5a5bdb6e2
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118410"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588223"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>在 Windows 上安装 SQL Server 机器学习服务（Python 和 R）
 
@@ -28,7 +28,7 @@ ms.locfileid: "81118410"
 
 + 为了实现业务连续性，机器学习服务支持 [Always On 可用性组](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)。 在每个节点上安装机器学习服务并配置包。
 
-+ SQL Server 2017 中的故障转移群集不支持安装机器学习服务  。 SQL Server 2019 支持上述服务。
++ SQL Server 2017 中的 [Always On 故障转移群集实例 (FCI)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 不支持  安装机器学习服务。 SQL Server 2019 及更高版本支持上述服务。
  
 + 不要在域控制器上安装机器学习服务。 安装程序的机器学习服务部分将失败。
 

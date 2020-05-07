@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f9203423267f68137e11203be60ffa4d0e0c3e41
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 379b9e74388b9cedad55e3263c823c3d9d276286
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296899"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588161"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>群集中的 Integration Services (SSIS)
 
@@ -128,7 +128,7 @@ ms.locfileid: "71296899"
   
 4.  将 **StorePath** 元素的值更改为上一步骤中在共享磁盘上所创建的 **Packages** 文件夹的完全限定路径。  
   
-5.  将注册表中的 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** 值更新为共享磁盘上服务配置文件的完全限定路径和文件名。  
+5.  在每个节点上，将注册表中的 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile  值更新为共享磁盘上服务配置文件的完全限定路径和文件名。  
   
 ### <a name="to-bring-the-integration-services-service-online"></a>将 Integration Services 服务联机  
   

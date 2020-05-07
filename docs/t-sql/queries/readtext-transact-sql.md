@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8fde97db271ccd0307d0af75ea0c7d4aacad9703
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 75b459554382b3bc7f73d6b3554a5ba10bf5294a
+ms.sourcegitcommit: 69f93dd1afc0df76c3b4d9203adae0ad7dbd7bb2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634801"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82598733"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ READTEXT 权限默认授予对指定的表具有 SELECT 权限的用户。 可�
 以下示例读取 `pub_info` 表中 `pr_info` 列的第 2 个至第 26 个字符。  
   
 > [!NOTE]  
->  若要运行此示例，必须安装 pubs 示例数据库  。  
+>  若要运行此示例，必须安装 [pubs](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases)  示例数据库。  
   
 ```  
 USE pubs;  

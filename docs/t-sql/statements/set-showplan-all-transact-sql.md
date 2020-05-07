@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d9e7712128269033a8391169063cf205f40208c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c1daa0270987a558b98e6a42e4f9498c56bfd6ef
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634275"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220352"
 ---
 # <a name="set-showplan_all-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,9 +50,9 @@ SET SHOWPLAN_ALL { ON | OFF }
 ## <a name="remarks"></a>备注  
  SET SHOWPLAN_ALL 的设置是在执行或运行时设置，而不是在分析时设置。  
   
- 如果 SET SHOWPLAN_ALL 为 ON，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回每个语句的执行信息但不执行语句。[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句不会被执行。 在将此选项设置为 ON 后，将始终返回有关所有后续 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的信息，直到将该选项设置为 OFF 为止。 例如，如果在 SET SHOWPLAN_ALL 为 ON 时执行 CREATE TABLE 语句，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将从涉及同一个表的后续 SELECT 语句返回错误信息，告知用户指定的表不存在。 因此，对此表的后续引用将失败。 如果 SET SHOWPLAN_ALL 为 OFF，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将执行语句，但不生成报表。  
+ 如果 `SET SHOWPLAN_ALL` 为 ON，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回每个语句的执行信息但不执行语句，并且 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句不会执行。 在将此选项设置为 ON 后，将始终返回有关所有后续 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的信息，直到将该选项设置为 OFF 为止。 例如，如果在 `SET SHOWPLAN_ALL` 为 ON 时执行 CREATE TABLE 语句，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将从涉及同一个表的后续 SELECT 语句返回错误信息，告知用户指定的表不存在。 因此，对此表的后续引用将失败。 如果 SET SHOWPLAN_ALL 为 OFF，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将执行语句，但不生成报表。  
   
- SET SHOWPLAN_ALL 是供为处理其输出而编写的应用程序使用的。 使用 SET SHOWPLAN_TEXT，可以为 Microsoft Win32 命令提示符应用程序（如 **osql** 实用工具）返回可读取的输出。  
+ `SET SHOWPLAN_ALL` 是供为处理其输出而编写的应用程序使用的。 使用 SET SHOWPLAN_TEXT，可以为 Microsoft Win32 命令提示符应用程序（如 **osql** 实用工具）返回可读取的输出。  
   
  不能在存储过程内指定 SET SHOWPLAN_TEXT 和 SET SHOWPLAN_ALL，它们必须是批处理中的唯一语句。  
   
@@ -74,8 +74,8 @@ SET SHOWPLAN_ALL { ON | OFF }
 |**AvgRowSize**|通过此运算符传递的行的预计平均行大小（以字节为单位）。|  
 |**TotalSubtreeCost**|此操作和所有子操作的预计（累积）开销*。|  
 |**OutputList**|包含当前操作正在提取的列的列表，此列表以逗号分隔。|  
-|**警告**|包含一组以逗号分隔的与当前操作相关的警告信息。 警告消息可能包含字符串 "NO STATS:()" 和一组列表。 此警告信息表示查询优化器曾尝试根据此列的统计信息做出决策，但没有找到可用的统计信息。 因此，查询优化器不得不进行推测，这可能已导致选择了低效的查询计划。 有关创建或更新列统计信息（这些统计信息有助于查询优化器选择更有效的查询计划）的详细信息，请参阅 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)。 此列可能选择包含字符串 MISSING JOIN PREDICATE，表示正在进行的联接（与表有关）未使用联接谓词。 意外丢失联接谓词可能导致查询的运行时间比预期长得多，并返回一个巨大的结果集。 如果出现此警告，请验证是否有意不使用联接谓词。|  
-|类型 |节点类型。 对于每个查询的父节点，这是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句类型（如 SELECT、INSERT、EXECUTE 等）。 对于表示执行计划的子节点，这是 PLAN_ROW 类型。|  
+|**:::no-loc text="Warnings":::**|包含一组以逗号分隔的与当前操作相关的警告信息。 警告消息可能包含字符串 "NO STATS:()" 和一组列表。 此警告信息表示查询优化器曾尝试根据此列的统计信息做出决策，但没有找到可用的统计信息。 因此，查询优化器不得不进行推测，这可能已导致选择了低效的查询计划。 有关创建或更新列统计信息（这些统计信息有助于查询优化器选择更有效的查询计划）的详细信息，请参阅 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)。 此列可能选择包含字符串 MISSING JOIN PREDICATE，表示正在进行的联接（与表有关）未使用联接谓词。 意外丢失联接谓词可能导致查询的运行时间比预期长得多，并返回一个巨大的结果集。 如果出现此警告，请验证是否有意不使用联接谓词。|  
+|**:::no-loc text="Type":::**|节点类型。 对于每个查询的父节点，这是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句类型（如 SELECT、INSERT、EXECUTE 等）。 对于表示执行计划的子节点，这是 PLAN_ROW 类型。|  
 |**Parallel**|**0** = 运算符没有以并行方式运行。<br /><br /> **1** = 运算符正在以并行方式运行。|  
 |**EstimateExecutions**|当前查询运行期间，预计将执行此运算符的次数。|  
 |||
@@ -91,7 +91,7 @@ SET SHOWPLAN_ALL { ON | OFF }
   
 -   对于包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句引用的对象（如表、视图等）的所有数据库，具有 SHOWPLAN 权限。  
   
- 对于其他所有语句，如 DDL、USE database_name、SET、DECLARE、动态 SQL 等，只需要具有执行  *语句的相应权限*[!INCLUDE[tsql](../../includes/tsql-md.md)]。  
+ 对于其他所有语句，如 DDL、USE database_name、SET、DECLARE、动态 SQL 等，只需要具有执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的相应权限  。  
   
 ## <a name="examples"></a>示例  
  下面两个语句使用了 SET SHOWPLAN_ALL 设置，以显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在查询中分析和优化索引的方法。  

@@ -1,5 +1,6 @@
 ---
 title: 部分备份 (SQL Server) | Microsoft Docs
+description: SQL Server 中的部分备份包含主文件组、所有读写文件组以及（可选）一个或多个只读文件中的数据。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fe6b6bb1-38d0-46c4-bab8-31df14e8999c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a2c265d3a373eb53b822142fa2955d07b96b88f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7f37c55278762a30314d2ece3c631c84f0ab777a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68033653"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180157"
 ---
 # <a name="partial-backups-sql-server"></a>部分备份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

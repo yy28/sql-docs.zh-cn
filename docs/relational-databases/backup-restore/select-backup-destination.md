@@ -1,5 +1,6 @@
 ---
 title: 选择备份目标 | Microsoft Docs
+description: 对于 SQL Server 还原，使用“选择备份目标”对话框可以选择磁盘或逻辑备份设备作为备份目标。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: f79e824b-1525-45de-8ede-513563af41b6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4bc7ed2ad628e404cd13da1760e74ee8d0a5850d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3aea62a27635e5d923edd26936480d5d9ff9a37a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68041448"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180675"
 ---
 # <a name="select-backup-destination"></a>选择备份目标
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "68041448"
 |||  
 |-|-|  
 |**磁带机**|选择此选项，以从与运行服务器实例的计算机建立了物理连接的磁带机列表中选择磁带机作为备份目标。<br /><br /> 注意：远程计算机中的磁带备份设备不是有效的备份目标。|  
-|**备份设备**|选择此选项以选择现有的逻辑备份设备。 这些逻辑备份设备对应于与运行服务器实例的计算机建立了物理连接的磁带机。<br /><br /> 注意：有关如何创建磁带备份设备的详细信息，请参阅[为磁带驱动器定义逻辑备份设备 (SQL Server)](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)。|  
+|**备份设备**|选择此选项以选择现有的逻辑备份设备。 这些逻辑备份设备对应于与运行服务器实例的计算机建立了物理连接的磁带机。<br /><br /> 注意：有关如何创建磁带备份设备的详细信息，请参阅[为磁带驱动器定义逻辑备份设备 &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)。|  
   
 ## <a name="see-also"></a>另请参阅  
  [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)   

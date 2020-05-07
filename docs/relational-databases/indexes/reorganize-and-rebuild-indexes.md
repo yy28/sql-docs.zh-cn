@@ -32,12 +32,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: faf62599a54c4c1a58b33066e69cf3b2e8698b70
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 4fee0e8af2e4d556e388fc72086286d4a21184a8
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138135"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220712"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>通过重新组织或重新生成索引来解决索引碎片问题
 
@@ -57,6 +57,9 @@ ms.locfileid: "82138135"
 
 决定使用哪种索引碎片整理方法的第一步是分析索引以确定碎片程度。 对于行存储索引和列存储索引，检测碎片的方式不同。
 
+> [!NOTE]
+> 删除大量数据之后检查索引或堆碎片尤其重要。 对于堆，如果频繁进行更新，则可能也需要检查碎片以避免前推记录激增。 有关堆的详细信息，请参阅[堆（没有聚集索引的表）](../../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)。 
+
 ### <a name="detecting-fragmentation-of-rowstore-indexes"></a>检测行存储索引中的碎片
 
 通过使用 [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)，可以检测特定索引中的碎片、表或索引视图上的所有索引、某个数据库中的所有索引或所有数据库中的所有索引。 对于已分区索引， **sys.dm_db_index_physical_stats** 还提供每个分区的碎片信息。
@@ -73,18 +76,22 @@ sys.dm_db_index_physical_stats 返回的结果集包含以下列  ：
 
 |**avg_fragmentation_in_percent** 值|修复语句|
 |-----------------------------------------------|--------------------------|
-|> 5% 且 < = 30%|ALTER INDEX REORGANIZE|
-|> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>1</sup>|
+|> 5% 且 < = 30% <sup>1</sup>|ALTER INDEX REORGANIZE|
+|> 30% <sup>1</sup>|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>2</sup>|
 
-<sup>1</sup> 重新生成索引可以联机执行，也可以脱机执行。 重新组织索引始终联机执行。 若要获得与重新组织选项相似的可用性，应联机重新生成索引。 有关详细信息，请参阅 [INDEX](#rebuild-an-index) 和[联机执行索引操作](../../relational-databases/indexes/perform-index-operations-online.md)。
+<sup>1</sup> 这些值提供了一个大致指导原则，用于确定应在 `ALTER INDEX REORGANIZE` 和 `ALTER INDEX REBUILD` 之间进行切换的点。 不过，实际值可能会随情况而变化。 必须要通过试验来确定最适合您环境的阈值。      
 
-这些值提供了一个大致指导原则，用于确定应在 `ALTER INDEX REORGANIZE` 和 `ALTER INDEX REBUILD` 之间进行切换的点。 不过，实际值可能会随情况而变化。 必须要通过试验来确定最适合您环境的阈值。 例如，如果给定索引主要用于扫描操作，则删除碎片可以提高这些操作的性能。 对于主要用于查找操作的索引，性能优势不太明显。 同样，删除堆中的碎片（不包含聚集索引的表）对于非聚集索引扫描操作特别有用，但在查找操作中不起作用。
+> [!TIP] 
+> 例如，如果给定索引主要用于扫描操作，则删除碎片可以提高这些操作的性能。 对于主要用于查找操作的索引，性能优势可能不太明显。    
+同样，删除堆中的碎片（不包含聚集索引的表）对于非聚集索引扫描操作特别有用，但在查找操作中不起作用。
 
-无需对碎片或小于 5% 的索引进行碎片整理，因为删除如此少量的碎片所获得的收益始终几乎远低于重新组织或重新生成索引的 CPU 成本。 此外，重新生成或重新组织小型行存储索引通常不会减少实际的碎片。 小索引的页面有关存储在混合盘区中。 混合区最多可由八个对象共享，因此在重新组织或重新生成小索引之后可能不会减少小索引中的碎片。 还可参阅[有关重新生成行存储索引的注意事项](#considerations-specific-to-rebuilding-rowstore-indexes)。
+<sup>2</sup> 重新生成索引可以联机执行，也可以脱机执行。 重新组织索引始终联机执行。 若要获得与重新组织选项相似的可用性，应联机重新生成索引。 有关详细信息，请参阅 [INDEX](#rebuild-an-index) 和[联机执行索引操作](../../relational-databases/indexes/perform-index-operations-online.md)。
+
+无需对碎片或小于 5% 的索引进行碎片整理，因为删除如此少量的碎片所获得的收益始终几乎远低于重新组织或重新生成索引的 CPU 成本。 此外，重新生成或重新组织小型行存储索引通常不会减少实际的碎片。 直到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]（含），[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 都使用混合盘区分配空间。 因此，小索引的页面有时存储在混合盘区中。 混合区最多可由八个对象共享，因此在重新组织或重新生成小索引之后可能不会减少小索引中的碎片。 还可参阅[有关重新生成行存储索引的注意事项](#considerations-specific-to-rebuilding-rowstore-indexes)。 有关盘区的详细信息，请参阅[页和盘区体系结构指南](../../relational-databases/pages-and-extents-architecture-guide.md#extents)。
 
 ### <a name="detecting-fragmentation-of-columnstore-indexes"></a>检测列存储索引中的碎片
 
-通过使用 [sys.dm_db_column_store_row_group_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)，可以确定索引中已删除行所占的百分比，这可以很好地度量列存储索引的行组中的碎片。 使用此类信息，可以计算特定索引、表中所有索引、数据库中所有索引或所有数据库中全部索引上的碎片。
+通过使用 [sys.dm_db_column_store_row_group_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)，可以确定索引中已删除行所占的百分比，这可以合理地度量列存储索引的行组中的碎片。 使用此类信息，可以计算特定索引、表中所有索引、数据库中所有索引或所有数据库中全部索引上的碎片。
 
 sys.dm_db_column_store_row_group_physical_stats 返回的结果集包含以下列  ：
 

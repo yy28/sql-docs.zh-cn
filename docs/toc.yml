@@ -10051,6 +10051,8 @@
       href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
 - name: 资源
   items:
+    - name: 脱机 SQL Server 文档
+      href: sql-server/sql-server-offline-documentation.md
     - name: 了解
       items:
         - name: 教育资源
@@ -10101,13 +10103,8 @@
           href: sql-server/partner-management-sql-server.md
         - name: 开发
           href: sql-server/partner-dev-sql-server.md
-    - name: 脱机 SQL Server 文档
-      href: sql-server/sql-server-offline-documentation.md
 - name: 参考
   items:
-    - name: 已存档内容 (SQL 2005-2012) >
-      displayName: '2005, 2008, 2008 r2, 2012, previous-versions'
-      href: 'https://docs.microsoft.com/previous-versions/sql/'
     - name: 数据库示例
       items:
         - name: 示例概述

@@ -38,12 +38,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4c6c89602f55eb72c01d32a2541bcf4c775b9a9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da4f6e997d3f99e9c64c7623a616fe5d45c283db
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78176687"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82169365"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -203,7 +203,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  SET **@** _variable_ = *column* = *expression* 将变量设置为与列相同的值。 这与 SET **@** _variable_ = _column_, _column_ = _expression_ 不同，后者将变量设置为列更新前的值。  
   
  \<OUTPUT_Clause>  
- 在 UPDATE 操作中，返回更新后的数据或基于更新后的数据的表达式。 针对远程表或视图的任何 DML 语句都不支持 OUTPUT 子句。 有关详细信息，请参阅 [OUTPUT 子句 (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md)。  
+ 在 UPDATE 操作中，返回更新后的数据或基于更新后的数据的表达式。 针对远程表或视图的任何 DML 语句都不支持 OUTPUT 子句。 有关该子句的参数和行为的详细信息，请参阅 [OUTPUT 子句 (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md)。  
   
  FROM \<table_source>  
  指定将表、视图或派生表源用于为更新操作提供条件。 有关详细信息，请参阅 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)。  

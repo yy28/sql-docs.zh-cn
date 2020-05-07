@@ -1,5 +1,6 @@
 ---
 title: 联机还原：只读文件（简单恢复模式）
+description: 此示例演示对于使用简单恢复模式以及多个文件组的数据库，如何在 SQL Server 中对只读文件执行联机还原。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 0c691fc6-9865-46a7-b055-8097424492d6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c4a3f311cc870331db030b5caf7191c9b6f91a28
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b032e7737a837ee6b453340fbd52bcbee072e65f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75243719"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179112"
 ---
-# <a name="example-online-restore-of-a-read-only-file-simple-recovery-model"></a>示例：联机还原只读文件（简单恢复模式）
+# <a name="example-online-restore-of-a-read-only-file-simple-recovery-model"></a>示例：只读文件的联机还原（简单恢复模式）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主题针对采用简单恢复模式并包含只读文件组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。 在简单恢复模式下，如果某个文件在最后一次变为只读时进行了备份，则可以联机还原该只读文件。  

@@ -1,5 +1,6 @@
 ---
 title: 设备内容 (SQL Server) | Microsoft Docs
+description: 在 SQL Server 中，使用“设备内容”对话框可查看描述设备、媒体、媒体集以及备份集的备份信息。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ecddec60e1a0fd30d28bfae52a5fef29a6425fbf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c9819b7853121c006180d0a988dbc83e905505f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68068494"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179179"
 ---
 # <a name="device-contents-sql-server"></a>设备内容 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,14 +58,14 @@ ms.locfileid: "68068494"
 |标头|值|  
 |------------|------------|  
 |**名称**|备份集的名称。|  
-|类型 |执行的备份类型：完整备份、差异备份或事务日志备份。|  
-|组件 |已备份的组件：数据库、文件或 *\<blank>* （用于事务日志）。|  
+|类型 |执行的备份类型：“完整”、“差异”或“事务日志”。|  
+|组件 |备份组件：数据库、文件或 \<空白>（对于事务日志）  。|  
 |**Server**|执行备份操作的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例名。|  
 |**Database**|已备份数据库的名称。|  
 |**位置**|备份集在卷中的位置。|  
 |**Date**|备份操作完成的日期和时间，按客户端的区域设置显示。|  
 |**大小**|备份集的大小（字节）。|  
-|**用户名**|{1}执行备份操作的用户的名称。{2}|  
+|**用户名**|执行备份操作的用户的名称。|  
 |**过期日期**|备份集的过期日期和时间。|  
   
 ## <a name="see-also"></a>另请参阅  

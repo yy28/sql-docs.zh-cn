@@ -1,5 +1,6 @@
 ---
 title: 还原数据库：差异
+description: 本文演示如何使用 SQL Server Management Studio 或 Transact-SQL 在 SQL Server 中还原差异数据库备份。
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d9114879622ea6d856e890a4f248ea1bc9a5d522
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fa40bde370ecb36cb268432ddd1273e23f1be191
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75253492"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180817"
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>还原差异数据库备份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +93,7 @@ ms.locfileid: "75253492"
   
          将所需设备添加到 **“备份介质”** 列表框后，单击 **“确定”** 返回到 **“常规”** 页。  
   
-         在 **“源: 设备: 数据库”** 列表框中，选择应还原的数据库名称。  
+         在“源:设备:数据库”列表框中，选择应还原的数据库名称 **。**  
   
          **注意** ：此列表仅在选择了 **“设备”** 时才可用。 只有在所选设备上具有备份的数据库才可用。  
   
@@ -139,7 +140,7 @@ ms.locfileid: "75253492"
   
 #### <a name="to-restore-a-differential-database-backup"></a>还原差异数据库备份  
   
-1.  执行 RESTORE DATABASE 语句并指定 NORECOVERY 子句，以还原在差异数据库备份之前执行的完整数据库备份。 有关详细信息，请参阅 [如何还原完整备份](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)。  
+1.  执行 RESTORE DATABASE 语句并指定 NORECOVERY 子句，以还原在差异数据库备份之前执行的完整数据库备份。 有关详细信息，请参阅[操作说明：还原完整备份](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)。  
   
 2.  执行 RESTORE DATABASE 语句以还原差异数据库备份，同时指定：  
   

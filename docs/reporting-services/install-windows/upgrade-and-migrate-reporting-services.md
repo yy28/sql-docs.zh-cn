@@ -10,36 +10,39 @@ helpviewer_keywords:
 author: maggiesMSFT
 ms.author: maggies
 ms.topic: conceptual
-ms.date: 08/17/2017
-ms.openlocfilehash: 0d0484552bc489231c83062ec00aa4e9f73dcb90
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.date: 05/01/2020
+ms.openlocfilehash: ca9ffd01b7553cb343a83565615a786467371891
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487256"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719523"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-  本主题概述 SQL Server Reporting Services 的升级和迁移选项。 有两种用于升级 SQL Server Reporting Services 部署的常规方法：  
+  本主题概述 SQL Server Reporting Services 的升级和迁移选项。 有几种用于升级 SQL Server Reporting Services 部署的常规方法：  
  
--   **升级：** 升级服务器和实例上当前安装的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件。 这通常称为“就地”升级。 对于从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器的一种模式升级到另一模式，不支持就地升级。 例如，不能将本机模式报表服务器升级到 SharePoint 模式报表服务器。 您可以将报表项从一个模式迁移到另一个模式。 有关详细信息，请参阅本文后面的“本机到 SharePoint 迁移”部分。  
+- 从 Reporting Services 2016 及更低版本升级到 Reporting Services 2016 及更低版本   ：升级服务器和实例上当前安装的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件。 这通常称为“就地”升级。 对于从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器的一种模式升级到另一模式，不支持就地升级。 例如，不能将本机模式报表服务器升级到 SharePoint 模式报表服务器。 您可以将报表项从一个模式迁移到另一个模式。 有关详细信息，请参阅本文档后面的 [SharePoint 模式升级和迁移方案](#bkmk_sharePoint_scenarios)部分。  
+
+- 从 Reporting Services 2016 及更低版本升级到 Reporting Services 2017 及更高版本是与以前版本中不同的升级方案   。 升级到 Reporting Services 2016 及更低版本时  ，可以使用 SQL Server 安装介质执行就地升级过程。 从 Reporting Services 2016 及更低版本升级到 Reporting Services 2017 及更高版时   ，无法执行相同的步骤，因为新的 Reporting Services 安装是独立产品。 它不再是 SQL Server 安装介质的一部分。 
+
+    若要从 Reporting Services 2016 及更低版本升级到 Reporting Services 2017 及更高版本，请遵循[迁移 Reporting Services 安装（本机模式）](migrate-a-reporting-services-installation-native-mode.md)一文（将 Reporting Services 2017 或更高版本作为目标实例）。 
+
+- 从 Reporting Services 2017 升级到未来版本同样是就地升级方案，因为产品安装 GUID 相同  。 运行 SQLServerReportingServices.exe 安装文件以在当前安装 Reporting Services 的服务器上开始就地升级。
   
--   **迁移**：安装并配置新 SharePoint 环境，并将报表项和资源复制到此新环境中，然后将此环境配置为使用现有内容。 迁移的较低级别形式是复制 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据库、配置文件，如果使用的是 SharePoint 模式，则还包括复制 SharePoint 内容数据库。  
-    
-> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式
+- **迁移**：安装并配置新 SharePoint 环境，并将报表项和资源复制到此新环境中，然后将此环境配置为使用现有内容。 迁移的较低级别形式是复制 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据库、配置文件，如果使用的是 SharePoint 模式，则还包括复制 SharePoint 内容数据库。  
+
 
 > [!NOTE]
-> 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
+> 自 SQL Server 2016 之后，不提供 Reporting Services 与 SharePoint 的集成这一功能。
    
 ##  <a name="known-upgrade-issues-and-best-practices"></a><a name="bkmk_known_issues"></a> 已知的升级问题和最佳做法  
  有关可以升级的受支持版本的详细列表，请参阅 [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。  
   
 > [!TIP]  
->  有关 SQL Server 的问题相关的最新信息，请参阅以下内容：  
->   
->  -   [SQL Server 2016 发行说明](https://go.microsoft.com/fwlink/?LinkID=398124)。  
+>  有关 SQL Server 的问题相关的最新信息，请参阅 [SQL Server 2016 发行说明](https://go.microsoft.com/fwlink/?LinkID=398124)。  
   
   
 ##  <a name="side-by-side-installations"></a><a name="bkmk_side_by_side"></a> 并行安装  

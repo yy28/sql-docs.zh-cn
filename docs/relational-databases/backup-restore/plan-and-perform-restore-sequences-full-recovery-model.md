@@ -1,5 +1,6 @@
 ---
 title: 还原顺序（完整恢复模式）| Microsoft Docs
+description: 了解如何为通常使用完整恢复模式的 SQL Server 数据库计划和执行还原顺序（由 RESTORE 语句组成）。
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 81f8e91f2179fdc0b11747714ab810b801dc5389
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc9a06ed8df330e6129f28260e5ef21890e98976
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258657"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180201"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>计划和执行还原顺序（完整恢复模式）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

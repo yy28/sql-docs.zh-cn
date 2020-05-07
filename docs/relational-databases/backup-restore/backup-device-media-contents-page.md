@@ -1,5 +1,6 @@
 ---
 title: 备份设备（“介质内容”页）| Microsoft Docs
+description: 使用“备份设备”对话框可以查看备份信息。 此信息描述设备、介质、介质集以及备份集。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c877ffb5bb15836f21a6a37c7cd8ccb22b27cc10
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 90d6fdb147e6f7b40a9e8072a5c2836bd4e40bcd
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67987760"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220502"
 ---
 # <a name="backup-device-media-contents-page"></a>备份设备（“介质内容”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,14 +60,14 @@ ms.locfileid: "67987760"
 |标头|值|  
 |------------|------------|  
 |**名称**|备份集的名称。|  
-|类型 |备份对象：数据库、文件或 *\<blank>* （用于事务日志）。|  
-|组件 |执行的备份类型：完整备份、差异备份或事务日志备份。|  
+|类型 |备份对象：数据库、文件或 \<空白>（对于事务日志）  。|  
+|组件 |执行的备份类型：“完整”、“差异”或“事务日志”。|  
 |**Server**|执行备份操作的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例名。|  
 |**Database**|已备份数据库的名称。|  
 |**位置**|备份集在卷中的位置。|  
 |**Date**|备份操作完成的日期和时间，按客户端的区域设置显示。|  
 |**大小**|备份集的大小（字节）。|  
-|**用户名**|{1}执行备份操作的用户的名称。{2}|  
+|**用户名**|执行备份操作的用户的名称。|  
 |**过期日期**|备份集的过期日期和时间。|  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  

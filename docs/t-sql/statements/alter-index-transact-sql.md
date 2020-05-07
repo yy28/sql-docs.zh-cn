@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad10e1d576d1751de10e433420fe3df6106c7ee4
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 82fb30a374ea9ac4cdabf0ab5f7b4d8eefb8f4c4
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138278"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588226"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -257,10 +257,13 @@ PARTITION
  对行存储  索引执行 REORGANIZE  
  对于行存储索引，REORGANIZE 指定要重新组织索引叶级别。 REORGANIZE 操作：  
   
--   始终联机执行。 这意味着不保留长期阻塞的表锁，且对基础表的查询或更新可以在 ALTER INDEX REORGANIZE 事务处理期间继续。  
--   不允许用于禁用的索引  
--   在 ALLOW_PAGE_LOCKS 设置为 OFF 时不允许执行  
--   当在事务中执行而事务回滚时不会回滚。  
+-   始终联机执行。 这意味着不保留长期阻塞的表锁，且对基础表的查询或更新可以在 ALTER INDEX REORGANIZE 事务处理期间继续。
+-   不允许用于禁用的索引。
+-   在 ALLOW_PAGE_LOCKS 设置为 OFF 时不允许执行。
+-   当在事务中执行而事务回滚时不会回滚。
+
+> [!NOTE]
+> 当 ALTER INDEX REORGANIZE 使用显式事务（例如，BEGIN TRAN ...COMMIT/ROLLBACK 中的 ALTER INDEX）而不是默认隐式事务模式时，REORGANIZE 的锁定行为会变得更加严格，这可能会导致阻塞。 有关隐式事务的详细信息，请参阅 [SET IMPLICIT_TRANSACTIONS (Transact-SQL)](../../t-sql/statements/set-implicit-transactions-transact-sql.md)。
 
 有关详细信息，请参阅 [重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。 
 

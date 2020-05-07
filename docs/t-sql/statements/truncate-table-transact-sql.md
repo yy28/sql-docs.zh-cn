@@ -25,12 +25,12 @@ ms.assetid: 3d544eed-3993-4055-983d-ea334f8c5c58
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8fea00776176f66f53ec8f20d2420980ba5c0b06
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 078a6b8ebdef8604c4023f6e652f5f431ee59d5b
+ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635454"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643366"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,10 +71,10 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  *table_name*  
  要截断的表的名称，或要删除其全部行的表的名称。 table_name 须是文本。  table_name 不能是 OBJECT_ID() 函数或变量。    
   
- WITH ( PARTITIONS ( { \<partition_number_expression> | \<range> } [ , ...n ] ) )    
+ WITH ( PARTITIONS ( { \<partition_number_expression> | \<range> } [ , ...n ] ) )      
 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)） 
   
- 指定要截断或删除其中所有行的分区。 如果表未分区，则 WITH PARTITIONS 参数会生成错误。  如果未提供 WITH PARTITIONS 子句，则整个表都将被截断。   
+ 指定要截断或删除其中所有行的分区。 如果未对表进行分区，则 `WITH PARTITIONS` 参数将生成错误。 如果未提供 `WITH PARTITIONS` 子句，则整个表都将被截断。  
   
  可以按以下方式指定 \<partition_number_expression>：  
   
@@ -84,37 +84,44 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
 -   同时提供范围和单独分区，例如：`WITH (PARTITIONS (2, 4, 6 TO 8))`  
   
--   \<range> 可指定为由单词 TO 隔开的分区号，例如：`WITH (PARTITIONS (6 TO 8))`    
+-   \<range> 可指定为由单词 TO 隔开的分区号，例如：`WITH (PARTITIONS (6 TO 8))`   
   
  要截断一个已分区表，表和索引必须对齐（在同一个分区函数上进行分区）。  
   
 ## <a name="remarks"></a>备注  
- 与 DELETE 语句相比，TRUNCATE TABLE 具有以下优点：  
+ 与 DELETE 语句相比，`TRUNCATE TABLE` 具有以下优点：  
   
 -   所用的事务日志空间较少。  
   
-     DELETE 语句每次删除一行，并在事务日志中为所删除的每行记录一个项。 TRUNCATE TABLE 通过释放用于存储表数据的数据页删除数据，且仅在事务日志中记录页释放。  
+     DELETE 语句每次删除一行，并在事务日志中为所删除的每行记录一个项。 `TRUNCATE TABLE` 通过释放用于存储表数据的数据页删除数据，且仅在事务日志中记录页释放。  
   
 -   使用的锁通常较少。  
   
-     当使用行锁执行 DELETE 语句时，将锁定表中各行以便删除。 TRUNCATE TABLE 始终锁定表（包含架构 (SCH-M) 锁）和页，而不是锁定各行。  
+     当使用行锁执行 DELETE 语句时，将锁定表中各行以便删除。 `TRUNCATE TABLE` 始终锁定表（包含架构 (SCH-M) 锁）和页，而不是锁定各行。  
   
 -   如无例外，在表中不会留有任何页。  
   
      执行 DELETE 语句后，表仍会包含空页。 例如，必须至少使用一个排他 (LCK_M_X) 表锁，才能释放堆中的空表。 如果执行删除操作时没有使用表锁，表（堆）中将包含许多空页。 对于索引，删除操作会留下一些空页，尽管这些页会通过后台清除进程迅速释放。  
   
- TRUNCATE TABLE 删除表中的所有行，但表结构及其列、约束、索引等保持不变。 若要删除表定义及其数据，请使用 DROP TABLE 语句。  
+ `TRUNCATE TABLE` 删除表中的所有行，但表结构及其列、约束、索引等保持不变。 若要删除表定义及其数据，请使用 `DROP TABLE` 语句。  
   
  如果表包含标识列，该列的计数器重置为该列定义的种子值。 如果未定义种子，则使用默认值 1。 若要保留标识计数器，请使用 DELETE。  
+ 
+ > [!NOTE]
+ > `TRUNCATE TABLE` 操作可以回滚。
   
 ## <a name="restrictions"></a>限制  
- 不能对以下表使用 TRUNCATE TABLE：  
+ 不能对以下表使用 `TRUNCATE TABLE`：  
   
--   由 FOREIGN KEY 约束引用的表。 （您可以截断具有引用自身的外键的表。）  
+-   由 FOREIGN KEY 约束引用的表。 可以截断具有引用自身的外键的表。 
   
 -   参与索引视图的表。  
   
 -   通过使用事务复制或合并复制发布的表。  
+
+-   系统版本控制时态表。
+
+-   由 EDGE 约束引用的表。  
   
  对于具有以上一个或多个特征的表，请使用 DELETE 语句。  
   
@@ -122,15 +129,15 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  
  在 [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[sspdw](../../includes/sspdw-md.md)] 中：
 
-- TRUNCATE TABLE 不可出现在 EXPLAIN 语句中。
+- `TRUNCATE TABLE` 不可出现在 EXPLAIN 语句中。
 
-- TRUNCATE TABLE 不可在事务内部运行。
+- `TRUNCATE TABLE` 不可在事务内部运行。
   
 ## <a name="truncating-large-tables"></a>截断大型表  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 能够删除或截断超过 128 个区的表，而无需同步锁定所有需删除的区。  
   
 ## <a name="permissions"></a>权限  
- 所需的最低权限是 table_name 上的 ALTER 权限。  TRUNCATE TABLE 权限默认授予表所有者、sysadmin 固定服务器角色的成员、db_owner 和 db_ddladmin 固定数据库角色的成员，并且不可转移权限。 但是，可以在诸如存储过程这样的模块中加入 TRUNCATE TABLE 语句，然后为使用 EXECUTE AS 子句的模块授予适当的权限。  
+ 所需的最低权限是 table_name  上的 `ALTER` 权限。 默认情况下，将 `TRUNCATE TABLE` 权限授予表所有者、`sysadmin` 固定服务器角色成员、`db_owner` 和 `db_ddladmin` 固定数据库角色成员，并且该权限不可转移。 但是，可以在诸如存储过程这样的模块中加入 `TRUNCATE TABLE` 语句，然后为使用 `EXECUTE AS` 子句的模块授予适当的权限。  
   
 ## <a name="examples"></a>示例  
   

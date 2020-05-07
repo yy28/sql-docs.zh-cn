@@ -1,5 +1,6 @@
 ---
 title: 备份文件和文件组 | Microsoft Docs
+description: 本文介绍如何使用 SQL Server Management Studio、Transact-SQL 或 PowerShell 在 SQL Server 中备份文件和文件组。
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cf87d09eed5b955c1773c46270f25cb0a2d57eaa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 48d0581df76c6f6b5c4cd291981cf01e13f5eb79
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71708687"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220598"
 ---
 # <a name="back-up-files-and-filegroups"></a>备份文件和文件组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

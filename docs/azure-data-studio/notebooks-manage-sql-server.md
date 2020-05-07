@@ -1,6 +1,6 @@
 ---
-title: 管理 SQL Server 笔记本
-description: 了解如何管理 Azure Data Studio 中的笔记本。 包括打开笔记本、保存笔记本和更改大数据群集连接。
+title: 如何管理笔记本
+description: 了解如何管理 Azure Data Studio 中的笔记本。 这包括打开笔记本、保存笔记本和更改 SQL 连接或 Python 内核。
 author: markingmyname
 ms.author: maghan
 ms.reviewer: achatter, alayu, mikeray
@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.custom: ''
-ms.date: 03/30/2020
-ms.openlocfilehash: 9b071a9d1b9e770e1443e5df539208baa4399a30
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.date: 04/27/2020
+ms.openlocfilehash: 435290bd45e79c835ba134bb732f1672dc31c2cf
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531590"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82178693"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>如何管理 Azure Data Studio 中的笔记本
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文介绍如何使用 SQL Server 在 Azure Data Studio 中打开和保存笔记本文件。 还演示了如何更改与 SQL Server 的连接。
+本文介绍如何在 Azure Data Studio 中打开和保存笔记本文件。 还演示了如何更改与 SQL Server 的连接或 Python 内核。
 
 ## <a name="open-a-notebook"></a>打开笔记本
 
@@ -57,9 +57,9 @@ ms.locfileid: "80531590"
 > - “文件”菜单中的“文件保存”、“文件另存为...”和“文件全部保存”命令    。
 > - 在命令面板中  输入的“File:Open”命令。
 
-## <a name="change-the-connection"></a>更改连接
+## <a name="change-the-sql-connection"></a>更改 SQL 连接
 
-更改笔记本的连接：
+更改笔记本的 SQL 连接：
 
 1. 选择笔记本工具栏中的“附加到”菜单，然后选择“更改连接”   。
 
@@ -69,6 +69,31 @@ ms.locfileid: "80531590"
 
    ![选择“附加到”菜单中的服务器](./media/notebooks-manage-sql-server/select-attach-to-2.png)
 
+## <a name="change-the-python-kernel"></a>更改 Python 内核
+
+首次打开 Azure Data Studio 时，将显示“为笔记本配置 Python”  页面。 可以选择以下任一项：
+
+- “新 Python 安装”  ，用于为 Azure Data Studio 安装 Python 的新副本，或是
+- “使用现有 Python 安装”  ，用于指定供 Azure Data Studio 使用的现有 Python 安装的路径
+
+若要查看活动 Python 内核的位置和版本，请创建一个代码单元格，并运行以下 Python 命令：
+
+```python
+import os
+import sys
+print(sys.version_info)
+print(os.path.dirname(sys.executable))
+```
+
+更改为不同的 Python 安装：
+
+1. 在“文件”菜单中，选择“首选项”，然后选择“设置”    。
+1. 在“扩展”下滚动到“笔记本配置”   。
+1. 在“使用现有 Python”下，取消选中“笔记本使用的预先存在的 python 安装的本地路径”选项  。
+1. 重启 Azure Data Studio。
+
+显示“为笔记本配置 Python”  页面时，可以选择创建新 Python 安装或指定现有安装的路径。
+
 ## <a name="next-steps"></a>后续步骤
 
-有关 Azure Data Studio 中的笔记本的详细信息，请参阅[如何在 SQL Server 2019 中使用笔记本](notebooks-guidance.md)。
+有关 Azure Data Studio 中的 SQL 笔记本的详细信息，请参阅[如何在 SQL Server 2019 中使用笔记本](notebooks-guidance.md)。

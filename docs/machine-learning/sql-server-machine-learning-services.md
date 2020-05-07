@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a94a3aea418a4c404b568fe6df7af701bc46de34
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: afce689bffe69de78970006aea51ddd49481e614
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81490746"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220652"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>什么是 SQL Server 机器学习服务（Python 和 R）？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ Python 和 R 的基本分发包含在机器学习服务中。 除了用于 Pytho
 
 ## <a name="python-and-r-versions"></a>Python 和 R 版本
 
-机器学习服务中包含的 Python 和 R 版本取决于使用的 SQL Server 的版本。 
+下面列出每个 SQL Server 版本的机器学习服务中包含的 Python 和 R 版本。
 
 | SQL Server 版本 | Python 版本 | R 版本 |
 |-|-|-|

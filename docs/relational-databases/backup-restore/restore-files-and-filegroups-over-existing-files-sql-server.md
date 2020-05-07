@@ -1,5 +1,6 @@
 ---
 title: 在现有文件上还原文件（和文件组）
+description: 本文演示如何使用 SQL Server Management Studio 或 Transact-SQL 在 SQL Server 中在现有文件上还原文件和文件组。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 517e07eb-9685-4b06-90af-b1cc496700b7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a237383f2bc36aa3e3dd1b74174e5fbdd455920a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b5d477202b26c06ed2507ebd87dc908ad4a845c7
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75241865"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180728"
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>在现有文件上还原文件和文件组 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,15 +92,15 @@ ms.locfileid: "75241865"
     |-----------------|------------|  
     |**还原**|选中的复选框指示要还原的备份集。|  
     |**名称**|备份集的名称。|  
-    |**文件类型**|指定备份中数据的类型： **“数据”** 、 **“日志”** 或 **“Filestream 数据”** 。 包含在表中的数据备份在 **“数据”** 文件中。 事务日志数据备份在 **“日志”** 文件中。 存储在文件系统上的二进制大型对象 (BLOB) 数据备份在 **Filestream 数据** 文件中。|  
-    |类型 |执行的备份类型有： **“完整”** 、 **“差异”** 或 **“事务日志”** 。|  
+    |**文件类型**|指定备份中数据的类型：数据、日志，或 Filestream 数据    。 包含在表中的数据备份在 **“数据”** 文件中。 事务日志数据备份在 **“日志”** 文件中。 存储在文件系统上的二进制大型对象 (BLOB) 数据备份在 **Filestream 数据** 文件中。|  
+    |类型 |执行的备份类型：“完整”、“差异”或“事务日志”    。|  
     |**Server**|执行备份操作的数据库引擎实例的名称。|  
     |**文件逻辑名称**|文件的逻辑名称。|  
     |**Database**|备份操作中涉及的数据库的名称。|  
     |**开始日期**|备份操作开始的日期和时间，按客户端的区域设置显示。|  
     |**完成日期**|备份操作完成的日期和时间，按客户端的区域设置显示。|  
     |**大小**|备份集的大小（字节）。|  
-    |**用户名**|{1}执行备份操作的用户的名称。{2}|  
+    |**用户名**|执行备份操作的用户的名称。|  
   
 6.  在 **“选择页”** 窗格中，单击 **“选项”** 页。  
   

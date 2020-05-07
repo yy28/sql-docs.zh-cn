@@ -1,5 +1,6 @@
 ---
 title: 媒体集、媒体簇和备份集
+description: 本文概述 SQL Server 在备份和恢复中使用的媒体集、媒体簇和备份集。
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod_service: backup-restore
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 168a471a57b3f1d8cd3ea2a5428d8b0bd9063965
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: af54a71c97397954db3a4aa86acccd64a9f8afa4
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258684"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180203"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>介质集、介质簇和备份集 (SQL Server)
 
@@ -52,7 +53,7 @@ ms.locfileid: "75258684"
 ##  <a name="overview-of-media-sets-media-families-and-backup-sets"></a><a name="OvMediaSetsFamiliesBackupSets"></a> 媒体集、媒体簇和备份集概述  
  包含一个或多个备份介质的集合的备份构成一个介质集。 *媒体集* 是 *备份媒体*（磁带或磁盘文件，或者是 Azure Blob）的有序集合，一个或多个备份操作使用固定类型和数量的备份设备向其写入。 给定媒体集使用磁带驱动器，或者使用磁盘驱动器或 Azure Blob，但不能结合使用两者或以上。 
  
-**例如：** 与媒体集相关联的备份设备可能是三个名为 `\\.\TAPE0`、 `\\.\TAPE1`和 `\\.\TAPE2`的磁带驱动器。 该介质集仅包含磁带，最少需要三个磁带（每个磁带机一个磁带）。 备份设备的类型和数量是在创建介质集时建立的，不能更改。 但是，如有必要，可以在备份和还原操作之间将给定设备替换为同一类型的设备。  
+**示例：** 与媒体集相关联的备份设备可能是三个名为 `\\.\TAPE0`、`\\.\TAPE1` 和 `\\.\TAPE2` 的磁带驱动器。 该介质集仅包含磁带，最少需要三个磁带（每个磁带机一个磁带）。 备份设备的类型和数量是在创建介质集时建立的，不能更改。 但是，如有必要，可以在备份和还原操作之间将给定设备替换为同一类型的设备。  
   
  介质集是在备份操作过程中通过格式化备份介质从而在备份介质上创建的。 有关详细信息，请参阅本主题后面的 [创建新介质集](#CreatingMediaSet)。 设置格式后，每个文件或磁带都包含介质集的介质标头，可以开始接收备份内容。 有了标头后，备份操作会将指定数据备份到为该操作指定的所有备份设备中的备份介质。  
   

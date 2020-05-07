@@ -1,5 +1,6 @@
 ---
 title: 将数据库还原到标记的事务
+description: 在对两个或更多相关数据库进行相关更新时，可以在 SQL Server 中使用事务标记将它们恢复到逻辑上一致的点。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bc572ac7e1272274996b13dfb0886427cebc128e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4e251534c777f595b529033cbe9c1f8ea59c6e73
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75247440"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180368"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently"></a>使用标记的事务一致地恢复相关的数据库
 

@@ -1,5 +1,6 @@
 ---
 title: 延迟的事务 (SQL Server) | Microsoft Docs
+description: 如果回滚所需的数据处于脱机状态，则会在 SQL Server Enterprise 中出现延迟的事务。 了解如何将这些事务移出延迟状态。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3cd81ad5125b6822dd59205bad32cb39194712d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 90dc61256f973ce8a16d50b547c0fca41b242465
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075978"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179244"
 ---
 # <a name="deferred-transactions-sql-server"></a>延迟的事务 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +86,7 @@ ms.locfileid: "68075978"
   
          有关紧急模式的信息，请参阅 [Database States](../../relational-databases/databases/database-states.md)。  
   
-    -   然后，通过在以下 DBCC 语句之一中使用 DBCC REPAIR_ALLOW_DATA_LOSS 选项修复数据库： [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)、 [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)或 [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)。  
+    -   然后，通过在以下 DBCC 语句之一中使用 DBCC REPAIR_ALLOW_DATA_LOSS 选项修复数据库：[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)、[DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) 或 [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)。  
   
          在遇到错误的页时，DBCC 将释放该页并修复所有相关错误。 此方法可以使数据库重新联机并处于物理上一致的状态。 但是，还可能会丢失其他数据；因此，应在不得已的情况下才使用此方法。  
   

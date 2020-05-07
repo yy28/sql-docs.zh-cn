@@ -1,5 +1,6 @@
 ---
 title: 还原数据库：简单恢复模式 (Transact-SQL)
+description: 本文演示如何使用 Transact-SQL 在简单恢复模式下还原完整 SQL Server 数据库备份。
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a928fa36-e285-476f-9a7b-6840a8bb7283
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 835f5c6a4571359f750862d3487817a7e11f6503
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 17de83d2f2fc876b25ebdb76ccd21204131d9a9c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244230"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180804"
 ---
 # <a name="restore-a-database-backup-under-the-simple-recovery-model-transact-sql"></a>在简单恢复模式下还原数据库备份 (Transact-SQL)
 

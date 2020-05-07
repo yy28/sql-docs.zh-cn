@@ -1,6 +1,6 @@
 ---
 title: 创建服务器审核和数据库审核规范
-description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL (T-SQL) 创建 SQL Server 审核和数据库审核规范
+description: 了解如何使用 SQL Server Management Studio 或 Transact-SQL (T-SQL) 创建 SQL Server 审核和数据库审核规范。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,41 +16,27 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d9ab1fa97653513d18c43b916ca5bfbc2105e8e7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 55b848cd43e157a9a75670a24aea645c3279f7ea
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557867"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262074"
 ---
-# <a name="create-a-server-audit-and-database-audit-specification"></a>创建服务器审核规范和数据库审核规范
+# <a name="create-a-server-audit-and-database-audit-specification"></a>创建服务器审核和数据库审核规范
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主题介绍如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建服务器审核和数据库审核规范。  
+  本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中创建服务器审核和数据库审核规范。  
   
- “  审核” [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库涉及到跟踪和记录系统中发生的事件。 *SQL Server Audit* 对象收集单个服务器实例或数据库级操作和操作组以进行监视。 这种审核处于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例级别。 每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例可以具有多个审核。 *数据库级别审核规范* 对象属于审核。 针对每个审核，您可以为每个 SQL Server 数据库创建一个数据库审核规范。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
+ 审核 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库涉及到跟踪和记录系统中发生的事件。 SQL Server Audit  对象收集单个服务器级实例或数据库级操作和操作组以进行监视。 这种审核处于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例级别。 每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例可以具有多个审核。 *数据库级别审核规范* 对象属于审核。 针对每个审核，您可以为每个 SQL Server 数据库创建一个数据库审核规范。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
- **本主题内容**  
-  
--   **开始之前：**  
-  
-     [限制和局限](#Restrictions)  
-  
-     [安全性](#Security)  
-  
--   **若要创建服务器审核规范和数据库审核规范，请使用：**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
+ ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 准备工作  
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
  数据库审核规范是驻留在给定数据库中的非安全对象。 数据库审核规范在创建之后处于禁用状态。  
   
- 当您在用户数据库中创建或修改数据库审核规范时，不要包括针对服务器范围对象（例如系统视图）的审核操作。 如果包括服务器范围的对象，将会创建审核。 但是，服务器范围对象将不包括，并且将不返回任何错误。 若要审核服务器范围的对象，请使用 master 数据库中的数据库审核规范。  
+ 当您在用户数据库中创建或修改数据库审核规范时，不要包括针对服务器范围对象（例如系统视图）的审核操作。 如果包括服务器范围对象，将会创建审核。 但是，服务器范围对象将不包括在内，并且将不返回任何错误。 若要审核服务器范围对象，请使用 master 数据库中的数据库审核规范。  
   
- 数据库审核规范位于创建它们的数据库（ **tempdb** 系统数据库除外）中。  
+ 数据库审核规范位于创建它们的数据库（ TempDB  系统数据库除外）中。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  
   
@@ -58,7 +44,7 @@ ms.locfileid: "75557867"
   
 -   具有 ALTER ANY DATABASE AUDIT 权限的用户可以创建数据库审核规范并将其绑定到任何审核。  
   
--   创建数据库审核规范后，具有 CONTROL SERVER 或 ALTER ANY DATABASE AUDIT 权限的主体或 sysadmin 帐户即可查看该规范。  
+-   创建数据库审核规范后，具有 CONTROL SERVER 或 ALTER ANY DATABASE AUDIT 权限的主体即可查看该规范。 sysadmin 帐户也可以查看它。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -66,9 +52,9 @@ ms.locfileid: "75557867"
   
 1.   在对象资源管理器中，展开“安全性”文件夹。  
   
-2.  右键单击“审核”文件夹，然后选择“新建审核…”   。有关详细信息，请参阅 [创建服务器审核和服务器审核规范](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)。  
+2.  右键单击“审核”文件夹，然后选择“新建审核”   。 有关详细信息，请参阅[创建服务器审核和服务器审核规范](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)。  
   
-3.  在完成选项选择后，请单击 **“确定”** 。  
+3.  选择选项完成后，选择“确定”。   
 
 #### <a name="to-create-a-database-level-audit-specification"></a>创建数据库级别审核规范  
   
@@ -76,12 +62,12 @@ ms.locfileid: "75557867"
   
 2.  展开 **“安全性”** 文件夹。  
   
-3.  右键单击“数据库审核规范”文件夹，然后选择“新建数据库审核规范…”   。  
+3.  右键单击“数据库审核规范”文件夹，然后选择“新建数据库审核规范”   。  
   
-     **“创建数据库审核规范”** 对话框中提供了以下选项。  
+     “创建数据库审核规范”  对话框中提供了以下选项：  
   
      **名称**  
-     数据库审核规范的名称。 这是在创建新服务器审核规范时自动生成的，但是您可以对其进行编辑。  
+     数据库审核规范的名称。 创建服务器审核规范时会自动生成名称。 该字段是可编辑的。  
   
      **审核**  
      现有服务器审核对象的名称。 或者键入审核的名称，或者从列表中选择一个名称。  
@@ -93,28 +79,28 @@ ms.locfileid: "75557867"
      显示具有指定“对象名称”  的对象的架构。  
   
      **Object Name**  
-     要审核的对象的名称。 这仅适用于审核操作，而不适用于审核组。  
+     要审核的对象的名称。 此选项仅适用于审核操作。 它不适用于审核组。  
   
      **省略号 (...)**  
-     打开 **“选择对象”** 对话框，以便基于指定的 **“审核操作类型”** 浏览和选择可用对象。  
+     打开“选择对象”  对话框，以便可以基于指定的“审核操作类型”  浏览和选择可用对象。  
   
      **主体名称**  
      对于所审核的对象，要作为审核筛选依据的帐户。  
   
      **省略号 (...)**  
-     打开 **“选择对象”** 对话框以基于指定的 **“对象名称”** 浏览和选择可用对象。  
+     打开“选择对象”  对话框，以便可以基于指定的“对象名称”  浏览和选择可用对象。  
   
-4.  在完成选项选择后，请单击 **“确定”** 。  
+4.  选择选项完成后，选择“确定”。   
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
 #### <a name="to-create-a-server-audit"></a>创建服务器审核  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
+1.  在“对象资源管理器”中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”** 。  
+2.  在标准栏上，选择“新建查询”  。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例粘贴到查询窗口中，然后选择“执行”  。  
   
     ```  
     USE master ;  
@@ -131,11 +117,11 @@ ms.locfileid: "75557867"
   
 #### <a name="to-create-a-database-level-audit-specification"></a>创建数据库级别审核规范  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
+1.  在“对象资源管理器”中，连接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的实例。  
   
-2.  在标准菜单栏上，单击 **“新建查询”** 。  
+2.  在标准栏上，选择“新建查询”  。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例创建名为 `Audit_Pay_Tables` 的服务器审核规范，该规范针对 `dbo` 表，基于上面定义的服务器审核对用户 `HumanResources.EmployeePayHistory` 发出的 SELECT 和 INSERT 语句进行审核。  
+3.  将以下示例粘贴到查询窗口中，然后选择“执行”  。 此示例创建一个称为 `Audit_Pay_Tables` 的数据库审核规范。 它针对 `HumanResources.EmployeePayHistory` 表，基于上一个部分中定义的服务器审核对 `dbo` 用户发出的 SELECT 和 INSERT 语句进行审核。  
   
     ```  
     USE AdventureWorks2012 ;   

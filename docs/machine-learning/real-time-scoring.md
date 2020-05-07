@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 932995bad218df91e58af7daed01ddf4277a5dc0
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f46b27019d85084b572dced79e786033b30c2aec
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117180"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719289"
 ---
 # <a name="real-time-scoring-with-sp_rxpredict-in-sql-server-machine-learning"></a>在 SQL Server 机器学习中使用 sp_rxPredict 进行实时评分
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "81117180"
 
 ## <a name="how-real-time-scoring-works"></a>实时评分的工作原理
 
-支持对基于 RevoScaleR 或 MicrosoftML 函数（例如 [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)、[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)）的特定模型类型进行实时评分。 它根据提供给存储为特殊二进制格式的机器学习模型的用户输入来使用本机 C++ 库生成评分。
+支持对基于 RevoScaleR 或 MicrosoftML 函数（例如 [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) 和 [rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)）的特定模型类型进行实时评分。 它根据提供给存储为特殊二进制格式的机器学习模型的用户输入来使用本机 C++ 库生成评分。
 
 因为无需调用外部语言运行时即可将已定型的模型用于评分，所以减少了多个进程的开销。 这为生产评分方案提供了进行更快速预测的性能。 由于数据永远不会离开 SQL Server，因此可以生成结果并将它们插入到新表中，而无需在 R 和 SQL 之间进行任何数据转换。
 
@@ -34,7 +34,7 @@ ms.locfileid: "81117180"
 3. 提供要评分的新输入数据（表格或各行）作为模型的输入。
 4. 若要生成分数，请调用 [sp_rxPredict](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) 存储过程。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 + [启用 SQL Server CLR 集成](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration)。
 

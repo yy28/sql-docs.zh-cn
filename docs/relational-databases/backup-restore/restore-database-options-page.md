@@ -1,5 +1,6 @@
 ---
 title: 还原数据库（“选项”页）| Microsoft Docs
+description: 在 SQL Server 中还原数据库时，使用“还原数据库”对话框的“选项”页可修改还原操作的行为和结果。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e5fb68197b4347c3b3c2e9c6c7186d28c9c79efa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2c806be6b0fa54431243c3062ac12d1d1229c037
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68041563"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180748"
 ---
 # <a name="restore-database-options-page"></a>还原数据库（“选项”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,6 @@
 ---
 title: 备份数据库（“介质选项”页）| Microsoft Docs
+description: 在 SQL Server 中，使用“备份数据库”对话框中的“媒体选项”可查看/修改媒体选项，包括覆盖媒体、可靠性和事务日志。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: efbd8b811b9dda44a4cc4609704291b9469edec3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eff34ba4721f036aceca6c6617177881017744e1
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70155562"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220592"
 ---
 # <a name="back-up-database-media-options-page"></a>备份数据库（“介质选项”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

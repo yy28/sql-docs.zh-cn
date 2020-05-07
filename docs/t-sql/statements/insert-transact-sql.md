@@ -32,12 +32,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a5b98bf8e99d55217fadfd2c1811cb484c3ee3b
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: 0ad386f4137b43746eed82665715e2fef5957a79
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82107980"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82181091"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -199,7 +199,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
 OUTPUT 子句  
  将插入行作为插入操作的一部分返回。 结果可返回到处理应用程序或插入到表或表变量中以供进一步处理。  
   
- 引用本地分区视图、分布式分区视图或远程表的 DML 语句或包含 execute_statement 的 INSERT 语句都不支持 [OUTPUT 子句](../../t-sql/queries/output-clause-transact-sql.md)  。 包含 \<dml_table_source> 子句的 INSERT 语句中不支持 OUTPUT INTO 子句。 
+ 引用本地分区视图、分布式分区视图或远程表的 DML 语句或包含 execute_statement 的 INSERT 语句都不支持 OUTPUT 子句  。 包含 \<dml_table_source> 子句的 INSERT 语句中不支持 OUTPUT INTO 子句。 有关该子句的参数和行为的详细信息，请参阅 [OUTPUT 子句 (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md)。
   
  VALUES  
  引入要插入的数据值的一个或多个列表。 对于 column_list（如果已指定）或表中的每个列，都必须有一个数据值  。 必须用圆括号将值列表括起来。  

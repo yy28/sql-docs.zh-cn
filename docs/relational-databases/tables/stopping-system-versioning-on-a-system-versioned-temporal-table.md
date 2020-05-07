@@ -1,7 +1,7 @@
 ---
 title: 停止对系统版本控制临时表的系统版本控制 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/11/2016
+ms.date: 04/28/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: dddd707e-bfb1-44ff-937b-a84c5e5d1a94
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 74b222b8014b3a0e41e34d588d5893b7f4aaf9b8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ebeb98accf6f89e094949a7a8e56a86a2dcd6dd
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165454"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220384"
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>停止对由系统控制版本的时态表进行系统版本控制
 
@@ -39,6 +39,7 @@ ms.locfileid: "74165454"
 - 设置 **SYSTEM_VERSIONING = OFF** 且不删除 **SYSTEM_TIME** 时间段时，系统将继续更新每个插入和更新操作的时间段列。 在当前表中执行的删除操作是永久性的。
 - 删除 **SYSTEM_TIME** 时间段以完全删除该时间段列。
 - 设置 **SYSTEM_VERSIONING = OFF**时，具有足够权限的所有用户都能够修改历史记录表的架构和内容，甚至还可以永久删除该历史记录表。
+- 如果使用临时查询扩展（如引用 SYSTEM_TIME  ）通过 SCHEMABINDING 创建了其他对象，则无法设置 SYSTEM_VERSIONING = OFF  。 如果设置 SYSTEM_VERSIONING = OFF  ，则此限制可防止这些对象失败。
 
 ### <a name="permanently-remove-system_versioning"></a>永久删除 SYSTEM_VERSIONING
 

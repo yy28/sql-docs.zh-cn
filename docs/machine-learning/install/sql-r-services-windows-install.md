@@ -1,26 +1,28 @@
 ---
-title: 安装 SQL Server 2016 R Services (In-Database)
+title: 安装 SQL Server 2016 R Services
+titleSuffix: ''
 description: 将 R 编程语言支持添加到 Windows 上 SQL Server 2016 R Services 中的数据库引擎。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/06/2019
+ms.date: 04/29/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: bef992e06f8f02e5ba7c553c2511eac353fe498a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 92b7a8190bdd221333d49c2113256faab7c9edaf
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118200"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588183"
 ---
 # <a name="install-sql-server-2016-r-services"></a>安装 SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文介绍如何安装和配置 SQL Server 2016 R Services  。 如具有 SQL Server 2016，安装此功能即可在 SQL Server 中启用 R 代码的执行。
 
-在 SQL Server 2017 中，[机器学习服务](../r/r-server-standalone.md)提供了 R 集成，这反映出已添加 Python。 如果你想获取 R 集成并具有 SQL Server 2017 安装介质，请参阅[安装 SQL Server 机器学习服务](sql-machine-learning-services-windows-install.md)以添加该功能。 
+> [!NOTE]
+> 在 SQL Server 2017 及更高版本中，[机器学习服务](../sql-server-machine-learning-services.md)提供了 R 集成，这反映出已添加 Python。 如果你想获取 R 集成并具有 SQL Server 2017 或更高版本，请参阅[安装 SQL Server 机器学习服务](sql-machine-learning-services-windows-install.md)以添加该功能。 
 
 <a name="bkmk_prereqs"> </a> 
 
@@ -30,7 +32,7 @@ ms.locfileid: "81118200"
 
 + 为实现业务连续性，R Services 支持 [Always On 可用性组](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)。 必须在每个节点上安装 R Services 并配置包。
 
-+ 请勿在故障转移群集上安装 R Services。 用于隔离 R 进程的安全机制与 Windows Server 故障转移群集环境不兼容。
++ 请勿在 SQL Server Always On 故障转移群集 (FCI) 上安装 R Services。 用于隔离 R 进程的安全机制与 SQL Server Always On 故障转移群集 (FCI) 环境不兼容。
 
 + 请勿在域控制器上安装 R Services。 安装程序的 R Services 部分将失败。
 

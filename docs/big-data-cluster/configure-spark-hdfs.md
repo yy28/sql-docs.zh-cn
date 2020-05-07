@@ -5,16 +5,16 @@ description: SQL Server 大数据群集允许 Spark 和 HDFS 解决方案。 了
 author: rajmera3
 ms.author: raajmera
 ms.reviewer: mikeray
-ms.date: 02/13/2020
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 630f81c921d99634cfb4b8824dc0d46c3680c85f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8d4325bcdbfe26d68b32fe4767a710b26f52f712
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77283472"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220142"
 ---
 # <a name="configure-apache-spark-and-apache-hadoop-in-big-data-clusters"></a>在大数据群集中配置 Apache Spark 和 Apache Hadoop
 
@@ -41,6 +41,10 @@ ms.locfileid: "77283472"
 - Hive： https://cwiki.apache.org/confluence/display/Hive/Configuration+Properties#ConfigurationProperties-MetaStore
 - Livy： https://github.com/cloudera/livy/blob/master/conf/livy.conf.template
 - Apache Knox 网关： https://knox.apache.org/books/knox-0-14-0/user-guide.html#Gateway+Details
+
+除了这些配置之外，我们还提供了配置 Spark 作业是否可以在存储池中运行的功能。 
+
+此布尔值 `includeSpark` `spec.resources.storage-0.spec.settings.spark` 处的配置文件 `bdc.json` 中。
 
 ## <a name="unsupported-configurations"></a>不支持的配置
 

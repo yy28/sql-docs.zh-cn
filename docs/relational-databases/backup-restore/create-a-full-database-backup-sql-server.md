@@ -1,10 +1,10 @@
 ---
 title: 创建完整数据库备份 | Microsoft Docs
+description: 本文演示如何使用 SQL Server Management Studio、Transact-SQL 或 PowerShell 在 SQL Server 中创建完整数据库备份。
 ms.custom: sqlfreshmay19
 ms.date: 09/12/2019
 ms.prod: sql
 ms.prod_service: backup-restore
-ms.reviewer: carlrab
 ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,13 @@ helpviewer_keywords:
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fe0c9a950221317cb4a9088bae7629fc0c894165
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.reviewer: carlrab
+ms.openlocfilehash: f49ba7c3f8d1ad352821e9f33e554209e88bbf37
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710324"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179278"
 ---
 # <a name="create-a-full-database-backup"></a>完整数据库备份
 

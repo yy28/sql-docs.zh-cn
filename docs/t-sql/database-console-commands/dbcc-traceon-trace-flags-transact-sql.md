@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 98aea4830dcbf299e4f8e54e893f60e55d7e3520
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 4cf63cf0f1939a47a95ef0c66934ebd910f2201a
+ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82086826"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643330"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 跟踪标志 (Transact-SQL)
 
@@ -101,7 +101,7 @@ ms.locfileid: "82086826"
 |1802 |在数据库附加或拆离操作过程中，禁用 ACL 更改和模拟访问验证。 在附加数据库并遇到访问权限错误（如错误 5120）时，这可能很有用。<br /><br />**作用域**：仅全局| 
 |**2301**|启用高级决策支持优化。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/920093)。<br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON) |
 |**2312**|将查询优化器基数估计模型设置为 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本，而不考虑数据库兼容性级别。<br /><br />**注意：** 如果数据库兼容性级别低于 120，则启用跟踪标志 2312 将使用基数估计模型 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (120)。 有关详细信息，请参阅 [Microsoft 支持文章](https://support.microsoft.com/kb/2801413)。<br /><br />从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，若要在查询级别完成此操作，请添加 USE HINT FORCE_DEFAULT_CARDINALITY_ESTIMATION [查询提示](../../t-sql/queries/hints-transact-sql-query.md)，而不是使用此跟踪标志。<br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON)| 
-|**2335**|导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在查询优化期间假定有固定数量的内存可用。 它不限制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 授予用来执行查询的内存。 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置的内存仍将由数据缓存、查询执行和其他使用者使用。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2413549)。<br /><br />**注意：** 请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON)|
+|**2335**|对于[最大服务器内存服务器配置](../../database-engine/configure-windows/server-memory-server-configuration-options.md)设置得太高的情况，使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 假设在查询优化期间有固定内存量可用，并使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为特定查询生成低效计划。 它不限制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 授予用来执行查询的内存。 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置的内存仍将由数据缓存、查询执行和其他使用者使用。<br /><br />**注意：** 请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON)|
 |**2340**|导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在生成计划时不对优化的嵌套循环联接使用排序操作（批排序）。 默认情况下，在查询优化器断定很有可能不需要排序，但在基数或成本估算不正确的情况下仍有可能时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可使用经过优化的嵌套循环联接，而不是使用完全扫描或显式排序的嵌套循环联接。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2009160)。<br /><br />从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，若要在查询级别完成此操作，请添加 USE HINT DISABLE_OPTIMIZED_NESTED_LOOP [查询提示](../../t-sql/queries/hints-transact-sql-query.md)，而不是使用此跟踪标志。<br /><br />**注意：** 请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON)|
 |**2371**|将固定更新统计信息阈值更改为线性更新统计信息阈值。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2754171)。<br /><br />**注意：** 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，在[数据库兼容性级别](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130 或更高版本下，此行为由引擎控制，跟踪标志 2371 不再有效。<br /><br />**作用域**：仅全局|
 |**2389**|为升序键启用自动生成的快速统计信息（直方图修正）。 如果设置了跟踪标志 2389，并且将前导统计信息列标记为升序，则会在查询编译时调整用于估计基数的直方图。 有关详细信息，请参阅此 [Microsoft 支持文章](https://support.microsoft.com/kb/2801413)。<br /><br />**注意：** 请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**注意：** 此跟踪标志不适用于 CE 版本 120 或更高版本。 请改用跟踪标志 4139。<br /><br />**作用域**：全局、会话或查询 (QUERYTRACEON)|

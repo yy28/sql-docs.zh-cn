@@ -3,17 +3,17 @@ title: 配置适用于 SQL Server 2017 和 2019 的 Linux 存储库
 description: 检查并配置适用于 Linux 中 SQL Server 2019 和 SQL Server 2017 的源存储库。 源存储库会影响在安装和升级期间应用的 SQL Server 版本。
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/10/2020
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 7253fb18ea783a1fb7aeec77aa73b9a899ec6ae9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: cea6b49e46b5dc1d386f42808f64743e2c7eed8c
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81301698"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262050"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>配置存储库以便安装和升级 Linux 上的 SQL Server
 
@@ -181,7 +181,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 >
 > 自 SQL Server 2017 CU20 起，开始支持 RHEL 8。
 >
-> 如果使用的是 RHEL 7 或 RHEL 8，请确保路径与 `/rhel/7` 或 `/rhel/8` 匹配。
+> 如果使用的是 RHEL 7 或 RHEL 8，请确保路径与 `/rhel/7` 或 `/rhel/8` 匹配。 我们的包与 RHEL 次版本无关。 这意味着，如果你使用的是 RHEL 7.6，则需要使用路径 `/rhel/7` 配置存储库。
 
 | 存储库 | 版本 | Command |
 |---|---|---|

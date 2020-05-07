@@ -1,5 +1,6 @@
 ---
 title: 使用 SSMS 还原数据库备份 | Microsoft Docs
+description: 本文说明如何使用 SQL Server Management Studio 还原完整 SQL Server 数据库备份。
 ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7cd893c9556b1dd45e2206ce73740e253af98ed3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2a76b91e9f5fd1cab9512cd42f05ce949ccf4d68
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70278769"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180823"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>使用 SSMS 还原数据库备份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +71,7 @@ ms.locfileid: "70278769"
         -   **选择备份设备** 对话框  
         
             **备份介质类型**  
-         从“备份介质类型”下拉列表中选择一个介质类型。   注意：只有在计算机上装有磁带机时，才会显示“磁带”选项，只有至少存在一个备份设备时，才会显示“备份设备”选项。  
+         从“备份介质类型”下拉列表中选择一个介质类型。   注意：只有在计算机上装有磁带机时，才会显示 **“磁带”** 选项，只有至少存在一个备份设备时，才会显示 **“备份设备”** 选项。
 
             **添加**  
             根据在“备份介质类型”下拉列表中选择的介质类型，单击“添加”将打开下列对话框之一。   （如果“备份介质”列表框中的列表已满，则“添加”按钮不可用。）  
@@ -93,7 +94,7 @@ ms.locfileid: "70278769"
     
              将所需设备添加到 **“备份介质”** 列表框后，单击 **“确定”** 返回到 **“常规”** 页。    
     
-         在 **“源: 设备: 数据库”** 列表框中，选择应还原的数据库名称。    
+         在“源:设备:数据库”列表框中，选择应还原的数据库名称 **。**    
     
          > [!NOTE]
          > 此列表仅在选择了 **“设备”** 时才可用。 只有在所选设备上具有备份的数据库才可用。    
@@ -146,7 +147,7 @@ ms.locfileid: "70278769"
 7.  在“还原选项”部分中，选择“覆盖现有数据库 (WITH REPLACE)”。  
 
     > [!NOTE]
-    > 未选中此选项可能会导致以下错误消息：“System.Data.SqlClient.SqlError: 备份集包含数据库备份，而不是现有的‘`Sales`’数据库。 (Microsoft.SqlServer.SmoExtended)”
+    > 未选中此选项可能会导致以下错误消息：“System.Data.SqlClient.SqlError:备份集中的数据库备份与现有的“`Sales`”数据库不同。 (Microsoft.SqlServer.SmoExtended)”
 
 8.  在“结尾日志备份”  部分中，取消选中“还原前执行结尾日志备份”  。
 
@@ -158,7 +159,7 @@ ms.locfileid: "70278769"
 9.  在“服务器连接”  部分，选中“关闭目标数据库的现有连接”  。
 
     > [!NOTE]
-    > 未选中此选项可能会导致以下错误消息：“System.Data.SqlClient.SqlError: 无法获得独占访问权限，因为数据库正在使用中。 (Microsoft.SqlServer.SmoExtended)”
+    > 未选中此选项可能会导致以下错误消息：“System.Data.SqlClient.SqlError:因为数据库正在使用，所以无法获得对数据库的独占访问权。 (Microsoft.SqlServer.SmoExtended)”
     
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
@@ -181,7 +182,7 @@ ms.locfileid: "70278769"
 
     > [!NOTE]
     > 如果收到以下错误信息：      
-    > “System.Data.SqlClient.SqlError：数据库“`Sales`”的日志结尾尚未备份。 如果该日志包含不希望丢失的工作，请使用 `BACKUP LOG WITH NORECOVERY` 备份该日志。 使用 `WITH REPLACE` 语句的 `WITH STOPAT` 或 `RESTORE` 子句覆盖该日志的内容。 (Microsoft.SqlServer.SmoExtended)”。      
+    > “System.Data.SqlClient.SqlError:数据库“`Sales`”的日志结尾尚未备份。 如果该日志包含不希望丢失的工作，请使用 `BACKUP LOG WITH NORECOVERY` 备份该日志。 使用 `RESTORE` 语句的 `WITH REPLACE` 或 `WITH STOPAT` 子句覆盖该日志的内容。 (Microsoft.SqlServer.SmoExtended)”。      
     > 那么你可能未输入上面步骤 6 中的新数据库名称。 还原一般会防止意外使用一个数据库覆盖另一个数据库。 如果 `RESTORE` 语句中指定的数据库已存在于当前服务器上，并且指定的数据库系列 GUID 与备份集中记录的数据库系列 GUID 不同，则不还原该数据库。 这是一项重要的安全保护措施。
 
 ### <a name="d--restore-earlier-disk-backups-to-a-point-in-time"></a>D.  将以前的磁盘备份还原到某个时间点
@@ -213,7 +214,7 @@ ms.locfileid: "70278769"
 #### <a name="e1---restore-a-striped-backup-over-an-existing-database-and-a-shared-access-signature-exists"></a>E1.   在现有数据库上还原条带备份，并存在共享的访问签名。
 已经创建具有读取、写入、删除和列表权限的存储访问策略。  已经为容器 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`创建与存储访问策略相关联的共享访问签名。  如果已存在 SQL Server 凭据，则步骤几乎一样。  数据库 `Sales` 当前在服务器上。  备份文件为 `Sales_stripe1of2_20160601.bak` 和 `Sales_stripe2of2_20160601.bak`。  
 
-1.  如果已存在 SQL Server 凭据，则从“Azure 存储容器:”下拉列表中选择 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`，否则请手动输入容器  **的名称。** `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` 
+1.  如果已存在 SQL Server 凭据，则从“Azure 存储容器:”下拉列表中选择 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`，否则请手动输入容器 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` 的名称。  
 1. 在“共享访问签名:”富文本框中输入共享访问签名。 
 1. 单击“确定”  将打开“在 Microsoft Azure 上定位备份文件”  对话框。
 1. 展开“容器”  并导航到 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。

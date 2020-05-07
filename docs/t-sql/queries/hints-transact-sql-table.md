@@ -1,7 +1,7 @@
 ---
 title: 表提示 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/31/2017
+ms.date: 04/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -36,12 +36,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d5675f7c62ce43a9e41770075cd4a97253ea051e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 225a92fc082a2778a7146923a9d138d0ce86aa7b
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981766"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087502"
 ---
 # <a name="hints-transact-sql---table"></a>提示 (Transact-SQL) - 表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "73981766"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
@@ -127,7 +127,7 @@ WITH **(** \<table_hint> **)** [ [ **,** ]...*n* ]
 > [!IMPORTANT]  
 > 不推荐省略 WITH 关键字：[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-使用或不使用 WITH 关键字均可使用以下的表提示：NOLOCK、READUNCOMMITTED、UPDLOCK、REPEATABLEREAD、SERIALIZABLE、READCOMMITTED、TABLOCK、TABLOCKX、PAGLOCK、ROWLOCK、NOWAIT、READPAST、XLOCK、SNAPSHOT 和 NOEXPAND。 如果指定的表提示不含 WITH 关键字，则必须单独指定该提示。 例如：  
+无论是否允许使用 `WITH` 关键字，都可以使用以下表提示：`NOLOCK`、`READUNCOMMITTED`、`UPDLOCK`、`REPEATABLEREAD`、`SERIALIZABLE`、`READCOMMITTED`、`TABLOCK`、`TABLOCKX`、`PAGLOCK`、`ROWLOCK`、`NOWAIT`、`READPAST`、`XLOCK`、`SNAPSHOT` 和 `NOEXPAND`。 如果指定的表提示不含 WITH 关键字，则必须单独指定该提示。 例如：  
   
 ```sql  
 FROM t (TABLOCK)  
@@ -261,7 +261,7 @@ NOLOCK
 > 对于 UPDATE 或 DELETE 语句：[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 NOWAIT  
-指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]在遇到表的锁时，立即返回一条消息。 NOWAIT 等同于将特定表的 SET LOCK_TIMEOUT 值指定为 0。 当 TABLOCK 提示也包含在内时，NOWAIT 提示不起作用。 若要在使用 TABLOCK 提示时终止查询而不等待，请改为在查询前加上 `SETLOCK_TIMEOUT 0;`。  
+指示[!INCLUDE[ssDE](../../includes/ssde-md.md)]在遇到表的锁时，立即返回一条消息。 NOWAIT 等同于为特定表指定 `SET LOCK_TIMEOUT 0`。 当 TABLOCK 提示也包含在内时，NOWAIT 提示不起作用。 若要在使用 TABLOCK 提示时终止查询而不等待，请改为在查询前加上 `SETLOCK_TIMEOUT 0;`。  
   
 PAGLOCK  
 在通常行或键采用单个锁的地方，或者通常采用单个表锁的地方，请采用页锁。 默认情况下，请使用与操作相对应的锁模式。 在从 SNAPSHOT 隔离级别操作的事务中指定时，除非将 PAGLOCK 与需要锁的其他表提示（例如，UPDLOCK 和 HOLDLOCK）组合，否则不会取得页锁。  
@@ -339,7 +339,7 @@ SPATIAL_WINDOW_MAX_CELLS = *integer*
 TABLOCK  
 指定在表级别应用获取的锁。 获取的锁类型取决于正在执行的语句。 例如，SELECT 语句可能获取一个共享锁。 通过指定 TABLOCK，将该共享锁应用到整个表而非在行或页级别应用。 如果同时指定了 HOLDLOCK，则会一直持有表锁，直至事务结束。  
   
-在使用 INSERT INTO \<target_table> SELECT \<columns> FROM \<source_table> 语句将数据导入某个堆时，可通过为目标表指定 TABLOCK 提示，实现语句的优化日志记录和锁定。 此外，数据库的恢复模式必须设置为简单或大容量日志模式。 有关详细信息，请参阅 [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)。  
+在使用 `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` 语句将数据导入某个堆时，可通过为目标表指定 TABLOCK 提示，实现语句的最小日志记录和优化锁定。 此外，数据库的恢复模式必须设置为简单或大容量日志模式。 TABLOCK 提示还允许对堆或聚集列存储索引进行并行插入。 有关详细信息，请参阅 [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)。  
   
 在与 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) BULK 行集提供程序一起使用以将数据导入表时，TABLOCK 允许多个客户端使用优化日志记录和锁定，以并发方式将数据加载到目标表中。 有关详细信息，请参阅[在批量导入中按最小方式记录日志的前提条件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
   

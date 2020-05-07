@@ -1,5 +1,6 @@
 ---
 title: 备份加密 | Microsoft Docs
+description: 本文介绍 SQL Server 备份的加密选项，包括备份期间加密的用法、优点和推荐做法。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 19a8597136f073d609c7a9cc77ce8e2b73c72004
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6efb6c939f0881e1fd5a90e0d7df96303d40bea4
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71688293"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220517"
 ---
 # <a name="backup-encryption"></a>备份加密
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "71688293"
   
  若要在备份期间加密，必须指定加密算法以及用于保护加密密钥的加密程序。 支持以下加密选项：  
   
-- **加密算法：** 支持的加密算法包括 AES 128、AES 192、AES 256 和 Triple DES  
+- **加密算法：** 支持的加密算法包括：AES 128、AES 192、AES 256 和 Triple DES  
   
 - **加密程序：** 证书或非对称密钥  
   
@@ -39,7 +40,7 @@ ms.locfileid: "71688293"
   
 ##  <a name="benefits"></a><a name="Benefits"></a> 优势  
   
-1. 加密数据库备份有助于保护数据：SQL Server 提供在创建备份的同时加密备份数据的选项。  
+1. 加密数据库备份有助于保证数据安全：SQL Server 提供用于在创建备份时加密备份数据的选项。  
   
 1. 加密还可用于使用 TDE 加密的数据库。  
   
@@ -52,7 +53,7 @@ ms.locfileid: "71688293"
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  以下是有关加密备份的先决条件：  
   
-1. **创建 master 数据库的数据库主密钥：** 数据库主密钥是一个对称密钥，用于保护数据库中证书和非对称密钥的私钥。 有关详细信息，请参阅 [SQL Server 和数据库加密密钥（数据库引擎）](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)。  
+1. **创建 master 数据库的数据库主密钥：** 数据库主密钥是一种用于保护数据库中存在的证书私钥和非对称密钥的对称密钥。 有关详细信息，请参阅 [SQL Server 和数据库加密密钥（数据库引擎）](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)。  
   
 1. 创建用于备份加密的证书或非对称密钥。 有关创建证书的详细信息，请参阅 [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)。 有关创建非对称密钥的详细信息，请参阅[创建非对称密钥 (Transact-SQL)](../../t-sql/statements/create-asymmetric-key-transact-sql.md)。  
   
