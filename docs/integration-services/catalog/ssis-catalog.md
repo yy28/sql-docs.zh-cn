@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1e240a53d86d66fdf81b53cae1ba55d41820befd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 81f446164fd12867c19273e6cf15018b749061a4
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287721"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925162"
 ---
 # <a name="ssis-catalog"></a>SSIS 目录
 
@@ -359,7 +359,7 @@ ms.locfileid: "79287721"
   
     ```  
   
-     有关如何使用 Windows PowerShell 和 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间的更多示例，请参阅 blogs.msdn.com 上的博客文章 [SQL Server 2012 中的 SSIS 和 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)。 有关命名空间和代码示例的概述，请参阅 blogs.msdn.com 上的博客文章 [SSIS 目录托管对象模型一瞥](https://go.microsoft.com/fwlink/?LinkId=254267)。  
+     有关如何使用 Windows PowerShell 和 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间的更多示例，请参阅 blogs.msdn.com 上的博客文章 [SQL Server 2012 中的 SSIS 和 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)。 有关命名空间和代码示例的概述，请参阅 blogs.msdn.com 上的博客文章 [SSIS 目录托管对象模型一瞥](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)。  
 
 ## <a name="catalog-properties-dialog-box"></a>“目录属性”对话框
   使用“目录属性”对话框可以配置 SSISDB 目录。 目录属性定义如何对敏感数据进行加密、如何保留操作和项目版本控制数据以及验证操作何时超时。SSISDB 目录是用于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目、包、参数和环境的中心存储区和管理点。  
@@ -582,7 +582,7 @@ ms.locfileid: "79287721"
 ###  <a name="prerequisites"></a><a name="prereq"></a>先决条件  
 为 SSISDB 数据库启用 Always On 支持前，请先执行以下先决性步骤。  
   
-1.  设置 Windows 故障转移群集。 请参阅 [安装适用于 Windows Server 2012 的故障转移群集功能和工具](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) 的博客文章以获取相关说明。 在所有群集节点上安装功能和工具。  
+1.  设置 Windows 故障转移群集。 请参阅 [安装适用于 Windows Server 2012 的故障转移群集功能和工具](https://techcommunity.microsoft.com/t5/failover-clustering/installing-the-failover-cluster-feature-and-tools-in-windows/ba-p/371733) 的博客文章以获取相关说明。 在所有群集节点上安装功能和工具。  
   
 2.  在群集的每个节点上安装具有 Integration Services (SSIS) 功能的 SQL Server 2016。  
   
@@ -668,4 +668,4 @@ ms.locfileid: "79287721"
   
 -   blogs.msdn.com 上的博客文章 [SSIS 目录访问控制提示](https://go.microsoft.com/fwlink/?LinkId=246669)。  
   
--   blogs.msdn.com 上的博客文章： [SSIS 目录托管对象模型一瞥](https://go.microsoft.com/fwlink/?LinkId=254267)。  
+-   blogs.msdn.com 上的博客文章： [SSIS 目录托管对象模型一瞥](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)。  
