@@ -2,7 +2,7 @@
 title: 设置连接属性
 description: 可以通过多种方式来指定 Microsoft JDBC Driver for SQL Server 的连接字符串属性。
 ms.custom: ''
-ms.date: 03/13/2020
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f1b62700-f046-488d-bd6b-a5cd8fc345b7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fadc79d2d44cbd835fafbf4ecd68247122577c66
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 0fcc9c86bc71846fd43cd1c606b55116c2171ca4
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487076"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922323"
 ---
 # <a name="setting-the-connection-properties"></a>设置连接属性
 
@@ -71,9 +71,9 @@ ms.locfileid: "81487076"
 | INSTANCENAME<br/><br/>字符串<br/>[&lt;=128 char]<br/><br/>Null | 要连接到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名。 如果未指定，则连接到默认实例。 对于 instanceName 和端口均已指定的情况，请参阅有关端口的备注。<br/><br/> 如果在 Server 连接属性中指定虚拟机名称，则无法使用 instanceName 连接属性   。 有关详细信息，请参阅 [JDBC 驱动程序对高可用性和灾难恢复的支持](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)。 |
 | integratedSecurity<br/><br/>boolean<br/>["true"&#124;"false"]<br/><br/>false | 设置为“true”可以指明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 Windows 操作系统上使用 Windows 凭据。 如果设置为“true”，JDBC 驱动程序在本地计算机凭据缓存中搜索在用户登录计算机或网络时提供的凭据。<br/><br/> 设置为“true”（且 authenticationscheme=JavaKerberos  ）可以指明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 Kerberos 凭据。 若要详细了解 Kerberos 身份验证，请参阅[使用 Kerberos 集成身份验证连接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)。 <br/><br/> 设置为“true”（且 authenticationscheme=NTLM  ）可以指明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 NTLM 凭据。 <br/><br/> 如果为“false”，则必须提供用户名和密码。 |
 | jaasConfigurationName<br/><br/>字符串<br/><br/>SQLJDBCDriver | 自 Microsoft JDBC Driver 6.2 for SQL Server 起，与 SQL Server 建立的每个连接都可以有自己的 JAAS 登录配置文件来建立 Kerberos 连接。 可以通过此属性传递登录配置文件的文件名。 <br/> 默认情况下，驱动程序为 IBM JVM 设置属性 `useDefaultCcache = true`，并为其他 JVM 设置 `useTicketCache = true`。 |
-| keyStoreAuthentication<br/><br/>字符串<br/><br/>Null | 自 Microsoft JDBC Driver 6.0 for SQL Server 起，此属性标识要为已启用 Always Encrypted 的连接无缝设置的密钥存储库，并确定用于对密钥存储库进行身份验证的身份验证机制。 Microsoft JDBC Driver 6.0 for SQL Server 支持使用此属性无缝设置 Java 密钥存储库（需要为其设置“keyStoreAuthentication=JavaKeyStorePassword”  ）。 请注意，若要使用此属性，还必须为 Java 密钥存储库设置 keyStoreLocation  和 keyStoreSecret  属性。 <br/><br/>有关详细信息，请参阅[通过 JDBC 驱动程序使用 Always Encrypted](https://msdn.microsoft.com/library/mt591987%28v=sql.110%29.aspx?f=255&MSPPError=-2147217396)。 |
-| keyStoreLocation<br/><br/>字符串<br/><br/>Null | 如果 keyStoreAuthentication=JavaKeyStorePassword  ，keyStoreLocation  属性标识 Java 密钥存储库文件的路径，此文件存储用于 Always Encrypted 数据的列主密钥。 请注意，必须在密钥存储库文件名中添加此路径。<br/><br/>有关详细信息，请参阅[通过 JDBC 驱动程序使用 Always Encrypted](https://msdn.microsoft.com/library/mt591987%28v=sql.110%29.aspx?f=255&MSPPError=-2147217396)。 |
-| keyStoreSecret<br/><br/>字符串<br/><br/>Null | 如果 keyStoreAuthentication=JavaKeyStorePassword  ，keyStoreSecret  属性标识用于密钥存储库和密钥的密码。 请注意，若要使用 Java 密钥存储库，密钥存储库和密钥密码必须相同。<br/><br/>有关详细信息，请参阅[通过 JDBC 驱动程序使用 Always Encrypted](https://msdn.microsoft.com/library/mt591987%28v=sql.110%29.aspx?f=255&MSPPError=-2147217396)。 |
+| keyStoreAuthentication<br/><br/>字符串<br/><br/>Null | 自 Microsoft JDBC Driver 6.0 for SQL Server 起，此属性标识要为已启用 Always Encrypted 的连接无缝设置的密钥存储库，并确定用于对密钥存储库进行身份验证的身份验证机制。 Microsoft JDBC Driver 6.0 for SQL Server 支持使用此属性无缝设置 Java 密钥存储库（需要为其设置“keyStoreAuthentication=JavaKeyStorePassword”  ）。 请注意，若要使用此属性，还必须为 Java 密钥存储库设置 keyStoreLocation  和 keyStoreSecret  属性。 <br/><br/>有关详细信息，请参阅[通过 JDBC 驱动程序使用 Always Encrypted](using-always-encrypted-with-the-jdbc-driver.md)。 |
+| keyStoreLocation<br/><br/>字符串<br/><br/>Null | 如果 keyStoreAuthentication=JavaKeyStorePassword  ，keyStoreLocation  属性标识 Java 密钥存储库文件的路径，此文件存储用于 Always Encrypted 数据的列主密钥。 请注意，必须在密钥存储库文件名中添加此路径。<br/><br/>有关详细信息，请参阅[通过 JDBC 驱动程序使用 Always Encrypted](using-always-encrypted-with-the-jdbc-driver.md)。 |
+| keyStoreSecret<br/><br/>字符串<br/><br/>Null | 如果 keyStoreAuthentication=JavaKeyStorePassword  ，keyStoreSecret  属性标识用于密钥存储库和密钥的密码。 请注意，若要使用 Java 密钥存储库，密钥存储库和密钥密码必须相同。<br/><br/>有关详细信息，请参阅[通过 JDBC 驱动程序使用 Always Encrypted](using-always-encrypted-with-the-jdbc-driver.md)。 |
 | lastUpdateCount<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>true | 如果值为“true”，则仅返回传递给服务器的 SQL 语句的最终更新计数，它可用于单个的 SELECT、INSERT 或 DELETE 语句中，以忽略由服务器触发器引起的其他更新计数。 将此属性设置为“false”可导致所有更新计数都被返回，包括由服务器触发器返回的更新计数。<br/><br/> **注意：** 此属性仅当与 [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) 方法一起使用时才适用。 其他所有 execute 方法返回所有结果和更新计数。 此属性仅影响由服务器触发器返回的更新计数， 而不影响作为触发器执行结果的一部分的结果集或错误。 |
 | lockTimeout<br/><br/>int<br/><br/>-1 | 在等待多少毫秒后数据库报告锁定超时。默认行为是无限期等待。 如果指定，该值将成为此连接上所有语句的默认值。 请注意，可以使用 Statement.setQueryTimeout()  为特定语句设置超时。 该值可为 0，这表示无需等待。 |
 | loginTimeout<br/><br/>int<br/>[0..65535]<br/><br/>15 | 因连接失败而中止连接之前驱动程序应等待的秒数。 零值表示该超时为默认系统超时，默认情况下指定为 15 秒。 非零值为因连接失败而中止连接之前驱动程序应等待的秒数。<br/><br/> 如果在 Server 连接属性中指定虚拟机名称，则应指定三分钟或更长的超时值，使故障转移连接有足够的时间连接成功  。 有关详细信息，请参阅 [JDBC 驱动程序对高可用性和灾难恢复的支持](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)。 |
