@@ -2,18 +2,18 @@
 title: Microsoft SQL Server 的驱动程序历史记录 | Microsoft Docs
 description: 本页面介绍 Microsoft 用于连接到 SQL Server 的历史数据连接技术。
 ms.custom: ''
-ms.date: 05/04/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3724e9c616a17e490946888d2acc8c886a57545a
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: f5db99b78cc5c5d251baee6028d1c9bc4e7448bf
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529064"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885764"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Microsoft SQL Server 的驱动程序历史记录
 
@@ -35,7 +35,7 @@ SQL Server Native Client 是一个用于 OLE DB 和 ODBC 的独立库。 SQL Ser
 
 ## <a name="ole-db"></a>OLE DB
 
-有三个不同代的 Microsoft OLE DB Provider for SQL Server。 第一代“Microsoft OLE DB Provider for SQL Server”(SQLOLEDB) 仍作为 [Windows 数据访问组件](#microsoft-or-windows-data-access-components)的一部分提供。 将不会对此提供程序更新新功能，因此不建议将该驱动程序用于新开发。 从 SQL Server 2005 开始，[SQL Server Native Client](#sql-server-native-client) 将包含一个 OLE DB 提供程序接口 (SQLNCLI)，并且它是 SQL Server 2005 至 SQL Server 2017 中随附的 OLE DB 提供程序。 它[于 2011 年宣布弃用](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/)，且不建议在新开发中使用此驱动程序。 在 2017 年，OLE DB 数据访问技术随后被[取消弃用，并宣布发布 2018 年新版的计划](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/)。 新的 OLE DB 提供程序被称为“Microsoft OLE DB Driver for SQL Server”(MSOLEDBSQL)，目前对其提供维护和支持。
+有三个不同代的 Microsoft OLE DB Provider for SQL Server。 第一代“Microsoft OLE DB Provider for SQL Server”(SQLOLEDB) 仍作为 [Windows 数据访问组件](#microsoft-or-windows-data-access-components)的一部分提供。 将不会对此提供程序更新新功能，因此不建议将该驱动程序用于新开发。 从 SQL Server 2005 开始，[SQL Server Native Client](#sql-server-native-client) 将包含一个 OLE DB 提供程序接口 (SQLNCLI)，并且它是 SQL Server 2005 至 SQL Server 2017 中随附的 OLE DB 提供程序。 它[于 2011 年宣布弃用](/archive/blogs/sqlnativeclient/microsoft-is-aligning-with-odbc-for-native-relational-data-access)，且不建议在新开发中使用此驱动程序。 在 2017 年，OLE DB 数据访问技术随后被[取消弃用，并宣布发布 2018 年新版的计划](/archive/blogs/sqlnativeclient/announcing-the-new-release-of-ole-db-driver-for-sql-server)。 新的 OLE DB 提供程序被称为“Microsoft OLE DB Driver for SQL Server”(MSOLEDBSQL)，目前对其提供维护和支持。
 
 ## <a name="adonet"></a>ADO.NET
 

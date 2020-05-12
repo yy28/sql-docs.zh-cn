@@ -2,7 +2,7 @@
 title: SQL 数据开发人员 | Microsoft Docs
 description: 使用 Microsoft 的 SQL 数据平台，为 Web 服务器、企业服务器和云创建跨移动设备和桌面设备以数据为中心的解决方案。
 ms.custom: ''
-ms.date: 03/28/2017
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7571287c89589969e3b2d3b8c26677423c1c35b0
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 0b60eb6ca02ef446fe05bb109123e5c48951905a
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528758"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922302"
 ---
 # <a name="sql-data-developer"></a>SQL 数据开发人员
 使用 Microsoft 的 SQL 数据平台，为 Web 服务器、企业服务器和云创建跨移动设备和桌面设备以数据为中心的解决方案。  
@@ -33,20 +33,17 @@ ms.locfileid: "81528758"
 
 ## <a name="sql-data-access"></a>SQL 数据访问
 * [SQL 客户端驱动程序](sql-connection-libraries.md)：使用 SQL 驱动程序，可以连接、查询、更新、插入或删除 SQL 数据库中的数据。
-* [实体框架](https://msdn.microsoft.com/library/gg696172.aspx)：通过实体框架，可以使用 LINQ 轻松访问数据库，可以直接访问 SQL Server，还可以选择控制实体数据模型 (EDM) 和原始关系结构之间的映射。 
-* [Windows Communication Foundation (WCF)](https://msdn.microsoft.com/library/dd456779.aspx)：使用数据服务作为一种近乎统包的解决方案，可以在 Web 和 Intranet 上轻松创建和使用 OData 服务
-* [Sync Framework](https://msdn.microsoft.com/library/jj839436.aspx)：使用 Sync Framework，可以脱机访问任何数据类型、任何数据存储、任何传输协议和任何网络拓扑。
-* [Reactive Extensions](https://msdn.microsoft.com/library/hh242985.aspx)：通过 Reactive Extensions (Rx)，可以使用可观测序列和 LINQ 样式查询运算符来执行事件流编程，并简化异步编程。  通过 Reactive Extensions for JavaScript (RxJS)，可以使用可观测序列在 Web 上简化基于异步回调且事件驱动的编程。
+* [实体框架](/ef/)：通过实体框架，可以使用 LINQ 轻松访问数据库，可以直接访问 SQL Server，还可以选择控制实体数据模型 (EDM) 和原始关系结构之间的映射。 
+* [Windows Communication Foundation (WCF)](/dotnet/framework/wcf/)：使用数据服务作为一种近乎统包的解决方案，可以在 Web 和 Intranet 上轻松创建和使用 OData 服务
+* [Sync Framework](/previous-versions/sql/synchronization/mt490616(v=msdn.10))：使用 Sync Framework，可以脱机访问任何数据类型、任何数据存储、任何传输协议和任何网络拓扑。
+* [Reactive Extensions](https://github.com/dotnet/reactive)：通过 Reactive Extensions (Rx)，可以使用可观测序列和 LINQ 样式查询运算符来执行事件流编程，并简化异步编程。  通过 Reactive Extensions for JavaScript (RxJS)，可以使用可观测序列在 Web 上简化基于异步回调且事件驱动的编程。
 * [CLR 集成](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)：通过 CLR 集成，可以使用任何 .NET Framework 语言（包括 Microsoft Visual Basic .NET 和 Microsoft Visual C#）编写存储过程、触发器、用户定义类型、用户定义函数、用户定义聚合和流式表值函数。 
 * [SQLXML 4.0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)：使用 SQLXML 4.0，可以将关系数据导出到 XML。
 
 ## <a name="data-collection-processing-and-visualization"></a>数据收集、处理和可视化
-* [Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)
+* [Analysis Services](/analysis-services/analysis-services-developer-documentation)
 * [Integration Services](../integration-services/integration-services-developer-documentation.md)  
 * [Master Data Services](../master-data-services/develop/master-data-services-developer-documentation.md)
 * [Replication Services](../relational-databases/replication/concepts/replication-developer-documentation.md)
 * [Reporting Services](../reporting-services/reporting-services-developer-documentation.md)
 * [Service Broker](../database-engine/configure-windows/sql-server-service-broker.md)
-
-
- 

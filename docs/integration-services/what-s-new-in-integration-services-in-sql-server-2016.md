@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8a6bd6207df7d0e93c1b6d360643a9d549e90af9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 37ef5ccd059b956f11b2202e55b2aa4b67832b27
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295035"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922341"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services 中的新增功能
 
@@ -187,9 +187,9 @@ ms.locfileid: "71295035"
 ####  <a name="support-for-always-encrypted-in-the-ssis-catalog"></a><a name="encrypted"></a> 支持 SSIS 目录中的 Always Encrypted  
  SSIS 已在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中提供始终加密功能支持。 有关详细信息，请参阅以下博客文章。  
   
--   [SSIS with Always Encrypted](https://blogs.msdn.com/b/ssis/archive/2015/12/18/ssis-with-always.aspx)  
+-   [SSIS with Always Encrypted](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-always-encrypted/ba-p/388272)  
   
--   [Lookup transformation with Always Encrypted](https://blogs.msdn.com/b/ssis/archive/2015/12/18/lookup-transformation-with-always-encrypted.aspx)  
+-   [Lookup transformation with Always Encrypted](https://techcommunity.microsoft.com/t5/sql-server-integration-services/lookup-transformation-with-always-encrypted/ba-p/388282)  
 
 ### <a name="better-debugging"></a>改进调试
 
@@ -215,7 +215,7 @@ ms.locfileid: "71295035"
   
 -   在脚本组件或自定义数据流组件中，调用 IDTSComponentMetadata100 接口的新 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> 方法。  
   
- 有关此方面改进的详细信息，请参阅 SSIS 开发人员 Bo Fan 的下述博客文章： [Error Column Improvements for SSIS Data Flow](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)（SSIS 数据流的错误列改进）。  
+ 有关此方面改进的详细信息，请参阅 SSIS 开发人员 Bo Fan 的下述博客文章： [Error Column Improvements for SSIS Data Flow](https://techcommunity.microsoft.com/t5/sql-server-integration-services/error-column-improvements-for-ssis-data-flow-updated-for-rc2/ba-p/388253)（SSIS 数据流的错误列改进）。  
   
 > [!NOTE]  
 >  （后续版本扩展了此支持。 有关详细信息，请参阅 [提供对错误列名称的扩展支持](#getidstring) 和 [API 中的全新 IDTSComponentMetaData130 接口](#CMD130)。）  
@@ -225,7 +225,7 @@ ms.locfileid: "71295035"
   
  GetIdentificationStringByLineageID 方法已重命名为 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>中新增或更新的功能。 有关详细信息，请参阅 [数据流中错误对应的列名称](#ErrorColumn)。  
   
- 有关这方面的更改以及错误列改进的详细信息，请参阅下述已更新的博客文章。 [SSIS 数据流的错误列改进（已对 CTP3.3 进行更新）](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)  
+ 有关这方面的更改以及错误列改进的详细信息，请参阅下述已更新的博客文章。 [SSIS 数据流的错误列改进（已对 CTP3.3 进行更新）](https://techcommunity.microsoft.com/t5/sql-server-integration-services/error-column-improvements-for-ssis-data-flow-updated-for-rc2/ba-p/388253)  
   
 > [!NOTE]  
 >  （在 RC0 中，此方法已移至新的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> 接口。 有关详细信息，请参阅 [API 中的全新 IDTSComponentMetaData130 接口](#CMD130)。）  

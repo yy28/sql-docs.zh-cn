@@ -2,7 +2,7 @@
 title: 结合使用 XA 与 Microsoft ODBC 驱动程序
 description: Microsoft ODBC Driver for SQL Server 支持在 Windows、Linux 和 macOS 上通过分布式事务处理协调器 (DTC) 使用 XA 事务。
 ms.custom: ''
-ms.date: 02/04/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: ba11ff1bee512b0e3ea7b2b641ac6dc64f60adc9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3b5b8444058f0078b56ab5e4500b86a4c35a1897
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635554"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886324"
 ---
 # <a name="using-xa-transactions"></a>使用 XA 事务
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "81635554"
 
 ## <a name="overview"></a>概述
 
-自版本 17.3 起，Microsoft ODBC Driver for SQL Server 开始支持在 Windows、Linux 和 macOS 上通过分布式事务处理协调器 (DTC) 使用 XA 事务。 借助驱动程序端上的 XA 实现，客户端应用程序可以将串行操作（如启动、提交、回滚事务分支等）发送到事务管理器 (TM)。 然后，TM 会根据这些操作与资源管理器 (RM) 进行通信。 若要详细了解 XA 规范和 Microsoft DTC (MS DTC) 实现，请参阅[工作原理：SQL Server DTC（MSDTC 和 XA 事务）](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/)。
+自版本 17.3 起，Microsoft ODBC Driver for SQL Server 开始支持在 Windows、Linux 和 macOS 上通过分布式事务处理协调器 (DTC) 使用 XA 事务。 借助驱动程序端上的 XA 实现，客户端应用程序可以将串行操作（如启动、提交、回滚事务分支等）发送到事务管理器 (TM)。 然后，TM 会根据这些操作与资源管理器 (RM) 进行通信。 若要详细了解 XA 规范和 Microsoft DTC (MS DTC) 实现，请参阅[工作原理：SQL Server DTC（MSDTC 和 XA 事务）](/archive/blogs/bobsql/how-it-works-sql-server-dtc-msdtc-and-xa-transactions)。
 
 
 

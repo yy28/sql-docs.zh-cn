@@ -1710,7 +1710,7 @@
               href: relational-databases/tables/disable-foreign-key-constraints-for-replication.md
             - name: 禁用“插入和更新”约束
               href: relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md
-        - name: 唯一约束
+        - name: UNIQUE 约束和 CHECK 约束
           href: relational-databases/tables/unique-constraints-and-check-constraints.md
           items:
             - name: 创建
