@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a1947ce2821bf02b09ea1a3a49f3d83c2613c357
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b608af9a25b6a4fe14078043276e0689990e6246
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180671"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922266"
 ---
 # <a name="restoring-from-backups-stored-in-microsoft-azure"></a>从 Microsoft Azure 中存储的备份还原
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "82180671"
 ### <a name="optimizing-restores"></a>优化还原  
  要减小还原写入时间，请将 **“执行卷维护任务”** 用户权限添加到 SQL Server 用户帐户。 有关详细信息，请参阅 [数据库文件初始化](https://go.microsoft.com/fwlink/?LinkId=271622)。 如果在开启即时文件初始化后还原操作仍很慢，请查看执行数据库备份的实例的日志文件的大小。 如果日志非常大（好几 GB），则还原操作慢是正常的。 在还原过程中，必须清空日志文件，这需要花费相当多的时间。  
   
- 要减少还原次数，建议使用压缩的备份。  对于大小超过 25 GB 的备份，请使用 [AzCopy 实用工具](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx) 下载到本地驱动器，然后执行还原。 有关其他备份最佳实践和建议，请参阅 [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)。  
+ 要减少还原次数，建议使用压缩的备份。  对于大小超过 25 GB 的备份，请使用 [AzCopy 实用工具](https://docs.microsoft.com/archive/blogs/windowsazurestorage/azcopy-uploadingdownloading-files-for-windows-azure-blobs) 下载到本地驱动器，然后执行还原。 有关其他备份最佳实践和建议，请参阅 [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)。  
   
  在执行还原操作时，也可开启跟踪标志 3051，以生成详细日志。 此日志文件放置在日志目录中，以下面的格式命名：BackupToUrl-\<instancename>-\<dbname>-action-\<PID>.log。 日志文件包含每次往返 Azure 存储的相关信息（包括计时），这在诊断问题时可能非常有用。  
   
