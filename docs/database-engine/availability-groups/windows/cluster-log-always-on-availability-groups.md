@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 045444c2141027854e54480483f09ab8eb9a04b6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5e13715681f5b86647662a37b982878b3ad77468
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244376"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925271"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>为 Always On 可用性组生成和分析 CLUSTER.LOG
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "75244376"
 ## <a name="generate-cluster-log"></a>生成群集日志  
  可以通过两种方式来生成群集日志：  
   
-1.  在命令提示符处使用 `cluster /log /g` 命令。 此命令会将群集日志生成到每个 WSFC 节点上的 \windows\cluster\reports 目录。 此方法的优点是，可以使用 `/level` 选项在生成的日志中指定详细信息级别。 其缺点在于，不能为生成的群集日志指定目标目录。 有关详细信息，请参阅 [How to create the cluster.log in Windows Server 2008 Failover Clustering](https://blogs.msdn.com/b/clustering/archive/2008/09/24/8962934.aspx)（如何在 Windows Server 2008 故障转移群集中创建 cluster.log）。  
+1.  在命令提示符处使用 `cluster /log /g` 命令。 此命令会将群集日志生成到每个 WSFC 节点上的 \windows\cluster\reports 目录。 此方法的优点是，可以使用 `/level` 选项在生成的日志中指定详细信息级别。 其缺点在于，不能为生成的群集日志指定目标目录。 有关详细信息，请参阅 [How to create the cluster.log in Windows Server 2008 Failover Clustering](https://techcommunity.microsoft.com/t5/failover-clustering/how-to-create-the-cluster-log-in-windows-server-2008-failover/ba-p/371283)（如何在 Windows Server 2008 故障转移群集中创建 cluster.log）。  
   
 2.  使用 [Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx) PowerShell cmdlet。 此方法的优点是，可以从所有节点将群集日志生成到运行 cmdlet 的节点上的一个目标目录。 其缺点在于，不能在生成的日志中指定详细信息级别。  
   

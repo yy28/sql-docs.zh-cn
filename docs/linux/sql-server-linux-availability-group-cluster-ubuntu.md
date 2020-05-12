@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: 8dd55f8cb9546c7ec91632d40d2eb6b46ffd4d90
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a42d031ee66ee455af91dbcce233140a7ab0a171
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558482"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001097"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>配置 Ubuntu 群集和可用性组资源
 
@@ -190,7 +190,7 @@ sudo apt-get install mssql-server-ha
 若要创建可用性组资源，请使用 `pcs resource create` 命令并设置资源属性。 以下命令将为可用性组创建一个名为 `ag1` 的 `ocf:mssql:ag` master/slave 类型的资源。 
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s --master meta notify=true
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s master meta notify=true
 
 ```
 

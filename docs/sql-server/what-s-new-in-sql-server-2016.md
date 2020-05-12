@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: dbf5f8534b19e93d956531df3c43a04776afe1c5
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0289967cfb3585f6fa7914262e8e280089d4b478
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665369"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886234"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新增功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -35,7 +35,7 @@ ms.locfileid: "80665369"
  **立即试用 SQL Server！** 
 - 下载免费的  [SQL Server 2016 开发者版！  ](https://www.microsoft.com/cloud-platform/sql-server-editions-developers)
 - 下载最新版 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)。 
-- 已经拥有 Azure 帐户？ 加速[已安装有 SQL Server 2016 的虚拟机](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016)。
+- 已经拥有 Azure 帐户？ 加速[已安装有 SQL Server 2016 的虚拟机](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)。
 
 ## <a name="sql-server-2016-database-engine"></a>SQL Server 2016 数据库引擎
 - 现在可以在 SQL Server 安装和设置过程中配置多个 tempDB  数据库文件。
