@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: ba171a1ec1082bbcedd77bd5c7bb7a666efd3d04
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e46ebc13ddd9368a2234c99979c9036a702e11e
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903794"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924815"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Scale Out 通过 SQL Server 故障转移群集实例对高可用性的支持
 
@@ -26,7 +26,7 @@ ms.locfileid: "77903794"
 要使用 SQL Server 故障转移群集实例设置 Scale Out Master 端的高可用性，请执行以下步骤：
 
 ## <a name="1-prerequisites"></a>1.先决条件
-设置 Windows 故障转移群集。 有关说明，请参阅博客文章[安装适用于 Windows Server 2012 的故障转移群集功能和工具](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx)。 在所有群集节点上安装功能和工具。
+设置 Windows 故障转移群集。 有关说明，请参阅博客文章[安装适用于 Windows Server 2012 的故障转移群集功能和工具](https://techcommunity.microsoft.com/t5/failover-clustering/installing-the-failover-cluster-feature-and-tools-in-windows/ba-p/371733)。 在所有群集节点上安装功能和工具。
 
 ## <a name="2-install-sql-server-failover-cluster"></a>2.安装 SQL Server 故障转移群集
 安装 SQL Server 故障转移群集。 有关说明，请参阅 [SQL Server 故障转移群集安装](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)。 安装过程中，在“功能选择”页上选择“数据库引擎服务”。 记录 SQL Server 网络名称，以便进一步配置。

@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4e72ded2e2f2a51805403132c662bff3d70c97ce
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 9271d10c83575ba1203c145d217c4b179976eff6
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487102"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886444"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>使用 sqlmlutils 安装 Python 包
 
@@ -25,7 +25,7 @@ ms.locfileid: "81487102"
 有关包位置和安装路径的详细信息，请参阅[获取 Python 包信息](../package-management/python-package-information.md)。
 
 > [!NOTE]
-> 不建议使用标准 Python `pip install` 命令在 SQL Server 2019 上添加 Python 包。 请改用本文中所述的 sqlmlutils  。
+> 本文中所述的 sqlmlutils 包用于将 Python 包添加到 SQL Server 2019 或更高版本  。 对于 SQL Server 2017 及更早版本，请参阅[使用 Python 工具安装包](https://docs.microsoft.com/sql/machine-learning/package-management/install-python-packages-standard-tools?view=sql-server-2017&viewFallbackFrom=sql-server-ver15)。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -63,7 +63,6 @@ ms.locfileid: "81487102"
 1. 打开命令提示符并运行以下命令，安装 sqlmlutils 包   。 替换下载的 sqlmlutils zip 文件的完整路径（此示例假定下载的文件为 `c:\temp\sqlmlutils-1.0.0.zip`）  。
 
    ```console
-   pip install "pymssql<3.0"
    pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils-1.0.0.zip
    ```
 

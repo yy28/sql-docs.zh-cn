@@ -2,7 +2,7 @@
 title: 结合使用 Azure Active Directory 和 ODBC 驱动程序
 description: 借助 Microsoft ODBC Driver for SQL Server，ODBC 应用程序可以使用 Azure Active Directory 连接到 Azure SQL 数据库实例。
 ms.custom: ''
-ms.date: 03/18/2020
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 15f8117c84f952d4244c95a53d187e142daa8572
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b829cb837eafb1a47283d50ede3ee789471e5f7f
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635411"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886304"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>结合使用 Azure Active Directory 和 ODBC 驱动程序
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -178,5 +178,5 @@ SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};U
 ~~~
 
 ## <a name="see-also"></a>另请参阅
-[使用 Azure AD 身份验证的 Azure SQL DB 对基于令牌的身份验证的支持](https://blogs.msdn.microsoft.com/sqlsecurity/2016/02/09/token-based-authentication-support-for-azure-sql-db-using-azure-ad-auth)
 
+[使用 Azure AD 身份验证的 Azure SQL DB 对基于令牌的身份验证的支持](/archive/blogs/sqlsecurity/token-based-authentication-support-for-azure-sql-db-using-azure-ad-auth)

@@ -2,7 +2,7 @@
 title: Microsoft Drivers for PHP 的支持资源
 description: 收录了在开发使用 Microsoft Drivers for PHP for SQL Server 的应用程序时有用的资源。
 ms.custom: ''
-ms.date: 10/15/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ff0627dc43a0004534294158c1a43c6c1c21b529
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 00e6ce56a5b02f188600297249b1d2dc412fde6a
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635345"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886424"
 ---
 # <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的支持资源
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "81635345"
   
 若要获取对等支持，请访问 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [论坛](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqldriverforphp)。  
   
-若要提供反馈、提问或了解开发团队正在考虑什么，请访问 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [团队博客](https://blogs.msdn.microsoft.com/sqlphp/)。  
+若要提供反馈、提问或了解开发团队正在考虑的内容，请访问 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [SQL Server 驱动程序博客](https://techcommunity.microsoft.com/t5/sql-server/bg-p/SQLServer/label-name/SQLServerDrivers)。  
   
 [GitHub 上的 Microsoft PHP Driver for SQL Server 源代码](https://github.com/Microsoft/msphpsql)  
   

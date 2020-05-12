@@ -1,6 +1,7 @@
 ---
-title: 结合使用 Always Encrypted 和 Microsoft .NET Data Provider for SQL Server  | Microsoft Docs
-ms.date: 11/18/2019
+title: 结合使用 Always Encrypted 和 SqlClient
+description: 了解如何使用 Microsoft.Data.SqlClient 和 Always Encrypted 开发应用程序，以确保数据安全。
+ms.date: 05/06/2020
 ms.assetid: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -9,12 +10,12 @@ ms.topic: conceptual
 author: cheenamalhotra
 ms.author: v-chmalh
 ms.reviewer: v-kaywon
-ms.openlocfilehash: dc70690bfe3d3d95171c885707b5a195c31b2fc1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5b4634d1d9bed66aed6d7871d1e2c14813e5ec34
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75233918"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886462"
 ---
 # <a name="using-always-encrypted-with-the-microsoft-net-data-provider-for-sql-server"></a>结合使用 Always Encrypted 和 Microsoft .NET Data Provider for SQL Server
 
@@ -559,7 +560,6 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 ## <a name="see-also"></a>另请参阅
 
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [始终加密博客](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 - [SQL 数据库教程：使用 Always Encrypted 保护敏感数据](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 - [教程：使用具有安全 enclave 的 Always Encrypted 开发 .NET 应用程序](tutorial-always-encrypted-enclaves-develop-net-apps.md)
 - [示例：使用 Always Encrypted 的 Azure Key Vault](azure-key-vault-example.md)
