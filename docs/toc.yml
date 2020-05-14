@@ -3,7 +3,7 @@
 - name: Docs 导航提示
   href: sql-server/sql-docs-navigation-guide.md
 - name: 先前版本 2005-2014
-  href: toc/previous-versions-sql-server.md
+  href: sql-server/previous-versions-sql-server.md
 - name: 概述
   items:
     - name: 新增功能
