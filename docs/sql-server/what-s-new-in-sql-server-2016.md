@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0289967cfb3585f6fa7914262e8e280089d4b478
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: b0b4a72519a0fa20d0c4a7472760a8f06a9ced32
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886234"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79190615"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新增功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -35,7 +35,7 @@ ms.locfileid: "82886234"
  **立即试用 SQL Server！** 
 - 下载免费的  [SQL Server 2016 开发者版！  ](https://www.microsoft.com/cloud-platform/sql-server-editions-developers)
 - 下载最新版 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)。 
-- 已经拥有 Azure 帐户？ 加速[已安装有 SQL Server 2016 的虚拟机](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)。
+- 已经拥有 Azure 帐户？ 加速[已安装有 SQL Server 2016 的虚拟机](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016)。
 
 ## <a name="sql-server-2016-database-engine"></a>SQL Server 2016 数据库引擎
 - 现在可以在 SQL Server 安装和设置过程中配置多个 tempDB  数据库文件。
@@ -55,7 +55,7 @@ ms.locfileid: "82886234"
 
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)
 SQL Server 2016 Analysis Services 提升了兼容性级别为 1200  的表格模型数据库的性能，并提供了创建、数据库管理、筛选、处理等功能。
-- [SQL Server R Services](~/machine-learning/what-s-new-in-sql-server-machine-learning-services.md)  将用于统计分析的 R 编程语言集成到 SQL Server 中。 
+- [SQL Server R Services](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)  将用于统计分析的 R 编程语言集成到 SQL Server 中。 
 - 新增的数据库一致性检查器 (DBCC)  在内部运行，以检测潜在的数据损坏问题。
 -  直接查询是查询实时外部数据，而不是先导入数据。现在支持更多的数据源，包括 Azure SQL、Oracle 和 Teradata。 
 - 新增了许多 DAX（数据访问表达式）函数  。

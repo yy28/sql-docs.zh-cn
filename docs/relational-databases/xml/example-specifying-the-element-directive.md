@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9b07ece5aab18649cd9c98f1028d05131b6c7687
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 5e0760c0d1ee59725e074f55d3730f574a5fac3a
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664775"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68006724"
 ---
 # <a name="example-specifying-the-element-directive"></a>示例：指定 ELEMENT 指令
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   此示例检索雇员信息并生成以元素为中心的 XML，如下所示：  
   
 ```  
