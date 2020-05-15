@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 32d8a7a590b31d63c256f861338193c234774908
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c11771790e91bb888df7e77749e6dc879081a46e
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165559"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849615"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>创建和测试分类器用户定义函数
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "74165559"
   
 1.  创建并配置新的资源池和工作负荷组。 将每个工作负荷组分配给相应的资源池。  
   
-    ```  
+    ```sql  
     --- Create a resource pool for production processing  
     --- and set limits.  
     USE master;  
@@ -57,6 +57,7 @@ ms.locfileid: "74165559"
          MIN_CPU_PERCENT = 50  
     );  
     GO  
+    
     --- Create a workload group for production processing  
     --- and configure the relative importance.  
     CREATE WORKLOAD GROUP gProductionProcessing  
@@ -64,13 +65,14 @@ ms.locfileid: "74165559"
     (  
          IMPORTANCE = MEDIUM  
     );  
+    
     --- Assign the workload group to the production processing  
     --- resource pool.  
     USING pProductionProcessing  
     GO  
+    
     --- Create a resource pool for off-hours processing  
     --- and set limits.  
-  
     CREATE RESOURCE POOL pOffHoursProcessing  
     WITH  
     (  
@@ -78,6 +80,7 @@ ms.locfileid: "74165559"
          MIN_CPU_PERCENT = 0  
     );  
     GO  
+    
     --- Create a workload group for off-hours processing  
     --- and configure the relative importance.  
     CREATE WORKLOAD GROUP gOffHoursProcessing  
@@ -93,14 +96,14 @@ ms.locfileid: "74165559"
   
 2.  更新内存中的配置。  
   
-    ```  
+    ```sql  
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     GO  
     ```  
   
 3.  创建一个表，并定义生产处理时间范围的开始和结束时间。  
   
-    ```  
+    ```sql  
     USE master;  
     GO  
     CREATE TABLE tblClassificationTimeTable  
@@ -113,7 +116,7 @@ ms.locfileid: "74165559"
     --- Add time values that the classifier will use to  
     --- determine the workload group for a session.  
     INSERT into tblClassificationTimeTable VALUES('gProductionProcessing', '6:35 AM', '6:15 PM');  
-    go  
+    GO  
     ```  
   
 4.  创建分类器函数，它使用时间函数以及可根据查找表中的时间计算的值。 有关在分类器函数中使用查找表的信息，请参阅本主题中的“在分类器函数中使用查找表的最佳做法”。  
@@ -121,7 +124,7 @@ ms.locfileid: "74165559"
     > [!NOTE]  
     >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 引入了一组扩展的日期和时间数据类型和函数。 有关详细信息，请参阅[日期和时间数据类型和功能 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
   
-    ```  
+    ```sql  
     CREATE FUNCTION fnTimeClassifier()  
     RETURNS sysname  
     WITH SCHEMABINDING  
@@ -149,7 +152,7 @@ ms.locfileid: "74165559"
   
 5.  注册分类器函数并更新内存中的配置。  
   
-    ```  
+    ```sql  
     ALTER RESOURCE GOVERNOR with (CLASSIFIER_FUNCTION = dbo.fnTimeClassifier);  
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     GO  
@@ -159,7 +162,7 @@ ms.locfileid: "74165559"
   
 1.  使用以下查询获取资源池和工作负荷组配置。  
   
-    ```  
+    ```sql  
     USE master;  
     SELECT * FROM sys.resource_governor_resource_pools;  
     SELECT * FROM sys.resource_governor_workload_groups;  
@@ -168,7 +171,7 @@ ms.locfileid: "74165559"
   
 2.  使用以下查询验证分类器函数是否存在以及是否启用。  
   
-    ```  
+    ```sql  
     --- Get the classifier function Id and state (enabled).  
     SELECT * FROM sys.resource_governor_configuration;  
     GO  
@@ -182,7 +185,7 @@ ms.locfileid: "74165559"
   
 3.  使用以下查询获取资源池和工作负荷组的当前运行时数据。  
   
-    ```  
+    ```sql  
     SELECT * FROM sys.dm_resource_governor_resource_pools;  
     SELECT * FROM sys.dm_resource_governor_workload_groups;  
     GO  
@@ -190,7 +193,7 @@ ms.locfileid: "74165559"
   
 4.  使用以下查询确定每个组中包含的会话。  
   
-    ```  
+    ```sql  
     SELECT s.group_id, CAST(g.name as nvarchar(20)), s.session_id, s.login_time, 
         CAST(s.host_name as nvarchar(20)), CAST(s.program_name AS nvarchar(20))  
     FROM sys.dm_exec_sessions AS s  
@@ -202,7 +205,7 @@ ms.locfileid: "74165559"
   
 5.  使用以下查询确定每个组中包含的请求。  
   
-    ```  
+    ```sql  
     SELECT r.group_id, g.name, r.status, r.session_id, r.request_id, 
         r.start_time, r.command, r.sql_handle, t.text   
     FROM sys.dm_exec_requests AS r  
@@ -215,7 +218,7 @@ ms.locfileid: "74165559"
   
 6.  使用以下查询确定分类器中运行的请求。  
   
-    ```  
+    ```sql  
     SELECT s.group_id, g.name, s.session_id, s.login_time, s.host_name, s.program_name   
     FROM sys.dm_exec_sessions AS s  
     INNER JOIN sys.dm_resource_governor_workload_groups AS g  
@@ -237,11 +240,11 @@ ms.locfileid: "74165559"
   
 ## <a name="best-practices-for-using-lookup-tables-in-a-classifier-function"></a>在分类器函数中使用查找表的最佳做法  
   
-1.  除非绝对必要，否则不要使用查找表。 如果需要使用查找表，可以将其硬编码在函数本身中；但是，这样做时需要权衡考虑分类器函数的复杂程度和动态变更。  
+1.  除非绝对必要，否则不要使用查找表。 如果需要使用查找表，可以将其硬编码到函数本身；但是，这样做时需要权衡考虑分类器函数的复杂程度和动态变更。  
   
 2.  限制为查找表执行的 I/O。  
   
-    1.  使用 TOP 1 仅返回一行。  
+    1.  使用 `TOP 1` 仅返回一行。  
   
     2.  尽量减少表中的行数。  
   
@@ -253,7 +256,7 @@ ms.locfileid: "74165559"
   
 3.  防止阻塞查找表。  
   
-    1.  使用 `NOLOCK` 提示防止阻塞，或在函数中使用最大值设置为 1000 毫秒的 `SET LOCK_TIMEOUT` 。  
+    1.  使用 `NOLOCK` 提示防止阻塞，或在函数中使用最大值设置为 1,000 毫秒的 `SET LOCK_TIMEOUT`。  
   
     2.  表必须存在于 master 数据库中。 （master 数据库是在客户端计算机尝试连接时可确保恢复的唯一一个数据库）。  
   

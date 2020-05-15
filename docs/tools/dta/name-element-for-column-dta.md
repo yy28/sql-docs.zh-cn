@@ -1,5 +1,6 @@
 ---
 title: 列的名称元素 (DTA)
+description: 在 dta 实用工具中，列的 Name 元素在用户指定的配置中为索引列指定一个名称。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: f80f72f94bff4797c2278b2af32f8c02dfd1e2e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d926b887790b66eccef08c6cae861d88ec646c5a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307967"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826731"
 ---
 # <a name="name-element-for-column-dta"></a>列的名称元素 (DTA)
 

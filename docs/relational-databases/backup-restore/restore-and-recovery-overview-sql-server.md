@@ -1,5 +1,6 @@
 ---
 title: 还原与恢复概述 (SQL Server) | Microsoft Docs
+description: 本文主要介绍了通过依次还原一组 SQL Server 备份，从故障中恢复 SQL Server 数据库所涉及的操作。
 ms.custom: ''
 ms.date: 04/23/2019
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 9b034e43f918a0f6c198c29cf2f6618ba38638f8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 143925d3fa6867d656a4f473194608e77f5a960e
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288571"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924931"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>还原与恢复概述 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -167,18 +168,18 @@ ms.locfileid: "79288571"
 ##  <a name="database-recovery-advisor-sql-server-management-studio"></a><a name="DRA"></a> 数据库恢复顾问 (SQL Server Management Studio)  
 数据库恢复顾问简化了制定还原计划的过程，可以很轻松地实现最优的正确还原顺序。 很多已知数据库还原问题和客户所要求的增强功能已得到解决。 数据库恢复顾问引入的主要增强功能包括：  
   
--   **还原计划算法：**  用于制定还原计划的算法已得到明显改进，特别是对于复杂的还原方案。 对于许多边缘案例（包括时点还原中存在分支的情形），处理效率要比以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]更高。  
+-   **还原计划算法：** 用于制定还原计划的算法已得到明显改进，特别是对于复杂的还原方案。 对于许多边缘案例（包括时点还原中存在分支的情形），处理效率要比以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]更高。  
   
--   **时间点还原：**  数据库恢复顾问极大地简化了将数据库还原到给定时间点的过程。 可视备份时间线明显增强了对时点还原的支持。 此可视时间线允许您将合适的时点标识为还原数据库的目标恢复点。 时间线简化了遍历有分支恢复路径（跨恢复分支的路径）的过程。 给定时点还原计划自动包括与还原到目标时点（日期和时间）相关的备份。 有关详细信息，请参阅[将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
+-   **时间点还原：** 数据库恢复顾问极大地简化了将数据库还原到给定时间点的过程。 可视备份时间线明显增强了对时点还原的支持。 此可视时间线允许您将合适的时点标识为还原数据库的目标恢复点。 时间线简化了遍历有分支恢复路径（跨恢复分支的路径）的过程。 给定时点还原计划自动包括与还原到目标时点（日期和时间）相关的备份。 有关详细信息，请参阅[将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
   
 有关详细信息，请参阅下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可管理性博客中有关数据库恢复顾问的信息：  
   
 -   [恢复顾问：简介](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
--   [恢复顾问：使用 SSMS 创建/还原拆分备份](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+-   [恢复顾问：使用 SSMS 创建/还原拆分备份](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
 
 ## <a name="accelerated-database-recovery"></a><a name="adr"></a> 加速数据库恢复
-[ 和 ](/azure/sql-database/sql-database-accelerated-database-recovery/) 中提供了[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]加速数据库恢复[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 通过重新设计 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [恢复过程](#TlogAndRecovery)，加速数据库恢复极大地提高了数据库可用性，尤其是存在长时间运行的事务时。 启用了加速数据库恢复的数据库在故障转移或其他非干净关闭后完成恢复过程的速度显著加快。 启用加速数据库恢复后，回滚取消长时间运行的事务的速度也显著加快。
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中提供了[加速数据库恢复](/azure/sql-database/sql-database-accelerated-database-recovery/) 通过重新设计 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [恢复过程](#TlogAndRecovery)，加速数据库恢复极大地提高了数据库可用性，尤其是存在长时间运行的事务时。 启用了加速数据库恢复的数据库在故障转移或其他非干净关闭后完成恢复过程的速度显著加快。 启用加速数据库恢复后，回滚取消长时间运行的事务的速度也显著加快。
 
 可使用以下语法对 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 按数据库启用加速数据库恢复：
 

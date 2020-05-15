@@ -23,12 +23,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db0bbc0fe85809ea827b005e8c10bbbfe4f30670
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: 0e9119b96d88d9727a18d6e7ef03310db56a719a
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517517"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849847"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 
@@ -60,7 +60,7 @@ propertyname
 |ComparisonStyle|排序规则的 Windows 比较样式。<br /><br /> 基本数据类型：int |  
 |ComputerNamePhysicalNetBIOS|当前运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的本地计算机的 NetBIOS 名称。<br /><br /> 对于故障转移群集上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 群集实例，当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例故障转移到故障转移群集中的其他节点时，该值将更改。<br /><br /> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例上，该值保持不变，并返回与 MachineName 属性相同的值。<br /><br /> **注意：** 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例位于故障转移群集中，并且您要获取故障转移群集实例的名称，请使用 MachineName 属性。<br /><br /> NULL = 输入无效，出现错误或不适用。<br /><br /> 基本数据类型：nvarchar(128) |  
 |版本|所安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的产品版本。 使用该属性的值确定功能和限制，例如[按 SQL Server 版本划分的计算能力限制](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。 64 位版本的[!INCLUDE[ssDE](../../includes/ssde-md.md)]向此版本追加（64 位）。<br /><br /> 返回：<br /><br /> “Enterprise Edition”<br /><br /> “Enterprise Edition:基于内核的许可”<br /><br /> “Enterprise Evaluation Edition”<br /><br /> “Business Intelligence Edition”<br /><br /> “Developer Edition”<br /><br /> “Express Edition”<br /><br /> “Express Edition with Advanced Services”<br /><br /> “Standard Edition”<br /><br /> “Web Edition”<br /><br /> “SQL Azure”表示 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 基本数据类型：nvarchar(128) |  
-|EditionID|EditionID 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的已安装产品版本。 使用该属性的值确定功能和限制，例如[按 SQL Server 版本划分的计算能力限制](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition：基于内核的许可<br /><br /> 610778273= Enterprise Evaluation<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905= Express with Advanced Services<br /><br /> -1534726760 = Standard<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = SQL Database 或 Azure Synapse Analytics（以前称为 SQL 数据仓库）<br /><br /> 基本数据类型：bigint |  
+|EditionID|EditionID 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的已安装产品版本。 使用该属性的值确定功能和限制，例如[按 SQL Server 版本划分的计算能力限制](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition：基于内核的许可<br /><br /> 610778273= Enterprise Evaluation<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905= Express with Advanced Services<br /><br /> -1534726760 = Standard<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = SQL 数据库或 Microsoft Azure Synapse Analytics（以前称为“SQL 数据仓库”）<br /><br /> 基本数据类型：bigint |  
 |EngineEdition|服务器上安装的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本。<br /><br /> 1 = Personal 或 Desktop Engine（不适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。）<br /><br /> 2 = Standard（对 Standard、Web 和 Business Intelligence 返回该值。）<br /><br /> 3 = Enterprise（对 Enterprise、Developer 以及 Enterprise 版本返回该值。）<br /><br /> 4 = Express（对 Express、Express with Tools 和 Express with Advanced Services 返回该值）<br /><br /> 5 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 6 = [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 8 = 托管实例<br /><br /> 基本数据类型：int |  
 |HadrManagerStatus|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 指示 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]管理器是否已启动。<br /><br /> 0 = 未启动，通信挂起。<br /><br /> 1 = 已启动，正在运行。<br /><br /> 2 = 未启动，已失败。<br /><br /> NULL = 输入无效，出现错误或不适用。|  
 |InstanceDefaultDataPath|适用范围：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到当前版本 2015 年底开始的更新  。<br /><br /> 实例数据文件的默认路径的名称。|  

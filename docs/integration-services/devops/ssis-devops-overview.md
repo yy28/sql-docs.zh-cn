@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 619fddade48e56c28995b193776e6d13f31918ac
-ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
+ms.openlocfilehash: 0b57ac8ea8462a5c79feb1a91c4f9d205927b953
+ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80809715"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82987201"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SQL Server Integration Services (SSIS) DevOps 工具（预览）
 
@@ -344,6 +344,14 @@ SSIS 目录配置的内联 JSON。 只有在选择“内联”作为配置文件
 |sensitive|环境变量的值是否是敏感值。|有效输入为： <br> true  <br> *false*|
 
 ## <a name="release-notes"></a>发行说明
+
+### <a name="version-100"></a>版本 1.0.0
+
+发行日期：2020 年 5 月 8 日
+
+- 正式发布 (GA) 版。
+- 添加了对 .NET Framework 最低代理版本的限制。 目前 .NET Framework 的最低版本是 4.6.2。
+- 优化了 SSIS 生成任务和 SSIS 部署任务的说明。
 
 ### <a name="version-020-preview"></a>版本 0.2.0 预览版
 

@@ -1,6 +1,6 @@
 ---
 title: 空间数据类型概述 | Microsoft Docs
-ms.date: 11/01/2016
+ms.date: 05/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9fb9acb0aa03184f038c2dda9be10b36e6ca32ee
+ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68048522"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82784672"
 ---
 # <a name="spatial-data-types-overview"></a>空间数据类型概述
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ geometry 和 geography 类型的子类型分为简单类型和集合类型。  �
 ### <a name="orientation-of-spatial-data"></a>空间数据的方向  
 在平面系统中，多边形的环方向并非重要因素。 例如，((0, 0), (10, 0), (0, 20), (0, 0)) 描述的多边形与 ((0, 0), (0, 20), (10, 0), (0, 0)) 描述的多边形相同。 SQL 规范的 OGC 简单特征未规定环顺序，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会强制环的顺序。  
 
-在椭圆体系统中，多边形无意义，或者模糊不清，没有方向。 例如，赤道周围的环是否描述了北半球或南半球？ 如果我们使用 **geography** 数据类型存储空间实例，必须指定环的方向并准确地描述实例的位置。 椭圆体系统中多边形的内部由左侧规则定义。  
+在椭圆体系统中，多边形无意义，或者模糊不清，没有方向。 例如，赤道周围的环是否描述了北半球或南半球？ 如果我们使用 **geography** 数据类型存储空间实例，必须指定环的方向并准确地描述实例的位置。 椭圆系统中的多边形的内部是由“左手定则”定义的：如果你想象自己沿着一个地理多边形的环行走，按照点的排列顺序，左边的区域被视为多边形的内部，右边的区域被视为多边形的外部。
 
 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中当兼容级别为 100 或更低时， **geography** 数据类型具有以下限制：  
 -   每个 **geography** 实例必须能够容纳在单个半球的内部。 任何大于半球的对象都无法存储。  

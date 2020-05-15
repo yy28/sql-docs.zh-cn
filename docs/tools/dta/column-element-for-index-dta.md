@@ -1,5 +1,6 @@
 ---
 title: 索引的列元素 (DTA)
+description: 在 dta 实用工具中，索引的 Column 元素指定为用户指定的配置创建索引的列。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/09/2017
-ms.openlocfilehash: 008cba36af33c465c3a126dc3e101b8ebca28e36
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 02900685d93eef62553d830494d25ec83ca83ce1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307880"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831623"
 ---
 # <a name="column-element-for-index-dta"></a>索引的列元素 (DTA)
 
@@ -42,7 +43,7 @@ ms.locfileid: "75307880"
   
 ## <a name="element-attributes"></a>元素属性  
   
- **Type**：可选。 指定索引列类型。 使用 string 数据类型将此属性指定为以下允许  值之一：  
+ **类型**：可选。 指定索引列类型。 使用 string 数据类型将此属性指定为以下允许  值之一：  
   
 -   **KeyColumn**  
   
@@ -64,7 +65,7 @@ ms.locfileid: "75307880"
   
      有关包含列的详细信息，请参阅 [创建带有包含列的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。  
   
- **SortOrder**：可选。 指定列的排序顺序。 请使用 **string** 数据类型按如下格式指定 **Ascending** 或 **Descending** 排序顺序：  
+ SortOrder  ：可选。 指定列的排序顺序。 请使用 **string** 数据类型按如下格式指定 **Ascending** 或 **Descending** 排序顺序：  
   
 ```  
 <Column SortOrder="Ascending">  

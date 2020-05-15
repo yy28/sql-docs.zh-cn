@@ -10,12 +10,12 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 19437198d7f65d640ea4501e97e149670a0a95fa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 95b6a5bfd44aafe8b76bf04d42a71808718172ab
+ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75325447"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82872786"
 ---
 # <a name="install-sql-server-on-server-core"></a>在 Server Core 上安装 SQL Server
 
@@ -27,11 +27,11 @@ Server Core 安装选项提供了用于运行特定服务器角色的最小环�
   
  有关当前支持的操作系统列表，请参阅[安装 SQL Server 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。
 
-## <a name="prerequisites"></a>必备条件  
+## <a name="prerequisites"></a>先决条件  
   
 |要求|如何安装|  
 |-----------------|--------------------|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |对于除 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 之外的所有版本的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]安装程序均要求 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core 配置文件。 如果尚未安装此配置文件，SQL Server 安装程序将自动安装。 安装需要重启。 可在运行安装程序前安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，避免重启。|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |对于除 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 之外的所有版本的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]安装程序均要求 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core 配置文件。 如果尚未安装此配置文件，SQL Server 安装程序将自动安装。 安装需要重启。 可在运行安装程序前安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，避免重启。|  
 |Windows Installer 4.5|随 Server Core 安装一同提供。|  
 |Windows PowerShell|随 Server Core 安装一同提供。|  
 |Java 运行时 |为了使用 PolyBase，需要安装相应的 Java 运行时。 有关详细信息，请参阅 [PolyBase 安装](../../relational-databases/polybase/polybase-installation.md)。|
@@ -287,13 +287,9 @@ Server Core 安装选项提供了用于运行特定服务器角色的最小环�
 ### <a name="enable-tcpip-on-the-instance-of-ssnoversion"></a>在实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上启用 TCP/IP  
  可以在 Server Core 上通过 Windows PowerShell 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用 TCP/IP 协议。 执行以下步骤:  
   
-1.  在服务器上，启动任务管理器。  
+1.  在 PowerShell 中运行：Import-Module SQLPS。  
   
-2.  在 **“应用程序”** 选项卡上，单击 **“新建任务”** 。  
-  
-3.  在 **“创建新任务”** 对话框上的 **“打开”** 字段中键入 **sqlps.exe** ，然后单击 **“确定”** 。 这将打开 **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** 窗口。  
-  
-4.  在 **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** 窗口中，运行以下脚本以启用 TCP/IP 协议：  
+2.  在 **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** 窗口中，运行以下脚本以启用 TCP/IP 协议：  
   
 ```powershell  
 $smo = 'Microsoft.SqlServer.Management.Smo.'  

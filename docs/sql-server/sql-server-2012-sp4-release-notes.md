@@ -1,5 +1,6 @@
 ---
 title: SQL Server 2012 Service Pack 发行说明 | Microsoft Docs
+description: 本文包含有关 SQL Server 2012 的四个服务包的聚合发行说明。 每个服务包都是之前服务包的累积。
 ms.prod: sql
 ms.technology: install
 ms.custom: ''
@@ -7,15 +8,15 @@ ms.date: 02/26/2018
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: e06daf1c4963df2706781ba222ef5efd07ab9249
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d49f60415135a40ffeb470f09903cd3cd080ab69
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79112379"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999428"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 Service Pack 发行说明
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -181,7 +182,7 @@ ms.locfileid: "79112379"
   
 **解决方法**：要将“计划的数据刷新”用于 Power View 工作簿，请创建仅用作数据模型的 PowerPivot 工作簿  。 使用您的 Excel 工作表和 Power View 工作表创建单独的工作簿，将它链接到包含数据模型的 PowerPivot 工作簿。 应只对包含数据模型的 PowerPivot 工作簿安排执行数据刷新。  
   
-### <a name="data-quality-services"></a>“数据库引擎服务”  
+### <a name="data-quality-services"></a>数据库引擎服务  
   
 #### <a name="dqs-available-in-the-incorrect-edition-of-sql-server-2012"></a>错误的 SQL Server 2012 版本中提供 DQS  
 **问题：** 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] RTM 版本中，Data Quality Services (DQS) 功能在 Enterprise、Business Intelligence 和 Developer 版本以外的 SQL Server 版本中提供。 在安装 SQL Server 2012 SP1 后，DQS 将在除 Enterprise、Business Intelligence 和 Developer 版本之外的所有版本中不可用。  

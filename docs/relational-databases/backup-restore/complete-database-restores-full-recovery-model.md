@@ -1,5 +1,6 @@
 ---
 title: 完整数据库还原（完整恢复模式）| Microsoft Docs
+description: 了解完整的 SQL Server 数据库还原，其中所有数据都会恢复到一致的时间点。
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: d7e56c5ceb23d2c42a973c7f8d56edbce5046a86
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cdcc38c973f1e1c79fda3fb366472b569cf392dc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908963"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824090"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>完整数据库还原（完整恢复模式）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

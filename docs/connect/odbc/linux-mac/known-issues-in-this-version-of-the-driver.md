@@ -1,7 +1,7 @@
 ---
 title: Linux 和 macOS 上的 ODBC 驱动程序的已知问题
 description: 了解 Linux 和 macOS 上有关 Microsoft ODBC Driver for SQL Server 的已知问题，以及解决连接问题的步骤。
-ms.date: 03/05/2020
+ms.date: 05/06/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: connectivity
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - known issues
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f6e39184b8ba565fed48ba501e2502dad19257ce
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 898df9a68fd0e1fd87cab597502d6e0baa17172b
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728418"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886390"
 ---
 # <a name="known-issues-for-the-odbc-driver-on-linux-and-macos"></a>Linux 和 macOS 上的 ODBC 驱动程序的已知问题
 
@@ -25,7 +25,7 @@ ms.locfileid: "81728418"
 
 ## <a name="known-issues"></a>已知问题
 
-其他问题将在 [Microsoft ODBC 驱动程序团队博客](https://blogs.msdn.com/b/sqlnativeclient/)上发布。  
+其他问题将在 [SQL Server 驱动程序博客](https://techcommunity.microsoft.com/t5/SQL-Server/bg-p/SQLServer/label-name/SQLServerDrivers)上发布。  
 
 - 由于系统库限制，Alpine Linux 支持较少的字符编码和区域设置。 例如 en_US.UTF-8 不可用。 有关详细信息，请参阅 [musl libc 与 glibc 功能之间的差异](https://wiki.musl-libc.org/functional-differences-from-glibc.html)。
 
@@ -82,7 +82,7 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
   
 - [带有连接环形缓冲区的 SQL Server 2008 中的连接疑难解答](https://techcommunity.microsoft.com/t5/sql-server/connectivity-troubleshooting-in-sql-server-2008-with-the/ba-p/383393)  
   
-- [SQL Server 身份验证疑难解答](https://docs.microsoft.com/archive/blogs/sqlsecurity/sql-server-authentication-troubleshooter)  
+- [SQL Server 身份验证疑难解答](/archive/blogs/sqlsecurity/sql-server-authentication-troubleshooter)  
 
 ## <a name="next-steps"></a>后续步骤
 

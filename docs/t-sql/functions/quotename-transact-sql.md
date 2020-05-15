@@ -19,15 +19,15 @@ helpviewer_keywords:
 - QUOTENAME function
 - valid identifiers [SQL Server]
 ms.assetid: 34d47f1e-2ac7-4890-8c9c-5f60f115e076
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b83a3dbe28848a335e414a0dd39ef1fafdffff17
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c0b033d43bd2912fe113634af7422b3728c83765
+ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634908"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82987483"
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "81634908"
   
 ## <a name="syntax"></a>语法  
   
-```syntaxsql
+```sql
 QUOTENAME ( 'character_string' [ , 'quote_character' ] )   
 ```  
   
@@ -47,7 +47,7 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
  Unicode 字符数据构成的字符串。 character_string 是 sysname，且最多具有 128 个字符   。 超过 128 个字符的输入将返回 NULL。  
   
  'quote_character'   
- 用作分隔符的单字符字符串。 可以是单引号 (')、左方括号或右方括号 ([])、双引号 (")、左圆括号或右圆括号 (())、大于或小于符号 ( **)、左大括号或右大括号 (** ) 或反引号 ( **)**   **><** **{}** **\`** 。 如果提供了不可接受的字符，则返回 NULL。 如果未指定 quote_character，则使用方括号  。  
+ 用作分隔符的单字符字符串。 可以是单引号 (')、左方括号或右方括号 ([])、双引号 (")、左圆括号或右圆括号 (())、大于或小于符号 (><)、左大括号或右大括号 ({}) 或反引号 (\`)        。 如果提供了不可接受的字符，则返回 NULL。 如果未指定 quote_character，则使用方括号  。  
   
 ## <a name="return-types"></a>返回类型  
  **nvarchar(258)**  
@@ -55,24 +55,33 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
 ## <a name="examples"></a>示例  
  以下示例接受字符串 `abc[]def` 并使用 `[` 和 `]` 字符来创建有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分隔标识符。  
   
-```  
-SELECT QUOTENAME('abc[]def');  
+```sql
+SELECT QUOTENAME('abc[]def');
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-[abc[]]def]  
+[abc[]]def]
   
 (1 row(s) affected)  
 ```  
   
  请注意，字符串 `abc[]def` 中的右方括号有两个，用于指示转义符。  
+ 
+ 下面的示例准备一个用引号引起来的字符串，用于对列命名。  
+  
+```sql
+DECLARE @columnName NVARCHAR(255)='user''s "custom" name'
+DECLARE @sql NVARCHAR(MAX) = 'SELECT FirstName AS ' + QUOTENAME(@columnName) + ' FROM dbo.DimCustomer'
+
+EXEC sp_executesql @sql
+```
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  以下示例接受字符串 `abc def` 并使用 `[` 和 `]` 字符来创建有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分隔标识符。  
   
-```  
+```sql
 SELECT QUOTENAME('abc def');   
 ```  
   
@@ -96,6 +105,3 @@ SELECT QUOTENAME('abc def');
  [STUFF (Transact-SQL)](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE (Transact-SQL)](../../t-sql/functions/translate-transact-sql.md)  
  [字符串函数 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
-  
-  
-

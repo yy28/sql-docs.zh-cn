@@ -18,12 +18,12 @@ ms.assetid: 43661b89-8f13-4480-ad53-70306cbb14c5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5a0385b96c861ae65cae70b332d0117eff97501
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 320dfc27d5582fd46d4ea7d8189e2a6ce4922144
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631831"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925201"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -45,7 +45,7 @@ THROW [ { error_number | @local_variable },
  error_number   
  表示异常的常量或变量。 error_number 为 int，并且必须大于或等于 50000 且小于或等于 2147483647   。  
   
- message   
+ *message*  
  描述异常的字符串或变量。 message 为 nvarchar(2048)   。  
   
  State   
@@ -67,7 +67,7 @@ THROW [ { error_number | @local_variable },
 |-------------------------|---------------------|  
 |如果将 msg_id 传递给 RAISERROR，则必须在 sys.messages 中定义 ID  。|无需在 sys.messages 中定义 error_number 参数  。|  
 |msg_str 参数可以包含 printf 格式设置样式   。|message 参数不接受 printf 样式的格式设置   。|  
-|severity 参数指定异常的严重性  。|没有 severity 参数  。 始终将异常严重性设置为 16。|  
+|severity 参数指定异常的严重性  。|没有 severity 参数  。 当 THROW 被用来发起异常时，严重性始终设置为 16。 但是，当 THROW 用于重新引发一个现有异常时，严重性被设置为该异常的严重级别。|  
   
 ## <a name="examples"></a>示例  
   

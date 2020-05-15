@@ -38,12 +38,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da4f6e997d3f99e9c64c7623a616fe5d45c283db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 405071c6f4752ab3aebc9f96d23dd2b5734fb39a
+ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82169365"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82872775"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -458,7 +458,7 @@ ID     Value
 ```  
 
 ## <a name="locking-behavior"></a>锁定行为  
- UPDATE 语句总是在其修改的表上获取排他 (X) 锁并在事务完成之前持有该锁。 有了排他锁，其他事务都不可以修改数据。 您可以指定表提示，以便通过指定其他锁定方法来覆盖 UPDATE 语句的持续时间的这一默认行为，但只建议经验丰富的开发人员和数据库管理员将提示用作最后的手段来执行。 有关详细信息，请参阅[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
+ UPDATE 语句在其修改的任何行上获取排他 (X) 锁，并在事务完成之前持有这些锁。 根据 UPDATE 语句的查询计划、要修改的行数和事务的隔离级别，可以在 PAGE 级或 TABLE 级（而不是 ROW 级）获取这些锁。 为避免这些更高级别的锁，可以考虑将影响数千行或更多行的 update 语句分成若干个批次，并确保索引支持任何联接和筛选条件。 有关 SQL Server 中的锁定机制的详细信息，请参阅[数据库引擎中的锁定](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine)一文。  
   
 ## <a name="logging-behavior"></a>日志记录行为  
  UPDATE 语句将记入日志；但是，对使用 \.WRITE 子句对较大值数据类型的部分更新进行最小日志记录  。 有关详细信息，请参阅上一节“数据类型”中的“更新大值数据类型”。  

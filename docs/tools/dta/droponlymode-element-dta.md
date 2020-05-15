@@ -1,5 +1,6 @@
 ---
 title: DropOnlyMode 元素 (DTA)
+description: 在 dta 实用工具中，DropOnlyMode 元素指定数据库引擎优化顾问只考虑删除现有的索引、索引视图或分区。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: a0cd0d9511e3a2791231f1cfa39aa4c8e5999eec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b8335b68b684f5ca9688542a30919c05397b6c65
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75305593"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831538"
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode 元素 (DTA)
 
@@ -43,7 +44,7 @@ ms.locfileid: "75305593"
   
  **默认值**  
   
- **出现次数**：可选。 对于每个 **TuningOptions** 元素只能使用一次。 如果在 **TuningOptions** 元素中指定了下列元素，则不能使用此元素：  
+ Occurrence  ：可选。 对于每个 **TuningOptions** 元素只能使用一次。 如果在 **TuningOptions** 元素中指定了下列元素，则不能使用此元素：  
   
 -   [FeatureSet 元素 (DTA)](../../tools/dta/featureset-element-dta.md)  
   
@@ -52,7 +53,7 @@ ms.locfileid: "75305593"
 -   将 [KeepExisting 元素 (DTA)](../../tools/dta/keepexisting-element-dta.md) 设置为 **ALL**  
   
 ## <a name="element-relationships"></a>元素关系  
- **父元素**：[TuningOptions 元素 (DTA)](../../tools/dta/tuningoptions-element-dta.md)  
+ 父元素  ：[TuningOptions 元素 (DTA)](../../tools/dta/tuningoptions-element-dta.md)  
   
  **子元素**  
   

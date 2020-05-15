@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a6226a080a7d831694e5d5978460c2e6d6016ead
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7433fa5404db80a04f5800faad35dcadffee432e
+ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822401"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82784631"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>卸载对 AlwaysOn 可用性组的次要副本的只读工作负荷
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ ms.locfileid: "74822401"
   
 -   如果文件包含辅助副本上仍需要的虚影记录，则主副本上对包含基于磁盘的表的文件的 DBCC SHRINKFILE 操作可能失败。  
   
--   从 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]中开始，甚至在主副本由于用户操作或失败而脱机时可读辅助副本仍可保持联机状态。 但是，只读路由并不在此情况下工作，因为可用性组侦听器也处于脱机状态。 对于只读工作负荷，客户端必须直接连接到只读辅助副本。  
+-   从 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 开始，即使主要副本由于用户操作或故障（例如，由于用户命令或故障而导致同步暂停，或者由于 WSFC 脱机而导致副本正在解析状态）而处于脱机状态，可读次要副本也能保持联机状态。 但是，只读路由并不在此情况下工作，因为可用性组侦听器也处于脱机状态。 对于只读工作负荷，客户端必须直接连接到只读辅助副本。  
   
 > [!NOTE]  
 >  如果你在托管可读次要副本的服务器实例上查询 [sys.dm_db_index_physical_stats](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 动态管理视图，则可能会遇到 REDO 阻塞问题。 这是因为此动态管理视图获取指定用户表或视图的 IS 锁，而该锁可能阻止 REDO 线程对该用户表或视图的 X 锁请求。  
@@ -236,7 +236,7 @@ GO
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
--   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On 团队博客：SQL Server Always On 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

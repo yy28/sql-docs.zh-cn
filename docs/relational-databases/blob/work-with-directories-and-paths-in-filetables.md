@@ -1,5 +1,6 @@
 ---
 title: 在 FileTable 中使用目录和路径 | Microsoft Docs
+description: FileTable 功能使用目录结构来存储文件。 了解如何使用其目录、路径、限制和语义。
 ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: sql
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2f31288df7d03bf527f1ee0a0bcd3b8ed84bba19
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bce7416918ec17d0fbea13a1df01f8dec2cb9729
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908702"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999447"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>在 FileTable 中使用目录和路径
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   说明 FileTable 中用于存储文件的目录结构。  
   
-##  <a name="how-to-work-with-directories-and-paths-in-filetables"></a><a name="HowToDirectories"></a> 如何在 FileTable 中使用目录和路径  
+##  <a name="how-to-work-with-directories-and-paths-in-filetables"></a><a name="HowToDirectories"></a> 如何：在 FileTable 中使用目录和路径  
  您可以使用以下 3 个函数以便在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中使用 FileTable 目录：  
   
 |为得到这一结果|使用此函数|  
@@ -32,7 +33,7 @@ ms.locfileid: "72908702"
 |获取 FileTable 中文件或目录的绝对或相对 UNC 路径。|[GetFileNamespacePath (Transact-SQL)](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)|  
 |通过提供路径，获取 FileTable 中指定文件或目录的路径定位器 ID 值。|[GetPathLocator (Transact-SQL)](../../relational-databases/system-functions/getpathlocator-transact-sql.md)|  
   
-##  <a name="how-to-use-relative-paths-for-portable-code"></a><a name="BestPracticeRelativePaths"></a> 如何使用相对路径编写可移植代码  
+##  <a name="how-to-use-relative-paths-for-portable-code"></a><a name="BestPracticeRelativePaths"></a> 如何：使用相对路径编写可移植代码  
  若要使代码和应用程序独立于当前的计算机和数据库，应避免编写依赖于绝对文件路径的代码。 可通过使用 [FileTableRootPath (Transact-SQL)](../../relational-databases/system-functions/filetablerootpath-transact-sql.md) 和 [GetFileNamespacePath (Transact-SQL)](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)函数组合在运行时获取文件的完整路径，如下例所示。 默认情况下， **GetFileNamespacePath** 函数返回数据库根路径下的文件的相对路径。  
   
 ```sql  

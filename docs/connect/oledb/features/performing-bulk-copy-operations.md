@@ -15,12 +15,12 @@ helpviewer_keywords:
 - MSOLEDBSQL, bulk copy operations
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: c6b1d33f4a0a768d33ebe9613c0c0cb97c5e77c3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8357abd0100a7320f898864de7af6f7a493d0fed
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67988979"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922412"
 ---
 # <a name="performing-bulk-copy-operations"></a>执行大容量复制操作
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -116,6 +116,5 @@ ms.locfileid: "67988979"
  [数据源属性 (OLE DB)](../../oledb/ole-db-data-source-objects/data-source-properties-ole-db.md)   
  [批量导入和导出数据 (SQL Server)](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)   
- [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
- [优化大容量导入性能](https://msdn.microsoft.com/library/ms190421\(SQL.105\).aspx)  
+ [IBCPSession (OLE DB)](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
 

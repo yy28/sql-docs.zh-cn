@@ -1,5 +1,6 @@
 ---
 title: SQL Server 2017 发行说明 | Microsoft Docs
+description: 本文介绍 SQL Server 2017 中的限制和问题，并提供相关信息的链接。
 ms.custom: ''
 ms.date: 11/01/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: b59588853342b298ebe4ffa8effb59e371c9df6a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 43e6451f54e55af8e9c782dbab8a23bc753a03bc
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665398"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001110"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 发行说明
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -113,7 +114,7 @@ ms.locfileid: "80665398"
 
 ### <a name="tsqllanguageservicemsi-ctp-21"></a>TSqlLanguageService.msi (CTP 2.1)
 
-- **问题及其对客户的影响：** 在已安装 2016 版 TSqlLanguageService.msi 的计算机上安装（通过 SQL 安装程序或作为独立可再发行组件安装）后，系统将删除 v13.* (SQL 2016) 版 Microsoft.SqlServer.Management.SqlParser.dll 和 Microsoft.SqlServer.Management.SystemMetadataProvider.dll    。 在 2016 版程序集上具有依赖项的任何应用程序停止运行并生成类似以下内容的错误：错误:无法加载文件或程序集“Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91”或其任何依赖项。系统找不到指定文件。
+- **问题及其对客户的影响：** 在已安装 2016 版 TSqlLanguageService.msi 的计算机上安装（通过 SQL 安装程序或作为独立可再发行组件安装）后，系统将删除 v13.* (SQL 2016) 版 Microsoft.SqlServer.Management.SqlParser.dll 和 Microsoft.SqlServer.Management.SystemMetadataProvider.dll    。 在 2016 版程序集上具有依赖项的任何应用程序停止运行并生成类似以下内容的错误：错误:无法加载文件或程序集“Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91”或其任何依赖项。系统找不到指定文件。 
 
    另外，尝试重新安装 2016 版 TSqlLanguageService.msi 失败，并显示以下消息：安装 Microsoft SQL Server 2016 T-SQL 语言服务失败，因为计算机上已存在更高版本  。
 
@@ -131,7 +132,7 @@ ms.locfileid: "80665398"
 - **问题及其对客户的影响：** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 的文档受到限制，且其内容包含在 [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] 文档集中。  文章中的 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 专属内容使用“适用于”  进行标注。 
 - **问题及其对客户的影响：** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 没有可用的脱机内容。
 
-### <a name="always-on-availability-groups"></a>Always On 可用性组
+### <a name="always-on-availability-groups"></a>AlwaysOn 可用性组
 
 - **问题及其对客户的影响：** 如果 SQL Server 主版本低于托管主要副本的实例，托管可用性组次要副本的 SQL Server 实例将崩溃。 如果从托管可用性组且受支持的任意 SQL Server 版本升级到 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] CTP 2.0，则这些升级将受到影响。 在下列情况下会发生此问题。 
 

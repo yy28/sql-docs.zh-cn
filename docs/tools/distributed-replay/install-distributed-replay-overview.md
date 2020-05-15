@@ -1,6 +1,7 @@
 ---
 title: 安装 Distributed Replay
 titleSuffix: SQL Server Distributed Replay
+description: 本文提供了在 SQL Server 中安装 Distributed Replay 功能所需信息的链接。
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: e5d1605d9f44cf5e28cd6e49b6a234de44f5c5f7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ba6115e530b0c8f5bd0a2d1ae9c03a3d7f701355
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74992127"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999410"
 ---
 # <a name="install-distributed-replay---overview"></a>Install Distributed Replay - Overview
 
@@ -32,7 +33,6 @@ ms.locfileid: "74992127"
 |[完成安装后步骤](../../tools/distributed-replay/complete-the-post-installation-steps.md)|完成 Distributed Replay 安装的过程主题。|  
 |[修改控制器和客户端服务帐户](../../tools/distributed-replay/modify-the-controller-and-client-services-accounts.md)|介绍如何启动和停止 Distributed Replay 控制器及客户端服务以及修改服务帐户的过程主题。|  
   
-## <a name="see-also"></a>另请参阅  
- [安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
-  
-  
+## <a name="see-also"></a>另请参阅
+
+-[安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)

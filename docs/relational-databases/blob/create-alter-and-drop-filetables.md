@@ -1,5 +1,6 @@
 ---
 title: 创建、更改和删除 FileTable | Microsoft Docs
+description: 在 SQL Server 中，FileTable 功能使用目录结构来存储文件。 了解如何创建新的 FileTable 或者更改/删除现有的 FileTable。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5483c2b6d344d72eb161b303abf1bf7e56825987
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bb0dd2a0196fbc832b0d0afeb0f02889ac1369a4
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76922893"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000050"
 ---
 # <a name="create-alter-and-drop-filetables"></a>创建、更改和删除 FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +36,9 @@ ms.locfileid: "76922893"
   
 -   要用于 3 个主键的名称和自动创建的唯一约束。  
   
-###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> 如何创建 FileTable  
+###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> 如何：创建 FileTable  
  **使用 Transact-SQL 创建 FileTable**  
- 通过调用带 [AS FileTable](../../t-sql/statements/create-table-transact-sql.md) 选项的 **CREATE TABLE (Transact-SQL)** 语句创建 FileTable。 由于 FileTable 有固定架构，您不必指定列的列表。 您可以为新的 FileTable 指定以下设置：  
+ 通过调用带 **AS FileTable** 选项的 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) 语句创建 FileTable。 由于 FileTable 有固定架构，您不必指定列的列表。 您可以为新的 FileTable 指定以下设置：  
   
 1.  **FILETABLE_DIRECTORY**。 指定充当存储在 FileTable 中的所有文件和目录的根目录的目录。 此名称应在数据库的所有 FileTable 目录名称中唯一。 无论当前排序规则设置如何，唯一性比较都不区分大小写。  
   
@@ -107,7 +108,7 @@ GO
   
  有关使用 ALTER TABLE 语句启用或禁用 FileTable 命名空间（包括系统定义的约束）的信息，请参阅 [管理 FileTables](../../relational-databases/blob/manage-filetables.md)。  
   
-###  <a name="how-to-change-the-directory-for-a-filetable"></a><a name="HowToChange"></a> 如何更改 FileTable 的目录  
+###  <a name="how-to-change-the-directory-for-a-filetable"></a><a name="HowToChange"></a> 如何：更改 FileTable 的目录  
  **使用 Transact-SQL 更改 FileTable 的目录**  
  调用 ALTER TABLE 语句并为 **FILETABLE_DIRECTORY** SET 选项提供一个有效的新值。  
   
@@ -175,7 +176,7 @@ GO
 |检查约束|系统定义的检查约束强制执行下列要求：<br /><br /> 有效的文件名。<br /><br /> 有效的文件属性。<br /><br /> 父对象必须是目录。<br /><br /> 命名空间层次结构在文件操作过程中锁定。|  
   
  **系统定义的约束的命名约定**  
- 上述系统定义的约束采用以下格式命名：**constraintType>_\<tablename>[\<\_columnname>]\<\_uniquifier>\<** ，其中：  
+ 上述系统定义的约束采用以下格式命名：\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>  ，其中：  
   
 -   *<constraint_type>* 为 CK（检查约束）、DF（默认约束）、FK（外键）、PK（主键）或 UQ（唯一约束）。  
   

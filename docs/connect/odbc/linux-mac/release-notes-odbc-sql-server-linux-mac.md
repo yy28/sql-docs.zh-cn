@@ -1,7 +1,8 @@
 ---
 title: Linux 和 macOS 上的 ODBC Driver for SQL Server 的发行说明
+description: 了解 Microsoft ODBC Driver for SQL Server 的发布版本中的新增功能和已更新内容。
 ms.custom: ''
-ms.date: 04/24/2020
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-jizho2
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 36d390bc13924bbedb1d423790127a3d24f9b63e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c2fe32e1a86273d071801fed9d2ffb8806d54ce6
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153278"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922197"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux 和 macOS 上的 Microsoft ODBC Driver for SQL Server 的发行说明
 
@@ -173,6 +174,6 @@ SUSE Linux 上的 ODBC 驱动程序（预览版）支持 64 位 SUSE Linux Enter
 
 Linux 上的 ODBC 驱动程序支持 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]。 有关详细信息，请参阅 [Linux 上的 ODBC Driver 对高可用性、灾难恢复的支持](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
 
-Linux 上的 ODBC 驱动程序支持与 Microsoft Azure SQL 数据库的连接。 有关详细信息，请参阅[操作说明：使用 ODBC 连接到 Azure SQL 数据库](https://msdn.microsoft.com/library/hh974312.aspx)。  
+Linux 上的 ODBC 驱动程序支持与 Azure SQL 数据库的连接。
 
 `-l` 选项（登录超时）已添加到 `bcp` 中。 有关详细信息，请参阅[使用 bcp 连接](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  。

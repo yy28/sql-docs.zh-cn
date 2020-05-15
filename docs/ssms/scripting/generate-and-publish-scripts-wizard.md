@@ -43,14 +43,14 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e19f5ae872c8d37eb639372db54466da7221cc15
-ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
+ms.openlocfilehash: b172457f50ca3d76c830f6ab2c789d28a3490ec8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80873133"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825637"
 ---
-# <a name="generate-and-publish-scripts-wizard"></a>“生成和发布脚本向导” 
+# <a name="generate-and-publish-scripts-wizard"></a>“生成和发布脚本向导”
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -156,6 +156,8 @@ ms.locfileid: "80873133"
 - **ANSI 填充** - 在脚本中包括 **ANSI PADDING ON** 。 默认值为 **True**。
 
 - **追加到文件** - 值为 **True**时，此脚本将被添加到在 **“设置脚本编写选项”** 页上指定的现有脚本的底部。 值为 **False**时，新脚本将覆盖以前的脚本。 默认值为 **False**。
+
+- 检查对象是否存在  - 设置为 True  时，将在为 SQL 对象生成 create 语句之前添加存在检查。 例如：表、视图、函数或存储过程。 CREATE 语句包装在 IF 语句中。 如果你知道目标是干净的，脚本会更清晰。 如果你不希望对象存在于目标上，则会收到错误。 默认值为 **False**。
 
 - 出错时继续编写脚本 - 值为 False 时，将在出现错误时停止编写脚本   。 值为 True 时，将继续编写脚本  。 默认值为 **False**。
 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e750070f51dc6cba1b035e9426d9814e4fd1b67
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5625c3429a9bae89ae940fb552a3e6d1e58678c9
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558022"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999412"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>具有安全 Enclave 的 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -156,7 +156,7 @@ SQL Server 支持 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 
 - 使用随机加密进行加密的列上的模式匹配 (LIKE) 和比较运算符。
     > [!NOTE]
     > 使用包含 BIN2 排序顺序的排序规则（即 BIN2 排序规则）的字符串列支持上面的操作。 对于使用非 BIN2 排序规则的字符串列，可以使用随机加密和已启用 enclave 的列加密密钥来加密列。 但是，可用于此类列的唯一新功能是就地加密。
-- 在使用随机加密的列上创建非聚集索引。
+- 在使用随机加密的列上创建非聚集索引和统计信息。
 
 [功能详细信息](always-encrypted-database-engine.md#feature-details)中列出的所有其他 Always Encrypted 限制也适用于具有安全 enclave 的 Always Encrypted。
 

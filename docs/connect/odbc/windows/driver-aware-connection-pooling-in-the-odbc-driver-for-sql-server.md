@@ -1,7 +1,8 @@
 ---
-title: 在适用于 SQL Server 的 ODBC 驱动程序中识别驱动程序的连接池 | Microsoft Docs
+title: ODBC 驱动程序中识别驱动程序的连接池
+description: 了解 Windows 上的 Microsoft ODBC Driver for SQL Server 中识别驱动程序的连接池的增强功能。
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f93f7f5a000016af3c20af08d9eb318851da8c48
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1e9da7b59f6acccbc95e3d3a797a0a1d507baee4
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928310"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922077"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>ODBC Driver for SQL Server 中识别驱动程序的连接池
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持[识别驱动程序的连接池](https://msdn.microsoft.com/library/hh405031(VS.85).aspx)。 本主题介绍 Windows 上的 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中识别驱动程序的连接池的增强功能：  
+  ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持[识别驱动程序的连接池](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)。 本主题介绍 Windows 上的 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中识别驱动程序的连接池的增强功能：  
   
 -   无论连接属性如何，使用 `SQLDriverConnect` 的连接都会从使用 `SQLConnect` 的连接转到单独的池。
 - 如果使用的是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证和驱动程序感知连接池，驱动程序不会对当前线程使用 Windows 用户的安全性上下文来分离池中的连接。 也就是说，当连接等效于其用于通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证的 Windows 模拟方案的参数，且它们使用同一个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证凭据连接到后端时，不同的 Windows 用户或许可以使用同一个连接池。 如果使用的是 Windows 身份验证和驱动程序感知连接池，驱动程序会使用当前 Windows 用户的安全性上下文来分离池中的连接。 也就是说，对于 Windows 模拟方案，不同的 Windows 用户不会共享连接，即使这些连接使用相同的参数也是如此。

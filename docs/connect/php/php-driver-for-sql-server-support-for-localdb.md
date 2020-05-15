@@ -1,7 +1,8 @@
 ---
-title: 支持 LocalDB | Microsoft Docs
+title: PHP 驱动程序对 LocalDB 的支持
+description: 了解 Microsoft Drivers for PHP for SQL Server 如何支持连接到 LocalDB 数据库实例。
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: connectivity
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7d31758d437ad8b175fca86bd5e25b0aff2c9989
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d618706cd05796079904c971cdf7b0c32485c1d4
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909133"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886284"
 ---
 # <a name="support-for-localdb"></a>支持 LocalDB
 
@@ -59,7 +60,7 @@ LocalDB 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的轻量�
         . 'AttachDBFileName=c:\\myData.MDF', NULL, NULL);  
     ```
 
-如果需要，您可以使用 sqllocaldb.exe 创建 LocalDB 实例。 还可以使用 sqlcmd.exe 添加和修改 LocalDB 实例中的数据库。 例如，`sqlcmd -S (localdb)\v11.0` 。 （在 IIS 中运行时，需要使用正确的帐户运行才能获得与在命令行中运行时相同的结果；若要了解详细信息，请参阅[将 LocalDB 与完整的 IIS 结合使用，第 2 部分：实例所有权](https://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx)。）
+如果需要，您可以使用 sqllocaldb.exe 创建 LocalDB 实例。 还可以使用 sqlcmd.exe 添加和修改 LocalDB 实例中的数据库。 例如，`sqlcmd -S (localdb)\v11.0` 。 （在 IIS 中运行时，需要使用正确的帐户运行才能获得与在命令行中运行时相同的结果；若要了解详细信息，请参阅[将 LocalDB 与完整的 IIS 结合使用，第 2 部分：实例所有权](/archive/blogs/sqlexpress/using-localdb-with-full-iis-part-2-instance-ownership)。）
 
 下面的示例连接字符串演示如何使用 SQLSRV 驱动程序连接到名为 myInstance 的 LocalDB 命名实例中的数据库：
 

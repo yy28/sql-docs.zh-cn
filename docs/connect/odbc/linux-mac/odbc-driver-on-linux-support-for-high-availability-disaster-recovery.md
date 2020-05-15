@@ -1,7 +1,8 @@
 ---
-title: Linux 和 macOS 上的 ODBC 驱动程序 - 高可用性和灾难恢复 | Microsoft Docs
+title: Linux 和 macOS 上的 ODBC 驱动程序 - 高可用性和灾难恢复
+description: 了解 Linux 和 macOS 的 Microsoft ODBC 驱动程序如何支持 AlwaysOn 可用性组。
 ms.custom: ''
-ms.date: 04/05/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,25 +11,25 @@ ms.topic: conceptual
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b738bac760211ff8b24ef1e5fdbc027fd966f166
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 50a72faf7dc517257ee2ce66f0f800c289f4329e
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912433"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922184"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Linux 和 macOS 上的 ODBC 驱动程序对高可用性和灾难恢复的支持
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Linux 和 macOS 的 ODBC 驱动程序支持 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]。 有关 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]的详细信息，请参阅：  
   
--   [可用性组侦听器、客户端连接和应用程序故障转移 (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)  
+-   [可用性组侦听器、客户端连接和应用程序故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
--   [创建和配置可用性组 (SQL Server)](https://msdn.microsoft.com/library/ff878265.aspx)  
+-   [创建和配置可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
   
--   [故障转移群集和 AlwaysOn 可用性组 (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)  
+-   [故障转移群集和 AlwaysOn 可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [活动次要副本：可读次要副本（AlwaysOn 可用性组）](https://msdn.microsoft.com/library/ff878253.aspx)  
+-   [活动次要副本：可读辅助副本（AlwaysOn 可用性组）](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
 您可以在连接字符串中指定给定可用性组的可用性组侦听器。 如果某一在 Linux 或 macOS 上的 ODBC 应用程序连接到进行故障转移的可用性组中的某个数据库，原始连接则将被断开，并且应用程序必须打开一个新的连接才能在故障转移后继续工作。
 
@@ -41,7 +42,7 @@ Linux 和 macOS 的 ODBC 驱动程序支持 [!INCLUDE[ssHADR](../../../includes/
 
 ## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 进行连接
 
-当连接到 **可用性组侦听程序或** 故障转移群集实例时，应始终指定 MultiSubnetFailover=Yes[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)][!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。 MultiSubnetFailover 会为  **中的所有可用性组和故障转移群集实例启用更快速的故障转移**[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。 MultiSubnetFailover 还可以显著缩短单子网和多子网 AlwaysOn 拓扑的故障转移时间  。 在多子网故障转移过程中，客户端将尝试并行连接。 在子网故障转移期间，驱动程序会主动重试 TCP 连接。
+当连接到 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 可用性组侦听程序或 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 故障转移群集实例时，应始终指定 MultiSubnetFailover=Yes  。 MultiSubnetFailover 会为 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中的所有可用性组和故障转移群集实例启用更快速的故障转移  。 MultiSubnetFailover 还可以显著缩短单子网和多子网 AlwaysOn 拓扑的故障转移时间  。 在多子网故障转移过程中，客户端将尝试并行连接。 在子网故障转移期间，驱动程序会主动重试 TCP 连接。
 
 **MultiSubnetFailover** 连接属性指示将在可用性组或故障转移群集实例中部署应用程序。 驱动程序会通过尝试连接到所有的 IP 地址，从而连接到主 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上的数据库。 当与 MultiSubnetFailover=Yes连接时，客户端将以比操作系统默认的 TCP 重新传输间隔更快的速度重新尝试建立 TCP 连接  。 **MultiSubnetFailover=Yes** 会在 AlwaysOn 可用性组或 AlwaysOn 故障转移群集实例的故障转移之后进行更快速的重新连接。 MultiSubnetFailover=Yes 同时适用于单子网和多子网可用性组和故障转移群集实例  。  
 

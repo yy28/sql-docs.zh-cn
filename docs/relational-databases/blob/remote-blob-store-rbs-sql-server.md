@@ -1,5 +1,6 @@
 ---
 title: 远程 Blob 存储 (RBS) (SQL Server) | Microsoft Docs
+description: SQL Server 远程 BLOB 存储 (RBS) 将二进制大型对象存储在商用存储中，而不是存储在主数据库服务器上。 了解此附加产品组件。
 ms.custom: ''
 ms.date: 11/03/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fc6bb3164b54f0799073e8b959f68b0dd625c47e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 383b5739e75d0d7e3ff42d2994e2a70c96842861
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258186"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999647"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>远程 Blob 存储区 (RBS) (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +83,7 @@ ms.locfileid: "75258186"
  使用 RBS 时，应定期轮换凭据存储对称密钥。 这是一种常见的可满足组织安全策略的安全最佳实践。  轮换 RBS 凭据存储对称密钥的方法之一是使用 RBS 数据库中的 [以下脚本](#Key_rotation) 。  你也可以使用此脚本迁移到更强的加密强度属性，如算法或密钥长度。 在轮换密钥前，先备份数据库。  脚本结束时，它有一些验证步骤。  
 如果你的安全策略需要与所提供属性不同的密钥属性（例如，算法或密钥长度），可以将该脚本用作模板。 在以下两个位置修改密钥属性：1) 创建临时密钥的位置 2) 创建永久密钥的位置。  
   
-##  <a name="rbs-resources"></a><a name="rbsresources"></a>RBS 资源  
+##  <a name="rbs-resources"></a><a name="rbsresources"></a> RBS 资源  
   
  **RBS 示例**  
  [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190) 上提供的 RBS 示例演示如何开发 RBS 应用程序，如何开发和安装自定义 RBS 提供程序。  
@@ -90,7 +91,7 @@ ms.locfileid: "75258186"
  **RBS 博客**  
  [RBS 博客](https://go.microsoft.com/fwlink/?LinkId=210315) 提供可帮助你理解、部署和维护 RBS 的其他信息。  
   
-##  <a name="key-rotation-script"></a><a name="Key_rotation"></a>密钥轮换脚本  
+##  <a name="key-rotation-script"></a><a name="Key_rotation"></a> 密钥轮换脚本  
  此示例创建一个名为 `sp_rotate_rbs_symmetric_credential_key` 的存储过程，以将当前使用的 RBS 凭据存储对称密钥替换为  
 你所选的密钥。  如果安全策略要求定期轮换密钥   
 或者有特定的算法要求，你可能想要这样做。  

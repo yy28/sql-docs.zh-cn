@@ -1,5 +1,6 @@
 ---
 title: EventString 元素 (DTA)
+description: 在 dta 实用工具中，EventString 元素直接在 XML 输入文件中指定 Transact-SQL 脚本工作负载。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: a0bf4fe2b768fd0a9f714540946a84c126aa1679
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f9944a2e9d9dc1ec8aad069aa74b90a6a420fad4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307697"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826511"
 ---
 # <a name="eventstring-element-dta"></a>EventString 元素 (DTA)
 

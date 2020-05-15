@@ -1,5 +1,6 @@
 ---
 title: 联机还原 (SQL Server) | Microsoft Docs
+description: 在 SQL Server Enterprise 版本中，某些情况下，你可以在数据库保持联机状态时，通过文件、页面或段落还原来还原数据。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: e4f5817fe575422dddeedd525b077dbf643a29b2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d5d371a8d94b49a40fa105f06457519a03ed7ac5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908873"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829779"
 ---
 # <a name="online-restore-sql-server"></a>联机还原 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 31688509bb7c7592da29ef51535029e1251ffd44
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f3aa47d41f347867a0db98b59e0cf5ab9b47c2da
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921110"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886314"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server（Windows 平台）
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -47,11 +47,10 @@ Microsoft ODBC Driver for SQL Server 可用于创建新应用程序。 还可以
 -   [使用透明网络 IP 解析](../../../connect/odbc/using-transparent-network-ip-resolution.md)   
 
 ## <a name="community"></a>社区  
-- [Microsoft SQL Server ODBC 驱动程序团队博客](https://blogs.msdn.com/sqlnativeclient/default.aspx)  
+- [SQL Server 驱动程序博客](https://techcommunity.microsoft.com/t5/sql-server/bg-p/SQLServer/label-name/SQLServerDrivers)  
 - [SQL Server 数据访问论坛](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
   
 ## <a name="see-also"></a>另请参阅  
-- [关于 SQL Server Native Client](https://msdn.microsoft.com/sqlserver/ff658532.aspx)   
 - [使用 SQL Server Native Client 生成应用程序](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)   
 - [SQL Server Native Client FAQ](https://msdn.microsoft.com/sqlserver/aa937707.aspx)   
 - [ODBC 程序员参考](../../../odbc/reference/odbc-programmer-s-reference.md)   

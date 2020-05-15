@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 65f3000cdc56079d2e55040e4844ce5578998e9e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6446ad935f2388f2fd2d8df898232f897e475cc3
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180396"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849805"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>使用资源调控器限制备份压缩的 CPU 使用量 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,6 @@ USE AdventureWorks2012;
 CREATE USER [domain_name\MAX_CPU] FOR LOGIN [domain_name\MAX_CPU];  
 EXEC sp_addrolemember 'db_backupoperator', 'domain_name\MAX_CPU';  
 GO  
-  
 ```  
   
  [[返回页首]](#Top)  
@@ -137,35 +136,33 @@ GO
   
 1.  发出 [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md) 语句以创建资源池。 此过程的示例使用以下语法：  
   
-     *CREATE RESOURCE POOL pool_name* WITH ( MAX_CPU_PERCENT = *value* );  
+    ```sql  
+    CREATE RESOURCE POOL <pool_name> WITH ( MAX_CPU_PERCENT = <value> );
+    ```  
   
-     *Value* 是 1 到 100 之间的一个整数，它指示最大平均 CPU 带宽的百分比。 实际适合的值取决于具体的环境。 为便于说明，本主题中的示例使用 20% (MAX_CPU_PERCENT = 20)。  
+    *Value* 是 1 到 100 之间的一个整数，它指示最大平均 CPU 带宽的百分比。 实际适合的值取决于具体的环境。 为便于说明，本主题中的示例使用 20% (MAX_CPU_PERCENT = 20)。  
   
 2.  发出一个 [CREATE WORKLOAD GROUP](../../t-sql/statements/create-workload-group-transact-sql.md) 语句，为你要调控其 CPU 使用的低优先级操作创建一个工作负荷组。 此过程的示例使用以下语法：  
   
-     CREATE WORKLOAD GROUP *group_name* USING *pool_name*;  
+    ```sql  
+    CREATE WORKLOAD GROUP <group_name> USING <pool_name>;
+    ```
   
 3.  发出一个 [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) 语句，以创建一个分类器函数，此函数将上一步创建的工作负荷组映射到低优先级登录名的用户。 此过程的示例使用以下语法：  
   
-     CREATE FUNCTION [*schema_name*.]*function_name*() RETURNS sysname  
+    ```sql 
+    CREATE FUNCTION <schema_name>.<function_name>() RETURNS sysname  
+    WITH SCHEMABINDING  
+    AS  
+    BEGIN  
+        DECLARE @workload_group_name AS <sysname>  
+        IF (SUSER_NAME() = '<user_of_low_priority_login>')  
+        SET @workload_group_name = '<workload_group_name>'  
+        RETURN @workload_group_name  
+    END;
+    ```
   
-     WITH SCHEMABINDING  
-  
-     AS  
-  
-     BEGIN  
-  
-     DECLARE @workload_group_name AS *sysname*  
-  
-     IF (SUSER_NAME() = '*user_of_low_priority_login*')  
-  
-     SET @workload_group_name = '*workload_group_name*'  
-  
-     RETURN @workload_group_name  
-  
-     END  
-  
-     有关该 CREATE FUNCTION 语句的各组成部分的信息，请参阅：  
+    有关此 `CREATE FUNCTION` 语句各组成部分的信息，请参阅：  
   
     -   [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
   
@@ -175,14 +172,16 @@ GO
         >  SUSER_NAME 仅仅是可用在分类器函数中的几个系统函数中的一个。 有关详细信息，请参阅 [创建和测试分类器用户定义函数](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)。  
   
     -   [SET @local_variable (Transact-SQL)](../../t-sql/language-elements/set-local-variable-transact-sql.md)。  
-  
+      
 4.  发出一个 [ALTER RESOURCE GOVERNOR](../../t-sql/statements/alter-resource-governor-transact-sql.md) 语句，将该分类器函数注册到资源调控器中。 此过程的示例使用以下语法：  
   
-     ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION = *schema_name*.*function_name*);  
+    ```sql  
+    ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION = <schema_name>.<function_name>);
+    ```  
   
 5.  再发出一个 ALTER RESOURCE GOVERNOR 语句，将更改应用于资源调控器内存中配置，如下所示：  
   
-    ```  
+    ```sql  
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
@@ -204,17 +203,18 @@ GO
   
 ```sql  
 -- Configure Resource Governor.  
-BEGIN TRAN  
 USE master;  
 -- Create a resource pool that sets the MAX_CPU_PERCENT to 20%.   
 CREATE RESOURCE POOL pMAX_CPU_PERCENT_20  
    WITH  
       (MAX_CPU_PERCENT = 20);  
 GO  
+
 -- Create a workload group to use this pool.   
 CREATE WORKLOAD GROUP gMAX_CPU_PERCENT_20  
 USING pMAX_CPU_PERCENT_20;  
 GO  
+
 -- Create a classification function.  
 -- Note that any request that does not get classified goes into   
 -- the 'Default' group.  
@@ -233,10 +233,10 @@ GO
 ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION= dbo.rgclassifier_MAX_CPU);  
 COMMIT TRAN;  
 GO  
+
 -- Start Resource Governor  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
-GO  
-  
+GO    
 ```  
   
  [[返回页首]](#Top)  

@@ -13,12 +13,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: afc420ffe62f31c5793f00f3acea12dedac7f509
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0cd776b547c60ddbb144415f7185d1c770d9e6df
+ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79198382"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82872797"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>快速入门：使用 Docker 运行 SQL Server 容器映像
 
@@ -99,7 +99,8 @@ any changes to one section should be duplicated in the other-->
    ```bash
    sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:2017-latest
+      -d \
+      mcr.microsoft.com/mssql/server:2017-latest
    ```
    ::: zone-end
 
@@ -107,7 +108,8 @@ any changes to one section should be duplicated in the other-->
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2017-latest
+      -d `
+      mcr.microsoft.com/mssql/server:2017-latest
    ```
    ::: zone-end
 
@@ -115,7 +117,8 @@ any changes to one section should be duplicated in the other-->
    ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2017-latest
+      -d `
+      mcr.microsoft.com/mssql/server:2017-latest
    ```
    ::: zone-end
 
@@ -133,7 +136,8 @@ any changes to one section should be duplicated in the other-->
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | 指定至少包含 8 个字符且符合 [SQL Server 密码要求](../relational-databases/security/password-policy.md)的强密码。 SQL Server 映像的必需设置。 |
    | **-p 1433:1433** | 将主机环境中的 TCP 端口（第一个值）映射到容器中的 TCP 端口（第二个值）。 在此示例中，SQL Server 侦听容器中的 TCP 1433，并对主机上的端口 1433 公开。 |
    | **--name sql1** | 为容器指定一个自定义名称，而不是使用随机生成的名称。 如果运行多个容器，则无法重复使用相同的名称。 |
-   | **-d mcr.microsoft.com/mssql/server:2017-latest** | SQL Server 2017 Linux 容器映像。 |
+   | **-d** | 在后台运行容器（守护程序） |
+   | ** mcr.microsoft.com/mssql/server:2017-latest** | SQL Server 2017 Linux 容器映像。 |
 
 3. 要查看 Docker 容器，请使用 `docker ps` 命令。
 

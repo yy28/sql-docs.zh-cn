@@ -11,12 +11,12 @@ ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2adb04d7f50a649d3b98be1732c15ee7c18a1767
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: f63d1c3c416859cab9ace87ad62e87b45c08a567
+ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487446"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82784483"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>临时表注意事项和限制
 
@@ -51,7 +51,7 @@ ms.locfileid: "81487446"
 
   - **Always On：** 完全支持
   - **变更数据捕获和数据跟踪**仅当前表支持
-  - **快照和事务复制**：仅支持未启用临时的单个发布服务器和启用了临时的一个订阅服务器。 在这种情况下，发布服务器用于 OLTP 工作负载，而订阅服务器用于卸载报表（包括“AS OF”查询）。 启动后，分发代理打开在其停止前一直保持打开状态的事务。 由于有此行为，SysStartTime 和 SysEndTime 填充到分发代理启动的第一个事务的开始时间。 因此，最好按计划运行分发代理，而不是采用默认的连续运行方式。 不支持使用多个订阅服务器，因为这可能会由于依赖本地系统时钟而导致临时数据不一致。
+  - **快照和事务复制**：仅支持未启用临时的单个发布服务器和启用了临时的一个订阅服务器。 在这种情况下，发布服务器用于 OLTP 工作负载，而订阅服务器用于卸载报表（包括“AS OF”查询）。 启动后，分发代理打开在其停止前一直保持打开状态的事务。 由于有此行为，SysStartTime 和 SysEndTime 填充到分发代理启动的第一个事务的开始时间。 因此，如果对你的应用程序或组织而言，必须向 SysStartTime 和 SysEndTime 填充一个接近于当前系统时间的时间，那么按计划运行分发代理可能比连续运行默认行为更可取。 不支持使用多个订阅服务器，因为这可能会由于依赖本地系统时钟而导致临时数据不一致。
   - **合并复制：** 不支持时态表
 
 - 定期查询仅影响当前表中的数据。 若要查询历史记录表中的数据，必须使用临时查询。 稍后将在本文档中“查询临时数据”部分讨论相关内容。

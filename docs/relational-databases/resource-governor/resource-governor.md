@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bbc94f7586c05746a70c2f9fd9172230771837a6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 41c77ad93bf129fa84f5d039b64a63593a335aee
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67912057"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849835"
 ---
 # <a name="resource-governor"></a>Resource Governor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源调控器是一项可用于管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作负荷和系统资源使用情况的功能。 可以通过 Resource Governor 指定各种限制，对可供传入应用程序请求使用的 CPU、物理 IO 和内存量进行限制。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor 是一项可用于管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作负载和系统资源使用情况的功能。 通过 Resource Governor，可以指定针对传入应用程序请求可使用的 CPU、物理 I/O 和内存的使用量的限制。  
   
 ## <a name="benefits-of-resource-governor"></a>资源调控器的优势  
  利用资源调控器，您可以通过指定传入请求的资源消耗限制来管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作负荷和资源。 在资源调控器上下文中，工作负荷是一组大小相似的查询或请求，可以且应该视为单个实体。 这并不是必需的，但是工作负荷的资源使用模式越统一，通过资源调控器可能获得的益处越多。 资源限制可以实时重新配置，对正在执行的工作负荷影响非常小。  
   
- 在相同服务器上存在多个不同工作负荷的环境中，使用资源调控器可以区分这些工作负荷并能根据指定的限制在请求时分配共享资源。 这些资源是 CPU、物理 IO 和内存。  
+ 在相同服务器上存在多个不同工作负荷的环境中，使用资源调控器可以区分这些工作负荷并能根据指定的限制在请求时分配共享资源。 这些资源是 CPU、物理 I/O 和内存。  
   
  通过使用资源调控器，您可以：  
   
@@ -34,22 +34,22 @@ ms.locfileid: "67912057"
   
 -   提供可预测性能并且在多工作负荷和多用户环境中支持针对工作负荷租户的 SLA。  
   
--   隔离和限制失控查询，或者中止可能使 IO 子系统饱和以及对其他工作负荷有负面影响的操作（例如 DBCC CHECKDB）的 IO 资源。  
+-   隔离和限制失控查询，或者中止可能使 I/O 子系统饱和以及对其他工作负载有负面影响的操作（例如 DBCC CHECKDB）的 I/O 资源。  
   
 -   为资源使用退款添加细粒度资源跟踪，并且对服务器资源的使用者提供可预测的计费。  
   
 ## <a name="resource-governor-constraints"></a>资源调控器约束  
  此资源调控器版本存在以下约束：  
   
--   资源管理仅限于 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 资源调控器不能用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
+-   资源管理仅限于 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 Resource Governor 不能用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
   
--   SQL Server 实例之间没有工作负荷监视或工作负荷管理。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间不存在工作负载监视或工作负载管理。  
   
--   资源调控器可以管理 OLTP 工作负荷，但通常持续时间非常短的查询类型总是在 CPU 上停留很短时间而不足以应用带宽控制。 这样会使返回的 CPU 使用率的统计信息有偏差。  
+-   资源调控器可以管理 OLTP 工作负荷，但通常持续时间非常短的查询类型总是在 CPU 上停留很短时间而不足以应用带宽控制。 这样会使返回的 CPU 使用百分比的统计信息有偏差。  
   
--   控制物理 IO 的功能仅适用于用户操作，而不适用于系统任务。 系统任务包括向事务日志的写入操作和 Lazy Writer IO 操作。 资源调控器主要应用于用户读取操作，因为大多数写操作通常由系统任务执行。  
+-   控制物理 I/O 的功能仅适用于用户操作，而不适用于系统任务。 系统任务包括向事务日志的写入操作和 Lazy Writer I/O 操作。 Resource Governor 主要应用于用户读取操作，因为大多数写操作通常由系统任务执行。  
   
--   您不能对内部资源池设置 IO 阈值。  
+-   不能对内部资源池设置 I/O 阈值。  
   
 ## <a name="resource-concepts"></a>资源概念  
  下面的三个概念是了解和使用资源调控器的基础：  

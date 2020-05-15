@@ -1,5 +1,6 @@
 ---
 title: 恢复数据库 - 不还原 (Transact-SQL)
+description: 在 SQL Server 中，仅恢复还原可以在不还原备份的情况下恢复数据库，通常是作为还原一系列备份时的最后一步。
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 1d5c0fbb11b7ec3aaed4ac48a7334f790f3fd9b3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ef3adbbf44c495e0449da174915704c4da9306dc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75255855"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834500"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>恢复数据库但不还原数据 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "75255855"
  `RESTORE DATABASE *database_name* WITH RECOVERY`  
   
 > [!NOTE]  
-> FROM **=backup_device> 子句不用于仅恢复还原，因为不需要任何备份**\<  。  
+> FROM =\<backup_device> 子句不用于仅恢复还原，因为不需要任何备份   。  
   
  **示例**  
   
