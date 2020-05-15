@@ -82,7 +82,7 @@ ms.locfileid: "79288231"
 |status|状态表使用的状态代码。|  
 |sub_status|状态表使用的子状态代码。|  
 |status_message|状态表使用的状态消息。|  
-|source|生成了跟踪记录的 Oracle CDC 组件的名称。|  
+|target|生成了跟踪记录的 Oracle CDC 组件的名称。|  
 |text_data|在错误或跟踪记录包含文本负载时的附加文本数据。|  
 |binary_data|在错误或跟踪记录包含二进制负载时的附加二进制数据。|  
   

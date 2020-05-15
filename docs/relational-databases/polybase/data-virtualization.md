@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: 3b45ec31788814df7c472dbb81e3b47e0e42abeb
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+ms.openlocfilehash: f4bd7eec24be747fe6c0933d31467410bfecf2a9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588084"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "75227505"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>对关系数据源使用“外部表”向导
 
@@ -64,7 +64,7 @@ SQL Server 2019 的重要方案之一是能够虚拟化数据。 此过程允许
 
 在下一页上，选择想为其创建外部视图的表。 选择父级数据库时，子表也包括在其中。 选择表后，映射表将显示在右侧。 可在此处更改类型。 此外，也可以更改所选外部表本身的名称。
 
-![外部数据源凭据](media/data-virtualization/data-table-map.png)
+![外部数据源凭据](media/data-virtualization/data-table-mapping.png)
 
 > [!NOTE]
 >若要更改映射视图，可双击另一个所选表。

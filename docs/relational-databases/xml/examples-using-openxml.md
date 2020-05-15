@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 003c84a55d4f0ab2ff727fdc80dd09eaa9b3435b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4ea3ad1c2f7cb482888f0cd4d31a91f9975745b7
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665195"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "67943388"
 ---
 # <a name="examples-using-openxml"></a>示例：使用 OPENXML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   本主题中的示例说明如何使用 OPENXML 创建 XML 文档的行集视图。 有关 OPENXML 语法的信息，请参阅 [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)。 这些示例说明了 OPENXML 的各个方面，但不包括在 OPENXML 中指定元属性。 有关如何在 OPENXML 中指定元属性的详细信息，请参阅 [在 OPENXML 中指定元属性](../../relational-databases/xml/specify-metaproperties-in-openxml.md)。  
   
 ## <a name="examples"></a>示例  

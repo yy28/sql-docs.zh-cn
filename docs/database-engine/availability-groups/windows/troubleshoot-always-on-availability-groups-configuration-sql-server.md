@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 068ccbd9e7f4d94ebba52ffc824efb70b9623f06
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 57625308d1d8e9fcca375e33c72f4bdbf9ace222
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925341"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79286991"
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>AlwaysOn 可用性组配置疑难解答 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ ms.locfileid: "82925341"
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|当前主副本|确保 READ_ONLY_ROUTING_LIST 仅包含承载可读辅助副本的服务器实例。|**标识可读次要副本：** sys.availability_replicas（**secondary_role_allow_connections_desc** 列）<br /><br /> **查看只读路由列表：** sys.availability_read_only_routing_lists<br /><br /> **更改只读路由列表：** ALTER AVAILABILITY GROUP|[sys.availability_replicas (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [sys.availability_read_only_routing_lists (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|read_only_routing_list 中的每个副本|请确保 Windows 防火墙未在阻止 READ_ONLY_ROUTING_URL 端口。|-|[为数据库引擎访问配置 Windows 防火墙](../../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|read_only_routing_list 中的每个副本|在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器中，请确认：<br /><br /> 已启用 SQL Server 远程连接。<br /><br /> 已启用 TCP/IP。<br /><br /> IP 地址已正确配置。|-|[查看或更改服务器属性 (SQL Server)](../../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [配置服务器以侦听特定 TCP 端口（SQL Server 配置管理器）](../../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
-|![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|read_only_routing_list 中的每个副本|确保 READ_ONLY_ROUTING_URL (TCP<strong>://</strong>*system-address*<strong>:</strong>*port*) 包含正确的完全限定域名 (FQDN) 和端口号。|-|[计算 AlwaysOn 的 read_only_routing_url](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)<br /><br /> [sys.availability_replicas (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
+|![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|read_only_routing_list 中的每个副本|确保 READ_ONLY_ROUTING_URL (TCP<strong>://</strong>*system-address*<strong>:</strong>*port*) 包含正确的完全限定域名 (FQDN) 和端口号。|-|[计算 AlwaysOn 的 read_only_routing_url](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)<br /><br /> [sys.availability_replicas (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|客户端系统|确认客户端驱动程序支持只读路由。|-|[AlwaysOn 客户端连接 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)|  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  

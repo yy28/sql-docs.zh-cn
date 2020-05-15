@@ -17,12 +17,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44a966ba100441a652ca0558552152a460e21c66
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8c4cfba19dc16e043ba6325fb6c9acb1665a597f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634144"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68071174"
 ---
 # <a name="insert-sql-graph"></a>INSERT（SQL 图形）
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "81634144"
 ## <a name="insert-into-node-table-syntax"></a>插入节点表语法 
 插入节点表的语法与插入常规表的语法相同。 
 
-```syntaxsql
+```sql
 [ WITH <common_table_expression> [ ,...n ] ]  
 INSERT   
 {  

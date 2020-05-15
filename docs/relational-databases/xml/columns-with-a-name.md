@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3a34c41519bd8e77a96a2551bc676b95f338510a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 855f7c079d592c095ce3754cd5c6fc799139324e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664656"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68113055"
 ---
 # <a name="columns-with-a-name"></a>具有名称的列
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 下面是一些特定条件，在这些条件下具有名称的行集列将映射（区分大小写）到生成的 XML：  
   

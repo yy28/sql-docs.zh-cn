@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - EOMONTH function
 ms.assetid: 1d060d8e-3297-4244-afef-57df2f8f92e2
-author: julieMSFT
-ms.author: jrasnick
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33677a8613631c757fa038741b9a407466eccd55
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 481faddf2a0a12bcc44a8b4e677101afa68c37a4
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827007"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "67904380"
 ---
 # <a name="eomonth-transact-sql"></a>EOMONTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "82827007"
   
 ## <a name="syntax"></a>语法  
   
-```syntaxsql
+```  
 EOMONTH ( start_date [, month_to_add ] )  
 ```  
   

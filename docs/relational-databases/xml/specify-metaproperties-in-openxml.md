@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6ff3072b84334f16395c7687c1baaf511cd1fd53
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 9354bf1c1539a7ba83f1af1eafdb27ed99041d76
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664818"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68000703"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>在 OPENXML 中指定元属性
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   XML 文档中的元属性特性用于描述 XML 项（例如元素节点、属性节点或其他任何 DOM 节点）的属性。 这些特性并不实际存在于 XML 文档文本中。 但是，OPENXML 将为所有 XML 项提供这些元属性。 通过这些元属性可以提取 XML 节点的信息（例如本地定位和命名空间信息）。 这些信息将提供比文字表现形式更加详细的信息。  
   
  可以使用 *ColPattern* 参数将这些元属性映射到 OPENXML 语句中的行集列。 这些列将包含它们所映射到的元属性的值。 有关 OPENXML 语法的详细信息，请参见 [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)。  

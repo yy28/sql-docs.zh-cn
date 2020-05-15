@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3f00a23d175ce798edc8c73fe0c1ec7e92053392
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 450a490e5c4f54f9fec2e88c1c73bfbf8502869a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81485179"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "66499995"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>教程先决条件（报表生成器）
 
@@ -35,9 +35,9 @@ ms.locfileid: "81485179"
   
 -   SQL Server 实例的名称和足以对任何数据库进行只读访问的凭据。 各教程中的数据集查询使用文字数据，但必须由 SQL Server 实例处理每个查询以返回报表数据集所必需的元数据。 例如，以下连接字符串仅指定一个服务器： `data source=<servername>`。 您必须对默认数据库具有读取权限，该权限是由授予您对服务器的访问权限的系统管理员分配给您的。 您还可以指定数据库，如以下连接字符串中所示： `data source=<servername>;initial catalog=<database>`。  
   
--   对于[教程：地图报表（报表生成器）](tutorial-map-report-report-builder.md)，报表服务器必须配置为支持将 Bing 地图作为背景。 有关详细信息，请参阅 [计划地图报表支持](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)。   
+-   对于[教程：地图报表（报表生成器）](Tutorial:%20Map%20Report%20\(Report%20Builder\).md)，报表服务器必须配置为支持将 Bing 地图作为背景。 有关详细信息，请参阅 [计划地图报表支持](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)。   
 
--   [教程：创建钻取报表和主报表（报表生成器）](tutorial-creating-drillthrough-and-main-reports-report-builder.md)教程要求可以访问 Contoso Sales 多维数据集。 有关详细信息，请参阅该教程。 
+-   [教程：创建钻取报表和主报表（报表生成器）](Tutorial:%20Creating%20Drillthrough%20and%20Main%20Reports%20\(Report%20Builder\).md)教程要求可以访问 Contoso Sales 多维数据集。 有关详细信息，请参阅该教程。 
   
 报表服务器管理员必须向你授予对报表服务器的必要权限，配置 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 文件夹位置，并且配置报表生成器默认选项。 有关详细信息，请参阅 [Install Report Builder](install-windows/install-report-builder.md)。  
 

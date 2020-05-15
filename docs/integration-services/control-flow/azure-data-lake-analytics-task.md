@@ -4,6 +4,8 @@ description: 使用 Data Lake Analytics 任务，可以将 U-SQL 作业提交到
 ms.custom: ''
 ms.date: 06/27/2019
 ms.prod: sql
+ms.prod_service: integration-services
+ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -11,13 +13,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPADLSTASK.F1
 author: yanancai
 ms.author: yanacai
-ms.reviewer: maghan
-ms.openlocfilehash: 1f4eaadafa422611c3d24cbefee7a7d982dd88d8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ab9a357e8215310b21fa2e401067f49176aeefd4
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763645"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "67947358"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics 任务
 
@@ -52,7 +53,6 @@ SourceType  指定的是 U-SQL 脚本源。 脚本在 SSIS 包执行期间提交
 |DirectInput |通过内联编辑器指定 U-SQL 脚本。 选择此值将显示动态选项 USQLStatement  。|  
 |**文件连接**|指定包含 U-SQL 脚本的本地 .usql 文件。 选择此选项将显示动态选项 FileConnection  。|  
 |**变量**|指定包含 U-SQL 脚本的 SSIS 变量。 选择此值将显示动态选项 **SourceVariable**。|
-| &nbsp; | &nbsp; |
 
 基于 SourceType 的动态选项  指定的是，U-SQL 查询的脚本内容。 
 
@@ -61,7 +61,6 @@ SourceType  指定的是 U-SQL 脚本源。 脚本在 SSIS 包执行期间提交
 |SourceType = DirectInput |直接在选项框中键入要提交的 U-SQL 查询，或选择浏览按钮 (...) 以在“输入 U-SQL 查询”  对话框中键入 U-SQL 查询。|  
 |SourceType = FileConnection |选择现有文件连接管理器，或选择“<新建连接...>”  以新建文件连接。 若要了解相关信息，请参阅[文件连接管理器](../../integration-services/connection-manager/file-connection-manager.md)和[文件连接管理器编辑器](../../integration-services/connection-manager/file-connection-manager-editor.md)。|  
 |SourceType = 变量 |选择现有变量，或选择“\<新建变量...>”  以新建变量。 若要了解相关信息，请参阅 [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)和[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。|
-| &nbsp; | &nbsp; |
 
 
 ### <a name="job-configuration"></a>作业配置
@@ -79,7 +78,6 @@ SourceType  指定的是 U-SQL 脚本源。 脚本在 SSIS 包执行期间提交
   |-----------|-----------------|
   |True|任务结果基于 U-SQL 作业执行结果。 作业成功先于任务成功。 作业失败先于任务失败。 任务成功或失败先于任务完成。|
   |False|任务结果基于 U-SQL 作业提交和准备结果。 作业提交成功并通过准备阶段先于任务成功。 作业提交失败或未通过准备阶段先于任务失败。 任务成功或失败先于任务完成。|
-  | &nbsp; | &nbsp; |
 
 - **TimeOut：** 指定作业执行的超时时间（以秒为单位）。 如果作业超时，就会被取消并标记为“失败”。 如果“Synchronous”  设置为“false”，便无法设置此属性。
 
@@ -127,7 +125,6 @@ OUTPUT @rs1
 |-------------|--------------|
 |用户：Variable1|\@in|
 |用户：Variable2|\@out| 
-| &nbsp; | &nbsp; |
 
 ## <a name="expression-page-configuration"></a>“表达式”页配置
 

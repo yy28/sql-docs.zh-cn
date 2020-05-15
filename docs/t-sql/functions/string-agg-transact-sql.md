@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - STRING_AGG function
 ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
-author: julieMSFT
-ms.author: jrasnick
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 122502b112fd250fa93461b19fabe6793a9410f0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d67efc13e326808b570fc33f054f922e74d5923e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824194"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "77478483"
 ---
 # <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "82824194"
   
 ## <a name="syntax"></a>语法  
   
-```syntaxsql
+```  
 STRING_AGG ( expression, separator ) [ <order_clause> ]
 
 <order_clause> ::=   
@@ -50,7 +50,7 @@ separator
 <order_clause>   
 使用 `WITHIN GROUP` 子句有选择性地指定串联结果的顺序：
 
-```syntaxsql
+```
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
 <order_by_expression_list>   

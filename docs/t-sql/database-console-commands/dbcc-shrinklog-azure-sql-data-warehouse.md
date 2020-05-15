@@ -11,12 +11,12 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e730d782a7d0bc6edf689dee6fa209a1432c5b8d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d2cf30f4f01a30d8171e58cce3052e45fefa6179
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632286"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "67930319"
 ---
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG（并行数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "81632286"
   
 ## <a name="syntax"></a>语法  
   
-```syntaxsql
+```sql
 DBCC SHRINKLOG   
     [ ( SIZE = { target_size [ MB | GB | TB ]  } | DEFAULT ) ]   
     [ WITH NO_INFOMSGS ]   

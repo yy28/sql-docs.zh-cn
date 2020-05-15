@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9e06886ec3a66e4860927a9f953c0bee9da2b902
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 015ba90a6f2cad79483e52d5caa23ad06784c055
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634630"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68004728"
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "81634630"
   
 ## <a name="syntax"></a>语法  
   
-```syntaxsql
+```  
   
 SET STATISTICS XML { ON | OFF }  
 ```  
@@ -74,7 +74,7 @@ SET STATISTICS XML { ON | OFF }
 ## <a name="examples"></a>示例  
  下面两条语句使用 SET STATISTICS XML 设置，显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在查询内对索引进行分析和优化的方法。 第一个查询在索引列上的 WHERE 子句中使用等于 (=) 比较运算符。 第二个查询在 WHERE 子句中使用 LIKE 运算符。 这将强制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用聚集索引扫描并查找满足 WHERE 子句条件的数据。 EstimateRows 和 EstimatedTotalSubtreeCost 属性内用于第一个基于索引查询的值较小，这表示与非索引查询相比，该查询的处理速度要快得多，且使用的资源较少   。  
   
-```sql
+```  
 USE AdventureWorks2012;  
 GO  
 SET STATISTICS XML ON;  

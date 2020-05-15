@@ -17,21 +17,21 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72bbe67c63867b932944412f220d07d360ee1c95
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c97363e7f13c3b42cf447ecf69929171544f3a6b
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636124"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "72907261"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-基于存储模型生成预测值或评分。 有关详细信息，请参阅[使用 PREDICT T-SQL 函数本机计分](../../machine-learning/sql-native-scoring.md)。
+基于存储模型生成预测值或评分。 有关详细信息，请参阅[使用 PREDICT T-SQL 函数本机计分](../../advanced-analytics/sql-native-scoring.md)。
 
 ## <a name="syntax"></a>语法
 
-```syntaxsql
+```
 PREDICT  
 (  
   MODEL = @model | model_literal,  
@@ -98,7 +98,7 @@ Windows 和 Linux 上的所有版本的 SQL Server 2017 或更高版本都支持
 
 ### <a name="supported-algorithms"></a>支持的算法
 
-使用的模型必须是使用 RevoScaleR 包中支持的算法之一创建的。 有关当前支持的型号的列表，请参阅[实时评分](../../machine-learning/real-time-scoring.md)。
+使用的模型必须是使用 RevoScaleR 包中支持的算法之一创建的。 有关当前支持的型号的列表，请参阅[实时评分](../../advanced-analytics/real-time-scoring.md)。
 
 ### <a name="permissions"></a>权限
 
@@ -182,4 +182,4 @@ WITH (pred float, stdErr float, pred_lower float, pred_higher float) AS p;
 
 ## <a name="next-steps"></a>后续步骤
 
-- [使用 PREDICT T-SQL 函数本机计分](../../machine-learning/sql-native-scoring.md)
+- [使用 PREDICT T-SQL 函数本机计分](../../advanced-analytics/sql-native-scoring.md)
