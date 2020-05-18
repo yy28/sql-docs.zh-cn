@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c751992e666151752783e9813efa2f696fcdcb6e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 610f837c5354a72c665da067fcc8fea582ac6de3
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77903761"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152009"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>什么是 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]？
 
@@ -117,7 +117,7 @@ Kubernetes 是一个开放源代码容器业务流程协调程序，可以根据
 存储池由 Linux 上的 SQL Server、Spark 和 HDFS 组成的存储池 Pod 组成。 SQL Server 大数据群集中的所有存储节点都是 HDFS 群集的成员。
 
 > [!TIP]
-> 如需深入了解大数据群集体系结构和安装，请参阅[研讨会：Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 体系结构](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)。
+> 如需深入了解大数据群集体系结构和安装，请参阅[研讨会：Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 体系结构](https://github.com/microsoft/sqlworkshops-bdc)。
 
 ## <a name="next-steps"></a>后续步骤
 
