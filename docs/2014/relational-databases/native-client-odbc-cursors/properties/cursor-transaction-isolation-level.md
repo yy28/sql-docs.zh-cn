@@ -13,20 +13,20 @@ helpviewer_keywords:
 - ODBC cursors, isolation levels
 - row versioning [SQL Server], ODBC
 ms.assetid: 0c6663a4-5a25-44aa-8fe4-e35af9bf4a83
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fef68bfdb62527f7b631b8d7433e095eba4d1c88
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c183af3a8db4ad9e08f15083462806244aa8187
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207149"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705559"
 ---
 # <a name="cursor-transaction-isolation-level"></a>游标事务隔离级别
   游标的完整锁定行为基于由客户端设置的并发属性和事务隔离级别之间的交互。 ODBC 客户端使用[SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) SQL_ATTR_TXN_ISOLATION 或 SQL_COPT_SS_TXN_ISOLATION 属性设置事务隔离级别。 通过将并发和事务隔离级别选项的锁定行为进行组合，可以确定特定游标环境的锁定行为。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序支持以下游标事务隔离级别：  
+ Native Client ODBC 驱动程序支持以下游标事务隔离级别 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ：  
   
 -   已提交读 (SQL_TXN_READ_COMMITTED)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63207149"
   
 -   快照 (SQL_TXN_SS_SNAPSHOT)  
   
- 请注意，ODBC API 指定了其他事务隔离级别，但不支持这些级别[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]或[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序。  
+ 请注意，ODBC API 指定了其他事务隔离级别，但不支持这些级别 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序。  
   
 ## <a name="see-also"></a>另请参阅  
  [游标属性](cursor-properties.md)  

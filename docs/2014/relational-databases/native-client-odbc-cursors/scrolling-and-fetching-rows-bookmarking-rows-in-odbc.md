@@ -13,15 +13,15 @@ helpviewer_keywords:
 - ODBC cursors, scrolling rows
 - bookmarks [ODBC]
 ms.assetid: 9cfcd243-c9d4-4c2a-abc4-399dbabe5f6b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7f54f9c61bb78a3c0e52adc491b95e03ad85ecd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6489fcee1a8faa3f1205c8418e329182c41e376c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207280"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705547"
 ---
 # <a name="bookmarking-rows-in-odbc"></a>在 ODBC 中为行加书签
   书签是用于标识数据行的值。 只有驱动程序或数据源才知道书签值的含义。 例如，书签可能与行号一样简单，也可能与磁盘地址一样复杂。 在 ODBC 中，应用程序为特定行请求书签，存储该书签，并将其传回到游标以返回到该行。  

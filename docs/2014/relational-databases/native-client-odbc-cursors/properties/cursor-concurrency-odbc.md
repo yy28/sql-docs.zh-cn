@@ -11,15 +11,15 @@ helpviewer_keywords:
 - cursors [ODBC], concurrency
 - ODBC cursors, concurrency
 ms.assetid: 68228ece-cbf1-4f19-bfdc-053884c1af48
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3101da05e25cf67fda816bd889393bbebe8be3ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7139ace2498ef2eeddb173950281ac4cf493efad
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62711452"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705595"
 ---
 # <a name="cursor-concurrency-odbc"></a>游标并发 (ODBC)
   和游标类型一样，游标操作也受应用程序设置的并发选项的影响。 并发选项是使用[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)的 SQL_ATTR_CONCURRENCY 选项设置的。 并发类型包括：  

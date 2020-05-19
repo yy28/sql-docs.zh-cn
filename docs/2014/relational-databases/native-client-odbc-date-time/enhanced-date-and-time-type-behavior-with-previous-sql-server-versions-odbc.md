@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], enhanced behavior with earlier SQL Server versions
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 44ac9cecce81f7873ca5ef42ba414bd4528e05b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d400faa496740182a1407f89e095ebaccf884b3a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63140635"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705468"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>与 SQL Server 早期版本的增强日期和时间类型行为 (ODBC)
   本主题说明当使用增强的日期和时间功能的客户端应用程序与早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本通信时的预期行为，以及使用 Microsoft 数据访问组件、Windows 数据访问组件或早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client 版本的客户端应用程序向支持增强的日期和时间功能的服务器发送命令时的预期行为。  
@@ -29,23 +29,23 @@ ms.locfileid: "63140635"
   
  由 SQLDescribeCol、SQLDescribeParam、SQGetDescField 和 SQLColAttribute 返回的语句元数据将返回与所有方面的下级类型一致的元数据，包括类型名称。 此类下级类型的一个示例是 `nvarchar`。  
   
- 当下级客户端应用程序针对[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] （或更高版本）服务器运行时，如果已对日期/时间类型进行架构更改，则预期行为如下所示：  
+ 当下级客户端应用程序针对 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] （或更高版本）服务器运行时，如果已对日期/时间类型进行架构更改，则预期行为如下所示：  
   
 |SQL Server 2005 类型|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本）类型|ODBC 客户端类型|结果转换（SQL 到 C）|参数转换（C 到 SQL）|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|Datetime|日期|SQL_C_TYPE_DATE|OK|确定（1）|  
+|datetime|日期|SQL_C_TYPE_DATE|确定|确定（1）|  
 |||SQL_C_TYPE_TIMESTAMP|时间字段设置为零。|成功 (2)<br /><br /> 如果时间字段非零，则失败。 适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||Time(0)|SQL_C_TYPE_TIME|OK|确定（1）|  
+||Time(0)|SQL_C_TYPE_TIME|确定|确定（1）|  
 |||SQL_C_TYPE_TIMESTAMP|日期字段设置为当前日期。|成功 (2)<br /><br /> 忽略日期。 如果秒的小数部分非零，则将失败。 适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
 ||Time(7)|SQL_C_TIME|失败-时间文本无效。|确定（1）|  
 |||SQL_C_TYPE_TIMESTAMP|失败-时间文本无效。|确定（1）|  
-||Datetime2 （3）|SQL_C_TYPE_TIMESTAMP|OK|确定（1）|  
-||Datetime2 （7）|SQL_C_TYPE_TIMESTAMP|OK|由客户端转换将值舍入到 1/300 秒。|  
-|Smalldatetime|日期|SQL_C_TYPE_DATE|OK|OK|  
+||Datetime2 （3）|SQL_C_TYPE_TIMESTAMP|确定|确定（1）|  
+||Datetime2 （7）|SQL_C_TYPE_TIMESTAMP|确定|由客户端转换将值舍入到 1/300 秒。|  
+|Smalldatetime|日期|SQL_C_TYPE_DATE|确定|确定|  
 |||SQL_C_TYPE_TIMESTAMP|时间字段设置为零。|成功 (2)<br /><br /> 如果时间字段非零，则失败。 适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||Time(0)|SQL_C_TYPE_TIME|OK|OK|  
+||Time(0)|SQL_C_TYPE_TIME|确定|确定|  
 |||SQL_C_TYPE_TIMESTAMP|日期字段设置为当前日期。|成功 (2)<br /><br /> 忽略日期。 如果秒的小数部分非零，则失败。<br /><br /> 适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|OK|OK|  
+||Datetime2(0)|SQL_C_TYPE_TIMESTAMP|确定|确定|  
   
 ## <a name="key-to-symbols"></a>符号含义  
   

@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - metadata [ODBC]
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9b4e7650f6b36ddbfb8c06ebe6c9f776cfee5ea0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fcac538ee01da719d43015408337f63a09f15d18
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032322"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705443"
 ---
 # <a name="parameter-and-result-metadata"></a>参数和结果元数据
   本主题介绍在日期和时间数据类型的实现参数描述符 (IPD) 和实现行描述符 (IRD) 字段中返回的内容。  
@@ -40,7 +40,7 @@ ms.locfileid: "63032322"
 |SQL_DESC_TYPE_NAME|`date`|`time`|在 IRD 中为 `smalldatetime`，在 IPD 中为 `datetime2`|在 IRD 中为 `datetime`，在 IPD 中为 `datetime2`|`datetime2`|datetimeoffset|  
 |SQL_CA_SS_VARIANT_TYPE|SQL_C_TYPE_DATE|SQL_C_TYPE_BINARY|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_BINARY|  
 |SQL_CA_SS_VARIANT_SQL_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
-|SQL_CA_SS_SERVER_TYPE|不适用|不适用|SQL_SS_TYPE_SMALLDATETIME|SQL_SS_TYPE_DATETIME|SQL_SS_TYPE_DEFAULT|不适用|  
+|SQL_CA_SS_SERVER_TYPE|不可用|不可用|SQL_SS_TYPE_SMALLDATETIME|SQL_SS_TYPE_DATETIME|SQL_SS_TYPE_DEFAULT|不可用|  
   
  有时，值范围中存在不连贯性。 例如，8,10..16 中缺少 9。 这是因为当小数精度大于零时添加了小数点。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "63032322"
   
  如果 SQL_CA_SS_SERVER_TYPE 通过调用 SQLSetDescField 进行设置，则其值必须为 SQL_SS_TYPE_DEFAULT、SQL_SS_TYPE_SMALLDATETIME 或 SQL_SS_TYPE_DATETIME。 如果不是这样，将返回 SQL_ERROR 并生成具有 SQLState HY092 和消息“属性/选项标识符无效”的诊断记录。  
   
- 依赖于 `datetime` 和 `smalldatetime` 而非 `datetime2` 支持的功能的应用程序可以使用 SQL_CA_SS_SERVER_TYPE 属性。 `datetime2`例如，需要使用`dateadd`和**datediif**函数，而`datetime`和`smalldatetime`也允许使用算术运算符。 大多数应用程序将不需要使用此属性，而且应当避免使用此属性。  
+ 依赖于 `datetime` 和 `smalldatetime` 而非 `datetime2` 支持的功能的应用程序可以使用 SQL_CA_SS_SERVER_TYPE 属性。 例如， `datetime2` 需要使用 `dateadd` 和**datediif**函数，而 `datetime` 和 `smalldatetime` 也允许使用算术运算符。 大多数应用程序将不需要使用此属性，而且应当避免使用此属性。  
   
 ## <a name="information-returned-in-ird-fields"></a>在 IRD 字段中返回的信息  
  在 IRD 字段中返回以下信息：  

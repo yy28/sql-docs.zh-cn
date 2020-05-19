@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ODBC cursors, rowset size
 - rowsets [ODBC]
 ms.assetid: 2febe2ae-fdc1-490e-a79f-c516bc8e7c3f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bff145e7e3c6e429ca0877c81c5188b02e428809
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9facf44afde40c69523c67997f294c4a5fa620c8
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207163"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705576"
 ---
 # <a name="cursor-rowset-size"></a>游标行集大小
   ODBC 游标并不仅限于一次提取一行。 它们可以在对**SQLFetch**或[SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md)的每次调用中检索多个行。 当与客户端/服务器数据库（例如 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]）一起使用时，可以更有效地一次提取多行。 提取时返回的行数称为行集大小，并使用[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)的 SQL_ATTR_ROW_ARRAY_SIZE 来指定。  
@@ -45,7 +45,7 @@ SQLSetStmtAttr(m_hstmt, SQL_ATTR_ROW_ARRAY_SIZE, (SQLPOINTER)uwRowsetSize, SQL_I
   
  [SQLGetData](../../native-client-odbc-api/sqlgetdata.md)也可用于从块游标中检索列数据。 由于**SQLGetData**一次只处理一行，因此在调用**SQLGetData**之前，必须调用**SQLSetPos**将行集中的特定行设置为当前行。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序通过使用行集快速检索整个结果集提供优化。 若要使用此优化，请在调用**SQLExecDirect**或**SQLExecute**时，将游标属性设置为其默认值（只进、只读、行集大小 = 1）。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序设置默认的结果集。 在不需要滚动的情况下将结果传输到客户端时，该优化功能比服务器游标更有效。 执行语句后，请增加行集大小并使用按列绑定或按行绑定。 这允许[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用默认结果集将结果行高效地发送到客户端，而[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native client ODBC 驱动程序会持续从客户端上的网络缓冲区中提取行。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序通过使用行集快速检索整个结果集提供优化。 若要使用此优化，请在调用**SQLExecDirect**或**SQLExecute**时，将游标属性设置为其默认值（只进、只读、行集大小 = 1）。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序设置默认的结果集。 在不需要滚动的情况下将结果传输到客户端时，该优化功能比服务器游标更有效。 执行语句后，请增加行集大小并使用按列绑定或按行绑定。 这允许 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用默认结果集将结果行高效地发送到客户端，而 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE client ODBC 驱动程序会持续从客户端上的网络缓冲区中提取行。  
   
 ## <a name="see-also"></a>另请参阅  
  [游标属性](cursor-properties.md)  
