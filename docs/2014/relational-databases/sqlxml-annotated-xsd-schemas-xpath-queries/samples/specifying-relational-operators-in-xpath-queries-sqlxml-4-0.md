@@ -12,15 +12,15 @@ helpviewer_keywords:
 - XPath operators [SQLXML]
 - operators [SQLXML]
 ms.assetid: 177a0eb2-11ef-4459-a317-485a433ee769
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1597893c203f1223ad916f5c7acecb66ff554c76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb2026f0e6720f98f2a2af96da6058e1ce06ba61
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012442"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717751"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定关系运算符 (SQLXML 4.0)
   以下示例显示如何在 XPath 查询中指定关系运算符。 这些示例中的 XPath 查询是针对 SampleSchema1.xml 中包含的映射架构指定的。 有关此示例架构的信息，请参阅[&#40;SQLXML 4.0&#41;的 XPath 批注的 XSD 架构示例](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
@@ -28,13 +28,13 @@ ms.locfileid: "66012442"
 ## <a name="examples"></a>示例  
   
 ### <a name="a-specify-relational-operator"></a>A. 指定关系运算符  
- 此 XPath 查询返回** \<Customer>** 元素的子元素，其中**CustomerID**属性值为 "1"，其中任何子** \<顺序>** 元素包含具有值大于3的**OrderQty**特性的** \<OrderDetail>** 子元素：  
+ 此 XPath 查询返回** \< Customer>** 元素的子元素，其中**CustomerID**属性值为 "1"，其中任何子** \< 顺序>** 元素包含具有值大于3的**OrderQty**特性的** \< OrderDetail>** 子元素：  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- 方括号中指定的谓词用于筛选** \<Customer>** 元素。 仅返回** \<客户>** 元素，这些元素至少具有一个** \<OrderDetail**为 OrderQty 特性值大于3的>孙。  
+ 方括号中指定的谓词用于筛选** \< Customer>** 元素。 仅返回** \< 客户>** 元素，这些元素至少具有一个 OrderDetail 为 OrderQty 特性值大于3的** \<>** 孙。  
   
  `child` 轴为默认轴。 因此，可以将该查询指定为：  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66012442"
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. 在 XPath 查询中指定关系运算符并使用布尔函数比较该结果  
- 此查询将返回**SalesPersonID**属性值小于270的上下文节点>元素子级的所有** \<顺序**：  
+ 此查询将返回**SalesPersonID**属性值小于270的上下文节点>元素子级的所有** \< 顺序**：  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  
@@ -92,7 +92,7 @@ ms.locfileid: "66012442"
 ```  
   
 > [!NOTE]  
->  在模板中指定该查询时，必须对 < 字符进行实体编码，因为 < 字符在 XML 文档中具有特殊含义。 在模板中，使用`<`指定 < 字符。  
+>  在模板中指定该查询时，必须对 < 字符进行实体编码，因为 < 字符在 XML 文档中具有特殊含义。 在模板中，使用 `<` 指定 < 字符。  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>针对映射架构测试 XPath 查询  
   

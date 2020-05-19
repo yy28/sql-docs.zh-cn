@@ -12,14 +12,14 @@ helpviewer_keywords:
 - registering custom business objects in RDS [ADO]
 - business objects in RDS [ADO]
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f998463e0f8190aa040b801d2fd29c732bb31dce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9f110447fbb0f00c037361b00945b228449caf4f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922369"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747715"
 ---
 # <a name="registering-a-custom-business-object"></a>注册自定义业务对象
 若要通过 Web 服务器成功启动自定义业务对象（.dll 或 .exe），必须将业务对象的 ProgID 输入到注册表中，如此过程中所述。 此 RDS 功能通过仅运行批准可执行文件来保护 Web 服务器的安全性。  

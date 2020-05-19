@@ -15,15 +15,15 @@ helpviewer_keywords:
 - parent axis
 - axes [SQLXML]
 ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 81d671c834cfeb1bf1191c0d5cd4ace72741ff10
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8adf10727478344216da05ea982a466daa0eba63
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010719"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717830"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定轴 (SQLXML 4.0)
   以下示例显示如何在 XPath 查询中指定轴。  
@@ -33,13 +33,13 @@ ms.locfileid: "66010719"
 ## <a name="examples"></a>示例  
   
 ### <a name="a-retrieve-child-elements-of-the-context-node"></a>A. 检索上下文节点的子元素  
- 以下 XPath 查询选择上下文节点的所有** \<联系人>** 子元素：  
+ 以下 XPath 查询选择上下文节点的所有** \< 联系人>** 子元素：  
   
 ```  
 /child::Contact  
 ```  
   
- 在查询中， `child`是`Contact`轴，是节点测试（如果`Contact`是** \<元素>** 节点，则为 TRUE，因为\<元素> 是与`child`轴关联的主节点类型）。  
+ 在查询中， `child` 是轴， `Contact` 是节点测试（如果 `Contact` 是** \< 元素>** 节点，则为 TRUE，因为 \< 元素> 是与轴关联的主节点类型 `child` ）。  
   
  `child` 轴为默认轴。 因此，可以将该查询编写为：  
   
@@ -84,13 +84,13 @@ ms.locfileid: "66010719"
 ```  
   
 ### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B. 检索上下文节点的孙级  
- 以下 XPath 查询选择该上下文节点的** \<Customer>** 元素子级的所有** \<Order>** 元素子级：  
+ 以下 XPath 查询选择该上下文节点的** \< Customer>** 元素子级的所有** \< Order>** 元素子级：  
   
 ```  
 /child::Customer/child::Order  
 ```  
   
- 在查询中， `child` `Customer`是轴，并且`Order`是节点测试（如果 Customer 和 Order 是** \<元素>** 节点，则这些节点测试为 TRUE，因为>节点的** \<元素**是`child`轴的主节点）。 对于与** \<客户>** 匹配的每个节点，会将与** \<订单>** 匹配的节点添加到结果中。 仅在结果集中返回** \<订单>** 。  
+ 在查询中， `child` 是轴， `Customer` 并且是 `Order` 节点测试（如果 Customer 和 Order 是** \< 元素>** 节点，则这些节点测试为 TRUE，因为>节点的** \< 元素**是轴的主节点 `child` ）。 对于与** \< 客户>** 匹配的每个节点，会将与** \< 订单>** 匹配的节点添加到结果中。 仅在结果集中返回** \< 订单>** 。  
   
  `child` 轴为默认轴。 因此，可以将该查询指定为：  
   
@@ -159,10 +159,10 @@ ms.locfileid: "66010719"
 </ROOT>  
 ```  
   
- 如果 XPath 查询指定为`Customer/Order/OrderDetail`，则从每个匹配** \<客户**的节点>查询将导航到其** \<Order>** 元素。 对于每个与** \<订单>** 匹配的节点，该查询将** \<>** 的节点添加到结果中。 仅在结果集中返回** \<OrderDetail>** 。  
+ 如果 XPath 查询指定为，则 `Customer/Order/OrderDetail` 从每个匹配客户的节点** \<>** 查询将导航到其** \< Order>** 元素。 对于每个与** \< 订单>** 匹配的节点，该查询将** \<>** 的节点添加到结果中。 仅在结果集中返回** \< OrderDetail>** 。  
   
 ### <a name="c-use--to-specify-the-parent-axis"></a>C. 使用 . 指定父轴  
- 以下查询将检索具有**CustomerID**属性值为1的父** \<Customer>** 元素的所有** \<订单>** 元素。 查询使用谓词中`child`的轴查找** \<Order>** 元素的父级。  
+ 以下查询将检索具有**CustomerID**属性值为1的父** \< Customer>** 元素的所有** \< 订单>** 元素。 查询使用 `child` 谓词中的轴查找** \< Order>** 元素的父级。  
   
 ```  
 /child::Customer/child::Order[../@CustomerID="1"]  
@@ -181,7 +181,7 @@ ms.locfileid: "66010719"
 ```  
   
 > [!NOTE]  
->  XPath 查询`/Order[../@CustomerID="1"]`将返回错误，因为没有** \<Order>** 的父项。 尽管映射架构中可能存在包含** \<Order>** 的元素，但 XPath 并未在任何位置开始;因此， ** \<Order>** 被视为文档中的顶级元素类型。  
+>  XPath 查询 `/Order[../@CustomerID="1"]` 将返回错误，因为没有** \< Order>** 的父项。 尽管映射架构中可能存在包含** \< Order>** 的元素，但 XPath 并未在任何位置开始; 因此， ** \< Order>** 在文档中被视为顶级元素类型。  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>针对映射架构测试 XPath 查询  
   
@@ -246,13 +246,13 @@ ms.locfileid: "66010719"
 ```  
   
 ### <a name="d-specify-the-attribute-axis"></a>D. 指定 attribute 轴  
- 以下 XPath 查询选择具有**CustomerID**属性值为1的上下文节点的所有** \<Customer>** 子元素：  
+ 以下 XPath 查询选择具有**CustomerID**属性值为1的上下文节点的所有** \< Customer>** 子元素：  
   
 ```  
 /child::Customer[attribute::CustomerID="1"]  
 ```  
   
- 在`attribute::CustomerID`谓词中， `attribute`是轴， `CustomerID`是节点测试（ `CustomerID`如果是属性，则节点测试为 TRUE，因为** \<属性>** 节点是`attribute`轴的主节点）。  
+ 在谓词中 `attribute::CustomerID` ， `attribute` 是轴， `CustomerID` 是节点测试（如果 `CustomerID` 是属性，则节点测试为 TRUE，因为** \< 属性>** 节点是轴的主节点 `attribute` ）。  
   
  可以指定 `attribute` 轴的快捷方式 (@)，因为 `child` 是默认轴，因此可以在查询中省略它：  
   

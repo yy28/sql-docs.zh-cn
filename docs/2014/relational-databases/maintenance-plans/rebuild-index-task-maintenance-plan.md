@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Rebuild Index Task dialog box
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 34bd5a607998c6e37f688ccbadcd4d612d3daea7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f38b504943dafd97c39ef66cd1ab903cafe18dd6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806979"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706425"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>“重新生成索引”任务（维护计划）
   使用“重新生成索引任务”  对话框可用利用新的填充因子对数据库中的表重新创建索引。 填充因子确定索引中每页上的空白空间量，以容纳将来的扩展内容。 随着向表中添加数据，由于没有维持填充因子，可用空间将逐渐填满。 重新组织数据页和索引页可以重新建立可用空间。  
@@ -69,13 +69,13 @@ ms.locfileid: "62806979"
  删除数据库中表上的索引，并使用新的、自动计算的填充因子重新创建索引，从而在索引页上保留指定的可用空间。 百分比越高，索引页上保留的可用空间就越多，并且索引增长也就越大。 有效值为 0 到 100。  
   
  **对 tempdb 中的结果进行排序**  
- 使用`SORT_IN_TEMPDB`选项，该选项确定在索引创建过程中生成的中间排序结果的临时存储位置。 如果不需要执行排序操作，或者可以在内存中执行排序，则系统会忽略 `SORT_IN_TEMPDB`选项。  
+ 使用 `SORT_IN_TEMPDB` 选项，该选项确定在索引创建过程中生成的中间排序结果的临时存储位置。 如果不需要执行排序操作，或者可以在内存中执行排序，则系统会忽略 `SORT_IN_TEMPDB`选项。  
   
  **重建索引时保持索引联机**  
  使用 `ONLINE` 选项，用户可以在索引操作期间访问基础表或聚集索引数据以及任何关联的非聚集索引。  
   
 > [!NOTE]  
->  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本中均不提供联机索引操作。 有关各个版本支持的功能列表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  **查看 T-SQL**  
  根据所选选项，查看针对此任务的服务器执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  

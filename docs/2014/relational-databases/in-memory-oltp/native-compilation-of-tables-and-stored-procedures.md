@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9e70ab55fedcc5053cf82a78c040c850a23824eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9fb2078ea3b9515af26df0846ee2f5d92bd9349a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63075184"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706440"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>表和存储过程的本机编译
   内存中 OLTP 引入了本机编译的概念。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以本机编译访问内存优化表的存储过程。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也可以本机编译内存优化表。 与解释型（传统） [!INCLUDE[tsql](../../includes/tsql-md.md)]相比，本机编译可提高访问数据的速度和执行查询的效率。 表和存储过程的本机编译生成 DLL。  
@@ -115,12 +115,12 @@ go
  表和存储过程的本机编译使用内存中 OLTP 编译器。 此编译器生成的文件将写入磁盘和载入内存。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用以下机制限制访问这些文件。  
   
 ### <a name="native-compiler"></a>本机编译器  
- 编译器可执行文件以及本机编译所需的二进制文件和头文件安装在文件夹 MSSQL\Binn\Xtp 下，作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的一部分。 因此，如果默认实例安装在 C:\Program files 下，则编译器文件安装在 C:\Program files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. 中。MSSQLSERVER\MSSQL\Binn\Xtp.  
+ 编译器可执行文件以及本机编译所需的二进制文件和头文件安装在文件夹 MSSQL\Binn\Xtp 下，作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的一部分。 因此，如果默认实例安装在 C:\Program files 下，则编译器文件安装在 C:\Program files \MSSQL12. 中 \\ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。MSSQLSERVER\MSSQL\Binn\Xtp.  
   
  为了限制访问编译器， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用访问控制列表 (ACL) 限制访问二进制文件。 通过 ACL 保护所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 二进制文件免遭修改或篡改。 本机编译器的 ACL 还限制使用编译器；仅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户和系统管理员对本机编译器文件具有读取和执行权限。  
   
 ### <a name="files-generated-by-a-native-compilation"></a>本机编译生成的文件  
- 编译表或存储过程时生成的文件包括 DLL 和中间文件，其中包括如下扩展名的文件：.c、.obj、.xml 和 .pdb。 生成的文件保存在默认数据文件夹的一个子文件夹中。 该子文件夹称为 Xtp。 在用默认数据文件夹安装默认实例时，生成的文件放置在 C:\Program files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. 中。MSSQLSERVER\MSSQL\DATA\Xtp.  
+ 编译表或存储过程时生成的文件包括 DLL 和中间文件，其中包括如下扩展名的文件：.c、.obj、.xml 和 .pdb。 生成的文件保存在默认数据文件夹的一个子文件夹中。 该子文件夹称为 Xtp。 在用默认数据文件夹安装默认实例时，生成的文件放置在 C:\Program files \MSSQL12. 中 \\ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。MSSQLSERVER\MSSQL\DATA\Xtp.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过以下三种方式防止纂改所生成的 DLL：  
   

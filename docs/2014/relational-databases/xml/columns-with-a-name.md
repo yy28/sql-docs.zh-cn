@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - names [SQL Server], columns with
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a57f4b1a56c3a23c9be8957f97fa7b352f9674a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a689c29297703e48a1f759643599dbc93843d9f0
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638161"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717229"
 ---
 # <a name="columns-with-a-name"></a>具有名称的列
   下面是一些特定条件，在这些条件下具有名称的行集列将映射（区分大小写）到生成的 XML：  
@@ -33,7 +33,7 @@ ms.locfileid: "62638161"
 -   一列具有不同的名称。  
   
 ## <a name="column-name-starts-with-an-at-sign-"></a>列名以 at 符号 (\@) 开头  
- 如果列名称以 at 符号（\@）开头并且不包含斜杠标记（/），则将创建具有相应列值的 <`row`> 元素的特性。 例如，下面的查询返回包含两列（\@PmId 和 Name）的行集。 在生成的 XML 中，将向相应的 <`row`> 元素添加 **PmId** 属性并为其分配 ProductModelID 值。  
+ 如果列名称以 at 符号（ \@ ）开头并且不包含斜杠标记（/），则将 `row` 创建具有相应列值的 <> 元素的特性。 例如，下面的查询返回包含两列（\@PmId 和 Name）的行集。 在生成的 XML 中，将向相应的 <`row`> 元素添加 **PmId** 属性并为其分配 ProductModelID 值。  
   
 ```  
   
@@ -66,7 +66,7 @@ go
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>列名不以 at 符号 (\@) 开头  
- 如果列名不以 at 符号（\@）开头，不是 XPath 节点测试之一，并且不包含斜杠标记（/），则将创建一个 XML 元素，该元素是行元素的子元素，默认情况下 <`row`>。  
+ 如果列名不以 at 符号（ \@ ）开头，不是 XPath 节点测试之一，并且不包含斜杠标记（/），则将创建一个 XML 元素，该元素是行元素的子元素， `row` 默认情况下 <>。  
   
  以下查询指定了列名 result。 因此，将向 <`row`> 元素添加 <`result`> 子元素。  
   
@@ -128,7 +128,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- 列名用作在 PATH 模式中构造 XML 时的路径。 包含雇员 ID 值的列名以 "\@" 开头。因此， **EmpID**属性添加到 <`row`> 元素。 其他所有列的列名中均包含指明层次结构的斜杠标记 (/)。 在生成的 XML 中，<`row`> 元素下将包含 <`EmpName`> 子元素，而 <`EmpName`> 子元素将包含 <`First`>、<`Middle`> 和 <`Last`> 子元素。  
+ 列名用作在 PATH 模式中构造 XML 时的路径。 包含雇员 ID 值的列名以 " \@ " 开头。因此， **EmpID**属性添加到 <`row`> 元素。 其他所有列的列名中均包含指明层次结构的斜杠标记 (/)。 在生成的 XML 中，<`row`> 元素下将包含 <`EmpName`> 子元素，而 <`EmpName`> 子元素将包含 <`First`>、<`Middle`> 和 <`Last`> 子元素。  
   
 ```  
 <row EmpID="1">  

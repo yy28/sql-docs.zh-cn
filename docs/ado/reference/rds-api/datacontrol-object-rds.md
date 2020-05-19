@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - DataControl object [ADO]
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a571e93a070c3ce07fbaf40a86b762c749042ec1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7bc9482c6626de36d9e45b2a2968b504b0793746
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964409"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746119"
 ---
 # <a name="datacontrol-object-rds"></a>DataControl 对象 (RDS)
 将数据查询[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)绑定到一个或多个控件（例如，文本框、网格控件或组合框）以在网页上显示**记录集**数据。  

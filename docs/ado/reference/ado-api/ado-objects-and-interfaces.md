@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO, objects and interfaces
 - objects [ADO]
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5ecc6de67defb2366bf208c38bd2de5bff643e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fe57e31792755aca1dc51b0af50805e853a5bab4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920901"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747241"
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO 对象和接口
 这些对象之间的关系在[ADO 对象模型](../../../ado/reference/ado-api/ado-object-model.md)中表示。  
@@ -40,7 +40,7 @@ ms.locfileid: "67920901"
 |[属性](../../../ado/reference/ado-api/property-object-ado.md)|表示由提供程序定义的 ADO 对象的动态特性。|  
 |[记录](../../../ado/reference/ado-api/record-object-ado.md)|表示**记录集**的一行或文件系统中的目录或文件。 **记录**对象对于脚本是安全的。|  
 |[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|表示基表中的记录集或执行的命令的结果。 **记录集**对象随时仅指集内的单个记录作为当前记录。<br /><br /> 对于脚本编写， **Recordset**对象是安全的。|  
-|[流](../../../ado/reference/ado-api/stream-object-ado.md)|表示数据的二进制流。<br /><br /> **流式**处理对象是安全的。|  
+|[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|表示数据的二进制流。<br /><br /> **流式**处理对象是安全的。|  
   
 ## <a name="see-also"></a>另请参阅  
  [ADO API 参考](../../../ado/reference/ado-api/ado-api-reference.md)   

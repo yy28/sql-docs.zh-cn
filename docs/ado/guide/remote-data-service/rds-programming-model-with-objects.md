@@ -11,14 +11,14 @@ helpviewer_keywords:
 - RDS programming model [ADO]
 - RDS objects [ADO]
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 06bf7c811074ba70741fe77b06037f9f69c9cda4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5f41fd577b470493aa6a53c8ea9ad760287a3507
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922462"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747747"
 ---
 # <a name="rds-programming-model-with-objects"></a>RDS 编程模型和对象
 RDS 的目标是通过诸如 IIS 这样的媒介获取和更新数据源。 编程模型指定完成此目标所需的活动序列。 对象模型指定其方法和属性影响编程模型的对象。  

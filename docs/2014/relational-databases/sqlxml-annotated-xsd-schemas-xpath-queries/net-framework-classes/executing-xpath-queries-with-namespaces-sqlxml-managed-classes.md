@@ -15,22 +15,22 @@ helpviewer_keywords:
 - SQLXML Managed Classes, executing XPath queries
 - namespaces [SQLXML], XPath queries
 ms.assetid: c6fc46d8-6b42-4992-a8f1-a8d4b8886e6e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 793107e91425e4fa0df23211a6d4ea42afef8c54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: afa994d7bda334e946a837f078d1efef1b78ac0a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010796"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717986"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>执行带命名空间的 XPath 查询（SQLXML 托管类）
   XPath 查询可以包含命名空间。 如果架构元素为限定命名空间（使用目标命名空间），则针对该架构的 XPath 查询必须指定该命名空间。  
   
  由于 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 中不支持使用通配符 (*)，因此必须使用命名空间前缀来指定 XPath 查询。 若要解析此前缀，请使用 namespace 属性来指定命名空间绑定。  
   
- 在下面的示例中，XPath 查询使用通配符（\*）和本地名称（）和命名空间 uri （） XPath 函数指定命名空间。 此 XPath 查询将返回其本地名称为 `Employee` 且其命名空间 URI 为 `urn:myschema:Contacts` 的所有元素：  
+ 在下面的示例中，XPath 查询使用通配符（ \* ）和本地名称（）和命名空间 uri （） XPath 函数指定命名空间。 此 XPath 查询将返回其本地名称为 `Employee` 且其命名空间 URI 为 `urn:myschema:Contacts` 的所有元素：  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  

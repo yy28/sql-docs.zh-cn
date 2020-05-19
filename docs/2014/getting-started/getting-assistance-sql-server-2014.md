@@ -8,15 +8,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - finding Help topics [SQL Server]
 ms.assetid: 2d43a79f-8f4e-4c98-b921-16035129a15b
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 69127078f72eeab296c754dfce666804dcdda53d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8509282897c1938d357f347ada98f7f2c3be4b4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62837687"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706951"
 ---
 # <a name="getting-assistance-sql-server-2014"></a>获取帮助 (SQL Server 2014)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 有以下三个关于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的主要信息来源：  
@@ -33,7 +33,7 @@ ms.locfileid: "62837687"
  [获取 SQL Server 帮助](../../2014/getting-started/getting-sql-server-assistance.md)  
  包含指向 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 相关信息主要来源的链接。 该主题还包含指向支持站点的链接。  
   
- [为残障人士提供的辅助功能](../../2014/getting-started/accessibility-for-people-with-disabilities.md)  
+ [面向残障人士的辅助功能](../../2014/getting-started/accessibility-for-people-with-disabilities.md)  
  介绍方便残障人士访问 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的产品、功能和服务。  
   
  [提供有关 SQL Server 2014 的反馈](../../2014/getting-started/providing-feedback-for-sql-server-2014.md)  

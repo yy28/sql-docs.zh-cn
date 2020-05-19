@@ -10,15 +10,15 @@ helpviewer_keywords:
 - extended events [SQL Server], packages
 - xe
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93691dccde430e7f636f956229b5305b211449f8
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62638739"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719181"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 扩展事件包
   包是用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 扩展事件对象的容器。 扩展事件包有三种类型，它们是：  
@@ -46,7 +46,7 @@ ms.locfileid: "62638739"
   
 -   谓词  
   
--   地图  
+-   Maps  
   
  在一个事件会话中可混合不同包中的对象。 有关详细信息，请参阅 [SQL Server Extended Events Sessions](sql-server-extended-events-sessions.md)。  
   
@@ -70,14 +70,14 @@ ms.locfileid: "62638739"
 #### <a name="event-categorization"></a>事件分类  
  扩展事件使用与 Windows 事件跟踪 (ETW) 类似的事件分类模型。 两个事件属性将用于分类、通道和关键字。 使用这些属性可支持将扩展事件与 ETW 及其工具进行集成。  
   
- **通道**  
+ **频道**  
   
  通道用于标识事件的用户。 下表对这些通道进行了说明。  
   
 |术语|定义|  
 |----------|----------------|  
 |管理员|管理员事件主要针对的是最终用户、管理员和支持人员。 管理员通道中包含的事件指示定义好的解决方案出现问题，管理员可以对该问题进行处理。 例如，应用程序无法连接到打印机就是一个管理员事件。 这些事件可能在文档中有详细描述，或者有与之关联的消息告诉读者如何纠正这一问题。|  
-|可运行|操作事件用于分析和诊断问题或匹配项。 它们可用于基于问题或匹配项来触发工具或任务。 操作事件的一个示例是从系统中添加或删除打印机。|  
+|操作|操作事件用于分析和诊断问题或匹配项。 它们可用于基于问题或匹配项来触发工具或任务。 操作事件的一个示例是从系统中添加或删除打印机。|  
 |分析|分析事件的发布量是很大的。 它们对程序操作进行说明并且通常用于性能调查。|  
 |调试|调试事件仅由开发人员用来诊断问题以进行调试。<br /><br /> 注意：调试通道中的事件返回特定于实现的内部状态数据。 这些事件返回的架构和数据可能在 SQL Server 的将来版本中更改或失效。 因此，调试渠道中的事件在 SQL Server 的将来版本中可能更改或删除且不事先通知。|  
   
@@ -151,7 +151,7 @@ where name = 'keyword_map'
   
  有关详细信息，请参阅 [sys.dm_xe_objects (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)。  
   
-### <a name="maps"></a>地图  
+### <a name="maps"></a>Maps  
  映射表用于将内部值映射到字符串，这使用户可以知道该值代表什么。 用户可以获得关于内部值真正含义的说明，而不是只能够获取数值。 下面的查询显示了获取映射值的方式。  
   
 ```  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Transact-SQL IntelliSense
 - IntelliSense [SQL Server], Transact-SQL syntax
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2db2ac49f1caa455c8c05529437a385d360ecaf6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5bf48818e6e1d0b5d92fbd04602d09a72276593
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242995"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718238"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense 支持的 Transact-SQL 语法
   本主题介绍了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的 IntelliSense 支持的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]语句和语法元素。  
@@ -50,11 +50,11 @@ ms.locfileid: "75242995"
 |[INSERT](/sql/t-sql/statements/insert-transact-sql)|所有语法， *execute_statement* 子句除外。|  
 |[UPDATE](/sql/t-sql/queries/update-transact-sql)|所有语法。|  
 |[DELETE](/sql/t-sql/statements/delete-transact-sql)|所有语法。|  
-|[把@local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|所有语法。|  
+|[DECLARE @local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|所有语法。|  
 |[字符集@local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|所有语法。|  
 |[EXECUTE](/sql/t-sql/language-elements/execute-transact-sql)|执行用户定义的存储过程、系统存储过程、用户定义函数和系统函数。|  
 |[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)|所有语法。|  
-|[创建视图](/sql/t-sql/statements/create-view-transact-sql)|所有语法。|  
+|[CREATE VIEW](/sql/t-sql/statements/create-view-transact-sql)|所有语法。|  
 |[CREATE PROCEDURE](/sql/t-sql/statements/create-procedure-transact-sql)|所有语法，以下情况除外：<br /><br /> 对 EXTERNAL NAME 子句不提供 IntelliSense 支持。<br /><br /> 在 AS 子句中，IntelliSense 仅支持本主题中列出的语句和语法。|  
 |[ALTER PROCEDURE](/sql/t-sql/statements/alter-procedure-transact-sql)|所有语法，以下情况除外：<br /><br /> 对 EXTERNAL NAME 子句不提供 IntelliSense 支持。<br /><br /> 在 AS 子句中，IntelliSense 仅支持本主题中列出的语句和语法。|  
 |[USE](/sql/t-sql/language-elements/use-transact-sql)|所有语法。|  

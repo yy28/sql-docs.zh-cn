@@ -11,14 +11,14 @@ helpviewer_keywords:
 - DataFactory handler in RDS [ADO]
 - customized handler in RDS [ADO]
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 98e2ec3538de68bffa5b22acc94dda3d81e5c6f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cd7aec0e98afd09b30c4e4d67102d1333efdcdd6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921889"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747606"
 ---
 # <a name="writing-your-own-customized-handler"></a>编写自己的自定义处理程序
 如果您是需要默认 RDS 支持的 IIS 服务器管理员，但对用户请求和访问权限有更多控制，则您可能需要编写自己的处理程序。  
@@ -31,7 +31,7 @@ ms.locfileid: "67921889"
 ## <a name="idatafactoryhandler-interface"></a>IDataFactoryHandler 接口  
  此接口包含两种方法， **dl.getrecordset**和**重新连接**。 这两种方法都需要将[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**adUseClient**。  
   
- 这两个方法均采用 "**Handler =**" 关键字中第一个逗号后出现的参数。 例如， `"Handler=progid,arg1,arg2;"`将传递的`"arg1,arg2"`参数字符串，并`"Handler=progid"`将传递 null 参数。  
+ 这两个方法均采用 "**Handler =**" 关键字中第一个逗号后出现的参数。 例如， `"Handler=progid,arg1,arg2;"` 将传递的参数字符串 `"arg1,arg2"` ，并 `"Handler=progid"` 将传递 null 参数。  
   
 ## <a name="getrecordset-method"></a>Dl.getrecordset 方法  
  此方法查询数据源，并使用提供的参数创建新的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 **记录集**必须用**adLockBatchOptimistic**打开，并且不能异步打开。  

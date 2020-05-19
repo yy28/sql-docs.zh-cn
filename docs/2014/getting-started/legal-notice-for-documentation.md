@@ -13,15 +13,15 @@ helpviewer_keywords:
 - undocumented [SQL Server]
 - documentation policy [SQL Server]
 ms.assetid: 6854121d-429d-4d1b-9d64-342583e08378
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b5a25f4f151bb7aa1a9deef24486bd533d5755b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac8669fc161dfba1f7ed1f7c3b16e15619be2ff6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62837517"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706925"
 ---
 # <a name="legal-notice-for-documentation"></a>文档法律声明
   本文档“按原样”提供。 本文档中表达的信息和视图（包括 URL 和其他 Internet 网站引用）如有更改，恕不另行通知。 您应承担使用本文档所带来的风险。  

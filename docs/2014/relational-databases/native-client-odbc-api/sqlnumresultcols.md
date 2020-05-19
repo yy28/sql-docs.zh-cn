@@ -11,22 +11,22 @@ topic_type:
 helpviewer_keywords:
 - SQLNumResultCols function
 ms.assetid: f79d8b3c-521e-4e50-a564-21d73ae5767b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 88edec63a97ff6c463f07add895ff8399fc4268a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0eb6de956884eb66990459b8b4c6a6336c8ed8ac
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046752"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705940"
 ---
 # <a name="sqlnumresultcols"></a>SQLNumResultCols
-  对于执行的语句， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序不会访问服务器来报告结果集中的列数。 在这种情况`SQLNumResultCols`下，不会导致服务器往返。 与[SQLDescribeCol](sqldescribecol.md)和[SQLColAttribute](sqlcolattribute.md)相似， `SQLNumResultCols`对已准备但未执行的语句调用会生成服务器往返。  
+  对于执行的语句， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驱动程序不会访问服务器来报告结果集中的列数。 在这种情况下，不 `SQLNumResultCols` 会导致服务器往返。 与[SQLDescribeCol](sqldescribecol.md)和[SQLColAttribute](sqlcolattribute.md)相似， `SQLNumResultCols` 对已准备但未执行的语句调用会生成服务器往返。  
   
  当某个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或语句批处理返回多个结果行集时，结果集列的个数可能在各个集之间有所变化。 `SQLNumResultCols`应为每个集调用。 如果列数有变化，应用程序应该在提取行结果之前重新绑定数据值。 有关处理多个结果集返回的详细信息，请参阅[SQLMoreResults](sqlmoreresults.md)。  
   
- 从 " [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]允许 SQLNumResultCols" 开始，数据库引擎中的改进可获取预期结果的更准确说明。 更准确的结果可能与早期版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQLNumResultCols 返回的值不同。 有关详细信息，请参阅[元数据发现](../native-client/features/metadata-discovery.md)。  
+ 从 "允许 SQLNumResultCols" 开始，数据库引擎中的改进 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 可获取预期结果的更准确说明。 更准确的结果可能与早期版本的 SQLNumResultCols 返回的值不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关详细信息，请参阅[元数据发现](../native-client/features/metadata-discovery.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLNumResultCols 函数](https://go.microsoft.com/fwlink/?LinkId=59359)   

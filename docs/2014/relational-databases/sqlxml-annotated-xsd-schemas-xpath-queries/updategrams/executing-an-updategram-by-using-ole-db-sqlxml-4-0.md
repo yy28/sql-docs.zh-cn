@@ -12,15 +12,15 @@ helpviewer_keywords:
 - OLE DB, SQLXML
 - executing updategrams [SQLXML]
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a61c0386d6e5c5e836a60e5175272d4fdaaa6f15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e58db16e14c0e959ca83dcdd687159f80bbeaf77
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014785"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717510"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>使用 OLE DB 执行 Updategram (SQLXML 4.0)
   本主题提供了 usingOLE DB 的工作示例，以执行 updategram。  
@@ -58,7 +58,7 @@ ms.locfileid: "66014785"
 </Schema>  
 ```  
   
- 查询返回所有雇员元素。 在默认映射中， ** \<person>** 元素将映射到 AdventureWorks 数据库中的 contact 表。  
+ 查询返回所有雇员元素。 在默认映射中， ** \< person>** 元素将映射到 AdventureWorks 数据库中的 contact 表。  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>将 XML 设置为命令并以 XML 文档形式检索结果  
   
@@ -513,7 +513,7 @@ FOR XML AUTO</sql:query>
 </ROOT>  
 ```  
   
- 该模板包含 SQL 查询。 查询需要其参数（@Title）的值。 如果未传递参数值，则使用默认值（“Mr.”）。  
+ 该模板包含 SQL 查询。 查询需要其参数（）的值 @Title 。 如果未传递参数值，则使用默认值（“Mr.”）。  
   
  向模板传递参数值时，参数名称和值都必须指定。  
   

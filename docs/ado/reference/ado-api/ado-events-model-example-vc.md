@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Visual C++ code examples [ADO], event model
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1af45d9ac4674af98097083e2da89a217f17a58f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bce894f1e0cce8c8d8800b2633924f9cc5bc6bd9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921016"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747343"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO 事件模型示例 (VC++)
 [Ado 事件实例化](../../../ado/guide/data/ado-event-instantiation-by-language.md)的 Visual C++ 部分通过语言提供有关如何实例化 ADO 事件模型的一般说明。 下面是在由 **#import**指令创建的环境中实例化事件模型的特定示例。  
@@ -44,7 +44,7 @@ ms.locfileid: "67921016"
   
 -   该示例编写为控制台应用程序。  
   
--   你应在注释 "`// Do some work`" 下插入你自己的代码。  
+-   你应在注释 "" 下插入你自己的代码 `// Do some work` 。  
   
 -   所有事件处理程序都默认为不执行任何操作，并取消进一步的通知。 应为应用程序插入适当的代码，并根据需要允许通知。  
   

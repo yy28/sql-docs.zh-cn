@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Remote Data Service (RDS)
 - RDS
 ms.assetid: 63a5f26b-e7ca-47d9-a004-59eaad6052b4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0faa6f595f4f2001dc3456fde6d01cac0d52355c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3b8df2482c4040c157c962178fdfddd8ead5bb84
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922305"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747653"
 ---
 # <a name="remote-data-service-rds"></a>远程数据服务 (RDS)
 远程数据服务（RDS）是 ADO 的一项功能，您可以使用它将数据从服务器移到客户端应用程序或网页，操作客户端上的数据，并在一次往返中将更新返回到服务器。  

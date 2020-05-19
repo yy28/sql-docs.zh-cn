@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint conditions
 ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c27ed8abfd66cb896182cd5a795965163e5c8618
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 58258ab6c364cbe7137e8a5157cb4f335e049c42
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243233"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718586"
 ---
 # <a name="specify-a-breakpoint-condition"></a>指定断点条件
   断点条件是当到达断点时，由调试器计算的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表达式。 如果满足条件，并且达到任何指定的命中计数，则调试器或者中断，或者执行为断点指定的操作。  
@@ -37,7 +37,7 @@ ms.locfileid: "75243233"
   
 2.  在 **“断点条件”** 对话框中，在 **“条件”** 框中输入一个有效的布尔表达式。  
   
-3.  如果要在表达式的计算结果为`true`时中断，则选择 "**为 true** "; 如果要在表达式的值发生更改时中断，请选择 "**已更改**"。  
+3.  如果要在表达式的计算结果为时中断，则选择 "**为 true** `true` "; 如果要在表达式的值发生更改时中断，请选择 "**已更改**"。  
   
     > [!NOTE]  
     >  在第一次到达断点之前，调试器不会计算布尔表达式。 如果选择 **“已更改”** ，则调试器不会将第一次计算视为一项更改，因此不会在第一次计算时中断。  

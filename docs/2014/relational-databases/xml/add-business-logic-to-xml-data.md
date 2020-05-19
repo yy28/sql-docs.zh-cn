@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ca0953b9ac191dfb765992f79988f3cc1502dfa4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b4be577d1499ea4809ee10b36343875253fc032
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211568"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717393"
 ---
 # <a name="add-business-logic-to-xml-data"></a>将业务逻辑添加到 XML 数据
   可以采用多种方式将业务逻辑添加到 XML 数据中：  
@@ -31,7 +31,7 @@ ms.locfileid: "68211568"
 -   您可以编写 Transact-SQL 存储过程和函数，对 XML 列进行处理以满足业务需要。  
   
 ## <a name="example-applying-xsl-transformation"></a>示例：应用 XSL 转换  
- 假设有一个 CLR 函数**TransformXml （）** ，该`xml`函数接受数据类型实例和存储在文件中的 XSL 转换，将转换应用于 XML 数据，然后在结果中返回转换后的 XML。 以下是用 C# 编写的主干函数：  
+ 假设有一个 CLR 函数**TransformXml （）** ，该函数接受 `xml` 数据类型实例和存储在文件中的 XSL 转换，将转换应用于 XML 数据，然后在结果中返回转换后的 XML。 以下是用 C# 编写的主干函数：  
   
 ```  
 public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {  

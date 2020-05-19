@@ -27,15 +27,15 @@ helpviewer_keywords:
 - ClientSideXML property
 - CommandStream property
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d002208a83b58a4c8547bc6ce85db073ced70974
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e7ee45c8d725e233541f4db34796e89327bc11e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010735"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717949"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>SqlXmlCommand 对象（SQLXML 托管类）
   这是 SqlXmlCommand 对象的构造函数：  
@@ -44,7 +44,7 @@ ms.locfileid: "66010735"
 public SqlXmlCommand(string cnString)  
 ```  
   
- 其中`cnString` ，是用于标识服务器、数据库和登录信息的 ADO 或 OLEDB 连接字符串，例如`Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`。  
+ 其中， `cnString` 是用于标识服务器、数据库和登录信息的 ADO 或 OLEDB 连接字符串，例如 `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"` 。  
   
  在该连接字符串中，`Provider` 必须是 SQLOLEDB，并且 `Data Provider` 不应包括在访问接口字符串中。  
   
@@ -86,7 +86,7 @@ public SqlXmlCommand(string cnString)
  XSL 文件的名称以及目录路径。 指定的路径可以是绝对路径或相对路径。 如果路径是相对路径，则使用基路径中指定的基路径解析相对路径。 如果未指定基本路径，则相对路径是相对于当前目录的路径。 有关工作示例，请参阅将[XSL 转换 &#40;SQLXML 托管类&#41;](applying-an-xsl-transformation-sqlxml-managed-classes.md)。  
   
  基路径  
- 基本路径（目录路径）。 此属性用于解析为 XSL 文件指定的相对路径（通过使用 XslPath 属性）、映射架构文件（通过使用 SchemaPath 属性）或 XML 模板中的外部架构引用（使用`mapping-schema`特性指定）。  
+ 基本路径（目录路径）。 此属性用于解析为 XSL 文件指定的相对路径（通过使用 XslPath 属性）、映射架构文件（通过使用 SchemaPath 属性）或 XML 模板中的外部架构引用（使用 `mapping-schema` 特性指定）。  
   
  OutputEncoding  
  为在执行命令时返回的流指定编码。 此属性用于为返回的流请求特定的编码。 某些常用编码是 UTF-8、ANSI 和 Unicode。 UTF-8 为默认编码。  
@@ -106,7 +106,7 @@ public SqlXmlCommand(string cnString)
  CommandType  
  标识命令的类型。 此属性用于指定您要执行的命令的类型。 下表中的值确定命令的类型。 有关工作示例，请参阅[在 .Net 环境中访问 SQLXML 功能](accessing-sqlxml-functionality-in-the-net-environment.md)。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |SqlXmlCommandType|执行某一 SQL 命令（例如 `SELECT * FROM Employees FOR XML AUTO`）。|  
 |SqlXmlCommandType|执行某一 XPath 命令（例如 `Employees[@EmployeeID=1]`）。|  

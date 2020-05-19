@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO, methods
 - methods [ADO]
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8df204daeda82f809cf50246590141729e3608e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 65145ce8f77c352fb24a2a206d99828298b6a60c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920927"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747260"
 ---
 # <a name="ado-methods"></a>ADO 方法
 
@@ -75,7 +75,7 @@ ms.locfileid: "67920927"
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|读取文本流时，跳过整行。|  
 |[Stat](../../../ado/reference/ado-api/stat-method.md)|获取有关打开的流的统计信息。|  
 |[支持](../../../ado/reference/ado-api/supports-method.md)|确定指定的**记录集**对象是否支持特定类型的功能。|  
-|[Update](../../../ado/reference/ado-api/update-method.md)|保存对记录**集**对象的当前行所做的任何更改，或**记录**对象的**字段**集合。|  
+|[更新](../../../ado/reference/ado-api/update-method.md)|保存对记录**集**对象的当前行所做的任何更改，或**记录**对象的**字段**集合。|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|将所有挂起的批更新写入磁盘。|  
 |[写入](../../../ado/reference/ado-api/write-method.md)|向**Stream**对象写入二进制数据。|  
 |[WriteText](../../../ado/reference/ado-api/writetext-method.md)|向**Stream**对象写入指定的文本字符串。|  

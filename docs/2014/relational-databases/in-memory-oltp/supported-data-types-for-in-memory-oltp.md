@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: de5f805a9d722974adf7975f713436bc7b1ca4d0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7ba8c40979873cc2c3f2358b57dc0e491a1795e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155157"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718834"
 ---
 # <a name="supported-data-types"></a>支持的数据类型
   内存优化表和本机编译存储过程中 **支持** 以下数据类型：  
@@ -28,7 +28,7 @@ ms.locfileid: "63155157"
 |bigint|[int、bigint、smallint 和 tinyint (Transact-SQL)](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
 |smallint|[int、bigint、smallint 和 tinyint (Transact-SQL)](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
 |tinyint|[int、bigint、smallint 和 tinyint (Transact-SQL)](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
-|decimal|[decimal 和 numeric (Transact-SQL)](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)|  
+|Decimal|[decimal 和 numeric (Transact-SQL)](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)|  
 |numeric|[decimal 和 numeric (Transact-SQL)](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)|  
 |float|[float 和 real (Transact-SQL)](/sql/t-sql/data-types/float-and-real-transact-sql)|  
 |real|[float 和 real (Transact-SQL)](/sql/t-sql/data-types/float-and-real-transact-sql)|  
@@ -55,7 +55,7 @@ ms.locfileid: "63155157"
 |---------------|--------------------------|  
 |date|[date (Transact-SQL)](/sql/t-sql/data-types/date-transact-sql)|  
 |time|[time (Transact-SQL)](/sql/t-sql/data-types/time-transact-sql)|  
-|日期/时间|[datetime (Transact-SQL)](/sql/t-sql/data-types/datetime-transact-sql)|  
+|datetime|[datetime (Transact-SQL)](/sql/t-sql/data-types/datetime-transact-sql)|  
 |datetime2|[datetime2 (Transact-SQL)](/sql/t-sql/data-types/datetime2-transact-sql)|  
 |smalldatetime|[smalldatetime (Transact-SQL)](/sql/t-sql/data-types/smalldatetime-transact-sql)|  
   

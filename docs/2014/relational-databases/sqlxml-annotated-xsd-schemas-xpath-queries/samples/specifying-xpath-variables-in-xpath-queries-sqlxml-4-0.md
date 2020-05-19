@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XPath queries [SQLXML], XPath variables
 - XPath variables [SQLXML]
 ms.assetid: c11ab816-11b8-4131-8b77-c03fe500fa10
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 25e6c96ccbe51ccc0d2d88c4b119c08538d37fcf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00731efa85b4396fa2086596c992ad50c9ab41b7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010686"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717705"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定 XPath 变量 (SQLXML 4.0)
   以下示例说明如何在 XPath 查询中传递 XPath 变量。 这些示例中的 XPath 查询是针对 SampleSchema1.xml 中包含的映射架构指定的。 有关此示例架构的信息，请参阅[&#40;SQLXML 4.0&#41;的 XPath 批注的 XSD 架构示例](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
@@ -26,7 +26,7 @@ ms.locfileid: "66010686"
 ## <a name="examples"></a>示例  
   
 ### <a name="a-use-the-xpath-variables"></a>A. 使用 XPath 变量  
- 示例模板由两个 XPath 查询构成。 每个 XPath 查询都采用一个参数。 该模板还为这些参数指定默认值。 如果未指定参数值，则使用默认值。 在** \<sql： header>** 中指定了两个具有默认值的参数。  
+ 示例模板由两个 XPath 查询构成。 每个 XPath 查询都采用一个参数。 该模板还为这些参数指定默认值。 如果未指定参数值，则使用默认值。 在** \< sql： header>** 中指定了两个具有默认值的参数。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

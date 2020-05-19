@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business objects in RDS [ADO]
 ms.assetid: 75a21910-607f-463a-ae18-a17130dafb7e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 31af4a68ec830a5fd514173c831ce3863fef7443
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 79f88f36b7eae83163ef2754f9b2c2265550c684
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922359"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747666"
 ---
 # <a name="registering-business-objects-on-the-client-for-use-with-dcom"></a>在用于 DCOM 的客户端中注册业务对象
 自定义业务对象需要确保客户端可以将其程序名称（ProgId）映射到可通过 DCOM 使用的标识符（CLSID）。 出于此原因，DCOM 对象的 ProgID 必须位于客户端注册表中，并映射到服务器端业务对象的类 ID。 对于其他支持的协议（HTTP、HTTPS 和进程内），这是不必要的。  

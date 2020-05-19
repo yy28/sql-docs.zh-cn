@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLColAttribute function
 ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 706d08eb3c140571460f4ebccb541ac24a71160a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: deb9ddbc59e8ff76c8c459022d73cca7e7de81d3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067659"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706350"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
-  您可以使用`SQLColAttribute`检索已准备或执行的 ODBC 语句的结果集列的属性。 对`SQLColAttribute`预定义语句调用将导致往返[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序接收语句执行过程中的结果集列数据，因此， `SQLColAttribute`在**SQLExecute**或**SQLExecDirect**完成后调用，不涉及服务器往返。  
+  您可以使用 `SQLColAttribute` 检索已准备或执行的 ODBC 语句的结果集列的属性。 `SQLColAttribute`对预定义语句调用将导致往返 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序接收语句执行过程中的结果集列数据，因此，在 `SQLColAttribute` **SQLExecute**或**SQLExecDirect**完成后调用，不涉及服务器往返。  
   
 > [!NOTE]  
 >  ODBC 列标识符属性并非可用于所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 结果集。  
@@ -39,9 +39,9 @@ ms.locfileid: "63067659"
 |SQL_DESC_TABLE_NAME|可用于从生成服务器游标的语句检索的结果集，或从包含 FOR BROWSE 子句的已执行 SELECT 语句检索的结果集。|  
 |SQL_DESC_UNNAMED|对于结果集中的所有列均为 SQL_NAMED，除非某列是不包含标签分配作为表达式一部分的表达式的结果。 当 SQL_DESC_UNNAMED 返回 SQL_UNNAMED 时，所有 ODBC 列标识符属性对于该列都包含零长度字符串。|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]当为已准备好但未执行的语句调用时`SQLColAttribute` ，NATIVE Client ODBC 驱动程序使用 SET FMTONLY 语句来减少服务器开销。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]当为 `SQLColAttribute` 已准备好但未执行的语句调用时，Native CLIENT ODBC 驱动程序使用 SET FMTONLY 语句来减少服务器开销。  
   
- 对于大值类型， `SQLColAttribute`将返回以下值：  
+ 对于大值类型， `SQLColAttribute` 将返回以下值：  
   
 |字段标识符|更改说明|  
 |----------------------|---------------------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "63067659"
   
  对于所有版本，当已准备的一批 SQL 语句生成多个结果集时，只为第一个结果集报告列属性。  
   
- 以下列属性是由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序公开的扩展。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序将返回*NumericAttrPtr*参数中的所有值。 这些值作为 SDWORD（signed long，有符号长值）返回，但 SQL_CA_SS_COMPUTE_BYLIST 除外，它是指向 WORD 数组的指针。  
+ 以下列属性是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驱动程序公开的扩展。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序将返回*NumericAttrPtr*参数中的所有值。 这些值作为 SDWORD（signed long，有符号长值）返回，但 SQL_CA_SS_COMPUTE_BYLIST 除外，它是指向 WORD 数组的指针。  
   
 |字段标识符|返回的值|  
 |----------------------|--------------------|  
@@ -102,7 +102,7 @@ ms.locfileid: "63067659"
  `SQLColAttribute` 支持大型 CLR 用户定义类型 (UDT)。 有关详细信息，请参阅[&#40;ODBC&#41;的大型 CLR 用户定义类型](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="sqlcolattribute-support-for-sparse-columns"></a>SQLColAttribute 对于稀疏列的支持  
- SQLColAttribute 查询新的实现行描述符（IRD）字段 SQL_CA_SS_IS_COLUMN_SET，以确定列是否为`column_set`列。  
+ SQLColAttribute 查询新的实现行描述符（IRD）字段 SQL_CA_SS_IS_COLUMN_SET，以确定列是否为 `column_set` 列。  
   
  有关详细信息，请参阅[稀疏列支持 &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md)。  
   

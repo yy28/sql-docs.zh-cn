@@ -38,15 +38,15 @@ helpviewer_keywords:
 - SQL Server assistance
 - SQL Server Solution Center
 ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cfa159a88cfc159e65fe3ec39b334a3f6e8c5c8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 22eeb621cb9c4ccdf0d853ff9d6d528c156c15a0
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74683606"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706934"
 ---
 # <a name="getting-sql-server-assistance"></a>获取 SQL Server 帮助
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 有以下三个关于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的主要信息来源：  
@@ -55,7 +55,7 @@ ms.locfileid: "74683606"
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer Network (MSDN) 和 TechNet 上的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 站点。  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]有关其他[!INCLUDE[msCoName](../includes/msconame-md.md)]网站的信息。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]有关其他网站的信息 [!INCLUDE[msCoName](../includes/msconame-md.md)] 。  
   
  如果在这些来源中没有找到所需信息，可以在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 社区论坛和新闻组中提问，也可以向 [!INCLUDE[msCoName](../includes/msconame-md.md)] 寻求帮助，以便解决具体问题。  
   

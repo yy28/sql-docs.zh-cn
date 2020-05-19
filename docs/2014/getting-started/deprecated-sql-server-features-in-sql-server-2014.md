@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: fdc0c778-cc8d-42ab-8833-4deb4329f37a
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 44fbab98aa017be66cd4dc369a713f44e8d248d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9749c9df163280e52d691fbf6838196b9ae1e4b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228220"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706996"
 ---
 # <a name="deprecated-sql-server-features-in-sql-server-2014"></a>SQL Server 2014 中不推荐使用的 SQL Server 功能
   本主题介绍 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中仍然可用但不推荐使用的功能。 按照计划， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]未来版本将不再具有这些功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
@@ -29,9 +29,9 @@ ms.locfileid: "75228220"
 |数据可编程性|[sys. endpoint_webmethods &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-endpoint-webmethods-transact-sql)|Windows Communications Foundation (WCF) 或 ASP.NET|本机 XML Web 服务|23|  
   
 ### <a name="slipstream-functionality"></a>补充功能  
- [产品更新功能](/previous-versions/sql/sql-server-2012/hh231670(v=sql.110)?redirectedfrom=MSDN)是在 SQL Server 2012 中引入的，是 PCU1 中[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]提供的补充功能的扩展。 在 SQL Server 2014 中，推荐使用 "产品更新" 功能来 SQL Server 集成。 因此，不应再使用与原始滑功能关联的命令行参数/*PCUSource*和/*CUSource*。 这些参数将继续运行，但可能会在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]安装程序的未来版本中删除。 建议使用的参数是/*UpdateSource* ，它结合了原始滑参数的功能：/*PCUSource*和/*CUSource*。  
+ [产品更新功能](/previous-versions/sql/sql-server-2012/hh231670(v=sql.110)?redirectedfrom=MSDN)是在 SQL Server 2012 中引入的，是 PCU1 中提供的补充功能的扩展 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 。 在 SQL Server 2014 中，推荐使用 "产品更新" 功能来 SQL Server 集成。 因此，不应再使用与原始滑功能关联的命令行参数/*PCUSource*和/*CUSource*。 这些参数将继续运行，但可能会在安装程序的未来版本中删除 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 建议使用的参数是/*UpdateSource* ，它结合了原始滑参数的功能：/*PCUSource*和/*CUSource*。  
   
- 有关 PCU1 中[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]提供的补充功能的详细信息，请参阅补充[SQL Server 更新](https://go.microsoft.com/fwlink/?LinkId=219945)（。https://go.microsoft.com/fwlink/?LinkId=219945)  
+ 有关 PCU1 中提供的补充功能的详细信息 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] ，请参阅补充[SQL Server 更新](https://go.microsoft.com/fwlink/?LinkId=219945)（ https://go.microsoft.com/fwlink/?LinkId=219945) 。  
  有关如何使用/*UpdateSource*将 SQL Server 生成进行补充的信息，请参阅以下内容：
  
  - [如何使用更新的安装包修补 SQL Server 2012 安装程序（使用 UpdateSource 获取智能安装）](https://blogs.msdn.microsoft.com/jason_howell/2012/08/28/how-to-patch-sql-server-2012-setup-with-an-updated-setup-package-using-updatesource-to-get-a-smart-setup/)

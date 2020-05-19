@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.swb.memoryoptimizationwizard.f1
 - swb.memoryoptimizationwizard.f1
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f4dcc5a7658ee3549d774989ae95a027a5787fc2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63158002"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719080"
 ---
 # <a name="memory-optimization-advisor"></a>内存优化顾问
   事务性能报告工具（请参阅 [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)）在移植到使用内存中 OLTP 时通知您的数据库中的哪些表会给您带来好处。 找到要移植以使用内存中 OLTP 的表之后，可使用内存优化顾问帮助您将基于磁盘的数据库表迁移到内存中 OLTP。  
@@ -84,7 +84,7 @@ ms.locfileid: "63158002"
 > [!WARNING]  
 >  只有在您明了与非持久表相关联的数据丢失风险的情况下，才选择此选项。  
   
- 单击“下一步”继续。  
+ 单击 **“下一步”** 以继续。  
   
 ### <a name="review-primary-key-conversion"></a>检查主键转换  
  下一个屏幕是 **“检查主键转换”**。 内存优化顾问将检测到表中是否有一个或多个主键，并且基于主键元数据填充列的列表。 否则，如果您想要迁移到持久的内存优化表，则必须创建主键。  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordConstruction interface [ADO]
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c56ba0b9d7ebebbf4a9e4baf669bbdc6eb84355e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 12a9b2cae1c516ed3bf8caef8127034e6ff2a847
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920800"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747178"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction 接口
 **ADORecordConstruction**接口用于从 c/c + + 应用程序中的 OLE DB**行**对象构造 ADO**记录**对象。  
@@ -41,7 +41,7 @@ ms.locfileid: "67920800"
  无。  
   
 ## <a name="remarks"></a>备注  
- 给定一个 OLE DB**行**对象（`pRow`），即 ADO **Record**对象（`adoR`）的构造，其中包含以下三个基本操作：  
+ 给定一个 OLE DB**行**对象（ `pRow` ），即 ADO **Record**对象（）的构造 `adoR` ，其中包含以下三个基本操作：  
   
 1.  创建 ADO**记录**对象：  
   

@@ -1,5 +1,5 @@
 ---
-title: RDS 返回&quot;"未读取&quot;流" 错误 |Microsoft Docs
+title: RDS 返回 " &quot; 未读取流" &quot; 错误 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - stream not read error in RDS [ADO]
 ms.assetid: cb5a68f8-dba4-41da-bafd-04efe53706b7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c89756e86a702217d5d9d8495bf62b0d27f52321
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ca194c911b590dfcc8baba87195c91a70640dd24
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922476"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747737"
 ---
-# <a name="rds-returns-quotstream-not-readquot-error"></a>RDS 返回&quot;"未读取&quot;流" 错误
+# <a name="rds-returns-quotstream-not-readquot-error"></a>RDS 返回 " &quot; 未读取流" &quot; 错误
 "无法读取流对象，因为它是空的，或当前位置位于流的末尾。 对于非空流，请将当前位置设置为 Position 属性。 若要确定流是否为空，请检查 "大小" 属性。  
   
  如果看到此错误消息，则可能已尝试对 http 使用参数化分层查询。 RDS 不允许使用远程参数化层次结构。  

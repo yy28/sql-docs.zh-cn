@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADO]
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 17fa0ff30e8dcdbf7ea67080f17c3e066bba8605
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4d0d94cf40a397ca030a9ea975a02962d6ab9489
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920675"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746912"
 ---
 # <a name="append-method-ado"></a>Append 方法 (ADO)
 将对象追加到集合。 如果集合是[字段](../../../ado/reference/ado-api/fields-collection-ado.md)，则可在将新字段对象追加到集合之前创建新的[字段](../../../ado/reference/ado-api/field-object.md)对象。  
@@ -43,10 +43,10 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *object*  
  一个对象变量，表示要追加的对象。  
   
- *名称*  
+ *Name*  
  一个包含新**字段**对象名称的**字符串**值，不能与*字段*中的任何其他对象同名。  
   
- *类型*  
+ *Type*  
  一个[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)值，其默认值为**adEmpty**，指定新字段的数据类型。 ADO 不支持以下数据类型，在将新字段追加到[Recordset 对象（ADO）](../../../ado/reference/ado-api/recordset-object-ado.md)时不应使用这些数据类型： **adIDispatch**、 **adIUnknown**、 **adVariant**。  
   
  *DefinedSize*  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4e47a8c6f5b0da31aea9168bbbc56bd9b28afb96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a15c617c2be877c19d447d615261a6d38eae9eb
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155788"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718944"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>内存优化表的统计信息
   查询优化器使用有关列的统计信息来创建可提高查询性能的查询计划。 从数据库中的表收集统计信息并将它保存在数据库元数据中。  
@@ -26,11 +26,11 @@ ms.locfileid: "63155788"
   
  默认情况下，不更新针对内存优化表的统计信息。 您需要手动更新它们。 对单个列、索引或表使用[UPDATE STATISTICS &#40;transact-sql&#41;](/sql/t-sql/statements/update-statistics-transact-sql) 。 使用[sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)为数据库中的所有用户和内部表更新统计信息。  
   
- 当使用[CREATE STATISTICS &#40;transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql)或[&#40;TRANSACT-SQL&#41;更新统计信息](/sql/t-sql/statements/update-statistics-transact-sql)时，必须指定`NORECOMPUTE`禁用内存优化表的自动统计信息更新。 对于基于磁盘的表， [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)仅在自上次[sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)后修改了统计信息时才更新统计信息。 对于内存优化表， [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)始终会生成更新的统计信息。 对于内存优化的表， [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)是一个不错的选择;否则，您需要了解哪些表有重大更改，以便您可以单独更新统计信息。  
+ 当使用[CREATE STATISTICS &#40;transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql)或[&#40;TRANSACT-SQL&#41;更新统计信息](/sql/t-sql/statements/update-statistics-transact-sql)时，必须指定 `NORECOMPUTE` 禁用内存优化表的自动统计信息更新。 对于基于磁盘的表， [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)仅在自上次[sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)后修改了统计信息时才更新统计信息。 对于内存优化表， [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)始终会生成更新的统计信息。 对于内存优化的表， [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)是一个不错的选择;否则，您需要了解哪些表有重大更改，以便您可以单独更新统计信息。  
   
  可以通过对数据进行采样或执行完全扫描来生成统计信息。 抽样的统计信息只使用表数据的样本来估计数据分布情况。 完全扫描统计信息扫描整个表以确定数据分布情况。 完全扫描统计信息通常更为准确，但计算时间较长。 抽样的统计信息收集得更快。  
   
- 默认情况下，基于磁盘的表使用抽样的统计信息。 内存优化的表仅支持完全扫描统计信息。 当使用[CREATE STATISTICS &#40;transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql)或[&#40;TRANSACT-SQL&#41;更新统计信息](/sql/t-sql/statements/update-statistics-transact-sql)时，必须为内存优化表指定`FULLSCAN`选项。  
+ 默认情况下，基于磁盘的表使用抽样的统计信息。 内存优化的表仅支持完全扫描统计信息。 当使用[CREATE STATISTICS &#40;transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql)或[&#40;TRANSACT-SQL&#41;更新统计信息](/sql/t-sql/statements/update-statistics-transact-sql)时，必须 `FULLSCAN` 为内存优化表指定选项。  
   
  对于内存优化表的统计信息还有其他注意事项：  
   
@@ -64,7 +64,7 @@ ms.locfileid: "63155788"
   
  要更新统计信息：  
   
--   用于[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]创建具有[更新统计信息任务](../maintenance-plans/update-statistics-task-maintenance-plan.md)的[维护计划](../maintenance-plans/create-a-maintenance-plan.md)  
+-   用于 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建具有[更新统计信息任务](../maintenance-plans/update-statistics-task-maintenance-plan.md)的[维护计划](../maintenance-plans/create-a-maintenance-plan.md)  
   
 -   或如下所述通过 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本更新统计信息。  
   
@@ -97,6 +97,6 @@ where t.is_memory_optimized=1
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [内存优化表](memory-optimized-tables.md)  
+ [Memory-Optimized Tables](memory-optimized-tables.md)  
   
   

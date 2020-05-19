@@ -13,18 +13,18 @@ helpviewer_keywords:
 - mapping-schema attribute
 - record deletions [SQLXML]
 ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 444ef7d8c95b0cbd41ba3fbb55a6fbeb30870462
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c01abd0eb56be4b8037aa9e03465c00a169c9967
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014871"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717517"
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML updategram 删除数据 (SQLXML 4.0)
-  当记录实例出现在** \<>** 块中没有相应记录的** \<之前>** 块中时，updategram 指示删除操作。 在这种情况下，updategram 将从数据库中删除** \<之前>** 块中的记录。  
+  当记录实例出现在** \<>** 块中没有相应记录的** \< 之前>** 块中时，updategram 指示删除操作。 在这种情况下，updategram 将从数据库中删除** \< 之前>** 块中的记录。  
   
  下面是 updategram 的删除操作格式：  
   
@@ -41,9 +41,9 @@ ms.locfileid: "66014871"
 </ROOT>  
 ```  
   
- 如果 updategram 仅执行删除操作，则可以省略** \<>标记后**。 如果未指定可选`mapping-schema`的属性，则 updategram 中指定的** \<ElementName>** 映射到数据库表，并且子元素或属性映射到表中的列。  
+ 如果 updategram 仅执行删除操作，则可以省略** \<>标记后**。 如果未指定可选的 `mapping-schema` 属性，则 updategram 中指定的** \< ElementName>** 映射到数据库表，并且子元素或属性映射到表中的列。  
   
- 如果 updategram 中指定的元素与表中的多行匹配或与任何行都不匹配，则 updategram 将返回错误，并取消整个** \<同步>** 块。 updategram 中的元素每次只能删除一个记录。  
+ 如果 updategram 中指定的元素与表中的多行匹配或与任何行都不匹配，则 updategram 将返回错误，并取消整个** \< 同步>** 块。 updategram 中的元素每次只能删除一个记录。  
   
 ## <a name="examples"></a>示例  
  本节中的示例使用默认映射（即未在 updategram 中指定映射架构）。 有关使用映射架构的 updategram 的更多示例，请参阅[在 Updategram &#40;SQLXML 4.0&#41;中指定带批注的映射架构](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)。  
@@ -55,7 +55,7 @@ ms.locfileid: "66014871"
   
  在这些示例中，updategram 不指定映射架构。 因此，updategram 使用默认映射，其中元素名称映射到表名称，而属性或子元素映射到列。  
   
- 此第一个 updategram 是以属性为中心的，它标识** \<之前>** 块中的两个倒班（Day-晚上和晚上夜）。 由于** \<>块后**，这是一个删除操作。  
+ 此第一个 updategram 是以属性为中心的，它标识** \< 之前>** 块中的两个倒班（Day-晚上和晚上夜）。 由于** \<>块后**，这是一个删除操作。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

@@ -17,23 +17,23 @@ helpviewer_keywords:
 - concurrency [SQLXML]
 - intermediate concurrency protection [SQLXML]
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b561de7d655001e2c62f7c85e57cc7eb098af12d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aca690da62c0a25bb5b40464d7e13574d83064f5
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014753"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717531"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>在 Updategram 中处理数据库并发问题 (SQLXML 4.0)
-  与其他数据库更新机制一样，updategram 必须处理多用户环境下对数据的并发更新。 Updategram 使用乐观并发控制，该模式将选择字段数据与快照进行比较，以确保要更新的数据自从在数据库中读取后，其他用户应用程序未更改过该数据。 Updategram 在 updategram 的** \<前面>** 块中包含这些快照值。 更新数据库之前，updategram 会根据数据库中当前的值检查在 " ** \<>** 块" 中指定的值，以确保更新有效。  
+  与其他数据库更新机制一样，updategram 必须处理多用户环境下对数据的并发更新。 Updategram 使用乐观并发控制，该模式将选择字段数据与快照进行比较，以确保要更新的数据自从在数据库中读取后，其他用户应用程序未更改过该数据。 Updategram 在 updategram 的** \< 前面>** 块中包含这些快照值。 更新数据库之前，updategram 会根据数据库中当前的值检查在 " ** \<>** 块" 中指定的值，以确保更新有效。  
   
  乐观并发控制在 updategram 中提供三种保护级别：低（无）、中间和高。 通过相应指定 updategram，可以确定需要的保护级别。  
   
 ## <a name="lowest-level-of-protection"></a>最低保护级别  
- 此级别为盲目更新，它不参照自上次读取数据库后已进行的其他更新来处理更新。 在这种情况下，只会在** \<之前>** 块中指定主键列来标识记录，并在** \<>块后**指定更新后的信息。  
+ 此级别为盲目更新，它不参照自上次读取数据库后已进行的其他更新来处理更新。 在这种情况下，只会在** \< 之前>** 块中指定主键列来标识记录，并在** \<>块后**指定更新后的信息。  
   
  例如，无论以前的电话号码是什么，以下 updategram 中的新联系人电话号码都是正确的。 请注意， ** \<>块之前**如何仅指定主键列（ContactID）。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66014753"
   
  您可以通过指定要在** \<>块之前**更新的主键列和列来获得此级别的保护。  
   
- 例如，此 updategram 为 ContactID 是 1 的联系人更新 Person.Contact 表的 Phone 列中的值。 Before>块指定**电话**属性，以确保在应用更新的值之前此属性值与数据库中相应列的值匹配。 ** \<**  
+ 例如，此 updategram 为 ContactID 是 1 的联系人更新 Person.Contact 表的 Phone 列中的值。 ** \< Before>** 块指定**电话**属性，以确保在应用更新的值之前此属性值与数据库中相应列的值匹配。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -97,11 +97,11 @@ ms.locfileid: "66014753"
     </ROOT>  
     ```  
   
-     此示例通过指定** \<before>** 块中记录的所有列值来指定最高保护级别。  
+     此示例通过指定** \< before>** 块中记录的所有列值来指定最高保护级别。  
   
 -   在** \<>块之前**指定时间戳列（如果可用）。  
   
-     除了指定`<before`> 块中的所有记录列外，只需指定时间戳列（如果表有一个）以及** \<之前>** 块中的主键列。 在每次更新记录后，数据库将时间戳列更新为唯一值。 在这种情况下，updategram 将时间戳的值与数据库中的相应值进行比较。 在数据库中存储的时间戳值为二进制值。 因此，必须在架构中将时间戳列指定为 `dt:type="bin.hex"`、`dt:type="bin.base64"` 或 `sql:datatype="timestamp"`。 （可以指定`xml`数据类型或[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型。）  
+     除了指定> 块中的所有记录列外 `<before` ，只需指定时间戳列（如果表有一个）以及** \< 之前>** 块中的主键列。 在每次更新记录后，数据库将时间戳列更新为唯一值。 在这种情况下，updategram 将时间戳的值与数据库中的相应值进行比较。 在数据库中存储的时间戳值为二进制值。 因此，必须在架构中将时间戳列指定为 `dt:type="bin.hex"`、`dt:type="bin.base64"` 或 `sql:datatype="timestamp"`。 （可以指定 `xml` 数据类型或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。）  
   
 #### <a name="to-test-the-updategram"></a>测试 updategram  
   

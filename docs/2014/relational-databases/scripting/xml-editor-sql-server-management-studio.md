@@ -14,15 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - XML Designer [SQL Server Management Studio]
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c4fc4e1b0f0340d579b1f6ee22db888417089352
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9202a3125b35075e9fe4311a4ebe81103cf6b937
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242943"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718136"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML 编辑器 (SQL Server Management Studio)
   提供用于处理 XML 架构、ADO.NET 数据集和 XML 文档的一组可视工具。 XML 设计器支持由万维网联合会 (W3C) 定义的 XML 架构定义 (XSD) 语言。 该设计器不支持 DTD（文档类型定义）或其他 XML 架构语言，例如 XDR（XML 数据简化）。  
@@ -95,7 +95,7 @@ ms.locfileid: "75242943"
 -   基于 XML 文档生成 XML 架构  
   
 ## <a name="xml-view"></a>XML 视图  
- XML 视图提供了一个用于编辑原始 XML 数据的编辑器，并提供有 IntelliSense 和颜色编码功能。 在处理具有关联架构的 .xsd 文件和 .xml 文件时，可以使用语句结束功能。 键入\<以启动标记，将显示在该位置有效的元素列表。 在键入元素名称并按空格键后，将显示相应元素所支持属性的列表。  
+ XML 视图提供了一个用于编辑原始 XML 数据的编辑器，并提供有 IntelliSense 和颜色编码功能。 在处理具有关联架构的 .xsd 文件和 .xml 文件时，可以使用语句结束功能。 键入 \< 以启动标记，将显示在该位置有效的元素列表。 在键入元素名称并按空格键后，将显示相应元素所支持属性的列表。  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 选项。 若要在 XML 编辑器中访问这些选项，请在 **“编辑”** 菜单上单击 **IntelliSense**。  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - executing template files [SQLXML]
 - CommandText property
 ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f1635358fc136c9faba3ce18b1d278ee1e407411
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65af4c1bce3e09f33771b2729c01c02b9512688b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012511"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718060"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>使用 CommandText 属性执行模板文件
   此示例演示如何使用 CommandTextproperty 指定由 SQL 或 XPath 查询组成的模板文件。 可以指定文件名作为值，而不是将 SQL 或 XPath 查询指定为 CommandText 值。 在下面的示例中，CommandType 属性指定为 SqlXmlCommandType. TemplateFile。  
@@ -91,7 +91,7 @@ class Test
   
 5.  在命令提示符下，执行 DocSample.exe。  
   
- 如果将参数传递给模板，则参数名称必须以 at 符号（@）开头;例如，p.Name = "@ContactID"，其中 p 是一个 SqlXmlParameter 对象。  
+ 如果将参数传递给模板，则参数名称必须以 at 符号（@）开头;例如，p.Name = " @ContactID "，其中 p 是一个 SqlXmlParameter 对象。  
   
  下面是接受一个参数后的已更新模板。  
   

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, querying XML example
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1d91192a8edd4d4ab93f539b9dc359e1be37eecf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3196b985b7bb788744f48b1fb64f64b5f6fe099b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637727"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716892"
 ---
 # <a name="example-querying-xmltype-columns"></a>示例：查询 XML 类型的列
   下面的查询包括 `xml` 类型的列。 该查询从 `xml` 类型的 `Instructions` 列的第一个位置检索产品型号 ID、名称和生产步骤。  

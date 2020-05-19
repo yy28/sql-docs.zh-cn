@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLCloseCursor function
 ms.assetid: e7134d65-5c1c-4ae2-b119-d9b4b9a42483
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: da7d6541f7bf31920519cc7462bdfd24a5f6dc0d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e076c7e81a1ccf61813bf5dc629fb3ce59f5070
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067683"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706361"
 ---
 # <a name="sqlclosecursor"></a>SQLCloseCursor
-  **SQLCloseCursor**使用*选项*值 SQL_CLOSE 来替换[SQLFreeStmt](sqlfreestmt.md) 。 收到**SQLCloseCursor**后，NATIVE Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序将放弃挂起的结果集行。 请注意， **SQLCloseCursor**不会改变语句的列和参数绑定（如果存在）。  
+  **SQLCloseCursor**使用*选项*值 SQL_CLOSE 来替换[SQLFreeStmt](sqlfreestmt.md) 。 收到**SQLCloseCursor**后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序将放弃挂起的结果集行。 请注意， **SQLCloseCursor**不会改变语句的列和参数绑定（如果存在）。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLCloseCursor](https://go.microsoft.com/fwlink/?LinkId=59331)   

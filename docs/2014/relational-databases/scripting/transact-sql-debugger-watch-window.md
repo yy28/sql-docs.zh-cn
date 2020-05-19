@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Watch Window [Transact-SQL]
 ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6d6f0d0335b07be83d7b34895c08e8ff01dcd67a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c50a286002d245bf05f24d74653a2697866f1dec
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242988"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718299"
 ---
 # <a name="watch-window"></a>“监视”窗口
   **“监视”** 窗口显示有关所选表达式的信息。 最多可以有四个监视窗口： **“监视 1”** 、 **“监视 2”、“监视 3”** 和 **“监视 4”** 。 这些表达式是在 **“调用堆栈”** 窗口中选择的当前调用堆栈帧范围内求值的。 只有在调试模式下才可监视变量和表达式。  

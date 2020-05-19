@@ -13,15 +13,15 @@ helpviewer_keywords:
 - FOR XML clause, syntax
 - FOR XML clause, ROOT directive
 ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0bb04374ede05406fdf6d273a76a246bb35f5dac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e09323a96a5a2fc282c1595c2606ea7e9b9a6bee
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637862"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717356"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>FOR XML 子句的基本语法
   FOR XML 模式可以是 RAW、AUTO、EXPLICIT 或 PATH。 它确定产生的 XML 的形状。  
@@ -60,7 +60,7 @@ XML
    [ , ROOT [ ('RootName') ] ]  
 ```  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  RAW[('*ElementName*')]  
  采用查询结果并将结果集中的每一行转换为将通用标识符 \<row /> 作为元素标记的 XML 元素。 使用此指令时，可以选择指定行元素的名称。 产生的 XML 将把指定的 *ElementName* 用作为每行生成的行元素。 有关详细信息，请参阅 [将 RAW 模式与 FOR XML 一起使用](use-raw-mode-with-for-xml.md)。  
   

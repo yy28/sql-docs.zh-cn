@@ -13,14 +13,14 @@ helpviewer_keywords:
 - AbsolutePosition property [ADO], JScript example
 - CursorLocation property [ADO], JScript example
 ms.assetid: bff98617-a6ba-4f41-9c5f-915161e3ea31
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9f80cd4683928bcb1be74af9f80c00f4324ebfac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1b946d98214047203147fb5c0bbba0e01ea09b7c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921797"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747538"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>AbsolutePosition 和 CursorLocation 属性示例（JScript）
 此示例演示[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)属性如何跟踪枚举[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的所有记录的循环的进度。 它通过将光标设置为客户端光标来使用[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性来启用**AbsolutePosition**属性。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为**AbsolutePositionJS**。  

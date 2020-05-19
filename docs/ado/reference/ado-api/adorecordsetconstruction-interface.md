@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordsetConstruction interface [ADO]
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1e1d14255acd4cc7f18abea1c494353ef970903c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 770bf86f62f243ea255693c7773e6fae48527cfd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920795"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747089"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction 接口
 **ADORecordsetConstruction**接口用于从 c/c + + 应用程序中的 OLE DB**行**集对象构造 ADO**记录集**对象。  
@@ -42,7 +42,7 @@ ms.locfileid: "67920795"
  无。  
   
 ## <a name="remarks"></a>备注  
- 给定一个 OLE DB**行集**对象`pRowset`（），将 ADO**记录集**对象（`adoRs`）的构造分为以下三个基本操作：  
+ 给定一个 OLE DB**行集**对象（ `pRowset` ），将 ADO**记录集**对象（）的构造 `adoRs` 分为以下三个基本操作：  
   
 1.  创建 ADO**记录集**对象：  
   
@@ -59,7 +59,7 @@ ms.locfileid: "67920795"
                          (void**)&adoRsConstruct);  
     ```  
   
-3.  调用`IADORecordsetConstruction::put_Rowset`属性方法，设置 ADO `Rowset` `Recordset`对象上的 OLE DB 对象：  
+3.  调用 `IADORecordsetConstruction::put_Rowset` 属性方法，设置 `Rowset` ADO 对象上的 OLE DB 对象 `Recordset` ：  
   
     ```  
     IUnknown *pUnk=NULL;  
@@ -67,7 +67,7 @@ ms.locfileid: "67920795"
     adoRsConstruct->put_Rowset(pUnk);  
     ```  
   
- 生成`adoRs`的对象现在表示从 OLE DB**行集**对象构造的 ADO**记录集**对象。  
+ 生成的 `adoRs` 对象现在表示从 OLE DB**行集**对象构造的 ADO**记录集**对象。  
   
  还可以从 OLE DB**章节**或**ROWPOSITION**对象构造 ADO**记录集**对象。  
   
