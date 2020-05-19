@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - CreateRecordset method [RDS]
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3c65f7d415864b169b683e0c9ab858506d31783b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7ae2d78f4647e2aefa707e97349daa73d08ee492
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964514"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748843"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 方法 (RDS)
 创建一个空的、断开连接的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -46,9 +46,9 @@ object.CreateRecordset(ColumnInfos)
  *ColumnsInfos*  
  特性的一个**变量**数组，用于定义创建的**记录集中**的每一列。 每个列定义都包含一个包含四个必需属性和一个可选属性的数组。  
   
-|特性|说明|  
+|属性|说明|  
 |---------------|-----------------|  
-|名称|列标题的名称。|  
+|“属性”|列标题的名称。|  
 |类型|数据类型的整数。|  
 |大小|字符宽度的整数，与数据类型无关。|  
 |可空性|布尔值。|  
@@ -65,28 +65,28 @@ object.CreateRecordset(ColumnInfos)
   
  对于某些可变数据类型，可以将类型强制转换为替换列中所述的类型。 在创建并填充**记录集**之前，你将看不到替换项。 如果需要，可以检查实际数据类型。  
   
-|长度|Constant|数字|Substitution|  
+|长度|返回的常量|Number|Substitution|  
 |------------|--------------|------------|------------------|  
-|已修复|**adTinyInt**|16||  
-|已修复|**adSmallInt**|2||  
-|已修复|**adInteger**|3||  
-|已修复|**adBigInt**|20||  
-|已修复|**adUnsignedTinyInt**|17||  
-|已修复|**adUnsignedSmallInt**|18||  
-|已修复|**adUnsignedInt**|19||  
-|已修复|**adUnsignedBigInt**|21||  
-|已修复|**adSingle**|4||  
-|已修复|**adDouble**|5||  
-|已修复|**adCurrency**|6||  
-|已修复|**adDecimal**|14||  
-|已修复|**adNumeric**|131||  
-|已修复|**adBoolean**|11||  
-|已修复|**adError**|10||  
-|已修复|**adGuid**|72||  
-|已修复|**adDate**|7||  
-|已修复|**adDBDate**|133||  
-|已修复|**adDBTime**|134||  
-|已修复|**adDBTimestamp**|135|7|  
+|固定|**adTinyInt**|16||  
+|固定|**adSmallInt**|2||  
+|固定|**adInteger**|3||  
+|固定|**adBigInt**|20||  
+|固定|**adUnsignedTinyInt**|17||  
+|固定|**adUnsignedSmallInt**|18||  
+|固定|**adUnsignedInt**|19||  
+|固定|**adUnsignedBigInt**|21||  
+|固定|**adSingle**|4||  
+|固定|**adDouble**|5||  
+|固定|**adCurrency**|6||  
+|固定|**adDecimal**|14||  
+|固定|**adNumeric**|131||  
+|固定|**adBoolean**|11||  
+|固定|**adError**|10||  
+|固定|**adGuid**|72||  
+|固定|**adDate**|7||  
+|固定|**adDBDate**|133||  
+|固定|**adDBTime**|134||  
+|固定|**adDBTimestamp**|135|7|  
 |变量|**adBSTR**|8|130|  
 |变量|**adChar**|129|200|  
 |变量|**adVarChar**|200||  

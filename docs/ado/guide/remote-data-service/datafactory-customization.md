@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - DataFactory customization in RDS [ADO]
 ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1bdc406778bea0d6355e747998d2517b841fc17b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a5339af431c913af21591124960e0e59a939dc14
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922773"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749652"
 ---
 # <a name="datafactory-customization"></a>自定义 DataFactory
 远程数据服务（RDS）提供了一种在三层客户端/服务器系统中轻松执行数据访问的方法。 客户端数据控件指定连接和命令字符串参数以对远程数据源执行查询，或指定连接字符串和[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象参数来执行更新。  

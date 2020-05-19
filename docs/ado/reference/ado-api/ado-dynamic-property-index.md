@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - dynamic properties [ADO], index
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9eb88905f56abf9c1c702f5fd73cbe61a1bcde3d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f7d2c5bcc1b07107164b8df73c8239ebd66b9fa4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921084"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749229"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO 动态属性索引
 数据访问接口、服务提供程序和服务组件可以将动态属性添加到未打开的[连接](../../../ado/reference/ado-api/connection-object-ado.md)和[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象的**属性**集合中。 指定的提供程序还可以在打开这些对象时插入其他属性。 其中一些属性在 " [ADO 动态属性](../../../ado/reference/ado-api/ado-dynamic-properties.md)" 部分列出。 [附录 A： providers](../../../ado/guide/appendixes/appendix-a-providers.md)部分的特定提供程序下列出了更多详细信息。  
@@ -38,7 +38,7 @@ ms.locfileid: "67921084"
 |列定义|DBPROP_COLUMNDEFINITION|  
 |连接超时值|DBPROP_INIT_TIMEOUT|  
 |当前目录|DBPROP_CURRENTCATALOG|  
-|“数据源”|DBPROP_INIT_DATASOURCE|  
+|数据源|DBPROP_INIT_DATASOURCE|  
 |数据源名称|DBPROP_DATASOURCENAME|  
 |数据源对象线程模型|DBPROP_DSOTHREADMODEL|  
 |DBMS 名称|DBPROP_DBMSNAME|  
@@ -56,7 +56,7 @@ ms.locfileid: "67921084"
 |最大行大小|DBPROP_MAXROWSIZE|  
 |最大行大小包括 BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|  
 |选择中的最大表数|DBPROP_MAXTABLESINSELECT|  
-|“模式”|DBPROP_INIT_MODE|  
+|模式|DBPROP_INIT_MODE|  
 |多个参数集|DBPROP_MULTIPLEPARAMSETS|  
 |多个结果|DBPROP_MULTIPLERESULTS|  
 |多个存储对象|DBPROP_MULTIPLESTORAGEOBJECTS|  
@@ -70,7 +70,7 @@ ms.locfileid: "67921084"
 |选择列表中的 ORDER BY 列|DBPROP_ORDERBYCOLUMNSINSELECT|  
 |输出参数可用性|DBPROP_OUTPUTPARAMETERAVAILABILITY|  
 |通过引用访问器传递|DBPROP_BYREFACCESSORS|  
-|密码|DBPROP_AUTH_PASSWORD|  
+|Password|DBPROP_AUTH_PASSWORD|  
 |持久性安全信息|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|  
 |永久性 ID 类型|DBPROP_PERSISTENTIDTYPE|  
 |准备中止行为|DBPROP_PREPAREABORTBEHAVIOR|  

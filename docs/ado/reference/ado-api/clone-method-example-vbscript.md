@@ -12,21 +12,21 @@ dev_langs:
 helpviewer_keywords:
 - Clone method [ADO], VBScript example
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cc82f72b175373d504b7fda658f1c7ed8eb7f1ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8382abfb78b67f900101ec27c33abeba988800e8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919993"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748993"
 ---
 # <a name="clone-method-example-vbscript"></a>Clone 方法示例 (VBScript)
 此示例使用[Clone](../../../ado/reference/ado-api/clone-method-ado.md)方法创建[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的副本，然后让用户单独定位每个副本的记录指针。  
   
  在 Active Server Page （ASP）中使用以下示例。 此示例使用通过 Microsoft Access 分发的**Northwind**数据库。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为 CloneVBS。 您可以在任何客户端浏览器中查看结果。  
   
- 若要执行此示例，请将`RsCustomerList.Source = "Customers"`行`RsCustomerList.Source = "Products"`更改为，以对较大的表进行计数。  
+ 若要执行此示例，请将行更改 `RsCustomerList.Source = "Customers"` 为， `RsCustomerList.Source = "Products"` 以对较大的表进行计数。  
   
 ```  
 <!-- BeginCloneVBS -->  
