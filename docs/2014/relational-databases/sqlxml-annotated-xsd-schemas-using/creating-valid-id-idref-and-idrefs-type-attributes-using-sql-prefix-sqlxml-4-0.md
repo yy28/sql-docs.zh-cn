@@ -19,15 +19,15 @@ helpviewer_keywords:
 - annotated XSD schemas, IDREF type attribute
 - ID relationships [SQLXML]
 ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 48ae7034ec0c133c1140e4c581794302ca8bad77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fb96a845f7d5bf97b14fe10f1e19849f0344984
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013923"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703622"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>使用 sql:prefix 创建有效的 ID、IDREF 和 IDREFS 类型属性 (SQLXML 4.0)
   可以将属性指定为 ID 类型属性。 然后，可以用指定为 IDREF 或 IDREFS 的属性引用 ID 类型属性，从而启用文档之间的链接。  
@@ -42,7 +42,7 @@ ms.locfileid: "66013923"
   
 -   ID、IDREF 和 IDREFS 的值必须是命名标记。 （例如，整数值 101 不能是 ID 值。）  
   
--   ID、IDREF 和 IDREFS 类型的属性不能`text`映射到类型`ntext`为、或`image`的列，也不能映射到任何其他二进制数据类型（例如`timestamp`）。  
+-   ID、IDREF 和 IDREFS 类型的属性不能映射到类型为、或的列，也不能映射到 `text` `ntext` `image` 任何其他二进制数据类型（例如 `timestamp` ）。  
   
  如果 XML 文档包含多个 ID，则使用 `sql:prefix` 批注以确保值是唯一的。  
   
@@ -52,9 +52,9 @@ ms.locfileid: "66013923"
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. 指定 ID 和 IDREFS 类型  
- 在下面的架构中， ** \<Customer>** 元素由** \<Order>** 子元素组成。 Order>元素还具有一个子元素，即** \<OrderDetail>** 元素。 ** \<**  
+ 在下面的架构中， ** \< Customer>** 元素由** \< Order>** 子元素组成。 ** \< Order>** 元素还具有一个子元素，即** \< OrderDetail>** 元素。  
   
- Customer>的**OrderIDList**属性是一个 IDREFS 类型属性，该属性引用** \<Order>** 元素的 "订单**id** " 属性。 ** \<**  
+ ** \< Customer>** 的**ORDERIDLIST**属性是一个 IDREFS 类型属性，该属性引用** \< Order>** 元素的 "订单**id** " 属性。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

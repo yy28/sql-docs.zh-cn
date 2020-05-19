@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XML Bulk Load [SQLXML], about XML Bulk Load
 - bulk load [SQLXML], about bulk load
 ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 329fb8df41df5d97cfcc3750c2850d03278d3739
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 593e51e34be3b607af121bfcba92497e019eba3f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013451"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703382"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>XML 大容量加载的指导原则和限制 (SQLXML 4.0)
   在使用 XML 大容量加载时，您应该熟悉以下指导原则和限制：  
@@ -35,9 +35,9 @@ ms.locfileid: "66013451"
   
 -   忽视所有 XML prolog 信息。  
   
-     XML 大容量加载将忽略 XML 文档中\<根> 元素之前和之后的所有信息。 例如，XML 大容量加载将忽视所有 XML 声明、内部 DTD 定义、外部 DTD 引用和注释等。  
+     XML 大容量加载将忽略 \< xml 文档中根> 元素之前和之后的所有信息。 例如，XML 大容量加载将忽视所有 XML 声明、内部 DTD 定义、外部 DTD 引用和注释等。  
   
--   如果您具有定义两个表之间（例如 Customer 和 CustOrder 之间）的主键/外键关系的映射架构，则必须在该架构中首先描述具有主键的表。 具有外键列的表必须出现在该架构中的后面。 这样做的原因是，架构中的表标识顺序是用于将它们加载到数据库中的顺序。例如，下面的 XDR 架构将在 XML 大容量加载中使用时产生错误，因为在** \<Customer>** 元素之前介绍了** \<Order>** 元素。 CustOrder 中的 CustomerID 列是引用 Cust 表中 CustomerID 主键列的外键列。  
+-   如果您具有定义两个表之间（例如 Customer 和 CustOrder 之间）的主键/外键关系的映射架构，则必须在该架构中首先描述具有主键的表。 具有外键列的表必须出现在该架构中的后面。 这样做的原因是，架构中的表标识顺序是用于将它们加载到数据库中的顺序。例如，下面的 XDR 架构将在 XML 大容量加载中使用时产生错误，因为在** \< Customer>** 元素之前介绍了** \< Order>** 元素。 CustOrder 中的 CustomerID 列是引用 Cust 表中 CustomerID 主键列的外键列。  
   
     ```  
     <?xml version="1.0" ?>  
@@ -77,7 +77,7 @@ ms.locfileid: "66013451"
   
 -   如果该架构未通过使用 `sql:overflow-field` 批注指定溢出列，则 XML 大容量加载将忽略在 XML 文档中提供、但未在该映射架构中描述的所有数据。  
   
-     XML 大容量加载只要在 XML 数据流中遇到已知标记，就会应用您指定的映射架构。 它将忽略在 XML 文档中提供、但未在该架构中描述的数据。 例如，假设您有一个映射架构，该架构描述了一个** \<Customer>** 元素。 XML 数据文件具有包含所有** \<客户>** 元素的** \<AllCustomers>** 根标记（在架构中未介绍）：  
+     XML 大容量加载只要在 XML 数据流中遇到已知标记，就会应用您指定的映射架构。 它将忽略在 XML 文档中提供、但未在该架构中描述的数据。 例如，假设您有一个映射架构，该架构描述了一个** \< Customer>** 元素。 XML 数据文件具有包含所有** \< 客户>** 元素的** \< AllCustomers>** 根标记（在架构中未介绍）：  
   
     ```  
     <AllCustomers>  
@@ -87,9 +87,9 @@ ms.locfileid: "66013451"
     </AllCustomers>  
     ```  
   
-     在这种情况下，XML 大容量加载将** \<忽略 AllCustomers>** 元素，并在** \<Customer>** 元素处开始映射。 XML 大容量将加载忽略在该架构中未描述、但在 XML 文档中出现的元素。  
+     在这种情况下，XML 大容量加载将忽略** \< AllCustomers>** 元素，并在** \< Customer>** 元素处开始映射。 XML 大容量将加载忽略在该架构中未描述、但在 XML 文档中出现的元素。  
   
-     请考虑另一个 XML 源数据文件，其中包含** \<Order>** 元素。 以下元素在映射架构中未描述：  
+     请考虑另一个 XML 源数据文件，其中包含** \< Order>** 元素。 以下元素在映射架构中未描述：  
   
     ```  
     <AllCustomers>  
@@ -105,11 +105,11 @@ ms.locfileid: "66013451"
     </AllCustomers>  
     ```  
   
-     XML 大容量加载将忽略这些** \<顺序>** 元素。 但是，如果在架构`sql:overflow-field`中使用批注将列标识为溢出列，则 XML 大容量加载会将所有未用完的数据存储在此列中。  
+     XML 大容量加载将忽略这些** \< 顺序>** 元素。 但是，如果在 `sql:overflow-field` 架构中使用批注将列标识为溢出列，则 XML 大容量加载会将所有未用完的数据存储在此列中。  
   
 -   CDATA 部分和实体引用在存储到数据库中之前将转换为等效的字符串。  
   
-     在此示例中，CDATA 节包装** \<City>** 元素的值。 XML 大容量加载在将** \<City>** 元素插入到数据库中之前提取字符串值（"NY"）。  
+     在此示例中，CDATA 节包装** \< City>** 元素的值。 XML 大容量加载在将** \< City>** 元素插入到数据库中之前提取字符串值（"NY"）。  
   
     ```  
     <City><![CDATA[NY]]> </City>  
@@ -142,7 +142,7 @@ ms.locfileid: "66013451"
     </Schema>  
     ```  
   
-     在此 XML 数据中，第二个** \<客户>** 元素中缺少 "**雇佣**日期" 属性。 当 XML 大容量加载将第二个** \<客户>** 元素插入到数据库中时，它将使用在该架构中指定的默认值。  
+     在此 XML 数据中，第二个** \< 客户>** 元素中缺少 "**雇佣**日期" 属性。 当 XML 大容量加载将第二个** \< 客户>** 元素插入到数据库中时，它将使用在该架构中指定的默认值。  
   
     ```  
     <ROOT>  
@@ -157,9 +157,9 @@ ms.locfileid: "66013451"
   
      创建在映射架构中标识的表（数据库必须存在）。 如果数据库中已存在一个或多个表，则 SGDropTables 属性将确定是否删除并重新创建这些预先存在的表。  
   
--   如果指定 SchemaGen 属性（例如，SchemaGen = true），则将创建在映射架构中标识的表。 但是，SchemaGen 不会在这些表中创建任何约束（如主键/外键约束），但有一个例外：如果构成关系中的主键的 XML 节点定义为具有 XML 类型 ID （即， `type="xsd:ID"`对于 XSD），且 SGUseID 属性设置为 True （对于 SchemaGen），则不仅是从 ID 类型化节点创建主键，而且还从映射架构关系创建主键/外键关系。  
+-   如果指定 SchemaGen 属性（例如，SchemaGen = true），则将创建在映射架构中标识的表。 但是，SchemaGen 不会在这些表中创建任何约束（如主键/外键约束），但有一个例外：如果构成关系中的主键的 XML 节点定义为具有 XML 类型 ID （即， `type="xsd:ID"` 对于 XSD），且 SGUseID 属性设置为 True （对于 SchemaGen），则不仅是从 ID 类型化节点创建主键，而且还从映射架构关系创建主键/外键关系。  
   
--   SchemaGen 不使用 XSD 架构方面和扩展来生成关系[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]架构。  
+-   SchemaGen 不使用 XSD 架构方面和扩展来生成关系 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 架构。  
   
 -   如果在大容量加载时指定 SchemaGen 属性（例如，SchemaGen = true），则只会更新指定的表（而不是共享名称的视图）。  
   

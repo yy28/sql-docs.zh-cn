@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint filter
 ms.assetid: 7bf1dddd-7b0b-4c47-8a7b-28a5569b4fa5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a9759134504c7b55f5008783a2e6c3bd9ebf1755
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42e068120e3eae54580d58e0f4d525ab5451d864
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243222"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703717"
 ---
 # <a name="specify-a-breakpoint-filter"></a>指定断点筛选器
   断点筛选器对断点进行限制，使其仅对指定的计算机、操作系统进程和线程执行操作。 断点筛选器通常在调试并行应用程序时使用。  

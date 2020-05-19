@@ -23,15 +23,15 @@ helpviewer_keywords:
 - table/view mapping [SQLXML], default mapping
 - element/attribute mapping [SQLXML]
 ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 404ae57711a7d8376774c4e5340017f784b916e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef143c3a23458e017067ebf0a2ad489bed149f75
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013879"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703604"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>XSD 元素和属性到表和列的默认映射 (SQLXML 4.0)
   默认情况下，XSD 带批注的架构中复杂类型的元素映射到指定数据库中具有相同名称的表（视图），而简单类型的元素或属性映射到表中具有相同名称的列。  
@@ -40,7 +40,7 @@ ms.locfileid: "66013879"
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-default-mapping"></a>A. 指定默认映射  
- 在本示例中，不在 XSD 架构中指定任何批注。 Person>元素属于复杂类型，因此默认情况下映射到 AdventureWorks 数据库中的 Person 表。 ** \<** ** \<>person**的所有属性（ContactID、FirstName、LastName）都是简单类型，默认情况下，将默认映射到 person 表中具有相同名称的列。  
+ 在本示例中，不在 XSD 架构中指定任何批注。 ** \< Person>** 元素属于复杂类型，因此默认情况下映射到 AdventureWorks 数据库中的 Person 表。 ** \<>person**的所有属性（ContactID、FirstName、LastName）都是简单类型，默认情况下，将默认映射到 person 表中具有相同名称的列。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -91,7 +91,7 @@ ms.locfileid: "66013879"
 ```  
   
 ### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. 将 XML 元素映射到数据库列  
- 在本示例中，由于不使用批注，因此还会发生默认映射。 Person>元素属于复杂类型，并且映射到数据库中具有相同名称的表。 ** \<** 元素** \<FirstName>** 和** \<LastName>** ，**雇员 id**属性属于简单类型，因此，映射到具有相同名称的列。 本示例与前一示例的唯一差别在于本示例使用元素来映射 FirstName 和 LastName 字段。  
+ 在本示例中，由于不使用批注，因此还会发生默认映射。 ** \< Person>** 元素属于复杂类型，并且映射到数据库中具有相同名称的表。 元素** \< FirstName>** 和** \< LastName>** ，**雇员 id**属性属于简单类型，因此，映射到具有相同名称的列。 本示例与前一示例的唯一差别在于本示例使用元素来映射 FirstName 和 LastName 字段。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -145,7 +145,7 @@ ms.locfileid: "66013879"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. 将 XML 元素映射到 XML 数据类型列  
- 在本示例中，由于不使用批注，因此还会发生默认映射。 ProductModel>元素属于复杂类型，并且映射到数据库中具有相同名称的表。 ** \<** **ProductModelID**属性属于简单类型，因此，映射到具有相同名称的列。 此示例与前一个示例的唯一区别在于，>元素的** \<说明**通过使用`xml` `xsd:anyType`类型映射到使用数据类型的列。  
+ 在本示例中，由于不使用批注，因此还会发生默认映射。 ** \< ProductModel>** 元素属于复杂类型，并且映射到数据库中具有相同名称的表。 **ProductModelID**属性属于简单类型，因此，映射到具有相同名称的列。 此示例与前一个示例的唯一区别在于， ** \<>** 元素的说明 `xml` 通过使用类型映射到使用数据类型的列 `xsd:anyType` 。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   

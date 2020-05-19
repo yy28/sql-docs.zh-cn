@@ -10,26 +10,26 @@ helpviewer_keywords:
 - sessions [OLE DB]
 - SQL Server Native Client OLE DB provider, sessions
 ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f594ace96fc34a77adca244e79c55551f0ddb8d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae9b5b908e4f4c6104d2639c7d0032a3b1f2087c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63228975"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705145"
 ---
 # <a name="sessions"></a>会话
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序会话表示到实例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]单个连接。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序会话表示到实例的单个连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序要求会话分隔数据源的事务空间。 通过某一特定会话对象创建的所有命令对象均参与该会话对象的本地事务或分布式事务。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序要求会话分隔数据源的事务空间。 通过某一特定会话对象创建的所有命令对象均参与该会话对象的本地事务或分布式事务。  
   
  在已初始化数据源上创建的第一个会话对象接收在初始化期间建立的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接。 当释放该会话对象的接口上的所有引用时，在该数据源上创建的其他会话对象即可使用与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的连接。  
   
  在数据源上创建的其他会话对象建立其自身到该数据源指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的连接。 当应用程序释放对创建该会话的对象的所有引用时，将删除与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的连接。  
   
- 下面的示例演示如何使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库：  
+ 下面的示例演示如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库：  
   
 ```  
 int main()  
@@ -178,7 +178,7 @@ EXIT:
 }  
 ```  
   
- 将[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序会话对象连接到的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例可能会导致持续创建和释放会话对象的应用程序产生很大的开销。 可以通过有效地管理[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序会话对象来最大程度地降低开销。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序应用程序可以[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过在对象的至少一个接口上维护引用来保持会话对象的连接处于活动状态。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将 Native Client OLE DB 提供程序会话对象连接到的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能会导致持续创建和释放会话对象的应用程序产生很大的开销。 可以通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有效地管理 Native Client OLE DB 提供程序会话对象来最大程度地降低开销。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序应用程序可以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过在对象的至少一个接口上维护引用来保持会话对象的连接处于活动状态。  
   
  例如，维护命令创建对象引用池将保持该池中这些会话对象的活动连接。 由于需要会话对象，因此，池维护代码将向需要会话的应用程序方法传递有效的 IDBCreateCommand**** 接口指针。 当应用程序方法不再需要该会话时，该方法将接口指针返回到池维护代码，而不是释放应用程序对命令创建对象的引用。  
   

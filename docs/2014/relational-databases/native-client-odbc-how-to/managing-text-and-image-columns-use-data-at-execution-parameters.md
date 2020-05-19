@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - data-at-execution
 ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d69ec20d919110ce241aa38bcfb22069a20d53a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44f1c1673e761425969558ecb911f8df92601274
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206801"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705255"
 ---
 # <a name="use-data-at-execution-parameters-odbc"></a>使用执行时数据参数 (ODBC)
     
@@ -25,7 +25,7 @@ ms.locfileid: "68206801"
   
 1.  调用 [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) 以将程序缓冲区绑定到语句参数时：  
   
-    -   对于最后一个参数，请使用 SQL_LEN_DATA_AT_EXEC （*length*），其中*length*是以字节表示`text`的`ntext`、或`image`参数数据的总长度。  
+    -   对于最后一个参数，请使用 SQL_LEN_DATA_AT_EXEC （*length*），其中*length*是 `text` `ntext` 以字节表示的、或 `image` 参数数据的总长度。  
   
     -   使用程序定义参数标识符的 `rgbValue`（第 8 个参数）。  
   

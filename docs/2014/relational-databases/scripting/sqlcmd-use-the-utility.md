@@ -14,20 +14,20 @@ helpviewer_keywords:
 - statements [SQL Server], executing
 - sqlcmd utility, about sqlcmd utility
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bb14d7809eba496ede8c8e0aa6e7133c2ad9c524
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 35f7bcf1c8e5ebcb225a9198944cf4144321bad3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243184"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703693"
 ---
 # <a name="use-the-sqlcmd-utility"></a>使用 sqlcmd 实用工具
   `sqlcmd` 实用工具是一个命令行实用工具，用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和脚本的即席、交互执行以及自动执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本撰写任务。 若要以交互方式使用 `sqlcmd`，或要生成可使用 `sqlcmd` 运行的脚本文件，用户需要了解 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 `sqlcmd`实用程序通常按以下方式使用：  
   
--   用户以交互方式输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，输入方式与在命令提示符下输入的方式类似。 结果将显示在命令提示符处。 若要打开命令提示符窗口，依次单击 **“开始”**、 **“所有程序”**，指向 **“附件”**，然后单击 **“命令提示符”**。 在命令提示符处，键入 `sqlcmd`，后面跟随所需的选项列表。 有关支持的选项的完整列表`sqlcmd`，请参阅[sqlcmd 实用工具](../../tools/sqlcmd-utility.md)。  
+-   用户以交互方式输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，输入方式与在命令提示符下输入的方式类似。 结果将显示在命令提示符处。 若要打开命令提示符窗口，依次单击 **“开始”**、 **“所有程序”**，指向 **“附件”**，然后单击 **“命令提示符”**。 在命令提示符处，键入 `sqlcmd`，后面跟随所需的选项列表。 有关支持的选项的完整列表 `sqlcmd` ，请参阅[sqlcmd 实用工具](../../tools/sqlcmd-utility.md)。  
   
 -   用户通过下列方式提交 `sqlcmd` 作业：指定要执行的单个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，或将实用工具指向要执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句所在的文本文件。 输出通常定向到一个文本文件，但也可以显示在命令提示符处。  
   
@@ -40,16 +40,16 @@ ms.locfileid: "75243184"
 ## <a name="typically-used-sqlcmd-options"></a>常用 sqlcmd 选项  
  最常用的选项如下：  
   
--   服务器选项（**-S**），用于标识[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要`sqlcmd`连接的的实例。  
+-   服务器选项（**-S**），用于标识 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要连接的的实例 `sqlcmd` 。  
   
--   身份验证选项（**-E**、 **-U**和 **-P**），用于指定用于连接`sqlcmd`到实例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]凭据。  
+-   身份验证选项（**-E**、 **-U**和 **-P**），用于指定用于 `sqlcmd` 连接到实例的凭据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
     > [!NOTE]  
     >  **-E** 选项为默认选项，毋须指定。  
   
--   输入选项（**-q**、 **-q**和 **-i**），用于标识输入的位置`sqlcmd`。  
+-   输入选项（**-q**、 **-q**和 **-i**），用于标识输入的位置 `sqlcmd` 。  
   
--   输出选项（**-o**），用于指定在其中`sqlcmd`放置输出的文件。  
+-   输出选项（**-o**），用于指定在其中 `sqlcmd` 放置输出的文件。  
   
 ## <a name="connecting-to-the-sqlcmd-utility"></a>连接到 sqlcmd 实用工具  
  以下是 `sqlcmd` 实用工具的常见用法：  
@@ -61,7 +61,7 @@ ms.locfileid: "75243184"
     ```  
   
     > [!NOTE]  
-    >  在前面的示例中，未指定 **-E** ，因为它是默认值`sqlcmd` ，并且通过使用 Windows 身份验证连接到默认实例。  
+    >  在前面的示例中，未指定 **-E** ，因为它是默认值，并且 `sqlcmd` 通过使用 Windows 身份验证连接到默认实例。  
   
 -   使用 Windows 身份验证连接到命名实例，以交互方式运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句：  
   
@@ -69,7 +69,7 @@ ms.locfileid: "75243184"
     sqlcmd -S <ComputerName>\<InstanceName>  
     ```  
   
-     或  
+     or  
   
     ```  
     sqlcmd -S .\<InstanceName>  
@@ -103,17 +103,17 @@ ms.locfileid: "75243184"
     >  若要查看 `sqlcmd` 实用工具所支持选项的列表，请运行：`sqlcmd -?`。  
   
 ## <a name="running-transact-sql-statements-interactively-by-using-sqlcmd"></a>使用 sqlcmd 以交互方式运行 Transact-SQL 语句  
- 您可以使用 `sqlcmd` 实用工具以交互方式在命令提示符窗口中执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 若要使用[!INCLUDE[tsql](../../includes/tsql-md.md)] `sqlcmd`以交互方式执行语句，请在不使用 **-q**、 **-q**、 **-Z**或 **-i**选项指定任何输入文件或查询的情况下运行实用工具。 例如：  
+ 您可以使用 `sqlcmd` 实用工具以交互方式在命令提示符窗口中执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 若要使用以交互方式执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句 `sqlcmd` ，请在不使用 **-q**、 **-q**、 **-Z**或 **-i**选项指定任何输入文件或查询的情况下运行实用工具。 例如：  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
  在未指定输入文件或查询的情况下执行命令时，`sqlcmd` 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定实例，然后显示一个新行，其中包含 `1>` 并且后面跟着一个闪烁的下划线（称为 `sqlcmd` 提示符）。 `1` 表示这是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的第一行，而 `sqlcmd` 提示符则是您键入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的起点。  
   
- 在 `sqlcmd` 提示符中，可以键入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和 `sqlcmd` 命令，如 `GO` 和 `EXIT`。 每个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句放在称为“语句缓存”的缓冲区中。 键入 `GO` 命令并按 Enter 键后，这些语句将发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 若要`sqlcmd`退出， `EXIT`请`QUIT`在新行的开头键入或。  
+ 在 `sqlcmd` 提示符中，可以键入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和 `sqlcmd` 命令，如 `GO` 和 `EXIT`。 每个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句放在称为“语句缓存”的缓冲区中。 键入 `GO` 命令并按 Enter 键后，这些语句将发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 若要退出 `sqlcmd` ， `EXIT` 请 `QUIT` 在新行的开头键入或。  
   
- 若要清除语句缓存，请键入 `:RESET`。 键入`^C`将`sqlcmd`导致退出。 在发出 `^C` 命令后，还可以用 `GO` 停止语句缓存的执行。  
+ 若要清除语句缓存，请键入 `:RESET`。 键入 `^C` `sqlcmd` 将导致退出。 在发出 `^C` 命令后，还可以用 `GO` 停止语句缓存的执行。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)]可以通过输入 **： ED**命令和`sqlcmd`提示符来编辑在交互式会话中输入的语句。 编辑器将打开，编辑 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句并关闭编辑器后，修改后的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将显示于命令窗口中。 输入`GO`以运行 therevised [!INCLUDE[tsql](../../includes/tsql-md.md)]语句。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]可以通过输入 **： ED**命令和提示符来编辑在交互式会话中输入的语句 `sqlcmd` 。 编辑器将打开，编辑 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句并关闭编辑器后，修改后的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将显示于命令窗口中。 输入 `GO` 以运行 therevised [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
 ## <a name="quoted-strings"></a>带引号的字符串  
  用引号引起来的字符无需任何额外的预处理即可使用。例外，输入两个连续的引号可以将引号插入字符串中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将这种字符序列视作一个引号。 （但在服务器上会进行转换。）当脚本变量出现在字符串中时，不会展开它们。  
@@ -156,7 +156,7 @@ ms.locfileid: "75243184"
   
  `1> _`  
   
- 这表示您已连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，并且 `sqlcmd` 现在已可以接受 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和 `sqlcmd` 命令。 `1>` 后闪烁的下划线是 `sqlcmd` 提示符，它标明了所键入语句和命令的显示位置。 现在，键入`USE AdventureWorks2012`并按 enter，然后键入`GO`并按 enter。 命令提示符窗口的内容如下：  
+ 这表示您已连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，并且 `sqlcmd` 现在已可以接受 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和 `sqlcmd` 命令。 `1>` 后闪烁的下划线是 `sqlcmd` 提示符，它标明了所键入语句和命令的显示位置。 现在，键入 `USE AdventureWorks2012` 并按 enter，然后键入 `GO` 并按 enter。 命令提示符窗口的内容如下：  
   
  `sqlcmd`  
   
@@ -207,7 +207,7 @@ ms.locfileid: "75243184"
  行 `3> GO` 后的几行内容为 `SELECT` 语句的输出。 生成输出后， `sqlcmd` 重置 `sqlcmd` 提示符并显示 `1>`。 在 `EXIT` 行输入 `1>`后，命令提示符窗口显示第一次打开时显示的行。 它指示 `sqlcmd` 已退出会话。 现在可以再键入一个 `EXIT` 命令关闭命令提示符窗口。  
   
 ## <a name="running-transact-sql-script-files-by-using-sqlcmd"></a>使用 sqlcmd 运行 Transact-SQL 脚本文件  
- 可以使用 `sqlcmd` 执行数据库脚本文件。 脚本文件是包含语句、 [!INCLUDE[tsql](../../includes/tsql-md.md)] `sqlcmd`命令和脚本变量混合的文本文件。 有关如何使用脚本变量的详细信息，请参阅 [将 sqlcmd 与脚本变量结合使用](sqlcmd-use-with-scripting-variables.md)。 `sqlcmd` 与脚本文件中语句、命令和脚本变量的配合方式类似于它与交互输入的语句和命令的配合方式。 主要区别在于 `sqlcmd` 从输入文件连续读取内容，而不是等待用户输入语句、命令和脚本变量。  
+ 可以使用 `sqlcmd` 执行数据库脚本文件。 脚本文件是包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、 `sqlcmd` 命令和脚本变量混合的文本文件。 有关如何使用脚本变量的详细信息，请参阅 [将 sqlcmd 与脚本变量结合使用](sqlcmd-use-with-scripting-variables.md)。 `sqlcmd` 与脚本文件中语句、命令和脚本变量的配合方式类似于它与交互输入的语句和命令的配合方式。 主要区别在于 `sqlcmd` 从输入文件连续读取内容，而不是等待用户输入语句、命令和脚本变量。  
   
  可以通过几种不同的方式创建数据库脚本文件：  
   
@@ -390,7 +390,7 @@ ms.locfileid: "75243184"
  `Syed Abbas, Catherine Abel, Kim Abercrombie,`  
   
 ### <a name="f-using-sqlcmd-in-a-windows-script-file"></a>F. 在 Windows 脚本文件中使用 sqlcmd  
- `sqlcmd`命令（如） `sqlcmd -i C:\InputFile.txt -o C:\OutputFile.txt,`可以与 VBScript 一起在 .bat 文件中执行。 此时，不要使用交互选项。 执行 .bat 文件的计算机上必须安装 `sqlcmd`。  
+ `sqlcmd`命令（如） `sqlcmd -i C:\InputFile.txt -o C:\OutputFile.txt,` 可以与 VBScript 一起在 .bat 文件中执行。 此时，不要使用交互选项。 执行 .bat 文件的计算机上必须安装 `sqlcmd`。  
   
  首先，创建以下四个文件：  
   
@@ -480,7 +480,7 @@ ms.locfileid: "75243184"
  `SQLCMD returned 100 to the command shell`  
   
 ### <a name="g-using-sqlcmd-to-set-encryption-on-azure-sql-database"></a>G. 使用 sqlcmd 在 Azure SQL 数据库上设置加密  
- `sqlcmd`可以在与[!INCLUDE[ssSDS](../../includes/sssds-md.md)]上的数据的连接上执行，以指定加密和证书信任。 提供两个 "sqlcmd" 选项：  
+ `sqlcmd`可以在与上的数据的连接上执行， [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 以指定加密和证书信任。 提供两个 "sqlcmd" 选项：  
   
 -   -N 开关，客户端使用它来请求加密连接。 此选项等同于 ADO.net 选项 `ENCRYPT = true`。  
   

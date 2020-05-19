@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - IRow interface
 ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 225a624f22f80b00a848d73f38febad60936b90a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a91faaa534c35e7affcdf11cb5174d8cb9e62fc6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62468493"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704895"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>使用 IRow::GetColumns 提取列 (OLE DB)
   通过 `IRow` 接口可以直接访问结果集中某一行的列。 因而，`IRow` 是一种从具有一行的结果集中检索列的有效方法。  
@@ -26,7 +26,7 @@ ms.locfileid: "62468493"
   
 -   如何提取一组列（依次）。  
   
--   如何两次访问某一列。 第一次获取实际列宽度，稍后访问实际数据。 在 DBCOLUMNACCESS 结构中，如果**pData**为 NULL 且**cbMaxLen**为0，则对的`IRow` - `>GetColumns()`调用只返回实际列长度。 在这种情况下，可以再次对同一列调用 `IRow->GetColumns()`，以检索实际数据。  
+-   如何两次访问某一列。 第一次获取实际列宽度，稍后访问实际数据。 在 DBCOLUMNACCESS 结构中，如果**pData**为 NULL 且**cbMaxLen**为0，则对的调用 `IRow` - `>GetColumns()` 只返回实际列长度。 在这种情况下，可以再次对同一列调用 `IRow->GetColumns()`，以检索实际数据。  
   
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，则应通过[Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532)对其进行加密。  

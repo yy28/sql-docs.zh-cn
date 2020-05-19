@@ -15,15 +15,15 @@ helpviewer_keywords:
 - VIA
 - client protocols [SQL Server]
 ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 94025942a6e06f4dfb7b0eeab43487e4a6308e4f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62681520703aa687d4acfc0dc1251cdf6279b8ee
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243262"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703714"
 ---
 # <a name="connect-to-the-database-engine-with-sqlcmd"></a>使用 sqlcmd 连接到数据库引擎
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持客户端使用 TCP/IP 网络协议（默认）和命名管道协议进行通信。 如果客户端正在连接到同一计算机上的[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例，则还可使用 Shared Memory 协议。 通常有三种选择协议的方法。 **sqlcmd** 实用工具使用的协议按下列顺序确定：  

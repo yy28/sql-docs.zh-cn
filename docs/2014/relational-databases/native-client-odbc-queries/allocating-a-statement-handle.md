@@ -17,15 +17,15 @@ helpviewer_keywords:
 - statement handles [ODBC]
 - SQLAllocHandle function
 ms.assetid: 9ee207f3-2667-45f5-87ca-e6efa1fd7a5c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 68e3d7a53f96216d158ddbdb1d1d0ca59db5f81f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7cce55becbe02982fcf3f7ffaf6f18954735499
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200252"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705206"
 ---
 # <a name="allocating-a-statement-handle"></a>分配语句句柄
   在应用程序可以执行语句之前，它必须分配语句句柄。 为此，可调用**SQLAllocHandle** ，并将*HandleType*参数设置为 SQL_HANDLE_STMT，并将*将 inputhandle*指向连接句柄。  
@@ -36,7 +36,7 @@ ms.locfileid: "63200252"
   
  调用**SQLSetStmtAttr**并将*fOption*设置为 SQL_ATTR_QUERY_TIMEOUT 会设置查询超时间隔，以帮助保护服务器和用户的长时间运行的查询。  
   
- 如果调用**SQLSetStmtAttr**并将*fOption*设置为 SQL_ATTR_MAX_LENGTH 会限制单个语句可以检索的**文本**和**图像**数据量。 如果调用**SQLSetStmtAttr** ，并将*fOption*设置为 SQL_ATTR_MAX_ROWS 也会将行集限制为前*n*行（如果这是所有应用程序都需要）。 请注意，设置 SQL_ATTR_MAX_ROWS 会导致驱动程序向服务器发出 SET ROWCOUNT 语句。 这会影响[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所有语句，包括触发器和更新。  
+ 如果调用**SQLSetStmtAttr**并将*fOption*设置为 SQL_ATTR_MAX_LENGTH 会限制单个语句可以检索的**文本**和**图像**数据量。 如果调用**SQLSetStmtAttr** ，并将*fOption*设置为 SQL_ATTR_MAX_ROWS 也会将行集限制为前*n*行（如果这是所有应用程序都需要）。 请注意，设置 SQL_ATTR_MAX_ROWS 会导致驱动程序向服务器发出 SET ROWCOUNT 语句。 这会影响所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句，包括触发器和更新。  
   
  当您设置这些选项时，请务必小心。 最好是连接句柄中的所有语句句柄对于 SQL_ATTR_MAX_LENGTH 和 SQL_ATTR_MAX_ROWS 都具有相同的设置。 如果驱动程序从一个语句句柄切换到另一个对于这些选项具有不同值的语句句柄，则驱动程序必须生成适当的 SET TEXTSIZE 和 SET ROWCOUNT 语句以更改这些设置。 驱动程序无法将这些语句与用户 SQL 语句放在相同的批中，因为用户 SQL 语句可能包含必须为批中第一条语句的语句。 驱动程序必须在单独的批中发送 SET TEXTSIZE 和 SET ROWCOUNT 语句，这会自动生成到服务器的一次附加往返。  
   

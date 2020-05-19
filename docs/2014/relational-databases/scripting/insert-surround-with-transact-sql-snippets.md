@@ -11,15 +11,15 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], surround with snippets
 - Transact-SQL snippets, surround with
 ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fde81304117befec38844c28b6d0c434ab3606e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 729cf43a76ea9874e2fc04a8425866d8969e90ff
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242090"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703882"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>插入外侧 Transact-SQL 代码段
   外侧代码段是一种模板，可将其作为在 BEGIN、IF 或 WHILE 块中插入一组 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的起点。  

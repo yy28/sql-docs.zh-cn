@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 3b8ccad5-411d-4b79-b95e-ee524714f7d6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3150dd7c37564429f5f31205bdf733fe134baf5d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a1259ef4b320e097998f2a631367b2e52e7c789e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874560"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704911"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>显示稀疏列的列和目录元数据 (OLE DB)
   此示例将创建具有三个列的表，包括一个稀疏列、一个非稀疏列和一个列集列。 随后示例将显示 OLE DB 标志，指示非稀疏列和列集列的列及目录元数据。  

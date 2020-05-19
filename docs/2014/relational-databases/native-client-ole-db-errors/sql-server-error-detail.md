@@ -14,18 +14,18 @@ helpviewer_keywords:
 - OLE DB error handling, error details
 - ISQLServerErrorInfo interface
 ms.assetid: 51500ee3-3d78-47ec-b90f-ebfc55642e06
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5c7535e4579204834fc8024b7c37c46675320b8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3d8c392312f98140f2a75becb175fab26c4e590
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63156390"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704950"
 ---
 # <a name="sql-server-error-detail"></a>SQL Server 错误详细信息
-  Native Client OLE DB 提供程序定义特定于访问接口的错误接口[ISQLServerErrorInfo。](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 该接口返回有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误的更多详细信息，在命令执行或行集操作失败时这些信息很有用。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序定义特定于访问接口的错误接口[ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md)。 该接口返回有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误的更多详细信息，在命令执行或行集操作失败时这些信息很有用。  
   
  可以用两种方式访问 ISQLServerErrorInfo 接口****。  
   
@@ -44,7 +44,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
   
  SSERRORINFO 结构成员由使用者解释如下。  
   
-|成员|说明|  
+|成员|描述|  
 |------------|-----------------|  
 |pwszMessage**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误消息。 与在 IErrorInfo::GetDescription 中返回的字符串相同****。|  
 |pwszServer**|会话的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|  

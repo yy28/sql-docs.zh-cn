@@ -18,18 +18,18 @@ helpviewer_keywords:
 - GetParameterInfo function
 - OLE DB, data types
 ms.assetid: 3d831ff8-3b79-4698-b2c1-2b5dd2f8235c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0979892b6770b9a9c2d0d9c4e8a0d734d873c085
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65858c2d8f43a7fb675f17ff8c719b1041d6ea79
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062184"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705122"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>行集和参数中的数据类型映射
-  在行集和作为参数值的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]情况下，Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB 提供程序使用以下 OLE DB 定义的数据类型来表示数据，这些数据类型在函数**IColumnsInfo：： GetColumnInfo**和**ICommandWithParameters：： GetParameterInfo**中报告。  
+  在行集和作为参数值的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 情况下，Native Client OLE DB 提供程序 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用以下 OLE DB 定义的数据类型来表示数据，这些数据类型在函数**IColumnsInfo：： GetColumnInfo**和**ICommandWithParameters：： GetParameterInfo**中报告。  
   
 |SQL Server 数据类型|OLE DB 数据类型|  
 |--------------------------|----------------------|  
@@ -63,7 +63,7 @@ ms.locfileid: "63062184"
 |**varchar**|DBTYPE_STR|  
 |**XML**|DBTYPE_XML|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持使用者请求的数据转换，如图所示。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序支持使用者请求的数据转换，如图所示。  
   
  sql_variant 对象可以保留除 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max)、xml、timestamp 和 Microsoft .NET Framework 公共语言运行时 (CLR) 用户定义类型以外的任意 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型的数据****。 另外，sql_variant 数据实例还不能将 sql_variant 作为其基础的基本数据类型。 例如，列中的某些行可能包含 smallint 值，而其他某些行可能包含 float 值，剩余的行则包含 char/nchar 值****************。  
   

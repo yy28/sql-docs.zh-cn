@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, rowset creation
 ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: de130ef821551383ada1a6df3574404cd3518e88
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eee3452c109bcd519cb24ba96b621ec25c0110df
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046497"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704587"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>创建表值参数行集
   尽管使用者可以为表值参数提供任意行集对象，但是典型的行集对象要针对后端数据存储来实现，因此提供有限的性能。 有鉴于此，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口支持使用者在内存中的数据之上创建专用行集对象。 此特殊的内存中行集对象是一个名为表值参数行集的新 COM 对象。 它提供与参数集相似的功能。  
@@ -39,14 +39,14 @@ ms.locfileid: "63046497"
   
  若要检索有关每个列的 null、唯一、计算和更新状态的信息，使用者使用 IColumnsRowset：： GetColumnsRowset 或 IColumnsInfo：： GetColumnInfo。 以下方法提供有关每个表值参数行集列的详细信息。  
   
- 使用者指定表值参数每一列的类型。 这类似于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建表时指定列的方式。 使用者通过[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *ppRowset* Output 参数从 Native Client OLE DB 提供程序获取表值参数行集对象。  
+ 使用者指定表值参数每一列的类型。 这类似于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建表时指定列的方式。 使用者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过*ppRowset* output 参数从 Native Client OLE DB 提供程序获取表值参数行集对象。  
   
 ## <a name="dynamic-scenario"></a>动态方案  
  当使用者不具有类型信息时，它应使用 IOpenRowset：： OpenRowset 来实例化表值参数行集对象。 使用者只需向访问接口提供类型名称。  
   
  在此方案中，访问接口代表使用者从服务器获取有关表值参数行集对象的类型信息。  
   
- 应按照静态方案的设置对 pTableID** 和 pUnkOuter** 参数进行设置。 然后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，Native Client OLE DB 提供程序从服务器获取类型信息（列信息和约束），并通过*ppRowset*参数返回表值参数行集对象。 此操作要求与服务器通信，因此性能不如静态方案。 动态方案仅适用于参数化过程调用。  
+ 应按照静态方案的设置对 pTableID** 和 pUnkOuter** 参数进行设置。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]然后，Native Client OLE DB 提供程序从服务器获取类型信息（列信息和约束），并通过*ppRowset*参数返回表值参数行集对象。 此操作要求与服务器通信，因此性能不如静态方案。 动态方案仅适用于参数化过程调用。  
   
 ## <a name="see-also"></a>另请参阅  
  [表值参数 &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   

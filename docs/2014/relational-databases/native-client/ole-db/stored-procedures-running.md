@@ -11,15 +11,15 @@ helpviewer_keywords:
 - OLE DB, stored procedures
 - SQL Server Native Client OLE DB provider, stored procedures
 ms.assetid: c77d9be9-2176-4438-8c7a-04b63ebece08
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0102fa66e65fa11f47eec9f49cd1fa90fb11f877
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91d6da9e7d9fd17d35d9868834c6b0d688519ff7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638764"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704172"
 ---
 # <a name="running-stored-procedures-ole-db"></a>运行存储过程 (OLE DB)
   执行语句时，对数据源调用存储过程（而不是直接在客户端应用程序中执行或准备语句）可以：  
@@ -34,7 +34,7 @@ ms.locfileid: "62638764"
   
 -   增加功能。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]存储过程用于返回数据的三个机制：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 存储过程用于返回数据的三个机制：  
   
 -   过程中的每一条 SELECT 语句都生成一个结果集。  
   
@@ -44,11 +44,11 @@ ms.locfileid: "62638764"
   
  应用程序必须能够处理来自存储过程的所有这些输出。  
   
- 在结果处理期间，不同的 OLE DB 访问接口返回输出参数和返回值的时间不同。 对于[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序，在使用者检索或取消存储过程返回的结果集之前，不会提供输出参数和返回代码。 返回代码和输出参数在最后一个来自服务器的 TDS 数据包中返回。  
+ 在结果处理期间，不同的 OLE DB 访问接口返回输出参数和返回值的时间不同。 对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序，在使用者检索或取消存储过程返回的结果集之前，不会提供输出参数和返回代码。 返回代码和输出参数在最后一个来自服务器的 TDS 数据包中返回。  
   
  访问接口返回输出参数和返回值时，使用 DBPROP_OUTPUTPARAMETERAVAILABILITY 属性进行报告。 此属性位于 DBPROPSET_DATASOURCEINFO 属性集中。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序将 DBPROP_OUTPUTPARAMETERAVAILABILITY 属性设置为 DBPROPVAL_OA_ATROWRELEASE，以指示在处理或释放结果集之前，不会返回返回代码和输出参数。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序将 DBPROP_OUTPUTPARAMETERAVAILABILITY 属性设置为 DBPROPVAL_OA_ATROWRELEASE，以指示在处理或释放结果集之前，不会返回返回代码和输出参数。  
   
 ## <a name="see-also"></a>另请参阅  
  [存储过程](stored-procedures.md)  

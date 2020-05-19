@@ -39,15 +39,15 @@ helpviewer_keywords:
 - databases [SQL Server], generating scripts
 - Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 47bf324dd757661a6f49f18b28f810c87ca1419e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b378eb5e4a68f07aee179e52552017578b0b33d4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242111"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703927"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>“生成和发布脚本向导”
   你可以使用“生成和发布脚本向导”  创建脚本，以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的实例之间传输数据库。 您可以在本地网络中或从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]为数据库引擎实例上的数据库生成脚本。 生成的脚本可以在数据库引擎或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的另一个实例上运行。 您还可以使用该向导将数据库的内容直接发布到使用 Database Publishing Services 创建的 Web 服务。 您可以为整个数据库创建脚本，或将其限制为特定的对象。  
@@ -150,7 +150,7 @@ ms.locfileid: "75242111"
   
  **常规** - 以下选项将应用于整个脚本。  
   
--   **ANSI 填充**-在`ANSI PADDING ON`脚本中包括。 默认值为 **True**。  
+-   **ANSI 填充**- `ANSI PADDING ON` 在脚本中包括。 默认值为 **True**。  
   
 -   **追加到文件** - 值为 **True**时，此脚本将被添加到在 **“设置脚本编写选项”** 页上指定的现有脚本的底部。 值为 **False**时，新脚本将覆盖以前的脚本。 默认值为 **False**。  
   
@@ -188,9 +188,9 @@ ms.locfileid: "75242111"
   
 -   **编写对象级权限脚本** - 包括在数据库中的对象上设置权限的脚本。 默认值为 **False**。  
   
--   **脚本统计信息**-设置为 "**编写统计信息脚本**" 时`CREATE STATISTICS` ，此选项包含用于对对象重新创建统计信息的语句。 **“编写统计信息和直方图脚本”** 选项还会创建直方图信息。 默认值为 **“不编写统计信息脚本”** 。 有关详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](/sql/t-sql/statements/create-statistics-transact-sql)。  
+-   **脚本统计信息**-设置为 "**编写统计信息脚本**" 时，此选项包含 `CREATE STATISTICS` 用于对对象重新创建统计信息的语句。 **“编写统计信息和直方图脚本”** 选项还会创建直方图信息。 默认值为 **“不编写统计信息脚本”** 。 有关详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](/sql/t-sql/statements/create-statistics-transact-sql)。  
   
--   **编写 USE DATABASE 脚本**-将`USE DATABASE`语句添加到脚本。 若要确保在正确的数据库中创建数据库对象，请包含 `USE DATABASE` 语句。 如果脚本应在其他数据库中使用，请选择**False**以忽略该`USE DATABASE`语句。 默认值为 **True**。 有关详细信息，请参阅 [USE (Transact-SQL)](/sql/t-sql/language-elements/use-transact-sql)。  
+-   **编写 USE DATABASE 脚本**-将 `USE DATABASE` 语句添加到脚本。 若要确保在正确的数据库中创建数据库对象，请包含 `USE DATABASE` 语句。 如果脚本应在其他数据库中使用，请选择**False**以忽略该 `USE DATABASE` 语句。 默认值为 **True**。 有关详细信息，请参阅 [USE (Transact-SQL)](/sql/t-sql/language-elements/use-transact-sql)。  
   
 -   **要编写脚本的数据的类型** - 选择应编写脚本的内容：“仅限数据”  和/或“仅限架构”  。 默认值为 **“仅限架构”** 。  
   
@@ -198,7 +198,7 @@ ms.locfileid: "75242111"
   
 -   **编写更改跟踪的脚本** - 如果在源数据库或源数据库中的表上启用了“编写更改跟踪的脚本”选项，则编写更改跟踪的脚本。 默认值为 **False**。 有关详细信息，请参阅[关于更改跟踪 (SQL Server)](../track-changes/about-change-tracking-sql-server.md)。  
   
--   **编写 check 约束脚本**- `CHECK`将约束添加到脚本中。 默认值为 **True**。 `CHECK` 约束要求输入表中的数据满足某些指定的条件。 有关详细信息，请参阅 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
+-   **编写 check 约束脚本**-将 `CHECK` 约束添加到脚本中。 默认值为 **True**。 `CHECK` 约束要求输入表中的数据满足某些指定的条件。 有关详细信息，请参阅 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
   
 -   “编写数据压缩选项的脚本”  - 如果在源数据库或源数据库中的表上配置了编写数据压缩选项的脚本选项，则编写数据压缩选项的脚本。 有关详细信息，请参阅 [Data Compression](../data-compression/data-compression.md)。 默认值为 **False**。  
   
@@ -252,9 +252,9 @@ ms.locfileid: "75242111"
   
 7.  **发布对象级权限** - 包括数据库中的选定对象上的权限。 默认值为 **False**。  
   
-8.  **发布统计信息**-设置为 "**发布统计信息**" `CREATE STATISTICS`时，将包含语句以重新创建有关对象的统计信息。 **“发布统计信息和直方图”** 选项还会创建直方图信息。 默认值为 **“不发布统计信息脚本”**。 有关详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](/sql/t-sql/statements/create-statistics-transact-sql)。  
+8.  **发布统计信息**-设置为 "**发布统计信息**" 时，将包含 `CREATE STATISTICS` 语句以重新创建有关对象的统计信息。 **“发布统计信息和直方图”** 选项还会创建直方图信息。 默认值为 **“不发布统计信息脚本”**。 有关详细信息，请参阅 [CREATE STATISTICS (Transact-SQL)](/sql/t-sql/statements/create-statistics-transact-sql)。  
   
-9. **发布 vardecimal 选项**-在源`vardecimal`数据库表上启用目标数据库表时对其启用表格式。 默认值为 **True**。  
+9. **发布 vardecimal 选项**-在 `vardecimal` 源数据库表上启用目标数据库表时对其启用表格式。 默认值为 **True**。  
   
 10. **架构限定对象名称** - 在创建的对象的名称中包括架构名称。 默认值为 **True**。  
   
@@ -268,7 +268,7 @@ ms.locfileid: "75242111"
   
  **表/视图选项** - 以下选项仅应用于表或视图。  
   
-1.  **发布 check 约束**-在发布过程中`CHECK`包括创建约束。 默认值为 **True**。 `CHECK` 约束要求输入表中的数据满足某些指定的条件。 有关详细信息，请参阅 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
+1.  **发布 check 约束**-在 `CHECK` 发布过程中包括创建约束。 默认值为 **True**。 `CHECK` 约束要求输入表中的数据满足某些指定的条件。 有关详细信息，请参阅 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
   
 2.  **发布外键** - 在发布过程中包括创建外键。 默认值为 **True**。 外键可指示和强制保持表间的关系。 有关详细信息，请参阅 [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md)。  
   

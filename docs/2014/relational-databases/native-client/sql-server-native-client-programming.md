@@ -15,21 +15,21 @@ helpviewer_keywords:
 - SQLNCLI
 - native data access [SQL Server Native Client]
 ms.assetid: 14ba2cb1-a424-4e4d-b224-0bf1015ab801
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1c288ade95434bc06fcbf7613a71c2106631128e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c30d74580d9912906589efc0164a948b71bb0d85
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929545"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704148"
 ---
 # <a name="sql-server-native-client-programming"></a>SQL Server Native Client 编程
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 是在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中引入的用于 OLE DB 和 ODBC 的独立数据访问应用程序编程接口 (API)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 将 SQL OLE DB 访问接口和 SQL ODBC 驱动程序组合成一个本机动态链接库 (DLL)。 除 Windows 数据访问组件（Windows DAC，以前为 Microsoft 数据访问组件或 MDAC）提供的功能之外，它还提供新的功能。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 可用于创建新应用程序或增强现有应用程序，使这些应用程序能够利用在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中引入的功能，例如多个活动结果集 (MARS)、用户定义数据类型 (UDT)、查询通知、快照隔离和 XML 数据类型支持。  
   
 > [!NOTE]  
->  有关 native Client 和 Windows DAC 之间[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的差异列表，以及有关将 Windows DAC 应用程序更新到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 之前要考虑的问题的信息，请参阅将[应用程序更新为从 MDAC SQL Server Native Client](applications/updating-an-application-to-sql-server-native-client-from-mdac.md)。  
+>  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client 和 WINDOWS dac 之间的差异列表，以及有关将 WINDOWS DAC 应用程序更新到 Native Client 之前要考虑的问题的信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅将[应用程序更新为从 MDAC SQL Server Native Client](applications/updating-an-application-to-sql-server-native-client-from-mdac.md)。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序始终与 Windows DAC 提供的 ODBC 驱动程序管理器一起使用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口可与 Windows DAC 提供的 OLE DB 核心服务一起使用，但这不是必要条件；是否选择使用核心服务取决于单个应用程序的要求（例如，是否必需连接池）。  
   
@@ -37,14 +37,14 @@ ms.locfileid: "76929545"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 旨在提供一种使用 OLE DB 或 ODBC 获取对 SQL Server 的本机数据访问的简化方法。 简化之处在于它将 OLE DB 和 ODBC 技术组合到一个库中，并且它提供一种创新和开发新的数据访问功能而不更改当前 Windows DAC 组件（现在是 Microsoft Windows 平台的一部分）的方法。  
   
- 当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 使用 windows dac 中的组件时，它不会显式依赖于特定版本的 windows dac。 可以将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 与随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 支持的任一操作系统安装的 Windows DAC 版本一起使用。  
+ 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 使用 WINDOWS dac 中的组件时，它不会显式依赖于特定版本的 WINDOWS dac。 可以将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 与随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 支持的任一操作系统安装的 Windows DAC 版本一起使用。  
   
 ## <a name="in-this-section"></a>本节内容  
  [SQL Server Native Client 中的新增功能](sql-server-native-client.md)  
  列出重大的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 新功能。  
   
  [何时使用 SQL Server Native Client](when-to-use-sql-server-native-client.md)  
- 讨论 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client 如何适应 Microsoft 数据访问技术，它如何与 Windows DAC 和 ADO.NET 进行比较，并提供用于决定要使用的数据访问技术的指针。  
+ 讨论 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 如何适应 Microsoft 数据访问技术，它如何与 WINDOWS DAC 和 ADO.NET 进行比较，并提供用于决定要使用的数据访问技术的指针。  
   
  [SQL Server Native Client 功能](features/sql-server-native-client-features.md)  
  介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 支持的功能。  

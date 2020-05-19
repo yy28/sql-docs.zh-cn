@@ -11,18 +11,18 @@ helpviewer_keywords:
 - applications [SQL Server Native Client]
 - OLE DB, creating applications
 ms.assetid: f3ae6815-f32d-4913-a1a2-2ba2f20cfd88
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0e422ac6535900a287ae610a85241dc67172c4f7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36416967a76631e59d5d122105b74be357e654de
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209751"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704762"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>创建 SQL Server Native Client OLE DB 访问接口应用程序
-  创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE DB 提供程序应用程序涉及以下步骤：  
+  创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机客户端 OLE DB 提供程序应用程序涉及以下步骤：  
   
 1.  建立与数据源的连接。  
   

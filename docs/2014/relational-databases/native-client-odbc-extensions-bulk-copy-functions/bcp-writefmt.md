@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_writefmt function
 ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8d4a5067598b475ed8fe103606088d0e4d6d0554
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec7c5f8db1d8d1f3c675b267adb8345d086d0b80
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62689410"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705280"
 ---
 # <a name="bcp_writefmt"></a>bcp_writefmt
   创建一个格式化文件，它包含对当前大容量复制数据文件的格式的说明。  
@@ -60,7 +60,7 @@ szFormatFile
  若要加载已保存的格式化文件，请使用[bcp_readfmt](bcp-readfmt.md)。  
   
 > [!NOTE]  
->  仅在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本7.0 和更高版本分发的**bcp**实用工具版本中支持**bcp_writefmt**生成的格式化文件。  
+>  仅在版本7.0 和更高版本分发的**bcp**实用工具版本中支持**bcp_writefmt**生成的格式化文件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="example"></a>示例  
   

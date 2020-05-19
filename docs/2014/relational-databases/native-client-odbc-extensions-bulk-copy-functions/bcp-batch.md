@@ -15,18 +15,18 @@ topic_type:
 helpviewer_keywords:
 - bcp_batch function
 ms.assetid: 0bda489e-86bc-4a7e-80f6-96047e03f281
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c41e8d90adc8ff6eb2058feebe3f33c10edbfa92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a37bafc9bac2601e3914455f431c639bce385f48
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62631381"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705351"
 ---
 # <a name="bcp_batch"></a>bcp_batch
-  将以前从程序变量大容量复制的所有行提交[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到[bcp_sendrow](bcp-sendrow.md)。  
+  将以前从程序变量大容量复制的所有行提交 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 到[bcp_sendrow](bcp-sendrow.md)。  
   
 ## <a name="syntax"></a>语法  
   

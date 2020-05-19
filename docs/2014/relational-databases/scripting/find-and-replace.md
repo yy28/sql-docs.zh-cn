@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Find and Replace dialog box
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c3d96670edc599a1f16456b862922dc6378b1362
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d65ec8de3e45632548a813024223eb72314acc2b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245146"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703922"
 ---
 # <a name="find-and-replace"></a>查找和替换
   使用 **“查找和替换”** 对话框可以在文件中查找特定文本，并且可以选择是否替换文本。 根据 **“查找和替换”** 对话框打开方式的不同，将显示不同版本的对话框，其中的选项会稍有差异。 在 **“编辑”** 菜单上，指向 **“查找和替换”** ，再单击 **“快速查找”** ，可打开包含查找选项的对话框，但其中不包含替换选项。 在 **“编辑”** 菜单上，指向 **“查找和替换”** ，再单击 **“快速替换”** ，可打开包含查找选项和替换选项的对话框。  

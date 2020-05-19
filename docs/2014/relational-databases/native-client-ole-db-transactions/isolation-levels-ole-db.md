@@ -12,22 +12,22 @@ helpviewer_keywords:
 - transactions [OLE DB]
 - SQL Server Native Client OLE DB provider, transactions
 ms.assetid: d70ee72c-6e2a-4bcd-9456-4a697a866361
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a18986af71f652a833f413ee1fa62ca2fd44ba06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4026154204cf6de95711a3014b069c34a29d9922
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63215996"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704509"
 ---
 # <a name="isolation-levels-ole-db"></a>隔离级别 (OLE DB)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端可以控制连接的事务隔离级别。 若要控制事务隔离级别， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序使用：  
   
 -   DBPROPSET_SESSION [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序默认自动提交模式 DBPROP_SESS_AUTOCOMMITISOLEVELS。  
   
-     级别[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 Native Client OLE DB 提供程序默认为 DBPROPVAL_TI_READCOMMITTED。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]级别的 Native Client OLE DB 提供程序默认为 DBPROPVAL_TI_READCOMMITTED。  
   
 -   将 ITransactionLocal::StartTransaction 方法的 isoLevel 参数用于本地手动提交事务******。  
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: c2f86810-2775-4ddd-8df7-e8373785a7fc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4007543cbe06b8b80c28a3a2a35c1a3c3fdbb525
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d529786fdb8643338c3a0d004c4a409e8e85a420
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63205866"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704306"
 ---
 # <a name="data-source-names-and-64-bit-operating-systems"></a>数据源名称和 64 位操作系统
   如果您要将某一应用程序构建为在 64 位操作系统上运行的 32 位应用程序并运行该应用程序，则必须使用 %windir%\SysWOW64\odbcad32.exe 中的 ODBC 管理器创建 ODBC 数据源。  

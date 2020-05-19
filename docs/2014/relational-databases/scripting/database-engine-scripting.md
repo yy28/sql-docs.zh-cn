@@ -12,15 +12,15 @@ helpviewer_keywords:
 - scripting [SQL Server Database Engine]
 - scripting [SQL Server Database Engine], PowerShell
 ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0b092c85ea678ce05c3b9c8bbff4f78d47589bdb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 48f749da0acc21e990954a1198d868c0786d2a72
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244964"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703984"
 ---
 # <a name="database-engine-scripting"></a>数据库引擎脚本
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 支持 [!INCLUDE[msCoName](../../includes/msconame-md.md)] PowerShell 脚本环境，以管理 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例和这些实例中的对象。 还可以在与脚本环境非常类似的环境中生成并运行包含 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 Xquery 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询。  
@@ -30,7 +30,7 @@ ms.locfileid: "75244964"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供程序，它将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象模型层次结构公开为类似于文件系统路径的 PowerShell 路径。 可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象模型类来管理路径的每个节点处表示的对象。  
   
--   一组执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命令的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cmdlet。 其中一个 cmdlet 是 **Invoke-Sqlcmd**。 这用于运行[!INCLUDE[ssDE](../../includes/ssde-md.md)]要与`sqlcmd`实用工具一起运行的查询脚本。  
+-   一组执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命令的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cmdlet。 其中一个 cmdlet 是 **Invoke-Sqlcmd**。 这用于运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 要与实用工具一起运行的查询脚本 `sqlcmd` 。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了用于运行 PowerShell 的以下功能：  
   
@@ -47,19 +47,19 @@ ms.locfileid: "75244964"
   
 -   Xquery 语言语句。  
   
--   实用工具中的`sqlcmd`命令和变量。  
+-   实用工具中的命令和变量 `sqlcmd` 。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了三种用于生成和运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询的环境：  
   
 -   可以在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中以交互方式运行和调试 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]查询。 可以在一个会话中编写并调试多个语句，然后将所有这些语句保存在一个脚本文件中。  
   
--   通过`sqlcmd`命令提示实用工具，您可以以[!INCLUDE[ssDE](../../includes/ssde-md.md)]交互方式运行查询，还[!INCLUDE[ssDE](../../includes/ssde-md.md)]可以运行现有的查询脚本文件。  
+-   通过 `sqlcmd` 命令提示实用工具，您可以以交互方式运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询，还可以运行现有的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询脚本文件。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询脚本文件通常是使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中以交互方式进行编码的。 之后，可在下面的某个环境中打开此文件：  
   
 -   使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的“文件”  /“打开”  菜单，在新的[!INCLUDE[ssDE](../../includes/ssde-md.md)]查询编辑器窗口中打开此文件。  
   
--   使用 **-i**_input_file_参数通过`sqlcmd`实用工具运行文件。  
+-   使用 **-i**_input_file_参数通过实用工具运行文件 `sqlcmd` 。  
   
 -   通过 **PowerShell 脚本中的** Invoke-Sqlcmd **cmdlet 使用** -QueryFromFile [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 参数运行此文件。  
   

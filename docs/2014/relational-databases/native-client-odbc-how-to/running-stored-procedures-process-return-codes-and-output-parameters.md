@@ -10,15 +10,15 @@ helpviewer_keywords:
 - return codes [ODBC]
 - output parameters [ODBC]
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e9b9a581a4f5331479c7dc5ed87fc5d213e8d465
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 38918636fa569b5f9b43e1f93698879863429fb0
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68205573"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705226"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>处理返回代码和输出参数 (ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程可具有整数返回代码和输出参数。 返回代码和输出参数在服务器的最后一个数据包中发送，在[SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md)返回 SQL_NO_DATA 之前，这些参数对应用程序不可用。 如果在存储过程中返回错误，请调用 SQLMoreResults 以转到下一个结果，直到返回 SQL_NO_DATA。  
@@ -43,11 +43,11 @@ ms.locfileid: "68205573"
   
  此示例连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 若要连接到命名实例，请更改 ODBC 数据源的定义以使用以下格式指定实例：server\namedinstance。 默认情况下，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 将安装在命名实例中。  
   
- 第一个（[!INCLUDE[tsql](../../includes/tsql-md.md)]）代码列表创建此示例使用的存储过程。  
+ 第一个（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）代码列表创建此示例使用的存储过程。  
   
  使用 odbc32.lib 编译第二个 (C++) 代码列表。 然后，执行该程序。  
   
- 第三个[!INCLUDE[tsql](../../includes/tsql-md.md)]（）代码列表删除此示例使用的存储过程。  
+ 第三个（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）代码列表删除此示例使用的存储过程。  
   
 ```  
 use AdventureWorks  

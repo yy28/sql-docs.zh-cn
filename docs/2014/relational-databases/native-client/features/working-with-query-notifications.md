@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, query notifications
 - consumer notification for rowset changes [SQL Server Native Client]
 ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7a149e8940896210a408b36c7cb06814646fd322
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72eb5468976a6a51d8e76a6cfdbca5118ebd1dd2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206598"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704324"
 ---
 # <a name="working-with-query-notifications"></a>使用查询通知
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中引入了查询通知。 查询通知建立在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的 Service Broker 基础结构之上，并允许在数据发生更改时向应用程序发送通知。 对提供数据库信息的缓存且需要在源数据发生更改时收到通知的应用程序（如 Web 应用程序）而言，以上功能特别有用。  
@@ -45,7 +45,7 @@ ms.locfileid: "68206598"
   
  只发送一次通知。 对于数据更改的持续通知，必须在处理每个通知之后重新执行查询来创建新的订阅。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端应用程序通常使用[!INCLUDE[tsql](../../../includes/tsql-md.md)] [receive](/sql/t-sql/statements/receive-transact-sql)命令接收通知，以从与通知选项中指定的服务关联的队列中读取通知。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端应用程序通常使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] [receive](/sql/t-sql/statements/receive-transact-sql)命令接收通知，以从与通知选项中指定的服务关联的队列中读取通知。  
   
 > [!NOTE]  
 >  对于需要通知的查询，必须限定其中的表名，例如 `dbo.myTable`。 表名必须用包含两个部分的名称进行限定。 如果使用的名称由三个或四个部分组成，则订阅无效。  
@@ -65,10 +65,10 @@ CREATE SERVICE myService ON QUEUE myQueue
 >  服务必须使用预定义约定 `https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification`，如上所示。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 访问接口  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持按行集修改的使用者通知。 使用者在行集修改的每个阶段以及在尝试执行任何更改时接收通知。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序支持按行集修改的使用者通知。 使用者在行集修改的每个阶段以及在尝试执行任何更改时接收通知。  
   
 > [!NOTE]  
->  使用**ICommand：： Execute**将通知查询传递给服务器，这是使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序订阅查询通知的唯一有效方式。  
+>  使用**ICommand：： Execute**将通知查询传递给服务器，这是使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序订阅查询通知的唯一有效方式。  
   
 ### <a name="the-dbpropset_sqlserverrowset-property-set"></a>DBPROPSET_SQLSERVERROWSET 属性集  
  为了通过 OLE DB 支持查询通知， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将以下新属性添加到 DBPROPSET_SQLSERVERROWSET 属性集。  
@@ -77,7 +77,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|查询通知保持为活动状态的秒数。<br /><br /> 默认为 432000 秒（5 天）。 最小值为 1 秒，最大值为 2^31-1 秒。|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|通知的消息正文。 消息正文是用户定义的，没有预定义格式。<br /><br /> 默认情况下，该字符串为空。 您可以使用 1 至 2000 个字符指定消息。|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|查询通知选项。 这些值是在*名称*=*值*为语法的字符串中指定的。 用户负责创建服务并从队列中读取通知。<br /><br /> 默认值为空字符串。|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|查询通知选项。 这些值是在*名称* = *值*为语法的字符串中指定的。 用户负责创建服务并从队列中读取通知。<br /><br /> 默认值为空字符串。|  
   
  无论语句是在用户事务中运行还是以自动提交模式运行，或者无论是提交还是回滚运行语句的事务，将始终提交通知订阅。 根据以下任一无效通知条件激发服务器通知：更改基础数据或架构，或者当达到超时期限时（以先发生者为准）。 激发通知后将立即删除通知注册。 因此，在接收通知时，应用程序必须再次订阅通知，以备进一步更新之用。  
   
@@ -105,7 +105,7 @@ RECEIVE * FROM MyQueue
  有关 DBPROPSET_SQLSERVERROWSET 属性集的详细信息，请参阅[行集属性和行为](../../native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 驱动程序  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序通过向[SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md)和[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)函数添加三个新属性，支持查询通知：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序通过向[SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md)和[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)函数添加三个新属性，支持查询通知：  
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT  
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ISequentialStream interface, samples
 - GetColumns method
 ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ca820a8f7f916aa473bdd527e24a9549b7c5195e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86d2627354fcf3ec6ed80675abeb552f3ff888da
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62467580"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704881"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns（或 IRow::Open）和 ISequentialStream 提取列
   大型数据可使用 `ISequentialStream` 接口进行绑定或检索。 对于绑定列，状态标志 DBSTATUS_S_TRUNCATED 表示数据被截断。  
@@ -37,7 +37,7 @@ ms.locfileid: "62467580"
   
     -   `IRow::Open()` 可用于在行上打开 `ISequentialStream`。 指定 DBGUID_STREAM，以指示列包含二进制数据流（随后可使用 `IStream` 或 `ISequentialStream` 读取列数据）。  
   
-    -   如果`IRow::GetColumns()`使用了，则将 DBCOLUMNACCESS 结构的**pData**元素设置为指向流对象。  
+    -   如果 `IRow::GetColumns()` 使用了，则将 DBCOLUMNACCESS 结构的**pData**元素设置为指向流对象。  
   
 4.  重复使用 ISequentialStream::Read()****，将指定的字节数读入使用者缓冲区。  
   

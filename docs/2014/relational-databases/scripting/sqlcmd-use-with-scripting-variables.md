@@ -15,15 +15,15 @@ helpviewer_keywords:
 - sqlcmd utility, scripts
 - setvar command
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6893d00a1fa7fb0986be2eb6241c596160085e2f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a1255a810c5d41dfe7c69dee781c670965f0756c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243170"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703666"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>将 sqlcmd 与脚本变量结合使用
   脚本中使用的变量称为脚本变量。 使用脚本变量，一个脚本可以应用于多个方案中。 例如，如果需要对多台服务器运行单个脚本，则可以用脚本变量来表示服务器名称，而不必为每台服务器修改脚本。 通过更改脚本变量表示的服务器名称，可以在不同的服务器上运行同一脚本。  
@@ -105,7 +105,7 @@ ms.locfileid: "75243170"
 |变量|相关选项|R/W|默认|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER*|-U|R|""|  
-|SQLCMDPASSWORD*|-P|--|""|  
+|SQLCMDPASSWORD*|-p|--|""|  
 |SQLCMDSERVER*|sqlcmd|R|"DefaultLocalInstance"|  
 |SQLCMDWORKSTATION|-H|R|"ComputerName"|  
 |SQLCMDDBNAME|-d|R|""|  

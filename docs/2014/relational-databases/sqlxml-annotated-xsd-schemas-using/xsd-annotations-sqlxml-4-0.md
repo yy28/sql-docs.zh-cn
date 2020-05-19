@@ -10,15 +10,15 @@ helpviewer_keywords:
 - annotated XSD schemas, annotations listed
 - XSD schemas [SQLXML], annotations
 ms.assetid: c62a6785-8d66-40a2-9c5d-80c73d600a3b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1b9e50cc418ef1fa2076b3207d7d3429694f160a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7fa444ebbf33c48a243703a19d1f296ce91816e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013549"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703457"
 ---
 # <a name="xsd-annotations-sqlxml-40"></a>XSD 批注 (SQLXML 4.0)
   下表列出在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中引入的 XSD 批注，并且将这些批注与已在 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 中引入的 XDR 批注进行比较。  
@@ -29,7 +29,7 @@ ms.locfileid: "66013549"
 |`sql:guid`|允许您指定是要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的 GUID 值，还是使用在该列的 updategram 中提供的值。|[使用 sql:identity 和 sql:guid 批注](using-the-sql-identity-and-sql-guid-annotations.md)|不支持|  
 |`sql:hide`|隐藏在最终 XML 文档的架构中指定的元素或属性。|[使用 sql:hide 隐藏元素和属性](hiding-elements-and-attributes-by-using-sql-hide.md)|不支持|  
 |`sql:identity`|可对映射到 IDENTITY 类型数据库列的任何节点指定。 为此批注指定的值定义如何更新数据库中相应 IDENTITY 类型的列。|[使用 sql:identity 和 sql:guid 批注](using-the-sql-identity-and-sql-guid-annotations.md)|不支持|  
-|`sql:inverse`|指示 updategram 逻辑使用** \<sql： relationship>** 反转其对父子关系的解释。|[在 sql： relationship 上指定 sql：反向特性 &#40;SQLXML 4.0&#41;](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)|不支持|  
+|`sql:inverse`|指示 updategram 逻辑使用** \< sql： relationship>** 反转其对父子关系的解释。|[在 sql： relationship 上指定 sql：反向特性 &#40;SQLXML 4.0&#41;](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)|不支持|  
 |`sql:is-constant`|创建不映射到任何表的 XML 元素。 该元素出现在查询输出中。|[使用 sql 创建常量元素：是常量 &#40;SQLXML 4.0&#41;](creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md)|相同|  
 |`sql:key-fields`|允许规定唯一标识表中的行的列。|[使用 sql：键字段 &#40;SQLXML 4.0&#41;标识键列](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)|相同|  
 |`sql:limit-field`<br /><br /> `sql:limit-value`|允许限制基于限制值返回的值。|[使用 sql： limit 字段和 sql： limit-value &#40;SQLXML 4.0&#41;筛选值](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-limit-field-and-sql-limit-value.md)|相同|  

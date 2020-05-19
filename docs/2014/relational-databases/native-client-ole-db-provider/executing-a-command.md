@@ -13,22 +13,22 @@ helpviewer_keywords:
 - OLE DB extensions for XML
 - SQL Server Native Client OLE DB provider, command execution
 ms.assetid: bb0b3cbf-fe45-46ba-b2ec-c5a39e3c7081
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5f94cc014a04c3392fefb61f4fa291a8f5a44ad8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 47307455468a20351c3a3cda2a619e6296fb29ad
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638457"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704735"
 ---
 # <a name="executing-a-command"></a>执行命令
   与数据源建立连接后，使用者调用 IDBCreateSession::CreateSession**** 方法来创建会话。 该会话充当命令、行集或事务工厂。  
   
  为了直接使用单独的表或索引，使用者请求 `IOpenRowset` 接口。 `IOpenRowset::OpenRowset` 方法打开并返回一个行集，该行集包括来自单个基表或索引的所有行。  
   
- 若要执行命令（如 SELECT \* FROM 作者），使用者请求`IDBCreateCommand`接口。 使用者可以执行 `IDBCreateCommand::CreateCommand` 方法，以便为 `ICommandText` 接口创建一个命令对象和请求。 `ICommandText::SetCommandText` 方法用于指定要执行的命令。  
+ 若要执行命令（如 SELECT \* FROM 作者），使用者请求 `IDBCreateCommand` 接口。 使用者可以执行 `IDBCreateCommand::CreateCommand` 方法，以便为 `ICommandText` 接口创建一个命令对象和请求。 `ICommandText::SetCommandText` 方法用于指定要执行的命令。  
   
  `Execute` 命令用于执行该命令。 该命令可以是任何 SQL 语句或过程名称。 不是所有命令都将生成结果集（行集）对象。 SELECT * FROM Authors 之类的命令将生成结果集。  
   

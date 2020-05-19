@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], color coding
 - color coding [Query Editor]
 ms.assetid: 802882dc-c997-4e3f-8a01-994bb43169ae
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e615a8e316cb5c8e15056eeaa111b5daf1ef5513
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 840096c197a2e827281bb0023ad03a6d407f3758
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244945"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704047"
 ---
 # <a name="color-coding-in-query-editors"></a>查询编辑器中的颜色编码
   在代码编辑器中输入的文本分配有一个类别；每个类别都由某种颜色来标识。 这些颜色有助于您在代码中快速查找文本。 例如，注释突出显示为深绿色。 下表列出了最常用的颜色。 在 **“工具”** 菜单的 **“选项”** 中，可以查看颜色及其类别的完整列表，并可配置自定义配色方案。 有关如何更改默认颜色的详细信息，请参阅 [Change Font Color, Size, and Style](change-font-color-size-and-style.md)。  

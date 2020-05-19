@@ -9,27 +9,27 @@ ms.topic: reference
 helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1aea946703b9ebe06c32fcc25044a3b68326625e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fb6c943e237e791ff4febed0ab3273eb9324662
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63199251"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704262"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 用户定义类型 (OLE DB)
   本主题讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中为支持大型公共语言运行时 (CLR) 用户定义类型 (UDT) 而对 OLE DB 进行的更改。  
   
- 有关 Native Client 中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]对大型 clr udt 的支持的详细信息，请参阅[大型 Clr 用户定义类型](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。 有关示例，请参阅[使用大型 CLR UDT (OLE DB)](../../native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)。  
+ 有关 Native Client 中对大型 CLR Udt 的支持的详细信息 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，请参阅[大型 Clr 用户定义类型](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。 有关示例，请参阅[使用大型 CLR UDT (OLE DB)](../../native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)。  
   
 ## <a name="data-format"></a>数据格式  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用 ~0 表示其大小对于大型对象 (LOB) 类型不受限制的值的长度。 ~0 还表示大于 8,000 个字节的 CLR UDT 的大小。  
   
  下表显示了参数和行集中的数据类型映射：  
   
-|SQL Server 数据类型|OLE DB 数据类型|内存布局|Value|  
+|SQL Server 数据类型|OLE DB 数据类型|内存布局|值|  
 |--------------------------|----------------------|-------------------|-----------|  
 |CLR UDT|DBTYPE_UDT|BYTE[]（字节数组\)|132 (oledb.h)|  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63199251"
  DBPROPSET_SQLSERVERCOLUMN 属性集通过 OLE DB 支持表的创建。 有关详细信息，请参阅[使用用户定义类型](../features/using-user-defined-types.md)。  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable 中的数据类型映射  
- 当需要 UDT 列时， `DBCOLUMNDESC`将在 ITableDefinition：： CreateTable 使用的结构中使用以下信息：  
+ `DBCOLUMNDESC`当需要 UDT 列时，将在 ITableDefinition：： CreateTable 使用的结构中使用以下信息：  
   
 |OLE DB 数据类型 (wType**)|pwszTypeName**|SQL Server 数据类型|rgPropertySets**|  
 |----------------------------------|--------------------|--------------------------|----------------------|  
@@ -118,13 +118,13 @@ ms.locfileid: "63199251"
 |绑定数据类型|UDT 到服务器|非 UDT 到服务器|UDT 来自服务器|非 UDT 来自服务器|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|支持 (5)|错误 (1)|支持 (5)|错误 (4)|  
-|DBTYPE_BYTES|支持 (5)|不适用|支持 (5)|不适用|  
-|DBTYPE_WSTR|支持 (2)、(5)|不适用|支持 (3)、(5)、(6)|不适用|  
-|DBTYPE_BSTR|支持 (2)、(5)|不适用|支持 (3)、(5)|不适用|  
-|DBTYPE_STR|支持 (2)、(5)|不适用|支持 (3)、(5)|不适用|  
-|DBTYPE_IUNKNOWN|支持 (6)|不适用|支持 (6)|不适用|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支持 (5)|不适用|支持 (3)、(5)|不适用|  
-|DBTYPE_VARIANT (VT_BSTR)|支持 (2)、(5)|不适用|空值|空值|  
+|DBTYPE_BYTES|支持 (5)|不可用|支持 (5)|不可用|  
+|DBTYPE_WSTR|支持 (2)、(5)|不可用|支持 (3)、(5)、(6)|不可用|  
+|DBTYPE_BSTR|支持 (2)、(5)|不可用|支持 (3)、(5)|不可用|  
+|DBTYPE_STR|支持 (2)、(5)|不可用|支持 (3)、(5)|不可用|  
+|DBTYPE_IUNKNOWN|支持 (6)|不可用|支持 (6)|不可用|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支持 (5)|不可用|支持 (3)、(5)|不可用|  
+|DBTYPE_VARIANT (VT_BSTR)|支持 (2)、(5)|不可用|空值|空值|  
   
 ### <a name="key-to-symbols"></a>符号含义  
   

@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], server to client
 ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d9e922f5bf8d07e75c976dbfc07b89b8527dbbc8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d248abc5fbfeb22b7ef399945b0116e9be2bda51
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023366"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705096"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>在服务器和客户端之间执行的转换
   本主题说明在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本）与使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 编写的客户端应用程序之间执行的日期/时间转换。  
@@ -27,25 +27,25 @@ ms.locfileid: "63023366"
   
 |转换后 -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|日期|1,7|OK|-|-|1|1,3|1,7|-|OK (VT_BSTR)|OK|OK|4|4|  
-|时间|5、6、7|-|9|OK|6|3、6|5、6|-|OK (VT_BSTR)|OK|OK|4|4|  
-|Smalldatetime|7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
-|Datetime|5、7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
-|Datetime2|5、7|8|9,10|10|7|3|5、7|-|OK (VT_BSTR)|OK|OK|4|4|  
-|Datetimeoffset|5、7、11|8，11|9、10、11|10，11|7、11|OK|5、7、11|-|OK (VT_BSTR)|OK|OK|4|4|  
-|Char、Varchar、<br /><br /> Nchar、Nvarchar|7, 13|12|12、9|12|12|12|7、13|不适用|空值|空值|空值|空值|空值|  
-|Sql_variant<br /><br /> (datetime)|7|8|9,10|10|OK|3|7|-|7(VT_DATE)|OK|OK|4|4|  
-|Sql_variant<br /><br /> (smalldatetime)|7|8|9,10|10|OK|3|7|-|7(VT_DATE)|OK|OK|4|4|  
-|Sql_variant<br /><br /> (date)|1,7|OK|2|2|1|1,3|1,7|-|OK(VT_BSTR)|OK|OK|4|4|  
-|Sql_variant<br /><br /> (time)|5、6、7|2|6|OK|6|3、6|5、6|-|OK(VT_BSTR)|OK|OK|4|4|  
-|Sql_variant<br /><br /> (datetime2)|5、7|8|9,10|10|OK|3|5、7|-|OK(VT_BSTR)|OK|OK|4|4|  
-|Sql_variant<br /><br /> (datetimeoffset)|5、7、11|8，11|9、10、11|10，11|7、11|OK|5、7、11|-|OK(VT_BSTR)|OK|OK|4|4|  
+|日期|1,7|确定|-|-|1|1,3|1,7|-|OK (VT_BSTR)|确定|OK|4|4|  
+|时间|5、6、7|-|9|确定|6|3、6|5、6|-|OK (VT_BSTR)|确定|OK|4|4|  
+|Smalldatetime|7|8|9,10|10|确定|3|7|-|7 (VT_DATE)|确定|OK|4|4|  
+|datetime|5、7|8|9,10|10|确定|3|7|-|7 (VT_DATE)|确定|OK|4|4|  
+|Datetime2|5、7|8|9,10|10|7|3|5、7|-|OK (VT_BSTR)|确定|OK|4|4|  
+|Datetimeoffset|5、7、11|8，11|9、10、11|10,11|7、11|确定|5、7、11|-|OK (VT_BSTR)|确定|OK|4|4|  
+|Char、Varchar、<br /><br /> Nchar、Nvarchar|7, 13|12|12、9|12|12|12|7、13|不可用|空值|空值|空值|空值|空值|  
+|Sql_variant<br /><br /> (datetime)|7|8|9,10|10|确定|3|7|-|7(VT_DATE)|确定|OK|4|4|  
+|Sql_variant<br /><br /> (smalldatetime)|7|8|9,10|10|确定|3|7|-|7(VT_DATE)|确定|OK|4|4|  
+|Sql_variant<br /><br /> (date)|1,7|确定|2|2|1|1,3|1,7|-|OK(VT_BSTR)|确定|OK|4|4|  
+|Sql_variant<br /><br /> (time)|5、6、7|2|6|确定|6|3、6|5、6|-|OK(VT_BSTR)|确定|OK|4|4|  
+|Sql_variant<br /><br /> (datetime2)|5、7|8|9,10|10|确定|3|5、7|-|OK(VT_BSTR)|确定|OK|4|4|  
+|Sql_variant<br /><br /> (datetimeoffset)|5、7、11|8，11|9、10、11|10,11|7、11|确定|5、7、11|-|OK(VT_BSTR)|确定|OK|4|4|  
   
 ## <a name="key-to-symbols"></a>符号含义  
   
 |符号|含义|  
 |------------|-------------|  
-|OK|不需要任何转换。|  
+|确定|不需要任何转换。|  
 |-|不支持任何转换。 如果在调用 IAccessor::CreateAccessor 时验证绑定，则在 rgStatus** 中返回 DBBINDSTATUS_UPSUPPORTEDCONVERSION。 当延迟取值函数验证时，则设置 DBSTATUS_E_BADACCESSOR。|  
 |1|时间字段设置为零。|  
 |2|设置 DBSTATUS_E_CANTCONVERTVALUE。|  

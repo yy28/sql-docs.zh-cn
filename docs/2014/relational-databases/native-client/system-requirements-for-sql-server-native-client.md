@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SQL Server Native Client, system requirements
 - SQLNCLI, system requirements
 ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 85b00f00e2c557f31a7343a99e1f2592741a6b59
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4bc3c47ea6d356279c5502eaf45abc09c307e7cd
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637799"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704130"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>SQL Server Native Client 的系统要求
   若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的数据访问功能（如 MARS），必须安装以下软件：  
@@ -35,7 +35,7 @@ ms.locfileid: "73637799"
 >  确保以管理员权限进行登录，然后再安装此软件。  
   
 ## <a name="operating-system-requirements"></a>操作系统要求  
- 有关支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的操作系统的列表，请参阅[SQL Server Native Client 的支持策略](applications/support-policies-for-sql-server-native-client.md)。  
+ 有关支持 Native Client 的操作系统的列表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅[SQL Server Native Client 的支持策略](applications/support-policies-for-sql-server-native-client.md)。  
   
 ## <a name="sql-server-requirements"></a>SQL Server 要求  
  若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据，必须安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
@@ -62,13 +62,13 @@ ms.locfileid: "73637799"
   
  没有对 ODBC 进行 `DataTypeCompatibility` 控制。  
   
- IDBInfo：： GetKeywords 将始终返回与连接上的服务器版本相对应的关键字列表，并不受影响`DataTypeCompatibility`。  
+ IDBInfo：： GetKeywords 将始终返回与连接上的服务器版本相对应的关键字列表，并不受影响 `DataTypeCompatibility` 。  
   
 |数据类型|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows 数据访问组件、MDAC 及<br /><br /> SQL Server Native Client OLE DB 应用程序（其中 DataTypeCompatibility=80）|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8Kb)|udt|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|图像|  
-|varchar(max)|varchar|varchar|Text|  
+|varchar(max)|varchar|varchar|文本|  
 |nvarchar(max)|nvarchar|nvarchar|Ntext|  
 |xml|xml|xml|Ntext|  
 |CLR UDT （> 8Kb）|udt|varbinary|图像|  

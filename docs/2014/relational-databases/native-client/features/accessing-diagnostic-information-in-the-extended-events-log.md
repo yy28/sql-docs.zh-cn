@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ddb50c8993de72230e97cdde729416258272bb1e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10ef11bf8d2620148f88392306aca4dbaace6f58
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046364"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704362"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>访问扩展事件日志中的诊断信息
-  从开始[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和数据访问跟踪（[数据访问跟踪](https://go.microsoft.com/fwlink/?LinkId=125805)）已更新，以便更轻松地从扩展事件日志中的连接环形缓冲区和应用程序性能信息获取有关连接失败的诊断信息。  
+  从开始 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和数据访问跟踪（[数据访问跟踪](https://go.microsoft.com/fwlink/?LinkId=125805)）已更新，以便更轻松地从扩展事件日志中的连接环形缓冲区和应用程序性能信息获取有关连接失败的诊断信息。  
   
  有关读取扩展事件日志的信息，请参阅[查看事件会话数据](../../../database-engine/view-event-session-data.md)。  
   
@@ -26,9 +26,9 @@ ms.locfileid: "63046364"
 >  该功能只用于故障排除和诊断目的，可能不适合审核或安全目的。  
   
 ## <a name="remarks"></a>备注  
- 对于连接操作，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将发送客户端连接 ID。 如果连接失败，您可以访问连接环形缓冲区（[使用连接环形缓冲区 SQL Server 2008 中的连接故障排除](https://go.microsoft.com/fwlink/?LinkId=207752)），并查找`ClientConnectionID`字段并获取有关连接失败的诊断信息。 仅当发生错误时，才在环形缓冲区中记录客户端连接 ID。 （如果在发送预登录数据包之前连接失败，将不会生成客户端连接 ID。）客户端连接 ID 是16字节的 GUID。 如果将 `client_connection_id` 操作添加到扩展事件会话中的事件，则还可以在扩展事件输出目标中找到客户端连接 ID。 如果您需要进一步的诊断帮助，则可以启用数据访问跟踪并再次运行连接命令，然后观察数据访问跟踪中的 `ClientConnectionID` 字段以查看是否有失败的操作。  
+ 对于连接操作，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将发送客户端连接 ID。 如果连接失败，您可以访问连接环形缓冲区（[使用连接环形缓冲区 SQL Server 2008 中的连接故障排除](https://go.microsoft.com/fwlink/?LinkId=207752)），并查找 `ClientConnectionID` 字段并获取有关连接失败的诊断信息。 仅当发生错误时，才在环形缓冲区中记录客户端连接 ID。 （如果在发送预登录数据包之前连接失败，将不会生成客户端连接 ID。）客户端连接 ID 是16字节的 GUID。 如果将 `client_connection_id` 操作添加到扩展事件会话中的事件，则还可以在扩展事件输出目标中找到客户端连接 ID。 如果您需要进一步的诊断帮助，则可以启用数据访问跟踪并再次运行连接命令，然后观察数据访问跟踪中的 `ClientConnectionID` 字段以查看是否有失败的操作。  
   
- 如果在 Native Client 中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用 ODBC 并且连接成功，则可以通过将`SQL_COPT_SS_CLIENT_CONNECTION_ID`属性与[SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md)结合使用来获取客户端连接 ID。  
+ 如果在 Native Client 中使用 ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 并且连接成功，则可以通过将 `SQL_COPT_SS_CLIENT_CONNECTION_ID` 属性与[SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md)结合使用来获取客户端连接 ID。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 还发送特定于线程的活动 ID。 如果开始会话时启用了 TRACK_CAUSAILITY 选项，则会在扩展的事件会话中捕获活动 ID。 对于活动连接的性能问题，您可以从客户端的数据访问跟踪（`ActivityID` 字段）中获取活动 ID，然后在扩展事件输出中找到活动 ID。 扩展事件中的活动 ID 是 16 字节 GUID（与客户端连接 ID 的 GUID 不同），且后面追加四个字节的序列号。 该序列号表示某个请求在线程内的顺序，并指示线程的批处理和 RPC 语句的相对顺序。 当启用数据访问跟踪且数据访问跟踪配置字词中的第 18 位设置为“打开”时，可以针对 SQL 批处理语句和 RPC 请求发送 `ActivityID`（可选）。  
   

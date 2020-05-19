@@ -16,20 +16,20 @@ helpviewer_keywords:
 - annotated XSD schemas, CDATA sections
 - sql:use-cdata
 ms.assetid: 26d2b9dc-f857-44ff-bcd4-aaf64ff809d0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cddde2ed1e40b2ea21cf4ebff75bea3beed8f2ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f1442011ddbdb010e5f498dbf3b42fa9ba333ea
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014010"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703647"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>使用 sql:use-cdata 创建 CDATA 节 (SQLXML 4.0)
   在 XML 中，CDATA 节用于对那些所含字符不转义则会识别为标记字符的特定文本块进行转义。  
   
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的数据库有时可能包含由 XML 分析器视为标记字符的字符;例如，尖括号（\<和 >）、小于或等于符号（<=）以及与号（&）都被视为标记字符。 但是，可以在 CDATA 节中对这类特殊字符进行包装，使它们不被视为标记字符。 XML 语法分析程序将 CDATA 节中的文本视为纯文本。  
+ Microsoft 中的数据库 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有时可以包含由 XML 分析器视为标记字符的字符; 例如，尖括号（ \< 和 >）、小于或等于符号（<=）以及与号（&）都被视为标记字符。 但是，可以在 CDATA 节中对这类特殊字符进行包装，使它们不被视为标记字符。 XML 语法分析程序将 CDATA 节中的文本视为纯文本。  
   
  `sql:use-cdata` 批注用于指定应当将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回的数据包含在 CDATA 节中，就是说，它指示是否应当将由 `sql:field` 指定的列中的值包含在 CDATA 节中。 可以仅对映射到数据库列的元素指定 `sql:use-cdata` 批注。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66014010"
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqluse-cdata-on-an-element"></a>A. 在元素上指定 sql:use-cdata  
- 在下面的架构中`sql:use-cdata` ，对于** \<地址>** 元素中的** \<AddressLine1>** 设置为1（True）。 结果，将在 CDATA 节中返回数据。  
+ 在下面的架构中， `sql:use-cdata` 对于** \< 地址>** 元素中的** \< AddressLine1>** 设置为1（True）。 结果，将在 CDATA 节中返回数据。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

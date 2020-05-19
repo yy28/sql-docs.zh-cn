@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - bcp_setbulkmode function
 ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9671447a2fba1cd57b021266f29de7af741f0de6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53a89baa1fc13759bd24d6c12190bce509f6dfce
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62688794"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705273"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
   bcp_setbulkmode 允许您在大容量复制操作中指定列格式，并在单个函数调用中设置所有列特性。  
@@ -77,12 +77,12 @@ cbRow
   
  下表列出了 property 参数的常量**。  
   
-|属性|说明|  
+|Property|说明|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|指定字符输出模式。<br /><br /> 对应于 BCP 中的-c 选项。EXE，并将`BCP_FMT_TYPE`属性设置为`SQLCHARACTER`bcp_setcolfmt。|  
-|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 输出模式。<br /><br /> 对应于 BCP 中的-w 选项。EXE 和 bcp_setcolfmt `BCP_FMT_TYPE`属性设置为`SQLNCHAR`的。|  
-|BCP_OUT_NATIVE_TEXT_MODE|指定对非字符类型使用本机类型，对字符类型使用 Unicode。<br /><br /> 对应于 BCP 中的-N 选项。使用`BCP_FMT_TYPE`属性设置为的 EXE 和`SQLNCHAR` bcp_setcolfmt （如果列类型是字符串，则默认值为; 如果不是字符串，则为默认值）。|  
-|BCP_OUT_NATIVE_MODE|指定本机数据库类型。<br /><br /> 对应于 BCP 中的-n 选项。EXE 和 bcp_setcolfmt， `BCP_FMT_TYPE`其属性设置为默认值。|  
+|BCP_OUT_CHARACTER_MODE|指定字符输出模式。<br /><br /> 对应于 BCP 中的-c 选项。EXE，并将 `BCP_FMT_TYPE` 属性设置为 bcp_setcolfmt `SQLCHARACTER` 。|  
+|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 输出模式。<br /><br /> 对应于 BCP 中的-w 选项。EXE 和 bcp_setcolfmt `BCP_FMT_TYPE` 属性设置为的 `SQLNCHAR` 。|  
+|BCP_OUT_NATIVE_TEXT_MODE|指定对非字符类型使用本机类型，对字符类型使用 Unicode。<br /><br /> 对应于 BCP 中的-N 选项。使用属性设置为的 EXE 和 bcp_setcolfmt `BCP_FMT_TYPE` `SQLNCHAR` （如果列类型是字符串，则默认值为; 如果不是字符串，则为默认值）。|  
+|BCP_OUT_NATIVE_MODE|指定本机数据库类型。<br /><br /> 对应于 BCP 中的-n 选项。EXE 和 bcp_setcolfmt，其 `BCP_FMT_TYPE` 属性设置为默认值。|  
   
  不应将 bcp_setbulkmode 与包含 bcp_setcolfmt、bcp_control 和 bcp_readfmt 的函数调用序列一起使用。 例如，不应调用 bcp_control （BCPTEXTFILE）和 bcp_setbulkmode。  
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - bindings [OLE DB]
 - OLE DB, bindings and conversions
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b35583f18cbe590773c6661091186f669e012555
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d920fef68adaa63059970a49c9473d75eeabfd30
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638204"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705048"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>绑定和转换 (OLE DB)
   本节介绍如何在 `datetime` 值和 `datetimeoffset` 值之间进行转换。 本节中描述的这些转换或者已由 OLE DB 提供，或者是 OLE DB 的一致扩展。  
@@ -28,7 +28,7 @@ ms.locfileid: "62638204"
   
 -   `datetime` 和 `datetimeoffset` 字符串的格式是：  
   
-     *yyyy*-*mm*mm-*dd*[ *hh*：*mm*：*ss*[。*9999999*] [？？ *hh*：*mm*]]  
+     *yyyy* -*mm* -*dd*[ *hh*：*mm*：*ss*[。*9999999*] [？？ *hh*：*mm*]]  
   
 -   `time` 字符串的格式是：  
   

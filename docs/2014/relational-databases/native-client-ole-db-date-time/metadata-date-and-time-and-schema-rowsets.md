@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], schema rowsets
 ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 710fbfdfd57608c24c56def1f2f9c4ec373f1957
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9238898efd324fae1e4990405c90e31fb7876ca4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63238016"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705033"
 ---
 # <a name="date-and-time-and-schema-rowsets"></a>日期和时间以及架构行集
   本主题提供有关 COLUMNS 行集和 PROCEDURE_PARAMETERS 行集的信息。 该信息与 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中引入的 OLE DB 日期和时间增强功能相关。  
@@ -30,7 +30,7 @@ ms.locfileid: "63238016"
 |date|DBTYPE_DBDATE|Clear|0|  
 |time|DBTYPE_DBTIME2|设置|0..7|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
-|日期/时间|DBTYPE_DBTIMESTAMP|Clear|3|  
+|datetime|DBTYPE_DBTIMESTAMP|Clear|3|  
 |datetime2|DBTYPE_DBTIMESTAMP|设置|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|设置|0..7|  
   

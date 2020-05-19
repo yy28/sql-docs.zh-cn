@@ -12,15 +12,15 @@ helpviewer_keywords:
 - text printing [SQL Server Management Studio]
 - printing code and text
 ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1a66d054f3952c1491b88df77f8999e87af65447
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d0b42a2d64b991089a7bec51a88704834e941432
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75241972"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703776"
 ---
 # <a name="print-code-and-results"></a>打印代码和结果
   在打印查询或文件时，如果打印机支持彩色打印，并且打印机设置中启用了彩色打印功能，则以彩色打印方式打印设定了颜色的元素。  

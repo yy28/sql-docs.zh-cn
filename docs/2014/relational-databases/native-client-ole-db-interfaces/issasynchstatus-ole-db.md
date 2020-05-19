@@ -13,18 +13,18 @@ topic_type:
 helpviewer_keywords:
 - ISSAsynchStatus interface
 ms.assetid: c643f09f-9ccc-4d8b-9243-3cde86c2bd46
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: aeb6c6c789bfe1ca2af5616fb0a1ef9785700224
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a4ea32cc0b36f1151c68b06af8f5445d4d46267b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127760"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704832"
 ---
 # <a name="issasynchstatus-ole-db"></a>ISSAsynchStatus (OLE DB)
-  **ISSAsynchStatus**公开对异步[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]操作的支持。 这是一个可选接口，它继承自 core OLE DB interface **IDBAsynchStatus**。 除了从 IDBAsynchStatus 继承的 Abort 和 GetStatus 方法外，ISSAsynchStatus 还提供一个新方法，用于在完成异步操作或发生超时前等待****************。  
+  **ISSAsynchStatus**公开对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 异步操作的支持。 这是一个可选接口，它继承自 core OLE DB interface **IDBAsynchStatus**。 除了从 IDBAsynchStatus 继承的 Abort 和 GetStatus 方法外，ISSAsynchStatus 还提供一个新方法，用于在完成异步操作或发生超时前等待****************。  
   
 |方法|说明|  
 |------------|-----------------|  

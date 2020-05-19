@@ -15,18 +15,18 @@ helpviewer_keywords:
 - stored procedures [OLE DB], calling
 - SQL Server Native Client OLE DB provider, stored procedures
 ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7385dddea48813615a851979e526af5f03a23332
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33fedf2957203b1a750aba8fd086087c03ffc934
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206578"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704187"
 ---
 # <a name="calling-a-stored-procedure-ole-db"></a>调用存储过程 (OLE DB)
-  存储过程可以有零个或多个参数。 它还可以返回值。 使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序时，可以通过以下方式传递存储过程的参数：  
+  存储过程可以有零个或多个参数。 它还可以返回值。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序时，可以通过以下方式传递存储过程的参数：  
   
 -   对数据值进行硬编码。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68206578"
 5.  通过使用 ICommand::Execute 执行命令****。  
   
 ## <a name="methods-of-calling-a-stored-procedure"></a>调用存储过程的方法  
- 在中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]执行存储过程时， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持：  
+ 在中执行存储过程时 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持：  
   
 -   ODBC CALL 转义序列。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68206578"
  有关展示 RPC 转义序列的示例应用程序，请参阅[执行存储过程（使用 RPC 语法）并处理返回代码和输出参数 &#40;OLE DB&#41;](../../native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)。  
   
 ### <a name="transact-sql-execute-statement"></a>Transact-SQL EXECUTE 语句  
- 与 [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql) 语句相比，ODBC CALL 转义序列和 RPC 转义序列是调用存储过程的首选方法。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序使用的 RPC 机制[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]来优化命令处理。 此 RPC 协议通过避免在服务器上进行大量参数处理和语句分析来提高性能。  
+ 与 [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql) 语句相比，ODBC CALL 转义序列和 RPC 转义序列是调用存储过程的首选方法。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序使用的 RPC 机制 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 来优化命令处理。 此 RPC 协议通过避免在服务器上进行大量参数处理和语句分析来提高性能。  
   
  下面是  EXECUTE[!INCLUDE[tsql](../../../includes/tsql-md.md)] **** 语句示例：  
   

@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_collen function
 ms.assetid: faaf1f7a-81f2-4852-a178-56602c33673a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a66a88a61a581dff262fb8585b5cf32830f8eeed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e46f3c241d44033194c484b8955389fba972fd22
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62718094"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705326"
 ---
 # <a name="bcp_collen"></a>bcp_collen
   为目标为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的当前大容量复制设置程序变量中的数据长度。  
@@ -59,7 +59,7 @@ idxServerCol
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>备注  
- 使用**bcp_collen**函数，可以在将数据复制到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]具有[bcp_sendrow](bcp-sendrow.md)时，更改特定列的程序变量中的数据长度。  
+ 使用**bcp_collen**函数，可以在将数据复制到具有 bcp_sendrow 时，更改特定列的程序变量中的数据长度 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [bcp_sendrow](bcp-sendrow.md)  
   
  最初，数据长度是在调用[bcp_bind](bcp-bind.md)时确定的。 如果数据长度在对**bcp_sendrow**的调用之间发生更改，并且没有使用长度前缀或终止符，则可以调用**bcp_collen**来重置长度。 对**bcp_sendrow**的下一次调用使用由对**bcp_collen**的调用设置的长度。  
   

@@ -10,20 +10,20 @@ helpviewer_keywords:
 - bulk copy [ODBC]
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 6037b2c2-62b5-4a9e-b36d-83e5b315eef2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dcc35614e156301efa5892d59a09156c189e0fac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 515f84836f55fe1aa97fbb03a22ee6cc2799710c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72688882"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705243"
 ---
 # <a name="bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc"></a>使用 SQL Server ODBC 驱动程序进行大容量复制操作指南主题 (ODBC)
   与 Microsoft SQL Server 2005 一起使用时，SQL Server ODBC 驱动程序支持 DB-LIBRARY API 所支持的相同大容量复制函数。  
   
- 有关从开始大容量复制的重大更改的信息[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，请参阅[&#40;ODBC&#41;执行大容量复制操作](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
+ 有关从开始大容量复制的重大更改的信息 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ，请参阅[&#40;ODBC&#41;执行大容量复制操作](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
   

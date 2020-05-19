@@ -13,18 +13,18 @@ helpviewer_keywords:
 - SQLSTATEs
 - errors [ODBC], cause information
 ms.assetid: 84cce528-edb0-473f-a85f-3eb87fbe2cf3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 253841e26ab7ecbeafb2cfeeed8c090c91650d14
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79e059843d14bccac6e9b9a0dd647c214fd11c06
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62805861"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705375"
 ---
 # <a name="sqlstate-odbc-error-codes"></a>SQLSTATE（ODBC 错误代码）
-  SQLSTATE 提供与警告或错误的原因有关的详细信息。 对于在检测并返回的数据源中发生的错误[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native Client ODBC 驱动程序将返回的本机错误号映射到相应的 SQLSTATE。 如果本机错误号没有要映射到的 ODBC 错误代码，则 native Client ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驱动程序将返回 SQLSTATE 42000 （"语法错误或访问冲突"）。 对于驱动程序检测到的错误， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序将生成相应的 SQLSTATE。  
+  SQLSTATE 提供与警告或错误的原因有关的详细信息。 对于在检测并返回的数据源中发生的错误 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序将返回的本机错误号映射到相应的 SQLSTATE。 如果本机错误号没有要映射到的 ODBC 错误代码，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驱动程序将返回 SQLSTATE 42000 （"语法错误或访问冲突"）。 对于驱动程序检测到的错误， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驱动程序将生成相应的 SQLSTATE。  
   
  有关状态错误代码的详细信息，请参阅下面的主题：  
   

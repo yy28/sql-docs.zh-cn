@@ -13,18 +13,18 @@ topic_type:
 helpviewer_keywords:
 - ISSCommandWithParameters interface
 ms.assetid: 3419b7f3-36a3-4863-816e-e641e4e90496
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4de7c6a99afcbd7db7c6e233fb737f129b536b8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c55af9d21c669bd452de2bac9db56d158febc449
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209769"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704799"
 ---
 # <a name="isscommandwithparameters-ole-db"></a>ISSCommandWithParameters (OLE DB)
-  **ISSCommandWithParameters**公开对 XML [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和用户定义类型（UDT）的支持。 这是一个可选接口，它继承自 core OLE DB interface **ICommandWithParameters**。 除了从**ICommandWithParameters**继承的三个方法;**GetParameterInfo**、 **MapParameterNames**和**SetParameterInfo**;**ISSCommandWithParameters**提供了两种新方法用于处理特定于服务器的数据类型。  
+  **ISSCommandWithParameters**公开对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 和用户定义类型（UDT）的支持。 这是一个可选接口，它继承自 core OLE DB interface **ICommandWithParameters**。 除了从**ICommandWithParameters**继承的三个方法;**GetParameterInfo**、 **MapParameterNames**和**SetParameterInfo**;**ISSCommandWithParameters**提供了两种新方法用于处理特定于服务器的数据类型。  
   
 > [!NOTE]  
 >  使用服务组件时，可以使用**ISSCommandWithParameters**接口，但服务组件本身将不会使用此接口。  

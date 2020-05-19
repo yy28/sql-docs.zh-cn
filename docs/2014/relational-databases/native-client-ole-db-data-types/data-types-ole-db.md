@@ -12,18 +12,18 @@ helpviewer_keywords:
 - data types [OLE DB]
 - OLE DB, data types
 ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e9371f053f95754cdcb7107559f9e0bc3eca2e9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b29121aa91dc6d237c0d5809d04e557fb766084
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062135"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705108"
 ---
 # <a name="data-types-ole-db"></a>数据类型 (OLE DB)
-  若要[!INCLUDE[tsql](../../includes/tsql-md.md)]使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB 提供程序来执行语句并处理结果，您必须知道在行集[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内绑定参数或列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，Native Client OLE DB 提供程序如何将数据类型映射到 OLE DB 数据类型，以及何时使用**ITableDefinition**接口在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]创建表。  
+  若要 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用 Native client OLE DB 提供程序来执行语句并处理结果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，您必须知道在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 行集内绑定参数或列时，Native Client OLE DB 提供程序如何将数据类型映射到 OLE DB 数据类型，以及何时使用**ITableDefinition**接口在中创建表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="in-this-section"></a>本节内容  
   

@@ -15,18 +15,18 @@ topic_type:
 helpviewer_keywords:
 - bcp_colfmt function
 ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4c583ffad2267a82c39d4ab6c7cd71a1852c7cb2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96773f6ed74282cfd1610fc0b297b7e78e892c42
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63065455"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705344"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
-  指定用户文件中的数据的源或目标格式。 用作源格式时， **bcp_colfmt**指定用作大容量复制到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表中的数据源的现有数据文件的格式。 用作目标格式时，将使用**bcp_colfmt**指定的列格式创建数据文件。  
+  指定用户文件中的数据的源或目标格式。 用作源格式时， **bcp_colfmt**指定用作大容量复制到表中的数据源的现有数据文件的格式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 用作目标格式时，将使用**bcp_colfmt**指定的列格式创建数据文件。  
   
 ## <a name="syntax"></a>语法  
   
@@ -72,11 +72,11 @@ idxServerCol
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]在*eUserDataType*参数中引入了对 SQLXML 和 SQLUDT 数据类型标记的支持。  
   
- *EUserDataType*参数由 sqlncli.msi 中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型标记进行枚举，而非 ODBC C 数据类型枚举器。 例如，可以使用特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的类型 SQLCHARACTER 来指定一个 ODBC 类型 SQL_C_CHAR 的字符串。  
+ *EUserDataType*参数由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlncli.msi 中的数据类型标记进行枚举，而非 ODBC C 数据类型枚举器。 例如，可以使用特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的类型 SQLCHARACTER 来指定一个 ODBC 类型 SQL_C_CHAR 的字符串。  
   
  若要为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型指定默认的数据表示形式，则将此参数设置为 0。  
   
- 若要在*eUserDataType*为 SQLDECIMAL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQLNUMERIC 时，从大容量复制到文件中：  
+ 若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *EUSERDATATYPE*为 SQLDECIMAL 或 SQLNUMERIC 时，从大容量复制到文件中：  
   
 -   如果源列不是**decimal**或**numeric**，则使用默认的精度和小数位数。  
   
@@ -100,7 +100,7 @@ idxServerCol
   
  将*cbUserData*设置为 SQL_VARLEN_DATA 指示系统应确定每列中的数据长度。 对于某些列，这可能意味着生成长度/空指示符，以便置于来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的副本的数据前，或者意味着该指示符应位于复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的数据中。  
   
- 对于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字符和二进制数据类型， *cbUserData*可以是 SQL_VARLEN_DATA、SQL_NULL_DATA、0或某个正值。 如果 SQL_VARLEN_DATA *cbUserData* ，则系统使用长度指示器（如果存在）或终止符序列来确定数据的长度。 如果长度指示符和终止符序列均提供，则大容量复制将采用导致数据复制量最少的方法。 如果*cbUserData* SQL_VARLEN_DATA，则数据类型为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字符或二进制类型，并且不指定长度指示符和终止符序列，系统将返回一条错误消息。  
+ 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字符和二进制数据类型， *cbUserData*可以是 SQL_VARLEN_DATA、SQL_NULL_DATA、0或某个正值。 如果 SQL_VARLEN_DATA *cbUserData* ，则系统使用长度指示器（如果存在）或终止符序列来确定数据的长度。 如果长度指示符和终止符序列均提供，则大容量复制将采用导致数据复制量最少的方法。 如果*cbUserData* SQL_VARLEN_DATA，则数据类型为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字符或二进制类型，并且不指定长度指示符和终止符序列，系统将返回一条错误消息。  
   
  如果 cbUserData 为 0 或正值，则系统使用 cbUserData 作为最大数据长度****。 但是，如果除了正的 cbUserData 以外，还提供了长度指示器或终止符序列，则系统使用导致数据复制量最少的方法来确定数据长度**。  
   

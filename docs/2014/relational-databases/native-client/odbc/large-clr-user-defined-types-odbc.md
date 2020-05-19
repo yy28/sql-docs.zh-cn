@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ODBC, large user-defined types
 - large user-defined types [ODBC]
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5af4f85652fc1a8a333912c741f96df014655ebe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df59c3a49715791e2f525e4bc5a69ff8991cac44
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144300"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704277"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>大型 CLR 用户定义类型 (ODBC)
   本主题讨论 SQL Server Native Client 中为支持大型公共语言运行时 (CLR) 用户定义类型 (UDT) 而对 ODBC 进行的更改。  
@@ -34,7 +34,7 @@ ms.locfileid: "63144300"
   
  下表显示了参数和结果集中的数据类型映射：  
   
-|SQL Server 数据类型|SQL 数据类型|Value|  
+|SQL Server 数据类型|SQL 数据类型|值|  
 |--------------------------|-------------------|-----------|  
 |CLR UDT|SQL_SS_UDT|-151 (sqlncli.h)|  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63144300"
   
 |SQL 数据类型|内存布局|C 数据类型|值 (sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
-|SQL_SS_UDT|SQLCHAR * （无符号\*字符）|SQL_C_BINARY|SQL_BINARY (-2)|  
+|SQL_SS_UDT|SQLCHAR * （无符号字符 \* ）|SQL_C_BINARY|SQL_BINARY (-2)|  
   
 ## <a name="descriptor-fields-for-parameters"></a>参数的描述符字段  
  IPD 字段中返回的信息如下所示：  
@@ -210,7 +210,7 @@ ms.locfileid: "63144300"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  为 UDT 返回的值如下所示：  
   
-|SQL 数据类型|类型|子类型|长度|Precision|缩放|  
+|SQL 数据类型|类型|子类型|长度|精度|缩放|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> （长度小于或等于 8,000 个字节）|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> （长度大于 8000 个字节）|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -230,7 +230,7 @@ ms.locfileid: "63144300"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  UDT 允许的值如下所示：  
   
-|SQL 数据类型|类型|子类型|长度|Precision|缩放|  
+|SQL 数据类型|类型|子类型|长度|精度|缩放|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> （长度小于或等于 8,000 个字节）|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> （长度大于 8000 个字节）|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

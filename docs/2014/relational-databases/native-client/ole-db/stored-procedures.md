@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, stored procedures
 - stored procedures [OLE DB], about OLE DB stored procedures
 ms.assetid: 75611e40-789f-412b-91e5-0cc0b8d289ef
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d4a2c55573807feb4de947f1fa3b5af685b9f168
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: efda11d7bcbb4afd37143c6f9669e15f0cc16f5f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638319"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704164"
 ---
 # <a name="stored-procedures"></a>存储过程
   存储过程[存储过程（数据库引擎）](../../stored-procedures/stored-procedures-database-engine.md)是存储在数据库中的可执行对象。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持：  
