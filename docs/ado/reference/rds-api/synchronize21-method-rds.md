@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Synchronize21 method [ADO]
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 66c3b9ecefd63cf7de1806e6fa838a0204626605
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 454b012b8027b86256215721bdfca17122713c75
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963256"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750563"
 ---
 # <a name="synchronize21-method-rds"></a>Synchronize21 方法 (RDS)
 将给定的记录集与连接字符串指定的数据库同步，以便与 ADO 2.1 一起使用。  

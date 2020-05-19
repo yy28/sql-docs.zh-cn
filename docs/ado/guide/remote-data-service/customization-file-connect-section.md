@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connect section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1de3710590cf49de30ff8e79a6ff829b124c42dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9dab615fd861252832abe83d4b0ae736e2189180
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922806"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749972"
 ---
 # <a name="customization-file-connect-section"></a>自定义文件 Connect 部分
 处理程序的默认行为是拒绝所有连接。 "**连接**" 部分指定该行为的例外情况。 例如，如果所有**连接**部分都不存在或为空，则默认情况下无法建立连接。  
@@ -60,7 +60,7 @@ connectionString
 |**访问**|指示这是一个访问项的文字字符串。|  
 |**_accessRight_**|以下访问权限之一：<br /><br /> -   **NoAccess** -用户无法访问数据源。<br />-   **ReadOnly** -用户可以读取数据源。<br />-   **ReadWrite** -用户可以读取或写入数据源。|  
   
- 如果要允许任何连接（有效地禁用默认处理程序行为），请将 "**连接默认值**" 部分中的 "访问" `Access=ReadWrite`项设置为，并删除或注释掉任何其他**连接**_标识符_部分。  
+ 如果要允许任何连接（有效地禁用默认处理程序行为），请将 "**连接默认值**" 部分中的 "访问" 项设置为 `Access=ReadWrite` ，并删除或注释掉任何其他**连接**_标识符_部分。  
   
 ## <a name="see-also"></a>另请参阅  
  [自定义文件日志部分](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   

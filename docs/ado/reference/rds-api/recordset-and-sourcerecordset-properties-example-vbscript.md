@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Source property [ADO], VBScript example
 - Recordset property [ADO], VBScript example
 ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 30b5a463c2180a4cc39ac1a0d2333b8b75d02bab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 64f83c8e7d8a281ff8bd9124d693d365cafd9181
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963595"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751109"
 ---
 # <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>Recordset 和 SourceRecordset 属性示例 (VBScript)
 > [!IMPORTANT]
@@ -28,7 +28,7 @@ ms.locfileid: "67963595"
   
  下面的示例演示如何在运行时设置[RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)的默认业务对象的必需参数。  
   
- 若要测试此示例，请将此代码剪切并\<粘贴到常规\<HTML 文档中的 Body> 和/Body> 标记之间，并将其命名为**RecordsetVBS**。 ASP 脚本将标识您的服务器。  
+ 若要测试此示例，请将此代码剪切并粘贴到 \< \< 常规 HTML 文档中的 Body> 和/Body> 标记之间，并将其命名为**RecordsetVBS**。 ASP 脚本将标识您的服务器。  
   
 ```  
 <!-- BeginRecordSetVBS -->  

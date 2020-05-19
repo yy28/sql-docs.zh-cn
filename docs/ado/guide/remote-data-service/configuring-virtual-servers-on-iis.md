@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - virtual servers in RDS [ADO]
 ms.assetid: 2b4786c6-40c4-4ce1-9ad4-03df436e0aff
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5888cb9666488ced6f9e112d21c48d0265f5c25
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fded1c66de5cd6c64d8663964de510e9d2f982f9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922837"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749999"
 ---
 # <a name="configuring-virtual-servers-on-iis"></a>在 IIS 上配置虚拟服务器
 在 Internet Information Services 4.0 中创建虚拟服务器时，需要执行以下两个额外步骤，以便将虚拟服务器配置为使用 RDS：  

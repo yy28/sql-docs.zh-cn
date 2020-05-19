@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Server property [RDS]
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9d196a60986734c5717be9711af1fa28accee414
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5cd4f578a8146a8fa7d45dcfd8e2b58f795def13
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963474"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750852"
 ---
 # <a name="server-property-rds"></a>Server 属性 (RDS)
 指示 Internet Information Services （IIS）名称和通信协议。  
@@ -110,7 +110,7 @@ DataControl.Server=""
  *awebsrvr*或*computername*  
  如果服务器位于远程计算机上，则为包含 Internet 或 intranet 路径或计算机名称的**字符串**值;或者，如果服务器在本地计算机上，则为空字符串。  
   
- *口*  
+ *port*  
  可选。 用于连接到运行 IIS 的服务器的端口。 端口号在 Internet Explorer 中设置（在 "**视图**" 菜单上，单击 "**选项**"，然后选择 "**连接**" 选项卡）或在 IIS 中。  
   
  *DataControl*  

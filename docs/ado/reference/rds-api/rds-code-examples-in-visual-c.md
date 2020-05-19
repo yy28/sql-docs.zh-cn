@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Visual C++ RDS examples [ADO]
 - RDS samples [ADO], Visual C++
 ms.assetid: 380264da-e6bb-418c-b4af-3c22d35644b8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2e9c359b20cf790188cf3d6b0b7b7f73de406fb1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 390f735cc85088e977f9176e6a91653f32f7d4db
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963714"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751239"
 ---
 # <a name="rds-code-examples-in-visual-c"></a>Visual C++ 中的 RDS 代码示例
 使用以下代码示例来了解如何在 Microsoft Visual C++ 中写入时使用 RDS 属性。  

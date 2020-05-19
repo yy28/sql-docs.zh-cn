@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - SQL property [RDS]
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f70eba6b5f53be7068708fdd8b139f0add10be90
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eb860ed19386b73d90fc26dab8fa96f4b9672a73
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963341"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750722"
 ---
 # <a name="sql-property"></a>SQL 属性
 指示用于检索[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的查询字符串。  
@@ -44,7 +44,7 @@ Run time: DataControl.SQL = "QueryString"
  表示 RDS 的对象变量 **。DataControl**对象。  
   
 ## <a name="remarks"></a>备注  
- 通常，这是 SQL 语句（使用数据库服务器的方言），例如`"Select * from NewTitles"`。 若要确保记录匹配并正确更新，可更新查询必须包含长二进制字段或计算字段之外的字段。  
+ 通常，这是 SQL 语句（使用数据库服务器的方言），例如 `"Select * from NewTitles"` 。 若要确保记录匹配并正确更新，可更新查询必须包含长二进制字段或计算字段之外的字段。  
   
  如果自定义服务器端业务对象检索客户端的数据，则**SQL**属性是可选的。  
   

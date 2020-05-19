@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], overview
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b3bce50892520dbc889a62960065ce3d8e423a81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6258c44d267462cea097c5553c9814b10d3787f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925624"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750291"
 ---
 # <a name="data-shaping-overview"></a>数据整理概述
 *数据定形*指的是在查询中的两个或多个逻辑实体之间建立层次关系。 可以在一个记录[集](../../../ado/reference/ado-api/recordset-object-ado.md)的记录与另一**记录集的**一个或多个记录（也称为章节）之间的父子关系中查看层次结构。 在父子关系中，父**记录集**包含子**记录集**。 例如，客户和订单就是这种层次结构关系。 对于数据库中的每个客户，可以有零个或多个订单。 层次结构关系可以是递归的，也就是说，孙记录可以嵌套在子记录中。 原则上，分层记录可以嵌套到任何深度。 在实践中，ADO 将递归限制在最多512个**记录集**。  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQL section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6163a5b5fd0999e17e17961639e0a1fee3e8fa4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 934b982004bf27e28a8daeed09061101886ce444
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922787"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749881"
 ---
 # <a name="customization-file-sql-section"></a>自定义文件 SQL 部分
 **Sql**部分可以包含替换客户端命令字符串的新 sql 字符串。 如果部分中没有 SQL 字符串，则将忽略该部分。  
@@ -28,7 +28,7 @@ ms.locfileid: "67922787"
   
  新的 SQL 字符串可能已*参数化*。 也就是说， **sql**部分 sql 字符串中的参数（由 "？" 字符指定）可以由客户端命令字符串中的*标识符*（用括号括起以逗号分隔的列表指定）中的相应参数替换。 标识符和参数列表的行为类似于函数调用。  
   
- 例如，假设客户端`"CustomerByID(4)"`命令字符串为，SQL 节标头为`[SQL CustomerByID]`，而新的 SQL 部分字符串为`"SELECT * FROM Customers WHERE CustomerID = ?".` ，则处理程序将`"SELECT * FROM Customers WHERE CustomerID = 4"`生成并使用该字符串来查询数据源。  
+ 例如，假设客户端命令字符串为 `"CustomerByID(4)"` ，SQL 节标头为 `[SQL CustomerByID]` ，而新的 SQL 部分字符串为，则 `"SELECT * FROM Customers WHERE CustomerID = ?".` 处理程序将生成 `"SELECT * FROM Customers WHERE CustomerID = 4"` 并使用该字符串来查询数据源。  
   
  如果新 SQL 语句为空字符串（""），则忽略该部分。  
   
