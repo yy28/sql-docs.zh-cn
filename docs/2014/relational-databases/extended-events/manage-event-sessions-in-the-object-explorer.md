@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xevents
 ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a229b02f60c56b9979d2d31788910b3faa63cb2f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62705519"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706647"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>在对象资源管理器中管理事件会话
   本主题讨论您可以在 **“对象资源管理器”** 中执行的将影响扩展事件的操作：  
@@ -36,7 +36,7 @@ ms.locfileid: "62705519"
  有关创建扩展事件会话的详细信息，请参阅 [Create an Extended Events Session](../../database-engine/create-an-extended-events-session.md)。  
   
 ## <a name="starting-or-stopping-an-extended-events-session"></a>开始或停止扩展事件会话  
- 您可以`ALTER EVENT SESSION`使用语句或使用**对象资源管理器**的 "**扩展事件**" 节点，通过**查询编辑器**启动或停止扩展事件会话。  
+ 您可以使用**Query Editor** `ALTER EVENT SESSION` 语句或使用**对象资源管理器**的 "**扩展事件**" 节点，通过查询编辑器启动或停止扩展事件会话。  
   
  在你停止某一事件会话后，该会话在 sys.dm_xe_sessions 动态管理视图 (DMV) 中不再作为活动会话列出。 但是，会话定义保持不变，并且您可以重新启动该会话。 若要完全删除某一会话定义，您必须删除该会话。  
   
@@ -96,7 +96,7 @@ STATE = STOP
   
 4.  展开 **“模板”** 下拉框。  
   
-5.  单击 " ** \<文件 ..." >打开**并浏览到要导入的会话（XML 文件）。  
+5.  单击 " ** \< 文件 ..." >打开**并浏览到要导入的会话（XML 文件）。  
   
  会话将出现在 **“会话”** 节点下。 默认情况下，不会启动会话。  
   
@@ -128,7 +128,7 @@ STATE = STOP
  在你删除某一事件会话时，所有配置信息都将被删除，并且会话定义不再在 sys.server_event_sessions 目录视图中出现。  
   
 > [!NOTE]  
->  system_health 和 AlwaysOn_health 随一起[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供;不要删除它们。 默认情况下，将启用 system_health（有关详细信息，请参阅 [使用 system_health 会话](use-the-ssms-xe-profiler.md)）。 默认情况下，AlwaysOn_health 处于关闭状态。 这些会话将收集可用于诊断性能问题的数据。  
+>  system_health 和 AlwaysOn_health 包含在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; 不要删除它们。 默认情况下，将启用 system_health（有关详细信息，请参阅 [使用 system_health 会话](use-the-ssms-xe-profiler.md)）。 默认情况下，AlwaysOn_health 处于关闭状态。 这些会话将收集可用于诊断性能问题的数据。  
   
  若要删除某一扩展事件会话，您必须具有 ALTER ANY EVENT SESSION 权限。  
   

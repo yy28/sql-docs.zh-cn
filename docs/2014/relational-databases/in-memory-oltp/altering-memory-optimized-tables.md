@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4d1ae35d9dae03292edf31cd2b06acf97dc0db0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bcfa139cb854954d920a1148f3d5cebb907c61e4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783243"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706559"
 ---
 # <a name="altering-memory-optimized-tables"></a>更改内存优化表
   不支持对内存优化表执行 ALTER 操作。 其中包括更改 bucket_count、添加或删除索引、添加或删除列等操作。 本主题指导如何更新内存优化表。  
@@ -63,13 +63,13 @@ ms.locfileid: "72783243"
     select @permissions  
     ```  
   
-4.  创建表的副本并将数据从原始表复制到表的副本。 可以使用以下[!INCLUDE[tsql](../../includes/tsql-md.md)] <sup>1</sup>创建副本。  
+4.  创建表的副本并将数据从原始表复制到表的副本。 可以使用以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] <sup>1</sup>创建副本。  
   
     ```sql  
     select * into dbo.T_copy from dbo.T  
     ```  
   
-     如果有足够的可用内存， `T_copy`则可以是内存优化表，这会使数据复制更快。<sup>2</sup>  
+     如果有足够的可用内存，则 `T_copy` 可以是内存优化表，这会使数据复制更快。<sup>2</sup>  
   
 5.  删除引用原始表的架构绑定对象。  
   
@@ -83,9 +83,9 @@ ms.locfileid: "72783243"
   
 10. 启动 `T` 上的工作负荷。  
   
- <sup>1</sup>请注意`T_copy` ，在此示例中，保存到磁盘。 如果 `T` 的备份可用，`T_copy` 可以为临时表或非持久表。  
+ <sup>1</sup>请注意， `T_copy` 在此示例中，保存到磁盘。 如果 `T` 的备份可用，`T_copy` 可以为临时表或非持久表。  
   
- <sup>2</sup>对于，必须有足够的`T_copy`内存。 执行 `DROP TABLE` 后，不立即释放内存。 如果 `T_copy` 进行内存优化，需要有足够的内存用于新增的两个 `T` 副本。 如果 `T_copy` 是基于磁盘的表，仅需要有足够的内存用于新增的一个 `T` 副本，因为在删除旧版本的 `T` 后垃圾收集器需要同步。  
+ <sup>2</sup>对于，必须有足够的内存 `T_copy` 。 执行 `DROP TABLE` 后，不立即释放内存。 如果 `T_copy` 进行内存优化，需要有足够的内存用于新增的两个 `T` 副本。 如果 `T_copy` 是基于磁盘的表，仅需要有足够的内存用于新增的一个 `T` 副本，因为在删除旧版本的 `T` 后垃圾收集器需要同步。  
   
 ## <a name="changing-schema-powershell"></a>更改架构 (PowerShell)  
  以下 PowerShell 脚本通过对表和相关权限编写脚本来为架构更改做准备和生成。  
@@ -223,7 +223,7 @@ Write-Host ""
   
  以下 PowerShell 脚本执行在上一示例中脚本化的架构更改。 此脚本提取作为变量的表，并执行为该表和相关存储过程生成的架构更改脚本。  
   
- 用法： execute_schema_change ps1 *server_name * *`schema_name`db_name table_name*  
+ 用法： execute_schema_change ps1 *server_name * * db_name `schema_name` table_name*  
   
 ```powershell
 # stop execution once an error occurs  
@@ -294,4 +294,4 @@ Write-Host ""
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [内存优化表](memory-optimized-tables.md)  
+ [Memory-Optimized Tables](memory-optimized-tables.md)  

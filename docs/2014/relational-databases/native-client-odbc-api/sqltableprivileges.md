@@ -11,20 +11,20 @@ topic_type:
 helpviewer_keywords:
 - SQLTablePrivileges function
 ms.assetid: 8cce22d5-28b1-4b50-a5bc-1de03e0ffd6b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 51492e55fd3c34c099a5f53187d1b2a9875ce7e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03c19fecd314bd67949b133e6c1e0ae9e8292d3d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188638"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705853"
 ---
 # <a name="sqltableprivileges"></a>SQLTablePrivileges
   可以对静态游标执行**SQLTablePrivileges** 。 尝试对可更新的（键集驱动或动态）执行**SQLTablePrivileges**将返回 SQL_SUCCESS_WITH_INFO 指示游标类型已更改。  
   
- Native Client ODBC 驱动程序通过接受由两部分组成的*CatalogName*参数的名称来支持链接服务器上表的报告信息： *Linked_Server_Name。 Catalog_Name。* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序通过接受由两部分组成的*CatalogName*参数的名称来支持链接服务器上表的报告信息： *Linked_Server_Name。 Catalog_Name*。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLTablePrivileges 函数](https://go.microsoft.com/fwlink/?LinkId=59373\)   

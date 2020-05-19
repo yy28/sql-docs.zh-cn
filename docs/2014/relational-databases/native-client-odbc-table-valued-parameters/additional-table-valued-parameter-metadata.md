@@ -10,18 +10,18 @@ helpviewer_keywords:
 - table-valued parameters (ODBC), catalog functions to retrieve metadata
 - table-valued parameters (ODBC), metadata
 ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f7b9aea58b56308764f907f8cf54bf74bb0663c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f0d46200df3881d7b24cf582b5c252f4e66e255b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200575"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82709747"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>其他表值参数的元数据
-  若要检索表值参数的元数据，应用程序将调用 SQLProcedureColumns。 对于表值参数，SQLProcedureColumns 将返回单个行。 添加了[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]两个额外特定的列 SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME，以提供与表值参数关联的表类型的架构和目录信息。 为了符合 ODBC 规范，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 的显示位置位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本中添加的所有驱动程序特定列之前，并位于 ODBC 自身委托的所有列之后。  
+  若要检索表值参数的元数据，应用程序将调用 SQLProcedureColumns。 对于表值参数，SQLProcedureColumns 将返回单个行。 添加了两个额外 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定的列 SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME，以提供与表值参数关联的表类型的架构和目录信息。 为了符合 ODBC 规范，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 的显示位置位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本中添加的所有驱动程序特定列之前，并位于 ODBC 自身委托的所有列之后。  
   
  下表列出了对表值参数非常重要的列。  
   

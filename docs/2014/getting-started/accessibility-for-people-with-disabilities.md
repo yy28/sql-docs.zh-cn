@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQL Server Books Online, accessibility features
 - customer service [SQL Server]
 ms.assetid: 0f85627e-e9d0-4b17-896a-218c9f31d339
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a653c4b5cd8d6e1bb9b5c826039169a7a5b80278
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8f3786ac7f031510d8985cb97634cbfc92024c4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74683599"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707025"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>为残障人士提供的辅助功能
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 致力于使所有用户更轻松地使用其产品和服务。 本主题提供了一些有关可使 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server 系列产品更便于残障人士使用的功能、产品和服务的信息。  
@@ -35,7 +35,7 @@ ms.locfileid: "74683599"
 >  本节包含的信息仅适用于在美国国内获得 [!INCLUDE[msCoName](../includes/msconame-md.md)] 产品使用许可证的用户。 如果您在美国以外获得本产品，则您的软件包中会包含一张分公司信息卡，其中列出了 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支持服务的电话号码和地址。 请与您的分公司联系，确认所在的地区是否提供本节中介绍的产品和服务类型。 有关详细信息（包括英语、法语、西班牙语、中文、日语和意大利语版本），请访问 [Microsoft 辅助功能网站](https://go.microsoft.com/fwlink/?LinkID=8287)。  
   
 ## <a name="ssnoversion-accessibility-features"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 辅助功能  
- 除了下一节中介绍的 Windows 辅助功能和实用工具以外，帮助查看器[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使残障人士更易于访问。  
+ 除了下一节中介绍的 Windows 辅助功能和实用工具以外，帮助查看器使 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 残障人士更易于访问。  
   
 ### <a name="the-help-viewer"></a>帮助查看器  
  Microsoft 帮助查看器 1.1 是用户用来阅读产品文档的工具。 此工具配备有多种辅助功能，包括 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 中包含的导航快捷键和命令快捷键。 例如，它使您得以更改计算机屏幕的显示颜色。 有关 Microsoft help Viewer 1.1 的辅助功能的信息，请参阅[Microsoft Help Viewer 1.1 的辅助](https://go.microsoft.com/fwlink/?LinkID=220144)功能。  
@@ -79,10 +79,10 @@ ms.locfileid: "74683599"
  可以在线获取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 文档。 有关详细信息，请参阅[将产品文档用于 SQL Server](../2014-toc/index.yml)。  
   
 ## <a name="obtaining-documentation-for-additional-msconame-products"></a>获取其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] 产品的文档  
- 你可以从[!INCLUDE[msCoName](../includes/msconame-md.md)] [Microsoft 辅助功能](https://go.microsoft.com/fwlink/?LinkID=67164)网站获取产品的可访问文档。  
+ 你可以 [!INCLUDE[msCoName](../includes/msconame-md.md)] 从[Microsoft 辅助功能](https://go.microsoft.com/fwlink/?LinkID=67164)网站获取产品的可访问文档。  
   
 ### <a name="recording-for-the-blind--dyslexic-inc"></a>Recording for the Blind & Dyslexic Inc.  
- 你可以为盲[!INCLUDE[msCoName](../includes/msconame-md.md)] & Dyslexic，inc. 获取其他出版物。这些文档将分发到以录音带或软盘上分发服务的已注册合格成员。 文档集中包含 80,000 多篇文章，其中包括 [!INCLUDE[msCoName](../includes/msconame-md.md)] 产品文档和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Press 图书。 有关 [!INCLUDE[msCoName](../includes/msconame-md.md)] 产品文档和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Press 图书的适用性和可用性信息，请联系：  
+ 你可以 [!INCLUDE[msCoName](../includes/msconame-md.md)] 为盲 & Dyslexic，inc. 获取其他出版物。这些文档将分发到以录音带或软盘上分发服务的已注册合格成员。 文档集中包含 80,000 多篇文章，其中包括 [!INCLUDE[msCoName](../includes/msconame-md.md)] 产品文档和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Press 图书。 有关 [!INCLUDE[msCoName](../includes/msconame-md.md)] 产品文档和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Press 图书的适用性和可用性信息，请联系：  
   
  记录盲人 & Dyslexic，Inc. Roszel 公路普林斯顿，NJ 08540  
   
@@ -97,8 +97,8 @@ ms.locfileid: "74683599"
 ## <a name="customer-service-for-people-who-are-deaf-or-hard-of-hearing"></a>为存在听觉障碍的人士提供的客户服务  
  如果存在听觉障碍，可以通过文本电话 (TTY/TDD) 服务访问所有 [!INCLUDE[msCoName](../includes/msconame-md.md)] 产品和客户服务。  
   
-### <a name="customer-service"></a>客户服务  
- 您可以通过拨[!INCLUDE[msCoName](../includes/msconame-md.md)]打电话（800）892-5234 在凌晨6:30 之间与销售信息中心联系。 销售 支持服务联系。  
+### <a name="customer-service"></a>Customer Service  
+ 您可以 [!INCLUDE[msCoName](../includes/msconame-md.md)] 通过拨打电话（800）892-5234 在凌晨6:30 之间与销售信息中心联系。 销售 支持服务联系。  
   
 ### <a name="technical-help"></a>技术帮助  
  若要在美国国内获得技术帮助，可在太平洋时间星期一到星期五（节假日除外）的早晨 6:00 至下午 6:00，通过拨打文本电话 (800) 892-5234 与 [!INCLUDE[msCoName](../includes/msconame-md.md)] 到下午 6:00 支持服务联系。 若要在加拿大获得 和下午 8:00 可在东部时间星期一到星期五（节假日除外）的上午 8:00 至晚上 8:00 拨打电话 (905) 568-9641。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支持服务的价格、条款和条件取决于提供服务的时间。  

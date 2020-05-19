@@ -10,20 +10,20 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server], ODBC
 - ODBC, FILESTREAM support
 ms.assetid: 87982955-1542-4551-9c06-447ffe8193b9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0e48619daa350fd5b7a7dc47a9762459fbddc7d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec85083e634123497c707f3028285ec1300ff2d4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206593"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707092"
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM 支持 (ODBC)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中的 ODBC 支持增强的 FILESTREAM 功能。 有关此功能的详细信息，请参阅[FILESTREAM 支持](../features/filestream-support.md)。 有关演示对 FILESTREAM 的 ODB 支持的示例，请参阅[使用 Filestream 以增量方式发送和接收数据 &#40;ODBC&#41;](../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)。  
   
- 若要发送和`varbinary(max)`接收大于 2 GB 的值，应用程序必须使用 SQLBindParameter （ *ColumnSize*设置为`SQL_SS_LENGTH_UNLIMITED`）绑定参数，并将*StrLen_or_IndPtr*的内容设置`SQL_DATA_AT_EXEC`为之前 SQLExecDirect 或 SQLExecute。  
+ 若要发送和接收 `varbinary(max)` 大于 2 GB 的值，应用程序必须使用 SQLBindParameter （ *ColumnSize*设置为）绑定参数 `SQL_SS_LENGTH_UNLIMITED` ，并将*StrLen_or_IndPtr*的内容设置为 `SQL_DATA_AT_EXEC` 之前 SQLExecDirect 或 SQLExecute。  
   
  与任何执行时数据参数一样，数据将与 SQLParamData 和 SQLPutData 一起提供。  
   

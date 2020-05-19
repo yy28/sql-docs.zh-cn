@@ -12,24 +12,24 @@ helpviewer_keywords:
 - cursors [ODBC], types
 - ODBC cursors, types
 ms.assetid: 3a916cc7-f352-42cb-8b83-f78e06cef991
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6d88b48c1fc4166b32821da9cdaaa5eb7f6c2e60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5b073ee58c0e29b1d7e6d02d079141838cef237
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63070993"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705668"
 ---
 # <a name="cursor-types"></a>游标类型
-  ODBC 定义 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持的四种游标类型。 这些游标的功能不同于检测对结果集及其消耗的资源（如**tempdb**中的内存和空间）的更改。 游标仅当尝试重新提取行时才会检测到对这些行的更改；数据源无法通知游标对当前提取行的更改。 游标检测并非由游标执行的更改的功能也受事务隔离级别的影响。  
+  ODBC 定义 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序支持的四种游标类型。 这些游标的功能不同于检测对结果集及其消耗的资源（如**tempdb**中的内存和空间）的更改。 游标仅当尝试重新提取行时才会检测到对这些行的更改；数据源无法通知游标对当前提取行的更改。 游标检测并非由游标执行的更改的功能也受事务隔离级别的影响。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持以下四种 ODBC 游标类型：  
   
 -   只进游标不支持滚动；它们只支持游标按从头到尾的顺序提取行。  
   
--   静态游标在打开游标时在**tempdb**中生成。 它们始终显示打开游标时的结果集。 它们从不会反映对数据的更改。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 静态游标始终是只读的。 由于静态服务器游标是在**tempdb**中作为工作表生成的，因此游标结果集的大小不能超过所允许的最大行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大小。  
+-   静态游标在打开游标时在**tempdb**中生成。 它们始终显示打开游标时的结果集。 它们从不会反映对数据的更改。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 静态游标始终是只读的。 由于静态服务器游标是在**tempdb**中作为工作表生成的，因此游标结果集的大小不能超过所允许的最大行大小 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 -   打开由键集驱动的游标时，该游标的结果集中各行的成员身份和顺序是固定的。 可通过游标显示对非键列的更改。  
   

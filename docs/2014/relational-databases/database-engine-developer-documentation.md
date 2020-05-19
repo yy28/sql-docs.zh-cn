@@ -10,15 +10,15 @@ helpviewer_keywords:
 - developer's guide [SQL Server Database Engine]
 - Database Engine [SQL Server], development
 ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fb5dec821d69066ce0a24c4e104f5f2be3ef905a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5751cadb999ee3a2c9d8260bee7a6197047d312
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530946"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706853"
 ---
 # <a name="developer39s-guide-database-engine"></a>开发人员&#39;指南（数据库引擎）
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供了大量用于开发、管理和控制数据库应用程序的工具。  
@@ -34,7 +34,7 @@ ms.locfileid: "69530946"
  说明 SQLXML 的最新版本，该版本提供与 SQLXML 3.0 相同的功能，另外还提供附加的更新以容纳随 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 引入的新功能，如 xml 数据类型。  
   
  [用于配置管理的 WMI 提供程序的概念](wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
- 描述与 Microsoft 管理控制台（MMC）和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager 的 Configuration Manager 管理单元一起使用的已发布层。 它提供了一种统一的方式，用于与管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器所请求注册表操作的 API 调用进行连接，并可对选定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务提供增强的控制和操作。  
+ 描述与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Microsoft 管理控制台（MMC）和 Configuration Manager 的 Configuration Manager 管理单元一起使用的已发布层 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 它提供了一种统一的方式，用于与管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器所请求注册表操作的 API 调用进行连接，并可对选定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务提供增强的控制和操作。  
   
  [WMI Provider for Server Events 的概念](wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
  说明如何使用 Windows Management Instrumentation (WMI) 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中监视事件。  

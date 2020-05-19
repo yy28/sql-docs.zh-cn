@@ -12,18 +12,18 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, persisted data source objects
 - persisted data source objects
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7a5d50163f439ec3fabd219761f0749c88745c58
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e4eaf05eb6334a9df316642adbeb4086be079ca
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63231452"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707416"
 ---
 # <a name="persisted-data-source-objects"></a>持久化数据源对象
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序支持具有**IPersistFile**接口的持久化数据源对象。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序支持具有**IPersistFile**接口的持久化数据源对象。  
   
 ## <a name="examples"></a>示例  
  **A. 使数据源初始化持久化：**  

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6493157c00e5a71c7c2f085191231bb33bb5279a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1e69f2510e825a935cf7eb34951051c1e3848bb9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967323"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764038"
 ---
 # <a name="append-method-adox-columns"></a>Append 方法（ADOX 列）
 向[Columns](../../../ado/reference/adox-api/columns-collection-adox.md)集合添加一个新的[列](../../../ado/reference/adox-api/column-object-adox.md)对象。  
@@ -37,7 +37,7 @@ Columns.Append Column [,Type] [,DefinedSize]
  *列*  
  要追加的**列**对象或者要创建并追加的列的名称。  
   
- *类型*  
+ *Type*  
  可选。 指定列的数据类型的**Long**值。 *类型*参数对应于**列**对象的[type](../../../ado/reference/adox-api/type-property-column-adox.md)属性。  
   
  *DefinedSize*  

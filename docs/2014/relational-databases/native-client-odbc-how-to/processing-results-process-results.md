@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - processing results [ODBC]
 ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 21474aed83aac1fe86e2242b1238affa11ae64a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 060709db7842173f6f30e78a6384a4b9489dfb3d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200313"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82712837"
 ---
 # <a name="process-results-odbc"></a>处理结果 (ODBC)
     
@@ -33,7 +33,7 @@ ms.locfileid: "63200313"
   
     -   如果使用绑定列，则在绑定列缓冲区使用现在可用的数据。  
   
-    -   如果使用绑定列，在最后一个绑定列后一次或多次调用 [SQLGetData](../native-client-odbc-api/sqlgetdata.md) 以获取未绑定列的数据。 对`SQLGetData`的调用应按列号递增顺序排列。  
+    -   如果使用绑定列，在最后一个绑定列后一次或多次调用 [SQLGetData](../native-client-odbc-api/sqlgetdata.md) 以获取未绑定列的数据。 对 `SQLGetData` 的调用应按列号递增顺序排列。  
   
     -   多次调用 `SQLGetData` 以从 text 或 image 列获取数据。  
   

@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - IRowsetFastLoad interface
 ms.assetid: d19a7097-48d9-409a-aff9-277891b7aca7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 35cee52e9a85989123bcb10d998d37ce86a28601
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 720ea095343abefb0b56f4f1f47bbd853d72378e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209815"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707345"
 ---
 # <a name="irowsetfastload-ole-db"></a>IRowsetFastLoad (OLE DB)
-  `IRowsetFastLoad`接口公开对基于内存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的大容量复制操作的支持。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者使用接口将数据快速添加到现有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表中。  
+  `IRowsetFastLoad`接口公开对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基于内存的大容量复制操作的支持。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者使用接口将数据快速添加到现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。  
   
  如果将会话的 SSPROP_ENABLEFASTLOAD 设置为 VARIANT_TRUE，则无法读取后续从该会话返回的行集中的数据。 将 SSPROP_ENABLEFASTLOAD 设置为 VARIANT_TRUE 时，在会话上创建的所有行集将属于 IRowsetFastLoad 类型。 IRowsetFastLoad 行集不支持行集提取功能，因此无法读取这些行集中的数据。  
   

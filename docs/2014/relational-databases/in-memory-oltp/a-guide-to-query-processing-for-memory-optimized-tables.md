@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 34fdc72cfbb341e7b7d998a76036e6e2b060e7d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ba02a877d06d6ee3b7f57f6a42c588f4c1019a9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112240"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706580"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>内存优化表查询处理指南
   内存中 OLTP 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中引入内存优化的表和本机编译的存储过程。 本文简单介绍针对内存优化表和本机编译存储过程的查询处理。  
@@ -222,7 +222,7 @@ END
   
  本机编译存储过程的调用如下所述：  
   
-1.  用户发出`EXEC` *usp_myproc*语句。  
+1.  用户发出 `EXEC` *usp_myproc*语句。  
   
 2.  分析器提取名称和存储过程参数。  
   
@@ -255,7 +255,7 @@ GO
 ### <a name="query-operators-in-natively-compiled-stored-procedures"></a>本机编译存储过程中的查询运算符  
  下表对本机编译存储过程中支持的查询运算符进行了总结：  
   
-|操作员|示例查询|  
+|运算符|示例查询|  
 |--------------|------------------|  
 |SELECT|`SELECT OrderID FROM dbo.[Order]`|  
 |INSERT|`INSERT dbo.Customer VALUES ('abc', 'def')`|  
@@ -303,6 +303,6 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 保留内存优化表的列级统计信息。 此外，它还保留表的实际行数。 但是，与基于磁盘的表相比，它并不自动更新内存优化表的统计信息。 因此，在表中进行重大更改之后需要手动更新统计信息。 有关详细信息，请参阅 [内存优化表的统计信息](memory-optimized-tables.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [内存优化表](memory-optimized-tables.md)  
+ [Memory-Optimized Tables](memory-optimized-tables.md)  
   
   

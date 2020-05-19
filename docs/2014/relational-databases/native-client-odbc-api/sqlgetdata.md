@@ -11,24 +11,24 @@ topic_type:
 helpviewer_keywords:
 - SQLGetData function
 ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 048ee2d27445bf64839c5331627a12e012cd4123
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92cd4d2357d8908ac8944883772fd2639ee30b11
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193308"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706055"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
   **SQLGetData**用于检索结果集数据，而不绑定列值。 可以对同一列连续调用**SQLGetData** ，以从具有**text**、 **ntext**或**image**数据类型的列中检索大量数据。  
   
- 此时，不要求应用程序绑定变量来提取结果集数据。 可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQLGetData**从 Native Client ODBC 驱动程序检索任意列的数据。  
+ 此时，不要求应用程序绑定变量来提取结果集数据。 可以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用**SQLGetData**从 Native Client ODBC 驱动程序检索任意列的数据。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序不支持使用**SQLGetData**以随机列顺序检索数据。 使用**SQLGetData**处理的所有未绑定列都必须具有比结果集中绑定列更高的列序号。 应用程序必须按照从未绑定列的最小序号值到最大序号值的顺序处理数据。 尝试从较小序号的列中检索数据将导致错误。 如果某个应用程序使用服务器游标报告结果集行，则该应用程序可重新提取当前行，然后提取列值。 如果对默认的只读、只进游标执行语句，则必须重新执行该语句来备份**SQLGetData**。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序不支持使用**SQLGetData**以随机列顺序检索数据。 使用**SQLGetData**处理的所有未绑定列都必须具有比结果集中绑定列更高的列序号。 应用程序必须按照从未绑定列的最小序号值到最大序号值的顺序处理数据。 尝试从较小序号的列中检索数据将导致错误。 如果某个应用程序使用服务器游标报告结果集行，则该应用程序可重新提取当前行，然后提取列值。 如果对默认的只读、只进游标执行语句，则必须重新执行该语句来备份**SQLGetData**。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序准确报告使用**SQLGetData**检索到的**text**、 **ntext**和**image**数据的长度。 应用程序可以充分利用*StrLen_or_IndPtr*参数返回，以便快速检索长数据。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序准确报告使用**SQLGetData**检索到的**text**、 **ntext**和**image**数据的长度。 应用程序可以充分利用*StrLen_or_IndPtr*参数返回，以便快速检索长数据。  
   
 > [!NOTE]  
 >  对于大值类型，在数据截断的情况下*StrLen_or_IndPtr*将返回 SQL_NO_TOTAL。  

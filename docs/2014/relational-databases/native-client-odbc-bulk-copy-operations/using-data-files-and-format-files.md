@@ -14,15 +14,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - bulk copy [ODBC], data files
 ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4c49ccb59a8e6ab1b027de02afee37252e8cc482
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51efa12bcb308c64c8c63a425cdc615dab237e04
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206829"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705805"
 ---
 # <a name="using-data-files-and-format-files"></a>使用数据文件和格式化文件
   最简单的大容量复制程序执行以下操作：  
@@ -49,7 +49,7 @@ ms.locfileid: "68206829"
   
  从格式化文件描述的数据文件中大容量复制时，请通过在**bcp_init**之后调用[bcp_readfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) ，然后在**bcp_exec**之前读取格式化文件。  
   
- **Bcp_control**函数在从数据文件大容量复制到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时控制多个选项。 **bcp_control**设置选项，如终止前的最大错误数、要开始大容量复制的文件中的行、要停止的行以及批大小。  
+ **Bcp_control**函数在从数据文件大容量复制到时控制多个选项 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **bcp_control**设置选项，如终止前的最大错误数、要开始大容量复制的文件中的行、要停止的行以及批大小。  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;ODBC&#41;执行大容量复制操作](performing-bulk-copy-operations-odbc.md)  

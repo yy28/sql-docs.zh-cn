@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLDescribeCol function
 ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 95d367efc0bf3fb3e3a74bd0ba9d48b9d8f25be2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dda7c4c0e2ae187f96883a32cac2528eceb90c74
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067763"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706301"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
-  对于已执行的语句[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，NATIVE Client ODBC 驱动程序不需要查询服务器来描述结果集中的列。 在这种情况`SQLDescribeCol`下，不会导致服务器往返。 与[SQLColAttribute](sqlnumresultcols.md)一样， `SQLDescribeCol`对已准备但未执行的语句调用会生成服务器往返。  
+  对于已执行的语句， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驱动程序不需要查询服务器来描述结果集中的列。 在这种情况下，不 `SQLDescribeCol` 会导致服务器往返。 与[SQLColAttribute](sqlnumresultcols.md)一样， `SQLDescribeCol` 对已准备但未执行的语句调用会生成服务器往返。  
   
  当某个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或语句批处理返回多个结果行集时，由序号引用的某一列可能来自单独的表或引用结果集中完全不同的列。 `SQLDescribeCol`应为每个集调用。 如果结果集有变化，应用程序应该在提取行结果之前重新绑定数据值。 有关处理多个结果集返回的详细信息，请参阅[SQLMoreResults](sqlmoreresults.md)。  
   
@@ -30,14 +30,14 @@ ms.locfileid: "63067763"
   
  对于大值数据类型，在*DataTypePtr*中返回的值为 SQL_VARCHAR、SQL_VARBINARY 或 SQL_NVARCHAR。 *ColumnSizePtr*中的值 SQL_SS_LENGTH_UNLIMITED 指示大小为 "无限制"。  
   
- 从 " [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]允许 SQLDescribeCol" 开始，数据库引擎中的改进可获取预期结果的更准确说明。 更准确的结果可能与早期版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQLDescribeCol 返回的值不同。 有关详细信息，请参阅[元数据发现](../native-client/features/metadata-discovery.md)。  
+ 从 "允许 SQLDescribeCol" 开始，数据库引擎中的改进 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 可获取预期结果的更准确说明。 更准确的结果可能与早期版本的 SQLDescribeCol 返回的值不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关详细信息，请参阅[元数据发现](../native-client/features/metadata-discovery.md)。  
   
 ## <a name="sqldescribecol-support-for-enhanced-date-and-time-features"></a>SQLDescribeCol 对日期和时间增强功能的支持  
  日期/时间类型返回以下值：  
   
 ||*DataTypePtr*|*ColumnSizePtr*|*DecimalDigitsPtr*|  
 |-|-------------------|---------------------|------------------------|  
-|日期/时间|SQL_TYPE_TIMESTAMP|23|3|  
+|datetime|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
 |date|SQL_TYPE_DATE|10|0|  
 |time|SQL_SS_TIME2|8, 10..16|0..7|  

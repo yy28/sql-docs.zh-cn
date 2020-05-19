@@ -13,18 +13,18 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: da56cbf334bca884e71469c63429135d6db84953
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b61d8b7436ab8766ad4009de46370d3914001ae
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63140627"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82708487"
 ---
 # <a name="setting-large-data"></a>设置大型数据
-  使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序，可以通过将指针传递到使用者存储对象来设置 BLOB 数据。  
+  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序，可以通过将指针传递到使用者存储对象来设置 BLOB 数据。  
   
  使用者创建包含数据的存储对象，并将指向此存储对象的指针传递给访问接口。 然后，访问接口从使用者存储对象读取数据，并将其写入 BLOB 列中。  
   

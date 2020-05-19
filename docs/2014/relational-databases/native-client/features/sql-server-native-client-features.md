@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SQLNCLI, about SQL Server Native Client
 - data access [SQL Server Native Client], features
 ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 093d40734b88cc370e0c08a8f9a8b86312409e6b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a516578a0d72028ec8543d136f571ea62d7520b6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225566"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707242"
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client 功能
   除公开 Windows（以前为 Microsoft）数据访问组件 (WDAC) 的功能以外，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 还实现诸多其他功能以公开 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能。  
@@ -30,7 +30,7 @@ ms.locfileid: "63225566"
  介绍从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client 开始的行为变化。  
   
  [使用数据库镜像](using-database-mirroring.md)  
- 讨论 Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client 如何支持使用镜像数据库，这是在备用服务器上保留[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据库的副本或镜像功能。  
+ 讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支持使用镜像数据库，这是在备用服务器上保留数据库的副本或镜像功能 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  [执行异步操作](performing-asynchronous-operations.md)  
  讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支持异步操作，即在不阻塞调用线程的情况下立即返回的功能。  
@@ -42,7 +42,7 @@ ms.locfileid: "63225566"
  讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支持 XML 数据类型，此基于 XML 的数据类型可用作列类型、变量类型、参数类型或函数返回类型。  
   
  [使用用户定义类型](using-user-defined-types.md)  
- 讨论 Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client 如何支持用户定义的类型（UDT），该方法通过允许您在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据库中存储对象和自定义数据结构来扩展 SQL 类型系统。  
+ 讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支持用户定义的类型（UDT），该方法通过允许您在数据库中存储对象和自定义数据结构来扩展 SQL 类型系统 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  [使用大值类型](using-large-value-types.md)  
  讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支持大值数据类型，该类型是大型对象数据类型 (LOB)。  
@@ -57,7 +57,7 @@ ms.locfileid: "63225566"
  讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支持基于行集修改的使用者通知。  
   
  [执行大容量复制操作](performing-bulk-copy-operations.md)  
- 讨论 Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client 如何支持大容量复制操作，这些操作允许将大量数据传入或传出[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]表或视图。  
+ 讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支持大容量复制操作，这些操作允许将大量数据传入或传出 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表或视图。  
   
  [使用不带验证的加密](using-encryption-without-validation.md)  
  讨论如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 对发送到服务器的数据加密，而无需验证证书。  
@@ -69,7 +69,7 @@ ms.locfileid: "63225566"
  讨论对大型公共语言运行时 (CLR) 用户定义类型 (UDT) 的支持。  
   
  [FILESTREAM 支持](filestream-support.md)  
- 讨论[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 对增强型 FILESTREAM 功能的支持。  
+ 讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 对增强型 FILESTREAM 功能的支持。  
   
  [客户端连接中的服务主体名称 (SPN) 支持](service-principal-name-spn-support-in-client-connections.md)  
  讨论如何扩展对服务主体名称 (SPN) 的支持，以便能够跨所有协议进行相互身份验证。  

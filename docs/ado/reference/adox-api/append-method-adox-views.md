@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 637932fed7effb87705b3aa195578cfd506e1454
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 540ff52141139f4748cb2cd4c8979f5f8b55b230
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967153"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763998"
 ---
 # <a name="append-method-adox-views"></a>Append 方法（ADOX 视图）
 创建新的[视图](../../../ado/reference/adox-api/view-object-adox.md)对象并将其追加到[Views](../../../ado/reference/adox-api/views-collection-adox.md)集合。  
@@ -34,7 +34,7 @@ Views.Append Name, Command
 ```  
   
 #### <a name="parameters"></a>参数  
- *名称*  
+ *Name*  
  一个**字符串**值，该值指定要创建的视图的名称。  
   
  *命令*  

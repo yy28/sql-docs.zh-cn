@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dd64ba8119db1ecf2d2b621cd202c9f700b53475
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c703843781558839a3f4f275a8427f69770a8690
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967281"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764068"
 ---
 # <a name="append-method-adox-procedures"></a>Append 方法（ADOX 过程）
 将新[过程](../../../ado/reference/adox-api/procedure-object-adox.md)对象添加到[过程](../../../ado/reference/adox-api/procedures-collection-adox.md)集合。  
@@ -34,7 +34,7 @@ Procedures.Append Name, Command
 ```  
   
 #### <a name="parameters"></a>参数  
- *名称*  
+ *Name*  
  一个**字符串**值，该值指定要创建并追加的过程的名称。  
   
  *命令*  

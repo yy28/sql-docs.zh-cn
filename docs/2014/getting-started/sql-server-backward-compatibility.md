@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: ac47cb74-5578-417d-bcef-f970d9527705
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dd93707ef139b1751d918af43efed72574d58aa5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58449d2d7d685eaceb3b3015121cb4f59271a46d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088508"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706867"
 ---
 # <a name="sql-server-backward-compatibility"></a>SQL Server 的向后兼容性
-  向后兼容性部分中的主题介绍[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]了[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]各版本之间的行为变化。  
+  向后兼容性部分中的主题介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 了各版本之间的行为变化 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
  本主题范围中包含的功能包括数据可编程性、外围应用配置器工具、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装程序、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务，以及其他多种功能更改。  
   

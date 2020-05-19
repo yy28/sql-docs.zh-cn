@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - AllowNullsEnum enumeration [ADOX]
 ms.assetid: 6acf3689-1a7f-4379-9d7f-df452ccbac27
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 48e9d8c40d2ab76b902d285526fcd9e9abf7be07
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 74bb82433d17bd47df71d3a9f8574d72ce39a265
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967337"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764078"
 ---
 # <a name="allownullsenum"></a>AllowNullsEnum
 指定是否为具有 null 值的记录编制索引。  
   
-|Constant|值|说明|  
+|返回的常量|值|说明|  
 |--------------|-----------|-----------------|  
 |**adIndexNullsAllow**|0|索引允许键列为空的项。 如果在键列中输入 null 值，则会将该项插入到索引中。|  
 |**adIndexNullsDisallow**|1|默认。 索引不允许键列为空的项。 如果在键列中输入 null 值，将出现错误。|  

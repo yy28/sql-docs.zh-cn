@@ -10,18 +10,18 @@ helpviewer_keywords:
 - Analyze, Migrate, Report
 - AMR
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 358a595ef326f86db9ab81294bc3a9c88fc8ef0d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63072362"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706538"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>确定表或存储过程是否应移植到内存中 OLTP
-  中[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]的事务性能收集器可帮助您评估内存中 OLTP 是否将改进数据库应用程序的性能。 事务性能分析报告还指示在应用程序中启用内存中 OLTP 所必须完成的工作量。 在你标识了要移植到内存中 OLTP 的基于磁盘的表之后，可以使用 [内存优化顾问](memory-optimization-advisor.md)帮助你迁移表。 同样， [Native Compilation Advisor](native-compilation-advisor.md) 帮助您将存储过程移植到本机编译的存储过程。  
+  中的事务性能收集器 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 可帮助您评估内存中 OLTP 是否将改进数据库应用程序的性能。 事务性能分析报告还指示在应用程序中启用内存中 OLTP 所必须完成的工作量。 在你标识了要移植到内存中 OLTP 的基于磁盘的表之后，可以使用 [内存优化顾问](memory-optimization-advisor.md)帮助你迁移表。 同样， [Native Compilation Advisor](native-compilation-advisor.md) 帮助您将存储过程移植到本机编译的存储过程。  
   
  本主题讨论如何：  
   
@@ -44,9 +44,9 @@ ms.locfileid: "63072362"
     > [!IMPORTANT]  
     >  数据库的性能取决于多种因素，不是所有这些因素都能被事务性能收集器发现和度量。 因此，事务性能分析报告不保证实际性能收益会符合其预测（如果作出任何预测）。  
   
- 当你在安装[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]时选择 "**管理工具-基本**" 或 "**管理工具-高级**" 时，会安装事务性能收集器和生成事务性能分析报告的功能。  
+ 当你在安装时选择 "**管理工具-基本**" 或 "**管理工具-高级**" 时，会安装事务性能收集器和生成事务性能分析报告的功能 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 。  
   
-## <a name="best-practices"></a>最佳方案  
+## <a name="best-practices"></a>最佳实践  
  下面的流程图给出了建议的工作流程。 黄色节点表示可选过程：  
   
  ![AMR 工作流](../../database-engine/media/amr-1.gif "AMR 工作流")  
@@ -63,7 +63,7 @@ ms.locfileid: "63072362"
   
  事务性能收集器每 15 分钟捕获数据。 若要获得稳定的结果，运行事务性能收集器至少 1 小时。 若要获得最佳结果，请根据需要运行尽可能长时间的事务性能收集器，以便捕获针对您的主要情形的数据。 只有在完成数据收集后，才生成事务性能分析报告。  
   
- 将事务性能收集器配置为在生产中在您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上运行，并且在您的开发（测试）环境中收集 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上的数据以便确保最小的系统开销。 有关如何在远程[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例上的管理数据仓库数据库中保存数据的信息，请参阅[在远程 SQL Server 实例上配置数据收集](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx)。  
+ 将事务性能收集器配置为在生产中在您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上运行，并且在您的开发（测试）环境中收集 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上的数据以便确保最小的系统开销。 有关如何在远程实例上的管理数据仓库数据库中保存数据的信息 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，请参阅[在远程 SQL Server 实例上配置数据收集](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx)。  
   
 ## <a name="performance-impacts"></a>性能影响  
  事务性能收集器由两个数据收集组构成：  
@@ -102,7 +102,7 @@ ms.locfileid: "63072362"
 ### <a name="configure-data-collection-on-a-local-ssnoversion-instance"></a>在本地 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上配置数据收集  
  数据收集需要启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理。 在一个服务器上，您仅需配置一个数据收集器。  
   
- 可以在 SQL Server 2012 或更高版本的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上配置数据收集器。  
+ 可以在 SQL Server 2012 或更高版本的上配置数据收集器 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  若要配置数据收集以便上载到同一实例上的管理数据仓库数据库，请执行以下步骤：  
   
@@ -118,10 +118,10 @@ ms.locfileid: "63072362"
   
 6.  验证所做的选择。 单击 "**上一步**" 以修改设置。 完成操作后，请单击 **“完成”** 。  
   
-###  <a name="configure-data-collection-on-a-remote-ssnoversion-instance"></a><a name="xxx"></a>在远程[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例上配置数据收集  
+###  <a name="configure-data-collection-on-a-remote-ssnoversion-instance"></a><a name="xxx"></a>在远程实例上配置数据收集 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  数据收集要求在收集该数据的实例上启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理。  
   
- 可以在 SQL Server 2012 或更高版本的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上配置数据收集器。  
+ 可以在 SQL Server 2012 或更高版本的上配置数据收集器 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  需要使用用于数据收集器的正确凭据建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理，以便将数据上载到其他实例（非待探查事务所在实例）上的管理数据仓库数据库。 若要启用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理，必须首先使用启用域的登录建立凭据。 该启用域的登录必须是管理数据仓库数据库的 `mdw_admin` 组的成员。 有关如何创建凭据的信息，请参阅[如何：创建凭据（SQL Server Management Studio）](../security/authentication-access/create-a-credential.md) 。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "63072362"
   
 6.  在标记为 "**选择要启用的数据收集器集**" 的框中，选择 "**事务性能收集组**"。  
   
-7.  选择 "**使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理程序代理进行远程上载**"。  
+7.  选择 "**使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理程序代理进行远程上载**"。  
   
 8.  操作完成后，单击“下一步”。  
   
@@ -155,7 +155,7 @@ ms.locfileid: "63072362"
   
     3.  单击 "**添加**"，然后选择 " **Msdb**角色"。  
   
-    4.  选择`dc_proxy`并单击 **"确定"**。 然后再次单击“确定”****。  
+    4.  选择 `dc_proxy` 并单击 **"确定"**。 然后再次单击“确定”****。  
   
      选择正确的代理后，单击 "**下一步**"。  
   

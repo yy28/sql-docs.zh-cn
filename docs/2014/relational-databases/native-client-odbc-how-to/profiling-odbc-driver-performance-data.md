@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - driver performance data [ODBC]
 ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a7de38f3c91814dbd364caee84b34dacdfbdf475
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 957e99d67360d72e1d8920d3bad2611c67f747de
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200303"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82712969"
 ---
 # <a name="profile-driver-performance-data-odbc"></a>配置驱动程序性能数据 (ODBC)
   此示例显示用于记录性能统计信息的特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序的选项； 其中创建了一个文件：odbcperf.log。此示例显示如何直接从 SQLPERF 数据结构（SQLPERF 结构在 Odbcss.h 中定义）创建性能数据日志文件和显示性能数据。 此示例是面向 ODBC 3.0 版或更高版本开发的。  
@@ -33,7 +33,7 @@ ms.locfileid: "63200303"
   
 3.  单击要记录其性能的数据源。  
   
-4.  单击 **“配置”**。  
+4.  单击 **“配置”** 。  
   
 5.  在 Microsoft SQL Server 配置 DSN 向导 "中，导航到日志文件中包含" 将**ODBC 驱动程序统计信息记录到**"的页。  
   

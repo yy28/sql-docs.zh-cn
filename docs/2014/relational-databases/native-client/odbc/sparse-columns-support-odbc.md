@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 11ae959f-2fb6-4b85-ac5d-1476a82136d4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a6e1583dad869860bdd2f555a354850c7f7a1198
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1d21a69105dbc419ad7c596a7ae0cc6ae4ceb57
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62691959"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707028"
 ---
 # <a name="sparse-columns-support-odbc"></a>稀疏列支持 (ODBC)
   本主题描述对稀疏列的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 支持。 有关演示 ODBC 对稀疏列的支持的示例，请参阅对[具有稀疏列的表调用 SQLColumns](../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md)。 有关稀疏列的详细信息，请参阅[SQL Server Native Client 中的稀疏列支持](../features/sparse-columns-support-in-sql-server-native-client.md)。  
@@ -26,7 +26,7 @@ ms.locfileid: "62691959"
  新的实现行描述符 (IRD) 是称为 SQL_CA_SS_IS_COLUMN_SET 的只读 SQLSMALLINT 字段，它可以用于确定列是否是 XML `column_set` 值。 SQL_CA_SS_IS_COLUMN_SET 接受值 SQL_TRUE 和 SQL_FALSE。  
   
 ## <a name="catalog-metadata"></a>目录元数据  
- 已[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]将两个特定列（SS_IS_SPARSE 和 SS_IS_COLUMN_SET）添加到[SQLColumns](../../native-client-odbc-api/sqlcolumns.md)的结果集中。  
+ 已将两个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定列（SS_IS_SPARSE 和 SS_IS_COLUMN_SET）添加到[SQLColumns](../../native-client-odbc-api/sqlcolumns.md)的结果集中。  
   
 ## <a name="odbc-function-support-for-sparse-columns"></a>对稀疏列的 ODBC 函数支持  
  以下 ODBC 函数已进行更新，以便在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中支持稀疏列：  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - SQLNCLI, additional resources
 - SQL Server Native Client, additional resources
 ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 639796b9abcf95c9f701d3ed88fbb5e71078eb8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5eadf89cb6516dcc437b727843cb861b7c04a9c1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63205849"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707146"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>查找更多 SQL Server Native Client 信息
   有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 和其他类型的数据访问编程的详细信息，请参阅以下联机资源：  
@@ -34,7 +34,7 @@ ms.locfileid: "63205849"
   
  Windows DAC SDK 包括 ActiveX 数据对象 (ADO)、OLE DB 和开放式数据库连接 (ODBC) 的文档。  
   
- 有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的其他信息，请参阅[Microsoft 支持部门](https://support.microsoft.com)。  
+ 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的其他信息，请参阅[Microsoft 支持部门](https://support.microsoft.com)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Native Client 编程](sql-server-native-client-programming.md)  

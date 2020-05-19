@@ -12,18 +12,18 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e0c042b367cbd8a56d21ed57735f9334d24003d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bd6af4f85fb8a39f2206bf6c3b9f3099a4af0b2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63195225"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82708561"
 ---
 # <a name="getting-large-data"></a>获取大型数据
-  通常，使用者应该隔离用来创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端 OLE DB 提供程序存储对象的代码，该代码用于处理未通过**ISequentialStream**接口指针引用的数据。  
+  通常，使用者应该隔离用来创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机客户端 OLE DB 提供程序存储对象的代码，该代码用于处理未通过**ISequentialStream**接口指针引用的数据。  
   
  本主题涉及可用于以下函数的功能：  
   
@@ -35,7 +35,7 @@ ms.locfileid: "63195225"
   
  如果将 DBPROP_ACCESSORDER 属性（位于行集属性组中）设置为 DBPROPVAL_AO_SEQUENTIAL 或 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 的任一值，则使用者应该只在调用**GetNextRows**方法时提取单行数据，因为 BLOB 数据不进行缓冲。 如果 DBPROP_ACCESSORDER 的值设置为 DBPROPVAL_AO_RANDOM，则使用者可以在 GetNextRows 中提取多行数据****。  
   
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者请求之前，Native Client OLE DB 提供程序[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不会从检索大数据。 使用者应在一个取值函数中绑定所有短 (Short) 数据，然后根据需要使用一个或多个临时取值函数检索大型数据值。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者请求之前，Native Client OLE DB 提供程序不会从检索大数据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 使用者应在一个取值函数中绑定所有短 (Short) 数据，然后根据需要使用一个或多个临时取值函数检索大型数据值。  
   
 ## <a name="example"></a>示例  
  本示例从单一列中检索大型数据值：  

@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - stored procedures [ODBC], calling
 ms.assetid: 31176be8-d40e-4f93-8d44-a46e804a3e2d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a960df20b7b07bffab900589ae4d520541d720c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7db8c722eb7afcb9db47478a1f42dd7830935ad7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72688666"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82712523"
 ---
 # <a name="call-stored-procedures-odbc"></a>调用存储过程 (ODBC)
   当 SQL 语句使用 ODBC CALL 转义子句调用存储过程时，Microsoft SQL Server 驱动程序使用远程存储过程调用（RPC）机制将该过程发送到 SQL Server。 RPC 请求在 SQL Server 中跳过大多数语句分析和参数处理，因此，其速度快于使用 Transact-SQL EXECUTE 语句。  

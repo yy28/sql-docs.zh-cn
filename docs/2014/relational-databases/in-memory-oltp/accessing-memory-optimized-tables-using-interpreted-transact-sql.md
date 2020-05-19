@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c81ac6c0c8dcf7e24c80b426654164c668fcf3a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c5769a59a8deebfa99a00229f1b1227e427e051a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62468604"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706562"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>使用解释型 Transact-SQL 访问内存优化表
   除了少数例外情况，可以使用任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询或 DML 操作（SELECT、INSERT、UPDATE 或 DELETE）、即席批处理和 SQL 模块（如存储过程、表值函数、触发器和视图）来访问内存优化表。  
@@ -36,10 +36,10 @@ ms.locfileid: "62468604"
   
  访问内存优化表中的数据的解释型 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程中不支持以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 构造。  
   
-|区域|不支持|  
+|分区图|不支持|  
 |----------|-----------------|  
 |访问表|TRUNCATE TABLE<br /><br /> MERGE（使用内存优化的表作为目标）<br /><br /> 动态和键集游标（这些会自动降级为静态）。<br /><br /> 使用上下文连接从 CLR 模块访问。<br /><br /> 从索引视图引用内存优化表。|  
-|跨数据库|跨数据库查询<br /><br /> 跨数据库事务<br /><br /> 链接的服务器|  
+|跨数据库|跨数据库查询<br /><br /> 跨数据库事务<br /><br /> 链接服务器|  
   
 ## <a name="table-hints"></a>表提示  
  有关表提示的详细信息，请参阅。 [表提示 &#40;transact-sql&#41;](/sql/t-sql/queries/hints-transact-sql-table)。 添加了 SNAPSHOT 隔离来支持 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]。  

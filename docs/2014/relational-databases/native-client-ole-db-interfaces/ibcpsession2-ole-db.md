@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - IBCPSession2 interface
 ms.assetid: 12816656-940d-4724-acfb-e916eef2e644
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: caa99de2383a022ff73c04dd5fcdeeb151ca086d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61084969ad28c94dd2047cda1d05f685751a70f7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62691853"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707393"
 ---
 # <a name="ibcpsession2-ole-db"></a>IBCPSession2 (OLE DB)
   IBCPSession2 接口扩展了 IBCPSession（该接口提供了成员函数，作为为每列调用 IBCPSession::BCPColFmt 的替代方式）。  IBCPSession2 继承自 IBCPSession，并添加了一个新方法： [IBCPSession2：： BCPSetBulkMode](ibcpsession2-bcpsetbulkmode.md)。  

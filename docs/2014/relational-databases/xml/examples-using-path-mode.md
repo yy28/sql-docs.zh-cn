@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c5a566d9684341b7aa20342147aab950ebd4047c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea8c809190e8c0230dfe301f973fcab3017d69ad
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63287775"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716658"
 ---
 # <a name="examples-using-path-mode"></a>示例：使用 PATH 模式
   下面的示例演示如何使用 PATH 模式通过 SELECT 查询生成 XML。 这些查询中有许多都是针对 ProductModel 表的 Instructions 列中存储的自行车生产说明 XML 文档指定的。  
@@ -200,7 +200,7 @@ FOR XML PATH ('ProductModelData'), root ('Root');
 GO  
 ```  
   
- 下面是部分结果： 因为该查询指定 ManuInstr 作为列名，所以该`query()`方法返回的 XML 包装在 <`ManuInstr`> 标记中，如下所示：  
+ 下面是部分结果： 因为该查询指定 ManuInstr 作为列名，所以该方法返回的 XML `query()` 包装在 <> 标记中，如下 `ManuInstr` 所示：  
   
  `<Root>`  
   

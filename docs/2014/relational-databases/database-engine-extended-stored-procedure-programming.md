@@ -13,22 +13,22 @@ helpviewer_keywords:
 - macros [SQL Server]
 - Extended Stored Procedure API [SQL Server]
 ms.assetid: 158a6765-0542-4e84-b5ab-f173d946ef5e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f4146e19c6306cbe83659390605f570561fcc08f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63f66eb4b47588476afc2e01cf9c42a00293aee5
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917816"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706846"
 ---
 # <a name="database-engine-extended-stored-procedure-programming"></a>数据库引擎扩展存储过程编程
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)] 请改用 CLR 集成。 有关详细信息，请参阅[公共语言运行时 (CLR) 集成编程概念](clr-integration/common-language-runtime-clr-integration-programming-concepts.md)。  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)]扩展存储过程 API 提供用于扩展[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能的基于服务器的应用程序编程接口（API）。 此 API 由用于生成应用程序的 C 和 C++ 函数以及宏组成，分为扩展存储过程和网关应用程序两个类别。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)]扩展存储过程 API 提供用于扩展功能的基于服务器的应用程序编程接口（API） [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 此 API 由用于生成应用程序的 C 和 C++ 函数以及宏组成，分为扩展存储过程和网关应用程序两个类别。  
   
  使用扩展存储过程可以用编程语言（例如 C）创建自己的外部例程。扩展存储过程对于用户的显示方式和执行方式与典型存储过程相同。 可以将参数传递给扩展存储过程，而且扩展存储过程可以返回结果和状态。  
   

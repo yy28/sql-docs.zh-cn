@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f0ba7f39d3c95fe992d6603707b2a67d6726b7e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637605"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717112"
 ---
 # <a name="create-instances-of-xml-data"></a>创建 XML 数据的实例
   本主题说明了如何生成 XML 实例。  
@@ -40,7 +40,7 @@ ms.locfileid: "62637605"
 -   使用大容量加载。  
   
 ## <a name="type-casting-string-and-binary-instances"></a>类型转换字符串实例和二进制实例  
- 您可以通过将字符串数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]类型（如 [**n**] [**var**]**char**、 **[n] text**、 **varbinary**和**image**）通过强制转换（强制转换`xml` ）或转换（转换）为`xml`数据类型，将其解析为数据类型。 对非类型化的 XML 进行检查以确认其格式是否正确。 如果存在与`xml`类型关联的架构，则还会执行验证。 有关详细信息，请参阅 [类型化的 XML 与非类型化的 XML 的比较](compare-typed-xml-to-untyped-xml.md)。  
+ 您可以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过将字符串数据类型（如 [**n**] [**var**]**char**、 **[n] text**、 **varbinary**和**IMAGE**） `xml` 通过强制转换（强制转换）或转换（转换）为数据类型，将其解析为数据类型 `xml` 。 对非类型化的 XML 进行检查以确认其格式是否正确。 如果存在与类型关联的架构 `xml` ，则还会执行验证。 有关详细信息，请参阅 [类型化的 XML 与非类型化的 XML 的比较](compare-typed-xml-to-untyped-xml.md)。  
   
  XML 文档可以采用不同的编码方式（例如，UTF-8、UTF-16 和 windows-1252）进行编码。 下面概述了有关字符串和二进制源类型与 XML 文档编码进行交互的方式以及分析器行为方式的规则。  
   
@@ -94,7 +94,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
  如果未使用 *style* 参数，或将其值设置为 0，则转换 xml DT 实例时不保留无关紧要的空格。 有关在将字符串数据转换为 xml DT 实例时如何使用 CONVERT 运算符及其 *style* 参数的详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](/sql/t-sql/functions/cast-and-convert-transact-sql)。  
   
 ### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>示例：将字符串值转换为类型化的 xml 并将其赋给某列  
- 下面的示例将包含 XML 片段的字符串变量转换为`xml`数据类型，然后将`xml`其存储在类型列中：  
+ 下面的示例将包含 XML 片段的字符串变量转换为 `xml` 数据类型，然后将其存储在 `xml` 类型列中：  
   
 ```  
 CREATE TABLE T(c1 int primary key, c2 xml)  
@@ -103,13 +103,13 @@ DECLARE  @s varchar(100)
 SET @s = '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust>'   
 ```  
   
- 以下插入操作将字符串隐式转换为`xml`类型：  
+ 以下插入操作将字符串隐式转换为 `xml` 类型：  
   
 ```  
 INSERT INTO T VALUES (3, @s)   
 ```  
   
- 可以显式将字符串强制转换为`xml`类型：  
+ 可以显式将字符串强制转换为 `xml` 类型：  
   
 ```  
 INSERT INTO T VALUES (3, cast (@s as xml))  
@@ -122,7 +122,7 @@ INSERT INTO T VALUES (3, convert (xml, @s))
 ```  
   
 ### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>示例：将字符串转换为类型化的 xml 并将其赋给某个变量  
- 在下面的示例中，将字符串转换为`xml`类型，并将其分配给`xml`数据类型的变量：  
+ 在下面的示例中，将字符串转换为 `xml` 类型，并将其分配给 `xml` 数据类型的变量：  
   
 ```  
 declare @x xml  
@@ -144,9 +144,9 @@ SET @xmlDoc = (SELECT Column1, Column2
  ...  
 ```  
   
- SELECT 语句返回文本 XML 片段，该片段在赋值到`xml`数据类型变量的过程中进行分析。  
+ SELECT 语句返回文本 XML 片段，该片段在赋值到数据类型变量的过程中进行分析 `xml` 。  
   
- 你还可以在 FOR XML 子句中使用[type 指令](type-directive-in-for-xml-queries.md)，该子句直接将 for xml 查询结果作为`xml`类型返回：  
+ 你还可以在 FOR XML 子句中使用[type 指令](type-directive-in-for-xml-queries.md)，该子句直接将 for xml 查询结果作为 `xml` 类型返回：  
   
 ```  
 Declare @xmlDoc xml  
@@ -163,7 +163,7 @@ SELECT @xmlDoc
 <Production.ProductModel ProductModelID="19" Name="Mountain-100" />...  
 ```  
   
- 在下面的示例中，将`xml` FOR XML 查询的类型化结果插入到`xml`类型列中：  
+ 在下面的示例中，将 `xml` FOR XML 查询的类型化结果插入到 `xml` 类型列中：  
   
 ```  
 CREATE TABLE T1 (c1 int, c2 xml)  
@@ -183,7 +183,7 @@ go
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `xml` 数据类型实例作为不同服务器构造（例如使用 TYPE 指令或在其中使用 `xml` 数据类型从 SQL 列、变量和输出参数返回 XML 的 FOR XML 查询）的结果返回到客户端。 在客户端应用程序代码中，ADO.NET 访问接口请求以二进制编码形式从服务器发送此 `xml` 数据类型信息。 但是，如果使用的是不带 TYPE 指令的 FOR XML，则 XML 数据将作为字符串类型返回。 在任何情况下，客户端访问接口都始终能够处理其中任一种形式的 XML 内容。  
   
 ## <a name="using-constant-assignments"></a>使用常量赋值  
- 如果需要`xml`数据类型的实例，可以使用字符串常量。 这与将字符串隐式 CAST 为 XML 相同。 例如：  
+ 如果需要数据类型的实例，可以使用字符串常量 `xml` 。 这与将字符串隐式 CAST 为 XML 相同。 例如：  
   
 ```  
 DECLARE @xmlDoc xml  
@@ -192,9 +192,9 @@ SET @xmlDoc = '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust>'
 SET @xmlDoc = N'<?xml version="1.0" encoding="ucs-2"?><doc/>'  
 ```  
   
- 前面的示例将字符串隐式转换为`xml`数据类型，并将其分配`xml`给类型变量。  
+ 前面的示例将字符串隐式转换为 `xml` 数据类型，并将其分配给 `xml` 类型变量。  
   
- 下面的示例将常量字符串插入到`xml`类型列中：  
+ 下面的示例将常量字符串插入到 `xml` 类型列中：  
   
 ```  
 CREATE TABLE T(c1 int primary key, c2 xml)  
@@ -205,7 +205,7 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
 >  对于类型化的 XML，是针对指定的架构来验证 XML。 有关详细信息，请参阅 [类型化的 XML 与非类型化的 XML 的比较](compare-typed-xml-to-untyped-xml.md)。  
   
 ## <a name="using-bulk-load"></a>使用大容量加载  
- 通过增强的 [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql) 功能，可以在数据库中大容量加载 XML 文档。 可以将文件中的 XML 实例大容量加载`xml`到数据库中的类型列。 有关工作示例，请参阅[批量导入和导出 XML 文档的示例 (SQL Server);](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)。 有关加载 XML 文档的详细信息，请参阅 [加载 XML 数据](load-xml-data.md)。  
+ 通过增强的 [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql) 功能，可以在数据库中大容量加载 XML 文档。 可以将文件中的 XML 实例大容量加载到 `xml` 数据库中的类型列。 有关工作示例，请参阅[批量导入和导出 XML 文档的示例 (SQL Server);](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)。 有关加载 XML 文档的详细信息，请参阅 [加载 XML 数据](load-xml-data.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
   

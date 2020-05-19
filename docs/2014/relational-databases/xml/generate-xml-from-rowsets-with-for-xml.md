@@ -9,20 +9,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, generating XML from rowsets
 ms.assetid: d061c0f1-3de9-4ad1-bbca-ce45d064b6c8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 181d07e187c6b1091d38ebbe0018c61ae856caf3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7024369f579f818e56250f1aac48c2d1834ea26
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204984"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82715377"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>使用 FOR XML 从行集生成 XML
-  可以通过将 FOR `xml` XML 与新的**type**指令一起使用，从行集生成数据类型实例。  
+  可以 `xml` 通过将 FOR XML 与新的**type**指令一起使用，从行集生成数据类型实例。  
   
- 可以将结果分配给`xml`数据类型列、变量或参数。 同样，可以嵌套 FOR XML 以生成任意层次结构。 这使嵌套的 FOR XML 在编写上比 FOR XML EXPLICIT 更为方便，但是对于深层次的结构，它的执行效果不如后者。 FOR XML 还引入了新的 PATH 模式。 这个新模式指定某个列的值在 XML 树中的路径。  
+ 可以将结果分配给 `xml` 数据类型列、变量或参数。 同样，可以嵌套 FOR XML 以生成任意层次结构。 这使嵌套的 FOR XML 在编写上比 FOR XML EXPLICIT 更为方便，但是对于深层次的结构，它的执行效果不如后者。 FOR XML 还引入了新的 PATH 模式。 这个新模式指定某个列的值在 XML 树中的路径。  
   
  可以使用新的 **FOR XML TYPE** 指令，采用 SQL 语法来定义关系数据上的只读 XML 视图。 可以使用 SQL 语句和嵌入式 XQuery 查询该视图，如下面的示例所示。 另外，您还可以在存储过程中引用这些 SQL 视图。  
   
@@ -36,7 +36,7 @@ FROM   T
 FOR XML AUTO, TYPE  
 ```  
   
- 视图中的 Columnxmlvalt 包含单一的 XML 类型`.`的行，它可以像常规`xml`数据类型实例一样进行查询。 例如，下面的查询返回名字为“David”的作者：  
+ 视图中的 Columnxmlvalt 包含单一的 XML 类型的行， `.` 它可以像常规 `xml` 数据类型实例一样进行查询。 例如，下面的查询返回名字为“David”的作者：  
   
 ```  
 SELECT xmlVal.query('//author[first-name = "David"]')  

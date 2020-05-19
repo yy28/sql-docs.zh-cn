@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ETW target
 - targets [SQL Server extended events], event tracing for windows target
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 34c367d6ea7663a262c7ccead1e85702af9cf499
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62519301"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706828"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows 事件跟踪目标
   在将 Windows 事件跟踪 (ETW) 作为目标使用前，建议您先掌握 ETW 的相关使用知识。 ETW 跟踪或者与扩展事件结合使用，或者用作扩展事件的事件使用者。 您可以从以下外部链接入手，获取有关 ETW 的背景信息：  
@@ -48,7 +48,7 @@ ms.locfileid: "62519301"
   
  下表介绍了配置 ETW 目标时可用的选项。  
   
-|选项|允许的值|描述|  
+|选项|允许的值|说明|  
 |------------|--------------------|-----------------|  
 |default_xe_session_name|任何不超过 256 个字符的字符串。 此值是可选的。|扩展事件会话名称。 默认情况下为 XE_DEFAULT_ETW_SESSION。|  
 |default_etw_session_logfile_path|任何不超过 256 个字符的字符串。 此值是可选的。|扩展事件会话日志文件的路径。 默认情况下为 %TEMP%\ XEEtw.etl。|  
@@ -75,7 +75,7 @@ ms.locfileid: "62519301"
     > [!IMPORTANT]  
     >  当第一个会话启动后不能再更改该文件路径。  
   
--   托管对象格式（MOF）文件位于* \<安装路径中>* \Microsoft SQL server\shared。 有关详细信息，请参阅 MSDN 上的 [托管对象格式](https://go.microsoft.com/fwlink/?LinkId=92851) 。  
+-   托管对象格式（MOF）文件位于* \< 安装路径中>* \Microsoft SQL server\shared。 有关详细信息，请参阅 MSDN 上的 [托管对象格式](https://go.microsoft.com/fwlink/?LinkId=92851) 。  
   
 ## <a name="adding-the-target-to-a-session"></a>将目标添加到会话  
  若要将 ETW 目标添加到扩展事件会话中，您必须在创建或更改事件会话时包括下面的语句：  

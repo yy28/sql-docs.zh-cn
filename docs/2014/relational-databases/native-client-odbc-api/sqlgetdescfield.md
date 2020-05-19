@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLGetDescField function
 ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6a92b3a9491b8424fb9015fc4d30875fedb38758
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b635716617c84185efdef0e2e23d2f3b65bbac91
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62657775"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706048"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序只为实现行描述符（IRD）公开驱动程序特定的描述符字段。 在 IRD 中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过驱动程序特定的列属性引用描述符字段。 有关可用驱动程序特定的描述符字段的完整列表的信息，请参阅[SQLColAttribute](sqlcolattribute.md)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序只为实现行描述符（IRD）公开驱动程序特定的描述符字段。 在 IRD 中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过驱动程序特定的列属性引用描述符字段。 有关可用驱动程序特定的描述符字段的完整列表的信息，请参阅[SQLColAttribute](sqlcolattribute.md)。  
   
  包含列标识符字符串的描述符字段通常是长度为零的字符串。 特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有描述符字段值都是只读的。  
   
@@ -36,13 +36,13 @@ ms.locfileid: "62657775"
   
  有关详细信息，请参阅[ODBC&#41;&#40;日期和时间改进](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
- 从开始[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，如果应用程序`SQL_C_SS_TIME2`使用 ODBC `time` 3.8，则`SQL_C_SS_TIMESTAMPOFFSET` SQLGetDescField 可以`datetimeoffset`返回（对于`SQL_C_BINARY`类型）或（对于）而不是。  
+ 从开始 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ， `SQL_C_SS_TIME2` 如果应用程序使用 ODBC 3.8，则 SQLGetDescField 可以返回（对于 `time` 类型）或 `SQL_C_SS_TIMESTAMPOFFSET` （对于 `datetimeoffset` ）而不是 `SQL_C_BINARY` 。  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>SQLGetDescField 对大型 CLR UDT 的支持  
  `SQLGetDescField` 支持大型 CLR 用户定义类型 (UDT)。 有关详细信息，请参阅[&#40;ODBC&#41;的大型 CLR 用户定义类型](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="sqlgetdescfield-support-for-sparse-columns"></a>SQLGetDescField 对稀疏列的支持  
- SQLGetDescField 可用于查询新的 IRD 字段 SQL_CA_SS_IS_COLUMN_SET 来确定列是否为`column_set`列。  
+ SQLGetDescField 可用于查询新的 IRD 字段 SQL_CA_SS_IS_COLUMN_SET 来确定列是否为 `column_set` 列。  
   
  有关详细信息，请参阅[稀疏列支持 &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md)。  
   

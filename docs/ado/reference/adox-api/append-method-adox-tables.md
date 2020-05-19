@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8c16ac4d18806b670c8b3e27dc09c9019d7ecdeb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 19617c65b350527753895ed613f671c3ac0f88e8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967246"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764008"
 ---
 # <a name="append-method-adox-tables"></a>Append 方法（ADOX 表）
 向[Tables](../../../ado/reference/adox-api/tables-collection-adox.md)集合添加一个新的[Table](../../../ado/reference/adox-api/table-object-adox.md)对象。  
@@ -34,7 +34,7 @@ Tables.Append Table
 ```  
   
 #### <a name="parameters"></a>参数  
- *数据表*  
+ *表*  
  一个包含对要追加的**表**的引用的**变量**值，或者是要创建并追加的表的名称。  
   
 ## <a name="remarks"></a>备注  

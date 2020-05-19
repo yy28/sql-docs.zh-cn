@@ -10,15 +10,15 @@ helpviewer_keywords:
 - extended events [SQL Server]
 - xe
 ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8498937fa1f259b194ea57fc5f5d286adf0db12
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990706"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706657"
 ---
 # <a name="extended-events"></a>扩展事件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件具有高度可伸缩且高度可配置的体系结构，使用户能够按需收集解决性能问题或确定性能问题所需的信息。  
@@ -93,7 +93,7 @@ ms.locfileid: "62990706"
 |介绍如何查看与各 SQL 跟踪事件及其关联列等效的扩展事件和操作。|[查看与 SQL 跟踪事件类等效的扩展事件](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
 |介绍如何找到在 CREATE EVENT SESSION 或 ALTER EVENT SESSION 中使用 ADD TARGET 参数时可设置的参数。|[获取 ADD TARGET 实参的可配置形参](../../database-engine/get-the-configurable-parameters-for-the-add-target-argument.md)|  
 |介绍如何将现有 SQL 跟踪脚本转换为扩展事件会话。|[将现有 SQL 跟踪脚本转换为扩展事件会话](convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
-|介绍如何确定持有锁的查询、查询的计划以及取锁时的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 堆栈。|[确定哪些查询持有锁](determine-which-queries-are-holding-locks.md)|  
+|介绍如何确定持有锁的查询、查询的计划以及取锁时的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 堆栈。|[确定持有锁的查询](determine-which-queries-are-holding-locks.md)|  
 |介绍如何识别影响数据库性能的锁来源。|[查找具有最多锁定的对象](find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
 |介绍如何将扩展事件和 Windows 事件跟踪配合使用来监视系统活动。|[使用扩展事件监视系统活动](monitor-system-activity-using-extended-events.md)|  
   

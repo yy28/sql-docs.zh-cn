@@ -10,18 +10,18 @@ helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a62d8fbafc353e2d71223506b7fb4516d184b494
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637990"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717094"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>创建 XML 数据类型的变量和列
-  `xml` 数据类型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的内置数据类型，并有些类似于其他内置类型（如 `int` 和 `varchar`）。 与其他内置类型一样，在创建表作为变量类型`xml` 、参数类型、函数返回类型或在[CAST 和 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)中时，可以使用数据类型作为列类型。  
+  `xml` 数据类型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的内置数据类型，并有些类似于其他内置类型（如 `int` 和 `varchar`）。 与其他内置类型一样，在 `xml` 创建表作为变量类型、参数类型、函数返回类型或在[CAST 和 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)中时，可以使用数据类型作为列类型。  
   
 ## <a name="creating-columns-and-variables"></a>创建列和变量  
  若要创建 `xml` 类型列作为表的一部分，请使用 `CREATE TABLE` 语句，如下例所示：  
@@ -127,9 +127,9 @@ INSERT INTO T values(1,'<Product />')
 ```  
   
 ## <a name="same-or-different-table"></a>相同或不同的表  
- 可以`xml`在包含其他关系列的表中创建数据类型列，也可以在具有与主表的外键关系的单独表中创建数据类型列。  
+ `xml`可以在包含其他关系列的表中创建数据类型列，也可以在具有与主表的外键关系的单独表中创建数据类型列。  
   
- 如果满足`xml`以下条件之一，则在同一个表中创建数据类型列：  
+ `xml`如果满足以下条件之一，则在同一个表中创建数据类型列：  
   
 -   您的应用程序对 XML 列执行数据检索，并且不需要 XML 列的 XML 索引。  
   

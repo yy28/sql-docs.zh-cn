@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 127569d1-a9f7-49bf-a561-c084986a8871
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3a3f5a8214c2966b1958c3a4ea08edbee5af6a2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 503bae580d2bacffbd143a1b4530f83b7c81a269
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225477"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707222"
 ---
 # <a name="sql-server-native-client-support-for-localdb"></a>SQL Server Native Client 对 LocalDB 的支持
   从 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 开始，将提供 SQL Server 的称作 LocalDB 的轻型版本。 本主题介绍如何连接到 LocalDB 实例中的数据库。  
@@ -31,7 +31,7 @@ ms.locfileid: "63225477"
   
 -   使用 `sqllocaldb.exe i` 发现默认实例的名称。  
   
--   使用 `AttachDBFilename` 连接字符串关键字指定服务器应附加的数据库文件。 使用`AttachDBFilename`时，如果未使用**数据库**连接字符串关键字指定数据库的名称，则在应用程序关闭时，将从 LocalDB 实例中删除数据库。  
+-   使用 `AttachDBFilename` 连接字符串关键字指定服务器应附加的数据库文件。 使用时 `AttachDBFilename` ，如果未使用**数据库**连接字符串关键字指定数据库的名称，则在应用程序关闭时，将从 LocalDB 实例中删除数据库。  
   
 -   在您的连接字符串中指定 LocalDB 实例：  
   

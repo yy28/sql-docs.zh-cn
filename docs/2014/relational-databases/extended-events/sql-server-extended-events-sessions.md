@@ -11,15 +11,15 @@ helpviewer_keywords:
 - sessions
 - extend events [SQL Server]
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6e589ccad75cea729913b10b6232f61693446595
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83440163bdb1e03690fe4f5dcf93fdfc6779057f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62705734"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706609"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 扩展事件会话是在用于承载 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 扩展事件引擎的进程中创建的。 扩展事件会话的以下各方面信息可为您理解扩展事件基础结构和所发生的常规处理提供有关背景知识：  
@@ -35,7 +35,7 @@ ms.locfileid: "62705734"
   
  对照前面的图，可以注意到在对事件会话发出不同的 DDL 命令时会话状态将发生更改。 下表说明了这些状态更改。  
   
-|图例标签|DDL 语句|描述|  
+|图例标签|DDL 语句|说明|  
 |------------------------|-------------------|-----------------|  
 |创建|CREATE EVENT SESSION|主机进程将创建一个会话对象，其中包含由 CREATE EVENT SESSION 提供的元数据。 主机进程将验证会话定义和用户权限级别，并将元数据存储在 master 数据库中。 此时该会话处于不活动状态。|  
 |更改|ALTER EVENT SESSION, STATE=START|主机进程启动会话。 主机进程将读取存储的元数据、验证会话定义、验证用户权限级别并创建会话。 此操作还将载入会话对象（例如事件和目标），此时事件处理即处于活动状态。|  

@@ -22,18 +22,18 @@ helpviewer_keywords:
 - XML [SQL Server], untyped
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 98cbaa59ea78e0033e9a534915987576347db604
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b00b44ebe66a372b2037e62dc589afa35003495e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637615"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717199"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>类型化的 XML 与非类型化的 XML 的比较
-  您可以创建 `xml` 类型的变量、参数和列。 您也可以将 XML 架构的集合与 `xml` 类型的变量、参数或列关联起来。 在这种情况下`xml` ，数据类型实例称为*类型化*。 否则，XML 实例称作“非类型化”  的实例。  
+  您可以创建 `xml` 类型的变量、参数和列。 您也可以将 XML 架构的集合与 `xml` 类型的变量、参数或列关联起来。 在这种情况下， `xml` 数据类型实例称为*类型化*。 否则，XML 实例称作“非类型化”  的实例。  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>格式正确的 XML 和 xml 数据类型  
  `xml` 数据类型可实现 ISO 标准的 `xml` 数据类型。 因此，它可以在非类型化的 XML 列中存储格式正确的 XML 1.0 版的文档以及具有文本节点和任意数量顶级元素的所谓的 XML 内容片段。 系统将检查数据格式是否正确，但不要求将列绑定到 XML 架构，并且拒绝在扩展意义上格式不正确的数据。 对于非类型化的 XML 变量和参数也是如此。  
@@ -52,7 +52,7 @@ ms.locfileid: "62637615"
   
 -   您有架构，但不希望服务器验证数据。 当应用程序将数据存储到服务器之前会执行客户端验证时，临时存储对该架构而言无效的 XML 数据时，或在服务器上使用不支持的架构组件时，需要如此。  
   
- 在以下`xml`情况下使用类型化数据类型：  
+ `xml`在以下情况下使用类型化数据类型：  
   
 -   您有对应于您的 XML 数据的架构，并且希望服务器根据 XML 架构验证您的 XML 数据。  
   
@@ -63,12 +63,12 @@ ms.locfileid: "62637615"
  类型化的 XML 列、参数和变量可以存储 XML 文档或内容。 但是，在声明时必须使用标志指定是存储文档还是存储内容。 此外，必须提供 XML 架构集合。 如果每个 XML 实例都刚好有一个顶级元素，请指定 DOCUMENT。 否则，请使用 CONTENT。 查询编译器在查询编译期间的类型检查过程中使用 DOCUMENT 标志来推断单独的顶级元素。  
   
 ## <a name="creating-typed-xml"></a>创建类型化的 XML  
- 创建类型化`xml`变量、参数或列之前，必须先使用[CREATE xml Schema collection &#40;transact-sql&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)来注册 XML 架构集合。 接下来，您就可以将 XML 架构集合与 `xml` 数据类型的变量、参数或列关联起来。  
+ 创建类型化 `xml` 变量、参数或列之前，必须先使用[CREATE XML schema Collection &#40;transact-sql&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)来注册 XML 架构集合。 接下来，您就可以将 XML 架构集合与 `xml` 数据类型的变量、参数或列关联起来。  
   
  在下列示例中，使用由两部分组成的名称命名约定指定 XML 架构集合名称。 第一部分是架构名称，第二部分是 XML 架构集合名称。  
   
 ### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>示例：将架构集合与 xml 类型变量关联起来  
- 下面的示例创建一个`xml`类型变量并将架构集合与其关联。 该示例中指定的架构集合已导入 **AdventureWorks** 数据库。  
+ 下面的示例创建一个 `xml` 类型变量并将架构集合与其关联。 该示例中指定的架构集合已导入 **AdventureWorks** 数据库。  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   

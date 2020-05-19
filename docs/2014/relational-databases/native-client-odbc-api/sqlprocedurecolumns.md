@@ -11,24 +11,24 @@ topic_type:
 helpviewer_keywords:
 - SQLProcedureColumns function
 ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 21c0a7248f2e8c5313678f503b239cdf44d16ea7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 536d8551b82918aae34fa25723c99e8cfad5f1ad
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046708"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705885"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
-  `SQLProcedureColumns`返回一列，报告所有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储过程的返回值特性。  
+  `SQLProcedureColumns`返回一列，报告所有存储过程的返回值特性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  `SQLProcedureColumns`返回 SQL_SUCCESS 是否存在*CatalogName*、 *SchemaName*、 *ProcName*或*ColumnName*参数的值。 当在这些参数中使用了无效值时， **SQLFetch**将返回 SQL_NO_DATA。  
   
  可以对静态服务器游标执行 `SQLProcedureColumns`。 尝试对可更新的（动态或键集）游标执行 `SQLProcedureColumns` 时，将返回 SQL_SUCCESS_WITH_INFO 以指示游标类型已更改。  
   
- 下表列出了结果集返回的列，以及如何通过[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序扩展这些列来处理**udt**和**xml**数据类型：  
+ 下表列出了结果集返回的列，以及如何通过 Native Client ODBC 驱动程序扩展这些列来处理**udt**和**xml**数据类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：  
   
 |列名称|说明|  
 |-----------------|-----------------|  

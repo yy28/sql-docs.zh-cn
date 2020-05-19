@@ -12,15 +12,15 @@ helpviewer_keywords:
 - handles [SQL Server Native Client]
 - environment handles [SQLNCLI]
 ms.assetid: 15c1b428-ea6d-4672-894c-f0e289e2da3f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 66afa14ccb1953265f526f8c8861237638f569fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 173211cfa6c1e70d979f908c88433857fccd0201
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63199030"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705748"
 ---
 # <a name="allocating-an-environment-handle"></a>分配环境句柄
   在应用程序可以调用任何 ODBC 函数之前，它必须初始化 ODBC 环境并分配环境句柄。 这是全局上下文句柄，并且是 ODBC 中其他句柄的占位符。 为此，可调用**SQLAllocHandle** ，并将*HandleType*参数设置为 SQL_HANDLE_ENV 并将*将 inputhandle*设置为 SQL_NULL_HANDLE。  

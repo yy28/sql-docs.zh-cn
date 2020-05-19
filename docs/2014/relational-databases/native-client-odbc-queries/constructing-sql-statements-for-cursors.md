@@ -14,20 +14,20 @@ helpviewer_keywords:
 - ODBC applications, statements
 - statements [ODBC], cursors
 ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3dc86f27ab9e111c5d93c91de65c51da9008ba33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 115f1072dae34075929622b8b3b57a16a43728a2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68207079"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82711079"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>为游标构造 SQL 语句
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序使用服务器游标来实现 ODBC 规范中定义的游标功能。 ODBC 应用程序通过使用[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)设置不同的语句特性来控制游标行为。 以下为属性及其默认值。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序使用服务器游标来实现 ODBC 规范中定义的游标功能。 ODBC 应用程序通过使用[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)设置不同的语句特性来控制游标行为。 以下为属性及其默认值。  
   
-|属性|默认|  
+|Attribute|默认|  
 |---------------|-------------|  
 |SQL_ATTR_CONCURRENCY|SQL_CONCUR_READ_ONLY|  
 |SQL_ATTR_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY|  
@@ -35,7 +35,7 @@ ms.locfileid: "68207079"
 |SQL_ATTR_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
 |SQL_ATTR_ROW_ARRAY_SIZE|1|  
   
- 当执行 SQL 语句时，将这些选项设置为默认值时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序不使用服务器游标来实现结果集;而是使用默认结果集。 如果在执行 SQL 语句时，这些选项中的任何一种都已更改为默认值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则 NATIVE Client ODBC 驱动程序会尝试使用服务器游标来实现结果集。  
+ 当执行 SQL 语句时，将这些选项设置为默认值时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驱动程序不使用服务器游标来实现结果集; 而是使用默认结果集。 如果在执行 SQL 语句时，这些选项中的任何一种都已更改为默认值，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驱动程序会尝试使用服务器游标来实现结果集。  
   
  默认结果集支持所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 对使用默认结果集时可以执行的 SQL 语句类型没有限制。  
   
