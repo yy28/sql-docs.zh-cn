@@ -55,7 +55,7 @@ numeric  ([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),
 ## <a name="remarks"></a>备注  
 IDENT_CURRENT 类似于 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 标识函数 SCOPE_IDENTITY 和 @@IDENTITY。 这三个函数都返回最后生成的标识值。 但是，上述每个函数中定义的“最后”的作用域和会话有所不同  ：  
 
--   IDENT_CURRENT 返回为某个会话和用域中的指定表生成的最新标识值。  
+-   IDENT_CURRENT 返回为某个会话和作用域中的指定表生成的最新标识值。  
 -   @@IDENTITY 返回为跨所有作用域的当前会话中的任何表生成的最后一个标识值。  
 -   SCOPE_IDENTITY 返回为当前会话和当前作用域中的某个表生成的最新标识值。  
   
