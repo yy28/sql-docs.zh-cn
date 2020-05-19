@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Record object [ADO]
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5ffc515350bfff4307da382c05aae50ed1930802
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6a7c3b44498dee88be8dc3f37cd713038375753
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917363"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754050"
 ---
 # <a name="record-object-ado"></a>记录对象 (ADO)
 表示[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)或数据提供程序中的行，或由半结构化数据访问接口（如文件或目录）返回的对象。  
@@ -59,7 +59,7 @@ ms.locfileid: "67917363"
   
 -   用[State](../../../ado/reference/ado-api/state-property-ado.md)属性指示**记录**的当前状态。  
   
--   通过[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)属性指示**记录** - 的*简单*、*集合*或*结构化文档*的类型。  
+-   通过 RecordType 属性指示**记录**的  -  *简单*、*集合*或*结构化文档*的类型[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)。  
   
 -   使用[Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)方法停止执行异步操作。  
   

@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - EventStatusEnum enumeration [ADO]
 ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8883679a85d1e134b1759c90cde524bb97995130
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1abce457e64c7f6865f94b85473fbc589e5ffb4f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932867"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755148"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 指定事件的当前执行状态。  
   
-|Constant|值|说明|  
+|返回的常量|值|说明|  
 |--------------|-----------|-----------------|  
 |**adStatusCancel**|4|请求取消导致事件发生的操作。|  
 |**adStatusCantDeny**|3|指示操作无法请求取消挂起的操作。|  
@@ -36,7 +36,7 @@ ms.locfileid: "67932867"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
   
-|Constant|  
+|返回的常量|  
 |--------------|  
 |AdoEnums. EventStatus|  
 |AdoEnums. EventStatus. CANTDENY|  

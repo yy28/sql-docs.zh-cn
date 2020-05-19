@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4ef42c04944f39e0b2d1930cc6520df2b6c5fa5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3f595938fba37e2529f95b763d18dd91731c0b39
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918851"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755110"
 ---
 # <a name="execute-method-ado-command"></a>Execute 方法（ADO 命令）
 执行[命令对象](../../../ado/reference/ado-api/command-object-ado.md)的[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)或[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)属性中指定的查询、SQL 语句或存储过程。  
@@ -58,7 +58,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
   
  当**CommandType**为**adCmdStoredProc**、 **adCmdTable**或**adCmdTableDirect**时，如果用户为**CommandStream**指定了值，则**执行**将引发错误。  
   
- 如果查询具有参数，则使用**命令**对象的参数的当前值，除非使用通过**执行**调用传递的参数值重写这些值。 可以通过在调用**Execute**方法时省略某些参数的新值，来重写参数的子集。 指定参数的顺序与方法传递参数的顺序相同。 例如，如果有四个（或多个）参数，而你只希望为第一个和第四个参数传递新值，则`Array(var1,,,var4)`将作为*parameters*参数传递。  
+ 如果查询具有参数，则使用**命令**对象的参数的当前值，除非使用通过**执行**调用传递的参数值重写这些值。 可以通过在调用**Execute**方法时省略某些参数的新值，来重写参数的子集。 指定参数的顺序与方法传递参数的顺序相同。 例如，如果有四个（或多个）参数，而你只希望为第一个和第四个参数传递新值，则将 `Array(var1,,,var4)` 作为*parameters*参数传递。  
   
 > [!NOTE]
 >  当传入*参数*参数时，输出参数不会返回正确的值。  

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4999b1e21ec145713cadae28ff7ee8a64dd460b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c2b07bb18aab0cde13a82540226fa477c306f268
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932895"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755097"
 ---
 # <a name="execute-method-ado-connection"></a>Execute 方法（ADO 连接）
 执行指定的查询、SQL 语句、存储过程或特定于提供程序的文本。  
@@ -39,7 +39,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
   
 #### <a name="parameters"></a>参数  
  *CommandText*  
- 一个**字符串**值，该值包含要执行的 SQL 语句、存储过程、URL 或特定于提供程序的文本。 **或者**，仅当提供程序可以识别 SQL 时，才可以使用表名。 例如，如果使用了表名 "Customers"，则 ADO 将自动预置标准 SQL Select 语法来形成，并将 "SELECT * FROM Customers" 作为[!INCLUDE[tsql](../../../includes/tsql-md.md)]语句传递给提供程序。  
+ 一个**字符串**值，该值包含要执行的 SQL 语句、存储过程、URL 或特定于提供程序的文本。 **或者**，仅当提供程序可以识别 SQL 时，才可以使用表名。 例如，如果使用了表名 "Customers"，则 ADO 将自动预置标准 SQL Select 语法来形成，并将 "SELECT * FROM Customers" 作为语句传递 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 给提供程序。  
   
  *RecordsAffected*  
  可选。 一个**长整型**变量，提供程序返回操作影响的记录数。  

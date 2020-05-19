@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Hierarchy object [ADO MD]
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 35e02e4823d0a3abf245e1885b95176d6350d712
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1232d228d597188364cb20a7f60dfaa11c8af21a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949696"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753969"
 ---
 # <a name="hierarchy-object-ado-md"></a>层次结构对象 (ADO MD)
 表示一个[维度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)成员可以聚合或 "汇总" 的方式。 可以在一个或多个层次结构上聚合维度。  
@@ -38,7 +38,7 @@ ms.locfileid: "67949696"
   
  **Properties**集合包含提供程序提供的属性。 下表列出了可用的属性。 实际属性列表可能有所不同，具体取决于提供程序的实现。 有关可用属性的更完整列表，请参阅提供程序的文档。  
   
-|名称|说明|  
+|“属性”|说明|  
 |----------|-----------------|  
 |AllMember|层次结构中最高级别的汇总的成员。|  
 |CatalogName|此多维数据集所属的目录的名称。|  
