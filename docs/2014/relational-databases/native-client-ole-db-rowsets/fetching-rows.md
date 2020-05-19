@@ -13,15 +13,15 @@ helpviewer_keywords:
 - IRowset interface
 - SQL Server Native Client OLE DB provider, fetching
 ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 21a66754a9259dadcb8788d6afef4947f9a69ad1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a68c66eaaccfa3ea32a4fb940eba71026d49361
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63140472"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82694422"
 ---
 # <a name="fetching-rows"></a>提取行
   IRowset 接口是基础行集接口****。 IRowset 接口提供了用于按顺序提取行、从这些行中获得数据以及管理行的方法****。 使用者使用 IRowset 中的这些方法执行所有基本行集操作****。 这包括提取和释放行以及获得列值。  

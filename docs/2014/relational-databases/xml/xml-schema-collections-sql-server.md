@@ -18,18 +18,18 @@ helpviewer_keywords:
 - XML schema collections [SQL Server]
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 939f0d85233f5efe7ddc010169fd0922000083f7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193038"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702262"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 架构集合 (SQL Server)
-  如主题[xml &#40;transact-sql&#41;](/sql/t-sql/xml/xml-transact-sql)中所述，SQL Server 通过`xml`数据类型提供 xml 数据的本机存储。 您可以选择通过 XML 架构集合将 XSD 架构与`xml`类型的变量或列关联。 XML 架构集合存储导入的 XML 架构，然后用于执行以下操作：  
+  如主题[xml &#40;transact-sql&#41;](/sql/t-sql/xml/xml-transact-sql)中所述，SQL Server 通过数据类型提供 xml 数据的本机存储 `xml` 。 您可以选择 `xml` 通过 XML 架构集合将 XSD 架构与类型的变量或列关联。 XML 架构集合存储导入的 XML 架构，然后用于执行以下操作：  
   
 -   验证 XML 实例  
   
@@ -41,7 +41,7 @@ ms.locfileid: "63193038"
   
  查询处理引擎也使用该架构进行类型检查并优化查询和数据修改。  
   
- 此外，SQL Server 使用关联的 XML 架构集合（在类型化`xml`的情况下）来验证 XML 实例。 如果 XML 实例符合架构，则数据库允许该实例存储在包含其类型信息的系统中。 否则，它将拒绝该实例。  
+ 此外，SQL Server 使用关联的 XML 架构集合（在类型化的情况下） `xml` 来验证 XML 实例。 如果 XML 实例符合架构，则数据库允许该实例存储在包含其类型信息的系统中。 否则，它将拒绝该实例。  
   
  可以使用内部函数 XML_SCHEMA_NAMESPACE 检索数据库中存储的架构集合。 有关详细信息，请参阅 [查看存储 XML 架构集合](../xml/view-a-stored-xml-schema-collection.md)。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "63193038"
   
 -   删除 XML 架构集合  
   
--   使用 XML 架构集合键入`xml`类型列、变量和参数，或者在表或列约束中使用它  
+-   使用 XML 架构集合键入 `xml` 类型列、变量和参数，或者在表或列约束中使用它  
   
  SQL Server 安全模式允许对每个对象使用 CONTROL 权限。 此权限的被授权者将获得对象的其他所有权限。 对象的所有者也拥有对象的所有权限。  
   
@@ -161,13 +161,13 @@ ms.locfileid: "63193038"
 ##  <a name="getting-information-about-xml-schemas-and-schema-collections"></a><a name="info"></a> 获取有关 XML 架构和架构集合的信息  
  XML 架构集合在目录视图 sys.xml_schema_collections 中枚举出来。 XML 架构集合“sys”由系统定义。 它包含无需显式加载即可在所有用户定义的 XML 架构集合中使用的预定义命名空间。 此列表包含 xml、xs、xsi、fn 和 xdt 的命名空间。 另外两个目录视图是 sys.xml_schema_namespaces（它枚举每个 XML 架构集合中的所有命名空间）和 sys.xml_components（它枚举每个 XML 架构中的所有 XML 架构组件）。  
   
- 内置函数**XML_SCHEMA_NAMESPACE**、 *schemaName、XmlSchemacollectionName、命名空间 uri*生成`xml`数据类型实例。 此实例包含在 XML 架构集合中所包含架构（预定义的 XML 架构除外）的 XML 架构片段。  
+ 内置函数**XML_SCHEMA_NAMESPACE**、 *schemaName、XmlSchemacollectionName、命名空间 uri*生成 `xml` 数据类型实例。 此实例包含在 XML 架构集合中所包含架构（预定义的 XML 架构除外）的 XML 架构片段。  
   
  可以按下列方式枚举 XML 架构集合的内容：  
   
 -   编写对 XML 架构集合的相应目录视图的 Transact-SQL 查询。  
   
--   使用内置函数 **XML_SCHEMA_NAMESPACE()** 。 您可以对`xml`此函数的输出应用数据类型方法。 但不能修改基础 XML 架构。  
+-   使用内置函数 **XML_SCHEMA_NAMESPACE()** 。 您可以 `xml` 对此函数的输出应用数据类型方法。 但不能修改基础 XML 架构。  
   
  这些在下列示例中进行了说明。  
   
@@ -188,7 +188,7 @@ WHERE    XSC.name = 'myCollection'
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
- 可以通过将目标命名空间指定为`xml` **XML_SCHEMA_NAMESPACE （）** 的第三个参数，将集合中的单个 XML 架构作为数据类型实例获取。 下面的示例说明了这一点。  
+ 可以 `xml` 通过将目标命名空间指定为**XML_SCHEMA_NAMESPACE （）** 的第三个参数，将集合中的单个 XML 架构作为数据类型实例获取。 下面的示例说明了这一点。  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>示例：从 XML 架构集合输出指定的架构  
  以下语句从关系架构 dbo 中的 XML 架构集合“myCollection”输出目标命名空间为“<https://www.microsoft.com/books>”的 XML 架构。  

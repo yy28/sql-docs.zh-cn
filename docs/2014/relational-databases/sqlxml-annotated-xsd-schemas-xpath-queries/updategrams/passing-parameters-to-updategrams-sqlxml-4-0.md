@@ -13,15 +13,15 @@ helpviewer_keywords:
 - updategrams [SQLXML], passing parameters
 - null values [SQLXML]
 ms.assetid: 2354e6e7-1860-471f-8711-4e374c5a4ed2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 92238e27c364c8f09721a55d00c750022b53a18f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea22b1c0bc435006e05fde02043ca9f44a8ca681
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014726"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703026"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>将参数传递给 Updategram (SQLXML 4.0)
   Updategram 为模板，因此您可以向其传递参数。 有关将参数传递到模板的详细信息，请参阅[&#40;SQLXML 4.0&#41;的 Updategram 安全注意事项](../security/updategram-security-considerations-sqlxml-4-0.md)。  
@@ -62,7 +62,7 @@ ms.locfileid: "66014726"
   
 1.  将上面的 updategram 复制到记事本中并将其另存为 UpdategramWithParameters.xml 文件。  
   
-2.  使用 ADO 准备 SQLXML 4.0 测试脚本（Sqlxml4test.vbs），通过在以下`cmd.Properties("Output Stream").Value = outStream`内容后添加以下行[来执行 sqlxml 4.0 查询](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)以执行 updategram：  
+2.  使用 ADO 准备 SQLXML 4.0 测试脚本（Sqlxml4test.vbs），通过在以下内容后添加以下行[来执行 sqlxml 4.0 查询](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)以执行 updategram `cmd.Properties("Output Stream").Value = outStream` ：  
   
     ```  
     cmd.NamedParameters = True  
@@ -97,7 +97,7 @@ ms.locfileid: "66014726"
   
 1.  将上面的 updategram 复制到记事本中并将其另存为 UpdategramPassingNullvalues.xml 文件。  
   
-2.  使用 ADO 准备 SQLXML 4.0 测试脚本（Sqlxml4test.vbs），通过在以下`cmd.Properties("Output Stream").Value = outStream`内容后添加以下行[来执行 sqlxml 4.0 查询](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)以执行 updategram：  
+2.  使用 ADO 准备 SQLXML 4.0 测试脚本（Sqlxml4test.vbs），通过在以下内容后添加以下行[来执行 sqlxml 4.0 查询](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)以执行 updategram `cmd.Properties("Output Stream").Value = outStream` ：  
   
     ```  
     cmd.NamedParameters = True  

@@ -3,22 +3,29 @@ title: SSMA for SAP ASE 中的新增功能（SybaseToSQL） |Microsoft Docs
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/2/2020
+ms.date: 4/27/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 7f23c7e1c676b4ade42b43cf963e0fa6956f93c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 258ddb758824c1d823cc1a7a306b05bf491d087b
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80625587"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220672"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE 中的新增功能（SybaseToSQL）
 
 本文列出了每个版本中的 SAP ASE SQL Server 迁移助手（以前称为 SSMA）的更改。
+
+## <a name="ssma-v89"></a>SSMA v 8。9
+
+SSMA for SAP ASE 的 v 8.9 版本包含以下更改：
+
+* 改进日期和时间格式转换
+* 修复了对象的 SQL 定义中缺少字符的问题
 
 ## <a name="ssma-v88"></a>SSMA v 8。8
 
@@ -39,7 +46,7 @@ SSMA for SAP ASE 的 8.8 8.8 版本包括：
 
 除了旨在提高可用性和性能的目标修补集外，通过添加使用户能够在转换后的代码中省略 SSMA 扩展属性的设置，还增强了 SSMA for SAP ASE 的 v 8.6 版本。
 
-若要利用此设置，请在 SSMA for SAP ASE 中导航到 "**工具** > " "**项目设置** > " "**常规** > **转换**"，然后在 "**杂项**" 下，将 "**省略扩展属性**" 设置的值更新为 **"是"**。
+若要利用此设置，请在 SSMA for SAP ASE 中导航到 "**工具**" "  >  **项目设置**" "  >  **常规**  >  **转换**"，然后在 "**杂项**" 下，将 "**省略扩展属性**" 设置的值更新为 **"是"**。
 
 ![省略扩展属性设置](../sybase/media/ssma-omit-extended-properties.png)
 
@@ -67,7 +74,7 @@ SSMA for SAP ASE 的 v2.0 版本增强了目标修补程序，这些修补程序
 SSMA for SAP ASE 的 v 8.3 版本已通过旨在提高质量和转换指标的目标修补程序进行了增强。 此外，此版本的 SSMA for SAP ASE 提供以下修补程序：
 
 * 解决辅助功能问题
-* 为 SQL Server 中的`hierarchyid`类型添加基本支持
+* 为 SQL Server 中的类型添加基本支持 `hierarchyid`
 
 ## <a name="ssma-v82"></a>SSMA
 
@@ -142,7 +149,7 @@ SSMA for SAP ASE 的版本7.6 版本包含以下更改：
 适用于 SAP ASE 的 SSMA （以前的 SSMA）的7.5 版本包含以下更改：
 
 * 确保为残障人士提供更好的辅助功能的多项改进。
-* 支持`CREATE OR REPLACE`语法。
+* 支持 `CREATE OR REPLACE` 语法。
 
 ## <a name="ssma-v74"></a>SSMA 7。4
 
@@ -193,8 +200,8 @@ Sybase 的 SSMA 2016 版包含以下更改：
 * 添加了对 SQL Server 2016 的支持。
 * 移除了 .NET 2.0 的安装程序检查。
 * 更新了从 .NET 3.5 到 .NET 4.0 的扩展包。
-* 修复`save-project`了`open-project`和用于 SSMA 控制台的命令。
-* 修复`securepassword`了 SSMA 控制台命令。
+* 修复 `save-project` `open-project` 了和用于 SSMA 控制台的命令。
+* 修复 `securepassword` 了 SSMA 控制台命令。
 * 修复了初始加载的对象计数。
 * 修复了全局设置中的 bug。
 
@@ -236,7 +243,7 @@ SSMA 的2014年7月发行版本包含以下更改：
 用于 Sybase 的 SSMA 的2012年1月版包含以下更改：
 
 * 添加了对回滚触发器转换的支持。
-* 在同一`SET`语句中`@@ROWCOUNT`提供`@@ERROR`了用于转换和的修补程序。
+* `@@ROWCOUNT` `@@ERROR` 在同一语句中提供了用于转换和的修补程序 `SET` 。
 
 ## <a name="july-2011"></a>2011 年 7 月
 
@@ -246,16 +253,16 @@ SSMA 2011 年7月发行版本在数据迁移过程中提供了改进的错误报
 
 用于 Sybase 的 SSMA 的2011年4月版本包含以下更改：
 
-* 合并的 "SSMA for Sybase" 产品，它[!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)]支持[!INCLUDE [ssSQL10](../../includes/sssql10-md.md)]、 [!INCLUDE [ssSQL11](../../includes/ssSQL11-md.md)]和 Azure SQL。
-* 添加了对连接和迁移到[!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]的支持。
+* 合并的 "SSMA for Sybase" 产品，它 [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] 支持 [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] 、 [!INCLUDE [ssSQL11](../../includes/ssSQL11-md.md)] 和 Azure SQL。
+* 添加了对连接和迁移到的支持 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] 。
 * 添加了一项新功能，可将 Sybase 数据库转换和迁移到 Azure SQL。
 * 增强了客户端数据迁移引擎，支持并行数据迁移。
 * 通过简单和大容量日志恢复模式改进了数据迁移性能。
 * 添加了正确地将区分大小写的 Sybase 数据库转换和迁移到区分大小写的 SQL Server 的功能。
 * 添加了对将 Sybase ASE 非 ANSI 联接 SQL Server 语句转换为 DELETE 和 UPDATE 语句的支持。
 * 提供了使用 Sybase ASE ODBC 提供程序和 Sybase ASE ADO.NET 提供程序连接到 Sybase ASE 服务器的其他连接选项。
-* 删除了名`SysDB`为的单独数据库的依赖项，该数据库包含 Sybase 模拟函数（作为扩展包的一部分安装）。
-* 添加了在群集上[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]安装适用于 Sybase 扩展包的 SSMA 的功能。
+* 删除了名为的单独数据库的依赖项 `SysDB` ，该数据库包含 Sybase 模拟函数（作为扩展包的一部分安装）。
+* 添加了在群集上安装适用于 Sybase 扩展包的 SSMA 的功能 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 。
 * 添加了 SSMA 早期版本创建的项目的向后兼容性（4.0 和4.2）。
 * 添加了一项功能，该功能能够安装 SSMA for Sybase v1.0 product （SxS）与较旧版本的 SSMA （v4.0 和4.2）。
 
@@ -278,11 +285,11 @@ SSMA 的2008年6月发行版包含以下更改：
 * 增加了对象转换的改进：
   * 联接转换已修订。
   * 聚合和非聚合，无需按子句分组。
-  * 带有`IDENTITY` `SELECT INTO`语句的函数。
+  * `IDENTITY`带有语句的函数 `SELECT INTO` 。
   * 仅限数据锁定的群集约束和索引。
-  * 创建的`SELECT INTO`临时表。
+  * 创建的临时表 `SELECT INTO` 。
   * 临时表的约束/索引。
-  * 支持[!INCLUDE [ssSQL10](../../includes/sssql10-md.md)]新的日期时间类型。
+  * 支持新的 [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] 日期时间类型。
   * Sybase 15.0 连接和数据类型支持。
 
 ## <a name="may-2007"></a>可能为2007
@@ -301,15 +308,15 @@ SSMA 的2008年6月发行版包含以下更改：
   * 您可以选择在编辑器窗口中显示行号。
   * 您可以将 SSMA 配置为提示替换重复的对象，或者在架构转换期间始终或从不替换重复的对象。
 * 添加了新的转换选项，使你可以配置 SSMA 处理以下情况的方式：
-  * 包含`CAST`二进制`CONVERT`字符串的或语句。
+  * `CAST` `CONVERT` 包含二进制字符串的或语句。
   * 检查相等表达式中是否存在 null 值。
   * 代理表。
-  * 的`RAISERROR`用户消息错误号。
+  * 的用户消息错误号 `RAISERROR` 。
   * `UPDATE`包含未解析标识符的语句。
-* 添加了新的迁移选项，使你可以指定 SSMA 应如何处理[!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]日期范围以外的日期。
+* 添加了新的迁移选项，使你可以指定 SSMA 应如何处理日期范围以外的日期 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 。
 * 在 " **SQL** " 选项卡上添加了**格式化的 SQL**设置，该设置将代码的格式设置为增强可读性。
 * Bug 修复，其中包括：
-  * SSMA 现在通过`LOCK TABLE <table> IN { SHARED | EXCLUSIVE } MODE`向表的后续`TABLOCK` `SELECT`查询`TABLOCKX`添加或提示来转换语句。
+  * SSMA 现在 `LOCK TABLE <table> IN { SHARED | EXCLUSIVE } MODE` 通过向 `TABLOCK` 表的后续查询添加或提示来转换语句 `TABLOCKX` `SELECT` 。
   * 在字符表达式中使用二进制类型时，现在会添加必要的强制转换。
   * 内存和性能的改进。
 

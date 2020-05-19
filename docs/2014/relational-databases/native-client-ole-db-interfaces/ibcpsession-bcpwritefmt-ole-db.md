@@ -13,15 +13,15 @@ topic_type:
 helpviewer_keywords:
 - BCPWriteFmt method
 ms.assetid: add50425-2ed6-411a-a391-4ce63c364892
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1b4022f14c1f39984b1feaa0a45adef2154c1d0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a547548f84af88ea3790658618570aeed8ce8112
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62826839"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82695133"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
   将每一列的格式信息写入格式化文件。  
@@ -41,7 +41,7 @@ const wchar_t *pwszFormatFile);
   
  若要加载已保存的格式化文件，请使用 [IBCPSession::BCPReadFmt](ibcpsession-bcpreadfmt-ole-db.md) 方法。  
   
-## <a name="arguments"></a>自变量  
+## <a name="arguments"></a>参数  
  pwszFormatFile**[in]  
  包含数据文件格式值的文件的路径和文件名。  
   

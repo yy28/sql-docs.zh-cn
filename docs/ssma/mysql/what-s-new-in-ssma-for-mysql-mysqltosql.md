@@ -3,22 +3,29 @@ title: SSMA for MySQL 中的新增功能（MySQLToSql） |Microsoft Docs
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/2/2020
+ms.date: 4/27/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 9d5c33bbb9e09a5a833c928547a5ec659fe43c96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 288056843e8868c5738f8f1e101015c0142bb6bd
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80625551"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220192"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL 中的新增功能 (MySQLToSql)
 
 本文列出了每个版本中的 MySQL 更改 SQL Server 迁移助手（SSMA）。
+
+## <a name="ssma-v89"></a>SSMA v 8。9
+
+SSMA for MySQL 的6.x 版包含以下更改：
+
+* 修复空间类型的数据迁移
+* 解决项目名称中含有特殊字符的问题
 
 ## <a name="ssma-v88"></a>SSMA v 8。8
 
@@ -31,7 +38,7 @@ SSMA for MySQL 的 v2.0 版本包括：
 
 SSMA for MySQL 的 v4.0 版本在图形用户界面中提供了细微的修复和性能改进。
 
-此外，SSMA for MySQL 现在提供面向 Azure SQL `LIMIT`时的转换 for 子句。
+此外，SSMA for MySQL 现在提供 `LIMIT` 面向 AZURE SQL 时的转换 for 子句。
 
 > [!IMPORTANT]
 > 对于 SSMA 的8.5 和更高版本，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从[此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
@@ -40,7 +47,7 @@ SSMA for MySQL 的 v4.0 版本在图形用户界面中提供了细微的修复�
 
 除了旨在提高可用性和性能的目标修补集外，通过添加使用户能够在转换后的代码中省略 SSMA 扩展属性的设置，增强了 SSMA for MySQL 的 v 8.6 版本。
 
-若要利用此设置，请在 SSMA for MySQL 中导航到 "**工具** > " "**项目设置** > " "**常规** > **转换**"，然后在 "**杂项**" 下，将 "**省略扩展属性**" 设置的值更新为 **"是"**。
+若要利用此设置，请在 SSMA for MySQL 中导航到 "**工具**" "  >  **项目设置**" "  >  **常规**  >  **转换**"，然后在 "**杂项**" 下，将 "**省略扩展属性**" 设置的值更新为 **"是"**。
 
 ![省略扩展属性设置](../mysql/media/ssma-omit-extended-properties.png)
 
@@ -66,7 +73,7 @@ SSMA for MySQL 的 v2.0 版本增强了目标修补程序，旨在解决辅助�
 SSMA for MySQL 的 v 8.3 版本利用旨在提高质量和转换指标的目标修补程序进行了增强。 此外，此版本的 SSMA for MySQL 提供了以下修补程序：
 
 * 解决辅助功能问题。
-* 为 SQL Server 中的`hierarchyid`类型添加基本支持。
+* 为 SQL Server 中的类型添加基本支持 `hierarchyid` 。
 
 ## <a name="ssma-v82"></a>SSMA
 
@@ -193,8 +200,8 @@ MySQL 的 SSMA 2016 版包含以下更改：
 * 移除了 .NET 2.0 的安装程序检查。
 * 更新了从 .NET 3.5 到 .NET 4.0 的扩展包。
 * 修复了 MySql 的默认 BigInt 类型映射。
-* 修复`save-project`了`open-project`和用于 SSMA 控制台的命令。
-* 修复`securepassword`了 SSMA 控制台命令。
+* 修复 `save-project` `open-project` 了和用于 SSMA 控制台的命令。
+* 修复 `securepassword` 了 SSMA 控制台命令。
 * 修复了初始加载的对象计数。
 * 修复了 MsSql 对象加载。
 * 修复了全局设置中的 bug。
@@ -236,15 +243,15 @@ SSMA for MySQL 的2014年4月版包含以下更改：
 
 SSMA for MySQL 的2011年7月发行版本包含以下更改：
   
-* 支持`LIMIT`将[!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] `OFFSET`转换为。
+* 支持将转换为 `LIMIT` [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] `OFFSET` 。
 * 在数据迁移过程中改进了错误报告。
   
 ## <a name="april-2011"></a>2011 年 4 月
 
 SSMA for MySQL 的2011年4月版包含以下更改：
   
-* 可单独安装 "SSMA for MySQL"，它支持[!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)]、 [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]和 Azure SQL。
-* 连接[!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]的能力。
+* 可单独安装 "SSMA for MySQL"，它支持 [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] 、 [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] 和 Azure SQL。
+* 连接的能力 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] 。
 * 增强了客户端数据迁移引擎，支持并行数据迁移。
 * 通过简单和大容量日志恢复模式改进了数据迁移性能。
 * SSMA for MySQL 控制台版本支持向后兼容性。 可以打开先前版本的 SSMA v 5.0 创建的项目。

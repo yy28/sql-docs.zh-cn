@@ -20,22 +20,22 @@ helpviewer_keywords:
 - XML [SQL Server], OPENXML statement
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a40eb3451ed249cf1ac582179fbda67e04fdfb3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc2a5b9d56f5c4d07c4e998439bd3b38d3c06058
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174006"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702574"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
   OPENXML 是一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 关键字，对内存中的 XML 文档提供与表或视图相似的行集。 OPENXML 允许像访问关系行集一样访问 XML 数据。 它通过提供以内部形式表示的 XML 文档的行集视图来实现这一点。 行集中的记录可以存储在数据库表中。
 
  无论行集提供程序（视图或 OPENROWSET）可以在何处作为源出现，都可以在 SELECT 和 SELECT INTO 语句中使用 OPENXML。 有关 OPENXML 语法的信息，请参阅 [OPENXML (Transact-SQL)](/sql/t-sql/functions/openxml-transact-sql)。
 
- 若要使用 OPENXML 编写对 XML 文档的查询，必须先调用`sp_xml_preparedocument`。 它将分析 XML 文档并向准备使用的已分析文档返回一个句柄。 已分析文档以文档对象模型 (DOM) 树的形式说明 XML 文档中的各种节点。 该文档句柄传递给 OPENXML。 然后 OPENXML 根据传递给它的参数提供一个该文档的行集视图。
+ 若要使用 OPENXML 编写对 XML 文档的查询，必须先调用 `sp_xml_preparedocument` 。 它将分析 XML 文档并向准备使用的已分析文档返回一个句柄。 已分析文档以文档对象模型 (DOM) 树的形式说明 XML 文档中的各种节点。 该文档句柄传递给 OPENXML。 然后 OPENXML 根据传递给它的参数提供一个该文档的行集视图。
 
 > [!NOTE]
 >  `sp_xml_preparedocument`使用 MSXML 分析器的 SQL 更新版本 Msxmlsql.dll。 此版本的 MSXML 分析器设计为支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并保持与 MSXML 2.6 版的向后兼容性。
@@ -110,7 +110,7 @@ EXEC sp_xml_removedocument @docHandle;
 -   行集列和 XML 节点之间的映射
 
 ### <a name="xml-document-handle-idoc"></a>XML 文档句柄 (idoc)
- 该`sp_xml_preparedocument`存储过程返回该文档句柄。
+ 该存储过程返回该文档句柄 `sp_xml_preparedocument` 。
 
 ### <a name="xpath-expression-to-identify-the-nodes-to-be-processed-rowpattern"></a>标识要处理的节点的 XPath 表达式 (rowpattern)
   指定为 rowpattern 的 XPath 表达式标识 XML 文档中的一组节点。 *rowpattern* 标识的每个节点对应于 OPENXML 所生成的行集中的一行。

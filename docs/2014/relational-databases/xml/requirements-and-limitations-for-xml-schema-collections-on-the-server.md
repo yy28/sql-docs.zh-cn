@@ -21,15 +21,15 @@ helpviewer_keywords:
 - schema collections [SQL Server], guidelines
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 245b844872070ee16104a90ecc0734462bdad3b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: efee2d8c9dea38beda1ba3398230dce8d1163d77
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63241260"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702528"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>在服务器上使用 XML 架构集合的要求和限制
   XML 架构定义语言 (XSD) 验证对使用 `xml` 数据类型的 SQL 列具有某些限制。 下表提供有关这些限制的详细信息，还提供了修改 XSD 架构的准则以使它可以与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一起使用。 本部分中的主题提供有关使用这些特定限制和准则的其他信息。  
@@ -47,7 +47,7 @@ ms.locfileid: "63241260"
 |将成员添加到现有替换组|无法将成员添加到 XML 架构集合中的现有替换组。 XML 架构中的替换组有以下限制：头元素和所有其成员元素必须在相同的 {CREATE &#124; ALTER} XML SCHEMA COLLECTION 语句中定义。|  
 |规范格式和模式限制|值的规范表示形式不能违反其类型的模式限制。 有关详细信息，请参阅 [Canonical Forms and Pattern Restrictions](canonical-forms-and-pattern-restrictions.md)。|  
 |枚举方面|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持包含以下类型的 XML 架构：具有模式方面或违反这些方面的枚举的类型。|  
-|方面长度|**Length**、 **minLength**和**maxLength**方面存储为`long`类型。 此类型为 32 位类型。 因此，这些值的可接受值的范围是 2<sup>^</sup>31。|  
+|方面长度|**Length**、 **minLength**和**maxLength**方面存储为 `long` 类型。 此类型为 32 位类型。 因此，这些值的可接受值的范围是 2 <sup>^</sup> 31。|  
 |ID 属性|每个 XML 架构组件可在其上具有 ID 属性。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对 **ID\< 类型的** **xsd:attribute>** 声明强制唯一性，但不存储这些值。 唯一性的强制的作用范围是 {CREATE &#124; ALTER} XML SCHEMA COLLECTION 语句。|  
 |ID 类型|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持类型为 **xs:ID**、 **xs:IDREF**或 **xs:IDREFS**的元素。 架构不会声明这种类型的元素或者从这种类型的限制或扩展派生的元素。|  
 |本地命名空间|必须为 **\<xsd:any>** 元素显式指定本地命名空间。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拒绝使用空字符串 ("") 作为命名空间属性的值的架构。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而是要求显式使用“##local”以指示作为通配符实例的未限定元素或属性。|  

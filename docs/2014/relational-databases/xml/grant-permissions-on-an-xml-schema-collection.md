@@ -10,15 +10,15 @@ helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e009f0fe22156f9a652dd19fceddf02bbc48c247
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61c8186f84a391b3b2394e82e21ecc407f6f3864
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63288759"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702636"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>授予对 XML 架构集合的权限
   您可以授予创建 XML 架构集合的权限，也可以授予对 XML 架构集合对象的某些操作权限。  

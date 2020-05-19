@@ -15,15 +15,15 @@ helpviewer_keywords:
 - XML data islands [SQL Server]
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 130228aee1ba21829651afb5dfd5665692a42315
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193339"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702404"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>在应用程序代码中使用 FOR XML 结果
   通过在 SQL 查询中使用 FOR XML 子句，可以检索查询结果，甚至可以将其转换为 XML 数据。 当 FOR XML 查询结果可以在 XML 应用程序代码中使用时，您可以使用此功能执行以下操作：  
@@ -290,7 +290,7 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml`通过数据类型支持，你可以通过指定[type 指令](type-directive-in-for-xml-queries.md)请求将 FOR XML 查询的结果`xml`作为数据类型返回，而不是作为字符串或图像类型化数据返回。 在 FOR XML 查询中使用 TYPE 指令时，该指令将提供对 FOR XML 结果（与 [在应用程序中使用 XML 数据](use-xml-data-in-applications.md)中显示的结果类似）的编程访问权限。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` 通过数据类型支持，你可以通过指定 type 指令请求将 FOR XML 查询的结果作为 `xml` 数据类型返回，而不是作为字符串或图像类型化数据[TYPE directive](type-directive-in-for-xml-queries.md)返回。 在 FOR XML 查询中使用 TYPE 指令时，该指令将提供对 FOR XML 结果（与 [在应用程序中使用 XML 数据](use-xml-data-in-applications.md)中显示的结果类似）的编程访问权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [FOR XML (SQL Server)](for-xml-sql-server.md)  

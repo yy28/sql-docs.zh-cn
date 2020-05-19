@@ -16,22 +16,22 @@ helpviewer_keywords:
 - BLOBs, URL references
 - Base 64-encoded format
 ms.assetid: 2f8cd93b-c636-462b-8291-167197233ee0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 153a88bcb31f65d4e6aff007cfbee7d1f7afc6df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cab7101480099ce462585b658cb1acb023399b4c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013733"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703544"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>使用 sql:encode 请求 BLOB 数据的 URL 引用 (SQLXML 4.0)
   在带批注的 XSD 架构中，将属性（或元素）映射为 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 BLOB 列时，将在 XML 中以 Base 64 编码格式返回数据。  
   
  如果希望在稍后使用返回的数据引用 (URI) 来检索二进制格式的 BLOB 数据，请指定 `sql:encode` 批注。 您可以针对简单类型的属性或元素指定 `sql:encode`。  
   
- 指定 `sql:encode` 批注以指示应返回字段的 URL，而非字段的值。 `sql:encode` 根据主键来在 URL 中生成单一选择。 可以使用`sql:key-fields`批注指定主键。  
+ 指定 `sql:encode` 批注以指示应返回字段的 URL，而非字段的值。 `sql:encode` 根据主键来在 URL 中生成单一选择。 可以使用批注指定主键 `sql:key-fields` 。  
   
  可以为 `sql:encode` 批注分配“url”或“default”值。 值为“default”将返回 Base 64 编码格式的数据。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66013733"
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>A. 指定 sql:encode 以获取对 BLOB 数据的 URL 引用  
- 在此示例中，映射架构指定`sql:encode` **LargePhoto**属性以检索对特定产品照片的 URI 引用（而不是以64编码格式检索二进制数据）。  
+ 在此示例中，映射架构指定 `sql:encode` **LargePhoto**属性以检索对特定产品照片的 URI 引用（而不是以64编码格式检索二进制数据）。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

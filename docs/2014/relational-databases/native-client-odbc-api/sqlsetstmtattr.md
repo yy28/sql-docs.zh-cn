@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLSetStmtAttr function
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 31493eb8c685fbb31fa21691794740eb2b61219c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 507ef6e5c5ebb566cdfbce028933b9faffad1de3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188684"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702141"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序不支持混合（键集/动态）游标模型。 如果将该值设置为非 0 值，尝试使用 SQL_ATTR_KEYSET_SIZE 设置键集大小将失败。  
@@ -50,7 +50,7 @@ ms.locfileid: "63188684"
   
 |*将 valueptr*值|说明|  
 |----------------------|-----------------|  
-|SQL_CO_OFF|默认。 禁用快速只进、只读游标和自动提取，启用只进只读游标上的**SQLGetData** 。 将 SQL_SOPT_SS_CURSOR_OPTIONS 设置为 SQL_CO_OFF 时，游标类型将不会发生更改。 也就是说，快速只进游标将保持为快速只进游标。 若要更改游标类型，应用程序现在必须使用`SQLSetStmtAttr`/SQL_ATTR_CURSOR_TYPE 设置不同的游标类型。|  
+|SQL_CO_OFF|默认。 禁用快速只进、只读游标和自动提取，启用只进只读游标上的**SQLGetData** 。 将 SQL_SOPT_SS_CURSOR_OPTIONS 设置为 SQL_CO_OFF 时，游标类型将不会发生更改。 也就是说，快速只进游标将保持为快速只进游标。 若要更改游标类型，应用程序现在必须使用/SQL_ATTR_CURSOR_TYPE 设置不同的游标类型 `SQLSetStmtAttr` 。|  
 |SQL_CO_FFO|启用快速只进只读游标，禁用只进、只读游标上的**SQLGetData** 。|  
 |SQL_CO_AF|针对任意游标类型启用自动提取选项。 如果为语句句柄设置了此选项，则**SQLExecute**或**SQLExecDirect**将生成隐式**SQLFetchScroll** （SQL_FIRST）。 此时将打开游标，并在与服务器的单个往返中返回第一批行。|  
 |SQL_CO_FFO_AF|使用自动提取选项启用快速只进游标。 它与同时指定 SQL_CO_AF 和 SQL_CO_FFO 的效果相同。|  
@@ -131,10 +131,10 @@ ms.locfileid: "63188684"
   
 |*将 valueptr*值|说明|  
 |----------------------|-----------------|  
-|SQL_SS_NAME_SCOPE_TABLE|默认。<br /><br /> 当使用表值参数时，指示应返回实际表的元数据。<br /><br /> 当使用稀疏列功能时，SQLColumns 将仅返回不是稀疏`column_set`成员的列。|  
+|SQL_SS_NAME_SCOPE_TABLE|默认。<br /><br /> 当使用表值参数时，指示应返回实际表的元数据。<br /><br /> 当使用稀疏列功能时，SQLColumns 将仅返回不是稀疏成员的列 `column_set` 。|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|指示应用程序需要表类型的元数据，而不是实际表（目录函数应返回表类型的元数据）。 然后，应用程序将表值参数的 TYPE_NAME 作为*TableName*参数传递。|  
-|SQL_SS_NAME_SCOPE_EXTENDED|当使用稀疏列功能时，无论`column_set`成员身份如何，SQLColumns 都将返回所有列。|  
-|SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|当使用稀疏列功能时，SQLColumns 仅返回作为稀疏`column_set`的成员的列。|  
+|SQL_SS_NAME_SCOPE_EXTENDED|当使用稀疏列功能时，无论成员身份如何，SQLColumns 都将返回所有列 `column_set` 。|  
+|SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|当使用稀疏列功能时，SQLColumns 仅返回作为稀疏的成员的列 `column_set` 。|  
 |SQL_SS_NAME_SCOPE_DEFAULT|等同于 SQL_SS_NAME_SCOPE_TABLE。|  
   
  SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 分别与*CatalogName*和*SchemaName*参数一起使用，以标识表值参数的目录和架构。 在应用程序检索完表值参数的元数据之后，该应用程序必须将 SQL_SOPT_SS_NAME_SCOPE 设置回原来的默认值 SQL_SS_NAME_SCOPE_TABLE。  

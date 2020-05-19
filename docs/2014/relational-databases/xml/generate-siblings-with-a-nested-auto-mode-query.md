@@ -10,15 +10,15 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested AUTO mode
 - nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b0db2a84b4be80fffec0f05aed11f39a3bcea7db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30d1f6540a8be6cc45af4d396daf10ca0d1a7d88
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63287361"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702704"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>使用嵌套 AUTO 模式查询生成同级
   以下示例显示了如何使用嵌套 AUTO 模式查询来生成同级。 生成此类 XML 的其他方式只有这一种，即使用 EXPLICIT 模式。 但是，这样做可能会很麻烦。  
@@ -66,7 +66,7 @@ FOR XML AUTO, TYPE
   
 -   查询在 `SalesOrder` 子句中指定的行集 `FROM`。 结果是包含一个或多个 <`SalesOrder`> 元素的 XML。  
   
--   指定 `AUTO` 模式和 `TYPE` 指令。 `AUTO`模式将查询结果转换为 XML， `TYPE`指令将结果作为`xml`类型返回。  
+-   指定 `AUTO` 模式和 `TYPE` 指令。 `AUTO`模式将查询结果转换为 XML，指令将 `TYPE` 结果作为 `xml` 类型返回。  
   
 -   包括两个以逗号分隔的嵌套 `SELECT` 语句。 第一个嵌套 `SELECT` 语句检索销售订单信息、表头和详细信息，第二个嵌套 `SELECT` 语句检索销售人员信息。  
   

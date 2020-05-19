@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ODBC functions
 - SQL Server Native Client ODBC driver, connections
 ms.assetid: 65b0267d-b2ab-4a59-83f2-436d90cfbf79
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 43ccc784d0d8759c559e705cbbb65861040f6e8a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a9dc6aadde75d1d4df797f85c0343bb11083b80f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63205677"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702054"
 ---
 # <a name="disconnecting-from-a-data-source"></a>与数据源断开连接
   当应用程序使用完数据源后，它将调用**SQLDisconnect**。 **SQLDisconnect**释放在连接上分配的所有语句，并断开驱动程序与数据源的连接。 断开连接后，应用程序可以调用[SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md)来释放连接句柄。 在退出之前，应用程序还会调用**SQLFreeHandle**来释放环境句柄。  

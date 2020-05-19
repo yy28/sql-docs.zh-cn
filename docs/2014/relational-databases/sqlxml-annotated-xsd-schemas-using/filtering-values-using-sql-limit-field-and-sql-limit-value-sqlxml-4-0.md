@@ -15,15 +15,15 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f93a60e7b6c1dfa2a0c7577aafbbb68d5068c629
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd38d26195d10c097ad090ed756a7f5d62508456
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013811"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703581"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>使用 sql:limit-field 和 sql:limit-value 筛选值 (SQLXML 4.0)
   可以基于某些限制值来限制从数据库查询返回的行。 `sql:limit-field` 和 `sql:limit-value` 批注用于标识包含限制值的数据库列和指定用于筛选返回的数据的特定限制值。  
@@ -53,7 +53,7 @@ ms.locfileid: "66013811"
   
  一个客户可以具有发货地址和/或开票地址。 AddressType 列值是 Shipping 和 Billing。  
   
- 这是映射架构，其中**ShipTo**架构属性映射到地址关系中的 StreetAddress 列。 此属性返回的值仅限于通过指定`sql:limit-field`和`sql:limit-value`批注来发送地址。 同样， **BillTo**架构特性仅返回客户的帐单地址。  
+ 这是映射架构，其中**ShipTo**架构属性映射到地址关系中的 StreetAddress 列。 此属性返回的值仅限于通过指定和批注来发送地址 `sql:limit-field` `sql:limit-value` 。 同样， **BillTo**架构特性仅返回客户的帐单地址。  
   
  以下是架构：  
   
@@ -170,7 +170,7 @@ ms.locfileid: "66013811"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- 这是订单详细信息中的 "订单**id** " 属性映射到订单关系中的 "订单 id" 列的映射架构。 此属性返回的值仅限于使用`sql:limit-field`和`sql:limit-value`批注为**折扣**属性指定的值为 2.0000000 e-001 （0.2）的值。  
+ 这是订单详细信息中的 "订单**id** " 属性映射到订单关系中的 "订单 id" 列的映射架构。 此属性返回的值仅限于使用和批注为**折扣**属性指定的值为 2.0000000 e-001 （0.2）的值 `sql:limit-field` `sql:limit-value` 。  
   
  以下是架构：  
   

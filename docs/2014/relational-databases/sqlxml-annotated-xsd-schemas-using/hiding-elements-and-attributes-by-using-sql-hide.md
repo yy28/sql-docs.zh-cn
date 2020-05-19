@@ -21,15 +21,15 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], hiding attributes and elements
 - attribute hiding [SQLXML]
 ms.assetid: 0978301b-f068-46b6-82b9-dc555161f52e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6ce8daf2badb855cbf855031d93e38fb689eab54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85d057af7202a5076f299371fb2b0b2ec170087f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013828"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703573"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>使用 sql:hide 隐藏元素和属性
   针对 XSD 架构执行 XPath 查询时，生成的 XML 文档具有在架构中指定的元素和属性。 可以使用 `sql:hide` 批注来指定隐藏架构中的某些元素和属性。 当查询的选择条件需要架构中的特定元素或属性，但是不希望在生成的 XML 文档中返回这些元素或属性时，该批注很有用。  
@@ -40,9 +40,9 @@ ms.locfileid: "66013828"
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. 对属性指定 sql:hide  
- 此示例中的 XSD 架构由一个** \<人员组成。请联系>** 元素与**ContactID**、 **FirstName**和**LastName**属性。  
+ 此示例中的 XSD 架构由一个** \< 人员组成。请联系>** 元素**与 ContactID**、 **FirstName**和**LastName**属性。  
   
- Person>元素属于复杂类型，因此映射到具有相同名称的表（默认映射）。 ** \<** Person>元素的所有属性都属于简单类型，并映射到 AdventureWorks 数据库的 Contacttable 中具有相同名称的列。 ** \<** 在架构中， `sql:hide`批注是在**ContactID**属性中指定的。 针对此架构指定 XPath 查询时，XML 文档中将不会返回**ContactID** 。  
+ ** \< Person>** 元素属于复杂类型，因此映射到具有相同名称的表（默认映射）。 ** \< Person>** 元素的所有属性都属于简单类型，并映射到 AdventureWorks 数据库的 Contacttable 中具有相同名称的列。 在架构中， `sql:hide` 批注是在**ContactID**属性中指定的。 针对此架构指定 XPath 查询时，XML 文档中将不会返回**ContactID** 。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -89,7 +89,7 @@ ms.locfileid: "66013828"
 </ROOT>  
 ```  
   
- 如果对元素指定 `sql:hide`，则该元素及其属性或子元素都不会出现在生成的 XML 文档中。 下面是在** \<OD>** 元素上`sql:hide`指定的另一个 XSD 架构：  
+ 如果对元素指定 `sql:hide`，则该元素及其属性或子元素都不会出现在生成的 XML 文档中。 下面是在 `sql:hide` ** \< OD>** 元素上指定的另一个 XSD 架构：  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -144,7 +144,7 @@ ms.locfileid: "66013828"
 </xsd:schema>  
 ```  
   
- 针对此架构指定 XPath 查询（ `/Customers[@CID="1"]`例如）时，生成的 XML 文档不包含** \<OD>** 元素及其子级，如下面的部分结果所示：  
+ `/Customers[@CID="1"]`针对此架构指定 XPath 查询（例如）时，生成的 XML 文档不包含** \< OD>** 元素及其子级，如下面的部分结果所示：  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - SQL_SS_TABLE
 ms.assetid: 6725bfb9-5f10-4115-be09-fd9c9f5779ea
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 90857b24fb467df0292beeb88fb9751e68204d12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c9ba511746375a902a1643631c86ec8c72dbd02
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63199986"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82698857"
 ---
 # <a name="odbc-sql-type-for-table-valued-parameters"></a>表值参数的 ODBC SQL 类型
   对表值参数的支持是通过新的 ODBC SQL 类型 SQL_SS_TABLE 提供的。  
@@ -31,7 +31,7 @@ ms.locfileid: "63199986"
   
  如果在调用 SQLGetData 时 SQL_SS_TABLE 了*TargetType*参数，则返回 SQL_ERROR，并生成包含 SQLSTATE = HY003，"应用程序缓冲区类型无效" 的诊断记录。  
   
- 不能将表值参数列作为 SQL_SS_TABLE 类型绑定。 如果`SQLBindParameter`在将*ParameterType*设置为 SQL_SS_TABLE 的情况下调用，将返回 SQL_ERROR，并生成包含 SQLSTATE = HY004 "SQL 数据类型无效" 的诊断记录。 SQLSetDescField 和 SQLSetDescRec 也会出现这种情况。  
+ 不能将表值参数列作为 SQL_SS_TABLE 类型绑定。 如果 `SQLBindParameter` 在将*ParameterType*设置为 SQL_SS_TABLE 的情况下调用，将返回 SQL_ERROR，并生成包含 SQLSTATE = HY004 "SQL 数据类型无效" 的诊断记录。 SQLSetDescField 和 SQLSetDescRec 也会出现这种情况。  
   
  表值参数列值与参数和结果列具有相同的数据转换选项。  
   

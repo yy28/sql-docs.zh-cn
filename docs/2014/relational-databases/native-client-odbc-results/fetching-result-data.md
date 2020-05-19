@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data types
 - SQLGetData function
 ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b803ca3742f9cb831e51105aab9d0ed75ad78e16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d4dc78d946f76161cbe7210e183d9b3b77be955
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200079"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82699288"
 ---
 # <a name="fetching-result-data"></a>提取结果数据
   ODBC 应用程序具有三个用于提取结果数据的选项。  
@@ -56,7 +56,7 @@ ms.locfileid: "63200079"
   
  在使用 SQL_C_DEFAULT 指定 C 变量的类型时必须小心。 SQL_C_DEFAULT 指定 C 变量的类型与列或参数的 SQL 数据类型匹配。 如果为**ntext**、 **nchar**或**nvarchar**列指定了 SQL_C_DEFAULT，则会将 Unicode 数据返回到应用程序。 如果尚未对应用程序进行编码以处理 Unicode 数据，则上述操作可能导致不同的问题。 对于**uniqueidentifier** （SQL_GUID）数据类型，可能会出现相同的问题类型。  
   
- **text**、 **ntext**和**image**数据通常太大，无法放入单个程序变量，通常使用**SQLGetData**而不是**SQLBindCol**进行处理。 使用服务器游标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，NATIVE Client ODBC 驱动程序会经过优化，以便在提取行时不传输未绑定的**text**、 **ntext**或**image**列的数据。 在应用程序为列发出**SQLGetData**之前，不会实际从服务器中检索**text**、 **ntext**或**image**数据。  
+ **text**、 **ntext**和**image**数据通常太大，无法放入单个程序变量，通常使用**SQLGetData**而不是**SQLBindCol**进行处理。 使用服务器游标时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驱动程序会经过优化，以便在提取行时不传输未绑定的**text**、 **ntext**或**image**列的数据。 在应用程序为列发出**SQLGetData**之前，不会实际从服务器中检索**text**、 **ntext**或**image**数据。  
   
  此优化可应用于应用程序，以便用户在滚动和向下滚动时不显示**text**、 **ntext**或**image**数据。 用户选择行后，应用程序可以调用**SQLGetData**来检索**text**、 **ntext**或**image**数据。 这会为用户不选择的任何行保存**文本**、 **ntext**或**图像**数据的传输，并且可以保存非常大的数据量。  
   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XML data [SQL Server], retrieving
 - XML instance retrieval
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c6ac510751f20856151e6d89280cbac76c74420
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63241208"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702525"
 ---
 # <a name="retrieve-and-query-xml-data"></a>检索和查询 XML 数据
   本主题说明查询 XML 数据必须指定的查询选项。 它还说明了当 XML 实例存储在数据库中时未保留的部分。  
@@ -40,7 +40,7 @@ FROM T1
   
  结果为 `<doc/>`。  
   
- 当在 `xml` 数据类型实例中存储 XML 数据时，不会保留 XML 声明（如 `<?xml version='1.0'?>`）。 这是设计的结果。 在将数据转换为类型`xml`后，XML 声明（）及其属性（版本/编码/独立）将丢失。 XML 声明被视为对 XML 分析器的指令。 XML 数据在内部存储为 ucs-2。 XML 实例中所有其他 PI 均被保留。  
+ 当在 `xml` 数据类型实例中存储 XML 数据时，不会保留 XML 声明（如 `<?xml version='1.0'?>`）。 这是设计的结果。 在将数据转换为类型后，XML 声明（）及其属性（版本/编码/独立）将丢失 `xml` 。 XML 声明被视为对 XML 分析器的指令。 XML 数据在内部存储为 ucs-2。 XML 实例中所有其他 PI 均被保留。  
   
   
 ### <a name="order-of-attributes"></a>属性的顺序  
@@ -87,7 +87,7 @@ GO
   
   
 ##  <a name="setting-required-query-options"></a><a name="query"></a> 设置所需的查询选项  
- 使用`xml`数据`xml`类型方法查询类型列或变量时，必须按所示设置以下选项。  
+ `xml`使用数据类型方法查询类型列或变量时 `xml` ，必须按所示设置以下选项。  
   
 |SET 选项|所需值|  
 |-----------------|---------------------|  
@@ -99,7 +99,7 @@ GO
 |NUMERIC_ROUNDABORT|OFF|  
 |QUOTED_IDENTIFIER|ON|  
   
- 如果未按所示方式设置这些选项，则对`xml`数据类型方法的查询和修改将失败。  
+ 如果未按所示方式设置这些选项，则对数据类型方法的查询和修改 `xml` 将失败。  
   
   
 ## <a name="see-also"></a>另请参阅  

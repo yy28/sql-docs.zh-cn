@@ -25,15 +25,15 @@ helpviewer_keywords:
 - table mapping [SQLXML], explicit mapping
 - element/attribute mapping [SQLXML]
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 72dfbcbd1ff264e596eecfecb5ebf759c2cbf5e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11144714addb50dc4c481512399228802390f2f3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013846"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703610"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>XSD 元素和属性到表和列的显式映射 (SQLXML 4.0)
   当使用 XSD 架构提供关系数据库的 XML 视图时，必须将该架构的元素和属性映射至数据库的表和列。 数据库表/视图中的行将映射至 XML 文档中的元素。 数据库中的列值映射到属性或元素。  
@@ -45,7 +45,7 @@ ms.locfileid: "66013846"
   
  当在元素上指定 `sql:relation` 时，此批注的范围适用于在该元素的复杂类型定义中描述的所有属性和子元素，因而提供了一种编写批注的快捷方式。  
   
- 当`sql:relation`中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有效的标识符在 XML 中无效时，批注也很有用。 例如，“Order Details”是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的有效表名，但该名称在 XML 中无效。 在这种情况下，可以使用 `sql:relation` 批注指定映射，例如：  
+ `sql:relation`当中有效的标识符 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 在 XML 中无效时，批注也很有用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 例如，“Order Details”是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的有效表名，但该名称在 XML 中无效。 在这种情况下，可以使用 `sql:relation` 批注指定映射，例如：  
   
 ```  
 <xsd:element name="OD" sql:relation="[Order Details]">  
@@ -58,9 +58,9 @@ ms.locfileid: "66013846"
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. 指定 sql:relation 和 sql:field 批注  
- 在此示例中，XSD 架构包含一个** \<Contact>** 包含** \<FName>** 和** \<LName>** 子元素和**ContactID**属性的复杂类型的元素。  
+ 在此示例中，XSD 架构包含一个** \< Contact>** 包含** \< FName>** 和** \< LName>** 子元素和**ContactID**属性的复杂类型的元素。  
   
- `sql:relation`批注将** \<Contact>** 元素映射到 AdventureWorks 数据库中的 contact 表。 `sql:field`批注将** \<FName>** 元素映射到 FirstName 列，并且将** \<LName>** 元素映射到 LastName 列。  
+ `sql:relation`批注将** \< Contact>** 元素映射到 AdventureWorks 数据库中的 contact 表。 `sql:field`批注将** \< FName>** 元素映射到 FirstName 列，并且将** \< LName>** 元素映射到 LastName 列。  
   
  没有为**ContactID**属性指定批注。 这导致将属性默认映射为具有相同名称的列。  
   

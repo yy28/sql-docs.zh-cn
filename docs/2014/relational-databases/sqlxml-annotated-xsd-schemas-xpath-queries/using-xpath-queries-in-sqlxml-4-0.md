@@ -12,21 +12,21 @@ helpviewer_keywords:
 - queries [SQLXML], XPath
 - XML views [SQLXML]
 ms.assetid: 7814d099-81ec-4fb8-894a-729cdbb5015a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 962d79dbee61fa498a6338c864366ec40ea7c759
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3700c706aff2a84eaedb89022c1384ce19f9ea68
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014565"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702972"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>在 SQLXML 4.0 中使用 XPath 查询
   通过 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对带批注的 XSD 架构的支持，您可以对数据库中存储的关系数据创建 XML 视图。 您可以使用 XPath 语言的子集查询由带批注的 XSD 架构创建的 XML 视图。  
   
 > [!NOTE]  
->  若要了解 SQLXML 4.0 中的 XPath 查询，必须熟悉 XML 视图和相关的概念，如模板和映射架构。 有关详细信息，请参阅[&#40;SQLXML 4.0&#41;中带批注的 XSD 架构简介](../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)。 有关 XPath 的详细信息，请参阅由万维网联合会（W3C）定义的 XPath 标准http://www.w3.org/TR/xpath。  
+>  若要了解 SQLXML 4.0 中的 XPath 查询，必须熟悉 XML 视图和相关的概念，如模板和映射架构。 有关详细信息，请参阅[&#40;SQLXML 4.0&#41;中带批注的 XSD 架构简介](../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)。 有关 XPath 的详细信息，请参阅由万维网联合会（W3C）定义的 XPath 标准 http://www.w3.org/TR/xpath 。  
   
 ## <a name="in-this-section"></a>本节内容  
  [&#40;SQLXML 4.0&#41;使用 XPath 查询简介](introduction-to-using-xpath-queries-sqlxml-4-0.md)  

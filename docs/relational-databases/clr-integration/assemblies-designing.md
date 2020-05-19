@@ -2,7 +2,7 @@
 title: 设计程序集 |Microsoft Docs
 description: 本文介绍在设计要在 SQL Server 上承载的程序集时要考虑的因素，包括对程序集进行打包、管理和限制。
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/24/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: clr
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65dbc1a4fdabbf234f4676d75011522a8f3481d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f2a5281d0e5fd7ac18f908ba4c28302b3bfdd5f
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488036"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262055"
 ---
 # <a name="assemblies---designing"></a>程序集 - 设计
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ System.Security.UnverifiableCodeAttribute
 ```  
   
 ### <a name="disallowed-net-framework-apis"></a>禁止的 .NET Framework API  
- 不[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]能从安全的和 EXTERNAL_ACCESS 的程序集调用任何用某个不允许的**HostProtectionAttributes**批注的 API。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 不能从安全的和 EXTERNAL_ACCESS 的程序集调用任何用某个不允许的**HostProtectionAttributes**批注的 API。  
   
 ```  
 eSelfAffectingProcessMgmt  
@@ -102,19 +102,22 @@ eUI
  必须使用 CREATE ASSEMBLY 将自定义程序集引用的任何程序集都加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 下列 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 程序集已经加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，因此，它们可以由自定义程序集引用，而不必使用 CREATE ASSEMBLY。  
   
 ```  
-custommarshallers.dll  
-Microsoft.visualbasic.dll  
-Microsoft.visualc.dll  
+CustomMarshalers.dll  
+Microsoft.VisualBasic.dll  
+Microsoft.VisualC.dll  
 mscorlib.dll  
-system.data.dll  
+System.dll  
+System.Configuration.dll  
+System.Core.dll  
+System.Data.dll  
+System.Data.OracleClient.dll  
 System.Data.SqlXml.dll  
-system.dll  
-system.security.dll  
-system.web.services.dll  
-system.xml.dll  
-System.Transactions  
-System.Data.OracleClient  
-System.Configuration  
+System.Deployment.dll  
+System.Security.dll  
+System.Transactions.dll  
+System.Web.Services.dll  
+system.Xml.dll  
+System.Xml.Linq.dll  
 ```  
   
 ## <a name="see-also"></a>另请参阅  

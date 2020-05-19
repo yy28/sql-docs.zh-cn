@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4e343e7e9657b69ebd06a147cb99fa19e3c36aab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 287acb7986b3e518260f82278f8079391932ab6f
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68120245"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262143"
 ---
 # <a name="sysfn_hadr_backup_is_preferred_replica--transact-sql"></a>sys. fn_hadr_backup_is_preferred_replica （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )
  要备份的数据库的名称。 *dbname*的类型为 sysname。  
   
 ## <a name="returns"></a>返回  
- 如果当前实例上的数据库位于首选副本上，则返回 1。 否则，返回 0。  
+ 如果当前实例上的数据库是首选副本，则返回数据类型**bool**：1，否则返回0。  
   
 ## <a name="remarks"></a>备注  
  在备份脚本中使用此函数来确定当前数据库是否位于用于备份的首选副本上。 您可以在每个可用性副本上运行脚本。 其中的每个作业都将查看相同的数据来确定应运行的作业，因此，只有一个计划的作业实际上会继续到备份阶段。 示例代码可与以下代码相似。  

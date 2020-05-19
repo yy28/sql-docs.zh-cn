@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_exec function
 ms.assetid: b23ea2cc-8545-4873-b0c1-57e76b0a3a7b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1d5ce458ea8f5874620ea0561eeea5c6ff8e56bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f86c33fb96ddddcefd31227ac904157f3bd8c388
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62689036"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701966"
 ---
 # <a name="bcp_exec"></a>bcp_exec
   执行数据库表和用户文件之间数据的完整大容量复制。  
@@ -59,7 +59,7 @@ pnRowsProcessed
   
  **bcp_exec**是在任意时间长度中可能未完成的唯一大容量复制函数。 因此，它是支持异步模式的唯一大容量复制函数。 若要设置异步模式，请在调用**bcp_exec**之前，使用[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)将 SQL_ATTR_ASYNC_ENABLE 设置为 SQL_ASYNC_ENABLE_ON。 若要测试完成，请调用具有相同参数的**bcp_exec** 。 如果大容量复制尚未完成， **bcp_exec**将返回 SUCCEED_ASYNC。 它还会在*pnRowsProcessed*中返回已发送到服务器的行数的状态计数。 发送到服务器的行直到到达批的末尾时才会提交。  
   
- 有关从开始大容量复制的重大更改的信息[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，请参阅[&#40;ODBC&#41;执行大容量复制操作](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
+ 有关从开始大容量复制的重大更改的信息 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ，请参阅[&#40;ODBC&#41;执行大容量复制操作](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)。  
   
 ## <a name="example"></a>示例  
  下面的示例演示如何使用**bcp_exec**：  

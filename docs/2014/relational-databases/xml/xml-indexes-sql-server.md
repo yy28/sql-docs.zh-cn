@@ -30,15 +30,15 @@ helpviewer_keywords:
 - PROPERTY index
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14c10afd53e219b847625e50f8fc88714cad1111
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62631360"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702278"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 索引 (SQL Server)
   可以对 `xml` 数据类型列创建 XML 索引。 它们对列中 XML 实例的所有标记、值和路径进行索引，从而提高查询性能。 在下列情况下，您的应用程序可以从 XML 索引中获益：  
@@ -103,7 +103,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  对于涉及 [xml Data Type Methods](/sql/t-sql/xml/xml-data-type-methods) 的查询，查询处理器使用主 XML 索引，并返回主索引自身中的标量值或 XML 子树。 （此索引存储重新构造 XML 实例所需的所有信息。）  
   
- 例如，以下查询将返回`CatalogDescription``xml` `ProductModel`表的 "类型" 列中存储的摘要信息。 只有当产品型号的目录说明中还存储 <`Summary`> 说明时，该查询才会返回 <`Features`> 信息。  
+ 例如，以下查询将返回表的 "类型" 列中存储的摘要信息 `CatalogDescription``xml` `ProductModel` 。 只有当产品型号的目录说明中还存储 <`Summary`> 说明时，该查询才会返回 <`Features`> 信息。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
@@ -168,7 +168,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `/book[@* = "someValue"]`，其中查询将查找包含值为 `book` 的属性的 <`"someValue"`> 元素。  
   
- 以下查询从 `ContactID` 表中返回 `Contact` 。 `WHERE`子句指定一个在 "类型" `AdditionalContactInfo``xml`列中查找值的筛选器。 只有当相应的其他联系信息 XML 二进制大型对象包含具体的电话号码时，才会返回联系 ID。 由于 <`telephoneNumber`> 元素可以显示在 XML 中的任意位置，因而路径表达式指定 descendent-or-self 轴。  
+ 以下查询从 `ContactID` 表中返回 `Contact` 。 `WHERE`子句指定一个在 "类型" 列中查找值的筛选器 `AdditionalContactInfo``xml` 。 只有当相应的其他联系信息 XML 二进制大型对象包含具体的电话号码时，才会返回联系 ID。 由于 <`telephoneNumber`> 元素可以显示在 XML 中的任意位置，因而路径表达式指定 descendent-or-self 轴。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -183,7 +183,7 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
  在这种情况下，<`number`> 的搜索值是已知的，但是它可以作为 <`telephoneNumber`> 元素的子级在 XML 实例中的任意位置出现。 这种查询可能受益于基于特定值的索引查找。  
   
 ### <a name="property-secondary-index"></a>PROPERTY 辅助索引  
- 从单个 XML 实例检索一个或多个值的查询适用 PROPERTY 索引。 如果使用`xml`类型的**value （）** 方法检索对象属性，并且对象的主键值已知，则会发生这种情况。  
+ 从单个 XML 实例检索一个或多个值的查询适用 PROPERTY 索引。 如果使用类型的**value （）** 方法检索对象属性 `xml` ，并且对象的主键值已知，则会发生这种情况。  
   
  PROPERTY 索引是对主 XML 索引的列（PK、Path 和节点值）创建的，其中 PK 是基表的主键。  
   
@@ -198,7 +198,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 除了本主题后面所述的区别之外，对`xml`类型列创建 XML 索引与对非`xml`类型列创建索引类似。 可以使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 语句创建和管理 XML 索引：  
+ 除了本主题后面所述的区别之外，对类型列创建 XML 索引 `xml` 与对非类型列创建索引类似 `xml` 。 可以使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 语句创建和管理 XML 索引：  
   
 -   [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)  
   

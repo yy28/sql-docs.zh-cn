@@ -18,15 +18,15 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - key-fields annotation
 ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bc3c063da7bb9133f8687a908c4bd7e0e13bae8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d592ea935453675d0467e9d2e4d9162d79117cc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013823"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703566"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>使用 sql:key-fields 标识键列 (SQLXML 4.0)
   针对 XSD 架构指定 XPath 查询时，大多数情况下必须有键信息才能获得结果中的正确嵌套。 指定 `sql:key-fields` 批注是一种确保生成正确层次结构的方式。  
@@ -36,19 +36,19 @@ ms.locfileid: "66013823"
   
  `sql:key-fields` 的值用于标识唯一标识关系中的行的列。 如果需要多个列才能唯一标识某行，则用空格分隔列值。  
   
- 如果元素包含的`sql:key-fields` ** \<sql： relationship>** 是在元素和子元素之间定义的，但未提供父元素中指定的表的主键，则必须使用批注。  
+ `sql:key-fields`如果元素包含的** \< sql： relationship>** 是在元素和子元素之间定义的，但未提供父元素中指定的表的主键，则必须使用批注。  
   
 ## <a name="examples"></a>示例  
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
-### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. 在 sql： relationship> \<没有提供足够的信息时生成适当的嵌套  
+### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. 在 \< sql： relationship> 没有提供足够的信息时生成适当的嵌套  
  该示例显示必须指定 `sql:key-fields` 的地方。  
   
- 请考虑以下架构。 该架构指定** \<order** ** \<>** 元素所属的 order>和** \<customer>** 元素之间的层次结构，而** \<customer>** 元素为子元素。  
+ 请考虑以下架构。 该架构指定 order ** \<>** 元素所属的** \< order>** 和** \< customer>** 元素之间的层次结构，而** \< customer>** 元素为子元素。  
   
- Sql： relationship>标记用于指定父子关系。 ** \<** 它将 Sales.SalesOrderHeader 表中的 CustomerID 标识为父键，该父键引用 Sales.Customer 表中的 CustomerID 子键。 ** \<Sql： relationship>** 中提供的信息不足以唯一标识父表（SalesOrderHeader）中的行。 因此，如果没有 `sql:key-fields` 批注，则生成的层次结构不准确。  
+ ** \< Sql： relationship>** 标记用于指定父子关系。 它将 Sales.SalesOrderHeader 表中的 CustomerID 标识为父键，该父键引用 Sales.Customer 表中的 CustomerID 子键。 ** \< Sql： relationship>** 中提供的信息不足以唯一标识父表（SalesOrderHeader）中的行。 因此，如果没有 `sql:key-fields` 批注，则生成的层次结构不准确。  
   
- 在`sql:key-fields` ** \<>按顺序**指定的情况下，批注唯一标识父项（SalesOrderHeader 表）中的行，其子元素显示在其父元素之下。  
+ 在 `sql:key-fields` ** \<>按顺序**指定的情况下，批注唯一标识父项（SalesOrderHeader 表）中的行，其子元素显示在其父元素之下。  
   
  以下是架构：  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66013823"
   
 1.  复制上面的架构代码，并将它粘贴到文本文件中。 将文件另存为 KeyFields1.xml。  
   
-2.  复制以下模板，并将它粘贴到文本文件中。 在保存 KeyFields1.xml 的相同目录中将该文件另存为 KeyFields1T.xml。 模板中的 XPath 查询将返回 CustomerID 小于3的所有** \<Order>** 元素。  
+2.  复制以下模板，并将它粘贴到文本文件中。 在保存 KeyFields1.xml 的相同目录中将该文件另存为 KeyFields1T.xml。 模板中的 XPath 查询将返回 CustomerID 小于3的所有** \< Order>** 元素。  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -125,7 +125,7 @@ ms.locfileid: "66013823"
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. 指定 sql:key-fields 以便在结果中生成正确的嵌套  
- 在下面的架构中，没有使用** \<sql： relationship>** 指定的层次结构。 此架构仍然需要指定 `sql:key-fields` 批注才能唯一标识 HumanResources.Employee 表中的雇员。  
+ 在下面的架构中，没有使用** \< sql： relationship>** 指定的层次结构。 此架构仍然需要指定 `sql:key-fields` 批注才能唯一标识 HumanResources.Employee 表中的雇员。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -152,7 +152,7 @@ ms.locfileid: "66013823"
   
 1.  复制上面的架构代码，并将它粘贴到文本文件中。 将文件另存为 KeyFields2.xml。  
   
-2.  复制以下模板，并将它粘贴到文本文件中。 在保存 KeyFields2.xml 的相同目录中将该文件另存为 KeyFields2T.xml。 模板中的 XPath 查询将返回所有** \<HumanResources>** 元素：  
+2.  复制以下模板，并将它粘贴到文本文件中。 在保存 KeyFields2.xml 的相同目录中将该文件另存为 KeyFields2T.xml。 模板中的 XPath 查询将返回所有** \< HumanResources>** 元素：  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

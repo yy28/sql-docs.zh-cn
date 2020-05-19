@@ -3,22 +3,34 @@ title: SSMA for Oracle 中的新增功能（OracleToSQL） |Microsoft Docs
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/2/2020
+ms.date: 4/27/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 88b87aad931f28637accc95aa4d993037fcf0b0a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07dd930a853926be98dba5f2ca91bd7080b9a808
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80625601"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220682"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle 中的新增功能（OracleToSQL）
 
 本文列出了每个版本中 Oracle 更改的 SQL Server 迁移助手（SSMA）。
+
+## <a name="ssma-v89"></a>SSMA v 8。9
+
+SSMA for Oracle 的6.x 版包含以下更改：
+
+* 动态 SQL 字符串文本的转换
+* 转换 `LAG` `FIRST_VALUE` 和 `LAST_VALUE` 分析函数
+* 添加对基本 `ALTER TRIGGER` / `ALTER INDEX` DDL （启用/禁用等）的支持
+* 改善了与内置函数名称匹配的列的转换
+* 为可执行筛选的列生成筛选的唯一索引 `NULL`
+* 改进了 Azure SQL 数据仓库的变量声明转换
+* 解决项目名称中含有特殊字符的问题
 
 ## <a name="ssma-v88"></a>SSMA v 8。8
 
@@ -26,10 +38,10 @@ SSMA for Oracle 的 v2.0 版本包括：
 
 * SQL Server 对象同步稳定性改进
 * 评估和转换期间的 GUI 性能改进
-* 提高了分析`OVER PARTITION`子句的转换
-* 分析函数的`LEAD`新转换
+* 提高了分析子句的转换 `OVER PARTITION`
+* 分析函数的新转换 `LEAD`
 * 子查询因式分解子句的新转换
-* Azure `REPLICATE` SQL 数据仓库的新分发选项
+* `REPLICATE`AZURE SQL 数据仓库的新分发选项
 * 全新的 Oracle 语法分析器，进一步提高转换性能
 
 ## <a name="ssma-v87"></a>SSMA v 8。7
@@ -45,11 +57,11 @@ SSMA for Oracle 的 v4.0 版本在图形用户界面中提供了细微的修复�
 
 除了旨在提高可用性和性能的目标修补集外，通过添加使用户能够在转换后的代码中省略 SSMA 扩展属性的设置，还增强了 SSMA for Oracle 的 v 8.6 版本。
 
-若要利用此设置，请在 SSMA for Oracle 中导航到 "**工具** > " "**项目设置** > " "**常规** > **转换**"，然后在 "**杂项**" 下，将 "**省略扩展属性**" 设置的值更新为 **"是"**。
+若要利用此设置，请在 SSMA for Oracle 中导航到 "**工具**" "  >  **项目设置**" "  >  **常规**  >  **转换**"，然后在 "**杂项**" 下，将 "**省略扩展属性**" 设置的值更新为 **"是"**。
 
 ![省略扩展属性设置](../oracle/media/ssma-omit-extended-properties.png)
 
-此外，SSMA for Oracle 现在提供改进的`XMLTABLE`子句分析。
+此外，SSMA for Oracle 现在提供改进的 `XMLTABLE` 子句分析。
 
 > [!IMPORTANT]
 > 对于 SSMA 的8.5 和更高版本，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从[此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。
@@ -60,9 +72,9 @@ SSMA for Oracle 的 v4.0 版本在图形用户界面中提供了细微的修复�
 
 此外，SSMA for Oracle 已通过以下支持得到增强：
 
-* 将所选对象数限制为990（Oracle `WHERE .. IN (..)`子句限制为1000项）。
-* 将数据从`RAW`迁移`UNIQUEIDENTIFIER`到。
-* `PARALLEL_ENABLE`子句分析。
+* 将所选对象数限制为990（Oracle `WHERE .. IN (..)` 子句限制为1000项）。
+* 将数据从迁移 `RAW` 到 `UNIQUEIDENTIFIER` 。
+* 子句分析 `PARALLEL_ENABLE` 。
 
 最后，适用于 Oracle 的 SSMA 的版本8.5 现在提供：
 
@@ -76,7 +88,7 @@ SSMA for Oracle 的 v4.0 版本在图形用户界面中提供了细微的修复�
 
 SSMA for Oracle 的 v2.0 版本使用旨在解决辅助功能问题的目标修补程序进行了增强，并修复了与最大索引列（为32，而不是16）相关的 bug，以支持 SQL Server 2016 及更高版本。
 
-此外，此版本的 SSMA for Oracle 添加了作为存储`SYS_REFCURSOR`过程`OUT`参数的转换。
+此外，此版本的 SSMA for Oracle 添加了 `SYS_REFCURSOR` 作为存储过程参数的转换 `OUT` 。
 
 > [!IMPORTANT]
 > 使用 SSMA 版本7.4 到8.4，.NET 4.5.2 是必备组件。
@@ -86,7 +98,7 @@ SSMA for Oracle 的 v2.0 版本使用旨在解决辅助功能问题的目标修�
 SSMA for Oracle 的 v 8.3 版本通过旨在改进质量和转换指标的目标修补程序进行了增强。 此外，此版本的 SSMA for Oracle 还提供了以下修补程序：
 
 * 解决辅助功能问题。
-* 为 SQL Server 中的`hierarchyid`类型添加基本支持。
+* 为 SQL Server 中的类型添加基本支持 `hierarchyid` 。
 * 解决通过同义词调用的函数的返回类型未知的问题。
 * 将 ODP.NET 更新为19.3。
 
@@ -94,11 +106,11 @@ SSMA for Oracle 的 v 8.3 版本通过旨在改进质量和转换指标的目标
 
 适用于 Oracle 的 SSMA 的版本8.2 版本增强为：
 
-* 添加对的`DBMS_OUTPUT.ENABLE` / `DISABLE`支持。
-* 删除`CAST AS FLOAT`默认`BINARY_FLOAT`数据`BINARY_DOUBLE`迁移查询中的和列。
+* 添加对的支持 `DBMS_OUTPUT.ENABLE` / `DISABLE` 。
+* 删除 `CAST AS FLOAT` `BINARY_FLOAT` `BINARY_DOUBLE` 默认数据迁移查询中的和列。
 * 如果当前值已更改，则修复序列刷新。
-* 如果存在具有相同名称的列，请修复`ROWNUM`与伪列（等）的误解相关的 bug。
-* 修复在转换`FOR`循环时出现不明确的可解析标识符的崩溃。
+* `ROWNUM`如果存在具有相同名称的列，请修复与伪列（等）的误解相关的 bug。
+* 修复在转换循环时出现不明确的可 `FOR` 解析标识符的崩溃。
 
 此外，此版本还包括一组旨在提高质量和转换指标的目标修补程序，以及对的修复：
 
@@ -141,7 +153,7 @@ SSMA for Oracle 的 v2.0 版本通过旨在改进质量和转换指标的目标�
 
 * 能够使用官方的托管 .NET 驱动程序连接到 Oracle。 OCI 驱动程序不再是使用适用于 Oracle 的 SQL Server 迁移助手的先决条件。
 
-* 默认`VARCHAR`情况下， `ROWID`映射`UROWID`和的功能。 从`uniqueidentifier`更改为适用于显式`ROWID`列的数据迁移。
+* `ROWID` `UROWID` 默认情况下，映射和的功能 `VARCHAR` 。 从更改 `uniqueidentifier` 为适用于显式列的数据迁移 `ROWID` 。
 
 ## <a name="ssma-v710"></a>SSMA
 
@@ -165,7 +177,7 @@ SSMA for Oracle 的 v 7.9 版本包含以下更改：
 SSMA for Oracle 的7.4 版版本包含以下更改：
 
 * 支持：
-  * `IN`子句的行表达式。
+  * 子句的行表达式 `IN` 。
   * 隐式类型转换。
   * `UID`Azure SQL 数据库的转换。
 * 更改**项目设置**中突出显示的类型映射。
@@ -178,7 +190,7 @@ SSMA for Oracle 的 v4.0 版本包含以下更改：
 * SSMA for Oracle 已通过可提高质量和转换指标的目标修补程序进行了增强。
 * 基于热门需求，SSMA for Oracle 的32位版本将恢复。 与之前的实现（在7.4 之前）相比，有两个安装包，但不能并行安装。 因此，你必须根据你拥有的连接组件选择最适合的版本。 如果可能，始终最好使用64位版本。
 * SQL Server 2017 支持现已正式成为 Linux 上支持的 Oracle 扩展包（新的远程安装选项）。 请注意，在 Linux 上安装时，扩展包功能是有限的，因为不支持测试人员和服务器端数据迁移功能。
-* SSMA for Oracle 允许您将具体化视图作为常规表进行迁移（可通过**项目设置** -> **同步** -> **发现具体化视图的支持表**）中的设置进行配置。
+* SSMA for Oracle 允许您将具体化视图作为常规表进行迁移（可通过**项目设置**  ->  **同步**  ->  **发现具体化视图的支持表**）中的设置进行配置。
 
 ## <a name="ssma-v76"></a>SSMA v 7。6
 
@@ -269,8 +281,8 @@ SSMA for Oracle 的5月2016版包含以下更改：
 * 改进的分析器和解析程序。
 * 移除了 .NET 2.0 的安装程序检查。
 * 更新了从 .NET 3.5 到 .NET 4.0 的扩展包。
-* 修复`save-project`了`open-project`和用于 SSMA 控制台的命令。
-* 修复`securepassword`了 SSMA 控制台命令。
+* 修复 `save-project` `open-project` 了和用于 SSMA 控制台的命令。
+* 修复 `securepassword` 了 SSMA 控制台命令。
 * 修复了初始加载的对象计数。
 * 修复了 Oracle 的字符数据类型的转换。
 * 修复了全局设置中的 bug。
@@ -320,13 +332,13 @@ SSMA for Oracle 的2014年4月版包含以下更改：
 
 ## <a name="january-2012"></a>2012 年 1 月
 
-SSMA for Oracle 的2012年1月版增加了`RowType`对`RecordType`和默认为`NULL`的输入参数的支持。
+SSMA for Oracle 的2012年1月版增加了对 `RowType` 和 `RecordType` 默认为的输入参数的支持 `NULL` 。
 
 ## <a name="july-2011"></a>2011 年 7 月
 
 SSMA for Oracle 的2011年7月发行版本包含以下更改：
 
-* 添加了对将 Oracle 序列转换为[!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]序列生成器的支持。
+* 添加了对将 Oracle 序列转换为 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] 序列生成器的支持。
 * 在数据迁移过程中改进了错误报告。
 * 使用保留字改进了语句的转换。
 * 改进了函数中 date 值的隐式转换。
@@ -335,13 +347,13 @@ SSMA for Oracle 的2011年7月发行版本包含以下更改：
 
 SSMA for Oracle 的2011年4月版包含以下更改：
 
-* 合并的 "SSMA for Oracle" 产品，它[!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)]支持[!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] 、 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]和。
-* 添加了对连接和迁移到[!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]的支持。
+* 合并的 "SSMA for Oracle" 产品，它支持 [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] 、 [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] 和 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] 。
+* 添加了对连接和迁移到的支持 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] 。
 * 增强了客户端数据迁移引擎，支持并行数据迁移。
-* 提高了恢复模式和`Simple` `Bulk`日志记录的数据迁移性能。
+* 提高了 `Simple` `Bulk` 恢复模式和日志记录的数据迁移性能。
 * 添加了对 SSMA 早期版本创建的项目的后向兼容性支持（4.0 和4.2）。
 * 添加了一种功能，该功能能够安装 SSMA for Oracle 5.0 5.0 产品（早期版本的 SSMA，4.0 和4.2）。
-* 添加了对报表用户定义类型（包括子类型、 `VARRAY`、 `NESTED TABLE`、对象表和对象视图）的支持以及它们在 PL/SQL 块中的用法以及特殊错误消息。
+* 添加了对报表用户定义类型（包括子类型、 `VARRAY` 、 `NESTED TABLE` 、对象表和对象视图）的支持以及它们在 PL/SQL 块中的用法以及特殊错误消息。
 
 ## <a name="july-2010"></a>2010 年 7 月
 
@@ -359,14 +371,14 @@ SSMA for Oracle 的2008年6月发行版包含以下更改：
 
 * 增加了对评估报表的改进，包括同义词的其他信息、可分析对象的原始源、面板和 SQL Server 徽标删除以及布局持久性。
 * 增加了对象转换的改进：
-  * 已`DBMS_LOB`添加`DBMS_SQL`包，转换。
+  * `DBMS_LOB` `DBMS_SQL` 已添加包，转换。
   * 联接转换已修订。
   * 修改集合和记录转换后，就是通过每个字段的单独变量释放的简单事例中的记录转换。
   * 改进了记录和集合实现。
   * 添加了窗口化聚合函数。
   * `ROLLUP`/`CUBE`添加了子句。
-  * `NEXTVAL` /改进`CURVAL`。
-  * 添加了列`SET`分组 in 子句、分组集和分组 ID。
+  * 改进 `NEXTVAL` / `CURVAL` 。
+  * 添加了列分组 in `SET` 子句、分组集和分组 ID。
   * `MERGE`已添加语句。
   * 添加了新的日期时间类型以及将记录和集合转换为添加的 CLR 数据类型。
 * 添加了测试人员的新功能。 现在可以使用测试人员将表测试为对象，可以更改测试用例中多个可测试对象的调用顺序，用户可以使用记录和集合来测试过程和函数作为参数和返回值，并且添加了依赖项分析器以仅检查已使用的表。

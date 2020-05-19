@@ -12,18 +12,18 @@ helpviewer_keywords:
 - Managed Classes [SQLXML], DiffGrams
 - SQLXML, Managed Classes
 ms.assetid: 81c687ca-8c9f-4f58-801f-8dabcc508a06
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3d8756bb3dc7b030541159c2aa127162907aa4b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0f84dae66bee63d1e7646a6b4e7018d4f071390
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013050"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703184"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>使用 SQLXML 托管类执行 DiffGram
-  此示例演示如何使用 SQLXML 托管类（node.js） [!INCLUDE[msCoName](../../../includes/msconame-md.md)]在 .NET Framework 环境中执行 DiffGram 文件[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，以将数据更新应用到表。  
+  此示例演示如何 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 SQLXML 托管类（node.js）在 .NET Framework 环境中执行 DiffGram 文件，以将数据更新应用到表。  
   
  在本示例中，DiffGram 更新客户 ALFKI 的客户信息（CompanyName 和 ContactName）。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66013050"
 </ROOT>  
 ```  
   
- Before>块包含** \<Customer>** 元素（**diffgr： id = "Customer1"**）。 ** \<** DataInstance>块包含具有相同**id**的相应** \<Customer>** 元素。 ** \<**** \<NewDataSet>** 中的** \<customer>** 元素还指定了**diffgr： hasChanges = "modified"**。 这指示一个更新操作，而且 Cust 表中的客户记录也会相应地更新。 请注意，如果未指定**diffgr： hasChanges**属性，DiffGram 处理逻辑将忽略此元素，并且不执行任何更新。  
+ ** \< Before>** 块包含** \< Customer>** 元素（**diffgr： id = "Customer1"**）。 ** \< DataInstance>** 块包含具有相同**id**的相应** \< Customer>** 元素。** \< NewDataSet>** 中的** \< customer>** 元素还指定了**diffgr： hasChanges = "modified"**。 这指示一个更新操作，而且 Cust 表中的客户记录也会相应地更新。 请注意，如果未指定**diffgr： hasChanges**属性，DiffGram 处理逻辑将忽略此元素，并且不执行任何更新。  
   
  下面是 c # 教程应用程序的代码，该应用程序演示如何使用 SQLXML 托管类来执行上述 DiffGram，并更新两个表（用户、Ord），你还将在**tempdb**数据库中创建该应用程序。  
   

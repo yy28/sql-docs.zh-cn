@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_init function
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8d482ac020aaaf5ac8f029306441c3e9979f4379
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c77414aac2b6b25d8b0c2ca774cac07c269f328
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62689066"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701956"
 ---
 # <a name="bcp_init"></a>bcp_init
   初始化大容量复制操作。  
@@ -75,7 +75,7 @@ eDirection
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>备注  
- 调用任何其他大容量复制函数之前调用**bcp_init** 。 **bcp_init**对工作站和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之间的大容量数据复制执行必要的初始化。  
+ 调用任何其他大容量复制函数之前调用**bcp_init** 。 **bcp_init**对工作站和之间的大容量数据复制执行必要的初始化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  **Bcp_init**函数必须与支持使用大容量复制函数的 ODBC 连接句柄一起提供。 若要启用句柄，请使用 SQLSetConnectAttr，将 SQL_COPT_SS_BCP [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)设置为在已分配但未连接的连接句柄上 SQL_BCP_ON。 尝试对已连接的句柄分配属性将导致错误。  
   
@@ -89,7 +89,7 @@ eDirection
   
 -   向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制时，数据文件必须包含数据库表中的每列数据。 从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制时，数据库表、视图或 SELECT 结果集中的所有列的数据均被复制到数据文件中。  
   
--   向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制时，数据文件中的列序号位置必须与数据库表中的列序号位置相同。 从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]复制时， **bcp_exec**根据数据库表中列的序号位置放置数据。  
+-   向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制时，数据文件中的列序号位置必须与数据库表中的列序号位置相同。 从复制时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， **bcp_exec**根据数据库表中列的序号位置放置数据。  
   
 -   如果数据库数据类型的长度可变（例如， **varbinary （22）**）或数据库列可以包含 null 值，则数据文件中的数据将以长度/空指示器作为前缀。 指示符的宽度因数据类型和大容量复制的版本而异。  
   
@@ -97,7 +97,7 @@ eDirection
   
  对于不包含索引的表，通过将数据库恢复模式设置为 SIMPLE 或 BULK_LOGGED 可以优化向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的大容量复制。 有关详细信息，请参阅批量导入和[更改数据库](/sql/t-sql/statements/alter-database-transact-sql)[中最小日志记录的先决条件](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
   
- 如果未使用任何数据文件，则必须调用[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)以指定每个列再的数据的格式和位置，然后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用[bcp_sendrow](bcp-sendrow.md)将数据行复制到中。  
+ 如果未使用任何数据文件，则必须调用[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)以指定每个列再的数据的格式和位置，然后使用 bcp_sendrow 将数据行复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中[bcp_sendrow](bcp-sendrow.md)。  
   
 ## <a name="example"></a>示例  
  此示例显示如何将 ODBC bcp_init 函数用于格式化文件。  

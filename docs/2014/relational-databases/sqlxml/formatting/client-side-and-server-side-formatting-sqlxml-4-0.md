@@ -12,15 +12,15 @@ helpviewer_keywords:
 - XML formatting [SQLXML]
 - SQLXML, formats
 ms.assetid: eb61e595-f44c-44b8-9d62-e4effce55685
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ab8293cdd0e2d839bb3d850116bf13f0cc0a7f58
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a8bcf160fe7baf8fbb98efa80b4f28516041f36
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012313"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702905"
 ---
 # <a name="client-side-and-server-side-formatting-sqlxml-40"></a>客户端与服务器端格式 (SQLXML 4.0)
   SQLXML 提供两种对 XML 文档进行格式设置的方式：  
@@ -29,7 +29,7 @@ ms.locfileid: "66012313"
   
 -   客户端格式设置  
   
- 本部分包括有关在客户端或服务器端设置 XML 文档的格式的信息，这些行集由对中[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的数据库执行的查询所生成的行集。  
+ 本部分包括有关在客户端或服务器端设置 XML 文档的格式的信息，这些行集由对中的数据库执行的查询所生成的行集 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="in-this-section"></a>本节内容  
  [&#40;SQLXML 4.0&#41;的客户端和服务器端 XML 格式的体系结构](server-side-xml-formatting-sqlxml-4-0.md)  

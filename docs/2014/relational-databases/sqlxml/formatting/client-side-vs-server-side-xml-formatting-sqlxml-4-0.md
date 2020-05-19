@@ -15,21 +15,21 @@ helpviewer_keywords:
 - AUTO mode
 - client-side XPath
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4eaa4667db1e8b6ed789e2adb90bc8d72c1b02e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b721a2abeaf941cd7169b731b5d1a74e15c4396
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012353"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702885"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>客户端与服务器端 XML 格式 (SQLXML 4.0)
   本主题说明在 SQLXML 中客户端与服务器端 XML 格式的一般差异。  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>客户端格式中不支持多行集查询  
- 使用客户端 XML 格式时不支持生成多个行集的查询。 例如，假定您有一个虚拟目录，在其中指定了客户端格式。 请考虑此示例模板，该模板在** \<sql： query>** 块中包含两个 SELECT 语句：  
+ 使用客户端 XML 格式时不支持生成多个行集的查询。 例如，假定您有一个虚拟目录，在其中指定了客户端格式。 请考虑此示例模板，该模板在** \< sql： query>** 块中包含两个 SELECT 语句：  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -40,12 +40,12 @@ ms.locfileid: "66012353"
 </ROOT>  
 ```  
   
- 您可以在应用程序代码中执行此模板，但会返回错误，因为客户端 XML 格式不支持多个行集的格式。 如果在两个单独** \<的 sql： query>** 块中指定查询，您将获得所需的结果。  
+ 您可以在应用程序代码中执行此模板，但会返回错误，因为客户端 XML 格式不支持多个行集的格式。 如果在两个单独的** \< sql： query>** 块中指定查询，您将获得所需的结果。  
   
 ## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>timestamp 在客户端与服务器端格式中的映射方式不同  
  在服务器端 XML 格式中，`timestamp` 类型的数据库列映射为 i8 XDR 类型（如果在查询中指定了 XMLDATA 选项）。  
   
- 在客户端 XML 格式中，`timestamp` 类型的数据库列映射为 `uri` 或 `bin.base64` XDR 类型（取决于是否在查询中指定了二进制 base64 选项）。 如果`bin.base64`使用 updategram 和 bulkload 功能，XDR 类型会很有用，因为此类型被转换为[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `timestamp`类型。 这样即可成功执行插入、更新或删除操作。  
+ 在客户端 XML 格式中，`timestamp` 类型的数据库列映射为 `uri` 或 `bin.base64` XDR 类型（取决于是否在查询中指定了二进制 base64 选项）。 `bin.base64`如果使用 updategram 和 bulkload 功能，XDR 类型会很有用，因为此类型被转换为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `timestamp` 类型。 这样即可成功执行插入、更新或删除操作。  
   
 ## <a name="deep-variants-are-used-in-server-side-formatting"></a>服务器端 XML 格式使用深层 VARIANT  
  在服务器端 XML 格式中，使用深层类型的 VARIANT 类型。 如果使用客户端 XML 格式，变量将转换为 Unicode 字符串，并且不使用 VARIANT 的子类型。  

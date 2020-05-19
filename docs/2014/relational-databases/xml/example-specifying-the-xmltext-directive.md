@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 56ccb1e8a25b7d9f138c2900422d301919fef039
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b76d727657530cfd872b04535f9413f86ff32b6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67597548"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702775"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>示例：指定 XMLTEXT 指令
   此示例说明如何在使用 EXPLICIT 模式的 `SELECT` 语句中使用 `XMLTEXT` 指令处理溢出列中的数据。  
@@ -100,7 +100,7 @@ FOR XML EXPLICIT;
   
  如果使用 *指令指定了*AttributeName`xmltext`，则 <`overflow`> 元素的属性将作为封闭的 <`Parent`> 元素的子元素属性添加。 为*AttributeName*指定的名称将成为子元素的名称。  
   
- 在此查询中， *AttributeName*<`overflow`> 与`xmltext`指令一起指定：  
+ 在此查询中， *AttributeName*<`overflow`> 与指令一起指定 `xmltext` ：  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  

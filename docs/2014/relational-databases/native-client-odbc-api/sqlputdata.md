@@ -11,30 +11,30 @@ topic_type:
 helpviewer_keywords:
 - SQLPutData function
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7e15353cd9f4c4a837fe5978d00259ad5460d50d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 410aa819e2d4af056c53fc30a971625001b1186e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046622"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702204"
 ---
 # <a name="sqlputdata"></a>SQLPutData
-  当使用 SQLPutData [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]向 SQL_LONGVARCHAR （`text`）、SQL_WLONGVARCHAR （`ntext`）或 SQL_LONGVARBINARY （`image`）列发送超过65535个字节的数据（对于版本 4.21 a）或 400 KB 的数据（对于 SQL Server 版本6.0 及更高版本）时，以下限制将适用：  
+  当使用 SQLPutData 向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_LONGVARCHAR （ `text` ）、SQL_WLONGVARCHAR （ `ntext` ）或 SQL_LONGVARBINARY （）列发送超过65535个字节的数据（对于版本 4.21 a）或 400 KB 的数据（对于 SQL Server 版本6.0 及更高版本）时，以下限制将适用 `image` ：  
   
 -   引用的参数可以是 INSERT 语句中的*insert_value* 。  
   
 -   引用的参数可以是 UPDATE 语句的 SET 子句中的*表达式*。  
   
- 当使用版本6.5 或更低版本时，取消将向运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的服务器提供块数据的 SQLPutData 调用序列将导致列值的部分更新。 调用`text`SQLCancel `ntext`时引用`image`的、或列被设置为中间占位符值。  
+ 当使用版本6.5 或更低版本时，取消将向运行的服务器提供块数据的 SQLPutData 调用序列将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导致列值的部分更新。 `text` `ntext` `image` 调用 SQLCancel 时引用的、或列被设置为中间占位符值。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序不支持连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 版和更低版本。  
   
 ## <a name="diagnostics"></a>诊断  
- 对于 SQLPutData， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有一个 Native Client 特定的 SQLSTATE：  
+ 对于 SQLPutData，有一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 特定的 SQLSTATE：  
   
 |SQLSTATE|错误|说明|  
 |--------------|-----------|-----------------|  

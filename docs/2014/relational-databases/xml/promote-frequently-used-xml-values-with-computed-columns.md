@@ -10,15 +10,15 @@ helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b5b2d167ca9bb2f5a39802bacceb3dd0eb3c96d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9c86eef119ce121dfb5ff964e64f1970eda16db
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68195576"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702548"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>使用计算列提升常用的 XML 值
   如果主要是对少数元素和属性值进行查询，您可能希望将这些数量提升到关系列。 检索整个 XML 实例，但只对一小部分 XML 数据进行查询时，这很有用。 不必对 XML 列创建 XML 索引。 但可以对提升的列进行索引。 必须编写查询才能使用提升的列。 也就是说，查询优化器不会将对 XML 列的查询再定向到提升的列。  
@@ -26,7 +26,7 @@ ms.locfileid: "68195576"
  提升的列可以是同一个表中的计算列，也可以是表中用户维护的单独列。 从每个 XML 实例提升单一值时，这就足够了。 但是，对于多值属性，则必须为属性创建单独的表，如下节所述。  
   
 ## <a name="computed-column-based-on-the-xml-data-type"></a>基于 xml 数据类型的计算列  
- 可以通过使用调用`xml`数据类型方法的用户定义函数来创建计算列。 计算列的类型可以是任何 SQL 类型，包括 XML。 下面的示例说明了这一点。  
+ 可以通过使用调用数据类型方法的用户定义函数来创建计算列 `xml` 。 计算列的类型可以是任何 SQL 类型，包括 XML。 下面的示例说明了这一点。  
   
 ### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>示例：基于 xml 数据类型方法的计算列  
  为书的 ISBN 号创建用户定义函数：  
@@ -67,7 +67,7 @@ FROM   T
 WHERE  ISBN = '0-7356-1588-2'  
 ```  
   
- 您可以使用用户定义函数创建用户定义函数以`xml`返回数据类型和计算列。 但是，不能对 XML 计算列创建 XML 索引。  
+ 您可以使用用户定义函数创建用户定义函数以返回 `xml` 数据类型和计算列。 但是，不能对 XML 计算列创建 XML 索引。  
   
 ## <a name="creating-property-tables"></a>创建属性表  
  您可能希望将 XML 数据中的某些多值属性提升到一个或多个表中，对那些表创建索引，并再次定向查询以使用这些表。 典型的情况是少数属性占了大部分查询工作负荷。 您可以执行下列操作：  
@@ -78,7 +78,7 @@ WHERE  ISBN = '0-7356-1588-2'
   
 -   为 XML 列创建触发器以维护属性表。 在触发器中，执行下列操作之一：  
   
-    -   使用`xml`数据类型方法（如**节点（）** 和**值（））** 来插入和删除属性表的行。  
+    -   使用 `xml` 数据类型方法（如**节点（）** 和**值（））** 来插入和删除属性表的行。  
   
     -   在公共语言运行时 (CLR) 中创建流式表值函数来插入和删除属性表的行。  
   

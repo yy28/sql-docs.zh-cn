@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52ab4d4b3cbb0e4418886517c9ffd9c70315851a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62689030"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701944"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
   返回指定 BCP 类型标记的 SQL 类型名称。  
@@ -57,7 +57,7 @@ fIsMaxType
   
  下表指定了可能的 BCP 类型、这些类型是否是 max 类型以及预期的输出。  
   
-|BCP 类型名称|MaxType|输出|  
+|BCP 类型名称|MaxType|Output|  
 |-------------------|-------------|------------|  
 |`SQLDECIMAL`|之前或之后|**decimal**|  
 |`SQLNUMERIC`|之前或之后|**numeric**|  
@@ -78,7 +78,7 @@ fIsMaxType
 |`SQLBINARY`|否|**二进制**|  
 |`SQLBIGVARBINARY`|否|**Varbinary**|  
 |`SQLVARBINARY`|否|**Varbinary**|  
-|`SQLIMAGE`|之前或之后|**映像**|  
+|`SQLIMAGE`|之前或之后|**图像**|  
 |`SQLINTN`|之前或之后|**int-null**|  
 |`SQLDATETIMN`|之前或之后|**datetime-null**|  
 |`SQLMONEYN`|之前或之后|**money-null**|  

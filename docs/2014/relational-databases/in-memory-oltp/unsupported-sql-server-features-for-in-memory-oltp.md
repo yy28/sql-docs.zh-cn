@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a5ec9cefd0106a8e6eb4d796921efe147bea446
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157242"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702217"
 ---
 # <a name="supported-sql-server-features"></a>支持的 SQL Server 功能
   本主题讨论内存优化表支持或不支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。  
@@ -59,7 +59,7 @@ ms.locfileid: "63157242"
   
 -   Service broker，存在限制。 无法访问本机编译存储过程中的队列。 无法在访问内存优化表的事务中访问远程数据库中的队列。  
   
--   故障转移群集：作为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alwayson 产品/服务的一部分，Alwayson 故障转移群集实例利用 Windows Server 故障转移群集（WSFC）功能通过冗余在服务器实例级别（故障转移群集实例（FCI））提供本地高可用性。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
+-   故障转移群集：作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alwayson 产品/服务的一部分，Alwayson 故障转移群集实例利用 Windows Server 故障转移群集（WSFC）功能通过冗余在服务器实例级别（故障转移群集实例（FCI））提供本地高可用性。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
 -   与 AlwaysOn 集成： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了几个为服务器或数据库打造高可用性的可选方案，包括 AlwaysOn。 有关详细信息，请参阅[高可用性解决方案 (SQL Server)](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)。  
   

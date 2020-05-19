@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_getcolfmt function
 ms.assetid: f8bdada5-7b2d-4475-8c98-f93e9d77b130
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: db8b433652829b16890552a70bd1e0d08d1c1bc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 793543cce582bd4e17cbf8d06f096056a2ecb89b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62689086"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701974"
 ---
 # <a name="bcp_getcolfmt"></a>bcp_getcolfmt
   用于查找列格式属性值。  
@@ -78,10 +78,10 @@ pcbLen
 ## <a name="remarks"></a>备注  
  [Bcp_setcolfmt](bcp-setcolfmt.md)主题中列出了列格式属性值。 列格式属性值是通过调用**bcp_setcolfmt**函数设置的，而**bcp_getcolfmt**函数用于查找列格式属性值。  
   
- 与早期[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本相比，连接到（或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]更高版本）服务器计算机时可能会观察到的行为更改。 有关详细信息，请参阅[元数据发现](../native-client/features/metadata-discovery.md)。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]与早期版本相比，连接到（或更高版本）服务器计算机时可能会观察到的行为更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关详细信息，请参阅[元数据发现](../native-client/features/metadata-discovery.md)。  
   
 ## <a name="bcp_getcolfmt-support-for-enhanced-date-and-time-features"></a>bcp_getcolfmt 对日期和时间增强功能的支持  
- 与日期/时间类型`BCP_FMT_TYPE`的属性一起使用的类型是在[&#40;OLE DB 和 ODBC&#41;的增强日期和时间类型的大容量复制更改](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)中指定的。  
+ 与 `BCP_FMT_TYPE` 日期/时间类型的属性一起使用的类型是在[&#40;OLE DB 和 ODBC&#41;的增强日期和时间类型的大容量复制更改](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)中指定的。  
   
  有关详细信息，请参阅[ODBC&#41;&#40;日期和时间改进](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   

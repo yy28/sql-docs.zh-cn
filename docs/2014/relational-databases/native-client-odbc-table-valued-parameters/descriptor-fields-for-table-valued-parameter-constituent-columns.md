@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), descriptor fields for constituent columns
 ms.assetid: 944b3968-fd47-4847-98d6-b87e8ef2acdc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a31491b56e5b5cd700e744be2b7a84f10f1e0121
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ddbc29c1895ad57ad191604fec228109c8c7c55e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63199934"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82698802"
 ---
 # <a name="descriptor-fields-for-table-valued-parameter-constituent-columns"></a>表值参数构成列的描述符字段
   本部分中描述的表值参数描述符字段是通过将[SQLSetDescField](../native-client-odbc-api/sqlsetdescfield.md)和[SQLSetDescField](../native-client-odbc-api/sqlsetdescfield.md)与实现参数描述符（IPD）的句柄结合使用来进行操作的。  
@@ -25,13 +25,13 @@ ms.locfileid: "63199934"
 ## <a name="remarks"></a>备注  
  SQL_DESC_AUTO_UNIQUE_VALUE 用于表值参数以及其他功能。  
   
-|属性名称|类型|说明|  
+|特性名|类型|说明|  
 |--------------------|----------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|SQL_TRUE 指示该列是标识列。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可使用此信息来优化性能，但不要求应用程序为标识列设置该设置。|  
   
  以下属性将添加到应用程序参数描述符 (APD) 和实现参数描述符 (IPD) 中的所有参数类型：  
   
-|属性名称|类型|说明|  
+|特性名|类型|说明|  
 |--------------------|----------|-----------------|  
 |SQL_CA_SS_COLUMN_COMPUTED|SQLSMALLINT|SQL_TRUE 指示该列是计算列。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可使用此信息来优化性能，但不要求应用程序为计算列设置该设置。<br /><br /> 对于非表值参数列的绑定，将忽略此属性。|  
 |SQL_CA_SS_COLUMN_IN_UNIQUE_KEY|SQLSMALLINT|SQL_TRUE 指示表值参数列参与唯一键。 这可能导致查询性能提高。 对于非表值参数列的绑定，将忽略此属性。|  
@@ -41,7 +41,7 @@ ms.locfileid: "63199934"
   
  这些属性仅对表值参数列有效。 对于其他参数，将忽略它们。  
   
- 如果为表值参数列设置了 SQL_CA_SS_COL_HAS_DEFAULT_VALUE，则该列的 SQL_DESC_DATA_PTR 必须为 Null 指针。 否则，SQLExecute 或 SQLExecDirect 将返回 SQL_ERROR。 将使用 SQLSTATE = 07S01 生成诊断记录，并使用消息 " \<参数 p>，列\<c>" 的默认参数使用无效，其中\<p> 是参数序号， \<c> 为列序号。  
+ 如果为表值参数列设置了 SQL_CA_SS_COL_HAS_DEFAULT_VALUE，则该列的 SQL_DESC_DATA_PTR 必须为 Null 指针。 否则，SQLExecute 或 SQLExecDirect 将返回 SQL_ERROR。 将使用 SQLSTATE = 07S01 生成诊断记录，并使用消息 "参数 \< p>，列 c>" 的默认参数使用无效， \< 其中 \< p> 是参数序号， \< c> 为列序号。  
   
 ## <a name="see-also"></a>另请参阅  
  [ODBC&#41;&#40;表值参数](table-valued-parameters-odbc.md)  

@@ -15,20 +15,20 @@ helpviewer_keywords:
 - SQLColAttribute function
 - SQLNumResultCols function
 ms.assetid: 90be414c-04b3-46c0-906b-ae7537989b7d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ba96d6312710f16f70b296dcb17bc3d5f226ff19
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b93a0386c921a863e310e99164d654c7d84e357b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200202"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82699341"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>确定结果集的特征 (ODBC)
   元数据是描述其他数据的数据。 例如，结果集元数据描述结果集的特征，比如结果集中的列数、这些列的数据类型、其名称、精度和可为 Null 性。  
   
- ODBC 通过其目录 API 函数向应用程序提供元数据。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client odbc 驱动程序将许多 ODBC API 目录函数实现为对相应[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目录过程的调用。  
+ ODBC 通过其目录 API 函数向应用程序提供元数据。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT odbc 驱动程序将许多 ODBC API 目录函数实现为对相应 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录过程的调用。  
   
  应用程序需要大多数结果集操作的元数据。 例如，应用程序使用某列的数据类型来确定要将哪一种变量绑定到该列； 使用某字符列的字节长度来确定必须有多少空间才能显示该列的数据。 应用程序确定列的元数据的方式取决于应用程序的类型。  
   

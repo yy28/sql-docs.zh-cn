@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 359419f0da19151172689090272e0c42e18cc906
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: faf30bd2b6ebfc13a7699241bc4a83ab653f2e24
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200373"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82700395"
 ---
 # <a name="odbc-how-to-topics"></a>ODBC 操作指南主题
-  若要使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] odbc 驱动程序，您必须能够创建 odbc 数据源并确保服务器具有正确的目录存储过程版本。 若要为使用 SQL Server 的 ODBC 应用程序编码，您必须了解如何分配 ODBC 句柄、设置属性、连接到 SQL Server 实例、执行查询和处理结果。  
+  若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] odbc 驱动程序，您必须能够创建 odbc 数据源并确保服务器具有正确的目录存储过程版本。 若要为使用 SQL Server 的 ODBC 应用程序编码，您必须了解如何分配 ODBC 句柄、设置属性、连接到 SQL Server 实例、执行查询和处理结果。  
   
 ## <a name="in-this-section"></a>本节内容  
   

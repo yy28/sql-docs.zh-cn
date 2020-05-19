@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - BCPSetBulkMode function
 ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2e2ba7f2874cc35fbd662c8696fa999980b52bb6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a07ba7d4af55fa4215a7b08ae34b718d4de46cd4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62989992"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82694591"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
   IBCPSession2::BCPSetBulkMode 提供用于指定列格式的 [IBCPSession::BCPColFmt (OLE DB)](ibcpsession-bcpcolfmt-ole-db.md) 的替代方法。 不同于设置单个列格式属性的 IBCPSession::BCPColFmt，IBCPSession2::BCPSetBulkMode 设置所有属性。  
@@ -58,7 +58,7 @@ HRESULT BCPSetBulkMode (
 |-|-|  
 |`S_OK`|方法成功。|  
 |`E_FAIL`|出现访问接口特定的错误；要获取详细信息，请使用 ISQLServerErrorInfo 接口。|  
-|`E_UNEXPECTED`|意外调用了该方法。 例如，在`IBCPSession2::BCPInit`调用 IBCPSession2：： BCPSetBulkMode 之前，未调用方法。|  
+|`E_UNEXPECTED`|意外调用了该方法。 例如，在 `IBCPSession2::BCPInit` 调用 IBCPSession2：： BCPSetBulkMode 之前，未调用方法。|  
 |`E_INVALIDARG`|参数无效。|  
 |`E_OUTOFMEMORY`|内存不足错误。|  
   
@@ -69,16 +69,16 @@ HRESULT BCPSetBulkMode (
   
  下表列出了 property 参数的常量**。  
   
-|属性|说明|  
+|Property|说明|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|指定字符输出模式。<br /><br /> 对应于 BCP 中的-c 选项。EXE，并将*eUserDataType*属性设置为`BCP_TYPE_SQLCHARACTER`IBCPSession：： BCPColFmt。|  
-|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 输出模式。<br /><br /> 对应于 BCP 中的-w 选项。EXE 和 IBCPSession：： BCPColFmt， *eUserDataType*属性设置为`BCP_TYPE_SQLNCHAR`。|  
-|BCP_OUT_NATIVE_TEXT_MODE|指定对非字符类型使用本机类型，对字符类型使用 Unicode。<br /><br /> 对应于 BCP 中的-N 选项。如果列类型为字符串或`BCP_TYPE_DEFAULT`不是字符串，则`BCP_TYPE_SQLNCHAR`将*EUSERDATATYPE*属性设置为的 EXE 和 IBCPSession：： BCPColFmt。|  
-|BCP_OUT_NATIVE_MODE|指定本机数据库类型。<br /><br /> 对应于 BCP 中的-n 选项。EXE 和 IBCPSession：： BCPColFmt， *eUserDataType*属性设置为`BCP_TYPE_DEFAULT`。|  
+|BCP_OUT_CHARACTER_MODE|指定字符输出模式。<br /><br /> 对应于 BCP 中的-c 选项。EXE，并将*eUserDataType*属性设置为 IBCPSession：： BCPColFmt `BCP_TYPE_SQLCHARACTER` 。|  
+|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 输出模式。<br /><br /> 对应于 BCP 中的-w 选项。EXE 和 IBCPSession：： BCPColFmt， *eUserDataType*属性设置为 `BCP_TYPE_SQLNCHAR` 。|  
+|BCP_OUT_NATIVE_TEXT_MODE|指定对非字符类型使用本机类型，对字符类型使用 Unicode。<br /><br /> 对应于 BCP 中的-N 选项。*eUserDataType* `BCP_TYPE_SQLNCHAR` 如果列类型为字符串或 `BCP_TYPE_DEFAULT` 不是字符串，则将 eUserDataType 属性设置为的 EXE 和 IBCPSession：： BCPColFmt。|  
+|BCP_OUT_NATIVE_MODE|指定本机数据库类型。<br /><br /> 对应于 BCP 中的-n 选项。EXE 和 IBCPSession：： BCPColFmt， *eUserDataType*属性设置为 `BCP_TYPE_DEFAULT` 。|  
   
- 可以调用 IBCPSession::BCPControl 和针对 IBCPSession::BCPControl 的 IBCPSession2::BCPSetBulkMode 选项，这些选项不会与 IBCPSession2::BCPSetBulkMode 冲突。 例如，可以调用 IBCPSession：： BCPControl `BCP_OPTION_FIRST`和 IBCPSession2：： BCPSetBulkMode。  
+ 可以调用 IBCPSession::BCPControl 和针对 IBCPSession::BCPControl 的 IBCPSession2::BCPSetBulkMode 选项，这些选项不会与 IBCPSession2::BCPSetBulkMode 冲突。 例如，可以调用 IBCPSession：： BCPControl `BCP_OPTION_FIRST` 和 IBCPSession2：： BCPSetBulkMode。  
   
- 不能将 IBCPSession：： BCPControl 与`BCP_OPTION_TEXTFILE`和 IBCPSession2：： BCPSetBulkMode 一起调用。  
+ 不能将 IBCPSession：： BCPControl 与 `BCP_OPTION_TEXTFILE` 和 IBCPSession2：： BCPSetBulkMode 一起调用。  
   
  如果尝试使用包含 IBCPSession::BCPColFmt、IBCPSession::BCPControl 和 IBCPSession::BCPReadFmt 的函数调用序列来调用 IBCPSession2::BCPSetBulkMode，则其中一个函数调用将返回序列错误故障。 如果选择更正错误，请调用 IBCPSession::BCPInit 重置设置，然后重新开始。  
   
