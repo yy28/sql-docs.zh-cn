@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - FetchOptions property [ADO]
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4e4e0943a675ef7cf3684ccddd2699fba02dac9e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 448dbb4d6c669f136c1d26b3730d16af2f0e8e17
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964127"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752141"
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions 属性 (RDS)
 指示异步提取的类型。  
@@ -29,7 +29,7 @@ ms.locfileid: "67964127"
 ## <a name="setting-and-return-values"></a>设置和返回值  
  设置或返回以下值之一。  
   
-|Constant|说明|  
+|返回的常量|说明|  
 |--------------|-----------------|  
 |**adcFetchUpFront**|在将控制权返回到应用程序之前，将提取[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的所有记录。 在允许应用程序执行任何操作之前，将提取完整的**记录集**。|  
 |**adcFetchBackground**|提取第一批记录后，控件即可返回到应用程序。 对于尝试访问第一批中未提取的记录的记录**集**，后面的记录将被延迟，直到实际提取所查找的记录为止，此时控件返回到应用程序。|  

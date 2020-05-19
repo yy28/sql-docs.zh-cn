@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - FilterValue property [ADO]
 ms.assetid: 28f17186-b842-4cf9-b320-a9bb941c481b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 615b64322699ca24e03368430c8d80f16ce51d4a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 17d4585a237b2dcd32df1508aeb85b291d4d9296
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964053"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752001"
 ---
 # <a name="filtervalue-property-rds"></a>FilterValue 属性 (RDS)
 指示用于筛选记录的值。  
@@ -38,7 +38,7 @@ DataControl.FilterValue = String
  表示 RDS 的对象变量[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
   
  *字符串*  
- 一个**字符串**值，该值表示用于筛选记录的数据值（例如`'Programmer'`或`125`）。  
+ 一个**字符串**值，该值表示用于筛选记录的数据值（例如 `'Programmer'` 或 `125` ）。  
   
 ## <a name="remarks"></a>备注  
  [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md)、 [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md)、 **FilterValue**、 [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)和[FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)属性提供客户端缓存上的排序和筛选功能。 排序功能按一个列中的值对记录进行排序。 筛选功能显示基于查找条件的记录子集，而完整的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)则保留在缓存中。 [Reset](../../../ado/reference/rds-api/reset-method-rds.md)方法将执行条件，并将当前**记录集**替换为可更新的**记录集**。  
