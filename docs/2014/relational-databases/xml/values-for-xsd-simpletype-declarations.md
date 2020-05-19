@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - xsd:simpleType declarations
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f0b24a9c02e38ba8165e015cdf8d1b107e64cbaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6682bdb7443ae9ee41bd1a7f77d7b5d5ae4d7359
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193074"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702306"
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>&lt;xsd:simpleType&gt; 声明的值
   下表根据所有已知的 XSD 简单类型枚举概述了已应用的限制。  
@@ -26,7 +26,7 @@ ms.locfileid: "63193074"
   
 |简单类型|限制|  
 |-----------------|----------------|  
-|`duration`|年份部分必须在-2<sup>^</sup>31 到 2<sup>^</sup>31-1 的范围内。 月、日、小时、分钟和秒都必须在 0 到 9999 范围内。 秒部分在小数点右侧有额外的三位精度。|  
+|`duration`|年份部分必须在-2 <sup>^</sup> 31 到 2 31-1 的范围内 <sup>^</sup> 。 月、日、小时、分钟和秒都必须在 0 到 9999 范围内。 秒部分在小数点右侧有额外的三位精度。|  
 |`dateTime`|时区子字段中的小时部分必须在 -14 到 +14 的可接受范围内。 年份部分必须在 1 到 9999 范围内。 月部分必须在 1 到 12 范围内。 日部分必须在 1 到 31 范围内且必须为有效的日历日期。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可检测出无效日期（如 1974-02-31，因为二月份没有 31 天），并返回错误。<br /><br /> 秒部分支持 100 纳秒的精度。 时区指示是可选的。<br /><br /> SQL Server 2005 支持的年范围是 -9999 到 9999。 现在，SQL Server 支持的年范围具有更强的限制性。 有关详细信息，请参阅[将类型化的 xml 与非类型化的 Xml 比较](compare-typed-xml-to-untyped-xml.md)。|  
 |`date`|年份部分必须在 1 到 9999 范围内。 月部分必须在 1 到 12 范围内。 日部分必须在 1 到 31 范围内且必须为有效的日历日期。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可检测出无效日期（如 1974-02-31，因为二月份没有 31 天），并返回错误。<br /><br /> SQL Server 2005 支持的年范围是 -9999 到 9999。 现在，SQL Server 支持的年范围具有更强的限制性。 有关详细信息，请参阅[将类型化的 xml 与非类型化的 Xml 比较](compare-typed-xml-to-untyped-xml.md)。|  
 |`gYearMonth`|年份部分必须在 -9999 到 9999 范围内。|  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], ADO.NET
 - XML [SQL Server], SQL Server Native Client
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4d9d64edf29d1e494d25474845295c505caedee8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4aed312c01e47245d3b2c3d360652ab2b366cfd9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63232436"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702323"
 ---
 # <a name="use-xml-data-in-applications"></a>使用 XML 数据应用程序
   本主题介绍在应用程序中使用 `xml` 数据类型时可用的选项。 本主题包括有关下列操作的信息：  
@@ -145,7 +145,7 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>使用 ADO.NET 处理 xml 类型列中的 XML  
- 若要使用 ADO.NET 和`xml`来处理数据类型列中的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] XML，可以使用`SqlCommand`类的标准行为。 例如，可以按照使用 `xml` 检索任何 SQL 列的相同方法检索 `SqlDataReader` 数据类型列及其值。但是，如果要将 `xml` 数据类型列的内容作为 XML 使用，必须先将这些内容指派给 `XmlReader` 类型。  
+ 若要 `xml` 使用 ADO.NET 和来处理数据类型列中的 XML， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 可以使用类的标准行为 `SqlCommand` 。 例如，可以按照使用 `xml` 检索任何 SQL 列的相同方法检索 `SqlDataReader` 数据类型列及其值。但是，如果要将 `xml` 数据类型列的内容作为 XML 使用，必须先将这些内容指派给 `XmlReader` 类型。  
   
  有关详细信息和示例代码，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK 文档中的“数据读取器中的 XML 列值”。  
   

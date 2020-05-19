@@ -23,15 +23,15 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 61c5fc1cb0692d22f110958b894ac2eb7c2af4cf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8be13e95cbf47a0769be20d6b0e55b39e9b7a57
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874690"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702749"
 ---
 # <a name="examples-using-openxml"></a>示例：使用 OPENXML
   本主题中的示例说明如何使用 OPENXML 创建 XML 文档的行集视图。 有关 OPENXML 语法的信息，请参阅 [OPENXML (Transact-SQL)](/sql/t-sql/functions/openxml-transact-sql)。 这些示例说明了 OPENXML 的各个方面，但不包括在 OPENXML 中指定元属性。 有关如何在 OPENXML 中指定元属性的详细信息，请参阅 [在 OPENXML 中指定元属性](specify-metaproperties-in-openxml.md)。  

@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_moretext function
 ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 83142e83ba04328ddf025e0a2f16ff18ad947075
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfa6968d4bb4254b52efd3e09d7f04e3c7fa9268
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62688846"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701917"
 ---
 # <a name="bcp_moretext"></a>bcp_moretext
   将部分较长的可变长度数据类型值发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -59,19 +59,19 @@ pData
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>备注  
- 此函数可与[bcp_bind](bcp-bind.md)和[bcp_sendrow](bcp-sendrow.md)结合使用，以便将长度可变的长数据值复制到多个较小的块区中 SQL Server。 **bcp_moretext**可用于具有以下 SQL Server 数据类型`text`的列：、 `ntext`、 `image`、 `varchar(max)`、 `nvarchar(max)`、 `varbinary(max)`、用户定义类型（UDT）和 XML。 **bcp_moretext**不支持数据转换，则提供的数据必须与目标列的数据类型匹配。  
+ 此函数可与[bcp_bind](bcp-bind.md)和[bcp_sendrow](bcp-sendrow.md)结合使用，以便将长度可变的长数据值复制到多个较小的块区中 SQL Server。 **bcp_moretext**可用于具有以下 SQL Server 数据类型的列： `text` 、 `ntext` 、、、、 `image` `varchar(max)` `nvarchar(max)` `varbinary(max)` 、用户定义类型（UDT）和 XML。 **bcp_moretext**不支持数据转换，则提供的数据必须与目标列的数据类型匹配。  
   
- 如果使用**bcp_moretext**支持的数据类型的非 null `bcp_sendrow` *pData*参数调用**bcp_bind** ，则将发送整个数据值，而不考虑长度。 但是，如果**bcp_bind**具有用于支持的数据类型的 NULL *pData*参数，则在成功返回后，可使用**bcp_moretext**立即复制数据， `bcp_sendrow`指示已处理包含数据的所有绑定列。  
+ 如果使用**bcp_moretext**支持的数据类型的非 null *pData*参数调用**bcp_bind** ，则 `bcp_sendrow` 将发送整个数据值，而不考虑长度。 但是，如果**bcp_bind**具有用于支持的数据类型的 NULL *pData*参数，则在成功返回后，可使用**bcp_moretext**立即复制数据， `bcp_sendrow` 指示已处理包含数据的所有绑定列。  
   
  如果使用**bcp_moretext**在一行中发送一种受支持的数据类型列，则还必须使用它来发送该行中所有其他支持的数据类型列。 不可以跳过任何列。 支持的数据类型为 SQLTEXT、SQLNTEXT、SQLIMAGE、SQLUDT 和 SQLXML。 如果列分别为 varchar(max)、nvarchar(max) 或 varbinary(max)，则 SQLCHARACTER、SQLVARCHAR、SQNCHAR、SQLBINARY 和 SQLVARBINARY 也属于此类别。  
   
- 调用**bcp_bind**或[bcp_collen](bcp-collen.md)会设置要复制到 SQL Server 列的所有数据部分的总长度。 尝试发送的字节数 SQL Server 超过调用**bcp_bind**中指定的字节数， `bcp_collen`或生成错误。 例如，在以下应用程序中会出现此错误：一个`bcp_collen`应用程序，该应用程序将 SQL Server `text`列的可用数据的长度设置为4500，然后调用**bcp_moretext**五次，同时指示每个调用的数据缓冲区长度为1000字节长。  
+ 调用**bcp_bind**或[bcp_collen](bcp-collen.md)会设置要复制到 SQL Server 列的所有数据部分的总长度。 尝试发送的字节数 SQL Server 超过调用**bcp_bind**中指定的字节数，或 `bcp_collen` 生成错误。 例如，在以下应用程序中会出现此错误：一个应用程序，该应用程序 `bcp_collen` 将 SQL Server 列的可用数据的长度设置 `text` 为4500，然后调用**bcp_moretext**五次，同时指示每个调用的数据缓冲区长度为1000字节长。  
   
  如果复制的行包含多个长、可变长度的列， **bcp_moretext**首先会将其数据发送到最低的按序号编号列，后跟下一个最低的按序号编号列，依此类推。 正确设置所需的数据的总长度很重要。 无法在长度设置之外发出已通过大容量复制接收某列的所有数据的信号。  
   
- 当`var(max)`使用 bcp_sendrow 和 bcp_moretext 将值发送到服务器时，无需调用 bcp_collen 来设置列长度。 相反，对于这些类型，将通过调用长度为零的 bcp_sendrow 终止值。  
+ 当 `var(max)` 使用 bcp_sendrow 和 bcp_moretext 将值发送到服务器时，无需调用 bcp_collen 来设置列长度。 相反，对于这些类型，将通过调用长度为零的 bcp_sendrow 终止值。  
   
- 应用程序通常会`bcp_sendrow`在循环中调用并**bcp_moretext** ，以发送多行数据。 下面概述了如何为包含两`text`列的表执行此操作：  
+ 应用程序通常会 `bcp_sendrow` 在循环中调用并**bcp_moretext** ，以发送多行数据。 下面概述了如何为包含两列的表执行此 `text` 操作：  
   
 ```  
 while (there are still rows to send)  
@@ -91,7 +91,7 @@ bcp_moretext(hdbc, 0, NULL);
 ```  
   
 ## <a name="example"></a>示例  
- 此示例演示如何将**bcp_moretext**与**bcp_bind**和`bcp_sendrow`结合使用：  
+ 此示例演示如何将**bcp_moretext**与**bcp_bind**和结合使用 `bcp_sendrow` ：  
   
 ```  
 // Variables like henv not specified.  

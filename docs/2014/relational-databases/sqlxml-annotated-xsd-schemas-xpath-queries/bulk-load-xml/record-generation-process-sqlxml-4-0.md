@@ -18,15 +18,15 @@ helpviewer_keywords:
 - leaving node scope [SQLXML]
 - schema mapping [SQLXML]
 ms.assetid: d8885bbe-6f15-4fb9-9684-ca7883cfe9ac
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2b43765b03ba42cede8c6879e749f1701f306d1f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6ea8755c5882e7678e835a2a8a8e727f66ac0f1b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013334"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703364"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>记录生成过程 (SQLXML 4.0)
   XML 大容量加载处理 XML 输入数据并为 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的相应表准备记录。 XML 大容量加载中的逻辑确定何时生成新记录、要将哪些子元素或属性值复制到记录的字段以及何时完成记录并可以发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以便插入。  
@@ -76,7 +76,7 @@ ms.locfileid: "66013334"
 </xsd:schema>  
 ```  
   
- 该架构指定具有**CustomerID**和**名称**属性的** \<Customer>** 元素。 `sql:relation`批注将** \<Customer>** 元素映射到 Customers 表。  
+ 该架构指定具有**CustomerID**和**名称**属性的** \< Customer>** 元素。 `sql:relation`批注将** \< Customer>** 元素映射到 Customers 表。  
   
  考虑 XML 文档的以下片段：  
   
@@ -88,13 +88,13 @@ ms.locfileid: "66013334"
   
  将前文中所述的架构提供给 XML 大容量加载并使用 XML 数据作为输入，XML 大容量加载按以下方式处理源数据中的节点（元素和属性）：  
   
--   第一个** \<Customer>** 元素的开始标记使该元素在范围内。 将此节点映射到 Customers 表。 因此，XML 大容量加载为 Customers 表生成一个记录。  
+-   第一个** \< Customer>** 元素的开始标记使该元素在范围内。 将此节点映射到 Customers 表。 因此，XML 大容量加载为 Customers 表生成一个记录。  
   
--   在架构中， ** \<Customer>** 元素的所有属性都映射到 Customers 表的列。 这些属性进入作用域时，XML 大容量加载将它们的值复制到父作用域已生成的客户记录。  
+-   在架构中， ** \< Customer>** 元素的所有属性都映射到 Customers 表的列。 这些属性进入作用域时，XML 大容量加载将它们的值复制到父作用域已生成的客户记录。  
   
--   当 XML 大容量加载到达** \<Customer>** 元素的结束标记时，该元素将超出范围。 这将导致 XML 大容量加载认为该记录已完成并将其发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+-   当 XML 大容量加载到达** \< Customer>** 元素的结束标记时，该元素将超出范围。 这将导致 XML 大容量加载认为该记录已完成并将其发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
- 对于每个后续** \<客户>** 元素，XML 大容量加载遵循此过程。  
+ 对于每个后续** \< 客户>** 元素，XML 大容量加载遵循此过程。  
   
 > [!IMPORTANT]  
 >  在此模型中，由于是在到达结束标记（或节点离开作用域）时插入记录，因此必须定义节点作用域内与该记录相关的所有数据。  
@@ -146,19 +146,19 @@ ms.locfileid: "66013334"
   
  下面给出了示例 XML 数据和创建工作示例的步骤。  
   
--   当 xml 数据文件中的** \<Customer>** 元素节点进入作用域时，xml 大容量加载将为 Customer 表生成一条记录。 然后，XML 大容量加载从** \<CustomerID>**、 ** \<公司名称>** 和** \<城市>** 子元素复制必需的列值（customerid、公司名称和城市），因为这些元素输入到作用域中。  
+-   当 XML 数据文件中的** \< Customer>** 元素节点进入作用域时，Xml 大容量加载将为 Customer 表生成一条记录。 然后，XML 大容量加载从** \< CustomerID>**、 ** \< 公司名称>** 和** \< 城市>** 子元素复制必需的列值（customerid、公司名称和城市），因为这些元素输入到作用域中。  
   
--   当>元素节点的** \<顺序**进入作用域时，XML 大容量加载将为 CustOrder 表生成一条记录。 XML 大容量加载会将 "**订单 id** " 属性的值复制到此记录。 Customerid 列所需的值是从** \<Customer>** 元素的** \<CustomerID>** 子元素中获取的。 XML 大容量加载使用在中`<sql:relationship>`指定的信息获取此记录的 customerid 外键值，除非在** \<Order>** 元素中指定了**customerid**属性。 一般规则是：如果子元素显式指定外键属性的值，则 XML 大容量加载使用该值，而不通过使用指定的 `<sql:relationship>` 来获取父元素的值。 由于此** \<顺序>** 元素节点超出范围，XML 大容量加载将记录发送到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，然后以相同的方式处理所有后续** \<顺序>** 元素节点。  
+-   当>元素节点的** \< 顺序**进入作用域时，XML 大容量加载将为 CustOrder 表生成一条记录。 XML 大容量加载会将 "**订单 id** " 属性的值复制到此记录。 CustomerID 列所需的值是从** \< Customer>** 元素的** \< CustomerID>** 子元素中获取的。 XML 大容量加载使用在中指定的信息 `<sql:relationship>` 获取此记录的 customerid 外键值，除非在** \< Order>** 元素中指定了**customerid**属性。 一般规则是：如果子元素显式指定外键属性的值，则 XML 大容量加载使用该值，而不通过使用指定的 `<sql:relationship>` 来获取父元素的值。 由于此** \< 顺序>** 元素节点超出范围，XML 大容量加载将记录发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，然后以相同的方式处理所有后续** \< 顺序>** 元素节点。  
   
--   最后， ** \<Customer>** 元素节点会超出范围。 此时，XML 大容量加载将客户记录发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 XML 大容量加载为 XML 数据流中的所有后续客户执行此过程。  
+-   最后， ** \< Customer>** 元素节点会超出范围。 此时，XML 大容量加载将客户记录发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 XML 大容量加载为 XML 数据流中的所有后续客户执行此过程。  
   
  以下是有关映射架构的两点结论：  
   
--   如果架构满足 "包含" 规则（例如，与客户相关联的所有数据，并且在关联** \<客户>** 和** \<order>** 元素节点的范围内定义了订单，则大容量加载将成功。  
+-   如果架构满足 "包含" 规则（例如，与客户相关联的所有数据，并且在关联** \< 客户>** 和** \< order>** 元素节点的范围内定义了订单，则大容量加载将成功。  
   
--   在描述** \<Customer>** 元素中，其子元素按适当的顺序指定。 在这种情况下，将在** \<Order>** 子元素之前指定** \<CustomerID>** 子元素。 这意味着在输入 XML 数据文件中，当** \<Order>** 元素进入范围时， ** \<CustomerID>** 元素值可用作外键值。 首先指定键属性，此即“键排序规则”。  
+-   在描述** \< Customer>** 元素中，其子元素按适当的顺序指定。 在这种情况下，将在** \< Order>** 子元素之前指定** \< CustomerID>** 子元素。 这意味着在输入 XML 数据文件中，当** \< Order>** 元素进入范围时， ** \< CustomerID>** 元素值可用作外键值。 首先指定键属性，此即“键排序规则”。  
   
-     如果**在\<order>** 子元素之后指定** \<CustomerID>** 子元素，则在** \<order>** 元素进入作用域时，该值将不可用。 然后读取** \</order>** 结束标记时，CustOrder 表的记录将被视为已完成，并且会在 CustOrder 表中插入值为 CustomerID 列的 NULL 值，这不是所需的结果。  
+     如果在** \< order>** 子元素之后指定** \< CustomerID>** 子元素，则在** \< order>** 元素进入作用域时，该值将不可用。 然后读取** \< /order>** 结束标记时，CustOrder 表的记录将被视为已完成，并且会在 CustOrder 表中插入值为 CUSTOMERID 列的 NULL 值，这不是所需的结果。  
   
 #### <a name="to-create-a-working-sample"></a>创建工作示例  
   
@@ -218,7 +218,7 @@ ms.locfileid: "66013334"
 ## <a name="exceptions-to-the-record-generation-rule"></a>记录生成规则的例外情况  
  如果节点属于 IDREF 或 IDREFS 类型，则在它进入作用域时，XML 大容量加载不为该节点生成记录。 您必须确保在架构的同一位置存在记录的完整描述。 忽略 `dt:type="nmtokens"` 批注，就像忽略 IDREFS 类型一样。  
   
- 例如，请看下面的 XSD 架构，该架构描述** \<Customer>** 和** \<Order>** 元素。 Customer>元素包含 IDREFS 类型的**OrderList**属性。 ** \<** `<sql:relationship>` 标记指定客户和订单列表之间的一对多关系。  
+ 例如，请看下面的 XSD 架构，该架构描述** \< Customer>** 和** \< Order>** 元素。 ** \< Customer>** 元素包含 IDREFS 类型的**OrderList**属性。 `<sql:relationship>` 标记指定客户和订单列表之间的一对多关系。  
   
  以下是架构：  
   
@@ -259,9 +259,9 @@ ms.locfileid: "66013334"
 </xsd:schema>  
 ```  
   
- 由于大容量加载将忽略 IDREFS 类型的节点，因此当**OrderList**属性节点进入作用域时，不会生成任何记录。 如果要将订单记录添加到 Orders 表，必须在架构中的某个地方描述这些订单。 在此架构中，指定** \<order>** 元素可确保 XML 大容量加载将订单记录添加到 Orders 表中。 Order>元素描述填充 CustOrder 表的记录所需的所有属性。 ** \<**  
+ 由于大容量加载将忽略 IDREFS 类型的节点，因此当**OrderList**属性节点进入作用域时，不会生成任何记录。 如果要将订单记录添加到 Orders 表，必须在架构中的某个地方描述这些订单。 在此架构中，指定** \< order>** 元素可确保 XML 大容量加载将订单记录添加到 Orders 表中。 ** \< Order>** 元素描述填充 CustOrder 表的记录所需的所有属性。  
   
- 您必须确保** \<Customer>** 元素中的**CustomerID**和**订单 id**值与** \<Order>** 元素中的值匹配。 由您负责维护引用完整性。  
+ 您必须确保** \< Customer>** 元素中的**CustomerID**和**订单 id**值与** \< Order>** 元素中的值匹配。 由您负责维护引用完整性。  
   
 #### <a name="to-test-a-working-sample"></a>测试工作示例  
   

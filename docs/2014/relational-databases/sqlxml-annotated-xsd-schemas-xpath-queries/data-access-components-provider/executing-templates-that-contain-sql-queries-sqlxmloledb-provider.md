@@ -13,22 +13,22 @@ helpviewer_keywords:
 - XML templates [SQLXML]
 - SQL queries [SQLXML]
 ms.assetid: ff2bc36f-e3fb-4d8f-8e3a-2680a39eda11
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cdf149720e853725a7f2fc9d0c03b24ea2caf9f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da0ddd549ad82420c4071c21de4ea6fef7f025de
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013117"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703263"
 ---
 # <a name="executing-templates-that-contain-sql-queries-sqlxmloledb-provider"></a>执行包含 SQL 查询的模板（SQLXMLOLEDB 访问接口）
   此示例演示如何使用 SQLXMLOLEDB 提供程序特定的属性 ClientSideXML。 在此客户端 ADO 示例应用程序中，在服务器上执行包含一个 SQL 查询的 XML 模板。  
   
  由于 ClientSideXML 属性设置为 True，因此将不带 FOR XML 子句的 SELECT 语句发送到服务器。 服务器执行该查询并将一个行集返回给客户端。 然后客户端对行集应用 FOR XML 转换，并生成 XML 文档。  
   
- XML 模板为生成的 XML 文档提供一个顶级根元素\<（根>）;因此，未提供 xml 根属性。  
+ XML 模板为生成的 XML 文档提供一个顶级根元素（ \< 根>），因此，不提供 xml 根属性。  
   
  若要执行 XML 模板，必须指定方言 {5d531cb2-e6ed-11d2-b252-00c04f681b71}。  
   

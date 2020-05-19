@@ -28,15 +28,15 @@ helpviewer_keywords:
 - Execute method
 - XML Bulk Load [SQLXML], object model
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1bf68b7f2c8fd1a2cc8d753ddd6348e8161b55c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9189617e7d572cd46805e34eaa258e81362827d7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013285"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703341"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 大容量加载对象模型 (SQLXML 4.0)
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML 大容量加载对象模型由 SQLXMLBulkLoad 对象组成。 该对象支持以下方法和属性。  
@@ -118,7 +118,7 @@ ms.locfileid: "66013285"
  SchemaGen  
  指定是否在执行大容量加载操作前创建必需的表。 此属性是一个布尔属性。 如果该属性设置为 TRUE，则创建在映射架构中标识的表（数据库必须存在）。 如果数据库中已存在一个或多个表，则 SGDropTables 属性将确定是否删除并重新创建这些预先存在的表。  
   
- SchemaGen 属性的默认值为 FALSE。 SchemaGen 不会对新创建的表创建 PRIMARY KEY 约束。 但是，如果在映射架构中可以找到匹配`sql:relationship`的和`sql:key-fields`批注并且键字段由单个列构成，则 SchemaGen 会在数据库中创建 FOREIGN KEY 约束。  
+ SchemaGen 属性的默认值为 FALSE。 SchemaGen 不会对新创建的表创建 PRIMARY KEY 约束。 但是，如果在映射架构中可以找到匹配的 `sql:relationship` 和 `sql:key-fields` 批注并且键字段由单个列构成，则 SchemaGen 会在数据库中创建 FOREIGN KEY 约束。  
   
  请注意，如果将 SchemaGen 属性设置为 TRUE，则 XML 大容量加载将执行以下操作：  
   
@@ -132,18 +132,18 @@ ms.locfileid: "66013285"
  默认值是 FALSE。  
   
  SGUseID  
- 指定映射架构中作为 `id` 类型标识的属性是否可用于在创建表时创建 PRIMARY KEY 约束。 当 SchemaGen 属性设置为 TRUE 时，使用此属性。 如果 SGUseID 为 TRUE，则 SchemaGen 实用程序`dt:type="id"`会使用一个属性，该属性被指定为主键列并在创建表时添加适当的 primary key 约束。  
+ 指定映射架构中作为 `id` 类型标识的属性是否可用于在创建表时创建 PRIMARY KEY 约束。 当 SchemaGen 属性设置为 TRUE 时，使用此属性。 如果 SGUseID 为 TRUE，则 SchemaGen 实用程序会使用一个属性，该属性 `dt:type="id"` 被指定为主键列并在创建表时添加适当的 PRIMARY key 约束。  
   
  默认值是 FALSE。  
   
  TempFilePath  
- 指定文件路径，该路径中包含 XML 大容量加载为事务性大容量加载创建的临时文件。 （仅当 Transaction 属性设置为 TRUE 时，此属性才有用。）必须确保用于 XML 大[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]容量加载的帐户有权访问此路径。 如果未设置此属性，XML 大容量加载将 TEMP 环境变量上指定的位置中存储临时文件。  
+ 指定文件路径，该路径中包含 XML 大容量加载为事务性大容量加载创建的临时文件。 （仅当 Transaction 属性设置为 TRUE 时，此属性才有用。）必须确保 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用于 XML 大容量加载的帐户有权访问此路径。 如果未设置此属性，XML 大容量加载将 TEMP 环境变量上指定的位置中存储临时文件。  
   
  事务  
  指定大容量加载是否应作为事务实现，在此情况下，如果大容量加载失败，则确保回滚。 此属性是一个布尔属性。 如果此属性设置为 TRUE，则大容量加载将在事务上下文中发生。 仅当 Transaction 设置为 TRUE 时，TempFilePath 属性才有用。  
   
 > [!NOTE]  
->  如果要将二进制数据（如 node.js、bin .xml XML 数据类型加载到二进制文件、图像[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型），则必须将 Transaction 属性设置为 FALSE。  
+>  如果要将二进制数据（如 node.js、bin .xml XML 数据类型加载到二进制文件、图像 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型），则必须将 Transaction 属性设置为 FALSE。  
   
  默认值是 FALSE。  
   

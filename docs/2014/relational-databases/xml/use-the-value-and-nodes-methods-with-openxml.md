@@ -11,20 +11,20 @@ helpviewer_keywords:
 - value method [XML in SQL Server]
 - nodes method [XML in SQL Server]
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 377f9ecfd0f3d94388929d78a048bc65e5020a3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 527e646f956e60b2c8495a738a85595baac383f2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193233"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702330"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>将 value() 和 nodes() 方法用于 OPENXML
-  您可以对`xml` **SELECT**子句中的数据类型使用多个**value （）** 方法来生成提取值的行集。 **nodes()** 方法为可用于其他查询的每个所选节点生成一个内部引用。 生成行集时，如果行集有多个列且用于生成行集的路径表达式比较复杂，结合使用 **nodes()** 和 **value()** 方法可能会更有效。  
+  您可以对 SELECT 子句中的数据类型使用多个**value （）** 方法 `xml` 来生成提取值的行集。 **SELECT** **nodes()** 方法为可用于其他查询的每个所选节点生成一个内部引用。 生成行集时，如果行集有多个列且用于生成行集的路径表达式比较复杂，结合使用 **nodes()** 和 **value()** 方法可能会更有效。  
   
- Node **（）** 方法生成特殊`xml`数据类型的实例，每个实例都将其上下文设置为不同的选定节点。 这种 XML 实例支持 **query()** 、**value()** 、**nodes()** 和 **exist()** 方法，并可在 **count(\*)** 聚合中使用。 所有其他用法都会导致错误。  
+ Node **（）** 方法生成特殊数据类型的实例 `xml` ，每个实例都将其上下文设置为不同的选定节点。 这种 XML 实例支持 **query()** 、**value()** 、**nodes()** 和 **exist()** 方法，并可在 **count(\*)** 聚合中使用。 所有其他用法都会导致错误。  
   
 ## <a name="example-using-nodes"></a>示例：使用 nodes()  
  假定您希望提取作者的名字和姓氏，而名字不是“David”。 此外，您希望提取该信息作为一个包含两列 FirstName 和 LastName 的行集。 通过使用 **nodes()** 方法和 **value()** 方法便可以完成该操作，如下所示：  
