@@ -15,14 +15,14 @@ helpviewer_keywords:
 - EOF property [ADO]
 - BOF property [ADO]
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4932d3349c2d4e2948ddd28d9df3a30424064dcb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9496a4e2115cb686764981e8a5fae3ecfe59401e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920384"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748736"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF、EOF 属性 (ADO)
 -   **BOF**指示当前记录位置位于[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象中的第一条记录之前。  
@@ -49,8 +49,8 @@ ms.locfileid: "67920384"
   
 ||MoveFirst<br /><br /> MoveLast|MovePrevious<br /><br /> 移动 < 0|移动0|MoveNext<br /><br /> 移动 > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF**=**True**， **EOF**=**False**|允许|错误|错误|允许|  
-|**BOF**=**False**， **EOF**=**True**|允许|允许|错误|错误|  
+|**BOF** =**True**， **EOF** = **False**|允许|错误|错误|允许|  
+|**BOF** =**False**， **EOF** = **True**|允许|允许|错误|错误|  
 |均**为 True**|错误|错误|错误|错误|  
 |均**为 False**|允许|允许|允许|允许|  
   

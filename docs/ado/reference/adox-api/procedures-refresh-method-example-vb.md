@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Refresh method [ADOX], Visual Basic example
 ms.assetid: 499679bd-287b-487d-bdfb-3803abffec1c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9b5201be26bfd9df41c9cb1d8908f59499520878
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 162e6739a61b52922998a61c019225ef0f8d5216
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965378"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748595"
 ---
 # <a name="procedures-refresh-method-example-vb"></a>过程 Refresh 方法示例 (VB)
 下面的代码演示如何刷新[目录](../../../ado/reference/adox-api/catalog-object-adox.md)的[过程](../../../ado/reference/adox-api/procedures-collection-adox.md)集合。 这是必需的，然后才能访问**目录**中的[过程](../../../ado/reference/adox-api/procedure-object-adox.md)对象。  

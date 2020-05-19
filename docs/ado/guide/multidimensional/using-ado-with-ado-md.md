@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, using with ADO MD
 ms.assetid: cfae435e-2ac3-4312-8c1e-9ca4a74cd875
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d3c634ec056d42e97dcbea3422a0e19a33596d54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 591a10e8c91aa22f939ff48f341b376bbd8ebe1b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923147"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748010"
 ---
 # <a name="using-ado-with-ado-md"></a>使用 ADO 与 ADO MD
 ADO 和 ADO MD 与不同的对象模型相关。 ADO 提供用于连接到数据源、执行命令、以表格格式检索表格数据和架构元数据以及查看提供程序错误信息的对象。 ADO MD 提供用于检索多维数据和查看多维架构元数据的对象。  

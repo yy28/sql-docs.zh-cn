@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional schemas and data
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2e4681bb9e1fd1028ee1ddc2bd7f72efc03fb6c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a4a2f6dbd2c5d075bb888e61bb01e1094c8ef5c0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923180"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748082"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>多维架构和数据的概述
 ## <a name="understanding-multidimensional-schemas"></a>了解多维架构  
@@ -53,7 +53,7 @@ Hamburg, Munich, Stuttgart}
 ### <a name="hierarchies"></a>层次结构  
  层次结构定义了可以 "汇总" 或分组的维度级别的方式。 一个维度可以有多个层次结构。 "地域" 维度中存在自然层次结构：  
   
-### <a name="levels"></a>Levels  
+### <a name="levels"></a>级别  
  在上图所示的 "地理位置" 维度中，每个框表示层次结构中的一个级别。  
   
  每个级别都有一组成员，如下所示：  

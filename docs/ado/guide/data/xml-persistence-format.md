@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XML persistence [ADO], persistence format
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e2d1c30546a8466ba9950f31cffdfb9447bd89ed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eb3abca1aabccd45bc76c4ec0ee5742531c47e28
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923381"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748318"
 ---
 # <a name="xml-persistence-format"></a>XML 暂留格式
 ADO 对 XML 流使用 UTF-8 编码。  
@@ -68,7 +68,7 @@ xmlns:z="#RowsetSchema">
   
  架构定义符合[W3C XML 数据规范](http://www.w3.org/TR/1998/NOTE-XML-data/)，并且可以进行完全验证（但 Internet Explorer 5 不会进行验证）。 对于记录集持久性，XML 数据是目前唯一受支持的架构格式。  
   
- Data 节包含三行，其中包含有关货主的信息。 对于空行集，data 节可以为空，但\<rs： data> 标记必须存在。 如果没有数据，则可以将标记简写编写为\<rs： data/>。 以 "rs" 为前缀的任何标记均表示它位于 urn：架构-microsoft-com：行集定义的命名空间中。  
+ Data 节包含三行，其中包含有关货主的信息。 对于空行集，data 节可以为空，但 \< rs： data> 标记必须存在。 如果没有数据，则可以将标记简写编写为 \< rs： data/>。 以 "rs" 为前缀的任何标记均表示它位于 urn：架构-microsoft-com：行集定义的命名空间中。  
   
 ## <a name="see-also"></a>另请参阅  
  [以 XML 格式保留记录](../../../ado/guide/data/persisting-records-in-xml-format.md)

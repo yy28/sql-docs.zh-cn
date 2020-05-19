@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional data [ADO]
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 61f3e34af2a9331118b41657cf958021b972b04a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dcd4839fc984dacddc79f54b350a98cdbe53355b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923135"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747995"
 ---
 # <a name="working-with-multidimensional-data"></a>使用多维数据
 *单元集*是针对多维数据的查询的结果。 它包含轴的集合，通常不超过四个轴，通常只有2到3个轴。 *轴*是一个或多个维度的成员集合，用于在多维数据集中查找或筛选特定值。  
@@ -40,7 +40,7 @@ ms.locfileid: "67923135"
   
 -   度量值-Sales、PercentChange、BudgetedSales  
   
--   Products  
+-   产品  
   
  以下单元集表示所有产品1991的销售额：  
   

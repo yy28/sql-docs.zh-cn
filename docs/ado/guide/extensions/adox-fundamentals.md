@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADOX, fundamentals
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 66965b99d0f8bcc87025239f7ffa54814e6d74f4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 131df9d5712bf89c28e1b8e7eae30217b6c16947
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923263"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748179"
 ---
 # <a name="adox-fundamentals"></a>ADOX 基础知识
 Microsoft®用于数据定义语言和安全（ADOX）的 ActiveX®数据对象扩展是对 ADO 对象和编程模型的扩展。 ADOX 包含用于创建和修改架构以及安全性的对象。 由于它是一种基于对象的架构处理方法，因此你可以编写代码来处理各种数据源，而不考虑它们的本机语法差异。  

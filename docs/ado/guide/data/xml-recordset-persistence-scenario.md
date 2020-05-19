@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XML persistence [ADO], persistence scenario
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 55ea62fac0cb2fe73b368429bb164cd28147fa7d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4a1110db8505a2a721c3503e51276cfb895fb965
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923363"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748305"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>XML 记录集暂留方案
 在此方案中，您将创建一个 Active Server Pages （ASP）应用程序，该应用程序将记录集对象的内容直接保存到 ASP 响应对象。  
@@ -65,7 +65,7 @@ ms.locfileid: "67923363"
   adoRec.Open strSQL, adoCon, adOpenStatic, adLockOptimistic, adCmdText  
 ```  
   
- 请确保将中`Data Source` `strCon`参数的值更改为 Microsoft SQL Server 计算机的名称。  
+ 请确保将中参数的值更改 `Data Source` `strCon` 为 Microsoft SQL Server 计算机的名称。  
   
  使文件保持打开状态，然后继续执行下一步。  
   
