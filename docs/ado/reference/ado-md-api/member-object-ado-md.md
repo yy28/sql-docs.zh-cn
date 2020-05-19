@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Member object [ADO MD], members
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 44d6b5f06bffb1cea786ba34d3d2aa8a3efb45ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d4d512d651c8162124c935ffdb260c4abe4ecb14
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949495"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753211"
 ---
 # <a name="member-object-ado-md"></a>成员对象 (ADO MD)
 表示多维数据集中某一级别的成员、某一级别的某个成员的子级或沿某个单元集的一个位置的成员。  
@@ -68,7 +68,7 @@ ms.locfileid: "67949495"
   
  **Properties**集合包含提供程序提供的属性。 下表列出了可用的属性。 实际属性列表可能有所不同，具体取决于提供程序的实现。 有关可用属性的更完整列表，请参阅提供程序的文档。  
   
-|名称|说明|  
+|“属性”|说明|  
 |----------|-----------------|  
 |CatalogName|此多维数据集所属的目录的名称。|  
 |ChildrenCardinality|成员具有的子级的个数。|  

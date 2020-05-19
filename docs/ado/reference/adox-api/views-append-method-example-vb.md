@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 50b24a21c54fcf23dba0748dfba31a99b5bbb1ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e9fe8ce0f7db1057bf31506478ee423907ac12bc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964795"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752998"
 ---
 # <a name="views-append-method-example-vb"></a>视图 Append 方法示例 (VB)
 下面的代码演示如何使用[命令](../../../ado/reference/ado-api/command-object-ado.md)对象和[Views](../../../ado/reference/adox-api/views-collection-adox.md)集合[Append](../../../ado/reference/adox-api/append-method-adox-views.md)方法在基础数据源中创建新视图。  

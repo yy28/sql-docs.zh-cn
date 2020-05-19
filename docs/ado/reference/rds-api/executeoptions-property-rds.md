@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - ExecuteOptions property [ADO], VBScript example
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2ae55ec1fccbd491854fb8bff2daa215d38b20ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 278603db9930458400c4057a3551f485fffe3fcc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964187"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752547"
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions 属性 (RDS)
 指示是否启用异步执行。  
@@ -29,7 +29,7 @@ ms.locfileid: "67964187"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回以下值之一。  
   
-|Constant|说明|  
+|返回的常量|说明|  
 |--------------|-----------------|  
 |**adcExecSync**|同步执行[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的下一次刷新。|  
 |**adcExecAsync**|默认。 异步执行**记录集**的下一次刷新。|  

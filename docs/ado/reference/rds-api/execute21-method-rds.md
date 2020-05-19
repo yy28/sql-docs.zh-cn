@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Execute21 method [RDS]
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8434345dcc4436865e4981a19ef1164d35a852f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3e7f006d0a833b8c370e6d80045a873c4ca2b16b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964201"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752639"
 ---
 # <a name="execute21-method-rds"></a>Execute21 方法 (RDS)
 执行请求并创建 ADO 记录集以在 ADO 2.1 中使用。  
@@ -41,7 +41,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  字符串标识要与此执行一起使用的处理程序。 该字符串包含两个部分。 第一部分包含要使用的处理程序的名称（ProgID）。 字符串的第二部分包含要传递给处理程序的参数。 如何解释参数字符串是处理程序特定的。 这两个部分由字符串中逗号的第一个实例分隔（尽管参数字符串可以包含其他逗号）。 这些参数是可选的。  
   
  *QueryString*  
- 在连接字符串中标识的 OLE DB 提供程序支持的命令语言中的命令。 对于基于 SQL 的提供程序，它可能包含[!INCLUDE[tsql](../../../includes/tsql-md.md)]命令语句，但对于非 SQL 提供程序（例如，MSDataShape），这可能不是[!INCLUDE[tsql](../../../includes/tsql-md.md)]查询语句。  
+ 在连接字符串中标识的 OLE DB 提供程序支持的命令语言中的命令。 对于基于 SQL 的提供程序，它可能包含 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 命令语句，但对于非 SQL 提供程序（例如，MSDataShape），这可能不是 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查询语句。  
   
  此外，如果正在使用处理程序（强烈建议使用处理程序），则处理程序可以更改或替换此处指定的值。 例如，处理程序通常将*QueryString*替换为其 .ini 文件中的查询字符串。 默认情况下，使用 Msdfmap 文件。  
   

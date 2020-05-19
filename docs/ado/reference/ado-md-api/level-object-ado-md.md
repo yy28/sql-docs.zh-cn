@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Level object [ADO MD]
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4a44060ae4ffd9399c34d4cd8133f5ad7404ed5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e1ee7ad05f05d2eb77d7d705200c52ddf3f01146
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949604"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753850"
 ---
 # <a name="level-object-ado-md"></a>级别对象 (ADO MD)
 包含一组成员，其中每个成员在层次结构中具有相同的级别。  
@@ -42,7 +42,7 @@ ms.locfileid: "67949604"
   
  **Properties**集合包含提供程序提供的属性。 下表列出了可用的属性。 实际属性列表可能有所不同，具体取决于提供程序的实现。 有关可用属性的更完整列表，请参阅提供程序的文档。  
   
-|名称|说明|  
+|“属性”|说明|  
 |----------|-----------------|  
 |CatalogName|此多维数据集所属的目录的名称。|  
 |CubeName|多维数据集的名称。|  

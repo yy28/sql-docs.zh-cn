@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Refresh method [ADOX]
 ms.assetid: cdad2d66-6ade-40dc-9e74-e40cfa9bc127
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e0d50c8cab60ddf1839c5683023af0b90ebe527c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c4b807bbadb5a9b4c8278be8ae895cd6ce4309c0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964736"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752935"
 ---
 # <a name="views-refresh-method-example-vb"></a>视图 Refresh 方法示例 (VB)
 下面的代码演示如何刷新[目录](../../../ado/reference/adox-api/catalog-object-adox.md)的[Views](../../../ado/reference/adox-api/views-collection-adox.md)集合。 这是必需的，才能访问**目录**中的[视图](../../../ado/reference/adox-api/view-object-adox.md)对象。  
