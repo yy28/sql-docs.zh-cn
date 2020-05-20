@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobserver
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bc4d3bca563079c7e1dd7f3ee93e5947f65700b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 046a5b9c4c162dd29c812d326f6d8a448e860604
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305235"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818854"
 ---
 # <a name="sp_add_jobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  无  
   
 ## <a name="remarks"></a>备注  
- automatic_post 存在于**sp_add_jobserver**中，但未在 "参数" 下列出。 ** \@** automatic_post 保留供内部使用。 ** \@**  
+ ** \@ automatic_post**存在于**sp_add_jobserver**中，但未在 "参数" 下列出。 ** \@ automatic_post**保留供内部使用。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为管理作业提供了一种图形化的简便方法，建议使用此方法来创建和管理作业基础结构。  
   
@@ -79,7 +79,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  以下示例将要运行的作业 `NightlyBackups` 指派给本地服务器。  
   
 > [!NOTE]  
->  此示例假定`NightlyBackups`作业已存在。  
+>  此示例假定 `NightlyBackups` 作业已存在。  
   
 ```  
 USE msdb ;  
