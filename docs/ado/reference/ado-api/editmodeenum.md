@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - EditModeEnum enumeration [ADO]
 ms.assetid: 45d54b6e-db2c-4553-9fd0-528147d6da2f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0a8c4ddb27bbc6831095062af5491fb501b6d5b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e4e16cbdddf39ba6abb03f93c35b2c2243d1bd71
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933049"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765558"
 ---
 # <a name="editmodeenum"></a>EditModeEnum
 指定记录的编辑状态。  
   
-|Constant|值|说明|  
+|返回的常量|值|说明|  
 |--------------|-----------|-----------------|  
 |**adEditNone**|0|指示没有正在进行的编辑操作。|  
 |**adEditInProgress**|1|指示当前记录中的数据已修改但未保存。|  
@@ -35,7 +35,7 @@ ms.locfileid: "67933049"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
   
-|Constant|  
+|返回的常量|  
 |--------------|  
 |AdoEnums. EditMode|  
 |AdoEnums. EditMode|  

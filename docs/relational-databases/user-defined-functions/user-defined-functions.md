@@ -103,7 +103,7 @@ ms.locfileid: "78370540"
 |@@IDLE|@@TOTAL_WRITE|  
 |@@IO_BUSY||  
   
- 下列不确定性内置函数不能在  **用户定义函数中使用**[!INCLUDE[tsql](../../includes/tsql-md.md)]。  
+ 下列不确定性内置函数不能在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数中使用。  
   
 |||  
 |-|-|  
@@ -115,7 +115,7 @@ ms.locfileid: "78370540"
 ##  <a name="schema-bound-functions"></a><a name="SchemaBound"></a> 绑定到架构的函数  
  `CREATE FUNCTION` 支持 `SCHEMABINDING` 子句，后者可将函数绑定到它引用的任何对象（如表、视图和其他用户定义函数）的架构。 尝试更改或删除绑定到架构的函数所引用的任何对象失败。  
   
- 必须满足以下条件才能在 `SCHEMABINDING`CREATE FUNCTION[ 中指定 ](../../t-sql/statements/create-function-transact-sql.md)：  
+ 必须满足以下条件才能在 [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) 中指定 `SCHEMABINDING`：  
   
 -   该函数引用的所有视图和用户定义函数必须是绑定到架构的视图和函数。  
   

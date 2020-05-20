@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - ActionEnum enumeration [ADOX]
 ms.assetid: f948febd-c885-4621-823b-421e116fec4e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fad40c6daed6fd86f93da3f658af6a21c33ca762
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: af82b9fbe8f38bcd55e90b5fee979e8c248c3542
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928624"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764218"
 ---
 # <a name="actionenum"></a>ActionEnum
 指定在调用[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)时要执行的操作的类型。  
   
-|Constant|值|说明|  
+|返回的常量|值|说明|  
 |--------------|-----------|-----------------|  
 |**adAccessDeny**|3|该组或用户将被拒绝指定的权限。|  
 |**adAccessGrant**|1|该组或用户将至少具有所需的权限。|  

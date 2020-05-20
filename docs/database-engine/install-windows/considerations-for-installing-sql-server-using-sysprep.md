@@ -80,7 +80,7 @@ ms.locfileid: "75251579"
 ##  <a name="prepare-image"></a><a name="BKMK_PrepareImage"></a> 准备映像  
 “准备映像”步骤安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品和功能，但不配置安装。  
   
-可在此步骤中指定要安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品安装文件的安装位置。 你可以通过“安装中心”[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**的“高级”** **页上的“SysPrep 部署的独立实例的映像准备”** **或从命令提示符准备**  的实例。  
+可在此步骤中指定要安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品安装文件的安装位置。 你可以通过“安装中心”的“高级”页上的“SysPrep 部署的独立实例的映像准备”或从命令提示符准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例。  
   
 - 您可以在同一台计算机上准备可以在以后完成的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的多个实例。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "75251579"
   
 - 使用“开始”菜单上的快捷方式。  
   
-- 访问“安装中心”  的“高级”  页上的“已准备独立实例的映像完成”  步骤。  
+- 访问“安装中心”的“高级”页上的“已准备独立实例的映像完成”步骤。  
   
 ## <a name="see-also"></a>另请参阅  
 [计划 SQL Server 安装](../../sql-server/install/planning-a-sql-server-installation.md)  

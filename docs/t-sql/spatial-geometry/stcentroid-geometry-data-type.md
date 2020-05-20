@@ -44,7 +44,7 @@ ms.locfileid: "67930170"
  开放地理空间信息联盟 (OGC) 类型：Point   
   
 ## <a name="remarks"></a>备注  
- 如果 `STCentroid()`geometry**实例的类型不是**Polygon、CurvePolygon**或**MultiPolygon **，则**  返回 null。  
+ 如果 **geometry** 实例的类型不是 **Polygon、CurvePolygon** 或 **MultiPolygon**，则 `STCentroid()` 返回 null。  
   
 ## <a name="examples"></a>示例  
   

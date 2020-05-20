@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Supports method [ADO], VC++ example
 ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8eb0aa12a31337340854f941237d673abd1c601c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 242b9888239ee2261014e47a13a347cb3bfcd421
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936716"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765368"
 ---
 # <a name="supports-method-example-vc"></a>Supports 方法示例 (VC++)
 此示例使用[支持](../../../ado/reference/ado-api/supports-method.md)方法显示使用不同游标类型打开的记录集支持的选项。 运行此示例需要 DisplaySupport 函数。  

@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveConnection property [ADO]
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8dabf974e36b1f6beaff36f3a4888c128d7dfe1b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 448510f237fc4ce56368d7f2d74b72f63de87c61
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921511"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764568"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection 属性 (ADO)
 指示指定的[命令](../../../ado/reference/ado-api/command-object-ado.md)、[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)或[记录](../../../ado/reference/ado-api/record-object-ado.md)对象当前属于哪个[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  
@@ -40,7 +40,7 @@ ms.locfileid: "67921511"
   
  如果将**连接**对象分配给**ActiveConnection**属性，则必须打开该对象。 分配关闭的连接对象会导致错误。  
   
-### <a name="note"></a>注意  
+### <a name="note"></a>备注  
  **Microsoft Visual Basic**将**ActiveConnection**属性设置为 "*无*" 将**命令**对象与当前**连接**取消关联，并使提供程序释放数据源上的任何关联资源。 然后，可以将**命令**对象与相同或其他**连接**对象关联。 某些提供程序允许您将属性设置从一个连接更改为另一个**连接**，而无需先将该属性设置为*Nothing*。  
   
  如果**Command**对象的[parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)集合包含提供程序提供的参数，则如果将**ActiveConnection**属性设置为*Nothing*或其他**连接**对象，则会清除该集合。 如果手动创建[参数](../../../ado/reference/ado-api/parameter-object.md)对象，并使用它们来填充**Command**对象的**Parameters**集合，则将**ActiveConnection**属性设置为*Nothing*或另一个**连接**对象会使**参数**集合保持不变。  

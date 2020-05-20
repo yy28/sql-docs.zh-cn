@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f9677e62a9efbaa36f03c5cde253b79aa5d401c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0b6bd1cb1f5b0461236c0604bb5818d9dcbadd2a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76925602"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765298"
 ---
 # <a name="ado-glossary"></a>ADO 术语表
 本主题定义与 ADO 相关的术语。  
@@ -100,7 +100,7 @@ ms.locfileid: "76925602"
  比较运算符  
  比较两个表达式并返回布尔值的运算符。  
   
- 一个条件参数，可表示为 ">" （大于）、"\<" （小于）、"=" （等于）、">=" （大于等于）、"<=" （小于或等于）、"<>" （不等于）或 "like" （模式匹配）。  
+ 一个条件参数，可表示为 ">" （大于）、" \< " （小于）、"=" （等于）、">=" （大于等于）、"<=" （小于或等于）、"<>" （不等于）或 "like" （模式匹配）。  
   
  组件  
  一个对象，它封装数据和代码，并提供一组明确可用的公开服务。  
@@ -170,7 +170,7 @@ ms.locfileid: "76925602"
  事件处理程序 (event handler)  
  事件处理程序是事件发生时执行的代码。 另请参阅事件。  
   
-## <a name="h"></a>H  
+## <a name="h"></a>H 上执行碎片合并  
  处理程序 (handler)  
  一个例程，用于管理常见的、相对简单的条件或操作，例如错误恢复或数据管理。  
   
@@ -186,7 +186,7 @@ ms.locfileid: "76925602"
  ISAPI （Internet 服务器应用程序编程接口）  
  一组适用于 Internet 服务器的函数，例如运行 Microsoft® Internet Information Services （IIS）的 Windows NT® Server/Windows 2000 服务器。  
   
- 密钥  
+ 键  
  表中唯一标识行的一列或多列;通常用于为表编制索引。  
   
 ## <a name="m"></a>M  
@@ -206,7 +206,7 @@ ms.locfileid: "76925602"
  层次结构树结构中的元素。 节点可以是根，也可以是另一个节点的子节点。 节点还可以是多个子级的父级。 另请参阅层次结构、树、根、子、父。  
   
  对象变量 (object variable)  
- 包含对象引用的变量。 例如， `objCustomObject`是一个指向类型为 CustomObject 的对象的变量：`Set objCustomObject = CreateObject(adodb.Recordset)`  
+ 包含对象引用的变量。 例如， `objCustomObject` 是一个指向类型为 CustomObject 的对象的变量：`Set objCustomObject = CreateObject(adodb.Recordset)`  
   
  ODBC（开放式数据库连接）  
  用于连接到各种数据源的标准编程语言接口。 通常可以通过 "控制面板" 访问此数据源名称（Dsn），可以将数据源名称（Dsn）分配给使用特定的 ODBC 驱动程序。  

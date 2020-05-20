@@ -33,7 +33,7 @@ ms.locfileid: "72305851"
 |消息正文|无法创建计划指南“%.\*ls”，因为 **\@type** 被指定为“%ls”，参数“%ls”为 NULL。 此类型要求该参数的值为非 NULL 值。 请为该参数指定非 NULL 值，或将该类型更改为允许该参数为 NULL 值的类型。|  
   
 ## <a name="explanation"></a>说明  
-**type 中指定的类型要求指定参数的值为非 NULL 值；但你指定的是 NULL 值\@** 。  
+\@type 中指定的类型要求指定参数的值为非 NULL 值；但你指定的是 NULL 值。  
   
 ## <a name="user-action"></a>用户操作  
 请为该参数指定非 NULL 值，或将该类型更改为允许该参数为 NULL 值的类型。  

@@ -98,7 +98,7 @@ ms.locfileid: "79288181"
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中设置或更改包的保护级别  
   
-1.  在[保护级别](#protection-levels)一节中查看 ProtectionLevel 属性的可用值，然后确定包的对应值  。  
+1.  在[保护级别](#protection-levels)一节中查看 ProtectionLevel 属性的可用值，然后确定包的对应值。  
   
 2.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含该包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "79288181"
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>在命令提示符下设置或更改包的保护级别  
   
-1.  在[保护级别](#protection-levels)一节中查看 ProtectionLevel 属性的可用值，然后确定包的对应值  。  
+1.  在[保护级别](#protection-levels)一节中查看 ProtectionLevel 属性的可用值，然后确定包的对应值。  
   
 2.  在主题 **dtutil Utility** 中查看 [Encrypt](../../integration-services/dtutil-utility.md)选项的映射，然后确定要用作所选 **ProtectionLevel** 属性的值的相应整数。  
   

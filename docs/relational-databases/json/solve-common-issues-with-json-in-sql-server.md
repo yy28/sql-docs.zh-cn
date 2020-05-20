@@ -85,7 +85,7 @@ FOR JSON PATH
   
  但 FOR JSON 查询返回的文本似乎被转义成了纯文本。 这种情况仅在指定了 WITHOUT_ARRAY_WRAPPER 的情况下才会发生。 为什么它不被视为 JSON 对象并以未转义的形式包含在结果中？  
   
- **答案。** 如果在内部 `WITHOUT_ARRAY_WRAPPER` 中指定 `FOR JSON` 选项，生成的 JSON 文本不一定是有效的 JSON。 因此，外部 `FOR JSON` 会假定其为纯文本，并对字符串进行转义。 如果确定该 JSON 输出是有效的，请用 `JSON_QUERY` 函数包装它，将其提升为格式正确的 JSON，如下例所示。  
+ **答案。** 如果在内部 `FOR JSON` 中指定 `WITHOUT_ARRAY_WRAPPER` 选项，生成的 JSON 文本不一定是有效的 JSON。 因此，外部 `FOR JSON` 会假定其为纯文本，并对字符串进行转义。 如果确定该 JSON 输出是有效的，请用 `JSON_QUERY` 函数包装它，将其提升为格式正确的 JSON，如下例所示。  
   
 ```sql  
 SELECT 'Text' as myText,  

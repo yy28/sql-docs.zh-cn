@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO MD, properties
 - properties [ADO MD]
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cc69511e41d00aa96e69181a654194f31f7dcc02
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b653bd79c6e6e27dee30a4f11385f457717364a2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930555"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765228"
 ---
 # <a name="ado-md-properties"></a>ADO MD 属性
 
@@ -27,9 +27,9 @@ ms.locfileid: "67930555"
 |[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|指示当前单元集或目录当前属于哪个 ADO**连接**对象。|  
 |[Caption](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|指示在显示**级别**或**成员**对象时要使用的文本标题。|  
 |[ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)|指示当前**成员**对象作为层次结构中的父级的成员的数目。|  
-|[子女](../../../ado/reference/ado-md-api/children-property-ado-md.md)|返回当前**成员**是层次结构中的父成员的**成员**的集合。|  
+|[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|返回当前**成员**是层次结构中的父成员的**成员**的集合。|  
 |[Count](../../../ado/reference/ado-api/count-property-ado.md)|指示集合中的对象数。|  
-|[深度](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|指示**级别**与层次结构级别的根之间的级别数。|  
+|[Depth](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|指示**级别**与层次结构级别的根之间的级别数。|  
 |[说明](../../../ado/reference/ado-md-api/description-property-ado-md.md)|返回当前对象的文本说明。|  
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|指示轴上的维度数。|  
 |[DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)|指示是否没有子级在轴上紧跟在该成员之后。|  
@@ -39,16 +39,16 @@ ms.locfileid: "67930555"
 |[FormattedValue](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)|指示单元格值的格式化显示。|  
 |[LevelDepth](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)|指示层次结构的根和成员之间的级别数。|  
 |[LevelName](../../../ado/reference/ado-md-api/levelname-property-ado-md.md)|指示成员的级别名称。|  
-|[名称](../../../ado/reference/ado-md-api/name-property-ado-md.md)|指示对象的名称。|  
+|[Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)|指示对象的名称。|  
 |[序数（单元）](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)|按单元格集中的位置唯一标识单元格。|  
 |[序号（位置）](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)|唯一标识沿轴的位置。|  
-|[Parent](../../../ado/reference/ado-md-api/parent-property-ado-md.md)|指示作为层次结构中当前成员的父成员的成员。|  
+|[父级](../../../ado/reference/ado-md-api/parent-property-ado-md.md)|指示作为层次结构中当前成员的父成员的成员。|  
 |[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)|指示此位置成员的父级是否与紧前面的成员的父级相同。|  
 |[源](../../../ado/reference/ado-md-api/source-property-ado-md.md)|指示单元集中的数据的源。|  
 |[状态](../../../ado/reference/ado-md-api/state-property-ado-md.md)|指示单元集的当前状态。|  
-|[类型](../../../ado/reference/ado-md-api/type-property-ado-md.md)|指示当前成员的类型。|  
+|[Type](../../../ado/reference/ado-md-api/type-property-ado-md.md)|指示当前成员的类型。|  
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|指示当前对象的明确名称。|  
-|[值](../../../ado/reference/ado-md-api/value-property-ado-md.md)|指示当前单元格的值。|  
+|值|指示当前单元格的值。|  
   
 ## <a name="see-also"></a>另请参阅  
  [ADO MD API 参考](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   

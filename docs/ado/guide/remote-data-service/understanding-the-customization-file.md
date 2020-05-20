@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 81a73044c1ab413fb2b49286814f3e6b3951c6c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2edcfaaae08da97eccfe7b9a570716a2dfedfc2c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921960"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764608"
 ---
 # <a name="understanding-the-customization-file"></a>了解自定义文件
 自定义文件中的每个节标头包含包含类型和参数的方括号（**[]**）。 四种节类型由文本字符串**connect**、 **sql**、 **userlist**或**日志**指示。 参数是文本字符串、默认值、用户指定的标识符或没有任何内容。  
@@ -46,9 +46,9 @@ identifier
 |**connect**|修改连接字符串的文本字符串。|  
 |**transact-sql**|用于修改命令字符串的文字字符串。|  
 |**userlist**|用于修改特定用户的访问权限的文字字符串。|  
-|**登录**|指定记录操作错误的日志文件的文本字符串。|  
+|**logs**|指定记录操作错误的日志文件的文本字符串。|  
 |**default**|如果未指定或找不到标识符，则使用文本字符串。|  
-|*标志*|与**连接**或**命令**字符串中的字符串匹配的字符串。<br /><br /> -如果节标头包含**connect**并且在连接字符串中找到标识符字符串，请使用此部分。<br />-如果节标头包含**sql**并且在命令字符串中找到了标识符字符串，请使用此部分。<br />-如果节标头包含**userlist** ，并且标识符字符串与**连接**部分标识符匹配，请使用此部分。|  
+|*identifier*|与**连接**或**命令**字符串中的字符串匹配的字符串。<br /><br /> -如果节标头包含**connect**并且在连接字符串中找到标识符字符串，请使用此部分。<br />-如果节标头包含**sql**并且在命令字符串中找到了标识符字符串，请使用此部分。<br />-如果节标头包含**userlist** ，并且标识符字符串与**连接**部分标识符匹配，请使用此部分。|  
   
  **DataFactory**调用处理程序，并传递客户端参数。 处理程序将在与相应的节标头中的标识符匹配的客户端参数中搜索整个字符串。 如果找到匹配项，则该部分的内容将应用于客户端参数。  
   

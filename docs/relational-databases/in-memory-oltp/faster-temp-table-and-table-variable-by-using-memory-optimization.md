@@ -124,7 +124,7 @@ CREATE TABLE #tempSessionC
   
   
   
-首先，创建以下表值函数来筛选 **\@spid\@** 。 该函数可供所有从会话临时表转换而来的 SCHEMA_ONLY 表使用。  
+首先，创建以下表值函数来筛选 \@\@spid。 该函数可供所有从会话临时表转换而来的 SCHEMA_ONLY 表使用。  
   
   
   

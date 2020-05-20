@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Recordset object [ADO], moving
 - MovePrevious method [ADO]
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0ea83f40c6d6e595277a173c181c24f33e382393
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3d68fb018e3b72e193127f8f49160813c06a1332
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924880"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764808"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>在记录集中移动的更多方法
 以下四个方法用于在**记录集中**移动或滚动记录： [MoveFirst、MoveLast、MoveNext 和 MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)。 （这些方法中的某些方法对于只进游标不可用。）  
@@ -46,7 +46,7 @@ If oRs.BOF Then oRs.MoveFirst
 . . .  
 ```  
   
- 如果已对**记录集**进行筛选或排序，且当前记录的数据已更改，则位置也可能会更改。 在这种情况下， **MoveNext**方法会正常运行，但请注意，位置是从新位置向前移动一条记录，而不是旧位置。 例如，更改当前记录中的数据，以便记录移到已排序**记录集**的末尾，这意味着调用**MoveNext**会导致 ADO 将当前记录设置为**记录集**最后一条记录之后的位置（**EOF** = **True**）。  
+ 如果已对**记录集**进行筛选或排序，且当前记录的数据已更改，则位置也可能会更改。 在这种情况下， **MoveNext**方法会正常运行，但请注意，位置是从新位置向前移动一条记录，而不是旧位置。 例如，更改当前记录中的数据，以便记录移到已排序**记录集**的末尾，这意味着调用**MoveNext**会导致 ADO 将当前记录设置为**记录集**最后一条记录之后的位置（**EOF**  =  **True**）。  
   
  **Recordset**对象的各种移动方法的行为在一定程度上取决于**记录集**内的数据。 添加到**记录集**的新记录最初按特定顺序添加，该顺序是由数据源定义的，可以隐式或显式依赖于新记录中的数据。 例如，如果在填充**记录集**的查询中执行了排序或联接，则新记录将插入到**记录集**内的适当位置。 如果在创建**记录集**时未显式指定排序方式，则数据源实现中的更改可能导致返回的行的顺序不小心发生更改。 此外，**记录集**的排序、筛选和编辑函数可能会影响顺序，并且可能会显示记录集中的哪些行。  
   

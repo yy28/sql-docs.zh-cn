@@ -20,14 +20,14 @@ f1_keywords:
 helpviewer_keywords:
 - Name property [ADO MD]
 ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c248139abfd136d5c79658592e0e49d5e10444aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 370dc7900e5fe876ea1b1064b2621371c730f323
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949398"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765083"
 ---
 # <a name="name-property-ado-md"></a>Name 属性 (ADO MD)
 指示对象的名称。  
@@ -36,7 +36,7 @@ ms.locfileid: "67949398"
  返回一个**字符串**，并且为只读。  
   
 ## <a name="remarks"></a>备注  
- 可以按序号引用检索对象的**Name**属性，之后可以按名称直接引用对象。 例如，如果`cdf.CubeDefs(0).Name`生成 "Bobs-sfpreviewcluster Video Store"，则可以将此[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)称为`cdf.CubeDefs("Bobs Video Store")`。  
+ 可以按序号引用检索对象的**Name**属性，之后可以按名称直接引用对象。 例如，如果 `cdf.CubeDefs(0).Name` 生成 "Bobs-sfpreviewcluster Video Store"，则可以将此[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)称为 `cdf.CubeDefs("Bobs Video Store")` 。  
   
 ## <a name="applies-to"></a>应用于  
   

@@ -21,13 +21,13 @@ ms.locfileid: "79288371"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-本主题介绍如何从 SQL Server 导入和导出向导的“选择数据源”  页或“选择目标”  业连接到 Microsoft SQL Server  。 有多种数据提供程序可用来连接 SQL Server。
+本主题介绍如何从 SQL Server 导入和导出向导的“选择数据源”页或“选择目标”业连接到 Microsoft SQL Server。 有多种数据提供程序可用来连接 SQL Server。
 
 > [!TIP]
 > 如果位于具有多个服务器的网络中，相比展开服务器的下拉列表，可能输入服务器名称会更便捷一些。 如果单击下拉列表，查询所有可用服务器的网络可能需要很长时间，并且结果可能甚至不会包含需要的服务器。
 
 ## <a name="connect-to-sql-server-with-the-net-framework-data-provider-for-sql-server"></a>使用用于 SQL Server 的 .NET Framework 数据提供程序连接到 SQL Server 
-在向导的“选择数据源”  页或“选择目标”  页上选择“用于 SQL Server 的 .NET Framework 数据提供程序”  之后，页面显示用于提供程序的选项的分组列表。 其中许多是不友好名称和不熟悉的设置。 所幸，要连接到任何企业数据库，通常只需要提供几条信息。 可以忽略其他设置的默认值。
+在向导的“选择数据源”页或“选择目标”页上选择“用于 SQL Server 的 .NET Framework 数据提供程序”之后，页面显示用于提供程序的选项的分组列表。 其中许多是不友好名称和不熟悉的设置。 所幸，要连接到任何企业数据库，通常只需要提供几条信息。 可以忽略其他设置的默认值。
 
 > [!NOTE]
 > 无论 SQL Server 是源还是目标，此数据提供程序的连接选项是相同的。 也就是说，在向导的“选择数据源”页和“选择目标”页上看到的选项是相同的   。
@@ -55,7 +55,7 @@ ms.locfileid: "79288371"
  输入源或目标提供程序的名称，或从下拉列表选择服务器。  
   
  **Integrated Security**  
- 使用 Windows 集成身份验证进行连接（建议），请指定 True  ；若要用  **身份验证进行连接，请指定 False**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果指定 **False**，则必须输入用户 ID 和密码。 默认值为 **False**。  
+ 使用 Windows 集成身份验证进行连接（建议），请指定 True；若要用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接，请指定 False。 如果指定 **False**，则必须输入用户 ID 和密码。 默认值为 **False**。  
   
  **用户 ID**  
  如果正在使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，请输入用户名。  

@@ -115,7 +115,7 @@ SELECT Rb.b1, (SELECT RA.a1 FROM RA WHERE RB.b1 = RA.a1) FROM RB GROUP BY RB.b1;
 ```  
   
 ### <a name="i-using-in-with-a-correlated-subquery"></a>I. 在相关子查询中使用 IN  
- 以下示例在相关或重复子查询中使用 `IN`。 该查询依赖于外部查询来查询其值。 该内部查询为外部查询可能选择的每一行各重复运行一次。 该查询检索 `EmployeeKey` 表中 `OrderQuantity` 为 `FactResellerSales` 且雇员标识号在 `5` 和 `DimEmployee` 表中相匹配的每个雇员的 `FactResellerSales` 加姓名的一个实例。  
+ 以下示例在相关或重复子查询中使用 `IN`。 该查询依赖于外部查询来查询其值。 该内部查询为外部查询可能选择的每一行各重复运行一次。 该查询检索 `FactResellerSales` 表中 `OrderQuantity` 为 `5` 且雇员标识号在 `DimEmployee` 和 `FactResellerSales` 表中相匹配的每个雇员的 `EmployeeKey` 加姓名的一个实例。  
   
 ```  
 SELECT DISTINCT dm.EmployeeKey, dm.FirstName, dm.LastName   

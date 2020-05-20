@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO MD, objects
 - objects [ADO MD]
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d568ca20cca6c12a04c0f3d54a2c134d59a0d7fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 01a35a38812d105a1e26454022321e57448efadd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930577"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765248"
 ---
 # <a name="ado-md-objects"></a>ADO MD 对象
 
@@ -31,9 +31,9 @@ ms.locfileid: "67930577"
 |[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|表示多维架构中的一个多维数据集，其中包含一组相关的维度。|  
 |[维度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|表示多维数据集的一个维度，其中包含一个或多个成员的层次结构。|  
 |[层次结构](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|表示一个维度成员可以聚合或 "汇总" 的方式。 可以在一个或多个层次结构上聚合维度。|  
-|[Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)|包含一组成员，其中每个成员在层次结构中具有相同的级别。|  
-|[职员](../../../ado/reference/ado-md-api/member-object-ado-md.md)|表示多维数据集中某一级别的成员、某一级别的某个成员的子级或沿某个单元集的一个位置的成员。|  
-|[置于](../../../ado/reference/ado-md-api/position-object-ado-md.md)|表示一个或多个不同维度的成员的集合，这些成员定义沿轴的点。|  
+|[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)|包含一组成员，其中每个成员在层次结构中具有相同的级别。|  
+|[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)|表示多维数据集中某一级别的成员、某一级别的某个成员的子级或沿某个单元集的一个位置的成员。|  
+|[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)|表示一个或多个不同维度的成员的集合，这些成员定义沿轴的点。|  
   
  此外，**目录**对象还连接到 ado**连接**对象，该对象包含在标准 ADO 库中：  
   

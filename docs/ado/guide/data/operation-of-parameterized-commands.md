@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data shaping [ADO], parameterized commands
 - parameterized commands [ADO]
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e7d4399a8cf279ed2283061fff9064ffcc1adfba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 17d2d282eddcd358d8b3efe90ffda2d40e9e1574
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924737"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764798"
 ---
 # <a name="operation-of-parameterized-commands"></a>参数化命令的操作
 如果使用的是大型子**记录集**（特别是与父**记录集**的大小相比），但只需访问几个子章节，则可以发现使用参数化命令更有效。  
@@ -86,7 +86,7 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
  此示例利用了 SQL WHERE 子句的更大灵活性来获得所需的结果。  
   
 > [!NOTE]
->  使用 WHERE 子句时，参数不能使用 text、ntext 和 image 的 SQL 数据类型，也不会生成包含以下说明的错误： `Invalid operator for data type`。  
+>  使用 WHERE 子句时，参数不能使用 text、ntext 和 image 的 SQL 数据类型，也不会生成包含以下说明的错误： `Invalid operator for data type` 。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据定形示例](../../../ado/guide/data/data-shaping-example.md)   

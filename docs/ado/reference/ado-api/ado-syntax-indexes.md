@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - syntax indexes [ADO]
 ms.assetid: fad34f61-c34f-4c0b-8ce5-3b8872abfe4e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e4e4b071b8c62d3110d9d732d4cc63be3cce084d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dfe797f2edf7df81ee8d70469d516b1c3f7d0b6f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920882"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764548"
 ---
 # <a name="ado-syntax-indexes"></a>ADO 语法索引
 调用 ADO 方法和属性的语法因开发环境而异。 ADO 语言参考的其余部分使用 Microsoft Visual Basic 编程语言来演示 ADO 方法和属性语法。 但是，请参阅以下部分，了解基于你的编程语言和方法的更具体的语法示例：  

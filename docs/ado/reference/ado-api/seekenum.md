@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - SeekEnum enumeration [ADO]
 ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 886825b4d32354572a5162487add419b00ec35d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dca33c975b3d25347b0cb9bb804b852ec5f93d7d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931066"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765388"
 ---
 # <a name="seekenum"></a>SeekEnum
 指定要执行的[搜索](../../../ado/reference/ado-api/seek-method.md)的类型。  
   
-|Constant|值|说明|  
+|返回的常量|值|说明|  
 |--------------|-----------|-----------------|  
 |**adSeekFirstEQ**|1|查找等于*架构*的第一个键。|  
 |**adSeekLastEQ**|2|查找等于*架构*的最后一个键。|  
@@ -37,7 +37,7 @@ ms.locfileid: "67931066"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
   
-|Constant|  
+|返回的常量|  
 |--------------|  
 |AdoEnums.Seek.FIRSTEQ|  
 |AdoEnums.Seek.LASTEQ|  

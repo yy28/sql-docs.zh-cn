@@ -25,7 +25,7 @@ ms.locfileid: "74095812"
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-通过将 **FOR JSON** 子句添加到 **SELECT** 语句中，将查询结果格式化为 JSON，或者将 SQL Server 中的数据导出为 JSON。 使用 FOR JSON 子句，通过将 JSON 输出的格式处理从应用委托到  **来简化客户端应用程序**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+通过将 **FOR JSON** 子句添加到 **SELECT** 语句中，将查询结果格式化为 JSON，或者将 SQL Server 中的数据导出为 JSON。 使用 FOR JSON 子句，通过将 JSON 输出的格式处理从应用委托到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来简化客户端应用程序。
   
  使用 FOR JSON 子句时，可以显式指定 JSON 输出的结构，或让 SELECT 语句的结构来决定输出  。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "74095812"
  ![对于 JSON](../../relational-databases/json/media/jsonslides2forjson.png)
   
 ## <a name="option-1---you-control-output-with-for-json-path"></a>选项 1 - 使用 FOR JSON PATH 控制输出
-在 PATH 模式下，可以使用点语法来设置嵌套的输出格式，例如  `'Item.UnitPrice'`。  
+在 PATH 模式下，可以使用点语法来设置嵌套的输出格式，例如 `'Item.UnitPrice'`。  
 
 以下是一个使用带有 **FOR JSON** 子句的 **对于 JSON** 模式。 下面的示例使用 **ROOT** 选项指定一个已命名根元素。 
   
@@ -77,7 +77,7 @@ FOR JSON AUTO;
 
 以下 `SELECT...FOR JSON AUTO` 示例显示当 `JOIN` 表中的数据之间存在 1 对多关系时显示的 JSON 结果。
 
-还说明了返回的 JSON 中缺少 NULL 值。 但是，可以使用 `INCLUDE_NULL_VALUES` 子句上的 `FOR` 关键字替代此默认行为。
+还说明了返回的 JSON 中缺少 NULL 值。 但是，可以使用 `FOR` 子句上的 `INCLUDE_NULL_VALUES` 关键字替代此默认行为。
 
 ```sql
 go

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - SchemaEnum enumeration [ADO]
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c064120e3c658cafd88a96953ff00e18fbaa9b88
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cb004c33ae413c93506bc1c90b331494b7e56adc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931113"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765428"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 指定[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法检索的架构**记录集**的类型。  
@@ -34,7 +34,7 @@ ms.locfileid: "67931113"
   
  ADO 为常量、 **adSchemaDBInfoKeywords**和**adSchemaDBInfoLiterals**生成类似于架构的结果。 ADO 创建一个**记录集**，然后使用**IDBInfo：： GetKeywords**和**IDBInfo：： GetLiteralInfo**方法分别返回的值填充每一行。 有关这些方法的其他信息可在 OLE DB 程序员参考的[IDBInfo](https://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3)部分找到。  
   
-|Constant|值|说明|约束列|  
+|返回的常量|值|说明|约束列|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|返回在目录中定义的由给定用户拥有的断言。<br /><br /> （断言行集）|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCatalogs**|1|返回与可从 DBMS 访问的目录关联的物理特性。<br /><br /> （目录行集）|CATALOG_NAME|  
@@ -81,7 +81,7 @@ ms.locfileid: "67931113"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
   
-|Constant|  
+|返回的常量|  
 |--------------|  
 |AdoEnums|  
 |AdoEnums|  

@@ -36,7 +36,7 @@ ms.locfileid: "67934827"
 > -   在执行任何升级之前备份您的数据库。  
 > -   升级过程将重新创建存储过程并对 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]所使用的表进行升级。 您对这些组件中的任何一个所做的任何自定义内容可能会丢失。  
 > -   模型部署包只能在创建它们的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中使用。 不能将在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中创建的模型部署包部署到 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中。  
-> -   在将 Data Quality Services 和 Master Data Services 升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，用于 Excel 的 Master Data Services 外接程序的任何早期版本都将不再适用。 可以从[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]适用于 Microsoft Excel 的 Master Data Services 加载项[下载适用于 Excel 的 ](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md) Master Data Services 加载项。  
+> -   在将 Data Quality Services 和 Master Data Services 升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，用于 Excel 的 Master Data Services 外接程序的任何早期版本都将不再适用。 可以从[适用于 Microsoft Excel 的 Master Data Services 加载项](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)下载适用于 Excel 的 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Master Data Services 加载项。  
   
 ##  <a name="file-location"></a><a name="fileLocation"></a> 文件位置  
   
@@ -78,7 +78,7 @@ ms.locfileid: "67934827"
   
     2.  在左窗格中单击 **“数据库配置”** 。  
   
-    3.  在右窗格中，单击“选择数据库”并指定 **、** 、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 数据库实例的信息[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。  
+    3.  在右窗格中，单击“选择数据库”并指定 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 数据库实例的信息。  
   
     4.  单击 **“升级数据库”** 以启动 **“升级数据库向导”** 。 有关详细信息，请参阅[升级数据库向导（Master Data Services 配置管理器）](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md)。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "67934827"
         -   **“创建新站点”** 。 创建网站时，将自动创建新的 Web 应用程序。  
   
         > [!IMPORTANT]  
-        >  在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版 Master Data Services 配置管理器中，可以选择 SQL Server 早期版本（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）的现有 MDS Web 应用程序。 您不能选择现有 Web 应用程序，而是必须为 MDS 创建一个 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Web 应用程序。 否则，在您尝试将 Web 应用程序与升级的 MDS 数据库关联时，您会收到错误，指出无法访问请求的页面，因为该页的相关配置数据无效。  
+        >  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版 Master Data Services 配置管理器中，可以选择 SQL Server 早期版本（[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]）的现有 MDS Web 应用程序。 您不能选择现有 Web 应用程序，而是必须为 MDS 创建一个 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Web 应用程序。 否则，在您尝试将 Web 应用程序与升级的 MDS 数据库关联时，您会收到错误，指出无法访问请求的页面，因为该页的相关配置数据无效。  
         >   
         >  如果要为 MDS Web 应用程序使用与现有（[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]）Web 应用程序相同的名字（别名），则必须首先从 IIS 中删除该 Web 应用程序和关联的应用程序池，然后使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 版 Master Data Services 配置管理器创建同名的 Web 应用程序。 有关从 IIS 删除 Web 应用程序和应用程序池的信息，请参阅 [删除应用程序 (IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) 和 [删除应用程序池 (IIS)](https://go.microsoft.com/fwlink/?LinkId=323538)。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "67934827"
   
  **升级（要升级数据库引擎）**  
   
-1.  **仅适用于 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]** ：打开“控制面板” **“程序和功能”，然后卸载 Microsoft**  >   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。  
+1.  **仅适用于 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]**：打开“控制面板” > “程序和功能”，然后卸载 Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。  
   
 2.  将数据引擎升级到 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 或 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]。 有关详细信息，请参阅 [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)。  
   

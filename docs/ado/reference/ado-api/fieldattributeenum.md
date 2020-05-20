@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - FieldAttributeEnum enumeration [ADO]
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0d375ed3dd4ea7ae7e2e5405d1feec962c5f56ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ca14531410942a77add7c6c99756b64bf99e785c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918705"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764518"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 指定[Field](../../../ado/reference/ado-api/field-object.md)对象的一个或多个属性。  
   
-|Constant|Value|说明|  
+|返回的常量|值|说明|  
 |--------------|-----------|-----------------|  
 |**adFldCacheDeferred**|0x1000|指示提供程序缓存字段值，并且后续读取是从缓存中完成的。|  
 |**adFldFixed**|0x10|指示字段包含固定长度数据。|  
@@ -48,7 +48,7 @@ ms.locfileid: "67918705"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
   
-|Constant|  
+|返回的常量|  
 |--------------|  
 |AdoEnums.FieldAttribute.CACHEDEFERRED|  
 |AdoEnums. FieldAttribute|  

@@ -68,7 +68,7 @@ ms.locfileid: "74095406"
   
 -   函数 [cdc.fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) 返回在指定间隔内发生的所有更改。 将始终生成此函数。 返回的项将始终进行排序：先按更改的事务提交 LSN 进行排序，然后按事务内的更改顺序值进行排序。 根据所选的行筛选器选项，在更新时将返回最终行（行筛选器选项为“all”），或者在更新时返回新值和旧值（行筛选器选项为“all update old”）。  
   
--   当启用源表时，如果将参数 [ 设置为 1，将生成函数 ](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)cdc.fn_cdc_get_net_changes_<capture_instance>@supports_net_changes。  
+-   当启用源表时，如果将参数 @supports_net_changes 设置为 1，将生成函数 [cdc.fn_cdc_get_net_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)。  
   
     > [!NOTE]  
     >  仅当源表具有定义的主键或已使用 @index_name 参数标识了唯一索引时，才支持此选项。  

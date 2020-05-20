@@ -62,7 +62,7 @@ SQL Server 2016 引入了使用分布式事务的功能，且该事务中的一�
   
 -   可用性组必须在 Windows Server 2012 R2 或更高版本上运行。 对于 Windows Server 2012 R2，必须安装 KB3090973 中的更新，网址：[https://support.microsoft.com/kb/3090973](https://support.microsoft.com/kb/3090973)。  
   
--   必须使用 CREATE AVAILABILITY GROUP  命令和 WITH DTC**SUPPORT = PER_DB\_** 子句创建可用性组。 当前不可更改现有可用性组。  
+-   必须使用 CREATE AVAILABILITY GROUP 命令和 WITH DTC\_SUPPORT = PER_DB 子句创建可用性组。 当前不可更改现有可用性组。  
 
 - 将加入可用性组的所有 SQL Server 实例都必须为 SQL Server 2016 或更高版本。
  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - address book application scenario [ADO], command buttons
 - RDS scenarios [ADO], command buttons
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d1aa5b628bec9399374b94a2cd78090207bf09b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 04f896b4a799e527e2442ef17e69a33f576950dd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922988"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764738"
 ---
 # <a name="address-book-command-buttons"></a>通讯簿命令按钮
 通讯簿应用程序包括以下命令按钮：  
@@ -38,11 +38,11 @@ ms.locfileid: "67922988"
  单击 "**查找**" 按钮将激活 VBScript Find_OnClick Sub 过程，该过程将生成并发送 SQL 查询。 单击此按钮将填充数据网格。  
   
 ## <a name="building-the-sql-query"></a>生成 SQL 查询  
- Find_OnClick Sub 过程的第一部分将通过向全局 SQL SELECT 语句追加文本字符串，一次生成一个短语。 首先，将变量`myQuery`设置为从数据源表请求所有数据行的 SQL SELECT 语句。 接下来，Sub 过程扫描页面上四个输入框中的每一个。  
+ Find_OnClick Sub 过程的第一部分将通过向全局 SQL SELECT 语句追加文本字符串，一次生成一个短语。 首先，将变量设置 `myQuery` 为从数据源表请求所有数据行的 SQL SELECT 语句。 接下来，Sub 过程扫描页面上四个输入框中的每一个。  
   
- 由于程序在生成 SQL 语句`like`时使用单词，因此查询是子字符串搜索，而不是完全匹配。  
+ 由于程序 `like` 在生成 SQL 语句时使用单词，因此查询是子字符串搜索，而不是完全匹配。  
   
- 例如，如果 "**姓氏**" 框中包含 "Berge" 条目，并且 "**标题**" 框中包含 "项目经理" 条目，则 SQL 语句（的`myQuery`值）将读取：  
+ 例如，如果 "**姓氏**" 框中包含 "Berge" 条目，并且 "**标题**" 框中包含 "项目经理" 条目，则 SQL 语句（的值 `myQuery` ）将读取：  
   
 ```sql
 Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee where lastname like 'Berge%' and title like 'Program Manager%'  
@@ -51,7 +51,7 @@ Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee wh
  如果查询成功，则会在 HTML 数据网格中显示姓氏中包含文本 "Berge" 的所有人员（如 Berge 和 Berger），以及包含 "项目经理" 字样的标题（例如，项目经理、高级技术）。  
   
 ## <a name="preparing-and-sending-the-query"></a>准备并发送查询  
- Find_OnClick Sub 过程的最后一部分包含两个语句。 第一个语句分配 RDS 的[SQL](../../../ado/reference/rds-api/sql-property.md)属性[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象等于动态生成的 SQL 查询。 第二个语句将导致**RDS。DataControl** object （`DC1`）用于查询数据库，然后在网格中显示查询的新结果。  
+ Find_OnClick Sub 过程的最后一部分包含两个语句。 第一个语句分配 RDS 的[SQL](../../../ado/reference/rds-api/sql-property.md)属性[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象等于动态生成的 SQL 查询。 第二个语句将导致**RDS。DataControl** object （ `DC1` ）用于查询数据库，然后在网格中显示查询的新结果。  
   
 ```vb
 Sub Find_OnClick  
@@ -62,7 +62,7 @@ End Sub
 ```  
   
 ## <a name="update-profile-button"></a>"更新配置文件" 按钮  
- 单击 "**更新配置文件**" 按钮将激活 VBScript Update_OnClick Sub 过程，该过程将执行[RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象的（`DC1`） [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)和[Refresh](../../../ado/reference/rds-api/refresh-method-rds.md)方法。  
+ 单击 "**更新配置文件**" 按钮将激活 VBScript Update_OnClick Sub 过程，该过程将执行[RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象的（ `DC1` ） [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)和[Refresh](../../../ado/reference/rds-api/refresh-method-rds.md)方法。  
   
 ```vb
 Sub Update_OnClick  
@@ -71,10 +71,10 @@ Sub Update_OnClick
 End Sub  
 ```  
   
- 当`DC1.SubmitChanges`执行时，远程数据服务将打包所有更新信息，并通过 HTTP 将其发送到服务器。 更新为 "完全" 或 "无";如果部分更新不成功，则不进行任何更改，并返回状态消息。 `DC1.Refresh`在**SubmitChanges**远程数据服务后，并不是必需的，但它可确保最新的数据。  
+ 当 `DC1.SubmitChanges` 执行时，远程数据服务将打包所有更新信息，并通过 HTTP 将其发送到服务器。 更新为 "完全" 或 "无";如果部分更新不成功，则不进行任何更改，并返回状态消息。 `DC1.Refresh`在**SubmitChanges**远程数据服务后，并不是必需的，但它可确保最新的数据。  
   
 ## <a name="cancel-changes-button"></a>"取消更改" 按钮  
- 单击 "**取消更改**" 将激活 VBScript Cancel_OnClick Sub 过程，该过程将执行[RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象的（`DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md)方法。  
+ 单击 "**取消更改**" 将激活 VBScript Cancel_OnClick Sub 过程，该过程将执行[RDS。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象的（ `DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md)方法。  
   
 ```vb
 Sub Cancel_OnClick  
@@ -82,7 +82,7 @@ Sub Cancel_OnClick
 End Sub  
 ```  
   
- 执行`DC1.CancelUpdate`时，它会丢弃自上次查询或更新以来用户对数据网格中的雇员记录所做的任何编辑。 它还原原始值。  
+ `DC1.CancelUpdate`执行时，它会丢弃自上次查询或更新以来用户对数据网格中的雇员记录所做的任何编辑。 它还原原始值。  
   
 ## <a name="see-also"></a>另请参阅  
  [通讯簿导航按钮](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)   

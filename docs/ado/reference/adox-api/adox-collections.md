@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADOX, collections
 - collections [ADOX]
 ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 453836f30e74dd604efe28d309ca69ea2ca26684
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f5c2792f9a5ef413f09793df8ff320d3826773f4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928606"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764148"
 ---
 # <a name="adox-collections"></a>ADOX 集合
 
@@ -29,9 +29,9 @@ ms.locfileid: "67928606"
 |[索引](../../../ado/reference/adox-api/indexes-collection-adox.md)|包含表的所有**索引**对象。|  
 |[“键”](../../../ado/reference/adox-api/keys-collection-adox.md)|包含表的所有**关键**对象。|  
 |[过程](../../../ado/reference/adox-api/procedures-collection-adox.md)|包含目录的所有**过程**对象。|  
-|[张](../../../ado/reference/adox-api/tables-collection-adox.md)|包含目录的所有**表**对象。|  
+|[表](../../../ado/reference/adox-api/tables-collection-adox.md)|包含目录的所有**表**对象。|  
 |[用户](../../../ado/reference/adox-api/users-collection-adox.md)|包含目录或组的所有存储的**用户**对象。|  
-|[视图](../../../ado/reference/adox-api/views-collection-adox.md)|包含目录的所有**视图**对象。|  
+|[Views](../../../ado/reference/adox-api/views-collection-adox.md)|包含目录的所有**视图**对象。|  
   
 ## <a name="see-also"></a>另请参阅  
  [ADOX API 参考](../../../ado/reference/adox-api/adox-api-reference.md)   

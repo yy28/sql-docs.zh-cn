@@ -14,17 +14,17 @@ helpviewer_keywords:
 - referencing libraries in a Visual C++ application[ADO]
 - ADO, libraries
 ms.assetid: d3ea12ec-bca8-48c3-af57-ce14576108c9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 62fb1b89299af1f466e446c8adba422a841f0196
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a790ace40aa31324ce8b22127d8f6948ae86e059
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923026"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764758"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>在 Visual C++ 应用程序中引用 ADO 库
-若要在 Visual C++ 应用程序中使用最新版本的 ADO，请`#import`使用以下指令：  
+若要在 Visual C++ 应用程序中使用最新版本的 ADO，请使用以下 `#import` 指令：  
   
 ```cpp
 #import "msado15.dll" \  

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - WillExecute event [ADO]
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e0e7c29be102e9c5c7709816895a6647c95337c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ef47b4bac626d82754ce01685504b4a48303a4b4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936617"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764448"
 ---
 # <a name="willexecute-event-ado"></a>WillExecute 事件 (ADO)
 在连接上执行挂起命令之前，就会调用**WillExecute**事件。  

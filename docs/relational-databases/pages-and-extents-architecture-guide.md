@@ -94,7 +94,7 @@ ms.locfileid: "79288271"
 > [!NOTE]
 > 一直到，并且包括 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，跟踪标志 1118 可用于将默认分配更改为始终使用统一区。 有关此跟踪标志的详细信息，请参阅 [DBCC TRACEON - 跟踪标志](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。   
 >   
-> 从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，将为 TempDB 自动启用 TF 1118 提供的功能。 对于用户数据库，此行为受 `SET MIXED_PAGE_ALLOCATION` 的 `ALTER DATABASE` 选项控制，同时默认值设置为禁用，且跟踪标志 1118 无效。 有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)。
+> 从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，将为 TempDB 自动启用 TF 1118 提供的功能。 对于用户数据库，此行为受 `ALTER DATABASE` 的 `SET MIXED_PAGE_ALLOCATION` 选项控制，同时默认值设置为禁用，且跟踪标志 1118 无效。 有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)。
 
 ## <a name="managing-extent-allocations-and-free-space"></a>管理区分配和可用空间 
 

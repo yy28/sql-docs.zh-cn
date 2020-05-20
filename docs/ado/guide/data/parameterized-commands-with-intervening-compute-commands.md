@@ -13,14 +13,14 @@ helpviewer_keywords:
 - APPEND clause [ADO]
 - COMPUTE command [ADO]
 ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fb6bc2b9f7e53caf28f44daf39815850940b9d3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6f66bde29a5036ed671f9af17bf5aab1df4acbca
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924727"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764778"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>参数化命令与中间 COMPUTE 命令
 典型的参数化形状 APPEND 命令包含一个子句，该子句使用查询命令创建父**记录集**，并使用另一个使用参数化查询命令（即包含参数占位符（问号，"？"）的命令创建子**记录**集的子句。 生成的整形**记录集**具有两个级别，其中父级占据较高级别，而子级占据较低级别。  

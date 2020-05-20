@@ -12,14 +12,14 @@ helpviewer_keywords:
 - syntax indexes [ADO], ADO/WFC
 - ADO/WFC syntax index [ADO]
 ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9441e956c51accf2af55624b311f28a18d39ed20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2ae2ddf07e2e687aec0b507b9ff9f2640087ef74
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920818"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764538"
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO - WFC 语法索引
 ADO 语言参考使用 Microsoft Visual Basic 编程语言来演示 ADO 方法和属性语法。 此索引是对 ADO 语言参考主题的交叉引用，基于 Windows 基础类（ADO/WFC）的 ADO。 当语法中存在差异时，请使用此索引中的函数签名，而不是语言参考主题中的语法列表。  

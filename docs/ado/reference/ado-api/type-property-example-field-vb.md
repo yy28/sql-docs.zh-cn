@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Type property [field] [ADO], Visual Basic example
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0ab43149a0e938be4359203b0da750b04a82b545
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1d3f13b0f76884f4b5e0077bdebef0c009d7b546
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936685"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765348"
 ---
 # <a name="type-property-example-field-vb"></a>Type 属性示例（字段）(VB)
 此示例通过显示与***Employees***表中所有[Field](../../../ado/reference/ado-api/field-object.md)对象的[Type](../../../ado/reference/ado-api/type-property-ado.md)属性值相对应的常量的名称，演示了[type](../../../ado/reference/ado-api/type-property-ado.md)属性。 运行此过程需要 FieldType 函数。  
