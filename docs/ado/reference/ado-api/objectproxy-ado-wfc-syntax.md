@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - ObjectProxy collection [ADO]
 ms.assetid: f68f58bc-ad28-46cc-9fb3-099e1a678397
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 485d011fa6762acd04cad54ff7fffc8d8136e063
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ff9cd79b4ac787987ef44ea3f73cbd9fb102ae43
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917948"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762316"
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy（ADO - WFC 语法）
 **ObjectProxy**对象表示服务器，由 "[空间](../../../ado/reference/rds-api/dataspace-object-rds.md)" 对象的**createObject**方法返回。 ObjectProxy 类具有一个方法，**调用**，它可以在服务器上调用方法，并返回由该调用导致的对象。  

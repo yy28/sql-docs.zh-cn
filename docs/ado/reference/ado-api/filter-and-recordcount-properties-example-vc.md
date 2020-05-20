@@ -13,14 +13,14 @@ helpviewer_keywords:
 - RecordCount property [ADO], VC++ example
 - Filter property [ADO], VC++ example
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 38f7dc64507e79704a62f321d7513419cc3c15d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d079a56268d903970f7e99d987b1315d1decec44
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932660"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763438"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Filter 和 RecordCount 属性示例（VC + +）
 此示例使用[Filter](../../../ado/reference/ado-api/filter-property.md)属性根据应用于现有**记录集**的指定条件来打开新的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它使用[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)属性来显示两个**记录集中**的记录数。 运行此过程需要 FilterField 函数。  

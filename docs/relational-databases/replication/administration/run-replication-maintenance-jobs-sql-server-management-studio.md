@@ -37,7 +37,7 @@ ms.locfileid: "76288334"
   
 -   **过期订阅清除**  
   
- 从   的“作业”文件夹和复制监视器的“代理”选项卡启动和停止这些作业[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。 在“作业属性 - **作业>”\<** 对话框中查看和修改每个作业的属性，可从同一文件夹和选项卡中访问此对话框。  
+ 从   的“作业”文件夹和复制监视器的“代理”选项卡启动和停止这些作业[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)。 在“作业属性 - \<作业>”对话框中查看和修改每个作业的属性，可从同一文件夹和选项卡中访问此对话框。  
   
 ### <a name="to-start-or-stop-a-replication-maintenance-job-in-management-studio"></a>在 Management Studio 中启动或停止复制维护作业  
   
@@ -63,7 +63,7 @@ ms.locfileid: "76288334"
   
 3.  右键单击一个作业，然后单击 **“属性”** 。  
   
-4.  在“作业属性 - **作业>”\<** 对话框中，根据需要修改任意属性，然后单击“确定”  。  
+4.  在“作业属性 - \<作业>”对话框中，根据需要修改任意属性，然后单击“确定”。  
   
 ### <a name="to-view-and-modify-properties-for-a-replication-maintenance-job-in-replication-monitor"></a>在复制监视器中查看和修改复制维护作业的属性  
   
@@ -73,7 +73,7 @@ ms.locfileid: "76288334"
   
 3.  在网格中右键单击一个作业，然后单击 **“属性”** 。  
   
-4.  在“作业属性 - **作业>”\<** 对话框中，根据需要修改任意属性，然后单击“确定”  。  
+4.  在“作业属性 - \<作业>”对话框中，根据需要修改任意属性，然后单击“确定”。  
   
 ## <a name="see-also"></a>另请参阅  
  [启动和停止复制代理 (SQL Server Management Studio)](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   

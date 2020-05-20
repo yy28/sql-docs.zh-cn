@@ -14,14 +14,14 @@ helpviewer_keywords:
 - XML persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 263f83093c46f4265559fe0b1844112687d4fc67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3afbec77df9a80ab7e304d2e3101e795b939eef2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924596"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763608"
 ---
 # <a name="persisting-records-in-xml-format"></a>以 XML 格式保留记录
 与 ADTG 格式一样，XML 格式的**记录集**持久性是通过 Microsoft OLE DB 永久性提供程序实现的。 此提供程序从保存的 XML 文件或包含 ADO 生成的架构信息的流中生成只进只读行集。 同样，它可以采用 ADO**记录集**，生成 XML，并将其保存到文件或实现 COM **IStream**接口的任何对象。 （事实上，文件只是支持**IStream**的对象的另一个示例。）对于版本2.5 及更高版本，ADO 依赖 Microsoft XML 分析器（MSXML）将 XML 加载到**记录集中**;因此需要 msxml .dll。  
@@ -59,7 +59,7 @@ rs.Open "titles.sav",,,,adCmdFile
 rs2.open s  
 ```  
   
- ADO 始终保留整个**记录集**对象。 如果要保存**Recordset**对象的一部分行，请使用**筛选器**方法缩小行或更改选择子句。 但是，必须使用客户端游标（**CursorLocation** = **adUseClient**）打开**记录集**对象，才能使用**筛选器**方法保存行的子集。 例如，若要检索以字母 "b" 开头的标题，可以将筛选器应用于打开的**Recordset**对象：  
+ ADO 始终保留整个**记录集**对象。 如果要保存**Recordset**对象的一部分行，请使用**筛选器**方法缩小行或更改选择子句。 但是，必须使用客户端游标（**CursorLocation**adUseClient）打开**记录集**对象  =  **adUseClient**，才能使用**筛选器**方法保存行的子集。 例如，若要检索以字母 "b" 开头的标题，可以将筛选器应用于打开的**Recordset**对象：  
   
 ```  
 rs.Filter "title_id like 'B*'"  

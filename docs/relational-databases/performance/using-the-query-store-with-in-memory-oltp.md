@@ -33,7 +33,7 @@ ms.locfileid: "72251293"
   
 -   启用查询存储后，将按默认方式收集查询、计划和编译时统计信息。 但是，不会激活运行时统计信息收集，除非你使用 [sys.sp_xtp_control_query_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 显式启用它。  
   
--   当你将 *new_collection_value 设置为 0 时，查询存储将停止为受影响的过程或整个 \@ 实例收集运行时统计信息*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+-   当你将 \@new_collection_value 设置为 0 时，查询存储将停止为受影响的过程或整个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例收集运行时统计信息。  
   
 -   不会保留使用 [sys.sp_xtp_control_query_exec_stats (Transact SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 配置的值。 请确保重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]后再次检查和配置统计信息收集。  
   
@@ -45,9 +45,9 @@ ms.locfileid: "72251293"
   
 -   在编译过程中，查询存储利用内存中 OLTP 中的计划生成机制捕获查询执行计划。 存储的计划在语义上等效于使用 `SET SHOWPLAN_XML ON` 所获取的计划，但有一处不同；查询存储中的计划按每个单独的语句进行拆分与存储。  
     
--   当你使用混合工作负荷在数据库中运行查询存储，可以使用 **sys.query_store_plan (Transact-SQL)** 中的 [is_natively_compiled](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) 快速查找由本机代码编译生成的查询计划。  
+-   当你使用混合工作负荷在数据库中运行查询存储，可以使用 [sys.query_store_plan (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) 中的 **is_natively_compiled** 快速查找由本机代码编译生成的查询计划。  
   
--   查询存储捕获模式（*ALTER TABLE* 语句中的 QUERY_CAPTURE_MODE  参数）不会对来自本机编译模块的查询产生影响，因为无论配置值为何，始终都会捕获它们。 这包括设置 `QUERY_CAPTURE_MODE = NONE`。  
+-   查询存储捕获模式（**ALTER TABLE** 语句中的 QUERY_CAPTURE_MODE 参数）不会对来自本机编译模块的查询产生影响，因为无论配置值为何，始终都会捕获它们。 这包括设置 `QUERY_CAPTURE_MODE = NONE`。  
   
 -   查询存储捕获的查询编译的持续时间仅包括在生成本机代码之前，查询优化所用的时间。 更确切地说，持续时间不包括 C 代码编译的时间，以及 C 代码生成所需的内部结构生成的时间。  
   

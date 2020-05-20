@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Jet
 - OLE DB provider for Microsoft Jet [ADO]
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 69d88aebe25f6cfa5490cce736c05780b87eee6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 204aca25a330dd912e1a9354adc92bbb7c58f847
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926646"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763208"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft Jet 的 microsoft OLE DB 提供程序概述
 Microsoft Jet 的 OLE DB 提供程序允许 ADO 访问 Microsoft Jet 数据库。
@@ -45,8 +45,8 @@ Microsoft.Jet.OLEDB.4.0
 |关键字|说明|
 |-------------|-----------------|
 |**提供程序**|指定 Microsoft Jet 的 OLE DB 提供程序。|
-|**数据源**|指定数据库路径和文件名（例如`c:\Northwind.mdb`）。|
-|**用户 ID**|指定用户名。 如果未指定此关键字，则默认情况下使用`admin`字符串 ""。|
+|**数据源**|指定数据库路径和文件名（例如 `c:\Northwind.mdb` ）。|
+|**用户 ID**|指定用户名。 如果未指定此关键字，则 `admin` 默认情况下使用字符串 ""。|
 |**密码**|指定用户密码。 如果未指定此关键字，则默认情况下使用空字符串（""）。|
 
 > [!NOTE]
@@ -91,7 +91,7 @@ Microsoft.Jet.OLEDB.4.0
 ## <a name="provider-specific-recordset-and-command-properties"></a>特定于提供程序的记录集和命令属性
  Jet 提供程序还支持多个特定于提供程序的**记录集**和**命令**属性。 这些属性通过**Recordset**或**Command**对象的**properties**集合进行访问和设置。 该表列出了 ADO 属性名称及其对应的 OLE DB 属性名称。
 
-|属性名称|说明|
+|属性名|描述|
 |-------------------|-----------------|
 |Jet OLEDB：大容量事务（DBPROP_JETOLEDB_BULKNOTRANSACTIONS）|指示是否对 SQL 大容量操作进行事务处理。 由于资源延迟，大型大容量操作在事务处理时可能会失败。|
 |Jet OLEDB：启用 Fat 游标（DBPROP_JETOLEDB_ENABLEFATCURSOR）|指示在为远程行源填充记录集时，Jet 是否应缓存多个行。|
@@ -131,7 +131,7 @@ Microsoft.Jet.OLEDB.4.0
 |目录术语|DBPROP_CATALOGTERM|
 |列定义|DBPROP_COLUMNDEFINITION|
 |当前目录|DBPROP_CURRENTCATALOG|
-|“数据源”|DBPROP_INIT_DATASOURCE|
+|数据源|DBPROP_INIT_DATASOURCE|
 |数据源名称|DBPROP_DATASOURCENAME|
 |数据源对象线程模型|DBPROP_DSOTHREADMODEL|
 |DBMS 名称|DBPROP_DBMSNAME|
@@ -146,7 +146,7 @@ Microsoft.Jet.OLEDB.4.0
 |最大行大小|DBPROP_MAXROWSIZE|
 |最大行大小包括 BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |选择中的最大表数|DBPROP_MAXTABLESINSELECT|
-|“模式”|DBPROP_INIT_MODE|
+|模式|DBPROP_INIT_MODE|
 |多个参数集|DBPROP_MULTIPLEPARAMSETS|
 |多个结果|DBPROP_MULTIPLERESULTS|
 |多个存储对象|DBPROP_MULTIPLESTORAGEOBJECTS|
@@ -159,7 +159,7 @@ Microsoft.Jet.OLEDB.4.0
 |选择列表中的 ORDER BY 列|DBPROP_ORDERBYCOLUMNSINSELECT|
 |输出参数可用性|DBPROP_OUTPUTPARAMETERAVAILABILITY|
 |通过引用访问器传递|DBPROP_BYREFACCESSORS|
-|密码|DBPROP_AUTH_PASSWORD|
+|Password|DBPROP_AUTH_PASSWORD|
 |永久性 ID 类型|DBPROP_PERSISTENTIDTYPE|
 |准备中止行为|DBPROP_PREPAREABORTBEHAVIOR|
 |准备提交行为|DBPROP_PREPARECOMMITBEHAVIOR|

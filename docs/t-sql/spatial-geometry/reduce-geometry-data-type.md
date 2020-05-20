@@ -54,7 +54,7 @@ ms.locfileid: "68101045"
   
  `Reduce()` 为 CircularString 实例返回 LineString、CircularString 或 CompoundCurve 实例     。  `Reduce()` 为 **CompoundCurve** 实例返回 **CompoundCurve** 或 **LineString** 实例。  
   
- 在 **Polygon** 实例中，近似算法独立应用于每个环。 如果返回的“Polygon”实例无效，该方法将生成 `FormatException`；例如，如果应用  **的目的是简化实例中的每个环，并且所生成的环发生重叠，则会创建无效的“MultiPolygon”实例**  `Reduce()`。  在有外环但无内环的“CurvePolygon”实例中， **会返回“CurvePolygon”、“LineString”或“Point”实例**`Reduce()`    。  如果 **CurvePolygon** 具有内环，则会返回 **CurvePolygon** 或 **MultiPoint** 实例。  
+ 在 **Polygon** 实例中，近似算法独立应用于每个环。 如果返回的“Polygon”实例无效，该方法将生成 `FormatException`；例如，如果应用 `Reduce()` 的目的是简化实例中的每个环，并且所生成的环发生重叠，则会创建无效的“MultiPolygon”实例。  在有外环但无内环的“CurvePolygon”实例中，`Reduce()` 会返回“CurvePolygon”、“LineString”或“Point”实例。  如果 **CurvePolygon** 具有内环，则会返回 **CurvePolygon** 或 **MultiPoint** 实例。  
   
  找到圆弧段时，近似算法会检查是否可以通过在给定公差一半之内的弦得出弧的近似值。 对于满足此条件的弦，计算中会用该弦来替换圆弧。 如果弦不满足此条件，则保留圆弧，并将近似算法应用于其余的段。  
   
@@ -70,7 +70,7 @@ SELECT @g.Reduce(.75).ToString();
 ```  
   
 ### <a name="b-using-reduce-with-varying-tolerance-levels-on-a-circularstring"></a>B. 对 CircularString 使用具有不同公差级别的 Reduce()  
- 以下示例对 `Reduce()`CircularString**实例使用具有三个公差级别的**：  
+ 以下示例对 **CircularString** 实例使用具有三个公差级别的 `Reduce()`：  
   
 ```
  DECLARE @g geometry = 'CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0)'; 
@@ -90,7 +90,7 @@ SELECT @g.Reduce(.75).ToString();
  返回的每个实例都包含端点 (0 0) 和 (24 0)。  
   
 ### <a name="c-using-reduce-with-varying-tolerance-levels-on-a-compoundcurve"></a>C. 对 CompoundCurve 使用具有不同公差级别的 Reduce()  
- 以下示例对 `Reduce()`CompoundCurve**实例使用具有两个公差级别的**：  
+ 以下示例对 **CompoundCurve** 实例使用具有两个公差级别的 `Reduce()`：  
   
 ```
  DECLARE @g geometry = 'COMPOUNDCURVE(CIRCULARSTRING(0 0, 8 8, 16 0, 20 -4, 24 0),(24 0, 20 4, 16 0))';  

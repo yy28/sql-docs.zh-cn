@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Cell object [ADO MD]
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bbf97a4095f2295b8851f87ba20ab083938e70ed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d309ba98c1e50d8eb6fbe47fb9452f8ea7df35ba
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67947748"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761795"
 ---
 # <a name="cell-object-ado-md"></a>单元对象 (ADO MD)
 表示单元集内包含的轴坐标相交处的数据。  
@@ -42,7 +42,7 @@ ms.locfileid: "67947748"
   
  **Properties**集合包含提供程序提供的属性。 下表列出了可用的属性。 实际属性列表可能有所不同，具体取决于提供程序的实现。 有关可用属性的更完整列表，请参阅提供程序的文档。  
   
-|名称|说明|  
+|“属性”|说明|  
 |----------|-----------------|  
 |BackColor|显示单元格时使用的背景色。|  
 |FontFlags|字体上的位掩码细节效果。|  

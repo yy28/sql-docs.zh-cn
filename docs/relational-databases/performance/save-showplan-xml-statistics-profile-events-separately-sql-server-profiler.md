@@ -23,11 +23,11 @@ ms.locfileid: "74165570"
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>单独保存 Showplan XML Statistics Profile 事件 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主题说明如何使用 **将在跟踪中捕获的** Showplan XML Statistics Profile [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]事件保存到单独的 .SQLPlan 文件中。 可在  **中打开 Showplan XML Statistics Profile 事件文件，这样就可以查看每个事件的图形执行计划**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+  本主题说明如何使用 **将在跟踪中捕获的** Showplan XML Statistics Profile [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]事件保存到单独的 .SQLPlan 文件中。 可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中打开 Showplan XML Statistics Profile 事件文件，这样就可以查看每个事件的图形执行计划。  
   
 ## <a name="save-showplan-xml-statistics-profile-events-separately"></a>单独保存 Showplan XML Statistics Profile 事件  
   
-1. 在“文件”菜单上，选择“新建跟踪”，然后连接到  **实例**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+1. 在“文件”菜单上，选择“新建跟踪”，然后连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
      此时，将显示 **“跟踪属性”** 对话框。  
   

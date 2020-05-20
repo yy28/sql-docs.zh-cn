@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - NextRecordset method [ADO]
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3c7af4f5d217670ab23e71a3c53ccd5cf7944b0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f6eaf12308db09c81b426b33f0002cd4664f62b8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932038"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762388"
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset 方法 (ADO)
 清除当前[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象，并通过前进一系列命令来返回下一个**记录集**。  

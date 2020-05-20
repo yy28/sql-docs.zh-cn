@@ -13,14 +13,14 @@ helpviewer_keywords:
 - NumericScale property [ADO], VC++ example
 - Precision property [ADO], VC++ example
 ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 70a751db424cec07a0ac617b3620316a07936400
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 35df19bc706e1844e7f6c9e5f3004614c1df5bd2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917968"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762306"
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>NumericScale 和 Precision 属性示例 (VC++)
 此示例使用[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)和[Precision](../../../ado/reference/ado-api/precision-property-ado.md)属性显示***Pubs***数据库的***折扣***表中的字段的小数位数和精度。  

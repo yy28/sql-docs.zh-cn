@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Recordset object [ADO]
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e76bc993b6f3fed781b8458bc7cf4a70081cd167
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fd92fc3d88372047262b91378341bc9aadcb35ef
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931367"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761865"
 ---
 # <a name="recordset-object-ado"></a>记录集对象 (ADO)
 表示基表中的整个记录集或执行的命令的结果。 **记录集**对象随时仅指集内的单个记录作为当前记录。  
@@ -50,7 +50,7 @@ ms.locfileid: "67931367"
   
  可使用[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 **MoveLast**、 **MoveNext**和**MovePrevious**方法;[Move](../../../ado/reference/ado-api/move-method-ado.md)方法;以及[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)、 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)和[Filter](../../../ado/reference/ado-api/filter-property.md)属性，用于重定位当前记录（假定提供程序支持相关功能）。 只进**记录集**对象仅支持[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)方法。 当您使用**移动**方法来访问每个记录（或枚举**记录集**）时，您可以使用**BOF**和**EOF**属性来确定是否已移出**记录集**的开头或结尾。  
   
- 使用**Recordset**对象的任何功能之前，必须对对象调用**支持**方法，以验证该功能是否受支持或可用。 如果**支持**方法返回 false，则不得使用该功能。 例如，如果`Recordset.Supports(adMovePrevious)`返回**True**，则可以使用**MovePrevious**方法。 否则，你将收到一个错误，因为**记录集**对象可能已关闭，并且该实例上呈现的功能不可用。 如果你感兴趣的功能不受支持，则**支持**将返回 false。 在这种情况下，应避免在**Recordset**对象上调用相应的属性或方法。  
+ 使用**Recordset**对象的任何功能之前，必须对对象调用**支持**方法，以验证该功能是否受支持或可用。 如果**支持**方法返回 false，则不得使用该功能。 例如，如果返回 True，则可以使用**MovePrevious**方法 `Recordset.Supports(adMovePrevious)` 。 **True** 否则，你将收到一个错误，因为**记录集**对象可能已关闭，并且该实例上呈现的功能不可用。 如果你感兴趣的功能不受支持，则**支持**将返回 false。 在这种情况下，应避免在**Recordset**对象上调用相应的属性或方法。  
   
  **记录集**对象可以支持两种类型的更新：即时和批处理。 在立即更新中，一旦调用[Update](../../../ado/reference/ado-api/update-method.md)方法，对数据所做的所有更改都会立即写入基础数据源。 你还可以使用[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)和**Update**方法将值数组作为参数传递，并同时更新记录中的多个字段。  
   

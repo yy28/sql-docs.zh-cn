@@ -35,9 +35,9 @@ ms.locfileid: "71294218"
 ## <a name="data-profiles"></a>数据配置文件  
  若要查看数据配置文件，请将数据事件探查任务配置为将其输出发送到文件，然后使用独立的数据配置文件查看器。 若要打开数据配置文件查看器，请执行以下操作之一。  
   
--   在“ **设计器”中右键单击“数据事件探查”** [!INCLUDE[ssIS](../../includes/ssis-md.md)]任务，然后单击“编辑”  。 在 **“数据事件探查任务编辑器”** 的 **“常规”** 页上，单击 **“打开配置文件查看器”** 。  
+-   在“[!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器”中右键单击“数据事件探查”任务，然后单击“编辑”。 在 **“数据事件探查任务编辑器”** 的 **“常规”** 页上，单击 **“打开配置文件查看器”** 。  
   
--   在文件夹 *drive>:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 中，运行 DataProfileViewer.exe\<* 。  
+-   在文件夹 \<drive>:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 中，运行 DataProfileViewer.exe。  
   
  该查看器使用多个窗格来显示请求的配置文件和计算所得的结果，包含可选详细信息和明细功能：  
   
@@ -222,7 +222,7 @@ ms.locfileid: "71294218"
  显示决定列值决定依赖列的行数。  
   
  **冲突计数**  
- 显示决定列值不能决定依赖列的行数。 （在这些行中，依赖值是 **dependent column name> 列中显示的值。\<** ）  
+ 显示决定列值不能决定依赖列的行数。 （在这些行中，依赖值是 \<dependent column name> 列中显示的值。）  
   
  **支持百分比**  
  显示决定列决定依赖列的行数的百分比。  

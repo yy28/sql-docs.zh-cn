@@ -36,7 +36,7 @@ ms.locfileid: "75320474"
   
     -   如果值为 **1**，则该发布支持此功能。  
   
-    -   如果值为 **0**，则在发布服务器上对发布数据库执行 [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)。 将 **的值指定为 allow_initialize_from_backup**`@property`，并将  **的值指定为 true**`@value`。  
+    -   如果值为 **0**，则在发布服务器上对发布数据库执行 [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)。 将 `@property` 的值指定为 allow_initialize_from_backup ，并将 `@value` 的值指定为 true。  
   
 2.  对于新发布，在发布服务器上对发布数据库执行 [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)。 将 **allow_initialize_from_backup** 的值指定为 **true**。 有关详细信息，请参阅 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)。  
   

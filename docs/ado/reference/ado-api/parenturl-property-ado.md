@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ParentURL property [ADO]
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 54b2db44fe2e1971356f96d33aa8de0b02781b1e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cb0669abc03da183fc70c289631fed67bb41829d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931644"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761985"
 ---
 # <a name="parenturl-property-ado"></a>ParentURL 属性 (ADO)
 指示指向当前**记录**对象的父[记录](../../../ado/reference/ado-api/record-object-ado.md)的绝对 URL 字符串。  
@@ -38,9 +38,9 @@ record.ActiveConnection = "https://first"
 record.Open "second"  
 ```  
   
- 现在， `the` **ParentURL**属性`"https://first"`的值与**ActiveConnection**相同。  
+ 现在， `the` **ParentURL**属性的值与 `"https://first"` **ActiveConnection**相同。  
   
- 源还可以是绝对 URL，如， `"https://first/second"`。 然后**ParentURL** `"https://first"`，ParentURL 属性是上述`"second"`级别。  
+ 源还可以是绝对 URL，如， `"https://first/second"` 。 然后， **ParentURL**属性是 `"https://first"` 上述级别 `"second"` 。  
   
  如果以下情况，此属性可能为 null 值：  
   

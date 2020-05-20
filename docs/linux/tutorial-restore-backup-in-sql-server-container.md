@@ -97,7 +97,7 @@ ms.locfileid: "79198264"
    docker ps -a
    ```
 
-1. 如果“状态”列显示“正常运行”，则 SQL Server 将在容器中运行，并侦听“端口”列中指定的端口    。 如果 SQL Server 容器的“状态”列显示“已退出”，则参阅[配置指南的疑难解答部分](sql-server-linux-configure-docker.md#troubleshooting)   。
+1. 如果“状态”列显示“正常运行”，则 SQL Server 将在容器中运行，并侦听“端口”列中指定的端口    。 如果 SQL Server 容器的“状态”列显示“已退出”，则参阅[配置指南的疑难解答部分](sql-server-linux-configure-docker.md#troubleshooting)。
 
   ```bash
   $ sudo docker ps -a
@@ -153,7 +153,7 @@ ms.locfileid: "79198264"
    docker ps -a
    ```
 
-1. 如果“状态”列显示“正常运行”，则 SQL Server 将在容器中运行，并侦听“端口”列中指定的端口    。 如果 SQL Server 容器的“状态”列显示“已退出”，则参阅[配置指南的疑难解答部分](sql-server-linux-configure-docker.md#troubleshooting)   。
+1. 如果“状态”列显示“正常运行”，则 SQL Server 将在容器中运行，并侦听“端口”列中指定的端口    。 如果 SQL Server 容器的“状态”列显示“已退出”，则参阅[配置指南的疑难解答部分](sql-server-linux-configure-docker.md#troubleshooting)。
 
    ```bash
    $ sudo docker ps -a
@@ -358,7 +358,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 
 将数据库还原到容器后，可能还需要定期在正在运行的容器中创建数据库备份。 步骤与之前步骤的模式类似，但顺序相反。
 
-1. 使用“BACKUP DATABASE”Transact-SQL 命令在容器中创建数据库备份  。 本教程在之前创建的 /var/opt/mssql/backup 目录中创建新的备份文件 wwi_2.bak  。
+1. 使用“BACKUP DATABASE”Transact-SQL 命令在容器中创建数据库备份  。 本教程在之前创建的 /var/opt/mssql/backup 目录中创建新的备份文件 wwi_2.bak。
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -407,7 +407,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 
 ## <a name="use-the-persisted-data"></a>使用持久化数据
 
-除了获取数据库备份来保护数据外，还可以使用数据卷容器。 本教程的开头使用 `-v sql1data:/var/opt/mssql` 参数创建了 sql1 容器  。 即使已删除了容器，sql1data 数据卷容器仍会保留 /var/opt/mssql 数据   。 以下步骤完全删除 sql1 容器  ，然后使用保存的数据创建新的容器 sql2  。
+除了获取数据库备份来保护数据外，还可以使用数据卷容器。 本教程的开头使用 `-v sql1data:/var/opt/mssql` 参数创建了 sql1 容器。 即使已删除了容器，sql1data 数据卷容器仍会保留 /var/opt/mssql 数据   。 以下步骤完全删除 sql1 容器  ，然后使用保存的数据创建新的容器 sql2  。
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

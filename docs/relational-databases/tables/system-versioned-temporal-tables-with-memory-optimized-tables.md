@@ -67,7 +67,7 @@ ms.locfileid: "74165457"
 
 数据刷新会从内存中内部缓冲区删除早于当前运行的最早事务的所有记录，以便将这些记录移动到基于磁盘的历史记录表。
 
-可通过调用 [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md) 并指定架构和表名来强制进行数据刷新：sys.sp_xtp_flush_temporal_history **、@schema_name@object_name** 。 利用这个由用户执行的命令，将像在系统按内部计划调用数据刷新任务时一样调用相同的数据移动进程。
+可通过调用 [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md) 并指定架构和表名来强制进行数据刷新：sys.sp_xtp_flush_temporal_history @schema_name、@object_name。 利用这个由用户执行的命令，将像在系统按内部计划调用数据刷新任务时一样调用相同的数据移动进程。
 
 ## <a name="see-also"></a>另请参阅
 

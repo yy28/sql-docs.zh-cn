@@ -35,7 +35,7 @@ ms.locfileid: "71174230"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  可以从下列位置查看和修改发布服务器的推送订阅属性：  
   
--   “订阅属性 - **发布服务器>：\<PublicationDatabase>”对话框，可从 \< 中获取。** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+-   “订阅属性 - \<发布服务器>：\<PublicationDatabase>”对话框，可从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中获取。  
   
 -   **“所有订阅”** 选项卡，该选项卡可以从复制监视器中找到。 有关启动复制监视器的信息，请参阅[启动复制监视器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
   
@@ -64,17 +64,17 @@ ms.locfileid: "71174230"
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>查看快照或事务发布的推送订阅的属性  
   
-1.  在发布服务器上，对发布数据库执行 [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)。 指定 **publication、\@subscriber，并为** article 指定值 all **\@**  **\@** 。  
+1.  在发布服务器上，对发布数据库执行 [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)。 指定 \@publication、\@subscriber，并为 \@article 指定值 all。  
   
-2.  在发布服务器上，对发布数据库执行 [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)，同时指定 **subscriber\@** 。  
+2.  在发布服务器上，对发布数据库执行 [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)，同时指定 \@subscriber。  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>更改快照或事务发布的推送订阅的属性  
   
-1.  在发布服务器上，对发布数据库执行 [sp_changesubscriber](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)，同时为要更改的订阅服务器属性指定 **subscriber 及任何参数\@** 。  
+1.  在发布服务器上，对发布数据库执行 [sp_changesubscriber](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)，同时为要更改的订阅服务器属性指定 \@subscriber 及任何参数。  
   
-2.  在发布服务器上，对发布数据库执行 [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)。 指定 **publication、\@subscriber、** destination_db，为 **article 指定值 all，将 \@property 指定为要更改的订阅属性，并将** value 指定为新值 **\@**  **\@** **\@** **\@** 。 这将更改推送订阅的安全设置。  
+2.  在发布服务器上，对发布数据库执行 [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)。 指定 \@publication、\@subscriber、\@destination_db，为 \@article 指定值 all，将 \@property 指定为要更改的订阅属性，并将 \@value 指定为新值。 这将更改推送订阅的安全设置。  
   
-3.  （可选）若要更改订阅的 Data Transformation Services (DTS) 包属性，请在订阅服务器上，对订阅数据库执行 [sp_changesubscriptiondtsinfo](../../relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql.md) 。 为 **jobid 指定分发代理作业的 ID，并指定以下 DTS 包属性\@** ：  
+3.  （可选）若要更改订阅的 Data Transformation Services (DTS) 包属性，请在订阅服务器上，对订阅数据库执行 [sp_changesubscriptiondtsinfo](../../relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql.md) 。 为 \@jobid 指定分发代理作业的 ID，并指定以下 DTS 包属性：  
   
     -   **dts_package_name\@**  
   
@@ -89,13 +89,13 @@ ms.locfileid: "71174230"
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-merge-publication"></a>查看合并发布的推送订阅的属性  
   
-1.  在发布服务器上，对发布数据库执行 [sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)。 指定 **publication 和 \@subscriber** **\@** 。  
+1.  在发布服务器上，对发布数据库执行 [sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)。 指定 \@publication 和 \@subscriber。  
   
-2.  在发布服务器上，执行 [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)，同时指定 **subscriber\@** 。  
+2.  在发布服务器上，执行 [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)，同时指定 \@subscriber。  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-merge-publication"></a>更改合并发布的推送订阅的属性  
   
-1.  在发布服务器上，对发布数据库执行 [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)。 指定 **publication、\@subscriber、** subscriber_db，将 **property 指定为要更改的订阅属性，并将 \@value 指定为新值** **\@** **\@** **\@** 。  
+1.  在发布服务器上，对发布数据库执行 [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)。 指定 \@publication、\@subscriber、\@subscriber_db，将 \@property 指定为要更改的订阅属性，并将 \@value 指定为新值。  
   
 ###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
   

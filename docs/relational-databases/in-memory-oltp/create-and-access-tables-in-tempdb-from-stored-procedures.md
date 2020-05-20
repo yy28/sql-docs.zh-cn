@@ -25,7 +25,7 @@ ms.locfileid: "74412717"
 
 有关临时表的内存优化和表变量方案的详细信息，请参阅： [通过使用内存优化获得更快的临时表和表变量](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)。
   
-  下面的示例演示如何将使用具有三列（id、ProductID、Quantity）的临时表替换为使用 dbo.OrderQuantityByProduct 类型的表变量 **OrderQuantityByProduct\@**  ：  
+  下面的示例演示如何将使用具有三列（id、ProductID、Quantity）的临时表替换为使用 dbo.OrderQuantityByProduct 类型的表变量 \@OrderQuantityByProduct：  
   
 ```sql  
 CREATE TYPE dbo.OrderQuantityByProduct   

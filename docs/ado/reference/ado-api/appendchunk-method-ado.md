@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - AppendChunk method [ADO]
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f9d575460daf0f801f6d6dd2e80b0c67f4886dc7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5ebf6f52e4c2ac9cc4875db26e633457915c0a5e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920564"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762936"
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk 方法 (ADO)
 将数据追加到大文本或二进制数据[字段](../../../ado/reference/ado-api/field-object.md)，或追加到[参数](../../../ado/reference/ado-api/parameter-object.md)对象。  
@@ -37,7 +37,7 @@ object.AppendChunk Data
  *object*  
  一个**字段**或**参数**对象。  
   
- *数据*  
+ *Data*  
  一个包含要追加到对象的数据的**变量**。  
   
 ## <a name="remarks"></a>备注  

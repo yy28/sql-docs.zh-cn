@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectPromptEnum enumeration [ADO]
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: afd5d9ca0de6b8d2ffba75f862e6ca0afb594848
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 61a66866f8206f2df4cbdeb3f2144e0ac12ac695
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919447"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762588"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 指定在打开与数据源的连接时是否应显示一个对话框，以提示输入缺少的参数。  
   
-|Constant|Value|说明|  
+|返回的常量|值|说明|  
 |--------------|-----------|-----------------|  
 |**adPromptAlways**|1|始终提示。|  
 |**adPromptComplete**|2|如果需要详细信息，请提示。|  
@@ -35,7 +35,7 @@ ms.locfileid: "67919447"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
   
-|Constant|  
+|返回的常量|  
 |--------------|  
 |AdoEnums. ConnectPrompt. ALWAYS|  
 |AdoEnums. ConnectPrompt. 完成|  

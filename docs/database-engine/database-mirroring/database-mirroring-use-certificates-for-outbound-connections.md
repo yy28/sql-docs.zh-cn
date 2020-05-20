@@ -64,7 +64,7 @@ ms.locfileid: "70846660"
      例如，为 HOST_A 系统创建一个证书。  
   
     > [!IMPORTANT]  
-    >  如果您想要使用超过一年的证书，则通过在 CREATE CERTIFICATE 语句中使用 EXPIRY_DATE 选项，按 UTC 时间指定到期日期。 此外，我们建议您使用 SQL Server Management Studio 来创建基于策略的管理规则，以便在证书到期时提醒您。 使用策略管理的“创建新条件”对话框，在“证书”方面的“**ExpirationDate”字段中创建此规则** **\@**  。 有关详细信息，请参阅 [使用基于策略的管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) 和 [保护 SQL Server](../../relational-databases/security/securing-sql-server.md)。  
+    >  如果您想要使用超过一年的证书，则通过在 CREATE CERTIFICATE 语句中使用 EXPIRY_DATE 选项，按 UTC 时间指定到期日期。 此外，我们建议您使用 SQL Server Management Studio 来创建基于策略的管理规则，以便在证书到期时提醒您。 使用策略管理的“创建新条件”对话框，在“证书”方面的“\@ExpirationDate”字段中创建此规则。 有关详细信息，请参阅 [使用基于策略的管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) 和 [保护 SQL Server](../../relational-databases/security/securing-sql-server.md)。  
   
     ```  
     USE master;  

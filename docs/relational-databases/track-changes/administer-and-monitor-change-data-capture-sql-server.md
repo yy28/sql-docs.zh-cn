@@ -79,7 +79,7 @@ ms.locfileid: "74095318"
 
 变更数据捕获使用基于保持期的清理策略来管理更改表的大小。 清除机制包含一个在启用第一个数据库表时所创建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业。 单个清除作业可处理所有数据库更改表的清除工作并将相同的保持值应用到所有定义的捕获实例。
   
-清除作业可通过运行无参数存储过程 `sp_MScdc_cleanup_job` 来启动。 此存储过程开始时，将从 `msdb.dbo.cdc_jobs` 中提取为清除作业配置的保持期和阈值。 保持值用于计算更改表的新低水印。 从 `tran_end_time` 表的最大 `cdc.lsn_time_mapping` 值中减去指定分钟数即可获得日期时间值形式的新低水印。 然后，使用 CDC.lsn_time_mapping 表将该日期时间值转换为相应的 `lsn` 值。 如果表中多个项共享相同的提交时间，则会选择与具有最小 `lsn` 的项相对应的 `lsn` 作为新低水印。 该 `lsn` 值将传递到 `sp_cdc_cleanup_change_tables` 以从数据库更改表中删除更改表项。  
+清除作业可通过运行无参数存储过程 `sp_MScdc_cleanup_job` 来启动。 此存储过程开始时，将从 `msdb.dbo.cdc_jobs` 中提取为清除作业配置的保持期和阈值。 保持值用于计算更改表的新低水印。 从 `cdc.lsn_time_mapping` 表的最大 `tran_end_time` 值中减去指定分钟数即可获得日期时间值形式的新低水印。 然后，使用 CDC.lsn_time_mapping 表将该日期时间值转换为相应的 `lsn` 值。 如果表中多个项共享相同的提交时间，则会选择与具有最小 `lsn` 的项相对应的 `lsn` 作为新低水印。 该 `lsn` 值将传递到 `sp_cdc_cleanup_change_tables` 以从数据库更改表中删除更改表项。  
   
 > [!NOTE]  
 > 使用最近事务的提交时间作为计算新低水印的基准的优点在于：它可使更改在更改表中保留指定的时间。 即使在捕获进程运行落后时也会出现这种情况。 通过为实际低水印选择具有共享提交时间的最小 `lsn`，与当前低水印具有相同提交时间的所有项会继续保留在更改表中。  

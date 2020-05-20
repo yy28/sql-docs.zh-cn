@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Charset property [ADO]
 ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 69d65a5330ea83b955629cd9de9684ecc47906ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a5750364a745cda43459ecba69ba42cbf6f3da40
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920085"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763138"
 ---
 # <a name="charset-property-ado"></a>Charset 属性 (ADO)
 指示一个字符集，文本[流](../../../ado/reference/ado-api/stream-object-ado.md)的内容应在**流**对象的内部缓冲区中转换为存储。  

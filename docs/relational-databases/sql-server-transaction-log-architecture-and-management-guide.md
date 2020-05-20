@@ -82,11 +82,11 @@ ms.locfileid: "79287081"
 >    -  如果增长在 64 MB 到 1GB 之间，创建 8 个 VLF，补偿此增长大小（如增长 512 MB，创建八个 64MB 的 VLF）
 >    -  如果增长大于 1GB，创建 16 个 VLF，补偿此增长大小（如增长 8 GB，创建十六个 512MB VLF）
 
-如果这些日志文件由于许多微小增量而增长到很大，则它们将具有很多虚拟日志文件。 这会降低数据库启动以及日志备份和还原操作的速度。  相反，如果日志文件设置得较大，但只有少量或仅一个增量，则它们将只有几个非常大的虚拟日志文件。 若要深入了解如何正确估计事务日志的所需大小  和自动增长  设置，请参阅[管理事务日志文件的大小](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations)的“建议”  部分。
+如果这些日志文件由于许多微小增量而增长到很大，则它们将具有很多虚拟日志文件。 这会降低数据库启动以及日志备份和还原操作的速度。  相反，如果日志文件设置得较大，但只有少量或仅一个增量，则它们将只有几个非常大的虚拟日志文件。 若要深入了解如何正确估计事务日志的所需大小和自动增长设置，请参阅[管理事务日志文件的大小](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations)的“建议”部分。
 
 建议为日志文件分配一个接近于最终所需大小的 size  值，使用所需增量实现最佳 VLF 分发，并且还要分配一个相对较大的 growth_increment  值。 请参考以下提示，确定当前事务日志大小的最佳 VLF 分发。 
- - `ALTER DATABASE` 的 `SIZE` 参数设置的 size 值是指日志文件的初始大小  。
- - `ALTER DATABASE` 的 `FILEGROWTH` 参数设置的 growth_increment  值（也称为自动增长值）是指每次需要新空间时添加到文件的空间大小。 
+ - `ALTER DATABASE` 的 `SIZE` 参数设置的 size 值是指日志文件的初始大小。
+ - `ALTER DATABASE` 的 `FILEGROWTH` 参数设置的 growth_increment 值（也称为自动增长值）是指每次需要新空间时添加到文件的空间大小。 
  
 有关 `ALTER DATABASE` 的 `FILEGROWTH` 和 `SIZE` 参数的详细信息，请参阅 [ALTER DATABASE (Transact-SQL) 文件和文件组选项](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
 

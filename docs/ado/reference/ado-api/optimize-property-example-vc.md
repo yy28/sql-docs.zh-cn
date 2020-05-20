@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Optimize property [ADO], VC++ example
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5000a537e068136de98e8635f348ff6aa3d9e364
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bc8268f65e8bd7206ff0be1423785e1862147bed
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931831"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762070"
 ---
 # <a name="optimize-property-example-vc"></a>Optimize 属性示例 (VC++)
 此示例演示[字段](../../../ado/reference/ado-api/field-object.md)对象动态**优化**属性。 不会为**Pubs**数据库中**作者**表的**zip**字段编制索引。 将 "**压缩**" 字段中的 "[优化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)" 属性设置为 " **True** " 可授予 ADO 生成索引，从而提高[Find](../../../ado/reference/ado-api/find-method-ado.md)方法的性能。  

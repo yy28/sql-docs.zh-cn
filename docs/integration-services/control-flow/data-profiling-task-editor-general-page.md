@@ -80,7 +80,7 @@ ms.locfileid: "71294202"
  打开数据配置文件查看器。 独立数据配置文件查看器显示数据事件探查任务的数据配置文件输出。 可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包内运行数据事件探查任务并计算数据配置文件之后，查看这些数据配置文件输出。  
   
 > [!NOTE]  
->  还可以通过在文件夹 *drive>:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 中运行 DataProfileViewer.exe 来打开数据配置文件查看器\<* 。  
+>  还可以通过在文件夹 \<drive>:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 中运行 DataProfileViewer.exe 来打开数据配置文件查看器。  
   
 ## <a name="see-also"></a>另请参阅  
  [单个表快速配置文件窗体（数据事件探查任务）](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)   

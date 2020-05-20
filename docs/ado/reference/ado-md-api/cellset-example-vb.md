@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Cellset object [ADO MD], Visual Basic example
 ms.assetid: 2666ad1c-b48e-4b2c-b269-5a9f4e4a7810
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1b099a1eb5d513285b33b26f5623f1e14b322731
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 943e36057478cbb6acfcabc0fa2ad713b4e43ac5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67911582"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761775"
 ---
 # <a name="cellset-example-vb"></a>单元集示例 (VB)
 此 Visual Basic 项目演示了使用 ADO MD 访问多维数据集数据的基础知识。 它显示列标题和行标题的成员标题，然后在单元集内显示特定单元格的格式化值。  

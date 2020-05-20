@@ -13,23 +13,23 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectModeEnum enumeration [ADO]
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: debf6f9dc4ac1326caf9fbf32b65f15f34a19094
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6e78ab5988d88447539da7c492f0b02943693844
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933459"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762608"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 指定可用于修改[连接](../../../ado/reference/ado-api/connection-object-ado.md)中的数据、打开[记录](../../../ado/reference/ado-api/record-object-ado.md)或为**Record**和[Stream](../../../ado/reference/ado-api/stream-object-ado.md)对象的[Mode](../../../ado/reference/ado-api/mode-property-ado.md)属性指定值的可用权限。  
   
-|Constant|值|说明|  
+|返回的常量|值|说明|  
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|指示只读权限。|  
 |**adModeReadWrite**|3|指示读取/写入权限。|  
-|**adModeRecursive**|0x400000|与其他* \*ShareDeny\* *值（**adModeShareDenyNone**、 **adModeShareDenyWrite**或**adModeShareDenyRead**）结合使用，以将共享限制传播到当前**记录**的所有子记录。 如果**记录**没有任何子级，则不会产生任何影响。 如果将运行时错误仅用于**adModeShareDenyNone** ，则会生成此错误。 但是，在与其他值结合使用时，可以将它与**adModeShareDenyNone**一起使用。 例如，可以使用 "**adModeRead** " 或 " **adModeShareDenyNone** " 或 " **adModeRecursive**"。|  
+|**adModeRecursive**|0x400000|与其他* \* ShareDeny \* *值（**adModeShareDenyNone**、 **adModeShareDenyWrite**或**adModeShareDenyRead**）结合使用，以将共享限制传播到当前**记录**的所有子记录。 如果**记录**没有任何子级，则不会产生任何影响。 如果将运行时错误仅用于**adModeShareDenyNone** ，则会生成此错误。 但是，在与其他值结合使用时，可以将它与**adModeShareDenyNone**一起使用。 例如，可以使用 "**adModeRead** " 或 " **adModeShareDenyNone** " 或 " **adModeRecursive**"。|  
 |**adModeShareDenyNone**|16|允许其他人打开具有任何权限的连接。 不能对其他人拒绝读取或写入访问权限。|  
 |**adModeShareDenyRead**|4|阻止其他人打开具有读取权限的连接。|  
 |**adModeShareDenyWrite**|8|阻止其他人打开具有写入权限的连接。|  
@@ -40,7 +40,7 @@ ms.locfileid: "67933459"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
   
-|Constant|  
+|返回的常量|  
 |--------------|  
 |AdoEnums. ConnectMode. READ|  
 |AdoEnums. ConnectMode|  

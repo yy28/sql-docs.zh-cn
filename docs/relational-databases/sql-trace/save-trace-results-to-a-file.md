@@ -35,7 +35,7 @@ ms.locfileid: "70846821"
   
 -   执行查询优化  
   
- 为存储过程 sp_trace_create 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tracefile 参数指定路径和文件名后， **会将跟踪结果保存到文件中\@**  。  
+ 为存储过程 sp_trace_create 的 \@tracefile 参数指定路径和文件名后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将跟踪结果保存到文件中。  
   
 > [!NOTE]  
 >  如果为存储过程 **sp_trace_create** 指定路径用来保存跟踪文件，则服务器必须可以访问该目录。 同时注意，如果为 **sp_trace_create**指定本地目录，则该目录应是服务器上的本地目录。  

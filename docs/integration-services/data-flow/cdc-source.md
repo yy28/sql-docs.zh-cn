@@ -45,7 +45,7 @@ ms.locfileid: "71293281"
   
 -   基于所确定的 CDC 处理范围的 CDC 状态包变量的名称。 CDC 源不修改该变量。  
   
- CDC 源返回的数据与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 函数 cdc.fn_cdc_get_all_changes_**capture-instance-name> 或 cdc.fn_cdc_get_net_changes_\<capture-instance-name>（在可用时）返回的数据相同** **\<** 。 唯一可选的添加是列 **__$initial_processing** ，它指示当前处理范围是否可与表的初始加载重叠。 有关初始处理的详细信息，请参阅 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)。  
+ CDC 源返回的数据与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 函数 cdc.fn_cdc_get_all_changes_\<capture-instance-name> 或 cdc.fn_cdc_get_net_changes_\<capture-instance-name>（在可用时）返回的数据相同。 唯一可选的添加是列 **__$initial_processing** ，它指示当前处理范围是否可与表的初始加载重叠。 有关初始处理的详细信息，请参阅 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)。  
   
  CDC 源有一个常规输出和一个错误输出。  
   
@@ -95,7 +95,7 @@ use <cdc-enabled-database-name>
 #### <a name="sql-server-error-message"></a>SQL Server 错误消息  
  下面是可以由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回的消息：  
   
- 为过程或函数 cdc.fn_cdc_get_net_changes_ **..> 提供的参数数目不足\<** 。  
+ 为过程或函数 cdc.fn_cdc_get_net_changes_\<..> 提供的参数数目不足。  
   
  此错误并不表示缺少参数。 这意味着 CDC 状态变量中的开始或结束 LSN 值无效。  
   
@@ -125,7 +125,7 @@ use <cdc-enabled-database-name>
 -   [使用 CDC 源提取更改数据](../../integration-services/data-flow/extract-change-data-using-the-cdc-source.md)  
   
 ## <a name="cdc-source-editor-connection-manager-page"></a>CDC 源编辑器（“连接管理器”页）
-  可以使用“CDC 源编辑器”  对话框的“连接管理器”  页，为 CDC 源从其中读取更改行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库（CDC 数据库）选择 ADO.NET 连接管理器。 一旦选择了 CDC 数据库，则需要选择该数据库中的一个捕获表。  
+  可以使用“CDC 源编辑器”对话框的“连接管理器”页，为 CDC 源从其中读取更改行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库（CDC 数据库）选择 ADO.NET 连接管理器。 一旦选择了 CDC 数据库，则需要选择该数据库中的一个捕获表。  
   
  有关 CDC 源的详细信息，请参阅 [CDC Source](../../integration-services/data-flow/cdc-source.md)。  
   
@@ -151,7 +151,7 @@ use <cdc-enabled-database-name>
  **捕获实例**  
  选择或键入具有要读取的 CDC 表的“CDC 捕获实例”的名称。  
   
- 一个捕获源表可具有一个或两个捕获实例，以便通过架构更改处理表定义的无缝转换。 如果为要捕获的源表定义了一个捕获实例，则选择要在此处使用的捕获实例。 表 [schema].[table] 的默认捕获实例名称为 \<schema>_\<table>，但使用的实际捕获实例名称可能会不同。 读取的实际表是 CDC 表 cdc .**capture-instance>_CT\<** 。  
+ 一个捕获源表可具有一个或两个捕获实例，以便通过架构更改处理表定义的无缝转换。 如果为要捕获的源表定义了一个捕获实例，则选择要在此处使用的捕获实例。 表 [schema].[table] 的默认捕获实例名称为 \<schema>_\<table>，但使用的实际捕获实例名称可能会不同。 读取的实际表是 CDC 表 cdc .\<capture-instance>_CT。  
   
  **CDC 处理模式**  
  选择可以最好地满足您的处理需要的处理模式。 可能的选项包括：  
@@ -162,7 +162,7 @@ use <cdc-enabled-database-name>
   
 -   **净值**：对于当前 CDC 处理范围中修改的每个源行，仅返回一个更改行。 如果某一源行更新了多次，将生成合并的更改（例如，插入+更新作为单个更新生成，更新+删除作为单个删除生成）。 在净更改处理模式下工作时，可以拆分对删除、插入和更新输出的更改并且并行处理它们，因为单个源行出现多次。  
   
--   **具有更新掩码的净值**：此模式类似于一般的净值模式，但它还添加了命名模式为 __$**column-name>\<_Changed 的布尔值列（指示当前更改行中已更改的列）\_** 。  
+-   **具有更新掩码的净值**：此模式类似于一般的净值模式，但它还添加了命名模式为 __$\<column-name>\__Changed 的布尔值列（指示当前更改行中已更改的列）。  
   
 -   **净值且具有合并**：此模式类似于一般的净值模式，但具有合并到单个合并操作中的插入和更新操作 (UPSERT)。  
   
@@ -218,7 +218,7 @@ use <cdc-enabled-database-name>
  查看数据源的名称。  
   
  **列**  
- 查看在“CDC 源编辑器”  对话框中“连接管理器”  页上选择的外部（源）列。  
+ 查看在“CDC 源编辑器”对话框中“连接管理器”页上选择的外部（源）列。  
   
  **错误**  
  选择 CDC 源应该如何处理流中的错误：忽略失败、重定向行或使组件失败。  

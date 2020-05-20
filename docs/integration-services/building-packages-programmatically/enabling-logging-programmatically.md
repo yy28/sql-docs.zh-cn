@@ -50,7 +50,7 @@ ms.locfileid: "71294936"
 |提供程序|说明|ConfigString 属性|  
 |--------------|-----------------|---------------------------|  
 |SQL Server Profiler|生成可捕获并在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler 中查看的 SQL 跟踪。 这种提供程序的默认文件扩展名是 .trc。|不需要任何配置。|  
-|SQL Server|将事件日志条目写入任意  **数据库的 sysssislog**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供程序要求指定与数据库的连接以及目标数据库的名称。|  
+|SQL Server|将事件日志条目写入任意 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的 sysssislog 表中。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供程序要求指定与数据库的连接以及目标数据库的名称。|  
 |文本文件|将事件日志条目以逗号分隔值 (CSV) 格式写入 ASCII 文本文件。 这种提供程序的默认文件扩展名是 .log。|文件连接管理器的名称。|  
 |Windows 事件日志|记录到本地计算机的标准 Windows 事件日志的应用程序日志中。|不需要任何配置。|  
 |XML 文件|将事件日志条目写入 XML 格式的文件中。 这种提供程序的默认文件扩展名是 .xml。|文件连接管理器的名称。|  

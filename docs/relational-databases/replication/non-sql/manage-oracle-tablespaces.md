@@ -32,15 +32,15 @@ ms.locfileid: "70276542"
   
 -   使用 [sp_changearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)。 若要使用 **sp_changearticle**，请指定下列内容：  
   
-    -   为参数 **publisher 指定 Oracle 发布服务器的名称\@** 。  
+    -   为参数 \@publisher 指定 Oracle 发布服务器的名称。  
   
-    -   为参数 **publication 指定 Oracle 发布的名称\@** 。  
+    -   为参数 \@publication 指定 Oracle 发布的名称。  
   
-    -   为参数 **article 指定项目的名称\@** 。  
+    -   为参数 \@article 指定项目的名称。  
   
-    -   为参数 **property 指定“tablespace”值\@** 。  
+    -   为参数 \@property 指定“tablespace”值。  
   
-    -   为参数 **value 指定表空间名称\@** 。  
+    -   为参数 \@value 指定表空间名称。  
   
 ## <a name="see-also"></a>另请参阅  
  [配置 Oracle 发布服务器](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   

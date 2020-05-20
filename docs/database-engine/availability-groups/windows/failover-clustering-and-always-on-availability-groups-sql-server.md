@@ -74,7 +74,7 @@ ms.locfileid: "74822250"
  **可用性组的故障转移策略设置应用于所有副本，无论它位于独立实例还是 FCI 实例中。  
   
 > [!NOTE]  
->  有关不同版本的  **中 FCI 内的**节点数**和** Always On 可用性组[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的详细信息，请参阅 [SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) )。  
+>  有关不同版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中 FCI 内的**节点数**和 **Always On 可用性组**的详细信息，请参阅 [SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473))。  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>FCI 上承载可用性副本的注意事项  
   

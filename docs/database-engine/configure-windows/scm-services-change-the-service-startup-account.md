@@ -54,13 +54,13 @@ ms.locfileid: "70212318"
     >  -   **Windows 10**：  
     >          要打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，请在“起始页”  中键入 SQLServerManager13.msc（适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]）。 对于早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请将 13 替换为较小的数字。 单击“SQLServerManager13.msc”可打开配置管理器。 要将配置管理器固定到“起始页”或“任务栏”，请右键单击“SQLServerManager13.msc”，然后单击“打开文件位置”  。 在“Windows 文件资源管理器”中，右键单击“SQLServerManager13.msc”，然后单击“固定到‘开始’屏幕”  或“固定到任务栏”  。  
     > -   **Windows 8**：  
-    >          若要打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，请在“搜索”超级按钮中的“应用”下，键入 SQLServerManager**version>.msc（例如 SQLServerManager13.msc），然后按“Enter”**  **\<**   。  
+    >          若要打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，请在“搜索”超级按钮中的“应用”下，键入 SQLServerManager\<version>.msc（例如 SQLServerManager13.msc），然后按“Enter”。  
   
 2.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中，单击 **“SQL Server 服务”** 。  
   
 3.  在详细信息窗格中，右键单击要为其更改服务启动帐户的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称，再单击“属性”  。  
   
-4.  在“SQL Server **instancename> 属性”对话框中，单击“登录”选项卡，并选择“登录身份”帐户类型\<**     。  
+4.  在“SQL Server \<instancename> 属性”对话框中，单击“登录”选项卡，并选择“登录身份”帐户类型。  
   
 5.  选择了新服务启动帐户后，单击 **“确定”** 。  
   

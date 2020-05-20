@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Unique property [ADOX], Visual Basic example
 - PrimaryKey property [ADOX], Visual Basic example
 ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 43ee83f0c08e5ea686758c5fe913d0afc9be572d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d38097ed2765eacfafafc980133594750a99d57e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965558"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763728"
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>PrimaryKey 和 Unique 属性示例 (VB)
 此示例演示[索引](../../../ado/reference/adox-api/index-object-adox.md)的[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)和[唯一](../../../ado/reference/adox-api/unique-property-adox.md)属性。 此代码创建一个具有两列的新表。 **PrimaryKey**和**Unique**属性用于使一列成为不允许重复值的主键。  

@@ -30,7 +30,7 @@ ms.locfileid: "71297171"
  在自定义用户界面项目或程序集中，可以创建一个实现 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumeratorUI> 的类。 此类派生自通常用于创建复合控件以承载其他 Windows 窗体控件的 System.Windows.Forms.UserControl。 你创建的控件显示在“Foreach 循环编辑器”的“集合”选项卡的“枚举器配置”区域中    。  
   
 > [!IMPORTANT]  
->  在按照[生成、部署并调试自定义对象](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)中的说明生成自定义用户界面并签名而且在全局程序集缓存中安装后，还要在<xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute.UITypeName%2A> 的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> 属性中提供此类的完全限定名称。  
+>  在按照[生成、部署并调试自定义对象](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)中的说明生成自定义用户界面并签名而且在全局程序集缓存中安装后，还要在<xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> 的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute.UITypeName%2A> 属性中提供此类的完全限定名称。  
   
 ## <a name="coding-the-user-interface-control-class"></a>编写用户界面控件类代码  
   

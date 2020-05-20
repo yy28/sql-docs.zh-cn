@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Reason parameter [ADO]
 - event parameters [ADO]
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 26caf2b54b4f0affbbe7cdc58fa2bf742f0d4101
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 32e3cd177089fb99009490b82941928e091ab7c6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925369"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763188"
 ---
 # <a name="event-parameters"></a>事件参数
 每个事件处理程序都有一个状态参数，用于控制事件处理程序。 对于完整事件，此参数还用于指示生成事件的操作是成功还是失败。 大多数完整事件还具有错误参数，以提供有关可能已发生的任何错误的信息，以及引用用于执行操作的 ADO 对象的一个或多个对象参数。 例如， [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)事件包含与事件关联的**命令**、**记录集**和**连接**对象的对象参数。 在下面的 Microsoft® Visual Basic®示例中，可以看到 pCommand、pRecordset 和 pConnection 对象，这些对象表示**Execute**方法使用的**命令**、**记录集**和**连接**对象。  

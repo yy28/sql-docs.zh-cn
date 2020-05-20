@@ -48,7 +48,7 @@ EnvelopeAngle( )
   
  在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，此方法已扩展到 FullGlobe 实例  。  
   
- 已删除应用于 `EnvelopeAngle()` 中的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的半球限制。 但是，对于角度大于 90 度的实例将返回 180 度。 对于跨越多个半球的 geography 实例而言，`EnvelopeAngle()` 并不精确  。  
+ 已删除应用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中的 `EnvelopeAngle()` 的半球限制。 但是，对于角度大于 90 度的实例将返回 180 度。 对于跨越多个半球的 geography 实例而言，`EnvelopeAngle()` 并不精确  。  
   
 ## <a name="examples"></a>示例  
   

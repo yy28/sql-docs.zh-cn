@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - SortOrder property [ADOX]
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4fe5c9bc18e0bc84dc8629ebc42227dad01ea3ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bd58cb2ec579586b25365abab9d6ff8b2b9c6617
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965191"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762768"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder 属性示例 (VB)
 此示例演示已追加到[索引](../../../ado/reference/adox-api/index-object-adox.md)的[Columns](../../../ado/reference/adox-api/columns-collection-adox.md)集合的[列](../../../ado/reference/adox-api/column-object-adox.md)的[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)属性。 该代码将升序索引追加到**Employees**表中的 Country 列，然后显示记录。 然后，该代码将向**Employees**表中的 "国家/地区" 列附加一个降序索引，并再次显示记录。 显示升序和降序索引之间的差异。  

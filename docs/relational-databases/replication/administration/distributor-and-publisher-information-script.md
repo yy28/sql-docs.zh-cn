@@ -27,7 +27,7 @@ ms.locfileid: "76288191"
   
 -   将 `use AdventureWorks2012` 一行更改为使用您的发布数据库的名称。  
   
--   从 `--` 一行中删除注释 (`exec sp_helparticle @publication='<PublicationName>'`) 并用发布的名称替换 \<PublicationName>。  
+-   从 `exec sp_helparticle @publication='<PublicationName>'` 一行中删除注释 (`--`) 并用发布的名称替换 \<PublicationName>。  
   
 ```  
 --********** Execute at the Distributor in the master database **********--  

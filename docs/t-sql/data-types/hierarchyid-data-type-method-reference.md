@@ -74,9 +74,9 @@ hierarchyid 数据类型可按如下方法转换为其他数据类型  ：
 可在任何复制的表中使用类型为 hierarchyid 的列  。 应用程序的要求取决于复制是单向的还是双向的，同时还取决于所用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本。
   
 ### <a name="one-directional-replication"></a>单向复制
-单向复制包括快照复制、事务复制，以及在订阅服务器上不做更改的合并复制。 在单向复制过程中如何使用层次结构列取决于订阅服务器所运行的  **版本**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 发布服务器可以将 hierachyid 列复制到  **订阅服务器，而无须考虑任何特殊事项**[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 发布服务器必须转换 hierarchyid 列，才能将它们复制到运行 **或更早版本的** 的订阅服务器[!INCLUDE[ssEW](../../includes/ssew-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的更早版本不支持 hierarchyid 列  。 如果您使用的是这些版本之一，仍然可以将数据复制到订阅服务器。 为此，必须设置架构选项或发布兼容性级别（如果是合并复制），从而使列能够转换为兼容的数据类型。  
+单向复制包括快照复制、事务复制，以及在订阅服务器上不做更改的合并复制。 在单向复制过程中如何使用层次结构列取决于订阅服务器所运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 发布服务器可以将 hierachyid 列复制到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 订阅服务器，而无须考虑任何特殊事项。  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 发布服务器必须转换 hierarchyid 列，才能将它们复制到运行 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 或更早版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的订阅服务器。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的更早版本不支持 hierarchyid 列  。 如果您使用的是这些版本之一，仍然可以将数据复制到订阅服务器。 为此，必须设置架构选项或发布兼容性级别（如果是合并复制），从而使列能够转换为兼容的数据类型。  
   
 这两种情况均支持列筛选。 这包括筛选出 hierarchyid 列  。 只要筛选器不包含 hierarchyid 列，就支持行筛选  。
   

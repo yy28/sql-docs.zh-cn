@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - CreateObject method [ADO]
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c6b50714cdff536418e759828d972c16abd7d7a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2b8cf7f5629158ccd1bdd74e30b7ba9bc5bb6942
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964548"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762668"
 ---
 # <a name="createobject-method-rds"></a>CreateObject 方法 (RDS)
 为目标业务对象创建代理并返回指向它的指针。 代理会将数据打包并封送到服务器端存根，以便与业务对象通信，以便通过 Internet 发送请求和数据。 对于进程内组件对象，不使用代理，只提供指向对象的指针。  
@@ -31,8 +31,8 @@ ms.locfileid: "67964548"
   
 |协议|语法|  
 |--------------|------------|  
-|HTTP|Set object = CreateObject （"ProgId"，"https\://awebsrvr"）|  
-|HTTPS|Set object = CreateObject （"ProgId"，"https\://awebsrvr"）|  
+|HTTP|Set object = CreateObject （"ProgId"，"https \: //awebsrvr"）|  
+|HTTPS|Set object = CreateObject （"ProgId"，"https \: //awebsrvr"）|  
 |DCOM|Set object = DataSpace.CreateObject("ProgId", "computername")|  
 |进程内|Set object = DataSpace.CreateObject("ProgId", "")|  
   

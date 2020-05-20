@@ -57,7 +57,7 @@ ms.locfileid: "73032999"
 1.  以 Administrators 组成员身份登录到 Windows，然后打开 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。  
 2.  在 **“连接到服务器”** 对话框中，单击 **“取消”** 。  
 3.  如果未显示“已注册的服务器”，请在“视图”  菜单中，单击“已注册的服务器”  。
-4.  在“已注册的服务器”工具栏中选择“数据库引擎”  后，展开“数据库引擎”  ，右键单击“本地服务器组”  ，指向“任务”  ，然后单击“注册本地服务器”  。 展开“本地服务器组”以查看所显示计算机上安装的  **的所有实例**[!INCLUDE[ssDE](../includes/ssde-md.md)]。 默认实例未命名，并显示为计算机名称。 命名实例显示为计算机名称，后跟反斜杠 (\\)，然后是实例名。 对于 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，除非在安装过程中更改了名称，否则实例将命名为 *<computer_name>* \sqlexpress。  
+4.  在“已注册的服务器”工具栏中选择“数据库引擎”  后，展开“数据库引擎”  ，右键单击“本地服务器组”  ，指向“任务”  ，然后单击“注册本地服务器”  。 展开“本地服务器组”以查看所显示计算机上安装的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的所有实例。 默认实例未命名，并显示为计算机名称。 命名实例显示为计算机名称，后跟反斜杠 (\\)，然后是实例名。 对于 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，除非在安装过程中更改了名称，否则实例将命名为 *<computer_name>* \sqlexpress。  
 
 ##### <a name="to-verify-that-the-database-engine-is-running"></a>验证数据库引擎是否正在运行
 
@@ -101,7 +101,7 @@ ms.locfileid: "73032999"
 
 3.  在“默认数据库”  框中，选择 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]（如果有）。 否则选择“master”  。  
 4.  在“服务器角色”  页中，如果新建登录名要成为管理员，则单击“sysadmin”  ，否则保留此项为空白。  
-5.  在“用户映射”  页中，针对  **数据库（如果有）选择“映射”** [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]。 否则选择“master”  。 注意，“用户”  框使用该登录名进行填充。 关闭后，该对话框将在数据库中创建此用户。  
+5.  在“用户映射”页中，针对 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库（如果有）选择“映射”。 否则选择“master”  。 注意，“用户”  框使用该登录名进行填充。 关闭后，该对话框将在数据库中创建此用户。  
 6.  在“默认架构”  框中，键入 **dbo** 将登录名映射到数据库所有者架构。   
 7.  接受“安全对象”  和“状态”  框的默认设置，然后单击“确定”  创建登录名。  
 

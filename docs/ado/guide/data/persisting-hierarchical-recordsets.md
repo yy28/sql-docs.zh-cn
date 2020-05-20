@@ -12,14 +12,14 @@ helpviewer_keywords:
 - persisting hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: 43798bb5-98a6-4ad6-9bf8-78154b3a1827
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 34649bba37f922e7597bf09870e3e9d3bcf522dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9c671adb19bd2e955b67ce23f268738ccf9033f5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924626"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763118"
 ---
 # <a name="persisting-hierarchical-recordsets"></a>保留分层记录集
 可以通过调用[save](../../../ado/reference/ado-api/save-method.md)方法，将分层**记录集**以 ADTG 或 XML 格式保存到文件。 但是，以 XML 格式保存分层**记录集**时，有两个限制：如果分层**记录集**包含挂起的更新，则不能以 xml 格式保存，并且不能保存参数化的分层**记录集**。  

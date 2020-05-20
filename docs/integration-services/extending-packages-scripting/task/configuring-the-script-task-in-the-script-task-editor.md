@@ -45,7 +45,7 @@ ms.locfileid: "71286047"
  若要设置脚本任务和脚本组件的默认脚本语言，请使用“选项”对话框的“常规”页上的“ScriptLanguage”属性    。 有关详细信息，请参阅 [General Page](../../general-page-of-integration-services-designers-options.md)。  
   
 ### <a name="entrypoint-property"></a>EntryPoint 属性  
- EntryPoint 属性对 VSTA 项目中的 ScriptMain 类指定一种方法， **运行时会将该方法作为脚本任务代码的入口点来调用**  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]。 ScriptMain  类是脚本模板生成的默认类。  
+ EntryPoint 属性对 VSTA 项目中的 ScriptMain 类指定一种方法，[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时会将该方法作为脚本任务代码的入口点来调用。 ScriptMain  类是脚本模板生成的默认类。  
   
  若要更改 VSTA 项目中方法的名称，则必须更改 **EntryPoint** 属性的值。  
   

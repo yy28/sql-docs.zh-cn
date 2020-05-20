@@ -27,7 +27,7 @@ ms.locfileid: "71299042"
 
   以编程方式生成新包或修改现有包后，通常要保存更改。  
   
- 本主题中用于保存包的所有方法都需要引用 Microsoft.SqlServer.ManagedDTS 程序集  。 在新项目中添加引用后，请使用 <xref:Microsoft.SqlServer.Dts.Runtime>using**或**Imports**语句导入** 命名空间。  
+ 本主题中用于保存包的所有方法都需要引用 Microsoft.SqlServer.ManagedDTS 程序集  。 在新项目中添加引用后，请使用 **using** 或 **Imports** 语句导入 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空间。  
   
 ## <a name="saving-a-package-programmatically"></a>以编程方式保存包  
  若要以编程方式保存包，可调用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] <xref:Microsoft.SqlServer.Dts.Runtime.Application> 类的以下方法之一：  

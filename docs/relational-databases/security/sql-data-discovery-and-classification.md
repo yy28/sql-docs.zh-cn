@@ -21,13 +21,13 @@ ms.locfileid: "75548336"
 # <a name="sql-data-discovery-and-classification"></a>SQL 数据发现和分类
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-数据发现和分类引入了全新工具，并将其内置于 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)，以便发现数据库中的敏感数据并对其进行分类、标记和报告     。
+数据发现和分类引入了全新工具，并将其内置于 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)，以便发现数据库中的敏感数据并对其进行分类、标记和报告。
 发现最敏感的数据（如商业、金融、医疗等）并对其进行分类在组织的信息保护中可起到关键作用。 它可以充当基础结构，用于：
 * 帮助满足数据隐私标准。
 * 控制对包含高度敏感数据的数据库/列的访问，并加强其安全性。
 
 > [!NOTE]
-> SQL Server 2012 及更高版本支持数据发现和分类，这些功能可用于 [SSMS 17.5](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 或更高版本  。 有关 Azure SQL 数据库，请参阅 [Azure SQL 数据库数据发现和分类](/azure/sql-database/sql-database-data-discovery-and-classification/)。
+> SQL Server 2012 及更高版本支持数据发现和分类，这些功能可用于 [SSMS 17.5](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 或更高版本。 有关 Azure SQL 数据库，请参阅 [Azure SQL 数据库数据发现和分类](/azure/sql-database/sql-database-data-discovery-and-classification/)。
 
 ## <a name="overview"></a><a id="subheading-1"></a>概述
 数据发现和分类引入了一套高级服务，形成了一种旨在保护各种数据（而不只是数据库）的全新 SQL 信息保护范例：
@@ -47,7 +47,7 @@ ms.locfileid: "75548336"
 
 1. 在 SQL Server Management Studio (SSMS) 中连接到 SQL Server。
 
-2. 在 SSMS 对象资源管理器中，右键单击要分类的数据库，并选择“任务” > “数据发现和分类” > “对数据进行分类...”    。
+2. 在 SSMS 对象资源管理器中，右键单击要分类的数据库，并选择“任务” > “数据发现和分类” > “对数据进行分类...”。
 
    ![“导航”窗格][0]
 
@@ -85,7 +85,7 @@ ms.locfileid: "75548336"
     ![“导航”窗格][8]
 
 
-6. 要生成数据库分类状态的完整摘要报表，请在窗口顶部菜单中单击“查看报表”  。 （也可以使用 SSMS 生成报告。 右键单击要生成报告的数据库，然后选择“任务” > “数据发现和分类” > “生成报告...”    ）
+6. 要生成数据库分类状态的完整摘要报表，请在窗口顶部菜单中单击“查看报表”  。 （也可以使用 SSMS 生成报告。 右键单击要生成报告的数据库，然后选择“任务” > “数据发现和分类” > “生成报告...”）
 
     ![“导航”窗格][9]
 
@@ -97,7 +97,7 @@ ms.locfileid: "75548336"
 
 1. 在 SQL Server Management Studio (SSMS) 中连接到 SQL Server。
 
-2. 在 SSMS 对象资源管理器中，右键单击一个数据库，然后选择“任务” > “数据发现和分类”   。
+2. 在 SSMS 对象资源管理器中，右键单击一个数据库，然后选择“任务” > “数据发现和分类”。
 
    你可以使用以下菜单选项来管理信息保护策略：
 

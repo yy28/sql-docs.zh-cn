@@ -30,13 +30,13 @@ ms.locfileid: "72005985"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|PG_NO_ELIGIBLE_STMT|  
-|消息正文|无法创建计划指南“%.\*ls”，因为 **plan_handle 指定的批或模块不包含可用于计划指南的语句\@** 。 请为 **plan_handle 指定其他值\@** 。|  
+|消息正文|无法创建计划指南“%.\*ls”，因为 \@plan_handle 指定的批或模块不包含可用于计划指南的语句。 请为 \@plan_handle 指定其他值。|  
   
 ## <a name="explanation"></a>说明  
-由  **指定的批或模块不包含可用于计划指南的语句\@** 。  
+由 \@ 指定的批或模块不包含可用于计划指南的语句。  
   
 ## <a name="user-action"></a>用户操作  
-请为 **plan_handle 指定其他值\@** 。  
+请为 \@plan_handle 指定其他值。  
   
 ## <a name="see-also"></a>另请参阅  
 [计划指南](~/relational-databases/performance/plan-guides.md)  

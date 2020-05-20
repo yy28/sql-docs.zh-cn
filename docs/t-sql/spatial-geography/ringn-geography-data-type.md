@@ -27,7 +27,7 @@ ms.locfileid: "68042658"
 # <a name="ringn-geography-data-type"></a>RingN（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  返回 geography 实例的指定环：  `1 ≤ n ≤ NumRings()`。  
+  返回 geography 实例的指定环：`1 ≤ n ≤ NumRings()`。  
   
 ## <a name="syntax"></a>语法  
   

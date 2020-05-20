@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Filter property
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ff06bc27e765945d1cca74b5f8401e0caadf6b17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bcc1b02671d73e9056babb417ba2fa22a4d6cf0e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918629"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762538"
 ---
 # <a name="filter-property"></a>Filter 属性
 指示[记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)数据的筛选器。  
@@ -39,16 +39,16 @@ ms.locfileid: "67918629"
 
 使用**Filter**属性可以有选择地将记录**集**对象中的记录显示为屏幕。 筛选后的**记录集**将成为当前游标。 基于当前**游标**返回值的其他属性会受到影响，如[ABSOLUTEPOSITION 属性（ado）](../../../ado/reference/ado-api/absoluteposition-property-ado.md)、 [AbsolutePage 属性（ado）](../../../ado/reference/ado-api/absolutepage-property-ado.md)、 [RecordCount 属性（ado）](../../../ado/reference/ado-api/recordcount-property-ado.md)和[PageCount 属性（ado）](../../../ado/reference/ado-api/pagecount-property-ado.md)。 将 "**筛选器**" 属性设置为特定的新值会将当前记录移动到满足新值的第一条记录。
   
-条件字符串由*FieldName-Operator* （例如， `"LastName = 'Smith'"`）形式的子句组成。 您可以通过将单个子句与**和**（例如， `"LastName = 'Smith' AND FirstName = 'John'"`）或**或**（例如`"LastName = 'Smith' OR LastName = 'Jones'"`）连接起来来创建复合子句。 对于条件字符串，请使用以下准则：
+条件字符串由*FieldName-Operator* （例如，）形式的子句组成 `"LastName = 'Smith'"` 。 您可以通过将单个子句与**和**（例如， `"LastName = 'Smith' AND FirstName = 'John'"` ）或**或**（例如）连接起来来创建复合子句 `"LastName = 'Smith' OR LastName = 'Jones'"` 。 对于条件字符串，请使用以下准则：
 
 -   *FieldName*必须是**记录集中**的有效字段名称。 如果字段名称包含空格，则必须用方括号将该名称括起来。  
   
--   运算符必须是下列之一： \<、>、 \<=、>=、 <>、= 或**LIKE**。  
+-   运算符必须是下列之一： \< 、>、 \< =、>=、 <>、= 或**LIKE**。  
   
 -   值是用于比较字段值的值（例如，"Smith"、#8/24/95 #、12.345 或 $50.00）。 使用单引号将字符串和井号（#）与日期一起使用。 对于数字，可以使用小数点、美元符号和科学记数法。 如果运算符**类似**，则值可以使用通配符。 仅星号（*）和百分号（%）允许使用通配符，并且它们必须是字符串中的最后一个字符。 值不能为空。  
   
 > [!NOTE]
->  若要在筛选器值中包含单引号（'），请使用两个单引号表示一个。 例如，若要筛选 O'Malley，则条件字符串应为`"col1 = 'O''Malley'"`。 若要在筛选值的开头和末尾包含单引号，请用井号（#）将字符串括起来。 例如，若要筛选 "1"，则条件字符串应为`"col1 = #'1'#"`。  
+>  若要在筛选器值中包含单引号（'），请使用两个单引号表示一个。 例如，若要筛选 O'Malley，则条件字符串应为 `"col1 = 'O''Malley'"` 。 若要在筛选值的开头和末尾包含单引号，请用井号（#）将字符串括起来。 例如，若要筛选 "1"，则条件字符串应为 `"col1 = #'1'#"` 。  
   
 -   AND 和 OR 之间没有优先级。 子句可以在括号内分组。 但是，不能对通过或联接的子句进行分组，然后使用和将该组联接到另一个子句，如以下代码片段所示：  
  `(LastName = 'Smith' OR LastName = 'Jones') AND FirstName = 'John'`  
@@ -56,7 +56,7 @@ ms.locfileid: "67918629"
 -   而是将此筛选器构造为  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   在**LIKE**子句中，可以在模式的开头和结尾使用通配符。 例如，你可以使用 `LastName Like '*mit*'`。 或者使用**LIKE** ，只能在模式的末尾使用通配符。 例如，`LastName Like 'Smit*'` 。  
+-   在**LIKE**子句中，可以在模式的开头和结尾使用通配符。 例如，可以使用 `LastName Like '*mit*'`。 或者使用**LIKE** ，只能在模式的末尾使用通配符。 例如，`LastName Like 'Smit*'` 。  
   
  例如，使用筛选器常量可以在批处理更新模式下更轻松地解决单个记录冲突，只允许查看在上一次[UpdateBatch 方法](../../../ado/reference/ado-api/updatebatch-method.md)方法调用期间受影响的记录。  
   
@@ -69,13 +69,13 @@ ms.locfileid: "67918629"
 假设根据某种类型的变量（如 sql_variant 类型）筛选**记录集**。 当在条件字符串中使用的字段的子类型和筛选器值不匹配时，将发生错误（DISP_E_TYPEMISMATCH 或80020005）。 例如，假设：
 
 - **记录集**对象（rs）包含 sql_variant 类型的列（C）。
-- 并且已为此列的一个字段分配了 I4 类型的值1。 条件字符串在字段中设置`rs.Filter = "C='A'"`为。
+- 并且已为此列的一个字段分配了 I4 类型的值1。 条件字符串在字段中设置为 `rs.Filter = "C='A'"` 。
 
-此配置在运行时产生错误。 但是， `rs.Filter = "C=2"`对同一字段应用时将不会产生任何错误。 并筛选出当前记录集的字段。
+此配置在运行时产生错误。 但是， `rs.Filter = "C=2"` 对同一字段应用时将不会产生任何错误。 并筛选出当前记录集的字段。
 
 有关 "书签" 值的说明，请参阅[Bookmark 属性（ADO）](../../../ado/reference/ado-api/bookmark-property-ado.md)属性，您可以在其中生成用于筛选器属性的数组。
 
-只有条件字符串形式的筛选器会影响持久**记录集**的内容。 条件字符串的一个示例是`OrderDate > '12/31/1999'`。 使用书签数组或**FilterGroupEnum**中的值创建的筛选器不会影响持久**记录集**的内容。 这些规则适用于使用客户端或服务器端游标创建的记录集。
+只有条件字符串形式的筛选器会影响持久**记录集**的内容。 条件字符串的一个示例是 `OrderDate > '12/31/1999'` 。 使用书签数组或**FilterGroupEnum**中的值创建的筛选器不会影响持久**记录集**的内容。 这些规则适用于使用客户端或服务器端游标创建的记录集。
   
 > [!NOTE]
 >  如果将 adFilterPendingRecords 标志应用于批处理更新模式中已筛选和已修改的**记录集**，则结果**集**将为空（如果筛选基于单键控表的键字段，并且已对键字段值进行修改）。 如果以下语句之一为 true，则生成的**记录集**将为非空：  
@@ -93,8 +93,8 @@ ms.locfileid: "67918629"
 ||非键|单个键|多个键|
 |-|--------------|----------------|-------------------|
 |**非键**|+|+|+|
-|**单个键**|+|-|不适用|
-|**多个键**|+|不适用|+|
+|**单个键**|+|-|不可用|
+|**多个键**|+|不可用|+|
 |||||
   
 ## <a name="applies-to"></a>应用于
@@ -103,7 +103,7 @@ ms.locfileid: "67918629"
   
 ## <a name="see-also"></a>另请参阅
 
-[Filter 和 RecordCount 属性示例（VB）](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)
-[筛选器和 RecordCount 属性示例（VC + +）](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)
-[Clear 方法（ado）](../../../ado/reference/ado-api/clear-method-ado.md)
-[优化属性-动态（ado）](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
+[Filter 和 RecordCount 属性示例（VB）](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md) 
+[Filter 和 RecordCount 属性示例（VC + +）](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md) 
+[Clear 方法（ADO）](../../../ado/reference/ado-api/clear-method-ado.md) 
+[优化属性-动态（ADO）](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

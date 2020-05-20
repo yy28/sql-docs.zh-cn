@@ -27,7 +27,7 @@ ms.locfileid: "76287341"
   
 -   **将订阅服务器数据库配置为支持复制到内存优化表**  
   
-     通过使用 [sp_addsubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 或 [sp_changesubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) 将 \@memory_optimized  属性设置为 true  。  
+     通过使用 [sp_addsubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 或 [sp_changesubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) 将 \@memory_optimized 属性设置为 true。  
   
 -   **将项目配置为支持复制到内存优化表**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "76287341"
   
 2.  向发布添加项目。 有关详细信息，请参阅 [定义项目](../../relational-databases/replication/publish/define-an-article.md)。  
   
-     如果是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行配置，请将 sp_addarticle  存储过程的 \@schema_option  参数设置为   
+     如果是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行配置，请将 sp_addarticle 存储过程的 \@schema_option 参数设置为   
     **0x40000000000**及更高版本支持此功能。  
   
 3.  在项目属性窗口中，将“启用内存优化”  设置为“true”  。  
@@ -54,16 +54,16 @@ ms.locfileid: "76287341"
   
 1.  转到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的订阅属性，然后将“内存优化订阅”  设置为“true”  。 只有在重新初始化订阅之后，系统才会应用这些更改。  
   
-     如果是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行配置，请将 sp_addsubscription  存储过程的 \@memory_optimized  参数设置为 true。  
+     如果是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行配置，请将 sp_addsubscription 存储过程的 \@memory_optimized 参数设置为 true。  
   
 2.  转到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的发布项目属性，然后将“启用内存优化”  设置为“true”。  
   
-     如果是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行配置，请将 sp_addarticle  存储过程的 \@schema_option  参数设置为   
+     如果是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行配置，请将 sp_addarticle 存储过程的 \@schema_option 参数设置为   
     **0x40000000000**及更高版本支持此功能。  
   
 3.  内存优化表不支持聚集索引。 若要让复制能够通过在目标上将聚集索引转换成非聚集索引来处理此情况，请将“为内存优化项目将聚集索引转换成非聚集索引”  设置为“true”。  
   
-     如果是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行配置，请将 sp_addarticle  存储过程的 \@schema_option  参数设置为 0x0000080000000000  。  
+     如果是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 进行配置，请将 sp_addarticle 存储过程的 \@schema_option 参数设置为 0x0000080000000000。  
   
 4.  重新生成快照。  
   

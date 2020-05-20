@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - RecordOpenOptionsEnum enumeration [ADO]
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ba165d51dde5224dac65467061eac0d38aeefc7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4d97a8cdf2f77f323f0897d7977a2c6945b46b87
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931426"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761895"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
 指定用于打开[记录](../../../ado/reference/ado-api/record-object-ado.md)的选项。 可以使用或组合这些值。  
   
-|Constant|值|说明|  
+|返回的常量|值|说明|  
 |--------------|-----------|-----------------|  
 |**adDelayFetchFields**|0x8000|向提供程序指出，不需要最初检索与**记录**关联的字段，但在第一次尝试访问该字段时可进行检索。 缺少此标志时，默认行为是检索所有**记录**对象字段。|  
 |**adDelayFetchStream**|0x4000|向提供程序指示，不需要最初检索与**记录**关联的默认流。 缺少此标志时，默认行为是检索与**Record**对象关联的默认流。|  

@@ -161,7 +161,7 @@ ms.locfileid: "79288231"
 ###  <a name="dboxcbcdc_add_servicesvcnamesqlusr"></a><a name="BKMK_dboxcbcdc_add_service"></a> dbo.xcbcdc_add_service(svcname,sqlusr)  
  **dbo.xcbcdc_add_service** 过程将一个条目添加到 **MSXDBCDC.xdbcdc_services** 表，并且以 1 为增量加到 **MSXDBCDC.xdbcdc_services** 表中该服务名称的 ref_count 列上。 当 **ref_count** 为 0 时，将删除该行。  
   
- 要使用 dbo.xcbcdc_add_service**service name, username> 过程，用户必须是具有要命名的 CDC 实例数据库的 db_owner 数据库角色的成员，或者是具有 sysadmin 或 serveradmin 固定服务器角色的成员\<**    。  
+ 要使用 dbo.xcbcdc_add_service\<service name, username> 过程，用户必须是具有要命名的 CDC 实例数据库的 db_owner 数据库角色的成员，或者是具有 sysadmin 或 serveradmin 固定服务器角色的成员。  
   
 ###  <a name="dboxdbcdc_startdbname"></a><a name="BKMK_dboxdbcdc_start"></a> dbo.xdbcdc_start(dbname)  
  **dbo.xdbcdc_start** 过程将一个开始请求发送到处理所选 CDC 实例的 CDC 服务，以便开始更改处理。  

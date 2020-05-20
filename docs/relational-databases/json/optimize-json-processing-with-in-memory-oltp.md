@@ -23,7 +23,7 @@ ms.locfileid: "74096071"
 SQL Server 和 Azure SQL 数据库允许使用 JSON 格式的文本。 为了提高处理 JSON 数据的查询性能，可以使用标准字符串列（NVARCHAR 类型）将 JSON 文档存储在内存优化表中。 将 JSON 数据存储在内存优化表中可以利用无锁内存中数据访问来提高查询性能。
 
 ## <a name="store-json-in-memory-optimized-tables"></a>在内存优化表中存储 JSON
-下面的示例演示了包含两个 JSON 列（`Product` 和 `Tags`）的 `Data` 内存优化表：
+下面的示例演示了包含两个 JSON 列（`Tags` 和 `Data`）的 `Product` 内存优化表：
 
 ```sql
 CREATE SCHEMA xtp;
@@ -49,7 +49,7 @@ CREATE TABLE xtp.Product(
 ## <a name="validate-json-columns"></a><a name="validate"></a>验证 JSON 列
 SQL Server 和 Azure SQL 数据库允许添加本机编译的 CHECK 约束，用于验证字符串列中存储的 JSON 文档的内容。 使用本机编译的 JSON CHECK 约束，可以确保内存优化表中存储的 JSON 文本的格式正确。
 
-下面的示例创建一个包含 JSON 列 `Product` 的 `Tags` 表。 `Tags` 列包含 CHECK 约束，其使用 `ISJSON` 函数验证列中的 JSON 文本。
+下面的示例创建一个包含 JSON 列 `Tags` 的 `Product` 表。 `Tags` 列包含 CHECK 约束，其使用 `ISJSON` 函数验证列中的 JSON 文本。
 
 ```sql
 DROP TABLE IF EXISTS xtp.Product;
@@ -82,7 +82,7 @@ ALTER TABLE xtp.Product
 -   制造产品的国家/地区。
 -   产品制造成本。
 
-在此示例中，每当 `MadeIn` 列中存储的 JSON 文档发生更改时，计算列 `Cost` 和 `Data` 就会更新。
+在此示例中，每当 `Data` 列中存储的 JSON 文档发生更改时，计算列 `MadeIn` 和 `Cost` 就会更新。
 
 ```sql
 DROP TABLE IF EXISTS xtp.Product;

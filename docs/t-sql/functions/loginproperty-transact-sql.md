@@ -112,7 +112,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 -   NULL（如果登录名不是有效的 SQL Server 登录名）  
   
 ## <a name="remarks"></a>备注  
- 此内置函数返回有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的密码策略设置的信息。 属性名称不区分大小写，因此 BadPasswordCount 和 badpasswordcount 等属性名称是等效的   。 PasswordHash、PasswordHashAlgorithm 和 PasswordLastSetTime 属性值在所有支持的 **配置中都可用，但仅当** 在  **上运行并且同时启用了 CHECK_POLICY 和 CHECK_EXPIRATION 时，其他属性才可用**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]。 有关详细信息，请参阅 [Password Policy](../../relational-databases/security/password-policy.md)。  
+ 此内置函数返回有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的密码策略设置的信息。 属性名称不区分大小写，因此 BadPasswordCount 和 badpasswordcount 等属性名称是等效的   。 PasswordHash、PasswordHashAlgorithm 和 PasswordLastSetTime 属性值在所有支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置中都可用，但仅当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 上运行并且同时启用了 CHECK_POLICY 和 CHECK_EXPIRATION 时，其他属性才可用。 有关详细信息，请参阅 [Password Policy](../../relational-databases/security/password-policy.md)。  
   
 ## <a name="permissions"></a>权限  
  需要对登录名具有 VIEW 权限。 请求密码哈希时，还需要 CONTROL SERVER 权限。  

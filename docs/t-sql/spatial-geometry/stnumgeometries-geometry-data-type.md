@@ -45,7 +45,7 @@ ms.locfileid: "68088926"
  如果 geometry 实例不是 MultiPoint、MultiLineString、MultiPolygon 或 GeometryCollection 实例，则此方法返回 1；如果 geometry 实例为空，则返回 0       。  
   
 > [!NOTE]  
->  如果 GeometryCollection 嵌套了空元素，则  **不会返回 0**`STNumGeometries()`。 虽然 GeometryCollection 实例中的元素为空，但该实例本身不是空集  。  
+>  如果 GeometryCollection 嵌套了空元素，则 `STNumGeometries()` 不会返回 0。 虽然 GeometryCollection 实例中的元素为空，但该实例本身不是空集  。  
   
   
 

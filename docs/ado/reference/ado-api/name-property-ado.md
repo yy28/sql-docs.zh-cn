@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Name property [ADO]
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a919bb377eee2da1c3c1a65e85ddfb9807ed8d50
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 38846bcb832df7cc535d35d8f07fb636f2db37f7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918037"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762418"
 ---
 # <a name="name-property-ado"></a>Name 属性 (ADO)
 指示对象的名称。  
@@ -38,7 +38,7 @@ ms.locfileid: "67918037"
   
  对于尚未追加到[Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)集合中的**参数**对象， **Name**属性为读/写。 对于追加**参数**对象和所有其他对象， **Name**属性是只读的。 名称在集合中不必是唯一的。  
   
- 可以按序号引用检索对象的**Name**属性，之后可以按名称直接引用对象。 例如，如果`rstMain.Properties(20).Name`生成`Updatability`，则可以随后将此属性称为。 `rstMain.Properties("Updatability")`  
+ 可以按序号引用检索对象的**Name**属性，之后可以按名称直接引用对象。 例如，如果 `rstMain.Properties(20).Name` 生成 `Updatability` ，则可以随后将此属性称为 `rstMain.Properties("Updatability")` 。  
   
 ## <a name="applies-to"></a>应用于  
   

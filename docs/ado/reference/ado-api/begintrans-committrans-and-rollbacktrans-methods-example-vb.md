@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CommitTrans method [ADO], Visual Basic example
 - BeginTrans method [ADO], Visual Basic example
 ms.assetid: aa7de324-cd71-4bd0-8043-24229f4a785e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0cfb65adeab6f97faca44dc917396bc02fab2fa1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bd2166aa19e0938ce14254abcf94ac21e12b00c7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920457"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762880"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>BeginTrans、CommitTrans 和 RollbackTrans 方法示例（VB）
 此示例将更改数据库的***Titles***表中所有心理学书籍的类型。 [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法启动了一个事务，该事务隔离对***标题***表所做的所有更改时， [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法会保存这些更改。 您可以使用[RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法来撤消使用[Update](../../../ado/reference/ado-api/update-method.md)方法保存的更改。  

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - EOF property [ADO], VC++ example
 - BOF property [ADO], VC++ example
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b0cc864aa298055796985dd58ec6595961a17841
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0654d6874c898102d6a85cadd70e821f8530a876
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920367"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762658"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF、EOF 和 Bookmark 属性示例（VC + +）
 如果用户尝试移过[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的第一个或最后一个记录，则此示例中的第一个函数使用[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)和[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)属性来显示消息。 它使用[书签](../../../ado/reference/ado-api/bookmark-property-ado.md)属性允许用户标记记录**集中**的记录并稍后返回到该记录。  

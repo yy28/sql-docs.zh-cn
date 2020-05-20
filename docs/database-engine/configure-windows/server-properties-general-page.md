@@ -59,10 +59,10 @@ ms.locfileid: "68025481"
  显示服务器支持的排序规则。 排序规则指定用于 Unicode 数据和非 Unicode 数据的特定代码页和排序顺序。  
   
  **已群集化**  
- 如果在  **故障转移群集中配置了该服务器实例，则显示“True”** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]；如果未群集该服务器实例，则显示“False”  。  
+ 如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集中配置了该服务器实例，则显示“True”；如果未群集该服务器实例，则显示“False”。  
   
  **启用 HADR**  
- 如果启用  **功能，则显示“True”** [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]；如果禁用  **功能，则显示“False”** [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]。 有关启用或禁用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 的详细信息，请参阅[启用和禁用 AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。  
+ 如果启用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 功能，则显示“True”；如果禁用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 功能，则显示“False”。 有关启用或禁用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 的详细信息，请参阅[启用和禁用 AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。  
   
 ## <a name="description-field"></a>说明字段  
  查看服务器属性的其他信息。  

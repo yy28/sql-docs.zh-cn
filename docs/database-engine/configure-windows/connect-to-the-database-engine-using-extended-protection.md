@@ -26,7 +26,7 @@ ms.locfileid: "68012097"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>使用扩展保护连接到数据库引擎
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自  始支持扩展保护 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。 **针对验证的扩展保护** 是操作系统实现的一项网络组件功能。 Windows 7 和 Windows Server 2008 R2 支持**扩展保护** 。 旧**操作系统的 Service Pack 中包括** 扩展保护 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 功能。 使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]扩展保护**进行连接时，** 会更安全。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自  始支持扩展保护 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。 **针对验证的扩展保护** 是操作系统实现的一项网络组件功能。 Windows 7 和 Windows Server 2008 R2 支持**扩展保护** 。 旧**操作系统的 Service Pack 中包括** 扩展保护 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 功能。 使用**扩展保护**进行连接时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会更安全。  
   
 > [!IMPORTANT]  
 > 默认情况下，Windows 不启用 **扩展保护** 。 有关如何在 Windows 中启用 **扩展保护** 的信息，请参阅 [针对验证的扩展保护](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview)。
@@ -49,7 +49,7 @@ ms.locfileid: "68012097"
  通道绑定在客户端与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的实例之间建立安全通道 (Schannel)。 此服务通过将客户端特定于该通道的通道绑定标记 (CBT) 与其自己的 CBT 进行比较，以验证客户端的身份。 渠道绑定可同时解决引诱攻击和假冒攻击。 然而，它引发的运行时成本较高，因为它要求对所有会话流量进行传输层安全 (TLS) 加密。 客户端应用程序使用加密方式连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，发生通道绑定，这与加密由客户端还是服务器实施无关。  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据提供程序支持 TLS 1.0 和 SSL 3.0。 如果通过在操作系统 SChannel 层中进行更改来强制使用不同的协议（例如 TLS 1.1 或 TLS 1.2），你可能无法连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 数据提供程序支持 TLS 1.0 和 SSL 3.0。 如果通过在操作系统 SChannel 层中进行更改来强制使用不同的协议（例如 TLS 1.1 或 TLS 1.2），你可能无法连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ### <a name="operating-system-support"></a>操作系统支持  
  以下链接提供有关 Windows 如何支持 **扩展保护**的详细信息：  
@@ -86,7 +86,7 @@ ms.locfileid: "68012097"
   
 1.  在 **“开始”** 菜单上，选择 **“所有程序”** ，指向 **Microsoft SQL Server** ，再单击 **“SQL Server 配置管理器”** 。  
   
-2.  展开“SQL Server 网络配置”、右键单击“协议”选择“ **_InstanceName**”，然后单击“属性”  \< *>*  。  
+2.  展开“SQL Server 网络配置”、右键单击“协议”选择“\<_InstanceName>”，然后单击“属性” 。  
   
 3.  对于渠道绑定和服务绑定，同时在 **“高级”** 选项卡上将 **“扩展保护”** 设置为适当的设置。  
   

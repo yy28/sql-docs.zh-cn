@@ -32,7 +32,7 @@ ms.locfileid: "76284904"
 有关详细信息，请参阅[查看和修改复制安全设置](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。
 
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio 
-可以使用新建发布向导或配置分发向导配置分发。 配置分发服务器后，查看并修改“分发服务器属性 - **分发服务器>”\<** 对话框中的属性。 若要配置分发服务器以便 `db_owner` 固定数据库角色的成员可以创建发布，或者要配置不是发布服务器的远程分发服务器，请使用“配置分发向导”。
+可以使用新建发布向导或配置分发向导配置分发。 配置分发服务器后，查看并修改“分发服务器属性 - \<分发服务器>”对话框中的属性。 若要配置分发服务器以便 `db_owner` 固定数据库角色的成员可以创建发布，或者要配置不是发布服务器的远程分发服务器，请使用“配置分发向导”。
 
 #### <a name="to-configure-distribution"></a>配置分发 
 
@@ -67,7 +67,7 @@ ms.locfileid: "76284904"
 
    对于 SQL 数据库托管实例上的分发服务器，对 `@working_directory` 使用 Azure 存储帐户，对 `@storage_connection_string` 使用存储访问密钥。 
 
-3. 在发布服务器上执行 [sp_replicationdboption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。 对 `@dbname` 指定要发布的数据库，对 `@optname` 指定复制类型，并对 `true` 指定值 `@value`。
+3. 在发布服务器上执行 [sp_replicationdboption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。 对 `@dbname` 指定要发布的数据库，对 `@optname` 指定复制类型，并对 `@value` 指定值 `true`。
 
 #### <a name="to-configure-publishing-using-a-remote-distributor"></a>使用远程分发服务器配置发布 
 

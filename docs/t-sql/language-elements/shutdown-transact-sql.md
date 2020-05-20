@@ -58,7 +58,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 3.  在每个数据库中插入检查点。  
   
- 当 sysadmin 固定服务器角色成员重启  **时，使用 SHUTDOWN 语句可以将所需的自动恢复工作量减到最少**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 当 sysadmin 固定服务器角色成员重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，使用 SHUTDOWN 语句可以将所需的自动恢复工作量减到最少。  
   
  还可以使用其他工具和方法停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 每个工具或方法都在所有数据库内执行检查点。 您可以从数据缓存中刷新已提交的数据，然后停止服务器：  
   
@@ -68,10 +68,10 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   使用“控制面板”中的“服务”应用程序。  
   
- 如果是从命令提示符下启动 sqlservr.exe，按 Ctrl+C 可以关闭  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 然而，按 Ctrl+C 键将不插入检查点。  
+ 如果是从命令提示符下启动 sqlservr.exe，按 Ctrl+C 可以关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 然而，按 Ctrl+C 键将不插入检查点。  
   
 > [!NOTE]  
->  使用上述任何方法停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都会向 `SERVICE_CONTROL_STOP` 发送 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 消息。  
+>  使用上述任何方法停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都会向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发送 `SERVICE_CONTROL_STOP` 消息。  
   
 ## <a name="permissions"></a>权限  
  SHUTDOWN 权限分配给 sysadmin 和 serveradmin 固定服务器角色的成员，且不可转让   。  

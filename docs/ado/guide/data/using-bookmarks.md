@@ -11,14 +11,14 @@ helpviewer_keywords:
 - bookmarks [ADO]
 - Recordset object [ADO]
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9fa2a738a3e94cd306619a318b75a2fd506972c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ebf38cb9afaabef6d1af4e941cf02df1947c7b73
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923609"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763048"
 ---
 # <a name="using-bookmarks"></a>使用书签
 当在**记录集中**四处移动后直接返回到特定记录，而不必滚动每个记录和比较值时，这通常很有用。 例如，如果您尝试使用**Find**方法搜索一条记录，但该搜索未返回任何记录，则您将自动置于该记录**集**的任一端。 如果提供程序支持，则可以使用书签来标记你的位置，然后再使用**Find**方法，以便可以返回到你的位置。 书签是唯一标识**Recordset**对象中的记录的**变量**类型值。  

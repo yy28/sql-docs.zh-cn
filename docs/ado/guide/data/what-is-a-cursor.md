@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ADO], about cursors
 ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7d903b2a5f971d0b6c7114a9e5229bff6133d743
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e2761a716981a5d22fd7f7347f7b757013cccc5d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923459"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762998"
 ---
 # <a name="what-is-a-cursor"></a>什么是游标？
 关系数据库中的操作会对整个行集起作用。 由 SELECT 语句返回的行集包括满足该语句的 WHERE 子句中条件的所有行。 这种由语句返回的完整行集称为结果集。 应用程序（尤其是交互和联机的应用程序）无法始终有效地将整个结果集作为一个单元来处理。 这些应用程序需要一种机制以便每次处理一行或一部分行。 游标就是提供这种机制的对结果集的一种扩展。  

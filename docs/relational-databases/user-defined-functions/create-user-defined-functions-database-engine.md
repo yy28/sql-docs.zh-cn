@@ -52,7 +52,7 @@ ms.locfileid: "79287991"
   
 -   用户定义函数可以嵌套；也就是说，用户定义函数可相互调用。 被调用函数开始执行时，嵌套级别将增加；被调用函数执行结束后，嵌套级别将减少。 用户定义函数的嵌套级别最多可达 32 级。 如果超出最大嵌套级别数，整个调用函数链将失败。 从 Transact-SQL 用户定义函数对托管代码的任何引用都将根据 32 级嵌套限制计入一个级别。 从托管代码内部调用的方法不根据此限制进行计数。  
   
--   下列 Service Broker 语句不能包含在  **用户定义函数的定义中**[!INCLUDE[tsql](../../includes/tsql-md.md)]：  
+-   下列 Service Broker 语句不能包含在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数的定义中：  
   
     -   `BEGIN DIALOG CONVERSATION`  
   
@@ -71,7 +71,7 @@ ms.locfileid: "79287991"
 需要在数据库中具有 `CREATE FUNCTION` 权限，并对创建函数时所在的架构具有 `ALTER` 权限。 如果函数指定用户定义类型，则需要对该类型具有 `EXECUTE` 权限。  
   
 ##  <a name="scalar-functions"></a><a name="Scalar"></a> 标量函数  
- 下面的示例在  **数据库中创建一个多语句标量函数（ 标量 UDF）** [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。 此函数输入一个值 `ProductID`，而返回一个单个数据值（指定库存产品的聚合量）。  
+ 下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中创建一个多语句标量函数（ 标量 UDF）。 此函数输入一个值 `ProductID`，而返回一个单个数据值（指定库存产品的聚合量）。  
   
 ```sql  
 IF OBJECT_ID (N'dbo.ufnGetInventoryStock', N'FN') IS NOT NULL  
@@ -105,7 +105,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
 > 有关详细信息，请参阅 [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)。 
 
 ##  <a name="table-valued-functions"></a><a name="TVF"></a> 表值函数  
-下面的示例在  **数据库中创建内联表值函数 (TVF)** [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。 此函数的输入参数为客户（商店）ID，而返回 `ProductID`、 `Name`以及 `YTD Total` （销售到商店的每种产品的本年度节截止到现在的销售总额）列。  
+下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中创建内联表值函数 (TVF)。 此函数的输入参数为客户（商店）ID，而返回 `ProductID`、 `Name`以及 `YTD Total` （销售到商店的每种产品的本年度节截止到现在的销售总额）列。  
   
 ```sql  
 IF OBJECT_ID (N'Sales.ufn_SalesByStore', N'IF') IS NOT NULL  
@@ -132,7 +132,7 @@ RETURN
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
-下面的示例在  **数据库中创建多语句表值函数 (MSTVF)** [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。 此函数具有一个输入参数 `EmployeeID` ，它返回直接或间接向指定员工报告的所有员工的列表。 然后在指定雇员 ID 109 的情况下调用此函数。  
+下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中创建多语句表值函数 (MSTVF)。 此函数具有一个输入参数 `EmployeeID` ，它返回直接或间接向指定员工报告的所有员工的列表。 然后在指定雇员 ID 109 的情况下调用此函数。  
   
 ```sql  
 IF OBJECT_ID (N'dbo.ufn_FindReports', N'TF') IS NOT NULL  
@@ -202,7 +202,7 @@ FROM dbo.ufn_FindReports(1);
 > 有关详细信息，请参阅[多语句表值函数的交错执行](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs)。
 
 > [!NOTE]  
-> 在传递存储过程或用户定义函数中的参数时，或在声明和设置批语句中的变量时，不会遵守 ANSI_WARNINGS。 例如，如果将一个变量定义为 char(3)，然后将其值设置为大于三个字符，则数据会被截断为定义的大小，并且 **或** 语句可以成功执行`INSERT``UPDATE`。
+> 在传递存储过程或用户定义函数中的参数时，或在声明和设置批语句中的变量时，不会遵守 ANSI_WARNINGS。 例如，如果将一个变量定义为 char(3)，然后将其值设置为大于三个字符，则数据会被截断为定义的大小，并且 `INSERT` 或 `UPDATE` 语句可以成功执行。
 
 ## <a name="see-also"></a>另请参阅  
  [用户定义的函数](../../relational-databases/user-defined-functions/user-defined-functions.md)     

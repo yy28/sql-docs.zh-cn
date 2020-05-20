@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - ObjectStateEnum enumeration [ADO]
 ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 708d146aaa40d873e0a519c860a047d4b1f93161
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3f233104501a17f384eb837d5e7390705a44ddc4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931929"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762296"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 指定对象是打开还是关闭，连接到数据源，执行命令，或检索数据。  
   
-|Constant|值|说明|  
+|返回的常量|值|说明|  
 |--------------|-----------|-----------------|  
 |**adStateClosed**|0|指示对象已关闭。|  
 |**adStateOpen**|1|指示对象已打开。|  
@@ -36,7 +36,7 @@ ms.locfileid: "67931929"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
   
-|Constant|  
+|返回的常量|  
 |--------------|  
 |AdoEnums.ObjectState.CLOSED|  
 |AdoEnums.ObjectState.OPEN|  

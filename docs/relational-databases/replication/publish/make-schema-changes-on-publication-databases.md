@@ -93,7 +93,7 @@ ms.locfileid: "76287661"
   
 -   若要将一个新列添加到表中但不在现有发布中包括此列，请禁用架构更改复制，然后执行 ALTER TABLE \<Table> ADD \<Column>。  
   
--   若要在现有发布中包括现有列，请使用 [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 或“发布属性 - **发布>”对话框。\<**  
+-   若要在现有发布中包括现有列，请使用 [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 或“发布属性 - \<发布>”对话框。  
   
      有关详细信息，请参阅 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。 这要求重新初始化订阅。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "76287661"
   
 -   若要从现有发布中删除列并从发布服务器中的表中删除该列，请执行 ALTER TABLE \<Table> DROP \<Column>。 默认情况下，该列然后将从所有订阅服务器中的表中删除。  
   
--   若要从现有发布中删除列但在发布服务器中的表中保留该列，请使用 [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 或“发布属性 - **发布>”对话框。\<**  
+-   若要从现有发布中删除列但在发布服务器中的表中保留该列，请使用 [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)、[sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 或“发布属性 - \<发布>”对话框。  
   
      有关详细信息，请参阅 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)。 这要求生成一个新的快照。  
   

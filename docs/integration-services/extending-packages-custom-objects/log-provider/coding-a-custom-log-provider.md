@@ -136,7 +136,7 @@ End Sub
 ```  
   
 ### <a name="writing-log-entries"></a>写入日志条目  
- 每次包中的对象通过对某一事件接口调用 Fire<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>event> 方法来引发事件时，都会调用 \< 方法。 每次引发事件时，都会提供其上下文的相关信息，通常是说明性消息。 但是，并非所有对 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 方法的调用都包含每个方法参数的信息。 例如，一些具有自我说明性名称的标准事件不提供 MessageText，并且 DataCode 和 DataBytes 只提供可选的补充信息。  
+ 每次包中的对象通过对某一事件接口调用 Fire\<event> 方法来引发事件时，都会调用 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 方法。 每次引发事件时，都会提供其上下文的相关信息，通常是说明性消息。 但是，并非所有对 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 方法的调用都包含每个方法参数的信息。 例如，一些具有自我说明性名称的标准事件不提供 MessageText，并且 DataCode 和 DataBytes 只提供可选的补充信息。  
   
  下面的代码示例实现了 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 方法，并将事件写入前述打开的流中。  
   

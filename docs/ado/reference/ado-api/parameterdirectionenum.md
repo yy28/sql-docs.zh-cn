@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - ParameterDirectionEnum enumeration [ADO]
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 68aaa0bfb8aa72c9e94a8b5db65768fe85895f0e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 88754f7dbd0064c765314d88b0fcc0d06f05bbb2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917743"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763398"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 指定[参数](../../../ado/reference/ado-api/parameter-object.md)是否表示输入参数、输出参数、输入参数和输出参数，或存储过程的返回值。  
   
-|Constant|Value|说明|  
+|返回的常量|值|说明|  
 |--------------|-----------|-----------------|  
 |**adParamInput**|1|默认。 指示参数表示输入参数。|  
 |**adParamInputOutput**|3|指示参数表示输入参数和输出参数。|  
@@ -36,7 +36,7 @@ ms.locfileid: "67917743"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
   
-|Constant|  
+|返回的常量|  
 |--------------|  
 |AdoEnums.ParameterDirection.INPUT|  
 |AdoEnums.ParameterDirection.INPUTOUTPUT|  

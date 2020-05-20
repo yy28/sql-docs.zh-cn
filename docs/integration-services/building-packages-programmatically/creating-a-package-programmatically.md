@@ -67,7 +67,7 @@ Module Module1
 End Module  
 ```  
   
- 若要编译并运行该示例，请在 Visual Studio 中按 F5。 若要使用 C# 编译器 (csc.exe) 生成代码，并在命令提示符处进行编译，请使用下面的命令和文件引用将 **filename> 替换为 .cs 或 .vb 文件的名称，并为其选择一个** outputfilename> *\<* *\<* 。  
+ 若要编译并运行该示例，请在 Visual Studio 中按 F5。 若要使用 C# 编译器 (csc.exe) 生成代码，并在命令提示符处进行编译，请使用下面的命令和文件引用将 \<filename> 替换为 .cs 或 .vb 文件的名称，并为其选择一个 \<outputfilename>。  
   
  **csc /target:library /out: \<outputfilename>.dll \<filename>.cs /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
@@ -75,7 +75,7 @@ End Module
   
  **vbc /target:library /out: \<outputfilename>.dll \<filename>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- 还可以通过将存储在磁盘中的现有包加载到文件系统或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中来创建包。 区别是要先创建 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 对象，然后由任一应用程序已重载方法填充包对象：LoadPackage 用于平面文件，LoadFromSQLServer 用于保存到  **的包，** 用于保存到文件系统的包  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A>。 下面的示例从磁盘加载一个现有包，然后查看该包的多个属性。  
+ 还可以通过将存储在磁盘中的现有包加载到文件系统或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中来创建包。 区别是要先创建 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 对象，然后由任一应用程序已重载方法填充包对象：LoadPackage 用于平面文件，LoadFromSQLServer 用于保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的包，<xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> 用于保存到文件系统的包。 下面的示例从磁盘加载一个现有包，然后查看该包的多个属性。  
   
 ```csharp  
 using System;  

@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - CursorTypeEnum enumeration [ADO]
 ms.assetid: ffc6e245-4471-42ae-84dd-e85bddfce983
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f6333934997c9de38b8df1dd08849886ff3dd7f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0af12cbad09990add1e5f42c05a68a0d249377fa
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933274"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763488"
 ---
 # <a name="cursortypeenum"></a>CursorTypeEnum
 指定[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象中使用的游标类型。  
   
-|Constant|值|说明|  
+|返回的常量|值|说明|  
 |--------------|-----------|-----------------|  
 |**adOpenDynamic**|2|使用动态游标。 其他**用户的添加**、更改和删除是可见的，并且允许所有类型的移动（书签除外，如果提供程序不支持）。|  
 |**adOpenForwardOnly**|0|默认。 使用只进游标。 与静态游标相同，不同之处在于只能向前滚动记录。 当只需通过**记录集**进行一次传递时，这可以提高性能。|  
@@ -36,7 +36,7 @@ ms.locfileid: "67933274"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
   
-|Constant|  
+|返回的常量|  
 |--------------|  
 |AdoEnums. CursorType|  
 |AdoEnums. CursorType. FORWARDONLY|  

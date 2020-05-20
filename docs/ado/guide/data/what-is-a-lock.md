@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cursors [ADO], locking
 - locks [ADO], about locking
 ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c1607c9434e6c30ffd317277aadab27af96868fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: df46dd1ba112dfc592dee34bc37e50c5b727fed7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923441"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762988"
 ---
 # <a name="what-is-a-lock"></a>什么是锁定？
 锁定是 DBMS 限制对多用户环境中的行的访问的过程。 如果行或列被独占锁定，则在解除锁定之前，不允许其他用户访问锁定的数据。 这可确保两个用户不能同时更新行中的同一列。  

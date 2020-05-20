@@ -25,7 +25,7 @@ ms.locfileid: "74056204"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文搜索查询可以通过使用全文搜索*同义词库*来搜索用户指定的字词的同义词。 每个同义词库为特定语言定义一组同义词。 通过开发针对全文数据定制的同义词库，您可以有效地扩大对这些数据的全文查询的范围。
 
-仅对所有 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 查询以及指定 [ 子句的任意 ](../../t-sql/queries/contains-transact-sql.md)CONTAINS[ 和 ](../../relational-databases/system-functions/containstable-transact-sql.md)CONTAINSTABLE`FORMSOF THESAURUS` 查询执行同义词库匹配操作。
+仅对所有 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 和 [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 查询以及指定 `FORMSOF THESAURUS` 子句的任意 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 和 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 查询执行同义词库匹配操作。
   
 全文搜索同义词库是一个 XML 文本文件。
   
@@ -44,7 +44,7 @@ ms.locfileid: "74056204"
 
 -   标注字符设置  
   
-     对于给定同义词库，所有搜索模式要么区分标注字符，要么不区分标注字符，如波形符 ( **~** )、锐音符 ( **&acute;** ) 或元音变音符 ( **&uml;** )（即要么区分重音  ，要么不区分重音  ）。 例如，假设你在全文查询中指定要将“caf&eacute;”模式替换为其他模式。 如果同义词库不区分重音，全文搜索会替换“caf&eacute;”和“cafe”模式。 如果同义词库区分重音，全文搜索仅替换“caf&eacute;”模式。 默认情况下，同义词库不区分重音。  
+     对于给定同义词库，所有搜索模式要么区分标注字符，要么不区分标注字符，如波形符 (~)、锐音符 (&acute;) 或元音变音符 (&uml;)（即要么区分重音，要么不区分重音）。 例如，假设你在全文查询中指定要将“caf&eacute;”模式替换为其他模式。 如果同义词库不区分重音，全文搜索会替换“caf&eacute;”和“cafe”模式。 如果同义词库区分重音，全文搜索仅替换“caf&eacute;”模式。 默认情况下，同义词库不区分重音。  
   
 ##  <a name="default-thesaurus-files"></a><a name="initial_thesaurus_files"></a>默认同义词库文件
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一组 XML 同义词库文件，分别对应于每种支持的语言。 这些文件实际上是空的。 它们仅包含所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 同义词库通用的顶级 XML 结构以及注释掉的示例同义词库。  

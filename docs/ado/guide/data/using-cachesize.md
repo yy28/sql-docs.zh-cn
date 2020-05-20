@@ -11,14 +11,14 @@ helpviewer_keywords:
 - locks [ADO], CacheSize property
 - CacheSize property [ADO]
 ms.assetid: ca1c3422-b6a4-4ba6-af55-54f975b698b1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a2e3a67e9ad0f1f26f804ecb38e960041863fad9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8014fc2b3a1d1614bc9b704b8838f0918f46c946
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923577"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763038"
 ---
 # <a name="using-cachesize"></a>使用 CacheSize
 使用**CacheSize**属性可控制从提供程序在本地内存中一次检索的记录数。 例如，如果**CacheSize**为10，则在第一次打开**Recordset**对象之后，提供程序会在本地内存中检索前10条记录。 当您在**Recordset**对象中移动时，提供程序将从本地内存缓冲区返回数据。 一旦移过缓存中的最后一条记录，提供程序就会将数据源中的后10个记录检索到缓存中。  

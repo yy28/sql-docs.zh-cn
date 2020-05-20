@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Visual Basic for applications functions [ADO]
 - data shaping [ADO], Visual Basic for Applications functions
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 25cac9bffce7602ce211be7f83c7e55239061282
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 155eda8cf8361abff080d52db9a226fa9237b2eb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923464"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763008"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications 函数
 以下 Visual Basic for Applications 函数可用于数据定形 CALC 表达式：  
@@ -31,18 +31,18 @@ ms.locfileid: "67923464"
 |Cdate|CDbl|Chr|ChrB|ChrW|Chr$|  
 |ChrB $|CInt|CLng|Cos|CSng|CStr|  
 |Cvar|CVDate|CVErr|日期|Date$|DateAdd|  
-|DateDiff|DatePart|DateSerial|DateValue|日期|DDB|  
-|错误|Error$|Exp|Fix|格式|Format$|  
-|FV|Hex|Hex$|Hour|IIF|InStr|  
-|Int|IPmt|IRR|IsDate|IsEmpty|IsError|  
-|IsNull|IsNumeric|IsObject|LCase|LCase$|Left|  
+|DateDiff|DatePart|DateSerial|DateValue|天|DDB|  
+|Error|Error$|Exp|Fix|格式|Format$|  
+|FV|Hex|Hex$|小时|IIF|InStr|  
+|int|IPmt|IRR|IsDate|IsEmpty|IsError|  
+|IsNull|IsNumeric|IsObject|LCase|LCase$|左|  
 |Leftb 将|Left$|Leftb 将 $|Len|日志|LTrim|  
 |LTrim$|Mid|Mid$|Minute|MIRR|月份|  
 |现在|NPer|NPV|Oct|Oct$|Pmt|  
-|PPmt|PV|QBColor|费率|RGB|Right|  
+|PPmt|PV|QBColor|费率|RGB|权限|  
 |Rightb 将|Right$|Rightb 将 $|Rnd|RTrim|RTrim $|  
 |秒|Sgn|Sin|SLN|Space|Space$|  
-|Sqr|Str|Str$|StrComp|StrConv|字符串|  
+|Sqr|Str|Str$|StrComp|StrConv|String|  
 |String$|SYD|Tan|时间|Time$|Timer|  
 |TimeSerial|TimeValue|Trim|Trim$|TypeName|UCase|  
 |UCase$|Val|VarType|星期|年||  

@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - RightsEnum enumeration [ADOX]
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f6db3d1fecd8a2670a81fb239cb1a100389be21a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 343d5ec73a9720085f450cde3f35a187cf4b7302
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965274"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762808"
 ---
 # <a name="rightsenum"></a>RightsEnum
 指定组或用户对对象的权限。  
   
-|Constant|值|说明|  
+|返回的常量|值|说明|  
 |--------------|-----------|-----------------|  
 |**adRightCreate**|16384（&H4000）|用户或组具有创建此类型的新对象的权限。|  
 |**adRightDelete**|65536（&H10000）|用户或组有权删除对象中的数据。 对于**表**等对象，用户有权从记录中删除数据值。|  

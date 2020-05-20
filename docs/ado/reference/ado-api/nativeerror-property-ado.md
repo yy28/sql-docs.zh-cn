@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - NativeError property [ADO]
 ms.assetid: b9b47e57-18a4-4186-aef5-5bd18d7b1d74
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 42888190dcd7b5e41987e6e8ec7194242549aa9c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2b9bd2228b38af302d96cd3794cc00674449fcac
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918019"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762398"
 ---
 # <a name="nativeerror-property-ado"></a>NativeError 属性 (ADO)
 指示给定[错误](../../../ado/reference/ado-api/error-object.md)对象的特定于提供程序的错误代码。  

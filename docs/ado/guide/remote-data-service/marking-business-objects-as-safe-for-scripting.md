@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business objects in RDS [ADO]
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 55ae560f35a06e77803bfb011f4d430d5079ea05
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6655b1bba274a9dc5079c7c996b58da6ba8ae0f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922609"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763598"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>将业务对象标记为“可安全编写脚本”
 > [!IMPORTANT]
@@ -28,7 +28,7 @@ ms.locfileid: "67922609"
 > [!NOTE]
 >  标记为 "可安全执行脚本" 的业务对象或用于初始化的安全对象可以通过网络上的任何人进行实例化和初始化。 将业务对象标记为 "可安全执行脚本" 并不安全。 至关重要的一点是，确保使用最高的安全性对业务对象进行编码，以确保此类对象不会为敏感数据提供未受保护的访问点。  
   
- 若要将业务对象手动标记为可安全编写脚本，请创建一个扩展名为 .reg 的文本文件，该文件包含以下文本。 在此示例中\<， *MyActiveXGUID*> 是业务对象的十六进制 GUID 编号。 以下两个数字启用了 "安全脚本编写" 功能：  
+ 若要将业务对象手动标记为可安全编写脚本，请创建一个扩展名为 .reg 的文本文件，该文件包含以下文本。 在此示例中， \< *MyActiveXGUID*> 是业务对象的十六进制 GUID 编号。 以下两个数字启用了 "安全脚本编写" 功能：  
   
 ```console
 [HKEY_CLASSES_ROOT\CLSID\<MyActiveXGUID>\Implemented   
@@ -43,6 +43,6 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
   
  在最后一个步骤中，应用程序安装向导将创建一个 .htm 和一个 .cab 文件。 然后，你可以将这两个文件复制到目标计算机，然后双击 .htm 文件以加载页面并正确注册服务器。  
   
- 因为默认情况下会在 Windows\System32\Occache 目录中安装业务对象，请将其移动到 Windows\System32 目录，并更改**HKEY_CLASSES_ROOT \clsid\\**\<*MyActiveXGUID*>\\**InprocServer32**注册表项以匹配正确的路径。
+ 因为默认情况下会在 Windows\System32\Occache 目录中安装业务对象，请将其移动到 Windows\System32 目录，并更改**HKEY_CLASSES_ROOT \clsid \\ ** \< *MyActiveXGUID* > \\ **InprocServer32**注册表项以匹配正确的路径。
 
 

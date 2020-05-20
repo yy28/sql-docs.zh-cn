@@ -140,7 +140,7 @@ WITH ( LANGUAGE = 'R' )
 
 **library_name**
 
-将库添加到作用域为该用户的数据库中。 在特定用户或所有者的上下文中，库名称必须是唯一的。 例如，两个用户 RUser1 和 RUser2 可以分别独立上传 R 库   `ggplot2`。 不过，如果 RUser1  要上传新版 `ggplot2`，第二个实例要么必须以不同方式命名，要么必须替换现有库。 
+将库添加到作用域为该用户的数据库中。 在特定用户或所有者的上下文中，库名称必须是唯一的。 例如，两个用户 RUser1 和 RUser2 可以分别独立上传 R 库 `ggplot2`。 不过，如果 RUser1  要上传新版 `ggplot2`，第二个实例要么必须以不同方式命名，要么必须替换现有库。 
 
 不能随意分配库名称；库名称应与在外部脚本中加载库时所需的名称相同。
 
@@ -273,7 +273,7 @@ EXEC sp_execute_external_script
 + `packageA` 具有 `packageB` 上的依赖项
 + `packageB` 具有 `packageC` 上的依赖项
 
-若要成功安装 `packageA`，则必须在将 `packageB` 添加到 SQL Server 的同时为 `packageC` 和 `packageA` 创建库。 同时请务必检查所需的包版本。
+若要成功安装 `packageA`，则必须在将 `packageA` 添加到 SQL Server 的同时为 `packageB` 和 `packageC` 创建库。 同时请务必检查所需的包版本。
 
 在实践中，常用包的依赖项通常比简单示例复杂得多。 例如，ggplot2  可能需要超过 30 个包，而这些包可能还需要服务器上没有的其他包。 任何缺少的包或错误的包版本都可能会导致安装失败。
 
@@ -302,7 +302,7 @@ EXEC sp_execute_external_script
 
     如果所需的包已上传到实例，则不需要再次添加。 请务必检查现有包的版本是否正确。 
     
-    第一次运行 `packageC` 以安装包 `packageB` 时，所需的包 `sp_execute_external_script` 和 `packageA` 也会按照正确的顺序安装。
+    第一次运行 `sp_execute_external_script` 以安装包 `packageA` 时，所需的包 `packageC` 和 `packageB` 也会按照正确的顺序安装。
 
     但是，如果所需的包均不可用，则安装目标包 `packageA` 时会失败。
 

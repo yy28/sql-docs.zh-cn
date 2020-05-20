@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Internet publishing [ADO]
 - urls [ADO]
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: decbc7c3b377234d91fe6b3e662d9449298041c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b95700d30337363091815763a5e9fbf1547902e6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923601"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763058"
 ---
 # <a name="using-ado-for-internet-publishing"></a>使用 ADO 进行 Internet 发布
 [用于 Internet 发布的 OLE DB 提供程序](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)演示了使用 ADO 访问异类数据的特定示例。 虽然本部分中的示例将特定于使用 Internet 发布提供程序，但在将 ADO 用于其他提供程序的异类数据（如提供程序到电子邮件存储）时，演示的原则应类似。  

@@ -38,7 +38,7 @@ ms.locfileid: "73632998"
   
     -   **\@on**（启用）  
   
-     修改“**on”参数时，请记住它与“\@columnid”参数是相互作用的** **\@** ：  
+     修改“\@on”参数时，请记住它与“\@columnid”参数是相互作用的：  
   
     |ON|列 ID|结果|  
     |--------|---------------|------------|  
@@ -48,7 +48,7 @@ ms.locfileid: "73632998"
     ||NOT NULL|指定事件的列关闭。|  
   
 > [!IMPORTANT]
->  与常规的存储过程不同，所有 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 存储过程 (<strong>sp_trace_xx *) 参数的类型都受到严格限制，不支持自动的数据类型转换*</strong>。 如果这些参数不是使用正确的输入参数数据类型（正如参数说明中指定的一样）调用的，则存储过程会返回错误。  
+>  与常规的存储过程不同，所有 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 存储过程 (<strong>sp_trace_xx</strong>) 参数的类型都受到严格限制，不支持自动的数据类型转换。 如果这些参数不是使用正确的输入参数数据类型（正如参数说明中指定的一样）调用的，则存储过程会返回错误。  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

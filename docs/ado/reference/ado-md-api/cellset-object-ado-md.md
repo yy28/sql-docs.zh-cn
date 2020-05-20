@@ -13,20 +13,20 @@ f1_keywords:
 helpviewer_keywords:
 - Cellset object [ADO MD]
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9524e9801f284d3dff3125b850cdd1fd32a361a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e50fb60fbde205171c066380a2c2023d485a5a09
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928649"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761765"
 ---
 # <a name="cellset-object-ado-md"></a>单元集对象 (ADO MD)
 表示多维查询的结果。 它是从多维数据集或其他单元集选择的单元的集合。  
   
 ## <a name="remarks"></a>备注  
- 使用直接的、类似数组的访问检索**单元集**内的数据。 您可以向下钻取到特定的成员，以获取有关该成员的数据。 例如，下面的代码返回名为`cst`的单元集的第一个轴上第一个位置的第一个成员的标题：  
+ 使用直接的、类似数组的访问检索**单元集**内的数据。 您可以向下钻取到特定的成员，以获取有关该成员的数据。 例如，下面的代码返回名为的单元集的第一个轴上第一个位置的第一个成员的标题 `cst` ：  
   
 ```  
 cst.Axes(0).Positions(0).Members(0).Caption  

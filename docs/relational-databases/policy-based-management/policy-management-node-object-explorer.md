@@ -19,7 +19,7 @@ ms.locfileid: "68086911"
 ---
 # <a name="policy-management-node-object-explorer"></a>“策略管理”节点（对象资源管理器）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本部分包含  **中对象资源管理器的“策略管理”** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]节点的以下 F1 帮助主题。  
+  本部分包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中对象资源管理器的“策略管理”节点的以下 F1 帮助主题。  
   
 -   [“创建新条件”或“打开条件”对话框 -“常规”页](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)  
   

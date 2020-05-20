@@ -217,7 +217,7 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 | 环境变量 | 说明 |
 |---|---|
 | ACCEPT_EULA | 设置为任何值（例如“Y”）时，都接受 SQL Server 许可条款。|
-| SSIS_PID | 设置 SQL Server 版本或产品密钥。 可能的值有：<ul><li>计算</li><li>开发人员</li><li>Express</li><li>Web</li><li>Standard</li><li>Enterprise</li><li>产品密钥</li></ul>指定产品密钥时，其格式必须为： *#####* - *#####* - *，其中 ##### 为字母或数字*- *#####* - *#####* *#* 。  |
+| SSIS_PID | 设置 SQL Server 版本或产品密钥。 可能的值有：<ul><li>计算</li><li>开发人员</li><li>Express</li><li>Web</li><li>Standard</li><li>Enterprise</li><li>产品密钥</li></ul>指定产品密钥时，其格式必须为：#####-#####-#####-#####-#####，其中 # 为字母或数字。  |
 | | |
 
 ## <a name="next-steps"></a>后续步骤

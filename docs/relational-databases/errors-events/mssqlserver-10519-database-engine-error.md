@@ -30,10 +30,10 @@ ms.locfileid: "72006078"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|PG_INCOMPATIBLE_STMT_AND_HINTS|  
-|消息正文|无法创建计划指南“%.\*ls”，因为 **hints 中指定的提示无法应用于 \@stmt 或** statement_start_offset 指定的语句 **\@** **\@** 。 请确保提示可以应用于该语句。|  
+|消息正文|无法创建计划指南“%.\*ls”，因为 \@hints 中指定的提示无法应用于 \@stmt 或 \@statement_start_offset 指定的语句。 请确保提示可以应用于该语句。|  
   
 ## <a name="explanation"></a>说明  
-**hints 中指定的提示无法应用于 \@stmt 或** statement_start_offset 指定的语句 **\@** **\@** 。  
+\@hints 中指定的提示无法应用于 \@stmt 或 \@statement_start_offset 指定的语句。  
   
 ## <a name="user-action"></a>用户操作  
 请指定可以应用于该语句的提示。  

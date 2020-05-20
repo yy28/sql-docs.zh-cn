@@ -110,7 +110,7 @@ ProductModelID  Instructions
   
 另外，行集中的上下文节点无法具体化。 即，无法在 SELECT 语句中使用此节点。 但是，可以在 IS NULL 和 COUNT(*) 中使用它。  
   
-使用 nodes() 方法的情况与使用 [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md) 的情况相同，会提供 XML 的行集视图  。 但是，在包含 XML 文档的若干行的表中使用 nodes() 方法时，无需使用游标  。  
+使用 nodes() 方法的情况与使用 [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md) 的情况相同，会提供 XML 的行集视图。 但是，在包含 XML 文档的若干行的表中使用 nodes() 方法时，无需使用游标  。  
   
 由 nodes() 方法返回的行集是未命名的行集  。 因此，必须通过使用别名来显式命名。  
   
@@ -201,7 +201,7 @@ go
 ### <a name="specifying-the-nodes-method-against-a-column-of-xml-type"></a>针对 xml 类型的列指定 nodes() 方法  
 此示例中使用了自行车生产说明，该说明存储在 ProductModel 表的 Instructions xml 类型列中   。  
   
-在以下示例中，已对 `ProductModel` 表中 xml  类型的 `Instructions` 列指定 `nodes()` 方法。  
+在以下示例中，已对 `ProductModel` 表中 xml 类型的 `Instructions` 列指定 `nodes()` 方法。  
   
 `nodes()` 方法通过指定 `/MI:root/MI:Location` 路径，将 <`Location`> 元素设置为上下文节点。 结果行集包括原始文档的逻辑副本，每个副本对应文档中的一个 <`Location`> 节点，上下文节点设置为 <`Location`> 元素。 因此，`nodes()` 函数提供一组 <`Location`> 上下文节点。  
   

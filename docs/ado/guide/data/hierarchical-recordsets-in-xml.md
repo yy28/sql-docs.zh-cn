@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - hierarchical Recordsets [ADO], in XML
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 17ed6f29442bc55f81d0ef83bfd19473a99e9a95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 24a5303f4ecd43293508f117b795d389a7608285
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925109"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762738"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>XML 中的分层记录集
 ADO 允许将分层记录集对象持久保存到 XML 中。 使用分层记录集对象，父记录集中某个字段的值就是另一个记录集。 此类字段表示为 XML 流中的子元素，而不是特性。  

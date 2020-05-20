@@ -60,7 +60,7 @@ ms.locfileid: "68316958"
   
 #### <a name="to-modify-an-index"></a>修改索引  
   
-下面的示例使用 `ProductID` 选项，删除 AdventureWorks 数据库中 `Production.WorkOrder` 表的 `DROP_EXISTING` 列上的现有索引并重新创建。 还设置了 `FILLFACTOR` 和 `PAD_INDEX` 选项。  
+下面的示例使用 `DROP_EXISTING` 选项，删除 AdventureWorks 数据库中 `Production.WorkOrder` 表的 `ProductID` 列上的现有索引并重新创建。 还设置了 `FILLFACTOR` 和 `PAD_INDEX` 选项。  
   
 [!code-sql[IndexDDL#CreateIndex4](../../relational-databases/indexes/codesnippet/tsql/modify-an-index_1.sql)]  
   

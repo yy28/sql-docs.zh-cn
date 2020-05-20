@@ -168,7 +168,7 @@ ms.locfileid: "76516548"
   
      有关详细信息，请参阅 [启动、停止、暂停、继续、重启 SQL Server 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
-3.  在另一个命令行窗口中，通过执行以下命令（并且用 **的实例替换***servername>\<）来分离* msdb[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库：`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
+3.  在另一个命令行窗口中，通过执行以下命令（并且用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例替换 *\<servername>*）来分离 **msdb** 数据库：`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
 4.  使用 Windows 资源管理器，重命名 **msdb** 数据库文件。 默认情况下，这些文件位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 DATA 子文件夹中。  
   
@@ -176,7 +176,7 @@ ms.locfileid: "76516548"
   
 6.  在命令行窗口中，连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并执行以下命令： `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
   
-     使用  *的实例替换 \<* servername>[!INCLUDE[ssDE](../../includes/ssde-md.md)]。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的文件系统路径。  
+     使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的实例替换 *\<servername>*。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的文件系统路径。  
   
 7.  使用 Windows 记事本，打开 **instmsdb.out** 文件，然后检查输出中是否存在任何错误。  
   

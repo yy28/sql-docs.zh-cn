@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Field object [ADO]
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 80e6576b236db44452c4e89b1d8f3bb8976ab120
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 07b58be0aed59707266f86b5e5074e82da80220b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923984"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763088"
 ---
 # <a name="the-field-object"></a>字段对象
 每个**字段**对象通常对应于数据库表中的一个列。 但是，**字段**还可以表示指向另一**记录集**的指针，称为章节。 在本指南的后面部分将介绍一些例外（如章节列）。  
@@ -68,9 +68,9 @@ ms.locfileid: "67923984"
 ### <a name="getting-more-field-information"></a>获取更多字段信息  
  ADO 对象具有两种类型的属性：内置和动态。 至此，只讨论了**Field**对象的内置属性。  
   
- 内置属性是在 ADO 中实现并使用`MyObject.Property`语法立即可用于任何新对象的属性。 它们不作为**属性**对象显示在对象的**属性**集合中。  
+ 内置属性是在 ADO 中实现并使用语法立即可用于任何新对象的属性 `MyObject.Property` 。 它们不作为**属性**对象显示在对象的**属性**集合中。  
   
- 动态属性由基础数据提供程序定义，并出现在相应 ADO 对象的**properties**集合中。 例如，特定于提供程序的属性可能指示**Recordset**对象是否支持事务或更新。 这些附加属性将显示为该**记录集**对象的**属性**集合中的**属性**对象。 动态属性只能通过使用语法`MyObject.Properties(0)`或`MyObject.Properties("Name")`的集合来引用。  
+ 动态属性由基础数据提供程序定义，并出现在相应 ADO 对象的**properties**集合中。 例如，特定于提供程序的属性可能指示**Recordset**对象是否支持事务或更新。 这些附加属性将显示为该**记录集**对象的**属性**集合中的**属性**对象。 动态属性只能通过使用语法或的集合来引用 `MyObject.Properties(0)` `MyObject.Properties("Name")` 。  
   
  不能删除任何一种属性。  
   

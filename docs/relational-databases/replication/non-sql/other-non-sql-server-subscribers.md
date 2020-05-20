@@ -21,7 +21,7 @@ ms.locfileid: "68110954"
 ---
 # <a name="other-non-sql-server-subscribers"></a>其他非 SQL Server 订阅服务器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持的非 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 订阅服务器列表，请参阅[非 SQL Sever 订阅服务器](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。 本主题包含有关 ODBC 驱动程序和 OLE DB 访问接口要求的信息。  
+  有关 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 支持的非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器列表，请参阅[非 SQL Sever 订阅服务器](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。 本主题包含有关 ODBC 驱动程序和 OLE DB 访问接口要求的信息。  
   
 ## <a name="odbc-driver-requirements"></a>ODBC 驱动程序要求  
  ODBC 驱动程序：  

@@ -48,7 +48,7 @@ ms.locfileid: "68140891"
   
  请注意，存在某些无法插入、删除或修改其值的属性。 例如：  
   
--   对于类型化或非类型化的 xml 而言，这样的属性有 xmlns、xmlns: **和 xml:base**  **\***  。  
+-   对于类型化或非类型化的 xml 而言，这样的属性有 xmlns、xmlns:\* 和 xml:base。  
   
 -   仅对于类型化的 xml 而言，这样的属性有 xsi:nil 和 xsi:type    。  
   

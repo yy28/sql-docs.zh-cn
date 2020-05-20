@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 16142f200e6fd6e7c141b4f1fe6d45fe8917bc28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8a091a606cf3049c055794bc16cc51db78a40978
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931907"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762175"
 ---
 # <a name="open-method-ado-recordset"></a>Open 方法（ADO 记录集）
 打开[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象上的游标。  
@@ -60,7 +60,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  对**Recordset**对象使用**Open**方法将打开一个游标，该游标表示基表、查询结果或以前保存的**记录集**的记录。  
   
- 使用可选的*Source*自变量来指定数据源，使用以下项之一：**命令**对象变量、SQL 语句、存储过程、表名称、URL 或完整的文件路径名称。 如果*源*是文件路径名称，则可以是完整路径（"c:\dir\file.rst"）、相对路径（".。。\file.rst "）或 URL （"<https://files/file.rst>"）。  
+ 使用可选的*Source*自变量来指定数据源，使用以下项之一：**命令**对象变量、SQL 语句、存储过程、表名称、URL 或完整的文件路径名称。 如果*源*是文件路径名称，则可以是完整路径（"c:\dir\file.rst"）、相对路径（".。。\file.rst "）或 URL （" <https://files/file.rst> "）。  
   
  使用**Open**方法的*Source*参数执行不返回记录的操作查询是一个不错的做法，因为没有简单的方法来确定调用是否成功。 此类查询返回的**记录集**将关闭。 若要执行不返回记录的查询（如 SQL INSERT 语句），请改为调用**命令**对象的[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)方法或[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象的[execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法。  
   

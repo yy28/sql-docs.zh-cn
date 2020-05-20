@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - MoveRecordOptionsEnum enumeration [ADO]
 ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dcdb825073b267c3e3351001ecc7b11c969582e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 849f3720d831c17b6b9d6d2829ae0b28f19992de
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932048"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762438"
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
 指定[Record](../../../ado/reference/ado-api/record-object-ado.md) object [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)方法的行为。  
   
-|Constant|值|说明|  
+|返回的常量|值|说明|  
 |--------------|-----------|-----------------|  
 |**adMoveUnspecified**|-1|默认。 执行默认移动操作：如果目标文件或目录已存在，操作将失败，并且操作将更新超文本链接。|  
 |**adMoveOverWrite**|1|覆盖目标文件或目录（即使它已存在）。|  

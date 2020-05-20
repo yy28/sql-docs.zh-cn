@@ -24,7 +24,7 @@ ms.locfileid: "68013627"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>使用“对象资源管理器详细信息”来监视可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主题说明如何通过使用  **的“对象资源管理器详细信息”** [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]窗格来监视和管理现有的 Always On 可用性组、可用性副本和可用性数据库。  
+  本主题说明如何通过使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的“对象资源管理器详细信息”窗格来监视和管理现有的 Always On 可用性组、可用性副本和可用性数据库。  
   
 > [!NOTE]  
 >  有关使用“对象资源管理器详细信息”窗格的信息，请参阅 [对象资源管理器详细信息窗格](../../../ssms/object/object-explorer-details-pane.md)。  

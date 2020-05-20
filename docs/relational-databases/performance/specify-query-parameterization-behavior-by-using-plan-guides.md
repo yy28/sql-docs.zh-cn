@@ -53,7 +53,7 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
 2.  请指定 PARAMETERIZATION FORCED 查询提示以对查询的参数化表单创建计划指南。  
 
     > [!IMPORTANT]  
-    >  作为参数化查询的一部分， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根据文字的值和大小，将数据类型分配给替换文字值的参数。 传递给 sp_get_query_template 的 **stmt 输出参数的常量文字值也发生同样的过程\@**  。 由于在  **参数化查询时，sp_create_plan_guide 的 \@params 参数中指定的数据类型必须与此查询中的数据类型匹配，因此可能必须要创建多个计划指南以涵盖全部可能的查询参数值**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+    >  作为参数化查询的一部分， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根据文字的值和大小，将数据类型分配给替换文字值的参数。 传递给 sp_get_query_template 的 \@stmt 输出参数的常量文字值也发生同样的过程。 由于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 参数化查询时，sp_create_plan_guide 的 \@params 参数中指定的数据类型必须与此查询中的数据类型匹配，因此可能必须要创建多个计划指南以涵盖全部可能的查询参数值。  
 
 以下脚本既可用于获取参数化查询也可用于之后对其创建计划指南：  
   

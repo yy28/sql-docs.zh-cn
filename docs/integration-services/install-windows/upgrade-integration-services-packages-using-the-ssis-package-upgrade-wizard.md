@@ -90,7 +90,7 @@ ms.locfileid: "71284721"
 2.  在向导的 **“选择包管理选项”** 页上，选择 **“备份原始包”** 选项。  
   
     > [!WARNING]  
-    >  当你在 **中打开某一** 或更高版本的项目时，将不会显示“备份原始包”[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]选项，因为该向导将自动启动。  
+    >  当你在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中打开某一 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 或更高版本的项目时，将不会显示“备份原始包”选项，因为该向导将自动启动。  
   
 3.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，运行 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包升级向导。  
   
