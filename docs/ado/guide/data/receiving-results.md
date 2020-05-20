@@ -11,14 +11,14 @@ helpviewer_keywords:
 - receiving results [ADO]
 - Recordset object [ADO], receiving results
 ms.assetid: 791aa26e-7aae-477e-9f05-5cd46e1de095
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2b861553e9a71ce56377f8d87bba0f9e26e929c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0e05bd86b908c8c6d7ac08525e425333d3e2f1ad
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924527"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759093"
 ---
 # <a name="receiving-results"></a>接收结果
 在 ADO 中，大多数命令都会导致某些信息返回给调用方。 对于返回行集的命令，会在**记录集**对象（可能是最常用的 ADO 对象）中接收结果。  

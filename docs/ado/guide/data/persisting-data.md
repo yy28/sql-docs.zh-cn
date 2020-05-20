@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 63323fd8ed18f57a68633dce0525d1d37e4978ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 60b3a9e036bb199b72373055b299f262862a5d16
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924709"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759113"
 ---
 # <a name="persisting-data"></a>保留数据
 可移植计算（例如，使用便携式计算机）已生成对可以在连接和断开连接状态下运行的应用程序的需求。 ADO 为开发人员提供了将客户端游标记录集保存到磁盘并稍后重新加载该**记录集**的功能，从而增加了对此功能的支持。  

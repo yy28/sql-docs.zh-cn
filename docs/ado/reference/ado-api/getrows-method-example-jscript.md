@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Getrows method [ADO], JScript example
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0ae1a96f2f5a72f354e376faa3e9e7370f9fcb92
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8ba091ff7db668cc049c50eeb26492a2c9ee3422
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932471"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760023"
 ---
 # <a name="getrows-method-example-jscript"></a>GetRows 方法示例 (JScript)
 此示例使用[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法从[记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)检索*Custiomers*表的所有行，并使用生成的数据来填充数组。 在以下两种情况下， **GetRows**方法将返回小于所需的行数：如果已达到[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) ，或者**getrows**试图检索其他用户删除的记录，则为。 仅当发生第二种情况时，函数才返回**False** 。 剪切下面的代码并将其粘贴到记事本或其他文本编辑器中，并将其保存为**GetRowsJS**。  

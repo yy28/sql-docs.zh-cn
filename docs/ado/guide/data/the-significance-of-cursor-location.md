@@ -13,14 +13,14 @@ helpviewer_keywords:
 - client-side cursors [ADO]
 - cursors [ADO], server-side
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e663ac5cdcf85fc1d050e0f066b597d29141ebfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7f5e960aa4ccc71079b8c06690665af74cffd0ab
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923894"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759063"
 ---
 # <a name="the-significance-of-cursor-location"></a>游标位置的重要性
 每个游标都使用临时资源来保存其数据。 这些资源可以是内存、磁盘分页文件、临时磁盘文件，甚至可以是数据库中的临时存储。 当这些资源位于客户端计算机上时，游标称为*客户端*游标。 当这些资源位于服务器上时，游标称为*服务器端*游标。  

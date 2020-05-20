@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - State property [ADO], Visual Basic example
 ms.assetid: 9da6db50-d9bb-47e1-ae8b-be3c9b88cf9a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7e9c497d8e417ccfcc74df2b21043446c2ce9860
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e03f64c5f5312bc6f3f0409cb5b701e854919b0e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67916857"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759743"
 ---
 # <a name="state-property-example-vb"></a>State 属性示例 (VB)
 此示例使用[State](../../../ado/reference/ado-api/state-property-ado.md)属性来显示异步连接正在打开的消息和正在执行的异步命令。  

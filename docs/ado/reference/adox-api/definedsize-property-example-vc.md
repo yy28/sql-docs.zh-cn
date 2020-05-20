@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - DefinedSize property [ADOX], VC++ example
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4d34aeed81cfead8f3081d9e0d7c4f148c17396d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9cafc18fb00a0adeb6d219d901ea40ca79510be5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76939577"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759173"
 ---
 # <a name="definedsize-property-example-vc"></a>DefinedSize 属性示例 (VC++)
 此示例演示[列](../../../ado/reference/adox-api/column-object-adox.md)的[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)属性。 该代码将重新定义*Northwind*数据库的**Employees**表的 FirstName 列的大小。 然后，将显示基于 " **Employees** " 表的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的 "名字"[字段](../../../ado/reference/ado-api/field-object.md)值的更改。 请注意，在您重新定义**DefinedSize**属性后，默认情况下，FirstName 字段会用空格填充。  

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Status property [ADO Field], Visual Basic example
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c28a0b615a9f250c8539e87abf9fefbc11f513ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2263f72311111ef7f63d006e085165ec2ab492c3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67916830"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759703"
 ---
 # <a name="status-property-example-field-vb"></a>Status 属性示例（字段）(VB)
 下面的示例使用[Internet 发布提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)从读/写文件夹打开文档。 [记录](../../../ado/reference/ado-api/record-object-ado.md)的[Field](../../../ado/reference/ado-api/field-object.md)对象的[Status](../../../ado/reference/ado-api/status-property-ado-field.md)属性将首先设置为**AdFieldPendingInsert**，然后将其更新为**adFieldOk**。  

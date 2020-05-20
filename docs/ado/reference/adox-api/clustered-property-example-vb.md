@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Clustered property [ADOX], Visual Basic example
 ms.assetid: 1cd30769-c8af-43e7-be27-12ed0434daa1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f2eb5e19e166a468a9ee30758da79d503f1b9932
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 91f2f3bc8793a82cd7fd7eee16e259868bdad915
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966951"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759403"
 ---
 # <a name="clustered-property-example-vb"></a>Clustered 属性示例 (VB)
 此示例演示[索引](../../../ado/reference/adox-api/index-object-adox.md)的[聚集](../../../ado/reference/adox-api/clustered-property-adox.md)属性。 请注意，Microsoft Jet 数据库不支持聚集索引，因此，此示例将为**Northwind**数据库中的所有索引的**聚集**属性返回**False** 。  

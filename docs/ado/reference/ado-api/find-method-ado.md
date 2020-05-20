@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Find method [ADO]
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9f394d5e3b3021ca240675d6979152c63b903190
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: acd6b92e6f22f5a345421e3070e530eb148ded5f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918618"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760123"
 ---
 # <a name="find-method-ado"></a>Find 方法 (ADO)
 在[记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)搜索满足指定条件的行。 或者，可以指定搜索方向、起始行和起始行的偏移量。 如果满足条件，则在找到的记录上设置当前行位置;否则，将位置设置为**记录集**的结束（或开始）。  
@@ -43,19 +43,19 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  *SearchDirection*  
  可选。 一个[SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md)值，指定搜索是否应在搜索方向上从当前行或下一个可用行开始。 如果值为**adSearchForward**，将在**记录集**末尾停止搜索。 如果值为**adSearchBackward**，则不成功的搜索将在**记录集**的开始处停止。  
   
- *Start*  
+ *开始*  
  可选。 作为搜索的起始位置的**变量**书签。  
   
 ## <a name="remarks"></a>备注  
  仅可在*条件*中指定单列名称。 此方法不支持多列搜索。  
   
- *条件*中的比较运算符可以是 "**>**" （大于）、"**\<**" （小于）、"=" （等于）、">=" （大于等于）、"<=" （小于或等于）、"<>" （不等于）、"" （与模式匹配）。  
+ *条件*中的比较运算符可以是 " **>** " （大于）、" **\<** " （小于）、"=" （等于）、">=" （大于等于）、"<=" （小于或等于）、"<>" （不等于）、"" （与模式匹配）。  
   
  *条件*中的值可以是字符串、浮点数字或日期。 字符串值用单引号或 "#" （数字符号）标记分隔（例如，"state =" WA "" 或 "state = #WA #"）。 日期值用 "#" （数字符号）标记分隔（例如，"start_date > #7/22/97 #"）。 这些值可以包含小时、分钟和秒以指示时间戳，但不应包含毫秒或错误。  
   
- 如果比较运算符为 "like"，则字符串值可能包含星号（*），以查找任意字符或子字符串的一个或多个匹配项。 例如，"\*Maine" 与 "" 匹配。 你还可以使用前导和尾随星号来查找值中包含的子字符串。 例如，"状态" 与 "\*as\*" "匹配阿拉斯加，阿肯色，和马萨诸塞州。  
+ 如果比较运算符为 "like"，则字符串值可能包含星号（*），以查找任意字符或子字符串的一个或多个匹配项。 例如，"Maine" 与 " \* " 匹配。 你还可以使用前导和尾随星号来查找值中包含的子字符串。 例如，"状态" 与 " \* as \* " "匹配阿拉斯加，阿肯色，和马萨诸塞州。  
   
- 星号只能在条件字符串的末尾，或在条件字符串的开头和末尾使用，如上所示。 不能将星号用作前导通配符（' * str '），也不能用作嵌入的\*通配符（' r '）。 这将导致错误。  
+ 星号只能在条件字符串的末尾，或在条件字符串的开头和末尾使用，如上所示。 不能将星号用作前导通配符（' * str '），也不能用作嵌入的通配符（' \* r '）。 这将导致错误。  
   
 > [!NOTE]
 >  如果在调用**Find**之前未设置当前行位置，将会发生错误。 在调用**Find**之前，应调用设置行位置的任何方法，例如[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)。  

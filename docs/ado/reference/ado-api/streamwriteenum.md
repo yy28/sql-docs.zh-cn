@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - StreamWriteEnum enumeration [ADO]
 ms.assetid: bdbf3405-a0bd-4f02-85d4-e3fe8da3f3f7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4cc9de1481cc683bddafe2f92959977319600f6a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 479bc032cf779752f11dccca73ee56fc05a8ebdd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928633"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759563"
 ---
 # <a name="streamwriteenum"></a>StreamWriteEnum
 指定是否将行分隔符追加到写入[流](../../../ado/reference/ado-api/stream-object-ado.md)对象的字符串。  
   
-|Constant|值|说明|  
+|返回的常量|值|说明|  
 |--------------|-----------|-----------------|  
 |**adWriteChar**|0|默认。 向**流**对象写入指定的文本字符串（由*数据*参数指定）。|  
 |**adWriteLine**|1|向**流**对象写入一个文本字符串和一个行分隔符。 如果未定义[LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)属性，则会返回运行时错误。|  

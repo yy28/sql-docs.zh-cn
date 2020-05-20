@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Getrows method [ADO], Visual Basic example
 ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fedde638e343281c5d3810cc80c9ba8db820e839
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 72c6a4755b05399605828e73f69bca7b8da632eb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918465"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760013"
 ---
 # <a name="getrows-method-example-vb"></a>GetRows 方法示例 (VB)
 此示例使用[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法从[记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)检索指定数目的行，并使用生成的数据来填充数组。 在以下两种情况下， **GetRows**方法将返回小于所需的行数：如果已达到[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) ，或者**getrows**试图检索其他用户删除的记录，则为。 仅当发生第二种情况时，函数才返回**False** 。 运行此过程需要 GetRowsOK 函数。  

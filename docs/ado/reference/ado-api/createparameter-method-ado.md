@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - CreateParameter method [RDS]
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: af796c36bd2960730536ec07ac49614876311e84
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6cd78e3cbe992a3f2df5046a26eca990479cb3fd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933290"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760213"
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter 方法 (ADO)
 创建具有指定属性的新[参数](../../../ado/reference/ado-api/parameter-object.md)对象。  
@@ -37,19 +37,19 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  返回一个**参数**对象。  
   
 #### <a name="parameters"></a>参数  
- *名称*  
+ *Name*  
  可选。 一个包含**参数**对象名称的**字符串**值。  
   
- *类型*  
+ *Type*  
  可选。 指定**参数**对象的数据类型的[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)值。  
   
  *方向*  
  可选。 指定**参数**对象类型的[ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md)值。  
   
- *大小*  
+ *Size*  
  可选。 一个**长整型**值，指定参数值的最大长度（以字符或字节为单位）。  
   
- *值*  
+ 值  
  可选。 一个**变量**，指定**参数**对象的值。  
   
 ## <a name="remarks"></a>备注  

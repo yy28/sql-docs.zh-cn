@@ -16,14 +16,14 @@ f1_keywords:
 helpviewer_keywords:
 - GetPermissions method [ADOX]
 ms.assetid: df201c1f-c76a-465d-98f0-83b7fc36e6e3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5f5b2a5170b499f5e88d4caac4822d2998691eea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9a2bbb889bc0277ab01f29896d4f60eebd8236cb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966223"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759163"
 ---
 # <a name="getpermissions-method-adox"></a>GetPermissions 方法 (ADOX)
 返回[组](../../../ado/reference/adox-api/group-object-adox.md)或[用户](../../../ado/reference/adox-api/user-object-adox.md)对对象或对象容器的权限。  
@@ -39,7 +39,7 @@ ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])
  返回一个**长整型**值，该值指定包含组或用户对对象的权限的位掩码。 此值可以是一个或多个[RightsEnum](../../../ado/reference/adox-api/rightsenum.md)常量。  
   
 #### <a name="parameters"></a>参数  
- *名称*  
+ *Name*  
  一个**变量**值，指定要为其设置权限的对象的名称。 如果要获取对象容器的权限，请将 "*名称*" 设置为 null 值。  
   
  *ObjectType*  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - OLE DB providers [ADO]
 - ADO, OLE DB providers
 ms.assetid: 6e0488c3-934d-4976-99dc-65c580dc7a3c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7e86375639d875f5cfec21705af47c005afd901e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1a50ad68f7a4b40d008bd6d60b6d24e1984428e1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924758"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759133"
 ---
 # <a name="ole-db-providers-ado"></a>OLE DB 提供程序 (ADO)
 OLE DB 定义一组 COM 接口，以使应用程序能够统一访问存储在不同信息源中的数据。 此方法允许数据源通过支持适用于数据源的 DBMS 功能量的接口来共享其数据。 按照设计，OLE DB 的高性能体系结构基于基于组件的灵活服务模型的使用方式。 OLE DB 只需要满足特定任务所需的组件数量，而不是在应用程序和数据之间采用指定数目的中间层。  

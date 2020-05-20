@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Count property [ADO], Visual Basic example
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5be99b4f43669a14f948cf10ee0b91028907ec0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8adf469970b6bfb75d4abe75694c99424768353b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933365"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760223"
 ---
 # <a name="count-property-example-vb"></a>Count 属性示例 (VB)
-此示例演示了***Employee***数据库中包含两个集合的[Count](../../../ado/reference/ado-api/count-property-ado.md)属性。 属性获取每个集合中的对象数，并设置枚举这些集合的循环的上限。 枚举这些集合而不使用**Count**属性的另一种方法是使用`For Each...Next`语句。  
+此示例演示了***Employee***数据库中包含两个集合的[Count](../../../ado/reference/ado-api/count-property-ado.md)属性。 属性获取每个集合中的对象数，并设置枚举这些集合的循环的上限。 枚举这些集合而不使用**Count**属性的另一种方法是使用 `For Each...Next` 语句。  
   
 ```  
 'BeginCountVB  

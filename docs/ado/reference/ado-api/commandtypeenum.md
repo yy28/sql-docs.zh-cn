@@ -13,21 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - CommandTypeEnum enumeration [ADO]
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5a2de155d9c4a61246245b2c7f9c3c73a535994a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 68572a642333e4e9c2c334cd7680b96b0cacced3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919687"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760373"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 指定如何解释命令参数。  
   
  验证用户提供的*command.commandstring*值非常重要，这是为了避免应用程序用户为 ADO 提供可能的危险命令。  
   
-|Constant|值|说明|  
+|返回的常量|值|说明|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|不指定命令类型参数。|  
 |**adCmdText**|1|将[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)计算为命令或存储过程调用的文本定义。|  
@@ -40,7 +40,7 @@ ms.locfileid: "67919687"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
   
-|Constant|  
+|返回的常量|  
 |--------------|  
 |AdoEnums. CommandType。未指定|  
 |AdoEnums. CommandType|  

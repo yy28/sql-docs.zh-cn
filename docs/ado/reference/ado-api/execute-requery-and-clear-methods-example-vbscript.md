@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Clear method [ADO], VBScript example
 - Requery method [ADO], VBScript example
 ms.assetid: 3a7bbf07-2fca-4892-95f4-eec93f2d5e91
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 27a177b6a3d23f20790490e1f16fac2be4ec958f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a0785e3e91c6d01f446e1d49b34a41beef052c48
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918813"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760153"
 ---
 # <a name="execute-requery-and-clear-methods-example-vbscript"></a>执行、再次查询和清除方法示例（VBScript）
 此示例演示从[命令](../../../ado/reference/ado-api/command-object-ado.md)对象和[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象运行时的**Execute**方法。 它还使用[Requery](../../../ado/reference/ado-api/requery-method.md)方法检索[记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)的当前数据，并使用[clear](../../../ado/reference/ado-api/clear-method-ado.md)方法清除[错误](../../../ado/reference/ado-api/errors-collection-ado.md)集合的内容。 要运行此过程，需要 ExecuteCommand 和 PrintOutput 过程。  

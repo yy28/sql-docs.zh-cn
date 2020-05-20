@@ -1,10 +1,8 @@
 ---
 title: 数据库实验助手概述
 description: 数据库实验助手概述
-ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
-ms.prod_service: dea
 ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ''
@@ -12,12 +10,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 939ff20fd0b708e949aee41d8aa2f3f59b63a9eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.custom: seo-lt-2019
+ms.openlocfilehash: dce2bfcafeb95a72e6584e4b619f1e4e5e12bdf1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247115"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759153"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>数据库实验助手概述
 
@@ -94,7 +93,7 @@ DEA 使用 Windows 身份验证连接到数据库服务器。 确保运行 DEA �
 
 ## <a name="set-up-telemetry"></a>设置遥测
 
-DEA 具有支持 internet 的功能，该功能可将遥测信息发送给 Microsoft，以用于增强产品体验。 收集的信息也保存在您的计算机上以进行本地审核，因此您始终可以查看收集的信息。 所有 DEA 日志文件都保存在% temp%\\DEA 文件夹中。
+DEA 具有支持 internet 的功能，该功能可将遥测信息发送给 Microsoft，以用于增强产品体验。 收集的信息也保存在您的计算机上以进行本地审核，因此您始终可以查看收集的信息。 所有 DEA 日志文件都保存在% temp% \\ DEA 文件夹中。
 
 可以收集四种事件类型的遥测数据：
 
@@ -105,7 +104,7 @@ DEA 具有支持 internet 的功能，该功能可将遥测信息发送给 Micro
 
 收集和发送遥测数据是可选的。 若要指定收集的事件以及收集的事件是否发送给 Microsoft，请执行以下步骤：
 
-1. 中转到安装 DEA 的位置（例如，C：\\Program Files （x86）\\Microsoft Corporation\\数据库实验助手）。
+1. 中转到安装 DEA 的位置（例如，C： \\ Program Files （x86） \\ Microsoft Corporation \\ 数据库实验助手）。
 2. 打开并修改 .config 文件**DEA** （适用于应用程序），并修改**DEACmd** （适用于 CLI）以根据需要处理方案：
     - 若要停止收集事件类型，请将*事件*（例如， **TraceEvent**）的值设置为**false**。 若要再次开始收集事件，请将值设置为**true**。
     - 若要停止保存事件的本地副本，请将**TraceLoggerEnabled**的值设置为**false**。 若要再次开始保存本地副本，请将值设置为**true**。
@@ -113,6 +112,6 @@ DEA 具有支持 internet 的功能，该功能可将遥测信息发送给 Micro
 
 DEA 由[Microsoft 隐私声明](https://aka.ms/dea-privacy)控制。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [工作负载比较过程的概述](database-experimentation-assistant-get-started.md)，其中介绍了在两个环境中比较工作负荷时所涉及的过程。

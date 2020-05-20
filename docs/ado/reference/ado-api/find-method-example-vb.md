@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Find method [ADO], Visual Basic example
 ms.assetid: bbf27dcc-9815-4e2f-8ea8-b8c9fe6dedd6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6513daf2a2d57b0ed2b9d68f6232112d238de037
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e3495e26fa4b71563716877db501299873aff532
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932629"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760103"
 ---
 # <a name="find-method-example-vb"></a>Find 方法示例 (VB)
 此示例使用[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)对象的[Find](../../../ado/reference/ado-api/find-method-ado.md)方法来查找和计算***Pubs***数据库中业务标题的数目。 该示例假定基础提供程序不支持类似的功能。  

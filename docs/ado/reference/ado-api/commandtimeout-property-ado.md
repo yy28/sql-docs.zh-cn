@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - CommandTimeout property [ADO]
 ms.assetid: c611f857-d6b0-4dca-8925-f4a02e769eb0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7c8c6b10e63e4cacce0124eb11102db796168d9b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b771c5b8dc54bb312893885aea9c9c151feef3e3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919701"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760383"
 ---
 # <a name="commandtimeout-property-ado"></a>CommandTimeout 属性 (ADO)
 指示在终止尝试并生成错误之前执行命令时等待的时间。  

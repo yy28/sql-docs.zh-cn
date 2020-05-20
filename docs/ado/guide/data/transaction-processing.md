@@ -13,14 +13,14 @@ helpviewer_keywords:
 - updating data [ADO], transaction processing
 - nested transactions [ADO]
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cab6638704856baf873274807c0e2eff9a1f92d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 33e78f7a278623c5990a22a638c5a8e693b9a3e1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923863"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759073"
 ---
 # <a name="transaction-processing"></a>事务处理
 用于分隔跨连接执行的一系列数据访问操作的开始和结束的*事务*。 根据数据源的事务功能，**连接**对象还允许您创建和管理事务。 例如，使用 Microsoft OLE DB 提供程序 SQL Server 访问 Microsoft SQL Server 上的数据库时，可以为执行的命令创建多个嵌套事务。  

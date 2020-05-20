@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - CursorLocationEnum enumeration [ADO]
 ms.assetid: acb255ff-1734-4b70-89bb-aef862b4c63b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b3af18120af91fe06da48c2e3636bf8a7c572161
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 278f69e504ed4af7589b7e2be2c281e5de5957fa
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919295"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760173"
 ---
 # <a name="cursorlocationenum"></a>CursorLocationEnum
 指定游标服务的位置。  
   
-|Constant|Value|说明|  
+|返回的常量|值|说明|  
 |--------------|-----------|-----------------|  
 |**adUseClient**|3|使用由本地游标库提供的客户端游标。 本地游标服务通常会允许驱动程序提供的游标中的许多功能，因此，使用此设置可能会提供有关将启用的功能的优势。 为了向后兼容，还支持同义词**adUseClientBatch** 。|  
 |**adUseNone**|1|不使用游标服务。 （此常量已过时，只是为了实现向后兼容性。）|  
@@ -34,7 +34,7 @@ ms.locfileid: "67919295"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
   
-|Constant|  
+|返回的常量|  
 |--------------|  
 |AdoEnums. CursorLocation|  
 |AdoEnums. CursorLocation|  

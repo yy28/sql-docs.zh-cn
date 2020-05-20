@@ -19,14 +19,14 @@ helpviewer_keywords:
 - ASC [ADO]
 - Sort property [ADO]
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 946314f7be9f6c39d47a3f26b577e10834064dab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3dc6f7799e28fff65a1b6e60329ba9fb94d84824
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930942"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759833"
 ---
 # <a name="sort-property"></a>Sort 属性
 指示[记录记录集](../../../ado/reference/ado-api/recordset-object-ado.md)的一个或多个字段名称，以及是否按升序或降序对每个字段进行排序。  
@@ -45,7 +45,7 @@ ms.locfileid: "67930942"
   
  如果将**Sort**属性设置为空字符串，则会将行重置为其原始顺序并删除临时索引。 不会删除现有索引。  
   
- 假设**记录集**包含三个名为 " *firstName*"、" *middleInitial*" 和 " *lastName*" 的字段。 将**Sort**属性设置为字符串 "`lastName DESC, firstName ASC`"，这会按姓氏以降序对**记录集**进行排序，然后按名字以升序排序。 忽略中间的初始。  
+ 假设**记录集**包含三个名为 " *firstName*"、" *middleInitial*" 和 " *lastName*" 的字段。 将**Sort**属性设置为字符串 " `lastName DESC, firstName ASC` "，这会按姓氏以降序对**记录集**进行排序，然后按名字以升序排序。 忽略中间的初始。  
   
  不能将字段命名为 "ASC" 或 "DESC"，因为这些名称与关键字**ASC**和**DESC**冲突。 您可以通过在返回**记录集**的查询中使用**AS**关键字，为具有冲突名称的字段创建别名。  
   

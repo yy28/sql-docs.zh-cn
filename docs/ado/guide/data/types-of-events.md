@@ -14,14 +14,14 @@ helpviewer_keywords:
 - complete events [ADO]
 - WillEvent event [ADO]
 ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c02d8d115a4336470c0e0d32aebabea63c05ab0b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f8d0dd197b5f74b25aad2f7e9e888165c2dc02ba
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923816"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759023"
 ---
 # <a name="types-of-events"></a>事件类型
 事件有两种基本类型。 "将在操作开始之前调用的" 事件 "，通常在其名称中包括" WillChangeRecordset "，例如，" **WillChangeRecordset** "或" **WillConnect**"。 在事件完成后调用的事件通常会在其名称中包括 "Complete" （例如， **RecordChangeComplete**或**ConnectComplete**）。 存在异常（如**InfoMessage** ），但会在关联的操作完成后发生。  
