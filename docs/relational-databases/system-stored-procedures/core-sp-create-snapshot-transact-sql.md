@@ -18,14 +18,14 @@ helpviewer_keywords:
 - core.sp_create_snapshot stored procedure
 - sp_create_snapshot
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ef2bce1ff84172d01b1304a416f84865f1cb36bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 98963dbab83ffea8590c213284b2540393d7c0fd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078222"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831843"
 ---
 # <a name="coresp_create_snapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,22 +47,22 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @collection_set_uid = ]"*collection_set_uid*"  
+ [ @collection_set_uid =] "*collection_set_uid*"  
  收集组的 GUID。 *collection_set_uid*为**uniqueidentifier** ，无默认值。 若要获取 GUID，请查询 msdb 数据库中的 dbo.syscollector_collection_sets 视图。  
   
- [ @collector_type_uid = ]"*collector_type_uid*"  
+ [ @collector_type_uid =] "*collector_type_uid*"  
  收集器类型的 GUID。 *collector_type_uid*为**uniqueidentifier** ，无默认值。 若要获取 GUID，请查询 msdb 数据库中的 dbo.syscollector_collector_types 视图。  
   
- [ @machine_name= ]"*machine_name*"  
+ [ @machine_name =] "*machine_name*"  
  收集组所在的服务器的名称。 *machine_name*是**sysname**，没有默认值。  
   
- [ @named_instance= ]"*named_instance*"  
+ [ @named_instance =] "*named_instance*"  
  收集组实例的名称。 *named_instance*是**sysname**，没有默认值。  
   
- [ @log_id = ]*log_id*  
+ [ @log_id =] *log_id*  
  映射到收集数据的服务器上的收集组事件日志的唯一标识符。 *log_id*为**bigint** ，无默认值。 若要获取*log_id*的值，请查询 msdb 数据库中的 dbo. syscollector_execution_log 视图。  
   
- [ @snapshot_id = ]*snapshot_id*  
+ [ @snapshot_id =] *snapshot_id*  
  插入到 core 快照视图中的行的唯一标识符。 *snapshot_id*为**int** ，并作为 OUTPUT 返回。  
   
 ## <a name="return-code-values"></a>返回代码值  

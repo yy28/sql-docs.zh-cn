@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergearticleconflicts
 ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 85e75e1ce52866eb04b3c410f021db8de392239a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8657fda01875b6c0ec78ecad0334f9f74b3e7eab
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122329"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833161"
 ---
 # <a name="sp_helpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'`合并发布的名称。*发布*的数据类型为**sysname**，默认**%** 值为，它返回数据库中具有冲突的所有项目。  
+`[ @publication = ] 'publication'`合并发布的名称。*发布*的数据类型为**sysname**，默认值为 **%** ，它返回数据库中具有冲突的所有项目。  
   
 `[ @publisher = ] 'publisher'`发布服务器的名称。*发布服务器*的**sysname**，默认值为 NULL。  
   

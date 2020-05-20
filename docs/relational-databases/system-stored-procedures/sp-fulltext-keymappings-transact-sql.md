@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sp_fulltext_keymappings
 - full-text indexes [SQL Server], troubleshooting
 ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef8bd6cfbcc10fa0625b4925da618ab275331a32
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fc68be51382b72dee1b143a3535d631ae93dbb7c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124241"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833270"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -62,7 +62,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |DocId|**bigint**|与键值相对应的内部文档标识符 (DocId) 列。|  
-|密钥|*|指定表中的全文键值。<br /><br /> 如果在映射表中不存在任何全文键，则返回一个空的行集。|  
+|键|*|指定表中的全文键值。<br /><br /> 如果在映射表中不存在任何全文键，则返回一个空的行集。|  
   
  <sup>*</sup>Key 的数据类型与基表中全文键列的数据类型相同。  
   
@@ -89,10 +89,10 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 ## <a name="examples"></a>示例  
   
 > [!NOTE]  
->  本节中的示例使用 `Production.ProductReview` 示例数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表。 可以通过执行为[创建全文索引 &#40;transact-sql&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)中的`ProductReview`表提供的示例来创建此索引。  
+>  本节中的示例使用 `Production.ProductReview` 示例数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表。 可以通过执行为 `ProductReview` [创建全文索引 &#40;transact-sql&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)中的表提供的示例来创建此索引。  
   
 ### <a name="a-obtaining-all-the-key-and-docid-values"></a>A. 获取所有键和 DocId 值  
- 下面的示例使用[DECLARE](../../t-sql/language-elements/declare-local-variable-transact-sql.md)语句创建局部变量， `@table_id`并将`ProductReview`表的 ID 指定为其值。 该示例执行**sp_fulltext_keymappings**指定`@table_id` *table_id*参数。  
+ 下面的示例使用[DECLARE](../../t-sql/language-elements/declare-local-variable-transact-sql.md)语句创建局部变量， `@table_id` 并将表的 ID 指定 `ProductReview` 为其值。 该示例执行**sp_fulltext_keymappings**指定 `@table_id` *table_id*参数。  
   
 > [!NOTE]  
 >  仅使用*table_id*参数的**sp_fulltext_keymappings**适用于小型表。  
@@ -117,7 +117,7 @@ GO
 |`4`|`4`|`4`|  
   
 ### <a name="b-obtaining-the-docid-value-for-a-specific-key-value"></a>B. 获取特定键值的 DocId 值  
- 下面的示例使用 DECLARE 语句创建局部变量 `@table_id`，并将 `ProductReview` 表的 ID 赋值给该变量。 该示例执行**sp_fulltext_keymappings**为`@table_id` *table_id*参数指定， *docid*参数为 NULL，*键*参数为4。  
+ 下面的示例使用 DECLARE 语句创建局部变量 `@table_id`，并将 `ProductReview` 表的 ID 赋值给该变量。 该示例执行**sp_fulltext_keymappings** `@table_id` 为*table_id*参数指定， *docid*参数为 NULL，*键*参数为4。  
   
 > [!NOTE]  
 >  仅使用*table_id*参数适用于小型表的**sp_fulltext_keymappings** 。  

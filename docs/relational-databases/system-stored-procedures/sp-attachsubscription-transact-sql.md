@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_attachsubscription
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2e059b78a886735ce53b86de77effa43b03136df
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c3ac5075f3bedeb889536fe90ebe7f6c4049199a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768970"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833445"
 ---
 # <a name="sp_attachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -72,23 +72,23 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 > [!NOTE]  
 >  已不推荐使用此参数，保留它只是为了让脚本能够向后兼容。 如果*subscriber_security_mode*不是**1**并且指定了*subscriber_password* ，将返回错误。  
   
-`[ @distributor_security_mode = ] distributor_security_mode`同步时连接到分发服务器时使用的安全模式。 *distributor_security_mode*的值为**int**，默认值为**0**。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 **1**指定 Windows 身份验证。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @distributor_security_mode = ] distributor_security_mode`同步时连接到分发服务器时使用的安全模式。 *distributor_security_mode*的值为**int**，默认值为**0**。 **0**指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 **1**指定 Windows 身份验证。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 `[ @distributor_login = ] 'distributor_login'`同步时连接到分发服务器时使用的分发服务器登录名。 如果*distributor_security_mode*设置为**0**，则*distributor_login*是必需的。 *distributor_login*的默认值为**sysname**，默认值为 NULL。  
   
 `[ @distributor_password = ] 'distributor_password'`分发服务器密码。 如果*distributor_security_mode*设置为**0**，则*distributor_password*是必需的。 *distributor_password*的默认值为**sysname**，默认值为 NULL。 *Distributor_password*的值必须少于 120 Unicode 字符。  
   
 > [!IMPORTANT]  
->  不要使用空密码。 请使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
+>  不要使用空密码。 使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
-`[ @publisher_security_mode = ] publisher_security_mode`同步时连接到发布服务器时使用的安全模式。 *publisher_security_mode*的值为**int**，默认值为**1**。 如果为**0**， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]则指定身份验证。 如果为**1**，则指定 Windows 身份验证。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode`同步时连接到发布服务器时使用的安全模式。 *publisher_security_mode*的值为**int**，默认值为**1**。 如果为**0**，则指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 如果为**1**，则指定 Windows 身份验证。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 `[ @publisher_login = ] 'publisher_login'`同步时连接到发布服务器时使用的登录名。 *publisher_login*的默认值为**sysname**，默认值为 NULL。  
   
 `[ @publisher_password = ] 'publisher_password'`连接到发布服务器时使用的密码。 *publisher_password*的默认值为**sysname**，默认值为 NULL。 *Publisher_password*的值必须少于 120 Unicode 字符。  
   
 > [!IMPORTANT]  
->  不要使用空密码。 请使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
+>  不要使用空密码。 使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
 `[ @job_login = ] 'job_login'`用于运行代理的 Windows 帐户的登录名。 *job_login*为**nvarchar （257）**，无默认值。 此 Windows 帐户总是用于与分发服务器建立代理连接。  
   

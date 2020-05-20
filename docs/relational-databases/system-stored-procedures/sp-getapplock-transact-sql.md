@@ -16,15 +16,15 @@ helpviewer_keywords:
 - application locks
 - sp_getapplock
 ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fee963f1b026090a84e58a9b0844fe040f9e9793
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a42fe0c5bf58dfb1214897d87cdde3126b924a75
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72717252"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833221"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @Resource= ]"*resource_name*"  
+ [ @Resource =] "*resource_name*"  
  指定标识锁资源的名称的字符串。 应用程序必须确保该资源名称是唯一的。 指定的名称经过内部哈希运算后成为可以存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁管理器中的值。 *resource_name*为**nvarchar （255）** ，无默认值。 如果资源字符串的长度超过**nvarchar （255）**，则它将被截断为**nvarchar （255）**。  
   
  比较了二进制*resource_name* ，因此无论当前数据库的排序规则设置如何，都是区分大小写的。  
@@ -54,16 +54,16 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 > [!NOTE]  
 >  一旦获取应用程序锁之后，则只能检索纯文本中的前 32 个字符；对剩余的字符执行哈希运算。  
   
- [ @LockMode= ]"*lock_mode*"  
+ [ @LockMode =] "*lock_mode*"  
  要为特定资源获取的锁模式。 lock_mode 是 nvarchar(32)，且无默认值******。 该值可以是下列任意值： **Shared**、 **Update**、 **IntentShared**、 **IntentExclusive**或**Exclusive**。 有关详细信息，请参阅[锁模式](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes)。
   
- [ @LockOwner= ]"*lock_owner*"  
+ [ @LockOwner =] "*lock_owner*"  
  锁的所有者，它是请求锁时所指定的 lock_owner 值**。 lock_owner 是 nvarchar(32)******。 该值可以是 Transaction（默认值）或 Session********。 默认情况下， *lock_owner*值为**transaction**时，sp_getapplock 必须从事务内执行。  
   
- [ @LockTimeout= ]"*value*"  
- 锁超时值（毫秒）。 默认值与 @@LOCK_TIMEOUT返回的值相同。 若要指示锁请求应返回的返回代码为-1，而不是在不能立即授予请求时等待锁，请指定0。  
+ [ @LockTimeout =] "*value*"  
+ 锁超时值（毫秒）。 默认值与 @ 返回的值相同 @LOCK_TIMEOUT 。 若要指示锁请求应返回的返回代码为-1，而不是在不能立即授予请求时等待锁，请指定0。  
   
- [ @DbPrincipal= ]"*database_principal*"  
+ [ @DbPrincipal =] "*database_principal*"  
  对数据库中的对象具有权限的用户、角色或应用程序角色。 函数的调用方必须是*database_principal*、dbo 或 db_owner 固定数据库角色的成员，才能成功调用该函数。 默认值为 public。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -91,7 +91,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
  只有 @DbPrincipal 参数中指定的数据库主体成员才能获取指定该主体的应用程序锁。 dbo 和 db_owner 角色成员被隐式视为所有角色成员。  
   
- 可以使用 sp_releaseapplock 显式释放锁。 如果某个应用程序为同一锁资源多次调用 sp_getapplock，则必须调用 sp_releaseapplock 同样次数才能释放锁。  当使用`Transaction`锁所有者打开锁时，在提交或回滚事务时将释放该锁。
+ 可以使用 sp_releaseapplock 显式释放锁。 如果某个应用程序为同一锁资源多次调用 sp_getapplock，则必须调用 sp_releaseapplock 同样次数才能释放锁。  当使用锁所有者打开锁时 `Transaction` ，在提交或回滚事务时将释放该锁。
   
  如果为同一锁资源多次调用 sp_getapplock，但是在所有请求中指定的锁模式与现有模式不同，则对资源的影响将是两个锁模式的联合。 多数情况下，这意味着将锁模式提升为现有模式或新请求模式中更强的模式。 在最终释放锁之前，即使出现锁释放调用，也会一直保持这一更强的模式。 例如，在以下调用顺序中，将以 `Exclusive` 模式而非 `Shared` 模式控制资源。  
   
@@ -111,7 +111,7 @@ GO
   
  如果应用程序锁发生死锁，则该死锁不会回滚请求此应用程序锁的事务。 必须手动完成任何可能需要作为返回值结果的回滚。 因此，建议在代码中使用错误检查，如果返回某些值（例如 -3），则启动 ROLLBACK TRANSACTION 或替代操作。  
   
- 以下是示例：  
+ 下面是一个示例：  
   
 ```  
 USE AdventureWorks2012;  

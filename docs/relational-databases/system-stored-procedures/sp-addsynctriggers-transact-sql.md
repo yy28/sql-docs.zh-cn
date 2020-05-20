@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsynctriggers
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2b9bdabcc11c900ae0a1cbe71280b64efb6ccdaf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b99d42216f188771219f711f34ccd7f105770f27
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096212"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833608"
 ---
 # <a name="sp_addsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
   
 `[ @distributor = ] 'distributor'`分发服务器的名称。 *分发服务器*的**sysname**，无默认值。  
   
-`[ @pubversion = ] pubversion`指示发布服务器的版本。 *pubversion*的值为**int**，默认值为1。 **1**表示发布服务器的版本为[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 或更早版本;**2**表示发布服务器为[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SERVICE Pack 3 （SP3）或更高版本。 当发布服务器版本为[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 或更高版本时， *pubversion*必须显式设置为**2** 。  
+`[ @pubversion = ] pubversion`指示发布服务器的版本。 *pubversion*的值为**int**，默认值为1。 **1**表示发布服务器的版本为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 或更早版本;**2**表示发布服务器为 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service PACK 3 （SP3）或更高版本。 *pubversion*当发布服务器版本为 SP3 或更高版本时，pubversion 必须显式设置为**2** [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  

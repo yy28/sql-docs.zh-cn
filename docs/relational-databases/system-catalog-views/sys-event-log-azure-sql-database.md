@@ -17,21 +17,21 @@ helpviewer_keywords:
 - event_log
 - sys.event_log
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
-author: MashaMSFT
-ms.author: mathoma
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a239624fcbc3913d636f7f57b496c006d06a64b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6eb1173bf191ae319dc257c42199f02a05c9455
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68061379"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831992"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  返回成功[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]的数据库连接、连接失败和死锁。 您可以使用此信息跟踪与 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 相关的数据库活动或排除其故障。  
+  返回成功的 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 数据库连接、连接失败和死锁。 您可以使用此信息跟踪与 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 相关的数据库活动或排除其故障。  
   
 > [!CAUTION]  
 > 对于具有大量数据库或大量登录名的安装，sys. event_log 中的活动可能会导致性能的限制、高 CPU 使用率，并可能导致登录失败。 Sys. event_log 的查询会导致此问题。 Microsoft 正在努力解决此问题。 同时，若要减少此问题的影响，请将查询限制为 event_log。 NewRelic SQL Server 插件的用户应访问[Microsoft Azure SQL 数据库的插件优化 & 性能调整](https://discuss.newrelic.com/t/microsoft-azure-sql-database-plugin-tuning-performance-tweaks/30729)，以了解其他配置信息。  
@@ -47,7 +47,7 @@ ms.locfileid: "68061379"
 |event_type |**nvarchar （64）**|事件的类型。<br /><br /> 有关可能值的列表，请参阅[事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)。|  
 |**event_subtype**|**int**|发生的事件的子类型。<br /><br /> 有关可能值的列表，请参阅[事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)。|  
 |**event_subtype_desc**|**nvarchar （64）**|事件子类型的说明。<br /><br /> 有关可能值的列表，请参阅[事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)。|  
-|severity |**int**|错误的严重性。 可能的值为：<br /><br /> 0 = 信息<br />1 = 警告<br />2 = 错误|  
+|severity |**int**|错误的严重性。 可能的值有：<br /><br /> 0 = 信息<br />1 = 警告<br />2 = 错误|  
 |**event_count**|**int**|指定的数据库在指定的时间间隔内（**start_time**和**end_time**）发生此事件的次数。|  
 |**2008**|**nvarchar(max)**|对事件的详细说明。<br /><br /> 有关可能值的列表，请参阅[事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)。|  
 |**additional_data**|**XML**|*注意：对于 Azure SQL 数据库 V12，此值始终为 NULL。请参阅[示例](#Deadlock)部分，了解如何检索 V12 的死锁事件。*<br /><br /> 对于**死锁**事件，此列包含死锁图。 对于其他事件类型，该列为 NULL。 |  
@@ -76,7 +76,7 @@ ms.locfileid: "68061379"
 |**连接**|**connection_failed**|9|**重新配置**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 连接失败，因为数据库目前正在经历重新配置。|  
 |**连接**|**connection_terminated**|0|**idle_connection_timeout**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 连接闲置的时间超过了系统定义的阈值。|  
 |**连接**|**connection_terminated**|1|**重新配置**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于数据库重新配置，该会话已终止。|  
-|**连接**|**调整**|*\<原因代码>*|**reason_code**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 请求受到限制。  限制原因代码： * \<原因代码>*。 有关详细信息，请参阅[引擎限制](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx)。|  
+|**连接**|**调整**|*\<原因代码>*|**reason_code**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 请求受到限制。  限制原因代码： * \< 原因代码>*。 有关详细信息，请参阅[引擎限制](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx)。|  
 |**连接**|**throttling_long_transaction**|40549|**long_transaction**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于您有长时间运行的事务，已终止会话。 请尝试缩短您的事务的运行时间。 有关详细信息，请参阅[资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
 |**连接**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于会话获取的锁过多，已终止该会话。 请尝试在单个事务中读取或修改更少的行。 有关详细信息，请参阅[资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
 |**连接**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*注意：仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于过度使用 TEMPDB，已终止该会话。 请尝试修改您的查询以减少使用临时表空间。 有关详细信息，请参阅[资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
@@ -124,8 +124,8 @@ start_time                    end_time
 
  此视图可能并未包含所有连接和错误信息：  
   
-- 此视图不包含可能会[!INCLUDE[ssSDS](../../includes/sssds-md.md)]发生的所有数据库错误，只包括本主题的[事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)中指定的错误。  
-- 如果[!INCLUDE[ssSDS](../../includes/sssds-md.md)]数据中心内存在计算机故障，则事件表中可能缺少少量数据。  
+- 此视图不包含 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 可能会发生的所有数据库错误，只包括本主题的[事件类型](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes)中指定的错误。  
+- 如果数据中心内存在计算机故障 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，则事件表中可能缺少少量数据。  
 - 如果通过 DoSGuard 拦截了 IP 地址，则无法收集来自该 IP 地址的连接尝试事件，这些事件不会出现在此视图中。  
   
 ## <a name="examples"></a>示例  

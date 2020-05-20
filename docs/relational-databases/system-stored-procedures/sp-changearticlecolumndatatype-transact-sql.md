@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticlecolumndatatype
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f101d9081c7eb898d43c461a3bd64eca0c043b64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa069ffe0d4ce677542ac714b19475aa3930f290
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67995514"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833439"
 ---
 # <a name="sp_changearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,19 +53,19 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
   
 `[ @column = ] 'column'`要更改其数据类型映射的列的名称。 *列*的值为**sysname**，无默认值。  
   
-`[ @type = ] 'type'`目标列中的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型的名称。 *type 的类型*为**sysname**，默认值为 NULL。  
+`[ @type = ] 'type'`[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标列中的数据类型的名称。 *type 的类型*为**sysname**，默认值为 NULL。  
   
-`[ @length = ] length`目标列中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型的长度。 *长度*为**bigint**，默认值为 NULL。  
+`[ @length = ] length`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目标列中数据类型的长度。 *长度*为**bigint**，默认值为 NULL。  
   
-`[ @precision = ] precision`目标列中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型的精度。 *精度*为**bigint**，默认值为 NULL。  
+`[ @precision = ] precision`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目标列中数据类型的精度。 *精度*为**bigint**，默认值为 NULL。  
   
-`[ @publisher = ] 'publisher'`指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'`指定一个非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
- **Sp_changearticlecolumndatatype**用于重写受支持的发布服务器类型（Oracle 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）之间的默认数据类型映射。 若要查看这些默认的数据类型映射，请执行[sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)。  
+ **Sp_changearticlecolumndatatype**用于重写受支持的发布服务器类型（Oracle 和）之间的默认数据类型映射 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 若要查看这些默认的数据类型映射，请执行[sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)。  
   
  仅 Oracle 发布服务器支持**sp_changearticlecolumndatatype** 。 对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布执行此存储过程将导致错误。  
   

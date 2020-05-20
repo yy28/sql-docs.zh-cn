@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysdac_history_internal
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cc058fea8e2ce86584c19a7a93018734f4782f69
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 025c11a6d04f61378080c303a4935ce98e64f164
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084762"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833101"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>Data-tier Application Tables - sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,17 +35,17 @@ ms.locfileid: "68084762"
 |**sequence_id**|**int**|标识某一操作内的步骤。|  
 |**instance_id**|**uniqueidentifier**|DAC 实例的标识符。 此列可以联接于[dbo. sysdac_instances&#41;&#40;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)的**instance_id**列。|  
 |**action_type**|**tinyint**|操作类型的标识符：<br /><br /> **0** = 部署<br /><br /> **1** = 创建<br /><br /> **2** = 重命名<br /><br /> **3** = 分离<br /><br /> **4** = 删除|  
-|**action_type_name**|**varchar （19）**|操作类型的名称：<br /><br /> **满怀信心**<br /><br /> **创建**<br /><br /> **rename**<br /><br /> **取出**<br /><br /> **delete**|  
+|**action_type_name**|**varchar （19）**|操作类型的名称：<br /><br /> **部署：**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **取出**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|受操作影响的对象类型的标识符：<br /><br /> **0** = dacpac<br /><br /> **1** = 登录名<br /><br /> **2** = 数据库|  
 |**dac_object_type_name**|**varchar （8）**|受操作影响的对象类型的名称：<br /><br /> **dacpac** = DAC 实例<br /><br /> **id**<br /><br /> **database**|  
 |**action_status**|**tinyint**|标识当前操作状态的代码：<br /><br /> **0** = 挂起<br /><br /> **1** = 成功<br /><br /> **2** = 失败|  
-|**action_status_name**|**varchar （11）**|操作的当前状态：<br /><br /> **未**<br /><br /> **辉煌**<br /><br /> **失败**|  
+|**action_status_name**|**varchar （11）**|操作的当前状态：<br /><br /> **挂起**<br /><br /> **辉煌**<br /><br /> **失败**|  
 |**必需**|**bit**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]在回滚 DAC 操作时使用。|  
 |**dac_object_name_pretran**|**sysname**|在提交包含操作的事务前对象的名称。 仅用于数据库和登录名。|  
 |**dac_object_name_posttran**|**sysname**|在提交包含操作的事务后对象的名称。 仅用于数据库和登录名。|  
 |**sqlscript**|**nvarchar(max)**|对数据库或登录名实现操作的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。|  
-|**payload**|**varbinary(max)**|在二进制编码字符串中保存的 DAC 包定义。|  
-|**备注**|**varchar(max)**|记录接受了 DAC 升级中的潜在数据损失的用户的登录名。|  
+|**负载**|**varbinary(max)**|在二进制编码字符串中保存的 DAC 包定义。|  
+|**注释**|**varchar(max)**|记录接受了 DAC 升级中的潜在数据损失的用户的登录名。|  
 |**error_string**|**nvarchar(max)**|在操作遇到错误时生成的错误消息。|  
 |**created_by**|**sysname**|启动了创建此条目的操作的登录名。|  
 |**date_created**|**datetime**|该条目的创建日期和时间。|  
@@ -74,7 +74,7 @@ WHERE instance_id NOT IN
  为处于活动状态的 DAC 删除行并不影响 DAC 操作；唯一影响是您将不能报告 DAC 的完整历史记录。  
   
 > [!NOTE]  
->  目前，没有删除上[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] **sysdac_history_internal**行的机制。  
+>  目前，没有删除上**sysdac_history_internal**行的机制 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。  
   
 ## <a name="permissions"></a>权限  
  要求具有 sysadmin 固定服务器角色的成员身份。 对此视图的只读访问权限可用于具有连接到 master 数据库的权限的所有用户。  

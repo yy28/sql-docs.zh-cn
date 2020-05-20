@@ -18,19 +18,19 @@ helpviewer_keywords:
 - machine names [SQL Server]
 - computer names
 ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1d89da6675fba33af3c6e2d1c054273b6e420ec3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8578cccba27f38999ef786e1fb48b46445ad682c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78172127"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833647"
 ---
 # <a name="sp_addserver-transact-sql"></a>sp_addserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]定义  本地实例的名称。 重命名宿主[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]计算机后，使用**sp_addserver**通知新计算机名称的实例[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 必须在该计算机承载的所有实例上执行此过程。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 无法更改的实例名称。 若要更改命名实例的实例名称，安装具有所需名称的新实例、从旧实例中分离数据库文件、将数据库附加到新实例并删除旧实例。 或者，你可以在客户端计算机上创建客户端别名名称，无需更改服务器计算机上的实例名称即可将连接重定向到其他服务器和实例名称或 **服务器:端口** 组合。
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]定义  本地实例的名称。 重命名宿主计算机后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，使用**sp_addserver**通知 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 新计算机名称的实例。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 必须在该计算机承载的所有实例上执行此过程。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 无法更改的实例名称。 若要更改命名实例的实例名称，安装具有所需名称的新实例、从旧实例中分离数据库文件、将数据库附加到新实例并删除旧实例。 或者，你可以在客户端计算机上创建客户端别名名称，无需更改服务器计算机上的实例名称即可将连接重定向到其他服务器和实例名称或 **服务器:端口** 组合。
 
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -48,13 +48,13 @@ sp_addserver [ @server = ] 'server' ,
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果计算机上安装了多个  实例，则实例将如同在一个独立服务器上运行。 通过将*服务器*作为*servername\instancename*引用来指定命名实例。
 
-`[ @local = ] 'LOCAL'`指定要添加为本地服务器的服务器。 local 的值为**varchar （10）**，默认值为 NULL。 ** \@** 将** \@local**指定**为 local 会**将** \@server**定义为本地服务器的名称，并使@SERVERNAME @ 函数返回*server*的值。
+`[ @local = ] 'LOCAL'`指定要添加为本地服务器的服务器。 ** \@ local**的值为**varchar （10）**，默认值为 NULL。 将** \@ local**指定**为 local 会**将** \@ server**定义为本地服务器的名称，并使 @ @SERVERNAME 函数返回*server*的值。
 
   安装程序会在安装过程中将此变量设置为计算机名称。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认情况下，用户可通过计算机名连接到  的实例而无需额外的配置。
 
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 只有重新启动后，本地的定义才会生效。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]每个实例中只能定义一个本地服务器。
 
-`[ @duplicate_ok = ] 'duplicate_OK'`指定是否允许重复的服务器名称。 duplicate_OK 的值为**varchar （13）**，默认值为 NULL。 ** \@** duplicate_OK 的值只能**duplicate_OK**或 NULL。 ** \@** 如果指定**duplicate_OK**并且要添加的服务器名称已存在，则不会引发错误。 如果未使用命名参数， ** \@** 则必须指定 local。
+`[ @duplicate_ok = ] 'duplicate_OK'`指定是否允许重复的服务器名称。 ** \@ duplicate_OK**的值为**varchar （13）**，默认值为 NULL。 ** \@ duplicate_OK**的值只能**duplicate_OK**或 NULL。 如果指定**duplicate_OK**并且要添加的服务器名称已存在，则不会引发错误。 如果未使用命名参数，则必须指定** \@ local** 。
 
 ## <a name="return-code-values"></a>返回代码值
  0（成功）或 1（失败）

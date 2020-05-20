@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_nodes dynamic management view
 ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2b6f88e857ab7fc6300698174914126fb0881f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3069bbf376fbd1a94be6697e6bbb4ea2552c5c27
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265729"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833741"
 ---
 # <a name="sysdm_os_nodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,12 +33,12 @@ ms.locfileid: "68265729"
 一个名为 SQLOS 的内部组件可创建模拟硬件处理器位置的节点结构。 可以通过使用[软件 NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)来更改这些结构，以创建自定义节点布局。  
 
 > [!NOTE]
-> 从开始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]将自动对某些硬件配置使用软件 NUMA。 有关详细信息，请参阅[自动软件 NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa)。
+> 从开始 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 将自动对某些硬件配置使用软件 NUMA。 有关详细信息，请参阅[自动软件 NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa)。
   
 下表提供了有关这些节点的信息。  
   
 > [!NOTE]
-> 若要从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]调用此 DMV，请使用名称**dm_pdw_nodes_os_nodes**。  
+> 若要从或调用此 DMV [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_os_nodes**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -59,12 +59,12 @@ ms.locfileid: "68265729"
 |online_scheduler_mask|**bigint**|标识此节点的进程关联掩码。|  
 |processor_group|**smallint**|标识此节点的处理器组。|  
 |cpu_count |**int** |此节点可用的 Cpu 数。 |
-|pdw_node_id|**int**|此分发所在的节点的标识符。<br /><br /> **适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|pdw_node_id|**int**|此分发所在的节点的标识符。<br /><br /> **适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
 ## <a name="permissions"></a>权限
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要权限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层上，需要`VIEW DATABASE STATE`具有数据库中的权限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
 ## <a name="see-also"></a>另请参阅    
  [&#40;Transact-sql 的与操作系统相关的动态管理视图 SQL Server&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   

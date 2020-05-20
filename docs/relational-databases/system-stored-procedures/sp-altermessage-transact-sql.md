@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_altermessage
 ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4949307cdaf2cc712e56525e872381c2af8256fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 804e5723732f4879451c885a0aa719d6822925a1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304791"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833552"
 ---
 # <a name="sp_altermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,15 +41,15 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
 ```  
   
 ## <a name="arguments"></a>参数  
- [**@message_id =** ]*message_number*  
+ [** @message_id =** ] *message_number*  
  要从**sys.databases**更改的消息的错误号。 *message_number*为**int** ，没有默认值。  
   
-`[ @parameter = ] 'write\_to\_log_'`与** \@parameter_value**一起使用，以指示要将消息写入[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 应用程序日志。 *write_to_log*是**sysname** ，没有默认值。 *write_to_log*必须设置为 WITH_LOG 或 NULL。 如果*write_to_log*设置为 WITH_LOG 或 NULL，并且** \@parameter_value**的值为**true**，则将消息写入 Windows 应用程序日志。 如果*write_to_log*设置为 WITH_LOG 或 NULL，并且** \@parameter_value**的值为**false**，则不会始终将消息写入 Windows 应用程序日志，而是根据错误的引发方式写入消息。 如果指定*write_to_log* ，还必须指定** \@parameter_value**的值。  
+`[ @parameter = ] 'write\_to\_log_'`与** \@ parameter_value**一起使用，以指示要将消息写入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 应用程序日志。 *write_to_log*是**sysname** ，没有默认值。 *write_to_log*必须设置为 WITH_LOG 或 NULL。 如果*write_to_log*设置为 WITH_LOG 或 NULL，并且** \@ parameter_value**的值为**True**，则将消息写入 Windows 应用程序日志。 如果*write_to_log*设置为 WITH_LOG 或 NULL，并且** \@ parameter_value**的值为**false**，则不会始终将消息写入 Windows 应用程序日志，而是根据错误的引发方式写入消息。 如果指定*write_to_log* ，还必须指定** \@ parameter_value**的值。  
   
 > [!NOTE]  
 >  如果消息写入了 Windows 应用程序日志，那么它也将被写入[!INCLUDE[ssDE](../../includes/ssde-md.md)]错误日志文件。  
   
-`[ @parameter_value = ]'value_'`与** \@参数**一起使用，以指示将错误写入[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 应用程序日志。 *值*为**varchar （5）**，无默认值。 如果**为 true**，则始终将错误写入 Windows 应用程序日志。 如果**为 false**，则不会始终将错误写入 Windows 应用程序日志，而是根据错误的引发方式写入。 如果指定*value* ，则还必须指定** \@参数** *write_to_log* 。  
+`[ @parameter_value = ]'value_'`与** \@ 参数**一起使用，以指示将错误写入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 应用程序日志。 *值*为**varchar （5）**，无默认值。 如果**为 true**，则始终将错误写入 Windows 应用程序日志。 如果**为 false**，则不会始终将错误写入 Windows 应用程序日志，而是根据错误的引发方式写入。 如果指定*value* ，则还必须指定** \@ 参数** *write_to_log* 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

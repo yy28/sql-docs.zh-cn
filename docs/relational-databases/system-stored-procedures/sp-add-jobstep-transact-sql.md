@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobstep
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c312f8798ba4ad42eed327123c9adc5feacba8a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5d9f68c1e3b4f0bec4ba338af12fb1f24c5ff204
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74412853"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833675"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 
@@ -33,7 +33,7 @@ ms.locfileid: "74412853"
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > 在[Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，大多数（但不是所有） SQL Server 代理作业类型都受支持。 有关详细信息，请参阅[Azure SQL 数据库托管实例与 SQL Server 的 t-sql 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+  > 在[Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，大多数（但不是所有） SQL Server 代理作业类型都受支持。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
   
 ## <a name="syntax"></a>语法  
   
@@ -77,7 +77,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 |值|说明|  
 |-----------|-----------------|  
-|'**ACTIVESCRIPTING**'|活动脚本<br /><br /> ** \* \*重要\*提示**[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
+|'**ACTIVESCRIPTING**'|活动脚本<br /><br /> ** \* \* 重要 \* 提示 \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |'**CMDEXEC**'|操作系统命令或可执行程序|  
 |"**分发**"|复制分发代理作业|  
 |"**SNAPSHOT**"|复制快照代理作业|  
@@ -104,7 +104,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 >   
 >  如果您需要使用这些标记，请首先确保只有可信任的 Windows 安全组（如 Administrators 组）成员才对安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机的事件日志拥有写入权限。 然后在对象资源管理器中右键单击“SQL Server 代理”****，选择“属性”****，并在“警报系统”**** 页上选择“为警报的所有作业响应替换标记”**** 以启用这些标记。  
   
-`[ @additional_parameters = ] 'parameters'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *参数*的值为**ntext**，默认值为 NULL。  
+`[ @additional_parameters = ] 'parameters'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*参数*的值为**ntext**，默认值为 NULL。  
   
 `[ @cmdexec_success_code = ] code`**CmdExec**子系统命令返回的值，指示*命令*已成功执行。 *代码*为**int**，默认值为**0**。  
   
@@ -130,11 +130,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @on_fail_step_id = ] fail_step_id`如果步骤失败并且*fail_action*为**4**，则该作业中要执行的步骤的 ID。 *fail_step_id*的值为**int**，默认值为**0**。  
   
-`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *服务器*为**nvarchar （30）**，默认值为 NULL。  
+`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*服务器*为**nvarchar （30）**，默认值为 NULL。  
   
-`[ @database_name = ] 'database'`要在其中执行[!INCLUDE[tsql](../../includes/tsql-md.md)]步骤的数据库的名称。 *database 的数据*值为**sysname**，默认值为 NULL，在这种情况下，将使用**master**数据库。 不允许用方括号 ([ ]) 将名称括起来。 对于 ActiveX 作业步骤，*数据库*是该步骤使用的脚本语言的名称。  
+`[ @database_name = ] 'database'`要在其中执行步骤的数据库的名称 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 *database 的数据*值为**sysname**，默认值为 NULL，在这种情况下，将使用**master**数据库。 不允许用方括号 ([ ]) 将名称括起来。 对于 ActiveX 作业步骤，*数据库*是该步骤使用的脚本语言的名称。  
   
-`[ @database_user_name = ] 'user'`执行[!INCLUDE[tsql](../../includes/tsql-md.md)]步骤时要使用的用户帐户的名称。 *user*的值为**sysname**，默认值为 NULL。 如果*用户*为 NULL，则该步骤会在*数据库*的作业所有者的用户上下文中运行。  只有在作业所有者是 SQL Server sysadmin 时，SQL Server 代理才包括此参数。 如果是这样，则给定的 Transact-SQL 步骤将在给定的 SQL Server 用户名的上下文中执行。 如果作业所有者不是 SQL Server sysadmin，则 Transact-sql 步骤将始终在拥有此作业的登录名的上下文中执行，并且该@database_user_name参数将被忽略。  
+`[ @database_user_name = ] 'user'`执行步骤时要使用的用户帐户的名称 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 *user*的值为**sysname**，默认值为 NULL。 如果*用户*为 NULL，则该步骤会在*数据库*的作业所有者的用户上下文中运行。  只有在作业所有者是 SQL Server sysadmin 时，SQL Server 代理才包括此参数。 如果是这样，则给定的 Transact-SQL 步骤将在给定的 SQL Server 用户名的上下文中执行。 如果作业所有者不是 SQL Server sysadmin，则 Transact-sql 步骤将始终在拥有此作业的登录名的上下文中执行，并且该 @database_user_name 参数将被忽略。  
   
 `[ @retry_attempts = ] retry_attempts`此步骤失败时的重试尝试次数。 *retry_attempts*的值为**int**，默认值为**0**，指示不重试。  
   
@@ -142,7 +142,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @os_run_priority = ] run_priority`保护.  
   
-`[ @output_file_name = ] 'file_name'`此步骤的输出保存到的文件的名称。 *file_name*为**nvarchar （200）**，默认值为 NULL。 *file_name*可以包含 " *command*" 下列出的一个或多个令牌。 此参数[!INCLUDE[tsql](../../includes/tsql-md.md)]仅对在、 **CmdExec**、 **PowerShell**、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]或[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]子系统上运行的命令有效。  
+`[ @output_file_name = ] 'file_name'`此步骤的输出保存到的文件的名称。 *file_name*为**nvarchar （200）**，默认值为 NULL。 *file_name*可以包含 " *command*" 下列出的一个或多个令牌。 此参数仅对在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 、 **CmdExec**、 **PowerShell**、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 或子系统上运行的命令有效 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。  
   
 `[ @flags = ] flags`控制行为的选项。 *flags*为**int**，可以是下列值之一。  
   
@@ -156,9 +156,9 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**32**|将所有输出写入作业历史记录|  
 |**64**|创建一个 Windows 事件以便用作 Cmd jobstep 要中止的信号|  
   
-`[ @proxy_id = ] proxy_id`作业步骤运行时所用代理的 id 号。 *proxy_id*的类型为**int**，默认值为 NULL。 如果未指定*proxy_id* 、未指定*proxy_name*并且未指定*user_name* ，则作业步骤将作为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理的服务帐户运行。  
+`[ @proxy_id = ] proxy_id`作业步骤运行时所用代理的 id 号。 *proxy_id*的类型为**int**，默认值为 NULL。 如果未指定*proxy_id* 、未指定*proxy_name*并且未指定*user_name* ，则作业步骤将作为代理的服务帐户运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-`[ @proxy_name = ] 'proxy_name'`作业步骤运行时所用代理的名称。 *proxy_name*的类型为**sysname**，默认值为 NULL。 如果未指定*proxy_id* 、未指定*proxy_name*并且未指定*user_name* ，则作业步骤将作为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理的服务帐户运行。  
+`[ @proxy_name = ] 'proxy_name'`作业步骤运行时所用代理的名称。 *proxy_name*的类型为**sysname**，默认值为 NULL。 如果未指定*proxy_id* 、未指定*proxy_name*并且未指定*user_name* ，则作业步骤将作为代理的服务帐户运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
@@ -171,7 +171,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  SQL Server Management Studio 为管理作业提供了一种图形化的简便方法，建议使用此方法来创建和管理作业基础结构。  
   
- 默认情况下，除非指定了另一个代理，否则作业[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]步骤将作为代理的服务帐户运行。 此帐户的要求是**sysadmin**固定安全角色的成员。
+ 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 除非指定了另一个代理，否则作业步骤将作为代理的服务帐户运行。 此帐户的要求是**sysadmin**固定安全角色的成员。
   
  代理可以通过*proxy_name*或*proxy_id*来识别。  
   
@@ -192,7 +192,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  以下示例可创建一个作业步骤，将销售数据库的访问权限更改为只读。 此外，此示例还指定了 5 次重试，每次重试之间的间隔为 5 分钟。  
   
 > [!NOTE]  
->  此示例假定`Weekly Sales Data Backup`作业已存在。  
+>  此示例假定 `Weekly Sales Data Backup` 作业已存在。  
   
 ```sql
 USE msdb;  

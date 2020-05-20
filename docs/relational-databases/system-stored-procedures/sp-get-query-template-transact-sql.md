@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_get_query_template
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 80f5bc86498bc33e0cb04e8ca54154b96307c480
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124083"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833220"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +43,13 @@ sp_get_query_template
   
 ## <a name="arguments"></a>参数  
  "*query_text*"  
- 要生成参数化版本的查询。 "*query_text*" 必须用单引号引起来，并以 N Unicode 说明符开头。 N "*query_text*" 是分配给@querytext参数的值。 此类型的类型为**nvarchar （max）**。  
+ 要生成参数化版本的查询。 "*query_text*" 必须用单引号引起来，并以 N Unicode 说明符开头。 N "*query_text*" 是分配给参数的值 @querytext 。 此类型的类型为**nvarchar （max）**。  
   
  @templatetext  
  提供的类型为**nvarchar （max）** 的输出参数，以字符串文字形式接收*query_text*的参数化形式。  
   
  @parameters  
- 按指示提供的类型为**nvarchar （max）** 的输出参数，用于接收已参数化的参数名称和数据类型的字符串文字@templatetext。  
+ 按指示提供的类型为**nvarchar （max）** 的输出参数，用于接收已参数化的参数名称和数据类型的字符串文字 @templatetext 。  
   
 ## <a name="remarks"></a>备注  
  如果出现下列情况，sp_get_query_template 会返回错误。  
@@ -58,7 +58,7 @@ sp_get_query_template
   
 -   *query_text*为 NULL，而不是 Unicode 字符串、语法无效或无法编译。  
   
- 如果 sp_get_query_template 返回错误，则不会修改@templatetext和@parameters输出参数的值。  
+ 如果 sp_get_query_template 返回错误，则不会修改 @templatetext 和 @parameters 输出参数的值。  
   
 ## <a name="permissions"></a>权限  
  要求具有公用数据库角色的成员身份。  

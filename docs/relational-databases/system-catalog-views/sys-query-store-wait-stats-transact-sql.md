@@ -19,12 +19,12 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bff80fbe2b5022e12eca58de42192a3a1bb18d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f3c94f7f23697539b000c9c76dc1d0970a56a96d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74190374"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834085"
 ---
 # <a name="sysquery_store_wait_stats-transact-sql"></a>sys. query_store_wait_stats （Transact-sql）
 
@@ -41,11 +41,11 @@ ms.locfileid: "74190374"
 |**wait_category_desc**|**nvarchar(128)**|有关 "等待类别" 字段的文本说明，请查看下表。|
 |**execution_type**|**tinyint**|确定查询执行的类型：<br /><br /> 0-常规执行（已成功完成）<br /><br /> 3-客户端启动的已中止执行<br /><br /> 4-异常中止执行|  
 |**execution_type_desc**|**nvarchar(128)**|执行类型字段的文本说明：<br /><br /> 0-常规<br /><br /> 3-已中止<br /><br /> 4-异常|  
-|**total_query_wait_time_ms**|**bigint**|查询`CPU wait`计划在聚合间隔和等待类别中的总时间（以毫秒为单位）。|
+|**total_query_wait_time_ms**|**bigint**|`CPU wait`查询计划在聚合间隔和等待类别中的总时间（以毫秒为单位）。|
 |**avg_query_wait_time_ms**|**float**|聚合间隔和等待类别中每次执行查询计划的平均等待持续时间（以毫秒为单位）。|
 |**last_query_wait_time_ms**|**bigint**|查询计划在聚合间隔和等待类别中的上次等待持续时间（以毫秒计）。|
-|**min_query_wait_time_ms**|**bigint**|查询`CPU wait`计划在聚合间隔和等待类别中的最短时间（以毫秒为单位）。|
-|**max_query_wait_time_ms**|**bigint**|查询`CPU wait`计划在聚合间隔和等待类别中的最长时间（以毫秒为单位）。|
+|**min_query_wait_time_ms**|**bigint**|`CPU wait`查询计划在聚合间隔和等待类别中的最短时间（以毫秒为单位）。|
+|**max_query_wait_time_ms**|**bigint**|`CPU wait`查询计划在聚合间隔和等待类别中的最长时间（以毫秒为单位）。|
 |**stdev_query_wait_time_ms**|**float**|`Query wait`聚合间隔和等待类别（以毫秒为单位）内查询计划的持续时间标准偏差。|
 
 ## <a name="wait-categories-mapping-table"></a>等待类别映射表
@@ -54,8 +54,8 @@ ms.locfileid: "74190374"
   
 |整数值|等待类别|等待类型包括在类别中|  
 |-----------------|---------------|-----------------|  
-|**0**|**Unknown**|Unknown |  
-|**1**|CPU****|SOS_SCHEDULER_YIELD|
+|**0**|**未知**|未知 |  
+|**1**|**CPU**|SOS_SCHEDULER_YIELD|
 |**2**|**工作线程**|THREADPOOL|
 |**3**|**住**|LCK_M_%|
 |**4**|**曾**|LATCH_%|
@@ -65,7 +65,7 @@ ms.locfileid: "74190374"
 |**8**|**SQL CLR**|CLR%，SQLCLR%|
 |**900**|**镜像**|DBMIRROR%|
 |**10**|**事务**|事务%，DTC%，TRAN_MARKLATCH_%，MSQL_XACT_%，TRANSACTION_MUTEX|
-|**11**|**空闲**|SLEEP_%、LAZYWRITER_SLEEP、SQLTRACE_BUFFER_FLUSH、SQLTRACE_INCREMENTAL_FLUSH_SLEEP、SQLTRACE_WAIT_ENTRIES、FT_IFTS_SCHEDULER_IDLE_WAIT、XE_DISPATCHER_WAIT、REQUEST_FOR_DEADLOCK_SEARCH、LOGMGR_QUEUE、ONDEMAND_TASK_QUEUE、CHECKPOINT_QUEUE、XE_TIMER_EVENT|
+|**11**|**闲置**|SLEEP_%、LAZYWRITER_SLEEP、SQLTRACE_BUFFER_FLUSH、SQLTRACE_INCREMENTAL_FLUSH_SLEEP、SQLTRACE_WAIT_ENTRIES、FT_IFTS_SCHEDULER_IDLE_WAIT、XE_DISPATCHER_WAIT、REQUEST_FOR_DEADLOCK_SEARCH、LOGMGR_QUEUE、ONDEMAND_TASK_QUEUE、CHECKPOINT_QUEUE、XE_TIMER_EVENT|
 |**12**|**预防**|PREEMPTIVE_%|
 |**9**|**Service Broker**|BROKER_% **（但不 BROKER_RECEIVE_WAITFOR）**|
 |**14**|**事务日志 IO**|数据库准备、LOGBUFFER、LOGMGR_RESERVE_APPEND、LOGMGR_FLUSH、LOGMGR_PMM_LOG、CHKPT.、WRITELOG|

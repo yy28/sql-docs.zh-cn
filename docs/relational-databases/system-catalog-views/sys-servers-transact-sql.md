@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.servers catalog view
 ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b17296d558c078d3f580e63bf662bb975615ad94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7b9cb03b97660bedc9c8e86cc72ae2bf9ebdd56d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68132952"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832691"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68132952"
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|链接服务器的本地 ID。|  
 |**name**|**sysname**|当**server_id** = 0 时，返回的值是服务器名称。<br /><br /> 如果**server_id** > 0，则返回的值为链接服务器的本地名称。|  
-|**product**|**sysname**|链接服务器的产品名。 值 "SQL Server" 指示的另一个实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|**产品**|**sysname**|链接服务器的产品名。 值 "SQL Server" 指示的另一个实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**程序**|**sysname**|用于连接到链接服务器的 OLE DB 访问接口名称。|  
 |**data_source**|**nvarchar(4000)**|OLE DB 数据源连接属性。|  
 |**location**|**nvarchar(4000)**|OLE DB 位置连接属性。 如果没有，则为 NULL。|  
@@ -65,7 +65,7 @@ ms.locfileid: "68132952"
   
  查看本地服务器不需要权限（**server_id** = 0）。  
   
- 创建链接服务器或远程服务器时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]会创建一个到**公共**服务器角色的默认登录映射。 默认登录映射意味着所有登录名都可以查看所有链接服务器和远程服务器。 若要限制这些服务器的可见性，请通过执行[sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)并为*LOCALLOGIN*参数指定 NULL 来删除默认的登录映射。  
+ 创建链接服务器或远程服务器时，会 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 创建一个到**公共**服务器角色的默认登录映射。 默认登录映射意味着所有登录名都可以查看所有链接服务器和远程服务器。 若要限制这些服务器的可见性，请通过执行[sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)并为*LOCALLOGIN*参数指定 NULL 来删除默认的登录映射。  
   
  如果删除了默认登录映射，则只有已作为链接登录名或远程登录名显式添加的用户才能查看其拥有登录名的链接服务器或远程服务器。  在默认的登录映射之后，查看所有链接服务器和远程服务器需要以下权限：  
   

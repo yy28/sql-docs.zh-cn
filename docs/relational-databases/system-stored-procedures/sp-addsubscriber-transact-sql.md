@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscriber
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 278af2ca1bd6abdb84cdf2371628c6b95662e46e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bf49c44ca3de4325c8d5c6ecab22adc3ac0614cf
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73962411"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833623"
 ---
 # <a name="sp_addsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,15 +71,15 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet 数据库|  
 |**3**|OLE DB 访问接口|  
   
-`[ @login = ] 'login'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证的登录 ID。 login 的数据类型为 sysname，默认值为 NULL******。  
+`[ @login = ] 'login'`身份验证的登录 ID [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 login 的数据类型为 sysname，默认值为 NULL******。  
   
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 现在，在执行[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)时，将基于每个订阅指定属性。 在指定值后，该值将用作在此订阅服务器上创建订阅时的默认值，同时返回一条警告消息。  
   
-`[ @password = ] 'password'`用于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证的密码。 *password*为**nvarchar （524）**，默认值为 NULL。  
+`[ @password = ] 'password'`用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的密码。 *password*为**nvarchar （524）**，默认值为 NULL。  
   
 > [!IMPORTANT]  
->  不要使用空密码。 请使用强密码。  
+>  不要使用空密码。 使用强密码。  
   
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 现在，在执行[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)时，将基于每个订阅指定属性。 在指定值后，该值将用作在此订阅服务器上创建订阅时的默认值，同时返回一条警告消息。  
@@ -105,7 +105,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |-----------|-----------------|  
 |**1**|一次性|  
 |**2**|按需|  
-|**4**|每日|  
+|**4**|每天|  
 |**8**|每周|  
 |**超过**|每月一次|  
 |**32**|与“每月”选项相关|  
@@ -145,7 +145,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |**1**|一次|  
 |**2**|秒|  
 |**4** （默认值）|Minute|  
-|**8**|Hour|  
+|**8**|小时|  
   
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 现在，在执行[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)时，将基于每个订阅指定属性。 在指定值后，该值将用作在此订阅服务器上创建订阅时的默认值，同时返回一条警告消息。  
@@ -177,17 +177,17 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @description = ] 'description'`订阅服务器的文本说明。 *description*的值为**nvarchar （255）**，默认值为 NULL。  
   
-`[ @security_mode = ] security_mode`实现的安全模式。 *security_mode*的值为**int**，默认值为1。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 **1**指定 Windows 身份验证。  
+`[ @security_mode = ] security_mode`实现的安全模式。 *security_mode*的值为**int**，默认值为1。 **0**指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 **1**指定 Windows 身份验证。  
   
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 现在，在执行[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)时，将基于每个订阅指定属性。 在指定值后，该值将用作在此订阅服务器上创建订阅时的默认值，同时返回一条警告消息。  
   
 `[ @encrypted_password = ] encrypted_password`此参数已弃用，为实现向后兼容性而提供，仅将*Encrypted_password*设置为任何值，但**0**会导致错误。  
   
-`[ @publisher = ] 'publisher'`指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'`指定一个非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  *publisher*在从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器进行发布时，不应使用 publisher。  
+>  在从发布服务器进行发布时，不应使用*publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  

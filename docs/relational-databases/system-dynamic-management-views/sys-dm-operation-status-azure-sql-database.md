@@ -16,15 +16,15 @@ helpviewer_keywords:
 - dm_operation_status dynamic management view
 - sys.dm_operation_status dynamic management view
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c49e4e01dd8ddaf0667546a8cc221a7918f42c81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9464a28505707abe602decabd00cde58a02d1feb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70911210"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833752"
 ---
 # <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status（Azure SQL 数据库）
 
@@ -54,7 +54,7 @@ ms.locfileid: "70911210"
  此视图仅在**master**数据库中适用于服务器级主体登录名。  
   
 ## <a name="remarks"></a>备注  
- 若要使用此视图，您必须连接到**master**数据库。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]使用服务器`sys.dm_operation_status`的 master 数据库中的视图跟踪对执行的以下操作的状态： **master** [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ 若要使用此视图，您必须连接到**master**数据库。 使用 `sys.dm_operation_status` 服务器的**master**数据库中的视图 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 跟踪对执行的以下操作的状态 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ：  
   
 -   创建数据库  
   

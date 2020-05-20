@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_alert
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2856f89264994b9f1812653450d94e2cb2e2b0c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a63a5e34ac0331bfe879814e4d503c4d57cc3208
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69890848"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832540"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,13 +70,13 @@ sp_update_alert
   
 `[ @message_id = ] message_id`警报定义的新消息或错误号。 通常， *message_id*与**sysmessages**表中的错误号相对应。 *message_id*的值为**int**，默认值为 NULL。 仅当警报的严重性级别设置为**0**时，才能使用消息 ID。  
   
-`[ @severity = ] severity`警报定义的新严重级别（从**1**到**25**）。 发送[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到具有指定严重性的 Windows 应用程序日志的任何消息都将激活警报。 *严重性*为**int**，默认值为 NULL。 仅当警报的消息 ID 设置为**0**时，才能使用严重性级别。  
+`[ @severity = ] severity`警报定义的新严重级别（从**1**到**25**）。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发送到具有指定严重性的 Windows 应用程序日志的任何消息都将激活警报。 *严重性*为**int**，默认值为 NULL。 仅当警报的消息 ID 设置为**0**时，才能使用严重性级别。  
   
 `[ @delay_between_responses = ] delay_between_responses`警报响应之间的新等待时间（以秒为单位）。 *delay_between_responses*的值为**int**，默认值为 NULL。  
   
 `[ @notification_message = ] 'notification_message'`作为电子邮件、 **net send**或寻呼通知的一部分发送给操作员的其他消息的修订文本。 *notification_message*为**nvarchar （512）**，默认值为 NULL。  
   
-`[ @include_event_description_in = ] include_event_description_in`指定是否应该在通知消息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中包含 Windows 应用程序日志中的错误说明。 *include_event_description_in*的数据值为**tinyint**，默认值为 NULL，可以是下列值中的一个或多个。  
+`[ @include_event_description_in = ] include_event_description_in`指定是否 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应该在通知消息中包含 Windows 应用程序日志中的错误说明。 *include_event_description_in*的数据值为**tinyint**，默认值为 NULL，可以是下列值中的一个或多个。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -115,8 +115,8 @@ sp_update_alert
 |格式元素|说明|  
 |--------------------|-----------------|  
 |*项*|性能对象、性能计数器或计数器的命名实例|  
-|*比较运算符*|以下运算符之一： **>**、、 **<****=**|  
-|*值*|计数器的数值|  
+|*比较运算符*|以下运算符之一： **>** 、 **<** 、**=**|  
+|值|计数器的数值|  
   
 `[ @category_name = ] 'category'`警报类别的名称。 *category 的类型*为**sysname** ，默认值为 NULL。  
   
@@ -128,7 +128,7 @@ sp_update_alert
  **0** （成功）或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
- 只有**sysmessages**写入到 Windows 应用[!INCLUDE[msCoName](../../includes/msconame-md.md)]程序日志的 sysmessages 才会触发警报。  
+ 只有**sysmessages**写入到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 应用程序日志的 sysmessages 才会触发警报。  
   
  **sp_update_alert**仅更改为其提供参数值的警报设置。 如果省略某一参数，则保留其当前设置。  
   

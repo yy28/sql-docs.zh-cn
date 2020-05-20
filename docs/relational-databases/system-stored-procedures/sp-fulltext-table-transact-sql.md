@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_table
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1db3a16b8072df38937bb482ac85a75dec6e83b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a906f17e655775308d72d04ed8917ca67b205b6a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124138"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833223"
 ---
 # <a name="sp_fulltext_table-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_fulltext_table
 |-----------|-----------------|  
 |**创建**|为*qualified_table_name*引用的表创建全文索引的元数据，并指定此表的全文索引数据应驻留在*fulltext_catalog_name*中。 此操作还将*unique_index_name*的用法指定为全文键列。 这个唯一的索引必须已经存在，并且必须已在表的某个列上定义。<br /><br /> 完成了全文目录填充后，才能对该表执行全文检索。|  
 |**击落**|删除*qualified_table_name*的全文索引的元数据。 如果全文索引是活动的，则将自动停用该全文索引，然后将其删除。 在删除全文索引之前，不必删除列。|  
-|**激活**|激活在停用后，为*qualified_table_name*收集全文索引数据的功能。 在激活全文索引之前，应该至少有一列参与了全文索引。<br /><br /> 只要添加了第一个要编制索引的列，便会自动激活全文索引（进行填充）。 如果从索引中删除最后一个列，该索引便成为非活动索引。 如果启用了更改跟踪，则激活非活动索引时将启动一个新填充。<br /><br /> 请注意，这实际上并不是填充全文索引，而只是将表注册到文件系统中的全文目录中，以便可以在下一次全文索引填充期间检索*qualified_table_name*中的行。|  
+|**启用**|激活在停用后，为*qualified_table_name*收集全文索引数据的功能。 在激活全文索引之前，应该至少有一列参与了全文索引。<br /><br /> 只要添加了第一个要编制索引的列，便会自动激活全文索引（进行填充）。 如果从索引中删除最后一个列，该索引便成为非活动索引。 如果启用了更改跟踪，则激活非活动索引时将启动一个新填充。<br /><br /> 请注意，这实际上并不是填充全文索引，而只是将表注册到文件系统中的全文目录中，以便可以在下一次全文索引填充期间检索*qualified_table_name*中的行。|  
 |**停用**|停用*qualified_table_name*的全文索引，以便无法再为*qualified_table_name*收集全文索引数据。 全文索引元数据依然保留，该表可以被重新激活。<br /><br /> 如果启用了更改跟踪，停用一个活动索引将冻结索引的状态：停止正在进行的所有填充，不再向索引传播更改。|  
 |**start_change_tracking**|启动全文索引的增量填充。 如果表没有时间戳，则启动全文索引的完全填充。 开始跟踪对表所做的更改。<br /><br /> 全文更改跟踪不跟踪对类型为**image**、 **text**或**ntext**的全文索引列执行的任何 WRITETEXT 或 UPDATETEXT 操作。|  
 |**stop_change_tracking**|停止对表更改的跟踪。|  
@@ -66,7 +66,7 @@ sp_fulltext_table
 |**stop_background_updateindex**|一旦发生更改，就停止将被跟踪的更改传播给全文索引。|  
 |**start_full**|启动表的全文索引的完全填充。|  
 |**start_incremental**|启动表的全文索引的增量填充。|  
-|**停止**|停止完全填充或增量填充。|  
+|**Stop**|停止完全填充或增量填充。|  
   
 `[ @ftcat = ] 'fulltext_catalog_name'`是一个有效的现有全文目录名称，用于**创建**操作。 对于其他所有操作，此参数必须为 NULL。 *fulltext_catalog_name*的默认值为**sysname**，默认值为 NULL。  
   
@@ -79,7 +79,7 @@ sp_fulltext_table
  无  
   
 ## <a name="remarks"></a>备注  
- 为特定表停用全文索引后，现有的全文索引将保持不变，直到下一次完全填充;但是，不使用此索引，因为[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]阻止对停用的表的查询。  
+ 为特定表停用全文索引后，现有的全文索引将保持不变，直到下一次完全填充;但是，不使用此索引，因为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 阻止对停用的表的查询。  
   
  如果重新激活该表，但不重新填充索引，则仍可使用旧索引对剩余的启用了全文索引的非新列进行查询。 在指定了完全全文列搜索的查询中，将匹配已删除的列中的数据。  
   

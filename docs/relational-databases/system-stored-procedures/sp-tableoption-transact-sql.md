@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_tableoption
 ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c72d07873e2e07ee7f6f095f677625a18cdb5a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e2e822d1ca6aff1e91a848f839b824bb4476fc5a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982267"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834194"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,21 +46,21 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @TableNamePattern =]"*table*"  
+ [ @TableNamePattern =] "*表*"  
  用户定义数据库表的限定名称或非限定名称。 如果提供了包含数据库名称的完全限定表名，则数据库名称必须为当前数据库的名称。 不能同时设置多个表的表选项。 *table*为**nvarchar （776）**，无默认值。  
   
- [ @OptionName = ]"*option_name*"  
+ [ @OptionName =] "*option_name*"  
  表选项名称。 *option_name*为**varchar （35）**，无默认值 NULL。 *option_name*可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
 |table lock on bulk load|禁用时（默认值），使用户定义表的大容量处理获得行锁。 启用时，使用户定义表的大容量处理获得大容量更新锁。|  
 |insert row lock|不再支持。<br /><br /> 此选项对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的锁定行为没有影响，保留此选项只是为了与现有脚本和过程兼容。|  
-|text in row|如果为 OFF 或 0（禁用，默认值），则不更改当前行为，且在行中不存在 BLOB。<br /><br /> 当指定并@OptionValue为 ON （启用）或从24到7000的整数值时，新的**text**、 **ntext**或**image**字符串将直接存储在数据行中。 当更新 BLOB 值时，所有现有 BLOB （二进制大型对象： **text**、 **ntext**或**image**数据）都将改为行格式的文本。 有关详细信息，请参阅“备注”。|  
-|large value types out of row|1 = 将表中的**varchar （max）**、 **nvarchar （max）**、 **varbinary （max）**、 **XML**和大型用户定义类型（UDT）列都存储在行外，并向根提供一个16字节的指针。<br /><br /> 0 = **varchar （max）**、 **nvarchar （max）**、 **varbinary （max）**、 **xml**和大型 UDT 值直接存储在数据行中，最大限制为8000个字节，并且只要可以在记录中容纳该值即可。 如果记录中容纳不下该值，则指针存储在行内，其余内容存储在 LOB 存储空间内的行外。 默认值为 0。<br /><br /> 大型用户定义类型（UDT）适用于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和更高版本。 <br /><br /> 使用[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)的 TEXTIMAGE_ON 选项来指定大数据类型存储的位置。 |  
-|vardecimal storage format|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 为 TRUE、ON 或 1 时，将为 vardecimal 存储格式启用指定的表。 为 FALSE、OFF 或 0 时，将不为 vardecimal 存储格式启用此表。 仅当使用[sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)为 vardecimal 存储格式启用了数据库时，才能启用 vardecimal 存储格式。 在[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和更高版本中，不推荐使用**vardecimal**存储格式。 请改用 ROW 压缩。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。 默认值为 0。|  
+|text in row|如果为 OFF 或 0（禁用，默认值），则不更改当前行为，且在行中不存在 BLOB。<br /><br /> 当指定并 @OptionValue 为 ON （启用）或从24到7000的整数值时，新的**text**、 **ntext**或**image**字符串将直接存储在数据行中。 当更新 BLOB 值时，所有现有 BLOB （二进制大型对象： **text**、 **ntext**或**image**数据）都将改为行格式的文本。 有关详细信息，请参阅“备注”。|  
+|large value types out of row|1 = 将表中的**varchar （max）**、 **nvarchar （max）**、 **varbinary （max）**、 **XML**和大型用户定义类型（UDT）列都存储在行外，并向根提供一个16字节的指针。<br /><br /> 0 = **varchar （max）**、 **nvarchar （max）**、 **varbinary （max）**、 **xml**和大型 UDT 值直接存储在数据行中，最大限制为8000个字节，并且只要可以在记录中容纳该值即可。 如果记录中容纳不下该值，则指针存储在行内，其余内容存储在 LOB 存储空间内的行外。 默认值为 0。<br /><br /> 大型用户定义类型（UDT）适用于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本。 <br /><br /> 使用[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)的 TEXTIMAGE_ON 选项来指定大数据类型存储的位置。 |  
+|vardecimal storage format|**适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。<br /><br /> 为 TRUE、ON 或 1 时，将为 vardecimal 存储格式启用指定的表。 为 FALSE、OFF 或 0 时，将不为 vardecimal 存储格式启用此表。 仅当使用[sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)为 vardecimal 存储格式启用了数据库时，才能启用 vardecimal 存储格式。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本中，不推荐使用**vardecimal**存储格式。 请改用 ROW 压缩。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。 默认值为 0。|  
   
- [ @OptionValue =]"*value*"  
+ [ @OptionValue =] "*value*"  
  指示*option_name*启用（TRUE、ON 或1）还是禁用（FALSE、OFF 或0）。 *值*为**varchar （12）**，无默认值。 *值*不区分大小写。  
   
  对于 text in row 选项，有效选项值是 0、ON、OFF，或从 24 到 7000 的整数。 当*值*为 ON 时，此限制的默认值为256字节。  
@@ -73,7 +73,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
  sp_tableoption 中的 text in row 选项只能对包含文本列的表启用或禁用。 如果表不含文本列，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将引发错误。  
   
- 如果启用了 text in row 选项，则该@OptionValue参数允许用户指定要存储在 BLOB 的行中的最大大小。 默认值为 256 字节，但是值可以介于 24 到 7000 个字节之间。  
+ 如果启用了 text in row 选项，则该 @OptionValue 参数允许用户指定要存储在 BLOB 的行中的最大大小。 默认值为 256 字节，但是值可以介于 24 到 7000 个字节之间。  
   
  如果满足以下条件， **text**、 **ntext**或**image**字符串将存储在数据行中：  
   
@@ -109,7 +109,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 ## <a name="examples"></a>示例  
   
 ### <a name="a-storing-xml-data-out-of-the-row"></a>A. 将 xml 数据存储在行外  
- 下面的示例指定`HumanResources.JobCandidate`表中的**xml**数据存储在行外。  
+ 下面的示例指定表中的**xml**数据 `HumanResources.JobCandidate` 存储在行外。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -118,7 +118,7 @@ EXEC sp_tableoption 'HumanResources.JobCandidate', 'large value types out of row
 ```  
   
 ### <a name="b-enabling-vardecimal-storage-format-on-a-table"></a>B. 在表中启用 vardecimal 存储格式  
- 下面的示例修改`Production.WorkOrderRouting`表以存储格式存储`decimal`数据类型。 `vardecimal`  
+ 下面的示例修改 `Production.WorkOrderRouting` 表以存储格式存储 `decimal` 数据类型 `vardecimal` 。  
 
 ```sql  
 USE master;  

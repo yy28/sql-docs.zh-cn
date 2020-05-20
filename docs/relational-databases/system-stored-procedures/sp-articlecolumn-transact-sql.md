@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_articlecolumn
 ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: acbbd043080b107a5d545408fabe271d62015e54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 250d8687a97afdfa937abb9c49b2efa131195a52
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105078"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833526"
 ---
 # <a name="sp_articlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,15 +67,15 @@ sp_articlecolumn [ @publication = ] 'publication'
   
  **1**指定对项目所做的更改可能导致快照无效，如果存在需要新快照的现有订阅，则授予将现有快照标记为过时并生成新快照的权限。  
   
- [**@force_reinit_subscription =** ]*force_reinit_subscription*  
+ [** @force_reinit_subscription =** ] *force_reinit_subscription*  
  确认此存储过程所执行的操作可能需要重新初始化现有订阅。 *force_reinit_subscription*为一个**位**，默认值为**0**。  
   
  **0**指定对项目所做的更改不会导致重新初始化订阅。 如果该存储过程检测到更改将需要重新初始化订阅，则会发生错误，并且不进行任何更改。 **1**指定对项目所做的更改会导致重新初始化现有订阅，并授予重新初始化订阅的权限。  
   
-`[ @publisher = ] 'publisher'`指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'`指定一个非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  *发布服务器*不应与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器一起使用。  
+>  *发布服务器*不应与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器一起使用。  
   
 `[ @internal = ] 'internal'`仅限内部使用。  
   

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.symmetric_keys catalog view
 ms.assetid: d410eae1-3a52-45de-b9a1-52d2bd93a8eb
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b4607c5873889c17e9934cc4f24465fe4e83007
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1ce1025ab54ced5162777c1c30f87f7f6262e0f3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108934"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833905"
 ---
 # <a name="syssymmetric_keys-transact-sql"></a>sys.symmetric_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68108934"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|name |**sysname**|密钥的名称。 在数据库中是唯一的。|  
+|**name**|**sysname**|密钥的名称。 在数据库中是唯一的。|  
 |**principal_id**|**int**|拥有密钥的数据库主体的 ID。|  
 |**symmetric_key_id**|**int**|密钥的 ID。 在数据库中是唯一的。|  
 |**key_length**|**int**|密钥的长度（位）。|  

@@ -1,5 +1,5 @@
 ---
-title: cdc.&lt;capture_instance&gt;_CT （transact-sql） |Microsoft Docs
+title: cdc。 &lt;capture_instance &gt; _CT （transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - cdc.<capture_instance>_CT
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6595fa2a2462463b9ecc64778af1d72e588477d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 02f08a02236195d02f36c0b8e24b792adf46933e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72908397"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833086"
 ---
-# <a name="cdcltcapture_instancegt_ct-transact-sql"></a>cdc.&lt;capture_instance&gt;_CT （transact-sql）
+# <a name="cdcltcapture_instancegt_ct-transact-sql"></a>cdc。 &lt;capture_instance &gt; _CT （transact-sql）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   对源表启用变更数据捕获时创建的更改表。 该表为对源表执行的每个插入和删除操作返回一行，为对源表执行的每个更新操作返回两行。 如果在启用源表时未指定更改表的名称，则会使用一个派生的名称。 名称的格式为 cdc。*capture_instance*_CT 其中*capture_instance*是源表的架构名称和格式*schema_table*的源表名称。 例如，如果对**AdventureWorks**示例数据库中的表**Person**启用了变更数据捕获，则派生的更改表名称将为**cdc。Person_Address_CT**。  
@@ -57,7 +57,7 @@ ms.locfileid: "72908397"
  不过，这些列中的值与源列的值相同。  
   
 ### <a name="large-object-data-types"></a>大型对象数据类型  
- 当 __ $ operation = 1 \_ \_或 $operation = 3 时，将始终为数据类型为**image**、 **text**和**ntext**的列分配**NULL**值。 数据类型为**varbinary （max）**、 **varchar （max）** 或**nvarchar （max）** 的列在 $operation = 3 时\_ \_赋给**NULL**值，除非在更新过程中更改了列。 当\_ \_$operation = 1 时，将在删除时为这些列分配其值。 捕获实例中包含的计算列的值始终为**NULL**。  
+ 当 __ $ operation = 1 **text**或**image** **ntext** **NULL** \_ \_ $operation = 3 时，将始终为数据类型为 image、text 和 ntext 的列分配 NULL 值。 数据类型为**varbinary （max）**、 **varchar （max）** 或**nvarchar （max）** 的列在 $Operation = 3 时赋给**NULL**值， \_ \_ 除非在更新过程中更改了列。 当 \_ \_ $operation = 1 时，将在删除时为这些列分配其值。 捕获实例中包含的计算列的值始终为**NULL**。  
   
  默认情况下，在一个 INSERT、UPDATE、WRITETEXT 或 UPDATETEXT 语句中可添加到已捕获列的最大大小为 65,536 字节或 64 KB。 若要增加此大小以支持较大的 LOB 数据，请使用 "[配置最大文本复制大小" 服务器配置选项](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)来指定更大的最大大小。 有关详细信息，请参阅 [配置 max text repl size 服务器配置选项](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)。  
   

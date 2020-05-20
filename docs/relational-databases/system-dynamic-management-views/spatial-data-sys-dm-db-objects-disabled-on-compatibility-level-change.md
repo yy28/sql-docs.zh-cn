@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_objects_disabled_on_compatibility_level_change catalog view
 ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30c3a5d7358e49c1e1762fbb9851066bdaf30871
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 300b988ce74a22dad3384920bb93fd45191128e8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68809900"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832616"
 ---
 # <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>空间数据-sys. dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -113,9 +113,9 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ### <a name="behavior-of-the-disabled-objects"></a>已禁用对象的行为  
  **索引**  
   
- 如果聚集索引处于禁用状态，或者如果强制非聚集索引，则会引发以下错误： "查询处理器无法生成计划，因为索引 '%。\*ls ' 的表或视图 '%。\*ls ' 已禁用。 " 若要重新启用这些对象，请在升级后通过**对 ... 调用 ALTER INDEX 来重建索引。重新生成**。  
+ 如果聚集索引处于禁用状态，或者如果强制非聚集索引，则会引发以下错误： "查询处理器无法生成计划，因为索引 '%. \*ls ' 的表或视图 '%. \*ls ' 已禁用。 " 若要重新启用这些对象，请在升级后通过**对 ... 调用 ALTER INDEX 来重建索引。重新生成**。  
   
- **无关**  
+ **堆**  
   
  如果使用具有已禁用堆的表，则会引发以下错误。 若要重新启用这些对象，请在升级后通过调用**ALTER INDEX ALL ON .。。重新生成**。  
   

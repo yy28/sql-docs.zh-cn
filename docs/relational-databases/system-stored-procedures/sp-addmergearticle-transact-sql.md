@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergearticle
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a9163e6d34a0de6200eafd413d163bb6d92fd4a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7ba2cebf6c4b779119696f19ee78b7ce8ec1cf66
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "72174007"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831877"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -75,13 +75,13 @@ sp_addmergearticle [ @publication = ] 'publication'
 ## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'`包含项目的发布的名称。 *发布*为**sysname**，无默认值。  
   
-`[ @article = ] 'article'`项目的名称。 该名称在发布中必须唯一。 *项目*是**sysname**，无默认值。 *项目*必须在运行[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的本地计算机上，并且必须符合标识符规则。  
+`[ @article = ] 'article'`项目的名称。 该名称在发布中必须唯一。 *项目*是**sysname**，无默认值。 *项目*必须在运行的本地计算机上 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并且必须符合标识符规则。  
   
 `[ @source_object = ] 'source_object'`要发布的数据库对象。 *source_object* **sysname**，无默认值。 有关可使用合并复制发布的对象类型的详细信息，请参阅[发布数据和数据库对象](../../relational-databases/replication/publish/publish-data-and-database-objects.md)。  
   
 `[ @type = ] 'type'`项目的类型。 *type*的数据类型为**sysname**，默认值为**table**，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**table** （默认值）|具有架构和数据的表。 复制会监视该表以确定要复制的数据。|  
 |**func schema only**|仅具有架构的函数。|  
@@ -101,7 +101,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @pre_creation_cmd = ] 'pre_creation_cmd'`指定应用快照时，如果订阅服务器上存在该表，系统将执行的操作。 *pre_creation_cmd*为**nvarchar （10）**，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**无**|如果订阅服务器上已存在该表，则不执行任何操作。|  
 |**delete**|根据子集筛选器中的 WHERE 子句发出 delete 命令。|  
@@ -115,7 +115,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @schema_option = ] schema_option`给定项目的架构生成选项的位图。 *schema_option*为**binary （8）**，可以是[|（位或）](../../t-sql/language-elements/bitwise-or-transact-sql.md)其中一个或多个值的乘积。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**0x00**|禁用快照代理的脚本，并使用在*creation_script*中定义的提供的架构预创建脚本。|  
 |**0x01**|生成对象创建（CREATE TABLE、CREATE PROCEDURE 等）。 这是存储过程项目的默认值。|  
@@ -144,17 +144,17 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0x4000000**|复制**xml**列的索引。|  
 |**0x8000000**|创建订阅服务器没有的任何架构。|  
 |**0x10000000**|将订阅服务器上的**xml**列转换为**ntext** 。|  
-|**0x20000000**|将中[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]引入的大型对象数据类型（ [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]**nvarchar （max）**、 **varchar （max）** 和**varbinary （max**））转换为支持的数据类型。|  
+|**0x20000000**|将中引入的大型对象数据类型（**nvarchar （max）**、 **varchar （max）** 和**varbinary （max**））转换 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 为支持的数据类型 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 。|  
 |**0x40000000**|复制权限。|  
 |**0x80000000**|尝试删除不属于发布的任何对象的依赖关系。|  
-|**0x100000000**|如果 FILESTREAM 属性是在**varbinary （max）** 列上指定的，则使用此选项复制该属性。 如果要将表复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 订阅服务器，请勿指定此选项。 不管如何设置此架构选项， [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]都不支持将包含 FILESTREAM 列的表复制到订阅服务器。 请参阅相关选项**0x800000000**。|  
-|**0x200000000**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]将中引入的日期和时间数据类型（**date**、 **time**、 **datetimeoffset**和 datetime2）转换为早期版本支持的数据类型。 **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|**0x100000000**|如果 FILESTREAM 属性是在**varbinary （max）** 列上指定的，则使用此选项复制该属性。 如果要将表复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 订阅服务器，请勿指定此选项。 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]不管如何设置此架构选项，都不支持将包含 FILESTREAM 列的表复制到订阅服务器。 请参阅相关选项**0x800000000**。|  
+|**0x200000000**|将中引入的日期和时间数据类型（**date**、 **time**、 **datetimeoffset**和**datetime2**）转换 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 为早期版本支持的数据类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**0x400000000**|复制数据和索引的压缩选项。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。|  
 |**0x800000000**|设置此选项可将 FILESTREAM 数据存储到订阅服务器上其自身的文件组中。 如果不设置此选项，FILESTREAM 数据将存储在默认文件组中。 由于复制操作不创建文件组，因此如果您设置此选项，您必须先创建文件组，然后在订阅服务器上应用快照。 有关如何在应用快照之前创建对象的详细信息，请参阅[在应用快照之前和之后执行脚本](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。<br /><br /> 请参阅相关选项**0x100000000**。|  
-|**0x1000000000**|将公共语言运行时（CLR）用户定义类型（Udt）转换为**varbinary （max）** ，以使类型为 UDT 的列能够复制到运行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的订阅服务器。|  
-|**0x2000000000**|将**hierarchyid**数据类型转换为**varbinary （max）** ，以便可以将**hierarchyid**类型的列复制到运行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的订阅服务器。 有关如何在复制的表中使用**hierarchyid**列的详细信息，请参阅[hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)。|  
+|**0x1000000000**|将公共语言运行时（CLR）用户定义类型（Udt）转换为**varbinary （max）** ，以使类型为 UDT 的列能够复制到运行的订阅服务器 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。|  
+|**0x2000000000**|将**hierarchyid**数据类型转换为**varbinary （max）** ，以便可以将**hierarchyid**类型的列复制到运行的订阅服务器 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 有关如何在复制的表中使用**hierarchyid**列的详细信息，请参阅[hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)。|  
 |**0x4000000000**|复制表的任何筛选的索引。 有关筛选索引的详细信息，请参阅[创建筛选索引](../../relational-databases/indexes/create-filtered-indexes.md)。|  
-|**0x8000000000**|将**geography**和**geometry**数据类型转换为**varbinary （max）** ，以便可以将这些类型的列复制到运行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的订阅服务器。|  
+|**0x8000000000**|将**geography**和**geometry**数据类型转换为**varbinary （max）** ，以便可以将这些类型的列复制到运行的订阅服务器 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。|  
 |**0x10000000000**|复制**地域**和**几何图形**类型的列上的索引。|  
   
  如果此值为 NULL，则系统将自动为项目生成一个有效的架构选项。 "备注" 部分的 "**默认架构选项**" 表显示根据项目类型选择的值。 此外，并非所有*schema_option*值都对每种类型的复制和项目类型都有效。 "备注" 中给出的 "**有效架构选项**" 表显示了可为给定项目类型指定的选项。  
@@ -191,7 +191,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 `[ @identity_range = ] identity_range`当使用自动标识范围管理时，控制分配给发布服务器和订阅服务器的标识范围大小。 *identity_range*为**bigint**，默认值为 NULL。 如果*identityrangemanagementoption*为**auto**或*auto_identity_range*为**true**，则必须指定此参数。  
   
 > [!NOTE]  
->  *identity_range*控制使用早期版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]重新发布订阅服务器上的标识范围大小。  
+>  *identity_range*控制使用早期版本的重新发布订阅服务器上的标识范围大小 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 `[ @threshold = ] threshold`控制合并代理何时分配新标识范围的百分比值。 当使用 "*阈值*" 中指定的百分比值时，合并代理将创建一个新的标识范围。 *阈值*为**int**，默认值为 NULL。 如果*identityrangemanagementoption*为**auto**或*auto_identity_range*为**true**，则必须指定此参数。  
   
@@ -201,7 +201,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  **1**指定将验证签名是否来自受信任的源。  
   
-`[ @destination_object = ] 'destination_object'`订阅数据库中对象的名称。 *destination_object*为**sysname**，默认值为 " ** \@source_object**"。 仅当项目为仅架构项目（如存储过程、视图和 UDF 等）时，才能指定此参数。 如果指定的项目是表项目，则中*@source_object*的值将覆盖*destination_object*中的值。  
+`[ @destination_object = ] 'destination_object'`订阅数据库中对象的名称。 *destination_object*为**sysname**，默认值为 " ** \@ source_object**"。 仅当项目为仅架构项目（如存储过程、视图和 UDF 等）时，才能指定此参数。 如果指定的项目是表项目，则中的值将 *@source_object* 覆盖*destination_object*中的值。  
   
 `[ @allow_interactive_resolver = ] 'allow_interactive_resolver'`启用或禁用对项目使用交互式冲突解决程序。 *allow_interactive_resolver*为**nvarchar （5）**，默认值为 FALSE。 **如果为 true** ，则允许对项目使用交互式冲突解决程序;**false**会禁用它。  
   
@@ -212,7 +212,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @check_permissions = ] check_permissions`是在合并代理将更改应用于发布服务器时验证的表级权限的位图。 如果合并进程使用的发布服务器登录名/用户帐户没有正确的表权限，则无效更改将被记录为冲突。 *check_permissions*为**int**，可以是[|（位或）](../../t-sql/language-elements/bitwise-or-transact-sql.md)以下一个或多个值的乘积。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**0x00** （默认值）|不检查权限。|  
 |**0x10**|检查了发布服务器上的权限后，才能上载订阅服务器上的插入操作。|  
@@ -240,7 +240,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  **false**指定*column_tracking*使用指定的默认冲突检测。 有关详细信息，请参阅[通过逻辑记录对相关行的更改进行分组](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)。  
   
 > [!NOTE]  
->  由于[!INCLUDE[ssEW](../../includes/ssew-md.md)]订阅服务器不支持逻辑记录，因此必须将*logical_record_level_conflict_detection*的值指定为**False**以支持这些订阅服务器。  
+>  由于订阅服务器不支持逻辑记录 [!INCLUDE[ssEW](../../includes/ssew-md.md)] ，因此必须将*logical_record_level_conflict_detection*的值指定为**False**以支持这些订阅服务器。  
   
 `[ @logical_record_level_conflict_resolution = ] 'logical_record_level_conflict_resolution'`为作为逻辑记录成员的项目指定冲突解决级别。 *logical_record_level_conflict_resolution*为**nvarchar （5）**，默认值为 FALSE。  
   
@@ -249,11 +249,11 @@ sp_addmergearticle [ @publication = ] 'publication'
  **false**指定入选行不约束为逻辑记录。 如果*logical_record_level_conflict_detection*为**true**，则*logical_record_level_conflict_resolution*也必须设置为**true**。 有关详细信息，请参阅[通过逻辑记录对相关行的更改进行分组](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)。  
   
 > [!NOTE]  
->  由于[!INCLUDE[ssEW](../../includes/ssew-md.md)]订阅服务器不支持逻辑记录，因此必须将*logical_record_level_conflict_resolution*的值指定为**False**以支持这些订阅服务器。  
+>  由于订阅服务器不支持逻辑记录 [!INCLUDE[ssEW](../../includes/ssew-md.md)] ，因此必须将*logical_record_level_conflict_resolution*的值指定为**False**以支持这些订阅服务器。  
   
 `[ @partition_options = ] partition_options`定义项目中数据的分区方式，当所有行只属于一个分区或只属于一个订阅时，将启用性能优化。 *partition_options*为**tinyint**，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**0** （默认值）|项目的筛选是静态的，或者不会为每个分区生成一个唯一数据子集（即“重叠”分区）。|  
 |**1**|分区是重叠的，订阅服务器中执行的数据操作语言 (DML) 更新不能更改行所属的分区。|  
@@ -267,7 +267,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @subscriber_upload_options = ] subscriber_upload_options`定义对具有客户端订阅的订阅服务器上所做的更新的限制。 有关详细信息，请参阅[使用仅下载项目优化合并复制性能](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)。 *subscriber_upload_options*为**tinyint**，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**0** （默认值）|无限制。 将订阅服务器上所做的更改上载到发布服务器。|  
 |**1**|允许在订阅服务器上进行更改，但不将更改上载到发布服务器。|  
@@ -280,11 +280,11 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @identityrangemanagementoption = ] identityrangemanagementoption`指定如何处理项目的标识范围管理。 *identityrangemanagementoption*的数据值为**nvarchar （10）**，可以为以下值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**无**|禁用标识范围管理。|  
 |**手动**|使用 NOT FOR REPLICATION 标记标识列，以启用手动标识范围处理。|  
-|**自动**|指定自动管理标识范围。|  
+|**auto**|指定自动管理标识范围。|  
 |NULL（默认值）|如果*auto_identity_range*的值不为**true**，则默认值为 "**无**"。|  
   
  为了向后兼容，当*identityrangemanagementoption*的值为 NULL 时，将检查*auto_identity_range*的值。 但是，当*identityrangemanagementoption*的值不为 NULL 时，将忽略*auto_identity_range*的值。 有关详细信息，请参阅[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)。  
@@ -334,11 +334,11 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**func schema only**|**0x01**|  
 |**indexed view schema only**|**0x01**|  
 |**proc schema only**|**0x01**|  
-|**table**|**0x0C034FD1** -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]具有本机模式快照的0x0C034FD1 及更高版本的兼容发布。<br /><br /> **0x08034FF1** -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]使用字符模式快照的0x08034FF1 及更高版本的兼容发布。|  
+|**table**|**0x0C034FD1**  -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 具有本机模式快照的0x0C034FD1 及更高版本的兼容发布。<br /><br /> **0x08034FF1**  -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 使用字符模式快照的0x08034FF1 及更高版本的兼容发布。|  
 |**view schema only**|**0x01**|  
   
 > [!NOTE]  
->  如果发布支持早期版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则**表**的默认架构选项是**0x30034FF1**。  
+>  如果发布支持早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则**表**的默认架构选项是**0x30034FF1**。  
   
 ## <a name="valid-schema-option-table"></a>有效架构选项表  
  下表描述了根据项目类型*schema_option*允许的值。  

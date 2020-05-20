@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setevent
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f622f7d7097afd66a87b8ad90280e19ac3ea40de
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b8c58657eda708965821c4739f76b49c558c8e76
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305297"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832567"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |24|Lock:Acquired|指示获取了某个资源（如数据页）的锁。|  
 |25|Lock:Deadlock|指示两个并发事务由于试图获得对方事务拥有的资源的不兼容锁而发生了相互死锁。|  
 |26|Lock:Cancel|指示已取消获取资源锁（例如，由于死锁）。|  
-|27|Lock:Timeout|指示由于其他事务持有所需资源的阻塞锁而使对资源（例如页）锁的请求超时。 超时由 @@LOCK_TIMEOUT函数确定，可使用 set LOCK_TIMEOUT 语句进行设置。|  
+|27|Lock:Timeout|指示由于其他事务持有所需资源的阻塞锁而使对资源（例如页）锁的请求超时。 超时由 @ @LOCK_TIMEOUT 函数确定，可使用 set LOCK_TIMEOUT 语句进行设置。|  
 |28|Degree of Parallelism Event（7.0 插入）|在执行 SELECT、INSERT 或 UPDATE 语句之前发生。|  
 |29-31|保留|改用事件 28。|  
 |32|保留|保留|  
@@ -81,7 +81,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |36|SP:CacheRemove|指示从过程缓存中删除了某个项。|  
 |37|SP:Recompile|指示已重新编译存储过程。|  
 |38|SP:CacheHit|指示在过程缓存中找到了存储过程。|  
-|39|不推荐使用|不推荐使用|  
+|39|已放弃|已放弃|  
 |40|SQL:StmtStarting|在启动了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时发生。|  
 |41|SQL:StmtCompleted|在完成了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时发生。|  
 |42|SP:Starting|指示启动了存储过程。|  
@@ -132,12 +132,12 @@ sp_trace_setevent [ @traceid = ] trace_id
 |101|保留||  
 |102|Audit Database Scope GDR|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的任何用户每次对语句权限发出 GRANT、DENY、REVOKE 时发生（仅适用于数据库操作，例如授予对数据库的权限）。|  
 |103|Audit Object GDR Event|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的任何用户每次对对象权限发出 GRANT、DENY、REVOKE 时发生。|  
-|104|Audit AddLogin Event|在添加或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]删除登录名时发生;对于**sp_addlogin**和**sp_droplogin**。|  
+|104|Audit AddLogin Event|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 添加或删除登录名时发生; 对于**sp_addlogin**和**sp_droplogin**，则为。|  
 |105|Audit Login GDR Event|在添加或删除 Windows 登录权限时发生;对于**sp_grantlogin**、 **sp_revokelogin**和**sp_denylogin**。|  
 |106|Audit Login Change Property Event|当修改登录名（密码除外）的属性时发生。对于**sp_defaultdb**和**sp_defaultlanguage**。|  
 |107|Audit Login Change Password Event|在更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录密码时发生。<br /><br /> 不记录密码。|  
 |108|Audit Add Login to Server Role Event|当在固定服务器角色中添加或删除登录名时发生;对于**sp_addsrvrolemember**和**sp_dropsrvrolemember**。|  
-|109|Audit Add DB User Event|在将登录名作为数据库用户（Windows 或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）添加到数据库或从数据库中删除时发生。对于**sp_grantdbaccess**、 **sp_revokedbaccess**、 **sp_adduser**和**sp_dropuser**。|  
+|109|Audit Add DB User Event|在将登录名作为数据库用户（Windows 或）添加到数据库或从数据库中删除时出现 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; 对于**sp_grantdbaccess**、 **sp_revokedbaccess**、 **sp_adduser**和**sp_dropuser**。|  
 |110|Audit Add Member to DB Role Event|将登录名作为数据库用户（固定或用户定义）添加或删除到数据库时发生。对于**sp_addrolemember**、 **sp_droprolemember**和**sp_changegroup**。|  
 |111|Audit Add Role Event|在将登录名作为数据库用户添加到数据库或从数据库中删除时发生。对于**sp_addrole**和**sp_droprole**。|  
 |112|Audit App Role Change Password Event|在更改应用程序角色的密码时发生。|  
@@ -253,28 +253,28 @@ sp_trace_setevent [ @traceid = ] trace_id
 |9|**ClientProcessID**|客户端计算机分配给正在运行客户端应用程序的进程的 ID。|  
 |10|**ApplicationName**|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 此列由应用程序传递的值填充，而不是由所显示的程序名填充。|  
 |11|**LoginName**|客户端的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。|  
-|12|**SPID**|分配[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]给与客户端关联的进程的服务器进程 ID。|  
-|13|**Duration**|事件所花费的实耗时间（以微秒为单位）。 Hash Warning 事件不填充该数据列。|  
+|12|**SPID**|分配给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与客户端关联的进程的服务器进程 ID。|  
+|13|**持续时间**|事件所花费的实耗时间（以微秒为单位）。 Hash Warning 事件不填充该数据列。|  
 |14|**StartTime**|事件开始的时间（如果可用）。|  
-|15|**结束**|事件结束的时间。 启动事件类（如 **SQL:BatchStarting** 或 **SP:Starting**）不填充此列。 **哈希警告**事件也不会填充它。|  
-|16|**内容**|服务器代表事件所执行的逻辑磁盘读取次数。 此列不由**Lock：已发布**事件填充。|  
-|17|**写**|服务器代表事件所执行的物理磁盘写入次数。|  
-|18|CPU****|事件所用的 CPU 时间（毫秒）。|  
+|15|**EndTime**|事件结束的时间。 启动事件类（如 **SQL:BatchStarting** 或 **SP:Starting**）不填充此列。 **哈希警告**事件也不会填充它。|  
+|16|**读取**|服务器代表事件所执行的逻辑磁盘读取次数。 此列不由**Lock：已发布**事件填充。|  
+|17|**写入**|服务器代表事件所执行的物理磁盘写入次数。|  
+|18|**CPU**|事件所用的 CPU 时间（毫秒）。|  
 |19|**权限**|显示权限的位图；由安全审核使用。|  
 |20|**严重性**|异常的严重级别。|  
 |21|**EventSubClass**|事件子类的类型。 所有事件类都不填充此数据列。|  
 |22|**ObjectID**|系统分配的对象 ID。|  
-|23|**成功**|尝试使用权限的成功情况；审核时使用。<br /><br /> **1** = 成功**0** = 失败|  
+|23|**Success**|尝试使用权限的成功情况；审核时使用。<br /><br /> **1** = 成功**0** = 失败|  
 |24|**IndexID**|受事件影响的对象的索引的 ID。 若要确定对象的索引的 ID，请使用 **sysindexes** 系统表的 **indid** 列。|  
 |25|**IntegerData**|与在跟踪中捕获的事件类相关的整型值。|  
-|26|**ServerName**|正在跟踪的实例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]名称（ *servername*或*servername\instancename*）。|  
+|26|**ServerName**|正在跟踪的实例的名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ *servername*或*servername\instancename*）。|  
 |27|**EventClass**|被记录的事件类的类型。|  
 |28|**ObjectType**|对象（如表、函数或存储过程）的类型。|  
-|29|**NestLevel**|执行此存储过程所处的嵌套级。 请[参阅@NESTLEVEL @ &#40;transact-sql&#41;](../../t-sql/functions/nestlevel-transact-sql.md)。|  
+|29|**NestLevel**|执行此存储过程所处的嵌套级。 请参阅[@ @NESTLEVEL &#40;transact-sql&#41;](../../t-sql/functions/nestlevel-transact-sql.md)。|  
 |30|**状态**|发生错误时的服务器状态。|  
 |31|**错误**|错误号。|  
 |32|**模式**|获取的锁的锁模式。 此列不由**Lock：已发布**事件填充。|  
-|33|**Handle**|事件中引用的对象的句柄。|  
+|33|**柄**|事件中引用的对象的句柄。|  
 |34|**ObjectName**|被访问的对象的名称。|  
 |35|**DatabaseName**|USE *database*语句中指定的数据库的名称。|  
 |36|**FileName**|被修改的文件名的逻辑名称。|  
@@ -298,23 +298,23 @@ sp_trace_setevent [ @traceid = ] trace_id
 |54|**GUID**|GUID 值，与跟踪中捕获的事件类相关。|  
 |55|**IntegerData2**|整数值，与跟踪中捕获的事件类相关。|  
 |56|**ObjectID2**|相关的对象或实体的 ID（如果可用）。|  
-|57|**类型**|整数值，与跟踪中捕获的事件类相关。|  
+|57|**Type**|整数值，与跟踪中捕获的事件类相关。|  
 |58|**OwnerID**|拥有锁的对象的类型。 仅限于锁事件。|  
 |59|**ParentName**|对象所在架构的名称。|  
 |60|**IsSystem**|指示事件是发生在系统进程中还是发生在用户进程中。<br /><br /> **1** = 系统<br /><br /> **0** = 用户。|  
-|61|**偏移量**|存储过程或批查询中的语句的起始偏移量。|  
+|61|**Offset**|存储过程或批查询中的语句的起始偏移量。|  
 |62|**SourceDatabaseID**|对象源所在数据库的 ID。|  
 |63|**： Sqlhandle**|基于即席查询文本或 SQL 对象的数据库和对象 ID 的 64 位哈希运算。 此值可传递给**sys.databases dm_exec_sql_text （）** 以检索关联的 sql 文本。|  
 |64|**SessionLoginName**|发起会话的用户的登录名。 例如，如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **连接到** 并以 **Login2**身份执行语句，则 **SessionLoginName** 将显示 **Login1**，而 **LoginName** 将显示 **Login2**。 此数据列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|  
   
- **[ @on=]** *on*  
+ **[ @on =]** *on*  
  指定将事件设置为 ON (1) 还是 OFF (0)。 *on*为**bit**，无默认值。  
   
  如果*将设置为* **1**，并且*column_id*为 NULL，则将事件设置为 on，并清除所有列。 如果*column_id*不为 null，则该事件的列设置为 ON。  
   
  如果*将设置为* **0**，并且*column_id*为 NULL，则将关闭事件，并清除所有列。 如果*column_id*不为 null，则将关闭列。  
   
- 下表说明了和** \@columnid** ** \@之间的交互**。  
+ 下表说明了和** \@ columnid** ** \@ 之间的交互**。  
   
 |@on|@columnid|结果|  
 |---------|---------------|------------|  
@@ -339,7 +339,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |16|该函数对此跟踪无效。|  
   
 ## <a name="remarks"></a>备注  
- **sp_trace_setevent**将执行以前版本中提供的扩展存储过程执行的许多操作[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 使用**sp_trace_setevent**而不是以下内容：  
+ **sp_trace_setevent**将执行以前版本中提供的扩展存储过程执行的许多操作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 使用**sp_trace_setevent**而不是以下内容：  
   
 -   **xp_trace_addnewqueue**  
   
@@ -347,7 +347,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 -   **xp_trace_seteventclassrequired**  
   
- 用户必须对为每个事件添加的每个列执行**sp_trace_setevent** 。 在每次执行期间，如果** \@"打开**" 设置为**1**， **sp_trace_setevent**会将指定的事件添加到跟踪的事件列表中。 如果** \@将**设置为**0**，则**sp_trace_setevent**从列表中删除指定的事件。  
+ 用户必须对为每个事件添加的每个列执行**sp_trace_setevent** 。 在每次执行期间，如果** \@ "打开**" 设置为**1**， **sp_trace_setevent**会将指定的事件添加到跟踪的事件列表中。 如果** \@ 将**设置为**0**，则**sp_trace_setevent**从列表中删除指定的事件。  
   
  所有 SQL 跟踪存储过程的参数（**sp_trace_xx**）都是严格类型化的。 如果没有用正确的输入参数数据类型（参数说明中指定的类型）来调用这些参数，则存储过程将返回错误。  
   

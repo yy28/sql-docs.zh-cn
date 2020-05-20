@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_tables_ex
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 77d1512c472005e59909342c94a88c4464c4fe5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5ebb27860d7b7da46680a61486c59de3929117ce
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096074"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834186"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 `[ @table_type = ] 'table_type'`要返回的表的类型。 *table_type*的数据值为**sysname**，默认值为 NULL，可以具有以下值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**A**|别名。|  
 |**GLOBAL TEMPORARY**|系统范围内可用的临时表的名称。|  
@@ -62,10 +62,10 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**SYNONYM**|同义词的名称。|  
 |**系统表**|系统表的名称。|  
 |**系统视图**|系统视图的名称。|  
-|**TABLE**|用户表的名称。|  
-|**VIEW**|视图的名称。|  
+|**数据表**|用户表的名称。|  
+|**显示**|视图的名称。|  
   
-`[ @fUsePattern = ] 'fUsePattern'`确定字符 **_**、 **%**、 **[** 和 **]** 是否解释为通配符。 有效值为 0（模式匹配为关闭状态）和 1（模式匹配为打开状态）。 *fUsePattern*的值为**bit**，默认值为1。  
+`[ @fUsePattern = ] 'fUsePattern'`确定字符 **_**、 **%** 、 **[** 和 **]** 是否解释为通配符。 有效值为 0（模式匹配为关闭状态）和 1（模式匹配为打开状态）。 *fUsePattern*的值为**bit**，默认值为1。  
   
 ## <a name="return-code-values"></a>返回代码值  
  无  
@@ -74,7 +74,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|表限定符名称。 各种 DBMS 产品支持表的三部分命名（_限定符_**。**_所有者_**。**_名称_）。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，此列表示数据库名称。 在某些其他产品中，该列表示表的数据库环境的服务器名。 此字段可以为 NULL。|  
+|**TABLE_CAT**|**sysname**|表限定符名称。 各种 DBMS 产品支持表的三部分命名（_限定符_**。**_所有者_**。**_名称_）。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此列表示数据库名称。 在某些其他产品中，该列表示表的数据库环境的服务器名。 此字段可以为 NULL。|  
 |**TABLE_SCHEM**|**sysname**|表所有者名称。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，此列表示创建该表的数据库用户的名称。 此字段始终返回值。|  
 |**TABLE_NAME**|**sysname**|表名。 此字段始终返回值。|  
 |**TABLE_TYPE**|**varchar(32)**|表、系统表或视图。|  

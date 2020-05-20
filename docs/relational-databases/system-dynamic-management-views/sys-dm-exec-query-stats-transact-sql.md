@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_stats dynamic management view
 ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23fd1a0c896436dad27ab771e2ed04c775938091
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a04468a272cb3d344ef55074e60d2dca4eec9bb9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77429008"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833811"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,14 +34,14 @@ ms.locfileid: "77429008"
   
 > [!NOTE]
 > - 每次执行时， **sys.databases dm_exec_query_stats**的结果可能会有所不同，因为数据只反映完成的查询，而不是仍在进行中的查询。
-> - 若要从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]调用此，请使用名称**dm_pdw_nodes_exec_query_stats**。    
+> - 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_exec_query_stats**。    
 
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**sql_handle**|**varbinary(64)**  |是唯一标识查询所属的批处理或存储过程的标记。<br /><br /> 通过调用 **sys.dm_exec_sql_text** 动态管理函数，**sql_handle** 可以和 **statement_start_offset** 及 **statement_end_offset** 一起用于检索查询的 SQL 文本。|  
 |**statement_start_offset**|**int**|指示行所说明的查询在其批查询或持久化对象文本中的开始位置（以字节为单位，从 0 开始）。|  
-|**statement_end_offset**|**int**|指示行所说明的查询在其批查询或持久化对象文本中的结束位置（以字节为单位，从 0 开始）。 对于之前[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]的版本，值-1 指示批处理的结束。 不再包含尾随的注释。|  
+|**statement_end_offset**|**int**|指示行所说明的查询在其批查询或持久化对象文本中的结束位置（以字节为单位，从 0 开始）。 对于之前的版本 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ，值-1 指示批处理的结束。 不再包含尾随的注释。|  
 |**plan_generation_num**|**bigint**|可用于在重新编译后区分不同计划实例的序列号。|  
 |**plan_handle**|**varbinary(64)**|是一个标记，用于唯一标识已执行并且其计划驻留在计划缓存中或当前正在执行的批处理的查询执行计划。 可以将此值传递给 [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) 动态管理函数来获取查询计划。<br /><br /> 当本机编译的存储过程查询内存优化的表时，此项将始终为 0x000。|  
 |**creation_time**|**datetime**|编译计划的时间。|  
@@ -63,7 +63,7 @@ ms.locfileid: "77429008"
 |**last_logical_reads**|**bigint**|上次执行计划时所执行的逻辑读取次数。<br /><br /> 当查询内存优化的表时，此项将始终为 0。|  
 |**min_logical_reads**|**bigint**|此计划在单个执行期间所执行的最少逻辑读取次数。<br /><br /> 当查询内存优化的表时，此项将始终为 0。|  
 |**max_logical_reads**|**bigint**|此计划在单个执行期间所执行的最多逻辑读取次数。<br /><br /> 当查询内存优化的表时，此项将始终为 0。|  
-|**total_clr_time**|**bigint**|在公共语言运行时（CLR）对象内使用的时间（以[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]微秒为单位报告，但仅精确到毫秒），在编译后此计划的执行。 CLR 对象可以是存储过程、函数、触发器、类型和聚合。|  
+|**total_clr_time**|**bigint**|在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时（CLR）对象内使用的时间（以微秒为单位报告，但仅精确到毫秒），在编译后此计划的执行。 CLR 对象可以是存储过程、函数、触发器、类型和聚合。|  
 |**last_clr_time**|**bigint**|在上一次执行此计划期间，在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 对象内执行所用的时间（以微秒为单位报告，但仅精确到毫秒）。 CLR 对象可以是存储过程、函数、触发器、类型和聚合。|  
 |**min_clr_time**|**bigint**|此计划在单次执行期间在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR 对象内所用的最小时间（以微秒为单位报告，但仅精确到毫秒）。 CLR 对象可以是存储过程、函数、触发器、类型和聚合。|  
 |**max_clr_time**|**bigint**|此计划在单次执行期间在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR 内所用的最大时间（以微秒为单位报告，但仅精确到毫秒）。 CLR 对象可以是存储过程、函数、触发器、类型和聚合。|  
@@ -103,19 +103,19 @@ ms.locfileid: "77429008"
 |**last_used_threads**|**bigint**|上次执行此计划时使用的并行线程数。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。|  
 |**min_used_threads**|**bigint**|此计划在一次执行期间使用的最小并行线程数。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。|  
 |**max_used_threads**|**bigint**|此计划在一次执行过程中使用的最大并行线程数。 查询内存优化表时，它将始终为0。<br /><br /> **适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。|  
-|**total_columnstore_segment_reads**|**bigint**|查询读取的列存储段的总数。 不可为 null。<br /><br /> **适用**于：从[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|    
-|**last_columnstore_segment_reads**|**bigint**|上次执行查询所读取的列存储段的数目。 不可为 null。<br /><br /> **适用**于：从[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|    
-|**min_columnstore_segment_reads**|**bigint**|查询在一次执行期间读取的列存储段的最小数目。 不可为 null。<br /><br /> **适用**于：从[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|    
-|**max_columnstore_segment_reads**|**bigint**|查询在一次执行过程中读取的最大列存储段数。 不可为 null。<br /><br /> **适用**于：从[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|    
-|**total_columnstore_segment_skips**|**bigint**|查询跳过的列存储段的总数。 不可为 null。<br /><br /> **适用**于：从[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|    
-|**last_columnstore_segment_skips**|**bigint**|上次执行查询时跳过的列存储段数。 不可为 null。<br /><br /> **适用**于：从[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|    
-|**min_columnstore_segment_skips**|**bigint**|查询在一次执行过程中跳过的列存储段的最小数目。 不可为 null。<br /><br /> **适用**于：从[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|    
-|**max_columnstore_segment_skips**|**bigint**|查询在一次执行过程中跳过的列存储段的最大数目。 不可为 null。<br /><br /> **适用**于：从[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|
-|**total_spills**|**bigint**|自编译以来执行此查询所溢出的总页数。<br /><br /> **适用**于：从[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
-|**last_spills**|**bigint**|上次执行查询时溢出的页数。<br /><br /> **适用**于：从[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
-|**min_spills**|**bigint**|此查询在一次执行期间溢出的最小页数。<br /><br /> **适用**于：从[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
-|**max_spills**|**bigint**|此查询在一次执行期间溢出的最大页数。<br /><br /> **适用**于：从[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
-|**pdw_node_id**|**int**|此分发所在的节点的标识符。<br /><br /> **适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+|**total_columnstore_segment_reads**|**bigint**|查询读取的列存储段的总数。 不可为 null。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|    
+|**last_columnstore_segment_reads**|**bigint**|上次执行查询所读取的列存储段的数目。 不可为 null。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|    
+|**min_columnstore_segment_reads**|**bigint**|查询在一次执行期间读取的列存储段的最小数目。 不可为 null。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|    
+|**max_columnstore_segment_reads**|**bigint**|查询在一次执行过程中读取的最大列存储段数。 不可为 null。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|    
+|**total_columnstore_segment_skips**|**bigint**|查询跳过的列存储段的总数。 不可为 null。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|    
+|**last_columnstore_segment_skips**|**bigint**|上次执行查询时跳过的列存储段数。 不可为 null。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|    
+|**min_columnstore_segment_skips**|**bigint**|查询在一次执行过程中跳过的列存储段的最小数目。 不可为 null。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|    
+|**max_columnstore_segment_skips**|**bigint**|查询在一次执行过程中跳过的列存储段的最大数目。 不可为 null。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|
+|**total_spills**|**bigint**|自编译以来执行此查询所溢出的总页数。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
+|**last_spills**|**bigint**|上次执行查询时溢出的页数。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
+|**min_spills**|**bigint**|此查询在一次执行期间溢出的最小页数。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
+|**max_spills**|**bigint**|此查询在一次执行期间溢出的最大页数。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
+|**pdw_node_id**|**int**|此分发所在的节点的标识符。<br /><br /> **适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 |**total_page_server_reads**|**bigint**|此计划自编译以来执行的远程页面服务器读取的总次数。<br /><br /> **适用于：** Azure SQL DB 超大规模 |  
 |**last_page_server_reads**|**bigint**|上次执行计划时所执行的远程页面服务器读取次数。<br /><br /> **适用于：** Azure SQL DB 超大规模 |  
 |**min_page_server_reads**|**bigint**|此计划在单次执行期间所执行的最少远程页面服务器读取次数。<br /><br /> **适用于：** Azure SQL DB 超大规模 |  
@@ -125,8 +125,8 @@ ms.locfileid: "77429008"
   
 ## <a name="permissions"></a>权限  
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要权限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层上，需要`VIEW DATABASE STATE`具有数据库中的权限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
    
 ## <a name="remarks"></a>备注  
  查询完成后，将更新该视图中的统计信息。  

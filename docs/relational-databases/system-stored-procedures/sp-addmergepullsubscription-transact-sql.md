@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepullsubscription
 ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1b0a20e2bc7a167698353db31e7c0411fb1a6961
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 21d9afddaf2fc4c937949244959cb346233cb51a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68769144"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831801"
 ---
 # <a name="sp_addmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
   
 `[ @publisher_db = ] 'publisher_db'`发布服务器数据库的名称。 *publisher_db*的默认值为**sysname**，默认值为 NULL。  
   
-`[ @subscriber_type = ] 'subscriber_type'`订阅服务器的类型。 *subscriber_type*为**nvarchar （15）**，可以是**global**、 **local**或**anonymous**。 在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更高版本中，本地订阅称为客户端订阅，全局订阅称为服务器订阅。  
+`[ @subscriber_type = ] 'subscriber_type'`订阅服务器的类型。 *subscriber_type*为**nvarchar （15）**，可以是**global**、 **local**或**anonymous**。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本中，本地订阅称为客户端订阅，全局订阅称为服务器订阅。  
   
 `[ @subscription_priority = ] subscription_priority`订阅优先级。 *subscription_priority*是**真实**的，默认值为 NULL。 对于本地订阅和匿名订阅，优先级为**0.0**。 在检测到冲突时，默认冲突解决程序将使用该优先级来选取入选方。 全局订阅服务器的订阅优先级必须低于 100，因为 100 是发布服务器的优先级。  
   
@@ -66,7 +66,7 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
 ## <a name="remarks"></a>备注  
  **sp_addmergepullsubscription**用于合并复制。  
   
- 如果使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理同步订阅，则必须在订阅服务器上运行[sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)存储过程，以创建与发布同步的代理和作业。  
+ 如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理同步订阅，则必须在订阅服务器上运行[sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)存储过程，以创建与发布同步的代理和作业。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_addmergepullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepullsubscript_0_1.sql)]  

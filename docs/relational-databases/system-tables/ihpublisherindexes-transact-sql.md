@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - IHpublisherindexes system table
 ms.assetid: 6008ef89-eeb9-46dc-93a2-f7623298cf0f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 114ffee3ca13d7b5a42c3843957df0a2450b787f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5ae1ee49522e55a632ff876251a831bc7b071a1c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67990242"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832381"
 ---
 # <a name="ihpublisherindexes-transact-sql"></a>IHpublisherindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "67990242"
 |table_id****|**int**|标识索引所属的[IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md)中的表。|  
 |**publisher_id**|**smallint**|标识从中发布索引的非 SQL Server 发布服务器。|  
 |**name**|**sysname**|已发布的索引的名称。|  
-|**type**|**nvarchar(255)**|[IHindextypes](../../relational-databases/system-tables/ihindextypes-transact-sql.md)系统表中支持的索引类型。|  
+|type |**nvarchar(255)**|[IHindextypes](../../relational-databases/system-tables/ihindextypes-transact-sql.md)系统表中支持的索引类型。|  
   
 ## <a name="see-also"></a>另请参阅  
  [异类数据库复制](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

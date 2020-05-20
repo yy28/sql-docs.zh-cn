@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.soap_endpoints catalog view
 ms.assetid: f50dcbfc-02ed-4a19-9c07-c78a5a1b3224
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f7081d96d996d33bbabedd13201d7b0fa2547563
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e9408727ed9a9f10a8ed223c8765591ff8327b99
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078674"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834001"
 ---
 # <a name="syssoap_endpoints-transact-sql"></a>sys.soap_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68078674"
 |**is_sql_language_enabled**|**bit**|1 = 指定了 BATCHES = ENABLED 选项，表示端点上允许使用即席 SQL 批。|  
 |**wsdl_generator_procedure**|**nvarchar （776）**|实现此方法的存储过程的三部分名称。<br /><br /> 方法名称要求使用严格的三部分语法。 不允许使用一部分、两部分或四部分名称。|  
 |**default_database**|**sysname**|在 DATABASE = 选项中给定的默认数据库名称。<br /><br /> NULL = 指定了 DEFAULT。|  
-|**default_namespace**|**nvarchar （384）**|命名空间 = 选项中指定的默认命名空间， `https://tempuri.org`如果改为指定默认命名空间，则为。|  
+|**default_namespace**|**nvarchar （384）**|命名空间 = 选项中指定的默认命名空间，如果改为指定默认命名空间，则为 `https://tempuri.org` 。|  
 |**default_result_schema**|**tinyint**|SCHEMA = 选项的默认值。<br /><br /> 0 = NONE<br /><br /> 1 = STANDARD|  
 |**default_result_schema_desc**|**nvarchar(60)**|对 SCHEMA = 选项的默认值的说明。<br /><br /> 无<br /><br /> STANDARD|  
 |**is_xml_charset_enforced**|**bit**|0 = 指定了 CHARACTER_SET = SQL 选项。<br /><br /> 1 = 指定了 CHARACTER_SET = XML 选项。|  

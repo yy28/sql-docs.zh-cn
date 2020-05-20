@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergearticles system table
 ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d712f462ebe504df20ded93d6a9730ce31e4d0db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8328c332fe35b8e157c8631d90b8de67c6e96e17
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251947"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831927"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,8 +31,8 @@ ms.locfileid: "72251947"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|name |**sysname**|项目的名称。|  
-|**type**|**tinyint**|指示项目类型，可以为下列类型之一：<br /><br /> **10** = 表。<br /><br /> **32** = 存储过程（仅限架构）。<br /><br /> **64** = 视图或索引视图（仅限架构）。<br /><br /> **128** = 用户定义的函数（仅限架构）。<br /><br /> **160** = 同义词（仅限架构）。|  
+|**name**|**sysname**|项目的名称。|  
+|type |**tinyint**|指示项目类型，可以为下列类型之一：<br /><br /> **10** = 表。<br /><br /> **32** = 存储过程（仅限架构）。<br /><br /> **64** = 视图或索引视图（仅限架构）。<br /><br /> **128** = 用户定义的函数（仅限架构）。<br /><br /> **160** = 同义词（仅限架构）。|  
 |**objid**|**int**|对象标识符。|  
 |**sync_objid**|**int**|表示同步数据集的视图的对象 ID。|  
 |**view_type**|**tinyint**|视图类型：<br /><br /> **0** = 不是视图;使用所有基对象。<br /><br /> **1** = 永久视图。<br /><br /> **2** = 临时视图。|  
@@ -69,8 +69,8 @@ ms.locfileid: "72251947"
 |**gen_cur**|**int**|对项目基表所做的本地更改的生成数。|  
 |**vertical_partition**|**int**|指定是否对表项目启用列筛选。 **0**指示没有垂直筛选并发布所有列。|  
 |**identity_support**|**int**|指定是否启用自动标识范围处理。 **1**表示启用标识范围处理， **0**表示没有标识范围支持。|  
-|**before_image_objid**|**int**|跟踪表对象 ID。 当使用* \@keep_partition_changes* = **true**创建发布时，跟踪表将包含某些键列值。|  
-|**before_view_objid**|**int**|视图表的对象 ID。 视图所在的表用于在删除或更新行之前跟踪行是否属于特定的订阅服务器。 仅当使用* \@keep_partition_changes* = **true**创建发布时才适用。|  
+|**before_image_objid**|**int**|跟踪表对象 ID。 当使用* \@ keep_partition_changes*true 创建发布时，跟踪表将包含某些键列值  =  **true**。|  
+|**before_view_objid**|**int**|视图表的对象 ID。 视图所在的表用于在删除或更新行之前跟踪行是否属于特定的订阅服务器。 仅当使用* \@ keep_partition_changes*true 创建发布时才适用  =  **。**|  
 |**verify_resolver_signature**|**int**|指定在合并复制中使用冲突解决程序之前是否验证数字签名：<br /><br /> **0** = 不验证签名。<br /><br /> **1** = 验证签名是否来自受信任的源。|  
 |**allow_interactive_resolver**|**bit**|指定是否对项目启用交互式冲突解决程序。 **1**指定对项目使用交互式冲突解决程序。|  
 |**fast_multicol_updateproc**|**bit**|指定是否已启用合并代理来使用一条 UPDATE 语句在同一行的多个列中应用更改。<br /><br /> **0** = 对每个更改的列发出单独的更新。<br /><br /> **1** = 发出一个 UPDATE 语句，该语句导致在一个语句中对多个列进行更新。|  
@@ -86,7 +86,7 @@ ms.locfileid: "72251947"
 |**delete_tracking**|**bit**|指示是否复制删除。<br /><br /> **0** = 不复制删除<br /><br /> **1** = 复制删除，这是合并复制的默认行为。<br /><br /> 如果*delete_tracking*的值为**0**，则必须在发布服务器上手动删除订阅服务器上删除的行，并且必须在订阅服务器上手动删除在发布服务器上删除的行。<br /><br /> 注意：值为**0**会导致非收敛。|  
 |**compensate_for_errors**|**bit**|指示在同步过程中遇到错误时是否执行补救措施。<br /><br /> **0** = 禁用补偿操作。<br /><br /> **1** = 不能在订阅服务器或发布服务器上应用的更改始终会导致补偿操作来撤消这些更改，这是合并复制的默认行为。<br /><br /> 注意：值为**0**会导致非收敛。|  
 |**pub_range**|**bigint**|发布服务器标识范围大小。|  
-|**内**|**bigint**|将分配到调整中订阅服务器的连续标识值的大小。|  
+|**range**|**bigint**|将分配到调整中订阅服务器的连续标识值的大小。|  
 |**阀**|**int**|标识范围阈值百分比。|  
 |**stream_blob_columns**|**bit**|指定在复制二进制大型对象列时是否使用数据流优化。 **1**表示尝试进行优化。|  
 |**preserve_rowguidcol**|**bit**|指示复制是否使用现有 rowguid 列。 如果值为**1** ，则表示使用现有的 ROWGUIDCOL 列。 **0**表示复制添加了 ROWGUIDCOL 列。|  

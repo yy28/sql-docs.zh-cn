@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSdbms_datatype system table
 ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 301aa5af9aa34031f381235341f1e7d461675432
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 299272377d8bbc55781d671a94240d6c309877ec
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907513"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832322"
 ---
 # <a name="msdbms_datatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "67907513"
 |-----------------|---------------|-----------------|  
 |**datatype_id**|**int**|标识每个唯一的数据类型。|  
 |**dbms_id**|**int**|标识数据类型所属的 DBMS。|  
-|**type**|**sysname**|数据类型名称（本机）。|  
+|type |**sysname**|数据类型名称（本机）。|  
 |**createparams**|**int**|说明哪一长度、精度和小数位数组合适用于每种数据类型的位图，包括：<br /><br /> **0x1** = 精度。<br /><br /> **0x2** = SCALE。<br /><br /> **0x4** = LENGTH。|  
   
 ## <a name="remarks"></a>备注  

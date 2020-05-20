@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_jobstep
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7914e3b56dd02d96c02835bf6b4dcc5eb90e8f4b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa6a12a45a5c0609b4b717ccdf90af63ea53776b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084878"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833110"
 ---
 # <a name="sp_update_jobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -99,11 +99,11 @@ sp_update_jobstep
   
 `[ @on_fail_step_id = ] fail_step_id`如果步骤失败并且*fail_action*为**4**，则该作业中要执行的步骤的标识号。 *fail_step_id*的值为**int**，默认值为 NULL。  
   
-`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *服务器*的默认值为**nvarchar （128）**，默认值为 NULL。  
+`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*服务器*的默认值为**nvarchar （128）**，默认值为 NULL。  
   
-`[ @database_name = ] 'database'`要在其中执行[!INCLUDE[tsql](../../includes/tsql-md.md)]步骤的数据库的名称。 *数据库*为**sysname**。 不允许用方括号 ([ ]) 将名称括起来。 默认值为 NULL。  
+`[ @database_name = ] 'database'`要在其中执行步骤的数据库的名称 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 *数据库*为**sysname**。 不允许用方括号 ([ ]) 将名称括起来。 默认值为 NULL。  
   
-`[ @database_user_name = ] 'user'`执行[!INCLUDE[tsql](../../includes/tsql-md.md)]步骤时要使用的用户帐户的名称。 *user*的值为**sysname**，默认值为 NULL。  
+`[ @database_user_name = ] 'user'`执行步骤时要使用的用户帐户的名称 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 *user*的值为**sysname**，默认值为 NULL。  
   
 `[ @retry_attempts = ] retry_attempts`此步骤失败时的重试尝试次数。 *retry_attempts*的值为**int**，默认值为 NULL。  
   
@@ -127,9 +127,9 @@ sp_update_jobstep
 |**8**|将日志写入表（覆盖现有的历史记录）|  
 |**超过**|将日志写入表（追加到现有的历史记录）|  
   
-`[ @proxy_id = ] proxy_id`作业步骤运行时所用代理的 ID 号。 *proxy_id*的类型为**int**，默认值为 NULL。 如果未指定*proxy_id* 、未指定*proxy_name*并且未指定*user_name* ，则作业步骤将作为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理的服务帐户运行。  
+`[ @proxy_id = ] proxy_id`作业步骤运行时所用代理的 ID 号。 *proxy_id*的类型为**int**，默认值为 NULL。 如果未指定*proxy_id* 、未指定*proxy_name*并且未指定*user_name* ，则作业步骤将作为代理的服务帐户运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-`[ @proxy_name = ] 'proxy_name'`作业步骤运行时所用代理的名称。 *proxy_name*的类型为**sysname**，默认值为 NULL。 如果未指定*proxy_id* 、未指定*proxy_name*并且未指定*user_name* ，则作业步骤将作为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理的服务帐户运行。  
+`[ @proxy_name = ] 'proxy_name'`作业步骤运行时所用代理的名称。 *proxy_name*的类型为**sysname**，默认值为 NULL。 如果未指定*proxy_id* 、未指定*proxy_name*并且未指定*user_name* ，则作业步骤将作为代理的服务帐户运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
@@ -152,7 +152,7 @@ sp_update_jobstep
   
  只有**sysadmin**的成员才能更新其他用户所拥有的作业步骤。  
   
- 如果作业步骤需要访问代理，则该作业步骤的创建者必须拥有对该作业步骤的代理的访问权限。 除 Transact-SQL 之外的所有子系统都需要一个代理帐户。 **Sysadmin**的成员可以访问所有代理，并且可以使用代理的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务帐户。  
+ 如果作业步骤需要访问代理，则该作业步骤的创建者必须拥有对该作业步骤的代理的访问权限。 除 Transact-SQL 之外的所有子系统都需要一个代理帐户。 **Sysadmin**的成员可以访问所有代理，并且可以使用代理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户。  
   
 ## <a name="examples"></a>示例  
  下面的示例更改 `Weekly Sales Data Backup` 作业的第一步的重试次数。 在运行此示例后，重试次数将为 `10`。  

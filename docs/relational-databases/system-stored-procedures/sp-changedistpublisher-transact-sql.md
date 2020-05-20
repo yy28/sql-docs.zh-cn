@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedistpublisher
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 80eb30fc6b6b2cea9fc058780831af3915fd9007
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fb90ec6a3d5413d22f4721491d3b151a7e28ac05
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771356"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833416"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -53,15 +53,15 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
  
  下表说明了发布服务器的属性和这些属性的值。  
   
-|属性|值|说明|  
+|Property|值|说明|  
 |--------------|------------|-----------------|  
-|**正在**|**true**|激活发布服务器。|  
+|**active**|**true**|激活发布服务器。|  
 ||**false**|停用发布服务器|  
 |**distribution_db**||分发数据库的名称。|  
 |**id**||登录名。|  
-|password ||提供的登录名的强密码。|  
-|**security_mode**|**1**|连接发布服务器时，使用 Windows 身份验证。 *对于非发布服务器，不能更改此项*[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *。*|  
-||**0**|连接发布服务器时，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 *对于非发布服务器，不能更改此项*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *。*|  
+|**password**||提供的登录名的强密码。|  
+|**security_mode**|**1**|连接发布服务器时，使用 Windows 身份验证。 *不能更改非* [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*发布者。*|  
+||**0**|连接发布服务器时，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 *不能更改非* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*发布者。*|  
 |**working_directory**||用于存储发布的数据和架构文件的工作目录。|  
 |NULL（默认值）||将打印所有可用的*属性*选项。| 
 |**storage_connection_string**| 访问密钥 | Azure SQL 数据库托管实例数据库时工作目录的访问密钥。 

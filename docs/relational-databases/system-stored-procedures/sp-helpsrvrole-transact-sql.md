@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsrvrole
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a632e6923ab3127a363650c63533fa548d1acc12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9abcbec940d9afa7b5aeb36183610b471bb3a3df
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006128"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833171"
 ---
 # <a name="sp_helpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
   
  若要在服务器角色中添加或删除成员，请参阅[ALTER SERVER ROLE &#40;transact-sql&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)。  
   
- 所有登录名都是 public 的成员。 sp_helpsrvrole 无法识别公共角色，因为在内部， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不会将公共作为角色实现。  
+ 所有登录名都是 public 的成员。 sp_helpsrvrole 无法识别公共角色，因为在内部，不 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将公共作为角色实现。  
   
  sp_helpsrvrole 不会将用户定义的服务器角色当作参数使用。 若要列出用户定义的服务器角色，请参阅[ALTER SERVER ROLE &#40;transact-sql&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)中的示例。  
   

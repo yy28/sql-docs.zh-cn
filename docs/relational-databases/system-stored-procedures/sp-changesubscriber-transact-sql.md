@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscriber
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 42b56712e8b441184d55bf12ce16dbcb55930374
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9a3b575b39055976262858fcf527d1b892790a02
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762781"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833389"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,11 +58,11 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ## <a name="arguments"></a>参数  
 `[ @subscriber = ] 'subscriber'`要更改其选项的订阅服务器的名称。 *订阅服务器*的**sysname**，无默认值。  
   
-`[ @type = ] type`订阅服务器类型。 *类型*为**tinyint**，默认值为 NULL。 **0**表示[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器。 **1**指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或其他 ODBC 数据源服务器订阅服务器。  
+`[ @type = ] type`订阅服务器类型。 *类型*为**tinyint**，默认值为 NULL。 **0**表示 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。 **1**指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或其他 ODBC 数据源服务器订阅服务器。  
   
 `[ @login = ] 'login'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证登录 ID。 login 的数据类型为 sysname，默认值为 NULL******。  
   
-`[ @password = ] 'password'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证密码。 *password*的值为**sysname**，默认值**%** 为。 **%** 指示密码属性未更改。  
+`[ @password = ] 'password'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证密码。 *password*的值为**sysname**，默认值为 **%** 。 **%** 指示密码属性未更改。  
   
 `[ @commit_batch_size = ] commit_batch_size`仅支持向后兼容性。  
   
@@ -76,7 +76,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |-----------|-----------------|  
 |**1**|一次性|  
 |**2**|按需|  
-|**4**|每日|  
+|**4**|每天|  
 |**8**|每周|  
 |**超过**|每月一次|  
 |**32**|与“每月”选项相关|  
@@ -104,7 +104,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**1**|一次|  
 |**2**|秒|  
 |**4**|Minute|  
-|**8**|Hour|  
+|**8**|小时|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequence_subday*的间隔。 *frequency_subday_interval*的值为**int**，默认值为 NULL。  
   
@@ -125,10 +125,10 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证|  
 |**1**|Windows 身份验证|  
   
-`[ @publisher = ] 'publisher'`指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'`指定一个非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  *publisher*更改[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器上的项目属性时，不应使用 publisher。  
+>  更改发布服务器上的项目属性时，不应使用*publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_getbindtoken
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ac8bc2087b4c100b784aadac8458e106538f76d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dca4015832f8bebf5501c4b3a7e84339bf62957b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68123996"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833190"
 ---
 # <a name="sp_getbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
 ```  
   
 ## <a name="arguments"></a>参数  
- [@out_token=] "*return_value*"  
+ [ @out_token =] "*return_value*"  
  用于绑定会话的令牌。 *return_value*的值为**varchar （255）** ，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -65,7 +65,7 @@ Cannot get a transaction token if there is no transaction active.
 Reissue the statement after a transaction has been started.  
 ```  
   
- 当 sp_getbindtoken 用于在打开的事务内登记分布式事务连接时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将返回相同的令牌。 例如：  
+ 当 sp_getbindtoken 用于在打开的事务内登记分布式事务连接时，将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回相同的令牌。 例如：  
   
 ```  
 USE AdventureWorks2012;  

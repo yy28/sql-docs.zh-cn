@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_table_validation
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 736b4f00e8d33a6bd1e095addc5219fe305ae26a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c63e6e535aed72684e56d5f578e52e065f8190d2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72173558"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834202"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @rowcount_only = ] type_of_check_requested`指定要执行的校验和或行数的类型。 *type_of_check_requested*为**smallint**，默认值为**1**。  
   
- 如果为**0**，则执行行计数[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和与7.0 兼容的校验和。  
+ 如果为**0**，则执行行计数和与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 兼容的校验和。  
   
  如果为**1**，则仅执行行计数检查。  
   
@@ -71,7 +71,7 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @shutdown_agent = ] shutdown_agent`如果分发代理**sp_table_validation**执行，则指定分发代理是否应在完成验证后立即关闭。 *shutdown_agent*为**bit**，默认值为**0**。 如果为**0**，则复制代理不会关闭。 如果为**1**，则会引发错误20578，并向复制代理发出信号以关闭。 当用户直接执行**sp_table_validation**时，将忽略此参数。  
   
-`[ @table_name = ] table_name`用于输出消息的视图的表名。 *table_name*的默认值为**sysname**，默认值为** \@table**。  
+`[ @table_name = ] table_name`用于输出消息的视图的表名。 *table_name*的默认值为**sysname**，默认值为** \@ table**。  
   
 `[ @column_list = ] 'column_list'`应该在校验和函数中使用的列的列表。 *column_list*为**nvarchar （4000）**，默认值为 NULL。 启用合并项目验证，以指定不包括计算列和时间戳列的列列表。  
   
@@ -87,7 +87,7 @@ sp_table_validation [ @table = ] 'table'
   
  执行校验和检查时，两个服务器的表结构必须完全相同；也就是说，表中包含的列必须相同，且列的顺序、数据类型和长度以及 NULL/NOT NULL 条件都必须相同。 例如，如果发布服务器执行 CREATE TABLE，然后执行 ALTER TABLE 以添加列，但是订阅服务器上应用的脚本是一个简单的 CREATE 表，则表结构不相同。 如果您不确定两个表的结构是相同的，请查看[syscolumns](../../relational-databases/system-compatibility-views/sys-syscolumns-transact-sql.md)并确认每个表中的偏移是相同的。  
   
- 如果使用了字符模式的**bcp** ，则浮点值可能会生成校验和差异，如果发布具有非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器，则为。 这是由于在进行字符模式转换时，精度上存在不可避免的微小差异。  
+ 如果使用了字符模式的**bcp** ，则浮点值可能会生成校验和差异，如果发布具有非订阅服务器，则为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 这是由于在进行字符模式转换时，精度上存在不可避免的微小差异。  
   
 ## <a name="permissions"></a>权限  
  若要执行**sp_table_validation**，您必须对要验证的表具有 SELECT 权限。  

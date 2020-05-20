@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_getdefaultdatatypemapping
 ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 32fe9edf5c3d8621046a27937d83f642b1689d1a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e85eb432123c30338b15528edcb7c301e2dc458b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68123987"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833175"
 ---
 # <a name="sp_getdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  返回有关和非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库管理系统（DBMS）之间的指定数据类型的默认映射的信息。 此存储过程在分发服务器上的任何数据库中执行。  
+  返回有关 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库管理系统（DBMS）之间的指定数据类型的默认映射的信息。 此存储过程在分发服务器上的任何数据库中执行。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -101,7 +101,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  **0** （成功）或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
- **sp_getdefaultdatatypemapping**用于与非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS 之间的所有复制类型。  
+ **sp_getdefaultdatatypemapping**用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与非 DBMS 之间的所有复制类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  **sp_getdefaultdatatypemapping**返回与指定的源数据类型最匹配的默认目标数据类型。  
   

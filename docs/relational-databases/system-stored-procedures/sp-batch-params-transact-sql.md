@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_batch_params
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9a5b4ac7c5e1e8d3c136f99475fa7a17ebd8b002
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e9a7cb410a1e520ee05b7f93263dcc46750dfb87
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001817"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833446"
 ---
 # <a name="sp_batch_params-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  返回一个行集，其中包含有关[!INCLUDE[tsql](../../includes/tsql-md.md)]批中包含的参数的信息。 **sp_batch_params**仅分析指定的批处理，并返回有关嵌入的参数值的信息。 此命令不会执行批处理，也不会修改执行环境。  
+  返回一个行集，其中包含有关批中包含的参数的信息 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 **sp_batch_params**仅分析指定的批处理，并返回有关嵌入的参数值的信息。 此命令不会执行批处理，也不会修改执行环境。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,7 +39,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @tsqlbatch = ] 'tsqlbatch'`一个 Unicode 字符串，其中包含所[!INCLUDE[tsql](../../includes/tsql-md.md)]需的参数信息的语句或批处理。 *tsqlbatch*为**nvarchar （max）** 或可隐式转换为**nvarchar （max）**。  
+`[ @tsqlbatch = ] 'tsqlbatch'`一个 Unicode 字符串，其中包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 所需的参数信息的语句或批处理。 *tsqlbatch*为**nvarchar （max）** 或可隐式转换为**nvarchar （max）**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  无  
@@ -55,7 +55,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |**PRECISION**|**int**|有效数字位数。 **PRECISION**列的返回值以10为底。|  
 |**LENGTH**|**int**|数据的传输大小。 此值为 NULL。|  
 |**纵向**|**smallint**|小数点右边的数字位数。 此值为 NULL。|  
-|**RADIX**|**smallint**|数值类型的基数。 此值为 NULL。|  
+|**基数**|**smallint**|数值类型的基数。 此值为 NULL。|  
 |**可以为 NULL**|**smallint**|指定为空性：<br /><br /> 1 = 可以将参数数据类型创建为允许空值。<br /><br /> 0 = 不允许空值。<br /><br /> 此值为 NULL。|  
 |**SQL_DATA_TYPE**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型的值，在说明符的 TYPE 字段中显示。 除了**datetime**和 ISO **interval**数据类型之外，此列与**DATA_TYPE**列相同。 该列始终返回值。 此值为 NULL。|  
 |**SQL_DATETIME_SUB**|**smallint**|如果**SQL_DATA_TYPE**的值 SQL_DATETIME 或 SQL_INTERVAL，则为**datetime**或 ISO **interval**子代码。 对于 datetime**** 和 ISO interval**** 以外的数据类型，该列为 NULL。 此值为 NULL。|  

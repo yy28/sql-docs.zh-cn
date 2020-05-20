@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_tables
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71aaa9e52cfca8435501695a4ebf60b2a6aa6ee4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14c618ef31562f6e6af70a569e21fdd4105d663e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096054"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834193"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ sp_tables [ [ @table_name = ] 'name' ]
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有一个具有指定名称的表，则返回该表的列。 如果未指定所有者，且当前用户未拥有指定名称的表，则该过程查找由数据库所有者拥有的具有指定名称的表。 如果存在，则返回该表的列。  
   
-`[ @table_qualifier = ] 'qualifier'`表限定符的名称。 *限定符*的值为**sysname**，默认值为 NULL。 各种 DBMS 产品支持表的三部分命名（_限定符_**。**_所有者_**。**_名称_）。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，此列表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
+`[ @table_qualifier = ] 'qualifier'`表限定符的名称。 *限定符*的值为**sysname**，默认值为 NULL。 各种 DBMS 产品支持表的三部分命名（_限定符_**。**_所有者_**。**_名称_）。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此列表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
   
 ``[ , [ @table_type = ] "'type', 'type'" ]``以逗号分隔的值列表，它提供有关指定的表类型的所有表的信息。 其中包括**TABLE**、 **SYSTEMTABLE**和**VIEW**。 *类型*为**varchar （100）**，默认值为 NULL。  
   
@@ -70,7 +70,7 @@ sp_tables [ [ @table_name = ] 'name' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**TABLE_QUALIFIER**|**sysname**|表限定符名称。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，此列表示数据库名称。 此字段可以为 NULL。|  
+|**TABLE_QUALIFIER**|**sysname**|表限定符名称。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此列表示数据库名称。 此字段可以为 NULL。|  
 |**TABLE_OWNER**|**sysname**|表所有者名称。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，此列表示创建该表的数据库用户的名称。 此字段始终返回值。|  
 |**TABLE_NAME**|**sysname**|表名。 此字段始终返回值。|  
 |**TABLE_TYPE**|**varchar(32)**|表、系统表或视图。|  
@@ -117,7 +117,7 @@ EXEC sp_tables ;
 ```  
   
 ### <a name="d-returning-information-about-the-tables-in-a-specified-schema"></a>D. 返回与指定架构中的表相关的信息  
- 下面的示例返回有关`AdventureWorksPDW201`数据库中的维度表的信息。  
+ 下面的示例返回有关数据库中的维度表的信息 `AdventureWorksPDW201` 。  
   
 ```  
 -- Uses AdventureWorks  

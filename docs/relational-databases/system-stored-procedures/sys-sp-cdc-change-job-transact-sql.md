@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_change_job
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 0c2c39363ca1b0824b27645df8c8501931b674a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c0cc477647150a11fc644378196f97cfc21007ff
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056758"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832507"
 ---
 # <a name="syssp_cdc_change_job-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,9 +63,9 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  当*连续*= 0 时， **sp_cdc_scan**作业最多执行一次日志*max_scans*扫描，每次扫描时处理*max_trans*事务，然后退出。  
   
- 如果** \@连续**的更改从1改为 0 ** \@** ，则 pollinginterval 会自动设置为0。 将忽略为** \@pollinginterval**以外的其他值指定的值。  
+ 如果** \@ 连续**的更改从1改为0，则** \@ pollinginterval**会自动设置为0。 将忽略为** \@ pollinginterval**以外的其他值指定的值。  
   
- 如果** \@省略连续**或显式设置为 NULL，并且** \@pollinginterval**被显式设置为大于0的值， ** \@则连续**自动设置为1。  
+ 如果省略** \@ 连续**或显式设置为 NULL，并且** \@ pollinginterval**被显式设置为大于0的值，则** \@ 连续**自动设置为1。  
   
  *连续*仅对捕获作业有效。  
   
@@ -98,7 +98,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ## <a name="examples"></a>示例  
   
 ### <a name="a-changing-a-capture-job"></a>A. 更改捕获作业  
- 下面`@job_type`的示例在`@maxscans` `@maxtrans` `AdventureWorks2012`数据库中更新捕获作业的、和参数。 省略了捕获作业的其他有效参数（`@continuous` 和 `@pollinginterval`）；未修改它们的值。  
+ 下面的示例 `@job_type` `@maxscans` `@maxtrans` 在数据库中更新捕获作业的、和参数 `AdventureWorks2012` 。 省略了捕获作业的其他有效参数（`@continuous` 和 `@pollinginterval`）；未修改它们的值。  
   
 ```  
 USE AdventureWorks2012;  
@@ -111,7 +111,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-cleanup-job"></a>B. 更改清除作业  
- 下例更新 `AdventureWorks2012` 数据库中的一个清除作业。 此作业类型的所有有效参数（ ** \@阈值**除外）均已指定。 不会修改** \@阈值**的值。  
+ 下例更新 `AdventureWorks2012` 数据库中的一个清除作业。 此作业类型的所有有效参数（ ** \@ 阈值**除外）均已指定。 不会修改** \@ 阈值**的值。  
   
 ```  
 USE AdventureWorks2012;  

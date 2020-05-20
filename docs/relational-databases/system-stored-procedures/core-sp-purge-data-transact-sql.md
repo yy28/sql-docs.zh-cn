@@ -18,14 +18,14 @@ helpviewer_keywords:
 - core.sp_purge_data stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 72737a9b623e7979617784c1ef49c3f6d09aaea8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 27f2d95a23a89c4e50924944709ba38a39a6ff2d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942494"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833664"
 ---
 # <a name="coresp_purge_data-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,18 +46,18 @@ core.sp_purge_data
 ```  
   
 ## <a name="arguments"></a>参数  
- [@retention_days =]*retention_days*  
+ [ @retention_days =] *retention_days*  
  管理数据仓库表中的数据的保留天数。 删除时间戳早于*retention_days*的数据。 *retention_days*为**smallint**，默认值为 NULL。 如果指定，该值必须是正数。 为 NULL 时，core.snapshots 视图中的 valid_through 列中的值决定了符合删除条件的行。  
   
- [@instance_name = ]"*instance_name*"  
+ [ @instance_name =] "*instance_name*"  
  收集组实例的名称。 *instance_name*的默认值为**sysname**，默认值为 NULL。  
   
- *instance_name*必须是完全限定的实例名称，由计算机名称和实例名称组成，格式为*computername*\\*instancename*。 为 NULL 时，使用本地服务器上的默认实例。  
+ *instance_name*必须是完全限定的实例名称，由计算机名称和实例名称组成，格式为*computername* \\ *instancename*。 为 NULL 时，使用本地服务器上的默认实例。  
   
- [@collection_set_uid = ]"*collection_set_uid*"  
+ [ @collection_set_uid =] "*collection_set_uid*"  
  收集组的 GUID。 *collection_set_uid*的值为**uniqueidentifier**，默认值为 NULL。 为 NULL 时，将删除所有收集组中的限定行。 若要获取此值，请查询 syscollector_collection_sets 目录视图。  
   
- [@duration = ]*持续时间*  
+ [ @duration =]*持续时间*  
  清除操作应当运行的最长分钟数。 *持续时间*为**smallint**，默认值为 NULL。 如果指定，则该值必须是零或正整数。 为 NULL 时，操作将一直运行，直到删除所有符合条件的行或手动停止操作。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -66,7 +66,7 @@ core.sp_purge_data
 ## <a name="remarks"></a>备注  
  此过程将基于保留期选择 core.snapshots 视图中符合删除条件的行。 符合删除条件的所有行将从 core.snapshots_internal 表中删除。 删除位于前面的行将在所有管理数据仓库表中触发级联删除操作。 通过使用 ON DELETE CASCADE 子句可以完成此操作，该子句是为用于存储收集的数据的所有表定义的。  
   
- 每个快照及其关联的数据都将在显式事务中删除，然后提交。 因此，如果手动停止清除操作，或超出为指定的@duration值，则只保留未提交的数据。 此数据可以在下一次运行作业时删除。  
+ 每个快照及其关联的数据都将在显式事务中删除，然后提交。 因此，如果手动停止清除操作，或超出为指定的值 @duration ，则只保留未提交的数据。 此数据可以在下一次运行作业时删除。  
   
  必须在管理数据仓库数据库的上下文中执行此过程。  
   
@@ -85,7 +85,7 @@ GO
 ```  
   
 ### <a name="b-specifying-retention-and-duration-values"></a>B. 指定保留期和持续时间值  
- 下面的示例从管理数据仓库中删除超过 7 天的数据。 此外，还指定@duration了参数，以便运行的运行时间不超过5分钟。  
+ 下面的示例从管理数据仓库中删除超过 7 天的数据。 此外，还 @duration 指定了参数，以便运行的运行时间不超过5分钟。  
   
 ```  
 USE <management_data_warehouse>;  
@@ -94,7 +94,7 @@ GO
 ```  
   
 ### <a name="c-specifying-an-instance-name-and-collection-set"></a>C. 指定实例名称和收集组  
- 下面的示例从指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的给定收集组的管理数据仓库中删除数据。 由于@retention_days未指定，因此将使用 "核心快照视图" 中 "valid_through" 列中的值来确定符合删除条件的收集组的行。  
+ 下面的示例从指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的给定收集组的管理数据仓库中删除数据。 由于 @retention_days 未指定，因此将使用 "核心快照视图" 中 "valid_through" 列中的值来确定符合删除条件的收集组的行。  
   
 ```  
 USE <management_data_warehouse>;  

@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sys.dm_cdc_errors dynamic management view
 - change data capture [SQL Server], error reporting
 ms.assetid: 898f2d76-9e63-45ef-94da-8034e86004ab
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 506dae205356504c76d47ffe324b82f9f34665f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 81908d815818c0274615e9bd2bd3bf40037e2b99
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018000"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833803"
 ---
 # <a name="change-data-capture---sysdm_cdc_errors"></a>Change Data Capture-sys. dm_cdc_errors
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68018000"
 |**session_id**|**int**|会话的 ID。<br /><br /> 0 = 在日志扫描会话中未发生错误。|  
 |**phase_number**|**int**|表示发生错误时会话所在的阶段的数字。 有关每个阶段的说明，请参阅[transact-sql&#41;&#40;dm_cdc_log_scan_sessions ](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)。|  
 |**entry_time**|**datetime**|记录错误的日期和时间。 此值对应于 SQL 错误日志中的时间戳。|  
-|**error_number**|**int**|错误消息的 ID。|  
+|error_number |**int**|错误消息的 ID。|  
 |**error_severity**|**int**|消息的严重级别，在 1 到 25 之间。|  
 |**error_state**|**int**|错误的状态号。|  
 |**error_message**|**nvarchar(1024)**|错误的消息正文。|  

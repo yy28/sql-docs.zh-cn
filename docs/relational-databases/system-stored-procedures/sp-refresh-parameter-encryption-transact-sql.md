@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sp_refresh_parameter_encryption
 - Always Encrypted, sp_refresh_parameter_encryption
 ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5f699f21b1f28537da2e2f0033fe6b17908186a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 47f622c287eb0e32e1c5db2d33b64af2de3e379b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68002461"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833130"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,9 +46,9 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>参数
 
-`[ @name = ] 'module_name'`存储过程、用户定义函数、视图、DML 触发器、数据库级 DDL 触发器或服务器级 DDL 触发器的名称。 *module_name*不能是公共语言运行时（CLR）存储过程或 CLR 函数。 *module_name*不能是绑定到架构的。 *module_name*为`nvarchar`，无默认值。 *module_name*可以是由多个部分组成的标识符，但只能引用当前数据库中的对象。
+`[ @name = ] 'module_name'`存储过程、用户定义函数、视图、DML 触发器、数据库级 DDL 触发器或服务器级 DDL 触发器的名称。 *module_name*不能是公共语言运行时（CLR）存储过程或 CLR 函数。 *module_name*不能是绑定到架构的。 *module_name*为 `nvarchar` ，无默认值。 *module_name*可以是由多个部分组成的标识符，但只能引用当前数据库中的对象。
 
-`[ @namespace = ] ' < class > '`指定模块的类。 如果*module_name*是 DDL 触发器， `<class>`则是必需的。 `<class>` 为 `nvarchar(20)`。 有效的输入`DATABASE_DDL_TRIGGER`为`SERVER_DDL_TRIGGER`和。    
+`[ @namespace = ] ' < class > '`指定模块的类。 如果*module_name*是 DDL 触发器， `<class>` 则是必需的。 `<class>` 为 `nvarchar(20)`。 有效的输入为 `DATABASE_DDL_TRIGGER` 和 `SERVER_DDL_TRIGGER` 。    
 
 ## <a name="return-code-values"></a>返回代码值  
 
@@ -61,28 +61,28 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 * 模块引用的表中列的加密属性已更新。 例如，已删除某列，并且添加了一个具有相同名称但具有不同加密类型、加密密钥或加密算法的新列。  
 * 模块引用了具有过时参数加密元数据的另一个模块。  
 
-当修改表的加密属性时， `sp_refresh_parameter_encryption`应直接或间接引用该表。 可以按任意顺序在这些模块上调用此存储过程，而无需用户先刷新内部模块，然后才能移动到其调用方。
+当修改表的加密属性时， `sp_refresh_parameter_encryption` 应直接或间接引用该表。 可以按任意顺序在这些模块上调用此存储过程，而无需用户先刷新内部模块，然后才能移动到其调用方。
 
-`sp_refresh_parameter_encryption`不会影响与对象关联的任何权限、 `SET`扩展属性或选项。 
+`sp_refresh_parameter_encryption`不会影响与对象关联的任何权限、扩展属性或 `SET` 选项。 
 
 若要刷新服务器级 DDL 触发器，可以在任何数据库的上下文中执行此存储过程。
 
 > [!NOTE]
->  当你运行`sp_refresh_parameter_encryption`时，将删除与对象关联的所有签名。
+>  当你运行时，将删除与对象关联的所有签名 `sp_refresh_parameter_encryption` 。
 
 ## <a name="permissions"></a>权限
 
-需要`ALTER`对模块的权限， `REFERENCES`以及对象引用的任何 CLR 用户定义类型和 XML 架构集合的权限。   
+需要对 `ALTER` 模块的权限，以及 `REFERENCES` 对象引用的任何 CLR 用户定义类型和 XML 架构集合的权限。   
 
-当指定的模块是数据库级 DDL 触发器时，需要`ALTER ANY DATABASE DDL TRIGGER`在当前数据库中具有权限。    
+当指定的模块是数据库级 DDL 触发器时，需要 `ALTER ANY DATABASE DDL TRIGGER` 在当前数据库中具有权限。    
 
-当指定的模块是服务器级 DDL 触发器时，需要`CONTROL SERVER`权限。
+当指定的模块是服务器级 DDL 触发器时，需要 `CONTROL SERVER` 权限。
 
-对于用`EXECUTE AS`子句定义的模块， `IMPERSONATE`需要对指定主体拥有权限。 通常，刷新对象时不会更改其`EXECUTE AS`主体，除非该模块是使用`EXECUTE AS USER`定义的，并且该主体的用户名现在解析为其他用户，而不是创建模块时的用户。
+对于用子句定义的模块 `EXECUTE AS` ， `IMPERSONATE` 需要对指定主体拥有权限。 通常，刷新对象时不会更改其 `EXECUTE AS` 主体，除非该模块是使用定义的， `EXECUTE AS USER` 并且该主体的用户名现在解析为其他用户，而不是创建模块时的用户。
  
 ## <a name="examples"></a>示例
 
-下面的示例创建一个表和一个过程，该过程引用该表，配置 Always Encrypted，然后演示更改表并运行该`sp_refresh_parameter_encryption`过程。  
+下面的示例创建一个表和一个过程，该过程引用该表，配置 Always Encrypted，然后演示更改表并运行该 `sp_refresh_parameter_encryption` 过程。  
 
 首先创建一个引用该表的初始表和一个存储过程。
 ```sql
@@ -135,7 +135,7 @@ GO
 ```
 
 
-最后，我们将 SSN 列替换为已加密的列，然后运行`sp_refresh_parameter_encryption`该过程来更新 Always Encrypted 组件。
+最后，我们将 SSN 列替换为已加密的列，然后运行该 `sp_refresh_parameter_encryption` 过程来更新 Always Encrypted 组件。
 ```sql
 ALTER TABLE [Patients] DROP COLUMN [SSN];
 GO

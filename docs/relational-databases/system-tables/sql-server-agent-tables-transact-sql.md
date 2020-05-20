@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SQL Server Agent, system tables
 - system tables [SQL Server], SQL Server Agent
 ms.assetid: 6cb39bfd-079e-4be4-9c42-2fa234c65ce1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fcc811542ad0b7884b703a02b4c983b8752ba200
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4cbc772ff5dcc14c196a8c9b920f67b03bd70598
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68130591"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834181"
 ---
 # <a name="sql-server-agent-tables-transact-sql"></a>SQL Server 代理表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "68130591"
  存储将由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理执行的各个预定作业的信息。  
   
  [dbo.sysjobschedules](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
- 包含[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理要执行的作业的计划信息  
+ 包含代理要执行的作业的计划信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
  [dbo.sysjobservers](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)  
  存储特定作业与一个或多个目标服务器的关联或关系。  
