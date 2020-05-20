@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_xtp_control_query_exec_stats
 ms.assetid: 4838125d-ad1e-479e-b7d2-42655e8f4f02
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cd8ee38dc4ac1a8fd3a729d94744d3fd98f78875
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 60d5967417698bc1970f02658fc28e8659201089
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017847"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814438"
 ---
 # <a name="syssp_xtp_control_query_exec_stats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
  @new_collection_value=*值*  
  决定打开 (1) 还是关闭 (0) 过程级统计信息收集。  
   
- @new_collection_value当启动时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，设置为零。  
+ @new_collection_value当启动时，设置为零 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  @database_id= = *database_id*， @xtp_object_id = *procedure_id*  
  本机编译存储过程的数据库 ID 和对象 ID。 如果为实例启用了统计信息收集（[sp_xtp_control_proc_exec_stats &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)），则将收集本机编译的存储过程的统计信息。 对实例关闭统计信息收集不会关闭对个别本机编译存储过程的统计信息收集。  

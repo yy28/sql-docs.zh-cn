@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OACreate
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2ad8059466ac520b6f9f793af7670cbd73b96b38
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d851461ae4cd07f3dd89e2cff4326d03e05a5d66
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68107933"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815254"
 ---
 # <a name="sp_oacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,9 +65,9 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  如果未指定，则默认值为**5**。 此值作为对**CoCreateInstance**的调用的*dwClsContext*参数进行传递。  
   
- 如果允许使用进程内 OLE 服务器（通过使用上下文值**1**或**5** ，或者不指定上下文值），则它有权访问所拥有的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内存和其他资源。 进程内 OLE 服务器可能会破坏 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存或资源并导致不可预知的结果，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问违规。  
+ 如果允许使用进程内 OLE 服务器（通过使用上下文值**1**或**5** ，或者不指定上下文值），则它有权访问所拥有的内存和其他资源 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 进程内 OLE 服务器可能会破坏 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存或资源并导致不可预知的结果，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问违规。  
   
- 当你指定的上下文值为**4**时，本地 OLE 服务器无权访问任何[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]资源，并且不会损坏[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内存或资源。  
+ 当你指定的上下文值为**4**时，本地 OLE 服务器无权访问任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源，并且不会损坏 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存或资源。  
   
 > [!NOTE]  
 >  此存储过程的参数按位置指定，而不是按名称指定。  

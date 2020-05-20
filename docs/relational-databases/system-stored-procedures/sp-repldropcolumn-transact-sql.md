@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_repldropcolumn
 ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a6b398a4dd7e93521b38708d3a7e37ae09e70a15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cf3aefc677f3eca48b26faf51eb92243e3806f10
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68771471"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815274"
 ---
 # <a name="sp_repldropcolumn-transact-sql"></a>sp_repldropcolumn (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68771471"
   从已发布的现有表项目中删除列。 此存储过程在发布服务器上对发布数据库执行。  
   
 > [!IMPORTANT]
->  已不推荐使用此存储过程，支持它主要是为了能够向后兼容。 它只能与[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]发布服务器和[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]重新发布订阅服务器一起使用。 不应对列将此过程与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本中引入的数据类型一起使用。  
+>  已不推荐使用此存储过程，支持它主要是为了能够向后兼容。 它只能与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 发布服务器和重新 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 发布订阅服务器一起使用。 不应对列将此过程与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本中引入的数据类型一起使用。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,30 +44,30 @@ sp_repldropcolumn [ @source_object = ] 'source_object', [ @column = ] 'column'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @source_object = ]"*source_object*"  
+ [ @source_object =] "*source_object*"  
  包含要删除的列的表项目的名称。 *source_object*为 nvarchar （258），无默认值。  
   
- [ @column = ]"*column*"  
+ [ @column =] "*column*"  
  表中要删除的列的名称。 *列*的值为 sysname，无默认值。  
   
- [ @from_agent = ]*from_agent*  
+ [ @from_agent =] *from_agent*  
  表示是否由复制代理执行该存储过程。 *from_agent*为 int，默认值为0，其中默认值为0，在复制代理执行此存储过程时，将使用值1，而在每个其他情况下，应使用默认值0。  
   
- [ @schema_change_script = ]"*schema_change_script*"  
+ [ @schema_change_script =] "*schema_change_script*"  
  指定用于修改系统生成的自定义存储过程的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本的名称和路径。 *schema_change_script*为 nvarchar （4000），默认值为 NULL。 复制允许用户定义的自定义存储过程替换事务复制中使用的一个或多个默认过程。 使用 sp_repldropcolumn 对复制的表项目进行架构更改后，将执行*schema_change_script* ，并可用于执行以下操作之一：  
   
 -   如果自定义存储过程是自动重新生成的，则*schema_change_script*可用于删除这些自定义存储过程，并使用支持新架构的用户定义的自定义存储过程替换这些存储过程。  
   
 -   如果自定义存储过程不是自动重新生成的，则*schema_change_script*可用于重新生成这些存储过程或创建用户定义的自定义存储过程。  
   
- [ @force_invalidate_snapshot = ]*force_invalidate_snapshot*  
+ [ @force_invalidate_snapshot =] *force_invalidate_snapshot*  
  启用或禁用使快照失效的功能。 *force_invalidate_snapshot*为一个位，默认值为1。  
   
  1 指定对项目的更改可能导致快照无效，如果发生这种情况，值 1 提供了新建快照所需的权限。  
   
  0 指定对项目所做的更改不会导致快照失效。  
   
- [ @force_reinit_subscription = ]*force_reinit_subscription*  
+ [ @force_reinit_subscription =] *force_reinit_subscription*  
  启用或禁用使订阅重新初始化的功能。 *force_reinit_subscription*是一位，默认值为0。  
   
  0 指定对项目所做的更改不会导致重新初始化订阅。  

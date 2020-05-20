@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_add_principalprofile_sp
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fedc7e0dd7fe71feb0b0da1f00f2a7f996c6129c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d752015dab48058af18cb981a009691f407da171
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305060"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814371"
 ---
 # <a name="sysmail_add_principalprofile_sp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,11 +55,11 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
  **0** （成功）或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
- 若要将配置文件设置为公共配置文件，请指定** \@principal_id** **0**或**public** ** \@principal_name** 。 公共配置文件可供**msdb**数据库中的所有用户使用，但用户还必须是**DatabaseMailUserRole**的成员才能执行**sp_send_dbmail**。  
+ 若要将配置文件设置为公共配置文件，请指定** \@ principal_id** **0**或**public** ** \@ principal_name** 。 公共配置文件可供**msdb**数据库中的所有用户使用，但用户还必须是**DatabaseMailUserRole**的成员才能执行**sp_send_dbmail**。  
   
- 数据库用户只能有一个默认的配置文件。 当** \@is_default**为 "**1**" 并且用户已与一个或多个配置文件关联时，指定的配置文件将成为该用户的默认配置文件。 以前的默认配置文件仍与该用户关联，但不再是默认配置文件。  
+ 数据库用户只能有一个默认的配置文件。 当** \@ is_default**为 "**1**" 并且用户已与一个或多个配置文件关联时，指定的配置文件将成为该用户的默认配置文件。 以前的默认配置文件仍与该用户关联，但不再是默认配置文件。  
   
- 如果** \@is_default**为 "**0**"，并且不存在其他关联，则存储过程将返回错误。  
+ 如果** \@ is_default**为 "**0**"，并且不存在其他关联，则存储过程将返回错误。  
   
  存储过程**sysmail_add_principalprofile_sp**在**msdb**数据库中，由**dbo**架构拥有。 如果当前数据库不是**msdb**，则必须使用由三部分组成的名称来执行该过程。  
   
@@ -69,7 +69,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ## <a name="examples"></a>示例  
  **A. 创建一个关联，设置默认配置文件**  
   
- 以下示例在名为`AdventureWorks Administrator Profile`的配置文件与**msdb**数据库用户`ApplicationUser`之间创建关联。 此配置文件是该用户的默认配置文件。  
+ 以下示例在名为的配置文件 `AdventureWorks Administrator Profile` 与**msdb**数据库用户之间创建关联 `ApplicationUser` 。 此配置文件是该用户的默认配置文件。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp  
@@ -80,7 +80,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
  **B. 将配置文件设置为默认的公共配置文件**  
   
- 下面的示例将配置文件`AdventureWorks Public Profile`设置为**msdb**数据库中用户的默认公共配置文件。  
+ 下面的示例将配置文件 `AdventureWorks Public Profile` 设置为**msdb**数据库中用户的默认公共配置文件。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp  

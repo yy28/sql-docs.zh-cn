@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_publication_access
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7c562c039b65f99f1d3d9915f0dd00b93dc95860
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8fe57e26392a2a01c7074d7d019baa20c4b9cb5f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770994"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815727"
 ---
 # <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,9 +42,9 @@ sp_help_publication_access [ @publication = ] 'publication'
 ## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'`要访问的发布的名称。 *发布*为**sysname**，无默认值。  
   
-`[ @return_granted = ] 'return_granted'`登录 ID。 *return_granted*为**bit**，默认值为1。 如果指定**0**并[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用身份验证，则返回出现在发布服务器而不是分发服务器上的可用登录名。 如果指定**0**并使用 Windows 身份验证，则返回在发布服务器或分发服务器上不被明确拒绝访问的登录名。  
+`[ @return_granted = ] 'return_granted'`登录 ID。 *return_granted*为**bit**，默认值为1。 如果指定**0**并 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用身份验证，则返回出现在发布服务器而不是分发服务器上的可用登录名。 如果指定**0**并使用 Windows 身份验证，则返回在发布服务器或分发服务器上不被明确拒绝访问的登录名。  
   
-`[ @login = ] 'login'`标准安全登录 ID。 *login*的值为**sysname**，默认值**%** 为。  
+`[ @login = ] 'login'`标准安全登录 ID。 *login*的值为**sysname**，默认值为 **%** 。  
   
 `[ @initial_list = ] initial_list`指定是返回具有发布访问权的所有成员，还是只返回那些在新成员添加到列表之前具有访问权限的成员。 *initial_list*为 bit，默认值为**0**。  
   
@@ -66,7 +66,7 @@ sp_help_publication_access [ @publication = ] 'publication'
 ## <a name="remarks"></a>备注  
  **sp_help_publication_access**在所有类型的复制中使用。  
   
- 如果结果集中的**Isntname**和**Isntgroup**均为**0**，则假定该登录名是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名。  
+ 如果结果集中的**Isntname**和**Isntgroup**均为**0**，则假定该登录名是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
 ## <a name="permissions"></a>权限  
  只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_help_publication_access**。  

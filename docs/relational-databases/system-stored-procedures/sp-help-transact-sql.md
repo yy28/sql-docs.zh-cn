@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help
 ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb5e9a1ab72140a08423fa50c10eeb1f2d06ad79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac6e69db443bd23c3e9b1119b21d8fd98ebe39c4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72909086"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815513"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,11 +54,11 @@ sp_help [ [ @objname = ] 'name' ]
   
     |列名称|数据类型|说明|  
     |-----------------|---------------|-----------------|  
-    |**名称**|**nvarchar （** 128 **）**|对象名称|  
+    |**Name**|**nvarchar （** 128 **）**|对象名称|  
     |**所有者**|**nvarchar （** 128 **）**|对象所有者（拥有对象的数据库主体。 默认为包含对象的架构所有者。）|  
     |**Object_type**|**nvarchar （** 31 **）**|对象类型|  
   
-2.  如果*name*为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型或用户定义数据类型， **sp_help**返回此结果集。  
+2.  如果*name*为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型或用户定义数据类型， **sp_help**返回此结果集。  
   
     |列名称|数据类型|说明|  
     |-----------------|---------------|-----------------|  
@@ -76,9 +76,9 @@ sp_help [ [ @objname = ] 'name' ]
 
     |列名称|数据类型|说明|  
     |-----------------|---------------|-----------------|  
-    |**名称**|**nvarchar （** 128 **）**|表名称|  
+    |**Name**|**nvarchar （** 128 **）**|表名|  
     |**所有者**|**nvarchar （** 128 **）**|表所有者|  
-    |**类型**|**nvarchar （** 31 **）**|表类型|  
+    |**Type**|**nvarchar （** 31 **）**|表类型|  
     |**Created_datetime**|**datetime**|表的创建日期|  
   
      **Sp_help**返回其他结果集，具体取决于指定的数据库对象。  
@@ -90,7 +90,7 @@ sp_help [ [ @objname = ] 'name' ]
         |列名称|数据类型|说明|  
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar （** 128 **）**|列名称。|  
-        |**类型**|**nvarchar （** 128 **）**|列数据类型。|  
+        |**Type**|**nvarchar （** 128 **）**|列数据类型。|  
         |**得出**|**varchar （** 35 **）**|指示是否计算列中的值：“是”或“否”。|  
         |**长度**|**int**|以字节为单位的列长度。<br /><br /> 注意：如果列数据类型是大值类型（**varchar （max）**、 **nvarchar （max）**、 **varbinary （max）** 或**xml**），该值将显示为-1。|  
         |**Prec**|**char （** 5 **）**|列精度。|  
@@ -105,7 +105,7 @@ sp_help [ [ @objname = ] 'name' ]
         |列名称|数据类型|说明|  
         |-----------------|---------------|-----------------|  
         |**标识**|**nvarchar （** 128 **）**|其数据类型被声明为标识的列名。|  
-        |**种子**|**numeric**|标识列的起始值。|  
+        |**Seed**|**numeric**|标识列的起始值。|  
         |**版本号**|**numeric**|用于此列中的值的增量。|  
         |**不用于复制**|**int**|当复制登录名（如**sqlrepl**）将数据插入到表中时，不会强制使用 IDENTITY 属性：<br /><br /> 1 = True<br /><br /> 0 = False|  
   
@@ -152,7 +152,7 @@ sp_help [ [ @objname = ] 'name' ]
         |列名称|数据类型|说明|  
         |-----------------|---------------|-----------------|  
         |**Parameter_name**|**nvarchar （** 128 **）**|存储过程参数名。|  
-        |**类型**|**nvarchar （** 128 **）**|存储过程参数的数据类型。|  
+        |**Type**|**nvarchar （** 128 **）**|存储过程参数的数据类型。|  
         |**长度**|**smallint**|最大物理存储长度（以字节为单位）。|  
         |**Prec**|**int**|精度，即数字总位数。|  
         |**缩放**|**int**|小数点右边的数字位数。|  

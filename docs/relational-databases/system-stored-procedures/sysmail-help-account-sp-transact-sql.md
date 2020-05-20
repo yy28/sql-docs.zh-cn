@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_account_sp
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ccb5cfd245148c97288a34b1857955f48f3efc73
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fb61b115689472c5be3ec14de2e7387de3317d4d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81528405"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814120"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,9 +60,9 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |**replyto_address**|**nvarchar(128)**|对于来自此帐户的消息发送答复的地址。|  
 |**servertype**|**sysname**|用于此帐户的电子邮件服务器的类型。|  
 |**服务器**|**sysname**|用于此帐户的电子邮件服务器的名称。|  
-|**口**|**int**|电子邮件服务器使用的端口号。|  
-|**用户名**|**nvarchar(128)**|登录电子邮件服务器所用的用户名（如果电子邮件服务器使用身份验证）。 当**username**为 NULL 时，数据库邮件不对此帐户使用身份验证。|  
-|**use_default_credentials**|**bit**|指定是否使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的凭据将邮件发送到 SMTP 服务器。 **use_default_credentials**是 bit，无默认值。 当此参数为 1 时，数据库邮件使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服务的凭据。 当此参数为0时，数据库邮件使用** \@用户名**和** \@密码**在 SMTP 服务器上进行身份验证。 如果** \@用户名**和** \@密码**为空，则数据库邮件使用匿名身份验证。 在指定此参数之前，请咨询您的 SMTP 管理员。|  
+|**port**|**int**|电子邮件服务器使用的端口号。|  
+|**username**|**nvarchar(128)**|登录电子邮件服务器所用的用户名（如果电子邮件服务器使用身份验证）。 当**username**为 NULL 时，数据库邮件不对此帐户使用身份验证。|  
+|**use_default_credentials**|**bit**|指定是否使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的凭据将邮件发送到 SMTP 服务器。 **use_default_credentials**是 bit，无默认值。 当此参数为 1 时，数据库邮件使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服务的凭据。 当此参数为0时，数据库邮件使用** \@ 用户名**和** \@ 密码**在 SMTP 服务器上进行身份验证。 如果** \@ 用户名**和** \@ 密码**为空，则数据库邮件使用匿名身份验证。 在指定此参数之前，请咨询您的 SMTP 管理员。|  
 |**enable_ssl**|**bit**|指定数据库邮件是否使用传输层安全性（TLS）（以前称为安全套接字层（SSL））对通信进行加密。 如果 SMTP 服务器需要 TLS，请使用此选项。 **enable_ssl**是 bit，无默认值。 1指示数据库邮件使用 TLS 加密通信。 0指示数据库邮件发送没有 TLS 加密的邮件。|  
   
 ## <a name="remarks"></a>备注  

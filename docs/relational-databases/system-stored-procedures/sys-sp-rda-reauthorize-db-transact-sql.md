@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reauthorize_db stored procedure
 ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 01809f0d4eb494d58f035d23846025578aada7c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 68267f07c125e05f235c1a0bcb4c7f855274bc86
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251264"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814701"
 ---
 # <a name="syssp_rda_reauthorize_db-transact-sql"></a>sys.sp_rda_reauthorize_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -38,17 +38,17 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ```  
   
 ## <a name="arguments"></a>参数  
- @credential= * \@凭据*  
+ @credential= * \@ 凭据*  
  与启用 Stretch 的本地数据库关联的数据库范围凭据。  
   
- @with_copy= * \@with_copy*  
- 指定是否创建远程数据的副本并连接到副本（推荐）。 with_copy 为 bit。 * \@*  
+ @with_copy= * \@ with_copy*  
+ 指定是否创建远程数据的副本并连接到副本（推荐）。 * \@ with_copy*为 bit。  
   
- @azure_servername= * \@azure_servername*  
- 指定包含远程数据的 Azure 服务器的名称。 * \@azure_servername* sysname。  
+ @azure_servername= * \@ azure_servername*  
+ 指定包含远程数据的 Azure 服务器的名称。 * \@ azure_servername* sysname。  
   
- @azure_databasename= * \@azure_databasename*  
- 指定包含远程数据的 Azure 数据库的名称。 * \@azure_databasename* sysname。  
+ @azure_databasename= * \@ azure_databasename*  
+ 指定包含远程数据的 Azure 数据库的名称。 * \@ azure_databasename* sysname。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 >0 （失败）  
