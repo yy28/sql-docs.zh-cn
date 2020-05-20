@@ -38,7 +38,7 @@ ms.locfileid: "71682011"
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
-float [ (**n**) ] 其中 n 为用于存储 float 数值尾数的位数（以科学记数法表示），因此可以确定精度和存储大小      。 如果指定了 n，则它必须是介于 1 和 53 之间的某个值    。 n 的默认值为 53   。
+float [ (_n_) ] 其中 n 为用于存储 float 数值尾数的位数（以科学记数法表示），因此可以确定精度和存储大小  。 如果指定了 n，则它必须是介于 1 和 53 之间的某个值    。 n 的默认值为 53   。
   
 |n 值 |Precision|存储大小|  
 |---|---|---|

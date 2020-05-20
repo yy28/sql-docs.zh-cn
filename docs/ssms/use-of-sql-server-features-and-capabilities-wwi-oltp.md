@@ -22,7 +22,7 @@ ms.locfileid: "75252224"
 ---
 # <a name="arguments-for-external-tools"></a>外部工具的参数
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-参数是在从“工具”  菜单中启动外部工具时，由 Studio 环境提供值的变量。 可以使用“外部工具”  对话框将外部工具（如记事本）添加到“工具”  菜单。  
+参数是在从“工具”  菜单中启动外部工具时，由 Studio 环境提供值的变量。 可以使用“外部工具”对话框将外部工具（如记事本）添加到“工具”菜单。  
   
 下表列出了外部工具的参数。  
   

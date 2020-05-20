@@ -47,7 +47,7 @@ ms.locfileid: "75254376"
   
 3.  在表示表或表值对象的矩形中，选择“&#42; (所有列)”  。  
   
-    查询和视图设计器会自动在“条件”窗格的“分组依据”  列中填充 **Count** 一词，并为要汇总的列分配列别名。 您可以用更有意义的名称替换这一自动生成的别名。 有关详细信息，请参阅[创建列别名 (Visual Database Tools)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)。  
+    查询和视图设计器会自动在“条件”窗格的“分组依据”列中填充 **Count** 一词，并为要汇总的列分配列别名。 您可以用更有意义的名称替换这一自动生成的别名。 有关详细信息，请参阅[创建列别名 (Visual Database Tools)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)。  
   
 4.  运行查询。  
   
@@ -59,13 +59,13 @@ ms.locfileid: "75254376"
   
 3.  在表示表或表结构对象的矩形中，选择“&#42; (所有列)”  。  
   
-    查询和视图设计器会自动在“条件”窗格的“分组依据”  列中填充 **Count** 一词，并为要汇总的列分配列别名。 若要在查询输出中创建更实用的列标题，请参阅[创建列别名 (Visual Database Tools)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)。  
+    查询和视图设计器会自动在“条件”窗格的“分组依据”列中填充 **Count** 一词，并为要汇总的列分配列别名。 若要在查询输出中创建更实用的列标题，请参阅[创建列别名 (Visual Database Tools)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)。  
   
 4.  添加要搜索的数据列，再清除“输出”  列中的复选框。  
   
-    查询和视图设计器会自动在网格的“分组依据”  列中填充 **Group By** 一词。  
+    查询和视图设计器会自动在网格的“分组依据”列中填充 **Group By** 一词。  
   
-5.  将“分组依据”  列中的 **Group By** 改为 **Where**。  
+5.  将“分组依据”列中的 **Group By** 改为 **Where**。  
   
 6.  在要搜索的数据列的“筛选器”  列中，输入搜索条件。  
   
@@ -79,9 +79,9 @@ ms.locfileid: "75254376"
   
 3.  将要计数的列添加到“条件”窗格中。  
   
-    查询和视图设计器会自动在网格的“分组依据”  列中填充 **Group By** 一词。  
+    查询和视图设计器会自动在网格的“分组依据”列中填充 **Group By** 一词。  
   
-4.  将“分组依据”  列中的 **Group By** 改为 **Count**。  
+4.  将“分组依据”列中的 **Group By** 改为 **Count**。  
   
     > [!NOTE]  
     > 若要只计算唯一值的数目，请选择 **Count Distinct**。  

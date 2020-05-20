@@ -57,7 +57,7 @@ ms.locfileid: "75252291"
   
 4.  右键单击要向其添加步骤的作业，然后选择“属性”  。  
   
-5.  在“作业属性 - job_name”  对话框中的“选择页”下，选择“步骤”    。 有关此页上可用选项的详细信息，请参阅[作业属性 - 新建作业（“步骤”页）](../../ssms/agent/job-properties-new-job-steps-page.md)。  
+5.  在“作业属性 - job_name”对话框中的“选择页”下，选择“步骤”  。 有关此页上可用选项的详细信息，请参阅[作业属性 - 新建作业（“步骤”页）](../../ssms/agent/job-properties-new-job-steps-page.md)。  
  
 6.  完成后，单击 **“确定”** 。  
   

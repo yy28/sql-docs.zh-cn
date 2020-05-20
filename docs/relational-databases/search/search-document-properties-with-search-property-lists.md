@@ -126,7 +126,7 @@ ms.locfileid: "74056101"
   
  **使用 Transact-SQL 将属性添加到搜索属性列表中**  
   
- 通过借助[查找搜索属性的属性集 GUID 和属性整数 ID](../../t-sql/statements/alter-search-property-list-transact-sql.md) 一文中介绍的方法之一获得的值使用 [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md) 语句。  
+ 通过借助[查找搜索属性的属性集 GUID 和属性整数 ID](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md) 一文中介绍的方法之一获得的值使用 [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md) 语句。  
   
  下面的示例演示在将属性添加到搜索属性列表时这些值的用法：  
   
@@ -154,7 +154,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
  **使用 Management Studio 将搜索属性列表与全文索引相关联**  
   
- 在“全文索引属性”  对话框的“常规”  页上，为“搜索属性列表”  指定一个值。  
+ 在“全文索引属性”对话框的“常规”页上，为“搜索属性列表”指定一个值。  
   
 ##  <a name="querying-search-properties-with-contains"></a><a name="Ov_CONTAINS_using_PROPERTY"></a> 使用 CONTAINS 查询搜索属性  
  针对属性范围的全文查询的基本 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 语法如下：  

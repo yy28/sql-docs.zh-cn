@@ -67,7 +67,7 @@ ms.locfileid: "71286577"
   
 4.  引用  。 从 Excel 文件读取构架信息的代码示例在脚本项目中需要对 System.Xml  命名空间的附加引用。  
   
-5.  设置脚本组件的默认脚本语言，方法是使用“选项”  对话框的“常规”  页上的“脚本语言”  选项。 有关详细信息，请参阅 [General Page](../general-page-of-integration-services-designers-options.md)。  
+5.  设置脚本组件的默认脚本语言，方法是使用“选项”对话框的“常规”页上的“脚本语言”选项。 有关详细信息，请参阅 [General Page](../general-page-of-integration-services-designers-options.md)。  
   
 ##  <a name="example-1-description-check-whether-an-excel-file-exists"></a><a name="example1"></a> 示例 1 说明：检查 Excel 文件是否存在  
  本示例可确定 `ExcelFile` 变量中指定的 Excel 工作簿文件是否存在，然后根据该结果设置 `ExcelFileExists` 变量的布尔值。 可以使用此布尔值在包的工作流中进行分支。  
@@ -94,7 +94,7 @@ ms.locfileid: "71286577"
   
 4.  单击“编辑脚本”  以打开脚本编辑器。  
   
-5.  在脚本文件的顶部添加针对 System.IO  命名空间的 Imports  语句。  
+5.  在脚本文件的顶部添加针对 System.IO 命名空间的 Imports 语句。  
   
 6.  添加以下代码。  
   
@@ -148,7 +148,7 @@ public class ScriptMain
   
 2.  在“脚本任务编辑器”  的“脚本”  选项卡上，单击“ReadOnlyVariables”  ，然后使用下列任一方法输入属性值：  
   
-    -   键入用逗号.  分隔的 ExcelTable  和 ExcelFile  。  
+    -   键入用逗号. 分隔的 ExcelTable 和 ExcelFile。  
   
          -或-  
   
@@ -166,7 +166,7 @@ public class ScriptMain
   
 5.  在脚本项目中添加对 System.Xml  程序集的引用。  
   
-6.  在脚本文件的顶部添加针对 System.IO  和 System.Data.OleDb  命名空间的 Imports  语句。  
+6.  在脚本文件的顶部添加针对 System.IO 和 System.Data.OleDb 命名空间的 Imports 语句。  
   
 7.  添加以下代码。  
   
@@ -271,7 +271,7 @@ public class ScriptMain
   
 4.  单击“编辑脚本”  以打开脚本编辑器。  
   
-5.  在脚本文件的顶部添加针对 System.IO  命名空间的 Imports  语句。  
+5.  在脚本文件的顶部添加针对 System.IO 命名空间的 Imports 语句。  
   
 6.  添加以下代码。  
   
@@ -348,7 +348,7 @@ public class ScriptMain
   
 5.  在脚本项目中添加对 System.Xml  命名空间的引用。  
   
-6.  在脚本文件的顶部添加针对 System.Data.OleDb  命名空间的 Imports  语句。  
+6.  在脚本文件的顶部添加针对 System.Data.OleDb 命名空间的 Imports 语句。  
   
 7.  添加以下代码。  
   
@@ -439,7 +439,7 @@ public class ScriptMain
   
 2.  将四个示例脚本任务彼此连接，以便每个任务在前一个任务成功完成后运行，然后将第四个示例任务连接到 DisplayResults  任务。  
   
-3.  在“脚本任务编辑器”  中打开 DisplayResults  任务。  
+3.  在“脚本任务编辑器”中打开 DisplayResults 任务。  
   
 4.  在“脚本”  选项卡中单击“ReadOnlyVariables”  然后使用下列任一方法添加[配置用于测试示例的包](#configuring)中列出的七个变量：  
   
@@ -451,7 +451,7 @@ public class ScriptMain
   
 5.  单击“编辑脚本”  以打开脚本编辑器。  
   
-6.  在脚本文件的顶部添加针对 Microsoft.VisualBasic  和 System.Windows.Forms  命名空间的 Imports  语句。  
+6.  在脚本文件的顶部添加针对 Microsoft.VisualBasic 和 System.Windows.Forms 命名空间的 Imports 语句。  
   
 7.  添加以下代码。  
   

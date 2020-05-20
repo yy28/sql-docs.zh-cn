@@ -177,28 +177,28 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
 |**OutputPath**={ *string* }|空值|可选参数，它通知  dbSqlPackage 在  string 指定的磁盘位置创建 DeployReport XML 输出文件或 Script SQL 输出文件。 此操作会覆盖当前驻留在 string 指定的位置的任何脚本。|  
   
 > [!NOTE]  
-> 如果没有为  DeployReport 或  Script 操作提供  OutputPath 参数，则会以消息的形式返回输出结果。  
+> 如果没有为 DeployReport 或 Script 操作提供 OutputPath 参数，则会以消息的形式返回输出结果。  
   
 ## <a name="examples"></a>示例  
-下面是使用  dbSqlPackage 的  Extract 操作的示例语法：  
+下面是使用 dbSqlPackage 的 Extract 操作的示例语法：  
   
 ```  
 MSDeploy.exe -verb:sync -source:dbSqlPackage="<source connection string>",<source parameter> -dest:dbSqlPackage="<target dacpac file path>"  
 ```  
   
-下面是使用  dbSqlPackage 的  Publish 操作的示例语法：  
+下面是使用 dbSqlPackage 的 Publish 操作的示例语法：  
   
 ```  
 MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Publish,<destination parameters>  
 ```  
   
-下面是使用  dbSqlPackage 的  DeployReport 操作的示例语法：  
+下面是使用 dbSqlPackage 的 DeployReport 操作的示例语法：  
   
 ```  
 MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=DeployReport,OutputPath="<path to output XML file>",<destination parameters>  
 ```  
   
-下面是使用  dbSqlPackage 的  操作的示例语法：  
+下面是使用 dbSqlPackage 的  操作的示例语法：  
   
 ```  
 MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Script,OutputPath="<path to output sql script>",<destination parameters>  

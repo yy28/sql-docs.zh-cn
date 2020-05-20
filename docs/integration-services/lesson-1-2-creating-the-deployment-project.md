@@ -30,7 +30,7 @@ ms.locfileid: "71283756"
   
 2.  在“文件”  菜单上，指向“新建”  ，然后单击“项目”  创建新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。  
   
-3.  在“新建项目”  对话框的“模板”  窗格中，选择“Integration Services 项目”  。  
+3.  在“新建项目”对话框的“模板”窗格中，选择“Integration Services 项目”。  
   
 4.  在“名称”  框中，将默认名称更改为“Deployment Tutorial”  。 或者，清除“创建解决方案的目录”  复选框。  
   

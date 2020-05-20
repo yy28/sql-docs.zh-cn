@@ -65,11 +65,11 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
 |格式|说明|  
 |------------|-----------------|  
-|String|language_term 对应于 [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 兼容性视图中 alias 列的值   。 字符串必须用单引号引起来，如 'language_term'  。|  
+|String|language_term 对应于 [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 兼容性视图中 alias 列的值。 字符串必须用单引号引起来，如 'language_term'。|  
 |Integer|language_term 是语言的 LCID  。|  
 |十六进制|language_term 将以 0x 开头，后面跟有 LCID 的十六进制值  。 十六进制值不能超过八位（包括前导零在内）。 如果该值是双字节字符集 (DBCS) 格式，则 SQL Server 将其转换为 Unicode 格式。|  
   
- ADD 'stopword' LANGUAGE language_term    
+ ADD 'stopword' LANGUAGE language_term  
  将非索引字添加到由 LANGUAGE language_term 指定的语言的非索引字表中  。  
   
  如果指定的关键字及语言 LCID 值组合在 STOPLIST 中不是唯一的，则将返回错误。  如果 LCID 值与已注册的语言不对应，则会产生一个错误。  

@@ -21,7 +21,7 @@ ms.locfileid: "79198484"
 
 **适用范围：  Microsoft Report Viewer 版本 150.900.148 及更高版本**
 
-Microsoft Report Viewer 控件与遵循 Microsoft 现代[支持生命周期策略](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy)的 SQL Server Reporting Services 和 Power BI 报表服务器兼容  。 此信息适用于通过 [NuGet](https://www.nuget.org/) 分发的“ASP.net”和“WinForms”版本   。 所有已发布的版本都可通过 [NuGet](https://www.nuget.org/) 获得。 修补程序、功能或其他更新将回滚转发到最新版本。 必须应用最新版本才能接收更改。 Report Viewer 会继续接收“安全更新和关键更新”，并且至少提前一年通知任何支持的策略更改  。
+Microsoft Report Viewer 控件与遵循 Microsoft 现代[支持生命周期策略](https://support.microsoft.com/hub/4095338/microsoft-lifecycle-policy)的 SQL Server Reporting Services 和 Power BI 报表服务器兼容。 此信息适用于通过 [NuGet](https://www.nuget.org/) 分发的“ASP.net”和“WinForms”版本 。 所有已发布的版本都可通过 [NuGet](https://www.nuget.org/) 获得。 修补程序、功能或其他更新将回滚转发到最新版本。 必须应用最新版本才能接收更改。 Report Viewer 会继续接收“安全更新和关键更新”，并且至少提前一年通知任何支持的策略更改  。
 
 有关 Report Viewer 控件的版本历史记录，请参阅以下链接：
 

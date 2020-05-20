@@ -40,7 +40,7 @@ ms.locfileid: "71283330"
   
 4.  在“部署 SSIS 包”页上，选择“SQL Server 部署”  选项，选中“安装后验证包”  复选框，再单击“下一步”  。  
   
-5.  在“指定目标 SQL Server”页上，在“服务器名称”  框中指定 **(local)** 。  
+5.  在“指定目标 SQL Server”页上，在“服务器名称”框中指定 **(local)** 。  
   
 6.  如果 SQL Server 的实例支持 Windows 身份验证，请选择“使用 Windows 身份验证”  ；否则，选择“使用 SQL Server 身份验证”  ，并提供用户名和密码。  
   
@@ -67,14 +67,14 @@ ms.locfileid: "71283330"
   
 15. 在“配置包”页上，验证“配置文件”  框是否列出了 datatransferconfig.dtsconfig 和 loadxmldataconfig.dtsconfig。  
   
-16. 在“配置文件”  列表中，单击 **datatransferconfig.dtsconfig**，展开“配置”  框的“路径”  列中的“属性”，再用下列值更新“值”  列：  
+16. 在“配置文件”列表中，单击 **datatransferconfig.dtsconfig**，展开“配置”框的“路径”列中的“属性”，再用下列值更新“值”列：  
   
     |properties|值|更新后的值|  
     |------------|---------|-----------------|  
     |\Package.Connections[Deployment Tutorial Log].Properties[ConnectionString]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Completed Packages\Deployment Tutorial Log|C:\DeploymentTutorialInstall\Deployment Tutorial Log|  
     |\Package.Connections[NewCustomers].Properties[ConnectionString]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\NewCustomers.txt|C:\DeploymentTutorialInstall\NewCustomers.txt|  
   
-17. 在“配置文件”  列表中，单击 loadxmldataconfig.dtsconfig，展开“配置”  框的“路径”  列中的“属性”，再用下列值更新“值”  列：  
+17. 在“配置文件”列表中，单击 loadxmldataconfig.dtsconfig，展开“配置”框的“路径”列中的“属性”，再用下列值更新“值”列：  
   
     |properties|值|更新后的值|  
     |------------|---------|-----------------|  

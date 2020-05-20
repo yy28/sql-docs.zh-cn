@@ -239,7 +239,7 @@ ms.locfileid: "68048736"
   
   
 ###  <a name="boundary-interior-and-exterior"></a><a name="boundary"></a> 边界、内部和外部  
- *geometry* 实例的“内部”  是指由实例占用的空间，而“外部”  是指未占用的空间。  
+ **geometry** 实例的“内部”是指由实例占用的空间，而“外部”是指未占用的空间。  
   
  “边界”  由 OGC 定义，如下所示：  
   
@@ -265,7 +265,7 @@ SELECT @g.STBoundary().ToString();
  [STBoundary](../../t-sql/spatial-geometry/stboundary-geometry-data-type.md)  
    
 ###  <a name="envelope"></a><a name="envelope"></a> 包络线  
- *geometry*实例的“包络线”  又称为“边界框”  ，它是一个由实例的最小和最大坐标 (X,Y) 形成的轴对齐矩形。  
+ **geometry**实例的“包络线”又称为“边界框”，它是一个由实例的最小和最大坐标 (X,Y) 形成的轴对齐矩形。  
   
  **返回实例的包络线**  
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  

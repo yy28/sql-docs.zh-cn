@@ -57,7 +57,7 @@ ms.locfileid: "75246454"
 > -   如果表/列约束是在项目的表定义中 CREATE TABLE 语句之外定义，则导入操作将覆盖表定义以便约束内联。 但是，它将离开行约束之外，从而导致项目中的约束重复。  
 > -   项目中已有的源脚本中的任意主密钥或数据库加密密钥将在导入时复制。 删除重复项以便生成项目。  
   
-“从脚本导入”过程将不包含预先部署/后期部署脚本、SQLCMD 变量或 RefactorLog 文件。 这些项以及在导入时检测到的任何其他不支持的构造将放入你项目中“脚本”  文件夹的 ScriptsIgnoredOnImport.sql  文件。  
+“从脚本导入”过程将不包含预先部署/后期部署脚本、SQLCMD 变量或 RefactorLog 文件。 这些项以及在导入时检测到的任何其他不支持的构造将放入你项目中“脚本”文件夹的 ScriptsIgnoredOnImport.sql 文件。  
   
  
 ## <a name="import-encrypted-objects"></a><a name="bkmk_import_encrypted"></a>导入加密的对象  

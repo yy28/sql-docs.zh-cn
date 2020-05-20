@@ -27,7 +27,7 @@ ms.locfileid: "71298638"
 
   通过使用你为以下属性指定的值，Azure 订阅连接管理器使 SSIS 包能够连接到 Azure 订阅：  Azure 订阅 ID 和管理证书。  
   
- Azure 订阅连接管理器是[用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)的组件  。
+ Azure 订阅连接管理器是[用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)的组件。
   
 1.  在如上所示的“添加 SSIS 连接管理器”  对话框中，选择“Azure 订阅”  ，然后单击“添加”  。  你应该会看到  “Azure 订阅连接管理器编辑器”对话框。  
   

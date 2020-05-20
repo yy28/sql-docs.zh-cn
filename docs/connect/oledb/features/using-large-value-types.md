@@ -36,7 +36,7 @@ ms.locfileid: "67988866"
  以前，只有诸如 text、ntext 和 image 之类的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型可以达到这样的长度    。 varchar、nvarchar 和 varbinary 的 max 说明符使这些数据类型也可以达到这样的长度     。 但是，由于仍然提供长数据类型，因而大多数 OLE DB 数据访问组件的接口将保持不变。 为了实现与旧版本的向后兼容性，OLE DB Driver for SQL Server 中的 DBCOLUMNFLAGS_ISLONG 标志仍在使用中。 针对 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更高版本编写的访问接口和驱动程序可以继续使用这些字词将新类型设置为最大长度不受限制。  
   
 > [!NOTE]  
->  还可以将 varchar(max)、nvarchar(max) 和 varbinary(max) 数据类型指定为存储过程的输入和输出参数类型、函数返回类型或者用在 [CAST 和 CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md) 函数中    。  
+>  还可以将 varchar(max)、nvarchar(max) 和 varbinary(max) 数据类型指定为存储过程的输入和输出参数类型、函数返回类型或者用在 [CAST 和 CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md) 函数中  。  
   
 > [!NOTE]  
 >  如果复制数据，可能需要将 [max text repl size 服务器配置选项](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)设置为 -1。  

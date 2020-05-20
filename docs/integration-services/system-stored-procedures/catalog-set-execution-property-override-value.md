@@ -49,7 +49,7 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
  当值为 1 时，属性是敏感的并在存储时加密。 当值为 0 时，属性是不敏感的并以纯文本形式存储值。 *sensitive* 参数为 **bit**。  
   
 ## <a name="remarks"></a>备注  
- 此过程执行的功能与“执行包”  对话框上“高级”  选项卡中的“属性重写”  部分执行的功能相同。 该属性的路径从包任务的“包路径”  属性派生。  
+ 此过程执行的功能与“执行包”对话框上“高级”选项卡中的“属性重写”部分执行的功能相同。 该属性的路径从包任务的“包路径”  属性派生。  
   
 ## <a name="return-code-value"></a>返回代码值  
  0（成功）  

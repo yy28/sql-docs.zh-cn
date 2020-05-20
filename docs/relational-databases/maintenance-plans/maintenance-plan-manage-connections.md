@@ -31,7 +31,7 @@ ms.locfileid: "68115963"
  指示是用 Windows 身份验证还是用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证建立连接。  
 
 > [!IMPORTANT]  
-> 包存储在 msdb  数据库中，其 ProtectionLevel  设置为 ServerStorage  ，因此，在使用 SQL Server 身份验证  时，将不会在 msdb  中加密密码。 只要 msdb  是安全的，就可以使用 SQL Server 身份验证  ，但建议使用 Windows 身份验证 
+> 包存储在 msdb  数据库中，其 ProtectionLevel  设置为 ServerStorage  ，因此，在使用 SQL Server 身份验证  时，将不会在 msdb  中加密密码。 只要 msdb 是安全的，就可以使用 SQL Server 身份验证，但建议使用 Windows 身份验证
 
 ## <a name="see-also"></a>另请参阅  
  [维护计划](../../relational-databases/maintenance-plans/maintenance-plans.md)  

@@ -56,12 +56,12 @@ ms.locfileid: "72909047"
   
      **Variable_Data_Size _= 2 + (_ Num_Variable_Cols** x 2) + **Max_Var_Size **   
   
-     添加到 Max_Var_Size **_中的字节用于跟踪每个可变长度列_** 。 此公式假设所有可变长度列均百分之百充满。 如果预计可变长度列占用的存储空间比例较低，则可以按照该比例调整 Max_Var_Size **_值，从而对整个表大小得出一个更准确的估计_** 。  
+     添加到 Max_Var_Size 中的字节用于跟踪每个可变长度列。 此公式假设所有可变长度列均百分之百充满。 如果预计可变长度列占用的存储空间比例较低，则可以按照该比例调整 Max_Var_Size 值，从而对整个表大小得出一个更准确的估计。  
   
     > [!NOTE]  
     >  你可以组合 **varchar**、 **nvarchar**、 **varbinary**或 **sql_variant** 列，使定义的表的总宽度超过 8,060 字节。 对于 varchar、nvarchar、varbinary 或 sql_variant 列，每列的长度仍不得超过 8,000 字节    。 但是，表中这些列的组合宽度可超过 8,060 字节的限制。  
   
-     如果没有可变长度列，请将 Variable_Data_Size **_设置为 0_** 。  
+     如果没有可变长度列，请将 Variable_Data_Size 设置为 0。  
   
 5.  计算总的行大小：  
   
@@ -83,7 +83,7 @@ ms.locfileid: "72909047"
   
 8.  计算在堆中存储数据所需的空间量（每页的总字节为 8192）：  
 
-     堆大小（字节）= 8192 x Num_Pages   
+     堆大小（字节）= 8192 x Num_Pages  
   
  此计算不考虑以下因素：  
   

@@ -56,7 +56,7 @@ ms.locfileid: "62651595"
     SELECT ProductID, Name, ProductNumber, SafetyStockLevel, ReorderPoint FROM  Production.Product Order By ProductID  
     ```  
   
-    还可通过选择“查询生成器”创建查询，然后通过选择“执行查询”验证查询   。 如果查询返回的数据不符合预期，则可能使用的 AdventureWorks 版本较低。 有关如何获取 AdventureWorks2014 示例数据库的详细信息，请参阅 [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases)  （AdventureWorks 示例数据库）。  
+    还可通过选择“查询生成器”创建查询，然后通过选择“执行查询”验证查询   。 如果查询返回的数据不符合预期，则可能使用的 AdventureWorks 版本较低。 有关如何获取 AdventureWorks2014 示例数据库的详细信息，请参阅 [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases)（AdventureWorks 示例数据库）。  
   
 11. 在“选择要生成的方法”页上，务必取消选中“创建方法以将更新直接发送到数据库(GenerateDBDirectMethods)”，然后选择“完成”    。  
   

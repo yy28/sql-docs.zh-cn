@@ -22,7 +22,7 @@ ms.locfileid: "67994476"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB 标准规范允许提供程序为 DBPROPINFO::vValues 指定 VT_EMPTY  。 但是，在使用 DBPROPSET_ROWSETALL  调用 IDBProperties::GetPropertyInfo  来检索行集属性时，OLE DB Driver for SQL Server OLE DB 始终返回 VT_EMPTY。  
+  OLE DB 标准规范允许提供程序为 DBPROPINFO::vValues 指定 VT_EMPTY  。 但是，在使用 DBPROPSET_ROWSETALL 调用 IDBProperties::GetPropertyInfo 来检索行集属性时，OLE DB Driver for SQL Server OLE DB 始终返回 VT_EMPTY。  
   
 ## <a name="see-also"></a>另请参阅  
  [接口 (OLE DB)](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md) 

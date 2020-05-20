@@ -41,7 +41,7 @@ ms.locfileid: "74822618"
     -   在所有主机服务器实例上，将 Service Broker PORT 设置为同一端口号。  
   
         > [!TIP]  
-        >  若要查看给定服务器实例上的 Service Broker 断点的端口号，请查询 [sys.tcp_endpoints](../../../relational-databases/system-catalog-views/sys-tcp-endpoints-transact-sql.md) 目录视图的“端口”  列，其中 **type_desc** = 'SERVICE_BROKER'。  
+        >  若要查看给定服务器实例上的 Service Broker 断点的端口号，请查询 [sys.tcp_endpoints](../../../relational-databases/system-catalog-views/sys-tcp-endpoints-transact-sql.md) 目录视图的“端口”列，其中 **type_desc** = 'SERVICE_BROKER'。  
   
      下面的示例创建经过 Windows 身份验证的 Service Broker 端点，该端点使用默认 Service Broker 端口 (4022) 并侦听所有有效的 IP 地址。  
   

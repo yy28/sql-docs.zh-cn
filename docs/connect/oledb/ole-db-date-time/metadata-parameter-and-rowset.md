@@ -68,7 +68,7 @@ ms.locfileid: "67995096"
   
  bPrecision  参数将被忽略。  
   
- 向服务器发送数据时将忽略“DBPARAMFLAGS_SS_ISVARIABLESCALE”。 通过使用特定于提供程序的类型名称“datetime”和“smalldatetime”，应用程序可以强制使用旧的表格格式数据流 (TDS) 类型   。 当连接到 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]（或更高版本）服务器时，如果类型名称为“datetime2”或“DBTYPE_DBTIMESTAMP”，将使用“datetime2”格式，并在必要时进行隐式服务器转换   。 如果使用提供程序特定的类型名称“datetime”  或“smalldatetime”  ，则将忽略 bScale  。 否则，应用程序必须确保正确设置了 bScale  。 对于使用“DBTYPE_DBTIMESTAMP”且从 MDAC 升级的应用程序和 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 的 OLE DB Driver for SQL Server，如果未正确设置 bScale  ，应用程序将失败。 当连接到早于 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 的服务器实例时，采用“DBTYPE_DBTIMESTAMP”且值不为 0 或 3 的 bScale 值不正确，并且将返回 E_FAIL  。  
+ 向服务器发送数据时将忽略“DBPARAMFLAGS_SS_ISVARIABLESCALE”。 通过使用特定于提供程序的类型名称“datetime”和“smalldatetime”，应用程序可以强制使用旧的表格格式数据流 (TDS) 类型   。 当连接到 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]（或更高版本）服务器时，如果类型名称为“datetime2”或“DBTYPE_DBTIMESTAMP”，将使用“datetime2”格式，并在必要时进行隐式服务器转换   。 如果使用提供程序特定的类型名称“datetime”或“smalldatetime”，则将忽略 bScale。 否则，应用程序必须确保正确设置了 bScale  。 对于使用“DBTYPE_DBTIMESTAMP”且从 MDAC 升级的应用程序和 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 的 OLE DB Driver for SQL Server，如果未正确设置 bScale  ，应用程序将失败。 当连接到早于 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 的服务器实例时，采用“DBTYPE_DBTIMESTAMP”且值不为 0 或 3 的 bScale 值不正确，并且将返回 E_FAIL  。  
   
  如果未调用 ICommandWithParameters::SetParameterInfo，则提供程序将根据 IAccessor::CreateAccessor 中指定的绑定类型来表示服务器类型，如下所示：  
   

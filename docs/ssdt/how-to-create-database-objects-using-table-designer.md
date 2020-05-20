@@ -52,9 +52,9 @@ SQL Server 对象资源管理器  中的新的“SQL Server”  节点不但在�
     CREATE TABLE [dbo].[Suppliers]  
     ```  
   
-4.  单击列网格中的空行以便向该表添加新列。  为“名称”  字段输入 CompanyName  ，为“数据类型”  字段输入 nvarchar (128)  ，取消选中“允许 Null 值”  字段。 在您按 Tab 键离开这些字段时，请注意脚本窗格将立即更新。  
+4.  单击列网格中的空行以便向该表添加新列。  为“名称”字段输入 CompanyName，为“数据类型”字段输入 nvarchar (128)，取消选中“允许 Null 值”字段。 在您按 Tab 键离开这些字段时，请注意脚本窗格将立即更新。  
   
-5.  添加另一个新列。 为“名称”  字段输入 Address  ，为“数据类型”  字段输入 nvarchar (MAX)  ，取消选中“允许 Null 值”  字段。  
+5.  添加另一个新列。 为“名称”字段输入 Address，为“数据类型”字段输入 nvarchar (MAX)，取消选中“允许 Null 值”字段。  
   
     > [!WARNING]  
     > 在您正在从连接的数据库编辑对象时，不要将这些对象保存到您的本地驱动器。 若要将所做的更改正确保存到数据库中，请按照接下来的[如何：使用 Power Buffer 更新连接的数据库](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)过程中的步骤进行操作。  

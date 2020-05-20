@@ -32,7 +32,7 @@ ms.locfileid: "75243863"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>“属性”窗口的 F1 帮助 (Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用“属性”  窗口可以查看所选元素的属性。 使用“属性”  窗口还可以查看文件、项目和解决方案的属性。 在“视图”  菜单上单击“属性窗口”  ，即可显示“属性”  窗口。  
+使用“属性”  窗口可以查看所选元素的属性。 使用“属性”  窗口还可以查看文件、项目和解决方案的属性。 在“视图”菜单上单击“属性窗口”，即可显示“属性”窗口。  
   
 “属性”  窗口可根据特定属性的需要显示不同类型的编辑字段。 显示为灰色的属性为只读属性。  
   

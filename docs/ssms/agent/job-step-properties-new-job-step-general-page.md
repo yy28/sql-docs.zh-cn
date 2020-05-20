@@ -222,7 +222,7 @@ ms.locfileid: "75242222"
 -   **SSIS 包存储区**  
   
 **Server**  
-键入存储 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包的服务器名。 仅当为“包源”  指定了 **SQL Server** 或“SSIS 包存储区”  时，此选项才可用。  
+键入存储 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包的服务器名。 仅当为“包源”指定了 **SQL Server** 或“SSIS 包存储区”时，此选项才可用。  
   
 **Use Windows Authentication**  
 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 身份验证登录到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 。  

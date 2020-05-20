@@ -27,7 +27,7 @@ ms.locfileid: "68015291"
   本文介绍了 OLE DB 表值参数类型支持。  
   
 ## <a name="table-valued-parameter-rowset-object"></a>表值参数行集对象  
- 您可以创建表值参数的专用行集对象。 使用 ITableDefinitionWithConstraints::CreateTableWithConstraints 或 IOpenRowset::OpenRowset 创建表值参数行集对象。 为此，请将 pTableID 参数的 eKind 成员设置为 DBKIND_GUID_NAME，并提供 CLSID_ROWSET_INMEMORY 作为 guid 成员    。 使用 IOpenRowset::OpenRowset 时，必须在 pTableID  的 pwszName  成员中指定表值参数的服务器类型名称。 表值参数行集对象的行为类似于常规 OLE DB Driver for SQL Server 对象。  
+ 您可以创建表值参数的专用行集对象。 使用 ITableDefinitionWithConstraints::CreateTableWithConstraints 或 IOpenRowset::OpenRowset 创建表值参数行集对象。 为此，请将 pTableID 参数的 eKind 成员设置为 DBKIND_GUID_NAME，并提供 CLSID_ROWSET_INMEMORY 作为 guid 成员    。 使用 IOpenRowset::OpenRowset 时，必须在 pTableID 的 pwszName 成员中指定表值参数的服务器类型名称。 表值参数行集对象的行为类似于常规 OLE DB Driver for SQL Server 对象。  
   
 ```  
 const GUID CLSID_ROWSET_TVP =   

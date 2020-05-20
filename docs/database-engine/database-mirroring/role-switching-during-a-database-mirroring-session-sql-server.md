@@ -109,7 +109,7 @@ ms.locfileid: "75252784"
 2.  镜像服务器将从主体数据库接收到的最后一个日志记录的日志序列号 (LSN) 记录为故障转移 LSN。  
   
     > [!NOTE]  
-    >  若要查看此 LSN，请从 **sys.database_mirroring (Transact-SQL)** 中选择 [mirroring_failover_lsn](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) 列。  
+    >  若要查看此 LSN，请从 [sys.database_mirroring (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) 中选择 **mirroring_failover_lsn** 列。  
   
 3.  如果重做队列中有任何等待的日志，则镜像服务器将完成前滚镜像数据库的操作。 所需时间取决于系统速度、最新工作负荷以及重做队列中的日志量。 对于同步运行模式，可通过限制重做队列的大小调整故障转移时间。 不过，这会导致主体服务器的速度下降，以便镜像服务器能够与其同步。  
   

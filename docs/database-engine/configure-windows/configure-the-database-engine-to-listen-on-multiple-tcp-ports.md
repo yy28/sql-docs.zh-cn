@@ -75,9 +75,9 @@ ms.locfileid: "68012720"
   
 #### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>将 SQL Server 数据库引擎配置为侦听其他 TCP 端口  
   
-1.  在 SQL Server 配置管理器中，展开“SQL Server 网络配置”  ，然后单击 **<instance_name>** 的“协议”  。  
+1.  在 SQL Server 配置管理器中，展开“SQL Server 网络配置”，然后单击 _<instance_name>_ 的“协议”。  
   
-2.  展开 **<instance_name>** 的“协议”  ，然后单击“TCP/IP”  。  
+2.  展开 _<instance_name>_ 的“协议”，然后单击“TCP/IP”。  
   
 3.  在右窗格中，右键单击要启用的每个禁用的 IP 地址，再单击“启用”  。  
   

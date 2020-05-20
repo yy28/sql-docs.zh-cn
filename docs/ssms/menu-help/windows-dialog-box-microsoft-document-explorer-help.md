@@ -21,7 +21,7 @@ ms.locfileid: "75240574"
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>Windows 对话框（Microsoft 文档资源管理器的帮助）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用此对话框可以显示、关闭和排列在编辑器和设计器中打开的文档。 单击“窗口”  菜单上的 **Windows** 可以显示此对话框。  
+使用此对话框可以显示、关闭和排列在编辑器和设计器中打开的文档。 单击“窗口”菜单上的 **Windows** 可以显示此对话框。  
   
 ## <a name="options"></a>选项  
 **名称**  

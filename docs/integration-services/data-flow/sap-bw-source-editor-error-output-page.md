@@ -51,7 +51,7 @@ ms.locfileid: "71291829"
  查看数据源的名称。  
   
  **列**  
- 查看在“SAP BW 源编辑器”  对话框的“列”  页上选择的外部（源）列。 有关此对话框的详细信息，请参阅 [SAP BW 源编辑器（“列”页）](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)。  
+ 查看在“SAP BW 源编辑器”对话框的“列”页上选择的外部（源）列。 有关此对话框的详细信息，请参阅 [SAP BW 源编辑器（“列”页）](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)。  
   
  **错误**  
  指定发生错误时 SAP BW 源组件应执行的操作：忽略错误、重定向行或使组件失败。  

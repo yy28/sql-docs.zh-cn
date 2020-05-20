@@ -65,7 +65,7 @@ GO
 ```  
   
 ### <a name="what-is-the-total-size-of-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>全文目录的全文索引和语义索引的总大小是多少？  
- 查询 **FULLTEXTCATALOGPROPERTY (Transact SQL)** 元数据函数的 [IndexSize](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 属性 。  
+ 查询 [FULLTEXTCATALOGPROPERTY (Transact SQL)](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 元数据函数的 **IndexSize** 属性 。  
   
 ```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')  
@@ -73,7 +73,7 @@ GO
 ```  
   
 ### <a name="how-many-items-are-indexed-in-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>有多少项编入全文目录的全文索引和语义索引？  
- 查询 **FULLTEXTCATALOGPROPERTY (Transact SQL)** 元数据函数的 [ItemCount](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 属性 。  
+ 查询 [FULLTEXTCATALOGPROPERTY (Transact SQL)](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 元数据函数的 **ItemCount** 属性 。  
   
 ```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')  

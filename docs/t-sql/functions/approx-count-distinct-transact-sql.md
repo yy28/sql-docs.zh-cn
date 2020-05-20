@@ -38,7 +38,7 @@ APPROX_COUNT_DISTINCT ( expression )
   
 ## <a name="arguments"></a>参数  
 *expression*  
-任意类型（“[image](../../t-sql/language-elements/expressions-transact-sql.md)” 、“**sql_variant**” 、“**ntext**” 或“**text**” 除外）的 **表达式**。 
+任意类型（“**image**” 、“**sql_variant**” 、“**ntext**” 或“**text**” 除外）的 [表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 
 
 ## <a name="return-types"></a>返回类型
  **bigint**  

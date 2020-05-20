@@ -47,7 +47,7 @@ ms.locfileid: "72907211"
  已接受的 **Polygon** 实例是可以在不引发异常的情况下存储到 **geometry** 或 **geography** 变量中的实例。 下面是一些已接受的 **Polygon** 实例：  
   
 -   空的 **Polygon** 实例  
--   包含一个可接受外部环 (LineString  ) 和零个或多个可接受内部环 (LineString  ) 的 Polygon  实例  
+-   包含一个可接受外部环 (LineString) 和零个或多个可接受内部环 (LineString) 的 Polygon 实例  
   
 为了让环 (LineString  ) 可接受，必须满足以下条件。  
   

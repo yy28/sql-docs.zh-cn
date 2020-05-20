@@ -33,7 +33,7 @@ ms.locfileid: "75256231"
  ## <a name="reporting-services-new-or-edit-server-registration-general-tab"></a>Reporting Services 新建或编辑服务器注册（“常规”选项卡） 
   在注册 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例时，使用此选项卡可以指定选项。  
   
- 若要访问此页，请在已注册的服务器中，在“已注册的服务器”  工具栏上单击“Reporting Services”  ，右键单击任意已注册的服务器组（如“Reporting Services”  ），指向“新建”  ，再单击“服务器注册”  。  
+ 若要访问此页，请在已注册的服务器中，在“已注册的服务器”工具栏上单击“Reporting Services”，右键单击任意已注册的服务器组（如“Reporting Services”），指向“新建”，再单击“服务器注册”。  
   
 ### <a name="options"></a>选项  
  **服务器类型**  
@@ -113,7 +113,7 @@ ms.locfileid: "75256231"
  
  使用此选项卡可以指定注册 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]时的选项。  
   
- 若要访问此页，请在“已注册的服务器”中，在  “已注册的服务器”工具栏上单击  “Integration Services”，右键单击任意已注册的服务器组，指向  “新建”，然后单击  “服务器注册”。  
+ 若要访问此页，请在“已注册的服务器”中，在“已注册的服务器”工具栏上单击“Integration Services”，右键单击任意已注册的服务器组，指向“新建”，然后单击“服务器注册”。  
   
 ### <a name="options"></a>选项  
  **服务器类型**  

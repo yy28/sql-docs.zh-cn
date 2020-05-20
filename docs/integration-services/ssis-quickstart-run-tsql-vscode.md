@@ -91,7 +91,7 @@ Visual Studio Code 是支持扩展的代码编辑器，适用于 Windows、macOS
 ## <a name="run-the-t-sql-code"></a>运行 T-SQL 代码
 运行以下 Transact-SQL 代码以便运行 SSIS 包。
 
-1. 在“编辑器”  窗口中，在空查询窗口中输入以下查询。 （此代码是由 SSMS “执行包”  对话框中的“脚本”  选项生成的代码。）
+1. 在“编辑器”  窗口中，在空查询窗口中输入以下查询。 （此代码是由 SSMS “执行包”对话框中的“脚本”选项生成的代码。）
 
 2. 为系统更新 `catalog.create_execution` 存储过程中的参数值。
 

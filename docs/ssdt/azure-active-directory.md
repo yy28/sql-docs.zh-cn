@@ -29,7 +29,7 @@ SQL Server Data Tools (SSDT) 提供了多种 [Azure Active Directory (Azure AD)]
 
 #### <a name="which-azure-sql-products"></a>哪些 Azure SQL 产品？
 
-本文介绍 [Azure 云](https://azure.microsoft.com/)中以下 Azure SQL 产品列表的 Azure AD  ：
+本文介绍 [Azure 云](https://azure.microsoft.com/)中以下 Azure SQL 产品列表的 Azure AD：
 
 - Azure SQL 数据库
 - Azure SQL 数据仓库
@@ -49,7 +49,7 @@ Active Directory 集成身份验证是一种使用 Azure Active Directory (Azure
 
 ## <a name="active-directory-interactive-authentication"></a>Active Directory 交互式身份验证
 
-使用 SSDT 连接到列出的 Azure SQL 产品时，Active Directory 交互式身份验证可用，但仅用于 [.NET Framework 4.7.2](https://docs.microsoft.com/dotnet/api/?view=netframework-4.7.2) 或更高版本  。
+使用 SSDT 连接到列出的 Azure SQL 产品时，Active Directory 交互式身份验证可用，但仅用于 [.NET Framework 4.7.2](https://docs.microsoft.com/dotnet/api/?view=netframework-4.7.2) 或更高版本。
 
 - [下载并安装任何版本的 .NET Framework](https://www.microsoft.com/net/download/all)。
 - [Visual Studio 2017 版本 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) 或更高版本。

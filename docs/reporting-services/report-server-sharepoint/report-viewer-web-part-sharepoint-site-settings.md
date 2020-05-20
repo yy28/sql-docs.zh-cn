@@ -28,7 +28,7 @@ ms.locfileid: "77256802"
 
     ![齿轮图标中的“网站设置”。](media/sharepoint-site-settings.png)
 
-2. 单击“Reporting Services”  网站设置组中的“报表查看器 Web 部件设置”  。
+2. 单击“Reporting Services”网站设置组中的“报表查看器 Web 部件设置”。
 
     > [!NOTE]
     > 还可通过直接导航到 `<site>/_layouts/15/ReportViewerWebPart/ReportViewerWebPartSettings.aspx` 访问网站设置

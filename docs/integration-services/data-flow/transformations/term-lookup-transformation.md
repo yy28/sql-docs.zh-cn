@@ -127,7 +127,7 @@ ms.locfileid: "71291205"
  使用 [配置错误输出](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 对话框可以为导致错误的行指定错误处理方式选项。  
   
 ## <a name="term-lookup-transformation-editor-reference-table-tab"></a>字词查找转换编辑器（“引用表”选项卡）
-  可以使用“字词查找转换编辑器”  对话框的“引用表”  选项卡指定到引用（查找）表的连接。  
+  可以使用“字词查找转换编辑器”对话框的“引用表”选项卡指定到引用（查找）表的连接。  
   
 ### <a name="options"></a>选项  
  **“无缓存”**  

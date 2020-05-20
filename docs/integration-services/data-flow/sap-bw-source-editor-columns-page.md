@@ -24,7 +24,7 @@ ms.locfileid: "71291850"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  使用“SAP BW 源编辑器”  的“列”  页将输出列映射到每个外部（源）列。  
+  使用“SAP BW 源编辑器”的“列”页将输出列映射到每个外部（源）列。  
   
  若要了解 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 源组件的详细信息，请参阅 [SAP BW 源](../../integration-services/data-flow/sap-bw-source.md)。  
   

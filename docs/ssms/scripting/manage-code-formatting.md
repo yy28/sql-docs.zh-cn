@@ -123,9 +123,9 @@ ms.locfileid: "78261856"
   
 1.  选择要转换的文本。  
   
-2.  若要将文本转换为大写，请按 Ctrl+Shift+U，或单击“编辑”  菜单的“高级”  子菜单上的“转换为大写”  。  
+2.  若要将文本转换为大写，请按 Ctrl+Shift+U，或单击“编辑”菜单的“高级”子菜单上的“转换为大写”。  
   
-3.  若要将文本转换为小写，请按 Ctrl+Shift+L，或单击“编辑”  菜单的“高级”  子菜单上的“转换为小写”  。  
+3.  若要将文本转换为小写，请按 Ctrl+Shift+L，或单击“编辑”菜单的“高级”子菜单上的“转换为小写”。  
   
 > [!NOTE]  
 >  有关键盘快捷键的完整列表，请参阅 [SQL Server Management Studio 键盘快捷键](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)。  

@@ -149,7 +149,7 @@ ms.locfileid: "75242667"
   
     ```  
   
-    你将从基类 [DeploymentPlanContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute.aspx) 重写 [OnExecute](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.aspx) 方法，该基类是 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 和 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) 的基类。 将向 OnExecute 方法传递一个 [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) 对象，该对象提供对任何指定参数、源和目标数据库模型、部署计划以及部署选项的访问权。 在此示例中，我们获取了部署计划和目标数据库名称。  
+    你将从基类 [DeploymentPlanContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.aspx) 重写 [OnExecute](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute.aspx) 方法，该基类是 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 和 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) 的基类。 将向 OnExecute 方法传递一个 [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) 对象，该对象提供对任何指定参数、源和目标数据库模型、部署计划以及部署选项的访问权。 在此示例中，我们获取了部署计划和目标数据库名称。  
   
 2.  现在，将正文的开头添加到 OnExecute 方法：  
   

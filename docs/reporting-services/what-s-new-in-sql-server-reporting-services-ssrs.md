@@ -50,7 +50,7 @@ ms.locfileid: "77079606"
 
 ### <a name="custom-headers"></a>自定义标头
 
-设置与指定的正则表达式模式匹配的所有 URL 的标头值。 用户可以将自定义标头值更新为有效的 XML，以设置所选请求 URL 的标头值。 管理员可以在 XML 中添加任意数量的标头。 有关详细信息，请参阅“服务器属性高级”  页中的[自定义标头](tools/server-properties-advanced-page-reporting-services.md#customheaders)。
+设置与指定的正则表达式模式匹配的所有 URL 的标头值。 用户可以将自定义标头值更新为有效的 XML，以设置所选请求 URL 的标头值。 管理员可以在 XML 中添加任意数量的标头。 有关详细信息，请参阅“服务器属性高级”页中的[自定义标头](tools/server-properties-advanced-page-reporting-services.md#customheaders)。
 
 ### <a name="transparent-database-encryption"></a>透明数据库加密
 
@@ -68,7 +68,7 @@ SQL Server 2019 现支持适用于企业版和标准版的 SSRS 目录数据库�
 
 **下载** ![下载](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "下载")
 
-若要下载 SQL Server 2017 Reporting Services，请转到 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=55252)  。
+若要下载 SQL Server 2017 Reporting Services，请转到 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=55252)。
 
 ### <a name="comments-on-reports"></a>注释报表
 

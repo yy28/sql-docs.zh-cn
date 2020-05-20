@@ -56,9 +56,9 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePo
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
 ### <a name="sharepoint-mode"></a>SharePoint 模式 
-“报表服务器安装选项”页中只有一个用于 SharePoint 模式的选项（“仅安装”）   。 此选项安装所有 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件和 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共享服务。 下一步是通过以下某个方式至少创建一个 SSRS 服务应用程序：  
+“报表服务器安装选项”页中只有一个用于 SharePoint 模式的选项（“仅安装”） 。 此选项安装所有 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件和 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共享服务。 下一步是通过以下某个方式至少创建一个 SSRS 服务应用程序：  
   
-- 转到 SharePoint Server 的管理中心，创建 SSRS 服务应用程序。 有关详细信息，请参阅[在 SharePoint 模式下安装第一个报表服务器](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)中的“创建服务应用程序”部分  。  
+- 转到 SharePoint Server 的管理中心，创建 SSRS 服务应用程序。 有关详细信息，请参阅[在 SharePoint 模式下安装第一个报表服务器](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)中的“创建服务应用程序”部分。  
   
 - 使用 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell cmdlet 创建服务应用程序和报表服务器数据库。 有关详细信息，请参阅[用于 Reporting Services SharePoint 模式的 PowerShell cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md) 主题中创建服务应用程序的示例。  
 

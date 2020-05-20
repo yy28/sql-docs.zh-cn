@@ -37,7 +37,7 @@ ms.locfileid: "74191074"
 
 ::: moniker range="=azuresqldb-current"
 > [!NOTE]
-> 在 Azure SQL 数据库中，可以通过先删除某个库，然后再使用 sqlmlutils 安装更改的版本来更改此库  。 有关 sqlmlutils 的详细信息，请参阅[使用 sqlmlutils 添加包](/azure/sql-database/sql-database-machine-learning-services-add-r-packages#add-a-package-with-sqlmlutils)  。
+> 在 Azure SQL 数据库中，可以通过先删除某个库，然后再使用 sqlmlutils 安装更改的版本来更改此库  。 有关 sqlmlutils 的详细信息，请参阅[使用 sqlmlutils 添加包](/azure/sql-database/sql-database-machine-learning-services-add-r-packages#add-a-package-with-sqlmlutils)。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -197,7 +197,7 @@ WITH ( LANGUAGE = 'R' )
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **language**
 
-指定包的语言。 该值可以是 R、Python 或外部语言的名称（请参阅[创建外部语言](create-external-language-transact-sql.md)）   。
+指定包的语言。 该值可以是 R、Python 或外部语言的名称（请参阅[创建外部语言](create-external-language-transact-sql.md)） 。
 ::: moniker-end
 
 ## <a name="remarks"></a>备注

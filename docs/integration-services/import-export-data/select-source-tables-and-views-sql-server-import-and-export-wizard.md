@@ -29,7 +29,7 @@ ms.locfileid: "71285134"
 > 如果必须复制多个 SQL Server 数据库或 SQL Server 数据库对象（而非表和视图），请使用复制数据库向导，而不是使用导入和导出向导。 有关详细信息，请参阅 [使用复制数据库向导](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
   
 ## <a name="screen-shot---if-youre-going-to-copy-tables"></a>屏幕截图 — 如果正准备复制表  
- 以下屏幕截图显示一个示例，示例内容为之前在“指定表复制或查询”  页上选择“从一个或多个表或视图复制数据”  选项时，向导的“选择源表和视图”  页。 在列表中，可以看到数据源中可用的所有表和视图。
+ 以下屏幕截图显示一个示例，示例内容为之前在“指定表复制或查询”页上选择“从一个或多个表或视图复制数据”选项时，向导的“选择源表和视图”页。 在列表中，可以看到数据源中可用的所有表和视图。
  
 在此示例中，“源”  列表包含 AdventureWorks 示例数据库中的所有表。 所选的行显示用户要将 Sales.Customer  表从源复制到目标上的 Sales.CustomerNew  表。 
    

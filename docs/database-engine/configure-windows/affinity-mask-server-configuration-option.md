@@ -116,7 +116,7 @@ GO
 |127|01111111|0、1、2、3、4、5 和 6|  
 |255|11111111|0、1、2、3、4、5、6 和 7|  
   
- affinity mask 选项是一个高级选项。 如果使用 sp_configure 系统存储过程来更改该设置，则仅当“显示高级选项”  设置为 1 时，才可以更改 **affinity mask**。 执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE 命令后，新的设置将立即生效，且不需要重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
+ affinity mask 选项是一个高级选项。 如果使用 sp_configure 系统存储过程来更改该设置，则仅当“显示高级选项”设置为 1 时，才可以更改 **affinity mask**。 执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE 命令后，新的设置将立即生效，且不需要重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
 ## <a name="non-uniform-memory-access-numa"></a>非一致性内存访问 (NUMA)  
  当使用基于硬件的非一致性内存访问 (NUMA) 并设置了关联掩码时，节点中的每个计划程序都将关联到它自己的 CPU。 未设置关联掩码时，每个计划程序都关联到 NUMA 节点内的 CPU 组，映射到 NUMA 节点 N1 的计划程序可对节点中的任何 CPU 计划工作，但是不能对与其他节点关联的 CPU 计划工作。  

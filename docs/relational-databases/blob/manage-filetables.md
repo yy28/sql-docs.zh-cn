@@ -192,7 +192,7 @@ GO
  FileTable 持有的大多数锁与应用程序打开的文件相对应。  
   
  **确定打开的文件和关联锁**  
- 将动态管理视图 **sys.dm_tran_locks (Transact SQL)** 中的 [request_owner_id](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) 字段与 **sys.dm_filestream_non_transacted_handles (Transact SQL)** 中的 [fcb_id](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) 字段进行联接。 在某些情况下，锁并不对应单个打开的文件句柄。  
+ 将动态管理视图 [sys.dm_tran_locks (Transact SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) 中的 **request_owner_id** 字段与 [sys.dm_filestream_non_transacted_handles (Transact SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)中的 **fcb_id** 字段进行联接。 在某些情况下，锁并不对应单个打开的文件句柄。  
   
 ```sql  
 SELECT opened_file_name  

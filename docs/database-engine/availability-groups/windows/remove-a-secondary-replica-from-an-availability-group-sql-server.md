@@ -69,7 +69,7 @@ ms.locfileid: "68014382"
   
      其中，group_name  为可用性组的名称，instance_name  为该次要副本所在的服务器实例。  
   
-     下面的示例将次要副本从 *MyAG* 可用性组中删除。 目标次要副本位于名为 COMPUTER02  的计算机上的服务器实例（名为 HADR_INSTANCE  ）上。  
+     下面的示例将次要副本从 *MyAG* 可用性组中删除。 目标次要副本位于名为 COMPUTER02 的计算机上的服务器实例（名为 HADR_INSTANCE）上。  
   
     ```  
     ALTER AVAILABILITY GROUP MyAG REMOVE REPLICA ON 'COMPUTER02\HADR_INSTANCE';  

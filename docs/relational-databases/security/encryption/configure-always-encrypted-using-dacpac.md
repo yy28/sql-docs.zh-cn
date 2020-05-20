@@ -22,7 +22,7 @@ ms.locfileid: "73595742"
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>使用 Always Encrypted 和 DAC 包配置列加密 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[数据层应用程序 (DAC) 包](../../data-tier-applications/data-tier-applications.md)（也称为 DACPAC）是 SQL Server 数据库部署的一个可移植单元，它定义了所有 SQL Server 对象，包括表和表中的列。 将 DACPAC 发布到数据库时（使用 DACPAC 升级数据库），目标数据库的架构将会更新以匹配 DACPAC 中的架构。 可以使用 SQL Server Management Studio、[PowerShell](../../data-tier-applications/upgrade-a-data-tier-application.md#UsingDACUpgradeWizard) 或 [sqlpackage](../../data-tier-applications/upgrade-a-data-tier-application.md#UpgradeDACPowerShell) 中的[升级数据层应用程序向导](../../../tools/sqlpackage.md#publish-parameters-properties-and-sqlcmd-variables)来发布 DACPAC。
+[数据层应用程序 (DAC) 包](../../data-tier-applications/data-tier-applications.md)（也称为 DACPAC）是 SQL Server 数据库部署的一个可移植单元，它定义了所有 SQL Server 对象，包括表和表中的列。 将 DACPAC 发布到数据库时（使用 DACPAC 升级数据库），目标数据库的架构将会更新以匹配 DACPAC 中的架构。 可以使用 SQL Server Management Studio、[PowerShell](../../data-tier-applications/upgrade-a-data-tier-application.md#UpgradeDACPowerShell) 或 [sqlpackage](../../../tools/sqlpackage.md#publish-parameters-properties-and-sqlcmd-variables) 中的[升级数据层应用程序向导](../../data-tier-applications/upgrade-a-data-tier-application.md#UsingDACUpgradeWizard)来发布 DACPAC。
 
 本文介绍了在 DACPAC 或/和目标数据库包含受 [Always Encrypted](always-encrypted-database-engine.md) 保护的列时升级数据库的特殊注意事项。 如果 DACPAC 中列的加密方案与目标数据库中现有列的加密方案不同，则发布 DACPAC 将导致对该列中存储的数据进行加密、解密或重新加密。 有关详细信息，请参阅下表。
 

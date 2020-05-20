@@ -22,7 +22,7 @@ ms.locfileid: "75258002"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>“索引列”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用此对话框可为索引选择列并设置它们的排序顺序。 一个索引可以使用一个或多个列，并且可以按升序或降序对每个列进行排序。 若要访问此对话框，请在“索引/键”  对话框中，单击“常规”  部分中的“列”  行的省略号按钮。  
+使用此对话框可为索引选择列并设置它们的排序顺序。 一个索引可以使用一个或多个列，并且可以按升序或降序对每个列进行排序。 若要访问此对话框，请在“索引/键”对话框中，单击“常规”部分中的“列”行的省略号按钮。  
   
 ## <a name="options"></a>选项  
 **列名称**  

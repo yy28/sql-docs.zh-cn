@@ -30,7 +30,7 @@ ms.locfileid: "68018889"
   
 -   如果 INSERT 语句设置了 **name**、 **path_locator**、 **parent_path_locator**或文件属性，则强制执行系统定义的约束。  
   
--   该应用程序可以通过提供指向 **GetPathLocator (Transact-SQL)** 函数的文件系统路径，来获取文件或目录的 [path_locator](../../relational-databases/system-functions/getpathlocator-transact-sql.md)。  
+-   该应用程序可以通过提供指向 [GetPathLocator (Transact-SQL)](../../relational-databases/system-functions/getpathlocator-transact-sql.md) 函数的文件系统路径，来获取文件或目录的 **path_locator**。  
   
 ##  <a name="update-operations-on-filetables"></a><a name="BasicsUpdate"></a> FileTable 上的 UPDATE 操作  
  下列注意事项适用于 FileTable 上的 **UPDATE** 操作：  

@@ -36,7 +36,7 @@ ms.locfileid: "75558012"
   
 #### <a name="to-view-the-properties-of-all-policies-on-an-object"></a>查看对象的所有策略的属性  
   
-1.  在对象资源管理器中，右键单击某个服务器、服务器对象、数据库或数据库对象，指向“策略”  ，然后选择“查看”  。 若要深入了解“查看策略 - object_name”对话框中的可用选项息，请参阅[查看策略对话框](../../relational-databases/policy-based-management/view-policies-dialog-box.md)   。  
+1.  在对象资源管理器中，右键单击某个服务器、服务器对象、数据库或数据库对象，指向“策略”  ，然后选择“查看”  。 若要深入了解“查看策略 - object_name”对话框中的可用选项息，请参阅[查看策略对话框](../../relational-databases/policy-based-management/view-policies-dialog-box.md)。  
   
 2.   完成后，单击“关闭”。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "75558012"
   
 4.  单击加号以便展开 **“策略”** 文件夹。  
   
-5.  右键单击要查看或修改的策略，然后选择“属性”  。 若要深入了解“打开策略 - policy_name”对话框中的可用选项，请参阅[创建新策略或打开策略对话框，“常规”页](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md)和[创建新策略或打开策略对话框，“说明”页](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)   。  
+5.  右键单击要查看或修改的策略，然后选择“属性”  。 若要深入了解“打开策略 - policy_name”对话框中的可用选项，请参阅[创建新策略或打开策略对话框，“常规”页](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md)和[创建新策略或打开策略对话框，“说明”页](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)。  
   
 6.  完成后，单击 **“确定”** 。  
   

@@ -38,7 +38,7 @@ ms.locfileid: "71296919"
 ## <a name="script-task-development-environment"></a>脚本任务开发环境  
  脚本任务将 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 用作脚本自身的开发环境。  
   
- 脚本代码以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写。 在“脚本任务编辑器”  中设置 **ScriptLanguage** 属性可指定脚本语言。 如果您倾向于使用其他编程语言，您可以用您选择的语言开发自定义程序集，然后通过脚本任务中的代码调用其功能。  
+ 脚本代码以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写。 在“脚本任务编辑器”中设置 **ScriptLanguage** 属性可指定脚本语言。 如果您倾向于使用其他编程语言，您可以用您选择的语言开发自定义程序集，然后通过脚本任务中的代码调用其功能。  
   
  您在脚本任务中创建的脚本存储在包定义中。 由于没有单独的脚本文件， 因此，使用脚本任务不会影响包部署。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "71296919"
   
 -   如果脚本任务配置为 [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] 编程语言，则 **ScriptMain** 类有一个公共子例程 **Main**。 **ScriptMain.Main** 子例程是运行脚本任务时运行时所调用的方法。  
   
-     默认情况下，新脚本的 **Main** 子例程中只有一行代码：`Dts.TaskResult = ScriptResults.Success`。 此代码行通知运行库任务运行成功。 **从脚本任务返回结果**中介绍了 [Dts.TaskResult](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md) 属性。  
+     默认情况下，新脚本的 **Main** 子例程中只有一行代码：`Dts.TaskResult = ScriptResults.Success`。 此代码行通知运行库任务运行成功。 [从脚本任务返回结果](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md)中介绍了 **Dts.TaskResult** 属性。  
   
 -   如果脚本任务配置为 Visual C# 编程语言，则 **ScriptMain** 类有一个公共方法：**Main**。 此方法在脚本任务运行时调用。  
   

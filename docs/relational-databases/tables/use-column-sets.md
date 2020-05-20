@@ -28,7 +28,7 @@ ms.locfileid: "71326131"
   
  当表中有很多列，且分别对这些列进行操作很烦琐时，应考虑使用列集。 当应用程序通过对具有很多列的表使用列集来选择和插入数据时，可能会在某种程度上改进性能。 但是，当对表中的列定义很多索引时，列集的性能则会下降。 这是因为执行计划所需的内存量增加。  
   
- 若要定义列集，请在 *CREATE TABLE* 或 [ALTER TABLE](../../t-sql/statements/create-table-transact-sql.md) 语句中使用 [<column_set_name>](../../t-sql/statements/alter-table-transact-sql.md) FOR ALL_SPARSE_COLUMNS 关键字。  
+ 若要定义列集，请在 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 或 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 语句中使用 *<column_set_name>* FOR ALL_SPARSE_COLUMNS 关键字。  
   
 ## <a name="guidelines-for-using-column-sets"></a>列集的使用准则  
  使用列集时，请考虑以下准则：  

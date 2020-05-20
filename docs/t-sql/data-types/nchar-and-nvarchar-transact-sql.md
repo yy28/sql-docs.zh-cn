@@ -30,13 +30,13 @@ ms.locfileid: "68354596"
   
 ## <a name="arguments"></a>参数  
 **nchar** [ ( n ) ]  
-固定大小字符串数据。 n 用于定义字符串大小（以双字节为单位），并且它必须为 1 到 4,000 之间的值  。 存储大小为 n  字节的两倍。 对于 [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 编码，存储大小为 n 个字节的两倍，并且可存储的字符数也为 n。   对于 UTF-16 编码，存储大小仍为 n 个字节的两倍，但可存储的字符数可能小于 n，因为补充字符使用两个双字节（也称为[代理项对](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)）。   nchar 的 ISO 同义词是 national char 和 national character    。
+固定大小字符串数据。 n 用于定义字符串大小（以双字节为单位），并且它必须为 1 到 4,000 之间的值  。 存储大小为 n  字节的两倍。 对于 [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 编码，存储大小为 n 个字节的两倍，并且可存储的字符数也为 n。   对于 UTF-16 编码，存储大小仍为 n 个字节的两倍，但可存储的字符数可能小于 n，因为补充字符使用两个双字节（也称为[代理项对](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)）。  nchar 的 ISO 同义词是 national char 和 national character    。
   
 **nvarchar** [ ( n | **max** ) ]  
-可变大小字符串数据。 n 用于定义字符串大小（以双字节为单位），并且它可能为 1 到 4,000 之间的值  。 max 指示最大存储大小是 2^30-1 个字符 (2 GB)  。 存储大小为 n  字节的两倍 + 2 个字节。 对于 [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 编码，存储大小为 n 个字节的两倍 + 2 个字节，并且可存储的字符数也为 n。   对于 UTF-16 编码，存储大小仍为 n 个字节的两倍 + 2 个字节，但可存储的字符数可能小于 n，因为补充字符使用两个双字节（也称为[代理项对](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)）。   nvarchar 的 ISO 同义词是 national char varying 和 national character varying    。
+可变大小字符串数据。 n 用于定义字符串大小（以双字节为单位），并且它可能为 1 到 4,000 之间的值  。 max 指示最大存储大小是 2^30-1 个字符 (2 GB)  。 存储大小为 n  字节的两倍 + 2 个字节。 对于 [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 编码，存储大小为 n 个字节的两倍 + 2 个字节，并且可存储的字符数也为 n。   对于 UTF-16 编码，存储大小仍为 n 个字节的两倍 + 2 个字节，但可存储的字符数可能小于 n，因为补充字符使用两个双字节（也称为[代理项对](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)）。  nvarchar 的 ISO 同义词是 national char varying 和 national character varying    。
   
 ## <a name="remarks"></a>备注  
-一个常见误解是，认为在 [NCHAR(n) 和 NVARCHAR(n)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，n 定义字符数    。 但在 [NCHAR(n) 和 NVARCHAR(n)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，n 定义字符串的长度（以双字节为单位）(0-4,000)     。 n 不会定义可存储的字符数  。 这类似于 [CHAR(n) 和 VARCHAR(n)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 的定义   。   
+一个常见误解是，认为在 [NCHAR(n) 和 NVARCHAR(n)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，n 定义字符数  。 但在 [NCHAR(n) 和 NVARCHAR(n)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 中，n 定义字符串的长度（以双字节为单位）(0-4,000)  。 n 不会定义可存储的字符数  。 这类似于 [CHAR(n) 和 VARCHAR(n)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 的定义 。   
 出现此误解的原因是，使用在 Unicode 范围 0-65,535 中定义的字符时，每个双字节可以存储一个字符。 但是，在较高的 Unicode 范围 (65,536-1,114,111) 中，一个字符可能使用两个双字节。 例如，在定义为 NCHAR(10) 的列中，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 可以存储使用一个双字节（Unicode 范围 0-65,535）的 10 个字符，但在使用两个双字节（Unicode 范围 65,536-1,114,111）时，将不超过 10 个字符。 有关 Unicode 存储和字符范围的详细信息，请参阅 [UTF-8 与 UTF-16 之间的存储差异](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences)。     
 
 如果没有在数据定义或变量声明语句中指定 n  ，则默认长度为 1。 如果没有使用 CAST 函数指定 n  ，则默认长度为 30。

@@ -64,7 +64,7 @@ ms.locfileid: "68048715"
   
 11. 在 **“空间”** 页上，指定要用于索引的空间属性的值。  
   
-     在对类型为“geometry”的列创建索引时，必须指定范围框的（X-min  、  Y-min）和（X-max  、  Y-max）坐标。        对于“geography”  类型列的索引，当你指定“地理网格”  分割方案后，边界框字段变为只读状态，因为地理网格分割不使用边界框。  
+     在对类型为“geometry”的列创建索引时，必须指定范围框的（X-min、Y-min）和（X-max、 Y-max）坐标。        对于“geography”  类型列的索引，当你指定“地理网格”  分割方案后，边界框字段变为只读状态，因为地理网格分割不使用边界框。  
   
      您还可以指定任意级别的分割方案的 **“每个对象的单元数”** 字段和网格密度的非默认值。 对于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ，每个对象的默认单元数为 16；对于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或更高版本，则为 8。对于 **，默认网格密度为** “中” [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。  
   

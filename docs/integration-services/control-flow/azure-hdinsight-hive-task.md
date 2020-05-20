@@ -29,7 +29,7 @@ ms.locfileid: "71294292"
      
 若要添加“Azure HDInsight Hive 任务”  ，可将其拖放到 SSIS 设计器，然后双击或右键单击“编辑”  ，以查看以下“Azure HDInsight Hive 任务编辑器”  对话框。  
   
-Azure HDInsight Hive 任务是[适用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)组件  。
+Azure HDInsight Hive 任务是[适用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)组件。
   
  以下列表介绍了此对话框中的字段。  
   

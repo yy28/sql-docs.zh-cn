@@ -69,7 +69,7 @@ ms.locfileid: "70148835"
 |**datetimeoffset(7)**|(34,7)|10|5-7|  
   
 ## <a name="supported-string-literal-formats-for-datetimeoffset"></a>datetimeoffset 支持的字符串文字格式
-下表列出了 datetimeoffset 支持的 ISO 8601 字符串文字格式  。 有关 datetimeoffset 日期和时间部分的字母、数值、未分隔的的字符串文字格式和时间格式的信息，请参阅 [date (Transact-SQL)](../../t-sql/data-types/date-transact-sql.md) 和 [time (Transact-SQL)](../../t-sql/data-types/time-transact-sql.md)  。
+下表列出了 datetimeoffset 支持的 ISO 8601 字符串文字格式  。 有关 datetimeoffset 日期和时间部分的字母、数值、未分隔的的字符串文字格式和时间格式的信息，请参阅 [date (Transact-SQL)](../../t-sql/data-types/date-transact-sql.md) 和 [time (Transact-SQL)](../../t-sql/data-types/time-transact-sql.md)。
   
 |ISO 8601|说明|  
 |---|---|
@@ -92,7 +92,7 @@ ms.locfileid: "70148835"
   
 对于 datetimeoffset 类型，在插入、更新、转换或赋值操作中将验证 UTC 和本地（相对于一致的或转换的时区偏移量）datetime 值   。 如果检测到任何无效的 UTC 或本地（相对于一致的或转换的时区偏移量）datetime 值，将引发一个无效值错误  。 例如，9999-12-31 10:10:00 在 UTC 中有效，但在本地时间中会溢出时区偏移量 +13:50。
   
-若要将日期转换为目标时区中的相应 datetimeoffset 值，请参阅 [AT TIME ZONE (Transact SQL)](../../t-sql/queries/at-time-zone-transact-sql.md)  。
+若要将日期转换为目标时区中的相应 datetimeoffset 值，请参阅 [AT TIME ZONE (Transact SQL)](../../t-sql/queries/at-time-zone-transact-sql.md)。
   
 ## <a name="ansi-and-iso-8601-compliance"></a>对 ANSI 和 ISO 8601 的遵从性  
 [date](../../t-sql/data-types/date-transact-sql.md) 和 [time](../../t-sql/data-types/time-transact-sql.md) 主题的“对 ANSI 和 ISO 8601 的遵从性”部分也适用于 datetimeoffset  。

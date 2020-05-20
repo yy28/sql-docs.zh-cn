@@ -34,11 +34,11 @@ ms.locfileid: "67989026"
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 允许应用程序执行异步数据库操作。 异步处理将使方法能够立即返回，而不会阻塞调用线程。 这使得多线程机制能提供更强大的功能和灵活性，而不需要开发人员显式创建线程或处理同步。 应用程序将在初始化数据库连接时或初始化由执行命令所生成的结果时请求异步处理。  
   
 ## <a name="opening-and-closing-a-database-connection"></a>打开和关闭数据库连接  
- 使用 适用于 SQL Server 的 OLE DB 驱动程序时，按设计以异步方式初始化数据源对象的应用程序可在调用 IDBInitialize::Initialize 之前，设置 DBPROP_INIT_ASYNCH 属性中的 DBPROPVAL_ASYNCH_INITIALIZE 位  。 设置此数据时，提供程序立即通过对 Initialize 的调用返回值。如果操作立即完成，则返回 S_OK；如果初始化以异步方式继续进行，则返回 DB_S_ASYNCHRONOUS  。 应用程序可查询数据源对象的 IDBAsynchStatus 或 [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md) 接口，然后调用 IDBAsynchStatus::GetStatus 或 [ISSAsynchStatus::WaitForAsynchCompletion](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md)，从而获得初始化的状态   。  
+ 使用 适用于 SQL Server 的 OLE DB 驱动程序时，按设计以异步方式初始化数据源对象的应用程序可在调用 IDBInitialize::Initialize 之前，设置 DBPROP_INIT_ASYNCH 属性中的 DBPROPVAL_ASYNCH_INITIALIZE 位  。 设置此数据时，提供程序立即通过对 Initialize 的调用返回值。如果操作立即完成，则返回 S_OK；如果初始化以异步方式继续进行，则返回 DB_S_ASYNCHRONOUS  。 应用程序可查询数据源对象的 IDBAsynchStatus 或 [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md) 接口，然后调用 IDBAsynchStatus::GetStatus 或 [ISSAsynchStatus::WaitForAsynchCompletion](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md)，从而获得初始化的状态 。  
   
  此外，SSPROP_ISSAsynchStatus 属性已添加到 DBPROPSET_SQLSERVERROWSET 属性集。 支持 **ISSAsynchStatus** 接口的提供程序必须使用值 VARIANT_TRUE 实现此属性。  
   
- 可调用 IDBAsynchStatus::Abort 或 [ISSAsynchStatus::Abort](../../oledb/ole-db-interfaces/issasynchstatus-abort-ole-db.md) 来取消 Initialize 异步调用   。 使用者必须显式请求异步数据源初始化。 否则，必须等到数据源对象完全初始化之后，IDBInitialize::Initialize 才返回值  。  
+ 可调用 IDBAsynchStatus::Abort 或 [ISSAsynchStatus::Abort](../../oledb/ole-db-interfaces/issasynchstatus-abort-ole-db.md) 来取消 Initialize 异步调用 。 使用者必须显式请求异步数据源初始化。 否则，必须等到数据源对象完全初始化之后，IDBInitialize::Initialize 才返回值  。  
   
 > [!NOTE]  
 >  连接池使用的数据源对象无法在适用于 SQL Server 的 OLE DB 驱动程序中调用 ISSAsynchStatus 接口  。 ISSAsynchStatus 接口不对入池数据源对象公开  。  

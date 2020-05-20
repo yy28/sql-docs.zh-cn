@@ -44,7 +44,7 @@ ms.locfileid: "68042497"
  CLR 返回类型：**SqlChars**  
   
 ## <a name="remarks"></a>备注  
- geography 实例的 OGC 类型可通过调用 [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md) 来确定  。  
+ geography 实例的 OGC 类型可通过调用 [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md) 来确定。  
   
  在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，服务器上可能返回的结果集已扩展到 FullGlobe 实例  。  
   

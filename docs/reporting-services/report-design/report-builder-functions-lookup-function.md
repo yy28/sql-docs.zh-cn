@@ -57,7 +57,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   返回结果表达式值。  
   
- 若要为单个名称或键字段检索多个值（具有 1 对多关系），请使用[LookupSet 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)。 若要为一组值调用 Lookup，请使用 [Multilookup 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-multilookup-function.md)  。  
+ 若要为单个名称或键字段检索多个值（具有 1 对多关系），请使用[LookupSet 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)。 若要为一组值调用 Lookup，请使用 [Multilookup 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-multilookup-function.md)。  
   
  存在以下限制：  
   

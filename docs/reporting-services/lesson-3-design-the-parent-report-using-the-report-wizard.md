@@ -28,7 +28,7 @@ ms.locfileid: "62651273"
   
     随后将启动报表向导。  
   
-4.  在“数据集属性”  页上的“数据源”  框中，选择在以下课程中创建的 DataSet1：  [第 2 课：定义用于父报表的数据连接和数据表](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)。  
+4.  在“数据集属性”页上的“数据源”框中，选择在[第 2 课：定义用于父报表的数据连接和数据表](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)中创建的 DataSet1  。  
   
     随后将自动用你在上面创建的 DataTable 更新“可用数据集”框   。  
   

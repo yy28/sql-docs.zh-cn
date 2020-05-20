@@ -149,7 +149,7 @@ ms.locfileid: "77081801"
 |字段|来自查询命令的字段<br /><br /> 计算字段不是数据集定义的一部分|查看字段，但无法对其进行更改<br /><br /> 字段集合是静态的，它基于您向报表中添加共享数据集时所使用的查询。 若要进行更新，请单击 **“数据集属性”** 对话框中的 **“刷新字段”** 。 实际的字段集合可以是定义中当前查询返回的任何集合。<br /><br /> 添加计算字段|  
 |数据集|数据选项，如区分大小写|覆盖实例中的数据选项|  
   
- 要详细了解如何创建数据集，请参阅 [Reporting Services 文档](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)中的 [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](../../reporting-services/tools/reporting-services-tools.md)和 [Reporting Services 工具](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)。  
+ 要详细了解如何创建数据集，请参阅 [Reporting Services 文档](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)中的 [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)和 [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)。  
   
 ##  <a name="filtering-sorting-and-grouping-data-in-a-dataset"></a><a name="SortGroupFilter"></a> 对数据集中的数据进行筛选、排序和分组  
  数据集中的数据来自对外部数据源运行查询命令所获得的结果。 数据扩展插件的查询命令语法确定是否可以对数据进行排序或分组。 在为报表检索数据前，在查询中发生排序和分组。 在为报表检索数据后发生筛选。  

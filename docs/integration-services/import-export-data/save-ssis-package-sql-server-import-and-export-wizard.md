@@ -46,7 +46,7 @@ ms.locfileid: "71296258"
 
 ## <a name="screen-shot---save-the-package-in-sql-server"></a>屏幕截图 - 将包保存在 SQL Server 中
 
- 如果在“保存和运行包”  页选择了“SQL Server”  选项，则以下屏幕截图将显示向导的“保存 SSIS 包”  。 
+ 如果在“保存和运行包”页选择了“SQL Server”选项，则以下屏幕截图将显示向导的“保存 SSIS 包”。 
   
 ![“导入和导出向导”的“保存 SSIS 包”页面](../../integration-services/import-export-data/media/save-package2.png "“导入和导出向导”的“保存 SSIS 包”页面")  
 
@@ -72,7 +72,7 @@ ms.locfileid: "71296258"
     
 ## <a name="screen-shot---save-the-package-in-the-file-system"></a>屏幕截图 - 将包保存在文件系统中
  
-如果选择了“保存并运行包”  页上的“文件系统”  选项，下面的屏幕截图将显示向导的“保存 SSIS 包”  页。 
+如果选择了“保存并运行包”页上的“文件系统”选项，下面的屏幕截图将显示向导的“保存 SSIS 包”页。 
   
 ![“导入和导出向导”的“保存 SSIS 包”页面](../../integration-services/import-export-data/media/save-package1.png "“导入和导出向导”的“保存 SSIS 包”页面")  
 

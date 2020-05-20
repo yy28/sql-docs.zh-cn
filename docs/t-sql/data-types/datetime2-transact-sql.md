@@ -60,7 +60,7 @@ ms.locfileid: "68086771"
 有关数据类型元数据，请参阅 [sys.systypes (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md) 或 [TYPEPROPERTY (Transact-SQL)](../../t-sql/functions/typeproperty-transact-sql.md)。 某些日期和时间数据类型的精度和小数位数是可变的。 若要获取列的精度和小数位数，请参阅 [COLUMNPROPERTY (Transact-SQL)](../../t-sql/functions/columnproperty-transact-sql.md)、[COL_LENGTH (Transact-SQL)](../../t-sql/functions/col-length-transact-sql.md) 或 [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)。
   
 ## <a name="supported-string-literal-formats-for-datetime2"></a>datetime2 支持的字符串文字格式
-以下各表列出了适用于 datetime2 的支持的 ISO 8601 和 ODBC 字符串文字格式  。 有关 datetime2 日期和时间部分的字母、数值、未分隔和时间格式的信息，请参阅 [date (Transact-SQL)](../../t-sql/data-types/date-transact-sql.md) 和 [time (Transact-SQL)](../../t-sql/data-types/time-transact-sql.md)  。
+以下各表列出了适用于 datetime2 的支持的 ISO 8601 和 ODBC 字符串文字格式  。 有关 datetime2 日期和时间部分的字母、数值、未分隔和时间格式的信息，请参阅 [date (Transact-SQL)](../../t-sql/data-types/date-transact-sql.md) 和 [time (Transact-SQL)](../../t-sql/data-types/time-transact-sql.md)。
   
 |ISO 8601|说明|  
 |---|---|

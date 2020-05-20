@@ -20,7 +20,7 @@ ms.locfileid: "77082170"
 # <a name="reporting-services-login-dialog-box-ssrs"></a>“Reporting Services 登录”对话框 (SSRS)
   使用 **“Reporting Services 登录”** 对话框可以提供向报表服务器发布报表时要使用的凭据。  
   
--   **注意** ：如果这是你为项目设置 **TargetServerURL** 部署属性以后首次向报表服务器发布报表，请确保你指定的服务器名类似于 **server** ，而不是 **reports**。 例如， `https://localhost/reportserver`，而不是 `https://localhost/reports`。 在本地服务器上指定 `reports` 目录而不是 `reportserver` 目录将间接打开此对话框。 有关设置 TargetServerURL 的详细信息，请参阅[设置部署属性 (Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)  。  
+-   **注意** ：如果这是你为项目设置 **TargetServerURL** 部署属性以后首次向报表服务器发布报表，请确保你指定的服务器名类似于 **server** ，而不是 **reports**。 例如， `https://localhost/reportserver`，而不是 `https://localhost/reports`。 在本地服务器上指定 `reports` 目录而不是 `reportserver` 目录将间接打开此对话框。 有关设置 TargetServerURL 的详细信息，请参阅[设置部署属性 (Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)。  
   
 ## <a name="options"></a>选项  
  **Server**  

@@ -29,7 +29,7 @@ ms.locfileid: "75755820"
   
 1.  在 Visual Studio 中，请确保 SQL Server 对象资源管理器  处于打开状态。 如果未打开，请单击“视图”  菜单并且选择“SQL Server 对象资源管理器”  。  
   
-2.  右键单击“SQL Server 对象资源管理器”  中的“SQL Server”  节点，然后选择“添加 SQL Server”  。  
+2.  右键单击“SQL Server 对象资源管理器”中的“SQL Server”节点，然后选择“添加 SQL Server”。  
   
 3.  在 **“连接到服务器”** 对话框中，输入您要连接到的服务器实例的 **“服务器名称”** 和您的凭据，然后单击 **“连接”** 。  
   

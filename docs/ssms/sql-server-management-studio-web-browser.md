@@ -25,7 +25,7 @@ ms.locfileid: "75253274"
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 用于托管 [!INCLUDE[msCoName](../includes/msconame_md.md)] Internet Explorer 版本。 此 Web 浏览器使您无需离开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]便可以浏览 URL 并查看 MSDN 库帮助主题。 通过指向“视图”  菜单上的“Web 浏览器”  ，然后单击“显示浏览器”  ，可以访问 Web 浏览器。
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 用于托管 [!INCLUDE[msCoName](../includes/msconame_md.md)] Internet Explorer 版本。 此 Web 浏览器使您无需离开 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]便可以浏览 URL 并查看 MSDN 库帮助主题。 通过指向“视图”菜单上的“Web 浏览器”，然后单击“显示浏览器”，可以访问 Web 浏览器。
 
 ## <a name="see-also"></a>另请参阅
 

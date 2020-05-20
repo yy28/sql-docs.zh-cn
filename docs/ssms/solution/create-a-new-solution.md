@@ -23,7 +23,7 @@ ms.locfileid: "75251930"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 创建项目时，[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 将创建一个解决方案来包含该项目。 一次只能打开一个解决方案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 不允许在项目中创建文件夹。 若要对您的工作进行组织，请创建多个项目。  
   
-若要访问解决方案资源管理器，请单击“视图”  菜单中的“解决方案资源管理器”  。  
+若要访问解决方案资源管理器，请单击“视图”菜单中的“解决方案资源管理器”。  
   
 ### <a name="to-create-a-new-solution-and-project"></a>创建一个新解决方案和项目  
   

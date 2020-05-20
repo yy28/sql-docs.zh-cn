@@ -53,7 +53,7 @@ ms.locfileid: "75242788"
   
 2.  在快捷菜单中，指向“表视图”  ，再单击“修改自定义”  。  
   
-3.  在“列选择”  对话框中，选择从“表视图”  菜单中选择“自定义”  时将要显示的属性。  
+3.  在“列选择”对话框中，选择从“表视图”菜单中选择“自定义”时将要显示的属性。  
   
 ## <a name="see-also"></a>另请参阅  
 [使用数据库关系图 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  

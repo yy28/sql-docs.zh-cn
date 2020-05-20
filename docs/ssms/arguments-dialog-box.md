@@ -22,7 +22,7 @@ ms.locfileid: "75245041"
 ---
 # <a name="arguments-dialog-box"></a>“参数”对话框
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-“参数”  对话框可以为工具指定新参数或现有参数。 如果启动一个外部工具，并且选中了该工具的“外部工具”  对话框中的“提示输入参数”  选项，则会出现此对话框。  
+“参数”  对话框可以为工具指定新参数或现有参数。 如果启动一个外部工具，并且选中了该工具的“外部工具”对话框中的“提示输入参数”选项，则会出现此对话框。  
   
 ## <a name="options"></a>选项  
 **参数**  

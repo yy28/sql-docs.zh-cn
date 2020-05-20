@@ -20,7 +20,7 @@ ms.locfileid: "75306798"
 ---
 # <a name="sql-server-properties-service-tab"></a>SQL Server 属性（“服务”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  使用“MSSQLSERVER 属性”  对话框上的“服务”  选项卡查看或指定下列选项。  
+  使用“MSSQLSERVER 属性”对话框上的“服务”选项卡查看或指定下列选项。  
   
 ## <a name="options"></a>选项  
  **二进制路径**  

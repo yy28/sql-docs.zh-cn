@@ -31,7 +31,7 @@ ms.locfileid: "67993995"
   
  在 pTableID 参数的 uName 联合的 pwszName 成员中，使用者将表名指定为 Unicode 字符串    。 pTableID 的 eKind 成员必须是 DBKIND_NAME   。  
   
- 使用者在 pColumnID  参数的 uName  联合的 pwszName  成员中指明列名。 该列名称为 Unicode 字符串。 pColumnID 的 eKind 成员必须是 DBKIND_NAME   。  
+ 使用者在 pColumnID 参数的 uName 联合的 pwszName 成员中指明列名。 该列名称为 Unicode 字符串。 pColumnID 的 eKind 成员必须是 DBKIND_NAME   。  
   
 ## <a name="example"></a>示例  
   

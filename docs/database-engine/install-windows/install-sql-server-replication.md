@@ -37,7 +37,7 @@ ms.locfileid: "67991046"
 ## <a name="installing-replication-by-using-setup"></a>使用安装程序安装复制  
 **在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  
   
-- 若要安装包括复制管理对象 (RMO) 在内的复制组件，请在安装向导的  “功能选择”页上选择  “SQL Server 复制”。  
+- 若要安装包括复制管理对象 (RMO) 在内的复制组件，请在安装向导的“功能选择”页上选择“SQL Server 复制”。  
   
 ## <a name="installing-replication-from-the-command-prompt"></a>从命令提示符安装复制  
  **在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  

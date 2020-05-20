@@ -21,7 +21,7 @@ ms.locfileid: "71296297"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-本主题介绍如何从 SQL Server 导入和导出向导的“选择数据源”  页或“选择目标”  页连接到 **Microsoft Access** 数据源。
+本主题介绍如何从 SQL Server 导入和导出向导的“选择数据源”页或“选择目标”页连接到 **Microsoft Access** 数据源。
 
 下面的屏幕截图显示到 Microsoft Access 数据库的示例连接。 在此示例中，无需输入用户名和密码，因为目标数据库不使用工作组信息文件。
 
@@ -97,7 +97,7 @@ ms.locfileid: "71296297"
 6.  在每个对话框中都单击“确定”  ，以返回到向导的“选择数据源”  或“选择目标”  页并继续操作。
 
 ## <a name="keep-your-autonumber-values-when-you-export-from-access"></a>从 Access 导出时保留自动编号值
-若要允许将源数据中的现有标识值插入到目标表中的标识列，请选择“列映射”  对话框中的“启用标识插入”  选项。 默认情况下，目标标识列通常不允许用户插入现有值。 若要显示“列映射”  对话框，请在到达向导的“选择源表和源视图”  页时选择“编辑映射”  。 若要查看这些页面，请参阅[选择源表和源视图](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)和[列映射](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)。
+若要允许将源数据中的现有标识值插入到目标表中的标识列，请选择“列映射”对话框中的“启用标识插入”选项。 默认情况下，目标标识列通常不允许用户插入现有值。 若要显示“列映射”对话框，请在到达向导的“选择源表和源视图”页时选择“编辑映射”。 若要查看这些页面，请参阅[选择源表和源视图](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)和[列映射](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)。
 
 如果现有主键位于标识列、自动编号列或等效列中，则通常必须选择此选项以保留现有主键值。 否则目标标识列通常会分配新值。
 

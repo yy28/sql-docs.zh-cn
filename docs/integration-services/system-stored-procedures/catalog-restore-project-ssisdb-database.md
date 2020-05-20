@@ -49,7 +49,7 @@ catalog.restore_project [ @folder_name = ] folder_name
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- 如果找到 project_name  ，则项目详细信息将作为结果的一部分返回为 varbinary(MAX)  。  
+ 如果找到 project_name，则项目详细信息将作为结果的一部分返回为 varbinary(MAX)。  
   
  如果无法将项目还原到指定的文件夹，则返回 NO RESULT SET  。  
   

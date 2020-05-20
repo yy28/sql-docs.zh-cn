@@ -29,13 +29,13 @@ ms.locfileid: "75226763"
   
 ### <a name="to-edit-data-in-a-table-visually-using-the-data-editor"></a>使用数据编辑器以直观的方式编辑表中的数据  
   
-1.  右键单击  “SQL Server 对象资源管理器”中的  “Products”表，然后选择“查看数据”  。  
+1.  右键单击“SQL Server 对象资源管理器”中的“Products”表，然后选择“查看数据”。  
   
 2.  数据编辑器随即启动。 请注意我们在前面的过程中添加到该表的行。  
   
-3.  右键单击  “SQL Server 对象资源管理器”中的  “Fruits”表，然后选择“查看数据”。  
+3.  右键单击“SQL Server 对象资源管理器”中的“Fruits”表，然后选择“查看数据”。  
   
-4.  在数据编辑器中，为  Id 键入  1，为  Perishable 键入  True，然后按 ENTER 键或 TAB 键，将焦点从新行移出以便将其提交到数据库。  
+4.  在数据编辑器中，为 Id 键入 1，为 Perishable 键入 True，然后按 ENTER 键或 TAB 键，将焦点从新行移出以便将其提交到数据库。  
   
 5.  重复上述步骤以便向表中输入  2、  False 和  3、  False。  
   
@@ -43,5 +43,5 @@ ms.locfileid: "75226763"
   
 6.  你可以通过单击工具栏上的“脚本”  按钮，将所做的编辑作为脚本查看。 或者，你可以使用“将脚本保存到文件”  按钮将所做编辑保存到某个 .sql 脚本中以便在以后执行。  
   
-7.  右键单击  “SQL Server 对象资源管理器”中的  “Trade”数据库，然后选择“新建查询”  。 在编辑器中，键入 `select * from dbo.PerishableFruits` 并按下“执行查询”  按钮以便返回 `PerishableFruits` 视图表示的数据。  
+7.  右键单击“SQL Server 对象资源管理器”中的“Trade”数据库，然后选择“新建查询”。 在编辑器中，键入 `select * from dbo.PerishableFruits` 并按下“执行查询”  按钮以便返回 `PerishableFruits` 视图表示的数据。  
   

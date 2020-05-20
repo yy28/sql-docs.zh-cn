@@ -29,7 +29,7 @@ ms.locfileid: "71298403"
      
 若要添加“Azure HDInsight Pig 任务”  ，可将其拖放到 SSIS 设计器，并双击或右键单击该任务，然后单击“编辑”  ，以查看以下“Azure HDInsight Pig 任务编辑器”  对话框。  
   
-“Azure HDInsight Pig 任务”是[适用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)的组件  。
+“Azure HDInsight Pig 任务”是[适用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)的组件。
   
  以下列表介绍了此对话框中的字段。  
   

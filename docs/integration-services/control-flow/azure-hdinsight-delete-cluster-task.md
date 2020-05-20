@@ -27,7 +27,7 @@ ms.locfileid: "71298421"
 
 Azure HDInsight 删除群集任务启用一个 SSIS 包来删除指定的 Azure 订阅和资源组中的一个 Azure HDInsight 群集  。
   
-Azure HDInsight 删除群集任务是[用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)的一个组件  。
+Azure HDInsight 删除群集任务是[用于 Azure 的 SQL Server Integration Services (SSIS) 功能包](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)的一个组件。
   
 > [!NOTE]
 > 删除 HDInsight 群集可能需要 10~20 分钟。  

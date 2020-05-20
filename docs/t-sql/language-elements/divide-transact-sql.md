@@ -42,7 +42,7 @@ dividend / divisor
   
 ## <a name="arguments"></a>参数  
  *被除数*  
- 被除数的数值表达式。 dividend 可以是具有数值数据类型类别中任一数据类型（datetime 和 smalldatetime 数据类型除外）的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)    。  
+ 被除数的数值表达式。 dividend 可以是具有数值数据类型类别中任一数据类型（datetime 和 smalldatetime 数据类型除外）的任何有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md) 。  
   
  *除数*  
  除数的数值表达式。 divisor 可以是具有数值数据类型类别中任一数据类型（datetime 和 smalldatetime 数据类型除外）的任何有效表达式    。  

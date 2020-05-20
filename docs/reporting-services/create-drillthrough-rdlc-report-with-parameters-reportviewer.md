@@ -19,7 +19,7 @@ ms.locfileid: "63194377"
 [钻取](https://technet.microsoft.com/library/ff519554.aspx) 报表是指用户通过单击其他报表中的链接打开的报表。 钻取报表通常包含某原始汇总报表中所包含的某项的详细信息。 本教程将详细介绍以下在 [本地模式报表](report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)中使用参数和查询创建钻取报表的课程。  
   
 ## <a name="requirements"></a>要求  
-若要使用此演练，必须具有访问 **AdventureWorks2014** 示例数据库的权限。 有关如何获取 AdventureWorks2014 示例数据库的详细信息，请参阅 [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases)  （AdventureWorks 示例数据库）。  
+若要使用此演练，必须具有访问 **AdventureWorks2014** 示例数据库的权限。 有关如何获取 AdventureWorks2014 示例数据库的详细信息，请参阅 [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases)（AdventureWorks 示例数据库）。  
   
 此演练假定你熟悉 Transaction-SQL 查询和 ADO.NET [DataSet](https://msdn.microsoft.com/library/system.data.dataset.aspx) 和 [DataTable](https://msdn.microsoft.com/library/system.data.datatable.aspx) 对象。  
   

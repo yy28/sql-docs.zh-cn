@@ -110,7 +110,7 @@ HRESULT GetStatus(
  发生了特定于访问接口的错误。  
   
 ## <a name="remarks"></a>备注  
- ISSAsynchStatus::GetStatus 方法的行为与 IDBAsynchStatus::GetStatus 方法完全类似，不同之处在于如果中止对数据源对象的初始化，前者将返回 E_UNEXPECTED，而不是 DB_E_CANCELED（但是 [ISSAsynchStatus::WaitForAsynchCompletion](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) 将返回 DB_E_CANCELED）   。 这是因为在中止后，数据源对象不会照常处于僵停状态，以便进一步尝试初始化操作。  
+ ISSAsynchStatus::GetStatus 方法的行为与 IDBAsynchStatus::GetStatus 方法完全类似，不同之处在于如果中止对数据源对象的初始化，前者将返回 E_UNEXPECTED，而不是 DB_E_CANCELED（但是 [ISSAsynchStatus::WaitForAsynchCompletion](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) 将返回 DB_E_CANCELED） 。 这是因为在中止后，数据源对象不会照常处于僵停状态，以便进一步尝试初始化操作。  
   
  如果异步初始化或填充行集，则必须支持此方法。  
   

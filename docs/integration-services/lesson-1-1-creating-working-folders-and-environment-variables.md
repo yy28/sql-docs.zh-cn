@@ -52,11 +52,11 @@ ms.locfileid: "71284136"
   
 4.  在“环境变量”  对话框的“系统变量”  框架中，单击“新建”  。  
   
-5.  在“新建系统变量”  对话框中，在“变量名”  框中键入 **DataTransfer**，并在“变量值”  框中键入 **C:\DeploymentTutorial\datatransferconfig.dtsconfig**。  
+5.  在“新建系统变量”对话框中，在“变量名”框中键入 **DataTransfer**，并在“变量值”框中键入 **C:\DeploymentTutorial\datatransferconfig.dtsconfig**。  
   
 6.  单击“确定”。   
   
-7.  再次单击“新建”  ，在“变量名”  框中键入 **LoadXMLData**，并在“变量值”  框中键入 **C:\DeploymentTutorial\loadxmldataconfig.dtsconfig**。  
+7.  再次单击“新建”，在“变量名”框中键入 **LoadXMLData**，并在“变量值”框中键入 **C:\DeploymentTutorial\loadxmldataconfig.dtsconfig**。  
   
 8.  单击“确定”  退出“环境变量”  对话框。  
   
@@ -74,11 +74,11 @@ ms.locfileid: "71284136"
   
 4.  在“环境变量”  对话框的“系统变量”  框架中，单击“新建”  。  
   
-5.  在“新建系统变量”  对话框中，在“变量名”  框中键入 **DataTransfer**，并在“变量值”  框中键入 **C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig**。  
+5.  在“新建系统变量”对话框中，在“变量名”框中键入 **DataTransfer**，并在“变量值”框中键入 **C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig**。  
   
 6.  单击“确定”。   
   
-7.  再次单击“新建”  ，在“变量名”  框中键入 **LoadXMLData**，并在“变量值”  框中键入 **C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig**。  
+7.  再次单击“新建”，在“变量名”框中键入 **LoadXMLData**，并在“变量值”框中键入 **C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig**。  
   
 8.  单击“确定”  退出“环境变量”  对话框。  
   

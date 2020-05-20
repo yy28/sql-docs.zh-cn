@@ -160,7 +160,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- 如果将基础架构更新为使用 datetime2  而非 datetime  ，则使用 sql_variant  并依赖于 datetime  的受限制精度的应用程序在迁移到 OLE DB Driver for SQL Server 时，必须对它们进行更新。  
+ 如果将基础架构更新为使用 datetime2 而非 datetime，则使用 sql_variant 并依赖于 datetime 的受限制精度的应用程序在迁移到 OLE DB Driver for SQL Server 时，必须对它们进行更新。  
   
  还通过添加以下内容，对 SSVARIANT 的访问宏进行了扩展：  
   
@@ -181,7 +181,7 @@ enum SQLVARENUM {
 |DBTYPE_DBTIME2| time(p)|OLE DB Driver for SQL Server 检查 DBCOLUMDESC bScale  成员以确定秒小数部分的精度。|  
 |DBTYPE_DBTIMESTAMPOFFSET| datetimeoffset(p)|OLE DB Driver for SQL Server 检查 DBCOLUMDESC bScale  成员以确定秒小数部分的精度。|  
   
- 应用程序以 wType  指定 DBTYPE_DBTIMESTAMP 时，它可以通过在 pwszTypeName  中提供类型名称来覆盖到 datetime2  的映射。 如果指定 datetime  ，则 bScale  必须为 3。 如果指定 smalldatetime  ，则 bScale  必须为 0。 如果 bScale  与 wType  和 pwszTypeName  不一致，则返回 DB_E_BADSCALE。  
+ 应用程序以 wType 指定 DBTYPE_DBTIMESTAMP 时，它可以通过在 pwszTypeName 中提供类型名称来覆盖到 datetime2 的映射。 如果指定 datetime  ，则 bScale  必须为 3。 如果指定 smalldatetime  ，则 bScale  必须为 0。 如果 bScale  与 wType  和 pwszTypeName  不一致，则返回 DB_E_BADSCALE。  
   
 ## <a name="see-also"></a>另请参阅  
  [日期和时间改进 (OLE DB)](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  

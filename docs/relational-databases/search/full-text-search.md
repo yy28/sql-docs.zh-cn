@@ -162,7 +162,7 @@ ms.locfileid: "72930275"
 |2|Front Reflector Bracket and Reflector Assembly 3|  
 |3|Front Reflector Bracket Installation|  
   
- 例如，下表（显示 Fragment 1）描述对“Document”  表的“Title”  列创建的全文索引的内容。 与该表呈现的信息相比，全文索引包含更多信息。 该表是全文索引的逻辑表示形式，并且仅为演示目的提供。 行以压缩格式存储，以优化磁盘的使用。  
+ 例如，下表（显示 Fragment 1）描述对“Document”表的“Title”列创建的全文索引的内容。 与该表呈现的信息相比，全文索引包含更多信息。 该表是全文索引的逻辑表示形式，并且仅为演示目的提供。 行以压缩格式存储，以优化磁盘的使用。  
   
  注意，数据已从原始文档倒排。 发生数据倒排是因为关键字映射到文档 ID。 因此，全文索引通常称为倒排索引。  
   

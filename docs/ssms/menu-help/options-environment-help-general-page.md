@@ -21,7 +21,7 @@ ms.locfileid: "75252344"
 ---
 # <a name="options-environment---help---general-page"></a>选项（“环境”-“帮助”-“常规”页）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用“选项”对话框可以选择文档集，并确定是在   [!INCLUDE[msCoName](../../includes/msconame_md.md)] 中以内部方式显示主题还是在单独窗口中以外部方式显示主题[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 若要访问此对话框，请单击“工具”  菜单上的“选项”  ，展开“环境”  节点中的“帮助”  ，再单击“常规”  。  
+使用“选项”对话框可以选择文档集，并确定是在   [!INCLUDE[msCoName](../../includes/msconame_md.md)] 中以内部方式显示主题还是在单独窗口中以外部方式显示主题[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 若要访问此对话框，请单击“工具”菜单上的“选项”，展开“环境”节点中的“帮助”，再单击“常规”。  
   
 > [!NOTE]  
 > 重新启动环境之后，在此页上对选项进行的更改才会生效。  

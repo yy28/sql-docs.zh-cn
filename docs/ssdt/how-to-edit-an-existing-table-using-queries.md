@@ -26,7 +26,7 @@ ms.locfileid: "75241407"
   
 ### <a name="to-edit-the-definition-of-an-existing-table"></a>编辑现有表的定义  
   
-1.  在“SQL Server 对象资源管理器”  中展开 Trade  数据库的“表”  节点，然后右键单击 dbo.Suppliers  。  
+1.  在“SQL Server 对象资源管理器”中展开 Trade 数据库的“表”节点，然后右键单击 dbo.Suppliers。  
   
 2.  选择“视图设计器”  以便在表设计器中查看表架构。  
   

@@ -26,7 +26,7 @@ ms.locfileid: "71296963"
 
   连接管理器是一个封装和存储连接特定类型数据源所需信息的便利单元。 有关详细信息，请参阅 [Integration Services (SSIS) 连接](../../../integration-services/connection-manager/integration-services-ssis-connections.md)。  
   
- 单击“脚本转换编辑器”的“连接管理器”页上的“添加”和“删除”按钮，可使现有连接管理器可供源或目标组件中的自定义脚本访问     。 但是，您必须编写自己的自定义代码才能加载或保存数据，并且才有可能打开和关闭与数据源的连接。 有关“脚本转换编辑器”的“连接管理器”页的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)和[脚本转换编辑器（“连接管理器”页）](../../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md)   。  
+ 单击“脚本转换编辑器”的“连接管理器”页上的“添加”和“删除”按钮，可使现有连接管理器可供源或目标组件中的自定义脚本访问     。 但是，您必须编写自己的自定义代码才能加载或保存数据，并且才有可能打开和关闭与数据源的连接。 有关“脚本转换编辑器”的“连接管理器”页的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)和[脚本转换编辑器（“连接管理器”页）](../../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md) 。  
   
  脚本组件在 ComponentWrapper 项目项中创建一个 Connections 集合类，该集合类为每个连接管理器包含一个强类型的取值函数，该取值函数与连接管理器本身同名   。 此集合通过 ScriptMain 类的 Connections 属性公开   。 该取值函数属性返回对作为 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100> 实例的连接管理器的引用。 例如，如果已在对话框的“连接管理器”页中添加名为 `MyADONETConnection` 的连接管理器，则可在脚本中添加以下代码来获取对该连接管理器的引用：  
   

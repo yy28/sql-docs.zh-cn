@@ -46,7 +46,7 @@ ms.locfileid: "75242439"
   
 2.  右键单击“SQL Server 代理”  ，然后选择“属性”  。  
   
-3.  在“SQL Server 代理属性” –**server_name** 对话框的“选择页”下，选择“高级”    。  
+3.  在“SQL Server 代理属性” –_server_name_ 对话框的“选择页”下，选择“高级”  。  
   
 4.  在 **“SQL Server 事件转发”** 下，选中 **“将事件转发到其他服务器”** 复选框。  
   

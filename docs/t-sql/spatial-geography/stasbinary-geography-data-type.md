@@ -44,7 +44,7 @@ ms.locfileid: "68042542"
  CLR 返回类型：**SqlBytes**  
   
 ## <a name="remarks"></a>备注  
- geography 实例的 OGC 类型可通过调用 [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md) 来确定  。  
+ geography 实例的 OGC 类型可通过调用 [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md) 来确定。  
   
 ## <a name="examples"></a>示例  
  下面的示例使用 `STAsBinary()` 根据文本创建一个从 (-122.360, 47.656) 到 (-122.343, 47.656) 的 `LineString``geography` 实例。 然后，它以 WKB 的形式返回结果。  

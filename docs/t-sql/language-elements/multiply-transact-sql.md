@@ -42,7 +42,7 @@ expression * expression
   
 ## <a name="arguments"></a>参数  
  *expression*  
- 数值数据类型类别中任意一种数据类型（[datetime](../../t-sql/language-elements/expressions-transact-sql.md) 和 **smalldatetime** 数据类型除外）的任意有效**表达式**。  
+ 数值数据类型类别中任意一种数据类型（**datetime** 和 **smalldatetime** 数据类型除外）的任意有效[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="result-types"></a>结果类型  
  返回优先级较高的参数的数据类型。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  

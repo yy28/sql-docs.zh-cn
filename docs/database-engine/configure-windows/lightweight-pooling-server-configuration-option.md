@@ -36,7 +36,7 @@ ms.locfileid: "67998039"
   
  将 **lightweight pooling** 设置为 1 将使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 切换到纤程模式计划。 该选项的默认值为 0。  
   
- **lightweight pooling** 选项是一个高级选项。 如果使用 **sp_configure** 系统存储过程来更改该设置，则仅当“显示高级选项”  设置为 1 时才可以更改“轻型池”  。 该设置在服务器重新启动后生效。  
+ **lightweight pooling** 选项是一个高级选项。 如果使用 **sp_configure** 系统存储过程来更改该设置，则仅当“显示高级选项”设置为 1 时才可以更改“轻型池”。 该设置在服务器重新启动后生效。  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows XP 不支持轻型池。 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 完全支持轻型池。  
