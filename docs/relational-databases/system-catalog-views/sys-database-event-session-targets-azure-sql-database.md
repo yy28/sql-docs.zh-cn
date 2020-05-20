@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 ms.assetid: 38d775ee-1fe1-4820-88c6-02b2f875a66b
-author: MightyPen
-ms.author: genemi
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e736adef1648785ec0d037688c340f31a0e1bda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4fb51c6d10928618c3d2172e96730cfb6ed6d9b0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67915101"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823506"
 ---
 # <a name="sysdatabase_event_session_targets-azure-sql-database"></a>sys.database_event_session_targets（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "67915101"
 |target_id|**int**|目标的 ID。 ID 在事件会话对象中是唯一的。 不可为 null。|  
 |name|**sysname**|事件目标的名称。 不可为 null。|  
 |包|**sysname**|包含事件目标的事件包的名称。 不可为 null。|  
-|module|**sysname**|包含事件目标的模块的名称。 不可为 null。|  
+|name|**sysname**|包含事件目标的模块的名称。 不可为 null。|  
   
 ## <a name="permissions"></a>权限  
  要求对服务器具有 VIEW DATABASE STATE 权限。  
@@ -43,7 +43,7 @@ ms.locfileid: "67915101"
   
 ||||  
 |-|-|-|  
-|From|到|关系|  
+|From|功能|关系|  
 |sys. database_event_session_targets event_session_id|sys. database_event_sessions event_session_id|多对一|  
   
 ## <a name="see-also"></a>另请参阅  

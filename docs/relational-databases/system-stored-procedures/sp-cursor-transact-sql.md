@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cd5cae24b30840ea08ec2ae025b021fcf70f2dc6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9e99f8f657c3d35cc91ff92a9ae5d920271769b8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108576"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820585"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68108576"
   
 ||  
 |-|  
-|**适用**于： SQL Server （ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|  
+|**适用**于： SQL Server （ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -125,7 +125,7 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="value-parameter"></a>value 参数  
  如前面在 "参数" 部分中所述，使用*值*的规则有两种替代方法：  
   
-1.  对于任何命名*值*参数，可以在\@选择列表中对列的名称使用预先挂起的名称。 此替代方法的一个优点是可能不需要进行数据转换。  
+1.  \@对于任何命名*值*参数，可以在选择列表中对列的名称使用预先挂起的名称。 此替代方法的一个优点是可能不需要进行数据转换。  
   
 2.  使用参数提交完整的 UPDATE 语句或 INSERT 语句，或使用多个参数提交 UPDATE 语句或 INSERT 语句的部分，SQL Server 稍后将其生成为完整的语句。 此类示例可在本主题后面的“示例”部分中找到。  
   
@@ -139,7 +139,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
->  如果指定\<了 "更新表名称>"，则将忽略为*表*参数指定的任何值。  
+>  如果 \< 指定了 "更新表名称>"，则将忽略为*表*参数指定的任何值。  
   
  当使用多个参数时，第一个参数必须为采用以下形式的字符串：  
   
@@ -149,7 +149,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `<column name> = expression  [,...n]`  
   
- 在这种情况下\<，构造的 update 语句中的表名称> 是*表*参数指定或默认为的表名。  
+ 在这种情况下， \< 构造的 update 语句中的表名称> 是*表*参数指定或默认为的表名。  
   
  对于 INSERT：  
   
@@ -158,7 +158,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ INSERT [INTO] <table name> ] VALUES ] ( <expression> [,...n] )`  
   
 > [!NOTE]  
->  如果指定 "插入* \<表名称>* "，则将忽略为*表*参数指定的任何值。  
+>  如果指定 "插入* \< 表名称>* "，则将忽略为*表*参数指定的任何值。  
   
  当使用多个参数时，第一个参数必须为采用以下形式的字符串：  
   
@@ -168,7 +168,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- 除了指定 VALUES 之外，在此情况下，在最后一个表达式后面必须带一个尾随“)”。 在这种情况下，构造的 UPDATE 语句中的* \<表名称>* 是*表*参数指定或默认为的表名。  
+ 除了指定 VALUES 之外，在此情况下，在最后一个表达式后面必须带一个尾随“)”。 在这种情况下，构造的 UPDATE 语句中的* \< 表名称>* 是*表*参数指定或默认为的表名。  
   
 > [!NOTE]  
 >  可以提交一个参数作为命名参数，也即“`@VALUES`”。 在此情况下，不能使用其他命名参数。  

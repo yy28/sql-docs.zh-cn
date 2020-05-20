@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_special_columns
 ms.assetid: 0b0993f8-73e0-402b-8c6c-1b0963956f5d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c82970caa25089320a1dc5daf68076f27478081f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ceb000826fee3ce4a26472343a6bb68e3636a9b3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032840"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820305"
 ---
 # <a name="sp_special_columns-transact-sql"></a>sp_special_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,27 +46,27 @@ sp_special_columns [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @table_name=]"*table_name*"  
+ [ @table_name =] "*table_name*"  
  用于返回目录信息的表的名称。 *名称*为**sysname**，无默认值。 不支持通配符模式匹配。  
   
- [ @table_owner=]"*table_owner*"  
+ [ @table_owner =] "*table_owner*"  
  用于返回目录信息的表的表所有者。 *所有者*为**sysname**，默认值为 NULL。 不支持通配符模式匹配。 如果未指定*owner* ，则应用基础 DBMS 的默认表可见性规则。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有一个具有指定名称的表，则返回该表的列。 如果未指定*owner* ，并且当前用户没有具有指定*名称*的表，则此过程将查找由数据库所有者拥有的指定*名称*的表。 如果存在该表，则返回该表的列。  
   
- [ @qualifier=]"*限定符*"  
- 表限定符的名称。 *限定符*的值为**sysname**，默认值为 NULL。 各种 DBMS 产品支持表的三部分命名（*qualifier.owner.name*）。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，此列表示数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  
+ [ @qualifier =] '*限定符*'  
+ 表限定符的名称。 *限定符*的值为**sysname**，默认值为 NULL。 各种 DBMS 产品支持表的三部分命名（*qualifier.owner.name*）。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此列表示数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  
   
- [ @col_type=]"*col_type*"  
+ [ @col_type =] "*col_type*"  
  列类型。 *col_type*的数据类型为**char （** 1 **）**，默认值为 r。 type r 返回的最佳列或列集通过检索列中的值，可以唯一标识指定表中的任何行。 列可以是为此目的专门设计的伪列，也可以是表的某个唯一索引的一个或多个列。 如果列类型为 V，则返回指定表中的列（如果有）。如果有事务更新了行中的某个值，则数据源将自动更新返回的列。  
   
- [ @scope=]"*scope*"  
+ [ @scope =] "*scope*"  
  ROWID 要求的最小作用域。 *作用域*为**char （** 1 **）**，默认值为 T。作用域 C 指定 ROWID 仅在定位在该行上时才有效。 如果作用域为 T，则指定 ROWID 对该事务有效。  
   
- [ @nullable=]"*nullable*"  
+ [ @nullable =] "*nullable*"  
  指示特殊列能否接受 Null 值。 *可以为 null*的数据类型为**char （** 1 **）**，默认值为 U。 O 指定不允许空值的特殊列。 如果值为 U，则指定列可以部分为 Null 值。  
   
- [ @ODBCVer=]'*ODBCVer*'  
+ [ @ODBCVer =] "*ODBCVer*"  
  所使用的 ODBC 版本。 *ODBCVer*的值为**int （** 4 **）**，默认值为2。 这指示 ODBC 版本 2.0。 有关 ODBC 2.0 版和 ODBC 3.0 版之间的差别的详细信息，请参阅 ODBC 3.0 版的 ODBC SQLSpecialColumns 规范。  
   
 ## <a name="return-code-values"></a>返回代码值  

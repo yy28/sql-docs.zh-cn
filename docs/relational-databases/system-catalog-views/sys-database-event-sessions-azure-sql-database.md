@@ -6,27 +6,27 @@ ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
 ms.assetid: 02c2cd71-d35e-4d4c-b844-92b240f768f4
-author: MightyPen
-ms.author: genemi
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4ef8388e18ee73a0f1217e4e04adc13379892520
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7384cf9bfcf08f307a4e81cb0cdebe78e8011ea3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67915078"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823515"
 ---
 # <a name="sysdatabase_event_sessions-azure-sql-database"></a>sys.database_event_sessions（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  列出当前数据库中存在的所有事件会话定义[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+  列出当前数据库中存在的所有事件会话定义 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。  
   
 > [!NOTE]
->  名为`sys.server_event_sessions`的类似目录视图仅[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]适用于。  
+>  名为的类似目录视图 `sys.server_event_sessions` 仅适用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ||  
 |-|  
-|**适用**于： [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]、和任何更高版本。|  
+|**适用**于： [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 、和任何更高版本。|  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  

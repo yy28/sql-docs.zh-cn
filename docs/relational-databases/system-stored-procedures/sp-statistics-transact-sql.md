@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_statistics
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4e3e25dbab53f31e354dcff537b6bfb9a6b433d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3cdde96f57f813dbc25434867ed78ff884c2e7ab
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032746"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820283"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,14 +72,14 @@ sp_statistics [ @table_name = ] 'table_name'
 |**TABLE_OWNER**|**sysname**|表所有者名称。 该列始终返回值。|  
 |**TABLE_NAME**|**sysname**|表名。 该列始终返回值。|  
 |**NON_UNIQUE**|**smallint**|NOT NULL。<br /><br /> 0 = 唯一<br /><br /> 1 = 不唯一|  
-|**INDEX_QUALIFIER**|**sysname**|索引所有者名称。 某些 DBMS 产品允许表所有者之外的用户创建索引。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，此列始终与**TABLE_NAME**相同。|  
+|**INDEX_QUALIFIER**|**sysname**|索引所有者名称。 某些 DBMS 产品允许表所有者之外的用户创建索引。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此列始终与**TABLE_NAME**相同。|  
 |**INDEX_NAME**|**sysname**|索引的名称。 该列始终返回值。|  
 |**类型**|**smallint**|此列始终返回值：<br /><br /> 0 = 表的统计信息<br /><br /> 1 = 聚集<br /><br /> 2 = 哈希<br /><br /> 3 = 非聚集|  
 |**SEQ_IN_INDEX**|**smallint**|列在索引中的位置。|  
 |**COLUMN_NAME**|**sysname**|返回的每个**TABLE_NAME**列的列名。 该列始终返回值。|  
 |**归类**|**char （1）**|在排序规则中使用的顺序。 可以是：<br /><br /> A = 升序<br /><br /> D = 降序<br /><br /> NULL = 不适用|  
 |**基数**|**int**|表中的行数或索引中的唯一值。|  
-|**PAGES**|**int**|用于存储索引或表的页数。|  
+|**页**|**int**|用于存储索引或表的页数。|  
 |**FILTER_CONDITION**|**varchar（128**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不返回值。|  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -88,7 +88,7 @@ sp_statistics [ @table_name = ] 'table_name'
 ## <a name="remarks"></a>备注  
  结果集中的索引按列**NON_UNIQUE**、**类型**、 **INDEX_NAME**和**SEQ_IN_INDEX**按升序显示。  
   
- 聚集索引类型引用一个索引，该索引中的表数据按索引的顺序存储。 这对应于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]聚集索引。  
+ 聚集索引类型引用一个索引，该索引中的表数据按索引的顺序存储。 这对应于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 聚集索引。  
   
  哈希索引类型接受完全匹配或范围搜索，但模式匹配搜索不使用该索引。  
   
@@ -97,8 +97,8 @@ sp_statistics [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>权限  
  需要对架构的 SELECT 权限。  
   
-## <a name="example-sssdwfull-and-sspdw"></a>示例： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下面的示例返回有关表的`DimEmployee`信息。  
+## <a name="example-sssdwfull-and-sspdw"></a>示例： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 下面的示例返回有关表的信息 `DimEmployee` 。  
   
 ```  
 -- Uses AdventureWorks  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpullsubscription
 ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7f65d868f7560f1e413b8c28308afac495233102
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c983f72d3ba08f3ffc70991a13e312947ee77378
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769084"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820650"
 ---
 # <a name="sp_addpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
  **sp_addpullsubscription**用于快照复制和事务复制。  
   
 > [!IMPORTANT]  
->  对于在队列中排队的更新订阅，请将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 验证用于与订阅服务器的连接，并为每个订阅服务器连接指定一个不同的帐户。 创建支持排队更新的请求订阅时，复制始终将连接设置为使用 Windows 身份验证（对于请求订阅，复制无法访问使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证所需的订阅服务器中的元数据）。 在这种情况下，应在配置订阅后执行[sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)来[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]更改连接以使用身份验证。  
+>  对于在队列中排队的更新订阅，请将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 验证用于与订阅服务器的连接，并为每个订阅服务器连接指定一个不同的帐户。 创建支持排队更新的请求订阅时，复制始终将连接设置为使用 Windows 身份验证（对于请求订阅，复制无法访问使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证所需的订阅服务器中的元数据）。 在这种情况下，应在配置订阅后执行[sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)来更改连接以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。  
   
  如果订阅服务器上不存在[MSreplication_subscriptions &#40;transact-sql&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)表， **sp_addpullsubscription**会创建它。 它还向[MSreplication_subscriptions &#40;transact-sql&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)表中添加了一行。 对于请求订阅，应首先在发布服务器上调用[sp_addsubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 。  
   

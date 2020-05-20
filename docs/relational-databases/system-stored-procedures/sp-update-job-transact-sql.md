@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_job
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5428ae9130646db662c6c960f777c6a7dfe25000
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 35653ce883733b7e1b3c2969fc4e62c61ad12eb9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084893"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820178"
 ---
 # <a name="sp_update_job-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 |**0**|从不|  
 |**1**|成功时|  
 |**2**|失败时|  
-|**3**|始终|  
+|**3**|Always|  
   
 `[ @notify_level_email = ] email_level`指定在完成该作业后何时发送电子邮件。 *email_level*是**int**。*email_level*使用与*eventlog_level*相同的值。  
   
@@ -121,7 +121,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  只有**sysadmin**的成员才可以使用此存储过程来编辑其他用户拥有的作业的属性。  
   
 ## <a name="examples"></a>示例  
- 下面的示例更改作业`NightlyBackups`的名称、说明和已启用状态。  
+ 下面的示例更改作业的名称、说明和已启用状态 `NightlyBackups` 。  
   
 ```  
 USE msdb ;  

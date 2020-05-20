@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_unregister_custom_scripting
 ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fe6bfe4c93ccabfaaec27739f7a1fd0e09348526
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8d54530c7cf6588a6ae07e1e504e3c53e86f8fa5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017901"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820222"
 ---
 # <a name="sp_unregister_custom_scripting-transact-sql"></a>sp_unregister_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  此存储过程将删除通过执行[sp_register_custom_scripting](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)注册的用户定义[!INCLUDE[tsql](../../includes/tsql-md.md)]的自定义存储过程或脚本文件。 此存储过程在发布服务器上对发布数据库执行。  
+  此存储过程将删除通过执行 sp_register_custom_scripting 注册的用户定义的自定义存储过程或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本[sp_register_custom_scripting](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)文件。 此存储过程在发布服务器上对发布数据库执行。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,7 +44,7 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 |值|说明|  
 |-----------|-----------------|  
 |**&**|复制 INSERT 语句时，执行注册的自定义存储过程或脚本。|  
-|**时更新**|复制 UPDATE 语句时，执行注册的自定义存储过程或脚本。|  
+|**update**|复制 UPDATE 语句时，执行注册的自定义存储过程或脚本。|  
 |**delete**|复制 DELETE 语句时，执行注册的自定义存储过程或脚本。|  
 |**custom_script**|在数据定义语言 (DDL) 触发器的结尾执行已注册的自定义存储过程或脚本。|  
   

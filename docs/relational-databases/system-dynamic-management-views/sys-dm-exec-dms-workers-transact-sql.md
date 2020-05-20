@@ -19,15 +19,15 @@ helpviewer_keywords:
 - dm_exec_dms_workers management view
 - sys.dm_exec_dms_workers management view
 ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6fd005563251ba674449020c7af25ce20ea98b4a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4951954bb9f6336c2c984a8d74c2224eab4dfbb0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73532944"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821086"
 ---
 # <a name="sysdm_exec_dms_workers-transact-sql"></a>sys.dm_exec_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -43,8 +43,8 @@ ms.locfileid: "73532944"
 |dms_step_index|`int`|此工作线程正在运行的 DMS 计划中的步骤。|请参阅[sys.databases dm_exec_dms_workers （transact-sql）](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
 |compute_node_id|`int`|正在运行辅助角色的节点。|请参阅[sys.databases &#40;transact-sql&#41;dm_exec_compute_nodes ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
 |distribution_id|`int`|||  
-|type|`nvarcha(32)`|||  
-|status|`nvarchar(32)`|此步骤的状态|"挂起"、"正在运行"、"完成"、"失败"、"UndoFailed"、"PendingCancel"、"已取消"、"撤消"、"已中止"|  
+|类型|`nvarcha(32)`|||  
+|状态|`nvarchar(32)`|此步骤的状态|"挂起"、"正在运行"、"完成"、"失败"、"UndoFailed"、"PendingCancel"、"已取消"、"撤消"、"已中止"|  
 |bytes_per_sec|`bigint`|||  
 |bytes_processed|`bigint`|||  
 |rows_processed|`bigint`|||  

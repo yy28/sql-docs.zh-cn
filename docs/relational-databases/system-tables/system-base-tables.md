@@ -14,14 +14,14 @@ helpviewer_keywords:
 - hobt [SQL Server]
 - base tables
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5ac374b9222f9bd592312f79173859691b495276
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1e436807a5738a1ad844a07b3403eb99d1a5cf18
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80531194"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82819786"
 ---
 # <a name="system-base-tables"></a>系统基表
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "80531194"
 |----------------|-----------------|  
 |**sys.sysschobjs**|存在于每个数据库中。 每一行表示数据库中的一个对象。|  
 |**sys.sysbinobjs**|存在于每个数据库中。 数据库中的每个 Service Broker 实体都存在对应的一行。 Service Broker 实体包括以下内容：<br /><br /> 消息类型<br /><br /> 服务约定<br /><br /> 服务<br /><br /> 名称和类型使用固定的二进制排序规则。|  
-|**sys.sysclsobjs**|存在于每个数据库中。 共享相同通用属性的每个分类实体均存在对应的一行，这些属性包括以下内容：<br /><br /> Assembly<br /><br /> 备份设备<br /><br /> 全文目录<br /><br /> 分区函数<br /><br /> 分区方案<br /><br /> 文件组<br /><br /> 模糊处理键|  
+|**sys.sysclsobjs**|存在于每个数据库中。 共享相同通用属性的每个分类实体均存在对应的一行，这些属性包括以下内容：<br /><br /> 程序集<br /><br /> 备份设备<br /><br /> 全文目录<br /><br /> 分区函数<br /><br /> 分区方案<br /><br /> 文件组<br /><br /> 模糊处理键|  
 |**sys.sysnsobjs**|存在于每个数据库中。 每个命名空间范围内的实体均存在对应的一行。 此表用于存储 XML 集合实体。|  
 |**sys.syscolpars**|存在于每个数据库中。 表、视图或表值函数的每个列均存在对应的一行。 过程或函数的每个参数也存在对应的行。|  
 |**sys.systypedsubobjs**|存在于每个数据库中。 每个类型化的子实体均存在对应的一行。 只有分区函数的参数属于此类别。|  

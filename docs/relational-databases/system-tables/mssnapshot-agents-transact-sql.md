@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsnapshot_agents system table
 ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2d57700abecccf3dae55289b49d4fd6c1af3e537
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4fcbbe40247742a1a5a1eda5e6f501aae279a12a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079958"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821058"
 ---
 # <a name="mssnapshot_agents-transact-sql"></a>MSsnapshot_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68079958"
 |**profile_id**|**int**|来自[MSagent_profiles &#40;transact-sql&#41;](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)表的配置 ID。|  
 |**dynamic_filter_login**|**sysname**|用于在定义分区的参数化筛选器中计算[SUSER_SNAME &#40;transact-sql&#41;](../../t-sql/functions/suser-sname-transact-sql.md)函数的值。 此列用于分区快照。|  
 |**dynamic_filter_hostname**|**sysname**|用于在定义分区的参数化筛选器中计算[HOST_NAME &#40;transact-sql&#41;](../../t-sql/functions/host-name-transact-sql.md)函数的值。 此列用于分区快照。|  
-|**publisher_security_mode**|**smallint**|代理在连接到发布服务器时使用的安全模式，可以是以下项之一：<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)]身份[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]验证<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)]个 Windows 身份验证。|  
+|**publisher_security_mode**|**smallint**|代理在连接到发布服务器时使用的安全模式，可以是以下项之一：<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证<br /><br /> **1**个  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 身份验证。|  
 |**publisher_login**|**sysname**|连接发布服务器时所使用的登录名。|  
 |**publisher_password**|**nvarchar （524）**|连接发布服务器时所使用的密码的加密值。|  
 |**job_step_uid**|**uniqueidentifier**|启动代理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤的唯一 ID。|  

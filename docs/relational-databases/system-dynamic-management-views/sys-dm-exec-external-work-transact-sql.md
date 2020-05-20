@@ -19,15 +19,15 @@ helpviewer_keywords:
 - PolyBase,views
 - PolyBase
 ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b0ba7eecc8e117e429f6992622d0c7bb2073f86a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8348ebacb68f2df122b73d6ad3480cadedd27c1b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74834327"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821099"
 ---
 # <a name="sysdm_exec_external_work-transact-sql"></a>sys.dm_exec_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -42,13 +42,13 @@ ms.locfileid: "74834327"
 |step_index|`int`|此工作线程正在执行的请求。|请参阅 dm_exec_requests sys.databases 中的*step_index* [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)。|  
 |dms_step_index|`int`|此工作线程正在执行的 DMS 计划的步骤。|请参阅[sys.databases &#40;transact-sql&#41;dm_exec_dms_workers ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)。|  
 |compute_node_id|`int`|正在运行辅助角色的节点。|请参阅[sys.databases &#40;transact-sql&#41;dm_exec_compute_nodes ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
-|type|`nvarchar(60)`|外部工作的类型。|"文件拆分"|  
+|类型|`nvarchar(60)`|外部工作的类型。|"文件拆分"|  
 |work_id|`int`|实际拆分的 ID。|大于或等于0。|  
 |input_name|`nvarchar(4000)`|要读取的输入的名称|使用 Hadoop 时的文件名。|  
 |read_location|`bigint`|偏移或读取位置。|要读取的文件的偏移量。|  
 |bytes_processed|`bigint`|此辅助进程分配用于处理数据的总字节数。 这不一定表示查询返回的总数据 |大于或等于0。|  
-|长度|`bigint`|Hadoop 或 HDFS 块的长度（如果为 Hadoop）|用户可定义的。 默认值为 Ed-64m|  
-|status|`nvarchar(32)`|辅助进程的状态|挂起，处理，已完成，失败，已中止|  
+|length|`bigint`|Hadoop 或 HDFS 块的长度（如果为 Hadoop）|用户可定义的。 默认值为 Ed-64m|  
+|状态|`nvarchar(32)`|辅助进程的状态|挂起，处理，已完成，失败，已中止|  
 |start_time|`datetime`|工作开始||  
 |end_time|`datetime`|工作结束||  
 |total_elapsed_time|`int`|总时间（毫秒）||

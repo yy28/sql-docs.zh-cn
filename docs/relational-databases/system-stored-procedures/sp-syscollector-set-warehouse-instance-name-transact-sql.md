@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_set_warehouse_instance_name
 ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6e21096971b9a0891d2c51c5fce34c119b454f0b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d9a2e99719fc4409d0aa83aae5e625370ff9abff
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010591"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820250"
 ---
 # <a name="sp_syscollector_set_warehouse_instance_name-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @instance_name = ]"*instance_name*"  
+ [ @instance_name =] "*instance_name*"  
  实例名。 *instance_name*是**sysname** ，如果为 NULL，则默认为本地实例。  
   
-> **注意：**  _instance_name_必须是完全限定的实例名称，由计算机名称和实例名称组成，格式为*computerName*\\*instanceName*。  
+> **注意：**_instance_name_必须是完全限定的实例名称，由计算机名称和实例名称组成，格式为*computerName* \\ *instanceName*。    
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsnapshot_history system table
 ms.assetid: 56bf4128-1689-4963-9343-432dd0898d31
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a84b8c8caae460975a871a22d7cdac6d741d4d93
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fcd046cf77786bb58aaa843d12b6e924f7b0f3ad
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997278"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821007"
 ---
 # <a name="mssnapshot_history-transact-sql"></a>MSsnapshot_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "67997278"
 |**start_time**|**datetime**|开始执行作业的时间。|  
 |**time**|**datetime**|记录消息的时间。|  
 |**duration**|**int**|消息会话的持续时间（秒）。|  
-|**提出**|**nvarchar(255)**|消息文本。|  
+|**注释**|**nvarchar(255)**|消息文本。|  
 |**delivered_transactions**|**int**|会话中传递的事务总数。|  
 |**delivered_commands**|**int**|每秒传递的命令数。|  
 |**delivery_rate**|**float(53)**|平均每秒传递的命令数。|  

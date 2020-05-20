@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups dynamic management view
 ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73da0ee5a47cf5b1c7443729e2a9b71dc01d18a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5dcd93a0c74d8fc12af14809c8ca66bf59275dee
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982293"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821044"
 ---
 # <a name="sysdm_resource_governor_workload_groups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "73982293"
   返回工作负荷组统计信息和工作负荷组当前在内存中的配置。 此视图可以与 sys.dm_resource_governor_resource_pools 联接以获取资源池名称。  
   
 > [!NOTE]  
->  若要从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]调用此，请使用名称**dm_pdw_nodes_resource_governor_workload_groups**。  
+>  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_resource_governor_workload_groups**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -63,7 +63,7 @@ ms.locfileid: "73982293"
 |request_memory_grant_timeout_sec|**int**|单个请求的内存授予超时的当前设置，以秒为单位。 不可为 null。|  
 |group_max_requests|**int**|并发请求最大数的当前设置。 不可为 null。|  
 |max_dop|**int**|工作负荷组的最大并行度。 默认值为 0，表示使用全局设置。 不可为 null。|  
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="remarks"></a>备注  
  此动态管理视图显示了内存中配置。 若要查看存储的配置元数据，请使用 sys.resource_governor_workload_groups 目录视图。  

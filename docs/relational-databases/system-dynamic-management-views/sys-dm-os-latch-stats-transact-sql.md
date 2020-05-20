@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_latch_stats dynamic management view
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f1a8480b7e512c697f3645006d453866963b81aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 16ebdd2ac874784c071fea7aa962d005436aac60
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289905"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820862"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "79289905"
 返回有关按类组织的所有闩锁等待的信息。 
   
 > [!NOTE]  
-> 若要从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]调用此，请使用名称**dm_pdw_nodes_os_latch_stats**。  
+> 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_os_latch_stats**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -39,11 +39,11 @@ ms.locfileid: "79289905"
 |waiting_requests_count|**bigint**|此类中的闩锁等待的个数。 此计数器在闩锁等待启动时递增。|  
 |wait_time_ms|**bigint**|此类中闩锁的总计等待时间（毫秒）。<br /><br /> **注意：** 此列每五分钟更新一次，在闩锁等待期间，在闩锁等待结束时进行更新。|  
 |max_wait_time_ms|**bigint**|内存对象已等待此闩锁的最大时间。 如果此值异常高，则可能指示有内部死锁。|  
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限  
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要权限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层上，需要`VIEW DATABASE STATE`具有数据库中的权限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
   
 ## <a name="remarks"></a>备注  
  通过检查不同闩锁类的相对等待数和等待时间，sys.dm_os_latch_stats 可以用来标识闩锁争用源。 在某些情况中，可能能够解决或减少闩锁争用。 但是，在某些情况下可能需要与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客户支持服务部门联系。  
@@ -61,7 +61,7 @@ GO
 >  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新启动，则这些统计信息不会持久化。 自从上次统计信息重置以来，或自从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动以来，所有数据都是累积的。  
   
 ## <a name="latches"></a><a name="latches"></a>栓  
- 闩锁是类似于锁的内部轻型同步对象，由各种[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]组件使用。 闩锁主要用于在操作（如缓冲区或文件访问）期间同步数据库页。 每个闩锁与单个分配单元关联。 
+ 闩锁是类似于锁的内部轻型同步对象，由各种 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件使用。 闩锁主要用于在操作（如缓冲区或文件访问）期间同步数据库页。 每个闩锁与单个分配单元关联。 
   
  由于闩锁由冲突模式中的另一个线程持有，所以当无法立即满足闩锁请求时，就会发生闩锁等待。 与锁不同，在操作之后，甚至在写入操作中，会立即释放闩锁。  
   

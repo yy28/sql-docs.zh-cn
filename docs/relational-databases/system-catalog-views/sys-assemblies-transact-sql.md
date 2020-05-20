@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.assemblies catalog view
 ms.assetid: e321753f-293f-42ab-b225-d118713df40b
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 19577afb746e3b005dffd803d86351d8a4b0eca4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5f5c1b2bc60710e4cbe7f6baad34698d89ccf858
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001204"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823573"
 ---
 # <a name="sysassemblies-transact-sql"></a>sys.assemblies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68001204"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|name |**sysname**|程序集的名称。 在该数据库中是唯一的。|  
+|**name**|**sysname**|程序集的名称。 在该数据库中是唯一的。|  
 |**principal_id**|**int**|此程序集所属主体的 ID。|  
 |**assembly_id**|**int**|程序集的标识号。 在数据库中是唯一的。|  
 |**clr_name**|**nvarchar(4000)**|对程序集的简单名称、版本号、区域性、公钥以及体系结构进行编码的规范字符串。 该值唯一地标识公共语言运行时 (CLR) 端的程序集。|  

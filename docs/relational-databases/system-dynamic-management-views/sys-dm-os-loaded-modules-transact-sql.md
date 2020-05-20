@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_loaded_modules dynamic management view
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f43e03e482bb7125100ed7bed56337fb75a2e711
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 58f0258843995acc82e84d69a4d2d101594fc313
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900090"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820799"
 ---
 # <a name="sysdm_os_loaded_modules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "67900090"
   针对每个加载到服务器地址空间的模块返回一行。  
   
 > [!NOTE]  
->  若要从[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]调用此，请使用名称**dm_pdw_nodes_os_loaded_modules**。  
+>  若要从调用此 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_os_loaded_modules**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  

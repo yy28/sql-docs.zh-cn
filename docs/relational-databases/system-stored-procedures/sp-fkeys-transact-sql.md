@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fkeys
 ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb5f684321a11d56a419ae73be0bfb2950fb9939
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cee63720a743de8e2aed496bf3f7f3e791780575
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124402"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820524"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,26 +44,26 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @pktable_name=]"*pktable_name*"  
+ [ @pktable_name =] "*pktable_name*"  
  带主键的表的名称，用于返回目录信息。 *pktable_name*的默认值为**sysname**，默认值为 NULL。 不支持通配符模式匹配。 必须提供此参数或*fktable_name*参数，或同时提供两者。  
   
- [ @pktable_owner=]"*pktable_owner*"  
+ [ @pktable_owner =] "*pktable_owner*"  
  用于返回目录信息的表（带主键）的所有者的名称。 *pktable_owner*的默认值为**sysname**，默认值为 NULL。 不支持通配符模式匹配。 如果未指定*pktable_owner* ，则应用基础 DBMS 的默认表可见性规则。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有具有指定名称的表，则返回该表的列。 如果未指定*pktable_owner*并且当前用户没有具有指定*pktable_name*的表，则此过程将查找数据库所有者拥有指定*pktable_name*的表。 如果有，则返回该表的列。  
   
- [ @pktable_qualifier =]"*pktable_qualifier*"  
+ [ @pktable_qualifier =] "*pktable_qualifier*"  
  表（带有主键）限定符的名称。 *pktable_qualifier*的默认值为 sysname，默认值为 NULL。 各种 DBMS 产品支持表的三部分命名（*qualifier.owner.name*）。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，限定符表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
   
- [ @fktable_name=]"*fktable_name*"  
+ [ @fktable_name =] "*fktable_name*"  
  用于返回目录信息的表（带外键）的名称。 *fktable_name*的默认值为 sysname，默认值为 NULL。 不支持通配符模式匹配。 必须提供此参数或*pktable_name*参数，或同时提供两者。  
   
- [ @fktable_owner =]"*fktable_owner*"  
+ [ @fktable_owner =] "*fktable_owner*"  
  用于返回目录信息的表（带外键）的所有者的名称。 *fktable_owner*的默认值为**sysname**，默认值为 NULL。 不支持通配符模式匹配。 如果未指定*fktable_owner* ，则应用基础 DBMS 的默认表可见性规则。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有具有指定名称的表，则返回该表的列。 如果未指定*fktable_owner*并且当前用户没有具有指定*fktable_name*的表，则此过程将查找数据库所有者拥有指定*fktable_name*的表。 如果有，则返回该表的列。  
   
- [ @fktable_qualifier= ]"*fktable_qualifier*"  
+ [ @fktable_qualifier =] "*fktable_qualifier*"  
  表（带外键）限定符的名称。 *fktable_qualifier*的默认值为**sysname**，默认值为 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，限定符表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -101,7 +101,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
 sp_fkeys 存储过程与 ODBC 中的 SQLForeignKeys 功能相同。  
   
 ## <a name="permissions"></a>权限  
- 需要`SELECT`对架构的权限。  
+ 需要 `SELECT` 对架构的权限。  
   
 ## <a name="examples"></a>示例  
  以下示例将为 `HumanResources.Department` 数据库中的 `AdventureWorks2012` 表检索一个外键的列表。  
@@ -114,7 +114,7 @@ EXEC sp_fkeys @pktable_name = N'Department'
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 以下示例将为 `DimDate` 数据库中的 `AdventureWorksPDW2012` 表检索一个外键的列表。 不返回任何行， [!INCLUDE[ssDW](../../includes/ssdw-md.md)]因为不支持外键。  
+ 以下示例将为 `DimDate` 数据库中的 `AdventureWorksPDW2012` 表检索一个外键的列表。 不返回任何行，因为不 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 支持外键。  
   
 ```sql  
 EXEC sp_fkeys @pktable_name = N'DimDate;  

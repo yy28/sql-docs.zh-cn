@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0f48f7e8dd6e7d8fa57868994f9bcabb66777e90
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5d6646bb794b50158035759916ba823c6fca2102
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095942"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820257"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ## <a name="arguments"></a>参数  
 `[ @traceid = ] trace_id`要设置筛选器的跟踪的 ID。 *trace_id*为**int**，没有默认值。 用户使用此*trace_id*值标识、修改和控制跟踪。  
   
-`[ @columnid = ] column_id`应用筛选器的列的 ID。 *column_id*为**int**，没有默认值。 如果*column_id*为 NULL， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]则将清除指定跟踪的所有筛选器。  
+`[ @columnid = ] column_id`应用筛选器的列的 ID。 *column_id*为**int**，没有默认值。 如果*column_id*为 NULL，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将清除指定跟踪的所有筛选器。  
   
 `[ @logical_operator = ] logical_operator`指定是否应用 AND （**0**）或 or （**1**）运算符。 *logical_operator*为**int**，没有默认值。  
   
@@ -92,7 +92,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |16|该函数对此跟踪无效。|  
   
 ## <a name="remarks"></a>备注  
- **sp_trace_setfilter**是一[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]种存储过程，它执行以前的版本中提供的扩展存储过程执行的许多操作[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 使用**sp_trace_setfilter**而不是**xp_trace_set\*筛选**扩展存储过程来创建、应用、删除或操作跟踪筛选器。 有关详细信息，请参阅[筛选跟踪](../../relational-databases/sql-trace/filter-a-trace.md)。  
+ **sp_trace_setfilter**是一种 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程，它执行以前的版本中提供的扩展存储过程执行的许多操作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 使用**sp_trace_setfilter**而不是**xp_trace_set \* 筛选**扩展存储过程来创建、应用、删除或操作跟踪筛选器。 有关详细信息，请参阅[筛选跟踪](../../relational-databases/sql-trace/filter-a-trace.md)。  
   
  特定列的所有筛选器都必须在**sp_trace_setfilter**的一次执行中同时启用。 例如，如果用户想对应用程序名称列应用两个筛选器，对用户名列应用一个筛选器，则用户必须按顺序对应用程序名称指定筛选器。 如果用户试图在一次存储过程调用中先对应用程序名称指定一个筛选器，接着对用户名指定筛选器，然后对应用程序名称指定另一个筛选器，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。  
   

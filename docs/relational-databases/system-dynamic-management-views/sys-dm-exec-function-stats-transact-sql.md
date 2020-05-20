@@ -15,15 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - sys.dm_exec_function_stats dynamic management view
 ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89d66217536d5cd552eb11de67d6d97d21ec9f6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 02cff18af9c0824d7f28e5685f5fc63a0bf45128
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68742833"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821152"
 ---
 # <a name="sysdm_exec_function_stats-transact-sql"></a>sys. dm_exec_function_stats （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68742833"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|函数所在的数据库 ID。|  
 |**object_id**|**int**|函数的对象标识号。|  
-|**type**|**char(2)**|对象的类型： FN = 标量值函数|  
+|type |**char(2)**|对象的类型： FN = 标量值函数|  
 |**type_desc**|**nvarchar(60)**|对象类型的说明： SQL_SCALAR_FUNCTION|  
 |**sql_handle**|**varbinary(64)**|这可用于与在此函数中执行的**dm_exec_query_stats**中的查询相关联。|  
 |**plan_handle**|**varbinary(64)**|内存中计划的标识符。 该标识符是瞬态的，仅当计划保留在缓存中时，它才保持不变。 此值可用于**sys.databases dm_exec_cached_plans**动态管理视图。<br /><br /> 当本机编译的函数查询内存优化表时，将始终为0x000。|  
@@ -74,8 +74,8 @@ ms.locfileid: "68742833"
   
 ## <a name="permissions"></a>权限  
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要权限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层上，需要`VIEW DATABASE STATE`具有数据库中的权限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
   
 ## <a name="examples"></a>示例  
  下面的示例返回有关按平均占用时间标识的前十个函数的信息。  

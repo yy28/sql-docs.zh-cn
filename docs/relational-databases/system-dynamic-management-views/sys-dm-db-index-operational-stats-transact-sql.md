@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_index_operational_stats dynamic management function
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8222454d5e016733abef3c086e38add777cd304
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d2b473019a20a962a41c44aade08e4a1daa2a765
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004893"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820846"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,7 +86,7 @@ sys.dm_db_index_operational_stats (
 |**object_id**|**int**|表或视图的 ID。|    
 |**index_id**|**int**|索引或堆的 ID。<br /><br /> 0 = 堆| 
 |**partition_number**|**int**|索引或堆中从 1 开始的分区号。| 
-|**hobt_id**|**bigint**|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /><br /> 跟踪列存储索引的内部数据的堆或B 树数据行集的 ID。<br /><br /> NULL-这不是内部列存储行集。<br /><br /> 有关更多详细信息，请参阅[internal_partitions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
+|**hobt_id**|**bigint**|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。<br /><br /> 跟踪列存储索引的内部数据的堆或B 树数据行集的 ID。<br /><br /> NULL-这不是内部列存储行集。<br /><br /> 有关更多详细信息，请参阅[internal_partitions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
 |**leaf_insert_count**|**bigint**|叶级插入的累积计数。|    
 |**leaf_delete_count**|**bigint**|叶级删除的累积计数。 仅对未标记为 ghost 的已删除记录递增 leaf_delete_count。 对于首先会幻像的已删除记录，将改为递增**leaf_ghost_count** 。|    
 |**leaf_update_count**|**bigint**|叶级更新的累积计数。|    
@@ -180,7 +180,7 @@ sys.dm_db_index_operational_stats (
  只要堆或索引的元数据被载入元数据缓存，每列中的值就会被设置为零，且在从元数据缓存中删除缓存对象前会累积统计信息。 所以，活动堆或索引可能始终将其元数据放在缓存中，且累积计数可能反映自上次启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以来的活动。 活动较少的堆或索引的元数据将在使用时移入和移出缓存。 因此，它可能有、也可能没有可用值。 删除索引将导致从内存中删除对应统计信息，且函数不再报告这些统计信息。 对索引执行的其他 DDL 操作可能导致统计信息的值被重置为零。    
     
 ## <a name="using-system-functions-to-specify-parameter-values"></a>使用系统函数指定参数值    
- [!INCLUDE[tsql](../../includes/tsql-md.md)]您可以使用函数[DB_ID](../../t-sql/functions/db-id-transact-sql.md)和[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)来指定*database_id*和*object_id*参数的值。 但是，将无效的值传递给这些函数可能会导致意外结果。 请始终确保使用 DB_ID 或 OBJECT_ID 时返回了有效的 ID。 有关详细信息，请参阅 sys.databases 中的 "备注" 部分[&#40;transact-sql&#41;dm_db_index_physical_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)。    
+ 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数[DB_ID](../../t-sql/functions/db-id-transact-sql.md)和[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)来指定*database_id*和*object_id*参数的值。 但是，将无效的值传递给这些函数可能会导致意外结果。 请始终确保使用 DB_ID 或 OBJECT_ID 时返回了有效的 ID。 有关详细信息，请参阅 sys.databases 中的 "备注" 部分[&#40;transact-sql&#41;dm_db_index_physical_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)。    
     
 ## <a name="permissions"></a>权限    
  需要下列权限：    

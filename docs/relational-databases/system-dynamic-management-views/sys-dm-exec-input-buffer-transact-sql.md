@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_input_buffer dynamic management function
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4e18f635b7bbdd8fa96a565fef6aef5be5bde87f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 05ec724effbabfeec11d113e46fd11c4daec0688
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74097869"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821063"
 ---
 # <a name="sysdm_exec_input_buffer-transact-sql"></a>sys. dm_exec_input_buffer （Transact-sql）
 
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
-返回有关提交给实例的语句的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]信息。
+返回有关提交给实例的语句的信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。
 
 ## <a name="syntax"></a>语法
 
@@ -59,12 +59,12 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 
 ## <a name="permissions"></a>权限
 
-在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上，如果用户具有 VIEW SERVER STATE 权限，则用户将在实例上看到所有正在执行的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]会话;否则，用户将只看到当前会话。
+在上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，如果用户具有 VIEW SERVER STATE 权限，则用户将在实例上看到所有正在执行的会话 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; 否则，用户将只看到当前会话。
 
 > [!IMPORTANT]
 > 在不使用 VIEW SERVER STATE 权限 SQL Server Management Studio 的情况下（例如在触发器、存储过程或函数中）对 SQL Server 运行此 DMV 会引发对 master 数据库的权限错误。
 
-在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]上，如果用户是数据库所有者，则用户将看到上的所有正在执行的[!INCLUDE[ssSDS](../../includes/sssds-md.md)]会话;否则，用户将只看到当前会话。
+在上 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，如果用户是数据库所有者，则用户将看到上的所有正在执行的会话 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ; 否则，用户将只看到当前会话。
 
 > [!IMPORTANT]
 > 在不带所有者权限的 Azure SQL 数据库 SQL Server Management Studio （如触发器、存储过程或函数）中运行此 DMV 会引发对 master 数据库的权限错误。

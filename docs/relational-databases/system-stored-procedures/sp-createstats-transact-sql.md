@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_createstats
 ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0bb7d109323f4eb4a33181ab45b4b17d15faf54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0cc6ff854079b740279127000a9edb04552245e1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108614"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820547"
 ---
 # <a name="sp_createstats-transact-sql"></a>sp_createstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [标识](../../relational-databases/statistics/statistics.md)   
  [&#40;Transact-sql&#41;创建统计信息](../../t-sql/statements/create-statistics-transact-sql.md)   
- [ALTER DATABASE SET Options &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [Transact-sql&#41;&#40;DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md)   
  [&#40;Transact-sql&#41;更新统计信息](../../t-sql/statements/update-statistics-transact-sql.md)   

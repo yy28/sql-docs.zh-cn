@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysdbmaintplan_history system table
 ms.assetid: 02d36f08-ac93-4463-bb59-284c5cd6ed04
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4470b6b5d1b30f5698bf588a04066c50bb4c7197
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 088dbf0fb51edddedd37fdd176becd413fc229ee
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68130452"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820969"
 ---
 # <a name="sysdbmaintplan_history-transact-sql"></a>sysdbmaintplan_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68130452"
 |**end_time**|**datetime**|完成操作的时间。|  
 |**duration**|**int**|完成数据库维护计划操作所需的时间。|  
 |**start_time**|**datetime**|操作开始的时间。|  
-|**error_number**|**int**|失败时报告的错误号。|  
+|error_number |**int**|失败时报告的错误号。|  
 |**message**|**nvarchar(512)**|**Sqlmaint**生成的消息。|  
   
   

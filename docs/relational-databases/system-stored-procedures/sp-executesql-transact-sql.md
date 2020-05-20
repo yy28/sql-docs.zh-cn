@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sp_executesql
 - dynamic SQL
 ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a548597b42bacdf5afaf7a2dc024156bd4ec3ad3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d71778517a9c6711a157bfe6f79df34ad05d9ee7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68290356"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820503"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,19 +49,19 @@ sp_executesql [ @stmt = ] statement
 ```  
   
 ## <a name="arguments"></a>参数  
- [ \@stmt =]*语句*  
- 是包含[!INCLUDE[tsql](../../includes/tsql-md.md)]语句或批处理的 Unicode 字符串。 \@stmt 必须是 Unicode 常量或 Unicode 变量。 不允许使用更复杂的 Unicode 表达式（例如使用 + 运算符连接两个字符串）。 不允许使用字符常量。 如果指定了 Unicode 常量，则必须使用**N**作为前缀。例如，Unicode 常量**N "sp_who"** 有效，但字符常量 **"sp_who"** 不是。 字符串的大小仅受可用数据库服务器内存限制。 在64位服务器上，字符串的大小限制为 2 GB，最大大小为**nvarchar （max）**。  
+ [ \@ stmt =]*语句*  
+ 是包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或批处理的 Unicode 字符串。 \@stmt 必须是 Unicode 常量或 Unicode 变量。 不允许使用更复杂的 Unicode 表达式（例如使用 + 运算符连接两个字符串）。 不允许使用字符常量。 如果指定了 Unicode 常量，则必须使用**N**作为前缀。例如，Unicode 常量**N "sp_who"** 有效，但字符常量 **"sp_who"** 不是。 字符串的大小仅受可用数据库服务器内存限制。 在64位服务器上，字符串的大小限制为 2 GB，最大大小为**nvarchar （max）**。  
   
 > [!NOTE]  
 >  \@stmt 可以包含与变量名称格式相同的参数，例如：`N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
- Stmt 中\@包含的每个参数都必须在 " \@params 参数定义" 列表和 "参数值" 列表中都有相应的条目。  
+ Stmt 中包含的每个参数都 \@ 必须在 " \@ params 参数定义" 列表和 "参数值" 列表中都有相应的条目。  
   
- [ \@params =]N '\@*parameter_name* *data_type* [,.。。*n* ] "  
- 一个字符串，其中包含在 stmt 中\@嵌入的所有参数的定义。字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n*是表示附加参数定义的占位符。 必须在参数中\@ \@定义 stmt 中指定的每个参数。 如果 stmt [!INCLUDE[tsql](../../includes/tsql-md.md)]中\@的语句或批处理不包含参数， \@则无需参数。 该参数的默认值为 NULL。  
+ [ \@ params =] N ' \@*parameter_name* *data_type* [,.。。*n* ] "  
+ 一个字符串，其中包含在 stmt 中嵌入的所有参数的定义 \@ 。字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n*是表示附加参数定义的占位符。 \@必须在参数中定义 stmt 中指定的每个参数 \@ 。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] stmt 中的语句或批处理不 \@ 包含参数， \@ 则无需参数。 该参数的默认值为 NULL。  
   
- [ \@param1 =]"*value1*"  
- 参数字符串中定义的第一个参数的值。 该值可以是 Unicode 常量，也可以是 Unicode 变量。 对于 stmt 中\@包含的每个参数，都必须提供一个参数值。如果 stmt 中[!INCLUDE[tsql](../../includes/tsql-md.md)] \@的语句或批处理没有参数，则不需要这些值。  
+ [ \@ param1 =] '*value1*'  
+ 参数字符串中定义的第一个参数的值。 该值可以是 Unicode 常量，也可以是 Unicode 变量。 对于 stmt 中包含的每个参数，都必须提供一个参数值 \@ 。如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] stmt 中的语句或批处理没有参数，则不需要这些值 \@ 。  
   
  [ OUT | OUTPUT ]  
  指示参数是输出参数。 **text**、 **ntext**和**image**参数可用作输出参数，除非该过程是公共语言运行时（CLR）过程。 使用 OUTPUT 关键字的输出参数可以为游标占位符，CLR 过程除外。  
@@ -78,7 +78,7 @@ sp_executesql [ @stmt = ] statement
 ## <a name="remarks"></a>备注  
  必须按照本主题前面的 "语法" 一节中所述，按特定顺序输入 sp_executesql 参数。 如果这些参数的输入顺序不正确，则会显示一条错误消息。  
   
- 在批处理、名称作用域和数据库上下文方面，sp_executesql 与 EXECUTE 的行为相同。 在[!INCLUDE[tsql](../../includes/tsql-md.md)]执行 sp_executesql 语句之前，不\@会编译 sp_executesql stmt 参数中的语句或批处理。 然后，将\@编译 stmt 的内容，并将其作为执行计划单独执行，该执行计划独立于调用 sp_executesql 的批处理的执行计划。 sp_executesql 批处理不能引用调用 sp_executesql 的批处理中声明的变量。 sp_executesql 批处理中的本地游标或变量对调用 sp_executesql 的批处理是不可见的。 对数据库上下文所做的更改只在 sp_executesql 语句结束前有效。  
+ 在批处理、名称作用域和数据库上下文方面，sp_executesql 与 EXECUTE 的行为相同。 [!INCLUDE[tsql](../../includes/tsql-md.md)]在 \@ 执行 sp_executesql 语句之前，不会编译 sp_executesql stmt 参数中的语句或批处理。 \@然后，将编译 stmt 的内容，并将其作为执行计划单独执行，该执行计划独立于调用 sp_executesql 的批处理的执行计划。 sp_executesql 批处理不能引用调用 sp_executesql 的批处理中声明的变量。 sp_executesql 批处理中的本地游标或变量对调用 sp_executesql 的批处理是不可见的。 对数据库上下文所做的更改只在 sp_executesql 语句结束前有效。  
   
  如果只更改了语句中的参数值，则 sp_executesql 可用来代替存储过程多次执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 因为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句本身保持不变，仅参数值发生变化，所以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器可能重复使用首次执行时所生成的执行计划。  
   
@@ -205,7 +205,7 @@ GO
  在该过程中使用 sp_executesql 比使用 EXECUTE 执行字符串更有效。 使用 sp_executesql 时，只生成 12 个版本的 INSERT 字符串，每个月的表对应 1 个字符串。 使用 EXECUTE 时，因为参数值不同，每个 INSERT 字符串均是唯一的。 尽管两种方法生成的批处理数相同，但因为 sp_executesql 生成的 INSERT 字符串都相似，所以查询优化器更有可能重复使用执行计划。  
   
 ### <a name="c-using-the-output-parameter"></a>C. 使用 OUTPUT 参数  
- 下面的示例使用`OUTPUT`参数存储`SELECT` `@SQLString`参数中的语句生成的结果集。然后`SELECT`执行两个语句，这些语句使用`OUTPUT`参数的值。  
+ 下面的示例使用 `OUTPUT` 参数存储参数中的语句生成的结果集 `SELECT` `@SQLString` 。`SELECT`然后执行两个语句，这些语句使用参数的值 `OUTPUT` 。  
   
 ```  
 USE AdventureWorks2012;  

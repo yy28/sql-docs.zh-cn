@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_tombstone system table
 ms.assetid: 8b3fc7bf-729b-40f2-8a26-e7dfbe8ddb38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 12caefe8b764090d46051912c876272c9efe86bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4ee4f5a7c48348f819891e298b3a20d5778b2023
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68092658"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823398"
 ---
 # <a name="msmerge_tombstone-transact-sql"></a>MSmerge_tombstone (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68092658"
 |-----------------|---------------|-----------------|  
 |**rowguid**|**uniqueidentifier**|行标识符。|  
 |**tablenick**|**int**|表的别名。|  
-|**type**|**tinyint**|删除的类型：<br /><br /> 1 = 用户删除。<br /><br /> 5 = 行不再属于筛选分区。<br /><br /> 6 = 系统删除。|  
+|type |**tinyint**|删除的类型：<br /><br /> 1 = 用户删除。<br /><br /> 5 = 行不再属于筛选分区。<br /><br /> 6 = 系统删除。|  
 |**衍生**|**varbinary （249）**|指示被删除的记录的版本，以及删除此记录时已知的更新。 出现两台订阅服务器在同一时间分别对一个行执行更新和删除操作的情况时，允许规则执行一致的冲突解决。|  
 |**产生**|**int**|在删除行时赋值。 如果订阅服务器请求第 N 代，则只发送代 >= N 的逻辑删除。|  
 |**logical_record_parent_rowguid**|**uniqueidentifier**|标识被删除的行所属的逻辑记录。|  

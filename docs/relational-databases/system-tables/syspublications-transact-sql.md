@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - syspublications system table
 ms.assetid: a86eb4f5-1f7b-493e-af55-3d15cf878228
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6d7fb57743726a59c0b501544802ecc7c701da20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 60b6557bdc8db86ef1d8092220fb91e7e506193f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029753"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820043"
 ---
 # <a name="syspublications-transact-sql"></a>syspublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "68029753"
 |**alt_snapshot_folder**|**nvarchar(255)**|指定快照的备用文件夹的位置。|  
 |**pre_snapshot_script**|**nvarchar(255)**|指定指向 **.sql**文件位置的指针。 在订阅服务器上应用快照时，分发代理将在运行任何复制的对象脚本之前运行快照前脚本。|  
 |**post_snapshot_script**|**nvarchar(255)**|指定指向 **.sql**文件位置的指针。 在初始同步过程中，分发代理将在应用所有其他复制的对象脚本和数据之后运行快照后脚本。|  
-|**compress_snapshot**|**bit**|指定写入*alt_snapshot_folder*位置的快照将压缩为[!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 格式。**1**表示将压缩快照。|  
+|**compress_snapshot**|**bit**|指定写入*alt_snapshot_folder*位置的快照将压缩为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 格式。**1**表示将压缩快照。|  
 |**ftp_address**|**sysname**|分发服务器的 FTP 服务的网络地址。 指定发布快照文件所在的位置以供分发代理拾取。|  
 |**ftp_port**|**int**|分发服务器的 FTP 服务的端口号。 指定发布快照文件的位置，以便分发代理选择|  
 |**ftp_subdirectory**|**nvarchar(255)**|指定当发布支持使用 FTP 传播快照时的快照文件的位置以供分发代理获取。|  
@@ -64,13 +64,13 @@ ms.locfileid: "68029753"
 |**centralized_conflicts**|**bit**|指定冲突记录是否存储在发布服务器上：<br /><br /> **0** = 在导致冲突的发布服务器和订阅服务器上存储冲突记录。<br /><br /> **1** = 冲突记录存储在发布服务器上。|  
 |**conflict_retention**|**int**|指定冲突保持期（天）。|  
 |**conflict_policy**|**int**|指定使用排队更新订阅服务器选项时遵循的冲突解决策略。 可以是下列值之一：<br /><br /> **1** = 发布服务器入选冲突。<br /><br /> **2** = 订阅服务器入选冲突。<br /><br /> **3** = 重新初始化订阅。|  
-|**queue_type**|**int**|指定所使用的队列类型。 可以是下列值之一：<br /><br /> **1** = msmq，使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]消息队列存储事务。<br /><br /> **2** = 使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]来存储事务的 sql。<br /><br /> 注意：使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]消息队列已弃用，不再可用。|  
+|**queue_type**|**int**|指定所使用的队列类型。 可以是下列值之一：<br /><br /> **1** = msmq，使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 消息队列存储事务。<br /><br /> **2** = 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来存储事务的 sql。<br /><br /> 注意：使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 消息队列已弃用，不再可用。|  
 |**ad_guidname**|**sysname**|指定是否在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中发布该发布。 有效的全局唯一标识符（GUID）指定发布在 Active Directory 中发布，GUID 是对应的 Active Directory 发布对象**objectGUID**。 如果为 NULL，则将不在 Active Directory 中发布该发布。|  
-|**backward_comp_level**|**int**|数据库兼容性级别，可以是以下值之一：<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。<br /><br /> **110** = 110[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。<br /><br /> **120** = 120[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。|  
+|**backward_comp_level**|**int**|数据库兼容性级别，可以是以下值之一：<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。<br /><br /> **110**  =  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 。<br /><br /> **120**  =  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 。|  
 |**allow_initialize_from_backup**|**bit**|指示订户是否可以从备份而非初始快照中初始化对此发布的订阅。 **1**表示可以从备份中初始化订阅， **0**表示不能。 有关详细信息，请参阅 [初始化事务订阅（不使用快照）](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。|  
 |**min_autonosync_lsn**|**binary**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**int**|指示发布是否支持架构复制。 **1**指示复制在发布服务器上执行的数据定义语言（DDL）语句， **0**指示不复制 DDL 语句。 有关详细信息，请参阅[对发布数据库进行架构更改](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。|  
-|**选项**|**int**|指定其他发布选项的位图，其中的位选项值如下所示：<br /><br /> **0x1** -已启用对等复制。<br /><br /> **0x2** -仅发布对等复制的本地更改。<br /><br /> **0x4** -为非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器启用。<br /><br /> **0x8** -启用对等冲突检测。|  
+|**options**|**int**|指定其他发布选项的位图，其中的位选项值如下所示：<br /><br /> **0x1** -已启用对等复制。<br /><br /> **0x2** -仅发布对等复制的本地更改。<br /><br /> **0x4** -为非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器启用。<br /><br /> **0x8** -启用对等冲突检测。|  
 |**originator_id**|**smallint**|为进行冲突检测标识对等复制拓扑中的每个节点。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。|  
   
 ## <a name="see-also"></a>另请参阅  

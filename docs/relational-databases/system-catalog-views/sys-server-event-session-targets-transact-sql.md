@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.server_event_session_targets catalog view
 - xe
 ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d9d3000b38f8cc59ef1349a1e0cd9219a3eb385f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 707060599513e765e702755251015899eb6732d7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133193"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821701"
 ---
 # <a name="sysserver_event_session_targets-transact-sql"></a>sys.server_event_session_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68133193"
   
 ||||  
 |-|-|-|  
-|From|到|关系|  
+|From|功能|关系|  
 |sys.server_event_session_targets.event_session_id|sys. server_event_sessions event_session_id|多对一|  
   
 ## <a name="see-also"></a>另请参阅  

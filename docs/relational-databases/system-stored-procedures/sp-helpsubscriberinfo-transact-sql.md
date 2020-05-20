@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscriberinfo
 ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 38b653dcb51f428692401fb87609187a82449393
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fdb8e596405c9e205ec7a8cd907569644f8c9c5c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771490"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820392"
 ---
 # <a name="sp_helpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @subscriber = ] 'subscriber'`订阅服务器的名称。 *订阅服务器*的默认值为**sysname**， **%** 默认值为，表示将返回所有信息。  
+`[ @subscriber = ] 'subscriber'`订阅服务器的名称。 *订阅服务器*的默认值为**sysname**，默认值为 **%** ，表示将返回所有信息。  
   
 `[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*为**sysname**，默认值为当前服务器的名称。  
   
@@ -51,9 +51,9 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |-----------------|---------------|-----------------|  
 |**器**|**sysname**|发布服务器的名称。|  
 |**订阅服务器**|**sysname**|订阅服务器的名称。|  
-|**type**|**tinyint**|订阅服务器的类型：<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)]数据库 1 = ODBC 数据源**1** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|type |**tinyint**|订阅服务器的类型：<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库**1** = ODBC 数据源|  
 |**id**|**sysname**|用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录 ID。|  
-|password |**sysname**|用于身份[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]验证的密码。|  
+|**password**|**sysname**|用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的密码。|  
 |**commit_batch_size**|**int**|不支持。|  
 |**status_batch_size**|**int**|不支持。|  
 |**flush_frequency**|**int**|不支持。|  
@@ -70,7 +70,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**retryattempt**|**int**|不支持。|  
 |**retrydelay**|**int**|不支持。|  
 |**2008**|**nvarchar(255)**|对订阅服务器的文本说明。|  
-|**security_mode**|**int**|实现的安全模式：<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)]个 Windows 身份验证|  
+|**security_mode**|**int**|实现的安全模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证<br /><br /> **1**个  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 身份验证|  
 |**frequency_type2**|**int**|合并代理的运行频率：<br /><br /> **1** = 一次<br /><br /> **2** = 按需<br /><br /> **4** = 每天<br /><br /> **8** = 每周<br /><br /> **16** = 每月<br /><br /> **32** = 每月相对<br /><br /> **64** = 自动启动<br /><br /> **128** = 定期|  
 |**frequency_interval2**|**int**|应用于*frequency_type*设置的频率的值。|  
 |**frequency_relative_interval2**|**int**|将*frequency_type*设置为32（每月相对）时使用的合并代理日期：<br /><br /> **1** = 第一<br /><br /> **2** = 秒<br /><br /> **4** = 第三<br /><br /> **8** = 第四<br /><br /> **16** = 最后|  

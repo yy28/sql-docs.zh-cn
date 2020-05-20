@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_purge_jobhistory
 ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad5e7a1d03dde408da52ca2b5ebe6b40f10c06c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64832f713153e6eaed126e30a2a0fd56c38a4bc6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313757"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820362"
 ---
 # <a name="sp_purge_jobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ sp_purge_jobhistory
 > [!NOTE]  
 >  **Sysadmin**固定服务器角色的成员或**SQLAgentOperatorRole**固定数据库角色的成员可以执行**sp_purge_jobhistory** ，而无需指定*job_name*或*job_id*。 如果**sysadmin**用户未指定这些参数，则所有本地作业和多服务器作业的作业历史记录在*oldest_date*指定的时间内被删除。 当**SQLAgentOperatorRole**用户未指定这些参数时，所有本地作业的作业历史记录将在*oldest_date*指定的时间内删除。  
   
-`[ @job_id = ] job_id`要删除的记录的作业标识号。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。 必须指定*job_id*或*job_name* ，但不能同时指定两者。 请参阅** \@job_name**说明中的说明，了解**sysadmin**或**SQLAgentOperatorRole**用户可以使用此参数的相关信息。  
+`[ @job_id = ] job_id`要删除的记录的作业标识号。 *job_id*的值为**uniqueidentifier**，默认值为 NULL。 必须指定*job_id*或*job_name* ，但不能同时指定两者。 请参阅** \@ job_name**说明中的说明，了解**sysadmin**或**SQLAgentOperatorRole**用户可以使用此参数的相关信息。  
   
 `[ @oldest_date = ] oldest_date`要保留在历史记录中的最早记录。 *oldest_date*为**datetime**，默认值为 NULL。 指定*oldest_date*时， **sp_purge_jobhistory**只删除早于指定值的记录。  
   

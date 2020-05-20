@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_copymergesnapshot
 ms.assetid: eaecd6e0-8486-4e5d-ace7-8ae75768c0a8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d51f29399487ee156210e96fe598c38288755913
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c8658790dc80ecdae843104f5ed1dd8be2684963
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72381711"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820619"
 ---
 # <a name="sp_copymergesnapshot-transact-sql"></a>sp_copymergesnapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  将指定发布的快照文件夹复制到** \@destination_folder**中列出的文件夹。 此存储过程在发布服务器上对发布数据库执行。  
+  将指定发布的快照文件夹复制到** \@ destination_folder**中列出的文件夹。 此存储过程在发布服务器上对发布数据库执行。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,7 +45,7 @@ sp_copymergesnapshot [ @publication = ] 'publication', [ @destination_folder = ]
  **0** （成功）或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
- **sp_copymergesnapshot**用于合并复制。 运行[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本7.0 及更早版本的订阅服务器不能使用备用快照位置。  
+ **sp_copymergesnapshot**用于合并复制。 运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本7.0 及更早版本的订阅服务器不能使用备用快照位置。  
   
 ## <a name="permissions"></a>权限  
  只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_copymergesnapshot**。  

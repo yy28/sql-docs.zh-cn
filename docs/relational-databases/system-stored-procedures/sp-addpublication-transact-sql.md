@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpublication
 ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5e6e7232d718d5cf6cb1791783f105f31dc2f4ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3ae6596579942a3292c3467f4d3489346eb4aa42
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769100"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820666"
 ---
 # <a name="sp_addpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -97,16 +97,16 @@ sp_addpublication [ @publication = ] 'publication'
 |**字符**|生成所有表的字符模式大容量复制程序输出。 _对于 Oracle 发布服务器，_ **字符**_仅对快照复制有效_。|  
 |**发出**|生成所有表的本机模式大容量复制程序输出，但在快照过程中并不锁定表。 只有事务发布支持该值。 *对于 Oracle 发布服务器不支持*。|  
 |**concurrent_c**|生成所有表的字符模式大容量复制程序输出，但在快照过程中并不锁定表。 只有事务发布支持该值。|  
-|**数据库快照**|从数据库快照生成所有表的本机模式大容量复制程序输出。 并非在的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]每个版本中都提供了数据库快照。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2016 的各个[版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。|  
-|**database snapshot character**|从数据库快照生成所有表的字符模式大容量复制程序输出。 并非在的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]每个版本中都提供了数据库快照。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2016 的各个[版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。|  
-|NULL（默认值）|[!INCLUDE[msCoName](../../includes/msconame-md.md)]对于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器，默认为**本机**。 对于非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器，当*repl_freq*的值为**Snapshot** ，并为所有其他情况**concurrent_c**时，默认为**字符**。|  
+|**数据库快照**|从数据库快照生成所有表的本机模式大容量复制程序输出。 并非在的每个版本中都提供了数据库快照 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。|  
+|**database snapshot character**|从数据库快照生成所有表的字符模式大容量复制程序输出。 并非在的每个版本中都提供了数据库快照 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。|  
+|NULL（默认值）|对于发布服务器，默认为**本机** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器，当*repl_freq*的值为**Snapshot** ，并为所有其他情况**concurrent_c**时，默认为**字符**。|  
   
 `[ \@repl_freq = ] 'repl_freq'`复制频率的类型， *repl_freq*为**nvarchar （10）**，可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
-|**连续**（默认值）|发布服务器提供所有基于日志的事务的输出。 对于非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器，这要求将*sync_method*设置为**concurrent_c**。|  
-|**概述**|发布服务器仅生成计划的同步事件。 对于非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器，这要求将*sync_method*设置为 "**字符**"。|  
+|**连续**（默认值）|发布服务器提供所有基于日志的事务的输出。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器，这要求将*sync_method*设置为**concurrent_c**。|  
+|**概述**|发布服务器仅生成计划的同步事件。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器，这要求将*sync_method*设置为 "**字符**"。|  
   
 `[ \@description = ] 'description'`发布的可选说明。 *description*的值为**nvarchar （255）**，默认值为 NULL。  
   
@@ -114,7 +114,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 |值|说明|  
 |-----------|-----------------|  
-|**活动**|发布数据可立即用于订阅服务器。|  
+|**active**|发布数据可立即用于订阅服务器。|  
 |**非活动**（默认值）|首次创建发布时，发布数据不能由订阅服务器使用（订阅服务器可以订阅，但这些订阅不被处理）。|  
   
  *对于 Oracle 发布服务器不支持*。  
@@ -148,7 +148,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@allow_queued_tran = ] 'allow_queued_updating'`在订阅服务器上启用或禁用更改的队列，直到可在发布服务器上应用这些更改。 *allow_queued_updating*为**nvarchar （5）** ，默认值为 FALSE。 如果**为 false**，则不会对订阅服务器上的更改进行排队。 *Oracle 发布服务器不支持* **true** 。  
   
-`[ \@snapshot_in_defaultfolder = ] 'snapshot_in_default_folder'`指定是否将快照文件存储在默认文件夹中。 *snapshot_in_default_folder*为**nvarchar （5）** ，默认值为 TRUE。 如果**为 true**，则可以在默认文件夹中找到快照文件。 如果**为 false**，则将快照文件存储在*alternate_snapshot_folder*指定的备用位置。 备用位置可以在另一台服务器、一个网络驱动器或可移动介质（如光盘或可移动磁盘）上。 也可以将快照文件保存到 FTP 站点以供订阅服务器以后检索。 请注意，此参数可以为 true，并且在** \@alt_snapshot_folder**参数中仍有一个位置。 该组合指定将快照文件同时存储在默认位置和备用位置。  
+`[ \@snapshot_in_defaultfolder = ] 'snapshot_in_default_folder'`指定是否将快照文件存储在默认文件夹中。 *snapshot_in_default_folder*为**nvarchar （5）** ，默认值为 TRUE。 如果**为 true**，则可以在默认文件夹中找到快照文件。 如果**为 false**，则将快照文件存储在*alternate_snapshot_folder*指定的备用位置。 备用位置可以在另一台服务器、一个网络驱动器或可移动介质（如光盘或可移动磁盘）上。 也可以将快照文件保存到 FTP 站点以供订阅服务器以后检索。 请注意，此参数可以为 true，并且在** \@ alt_snapshot_folder**参数中仍有一个位置。 该组合指定将快照文件同时存储在默认位置和备用位置。  
   
 `[ \@alt_snapshot_folder = ] 'alternate_snapshot_folder'`指定快照的备用文件夹的位置。 *alternate_snapshot_folder*的默认值为**nvarchar （255）** ，默认值为 NULL。  
   
@@ -156,7 +156,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@post_snapshot_script = ] 'post_snapshot_script'`指定指向 **.sql**文件位置的指针。 *post_snapshot_script*为**nvarchar （255）**，默认值为 NULL。 分发代理将在初始同步过程中已应用所有其他复制的对象脚本和数据之后才运行快照后脚本。 该脚本在分发代理连接到订阅数据库时使用的安全上下文中执行。  
   
-`[ \@compress_snapshot = ] 'compress_snapshot'`指定写入** \@alt_snapshot_folder**位置的快照将压缩为[!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 格式。 *compress_snapshot*为**nvarchar （5）**，默认值为 FALSE。 **false**指定不压缩快照;**如果为 true，则**指定将压缩快照。 不能压缩大于 2 GB 的快照文件。 压缩快照文件在分发代理运行的位置解压缩；请求订阅通常与压缩快照一起使用，以便在订阅服务器上解压缩文件。 不能压缩默认文件夹中的快照。  
+`[ \@compress_snapshot = ] 'compress_snapshot'`指定写入** \@ alt_snapshot_folder**位置的快照将压缩为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 格式。 *compress_snapshot*为**nvarchar （5）**，默认值为 FALSE。 **false**指定不压缩快照;**如果为 true，则**指定将压缩快照。 不能压缩大于 2 GB 的快照文件。 压缩快照文件在分发代理运行的位置解压缩；请求订阅通常与压缩快照一起使用，以便在订阅服务器上解压缩文件。 不能压缩默认文件夹中的快照。  
   
 `[ \@ftp_address = ] 'ftp_address'`分发服务器的 FTP 服务的网络地址。 *ftp_address*的默认值为**sysname**，默认值为 NULL。 指定供订阅服务器的分发代理或合并代理拾取的发布快照文件的位置。 由于为每个发布都存储此属性，因此每个发布可以具有不同的*ftp_address*。 该发布必须支持使用 FTP 来传播快照。  
   
@@ -194,7 +194,7 @@ sp_addpublication [ @publication = ] 'publication'
 |值|说明|  
 |-----------|-----------------|  
 |**transact-sql**|使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储事务。|  
-|NULL（默认值）|默认为**sql**，它指定使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]来存储事务。|  
+|NULL（默认值）|默认为**sql**，它指定使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来存储事务。|  
   
 > [!NOTE]  
 >  不再支持使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 消息队列。 指定**msmq**值将导致警告，复制会自动将此值设置为**sql**。  
@@ -207,10 +207,10 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@qreader_job_name = ] 'queue_reader_agent_name'`现有代理作业的名称。 *queue_reader_agent_name*的值为**sysname**，默认值为 NULL。 仅当队列读取器代理将使用现有作业而不是新建作业时，才指定该参数。  
   
-`[ \@publisher = ] 'publisher'`指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
+`[ \@publisher = ] 'publisher'`指定一个非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  *publisher*将发布添加到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器时，不应使用 publisher。  
+>  将发布添加到发布服务器时，不应使用*publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 `[ \@allow_initialize_from_backup = ] 'allow_initialize_from_backup'`指示订户是否可以从备份而非初始快照中初始化对此发布的订阅。 *allow_initialize_from_backup*为**nvarchar （5）**，可以是下列值之一：  
   
@@ -225,13 +225,13 @@ sp_addpublication [ @publication = ] 'publication'
 > [!WARNING]  
 >  为了避免丢失订阅服务器数据，在将 **sp_addpublication** 与 `@allow_initialize_from_backup = N'true'`一起使用时，始终使用 `@immediate_sync = N'true'`。  
   
-`[ \@replicate_ddl = ] replicate_ddl`指示发布是否支持架构复制。 *replicate_ddl*为**int**，默认值为**1** （对于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器）， **0**表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]非发布服务器。 **1**指示复制在发布服务器上执行的数据定义语言（DDL）语句， **0**指示不复制 DDL 语句。 *Oracle 发布服务器不支持架构复制。* 有关详细信息，请参阅[对发布数据库进行架构更改](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
+`[ \@replicate_ddl = ] replicate_ddl`指示发布是否支持架构复制。 *replicate_ddl*为**int**，默认值为**1** （对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器）， **0**表示非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 **1**指示复制在发布服务器上执行的数据定义语言（DDL）语句， **0**指示不复制 DDL 语句。 *Oracle 发布服务器不支持架构复制。* 有关详细信息，请参阅[对发布数据库进行架构更改](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
   
- 当 ddl 语句添加列时， * \@replicate_ddl*参数。 当* \@* ddl 语句出于以下原因更改或删除列时，将忽略 replicate_ddl 参数。  
+ 当 DDL 语句添加列时， * \@ replicate_ddl*参数。 当 DDL 语句出于以下原因更改或删除列时，将忽略* \@ replicate_ddl*参数。  
   
--   删除列时，必须更新 sysarticlecolumns 以防止新的 DML 语句包含删除的列，如果包含可能导致分发代理失败。 Replicate_ddl 参数将被忽略，因为复制必须始终复制架构更改。 * \@*  
+-   删除列时，必须更新 sysarticlecolumns 以防止新的 DML 语句包含删除的列，如果包含可能导致分发代理失败。 * \@ Replicate_ddl*参数将被忽略，因为复制必须始终复制架构更改。  
   
--   更改列时，源数据类型或为 Null 性可能已更改，这导致 DML 语句包含可能与订阅服务器上的表不兼容的值。 这种 DML 语句可能导致分发代理失败。 Replicate_ddl 参数将被忽略，因为复制必须始终复制架构更改。 * \@*  
+-   更改列时，源数据类型或为 Null 性可能已更改，这导致 DML 语句包含可能与订阅服务器上的表不兼容的值。 这种 DML 语句可能导致分发代理失败。 * \@ Replicate_ddl*参数将被忽略，因为复制必须始终复制架构更改。  
   
 -   DDL 语句添加新列时，sysarticlecolumns 不包含新列。 DML 语句将不尝试复制新列的数据。 采用该参数，因为复制或不复制 DDL 均可接受。  
   
@@ -259,7 +259,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@publish_local_changes_only = ] 'publish_local_changes_only'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ \@enabled_for_het_sub = ] 'enabled_for_het_sub'`启用发布以支持非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器。 *enabled_for_het_sub*为**nvarchar （5）** ，默认值为 FALSE。 如果值为**true** ，则表示发布支持非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器。 如果*enabled_for_het_sub*为**true**，则以下限制适用：  
+`[ \@enabled_for_het_sub = ] 'enabled_for_het_sub'`启用发布以支持非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。 *enabled_for_het_sub*为**nvarchar （5）** ，默认值为 FALSE。 如果值为**true** ，则表示发布支持非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。 如果*enabled_for_het_sub*为**true**，则以下限制适用：  
   
 -   *allow_initialize_from_backup*必须为**false**。  
   
@@ -321,7 +321,7 @@ sp_addpublication [ @publication = ] 'publication'
   
  如果存在发布相同数据库对象的多个发布，则只有*replicate_ddl*值为**1**的发布才会复制 ALTER TABLE、ALTER VIEW、ALTER PROCEDURE、ALTER FUNCTION 和 alter TRIGGER ddl 语句。 但是，发布已删除列的所有发布都将复制 ALTER TABLE DROP COLUMN DDL 语句。  
   
- 为发布启用了 ddl 复制（*replicate_ddl* = **1**），为了对发布进行非复制 ddl 更改，必须首先执行[sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)将*replicate_ddl*设置为**0**。 在发出非复制 DDL 语句后，可以再次运行[sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)以重新打开 DDL 复制。  
+ 为发布启用了 DDL 复制（*replicate_ddl*  =  **1**），为了对发布进行非复制 ddl 更改，必须首先执行[sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)将*replicate_ddl*设置为**0**。 在发出非复制 DDL 语句后，可以再次运行[sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)以重新打开 DDL 复制。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_AddTranPub](../../relational-databases/replication/codesnippet/tsql/sp-addpublication-transa_1.sql)]  

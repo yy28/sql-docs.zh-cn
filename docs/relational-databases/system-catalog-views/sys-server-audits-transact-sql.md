@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_audits catalog view
 ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0a00f6843a0ef379c12aa1d1d00df9380efbd139
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 67f25c6f4d39eb8cbd3b09d2e7710462f91ed397
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124995"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821555"
 ---
 # <a name="sysserver_audits-transact-sql"></a>sys.server_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "68124995"
 |**create_date**|**datetime**|创建审核的 UTC 日期。|  
 |**modify_date**|**datetime**|上次修改审核的 UTC 日期。|  
 |**principal_id**|**int**|向服务器注册的审核所有者的 ID。|  
-|**type**|**char(2)**|审核类型：<br /><br /> SL-NT 安全事件日志<br /><br /> AL-NT 应用程序事件日志<br /><br /> 文件系统上的 FL 文件|  
+|type |**char(2)**|审核类型：<br /><br /> SL-NT 安全事件日志<br /><br /> AL-NT 应用程序事件日志<br /><br /> 文件系统上的 FL 文件|  
 |**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPICATION LOG<br /><br /> FILE|  
 |**on_failure**|**tinyint**|失败时要写入的操作项：<br /><br /> 0-继续<br /><br /> 1-关闭服务器实例<br /><br /> 2-失败操作|  
 |**on_failure_desc**|**nvarchar(60)**|失败时要写入的操作项：<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
 |**is_state_enabled**|**tinyint**|0-已禁用<br /><br /> 1 - 启用|  
 |**queue_delay**|**int**|写入磁盘前等待的最长时间（以毫秒为单位）。 如果为0，则审核将保证写入，然后事件才能继续。|  
-|**推断**|**nvarchar （3000）**|应用于事件的谓词表达式。|  
+|**predicate**|**nvarchar （3000）**|应用于事件的谓词表达式。|  
   
 ## <a name="permissions"></a>权限  
  具有**ALTER ANY SERVER AUDIT**或**VIEW any DEFINITION**权限的主体有权访问此目录视图。 此外，不能拒绝主体**VIEW ANY DEFINITION**权限。  

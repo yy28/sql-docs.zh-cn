@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepushsubscription_agent
 ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fb74cc0887d68ea01fabe7f6168c0d23275d8f4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2f0a3edd44f7795fd57fab1cf640e7ab95d59ee2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68769163"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820734"
 ---
 # <a name="sp_addmergepushsubscription_agent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,16 +68,16 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @subscriber_db = ] 'subscriber_db'`订阅数据库的名称。 *subscriber_db*的默认值为**sysname**，默认值为 NULL。  
   
-`[ @subscriber_security_mode = ] subscriber_security_mode`同步时连接到订阅服务器时使用的安全模式。 *subscriber_security_mode*的值为**int**，默认值为1。 如果为**0**， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]则指定身份验证。 如果为**1**，则指定 Windows 身份验证。  
+`[ @subscriber_security_mode = ] subscriber_security_mode`同步时连接到订阅服务器时使用的安全模式。 *subscriber_security_mode*的值为**int**，默认值为1。 如果为**0**，则指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 如果为**1**，则指定 Windows 身份验证。  
   
 `[ @subscriber_login = ] 'subscriber_login'`同步时连接到订阅服务器时要使用的订阅服务器登录名。 如果*subscriber_security_mode*设置为**0**，则*subscriber_login*是必需的。 *subscriber_login*的默认值为**sysname**，默认值为 NULL。  
   
-`[ @subscriber_password = ] 'subscriber_password'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证的订阅服务器密码。 如果*subscriber_security_mode*设置为**0**，则*subscriber_password*是必需的。 *subscriber_password*的默认值为**sysname**，默认值为 NULL。 如果使用订阅服务器密码，将自动对密码进行加密。  
+`[ @subscriber_password = ] 'subscriber_password'`身份验证的订阅服务器密码 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果*subscriber_security_mode*设置为**0**，则*subscriber_password*是必需的。 *subscriber_password*的默认值为**sysname**，默认值为 NULL。 如果使用订阅服务器密码，将自动对密码进行加密。  
   
 > [!IMPORTANT]  
 >  如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
-`[ @publisher_security_mode = ] publisher_security_mode`同步时连接到发布服务器时使用的安全模式。 *publisher_security_mode*的值为**int**，默认值为1。 如果为**0**， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]则指定身份验证。 如果为**1**，则指定 Windows 身份验证。  
+`[ @publisher_security_mode = ] publisher_security_mode`同步时连接到发布服务器时使用的安全模式。 *publisher_security_mode*的值为**int**，默认值为1。 如果为**0**，则指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 如果为**1**，则指定 Windows 身份验证。  
   
 `[ @publisher_login = ] 'publisher_login'`同步时连接到发布服务器时使用的登录名。 *publisher_login*的默认值为**sysname**，默认值为 NULL。  
   
@@ -97,11 +97,11 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @frequency_type = ] frequency_type`用于计划合并代理的频率。 *frequency_type*为**int**，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**1**|一次性|  
 |**2**|按需|  
-|**4**|每日|  
+|**4**|每天|  
 |**8**|每周|  
 |**超过**|每月一次|  
 |**32**|与“每月”选项相关|  
@@ -114,7 +114,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @frequency_interval = ] frequency_interval`合并代理运行的日期。 *frequency_interval*为**int**，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**1**|星期日|  
 |**2**|星期一|  
@@ -123,14 +123,14 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |**5**|星期四|  
 |**6**|星期五|  
 |**7**|星期六|  
-|**8**|日期|  
+|**8**|天|  
 |**900**|工作日|  
 |**10**|周末|  
 |NULL（默认值）||  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`合并代理的日期。 如果*frequency_type*设置为**32** （每月相对），则使用此参数。 *frequency_relative_interval*为**int**，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**1**|第一个|  
 |**2**|秒|  
@@ -143,12 +143,12 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @frequency_subday = ] frequency_subday`在定义的时间段内重新计划的频率。 *frequency_subday*为**int**，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|秒|  
 |**4**|Minute|  
-|**8**|Hour|  
+|**8**|小时|  
 |NULL（默认值）||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*的间隔。 *frequency_subday_interval*的值为**int**，默认值为 NULL。  
@@ -161,7 +161,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @active_end_date = ] active_end_date`停止计划合并代理的日期，格式为 YYYYMMDD。 *active_end_date*的值为**int**，默认值为 NULL。  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`指定是否可以通过 Windows 同步管理器同步订阅。 *enabled_for_syncmgr*为**nvarchar （5）**，默认值为 FALSE。 如果**为 false**，则不向同步管理器注册订阅。 如果**为 true**，则会向同步管理器注册订阅，并在不[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]启动的情况下同步订阅。  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`指定是否可以通过 Windows 同步管理器同步订阅。 *enabled_for_syncmgr*为**nvarchar （5）**，默认值为 FALSE。 如果**为 false**，则不向同步管理器注册订阅。 如果**为 true**，则会向同步管理器注册订阅，并在不启动的情况下同步订阅 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

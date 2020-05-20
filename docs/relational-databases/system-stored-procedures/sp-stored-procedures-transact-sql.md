@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_stored_procedures
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 554b9317d6b474b23e9dbbc10dea03156ccc6287
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 865e86976a6da117d41ba2f22020f7137dee5038
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68702785"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820268"
 ---
 # <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 
@@ -55,7 +55,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   当前数据库中的 **dbo** 架构。  
   
-`[ @qualifier = ] 'qualifier'`过程限定符的名称。 *限定符*的值为**sysname**，默认值为 NULL。 各种 DBMS 产品支持表的三部分命名方式（限定符形式）_qualifier_**。**_架构_**。**_名称_。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，*限定符*表示数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  
+`[ @qualifier = ] 'qualifier'`过程限定符的名称。 *限定符*的值为**sysname**，默认值为 NULL。 各种 DBMS 产品支持表的三部分命名方式（限定符形式）_qualifier_**。**_架构_**。**_名称_。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，*限定符*表示数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  
   
 `[ @fUsePattern = ] 'fUsePattern'`确定下划线（_）、百分比（%）或方括号 [] 是否解释为通配符。 *fUsePattern*的值为**bit**，默认值为1。  
   

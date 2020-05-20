@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpublication_snapshot
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c32ea67eef368a17b129989e3f05c29ab0533d72
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3447b9111ec6d6a6fd6a4084f884647cbd38eec2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769114"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820678"
 ---
 # <a name="sp_addpublication_snapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**1**|一次|  
 |**2**|秒|  
 |**4** （默认值）|Minute|  
-|**8**|Hour|  
+|**8**|小时|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*的间隔。 *frequency_subday_interval*的值为**int**，默认值为5，表示每5分钟一次。  
   
@@ -108,7 +108,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
   
 `[ @snapshot_job_name = ] 'snapshot_agent_name'`如果正在使用现有作业，则为现有快照代理作业名称。 *snapshot_agent_name*的默认值为**nvarchar （100）** ，默认值为 NULL。 此参数只限内部使用，创建新发布时不应指定它。 如果指定*snapshot_agent_name* ，则*job_login*和*job_password*必须为 NULL。  
   
-`[ @publisher_security_mode = ] publisher_security_mode`连接到发布服务器时代理所使用的安全模式。 *publisher_security_mode*为**smallint**，默认值为1。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证， **1**指定 Windows 身份验证。 对于非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器，必须指定**0**值。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode`连接到发布服务器时代理所使用的安全模式。 *publisher_security_mode*为**smallint**，默认值为1。 **0**指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证， **1**指定 Windows 身份验证。 对于非发布服务器，必须指定**0**值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 `[ @publisher_login = ] 'publisher_login'`连接到发布服务器时使用的登录名。 *publisher_login*的默认值为**sysname**，默认值为 NULL。 当*publisher_security_mode*为**0**时，必须指定*publisher_login* 。 如果*publisher_login*为 NULL 且*publisher_security_mode*为**1**，则连接到发布服务器时将使用*job_login*中指定的帐户。  
   
@@ -120,17 +120,17 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 `[ @job_login = ] 'job_login'`运行代理时所用的帐户的登录名。 在 Azure SQL 数据库托管实例上，使用 SQL Server 帐户。 *job_login*为**nvarchar （257）**，默认值为 NULL。 此帐户始终用于到分发服务器的代理连接。 创建新的快照代理作业时，必须提供此参数。  
   
 > [!NOTE]
->  对于非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器，此登录名必须与[&#40;transact-sql&#41;sp_adddistpublisher](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)中指定的相同。  
+>  对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器，此登录名必须与[&#40;transact-sql&#41;sp_adddistpublisher](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)中指定的相同。  
   
 `[ @job_password = ] 'job_password'`运行代理所用的 Windows 帐户的密码。 *job_password* **sysname**，无默认值。 创建新的快照代理作业时，必须提供此参数。  
   
 > [!IMPORTANT]  
 >  请不要将身份验证信息存储在脚本文件中。 为了提高安全性，建议您在运行时提供登录名和密码。  
   
-`[ @publisher = ] 'publisher'`指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'`指定一个非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  *publisher*在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器上创建快照代理时，不应使用 publisher。  
+>  在发布服务器上创建快照代理时，不应使用*publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  

@@ -19,12 +19,12 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d33b78710605841e4559f9c402a18210e25b2daa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 143ed8e5487772a39e4e98c92f8f07d78de7f370
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73980305"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823367"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>sys. index_resumable_operations （Transact-sql）
 
@@ -40,7 +40,7 @@ ms.locfileid: "73980305"
 |**sql_text**|**nvarchar(max)**|DDL T-sql 语句文本|
 |**last_max_dop**|**smallint**|上次使用的 MAX_DOP （默认值 = 0）|
 |**partition_number**|**int**|所属索引或堆中的分区号。 对于未分区的表和索引，或者如果正在重新生成所有分区，则此列的值为 NULL。|
-|**state**|**tinyint**|可恢复索引的操作状态：<br /><br />0 = 正在运行<br /><br />1 = 暂停|
+|State |**tinyint**|可恢复索引的操作状态：<br /><br />0 = 正在运行<br /><br />1 = 暂停|
 |**state_desc**|**nvarchar(60)**|可恢复索引的操作状态的说明（正在运行或已暂停）|  
 |**start_time**|**datetime**|索引操作开始时间（不可为 null）|
 |**last_pause_time**|**datatime**| 索引操作上次暂停时间（可以为 null）。 如果操作正在运行且从未暂停，则为 NULL。|
@@ -63,7 +63,7 @@ SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;
 ## <a name="see-also"></a>另请参阅
 
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
-- [创建索引](../../t-sql/statements/create-index-transact-sql.md)
+- [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
 - [目录视图](catalog-views-transact-sql.md)
 - [对象目录视图](object-catalog-views-transact-sql.md)
 - [sys.indexes](sys-xml-indexes-transact-sql.md)

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_startpublication_snapshot
 ms.assetid: 2cf568ee-0679-4d19-a394-27210bff61e5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ab1b3487c3a1affe7a0dc40f62d241d19b29186b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 70423377372a4ff41b5bd90487bd2080fec96edc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032757"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820300"
 ---
 # <a name="sp_startpublication_snapshot-transact-sql"></a>sp_startpublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sp_startpublication_snapshot [ @publication = ] 'publication'
 ## <a name="arguments"></a>参数  
 `[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，无默认值。  
   
-`[ @publisher = ] 'publisher'`非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器的名称。 *发布服务器*的**sysname**，默认值为 NULL。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器，无需指定此参数。  
+`[ @publisher = ] 'publisher'`非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器的名称。 *发布服务器*的**sysname**，默认值为 NULL。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器，无需指定此参数。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
@@ -48,7 +48,7 @@ sp_startpublication_snapshot [ @publication = ] 'publication'
 ## <a name="remarks"></a>备注  
  **sp_startpublication_snapshot**用于所有类型的复制。  
   
- 对于非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器，此存储过程在分发服务器上的分发数据库中执行。  
+ 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器，此存储过程在分发服务器上的分发数据库中执行。  
   
 ## <a name="permissions"></a>权限  
  只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_startpublication_snapshot**。  

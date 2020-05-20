@@ -19,15 +19,15 @@ helpviewer_keywords:
 - dm_exec_dms_services management view
 - sys.dm_exec_dms_services management view
 ms.assetid: 6ac47eef-4293-46b8-8555-07a614837504
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11e353af23c2331cd8f2bef5b439c967512e7323
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1b3171f1b5405cc251d15759ad6f6a7a134fadb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73532925"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821249"
 ---
 # <a name="sysdm_exec_dms_services-transact-sql"></a>sys.dm_exec_dms_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "73532925"
 |-----------------|---------------|-----------------|-----------|  
 |dms_core_id|`int`|与 DMS 核心关联的唯一数字 id。 此视图的键。|唯一 ID。|  
 |compute_node_id|`int`|此 DMS 服务正在其上运行的节点的 ID|请参阅 dm_exec_compute_nodes sys.databases 中的*compute_node_id* [&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
-|status|`nvarchar(32)`|DMS 服务的当前状态||
+|状态|`nvarchar(32)`|DMS 服务的当前状态||
 |compute_pool_id|`int`|池的唯一标识符。|
 
 ## <a name="see-also"></a>另请参阅  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_column
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e17a87a04c8c4286a66c6e7a0746f2d7de48d72
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 724c3b71012014d6858554614fbed9239bbfeddc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124340"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820448"
 ---
 # <a name="sp_fulltext_column-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 |**add**|将*qualified_table_name* *column_name*添加到表的不活动全文索引中。 此操作可启用列以进行全文索引。|  
 |**击落**|从表的不活动全文索引中移除*qualified_table_name* *column_name* 。|  
   
-`[ @language = ] 'language_term'`列中存储的数据的语言。 有关中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]包含的语言的列表，请参阅[transact-sql&#41;&#40;fulltext_languages ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。  
+`[ @language = ] 'language_term'`列中存储的数据的语言。 有关中包含的语言的列表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅[transact-sql&#41;&#40;fulltext_languages ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。  
   
 > [!NOTE]  
 >  如果列包含的数据使用了多种语言或不支持的语言，则使用“非特定语言”。 默认值通过配置选项“默认全文语言”指定。  
