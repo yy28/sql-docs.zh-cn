@@ -108,10 +108,10 @@ ms.locfileid: "71293900"
   
 ### <a name="options"></a>选项  
  **SourceConnection**  
- 从列表中选择 SMO 连接管理器，或单击“**新建连接...>”，创建与源服务器的新连接\<** 。  
+ 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与源服务器的新连接。  
   
  **DestinationConnection**  
- 从列表中选择 SMO 连接管理器，或单击“**新建连接...>”，创建与目标服务器的新连接\<** 。  
+ 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与目标服务器的新连接。  
   
  **DestinationDatabaseName**  
  指定目标服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的名称。  

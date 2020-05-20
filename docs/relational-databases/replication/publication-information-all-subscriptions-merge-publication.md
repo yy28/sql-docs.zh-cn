@@ -71,7 +71,7 @@ ms.locfileid: "75321400"
  每个订阅的名称，格式为：SubscriberName:  SubscriptionDatabaseName。  
   
  **友好名称**  
- 仅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。 每个订阅的说明。 此说明是在“订阅属性”对话框中输入的，或是通过 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) 或 [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md) 的 `@description` 指定的  。 用户通常将说明用作订阅的“友好名称”或别名。  
+ 仅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。 每个订阅的说明。 此说明是在“订阅属性”对话框中输入的，或是通过 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) 或 [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md) 的 `@description` 指定的。 用户通常将说明用作订阅的“友好名称”或别名。  
   
  **“性能”**  
  仅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。 每个订阅的性能等级，这是基于复制监视器对传送速率的最新度量值来确定的。 对于具有相同连接类型（拨号或 LAN）的发布的订阅，通过将单独的订阅性能与其平均历史性能进行比较，可以确定性能等级。 如果通过同一类型的连接进行了五次同步，且每次同步都进行了 50 处或更多的更改，则复制监视器将在此列中显示一个值。 如果所做更改为 50 处或更多处的同步次数少于五次，或最近一次同步所做的更改少于 50 处，则此列为空白。  

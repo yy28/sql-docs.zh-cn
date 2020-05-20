@@ -24,7 +24,7 @@ ms.locfileid: "68823112"
 
 ## <a name="backup-a-database"></a>备份数据库
 
-下例使用 sqlcmd 连接到本地 SQL Server 实例，并对名为  **的用户数据库进行完整备份**`demodb`。
+下例使用 sqlcmd 连接到本地 SQL Server 实例，并对名为 `demodb` 的用户数据库进行完整备份。
 
 ```bash
 sqlcmd -S localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'/var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"

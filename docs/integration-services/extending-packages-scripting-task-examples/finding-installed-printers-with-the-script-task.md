@@ -43,9 +43,9 @@ ms.locfileid: "71286858"
   
 #### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
   
-1.  使用类型对象`PrinterList`**创建名为**  的变量。  
+1.  使用类型对象创建名为 `PrinterList` 的变量。  
   
-2.  在“脚本任务编辑器”  的“脚本”  页，将此变量添加到 ReadWriteVariables 属性。  
+2.  在“脚本任务编辑器”的“脚本”页，将此变量添加到 ReadWriteVariables 属性。  
   
 3.  在脚本项目中，添加对 System.Drawing  命名空间的引用。  
   

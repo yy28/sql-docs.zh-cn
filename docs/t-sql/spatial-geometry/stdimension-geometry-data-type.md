@@ -42,7 +42,7 @@ ms.locfileid: "68107841"
  CLR 返回类型：SqlInt32   
   
 ## <a name="remarks"></a>备注  
- 如果 `STDimension()`geometry**实例为空，则** 返回 -1。  
+ 如果 **geometry** 实例为空，则 `STDimension()` 返回 -1。  
   
 ## <a name="examples"></a>示例  
  以下示例创建一个存放 **geometry** 实例的表变量，并插入一个 `Point`、一个 `LineString` 和一个 `Polygon`。  然后，该示例使用 `STDimension()` 返回每个 **geometry** 实例的维度。  

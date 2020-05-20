@@ -20,7 +20,7 @@ ms.locfileid: "74957479"
 ---
 # <a name="back-up-the-service-master-key"></a>备份服务主密钥
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本文介绍如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中备份服务主密钥。 服务主密钥是加密层次结构的根。 应当对服务主密钥进行备份，并将其存储在另外一个安全的位置。 创建该备份应该是首先在服务器上执行的管理操作之一。  
+  本文介绍如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中备份服务主密钥。 服务主密钥是加密层次结构的根。 应当对服务主密钥进行备份，并将其存储在另外一个安全的位置。 创建该备份应该是首先在服务器上执行的管理操作之一。  
 
 ## <a name="before-you-begin"></a>开始之前  
   

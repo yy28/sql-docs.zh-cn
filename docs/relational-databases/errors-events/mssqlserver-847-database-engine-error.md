@@ -35,7 +35,7 @@ ms.locfileid: "70874731"
 ## <a name="explanation"></a>说明  
 计算机可能停止响应，或在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将缓冲区闩锁错误写入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志的同时可能出现超时或某些其他常规操作中断。  
   
-如果消息中的状态字段的值为 0x04 on，则表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在等待 I/O 操作。 也可能在 [ 错误日志中收到消息 ](~/relational-databases/errors-events/mssqlserver-833-database-engine-error.md)MSSQLSERVER_833[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+如果消息中的状态字段的值为 0x04 on，则表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在等待 I/O 操作。 也可能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志中收到消息 [MSSQLSERVER_833](~/relational-databases/errors-events/mssqlserver-833-database-engine-error.md)。  
   
 如果消息中的状态字段的值为 0x04 off，则表示存在对某个页的大量争用。 如果对象是数据页，则错误可能是由低效的代码设计引起的。 如果是非数据页，则错误可能由服务器瓶颈引起，如硬件资源不足。  
   

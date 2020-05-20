@@ -24,7 +24,7 @@ ms.locfileid: "71283256"
 
 在此任务中，将测试已部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的实例的包。  
   
-在其他 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教程中，可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的开发环境中使用“调试”菜单上的“开始调试”选项运行 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的包。   这一次，将以不同方式运行包。  
+在其他 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教程中，可以在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的开发环境中使用“调试”菜单上的“开始调试”选项运行 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的包。 这一次，将以不同方式运行包。  
   
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了几个可用于在测试和生产环境中运行包的工具：命令提示实用工具 **dtexec** 和执行包实用工具。 执行包实用工具是基于 **dtexec**构建的图形工具。 这两种工具均可直接执行包。 此外， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 还提供了一个 SQL Server 代理子系统，专门用于将包执行计划为 SQL Server 代理作业中的一个步骤。  
   

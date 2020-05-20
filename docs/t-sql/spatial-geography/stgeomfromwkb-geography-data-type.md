@@ -51,7 +51,7 @@ STGeomFromWKB ( 'WKB_geography' , SRID )
  CLR 返回类型：SqlGeography   
   
 ## <a name="remarks"></a>备注  
- **返回的 geography**`STGeomFromText()` 实例的 OGC 类型设置为相应的 WKB 输入。  
+ `STGeomFromText()` 返回的 geography 实例的 OGC 类型设置为相应的 WKB 输入。  
   
  如果输入的格式不正确，此方法将引发 FormatException  。  
   

@@ -35,7 +35,7 @@ ms.locfileid: "68042462"
   
 ## <a name="arguments"></a>参数  
  other_geography   
- 与对其调用  **的实例进行比较的其他 geography 实例**`STContains()`。  
+ 与对其调用 `STContains()` 的实例进行比较的其他 geography 实例。  
   
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit   

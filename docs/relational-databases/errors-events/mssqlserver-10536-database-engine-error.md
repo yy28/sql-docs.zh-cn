@@ -30,10 +30,10 @@ ms.locfileid: "71174277"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|PG_TOO_MANY_STMTS|  
-|消息正文|无法创建计划指南“%.\*ls”，因为与指定 **plan_handle 对应的批或模块中包含的合格语句超过 1000 个\@** 。 通过为每个语句指定 **statement_start_offset** 值，为批处理或模块中的每个语句创建一个计划指南。|  
+|消息正文|无法创建计划指南“%.\*ls”，因为与指定 \@plan_handle 对应的批或模块中包含的合格语句超过 1000 个。 通过为每个语句指定 **statement_start_offset** 值，为批处理或模块中的每个语句创建一个计划指南。|  
   
 ## <a name="explanation"></a>说明  
-与指定的 **plan_handle 对应的批或模块中包含的合格语句超过 1000 个\@** 。  
+与指定的 \@plan_handle 对应的批或模块中包含的合格语句超过 1000 个。  
   
 ## <a name="user-action"></a>用户操作  
 通过为每个语句指定 **statement_start_offset** 值，为批处理或模块中的每个语句创建一个计划指南。  

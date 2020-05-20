@@ -64,7 +64,7 @@ ms.locfileid: "74822307"
   
      其中，\<system-address>  是明确标识目标计算机系统的字符串，\<port>  是伙伴服务器实例的镜像终结点使用的端口号。 有关详细信息，请参阅 [指定服务器网络地址（数据库镜像）](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
   
-     例如，在主体服务器实例上，下面的 ALTER DATABASE 语句设置见证服务器。 数据库名称为“AdventureWorks”，系统地址为 DBSERVER3（见证服务器系统的名称），见证服务器的数据库镜像终结点使用的端口为  `7022`：  
+     例如，在主体服务器实例上，下面的 ALTER DATABASE 语句设置见证服务器。 数据库名称为“AdventureWorks”，系统地址为 DBSERVER3（见证服务器系统的名称），见证服务器的数据库镜像终结点使用的端口为 `7022`：  
   
     ```  
     ALTER DATABASE AdventureWorks   

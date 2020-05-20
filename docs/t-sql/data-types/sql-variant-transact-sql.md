@@ -60,7 +60,7 @@ sql_variant 的最大长度可以是 8016 个字节  。 这包括基类型信�
 ODBC 不完全支持 sql_variant  。 因此，使用 Microsoft OLE DB Provider for ODBC (MSDASQL) 时，sql_variant 列的查询将作为二进制数据返回  。 例如，包含字符串数据 'PS2091' 的 sql_variant 列将作为 0x505332303931 返回  。
   
 ## <a name="comparing-sql_variant-values"></a>比较 sql_variant 值  
-sql_variant 数据类型在用于转换的数据类型层次结构列表中位于顶部  。 为了进行 sql_variant 比较， **数据类型层次结构顺序划分为多个数据类型系列**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+sql_variant 数据类型在用于转换的数据类型层次结构列表中位于顶部  。 为了进行 sql_variant 比较，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型层次结构顺序划分为多个数据类型系列。
   
 |数据类型层次结构|数据类型系列|  
 |---|---|
@@ -95,7 +95,7 @@ sql_variant 数据类型在用于转换的数据类型层次结构列表中位�
 -   在比较 char、varchar、nchar 或 nvarchar 数据类型的 sql_variant 值时，将首先基于以下条件来比较这些值的排序规则：LCID、LCID 版本、比较标志和排序 ID      。 其中的每个条件都按所列出的顺序作为整数值进行比较。 如果所有这些条件都相等，则将按照排序规则来比较实际的字符串值。  
   
 ## <a name="converting-sql_variant-data"></a>转换 sql_variant 数据  
-当处理 sql_variant 数据类型时， **支持将其他数据类型的对象隐式转换为 sql_variant 类型**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  。 但是，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持从 sql_variant 数据隐式转换为其他数据类型的对象  。
+当处理 sql_variant 数据类型时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持将其他数据类型的对象隐式转换为 sql_variant 类型。 但是，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持从 sql_variant 数据隐式转换为其他数据类型的对象  。
   
 ## <a name="restrictions"></a>限制  
 下表列出了无法使用 sql_variant 存储的值的类型  ：
@@ -115,7 +115,7 @@ sql_variant 数据类型在用于转换的数据类型层次结构列表中位�
 ## <a name="examples"></a>示例  
 
 ### <a name="a-using-a-sql_variant-in-a-table"></a>A. 在表中使用 sql_variant  
- 下面的示例创建一个 sql_variant 数据类型的表。 然后该示例检索有关 `SQL_VARIANT_PROPERTY` 值 `colA` 的 `46279.1` 信息，其中，`colB` =`1689`，并假设 `tableA` 有类型为 `colA` 和 `sql_variant` 的 `colB`。  
+ 下面的示例创建一个 sql_variant 数据类型的表。 然后该示例检索有关 `colA` 值 `46279.1` 的 `SQL_VARIANT_PROPERTY` 信息，其中，`colB` =`1689`，并假设 `tableA` 有类型为 `sql_variant` 和 `colB` 的 `colA`。  
   
 ```sql    
 CREATE   TABLE tableA(colA sql_variant, colB int)  
@@ -138,7 +138,7 @@ decimal      8           2
 ```  
   
 ### <a name="b-using-a-sql_variant-as-a-variable"></a>B. 使用 sql_variant 作为变量   
- 下面的示例使用 sql_variant 数据类型创建了一个变量，然后检索名为 `SQL_VARIANT_PROPERTY` 的变量的 @v1 信息。  
+ 下面的示例使用 sql_variant 数据类型创建了一个变量，然后检索名为 @v1 的变量的 `SQL_VARIANT_PROPERTY` 信息。  
   
 ```sql    
 DECLARE @v1 sql_variant;  

@@ -22,7 +22,7 @@ ms.locfileid: "68113174"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 
-[ 中的 ](../../relational-databases/performance/how-query-store-collects-data.md)查询存储[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能可自动捕获查询、计划和运行时统计信息的历史记录，并将此信息保存在数据库中。 [数据库引擎优化顾问 (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md) 支持使用一个新选项来利用 Query Store 自动选择用于优化的适当工作负荷。 对于许多用户而言，使用此功能便不需要显式收集用于优化的工作负荷。 仅当数据库已启用 Query Store 功能时，此功能才可用。 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 [查询存储](../../relational-databases/performance/how-query-store-collects-data.md) 功能可自动捕获查询、计划和运行时统计信息的历史记录，并将此信息保存在数据库中。 [数据库引擎优化顾问 (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md) 支持使用一个新选项来利用 Query Store 自动选择用于优化的适当工作负荷。 对于许多用户而言，使用此功能便不需要显式收集用于优化的工作负荷。 仅当数据库已启用 Query Store 功能时，此功能才可用。 
   
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v16.4 或更高版本支持此功能  。 
   

@@ -84,20 +84,20 @@ ms.locfileid: "76287514"
   
 #### <a name="to-view-and-modify-article-properties"></a>查看和修改项目属性  
   
-1.  在“发布属性 - **发布>”对话框的“项目”页上，选择一个项目，然后单击“项目属性”。** **\<**   
+1.  在“发布属性 - \<发布>”对话框的“项目”页上，选择一个项目，然后单击“项目属性”。  
   
 2.  选择要将更改应用于哪些项目属性：  
   
-    -   单击“设置突出显示的 **对象类型> 项目的属性”以启动“项目属性 - \<对象名>”对话框；在此对话框中进行的属性更改仅应用于在“项目”页上的对象窗格中突出显示的对象。** **\<**   
+    -   单击“设置突出显示的 \<对象类型> 项目的属性”以启动“项目属性 - \<对象名>”对话框；在此对话框中进行的属性更改仅应用于在“项目”页上的对象窗格中突出显示的对象。  
   
-    -   单击“设置所有 **对象类型> 项目的属性”以启动“所有 \<对象类型> 项目的属性”对话框；在此对话框中进行的属性更改应用于“项目”页上的对象窗格中该类型的所有对象，包括尚未选择进行发布的对象。** **\<**   
+    -   单击“设置所有 \<对象类型> 项目的属性”以启动“所有 \<对象类型> 项目的属性”对话框；在此对话框中进行的属性更改应用于“项目”页上的对象窗格中该类型的所有对象，包括尚未选择进行发布的对象。  
   
         > [!NOTE]  
-        >  在“所有 **对象类型> 项目的属性”对话框中进行的属性更改会重写以前在“项目属性 - \<对象名>”对话框中进行的任何更改。** **\<** 例如，若要为某对象类型的所有项目设置一些默认值，但还希望为单个对象设置一些属性，请首先设置所有项目的默认值。 然后再设置单个对象的属性。  
+        >  在“所有 \<对象类型> 项目的属性”对话框中进行的属性更改会重写以前在“项目属性 - \<对象名>”对话框中进行的任何更改。 例如，若要为某对象类型的所有项目设置一些默认值，但还希望为单个对象设置一些属性，请首先设置所有项目的默认值。 然后再设置单个对象的属性。  
   
 3.  根据需要修改属性，然后单击 **“确定”** 。  
   
-4.  在“发布属性 - **发布>”对话框中单击“确定”。** **\<**  
+4.  在“发布属性 - \<发布>”对话框中单击“确定”。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
  可以使用复制存储过程以编程方式修改项目以及返回其属性。 使用的存储过程取决于项目所属的发布的类型。  
@@ -113,7 +113,7 @@ ms.locfileid: "76287514"
 1.  执行 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)，指定 `@property` 参数中要更改的项目属性，以及 `@value` 参数中此属性的新值。  
   
     > [!NOTE]  
-    >  如果更改需要生成新的快照，则还必须为 `1` 指定值 `@force_invalidate_snapshot`，并且如果更改需要初始化订阅服务器，则还必须为 `1` 指定值 `@force_reinit_subscription`。 有关更改时需要新快照或重新初始化的属性的详细信息，请参阅[更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
+    >  如果更改需要生成新的快照，则还必须为 `@force_invalidate_snapshot` 指定值 `1`，并且如果更改需要初始化订阅服务器，则还必须为 `@force_reinit_subscription` 指定值 `1`。 有关更改时需要新快照或重新初始化的属性的详细信息，请参阅[更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-merge-publication"></a>查看属于合并发布的项目的属性  
   
@@ -126,7 +126,7 @@ ms.locfileid: "76287514"
 1.  执行 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)，指定 `@property` 参数中要更改的项目属性，以及 `@value` 参数中此属性的新值。  
   
     > [!NOTE]  
-    >  如果更改需要生成新的快照，则还必须为 `1` 指定值 `@force_invalidate_snapshot`，并且如果更改需要初始化订阅服务器，则还必须为 `1` 指定值 `@force_reinit_subscription`。 有关更改时需要新快照或重新初始化的属性的详细信息，请参阅[更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
+    >  如果更改需要生成新的快照，则还必须为 `@force_invalidate_snapshot` 指定值 `1`，并且如果更改需要初始化订阅服务器，则还必须为 `@force_reinit_subscription` 指定值 `1`。 有关更改时需要新快照或重新初始化的属性的详细信息，请参阅[更改发布和项目属性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)。  
   
 ###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  此事务复制示例返回了已发布项目的属性。  

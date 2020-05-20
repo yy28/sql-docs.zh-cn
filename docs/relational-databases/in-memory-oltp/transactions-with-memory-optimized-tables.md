@@ -81,7 +81,7 @@ SELECT * FROM
 COMMIT TRANSACTION;
 ```
 
-通过使用数据库选项 `WITH (SNAPSHOT)` 可避免使用 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` 提示的需求。 如果将此选项设置为 `ON`，访问内存优化表时使用的较低隔离级别将自动提升到 SNAPSHOT 隔离。  
+通过使用数据库选项 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` 可避免使用 `WITH (SNAPSHOT)` 提示的需求。 如果将此选项设置为 `ON`，访问内存优化表时使用的较低隔离级别将自动提升到 SNAPSHOT 隔离。  
 
 ```sql
 ALTER DATABASE CURRENT

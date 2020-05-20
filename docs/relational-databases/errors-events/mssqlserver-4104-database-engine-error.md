@@ -79,7 +79,7 @@ ms.locfileid: "68120591"
     SELECT a.c2 FROM a, b;   
     ```  
   
-    假定 UDT `myudt2` 不具有名为 `c2` 的属性，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将无法确定标识符 `a.c2` 是指表 `c2` 中的列 `a`，还是指表 `a` 中的列 `c2`、属性 `b`。  
+    假定 UDT `myudt2` 不具有名为 `c2` 的属性，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将无法确定标识符 `a.c2` 是指表 `a` 中的列 `c2`，还是指表 `b` 中的列 `a`、属性 `c2`。  
   
 ## <a name="user-action"></a>用户操作  
   

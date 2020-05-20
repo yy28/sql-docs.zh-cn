@@ -28,7 +28,7 @@ ms.locfileid: "67930731"
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-根据地理标记语言 (GML) 的  **子集中的给定表示形式构造 geography 实例**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+根据地理标记语言 (GML) 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 子集中的给定表示形式构造 geography 实例。
   
 有关 GML 的详细信息，请参阅以下开放地理空间信息联盟规范：[OGC 规范：地理标记语言](https://go.microsoft.com/fwlink/?LinkId=93629)
   

@@ -65,7 +65,7 @@ ms.locfileid: "74095430"
 ##  <a name="change-data-capture"></a><a name="Capture"></a> 变更数据捕获  
  变更数据捕获通过获取进行 DML 更改的方面和更改的实际数据，提供用户表的历史更改信息。 更改是使用异步进程捕获的，此进程读取事务日志，并且对系统造成的影响很小。  
   
- 正如下图所示，对用户表所做的更改是在相应更改表中捕获的。 这些更改表提供了更改随时间变化的历史视图。 借助于 [ 提供的](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)变更数据捕获[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能，可以方便且系统地使用更改数据。  
+ 正如下图所示，对用户表所做的更改是在相应更改表中捕获的。 这些更改表提供了更改随时间变化的历史视图。 借助于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供的[变更数据捕获](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)功能，可以方便且系统地使用更改数据。  
   
  ![变更数据捕获的概念图示](../../relational-databases/track-changes/media/cdcart1.gif "变更数据捕获的概念图示")  
   

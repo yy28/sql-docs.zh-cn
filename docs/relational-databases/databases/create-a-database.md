@@ -112,7 +112,7 @@ ms.locfileid: "68037612"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例将创建数据库 `Sales`。 由于未使用关键字 PRIMARY，因此第一个文件 (`Sales_dat`) 将成为主文件。 因为在 `Sales_dat` 文件的 SIZE 参数中没有指定 MB 或 KB，将使用 MB 并按 MB 分配。 `Sales_log` 文件以 MB 为单位进行分配，因为 `MB` 参数中显式声明了 `SIZE` 后缀。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例将创建数据库 `Sales`。 由于未使用关键字 PRIMARY，因此第一个文件 (`Sales_dat`) 将成为主文件。 因为在 `Sales_dat` 文件的 SIZE 参数中没有指定 MB 或 KB，将使用 MB 并按 MB 分配。 `Sales_log` 文件以 MB 为单位进行分配，因为 `SIZE` 参数中显式声明了 `MB` 后缀。  
   
 ```sql  
 USE master ;  

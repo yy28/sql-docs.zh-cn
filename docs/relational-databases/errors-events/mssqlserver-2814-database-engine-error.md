@@ -53,7 +53,7 @@ ms.locfileid: "68001973"
   
 ## <a name="user-action"></a>用户操作  
   
-1.  通过运行以下查询查看导致重新编译的语句。 将 *sql_handle*、*starting_offset*、*ending_offset* 和 *plan_handle* 占位符替换为错误消息中指定的值。 对于临时和预定义  **语句，database_name** **和 object_name**[!INCLUDE[tsql](../../includes/tsql-md.md)] 列将为 NULL。  
+1.  通过运行以下查询查看导致重新编译的语句。 将 *sql_handle*、*starting_offset*、*ending_offset* 和 *plan_handle* 占位符替换为错误消息中指定的值。 对于临时和预定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，database_name 和 object_name 列将为 NULL。  
   
     ```sql   
     SELECT DB_NAME(st.dbid) AS database_name,  

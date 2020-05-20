@@ -52,9 +52,9 @@ ms.locfileid: "68056716"
   
 如果由非分发服务器的其他节点上运行的复制代理（如在订阅服务器上运行的合并代理）启动的 **sp_get_redirected_publisher** 调用返回了错误 21879，则应注意一些特殊事项。 如果使用 Windows 身份验证连接到重定向发布服务器，则必须将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为使用 Kerberos 身份验证以便成功建立连接。 当使用 Windows 身份验证且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未配置为使用 Kerberos 身份验证时，在订阅服务器上运行的合并代理将收到错误 18456，指示“NT AUTHORITY\ANONYMOUS LOGON”登录名失败。 可以通过三种方式解决此问题：  
   
--   将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为使用 Kerberos 身份验证。 请参阅 **联机丛书中的**Kerberos 身份验证和 SQL Server[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+-   将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为使用 Kerberos 身份验证。 请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的 **Kerberos 身份验证和 SQL Server**。  
   
 -   使用 **sp_changedistpublisher** 更改与 MSdistpublishers 中的原始发布服务器相关联的安全模式，并指定要用于该连接的登录名和密码。  
   
--   当在分发服务器上调用 *sp_get_redirected_publisher* 时，在合并代理命令行中指定命令行参数 **BypassPublisherValidation** 以跳过验证。  
+-   当在分发服务器上调用 **sp_get_redirected_publisher** 时，在合并代理命令行中指定命令行参数 *BypassPublisherValidation* 以跳过验证。  
   

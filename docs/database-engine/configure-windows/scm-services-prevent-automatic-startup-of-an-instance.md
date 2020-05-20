@@ -40,15 +40,15 @@ ms.locfileid: "68025661"
     >  -   **Windows 10**：  
     >          要打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，请在“起始页”  中键入 SQLServerManager13.msc（适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]）。 对于早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请将 13 替换为较小的数字。 单击“SQLServerManager13.msc”可打开配置管理器。 要将配置管理器固定到“起始页”或“任务栏”，请右键单击“SQLServerManager13.msc”，然后单击“打开文件位置”  。 在“Windows 文件资源管理器”中，右键单击“SQLServerManager13.msc”，然后单击“固定到‘开始’屏幕”  或“固定到任务栏”  。  
     > -   **Windows 8**：  
-    >          若要打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，请在“搜索”超级按钮中的“应用”下，键入 SQLServerManager**version>.msc（例如 SQLServerManager13.msc），然后按“Enter”**  **\<**   。  
+    >          若要打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，请在“搜索”超级按钮中的“应用”下，键入 SQLServerManager\<version>.msc（例如 SQLServerManager13.msc），然后按“Enter”。  
   
 2.  在 SQL Server 配置管理器中，展开 **“服务”** ，再单击 **SQL Server**。  
   
 3.  在“详细信息”窗格中，右键单击“”  ，再单击“属性”   
   
-4.  在“SQL Server **实例名> 属性”对话框中，在“服务”选项卡上的“常规”框中，将“启动模式”的值设置为“手动”\<**       。  
+4.  在“SQL Server \<实例名> 属性”对话框中，在“服务”选项卡上的“常规”框中，将“启动模式”的值设置为“手动”。  
   
-5.  单击“确定”关闭“SQL Server **实例名> 属性”对话框，然后再关闭**  配置管理器 **\<**   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+5.  单击“确定”关闭“SQL Server \<实例名> 属性”对话框，然后再关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
 ## <a name="see-also"></a>另请参阅  
  [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  

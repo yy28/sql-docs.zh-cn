@@ -96,7 +96,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
 ## <a name="examples"></a>示例  
   
 ### <a name="a-creating-an-empty-property-list-and-associating-it-with-an-index"></a>A. 创建空属性列表并将其与索引关联  
- 以下示例创建名为 `DocumentPropertyList` 的新搜索属性列表。 该示例然后使用 [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) 语句将新属性列表与 `Production.Document` 数据库中 `AdventureWorks` 表的全文检索关联，但不开始填充。  
+ 以下示例创建名为 `DocumentPropertyList` 的新搜索属性列表。 该示例然后使用 [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) 语句将新属性列表与 `AdventureWorks` 数据库中 `Production.Document` 表的全文检索关联，但不开始填充。  
   
 > [!NOTE]  
 >  有关将多个预定义的知名搜索属性添加到此搜索属性列表的示例，请参阅 [ALTER SEARCH PROPERTY LIST (Transact-SQL)](../../t-sql/statements/alter-search-property-list-transact-sql.md)。 在向列表中添加搜索属性后，数据库管理员将需要使用另一个带有 START FULL POPULATION 子句的 ALTER FULLTEXT INDEX 语句。  

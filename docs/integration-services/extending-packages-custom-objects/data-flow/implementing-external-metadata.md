@@ -79,7 +79,7 @@ End Sub
  对于保留外部元数据列集合的组件，验证还需要完成其他步骤，因为必须验证附加的列集合。 验证可分为连接下的验证和断开连接下的验证。  
   
 ### <a name="connected-validation"></a>连接下的验证  
- 组件与外部数据源处于连接状态时，输入或输出集合中的列是直接与外部数据源相验证的。 另外，还必须验证外部元数据集合中的列。 如此要求的原因是，外部元数据集合可使用  **中的“高级编辑器”** [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]来修改，而且对该集合所做的更改是无法检测的。 因此，处于连接状态时，组件必须确保外部元数据列集合中的列始终反映外部数据源中的列。  
+ 组件与外部数据源处于连接状态时，输入或输出集合中的列是直接与外部数据源相验证的。 另外，还必须验证外部元数据集合中的列。 如此要求的原因是，外部元数据集合可使用 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中的“高级编辑器”来修改，而且对该集合所做的更改是无法检测的。 因此，处于连接状态时，组件必须确保外部元数据列集合中的列始终反映外部数据源中的列。  
   
  可以选择在“高级编辑器”  中隐藏外部元数据集合，方法是将该集合的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A> 属性设置为 **false**。 但这也会隐藏编辑器的“列映射”  选项卡，该选项卡允许用户将输入或输出集合中的列映射到外部元数据列集合中的列。 将此属性设置为 **false** 不会阻止开发人员以编程方式修改外部元数据列集合，而会为在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中独占使用的组件的外部元数据列集合提供一定程度的保护。  
   

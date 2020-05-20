@@ -52,7 +52,7 @@ ms.locfileid: "68066553"
   
 -   为方法传递了非数值参数，例如，`@g.BufferWithCurves('a')`  
   
--   向方法传递了 NULL，例如，  `@g.BufferWithCurves(NULL)`  
+-   向方法传递了 NULL，例如，`@g.BufferWithCurves(NULL)`  
   
 ## <a name="remarks"></a>备注  
  下表显示为不同距离值返回的结果。  
@@ -67,7 +67,7 @@ ms.locfileid: "68066553"
 > [!NOTE]  
 >  由于 distance 的类型为 float，因此，很小的值可能在计算中等于零   。  如果发生这种情况，则会返回执行调用的 geography 实例的副本  。  
   
- 如果将 string 参数传递给方法，则会将其转换为 float；否则，将引发   `ArgumentException`。  
+ 如果将 string 参数传递给方法，则会将其转换为 float；否则，将引发 `ArgumentException`。  
   
 ## <a name="examples"></a>示例  
   
@@ -95,7 +95,7 @@ ms.locfileid: "68066553"
  SELECT @g.BufferWithCurves(-2).ToString();
  ```  
   
- 此 SELECT 语句返回  `GEOMETRYCOLLECTION EMPTY`  
+ 此 SELECT 语句返回 `GEOMETRYCOLLECTION EMPTY`  
   
 ### <a name="d-calling-bufferwithcurves-with-a-parameter-value--0"></a>D. 使用 = 0 的参数值调用 BufferWithCurves()  
  以下示例返回执行调用的 geography 实例的副本  ：  

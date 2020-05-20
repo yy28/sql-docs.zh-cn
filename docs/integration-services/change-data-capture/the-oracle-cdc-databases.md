@@ -80,7 +80,7 @@ ms.locfileid: "79287701"
 ###  <a name="change-tables-_ct"></a><a name="BKMK_Change_Tables_CT"></a> 更改表 (_CT)  
  更改表是从镜像表创建的。 它们包含从 Oracle 数据库捕获的更改数据。 根据以下约定命名这些表：  
   
- [cdc].[**capture-instance>_CT]\<**  
+ [cdc].[\<capture-instance>_CT]  
   
  在最初为表 `<schema-name>.<table-name>`启用捕获时，默认捕获实例名称为 `<schema-name>_<table-name>`。 例如，Oracle HR.EMPLOYEES 表的默认捕获实例名称为 HR_EMPLOYEES，而关联的更改表为 [cdc]。 [HR_EMPLOYEES_CT]。  
   

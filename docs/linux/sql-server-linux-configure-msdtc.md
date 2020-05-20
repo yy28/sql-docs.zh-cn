@@ -139,7 +139,7 @@ Ubuntu 和 SLES 不使用“firewalld”服务，因此 iptable 规则就是实�
    > [!NOTE]
    > 需要具有超级用户 (sudo) 权限才能编辑“rc.local”或“after.local”文件   。
 
-“iptables-save”和“iptables-restore”命令以及  **启动配置提供了保存和恢复 iptables 条目的基本机制**`rc.local`/`after.local`。 可能有更高级或更自动化的选项，具体取决于 Linux 分发。 例如，Ubuntu 替代方案是 iptables-persistent 包，用于使条目持久  。
+“iptables-save”和“iptables-restore”命令以及 `rc.local`/`after.local` 启动配置提供了保存和恢复 iptables 条目的基本机制。 可能有更高级或更自动化的选项，具体取决于 Linux 分发。 例如，Ubuntu 替代方案是 iptables-persistent 包，用于使条目持久  。
 
 > [!IMPORTANT]
 > 前面的步骤假设为固定的 IP 地址。 如果 SQL Server 实例的 IP 地址发生更改（由于手动干预或 DHCP），则需要删除并重新创建路由规则（如果它们是使用 iptables 创建的）。 如果需要重新创建或删除现有路由规则，可以使用以下命令删除旧 `RpcEndPointMapper` 规则：
@@ -150,7 +150,7 @@ Ubuntu 和 SLES 不使用“firewalld”服务，因此 iptable 规则就是实�
 
 ### <a name="port-routing-in-rhel"></a>RHEL 中的端口路由
 
-在使用“firewalld”服务的分发（例如 Red Hat Enterprise Linux）上，可以使用同一服务来打开服务器上的端口和实现内部端口转发  。 例如，在 Red Hat Enterprise Linux 上，应使用“firewalld”服务（通过带有  **或类似选项的“firewall-cmd”配置实用程序）来创建和管理永久性端口转发规则，而非使用 iptables**  `-add-forward-port`。
+在使用“firewalld”服务的分发（例如 Red Hat Enterprise Linux）上，可以使用同一服务来打开服务器上的端口和实现内部端口转发  。 例如，在 Red Hat Enterprise Linux 上，应使用“firewalld”服务（通过带有 `-add-forward-port` 或类似选项的“firewall-cmd”配置实用程序）来创建和管理永久性端口转发规则，而非使用 iptables。
 
 ```bash
 sudo firewall-cmd --permanent --add-forward-port=port=135:proto=tcp:toport=13500

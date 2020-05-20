@@ -325,7 +325,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>使用可序列化事务的示例  
- Org_BreadthFirst 索引可确保确定 **last_child 使用范围查找** **\@** 。 除了应用程序可能需要检查的其他错误情况之外，插入后出现重复键冲突表示试图添加具有同一 ID 的多个雇员，因此必须重新计算 **last_child\@** 。 以下代码计算可序列化事务中的新节点值：  
+ Org_BreadthFirst 索引可确保确定 \@last_child 使用范围查找。 除了应用程序可能需要检查的其他错误情况之外，插入后出现重复键冲突表示试图添加具有同一 ID 的多个雇员，因此必须重新计算 \@last_child。 以下代码计算可序列化事务中的新节点值：  
   
 ```sql
 CREATE TABLE Org_T2  
@@ -512,7 +512,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="moving-subtrees"></a><a name="BKMK_MovingSubtrees"></a> 移动子树  
- 另一项常用操作是移动子树。 下面的过程采用 **oldMgr 的子树作为参数，使其（包括 \@oldMgr）成为** newMgr的子树 **\@** **\@** 。  
+ 另一项常用操作是移动子树。 下面的过程采用 \@oldMgr 的子树作为参数，使其（包括 \@oldMgr）成为 \@newMgr的子树。  
   
 ```sql
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  

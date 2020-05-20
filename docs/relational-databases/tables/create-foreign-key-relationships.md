@@ -24,7 +24,7 @@ ms.locfileid: "68123749"
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-本文介绍了如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中创建外键关系。 当希望将一个表的行与另一个表的行相关联时，您可在这两个表之间创建关系。
+本文介绍了如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中创建外键关系。 当希望将一个表的行与另一个表的行相关联时，您可在这两个表之间创建关系。
 
 ## <a name="before-you-begin-limits-and-restrictions"></a><a name="BeforeYouBegin"></a> 开始之前！ 限制和局限
 
@@ -73,7 +73,7 @@ ms.locfileid: "68123749"
 
 ### <a name="using-transact-sql"></a>“使用 Transact-SQL”
 
-下面的示例创建一个表，并对列 `TempID` 定义外键约束，以引用 AdventureWorks 数据库中 `SalesReasonID` 表内的列 `Sales.SalesReason`。 ON DELETE CASCADE 和 ON UPDATE CASCADE 子句用于确保对 `Sales.SalesReason` 表的更改自动传播到 `Sales.TempSalesReason` 表。    
+下面的示例创建一个表，并对列 `TempID` 定义外键约束，以引用 AdventureWorks 数据库中 `Sales.SalesReason` 表内的列 `SalesReasonID`。 ON DELETE CASCADE 和 ON UPDATE CASCADE 子句用于确保对 `Sales.SalesReason` 表的更改自动传播到 `Sales.TempSalesReason` 表。    
 
 ```sql
 CREATE TABLE Sales.TempSalesReason 
@@ -91,7 +91,7 @@ CREATE TABLE Sales.TempSalesReason
 ## <a name="create-a-foreign-key-in-an-existing-table"></a>在现有表中创建外键
 
 ### <a name="using-transact-sql"></a>“使用 Transact-SQL”
-下面的示例对列 `TempID` 创建外键，并引用 AdventureWorks 数据库中 `SalesReasonID` 表内的列 `Sales.SalesReason`。
+下面的示例对列 `TempID` 创建外键，并引用 AdventureWorks 数据库中 `Sales.SalesReason` 表内的列 `SalesReasonID`。
 
 ```sql
 ALTER TABLE Sales.TempSalesReason

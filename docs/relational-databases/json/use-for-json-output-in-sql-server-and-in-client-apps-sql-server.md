@@ -23,7 +23,7 @@ ms.locfileid: "74095930"
 # <a name="use-for-json-output-in-sql-server-and-in-client-apps-sql-server"></a>在 SQL Server 和客户端应用中使用 FOR JSON 输出 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-下面的示例演示了在  **或客户端应用中使用 FOR JSON 子句或其 JSON 输出的几种方式**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+下面的示例演示了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或客户端应用中使用 FOR JSON 子句或其 JSON 输出的几种方式。  
   
 ## <a name="use-for-json-output-in-sql-server-variables"></a>在 SQL Server 变量中使用 FOR JSON 输出  
 FOR JSON 子句的输出类型为 NVARCHAR(MAX)，因此可以将它赋给任何变量，如下面的示例中所示。  

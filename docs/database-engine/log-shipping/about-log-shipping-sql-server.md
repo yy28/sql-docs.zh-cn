@@ -36,7 +36,7 @@ ms.locfileid: "68057911"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用日志传送，可以自动将“主服务器”  实例上“主数据库”  内的事务日志备份发送到单独“辅助服务器”  实例上的一个或多个“辅助数据库”  。 事务日志备份分别应用于每个辅助数据库。 可选的第三个服务器实例（称为“监视服务器  ”）记录备份和还原操作的历史记录及状态，还可以在无法按计划执行这些操作时引发警报。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用日志传送，可以自动将“主服务器”实例上“主数据库”内的事务日志备份发送到单独“辅助服务器”实例上的一个或多个“辅助数据库”。 事务日志备份分别应用于每个辅助数据库。 可选的第三个服务器实例（称为“监视服务器  ”）记录备份和还原操作的历史记录及状态，还可以在无法按计划执行这些操作时引发警报。  
   
  **本主题内容：**  
   

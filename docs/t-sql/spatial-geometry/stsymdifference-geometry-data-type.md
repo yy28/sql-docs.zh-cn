@@ -38,7 +38,7 @@ ms.locfileid: "77051677"
   
 ## <a name="arguments"></a>参数  
  *other_geometry*  
- 调用 **的实例以外的另一个**geometry`STSymDifference()` 实例。  
+ 调用 `STSymDifference()` 的实例以外的另一个 **geometry** 实例。  
   
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   

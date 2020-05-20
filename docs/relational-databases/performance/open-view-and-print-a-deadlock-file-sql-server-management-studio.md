@@ -30,13 +30,13 @@ ms.locfileid: "74165765"
   
 ## <a name="open-and-view-a-deadlock-file"></a>打开和查看死锁文件  
   
-1. 在  **中的“文件”** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]菜单上，指向“打开”  ，然后选择“文件”  。  
+1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“文件”菜单上，指向“打开”，然后选择“文件”。  
   
 2. 在 **“打开文件”** 对话框的 **“文件类型”** 框中选择 .xdl 文件类型。 现在就获得了一个筛选为只包含死锁文件的列表。  
   
 ## <a name="print-a-deadlock-file"></a>打印死锁文件  
   
-1. 在  **中的“文件”** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]菜单上，指向“打开”  ，然后选择“文件”  。  
+1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“文件”菜单上，指向“打开”，然后选择“文件”。  
   
 2. 在 **“打开文件”** 对话框的 **“文件类型”** 框中选择 .xdl 文件类型。 现在就获得了一个筛选为只包含死锁文件的列表。  
   

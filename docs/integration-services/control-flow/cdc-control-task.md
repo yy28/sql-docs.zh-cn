@@ -107,17 +107,17 @@ ms.locfileid: "71294257"
   
 -   **标记初始加载开始**：在从不具有快照的活动数据库执行初始加载时使用此操作。 在初始加载包的开头调用此操作，以便在初始加载包开始读取源表之前记录源数据库中的当前 LSN。 此操作要求连接到源数据库。  
   
-     如果你在  **CDC（也就是说，不是 Oracle）时选择“标记初始加载开始”** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，则在连接管理器中指定的用户必须是 **db_owner** 或 **sysadmin**。  
+     如果你在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC（也就是说，不是 Oracle）时选择“标记初始加载开始”，则在连接管理器中指定的用户必须是 **db_owner** 或 **sysadmin**。  
   
 -   **标记初始加载结束**：在从不具有快照的活动数据库执行初始加载时使用此操作。 在初始加载包的末尾调用此操作，以便在初始加载包完成读取源表之后记录源数据库中的当前 LSN。 此 LSN 通过以下方式确定：首先记录此操作发生时的当前时间，然后在 CDC 数据库的 `cdc.lsn_time_`映射表中进行查询以便查找在该时间后发生的更改。  
   
-     如果你在  **CDC（也就是说，不是 Oracle）上工作时选择“标记初始加载结束”** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，则在连接管理器中指定的用户必须是 **db_owner** 或 **sysadmin**。  
+     如果你在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC（也就是说，不是 Oracle）上工作时选择“标记初始加载结束”，则在连接管理器中指定的用户必须是 **db_owner** 或 **sysadmin**。  
   
 -   **标记 CDC 开始**：在从快照数据库或静默数据库执行初始加载时使用此操作。 在初始加载包内的任何一点都可以调用该操作。 该操作接受可以作为快照 LSN 的参数、快照数据库的名称（将自其自动派生快照 LSN），也可以将其保留为空（这种情况下，将当前数据库 LSN 用作更改处理包的开始 LSN）。  
   
      此操作可用来替代标记初始加载开始/结束操作。  
   
-     如果你在  **CDC（也就是说，不是 Oracle）上工作时选择“标记 CDC 开始”** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，则在连接管理器中指定的用户必须是 **db_owner** 或 **sysadmin**。  
+     如果你在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC（也就是说，不是 Oracle）上工作时选择“标记 CDC 开始”，则在连接管理器中指定的用户必须是 **db_owner** 或 **sysadmin**。  
   
 -   **获取处理范围**：在调用使用 CDC 源数据流的数据流之前，在更改处理包中使用此操作。 此操作建立 CDC 源数据流在调用时读取的 LSN 的范围。 该范围存储于一个 SSIS 包变量中，在数据流处理期间 CDC 源将使用该变量。  
   

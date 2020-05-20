@@ -96,14 +96,14 @@ ms.locfileid: "71293883"
  键入传输错误消息任务的说明。  
   
 ## <a name="transfer-error-messages-task-editor-messages-page"></a>传输错误消息任务编辑器（“消息”页）
-  可以使用“传输错误消息任务编辑器”  对话框的“消息”  页指定属性，以将一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户定义错误消息从一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例复制到另一个实例。 
+  可以使用“传输错误消息任务编辑器”对话框的“消息”页指定属性，以将一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户定义错误消息从一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例复制到另一个实例。 
   
 ### <a name="options"></a>选项  
  **SourceConnection**  
- 从列表中选择 SMO 连接管理器，或单击“**新建连接...>”，创建与源服务器的新连接\<** 。  
+ 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与源服务器的新连接。  
   
  **DestinationConnection**  
- 从列表中选择 SMO 连接管理器，或单击“**新建连接...>”，创建与目标服务器的新连接\<** 。  
+ 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与目标服务器的新连接。  
   
  **IfObjectExists**  
  选择在目标服务器上已存在同名的错误消息时，该任务是应该覆盖现有的用户定义错误消息还是跳过现有消息，或是失败。  

@@ -24,17 +24,17 @@ ms.locfileid: "76287586"
 ---
 # <a name="publish-execution-of-stored-procedure-in-transactional-publication"></a>在事务发布中发布存储过程的执行
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  可以在“项目属性 - **项目>”\<** 对话框中指定应发布存储过程执行情况（而不仅仅是其定义）。 新建发布向导和“发布属性 - **发布>”\<** 对话框中提供了该对话框。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+  可以在“项目属性 - \<项目>”对话框中指定应发布存储过程执行情况（而不仅仅是其定义）。 新建发布向导和“发布属性 - \<发布>”对话框中提供了该对话框。 有关如何使用该向导和如何访问该对话框的详细信息，请参阅[创建发布](../../../relational-databases/replication/publish/create-a-publication.md)和[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
  初始化订阅时，过程定义（CREATE PROCEDURE 语句）将被复制到订阅服务器上；当在发布服务器上执行过程时，复制将在订阅服务器上执行相应的过程。  
   
 ### <a name="to-publish-the-execution-of-a-stored-procedure"></a>发布存储过程的执行  
   
-1.  在新建发布向导或“发布属性 - **发布>”** **对话框的“项目”\<** 页上，选择一个存储过程。  
+1.  在新建发布向导或“发布属性 - \<发布>”对话框的“项目”页上，选择一个存储过程。  
   
 2.  单击 **“项目属性”** ，然后单击 **“设置突出显示的存储过程项目的属性”** 。  
   
-3.  在“项目属性 - **项目>”\<** 对话框中，为“复制”  选项指定下面的一个值：  
+3.  在“项目属性 - \<项目>”对话框中，为“复制”选项指定下面的一个值：  
   
     -   **存储过程的执行**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "76287586"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  如果处于“发布属性 - **发布>”对话框中，请单击“确定”以保存并关闭该对话框。\<**   
+5.  如果处于“发布属性 - \<发布>”对话框中，请单击“确定”以保存并关闭该对话框。  
   
 ## <a name="see-also"></a>另请参阅  
  [在事务复制中发布存储过程执行](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md)  

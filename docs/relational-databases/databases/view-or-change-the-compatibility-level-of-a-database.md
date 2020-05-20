@@ -61,7 +61,7 @@ ms.locfileid: "73843539"
   
      当前兼容级别显示在 **“兼容级别”** 列表框中。  
   
-5.  若要更改兼容级别，请从列表中选择其他选项。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]ALTER DATABASE 兼容性级别 (Transact-SQL)[ 页中列出了不同 ](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats) 版本的可用选项。  
+5.  若要更改兼容级别，请从列表中选择其他选项。 [ALTER DATABASE 兼容性级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats) 页中列出了不同 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 版本的可用选项。  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

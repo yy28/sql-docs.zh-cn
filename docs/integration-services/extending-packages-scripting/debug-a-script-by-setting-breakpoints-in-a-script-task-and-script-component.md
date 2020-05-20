@@ -27,10 +27,10 @@ ms.locfileid: "71286285"
 
   此过程描述如何在脚本任务和脚本组件所使用的脚本中设置断点。  
   
- 在脚本中设置断点后，“设置断点 - **对象名称>\<”** {4}{5}对话框会列出这些断点以及内置断点。  
+ 在脚本中设置断点后，“设置断点 - \<对象名称>{1000001}”{1000001}对话框会列出这些断点以及内置断点。  
   
 > [!IMPORTANT]  
->  在某些情况下，将忽略脚本任务和脚本组件中的断点。 有关详细信息，请参阅**脚本任务的编码和调试**中的[调试脚本任务](../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)部分以及**脚本组件的编码和调试**中的[调试脚本组件](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)部分。  
+>  在某些情况下，将忽略脚本任务和脚本组件中的断点。 有关详细信息，请参阅[脚本任务的编码和调试](../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)中的**调试脚本任务**部分以及[脚本组件的编码和调试](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)中的**调试脚本组件**部分。  
   
 ### <a name="to-set-a-breakpoint-in-script"></a>在脚本中设置断点  
   

@@ -62,7 +62,7 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
 ## <a name="remarks"></a>备注  
  使用 ALTER XML SCHEMA COLLECTION 添加其命名空间尚不在 XML 架构集合中的新 XML 架构，或向已存在于该集合的命名空间中添加新组件。  
   
- 以下示例将新的 \<element> 添加到集合 `https://MySchema/test_xml_schema` 的现有命名空间 `MyColl` 中。  
+ 以下示例将新的 \<element> 添加到集合 `MyColl` 的现有命名空间 `https://MySchema/test_xml_schema` 中。  
   
 ```  
 -- First create an XML schema collection.  

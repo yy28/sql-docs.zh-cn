@@ -103,10 +103,10 @@ ms.locfileid: "71293872"
   
 ### <a name="options"></a>选项  
  **SourceConnection**  
- 从列表中选择 SMO 连接管理器，或单击“**新建连接...>”，创建与源服务器的新连接\<** 。  
+ 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与源服务器的新连接。  
   
  **DestinationConnection**  
- 从列表中选择 SMO 连接管理器，或单击“**新建连接...>”，创建与目标服务器的新连接\<** 。  
+ 从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与目标服务器的新连接。  
   
  **TransferAllJobs**  
  选择该任务是应将全部的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业还是仅将指定的作业从源服务器复制到目标服务器。  

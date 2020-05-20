@@ -72,14 +72,14 @@ GO
 EXECUTE dbo.usp_myproc;   
 ```  
   
- 在 `REVERT` 内部定义的 `usp_myproc` 语句会切换在模块内部设置的执行上下文，但不会影响在模块外部设置的执行上下文。 就是说，会话的执行上下文将仍然设置为 `login1`。  
+ 在 `usp_myproc` 内部定义的 `REVERT` 语句会切换在模块内部设置的执行上下文，但不会影响在模块外部设置的执行上下文。 就是说，会话的执行上下文将仍然设置为 `login1`。  
   
  指定为独立语句时，REVERT 将应用于在批或会话中定义的 EXECUTE AS 语句。 如果相应的 EXECUTE AS 语句包含 WITH NO REVERT 子句，则 REVERT 无效。 在这种情况下，执行上下文将保持有效状态，直到删除会话。  
   
 ## <a name="using-revert-with-cookie"></a>使用 REVERT WITH COOKIE  
- 用于设置会话执行上下文的 EXECUTE AS 语句可以包含可选子句 WITH NO REVERT COOKIE = @varbinary_variable  。 运行此语句时，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 将 cookie 传递给 @varbinary_variable  。 只有执行调用的 REVERT WITH COOKIE = @varbinary_variable语句包含正确的 *varbinary_variable 值，该语句设置的执行上下文才能恢复为以前的上下文* *\@* 。  
+ 用于设置会话执行上下文的 EXECUTE AS 语句可以包含可选子句 WITH NO REVERT COOKIE = @varbinary_variable  。 运行此语句时，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 将 cookie 传递给 @varbinary_variable  。 只有执行调用的 REVERT WITH COOKIE = @varbinary_variable语句包含正确的 \@varbinary_variable 值，该语句设置的执行上下文才能恢复为以前的上下文。  
   
- 此机制在使用连接池的环境中是有用的。 连接池是一组供跨越多个最终用户的应用程序重用的数据库连接的维护机制。 由于只有 EXECUTE AS 语句的调用方（在这里，是应用程序）才知道传递到 *varbinary_variable 的值，因此调用方可以保证它们所建立的执行上下文无法被调用该应用程序的最终用户更改\@* 。 恢复执行上下文之后，应用程序可以将上下文切换到另一个主体。  
+ 此机制在使用连接池的环境中是有用的。 连接池是一组供跨越多个最终用户的应用程序重用的数据库连接的维护机制。 由于只有 EXECUTE AS 语句的调用方（在这里，是应用程序）才知道传递到 \@varbinary_variable 的值，因此调用方可以保证它们所建立的执行上下文无法被调用该应用程序的最终用户更改。 恢复执行上下文之后，应用程序可以将上下文切换到另一个主体。  
   
 ## <a name="permissions"></a>权限  
  不需要任何权限。  

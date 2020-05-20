@@ -115,7 +115,7 @@ ms.locfileid: "76287602"
 ## <a name="publishing-views"></a>发布视图  
  各种类型的复制都允许复制视图。 可以将视图（若是索引视图，要连同其所附索引）复制到订阅服务器，同时还必须复制基表。  
   
- 对于索引视图，事务复制还允许将其作为表而非视图进行复制，这样就无需再复制基表。 为此，请为 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 的 \@type  参数指定“indexed view logbased”选项之一。 有关使用 **sp_addarticle** 的详细信息，请参阅[定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
+ 对于索引视图，事务复制还允许将其作为表而非视图进行复制，这样就无需再复制基表。 为此，请为 [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 的 \@type 参数指定“indexed view logbased”选项之一。 有关使用 **sp_addarticle** 的详细信息，请参阅[定义项目](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 ## <a name="publishing-user-defined-functions"></a>发布用户定义函数  
  将 CLR 函数和 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 函数的 CREATE FUNCTION 语句复制到每个订阅服务器。 对于 CLR 函数，还要复制关联程序集。 函数的更改将复制到订阅服务器，关联程序集的更改则不然。  
@@ -153,7 +153,7 @@ ms.locfileid: "76287602"
 -   如果发布的数据库对象依赖于一个或多个其他数据库对象，则必须发布所有被引用对象。 例如，如果要发布的视图依赖于一个表，则也必须发布该表。  
   
     > [!NOTE]  
-    >  如果向合并发布中添加一个项目和一个依赖于此新项目的现有项目，则必须使用 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 和 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 的 \@processing_order  参数指定两个项目的处理顺序。 请考虑以下情况：您要发布一个表，但不发布该表引用的函数。 如果不发布该函数，则无法在订阅服务器中创建相应的表。 将此函数添加到发布时：为 sp_addmergearticle  的 \@processing_order  参数指定值 1  ；为 sp_changemergearticle  的 \@processing_order  参数指定值 2  ，为参数 \@article  指定表名称。 此处理顺序可确保在创建依赖于某函数的表之前在订阅服务器上创建该函数。 每个项目可以使用不同的数字，只要函数的数字小于表的数字即可。  
+    >  如果向合并发布中添加一个项目和一个依赖于此新项目的现有项目，则必须使用 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 和 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 的 \@processing_order 参数指定两个项目的处理顺序。 请考虑以下情况：您要发布一个表，但不发布该表引用的函数。 如果不发布该函数，则无法在订阅服务器中创建相应的表。 将此函数添加到发布时：为 sp_addmergearticle 的 \@processing_order 参数指定值 1；为 sp_changemergearticle 的 \@processing_order 参数指定值 2，为参数 \@article 指定表名称。 此处理顺序可确保在创建依赖于某函数的表之前在订阅服务器上创建该函数。 每个项目可以使用不同的数字，只要函数的数字小于表的数字即可。  
   
 -   发布名称中不能包含以下字符：% * [ ] | : " ? \ / < >。  
   
@@ -169,7 +169,7 @@ ms.locfileid: "76287602"
   
 -   通过 [sp_bindefault &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md) 创建的绑定默认值（绑定默认值会对用 ALTER TABLE 或 CREATE TABLE 的关键字 DEFAULT 创建的默认值不利）将不复制。  
   
--   由于分发代理传递它们时所采用的顺序，包含针对索引视图的 **NOEXPAND** 提示的函数不能在与引用的表和索引视图相同的发布中发布。 若要解决此问题，请将创建的表和索引视图放置于第一个发布中，并且将包含针对索引视图的 **NOEXPAND** 提示的函数添加到在第一个发布完成后发布的第二个发布中。 或者，为这些函数创建脚本，并且使用 sp_addpublication  的 \@post_snapshot_script  参数传递该脚本。  
+-   由于分发代理传递它们时所采用的顺序，包含针对索引视图的 **NOEXPAND** 提示的函数不能在与引用的表和索引视图相同的发布中发布。 若要解决此问题，请将创建的表和索引视图放置于第一个发布中，并且将包含针对索引视图的 **NOEXPAND** 提示的函数添加到在第一个发布完成后发布的第二个发布中。 或者，为这些函数创建脚本，并且使用 sp_addpublication 的 \@post_snapshot_script 参数传递该脚本。  
   
 ### <a name="schemas-and-object-ownership"></a>架构和对象所有权  
  在新建发布向导中，复制在架构和对象所有权方面具有以下默认行为：  
@@ -193,9 +193,9 @@ ms.locfileid: "76287602"
 ### <a name="publishing-tables-in-more-than-one-publication"></a>在多个发布中发布表  
  复制支持按照下列限制在多个发布中发布项目（包括重新发布数据）：  
   
--   如果在事务发布和合并发布中发布项目，请确保将合并项目的 \@published_in_tran_pub  属性设置为 TRUE。 有关设置属性的详细信息，请参阅[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)和[查看和修改项目属性](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)。  
+-   如果在事务发布和合并发布中发布项目，请确保将合并项目的 \@published_in_tran_pub 属性设置为 TRUE。 有关设置属性的详细信息，请参阅[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)和[查看和修改项目属性](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)。  
   
-     如果项目是事务订阅的一部分并且包括在合并发布中，还应该设置 \@published_in_tran_pub  属性。 如果是这种情况，注意，默认情况下事务复制期望表在订阅服务器中被视为只读表；如果合并复制对事务订阅中的表进行数据更改，则无法实现数据收敛。 为了避免这种情况，建议您在合并发布中将所有此类表都指定为仅供下载。 这样可以防止合并订阅服务器向表中上载数据更改。 有关详细信息，请参阅[使用仅下载项目优化合并复制性能](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)。  
+     如果项目是事务订阅的一部分并且包括在合并发布中，还应该设置 \@published_in_tran_pub 属性。 如果是这种情况，注意，默认情况下事务复制期望表在订阅服务器中被视为只读表；如果合并复制对事务订阅中的表进行数据更改，则无法实现数据收敛。 为了避免这种情况，建议您在合并发布中将所有此类表都指定为仅供下载。 这样可以防止合并订阅服务器向表中上载数据更改。 有关详细信息，请参阅[使用仅下载项目优化合并复制性能](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)。  
   
 -   不能在合并发布和事务发布中同时发布带有排队更新订阅的项目。  
   

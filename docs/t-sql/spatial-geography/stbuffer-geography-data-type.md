@@ -50,11 +50,11 @@ ms.locfileid: "68042528"
  CLR 返回类型：SqlGeography   
   
 ## <a name="remarks"></a>备注  
- STBuffer() 计算缓冲区的方式与 [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md) 相同：指定 tolerance = abs(distance)  *.001 且 relative*false\*   =   。  
+ STBuffer() 计算缓冲区的方式与 [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md) 相同：指定 tolerance = abs(distance) \* .001 且 relative = false。  
   
  负的缓冲区将删除 geography 实例的给定距离的边界内的所有点  。  
   
- `STBuffer()` 在某些情况下将返回 FullGlobe 实例；例如，当缓冲区距离大于从赤道到极地的距离时， **返回 FullGlobe 实例**`STBuffer()`  。 缓冲区不能超过完整的地球。  
+ `STBuffer()` 在某些情况下将返回 FullGlobe 实例；例如，当缓冲区距离大于从赤道到极地的距离时，`STBuffer()` 返回 FullGlobe 实例。 缓冲区不能超过完整的地球。  
   
  在缓冲区的距离超过下列限制的 FullGlobe 实例中，此方法将引发 ArgumentException   ：  
   

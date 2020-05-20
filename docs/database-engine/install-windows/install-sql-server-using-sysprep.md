@@ -83,19 +83,19 @@ ms.locfileid: "67990948"
   
 1. 插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装介质， 然后双击根文件夹中的 Setup.exe。 若要从网络共享进行安装，请找到共享中的根文件夹，然后双击 Setup.exe。 
   
-2. 安装向导将运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心。 若要准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请单击 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“高级”页上的** **“** 的独立实例的映像准备”。 
+2. 安装向导将运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心。 若要准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请单击“高级”页上的“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例的映像准备”。 
   
 3. 系统配置检查器将在您的计算机上运行发现操作。 若要继续，请单击 **“确定”** 。 您可以通过单击 **“显示详细信息”** 在屏幕上查看详情，或通过单击 **“查看详细报告”** 从而以 HTML 报告的形式进行查看。 
   
-4. 在“产品更新”页中，将显示最近提供的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品更新。 如果你不想包括更新，则取消选中“包括  **产品更新”[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 复选框。 如果未发现任何产品更新， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将不会显示该页并且自动前进到 **“安装安装程序文件”** 页。 
+4. 在“产品更新”页中，将显示最近提供的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品更新。 如果你不想包括更新，则取消选中“包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品更新”复选框。 如果未发现任何产品更新， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将不会显示该页并且自动前进到 **“安装安装程序文件”** 页。 
   
 5. 在“安装安装程序文件”页上，安装程序将提供下载、提取和安装这些安装程序文件的进度。 如果找到了针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的更新，并且指定了包括该更新，则也将安装该更新。 
   
 6. 系统配置检查器将在安装继续之前验证计算机的系统状态。 您可以通过单击 **“显示详细信息”** 在屏幕上查看详情，或通过单击 **“查看详细报告”** 从而以 HTML 报告的形式进行查看。 
   
-7. 在  “准备映像类型”页中，选择 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“准备**  的新实例”。 
+7. 在“准备映像类型”页中，选择“准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新实例”。 
   
-     仅当计算机上存在未配置的已准备  **实例时，才显示**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“准备映像类型”页。 您可以选择准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新实例，或者将 sys prep 支持的功能添加到计算机上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的现有已准备实例。 有关如何向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备实例添加功能的详细信息，请参阅 [向已准备实例添加功能](#AddFeatures)。 
+     仅当计算机上存在未配置的已准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，才显示“准备映像类型”页。 您可以选择准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新实例，或者将 sys prep 支持的功能添加到计算机上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的现有已准备实例。 有关如何向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备实例添加功能的详细信息，请参阅 [向已准备实例添加功能](#AddFeatures)。 
   
 8. 在 **“许可条款”** 页上阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 为了帮助改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您还可以启用功能使用情况选项并将报告发送给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 
   
@@ -139,7 +139,7 @@ ms.locfileid: "67990948"
   
 ### <a name="complete-a-prepared-instance-of-ssnoversion"></a>完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1. 如果在您的计算机的映像中包括了一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备实例，则在“开始”菜单中会看到一个相应的快捷方式。 你也可以启动安装中心，然后在  “高级”页上单击  “已准备独立实例的映像完成”。 
+1. 如果在您的计算机的映像中包括了一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备实例，则在“开始”菜单中会看到一个相应的快捷方式。 你也可以启动安装中心，然后在“高级”页上单击“已准备独立实例的映像完成”。 
   
 2. 系统配置检查器将在您的计算机上运行发现操作。 若要继续，请单击 **“确定”** 。 您可以通过单击 **“显示详细信息”** 在屏幕上查看详情，或通过单击 **“查看详细报告”** 从而以 HTML 报告的形式进行查看。 
   
@@ -172,7 +172,7 @@ ms.locfileid: "67990948"
   
 10. 本文中的其余工作流取决于在准备步骤中已选择的功能。 您可能不会看到所有的页面，具体取决于进行的选择。 
   
-11. 在“服务器配置 - 服务帐户”页上指定  **服务的登录帐户**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此页上配置的实际服务取决于您选择安装的功能。 
+11. 在“服务器配置 - 服务帐户”页上指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的登录帐户。 此页上配置的实际服务取决于您选择安装的功能。 
   
      您可以为所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务分配相同的登录帐户，也可以单独配置各个服务帐户。 您还可以指定是自动启动、手动启动还是禁用服务。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议您逐个配置服务帐户，以便为每项服务提供最低权限，其中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务将被授予完成其任务所必须具备的最低权限。 有关详细信息，请参阅 [服务器配置 - 服务帐户](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) 和 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。 
   
@@ -225,13 +225,13 @@ ms.locfileid: "67990948"
   
 1. 插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装介质， 然后双击根文件夹中的 Setup.exe。 若要从网络共享进行安装，请找到共享中的根文件夹，然后双击 Setup.exe。 
   
-2. 安装向导将运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心。 若要向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备实例添加功能，请单击 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“高级”页上的** **“** 的独立实例的映像准备”。 
+2. 安装向导将运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心。 若要向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备实例添加功能，请单击“高级”页上的“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的独立实例的映像准备”。 
   
 3. 系统配置检查器将在您的计算机上运行发现操作。 若要继续，请单击 **“确定”** 。 您可以通过单击 **“显示详细信息”** 在屏幕上查看详情，或通过单击 **“查看详细报告”** 从而以 HTML 报告的形式进行查看。 
   
 4. 在“安装程序支持文件”页，单击 **“安装”** 以安装安装程序支持文件。 
   
-5. 在  “准备映像类型”页上，选择 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“向**  的现有已准备实例中添加功能”选项。 从可用的已准备实例的下拉列表中，选择要将功能添加到的特定的已准备实例。 
+5. 在“准备映像类型”页上，选择“向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的现有已准备实例中添加功能”选项。 从可用的已准备实例的下拉列表中，选择要将功能添加到的特定的已准备实例。 
   
 6. 在 **“功能选择”** 页上，指定要添加到指定的已准备实例的功能。 
   

@@ -70,7 +70,7 @@ End Sub
 > [!NOTE]  
 >  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> 接口对 **Object** 类型的属性值提供有限支持。 能够作为自定义属性值存储的唯一对象是简单类型数组，如字符串或整数。  
   
- 可指示自定义属性支持属性表达式，方法是从 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.ExpressionType%2A> 枚举将其 **属性的值设置为**CPET_NOTIFY<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSCustomPropertyExpressionType>，如以下示例中所示。 不必添加用于处理或验证用户输入的属性表达式的任何代码。 可以设置属性的默认值、验证该值并正常读取和使用该值。  
+ 可指示自定义属性支持属性表达式，方法是从 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.ExpressionType%2A> 枚举将其 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSCustomPropertyExpressionType> 属性的值设置为 **CPET_NOTIFY**，如以下示例中所示。 不必添加用于处理或验证用户输入的属性表达式的任何代码。 可以设置属性的默认值、验证该值并正常读取和使用该值。  
   
 ```csharp  
 IDTSCustomProperty100 myCustomProperty;  

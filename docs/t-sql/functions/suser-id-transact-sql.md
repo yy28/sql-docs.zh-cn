@@ -49,7 +49,7 @@ SUSER_ID ( [ 'login' ] )
   
 ## <a name="arguments"></a>参数  
  **'** *login* **'**  
- 用户的登录名。 login  是 **nchar**。 如果 login  指定为 **char**，则 login  会隐式转换为 **nchar**。 login  可以是有权限连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或 Windows 用户或组。 如果未指定 login  ，则返回当前用户的登录标识号。 如果此参数包含词 NULL，将返回 NULL。  
+ 用户的登录名。 login  是 **nchar**。 如果 login  指定为 **char**，则 login  会隐式转换为 **nchar**。 login 可以是有权限连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或 Windows 用户或组。 如果未指定 login  ，则返回当前用户的登录标识号。 如果此参数包含词 NULL，将返回 NULL。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  

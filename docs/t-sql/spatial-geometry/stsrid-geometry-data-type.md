@@ -44,7 +44,7 @@ STSrid
  CLR 类型：SqlInt32   
   
 ## <a name="examples"></a>示例  
- 第一个示例创建 SRID 值为 13 的 geometry 实例并使用  **确认该 SRID**`STSrid`。  
+ 第一个示例创建 SRID 值为 13 的 geometry 实例并使用 `STSrid` 确认该 SRID。  
   
 ```  
 DECLARE @g geometry;  

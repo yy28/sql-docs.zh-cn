@@ -51,7 +51,7 @@ ms.locfileid: "73595782"
 
 对于此方案，可以使用支持 SQL Server 的任何数据提供程序连接到源或目标 SQL Server 数据库。 如果使用的提供程序支持 Always Encrypted 连接到目标数据库，则需要确保为数据库连接禁用 Always Encrypted。 有关详细信息，请参阅[为数据库连接启用和禁用 Always Encrypted](#enable-and-disable-always-encrypted-for-a-database-connection)。
 
-还需要确保 SQL Server 导入和导出向导用于连接到目标数据库的数据库主体（用户）使用设置为 `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` 的 `ON` 选项进行配置。 此选项会取消在大容量复制操作中，在服务器上进行的加密元数据检查，这使向导可以将加密数据大容量插入目标数据库，而无需解密数据。 有关详细信息，请参阅[将加密数据大容量加载到受 Always Encrypted 保护的列](migrate-sensitive-data-protected-by-always-encrypted.md)。
+还需要确保 SQL Server 导入和导出向导用于连接到目标数据库的数据库主体（用户）使用设置为 `ON` 的 `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` 选项进行配置。 此选项会取消在大容量复制操作中，在服务器上进行的加密元数据检查，这使向导可以将加密数据大容量插入目标数据库，而无需解密数据。 有关详细信息，请参阅[将加密数据大容量加载到受 Always Encrypted 保护的列](migrate-sensitive-data-protected-by-always-encrypted.md)。
 
 ## <a name="enable-and-disable-always-encrypted-for-a-database-connection"></a>为数据库连接启用和禁用 Always Encrypted
 如果迁移方案需要 SQL Server 导入和导出向导能够加密和/或解密数据，则需要使用支持 Always Encrypted 的数据提供程序配置源 SQL Server 数据库连接和/或目标 SQL Server 数据库连接。 还需要为源和/或目标数据库连接启用 Always Encrypted。

@@ -42,7 +42,7 @@ ms.locfileid: "67946960"
 ##  <a name="create-a-plan-guide-using-ssms"></a><a name="SSMSProcedure"></a> 使用 SSMS 创建计划指南  
 1.  单击加号以便展开您要在其中创建计划指南的数据库，然后单击加号以便展开 **“可编程性”** 文件夹。  
   
-2.  右键单击“计划指南”文件夹，然后选择“新建计划指南…”。**select_plan_guide**  ![](../../relational-databases/performance/media/select-plan-guide.png)
+2.  右键单击“计划指南”文件夹，然后选择“新建计划指南…”。![select_plan_guide](../../relational-databases/performance/media/select-plan-guide.png)
   
 3.  在 **“新建计划指南”** 对话框的 **“名称”** 框中，输入计划指南的名称。  
   

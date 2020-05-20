@@ -54,7 +54,7 @@ expression - expression
 ### <a name="a-using-subtraction-in-a-select-statement"></a>A. 在 SELECT 语句中使用减法  
  以下示例计算税率最高的省/市/自治区与税率最低的省/市/自治区之间的税率差异。  
   
- 适用范围：**和**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+ 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
 ```  
 -- Uses AdventureWorks  

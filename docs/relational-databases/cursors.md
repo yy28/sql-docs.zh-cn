@@ -44,7 +44,7 @@ ms.locfileid: "79112334"
   
 > [!TIP]
 > 在某些情况下，如果表上有一个主键，可以使用 `WHILE` 循环代替游标，而不会产生游标的开销。
-> 然而，在某些情况下，游标不仅是不可避免的，而且实际上是不可或缺的。 在这种情况下，如果不需要基于游标来更新表，则使用“firehose”游标，即[快进和只读](#forward-only)游标  。
+> 然而，在某些情况下，游标不仅是不可避免的，而且实际上是不可或缺的。 在这种情况下，如果不需要基于游标来更新表，则使用“firehose”游标，即[快进和只读](#forward-only)游标。
   
 ## <a name="cursor-implementations"></a>游标实现  
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持三种游标实现。  
@@ -80,7 +80,7 @@ API 游标支持 OLE DB 和 ODBC 中的 API 游标函数。 API 服务器游标�
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 静态游标始终是只读的。  
   
 > [!NOTE]
-> 由于静态游标的结果集存储在“tempdb”中的一个工作表中，因此结果集中的行大小不能超过 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表的最大行大小  。  
+> 由于静态游标的结果集存储在“tempdb”中的一个工作表中，因此结果集中的行大小不能超过 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表的最大行大小。  
 > 有关详细信息，请参阅[查询处理体系结构指南中的工作表](../relational-databases/query-processing-architecture-guide.md#worktables)。 有关最大行大小的详细信息，请参阅 [SQL Server 最大容量规范](../sql-server/maximum-capacity-specifications-for-sql-server.md)。  
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] 称静态游标为不敏感游标。 一些数据库 API 将这类游标识别为快照游标。  

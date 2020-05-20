@@ -36,7 +36,7 @@ ms.locfileid: "67940241"
 ## <a name="arguments"></a>参数  
 binary [ ( n ) ] 长度为 n 字节的固定长度二进制数据，其中 n 是从 1 到 8,000 的值     。 存储大小为 n 字节  。
   
-varbinary [ ( n**max) ] 可变长度二进制数据**   |   。 n 的取值范围为 1 至 8,000  。 max 指示最大存储大小是 2^31-1 个字节  。 存储大小为所输入数据的实际长度 + 2 个字节。 所输入数据的长度可以是 0 字节。 varbinary 的 ANSI SQL 同义词为 binary varying   。
+varbinary [ ( n | max) ] 可变长度二进制数据。 n 的取值范围为 1 至 8,000  。 max 指示最大存储大小是 2^31-1 个字节  。 存储大小为所输入数据的实际长度 + 2 个字节。 所输入数据的长度可以是 0 字节。 varbinary 的 ANSI SQL 同义词为 binary varying   。
   
 ## <a name="remarks"></a>备注  
 如果没有在数据定义或变量声明语句中指定 _n_，则默认长度为 1。 如果没有使用 CAST 函数指定 _n_，则默认长度为 30。
@@ -71,7 +71,7 @@ varbinary [ ( n**max) ] 可变长度二进制数据**   |   。 n 的取值范�
 SELECT CAST( 123456 AS BINARY(4) );  
 ```  
   
-但是，以下 `SELECT` 语句显示如果 binary 目标太小而不能保存整个值，则前导数字会被自动截断，以使该数值存储为  `0xe240`：
+但是，以下 `SELECT` 语句显示如果 binary 目标太小而不能保存整个值，则前导数字会被自动截断，以使该数值存储为 `0xe240`：
   
 ```sql
 SELECT CAST( 123456 AS BINARY(2) );  
@@ -92,7 +92,7 @@ GO
 最终结果为 `57921`，而不是 `123457`。
   
 > [!NOTE]  
->  不能保证在  **各个版本之间对任一数据类型与 binary 数据类型进行转换的结果是一致的**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+>  不能保证在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各个版本之间对任一数据类型与 binary 数据类型进行转换的结果是一致的。  
   
 ## <a name="see-also"></a>另请参阅
 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  

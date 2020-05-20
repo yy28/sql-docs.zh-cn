@@ -30,7 +30,7 @@ ms.locfileid: "71297258"
  在自定义用户界面项目或程序集中，通常有两个类，实现 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> 的类以及为收集用户信息而显示的 Windows 窗体。  
   
 > [!IMPORTANT]  
->  在按照[编写自定义连接管理器代码](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)中的说明生成自定义用户界面并签名而且在全局程序集缓存中安装后，还要在 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> 的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 属性中提供此类的完全限定名称。  
+>  在按照[编写自定义连接管理器代码](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)中的说明生成自定义用户界面并签名而且在全局程序集缓存中安装后，还要在 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> 属性中提供此类的完全限定名称。  
   
 > [!NOTE]  
 >  内置于 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 的大多数任务、源和目标都只能与特定类型的内置连接管理器一起工作。 因此，不能使用内置任务和组件测试这些示例。  

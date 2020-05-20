@@ -88,7 +88,7 @@ OrgNode   Node
 ```  
   
 ### <a name="b-converting-transact-sql-values-without-a-table"></a>B. 不使用表转换 Transact-SQL 值  
-下面的代码示例使用 `ToString` 将 hierarchyid 值转换为字符串，并使用  **将字符串值转换为 hierarchyid**`Parse`  。
+下面的代码示例使用 `ToString` 将 hierarchyid 值转换为字符串，并使用 `Parse` 将字符串值转换为 hierarchyid。
   
 ```sql
 DECLARE @StringValue AS nvarchar(4000), @hierarchyidValue AS hierarchyid  

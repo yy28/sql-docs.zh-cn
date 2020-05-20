@@ -121,7 +121,7 @@ ms.locfileid: "71680984"
 
 ## <a name="import-an-existing-project-with-the-import-project-wizard"></a>使用导入项目向导导入现有项目
   
-1.  在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中的“文件”  菜单上，单击“新建” >   “项目”  。  
+1.  在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中的“文件”菜单上，单击“新建” > “项目”。  
   
 2.  在 **“新建项目”** 窗口的 **“已安装的模板”** 区域中，展开 **“商业智能”** ，然后单击 **“Integration Services”** 。  
   

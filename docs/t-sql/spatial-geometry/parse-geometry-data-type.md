@@ -43,7 +43,7 @@ Parse ( 'geometry_tagged_text' )
  CLR 返回类型：SqlGeometry   
   
 ## <a name="remarks"></a>备注  
- **返回的**geometry`Parse()` 实例的 OGC 类型设置为相应的 WKT 输入。  
+ `Parse()` 返回的 **geometry** 实例的 OGC 类型设置为相应的 WKT 输入。  
   
  字符串“Null”将被解释为 Null **geometry** 实例。  
   

@@ -50,7 +50,7 @@ SQL Server 返回类型：geometry
   
 -   为方法传递了非数值参数，例如，`@g.BufferWithCurves('a')`  
   
--   向方法传递了 NULL，例如，  `@g.BufferWithCurves(NULL)`  
+-   向方法传递了 NULL，例如，`@g.BufferWithCurves(NULL)`  
   
 ## <a name="remarks"></a>备注  
  下图显示此方法返回的示例 geometry 实例。  
@@ -71,7 +71,7 @@ SQL Server 返回类型：geometry
   
  负缓冲区删除距几何图形边界给定距离内的所有点。 下图以圆的明暗交错区域显示负缓冲区。 虚线是原始多边形的边界，实线是结果多边形的边界。  
   
- 如果将 string 参数传递给方法，则会将其转换为 float；否则，将引发   `ArgumentException`。  
+ 如果将 string 参数传递给方法，则会将其转换为 float；否则，将引发 `ArgumentException`。  
   
 ## <a name="examples"></a>示例  
   
@@ -99,7 +99,7 @@ SQL Server 返回类型：geometry
  SELECT @g.BufferWithCurves(-2).ToString();
  ```  
   
- 此 SELECT 语句返回  `GEOMETRYCOLLECTION EMPTY`  
+ 此 SELECT 语句返回 `GEOMETRYCOLLECTION EMPTY`  
   
 ### <a name="d-calling-bufferwithcurves-with-a-parameter-value--0"></a>D. 使用 = 0 的参数值调用 BufferWithCurves()  
  以下示例返回调用 geometry 实例的副本  ：  
@@ -154,7 +154,7 @@ SQL Server 返回类型：geometry
  SELECT @g.BufferWithCurves(1.6).ToString();
  ```  
   
- 前两个 SELECT 语句返回一个  **实例，因为 distance 参数小于或等于两个点 (1 1) 和 (1 4) 之间的距离的 1/2**`GeometryCollection`  。 第三个 SELECT 语句返回一个  **实例，因为两个点 (1 1) 和 (1 4) 的缓冲实例发生重叠**`CurvePolygon`。  
+ 前两个 SELECT 语句返回一个 `GeometryCollection` 实例，因为 distance 参数小于或等于两个点 (1 1) 和 (1 4) 之间的距离的 1/2。 第三个 SELECT 语句返回一个 `CurvePolygon` 实例，因为两个点 (1 1) 和 (1 4) 的缓冲实例发生重叠。  
   
 ## <a name="see-also"></a>另请参阅  
  [几何图形实例上的扩展方法](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  

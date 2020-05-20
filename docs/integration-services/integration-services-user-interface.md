@@ -51,7 +51,7 @@ ms.locfileid: "71284171"
 |**数字签名**|为包签名或从包中删除签名。|在 **SSIS** 菜单上，单击 **“数字签名”** 。<br /><br /> -或-<br /><br /> 右键单击“控制流”  选项卡的设计图面上任意位置，再单击“数字签名”  。|  
 |**设置断点**|对任务启用断点，并设置断点属性。|在“控制流”  选项卡的设计图面上，右键单击任务或容器，再单击“编辑断点”  。 若要对包设置断点，请右键单击“控制流”  选项卡的设计图面上的任意位置，再单击“编辑断点”  。|  
   
- **“入门”** 窗口提供指向示例、教程和视频内容的链接。 若要添加指向更多内容的链接，请修改 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]当前版本附带的 SamplesSites.xml 文件。 建议不要修改指定 RSS 源 URL 的 \<GettingStartedSamples> 元素值。 该文件位于 *drive>:\Program Files\Microsoft SQL Server\110\DTS\Binn 文件夹中\<* 。 在 64 位计算机上，该文件位于 *drive>:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn 文件夹中\<* 。  
+ **“入门”** 窗口提供指向示例、教程和视频内容的链接。 若要添加指向更多内容的链接，请修改 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]当前版本附带的 SamplesSites.xml 文件。 建议不要修改指定 RSS 源 URL 的 \<GettingStartedSamples> 元素值。 该文件位于 \<drive>:\Program Files\Microsoft SQL Server\110\DTS\Binn 文件夹中。 在 64 位计算机上，该文件位于 \<drive>:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn 文件夹中。  
   
  如果 SamplesSites.xml 文件确已损坏，请用下面的默认 xml 替换该文件中的 xml。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "71284171"
 ## <a name="advanced-editor"></a>“高级编辑器”  
  **“高级编辑器”** 对话框是用于配置数据流组件的用户界面。 它使用通用的布局反映组件的属性。 **“高级编辑器”** 对话框对具有多个输入的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 转换不可用。  
   
- 若要打开此编辑器，请单击“属性”  窗口中的“显示高级编辑器”  ，或右键单击数据流组件，再单击“显示高级编辑器”  。  
+ 若要打开此编辑器，请单击“属性”窗口中的“显示高级编辑器”，或右键单击数据流组件，再单击“显示高级编辑器”。  
   
  如果创建自定义源、转换或目标，但不想编写自定义用户界面，则可以使用 **“高级编辑器”** 。  
   

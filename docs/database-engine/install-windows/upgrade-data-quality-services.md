@@ -25,7 +25,7 @@ ms.locfileid: "67934858"
   
 > [!IMPORTANT]
 >  -   您必须先备份 DQS 数据库，然后才能升级 DQS，以防止在架构升级过程中出现任何意外数据损失。 有关备份 DQS 数据库的信息，请参阅 [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)。  
-> -   通过使用当前或早期版本的 Data Quality Client 或 Integration Services 中的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]DQS 清除转换[，可以连接到 ](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) Data Quality Server 执行数据质量任务。  
+> -   通过使用当前或早期版本的 Data Quality Client 或 Integration Services 中的 [DQS 清除转换](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)，可以连接到 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server 执行数据质量任务。  
 > -   升级 Data Quality Services 和 Master Data Services 后，用于 Excel 的 Master Data Services 加载项的任何早期版本都将不再适用。 你可以从 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 此处 [下载用于 Excel 的](https://go.microsoft.com/fwlink/?LinkID=506665)版本 Master Data Services 外接程序。  
   
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  

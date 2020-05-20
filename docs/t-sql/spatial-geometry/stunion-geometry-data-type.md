@@ -38,7 +38,7 @@ ms.locfileid: "68066222"
   
 ## <a name="arguments"></a>参数  
  *other_geometry*  
- 与调用 **的实例形成并集的另一个**geometry`STUnion()` 实例。  
+ 与调用 `STUnion()` 的实例形成并集的另一个 **geometry** 实例。  
   
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：geometry   

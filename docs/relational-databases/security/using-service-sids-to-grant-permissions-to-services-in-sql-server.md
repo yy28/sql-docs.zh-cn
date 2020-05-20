@@ -42,7 +42,7 @@ SQL Server 使用[每个服务的安全标识符 (SID)](https://support.microsof
 
 系统历来通过为 [LocalSystem](https://msdn.microsoft.com/library/windows/desktop/ms684190)（[NT AUTHORITY\SYSTEM，语言为 en-us](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Localized_service_names)）或 [NetworkService](/windows/desktop/Services/networkservice-account)（[NT AUTHORITY\NETWORK SERVICE，语言为 en-us](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?#Localized_service_names)）帐户创建登录名并授予这些登录名权限，来授予系统帐户权限。 此方法在以系统帐户运行的 SQL 中授予任何进程或服务权限。
 
-使用服务 SID 允许对特定服务授予权限。 该服务在运行时只能访问已授予权限的资源。 例如，如果 `HealthService` 作为 `LocalSystem` 运行并被授予 `View Server State`，则 `LocalSystem` 帐户仅在 `View Server State` 的上下文中运行时才具有对 `HealthService` 的权限。 如果任何其他进程尝试像 `LocalSystem` 一样访问 SQL 的服务器状态，则将被拒绝访问。
+使用服务 SID 允许对特定服务授予权限。 该服务在运行时只能访问已授予权限的资源。 例如，如果 `HealthService` 作为 `LocalSystem` 运行并被授予 `View Server State`，则 `LocalSystem` 帐户仅在 `HealthService` 的上下文中运行时才具有对 `View Server State` 的权限。 如果任何其他进程尝试像 `LocalSystem` 一样访问 SQL 的服务器状态，则将被拒绝访问。
 
 ## <a name="examples"></a>示例
 

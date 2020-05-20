@@ -91,7 +91,7 @@ End Class
  <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> 方法的返回值确定对组件的更改是持久的还是被放弃。 此方法返回 false  时，所有更改都被放弃；返回 true  时，将持久化对组件的更改并将包标记为需要保存。  
   
 ### <a name="using-the-services-of-the-ssis-designer"></a>使用 SSIS 设计器的服务  
- **方法的 IServiceProvider**<xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 参数可以访问 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器的以下服务：  
+ <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 方法的 IServiceProvider 参数可以访问 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器的以下服务：  
   
 |服务|说明|  
 |-------------|-----------------|  

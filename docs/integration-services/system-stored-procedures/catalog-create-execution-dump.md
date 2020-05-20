@@ -24,7 +24,7 @@ ms.locfileid: "71295507"
 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  导致暂停正在运行的包并创建转储文件。 此文件存储在 *drive>:\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps文件夹中\<* 。  
+  导致暂停正在运行的包并创建转储文件。 此文件存储在 \<drive>:\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps文件夹中。  
   
 ## <a name="syntax"></a>语法  
   

@@ -38,7 +38,7 @@ ms.locfileid: "68066245"
   
 ## <a name="arguments"></a>参数  
  *other_geometry*  
- 将与调用  **的实例进行比较的另一个 geometry 实例**`STTouches()`。  
+ 将与调用 `STTouches()` 的实例进行比较的另一个 geometry 实例。  
   
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit   

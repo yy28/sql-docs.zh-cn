@@ -46,7 +46,7 @@ ms.locfileid: "68107805"
  CLR 返回类型：SqlDouble   
   
 ## <a name="remarks"></a>备注  
- 如果 `STDistance()`geometry**实例的空间引用 ID (SRID) 不匹配，则** 始终返回 null。  
+ 如果 **geometry** 实例的空间引用 ID (SRID) 不匹配，则 `STDistance()` 始终返回 null。  
   
 ## <a name="examples"></a>示例  
   

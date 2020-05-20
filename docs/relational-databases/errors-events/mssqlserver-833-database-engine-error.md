@@ -49,7 +49,7 @@ ms.locfileid: "68129241"
   
 -   **Current Disk Queue Length**  
   
-例如，运行 **的计算机上的**Average Disk Sec/Transfer[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时间通常少于 15 毫秒。 如果 **Average Disk Sec/Transfer** 值增加，这表明 I/O 子系统未能完全满足 I/O 需求。  
+例如，运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机上的 **Average Disk Sec/Transfer** 时间通常少于 15 毫秒。 如果 **Average Disk Sec/Transfer** 值增加，这表明 I/O 子系统未能完全满足 I/O 需求。  
   
 > [!NOTE]  
 > 防病毒程序可能会减慢磁盘访问速度。 若要提高访问速度，请将错误消息中指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据文件从实时病毒扫描中排除。  

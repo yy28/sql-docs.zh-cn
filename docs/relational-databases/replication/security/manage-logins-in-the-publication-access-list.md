@@ -47,11 +47,11 @@ ms.locfileid: "76287298"
 -   在将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名添加到 PAL 前，必须将该登录名与发布数据库中的数据库用户关联。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 可以使用“发布属性 - **发布>”** **对话框的“发布访问列表”\<** 页上的发布访问列表 (PAL) 管理登录名。 有关如何访问此对话框的详细信息，请参阅[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 可以使用“发布属性 - \<发布>”对话框的“发布访问列表”页上的发布访问列表 (PAL) 管理登录名。 有关如何访问此对话框的详细信息，请参阅[查看和修改发布属性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-manage-logins-in-the-pal"></a>管理 PAL 中的登录名  
   
-1.  在“发布属性 - **发布>”** **对话框的“发布访问列表”\<** 页上，使用“添加”  、“删除”  和“全部删除”  按钮在 PAL 中添加和删除登录名和组。 不要从 PAL 中删除 **distributor_admin** 。 复制将使用此帐户。  
+1.  在“发布属性 - \<发布>”对话框的“发布访问列表”页上，使用“添加”、“删除”和“全部删除”按钮在 PAL 中添加和删除登录名和组。 不要从 PAL 中删除 **distributor_admin** 。 复制将使用此帐户。  
   
     > [!NOTE]  
     >  如果使用远程分发服务器，则 PAL 中的帐户必须在发布服务器和分发服务器中都可用。 帐户必须是在这两个服务器中定义的域帐户或本地帐户。 与这两个登录名关联的密码必须相同。  

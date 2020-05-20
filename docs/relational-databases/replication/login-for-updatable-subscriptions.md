@@ -35,7 +35,7 @@ ms.locfileid: "71710359"
   
 -   复制创建的链接服务器；用在订阅服务器上做更改的用户的凭据建立连接。  
   
- 可以在此向导中指定前两个选项。 最后一个选项只能使用 [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) 指定；将参数  **的值指定为 1**`@security_mode`。  
+ 可以在此向导中指定前两个选项。 最后一个选项只能使用 [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) 指定；将参数 `@security_mode` 的值指定为 1。  
   
 ## <a name="options"></a>选项  
  **创建使用以下 SQL Server 身份验证登录名进行连接的链接服务器：**  

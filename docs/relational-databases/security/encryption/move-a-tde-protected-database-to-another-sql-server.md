@@ -22,7 +22,7 @@ ms.locfileid: "75558504"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>将受 TDE 保护的数据库移到其他 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主题介绍如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 通过透明数据加密 (TDE) 来保护数据库，然后再将数据库移动到 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 的其他实例。 TDE 针对数据和日志文件执行实时 I/O 加密和解密。 加密使用数据库加密密钥 (DEK)，它存储在数据库引导记录中，可在恢复时使用。 DEK 是使用存储在服务器的 **master** 数据库中的证书保护的对称密钥，或者是由 EKM 模块保护的非对称密钥。   
+  本主题介绍如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 通过透明数据加密 (TDE) 来保护数据库，然后再将数据库移动到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的其他实例。 TDE 针对数据和日志文件执行实时 I/O 加密和解密。 加密使用数据库加密密钥 (DEK)，它存储在数据库引导记录中，可在恢复时使用。 DEK 是使用存储在服务器的 **master** 数据库中的证书保护的对称密钥，或者是由 EKM 模块保护的非对称密钥。   
    
 ##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
@@ -172,7 +172,7 @@ ms.locfileid: "75558504"
   
     -   当数据库进行了复制操作，则 **“状态”** 为 **“未就绪”** ， **“消息”** 列将显示 **“已复制数据库”** 。  
   
-    -   如果数据库有一个或多个活动连接，则“状态”为“未就绪”，“消息”列显示“**number**of**active**connections **个活动连接”，例如：“1 个活动连接”** _\<\_\_\_\>_   。 在分离数据库之前，需要通过选择 **“删除连接”** 断开所有活动连接。  
+    -   如果数据库有一个或多个活动连接，则“状态”为“未就绪”，“消息”列显示“\<number\_of\_active\_connections\> 个活动连接”，例如：“1 个活动连接”。 在分离数据库之前，需要通过选择 **“删除连接”** 断开所有活动连接。  
   
      若要获取有关消息的详细信息，请单击相应的超链接文本打开活动监视器。  
   
@@ -190,7 +190,7 @@ ms.locfileid: "75558504"
   
 8.  在 **“附加数据库”** 对话框中的 **“要附加的数据库”** 下，单击 **“添加”** 。  
   
-9. 在“定位数据库文件 - server**name”对话框中，选择要附加到新服务器的数据库文件，然后单击“确定”** _\__  。  
+9. 在“定位数据库文件 - server\_name”对话框中，选择要附加到新服务器的数据库文件，然后单击“确定”。  
   
      在 **“附加数据库”** 对话框中提供了以下选项。  
   

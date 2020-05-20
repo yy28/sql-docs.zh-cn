@@ -73,7 +73,7 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 
 ### <a name="example-known-singleton"></a>示例：已知单一性
 
-在此示例中，nodes()  方法为每个 `<book>` 元素生成一个单独的行。 对  **节点进行计算的 value()** `<book>` 方法提取 `@genre` 值，并且是单一属性。
+在此示例中，nodes()  方法为每个 `<book>` 元素生成一个单独的行。 对 `<book>` 节点进行计算的 value() 方法提取 `@genre` 值，并且是单一属性。
 
 ```sql
 SELECT nref.value('@genre', 'varchar(max)') LastName

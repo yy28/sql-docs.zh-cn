@@ -68,7 +68,7 @@ SET @string = 1;
 SELECT @string + ' is a string.'
 ```
 
-`int` 的 `1` 值会转换为 `varchar`，因此 `SELECT` 语句返回值 `1 is a string.`。
+`1` 的 `int` 值会转换为 `varchar`，因此 `SELECT` 语句返回值 `1 is a string.`。
 
 下面的示例演示改为使用 `int` 变量的类似脚本：
 
@@ -135,7 +135,7 @@ SELECT @notastring + '1'
 |**datetime**、**smalldatetime**|**Date**|  
 |设置为 NULL 的任何类型|Variant 设置为 Null |  
   
-除了 binary、varbinary 和 image 值以外，所有单个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 值都被转换为单个 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 值    。 这些值将被转换为  **中的一维 Byte() 数组**[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]。 此数组的范围为 Byte( 0 to **length** 1)，其中 length 是  _binary、varbinary 或 image 值中的字节数_   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]    。
+除了 binary、varbinary 和 image 值以外，所有单个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 值都被转换为单个 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 值    。 这些值将被转换为 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中的一维 Byte() 数组。 此数组的范围为 Byte( 0 to **length** 1)，其中 length 是  _binary、varbinary 或 image 值中的字节数_   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]    。
   
 以下是从 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 数据类型到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型的转换。
   

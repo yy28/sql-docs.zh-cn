@@ -24,7 +24,7 @@ ms.locfileid: "68082557"
 
 [!INCLUDE[tsql-appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-计算列是虚拟列，并非实际存储在表中，除非此列标记为 PERSISTED。 计算列的表达式可以使用其他列中的数据来计算其所属列的值。 可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中为计算列指定一个表达式。
+计算列是虚拟列，并非实际存储在表中，除非此列标记为 PERSISTED。 计算列的表达式可以使用其他列中的数据来计算其所属列的值。 可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中为计算列指定一个表达式。
 
 **本主题内容**
 
@@ -65,7 +65,7 @@ ms.locfileid: "68082557"
    > [!IMPORTANT]
    > 当两个不同数据类型的表达式用公式组合后，数据类型优先级规则指定将优先级较低的数据类型转换为优先级较高的数据类型。 如果此转换不是所支持的隐式转换，则返回错误“`Error validating the formula for column column_name.`”。 使用 CAST 或 CONVERT 函数解决数据类型冲突。 例如，如果类型为 **nvarchar** 的列与类型为 **int**的列相结合，则整数类型必须转换为 **nvarchar** ，如公式 `('Prod'+CONVERT(nvarchar(23),ProductID))`中所示。 有关详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。
 
-5. 从“持久化”  子属性的下拉菜单上选择“是”  或“否”  ，以指示该数据是否持久。
+5. 从“持久化”子属性的下拉菜单上选择“是”或“否”，以指示该数据是否持久。
 
 6. 在“文件”菜单上，单击“保存表名称”    。
 

@@ -112,7 +112,7 @@ GO
 ```  
 
 ### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C. 返回不包含数据的预算数量  
- 如果 `budgets` 和 `NULLIF` 都不包含数据，则以下示例创建 `current_year` 表、加载数据，并使用 `previous_year` 返回 null。  
+ 如果 `current_year` 和 `previous_year` 都不包含数据，则以下示例创建 `budgets` 表、加载数据，并使用 `NULLIF` 返回 null。  
   
 ```sql  
 CREATE TABLE budgets (  

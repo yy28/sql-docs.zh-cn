@@ -74,7 +74,7 @@ ms.locfileid: "70059292"
   
 3. 右键单击“本地订阅”文件夹，然后选择“新建订阅”   。  
   
-4. 在新建订阅向导的“发布”页上，从“发布服务器”下拉列表中选择“\<查找 SQL Server 发布服务器>”或“\<查找 Oracle 发布服务器>”。      
+4. 在新建订阅向导的“发布”页上，从“发布服务器”下拉列表中选择“\<查找 SQL Server 发布服务器>”或“\<查找 Oracle 发布服务器>”。  
   
 5. 在 **“连接到服务器”** 对话框中连接到发布服务器。  
   
@@ -94,18 +94,18 @@ ms.locfileid: "70059292"
   
    - 如果 **allow_push** 的值为 **1**，则支持推送订阅。  
   
-   - 如果 allow_push 的值为 0，则运行 [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   。 为 \@property 指定 allow_push，为 \@value 指定 true     。  
+   - 如果 allow_push 的值为 0，则运行 [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)。 为 \@property 指定 allow_push，为 \@value 指定 true。  
   
-2. 在发布服务器上的发布数据库中，运行 [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定 \@publication  、\@subscriber  和 \@destination_db  。 将 \@subscription_type  的值指定为 push  。 有关如何更新订阅的信息，请参阅[创建事务性发布的可更新订阅](publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
+2. 在发布服务器上的发布数据库中，运行 [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md)。 指定 \@publication、\@subscriber 和 \@destination_db。 将 \@subscription_type 的值指定为 push。 有关如何更新订阅的信息，请参阅[创建事务性发布的可更新订阅](publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
   
 3. 在发布服务器上的发布数据库中，运行 [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)。 指定下列各项：  
   
-   - \@subscriber  、\@subscriber_db  和 \@publication  参数。  
+   - \@subscriber、\@subscriber_db 和 \@publication 参数。  
   
-   - 分发服务器中的分发代理运行时所使用的 \@job_login  和 \@job_password  指定的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 凭据。  
+   - 分发服务器中的分发代理运行时所使用的 \@job_login 和 \@job_password 指定的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 凭据。  
   
      > [!NOTE]
-     > 使用 Windows 集成身份验证进行的连接始终使用由 \@job_login 和 \@job_password 指定的 Windows 凭据   。 分发代理始终使用 Windows 集成身份验证与分发服务器建立本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。  
+     > 使用 Windows 集成身份验证进行的连接始终使用由 \@job_login 和 \@job_password 指定的 Windows 凭据。 分发代理始终使用 Windows 集成身份验证与分发服务器建立本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。  
   
    - （可选）subscriber_security_mode 的 0 值以及 \@subscriber_login 和 \@subscriber_password 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录信息  **\@**   。 如果您需要在连接到订阅服务器时使用 SQL Server 身份验证，则指定这些参数。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "70059292"
   
    - 如果 **allow_push** 的值为 **1**，则发布支持推送订阅。  
   
-   - 如果 allow_push 的值不为 1，则运行 [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   。 为 \@property 指定 allow_push，为 \@value 指定 true     。  
+   - 如果 allow_push 的值不为 1，则运行 [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)。 为 \@property 指定 allow_push，为 \@value 指定 true。  
   
 2. 在发布服务器上的发布数据库中，运行 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)。 指定下列参数：  
   
@@ -134,16 +134,16 @@ ms.locfileid: "70059292"
   
 3. 在发布服务器上的发布数据库中，运行 [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)。 指定下列各项：  
   
-   - \@subscriber  、\@subscriber_db  和 \@publication  参数。  
+   - \@subscriber、\@subscriber_db 和 \@publication 参数。  
   
-   - 分发服务器中的合并代理运行时所使用的 \@job_login  和 \@job_password  指定的 Windows 凭据。  
+   - 分发服务器中的合并代理运行时所使用的 \@job_login 和 \@job_password 指定的 Windows 凭据。  
   
      > [!NOTE]
-     > 使用 Windows 集成身份验证进行的连接始终使用由 \@job_login 和 \@job_password 指定的 Windows 凭据   。 合并代理程序始终使用 Windows 集成身份验证与分发服务器建立本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。  
+     > 使用 Windows 集成身份验证进行的连接始终使用由 \@job_login 和 \@job_password 指定的 Windows 凭据。 合并代理程序始终使用 Windows 集成身份验证与分发服务器建立本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。  
   
-   - （可选）\@subscriber_security_mode  的 0  值以及 \@subscriber_login  和 \@subscriber_password  指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录信息。 如果您需要在连接到订阅服务器时使用 SQL Server 身份验证，则指定这些参数。  
+   - （可选）\@subscriber_security_mode 的 0 值以及 \@subscriber_login 和 \@subscriber_password 指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录信息。 如果您需要在连接到订阅服务器时使用 SQL Server 身份验证，则指定这些参数。  
   
-   - （可选）\@publisher_security_mode  的 0  值以及 \@publisher_login  和 \@publisher_password  指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录信息。 如果您需要在连接到发布服务器时使用 SQL Server 身份验证，则指定这些值。  
+   - （可选）\@publisher_security_mode 的 0 值以及 \@publisher_login 和 \@publisher_password 指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录信息。 如果您需要在连接到发布服务器时使用 SQL Server 身份验证，则指定这些值。  
   
    - 该订阅的合并代理作业计划。 有关详细信息，请参阅[指定同步计划](../../relational-databases/replication/specify-synchronization-schedules.md)。  
   

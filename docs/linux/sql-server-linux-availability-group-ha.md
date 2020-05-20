@@ -136,7 +136,7 @@ SQL Server 2017 引入了 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 群集�
 
 ## <a name="understand-sql-server-resource-agent-for-pacemaker"></a>了解 Pacemaker 的 SQL Server 资源代理
 
-SQL Server 2017 CTP 1.4 向 `sequence_number` 添加了 `sys.availability_groups`，以允许 Pacemaker 通过主要副本识别次要副本的最新状态。 `sequence_number` 是一个单调递增的 BIGINT，表示本地可用性组副本的最新状态。 Pacemaker 会在每个可用性组配置更改时更新 `sequence_number`。 配置更改示例包括故障转移、副本添加或删除。 该数字将在主要副本上更新，然后复制到次要副本。 因此，具有最新配置的次要副本的序列号与主要副本相同。 
+SQL Server 2017 CTP 1.4 向 `sys.availability_groups` 添加了 `sequence_number`，以允许 Pacemaker 通过主要副本识别次要副本的最新状态。 `sequence_number` 是一个单调递增的 BIGINT，表示本地可用性组副本的最新状态。 Pacemaker 会在每个可用性组配置更改时更新 `sequence_number`。 配置更改示例包括故障转移、副本添加或删除。 该数字将在主要副本上更新，然后复制到次要副本。 因此，具有最新配置的次要副本的序列号与主要副本相同。 
 
 当 Pacemaker 决定将某个副本提升为主要副本时，会先向所有副本发送*预提升*通知。 各副本将返回序列号。 接下来，当 Pacemaker 实际尝试将某个副本提升为主要副本时，只有当该副本的序列号在所有序列号中最高时，该副本才会提升自身。 如果其自己的序列号与最高序列号不匹配，则该副本会拒绝提升操作。 这样，就只有序列号最高的副本才会升级为主副本，确保不会丢失数据。 
 
@@ -155,7 +155,7 @@ SQL Server 2017 CTP 1.4 向 `sequence_number` 添加了 `sys.availability_groups
 
 你可以选择覆盖默认行为，并阻止可用性组资源自动设置 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`。
 
-以下脚本在名为 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 的可用性组上将 `<**ag1**>` 设置为 0。 运行前，将 `<**ag1**>` 替换为可用性组的名称。
+以下脚本在名为 `<**ag1**>` 的可用性组上将 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 设置为 0。 运行前，将 `<**ag1**>` 替换为可用性组的名称。
 
 ```bash
 sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=0

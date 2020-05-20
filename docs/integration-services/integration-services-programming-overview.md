@@ -62,7 +62,7 @@ ms.locfileid: "71296217"
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 应用程序编程接口与基于 COM 的脚本语言（如 VBScript）不兼容。  
   
 ## <a name="locating-assemblies"></a>定位程序集  
- 在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 程序集已升级到 .NET 4.0。 位于 *drive>:\Windows\Microsoft.NET\assembly 中的 .NET 4 存在单独的全局程序集缓存\<* 。 您可在此路径下找到所有 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 程序集，一般位于 GAC_MSIL 文件夹中。  
+ 在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 程序集已升级到 .NET 4.0。 位于 \<drive>:\Windows\Microsoft.NET\assembly 中的 .NET 4 存在单独的全局程序集缓存。 您可在此路径下找到所有 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 程序集，一般位于 GAC_MSIL 文件夹中。  
   
  与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 早期版本一样，核心 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 扩展性 .dll 文件也位于 *\<驱动器>* :\Program Files\Microsoft SQL Server\100\SDK\Assemblies 中。  
   

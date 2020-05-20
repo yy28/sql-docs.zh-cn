@@ -106,7 +106,7 @@ ms.locfileid: "71296189"
   
  通过编程或使用 SSIS 设计器第一次创建包时，会将 GUID 添加到它的 **ID** 属性中，并在它的 **Name** 属性中添加名称。 如果通过复制现有包或使用模板包来创建新包，那么也会复制名称和 GUID。 如果使用日志记录，则这可能是个问题，因为包的 GUID 和名称将写入日志，以标识被记录的信息所属的包。 因此，应当更新新包的名称和 GUID，以便帮助将它们与源包区分开来，并且能够在日志数据中的区分彼此。  
   
- 若要更改包 GUID，需要在 **的“属性”窗口中的“ID”** [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]属性内重新生成 GUID。 若要更改包名称，可以在“属性”窗口中更新 **Name** 属性的值。 还可以使用 **dtutil** 命令提示符，或通过编程更新 GUID 和名称。 有关详细信息，请参阅 [设置包属性](../integration-services/set-package-properties.md) 和 [dtutil 实用工具](../integration-services/dtutil-utility.md)。  
+ 若要更改包 GUID，需要在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的“属性”窗口中的“ID”属性内重新生成 GUID。 若要更改包名称，可以在“属性”窗口中更新 **Name** 属性的值。 还可以使用 **dtutil** 命令提示符，或通过编程更新 GUID 和名称。 有关详细信息，请参阅 [设置包属性](../integration-services/set-package-properties.md) 和 [dtutil 实用工具](../integration-services/dtutil-utility.md)。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象模型之外， [!INCLUDE[ssIS](../includes/ssis-md.md)] 还包含了两个图形工具： [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 设计器和 [!INCLUDE[ssIS](../includes/ssis-md.md)] 导入和导出向导。 有关详细信息，请参阅下列主题。  

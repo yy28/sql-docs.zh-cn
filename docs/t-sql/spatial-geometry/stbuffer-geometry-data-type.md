@@ -46,7 +46,7 @@ ms.locfileid: "67930369"
  CLR 返回类型：SqlGeometry   
   
 ## <a name="remarks"></a>备注  
- `STBuffer()` 计算缓冲区的方式与 [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md) 相似，指定 tolerance = distance *.001 和 relative*false\*   =   。  
+ `STBuffer()` 计算缓冲区的方式与 [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md) 相似，指定 tolerance = distance\* .001 和 relative  = false。  
   
  如果 distance > 0，则返回 Polygon 或 MultiPolygon 实例    。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "67930369"
  SELECT @g.STBuffer(-2).ToString();
  ```  
   
- 此 SELECT 语句返回  `GEOMETRYCOLLECTION EMPTY.`  
+ 此 SELECT 语句返回 `GEOMETRYCOLLECTION EMPTY.`  
   
 ### <a name="e-calling-stbuffer-with-parameter_value--0"></a>E. 当参数值 = 0 时调用 STBuffer()  
  以下示例返回调用 `geometry` 实例的副本：  
@@ -160,7 +160,7 @@ ms.locfileid: "67930369"
  SELECT @g.STBuffer(1.6).ToString();
  ```  
   
- 前两个 SELECT 语句返回一个  **实例，因为 distance 参数小于或等于两个点 (1 1) 和 (1 4) 之间的距离的 1/2**`MultiPolygon`  。 第三个 SELECT 语句返回一个  **实例，因为两个点 (1 1) 和 (1 4) 的缓冲实例发生重叠**`Polygon`。  
+ 前两个 SELECT 语句返回一个 `MultiPolygon` 实例，因为 distance 参数小于或等于两个点 (1 1) 和 (1 4) 之间的距离的 1/2。 第三个 SELECT 语句返回一个 `Polygon` 实例，因为两个点 (1 1) 和 (1 4) 的缓冲实例发生重叠。  
   
 ## <a name="see-also"></a>另请参阅  
  [BufferWithTolerance（geometry 数据类型）](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   

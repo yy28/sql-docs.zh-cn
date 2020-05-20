@@ -153,7 +153,7 @@ GO
 ```  
   
 ## <a name="create-distributed-availability-group-on-first-cluster"></a>在第一个群集上创建分布式可用性组  
- 在第一个 WSFC 上创建分布式可用性组（此示例中命名为 `distributedag` ）。 使用具有 **DISTRIBUTED** 选项的 **CREATE AVAILABILITY GROUP** 命令。 AVAILABILITY GROUP ON 参数指定了成员可用性组、**和**`ag1``ag2`。  
+ 在第一个 WSFC 上创建分布式可用性组（此示例中命名为 `distributedag` ）。 使用具有 **DISTRIBUTED** 选项的 **CREATE AVAILABILITY GROUP** 命令。 AVAILABILITY GROUP ON 参数指定了成员可用性组、`ag1` 和 `ag2`。  
   
 ```sql  
 CREATE AVAILABILITY GROUP [distributedag]  
@@ -284,7 +284,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
       INNER JOIN sys.availability_groups ag on drs.group_id = ag.group_id;
       ```  
 
-    在可用性组 synchronization_state_desc 为  **并且在全局主数据库和转发器上每个数据库的 last_hardened_lsn 都相同之后，再继续操作**`SYNCHRONIZED`。  如果 synchronization_state_desc 不为  **或 last_hardened_lsn 不相同，请每五秒钟运行一次命令，直到它更改为止**`SYNCHRONIZED`。 请在 synchronization_state_desc  且每个数据库的 last_hardened_lsn 都相同之后，再继续操作 = `SYNCHRONIZED`。 
+    在可用性组 synchronization_state_desc 为 `SYNCHRONIZED` 并且在全局主数据库和转发器上每个数据库的 last_hardened_lsn 都相同之后，再继续操作。  如果 synchronization_state_desc 不为 `SYNCHRONIZED` 或 last_hardened_lsn 不相同，请每五秒钟运行一次命令，直到它更改为止。 请在 synchronization_state_desc = `SYNCHRONIZED` 且每个数据库的 last_hardened_lsn 都相同之后，再继续操作。 
 
 1. 在全局主要副本上，将分布式可用性组角色设置为 `SECONDARY`。 
 

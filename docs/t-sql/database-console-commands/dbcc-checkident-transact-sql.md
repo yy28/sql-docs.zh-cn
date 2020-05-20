@@ -93,7 +93,7 @@ DBCC CHECKIDENT
 |-----------------------------|---------------------------------------------|  
 |DBCC CHECKIDENT ( *table_name*, NORESEED )|不重置当前标识值。 DBCC CHECKIDENT 将返回标识列的当前标识值和当前最大值。 如果这两个值不相同，则应重置标识值，以避免值序列中的潜在错误或空白。|  
 |DBCC CHECKIDENT ( *table_name* )<br /><br /> 或<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED )|如果表的当前标识值小于标识列中存储的最大标识值，则使用标识列中的最大值对其进行重置。 请参阅后面的“例外”一节。|  
-|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|将当前标识值设置为 *new_reseed_value*。 如果自从创建表以来未在表中插入任何行，或者已使用 TRUNCATE TABLE 语句删除所有行，则在运行 DBCC CHECKIDENT 之后插入的第一行将使用 *new_reseed_value* 作为标识。 如果行位于表中，或如果已通过使用 DELETE 语句删除了所有行，则下一个插入行将使用 new_reseed_value  + [当前增量](../../t-sql/functions/ident-incr-transact-sql.md)值。 如果事务插入一个行并且稍后回滚，则下一个插入行使用 new_reseed_value + [当前增量](../../t-sql/functions/ident-incr-transact-sql.md)值，就像已删除该行一样  。 如果该表不为空，那么将标识值设置为小于标识列中的最大值的数字时，将会出现下列情况之一：<br /><br /> -如果标识列中存在 PRIMARY KEY 或 UNIQUE 约束，则随后在表中执行插入操作时将生成错误消息 2627，原因是生成的标识值将与现有值冲突。<br /><br /> -如果不存在 PRIMARY KEY 或 UNIQUE 约束，则随后的插入操作将产生重复的标识值。|  
+|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|将当前标识值设置为 *new_reseed_value*。 如果自从创建表以来未在表中插入任何行，或者已使用 TRUNCATE TABLE 语句删除所有行，则在运行 DBCC CHECKIDENT 之后插入的第一行将使用 *new_reseed_value* 作为标识。 如果行位于表中，或如果已通过使用 DELETE 语句删除了所有行，则下一个插入行将使用 new_reseed_value  + [当前增量](../../t-sql/functions/ident-incr-transact-sql.md)值。 如果事务插入一个行并且稍后回滚，则下一个插入行使用 new_reseed_value + [当前增量](../../t-sql/functions/ident-incr-transact-sql.md)值，就像已删除该行一样。 如果该表不为空，那么将标识值设置为小于标识列中的最大值的数字时，将会出现下列情况之一：<br /><br /> -如果标识列中存在 PRIMARY KEY 或 UNIQUE 约束，则随后在表中执行插入操作时将生成错误消息 2627，原因是生成的标识值将与现有值冲突。<br /><br /> -如果不存在 PRIMARY KEY 或 UNIQUE 约束，则随后的插入操作将产生重复的标识值。|  
   
 ## <a name="exceptions"></a>例外
 
@@ -101,7 +101,7 @@ DBCC CHECKIDENT
   
 |条件|重置方法|  
 |---------------|-------------------|  
-|当前标识值大于表中的最大值。|执行 DBCC CHECKIDENT (table_name  , NORESEED) 以确定列中的当前最大值。 接下来，在 DBCC CHECKIDENT (table_name  , RESEED,new_reseed_value  ) 命令中指定该值作为 new_reseed_value  。<br /><br /> \- 或 -<br /><br /> 执行 DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*)，其中 *new_reseed_value* 设置为非常低的值，然后运行 DBCC CHECKIDENT (*table_name*, RESEED) 以更正值。|  
+|当前标识值大于表中的最大值。|执行 DBCC CHECKIDENT (table_name  , NORESEED) 以确定列中的当前最大值。 接下来，在 DBCC CHECKIDENT (table_name, RESEED,new_reseed_value) 命令中指定该值作为 new_reseed_value。<br /><br /> \- 或 -<br /><br /> 执行 DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*)，其中 *new_reseed_value* 设置为非常低的值，然后运行 DBCC CHECKIDENT (*table_name*, RESEED) 以更正值。|  
 |删除表中的所有行。|执行 DBCC CHECKIDENT (table_name, RESEED,new_reseed_value)，其中 new_reseed_value 设置为新起始值    。|  
   
 ## <a name="changing-the-seed-value"></a>更改种子值

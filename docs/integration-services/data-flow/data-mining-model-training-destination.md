@@ -58,7 +58,7 @@ ms.locfileid: "71293112"
   
 ### <a name="options"></a>选项  
  **“ODBC 目标编辑器”**  
- 从现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接的列表中进行选择，或者通过使用下面介绍的“新建”[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**按钮创建新的**  连接。  
+ 从现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接的列表中进行选择，或者通过使用下面介绍的“新建”按钮创建新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接。  
   
  **新建**  
  通过使用“添加 Analysis Services 连接管理器”  对话框创建一个新连接。  

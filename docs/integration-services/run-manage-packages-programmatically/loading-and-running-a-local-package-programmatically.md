@@ -32,7 +32,7 @@ ms.locfileid: "71295757"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  可以使用[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]运行包[中介绍的方法，根据需要或在预定时间运行 ](../packages/run-integration-services-ssis-packages.md) 包。 但是，也可以只用几行代码，从自定义应用程序（如 Windows 窗体应用程序、控制台应用程序、ASP.NET Web 窗体或 Web 服务、Windows 服务）运行包。  
+  可以使用[运行包](../packages/run-integration-services-ssis-packages.md)中介绍的方法，根据需要或在预定时间运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 但是，也可以只用几行代码，从自定义应用程序（如 Windows 窗体应用程序、控制台应用程序、ASP.NET Web 窗体或 Web 服务、Windows 服务）运行包。  
   
  本主题讨论：  
   
@@ -40,7 +40,7 @@ ms.locfileid: "71295757"
   
 -   以编程方式运行包  
   
- 本主题中用于加载和运行包的所有方法都需要引用 Microsoft.SqlServer.ManagedDTS  程序集。 在新项目中添加引用之后，使用 using<xref:Microsoft.SqlServer.Dts.Runtime> **或 Imports** **语句导入** 命名空间。  
+ 本主题中用于加载和运行包的所有方法都需要引用 Microsoft.SqlServer.ManagedDTS  程序集。 在新项目中添加引用之后，使用 using 或 Imports 语句导入 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空间。  
   
 ## <a name="loading-a-package-programmatically"></a>以编程方式加载包  
  若要以编程方式在本地计算机中加载包，无论包是本地存储还是远程存储，都可以调用以下方法之一：  
@@ -68,7 +68,7 @@ ms.locfileid: "71295757"
 4.  在主例程中添加以下代码。 完成的控制台应用程序应类似于下面的示例。  
   
     > [!NOTE]  
-    >  该示例代码演示如何使用 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadPackage%2A> 方法从文件系统加载包。 但您也可以通过调用 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromSqlServer%2A> 方法，从 MSDB 数据库加载包，或者通过调用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 方法，从 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> 包存储区加载包。  
+    >  该示例代码演示如何使用 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadPackage%2A> 方法从文件系统加载包。 但您也可以通过调用 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromSqlServer%2A> 方法，从 MSDB 数据库加载包，或者通过调用 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> 方法，从 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包存储区加载包。  
   
 5.  运行该项目。 示例代码执行随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 示例安装的 CalculatedColumns 示例包。 包执行的结果显示在控制台窗口中。  
   

@@ -42,7 +42,7 @@ DATABASE_PRINCIPAL_ID ( 'principal_name' )
   
 ## <a name="arguments"></a>参数  
 principal_name   
-sysname 类型的表达式，表示数据库主体  。 如果省略 principal_name， *返回当前用户的 ID*`DATABASE_PRINCIPAL_ID`。 `DATABASE_PRINCIPAL_ID` 需要使用括号。
+sysname 类型的表达式，表示数据库主体  。 如果省略 principal_name，`DATABASE_PRINCIPAL_ID` 返回当前用户的 ID。 `DATABASE_PRINCIPAL_ID` 需要使用括号。
   
 ## <a name="return-types"></a>返回类型
 **int**  

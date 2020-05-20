@@ -32,7 +32,7 @@ ms.locfileid: "74190119"
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   使用向导或 PowerShell 脚本将数据层应用程序 (DAC) 从 DAC 包部署到数据库引擎或 Azure SQL 数据库的现有实例。 
   
- 该部署过程通过在 **msdb** 系统数据库（在 **中为**master[!INCLUDE[ssSDS](../../includes/sssds-md.md)]）中存储 DAC 定义来注册一个 DAC 实例，创建一个数据库，然后使用在该 DAC 中定义的所有数据库对象来填充该数据库。  
+ 该部署过程通过在 **msdb** 系统数据库（在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中为 **master**）中存储 DAC 定义来注册一个 DAC 实例，创建一个数据库，然后使用在该 DAC 中定义的所有数据库对象来填充该数据库。  
  
   
 ## <a name="deploy-the-same-dac-package-multiple-times"></a>多次部署同一 DAC 包 
@@ -102,7 +102,7 @@ ms.locfileid: "74190119"
   
  如果您更改数据库名称，则数据文件和日志文件的名称也将更改以匹配这个新值。  
   
- 该数据库名称还用作 DAC 实例的名称。 该实例名称显示在“对象资源管理器”  中“数据层应用程序”  节点下的 DAC 的节点上，或者显示在“实用工具资源管理器”  中“已部署的数据层应用程序”  节点下的 DAC 的节点上。  
+ 该数据库名称还用作 DAC 实例的名称。 该实例名称显示在“对象资源管理器”中“数据层应用程序”节点下的 DAC 的节点上，或者显示在“实用工具资源管理器”中“已部署的数据层应用程序”节点下的 DAC 的节点上。  
   
  以下选项不应用于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，并且在部署到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]时不显示。  
   

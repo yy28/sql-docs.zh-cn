@@ -44,7 +44,7 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
   
 ## <a name="arguments"></a>参数  
  IF EXISTS   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)） 
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）
   
  只有在同义词已存在时才对其进行有条件地删除。  
   
