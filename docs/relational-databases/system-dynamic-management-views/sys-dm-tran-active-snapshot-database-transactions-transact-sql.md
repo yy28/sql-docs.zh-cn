@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_active_snapshot_database_transactions dynamic management view
 ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a17fb16130aea073c7a878334ac78b0347267b6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42ed4cebfda43801cdbc3ab42225783c674612e0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262704"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810961"
 ---
 # <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "68262704"
  此动态管理视图不包括系统事务。  
   
 > [!NOTE]  
->  若要从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]调用此，请使用名称**dm_pdw_nodes_tran_active_snapshot_database_transactions**。  
+>  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_tran_active_snapshot_database_transactions**。  
   
 ## <a name="syntax"></a>语法  
   
@@ -69,12 +69,12 @@ sys.dm_tran_active_snapshot_database_transactions
 |**max_version_chain_traversed**|**int**|为查找在事务上一致的版本而遍历的版本链的最大长度。|  
 |**average_version_chain_traversed**|**real**|被遍历的版本链中的行版本平均数。|  
 |**elapsed_time_seconds**|**bigint**|自事务获取其事务序列号以来所经过的时间。|  
-|**pdw_node_id**|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|**pdw_node_id**|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要权限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层上，需要`VIEW DATABASE STATE`具有数据库中的权限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
 ## <a name="remarks"></a>备注  
  **sys. dm_tran_active_snapshot_database_transactions**报告分配有事务序列号（XSN）的事务。 XSN 在事务首次访问版本存储区时分配。 在为快照隔离或使用行版本控制的已提交读隔离启用的数据库中，下面的示例说明何时将 XSN 分配给事务：  
@@ -145,7 +145,7 @@ elapsed_time_seconds
   
  以下信息将从 sys.databases 计算结果**dm_tran_active_snapshot_database_transactions**：  
   
--   XSN-57：由于此事务未在快照隔离下运行，因此`is_snapshot` ，值`first_snapshot_sequence_num`为`0`。 由于 ALLOW_SNAPSHOT_ISOLATION 或 READ_COMMITTED_SNAPSHOT 数据库选项中有一个为 ON 或两者均为 ON，因此 `transaction_sequence_num` 表明已为此事务分配事务序列号。  
+-   XSN-57：由于此事务未在快照隔离下运行，因此， `is_snapshot` 值 `first_snapshot_sequence_num` 为 `0` 。 由于 ALLOW_SNAPSHOT_ISOLATION 或 READ_COMMITTED_SNAPSHOT 数据库选项中有一个为 ON 或两者均为 ON，因此 `transaction_sequence_num` 表明已为此事务分配事务序列号。  
   
 -   XSN-58：此事务未在快照隔离下运行，因此适用与 XSN-57 相同的信息。  
   

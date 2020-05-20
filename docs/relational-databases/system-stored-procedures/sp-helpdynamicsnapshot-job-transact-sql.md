@@ -19,14 +19,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdynamicsnapshot_job
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 55d7ad0dfd941102cfeb6661e65980f980fa8b2d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 866f05904cfa1b6c7b3ce6b20a59a5be3096be2b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770980"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810599"
 ---
 # <a name="sp_helpdynamicsnapshot_job-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'`发布的名称。 *发布*的数据类型为**sysname**，默认**%** 值为，它返回与所有发布的指定*dynamic_snapshot_jobid*和*dynamic_snapshot_jobname*匹配的所有已筛选的数据快照作业的信息。  
+`[ @publication = ] 'publication'`发布的名称。 *发布*的数据类型为**sysname**，默认值为 **%** ，它返回与所有发布的指定*dynamic_snapshot_jobid*和*dynamic_snapshot_jobname*匹配的所有已筛选的数据快照作业的信息。  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`筛选的数据快照作业的名称。 *dynamic_snapshot_jobname*为**sysname**，默认值为**%**""，它将返回具有指定*dynamic_snapshot_jobid*的发布的所有动态作业。 如果创建作业时未显式指定作业名称，则作业名称具有以下格式：  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`筛选的数据快照作业的名称。 *dynamic_snapshot_jobname*为**sysname**，默认值为 **%** ""，它将返回具有指定*dynamic_snapshot_jobid*的发布的所有动态作业。 如果创建作业时未显式指定作业名称，则作业名称具有以下格式：  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
@@ -61,7 +61,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |**id**|**int**|标识已筛选的数据快照作业。|  
 |**job_name**|**sysname**|已筛选数据快照作业的名称。|  
-|**job_id**|**uniqueidentifier**|标识分发[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务器上的代理作业。|  
+|**job_id**|**uniqueidentifier**|标识 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分发服务器上的代理作业。|  
 |**dynamic_filter_login**|**sysname**|用于计算为发布定义的参数化行筛选器中的[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)函数的值。|  
 |**dynamic_filter_hostname**|**sysname**|用于计算为发布定义的参数化行筛选器中的[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)函数的值。|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|在使用参数化行筛选器时，从中读取快照文件的文件夹的路径。|  

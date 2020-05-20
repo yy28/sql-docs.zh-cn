@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_run_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 7bbaee48-dfc7-45c0-b11f-c636b6a7e720
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3807a53921572bbe20b4c459bff34958cbb42001
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 88b1cd8aaf95da010883faa7033c0bd6bf3cd2a5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304993"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809733"
 ---
 # <a name="sp_syscollector_run_collection_set-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ## <a name="remarks"></a>备注  
  *Collection_set_id*或*name*必须具有值，两者都不能为 NULL。  
   
- 此过程将为指定的收集组启动收集和上载作业，如果收集组的** \@collection_mode**设置为非缓存（1），则会立即启动收集代理作业。 有关详细信息，请参阅[&#40;transact-sql&#41;sp_syscollector_create_collection_set ](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)。  
+ 此过程将为指定的收集组启动收集和上载作业，如果收集组的** \@ collection_mode**设置为非缓存（1），则会立即启动收集代理作业。 有关详细信息，请参阅[&#40;transact-sql&#41;sp_syscollector_create_collection_set ](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)。  
   
  sp_sycollector_run_collection_set 还可用于运行没有计划的收集组。  
   

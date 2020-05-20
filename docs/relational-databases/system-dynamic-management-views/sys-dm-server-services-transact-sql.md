@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_services dynamic management view
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a480ba134a4f3049f7501cb68a0331ac8fdd386b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ed3638e3c8811235778ab2362700c9e08bf08ca5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095371"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811374"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  返回有关当前实例中的 SQL Server、全文 SQL Server Launchpad 服务（SQL Server 2017 +）和 SQL Server 代理服务的信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 使用此动态管理视图可以报告有关这些服务的状态信息。  
+  返回有关当前实例中的 SQL Server、全文 SQL Server Launchpad 服务（SQL Server 2017 +）和 SQL Server 代理服务的信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 使用此动态管理视图可以报告有关这些服务的状态信息。  
   
  
 |列名称|数据类型|说明|  
@@ -36,7 +36,7 @@ ms.locfileid: "74095371"
 |servicename|**nvarchar(256)**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、全文或 SQL Server 代理服务的名称。 不可为 null。|  
 |startup_type|**int**|指示服务的启动模式。 下面是可能的值及其相应的说明。<br /><br /> 0：其他<br />1：其他<br />2：自动<br />3：手动<br />4：已禁用<br /><br /> 可以为 Null。|  
 |startup_type_desc|**nvarchar(256)**|描述服务的启动模式。 下面是可能的值及其相应的说明。<br /><br /> 其他：其他（引导启动）<br />其他：其他（系统启动）<br />自动：自动启动<br />手动：请求开始<br />禁用：已禁用<br /><br /> 不可为 null。|  
-|status|**int**|指示服务的当前状态。 下面是可能的值及其相应的说明。<br /><br /> 1：已停止<br />2：其他（启动挂起）<br />3：其他（停止挂起）<br />4：正在运行<br />5：其他（继续挂起）<br />6：其他（暂停挂起）<br />7：已暂停<br /><br /> 可以为 Null。|  
+|状态|**int**|指示服务的当前状态。 下面是可能的值及其相应的说明。<br /><br /> 1：已停止<br />2：其他（启动挂起）<br />3：其他（停止挂起）<br />4：正在运行<br />5：其他（继续挂起）<br />6：其他（暂停挂起）<br />7：已暂停<br /><br /> 可以为 Null。|  
 |status_desc|**nvarchar(256)**|描述服务的当前状态。 下面是可能的值及其相应的说明。<br /><br /> 已停止：服务已停止。<br />其他（启动操作挂起）：服务正在启动。<br />其他（停止操作挂起）：服务正在停止。<br />正在运行：服务正在运行。<br />其他（继续操作挂起）：服务处于挂起状态。<br />其他（暂停挂起）：服务正在暂停。<br />已暂停：服务已暂停。<br /><br /> 不可为 null。|  
 |process_id|**int**|服务的进程 ID。 不可为 null。|  
 |last_startup_time|**datetimeoffset(7)**|上次启动服务的日期和时间。 可以为 Null。|  
@@ -44,7 +44,7 @@ ms.locfileid: "74095371"
 |filename|**nvarchar(256)**|服务可执行文件的路径和文件名。 不可为 null。|  
 |is_clustered|**nvarchar （1）**|指示服务是否作为群集服务器的资源安装。 不可为 null。|  
 |cluster_nodename|**nvarchar(256)**|安装此服务的群集节点的名称。 可以为 Null。|
-|instant_file_initialization_enabled|**nvarchar （1）**|指定是否为[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服务启用即时文件初始化。<br /><br />Y = 为服务启用即时文件初始化。<br /><br />N = 为服务禁用即时文件初始化。<br /><br /> 可以为 Null。<br /><br /> **注意：** 不适用于其他服务，例如 SQL Server 代理。<br /><br /> **适用范围：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （从[!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 开始，到[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 及更高版本）。|  
+|instant_file_initialization_enabled|**nvarchar （1）**|指定是否为服务启用即时文件初始化 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。<br /><br />Y = 为服务启用即时文件初始化。<br /><br />N = 为服务禁用即时文件初始化。<br /><br /> 可以为 Null。<br /><br /> **注意：** 不适用于其他服务，例如 SQL Server 代理。<br /><br /> **适用于：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（始于 [!INCLUDE[sssql11](../../includes/sssql11-md.md)]SP4 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 SP1 及更高版本）。|  
 
 ## <a name="security"></a>安全性  
   

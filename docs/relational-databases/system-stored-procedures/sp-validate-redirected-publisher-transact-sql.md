@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_validate_redirected_publisher
 ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b01fba8260e86d135e740964022187b9914e5fc0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 09ef147b9051ecbacdc1a33468100f4be2b372e9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252048"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808998"
 ---
 # <a name="sp_validate_redirected_publisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "72252048"
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @original_publisher = ] 'original_publisher'`最初发布数据库的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的名称。 *original_publisher* **sysname**，无默认值。  
+`[ @original_publisher = ] 'original_publisher'`最初发布数据库的实例的名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *original_publisher* **sysname**，无默认值。  
   
 `[ @publisher_db = ] 'publisher_db'`要发布的数据库的名称。 *publisher_db* **sysname**，无默认值。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "72252048"
  无。  
   
 ## <a name="remarks"></a>备注  
- 如果发布服务器和发布数据库中不存在任何项， **sp_validate_redirected_publisher**将在输出参数* \@redirected_publisher*中返回 null。 如果存在条目，则在成功和失败的情况下都会在输出参数中返回条目。  
+ 如果发布服务器和发布数据库中不存在任何项， **sp_validate_redirected_publisher**将在输出参数* \@ redirected_publisher*中返回 null。 如果存在条目，则在成功和失败的情况下都会在输出参数中返回条目。  
   
  如果验证成功， **sp_validate_redirected_publisher**将返回成功指示。  
   

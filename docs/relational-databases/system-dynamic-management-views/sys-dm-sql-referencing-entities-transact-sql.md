@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_sql_referencing_entities dynamic management function
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd09706d1b3de9ebe4a5b333f79be9644c433e7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a3557f9f77a310a9e72e8a9fb1e11a6976256d2d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982341"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811300"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "73982341"
   
 -   服务器级 DDL 触发器  
   
-**适用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]）、。  
+**适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -102,7 +102,7 @@ sys.dm_sql_referencing_entities (
 |实体类型|引用实体|被引用的实体|  
 |-----------------|------------------------|-----------------------|  
 |表|是*|是|  
-|查看|是|是|  
+|视图|是|是|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程**|是|是|  
 |CLR 存储过程|否|是|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数|是|是|  
@@ -118,7 +118,7 @@ sys.dm_sql_referencing_entities (
 |XML 架构集合|否|是|  
 |分区函数|否|是|  
   
- \*仅当表引用计算列、CHECK 约束或 DEFAULT 约束的[!INCLUDE[tsql](../../includes/tsql-md.md)]定义中的模块、用户定义类型或 XML 架构集合时，才会将该表作为引用实体进行跟踪。  
+ \*仅当表引用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 计算列、CHECK 约束或 DEFAULT 约束的定义中的模块、用户定义类型或 XML 架构集合时，才会将该表作为引用实体进行跟踪。  
   
  ** 整数值大于 1 的带编号的存储过程将不会作为引用实体或被引用的实体进行跟踪。  
   
@@ -154,7 +154,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. 返回引用给定类型的实体  
- 下面的示例返回引用别名类型 `dbo.Flag` 的实体。 结果集中显示了使用此类型的两个存储过程。 此`dbo.Flag`类型还用于`HumanResources.Employee`表中的多个列的定义中;但是，因为该类型不在表中的计算列、CHECK 约束或 DEFAULT 约束的定义中，所以没有为`HumanResources.Employee`该表返回任何行。  
+ 下面的示例返回引用别名类型 `dbo.Flag` 的实体。 结果集中显示了使用此类型的两个存储过程。 此 `dbo.Flag` 类型还用于表中的多个列的定义中 `HumanResources.Employee` ; 但是，由于该类型不在表中的计算列、CHECK 约束或 DEFAULT 约束的定义中，因此不会为该表返回任何行 `HumanResources.Employee` 。  
   
 ```sql  
 USE AdventureWorks2012;  

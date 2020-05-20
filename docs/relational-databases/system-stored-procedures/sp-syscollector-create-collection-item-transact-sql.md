@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_create_collection_item
 - data collector [SQL Server], stored procedures
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7ba3753a18d8e79848b0674e4738f2d2b811143e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d597436277255441ad893215a3581580264d99a3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032674"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810056"
 ---
 # <a name="sp_syscollector_create_collection_item-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,26 +46,26 @@ sp_syscollector_create_collection_item
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @collection_set_id = ]*collection_set_id*  
+ [ @collection_set_id =] *collection_set_id*  
  收集组的唯一本地标识符。 *collection_set_id*是**int**。  
   
- [ @collector_type_uid = ]"*collector_type_uid*"  
+ [ @collector_type_uid =] "*collector_type_uid*"  
  标识要用于此项的收集器类型的 GUID *collector_type_uid*是无默认值的**uniqueidentifier** 。 有关收集器类型的列表，请查询 syscollector_collector_types 系统视图。  
   
- [ @name = ]"*name*"  
+ [ @name =] "*name*"  
  收集项的名称。 *名称*为**sysname** ，不能为空字符串或 NULL。  
   
  *名称*必须是唯一的。 有关当前收集项名称的列表，请查询 syscollector_collection_items 系统视图。  
   
- [ @frequency = ]*频率*  
+ [ @frequency =]*频率*  
  用于指定此收集项收集数据的频率（秒）。 *frequency*的值为**int**，默认值为5。 可指定的最小值为 5 秒。  
   
  如果将收集组设置为非缓存模式，则忽略频率，这是因为此模式将导致数据收集和上载按为收集组指定的计划执行。 若要查看收集组的收集模式，请查询 " [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)系统" 视图。  
   
- [ @parameters = ]"*parameters*"  
+ [ @parameters =] "*parameters*"  
  收集器类型的输入参数。 *参数*的值为**xml** ，默认值为 NULL。 *参数*架构必须与收集器类型的参数架构匹配。  
   
- [ @collection_item_id = ]*collection_item_id*  
+ [ @collection_item_id =] *collection_item_id*  
  标识收集组项的唯一标识符。 *collection_item_id*为**int** ，并且具有 OUTPUT。  
   
 ## <a name="return-code-values"></a>返回代码值  

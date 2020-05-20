@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_info
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7409dcee64c7867b8811a282be71070923d48aa1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a83d216b0830b035da72ad579a2448a12f41adba
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68702854"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810304"
 ---
 # <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-SQL)
 
@@ -68,23 +68,23 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**超过**|IDENTIFIER_CASE<br /><br /> 在数据库（系统目录中对象的事例）中指定用户定义的名称（表名、列名、存储过程名）。|SENSITIVE|  
 |**11x17**|TX_ISOLATION<br /><br /> 指定服务器所采用的初始事务隔离级别，此级别与 SQL-92 中定义的隔离级别相对应。|2|  
 |**18**|COLLATION_SEQ<br /><br /> 指定该服务器的字符集排序。|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
-|**19**|SAVEPOINT_SUPPORT<br /><br /> 指定基础 DBMS 是否支持命名保存点。|Y|  
-|**0.2**|MULTI_RESULT_SETS<br /><br /> 指定基础数据库或网关本身是否支持多个结果集（通过网关可以将多个语句与返回给客户端的多个结果集一起发送）。|Y|  
-|22 |ACCESSIBLE_TABLES<br /><br /> 指定在**sp_tables**中，网关是否只返回当前用户可访问的表、视图等（即至少具有表的 SELECT 权限的用户）。|Y|  
+|**19**|SAVEPOINT_SUPPORT<br /><br /> 指定基础 DBMS 是否支持命名保存点。|是|  
+|**0.2**|MULTI_RESULT_SETS<br /><br /> 指定基础数据库或网关本身是否支持多个结果集（通过网关可以将多个语句与返回给客户端的多个结果集一起发送）。|是|  
+|22 |ACCESSIBLE_TABLES<br /><br /> 指定在**sp_tables**中，网关是否只返回当前用户可访问的表、视图等（即至少具有表的 SELECT 权限的用户）。|是|  
 |**100**|USERID_LENGTH<br /><br /> 指定用户名的最大字符数。|128|  
 |**101**|QUALIFIER_TERM<br /><br /> 指定表限定符（由三部分组成的名称的第一部分）的 DBMS 供应商术语。|database|  
-|**102**|NAMED_TRANSACTIONS<br /><br /> 指定基础 DBMS 是否支持命名事务。|Y|  
-|**103**|SPROC_AS_LANGUAGE<br /><br /> 指定能否将存储过程作为语言事件执行。|Y|  
-|**104**|ACCESSIBLE_SPROC<br /><br /> 指定是否在**sp_stored_procedures**中，网关仅返回由当前用户执行的存储过程。|Y|  
+|**102**|NAMED_TRANSACTIONS<br /><br /> 指定基础 DBMS 是否支持命名事务。|是|  
+|**103**|SPROC_AS_LANGUAGE<br /><br /> 指定能否将存储过程作为语言事件执行。|是|  
+|**104**|ACCESSIBLE_SPROC<br /><br /> 指定是否在**sp_stored_procedures**中，网关仅返回由当前用户执行的存储过程。|是|  
 |**105**|MAX_INDEX_COLS<br /><br /> 指定 DBMS 索引中的最大列数。|16|  
-|**106**|RENAME_TABLE<br /><br /> 指定是否可以重命名表。|Y|  
-|**107**|RENAME_COLUMN<br /><br /> 指定是否可以重命名列。|Y|  
-|**108**|DROP_COLUMN<br /><br /> 指定是否可以删除列。|Y|  
-|**109**|INCREASE_COLUMN_LENGTH<br /><br /> 指定是否可以增大列的大小。|Y|  
-|**110**|DDL_IN_TRANSACTION<br /><br /> 指定 DDL 语句是否可以出现在事务中。|Y|  
-|**111**|DESCENDING_INDEXES<br /><br /> 指定是否支持降序索引。|Y|  
-|**112**|SP_RENAME<br /><br /> 指定是否可以重命名存储过程。|Y|  
-|**113**|REMOTE_SPROC<br /><br /> 指定能否通过 DB-Library 中的远程存储过程函数执行存储过程。|Y|  
+|**106**|RENAME_TABLE<br /><br /> 指定是否可以重命名表。|是|  
+|**107**|RENAME_COLUMN<br /><br /> 指定是否可以重命名列。|是|  
+|**108**|DROP_COLUMN<br /><br /> 指定是否可以删除列。|是|  
+|**109**|INCREASE_COLUMN_LENGTH<br /><br /> 指定是否可以增大列的大小。|是|  
+|**110**|DDL_IN_TRANSACTION<br /><br /> 指定 DDL 语句是否可以出现在事务中。|是|  
+|**111**|DESCENDING_INDEXES<br /><br /> 指定是否支持降序索引。|是|  
+|**112**|SP_RENAME<br /><br /> 指定是否可以重命名存储过程。|是|  
+|**113**|REMOTE_SPROC<br /><br /> 指定能否通过 DB-Library 中的远程存储过程函数执行存储过程。|是|  
 |**500**|SYS_SPROC_VERSION<br /><br /> 指定当前实现的目录存储过程的版本。|当前的版本号|  
   
 ## <a name="remarks"></a>备注  

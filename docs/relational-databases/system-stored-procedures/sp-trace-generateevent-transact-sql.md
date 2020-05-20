@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_generateevent
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cfeacf9f3c18d3f80b7ad83a3697e33a5797ba22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5c5807225c2bda185b61050433cc3378b25b6fe1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096022"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809613"
 ---
 # <a name="sp_trace_generateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_trace_generateevent [ @eventid = ] event_id
 |**9**|内存不足。 在没有足够内存执行指定的操作时返回此代码。|  
   
 ## <a name="remarks"></a>备注  
- **sp_trace_generateevent**执行先前由**xp_trace_\* **扩展存储过程执行的许多操作。 使用**sp_trace_generateevent**而不是**xp_trace_generate_event**。  
+ **sp_trace_generateevent**执行先前由**xp_trace_ \* **扩展存储过程执行的许多操作。 使用**sp_trace_generateevent**而不是**xp_trace_generate_event**。  
   
  仅用户定义事件的 ID 号可与**sp_trace_generateevent**一起使用。 如果使用其他事件 ID 号，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将产生错误。  
   

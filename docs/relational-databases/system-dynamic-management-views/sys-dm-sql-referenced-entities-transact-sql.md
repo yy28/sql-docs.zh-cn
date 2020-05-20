@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_sql_referenced_entities dynamic management function
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64ddba95ec5c7fb8dfa6e6e685fcf9d5b6846fe9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb2b6e422b9b9e746e851e6d7b799cdf7c63387f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090676"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811241"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-为中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定的引用实体的定义中的名称引用的每个用户定义实体返回一行。 当一个用户定义的实体（称为 "*被引用的实体*"）出现在另一个用户定义实体（称为 "*引用实体*"）的持久化 SQL 表达式中时，将创建两个实体之间的依赖关系。 例如，如果存储过程是指定的引用实体，则此函数会返回该存储过程中引用的所有用户定义实体，例如表、视图、用户定义类型 (UDT) 或其他存储过程。  
+为中指定的引用实体的定义中的名称引用的每个用户定义实体返回一行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 当一个用户定义的实体（称为 "*被引用的实体*"）出现在另一个用户定义实体（称为 "*引用实体*"）的持久化 SQL 表达式中时，将创建两个实体之间的依赖关系。 例如，如果存储过程是指定的引用实体，则此函数会返回该存储过程中引用的所有用户定义实体，例如表、视图、用户定义类型 (UDT) 或其他存储过程。  
   
  可以使用此动态管理函数报告指定的引用实体引用的以下类型的实体：  
   
@@ -122,7 +122,7 @@ sys.dm_sql_referenced_entities (
 |实体类型|引用实体|被引用的实体|  
 |-----------------|------------------------|-----------------------|  
 |表|是*|是|  
-|查看|是|是|  
+|视图|是|是|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程**|是|是|  
 |CLR 存储过程|否|是|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 用户定义函数|是|是|  
@@ -139,7 +139,7 @@ sys.dm_sql_referenced_entities (
 |分区函数|否|是|  
 | &nbsp; | &nbsp; | &nbsp; |
 
- \*仅当表引用计算列、CHECK 约束或 DEFAULT 约束的[!INCLUDE[tsql](../../includes/tsql-md.md)]定义中的模块、用户定义类型或 XML 架构集合时，才会将该表作为引用实体进行跟踪。  
+ \*仅当表引用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 计算列、CHECK 约束或 DEFAULT 约束的定义中的模块、用户定义类型或 XML 架构集合时，才会将该表作为引用实体进行跟踪。  
   
  ** 整数值大于 1 的带编号的存储过程将不会作为引用实体或被引用的实体进行跟踪。  
   
@@ -268,8 +268,8 @@ The dependencies reported for entity "dbo.Proc1" might not include
 
 本例 E 假设已运行示例 D。 示例 E 显示了动态维护依赖关系。 该示例执行以下操作：
 
-1. 重新创建`Table1`，它在示例 D 中被删除。
-2. 运行`sys.dm_sql_referenced_entities`时，将用指定为引用实体的存储过程再次运行。
+1. 重新创建 `Table1` ，它在示例 D 中被删除。
+2. 运行 `sys.dm_sql_referenced_entities` 时，将用指定为引用实体的存储过程再次运行。
 
 结果集显示这两个表及其各自的列都是在存储过程中定义的。 此外，`is_all_columns_found` 列为所有对象和列返回 1。
 
@@ -304,7 +304,7 @@ GO
  ```
  
 ### <a name="f-returning-object-or-column-usage"></a>F. 返回对象或列的用法  
- 下面的示例返回存储过程 `HumanResources.uspUpdateEmployeePersonalInfo` 的对象和列依赖关系。 此过程根据`NationalIDNumber`指定`BirthDate,``MaritalStatus` `Gender` `Employee` `BusinessEntityID`的值更新表的列、和。 另一个存储过程`upsLogError`是在 TRY .。。捕获执行错误的 CATCH 块。 `is_selected`、`is_updated` 和 `is_select_all` 列返回与如何在引用对象中使用这些对象和列有关的信息。 进行了修改的表和列由 is_updated 列中的 1 指示。 仅选择 `BusinessEntityID` 列，既不选择、也不修改存储过程 `uspLogError`。  
+ 下面的示例返回存储过程 `HumanResources.uspUpdateEmployeePersonalInfo` 的对象和列依赖关系。 此过程根据指定的 `NationalIDNumber` 值更新表的列、 `BirthDate,``MaritalStatus` 和 `Gender` `Employee` `BusinessEntityID` 。 另一个存储过程 `upsLogError` 是在 TRY .。。捕获执行错误的 CATCH 块。 `is_selected`、`is_updated` 和 `is_select_all` 列返回与如何在引用对象中使用这些对象和列有关的信息。 进行了修改的表和列由 is_updated 列中的 1 指示。 仅选择 `BusinessEntityID` 列，既不选择、也不修改存储过程 `uspLogError`。  
 
 ```sql  
 USE AdventureWorks2012;
