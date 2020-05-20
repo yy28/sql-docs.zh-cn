@@ -17,19 +17,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_availability_group_states dynamic management view
 ms.assetid: d18019dd-f8dc-4492-b035-b1a639369b65
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 91efefbdc28480cf2a3b3fb579dba0946dba8a2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bace0824a7c8411e267186c3e9919ba2eb4be15c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900775"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811975"
 ---
 # <a name="sysdm_hadr_availability_group_states-transact-sql"></a>sys.dm_hadr_availability_group_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  为在本地实例上拥有可用性副本的每个 Always On 可用性组返回一行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 每行显示定义给定可用性组的运行状况的状态。  
+  为在本地实例上拥有可用性副本的每个 Always On 可用性组返回一行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 每行显示定义给定可用性组的运行状况的状态。  
   
 > [!NOTE]  
 >  若要获取的完整列表，请查询[sys.databases. availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)目录视图。  

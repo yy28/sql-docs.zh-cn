@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - syssubscriptions system table
 ms.assetid: 106c1707-e0e0-49b4-ba50-25380c40fab2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 251dbb143c1b5aa150cc094ce67943dd0139ee6d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0a7fa169bef5d105889bf9035155fef97505f723
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305012"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812075"
 ---
 # <a name="syssubscriptions-transact-sql"></a>syssubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "72305012"
 |**update_mode**|**tinyint**|更新模式：<br /><br /> **0** = 只读。<br /><br /> **1** = 立即更新。|  
 |**loopback_detection**|**bit**|适用于作为双向事务复制拓扑的一部分的订阅。 环回检测将确定分发代理是否将在订阅服务器上发起的事务发送回订阅服务器：<br /><br /> **0** = 发送回。<br /><br /> **1** = 不发送回。|  
 |**queued_reinit**|**bit**|指定是否将项目标记为初始化或重新初始化。 如果值为**1** ，则指定订阅的项目已标记为进行初始化或重新初始化。|  
-|**nosync_type**|**tinyint**|订阅初始化的类型：<br /><br /> **0** = 自动（快照）<br /><br /> **1** = 仅复制支持<br /><br /> **2** = 用备份初始化<br /><br /> **3** = 从日志序列号（LSN）初始化<br /><br /> 有关详细信息，请参阅[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)的** \@sync_type**参数。|  
+|**nosync_type**|**tinyint**|订阅初始化的类型：<br /><br /> **0** = 自动（快照）<br /><br /> **1** = 仅复制支持<br /><br /> **2** = 用备份初始化<br /><br /> **3** = 从日志序列号（LSN）初始化<br /><br /> 有关详细信息，请参阅[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)的** \@ sync_type**参数。|  
 |**srvname**|**sysname**|订阅服务器的名称。|  
   
 ## <a name="see-also"></a>另请参阅  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_plan dynamic management function
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3d4ccd016c32e197c75026c1039e5ff4c21eef32
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4cc8fd7a20da6d0bf56d68b690bf35341cb6a63e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68135176"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812088"
 ---
 # <a name="sysdm_exec_query_plan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,21 +73,21 @@ sys.dm_exec_query_plan(plan_handle)
   
 -   有些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句未放入缓存，如大容量操作语句或包含大于 8 KB 的字符串文字的语句。 除非当前正在执行此批处理，否则由于这些语句不在缓存中，而无法使用 **sys.dm_exec_query_plan** 来检索这些语句的 XML 显示计划。  
   
--   如果某个[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理或存储过程包含对用户定义函数的调用或对动态 SQL 的调用（例如，使用 EXEC （*string*）），则用户定义函数的编译的 XML 显示计划不包含在由 sys.databases 或存储过程返回的表中 **。 dm_exec_query_plan** 。 相反，必须为与用户定义函数相对应的计划句柄单独调用**sys.databases dm_exec_query_plan** 。  
+-   如果某个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理或存储过程包含对用户定义函数的调用或对动态 SQL 的调用（例如，使用 EXEC （*string*）），则用户定义函数的编译的 XML 显示计划不包含在由 sys.databases 或存储过程返回的表中 **。 dm_exec_query_plan** 。 相反，必须为与用户定义函数相对应的计划句柄单独调用**sys.databases dm_exec_query_plan** 。  
   
  当即席查询使用简单参数化或强制参数化时，**query_plan** 列将仅包含语句文本，而非实际查询计划。 若要返回查询计划，则应为已准备好的参数化查询的计划句柄调用 **sys.dm_exec_query_plan**。 可以通过引用 [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) 视图的 **sql** 列或 [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) 动态管理视图的文本列来确定查询是否已参数化。  
   
 > [!NOTE] 
-> 由于**xml**数据类型中允许的嵌套级别数有限制，因此**dm_exec_query_plan**无法返回满足或超过128嵌套元素级别的查询计划。 在早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，这种情况将导致无法返回查询计划，并生成错误 6335。 在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 及更高版本中， **QUERY_PLAN**列返回 NULL。   
+> 由于**xml**数据类型中允许的嵌套级别数有限制，因此**dm_exec_query_plan**无法返回满足或超过128嵌套元素级别的查询计划。 在早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，这种情况将导致无法返回查询计划，并生成错误 6335。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 及更高版本中， **query_plan**列返回 NULL。   
 > 您可以使用[sys. dm_exec_text_query_plan &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)动态管理函数以文本格式返回查询计划的输出。  
   
 ## <a name="permissions"></a>权限  
- 若要执行**dm_exec_query_plan**，用户必须是**sysadmin**固定服务器角色的成员或具有对服务器的`VIEW SERVER STATE`权限。  
+ 若要执行**dm_exec_query_plan**，用户必须是**sysadmin**固定服务器角色的成员或具有 `VIEW SERVER STATE` 对服务器的权限。  
   
 ## <a name="examples"></a>示例  
  以下示例显示如何使用 **sys.dm_exec_query_plan** 动态管理视图。  
   
- 若要查看 XML 显示计划，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的查询编辑器中执行以下查询，然后在 **sys.dm_exec_query_plan** 返回的表的 **query_plan** 列中单击 **ShowPlanXML**。 XML 显示计划显示在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 摘要窗格中。 若要将 XML 显示计划保存到文件中，请在**query_plan**列中右键单击 " **ShowPlanXML** "，然后单击 "**将结果另存为**"，将文件命名为\< *file_name*> 的格式;例如，Myxmlshowplan.sqlplan. .sqlplan。  
+ 若要查看 XML 显示计划，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的查询编辑器中执行以下查询，然后在 **sys.dm_exec_query_plan** 返回的表的 **query_plan** 列中单击 **ShowPlanXML**。 XML 显示计划显示在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 摘要窗格中。 若要将 XML 显示计划保存到文件中，请在**query_plan**列中右键单击 " **ShowPlanXML** "，然后单击 "**将结果另存为**"，将文件命名为 \< *file_name*>，例如 myxmlshowplan.sqlplan .sqlplan。  
   
 ### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>A. 检索运行速度缓慢的 Transact-SQL 查询或批查询的缓存查询计划  
  不同类型的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批查询（如即席批查询、存储过程和用户定义函数）的查询计划缓存在称作计划缓存的内存区域中。 每个缓存查询计划均由称作计划句柄的唯一标识符进行标识。 您可以通过 **sys.dm_exec_query_plan** 动态管理视图指定此计划句柄，以便检索特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询或批处理的执行计划。  
@@ -116,7 +116,7 @@ WHERE session_id = 54;
 GO  
 ```  
   
- **Sys. dm_exec_requests**返回的表指示运行速度缓慢的查询或批处理的计划句柄为`0x06000100A27E7C1FA821B10600`，您可以将指定为*plan_handle*参数，并使用`sys.dm_exec_query_plan`来检索 XML 格式的执行计划，如下所示。 运行速度缓慢的查询或批处理的 XML 格式的执行计划包含在 `sys.dm_exec_query_plan` 返回的表的 **query_plan** 列中。  
+ **Sys. dm_exec_requests**返回的表指示运行速度缓慢的查询或批处理的计划句柄为 `0x06000100A27E7C1FA821B10600` ，您可以将指定为*plan_handle*参数，并使用 `sys.dm_exec_query_plan` 来检索 XML 格式的执行计划，如下所示。 运行速度缓慢的查询或批处理的 XML 格式的执行计划包含在 `sys.dm_exec_query_plan` 返回的表的 **query_plan** 列中。  
   
 ```sql  
 USE master;  

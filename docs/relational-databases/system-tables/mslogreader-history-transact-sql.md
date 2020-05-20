@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSlogreader_history system table
 ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9fbd2240bdeba50d8ae41bce8d3a8d58b28de036
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5dfb1efc93efe8c4b59d649466f8b0c0af0a64a6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907297"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812719"
 ---
 # <a name="mslogreader_history-transact-sql"></a>MSlogreader_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "67907297"
 |**start_time**|**datetime**|开始执行作业的时间。|  
 |**time**|**datetime**|记录消息的时间。|  
 |**duration**|**int**|消息会话的持续时间（秒）。|  
-|**提出**|**nvarchar(255)**|消息文本。|  
+|**注释**|**nvarchar(255)**|消息文本。|  
 |**xact_seqno**|**varbinary(16)**|上次处理的事务序列号。|  
 |**delivery_time**|**int**|传递第一个事务的时间。|  
 |**delivered_transactions**|**int**|会话中传递的事务总数。|  

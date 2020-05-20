@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_primary_databases system table
 ms.assetid: 56888756-a798-42be-9b5e-0f9aa05a2cc6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9c1dfefbc309e9ccc0f170461795c00a117247e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 28e32289763b6b191e8eb160e06f8c961dd5f437
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304983"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82813196"
 ---
 # <a name="log_shipping_primary_databases-transact-sql"></a>log_shipping_primary_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "72304983"
 |**backup_retention_period**|**int**|日志备份文件在删除之前保留在备份目录中的时间长度（分钟）。|  
 |**backup_job_id**|**uniqueidentifier**|与主服务器上的备份作业相关联的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业 ID。|  
 |**monitor_server**|**sysname**|在日志传送配置中用作监视服务器的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例的名称。|  
-|**monitor_server_security_mode**|**bit**|用于连接到监视服务器的安全模式。<br /><br /> 1 = Windows 身份验证。<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。|  
+|**monitor_server_security_mode**|**bit**|用于连接到监视服务器的安全模式。<br /><br /> 1 = Windows 身份验证。<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。|  
 |**last_backup_file**|**nvarchar （500）**|最近一次事务日志备份的绝对路径。|  
 |**last_backup_date**|**datetime**|上一次日志备份操作的时间和日期。|  
-|**user_specified_monitor**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **sp_help_log_shipping_primary_database**和**sp_help_log_shipping_secondary_primary**使用此列控制中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的监视器设置的显示。<br /><br /> 0 = 调用这两个存储过程中的任意一个时，用户未指定** \@monitor_server**参数的显式值。<br /><br /> 1 = 用户指定一个显式值。|  
+|**user_specified_monitor**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **sp_help_log_shipping_primary_database**和**sp_help_log_shipping_secondary_primary**使用此列控制中的监视器设置的显示 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。<br /><br /> 0 = 调用这两个存储过程中的任意一个时，用户未指定** \@ monitor_server**参数的显式值。<br /><br /> 1 = 用户指定一个显式值。|  
 |**backup_compression**|**tinyint**|指示日志传送配置是否覆盖服务器级的备份压缩行为。<br /><br /> 0 = 禁用。 永远不压缩日志备份，不管服务器配置的备份压缩设置是什么。<br /><br /> 1 = 启用。 始终压缩日志备份，不管服务器配置的备份压缩设置是什么。<br /><br /> 2 = 使用视图的服务器配置，[或配置备份压缩默认服务器配置选项](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)服务器-配置选项。 这是默认值。<br /><br /> 仅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Enterprise 版本中支持备份压缩。|  
   
 ## <a name="see-also"></a>另请参阅  

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_availability_replica_cluster_nodes dynamic management view
 ms.assetid: dbd7e416-badd-4332-a45c-438aa0145a99
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a5e33207fd6fd14fe4fe2f8bcc732b2f762f3723
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 264a663ef977cc468cc242b9b24eb42e713f0202
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900630"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811907"
 ---
 # <a name="sysdm_hadr_availability_replica_cluster_nodes-transact-sql"></a>sys.dm_hadr_availability_replica_cluster_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "67900630"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|group_name****|**nvarchar(256)**|可用性组的名称。|  
+|group_name |**nvarchar(256)**|可用性组的名称。|  
 |**replica_server_name**|**nvarchar(256)**|承载副本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|  
 |**node_name**|**nvarchar(256)**|群集节点的名称。|  
   
