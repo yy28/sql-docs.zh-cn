@@ -112,25 +112,25 @@ ms.locfileid: "75247294"
 
   ![“工具”菜单](media/ssms-configuration/tools.png)
 
-* 要修改突出显示的工具栏，请选择“工具” **“自定义”**  >   ：
+* 要修改突出显示的工具栏，请选择“工具” > “自定义”：
 
     ![自定义工具栏](media/ssms-configuration/toolbar.png)
 
 ### <a name="change-the-font"></a>更改字体
 
-* 要更改字体，请选择“工具” **“选项”** “字体和颜色” >    >   ：
+* 要更改字体，请选择“工具” > “选项” > “字体和颜色”：
 
      ![更改字体和颜色](media/ssms-configuration/fontsandcolors.png)
 
 ### <a name="change-startup-options"></a>更改启动选项
 
-* 启动选项决定了首次打开 SSMS 时工作区的外观。 要更改启动选项，请选择“工具” **“选项”** “启动” >    >   ：
+* 启动选项决定了首次打开 SSMS 时工作区的外观。 要更改启动选项，请选择“工具” > “选项” > “启动”：
 
     ![更改启动选项](media/ssms-configuration/startup.png)
 
 ### <a name="reset-settings-to-the-default"></a>将设置重置为默认值
 
-* 可从菜单导出和导入所有这些设置。 要导入或导出设置或恢复默认设置，请选择“工具” **“导入和导出设置”**  >   
+* 可从菜单导出和导入所有这些设置。 要导入或导出设置或恢复默认设置，请选择“工具” > “导入和导出设置” 
 
     ![导入和导出设置](media/ssms-configuration/settings.png)
 

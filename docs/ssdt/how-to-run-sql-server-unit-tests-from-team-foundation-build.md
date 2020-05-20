@@ -246,7 +246,7 @@ ms.locfileid: "75244294"
   
 3.  在导航栏中，单击“生成默认值”  。  
   
-4.  在“将生成输出复制到以下放置文件夹(UNC 路径，如 **\server\share)”\\** 中，指定一个文件夹以包含生成输出。  
+4.  在“将生成输出复制到以下放置文件夹(UNC 路径，如 \\\server\share)”中，指定一个文件夹以包含生成输出。  
   
     您可以指定本地计算机上的共享文件夹或生成过程有权访问的任何网络位置。  
   
@@ -280,7 +280,7 @@ ms.locfileid: "75244294"
   
 3.  确认“生成定义”  、“生成代理”  和“该生成的放置文件夹”  字段中的值全部正确，然后单击“排队”  。  
   
-    此时将显示“生成资源管理器”  的“排队”  选项卡。 有关详细信息，请参阅[管理和查看已完成的生成 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms181730(VS.100).aspx)或[在生成资源管理器中管理你的生成 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms181732.aspx)。  
+    此时将显示“生成资源管理器”的“排队”选项卡。 有关详细信息，请参阅[管理和查看已完成的生成 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms181730(VS.100).aspx)或[在生成资源管理器中管理你的生成 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms181732.aspx)。  
   
 ## <a name="see-also"></a>另请参阅  
 [运行 SQL Server 单元测试](../ssdt/running-sql-server-unit-tests.md)  

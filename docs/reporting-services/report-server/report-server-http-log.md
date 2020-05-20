@@ -28,7 +28,7 @@ ms.locfileid: "67140453"
 |||  
 |-|-|  
 |文件名|默认情况下，文件名为 ReportServerService_HTTP_\<timestamp>.log。 您可以通过在 ReportingServicesService.exe.config 文件中修改 HttpTraceFileName 属性来自定义文件名的前缀。 时间戳基于协调世界时 (UTC)。|  
-|文件位置|该文件位于 \Microsoft SQL Server\\*SQL Server Instance>\Reporting Services\LogFiles 中\<* 。|  
+|文件位置|该文件位于 \Microsoft SQL Server\\\<SQL Server Instance>\Reporting Services\LogFiles 中。|  
 |文件格式|该文件是 EN-US 格式。 它是 ASCII 文本文件。|  
 |创建和保留文件|当您在配置文件中启用了日志、重新启动服务以及报表服务器处理 HTTP 请求时，会创建 HTTP 日志。 如果配置了相应设置但没有看到日志文件，请打开报表或启动报表服务器应用程序（如 Web 门户），以生成创建日志文件的 HTTP 请求。<br /><br /> 在各服务重新启动并且随后发生对报表服务器的 HTTP 请求时，会创建日志文件的新实例。<br /><br /> 默认情况下，跟踪日志大小限制为 32 MB，并在 14 天后删除。|  
   

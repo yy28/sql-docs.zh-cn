@@ -38,7 +38,7 @@ ms.locfileid: "77256724"
 
 2. 命名页，并选择“创建”  。
 
-3. 在页设计器中，选择功能区中的“插入”  选项卡。 然后选择“部件”  部分中的“Web 部件”  。
+3. 在页设计器中，选择功能区中的“插入”  选项卡。 然后选择“部件”部分中的“Web 部件”。
 
     ![从 office 功能区插入 Web 部件。](media/sharepoint-insert-web-part.png)
 
@@ -46,7 +46,7 @@ ms.locfileid: "77256724"
 
     ![添加报表查看器 Web 部件。](media/sharepoint-report-viewer-web-part.png)
 
-    最初可能遇到错误。 出现错误的原因是，默认报表服务器 URL 设置为 *https://localhost* 且可能在该位置不可用。
+    最初可能遇到错误。 出现错误的原因是，默认报表服务器 URL 设置为 https://localhost 且可能在该位置不可用。
 
 ## <a name="configure-the-report-viewer-web-part"></a>配置报表查看器 Web 部件
 
@@ -56,11 +56,11 @@ ms.locfileid: "77256724"
 
     ![编辑 Web 部件下拉列表中的网页。](media/sharepoint-edit-web-part.png)
 
-2. 为承载报表的报表服务器输入“报表服务器 URL”  。 URL 看起来应类似于 *https://myrsserver/reportserver* 。
+2. 为承载报表的报表服务器输入“报表服务器 URL”  。 URL 看起来应类似于 https://myrsserver/reportserver。
 
 3. 输入想要在 Web 部件中显示的报表的路径和名称。 这看起来应类似于 /AdventureWorks Sample Reports/Company Sales  。 在此示例中，报表“公司销售额”  位于名为 AdventureWorks 示例报表  的文件夹中。
 
-4. 如果报表需要参数，则在提供报表服务器 URL 和报表名称后，选择“参数”  部分中的“负载参数”  。
+4. 如果报表需要参数，则在提供报表服务器 URL 和报表名称后，选择“参数”部分中的“负载参数”。
 
 5. 选择“确定”  将所做更改保存到 Web 部件配置。
 

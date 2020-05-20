@@ -162,8 +162,8 @@ ms.locfileid: "79286381"
 |（空格）|[ ]|Firstname Lastname  将变为 Firstname[ ]Lastname |  
 |\（反斜杠）|替换为一个空格字符|DomainName\Username  将变为 DomainName Username |  
 |@（@ 符号）|[at]|username  @hotmail.com 将变为 username  [at]hotmail.com|  
-|&（与号）|[amp]|username  @company  &company.com  将变为 username[at]company[amp]company.com   |  
-|$（美元符号）|[dollar]|User*Name* $  将变为 User[ ][dollar]Name  |  
+|&（与号）|[amp]|username@company&company.com 将变为 username[at]company[amp]company.com|  
+|$（美元符号）|[dollar]|User $Name 将变为 User[ ][dollar]Name|  
   
  “我的报表”功能是可选的。 安装报表服务器时，默认情况下将禁用“我的报表”功能。 有关启用此功能的详细信息，请参阅 [启用和禁用“我的报表”](../../reporting-services/report-server/enable-and-disable-my-reports.md)。 有关详细信息，请参阅 [保护我的报表](../../reporting-services/security/secure-my-reports.md)。  
   

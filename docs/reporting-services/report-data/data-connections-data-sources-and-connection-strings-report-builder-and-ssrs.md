@@ -18,7 +18,7 @@ ms.locfileid: "74190913"
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-  若要在[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中添加数据，必须先创建连接到数据源  的连接字符串  。 本文介绍了如何创建数据连接字符串，以及与数据源凭据相关的重要信息。 数据源包含数据源类型、连接信息以及要使用的凭据的类型。 有关更多背景信息，请参阅 [SQL Server Reporting Services (SSRS) 中的报表数据简介](report-data-ssrs.md)。
+  若要在[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中添加数据，必须先创建连接到数据源的连接字符串。 本文介绍了如何创建数据连接字符串，以及与数据源凭据相关的重要信息。 数据源包含数据源类型、连接信息以及要使用的凭据的类型。 有关更多背景信息，请参阅 [SQL Server Reporting Services (SSRS) 中的报表数据简介](report-data-ssrs.md)。
   
 ##  <a name="built-in-data-extensions"></a><a name="bkmk_DataConnections"></a> 内置数据扩展插件  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的默认数据扩展插件包括 Microsoft SQL Server、Microsoft Azure SQL 数据库和 Microsoft SQL Server Analysis Services。 有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持的数据源和版本的完整列表，请参阅 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
@@ -54,7 +54,7 @@ ms.locfileid: "74190913"
  若要详细了解连接到这些数据源类型所需的配置，请参阅[添加外部数据源中的数据 &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) 或 [Reporting Services 支持的数据源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) 下的特定数据连接文章。  
   
 ##  <a name="special-characters-in-a-password"></a><a name="bkmk_special_password_characters"></a> 密码中的特殊字符  
- 如果将 ODBC 或 SQL 数据源配置为提示输入密码或在连接字符串中包含密码，并且用户输入了具有标点符号等特殊字符的密码，则有些基础数据源驱动程序无法验证特殊字符。 处理报表时，可能会出现“密码无效”这一消息来指示此问题。 如果不能更改密码，则可以使用数据库管理员角色将相应的凭据作为系统 ODBC 数据源名称 (DSN) 的一部分存储在服务器上。 有关详细信息，请参阅 [ 文档中的“](https://docs.microsoft.com/dotnet/api/system.data.odbc.odbcconnection.connectionstring)OdbcConnection.ConnectionString[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]”。  
+ 如果将 ODBC 或 SQL 数据源配置为提示输入密码或在连接字符串中包含密码，并且用户输入了具有标点符号等特殊字符的密码，则有些基础数据源驱动程序无法验证特殊字符。 处理报表时，可能会出现“密码无效”这一消息来指示此问题。 如果不能更改密码，则可以使用数据库管理员角色将相应的凭据作为系统 ODBC 数据源名称 (DSN) 的一部分存储在服务器上。 有关详细信息，请参阅 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 文档中的“[OdbcConnection.ConnectionString](https://docs.microsoft.com/dotnet/api/system.data.odbc.odbcconnection.connectionstring)”。  
   
 ##  <a name="expression-based-connection-strings"></a><a name="bkmk_Expressions_in_connection_strings"></a> 基于表达式的连接字符串  
  基于表达式的连接字符串是在运行时计算的。 例如，您可以将数据源指定为参数，在连接字符串中包含相应的参数引用，并允许用户选择报表的数据源。 例如，假设一个跨国公司在多个国家/地区都配置了数据服务器。 使用基于表达式的连接字符串，要运行销售报表的用户就可以在运行报表之前选择用于特定国家/地区的数据源。  

@@ -27,7 +27,7 @@ ms.locfileid: "67994358"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  ISSCommandWithParameters 接口公开了对  **XML 和用户定义类型 (UDT) 的支持**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 这一可选接口继承自核心 OLE DB 接口 ICommandWithParameters  。 除了从 ICommandWithParameters 继承的三个方法（GetParameterInfo、MapParameterNames 和 SetParameterInfo）之外，ISSCommandWithParameters 还提供了两个用于处理服务器特定数据类型的新方法      。  
+  ISSCommandWithParameters 接口公开了对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML 和用户定义类型 (UDT) 的支持。 这一可选接口继承自核心 OLE DB 接口 ICommandWithParameters  。 除了从 ICommandWithParameters 继承的三个方法（GetParameterInfo、MapParameterNames 和 SetParameterInfo）之外，ISSCommandWithParameters 还提供了两个用于处理服务器特定数据类型的新方法      。  
   
 > [!NOTE]  
 >  当使用服务组件时，可以使用 ISSCommandWithParameters 接口，但是服务组件不会使用此接口  。  

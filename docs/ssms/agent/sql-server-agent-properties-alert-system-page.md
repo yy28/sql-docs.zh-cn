@@ -43,7 +43,7 @@ ms.locfileid: "75234543"
 > 更改电子邮件系统后，必须重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务才能使更改生效。  
   
 **邮件配置文件**  
-设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理要使用的配置文件。 也可以选择“**新建数据库邮件配置文件...>”\<** 创建新的配置文件。  
+设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理要使用的配置文件。 也可以选择“\<新建数据库邮件配置文件...>”创建新的配置文件。  
   
 **寻呼电子邮件**  
 使用此部分中的选项，可以配置发送给寻呼地址的电子邮件，以便与您的寻呼系统协同工作。  

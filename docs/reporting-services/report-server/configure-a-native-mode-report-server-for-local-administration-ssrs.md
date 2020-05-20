@@ -134,7 +134,7 @@ ms.locfileid: "77080895"
   
  **配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** 角色属性和角色分配，以便您无需每次都使用提升的权限启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ：  
   
--   从“开始”菜单，右键单击“Microsoft SQL Server **”，然后单击“以管理员身份运行”。** **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**   
+-   从“开始”菜单，右键单击“Microsoft SQL Server [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]”，然后单击“以管理员身份运行”。  
   
 -   连接到您的本地 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "77080895"
   
  **在每次打开 SSDT 时使用提升的权限运行：**  
   
-1.  从开始菜单中，选择“Microsoft SQL Server”，然后右键单击“SQL Server Data Tools”  。  单击 **“以管理员身份运行”** 。  
+1.  从开始菜单中，选择“Microsoft SQL Server”，然后右键单击“SQL Server Data Tools”。 单击 **“以管理员身份运行”** 。  
   
 2.  提示是否继续时，选择“是”。   
   

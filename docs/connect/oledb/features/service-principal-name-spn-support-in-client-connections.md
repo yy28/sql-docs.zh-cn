@@ -69,7 +69,7 @@ ms.locfileid: "74056672"
  新的连接行为由客户端实现，因此这种行为不特定于某个版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="linked-servers-and-delegation"></a>链接服务器和委托  
- 创建链接服务器时，[sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 的 \@provstr 参数可用于指定服务器和故障转移合作伙伴 SPN  。 执行此操作的优点与在客户端连接字符串中指定 SPN 的优点相同：建立使用 Kerberos 身份验证的连接更简单且更可靠。  
+ 创建链接服务器时，[sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 的 \@provstr 参数可用于指定服务器和故障转移合作伙伴 SPN。 执行此操作的优点与在客户端连接字符串中指定 SPN 的优点相同：建立使用 Kerberos 身份验证的连接更简单且更可靠。  
   
  使用链接服务器的委托要求 Kerberos 身份验证。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "74056672"
 |------------|-----------------|  
 |MSSQLSvc/*fqdn*|使用除 TCP 之外的协议时访问接口生成的用于默认实例的默认 SPN。<br /><br /> *fqdn* 为完全限定的域名。|  
 |MSSQLSvc/*fqdn*:*port*|使用 TCP 时访问接口生成的默认 SPN。<br /><br /> *port* 是 TCP 端口号。|  
-|MSSQLSvc/*fqdn*:*InstanceName*|使用除 TCP 之外的协议时访问接口生成的用于命名实例的默认 SPN。<br /><br /> InstanceName 为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例名  。|  
+|MSSQLSvc/*fqdn*:*InstanceName*|使用除 TCP 之外的协议时访问接口生成的用于命名实例的默认 SPN。<br /><br /> InstanceName 为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例名。|  
 |HOST/*fqdn*<br /><br /> HOST/*MachineName*|映射到内置计算机帐户的 SPN，这些内置计算机帐户由 Windows 自动注册。|  
 |*Username*@*Domain*|域帐户的直接规范。<br /><br /> *Username* 为 Windows 用户帐户名。<br /><br /> *Domain* 为 Windows 域名或完全限定的域名。|  
 |*MachineName*$@*Domain*|计算机帐户的直接规范。<br /><br /> （如果要连接到的服务器正在 LOCAL SYSTEM 或 NETWORK SERVICE 帐户下运行，则若要获取 Kerberos 身份验证， **ServerSPN** 可以使用 *MachineName*$@*Domain* 格式）。|  

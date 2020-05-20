@@ -73,7 +73,7 @@ ms.locfileid: "76516598"
 > SQL Server Express with Tools 和 SQL Server Express 不支持 Reporting Services。
   
 ## <a name="edition-requirements-for-the-report-server-database"></a>报表服务器数据库的版本要求
- 创建报表服务器数据库时，并非所有版本的 SQL Server [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 都可以用来承载数据库。 下表显示了可用于特定 SQL Server [!INCLUDE[ssDE](../includes/ssde-md.md)] 版本的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 版本。  
+ 创建报表服务器数据库时，并非所有版本的 SQL Server [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 都可以用来承载数据库。 下表显示了可用于特定 SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 版本的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 版本。  
   
 |对于此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services 版本，|使用此版本的数据库引擎实例来承载数据库。|  
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  

@@ -50,7 +50,7 @@ ms.locfileid: "73707146"
 
 1. 启动 Visual Studio Code 并导航到“扩展”侧边栏。
 
-1. 单击侧边栏顶部的 `…` 上下文菜单，然后选择 `Install from vsix`。
+1. 单击侧边栏顶部的 `Install from vsix` 上下文菜单，然后选择 `…`。
 
    ![安装 VSIX](media/vs-extension/install_vsix.png)
 
@@ -95,7 +95,7 @@ azdata bdc endpoint list
 
 需要在 Visual Studio Code 中打开工作区，并在其中保存应用的项目  。
 
-若要从某个模板部署新应用，请单击 `New App Template` 窗格上的 `App Specifications` 按钮，系统将提示你输入名称、运行时以及要在本地计算机上放置新应用的位置。 提供的名称和版本应为 DNS-1035 标签，且必须由小写字母数字字符或“-”组成，以字母字符开头，以字母数字字符结尾。
+若要从某个模板部署新应用，请单击 `App Specifications` 窗格上的 `New App Template` 按钮，系统将提示你输入名称、运行时以及要在本地计算机上放置新应用的位置。 提供的名称和版本应为 DNS-1035 标签，且必须由小写字母数字字符或“-”组成，以字母字符开头，以字母数字字符结尾。
 
 建议将其放在当前的 Visual Studio Code 工作区中，以便可以使用扩展的全部功能，不过也可以将其放在本地文件系统中的任何位置。
 
@@ -115,14 +115,14 @@ azdata bdc endpoint list
 可工作区文件夹中找到该应用的源代码。
 
 - **源文件名**
-   - 这是 `src` 中 `spec.yaml` 指定的源代码文件
-   - 该文件有一个名为 `handler` 的函数，它被视为应用的 `entrypoint`，如 `spec.yaml` 所示。 它采用名为 `msg` 的字符串输入，并返回一个名为 `out` 的字符串输出。 这些内容在 `inputs` 的 `outputs` 和 `spec.yaml` 中指定。
+   - 这是 `spec.yaml` 中 `src` 指定的源代码文件
+   - 该文件有一个名为 `handler` 的函数，它被视为应用的 `entrypoint`，如 `spec.yaml` 所示。 它采用名为 `msg` 的字符串输入，并返回一个名为 `out` 的字符串输出。 这些内容在 `spec.yaml` 的 `inputs` 和 `outputs` 中指定。
 
-如果不想使用搭建基架的模板且只想通过 `spec.yaml` 来部署已构建的应用，请单击 `New Deploy Spec` 按钮旁边的 `New App Template` 按钮并完成相同的过程，不过你将仅收到 `spec.yaml`，但你可以修改选择方式。
+如果不想使用搭建基架的模板且只想通过 `spec.yaml` 来部署已构建的应用，请单击 `New App Template` 按钮旁边的 `New Deploy Spec` 按钮并完成相同的过程，不过你将仅收到 `spec.yaml`，但你可以修改选择方式。
 
 ### <a name="deploy-app"></a>部署应用
 
-可以通过 `Deploy App` 中的代码可重用功能区 `spec.yaml` 立即部署此应用，也可以按“应用规范”菜单中 `spec.yaml` 文件旁边的闪电文件夹按钮来进行部署。 扩展将压缩 `spec.yaml` 所在目录中的所有文件，并将应用部署到群集。 
+可以通过 `spec.yaml` 中的代码可重用功能区 `Deploy App` 立即部署此应用，也可以按“应用规范”菜单中 `spec.yaml` 文件旁边的闪电文件夹按钮来进行部署。 扩展将压缩 `spec.yaml` 所在目录中的所有文件，并将应用部署到群集。 
 
 >[!NOTE]
 >请确保所有应用文件都与 `spec.yaml` 位于同一目录中。 `spec.yaml` 必须位于应用源代码目录的根级别。 

@@ -70,7 +70,7 @@ ms.locfileid: "75244404"
   
 4. 对扩展部署中的每个报表服务器重复上述步骤。  
   
-5. 确保 \Reporting Services\Reportserver 文件夹中所有 Web.Config 文件的 <`machineKey`> 部分都包含相同的 <`system.web`> 元素。  
+5. 确保 \Reporting Services\Reportserver 文件夹中所有 Web.Config 文件的 <`system.web`> 部分都包含相同的 <`machineKey`> 元素。  
 
 ::: moniker-end
 
@@ -108,7 +108,7 @@ ms.locfileid: "75244404"
   
 1. 在文本编辑器中打开 RSReportServer.config。  
   
-2. 查找 **Service> 部分，并将以下信息添加到配置文件，将 Hostname 值替换为 NLB 服务器的虚拟服务器名\<**  ：  
+2. 查找 \<Service> 部分，并将以下信息添加到配置文件，将 Hostname 值替换为 NLB 服务器的虚拟服务器名：  
   
     ```xml
     <Hostname>virtual_server</Hostname>  
@@ -116,7 +116,7 @@ ms.locfileid: "75244404"
   
 3. 查找 **UrlRoot**。 此元素未在该配置文件中指定，但是所使用的默认值是采用 https:// 或 `https://<computername>/<reportserver>` 格式的 URL，其中 \<reportserver> 是报表服务器 Web 服务的虚拟目录名称  。  
   
-4. 为“UrlRoot”键入一个包括群集虚拟名称的值，其格式为： https:// 或  `https://<virtual_server>/<reportserver>`。  
+4. 为“UrlRoot”键入一个包括群集虚拟名称的值，其格式为：https:// 或 `https://<virtual_server>/<reportserver>`。  
   
 5. 保存文件。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "75244404"
   
 1. 在文本编辑器中打开 RSReportServer.config 文件。  
   
-2. 查找 \<Hostname>、**ReportServerUrl> 和** UrlRoot>，并检查每个设置的主机名\<  \<  。 如果该值不是预期的主机名，请将其替换为正确的主机名。  
+2. 查找 \<Hostname>、\<ReportServerUrl> 和 \<UrlRoot>，并检查每个设置的主机名。 如果该值不是预期的主机名，请将其替换为正确的主机名。  
   
  如果在做出以下更改后启动 Reporting Services 配置工具，则该工具可能会将 \<ReportServerUrl> 设置更改为默认值  。 请始终保留一份配置文件的备份副本，以备需要用包含要使用的设置的版本替换该配置文件时使用。  
   

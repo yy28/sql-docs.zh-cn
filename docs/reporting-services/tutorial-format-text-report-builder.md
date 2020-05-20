@@ -46,7 +46,7 @@ ms.locfileid: "63042939"
   
 ### <a name="to-create-a-data-source"></a>创建数据源  
   
-1.  在“报表数据”窗格中，单击“新建” **“数据源”**  >   。  
+1.  在“报表数据”窗格中，单击“新建” > “数据源”。  
 
     如果未出现“报表数据”窗格，请在“视图”选项卡上选中“报表数据”    。
   
@@ -54,7 +54,7 @@ ms.locfileid: "63042939"
   
 3.  单击 **“使用我的报表中嵌入的连接”** 。  
   
-4.  验证连接类型是否为 Microsoft SQL Server，然后在“连接字符串”框中键入：  `Data Source = <servername>`  
+4.  验证连接类型是否为 Microsoft SQL Server，然后在“连接字符串”框中键入：`Data Source = <servername>`  
   
     > [!NOTE]  
     > 表达式 `<servername>`（例如 Report001）指定安装了 SQL Server 数据库引擎实例的计算机。 本教程不需要具体数据；只需要与 SQL Server 数据库的连接。 如果你已经具有在“数据源连接”  下列出的某一数据源连接，则可以选择该连接并且转到下一过程“创建数据集”。 有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
@@ -63,7 +63,7 @@ ms.locfileid: "63042939"
   
 ### <a name="to-create-a-dataset"></a>创建数据集  
   
-1.  在“报表数据”窗格中，单击“新建” **“数据集”**  >   。  
+1.  在“报表数据”窗格中，单击“新建” > “数据集”。  
   
 2.  确保数据源为 **TextDataSource**。  
   
@@ -177,9 +177,9 @@ ms.locfileid: "63042939"
 ## <a name="add-a-table-to-the-report-design-surface"></a><a name="AddTable"></a>向报表设计图面添加表  
 创建此表是为了放置超链接和旋转后的文本。   
   
-1.  在“插入”选项卡上，转至“表” **“表向导”**   >   。  
+1.  在“插入”选项卡上，转至“表” > “表向导”。  
   
-2.  在“新建表或矩阵”向导的“选择数据集”页上，单击“选择此报表中的现有数据集或共享数据集” **“TextDataset(在此报表中)”** “下一步”   >    >   。  
+2.  在“新建表或矩阵”向导的“选择数据集”页上，单击“选择此报表中的现有数据集或共享数据集” > “TextDataset(在此报表中)” > “下一步”。  
   
 3.  在“排列字段”页上，将“Territory”、“LinkText”和“Product”字段拖到“行组”上，将“Sales”字段拖到“值”上，然后单击“下一步”         。  
 
@@ -197,7 +197,7 @@ ms.locfileid: "63042939"
   
 8.  单击 **“设计”** 返回设计视图。  
   
-9. 选择“LinkText”列中的“总计”单元格，然后按住 Shift 键并选择右侧的两个单元格：“Product”列中的空单元格和“Sales”列中的  **单元格**   `[Sum(Sales)]`  。  
+9. 选择“LinkText”列中的“总计”单元格，然后按住 Shift 键并选择右侧的两个单元格：“Product”列中的空单元格和“Sales”列中的 `[Sum(Sales)]` 单元格。  
   
 11. 选中这三个单元格后，右键单击其中一个单元格，然后单击“删除行”  。  
 
@@ -268,7 +268,7 @@ ms.locfileid: "63042939"
   
 3.  在“开始”选项卡上，转至“数字”组，然后单击“货币”按钮    。  
   
-4.  （可选）如果区域设置为“英语(美国)”，则默认示例文本为 [ **$12,345.00**]。 如果看不到示例货币值，请在“数字”组中单击“占位符样式” **“示例值”**   >   。  
+4.  （可选）如果区域设置为“英语(美国)”，则默认示例文本为 [ **$12,345.00**]。 如果看不到示例货币值，请在“数字”组中单击“占位符样式” > “示例值”。  
 
     ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
   

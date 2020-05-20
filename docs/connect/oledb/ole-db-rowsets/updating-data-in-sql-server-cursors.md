@@ -36,7 +36,7 @@ ms.locfileid: "67994158"
  如果客户端应用程序设计使事务长时间保持打开状态，事务隔离级别在定位行时可能造成严重滞后。 默认情况下，适用于 SQL Server 的 OLE DB 驱动程序使用 DBPROPVAL_TI_READCOMMITTED 指定的已提交读隔离级别。 当行集并发为只读时，OLE DB Driver for SQL Server 支持脏读隔离。 因此，使用者可以在可修改行集中请求更高级别的隔离，但是不能成功请求任何更低级别。  
   
 ## <a name="immediate-and-delayed-update-modes"></a>立即更新模式和延迟更新模式  
- 在立即更新模式中，对 IRowsetChange::SetData 的每次调用均导致与  **之间发生一次往返**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 如果使用者对一个行进行了多次更改，通过一个 SetData 调用提交所有更改将更有效  。  
+ 在立即更新模式中，对 IRowsetChange::SetData 的每次调用均导致与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之间发生一次往返。 如果使用者对一个行进行了多次更改，通过一个 SetData 调用提交所有更改将更有效  。  
   
  在延迟更新模式中，针对 IRowsetUpdate::Update 的 cRows 和 rghRows 参数中指示的每个行执行一次与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之间的往返    。  
   

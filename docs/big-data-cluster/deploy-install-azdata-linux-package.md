@@ -20,7 +20,7 @@ ms.locfileid: "75728578"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文介绍如何在 Linux 上安装用于 SQL Server 2019 大数据群集的 `azdata`。 在这些包管理器可用之前，需要 `azdata` 来安装 `pip`。
+本文介绍如何在 Linux 上安装用于 SQL Server 2019 大数据群集的 `azdata`。 在这些包管理器可用之前，需要 `pip` 来安装 `azdata`。
 
 [!INCLUDE [azdata-package-installation-remove-pip-install](../includes/azdata-package-installation-remove-pip-install.md)]
 

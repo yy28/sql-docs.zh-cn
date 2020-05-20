@@ -76,9 +76,9 @@ ms.locfileid: "78335746"
 
     ![删除 SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/remove-sql-2017.png)
   
-1.  在“选择实例”页上，使用下拉框指定要删除的 **实例，或者指定与仅删除** 共享功能和管理工具相对应的选项[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 若要继续操作，请选择“下一步”  。  
+1.  在“选择实例”页上，使用下拉框指定要删除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，或者指定与仅删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享功能和管理工具相对应的选项。 若要继续操作，请选择“下一步”  。  
   
-1.  在“选择功能”页上，指定要从指定的  **实例中删除的功能**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+1.  在“选择功能”页上，指定要从指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中删除的功能。  
   
 1.  在 **“准备删除”** 页上查看要卸载的组件和功能的列表。 单击 **“删除”** 开始卸载  
  
@@ -97,9 +97,9 @@ ms.locfileid: "78335746"
 
     ![删除 SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/remove-sql-2012.png)
   
-1.  在“选择实例”页上，使用下拉框指定要删除的 **实例，或者指定与仅删除** 共享功能和管理工具相对应的选项[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 若要继续操作，请选择“下一步”  。  
+1.  在“选择实例”页上，使用下拉框指定要删除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，或者指定与仅删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享功能和管理工具相对应的选项。 若要继续操作，请选择“下一步”  。  
   
-1.  在“选择功能”页上，指定要从指定的  **实例中删除的功能**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+1.  在“选择功能”页上，指定要从指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中删除的功能。  
   
 1.  在 **“准备删除”** 页上查看要卸载的组件和功能的列表。 单击 **“删除”** 开始卸载  
  

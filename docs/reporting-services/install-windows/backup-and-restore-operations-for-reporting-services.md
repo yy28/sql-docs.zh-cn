@@ -39,7 +39,7 @@ ms.locfileid: "68264966"
     ::: moniker-end
   
 ## <a name="backing-up-the-report-server-databases"></a>备份和还原报表服务器数据库  
- 由于报表服务器是无状态服务器，因此所有应用程序数据都存储于在 **实例上运行的** reportserver **和** reportservertempdb [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 数据库中。 可以使用支持的备份  **数据库的方法之一来备份 reportserver 和 reportservertempdb 数据库**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 下面是一些特定于报表服务器数据库的建议：  
+ 由于报表服务器是无状态服务器，因此所有应用程序数据都存储于在 **实例上运行的** reportserver **和** reportservertempdb [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 数据库中。 可以使用支持的备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的方法之一来备份 reportserver 和 reportservertempdb 数据库。 下面是一些特定于报表服务器数据库的建议：  
   
 -   使用完整恢复模式备份 reportserver  数据库。  
   

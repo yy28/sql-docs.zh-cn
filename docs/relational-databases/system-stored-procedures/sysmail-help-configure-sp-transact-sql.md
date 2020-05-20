@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_configure_sp
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3d07f77c468bb14b28cd003f599bebd636d6f862
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8a29933568cec147dc27ff7c9b5f026d62856e5b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056161"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807718"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +39,13 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @parameter_name = ] 'parameter_name'`要检索的配置设置的名称。 如果指定此参数，则将在** \@parameter_value**输出参数中返回配置设置的值。 当未** \@指定 parameter_name**时，此存储过程将返回一个结果集，其中包含实例中的所有数据库邮件配置设置。  
+`[ @parameter_name = ] 'parameter_name'`要检索的配置设置的名称。 如果指定此参数，则将在** \@ parameter_value**输出参数中返回配置设置的值。 当未指定** \@ parameter_name**时，此存储过程将返回一个结果集，其中包含实例中的所有数据库邮件配置设置。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- 当未** \@指定 parameter_name**时，将返回包含以下列的结果集。  
+ 当未指定** \@ parameter_name**时，将返回包含以下列的结果集。  
   
 ||||  
 |-|-|-|  
@@ -57,7 +57,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="remarks"></a>备注  
  存储过程**sysmail_help_configure_sp**列出实例的当前数据库邮件配置设置。  
   
- 如果指定了** \@parameter_name** ，但没有为** \@parameter_value**提供输出参数，则此存储过程不会生成任何输出。  
+ 如果指定了** \@ parameter_name** ，但没有为** \@ parameter_value**提供输出参数，则此存储过程不会生成任何输出。  
   
  存储过程**sysmail_help_configure_sp**在**msdb**数据库中，由**dbo**架构拥有。 如果当前数据库不是**msdb**，则必须使用由三部分组成的名称来调用该过程。  
   

@@ -33,7 +33,7 @@ Previous(expression, scope)
  （**Variant** 或 **Binary**）用于标识数据和检索以前值的表达式，例如 `Fields!Fieldname.Value` 或 `Sum(Fields!Fieldname.Value)`。  
   
  *作用域*  
- (**String**) 可选。 组或数据区域的名称，也可以为 null（在  **中为“Nothing”** [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]），它指定从中检索由表达式  指定的以前值的作用域。  
+ (**String**) 可选。 组或数据区域的名称，也可以为 null（在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中为“Nothing”），它指定从中检索由表达式指定的以前值的作用域。  
   
 ## <a name="return-type"></a>返回类型  
  返回 **Variant** 或 **Binary**。  
@@ -52,7 +52,7 @@ Previous(expression, scope)
   
  如果 *expression* 包含指定非默认作用域的聚合函数，则 *Previous* 函数的 **scope** 参数必须是聚合函数调用中指定的作用域的包含作用域。  
   
- 在 expression  参数中，不能使用函数 Level  、InScope  、Aggregate  和 Previous  。 不支持将 *recursive* 参数指定给任何聚合函数。  
+ 在 expression 参数中，不能使用函数 Level、InScope、Aggregate 和 Previous。 不支持将 *recursive* 参数指定给任何聚合函数。  
   
  有关详细信息，请参阅[聚合函数引用（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)和[总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   

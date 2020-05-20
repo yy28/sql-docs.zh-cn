@@ -52,7 +52,7 @@ setup /q /ACTION=install /FEATURES=RS /InstanceName=MSSQLSERVER /RSSVCACCOUNT="N
 ```  
   
 #### <a name="installation-wizard"></a>安装向导  
- 在“功能选择”页中选择 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 时，安装程序将提供可用于指定安装模式的“ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置”页。 要指定“仅文件”安装，请在“ **配置”页上选择“安装但不配置报表服务器”** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
+ 在“功能选择”页中选择 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 时，安装程序将提供可用于指定安装模式的“ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置”页。 要指定“仅文件”安装，请在“[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置”页上选择“安装但不配置报表服务器”。  
   
 ## <a name="see-also"></a>另请参阅  
  [验证 Reporting Services 安装](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   

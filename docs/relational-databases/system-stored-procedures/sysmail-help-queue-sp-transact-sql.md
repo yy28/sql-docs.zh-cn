@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_queue_sp
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d506d7ea841e211d9ab6fb0715a6a9359cefa83d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 40a6b569dc469f216d54e615fadd506e968db981
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289945"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807489"
 ---
 # <a name="sysmail_help_queue_sp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  数据库邮件中具有两个队列：邮件队列和状态队列。 邮件队列存储正在等待发送的邮件项。 状态队列存储已发送项的状态。 此存储过程允许查看邮件队列的状态或状态队列的状态。 如果未指定参数** \@queue_type** ，则存储过程将为每个队列返回一行。  
+  数据库邮件中具有两个队列：邮件队列和状态队列。 邮件队列存储正在等待发送的邮件项。 状态队列存储已发送项的状态。 此存储过程允许查看邮件队列的状态或状态队列的状态。 如果未指定参数** \@ queue_type** ，则存储过程将为每个队列返回一行。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +50,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 |-----------------|---------------|-----------------|  
 |**queue_type**|**nvarchar （6）**|队列的类型。 可能的值为 "**邮件**" 和 "**状态**"。|  
 |**length**|**int**|指定队列中邮件项的数量。|  
-|**state**|**nvarchar （64）**|监视器的状态。 可能的值为**非活动状态**（队列处于非活动状态）、已**通知**（队列已通知发生接收）和**RECEIVES_OCCURRING** （队列正在接收）。|  
+|State |**nvarchar （64）**|监视器的状态。 可能的值为**非活动状态**（队列处于非活动状态）、已**通知**（队列已通知发生接收）和**RECEIVES_OCCURRING** （队列正在接收）。|  
 |**last_empty_rowset_time**|**型**|上次队列为空的日期和时间。 采用军用时间格式和 GMT 时区。|  
 |**last_activated_time**|**型**|上次激活队列的日期和时间。 采用军用时间格式和 GMT 时区。|  
   

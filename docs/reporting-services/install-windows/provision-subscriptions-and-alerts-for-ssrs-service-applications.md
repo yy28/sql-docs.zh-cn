@@ -88,7 +88,7 @@ ms.locfileid: "62651943"
   
 #### <a name="to-load-the-transact-sql-script-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中加载 Transact-SQL 脚本  
   
-1.  要打开 SQL Server Management Studio，请在“开始”菜单上单击“ **”，然后单击“SQL Server Management Studio”** [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]  。  
+1.  要打开 SQL Server Management Studio，请在“开始”菜单上单击“[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]”，然后单击“SQL Server Management Studio”。  
   
 2.  在 **“连接到服务器”** 对话框中，设置以下选项：  
   

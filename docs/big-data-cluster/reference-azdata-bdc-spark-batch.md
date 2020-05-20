@@ -20,7 +20,7 @@ ms.locfileid: "75258636"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-以下文章提供了 `bdc spark batch` 工具中 `azdata` 命令的参考。 有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)
+以下文章提供了 `azdata` 工具中 `bdc spark batch` 命令的参考。 有关其他 `azdata` 命令的详细信息，请参阅 [azdata 参考](reference-azdata.md)
 
 ## <a name="commands"></a>命令
 |     |     |

@@ -62,7 +62,7 @@ ms.locfileid: "75239230"
   
 2.  右键单击“SQL Server 代理”  ，然后单击“属性”  。  
   
-3.  在“SQL Server 代理属性 **server**name _”\__ 对话框的“选择页”  下，选择“连接”  ，然后  
+3.  在“SQL Server 代理属性 _server\_name_”对话框的“选择页”下，选择“连接”，然后  
   
 4.  在 **“本地主机服务器别名”** 框中，键入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理应连接到的服务器别名的类型。  
   

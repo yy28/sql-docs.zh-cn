@@ -75,7 +75,7 @@ LESS 样式表中包含了引用预定义 LESS 变量的块，如下所示。
     "primary":"#009900",   
     "primaryContrast":"#ffffff"   
   
-经过处理的输出会查看“**primaryButtonBg\@** 变量，并确保它映射到了名为“primary”  的 json 属性（在此示例中是 #009900）。 这样才能输出正确的 CSS。  
+经过处理的输出会查看“\@primaryButtonBg变量，并确保它映射到了名为“primary”的 json 属性（在此示例中是 #009900）。 这样才能输出正确的 CSS。  
   
     .btn-primary {   
         color:#ffffff;   

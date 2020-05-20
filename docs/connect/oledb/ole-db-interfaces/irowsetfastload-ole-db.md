@@ -25,7 +25,7 @@ ms.locfileid: "67994394"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  IRowsetFastLoad 接口公开了对  **基于内存的大容量复制操作的支持**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 OLE DB Driver for SQL Server 使用者使用该接口快速将数据添加到现有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表。  
+  IRowsetFastLoad 接口公开了对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 基于内存的大容量复制操作的支持。 OLE DB Driver for SQL Server 使用者使用该接口快速将数据添加到现有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表。  
   
  如果将会话的 SSPROP_ENABLEFASTLOAD 设置为 VARIANT_TRUE，则无法读取后续从该会话返回的行集中的数据。 将 SSPROP_ENABLEFASTLOAD 设置为 VARIANT_TRUE 时，在会话上创建的所有行集将属于 IRowsetFastLoad 类型。 IRowsetFastLoad 行集不支持行集提取功能，因此无法读取这些行集中的数据。  
   

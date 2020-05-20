@@ -46,7 +46,7 @@ ms.locfileid: "75241894"
     使用此选项可以筛选所显示的文件和文件夹。 输入要用来筛选的完整或部分文件名，使用星号 (`*`) 作为通配符。  
   
     > [!NOTE]  
-    > 通过在“文件名”  框中输入 URL 或网络路径，导航到 Web 和网络位置。 例如，输入  **可显示 mywebsite Web 位置中可用的文件，输入 `https://mywebsite`\myserver\myshare 可显示 myserver 上的 myshare 位置中可用的文件** **\\** 。  
+    > 通过在“文件名”  框中输入 URL 或网络路径，导航到 Web 和网络位置。 例如，输入 `https://mywebsite` 可显示 mywebsite Web 位置中可用的文件，输入 \\\myserver\myshare 可显示 myserver 上的 myshare 位置中可用的文件。  
   
     **文件类型**  
     使用此选项基于文件扩展名筛选文件。 每个产品列出最常用文件类型的默认筛选器。  

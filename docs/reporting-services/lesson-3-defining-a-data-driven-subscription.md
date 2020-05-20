@@ -19,7 +19,7 @@ ms.locfileid: "66826859"
 本 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 教程课程使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web 门户的“数据驱动订阅”页，以连接到订阅数据源、生成检索订阅数据的查询，并将结果集映射到报表和传递选项。  
   
 > [!NOTE]  
-> 开始操作之前，请确认“ **代理”服务正在运行[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]** 。 如果该代理服务未运行，则无法保存订阅。  一种验证方法是，打开 [SQL Server 配置管理器](../relational-databases/sql-server-configuration-manager.md)。
+> 开始操作之前，请确认“[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理”服务正在运行。 如果该代理服务未运行，则无法保存订阅。  一种验证方法是，打开 [SQL Server 配置管理器](../relational-databases/sql-server-configuration-manager.md)。
 本课程假设您已经完成了第 1 课和第 2 课，并且报表数据源使用存储的凭据。  有关详细信息，请参阅 [第 2 课：修改报表数据源属性](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
   
 ## <a name="start-the-data-driven-subscription-wizard"></a><a name="bkmk_startwizard"></a>启动数据驱动订阅向导  

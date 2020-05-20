@@ -69,7 +69,7 @@ ms.locfileid: "75244459"
   
 1.  单击 **“开始”** ，依次指向 **“所有程序”** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]和 **“配置工具”** ，然后单击 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器”** 。  
   
-2.  在“ **配置管理器”[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 的控制台窗格中，依次展开“ **网络配置”[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 、“**实例名称> 的协议”\<** ，然后双击“TCP/IP”  。  
+2.  在“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器”的控制台窗格中，依次展开“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 网络配置”、“\<实例名称> 的协议”，然后双击“TCP/IP”。  
   
 3.  在“TCP/IP 属性”  对话框的“IP 地址”  选项卡上，将显示若干个 IP 地址，格式为：**IP1**、**IP2**...，一直到 **IPAll**。 这些 IP 地址中有一个是环回适配器的 IP 地址 (127.0.0.1)。 其他 IP 地址是计算机上配置的各个 IP 地址。  
   

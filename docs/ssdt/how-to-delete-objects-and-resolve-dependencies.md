@@ -38,7 +38,7 @@ ms.locfileid: "75241429"
   
 1.  请确保 `Customer` 表未在表设计器或 Transact\-SQL 编辑器中打开。  
   
-2.  展开 SQL Server 对象资源管理器  中的“表”  节点。 右键单击 Customer  表，然后选择“重命名”  。  
+2.  展开 SQL Server 对象资源管理器中的“表”节点。 右键单击 Customer  表，然后选择“重命名”  。  
   
 3.  将表名称更改为 Customers  ，然后按 ENTER 键。  
   
@@ -49,20 +49,20 @@ ms.locfileid: "75241429"
   
 5.  按照之前的[如何：使用 Power Buffer 更新连接的数据库](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)过程中的步骤应用更改。  
   
-6.  再次右键单击“SQL Server 对象资源管理器”  中的“Customers”  表，然后选择“查看数据”  。 请注意，在重命名操作后表数据将保持不变。  
+6.  再次右键单击“SQL Server 对象资源管理器”中的“Customers”表，然后选择“查看数据”。 请注意，在重命名操作后表数据将保持不变。  
   
 7.  右键单击 Products  表，然后选择“查看代码”  。 请注意，外键引用已自动更新为 `REFERENCES [dbo].[Customers] ([Id])` 以便反映此重命名操作。  
   
 ### <a name="to-delete-a-table"></a>删除表  
   
-1.  右键单击“SQL Server 对象资源管理器”  中的“Customers”  表，然后选择“删除”  。  
+1.  右键单击“SQL Server 对象资源管理器”中的“Customers”表，然后选择“删除”。  
   
 2.  在“预览数据库更新”  对话框的“用户操作”  下，请注意 SSDT 已标识了所有依赖对象，在此情况下，依赖对象是将删除的外键引用。  
   
 3.  单击“更新数据库”  。  
   
-4.  右键单击  “SQL Server 对象资源管理器”中的  “Products”表，然后选择“查看代码”  。 请注意，对 `Customers` 表的外键引用已消失。  
+4.  右键单击“SQL Server 对象资源管理器”中的“Products”表，然后选择“查看代码”。 请注意，对 `Customers` 表的外键引用已消失。  
   
     > [!WARNING]  
-    > 如果在删除操作发生时已在表设计器或 Transact**SQL 编辑器中打开了 Products**\- 表，则该表将不会自动刷新以显示外键引用的删除。 此外，与无法解析的引用有关的错误可能会出现在“错误列表”  中。 若要解决此问题，请关闭表设计器或 Transact\-SQL 编辑器，然后重新打开 Products 表。  
+    > 如果在删除操作发生时已在表设计器或 Transact\-SQL 编辑器中打开了 Products 表，则该表将不会自动刷新以显示外键引用的删除。 此外，与无法解析的引用有关的错误可能会出现在“错误列表”  中。 若要解决此问题，请关闭表设计器或 Transact\-SQL 编辑器，然后重新打开 Products 表。  
   

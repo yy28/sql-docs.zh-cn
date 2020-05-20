@@ -56,7 +56,7 @@ ms.locfileid: "75246573"
      从“已注册的服务器”中注册某服务器时，“服务器类型”  框是只读的，它与“已注册的服务器”窗格中显示的服务器类型相匹配。 若要注册其他类型的服务器，请在开始注册新服务器之前，在 **“已注册的服务器”** 工具栏上依次单击 **“数据库引擎”** 、 **“分析服务器”** 、 **Reporting Services** 或 **Integration Services** 。  
   
      **服务器名称**  
-     选择要注册的服务器实例，格式如下：*servername>\<* [\\*instancename>\<* ]。  
+     选择要注册的服务器实例，格式如下：\<servername>[\\\<instancename>]。  
   
      **身份验证**  
      在连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例时，可以使用两种身份验证模式。  

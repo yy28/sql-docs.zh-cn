@@ -62,7 +62,7 @@ ms.locfileid: "63193696"
     <Extension Name="My Rendering Extension Name" Type="CompanyName.ExtensionName.MyRenderingProvider, AssemblyName" />  
     ```  
   
-     **Name** 的值必须是呈现扩展插件的唯一名称。 Type 的值是一个以逗号分隔的列表，它包含  **实现的完全限定命名空间的一个条目，后跟程序集的名称（不包含 .dll 文件扩展名）** <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>。 默认情况下，呈现扩展插件是可见的。 若要从用户界面（如报表管理器）中隐藏扩展插件，请将 **Visible** 属性添加到 **Extension** 元素，并将其设置为 **false**。  
+     **Name** 的值必须是呈现扩展插件的唯一名称。 Type 的值是一个以逗号分隔的列表，它包含 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> 实现的完全限定命名空间的一个条目，后跟程序集的名称（不包含 .dll 文件扩展名）。 默认情况下，呈现扩展插件是可见的。 若要从用户界面（如报表管理器）中隐藏扩展插件，请将 **Visible** 属性添加到 **Extension** 元素，并将其设置为 **false**。  
   
 ## <a name="verifying-the-deployment"></a>验证部署  
  还可以打开报表管理器，并验证您的扩展插件是否包括在报表的可用导出类型列表中。  

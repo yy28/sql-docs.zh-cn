@@ -525,7 +525,7 @@ ms.locfileid: "75242693"
   
 1.  在 Visual Studio 中，右键单击项目并选择“重新生成”。 这将重新生成项目，您应该看到生成的模型统计信息，其中输出将包含在生成输出中并保存到 ModelStatistics.xml。 请注意，可能需要在解决方案资源管理器中选择“显示所有文件”才能看到 xml 文件。  
   
-2.  打开 Visual Studio 命令提示符：在“开始”  菜单上，依次单击“所有程序”  、“Microsoft Visual Studio **”<Visual Studio Version>** 、“Visual Studio Tools”  和“Visual Studio 命令提示符( **)”<Visual Studio Version>** 。  
+2.  打开 Visual Studio 命令提示符：在“开始”菜单上，依次单击“所有程序”、“Microsoft Visual Studio <Visual Studio Version>”、“Visual Studio Tools”和“Visual Studio 命令提示符(<Visual Studio Version>)”。  
   
 3.  在命令提示符处，导航到包含 SQL 项目的文件夹。  
   

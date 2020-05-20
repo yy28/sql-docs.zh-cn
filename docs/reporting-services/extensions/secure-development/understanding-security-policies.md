@@ -33,7 +33,7 @@ ms.locfileid: "63193381"
  报表服务器程序集是指那些包含作为 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 产品的一部分的代码的程序集。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 是用托管代码程序集编写的；所有这些程序集都采用了强命名模式（即数字签名模式）。 这些程序集的代码组是使用 StrongNameMembershipCondition 定义的，StrongNameMembershipCondition 为程序集的强名称提供基于公钥信息的证据  。 代码组被授予 FullTrust 权限集  。  
   
 ## <a name="report-server-extensions-rendering-data-delivery-and-security"></a>报表服务器扩展插件（呈现扩展插件、数据扩展插件、传递扩展插件和安全扩展插件）  
- 报表服务器扩展插件是您或第三方为了扩展 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的功能而创建的自定义数据扩展插件、传递扩展插件、呈现扩展插件和安全扩展插件。 在与要扩展的  **组件相关联的策略配置文件中，必须向这些扩展插件或程序集代码授予 FullTrust**[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。 随 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供的扩展插件是用报表服务器公钥签名的，它们将接收 FullTrust 权限集  。  
+ 报表服务器扩展插件是您或第三方为了扩展 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的功能而创建的自定义数据扩展插件、传递扩展插件、呈现扩展插件和安全扩展插件。 在与要扩展的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 组件相关联的策略配置文件中，必须向这些扩展插件或程序集代码授予 FullTrust。 随 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供的扩展插件是用报表服务器公钥签名的，它们将接收 FullTrust 权限集  。  
   
 > [!IMPORTANT]  
 >  必须修改 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 策略配置文件才能允许任何第三方扩展插件获得 FullTrust  。 如果没有为自定义扩展插件添加具有 FullTrust 的代码组，则这些扩展插件将无法由报表服务器使用  。  
@@ -60,7 +60,7 @@ ms.locfileid: "63193381"
   
  Execution 权限集允许运行（执行）代码，但是不使用受保护的资源  。 在报表中找到的所有表达式都编译为一个称作“表达式宿主”的程序集，该程序集作为已编译报表的一部分存储。 在执行报表时，报表服务器会加载并调用表达式宿主程序集以执行相应的表达式。 对表达式宿主程序集进行签名所用的密钥与为所有的表达式宿主定义代码组所用的密钥相同。  
   
- 报表表达式引用报表对象模型集合（字段、参数等）并执行简单任务（如算术和字符串运算）。 用来执行这些简单操作的代码只需要 Execution 权限  。 在  **中，Code 元素中的用户定义方法以及任何自定义程序集在默认情况下都被授予 Execution 权限**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。 因此，对于大多数表达式来说，当前的配置不要求您修改任何安全策略文件。 若要向表达式宿主程序集授予额外的权限，管理员需要修改报表服务器和报表设计器的策略配置文件，并更改报表表达式代码组。 由于权限是全局设置，因此更改表达式宿主的默认权限会影响所有报表。 因此，极力建议您将需要额外安全性的所有代码放在一个自定义程序集内。 只有此程序集将被授予所需的权限。  
+ 报表表达式引用报表对象模型集合（字段、参数等）并执行简单任务（如算术和字符串运算）。 用来执行这些简单操作的代码只需要 Execution 权限  。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中，Code 元素中的用户定义方法以及任何自定义程序集在默认情况下都被授予 Execution 权限。 因此，对于大多数表达式来说，当前的配置不要求您修改任何安全策略文件。 若要向表达式宿主程序集授予额外的权限，管理员需要修改报表服务器和报表设计器的策略配置文件，并更改报表表达式代码组。 由于权限是全局设置，因此更改表达式宿主的默认权限会影响所有报表。 因此，极力建议您将需要额外安全性的所有代码放在一个自定义程序集内。 只有此程序集将被授予所需的权限。  
   
 > [!IMPORTANT]  
 >  用来调用外部程序集或受保护资源的代码应当合并到一个自定义程序集内以供报表使用， 这会使您对代码所请求和断言的权限进行更多的控制。 不应当为了保护 Code 元素中的方法而进行调用  。 因为这样做会要求你向报表表达式宿主授予 FullTrust，并向所有的自定义代码授予对 CLR 的完全访问权限  。  

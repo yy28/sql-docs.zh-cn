@@ -30,7 +30,7 @@ ms.locfileid: "68015579"
   
 -   如何提取一组列（依次）。  
   
--   如何两次访问某一列。 第一次获取实际列宽度，稍后访问实际数据。 在 DBCOLUMNACCESS 结构中，如果 pData 为 NULL 且 cbMaxLen 为 0，则对于 IRow **>GetColumns() 的调用只返回实际列长度**   -  。 在这种情况下，可以再次对同一列调用 IRow->GetColumns() 以检索实际数据  。  
+-   如何两次访问某一列。 第一次获取实际列宽度，稍后访问实际数据。 在 DBCOLUMNACCESS 结构中，如果 pData 为 NULL 且 cbMaxLen 为 0，则对于 IRow->GetColumns() 的调用只返回实际列长度。 在这种情况下，可以再次对同一列调用 IRow->GetColumns() 以检索实际数据  。  
   
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  

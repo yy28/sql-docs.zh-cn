@@ -31,7 +31,7 @@ HDFS 是一个文件系统，类似于基于 Linux 的文件系统，它使用 P
   
 ## <a name="hdfs-shell"></a>HDFS shell
 
-使用 `hdfs` 中的 `azdata` shell 功能，可以直接在 shell 中发出命令，以管理文件和目录的 HDFS 权限。 基础机制使用 WebHdfs 调用来发出命令
+使用 `azdata` 中的 `hdfs` shell 功能，可以直接在 shell 中发出命令，以管理文件和目录的 HDFS 权限。 基础机制使用 WebHdfs 调用来发出命令
 
 以下命令将打开 shell。
 
@@ -74,7 +74,7 @@ acl modify: Change completed.
 
 ## <a name="create-a-directory-in-hdfs-using-azdata"></a>使用 `azdata` 在 HDFS 中创建目录
 
-在路径 `data` 中创建一个名为 `/sales` 的目录。
+在路径 `/sales` 中创建一个名为 `data` 的目录。
 
 ```bash
 azdata bdc hdfs mkdir --path '/sales/data'
@@ -82,7 +82,7 @@ azdata bdc hdfs mkdir --path '/sales/data'
 
 ## <a name="change-owner-of-a-directory-or-file"></a>更改目录或文件的所有者
 
-在 HDFS 中更改目录 `data` 的所有者用户，并将  *设置为所有者用户，将 `alice` 设置为所有者组* *`salesgroup`* 。 必须具有所有者身份才可更改所有者。
+在 HDFS 中更改目录 `data` 的所有者用户，并将 `alice` 设置为所有者用户，将 `salesgroup` 设置为所有者组。 必须具有所有者身份才可更改所有者。
 
 ```bash
 azdata bdc hdfs chown --owner alice --group 'salesgroup' --path '/sales/data'
@@ -102,7 +102,7 @@ azdata bdc hdfs chmod --permission 775 --path /sales/data/file.txt
 
 ## <a name="set-sticky-bit-on-directories"></a>对目录设置粘滞位
 
-对目录设置粘滞位可防止意外删除或重定位文件。 粘滞位限制了删除文件或将文件移动到超级用户、目录所有者或文件所有者的权限。 此设置不会影响文件。 下面的示例通过为权限添加 `users` 前缀来对目录 `1` 设置粘滞位。
+对目录设置粘滞位可防止意外删除或重定位文件。 粘滞位限制了删除文件或将文件移动到超级用户、目录所有者或文件所有者的权限。 此设置不会影响文件。 下面的示例通过为权限添加 `1` 前缀来对目录 `users` 设置粘滞位。
 
 ```bash
 azdata bdc hdfs chmod --path /sales/users --permission 1750
@@ -112,7 +112,7 @@ azdata bdc hdfs chmod --path /sales/users --permission 1750
 
 要在 HDFS 中对文件和目录设置 ACL，请使用 `azdata` 命令。
 
-对目录设置 ACL，并为指定用户  *提供对目录 `tom` 的读取、写入和执行权限* *`data`* 。 
+对目录设置 ACL，并为指定用户 `tom` 提供对目录 `data` 的读取、写入和执行权限。 
 
 > [!NOTE]
 > 使用 `set` 命令时，请确保提供完整的 ACL 规范，包括适用于所有者用户、所有者组和其他用户的 ACL 规范。

@@ -65,7 +65,7 @@ ms.locfileid: "65619691"
   
  您需要如前面的步骤中所述启用日志记录，然后完成以下内容：  
   
-1.  从  **服务应用程序的“系统设置”页，找到“用户定义”部分**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  。  
+1.  从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的“系统设置”页，找到“用户定义”部分。  
   
 2.  将 **ExecutionLogLevel** 更改为 **verbose**。 该字段是文本输入字段，其两个可能的值是 **verbose** 和 **normal**。  
   

@@ -35,7 +35,7 @@ ms.locfileid: "77080641"
   
      对于在本机模式下的报表服务器上的图像，在“使用此图像”框中键入图像的相对路径，例如 ../images/image1.jpg  。  
   
-     对于 SharePoint 集成模式下报表服务器上的图像，或者任何其他网站上的图像，在“使用此图像”框中键入图像的完整 URL，例如 https://**SharePointservername>/** site>/Documents/images/image1.jpg\<\<。  
+     对于 SharePoint 集成模式下报表服务器上的图像，或者任何其他网站上的图像，在“使用此图像”框中键入图像的完整 URL，例如 https://\<SharePointservername>/\<site>/Documents/images/image1.jpg。  
   
      有关详细信息，请参阅[指定外部项的路径（报表生成器和 SSRS）](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
   

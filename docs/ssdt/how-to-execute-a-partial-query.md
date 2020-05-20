@@ -26,7 +26,7 @@ Transact\-SQL 编辑器允许突出显示特定的脚本段落并将其作为单
   
 ## <a name="to-partially-execute-a-query"></a>部分执行查询  
   
-1. 在“SQL Server 对象资源管理器”  中，双击“视图”  下的 PerishableFruits  以在 Transact\-SQL 编辑器中将其打开。  
+1. 在“SQL Server 对象资源管理器”中，双击“视图”下的 PerishableFruits 以在 Transact\-SQL 编辑器中将其打开。  
   
 2. 突出显示代码中的 `SELECT p.Id, p.Name FROM dbo.Product p` 段，右键单击并选择“执行查询”  。  
   

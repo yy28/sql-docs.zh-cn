@@ -29,7 +29,7 @@ ms.locfileid: "68049110"
 > [!NOTE]
 > SQL Server PowerShell 模块有两种；SqlServer 和 SQLPS   。 虽然 SQL Server 安装附带了 SQLPS 模块（用于向后兼容），但该模块不再更新  。 最新的 PowerShell 模块是 SqlServer 模块  。 SqlServer 模块不仅包含 SQLPS 更新版本的 cmdlet，并且还包含新的 cmdlet 以支持最新的 SQL 功能   。  
 > 虽然 SQL Server Management Studio (SSMS) 随附了以前版本的 SqlServer 模块，但仅限 16.x 版本的 SSMS   。 要在 SSMS 17.0 和更高版本中使用 PowerShell，则必须从 PowerShell 库安装 SqlServer  模块。
-> 要安装 SqlServer 模块，请参阅[安装 SQL Server PowerShell](download-sql-server-ps-module.md)  。
+> 要安装 SqlServer 模块，请参阅[安装 SQL Server PowerShell](download-sql-server-ps-module.md)。
 
   
 ## <a name="syntax"></a>语法  
@@ -75,7 +75,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  例如，为 **ServerCollection** 类指定“服务器”，为 **DatabaseCollection** 类指定“数据库”。  
   
  \@*PropertyName*  
- 指定与  “对象”中指定的对象相关联的类的其中一个属性的名称。 属性名必须以字符 \@ 为前缀。 例如，对 Database  类的 IsAnsiNull  属性指定 \@IsAnsiNull。  
+ 指定与  “对象”中指定的对象相关联的类的其中一个属性的名称。 属性名必须以字符 \@ 为前缀。 例如，对 Database 类的 IsAnsiNull 属性指定 \@IsAnsiNull。  
   
  \@*BooleanPropertyName*=true()  
  枚举指定的布尔属性设置为 TRUE 的所有对象。  

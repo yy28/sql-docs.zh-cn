@@ -208,7 +208,7 @@ ms.locfileid: "77080337"
   
      如果文本框仅包含日期或数字，则应使用文本框的 Format 属性来应用格式设置，而不应在文本框中使用 **Format** 函数。  
   
--   Right、Len 和 InStr 函数对于返回子字符串十分有用，例如将 DOMAIN**username 剪裁为用户名**    \\  。 下面的表达式从名为 User\\ *的参数返回反斜杠 (* ) 字符右侧的字符串部分：  
+-   Right、Len 和 InStr 函数对于返回子字符串十分有用，例如将 DOMAIN\\username 剪裁为用户名。 下面的表达式从名为 User 的参数返回反斜杠 (\\) 字符右侧的字符串部分：  
   
     ```  
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  

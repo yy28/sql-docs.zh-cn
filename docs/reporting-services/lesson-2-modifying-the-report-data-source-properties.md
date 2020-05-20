@@ -87,7 +87,7 @@ ms.locfileid: "62651706"
  ![ssrs_tutorial_datadriven_parameter](../reporting-services/media/ssrs-tutorial-datadriven-parameter.png) 
 2.  验证“名称”  是否为 `OrderNumber`。  
   
-3.  验证“提示”是否为  `OrderNumber`。  
+3.  验证“提示”是否为 `OrderNumber`。  
   
 4.  选择“允许空值("")”  。  
   

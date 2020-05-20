@@ -26,11 +26,11 @@ ms.locfileid: "65579878"
 > [!NOTE]
 > 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
 
- “本地模式”中没有  *报表服务器*[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 必须安装 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序，但无需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 在本地模式中，用户可以查看报表，但无法使用订阅和数据警报之类的服务器端功能。  
+ “本地模式”中没有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 必须安装 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序，但无需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 在本地模式中，用户可以查看报表，但无法使用订阅和数据警报之类的服务器端功能。  
 
 ## <a name="local-mode-vs-connected-mode-and-supported-extensions"></a>本地模式与连接模式对比以及支持的扩展插件
 
- **本地模式：** 当你具有支持本地模式的数据扩展插件时，报表查看器会直接从 SharePoint 呈现报表。 “本地模式”中没有  *报表服务器*[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 必须安装 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序，但无需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 在本地模式下，用户可以查看报表，但 **无法** 使用订阅和数据警报之类的服务器端功能。  
+ **本地模式：** 当你具有支持本地模式的数据扩展插件时，报表查看器会直接从 SharePoint 呈现报表。 “本地模式”中没有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 必须安装 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序，但无需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 在本地模式下，用户可以查看报表，但 **无法** 使用订阅和数据警报之类的服务器端功能。  
   
  **连接模式**也称为 *远程模式* ，在 SharePoint 模式下需使用连接至 SharePoint 场的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器，以便报表服务器控件可以呈现报表。  
   

@@ -49,7 +49,7 @@ ms.locfileid: "63295728"
   
 3.  在右窗格中，单击“表或矩阵向导”  。  
   
-4.  在“选择数据集”页上，单击“创建数据集” **“下一步”**   >   。  
+4.  在“选择数据集”页上，单击“创建数据集” > “下一步”。  
   
 6.  在“选择数据源的连接”  页上，选择类型为“SQL Server”  的数据源。 从列表中选择一个数据源或浏览到报表服务器以选择一个数据源。  
 
@@ -470,7 +470,7 @@ ms.locfileid: "63295728"
   
 16. 在“状态度量单位”  框中，选择“数字”  。  
   
-17. 在具有向下箭头的行中，单击“起始”  值的文本框右侧的 **fx**按钮。  
+17. 在具有向下箭头的行中，单击“起始”值的文本框右侧的 **fx**按钮。  
 
     ![report-builder-expression-tutorial-indicator-start](../reporting-services/media/report-builder-expression-tutorial-indicator-start.png)
   
@@ -502,9 +502,9 @@ ms.locfileid: "63295728"
   
 33. 在具有向上箭头的行的“起始”  框中，键入 **0**  
   
-34. 单击“结束”  值的文本框右侧的 **fx** 按钮。  
+34. 单击“结束”值的文本框右侧的 **fx** 按钮。  
   
-35. 在“表达式”对话框中，删除“100”并创建表达式：   `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
+35. 在“表达式”对话框中，删除“100”并创建表达式：`=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
   
 36. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

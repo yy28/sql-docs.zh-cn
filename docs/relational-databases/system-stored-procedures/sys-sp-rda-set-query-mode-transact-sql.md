@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_set_query_mode stored procedure
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 98796b89486ce59b289c83a74e5c466a6522b557
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 06690f79bf2cc708a83ec272906b3f4be09fe03d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278322"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807767"
 ---
 # <a name="syssp_rda_set_query_mode-transact-sql"></a>sys. sp_rda_set_query_mode （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @mode = ]* \@模式*  
+ [ @mode =] * \@ 模式*  
  是以下值之一。  
   
 -   **已禁用**针对启用 Stretch 的表的所有查询都将失败。  
@@ -48,7 +48,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
   
 -   **LOCAL_AND_REMOTE**针对启用 Stretch 的表的查询将返回本地和远程数据。 此选项为默认行为。  
   
- [ @force = ] * \@强制*  
+ [ @force =] * \@ force*  
  如果希望在不验证的情况下更改查询模式，则可以将此值设置为1。  
   
 ## <a name="return-code-values"></a>返回代码值  

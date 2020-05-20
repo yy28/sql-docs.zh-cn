@@ -117,7 +117,7 @@ rs.Credentials = System.Net.CredentialCache.DefaultCredentials;
   
 ```  
   
- 还可以将“using”  （在  **中为“Import”** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]）指令添加到报表服务器 Web 服务引用中。 如果您使用该指令，则不必完全限定命名空间中的类型。 为此，请在文件中添加以下代码：  
+ 还可以将“using”（在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中为“Import”）指令添加到报表服务器 Web 服务引用中。 如果您使用该指令，则不必完全限定命名空间中的类型。 为此，请在文件中添加以下代码：  
   
 ```vb  
 Import myNamespace.myReferenceName  

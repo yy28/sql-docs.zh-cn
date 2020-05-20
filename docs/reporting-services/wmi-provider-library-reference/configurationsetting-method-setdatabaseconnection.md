@@ -70,7 +70,7 @@ public void BackupEncryptionKey(string Server,
 ## <a name="remarks"></a>备注  
  当 CredentialsType 参数设置为 0 (Windows) 时，必须设置 UserName 和 Password 参数    。 UserName 参数的格式必须为“domain\username”，相应的值必须代表有效的 Windows 登录名  。  
   
- 如果将 CredentialsType 参数设置为 1 ( *)，则 UserName 参数传递的值必须符合*  登录名的要求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 如果将 CredentialsType 参数设置为 1 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])，则 UserName 参数传递的值必须符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的要求。  
   
  如果将 CredentialsType 参数设置为 2（Windows 服务），则报表服务器将使用集成安全性连接到报表服务器数据库，并且忽略 UserName 和 Password 参数    。 报告服务器 Web 服务将使用 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 帐户或应用程序池的帐户及 Windows 服务帐户访问报表服务器数据库。  
   

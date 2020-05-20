@@ -64,7 +64,7 @@ out Int32 HRESULT);
 ## <a name="remarks"></a>备注  
  如果 *DatabaseName* 为空，则忽略 *IsRemote* ，并且数据库名称使用报表服务器配置文件中的值。  
   
- 如果将 IsWindowsUser 设置为 true，则 UserName 的格式应为 *domain>* <username   \<\\\>。  
+ 如果将 IsWindowsUser 设置为 true，则 UserName 的格式应为 \<domain>\\<username\>。  
   
  如果将 *IsWindowsUser* 设置为 **true**，则生成后的脚本将向用户授予对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的登录权限，将报表服务器数据库设置为默认数据库，并向用户授予报表服务器数据库、报表服务器临时数据库、master 数据库和 MSDB 系统数据库的 **RSExec** 角色。  
   

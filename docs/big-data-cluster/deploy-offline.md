@@ -118,7 +118,7 @@ ms.locfileid: "73531975"
 
 ## <a name="install-tools-offline"></a>脱机安装工具
 
-大数据群集部署需要多种工具，包括 Python、 **和 Kubectl**`azdata`  。 通过下列步骤在脱机服务器上安装这些工具。
+大数据群集部署需要多种工具，包括 Python、`azdata` 和 Kubectl。 通过下列步骤在脱机服务器上安装这些工具。
 
 ### <a name="install-python-offline"></a><a id="python"></a> 脱机安装 python
 

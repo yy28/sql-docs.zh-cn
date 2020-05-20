@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_validatemergepublication
 ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 02ffdd0facfedd1b9eb6d8eee083f819566d818d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6a0ca36329c8ddb68c9727fe1b9d2cf17674c93a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72006102"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808755"
 ---
 # <a name="sp_validatemergepublication-transact-sql"></a>sp_validatemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [**\@发布 =**]**"***发布***"**  
+ [** \@ 发布 =**] **"***发布***"**  
  发布的名称。 *发布*为**sysname**，无默认值。  
   
 `[ @level = ] level`要执行的验证的类型。 *级别*为**tinyint**，无默认值。 级别可以为下列值之一：  
@@ -46,7 +46,7 @@ sp_validatemergepublication [@publication=] 'publication'
 |级别值|说明|  
 |-----------------|-----------------|  
 |**1**|只验证行计数。|  
-|**2**|验证行计数和校验和。 对于[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]订阅服务器，此设置自动设置为**3**。|  
+|**2**|验证行计数和校验和。 对于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 订阅服务器，此设置自动设置为**3**。|  
 |**3**|此为建议值。|  
   
 ## <a name="return-code-values"></a>返回代码值  

@@ -19,7 +19,7 @@ ms.locfileid: "75257134"
 ---
 # <a name="open-and-configure-object-explorer"></a>打开和配置对象资源管理器
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用  **中的“视图”** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]菜单打开对象资源管理器。 使用“工具”  菜单上的“选项”  配置对象资源管理器选项。  
+使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“视图”菜单打开对象资源管理器。 使用“工具”  菜单上的“选项”  配置对象资源管理器选项。  
   
 ## <a name="viewing-object-explorer"></a>查看对象资源管理器  
 默认情况下， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中对象资源管理器是可见的。 如果看不到对象资源管理器，请在“视图”  菜单上单击“对象资源管理器”  。  

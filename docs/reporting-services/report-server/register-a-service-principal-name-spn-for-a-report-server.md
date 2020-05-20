@@ -41,7 +41,7 @@ Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>
   
  **HTTP** 为服务类。 报表服务器 Web 服务在 HTTP.SYS 中运行。 在为 HTTP 创建 SPN 时，将同时对在 HTTP.SYS（包括承载在 IIS 中的应用程序）中运行的位于同一台计算机上的所有 Web 应用程序授予基于该域用户帐户的票证。 如果这些服务在其他帐户下运行，则身份验证请求将失败。 为避免此问题，请务必将所有 HTTP 应用程序配置为在同一帐户下运行，或考虑为每个应用程序创建主机头，然后为每个主机头单独创建一个 SPN。 配置主机标头时，无论 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置如何都必须更改 DNS。  
   
- 为 \<computername> 和 *domainname> 指定的值可标识托管报表服务器的计算机的唯一网络地址*\<  。 此地址可以是本地主机名，或者完全限定的域名 (FQDN)。 如果只有一个域，可从命令行中省略 \<domainname>  。 \<domain-user-account  > 是报表服务器服务运行时所使用的用户帐户以及必须注册 SPN 的用户帐户。  
+ 为 \<computername> 和 \<domainname> 指定的值可标识托管报表服务器的计算机的唯一网络地址。 此地址可以是本地主机名，或者完全限定的域名 (FQDN)。 如果只有一个域，可从命令行中省略 \<domainname>  。 \<domain-user-account  > 是报表服务器服务运行时所使用的用户帐户以及必须注册 SPN 的用户帐户。  
   
 ## <a name="register-an-spn-for-domain-user-account"></a>为域用户帐户注册 SPN  
   

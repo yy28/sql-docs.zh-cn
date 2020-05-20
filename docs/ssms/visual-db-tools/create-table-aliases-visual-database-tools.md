@@ -31,7 +31,7 @@ ms.locfileid: "75254228"
   
 -   使用同一个表的多个实例（如在自联接中），并需要一种引用其中的一个实例或其他实例的方法。  
   
-例如，可以为表名 `"e"` 创建别名 `employee_information`，然后在查询的其余部分使用 `"e"` 引用该表。  
+例如，可以为表名 `employee_information` 创建别名 `"e"`，然后在查询的其余部分使用 `"e"` 引用该表。  
   
 ### <a name="to-create-an-alias-for-a-table-or-table-valued-object"></a>为表或表值对象创建别名  
   

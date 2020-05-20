@@ -45,7 +45,7 @@ ms.locfileid: "77080686"
 2.  单击 **“边框”** 按钮旁的箭头以确定要更改矩形的哪些边。    
     
     > [!NOTE]    
-    >  如果将线条样式设置为“双线”并且线条宽度为 1 1/2 pt 或更窄，则在报表生成器、报表设计器或  **Web 门户中运行报表时，线条可能不会显示为双线**[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]。 将报表导出为其他格式（例如 Microsoft Word 和 Acrobat PDF）后，线条会显示为双线。    
+    >  如果将线条样式设置为“双线”并且线条宽度为 1 1/2 pt 或更窄，则在报表生成器、报表设计器或 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 门户中运行报表时，线条可能不会显示为双线。 将报表导出为其他格式（例如 Microsoft Word 和 Acrobat PDF）后，线条会显示为双线。    
     
 ## <a name="see-also"></a>另请参阅    
  [矩形和线条（报表生成器和 SSRS）](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)     

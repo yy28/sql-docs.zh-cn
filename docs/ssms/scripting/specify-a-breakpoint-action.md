@@ -35,7 +35,7 @@ ms.locfileid: "75253654"
   
 打印消息在 **“打印消息”** 选项中指定并被指定为一个文本字符串，其中包含的表达式包括正在调试的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的信息。 表达式包括：  
   
--   包含在大括号 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 中的 {} 表达式。 该表达式可以包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 变量、参数和内置函数。 示例包括 {@MyVariable}、{@NameParameter}、{@@SPID} 或 {SERVERPROPERTY(‘ProcessID’)}。  
+-   包含在大括号 ({}) 中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表达式。 该表达式可以包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 变量、参数和内置函数。 示例包括 {@MyVariable}、{@NameParameter}、{@@SPID} 或 {SERVERPROPERTY(‘ProcessID’)}。  
   
 -   以下关键字之一：  
   

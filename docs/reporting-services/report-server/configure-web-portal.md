@@ -35,7 +35,7 @@ Web 门户是一种用于查看报表、管理报表服务器内容以及向用�
 
 Web 门户是用户在 Web 浏览器中访问的 Web 应用程序。 因此必须至少定义用于在浏览器窗口中打开该应用程序的 URL。 该 URL 由主机名、端口和虚拟目录组成。 此 URL 的默认值包括为报表服务器 Web 服务 URL 定义的主机名和端口值，再加上 **reports** 虚拟目录名。 如果有命名实例，则虚拟目录为 **reports_instance**，其中 **instance** 是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例的名称。
 
-默认情况下，Web 门户 URL 由唯一的虚拟目录名和为在同一实例中运行的报表服务器 Web 服务定义的端口和主机名组成。 在大多数情况下，主机名是报表服务器计算机的网络名称，但也可以是解析该计算机的 IP 地址或主机标头。 若要将 Web 门户配置为使用默认 URL，请使用  **配置工具中的“Web 门户 URL”页面**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。
+默认情况下，Web 门户 URL 由唯一的虚拟目录名和为在同一实例中运行的报表服务器 Web 服务定义的端口和主机名组成。 在大多数情况下，主机名是报表服务器计算机的网络名称，但也可以是解析该计算机的 IP 地址或主机标头。 若要将 Web 门户配置为使用默认 URL，请使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具中的“Web 门户 URL”页面。
 
 > [!TIP]
 > 如果尝试访问远程计算机上的 Web 门户，但在浏览器中收到连接错误消息，这通常是由于防火墙设置造成的。 有关详细信息，请参阅 [将防火墙配置为允许报表服务器访问](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)。
@@ -80,7 +80,7 @@ Web 门户是用户在 Web 浏览器中访问的 Web 应用程序。 因此必�
 
 2. 打开 Internet Explorer。
 
-3. 输入 Web 门户 URL。 默认情况下，该 URL 为 https://\<your-server-name>/reports，但如果已将 Reporting Services 作为命名实例安装，则默认 URL 将为 https://**your-server-name>/reports**_instancename>\<  \<  。
+3. 输入 Web 门户 URL。 默认情况下，该 URL 为 https://\<your-server-name>/reports，但如果已将 Reporting Services 作为命名实例安装，则默认 URL 将为 https://\<your-server-name>/reports\<_instancename>。
 
 4. 选择“站点设置”。 
 

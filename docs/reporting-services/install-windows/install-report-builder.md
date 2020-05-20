@@ -31,7 +31,7 @@ ms.locfileid: "76971387"
 > [!NOTE]
 > 自 SQL Server 2016 之后，不再提供 Reporting Services 与 SharePoint 的集成这一功能。
   
- 可以从 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] Web 门户或者与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 集成的 SharePoint 站点启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 有关信息，请参阅 [启动报表生成器](../../reporting-services/report-builder/start-report-builder.md)。  
+ 可以从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户或者与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 集成的 SharePoint 站点启动 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]。 有关信息，请参阅 [启动报表生成器](../../reporting-services/report-builder/start-report-builder.md)。  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -50,7 +50,7 @@ ms.locfileid: "76971387"
   
 ## <a name="system-requirements"></a>系统要求
   
- 请参阅 Microsoft 下载中心上 **报表生成器下载页** 的 [“系统要求”](https://go.microsoft.com/fwlink/?LinkID=734968)部分。
+ 请参阅 Microsoft 下载中心上 [报表生成器下载页](https://go.microsoft.com/fwlink/?LinkID=734968) 的 **“系统要求”** 部分。
   
 ##  <a name="to-install-ssrbnoversion-from-the-download-site"></a><a name="download"></a> 从下载站点安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
@@ -65,9 +65,9 @@ ms.locfileid: "76971387"
 4.  在 **“默认的目标服务器”** 页上，如果目标报表服务器的 URL 与默认 URL 不同，则可选择提供前者。 单击“下一步”。   
   
     > [!NOTE]  
-    >  如果计划在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 连接到某个报表服务器时使用它，则此时提供该报表服务器的 URL 将会非常方便。 从  **中的“选项”对话框也可以执行相同操作**[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]。  
+    >  如果计划在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 连接到某个报表服务器时使用它，则此时提供该报表服务器的 URL 将会非常方便。 从 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中的“选项”对话框也可以执行相同操作。  
   
-5.  单击“安装”以完成  **的安装**[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]。  
+5.  单击“安装”以完成 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的安装。  
   
 ## <a name="to-install-ssrbnoversion-from-a-share"></a>从共享安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
@@ -107,13 +107,13 @@ ms.locfileid: "76971387"
   
 ## <a name="set-ssrbnoversion-defaults"></a>设置 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 默认值  
   
--   安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 后，可以设置一些默认选项。 单击“文件” **“选项”**  >   。  
+-   安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 后，可以设置一些默认选项。 单击“文件” > “选项”。  
   
      设置默认 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户或者 SharePoint 站点最有用。 有关详细信息，请参阅 [Set default options for Report Builder](../../reporting-services/report-builder/set-default-options-for-report-builder.md)。  
   
 -   单击“报表生成器”  。  
   
-     如果未在现有服务器列表中看到报表服务器，请关闭“打开报表”对话框，并单击  **底部的“连接”，以连接到服务器**  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]。  
+     如果未在现有服务器列表中看到报表服务器，请关闭“打开报表”对话框，并单击 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 底部的“连接”，以连接到服务器。  
   
 ## <a name="see-also"></a>另请参阅  
  [启动报表生成器](../../reporting-services/report-builder/start-report-builder.md)   

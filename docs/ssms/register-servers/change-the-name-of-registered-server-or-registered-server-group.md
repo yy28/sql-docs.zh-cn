@@ -26,7 +26,7 @@ ms.locfileid: "75258895"
   
 ## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio
 
-从菜单导航到“视图” **“已注册的服务器”，以打开“已注册的服务器”窗格。\\** 
+从菜单导航到“视图”\\“已注册的服务器”，以打开“已注册的服务器”窗格。
 
 ### <a name="to-change-the-name-of-a-server"></a>更改服务器的名称
 

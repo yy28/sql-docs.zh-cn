@@ -53,7 +53,7 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
 |RS 2000 RTM|@DBVersion = 'C.0.6.43'|SQL Server 2000|  
 |修补程序||最接近的适用版本|  
   
- 如果版本早于  *2000，返回的 HRESULT 为 ACT_E_BAD_VERSION*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 如果版本早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000，返回的 HRESULT 为 ACT_E_BAD_VERSION。  
   
 ## <a name="return-value"></a>返回值  
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功。 非零值指示已发生错误。  

@@ -35,7 +35,7 @@ ms.locfileid: "68045766"
  本文介绍从本地计算机卸载和删除 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 的过程。  
   
  [删除数据质量服务器对象](../../sql-server/install/remove-data-quality-server-objects.md)  
- 本文介绍如何在卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 或者仅卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DQS) 中的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 组件后手动删除 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] 对象。  
+ 本文介绍如何在卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或者仅卸载 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 中的 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 组件后手动删除 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 对象。  
   
 ## <a name="related-sections"></a>相关章节  
   

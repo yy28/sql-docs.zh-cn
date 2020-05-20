@@ -27,7 +27,7 @@ ms.locfileid: "67994170"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server 仅对于  **游标支持的行集支持 IRowsetResynch**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 IRowsetResynch 并不是需要时就可用  。 使用者在打开行集前必须请求该接口。  
+  OLE DB Driver for SQL Server 仅对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 游标支持的行集支持 IRowsetResynch。 IRowsetResynch 并不是需要时就可用  。 使用者在打开行集前必须请求该接口。  
   
 ## <a name="see-also"></a>另请参阅  
  [更新行集中的数据](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  

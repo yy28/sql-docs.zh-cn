@@ -25,7 +25,7 @@ ms.locfileid: "68015509"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  IBCPSession 接口公开了对  **基于文件的大容量复制操作的支持**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 IBCPSession  接口在 OLE DB Driver for SQL Server 中公开，与会话位于同一级别。 在适用于 SQL Server 的 OLE DB 驱动程序中，数据源对象是会话对象的工厂，且大容量复制操作在连接属性 SSPROP_ENABLEBULKCOPY 中指定。 此外，SSPROP_ENABLEFASTLOAD 属性应当设置为 True。  
+  IBCPSession 接口公开了对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 基于文件的大容量复制操作的支持。 IBCPSession  接口在 OLE DB Driver for SQL Server 中公开，与会话位于同一级别。 在适用于 SQL Server 的 OLE DB 驱动程序中，数据源对象是会话对象的工厂，且大容量复制操作在连接属性 SSPROP_ENABLEBULKCOPY 中指定。 此外，SSPROP_ENABLEFASTLOAD 属性应当设置为 True。  
   
  调用 IDBCreateSession::CreateSession 方法随后将创建 BulkCopySession 对象   。 然后，可针对此 IBCPSession 对象的 IBCPSession 接口，采用极为相似的签名来调用通过 IBCPSession 对象公开的所有基于文件的大容量复制方法    。  
   

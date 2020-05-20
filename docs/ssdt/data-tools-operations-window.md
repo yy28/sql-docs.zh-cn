@@ -32,7 +32,7 @@ ms.locfileid: "75241674"
   
 -   在“SQL Server 对象资源管理器”  中展开一个数据库。 此操作将开始导入数据库模型。  
   
--   提交对数据库所做的更改或通过 Transact**SQL 编辑器中的“更新数据库”** \-按钮来生成脚本。 有关详细信息，请参阅[如何：使用 Power Buffer 更新连接的数据库](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)。  
+-   提交对数据库所做的更改或通过 Transact\-SQL 编辑器中的“更新数据库”按钮来生成脚本。 有关详细信息，请参阅[如何：使用 Power Buffer 更新连接的数据库](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)。  
   
 -   从“SQL Server 对象资源管理器”  中删除对象。 有关详细信息，请参阅[如何：删除对象和解析依赖关系](../ssdt/how-to-delete-objects-and-resolve-dependencies.md)。  
   

@@ -185,7 +185,7 @@ ms.locfileid: "73637982"
   
     若要查看其他可用聚合函数，请打开下拉列表（不要更改聚合函数）。  
   
-5.  将“Sales_Return_Amount”拖到“值”中，然后将它放到“ **”下面**`[Sum(Sales_Amount)]`。  
+5.  将“Sales_Return_Amount”拖到“值”中，然后将它放到“`[Sum(Sales_Amount)]`”下面。  
   
     步骤 4 和 5 指定要在矩阵中显示的数据。  
   
@@ -230,7 +230,7 @@ ms.locfileid: "73637982"
   
     一个空列会添加到“销售额”的右侧  。  
   
-3.  在功能区上，单击“矩形”，然后单击 [Product_Subcategory] 行组中  **单元右侧的空单元**`[Sum(Sales_Amount)]`。  
+3.  在功能区上，单击“矩形”，然后单击 [Product_Subcategory] 行组中 `[Sum(Sales_Amount)]` 单元右侧的空单元。  
   
 4.  在功能区上单击“迷你图”图标，然后单击添加了矩形的单元  。  
   
@@ -267,7 +267,7 @@ ms.locfileid: "73637982"
   
 5.  单击“值”列表右侧的“(fx)”按钮   。  
   
-6.  在“表达式”对话框的“类别”窗格中，单击“数据集”，然后在“值”列表中双击    `First(Product_Category_Name)`。  
+6.  在“表达式”对话框的“类别”窗格中，单击“数据集”，然后在“值”列表中双击 `First(Product_Category_Name)`。  
   
     “表达式”框包含以下表达式  ：  
   
@@ -363,7 +363,7 @@ ms.locfileid: "73637982"
   
 5.  在“数据源”  中，确认数据源是“Microsoft SQL Server Analysis Services (AdomdClient)”  。  
   
-6.  在“服务器名称”中，键入安装  **实例所在服务器的名称**[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
+6.  在“服务器名称”中，键入安装 [!INCLUDE[msCoName](../includes/msconame-md.md)] 实例所在服务器的名称[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
   
 7.  在“选择或输入数据库名称”  中，选择 Contoso 多维数据集。  
   
@@ -475,7 +475,7 @@ ms.locfileid: "73637982"
   
 2.  从“Product”维度将“Product Category Name”拖到数据窗格，然后将它放到“Channel Name”的右侧。  
   
-3.  从“计算成员”，将“ **”拖到数据窗格，然后将它放到“Product Category Name”的右侧**`Net QTY`。  
+3.  从“计算成员”，将“`Net QTY`”拖到数据窗格，然后将它放到“Product Category Name”的右侧。  
   
 4.  从“计算成员”，将“Net Sales”拖到数据窗格，然后将它放到“ `Net QTY`”的右侧。  
   
@@ -500,7 +500,7 @@ ms.locfileid: "73637982"
   
     若要查看其他可用聚合函数，请打开下拉列表。 不要更改聚合函数。  
   
-4.  将“`Net_Sales_Return`”拖到“值”，然后将它放在“ **”下面**`[Sum(Net_QTY)]`。  
+4.  将“`Net_Sales_Return`”拖到“值”，然后将它放在“`[Sum(Net_QTY)]`”下面。  
   
     步骤 3 和 4 指定要在矩阵中显示的数据。  
   
@@ -581,7 +581,7 @@ ms.locfileid: "73637982"
   
 1.  若要切换到设计视图，请单击“设计”  。  
   
-2.  在功能区上，单击“矩形”图标，然后在 **列组的** 行组中的 `[Sum(Net QTY)]` 单元内单击`[Product_Category_Name]``Channel_Name`。  
+2.  在功能区上，单击“矩形”图标，然后在 `Channel_Name` 列组的 `[Product_Category_Name]` 行组中的 `[Sum(Net QTY)]` 单元内单击。  
   
 3.  在功能区上，单击“指示器”图标，然后在矩形内单击  。 “选择指示器类型”对话框将打开，其中选择了“方向”指示器   。  
   
@@ -589,11 +589,11 @@ ms.locfileid: "73637982"
   
 5.  右键单击该指示器，然后在“仪表数据”窗格中单击“(未指定)”旁边的向下箭头  。 选择 `Net_QTY`。  
   
-6.  对“总计”内 `[Sum(Net QTY)]` 行组中的 `[Product_Category_Name]` 单元重复步骤 2 到 5  。  
+6.  对“总计”内 `[Product_Category_Name]` 行组中的 `[Sum(Net QTY)]` 单元重复步骤 2 到 5。  
   
 #### <a name="to-add-an-indicator-for-net-sales-values"></a>添加 Net Sales 值的指示器  
   
-1.  在功能区上，单击“矩形”图标，然后在 **列组的** 行组中的 `[Sum(Net_Sales)]` 单元内单击`[Product_Category_Name]``Channel_Name`。  
+1.  在功能区上，单击“矩形”图标，然后在 `Channel_Name` 列组的 `[Product_Category_Name]` 行组中的 `[Sum(Net_Sales)]` 单元内单击。  
   
 2.  在功能区上，单击“指示器”图标，然后在矩形内单击  。  
   
@@ -601,7 +601,7 @@ ms.locfileid: "73637982"
   
 4.  右键单击该指示器，然后在“仪表数据”窗格中单击“(未指定)”旁边的向下箭头  。 选择 `Net_Sales`。  
   
-5.  对“总计”内 `[Sum(Net_Sales)]` 行组中的 `[Product_Category_Name]` 单元重复步骤 1 到 4  。  
+5.  对“总计”内 `[Product_Category_Name]` 行组中的 `[Sum(Net_Sales)]` 单元重复步骤 1 到 4。  
   
 6.  若要预览报表，请单击 **“运行”** 。  
   

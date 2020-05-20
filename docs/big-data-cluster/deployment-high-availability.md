@@ -76,7 +76,7 @@ ms.locfileid: "79286041"
 }
 ```
 
-以下步骤通过示例演示了如何从 `aks-dev-test-ha` 配置文件开始，自定义大数据群集部署配置。 对于 `kubeadm` 群集上的部署将应用类似的步骤，但请确保对 `NodePort` 部分中的 `serviceType` 使用 `endpoints`。
+以下步骤通过示例演示了如何从 `aks-dev-test-ha` 配置文件开始，自定义大数据群集部署配置。 对于 `kubeadm` 群集上的部署将应用类似的步骤，但请确保对 `endpoints` 部分中的 `serviceType` 使用 `NodePort`。
 
 1. 克隆目标配置文件
 
@@ -132,7 +132,7 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 对于某些操作（例如设置服务器级别配置或手动将数据库添加到可用性组），则必须连接到 SQL Server 实例。 在低于 SQL Server 2019 CU2 的版本中，诸如 `sp_configure`、`RESTORE DATABASE` 或任何可用性组 DDL 之类的操作都需要此类型的连接。 默认情况下，大数据群集不包括启用实例连接的终结点，因此必须手动公开此终结点。 
 
 > [!IMPORTANT]
-> 为连接 SQL Server 实例而公开的终结点仅支持 SQL 身份验证，即使在启用了 Active Directory 的群集中也是如此。 默认情况下，在大数据群集部署过程中，将禁用 `sa` 登录名，并根据在部署时为 `sysadmin` 和 `AZDATA_USERNAME` 环境变量提供的值预配新的 `AZDATA_PASSWORD` 登录名。
+> 为连接 SQL Server 实例而公开的终结点仅支持 SQL 身份验证，即使在启用了 Active Directory 的群集中也是如此。 默认情况下，在大数据群集部署过程中，将禁用 `sa` 登录名，并根据在部署时为 `AZDATA_USERNAME` 和 `AZDATA_PASSWORD` 环境变量提供的值预配新的 `sysadmin` 登录名。
 
 下面的示例演示如何公开此终结点，然后将通过还原工作流创建的数据库添加到可用性组。 当希望使用 `sp_configure` 更改服务器配置时，可以参考与 SQL Server 主实例建立连接的类似说明。
 

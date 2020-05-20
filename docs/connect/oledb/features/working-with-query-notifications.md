@@ -83,7 +83,7 @@ OLE DB Driver for SQL Server 支持行集修改时的使用者通知。 使用�
 |----------|----------|-----------------|
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|查询通知保持为活动状态的秒数。<br /><br /> 默认为 432000 秒（5 天）。 最小值为 1 秒，最大值为 2^31-1 秒。|
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|通知的消息正文。 此消息是用户定义的，没有预定义格式。<br /><br /> 默认情况下，该字符串为空。 使用 1 到 2000 个字符指定一条消息。|
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|查询通知选项。 采用 name*value 语法以字符串形式指定这些内容*=  。 用户负责创建服务并从队列中读取通知。<br /><br /> 默认值为空字符串。|
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|查询通知选项。 采用 name=value 语法以字符串形式指定这些内容。 用户负责创建服务并从队列中读取通知。<br /><br /> 默认值为空字符串。|
 
 始终提交通知订阅。 无论语句是在用户事务中运行还是以自动提交模式运行，或者无论是提交还是回滚运行语句的事务，都将发生这种情况。 根据以下任一无效通知条件激发服务器通知：更改基础数据或架构，或者当达到超时期限时（以先发生者为准）。 
 
@@ -104,7 +104,7 @@ RECEIVE * FROM MyQueue
 
 如果队列为空，该语句将立即返回空的结果集。 否则，它将返回所有队列通知。
 
-如果 `SSPROP_QP_NOTIFICATION_MSGTEXT` 和 `SSPROP_QP_NOTIFICATION_OPTIONS` 为非 null 且非空，则会将包含上面定义的三个属性的查询通知 TDS 标头发送到服务器。 每次执行命令时都会发生这种情况。 如果其中任何一个属性为 null（或为空），则不会发送标头并引发 `DB_E_ERRORSOCCURRED`（如果属性同时标记为可选，则会引发 `DB_S_ERRORSOCCURRED`）。 然后，将状态值设置为 `DBPROPSTATUS_BADVALUE`。 在执行和准备期间进行验证。 类似地，当设置查询通知属性以连接到 `DB_S_ERRORSOCCURED` 之前的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本时，将引发 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 在本例中，状态值为 `DBPROPSTATUS_NOTSUPPORTED`。
+如果 `SSPROP_QP_NOTIFICATION_MSGTEXT` 和 `SSPROP_QP_NOTIFICATION_OPTIONS` 为非 null 且非空，则会将包含上面定义的三个属性的查询通知 TDS 标头发送到服务器。 每次执行命令时都会发生这种情况。 如果其中任何一个属性为 null（或为空），则不会发送标头并引发 `DB_E_ERRORSOCCURRED`（如果属性同时标记为可选，则会引发 `DB_S_ERRORSOCCURRED`）。 然后，将状态值设置为 `DBPROPSTATUS_BADVALUE`。 在执行和准备期间进行验证。 类似地，当设置查询通知属性以连接到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本时，将引发 `DB_S_ERRORSOCCURED`。 在本例中，状态值为 `DBPROPSTATUS_NOTSUPPORTED`。
 
 启动订阅不能保证将成功传递后续消息。 此外，不检查指定服务名称的有效性。
 

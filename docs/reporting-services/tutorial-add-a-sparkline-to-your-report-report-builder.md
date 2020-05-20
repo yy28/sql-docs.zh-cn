@@ -40,7 +40,7 @@ ms.locfileid: "63043078"
   
 3.  在右窗格中，单击“表或矩阵向导”  。  
   
-4.  在“选择数据集”页上，单击“创建数据集” **“下一步”**   >   。 将打开“选择数据源的连接”  页面。  
+4.  在“选择数据集”页上，单击“创建数据集” > “下一步”。 将打开“选择数据源的连接”  页面。  
   
     > [!NOTE]  
     > 本教程不需要具体数据；只需要与 SQL Server 数据库连接。 如果已经具有在“数据源连接”下列出的某一数据源连接，则可以选择该连接并且转到步骤 10。  有关详细信息，请参阅[获取数据连接的备选方式（报表生成器）](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
@@ -173,7 +173,7 @@ ms.locfileid: "63043078"
 
     ![report-builder-placeholder-currency](../reporting-services/media/report-builder-placeholder-currency.png)
   
-    如果区域设置为“英语(美国)”，则默认示例文本为 [ **$12,345.00**]。 如果看不到示例货币值，请在“数字”组中单击“占位符样式” **“示例值”**   >   。  
+    如果区域设置为“英语(美国)”，则默认示例文本为 [ **$12,345.00**]。 如果看不到示例货币值，请在“数字”组中单击“占位符样式” > “示例值”。  
     
     ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
    
@@ -200,7 +200,7 @@ ms.locfileid: "63043078"
 
     ![report-builder-add-column-left](../reporting-services/media/report-builder-add-column-left.png)
   
-4.  在新列中，右键单击 `[Product]` 行中的单元格，选择“插入” **“迷你图”**  >   。  
+4.  在新列中，右键单击 `[Product]` 行中的单元格，选择“插入” > “迷你图”。  
 
     ![report-builder-insert-sparkline](../reporting-services/media/report-builder-insert-sparkline.png)
   

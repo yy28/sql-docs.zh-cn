@@ -25,7 +25,7 @@ ms.locfileid: "67993876"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  LINKEDSERVERS 行集用于枚举可以参与  **分布式查询的组织数据源**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  LINKEDSERVERS 行集用于枚举可以参与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式查询的组织数据源。  
   
  LINKEDSERVERS 行集包含以下列  。  
   

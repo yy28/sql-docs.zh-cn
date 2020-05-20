@@ -115,7 +115,7 @@ azdata app describe --name add-app --version v1
 ## <a name="execute-the-app-using-the-restful-web-service"></a>使用 RESTful Web 服务执行应用
 
 > [!NOTE]
-> 如果需要，可以打开在浏览器中运行 `swagger` 时返回的 `azdata app describe --name [appname] --version [version]` 的 URL，该 URL 应与 `https://[IP]:[PORT]/app/[appname]/[version]/swagger.json` 类似。 必须使用用于 `azdata login` 的同一凭据登录。 可以将 `swagger.json` 的内容粘贴到 [Swagger 编辑器](https://editor.swagger.io)中。 你将看到 Web 服务公开 `run` 方法。 另请注意顶部显示的基 URL。
+> 如果需要，可以打开在浏览器中运行 `azdata app describe --name [appname] --version [version]` 时返回的 `swagger` 的 URL，该 URL 应与 `https://[IP]:[PORT]/app/[appname]/[version]/swagger.json` 类似。 必须使用用于 `azdata login` 的同一凭据登录。 可以将 `swagger.json` 的内容粘贴到 [Swagger 编辑器](https://editor.swagger.io)中。 你将看到 Web 服务公开 `run` 方法。 另请注意顶部显示的基 URL。
 
 你可以使用自己喜欢的工具调用 `run` 方法 (`https://[IP]:30778/api/app/[appname]/[version]/run`)，并在 POST 请求正文中传入参数作为 json。 在本示例中，我们将使用 [Postman](https://www.getpostman.com/)。 在进行调用之前，需要将 `Authorization` 设置为 `Bearer Token` 并粘贴之前检索到的令牌。 这将在你的请求中设置标头。 请参阅以下屏幕截图。
 

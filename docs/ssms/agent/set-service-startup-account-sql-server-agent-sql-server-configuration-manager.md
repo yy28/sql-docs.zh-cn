@@ -69,7 +69,7 @@ ms.locfileid: "75239206"
   
 5.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器的控制台窗格中，选择 **“SQL Server 服务”** 。  
   
-6.  在详细信息窗格中，右键单击“SQL Server 代理 **(server**name) _”\__ （其中 server_name  是要更改其服务启动帐户的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理实例的名称），然后选择“属性”  。  
+6.  在详细信息窗格中，右键单击“SQL Server 代理 _(server\_name)_”（其中 server_name 是要更改其服务启动帐户的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理实例的名称），然后选择“属性”。  
   
 7.  在“SQL Server 代理(server**name)** _属性”\__  对话框的“登录”  选项卡中，选择“登录身份”  下的以下选项之一：  
   

@@ -69,7 +69,7 @@ ms.locfileid: "77558382"
   
  OLE DB Driver for SQL Server 支持使用者请求的数据转换，如图所示。  
   
- sql_variant 对象可以保留除 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max)、xml、timestamp 和 Microsoft .NET Framework 公共语言运行时 (CLR) 用户定义类型以外的任意  **数据类型的数据**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 另外，sql_variant 数据实例还不能将 sql_variant 作为其基础的基本数据类型。 例如，列中的某些行可能包含 smallint 值，而其他某些行可能包含 float 值，剩余的行则包含 char**nchar 值**   /  。  
+ sql_variant 对象可以保留除 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max)、xml、timestamp 和 Microsoft .NET Framework 公共语言运行时 (CLR) 用户定义类型以外的任意 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型的数据。 另外，sql_variant 数据实例还不能将 sql_variant 作为其基础的基本数据类型。 例如，列中的某些行可能包含 smallint 值，而其他某些行可能包含 float 值，剩余的行则包含 char/nchar 值。  
   
 > [!NOTE]  
 >  sql_variant 数据类型类似于 Microsoft Visual Basic® 中的 Variant 数据类型以及 OLEDB 中的 DBTYPE_VARIANT 和 DBTYPE_SQLVARIANT  。  

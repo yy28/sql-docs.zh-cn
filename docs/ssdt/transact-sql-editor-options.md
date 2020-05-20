@@ -36,7 +36,7 @@ ms.locfileid: "75256322"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL 编辑器选项
 
-本主题包含有关 Transact-SQL 编辑器的一些选项的信息。 要设置这些选项，请通过“工具\选项”  菜单导航到“选项”  对话框。  
+本主题包含有关 Transact-SQL 编辑器的一些选项的信息。 要设置这些选项，请通过“工具\选项”菜单导航到“选项”对话框。  
   
 [查询执行](#QueryExecution)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "75256322"
 |**SET CURSOR_CLOSE_ON_COMMIT**|控制在提交事务时是否关闭游标。 有关详细信息，请参阅 [SET CURSOR_CLOSE_ON_COMMIT](https://go.microsoft.com/fwlink/?LinkId=238754)。|  
 |**SET ANSI_PADDING**|对列存储值长度小于列的定义大小的值以及在 **char**、 **varchar**、 **binary**和 **varbinary** 数据中含有尾随空格的列存储值的方式进行控制。 有关详细信息，请参阅 [SET ANSI_PADDING](https://go.microsoft.com/fwlink/?LinkId=238755)。|  
 |**SET ANSI_WARNINGS**|为多个错误条件指定 SQL-92 标准行为。有关详细信息，请参阅 [SET ANSI_WARNINGS](https://go.microsoft.com/fwlink/?LinkId=238758)。|  
-|**SET ANSI_NULLS**|指定在与 null 值一起使用等于 ( **=** ) 和不等于 ( **<>** ) 比较运算符时采用符合 SQL-92 标准的行为。有关详细信息，请参阅 [SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759)。|  
+|**SET ANSI_NULLS**|指定在与 null 值一起使用等于 (=) 和不等于 (<>) 比较运算符时采用符合 SQL-92 标准的行为。有关详细信息，请参阅 [SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759)。|  
   
 ## <a name="query-results"></a><a name="QueryResults"></a>查询结果  
   

@@ -46,7 +46,7 @@ HRESULT Abort(void);
  在 ISSAbort::Abort 返回 S_OK 后，关联的 IMultipleResults 接口将进入不可用状态并对于所有方法调用返回 DB_E_CANCELED（由 IUnknown 接口定义的方法除外），直到释放它为止    。 如果在调用 Abort 之前已从 IMultipleResults 获取了 IRowset，则它也会进入不可用状态，并对所有方法调用返回 DB_E_CANCELED（由 IUnknown 接口和 IRowset::ReleaseRows 定义的方法除外），直到在成功调用 ISSAbort::Abort 之后释放它为止       。  
   
 > [!NOTE]  
->  从 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 开始，如果服务器 XACT_ABORT 状态为 ON，则当连接到  **时，ISSAbort::Abort 的执行将终止并回滚当前所有的隐式或显式事务**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的较早版本不中止当前事务。  
+>  从 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 开始，如果服务器 XACT_ABORT 状态为 ON，则当连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时，ISSAbort::Abort 的执行将终止并回滚当前所有的隐式或显式事务。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的较早版本不中止当前事务。  
   
 ## <a name="arguments"></a>参数  
  无。  

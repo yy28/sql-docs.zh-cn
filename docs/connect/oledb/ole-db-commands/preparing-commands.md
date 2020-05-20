@@ -43,7 +43,7 @@ ms.locfileid: "68016047"
   
  临时存储过程的创建由特定于适用于 SQL Server 的 OLE DB 驱动程序的初始化属性 SSPROP_INIT_USEPROCFORPREP 控制。 如果属性值为 SSPROPVAL_USEPROCFORPREP_ON 或 SSPROPVAL_USEPROCFORPREP_ON_DROP，则适用于 SQL Server 的 OLE DB 驱动程序会在准备命令时尝试创建存储过程。 如果应用程序用户拥有足够的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 权限，存储过程将创建成功。  
   
- 对于很少断开连接的使用者，临时存储过程的创建可能需要大量的 tempdb（即在其中创建临时对象的  **系统数据库）资源**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 如果 SSPROP_INIT_USEPROCFORPREP 的值为 SSPROPVAL_USEPROCFORPREP_ ON，那么由适用于 SQL Server 的 OLE DB 驱动程序创建的临时存储过程在仅当创建命令的会话断开与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的连接时才会被删除。 如果该连接为数据源初始化时创建的默认连接，则临时存储过程仅当数据源变成未初始化状态时才删除。  
+ 对于很少断开连接的使用者，临时存储过程的创建可能需要大量的 tempdb（即在其中创建临时对象的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 系统数据库）资源。 如果 SSPROP_INIT_USEPROCFORPREP 的值为 SSPROPVAL_USEPROCFORPREP_ ON，那么由适用于 SQL Server 的 OLE DB 驱动程序创建的临时存储过程在仅当创建命令的会话断开与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的连接时才会被删除。 如果该连接为数据源初始化时创建的默认连接，则临时存储过程仅当数据源变成未初始化状态时才删除。  
   
  如果 SSPROP_INIT_USEPROCFORPREP 的值为 SSPROPVAL_USEPROCFORPREP_ON_DROP，那么当发生以下情况之一时，会删除适用于 SQL Server 的 OLE DB 驱动程序临时存储过程：  
   

@@ -54,7 +54,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功。 非零值指示已发生错误。  
   
 ## <a name="remarks"></a>备注  
- UseBuiltInAccount 参数设置为 true 并且报表服务器在 Microsoft  *或 Windows XP 上运行时，将忽略 Name、Domain 和 Password 参数的值，并且使用本地系统帐户*  [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)]    。  
+ UseBuiltInAccount 参数设置为 true 并且报表服务器在 Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] 或 Windows XP 上运行时，将忽略 Name、Domain 和 Password 参数的值，并且使用本地系统帐户。  
   
  UseBuiltInAccount 参数设置为 true 并且报表服务器在 Windows Server 2003 上运行时，将忽略 Domain 和 Password 属性，并且名称字段必须包含“Builtin\NetworkService”、“Builtin\System”或“Builtin\LocalService”     。  
   

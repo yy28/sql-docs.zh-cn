@@ -59,7 +59,7 @@ ms.locfileid: "75247300"
 
 2. 展开 **“数据库”** 节点。
 
-3. 右键单击数据库“Adventureworks2016” **“任务”** “备份” >    >   ：
+3. 右键单击数据库“Adventureworks2016” > “任务” > “备份”：
 
     ![备份数据库](media/scripting-ssms/backupdb.png)
 
@@ -75,11 +75,11 @@ ms.locfileid: "75247300"
 
 ### <a name="script-t-sql-when-you-shrink-the-transaction-log"></a>在收缩事务日志时编写 T-SQL 脚本
 
-1. 右键单击数据库“AdventureWorks2016” **“任务”** “收缩” > “文件”   >    >   ：
+1. 右键单击数据库“AdventureWorks2016” > “任务” > “收缩” > “文件”：
 
      ![收缩文件](media/scripting-ssms/shrinkfiles.png)
 
-2. 从  “文件类型”下拉列表框中选择“日志”  ：
+2. 从“文件类型”下拉列表框中选择“日志”：
 
     ![收缩事务日志](media/scripting-ssms/shrinktlog.png)
 
@@ -103,7 +103,7 @@ ms.locfileid: "75247300"
 
 2. 展开 **“数据库”** 节点。
 
-3. 右键单击数据库“AdventureWorks2016” **“编写数据库脚本为”** “创建到” > “新建查询窗口”   >    >   ：
+3. 右键单击数据库“AdventureWorks2016” > “编写数据库脚本为” > “创建到” > “新建查询窗口”：
 
     ![编写数据库脚本](media/scripting-ssms/scriptdb.png)
 
@@ -172,7 +172,7 @@ ms.locfileid: "75247300"
 
 4. 展开“表”节点  。
 
-5. 右键单击“dbo.ErrorLog” **“编写表脚本为”** “删除并创建到” > “新建查询编辑器窗口”   >    >   ：
+5. 右键单击“dbo.ErrorLog” > “编写表脚本为” > “删除并创建到” > “新建查询编辑器窗口”：
 
     ![编写表脚本](media/scripting-ssms/scripttable.png)
 
@@ -193,7 +193,7 @@ ms.locfileid: "75247300"
 
 4. 展开“存储过程”节点  。
 
-5. 右键单击存储过程“dbo.uspGetBillOfMaterials” **“编写存储过程脚本为”** “删除并创建到” > “新建查询编辑器窗口”   >    >   ：
+5. 右键单击存储过程“dbo.uspGetBillOfMaterials” > “编写存储过程脚本为” > “删除并创建到” > “新建查询编辑器窗口”：
 
     ![编写存储过程脚本](media/scripting-ssms/scriptstoredprocedure.PNG)
 
@@ -209,7 +209,7 @@ ms.locfileid: "75247300"
 
 4. 展开“会话”节点  。
 
-5. 右键单击感兴趣的扩展会话 >“编写会话脚本为” **“CREATE 到”** “新建查询编辑器窗口” >    >   ：
+5. 右键单击感兴趣的扩展会话 >“编写会话脚本为” > “CREATE 到” > “新建查询编辑器窗口”：
 
     ![扩展的新建查询编辑器窗口会话](media/scripting-ssms/scriptxevents.png)
 

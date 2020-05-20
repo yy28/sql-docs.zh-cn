@@ -42,7 +42,7 @@ ms.locfileid: "67988787"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入了 xml 数据类型，它可用于在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中存储 XML 文档和片段  。 xml 数据类型是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的内置数据类型，在某些方面类似于其他内置类型（如 int 和 varchar）    。 与使用其他内置类型一样，可以在创建表时将 xml 数据类型用作列类型，也可以将其用作变量类型、参数类型或函数返回类型，还可以将其用在 CAST 和 CONVERT 函数中  。  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入了 xml 数据类型，它可用于在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中存储 XML 文档和片段。 xml 数据类型是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的内置数据类型，在某些方面类似于其他内置类型（如 int 和 varchar）。 与使用其他内置类型一样，可以在创建表时将 xml 数据类型用作列类型，也可以将其用作变量类型、参数类型或函数返回类型，还可以将其用在 CAST 和 CONVERT 函数中  。  
   
 ## <a name="programming-considerations"></a>编程时的注意事项  
  XML 可以是自描述的，即可以根据需要包含一个 XML 标头来指定文档的编码，例如：  
@@ -90,7 +90,7 @@ ms.locfileid: "67988787"
 |DBTYPE_WSTR|传递<sup>6，10</sup>|N/A <sup>2</sup>|成功<sup>4，6，12</sup>|N/A <sup>2</sup>|  
 |DBTYPE_BSTR|传递<sup>6，10</sup>|N/A <sup>2</sup>|成功 <sup>3</sup>|N/A <sup>2</sup>|  
 |DBTYPE_STR|成功<sup>6，9，10</sup>|N/A <sup>2</sup>|成功<sup>5，6，12</sup>|N/A <sup>2</sup>|  
-|DBTYPE_IUNKNOWN|通过 ISequentialStream 的字节流<sup>7</sup> |N/A <sup>2</sup>|通过 ISequentialStream 的字节流<sup>11</sup> |N/A <sup>2</sup>|  
+|DBTYPE_IUNKNOWN|通过 ISequentialStream 的字节流<sup>7</sup>|N/A <sup>2</sup>|通过 ISequentialStream 的字节流<sup>11</sup>|N/A <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|传递<sup>6，7</sup>|N/A <sup>2</sup>|空值|N/A <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|传递<sup>6，10</sup>|N/A <sup>2</sup>|成功<sup>3</sup>|N/A <sup>2</sup>|  
   
@@ -192,7 +192,7 @@ ms.locfileid: "67988787"
  OLE DB Driver for SQL Server 在许多核心 OLE DB 接口中添加了新值或进行了更改。  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters 接口  
- 为通过 OLE DB 支持 xml 数据类型，适用于 SQL Server 的 OLE DB 驱动程序实现了大量更改，包括添加 [ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md) 接口  。 这一新接口继承自核心 OLE DB 接口 ICommandWithParameters  。 除了从 ICommandWithParameters 继承的三个方法（GetParameterInfo、MapParameterNames 和 SetParameterInfo），ISSCommandWithParameters 还提供 [GetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) 和 [SetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) 方法，它们用于处理服务器特定的数据类型      。  
+ 为通过 OLE DB 支持 xml 数据类型，适用于 SQL Server 的 OLE DB 驱动程序实现了大量更改，包括添加 [ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md) 接口。 这一新接口继承自核心 OLE DB 接口 ICommandWithParameters  。 除了从 ICommandWithParameters 继承的三个方法（GetParameterInfo、MapParameterNames 和 SetParameterInfo），ISSCommandWithParameters 还提供 [GetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) 和 [SetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) 方法，它们用于处理服务器特定的数据类型。  
   
 > [!NOTE]  
 >  ISSCommandWithParameters 接口也利用新的 SSPARAMPROPS 结构  。  

@@ -58,7 +58,7 @@ ms.locfileid: "67993857"
 |IDBSchemaRowset::GetSchemaRowset|DBSCHEMA_COLUMNS 返回两个新列：SS_IS_COLUMN_SET 和 SS_IS_SPARSE。<br /><br /> DBSCHEMA_COLUMNS 仅返回不属于 column_set 成员的列  。<br /><br /> 已添加两个新架构行集：不管 column_set 成员身份的稀疏性如何，DBSCHEMA_COLUMNS_EXTENDED 都将返回所有列  。 DBSCHEMA_SPARSE_COLUMN_SET 仅返回属于 column_set 成员的列  。 这些新行集具有与 DBSCHEMA_COLUMNS 相同的列和限制。|  
 |IDBSchemaRowset::GetSchemas|IDBSchemaRowset::GetSchemas 将新行集 DBSCHEMA_COLUMNS_EXTENDED 和 DBSCHEMA_SPARSE_COLUMN_SET 的 GUID 包括在可用架构行集的列表中。|  
 |ICommand::Execute|如果使用表中的 select **，它将返回不属于稀疏 column_set 成员的所有列，外加一个 XML 列（如果有），其中包含属于稀疏 column_set 成员的所有非 NULL 列的值\***    。|  
-|IOpenRowset::OpenRowset|IOpenRowset::OpenRowset 通过同一表上的 select **\*** 查询返回与 ICommand::Execute 具有相同列的行集。|  
+|IOpenRowset::OpenRowset|IOpenRowset::OpenRowset 通过同一表上的 select\* 查询返回与 ICommand::Execute 具有相同列的行集。|  
 |ITableDefinition|对于稀疏列或 column_set 列，该接口没有更改  。 必须进行架构修改的应用程序必须直接执行正确的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]。|  
   
 ## <a name="see-also"></a>另请参阅  

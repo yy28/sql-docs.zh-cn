@@ -19,19 +19,19 @@ helpviewer_keywords:
 - sys.sp_cdc_help_change_data_capture
 - sp_cdc_help_change_data_capture
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: fdf0086fe3a87823a419f3535888ea3211ee9ef1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b5ceaaa02d07e34e1e93789d2c72f80a3459a472
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905177"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807958"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  返回当前数据库中为变更数据捕获启用的每个表的变更数据捕获配置。 最多可为每个源表返回两行，为每个捕获实例返回一行。 并非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供变更数据捕获功能。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2016 的各个[版本支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+  返回当前数据库中为变更数据捕获启用的每个表的变更数据捕获配置。 最多可为每个源表返回两行，为每个捕获实例返回一行。 并非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供变更数据捕获功能。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,14 +45,14 @@ sys.sp_cdc_help_change_data_capture
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @source_schema = ]"*source_schema*"  
+ [ @source_schema =] "*source_schema*"  
  源表所属架构的名称。 *source_schema*的默认值为**sysname**，默认值为 NULL。 指定*source_schema*时，还必须指定*source_name* 。  
   
  如果非 NULL，则当前数据库中必须存在*source_schema* 。  
   
  如果*source_schema*为非 null，则*source_name*也必须为非 null。  
   
- [ @source_name = ]"*source_name*"  
+ [ @source_name =] "*source_name*"  
  源表的名称。 *source_name*的默认值为**sysname**，默认值为 NULL。 指定*source_name*时，还必须指定*source_schema* 。  
   
  如果非 NULL，则当前数据库中必须存在*source_name* 。  

@@ -42,7 +42,7 @@ KPI 将只使用共享数据集的第一行数据。 请确保你想要使用的
 可以在报表服务器中的任何文件夹中创建 KPI。  创建 KPI 前，需要考虑 KPI 的正确放置位置。 可以将它放在用户可见、同时可与周围其他报表和 KPI 相关的文件夹中。  
 ## <a name="adding-a-kpi"></a>添加 KPI
   
-在确定 KPI 的位置之后，转到该文件夹并从顶部菜单中选择“新建” **“KPI”**  >   。  
+在确定 KPI 的位置之后，转到该文件夹并从顶部菜单中选择“新建” > “KPI”。  
   
 ![rsCreateKPI1](../reporting-services/media/rscreatekpi1.png)  
   

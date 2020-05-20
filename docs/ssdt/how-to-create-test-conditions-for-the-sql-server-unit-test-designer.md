@@ -36,7 +36,7 @@ ms.locfileid: "75241480"
   
 6.  在“项目”  菜单上，单击“卸载项目”  。  
   
-7.  在“解决方案资源管理器”  中右键单击项目，然后选择“编辑 **.csproj”<project name>** 。  
+7.  在“解决方案资源管理器”中右键单击项目，然后选择“编辑 <project name>.csproj”。  
   
 8.  在导入 Microsoft.CSharp.targets 后添加以下 Import 语句：  
   

@@ -32,7 +32,7 @@ ms.locfileid: "75254682"
   
 ## <a name="create-a-table"></a>创建表  
   
-1. 右键单击数据库中的“表”节点，然后选择“新建” **“表”**   >   ：  
+1. 右键单击数据库中的“表”节点，然后选择“新建” > “表”：  
   
     ![新建表](../media/design-tables/new-table.png)
   

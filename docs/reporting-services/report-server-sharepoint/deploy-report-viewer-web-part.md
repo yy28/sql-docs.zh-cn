@@ -80,7 +80,7 @@ ms.locfileid: "77256676"
 
     ![齿轮图标中的“网站设置”。](media/sharepoint-site-settings.png)
 
-    默认情况下，通过端口 80 访问 SharePoint Web 应用程序。 这意味着通常可通过输入 https:// *打开根网站集以访问 SharePoint 网站<computer name>* 。
+    默认情况下，通过端口 80 访问 SharePoint Web 应用程序。 这意味着通常可通过输入 https://<computer name> 打开根网站集以访问 SharePoint 网站。
 
 3. 在“网站集管理”中，选择“网站集功能”   。
 
@@ -120,7 +120,7 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 
     ![齿轮图标中的“网站设置”。](media/sharepoint-site-settings.png)
 
-    默认情况下，通过端口 80 访问 SharePoint Web 应用程序。 这意味着通常可通过输入 https:// *打开根网站集以访问 SharePoint 网站<computer name>* 。
+    默认情况下，通过端口 80 访问 SharePoint Web 应用程序。 这意味着通常可通过输入 https://<computer name> 打开根网站集以访问 SharePoint 网站。
 
 2. 在“Web 设计器库”下，选择“Web 部件”   。
 

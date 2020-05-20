@@ -27,7 +27,7 @@ ms.locfileid: "78261886"
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-本节介绍了  **中“连接到服务器”** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框页的 F1 帮助。  
+本节介绍了 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中“连接到服务器”对话框页的 F1 帮助。  
   
 [查找服务器（本地服务器）](../../ssms/f1-help/browse-for-servers-local-servers.md)  
   

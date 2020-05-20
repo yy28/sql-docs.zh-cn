@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.sp_cdc_generate_wrapper_function
 - sp_cdc_generate_wrapper_function
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 074e114f81db6615a04240f10447a3f711a51cf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d1f29541162381923faa6baa4ca6ce8d362a0f27
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083754"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808169"
 ---
 # <a name="syssp_cdc_generate_wrapper_function-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +50,16 @@ sys.sp_cdc_generate_wrapper_function
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @capture_instance= ]"*capture_instance*"  
+ [ @capture_instance =] "*capture_instance*"  
  要为其生成脚本的捕获实例。 *capture_instance* **sysname** ，并且其默认值为 NULL。 如果不指定值，或将值显式设置为 NULL，则会为所有捕获实例生成包装脚本  
   
- [ @closed_high_end_point= ]*high_end_pt_flag*  
+ [ @closed_high_end_point =] *high_end_pt_flag*  
  一个标志位，指示生成的过程是否将提交时间等于高端点的更改包括在提取间隔内。 *high_end_pt_flag*是**bit** ，默认值为1，指示应包括端点。 值为 0 表示所有提交时间将严格小于高端点。  
   
- [ @column_list= ]"*column_list*"  
+ [ @column_list =] "*column_list*"  
  将包括在由包装函数返回的结果集中的捕获列的列表。 *column_list*为**nvarchar （max）** ，其默认值为 NULL。 指定 NULL 时，将包括所有捕获列。  
   
- [ @update_flag_list= ]"*update_flag_list*"  
+ [ @update_flag_list =] "*update_flag_list*"  
  包含的列的列表，在由包装函数返回的结果集中将为这些列包括一个更新标志。 *update_flag_list*为**nvarchar （max）** ，其默认值为 NULL。 指定 NULL 时，不包括更新标志。  
   
 ## <a name="return-code-values"></a>返回代码值  

@@ -46,14 +46,14 @@ ms.locfileid: "69028896"
   
 可以从 Reporting Services 支持的任何数据源为移动报表创建共享数据源。 请参阅[支持的数据源列表](../report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
-1. 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中，单击“新建” **“数据源”**  >   。  
+1. 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中，单击“新建” > “数据源”。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
 3. 输入数据源信息，然后单击“确定”  。  
   
     默认情况下，数据源不会显示在门户中。    
    
-5. 若要查看数据源，请单击“显示” **“数据源”**  >   。  
+5. 若要查看数据源，请单击“显示” > “数据源”。  
   
    ![PBI_SSMRP_DisplayDataSources](../../reporting-services/mobile-reports/media/pbi-ssmrp-displaydatasources.png)  
    
@@ -67,7 +67,7 @@ ms.locfileid: "69028896"
   
 使用现有的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 客户端工具（例如 [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]中的报表设计器）创建共享数据集。  本演练使用 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。 [安装报表生成器](../install-windows/install-report-builder.md)，或从 Web 门户启动它。 需要创建三个数据集，一个用于 KPI 值，一个用于 KPI 趋势，包含更多字段的那一个用于 Reporting Services 移动报表。     
   
-1. 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中，单击“新建” **“分页报表”以启动**  >   [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。  
+1. 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中，单击“新建” > “分页报表”以启动 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)   
 2. 单击“新数据集”  。  
@@ -96,7 +96,7 @@ ms.locfileid: "69028896"
 ## <a name=""></a><a name="create-KPI">创建 KPI</a>  
 可在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中立即创建 KPI。    
   
-1. 在 Web 门户右上角，单击“新建” **“新建 KPI”**  >   。   
+1. 在 Web 门户右上角，单击“新建” > “新建 KPI”。   
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
       
@@ -141,7 +141,7 @@ ms.locfileid: "69028896"
   
 ## <a name="start-with-the-visuals"></a>从视觉对象开始  
   
-1. 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中，单击“新建” **“移动报表”以启动**  >   [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]。  
+1. 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中，单击“新建” > “移动报表”以启动 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)
 
@@ -246,7 +246,7 @@ ms.locfileid: "69028896"
   
 3. 在服务器上，浏览到要保存移动报表的文件夹。  
   
-4. 单击“选择文件夹” **“保存”**  >   。  
+4. 单击“选择文件夹” > “保存”。  
   
    你会收到一条确认报表已保存的消息。  
     

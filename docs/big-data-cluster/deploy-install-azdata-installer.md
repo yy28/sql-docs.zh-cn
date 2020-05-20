@@ -20,7 +20,7 @@ ms.locfileid: "73594331"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-本文介绍如何在 Windows 上安装用于 SQL Server 2019 大数据群集的 `azdata`。 在 Windows 安装可用之前，需要使用 `azdata` 安装 `pip`。
+本文介绍如何在 Windows 上安装用于 SQL Server 2019 大数据群集的 `azdata`。 在 Windows 安装可用之前，需要使用 `pip` 安装 `azdata`。
 
 >对于 Linux (Ubuntu)，请参阅[使用安装程序安装 `azdata`](./deploy-install-azdata-linux-package.md)。
 

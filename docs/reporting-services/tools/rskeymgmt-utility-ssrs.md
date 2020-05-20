@@ -147,7 +147,7 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>联接同一台计算机上的报表服务器实例  
  可以从安装在同一台计算机上的多个报表服务器实例创建扩展部署。 如果要联接本地安装的报表服务器实例，请不要设置 **-u** 和 **-v** 参数。 仅当联接远程计算机中的实例时才需使用 **-u** 和 **-v** 参数。 如果指定这些参数，您将收到以下错误：“用户凭据不能用于本地连接”。  
   
- 以下示例说明了使用多个本地实例创建扩展部署的语法。 在此示例中，\<initializedinstance> 是已初始化为使用报表服务器数据库的实例名称，而 **newinstance> 是要添加到部署的实例名称**\<  ：  
+ 以下示例说明了使用多个本地实例创建扩展部署的语法。 在此示例中，\<initializedinstance> 是已初始化为使用报表服务器数据库的实例名称，而 \<newinstance> 是要添加到部署的实例名称：  
   
 ```  
 rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>  

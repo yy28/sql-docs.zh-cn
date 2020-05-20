@@ -56,7 +56,7 @@ ms.locfileid: "74866314"
   
 3.  键入以下命令，为本地报表服务器实例配置该帐户：  
   
-     rsconfig -e -u**域/用户名> -p\<密码>\<**  
+     rsconfig -e -u\<域/用户名> -p\<密码>  
   
  **rsconfig -e** 支持其他参数。 要详细了解语法并查看命令示例，请参阅 [rsconfig 实用工具 &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md).
  

@@ -67,7 +67,7 @@ ms.locfileid: "63193770"
     <Extension Name="My Delivery Extension Name" Type="CompanyName.ExtensionName.MyDeliveryExtensionClass, AssemblyName" />  
     ```  
   
-     Name 的值是传递扩展插件的唯一名称  。 Type 的值是以逗号分隔的列表，包括实现  **接口的类的完全限定命名空间的条目，后跟程序集的名称（不包括 .dll 文件扩展名）** <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension>。 默认情况下，传递扩展插件是可见的。 若要从用户界面（如 Web 门户）中隐藏扩展插件，请将 Visible 属性添加到 Extension 元素，并将其设置为 false    。  
+     Name 的值是传递扩展插件的唯一名称  。 Type 的值是以逗号分隔的列表，包括实现 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> 接口的类的完全限定命名空间的条目，后跟程序集的名称（不包括 .dll 文件扩展名）。 默认情况下，传递扩展插件是可见的。 若要从用户界面（如 Web 门户）中隐藏扩展插件，请将 Visible 属性添加到 Extension 元素，并将其设置为 false    。  
   
 5.  最后，为自定义程序集添加一个代码组，以便为传递扩展插件授予 FullTrust 权限  。 为此，需要将代码组添加到 rssrvpolicy.config 文件，该文件默认位于 %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer 中。 代码组可能如下所示：  
   
