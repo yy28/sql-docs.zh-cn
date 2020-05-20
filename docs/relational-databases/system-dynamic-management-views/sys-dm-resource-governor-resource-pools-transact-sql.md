@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_resource_governor_resource_pools dynamic management view
 ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c39c32a907cecd8f670875fffba9f21995f2ccee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae7fd97640b048d504dd03599bf991e9ae91929d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982300"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827834"
 ---
 # <a name="sysdm_resource_governor_resource_pools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "73982300"
   返回有关当前资源池状态、资源池的当前配置以及资源池统计信息的信息。  
   
 > [!NOTE]  
->  若要从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]调用此，请使用名称**dm_pdw_nodes_resource_governor_resource_pools**。  
+>  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_resource_governor_resource_pools**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -76,7 +76,7 @@ ms.locfileid: "73982300"
 |write_io_stall_queued_ms|**bigint**|**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> 写 IO 到达和发出之间的总时间（毫秒）。 可以为 Null。 如果没有为 IO 调控资源池，则为 null。 也就是说，资源池 MIN_IOPS_PER_VOLUME 和 MAX_IOPS_PER_VOLUME 设置是0。<br /><br /> 这是 IO 资源调控所引入的延迟。|  
 |io_issue_violations_total|**int**|**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> 总 IO 发出违反数。 即 IO 发出率低于保留比率时的次数。 可以为 Null。 如果没有为 IO 调控资源池，则为 null。 也就是说，资源池 MIN_IOPS_PER_VOLUME 和 MAX_IOPS_PER_VOLUME 设置是0。|  
 |io_issue_delay_total_ms|**bigint**|**适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。<br /><br /> 预定发出 IO 和实际发出 IO 之间的总时间（毫秒）。 可以为 Null。 如果没有为 IO 调控资源池，则为 null。 也就是说，资源池 MIN_IOPS_PER_VOLUME 和 MAX_IOPS_PER_VOLUME 设置是0。|  
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="remarks"></a>备注  
  资源调控器工作负荷组和资源调控器资源池具有多对一映射关系。 因此，许多资源池统计信息都是派生自工作负荷组统计信息。  

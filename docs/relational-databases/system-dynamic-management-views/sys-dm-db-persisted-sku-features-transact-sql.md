@@ -17,19 +17,19 @@ helpviewer_keywords:
 - editions [SQL Server]
 - sys.dm_db_persisted_sku_features dynamic management view
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f689541d455f4f7e6da4cc68742519a74f671506
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c92a9271575a725aef6981b97cb9b35c81829044
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73981838"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828048"
 ---
 # <a name="sysdm_db_persisted_sku_features-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  的[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]某些功能改变了在数据库文件[!INCLUDE[ssDE](../../includes/ssde-md.md)]中存储信息的方式。 这些功能仅限于特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本。 不能将包含这些功能的数据库移到不支持这些功能的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 使用 sys. dm_db_persisted_sku_features 动态管理视图可列出当前数据库中启用的特定于版本的功能。
+  的某些功能改变了在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 数据库文件中存储信息的方式。 这些功能仅限于特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本。 不能将包含这些功能的数据库移到不支持这些功能的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 使用 sys. dm_db_persisted_sku_features 动态管理视图可列出当前数据库中启用的特定于版本的功能。
   
 **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）。
   
@@ -44,15 +44,15 @@ ms.locfileid: "73981838"
 ## <a name="remarks"></a>备注  
  如果数据库未使用特定版本可能限制的任何功能，则视图不返回任何行。  
   
- sys. dm_db_persisted_sku_features 可能会列出以下数据库更改的功能，这些功能仅[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]限于特定版本：  
+ sys. dm_db_persisted_sku_features 可能会列出以下数据库更改的功能，这些功能仅限于特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本：  
   
 -   **ChangeCapture**：指示数据库已启用更改数据捕获。 若要删除变更数据捕获，请使用[sys. sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)存储过程。 有关详细信息，请参阅[关于变更数据捕获 (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)。  
   
--   **ColumnStoreIndex**：指示至少有一个表具有列存储索引。 若要使数据库移到不支持此功能的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本，请使用[DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)或[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)语句删除列存储索引。 有关详细信息，请参阅[列存储索引](../../relational-databases/indexes/columnstore-indexes-overview.md)。  
+-   **ColumnStoreIndex**：指示至少有一个表具有列存储索引。 若要使数据库移到不 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持此功能的版本，请使用[DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)或[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)语句删除列存储索引。 有关详细信息，请参阅[列存储索引](../../relational-databases/indexes/columnstore-indexes-overview.md)。  
   
     **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）。  
   
--   **压缩**：指示至少一个表或索引使用数据压缩或 vardecimal 存储格式。 若要使数据库移到不支持此功能的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本，请使用[Alter TABLE](../../t-sql/statements/alter-table-transact-sql.md)或[alter INDEX](../../t-sql/statements/alter-index-transact-sql.md)语句删除数据压缩。 若要删除 vardecimal 存储格式，请使用 sp_tableoption 语句。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。  
+-   **压缩**：指示至少一个表或索引使用数据压缩或 vardecimal 存储格式。 若要使数据库移到不 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持此功能的版本，请使用[alter TABLE](../../t-sql/statements/alter-table-transact-sql.md)或[alter INDEX](../../t-sql/statements/alter-index-transact-sql.md)语句删除数据压缩。 若要删除 vardecimal 存储格式，请使用 sp_tableoption 语句。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。  
   
 -   **MultipleFSContainers**：指示数据库使用多个 FILESTREAM 容器。 数据库具有包含多个容器（文件）的 FILESTREAM 文件组。 有关详细信息，请参阅 [FILESTREAM (SQL Server)](../../relational-databases/blob/filestream-sql-server.md)。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "73981838"
 -   **TransparentDataEncryption。** 指示使用透明数据加密对数据库进行加密。 若要删除透明数据加密，请使用 ALTER DATABASE 语句。 有关详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
 
 > [!NOTE]
-> 从[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1 开始，这些功能除外， **TransparentDataEncryption 除外。** 跨多个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本提供，并不限于 Enterprise Edition 或 Developer edition。
+> 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1 开始，这些功能除外， **TransparentDataEncryption 除外。** 跨多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本提供，并不限于 Enterprise edition 或 Developer edition。
 
  若要确定数据库是否使用仅限于特定版本的任何功能，请对数据库执行下面的语句：  
   

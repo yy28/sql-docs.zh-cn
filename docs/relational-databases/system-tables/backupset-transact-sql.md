@@ -17,15 +17,15 @@ helpviewer_keywords:
 - backup media [SQL Server], backupset system table
 - backup sets [SQL Server]
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b138a299edbb1e9f3a2314e92b7e77418594a711
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0eb367dd29a96f5819563f0b10e036b7274c4303
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68119334"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827348"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "68119334"
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]主要版本号。 可以为 NULL。|  
 |**software_minor_version**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 次版本号。 可以为 NULL。|  
 |**software_build_version**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部版本号。 可以为 NULL。|  
-|time_zone****|**smallint**|本地时间（备份操作发生地的时间）和协调世界时 (UTC) 之间的差异（以 15 分钟为单位）。 值可介于（含） -48 到 +48 之间。 值 127 表示未知。 例如，-20 为美国东部标准时间 (EST)，即比 UTC 晚 5 小时。 可以为 NULL。|  
+|**time_zone**|**smallint**|本地时间（备份操作发生地的时间）和协调世界时 (UTC) 之间的差异（以 15 分钟为单位）。 值可介于（含） -48 到 +48 之间。 值 127 表示未知。 例如，-20 为美国东部标准时间 (EST)，即比 UTC 晚 5 小时。 可以为 NULL。|  
 |**mtf_minor_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 磁带格式的次版本号。 可以为 NULL。|  
 |**first_lsn**|**numeric(25,0)**|备份集中第一条或最早的日志记录的日志序列号。 可以为 NULL。|  
 |**last_lsn**|**numeric(25,0)**|备份集之后的下一条日志记录的日志序列号。 可以为 NULL。|  
@@ -64,7 +64,7 @@ ms.locfileid: "68119334"
 |**database_creation_date**|**datetime**|数据库最初创建的日期和时间。 可以为 NULL。|  
 |**backup_start_date**|**datetime**|备份操作的开始日期和时间。 可以为 NULL。|  
 |**backup_finish_date**|**datetime**|备份操作的结束日期和时间。 可以为 NULL。|  
-|**type**|**char （1）**|备份类型。 可以是：<br /><br /> D = 数据库<br /><br /> I = 差异数据库<br /><br /> L = 日志<br /><br /> F = 文件或文件组<br /><br /> G = 差异文件<br /><br /> P = 部分<br /><br /> Q = 差异部分<br /><br /> 可以为 NULL。|  
+|type |**char （1）**|备份类型。 可以是：<br /><br /> D = 数据库<br /><br /> I = 差异数据库<br /><br /> L = 日志<br /><br /> F = 文件或文件组<br /><br /> G = 差异文件<br /><br /> P = 部分<br /><br /> Q = 差异部分<br /><br /> 可以为 NULL。|  
 |**sort_order**|**smallint**|执行备份操作的服务器的排序顺序。 可以为 NULL。 有关排序顺序和排序规则的详细信息，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。|  
 |**code_page**|**smallint**|执行备份操作的服务器的代码页。 可以为 NULL。 有关代码页的详细信息，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。|  
 |**compatibility_level**|**tinyint**|数据库的兼容级别设置。 可以是：<br /><br /> 90 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 100 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 120 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> 可以为 NULL。<br /><br /> 有关兼容性级别的详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。|  
@@ -73,7 +73,7 @@ ms.locfileid: "68119334"
 |**database_name**|**nvarchar(128)**|备份操作中涉及的数据库的名称。 可以为 NULL。|  
 |server_name |**nvarchar(128)**|运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份操作的服务器的名称。 可以为 NULL。|  
 |**machine_name**|**nvarchar(128)**|运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的计算机的名称。 可以为 NULL。|  
-|**flag**|**int**|在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，**标志**列已被弃用，并且将被替换为以下位列：<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> 可以为 NULL。<br /><br /> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]　早期版本的备份集中，标志位如下：<br />1 = 备份包含最少的记录数据。 <br />2 = 使用了 WITH SNAPSHOT。 <br />4 = 备份时数据库为只读。<br />8 = 备份时数据库处于单用户模式。|  
+|**flag**|**int**|在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，**标志**列已被弃用，并且将被替换为以下位列：<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> 可以为 NULL。<br /><br /> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]　早期版本的备份集中，标志位如下：<br />1 = 备份包含最少的记录数据。 <br />2 = 使用了 WITH SNAPSHOT。 <br />4 = 备份时数据库为只读。<br />8 = 备份时数据库处于单用户模式。|  
 |**unicode_locale**|**int**|Unicode 区域设置。 可以为 NULL。|  
 |**unicode_compare_style**|**int**|Unicode 比较风格。 可以为 NULL。|  
 |**collation_name**|**nvarchar(128)**|排序规则名。 可以为 NULL。|  
@@ -108,14 +108,14 @@ ms.locfileid: "68119334"
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;Transact-sql&#41;备份和还原表](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
- [backupfile &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
- [backupfilegroup &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
- [backupmediafamily &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
- [backupmediaset &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
- [备份和还原期间可能的媒体错误 &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
- [介质集、介质簇和备份集 &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
+ [backupfile (Transact-SQL)](../../relational-databases/system-tables/backupfile-transact-sql.md)   
+ [backupfilegroup (Transact-SQL)](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
+ [backupmediafamily (Transact-SQL)](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
+ [backupmediaset (Transact-SQL)](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
+ [备份和还原期间可能出现的媒体错误 (SQL Server)](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
+ [媒体集、媒体簇和备份集 (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [恢复模式 (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
- [RESTORE HEADERONLY &#40;Transact-sql&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
+ [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
  [&#40;Transact-sql&#41;备份和还原表](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)  
   
   

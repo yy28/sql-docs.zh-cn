@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_db_increased_partitions
 ms.assetid: a8c043ec-b504-4929-ac0e-8babaa99d989
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 83a40c9070db1c997f30db71a6cff226cd0430d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8efcbb99bfbb7d1b4492c7945304de65192804e6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108257"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826195"
 ---
 # <a name="sp_db_increased_partitions"></a>sp_db_increased_partitions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_dp_increased_partitions
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @dbname= ]"*database_name*"  
+ [ @dbname =] "*database_name*"  
  数据库的名称。 在**sysname** *中，默认*值为 NULL。 如果未指定*dbname* ，则使用当前数据库。  
   
- [ @increased_partitions= ]"*increased_partitions*"  
+ [ @increased_partitions =] "*increased_partitions*"  
  对指定的数据库启用或禁用对 15000 个分区的支持。 *increased_partitions*的值为**varchar （6）** ，默认值为 NULL。 要启用支持，则接受的值是“ON”或“TRUE”；要禁用支持，则接受的值为“OFF”和“FALSE”。 如果未指定*increased_partitions* ，则该过程将返回1，表示已对指定的数据库启用支持，或为0以指示禁用了支持。  
   
 ## <a name="return-code-values"></a>返回代码值  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_configure_peerconflictdetection
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8a8cc9930ddf85dea60999e3b63dbcebaaf42d8f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a332257b640124c04ed339ff11473b89a7c3b83b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68215944"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828431"
 ---
 # <a name="sp_configure_peerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,41 +44,41 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @publication=]"*发布*"  
+ [ @publication =] "*发布*"  
  要配置冲突检测的发布的名称。 *发布*为**sysname**，无默认值。  
   
- [ @action= ]"*action*"  
+ [ @action =] "*action*"  
  指定是否为发布启用或禁用冲突检测。 *操作*为**nvarchar （5）**，可以为以下值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
-|**可**|为发布启用冲突检测。|  
-|**禁用**|为发布禁用冲突检测。|  
+|**enable**|为发布启用冲突检测。|  
+|**disable**|为发布禁用冲突检测。|  
 |NULL（默认值）||  
   
- [ @originator_id= ]*originator_id*  
+ [ @originator_id =] *originator_id*  
  指定对等拓扑中某个节点的 ID。 *originator_id*的值为**int**，默认值为 NULL。 如果 "*操作*" 设置为 "**启用**"，则此 ID 用于冲突检测。 请指定拓扑中从未使用过的非零、正值 ID。 有关已经使用过的 ID 的列表，请查询 [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) 系统表。  
   
- [ @conflict_retention= ]*conflict_retention*  
+ [ @conflict_retention =] *conflict_retention*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @continue_onconflict= ]"*continue_onconflict*"]  
+ [ @continue_onconflict =] "*continue_onconflict*"]  
  确定检测到冲突后分发代理是否继续处理更改。 *continue_onconflict*为**nvarchar （5）** ，默认值为 FALSE。  
   
 > [!CAUTION]  
 >  建议您使用默认值 FALSE。 如果此选项设置为 TRUE，则分发代理会尝试应用来自具有最高发起方 ID 的节点的冲突行来收敛拓扑中的数据。 此方法不保证将会收敛。 您应确保检测到冲突之后拓扑保持一致。 有关详细信息，请参阅 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)中的“处理冲突”。  
   
- [ @local= ]"*local*"  
+ [ @local =] "*local*"  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @timeout= ]*超时*  
+ [ @timeout =]*超时*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
- sp_configure_peerconflictdetection 用于对等事务复制。 若要使用冲突检测，所有节点都必须[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]运行或更高版本;必须为所有节点启用和检测。  
+ sp_configure_peerconflictdetection 用于对等事务复制。 若要使用冲突检测，所有节点都必须运行 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本; 并且必须为所有节点启用检测。  
   
 ## <a name="permissions"></a>权限  
  要求具有 sysadmin 固定服务器角色或 db_owner 固定数据库角色的成员身份。  

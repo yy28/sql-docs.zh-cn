@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobactivity
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 95283eee1a38dbafd9824986188df565103de06c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 755ba9552945e0e983fa5eef6cc53de1c29be5e3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68054985"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827628"
 ---
 # <a name="sp_help_jobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**job_id**|**uniqueidentifier**|作业标识符。|  
 |**job_name**|**sysname**|作业的名称。|  
 |**run_requested_date**|**datetime**|请求运行作业的时间。|  
-|**run_requested_source**|**sysname**|请求运行作业的请求源。 即以下函数之一：<br /><br /> **1** = 按计划运行<br /><br /> **2** = 为响应警报而运行<br /><br /> **3** = 启动时运行<br /><br /> **4** = 按用户运行<br /><br /> **6** = 按 CPU 空闲计划运行|  
+|**run_requested_source**|**sysname**|请求运行作业的请求源。 下列其中一项：<br /><br /> **1** = 按计划运行<br /><br /> **2** = 为响应警报而运行<br /><br /> **3** = 启动时运行<br /><br /> **4** = 按用户运行<br /><br /> **6** = 按 CPU 空闲计划运行|  
 |**queued_date**|**datetime**|将请求加入队列的时间。 如果直接运行作业，则该值为 NULL。|  
 |**start_execution_date**|**datetime**|将作业分配给可运行线程的时间。|  
 |**last_executed_step_id**|**int**|最近运行的作业步骤的 ID。|  

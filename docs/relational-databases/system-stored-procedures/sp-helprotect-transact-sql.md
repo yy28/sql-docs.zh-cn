@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helprotect
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7db43df5d500e56e58e3e8465ac03158fe7e4d21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8ff791855f7e65652f64d18f3128831172da9229
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997476"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828871"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "67997476"
   返回一个报表，报表中包含当前数据库中某对象的用户权限或语句权限的信息。  
   
 > [!IMPORTANT]  
->  **sp_helprotect**不返回有关中[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]引入的安全对象的信息。 改为使用[database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)和[fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 。  
+>  **sp_helprotect**不返回有关中引入的安全对象的信息 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 改为使用[database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)和[fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 。  
   
  不列出始终分配给固定服务器角色或固定数据库角色的权限。 不包括基于其在角色中的成员身份接收权限的登录名或用户。  
   

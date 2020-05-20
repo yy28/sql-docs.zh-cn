@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_category
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1b44f5962e8241afa95b9e68cf75d493dff01ad5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2c09dfe73df914a38e53a39b99c99388590c8d9c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304806"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827731"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="arguments"></a>参数  
 `[ @class = ] 'class'`要请求其信息的类。 *类*为**varchar （8）**，默认值为**JOB**。 *类*可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**任务**|提供有关作业类别的信息。|  
 |**发出**|提供有关警报类别的信息。|  
@@ -52,11 +52,11 @@ sp_help_category [ [ @class = ] 'class' ]
   
 `[ @type = ] 'type'`请求其信息的类别的类型。 *类型*为**varchar （12）**，默认值为 NULL，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**地方**|本地作业类别。|  
 |**MULTI-SERVER**|多服务器作业类别。|  
-|**内容**|**作业**之外的类的类别。|  
+|**NONE**|**作业**之外的类的类别。|  
   
 `[ @name = ] 'name'`请求其信息的类别的名称。 *名称*为**sysname**，默认值为 NULL。  
   
@@ -66,7 +66,7 @@ sp_help_category [ [ @class = ] 'class' ]
  **0** （成功）或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- 当** \@后缀**为**0**时， **sp_help_category**将返回以下结果集：  
+ 当** \@ 后缀**为**0**时， **sp_help_category**将返回以下结果集：  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -74,7 +74,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**tinyint**|类别的类型：<br /><br /> **1** = 本地<br /><br /> **2** = 多服务器<br /><br /> **3** = 无|  
 |**name**|**sysname**|类别名称|  
   
- 当** \@后缀**为**1**时， **sp_help_category**将返回以下结果集：  
+ 当** \@ 后缀**为**1**时， **sp_help_category**将返回以下结果集：  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_job
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7752b8fcb453f545c357c529774d570e41201ed1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c78536fbf8e9bb00133d7724f218c60c3d005fb2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72381913"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826324"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "72381913"
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
  > [!IMPORTANT]  
- > 在[Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，当前支持大多数（但并非所有） SQL Server 代理功能。 有关详细信息，请参阅[Azure SQL 数据库托管实例与 SQL Server 的 t-sql 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+ > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
  
 ## <a name="syntax"></a>语法  
   
@@ -57,7 +57,7 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_name = ] 'job_name'`作业的名称。 名称必须是唯一的，不能包含百分号（**%**）字符。 *job_name*为**nvarchar （128）**，无默认值。  
+`[ @job_name = ] 'job_name'`作业的名称。 名称必须是唯一的，不能包含百分号（ **%** ）字符。 *job_name*为**nvarchar （128）**，无默认值。  
   
 `[ @enabled = ] enabled`指示添加的作业的状态。 *enabled*为**tinyint**，默认值为1（已启用）。 如果为**0**，则不启用作业，并且该作业不会根据其计划运行。但是，可以手动运行它。  
   
@@ -69,7 +69,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
 `[ @category_id = ] category_id`一种与语言无关的机制，用于指定作业类别。 *category_id*的值为**int**，默认值为 NULL。  
   
-`[ @owner_login_name = ] 'login'`拥有作业的登录名。 *login*的值为**sysname**，默认值为 NULL，它被解释为当前登录名。 只有**sysadmin**固定服务器角色的成员才能设置或更改** \@owner_login_name**的值。 如果不是**sysadmin**角色的成员的用户设置或更改** \@owner_login_name**的值，则此存储过程的执行将失败并返回错误。  
+`[ @owner_login_name = ] 'login'`拥有作业的登录名。 *login*的值为**sysname**，默认值为 NULL，它被解释为当前登录名。 只有**sysadmin**固定服务器角色的成员才能设置或更改** \@ owner_login_name**的值。 如果不是**sysadmin**角色的成员的用户设置或更改** \@ owner_login_name**的值，则此存储过程的执行将失败并返回错误。  
   
 `[ @notify_level_eventlog = ] eventlog_level`一个值，该值指示何时将条目放入此作业的 Microsoft Windows 应用程序日志中。 *eventlog_level*为**int**，可以是下列值之一。  
   
@@ -78,7 +78,7 @@ sp_add_job [ @job_name = ] 'job_name'
 |**0**|从不|  
 |**1**|成功时|  
 |**2** （默认值）|失败时|  
-|**3**|始终|  
+|**3**|Always|  
   
 `[ @notify_level_email = ] email_level`一个值，该值指示在完成该作业后何时发送电子邮件。 *email_level*的值为**int**，默认值为**0**，表示从不。 *email_level*使用与*eventlog_level*相同的值。  
   
@@ -106,16 +106,16 @@ sp_add_job [ @job_name = ] 'job_name'
  无  
   
 ## <a name="remarks"></a>备注  
- originating_server 存在于**sp_add_job 中，** 但未在 "参数" 下列出。 ** \@** originating_server 保留供内部使用。 ** \@**  
+ ** \@ originating_server**存在于**sp_add_job 中，** 但未在 "参数" 下列出。 ** \@ originating_server**保留供内部使用。  
   
- 执行**sp_add_job**以添加作业后，可以使用**sp_add_jobstep**添加执行作业的活动的步骤。 **sp_add_jobschedule**可用于创建[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务用于执行作业的计划。 使用**sp_add_jobserver**设置作业的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]执行实例，并**sp_delete_jobserver**从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例中删除作业。  
+ 执行**sp_add_job**以添加作业后，可以使用**sp_add_jobstep**添加执行作业的活动的步骤。 **sp_add_jobschedule**可用于创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务用于执行作业的计划。 使用**sp_add_jobserver**设置作业的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行实例，并**sp_delete_jobserver**从实例中删除作业 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  如果作业将在多服务器环境中的一个或多个目标服务器上执行，请使用**sp_apply_job_to_targets**来设置作业的目标服务器或目标服务器组。 若要从目标服务器或目标服务器组中删除作业，请使用**sp_remove_job_from_targets**。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为管理作业提供了一种图形化的简便方法，建议使用此方法来创建和管理作业基础结构。  
   
 ## <a name="permissions"></a>权限  
- 若要运行此存储过程，用户必须是**sysadmin**固定服务器角色的成员，或者被授予以下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理固定数据库角色之一，这些角色驻留在**msdb**数据库中：  
+ 若要运行此存储过程，用户必须是**sysadmin**固定服务器角色的成员，或者被授予以下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理固定数据库角色之一，这些角色驻留在**msdb**数据库中：  
   
 -   **SQLAgentUserRole**  
   
@@ -125,7 +125,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  有关与这些固定数据库角色关联的特定权限的信息，请参阅[SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- 只有**sysadmin**固定服务器角色的成员才能设置或更改** \@owner_login_name**的值。 如果不是**sysadmin**角色的成员的用户设置或更改** \@owner_login_name**的值，则此存储过程的执行将失败并返回错误。  
+ 只有**sysadmin**固定服务器角色的成员才能设置或更改** \@ owner_login_name**的值。 如果不是**sysadmin**角色的成员的用户设置或更改** \@ owner_login_name**的值，则此存储过程的执行将失败并返回错误。  
   
 ## <a name="examples"></a>示例  
   

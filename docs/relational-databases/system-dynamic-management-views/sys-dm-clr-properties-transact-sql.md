@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_properties dynamic management view
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 331969c2baa8ec67e0cd7c0ebf8cdd894878f397
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8cb9cfc6e645e9777a697e62183db874c47cfeb4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266056"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824714"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68266056"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|name |**nvarchar(128)**|属性的名称。|  
+|**name**|**nvarchar(128)**|属性的名称。|  
 |**value**|**nvarchar(128)**|属性的值。|  
   
 ## <a name="properties"></a>属性  
@@ -44,7 +44,7 @@ ms.locfileid: "68266056"
   
  **Version**属性指示服务器上的 .NET Framework 和宿主 CLR 的版本。  
   
- **Sys. dm_clr_properties**动态托管视图可为**state**属性返回六个不同的值，这反映了[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]托管 clr 的状态。 它们是：  
+ **Sys. dm_clr_properties**动态托管视图可为**state**属性返回六个不同的值，这反映了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 托管 clr 的状态。 它们分别是：  
   
 -   Mscoree 未加载。  
   
@@ -62,19 +62,19 @@ ms.locfileid: "68266056"
   
  可能会出现**具有 mscoree.dll 状态的锁定 clr 版本**，但未使用托管的 clr，因而尚未对其进行初始化。 在第一次执行 DDL 语句（如[CREATE ASSEMBLY &#40;transact-sql&#41;](../../t-sql/statements/create-assembly-transact-sql.md)）或托管数据库对象时，将初始化托管的 CLR。  
   
- **CLR 处于已初始化**状态指示托管 CLR 已成功初始化。 请注意，这并不能指示是否启用了用户 CLR 代码的执行。 如果先启用用户 CLR 代码的执行，然后使用[!INCLUDE[tsql](../../includes/tsql-md.md)] [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)存储过程将其禁用，则状态值仍将为**CLR 初始化**。  
+ **CLR 处于已初始化**状态指示托管 CLR 已成功初始化。 请注意，这并不能指示是否启用了用户 CLR 代码的执行。 如果先启用用户 CLR 代码的执行，然后使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)存储过程将其禁用，则状态值仍将为**CLR 初始化**。  
   
  **Clr 初始化永久失败**状态指示托管 CLR 初始化失败。 原因可能是内存不足，也可能是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与 CLR 的宿主握手失败。 在此情况下，将引发错误消息 6512 或 6513。  
   
- **CLR 处于停止状态**，仅在处于关闭[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]过程中时才会出现。  
+ **CLR 处于停止状态**，仅在处于关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 过程中时才会出现。  
   
 ## <a name="remarks"></a>备注  
- 此视图的属性和值在的未来版本中可能会更改[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，因为它增强了 CLR 集成功能。  
+ 此视图的属性和值在的未来版本中可能会更改， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 因为它增强了 CLR 集成功能。  
   
 ## <a name="permissions"></a>权限  
   
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要权限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层上，需要`VIEW DATABASE STATE`具有数据库中的权限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
 ## <a name="examples"></a>示例  
  以下示例检索有关宿主 CLR 的信息：  

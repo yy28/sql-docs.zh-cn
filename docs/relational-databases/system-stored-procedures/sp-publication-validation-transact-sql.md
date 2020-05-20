@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_publication_validation
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bdfe70e3df86f792d250cd7abcc3ef3013e9df19
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4fd1c7bf329334bee0d8b3c29ba5d1d97909818e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056234"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826003"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_publication_validation [ @publication = ] 'publication'
 |-----------|-----------------|  
 |**0**|执行与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 兼容的校验和。<br /><br /> 注意：水平筛选项目时，将执行行计数操作，而不是校验和操作。|  
 |**1** （默认值）|仅执行行计数检查。|  
-|**2**|执行行计数和二进制校验和。<br /><br /> 注意：对于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本7.0 订阅服务器，只执行行计数验证。|  
+|**2**|执行行计数和二进制校验和。<br /><br /> 注意：对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本7.0 订阅服务器，只执行行计数验证。|  
   
 `[ @full_or_fast = ] 'full_or_fast'`用于计算行计数的方法。 *full_or_fast*为**tinyint** ，可以是下列值之一。  
   
@@ -61,10 +61,10 @@ sp_publication_validation [ @publication = ] 'publication'
   
 `[ @shutdown_agent = ] 'shutdown_agent'`指示分发代理是否应在完成验证后立即关闭。 *shutdown_agent*为**bit**，默认值为**0**。 如果为**0**，则复制代理不会关闭。 如果为**1**，则复制代理会在最后一篇文章验证后关闭。  
   
-`[ @publisher = ] 'publisher'`指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'`指定一个非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器上请求验证时，不应使用*发布服务器*。  
+>  在发布服务器上请求验证时，不应使用*发布服务器* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  

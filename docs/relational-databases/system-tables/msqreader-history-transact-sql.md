@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSqreader_history system table
 ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f21873e8db662bc77bd1acbb5d48c6af49aba404
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 37f5db39ad610d205a0bd6b268ab701f53c93ffa
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032536"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827203"
 ---
 # <a name="msqreader_history-transact-sql"></a>MSqreader_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68032536"
 |**start_time**|**datetime**|代理会话开始的日期和时间。|  
 |**time**|**datetime**|最后记录消息的日期和时间。|  
 |**duration**|**int**|记录的会话活动的占用时间（秒）。|  
-|**提出**|**nvarchar(255)**|说明文本。|  
+|**注释**|**nvarchar(255)**|说明文本。|  
 |**transaction_id**|**nvarchar(40)**|存储在消息中的事务 ID（如果适用）。|  
 |**transaction_status**|**int**|事务的状态。|  
 |**transactions_processed**|**int**|会话中处理的事务的累计数量。|  
@@ -46,7 +46,7 @@ ms.locfileid: "68032536"
 |**transaction_rate**|**float(53)**|事务处理速率。|  
 |**订阅服务器**|**sysname**|订阅服务器的名称。|  
 |**subscriberdb**|**sysname**|订阅数据库的名称。|  
-|**error_id**|**int**|如果不是零，则数字表示[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]错误消息。|  
+|**error_id**|**int**|如果不是零，则数字表示 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误消息。|  
 |**timestamp**|**timestamp**|表的时间戳列。|  
   
 ## <a name="see-also"></a>另请参阅  

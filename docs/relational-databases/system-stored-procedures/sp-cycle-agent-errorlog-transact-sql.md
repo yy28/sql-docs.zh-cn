@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cycle_agent_errorlog
 ms.assetid: 8aa96182-60b7-4d7b-b2a7-ccce70378c6e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c95cc2db84bdf059437a45e2719bbc63d6eb6829
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8fcb9bad5548107ef3a9294f22696abeacbdedcd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108355"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826239"
 ---
 # <a name="sp_cycle_agent_errorlog-transact-sql"></a>sp_cycle_agent_errorlog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_cycle_agent_errorlog
  无  
   
 ## <a name="remarks"></a>备注  
- 每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]启动代理时，当前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的代理错误日志都会重命名为**SQLAgent**;**SQLAgent**将变为**SQLAgent**， **SQLAgent**将变为**SQLAgent**，依此类推。 **sp_cycle_agent_errorlog**使你能够在不停止和启动服务器的情况下循环错误日志文件。  
+ 每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动代理时，当前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理错误日志都会重命名为**SQLAgent**;**SQLAgent**将变为**SQLAgent**， **SQLAgent**将变为**SQLAgent**，依此类推。 **sp_cycle_agent_errorlog**使你能够在不停止和启动服务器的情况下循环错误日志文件。  
   
  必须从**msdb**数据库运行此存储过程。  
   

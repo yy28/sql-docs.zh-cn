@@ -18,21 +18,21 @@ helpviewer_keywords:
 - internal tables
 - sys.internal_tables catalog view
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0b3f262943d41f1cd9592ab805d02bce3ade77a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a5878b5f1e52241a8d733bd6414d73db4e7e7cb8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68044538"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825295"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   为每个作为内部表的对象返回一行。 内部表由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动生成以支持各种功能。 例如，创建主 XML 索引时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将自动创建一个内部表以保存拆分的 XML 文档数据。 内部表出现在每个数据库的**sys**架构中，并具有唯一的系统生成的名称，用于指示其功能，例如**xml_index_nodes_2021582240_32001**或**queue_messages_1977058079**  
   
- 内部表不包括用户可访问的数据，并且其架构是固定的，不可改变。 不能在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中引用内部表名称。 例如，不能执行 SELECT \* FROM * \<internal_table_name>*。 但是，可以查询目录视图以查看内部表的元数据。  
+ 内部表不包括用户可访问的数据，并且其架构是固定的，不可改变。 不能在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中引用内部表名称。 例如，不能执行 SELECT \* FROM * \< internal_table_name>*。 但是，可以查询目录视图以查看内部表的元数据。  
   
   
 |列名称|数据类型|说明|  
@@ -40,8 +40,8 @@ ms.locfileid: "68044538"
 |**\<继承自 sys.databases 的列>**||有关此视图所继承的列的列表，请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |**internal_type**|**tinyint**|内部表的类型：<br /><br /> 3 = **query_disk_store_query_hints**<br /><br /> 4 = **query_disk_store_query_template_parameterization**<br /><br /> 6 = **query_disk_store_wait_stats**<br /><br /> 201 = **queue_messages**<br /><br /> 202 = **xml_index_nodes**<br /><br /> 203 = **fulltext_catalog_freelist**<br /><br /> 205 = **query_notification**<br /><br /> 206 = **service_broker_map**<br /><br /> 207 = **extended_indexes** （如空间索引）<br /><br /> 208 = **filestream_tombstone**<br /><br /> 209 = **change_tracking**<br /><br /> 210 = **tracked_committed_transactions**<br /><br /> 220 = **contained_features**<br /><br /> 225 = **filetable_updates**<br /><br /> 236 = **selective_xml_index_node_table**<br /><br /> 240 = **query_disk_store_query_text**<br /><br /> 241 = **query_disk_store_query**<br /><br /> 242 = **query_disk_store_plan**<br /><br /> 243 = **query_disk_store_runtime_stats**<br /><br /> 244 = **query_disk_store_runtime_stats_interval**<br /><br /> 245 = **query_context_settings**|  
 |**internal_type_desc**|**nvarchar(60)**|内部表的类型说明：<br /><br /> QUERY_DISK_STORE_QUERY_HINTS<br /><br /> QUERY_DISK_STORE_QUERY_TEMPLATE_PARAMETERIZATION<br /><br /> QUERY_DISK_STORE_WAIT_STATS<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS<br /><br /> CONTAINED_FEATURES<br /><br /> FILETABLE_UPDATES<br /><br /> SELECTIVE_XML_INDEX_NODE_TABLE<br /><br /> QUERY_DISK_STORE_QUERY_TEXT<br /><br /> QUERY_DISK_STORE_QUERY<br /><br /> QUERY_DISK_STORE_PLAN<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS_INTERVAL<br /><br /> QUERY_CONTEXT_SETTINGS|  
-|**parent_id**|**int**|父项的 ID，无论该父项的是否在架构范围内。 否则，其值为 0（如果没有父项）。<br /><br /> **队列 queue_messages** = **object_id**<br /><br /> **xml 索引 xml_index_nodes** = **object_id**<br /><br /> **fulltext_catalog_freelist** = 全文目录的 fulltext_catalog_freelist**fulltext_catalog_id**<br /><br /> **全文索引 fulltext_index_map** = **object_id**<br /><br /> **query_notification**或**service_broker_map** = 0<br /><br /> **extended_indexes** = 扩展索引（如空间索引）的 extended_indexes**object_id**<br /><br /> 已为其启用表跟踪的表的**object_id** = **change_tracking**|  
-|**parent_minor_id**|**int**|父项的次要 ID。<br /><br /> **XML 索引 xml_index_nodes** = **index_id**<br /><br /> **extended_indexes** = 扩展索引（如空间索引）的 extended_indexes**index_id**<br /><br /> 0 = **queue_messages**、 **fulltext_catalog_freelist**、 **fulltext_index_map**、 **query_notification**、 **service_broker_map**或**change_tracking**|  
+|**parent_id**|**int**|父项的 ID，无论该父项的是否在架构范围内。 否则，其值为 0（如果没有父项）。<br /><br /> **queue_messages**  = 队列**object_id**<br /><br /> **xml_index_nodes**  = xml 索引**object_id**<br /><br /> **fulltext_catalog_freelist**  = 全文目录的**fulltext_catalog_id**<br /><br /> **fulltext_index_map**  = 全文索引**object_id**<br /><br /> **query_notification**或**service_broker_map** = 0<br /><br /> **extended_indexes**  = 扩展索引（如空间索引）的**object_id**<br /><br /> 已为其启用表跟踪的表的**object_id** = **change_tracking**|  
+|**parent_minor_id**|**int**|父项的次要 ID。<br /><br /> **xml_index_nodes**  = XML 索引**index_id**<br /><br /> **extended_indexes**  = 扩展索引（如空间索引）的**index_id**<br /><br /> 0 = **queue_messages**、 **fulltext_catalog_freelist**、 **fulltext_index_map**、 **query_notification**、 **service_broker_map**或**change_tracking**|  
 |**lob_data_space_id**|**int**|对于该表，非零值是存放大型对象 (LOB) 数据的数据空间（文件组或分区方案）的 ID。|  
 |**filestream_data_space_id**|**int**|保留供将来使用。|  
   

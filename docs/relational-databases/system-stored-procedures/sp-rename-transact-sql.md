@@ -18,20 +18,20 @@ helpviewer_keywords:
 - sp_rename
 - renaming tables
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92ef8c4583db152b2f81a574010a12030680704f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac92f07acb7e7322adcf00e09774f72e93e39963
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983070"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826551"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  在当前数据库中更改用户创建对象的名称。 此对象可以是表、索引、列、别名数据类型或[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]公共语言运行时（CLR）用户定义类型。  
+  在当前数据库中更改用户创建对象的名称。 此对象可以是表、索引、列、别名数据类型或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时（CLR）用户定义类型。  
   
 > [!CAUTION]  
 >  更改对象名的任一部分都可能破坏脚本和存储过程。 我们建议您不要使用此语句来重命名存储过程、触发器、用户定义函数或视图；而是删除该对象，然后使用新名称重新创建该对象。  
@@ -47,18 +47,18 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @objname = ]"*object_name*"  
+ [ @objname =] "*object_name*"  
  用户对象或数据类型的当前限定或非限定名称。 如果要重命名的对象是表中的列，则*object_name*必须是表的形式。*列*或*架构。* 如果要重命名的对象是一个索引，则*object_name*必须是表的形式。*索引*或*架构。* 如果要重命名的对象是一个约束，则*object_name*的格式必须为*schema。*  
   
  只有在指定了限定对象时才必须使用引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 *object_name*为**nvarchar （776）**，无默认值。  
   
- [ @newname = ]"*new_name*"  
+ [ @newname =] "*new_name*"  
  指定对象的新名称。 *new_name*必须是由一个部分构成的名称，并且必须遵循标识符的规则。 *newname*为**sysname**，无默认值。  
   
 > [!NOTE]  
 >  触发器名称不能以 # 或 ## 开头。  
   
- [ @objtype = ]"*object_type*"  
+ [ @objtype =] "*object_type*"  
  要重命名的对象的类型。 *object_type*为**varchar （13）**，默认值为 NULL，可以是下列值之一。  
   
 |值|说明|  
@@ -100,7 +100,7 @@ GO
 ```  
   
 ### <a name="b-renaming-a-column"></a>B. 重命名列  
- 下面的示例将`TerritoryID` `SalesTerritory`表中的列重命名`TerrID`为。  
+ 下面的示例将 `TerritoryID` 表中的列重命名 `SalesTerritory` 为 `TerrID` 。  
   
 ```  
 USE AdventureWorks2012;  

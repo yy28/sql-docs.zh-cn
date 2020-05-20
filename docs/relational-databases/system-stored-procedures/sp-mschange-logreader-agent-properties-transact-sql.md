@@ -14,19 +14,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_MSchange_logreader_agent_properties
 ms.assetid: 925df9d3-a041-4046-8e17-c47f40edb86d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 37a36218b4e9e93a761c776e76a6596f40a6c0eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ab4acf32a4277c5f8c13e71640b98554712d5dac
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75322266"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828874"
 ---
 # <a name="sp_mschange_logreader_agent_properties-transact-sql"></a>sp_MSchange_logreader_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  更改在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更高版本的分发服务器上运行的日志读取器代理作业的属性。 当发布服务器在 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 实例上运行时，可使用此存储过程更改属性。 此存储过程在分发服务器上对分发数据库执行。  
+  更改在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本的分发服务器上运行的日志读取器代理作业的属性。 当发布服务器在 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 实例上运行时，可使用此存储过程更改属性。 此存储过程在分发服务器上对分发数据库执行。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
   
 `[ @publisher_security_mode = ] publisher_security_mode`连接到发布服务器时代理所使用的安全模式。 *publisher_security_mode*为**smallint**，无默认值。  
   
- **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。  
+ **0**指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。  
   
  **1**指定 Windows 身份验证。  
   
@@ -59,11 +59,11 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
   
 `[ @publisher_password = ] 'publisher_password'`连接到发布服务器时使用的密码。 *publisher_password* **sysname**，无默认值。  
   
-`[ @job_login = ] 'job_login'`用于运行代理的 Windows 帐户的登录名。 *job_login*为**nvarchar （257）**，无默认值。 *对于非发布服务器，不能更改此项*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *。*  
+`[ @job_login = ] 'job_login'`用于运行代理的 Windows 帐户的登录名。 *job_login*为**nvarchar （257）**，无默认值。 *不能更改非* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*发布者。*  
   
 `[ @job_password = ] 'job_password'`运行代理所用的 Windows 帐户的密码。 *job_password* **sysname**，无默认值。  
   
-`[ @publisher_type = ] 'publisher_type'`指定发布服务器未在实例中运行时的发布服务器类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 *publisher_type* **sysname**，可以是下列值之一。  
+`[ @publisher_type = ] 'publisher_type'`指定发布服务器未在实例中运行时的发布服务器类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *publisher_type* **sysname**，可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
@@ -80,7 +80,7 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
   
  更改代理登录名或密码之后，必须先停止并重新启动代理，然后更改才能生效。  
   
- 当发布服务器在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更高版本的实例上运行时，应使用[sp_changelogreader_agent](../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md)更改日志读取器代理的属性。  
+ 当发布服务器在或更高版本的实例上运行时 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ，应使用[sp_changelogreader_agent](../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md)更改日志读取器代理的属性。  
   
 ## <a name="permissions"></a>权限  
  只有分发服务器上**sysadmin**固定服务器角色的成员才能**sp_MSchange_logreader_agent_properties**执行。  

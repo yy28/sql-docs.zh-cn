@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_memory_objects dynamic management view
 ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3d0691a82607a207a64f4a6c7ed8c937f052abc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eece83b3c1fcde0d33a515c85eeb2cdac0a72cf4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983079"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827873"
 ---
 # <a name="sysdm_os_memory_objects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "73983079"
 |**pages_in_bytes**|**bigint**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 此内存对象实例分配的内存量（以字节为单位）。 不可为 null。|  
 |**creation_options**|**int**|仅限内部使用。 可以为 Null。|  
 |**bytes_used**|**bigint**|仅限内部使用。 可以为 Null。|  
-|**type**|**nvarchar(60)**|内存对象的类型。<br /><br /> 它指示该内存对象所属的特定组件，或指示内存对象的函数。 可以为 Null。|  
+|type |**nvarchar(60)**|内存对象的类型。<br /><br /> 它指示该内存对象所属的特定组件，或指示内存对象的函数。 可以为 Null。|  
 |**name**|**varchar（128**|仅限内部使用。 可以为 NULL。|  
 |**memory_node_id**|**smallint**|该内存对象所用的内存节点的 ID。 不可为 null。|  
 |**creation_time**|**datetime**|仅限内部使用。 可以为 Null。|  
@@ -54,14 +54,14 @@ ms.locfileid: "73983079"
 |**contention_factor**|**real**|一个值，该值指定此内存对象的争用，0表示无争用。 每当指定数量的内存分配在该时间段内反射争用时，该值就会更新。 仅适用于线程安全内存对象。|  
 |**waiting_tasks_count**|**bigint**|此内存对象上的等待次数。 从此内存对象分配内存时，此计数器将递增。 增量是当前等待访问此内存对象的任务数。 仅适用于线程安全内存对象。 这是最大努力，无需保证正确性。|  
 |**exclusive_access_count**|**bigint**|指定以独占方式访问此内存对象的频率。 仅适用于线程安全内存对象。  这是最大努力，无需保证正确性。|  
-|**pdw_node_id**|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|**pdw_node_id**|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
- [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]中尚未实现**partition_type**、 **contention_factor**、 **waiting_tasks_count**和**exclusive_access_count** 。  
+ 中尚未实现**partition_type**、 **contention_factor**、 **waiting_tasks_count**和**exclusive_access_count** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 。  
   
 ## <a name="permissions"></a>权限
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要权限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层上，需要`VIEW DATABASE STATE`具有数据库中的权限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
 ## <a name="remarks"></a>备注  
  内存对象是指多个堆。 它们所提供的分配的粒度比内存分配器所提供的分配的粒度更精细。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件使用内存对象，而不使用内存分配器。 内存对象使用内存分配器的页分配器接口来分配页。 内存对象不使用虚拟内存接口或共享内存接口。 根据分配模式的不同，组件可以创建不同的内存对象类型来分配任意大小的区域。  

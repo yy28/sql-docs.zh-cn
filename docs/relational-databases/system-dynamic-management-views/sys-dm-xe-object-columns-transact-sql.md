@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sys.dm_xe_object_columns dynamic management view
 - extended events [SQL Server], views
 ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8b44824310637b279388ea367cd4ab1d07401d1f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3cdd234d99a02e4b7ecb72a7b0de6f47a268780c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090277"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826632"
 ---
 # <a name="sysdm_xe_object_columns-transact-sql"></a>sys.dm_xe_object_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,15 +45,15 @@ ms.locfileid: "68090277"
 |column_type|**nvarchar(60)**|指示如何使用此列。 不可为 null。 column_type 可以是以下项之一：<br /><br /> readonly。 该列包含不能被更改的静态值。<br /><br /> data。 该列可包含由对象公开的运行时数据。<br /><br /> customizable。 该列包含可以被更改的值。<br /><br /> 注意：更改此值可以修改对象的行为。|  
 |column_value|**nvarchar(256)**|显示与对象列关联的静态值。 可以为 Null。|  
 |capabilities|**int**|一个描述列的功能的位图。 可以为 Null。|  
-|capabilities_desc|**nvarchar(256)**|此对象列的功能的说明。 此值可以为下列值之一：<br /><br /> Mandatory。 将父对象绑定到一个事件会话时必须设置该值。<br /><br /> 可以为 Null。|  
-|description|**nvarchar （3072）**|此对象列的说明。 可以为 Null。|  
+|capabilities_desc|**nvarchar(256)**|此对象列的功能的说明。 此值可以为下列值之一：<br /><br /> 必需。 将父对象绑定到一个事件会话时必须设置该值。<br /><br /> 可以为 Null。|  
+|说明|**nvarchar （3072）**|此对象列的说明。 可以为 Null。|  
   
 ## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ### <a name="relationship-cardinalities"></a>关系基数  
   
-|From|到|关系|  
+|From|功能|关系|  
 |----------|--------|------------------|  
 |sys.dm_xe_object_columns.object_name、sys.dm_xe_object_columns.object_package_guid|sys.dm_xe_objects.name、<br /><br /> sys.dm_xe_objects.package_guid|多对一|  
 |sys.dm_xe_object_columns.type_name<br /><br /> sys.dm_xe_object_columns.type_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_objects.package_guid|多对一|  

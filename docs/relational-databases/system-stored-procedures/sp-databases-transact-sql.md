@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_databases
 ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c338fb8057c2d58727f18e0bb69e2fa825e71559
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1c4cd06a540709b5e100a086a426fd5bdb46abf5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108327"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826225"
 ---
 # <a name="sp_databases-transact-sql"></a>sp_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_databases
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**DATABASE_NAME**|**sysname**|数据库的名称。 在中[!INCLUDE[ssDE](../../includes/ssde-md.md)]，此列表示存储在**sys.databases**目录视图中的数据库名称。|  
+|**DATABASE_NAME**|**sysname**|数据库的名称。 在中 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，此列表示存储在**sys.databases**目录视图中的数据库名称。|  
 |**DATABASE_SIZE**|**int**|数据库的大小（以 KB 计）。|  
 |**备注**|**varchar （254）**|对于[!INCLUDE[ssDE](../../includes/ssde-md.md)]，此字段始终返回 NULL。|  
   

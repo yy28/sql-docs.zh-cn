@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_job
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 29870a0ffb3d2c3b1872acbb40266aef0d16b62c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1972670a39dbd0fdb3f12b58df5116a83bf0a58d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75546562"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827636"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @job_aspect = ] 'job_aspect'`要显示的作业属性。 *job_aspect*为**varchar （9）**，默认值为 NULL，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**ALL**|作业特征信息|  
 |**任务**|作业信息|  
@@ -91,7 +91,7 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|状态.|  
 |**7**|正在执行完成操作。|  
   
-`[ @date_comparator = ] 'date_comparison'`用于比较*date_created*和*date_modified*的比较运算符。 *date_comparison*为**char （1）**，可以为 =、 \<或 >。  
+`[ @date_comparator = ] 'date_comparison'`用于比较*date_created*和*date_modified*的比较运算符。 *date_comparison*为**char （1）**，可以为 =、 \< 或 >。  
   
 `[ @date_created = ] date_created`作业的创建日期。 *date_created*为**datetime**，默认值为 NULL。  
   
@@ -138,7 +138,7 @@ sp_help_job { [ @job_id = ] job_id
 |**has_step**|**int**|作业具有的作业步骤数。|  
 |**has_schedule**|**int**|作业具有的作业计划数。|  
 |**has_target**|**int**|作业具有的目标服务器数。|  
-|**type**|**int**|作业的类型。<br /><br /> 1 = 本地作业。<br /><br /> **2** = 多服务器作业。<br /><br /> **0** = 作业没有目标服务器。|  
+|type |**int**|作业的类型。<br /><br /> 1 = 本地作业。<br /><br /> **2** = 多服务器作业。<br /><br /> **0** = 作业没有目标服务器。|  
   
  如果指定*job_id*或*job_name* ， **sp_help_job**将为作业步骤、作业计划和作业目标服务器返回这些附加的结果集。  
   
@@ -162,7 +162,7 @@ sp_help_job { [ @job_id = ] job_id
 |**retry_attempts**|**int**|在认定步骤已经失败之前，应该对命令进行重试的最大次数（如果命令没有成功）。|  
 |**retry_interval**|**int**|两次重试尝试之间的间隔（以分钟为单位）。|  
 |**os_run_priority**|**varchar （4000）**|保留。|  
-|**output_file_name**|**varchar （200）**|命令输出应写入到的文件（[!INCLUDE[tsql](../../includes/tsql-md.md)]仅限**CmdExec**步骤）。|  
+|**output_file_name**|**varchar （200）**|命令输出应写入到的文件（ [!INCLUDE[tsql](../../includes/tsql-md.md)] 仅限**CmdExec**步骤）。|  
 |**last_run_outcome**|**int**|步骤上一次运行的结果：<br /><br /> **0** = 失败<br /><br /> **1** = 成功<br /><br /> **3** = 已取消<br /><br /> **5** = 未知|  
 |**last_run_duration**|**int**|步骤上一次运行的持续时间（以秒为单位）。|  
 |**last_run_retries**|**int**|步骤上一次运行时，重试命令的次数。|  

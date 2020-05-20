@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsort
 ms.assetid: 2a88d079-3755-43cb-8a54-97d0114149e6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 511b5b8f01a96f860d9f0c4266f92b323e6f1240
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a9eeca46571b2e61e73f9f5670bfeba0fd5f908
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997353"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826073"
 ---
 # <a name="sp_helpsort-transact-sql"></a>sp_helpsort (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_helpsort
  返回服务器默认排序规则。  
   
 ## <a name="remarks"></a>备注  
- 如果安装的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]具有指定的排序规则以与的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早期安装兼容，则**sp_helpsort**返回空结果。 发生此行为时，可以通过查询 SERVERPROPERTY 对象（例如： `SELECT SERVERPROPERTY ('Collation');`）来确定排序规则。  
+ 如果安装的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具有指定的排序规则以与的早期安装兼容 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则**sp_helpsort**返回空结果。 发生此行为时，可以通过查询 SERVERPROPERTY 对象（例如：）来确定排序规则 `SELECT SERVERPROPERTY ('Collation');` 。  
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpxactsetjob
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0fdd70480a63e334aa3e178d19287b30937e2f53
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9fbc18b737c4c901527e6dc1684b75c2f5ddedda
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056787"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826049"
 ---
 # <a name="sp_helpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publisher = ] 'publisher'`作业所属的非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器的名称。 *发布服务器*的**sysname**，无默认值。  
+`[ @publisher = ] 'publisher'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作业所属的非发布服务器的名称。 *发布服务器*的**sysname**，无默认值。  
   
 ## <a name="result-sets"></a>结果集  
   

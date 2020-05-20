@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_update_collection_item
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 791c20214ff3eda4b5bb1f2bd3214b25ea972d74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e14f60cb3e1a4493e58968913a3ae840625e190f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010557"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828211"
 ---
 # <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,21 +46,21 @@ sp_syscollector_update_collection_item
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @collection_item_id = ]*collection_item_id*  
+ [ @collection_item_id =] *collection_item_id*  
  标识收集项的唯一标识符。 *collection_item_id*为**int** ，默认值为 NULL。 如果*name*为 NULL，则*collection_item_id*必须具有值。  
   
- [ @name = ]"*name*"  
+ [ @name =] "*name*"  
  收集项的名称。 *名称*为**sysname** ，默认值为 NULL。 如果*collection_item_id*为 NULL，则*name*必须具有值。  
   
- [ @new_name = ]"*new_name*"  
+ [ @new_name =] "*new_name*"  
  收集项的新名称。 *new_name*为**sysname**，如果使用，则不能为空字符串。  
   
  *new_name*必须是唯一的。 有关当前收集项名称的列表，请查询 syscollector_collection_items 系统视图。  
   
- [ @frequency = ]*频率*  
+ [ @frequency =]*频率*  
  此收集项收集数据的频率（以秒为单位）。 *frequency*的类型为**int**，默认值为5，这是可以指定的最小值。  
   
- [ @parameters = ]"*parameters*"  
+ [ @parameters =] "*parameters*"  
  收集项的输入参数。 *参数*的值为**xml** ，默认值为 NULL。 *参数*架构必须与收集器类型的参数架构匹配。  
   
 ## <a name="return-code-values"></a>返回代码值  

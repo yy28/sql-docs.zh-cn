@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_configure
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 09f5a26493600fd346192f6ba7ebbc73ea7ed184
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8d3284d8231b01b58cc807aeb70c55f5fe18c2b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73536222"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828419"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -78,9 +78,9 @@ RECONFIGURE
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|name |**nvarchar(35)**|配置选项的名称。|  
+|**name**|**nvarchar(35)**|配置选项的名称。|  
 |**短**|**int**|配置选项的最小值。|  
-|**maximum**|**int**|配置选项的最大值。|  
+|**最佳**|**int**|配置选项的最大值。|  
 |**config_value**|**int**|配置选项使用**sp_configure**设置的值（值在**sys.databases**中）。 有关这些选项的详细信息，请参阅[服务器配置选项 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)和[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
 |**run_value**|**int**|配置选项的当前运行值（ **value_in_use**中的值）。<br /><br /> 有关详细信息，请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
   
@@ -99,14 +99,14 @@ RECONFIGURE
 > [!CAUTION]  
 > 不合适的选项值会给服务器实例的配置造成不利影响。 请谨慎使用 RECONFIGURE WITH OVERRIDE。  
   
- RECONFIGURE 语句可以动态更新某些选项，而其他选项的更新则需要停止服务器再重新启动才能实现。 例如，"**最小服务器内存**" 和 " [!INCLUDE[ssDE](../../includes/ssde-md.md)]**最大服务器**内存" 服务器内存选项在中动态更新。因此，你可以更改它们而无需重新启动服务器。 与此相反，重新配置**填充因子**选项的运行值需要重新启动[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+ RECONFIGURE 语句可以动态更新某些选项，而其他选项的更新则需要停止服务器再重新启动才能实现。 例如，"**最小服务器内存**" 和 "**最大服务器**内存" 服务器内存选项在中动态更新， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 因此，你可以更改它们而无需重新启动服务器。 与此相反，重新配置**填充因子**选项的运行值需要重新启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
   
  在配置选项上运行重新配置后，可以通过执行**sp_configure "***option_name***"** 来查看是否已动态更新了选项。 对于动态更新的选项， **run_value**和**config_value**列中的值应匹配。 还可以查看**sys.databases**目录视图的**is_dynamic**列，查看哪些选项是动态的。  
  
  此更改也会写入 SQL Server 错误日志。
   
 > [!NOTE]  
->  如果某个选项的指定*值*过高，则**run_value**列将反映[!INCLUDE[ssDE](../../includes/ssde-md.md)]已默认为动态内存的事实，而不是使用无效的设置。  
+>  如果某个选项的指定*值*过高，则**run_value**列将反映 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 已默认为动态内存的事实，而不是使用无效的设置。  
   
  有关详细信息，请参阅[重新配置 &#40;transact-sql&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)。  
   
@@ -157,7 +157,7 @@ RECONFIGURE WITH OVERRIDE;
 EXEC sp_configure;  
 ```  
   
- 结果返回选项名称，后跟该选项的最小值和最大值。 **Config_value**是重新配置完成时[!INCLUDE[ssDW](../../includes/ssdw-md.md)]将使用的值。 **run_value** 是当前正在使用的值。 **config_value** 和 **run_value** 通常是相同的，除非该值正在进行更改。  
+ 结果返回选项名称，后跟该选项的最小值和最大值。 **Config_value**是重新 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 配置完成时将使用的值。 **run_value** 是当前正在使用的值。 **config_value** 和 **run_value** 通常是相同的，除非该值正在进行更改。  
   
 ### <a name="d-list-the-configuration-settings-for-one-configuration-name"></a>D. 列出一个配置名称的配置设置  
   

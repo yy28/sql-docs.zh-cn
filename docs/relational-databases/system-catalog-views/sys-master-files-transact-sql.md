@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.master_files catalog view
 ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2aa7c30f132f0c0e8774dcb39f31e1a254e8689c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2baa122d56582cfdf0bef780434f9f5ba98711ca
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313718"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825114"
 ---
 # <a name="sysmaster_files-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "72313718"
 |-----------------|---------------|-----------------|  
 |database_id|**int**|应用此文件的数据库的 ID。 Masterdatabase_id 始终为1。|  
 |file_id|**int**|数据库内文件的 ID。 主 file_id 始终为 1。|  
-|file_guid|**uniqueidentifier**|文件的唯一标识符。<br /><br /> NULL = 数据库已从的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早期版本升级（适用于 SQL Server 2005 及更早版本）。|  
-|type|**tinyint**|文件类型：<br /><br /> 0 = 行。<br /><br /> 1 = 日志<br /><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 全文（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的全文目录；升级到的或在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本中创建的全文目录将报告文件类型 0。）|  
+|file_guid|**uniqueidentifier**|文件的唯一标识符。<br /><br /> NULL = 数据库已从的早期版本升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （适用于 SQL Server 2005 及更早版本）。|  
+|类型|**tinyint**|文件类型：<br /><br /> 0 = 行。<br /><br /> 1 = 日志<br /><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 全文（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的全文目录；升级到的或在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本中创建的全文目录将报告文件类型 0。）|  
 |type_desc|**nvarchar(60)**|文件类型的说明：<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的全文目录。）|  
 |data_space_id|**int**|此文件所属数据空间的 ID。 数据空间是一个文件组。<br /><br /> 0 = 日志文件|  
 |name|**sysname**|数据库中文件的逻辑名称。|  
@@ -64,7 +64,7 @@ ms.locfileid: "72313718"
 |redo_target_lsn|**numeric(25,0)**|对此文件的联机前滚可以停止时的 LSN。<br /><br /> 除非 state = RESTORING 或 state = RECOVERY_PENDING，否则为 NULL。|  
 |redo_target_fork_guid|**uniqueidentifier**|可恢复容器的恢复分叉。 与 redo_target_lsn 成对使用。|  
 |backup_lsn|**numeric(25,0)**|文件的最新数据或差异备份的 LSN。|  
-|credential_id|**int**|用于存储文件的`credential_id` `sys.credentials` 例如，当在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure 虚拟机上运行并且数据库文件存储在 azure blob 存储中时，将使用存储位置的访问凭据配置凭据。|  
+|credential_id|**int**|`credential_id` `sys.credentials` 用于存储文件的。 例如，当在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure 虚拟机上运行并且数据库文件存储在 azure blob 存储中时，将使用存储位置的访问凭据配置凭据。|  
   
 > [!NOTE]  
 >  在删除或重新生成大型索引时，或者在删除或截断大型表时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将延迟实际页释放及其关联锁，直至事务提交完毕为止。 延迟的删除操作不会立即释放已分配的空间。 因此，sys.master_files 返回的值在删除或截断了大型对象后，可能无法立即反映出磁盘的实际可用空间。  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_catalogs
 ms.assetid: ebb29ee2-be65-4e09-9c53-e3c6d12633e1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0844001016f67d227b4612176b2804dcda0a3d29
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b760e27d7a0b320c0e911a1a485d1e5e9033146a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68045939"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824848"
 ---
 # <a name="sp_catalogs-transact-sql"></a>sp_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_catalogs [ @server_name = ] 'linked_svr'
  以下示例返回名为 `OLE DB ODBC Linked Server #3` 的链接服务器的目录信息。  
   
 > [!NOTE]  
->  为了**sp_catalogs**提供有用的`OLE DB ODBC Linked Server #3`信息，必须已经存在。  
+>  为了**sp_catalogs**提供有用的信息， `OLE DB ODBC Linked Server #3` 必须已经存在。  
   
 ```  
 USE master;  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAGetErrorInfo
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c8108896e5ef7599c3441e922c54ba606d65d5fe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68107916"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828854"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ sp_OAGetErrorInfo [ objecttoken ]
   
 |错误及 HRESULT|常见原因|  
 |-----------------------|------------------|  
-|**变量类型错误 (0x80020008)**|作为方法参数传递[!INCLUDE[tsql](../../includes/tsql-md.md)]的值的数据类型与该方法参数的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]数据类型不匹配，或者 NULL 值作为方法参数传递。|  
+|**变量类型错误 (0x80020008)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]作为方法参数传递的值的数据类型与该方法参数的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 数据类型不匹配，或者 NULL 值作为方法参数传递。|  
 |**未知名称 (0x8002006)**|找不到指定对象的指定属性名或方法名。|  
 |**类字符串无效 (0x800401f3)**|没有将指定的 ProgID 或 CLSID 没有注册为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 OLE 对象。 自定义 OLE 自动化服务器必须先进行注册，然后才能使用**sp_OACreate**对其进行实例化。 为此，可以对进程内（.dll）服务器使用 Regsvr32 实用程序，或者为本地（.exe）服务器使用 **/REGSERVER**命令行开关。|  
 |**服务器执行失败 (0x80080005)**|指定的 OLE 对象已注册为本地 OLE 服务器（.exe 文件），但无法找到或启动该 .exe 文件。|  

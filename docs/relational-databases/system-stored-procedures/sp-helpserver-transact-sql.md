@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpserver
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 844e96d765f9ed06f88b140b906b78eb4ea16ea0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9e965a11708b2d4bbb72903a05846cb14300a5c6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997441"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826092"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 `[ @optname = ] 'option'`描述服务器的选项。 *选项*为**varchar （** 35 **）**，默认值为 NULL，必须是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**排序规则兼容**|影响分布式查询在链接服务器上的执行。 如果此选项设置为 True，|  
 |**数据访问**|启用和禁用链接服务器以进行分布式查询访问。|  
@@ -55,7 +55,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**pub**|发行者。|  
 |**rpc**|从指定的服务器启用 RPC。|  
 |**rpc 输出**|对指定的服务器启用 RPC。|  
-|**该子**|订阅服务器.|  
+|**sub**|订阅服务器.|  
 |**系统**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**使用远程排序规则**|使用远程列的排序规则而不使用本地服务器的排序规则。|  
   
@@ -68,7 +68,7 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|name |**sysname**|服务器名称。|  
+|**name**|**sysname**|服务器名称。|  
 |**network_name**|**sysname**|服务器的网络名称。|  
 |**status**|**varchar （** 70 **）**|服务器状态。|  
 |**id**|**char （** 4 **）**|服务器的标识号。|  

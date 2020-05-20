@@ -7,16 +7,16 @@ ms.prod_service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
 ms.assetid: 7f353e2a-f8fc-4366-97e4-aa1c49eadaf4
-author: MightyPen
-ms.author: genemi
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 860faaa6c9e574feda8d5c28be17a265707fd72e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac4b9b01b85b6c8b4832a591ba18654ac58e9125
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73844426"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826672"
 ---
 # <a name="sysdm_xe_database_session_targets-azure-sql-database"></a>sys.dm_xe_database_session_targets（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "73844426"
   
 ### <a name="relationship-cardinalities"></a>关系基数  
   
-|From|到|关系|  
+|From|功能|关系|  
 |----------|--------|------------------|  
 |sys. dm_xe_database_session_targets event_session_address|sys. dm_xe_database_sessions|多对一|  
   

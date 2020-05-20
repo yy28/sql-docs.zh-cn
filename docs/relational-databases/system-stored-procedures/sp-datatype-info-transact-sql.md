@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_datatype_info
 ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 39e8f688c23cffb1512be1cd1142d38c010668a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e88bc45995574dcde29427773e3e8d9bec62ed96
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108306"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826209"
 ---
 # <a name="sp_datatype_info-transact-sql"></a>sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -79,7 +79,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
  要求具有 public 角色的成员身份。  
   
 ## <a name="examples"></a>示例  
- 下面的示例通过指定的*data_type*值来检索`-9` **sysname**和**nvarchar**数据类型的信息。  
+ 下面的示例通过指定的*data_type*值来检索**sysname**和**nvarchar**数据类型的信息 `-9` 。  
   
 ```  
 USE master;  

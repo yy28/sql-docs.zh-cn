@@ -17,23 +17,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_stats_histogram dynamic management function
 ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e5a79a4ab38fd1cb7d118624fd170219aa90a94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 06a8b8e36123f34b42b890c8315b8847a3c0e0bb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096256"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828041"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-返回当前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库中指定数据库对象（表或索引视图）的统计信息直方图。 类似于 `DBCC SHOW_STATISTICS WITH HISTOGRAM`。
+返回当前数据库中指定数据库对象（表或索引视图）的统计信息直方图 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 类似于 `DBCC SHOW_STATISTICS WITH HISTOGRAM`。
 
 > [!NOTE] 
-> 从[!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)] SP1 CU2 开始，可以使用这一 DMF
+> 从 SP1 CU2 开始，可以使用这一 DMF [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)]
 
 ## <a name="syntax"></a>语法  
   
@@ -59,13 +59,13 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |range_rows |**real** |其列值位于直方图梯级内（不包括上限）的行的估算数目。 |
 |equal_rows |**real** |其列值等于直方图梯级的上限的行的估算数目。 |
 |distinct_range_rows |**bigint** |非重复列值位于直方图梯级内（不包括上限）的行的估算数目。 |
-|average_range_rows |**real** |直方图步骤中具有重复列值的平均行数，不包括上限（`RANGE_ROWS / DISTINCT_RANGE_ROWS`对于`DISTINCT_RANGE_ROWS > 0`）。 |
+|average_range_rows |**real** |直方图步骤中具有重复列值的平均行数，不包括上限（ `RANGE_ROWS / DISTINCT_RANGE_ROWS` 对于 `DISTINCT_RANGE_ROWS > 0` ）。 |
   
  ## <a name="remarks"></a>备注  
  
- 的结果集`sys.dm_db_stats_histogram`将返回类似于`DBCC SHOW_STATISTICS WITH HISTOGRAM`的信息， `object_id`并且`stats_id`还包括`step_number`、和。
+ 的结果集将 `sys.dm_db_stats_histogram` 返回类似于的信息， `DBCC SHOW_STATISTICS WITH HISTOGRAM` 并且还包括 `object_id` 、 `stats_id` 和 `step_number` 。
 
- 因为列`range_high_key`是 sql_variant 的数据类型，所以如果谓词与非字符串`CAST`常量`CONVERT`进行比较，则可能需要使用或。
+ 因为列 `range_high_key` 是 sql_variant 的数据类型，所以 `CAST` `CONVERT` 如果谓词与非字符串常量进行比较，则可能需要使用或。
 
 ### <a name="histogram"></a>直方图
   
@@ -94,7 +94,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 ## <a name="examples"></a>示例  
 
 ### <a name="a-simple-example"></a>A. 简单示例    
-下面的示例创建并填充一个简单表。 然后， `Country_Name`在列上创建统计信息。
+下面的示例创建并填充一个简单表。 然后，在列上创建统计信息 `Country_Name` 。
 
 ```sql
 CREATE TABLE Country
@@ -105,7 +105,7 @@ INSERT Country (Country_Name) VALUES ('Canada'), ('Denmark'), ('Iceland'), ('Per
 CREATE STATISTICS Country_Stats  
     ON Country (Country_Name) ;  
 ```   
-`stat_id`主键的占用次数`sys.dm_db_stats_histogram`为`stat_id` 1，因此调用 number 2 可返回`Country`表的统计信息直方图。    
+主键的占用 `stat_id` 次数为1，因此调用 `sys.dm_db_stats_histogram` `stat_id` number 2 可返回表的统计信息直方图 `Country` 。    
 ```sql     
 SELECT * FROM sys.dm_db_stats_histogram(OBJECT_ID('Country'), 2);
 ```
@@ -120,14 +120,14 @@ WHERE s.[name] = N'<statistic_name>';
 ```
 
 ### <a name="c-useful-query"></a>C. 有用的查询：
-下面的示例从表`Country`中选择包含列`Country_Name`的谓词。
+下面的示例从表中选择 `Country` 包含列的谓词 `Country_Name` 。
 
 ```sql  
 SELECT * FROM Country 
 WHERE Country_Name = 'Canada';
 ```
 
-下面的示例针对与上面查询中的谓词匹配`Country`的直方图`Country_Name`步骤，查看之前为表和列创建的统计信息。
+下面的示例 `Country` `Country_Name` 针对与上面查询中的谓词匹配的直方图步骤，查看之前为表和列创建的统计信息。
 
 ```sql  
 SELECT ss.name, ss.stats_id, shr.steps, shr.rows, shr.rows_sampled, 

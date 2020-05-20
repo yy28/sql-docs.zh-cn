@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_loaded_assemblies dynamic management view
 ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1cd677e516048aa52badec7fc9875e5a5b13f25a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d1597a3b6f8366b74e713eaeeda2ce412762809b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68138660"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824721"
 ---
 # <a name="sysdm_clr_loaded_assemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  为加载到服务器地址空间的每个托管用户程序集返回一行。 使用此视图可以了解在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]执行的 CLR 集成托管数据库对象并对其进行故障排除。  
+  为加载到服务器地址空间的每个托管用户程序集返回一行。 使用此视图可以了解在中执行的 CLR 集成托管数据库对象并对其进行故障排除 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  程序集是用于定义托管数据库对象并在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中部署的托管代码 DLL 文件。 只要用户执行了这些托管数据库对象中的一个，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 CLR 便会加载其中定义了托管数据库对象的程序集（及其引用）。 将加载的程序集保留在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可提高性能，以便将来可调用程序集中包含的托管数据库对象而无需重新加载该程序集。 只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 面临内存不足的压力时才会卸载该程序集。 有关程序集和 CLR 集成的详细信息，请参阅[Clr 宿主环境](../../relational-databases/clr-integration/clr-integration-architecture-clr-hosted-environment.md)。 有关托管数据库对象的详细信息，请参阅[通过公共语言运行时生成数据库对象 &#40;CLR&#41; 集成](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)。  
 
@@ -37,7 +37,7 @@ ms.locfileid: "68138660"
 |-----------------|---------------|-----------------|  
 |**assembly_id**|**int**|已加载程序集的 ID。 **Assembly_id**可用于在[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)目录视图中查找有关程序集的详细信息。 请注意， [!INCLUDE[tsql](../../includes/tsql-md.md)] [sys.databases](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)目录仅显示当前数据库中的程序集。 " **Dm_clr_loaded_assemblies sqs** " 视图显示服务器上已加载的所有程序集。|  
 |**appdomain_address**|**int**|加载程序集的应用程序域（**AppDomain**）的地址。 单个用户拥有的所有程序集始终加载到相同的**AppDomain**中。 **Appdomain_address**可用于在[sys. dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md)视图中查找有关**appdomain**的详细信息。|  
-|**load_time**|**datetime**|程序集的加载时间。 请注意，程序集将保持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]加载状态，直到处于内存压力下并卸载**AppDomain**。 你可以监视**load_time** ，以了解在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内存压力下的频率并卸载**AppDomain**。|  
+|**load_time**|**datetime**|程序集的加载时间。 请注意，程序集将保持加载状态，直到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 处于内存压力下并卸载**AppDomain**。 你可以监视**load_time** ，以了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在内存压力下的频率并卸载**AppDomain**。|  
   
 ## <a name="permissions"></a>权限  
  要求具有服务器的 VIEW SERVER STATE 权限。  

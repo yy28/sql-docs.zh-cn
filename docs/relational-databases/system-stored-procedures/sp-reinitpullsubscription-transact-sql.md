@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_reinitpullsubscription
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6f9021ec9b71694fc6567db5edf79965e09fd3c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 46abcc422058503a0c1911d69ec36b1539957753
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304911"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826557"
 ---
 # <a name="sp_reinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
   
  在下一次运行分发代理期间，可从订阅服务器调用**sp_reinitpullsubscription**以重新初始化订阅。  
   
- 不能从订阅服务器重新初始化使用值为**false**的** \@immediate_sync**创建的发布的订阅。  
+ 不能从订阅服务器重新初始化使用值为**false**的** \@ immediate_sync**创建的发布的订阅。  
   
  您可以通过在订阅服务器上执行**sp_reinitpullsubscription**或在发布服务器上执行**sp_reinitsubscription**来重新初始化请求订阅。  
   

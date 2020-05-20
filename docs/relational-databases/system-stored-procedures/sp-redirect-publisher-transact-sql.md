@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_redirect_publisher
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6062522ca6c5c3a311ba2f2c796f791c47e874ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 60cd08c7ddf8ab520b6ff5e8ffb588b1a8f118c9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252113"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828240"
 ---
 # <a name="sp_redirect_publisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sp_redirect_publisher
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @original_publisher = ] 'original_publisher'`最初发布数据库的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的名称。 *original_publisher* **sysname**，无默认值。  
+`[ @original_publisher = ] 'original_publisher'`最初发布数据库的实例的名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *original_publisher* **sysname**，无默认值。  
   
 `[ @publisher_db = ] 'publisher_db'`要发布的数据库的名称。 *publisher_db* **sysname**，无默认值。  
   
@@ -55,7 +55,7 @@ sp_redirect_publisher
 ## <a name="remarks"></a>备注  
  **sp_redirect_publisher**用于通过将发布服务器/数据库对与可用性组的侦听器相关联，使复制发布服务器重定向到 Always On 可用性组的当前主副本。 为包含已发布数据库的可用性组配置 AG 侦听器后，执行**sp_redirect_publisher** 。  
   
- 如果在主副本上从可用性组中删除原始发布服务器上的发布数据库，请在不指定* \@redirected_publisher*参数的值的情况下执行**sp_redirect_publisher** ，以删除发布服务器/数据库对的重定向。 有关在时重定向发布服务器的详细信息，请参阅[维护 AlwaysOn 发布数据库 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)。  
+ 如果在主副本上从可用性组中删除原始发布服务器上的发布数据库，请在不指定* \@ redirected_publisher*参数的值的情况下执行**sp_redirect_publisher** ，以删除发布服务器/数据库对的重定向。 有关在时重定向发布服务器的详细信息，请参阅[维护 AlwaysOn 发布数据库 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)。  
   
 ## <a name="permissions"></a>权限  
  调用方必须是**sysadmin**固定服务器角色的成员、分发数据库**db_owner**固定数据库角色的成员，或者是与发布服务器数据库相关联的已定义发布的发布访问列表的成员。  

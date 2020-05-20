@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_indexoption
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6d1231b4411e11de65cfe99d209ed231db79b5db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 17189e3acebd81e977b02b1b1b235f8e300e5e9c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68030905"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826021"
 ---
 # <a name="sp_indexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## <a name="examples"></a>示例  
   
 ### <a name="a-setting-an-option-on-a-specific-index"></a>A. 对特定索引设置选项  
- 下面的示例对`IX_Customer_TerritoryID` `Customer`表的索引不允许页锁。  
+ 下面的示例对表的索引不允许页锁 `IX_Customer_TerritoryID` `Customer` 。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -117,7 +117,7 @@ GO
 ```  
   
 ### <a name="c-setting-an-option-on-a-table-with-no-clustered-index"></a>C. 对不包含聚集索引的表设置选项  
- 以下示例对不包含聚集索引的表（堆）禁用页锁。 在`sys.indexes`执行`sp_indexoption`过程之前和之后，将查询目录视图以显示语句的结果。  
+ 以下示例对不包含聚集索引的表（堆）禁用页锁。 在 `sys.indexes` 执行过程之前和之后，将查询目录视图 `sp_indexoption` 以显示语句的结果。  
   
 ```sql  
 USE AdventureWorks2012;  

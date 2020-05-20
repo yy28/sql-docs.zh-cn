@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindsession
 ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fac327d88aa8a6d74e153c1c7b2f3d637bf6f936
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9a079a279c9d342033086c565203f85ad360e753
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046022"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828474"
 ---
 # <a name="sp_bindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  将会话绑定到同一个实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]中的其他会话或解除绑定。 绑定会话允许两个或更多的会话参与同一事务并共享锁，直到发出 ROLLBACK TRANSACTION 或 COMMIT TRANSACTION 命令。  
+  将会话绑定到同一个实例中的其他会话或解除绑定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 绑定会话允许两个或更多的会话参与同一事务并共享锁，直到发出 ROLLBACK TRANSACTION 或 COMMIT TRANSACTION 命令。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 请改用多个活动结果集 (MARS) 或分布式事务。 有关详细信息，请参阅[使用多个活动的结果集 (MARS)](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)。  
@@ -53,7 +53,7 @@ sp_bindsession { 'bind_token' | NULL }
   
  **sp_bindsession**使用绑定令牌绑定两个或更多个现有客户端会话。 这些客户端会话必须位于获得绑定令牌的同一[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中。 会话是执行命令的客户端。 绑定数据库会话共享事务和锁空间。  
   
- 从一个[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例获得的绑定令牌不能用于连接到另一实例的客户端会话，甚至对 DTC 事务也是如此。 绑定令牌仅在每个实例的本地有效，不能由多个实例共享。 若要将客户端会话绑定到的[!INCLUDE[ssDE](../../includes/ssde-md.md)]另一个实例，则必须通过执行**sp_getbindtoken**获取不同的绑定令牌。  
+ 从一个[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例获得的绑定令牌不能用于连接到另一实例的客户端会话，甚至对 DTC 事务也是如此。 绑定令牌仅在每个实例的本地有效，不能由多个实例共享。 若要将客户端会话绑定到的另一个实例 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，则必须通过执行**sp_getbindtoken**获取不同的绑定令牌。  
   
  如果**sp_bindsession**将失败，并在使用非活动令牌时出现错误。  
   

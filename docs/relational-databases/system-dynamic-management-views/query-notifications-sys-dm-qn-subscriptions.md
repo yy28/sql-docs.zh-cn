@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e0d725d37470f28847feb296194abd98fce9ae4a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 57087264554d228ec02ed22baa2afb932e646b10
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68061923"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826381"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>查询通知-sys. dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,12 +37,12 @@ ms.locfileid: "68061923"
 |**sid**|**varbinary （85）**|创建并拥有该订阅的服务器主体的安全 ID。|  
 |**object_id**|**int**|存储有关订阅参数信息的内部表的 ID。|  
 |**created**|**datetime**|创建订阅的日期和时间。|  
-|**timeout**|**int**|订阅超时（以秒为单位）。 在经过这段时间后，通知将标记为激发。<br /><br /> 注意：实际触发时间可能大于指定的超时时间。但是，如果在指定的超时时间之后但在激发订阅之前发生了无效的更改，则[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可确保在发生更改时进行触发。|  
+|**timeout**|**int**|订阅超时（以秒为单位）。 在经过这段时间后，通知将标记为激发。<br /><br /> 注意：实际触发时间可能大于指定的超时时间。但是，如果在指定的超时时间之后但在激发订阅之前发生了无效的更改，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可确保在发生更改时进行触发。|  
 |**status**|**int**|指示订阅的状态。 有关代码列表，请参阅备注下的表。|  
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|From|到|开|类型|  
+|From|功能|On|类型|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|多对一|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|多对一|  
