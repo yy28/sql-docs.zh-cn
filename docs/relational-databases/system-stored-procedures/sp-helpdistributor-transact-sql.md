@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdistributor
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8333e805c50f4b8084f8463877c361917097b547
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6d849e7d43cc73ca6153375f5e5b3772944af1f7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70745385"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828981"
 ---
 # <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  列出有关分发服务器、分发数据库、工作目录和[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理用户帐户的信息。 该存储过程在发布服务器上对发布数据库或任何数据库执行。  
+  列出有关分发服务器、分发数据库、工作目录和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理用户帐户的信息。 该存储过程在发布服务器上对发布数据库或任何数据库执行。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,13 +49,13 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @distributor = ] 'distributor' OUTPUT`分发服务器的名称。 分发服务器的默认值为**sysname**， **%** 默认值为，它是返回结果集的唯一值。  
+`[ @distributor = ] 'distributor' OUTPUT`分发服务器的名称。 分发服务器的默认值为**sysname**，默认 **%** 值为，它是返回结果集的唯一值。  
   
-`[ @distribdb = ] 'distribdb' OUTPUT`分发数据库的名称。 *distribdb*的类型为**sysname**，默认值**%** 为，该值是返回结果集的唯一值。  
+`[ @distribdb = ] 'distribdb' OUTPUT`分发数据库的名称。 *distribdb*的类型为**sysname**，默认 **%** 值为，该值是返回结果集的唯一值。  
   
-`[ @directory = ] 'directory' OUTPUT`工作目录。 *目录*的类型为**nvarchar （255）**，默认值**%** 为，它是返回结果集的唯一值。  
+`[ @directory = ] 'directory' OUTPUT`工作目录。 *目录*的类型为**nvarchar （255）**，默认 **%** 值为，它是返回结果集的唯一值。  
   
-`[ @account = ] 'account' OUTPUT`是[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户帐户。 *帐户*为**nvarchar （255）**，默认值为**%**，它是返回结果集的唯一值。  
+`[ @account = ] 'account' OUTPUT`是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户帐户。 *帐户*为**nvarchar （255）**，默认 **%** 值为，它是返回结果集的唯一值。  
   
 `[ @min_distretention = ] _min_distretentionOUTPUT`最小分发保持期（以小时为单位）。 *min_distretention*的值为**int**，默认值为 **-1**。  
   
@@ -63,17 +63,17 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 `[ @history_retention = ] _history_retentionOUTPUT`历史记录保持期（以小时为单位）。 *history_retention*的值为**int**，默认值为 **-1**。  
   
-`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT`历史记录清除代理的名称。 *history_cleanupagent*为**nvarchar （100）**，默认值为**%**，它是返回结果集的唯一值。  
+`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT`历史记录清除代理的名称。 *history_cleanupagent*为**nvarchar （100）**，默认 **%** 值为，它是返回结果集的唯一值。  
   
-`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT`分发清除代理的名称。 *distrib_cleanupagent*为**nvarchar （100）**，默认值为**%**，它是返回结果集的唯一值。  
+`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT`分发清除代理的名称。 *distrib_cleanupagent*为**nvarchar （100）**，默认 **%** 值为，它是返回结果集的唯一值。  
   
 `[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**，默认值为 NULL。  
   
-`[ @local = ] 'local'`是否[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]应获得本地服务器值。 *local*为**nvarchar （5）**，默认值为 NULL。  
+`[ @local = ] 'local'`是否 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应获得本地服务器值。 *local*为**nvarchar （5）**，默认值为 NULL。  
   
-`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT`发出远程过程调用的服务器的名称。 *rpcsrvname*的类型为**sysname**，默认值**%** 为，该值是返回结果集的唯一值。  
+`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT`发出远程过程调用的服务器的名称。 *rpcsrvname*的类型为**sysname**，默认 **%** 值为，该值是返回结果集的唯一值。  
   
-`[ @publisher_type = ] 'publisher_type' OUTPUT`发布服务器的发布服务器类型。 *publisher_type*的默认值为**sysname**，默认**%** 值为，该值是返回结果集的唯一值。  
+`[ @publisher_type = ] 'publisher_type' OUTPUT`发布服务器的发布服务器类型。 *publisher_type*的默认值为**sysname**，默认 **%** 值为，该值是返回结果集的唯一值。  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -82,7 +82,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |**发行人**|**sysname**|分发服务器的名称。|  
 |**分发数据库**|**sysname**|分发数据库的名称。|  
 |**文件夹**|**nvarchar(255)**|工作目录的名称。|  
-|**帐户登录**|**nvarchar(255)**|Windows 用户帐户的名称。|  
+|**帐户**|**nvarchar(255)**|Windows 用户帐户的名称。|  
 |**min distrib retention**|**int**|最小分发保持期。|  
 |**max distrib retention**|**int**|最大分发保持期。|  
 |**history retention**|**int**|历史记录保持期。|  
@@ -111,7 +111,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |history retention|**\@history_retention**|  
 |history cleanup agent|**\@history_cleanupagent**|  
 |distribution cleanup agent|**\@distrib_cleanupagent**|  
-|rpc login name|none|  
+|rpc login name|无|  
   
  以下结果集列返回给分发服务器上的某个发布的发布访问列表中的用户:  
   

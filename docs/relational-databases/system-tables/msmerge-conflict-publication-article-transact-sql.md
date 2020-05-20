@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_conflict_publication_article system table
 ms.assetid: dc4490b4-02d8-4dfc-98f5-0cf8de8e11be
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8d2c324f032f9cdd3206f6f2bed77fba74c2c0f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 070b8cfe44190f89db8e7adf142debbc29e64d15
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75322108"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829236"
 ---
 # <a name="msmerge_conflict_publication_article-transact-sql"></a>MSmerge_conflict_publication_article （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,10 +32,10 @@ ms.locfileid: "75322108"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**_文章\_列\_名称_**|**各种**|表示复制表中的一列。 在该系统表中，表项目中的每列对应一列。|  
+|**_文章 \_ 列 \_ 名称_**|**各种**|表示复制表中的一列。 在该系统表中，表项目中的每列对应一列。|  
 |**rowguid**|**uniqueidentifier**|冲突行的行标识符。|  
 |**ModifiedDate**|**datetime**|发生冲突的时间。|  
-|**源\_数据\_源 id**|**uniqueidentifier**|为其撤销行更改或失去冲突的订阅。|  
+|**源 \_ 数据源 \_ id**|**uniqueidentifier**|为其撤销行更改或失去冲突的订阅。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

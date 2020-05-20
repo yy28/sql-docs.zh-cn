@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpublications system table
 ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: de4970e82155454b3d05d6200bc7413baca97aef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 31f7d9c3e5d297a39fd0278c51014793a4b8dbd0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67939014"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829231"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "67939014"
 |**发布**|**sysname**|发布的名称。|  
 |**publication_id**|**int**|发布 ID。|  
 |**publication_type**|**int**|发布类型：<br /><br /> **0** = 事务性。<br /><br /> **1** = 快照。<br /><br /> **2** = 合并。|  
-|**thirdparty_flag**|**bit**|指示发布是否为[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库：<br /><br /> **0** = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。<br /><br /> **1** = 之外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的数据源。|  
+|**thirdparty_flag**|**bit**|指示发布是否为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br /> **1** = 之外的数据源 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**independent_agent**|**bit**|表明该发布是否有独立的分发代理。|  
 |**immediate_sync**|**bit**|指示每次运行快照代理时是否创建或重新创建同步文件。|  
 |**allow_push**|**bit**|指示是否可为给定发布创建推送订阅。|  
@@ -47,9 +47,9 @@ ms.locfileid: "67939014"
 |**保留**|**int**|发布的保持期（以小时为单位）。|  
 |**sync_method**|**int**|同步方法包括：<br /><br /> **0** = 本机（生成所有表的本机模式大容量复制输出）。<br /><br /> **1** = 字符（生成所有表的字符模式大容量复制输出）。<br /><br /> **3** = 并发（生成所有表的本机模式大容量复制输出，但在快照过程中并不锁定表）。<br /><br /> **4** = Concurrent_c （生成所有表的字符模式大容量复制输出，但在快照过程中并不锁定表）<br /><br /> 值**3**和**4**可用于事务复制和合并复制，但不适用于快照复制。|  
 |**allow_subscription_copy**|**bit**|启用或禁用对订阅此发布的订阅数据库的复制功能。 **0**表示禁用复制， **1**表示启用复制。|  
-|**thirdparty_options**|**int**|指定是否禁止在中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的复制文件夹中显示发布：<br /><br /> **0** = 在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 Replication 文件夹中显示异类发布。<br /><br /> **1** = 禁止在的 Replication 文件夹中显示异类发布[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。|  
+|**thirdparty_options**|**int**|指定是否禁止在中的复制文件夹中显示发布 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ：<br /><br /> **0** = 在的 Replication 文件夹中显示异类发布 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。<br /><br /> **1** = 禁止在的 Replication 文件夹中显示异类发布 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。|  
 |**allow_queued_tran**|**bit**|指定发布是否允许排队更新：<br /><br /> **0 =** 发布未排队。<br /><br /> **1** = 发布已排队。|  
-|**选项**|**int**|没有此版本的信息。|  
+|**options**|**int**|没有此版本的信息。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

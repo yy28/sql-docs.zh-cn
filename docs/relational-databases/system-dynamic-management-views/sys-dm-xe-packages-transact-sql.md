@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sys.dm_xe_packages dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 065625fdaca015de9c445e6e6f0e1ad0013f38e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 15a7b6a0fd05821e652160606002c1cef8edc717
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090261"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829067"
 ---
 # <a name="sysdm_xe_packages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68090261"
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(256)**|包的名称。 包自身便可显示说明。 不可为 null。|  
 |guid|**uniqueidentifier**|标识包的 GUID。 不可为 null。|  
-|description|**nvarchar （3072）**|包说明。 包作者设置的 descriptionis 不能为 null。|  
+|说明|**nvarchar （3072）**|包说明。 包作者设置的 descriptionis 不能为 null。|  
 |capabilities|**int**|说明此包的功能的位图。 可以为 Null。|  
 |capabilities_desc|**nvarchar(256)**|此包可能具有的所有功能的列表。 可以为 Null。|  
 |module_guid|**nvarchar(60)**|公开此包的模块的 GUID。 不可为 null。|  
@@ -54,7 +54,7 @@ ms.locfileid: "68090261"
   
 ||||  
 |-|-|-|  
-|From|到|关系|  
+|From|功能|关系|  
 |sys.dm_xe_packages.module_address|sys.dm_os_loaded_modules.base_address|多对一|  
   
 ## <a name="see-also"></a>另请参阅  

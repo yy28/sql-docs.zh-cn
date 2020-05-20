@@ -19,21 +19,21 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - sys.availability_group_listener_ip_addresses catalog view
 ms.assetid: e515fa6b-1354-4110-9b70-ab2e6164c992
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a9c66e12ec326ba5021de0829b0d7cc479f858c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 49f7322dc32634631a991d76bab58394a26c491e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997584"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829120"
 ---
 # <a name="sysavailability_group_listener_ip_addresses-transact-sql"></a>sys.availability_group_listener_ip_addresses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   为 Windows Server 故障转移群集 (WSFC) 中任何 AlwaysOn 可用性组侦听程序的每个关联 IP 地址都返回一行。  
   
- 主键： **listener_id** + **ip_address** + **ip_sub_mask**  
+ 主键： **listener_id**  +  **ip_address**  +  **ip_sub_mask**  
   
   
 |列名称|数据类型|说明|  
@@ -44,8 +44,8 @@ ms.locfileid: "67997584"
 |**is_dhcp**|**bit**|IP 地址是否由 DHCP 配置，可为下列值之一：<br /><br /> 0 = IP 地址不由 DHCP 配置。<br /><br /> 1 = IP 地址由 DHCP 配置。|  
 |**network_subnet_ip**|**nvarchar （48）**|指定 IP 地址所属子网的网络子网 IP 地址。|  
 |**network_subnet_prefix_length**|**int**|IP 地址所属子网的网络子网前缀长度。|  
-|**network_subnet_ipv4_mask**|**nvarchar （45）**|IP 地址所属子网的网络子网掩码。 **network_subnet_ipv4_mask**在[CREATE availability group](../../t-sql/statements/create-availability-group-transact-sql.md)或[ALTER availability group](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]语句的 WITH DHCP 子句中指定 DHCP <network_subnet_option> 选项。<br /><br /> NULL = IPv6 子网|  
-|**state**|**tinyint**|WSFC 群集中 IP 资源的“联机”/“脱机”状态，可为下列值之一：<br /><br /> 1 = 联机。 IP 资源处于联机状态。<br /><br /> 0 = 脱机。 IP 资源处于脱机状态。<br /><br /> 2 = 联机挂起。 IP 资源处于脱机状态，但正在联机。<br /><br /> 3 = 失败。 IP 资源尝试重新联机，但失败。|  
+|**network_subnet_ipv4_mask**|**nvarchar （45）**|IP 地址所属子网的网络子网掩码。 **network_subnet_ipv4_mask**在[CREATE Availability GROUP](../../t-sql/statements/create-availability-group-transact-sql.md)或[ALTER AVAILABILITY group](../../t-sql/statements/alter-availability-group-transact-sql.md)语句的 WITH DHCP 子句中指定 DHCP <network_subnet_option> 选项 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。<br /><br /> NULL = IPv6 子网|  
+|State |**tinyint**|WSFC 群集中 IP 资源的“联机”/“脱机”状态，可为下列值之一：<br /><br /> 1 = 联机。 IP 资源处于联机状态。<br /><br /> 0 = 脱机。 IP 资源处于脱机状态。<br /><br /> 2 = 联机挂起。 IP 资源处于脱机状态，但正在联机。<br /><br /> 3 = 失败。 IP 资源尝试重新联机，但失败。|  
 |**state_desc**|**nvarchar(60)**|**状态**说明，其中之一：<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> ONLINE_PENDING<br /><br /> FAILED|  
   
 ## <a name="security"></a>安全性  

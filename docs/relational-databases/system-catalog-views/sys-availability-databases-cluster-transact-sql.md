@@ -20,19 +20,19 @@ helpviewer_keywords:
 - sys.availability_databases_cluster catalog view
 - Availability Groups [SQL Server], databases
 ms.assetid: 8d9c57e5-7f39-4315-b466-92748231140a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 206c9b1c250cb95a6ad49ccf20f8badf11f870ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2c36c1574ae1ad289c9980e1df9bfbe3b241e164
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046531"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829143"
 ---
 # <a name="sysavailability_databases_cluster-transact-sql"></a>sys.availability_databases_cluster (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  对于正在为 Windows Server 故障转移群集（WSFC） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]群集中的任何 Always On 可用性组承载可用性副本的实例上的每个可用性数据库，都包含一行，不管本地副本数据库是否已联接到可用性组。  
+  对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在为 Windows Server 故障转移群集（WSFC）群集中的任何 Always On 可用性组承载可用性副本的实例上的每个可用性数据库，都包含一行，不管本地副本数据库是否已联接到可用性组。  
   
 > [!NOTE]  
 >  将数据库添加到可用性组后，主数据库自动联接到该组。 必须在每个辅助副本上准备辅助数据库，之后才能将其联接到可用性组。   
