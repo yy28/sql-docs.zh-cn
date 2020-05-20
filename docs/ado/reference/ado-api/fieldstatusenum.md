@@ -13,21 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - FieldStatusEnum enumeration [ADO]
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d3ad005a4c26a033f6c97d97def4cd55d867c14e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7ea1fc2d8347df28e983b412976c545327456ad8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918659"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756821"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 指定[字段对象](../../../ado/reference/ado-api/field-object.md)的[状态](../../../ado/reference/ado-api/status-property-ado-field.md)。  
   
- **AdFieldPending\* **值指示导致状态设置的操作，并且可以与其他状态值组合。  
+ **AdFieldPending \* **值指示导致状态设置的操作，并且可以与其他状态值组合。  
   
-|Constant|Value|说明|  
+|返回的常量|值|说明|  
 |--------------|-----------|-----------------|  
 |**adFieldAlreadyExists**|26|指示指定字段已存在。|  
 |**adFieldBadStatus**|12|指示从 ADO 发送到 OLE DB 提供程序的状态值无效。 可能的原因包括 OLE DB 1.0 或1.1 提供程序，或者[值](../../../ado/reference/ado-api/value-property-ado.md)和[状态](../../../ado/reference/ado-api/status-property-ado-field.md)的组合不正确。|  

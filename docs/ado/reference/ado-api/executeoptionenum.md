@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - ExecuteOptionEnum enumeration [ADO]
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bef70bd72425e749865e31ecf162e719737dd272
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 868acb8dec7ed8a6bd22f3cc5551dede63a50408
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932848"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757133"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 指定提供程序执行命令的方式。  
   
-|Constant|值|说明|  
+|返回的常量|值|说明|  
 |--------------|-----------|-----------------|  
 |**adAsyncExecute**|0x10|指示该命令应以异步方式执行。<br /><br /> 此值不能与[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)值**adCmdTableDirect**组合。|  
 |**adAsyncFetch**|0x20|指示应异步检索在[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)属性中指定的初始数量后的其余行。|  
@@ -38,7 +38,7 @@ ms.locfileid: "67932848"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
   
-|Constant|  
+|返回的常量|  
 |--------------|  
 |AdoEnums.ExecuteOption.ASYNCEXECUTE|  
 |AdoEnums.ExecuteOption.ASYNCFETCH|  

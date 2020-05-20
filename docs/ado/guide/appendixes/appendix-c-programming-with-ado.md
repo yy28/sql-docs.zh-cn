@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, programming
 ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d06cf8343bf100077fccc34645ccb14dbdbfaae6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7ed57bb3087378ac6529fc5bd8c8a0aa01e06cfa
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926875"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758523"
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>附录 C：在开发环境中用 ADO 编程
 ADO 是可与许多编程语言（包括 Microsoft Visual Basic、VBScript、JScript 和 Visual C++）结合使用的 COM 自动化接口组件。 其中的每个工具和其他应用程序（如 Microsoft Office 和 Microsoft SQL Server）都安装了 ADO 版本。
 
- ADO 库为 msado15.dll，程序 ID （ProgID）前缀为 "ADODB.RECORDSET"。 例如，若要显式引用 ADO[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，请使用`ADODB.Recordset`。
+ ADO 库为 msado15.dll，程序 ID （ProgID）前缀为 "ADODB.RECORDSET"。 例如，若要显式引用 ADO[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，请使用 `ADODB.Recordset` 。
 
  有关在各种开发环境中用 ADO 进行编程的详细信息，请参阅以下主题：
 

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cursors [ADO], forward-only
 - forward-only cursors [ADO]
 ms.assetid: 2b1e062f-3294-4a6f-8241-a17045c4df18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e84fbf2b8fda2fa2b14088af1e0830d8109aba8a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8943e97e8ce246732f0153a53f8be8d80d4fa88f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925309"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758193"
 ---
 # <a name="forward-only-cursors"></a>只进游标
 典型的默认游标类型称为只进（或不可滚动）游标，只能通过结果集向前移动。 只进游标不支持滚动（在结果集中向前和向后移动的能力）;它仅支持从结果集的开始处提取行。 对于某些只进游标（例如，使用 SQL Server 游标库），当前用户（或其他用户提交的）所做的所有 insert、update 和 delete 语句都将在提取行时可见。 由于游标无法向后滚动，但是，在提取行后对数据库中的行进行的更改通过游标均不可见。  

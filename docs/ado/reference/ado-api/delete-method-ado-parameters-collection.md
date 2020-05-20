@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Delete method [ADO]
 ms.assetid: 160c575e-df63-4ade-a2d3-5fd8f72e70cc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 965ef1bc84961e3358c530180bfe4e99249b0bc7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 19fb69e51e04a2e15c60767981bc32e4dfe77141
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933176"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757373"
 ---
 # <a name="delete-method-ado-parameters-collection"></a>Delete 方法（ADO 参数集合）
 从[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)集合中删除对象。  

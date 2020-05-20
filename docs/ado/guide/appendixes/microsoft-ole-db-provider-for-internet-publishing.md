@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Internet publishing
 - Internet Publishing provider [ADO]
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 19d719ddb4e5a2f7851a1d12dc4abe69069a354f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 079bbefce30b5836c16394a7b8efb215725c5ce6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926755"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758453"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>用于 Internet 发布的 Microsoft OLE DB 提供程序概述
 用于 Internet 发布的 Microsoft OLE DB 提供程序允许 ADO 访问 Microsoft FrontPage 或 Microsoft Internet Information Server 所提供的资源。 资源包括 web 源文件（如 HTML 文件）或 Windows 2000 web 文件夹。

@@ -13,17 +13,17 @@ helpviewer_keywords:
 - VBScript error handling [ADO]
 - errors [ADO], VBScript
 ms.assetid: 31bc3743-32d3-4bc7-ac61-ee6ed0fdec70
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 99c3d2a615abe64a6ea5fc79cab8fb3dc083178d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d191748315cb4636b295dbae56333e9ee0d16227
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925146"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758853"
 ---
 # <a name="handling-errors-in-vbscript"></a>处理 VBScript 中的错误
-Visual Basic 中使用的方法和 VBScript 使用的方法之间没有区别。 主要区别是 VBScript 不支持通过在标签处继续执行来处理错误。 换句话说，您不能在 VBScript `On Error GoTo`中使用。 相反，请`On Error Resume Next`使用，然后选中**错误**集合的 " **Err** " 和 "**计数**" 属性，如以下示例中所示：  
+Visual Basic 中使用的方法和 VBScript 使用的方法之间没有区别。 主要区别是 VBScript 不支持通过在标签处继续执行来处理错误。 换句话说，您不能 `On Error GoTo` 在 VBScript 中使用。 相反，请使用， `On Error Resume Next` 然后选中**错误**集合的 " **Err** " 和 "**计数**" 属性，如以下示例中所示：  
   
 ```  
 <!-- BeginErrorExampleVBS -->  

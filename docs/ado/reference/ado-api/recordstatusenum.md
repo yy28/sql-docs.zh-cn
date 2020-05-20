@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - RecordStatusEnum enumeration [ADO]
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 233b2f84b6a60c7b5162edce6c1b76b63946ae81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f84f43a90479064c2a95d407b7f816fd48c1c679
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931287"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756754"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
 指定有关批更新和其他批量操作的记录的[状态](../../../ado/reference/ado-api/status-property-ado-recordset.md)。  
   
-|Constant|值|说明|  
+|返回的常量|值|说明|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|指示未保存记录，因为该操作已取消。|  
 |**adRecCantRelease**|0x400|指示未保存新记录，因为现有记录已锁定。|  
@@ -51,7 +51,7 @@ ms.locfileid: "67931287"
   
  Package： **.com. 数据**  
   
-|Constant|  
+|返回的常量|  
 |--------------|  
 |AdoEnums.RecordStatus.CANCELED|  
 |AdoEnums.RecordStatus.CANTRELEASE|  

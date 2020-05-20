@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Resync Command property [ADO]
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e81fa9ffb28ba31f50d77cacf372bc24d09787ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 916afef294a76e62702dbbd7cc413a0540484f62
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917138"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756480"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resync Command 属性 - 动态 (ADO)
 指定一个用户提供的命令字符串，重新[同步](../../../ado/reference/ado-api/resync-method.md)方法发出此命令以刷新 "[唯一表](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)动态" 属性中命名的表中的数据。  
@@ -33,7 +33,7 @@ ms.locfileid: "67917138"
   
  下面是基于 SQL 的两个示例：  
   
- 1\)通过命令定义**记录集**：  
+ 1 \) 通过命令定义**记录集**：  
   
 ```  
 SELECT * FROM Customers JOIN Orders ON   
@@ -54,7 +54,7 @@ WHERE Orders.OrderID = ?"
   
  **唯一表**为*Orders* *，其*主键是参数化的。 子选择提供了一种简单的方法，可通过编程方式确保按原始命令返回相同的列数和列顺序。  
   
- 2\) **记录集**由存储过程定义：  
+ 2 \) **记录集**由存储过程定义：  
   
 ```  
 CREATE PROC Custorders @CustomerID char(5) AS   

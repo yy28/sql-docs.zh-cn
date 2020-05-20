@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Refresh method [ADO], VC++ example
 ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 58bc25f41171e4258347522efe7a02f2620cfd82
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: abd6a67cdec9e330cb2f21baeedfe3518fd3b7d0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917276"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756527"
 ---
 # <a name="refresh-method-example-vc"></a>Refresh 方法示例 (VC++)
 此示例演示如何使用[refresh](../../../ado/reference/ado-api/refresh-method-ado.md)方法刷新存储过程[命令](../../../ado/reference/ado-api/command-object-ado.md)对象的[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)集合。  

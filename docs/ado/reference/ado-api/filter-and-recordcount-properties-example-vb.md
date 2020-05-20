@@ -13,14 +13,14 @@ helpviewer_keywords:
 - RecordCount property [ADO], Visual Basic example
 - Filter property [ADO], Visual Basic example
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6f94440d9ddd0d0b5091f2a106f603397147ebda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8eeb68293e7c800fda4c4dd395f840cfeeb2d572
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918643"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756769"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Filter 和 RecordCount 属性示例 (VB)
 此示例打开***Pubs***数据库的发布服务器表中的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 然后，它使用[筛选器](../../../ado/reference/ado-api/filter-property.md)属性将可见记录的数目限制为特定国家/地区的发布者。 **RecordCount**属性用于显示已筛选和未筛选的记录集之间的差异。  

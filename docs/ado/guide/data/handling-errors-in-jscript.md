@@ -13,14 +13,14 @@ helpviewer_keywords:
 - errors [ADO], JScript
 - JScript error handling [ADO]
 ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a92077bf72c025fa183292525b3bd756a4bf4b87
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 81ed99344a610e367b185f1acb1ae8cbae3da284
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925174"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758863"
 ---
 # <a name="handling-errors-in-jscript"></a>处理 JScript 中的错误
 Microsoft® JScript®代码必须检查**连接**对象的**错误**集合的**Count**属性。 如果值大于0，则循环访问集合，并像在任何其他语言中那样打印这些值。  

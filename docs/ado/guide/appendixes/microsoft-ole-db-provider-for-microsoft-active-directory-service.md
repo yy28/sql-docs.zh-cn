@@ -13,14 +13,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Active Directory service
 - OLE DB provider for Active Directory service [ADO]
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e204a4f6f7f395ca93198bc560f4a216d5a70673
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 837f5fbcbb6c7730cdfcbe08e532a73c5faad06f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926676"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758323"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB Provider for Microsoft Active Directory 服务
 Active Directory Service 接口（ADSI）提供程序允许 ADO 通过 ADSI 连接到异类目录服务。 这使得 ADO 应用程序除了任何符合 LDAP 的目录服务和 Novell 目录服务之外，还可以对 Microsoft Windows NT 4.0 和 Microsoft Windows 2000 目录服务进行只读访问。 ADSI 本身基于提供程序模型，因此，如果有新的提供程序可访问另一个目录，ADO 应用程序将能够无缝地访问它。 ADSI 提供程序启用了自由线程和 Unicode。  
@@ -62,7 +62,7 @@ ADSDSOObject
 |值|说明|  
 |-----------|-----------------|  
 |*Root*|指示从其开始搜索的**ADsPath**对象（即，搜索的根目录）。|  
-|*筛选器*|指示 RFC 1960 格式的搜索筛选器。|  
+|*Filter*|指示 RFC 1960 格式的搜索筛选器。|  
 |*特性*|指示要返回的属性的逗号分隔列表。|  
 |*Scope*|可选。 指定搜索范围的**字符串**。 可以是以下其中一个值：<br /><br /> -仅搜索基本对象（搜索的根目录）。<br />-OneLevel-仅搜索一级。<br />-子树-搜索整个子树。|  
   
@@ -89,7 +89,7 @@ objectClass='user' AND objectCategory='Person'"
   
  **标准 ADO 记录集属性的可用性：**  
   
-|属性|可用性|  
+|Property|是否支持|  
 |--------------|------------------|  
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|读/写|  
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|读/写|  
@@ -101,7 +101,7 @@ objectClass='user' AND objectCategory='Person'"
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|始终**adOpenStatic**|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|始终**adEditNone**|  
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|只读|  
-|[筛选器](../../../ado/reference/ado-api/filter-property.md)|读/写|  
+|[Filter](../../../ado/reference/ado-api/filter-property.md)|读/写|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|读/写|  
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|不可用|  
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|读/写|  
@@ -134,7 +134,7 @@ objectClass='user' AND objectCategory='Person'"
 |[重新](../../../ado/reference/ado-api/requery-method.md)|是|  
 |[重新同步](../../../ado/reference/ado-api/resync-method.md)|是|  
 |[支持](../../../ado/reference/ado-api/supports-method.md)|是|  
-|[Update](../../../ado/reference/ado-api/update-method.md)|否|  
+|[更新](../../../ado/reference/ado-api/update-method.md)|否|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|否|  
   
  有关 ADSI 的详细信息以及提供程序的具体信息，请参阅 Active Directory 服务接口文档或访问 ADSI 网页。  

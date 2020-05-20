@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - IsolationLevelEnum enumeration [ADO]
 ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 15ae2aac2851c496b6cac9e47d37fe5fa26b8e34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 864938729153a1cd3f8f31f2e4ba04b075d2f713
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918374"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758643"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 指定[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象的事务隔离级别。  
   
-|Constant|Value|说明|  
+|返回的常量|值|说明|  
 |--------------|-----------|-----------------|  
 |**adXactUnspecified**|-1|指示提供程序使用的隔离级别与指定的隔离级别不同，但是无法确定该级别。|  
 |**adXactChaos**|16|指示无法覆盖来自更高隔离事务的挂起的更改。|  
@@ -40,7 +40,7 @@ ms.locfileid: "67918374"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
   
-|Constant|  
+|返回的常量|  
 |--------------|  
 |AdoEnums. IsolationLevel。未指定|  
 |AdoEnums. IsolationLevel|  

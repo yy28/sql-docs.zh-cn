@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - RecordTypeEnum enumeration [ADO]
 ms.assetid: f557e537-015d-4ba7-8a41-a6f00b366a91
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: df70838b7986993459df4f37af8b7043626a5d7b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8b47b68b8515ea80405d6083e37a767fb5a6d21e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931265"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756559"
 ---
 # <a name="recordtypeenum"></a>RecordTypeEnum
 指定[记录](../../../ado/reference/ado-api/record-object-ado.md)对象的类型。  
   
-|Constant|值|说明|  
+|返回的常量|值|说明|  
 |--------------|-----------|-----------------|  
 |**adSimpleRecord**|0|指示*简单*记录（不包含子节点）。|  
 |**adCollectionRecord**|1|指示*集合*记录（包含子节点）。|  

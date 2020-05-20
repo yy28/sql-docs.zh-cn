@@ -13,26 +13,26 @@ f1_keywords:
 helpviewer_keywords:
 - GetRowsOptionEnum enumeration [ADO]
 ms.assetid: adc109b9-79f4-4946-a5eb-658e22e9a8a5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a48d0d3a08095cde1da2c142ed59efafb0ba463f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7b1c38e266cc84816a4ad751112d5744edf3e3e4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918486"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758753"
 ---
 # <a name="getrowsoptionenum"></a>GetRowsOptionEnum
 指定要从[记录集中](../../../ado/reference/ado-api/recordset-object-ado.md)检索的记录数。  
   
-|Constant|Value|说明|  
+|返回的常量|值|说明|  
 |--------------|-----------|-----------------|  
 |**adGetRowsRest**|-1|从当前位置或由[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法的*Start*参数指定的书签检索记录**集中**的其余记录。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
   
-|Constant|  
+|返回的常量|  
 |--------------|  
 |AdoEnums. GetRowsOption|  
   

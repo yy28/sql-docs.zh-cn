@@ -13,14 +13,14 @@ helpviewer_keywords:
 - errors [ADO], Visual C++
 - Visual C++ error handling [ADO]
 ms.assetid: b7576f07-020a-45f7-9e79-b5756f33f7ab
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fb9eb29a78c3ec5f47e3ff09641ba04ca01d204a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1628522a6ef1c9498ea26e987070ee9f3a873d19
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925129"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758843"
 ---
 # <a name="handling-errors-in-visual-c"></a>处理 Visual C++ 中的错误
 在 COM 中，大多数操作都返回一个 HRESULT 返回代码，该代码指示函数是否已成功完成。 #Import 指令围绕每个 "原始" 方法或属性生成包装代码，并检查返回的 HRESULT。 如果 HRESULT 指示失败，则包装代码通过调用 _com_issue_errorex （），并将 HRESULT 返回代码作为参数来引发 COM 错误。 COM 错误对象可以在**try-catch**块中捕获。 （为提高效率，请捕获对 _com_error 对象的引用。）  

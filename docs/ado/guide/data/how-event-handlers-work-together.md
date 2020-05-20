@@ -15,14 +15,14 @@ helpviewer_keywords:
 - event handlers [ADO]
 - multiple object event handlers [ADO]
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b744dbd464aedbd9b87d22aa74277787fcc3c7a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 98144b1dacb406de4f57f9d051547640edd09397
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925040"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758103"
 ---
 # <a name="how-event-handlers-work-together"></a>事件处理程序的协同工作原理
 除非您正在 Visual Basic 进行编程，否则不管是否确实处理所有事件，都必须实现**连接**事件和**记录集**事件的所有事件处理程序。 您必须执行的实现工作量取决于编程语言。 有关详细信息，请参阅[按语言的 ADO 事件实例化](../../../ado/guide/data/ado-event-instantiation-by-language.md)。  
@@ -45,7 +45,7 @@ ms.locfileid: "67925040"
   
  单个**完整**事件处理程序对于管理异步操作非常有用。 每个异步操作都有一个适当的**完整**事件。  
   
- 例如，填充大型[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)对象可能需要很长时间。 如果你的应用程序已适当编写，你可以`Recordset.Open(...,adAsyncExecute)`启动操作并继续其他处理。 当**记录集**由**ExecuteComplete**事件填充时，最终会收到通知。  
+ 例如，填充大型[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)对象可能需要很长时间。 如果你的应用程序已适当编写，你可以启动 `Recordset.Open(...,adAsyncExecute)` 操作并继续其他处理。 当**记录集**由**ExecuteComplete**事件填充时，最终会收到通知。  
   
 ## <a name="single-event-handlers-and-multiple-objects"></a>单个事件处理程序和多个对象  
  编程语言（例如 Microsoft Visual C++®）的灵活性使您能够从多个对象处理一个事件处理程序事件。 例如，你可能有一个从多个**连接**对象的 "**断开连接**" 事件处理程序事件。 如果某个连接结束，则会调用 "**断开连接**" 事件处理程序。 由于事件处理程序对象参数将设置为相应的**连接**对象，因此可以告知哪个连接引发了事件。  

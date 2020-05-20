@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Recordset [ADO]
 ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1c195b3f9897d0bc71ab9e03e69153a66cdd80ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0bffe36980f06bc187bdaf819b373cdb547ecc92
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924922"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757793"
 ---
 # <a name="jscript-code-example-to-return-a-recordset"></a>用于返回记录集的 JScript 代码示例
 ## <a name="jscript-code-rsjs"></a>JScript 代码（rs-232c）  
@@ -85,4 +85,4 @@ function alert(str)
   
 2.  打开一个命令提示符，然后将 cd 保存到保存 JScript 文件的目录（rs-232c）。  
   
-3.  在`CScript rs.js`命令提示符下键入。
+3.  在 `CScript rs.js` 命令提示符下键入。

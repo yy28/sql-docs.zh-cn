@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - DataTypeEnum enumeration [ADO]
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 27386894ce6d1d393505d49b4863a0ba9bf3320b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5d22757951cad59c10bc1d7eea85ea8ee11ed0ad
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933224"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757623"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 指定[字段](../../../ado/reference/ado-api/field-object.md)、[参数](../../../ado/reference/ado-api/parameter-object.md)或[属性](../../../ado/reference/ado-api/property-object-ado.md)的数据类型。 下表的 "说明" 列中的括号内显示了相应的 OLE DB 类型指示器。  
   
-|Constant|值|说明|  
+|返回的常量|值|说明|  
 |--------------|-----------|-----------------|  
 |**AdArray**|0x2000|标志值始终与另一个数据类型常量合并，指示另一个数据类型的数组。 不适用于 ADOX。|  
 |**adBigInt**|20|指示八字节有符号整数（DBTYPE_I8）。|  
@@ -71,7 +71,7 @@ ms.locfileid: "67933224"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
   
-|Constant|  
+|返回的常量|  
 |--------------|  
 |AdoEnums|  
 |AdoEnums|  

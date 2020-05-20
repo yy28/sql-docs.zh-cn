@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bee7d185d5f598a2f0a086bb7e3bea49ddfff88c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c45f457cdf633cc16052ed2945f71da176efe472
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924913"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757583"
 ---
 # <a name="more-about-recordset-persistence"></a>更多有关记录集暂留的信息
 ADO 记录集对象支持使用其[Save](../../../ado/reference/ado-api/save-method.md)方法在文件中存储**记录集**对象的内容。 持久存储的文件可能位于本地驱动器、服务器或网站上的 URL。 稍后，可以通过**Recordset**对象的[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法或[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象的[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法来还原文件。  
