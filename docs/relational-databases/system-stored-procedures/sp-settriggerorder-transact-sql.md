@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_settriggerorder
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e258badbcf304fddbaf7575269194bd409ec8645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad5239e2761ed1cc788f7826a054ac0e038d9e79
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982233"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824292"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,19 +53,19 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 |值|说明|  
 |-----------|-----------------|  
 |**1**|触发器被第一个触发。|  
-|**时间**|触发器被最后一个触发。|  
+|**最后一个**|触发器被最后一个触发。|  
 |**无**|触发器以未定义的顺序触发。|  
   
-`[ @stmttype = ] 'statement_type'`指定触发触发器的 SQL 语句。 *statement_type*为**varchar （50）** ，可以是 INSERT、UPDATE、DELETE、LOGON 或[!INCLUDE[tsql](../../includes/tsql-md.md)] [DDL 事件](../../relational-databases/triggers/ddl-events.md)中列出的任何语句事件。 不能指定事件组。  
+`[ @stmttype = ] 'statement_type'`指定触发触发器的 SQL 语句。 *statement_type*为**varchar （50）** ，可以是 INSERT、UPDATE、DELETE、LOGON 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] [DDL 事件](../../relational-databases/triggers/ddl-events.md)中列出的任何语句事件。 不能指定事件组。  
   
- 只有在将触发器定义为该语句类型的触发器之后，才能将该触发器指定为语句类型的**第一个**或**最后**一个触发器。 例如，如果**TR1**定义为 insert 触发器，则可以**先**将 trigger **TR1**指定为 table **T1**上的 insert。 如果仅将**TR1**定义为 INSERT 触发器，则会将设置为 UPDATE 语句的**第一个**或最后一个触发器。 **Last** [!INCLUDE[ssDE](../../includes/ssde-md.md)] 有关详细信息，请参见“备注”部分。  
+ 只有在将触发器定义为该语句类型的触发器之后，才能将该触发器指定为语句类型的**第一个**或**最后**一个触发器。 例如，如果**TR1**定义为 insert 触发器，则可以**先**将 trigger **TR1**指定为 table **T1**上的 insert。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]如果仅将**TR1**定义为 INSERT 触发器，则会将设置为 UPDATE 语句的**第一个**或**最后**一个触发器。 有关详细信息，请参见“备注”部分。  
   
- namespace = { **' 数据库 '** | **"SERVER"** | ** \@** 无效  
- 当*triggername*是 DDL 触发器时， ** \@命名空间**指定是使用数据库作用域还是服务器作用域创建*triggername* 。 如果*triggername*是 logon 触发器，则必须指定服务器。 有关 DDL 触发器作用域的详细信息，请参阅[Ddl 触发器](../../relational-databases/triggers/ddl-triggers.md)。 如果未指定或指定 NULL，则*triggername*是 DML 触发器。  
+ ** \@ namespace =** { **' 数据库 '**  |  **"SERVER"** |无效  
+ 当*triggername*是 DDL 触发器时， ** \@ 命名空间**指定是使用数据库作用域还是服务器作用域创建*triggername* 。 如果*triggername*是 logon 触发器，则必须指定服务器。 有关 DDL 触发器作用域的详细信息，请参阅[Ddl 触发器](../../relational-databases/triggers/ddl-triggers.md)。 如果未指定或指定 NULL，则*triggername*是 DML 触发器。  
   
 ||  
 |-|  
-|服务器适用于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和更高版本。|  
+|服务器适用于： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更高版本。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）和1（失败）  

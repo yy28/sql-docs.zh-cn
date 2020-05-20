@@ -16,19 +16,19 @@ helpviewer_keywords:
 - sp_syscollector_create_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bd8c82a401f78f4907bb891ede845017c00ac5ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4290d2ecff4b76675f464c5e2a396703e7fc370c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032631"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824280"
 ---
 # <a name="sp_syscollector_create_collector_type-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  为数据收集器创建收集器类型。 收集器类型是围绕[!INCLUDE[ssIS](../../includes/ssis-md.md)]包的逻辑包装，它们提供用于收集数据并将数据上载到管理数据仓库的实际机制。  
+  为数据收集器创建收集器类型。 收集器类型是围绕包的逻辑包装 [!INCLUDE[ssIS](../../includes/ssis-md.md)] ，它们提供用于收集数据并将数据上载到管理数据仓库的实际机制。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,22 +46,22 @@ sp_syscollector_create_collector_type
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @collector_type_uid = ]"*collector_type_uid*"  
+ [ @collector_type_uid =] "*collector_type_uid*"  
  收集器类型的 GUID。 *collector_type_uid*是**uniqueidentifier** ，如果为 NULL，则它将自动创建并作为输出返回。  
   
- [ @name = ]"*name*"  
+ [ @name =] "*name*"  
  收集器类型的名称。 *名称*为**sysname** ，必须指定。  
   
- [ @parameter_schema = ]"*parameter_schema*"  
+ [ @parameter_schema =] "*parameter_schema*"  
  此收集器类型的 XML 架构。 *parameter_schema*为**xml** ，默认值为 NULL。  
   
- [ @parameter_formatter = ]"*parameter_formatter*"  
+ [ @parameter_formatter =] "*parameter_formatter*"  
  是用于转换 XML 以便在收集组属性页中使用的模板。 *parameter_formatter*为**xml** ，默认值为 NULL。  
   
- [@collection_package_id = ]*collection_package_id*  
+ [ @collection_package_id =] *collection_package_id*  
  指向收集组使用的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 收集包的本地唯一标识符。 *collection_package_id* **uniqueidentifer** ，并且是必需的。  
   
- [@upload_package_id = ]*upload_package_id*  
+ [ @upload_package_id =] *upload_package_id*  
  指向收集组使用的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 上载包的本地唯一标识符。 *upload_package_id*是**uniqueidentifier** ，且是必需的。  
   
 ## <a name="return-code-values"></a>返回代码值  

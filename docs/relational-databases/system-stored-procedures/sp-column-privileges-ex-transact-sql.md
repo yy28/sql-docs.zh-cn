@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_column_privileges_ex
 ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cd4251c4b47f67d348b6978c05c07d0ae64d16c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 46abd2a21441cdf911cecb9b21f02451400258f3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070361"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823980"
 ---
 # <a name="sp_column_privileges_ex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,11 +58,11 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|表限定符名称。 各种 DBMS 产品支持表的三部分命名（_限定符_**。**_所有者_**。**_名称_）。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，此列表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。 此字段可以为 NULL。|  
+|**TABLE_CAT**|**sysname**|表限定符名称。 各种 DBMS 产品支持表的三部分命名（_限定符_**。**_所有者_**。**_名称_）。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此列表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。 此字段可以为 NULL。|  
 |**TABLE_SCHEM**|**sysname**|表所有者名称。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，此列表示创建该表的数据库用户的名称。 此字段始终返回值。|  
 |**TABLE_NAME**|**sysname**|表名。 此字段始终返回值。|  
 |**COLUMN_NAME**|**sysname**|列名称，为返回的每个列的**TABLE_NAME** 。 此字段始终返回值。|  
-|**授权者**|**sysname**|已**向列出的**被授权者授予对此**COLUMN_NAME**的权限的数据库用户名。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，此列始终与**TABLE_OWNER**相同。 此字段始终返回值。<br /><br /> **授权**者列可以是数据库所有者（**TABLE_OWNER**），也可以是数据库所有者在 GRANT 语句中使用 WITH grant OPTION 子句授予权限的用户。|  
+|**授权者**|**sysname**|已**向列出的**被授权者授予对此**COLUMN_NAME**的权限的数据库用户名。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此列始终与**TABLE_OWNER**相同。 此字段始终返回值。<br /><br /> **授权**者列可以是数据库所有者（**TABLE_OWNER**），也可以是数据库所有者在 GRANT 语句中使用 WITH grant OPTION 子句授予权限的用户。|  
 |**被授权者**|**sysname**|已被列出的**授权**者授予此**COLUMN_NAME**的权限的数据库用户名。 此字段始终返回值。|  
 |**PRIVILEGE**|**varchar （** 32 **）**|可用列权限中的一个。 列权限可以是下列值中的一个（或定义实现时数据源支持的其他值）：<br /><br /> SELECT =**被**授权者可以检索列的数据。<br /><br /> INSERT =**当**向表中插入新行**时，被**授权者可以为此列提供数据。<br /><br /> UPDATE =**被**授权者可以修改列中的现有数据。<br /><br /> REFERENCE = 被授权者**可以通过主键**/外键关系引用外表中的列。 主键/外键关系是使用表约束定义的。|  
 |**IS_GRANTABLE**|**varchar （** 3 **）**|指示**是否允许被授权**者向其他用户授予权限（通常称为 "授予 with grant" 权限）。 可以是 YES、NO 或 NULL。 未知值或 NULL 值表示不能使用“授予再授予”(grant with grant) 的数据源。|  

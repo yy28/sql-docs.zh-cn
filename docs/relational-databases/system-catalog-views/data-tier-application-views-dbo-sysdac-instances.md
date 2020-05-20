@@ -18,14 +18,14 @@ helpviewer_keywords:
 - dbo.sysdac_instances
 - sysdac_instances
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b1530e58597947a7e19f4ca264808fbfefd164ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dfff37bc876302e404b63eb7babf4fc3700fc9d9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68033126"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823629"
 ---
 # <a name="data-tier-application-views---dbosysdac_instances"></a>数据层应用程序视图-dbo. sysdac_instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68033126"
 |instance_name|**sysname**|在部署 DAC 时指定的 DAC 实例的名称。|  
 |type_name|**sysname**|在创建 DAC 包时指定的 DAC 的名称。|  
 |type_version|**nvarchar （64）**|在创建 DAC 包时指定的 DAC 的版本。|  
-|description|**nvarchar(4000)**|在创建 DAC 包时写入的 DAC 的说明。|  
+|说明|**nvarchar(4000)**|在创建 DAC 包时写入的 DAC 的说明。|  
 |type_stream|**varbinary(max)**|包含 DAC 中包含的逻辑对象（如表和视图）的已编码表示形式的位流。|  
 |date_created|**datetime**|DAC 实例的创建日期和时间。|  
 |created_by|**sysname**|创建 DAC 实例的登录名。|  

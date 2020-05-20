@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_faileditems database mail view
 ms.assetid: a31562c5-358e-4cfc-a72d-b3faccc53851
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 586727c86dca057abeb221c828720ea38e24d7b0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dc783b97430f5ddc456ebba82dd76a50c6d3cd2a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060216"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824062"
 ---
 # <a name="sysmail_faileditems-transact-sql"></a>sysmail_faileditems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +35,10 @@ ms.locfileid: "68060216"
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|邮件队列中邮件项的标识符。|  
 |**profile_id**|**int**|提交消息所用配置文件的标识符。|  
-|**recipients**|**varchar(max)**|消息收件人的电子邮件地址。|  
+|**者**|**varchar(max)**|消息收件人的电子邮件地址。|  
 |**copy_recipients**|**varchar(max)**|接收消息副本的用户的电子邮件地址。|  
 |**blind_copy_recipients**|**varchar(max)**|接收消息副本但其姓名未出现在消息标头中的用户的电子邮件地址。|  
-|**主题**|**nvarchar （510）**|消息的主题行。|  
+|**subject**|**nvarchar （510）**|消息的主题行。|  
 |**body**|**varchar(max)**|消息正文。|  
 |**body_format**|**varchar （20）**|消息正文的格式。 可能值为 TEXT 和 HTML。|  
 |**importance**|**varchar （6）**|消息的**重要性**参数。|  

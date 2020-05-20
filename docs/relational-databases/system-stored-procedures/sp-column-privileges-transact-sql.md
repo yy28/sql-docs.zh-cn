@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_column_privileges
 ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc0ad8fcdf8c72e1b91df651a75227975d18294e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6a2535aff30c0a3071b641889f5e4a3f1433f88b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68061812"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823963"
 ---
 # <a name="sp_column_privileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,19 +43,19 @@ sp_column_privileges [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @table_name= ]"*table_name*"  
+ [ @table_name =] "*table_name*"  
  用来返回目录信息的表。 *table_name* **sysname**，无默认值。 不支持通配符模式匹配。  
   
- [ @table_owner= ]"*table_owner*"  
+ [ @table_owner =] "*table_owner*"  
  用于返回目录信息的表的所有者。 *table_owner*的默认值为**sysname**，默认值为 NULL。 不支持通配符模式匹配。 如果未指定*table_owner* ，则应用基础数据库管理系统（DBMS）的默认表可见性规则。  
   
  如果当前用户拥有具有指定名称的表，则返回该表的列。 如果未指定*table_owner*并且当前用户没有具有指定*table_name*的表，则 sp_column 权限将查找数据库所有者拥有指定*table_name*的表。 如果有，则返回该表的列。  
   
- [ @table_qualifier= ]"*table_qualifier*"  
- 表限定符的名称。 *table_qualifier*的默认值为*sysname*，默认值为 NULL。 各种 DBMS 产品支持表的三部分命名（_限定符_**。**_所有者_**。**_名称_）。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，此列表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
+ [ @table_qualifier =] "*table_qualifier*"  
+ 表限定符的名称。 *table_qualifier*的默认值为*sysname*，默认值为 NULL。 各种 DBMS 产品支持表的三部分命名（_限定符_**。**_所有者_**。**_名称_）。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此列表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
   
- [ @column_name= ]"*column*"  
- 只获取一列目录信息时所用的单独的列。 *列*的值为**nvarchar （** 384 **）**，默认值为 NULL。 如果未指定*column* ，则返回所有列。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，*列*表示 sys.databases 表中列出的列名称。 *列*可以包含使用基础 DBMS 的通配符匹配模式的通配符。 为了达到最佳的互操作性，网关客户端应只采用 ISO 标准模式匹配（% 和 _ 通配符）。  
+ [ @column_name =] "*column*"  
+ 只获取一列目录信息时所用的单独的列。 *列*的值为**nvarchar （** 384 **）**，默认值为 NULL。 如果未指定*column* ，则返回所有列。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，*列*表示 sys.databases 表中列出的列名称。 *列*可以包含使用基础 DBMS 的通配符匹配模式的通配符。 为了达到最佳的互操作性，网关客户端应只采用 ISO 标准模式匹配（% 和 _ 通配符）。  
   
 ## <a name="result-sets"></a>结果集  
  sp_column_privileges 与 ODBC 中的 SQLColumnPrivileges 等价。 返回的结果按 TABLE_QUALIFIER、TABLE_OWNER、TABLE_NAME、COLUMN_NAME 和 PRIVILEGE 排序。  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_clean_db_free_space
 - ghost records
 ms.assetid: faa96f7e-be92-47b1-8bc5-4dbba5331655
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8f6aa21345fe4ba16c06a5ead3381a6e1ccdef8e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cf21502e06d67edd2e9d5c3dcfdd3c5caa42704c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070386"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823999"
 ---
 # <a name="sp_clean_db_free_space-transact-sql"></a>sp_clean_db_free_space (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,17 @@ sp_clean_db_free_space
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @dbname= ]"*database_name*"  
+ [ @dbname =] "*database_name*"  
  要清理的数据库的名称。 *dbname*为**sysname** ，且不能为 NULL。  
   
- [ @cleaning_delay= ]"*delay_in_seconds*"  
+ [ @cleaning_delay =] "*delay_in_seconds*"  
  指定各次页清理之间的延迟间隔。 这会有助于减轻对 I/O 系统的影响。 *delay_in_seconds*的**整数为 int** ，默认值为0。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>备注  
- 删除表的操作或更新操作导致行移动可以立即通过删除对该行的引用来释放页上的空间。 但是，在某些情况下，该行仍然作为虚影记录而保留在数据页上。 后台进程定期清除虚影记录。 不会[!INCLUDE[ssDE](../../includes/ssde-md.md)]在响应查询时返回该残留数据。 但是，在数据或备份文件处于其物理安全性面临风险的环境中时，可以使用 sp_clean_db_free_space 来清除虚影记录。  
+ 删除表的操作或更新操作导致行移动可以立即通过删除对该行的引用来释放页上的空间。 但是，在某些情况下，该行仍然作为虚影记录而保留在数据页上。 后台进程定期清除虚影记录。 不会在响应查询时返回该残留数据 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 但是，在数据或备份文件处于其物理安全性面临风险的环境中时，可以使用 sp_clean_db_free_space 来清除虚影记录。  
   
  运行 sp_clean_db_free_space 所需的时间依文件大小、磁盘的可用空间和容量而定。 由于运行 sp_clean_db_free_space 对 I/O 活动有较大的影响，我们建议您在常规运行时间之外运行此过程。  
   

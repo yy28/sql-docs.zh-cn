@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscription
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5684d80bc63fe543e54aa4c38d9f0a516b6334ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c88e0f545a19c1f486c5c6927c11fd2707112963
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770667"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824076"
 ---
 # <a name="sp_changesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -60,28 +60,28 @@ sp_changesubscription [ @publication = ] 'publication'
   
 `[ @value = ] 'value'`指定的*属性*的新值。 *值*为**nvarchar （4000）**，可以是表中的值之一。  
   
-|属性|值|说明|  
+|Property|值|说明|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||用来运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的登录名。|  
 |**distrib_job_password**||用来运行代理的 Windows 帐户的密码。|  
-|**subscriber_catalog**||在与 OLE DB 访问接口建立连接时要使用的目录。 此属性仅对非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器有效。|  
-|**subscriber_datasource**||OLE DB 访问接口识别的数据源的名称。 *此属性仅对非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *订阅服务器有效。*|  
-|**subscriber_location**||OLE DB 访问接口识别的数据库的位置。 *此属性仅对非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *订阅服务器有效。*|  
+|**subscriber_catalog**||在与 OLE DB 访问接口建立连接时要使用的目录。 此属性仅对非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器有效。|  
+|**subscriber_datasource**||OLE DB 访问接口识别的数据源的名称。 *此属性仅对非* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*订阅服务器。*|  
+|**subscriber_location**||OLE DB 访问接口识别的数据库的位置。 *此属性仅对非* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*订阅服务器。*|  
 |**subscriber_login**||在订阅服务器上的登录名。|  
 |**subscriber_password**||提供的登录名的强密码。|  
 |**subscriber_security_mode**|**1**|连接订阅服务器时，使用 Windows 身份验证。|  
 ||**0**|连接订阅服务器时，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。|  
-|**subscriber_provider**||唯一编程标识符 (PROGID)，用于注册非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源的 OLE DB 访问接口。 *此属性仅对非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *订阅服务器有效。*|  
-|**subscriber_providerstring**||OLE DB 访问接口特定的连接字符串，用于标识数据源。 *此属性仅对非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *订阅服务器有效。*|  
-|**subscriptionstreams**||每个分发代理所允许的向订阅服务器并行应用批量更改的连接数。 对于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器，支持介于**1**到**64**之间的值。 对于非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器、Oracle 发布服务器或对等订阅，此属性必须为**0** 。|  
+|**subscriber_provider**||唯一编程标识符 (PROGID)，用于注册非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源的 OLE DB 访问接口。 *此属性仅对非* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*订阅服务器。*|  
+|**subscriber_providerstring**||OLE DB 访问接口特定的连接字符串，用于标识数据源。 *此属性仅对非* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*订阅服务器。*|  
+|**subscriptionstreams**||每个分发代理所允许的向订阅服务器并行应用批量更改的连接数。 对于发布服务器，支持介于**1**到**64**之间的值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 对于非**0** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器、Oracle 发布服务器或对等订阅，此属性必须为0。|  
 |**subscriber_type**|**1**|ODBC 数据源服务器|  
 ||**3**|OLE DB 访问接口|  
 |**memory_optimized**|**bit**|指示订阅支持内存优化表。 *memory_optimized*是**bit**，其中1等于 true （订阅支持内存优化表）。|  
   
-`[ @publisher = ] 'publisher'`指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'`指定一个非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  不应为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器指定*发布服务器*。  
+>  不应为发布服务器指定*发布服务器* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
