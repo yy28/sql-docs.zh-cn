@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data retrieval [ADO]
 - ADO, examining data
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0245d492b7014b2dfc0097a9d3f2c9a7098eae51
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 80f41778d1afa806b739e43edda6fb5b79e8f432
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925359"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760463"
 ---
 # <a name="examining-data"></a>检查数据
 "[获取数据](../../../ado/guide/data/getting-data.md)" 部分说明了如何将数据源中的数据作为一个或多个**记录集**对象进行检索。 本节将更详细地讨论**记录集**，包括如何在**记录集中**导航并查看其数据。  

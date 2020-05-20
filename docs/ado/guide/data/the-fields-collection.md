@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Field object [ADO], fields collection
 - Fields collection [ADO]
 ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 197a57b8a9b9ea2927a057733992a02c731a335a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0e249d22657718899c7838aa55a23a543389dc5a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923939"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760773"
 ---
 # <a name="the-fields-collection"></a>字段集合
 **字段**集合是 ADO 的内部集合之一。 集合是一组有序项，可作为一个单元来引用。 有关 ADO 集合的详细信息，请参阅[Ado 对象模型](../../../ado/guide/data/ado-objects-and-collections.md)。  
@@ -66,7 +66,7 @@ objField = objRecordset.Fields.Item(0)
 objField = objRecordset.Fields(0)  
 ```  
   
- 如果这两种方法是等效的，最好这样做？ 不一定。 使用索引从集合中检索**字段**的速度更快，因为它直接访问**字段**，而无需执行字符串查找。 另一方面，集合中**字段**的顺序必须是已知的，并且如果顺序发生更改，则在任何情况下都必须更改对**字段的**索引的引用。 虽然稍微慢一些，但使用**字段**的名称更灵活，因为它不依赖于集合中**字段**的顺序。  
+ 如果这两种方法是等效的，最好这样做？ 视情况而定。 使用索引从集合中检索**字段**的速度更快，因为它直接访问**字段**，而无需执行字符串查找。 另一方面，集合中**字段**的顺序必须是已知的，并且如果顺序发生更改，则在任何情况下都必须更改对**字段的**索引的引用。 虽然稍微慢一些，但使用**字段**的名称更灵活，因为它不依赖于集合中**字段**的顺序。  
   
 ## <a name="using-the-refresh-method"></a>使用 Refresh 方法  
  与其他一些 ADO 集合不同，对**字段**集合使用**Refresh**方法不会产生任何效果。 若要从基础数据库结构中检索更改，必须使用**Requery**方法，或者如果**记录集**对象不支持书签，则为**MoveFirst**方法，这将导致再次对提供程序执行该命令。  

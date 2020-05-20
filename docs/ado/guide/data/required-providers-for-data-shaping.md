@@ -11,14 +11,14 @@ helpviewer_keywords:
 - providers [ADO], data shaping
 - data shaping [ADO], providers required
 ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 732563fc2c4e1cc93beac8712d845b960ae56aaf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: abda9d7a275ce100636efa58430009dd430fac0b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68661270"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760943"
 ---
 # <a name="required-providers-for-data-shaping"></a>数据整理所需的提供程序
 数据定形通常需要两个提供程序。 OLE DB 的服务提供商、[数据定形服务](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)提供数据定形功能，数据访问接口（例如 SQL Server 的 OLE DB 提供程序）提供数据行来填充形状的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

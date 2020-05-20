@@ -11,14 +11,14 @@ helpviewer_keywords:
 - editing data [ADO], Supports method
 - Supports method [ADO]
 ms.assetid: 65090cba-6d46-4775-8d61-f6838e7752a6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dc42e9128ccc1ccb43996f554ffe280916884307
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 360a57c6647b83fc72ba950a6aaa8175155c893f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925521"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761063"
 ---
 # <a name="determining-what-is-supported"></a>确定支持的功能
 **支持**方法用于确定指定的**记录集**对象是否支持特定类型的功能。 它采用以下语法：  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Indexing service
 - OLE DB provider for Microsoft Indexing service [ADO]
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a5a81514fd12117a9f43e2c33bf0cda579fb363d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e4bc6669f961e712ced994a590348604e7bd3274
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926667"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760473"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Microsoft 索引服务提供商概述
 Microsoft OLE DB Provider for Microsoft 索引服务提供对 Microsoft 索引服务编制索引的文件系统和 Web 数据的只读访问。 ADO 应用程序可以发出 SQL 查询来检索内容和文件属性信息。
@@ -66,7 +66,7 @@ MSIDXS
 
  **标准 ADO 记录集属性的可用性：**
 
-|属性|可用性|
+|Property|是否支持|
 |--------------|------------------|
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|读/写|
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|读/写|
@@ -78,7 +78,7 @@ MSIDXS
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|始终**adOpenStatic**|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|始终**adEditNone**|
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|只读|
-|[筛选器](../../../ado/reference/ado-api/filter-property.md)|读/写|
+|[Filter](../../../ado/reference/ado-api/filter-property.md)|读/写|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|读/写|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|不可用|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|读/写|
@@ -110,7 +110,7 @@ MSIDXS
 |[重新](../../../ado/reference/ado-api/requery-method.md)|是|
 |[重新同步](../../../ado/reference/ado-api/resync-method.md)|是|
 |[支持](../../../ado/reference/ado-api/supports-method.md)|是|
-|[Update](../../../ado/reference/ado-api/update-method.md)|否|
+|[更新](../../../ado/reference/ado-api/update-method.md)|否|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|否|
 
  有关 microsoft OLE DB 提供商 for Microsoft 索引服务的具体实现详细信息和功能信息，请参阅[OLE DB 程序员指南](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx)，或访问 Windows NT Server 网站的 "Web 服务" 页。

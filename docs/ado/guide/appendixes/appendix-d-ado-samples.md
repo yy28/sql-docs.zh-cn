@@ -11,14 +11,14 @@ helpviewer_keywords:
 - samples [ADO]
 - ADO, samples
 ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b4a1289755d04c2d9f861fbdcb704fad3d8707d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f9c3e853910f0be04b8cd483f5a21264ca096e9e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926869"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760523"
 ---
 # <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>附录 D： Windows SDK 中的 ADO 示例
 Windows SDK 包含了几个示例应用程序，这些应用程序演示了 ADO 和 RDS 代码的使用。 这些示例旨在帮助你了解如何使用 ADO 和 RDS，但不应在生产服务器上部署。

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Schema section [ADO]
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b6e591ecc9f366f3914986b0ae11e0e301b782d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8222b697fec7d0dd5bd1f32425cf48761f25308e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924292"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760893"
 ---
 # <a name="schema-section"></a>架构部分
 架构部分是必需的。 如前面的示例所示，ADO 写出了有关每个列的详细元数据，以尽可能多地保留数据值的语义。 但是，若要在 XML 中加载，ADO 只需要列的名称及其所属的行集。 下面是最小架构的示例：  
@@ -95,7 +95,7 @@ ms.locfileid: "67924292"
 </rs:data>  
 ```  
   
- 同样，由于在前面的示例中没有`CompanyName`为定义的别名， `CompanyName`因此必须在整个文档中一致地使用。  
+ 同样，由于 `CompanyName` 在前面的示例中没有为定义的别名，因此 `CompanyName` 必须在整个文档中一致地使用。  
   
 ## <a name="data-types"></a>数据类型  
  您可以向具有 dt： type 属性的列应用数据类型。 有关允许的 XML 类型的权威性指南，请参阅[W3C xml-data 规范](http://www.w3.org/TR/1998/NOTE-XML-data/)的 "数据类型" 部分。 可以通过两种方式指定数据类型：直接在列定义本身上指定 dt： type 特性，或使用 s:datatype 构造作为列定义的嵌套元素。 例如，  
@@ -152,13 +152,13 @@ ms.locfileid: "67924292"
 </s:AttributeType>  
 ```  
   
- 定义允许`CompanyName`为 null，但`ShipperID`不能包含 null 值。 如果 data 节包含以下行，则持久性提供程序将`CompanyName`列的数据状态设置为 OLE DB 状态常量 DBSTATUS_S_ISNULL：  
+ 定义允许为 `CompanyName` null，但 `ShipperID` 不能包含 null 值。 如果 data 节包含以下行，则持久性提供程序将列的数据状态设置 `CompanyName` 为 OLE DB 状态常量 DBSTATUS_S_ISNULL：  
   
 ```  
 <z:row ShipperID="1"/>  
 ```  
   
- 如果行完全为空（如下所示），则持久性提供程序将返回 "DBSTATUS_E_UNAVAILABLE 的`ShipperID` OLE DB 状态，并 DBSTATUS_S_ISNULL" 公司名称 "。  
+ 如果行完全为空（如下所示），则持久性提供程序将返回 "DBSTATUS_E_UNAVAILABLE 的 OLE DB 状态， `ShipperID` 并 DBSTATUS_S_ISNULL" 公司名称 "。  
   
 ```  
 <z:row/>   
@@ -170,7 +170,7 @@ ms.locfileid: "67924292"
 <z:row ShipperID="1" CompanyName=""/>  
 ```  
   
- 对于前面的行，持久性提供程序将为这两个列返回 OLE DB 状态 DBSTATUS_S_OK。 在`CompanyName`此示例中，只是 "" （长度为零的字符串）。  
+ 对于前面的行，持久性提供程序将为这两个列返回 OLE DB 状态 DBSTATUS_S_OK。 `CompanyName`在此示例中，只是 "" （长度为零的字符串）。  
   
  有关可用于 OLE DB 的 XML 文档架构中的 OLE DB 构造的详细信息，请参阅 "urn： schema-microsoft com：行集" 的定义和 OLE DB 程序员指南。  
   

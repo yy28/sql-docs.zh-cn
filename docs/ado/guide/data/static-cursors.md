@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cursors [ADO], static
 - static cursors [ADO]
 ms.assetid: cce93ace-c4ed-4c6c-940c-28a50ff2fd12
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 520c484bdaaa6eb59488900208993a607c5b0f7b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4baacc48beffda2d83a23ce24d3a31c314da5841
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924118"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760823"
 ---
 # <a name="static-cursors"></a>静态游标
 静态游标始终显示第一次打开游标时的结果集。 静态游标是只读的或读/写的，并提供向前和向后滚动，具体取决于实现。 静态游标通常不会检测在打开游标后对结果集的成员资格、顺序或值所做的更改。 尽管不需要，但静态游标可检测其自己的更新、删除和插入。  

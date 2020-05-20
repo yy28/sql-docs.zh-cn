@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO], disconnecting and reconnecting
 ms.assetid: c5134af7-81d6-4de4-9fd1-cfe29973545e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9829ddfd7e625941c97bd3b2027c328a1fba93d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7ef30165a05bc472bfe34cec4e7f669d545d7768
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925515"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761053"
 ---
 # <a name="disconnecting-and-reconnecting-the-recordset"></a>断开连接并重新连接记录集
 ADO 中最强大的功能之一是能够从数据源打开客户端记录集，然后将记录集与数据源断开连接。 断开记录集的连接后，可以关闭与数据源的连接，从而释放用于维护该数据源的服务器上的资源。 当记录集中的数据断开连接，然后重新连接到数据源并在批处理模式下发送更新时，可以继续查看和编辑该记录集中的数据。  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - conflicts [ADO], detecting and resolving
 - ADO, detecting and resolving conflicts
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bce9917f144e8c63160f571a986263d8d7e97b21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d3b3a9f4c5482d0171c59a734aa6139bc2239c55
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925567"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761083"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>检测和解决冲突
 如果在即时模式下处理记录集，则可能会有很少的并发问题发生。 另一方面，如果应用程序使用批处理模式更新，则可能会有很好的机会，让一个用户在另一个用户编辑相同记录所做的更改保存之前更改记录。 在这种情况下，你将希望应用程序妥善处理冲突。 你可能希望最后一位用户将更新发送到服务器 "wins"。 或者，您可能想让最近的用户通过在两个冲突值之间进行选择来决定哪个更新的优先级。  

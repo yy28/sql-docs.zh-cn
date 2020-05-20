@@ -13,21 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - ADCPROP_UPDATECRITERIA_ENUM [ADO]
 ms.assetid: 33fd7b65-2ec8-4f62-91a7-630b5dab1aa2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 12d960e8fcd5e1f27ea8198ce52e080f6fddf7c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c68e0d7aa7cdbea80fe2ca2f0ff05ab77ea20b6e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921419"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760676"
 ---
 # <a name="adcprop_updatecriteria_enum"></a>ADCPROP_UPDATECRITERIA_ENUM
 指定哪些字段可用于在使用[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象的数据源的行的开放式更新过程中检测冲突。  
   
  在[ADO 动态属性索引](../../../ado/reference/ado-api/ado-dynamic-property-index.md)中引用的**记录集**"**更新条件**" 动态属性和[用于 OLE DB 文档的 Microsoft 游标服务](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)中介绍了这些常量。  
   
-|Constant|值|说明|  
+|返回的常量|值|说明|  
 |--------------|-----------|-----------------|  
 |**adCriteriaAllCols**|1|如果数据源行的任何列已更改，则检测冲突。|  
 |**adCriteriaKey**|0|如果数据源行的键列已更改（这意味着行已删除），则检测冲突。|  
@@ -37,7 +37,7 @@ ms.locfileid: "67921419"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  Package： **.com. 数据**  
   
-|Constant|  
+|返回的常量|  
 |--------------|  
 |AdoEnums.AdcPropUpdateCriteria.ALLCOLS|  
 |AdoEnums.AdcPropUpdateCriteria.KEY|  

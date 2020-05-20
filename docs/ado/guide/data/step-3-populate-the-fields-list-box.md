@@ -8,17 +8,17 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9d7f351b90030e755dde8ad13905ef4533eff08e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2ecedd516891e2f99a800da452573717f211ff60
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924051"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760793"
 ---
 # <a name="step-3-populate-the-fields-list-box"></a>步骤 3：填充字段列表框
-若要填充 "字段" 列表框，请将以下代码插入到的 Click `lstMain`事件处理程序中：  
+若要填充 "字段" 列表框，请将以下代码插入到的 Click 事件处理程序中 `lstMain` ：  
   
 ```  
 Private Sub lstMain_Click()  
@@ -46,13 +46,13 @@ Private Sub lstMain_Click()
 End Sub  
 ```  
   
- 此代码将分别声明并实例化本地记录和`rec`记录`rs`集对象。  
+ 此代码将分别声明并实例化本地记录和记录集对象 `rec` `rs` 。  
   
- 与中`lstMain`所选资源相对应的行成为的当前行`grs`。 然后，"详细信息" 列表框`rec`将被清除，并以的`grs`当前行作为源打开。  
+ 与中所选资源相对应的行 `lstMain` 成为的当前行 `grs` 。 然后，"详细信息" 列表框将被清除，并以的 `rec` 当前行 `grs` 作为源打开。  
   
- 如果资源是由[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)指定的集合记录，则会在记录的子级`rs`上打开本地记录集。然后`lstDetails` ，将用的行中的值填充`rs`。  
+ 如果资源是由[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)指定的集合记录，则 `rs` 会在记录的子级上打开本地记录集。然后， `lstDetails` 将用的行中的值填充 `rs` 。  
   
- 如果资源是简单记录， `recFields`则调用。 有关的详细信息`recFields`，请参阅下一步。  
+ 如果资源是简单记录， `recFields` 则调用。 有关的详细信息 `recFields` ，请参阅下一步。  
   
  如果资源是结构化文档，则不实现任何代码。  
   

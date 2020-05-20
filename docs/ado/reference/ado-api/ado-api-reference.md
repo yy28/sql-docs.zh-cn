@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, reference
 ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9e3c71d7233e75e0c97cacf6ec35d86bd4c8df31
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ee4fc69164dcfc5d19643fc9e6ce496a5b3489c6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921221"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760593"
 ---
 # <a name="ado-api-reference"></a>ADO API 参考
 ADO 文档的本节包含有关每个 ADO 对象、集合、属性、动态属性、方法、事件和枚举的主题。 此外，它还包含要与 Microsoft Visual C++ 和 Windows 基础类（WFC）一起使用的 ADO 语法索引的列表。  

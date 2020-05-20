@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data shaping [ADO], APPEND clause
 - append clause [ADO]
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e09113b42f655a3b94ab3877ff81f2553a363931
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d26f83985ce74edc0581ff9ff8fee31d5064c7e5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924184"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760863"
 ---
 # <a name="shape-append-clause"></a>Shape APPEND 子句
 Shape command APPEND 子句向**记录集**追加一列或多列。 通常，这些列是章节列，它们引用子**记录集**。  
@@ -36,7 +36,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
  *parent-command*  
  零或以下值之一（可以完全省略*父命令*）：  
   
--   括在大括号（"{}"）中的提供程序命令，该命令返回**记录集**对象。 将向基础数据提供程序发出命令，其语法取决于提供程序的要求。 这通常是 SQL 语言，尽管 ADO 不需要任何特定的查询语言。  
+-   括在大括号（""）中的提供程序命令 {} ，该命令返回**记录集**对象。 将向基础数据提供程序发出命令，其语法取决于提供程序的要求。 这通常是 SQL 语言，尽管 ADO 不需要任何特定的查询语言。  
   
 -   嵌入在括号内的另一个 shape 命令。  
   
@@ -66,7 +66,7 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 ## <a name="remarks"></a>备注  
  *子记录集*  
- -   括在大括号（"{}"）中的提供程序命令，该命令返回**记录集**对象。 将向基础数据提供程序发出命令，其语法取决于提供程序的要求。 这通常是 SQL 语言，尽管 ADO 不需要任何特定的查询语言。  
+ -   括在大括号（""）中的提供程序命令 {} ，该命令返回**记录集**对象。 将向基础数据提供程序发出命令，其语法取决于提供程序的要求。 这通常是 SQL 语言，尽管 ADO 不需要任何特定的查询语言。  
   
 -   嵌入在括号内的另一个 shape 命令。  
   
@@ -102,13 +102,13 @@ SHAPE [parent-command [[AS] parent-alias]]
 SHAPE {select * from t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- 形状将执行两个命令`select * from t1` ：和`select * from t2 RELATE k1 TO k2)`（。 如果用户提供了一个由多个提供程序命令（用分号分隔）组成的复合命令，则形状无法区分差别。 因此，在下面的 SHAPE 命令中，  
+ 形状将执行两个命令： `select * from t1` 和（ `select * from t2 RELATE k1 TO k2)` 。 如果用户提供了一个由多个提供程序命令（用分号分隔）组成的复合命令，则形状无法区分差别。 因此，在下面的 SHAPE 命令中，  
   
 ```  
 SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- 形状执行`select * from t1; drop table t1`和（`select * from t2 RELATE k1 TO k2),`在此示例`drop table t1`中，不认识到是一个单独的，而是危险的提供程序命令。 应用程序必须始终验证用户输入，以防发生此类潜在的黑客攻击。  
+ 形状执行 `select * from t1; drop table t1` 和（ `select * from t2 RELATE k1 TO k2),` `drop table t1` 在此示例中，不认识到是一个单独的，而是危险的提供程序命令。 应用程序必须始终验证用户输入，以防发生此类潜在的黑客攻击。  
   
  本部分包含以下主题。  
   

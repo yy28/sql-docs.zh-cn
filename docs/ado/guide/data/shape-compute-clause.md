@@ -12,14 +12,14 @@ helpviewer_keywords:
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 44ccd2c978cb0356a2fcab75daa860db0f4f77f5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924147"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760843"
 ---
 # <a name="shape-compute-clause"></a>Shape COMPUTE 子句
 Shape 计算子句生成父**记录集**，其列包含对子**记录集**的引用;其内容为章节、新列或计算列的可选列，或者对子**记录**集或之前形状的**记录集**执行聚合函数的结果。可选的 from 子句中列出的子**记录集中**的任何列。  
@@ -38,7 +38,7 @@ SHAPE child-command [AS] child-alias
  *子命令*  
  包含以下项之一：  
   
--   大括号（"{}"）中的一个查询命令，该命令返回子**记录集**对象。 将向基础数据提供程序发出命令，其语法取决于提供程序的要求。 这通常是 SQL 语言，尽管 ADO 不需要任何特定的查询语言。  
+-   大括号（""）中的一个查询命令 {} ，该命令返回子**记录集**对象。 将向基础数据提供程序发出命令，其语法取决于提供程序的要求。 这通常是 SQL 语言，尽管 ADO 不需要任何特定的查询语言。  
   
 -   现有整形**记录集**的名称。  
   
@@ -76,9 +76,9 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders
   
  例如，假设有一个名为 "人口统计" 的表，其中包含州、城市和人口字段。 （表中的人口数字仅作为示例提供）。  
   
-|状态|城市|人口数|  
+|州省/自治区/直辖市|城市|人口数|  
 |-----------|----------|----------------|  
-|WA|Seattle|700000|  
+|WA|西雅图|700000|  
 |OR|Medford|200,000|  
 |OR|Portland|400,000|  
 |CA|Los Angeles|800000|  
@@ -94,7 +94,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
            objConnection  
 ```  
   
- 此命令打开具有两个级别的形状**记录集**。 父级别`SUM(rs.population)`是带有聚合列（）的生成的**记录集**、引用子**记录集**的列（`rs`）和用于对子**记录集**进行分组的列`state`（）。 子级别是查询命令（`select * from demographics`）返回的**记录集**。  
+ 此命令打开具有两个级别的形状**记录集**。 父级别是带有聚合列（）的生成的**记录集** `SUM(rs.population)` 、引用子**记录集**的列（ `rs` ）和用于对子**记录集**进行分组的列（ `state` ）。 子级别是查询命令（）返回的**记录集** `select * from demographics` 。  
   
  子**记录集**详细信息行将按状态分组，而不是以特定顺序分组。 也就是说，组不会按字母顺序或数字顺序排列。 如果希望对父**记录集**进行排序，则可以使用**记录集排序**方法对父**记录集**进行排序。  
   
@@ -104,7 +104,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 ### <a name="parent"></a>Parent  
   
-|SUM （rs。总数|rs|状态|  
+|SUM （rs。总数|rs|州省/自治区/直辖市|  
 |---------------------------|--------|-----------|  
 |1300000|对 child1 的引用|CA|  
 |1200000|对 child2 的引用|WA|  
@@ -112,21 +112,21 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 ## <a name="child1"></a>Child1  
   
-|状态|城市|人口数|  
+|州省/自治区/直辖市|城市|人口数|  
 |-----------|----------|----------------|  
 |CA|Los Angeles|800000|  
 |CA|San Diego|600000|  
   
 ## <a name="child2"></a>Child2  
   
-|状态|城市|人口数|  
+|州省/自治区/直辖市|城市|人口数|  
 |-----------|----------|----------------|  
-|WA|Seattle|700000|  
+|WA|西雅图|700000|  
 |WA|Tacoma|500,000|  
   
 ## <a name="child3"></a>Child3  
   
-|状态|城市|人口数|  
+|州省/自治区/直辖市|城市|人口数|  
 |-----------|----------|----------------|  
 |OR|Medford|200,000|  
 |OR|Portland|400,000|  

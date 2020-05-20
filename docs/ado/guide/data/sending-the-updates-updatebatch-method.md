@@ -8,14 +8,14 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 182e444587ce9bb3ca73166fb05dfac2506a39aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: abb0051ef336a145b2da75906831d7adc168e6e3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924259"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760883"
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>发送更新：UpdateBatch 方法
 下面的代码通过将 LockType 属性设置为 adLockBatchOptimistic，将 CursorLocation 设置为 adUseClient，以批处理模式打开记录集。 它添加两个新记录，并更改现有记录中字段的值，保存原始值，然后调用 UpdateBatch 将更改发送回数据源。  

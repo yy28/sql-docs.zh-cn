@@ -12,14 +12,14 @@ helpviewer_keywords:
 - errors [ADO]
 - ADO, error handling
 ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4cb3213b6a4c5711ccb8d6f9243047d8361a6e37
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fa18c5d93617963afa1cf8d472651d03db6ed493
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925428"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761013"
 ---
 # <a name="error-handling"></a>错误处理
 ADO 使用多种不同的方法来通知应用程序发生的错误。 本部分讨论在使用 ADO 时可能发生的错误类型以及应用程序的通知方式。 它通过提出有关如何处理这些错误的建议来结束。  

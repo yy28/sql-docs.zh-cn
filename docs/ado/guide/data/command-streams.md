@@ -11,14 +11,14 @@ helpviewer_keywords:
 - command streams [ADO]
 - streams [ADO], command
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fd0c2273739a3651c7fdd4c424ce0cb47d39dd5b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0bf95d202d842a656ec4b42bc2277b8eb9a76689
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925847"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761203"
 ---
 # <a name="command-streams"></a>命令流
 ADO 始终支持由**CommandText**属性指定的字符串格式的命令输入。 作为替代方法，使用 ADO 2.7 或更高版本，还可以通过将流分配给**CommandStream**属性，来使用信息流进行命令输入。 可以分配 ADO**流**对象，也可以指定支持 COM **IStream**接口的任何对象。  
@@ -40,7 +40,7 @@ adoStreamQuery.Open
   
  查询流的内容将是 XML 模板查询。  
   
- 模板查询需要引用由\<sql： query> 标记的 sql： prefix 标识的 XML 命名空间。 SQL SELECT 语句作为 XML 模板的内容包含，并分配给字符串变量，如下所示：  
+ 模板查询需要引用由 \< sql： query> 标记的 sql： prefix 标识的 XML 命名空间。 SQL SELECT 语句作为 XML 模板的内容包含，并分配给字符串变量，如下所示：  
   
 ```  
 sQuery = "<ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>  

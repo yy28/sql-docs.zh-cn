@@ -10,28 +10,28 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data section [ADO]
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6aebf318652e604c5f5ad4c30ef389fdfd9e78c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2d6b03137e920be036d1dd47cb4612076247fa3f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925643"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761093"
 ---
 # <a name="data-section"></a>数据部分
 Data 节定义行集的数据以及任何挂起的更新、插入或删除。 数据节可以包含零行或多行。 它只能包含一个行集中的数据，该行由架构定义。 另外，如上所述，可以省略没有任何数据的列。 如果在 data 节中使用了某个特性或子元素，并且该构造未在 schema 节中定义，则它将以无提示方式忽略。  
   
-## <a name="string"></a>字符串  
+## <a name="string"></a>String  
  文本数据中的保留 XML 字符必须替换为相应的字符实体。 例如，在公司名称 "Joe，车库" 中，单引号必须替换为实体。 实际行如下所示：  
   
 ```  
 <z:row CompanyName="Joe's Garage"/>  
 ```  
   
- 以下字符在 XML 中保留，必须替换为字符实体： {"，"、&、\<>}。  
+ 以下字符在 XML 中保留，必须替换为字符实体： {"，"、&、 \< >}。  
   
-## <a name="binary"></a>Binary  
+## <a name="binary"></a>二进制  
  二进制数据是 bin。十六进制编码（即，一个字节映射到两个字符，每个字节1个字符）。  
   
 ## <a name="datetime"></a>DateTime  

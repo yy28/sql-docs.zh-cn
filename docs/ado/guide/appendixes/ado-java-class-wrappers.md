@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - class wrappers [ADO]
 ms.assetid: 1fc09dc1-9e32-412e-9f43-b8eb8bb483ca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 70486a27cfbe5c977d371906da89563059685093
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 485c53645387e5dafbe562442ec12503df0a6737
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67927009"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760553"
 ---
 # <a name="ado-java-class-wrappers"></a>ADO Java 类包装器
 此代码声明了 ADO[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)类包装的实例，并将其初始化，所有代码都在相同的代码行中。 此外，它还声明[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法中每个参数的变量，尤其是对于[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)和[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) （因为 Java 不支持枚举类型）。 它将打开并关闭**Recordset**对象。 将 Rs1 设置为 NULL 仅计划在 Java 对未使用的对象执行其系统化和间歇性释放时要释放的变量。  

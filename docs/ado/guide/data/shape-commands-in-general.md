@@ -11,14 +11,14 @@ helpviewer_keywords:
 - shape commands [ADO]
 - data shaping [ADO], shape commands
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 09fec8bd07d036fd6a93b8f6bcb54a51a68150fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0554da0486b58aff8da6fcf012732b6012f70ae6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924178"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760853"
 ---
 # <a name="shape-commands-in-general"></a>常用 Shape 命令
 数据定形定义了整形**记录集**的列、列所表示的实体之间的关系，以及使用数据填充**记录集**的方式。  
@@ -27,7 +27,7 @@ ms.locfileid: "67924178"
   
 |列类型|说明|  
 |-----------------|-----------------|  
-|data|查询命令返回给数据访问接口、表或之前形状**记录集**的**记录集**的字段。|  
+|数据|查询命令返回给数据访问接口、表或之前形状**记录集**的**记录集**的字段。|  
 |段|对另一**记录集**的引用，称为*章节*。 通过章节列可以定义*父子关系，* 其中的*父*项是包含章列的**记录集**，而*子级*是本章表示的**记录集**。|  
 |aggregate|通过对子**记录集**的所有行的所有行或列执行*聚合函数*来派生列的值。 （请参阅以下主题中的聚合函数、[聚合函数、CALC 函数和新关键字](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)。）|  
 |计算表达式|列的值是通过对**记录集**的同一行中的列计算 Visual Basic for Applications 表达式来派生的。 表达式是 CALC 函数的参数。 （请参阅以下主题中的计算表达式：[聚合函数、CALC 函数、NEW 关键字](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)和[Visual Basic for Applications 函数](../../../ado/guide/data/visual-basic-for-applications-functions.md)。）|  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - ADO, OLE DB providers
 - service providers [ADO]
 ms.assetid: 1fd7a374-587b-4ca9-9204-3a4019b67a71
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a78db07f5ba445c54108558b2ff222bd217c2bbe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d6d0a4b9160ca0c2ff3ee64e5814e24df52141cf
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924246"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760873"
 ---
 # <a name="service-providers-and-components"></a>服务提供商和组件
 服务提供程序是通过实现不受数据存储本机支持的扩展接口来扩展数据提供程序功能的组件。  

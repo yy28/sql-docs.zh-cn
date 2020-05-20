@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Recordset dynamic properties in XML [ADO]
 ms.assetid: 52f8e379-812a-4db8-9210-94458926301c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a058a2d0c5a808f29807744c6ba01f658bebc120
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d9d19ded093cd10a7670b31cd2d5c78a475950d2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924446"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760963"
 ---
 # <a name="recordset-dynamic-properties-in-xml"></a>XML 中的记录集动态属性
 以下记录集提供程序特定属性（来自客户端游标引擎）当前已保留为 XML 格式：  

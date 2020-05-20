@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connections [ADO]
 - connection strings [ADO]
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3c9d81ef7be98f3c65167de24b3ff59ac6f05df5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b58dc19097d01630fa1ab1c2707e8be379ae83cb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925764"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761143"
 ---
 # <a name="creating-a-connection-string"></a>创建连接字符串
 连接字符串由以分号分隔的参数/值对列表（即参数）组成。 例如：  
@@ -48,7 +48,7 @@ m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _
              "Initial Catalog=Northwind;Integrated Security='SSPI';"  
 ```  
   
- 在此连接字符串中，ADO 仅识别`"Provider=SQLOLEDB"`参数，该参数指定作为 ADO 数据源的 SQL Server 的 Microsoft OLE DB 提供程序。 参数/值对`"Data Source=MySqlServer; Initial Catalog=Northwind;Integrated Security='SSPI';"`的其余部分逐字传递到此提供程序。 此类参数的类型和有效性是特定于提供程序的。 有关可以在连接字符串中传递的有效参数的信息，请参阅各个提供商的文档。  
+ 在此连接字符串中，ADO 仅识别 `"Provider=SQLOLEDB"` 参数，该参数指定作为 ADO 数据源的 SQL Server 的 Microsoft OLE DB 提供程序。 参数/值对的其余部分 `"Data Source=MySqlServer; Initial Catalog=Northwind;Integrated Security='SSPI';"` 逐字传递到此提供程序。 此类参数的类型和有效性是特定于提供程序的。 有关可以在连接字符串中传递的有效参数的信息，请参阅各个提供商的文档。  
   
  根据 SQL Server 文档的 OLE DB 提供程序，您可以将 "Server" 替换为*数据源*参数，将 "Database" 替换为*初始目录*参数。 因此，以下连接字符串将产生与上面的结果相同的结果：  
   

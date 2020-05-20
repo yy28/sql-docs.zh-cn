@@ -11,21 +11,21 @@ helpviewer_keywords:
 - editing data [ADO], edit mode
 - ADO, editing data
 ms.assetid: 4c7e010d-08cd-4e22-9b32-23c36f02f88c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22e63bad49586bbbc1a5616114055779cd3ea041
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6df3765b8dd9461349937fc14f6edebcaab3fbfb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925545"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761073"
 ---
 # <a name="determining-edit-mode"></a>确定编辑模式
 ADO 维护与当前记录相关联的编辑缓冲区。 **EditMode**属性指示是否已对此缓冲区进行了更改或者是否已创建新记录。 使用**EditMode**确定当前记录的编辑状态。 如果编辑进程已中断并确定是否需要使用**Update**或**CancelUpdate**方法，则可以测试挂起的更改。  
   
  **EditMode**返回下表中列出的一个**EditModeEnum**常量。  
   
-|Constant|说明|  
+|返回的常量|说明|  
 |--------------|-----------------|  
 |**adEditNone**|指示没有正在进行的编辑操作。|  
 |**adEditInProgress**|指示当前记录中的数据已修改但未保存。|  

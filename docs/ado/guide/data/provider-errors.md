@@ -14,14 +14,14 @@ helpviewer_keywords:
 - errors [ADO], provider
 - Error object [ADO], provider errors
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85d4a7607fae1df7dfb6ec62b8a3bfae8f58001b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2fce89dd6df633f8cdcf78271c63336b3ecc7b05
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924548"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760993"
 ---
 # <a name="provider-errors"></a>提供程序错误
 发生提供程序错误时，将返回运行时错误-2147467259。 如果收到此错误，请检查活动**连接**对象的**错误**集合，该集合包含一个或多个描述发生的错误的错误。  
@@ -69,7 +69,7 @@ End Function
 |**说明**|发生的错误的文本说明。|  
 |**HelpContext、帮助**|引用包含所发生错误的说明的帮助主题和帮助文件。|  
 |**NativeError**|特定于提供程序的错误号。|  
-|**数字**|一个长整型，表示发生的错误的数字（在**ErrorValueEnum**中列出）。|  
+|**多种**|一个长整型，表示发生的错误的数字（在**ErrorValueEnum**中列出）。|  
 |**源**|指示生成错误的对象或应用程序的名称。|  
 |**SQLState**|提供程序在 SQL 语句过程中返回的五个字符的错误代码。|  
   

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ADO code examples, Visual C++
 ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7741b6757cef08dcc4d5a05574f22c4f4538d97f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ac6e639001c84142604ca54664784922da05d682
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921182"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760563"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Visual C++ 中的 ADO 代码示例
 使用以下代码示例来了解如何在 Microsoft Visual C++ 中写入时使用 ADO 方法、属性和事件。  

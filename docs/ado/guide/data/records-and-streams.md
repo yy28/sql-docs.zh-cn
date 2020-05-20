@@ -12,14 +12,14 @@ helpviewer_keywords:
 - streams [ADO], about streams
 - records [ADO]
 ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4636df1451ba946b9a7bfb62e3d6775c35b1d6f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ec87974499edabb2c5a5ae503d90f9f739694c41
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924499"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760983"
 ---
 # <a name="records-and-streams"></a>记录和流
 ADO 目前提供[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)对象作为访问数据源中的信息（例如关系数据库）的主要方式。 但是，某些提供程序支持[记录](../../../ado/reference/ado-api/record-object-ado.md)和[流](../../../ado/reference/ado-api/stream-object-ado.md)对象作为替代对象或补充对象，这些对象可用于处理提供程序的数据。 有关**记录**行为的详细信息，请参阅提供程序的文档。  

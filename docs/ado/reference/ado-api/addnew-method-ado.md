@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - AddNew method [ADO]
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a2f9efa8f5042fab603c794edada5aacab001936
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6359d1b9f69963120e9446c47aa5473beedd127
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921328"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760723"
 ---
 # <a name="addnew-method-ado"></a>AddNew 方法 (ADO)
 为可更新的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象创建新记录。  
@@ -37,7 +37,7 @@ recordset.AddNew FieldList, Values
  *记录集*  
  **记录集**对象。  
   
- *字段列表*  
+ *FieldList*  
  可选。 单个名称，或者新记录中字段的名称或序号位置的数组。  
   
  *值*  

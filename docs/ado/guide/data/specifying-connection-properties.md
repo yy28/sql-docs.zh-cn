@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connection properties [ADO]
 - connections [ADO]
 ms.assetid: 49456201-b085-4851-9686-e814136b07be
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5aee5946f3087956a0117b88f4044ef8a6c9bd9f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6fee9745bca206f00603b32a6c4cd29faab34eca
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924130"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760833"
 ---
 # <a name="specifying-connection-properties"></a>指定连接属性
 可以通过在打开连接之前设置**连接**对象的属性，来提供[连接字符串](../../../ado/guide/data/creating-a-connection-string.md)所指定的大量信息。 例如，你可以通过使用以下代码来实现与[创建连接字符串](../../../ado/guide/data/creating-a-connection-string.md)中所述的连接字符串相同的效果。  

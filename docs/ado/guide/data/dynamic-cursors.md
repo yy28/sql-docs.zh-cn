@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cursors [ADO], dynamic
 - dynamic cursors [ADO]
 ms.assetid: 00460f30-8cf7-494e-82df-41012f40ae51
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 86e51b7880004117e8efc96bd310c6de705d43a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4a2b251e23c2408e75acd77debbc0876fd3f9c98
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925507"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761043"
 ---
 # <a name="dynamic-cursors"></a>动态游标
 动态游标检测对结果集中的行所做的所有更改，而不考虑更改是发生在游标内部还是游标外的其他用户。 所有用户发出的所有 insert、update 和 delete 语句均通过游标可见。 动态游标可以检测在打开游标后对结果集中的行、顺序和值所做的任何更改。 在游标外部所做的更新直到提交时才可见（除非将游标事务隔离级别设置为 "未提交"）。  
