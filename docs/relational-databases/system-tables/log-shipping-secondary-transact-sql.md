@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_secondary system table
 ms.assetid: 69723419-4544-49c6-a517-adb30ffa5741
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 687f9f7441b7d77ea191047ef22491728ba81047
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5debab1572bc2f788c0dc13773d0dc140c693108
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095826"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82805892"
 ---
 # <a name="log_shipping_secondary-transact-sql"></a>log_shipping_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68095826"
 |**copy_job_id**|**uniqueidentifier**|与辅助服务器上的复制作业关联的 ID。|  
 |**restore_job_id**|**uniqueidentifier**|与辅助服务器上的还原作业关联的 ID。|  
 |**monitor_server**|**sysname**|在日志传送配置中用作监视服务器的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例的名称。|  
-|**monitor_server_security_mode**|**bit**|用于连接到监视服务器的安全模式。<br /><br /> 1 = Windows 身份验证。<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。|  
+|**monitor_server_security_mode**|**bit**|用于连接到监视服务器的安全模式。<br /><br /> 1 = Windows 身份验证。<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。|  
 |**last_copied_file**|**nvarchar （500）**|上次复制到辅助服务器的备份文件的文件名。|  
 |**last_copied_date**|**datetime**|上次复制到辅助服务器的时间和日期。|  
   

@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sysjobhistory system table
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cc488958513f4a84ac776ff26f1fe2c867f8fa74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2ff3c872b195123608c12515fb3c19a03c3e3f44
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76761831"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807021"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "76761831"
 |**服务**|**sysname**|执行作业时所在服务器的名称。|  
   
   ## <a name="example"></a>示例
- 下面[!INCLUDE[tsql](../../includes/tsql-md.md)]的查询将**run_time**和**run_duration**列转换为更加用户友好格式。  在中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]执行脚本。
+ 下面的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询将**run_time**和**run_duration**列转换为更加用户友好格式。  在中执行脚本 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。
  
  ```sql
  SET NOCOUNT ON;

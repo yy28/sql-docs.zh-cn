@@ -16,14 +16,14 @@ helpviewer_keywords:
 - backup media [SQL Server], backupmediaset system table
 - backupmediaset system table
 ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1dbaf429acb94334540f0e147eae2808e1655309
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4b268bf205245f8c63ca9e8273e4b80607282a00
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68119345"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807309"
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,12 +34,12 @@ ms.locfileid: "68119345"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**media_set_id**|**int**|唯一介质集标识号。 标识，主键。|  
-|**media_uuid**|**uniqueidentifier**|介质集的 UUID。 所有[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]介质集都具有 UUID。<br /><br /> 但对于的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早期版本，如果介质集只包含一个介质簇，则**media_uuid**列可能为 NULL （**media_family_count**为1）。|  
+|**media_uuid**|**uniqueidentifier**|介质集的 UUID。 所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 介质集都具有 UUID。<br /><br /> 但对于的早期版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，如果介质集只包含一个介质簇，则**media_uuid**列可能为 NULL （**media_family_count**为1）。|  
 |**media_family_count**|**tinyint**|媒体集中的媒体簇数。 可以为 NULL。|  
 |**name**|**nvarchar(128)**|介质集的名称。 可以为 NULL。<br /><br /> 有关详细信息，请参阅 MEDIANAME and MEDIADESCRIPTION in [BACKUP &#40;transact-sql&#41;](../../t-sql/statements/backup-transact-sql.md)。|  
 |**2008**|**nvarchar(255)**|介质集的文本化说明。 可以为 NULL。<br /><br /> 有关详细信息，请参阅 MEDIANAME and MEDIADESCRIPTION in [BACKUP &#40;transact-sql&#41;](../../t-sql/statements/backup-transact-sql.md)。|  
 |**software_name**|**nvarchar(128)**|写入介质标签的备份软件名称。 可以为 NULL。|  
-|**software_vendor_id**|**int**|写入备份介质标签的软件供应商标识号。 可以为 NULL。<br /><br /> 的值[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为十六进制0x1200。|  
+|**software_vendor_id**|**int**|写入备份介质标签的软件供应商标识号。 可以为 NULL。<br /><br /> 的值 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为十六进制0x1200。|  
 |**MTF_major_version**|**tinyint**|用于生成该介质集的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 磁带格式的主要版本号。 可以为 NULL。|  
 |**mirror_count**|**tinyint**|介质集中的镜像数。|  
 |**is_password_protected**|**bit**|指定介质集是否受到密码保护：<br /><br /> 0 = 未受到保护<br /><br /> 1 = 受到保护|  
@@ -53,10 +53,10 @@ ms.locfileid: "68119345"
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;Transact-sql&#41;备份和还原表](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
- [backupfile &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
- [backupfilegroup &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
- [backupmediafamily &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
- [backupset &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
+ [backupfile (Transact-SQL)](../../relational-databases/system-tables/backupfile-transact-sql.md)   
+ [backupfilegroup (Transact-SQL)](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
+ [backupmediafamily (Transact-SQL)](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
+ [backupset (Transact-SQL)](../../relational-databases/system-tables/backupset-transact-sql.md)   
  [系统表 (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_conflicts_info system table
 ms.assetid: 6b76ae96-737a-4000-a6b6-fcc8772c2af4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7629bff37fb33080f8057fc1799437fff182882f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a8d86c5566aa7d97f1aea0d4cc8e6e9e9140001c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68044801"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82805455"
 ---
 # <a name="msmerge_conflicts_info-transact-sql"></a>MSmerge_conflicts_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68044801"
 |**rowguid**|**uniqueidentifier**|冲突行的标识符。|  
 |**origin_datasource**|**nvarchar(255)**|发起冲突更改的数据库名。|  
 |**conflict_type**|**int**|发生的冲突类型，可以为下列类型之一：<br /><br /> **1** = 更新冲突：在行级别上检测到冲突。<br /><br /> **2** = 列更新冲突：在列级别上检测到冲突。<br /><br /> **3** = 更新删除 wins 冲突：删除入选冲突。<br /><br /> **4** = 更新 Wins 删除冲突：此表中记录了丢失冲突的已删除 rowguid。<br /><br /> **5** = 上载插入失败：无法在发布服务器中应用来自订阅服务器的插入。<br /><br /> **6** = 下载插入失败：无法在订阅服务器上应用从发布服务器进行的插入。<br /><br /> **7** = 上载删除失败：无法将订阅服务器上的删除内容上载到发布服务器。<br /><br /> **8** = 下载删除失败：无法将在发布服务器上删除操作下载到订阅服务器。<br /><br /> **9** = 上载更新失败：订阅服务器上的更新无法在发布服务器上应用。<br /><br /> **10** = 下载更新失败：发布服务器上的更新无法应用于订阅服务器。<br /><br /> **11** = 分辨率<br /><br /> **12** = 逻辑记录更新 Wins 删除：此表中记录了丢失冲突的已删除逻辑记录。<br /><br /> **13** = 逻辑记录冲突插入更新：插入到逻辑记录与更新冲突。<br /><br /> **14** = 逻辑记录删除 Wins 更新冲突：此表中记录了丢失冲突的更新逻辑记录。|  
-|**reason_code**|**int**|可能与上下文相关的错误代码。 对于更新-更新和更新-删除冲突，用于此列的值与**conflict_type**相同。 但是，对于失败的更改冲突，原因代码是使合并代理无法应用更改的错误。 例如，如果合并代理在订阅服务器上由于主键冲突而无法在订阅服务器上应用插入，则会记录一个**conflict_type**为6（"下载插入失败"）和2627的**reason_code** ，这是 primary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] key 冲突的内部错误消息： "违反了% ls 约束 '%. * ls '"。 无法在对象 '%. 中插入重复键。\*ls "."|  
+|**reason_code**|**int**|可能与上下文相关的错误代码。 对于更新-更新和更新-删除冲突，用于此列的值与**conflict_type**相同。 但是，对于失败的更改冲突，原因代码是使合并代理无法应用更改的错误。 例如，如果合并代理在订阅服务器上由于主键冲突而无法在订阅服务器上应用插入，则会记录一个**conflict_type**为6（"下载插入失败"）和2627的**reason_code** ，这是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] primary key 冲突的内部错误消息： "违反了% ls 约束 '%. * ls '"。 无法在对象 '%. 中插入重复键。 \*ls "."|  
 |**reason_text**|**nvarchar （720）**|可能与上下文相关的错误说明。|  
 |**pubid**|**uniqueidentifier**|发布的标识符。|  
 |**MSrepl_create_time**|**datetime**|冲突发生的时间。|  
