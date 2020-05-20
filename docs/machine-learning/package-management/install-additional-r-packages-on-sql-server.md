@@ -3,28 +3,28 @@ title: 安装新 R 包
 description: 了解如何使用 sqlmlutils 将新的 R 包安装到 SQL Server 机器学习服务或 SQL Server R Services 的实例。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/20/2019
+ms.date: 05/11/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ecfeeafd90d2fd7449ed99c5bacbdff05dff2784
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2b2c561791b88340fd0a77977843f582fa60c648
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746329"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269426"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>使用 sqlmlutils 安装新的 R 包
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本文介绍如何使用 [sqlmlutils](https://github.com/Microsoft/sqlmlutils) 包中的函数以将新的 R 包安装到 SQL Server 机器学习服务或 SQL Server R Services 的实例  。 安装的包可用于使用 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL 语句在数据库中运行的 R 脚本。
+本文介绍如何使用 [sqlmlutils](https://github.com/Microsoft/sqlmlutils) 包中的函数以将新的 R 包安装到 SQL Server 机器学习服务或 SQL Server R Services 的实例。 安装的包可用于使用 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL 语句在数据库中运行的 R 脚本。
 
 > [!NOTE]
-> 本文中所述的 sqlmlutils  包用于将 R 包添加到 SQL Server 2019 或更高版本。 对于 SQL Server 2017 及更早版本，请参阅[使用 R 工具安装包](https://docs.microsoft.com/sql/machine-learning/package-management/install-r-packages-standard-tools?view=sql-server-2017&viewFallbackFrom=sql-server-ver15)。
+> 本文中所述的 sqlmlutils 包用于将 R 包添加到 SQL Server 2019 或更高版本。 对于 SQL Server 2017 及更早版本，请参阅[使用 R 工具安装包](https://docs.microsoft.com/sql/machine-learning/package-management/install-r-packages-standard-tools?view=sql-server-2017&viewFallbackFrom=sql-server-ver15)。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -43,62 +43,67 @@ ms.locfileid: "82746329"
 
 ## <a name="install-sqlmlutils-on-the-client-computer"></a>在客户端计算机上安装 sqlmlutils
 
-若要使用 sqlmlutils，首先需要将其安装在用于连接到 SQL Server 的客户端计算机上  。
+若要使用 sqlmlutils，首先需要将其安装在用于连接到 SQL Server 的客户端计算机上。
 
-sqlmlutils 包依赖于 RODBCext 包，RODBCext 依赖于许多其他包    。 请参照以下过程，按正确顺序安装所有这些包。
+sqlmlutils 包依赖于 RODBCext 包，RODBCext 依赖于许多其他包  。 请参照以下过程，按正确顺序安装所有这些包。
 
 ### <a name="install-sqlmlutils-online"></a>联机安装 sqlmlutils
 
-如果客户端计算机可以访问 Internet，则可以联机下载并安装 sqlmlutils 及其依赖的包  。
+如果客户端计算机可以访问 Internet，则可以联机下载并安装 sqlmlutils 及其依赖的包。
 
-1. 从 https://github.com/Microsoft/sqlmlutils/tree/master/R/dist 将最新的 sqlmlutils zip 文件下载到客户端计算机  。 请勿解压缩文件。
+1. 从 https://github.com/Microsoft/sqlmlutils/tree/master/R/dist 将最新的 sqlmlutils 文件（对于 Windows 为 `.zip` ，对于 Linux 为 `.tar.gz` ）下载到客户端计算机。 不要展开该文件。
 
-1. 打开“命令提示符”并运行以下命令，安装 sqlmlutils 和 RODBCext 包    。 将下载的 sqlmlutils zip 文件的完整路径替换进去（此示例假定该文件位于“文档”文件夹中）  。 已联机查找到 RODBCext 包，并安装它  。
+1. 打开“命令提示符”并运行以下命令，以安装 RODBCext 和 sqlmlutils 包  。 替换下载的 sqlmlutils 文件的路径。 已联机查找到 RODBCext 包，并安装它。
 
+   ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
    ```console
-   R -e "install.packages('RODBCext', repos='https://cran.microsoft.com')"
-   R CMD INSTALL %UserProfile%\Documents\sqlmlutils_0.7.1.zip
+   R -e "install.packages('RODBCext', repos='https://mran.microsoft.com/snapshot/2019-02-01/')"
+   R CMD INSTALL sqlmlutils_0.7.1.zip
    ```
+   ::: moniker-end
+
+   ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+   ```console
+   R -e "install.packages('RODBCext', repos='https://mran.microsoft.com/snapshot/2019-02-01/')"
+   R CMD INSTALL sqlmlutils_0.7.1.tar.gz
+   ```
+   ::: moniker-end
 
 ### <a name="install-sqlmlutils-offline"></a>脱机安装 sqlmlutils
 
-如果客户端计算机没有 Internet 连接，则需要使用能够访问 Internet 的计算机预先下载 sqlmlutils 和 RODBCext 包   。 然后，可以将这些文件复制到客户端计算机上的一个文件夹中，并脱机安装这些包。
+如果客户端计算机没有 Internet 连接，则需要使用能够访问 Internet 的计算机预先下载 RODBCext 和 sqlmlutils 包 。 然后，可以将这些文件复制到客户端计算机上的一个文件夹中，并脱机安装这些包。
 
-RODBCext 包具备许多存在依赖关系的包，并且识别包的所有依赖关系很复杂  。 建议使用 [miniCRAN](https://andrie.github.io/miniCRAN/) 来为包含所有依赖包的包创建本地存储库文件夹  。
+RODBCext 包具备许多存在依赖关系的包，并且识别包的所有依赖关系很复杂。 建议使用 [miniCRAN](https://andrie.github.io/miniCRAN/) 来为包含所有依赖包的包创建本地存储库文件夹。
 有关详细信息，请参阅[使用 miniCRAN 创建本地 R 包存储库](create-a-local-package-repository-using-minicran.md)。
 
-**sqlmlutils** 包包含一个 zip 文件，可以将该文件复制到客户端计算机并进行安装。
+sqlmlutils 包中包含一个文件，可以将该文件复制到客户端计算机并进行安装。
 
 在能够访问 Internet 的计算机上执行以下操作：
 
-1. 安装 miniCRAN  。 有关详细信息，请参阅[安装 miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran)。
+1. 安装 miniCRAN。 有关详细信息，请参阅[安装 miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran)。
 
-1. 在 RStudio 中，运行以下 R 脚本，以创建 RODBCext 包的本地存储库  。 此示例在 `c:\downloads\rodbcext` 文件夹中创建存储库。
+1. 在 RStudio 中，运行以下 R 脚本，以创建 RODBCext 包的本地存储库。 本示例假定在文件夹 `rodbcext` 中创建存储库。
 
-   ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
-
+   ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
    ```R
-   CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
-   local_repo <- "c:/downloads/rodbcext"
+   CRAN_mirror <- c(CRAN = "https://mran.microsoft.com/snapshot/2019-02-01/")
+   local_repo <- "rodbcext"
    pkgs_needed <- "RODBCext"
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
 
    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.5");
    ```
-
    ::: moniker-end
 
    ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
-
    ```R
-   CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
-   local_repo <- "c:/downloads/rodbcext"
+   CRAN_mirror <- c(CRAN = "https://mran.microsoft.com/snapshot/2019-02-01/")
+   local_repo <- "rodbcext"
    pkgs_needed <- "RODBCext"
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
 
    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "source", Rversion = "3.5");
    ```
-
    ::: moniker-end
 
    至于 `Rversion` 值，请使用安装在 SQL Server 上的 R 版本。 若要验证已安装的版本，请使用以下 T-SQL 命令。
@@ -108,28 +113,41 @@ RODBCext 包具备许多存在依赖关系的包，并且识别包的所有依�
     , @script = N'print(R.version)'
    ```
 
-1. 从 [https://github.com/Microsoft/sqlmlutils/tree/master/R/dist](https://github.com/Microsoft/sqlmlutils/tree/master/R/dist) 下载最新的 sqlmlutils zip 文件（请勿解压缩文件）  。 例如，将文件下载到 `c:\downloads\sqlmlutils_0.7.1.zip`。
+1. 从 [https://github.com/Microsoft/sqlmlutils/tree/master/R/dist](https://github.com/Microsoft/sqlmlutils/tree/master/R/dist) 下载最新的 sqlmlutils 文件（对于 Windows 为 `.zip` ，对于 Linux 为 `.tar.gz` ）。 不要展开该文件。
 
-1. 将整个 RODBCext 存储库文件夹 (`c:\downloads\rodbcext`) 和 sqlmlutils zip 文件 (`c:\downloads\sqlmlutils_0.7.1.zip`) 复制到客户端计算机   。 例如，将它们复制到客户端计算机上的 `c:\temp\packages` 文件夹中。
+1. 将整个 RODBCext 存储库文件夹和 sqlmlutils 文件复制到客户端计算机 。
 
-在用于连接到 SQL Server 的客户端计算机上，打开命令提示符并运行以下命令依次安装 RODBCext 和 sqlmlutils   。
+在用于连接到 SQL Server 的客户端计算机上：
 
-```console
-R -e "install.packages('RODBCext', repos='c:\temp\packages\rodbcext')"
-R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
-```
+1. 打开命令提示符。
+
+1. 运行以下命令，依次安装 RODBCext 和 sqlmlutils 。 替换 RODBCext 存储库文件夹和复制到此计算机的 sqlmlutils 文件的完整路径 。
+
+   ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+   ```console
+   R -e "install.packages('RODBCext', repos='rodbcext')"
+   R CMD INSTALL sqlmlutils_0.7.1.zip
+   ```
+   ::: moniker-end
+
+   ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+   ```console
+   R -e "install.packages('RODBCext', repos='rodbcext')"
+   R CMD INSTALL sqlmlutils_0.7.1.tar.gz
+   ```
+   ::: moniker-end
 
 ## <a name="add-an-r-package-on-sql-server"></a>在 SQL Server 上添加 R 包
 
-在下面的示例中，将 [glue](https://cran.r-project.org/web/packages/glue/) 包添加到 SQL Server  。
+在下面的示例中，将 [glue](https://cran.r-project.org/web/packages/glue/) 包添加到 SQL Server。
 
 ### <a name="add-the-package-online"></a>联机添加包
 
-如果用于连接到 SQL Server 的客户端计算机具有 Internet 访问权限，则可以使用 sqlmlutils 在 Internet 上查找 glue 包及任何依赖项，然后将该包远程安装到 SQL Server 实例   。
+如果用于连接到 SQL Server 的客户端计算机具有 Internet 访问权限，则可以使用 sqlmlutils 在 Internet 上查找 glue 包及任何依赖项，然后将该包远程安装到 SQL Server 实例 。
 
-1. 在客户端计算机上，打开 RStudio 并创建一个新 R 脚本文件  。
+1. 在客户端计算机上，打开 RStudio 并创建一个新 R 脚本文件。
 
-1. 通过 sqlmlutils 使用以下 R 脚本安装 glue 包   。 请将相应部分替换为自己的 SQL Server 数据库连接信息。
+1. 通过 sqlmlutils 使用以下 R 脚本安装 glue 包 。 请将相应部分替换为自己的 SQL Server 数据库连接信息。
 
    ```R
    library(sqlmlutils)
@@ -143,19 +161,18 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
    ```
 
    > [!TIP]
-   > 范围可为 PUBLIC（公共）或 PRIVATE（私有）    。 当数据库管理员需要安装所有用户都能使用的包时，公共范围就非常有用。 若采用私有范围，则只有安装这个包的用户才能使用它。 如果未指定范围，则默认范围为 PRIVATE（私有）  。
+   > 范围可为 PUBLIC（公共）或 PRIVATE（私有）  。 当数据库管理员需要安装所有用户都能使用的包时，公共范围就非常有用。 若采用私有范围，则只有安装这个包的用户才能使用它。 如果未指定范围，则默认范围为 PRIVATE（私有）。
 
 ### <a name="add-the-package-offline"></a>脱机添加包
 
-如果客户端计算机没有 Internet 连接，则需要通过能够访问 Internet 的计算机使用 miniCRAN 下载 glue 包   。 然后将包复制到客户端计算机，可以在其中脱机安装该包。
-有关安装 miniCRAN 的信息，请参阅[安装 miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran)  。
+如果客户端计算机没有 Internet 连接，则需要通过能够访问 Internet 的计算机使用 miniCRAN 下载 glue 包 。 然后将包复制到客户端计算机，可以在其中脱机安装该包。
+有关安装 miniCRAN 的信息，请参阅[安装 miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran)。
 
 在能够访问 Internet 的计算机上执行以下操作：
 
-1. 运行以下 R 脚本，为 glue 创建本地存储库  。 此示例在 `c:\downloads\glue` 中创建存储库文件夹。
+1. 运行以下 R 脚本，为 glue 创建本地存储库。 此示例在 `c:\downloads\glue` 中创建存储库文件夹。
 
-   ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
-
+   ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
    ```R
    CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
    local_repo <- "c:/downloads/glue"
@@ -164,11 +181,9 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
 
    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.5");
    ```
-
    ::: moniker-end
 
    ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
-
    ```R
    CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
    local_repo <- "c:/downloads/glue"
@@ -177,7 +192,6 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
 
    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "source", Rversion = "3.5");
    ```
-
    ::: moniker-end
 
 
@@ -188,13 +202,13 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
     , @script = N'print(R.version)'
    ```
 
-1. 将整个 glue 存储库文件夹 (`c:\downloads\glue`) 复制到客户端计算机  。 例如，将它复制到 `c:\temp\packages\glue` 文件夹。
+1. 将整个 glue 存储库文件夹 (`c:\downloads\glue`) 复制到客户端计算机。 例如，将它复制到 `c:\temp\packages\glue` 文件夹。
 
 在客户端计算机上执行以下操作：
 
-1. 打开 RStudio 并创建一个新 R Script 文件  。
+1. 打开 RStudio 并创建一个新 R Script 文件。
 
-1. 通过 sqlmlutils 使用以下 R 脚本安装 glue 包   。 将自己的 SQL Server 数据库连接信息替换进去（如果不使用 Windows 身份验证，请添加 `uid` 和 `pwd` 参数）。
+1. 通过 sqlmlutils 使用以下 R 脚本安装 glue 包 。 将自己的 SQL Server 数据库连接信息替换进去（如果不使用 Windows 身份验证，请添加 `uid` 和 `pwd` 参数）。
 
    ```R
    library(sqlmlutils)
@@ -207,11 +221,11 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
    ```
 
    > [!TIP]
-   > 范围可为 PUBLIC（公共）或 PRIVATE（私有）    。 当数据库管理员需要安装所有用户都能使用的包时，公共范围就非常有用。 若采用私有范围，则只有安装这个包的用户才能使用它。 如果未指定范围，则默认范围为 PRIVATE（私有）  。
+   > 范围可为 PUBLIC（公共）或 PRIVATE（私有）  。 当数据库管理员需要安装所有用户都能使用的包时，公共范围就非常有用。 若采用私有范围，则只有安装这个包的用户才能使用它。 如果未指定范围，则默认范围为 PRIVATE（私有）。
 
 ## <a name="use-the-package"></a>使用包
 
-安装 glue 包后，可以通过 T-SQL sp_execute_external_script 命令在 SQL Server 中的 R 脚本中使用它   。
+安装 glue 包后，可以通过 T-SQL sp_execute_external_script 命令在 SQL Server 中的 R 脚本中使用它 。
 
 1. 打开 Azure Data Studio 或 SSMS 并连接到 SQL Server 数据库。
 
@@ -239,7 +253,7 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
 
 ## <a name="remove-the-package"></a>删除包
 
-如果要删除 glue 包，请运行以下 R 脚本  。 使用与之前的定义一致的 connection 变量  。
+如果要删除 glue 包，请运行以下 R 脚本。 使用与之前的定义一致的 connection 变量。
 
 ```R
 sql_remove.packages(connectionString = connection, pkgs = "glue", scope = "PUBLIC")

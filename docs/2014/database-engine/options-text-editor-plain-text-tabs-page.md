@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.Tabs
 ms.assetid: 07d82d10-bca9-4b37-abbb-58ef9bfb264b
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0e060f1bccb544edd4e82c759b737e05c4bb980b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bdbcfa8140ecbc8c40086af41e64ba96920fe78
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089863"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000688"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>选项（“文本编辑器”-“纯文本”-“选项卡”页）
   使用此对话框可以更改文本编辑器的跳格行为，该编辑器用于编辑未与特定开发语言关联的文档。 若要显示这些设置，请在****“工具”菜单上单击****“选项”，展开****“文本编辑器”，展开****“纯文本”，再单击****“制表符”。  
@@ -29,7 +29,7 @@ ms.locfileid: "66089863"
  **无**  
  不缩进按 Enter 时创建的新行。 光标置于新行的第一列。  
   
- **模块**  
+ **阻止**  
  缩进按 Enter 时创建的新行，缩进量与上一行的缩进量相同。  
   
  **智能**  

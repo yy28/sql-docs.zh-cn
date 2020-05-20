@@ -12,15 +12,15 @@ helpviewer_keywords:
 - breaking changes [full-text search]
 - full-text indexes [SQL Server], breaking changes
 ms.assetid: c55a6748-e5d9-4fdb-9a1f-714475a419c5
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 45b13c29af6a9c5e82533a4b66213d1cb1b9dd15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a223060768c35b2daf00837153e59218ff1c50e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787755"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001017"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>对全文搜索的重大更改
   本主题介绍全文搜索的重大更改。 这些更改可能导致基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的早期版本的应用程序、脚本或功能无法继续使用。 在进行升级时可能会遇到这些问题。 有关详细信息，请参阅 [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)。  
@@ -39,7 +39,7 @@ ms.locfileid: "62787755"
 |功能|方案|SQL Server 2005|SQL Server 2008 及更高版本|  
 |-------------|--------------|---------------------|----------------------------------------|  
 |具有用户定义类型（Udt）的[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|全文键为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用户定义类型，例如，`MyType = char(1)`。|返回键的类型是为用户定义类型指定的类型。<br /><br /> 在此示例中，为**char （1）**。|返回键的类型是用户定义类型。 在此示例中，此为**MyType**。|  
-|*top_n_by_rank*参数（CONTAINSTABLE 和[FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) [!INCLUDE[tsql](../includes/tsql-md.md)]语句）|使用0作为参数*top_n_by_rank*查询。|失败并显示一个错误消息，说明您必须使用一个大于零的值。|成功，返回零行。|  
+|*top_n_by_rank*参数（CONTAINSTABLE 和[FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) [!INCLUDE[tsql](../includes/tsql-md.md)] 语句）|使用0作为参数*top_n_by_rank*查询。|失败并显示一个错误消息，说明您必须使用一个大于零的值。|成功，返回零行。|  
 |CONTAINSTABLE 和**ItemCount**|在它将更改推入 MSSearch 之前从基表中删除行。|CONTAINSTABLE 返回虚影记录。 **ItemCount**未更改。|CONTAINSTABLE 不返回任何虚影记录。|  
 |**ItemCount**|表包含 Null 文档或类型列。|除了索引文档之外，还会在**ItemCount**值中计算为 null 或具有 null 类型的文档。|只有索引的文档才会计入**ItemCount**值。|  
 |目录**ItemCount**|扩展名为 NULL 的 Blob 列。|它在目录的**ItemCount**中计数|不会在目录的**ItemCount**中对其进行计数。|  
@@ -50,7 +50,7 @@ ms.locfileid: "62787755"
 |[sp_fulltext_database](/sql/relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql)|通过使用 sp_fulltext_database 启用或禁用全文搜索。|全文查询不返回任何结果。 如果对数据库禁用全文功能，则将不允许全文操作。|为全文查询返回结果，并且允许全文操作，即使对数据库禁用全文功能也是如此。|  
 |特定于区域设置的非索引字|查询 inlocale 的父语言的特定变体，如比利时法语和加拿大法语。|查询 inlocale 特定的变量由其父语言的组件（断字符、词干分析器和非索引字）处理。 例如，“法语（法国）”组件用于分析“法语（比利时）”。|必须为每个区域设置标识符 (LCID) 显式添加非索引字。 例如，您需要为比利时、加拿大和法国指定一个 LCID。|  
 |同义词库词干分析进程|使用同义词库和变形（词干分析）。|同义词库单词在其扩展之后自动进行词干分析。|如果要得到扩展形式中的词干，则需要显式添加词干。|  
-|全文目录路径和文件组|使用全文目录。|每个全文目录都有一个物理路径，并且都属于一个文件组。 系统将其视为数据库文件。|全文目录是虚拟对象，不属于任何文件组。 全文目录是表示一组全文索引的逻辑概念。<br /><br /> 注意： [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)]指定全文目录的 DDL 语句可以正常工作。|  
+|全文目录路径和文件组|使用全文目录。|每个全文目录都有一个物理路径，并且都属于一个文件组。 系统将其视为数据库文件。|全文目录是虚拟对象，不属于任何文件组。 全文目录是表示一组全文索引的逻辑概念。<br /><br /> 注意： [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] 指定全文目录的 DDL 语句可以正常工作。|  
 |[sys.fulltext_catalogs](/sql/relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql)|使用此目录视图的 path、data_space_id 和 file_id。|这些列都返回一个特定值。|由于全文目录已不再位于文件系统中，因而这些列均返回 NULL。|  
 |[sys.sysfulltextcatalogs](/sql/relational-databases/system-compatibility-views/sys-sysfulltextcatalogs-transact-sql)|使用此不推荐使用的系统表的 path 列。|返回全文目录的文件系统路径。|由于全文目录已不再位于文件系统中，因而返回 NULL。|  
 |[sp_help_fulltext_catalogs](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql)<br /><br /> [sp_help_fulltext_catalogs_cursor](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql)|使用这些不推荐使用的存储过程的 PATH 列。|返回全文目录的文件系统路径。|由于全文目录已不再位于文件系统中，因而返回 NULL。|  

@@ -10,18 +10,18 @@ helpviewer_keywords:
 - Database Engine [SQL Server], development
 - development [SQL Server Database Engine]
 ms.assetid: d9efe145-3306-4d61-bd77-e2af43e19c34
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 43aa8a23a7d9322e6865b83e3aee4d77fa40e49e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b181efac9660dda7b1ddd0e313f6562e1ea3ba0
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064981"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000987"
 ---
 # <a name="database-engine-features-and-tasks"></a>数据库引擎功能和任务
-  查找任何人员（设计人员、开发人员、分析人员或管理员）生成[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据库所需的信息。  
+  查找任何人员（设计人员、开发人员、分析人员或管理员）生成数据库所需的信息 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
 ## <a name="in-this-section"></a>本节内容  
  [数据库引擎实例 (SQL Server)](configure-windows/database-engine-instances-sql-server.md)  

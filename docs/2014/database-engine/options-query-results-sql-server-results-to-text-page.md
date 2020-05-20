@@ -9,18 +9,18 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.SqlServer.SQLResultsToText
 ms.assetid: 2ccbdf17-e14f-42f1-a836-ca999a3432c9
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 43e35c5de15aeeab5351b4d262db846840e5f6a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2aea2292ada0256e5ae7b988a8e65649dbc50c0d
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66090021"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000747"
 ---
 # <a name="options-query-results-sql-server-results-to-text-page"></a>选项（查询结果-SQL Server-结果到文本页）
-  使用此页可以指定以文本格式显示查询结果集的选项。 对这些选项所做的更改只应用于新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询。 若要更改当前查询的选项，请在 "**查询**" 菜单上单击 "**查询选项**"，或在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]查询窗口中单击右键，然后选择 "**查询选项**"。 在 **“查询选项”** 对话框中的 **“结果”** 下，单击 **“文本”**。  
+  使用此页可以指定以文本格式显示查询结果集的选项。 对这些选项所做的更改只应用于新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询。 若要更改当前查询的选项，请在 "**查询**" 菜单上单击 "**查询选项**"，或在查询窗口中单击右键， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 然后选择 "**查询选项**"。 在 **“查询选项”** 对话框中的 **“结果”** 下，单击 **“文本”**。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
  **输出格式**  

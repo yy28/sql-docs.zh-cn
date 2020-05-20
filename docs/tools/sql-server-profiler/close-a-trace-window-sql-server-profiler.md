@@ -1,6 +1,7 @@
 ---
 title: 关闭跟踪窗口
 titleSuffix: SQL Server Profiler
+description: 了解如何在捕获事件数据的 SQL Server Profiler 中关闭跟踪窗口。 了解如何在跟踪期间或在完成跟踪后关闭跟踪窗口。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ ms.author: maghan
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 8f601af41c0a78af0f49a98d97f559b47de237f4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 92bf90cf51bc380a1c1cd61d72fb5ebcca68dbd1
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74957651"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151923"
 ---
 # <a name="close-a-trace-window-sql-server-profiler"></a>关闭跟踪窗口 (SQL Server Profiler)
 
@@ -27,7 +28,7 @@ ms.locfileid: "74957651"
   
 1. 选择要关闭的跟踪窗口。  
   
-2. 在“文件”菜单中，单击“关闭”。    
+2. 在“文件”菜单中，单击“关闭”。   
   
 > [!IMPORTANT]  
 > 如果跟踪正在运行，则关闭跟踪窗口将停止相关跟踪。  

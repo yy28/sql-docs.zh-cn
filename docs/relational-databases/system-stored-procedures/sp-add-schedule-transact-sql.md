@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_schedule
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 21fe2a05c87caf5270967381e9ebeefc1069729f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dcaf10a680540a533e539783a1fc9ed289998a40
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "70810397"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151972"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -49,7 +49,8 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
     [ , [ @active_end_time = ] active_end_time ]   
     [ , [ @owner_login_name = ] 'owner_login_name' ]  
     [ , [ @schedule_uid = ] schedule_uid OUTPUT ]  
-    [ , [ @schedule_id = ] schedule_id OUTPUT ]  
+    [ , [ @schedule_id = ] schedule_id OUTPUT ]
+    [ , [ @schedule_uid = ] _schedule_uid OUTPUT ]
     [ , [ @originating_server = ] server_name ] /* internal */  
 ```  
   
@@ -60,10 +61,10 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_type = ] freq_type`指示何时执行作业的值。 *freq_type*的数据值为**int**，默认值为**0**，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
-|**4**|每日|  
+|**4**|每天|  
 |**8**|每周|  
 |**超过**|每月一次|  
 |**32**|每月，相对于*freq_interval*|  
@@ -84,7 +85,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_subday_type = ] freq_subday_type`指定*freq_subday_interval*的单位。 *freq_subday_type*的数据值为**int**，默认值为**0**，可以是下列值之一。  
   
-|Value|说明（单位）|  
+|值|说明（单位）|  
 |-----------|--------------------------|  
 |**0x1**|在指定的时间|  
 |**0x2**|秒|  
@@ -95,7 +96,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_relative_interval = ] freq_relative_interval`如果*freq_interval*为32（每月相对），则为每月*freq_interval*的作业。 *freq_relative_interval*的数据值为**int**，默认值为**0**，可以是下列值之一。 如果*freq_type*不等于32，则将忽略*freq_relative_interval* 。  
   
-|Value|说明（单位）|  
+|值|说明（单位）|  
 |-----------|--------------------------|  
 |**1**|第一个|  
 |**2**|秒|  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_spaceused
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b0bd2f253dede1c427eda826eba0e998a144736
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f015625f168693da0c3c204ca85cbee1beb5d897
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252023"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152131"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -44,7 +44,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 ## <a name="arguments"></a>参数  
 
-对于[!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]和[!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]， `sp_spaceused`必须指定命名的参数（例如`sp_spaceused (@objname= N'Table1');` ，而不是依赖于参数的序号位置。 
+对于 [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] 和 [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] ， `sp_spaceused` 必须指定命名的参数（例如， `sp_spaceused (@objname= N'Table1');` 而不是依赖于参数的序号位置。 
 
 `[ @objname = ] 'objname'`
    
@@ -52,7 +52,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 如果未指定*objname* ，则返回整个数据库的结果。  
 *objname*的值为**nvarchar （776）**，默认值为 NULL。  
 > [!NOTE]  
-> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]和[!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]仅支持数据库对象和表对象。
+> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]和 [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] 仅支持数据库对象和表对象。
   
 `[ @updateusage = ] 'updateusage'`指示应运行 DBCC UPDATEUSAGE 以更新空间使用情况信息。 如果未指定*objname* ，则对整个数据库运行语句;否则，语句将在*objname*上运行。 值可以为**true**或**false**。 *updateusage*的值为**varchar （5）**，默认值为**false**。  
   
@@ -60,27 +60,27 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
  *Mode*参数可具有以下值：  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |ALL|返回对象或数据库的存储统计信息，其中包括本地部分和远程部分。|  
-|LOCAL_ONLY|返回仅对象或数据库的本地部分的存储统计信息。 如果对象或数据库未启用 Stretch，则返回与@mode = ALL 相同的统计信息。|  
+|LOCAL_ONLY|返回仅对象或数据库的本地部分的存储统计信息。 如果对象或数据库未启用 Stretch，则返回与 = ALL 相同的统计信息 @mode 。|  
 |REMOTE_ONLY|返回仅对象或数据库的远程部分的存储统计信息。 如果满足以下条件之一，则此选项将引发错误：<br /><br /> 该表未启用延伸。<br /><br /> 表已启用延伸，但你从未启用数据迁移。 在这种情况下，远程表还没有架构。<br /><br /> 用户已手动删除远程表。<br /><br /> 设置远程数据存档返回了成功状态，但实际上它失败了。|  
   
  *模式*为**varchar （11）**，默认值为**N'ALL '**。  
   
 `[ @oneresultset = ] oneresultset`指示是否返回单个结果集。 *Oneresultset*参数可具有以下值：  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
-|0|当* \@objname*为 null 或未指定时，将返回两个结果集。 默认行为是两个结果集。|  
-|1|如果* \@objname* = null 或未指定，则返回单个结果集。|  
+|0|当* \@ objname*为 null 或未指定时，将返回两个结果集。 默认行为是两个结果集。|  
+|1|如果* \@ objname* = null 或未指定，则返回单个结果集。|  
   
  *oneresultset*的值为**bit**，默认值为**0**。  
 
 `[ @include_total_xtp_storage] 'include_total_xtp_storage'`
-**适用于：** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]、 [!INCLUDE[sssds-md](../../includes/sssds-md.md)]。  
+**适用于：** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] 、 [!INCLUDE[sssds-md](../../includes/sssds-md.md)] 。  
   
- 当@oneresultset= 1 时，参数@include_total_xtp_storage确定单个结果集是否包含 MEMORY_OPTIMIZED_DATA 存储的列。 默认值为0，即默认情况下（如果省略该参数），则不会将 XTP 列包含在结果集中。  
+ 当 @oneresultset = 1 时，参数 @include_total_xtp_storage 确定单个结果集是否包含 MEMORY_OPTIMIZED_DATA 存储的列。 默认值为0，即默认情况下（如果省略该参数），则不会将 XTP 列包含在结果集中。  
 
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -117,7 +117,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|name |**nvarchar(128)**|请求其空间使用信息的对象的名称。<br /><br /> 不返回对象的架构名称。 如果架构名称是必需的，请使用[sys. dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)或[sys. dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)动态管理视图获取等效大小的信息。|  
+|**name**|**nvarchar(128)**|请求其空间使用信息的对象的名称。<br /><br /> 不返回对象的架构名称。 如果架构名称是必需的，请使用[sys. dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)或[sys. dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)动态管理视图获取等效大小的信息。|  
 |**各**|**char （20）**|表中现有的行数。 如果指定的对象是 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 队列，该列将指示队列中的消息数。|  
 |**保护**|**varchar （18）**|*Objname*的保留空间总量。|  
 |**数据**|**varchar （18）**|*Objname*中的数据所用的空间总量。|  
@@ -149,7 +149,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**xtp_used**|**varchar （18）**|状态为 "构造"、"活动" 和 "合并目标" 的检查点文件的总大小（KB）。 这是内存优化表中的数据所用的磁盘空间。|  
 |**xtp_pending_truncation**|**varchar （18）**|状态 WAITING_FOR_LOG_TRUNCATION 的检查点文件的总大小（KB）。 这是在发生日志截断后用于等待清理的检查点文件的磁盘空间。|
 
-如果省略*objname* ，则 oneresultset 的值为1， *include_total_xtp_storage*为1，则返回以下单个结果集以提供当前数据库大小信息。 如果`include_total_xtp_storage`为0（默认值），则省略最后三列。 
+如果省略*objname* ，则 oneresultset 的值为1， *include_total_xtp_storage*为1，则返回以下单个结果集以提供当前数据库大小信息。 如果 `include_total_xtp_storage` 为0（默认值），则省略最后三列。 
 
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -160,18 +160,18 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**数据**|**varchar （18）**|数据使用的空间总量。|  
 |**index_size**|**varchar （18）**|索引使用的空间总量。|  
 |**用**|**varchar （18）**|为数据库中的对象保留但尚未使用的空间总量。|
-|**xtp_precreated**|**varchar （18）**|状态为预创建的检查点文件的总大小（KB）。 这将计入整个数据库中的未分配空间。 如果数据库没有至少具有一个容器的 memory_optimized_data 文件组，则返回 NULL。 *只有在@include_total_xtp_storage= 1 时才包括此列*。| 
-|**xtp_used**|**varchar （18）**|状态为 "构造"、"活动" 和 "合并目标" 的检查点文件的总大小（KB）。 这是内存优化表中的数据所用的磁盘空间。 如果数据库没有至少具有一个容器的 memory_optimized_data 文件组，则返回 NULL。 *只有在@include_total_xtp_storage= 1 时才包括此列*。| 
-|**xtp_pending_truncation**|**varchar （18）**|状态 WAITING_FOR_LOG_TRUNCATION 的检查点文件的总大小（KB）。 这是在发生日志截断后用于等待清理的检查点文件的磁盘空间。 如果数据库没有至少具有一个容器的 memory_optimized_data 文件组，则返回 NULL。 只有此列包含在内`@include_total_xtp_storage=1`。|
+|**xtp_precreated**|**varchar （18）**|状态为预创建的检查点文件的总大小（KB）。 这将计入整个数据库中的未分配空间。 如果数据库没有至少具有一个容器的 memory_optimized_data 文件组，则返回 NULL。 *只有在 @include_total_xtp_storage = 1 时才包括此列*。| 
+|**xtp_used**|**varchar （18）**|状态为 "构造"、"活动" 和 "合并目标" 的检查点文件的总大小（KB）。 这是内存优化表中的数据所用的磁盘空间。 如果数据库没有至少具有一个容器的 memory_optimized_data 文件组，则返回 NULL。 *只有在 @include_total_xtp_storage = 1 时才包括此列*。| 
+|**xtp_pending_truncation**|**varchar （18）**|状态 WAITING_FOR_LOG_TRUNCATION 的检查点文件的总大小（KB）。 这是在发生日志截断后用于等待清理的检查点文件的磁盘空间。 如果数据库没有至少具有一个容器的 memory_optimized_data 文件组，则返回 NULL。 只有此列包含在内 `@include_total_xtp_storage=1` 。|
 
 ## <a name="remarks"></a>备注  
- **database_size**始终大于**保留** + **未分配空间**的总和，因为它包括日志文件的大小，但**保留**和**unallocated_space**只考虑数据页。  
+ **database_size**通常大于**保留**  +  **未分配空间**的总和，因为它包括日志文件的大小，但**保留**和**unallocated_space**只考虑数据页。 在某些情况下，Azure Synapse Analytics 不能为 true。 
   
  XML 索引和全文索引使用的页包括在两个结果集的**index_size**中。 当指定*objname*时，对象的 XML 索引和全文索引的页也将计入总**保留**和**index_size**结果中。  
   
  如果为数据库或具有空间索引的对象计算空间使用量，则空间大小列（如**database_size**、**保留**和**index_size**）包括空间索引的大小。  
   
- 当指定*updateusage*时，会[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]扫描数据库中的数据页，并对**sys.databases. allocation_units**和**sys.databases 分区**目录视图进行任何所需的更正，以了解每个表使用的存储空间。 在某些情况下（例如删除索引后、表的空间信息不是当前信息时），需要执行该操作。 *updateusage*可能需要一些时间才能在大型表或数据库上运行。 仅当您怀疑返回了不正确的值，并且该进程不会对数据库中的其他用户或进程产生不利影响时，才使用*updateusage* 。 如果首选该进程，则可以单独运行 DBCC UPDATEUSAGE。  
+ 当指定*updateusage*时，会 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 扫描数据库中的数据页，并对**sys.databases. allocation_units**和**sys.databases 分区**目录视图进行任何所需的更正，以了解每个表使用的存储空间。 在某些情况下（例如删除索引后、表的空间信息不是当前信息时），需要执行该操作。 *updateusage*可能需要一些时间才能在大型表或数据库上运行。 仅当您怀疑返回了不正确的值，并且该进程不会对数据库中的其他用户或进程产生不利影响时，才使用*updateusage* 。 如果首选该进程，则可以单独运行 DBCC UPDATEUSAGE。  
   
 > [!NOTE]  
 >  在删除或重新生成大型索引时，或者在删除或截断大型表时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将延迟实际页释放及其关联锁，直至事务提交完毕为止。 延迟的删除操作不会立即释放已分配的空间。 因此，在删除或截断大型对象之后**sp_spaceused**立即返回的值可能不会反映可用的实际磁盘空间。  
@@ -202,7 +202,7 @@ GO
 ```  
   
 ### <a name="c-displaying-space-usage-information-about-the-remote-table-associated-with-a-stretch-enabled-table"></a>C. 显示与已启用延伸的表相关联的远程表的空间使用情况信息  
- 下面的示例通过使用** \@mode**参数指定远程目标来汇总与启用 Stretch 的表关联的远程表所使用的空间。 有关详细信息，请参阅 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。  
+ 下面的示例通过使用** \@ mode**参数指定远程目标来汇总与启用 Stretch 的表关联的远程表所使用的空间。 有关详细信息，请参阅 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。  
   
 ```sql  
 USE StretchedAdventureWorks2016  

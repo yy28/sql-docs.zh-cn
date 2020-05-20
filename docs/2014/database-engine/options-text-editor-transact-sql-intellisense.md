@@ -12,15 +12,15 @@ f1_keywords:
 dev_langs:
 - TSQL
 ms.assetid: 1855d916-5bf9-4d94-b0fb-9f9bb05ff950
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fd2cf2be2102aeed1c853ce1b9a198c2b196d26a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b39d0ad9439e265b80bdfc408389332fe308848e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089822"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000652"
 ---
 # <a name="options-text-editor-transact-sql-intellisense"></a>选项（文本编辑器-Transact-sql-IntelliSense）
   您可以使用 **“选项”** 对话框更改 [!INCLUDE[ssDE](../includes/ssde-md.md)] 查询编辑器的 IntelliSense 设置。 若要显示这些设置，请在“工具”**** 菜单上单击“选项”****，依次展开“文本编辑器”**** 文件夹和“Transact-SQL”**** 文件夹，然后单击“高级”****。  

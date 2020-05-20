@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 28ff17dc-172b-4ac4-853f-990b5dc02fd1
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 459bdc20c9698a8b6271092c57ed0de936c4d7f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: de736c48763973b48be41d4d63f5237a10b3fff6
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775039"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000877"
 ---
 # <a name="manage-full-text-indexes"></a>管理全文索引
      
@@ -37,7 +37,7 @@ ms.locfileid: "62775039"
     |----------|-----------------|  
     |**常规**|显示全文索引的基本属性。 这些基本属性包括若干个可修改属性和多个不可更改属性，后者如数据库名称、表名和全文键列的名称。 可修改属性包括：<br /><br /> **全文索引非索引字表**<br /><br /> **全文索引已启用**<br /><br /> **更改跟踪**<br /><br /> **搜索属性列表**<br /><br /> <br /><br /> 有关详细信息，请参阅[全文本索引属性（常规页）](full-text-index-properties-general-page.md)。|  
     |**“列”**|显示可用于全文索引的表列。 对于选中的列，均会创建全文索引。 您可以根据需要选择将任意数目的可用列包括在全文索引中。 有关详细信息，请参阅[全文本索引属性（列页）](../../2014/database-engine/full-text-index-properties-columns-page.md)。|  
-    |**计划**|使用此页可以创建或管理 SQL Server 代理作业的计划，该作业用于启动全文索引填充的表增量填充。 有关详细信息，请参阅 [填充全文索引](../relational-databases/indexes/indexes.md)。<br /><br /> <strong> \* \*重要\*提示</strong>退出 "**全文索引属性**" 对话框后，任何新创建的计划都将与 SQL Server 代理作业关联（ *Database_name*上启动增量表填充。*table_name*）。|  
+    |**计划**|使用此页可以创建或管理 SQL Server 代理作业的计划，该作业用于启动全文索引填充的表增量填充。 有关详细信息，请参阅 [填充全文索引](../relational-databases/indexes/indexes.md)。<br /><br /> <strong> \* \* 重要 \* 说明 \* </strong>在您退出 "**全文索引属性**" 对话框后，任何新创建的计划都将与 SQL Server 代理作业关联（ *database_name*上启动增量表填充。*table_name*）。|  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 以保存任何更改并退出“全文索引属性”对话框。   
   
@@ -68,7 +68,7 @@ ms.locfileid: "62775039"
   
 #### <a name="to-inquire-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>查询给定的唯一索引是否作为全文键列使用  
   
-1.  使用 [SELECT](/sql/t-sql/queries/select-transact-sql) 语句调用 [INDEXPROPERTY](/sql/t-sql/functions/indexproperty-transact-sql) 函数。 在函数调用中，使用 OBJECT_ID 函数将表名（*table_name*）转换为表 ID，指定该表的唯一索引的名称，并指定`IsFulltextKey`索引属性，如下所示：  
+1.  使用 [SELECT](/sql/t-sql/queries/select-transact-sql) 语句调用 [INDEXPROPERTY](/sql/t-sql/functions/indexproperty-transact-sql) 函数。 在函数调用中，使用 OBJECT_ID 函数将表名（*table_name*）转换为表 ID，指定该表的唯一索引的名称，并指定 `IsFulltextKey` 索引属性，如下所示：  
   
     ```  
     SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );  
@@ -92,7 +92,7 @@ SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID
   
 1.  每个启用全文的表都有一个列，该列用于强制实现表中行的唯一性（“唯一键列”）  。 从 OBJECTPROPERTYEX 函数获取的 `TableFulltextKeyColumn` 属性包含唯一键列的列 ID。  
   
-     若要获取此标识符，可以使用 SELECT 语句调用 OBJECTPROPERTYEX 函数。 使用 OBJECT_ID 函数将表名（*table_name*）转换为表 ID，并指定`TableFulltextKeyColumn`属性，如下所示：  
+     若要获取此标识符，可以使用 SELECT 语句调用 OBJECTPROPERTYEX 函数。 使用 OBJECT_ID 函数将表名（*table_name*）转换为表 ID，并指定 `TableFulltextKeyColumn` 属性，如下所示：  
   
     ```  
     SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 'Column Identifier';  

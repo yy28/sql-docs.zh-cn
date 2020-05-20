@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAdvanced
 ms.assetid: 3ec788c7-22c3-4216-9ad0-81a168d17074
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5323054b77ed26a3ada816f44c1bf6764ded931d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fcb8be3b7803402d6e20510d95f293107b66540
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089365"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000807"
 ---
 # <a name="options-query-executionsql-serveradvanced-page"></a>选项（“查询执行”:“SQL Server”:“高级”页）
   有几个使用 SET 命令的选项。 使用此页可以指定在 SQL Server 查询编辑器中运行 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询时的 **set** 选项。 这些选项对其他代码编辑器不起任何作用。 对这些选项所做的更改仅应用于新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询。 若要更改当前查询的选项，请单击 **“查询”** 菜单或 **查询窗口中快捷菜单上的** “查询选项” [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 在 **“执行”** 下，单击 **“高级”**。 有关每个选项的详细信息，请参阅 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书。  

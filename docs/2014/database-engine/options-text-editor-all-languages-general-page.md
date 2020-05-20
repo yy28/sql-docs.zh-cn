@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: bf18907c-94e2-4c09-9b2b-0925ac04c627
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 385380e6e51c3b8519e7dbc6ec3d934e1ef14846
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55e89850c3b3f19c30a4943f5d787407da7e3c88
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089252"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000731"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>选项（“文本编辑器”-“所有语言”-“常规”页）
   使用此对话框可以设置 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的所有五个编辑器的常规编辑选项。 若要显示这些选项，请在 **“工具”** 菜单上单击 **“选项”** 。 选择 **“文本编辑器”** 文件夹，展开 **“所有语言”** 文件夹，再单击 **“常规”**。  
@@ -60,7 +60,7 @@ ms.locfileid: "66089252"
   
  如果所在行不是空白行，则此设置对 **“复制”** 或 **“剪切”** 无效。 如果没有选定任何内容，将复制或剪切整个行。 如果随后单击 **“粘贴”**，将粘贴整个行的文本及其行终止符。  
   
-## <a name="display"></a>显示器  
+## <a name="display"></a>显示  
  **行号**  
  在每行代码的旁边显示行号。  
   

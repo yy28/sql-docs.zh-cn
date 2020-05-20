@@ -11,15 +11,15 @@ helpviewer_keywords:
 - behavior changes [full-text search]
 - full-text indexes [SQL Server], breaking changes
 ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00dc0fbda03bb7f729123a84e7e91fb2361aee9f
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813190"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001057"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>全文搜索的行为更改
   本主题介绍全文搜索中的行为更改。 与早期版本的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 相比， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的功能的工作或交互方式会受到行为更改的影响。  
@@ -77,9 +77,9 @@ ms.locfileid: "62813190"
 |Mt. Kent and Mt Challenger|challenger<br /><br /> kent<br /><br /> mt<br /><br /> Mt.|mt<br /><br /> kent<br /><br /> challenger|  
   
 ## <a name="behavior-changes-in-full-text-search-in-sql-server-2008"></a>SQL Server 2008 中全文搜索的行为更改  
- 在[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]和更高版本中，全文引擎作为数据库服务集成到关系数据库中，作为服务器查询和存储引擎基础结构的一部分。 新的全文搜索体系结构可实现以下目的：  
+ 在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 和更高版本中，全文引擎作为数据库服务集成到关系数据库中，作为服务器查询和存储引擎基础结构的一部分。 新的全文搜索体系结构可实现以下目的：  
   
--   集成的存储和管理-全文搜索现在直接与的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]固有存储和管理功能集成，并且 MSFTESQL 服务已不再存在。  
+-   集成的存储和管理-全文搜索现在直接与的固有存储和管理功能集成 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，并且 MSFTESQL 服务已不再存在。  
   
     -   全文索引存储在数据库文件组内部，而不是在文件系统中。 对数据库执行管理操作（如创建备份）会自动影响其全文索引。  
   
@@ -94,11 +94,11 @@ ms.locfileid: "62813190"
   
 -   非索引字和非索引字表已替代干扰词和干扰词文件。 非索引字表是一种数据库对象，有助于简化非索引字的可管理性任务，并提高不同服务器实例和环境之间的完整性的一个数据库对象。 有关详细信息，请参阅 [为全文搜索配置和管理非索引字和非索引字表](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
   
--   [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 和更高版本包括 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 中存在的许多语言的新断字符。 只有英语、朝鲜语、泰语和中文（所有形式）的断字符保持不变。 对于其他语言，如果全文目录是在[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]数据库升级到[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]或更高版本时导入的，则全文目录中全文索引使用的一种或多种语言现在可能与新断字符关联，这些断字符的行为可能与导入的断字符的行为略有不同。 有关如何确保查询和全文索引内容之间的一致性的详细信息，请参阅[升级全文搜索](../relational-databases/search/upgrade-full-text-search.md)。  
+-   [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 和更高版本包括 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 中存在的许多语言的新断字符。 只有英语、朝鲜语、泰语和中文（所有形式）的断字符保持不变。 对于其他语言，如果全文目录是在 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 数据库升级到 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 或更高版本时导入的，则全文目录中全文索引使用的一种或多种语言现在可能与新断字符关联，这些断字符的行为可能与导入的断字符的行为略有不同。 有关如何确保查询和全文索引内容之间的一致性的详细信息，请参阅[升级全文搜索](../relational-databases/search/upgrade-full-text-search.md)。  
   
 -   已添加一个新的 FDHOST 启动器 (MSSQLFDLauncher) 服务。 有关详细信息，请参阅[全文搜索入门](../relational-databases/search/get-started-with-full-text-search.md)。  
   
--   全文索引处理[FILESTREAM](../relational-databases/blob/filestream-sql-server.md)列的方式与处理`varbinary(max)`列的方式相同。 FILESTREAM 表必须有一列包含每个 FILESTREAM BLOB 的文件扩展名。 有关详细信息，请参阅[利用全文搜索进行查询](../relational-databases/search/query-with-full-text-search.md)、[配置和管理搜索筛选器](../relational-databases/search/configure-and-manage-filters-for-search.md)和[sys. fulltext_document_types &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql)。  
+-   全文索引处理[FILESTREAM](../relational-databases/blob/filestream-sql-server.md)列的方式与处理列的方式相同 `varbinary(max)` 。 FILESTREAM 表必须有一列包含每个 FILESTREAM BLOB 的文件扩展名。 有关详细信息，请参阅[利用全文搜索进行查询](../relational-databases/search/query-with-full-text-search.md)、[配置和管理搜索筛选器](../relational-databases/search/configure-and-manage-filters-for-search.md)和[sys. fulltext_document_types &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql)。  
   
      全文引擎会对 FILESTREAM BLOB 的内容进行索引。 对诸如图像之类的文件进行索引可能没有用。 更新 FILESTREAM BLOB 时，会重新对其进行索引。  
   

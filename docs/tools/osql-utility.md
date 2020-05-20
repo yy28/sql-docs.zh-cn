@@ -1,5 +1,6 @@
 ---
 title: osql 实用工具
+description: 在 SQL Server 中，使用 osql 实用工具可以输入 Transact-SQL 语句、系统过程和脚本文件。 osql 实用工具通过 ODBC 与服务器通信。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -25,12 +26,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: dbc103ea44027056541dada86451c757a27619ff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a6b04e904088ce78d46f692b9f29207d54f14c99
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307364"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151357"
 ---
 # <a name="osql-utility"></a>osql 实用工具
 
@@ -99,7 +100,7 @@ C:\>osql
  使用可信连接而不请求密码。  
   
  **-S** _server\_name_[ **\\** _instance\_name_]  
- 指定要连接到的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 指定要连接到该服务器上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的命名实例的 _server\_name_\\  _instance\_name_。 如果未指定服务器， **osql** 将连接到本地计算机上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 默认实例。 从网络上的远程计算机执行 **osql** 时，此选项是必需的。  
+ 指定要连接到的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 指定要连接到该服务器上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的命名实例的 _server\_name_\\_instance\_name_。 如果未指定服务器， **osql** 将连接到本地计算机上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 默认实例。 从网络上的远程计算机执行 **osql** 时，此选项是必需的。  
   
  **-H** _wksta_name_  
  工作站的名称。 工作站名称存储在 **sysprocesses.hostname** 中，并由 **sp_who**显示。 如果不指定此选项，则采用当前计算机名称。  
@@ -114,7 +115,7 @@ C:\>osql
  指定命令超时之前的秒数。如果未指定 *time_out* 值，则命令将不会超时。  
   
  **-h** _headers_  
- 指定要在列标题之间打印的行数。 默认为每一组查询结果输出一次标题。 使用 -1 可指定不打印标题。 如果使用的是 -1，参数和设置之间就不得有空格（可以是 -h-1  ，但不能是 -h -1  ）。  
+ 指定要在列标题之间打印的行数。 默认为每一组查询结果输出一次标题。 使用 -1 可指定不打印标题。 如果使用的是 -1，参数和设置之间就不得有空格（可以是 -h-1，但不能是 -h -1）。  
   
  **-s** _col_separator_  
  指定列分隔符字符，默认值为空格。 若要使用对操作系统有特殊含义的字符（例如 | ; & < >），请将该字符用双引号 (") 括起来。  
@@ -258,7 +259,7 @@ osql -E -i titles.qry -o titles.res
 > [!IMPORTANT]  
 >  如果可能，请使用 **-E**选项（信任连接）。  
   
- 以交互方式使用 osql  时，可使用 :r  _file\_name_ 将操作系统文件读入命令缓冲区。 这会将 *file_name* 中的 SQL 脚本作为单个批处理直接发送给服务器。  
+ 以交互方式使用 osql 时，可使用 :r_file\_name_ 将操作系统文件读入命令缓冲区。 这会将 *file_name* 中的 SQL 脚本作为单个批处理直接发送给服务器。  
   
 > [!NOTE]  
 >  使用 **osql**时，如果批处理分隔符 GO 出现在 SQL 脚本文件中，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会将其视为语法错误。  

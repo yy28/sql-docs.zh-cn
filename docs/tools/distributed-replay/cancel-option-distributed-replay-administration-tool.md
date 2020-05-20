@@ -1,6 +1,7 @@
 ---
 title: Cancel 选项管理工具
 titleSuffix: SQL Server Distributed Replay
+description: 本文介绍 SQL Server Distributed Replay 管理工具的 Cancel 命令行选项和语法。
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,18 +12,18 @@ ms.topic: conceptual
 ms.assetid: fea376de-307a-4b45-b7e2-37df88f3681a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 00bff043287d323b84ad878e1444fda83e6d97be
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 41d76a8b87e6aa0bc46c5199c2843cce89f7cdac
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307060"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152119"
 ---
 # <a name="cancel-option-distributed-replay-administration-tool"></a>Cancel 选项（分布式重播管理工具）
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具 DReplay.exe  是一个命令行工具，可用于与 Distributed Replay 控制器进行通信。 本主题介绍 **cancel** 命令行选项和相应的语法。  
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具 DReplay.exe 是一个命令行工具，可用于与 Distributed Replay 控制器进行通信。 本主题介绍 **cancel** 命令行选项和相应的语法。  
   
  **cancel** 选项取消控制器上运行的当前操作。  
   
@@ -35,8 +36,8 @@ ms.locfileid: "75307060"
 dreplay cancel [-m controller] [-q]   
 ```  
   
-#### <a name="parameters"></a>parameters  
- **-m** *controller*  
+#### <a name="parameters"></a>参数  
+ -m controller  
  控制器的计算机名称。 可以用“`localhost`”或“`.`”指代本地计算机。  
   
  如果未指定 **-m** 参数，则使用本地计算机。  

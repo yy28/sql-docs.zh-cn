@@ -1,6 +1,7 @@
 ---
 title: 准备输入跟踪数据
 titleSuffix: SQL Server Distributed Replay
+description: 使用 SQL Server Distributed Replay 开始分布式重播之前，必须先启动预处理阶段以准备输入跟踪数据。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 514d11ded0761cd4719b3d3a44b7c91d08d97e04
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4bb84ab2f8df17bba52b41d115b2c67d47931eb3
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307007"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152210"
 ---
 # <a name="prepare-the-input-trace-data"></a>准备输入跟踪数据
 
@@ -33,7 +34,7 @@ ms.locfileid: "75307007"
   
 ### <a name="to-prepare-the-input-trace-data"></a>准备输入跟踪数据  
   
-1.  **（可选）修改预处理配置设置**：若要修改预处理配置设置（例如，是否筛选系统会话或配置最长空闲时间），你必须修改基于 XML 的预处理配置文件 `<PreprocessModifiers>` 的 `DReplay.exe.preprocess.config`元素。 在修改预处理配置文件时，建议您修改副本而非原始文件。 若要修改设置，请执行以下步骤：  
+1.  **（可选）修改预处理配置设置**：若要修改预处理配置设置（例如，是否筛选系统会话或配置最长空闲时间），必须修改基于 XML 的预处理配置文件 `DReplay.exe.preprocess.config` 的 `<PreprocessModifiers>` 元素。 在修改预处理配置文件时，建议您修改副本而非原始文件。 若要修改设置，请执行以下步骤：  
   
     1.  制作默认预处理配置文件 `DReplay.exe.preprocess.config`的副本并重命名此新文件。 默认预处理配置文件位于管理工具安装文件夹。  
   
@@ -43,7 +44,7 @@ ms.locfileid: "75307007"
   
      有关预处理配置文件的详细信息，请参阅 [配置 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)。  
   
-2.  **启动预处理阶段**：若要准备输入跟踪数据，你必须使用 **preprocess** 选项运行管理工具。 有关详细信息，请参阅[预处理选项（Distributed Replay 管理工具）](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)。  
+2.  **启动预处理阶段**：若要准备输入跟踪数据，必须使用“预处理”选项运行管理工具。 有关详细信息，请参阅[预处理选项（Distributed Replay 管理工具）](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)。  
   
     1.  打开 Windows 命令提示符实用工具 (**CMD.exe**)，然后导航到 Distributed Replay 管理工具 (**DReplay.exe**) 的安装位置。  
   

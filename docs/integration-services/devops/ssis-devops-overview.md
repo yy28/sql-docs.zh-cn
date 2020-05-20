@@ -9,26 +9,26 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0b57ac8ea8462a5c79feb1a91c4f9d205927b953
-ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
+ms.openlocfilehash: 946ea5d404db51c5241e5657524cf3dbc1a519a7
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82987201"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152161"
 ---
-# <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SQL Server Integration Services (SSIS) DevOps 工具（预览）
+# <a name="sql-server-integration-services-ssis-devops-tools"></a>SQL Server Integration Services (SSIS) DevOps 工具
 
-可从 Azure DevOps 市场获取 [SSIS DevOps 工具](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools)扩展  。
+可从 Azure DevOps 市场获取 [SSIS DevOps 工具](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools)扩展。
 
-如果你没有 Azure DevOps 组织，首先请注册 [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops)，然后根据[这些步骤](https://docs.microsoft.com/azure/devops/marketplace/overview?view=azure-devops&tabs=browser#add-an-extension)添加 SSIS DevOps 工具扩展   。
+如果你没有 Azure DevOps 组织，首先请注册 [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-sign-up?view=azure-devops)，然后根据[这些步骤](https://docs.microsoft.com/azure/devops/marketplace/overview?view=azure-devops&tabs=browser#add-an-extension)添加 SSIS DevOps 工具扩展 。
 
-SSIS DevOps 工具包括 SSIS 生成任务、SSIS 部署发布任务和 SSIS 目录配置任务     。
+SSIS DevOps 工具包括 SSIS 生成任务、SSIS 部署发布任务和 SSIS 目录配置任务   。
 
-- [SSIS 生成](#ssis-build-task)任务支持在项目部署模型或包部署模型中生成 dtproj 文件  。
+- [SSIS 生成](#ssis-build-task)任务支持在项目部署模型或包部署模型中生成 dtproj 文件。
 
-- [SSIS 部署](#ssis-deploy-task)任务支持将单个或多个 ispac 文件部署到本地 SSIS 目录，并将 Azure-SSIS IR 或 SSISDeploymentManifest 文件及其关联文件部署到本地或 Azure 文件共享  。
+- [SSIS 部署](#ssis-deploy-task)任务支持将单个或多个 ispac 文件部署到本地 SSIS 目录，并将 Azure-SSIS IR 或 SSISDeploymentManifest 文件及其关联文件部署到本地或 Azure 文件共享。
 
-- [SSIS 目录配置](#ssis-catalog-configuration-task)任务支持使用采用 JSON 格式的配置文件配置 SSIS 目录的文件夹/项目/环境  。 此任务支持以下方案：
+- [SSIS 目录配置](#ssis-catalog-configuration-task)任务支持使用采用 JSON 格式的配置文件配置 SSIS 目录的文件夹/项目/环境。 此任务支持以下方案：
     - Folder
         - 创建文件夹。
         - 更新文件夹说明。
@@ -50,7 +50,7 @@ SSIS DevOps 工具包括 SSIS 生成任务、SSIS 部署发布任务和 SSIS 目
 
 要生成的项目文件夹或文件的路径。 如果指定了文件夹路径，则 SSIS 生成任务将以递归方式搜索此文件夹下的所有 dtproj 文件并生成所有文件。
 
-项目路径不能为空  ，设置为 .  以便从存储库的根文件夹中生成。
+项目路径不能为空，设置为 . 以便从存储库的根文件夹中生成。
 
 #### <a name="project-configuration"></a>项目配置
 
@@ -62,7 +62,7 @@ SSIS DevOps 工具包括 SSIS 生成任务、SSIS 部署发布任务和 SSIS 目
 
 ### <a name="limitations-and-known-issues"></a>限制和已知问题
 
-- SSIS 生成任务依赖于 Visual Studio 和 SSIS 设计器，这对于生成代理是必需的。 因此，要在管道中运行 SSIS 生成任务，必须为 Microsoft 托管代理选择 vs2017-win2016，或在自托管代理上安装 Visual Studio 和 SSIS 设计器（VS2017 + SSDT2017 或 VS2019 + SSIS 项目扩展）  。
+- SSIS 生成任务依赖于 Visual Studio 和 SSIS 设计器，这对于生成代理是必需的。 因此，要在管道中运行 SSIS 生成任务，必须为 Microsoft 托管代理选择 vs2017-win2016，或在自托管代理上安装 Visual Studio 和 SSIS 设计器（VS2017 + SSDT2017 或 VS2019 + SSIS 项目扩展）。
 
 - 要使用任何现成组件（包括 SSIS Azure 功能包和其他第三方组件）生成 SSIS 项目，必须在运行管道代理的计算机上安装这些现成组件。  对于 Microsoft 托管代理，用户可以添加 [PowerShell 脚本任务](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops)或[命令行脚本任务](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops)，以便在执行 SSIS 生成任务之前下载和安装组件。 下面是用于安装 Azure 功能包的示例 PowerShell 脚本： 
 
@@ -74,7 +74,7 @@ start -Wait -FilePath msiexec -Args "/i AFP.msi /quiet /l* log.txt"
 cat log.txt
 ```
 
-- SSIS 生成任务不支持 EncryptSensitiveWithPassword 和 EncryptAllWithPassword 保护级别   。 请确保基本代码中的所有 SSIS 项目都不使用这两个保护级别，否则，SSIS 生成任务在执行过程中将挂起和超时。
+- SSIS 生成任务不支持 EncryptSensitiveWithPassword 和 EncryptAllWithPassword 保护级别 。 请确保基本代码中的所有 SSIS 项目都不使用这两个保护级别，否则，SSIS 生成任务在执行过程中将挂起和超时。
 
 ## <a name="ssis-deploy-task"></a>SSIS 部署任务
 
@@ -90,8 +90,8 @@ cat log.txt
 
 目标类型。 当前的 SSIS 部署任务支持两种类型：
 
-- 文件系统  ：将 SSISDeploymentManifest 文件及其关联文件部署到指定的文件系统。 支持本地和 Azure 文件共享。
-- SSISDB  ：将 ISPAC 文件部署到指定的 SSIS 目录，该目录可托管在本地 SQL Server 或 Azure-SSIS Integration Runtime 上。
+- 文件系统：将 SSISDeploymentManifest 文件及其关联文件部署到指定的文件系统。 支持本地和 Azure 文件共享。
+- SSISDB：将 ISPAC 文件部署到指定的 SSIS 目录，该目录可托管在本地 SQL Server 或 Azure-SSIS Integration Runtime 上。
 
 #### <a name="destination-server"></a>目标服务器
 
@@ -290,33 +290,33 @@ SSIS 目录配置的内联 JSON。 只有在选择“内联”作为配置文件
 
 |properties  |说明  |说明  |
 |---------|---------|---------|
-|文件夹  |文件夹对象的数组。 每个对象都包含目录文件夹的配置信息。|有关文件夹对象的架构，请参阅“文件夹属性”  。|
+|文件夹  |文件夹对象的数组。 每个对象都包含目录文件夹的配置信息。|有关文件夹对象的架构，请参阅“文件夹属性”。|
 
 ##### <a name="folder-attributes"></a>文件夹属性
 
 |properties  |说明  |说明  |
 |---------|---------|---------|
 |name  |目录文件夹的名称。|如果文件夹不存在，将创建一个文件夹。|
-|description|目录文件夹的说明。|将跳过 NULL 值  。|
-|projects|项目对象的数组。 每个对象都包含项目的配置信息。|有关项目对象的架构，请参阅“项目属性”  。|
-|environments|环境对象的数组。 每个对象都包含环境的配置信息。|有关环境对象的架构，请参阅“环境属性”  。|
+|description|目录文件夹的说明。|将跳过 NULL 值。|
+|projects|项目对象的数组。 每个对象都包含项目的配置信息。|有关项目对象的架构，请参阅“项目属性”。|
+|environments|环境对象的数组。 每个对象都包含环境的配置信息。|有关环境对象的架构，请参阅“环境属性”。|
 
 ##### <a name="project-attributes"></a>项目属性
 
 |properties  |说明  |说明  |
 |---------|---------|---------|
 |name|项目名称。 |如果父文件夹中不存在项目，则将跳过项目对象。|
-|parameters|参数对象的数组。 每个对象都包含参数的配置信息。|有关参数对象的架构，请参阅“参数属性”  。|
-|引用|引用对象的数组。 每个对象都代表对目标项目的环境引用。|有关引用对象的架构，请参阅“引用属性”  。|
+|parameters|参数对象的数组。 每个对象都包含参数的配置信息。|有关参数对象的架构，请参阅“参数属性”。|
+|引用|引用对象的数组。 每个对象都代表对目标项目的环境引用。|有关引用对象的架构，请参阅“引用属性”。|
 
 ##### <a name="parameter-attributes"></a>参数属性
 
 |properties  |说明  |说明  |
 |---------|---------|---------|
-|name|参数的名称。|参数可以是项目参数，也可以是包参数   。 <br> 如果父项目中不存在参数，则将跳过参数。|
-|容器 (container)|参数的容器。|<li>如果参数是项目参数，则容器应为项目名称  。 <li>如果它是包参数，则容器应为扩展名为 .dtsx 的包名称   。 <li> 如果参数是连接管理器属性，则名称应采用以下格式：CM.\<连接管理器名称>.\<属性名称>  。|
-|值|参数值。|<li>当 valueType 是引用对象时   ：值是对字符串类型中的环境变量的引用  。 <li> 当 valueType 是文本时   ：此属性支持任何有效的布尔、数字和字符串 JSON 值    。 <br> 该值将转换为目标参数类型。 如果无法转换，则会发生错误。<li> Null 值无效  。 任务将跳过此参数对象，并发出警告。|
-|valueType|参数值的类型。|有效类型包括： <br> 文本  ：value 属性表示文本值  。 <br> 引用对象  ：value 属性表示对环境变量的引用  。|
+|name|参数的名称。|参数可以是项目参数，也可以是包参数 。 <br> 如果父项目中不存在参数，则将跳过参数。|
+|容器 (container)|参数的容器。|<li>如果参数是项目参数，则容器应为项目名称。 <li>如果它是包参数，则容器应为扩展名为 .dtsx 的包名称。 <li> 如果参数是连接管理器属性，则名称应采用以下格式：CM.\<连接管理器名称>.\<属性名称>。|
+|值|参数值。|<li>当 valueType 是引用对象时 ：值是对字符串类型中的环境变量的引用。 <li> 当 valueType 是文本时 ：此属性支持任何有效的布尔、数字和字符串 JSON 值  。 <br> 该值将转换为目标参数类型。 如果无法转换，则会发生错误。<li> Null 值无效。 任务将跳过此参数对象，并发出警告。|
+|valueType|参数值的类型。|有效类型包括： <br> 文本：value 属性表示文本值。 <br> 引用对象：value 属性表示对环境变量的引用。|
 
 ##### <a name="reference-attributes"></a>引用属性
 
@@ -330,20 +330,26 @@ SSIS 目录配置的内联 JSON。 只有在选择“内联”作为配置文件
 |properties  |说明  |说明  |
 |---------|---------|---------|
 |name|环境的名称。|如果环境不存在，将创建环境。|
-|description|环境的说明。|将跳过 NULL 值  。|
-|variables|变量对象的数组。|每个对象都包含环境变量的配置信息。有关变量对象的架构，请参阅“变量属性”  。|
+|description|环境的说明。|将跳过 NULL 值。|
+|variables|变量对象的数组。|每个对象都包含环境变量的配置信息。有关变量对象的架构，请参阅“变量属性”。|
 
 ##### <a name="variable-attributes"></a>变量属性
 
 |properties  |说明  |说明  |
 |---------|---------|---------|
 |name|环境变量的名称。|如果环境变量不存在，将创建环境变量。|
-|type|环境变量的数据类型。|有效类型包括： <br> *boolean* <br> byte  <br> *datetime* <br> Decimal <br> *double* <br> int16  <br> int32  <br> int64  <br> sbyte  <br> single  <br> *string* <br> uint32  <br> uint64 |
-|description|环境变量的说明。|将跳过 NULL 值  。|
-|值|环境变量的值。|此属性支持任何有效的布尔、数字和字符串 JSON 值。<br> 该值将转换为 type 属性指定的类型  。 如果转换失败，则会发生错误。<br>Null 值无效  。 任务将跳过此环境变量对象，并发出警告。|
-|sensitive|环境变量的值是否是敏感值。|有效输入为： <br> true  <br> *false*|
+|type|环境变量的数据类型。|有效类型包括： <br> *boolean* <br> byte <br> *datetime* <br> Decimal <br> *double* <br> int16 <br> int32 <br> int64 <br> sbyte <br> single <br> *string* <br> uint32 <br> uint64|
+|description|环境变量的说明。|将跳过 NULL 值。|
+|值|环境变量的值。|此属性支持任何有效的布尔、数字和字符串 JSON 值。<br> 该值将转换为 type 属性指定的类型。 如果转换失败，则会发生错误。<br>Null 值无效。 任务将跳过此环境变量对象，并发出警告。|
+|sensitive|环境变量的值是否是敏感值。|有效输入为： <br> true <br> *false*|
 
 ## <a name="release-notes"></a>发行说明
+
+### <a name="version-101"></a>版本 1.0.1
+
+发行日期：2020 年 5 月 9 日
+
+- 解决了即使仅将单个 dtproj 文件指定为项目路径，SSIS 生成任务也始终生成整个解决方案的问题。
 
 ### <a name="version-100"></a>版本 1.0.0
 

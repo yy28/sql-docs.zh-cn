@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.schedule.f1
 ms.assetid: 8681506b-5dc6-4165-beb6-1e76ca470425
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8094d481af3fef9db8bb7ef9ab45fc5c66ff7e11
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1e8ac94f235e08f2217edb9504722ebac998cb28
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62778819"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000929"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>全文目录属性（“填充计划”页）
   使用此对话框可以添加或修改确定何时填充或重新填充全文目录的计划。  
@@ -25,7 +25,7 @@ ms.locfileid: "62778819"
 ## <a name="schedules-grid"></a>计划网格  
  每一行表示一个填充或重新填充目录的计划操作。  
   
- **名称**  
+ **Name**  
  显示计划的名称。  
   
  **填充类型**  

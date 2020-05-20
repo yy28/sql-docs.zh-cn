@@ -11,15 +11,15 @@ f1_keywords:
 dev_langs:
 - TSQL
 ms.assetid: a4499784-67f7-46ef-9f7c-2d0fdd117a52
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cc649ee021012774a0f199b97ea3cbf6bae4adef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 761c84612c207397e33ae96dfcfb088b05bc24b8
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089139"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000656"
 ---
 # <a name="options-text-editor---transact-sql---tabs-page"></a>选项（"文本编辑器-Transact-sql-选项卡" 页）
   使用此对话框可以更改用于对 [!INCLUDE[ssDE](../includes/ssde-md.md)] 脚本进行编程的[!INCLUDE[tsql](../includes/tsql-md.md)]查询编辑器的跳格行为。 若要显示这些设置，请在“工具”**** 菜单上单击“选项”****，依次展开“文本编辑器”**** 文件夹和“Transact-SQL”**** 子文件夹，然后单击“制表符”****。  
@@ -31,7 +31,7 @@ ms.locfileid: "66089139"
  **无**  
  选择此选项后，则按 Enter 键时所创建的新行不会缩进。 光标置于新行的第一列。  
   
- **模块**  
+ **阻止**  
  如果选择此选项，则按 Enter 时创建的新行的自动缩进距离与上一行的缩进距离相同。  
   
  **智能**  
@@ -45,7 +45,7 @@ ms.locfileid: "66089139"
  设置自动缩进的大小（以空格为单位）。 默认为四个空格。 可能会插入制表符、空格字符，或同时插入这二者，以填充为指定大小。  
   
  **插入空格**  
- 选择此选项后，缩进操作仅插入空格字符，而不会插入制表符。 例如，如果 "**缩进大小**" 设置为5，则每次按 tab 键或单击主[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]窗口工具栏上的 "**增加缩进**" 按钮时，都会插入五个空格字符。  
+ 选择此选项后，缩进操作仅插入空格字符，而不会插入制表符。 例如，如果 "**缩进大小**" 设置为5，则每次按 tab 键或单击主窗口工具栏上的 "**增加缩进**" 按钮时，都会插入五个空格字符 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 。  
   
  **保留制表符**  
  选择此选项后，缩进操作会插入尽可能多的制表符。 每个制表符都会填充 **“制表符大小”** 中指定的空格数。 如果 **“缩进大小”** 不是 **“制表符大小”** 的偶数倍，则会添加空格字符补齐。  

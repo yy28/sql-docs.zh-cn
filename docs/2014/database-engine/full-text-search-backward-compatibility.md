@@ -11,15 +11,15 @@ helpviewer_keywords:
 - backward compatibility [SQL Server], Database Engine
 - full-text search [SQL Server], backward compatibility
 ms.assetid: 1b5a9bbc-beb8-44fd-ab03-4c14908c604c
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5a749bb4da4511f30a231f6ab2dd05a35ebdb11d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 322c0e835403d3cebb9ca42b77d803a6573a220c
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779257"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000887"
 ---
 # <a name="full-text-search-backward-compatibility"></a>全文搜索向后兼容性
   向后兼容性部分中的主题介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]的早期版本中的全文搜索在行为上的更改。  

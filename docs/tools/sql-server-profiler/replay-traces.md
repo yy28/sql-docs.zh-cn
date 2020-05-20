@@ -1,6 +1,7 @@
 ---
 title: 重播跟踪
 titleSuffix: SQL Server Profiler
+description: 了解如何从一台计算机上重播 SQL Server Profiler 数据，以及如何在重播时使用断点和模拟用户连接来解决问题。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 50ef296f7ce7198dc0e233aca08e33c5f1cf7af0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 46d8a93d917917c0b0dec57e26633f564b9c1d01
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307463"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151712"
 ---
 # <a name="replay-traces"></a>重播跟踪
 
@@ -28,7 +29,7 @@ ms.locfileid: "75307463"
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 具有多线程播放引擎，能模拟用户连接和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 重播对于解决应用程序或进程问题是很有用的。 当标识出问题并进行了纠正后，请对纠正后的应用程序或进程运行找出潜在问题的跟踪。 然后，重播原始跟踪并比较结果。  
   
- 跟踪重播支持通过使用 **“重播”** **菜单上的“切换断点”** [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]和“运行至光标处”  选项来进行调试。 由于这些选项可以将跟踪重播打断为较短的段以便进行增量分析，因此尤其改善了对长脚本的分析。  
+ 跟踪重播支持通过使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]“重播”菜单上的“切换断点”和“运行至光标处”选项来进行调试。 由于这些选项可以将跟踪重播打断为较短的段以便进行增量分析，因此尤其改善了对长脚本的分析。  
   
  有关重播跟踪所需权限的信息，请参阅 [运行 SQL Server Profiler 所需的权限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)。  
   

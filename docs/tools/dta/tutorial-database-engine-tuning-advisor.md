@@ -1,5 +1,6 @@
 ---
-title: 教程：数据库引擎优化顾问
+title: 教程：Database Engine Tuning Advisor
+description: 数据库引擎优化顾问会检查处理查询的方式，并建议如何通过修改数据库结构来改善查询处理性能。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -14,14 +15,14 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: a6fea0bbb9c9471885f76f3f6f44a86b50718d3e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ad92ad29414afcf849ef0dd8a1ade0463748af35
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75304708"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151487"
 ---
-# <a name="tutorial-database-engine-tuning-advisor"></a>教程：数据库引擎优化顾问
+# <a name="tutorial-database-engine-tuning-advisor"></a>教程：Database Engine Tuning Advisor
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -32,7 +33,7 @@ ms.locfileid: "75304708"
 ## <a name="what-you-will-learn"></a>学习内容  
 本教程将讲述如何定位数据库引擎优化顾问 GUI，以及如何通过 GUI 和 **dta** 实用工具执行一些基本任务。 本教程包含以下几课：  
   
-[第 1 课：数据库引擎优化顾问中的基本导航](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
+[第 1 课：数据库引擎优化顾问基本导览](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
 在本课程中，您将熟悉新的数据库引擎优化顾问 GUI，并学习如何设置显示选项和布局。  
   
 [第 2 课：使用数据库引擎优化顾问](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
@@ -54,7 +55,7 @@ ms.locfileid: "75304708"
 -   [dta 实用工具](../../tools/dta/dta-utility.md) 提供有关此命令提示实用工具的参考材料和可用于控制此实用工具的操作的可选 XML 文件。  
   
 ## <a name="next-lesson"></a>下一课  
-[第 1 课：数据库引擎优化顾问中的基本导航](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
+[第 1 课：数据库引擎优化顾问基本导览](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
   
   
   

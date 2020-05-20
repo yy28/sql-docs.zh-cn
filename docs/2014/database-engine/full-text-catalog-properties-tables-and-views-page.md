@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.tablesviews.f1
 ms.assetid: 2d45fcd2-0f0f-4167-9027-316d6696c106
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 78d7dc111bc0b6eb10e80f32785beeda710e52bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2cab8e460b2091f9b4be90f32b7e08b15b4cf60b
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779188"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000947"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>全文目录属性（“表和视图”页）
   使用此对话框可以查看或修改为全文目录分配的表和视图。  
@@ -45,7 +45,7 @@ ms.locfileid: "62779188"
 |-|-|  
 |**可用列**|显示进行全文索引的所有列。 若要向全文索引中添加列，请选中相应的复选框。|  
 |**断字符语言**|显示断字符的语言。|  
-|**数据类型列**|列出表中列的名称，该列包含在 "**可用列**" 中列出的列的文档类型（如果该列是`varbinary(max)`或`image`列）。|  
+|**数据类型列**|列出表中列的名称，该列包含在 "**可用列**" 中列出的列的文档类型（如果该列是 `varbinary(max)` 或 `image` 列）。|  
 |**统计语义**|选择是否为所选列启用语义索引。 有关详细信息，请参阅[语义搜索 (SQL Server)](../relational-databases/search/semantic-search-sql-server.md)。<br /><br /> 如果您在选择 **“统计语义”** 前选择某一 **“语言”**，并且所选语言没有关联的语义语言模型，则 **“统计语义”** 复选框将被禁用。 如果你在选择****“语言”前选择****“统计语义”，则下拉组合框中提供的语言将限制为存在语义语言模型支持的那些语言。|  
   
 ## <a name="track-changes"></a>跟踪更改  

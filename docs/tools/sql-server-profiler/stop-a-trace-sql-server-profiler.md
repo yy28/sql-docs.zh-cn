@@ -1,6 +1,7 @@
 ---
 title: 停止跟踪
 titleSuffix: SQL Server Profiler
+description: 了解如何停止正在 SQL Server Profiler 中运行的跟踪，如何更改要调整的任何属性，以及如何保存捕获的数据。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 8b5c41497df9934102626031e23e53dd756898d7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1639a4c95524387859c8163d94ce5bb9d8a5519a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307778"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151659"
 ---
 # <a name="stop-a-trace-sql-server-profiler"></a>停止跟踪 (SQL Server Profiler)
 

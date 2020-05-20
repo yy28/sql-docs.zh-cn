@@ -1,5 +1,6 @@
 ---
 title: 工作负荷元素 (DTA)
+description: 在 dta 实用工具中，工作负荷元素会指定要用于优化会话的工作负荷。 本文将介绍这一元素。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 22331332715639b12f7a2cc82d8b71d723a1fecd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5ac7f5a55ce968eeb2ca274deff09ff8b7f2e4ae
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307898"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151467"
 ---
 # <a name="workload-element-dta"></a>工作负荷元素 (DTA)
 

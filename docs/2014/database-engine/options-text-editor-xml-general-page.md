@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 784032205f081e340e30203314e96a3b2dbf640e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b32dcfc95c5fc6929454add71ff4452e00fdda6e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089202"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001039"
 ---
 # <a name="options-text-editor---xml---general-page"></a>选项（“文本编辑器”-“XML”-“常规”页）
   使用此对话框可以更改 XML 编辑器（用于编辑 XML 文档）的常规编辑行为。 若要显示这些设置，请在 **“工具”** 菜单上单击 **“选项”** ，展开 **XML** 子文件夹，再单击 **“常规”**。  
   
 ## <a name="setting-options-in-multiple-locations"></a>在多个位置设置选项  
- XML 编辑器的选项也可在“所有语言”和“常规”对话框中设置。 **** 如果使用 "**所有语言**" 对话框来设置其他[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]编辑器（例如 DMX 或 MDX 编辑器）的其他选项，则必须使用此对话框重置 XML 编辑器选项。  
+ XML 编辑器的选项也可在“所有语言”和“常规”对话框中设置。 **** 如果使用 "**所有语言**" 对话框来设置其他 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 编辑器（例如 DMX 或 MDX 编辑器）的其他选项，则必须使用此对话框重置 XML 编辑器选项。  
   
 ## <a name="statement-completion"></a>语句结束  
  **自动列出成员**  
@@ -55,7 +55,7 @@ ms.locfileid: "66089202"
   
  如果不是空白行，则此设置对 **“复制”** 或 **“剪切”** 无效。 如果没有选定任何内容，将复制或剪切整个行。 如果随后单击 **“粘贴”**，将粘贴整个行的文本及其行终止符。  
   
-## <a name="display"></a>显示器  
+## <a name="display"></a>显示  
  **行号**  
  如果选中此复选框，则将在每个代码行的旁边显示行号。  
   

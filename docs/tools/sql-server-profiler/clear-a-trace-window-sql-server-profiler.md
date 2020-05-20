@@ -1,6 +1,7 @@
 ---
 title: 清除跟踪窗口
 titleSuffix: SQL Server Profiler
+description: 了解如何清除在 SQL Server Profiler 中捕获事件数据的跟踪窗口，而不清除任何跟踪文件或表。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 1158a2409c078c58a8d48cb4d5780b6d08643aea
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 451e678c2e8a7f0d238e46b99370b7002dd14abc
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307357"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151931"
 ---
 # <a name="clear-a-trace-window-sql-server-profiler"></a>清除跟踪窗口 (SQL Server Profiler)
 
@@ -27,7 +28,7 @@ ms.locfileid: "75307357"
   
 1.  选择要清除的跟踪窗口。  
   
-2.  在“编辑”  菜单上，单击“清除跟踪窗口”  。  
+2.  在“编辑”菜单上，单击“清除跟踪窗口”。  
   
      跟踪窗口中的内容将被删除。 请注意，如果已保存跟踪文件或表，则该文件或表的内容将保持不变。  
   

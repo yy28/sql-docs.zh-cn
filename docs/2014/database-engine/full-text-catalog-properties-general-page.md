@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.general.f1
 ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60a56b6d64957198292146d392ea22a572fb8a4e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779660"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000957"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>全文目录属性（“常规”页）
   本节介绍在 **“全文目录属性”** 对话框的 **“常规”** 页上可用的选项和功能。  
@@ -32,9 +32,9 @@ ms.locfileid: "62779660"
  显示目录是否为数据库的默认目录。  
   
  **填充状态**  
- 指示目录的状态。 可能的值为：  
+ 指示目录的状态。 可能的值有：  
   
--   **空闲**  
+-   **闲置**  
   
 -   **正在进行爬网**  
   
@@ -60,11 +60,11 @@ ms.locfileid: "62779660"
  **目录大小**  
  显示全文目录的大小 (MB)。  
   
- **名称**  
+ **Name**  
  全文目录的名称。  
   
  **区分重音**  
- 查看或修改目录是否对变音标记敏感，如波形符（**~**）、锐音符号（**")**）或元音变音符（e **）。** 有效值是：  
+ 查看或修改目录是否对变音标记敏感，如波形符（ **~** ）、锐音符号（**")**）或元音变音符（e**¨**）。 有效值是：  
   
 -   **否**  
   

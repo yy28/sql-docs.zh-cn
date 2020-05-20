@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fd68ebe406fc7168746c804e585fa7465ee8c527
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4253bf2395fc33ecf315a1f092e0203513de90e5
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089279"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000686"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>选项（“文本编辑器”-“纯文本”-“常规”页）
   使用此对话框可以更改文本编辑器的常规编辑行为，该编辑器用于编辑未与特定开发语言关联的文档。 若要显示这些设置，请在 **“工具”** 菜单上单击 **“选项”** ，依次展开 **“文本编辑器”** 和 **“纯文本”** ，然后单击 **“常规”**。  
@@ -55,7 +55,7 @@ ms.locfileid: "66089279"
   
  如果不是空白行，则此设置对 **“复制”** 或 **“剪切”** 无效。 如果没有选定任何内容，将复制或剪切整个行。 如果随后单击 **“粘贴”**，将粘贴整个行的文本及其行终止符。  
   
-## <a name="display"></a>显示器  
+## <a name="display"></a>显示  
  **行号**  
  在每行文本的旁边显示行号。  
   

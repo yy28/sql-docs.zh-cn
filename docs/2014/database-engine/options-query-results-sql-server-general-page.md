@@ -13,15 +13,15 @@ f1_keywords:
 - MISCELLANEOUSFILESPROJECT
 - DevLang-TSQL
 ms.assetid: d3b31e81-c0b6-4615-8fb3-997edb2acb7a
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 48261d5ff0290dd5042b6604d9e492871bf6da38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4eb7ac1830554180b1de1ee67b6bc6f11fd2463f
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089329"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000785"
 ---
 # <a name="options-query-results-sql-server-general-page"></a>选项（查询结果-SQL Server-"常规" 页）
   使用此页可确定查询结果窗格的默认行为。 若要显示这些设置，请在“工具”**** 菜单上，单击“选项”****，展开“查询结果”**** 文件夹，选择 “SQL Server”****，然后单击“常规”****。 对这些选项所做的更改只应用于新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询。 若要更改当前查询的选项，请单击“查询”**** 菜单上的“查询选项”****，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询窗口中右键单击并选择“查询选项”****。  

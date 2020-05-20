@@ -32,12 +32,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fee0e8af2e4d556e388fc72086286d4a21184a8
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 03690af5e9ec4ce835372378ca3bdf13eff3073a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220712"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152034"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>通过重新组织或重新生成索引来解决索引碎片问题
 
@@ -64,7 +64,7 @@ ms.locfileid: "82220712"
 
 通过使用 [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)，可以检测特定索引中的碎片、表或索引视图上的所有索引、某个数据库中的所有索引或所有数据库中的所有索引。 对于已分区索引， **sys.dm_db_index_physical_stats** 还提供每个分区的碎片信息。
 
-sys.dm_db_index_physical_stats 返回的结果集包含以下列  ：
+sys.dm_db_index_physical_stats 返回的结果集包含以下列：
 
 |列|说明|
 |------------|-----------------|
@@ -93,7 +93,7 @@ sys.dm_db_index_physical_stats 返回的结果集包含以下列  ：
 
 通过使用 [sys.dm_db_column_store_row_group_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)，可以确定索引中已删除行所占的百分比，这可以合理地度量列存储索引的行组中的碎片。 使用此类信息，可以计算特定索引、表中所有索引、数据库中所有索引或所有数据库中全部索引上的碎片。
 
-sys.dm_db_column_store_row_group_physical_stats 返回的结果集包含以下列  ：
+sys.dm_db_column_store_row_group_physical_stats 返回的结果集包含以下列：
 
 |列|说明|
 |------------|-----------------|
@@ -108,7 +108,7 @@ sys.dm_db_column_store_row_group_physical_stats 返回的结果集包含以下�
 
 知道索引碎片程度后，可以使用下表确定删除碎片的最佳方法：[INDEX REORGANIZE](#reorganize-an-index) 或 [INDEX](#rebuild-an-index)。
 
-|“计算的碎片(%)”  值|适用于版本|修复语句|
+|“计算的碎片(%)”值|适用于版本|修复语句|
 |-----------------------------------------------|--------------------------|--------------------------|
 |> = 20%|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|ALTER INDEX REBUILD|
 |> = 20%|自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起|ALTER INDEX REORGANIZE|
@@ -223,6 +223,7 @@ object_id   TableName                   index_id    IndexName                   
 重新组织索引使用的系统资源最少，并且是联机操作。 也就是说，不保留长期阻塞性表锁，且对基础表的查询或更新可以在 `ALTER INDEX REORGANIZE` 事务处理期间继续进行。
 
 - 对于[行存储索引](clustered-and-nonclustered-indexes-described.md)，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 通过以物理方式重新排序叶级别页，以匹配叶节点逻辑顺序（从左到右），从而对表和视图中的聚集索引和非聚集索引的叶级别进行碎片整理。 重新组织还会根据索引的填充因子值压缩索引页。 若要查看填充因子设置，请使用 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)。 有关语法示例，请参阅[示例：行存储重新组织](../../t-sql/statements/alter-index-transact-sql.md#examples-rowstore-indexes)。
+
 - 如果使用[列存储索引](columnstore-indexes-overview.md)，则在一段时间内插入、更新和删除数据后，增量存储可能最终会有多个小行组。 重新组织列存储索引会强制将所有行组转到列存储中，然后将行组合并为行数更多的更少行组。 重新组织操作还将删除已从列存储中删除的行。 重新组织最初需要额外的 CPU 资源来压缩数据，这可能降低整体系统性能。 但是，一旦压缩数据后，查询性能就会提高。 有关语法示例，请参阅[示例：列存储重新组织](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes)。
 
 ### <a name="rebuild-an-index"></a>重新生成索引
@@ -230,17 +231,23 @@ object_id   TableName                   index_id    IndexName                   
 重新生成索引将会删除并重新创建索引。 重新生成操作可以联机或脱机执行，具体取决于索引类型和 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 版本。 有关 T-SQL 语法，请参阅 [ALTER INDEX REBUILD](../../t-sql/statements/alter-index-transact-sql.md#rebuilding-indexes)
 
 - 对于[行存储索引](clustered-and-nonclustered-indexes-described.md)，重新生成操作会：删除碎片；根据指定或现有的填充因子设置来压缩页，从而回收磁盘空间；还会在连续页中重新排序索引行。 如果指定 `ALL`，将删除表中的所有索引，然后在一个事务中重新生成。 不必预先删除外键约束。 重新生成具有 128 个区或更多区的索引时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]延迟实际的页释放及其关联的锁，直到事务提交。 有关语法示例，请参阅[示例：行存储重新组织](../../t-sql/statements/alter-index-transact-sql.md#examples-rowstore-indexes)。
-- 对于[列存储索引](columnstore-indexes-overview.md)，重新生成操作会：删除碎片；将所有行移到列存储中；以物理方式删除已在逻辑上从表中删除的行，从而回收磁盘空间。 自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，通常不需要重新生成列存储索引，因为 `REORGANIZE` 以联机操作形式在后台执行重新生成的基本操作。 有关语法示例，请参阅[示例：列存储重新组织](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes)。
+
+- 对于[列存储索引](columnstore-indexes-overview.md)，重新生成操作会：删除碎片；将所有行移到列存储中；以物理方式删除已在逻辑上从表中删除的行，从而回收磁盘空间。 
+  
+  > [!TIP]
+  > 自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起，通常不需要重新生成列存储索引，因为 `REORGANIZE` 以联机操作形式在后台执行重新生成的基本操作。 
+  
+  有关语法示例，请参阅[示例：列存储重新生成](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes)。
 
 ### <a name="permissions"></a><a name="Permissions"></a> 权限
 
 要求具有对表或视图的 `ALTER` 权限。 用户至少必须是以下某个角色的成员：
 
-- db_ddladmin 数据库角色 <sup>1</sup> 
-- db_owner 数据库角色 
-- sysadmin 服务器角色 
+- db_ddladmin 数据库角色 <sup>1</sup>
+- db_owner 数据库角色
+- sysadmin 服务器角色
 
-<sup>1</sup>db_ddladmin 数据库角色是[最低权限角色](/windows-server/identity/ad-ds/plan/security-best-practices/implementing-least-privilege-administrative-models)  。
+<sup>1</sup>db_ddladmin 数据库角色是[最低权限角色](/windows-server/identity/ad-ds/plan/security-best-practices/implementing-least-privilege-administrative-models)。
 
 ### <a name="remove-fragmentation-using-ssmanstudiofull"></a><a name="SSMSProcedureReorg"></a> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 删除碎片
 
@@ -254,9 +261,6 @@ object_id   TableName                   index_id    IndexName                   
 6. 在 **“重新组织索引”** 对话框中，确认正确的索引位于 **“要重新组织的索引”** 网格中，然后单击 **“确定”** 。
 7. 选中 **“压缩大型对象列数据”** 复选框，以指定也压缩所有包含大型对象 (LOB) 数据的页。
 8. 单击“确定” **。**
-
-> [!NOTE]
-> 如果使用 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 重新组织列存储索引，会将 `COMPRESSED` 行组合并在一起，但不会强制将所有行组压缩到列存储中。 将压缩 CLOSED 行组，但不会将 OPEN 行组压缩到列存储中。 若要压缩所有行组，请使用[下面](#TsqlProcedureReorg)的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 示例。
 
 #### <a name="to-reorganize-all-indexes-in-a-table"></a>重新组织表中的所有索引
 
@@ -274,7 +278,7 @@ object_id   TableName                   index_id    IndexName                   
 2. 展开 **“表”** 文件夹。
 3. 展开要为其重新组织索引的表。
 4. 展开 **“索引”** 文件夹。
-5. 右键单击要重新组织的索引，然后选择“重新生成”  。
+5. 右键单击要重新组织的索引，然后选择“重新生成”。
 6. 在 **“重新生成索引”** 对话框中，确认正确的索引位于 **“要重新生成的索引”** 网格中，然后单击 **“确定”** 。
 7. 选中 **“压缩大型对象列数据”** 复选框，以指定也压缩所有包含大型对象 (LOB) 数据的页。
 8. 单击“确定” **。**
@@ -357,6 +361,13 @@ ALTER INDEX ALL ON HumanResources.Employee
 
 重新生成列存储索引时，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 会从原始列存储索引（包括增量存储）中读取所有数据。 它将数据合并到新的行组中，并且将行组压缩到列存储中。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 通过以物理方式删除已在逻辑上从表中删除的行，对列存储进行碎片整理。 删除的字节会在磁盘上回收。
 
+> [!NOTE]
+> 如果使用 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 重新组织列存储索引，会将 COMPRESSED 行组合并在一起，但不会强制将所有行组压缩到列存储中。 将压缩 CLOSED 行组，但不会将 OPEN 行组压缩到列存储中。 若要强制压缩所有行组，请使用[下面](#TsqlProcedureReorg)的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 示例。
+
+> [!NOTE]
+> 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，tuple-mover 通过后台合并任务获得帮助，该任务会自动压缩较小的已存在一段时间（由内部阈值确定）的 OPEN 增量行组，或者合并已从中删除大量行的 COMPRESSED 行组。 随着时间的推移，这会提高列存储索引的质量。    
+> 有关列存储术语和概念的详细信息，请参阅[列存储索引：概述](../../relational-databases/indexes/columnstore-indexes-overview.md)。
+
 ### <a name="rebuild-a-partition-instead-of-the-entire-table"></a>重新生成分区，而不是整个表
 
 - 如果索引很大，并且在重新生成期间需要足够的磁盘空间来存储索引的额外副本，则重新生成整个表将很费时间。 通常仅需要重新生成最近使用的分区。
@@ -375,7 +386,9 @@ ALTER INDEX ALL ON HumanResources.Employee
 重新组织列存储索引时，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 会将每个 CLOSED 增量行组作为压缩行组压缩到列存储中。 自 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起以及在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，`REORGANIZE` 命令会联机执行以下额外的碎片整理优化：
 
 - 在逻辑删除了 10% 或更多行时从行组中物理移除行。 删除的字节会在物理媒体上进行回收。 例如，如果具有 100 万行的压缩行组删除了 10 万行，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会移除已删除的行，并使用 90 万行重新压缩行组。 它通过移除已删除的行来节省存储。
+
 - 合并一个或多个压缩行组，以将每个行组的行增加到最多 1,048,576 行。 例如，如果批量导入 5 批 102,400 行，则会获得 5 个压缩行组。 如果运行 REORGANIZE，则这些行组会合并为 1 个大小为 512,000 的压缩行组。 这假定不存在任何字典大小或内存限制。
+
 - 对于逻辑上已有 10% 或更多行被删除的行组，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 会尝试将此行组与一个或多个行组合并。 例如，行组 1 使用 500,000 行进行压缩，行组 21 使用最大值 1,048,576 行进行压缩。 行组 21 删除了 60% 的行，剩下 409,830 行。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 倾向于合并这两个行组来压缩一个新行组，这个行组有 909,830 行。
 
 在数据加载后，增量存储中可能会有多个小型行组。 可以使用 `ALTER INDEX REORGANIZE` 将所有行组强制载入列存储，然后将行组合并成具有更多行的较少行组。 重新组织操作还将删除已从列存储中删除的行。
@@ -389,22 +402,22 @@ ALTER INDEX ALL ON HumanResources.Employee
 > [!WARNING]
 > 对超过 1,000 个分区的表创建和重新生成非对齐索引是可能的，但不支持。 这样做可能会导致性能下降，或在执行这些操作的过程中占用过多内存。 Microsoft 建议，当分区数超过 1,000 时，只使用[对齐索引](../partitions/partitioned-tables-and-indexes.md#aligned-index)。
 
-如果索引所在的文件组脱机  或设置为只读  ，便无法重新组织或重新生成索引。 如果指定了关键字 `ALL`，但有一个或多个索引位于脱机文件组或只读文件组中，该语句将失败。
+如果索引所在的文件组脱机或设置为只读，便无法重新组织或重新生成索引。 如果指定了关键字 `ALL`，但有一个或多个索引位于脱机文件组或只读文件组中，该语句将失败。
 
 统计信息：
 
-- 当创建或重新生成索引后   ，将通过扫描表中的所有行来创建或更新统计信息。 但是，从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，当创建或重新生成已分区索引时，不会通过扫描表中的所有行来创建或更新统计信息。 相反，查询优化器使用默认采样算法来生成这些统计信息。 若要通过扫描表中所有行的方法获得有关已分区索引的统计信息，请使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 或 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 以及 `FULLSCAN` 子句。
+- 当创建或重新生成索引后 ，将通过扫描表中的所有行来创建或更新统计信息。 但是，从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，当创建或重新生成已分区索引时，不会通过扫描表中的所有行来创建或更新统计信息。 相反，查询优化器使用默认采样算法来生成这些统计信息。 若要通过扫描表中所有行的方法获得有关已分区索引的统计信息，请使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 或 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 以及 `FULLSCAN` 子句。
 
-- 重新组织索引后  ，统计信息不会更新。
+- 重新组织索引后，统计信息不会更新。
 
 当 `ALLOW_PAGE_LOCKS` 设置为 OFF 时，无法重新组织索引。
 
 在 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 及更低版本中，重新生成聚集列存储索引是一项脱机操作。 执行重新生成操作时，数据库引擎必须获取表或分区上的排他锁。 即使在使用 `NOLOCK`、读取已提交的照隔离 (RCSI) 或快照隔离时，数据在重新生成期间仍处于脱机状态且不可用。
-自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，可以使用 `ONLINE=ON` 选项重新生成聚集列存储索引。
+自 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，可以使用 `ONLINE = ON` 选项重新生成聚集列存储索引。
 
-对于包含有序聚集列存储索引的 Azure Synapse Analytics（以前称为 Azure SQL 数据仓库）表，`ALTER INDEX REBUILD` 会使用 TempDB 对数据进行重新排序。 在重新生成操作期间监视 TempDB。 如果需要更多 TempDB 空间，请纵向扩展数据仓库。 完成索引重新生成之后，缩小为原空间大小。
+对于包含有序聚集列存储索引的 Azure Synapse Analytics（以前称为 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]）表，`ALTER INDEX REBUILD` 会使用 TempDB 对数据进行重新排序。 在重新生成操作期间监视 TempDB。 如果需要更多 TempDB 空间，请纵向扩展数据仓库。 完成索引重新生成之后，缩小为原空间大小。
 
-对于包含有序聚集列存储索引的 Azure Synapse Analytics（以前称为 Azure SQL 数据仓库）表，`ALTER INDEX REORGANIZE` 不会对数据进行重新排序。 要对数据重新排序，可使用 `ALTER INDEX REBUILD`。
+对于包含有序聚集列存储索引的 Azure Synapse Analytics（以前称为 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]）表，`ALTER INDEX REORGANIZE` 不会对数据进行重新排序。 要对数据重新排序，可使用 `ALTER INDEX REBUILD`。
 
 ## <a name="using-index-rebuild-to-recover-from-hardware-failures"></a>使用 INDEX REBUILD 从硬件故障中恢复
 

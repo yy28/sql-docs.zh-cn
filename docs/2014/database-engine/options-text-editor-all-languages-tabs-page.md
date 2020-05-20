@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: bd715d6b-f873-41d4-aa10-57b7098b61cc
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 377ca16075a86c366fcfa8d9d96bcfa989efec4b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56dee0d04c713163f74c391fe5a482092c6c30e7
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089905"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000727"
 ---
 # <a name="options-text-editor---all-languages--tabs-page"></a>选项（“文本编辑器”-“所有语言”-“选项卡”页）
   使用此对话框可以设置 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的所有五个编辑器的跳格行为。 若要显示这些选项，请在 **“工具”** 菜单上单击 **“选项”** 。 选择“文本编辑器”**** 文件夹，展开“所有语言”**** 文件夹，再单击“制表符”****。  
@@ -32,7 +32,7 @@ ms.locfileid: "66089905"
  **无**  
  选择此选项后，则按 Enter 键时所创建的新行不会缩进。 光标置于新行的第一列。  
   
- **模块**  
+ **阻止**  
  如果选择此选项，则按 Enter 时所创建新行的自动缩进距离与上一行的缩进距离相同。  
   
  **智能**  

@@ -13,18 +13,18 @@ helpviewer_keywords:
 - aliases [SQL Server], named pipes
 - Named Pipes [SQL Server], connection strings
 ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 12d5cb30217a0580d4da101d614b4930cfd8184b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c22ee167318fb6e37194a3558637d9afc642111
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63065545"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001027"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>使用 Named Pipes 创建有效的连接字符串
-  除非用户进行了更改，否则当的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]默认实例侦听 named pipes 协议时，它将使用`\\.\pipe\sql\query`作为管道名称。 句点指示该计算机是本地计算机， `pipe`指示该连接是命名管道， `sql\query`是管道的名称。 若要连接到默认管道，别名必须使用 `\\<computer_name>\pipe\sql\query` 作为管道名称。 如果已将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为侦听其他管道，则管道名称必须使用该管道。 例如，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 `\\.\pipe\unit\app` 作为管道，则别名必须使用 `\\<computer_name>\pipe\unit\app` 作为管道名称。  
+  除非用户进行了更改，否则当的默认实例 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 侦听 named pipes 协议时，它将使用 `\\.\pipe\sql\query` 作为管道名称。 句点指示该计算机是本地计算机， `pipe` 指示该连接是命名管道， `sql\query` 是管道的名称。 若要连接到默认管道，别名必须使用 `\\<computer_name>\pipe\sql\query` 作为管道名称。 如果已将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为侦听其他管道，则管道名称必须使用该管道。 例如，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 `\\.\pipe\unit\app` 作为管道，则别名必须使用 `\\<computer_name>\pipe\unit\app` 作为管道名称。  
   
  若要创建一个有效的管道名称，必须执行以下操作：  
   
@@ -32,11 +32,11 @@ ms.locfileid: "63065545"
   
 -   选择 "**命名管道**" 作为**协议**。  
   
--   输入**管道名称**。 或者，你可以将 "**管道名称**" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]留空，在指定**协议**和**服务器**后 Configuration Manager 将完成相应的管道名称  
+-   输入**管道名称**。 或者，你可以将 "**管道名称**" 留空，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指定**协议**和**服务器**后 Configuration Manager 将完成相应的管道名称  
   
 -   指定**服务器**。 对于命名实例，可以提供服务器名称和实例名称。  
   
- 连接时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 组件将从注册表中读取指定别名的服务器、协议和管道名称值，并创建格式`np:\\<computer_name>\pipe\<pipename>`为或`np:\\<IPAddress>\pipe\<pipename>`的管道名称。对于命名实例，默认管道名称为`\\<computer_name>\pipe\MSSQL$<instance_name>\sql\query`。  
+ 连接时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 组件将从注册表中读取指定别名的服务器、协议和管道名称值，并创建格式为或的管道名称 `np:\\<computer_name>\pipe\<pipename>` `np:\\<IPAddress>\pipe\<pipename>` 。对于命名实例，默认管道名称为 `\\<computer_name>\pipe\MSSQL$<instance_name>\sql\query` 。  
   
 > [!NOTE]  
 >  默认情况下，[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 防火墙关闭端口 445。 因为 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过端口 445 进行通信，所以，如果将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为使用命名管道侦听传入客户端连接，则必须重新打开该端口。 有关配置防火墙的信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“如何将防火墙配置为允许 SQL Server 访问”，或者查阅防火墙文档。  
@@ -116,7 +116,7 @@ Server             .
 ```  
   
 > [!NOTE]  
->  若要将网络协议指定为**sqlcmd**参数，请参阅联机丛书中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 "如何使用 sqlcmd 连接到数据库引擎"。  
+>  若要将网络协议指定为**sqlcmd**参数，请参阅联机丛书中的 "如何使用 sqlcmd 连接到数据库引擎" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用 Shared Memory 协议创建有效的连接字符串](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   

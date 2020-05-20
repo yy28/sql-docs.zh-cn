@@ -1,6 +1,7 @@
 ---
 title: SQL Server 分布式重播
 titleSuffix: SQL Server Distributed Replay
+description: SQL Server Distributed Replay 功能可帮助你评估即将进行的 SQL Server、硬件和操作系统升级以及 SQL Server 优化的影响。
 ms.prod: sql
 ms.technology: tools-other
 ms.topic: conceptual
@@ -10,12 +11,12 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: d19e8906ba6e1d5d517d1d176f6edb2b3e4fb50e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 856a1440c816555c0d03526bbbfcde9363c6a73f
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746357"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152173"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server 分布式重播
 
@@ -43,14 +44,14 @@ SQL Server Profiler 和 Distributed Replay 在功能上有些重复。
 
 |工具|使用场景|
 |----------|---------------|
-| SQL Server Profiler | 您希望在单台计算机上使用传统的重播机制。 特别是，你需要逐行调试功能，如“步骤”  、“运行至光标处”  和“切换断点”  命令。<br /><br /> 您要重播 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 跟踪。 |
+| SQL Server Profiler | 您希望在单台计算机上使用传统的重播机制。 特别是，你需要逐行调试功能，如“步骤”、“运行至光标处”和“切换断点”命令。<br /><br /> 您要重播 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 跟踪。 |
 | 分布式重播 |您要评估应用程序兼容性。 例如，您要测试 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和操作系统升级方案、硬件升级或索引优化。<br /><br /> 捕获的跟踪中的并发率过高，以致于单个重播客户端不足以对其进行模拟。|  
 
 ## <a name="distributed-replay-concepts"></a>分布式重播概念
 
 以下组件组成分布式重播环境：  
 
-- **Distributed Replay 管理工具**：一个控制台应用程序 DReplay.exe  , 可用来与分布式重播控制器进行通信。 使用管理工具可控制分布式的重播。  
+- **Distributed Replay 管理工具**：一个控制台应用程序 DReplay.exe, 可用来与分布式重播控制器进行通信。 使用管理工具可控制分布式的重播。  
 
 - **Distributed Replay 控制器**：运行名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 Distributed Replay 控制器的 Windows 服务的一台计算机。 Distributed Replay 控制器协调分布式的重播客户端的操作。 在每个 Distributed Replay 环境中只能有一个控制器实例。  
 

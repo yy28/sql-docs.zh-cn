@@ -1,6 +1,7 @@
 ---
 title: “预处理”选项
 titleSuffix: SQL Server Distributed Replay
+description: Microsoft SQL Server Distributed Replay 工具 DReplay.exe 是一个命令行工具，可用于与 Distributed Replay 控制器进行通信。
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 1b003bf2441e3cffc2e21557497695f92df50135
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7baf79900fb89903c9d398dfb1e7b72c3600f1e0
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307024"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152196"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>preprocess 选项（分布式重播管理工具）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具 DReplay.exe  是一个命令行工具，可用于与 Distributed Replay 控制器进行通信。 本主题介绍 **preprocess** 命令行选项和相应的语法。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具 DReplay.exe 是一个命令行工具，可用于与 Distributed Replay 控制器进行通信。 本主题介绍 **preprocess** 命令行选项和相应的语法。  
   
  **preprocess** 选项用于启动预处理阶段。 在此阶段，控制器会准备对针对目标服务器进行重播的输入跟踪数据。  
   
@@ -34,7 +35,7 @@ dreplay preprocess [-m controller] -i input_trace_file
     -d controller_working_dir [-c config_file] [-f status_interval]  
 ```  
   
-#### <a name="parameters"></a>parameters  
+#### <a name="parameters"></a>参数  
  **-m** _controller_  
  指定控制器的计算机名称。 可以用“`localhost`”或“`.`”指代本地计算机。  
   

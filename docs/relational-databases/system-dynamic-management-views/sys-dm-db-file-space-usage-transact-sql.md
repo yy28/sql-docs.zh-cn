@@ -17,39 +17,39 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_file_space_usage dynamic management view
 ms.assetid: 148a5276-a8d5-49d2-8146-3c63d24c2144
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a160909901b265a6d07af18f6373554b036fe894
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c235ebc59424eba97d985740a7cf8456eee53150
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983050"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152028"
 ---
 # <a name="sysdm_db_file_space_usage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  返回数据库中每个文件的空间使用信息。  
+  返回数据库中每个数据文件的空间使用情况信息。  
   
 > [!NOTE]  
->  若要从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]调用此，请使用名称**dm_pdw_nodes_db_file_space_usage**。  
+>  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_db_file_space_usage**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|数据库 ID。|  
 |file_id|**smallint**|文件 ID。<br /><br /> file_id 映射到 sys.databases 中的 file_id [dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md)和[sys.sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md)中的 fileid。|  
 |filegroup_id|**smallint**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 文件组 ID。|  
-|total_page_count|**bigint**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 文件中的总页数。|  
-|allocated_extent_page_count|**bigint**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 文件的已分配区中的总页数。|  
-|unallocated_extent_page_count|**bigint**|文件的未分配区中的总页数。<br /><br /> 不包括已分配区中的未使用页。|  
+|total_page_count|**bigint**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 数据文件中的总页数。|  
+|allocated_extent_page_count|**bigint**|**适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本。<br /><br /> 数据文件的已分配区中的总页数。|  
+|unallocated_extent_page_count|**bigint**|数据文件的未分配区中的总页数。<br /><br /> 不包括已分配区中的未使用页。|  
 |version_store_reserved_page_count|**bigint**|为版本存储分配的统一区中的总页数。 永远不会从混合区分配版本存储页。<br /><br /> 不包括 IAM 页，因为 IAM 页始终从混合区进行分配。 如果 PFS 页是从统一区分配的，则包括 PFS 页。<br /><br /> 有关详细信息，请参阅 [sys.dm_tran_version_store (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md)。|  
 |user_object_reserved_page_count|**bigint**|从统一区为数据库中的用户对象分配的总页数。 计数中包括已分配区中未使用的页。<br /><br /> 不包括 IAM 页，因为 IAM 页始终从混合区进行分配。 如果 PFS 页是从统一区分配的，则包括 PFS 页。<br /><br /> 您可以使用[sys. allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)目录视图中的 total_pages 列来返回用户对象中每个分配单元的保留页计数。 但请注意，total_pages 列包括 IAM 页。|  
 |internal_object_reserved_page_count|**bigint**|从统一区为文件中的内部对象分配的总页数。 计数中包括已分配区中未使用的页。<br /><br /> 不包括 IAM 页，因为 IAM 页始终从混合区进行分配。 如果 PFS 页是从统一区分配的，则包括 PFS 页。<br /><br /> 不存在可返回每个内部对象的页计数的目录视图或动态管理对象。|  
 |mixed_extent_page_count|**bigint**|文件的已分配混合区中的已分配和未分配总页数。 混合区包含分配给不同对象的页。 此计数包含文件中的所有 IAM 页。|
 |modified_extent_page_count|**bigint**|**适用对象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和更高版本。<br /><br />自上次完整数据库备份以来，在文件分配的范围内修改的总页数。 修改后的页计数可用于跟踪自上次完整备份以来数据库的差异变化量，以确定是否需要进行差异备份。|
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
-|distribution_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 与分布关联的唯一数字 id。|  
+|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|distribution_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 与分布关联的唯一数字 id。|  
   
 ## <a name="remarks"></a>备注  
  页计数始终为区级计数。 所以，页计数的值始终为八的倍数。 包含全局分配映射表 (GAM) 和共享全局分配映射表 (SGAM) 分配页的区是已分配的统一区。 它们不包含在上文所述的页计数中。 有关页和区的详细信息，请参阅[页和区体系结构指南](../../relational-databases/pages-and-extents-architecture-guide.md)。 
@@ -84,19 +84,19 @@ ms.locfileid: "73983050"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|From|到|关系|  
+|From|功能|关系|  
 |----------|--------|------------------|  
 |sys.dm_db_file_space_usage.database_id、file_id|sys.dm_io_virtual_file_stats.database_id、file_id|一对一|  
   
 ## <a name="permissions"></a>权限
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要权限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层上，需要`VIEW DATABASE STATE`具有数据库中的权限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
 ## <a name="examples"></a>示例  
   
 ### <a name="determing-the-amount-of-free-space-in-tempdb"></a>确定 tempdb 中的可用空间量  
- 下面的查询将返回**tempdb**中所有文件的可用页总数和总可用空间（mb）。  
+ 下面的查询返回**tempdb**中所有数据文件中可用的可用页总数和总可用空间（mb）。  
   
 ```sql
 USE tempdb;  

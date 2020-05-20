@@ -1,5 +1,6 @@
 ---
 title: 使用用户指定配置的 XML 输入文件示例
+description: 本文包含使用用户指定配置的 XML 输入文件示例，其可用于优化工作负荷以使用数据库引擎优化顾问。
 titleSuffix: DTA
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +13,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: ac32f47bc81e2abb2865a01b17070a9f72f7b4dc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 187d1b8492719a35f470d718cd9d5727628f76e1
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257077"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151765"
 ---
 # <a name="xml-input-file-sample-with-user-specified-configuration-dta"></a>使用用户指定配置 (DTA) 的 XML 输入文件示例
 

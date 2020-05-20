@@ -22,12 +22,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6c4cbb43048e9dff683b510d958e3e25d87e823
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9579c639e1c731c30a145a856a889796795c90b8
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77507488"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151528"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -39,7 +39,7 @@ ms.locfileid: "77507488"
 
 ## <a name="syntax"></a>语法
 
-``` 
+```syntaxsql
 CREATE DATABASE SCOPED CREDENTIAL credential_name
 WITH IDENTITY = 'identity_name'
     [ , SECRET = 'secret' ]
@@ -48,11 +48,14 @@ WITH IDENTITY = 'identity_name'
 
 ## <a name="arguments"></a>参数
 
-credential_name 指定正在创建的数据库范围凭据的名称  。 credential_name 不能以数字符号 (#) 开头  。 系统凭据以 ## 开头。
+credential_name 指定正在创建的数据库范围凭据的名称。 credential_name 不能以数字符号 (#) 开头。 系统凭据以 ## 开头。
 
-IDENTITY ='identityname' 指定从服务器外部进行连接时要使用的帐户名称  _\__  。 要使用共享密钥从 Azure Blob 存储导入文件，标识名称必须是 `SHARED ACCESS SIGNATURE`。 若要将数据加载到 SQL DW，任何有效的值均可用于标识。 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。
+IDENTITY ='identityname' 指定从服务器外部进行连接时要使用的帐户名称 _\__ 。 要使用共享密钥从 Azure Blob 存储导入文件，标识名称必须是 `SHARED ACCESS SIGNATURE`。 若要将数据加载到 SQL DW，任何有效的值均可用于标识。 有关共享访问签名的详细信息，请参阅[使用共享访问签名 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。
 
-SECRET ='secret' 指定发送身份验证所需的机密内容    。 需要 `SECRET` 才可从 Azure Blob 存储导入文件。 若要从 Azure Blob 存储加载到 SQL DW 或并行数据仓库，Secret 必须是 Azure 存储密钥。
+> [!NOTE]
+如果为 Azure Blob 存储中的容器启用了匿名访问，则不需要 WITH IDENTITY。 有关查询 Azure Blob 存储的示例，请参阅[从 Azure Blob 存储上存储的文件导入表](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage)。
+
+SECRET ='secret' 指定发送身份验证所需的机密内容。 需要 `SECRET` 才可从 Azure Blob 存储导入文件。 若要从 Azure Blob 存储加载到 SQL DW 或并行数据仓库，Secret 必须是 Azure 存储密钥。
 > [!WARNING]
 > SAS 密钥值可以“?”（问号）开头。 使用 SAS 密钥时，必须删除前导“?”。 否则会阻止操作。
 
@@ -82,7 +85,7 @@ SECRET ='secret' 指定发送身份验证所需的机密内容    。 需要 `SE
 
 ## <a name="permissions"></a>权限
 
-需要针对数据库的 CONTROL 权限  。
+需要针对数据库的 CONTROL 权限。
 
 ## <a name="examples"></a>示例
 
@@ -101,7 +104,7 @@ CREATE DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'Mary5',
 
 ### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. 为共享访问签名创建数据库范围凭据
 
-以下示例创建的数据库范围凭据可用于创建可执行批量操作（例如 [BULK INSERT](../../t-sql/statements/create-external-data-source-transact-sql.md) 和 [OPENROWSET](../../t-sql/statements/bulk-insert-transact-sql.md)）的[外部数据源](../../t-sql/functions/openrowset-transact-sql.md)。 共享访问签名不能与 SQL Server、APS 或 SQL DW 中的 PolyBase一起使用。
+以下示例创建的数据库范围凭据可用于创建可执行批量操作（例如 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)）的[外部数据源](../../t-sql/statements/create-external-data-source-transact-sql.md)。 共享访问签名不能与 SQL Server、APS 或 SQL DW 中的 PolyBase一起使用。
 
 ```sql
 -- Create a db master key if one does not already exist, using your own password.
