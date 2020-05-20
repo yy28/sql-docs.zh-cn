@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_text_query_plan dynamic management function
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d23813078c2a90b18af0a1df48079b571e77a13
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 082de052d40cc41a81ea7a0963b2e3174338b8a5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983144"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824557"
 ---
 # <a name="sysdm_exec_text_query_plan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "73983144"
 -   查询计划的输出无大小限制。  
 -   可以指定批处理内的单个语句。  
   
-**适用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更高版本[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]）、。
+**适用**于： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -100,7 +100,7 @@ sys.dm_exec_text_query_plan
   
 -   有些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句未放入缓存，如大容量操作语句或包含大于 8 KB 的字符串文字的语句。 由于这些语句不在缓存中，因此无法使用 **sys.dm_exec_text_query_plan** 来检索这些语句的显示计划。  
   
--   如果某个[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理或存储过程包含对用户定义函数的调用或对动态 SQL 的调用（例如，使用 EXEC （*string*）），则用户定义函数的编译的 XML 显示计划不包含在由 sys.databases 或存储过程返回的表中 **。 dm_exec_text_query_plan** 。 相反，必须为与用户定义函数对应的*plan_handle*单独调用**dm_exec_text_query_plan** 。  
+-   如果某个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理或存储过程包含对用户定义函数的调用或对动态 SQL 的调用（例如，使用 EXEC （*string*）），则用户定义函数的编译的 XML 显示计划不包含在由 sys.databases 或存储过程返回的表中 **。 dm_exec_text_query_plan** 。 相反，必须为与用户定义函数对应的*plan_handle*单独调用**dm_exec_text_query_plan** 。  
   
 当即席查询使用[简单](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)参数化或[强制参数](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)化时， **query_plan**列将仅包含语句文本，而非实际查询计划。 若要返回查询计划，则应为已准备好的参数化查询的计划句柄调用 **sys.dm_exec_text_query_plan**。 可以通过引用 [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) 视图的 **sql** 列或 [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) 动态管理视图的文本列来确定查询是否已参数化。  
   
@@ -145,7 +145,7 @@ GO
 ```  
   
 ### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>B. 从计划缓存中检索每个查询计划  
- 若要检索驻留在计划缓存中的所有查询计划的快照，请通过查询 `sys.dm_exec_cached_plans` 动态管理视图来检索缓存中所有查询计划的计划句柄。 计划句柄存储在 `plan_handle` 的 `sys.dm_exec_cached_plans` 列中。 然后，使用 CROSS APPLY 运算符将计划句柄传递给 `sys.dm_exec_text_query_plan`，如下所示。 当前位于计划缓存中的每个计划的显示计划输出位于`query_plan`返回的表的列中。  
+ 若要检索驻留在计划缓存中的所有查询计划的快照，请通过查询 `sys.dm_exec_cached_plans` 动态管理视图来检索缓存中所有查询计划的计划句柄。 计划句柄存储在 `plan_handle` 的 `sys.dm_exec_cached_plans` 列中。 然后，使用 CROSS APPLY 运算符将计划句柄传递给 `sys.dm_exec_text_query_plan`，如下所示。 当前位于计划缓存中的每个计划的显示计划输出位于 `query_plan` 返回的表的列中。  
   
 ```sql  
 USE master;  

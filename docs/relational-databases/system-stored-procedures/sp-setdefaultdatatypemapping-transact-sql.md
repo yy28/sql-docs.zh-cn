@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_setdefaultdatatypemapping
 ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9f0dfadc3b2b990d999df1d66069c4b68df9e6cf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d1acd5a12274c00bf2829b2219055d5a1ecf9eff
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68104416"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824303"
 ---
 # <a name="sp_setdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  将和非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库管理系统（DBMS）之间的现有数据类型映射标记为默认值。 此存储过程在分发服务器上的任何数据库中执行。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将和非数据库管理系统（DBMS）之间的现有数据类型映射标记 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为默认值。 此存储过程在分发服务器上的任何数据库中执行。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -110,7 +110,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  **0** （成功）或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
- **sp_setdefaultdatatypemapping**用于与非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS 之间的所有复制类型。  
+ **sp_setdefaultdatatypemapping**用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与非 DBMS 之间的所有复制类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  默认数据类型映射适用于所有包含指定 DBMS 的复制拓扑。  
   

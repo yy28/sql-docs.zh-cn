@@ -16,15 +16,15 @@ helpviewer_keywords:
 - dm_database_copies
 - sys.dm_database_copies
 ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0654bd9d15591d994b05ab2c01d9912bc0c56117
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f63469fb4955895b1eb1e3e8466dfbce6306e502
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005080"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824619"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -59,6 +59,6 @@ ms.locfileid: "68005080"
  此视图仅在**master**数据库中适用于服务器级主体登录名。  
   
 ## <a name="remarks"></a>备注  
- 您可以在源服务器或目标[!INCLUDE[ssSDS](../../includes/sssds-md.md)]服务器的**master**数据库中使用**sys. dm_database_copies**视图。 当数据库复制成功完成并且新的数据库处于联机状态时，将自动删除**sys.databases dm_database_copies**视图中的行。  
+ 您可以在源服务器或目标服务器的**master**数据库中使用**sys. dm_database_copies**视图 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 当数据库复制成功完成并且新的数据库处于联机状态时，将自动删除**sys.databases dm_database_copies**视图中的行。  
   
   

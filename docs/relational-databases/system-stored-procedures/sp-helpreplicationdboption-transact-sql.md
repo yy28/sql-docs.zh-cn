@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpreplicationdboption
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7aa68b2ee2e592f264f5a64c4c675103253da495
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 84f009a2f2184ce2974f837006471d2b9bb97346
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771532"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824428"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,11 +39,11 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @dbname = ] 'dbname'`数据库的名称。 *dbname*的值为**sysname**，默认值**%** 为。 如果**%** 为，则结果集包含发布服务器上的所有数据库，否则仅返回有关指定数据库的信息。 如下所述，将不会返回用户对其不具有适当权限的任何数据库的信息。  
+`[ @dbname = ] 'dbname'`数据库的名称。 *dbname*的值为**sysname**，默认值为 **%** 。 如果为 **%** ，则结果集包含发布服务器上的所有数据库，否则仅返回有关指定数据库的信息。 如下所述，将不会返回用户对其不具有适当权限的任何数据库的信息。  
   
 `[ @type = ] 'type'`将结果集限制为仅包含已启用指定复制选项*类型*值的数据库。 *类型*为**sysname**，可以为以下值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**发布**|允许事务复制。|  
 |**合并发布**|允许合并复制。|  
@@ -55,7 +55,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|name |**sysname**|数据库的名称。|  
+|**name**|**sysname**|数据库的名称。|  
 |**id**|**int**|数据库标识符。|  
 |**transpublish**|**bit**|如果已为快照或事务发布启用了数据库，则为;如果值为**1** ，则表示启用了快照或事务发布。|  
 |**mergepublish**|**bit**|如果数据库已启用合并发布，则为; 否则为。如果值为**1** ，则表示启用了合并发布。|  
