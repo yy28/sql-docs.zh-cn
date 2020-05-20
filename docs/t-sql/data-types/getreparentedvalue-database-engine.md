@@ -59,7 +59,7 @@ CLR 返回类型：SqlHierarchyId
 ## <a name="examples"></a>示例  
   
 ### <a name="a-comparing-two-node-locations"></a>A. 比较两个节点位置  
-以下示例显示了节点的当前 hierarchyid。 它还显示了如果移动节点使其成为 **NewParent 节点的后代，节点的 hierarchyid 将会是什么** **\@** 。 它使用 `ToString()` 方法来显示层次结构关系。
+以下示例显示了节点的当前 hierarchyid。 它还显示了如果移动节点使其成为 \@NewParent 节点的后代，节点的 hierarchyid 将会是什么。 它使用 `ToString()` 方法来显示层次结构关系。
   
 ```sql
 DECLARE @SubjectEmployee hierarchyid , @OldParent hierarchyid, @NewParent hierarchyid  

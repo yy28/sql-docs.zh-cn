@@ -26,7 +26,7 @@ ms.locfileid: "74957406"
 # <a name="encrypt-a-column-of-data"></a>加密数据列
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  本文介绍如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中通过对称加密对数据列进行加密。 这有时称为列级加密或单元级加密。  
+  本文介绍如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中通过对称加密对数据列进行加密。 这有时称为列级加密或单元级加密。  
 
 ## <a name="security"></a>安全性  
   

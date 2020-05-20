@@ -32,7 +32,7 @@ ms.locfileid: "75244241"
   
 ### <a name="to-rename-a-type"></a>重命名类型  
   
-1.  在“解决方案资源管理器”  中右键单击 Products  表 (Products.sql)，然后选择“查看代码”  以便在 Transact\-SQL 编辑器中打开该脚本。  
+1.  在“解决方案资源管理器”中右键单击 Products 表 (Products.sql)，然后选择“查看代码”以便在 Transact\-SQL 编辑器中打开该脚本。  
   
 2.  在脚本中右键单击 `[Products]`，然后选择“重构”  和“重命名”  。  
   
@@ -44,11 +44,11 @@ ms.locfileid: "75244241"
   
 6.  对于已在表设计器或 Transact\-SQL 编辑器中打开的脚本文件，请注意 Transact\-SQL 编辑器已用左侧的绿色条突出显示了发生了更改的位置。  
   
-7.  请注意在“解决方案资源管理器”  中添加了 TradeDev.refactorlog  。 双击将其打开。 它包含此会话中所有更改的 XML 表示形式。  
+7.  请注意在“解决方案资源管理器”中添加了 TradeDev.refactorlog。 双击将其打开。 它包含此会话中所有更改的 XML 表示形式。  
   
 8.  按 F5 以生成该项目并将该项目部署到本地数据库中。  
   
-9. 右键单击“SQL Server 对象资源管理器”  中“本地”  下的“TradeDev”  数据库，然后选择“刷新”  。  
+9. 右键单击“SQL Server 对象资源管理器”中“本地”下的“TradeDev”数据库，然后选择“刷新”。  
   
 10. 展开“表”  ，你会发现，Products  表已重命名。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "75244241"
   
 ### <a name="to-expand-wildcards"></a>展开通配符  
   
-1.  在“解决方案资源管理器”  中展开“函数”  节点，然后双击 GetProductsBySupplier.sql  。  
+1.  在“解决方案资源管理器”中展开“函数”节点，然后双击 GetProductsBySupplier.sql。  
   
 2.  将光标放置于此行中的星号上，然后右击。 选择“重构”  和“展开通配符”  。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "75244241"
     SELECT [Id], [Name], [ShelfLife], [SupplierId], [CustomerId] from Product p  
     ```  
   
-3.  在“预览更改”  对话框中，单击“应用”  按钮。  请注意，所有的对象引用都已更新，以便包括对象架构的名称和父对象的名称（如果该对象具有父对象）。  
+3.  在“预览更改”对话框中，单击“应用”按钮。  请注意，所有的对象引用都已更新，以便包括对象架构的名称和父对象的名称（如果该对象具有父对象）。  
   
     ```  
     SELECT [p].[Id], [p].[Name], [p].[ShelfLife], [p].[SupplierId], [p].[CustomerId] from [dbo].[Product] p  

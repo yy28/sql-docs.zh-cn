@@ -70,7 +70,7 @@ ms.locfileid: "72909787"
   
 5.  在“保存 **网格或文本> 结果”对话框中的“保存类型”框中，单击“所有文件(** .\<)”   **\*\*** 。  
   
-6.  在“文件名”框中，提供“**名称>.sqlplan”格式的名称，然后单击“保存”** \<   。  
+6.  在“文件名”框中，提供“\<名称>.sqlplan”格式的名称，然后单击“保存”。  
 
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>使用 SQL Server Management Studio 选项保存执行计划  
   
@@ -80,15 +80,15 @@ ms.locfileid: "72909787"
   
      此外，还可以在 **“文件”** 菜单上选择 **“将执行计划另存为”** 。  
   
-3.  在“另存为”  对话框中，确保将“保存类型”  设置为“执行计划文件( **.sqlplan)”\*** 。  
+3.  在“另存为”对话框中，确保将“保存类型”设置为“执行计划文件(\*.sqlplan)”。  
   
-4.  在“文件名”框中，提供“**名称>.sqlplan”格式的名称，然后单击“保存”** \<   。  
+4.  在“文件名”框中，提供“\<名称>.sqlplan”格式的名称，然后单击“保存”。  
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中打开保存的 XML 查询计划  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 **“文件”** 菜单上，选择 **“打开”** ，然后单击 **“文件”** 。  
   
-2.  在“打开文件”  对话框中，将“文件类型”  设置为“执行计划文件( **.sqlplan)”\*** ，以筛选出保存的 XML 查询计划文件的列表。  
+2.  在“打开文件”对话框中，将“文件类型”设置为“执行计划文件(\*.sqlplan)”，以筛选出保存的 XML 查询计划文件的列表。  
   
 3.  选择要查看的 XML 查询计划文件，然后单击 **“打开”** 。  
   

@@ -36,7 +36,7 @@ DECLARE @MyCounter INT;
 SET @MyCounter = 1;  
 ```  
   
- 赋值运算符也能用于在列标题和定义列值的表达式之间建立联系。 以下示例显示列标题 `FirstColumnHeading` 和 `SecondColumnHeading`。 标题为 `xyz` 的列中，所有行均显示字符串 `FirstColumnHeading`。 然后，标题为`Product` 的列中，列出来自 `SecondColumnHeading` 表的每个产品 ID。  
+ 赋值运算符也能用于在列标题和定义列值的表达式之间建立联系。 以下示例显示列标题 `FirstColumnHeading` 和 `SecondColumnHeading`。 标题为 `FirstColumnHeading` 的列中，所有行均显示字符串 `xyz`。 然后，标题为`SecondColumnHeading` 的列中，列出来自 `Product` 表的每个产品 ID。  
   
 ```  
 -- Uses AdventureWorks  

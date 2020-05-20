@@ -29,7 +29,7 @@ ms.locfileid: "74056733"
 
 FILESTREAM 允许通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或通过直接访问 Windows 文件系统来存储和访问大型二进制值。 大型二进制值是大于 2 GB 的值。 若要详细了解增强的 FILESTREAM 支持，请参阅 [FILESTREAM (SQL Server)](../../../relational-databases/blob/filestream-sql-server.md)。  
   
-默认情况下，在打开数据库连接时，\@\@TEXTSIZE 将设置为 -1（表示“无限制”）  。  
+默认情况下，在打开数据库连接时，\@\@TEXTSIZE 将设置为 -1（表示“无限制”）。  
   
 还可以使用 Windows 文件系统 API 访问和更新 FILESTREAM 列。  
   
@@ -38,7 +38,7 @@ FILESTREAM 允许通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.
 ## <a name="querying-for-filestream-columns"></a>查询 FILESTREAM 列  
 OLE DB 中的架构行集不会报告某个列是否为 FILESTREAM 列。 OLE DB 中的 ITableDefinition 不能用于创建 FILESTREAM 列。    
   
-若要创建 FILESTREAM 列或检测哪些现有列是 FILESTREAM 列，可以使用 [sys.columns](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 目录视图的 is_filestream 列  。  
+若要创建 FILESTREAM 列或检测哪些现有列是 FILESTREAM 列，可以使用 [sys.columns](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 目录视图的 is_filestream 列。  
   
 以下是一个示例：  
   
@@ -54,7 +54,7 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>下级兼容性  
-如果你的客户端是使用 OLE DB Driver for SQL Server 编译的，并且该应用程序连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] - [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]），那么 varbinary(max)  行为将与 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 引入的行为一致。 就是说，返回数据的最大大小将限制为不超过 2 GB。 对于超过 2 GB 的结果值，将发生截断，并将返回“字符串数据，右截断”警告。 
+如果你的客户端是使用 OLE DB Driver for SQL Server 编译的，并且该应用程序连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] - [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]），那么 varbinary(max) 行为将与 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 引入的行为一致。 就是说，返回数据的最大大小将限制为不超过 2 GB。 对于超过 2 GB 的结果值，将发生截断，并将返回“字符串数据，右截断”警告。 
   
 如果将数据类型兼容性设置为 80，则客户端行为将与下级客户端行为一致。  
   

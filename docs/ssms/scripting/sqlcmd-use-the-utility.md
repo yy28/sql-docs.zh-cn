@@ -42,7 +42,7 @@ ms.locfileid: "79090598"
   
 -   服务器选项 (-S  )，用于标识 sqlcmd[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接到的   的实例。  
   
--   身份验证选项（-E、-U 和 -P），用于指定 sqlcmd 连接到  **实例所使用的凭据**    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 **注意：** -E 选项为默认选项，无需指定  。  
+-   身份验证选项（-E、-U 和 -P），用于指定 sqlcmd 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例所使用的凭据。 **注意：** -E 选项为默认选项，无需指定  。  
   
 -   输入选项（-Q、-q 和 -i），用于标识 sqlcmd 输入的位置     。  
   

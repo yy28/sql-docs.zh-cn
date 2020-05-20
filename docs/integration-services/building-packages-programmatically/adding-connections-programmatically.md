@@ -45,7 +45,7 @@ ms.locfileid: "71299099"
   
  `ConnectionManagerAdoNetClass cmado = cm.InnerObject as ConnectionManagerAdoNet;`  
   
- 这可将托管连接管理器对象转换为其基础连接对象。 如果使用的是 C++，则需要调用  **对象的 QueryInterface**<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 方法，并请求基础连接对象的接口。  
+ 这可将托管连接管理器对象转换为其基础连接对象。 如果使用的是 C++，则需要调用 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象的 QueryInterface 方法，并请求基础连接对象的接口。  
   
  下表列出了随 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的连接管理器。 此外，还有 `package.Connections.Add("xxx")` 语句中使用的字符串。 若要获取所有连接管理器的列表，请参阅 [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)。  
   

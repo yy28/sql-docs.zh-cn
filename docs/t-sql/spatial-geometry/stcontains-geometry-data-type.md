@@ -38,7 +38,7 @@ ms.locfileid: "67930158"
   
 ## <a name="arguments"></a>参数  
  *other_geometry*  
- 将与调用  **的实例进行比较的另一个 geometry 实例**`STContains()`。  
+ 将与调用 `STContains()` 的实例进行比较的另一个 geometry 实例。  
   
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit   
@@ -46,7 +46,7 @@ ms.locfileid: "67930158"
  CLR 返回类型：SqlBoolean   
   
 ## <a name="remarks"></a>备注  
- 如果 `STContains()`geometry**实例的空间引用 ID (SRID) 不匹配，则** 始终返回 null。  
+ 如果 **geometry** 实例的空间引用 ID (SRID) 不匹配，则 `STContains()` 始终返回 null。  
   
 ## <a name="examples"></a>示例  
  以下示例使用 `STContains()` 测试两个 `geometry` 实例，以查看第一个实例是否包含第二个实例。  

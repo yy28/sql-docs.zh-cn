@@ -46,7 +46,7 @@ ms.locfileid: "71296998"
   
 2.  创建一个名为 MessageText 的 String 类型的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 变量，将消息文本传入脚本   。 输入默认消息作为该变量的值。  
   
-3.  向设计图面添加一个脚本任务，并对其进行编辑。 在“脚本任务编辑器”的“脚本”选项卡中，将  **变量添加到 ReadOnlyVariables 属性中，使该变量在脚本内可用**  `MessageText`  。  
+3.  向设计图面添加一个脚本任务，并对其进行编辑。 在“脚本任务编辑器”的“脚本”选项卡中，将 `MessageText` 变量添加到 ReadOnlyVariables 属性中，使该变量在脚本内可用。  
   
 4.  单击“编辑脚本”，打开   Tools for Applications (VSTA) 脚本编辑器[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]。  
   

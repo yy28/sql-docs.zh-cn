@@ -36,7 +36,7 @@ ms.locfileid: "71298899"
   
 -   **Windows 身份验证**  
   
--   **SQL Server 身份验证**：如果选择此选项，则必须在连接到的  **中为用户键入“登录名”** **和“密码”** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+-   **SQL Server 身份验证**：如果选择此选项，则必须在连接到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中为用户键入“登录名”和“密码”。  
   
  **选项**  
  单击箭头可以查看要配置的可用选项。 您可以选择保留这些选项不变，使用其默认值。 可用选项是：  

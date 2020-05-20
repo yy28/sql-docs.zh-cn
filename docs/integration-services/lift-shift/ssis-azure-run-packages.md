@@ -64,7 +64,7 @@ ms.locfileid: "68054633"
 
 ## <a name="run-a-package-with-script-or-code"></a><a name="script"></a>使用脚本或代码运行包
 
-在可以调用托管 API 的任何开发环境中，可以通过调用 `Execute` 命名空间中 `Package` 对象的 `Microsoft.SQLServer.Management.IntegrationServices` 方法，运行包。
+在可以调用托管 API 的任何开发环境中，可以通过调用 `Microsoft.SQLServer.Management.IntegrationServices` 命名空间中 `Package` 对象的 `Execute` 方法，运行包。
 
 有关详细信息，请参阅以下示例：
 

@@ -84,7 +84,7 @@ ms.locfileid: "68344597"
  管理员不可更改这些主体帐户的密码，因为这些密码基于颁发给 Microsoft 的证书。
   
 ## <a name="the-guest-user"></a>guest 用户  
- 每个数据库包括一个 `guest`的行为的更改。 授予 `guest` 用户的权限由对数据库具有访问权限，但在数据库中没有用户帐户的用户继承。 `guest` 用户无法删除，但可通过撤消其 CONNECT 权限禁用。 可以通过在 `REVOKE CONNECT FROM GUEST;` 或 `master` 以外的任何数据库中执行 `tempdb` 来撤消 CONNECT 权限。  
+ 每个数据库包括一个 `guest`的行为的更改。 授予 `guest` 用户的权限由对数据库具有访问权限，但在数据库中没有用户帐户的用户继承。 `guest` 用户无法删除，但可通过撤消其 CONNECT 权限禁用。 可以通过在 `master` 或 `tempdb` 以外的任何数据库中执行 `REVOKE CONNECT FROM GUEST;` 来撤消 CONNECT 权限。  
   
   
 ## <a name="related-tasks"></a>Related Tasks  

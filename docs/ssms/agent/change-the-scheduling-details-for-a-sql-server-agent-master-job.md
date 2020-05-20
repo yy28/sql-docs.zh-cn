@@ -50,7 +50,7 @@ ms.locfileid: "75242535"
   
 4. 右键单击要编辑其计划的作业，然后选择“属性”  。  
   
-5. 在“作业属性 – **job**name _”对话框中的“选择页”下，选择“计划”\__   。 有关此页上可用选项的详细信息，请参阅[作业属性 - 新建作业（“计划”页）](../../ssms/agent/job-properties-new-job-schedules-page.md)。  
+5. 在“作业属性 – _job\_name_”对话框中的“选择页”下，选择“计划”。 有关此页上可用选项的详细信息，请参阅[作业属性 - 新建作业（“计划”页）](../../ssms/agent/job-properties-new-job-schedules-page.md)。  
   
 6. 完成后，单击 **“确定”** 。  
   

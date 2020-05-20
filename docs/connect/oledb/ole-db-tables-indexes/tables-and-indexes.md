@@ -31,7 +31,7 @@ ms.locfileid: "68015237"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  适用于 SQL Server 的 OLE DB 驱动程序公开 IIndexDefinition 和 ITableDefinition 接口，使使用者能够创建、更改和删除  **表和索引**  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 表和索引定义是否有效取决于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的版本。  
+  适用于 SQL Server 的 OLE DB 驱动程序公开 IIndexDefinition 和 ITableDefinition 接口，使使用者能够创建、更改和删除 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表和索引。 表和索引定义是否有效取决于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的版本。  
   
  创建或删除表和索引的功能取决于使用者应用程序用户的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 访问权限。 删除表的功能还可以通过是否存在声明性引用完整性约束或其他因素进行进一步限制。  
   

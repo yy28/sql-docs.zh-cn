@@ -66,7 +66,7 @@ ms.locfileid: "75243513"
   
 可以通过在 Transact\-SQL 脚本中使用 RAISERROR 语句来在服务器上直接使用 Transact\-SQL 断言。 其语法为：  
   
-RAISERROR ( **, @ErrorMessage, @ErrorSeverity)@ErrorState**  
+RAISERROR (@ErrorMessage, @ErrorSeverity, @ErrorState)  
   
 其中：  
   

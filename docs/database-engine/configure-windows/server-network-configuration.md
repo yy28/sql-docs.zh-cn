@@ -40,7 +40,7 @@ ms.locfileid: "68025608"
  配置为使用动态端口后，在每次启动时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的端口可能都会发生变化。 如果通过防火墙连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的端口。 将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为使用特定端口，这样就可以将防火墙配置为允许与服务器通信。 有关详细信息，请参阅[将服务器配置为侦听特定 TCP 端口（SQL Sever 配置管理器）](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)。  
   
 ### <a name="changing-a-named-pipe"></a>更改命名管道  
- 您可以配置命名管道协议以侦听指定的命名管道。 默认情况下，对于默认实例，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的默认实例将侦听管道 \\\\.\pipe\sql\query，而对于命名实例，将侦听管道 \\\\.\pipe\MSSQL$*实例名>\sql\query\<* 。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 只能侦听一个命名管道，但您可以根据需要将该管道更改为其他名称。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务可帮助客户端在连接时识别管道。 有关详细信息，请参阅[将服务器配置为侦听更改管道（SQL Sever 配置管理器）](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md)。  
+ 您可以配置命名管道协议以侦听指定的命名管道。 默认情况下，对于默认实例，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的默认实例将侦听管道 \\\\.\pipe\sql\query，而对于命名实例，将侦听管道 \\\\.\pipe\MSSQL$\<实例名>\sql\query。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 只能侦听一个命名管道，但您可以根据需要将该管道更改为其他名称。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务可帮助客户端在连接时识别管道。 有关详细信息，请参阅[将服务器配置为侦听更改管道（SQL Sever 配置管理器）](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md)。  
   
 ## <a name="force-encryption"></a>强行加密  
  可以将[!INCLUDE[ssDE](../../includes/ssde-md.md)]配置为在与客户端应用程序通信时要求加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  

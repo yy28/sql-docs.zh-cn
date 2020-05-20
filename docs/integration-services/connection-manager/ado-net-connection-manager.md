@@ -132,7 +132,7 @@ ms.locfileid: "74687275"
     
 - **在设计时进行配置。** 在 SSIS 设计器中，右键单击 ADO.NET 连接管理器，然后选择“属性”  。 将属性 `ConnectUsingManagedIdentity` 更新为 `True`。
     > [!NOTE]
-    >  目前，当你在 SSIS 设计器或 `ConnectUsingManagedIdentity` SQL Server 中运行 SSIS 包时，连接管理器属性 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 不生效（表明托管标识身份验证不起作用）。
+    >  目前，当你在 SSIS 设计器或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 中运行 SSIS 包时，连接管理器属性 `ConnectUsingManagedIdentity` 不生效（表明托管标识身份验证不起作用）。
     
 - **在运行时进行配置。** 通过 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/integration-services/ssis-quickstart-run-ssms) 或 [Azure 数据工厂执行 SSIS 包活动](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)运行包时，找到 ADO.NET 连接管理器。 将其属性 `ConnectUsingManagedIdentity` 更新为 `True`。
     > [!NOTE]

@@ -65,7 +65,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 要求具有 **sysadmin** 固定服务器角色或 **db_owner** 固定数据库角色的成员身份。
   
 ## <a name="examples"></a>示例  
-以下示例假设以 xp_sample.dll 实现 `xp_sample` 且已执行完毕。 DBCC \<dllname> (FREE) 会卸载与  *扩展过程相关联的 xp_sample.dll 文件*`xp_sample`。
+以下示例假设以 xp_sample.dll 实现 `xp_sample` 且已执行完毕。 DBCC \<dllname> (FREE) 会卸载与 `xp_sample` 扩展过程相关联的 xp_sample.dll 文件。
   
 ```sql  
 DBCC xp_sample (FREE);  

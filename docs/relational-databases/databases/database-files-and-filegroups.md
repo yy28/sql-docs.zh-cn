@@ -59,9 +59,9 @@ ms.locfileid: "79287981"
 ### <a name="logical-and-physical-file-names"></a>逻辑和物理文件名称
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件具有两种文件名类型： 
 
-**logical_file_name:**  logical_file_name 是在所有 Transact-SQL 语句中引用物理文件时所使用的名称。 逻辑文件名必须符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符规则，而且在数据库中的逻辑文件名中必须是唯一的。 这是由 `NAME` 的 `ALTER DATABASE` 参数设置的。 有关详细信息，请参阅 [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
+**logical_file_name:**  logical_file_name 是在所有 Transact-SQL 语句中引用物理文件时所使用的名称。 逻辑文件名必须符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符规则，而且在数据库中的逻辑文件名中必须是唯一的。 这是由 `ALTER DATABASE` 的 `NAME` 参数设置的。 有关详细信息，请参阅 [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
 
-**os_file_name:** os_file_name 是包括目录路径的物理文件的名称。 它必须符合操作系统文件命名规则。 这是由 `FILENAME` 的 `ALTER DATABASE` 参数设置的。 有关详细信息，请参阅 [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
+**os_file_name:** os_file_name 是包括目录路径的物理文件的名称。 它必须符合操作系统文件命名规则。 这是由 `ALTER DATABASE` 的 `FILENAME` 参数设置的。 有关详细信息，请参阅 [ALTER DATABASE 文件和文件组选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
 
 > [!IMPORTANT]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据和日志文件可以保存在 FAT 或 NTFS 文件系统中。 由于 NTFS 在安全方面具有优势，因此，建议在 Windows 系统上使用 NTFS 文件系统。 
@@ -84,7 +84,7 @@ ms.locfileid: "79287981"
 
 每个文件还可以指定一个最大大小。 如果没有指定最大大小，文件可以一直增长到用完磁盘上的所有可用空间。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为数据库嵌入某应用程序，而该应用程序的用户无法迅速与系统管理员联系，则此功能就特别有用。 用户可以使文件根据需要自动增长，以减轻监视数据库中的可用空间和手动分配额外空间的管理负担。  
 
-如果为 [ 启用 ](../../relational-databases/databases/database-instant-file-initialization.md)即时文件初始化 (IFI)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]则为数据文件分配新空间时会产生最小开销。
+如果为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启用 [即时文件初始化 (IFI)](../../relational-databases/databases/database-instant-file-initialization.md)则为数据文件分配新空间时会产生最小开销。
 
 有关事务日志文件管理的详细信息，请参阅[管理事务日志文件的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations)。   
 

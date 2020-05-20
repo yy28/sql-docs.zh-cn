@@ -148,7 +148,7 @@ ms.locfileid: "68100464"
   
 2.  在“SQL Server 服务”  节点中，右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（如 **SQL Server (MSSQLSERVER)** ），并选择“属性”  。  
   
-3.  在“SQL Server (**instance_name**) 属性”   对话框中，单击“启动参数”  选项卡。  
+3.  在“SQL Server (_instance_name_) 属性”对话框中，单击“启动参数”选项卡。  
   
 4.  在“现有参数”框中，选择 –d 参数以移动 master 数据文件  。 单击 **“更新”** 以保存更改。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "68100464"
   
      `-lE:\SQLData\mastlog.ldf`  
   
-6.  通过右键单击实例名称并选择“停止”[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**来停止**  实例。  
+6.  通过右键单击实例名称并选择“停止”来停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
 7.  将 master.mdf 和 mastlog.ldf 文件移动到新位置。  
   

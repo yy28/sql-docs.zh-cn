@@ -28,7 +28,7 @@ ms.locfileid: "75241383"
   
 ### <a name="to-navigate-between-scripts"></a>在脚本之间导航  
   
-1.  在“解决方案资源管理器”  中展开“函数”  文件夹，然后双击  “GetProductsBySupplier.sql”。  
+1.  在“解决方案资源管理器”中展开“函数”文件夹，然后双击“GetProductsBySupplier.sql”。  
   
 2.  在此行代码中右键单击 `Products`，然后选择“转到定义”   
   
@@ -38,5 +38,5 @@ ms.locfileid: "75241383"
   
 3.  Products.sql 将自动打开，并且显示定义 `Products` 类型的位置。  
   
-4.  返回到 GetProductsBySupplier.sql。 这次在  **的上下文菜单中选择“查找所有引用”** `Products`。 在“查找符号结果”  窗格中，你将看到引用了 `Products` 表的位置的列表。 双击任何搜索结果将转到该引用的位置。  
+4.  返回到 GetProductsBySupplier.sql。 这次在 `Products` 的上下文菜单中选择“查找所有引用”。 在“查找符号结果”  窗格中，你将看到引用了 `Products` 表的位置的列表。 双击任何搜索结果将转到该引用的位置。  
   

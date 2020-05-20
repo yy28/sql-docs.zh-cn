@@ -40,13 +40,13 @@ ms.locfileid: "71282171"
   
 -   [使用 Web 服务或远程组件以编程方式运行远程包](#service)  
   
- 本主题中用于加载和保存包的几乎所有方法都需要引用 Microsoft.SqlServer.ManagedDTS 程序集  。 但是本主题中演示的用于执行 sp_start_job 存储过程的 ADO.NET 方法是一个例外，该方法只需引用 System.Data   。 在新项目中添加对 Microsoft.SqlServer.ManagedDTS 程序集的引用后，请使用 using 或 Imports 语句导入  **命名空间**<xref:Microsoft.SqlServer.Dts.Runtime>   。  
+ 本主题中用于加载和保存包的几乎所有方法都需要引用 Microsoft.SqlServer.ManagedDTS 程序集  。 但是本主题中演示的用于执行 sp_start_job 存储过程的 ADO.NET 方法是一个例外，该方法只需引用 System.Data   。 在新项目中添加对 Microsoft.SqlServer.ManagedDTS 程序集的引用后，请使用 using 或 Imports 语句导入 <xref:Microsoft.SqlServer.Dts.Runtime> 命名空间。  
   
 ###  <a name="using-sql-server-agent-to-run-a-remote-package-programmatically-on-the-server"></a><a name="agent"></a>使用 SQL Server 代理以编程方式在服务器上运行远程包  
- 下面的代码示例演示如何以编程方式使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在服务器上运行远程包。 该示例代码调用系统存储过程 sp_start_job，该存储过程启动一个  **代理作业**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 该存储过程启动的作业名为 `RunSSISPackage`，并且此作业位于远程计算机上。 然后 `RunSSISPackage` 作业在远程计算机上运行包。  
+ 下面的代码示例演示如何以编程方式使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在服务器上运行远程包。 该示例代码调用系统存储过程 sp_start_job，该存储过程启动一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。 该存储过程启动的作业名为 `RunSSISPackage`，并且此作业位于远程计算机上。 然后 `RunSSISPackage` 作业在远程计算机上运行包。  
   
 > [!NOTE]  
->  sp_start_job 存储过程的返回值指示该存储过程是否已成功启动  **代理作业**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此返回值不指示该包成功还是失败。  
+>  sp_start_job 存储过程的返回值指示该存储过程是否已成功启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。 此返回值不指示该包成功还是失败。  
   
  有关对从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业运行的包进行故障排除的信息，请参阅 Microsoft 文章[从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行](https://support.microsoft.com/kb/918760)。  
   

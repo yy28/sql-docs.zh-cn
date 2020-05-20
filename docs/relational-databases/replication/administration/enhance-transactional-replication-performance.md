@@ -116,7 +116,7 @@ ms.locfileid: "76288174"
   
 **–SubscriptionStreams** 参数可以显著提高聚合复制吞吐量。 它使到一台订阅服务器的多个连接可以并行应用批量更改，同时在使用单线程时保持多个事务特征的存在。 如果有一个连接无法执行或提交，则所有连接将中止当前批处理，而且代理将用单独的流重试失败的批处理。 在重试阶段完成之前，订阅服务器上会存在临时事务不一致。 失败的批处理成功提交后，订阅服务器将恢复到事务一致状态。  
   
-可以使用 `@subscriptionstreams`sp_addsubscription &#40;Transact-SQL&#41;[ 的 ](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 来指定此代理参数的值。  
+可以使用 [sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 的 `@subscriptionstreams` 来指定此代理参数的值。  
 
 有关实施订阅流的详细信息，请参阅[导航 SQL 复制 subscriptionStream 设置](https://blogs.msdn.microsoft.com/repltalk/2010/03/01/navigating-sql-replication-subscriptionstreams-setting)。
   

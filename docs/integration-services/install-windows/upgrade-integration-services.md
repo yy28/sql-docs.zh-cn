@@ -55,9 +55,9 @@ ms.locfileid: "68262795"
 ## <a name="upgrading-integration-services"></a>升级 Integration Services  
  可以通过使用下列方法之一来进行升级：  
   
--   运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序，然后选择“从 SQL Server 2008、SQL Server 2008 R2、 **或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 升级 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]”选项**。  
+-   运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序，然后选择“从 SQL Server 2008、SQL Server 2008 R2、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 升级 **”选项**。  
   
--   在命令提示符处运行 **setup.exe** ，然后指定 **/ACTION=upgrade** 选项。 有关详细信息，请参阅[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]从命令提示符安装 SQL Server 2016[ 中的“](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 的安装脚本”部分。  
+-   在命令提示符处运行 **setup.exe** ，然后指定 **/ACTION=upgrade** 选项。 有关详细信息，请参阅[从命令提示符安装 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 中的“[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的安装脚本”部分。  
   
  不能通过升级执行下列操作：  
   

@@ -391,7 +391,7 @@ GO
   
 ```  
   
- 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的 `SELECT *` 语句将这个新列作为最后一列接收，而非作为第一列接收。 如果这样做是不可接受的，则您必须创建全新的表，将数据移到该表中，然后针对这个新表重新创建权限。  
+ 使用 `SELECT *` 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将这个新列作为最后一列接收，而非作为第一列接收。 如果这样做是不可接受的，则您必须创建全新的表，将数据移到该表中，然后针对这个新表重新创建权限。  
   
 ## <a name="related-content"></a>相关内容  
  [CREATE SEQUENCE (Transact-SQL)](../../t-sql/statements/create-sequence-transact-sql.md)  

@@ -90,7 +90,7 @@ ms.locfileid: "68084021"
     -  最大型索引维护操作所需的时间。
     -  在数据库中执行最大批操作所需的时间。
 
--   使用 `FILEGROWTH` 选项设置数据和日志文件的 autogrow 时，建议首选使用 size 而不是使用 percentage 进行设置，以便更好地控制增长比，因为 percentage 表示的是日益增长量    。
+-   使用 `FILEGROWTH` 选项设置数据和日志文件的 autogrow 时，建议首选使用 size 而不是使用 percentage 进行设置，以便更好地控制增长比，因为 percentage 表示的是日益增长量。
     -  请记住，事务日志不能利用[即时文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)，因此延长的日志增长时间尤其重要。 
     -  最佳做法是，针对日志事务，请勿将 `FILEGROWTH` 选项值设置为超过 1,024 MB。 `FILEGROWTH` 选项的默认值为：  
   
@@ -110,7 +110,7 @@ ms.locfileid: "68084021"
 
 -   日志文件可以设为自动收缩。 但是，不建议这样做，auto_shrink 数据库属性默认设为 FALSE   。 如果 auto_shrink 设置为 TRUE，则仅当其空间的 25% 以上未使用时，自动收缩才会减少文件的大小  。 
     -   文件将收缩至未使用空间占文件 25% 的大小，或者收缩至文件的原始大小，以两者中较大者为准。 
-    -   有关更改 auto_shrink 属性设置的详细信息，请参阅[查看或更改数据库的属性](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)和 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)  。 
+    -   有关更改 auto_shrink 属性设置的详细信息，请参阅[查看或更改数据库的属性](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)和 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。 
   
 ## <a name="see-also"></a>另请参阅  
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   

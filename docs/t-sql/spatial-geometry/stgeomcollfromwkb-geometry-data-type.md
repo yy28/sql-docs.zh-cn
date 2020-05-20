@@ -49,7 +49,7 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
  CLR 返回类型：SqlGeometry   
   
 ## <a name="remarks"></a>备注  
- **返回的 geometry 实例的 OGC 类型设置为 GeomCollection、MultiPolygon、MultiLineString 或 MultiPoint，具体取决于相应的 WKB 输入**`STGeomCollFromWKB()`     。  
+ `STGeomCollFromWKB()` 返回的 geometry 实例的 OGC 类型设置为 GeomCollection、MultiPolygon、MultiLineString 或 MultiPoint，具体取决于相应的 WKB 输入。  
   
  如果输入格式不正确，此方法会抛出 FormatException 异常。  
   

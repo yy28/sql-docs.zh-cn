@@ -76,7 +76,7 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
  要求具有加密提供程序的 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  
- 以下示例将 `SecurityProvider` 中一个名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的加密提供程序更改为更新版本的 .dll 文件。 该新版本名为 `c:\SecurityProvider\SecurityProvider_v2.dll` 并且安装在服务器上。 服务器上必须安装有该提供程序的证书。  
+ 以下示例将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中一个名为 `SecurityProvider` 的加密提供程序更改为更新版本的 .dll 文件。 该新版本名为 `c:\SecurityProvider\SecurityProvider_v2.dll` 并且安装在服务器上。 服务器上必须安装有该提供程序的证书。  
   
 1. 禁止该提供程序执行升级。 这样会终止所有打开的加密会话。  
 ```  

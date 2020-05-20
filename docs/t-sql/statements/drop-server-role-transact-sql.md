@@ -68,7 +68,7 @@ GO
 ```  
   
 ### <a name="b-to-view-role-membership"></a>B. 查看角色成员身份  
- 若要查看角色成员身份，请使用  **中的“服务器角色(成员)”** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]页或执行以下查询：  
+ 若要查看角色成员身份，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“服务器角色(成员)”页或执行以下查询：  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   

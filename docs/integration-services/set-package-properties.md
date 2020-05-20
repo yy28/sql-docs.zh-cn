@@ -112,7 +112,7 @@ ms.locfileid: "71281941"
 |**CreatorComputerName**|创建包的计算机的名称。|  
 |**CreatorName**|包创建者的姓名。|  
 |**说明**|包功能说明。|  
-|**ID**|包 GUID，该属性是在创建包时分配的。 此属性为只读。 若要生成 **ID** 属性的新随机值，请在下拉列表中选择 **“生成新 ID”\<\>** 。|  
+|**ID**|包 GUID，该属性是在创建包时分配的。 此属性为只读。 若要生成 **ID** 属性的新随机值，请在下拉列表中选择 \<“生成新 ID”\>。|  
 |**名称**|包的名称。|  
 |**PackageType**|包类型。 其值为： **Default**、 **DTSDesigner**、 **DTSDesigner100**、 **DTSWizard**、 **SQLDBMaint**和 **SQLReplication**。 此属性的默认值为 **Default**。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>。|  
   

@@ -37,7 +37,7 @@ ms.locfileid: "74055224"
 ###  <a name="security"></a><a name="Security"></a> Security  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> 权限  
- 执行 **sp_spaceused** 的权限授予 **public** 角色。 只有 db_owner 固定数据库角色的成员可以指定 **updateusage 参数** **\@** 。  
+ 执行 **sp_spaceused** 的权限授予 **public** 角色。 只有 db_owner 固定数据库角色的成员可以指定 **updateusage 参数\@**。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   

@@ -88,7 +88,7 @@ ms.locfileid: "71282478"
 ### <a name="debugging-the-sql-server-agent-jobs-and-child-packages"></a>调试 SQL Server 代理作业和子包  
  通过使用下列方法之一，可以测试 SQL Server 代理作业及其子包：  
   
--   通过单击“调试” **“开始执行(不调试)”在 SSIS 设计器中运行每个子包** /   。  
+-   通过单击“调试” / “开始执行(不调试)”在 SSIS 设计器中运行每个子包。  
   
 -   通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]在远程计算机上运行单个 SQL Server 代理作业，以确保包运行。  
   

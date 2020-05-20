@@ -46,7 +46,7 @@ ms.locfileid: "67950200"
  CLR 返回类型：SqlGeometry   
   
 ## <a name="remarks"></a>备注  
- 如果参数大于 **的结果，则此方法返回**null`STNumGeometries()`；如果 **expression** 参数小于 1，则将引发 *ArgumentOutOfRangeException*。  
+ 如果参数大于 `STNumGeometries()` 的结果，则此方法返回 **null**；如果 *expression* 参数小于 1，则将引发 **ArgumentOutOfRangeException**。  
   
 ## <a name="examples"></a>示例  
  以下示例创建 `MultiPoint``geometry collection` 并使用 `STGeometryN()` 查找该集合的第二个 `geometry` 实例。  

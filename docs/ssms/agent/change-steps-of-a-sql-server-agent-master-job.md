@@ -49,13 +49,13 @@ ms.locfileid: "75238080"
   
 4.  右键单击要修改步骤的作业，然后选择“属性”  。  
   
-5.  在“作业属性 - job**name”对话框中的“选择页”下，选择“步骤** _\__   。  
+5.  在“作业属性 - job\_name”对话框中的“选择页”下，选择“步骤。  
   
-6.  单击“编辑”，打开“作业步骤属性 -job **step**name”  对话框 _\_\__ 。 有关此对话框中的可用选项的详细信息，请参阅[作业步骤属性 - 新建作业步骤（“常规”页）](../../ssms/agent/job-step-properties-new-job-step-general-page.md)和[作业步骤属性 - 新建作业步骤（“高级”页）](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md)。  
+6.  单击“编辑”，打开“作业步骤属性 -job \_step\_name”对话框。 有关此对话框中的可用选项的详细信息，请参阅[作业步骤属性 - 新建作业步骤（“常规”页）](../../ssms/agent/job-step-properties-new-job-step-general-page.md)和[作业步骤属性 - 新建作业步骤（“高级”页）](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md)。  
   
 7.  完成后，单击 **“确定”** 。  
   
-8.  在“作业属性 - job**name”** _对话框中，单击“确定”\__  。  
+8.  在“作业属性 - job\_name”对话框中，单击“确定”。  
   
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a>使用 Transact-SQL  
   

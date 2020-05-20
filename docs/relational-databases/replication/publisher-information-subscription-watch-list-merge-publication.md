@@ -74,7 +74,7 @@ ms.locfileid: "75320612"
  每个订阅的名称，格式为：SubscriberName:  SubscriptionDatabaseName。  
   
  **友好名称**  
- 每个订阅的说明。 此说明是在“订阅属性”对话框中输入的，或是通过 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) 或 [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md) 的 `@description` 指定的  。 用户通常将说明用作订阅的“友好名称”或别名。  
+ 每个订阅的说明。 此说明是在“订阅属性”对话框中输入的，或是通过 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) 或 [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md) 的 `@description` 指定的。 用户通常将说明用作订阅的“友好名称”或别名。  
   
  **发布**  
  与订阅同步的发布的名称，格式为：PublicationDatabaseName:  PublicationName。  

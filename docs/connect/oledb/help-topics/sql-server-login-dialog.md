@@ -47,13 +47,13 @@ ms.locfileid: "72381745"
 |镜像服务器|指定要镜像的数据库的故障转移伙伴的名称。|
 |镜像 SPN|您还可以指定镜像服务器的 SPN。 镜像服务器的 SPN 用于在客户端和服务器之间相互进行身份验证。|
 |语言|指定用于 SQL Server 系统消息的国家/地区语言。 运行 SQL Server 的计算机必须安装该语言。 此设置将覆盖为该服务器上的登录名指定的默认语言。 如果未指定语言，连接将使用为该服务器上的登录名指定的默认语言。|
-|应用程序名称|指定将要存储在 sys.sysprocesses  中该连接所在行的 program_name  列中的应用程序名称。|
-|工作站 ID|指定将要存储在 sys.sysprocesses  中该连接所在行的 hostname  列中的工作站 ID。|
+|应用程序名称|指定将要存储在 sys.sysprocesses 中该连接所在行的 program_name 列中的应用程序名称。|
+|工作站 ID|指定将要存储在 sys.sysprocesses 中该连接所在行的 hostname 列中的工作站 ID。|
 |对数据使用强加密|如果选中，将对通过连接传递的数据进行加密。|
 |信任服务器证书|如果选中，将验证服务器证书。 服务器证书必须具有正确的服务器主机名，并由受信任的证书颁发机构颁发。|
 
 > [!NOTE]  
-> 当使用 `Windows Authentication` 或 `SQL Server Authentication` 模式时，仅当启用“对数据使用强加密”  选项时，才考虑“信任服务器证书”  。
+> 当使用 `Windows Authentication` 或 `SQL Server Authentication` 模式时，仅当启用“对数据使用强加密”选项时，才考虑“信任服务器证书”。
 
 ## <a name="next-steps"></a>后续步骤
 - 使用 OLE DB 驱动程序[对 Azure Active Directory 进行身份验证](../features/using-azure-active-directory.md)。

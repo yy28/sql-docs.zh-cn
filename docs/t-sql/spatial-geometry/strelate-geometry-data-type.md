@@ -38,7 +38,7 @@ ms.locfileid: "68066314"
   
 ## <a name="arguments"></a>参数  
  *other_geometry*  
- 将与调用  **的实例进行比较的另一个 geometry 实例**`STRelate()`。  
+ 将与调用 `STRelate()` 的实例进行比较的另一个 geometry 实例。  
   
  *intersection_pattern_matrix*  
  两个 **geometry** 实例间的 DE-9IM 模式矩阵设备的 **nchar(9)** 类型编码可接受值字符串。  

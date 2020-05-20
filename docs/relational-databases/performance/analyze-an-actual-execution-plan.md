@@ -40,7 +40,7 @@ ms.locfileid: "72289325"
   
 ## <a name="to-analyze-an-execution-plan-for-a-query"></a>分析查询的执行计划  
   
-1.  使用“文件”菜单打开以前保存的查询执行计划文件 (.sqlplan) 并单击“打开文件”或将计划文件拖到  **窗口**  [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]。 或者，如果刚执行了查询并选择显示其执行计划，请移动到结果窗格中的“执行计划”选项卡中  。 
+1.  使用“文件”菜单打开以前保存的查询执行计划文件 (.sqlplan) 并单击“打开文件”或将计划文件拖到 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 窗口。 或者，如果刚执行了查询并选择显示其执行计划，请移动到结果窗格中的“执行计划”选项卡中  。 
 
 2.  右键单击执行计划的空白区域，然后单击“分析实际执行计划”  。 
 

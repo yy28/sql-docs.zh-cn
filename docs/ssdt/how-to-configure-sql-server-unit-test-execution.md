@@ -38,7 +38,7 @@ ms.locfileid: "75241569"
   
 1.  在“解决方案资源管理器”  中右键单击单元测试项目，然后单击“SQL Server 测试配置”  。  
   
-    将显示“SQL Server 测试配置 -‘ **’”<projectname>** 对话框。  
+    将显示“SQL Server 测试配置 -‘<projectname>’”对话框。  
   
 2.  在“数据库连接”  下，可以执行下列操作：  
   
@@ -50,7 +50,7 @@ ms.locfileid: "75241569"
   
     此步骤将创建一个用于在单元测试中执行测试脚本的 `ExecutionContext` 连接字符串。 如果您还指定了辅助连接，则还将创建 `PrivilegedContext` 连接字符串。 此连接用于在单元测试中的测试脚本之外测试与数据库的交互。 有关详细信息，请参阅[连接字符串和权限概述](../ssdt/overview-of-connection-strings-and-permissions.md)。  
   
-3.  单击“确定”  以关闭“SQL Server 测试配置 -‘ **’”<projectname>** 对话框。  
+3.  单击“确定”以关闭“SQL Server 测试配置 -‘<projectname>’”对话框。  
   
 4.  重新生成测试项目以应用配置更改。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "75241569"
   
 3.  在“解决方案资源管理器”  中右键单击单元测试项目，然后单击“SQL Server 测试配置”  。  
   
-    将显示“SQL Server 测试配置 -‘ **’”<projectname>** 对话框。  
+    将显示“SQL Server 测试配置 -‘<projectname>’”对话框。  
   
 4.  在“部署”  下，可执行下列操作：  
   
@@ -76,7 +76,7 @@ ms.locfileid: "75241569"
   
     -   在“部署配置”  下，单击要针对其进行部署的项目配置。 可以选择“调试”  、“默认值”  或“发布”  。 但是，如果您为单元测试创建配置，则该配置也将作为选项显示。  
   
-5.  单击“确定”  以关闭“SQL Server 测试配置 -‘ **’”<projectname>** 对话框。  
+5.  单击“确定”以关闭“SQL Server 测试配置 -‘<projectname>’”对话框。  
   
     在测试运行开始时，将运行在步骤 1 中生成的 Transact\-SQL 脚本。 此操作会将架构部署到目标数据库。  
   

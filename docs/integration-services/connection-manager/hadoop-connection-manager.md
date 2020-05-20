@@ -28,7 +28,7 @@ ms.locfileid: "77903784"
   
 ## <a name="configure-the-hadoop-connection-manager"></a>配置 Hadoop 连接管理器  
   
-1.  在“添加 SSIS 连接管理器”对话框中，选择“Hadoop” > “添加”    。 此时将打开“Hadoop 连接管理器编辑器”  对话框。  
+1.  在“添加 SSIS 连接管理器”对话框中，选择“Hadoop” > “添加”。 此时将打开“Hadoop 连接管理器编辑器”  对话框。  
   
 2.  若要配置相关的 Hadoop 群集信息，请在左窗格中选择“WebHCat”或“WebHDFS”选项卡   。
   
@@ -152,7 +152,7 @@ ms.locfileid: "77903784"
 
     在配置后重新启动 KDC 服务。
 
-2.  在 KDC 服务器上准备名为“krbtgt/REALM\@AD.COM”的主体  。 使用以下命令：
+2.  在 KDC 服务器上准备名为“krbtgt/REALM\@AD.COM”的主体。 使用以下命令：
 
     `Kadmin> addprinc krbtgt/REALM.COM@AD.COM`
 
@@ -167,15 +167,15 @@ ms.locfileid: "77903784"
     C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
     ```
 
-2.  建立从 Windows 域到 Kerberos 领域的信任。 在下面的示例中，`[password]` 是主体 krbtgt/REALM.COM\@AD.COM 的密码  。
+2.  建立从 Windows 域到 Kerberos 领域的信任。 在下面的示例中，`[password]` 是主体 krbtgt/REALM.COM\@AD.COM 的密码。
 
     `C:> netdom trust REALM.COM /Domain: AD.COM /add /realm /password:[password]`
 
 3.  选择要与 Kerberos 一起使用的加密算法。
 
-    1. 转到“服务器管理器” > “组策略管理” > “域”    。 从此处转到“组策略对象” > “默认或活动的域策略” > “编辑”    。
+    1. 转到“服务器管理器” > “组策略管理” > “域”。 从此处转到“组策略对象” > “默认或活动的域策略” > “编辑”。
 
-    2. 在“组策略管理编辑器”弹出窗口中，转到“计算机配置” > “策略” > “Windows 设置”     。 从此处转到“安全设置” > “本地策略” > “安全选项”    。 配置“网络安全:  配置 Kerberos 允许的加密类型”。
+    2. 在“组策略管理编辑器”弹出窗口中，转到“计算机配置” > “策略” > “Windows 设置”。 从此处转到“安全设置” > “本地策略” > “安全选项”。 配置“网络安全:  配置 Kerberos 允许的加密类型”。
 
     3. 选择想要用来连接到 KDC 的加密算法。 通常，可以选择任一选项。
 
@@ -187,9 +187,9 @@ ms.locfileid: "77903784"
 
 4.  若要在 Windows 域中使用 Kerberos 主体，请创建域帐户和 Kerberos 主体之间的映射。
 
-    1. 转到“管理工具” > “Active Directory 用户和计算机”   。
+    1. 转到“管理工具” > “Active Directory 用户和计算机”。
 
-    2. 通过选择“视图” > “高级功能”，配置高级功能   。
+    2. 通过选择“视图” > “高级功能”，配置高级功能。
 
     3. 找到要创建映射的帐户，右键单击以查看“名称映射”，然后选择“Kerberos 名称”选项卡   。
 

@@ -79,13 +79,13 @@ SQLRETURN SQLGetDescField(
 
  `nn nn [n sensitivityprops]`
 
-对于每个列 (c)  ，均存在 n  4 字节 *`sensitivityprops`* ：
+对于每个列 (c)，均存在 n 4 字节 `sensitivityprops`：
 
  `ss ss tt tt`
 
-s - 索引到 *`sensitivitylabels`* 数组，如果未标记，则为 `FF FF`
+s - 索引到 `sensitivitylabels` 数组，如果未标记，则为 `FF FF`
 
-t - 索引到 *`informationtypes`* 数组，如果未标记，则为 `FF FF`
+t - 索引到 `informationtypes` 数组，如果未标记，则为 `FF FF`
 
 
 <br><br>
@@ -244,9 +244,9 @@ int main(int argc, char **argv)
 ```
 
 ## <a name="supported-version"></a><a name="bkmk-version"></a>支持的版本
-如果 `SQLGetDescField` 设置为 `FieldIdentifier` (1237)，Microsoft ODBC Driver 17.2 将允许通过 `SQL_CA_SS_DATA_CLASSIFICATION` 检索数据分类信息。 
+如果 `FieldIdentifier` 设置为 `SQL_CA_SS_DATA_CLASSIFICATION` (1237)，Microsoft ODBC Driver 17.2 将允许通过 `SQLGetDescField` 检索数据分类信息。 
 
-从 Microsoft ODBC Driver 17.4.1.1 开始，可以使用 `SQLGetDescField` (1238) 字段标识符通过 `SQL_CA_SS_DATA_CLASSIFICATION_VERSION` 检索服务器支持的数据分类版本。 在 17.4.1.1 中，支持的数据分类版本设置为“2”。
+从 Microsoft ODBC Driver 17.4.1.1 开始，可以使用 `SQL_CA_SS_DATA_CLASSIFICATION_VERSION` (1238) 字段标识符通过 `SQLGetDescField` 检索服务器支持的数据分类版本。 在 17.4.1.1 中，支持的数据分类版本设置为“2”。
 
  
 

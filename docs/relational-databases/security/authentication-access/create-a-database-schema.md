@@ -86,7 +86,7 @@ ms.locfileid: "72903747"
     CREATE TABLE Chains.Sizes (ChainID int, width dec(10,2));
     ```
 
-4.  可在单个语句中执行的其他选项。 下面的示例将创建由 Annik 所有、包含表 `Sprockets` 的 `NineProngs` 架构。 该语句向 Mandar 授予 `SELECT` 权限，而对 Prasanna 拒绝授予 `SELECT` 权限。  
+4.  可在单个语句中执行的其他选项。 下面的示例将创建由 Annik 所有、包含表 `NineProngs` 的 `Sprockets` 架构。 该语句向 Mandar 授予 `SELECT` 权限，而对 Prasanna 拒绝授予 `SELECT` 权限。  
 
     ```sql  
     CREATE SCHEMA Sprockets AUTHORIZATION Annik  

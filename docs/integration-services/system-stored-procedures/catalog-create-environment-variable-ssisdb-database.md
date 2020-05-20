@@ -90,7 +90,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
  此存储过程验证变量的数据类型，以确保它受 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录支持。  
   
 > [!TIP]  
->  请考虑在  **中使用 Int16**[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型，而不使用不受支持的 Sbyte  数据类型。  
+>  请考虑在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中使用 Int16 数据类型，而不使用不受支持的 Sbyte 数据类型。  
   
  使用 value  参数传递给此存储过程的值将根据下表，从 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型：  
   

@@ -54,7 +54,7 @@ ms.locfileid: "80216890"
   
 3.  将“数据流”  组件从“SSIS 工具箱”  拖到“控制流”  选项卡的设计图面。  
   
-4.  在“控制流”  中双击“数据流”  组件打开“数据流设计器”  。  
+4.  在“控制流”中双击“数据流”组件打开“数据流设计器”。  
   
 5.  将 **源组件** 从工具箱拖到“数据流设计器”，然后并将它配置为从数据源提取数据。   
   
@@ -71,7 +71,7 @@ ms.locfileid: "80216890"
   
     4.  将“OLE DB 源”  组件从“SSIS 工具箱”  拖到“数据流设计器”  。  
   
-    5.  将组件配置为从 **TestDB** 数据库中的 **Employee** 表提取数据。 为“OLE DB 连接管理器”  选择“(local).TestDB”  ，为“数据访问模式”  选择“表或视图”  ，为“表或视图的名称”  选择“[dbo].[Employee]”  。  
+    5.  将组件配置为从 **TestDB** 数据库中的 **Employee** 表提取数据。 为“OLE DB 连接管理器”选择“(local).TestDB”，为“数据访问模式”选择“表或视图”，为“表或视图的名称”选择“[dbo].[Employee]”。  
   
          ![数据流目标 - OLE DB 连接](../../integration-services/data-flow/media/dsd-oledbconnectionmanager.jpg "数据流目标 - OLE DB 连接")  
   
@@ -94,7 +94,7 @@ ms.locfileid: "80216890"
   
 1.  通过运行 C:\Program Files\Microsoft SQL Server\130\DTS\Binn 中的 ISDataFeedPublishingWizard.exe，或者单击“开始\所有程序”下的 Microsoft SQL Server 2016\SQL Server 2016 Data Feed Publishing Wizard，来启动 **SSIS 数据馈送发布向导** 。  
   
-2.  在“简介”  页上，单击“下一步”  。  
+2.  在“简介”页上，单击“下一步”。  
   
      ![数据馈送发布向导 -“简介”页](../../integration-services/data-flow/media/dsd-feedpublishingwizard-introductionpage.jpg "数据馈送发布向导 -“简介”页")  
   
@@ -138,13 +138,13 @@ ms.locfileid: "80216890"
   
     6.  单击“下一步”  切换到“验证”页  。  
   
-5.  在“验证”页上，检查验证所有设置的值后返回的结果。  在以下示例中，你将看到针对链接服务器存在状态的 **警告** ，因为选定的 SQL Server 实例上不存在链接服务器。 如果你看到“结果”  中包含“错误”  ，请将鼠标悬停在“错误”  ，这样便可以查看有关该错误的详细信息。 例如，如果你尚未启用“允许对 SSISOLEDB 提供程序使用 inprocess 选项”，则在执行链接服务器配置操作时会收到错误。  
+5.  在“验证”页上，检查验证所有设置的值后返回的结果。  在以下示例中，你将看到针对链接服务器存在状态的 **警告** ，因为选定的 SQL Server 实例上不存在链接服务器。 如果你看到“结果”中包含“错误”，请将鼠标悬停在“错误”，这样便可以查看有关该错误的详细信息。 例如，如果你尚未启用“允许对 SSISOLEDB 提供程序使用 inprocess 选项”，则在执行链接服务器配置操作时会收到错误。  
   
      ![数据馈送发布向导 -“验证”页](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "数据馈送发布向导 -“验证”页")  
   
 6.  若要将此报告保存为 XML 文件，请单击“保存报告”。  
   
-7.  在“验证”  页上单击“下一步”  切换到“摘要”  页。  
+7.  在“验证”页上单击“下一步”切换到“摘要”页。  
   
 8.  在“摘要”  页中检查所做的选择，然后单击“发布”  启动发布过程。这将会创建链接服务器（如果服务器上没有链接服务器），然后使用链接服务器创建视图。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "80216890"
   
 1.  启动 SQL Server Management Studio。  
   
-2.  展开“\<计算机名称>”、“数据库”、“**你在向导中选择的数据库>”和“视图”**  \<   。  
+2.  展开“\<计算机名称>”、“数据库”、“\<你在向导中选择的数据库>”和“视图”。  
   
 3.  右键单击向导创建的“\<向导创建的视图>”，然后单击“选择前 1000 行”   。  
   

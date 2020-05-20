@@ -48,7 +48,7 @@ ms.locfileid: "71711059"
   
      也可以使用非订阅服务器名称或分发服务器名称的值来覆盖此函数。 应用程序通常会用更有意义的值来覆盖此函数，如销售人员姓名或销售人员 ID。 有关详细信息，请参阅本主题中的“覆盖 HOST_NAME() 值”部分。  
   
- 将系统函数返回的值与在要筛选的表中指定的列进行比较，并将相应的数据下载到订阅服务器。 此比较是在初始化订阅时（因此初始快照中仅包含相应的数据）和每次同步订阅时进行的。 默认情况下，如果发布服务器上的更改导致行移出分区，则该行将从订阅服务器中删除（可以使用 `@allow_partition_realignment`sp_addmergepublication &#40;Transact-SQL&#41;[ 的 ](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 参数控制此行为）。  
+ 将系统函数返回的值与在要筛选的表中指定的列进行比较，并将相应的数据下载到订阅服务器。 此比较是在初始化订阅时（因此初始快照中仅包含相应的数据）和每次同步订阅时进行的。 默认情况下，如果发布服务器上的更改导致行移出分区，则该行将从订阅服务器中删除（可以使用 [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 的 `@allow_partition_realignment` 参数控制此行为）。  
   
 > [!NOTE]  
 >  对参数化筛选器进行比较时，将始终使用数据库排序规则。 例如，如果数据库排序规则不区分大小写，而表或列排序规则区分大小写，那么该比较将不区分大小写。  
@@ -95,15 +95,15 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  例如，为雇员 Pamela Ansman-Wolfe 分配的雇员 ID 为 280。 为此雇员创建订阅时，为 HOST_NAME() 值指定雇员 ID 值（在此例中为 280）。 合并代理连接到发布服务器时，会将 HOST_NAME() 返回的值与表中的值进行比较，并仅下载 **EmployeeID** 列中值为 280 的行。  
   
 > [!IMPORTANT]
->  HOST_NAME() 函数会返回 **nchar** 值，因此如果筛选子句中的列为数值数据类型（如前面示例所示），则必须使用 CONVERT。 出于性能方面的考虑，建议您不要对参数化行筛选器子句（如 `CONVERT(nchar,EmployeeID) = HOST_NAME()`）中的列名应用函数。 建议改为使用示例中所示的方法： `EmployeeID = CONVERT(int,HOST_NAME())`。 此子句可用于 `@subset_filterclause`sp_addmergearticle[ 的 ](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 参数，但通常不能在新建发布向导中使用（该向导会执行筛选子句以对其进行验证，而此验证会失败，因为计算机名称无法转换为 int中，参数化筛选器称为“动态筛选器”）  。 如果使用的是新建发布向导，建议在向导中指定 `CONVERT(nchar,EmployeeID) = HOST_NAME()` ，然后在为发布创建快照之前，使用 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 将子句更改为 `EmployeeID = CONVERT(int,HOST_NAME())` 。  
+>  HOST_NAME() 函数会返回 **nchar** 值，因此如果筛选子句中的列为数值数据类型（如前面示例所示），则必须使用 CONVERT。 出于性能方面的考虑，建议您不要对参数化行筛选器子句（如 `CONVERT(nchar,EmployeeID) = HOST_NAME()`）中的列名应用函数。 建议改为使用示例中所示的方法： `EmployeeID = CONVERT(int,HOST_NAME())`。 此子句可用于 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 的 `@subset_filterclause` 参数，但通常不能在新建发布向导中使用（该向导会执行筛选子句以对其进行验证，而此验证会失败，因为计算机名称无法转换为 int中，参数化筛选器称为“动态筛选器”）。 如果使用的是新建发布向导，建议在向导中指定 `CONVERT(nchar,EmployeeID) = HOST_NAME()` ，然后在为发布创建快照之前，使用 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 将子句更改为 `EmployeeID = CONVERT(int,HOST_NAME())` 。  
   
  **覆盖 HOST_NAME() 值**  
   
  使用下列方法之一覆盖 HOST_NAME() 值：  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：在新建订阅向导的“HOST**NAME\_\( 值”\)** 页中，指定一个值。 有关创建订阅的详细信息，请参阅[订阅发布](../../../relational-databases/replication/subscribe-to-publications.md)。  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：在新建订阅向导的“HOST\_NAME\(\) 值”页中，指定一个值。 有关创建订阅的详细信息，请参阅[订阅发布](../../../relational-databases/replication/subscribe-to-publications.md)。  
   
--   复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编程：为 `@hostname`sp_addmergesubscription &#40;Transact-SQL&#41;[（对于推送订阅）或 ](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;[（对于请求订阅）的 ](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) 参数指定一个值。  
+-   复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编程：为 [sp_addmergesubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)（对于推送订阅）或 [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)（对于请求订阅）的 `@hostname` 参数指定一个值。  
   
 -   合并代理：在命令行中或通过代理配置文件指定 **-Hostname** 参数的值。 有关合并代理的详细信息，请参阅 [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)。 有关代理配置文件的详细信息，请参阅 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   

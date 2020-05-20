@@ -36,5 +36,5 @@ ms.locfileid: "72251487"
 为了承载发布服务器数据库，SQL Server 实例必须为复制发布服务器。 **sp_validate_redirected_publisher** 在远程服务器上调用 **sp_helpdistributor** 来确定该服务器是否为复制发布服务器。 此错误表示 SQL Server 的目标实例不是复制发布服务器。  
   
 ## <a name="user-action"></a>用户操作  
-在承载发布服务器数据库的 SQL Server 实例上执行 sp_adddistributor  。 在运行 **sp_adddistributor** 时，指定正确的分发服务器。 为 *password 参数使用与最初在分发服务器上运行 sp_adddistributor 时使用的值相同的值\@*  。  
+在承载发布服务器数据库的 SQL Server 实例上执行 sp_adddistributor  。 在运行 **sp_adddistributor** 时，指定正确的分发服务器。 为 \@password 参数使用与最初在分发服务器上运行 sp_adddistributor 时使用的值相同的值。  
   

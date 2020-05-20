@@ -72,7 +72,7 @@ catalog.deploy_project [@folder_name =] folder_name
   
 -   参数引用的对象不存在，参数试图创建的对象已存在，或者参数在某个其他方面无效  
   
--   参数 *project_name 的值与部署文件中的项目的名称不匹配\@* 。  
+-   参数 \@project_name 的值与部署文件中的项目的名称不匹配。  
   
 -   用户不具备足够的权限  
   

@@ -99,7 +99,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine /INSTANCENAME=MSSQLSERVER /SQL
 ### <a name="using-ssnoversion-configuration-manager-remotely"></a>远程使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器  
 这些步骤用于在运行 Windows 的客户端版的电脑上执行，或在安装了服务器图形 Shell 的 Windows Server 上运行。  
   
-1. 打开“计算机管理”  。 要打开“计算机管理”，请单击“启动”，键入 **，然后单击“确定”**  `compmgmt.msc`  。    
+1. 打开“计算机管理”  。 要打开“计算机管理”，请单击“启动”，键入 `compmgmt.msc`，然后单击“确定”。    
   
 2. 在控制台树中，右键单击“计算机管理”，再单击“连接到另一台计算机...”   。  
   
@@ -107,9 +107,9 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine /INSTANCENAME=MSSQLSERVER /SQL
   
 4. 在控制台树中，单击服务器核心计算机的“计算机管理”下的“服务和应用程序”   。  
   
-5. 双击“ **配置管理器”[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 。  
+5. 双击“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器”。  
   
-6. 在“ **配置管理器”中，单击“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务”、右键单击“** ”(**instance name)，其中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instance name> 是要启用 AlwaysOn 可用性组的本地服务器实例的名称，然后单击“属性”** **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** \<\<。  
+6. 在“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器”中，单击“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务”、右键单击“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]”(\<instance name)，其中 \<instance name> 是要启用 AlwaysOn 可用性组的本地服务器实例的名称，然后单击“属性”。  
   
 7. 选择 **“AlwaysOn 高可用性”** 选项卡。  
   

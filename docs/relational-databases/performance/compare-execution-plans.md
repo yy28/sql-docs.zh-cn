@@ -42,7 +42,7 @@ ms.locfileid: "76910240"
 - [查询存储](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)中两个选定的查询计划。
 
 > [!TIP]
-> 计划比较适用于所有 .sqlplan 文件，包括较旧版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件  。 此外，此选项还支持脱机比较，因此无需连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 
+> 计划比较适用于所有 .sqlplan 文件，包括较旧版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件。 此外，此选项还支持脱机比较，因此无需连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 
 
 比较两个执行计划时，本质上执行相同操作的计划区域会以相同颜色和样式突出显示  。 如果单击一个计划中的某个彩色区域，焦点会同时集中在另一个计划的匹配节点上。 仍可以对不同执行计划中不匹配的运算符和节点进行比较，但在这种情况下，必须手动选择运算符才能比较。
 
@@ -51,7 +51,7 @@ ms.locfileid: "76910240"
   
 ## <a name="to-compare-execution-plans"></a>比较执行计划
   
-1.  使用“文件”菜单打开以前保存的查询执行计划文件 (.sqlplan) 并单击“打开文件”或将计划文件拖到 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 窗口   。 或者，如果刚执行了查询并选择显示其执行计划，请移动到结果窗格中的“执行计划”选项卡中  。 
+1.  使用“文件”菜单打开以前保存的查询执行计划文件 (.sqlplan) 并单击“打开文件”或将计划文件拖到 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 窗口。 或者，如果刚执行了查询并选择显示其执行计划，请移动到结果窗格中的“执行计划”选项卡中  。 
 
 2.  右键单击执行计划的空白区域，然后单击“比较显示计划”  。 
 
@@ -69,7 +69,7 @@ ms.locfileid: "76910240"
      > [!TIP]
      > 可用于执行计划的所有缩放和导航选项均在计划比较模式下工作。 有关详细信息，请参阅[显示实际执行计划](../../relational-databases/performance/display-an-actual-execution-plan.md)。
 
-5.  在默认选择范围内，右侧还会显示一个双属性窗口。 如果属性同时存在于两个被比较的运算符中但有差异，属性前面会带有不等号 (&ne;)，这样更易识别  。
+5.  在默认选择范围内，右侧还会显示一个双属性窗口。 如果属性同时存在于两个被比较的运算符中但有差异，属性前面会带有不等号 (&ne;)，这样更易识别。
 
     ![双属性窗口](../../relational-databases/performance/media/plancomparison-properties.png "双属性窗口")  
 
@@ -86,7 +86,7 @@ ms.locfileid: "76910240"
 
         ![比较的计划中的多个语句](../../relational-databases/performance/media/plancomparison-multiple.png "比较的计划中的多个语句")  
 
-    3.  在“方案”选项卡中，可以找到关于部分最相关方面的自动分析，查看与比较的计划间的[基数估算](../../relational-databases/performance/cardinality-estimation-sql-server.md)差异相关的内容  。 对于在左窗格中列出的每个运算符，右侧窗格会在“单击此处了解有关此方案的更多信息”链接中显示该方案的详细信息，并列出制定该方案的可能理由  。 
+    3.  在“方案”选项卡中，可以找到关于部分最相关方面的自动分析，查看与比较的计划间的[基数估算](../../relational-databases/performance/cardinality-estimation-sql-server.md)差异相关的内容。 对于在左窗格中列出的每个运算符，右侧窗格会在“单击此处了解有关此方案的更多信息”链接中显示该方案的详细信息，并列出制定该方案的可能理由  。 
 
         ![不同的估计行数](../../relational-databases/performance/media/plancomparison-scenarios.png "不同的估计行数")  
 

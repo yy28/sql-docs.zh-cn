@@ -49,7 +49,7 @@ CLR 返回类型：SqlGeography
 此方法返回一个点  。 在与 `EnvelopeAngle()` 一起使用时，`EnvelopeCenter()` 返回 geography 实例的一个边框圆  。  
   
 > [!NOTE]  
->  `EnvelopeCenter()` 返回 geography 实例的一个边框圆，但是不保证结果能够产生最小的边框圆  。 与此相反，geometry 数据类型方法  **在应用于 geometry 实例时可以保证返回最小的边框圆**`STEnvelope()`  。  
+>  `EnvelopeCenter()` 返回 geography 实例的一个边框圆，但是不保证结果能够产生最小的边框圆  。 与此相反，geometry 数据类型方法 `STEnvelope()` 在应用于 geometry 实例时可以保证返回最小的边框圆。  
   
 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本中，将表示此实例信封的圆的中心作为“点”返回  。 对于所有根据 `EnvelopeAngle()` = 180 定义的大型对象，`EnvelopeCenter()` 将返回 (90,0)。  
   

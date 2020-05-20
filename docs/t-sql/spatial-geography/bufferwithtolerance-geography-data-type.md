@@ -62,9 +62,9 @@ _relative_
 CLR 返回类型：SqlGeography   
   
 ## <a name="remarks"></a>备注  
-如果 distance  不是数字 (NAN)，或如果 distance  是正/负无穷大，此方法会抛出 ArgumentException  。  如果 tolerance  为零 (0)，而不是数字 (NaN)、负数或正/负无穷大，此方法也会抛出 ArgumentException  。  
+如果 distance 不是数字 (NAN)，或如果 distance 是正/负无穷大，此方法会抛出 ArgumentException。  如果 tolerance 为零 (0)，而不是数字 (NaN)、负数或正/负无穷大，此方法也会抛出 ArgumentException。  
   
-`STBuffer()` 在某些情况下将返回 FullGlobe 实例；例如，当缓冲区距离大于从赤道到两极的距离时， **在两极返回 FullGlobe 实例**`STBuffer()`  。  
+`STBuffer()` 在某些情况下将返回 FullGlobe 实例；例如，当缓冲区距离大于从赤道到两极的距离时，`STBuffer()` 在两极返回 FullGlobe 实例。  
   
 在缓冲区的距离超过下列限制的 FullGlobe 实例中，此方法将引发 ArgumentException   ：  
   

@@ -27,7 +27,7 @@ ms.locfileid: "77080600"
   
 ### <a name="to-add-or-edit-a-report-parameter"></a>添加或编辑报表参数  
   
-1.  在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或报表设计器的“报表数据”  窗格中，右键单击“参数”  节点，然后单击“添加参数”  。 此时将打开 **“报表参数属性”** 对话框。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 或报表设计器的“报表数据”窗格中，右键单击“参数”节点，然后单击“添加参数”。 此时将打开 **“报表参数属性”** 对话框。  
   
 2.  在 **“名称”** 中，键入参数的名称，或接受默认名称。  
   

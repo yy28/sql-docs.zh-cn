@@ -87,7 +87,7 @@ ms.locfileid: "76285944"
     > [!NOTE]  
     >  使用 CTRL 键可选择多个文件。  
   
-8.  （可选）重复步骤 6。 单击“浏览”选项卡，导航到 **COM，选择“Microsoft.SqlServer.Replication.BusinessLogicSupport.dll”，然后单击“确定”。** [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]   
+8.  （可选）重复步骤 6。 单击“浏览”选项卡，导航到 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM，选择“Microsoft.SqlServer.Replication.BusinessLogicSupport.dll”，然后单击“确定”。  
   
 9. 在 **“视图”** 菜单上，单击 **“代码”** 。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "76285944"
     > [!NOTE]  
     >  使用 CTRL 键可选择多个文件。  
   
-8.  （可选）重复步骤 6。 单击“浏览”选项卡，导航到 **COM，选择“Microsoft.SqlServer.Replication.BusinessLogicSupport.dll”，然后单击“确定”。** [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]   
+8.  （可选）重复步骤 6。 单击“浏览”选项卡，导航到 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM，选择“Microsoft.SqlServer.Replication.BusinessLogicSupport.dll”，然后单击“确定”。  
   
 9. 在 **“视图”** 菜单上，单击 **“代码”** 。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "76285944"
     ```  
   
 ## <a name="connecting-to-a-replication-server"></a>连接复制服务器  
- RMO 编程对象要求使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 类的实例连接 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 实例。 与该服务器的连接是独立于任何 RMO 编程对象的。 然后，在创建实例的过程中或在给 RMO 对象的 `P:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContex`t 属性赋值的过程中，该编程对象会传递给 RMO 对象。 采用这种方式，RMO 编程对象实例和连接对象实例可以分别创建和管理，而多个 RMO 编程对象可以重用一个连接对象。 连接复制服务器时适用下列规则：  
+ RMO 编程对象要求使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类的实例连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 与该服务器的连接是独立于任何 RMO 编程对象的。 然后，在创建实例的过程中或在给 RMO 对象的 `P:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContex`t 属性赋值的过程中，该编程对象会传递给 RMO 对象。 采用这种方式，RMO 编程对象实例和连接对象实例可以分别创建和管理，而多个 RMO 编程对象可以重用一个连接对象。 连接复制服务器时适用下列规则：  
   
 -   该连接的所有属性都对给定的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象定义。  
   

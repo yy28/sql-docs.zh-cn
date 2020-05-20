@@ -135,7 +135,7 @@ ms.locfileid: "71295672"
 11. 单击“确定”。 
 
 ## <a name="package-roles-dialog-box-ui-reference"></a><a name="roles_dialog"></a>“包角色”对话框 UI 参考
-  可以使用  **中的“包角色”** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框，指定具有包读取访问权限的数据库级角色以及具有包写入访问权限的数据库级角色。 数据库级角色仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 数据库中存储的包  。  
+  可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“包角色”对话框，指定具有包读取访问权限的数据库级角色以及具有包写入访问权限的数据库级角色。 数据库级角色仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 数据库中存储的包  。  
   
  该对话框中列出的角色是 **msdb** 系统数据库的当前数据库角色。 如果未选择任何角色，将应用默认的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 角色。 默认情况下，读取者角色包括 **db_ssisadmin**、 **db_ssisoperator**以及创建包的用户。 作为以上任一角色的成员的用户或创建该包的用户，可以枚举、查看、导出和运行包。 默认情况下，写入者角色包括 **db_ssisadmin** 和创建包的用户。 作为此角色的成员的用户和创建该包的用户，可以导入、删除和更改包。  
   

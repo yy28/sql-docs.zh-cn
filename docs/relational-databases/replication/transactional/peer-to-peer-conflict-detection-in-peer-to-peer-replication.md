@@ -87,7 +87,7 @@ ms.locfileid: "68041089"
   
 -   尝试通过允许分发代理继续应用所做的更改，再次同步节点：  
   
-    1.  执行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)：为 @property 参数指定“p2p_continue_onconflict”，为 **参数指定**true@value。  
+    1.  执行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)：为 @property 参数指定“p2p_continue_onconflict”，为 @value 参数指定 **true**。  
   
     2.  重新启动分发代理。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68041089"
         > [!NOTE]  
         >  如果在执行该步骤之后数据不一致，则必须在具有最高优先级的节点上手动更新行，然后允许从该节点传播所做的更改。 如果拓扑中不再有发生冲突的更改，则所有节点将保持一致状态。  
   
-    5.  执行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)：为 @property 参数指定“p2p_continue_onconflict”，为 **参数指定**false@value。  
+    5.  执行 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)：为 @property 参数指定“p2p_continue_onconflict”，为 @value 参数指定 **false**。  
   
 ## <a name="see-also"></a>另请参阅  
  [@loopback_detection](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  

@@ -103,7 +103,7 @@ WITH (
  GO
 ```
 
-在执行 `SEEDING_MODE` 语句期间在主要副本上设置 `CREATE AVAILABILITY GROUP` 不起作用，因为主要副本已包含数据库的主要读/写副本。 仅当另一个副本被设为主要副本并添加数据库时，才应用 `SEEDING_MODE`。 稍后可更改种子设定模式 - 请参阅[更改副本的种子设定模式](#change-the-seeding-mode-of-a-replica)。
+在执行 `CREATE AVAILABILITY GROUP` 语句期间在主要副本上设置 `SEEDING_MODE` 不起作用，因为主要副本已包含数据库的主要读/写副本。 仅当另一个副本被设为主要副本并添加数据库时，才应用 `SEEDING_MODE`。 稍后可更改种子设定模式 - 请参阅[更改副本的种子设定模式](#change-the-seeding-mode-of-a-replica)。
 
 在成为次要副本的实例上，一旦联接实例，SQL Server 日志中将添加以下消息：
 

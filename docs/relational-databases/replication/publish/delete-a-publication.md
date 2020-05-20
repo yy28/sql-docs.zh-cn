@@ -60,10 +60,10 @@ ms.locfileid: "76287639"
   
     -   若要删除单个发布，请在发布服务器上，对发布数据库执行 [sp_droppublication](../../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md) 。  
   
-    -   若要删除发布数据库中的所有发布并删除其中的所有复制对象，请在发布服务器上执行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 。 为 \@type 指定 tran 值   。 （可选）如果无法访问分发服务器，或者数据库的状态为可疑或脱机，则将 \@force 的值指定为 1   。 （可选）如果未对发布数据库执行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)，请为 \@dbname 指定数据库的名称  。  
+    -   若要删除发布数据库中的所有发布并删除其中的所有复制对象，请在发布服务器上执行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 。 为 \@type 指定 tran 值。 （可选）如果无法访问分发服务器，或者数据库的状态为可疑或脱机，则将 \@force 的值指定为 1。 （可选）如果未对发布数据库执行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)，请为 \@dbname 指定数据库的名称。  
   
         > [!NOTE]  
-        >  将 \@force 的值指定为 1 可能会使与复制相关的发布对象保留在数据库中   。  
+        >  将 \@force 的值指定为 1 可能会使与复制相关的发布对象保留在数据库中。  
   
 2.  如果此数据库中没有任何其他发布，则执行 [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) 以禁止当前数据库使用快照复制或事务复制进行发布。  
   
@@ -75,10 +75,10 @@ ms.locfileid: "76287639"
   
     -   若要删除单个发布，请在发布服务器上对发布数据库执行 [sp_dropmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)。  
   
-    -   若要删除发布数据库中的所有发布并删除其中的所有复制对象，请在发布服务器上执行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 。 为 \@type 指定 merge 值   。 （可选）如果无法访问分发服务器，或者数据库的状态为可疑或脱机，则将 \@force 的值指定为 1   。 （可选）如果未对发布数据库执行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)，请为 \@dbname 指定数据库的名称  。  
+    -   若要删除发布数据库中的所有发布并删除其中的所有复制对象，请在发布服务器上执行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 。 为 \@type 指定 merge 值。 （可选）如果无法访问分发服务器，或者数据库的状态为可疑或脱机，则将 \@force 的值指定为 1。 （可选）如果未对发布数据库执行 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)，请为 \@dbname 指定数据库的名称。  
   
         > [!NOTE]  
-        >  将 \@force 的值指定为 1 可能会使与复制相关的发布对象保留在数据库中   。  
+        >  将 \@force 的值指定为 1 可能会使与复制相关的发布对象保留在数据库中。  
   
 2.  如果此数据库中没有任何其他发布，则执行 [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) 以禁止当前数据库使用合并复制进行发布。  
   

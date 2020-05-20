@@ -32,9 +32,9 @@ ms.locfileid: "67989040"
 > 增大连接超时值和实现连接重试逻辑将增加应用程序连接到可用性组的概率。 此外，由于可用性组进行故障转移而可能使连接失败，您应实现连接重试逻辑，重试失败的连接，直至重新连接。  
   
 ## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 进行连接  
- 在连接到 SQL Server AlwaysOn 可用性组侦听程序或  **故障转移群集实例时，应始终指定 MultiSubnetFailover=Yes**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 MultiSubnetFailover 可加快  **中所有 AlwaysOn 可用性组和故障转移群集实例的故障转移速度，并且将显著缩短单子网和多子网 AlwaysOn 拓扑的故障转移时间**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 在多子网故障转移过程中，客户端将尝试并行进行连接。 在子网故障转移过程中，OLE DB Driver for SQL Server 将重试 TCP 连接。  
+ 在连接到 SQL Server AlwaysOn 可用性组侦听程序或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例时，应始终指定 MultiSubnetFailover=Yes。 MultiSubnetFailover 可加快 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中所有 AlwaysOn 可用性组和故障转移群集实例的故障转移速度，并且将显著缩短单子网和多子网 AlwaysOn 拓扑的故障转移时间。 在多子网故障转移过程中，客户端将尝试并行进行连接。 在子网故障转移过程中，OLE DB Driver for SQL Server 将重试 TCP 连接。  
   
- MultiSubnetFailover 连接属性指示应用程序正部署在某一可用性组或故障转移群集实例中，并且该 OLE DB Driver for SQL Server 将通过试图连接到所有的 IP 地址来尝试连接到主  **实例上的数据库**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 如果为连接指定的是 MultiSubnetFailover=Yes  ，客户端重试 TCP 连接的时间短于操作系统的默认 TCP 重传间隔。 这样，就可以在对 AlwaysOn 可用性组或故障转移群集实例执行故障转移之后更快地进行重新连接，这一点同时适用于单子网和多子网可用性组和故障转移群集实例。  
+ MultiSubnetFailover 连接属性指示应用程序正部署在某一可用性组或故障转移群集实例中，并且该 OLE DB Driver for SQL Server 将通过试图连接到所有的 IP 地址来尝试连接到主 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上的数据库。 如果为连接指定的是 MultiSubnetFailover=Yes  ，客户端重试 TCP 连接的时间短于操作系统的默认 TCP 重传间隔。 这样，就可以在对 AlwaysOn 可用性组或故障转移群集实例执行故障转移之后更快地进行重新连接，这一点同时适用于单子网和多子网可用性组和故障转移群集实例。  
   
  有关连接字符串关键字的详细信息，请参阅[将连接字符串关键字用于 OLE DB Driver for SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。  
   
@@ -123,7 +123,7 @@ OLE DB Driver for SQL Server 应用程序可以使用以下方法之一来设置
  IDataInitialize::GetDataSource 使用可包含 MultiSubnetFailover 关键字的输入连接字符串   。  
 
 -   **IDBProperties::SetProperties**  
-若要设置 MultiSubnetFailover  属性值，请调用 IDBProperties::SetProperties  ，从而传入值为 VARIANT_TRUE  或 VARIANT_FALSE  的 SSPROP_INIT_MULTISUBNETFAILOVER  属性，或值包含“MultiSubnetFailover=Yes”  或“MultiSubnetFailover=No”  的 DBPROP_INIT_PROVIDERSTRING  属性。
+若要设置 MultiSubnetFailover 属性值，请调用 IDBProperties::SetProperties，从而传入值为 VARIANT_TRUE 或 VARIANT_FALSE 的 SSPROP_INIT_MULTISUBNETFAILOVER 属性，或值包含“MultiSubnetFailover=Yes”或“MultiSubnetFailover=No”的 DBPROP_INIT_PROVIDERSTRING 属性。
 
 #### <a name="example"></a>示例
 

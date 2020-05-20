@@ -115,7 +115,7 @@ ms.locfileid: "68024988"
   
 9. 单击“关闭”  。  
   
-10. 在“文件”  菜单上，单击“保存 **table**name _”\__ 。  
+10. 在“文件”菜单上，单击“保存 _table\_name_”。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

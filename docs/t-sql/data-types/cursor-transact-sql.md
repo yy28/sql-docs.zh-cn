@@ -28,7 +28,7 @@ ms.locfileid: "71682077"
   
 ## <a name="remarks"></a>备注  
 有些操作可以引用那些具有 cursor 数据类型的变量和参数，这些操作包括  ：
--   DECLARE *local_variable 和 SET \@local_variable 语句* *\@* 。  
+-   DECLARE \@local_variable 和 SET \@local_variable 语句。  
 -   OPEN、FETCH、CLOSE 及 DEALLOCATE 游标语句。  
 -   存储过程输出参数。  
 -   CURSOR_STATUS 函数。  

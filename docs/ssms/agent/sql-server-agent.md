@@ -29,7 +29,7 @@ ms.locfileid: "75257936"
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理是一种 Microsoft Windows 服务，它在  *中执行计划的管理任务，即“作业”* [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理是一种 Microsoft Windows 服务，它在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中执行计划的管理任务，即“作业”。  
 
 ## <a name="benefits-of-sql-server-agent"></a><a name="Benefits"></a>SQL Server 代理的好处 
 
@@ -127,7 +127,7 @@ ms.locfileid: "75257936"
   
 |子系统名称|说明|  
 |--------------|-----------|  
-|Microsoft ActiveX 脚本|运行 ActiveX 脚本作业步骤。<br /><br />**警告** 在未来版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame_md.md)] 中，将从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理中删除 ActiveX 脚本编写子系统。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。|  
+|Microsoft ActiveX 脚本|运行 ActiveX 脚本作业步骤。<br /><br />**警告** 在未来版本的 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，将从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理中删除 ActiveX 脚本编写子系统。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。|  
 |操作系统 (**CmdExec**)|运行可执行程序。|  
 |PowerShell|运行 PowerShell 脚本作业步骤。|  
 |复制分发服务器|运行激活复制分发服务器代理的作业步骤。|  

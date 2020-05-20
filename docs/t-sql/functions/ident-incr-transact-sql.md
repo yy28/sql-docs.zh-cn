@@ -54,7 +54,7 @@ numeric  ([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),
 ## <a name="examples"></a>示例  
   
 ### <a name="a-returning-the-increment-value-for-a-specified-table"></a>A. 返回指定表的增量值  
- 以下示例返回 `Person.Address` 数据库中 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表的增量值。  
+ 以下示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `Person.Address` 表的增量值。  
   
 ```sql  
 USE AdventureWorks2012;  

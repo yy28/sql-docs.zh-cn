@@ -200,7 +200,7 @@ Ubuntu 的配置与 RHEL 类似。 但有一个主要区别：安装 Pacemaker �
 如果尚未安装 SQL Server HA 包和 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 代理，请使用以下命令安装它们。 安装 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 后安装 HA 包需要重新启动 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 才能使用。 这些说明假定已经设置了 Microsoft 包的存储库，因为此时应安装 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]。
 > [!NOTE]
 > - 如果不将 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 代理用于日志传送或任何其他用途，则不必安装它，这时可以跳过包 mssql-server-agent  。
-> - 其他用于 Linux 上的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 全文搜索 (mssql-server-fts) 和  *Integration Services (mssql-server-is) 的可选包对于高可用性、FCI 或 AG 都不是必需的*[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]  。
+> - 其他用于 Linux 上的 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 全文搜索 (mssql-server-fts) 和 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (mssql-server-is) 的可选包对于高可用性、FCI 或 AG 都不是必需的。
 
 **RHEL**
 

@@ -46,7 +46,7 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>参数  
- FILE ='path**to**file' _\_\__   
+ FILE ='path\_to\_file'  
  指定存储服务主密钥的完整路径（包括文件名）。 path_to_file 可以是本地路径，也可以是网络位置的 UNC 路径  。  
   
  PASSWORD ='password'     

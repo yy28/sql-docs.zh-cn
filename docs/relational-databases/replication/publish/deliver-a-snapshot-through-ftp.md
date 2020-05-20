@@ -47,11 +47,11 @@ ms.locfileid: "71710989"
  如果可能，请在运行时提示用户输入其凭据。 如果将凭据存储在脚本文件中，则必须确保此文件的安全。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 配置 FTP 服务器后，请在“发布属性 **发布>”对话框中为该服务器指定目录和安全信息。\<** 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
+ 配置 FTP 服务器后，请在“发布属性 \<发布>”对话框中为该服务器指定目录和安全信息。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
 #### <a name="to-specify-ftp-information"></a>指定 FTP 信息  
   
-1.  在“发布属性 - **发布>”对话框中，从以下任一页面选择“允许订阅服务器下载使用 FTP 的快照文件”。\<**   
+1.  在“发布属性 - \<发布>”对话框中，从以下任一页面选择“允许订阅服务器下载使用 FTP 的快照文件”。  
   
     -   “FTP 快照”页面，用于运行   之前版本的发布服务器的快照发布、事务发布以及合并发布[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "71710989"
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-snapshot-or-transactional-publication"></a>为快照发布或事务发布启用 FTP 快照传递  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)。 指定 `@publication`，为  **指定值 true，并为以下参数指定适当的值**`@enabled_for_internet`：  
+1.  在发布服务器上，对发布数据库执行 [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)。 指定 `@publication`，为 `@enabled_for_internet` 指定值 true，并为以下参数指定适当的值：  
   
     -   `@ftp_address` - 用于传递快照的 FTP 服务器的地址。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "71710989"
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-merge-publication"></a>为合并发布启用 FTP 快照传递  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 指定 `@publication`，为  **指定值 true，并为以下参数指定适当的值**`@enabled_for_internet`：  
+1.  在发布服务器上，对发布数据库执行 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。 指定 `@publication`，为 `@enabled_for_internet` 指定值 true，并为以下参数指定适当的值：  
   
     -   `@ftp_address` - 用于传递快照的 FTP 服务器的地址。  
   

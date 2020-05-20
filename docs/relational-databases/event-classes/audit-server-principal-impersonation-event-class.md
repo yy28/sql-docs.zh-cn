@@ -21,7 +21,7 @@ ms.locfileid: "67913375"
 ---
 # <a name="audit-server-principal-impersonation-event-class"></a>Audit Server Principal Impersonation 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  当服务器范围内存在模拟情况（如 EXECUTE AS  登录名\<>）时会发生 *Audit Server Principal Impersonation* 事件类。  
+  当服务器范围内存在模拟情况（如 EXECUTE AS \<*登录名*>）时会发生 **Audit Server Principal Impersonation** 事件类。  
   
 ## <a name="audit-server-principal-impersonation-event-class-data-columns"></a>Audit Server Principal Impersonation 事件类的数据列  
   

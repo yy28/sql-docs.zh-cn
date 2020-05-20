@@ -62,7 +62,7 @@ ms.locfileid: "71290730"
 
 - 示例数据、已完成的包、配置和自述文件。 要将示例数据和课程包下载为 Zip 文件，请参阅 [SQL Server Integration Services 教程文件](https://www.microsoft.com/download/details.aspx?id=56827)。 为了防止意外更改发生，zip 文件中的大部分文件都是只读文件。 若要将输出写入到文件或更改输出，必须在文件属性中禁用只读属性。
 
--   AdventureWorks2014 示例数据库  。 要下载 AdventureWorks2014 数据库，请从 [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)（AdventureWorks 示例数据库）下载 `AdventureWorks2014.bak`，并还原备份  。  
+-   AdventureWorks2014 示例数据库  。 要下载 AdventureWorks2014 数据库，请从 [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)（AdventureWorks 示例数据库）下载 `AdventureWorks2014.bak`，并还原备份。  
 
 -   必须具有在 AdventureWorks 数据库中创建和删除表的权限。
     
@@ -76,7 +76,7 @@ ms.locfileid: "71290730"
 
 - 示例数据、已完成的包、配置和自述文件。 要将示例数据和课程包下载为 Zip 文件，请参阅 [SQL Server Integration Services 教程文件](https://www.microsoft.com/download/details.aspx?id=56827)。 为了防止意外更改发生，zip 文件中的大部分文件都是只读文件。 若要将输出写入到文件或更改输出，必须在文件属性中禁用只读属性。
 
--   AdventureWorks2014 示例数据库  。 要下载 AdventureWorks2014 数据库，请从 [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)（AdventureWorks 示例数据库）下载 `AdventureWorks2014.bak`，并还原备份  。  
+-   AdventureWorks2014 示例数据库  。 要下载 AdventureWorks2014 数据库，请从 [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)（AdventureWorks 示例数据库）下载 `AdventureWorks2014.bak`，并还原备份。  
     
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。    
     

@@ -20,7 +20,7 @@ ms.locfileid: "73594417"
 # <a name="configure-always-encrypted-using-powershell"></a>使用 PowerShell 配置 Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-SqlServer PowerShell 模块提供用于在 [ 或 ](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 中配置 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]Always Encrypted[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 cmdlet。
+SqlServer PowerShell 模块提供用于在 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中配置 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 的 cmdlet。
 
 ## <a name="security-considerations-when-using-powershell-to-configure-always-encrypted"></a>使用 PowerShell 配置 Always Encrypted 时的安全注意事项
 

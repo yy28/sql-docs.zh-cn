@@ -115,7 +115,7 @@ GO
 ```  
   
 ### <a name="create-a-new-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 创建新的语义索引  
- 运行全文索引向导并在“选择表列”  页为每个要创建语义索引的列启用“统计语义”  。 有关详细信息，包括有关如何启动全文索引向导的信息，请参阅 [使用全文索引向导](../../relational-databases/search/use-the-full-text-indexing-wizard.md)。  
+ 运行全文索引向导并在“选择表列” 页为每个要创建语义索引的列启用“统计语义” 。 有关详细信息，包括有关如何启动全文索引向导的信息，请参阅 [使用全文索引向导](../../relational-databases/search/use-the-full-text-indexing-wizard.md)。  
   
 ##  <a name="create-a-semantic-index-when-there-is-an-existing-full-text-index"></a><a name="HowToEnableAlter"></a> 在存在现有全文索引时创建语义索引  
  在使用 **ALTER FULLTEXT INDEX** 语句更改现有全文索引时，可以添加语义索引。 您还可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用各种对话框添加语义索引。  
@@ -144,7 +144,7 @@ GO
 ```  
   
 ### <a name="add-a-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 添加语义索引  
- 可以在“全文索引属性”  对话框的“全文索引列”  页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
+ 可以在“全文索引属性”对话框的“全文索引列”页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
 
 ## <a name="alter-a-semantic-index"></a>更改语义索引
   
@@ -158,7 +158,7 @@ GO
 在使用 **ALTER FULLTEXT INDEX** 语句更改现有全文索引时，可以删除语义索引。 您还可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用各种对话框删除语义索引。  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>使用 Transact-SQL 删除语义索引  
-要仅从一个或多个列删除语义索引，请使用 ALTER COLUMNcolumn**nameDROP STATISTICAL_SEMANTICS 选项调用 ALTER FULLTEXT INDEX 语句**  _\__  。 可以在单个 **ALTER** 语句中从多个列删除索引。  
+要仅从一个或多个列删除语义索引，请使用 ALTER COLUMNcolumn\_nameDROP STATISTICAL_SEMANTICS 选项调用 ALTER FULLTEXT INDEX 语句。 可以在单个 **ALTER** 语句中从多个列删除索引。  
   
 ```sql  
 USE database_name  
@@ -170,7 +170,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-要从一列同时删除全文索引和语义索引，请使用 ALTER COLUMNcolumn**nameDROP 选项调用 ALTER FULLTEXT INDEX 语句**  _\__  。  
+要从一列同时删除全文索引和语义索引，请使用 ALTER COLUMNcolumn\_nameDROP 选项调用 ALTER FULLTEXT INDEX 语句。  
   
 ```sql  
 USE database_name  
@@ -183,7 +183,7 @@ GO
 ```  
   
  ### <a name="drop-a-semantic-index-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 删除语义索引  
- 可以在“全文索引属性”  对话框的“全文索引列”  页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
+ 可以在“全文索引属性”对话框的“全文索引列”页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
   
 ###  <a name="requirements-and-restrictions-for-dropping-a-semantic-index"></a><a name="dropreq"></a> 删除语义索引的要求和限制  
   
@@ -194,7 +194,7 @@ GO
 ## <a name="check-whether-semantic-search-is-enabled-on-database-objects"></a>检查是否在数据库对象上启用了语义搜索  
 ### <a name="is-semantic-search-enabled-for-a-database"></a>是否为数据库启用了语义搜索？
   
- 查询 **DATABASEPROPERTYEX (Transact-SQL)** 元数据函数的 [IsFullTextEnabled](../../t-sql/functions/databasepropertyex-transact-sql.md) 属性。  
+ 查询 [DATABASEPROPERTYEX (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md) 元数据函数的 **IsFullTextEnabled** 属性。  
   
  返回值 1 表示为数据库启用了全文搜索和语义搜索；返回值 0 表示未启用它们。  
   
@@ -205,7 +205,7 @@ GO
   
 ### <a name="is-semantic-search-enabled-for-a-table"></a>是否为表启用了语义搜索？  
  
- 查询 **OBJECTPROPERTYEX (Transact-SQL)** 元数据函数的 [TableFullTextSemanticExtraction](../../t-sql/functions/objectpropertyex-transact-sql.md) 属性。  
+ 查询 [OBJECTPROPERTYEX (Transact-SQL)](../../t-sql/functions/objectpropertyex-transact-sql.md) 元数据函数的 **TableFullTextSemanticExtraction** 属性。  
   
  返回值 1 表示为表启用了语义搜索；返回值 0 表示未启用它。  
   
@@ -218,7 +218,7 @@ GO
    
  若要确定是否为特定列启用了语义搜索：  
   
--   查询 **COLUMNPROPERTY (Transact-SQL)** 元数据函数的 [StatisticalSemantics](../../t-sql/functions/columnproperty-transact-sql.md) 属性。  
+-   查询 [COLUMNPROPERTY (Transact-SQL)](../../t-sql/functions/columnproperty-transact-sql.md) 元数据函数的 **StatisticalSemantics** 属性。  
   
      返回值 1 表示为列启用了语义搜索；返回值 0 表示未启用它。  
   

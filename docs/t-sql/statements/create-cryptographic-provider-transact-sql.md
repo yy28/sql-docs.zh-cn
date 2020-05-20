@@ -68,7 +68,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  要求具有 CONTROL SERVER 权限，或者具有 sysadmin 固定服务器角色的成员身份  。  
   
 ## <a name="examples"></a>示例  
- 下面的示例通过 .dll 文件在 `SecurityProvider` 中创建名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的加密提供程序。 此 .dll 文件命名为 `c:\SecurityProvider\SecurityProvider_v1.dll` 并安装在服务器上。 必须首先在服务器上安装此提供程序的证书。  
+ 下面的示例通过 .dll 文件在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建名为 `SecurityProvider` 的加密提供程序。 此 .dll 文件命名为 `c:\SecurityProvider\SecurityProvider_v1.dll` 并安装在服务器上。 必须首先在服务器上安装此提供程序的证书。  
   
 ```  
 -- Install the provider  

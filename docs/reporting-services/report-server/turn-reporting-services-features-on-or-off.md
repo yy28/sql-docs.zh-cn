@@ -21,7 +21,7 @@ ms.locfileid: "67140373"
 # <a name="turn-reporting-services-features-on-or-off"></a>打开或关闭 Reporting Services 功能
   您可以关闭不用作锁定策略一部分的报表服务器功能，以减小生产报表服务器的攻击面。 在大多数情况下，需要同时运行各种 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能才能使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中提供的所有功能。 但是根据所用的部署模型，您可以禁用不需要的功能。 例如，如果所有报表处理均已配置为预定操作，则可以只启用后台处理。 同样，如果只需要交互式的按需报表，可以只运行报表服务器 Web 服务。  
   
- 本文中的过程展示了如何禁用本机模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 可以不同的方式配置这些功能，如直接编辑 `RsReportServer.config` 文件或使用  **中基于策略的管理的“Reporting Services 的外围应用配置”** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]方面。 使用以下链接可以找到说明如何打开或关闭相应功能的步骤：  
+ 本文中的过程展示了如何禁用本机模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 可以不同的方式配置这些功能，如直接编辑 `RsReportServer.config` 文件或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中基于策略的管理的“Reporting Services 的外围应用配置”方面。 使用以下链接可以找到说明如何打开或关闭相应功能的步骤：  
   
 -   [报表服务器 Web 服务](#RSWebSvc)  
   

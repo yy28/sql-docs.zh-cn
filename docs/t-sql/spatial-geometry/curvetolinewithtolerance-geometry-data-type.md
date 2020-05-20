@@ -72,7 +72,7 @@ ms.locfileid: "67929302"
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. 在 CircularString 实例上使用不同的公差值  
- 以下示例说明设置容差如何影响从 `LineString` 实例返回的 `CircularString` 实例：  
+ 以下示例说明设置容差如何影响从 `CircularString` 实例返回的 `LineString` 实例：  
   
 ```
  DECLARE @g geometry; 

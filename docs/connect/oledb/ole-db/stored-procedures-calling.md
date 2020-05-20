@@ -95,7 +95,7 @@ ms.locfileid: "68015198"
   
  使用 ODBC CALL 转义序列调用过程的常用语法是：  
   
- {[?=  ]call  procedure_name\__ [(  [parameter  ][,  [parameter  ]]...)  ]}  
+ {[?=]callprocedure\_name[([parameter][,[parameter]]...)]}  
   
  例如：  
   

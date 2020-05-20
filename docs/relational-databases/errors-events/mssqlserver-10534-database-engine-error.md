@@ -30,10 +30,10 @@ ms.locfileid: "72304780"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|PG_INVALID_PARAMS|  
-|消息正文|无法创建计划指南“%.\*ls”，因为为 **params\@** 指定的值无效。 请以 *parameter_name parameter_type* 的形式指定该值，或指定 NULL。|  
+|消息正文|无法创建计划指南“%.\*ls”，因为为 \@params 指定的值无效。 请以 *parameter_name parameter_type* 的形式指定该值，或指定 NULL。|  
   
 ## <a name="explanation"></a>说明  
-为 **params\@** 指定的值无效。  
+为 \@params 指定的值无效。  
   
 ## <a name="user-action"></a>用户操作  
 请以 *parameter_name parameter_type* 的形式指定该值，或指定 NULL。  

@@ -21,7 +21,7 @@ ms.locfileid: "75241494"
 
 如果更喜欢使用脚本来创建或编辑视图、存储过程、函数、触发器或用户定义的类型，则可以使用 Transact\-SQL 编辑器。 Transact\-SQL 编辑器提供 IntelliSense 和其他语言支持。 有关详细信息，请参阅[使用 Transact-SQL 编辑器编辑和执行脚本](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md)。  
   
-在使用“查看代码”\-**上下文菜单在连接的数据库或项目中打开某一数据库实体时，将调用 Transact**SQL 编辑器。 在从 SQL Server 对象资源管理器使用“新建查询”  上下文菜单或者向数据库项目添加新的脚本对象时，该编辑器也自动打开。 如果没有连接到某一数据库，但想要对其执行查询，则也可以使用“新建查询连接”  对话框，方法是：从“SQL”  菜单中选择“Transact-SQL 编辑器”  菜单以连接到某一数据库，然后启动 Transact\-SQL 编辑器。  
+在使用“查看代码”上下文菜单在连接的数据库或项目中打开某一数据库实体时，将调用 Transact\-SQL 编辑器。 在从 SQL Server 对象资源管理器使用“新建查询”  上下文菜单或者向数据库项目添加新的脚本对象时，该编辑器也自动打开。 如果没有连接到某一数据库，但想要对其执行查询，则也可以使用“新建查询连接”对话框，方法是：从“SQL”菜单中选择“Transact-SQL 编辑器”菜单以连接到某一数据库，然后启动 Transact\-SQL 编辑器。  
   
 > [!WARNING]  
 > 下面的过程利用在[连接的数据库开发](../ssdt/connected-database-development.md)一节的前面的过程中创建的实体。  
@@ -42,9 +42,9 @@ ms.locfileid: "75241494"
     );  
     ```  
   
-3.  单击 Transact**SQL 编辑器工具栏中的“执行查询”** \-按钮以便运行此查询。  
+3.  单击 Transact\-SQL 编辑器工具栏中的“执行查询”按钮以便运行此查询。  
   
-4.  右键单击“SQL Server 对象资源管理器”  中的“Trade”  数据库，然后选择“刷新”  。 请注意，新的 Fruits  表已添加到该数据库中。  
+4.  右键单击“SQL Server 对象资源管理器”中的“Trade”数据库，然后选择“刷新”。 请注意，新的 Fruits  表已添加到该数据库中。  
   
 ### <a name="to-create-a-new-function"></a>创建新的函数  
   
@@ -73,7 +73,7 @@ ms.locfileid: "75241494"
     END  
     ```  
   
-    此函数将返回 `Products` 表中其 `SupplierId` 等于指定参数的所有行。 单击 Transact**SQL 编辑器工具栏中的“执行查询”** \-按钮以便运行此查询。  
+    此函数将返回 `Products` 表中其 `SupplierId` 等于指定参数的所有行。 单击 Transact\-SQL 编辑器工具栏中的“执行查询”按钮以便运行此查询。  
   
 2.  在 SQL Server 对象资源管理器中的 Trade  节点下，展开“可编程性”  和“函数”  节点。 可以在“表值函数”  下找到刚创建的新函数。  
   

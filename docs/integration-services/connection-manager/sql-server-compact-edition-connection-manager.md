@@ -63,7 +63,7 @@ ms.locfileid: "71294353"
  输入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库的路径和文件名。  
   
  **“浏览”**  
- 通过使用“选择 SQL Server Compact Edition 数据库”[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**对话框找到所需的**  Compact 数据库文件。  
+ 通过使用“选择 SQL Server Compact Edition 数据库”对话框找到所需的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库文件。  
   
  **输入数据库密码**  
  输入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 数据库的密码。  

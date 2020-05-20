@@ -59,7 +59,7 @@ ms.locfileid: "67934084"
   
 5.  右键单击要更新的统计信息对象，然后选择  “属性”。  
   
-6.  在“统计信息属性 - statistics**name”对话框中，选中“更新这些列的统计信息”复选框，然后单击“确定”** _\__   。  
+6.  在“统计信息属性 - statistics\_name”对话框中，选中“更新这些列的统计信息”复选框，然后单击“确定”。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

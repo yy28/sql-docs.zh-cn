@@ -41,7 +41,7 @@ ms.locfileid: "71286827"
   
 1.  创建三个字符串变量：`email`、`name` 和 `title`。 输入一个有效的企业电子邮件地址作为 `email` 变量的值。  
   
-2.  在“脚本任务编辑器”的“脚本”页，将  **变量添加到 ReadOnlyVariables 属性中**  `email`  。  
+2.  在“脚本任务编辑器”的“脚本”页，将 `email` 变量添加到 ReadOnlyVariables 属性中。  
   
 3.  将 `name` 和 `title` 变量添加到 ReadWriteVariables  属性中。  
   

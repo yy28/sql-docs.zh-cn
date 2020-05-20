@@ -50,7 +50,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
  [ @profile_value = ] profile_value   
  需要新的自定义日志记录级别记录的统计信息。  
   
- 统计信息的有效值包括以下内容。 这些值与“自定义日志记录级别管理”  对话框的“统计信息”  选项卡上的值相对应。  
+ 统计信息的有效值包括以下内容。 这些值与“自定义日志记录级别管理”对话框的“统计信息”选项卡上的值相对应。  
   
 -   执行 = 0  
   
@@ -63,7 +63,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
  [ @events_value = ] events_value   
  需要新的自定义日志记录级别记录的事件。  
   
- 事件的有效值包括以下内容。 这些值与“自定义日志记录级别管理”  对话框的“事件”  选项卡上的值相对应。  
+ 事件的有效值包括以下内容。 这些值与“自定义日志记录级别管理”对话框的“事件”选项卡上的值相对应。  
   
 |没有事件上下文的事件|具有事件上下文的事件|  
 |----------------------------------|-------------------------------|  
@@ -77,7 +77,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
  level_id  为 bigint  。  
   
 ## <a name="remarks"></a>备注  
- 若要合并 Transact-SQL 中用于 profile_value 或 events_value 参数的的多个值，请按此示例中的操作执行   。 若要捕获 OnError (8) 和 DiagnosticEx (15) 事件，计算 events_value 的公式为  `2^8 + 2^15 = 33024`。  
+ 若要合并 Transact-SQL 中用于 profile_value 或 events_value 参数的的多个值，请按此示例中的操作执行   。 若要捕获 OnError (8) 和 DiagnosticEx (15) 事件，计算 events_value 的公式为 `2^8 + 2^15 = 33024`。  
   
 ## <a name="return-codes"></a>返回代码  
  0（成功）  

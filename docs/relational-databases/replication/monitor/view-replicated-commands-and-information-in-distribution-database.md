@@ -38,7 +38,7 @@ ms.locfileid: "76286328"
   
 1.  （可选）在发布服务器的发布数据库中，执行 [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)。 指定 `@publication` 和 `@article`。 请记录结果集中 **article id** 的值。  
   
-2.  在分发服务器的分发数据库中，执行 [sp_browsereplcmds](../../../relational-databases/system-stored-procedures/sp-browsereplcmds-transact-sql.md)。 （可选）为 `@article_id` 指定从步骤 2 中得到的项目 ID。 （可选）为 `@publisher_database_id`指定发布数据库的 ID，此 ID 可以从 [sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图的 database_id 列获得  。  
+2.  在分发服务器的分发数据库中，执行 [sp_browsereplcmds](../../../relational-databases/system-stored-procedures/sp-browsereplcmds-transact-sql.md)。 （可选）为 `@article_id` 指定从步骤 2 中得到的项目 ID。 （可选）为 `@publisher_database_id`指定发布数据库的 ID，此 ID 可以从 [sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图的 database_id 列获得。  
   
 ## <a name="see-also"></a>另请参阅  
  [以编程方式监视复制](../../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

@@ -36,7 +36,7 @@ ms.locfileid: "74056516"
 >  针对的列必须启用了全文索引和语义索引。  
   
 ###  <a name="example-find-the-top-documents-that-are-similar-to-another-document"></a><a name="HowToIdentifySimilar"></a> Example: Find the top documents that are similar to another document  
- 以下示例从 AdventureWorks2012 示例数据库的 HumanResources.JobCandidate 表中检索与按 *CandidateID 指定的候选人最相似的 10 个候选人\@* 。  
+ 以下示例从 AdventureWorks2012 示例数据库的 HumanResources.JobCandidate 表中检索与按 \@CandidateID 指定的候选人最相似的 10 个候选人。  
   
 ```scr  
 SELECT TOP(10) KEY_TBL.matched_document_key AS Candidate_ID  

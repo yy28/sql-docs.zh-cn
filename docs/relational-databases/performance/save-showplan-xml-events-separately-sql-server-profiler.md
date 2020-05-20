@@ -23,7 +23,7 @@ ms.locfileid: "74165585"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>单独保存 Showplan XML 事件 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主题介绍了如何使用 **将在跟踪中捕获到的** Showplan XML [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]事件分别保存到单独的 .SQLPlan 文件中。 可在 **中打开**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Showplan XML 事件文件，以便查看每个事件以图形表示的执行计划。  
+  本主题介绍了如何使用 **将在跟踪中捕获到的** Showplan XML [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]事件分别保存到单独的 .SQLPlan 文件中。 可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中打开 Showplan XML 事件文件，以便查看每个事件以图形表示的执行计划。  
   
 ## <a name="save-showplan-xml-events-separately"></a>分别保存 Showplan XML 事件  
   

@@ -43,7 +43,7 @@ ms.locfileid: "79090517"
    traceflag0 = 1204
    ```
 
-1. 将 `mssql-custom.conf` 文件复制到 `/var/opt/mssql` Pod 中的 `mssql-server` 容器中的 `master-0`。 将 `<namespaceName>` 替换为大数据群集名称。
+1. 将 `mssql-custom.conf` 文件复制到 `master-0` Pod 中的 `mssql-server` 容器中的 `/var/opt/mssql`。 将 `<namespaceName>` 替换为大数据群集名称。
 
    ```bash
    kubectl cp mssql-custom.conf master-0:/var/opt/mssql/mssql-custom.conf -c mssql-server -n <namespaceName>

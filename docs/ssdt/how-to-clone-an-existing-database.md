@@ -34,19 +34,19 @@ ms.locfileid: "75241592"
   
 3.  将这个新数据库重命名为 TradeDev  。  
   
-4.  右键单击“SQL Server 对象资源管理器”  中的“Trade”  数据库，然后选择“架构比较”  。 按照[如何：使用架构比较来比较不同数据库定义](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)主题中的步骤，选择原始的 Trade  数据库作为源，选择新的 TradeDev  数据库作为目标。 这将使用来自 Trade  的架构更新 TradeDev  。  
+4.  右键单击“SQL Server 对象资源管理器”中的“Trade”数据库，然后选择“架构比较”。 按照[如何：使用架构比较来比较不同数据库定义](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)主题中的步骤，选择原始的 Trade  数据库作为源，选择新的 TradeDev  数据库作为目标。 这将使用来自 Trade 的架构更新 TradeDev。  
   
 ### <a name="to-replicate-data"></a>复制数据  
   
 1.  上一步仅将生产数据库的架构复制到开发数据库。 在本过程中，您将生产数据复制到开发数据库。  
   
-    在 Trade  数据库中右键单击 Suppliers  表，然后选择“查看数据”  。 数据编辑器随即打开。  
+    在 Trade 数据库中右键单击 Suppliers 表，然后选择“查看数据”。 数据编辑器随即打开。  
   
-2.  在工具栏中单击“最大行”  旁边的“脚本”  按钮。  
+2.  在工具栏中单击“最大行”旁边的“脚本”按钮。  
   
 3.  在脚本窗口打开后，请确保 Connected 显示在 Transact\-SQL 脚本窗格之下的状态栏中。 如果显示 Disconnected，则单击“连接”  按钮（工具栏中最左侧的按钮）并且输入你的服务器信息和凭据。  
   
-4.  在“连接”  **“断开连接”** /按钮旁的“数据库”  下拉菜单中，选择 TradeDev  。 这类似于 Transact\-SQL`USE` 语句，并且将确保代码编辑器中的脚本将对 TradeDev  数据库执行。  
+4.  在“连接”/“断开连接”按钮旁的“数据库”下拉菜单中，选择 TradeDev。 这类似于 Transact\-SQL`USE` 语句，并且将确保代码编辑器中的脚本将对 TradeDev  数据库执行。  
   
 5.  单击“执行查询”  按钮以执行 `INSERT` 语句。 这会将来自 `Suppliers` 数据库的 `Trade` 表的所有行插入到 `Suppliers` 数据库的 `TradeDev` 表中。  
   

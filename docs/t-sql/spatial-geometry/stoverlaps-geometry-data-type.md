@@ -38,7 +38,7 @@ ms.locfileid: "68140919"
   
 ## <a name="arguments"></a>参数  
  *other_geometry*  
- 将与调用  **的实例进行比较的另一个 geometry 实例**`STOverlaps()`。  
+ 将与调用 `STOverlaps()` 的实例进行比较的另一个 geometry 实例。  
   
 ## <a name="return-types"></a>返回类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回类型：bit   
@@ -48,7 +48,7 @@ ms.locfileid: "68140919"
 ## <a name="remarks"></a>备注  
  如果表示两个 **geometry** 实例交集的区域与这两个实例具有相同的维度，而且该区域不等于这两个实例当中的任意一个，则说明这两个实例重叠。  
   
- 如果两个 `STOverlaps()`geometry**实例的交点与这两个实例具有不同的维度，则** 始终返回 0。  
+ 如果两个 **geometry** 实例的交点与这两个实例具有不同的维度，则 `STOverlaps()` 始终返回 0。  
   
  如果 geometry 实例的空间引用 ID (SRID) 不匹配，则此方法始终返回 null  。  
   
