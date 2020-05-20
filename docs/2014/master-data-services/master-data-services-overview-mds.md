@@ -13,19 +13,19 @@ ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0beb45070e9f6c0294dc18d966f3100263f7d852
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7ac1acb47c6345bb2b746b2e3a3e1817b63a3e75
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176026"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886374"
 ---
 # <a name="master-data-services-overview"></a>Master Data Services 概述
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，模型是你的主数据结构中的最高级别的容器。 创建一个模型来管理类似数据的组，例如管理联机产品数据。 模型包含一个或多个实体，而实体包含属于数据记录的成员。
 
 |||
 |-|-|
-|![Azure 虚拟机](../../2014/master-data-services/media/azure-virtual-machine.png "Azure 虚拟机")|是否想要试用 SQL Server 2016？ 注册 Microsoft Azure，然后转到 **[此处](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 以加速已安装有 SQL Server 2016 的虚拟机。 完成后，可以删除虚拟机。|
+|![Azure 虚拟机](../../2014/master-data-services/media/azure-virtual-machine.png "Azure 虚拟机")|是否想要试用 SQL Server 2016？ 注册 Microsoft Azure，然后转到 **[此处](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)** 以加速已安装有 SQL Server 2016 的虚拟机。 完成后，可以删除虚拟机。|
 
  例如，你的在线产品模型可能包含多个实体（如 Product、Color 和 Style）。 Color 实体可以含有红色、银色和黑色成员。
 
@@ -48,7 +48,7 @@ ms.locfileid: "78176026"
 > [!NOTE]
 >  您最好在测试环境中完成以下任务并且使用在按照 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]时提供的示例数据。 有关详细信息，请参阅[部署模型 (Master Data Services)](../../2014/master-data-services/deploying-models-master-data-services.md)。
 
-|操作|详细信息|“相关主题”|
+|操作|详细信息|相关主题|
 |------------|-------------|--------------------|
 |创建模型|在您创建一个模型时，该模型将被视作 VERSION_1。|[模型 (Master Data Services)](../../2014/master-data-services/models-master-data-services.md)<br /><br /> [创建模型 (Master Data Services)](../../2014/master-data-services/create-a-model-master-data-services.md)|
 |创建实体|可以创建所需的任何数目的实体以便包含您的成员。|[实体 (Master Data Services)](../../2014/master-data-services/entities-master-data-services.md)<br /><br /> [创建实体 (Master Data Services)](../../2014/master-data-services/create-an-entity-master-data-services.md)|

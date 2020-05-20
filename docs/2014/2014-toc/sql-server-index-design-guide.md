@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 726fb1ffd4175afa0d247d2029db559db2ff3231
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe493927d269c092e775970b3089550203271f0e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68475975"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000497"
 ---
 # <a name="sql-server-index-design-guide"></a>SQL Server 索引设计指南
 
   索引设计不佳和缺少索引是提高数据库和应用程序性能的主要障碍。 设计高效的索引对于获得良好的数据库和应用程序性能极为重要。 本 SQL Server 索引设计指南包含帮助您设计高效索引以满足应用程序需要的信息和最佳实践。  
   
-**适用**于： [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]到[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] （除非另有说明）。  
+**适用**于： [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 到（除非另有 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 说明）。  
   
  本指南假定读者对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中提供的索引类型有一般了解。 有关索引类型的一般说明，请参阅 [索引类型](../relational-databases/indexes/indexes.md)。  
   
@@ -213,7 +213,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   可用于范围查询。  
   
- 如果未使用 UNIQUE 属性创建聚集索引，将[!INCLUDE[ssDE](../includes/ssde-md.md)]向表自动添加一个4字节的 uniquifier> 列。 需要时， [!INCLUDE[ssDE](../includes/ssde-md.md)]会自动将 uniquifier> 值添加到行中，以使每个键唯一。 此列和列值供内部使用，用户不能查看或访问。  
+ 如果未使用 UNIQUE 属性创建聚集索引，将向 [!INCLUDE[ssDE](../includes/ssde-md.md)] 表自动添加一个4字节的 uniquifier> 列。 需要时， [!INCLUDE[ssDE](../includes/ssde-md.md)] 会自动将 uniquifier> 值添加到行中，以使每个键唯一。 此列和列值供内部使用，用户不能查看或访问。  
   
 ### <a name="clustered-index-architecture"></a>聚集索引体系结构  
 
@@ -267,7 +267,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   频繁更改的列  
   
-     这将导致整行移动，因为 [!INCLUDE[ssDE](../includes/ssde-md.md)] 必须按物理顺序保留行中的数据值。 这一点要特别注意，因为在大容量事务处理系统中数据通常是可变的。  
+     这将导致整行移动，因为 [!INCLUDE[ssDE](../includes/ssde-md.md)] 必须按物理顺序保留行的数据值。 这一点要特别注意，因为在大容量事务处理系统中数据通常是可变的。  
   
 -   宽键  
   
@@ -628,10 +628,10 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  [本指南中与 "](#Top) ![返回页首" 链接一起使用的箭头图标](media/uparrow16x16.gif "用于返回页首链接的箭头图标")  
   
-##  <a name="additional-reading"></a><a name="Additional_Reading"></a>其他阅读材料  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> 其他阅读主题  
 
  [使用 SQL Server 2008 索引视图提高性能](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
   
- [已分区表和索引](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+ [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

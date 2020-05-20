@@ -10,42 +10,42 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 14de3fa15fa5a648c2d41824d237040b5aa085e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4657bf58a7160f075759a265fef883c92fee0c9
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771573"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921707"
 ---
 # <a name="ssis-catalog"></a>SSIS 目录
-  `SSISDB`目录是使用已部署到[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服务器的（SSIS）项目的中心点。 例如，您可以设置项目和包参数，配置环境以便为包指定运行时值，执行包并对包进行故障排除，以及管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器操作。  
+  `SSISDB`目录是使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 已部署到服务器的（SSIS）项目的中心点 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。 例如，您可以设置项目和包参数，配置环境以便为包指定运行时值，执行包并对包进行故障排除，以及管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器操作。  
   
- `SSISDB`目录中存储的对象包括项目、包、参数、环境和操作历史记录。  
+ 目录中存储的对象 `SSISDB` 包括项目、包、参数、环境和操作历史记录。  
   
- 通过查询`SSISDB` `SSISDB`数据库中的视图来检查存储在目录中的对象、设置和操作数据。 可以通过调用`SSISDB`数据库中的存储过程或使用`SSISDB`目录的 UI 来管理对象。 在很多情况下，同一个任务既可使用 UI 执行，也可以通过调用存储过程来执行。  
+ `SSISDB`通过查询数据库中的视图来检查存储在目录中的对象、设置和操作数据 `SSISDB` 。 可以通过调用数据库中的存储过程 `SSISDB` 或使用目录的 UI 来管理对象 `SSISDB` 。 在很多情况下，同一个任务既可使用 UI 执行，也可以通过调用存储过程来执行。  
   
  要维护 `SSISDB` 数据库，建议您应用管理用户数据库的标准企业策略。 有关创建维护计划的信息，请参阅 [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)。  
   
- `SSISDB`目录和`SSISDB`数据库支持 Windows PowerShell。 有关将 SQL Server 与 Windows PowerShell 一起使用的详细信息，请参阅 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)。 有关如何使用 Windows PowerShell 完成任务（如部署项目）的示例，请参阅 blogs.msdn.com 上的博客文章 [SQL Server 2012 中的 SSIS 和 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)。  
+ `SSISDB`目录和 `SSISDB` 数据库支持 Windows PowerShell。 有关将 SQL Server 与 Windows PowerShell 一起使用的详细信息，请参阅 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)。 有关如何使用 Windows PowerShell 完成任务（如部署项目）的示例，请参阅 blogs.msdn.com 上的博客文章 [SQL Server 2012 中的 SSIS 和 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)。  
   
  有关查看操作数据的详细信息，请参阅[监视包执行和其他操作](../performance/monitor-running-packages-and-other-operations.md)。  
   
- 你可以通过`SSISDB`连接到[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库引擎，然后在对象资源管理器中展开 " **Integration Services 目录**" 节点来访问中的目录。 可以通过在`SSISDB`对象资源管理器中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]展开 "数据库" 节点来访问中的数据库。  
+ 你可以 `SSISDB` [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 通过连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎，然后在对象资源管理器中展开 " **Integration Services 目录**" 节点来访问中的目录。 可以通过在 `SSISDB` 对象资源管理器中 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 展开 "数据库" 节点来访问中的数据库。  
   
 > [!NOTE]  
->  不能重命名`SSISDB`数据库。  
+>  不能重命名 `SSISDB` 数据库。  
   
 > [!NOTE]  
->  如果`SSISDB`数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]附加到的实例停止或不响应，则 ISServerExec 进程结束。 向 Windows 事件日志写入一条消息。  
+>  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `SSISDB` 数据库附加到的实例停止或不响应，则 ISServerExec 进程结束。 向 Windows 事件日志写入一条消息。  
 >   
 >  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源作为群集故障转移的一部分进行故障转移，则正在运行的包不重新启动。 您可以使用检查点来重新启动包。 有关详细信息，请参阅 [通过使用检查点重新启动包](../packages/restart-packages-by-using-checkpoints.md)。  
   
 ## <a name="catalog-object-identifiers"></a>目录对象标识符  
  在目录中创建新对象时，为该对象指定一个名称。 对象名称就是一个标识符。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定义了有关可在标识符中使用的字符的规则。 以下对象的名称必须遵循标识符规则。  
   
--   Folder  
+-   文件夹  
   
--   项目  
+-   Project  
   
 -   环境  
   
@@ -92,9 +92,9 @@ ms.locfileid: "62771573"
 ### <a name="operations-and-project-version-cleanup"></a>操作和项目版本清理  
  目录中很多操作的状态数据都存储在内部数据库表中。 例如，目录会跟踪包执行和项目部署的状态。 为了维持操作数据的大小，使用 **中的** “SSIS Server 维护作业” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 来删除旧数据。 在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时创建此 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 代理作业。  
   
- 您可以使用相同名称将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目部署到目录中的同一文件夹，以对其进行更新或重新部署。 默认情况下，每次重新部署项目时， `SSISDB`目录将保留以前版本的项目。 为了维持操作数据的大小，使用了 **“SSIS 服务器维护作业”** 来删除旧版本的项目。  
+ 您可以使用相同名称将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目部署到目录中的同一文件夹，以对其进行更新或重新部署。 默认情况下，每次重新部署项目时， `SSISDB` 目录将保留以前版本的项目。 为了维持操作数据的大小，使用了 **“SSIS 服务器维护作业”** 来删除旧版本的项目。  
   
- 以下`SSISDB`目录属性定义此[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理作业的行为方式。 可以使用“目录属性”**** 对话框或使用 [catalog.catalog_properties（SSISDB 数据库）](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database)和 [catalog.configure_catalog（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database)查看和修改属性。  
+ 以下 `SSISDB` 目录属性定义此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的行为方式。 可以使用“目录属性”**** 对话框或使用 [catalog.catalog_properties（SSISDB 数据库）](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database)和 [catalog.configure_catalog（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database)查看和修改属性。  
   
  **定期清理日志**  
  当此属性设置为 `True` 时，操作清除作业步骤将会运行。  
@@ -102,7 +102,7 @@ ms.locfileid: "62771573"
  **保持期(天)**  
  定义可允许的操作数据的最长保存时间（以天为单位）。 将删除较旧的数据。  
   
- 最小值为一天。 最大值仅受[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int`数据的最大值的限制。 有关此数据类型的信息，请参阅 [int、bigint、smallint 和 tinyint (Transact-SQL)](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)。  
+ 最小值为一天。 最大值仅受数据的最大值的限制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int` 。 有关此数据类型的信息，请参阅 [int、bigint、smallint 和 tinyint (Transact-SQL)](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)。  
   
  **定期删除旧版本**  
  当此属性设置为 `True` 时，项目版本清除作业步骤将会运行。  
@@ -131,7 +131,7 @@ ms.locfileid: "62771573"
   
  更改加密算法是一项很耗时的操作。 首先，服务器必须使用以前指定的算法来解密所有配置值。 然后，服务器必须使用新算法来重新对这些值进行加密。 此时，在服务器上不能有其他 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 操作。 因此，为使 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 操作继续运行而不会中断，加密算法在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的对话框中是只读值。  
   
- 若要更改 "**加密算法**" 属性设置， `SSISDB`请将数据库设置为单用户模式，然后调用 catalog. configure_catalog 存储过程。 将 ENCRYPTION_ALGORITHM 用于 *property_name* 参数。 有关支持的属性值，请参阅 [catalog.catalog_properties（SSISDB 数据库）](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database)。 有关该存储过程的详细信息，请参阅 [catalog.configure_catalog（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database)。  
+ 若要更改 "**加密算法**" 属性设置，请将 `SSISDB` 数据库设置为单用户模式，然后调用 catalog. configure_catalog 存储过程。 将 ENCRYPTION_ALGORITHM 用于 *property_name* 参数。 有关支持的属性值，请参阅 [catalog.catalog_properties（SSISDB 数据库）](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database)。 有关该存储过程的详细信息，请参阅 [catalog.configure_catalog（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database)。  
   
  有关单用户模式的详细信息，请参阅 [将数据库设置为单用户模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中加密和加密算法的信息，请参阅 [SQL Server 加密](../../relational-databases/security/encryption/sql-server-encryption.md)一节中的有关主题。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "62771573"
 |服务器范围的默认日志记录级别|SERVER_LOGGING_LEVEL|  
   
 ## <a name="permissions"></a>权限  
- 文件夹中包含的项目、环境和包是安全对象。 您可以授予对文件夹的权限，包括 MANAGE_OBJECT_PERMISSIONS 权限。 利用 MANAGE_OBJECT_PERMISSIONS，您可以将文件夹内容的管理委托给用户，而无需为 ssis_admin 角色授予用户成员身份。 您还可以授予对项目、环境和操作的权限。 操作包括初始化[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、部署项目、创建和启动执行、验证项目和包以及配置`SSISDB`目录。  
+ 文件夹中包含的项目、环境和包是安全对象。 您可以授予对文件夹的权限，包括 MANAGE_OBJECT_PERMISSIONS 权限。 利用 MANAGE_OBJECT_PERMISSIONS，您可以将文件夹内容的管理委托给用户，而无需为 ssis_admin 角色授予用户成员身份。 您还可以授予对项目、环境和操作的权限。 操作包括初始化 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 、部署项目、创建和启动执行、验证项目和包以及配置 `SSISDB` 目录。  
   
  有关数据库角色的详细信息，请参阅 [数据库级别的角色](../../relational-databases/security/authentication-access/database-level-roles.md)。  
   
@@ -157,7 +157,7 @@ ms.locfileid: "62771573"
   
  如果该主体已对其他主体授予或拒绝权限，则应先撤消授权者授予的权限，然后才能删除主体。 否则，系统尝试删除主体时会返回一条错误消息。 触发器将删除数据库主体作为被授权者的所有权限记录。  
   
- 建议不要禁用触发器，因为它可确保在从`SSISDB`数据库中删除数据库主体后没有孤立的权限记录。  
+ 建议不要禁用触发器，因为它可确保在从数据库中删除数据库主体后没有孤立的权限记录 `SSISDB` 。  
   
 ### <a name="managing-permissions"></a>管理权限  
  可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 用户界面、存储过程以及 <xref:Microsoft.SqlServer.Management.IntegrationServices> 命名空间来管理权限。  
@@ -171,7 +171,7 @@ ms.locfileid: "62771573"
  若要使用 Transact-sql 管理权限，请调用[目录。 grant_permission &#40;Ssisdb 数据库&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database)、[目录 deny_permission &#40;ssisdb 数据库&#41;](/sql/integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database)和 revoke_permission &#40;ssisdb[数据库&#41;。 ](/sql/integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database) 若要查看所有对象的当前主体的有效权限，请查询 [catalog.effective_object_permissions（SSISDB 数据库）](/sql/integration-services/system-views/catalog-effective-object-permissions-ssisdb-database)。 本主题描述了不同类型的权限。 若要查看已显式分配给用户的权限，请查询 [catalog.explicit_object_permissions（SSISDB 数据库）](/sql/integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database)。  
   
 ## <a name="folders"></a>文件夹  
- 文件夹包含目录中的`SSISDB`一个或多个项目和环境。 可以使用 [catalog.folders（SSISDB 数据库）](/sql/integration-services/system-views/catalog-folders-ssisdb-database) 视图来访问有关目录中的文件夹的信息。 您可以使用以下存储过程管理文件夹。  
+ 文件夹包含目录中的一个或多个项目和环境 `SSISDB` 。 可以使用 [catalog.folders（SSISDB 数据库）](/sql/integration-services/system-views/catalog-folders-ssisdb-database) 视图来访问有关目录中的文件夹的信息。 您可以使用以下存储过程管理文件夹。  
   
 -   [catalog.create_folder（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database)  
   
@@ -287,6 +287,6 @@ ms.locfileid: "62771573"
   
 -   blogs.msdn.com 上的博客文章 [SSIS 目录访问控制提示](https://go.microsoft.com/fwlink/?LinkId=246669)。  
   
--   blogs.msdn.com 上的博客文章： [SSIS 目录托管对象模型一瞥](https://go.microsoft.com/fwlink/?LinkId=254267)。  
+-   blogs.msdn.com 上的博客文章： [SSIS 目录托管对象模型一瞥](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)。  
   
   

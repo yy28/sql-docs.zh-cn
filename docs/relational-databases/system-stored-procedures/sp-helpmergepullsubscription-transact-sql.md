@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergepullsubscription
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c92ea8e2f172d9cb5b40559c2a7b77a60153065b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: af38463c5104da636d04f961b0cee5210369e38d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68137714"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834492"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="argument"></a>参数  
-`[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，默认值为**%**。 **%** 如果*是，则返回*有关当前数据库中所有合并发布和订阅的信息。  
+`[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，默认值为 **%** 。 如果*是* **%** ，则返回有关当前数据库中所有合并发布和订阅的信息。  
   
-`[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**为，默认值**%** 为。  
+`[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**为，默认值为 **%** 。  
   
-`[ @publisher_db = ] 'publisher_db'`发布服务器数据库的名称。 *publisher_db*的默认值为**sysname**，默认**%** 值为。  
+`[ @publisher_db = ] 'publisher_db'`发布服务器数据库的名称。 *publisher_db*的默认值为**sysname**，默认值为 **%** 。  
   
 `[ @subscription_type = ] 'subscription_type'`指示是否显示请求订阅。 *subscription_type*为**nvarchar （10）**，默认值为 **"pull"**。 有效值为 **"push"**、 **"pull"** 或 **"both"**。  
   
@@ -69,11 +69,11 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**last_updated**|**nvarchar （26）**|合并代理上次成功同步订阅的时间。|  
 |**publisher_login**|**sysname**|发布服务器登录名。|  
 |**publisher_password**|**sysname**|发布者密码。|  
-|**publisher_security_mode**|**int**|指定发布服务器的安全模式：<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** = Windows 身份验证|  
+|**publisher_security_mode**|**int**|指定发布服务器的安全模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证<br /><br /> **1** = Windows 身份验证|  
 |**发行人**|**sysname**|分发服务器的名称。|  
 |**distributor_login**|**sysname**|分发服务器登录名。|  
 |**distributor_password**|**sysname**|分发服务器密码。|  
-|**distributor_security_mode**|**int**|指定分发服务器的安全模式：<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** = Windows 身份验证|  
+|**distributor_security_mode**|**int**|指定分发服务器的安全模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证<br /><br /> **1** = Windows 身份验证|  
 |**ftp_address**|**sysname**|仅为向后兼容而提供。 是分发服务器的文件传输协议 (FTP) 服务的网络地址。|  
 |**ftp_port**|**int**|仅为向后兼容而提供。 分发服务器 FTP 服务的端口号。|  
 |**ftp_login**|**sysname**|仅为向后兼容而提供。 用于连接到 FTP 服务的用户名。|  
@@ -92,11 +92,11 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**internet_url**|**nvarchar(260)**|表示 Web 同步的复制侦听器位置的 URL。|  
 |**internet_login**|**nvarchar(128)**|在使用基本身份验证连接到承载 Web 同步的 Web 服务器时，合并代理所使用的登录名。|  
 |**internet_password**|**nvarchar （524）**|在使用基本身份验证连接到承载 Web 同步的 Web 服务器时，合并代理所使用的登录密码。|  
-|**internet_security_mode**|**int**|连接到承载 Web 同步的 Web 服务器时使用的身份验证模式。 值**1**表示 Windows 身份验证，值**0**表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。|  
+|**internet_security_mode**|**int**|连接到承载 Web 同步的 Web 服务器时使用的身份验证模式。 值**1**表示 Windows 身份验证，值**0**表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。|  
 |**internet_timeout**|**int**|Web 同步请求过期之前的时间长度（秒）。|  
 |**hostname**|**nvarchar(128)**|指定在参数化行筛选器的 WHERE 子句中使用此函数时[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)的重载值。|  
-|**job_login**|**nvarchar(512)**|是运行合并代理时所用的 Windows 帐户，它以 "*域*\\*用户名*" 的格式返回。|  
-|**job_password**|**sysname**|出于安全原因，始终返回值**\*\*\*\*\*\*\*\*"\***"。|  
+|**job_login**|**nvarchar(512)**|是运行合并代理时所用的 Windows 帐户，它以 "*域*用户名" 的格式返回 \\ *username*。|  
+|**job_password**|**sysname**|出于安全原因，始终返回值 " **\*\*\*\*\*\*\*\*\*\*** "。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  

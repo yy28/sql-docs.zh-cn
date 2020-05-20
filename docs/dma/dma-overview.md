@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, overview
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: 64c8416a15afd685559fe2d05c436c2e5fc1382d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: ad6bf673fb9bfe435d517dfd9e2dcf71774191a1
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632850"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885794"
 ---
 # <a name="overview-of-data-migration-assistant"></a>数据迁移助手概述
 
@@ -42,7 +42,7 @@ ms.locfileid: "73632850"
 
 - 发现可能会影响升级到本地 SQL Server 的问题。它们被描述为兼容性问题，并按以下类别进行组织：
 
-  - 中断性变更
+  - 重大更改
   - 行为变更
   - 已弃用的功能
 

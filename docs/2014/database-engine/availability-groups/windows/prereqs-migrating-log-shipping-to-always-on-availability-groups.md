@@ -13,12 +13,12 @@ ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 865e8d720e9977f582ac5ae8a0e75d995fc82629
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a2dc38d5e916cf67c09162c86db9ab31728804f
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789547"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922033"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>从日志传送迁移到 AlwaysOn 可用性组的先决条件 (SQL Server)
   本主题介绍将日志传送主数据库与其一个或多个辅助数据库一起转换为 AlwaysOn 主数据库和辅助数据库的先决条件。  
@@ -39,12 +39,12 @@ ms.locfileid: "62789547"
 ##  <a name="availability-group-prerequisites"></a><a name="AGPrereqsRealAddress"></a>可用性组先决条件  
  若要允许备份作业在可用性组的主副本上运行，请使用下列 AlwaysOn 可用性组备份设置：  
   
-|属性|设置|  
+|Property|设置|  
 |--------------|-------------|  
 |可用性组的自动备份首选项|仅在主副本上|  
 |主副本的备份优先级。|>0|  
   
- **参考信息：**  
+ **有关详细信息：**  
   
  [查看可用性组属性 (SQL Server)](view-availability-group-properties-sql-server.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62789547"
   
  在您为可用性组创建了所有辅助数据库后，如果您想要在辅助副本上执行备份，则需要重新配置该可用性组的自动备份首选项。  
   
- **参考信息：**  
+ **有关详细信息：**  
   
  [将日志传送配置转换为可用性组](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) （SQL Server 博客）  
   
@@ -93,11 +93,11 @@ ms.locfileid: "62789547"
   
 -   **博客：**  
   
-     [将日志传送配置转换为可用性组](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)  
+     [将日志传送配置转换为可用性组](https://docs.microsoft.com/archive/blogs/sqlalwayson/converting-a-logshipping-configuration-to-availability-group)  
   
-     [将日志传送主数据库和辅助数据库添加到现有可用性组](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/01/use-log-shipping-to-prepare-secondary-databases-for-an-existing-availability-group.aspx)  
+     [将日志传送主数据库和辅助数据库添加到现有可用性组](https://docs.microsoft.com/archive/blogs/sqlalwayson/add-a-log-shipping-primary-database-and-secondary-databases-to-an-existing-availability-group)  
   
-     [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 官方团队博客](https://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 官方团队博客](https://docs.microsoft.com/archive/blogs/sqlalwayson/)  
   
      [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
   

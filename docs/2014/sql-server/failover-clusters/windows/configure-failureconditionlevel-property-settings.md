@@ -10,12 +10,12 @@ ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 87ed68cc3540075e0fd5d357182d709394f44455
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cfaffaeec425542597aaa43498ec0222813a251e
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797498"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925031"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>配置 FailureConditionLevel 属性设置
   使用 FailureConditionLevel 属性可以设置 AlwaysOn 故障转移群集实例 (FCI) 进行故障转移或重新启动的条件。 对此属性的更改会立即应用，而无需重新启动 Windows Server 故障转移群集 (WSFC) 服务或 FCI 资源。  
@@ -42,7 +42,7 @@ ms.locfileid: "72797498"
   
 2.  导入 `FailoverClusters` 模块以启用群集 cmdlet。  
   
-3.  使用`Get-ClusterResource` cmdlet 查找[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]资源，然后使用`Set-ClusterParameter` cmdlet 为故障转移群集实例设置**FailureConditionLevel**属性。  
+3.  使用 `Get-ClusterResource` cmdlet 查找 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源，然后使用 `Set-ClusterParameter` Cmdlet 为故障转移群集实例设置**FailureConditionLevel**属性。  
   
 > [!TIP]  
 >  每次您打开新的 PowerShell 窗口时，都需要导入 `FailoverClusters` 模块。  
@@ -58,7 +58,7 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 ### <a name="related-content-powershell"></a>相关内容 (PowerShell)  
   
--   [群集和高可用性](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) （故障转移群集和网络负载平衡团队博客）  
+-   [群集和高可用性](https://techcommunity.microsoft.com/t5/failover-clustering/bg-p/FailoverClustering) （故障转移群集和网络负载平衡团队博客）  
   
 -   [故障转移群集上的 Windows PowerShell 入门](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
@@ -80,7 +80,7 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
 
 ### <a name="to-configure-failureconditionlevel-property-settings"></a>配置 FailureConditionLevel 属性设置
   
- 使用[ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]语句，你可以指定 FailureConditionLevel 属性值。  
+ 使用[ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句，你可以指定 FailureConditionLevel 属性值。  
   
 ###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  以下示例将 FailureConditionLevel 属性设置为 0，表示对于任何故障条件将不自动触发故障转移或重新启动。  

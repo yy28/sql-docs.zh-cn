@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: fc78354e3b422342e376bd7ebe75233dcd3ffaee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: 00d27decc533d33056a7cc0cb19c2584fea564fb
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056533"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885865"
 ---
 # <a name="upgrade-sql-server-using-the-data-migration-assistant"></a>使用数据迁移助手 SQL Server 升级
 
@@ -49,7 +49,7 @@ ms.locfileid: "74056533"
 
 5. 建议你通过在 "**连接属性**" 部分中选择 "**加密连接**" 来加密连接。
 
-6. 单击“下一步”。 
+6. 单击 **“下一步”** 。
 
    ![指定源和目标页](../dma/media/SourceTarget.png)
 

@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_register_custom_scripting
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c10451148c6f9b2fda231691b770bca3928517f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d57f3098a69e499392af502d2d3a6d94840bde21
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68075748"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834336"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  复制允许用户定义的自定义存储过程替换事务复制中使用的一个或多个默认过程。 对复制的表进行架构更改时，将重新创建这些存储过程。 **sp_register_custom_scripting**注册当发生架构更改[!INCLUDE[tsql](../../includes/tsql-md.md)]时执行的存储过程或脚本文件，以编写新的用户定义的自定义存储过程的定义脚本。 这个新的用户定义的自定义存储过程应反映表的新架构。 在发布服务器上对发布数据库执行**sp_register_custom_scripting** ，并在架构发生更改时在订阅服务器上执行已注册的脚本文件或存储过程。  
+  复制允许用户定义的自定义存储过程替换事务复制中使用的一个或多个默认过程。 对复制的表进行架构更改时，将重新创建这些存储过程。 **sp_register_custom_scripting**注册 [!INCLUDE[tsql](../../includes/tsql-md.md)] 当发生架构更改时执行的存储过程或脚本文件，以编写新的用户定义的自定义存储过程的定义脚本。 这个新的用户定义的自定义存储过程应反映表的新架构。 在发布服务器上对发布数据库执行**sp_register_custom_scripting** ，并在架构发生更改时在订阅服务器上执行已注册的脚本文件或存储过程。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,16 +45,16 @@ sp_register_custom_scripting [ @type  = ] 'type'
 |值|说明|  
 |-----------|-----------------|  
 |**&**|复制 INSERT 语句时，将执行注册的自定义存储过程。|  
-|**时更新**|复制 UPDATE 语句时，将执行注册的自定义存储过程。|  
+|**update**|复制 UPDATE 语句时，将执行注册的自定义存储过程。|  
 |**delete**|复制 DELETE 语句时，将执行注册的自定义存储过程。|  
 |**custom_script**|在数据定义语言 (DDL) 触发器的末尾执行脚本。|  
   
-`[ @value = ] 'value'`要注册的[!INCLUDE[tsql](../../includes/tsql-md.md)]脚本文件的存储过程或名称和完全限定路径的名称。 *值*为**nvarchar （1024）**，无默认值。  
+`[ @value = ] 'value'`要注册的脚本文件的存储过程或名称和完全限定路径的名称 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 *值*为**nvarchar （1024）**，无默认值。  
   
 > [!NOTE]  
 >  指定 NULL 作为*值*参数将取消注册先前注册的脚本，这与运行[sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)相同。  
   
- 如果 "*类型*" 的值为 " **custom_script**"，则需要[!INCLUDE[tsql](../../includes/tsql-md.md)]脚本文件的名称和完整路径。 否则，*值*必须是已注册的存储过程的名称。  
+ 如果 "*类型*" 的值为 " **custom_script**"，则需要脚本文件的名称和完整路径 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 否则，*值*必须是已注册的存储过程的名称。  
   
 `[ @publication = ] 'publication'`正在为其注册自定义存储过程或脚本的发布的名称。 *发布*为**sysname**，默认值为**NULL**。  
   

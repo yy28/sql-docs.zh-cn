@@ -10,12 +10,12 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cb77d8abdc0b4a8ca67996433e5399740c7bdc0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 087ca52acea1cace7eb218cc33ce31cd21e10cc8
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82086877"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922241"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教程：创建钻取报表和主报表（报表生成器）
   本教程教您如何创建两种报表：钻取报表和主报表。 这些报表中使用的示例销售数据可从 Analysis Services 多维数据集检索。 下图显示了将创建的报表。  
@@ -89,7 +89,7 @@ ms.locfileid: "82086877"
   
 #### <a name="to-create-a-new-report"></a>创建新的报表  
   
-1.  单击 "**开始**"，指向 "**程序**" [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] ，指向 "**报表生成器**"，然后单击 "**报表生成器**"。  
+1.  单击 "**开始**"，指向 "**程序**"，指向 [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] "**报表生成器**"，然后单击 "**报表生成器**"。  
   
      随即将打开“入门”**** 对话框。 如果未显示，请在 "**报表生成器**" 按钮中单击 "**新建**"。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "82086877"
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. 单击“下一步”。   
+14. 单击 **“下一步”** 。  
   
 ##  <a name="1b-create-an-mdx-query"></a><a name="DMDXQuery"></a>1b. 创建 MDX 查询  
  在报表中，可以使用具有预定义查询的共享数据集，也可以创建仅在报表中使用的嵌入数据集。 在本教程中，将创建一个嵌入数据集。  
@@ -210,7 +210,7 @@ ms.locfileid: "82086877"
   
 6.  在查询设计器工具栏上，单击 "**运行（！）**"。  
   
-7.  单击“下一步”。   
+7.  单击 **“下一步”** 。  
   
 ##  <a name="1c-organize-data-into-groups"></a><a name="DLayout"></a>1c. 将数据组织到组中  
  在选择要对数据分组的字段时，可以设计一个矩阵，其中的行和列显示了详细数据和聚合数据。  
@@ -236,7 +236,7 @@ ms.locfileid: "82086877"
   
      步骤 4 和 5 指定要在矩阵中显示的数据。  
   
-6.  单击“下一步”。   
+6.  单击 **“下一步”** 。  
   
 ##  <a name="1d-add-subtotals-and-totals"></a><a name="DTotals"></a>1d. 添加小计和总计  
  创建组后，可以添加用于显示字段的聚合值的行并设置其格式。 还可以选择是显示所有数据还是允许用户以交互方式展开和折叠已分组数据。  
@@ -247,7 +247,7 @@ ms.locfileid: "82086877"
   
      向导的“预览”窗格将显示包含四行的矩阵。  
   
-2.  单击“下一步”。   
+2.  单击 **“下一步”** 。  
   
 ##  <a name="1e-choose-a-style"></a><a name="DStyle"></a>1e. 选择样式  
  样式指定字形、颜色集和边框样式。  
@@ -394,7 +394,7 @@ ms.locfileid: "82086877"
   
 #### <a name="to-create-a-new-report"></a>创建新的报表  
   
-1.  单击 "**开始**"，指向 "**程序**" [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] ，指向 "**报表生成器**"，然后单击 "**报表生成器**"。  
+1.  单击 "**开始**"，指向 "**程序**"，指向 [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] "**报表生成器**"，然后单击 "**报表生成器**"。  
   
 2.  在“入门”**** 对话框中，确认已选中“新建报表”****，然后单击“表或矩阵向导”****。  
   
@@ -413,7 +413,7 @@ ms.locfileid: "82086877"
   
 5.  在“数据源”**** 中，确认数据源是“Microsoft SQL Server Analysis Services (AdomdClient)”****。  
   
-6.  在 "**服务器名称**" 中，键入安装了实例的[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]服务器的名称。  
+6.  在 "**服务器名称**" 中，键入安装了实例的服务器的名称 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。  
   
 7.  在“选择或输入数据库名称”**** 中，选择 Contoso 多维数据集。  
   
@@ -435,7 +435,7 @@ ms.locfileid: "82086877"
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. 单击“下一步”。   
+14. 单击 **“下一步”** 。  
   
 ##  <a name="1b-create-an-mdx-query"></a><a name="MMDXQuery"></a>1b. 创建 MDX 查询  
  接下来将创建嵌入数据集。 为此，您将使用查询设计器来创建筛选器、参数和计算成员以及数据集本身。  
@@ -447,7 +447,7 @@ ms.locfileid: "82086877"
 2.  在“选择多维数据集”**** 对话框中，依次单击“Sales”和“确定”****。  
   
     > [!TIP]  
-    >  如果不想手动生成 MDX 查询，请单击 ![切换到设计模式](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "切换到设计模式") 图标，将查询设计器切换到“查询”模式，将已完成的 MDX 粘贴到查询设计器，然后继续执行 [创建数据集](#MSkip)中的步骤 5。  
+    >  如果不想手动生成 MDX 查询，请单击 ![切换到设计模式](media/rsqdicon-designmode.gif "切换到设计模式") 图标，将查询设计器切换到“查询”模式，将已完成的 MDX 粘贴到查询设计器，然后继续执行 [创建数据集](#MSkip)中的步骤 5。  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
@@ -533,7 +533,7 @@ ms.locfileid: "82086877"
   
      查看查询结果集。  
   
-6.  单击“下一步”。   
+6.  单击 **“下一步”** 。  
   
 ##  <a name="1c-organize-data-into-groups"></a><a name="MLayout"></a>1c. 将数据组织到组中  
  在选择要对数据分组的字段时，可以设计一个矩阵，其中的行和列显示了详细数据和聚合数据。  
@@ -563,7 +563,7 @@ ms.locfileid: "82086877"
   
      向导的“预览”窗格将显示包含四行的矩阵。  运行报表时，将通过以下方式显示每个行：第一行为列组，第二行包含列标题，第三行包含产品类别数据（`[Sum(Net_ QTY)]` 和 `[Sum(Net_Sales)]`），第四行包含总计。  
   
-2.  单击“下一步”。   
+2.  单击 **“下一步”** 。  
   
 ##  <a name="1e-choose-a-style"></a><a name="MStyle"></a>1e. 选择样式  
  将“石板”样式应用到报表。 钻取报表也使用此样式。  

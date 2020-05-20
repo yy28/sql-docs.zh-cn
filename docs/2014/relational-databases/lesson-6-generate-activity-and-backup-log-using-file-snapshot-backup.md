@@ -10,17 +10,17 @@ ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 25ae3cee8e08292297449914bfb6e40dfc1b4b3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e31789b1f2cf5b2206af400c7c7798f7761f1e6c
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175462"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922074"
 ---
 # <a name="lesson-7-move-your-data-files-to-azure-storage"></a>第 7 课：将数据文件移动到 Azure 存储
   在本课中，您将学习如何将数据文件移到 Azure 存储（而不是您的 SQL Server 实例）中。 不需要学完第 4、5 和 6 课即可听懂本课。  
   
- 若要将数据文件移到 Azure 存储，可以使用`ALTER DATABASE`语句，因为它可帮助更改数据文件的位置。  
+ 若要将数据文件移到 Azure 存储，可以使用 `ALTER DATABASE` 语句，因为它可帮助更改数据文件的位置。  
   
  本课假定您已完成以下步骤：  
   
@@ -74,7 +74,7 @@ ms.locfileid: "70175462"
   
     ```  
   
-5.  现在，需要使用以下方法之一将数据文件复制到 Azure 存储： [AzCopy 工具](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx)、 [Put 页面](https://msdn.microsoft.com/library/azure/ee691975.aspx)、[存储客户端库参考](https://msdn.microsoft.com/library/azure/dn261237.aspx)或第三方存储资源管理器工具。  
+5.  现在，需要使用以下方法之一将数据文件复制到 Azure 存储： [AzCopy 工具](https://docs.microsoft.com/archive/blogs/windowsazurestorage/azcopy-uploadingdownloading-files-for-windows-azure-blobs)、 [Put 页面](https://msdn.microsoft.com/library/azure/ee691975.aspx)、[存储客户端库参考](https://msdn.microsoft.com/library/azure/dn261237.aspx)或第三方存储资源管理器工具。  
   
      **重要提示：** 使用此新增强功能时，请始终确保创建的是页 Blob 而非块 Blob。  
   

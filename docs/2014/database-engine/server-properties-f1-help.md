@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 3a44c98f-6750-48b9-90c7-82391b134c9d
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d60e8cae564886109409eed2595a7ce1247b61a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1048ecf02da0df649043034c2d9db5071284017b
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089841"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000517"
 ---
 # <a name="server-properties-f1-help"></a>“服务器属性”页的 F1 帮助
   本部分包含 SQL Server Management Studio 中 **“服务器属性”** 页的 F1 帮助主题。  

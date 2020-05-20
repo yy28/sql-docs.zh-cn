@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergesubscription
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0e5f044482d3e46e4e20279a437b8d9459d1d3bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e790d110fc45708c7aa2be76db3890c8d1bc7f13
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68002639"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834438"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,19 +43,19 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，默认值为**%**。 该发布必须已经存在，并符合标识符的相关规则。 如果为 NULL **%** 或，则返回有关当前数据库中所有合并发布和订阅的信息。  
+`[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，默认值为 **%** 。 该发布必须已经存在，并符合标识符的相关规则。 如果为 NULL 或 **%** ，则返回有关当前数据库中所有合并发布和订阅的信息。  
   
-`[ @subscriber = ] 'subscriber'`订阅服务器的名称。 *订阅服务器*的默认值为**sysname**， **%** 默认值为。 如果为 NULL 或 %，则返回有关对给定发布的所有订阅信息。  
+`[ @subscriber = ] 'subscriber'`订阅服务器的名称。 *订阅服务器*的默认值为**sysname**，默认值为 **%** 。 如果为 NULL 或 %，则返回有关对给定发布的所有订阅信息。  
   
-`[ @subscriber_db = ] 'subscriber_db'`订阅数据库的名称。 *subscriber_db*的默认值为**sysname**，默认**%** 值为，它返回有关所有订阅数据库的信息。  
+`[ @subscriber_db = ] 'subscriber_db'`订阅数据库的名称。 *subscriber_db*的默认值为**sysname**，默认值为 **%** ，它返回有关所有订阅数据库的信息。  
   
-`[ @publisher = ] 'publisher'`发布服务器的名称。 发布服务器必须为有效服务器。 *发布服务器*的默认值为**sysname**， **%** 默认值为，它返回有关所有发布服务器的信息。  
+`[ @publisher = ] 'publisher'`发布服务器的名称。 发布服务器必须为有效服务器。 *发布服务器*的默认值为**sysname**，默认值为 **%** ，它返回有关所有发布服务器的信息。  
   
-`[ @publisher_db = ] 'publisher_db'`发布服务器数据库的名称。 *publisher_db*的默认值为**sysname**，默认**%** 值为，它返回所有发布服务器数据库的相关信息。  
+`[ @publisher_db = ] 'publisher_db'`发布服务器数据库的名称。 *publisher_db*的默认值为**sysname**，默认值为 **%** ，它返回所有发布服务器数据库的相关信息。  
   
 `[ @subscription_type = ] 'subscription_type'`订阅的类型。 *subscription_type*为**nvarchar （15）**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**push** （默认值）|推送订阅|  
 |**请求**|请求订阅|  
@@ -85,9 +85,9 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**offload_server**|**sysname**|运行代理的服务器名。|  
 |**use_interactive_resolver**|**int**|返回在调节过程中是否使用交互式冲突解决程序。 如果为**0**，则不使用交互式冲突解决程序。|  
 |**hostname**|**sysname**|按[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)函数的值筛选订阅时提供的值。|  
-|**subscriber_security_mode**|**smallint**|订阅服务器上的安全模式，其中**1**表示 Windows 身份验证， **0**表示[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。|  
+|**subscriber_security_mode**|**smallint**|订阅服务器上的安全模式，其中**1**表示 Windows 身份验证， **0**表示 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。|  
 |**subscriber_login**|**sysname**|在订阅服务器上的登录名。|  
-|**subscriber_password**|**sysname**|永远不会返回实际的订阅服务器密码。 结果由**\*\*\*"\*" 字符串屏蔽。\***|  
+|**subscriber_password**|**sysname**|永远不会返回实际的订阅服务器密码。 结果由 " **\*\*\*\*\*\*** " 字符串屏蔽。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  

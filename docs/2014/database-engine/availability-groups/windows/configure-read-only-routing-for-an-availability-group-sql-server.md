@@ -17,12 +17,12 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f50ff5cd5a3ecbc70aafb6da7cf5008f31bada0f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e74a05193ae2051b12dbc15bb199b22a3c44f2a
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797727"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925001"
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>为可用性组配置只读路由 (SQL Server)
   若要配置 AlwaysOn 可用性组以便在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中支持只读路由，您可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell。 ** “只读路由”指的是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将符合条件的只读连接请求路由到可用的 AlwaysOn [可读辅助副本](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) （即，配置为在辅助角色下运行时允许只读工作负荷的副本）的能力。 为支持只读路由，可用性组必须具备 [可用性组侦听器](../../listeners-client-connectivity-application-failover.md)。 只读客户端必须将其连接请求定向到此侦听器，并且客户端的连接字符串必须将应用程序意向指定为“只读”。 也就是说，它们必须是 *读意向连接请求*。  
@@ -39,7 +39,7 @@ ms.locfileid: "72797727"
   
 -   可用性组必须拥有可用性组侦听器。 有关详细信息，请参阅 [创建或配置可用性组侦听程序 (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md)。  
   
--   必须将一个或多个可用性副本配置为接受辅助角色中的只读（即，可[读辅助副本](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)（AlwaysOn% 20Availability% 20Groups\)））。 有关详细信息，请参阅 [配置对可用性副本的只读访问 (SQL Server)](configure-read-only-access-on-an-availability-replica-sql-server.md)。  
+-   必须将一个或多个可用性副本配置为接受辅助角色中的只读（即，可[读辅助副本](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)（AlwaysOn% 20Availability% 20Groups \) ））。 有关详细信息，请参阅 [配置对可用性副本的只读访问 (SQL Server)](configure-read-only-access-on-an-availability-replica-sql-server.md)。  
   
 -   您必须连接到承载当前主副本的服务器实例。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "72797727"
   
 -   对于要支持只读路由的每个可读次要副本，你需要指定 *只读路由 URL*。 此 URL 仅在本地副本在辅助角色下运行时起作用。 必须根据需要在逐个副本的基础上指定只读路由 URL。 每个只读路由 URL 都用于将读意向请求路由到一个特定的可读辅助副本。 通常，向每个可读辅助副本分配一个只读路由 URL。  
   
-     有关计算可用性副本的只读路由 URL 的信息，请参阅 [计算 AlwaysOn 的 read_only_routing_url](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)。  
+     有关计算可用性副本的只读路由 URL 的信息，请参阅 [计算 AlwaysOn 的 read_only_routing_url](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)。  
   
 -   对于要在其作为主要副本时支持只读路由的每个可用性副本，都需要指定一个 *只读路由列表*。 一个给定的只读路由列表仅在本地副本在主角色下运行时才起作用。 必须根据需要在逐个副本的基础上指定此列表。 通常，每个只读路由列表中将包含各只读路由 URL，并且在列表的末尾具有本地副本的 URL。  
   
@@ -74,29 +74,29 @@ ms.locfileid: "72797727"
   
 1.  连接到承载主副本的服务器实例。  
   
-2.  如果要为新的可用性组指定副本，请使用[CREATE availability group](/sql/t-sql/statements/create-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]语句。 如果要添加或修改现有可用性组的副本，请使用[ALTER availability group](/sql/t-sql/statements/alter-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]语句。  
+2.  如果要为新的可用性组指定副本，请使用[CREATE AVAILABILITY group](/sql/t-sql/statements/create-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句。 如果要添加或修改现有可用性组的副本，请使用[ALTER AVAILABILITY group](/sql/t-sql/statements/alter-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句。  
   
     -   若要配置辅助角色的只读路由，请在 ADD REPLICA 或 MODIFY REPLICA WITH 子句中指定 SECONDARY_ROLE 选项，如下所示：  
   
-         SECONDARY_ROLE **（** READ_ONLY_ROUTING_URL **= '** TCP：**/*`system-address`*/*`port`*： '）**  
+         SECONDARY_ROLE **（** READ_ONLY_ROUTING_URL **= '** TCP：**// *`system-address`* ： *`port`* '）**  
   
          只读路由 URL 的参数如下所示：  
   
          *系统地址*  
          一个字符串，例如系统名称、完全限定的域名或 IP 地址，它们明确标识了目标计算机系统。  
   
-         *口*  
+         *port*  
          一个端口号，由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的数据库引擎使用。  
   
          例如：   `SECONDARY_ROLE (READ_ONLY_ROUTING_URL = N'TCP://COMPUTER01.contoso.com:1433')`  
   
          如果副本已配置为允许只读连接，则在 MODIFY REPLICA 子句中，ALLOW_CONNECTIONS 是可选的。  
   
-         有关详细信息，请参阅 [计算 AlwaysOn 的 read_only_routing_url](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)。  
+         有关详细信息，请参阅 [计算 AlwaysOn 的 read_only_routing_url](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)。  
   
     -   若要配置主角色的只读路由，请在 ADD REPLICA 或 MODIFY REPLICA WITH 子句中指定 PRIMARY_ROLE 选项，如下所示：  
   
-         PRIMARY_ROLE **（** READ_ONLY_ROUTING_LIST **= （'*`server`*'** [ **，**.。。*n* ] **））**  
+         PRIMARY_ROLE **（** READ_ONLY_ROUTING_LIST **= （' *`server`* '** [ **，**.。。*n* ] **））**  
   
          其中， *server* 标识一个托管可用性组中的只读次要副本的服务器实例。  
   
@@ -150,13 +150,13 @@ GO
   
 2.  在将可用性副本添加到可用性组中时，请使用 `New-SqlAvailabilityReplica` cmdlet。 在修改现有可用性副本时，请使用 `Set-SqlAvailabilityReplica` cmdlet。 相关参数如下：  
   
-    -   若要为辅助角色配置只读路由，请指定**ReadonlyRoutingConnectionUrl "*`url`*"** 参数。  
+    -   若要为辅助角色配置只读路由，请指定**ReadonlyRoutingConnectionUrl " *`url`* "** 参数。  
   
          其中， *url* 是当路由到副本时要用于建立只读连接的连接完全限定域名 (FQDN) 和端口。 例如：`-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   
-         有关详细信息，请参阅 [计算 AlwaysOn 的 read_only_routing_url](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)。  
+         有关详细信息，请参阅 [计算 AlwaysOn 的 read_only_routing_url](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)。  
   
-    -   若要为主要角色配置连接访问，请指定**ReadonlyRoutingList*`server`*""** [ **，**.。。*n* ]，其中，*服务器*标识一个承载可用性组中的只读次要副本的服务器实例。 例如：`-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
+    -   若要为主要角色配置连接访问，请指定**ReadonlyRoutingList " *`server`* "** [ **，**.。。*n* ]，其中，*服务器*标识一个承载可用性组中的只读次要副本的服务器实例。 例如：`-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
         > [!NOTE]  
         >  您必须先设置副本的只读路由 URL，然后才能为其配置只读路由列表。  
@@ -183,7 +183,7 @@ Set-SqlAvailabilityReplica -ReadOnlyRoutingList "SecondaryServer","PrimaryServer
  在这两种角色中配置当前主副本和可读辅助副本以支持只读路由后，可读辅助副本可接收/读取来自通过可用性组侦听器连接的客户端的读意向连接。  
   
 > [!TIP]  
->  使用[Bcp 实用工具](../../../tools/bcp-utility.md)或[sqlcmd 实用工具](../../../tools/sqlcmd-utility.md)时，可以通过指定`-K ReadOnly`开关来指定对启用了只读访问权限的任何辅助副本的只读访问。  
+>  使用[Bcp 实用工具](../../../tools/bcp-utility.md)或[sqlcmd 实用工具](../../../tools/sqlcmd-utility.md)时，可以通过指定开关来指定对启用了只读访问权限的任何辅助副本的只读访问 `-K ReadOnly` 。  
   
 ###  <a name="requirements-and-recommendations-for-client-connection-strings"></a><a name="ConnStringReqsRecs"></a> 针对客户端连接字符串的要求和建议  
  对于要使用只读路由的客户端应用程序，其连接字符串必须满足以下要求：  
@@ -233,7 +233,7 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
   
 -   **博客：**  
   
-     [计算 AlwaysOn 的 read_only_routing_url](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)  
+     [计算 AlwaysOn 的 read_only_routing_url](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson)  
   
      [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 官方团队博客](https://blogs.msdn.com/b/sqlalwayson/)  
   

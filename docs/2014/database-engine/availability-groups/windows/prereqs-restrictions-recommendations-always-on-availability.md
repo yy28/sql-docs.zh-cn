@@ -19,12 +19,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b12b9030d27e371e0299e06917464b1467b9b10e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c018a020fd86925ff14efcb37e2f5734c7e5f141
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782961"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925006"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-alwayson-availability-groups-sql-server"></a>针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)
   本主题介绍在部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]时的注意事项，包括针对主机、Windows Server 故障转移群集 (WSFC) 群集、服务器实例和可用性组的先决条件、限制和建议。 对于上述各组件，还指出了安全注意事项和所需权限（如果有）。  
@@ -34,12 +34,12 @@ ms.locfileid: "72782961"
   
  
   
-##  <a name="net-hotfixes-that-support-alwayson-availability-groups"></a><a name="DotNetHotfixes"></a>支持 AlwaysOn 可用性组的 .net 修补程序  
- 根据您将用于 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]组件和功能，您可能需要安装在下表中标识的其他 .Net 修补程序。 可以按任意顺序安装这些修补程序。  
+##  <a name="net-hotfixes-that-support-alwayson-availability-groups"></a><a name="DotNetHotfixes"></a>支持 AlwaysOn 可用性组的 .NET 修补程序  
+ 根据 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 你将用于的组件和功能 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ，可能需要安装下表中标识的其他 .net 修补程序。 可以按任意顺序安装这些修补程序。  
   
 ||依赖功能|修补程序|链接|  
 |------|-----------------------|------------|----------|  
-|![旁边](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.Net 3.5 SP1 修补程序添加对读意向、只读和多子网故障转移的 SQL Client for AlwaysOn 功能的支持。 此修补程序需要安装在每个 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表服务器上。|KB 2654347： [.Net 3.5 SP1 修补程序添加对 AlwaysOn 功能的支持](https://go.microsoft.com/fwlink/?LinkId=242896)|  
+|![旁边](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.NET 3.5 SP1 修补程序增加了对 SQL Client for Read 意向、readonly 和 multisubnetfailover 的 AlwaysOn 功能的支持。 此修补程序需要安装在每个 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表服务器上。|KB 2654347： [.net 3.5 SP1 修补程序添加对 AlwaysOn 功能的支持](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 ##  <a name="windows-system-requirements-and-recommendations"></a><a name="SystemReqsForAOAG"></a>Windows 系统要求和建议  
   
@@ -53,7 +53,7 @@ ms.locfileid: "72782961"
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|确保每台计算机正在运行 x86（非 WOW64）或 x64 Windows Server 2008 或更高版本。|WOW64（Windows 64 位上的 Windows 32 位）不支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。|  
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|确保每台计算机都是 Windows Server 故障转移群集 (WSFC) 群集中的节点。|[Windows Server 故障转移群集 (WSFC) 与 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)|  
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|请确保 WSFC 群集包含足够多的节点来支持您的可用性组配置。|对于某一给定可用性组，一个 WSFC 节点只能承载一个可用性副本。 在某一给定 WSFC 节点上， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的一个或多个实例可为许多可用性组承载可用性副本。<br /><br /> 询问您的数据库管理员，了解为支持计划的可用性组的可用性副本，需要多少个 WSFC 节点。<br /><br /> [AlwaysOn 可用性组概述 (SQL Server)](overview-of-always-on-availability-groups-sql-server.md)。|  
-|![旁边](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|确保 WSFC 群集中的每个节点上都安装了所有适用的 Window 修补程序。|** \* \*重要\*提示**对于正在其[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]上部署的 WSFC 群集的节点，需要或建议使用许多修补程序。 有关详细信息，请参阅本节后面的[支持 AlwaysOn 可用性组的 Windows 修补程序（Windows 系统）](#WinHotfixes)。|  
+|![旁边](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|确保 WSFC 群集中的每个节点上都安装了所有适用的 Window 修补程序。|** \* \* 重要 \* 提示 \* **对于正在部署的 WSFC 群集的节点，需要或建议使用许多修补程序 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 。 有关详细信息，请参阅本节后面的[支持 AlwaysOn 可用性组的 Windows 修补程序（Windows 系统）](#WinHotfixes)。|  
   
 > [!IMPORTANT]  
 >  另外，确保已正确配置了您的环境以连接到可用性组。 有关详细信息，请参阅[AlwaysOn 客户端连接（SQL Server）](always-on-client-connectivity-sql-server.md)。  
@@ -99,7 +99,7 @@ ms.locfileid: "72782961"
   
 3.  使用 `Get-ClusterResource` cmdlet 查找网络名称资源，然后使用 `Set-ClusterParameter` cmdlet 设置 `HostRecordTTL` 值，如下所示：  
   
-     Get-clusterresource "*\<w>*" |Set-clusterparameter HostRecordTTL * \<TimeInSeconds>*  
+     Get-clusterresource "* \< w>*" |Set-clusterparameter HostRecordTTL * \< TimeInSeconds>*  
   
      下面的 PowerShell 示例为名为“`SQL Network Name (SQL35)`”的网络名称资源将 HostRecordTTL 设置为 300 秒。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "72782961"
   
 ##### <a name="related-content-powershell"></a>相关内容 (PowerShell)  
   
--   [群集和高可用性](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) （故障转移群集和网络负载平衡团队博客）  
+-   [群集和高可用性](https://techcommunity.microsoft.com/t5/failover-clustering/bg-p/FailoverClustering) （故障转移群集和网络负载平衡团队博客）  
   
 -   [故障转移群集上的 Windows PowerShell 入门](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
@@ -125,7 +125,7 @@ ms.locfileid: "72782961"
   
 -   [在多站点故障转移群集中配置 DNS 设置](https://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
   
--   [向网络名称资源注册 DNS](https://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
+-   [向网络名称资源注册 DNS](https://techcommunity.microsoft.com/t5/failover-clustering/dns-registration-with-the-network-name-resource/ba-p/371482)  
   
 -   [Windows 2008 R2 故障转移多站点群集](https://kiruba4u.blogspot.com/2012/03/failover-clustering-in-windows-server.html)  
   
@@ -139,12 +139,12 @@ ms.locfileid: "72782961"
 ||先决条件|链接|  
 |-|------------------|-----------|  
 |![旁边](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|主机必须是 Windows Server 故障转移群集 (WSFC) 节点。 承载给定可用性组的可用性副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例必须位于单个 WSFC 群集的单独节点上。 唯一的例外是在迁移到另一个 WSFC 群集时，此时一个可用性组可能会暂时跨两个群集。|[Windows Server 故障转移群集 (WSFC) 与 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [故障转移群集和 AlwaysOn 可用性组 &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)|  
-|![旁边](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|如果您希望将可用性组与 Kerberos 一起使用：<br /><br /> 承载可用性组的可用性副本的所有服务器实例都必须使用相同的 SQL Server 服务帐户。<br /><br /> 域管理员需要在可用性组侦听器的虚拟网络名称 (VNN) 的 SQL Server 服务帐户上使用 Active Directory 手动注册服务主体名称 (SPN)。 如果在 SQL Server 服务帐户之外的帐户上注册 SPN，则身份验证将失败。<br /><br /> ** \* \*重要\*提示**如果更改 SQL Server 服务帐户，则域管理员需要手动重新注册 SPN。|[为 Kerberos 连接注册服务主体名称](../../configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **简要说明：**<br /><br /> Kerberos 和 SPN 强制实施相互身份验证。 SPN 将映射到启动 SQL Server 服务的 Windows 帐户。 如果未正确注册 SPN 或注册失败，则 Windows 安全层将无法确定与 SPN 关联的帐户，因而无法使用 Kerberos 身份验证。<br /><br /> 注意：NTLM 没有此要求。|  
+|![旁边](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|如果您希望将可用性组与 Kerberos 一起使用：<br /><br /> 承载可用性组的可用性副本的所有服务器实例都必须使用相同的 SQL Server 服务帐户。<br /><br /> 域管理员需要在可用性组侦听器的虚拟网络名称 (VNN) 的 SQL Server 服务帐户上使用 Active Directory 手动注册服务主体名称 (SPN)。 如果在 SQL Server 服务帐户之外的帐户上注册 SPN，则身份验证将失败。<br /><br /> ** \* \* 重要 \* 提示 \* **如果更改 SQL Server 服务帐户，则域管理员需要手动重新注册 SPN。|[为 Kerberos 连接注册服务主体名称](../../configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **简要说明：**<br /><br /> Kerberos 和 SPN 强制实施相互身份验证。 SPN 将映射到启动 SQL Server 服务的 Windows 帐户。 如果未正确注册 SPN 或注册失败，则 Windows 安全层将无法确定与 SPN 关联的帐户，因而无法使用 Kerberos 身份验证。<br /><br /> 注意：NTLM 没有此要求。|  
 |![旁边](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|如果您计划使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例 (FCI) 承载可用性副本，则请确保您理解 FCI 限制并且满足 FCI 要求。|[使用 SQL Server 故障转移群集实例 (FCI) 承载可用性副本的先决条件和要求](#FciArLimitations) （本主题的后面将介绍）|  
 |![旁边](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|每个服务器实例都必须正在运行 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]的 Enterprise Edition。|[SQL Server 2014 各个版本支持的功能](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)|  
 |![旁边](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|为某一可用性组承载可用性副本的所有服务器实例必须都使用相同的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 排序规则。|[设置或更改服务器排序规则](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
-|![旁边](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|对将为任何可用性组承载可用性副本的每个服务器实例都启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。 在某一给定计算机上，您可为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 启用您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装支持的任意多的服务器实例。|[启用和禁用 AlwaysOn 可用性组 (SQL Server)](enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> ** \* \*重要\*提示**如果删除并重新创建了 WSFC 群集，则必须在原始 WSFC 群集上启用了的[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]每个服务器实例上禁用并重新启用该功能。|  
-|![旁边](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|每个服务器实例都要求数据库镜像端点。 请注意，此端点由服务器实例上的所有可用性副本以及数据库镜像伙伴和见证服务器共享。<br /><br /> 如果你选择承载可用性副本的服务器实例正在某一域用户帐户下运行并且尚不具有数据库镜像端点，则 [新建可用性组向导](use-the-availability-group-wizard-sql-server-management-studio.md) （或者 [将副本添加到可用性组向导](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)）可以创建该端点并将 CONNECT 权限授予服务器实例的服务帐户。 但是，如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务正在以内置帐户（例如 Local System、Local Service 或 Network Service）或非域帐户运行，您必须使用证书来进行端点身份验证，并且该向导将无法在服务器实例上创建数据库镜像端点。 在此情况下，我们建议您首先手动创建数据库镜像端点，然后启动该向导。<br /><br /> ** \* \*安全\*说明**的传输安全性[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]与数据库镜像的传输安全性相同。|[数据库镜像终结点 (SQL Server)](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [用于数据库镜像和 AlwaysOn 可用性组 &#40;SQL Server 的传输安全&#41;](../../database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
+|![旁边](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|对将为任何可用性组承载可用性副本的每个服务器实例都启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。 在某一给定计算机上，您可为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 启用您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装支持的任意多的服务器实例。|[启用和禁用 AlwaysOn 可用性组 (SQL Server)](enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> ** \* \* 重要 \* 提示 \* **如果你删除并重新创建了 WSFC 群集，则必须在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 原始 WSFC 群集上启用了的每个服务器实例上禁用并重新启用该功能。|  
+|![旁边](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|每个服务器实例都要求数据库镜像端点。 请注意，此端点由服务器实例上的所有可用性副本以及数据库镜像伙伴和见证服务器共享。<br /><br /> 如果你选择承载可用性副本的服务器实例正在某一域用户帐户下运行并且尚不具有数据库镜像端点，则 [新建可用性组向导](use-the-availability-group-wizard-sql-server-management-studio.md) （或者 [将副本添加到可用性组向导](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)）可以创建该端点并将 CONNECT 权限授予服务器实例的服务帐户。 但是，如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务正在以内置帐户（例如 Local System、Local Service 或 Network Service）或非域帐户运行，您必须使用证书来进行端点身份验证，并且该向导将无法在服务器实例上创建数据库镜像端点。 在此情况下，我们建议您首先手动创建数据库镜像端点，然后启动该向导。<br /><br /> 的** \* \* 安全 \* 说明 \* **传输安全性与 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 数据库镜像相同。|[数据库镜像终结点 (SQL Server)](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [用于数据库镜像和 AlwaysOn 可用性组 &#40;SQL Server 的传输安全&#41;](../../database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
 |![旁边](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|如果使用 FILESTREAM 的任何数据库将添加到某一可用性组，请确保在将承载该可用性组的可用性副本的每个服务器实例上都启用 FILESTREAM。|[启用和配置 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
 |![旁边](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|如果任何包含的数据库将添加到某一可用性组，请确保在将承载该可用性组的可用性副本的每个服务器实例上将 `contained database authentication` 服务器选项都设置为 `1`。|[contained database authentication 服务器配置选项](../../configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [服务器配置选项 (SQL Server)](../../configure-windows/server-configuration-options-sql-server.md)|  
   
@@ -175,7 +175,7 @@ ms.locfileid: "72782961"
   
 ###  <a name="permissions-server-instance"></a><a name="PermissionsSI"></a>权限（服务器实例）  
   
-|任务|所需的权限|  
+|任务|所需权限|  
 |----------|--------------------------|  
 |创建数据库镜像端点|要求具有 CREATE ENDPOINT 权限，或者具有**sysadmin**固定服务器角色的成员身份。  此外，还要求 CONTROL ON ENDPOINT 权限。 有关详细信息，请参阅 [GRANT 终结点权限 (Transact-SQL)](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)。|  
 |启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]|要求本地计算机上 **Administrator** 组中的成员身份以及对 WSFC 群集的完全控制。|  
@@ -198,7 +198,7 @@ ms.locfileid: "72782961"
  例如，要使可用性组支持自动故障转移，作为自动故障转移伙伴的辅助副本必须处于 SYNCHRONIZED 状态。 如果到此辅助副本的网络链接失败（甚至间歇性断开），副本将进入 UNSYNCHRONIZED 状态，并且在该链接恢复之前无法重新同步。 如果在该辅助副本不同步时，WSFC 群集请求自动故障转移，则不会发生自动故障转移。  
   
 ##  <a name="client-connectivity-support"></a><a name="ClientConnSupport"></a>客户端连接支持  
- 有关客户端[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]连接支持的信息，请参阅[AlwaysOn 客户端连接（SQL Server）](always-on-client-connectivity-sql-server.md)。  
+ 有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 客户端连接支持的信息，请参阅[AlwaysOn 客户端连接（SQL Server）](always-on-client-connectivity-sql-server.md)。  
   
 ##  <a name="prerequisites-and-restrictions-for-using-a-sql-server-failover-cluster-instance-fci-to-host-an-availability-replica"></a><a name="FciArLimitations"></a> 使用 SQL Server 故障转移群集实例 (FCI) 承载可用性副本的先决条件和限制  
  
@@ -286,7 +286,7 @@ ms.locfileid: "72782961"
   
 #### <a name="permissions-availability-groups"></a>权限（可用性组）  
   
-|任务|所需的权限|  
+|任务|所需权限|  
 |----------|--------------------------|  
 |创建可用性组|需要 **sysadmin** 固定服务器角色的成员资格，以及 CREATE AVAILABILITY GROUP 服务器权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。|  
 |更改可用性组|对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。<br /><br /> 此外，将数据库联接到可用性组要求具有 **db_owner** 固定服务器角色的成员身份。|  
@@ -330,7 +330,7 @@ ms.locfileid: "72782961"
   
 -   如果辅助数据库的文件路径（包括驱动器号）不同于相应主数据库的路径，则以下限制适用：  
   
-    -   **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]:** 不支持 "**完全**" 选项（在 "[选择初始数据同步](select-initial-data-synchronization-page-always-on-availability-group-wizards.md)" 页上），  
+    -   ** [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] / [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] ：** 不支持 "**完全**" 选项（在 "[选择初始数据同步](select-initial-data-synchronization-page-always-on-availability-group-wizards.md)" 页上），  
   
     -   **RESTORE WITH MOVE：**  若要创建辅助数据库，在承载辅助副本的每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上数据库文件必须是 RESTORED WITH MOVE。  
   

@@ -10,12 +10,12 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b317ffdb38c06cafe09ff786004b7ac144d0b18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8f1b28766eab6ecd5035dd8a58e88abaccc97c5
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228467"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921735"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>演示内存中 OLTP 的 AdventureWorks 扩展
     
@@ -35,24 +35,24 @@ ms.locfileid: "75228467"
   
 -   [基于 AdventureWorks 安装内存中 OLTP 示例](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的说明  
   
--   [示例表和过程的说明](#Descriptionofthesampletablesandprocedures)-这包括通过[!INCLUDE[hek_2](../includes/hek-2-md.md)]示例添加到 AdventureWorks 的表和过程的说明，以及将一些原始 AdventureWorks 表迁移到内存优化的注意事项  
+-   [示例表和过程的说明](#Descriptionofthesampletablesandprocedures)-这包括通过示例添加到 AdventureWorks 的表和过程的说明，以及将 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 一些原始 AdventureWorks 表迁移到内存优化的注意事项  
   
 -   执行[使用演示工作负荷执行度量](#PerformanceMeasurementsusingtheDemoWorkload)的说明 - 包括有关安装和运行 ostress（一种用于驱动工作负荷的工具）以及运行演示工作负荷本身的说明  
   
 -   [示例中的内存和磁盘空间利用率](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 先决条件  
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]RTM-评估版、开发人员版或企业版  
   
--   对于性能测试，服务器的规格类似于生产环境。 对于此特定示例，应至少有 16 GB 内存可供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用。 有关硬件的[!INCLUDE[hek_2](../includes/hek-2-md.md)]一般指导原则，请参阅以下博客文章：[https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
+-   对于性能测试，服务器的规格类似于生产环境。 对于此特定示例，应至少有 16 GB 内存可供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用。 有关硬件的一般指导原则 [!INCLUDE[hek_2](../includes/hek-2-md.md)] ，请参阅以下博客文章：[https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/](https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/)  
   
 ##  <a name="installing-the-hek_2-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>基于 AdventureWorks 安装 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 示例  
  请按照以下步骤安装示例：  
   
 1.  下载用于 AdventureWorks2014 数据库完整备份的存档：  
   
-    1.  打开以下内容： [https://msftdbprodsamples.codeplex.com/downloads/get/880661](https://msftdbprodsamples.codeplex.com/downloads/get/880661)。  
+    1.  打开以下内容： [https://msftdbprodsamples.codeplex.com/downloads/get/880661](https://msftdbprodsamples.codeplex.com/downloads/get/880661) 。  
   
     2.  提示保存文件时，选择本地文件夹。  
   
@@ -87,13 +87,13 @@ ms.locfileid: "75228467"
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  从[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [SQL Server 2014 RTM 内存中 OLTP 示例中](https://go.microsoft.com/fwlink/?LinkID=396372)将示例脚本 "rtm [!INCLUDE[hek_2](../includes/hek-2-md.md)] sample" 下载到本地文件夹。  
+5.  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[hek_2](../includes/hek-2-md.md)] 从[SQL Server 2014 RTM 内存中 OLTP 示例中](https://go.microsoft.com/fwlink/?LinkID=396372)将示例脚本 "rtm sample" 下载到本地文件夹。  
   
-6.  更新脚本 "[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample" 中变量 "checkpoint_files_location" 的值，以指向[!INCLUDE[hek_2](../includes/hek-2-md.md)]检查点文件的目标位置。 检查点文件应置于具有良好顺序 IO 性能的驱动器上。  
+6.  更新脚本 "RTM Sample" 中变量 "checkpoint_files_location" 的值 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[hek_2](../includes/hek-2-md.md)] ，以指向 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 检查点文件的目标位置。 检查点文件应置于具有良好顺序 IO 性能的驱动器上。  
   
      将变量“database_name”的值更新为指向 AdventureWorks2014 数据库。  
   
-    1.  请确保在路径名称中包含\'反斜杠 "  
+    1.  请确保在 \' 路径名称中包含反斜杠 "  
   
     2.  示例：  
   
@@ -113,7 +113,7 @@ ms.locfileid: "75228467"
   
     2.  使用 Management Studio：  
   
-        1.  在查询窗口中[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]打开[!INCLUDE[hek_2](../includes/hek-2-md.md)]脚本 "RTM Sample .sql"  
+        1.  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[hek_2](../includes/hek-2-md.md)] 在查询窗口中打开脚本 "RTM Sample .sql"  
   
         2.  连接到包含数据库 AdventureWorks2014 的目标服务器  
   
@@ -223,7 +223,7 @@ ms.locfileid: "75228467"
   
 -   *别名 UDT* - 原始表使用等效于系统数据类型位的用户定义数据类型 dbo.Flag。 迁移的表改用位数据类型。  
   
--   *BIN2 排序规则*-列 Name 和 ProductNumber 包含在索引键中，因此必须在中[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]具有 BIN2 排序规则。 这里假设应用程序不依赖于排序规则具体内容（如区分大小写）。  
+-   *BIN2 排序规则*-列 Name 和 ProductNumber 包含在索引键中，因此必须在中具有 BIN2 排序规则 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 。 这里假设应用程序不依赖于排序规则具体内容（如区分大小写）。  
   
 -   *Rowguid* - 省略了 rowguid 列。 有关详细信息，请参见表 SalesOrderHeader 的说明。  
   
@@ -412,7 +412,7 @@ ms.locfileid: "75228467"
   
 -   -S 要连接到的 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的名称  
   
--   -E 使用 Windows 身份验证进行连接（默认）;如果使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]身份验证，请使用选项-u 和-P 分别指定用户名和密码  
+-   -E 使用 Windows 身份验证进行连接（默认）;如果使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证，请使用选项-u 和-P 分别指定用户名和密码  
   
 -   -d 数据库的名称，对于此示例为 AdventureWorks2014  
   
@@ -462,7 +462,7 @@ END
  我们将使用 Ostress 工具通过几个并发连接执行脚本。 我们将使用参数“-n”控制连接数，使用参数“r”控制对每个连接执行脚本的次数。  
   
 #### <a name="functional-validation-of-the-workload"></a>工作负荷的功能验证  
- 若要验证一切是否正常运行，我们将从一个示例测试开始，使用10个并发连接和5个迭代，同时插入\*总共 10 * 5 20 = 1000 销售订单。  
+ 若要验证一切是否正常运行，我们将从一个示例测试开始，使用10个并发连接和5个迭代，同时插入总共 10 * 5 \* 20 = 1000 销售订单。  
   
  对于以下命令，我们假设在本地计算机上使用默认实例。 如果使用命名实例或使用远程服务器，请使用参数 -S 相应地更改服务器名称。  
   
@@ -519,7 +519,7 @@ ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @
   
  在一台共有 8 个物理（16 个逻辑）核心的测试服务器上，需要 41 分 25 秒。 在另一台有 24 个物理（48 个逻辑）核心的测试服务器上，需要 52 分 16 秒。  
   
- 此测试中内存优化表与基于磁盘的表之间存在性能差异的主要因素在于，使用基于磁盘的表时， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 无法完全利用 CPU。 原因在于闩锁争用：并发事务尝试写入相同数据页；闩锁用于确保一次只有一个事务才能写入页。 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 引擎没有闩锁，数据行不是按页组织。 因而，并发事务不会阻塞彼此的插入，从而[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]能够完全利用 CPU。  
+ 此测试中内存优化表与基于磁盘的表之间存在性能差异的主要因素在于，使用基于磁盘的表时， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 无法完全利用 CPU。 原因在于闩锁争用：并发事务尝试写入相同数据页；闩锁用于确保一次只有一个事务才能写入页。 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 引擎没有闩锁，数据行不是按页组织。 因而，并发事务不会阻塞彼此的插入，从而 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 能够完全利用 CPU。  
   
  在工作负荷运行期间可以观察 CPU 利用率（例如使用任务管理器）。 对于基于磁盘的表，可以看到 CPU 利用率远低于 100%。 在有 16 个逻辑处理器的测试配置中，利用率保持在 24% 左右。  
   
@@ -568,7 +568,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**type**|**name**|**pages_MB**|  
+|type |**name**|**pages_MB**|  
 |MEMORYCLERK_XTP|默认|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
 |MEMORYCLERK_XTP|默认|0|  
@@ -617,7 +617,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**type**|**name**|**pages_MB**|  
+|type |**name**|**pages_MB**|  
 |MEMORYCLERK_XTP|默认|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
 |MEMORYCLERK_XTP|默认|0|  
@@ -663,7 +663,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**type**|**name**|**pages_MB**|  
+|type |**name**|**pages_MB**|  
 |MEMORYCLERK_XTP|默认|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
 |MEMORYCLERK_XTP|默认|0|  
@@ -682,7 +682,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**type**|**name**|**pages_MB**|  
+|type |**name**|**pages_MB**|  
 |MEMORYCLERK_XTP|默认|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
 |MEMORYCLERK_XTP|默认|0|  
@@ -739,7 +739,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**计数**|**磁盘上大小 (MB)**|  
+|**state_desc**|**file_type_desc**|**count**|**磁盘上大小 (MB)**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
@@ -785,7 +785,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**计数**|**磁盘上大小 (MB)**|  
+|**state_desc**|**file_type_desc**|**count**|**磁盘上大小 (MB)**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
@@ -831,7 +831,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**计数**|**磁盘上大小 (MB)**|  
+|**state_desc**|**file_type_desc**|**count**|**磁盘上大小 (MB)**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |ACTIVE|DATA|38|5152|  
@@ -864,7 +864,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**计数**|**磁盘上大小 (MB)**|  
+|**state_desc**|**file_type_desc**|**count**|**磁盘上大小 (MB)**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|2|268|  

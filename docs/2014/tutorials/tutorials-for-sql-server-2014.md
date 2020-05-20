@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: be20c79c4c44d65b4d6b1177d06cea5ef66c164b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da87f0fbae21d11906f12a906aa5107e8812436e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242059"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000041"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>SQL Server 2014 教程
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 引入了很多新技术和新功能。  
@@ -24,18 +24,18 @@ ms.locfileid: "75242059"
   
  如果您使用的是 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 服务器，则应已安装了 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 数据访问接口。 为了使教程正常发挥作用，您需要使用这些访问接口的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 示例数据库，或者您需要使用示例数据库的 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 版本的 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 数据访问接口。  
   
--   若要[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]下载与教程一起使用的示例，请参阅 CodePlex 上[的 SQL Server 的示例](https://social.technet.microsoft.com/wiki/contents/articles/3735.sql-server-samples-readme.aspx#About_Crescent_Sample_Images)。  
+-   若要下载 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 与教程一起使用的示例，请参阅 CodePlex 上[的 SQL Server 的示例](https://social.technet.microsoft.com/wiki/contents/articles/3735.sql-server-samples-readme.aspx#About_Crescent_Sample_Images)。  
   
--   若要下载[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]与教程[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]一起[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]使用的工作簿和报表，请[在 PowerPivot 和 Power View 中转到 HelloWorldPicnic 示例模型的图像文件](https://www.microsoft.com/download/details.aspx?id=26719)。  
+-   若要下载 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 与教程一起使用的工作簿和报表 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] ，请[在 PowerPivot 和 Power View 中转到 HelloWorldPicnic 示例模型的图像文件](https://www.microsoft.com/download/details.aspx?id=26719)。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)]是[!INCLUDE[SPS2010](../includes/sps2010-md.md)]企业版外接程序的一项功能。  
+    >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]是 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 企业版外接程序的一项功能 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] 。  
   
--   若要[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]下载版本[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)]的数据库，请参阅 CodePlex 上的[艾德 Works 2014 示例数据库](https://msftdbprodsamples.codeplex.com/releases/view/125550)。  
+-   若要下载 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 版本的 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 数据库，请参阅 CodePlex 上的[艾德 Works 2014 示例数据库](https://msftdbprodsamples.codeplex.com/releases/view/125550)。  
   
--   若要[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]下载版本[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)]的数据库，请在 CodePlex 上[的 SQL Server 2012 中转到艾德作品](https://msftdbprodsamples.codeplex.com/releases/view/55330)。  
+-   若要下载 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 版本的 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 数据库，请在 CodePlex 上[的 SQL Server 2012 中转到艾德作品](https://msftdbprodsamples.codeplex.com/releases/view/55330)。  
   
--   若要查看教程的[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]列表，请参阅 MSDN library 中的[教程](https://msdn.microsoft.com/library/ms167593.aspx)。  
+-   若要查看教程的列表，请参阅 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] MSDN library 中的[教程](https://msdn.microsoft.com/library/ms167593.aspx)。  
   
 ## <a name="in-this-section"></a>本节内容  
  提供了针对这些 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 技术的教程。  

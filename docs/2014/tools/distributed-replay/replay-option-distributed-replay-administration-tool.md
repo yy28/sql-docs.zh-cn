@@ -10,15 +10,15 @@ ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ffe6a854e24240c6298dfbf7b4c195d787e07c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5f25a42b54e0ae310c7033a81f75cad75582416
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78172016"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925061"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>重播选项（分布式重播管理工具）
-  Distributed Replay 管理工具`DReplay.exe`是一个命令行工具，可用于与 Distributed Replay 控制器进行通信。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本主题介绍 **replay** 命令行选项和相应的语法。
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 管理工具 `DReplay.exe` 是一个命令行工具，可用于与 Distributed Replay 控制器进行通信。 本主题介绍 **replay** 命令行选项和相应的语法。
 
  **replay** 选项启动事件重播阶段，在该阶段中，控制器将重播数据调度到指定客户端，启动分布式重播并同步客户端。 每个参与重播的客户端可以选择记录重播活动并在本地保存结果跟踪文件。
 
@@ -50,11 +50,11 @@ ms.locfileid: "78172016"
 
 -   不支持 UNC 路径。
 
- **-o**捕获客户端的重播活动，并将其保存到由客户端配置文件中的`<ResultDirectory>`元素指定的路径中的结果跟踪`DReplayClient.xml`文件中。
+ **-o**捕获客户端的重播活动，并将其保存到由 `<ResultDirectory>` 客户端配置文件中的元素指定的路径中的结果跟踪文件中 `DReplayClient.xml` 。
 
  如果 -o**** 参数未指定，结果跟踪文件就不会生成。 在重播结束时，控制台输出将返回摘要信息，但不提供其他重播统计信息。
 
- **-s** *target_server*指定应对其重播分布式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]工作负荷的目标实例。 必须以 **server_name[\instance name]** 格式指定此参数。
+ **-s** *target_server*指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 应对其重播分布式工作负荷的目标实例。 必须以 **server_name[\instance name]** 格式指定此参数。
 
  不能使用“`localhost`”或“`.`”作为目标服务器。
 
@@ -148,6 +148,6 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
  有关详细信息，请参阅 [Distributed Replay Security](distributed-replay-security.md)。
 
 ## <a name="see-also"></a>另请参阅
- [重播跟踪数据](replay-trace-data.md)[查看重播结果](review-the-replay-results.md) [SQL Server Distributed Replay](sql-server-distributed-replay.md)使用 Distributed Replay[配置 Distributed Replay](configure-distributed-replay.md) [SQL Server Distributed Replay 论坛](https://social.technet.microsoft.com/Forums/sl/sqldru/)[使用 SQL Server](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx) [负载测试 Distributed Replay 第2部分](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)
+ [重播跟踪数据](replay-trace-data.md)[查看重播结果](review-the-replay-results.md) [SQL Server Distributed Replay](sql-server-distributed-replay.md)使用 Distributed Replay[配置 Distributed Replay](configure-distributed-replay.md) [SQL Server Distributed Replay 论坛](https://social.technet.microsoft.com/Forums/sl/sqldru/)[使用 SQL Server](https://docs.microsoft.com/archive/blogs/batuhanyildiz/using-distributed-replay-to-load-test-your-sql-serverpart-1) [负载测试 Distributed Replay 第2部分](https://docs.microsoft.com/archive/blogs/msdn/mspfe/using-distributed-replay-to-load-test-your-sql-serverpart-2)
 
 

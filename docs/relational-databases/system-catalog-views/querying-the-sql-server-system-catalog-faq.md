@@ -16,14 +16,14 @@ helpviewer_keywords:
 - system catalogs [SQL Server], example queries
 - catalog views [SQL Server], frequently asked questions
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c16bc1e0c8d8d6b5a62e2823aa011b58520b1d00
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 30b325dcd012defe3755f769c74ec2fc5d57522e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018366"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834493"
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>查询 SQL Server 系统目录常见问题
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -616,7 +616,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-determine-if-a-column-is-used-in-a-computed-column-expression"></a><a name="_FAQ20"></a>如何实现确定列是否在计算列表达式中使用？  
- 运行以下查询之前，请将、 `<database_name>` `<schema_name.table_name>`和`<column_name`> 替换为有效的名称。  
+ 运行以下查询之前，请将 `<database_name>` 、 `<schema_name.table_name>` 和> 替换 `<column_name` 为有效的名称。  
   
 ```  
 USE <database_name>;  
@@ -660,7 +660,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-find-the-columns-that-depend-on-a-specified-clr-user-defined-type-or-alias-type"></a><a name="_FAQ22"></a>如何实现查找依赖于指定 CLR 用户定义类型或别名类型的列？  
- 运行以下查询之前，请将替换`<database_name>`为有效的名称`<schema_name.data_type_name>` ，将替换为有效的架构限定的 CLR 用户定义类型或架构限定的别名类型名称。 下面的查询要求**db_owner**角色的成员身份或权限才能查看数据库中的所有依赖列和计算列元数据。  
+ 运行以下查询之前，请将替换为有效的名称，将替换为 `<database_name>` 有效的 `<schema_name.data_type_name>` 架构限定的 CLR 用户定义类型或架构限定的别名类型名称。 下面的查询要求**db_owner**角色的成员身份或权限才能查看数据库中的所有依赖列和计算列元数据。  
   
 ```  
 USE <database_name>;  
@@ -757,7 +757,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-find-the-check-constraints-that-depend-on-a-specified-clr-user-defined-type"></a><a name="_FAQ25"></a>如何实现查找依赖于指定 CLR 用户定义类型的 CHECK 约束？  
- 运行以下查询之前，请使用有效`<database_name>`名称替换，并`<schema_name.data_type_name>`使用有效的架构限定 CLR 用户定义类型名称替换。  
+ 运行以下查询之前，请使用 `<database_name>` 有效名称替换，并 `<schema_name.data_type_name>` 使用有效的架构限定 CLR 用户定义类型名称替换。  
   
 ```  
 USE <database_name>;  

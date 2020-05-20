@@ -10,12 +10,12 @@ ms.assetid: a8b0bacc-4d2c-42e4-84bf-1a97e0bd385b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7a13345da45d7e6c31a53bc51371306da444a96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3498032da616658785d2ff33262ed57fa5736f1
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228184"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921836"
 ---
 # <a name="monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs"></a>监视数据与差异文件对的合并以及排除其故障
   内存中 OLTP 使用合并策略自动合并相邻数据和差异文件对。 无法禁用合并活动。  
@@ -47,7 +47,7 @@ exec sys.sp_xtp_merge_checkpoint_files 'H_DB',  12345, 67890
   
  假定三个数据和差异文件对的每一对都有 15836 行，并且其中删除了 5279 行。 合并后，新数据文件有 31872 行，未删除行。 新数据文件的大小可远远大于初始分配的 128MB 大小。 这是因为手动合并优先于合并策略，强制合并所请求的文件。  
   
- [具有内存优化表的数据库中检查点文件的博客状态转换](https://blogs.technet.com/b/dataplatforminsider/archive/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables.aspx)说明数据和差异文件对从开始到垃圾回收的状态转换。  
+ [具有内存优化表的数据库中检查点文件的博客状态转换](https://cloudblogs.microsoft.com/sqlserver/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables/)说明数据和差异文件对从开始到垃圾回收的状态转换。  
   
 ## <a name="see-also"></a>另请参阅  
  [创建和管理用于内存优化对象的存储](../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  

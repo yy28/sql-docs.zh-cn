@@ -16,12 +16,12 @@ ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d93f78c157d5551e805437f156b8972ca8616c2b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2aee8939ed2bba9ffc6f96344a5c4ac1a95fbaab
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797736"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922044"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>配置对可用性副本的只读访问 (SQL Server)
   默认情况下，允许对主副本进行读写和读意向访问，不允许连接到 AlwaysOn 可用性组的辅助副本。 本主题说明如何通过使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 PowerShell 来配置 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中 AlwaysOn 可用性组的可用性副本的连接访问。  
@@ -87,7 +87,7 @@ ms.locfileid: "72797736"
   
 1.  连接到承载主副本的服务器实例。  
   
-2.  如果要为新的可用性组指定副本，请使用[CREATE availability group](/sql/t-sql/statements/create-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]语句。 如果要添加或修改现有可用性组的副本，请使用[ALTER availability group](/sql/t-sql/statements/alter-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]语句。  
+2.  如果要为新的可用性组指定副本，请使用[CREATE AVAILABILITY group](/sql/t-sql/statements/create-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句。 如果要添加或修改现有可用性组的副本，请使用[ALTER AVAILABILITY group](/sql/t-sql/statements/alter-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句。  
   
     -   若要配置辅助角色的连接访问，请在 ADD REPLICA 或 MODIFY REPLICA WITH 子句中指定 SECONDARY_ROLE 选项，如下所示：  
   
@@ -143,7 +143,7 @@ GO
   
 2.  在将可用性副本添加到可用性组中时，请使用 `New-SqlAvailabilityReplica` cmdlet。 在修改现有可用性副本时，请使用 `Set-SqlAvailabilityReplica` cmdlet。 相关参数如下：  
   
-    -   若要配置辅助角色的连接访问，请指定`ConnectionModeInSecondaryRole` *secondary_role_keyword*参数，其中*secondary_role_keyword*等于以下值之一：  
+    -   若要配置辅助角色的连接访问，请指定 `ConnectionModeInSecondaryRole` *secondary_role_keyword*参数，其中*secondary_role_keyword*等于以下值之一：  
   
          `AllowNoConnections`  
          不允许直接连接到辅助副本中的数据库，且不支持读取这些数据库。 这是默认设置。  
@@ -154,7 +154,7 @@ GO
          `AllowAllConnections`  
          允许针对辅助副本中的数据库的所有连接进行只读访问。  
   
-    -   若要为主要角色配置连接访问，请`ConnectionModeInPrimaryRole`指定*primary_role_keyword*，其中*primary_role_keyword*等于以下值之一：  
+    -   若要为主要角色配置连接访问，请指定 `ConnectionModeInPrimaryRole` *primary_role_keyword*，其中*primary_role_keyword*等于以下值之一：  
   
          `AllowReadWriteConnections`  
          不允许 Application Intent 连接属性设置为 ReadOnly 的连接。 在 Application Intent 属性设置为 ReadWrite 或者未设置 Application Intent 连接属性时，将允许连接。 有关 Application Intent 连接属性的详细信息，请参阅 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
@@ -182,7 +182,7 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
 ##  <a name="follow-up-after-configuring-read-only-access-for-an-availability-replica"></a><a name="FollowUp"></a>跟进：为可用性副本配置只读访问后  
  **对可读取辅助副本的只读访问**  
   
--   使用[Bcp 实用工具](../../../tools/bcp-utility.md)或[sqlcmd 实用工具](../../../tools/sqlcmd-utility.md)时，可以通过指定`-K ReadOnly`开关来指定对启用了只读访问权限的任何辅助副本的只读访问。  
+-   使用[Bcp 实用工具](../../../tools/bcp-utility.md)或[sqlcmd 实用工具](../../../tools/sqlcmd-utility.md)时，可以通过指定开关来指定对启用了只读访问权限的任何辅助副本的只读访问 `-K ReadOnly` 。  
   
 -   使客户端应用程序能够连接到可读取辅助副本：  
   
@@ -211,26 +211,25 @@ DATABASEPROPERTYEX([db name],'Updatability') = N'READ_ONLY'
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
--   [AlwaysOn：可读辅助副本的价值主张](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-value-proposition-of-readable-secondary.aspx)  
+-   [Always On: Value Proposition of Readable Secondary（AlwaysOn：可读次要副本的价值主张）](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-value-proposition-of-readable-secondary)  
   
--   [AlwaysOn：为什么存在两个选项用于为读取工作负荷启用辅助副本？](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx)  
+-   [Always On: Why there are two options to enable a secondary replica for read workload?（AlwaysOn：启用次要副本以读取工作负荷为什么存在两个选项？）](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload)  
   
--   [AlwaysOn：设置可读辅助副本](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-setting-up-readable-seconary-replica.aspx)  
+-   [Always On：设置可读辅助副本](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-setting-up-readable-seconary-replica)  
   
--   [AlwaysOn：我启用了可读辅助副本，但我的查询却受阻？](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx)  
+-   [Always On: I just enabled Readable Secondary but my query is blocked?（AlwaysOn：我启用了可读次要副本，但我的查询却受阻？）](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-i-just-enabled-readable-secondary-but-my-query-is-blocked)  
   
--   [AlwaysOn：在可读辅助副本、只读数据库和数据库快照上提供最新统计信息](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx)  
+-   [Always On: Making latest statistics available on Readable Secondary, Read-Only database and Database Snapshot（AlwaysOn：在可读次要副本、只读数据库和数据库快照上提供最新统计信息）](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-making-latest-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot)  
   
--   [AlwaysOn：使用只读数据库、数据库快照和辅助副本上的统计信息的挑战](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica.aspx)  
+-   [Always On: Challenges with statistics on ReadOnly database, Database Snapshot and Secondary Replica（AlwaysOn：使用只读数据库、数据库快照和次要副本上的统计信息的挑战）](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica)  
   
--   [AlwaysOn：在辅助副本上运行报表工作负荷时对主工作负荷的影响](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica.aspx)  
+-   [Always On: Impact on the primary workload when you run reporting workload on the secondary replica（AlwaysOn：在次要副本上运行报表工作负荷时对主工作负荷的影响）](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica)  
   
--   [AlwaysOn：将可读辅助副本上的报表工作负荷映射到快照隔离的影响](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-of-mapping-reporting-workload-to-snapshot-isolation-on-readable-secondary.aspx)  
+-   [Always On: Impact of mapping reporting workload on Readable Secondary to Snapshot Isolation（AlwaysOn：将可读次要副本上的报表工作负荷映射到快照隔离的影响）](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-impact-of-mapping-reporting-workload-on-readable-secondary-to-snapshot-isolation)  
   
--   [AlwaysOn：最大程度减少在辅助副本上运行工作负荷时对 REDO 线程的阻止](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica.aspx)  
+-   [Always On: Minimizing blocking of REDO thread when running reporting workload on Secondary Replica（AlwaysOn：最大程度减少在次要副本上运行工作负荷时对 REDO 线程的阻止）](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica)  
   
--   [AlwaysOn：可读辅助副本和数据延迟](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson.aspx)  
-  
+-   [Always On: Readable Secondary and data latency（AlwaysOn：可读次要副本和数据延迟）](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-readable-secondary-and-data-latency)  
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   

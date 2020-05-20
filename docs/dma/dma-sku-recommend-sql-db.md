@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: d6d329b97946d9d8042641653ed0167510a19b17
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: 7fa2b8361f9a09dbab28689e31d77a3152ff83dd
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72586739"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885825"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>确定本地数据库的正确的 Azure SQL 数据库/托管实例 SKU
 
@@ -41,7 +41,7 @@ ms.locfileid: "72586739"
 ## <a name="prerequisites"></a>先决条件
 
 - 下载并安装最新版本的[DMA](https://aka.ms/get-dma)。 如果你已经具有该工具的早期版本，请将其打开，系统会提示你升级 DMA。
-- 确保你的计算机具有[PowerShell 版本 5.1](https://www.microsoft.com/download/details.aspx?id=54616)或更高版本，以便运行所有脚本。 有关 findoug 安装在计算机上的 PowerShell 版本的信息，请参阅[下载并安装 Windows PowerShell 5.1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)一文。
+- 确保你的计算机具有[PowerShell 版本 5.1](https://www.microsoft.com/download/details.aspx?id=54616)或更高版本，以便运行所有脚本。 有关如何找出计算机上安装的 PowerShell 版本的信息，请参阅[下载并安装 Windows PowerShell 5.1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)一文。
 - 确保计算机上已安装 Azure Powershell 模块。 有关详细信息，请参阅[安装 Azure PowerShell 模块](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0)一文。
 - 验证是否已将收集性能计数器所需的 PowerShell 文件**SkuRecommendationDataCollectionScript**安装在 DMA 文件夹中。
 - 确保你要在其上执行此过程的计算机对承载数据库的计算机具有管理员权限。
@@ -102,7 +102,7 @@ ms.locfileid: "72586739"
     - **/AzureAuthenticationTenantId**：身份验证租户。
     - **/AzureAuthenticationClientId**：用于身份验证的 AAD 应用的客户端 ID。
     - 以下身份验证选项之一：
-      - Interactive (交互)
+      - 交互
         - **AzureAuthenticationInteractiveAuthentication**：对于身份验证弹出窗口，将设置为 true。
       - 基于证书
         - **AzureAuthenticationCertificateStoreLocation**：设置为证书存储位置（例如，"CurrentUser"）。

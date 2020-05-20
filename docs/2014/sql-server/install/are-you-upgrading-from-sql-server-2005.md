@@ -10,12 +10,12 @@ ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2db6a47de02b49397847dc9d713277ffcb152156
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: feed59c01a9fe77c226164c6b5b5df5caf0c77c1
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75656574"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922164"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>是否从 SQL Server 2005 进行升级？
   需立即升级到较新版本的 SQL Server 和 Azure SQL 数据库的原因之一是，对 SQL Server 2005 的扩展支持已结束。 通过升级，你不仅可以维护安全性和合规性、获取突破性的性能，还可以优化你的数据平台基础结构。  
@@ -36,7 +36,7 @@ ms.locfileid: "75656574"
   
  若要查看有关这些选项的更全面分析，请 [单击此处](https://sql05upgrade.azurewebsites.net/)。  
   
-|关系存储选项|好处|要考虑的其他因素|  
+|关系存储选项|优势|要考虑的其他因素|  
 |-------------------------------|--------------|-------------------------------|  
 |**本地 SQL Server**<br /><br /> 对于任何类型的数据库应用程序（从交易系统到数据仓库），请考虑此选项。<br /><br /> 有关详细信息，请参阅[SQL Server 2014](https://www.microsoft.com/EN-US/server-cloud/products/sql-server/)。|因为你管理硬件和软件，因此你对功能和可伸缩性具有最大控制权。<br /><br /> 如果是从 SQL Server 2005 升级，则这是最相似的环境。|你必须做出最大的前期投资并进行日常管理，因为你需要购买、维护和管理你自己的硬件和软件。|  
 |**Azure 虚拟机上托管的 SQL Server**<br /><br /> 如果你需要以下内容，请考虑此选项。<br />-迁移到托管环境的好处。<br />-控制操作环境。<br />-SQL Server 的熟悉功能集。<br /><br /> 有关详细信息，请参阅[Azure 虚拟机上的 SQL Server 概述](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)。<br /><br /> 有关迁移的详细信息，请参阅 [将数据库迁移到 Azure VM 上的 SQL Server](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/)。|可以从虚拟机映像库快速进行部署。<br /><br /> 获得完整的 SQL Server 功能集。<br /><br /> 节约硬件和服务器软件的成本。 只需支付每小时的使用费用。|必须配置并管理 SQL Server 和操作系统软件。|  
@@ -44,7 +44,7 @@ ms.locfileid: "75656574"
   
  你还可能想要针对某些数据和应用程序考虑使用非关系或 NoSQL 解决方案。  
   
-|非关系解决方案|好处|  
+|非关系解决方案|优势|  
 |------------------------------|--------------|  
 |**Azure DocumentDB**<br /><br /> 对于现代、可伸缩、移动和 Web 应用程序（使用 JSON 数据并要求结合使用功能强大的查询和事务数据处理），请考虑此选项。<br /><br /> 有关详细信息，请参阅 [DocumentDB](https://azure.microsoft.com/services/documentdb/)。|已为你的文档编制索引，你可以使用熟悉的 SQL 语法来查询它们。<br /><br /> 该数据库未设计架构。<br /><br /> 无需重新生成索引即可向文档添加属性。<br /><br /> 直接在数据库引擎内获取 JSON 和 JavaScript 支持。<br /><br /> 获取对地理空间数据和集成其他 Azure 服务（包括 Azure Search、HDInsight 和 Data Factory）的本机支持。<br /><br /> 获得低延迟、高性能存储并保留吞吐量级别。|  
 |**Azure 表存储**<br /><br /> 请考虑此选项以使用经济高效的解决方案存储数千兆半结构化数据。<br /><br /> 有关详细信息，请参阅 [表存储](https://azure.microsoft.com/services/storage/tables/)。|无需使数据离线即可扩展你的应用和表架构。<br /><br /> 无需分片数据集即可纵向扩展。<br /><br /> 获取跨多个区域复制数据的异地冗余存储。|  
@@ -57,11 +57,11 @@ ms.locfileid: "75656574"
   
 -   阅读以下 SQL Server 团队博客文章系列中有关如何规划升级的内容。  
   
-    -   [规划有效地从 SQL Server 2005 升级：步骤 1/3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx)  
+    -   [规划有效地从 SQL Server 2005 升级：步骤 1/3](https://cloudblogs.microsoft.com/sqlserver/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3/)  
   
-    -   [规划有效地从 SQL Server 2005 升级：步骤 2/3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx)  
+    -   [规划有效地从 SQL Server 2005 升级：步骤 2/3](https://cloudblogs.microsoft.com/sqlserver/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3/)  
   
-    -   [规划有效地从 SQL Server 2005 升级：步骤 3/3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)  
+    -   [规划有效地从 SQL Server 2005 升级：步骤 3/3](https://cloudblogs.microsoft.com/sqlserver/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3/)  
   
 -   查看[规划 SQL Server 安装](../../../2014/sql-server/install/planning-a-sql-server-installation.md)所需的要求和注意事项，包括[安装 SQL Server 2014 的硬件和软件要求](hardware-and-software-requirements-for-installing-sql-server.md)。  
   

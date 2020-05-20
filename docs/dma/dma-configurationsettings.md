@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc6805426251e87a8db3dcf4ad9da6343ac0ea12
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056544"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885994"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>为数据迁移助手配置设置
 
@@ -29,11 +29,11 @@ ms.locfileid: "74056544"
 
 - 桌面应用程序
 
-  % ProgramFiles%\\Microsoft 数据迁移助手\\
+  % ProgramFiles% \\ Microsoft 数据迁移助手 \\
 
 - 命令行实用工具
 
-  % ProgramFiles%\\Microsoft 数据迁移助手\\dmacmd 
+  % ProgramFiles% \\ Microsoft 数据迁移助手 \\ dmacmd 
 
 请确保在进行任何修改之前保存原始配置文件的副本。 进行更改后，重新启动数据迁移助手，以使新的配置值生效。
 
@@ -82,7 +82,7 @@ ms.locfileid: "74056544"
 在评估期间，数据迁移助手提取数据层应用程序（dacpac）以了解数据库架构。 对于极大型数据库，或如果服务器负载过大，此操作可能会失败并出现超时。 从数据迁移 v1.0 开始，可以修改以下配置值以避免错误。 
 
 > [!NOTE]
-> 默认情况&lt;下&gt; ，将对整个 dacfx 条目进行注释。 删除注释，然后根据需要修改值。
+> 默认情况下，将对整个 &lt; dacfx &gt; 条目进行注释。 删除注释，然后根据需要修改值。
 
 - commandTimeout
 
@@ -90,7 +90,7 @@ ms.locfileid: "74056544"
 
 - databaseLockTimeout
 
-   此参数等效于[设置锁定\_超时\_超时期限](../t-sql/statements/set-lock-timeout-transact-sql.md)（以*毫秒为单位）*。（默认值 = 5000）
+   此参数等效于[设置锁定 \_ 超时超时 \_ 期限](../t-sql/statements/set-lock-timeout-transact-sql.md)（以*毫秒为单位）*。（默认值 = 5000）
 
 - maxDataReaderDegreeOfParallelism
 

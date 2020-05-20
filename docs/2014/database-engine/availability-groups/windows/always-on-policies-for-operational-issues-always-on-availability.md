@@ -13,12 +13,12 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 090ad6a9651a01532af528f5f78316eeadb9798d
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815748"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922016"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>针对 AlwaysOn 可用性组运行问题的 AlwaysOn 策略 (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 运行状况模型评估一组基于预定义策略的管理 (PBM) 策略。 可以使用这些策略查看 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中可用性组及其可用性副本和数据库的运行状况。  
@@ -86,7 +86,7 @@ ms.locfileid: "62815748"
   
  用户定义策略可以使用任何可用的 PBM 方面，包括那些由 AlwaysOn 预定义策略使用的方面（请参阅本主题前面的[预定义策略和问题](#AlwaysOnPBM)）。 服务器方面提供了下列用于监视 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]运行状况的属性：（`IsHadrEnabled` 和 `HadrManagerStatus`）。 服务器方面还提供了下列用于监视 WSFC 群集配置的策略：`ClusterQuorumType` 和 `ClusterQuorumState`。  
   
- 有关详细信息，请参阅 [AlwaysOn 运行状况模型第二部分 -- 扩展运行状况模型](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)（SQL Server AlwaysOn 团队博客）。  
+ 有关详细信息，请参阅 [AlwaysOn 运行状况模型第二部分 -- 扩展运行状况模型](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)（SQL Server AlwaysOn 团队博客）。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   
@@ -104,9 +104,9 @@ ms.locfileid: "62815748"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   
--   [AlwaysOn 运行状况模型第一部分 — — 运行状况模型体系结构](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [AlwaysOn 运行状况模型第一部分 — — 运行状况模型体系结构](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)  
   
--   [AlwaysOn 运行状况模型第二部分 — — 扩展运行状况模型](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [AlwaysOn 运行状况模型第二部分 — — 扩展运行状况模型](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)  
   
 -   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

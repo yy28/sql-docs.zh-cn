@@ -10,23 +10,23 @@ helpviewer_keywords:
 - replication [SQL Server], tutorials
 - replication [SQL Server], administering
 ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f11321b20c4238fdf9b3376d79edcb12c0e9204b
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721157"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000465"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>第 1 课：为复制创建 Windows 帐户
   在本课中，将创建 Windows 帐户以运行复制代理。 您将在本地服务器上为以下代理创建一个单独的 Windows 帐户：  
   
-|代理|位置|帐户名|  
+|Agent|位置|帐户名|  
 |-----------|--------------|------------------|  
-|快照代理|发布者|\<*machine_name*>\repl_snapshot|  
-|日志读取器代理|发布者|\<*machine_name*>\repl_logreader|  
+|快照代理|Publisher|\<*machine_name*>\repl_snapshot|  
+|日志读取器代理|Publisher|\<*machine_name*>\repl_logreader|  
 |分发代理|发布服务器和订阅服务器|\<*machine_name*>\repl_distribution|  
 |合并代理|发布服务器和订阅服务器|\<*machine_name*>\repl_merge|  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62721157"
   
 3.  右键单击 "**用户**"，然后单击 "**新建用户**"。  
   
-4.  在`repl_snapshot` "**用户名**" 框中输入，提供密码和其他相关信息，然后单击 "**创建**" 创建 repl_snapshot 帐户。  
+4.  `repl_snapshot`在 "**用户名**" 框中输入，提供密码和其他相关信息，然后单击 "**创建**" 创建 repl_snapshot 帐户。  
   
 5.  重复上述步骤创建 repl_logreader、repl_distribution 和 repl_merge 帐户。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62721157"
   
 3.  右键单击 "**用户**"，然后单击 "**新建用户**"。  
   
-4.  在`repl_distribution` "**用户名**" 框中输入，提供密码和其他相关信息，然后单击 "**创建**" 创建 repl_distribution 帐户。  
+4.  `repl_distribution`在 "**用户名**" 框中输入，提供密码和其他相关信息，然后单击 "**创建**" 创建 repl_distribution 帐户。  
   
 5.  重复上述步骤创建 repl_merge 帐户。  
   

@@ -9,12 +9,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/15/2019
-ms.openlocfilehash: a5f9e9b52186a2d4569ac30a591ae95acfa36101
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1acbc2c75a7cd0dc45c0f9dd329951e073f8120
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75656584"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925071"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>比较不同 Microsoft 环境中的商业智能功能
 
@@ -31,7 +31,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 商业智能可
 |与 Master Data Services (MDS) 和 Data Quality Services (DQS) 的集成|是|否|否|  
 |计划数据刷新|是，但不支持包含 Power Query 数据的工作薄|否|是|  
 |自然语言查询（Q&）|否|否|是** <sup>2</sup>**|  
-|预测性的预测|否|否|是 **<sup>3</sup>**|  
+|预测性的预测|否|否|是** <sup>3</sup>**|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 集成|是|否|否|  
 |[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 集成（多维式和表格式）|是|否|否|  
 |将交互式 Power View 仪表板导出至 PowerPoint 演示文稿|是|否|否|  
@@ -44,7 +44,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 商业智能可
   
  **<sup>2</sup>**  [Power BI Q&：优化 Power BI 工作簿（云建模）](https://powerbi.microsoft.com/nl-nl/blog/new-in-power-bi-cloud-modeling-for-q-and-a/)。  
   
- **<sup>3</sup>**  [介绍 Power View for Office 365 中的新预测功能](https://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx)。  
+ **<sup>3</sup>**  [介绍 Power View for Office 365 中的新预测功能](https://powerbi.microsoft.com/blog/introducing-new-forecasting-capabilities-in-power-view-for-office-365/)。  
   
 ## <a name="view-and-browse-bi-data-reports-and-dashboards"></a>查看和浏览 BI 数据、报表和仪表板  
   
@@ -54,7 +54,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 商业智能可
 |HTML5 中的浏览器内数据浏览|否|否|是|  
 |可远程访问报表和仪表板的移动 BI 应用|否|否|是** <sup>1</sup>**|  
 |Excel 工作薄，其中 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 作为数据源 **<sup>2</sup>**|是|否|否|  
-|可以使用不同浏览器和版本中的功能|是，针对非 Power View 可视化效果 **<sup>3</sup>**|是，因为工作薄文件大小小于 10 MB **<sup>3</sup>**|是 **<sup>3</sup>**|  
+|可以使用不同浏览器和版本中的功能|是，针对非 Power View 可视化效果 **<sup>3</sup>**|是，因为工作薄文件大小小于 10 MB **<sup>3</sup>**|是** <sup>3</sup>**|  
 |||||
 
  **<sup>1</sup>**  [Microsoft Power BI](https://apps.microsoft.com/windows/app/microsoft-power-bi/b7e7c94d-2ea3-4fa6-a277-9d19a1f697ba)。  

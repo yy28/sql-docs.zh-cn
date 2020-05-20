@@ -12,18 +12,23 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, new features
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: b5caa8b63175447daa04198768a67e7fe5e59c81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: 287e3396ec26652f43754be313b02e3bf7d9831d
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78896803"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924621"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>数据迁移助手的新增功能
 
 本文列出了每个版本的数据迁移助手中的新增内容。
+
+## <a name="data-migration-assistant-v-52"></a>数据迁移助手 v 5。2
+数据迁移助手的5.2 版本提供对以下内容的支持：
+- 将评估上载到 Azure Migrate，并支持 Azure 政府和国内云（主权产品）。  此功能可用于评估迁移到 Azure SQL 的 SQL Server 数据空间的准备情况。
+- 支持对 Azure 政府和国内云的 Azure Migrate 上传评估的命令行。  现在，你可以将评估完全自动上载到 Azure 迁移项目，以获取合并的 Azure SQL 就绪状态报告。 
 
 ## <a name="data-migration-assistant-v-50"></a>数据迁移助手 v 5。0
 
@@ -176,7 +181,7 @@ Linux 和 Windows 使用不同的路径格式。 因此，迁移到 Linux 上的
 数据迁移助手的1.0 版是初始版本，它提供了：
 
 - 发现可能影响升级到 SQL Server 本地版本的问题。 任何发现都被描述为兼容性问题，并分为以下几个方面：
-  - 中断性变更
+  - 重大更改
   - 行为变更
   - 已弃用的功能
 - 发现目标 SQL Server 平台中的新功能，数据库在升级后可从中受益。 任何发现均被描述为功能建议，并分为以下几个方面：

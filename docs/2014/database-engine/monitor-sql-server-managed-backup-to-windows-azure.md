@@ -1,5 +1,6 @@
 ---
 title: 监视 SQL Server 托管备份到 Azure |Microsoft Docs
+description: 本文介绍可用于确定使用 SQL Server 托管备份到 Azure 的总体运行状况并标识错误的工具。
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,18 +11,18 @@ ms.assetid: cfb9e431-7d4c-457c-b090-6f2528b2f315
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25e45e5877d528d1f01fe8695d8575466991c381
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ed32927e38f67c718031930023bd246048e2db5
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798035"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849605"
 ---
 # <a name="monitor-sql-server-managed-backup-to-azure"></a>监视针对 Azure 的 SQL Server 托管备份
   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]内置多种措施，可在备份过程中找出问题和错误，如有可能，再通过纠正措施纠正这些问题。  但是，有一些需要用户干预的情况。 本主题介绍可用于确定备份的整体运行状况和标识需解决的任何错误的工具。  
   
 ## <a name="overview-of-ss_smartbackup-built-in-debugging"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]的内置调试概述  
- [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]定期检查计划的备份并尝试重新安排任何失败的备份。 它定期轮询存储帐户以找出日志链中影响数据库可恢复性的中断情况，并且相应地安排新备份。 它还将考虑 Azure 限制策略，并提供管理多个数据库备份的机制。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]使用扩展事件跟踪所有活动。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]代理使用的扩展事件通道包括管理、操作、分析和调试。 属于管理类别的事件通常与错误相关且要求用户干预，并且默认情况下是启用的。 分析事件默认情况下也启用，但通常与要求用户干预的错误无关。 操作事件通常是信息性的。 例如，操作事件包括计划备份、成功完成备份等。调试是最详细的，在内部使用，用于[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]确定问题并在需要时对其进行更正。  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]定期检查计划的备份并尝试重新安排任何失败的备份。 它定期轮询存储帐户以找出日志链中影响数据库可恢复性的中断情况，并且相应地安排新备份。 它还将考虑 Azure 限制策略，并提供管理多个数据库备份的机制。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]使用扩展事件跟踪所有活动。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]代理使用的扩展事件通道包括管理、操作、分析和调试。 属于管理类别的事件通常与错误相关且要求用户干预，并且默认情况下是启用的。 分析事件默认情况下也启用，但通常与要求用户干预的错误无关。 操作事件通常是信息性的。 例如，操作事件包括计划备份、成功完成备份等。调试是最详细的，在内部使用，用于 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 确定问题并在需要时对其进行更正。  
   
 ### <a name="configure-monitoring-parameters-for-ss_smartbackup"></a>为[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]配置监视参数  
  **Smart_admin sp_set_parameter**系统存储过程允许您指定监视设置。 以下部分演练启用扩展事件以及针对错误和警告启用电子邮件通知的过程。  
@@ -32,7 +33,7 @@ ms.locfileid: "72798035"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 这将返回扩展事件的当前配置和电子邮件通知。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。 这将返回扩展事件的当前配置和电子邮件通知。  
   
 ```sql
 Use msdb  
@@ -108,13 +109,13 @@ GO
     ```  
   
 ### <a name="aggregated-error-countshealth-status"></a>聚合的错误计数/运行状态  
- **Smart_admin fn_get_health_status**函数返回一个表，其中列出了可用于监视的运行状况的[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]每个类别的聚合错误计数。 本主题中后面介绍的系统配置的电子邮件通知机制也使用这个相同的函数。   
+ **Smart_admin fn_get_health_status**函数返回一个表，其中列出了可用于监视的运行状况的每个类别的聚合错误计数 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 。 本主题中后面介绍的系统配置的电子邮件通知机制也使用这个相同的函数。   
 这些聚合的计数可用于监视系统运行状况。 例如，如果 number_ of_retention_loops 列在 30 分钟内为 0，则可能保持管理占用较长时间，或者甚至未正确工作。 非零错误列可能指示问题，并且应查看扩展事件日志以便发现问题。 或者，调用**smart_admin sp_get_backup_diagnostics**存储过程以查找错误的详细信息。  
   
 ### <a name="using-agent-notification-for-assessing-backup-status-and-health"></a>使用代理通知以便评估备份状态和运行状况  
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]包括一个通知机制，后者基于 SQL Server 基于策略的管理策略。  
   
- **先决条件**  
+ **先决条件：**  
   
 -   使用此功能需要数据库邮件。 有关如何为 SQL Server 实例启用 DB 邮件的详细信息，请参阅[Configure 数据库邮件](../relational-databases/database-mail/configure-database-mail.md)。  
   
@@ -203,7 +204,7 @@ $policyResults = Get-SqlSmartAdmin | Test-SqlSmartAdmin -AllowUserPolicies
 $policyResults.PolicyEvaluationDetails | Select Name, Category, Expression, Result, Exception | fl
 ```  
   
- 下面的脚本将返回默认实例（`\SQL\COMPUTER\DEFAULT`）的错误和警告的详细报告：  
+ 下面的脚本将返回默认实例（）的错误和警告的详细报告 `\SQL\COMPUTER\DEFAULT` ：  
   
 ```powershell
 (Get-SqlSmartAdmin ).EnumHealthStatus()  
@@ -248,8 +249,8 @@ smart_backup_files;
   
 -   **复制失败-F：** 类似于正在进行复制，这是特定的 t 可用性组数据库。 如果复制过程失败，则将状态标为 F。  
   
--   **损坏-C：** 如果[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]在多次尝试后仍无法通过执行还原 HEADER_ONLY 命令来验证存储中的备份文件，则会将此文件标记为已损坏。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 将安排一次备份以确保损坏的文件不会导致备份链中断。  
+-   **损坏-C：** 如果在 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 多次尝试后仍无法通过执行还原 HEADER_ONLY 命令来验证存储中的备份文件，则会将此文件标记为已损坏。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 将安排一次备份以确保损坏的文件不会导致备份链中断。  
   
 -   **已删除-D：** 在 Azure 存储中找不到相应的文件。 如果删除的文件导致备份链中断，则 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 将安排一次备份。  
   
--   **未知-U：** 此状态表明， [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]尚未能够验证 Azure 存储中是否存在文件和其属性。 下次运行此过程时（大约每 15 分钟一次），将更新此状态。  
+-   **未知-U：** 此状态表明，尚未 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 能够验证 Azure 存储中是否存在文件和其属性。 下次运行此过程时（大约每 15 分钟一次），将更新此状态。  

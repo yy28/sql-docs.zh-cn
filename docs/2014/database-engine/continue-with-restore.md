@@ -1,5 +1,6 @@
 ---
 title: 继续还原 |Microsoft Docs
+description: 在 SQL Server 中，使用 "继续还原" 对话框指示是否要还原下一个备份集。
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,12 +13,12 @@ ms.assetid: 987ac05f-57c0-49a9-9903-9889717aae4f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d396dd41c7643991063bfa476059362c668673e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd26a49b87615114b36c3fe57c7c6b50fbdbe7b0
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808248"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849585"
 ---
 # <a name="continue-with-restore"></a>继续还原
   使用 **“继续还原”** 对话框可指示是否要还原到下一个备份集。 若要延迟还原操作（例如，需要更换磁带），请待您做好继续操作的准备后再单击 **“确定”**。  
@@ -35,8 +36,8 @@ ms.locfileid: "62808248"
  显示备份集的说明。  
   
 ## <a name="see-also"></a>另请参阅  
- [查看备份磁带或文件的内容 &#40;SQL Server&#41;](../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)   
- [查看 &#40;SQL Server 的逻辑备份设备的属性和内容&#41;](../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)   
+ [查看备份磁带或文件的内容 (SQL Server)](../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)   
+ [查看逻辑备份设备的属性和内容 (SQL Server)](../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)   
  [还原数据库备份 &#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
  [还原事务日志备份 (SQL Server)](../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   

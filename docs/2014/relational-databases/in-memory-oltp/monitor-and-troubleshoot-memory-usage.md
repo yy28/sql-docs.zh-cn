@@ -10,12 +10,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 968d1bb6ce5eee2d25860353586d14f31dc67807
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6f770ea7ed5257cdca5def868b1bdfa8359af79a
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175906"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925089"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>内存使用情况的监视和故障排除
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 使用内存的模式与针对基于磁盘的表的模式不同。 您可以使用为内存和垃圾回收子系统提供的 DMV 或性能计数器，监视数据库中内存优化表和索引分配和使用的内存量。  这使您在系统和数据库级别都获得可见性，并允许防止由于内存用尽而导致的问题。
@@ -113,7 +113,7 @@ ms.locfileid: "78175906"
 ##  <a name="monitoring-memory-usage"></a>监视内存使用量
 
 ###  <a name="using-ssmanstudiofull"></a>使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 附随内置的标准报表，以便监视内存中表使用的内存。 您可以使用 [此处](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)所述的对象资源管理器访问这些报表。 还可使用对象资源管理器监视单独的内存优化表占用的内存。
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 附随内置的标准报表，以便监视内存中表使用的内存。 可以使用对象资源管理器访问这些报表。 还可使用对象资源管理器监视单独的内存优化表占用的内存。
 
 #### <a name="consumption-at-the-database-level"></a>数据库级别的内存使用情况
  您可以按如下所示在数据库级别监视内存使用情况。
@@ -122,7 +122,7 @@ ms.locfileid: "78175906"
 
 2.  在对象资源管理器中，右键单击您要报告的数据库。
 
-3.  在上下文菜单中，选择 "**报告** -> **标准报表** -> " "**内存优化对象的内存使用**情况"
+3.  在上下文菜单中，选择 "**报告**  ->  **标准报表**" "  ->  **内存优化对象的内存使用**情况"
 
  ![HK_MM_SSMS](../../database-engine/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")
 

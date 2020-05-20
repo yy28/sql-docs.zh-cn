@@ -10,15 +10,15 @@ f1_keywords:
 - Full-Text Search
 - Upgrade options, Full-Text Search
 ms.assetid: 16c9376b-5fbb-4495-a429-06a2493849c9
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 575105d61446f2fd272e4087457e7762c1abb2e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce419321dc3201c4db8d103e1d256e14168c6ec8
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095088"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000199"
 ---
 # <a name="full-text-search-upgrade-options"></a>全文搜索升级选项
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导的“全文搜索升级选项”页选择用于此时要升级的数据库的全文搜索升级选项。  
@@ -38,7 +38,7 @@ ms.locfileid: "66095088"
   
  有关导入全文检索的影响的信息，请参阅本主题后面的“有关选择全文升级选项的注意事项”。  
   
- **过程**  
+ **重新生成**  
  使用新的和增强的断字符重新生成全文目录。 重新生成索引可能需要许多时间，且升级后可能需要占用大量的 CPU 和内存。  
   
  **重置**  

@@ -11,15 +11,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, login migration
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
+author: rajeshsetlem
+ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 368372ab7324b11e9f7fdaa6af94d5ba2c0534ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f721800de13d11eefa1cabdd2f23fda838db9396
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056483"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885784"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>将 SQL Server 登录名迁移数据迁移助手
 
@@ -34,7 +34,7 @@ ms.locfileid: "74056483"
 
 - 数据迁移助手当前不支持与独立安全证书（映射到证书的登录名）关联的登录名、独立的非对称密钥（映射到非对称密钥的登录名）以及映射到凭据的登录名。
 
-- 数据迁移助手不会将**sa**登录名和服务器原理与用双引号（\#\#）括起来的名称一起使用，这些名称仅供内部使用。
+- 数据迁移助手不会将**sa**登录名和服务器原理与用双引号（）括起来的名称一起使用 \# \# ，这些名称仅供内部使用。
 
 - 默认情况下，数据迁移助手选择要迁移的所有合格登录名。 还可以选择要迁移的特定登录名。 当数据迁移助手迁移所有合格的登录名时，该登录用户的映射在迁移的数据库中保持不变。
 

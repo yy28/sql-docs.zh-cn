@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 59dc8c96ebda5ac66fb6701d480cb6d633e83158
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f45a598c9e96d33f1edcc41c748a6751df712391
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80809752"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886104"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>使用数据迁移助手进行 SQL Server 迁移评估
 
@@ -37,7 +37,7 @@ ms.locfileid: "80809752"
 
     如果要将本地 SQL Server 实例升级到现代的本地 SQL Server 实例或托管在 Azure VM 上的 SQL Server，请将源和目标服务器类型设置为 " **SQL Server**"。 如果要迁移到 Azure SQL 数据库，请改为将目标服务器类型设置为 " **AZURE Sql 数据库**"。
 
-3. 单击“创建”。 
+3. 单击 **“创建”** 。
 
    ![创建评估](../dma/media/dma-assesssqlonprem/new-assessment.png)
 

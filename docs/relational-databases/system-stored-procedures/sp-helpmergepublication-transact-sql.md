@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergepublication
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d291288c44341c3a707696b0b3baecdcd15779ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 26480fa1adb8493a1c29e5b67a163e9cbff54920
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68137652"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834461"
 ---
 # <a name="sp_helpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,31 +43,31 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>参数  
  [ @publication **=** ] **"**_发布_**"**  
- 发布的名称。 *发布*为**sysname**，默认值为**%**，它返回当前数据库中所有合并发布的相关信息。  
+ 发布的名称。 *发布*为**sysname**，默认值为 **%** ，它返回当前数据库中所有合并发布的相关信息。  
   
  [ @found **=** ] **"***找到***"** 输出  
  指示返回行的标志。 *找到* **int**和 OUTPUT 参数，默认值为 NULL。 **1**指示已找到发布。 **0**表示找不到发布。  
   
- [ @publication_id **=**] **"***publication_id***"** 输出  
+ [ @publication_id **=** ] **"***publication_id***"** 输出  
  发布的标识号。 *publication_id*是**uniqueidentifier**和 OUTPUT 参数，默认值为 NULL。  
   
- [ @reserved **=**] **"***reserved***"**  
+ [ @reserved **=** ] **"***reserved***"**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*reserved*的值为**nvarchar （20）**，默认值为 NULL。  
   
  [ @publisher **=** ] **'***发布服务器***'**  
  发布服务器的名称。 *发布服务器*的**sysname**，默认值为 NULL。  
   
- [@publisher_db **=** ] **'***publisher_db***'**  
+ [ @publisher_db **=** ] **'***publisher_db***'**  
  发布数据库的名称。 *publisher_db*的默认值为**sysname**，默认值为 NULL。  
   
 ## <a name="result-sets"></a>结果集  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|ID|**int**|发布在结果集列表中的连续顺序。|  
+|id|**int**|发布在结果集列表中的连续顺序。|  
 |name|**sysname**|发布的名称。|  
-|description|**nvarchar(255)**|对发布的说明。|  
-|status|**tinyint**|指示发布数据何时可用。|  
+|说明|**nvarchar(255)**|对发布的说明。|  
+|状态|**tinyint**|指示发布数据何时可用。|  
 |retention|**int**|用于保存对发布中项目所做更改的元数据的时间量。 此时间段单位可以为天、星期、月或年。 有关单位的信息，请参阅 retention_period_unit 列。|  
 |sync_mode|**tinyint**|该发布的同步模式：<br /><br /> **0** = 本机大容量复制程序（**bcp**实用工具）<br /><br /> **1** = 字符大容量复制|  
 |allow_push|**int**|确定是否可以为给定发布创建推送订阅。 **0**表示不允许推送订阅。|  
@@ -79,14 +79,14 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |publication_type|**int**|发布的类型：<br /><br /> **0** = Snapshot。<br /><br /> **1** = 事务性。<br /><br /> **2** = 合并。|  
 |pubid|**uniqueidentifier**|该发布的唯一标识符。|  
 |snapshot_jobid|**binary(16)**|快照代理的作业 ID。 若要获取[sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)系统表中快照作业的条目，必须将此十六进制值转换为**uniqueidentifier**。|  
-|enabled_for_internet|**int**|确定是否为 Internet 启用发布。 如果为**1**，则将发布的同步文件放在`C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp`目录中。 用户必须创建文件传输协议 (FTP) 目录。 如果为**0**，则不启用发布以进行 Internet 访问。|  
+|enabled_for_internet|**int**|确定是否为 Internet 启用发布。 如果为**1**，则将发布的同步文件放在 `C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp` 目录中。 用户必须创建文件传输协议 (FTP) 目录。 如果为**0**，则不启用发布以进行 Internet 访问。|  
 |dynamic_filter|**int**|指示是否使用参数化行筛选器。 **0**表示不使用参数化行筛选器。|  
 |has_subscription|**bit**|指示发布是否具有任何订阅。 **0**表示当前没有对此发布的订阅。|  
 |snapshot_in_default_folder|**bit**|指定快照文件是否存储在默认文件夹中。<br /><br /> 如果为**1**，则可以在默认文件夹中找到快照文件。<br /><br /> 如果为**0**，则将快照文件存储在**alt_snapshot_folder**指定的备用位置。 备用位置可以在另一台服务器、网络驱动器或可移动介质（如 cd-rom 或可移动磁盘）上。 也可以将快照文件保存到 FTP 站点以供订阅方以后检索。<br /><br /> 注意：此参数可以为 true，并且在**alt_snapshot_folder**参数中仍有一个位置。 这个组合指定将快照文件存储在默认位置和替代位置。|  
 |alt_snapshot_folder|**nvarchar(255)**|指定快照的备用文件夹的位置。|  
 |pre_snapshot_script|**nvarchar(255)**|指定指向 .sql 文件的指针，在订阅服务器上应用快照时，合并代理在任何复制的对象脚本之前运行该文件 **。**|  
 |post_snapshot_script|**nvarchar(255)**|指定一个指向 **.sql**文件的指针，该文件在初始同步过程中应用了其他所有复制对象脚本和数据之后运行合并代理。|  
-|compress_snapshot|**bit**|指定写入**alt_snapshot_folder**位置的快照压缩为[!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 格式。|  
+|compress_snapshot|**bit**|指定写入**alt_snapshot_folder**位置的快照压缩为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 格式。|  
 |ftp_address|**sysname**|分发服务器的 FTP 服务网络地址。 指定发布快照文件的位置，以便合并代理选取。|  
 |ftp_port|**int**|分发服务器 FTP 服务的端口号。 **ftp_port**的默认值为**21**。 指定供合并代理拾取的发布快照文件所在的位置。|  
 |ftp_subdirectory|**nvarchar(255)**|指定当使用 FTP 传递快照时，快照文件供合并代理拾取的位置。|  
@@ -96,7 +96,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |allow_subscription_copy|**int**|指定是否已启用复制订阅该发布的订阅数据库的功能。 如果值为**0** ，则表示不允许复制。|  
 |allow_synctoalternate|**int**|指定是否允许备用同步伙伴与该发布服务器同步。 值**0**表示不允许同步伙伴。|  
 |validate_subscriber_info|**nvarchar （500）**|列出用于检索订阅服务器信息和验证订阅服务器上的参数化行筛选条件的函数。 有助于验证信息分区是否与每个合并一致。|  
-|backward_comp_level|**int**|数据库兼容级别，可以为下列值之一：<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level|**int**|数据库兼容级别，可以为下列值之一：<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_activedirectory|**bit**|指定是否将发布信息发布到 Active Directory。 值为**0**表示无法从 Active Directory 获取发布信息。<br /><br /> 已不推荐使用该参数，支持该参数只是为了让脚本能够向后兼容。 您不再能够向 Active Directory 中添加发布信息。|  
 |max_concurrent_merge|**int**|并发合并进程数。 如果为**0**，则在任意给定时间运行的并发合并进程数没有限制。|  
 |max_concurrent_dynamic_snapshots|**int**|针对合并发布可以运行的最大并发已筛选数据快照会话数。 如果为**0**，则在任意给定时间，可同时对发布运行的并发筛选数据快照会话的最大数量没有限制。|  

@@ -1,5 +1,6 @@
 ---
 title: 为可用性组设置 SQL Server 托管备份到 Azure |Microsoft Docs
+description: 本教程演示如何为参与 Always On 可用性组的数据库配置 SQL Server 托管 Microsoft Azure 备份。
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +11,12 @@ ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 75ab1892641fa3bf805d52c649a8526e256d14b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc7b94b52a51fdae8d205dd177bc3d4bac6f721d
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228197"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849525"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>为可用性组设置针对 Azure 的 SQL Server 托管备份
   本主题是有关为参与 AlwaysOn 可用性组的数据库配置 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 的教程。  
@@ -30,13 +31,13 @@ ms.locfileid: "75228197"
 ### <a name="configuring-ss_smartbackup-for-availability-databases"></a>为可用性数据库配置 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
  **访问**  
   
--   要求具有**db_backupoperator**数据库角色的成员身份、具有**ALTER ANY CREDENTIAL**权限`EXECUTE`以及对**sp_delete_backuphistory**存储过程的权限。  
+-   要求具有**db_backupoperator**数据库角色的成员身份、具有**ALTER ANY CREDENTIAL**权限以及 `EXECUTE` 对**sp_delete_backuphistory**存储过程的权限。  
   
 -   需要对**smart_admin fn_get_current_xevent_settings**函数的**SELECT**权限。  
   
--   需要`EXECUTE`对 smart_admin 的权限**sp_get_backup_diagnostics**存储过程。 此外，它还需要 `VIEW SERVER STATE` 权限，因为它在内部调用其他需要此权限的系统对象。  
+-   需要 `EXECUTE` 对 smart_admin 的权限**sp_get_backup_diagnostics**存储过程。 此外，它还需要 `VIEW SERVER STATE` 权限，因为它在内部调用其他需要此权限的系统对象。  
   
--   需要`EXECUTE`对和`smart_admin.sp_backup_master_switch`存储`smart_admin.sp_set_instance_backup`过程的权限。  
+-   需要 `EXECUTE` 对 `smart_admin.sp_set_instance_backup` 和 `smart_admin.sp_backup_master_switch` 存储过程的权限。  
   
  下面是为 AlwaysOn 可用性组设置 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 的基本步骤。 本主题后面将介绍详细的分步教程。  
   
@@ -46,9 +47,9 @@ ms.locfileid: "75228197"
   
 3.  指定备份副本。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 使用首选备份副本设置决定使用哪个数据库安排从它进行备份。  若要确定当前副本是否为首选备份副本，请使用[sys. fn_hadr_backup_is_preferred_replica &#40;transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql)函数。  
   
-4.  在每个副本[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]上，使用**智能 sp_set_db_backup**存储过程的数据库的运行配置。  
+4.  在每个副本上， [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 使用**智能 sp_set_db_backup**存储过程的数据库的运行配置。  
   
-     **故障转移后的行为：将继续工作，并在发生故障转移事件后维护备份副本和可恢复性。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 故障转移后不需要执行任何特定操作。  
+     ** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 故障转移后的行为：** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 将继续工作，并在发生故障转移事件后维护备份副本和可恢复性。 故障转移后不需要执行任何特定操作。  
   
 #### <a name="considerations-and-requirements"></a>注意事项和要求：  
  为参与 AlwaysOn 可用性组的数据库配置 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 需要考虑特定的事项并且有特定的要求。 下面列出了注意事项和要求：  
@@ -72,13 +73,13 @@ ms.locfileid: "75228197"
   
 2.  **创建 SQL 凭据：** 使用存储帐户的名称作为标识，并使用存储访问密钥作为密码创建 SQL 凭据。  
   
-3.  **确保 SQL Server 代理服务启动且正在运行：** 如果当前未运行 SQL Server 代理，则启动它。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 需要实例上运行有 SQL Server 代理才能执行备份操作。  可能要将 SQL 代理设置为自动运行以确保可正常进行备份操作。  
+3.  **确保 SQL Server 代理服务已启动且正在运行：** 如果 SQL Server 代理当前未运行，请启动它。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 需要实例上运行有 SQL Server 代理才能执行备份操作。  可能要将 SQL 代理设置为自动运行以确保可正常进行备份操作。  
   
 4.  **确定保持期：** 确定备份文件的保持期。 以天为单位指定保持期，范围可为 1 到 30。 保持期决定了可恢复数据库的时段。  
   
 5.  **创建在备份期间用于加密的证书或非对称密钥：** 在第一个节点节点1上创建证书，然后使用备份证书将其导出到文件[&#40;transact-sql&#41;](/sql/t-sql/statements/backup-certificate-transact-sql)。 在 Node 2 上，使用从 Node 1 导出的文件创建证书。 有关从文件创建证书的详细信息，请参阅[CREATE certificate &#40;transact-sql&#41;](/sql/t-sql/statements/create-certificate-transact-sql)中的示例。  
   
-6.  **在节点 1 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]上为 AGTestDB 启用和配置：** 启动 SQL Server Management Studio 并连接到在其中安装了可用性数据库的节点1上的实例。 在根据要求修改数据库名称、存储 URL、SQL 凭据和保持期的值后，从查询窗口中运行以下语句：  
+6.  ** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 在节点1上启用和配置 AGTestDB：** Start SQL Server Management Studio，并连接到在其中安装了可用性数据库的节点1上的实例。 在根据要求修改数据库名称、存储 URL、SQL 凭据和保持期的值后，从查询窗口中运行以下语句：  
   
     ```  
     Use msdb;  
@@ -97,7 +98,7 @@ ms.locfileid: "75228197"
   
      有关创建用于加密的证书的详细信息，请参阅[创建加密的备份](../relational-databases/backup-restore/create-an-encrypted-backup.md)中的**创建备份证书**步骤。  
   
-7.  **为节点 2 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]上的 AGTestDB 启用和配置：** 开始 SQL Server Management Studio，然后连接到安装了可用性数据库的节点2上的实例。 在根据要求修改数据库名称、存储 URL、SQL 凭据和保持期的值后，从查询窗口中运行以下语句：  
+7.  ** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 为节点2上的 AGTestDB 启用和配置：** Start SQL Server Management Studio 并连接到安装了可用性数据库的节点2上的实例。 在根据要求修改数据库名称、存储 URL、SQL 凭据和保持期的值后，从查询窗口中运行以下语句：  
   
     ```  
     Use msdb;  
@@ -116,7 +117,7 @@ ms.locfileid: "75228197"
   
      [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 。 数据库上的备份操作最多可能需要 15 分钟才能运行。 备份将在首选备份副本上进行。  
   
-8.  **查看扩展事件默认配置：** 通过在用于安排从其进行备份的副本[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]上运行以下 transact-sql 语句，检查扩展事件配置。 这通常是数据库所属可用性组的首选备份副本设置。  
+8.  **查看扩展事件默认配置：** 通过在用于安排从其进行备份的副本上运行以下 transact-sql 语句，检查扩展事件配置 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 。 这通常是数据库所属可用性组的首选备份副本设置。  
   
     ```  
     SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
@@ -128,9 +129,9 @@ ms.locfileid: "75228197"
   
     1.  如果尚未在此实例上启用数据库邮件，请进行设置。 有关详细信息，请参阅 [Configure Database Mail](../relational-databases/database-mail/configure-database-mail.md)。  
   
-    2.  将 SQL Server 代理通知配置为使用数据库邮件。 有关详细信息，请参阅[配置 SQL Server 代理 Mail 使用数据库邮件](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)。  
+    2.  将 SQL Server 代理通知配置为使用数据库邮件。 有关详细信息，请参阅 [Configure SQL Server Agent Mail to Use Database Mail](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)。  
   
-    3.  **启用电子邮件通知以接收备份错误和警告：** 从查询窗口中，运行以下 Transact-SQL 语句：  
+    3.  **启用电子邮件通知以接收备份错误和警告：** 在查询窗口中，运行以下 Transact-SQL 语句：  
   
         ```  
         EXEC msdb.smart_admin.sp_set_parameter  
@@ -143,7 +144,7 @@ ms.locfileid: "75228197"
   
 10. **在 Azure 存储帐户中查看备份文件：** 从 SQL Server Management Studio 或 Azure 管理门户连接到存储帐户。 您将看到一个 SQL Server 实例的容器，其中承载您配置为使用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 的数据库。 您也会在为数据库启用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 的 15 分钟内，看到数据库和日志备份。  
   
-11. **监视运行状态：**  你可以通过以前配置的电子邮件通知进行监视，也可以主动监控记录的事件。 以下是一些用于查看事件的示例 Transact-SQL 语句：  
+11. **监视运行状态：** 可以通过以前配置的电子邮件通知进行监视，也可以主动监控记录的事件。 以下是一些用于查看事件的示例 Transact-SQL 语句：  
   
     ```  
     --  view all admin events  

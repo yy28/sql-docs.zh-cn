@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.availability_groups catalog view
 ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: ca82c64d2d0269564567de175b9d6f778f76d4d7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f1cbe0e72bbb8e15a330f67b3717960bc6b251a5
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874265"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925163"
 ---
 # <a name="sysavailability_groups-transact-sql"></a>sys.availability_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "70874265"
 |**name**|**sysname**|可用性组的名称。 这是在 Windows Server 故障转移群集 (WSFC) 内必须唯一的用户指定的名称。|  
 |**resource_id**|**nvarchar(40)**|WSFC 群集资源的资源 ID。|  
 |**resource_group_id**|**nvarchar(40)**|可用性组的 WSFC 群集资源组的资源组 ID。|  
-|**failure_condition_level**|**int**|用户定义的失败条件级别，在此级别下必须触发自动故障转移，其中一个整数值是此表下表中显示的一个整数值。<br /><br /> 失败条件级别的范围 (1-5) 是从最少限制的级别 1 到最多限制的级别 5。 给定的条件级别包含所有限制较少的级别。 因此，最严格的条件级别 5 包含四个限制较少的级别 (1-4)，级别 4 包含级别 1-3，依此类推。<br /><br /> 若要更改此值，请使用[ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]语句的 FAILURE_CONDITION_LEVEL 选项。|  
-|**health_check_timeout**|**int**|[Sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)系统存储过程返回服务器运行状况信息的等待时间（以毫秒为单位），假定服务器实例速度较慢或未响应。 默认值为 30000 毫秒（30 秒）。<br /><br /> 若要更改此值，请使用[ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]语句的 HEALTH_CHECK_TIMEOUT 选项。|  
-|**automated_backup_preference**|**tinyint**|用于对此可用性组中的可用性数据库执行备份的首选位置。 下面是可能的值及其说明。<br /><br /> <br /><br /> 0：主要。 备份应该始终在主副本上发生。<br /><br /> 1：仅辅助副本。 首选是对辅助副本执行备份。<br /><br /> 2：首选辅助副本。 首选是对辅助副本执行备份，但如果没有可用于备份操作的辅助副本，对主副本执行备份是可接受的。 此选项为默认行为。<br /><br /> 3：任何副本。 没有是对主副本执行备份还是对辅助副本执行备份的优先选择。<br /><br /> <br /><br /> 有关详细信息，请参阅 [活动辅助副本：辅助副本备份（AlwaysOn 可用性组）](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)概念。|  
+|**failure_condition_level**|**int**|用户定义的失败条件级别，在此级别下必须触发自动故障转移，其中一个整数值是此表下表中显示的一个整数值。<br /><br /> 失败条件级别的范围 (1-5) 是从最少限制的级别 1 到最多限制的级别 5。 给定的条件级别包含所有限制较少的级别。 因此，最严格的条件级别 5 包含四个限制较少的级别 (1-4)，级别 4 包含级别 1-3，依此类推。<br /><br /> 若要更改此值，请使用[ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)语句的 FAILURE_CONDITION_LEVEL 选项 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。|  
+|**health_check_timeout**|**int**|[Sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)系统存储过程返回服务器运行状况信息的等待时间（以毫秒为单位），假定服务器实例速度较慢或未响应。 默认值为 30000 毫秒（30 秒）。<br /><br /> 若要更改此值，请使用[ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)语句的 HEALTH_CHECK_TIMEOUT 选项 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。|  
+|**automated_backup_preference**|**tinyint**|用于对此可用性组中的可用性数据库执行备份的首选位置。 下面是可能的值及其说明。<br /><br /> <br /><br /> 0：主要。 备份应该始终在主副本上发生。<br /><br /> 1：仅辅助副本。 首选是对辅助副本执行备份。<br /><br /> 2：首选辅助副本。 首选是对辅助副本执行备份，但如果没有可用于备份操作的辅助副本，对主副本执行备份是可接受的。 此选项为默认行为。<br /><br /> 3：任何副本。 没有是对主副本执行备份还是对辅助副本执行备份的优先选择。<br /><br /> <br /><br /> 有关详细信息，请参阅[活动次要副本：次要副本备份（Always On 可用性组）](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。|  
 |**automated_backup_preference_desc**|**nvarchar(60)**|**Automated_backup_preference**的说明，请执行以下操作之一：<br /><br /> PRIMARY<br /><br /> SECONDARY_ONLY<br /><br /> SECONDARY<br /><br /> 无|  
 |**version**|**smallint**|存储在 Windows 故障转移群集中的可用性组元数据的版本。 添加新功能时，此版本号会递增。|  
 |**basic_features**|**bit**|指定这是否为基本可用性组。 有关详细信息，请参阅[基本可用性组（Always On 可用性组）](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)。|  
@@ -53,8 +53,8 @@ ms.locfileid: "70874265"
   
 |值|失败条件|  
 |-----------|-----------------------|  
-|1|指定在发生以下任何情况时应启动自动故障转移：<br /><br /> <br /><br /> - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务已关闭。<br /><br /> -用于连接到 WSFC 故障转移群集的可用性组的租约过期，因为没有从服务器实例接收到 ACK。 有关详细信息，请参阅 [工作原理：SQL Server AlwaysOn 租约超时](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)。|  
-|2|指定在发生以下任何情况时应启动自动故障转移：<br /><br /> <br /><br /> -的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]未连接到群集，并且超出了可用性组的用户指定的**health_check_timeout**阈值。<br /><br /> -可用性副本处于失败状态。|  
+|1|指定在发生以下任何情况时应启动自动故障转移：<br /><br /> <br /><br /> - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务已关闭。<br /><br /> -用于连接到 WSFC 故障转移群集的可用性组的租约过期，因为没有从服务器实例接收到 ACK。 有关详细信息，请参阅 [工作原理：SQL Server AlwaysOn 租约超时](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-sql-server-alwayson-lease-timeout/ba-p/317268)。|  
+|2|指定在发生以下任何情况时应启动自动故障转移：<br /><br /> <br /><br /> -的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未连接到群集，并且超出了可用性组的用户指定的**health_check_timeout**阈值。<br /><br /> -可用性副本处于失败状态。|  
 |3|指定在发生了严重的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部错误（例如孤立的自旋锁、严重的写访问冲突或过多的转储）时应启动自动故障转移。<br /><br /> 这是默认值。|  
 |4|指定在发生了中等程度的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部错误（例如在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部资源池中出现持久的内存不足情况）时应启动自动故障转移。|  
 |5|指定在出现任何符合的失败条件时应启动自动故障转移，这些失败条件包括：<br /><br /> <br /><br /> -缺少 SQL 引擎工作线程。<br /><br /> -检测到无法解决的死锁。|  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - In-Memory OLTP
 - memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 530e620be1a1c0f9d457eb23712c5228a3883d45
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 418cdbb85781cd99d3febc2371ed69751d29f588
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175914"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922102"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>内存中 OLTP（内存中优化）
 
@@ -26,7 +26,7 @@ ms.locfileid: "78175914"
 
 |||
 |-|-|
-|![Azure 虚拟机](../../master-data-services/media/azure-virtual-machine.png "Azure 虚拟机")|是否想要试用 SQL Server 2016？ 注册 Microsoft Azure，然后转到**[此处](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 以启动已安装 SQL Server 2016 的虚拟机。 完成后，可以删除虚拟机。|
+|![Azure 虚拟机](../../master-data-services/media/azure-virtual-machine.png "Azure 虚拟机")|是否想要试用 SQL Server 2016？ 注册 Microsoft Azure，然后转到**[此处](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)** 以启动已安装 SQL Server 2016 的虚拟机。 完成后，可以删除虚拟机。|
 
  若要使用 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]，请将经常访问的表定义为内存优化表。 内存优化表具有完全事务性和持久性，可通过与访问基于磁盘的表一样的方式使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 对其进行访问。 查询可引用内存优化表和基于磁盘的表。 事务可更新内存优化表和基于磁盘的表中的数据。 仅引用内存优化表的存储过程可本机编译为机器代码，以便进一步提高性能。 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎专用于实现从高度扩展的中间层推动的 OLTP 类型的事务的超高会话并发。 为实现此目标，它使用无闩锁数据结构和多版本乐观并发控制。 结果是可预测的，通过数据库事务的线性扩展实现了亚毫秒级低延迟和高吞吐量。 实际的性能提升取决于许多因素，但通常可实现 5 到 20 倍的性能改进。
 
@@ -40,7 +40,7 @@ ms.locfileid: "78175914"
 |低延迟。|需要典型数据库解决方案无法实现的低延迟业务事务。|消除争用。<br /><br /> 最大限度缩短代码执行时间。<br /><br /> 低延迟代码执行。<br /><br /> 高效数据检索。|
 |会话状态管理。|频繁插入、更新和点查找。<br /><br /> 来自大量无状态 web 服务器的大规模的负荷。|消除争用。<br /><br /> 高效数据检索。<br /><br /> 使用非持久表时，可选的 IO 减少或删除|
 
- 有关[!INCLUDE[hek_2](../../../includes/hek-2-md.md)]将导致最大性能提高的方案的详细信息，请参阅[内存中 OLTP-常见的工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)。
+ 有关 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 将导致最大性能提高的方案的详细信息，请参阅[内存中 OLTP-常见的工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)。
 
  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 将提高具有短时间运行的事务的 OLTP 中的性能。
 
@@ -63,7 +63,7 @@ ms.locfileid: "78175914"
 > [!IMPORTANT]
 >  一些对表和存储过程的语法更改将需要使用 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]。 有关详细信息，请参阅 [迁移到内存中 OLTP](migrating-to-in-memory-oltp.md)。 在尝试将基于磁盘的表迁移到内存优化的表前，请阅读[确定表或存储过程是否应移植到内存中 OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) 以了解哪些表和存储过程将从 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 中受益。
 
-## <a name="in-this-section"></a>在本节中
+## <a name="in-this-section"></a>本节内容
  本节提供有关以下概念的信息：
 
 |主题|说明|
@@ -71,7 +71,7 @@ ms.locfileid: "78175914"
 |[使用内存优化表的要求](memory-optimized-tables.md)|讨论使用内存优化的表的硬件和软件要求及指导原则。|
 |[在虚拟机环境下使用内存中 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)|讨论内容包括在虚拟化环境中使用 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 。|
 |[内存中 OLTP 代码示例](in-memory-oltp-code-samples.md)|包含说明如何创建和使用内存优化的表的代码示例。|
-|[内存优化表](memory-optimized-tables.md)|介绍内存优化的表。|
+|[Memory-Optimized Tables](memory-optimized-tables.md)|介绍内存优化的表。|
 |[内存优化表变量](../../database-engine/memory-optimized-table-variables.md)|一个代码示例，其中展示如何使用内存优化的表变量代替传统的表变量以减少 tempdb 的使用次数。|
 |[内存优化表上的索引](../../database-engine/indexes-on-memory-optimized-tables.md)|介绍内存优化索引。|
 |[本机编译的存储过程](natively-compiled-stored-procedures.md)|介绍本机编译的存储过程。|
@@ -87,7 +87,7 @@ ms.locfileid: "78175914"
 
 -   [Microsoft？？SQL Server？？2014产品指南](https://www.microsoft.com/download/confirmation.aspx?id=39269)
 
--   [内存中 OLTP 博客](https://go.microsoft.com/fwlink/?LinkId=311696)
+-   [内存中 OLTP 博客](https://cloudblogs.microsoft.com/sqlserver/2013/06/26/sql-server-2014-in-memory-technologies-blog-series-introduction/)
 
 -   [内存中 OLTP-常见的工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)
 
