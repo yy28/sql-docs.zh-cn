@@ -143,7 +143,7 @@ ms.locfileid: "79287801"
   
 -   插入或追加新数据时，使用 [UPDATE](../../t-sql/queries/update-transact-sql.md) 语句中的 `.WRITE` 子句部分更新到大型值数据类型。 注意，在更新现有值时没有使用最小日志记录。 有关大型值数据类型的详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。  
   
--   在[nUPDATETEXT](../../t-sql/queries/writetext-transact-sql.md) 、 [nUPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) 和 **UPDATETEXT**, **nUPDATETEXT**, 、 **UPDATETEXT** 语句。 注意，在更新现有值时没有使用最小日志记录。  
+-   在[WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) 、 [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) 和 **text**, **ntext**, 、 **image** 语句。 注意，在更新现有值时没有使用最小日志记录。  
   
     > [!WARNING]
     > `WRITETEXT` 和 `UPDATETEXT` 语句已被弃用；请避免在新的应用程序中使用它们。  
