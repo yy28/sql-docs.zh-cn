@@ -1,7 +1,7 @@
 ---
 title: UPDATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/27/2019
+ms.date: 05/19/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -38,12 +38,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 405071c6f4752ab3aebc9f96d23dd2b5734fb39a
-ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
+ms.openlocfilehash: da8b8b87eceba11f6a39a10527ef90046232676a
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82872775"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606802"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "82872775"
   
 ## <a name="syntax"></a>语法  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server and Azure SQL Database  
 
 [ WITH <common_table_expression> [...n] ]  
@@ -103,8 +103,29 @@ UPDATE
     table_or_view_name}  
 ```  
   
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+```syntaxsql 
+-- Syntax for Azure Synapse Analysis (formerly SQL Data Warehouse) 
+
+[ WITH <common_table_expression> [ ,...n ] ]
+UPDATE [ database_name . [ schema_name ] . | schema_name . ] table_name
+SET { column_name = { expression | NULL } } [ ,...n ]  
+FROM [ database_name . [ schema_name ] . | schema_name . ] table_name   
+JOIN {<join_table_source>}[ ,...n ] 
+ON <join_condition>
+[ WHERE <search_condition> ]   
+[ OPTION ( LABEL = label_name ) ]  
+[;]  
+
+<join_table_source> ::=   
+{  
+    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias 
+    [ <tablesample_clause>]  
+    | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]  
+}  
+```
+
+```syntaxsql
+-- Syntax for Parallel Data Warehouse
 
 UPDATE [ database_name . [ schema_name ] . | schema_name . ] table_name   
 SET { column_name = { expression | NULL } } [ ,...n ]  
@@ -120,18 +141,18 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  公用表表达式还可与 SELECT、INSERT、DELETE 和 CREATE VIEW 等语句一起使用。 有关详细信息，请参阅 [WITH common_table_expression (Transact-SQL)](../../t-sql/queries/with-common-table-expression-transact-sql.md)。  
   
- TOP ( expression) [ PERCENT ]     
+ TOP ( expression) [ PERCENT ]  
  指定更新的行数或行数百分比。 *expression* 可以是行数或行的百分比。  
   
  与 INSERT、UPDATE 或 DELETE 一起使用的 TOP 表达式中被引用行将不按任何顺序排列。  
   
- 在 INSERT、UPDATE 和 DELETE 语句中，需要使用括号分隔 TOP 中的 expression  。 有关详细信息，请参阅 [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md)。  
+ 在 INSERT、UPDATE 和 DELETE 语句中，需要使用括号分隔 TOP 中的 expression。 有关详细信息，请参阅 [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md)。  
   
- table_alias   
+ table_alias  
  在表示要从中更新行的表或视图的 FROM 子句中指定的别名。  
   
- server_name   
- 是表或视图所在服务器的名称（使用链接服务器名称或 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 函数作为服务器名称）。 如果指定了 server_name，则需要 database_name 和 schema_name    。  
+ server_name  
+ 是表或视图所在服务器的名称（使用链接服务器名称或 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 函数作为服务器名称）。 如果指定了 server_name，则需要 database_name 和 schema_name  。  
   
  *database_name*  
  数据库的名称。  
@@ -139,34 +160,34 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *schema_name*  
  表或视图所属架构的名称。  
   
- table_or_view_name   
- 要更新行的表或视图的名称。 table_or_view_name 引用的视图必须可更新，并且只在该视图的 FROM 子句中引用一个基表  。 有关可更新视图的详细信息，请参阅 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)。  
+ table_or_view_name  
+ 要更新行的表或视图的名称。 table_or_view_name 引用的视图必须可更新，并且只在该视图的 FROM 子句中引用一个基表。 有关可更新视图的详细信息，请参阅 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)。  
   
- rowset_function_limited   
+ rowset_function_limited  
  [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 或 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 函数，视提供程序的功能而定。  
   
- WITH ( \<Table_Hint_Limited> )    
+ WITH ( \<Table_Hint_Limited> )   
  指定目标表允许的一个或多个表提示。 需要有 WITH 关键字和括号。 不允许 NOLOCK 和 READUNCOMMITTED。 有关表提示的信息，请参阅[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
   
- @table_variable   
+ @table_variable  
  将[表](../../t-sql/data-types/table-transact-sql.md) 变量指定为表源。  
   
  SET  
  指定要更新的列或变量名称的列表。  
   
- column_name   
- 包含要更改的数据的列。 column_name 必须存在于 table_or view_name 中   。 不能更新标识列。  
+ column_name  
+ 包含要更改的数据的列。 column_name 必须存在于 table_or view_name 中 。 不能更新标识列。  
   
  *expression*  
- 返回单个值的变量、文字值、表达式或嵌套 select 语句（加括号）。 expression 返回的值替换 column_name 或 @ 变量中的现有值    。  
+ 返回单个值的变量、文字值、表达式或嵌套 select 语句（加括号）。 expression 返回的值替换 column_name 或 @ 变量中的现有值  。  
   
 > [!NOTE]  
->  当引用 Unicode 字符数据类型 nchar、nvarchar 和 ntext 时，“expression”应采用大写字母“N”作为前缀    。 如果未指定“N”，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将字符串转换为与数据库或列的默认排序规则相对应的代码页。 此代码页中没有的字符都将丢失。  
+>  当引用 Unicode 字符数据类型 nchar、nvarchar 和 ntext 时，“expression”应采用大写字母“N”作为前缀  。 如果未指定“N”，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将字符串转换为与数据库或列的默认排序规则相对应的代码页。 此代码页中没有的字符都将丢失。  
   
  DEFAULT  
  指定用为列定义的默认值替换列中的现有值。 如果该列没有默认值并且定义为允许 Null 值，则该参数也可用于将列更改为 NULL。  
   
- { += | -= | \*= | /= | %= | &= | ^= | |=         }  
+ { += | -= | \*= | /= | %= | &= | ^= | |=        }  
  复合赋值运算符：  
  += 相加并赋值  
  -= 相减并赋值  
@@ -177,28 +198,28 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  ^=              “位异或”并赋值  
  |=               “位或”并赋值  
   
- udt_column_name   
+ udt_column_name  
  用户定义类型列。  
   
- property_name | field_name    
+ property_name | field_name   
  用户定义类型的公共属性或公共数据成员。  
   
- method_name ( argument [ ,... n] )        
- 带一个或多个参数的 udt_column_name 的非静态公共赋值函数方法  。  
+ method_name ( argument [ ,... n] )  
+ 带一个或多个参数的 udt_column_name 的非静态公共赋值函数方法。  
   
- .WRITE (expression,@Offset,@Length)          
- 指定要修改的 column_name  值的一部分。 expression 替换从 column_name 的 @Offset 开始的 @Length 单位     。 使用该子句只能指定 varchar(max)、nvarchar(max) 或 varbinary(max) 的列    。 column_name 不能为 NULL，也不能由表名或表别名限定  。  
+ .WRITE (expression,@Offset,@Length)   
+ 指定要修改的 column_name 值的一部分。 expression 替换从 column_name 的 @Offset 开始的 @Length 单位   。 使用该子句只能指定 varchar(max)、nvarchar(max) 或 varbinary(max) 的列  。 column_name 不能为 NULL，也不能由表名或表别名限定。  
   
- expression 是复制到 column_name 的值   。 expression 的计算结果必须为 column_name 类型或者 expression 必须能够隐式强制转换为此类型   。 如果 expression 设置为 NULL，则忽略 @Length，并将 column_name 中的值按指定的 @Offset 截断     。  
+ expression 是复制到 column_name 的值 。 expression 的计算结果必须为 column_name 类型或者 expression 必须能够隐式强制转换为此类型 。 如果 expression 设置为 NULL，则忽略 @Length，并将 column_name 中的值按指定的 @Offset 截断   。  
   
- @Offset 是存储在 column_name 中的值的起点，从该点开始编写 expression    。 @Offset 是从 0 开始的序号字节位置，数据类型为 bigint，不能为负数   。 如果 @Offset 为 NULL，则更新操作将在现有 column_name 值的结尾追加 expression，并忽略 @Length     。 如果 @Offset 大于 column_name 值的字节长度，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将返回错误   。 如果 @Offset 加上 @Length 超出了列中基础值的限度，则将删除到值的最后一个字符   。  
+ @Offset 是存储在 column_name 中的值的起点，从该点开始编写 expression  。 @Offset 是从 0 开始的序号字节位置，数据类型为 bigint，不能为负数。 如果 @Offset 为 NULL，则更新操作将在现有 column_name 值的结尾追加 expression，并忽略 @Length   。 如果 @Offset 大于 column_name 值的字节长度，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将返回错误 。 如果 @Offset 加上 @Length 超出了列中基础值的限度，则将删除到值的最后一个字符 。  
   
- @Length 是指列中某个部分的长度，从 @Offset 开始，该长度由 expression 替换    。 @Length 是 bigint 并且不能为负数   。 如果 @Length 为 NULL，则更新操作将删除从 @Offset 到 column_name 值的结尾的所有数据    。  
+ @Length 是指列中某个部分的长度，从 @Offset 开始，该长度由 expression 替换  。 @Length 是 bigint 并且不能为负数。 如果 @Length 为 NULL，则更新操作将删除从 @Offset 到 column_name 值的结尾的所有数据  。  
   
  有关详细信息，请参阅[更新大值数据类型](#updating-lobs)。  
   
- @ variable    
- 已声明的变量，该变量将设置为 expression 所返回的值  。  
+ @ variable  
+ 已声明的变量，该变量将设置为 expression 所返回的值。  
   
  SET **@** _variable_ = *column* = *expression* 将变量设置为与列相同的值。 这与 SET **@** _variable_ = _column_, _column_ = _expression_ 不同，后者将变量设置为列更新前的值。  
   
@@ -231,15 +252,15 @@ CURRENT OF
  使用 WHERE CURRENT OF 子句的定位更新将在游标的当前位置更新单行。 这比使用 WHERE \<search_condition> 子句限定所更新行的搜索更新更精确。 当搜索条件不唯一标识一行时，搜索更新将修改多行。  
   
 GLOBAL  
- 指定 cursor_name 是指全局游标  。  
+ 指定 cursor_name 是指全局游标。  
   
-cursor_name   
- 要从中进行提取的开放游标的名称。 如果同时存在名为 cursor_name 的全局游标和局部游标，那么，在指定了 GLOBAL 时，该参数是指全局游标；否则是指局部游标  。 游标必须允许更新。  
+cursor_name  
+ 要从中进行提取的开放游标的名称。 如果同时存在名为 cursor_name 的全局游标和局部游标，那么，在指定了 GLOBAL 时，该参数是指全局游标；否则是指局部游标。 游标必须允许更新。  
   
-cursor_variable_name   
- cursor 变量的名称。 cursor_variable_name  必须引用允许更新的游标。  
+cursor_variable_name  
+ cursor 变量的名称。 cursor_variable_name 必须引用允许更新的游标。  
   
-OPTION ( \<query_hint> [ ,... n ] )      
+OPTION ( \<query_hint> [ ,... n ] )   
  指定优化器提示用于自定义[!INCLUDE[ssDE](../../includes/ssde-md.md)]处理语句的方式。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ## <a name="best-practices"></a>最佳做法  
@@ -315,38 +336,38 @@ GO
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，将不再支持在 FROM 子句中使用应用于 UPDATE 或 DELETE 语句目标表的 READUNCOMMITTED 和 NOLOCK 提示。 请避免在新的开发工作上下文中使用这些提示，并计划修改当前使用它们的应用程序。  
   
 ## <a name="data-types"></a>数据类型  
- 所有的 char 和 nchar 列向右填充至定义长度   。  
+ 所有的 char 和 nchar 列向右填充至定义长度 。  
   
- 如果 ANSI_PADDING 设置为 OFF，则会从插入 varchar 和 nvarchar 列的数据中删除所有尾随空格，但只包含空格的字符串除外   。 这些字符串被截断为空字符串。 如果 ANSI_PADDING 设置为 ON，则插入尾随空格。 Microsoft SQL Server ODBC 驱动程序和用于 SQL Server 的 OLE DB 访问接口自动对每个连接设置 ANSI_PADDING ON。 这可在 ODBC 数据源中进行配置，也可通过设置连接特性或属性进行配置。 有关详细信息，请参阅 [SET ANSI_PADDING (Transact-SQL)](../../t-sql/statements/set-ansi-padding-transact-sql.md)。  
+ 如果 ANSI_PADDING 设置为 OFF，则会从插入 varchar 和 nvarchar 列的数据中删除所有尾随空格，但只包含空格的字符串除外 。 这些字符串被截断为空字符串。 如果 ANSI_PADDING 设置为 ON，则插入尾随空格。 Microsoft SQL Server ODBC 驱动程序和用于 SQL Server 的 OLE DB 访问接口自动对每个连接设置 ANSI_PADDING ON。 这可在 ODBC 数据源中进行配置，也可通过设置连接特性或属性进行配置。 有关详细信息，请参阅 [SET ANSI_PADDING (Transact-SQL)](../../t-sql/statements/set-ansi-padding-transact-sql.md)。  
   
 ### <a name="updating-text-ntext-and-image-columns"></a>更新 text、ntext 和 image 列  
- 使用 UPDATE 修改 text、ntext 或 image 列时将对列进行初始化，向其列分配有效的文本指针，并且分配至少一个数据页（除非使用 NULL 更新该列）    。  
+ 使用 UPDATE 修改 text、ntext 或 image 列时将对列进行初始化，向其列分配有效的文本指针，并且分配至少一个数据页（除非使用 NULL 更新该列）  。  
   
- 若要替换或修改大型 text、ntext 或 image 数据块，请使用 [WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) 或 [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md)，而不使用 UPDATE 语句    。  
+ 若要替换或修改大型 text、ntext 或 image 数据块，请使用 [WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) 或 [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md)，而不使用 UPDATE 语句  。  
   
- 如果 UPDATE 语句在更新聚集键以及一个或者多个 text、ntext 或 image 列时可以更改多个行，则对这些列的部分更新将作为替换所有值来执行    。  
+ 如果 UPDATE 语句在更新聚集键以及一个或者多个 text、ntext 或 image 列时可以更改多个行，则对这些列的部分更新将作为替换所有值来执行  。  
   
 > [!IMPORTANT]
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中将删除 ntext、text 和 image 数据类型    。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中将删除 ntext、text 和 image 数据类型  。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。  
   
 ### <a name="updating-large-value-data-types"></a><a name="updating-lobs"></a> 更新大值数据类型  
- 使用 .WRITE (expression,@Offset,@Length) 子句执行 varchar(max)、nvarchar(max) 和 varbinary(max) 数据类型的部分或完整更新            。 
+ 使用 .WRITE (expression,@Offset,@Length) 子句执行 varchar(max)、nvarchar(max) 和 varbinary(max) 数据类型的部分或完整更新     。 
  
- 例如，对 varchar(max) 列的部分更新可能只删除或修改该列的前 200 个字节（如果使用的是 ASCII 字符，则为前 200 个字符），而完整更新则删除或修改该列中的所有数据  。 如果将数据库恢复模式设置为大容量日志模式或简单模式，则对插入或追加新数据的 .WRITE 更新进行最小日志记录  。 在更新现有值时，不使用最小日志记录。 有关详细信息，请参阅 [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
+ 例如，对 varchar(max) 列的部分更新可能只删除或修改该列的前 200 个字节（如果使用的是 ASCII 字符，则为前 200 个字符），而完整更新则删除或修改该列中的所有数据。 如果将数据库恢复模式设置为大容量日志模式或简单模式，则对插入或追加新数据的 .WRITE 更新进行最小日志记录。 在更新现有值时，不使用最小日志记录。 有关详细信息，请参阅 [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
  当 UPDATE 语句导致下列任一操作时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]便会将部分更新转换为完整更新：  
 -   更改分区视图或表的键列。  
 -   修改多行并且还将非唯一的聚集索引的键更新为非常量值。  
   
-不能使用 .WRITE 子句更新 NULL 列或将 column_name 的值设置为 NULL   。  
+不能使用 .WRITE 子句更新 NULL 列或将 column_name 的值设置为 NULL。  
   
-对于 varbinary 和 varchar 数据类型，以字节为单位指定 @Offset 和 @Length；对于 nvarchar 数据类型，则以字节对为单位进行指定      。 有关字符串数据类型长度的详细信息，请参阅 [char 和 varchar (Transact-SQL)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 以及 [nchar 和 nvarchar (Transact-SQL)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)。
+对于 varbinary 和 varchar 数据类型，以字节为单位指定 @Offset 和 @Length；对于 nvarchar 数据类型，则以字节对为单位进行指定   。 有关字符串数据类型长度的详细信息，请参阅 [char 和 varchar (Transact-SQL)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 以及 [nchar 和 nvarchar (Transact-SQL)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)。
   
 为了获得最佳性能，建议按照块区大小为 8040 字节倍数的方式插入或更新数据。  
   
-如果在 OUTPUT 子句中引用了由 \.WRITE 子句修改的列，则该列的完整值（deleted.column\_name 中的前像或 inserted.column\_name 中的后像）返回到表变量中的指定列      。 请参阅后面的示例 R。  
+如果在 OUTPUT 子句中引用了由 \.WRITE 子句修改的列，则该列的完整值（deleted.column\_name 中的前像或 inserted.column\_name 中的后像）返回到表变量中的指定列 。 请参阅后面的示例 R。  
   
-若要针对其他字符或二进制数据类型获得相同的 \.WRITE 功能，请使用 [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  。  
+若要针对其他字符或二进制数据类型获得相同的 \.WRITE 功能，请使用 [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)。  
   
 ### <a name="updating-user-defined-type-columns"></a>更新用户定义类型列  
  更新用户定义类型列中的值可以通过下列方式之一完成：  
@@ -461,12 +482,12 @@ ID     Value
  UPDATE 语句在其修改的任何行上获取排他 (X) 锁，并在事务完成之前持有这些锁。 根据 UPDATE 语句的查询计划、要修改的行数和事务的隔离级别，可以在 PAGE 级或 TABLE 级（而不是 ROW 级）获取这些锁。 为避免这些更高级别的锁，可以考虑将影响数千行或更多行的 update 语句分成若干个批次，并确保索引支持任何联接和筛选条件。 有关 SQL Server 中的锁定机制的详细信息，请参阅[数据库引擎中的锁定](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine)一文。  
   
 ## <a name="logging-behavior"></a>日志记录行为  
- UPDATE 语句将记入日志；但是，对使用 \.WRITE 子句对较大值数据类型的部分更新进行最小日志记录  。 有关详细信息，请参阅上一节“数据类型”中的“更新大值数据类型”。  
+ UPDATE 语句将记入日志；但是，对使用 \.WRITE 子句对较大值数据类型的部分更新进行最小日志记录。 有关详细信息，请参阅上一节“数据类型”中的“更新大值数据类型”。  
   
 ## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
- 要求对目标表具有 `UPDATE` 权限。 如果 UPDATE 语句包含 WHERE 子句，或者 SET 子句中的 expression 使用了表中的某个列，则还要求对要更新的表具有 `SELECT` 权限  。  
+ 要求对目标表具有 `UPDATE` 权限。 如果 UPDATE 语句包含 WHERE 子句，或者 SET 子句中的 expression 使用了表中的某个列，则还要求对要更新的表具有 `SELECT` 权限。  
   
  UPDATE 权限默认授予 `sysadmin` 固定服务器角色、`db_owner` 和 `db_datawriter` 固定数据库角色的成员以及表所有者。 `sysadmin`、`db_owner` 和 `db_securityadmin` 角色的成员以及表所有者可以将权限转让给其他用户。  
   
@@ -526,7 +547,7 @@ GO
 ```  
   
 #### <a name="d-using-the-top-clause"></a>D. 使用 TOP 子句  
- 以下示例使用 TOP 子句来限制 UPDATE 语句中修改的行数。 当 TOP (n) 子句与 UPDATE 一起使用时，将针对随机选择的“n”行执行更新操作   。 以下示例按照 `VacationHours` 表中 10 个随机行的 25% 更新 `Employee` 列。  
+ 以下示例使用 TOP 子句来限制 UPDATE 语句中修改的行数。 当 TOP (n) 子句与 UPDATE 一起使用时，将针对随机选择的“n”行执行更新操作 。 以下示例按照 `VacationHours` 表中 10 个随机行的 25% 更新 `Employee` 列。  
   
 ```sql  
 USE AdventureWorks2012;
@@ -797,7 +818,7 @@ SET GroupName = 'Sales and Marketing';
 ```  
   
 #### <a name="q-updating-data-in-a-remote-table-by-using-the-opendatasource-function"></a>Q. 使用 OPENDATASOURCE 函数更新远程表中的数据  
- 以下示例通过指定 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 行集函数来更新远程表中的行。 通过使用 server_name 或 server_name\instance_name 格式，为该数据源指定一个有效的服务器名称   。 您可能需要为即席分布式查询配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关详细信息，请参阅[即席分布式查询服务器配置选项](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md)。  
+ 以下示例通过指定 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 行集函数来更新远程表中的行。 通过使用 server_name 或 server_name\instance_name 格式，为该数据源指定一个有效的服务器名称 。 您可能需要为即席分布式查询配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 有关详细信息，请参阅[即席分布式查询服务器配置选项](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md)。  
 
 ```sql
 UPDATE OPENDATASOURCE('SQLNCLI', 'Data Source=<server name>;Integrated Security=SSPI').AdventureWorks2012.HumanResources.Department
@@ -808,7 +829,7 @@ SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;
  本节中的示例说明了如何更新使用大型对象 (LOB) 数据类型定义的列中的值。  
   
 #### <a name="r-using-update-with-write-to-modify-data-in-an-nvarcharmax-column"></a>R. 使用包含 .WRITE 的 UPDATE 来修改 nvarchar(max) 列中的数据  
- 以下示例使用 .WRITE 子句更新 `DocumentSummary`（`Production.Document` 表内的 nvarchar(max) 列）中的部分值  。 通过指定替换单词、现有数据中要替换的单词的开始位置（偏移量）以及要替换的字符数（长度），将单词 `components` 替换为单词 `features`。 此示例还使用 OUTPUT 子句将 `DocumentSummary` 列的前像和后像返回给 `@MyTableVar` 表变量。  
+ 以下示例使用 .WRITE 子句更新 `DocumentSummary`（`Production.Document` 表内的 nvarchar(max) 列）中的部分值。 通过指定替换单词、现有数据中要替换的单词的开始位置（偏移量）以及要替换的字符数（长度），将单词 `components` 替换为单词 `features`。 此示例还使用 OUTPUT 子句将 `DocumentSummary` 列的前像和后像返回给 `@MyTableVar` 表变量。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -828,7 +849,7 @@ GO
 ```  
   
 #### <a name="s-using-update-with-write-to-add-and-remove-data-in-an-nvarcharmax-column"></a>S. 使用包含 .WRITE 的 UPDATE 在 nvarchar(max) 列中添加和删除数据  
- 以下示例从当前值设置为 NULL 的 nvarchar(max) 列中添加和删除列  。 由于不能使用 .WRITE 子句修改 NULL 列，因此先使用临时数据填充该列。 然后，使用 .WRITE 子句将该数据替换为正确的数据。 其他示例将数据追加到列值的结尾，从列中删除（截断）数据，最后从列中删除部分数据。 SELECT 语句显示由每个 UPDATE 语句生成的数据修改。  
+ 以下示例从当前值设置为 NULL 的 nvarchar(max) 列中添加和删除列。 由于不能使用 .WRITE 子句修改 NULL 列，因此先使用临时数据填充该列。 然后，使用 .WRITE 子句将该数据替换为正确的数据。 其他示例将数据追加到列值的结尾，从列中删除（截断）数据，最后从列中删除部分数据。 SELECT 语句显示由每个 UPDATE 语句生成的数据修改。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -885,7 +906,7 @@ GO
 ```  
   
 #### <a name="t-using-update-with-openrowset-to-modify-a-varbinarymax-column"></a>T. 使用包含 OPENROWSET 的 UPDATE 修改 varbinary(max) 列  
- 以下示例将 varbinary(max) 列中存储的现有图像替换为新图像  。 将 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 函数和 BULK 选项一起使用以将图像加载到列中。 此示例假定指定的文件路径中存在名为 `Tires.jpg` 的文件。  
+ 以下示例将 varbinary(max) 列中存储的现有图像替换为新图像。 将 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 函数和 BULK 选项一起使用以将图像加载到列中。 此示例假定指定的文件路径中存在名为 `Tires.jpg` 的文件。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -1136,85 +1157,33 @@ WHERE Year=2004;
 SELECT * FROM YearlyTotalSales;   
 ```  
 
-### <a name="ah-ansi-join-replacement-for-update-statements"></a>AH. 更新语句的 ANSI 联接替换
-可能会发现更新很复杂，它使用 ANSI 联接语法将两个以上的表联接在一起，以执行 UPDATE 或 DELETE 操作。  
-
-假设必须更新此表：  
+### <a name="ah-ansi-join-for-update-statements"></a>AH. 更新语句的 ANSI 联接
+此示例演示了如何根据与其他表联接的结果来更新数据。
 
 ```sql
-CREATE TABLE [dbo].[AnnualCategorySales]
-(   [EnglishProductCategoryName]    NVARCHAR(50)    NOT NULL
-,   [CalendarYear]                  SMALLINT        NOT NULL
-,   [TotalSalesAmount]              MONEY           NOT NULL
-)
-WITH
-(
-    DISTRIBUTION = ROUND_ROBIN
-)
-;  
+CREATE TABLE dbo.Table1   
+    (ColA int NOT NULL, ColB decimal(10,3) NOT NULL);  
+GO  
+
+CREATE TABLE dbo.Table2   
+    (ColA int PRIMARY KEY NOT NULL, ColB decimal(10,3) NOT NULL);  
+GO  
+INSERT INTO dbo.Table1 VALUES(1, 10.0), (1, 20.0);  
+INSERT INTO dbo.Table2 VALUES(1, 0.0);  
+GO  
+
+UPDATE dbo.Table2   
+SET dbo.Table2.ColB = dbo.Table2.ColB + dbo.Table1.ColB  
+FROM dbo.Table2   
+    INNER JOIN dbo.Table1   
+    ON (dbo.Table2.ColA = dbo.Table1.ColA);  
+GO  
+
+SELECT ColA, ColB   
+FROM dbo.Table2;
+GO
 ```
 
-原始查询看起来可能如下：  
-
-```
-UPDATE  acs
-SET     [TotalSalesAmount] = [fis].[TotalSalesAmount]
-FROM    [dbo].[AnnualCategorySales]     AS acs
-JOIN    (
-        SELECT  [EnglishProductCategoryName]
-        ,       [CalendarYear]
-        ,       SUM([SalesAmount])              AS [TotalSalesAmount]
-        FROM    [dbo].[FactInternetSales]       AS s
-        JOIN    [dbo].[DimDate]                 AS d    ON s.[OrderDateKey]             = d.[DateKey]
-        JOIN    [dbo].[DimProduct]              AS p    ON s.[ProductKey]               = p.[ProductKey]
-        JOIN    [dbo].[DimProductSubCategory]   AS u    ON p.[ProductSubcategoryKey]    = u.[ProductSubcategoryKey]
-        JOIN    [dbo].[DimProductCategory]      AS c    ON u.[ProductCategoryKey]       = c.[ProductCategoryKey]
-        WHERE   [CalendarYear] = 2004
-        GROUP BY
-                [EnglishProductCategoryName]
-        ,       [CalendarYear]
-        ) AS fis
-ON  [acs].[EnglishProductCategoryName]  = [fis].[EnglishProductCategoryName]
-AND [acs].[CalendarYear]                = [fis].[CalendarYear]
-;  
-```
-
-由于 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 不支持 UPDATE 语句中 FROM 子句的 ANSI 联接，因此需要稍作更改才能复制此代码。  
-
-可以将 CTAS 和隐式联接结合使用来替换此代码：  
-
-```sql
--- Create an interim table
-CREATE TABLE CTAS_acs
-WITH (DISTRIBUTION = ROUND_ROBIN)
-AS
-SELECT  ISNULL(CAST([EnglishProductCategoryName] AS NVARCHAR(50)),0)    AS [EnglishProductCategoryName]
-,       ISNULL(CAST([CalendarYear] AS SMALLINT),0)                      AS [CalendarYear]
-,       ISNULL(CAST(SUM([SalesAmount]) AS MONEY),0)                     AS [TotalSalesAmount]
-FROM    [dbo].[FactInternetSales]       AS s
-JOIN    [dbo].[DimDate]                 AS d    ON s.[OrderDateKey]             = d.[DateKey]
-JOIN    [dbo].[DimProduct]              AS p    ON s.[ProductKey]               = p.[ProductKey]
-JOIN    [dbo].[DimProductSubCategory]   AS u    ON p.[ProductSubcategoryKey]    = u.[ProductSubcategoryKey]
-JOIN    [dbo].[DimProductCategory]      AS c    ON u.[ProductCategoryKey]       = c.[ProductCategoryKey]
-WHERE   [CalendarYear] = 2004
-GROUP BY
-        [EnglishProductCategoryName]
-,       [CalendarYear]
-;
-
--- Use an implicit join to perform the update
-UPDATE  AnnualCategorySales
-SET     AnnualCategorySales.TotalSalesAmount = CTAS_ACS.TotalSalesAmount
-FROM    CTAS_acs
-WHERE   CTAS_acs.[EnglishProductCategoryName] = AnnualCategorySales.[EnglishProductCategoryName]
-AND     CTAS_acs.[CalendarYear]               = AnnualCategorySales.[CalendarYear]
-;
-
---Drop the interim table
-DROP TABLE CTAS_acs
-;
-```
-  
 ## <a name="see-also"></a>另请参阅  
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   

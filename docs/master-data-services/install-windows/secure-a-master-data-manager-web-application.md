@@ -1,5 +1,6 @@
 ---
 title: 保护主数据管理器 Web 应用程序
+description: 在 SQL Server 中，可以通过 HTTPS 保护主数据管理器 web 应用程序。 必须是管理员，并且必须在 web 服务器上安装 MDS。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 57ba6a83d48254bdd0d86fee9a5d2d6300cb58bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ac70d45886904032e1f61c01c35ee8542351029
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81728498"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606509"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>保护主数据管理器 Web 应用程序
 
@@ -40,13 +41,13 @@ ms.locfileid: "81728498"
   
 3.  在“操作”**** 窗格中，单击“绑定”****。  
   
-4.  单击 **“添加”** 。  
+4.  单击 **添加**。  
   
 5.  从列表中选择 **https**。  
   
 6.  选择 TLS/SSL 证书。  
   
-7.  单击“确定”。   
+7.  单击 **“确定”** 。  
   
 8.  可选。 若要删除 HTTP 以便用户只能使用 HTTPS 访问站点，请单击含有 **http**的行。 单击 **“删除”** ，然后在确认对话框上单击 **“是”**。  
   

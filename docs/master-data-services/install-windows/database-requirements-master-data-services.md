@@ -1,5 +1,6 @@
 ---
 title: 数据库要求
+description: 使用 Master Data Services 配置管理器创建和配置 Master Data Services 数据库，该数据库存储所有主数据。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a06d5b8ebc22e5456e8f2989766f2f829d637cd0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad7b080f1b42ae6f082be94afe9a5709f613f53c
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728134"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606702"
 ---
 # <a name="database-requirements-master-data-services"></a>数据库要求 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  所有主数据都存储于 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库中。 承载此数据库的计算机必须运行的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+  所有主数据都存储于 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库中。 承载此数据库的计算机必须运行的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
   
  使用 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 在本地或远程计算机上创建和配置 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库。 如果您将数据库从一个环境移到另一个环境，则可以通过将 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 服务和 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 与其新位置中的数据库相关联，在新环境中维护这些信息。  
   
@@ -55,7 +56,7 @@ ms.locfileid: "73728134"
   
 -   Microsoft SQL Server 2008 R2 Developer (64-bit) x64  
   
- 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2016 的各个[版本支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。 
+ 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。 
   
 ### <a name="operating-system"></a>操作系统  
  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]支持的 Windows 操作系统和其它要求的信息，请参阅 [安装 SQL Server 2016 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  

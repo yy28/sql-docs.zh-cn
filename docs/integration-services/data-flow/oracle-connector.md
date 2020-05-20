@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 92aaf7c04d7a5e176fce4448b9d4f6172b541647
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ce461246f0afef31ab4b60b772f92aeeb479a4cb
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75755839"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606866"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Microsoft Connector for Oracle
 
@@ -26,7 +26,7 @@ ms.locfileid: "75755839"
 
 Microsoft Connector for Oracle 支持以下 Microsoft SQL Server 产品：
 
-- SQL Server 2019 及更高版本
+- SQL Server 2019 CU1 及更高版本
 - 15.9.3 版本以后的 SQL Server Data Tools (SSDT)
 
 支持以下 Oracle Database 版本的数据源：
@@ -47,7 +47,7 @@ Microsoft Connector for Oracle 支持以下 Microsoft SQL Server 产品：
 
 安装连接器后，必须重启 SQL Server Integration Services，才能确保 Oracle 源和目标正常运行。
 
-要执行面向 SQL Server 2017 及更低版本的 SSIS 包，除了 Microsoft Connector for Oracle，还需要安装 Oracle 客户端以及 Microsoft Connector for Oracle by Attunity，相应版本可见以下链接    ：
+要执行面向 SQL Server 2017 及更低版本的 SSIS 包，除了 Microsoft Connector for Oracle，还需要安装 Oracle 客户端以及 Microsoft Connector for Oracle by Attunity，相应版本可见以下链接  ：
 
 - [SQL Server 2017：适用于 Oracle 的 Attunity Microsoft Connector 版本 5.0](https://www.microsoft.com/download/details.aspx?id=55179)
 - [SQL Server 2016：适用于 Oracle 的 Attunity Microsoft Connector 版本 4.0](https://www.microsoft.com/download/details.aspx?id=52950)

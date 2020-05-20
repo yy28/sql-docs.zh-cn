@@ -1,7 +1,7 @@
 ---
 title: DELETE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/30/2019
+ms.date: 05/19/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -25,12 +25,12 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1207f4938c1c3b269cd503e1f7f7f7e279207685
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56e259f707a665c5bc2f4af89b63c2cb3846b70c
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82169355"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606409"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -80,7 +80,27 @@ DELETE
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics (formerly SQL Data Warehouse)
+
+[ WITH <common_table_expression> [ ,...n ] ] 
+DELETE [database_name . [ schema ] . | schema. ] table_name  
+FROM [database_name . [ schema ] . | schema. ] table_name 
+JOIN {<join_table_source>}[ ,...n ]  
+ON <join_condition>
+[ WHERE <search_condition> ]   
+[ OPTION ( <query_options> [ ,...n ]  ) ]  
+[; ]  
+
+<join_table_source> ::=   
+{  
+    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias 
+    [ <tablesample_clause>]  
+    | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]  
+}  
+```
+
+```syntaxsql
+-- Syntax for Parallel Data Warehouse  
   
 DELETE 
     [ FROM [database_name . [ schema ] . | schema. ] table_name ]   
@@ -99,15 +119,15 @@ DELETE
  指定将要删除的任意行数或任意行的百分比。 *expression* 可以是行数或行的百分比。 与 INSERT、UPDATE 或 DELETE 一起使用的 TOP 表达式中被引用行将不按任何顺序排列。 有关详细信息，请参阅 [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md)。  
   
  FROM  
- 一个可选关键字，可用在 DELETE 关键字与目标 table_or_view_name 或 rowset_function_limited 之间   。  
+ 一个可选关键字，可用在 DELETE 关键字与目标 table_or_view_name 或 rowset_function_limited 之间 。  
   
- table_alias   
+ table_alias  
  在表示要从中删除行的表或视图的 FROM *table_source* 子句中指定的别名。  
   
- server_name   
+ server_name  
  **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
- 表或视图所在服务器的名称（使用链接服务器名称或 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 函数作为服务器名称）。 如果指定了 server_name，则需要 database_name 和 schema_name    。  
+ 表或视图所在服务器的名称（使用链接服务器名称或 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 函数作为服务器名称）。 如果指定了 server_name，则需要 database_name 和 schema_name  。  
   
  *database_name*  
  数据库的名称。  
@@ -115,19 +135,19 @@ DELETE
  *schema_name*  
  表或视图所属架构的名称。  
   
- table_or_view_name   
+ table_or_view_name  
  要从中删除行的表或视图的名称。  
   
  在其作用域内还可用作 DELETE 语句中的表源的表变量。  
   
- table_or_view_name 引用的视图必须可更新，并且只在视图定义的 FROM 子句中引用一个基表  。 有关可更新视图的详细信息，请参阅 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)。  
+ table_or_view_name 引用的视图必须可更新，并且只在视图定义的 FROM 子句中引用一个基表。 有关可更新视图的详细信息，请参阅 [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)。  
   
- rowset_function_limited   
+ rowset_function_limited  
  **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 或 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 函数，视提供程序的功能而定。  
   
- WITH ( \<table_hint_limited> [... n] )     
+ WITH ( \<table_hint_limited> [... n] )  
  指定目标表允许的一个或多个表提示。 需要有 WITH 关键字和括号。 不允许 NOLOCK 和 READUNCOMMITTED。 有关表提示的详细信息，请参阅[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
   
  \<OUTPUT_Clause>  
@@ -156,15 +176,15 @@ DELETE
  指定 DELETE 在指定游标的当前位置执行。  
   
  GLOBAL  
- 指定 cursor_name 是指全局游标  。  
+ 指定 cursor_name 是指全局游标。  
   
- cursor_name   
- 从其中进行提取的打开游标的名称。 如果同时存在名为 cursor_name 的全局游标和局部游标，那么，在指定了 GLOBAL 时，该参数是指全局游标；否则是指局部游标  。 游标必须允许更新。  
+ cursor_name  
+ 从其中进行提取的打开游标的名称。 如果同时存在名为 cursor_name 的全局游标和局部游标，那么，在指定了 GLOBAL 时，该参数是指全局游标；否则是指局部游标。 游标必须允许更新。  
   
- cursor_variable_name   
+ cursor_variable_name  
  游标变量的名称。 游标变量必须引用允许更新的游标。  
   
- OPTION ( \<query_hint> [ ,... n] )      
+ OPTION ( \<query_hint> [ ,... n] )   
  关键字，指示用于自定义[!INCLUDE[ssDE](../../includes/ssde-md.md)]处理语句的方式的优化器提示。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ## <a name="best-practices"></a>最佳实践  
@@ -249,7 +269,7 @@ WHERE StandardCost > 1000.00;
 GO  
 ```  
   
- 下面的示例演示一个更复杂的 WHERE 子句。 WHERE 子句定义要确定删除的行而必须满足的两个条件。 `StandardCost` 列中的值必须介于 `12.00` 与 `14.00` 之间，而 `SellEndDate` 列中的值必须为 Null。 该示例还将打印“\@\@ROWCOUNT”函数中的值，以返回已删除的行数  。  
+ 下面的示例演示一个更复杂的 WHERE 子句。 WHERE 子句定义要确定删除的行而必须满足的两个条件。 `StandardCost` 列中的值必须介于 `12.00` 与 `14.00` 之间，而 `SellEndDate` 列中的值必须为 Null。 该示例还将打印“\@\@ROWCOUNT”函数中的值，以返回已删除的行数。  
   
 ```sql
 DELETE Production.ProductCostHistory  
@@ -315,7 +335,7 @@ DELETE spqh
 ```  
   
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>E. 使用 TOP 限制删除的行数  
- 当 TOP (n) 子句与 DELETE 一起使用时，将针对随机选择的 n 行执行删除操作   。 以下示例从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `PurchaseOrderDetail` 表中删除到期日期早于 2006 年 7 月 1 日的 `20` 个随机行。  
+ 当 TOP (n) 子句与 DELETE 一起使用时，将针对随机选择的 n 行执行删除操作 。 以下示例从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `PurchaseOrderDetail` 表中删除到期日期早于 2006 年 7 月 1 日的 `20` 个随机行。  
   
 ```sql
 DELETE TOP (20)   
@@ -341,7 +361,7 @@ GO
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. 通过使用链接服务器从远程表删除数据  
- 下面的示例将删除远程表中的行。 该示例从使用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 创建指向远程数据源的链接开始。 然后，将链接服务器名称 `MyLinkServer` 指定为 server.catalog.schema.object 形式的由四个部分组成的对象名称的一部分  。  
+ 下面的示例将删除远程表中的行。 该示例从使用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 创建指向远程数据源的链接开始。 然后，将链接服务器名称 `MyLinkServer` 指定为 server.catalog.schema.object 形式的由四个部分组成的对象名称的一部分。  
   
 ```sql
 USE master;  
@@ -377,7 +397,7 @@ GO
 ```  
   
 #### <a name="h-deleting-data-from-a-remote-table-by-using-the-opendatasource-function"></a>H. 通过使用 OPENDATASOURCE 函数从远程表删除数据  
- 以下示例通过指定 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 行集函数从远程表中删除行。 通过使用 server_name 或 server_name\instance_name 格式，为该数据源指定一个有效的服务器名称   。  
+ 以下示例通过指定 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 行集函数从远程表中删除行。 通过使用 server_name 或 server_name\instance_name 格式，为该数据源指定一个有效的服务器名称 。  
   
 ```sql
 DELETE FROM OPENDATASOURCE('SQLNCLI',  
@@ -440,7 +460,8 @@ GO
 DELETE FROM Table1;  
 ```  
   
-### <a name="l-delete-a-set-of-rows-from-a-table"></a>L. 从表中删除一组行  
+### <a name="l-delete-a-set-of-rows-from-a-table"></a>L. 从表中删除一组行
+
  以下示例从 `Table1` 表中删除 `StandardCost` 列的值大于 1000.00 的所有行。  
   
 ```sql
@@ -448,7 +469,8 @@ DELETE FROM Table1
 WHERE StandardCost > 1000.00;  
 ```  
   
-### <a name="m-using-label-with-a-delete-statement"></a>M. 通过 DELETE 语句使用 LABEL  
+### <a name="m-using-label-with-a-delete-statement"></a>M. 通过 DELETE 语句使用 LABEL
+
  以下示例将标签与 DELETE 语句一起使用。  
   
 ```sql
@@ -457,7 +479,8 @@ OPTION ( LABEL = N'label1' );
   
 ```  
   
-### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>N. 通过 DELETE 语句使用标签和查询提示  
+### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>N. 通过 DELETE 语句使用标签和查询提示
+
  此查询显示通过 DELETE 语句使用查询联接提示的基本语法。 有关联接提示以及如何使用 OPTION 子句的详细信息，请参阅 [OPTION 子句 (Transact-SQL)](../queries/option-clause-transact-sql.md)。
   
 ```sql
@@ -481,8 +504,32 @@ DELETE tableA WHERE EXISTS (
 SELECT TOP 1 1 FROM tableB tb WHERE tb.col1 = tableA.col1
 )
 ```
-  
-## <a name="see-also"></a>另请参阅  
+
+### <a name="p-delete-based-on-the-result-of-joining-with-another-table"></a>P. 根据与其他表联接的结果进行删除
+
+此示例演示了如何根据与其他表联接的结果从表中删除内容。
+
+```sql
+CREATE TABLE dbo.Table1   
+    (ColA int NOT NULL, ColB decimal(10,3) NOT NULL);  
+GO  
+
+CREATE TABLE dbo.Table2   
+    (ColA int PRIMARY KEY NOT NULL, ColB decimal(10,3) NOT NULL);  
+GO  
+INSERT INTO dbo.Table1 VALUES(1, 10.0), (1, 20.0);  
+INSERT INTO dbo.Table2 VALUES(1, 0.0);  
+GO  
+
+DELETE dbo.Table2   
+FROM dbo.Table2   
+    INNER JOIN dbo.Table1   
+    ON (dbo.Table2.ColA = dbo.Table1.ColA)
+    WHERE dboTable2.ColA = 1;  
+```
+
+## <a name="see-also"></a>另请参阅
+
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   

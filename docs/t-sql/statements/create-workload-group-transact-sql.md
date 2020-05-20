@@ -20,12 +20,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 84685f8e9d75d75d65255292b2b45b2b0c990cac
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 6744a4590c0f1d893f79bbe93db189b96cb7b4c0
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886505"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606419"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -88,17 +88,17 @@ CREATE WORKLOAD GROUP group_name
 
 ```
 
-group_name </br>
-指定用于标识工作负荷组的名称。 group_name 为 sysname  。 最长可为 128 个字符，并且在实例中必须是唯一的。
+group_name</br>
+指定用于标识工作负荷组的名称。 group_name 为 sysname。 最长可为 128 个字符，并且在实例中必须是唯一的。
 
-MIN_PERCENTAGE_RESOURCE = value </br>
-指定为此工作负荷组保证的最小资源分配，这些资源不与其他工作负荷组共享。 value 为 0 到 100 之间的整数  。 所有工作负荷组的 min_percentage_resource 的总和不能超过 100。 min_percentage_resource 的值不能大于 cap_percentage_resource。 有每个服务级别允许的最小有效值。 有关更多详细信息，请参阅[有效值](#effective-values)。
+MIN_PERCENTAGE_RESOURCE = value</br>
+指定为此工作负荷组保证的最小资源分配，这些资源不与其他工作负荷组共享。 value 为 0 到 100 之间的整数。 所有工作负荷组的 min_percentage_resource 的总和不能超过 100。 min_percentage_resource 的值不能大于 cap_percentage_resource。 有每个服务级别允许的最小有效值。 有关更多详细信息，请参阅[有效值](#effective-values)。
 
-CAP_PERCENTAGE_RESOURCE = value </br>
+CAP_PERCENTAGE_RESOURCE = value</br>
 指定工作负荷组中所有请求的最大资源利用率。 整数取值范围为 1 到 100。 cap_percentage_resource 的值必须大于 min_percentage_resource。 如果在其他工作负荷组中将 min_percentage_resource 配置为大于零，则 cap_percentage_resource 的有效值会减少。
 
-REQUEST_MIN_RESOURCE_GRANT_PERCENT = value </br>
-设置每个请求分配到的最小资源量。 value 是一个必需参数，取值范围为 0.75 到 100.00（十进制）  。 request_min_resource_grant_percent 的值必须是0.25 的倍数，必须是 min_percentage_resource 的因数，且小于 cap_percentage_resource。 有每个服务级别允许的最小有效值。 有关更多详细信息，请参阅[有效值](#effective-values)。
+REQUEST_MIN_RESOURCE_GRANT_PERCENT = value</br>
+设置每个请求分配到的最小资源量。 value 是一个必需参数，取值范围为 0.75 到 100.00（十进制）。 request_min_resource_grant_percent 的值必须是0.25 的倍数，必须是 min_percentage_resource 的因数，且小于 cap_percentage_resource。 有每个服务级别允许的最小有效值。 有关更多详细信息，请参阅[有效值](#effective-values)。
 
 例如：
 
@@ -120,8 +120,8 @@ WITH
 |Xlargerc|70%|
 |||
 
-REQUEST_MAX_RESOURCE_GRANT_PERCENT = value </br>         
-设置每个请求分配的最小资源量。 value 是一个可选十进制参数，其默认值等于 request_min_resource_grant_percent  。 value 必须大于或等于 request_min_resource_grant_percent  。 当 request_max_resource_grant_percent 的值大于 request_min_resource_grant_percent 并且系统资源可用时，会向请求分配其他资源。
+REQUEST_MAX_RESOURCE_GRANT_PERCENT = value</br>         
+设置每个请求分配的最小资源量。 value 是一个可选十进制参数，其默认值等于 request_min_resource_grant_percent。 value 必须大于或等于 request_min_resource_grant_percent。 当 request_max_resource_grant_percent 的值大于 request_min_resource_grant_percent 并且系统资源可用时，会向请求分配其他资源。
 
 *IMPORTANCE* = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }</br>        
 指定工作负荷组中某个请求的默认重要性。 重要性为下列值之一，默认值为 NORMAL：
@@ -134,8 +134,8 @@ REQUEST_MAX_RESOURCE_GRANT_PERCENT = value </br>
 
 在工作负荷组设置的重要性是工作负荷组中所有请求的默认重要性。 用户还可以在分类器级别设置重要性，这可能会覆盖工作负荷组的重要性设置。 这允许对工作负荷组内请求的重要性进行区分，以便更快地访问非保留资源。 当工作负荷组 min_percentage_resource 的总和小于 100 时，将根据重要性分配非保留资源。
 
-QUERY_EXECUTION_TIMEOUT_SEC = value </br>     
-指定查询在取消之前可以执行的最长时间（以秒为单位）。 value 必须为 0 或一个正整数  。 value 的默认设置为 0，查询永不超时。QUERY_EXECUTION_TIMEOUT_SEC 在查询处于运行状态时而不是在查询加入队列时进行计数。
+QUERY_EXECUTION_TIMEOUT_SEC = value</br>     
+指定查询在取消之前可以执行的最长时间（以秒为单位）。 value 必须为 0 或一个正整数。 value 的默认设置为 0，查询永不超时。QUERY_EXECUTION_TIMEOUT_SEC 在查询处于运行状态时而不是在查询加入队列时进行计数。
 
 ## <a name="remarks"></a>备注
 
@@ -181,7 +181,8 @@ QUERY_EXECUTION_TIMEOUT_SEC = value </br>
 
 ## <a name="see-also"></a>另请参阅
 
-- [DROP WORKLOAD GROUP (Transact-SQL)](drop-workload-group-transact-sql.md)
+- [DROP 工作负荷组 (Transact-SQL)](drop-workload-group-transact-sql.md)
+- [ALTER 工作负荷组 (Transact-SQL)](alter-workload-group-transact-sql.md)
 - [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md)
 - [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md)
 - [快速入门：使用 T-SQL 配置工作负荷隔离](/azure/sql-data-warehouse/quickstart-configure-workload-isolation-tsql)
