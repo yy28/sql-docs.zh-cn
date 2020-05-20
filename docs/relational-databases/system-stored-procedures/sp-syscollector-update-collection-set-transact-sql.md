@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_update_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0a351eaa746654d26d7f51536a41fc2677a2f67e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cb261fdfb745e935b94fc5c2944640c507674ece
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010565"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816459"
 ---
 # <a name="sp_syscollector_update_collection_set-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_syscollector_update_collection_set
   
 `[ @days_until_expiration = ] days_until_expiration`收集的数据保存在管理数据仓库中的天数。 *days_until_expiration*为**smallint**。 *days_until_expiration*必须是0或正整数。  
   
-`[ @proxy_id = ] proxy_id`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理的代理帐户的唯一标识符。 *proxy_id*是**int**。  
+`[ @proxy_id = ] proxy_id`代理的代理帐户的唯一标识符 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *proxy_id*是**int**。  
   
 `[ @proxy_name = ] 'proxy_name'`代理的名称。 *proxy_name*是**sysname** ，可为 null。  
   
@@ -87,7 +87,7 @@ sp_syscollector_update_collection_set
   
 `[ @logging_level = ] logging_level`日志记录级别。 *logging_level*为**smallint** ，并具有以下值之一：  
   
- 0-记录执行信息和[!INCLUDE[ssIS](../../includes/ssis-md.md)]跟踪事件：  
+ 0-记录执行信息和 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 跟踪事件：  
   
 -   启动/停止收集组  
   

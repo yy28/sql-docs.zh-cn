@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_setnetname
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 03282ae181ec9fc032e5f64549840d3d292b385e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3e75d1d43c37d0e758b02025df4f601c87f44f2e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68104402"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816610"
 ---
 # <a name="sp_setnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  将**sys. server**中的网络名称设置为的远程实例的实际网络计算机名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 该过程可用于启用对计算机（其网络名中包含无效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符）的远程存储过程调用执行。  
+  将**sys. server**中的网络名称设置为的远程实例的实际网络计算机名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 该过程可用于启用对计算机（其网络名中包含无效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符）的远程存储过程调用执行。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,10 +41,10 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>参数  
- *server* ** @server = "** server **"**  
+ ** @server = "** *server* **"**  
  在用户编码的远程存储过程调用语法中引用的远程服务器名。 **Sys.** server 中必须已有一行才能使用此*服务器*。 *server* 的数据类型为 **sysname**，无默认值。  
   
- *network_name* ** @netname = '** network_name **'**  
+ ** @netname = '** *network_name* **'**  
  对其执行远程存储过程调用的计算机网络名。 *network_name* **sysname**，无默认值。  
   
  该名称必须与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 计算机名相匹配，并且该名称可以包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符中不允许使用的字符。  

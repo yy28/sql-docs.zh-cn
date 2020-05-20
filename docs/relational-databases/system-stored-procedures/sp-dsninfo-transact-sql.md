@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dsninfo
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cb67524304807eba6765387590fd53a52b92f19a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa9033b52851b6b678671e94c6d10d71b5a488fc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124710"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818667"
 ---
 # <a name="sp_dsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @infotype = ] 'info_type'`要返回的信息的类型。 如果未指定*info_type*或指定 NULL，则返回所有信息类型。 *info_type*为**varchar （128）**，默认值为 NULL，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**DBMS_NAME**|指定数据源供应商名称。|  
 |**DBMS_VERSION**|指定数据源版本。|  
@@ -58,7 +58,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @dso_type = ] dso_type`数据源类型。 *dso_type*为**int**，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**1** （默认值）|ODBC 数据源|  
 |**3**|OLE DB 数据源|  
@@ -71,7 +71,7 @@ sp_dsninfo [ @dsn =] 'dsn'
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**信息类型**|**nvarchar （64）**|信息类型，如 DBMS_NAME、DBMS_VERSION、DATABASE_NAME 和 SQL_SUBSCRIBER。|  
-|**值**|**nvarchar(512)**|关联的信息类型的值。|  
+|值|**nvarchar(512)**|关联的信息类型的值。|  
   
 ## <a name="remarks"></a>备注  
  **sp_dsninfo**在所有类型的复制中使用。  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helplogins
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b4c3d6ded5d85e5d38556792aaa7ea71dd9f42fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c26bf0ff225a593a6427402fc15543edbfc15637
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122454"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818131"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|登录名。|  
 |**SID**|**varbinary （85）**|登录安全标识符 (SID)。|  
-|**DefDBName**|**sysname**|**LoginName**在连接到实例时使用的默认数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|**DefDBName**|**sysname**|**LoginName**在连接到实例时使用的默认数据库 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**DefLangName**|**sysname**|**LoginName**使用的默认语言。|  
 |**Auser**|**char （5）**|Yes = **LoginName**在数据库中具有关联的用户名。<br /><br /> No = **LoginName**没有关联的用户名。|  
 |**ARemote**|**char （7）**|Yes = **LoginName**具有关联的远程登录名。<br /><br /> No = **LoginName**没有关联的登录名。|  
@@ -61,7 +61,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|登录名。|  
-|**DBName**|**sysname**|**LoginName**在连接到实例时使用的默认数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|**DBName**|**sysname**|**LoginName**在连接到实例时使用的默认数据库 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**用户名**|**sysname**|**LoginName**在**dbname**中映射到的用户帐户，以及**LoginName**是**dbname**中的成员的角色。|  
 |**UserOrAlias**|**char （8）**|MemberOf =**用户名**是一个角色。<br /><br /> User = **UserName**是用户帐户。|  
   

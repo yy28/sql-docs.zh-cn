@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpreplicationoption
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1003a1a33565da9b48135123d83c4ea6551debeb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 395a7c2227fb23a177cb1b3980b26014f0651c0c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771484"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82817654"
 ---
 # <a name="sp_helpreplicationoption-transact-sql"></a>sp_helpreplicationoption (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ## <a name="arguments"></a>参数  
 `[ @optname = ] 'option_name'`要查询的复制选项的名称。 *option_name*的默认值为**sysname**，默认值为 NULL。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**事务**|在启用事务复制时返回结果集。|  
 |**merge**|在启用合并复制时返回结果集。|  

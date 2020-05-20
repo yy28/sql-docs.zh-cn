@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_indexes
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 625b1b5bca3c76a0433e0b887d2c291a714c6f54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0d678b5643c4288c07ff7576bfced5cd9f0655d1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139922"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82817767"
 ---
 # <a name="sp_indexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,25 +44,25 @@ sp_indexes [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @table_server= ]"*table_server*"  
+ [ @table_server =] "*table_server*"  
  要为其请求表信息的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 链接服务器的名称。 *table_server* **sysname**，无默认值。  
   
- [ @table_name= ]"*table_name*"  
+ [ @table_name =] "*table_name*"  
  要为其提供索引信息的远程表的名称。 *table_name*的默认值为**sysname**，默认值为 NULL。 如果为 NULL，则返回指定数据库中的所有表。  
   
- [ @table_schema= ]"*table_schema*"  
+ [ @table_schema =] "*table_schema*"  
  指定表架构。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境中，该值对应于表所有者。 *table_schema*的默认值为**sysname**，默认值为 NULL。  
   
- [ @table_catalog= ]"*table_db*"  
+ [ @table_catalog =] "*table_db*"  
  *Table_name*所在的数据库的名称。 *table_db*的默认值为**sysname**，默认值为 NULL。 如果为 NULL， *table_db*默认为**master**。  
   
- [ @index_name= ]"*index_name*"  
+ [ @index_name =] "*index_name*"  
  为其请求信息的索引的名称。 *index*的值为**sysname**，默认值为 NULL。  
   
- [ @is_unique= ]"*is_unique*"  
+ [ @is_unique =] "*is_unique*"  
  要为其返回信息的索引的类型。 *is_unique*为**bit**，默认值为 NULL，可以为以下值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |1|返回有关唯一索引的信息。|  
 |0|返回有关非唯一索引的信息。|  
@@ -76,7 +76,7 @@ sp_indexes [ @table_server = ] 'table_server'
 |TABLE_SCHEM|**sysname**|表的架构。|  
 |TABLE_NAME|**sysname**|远程表的名称。|  
 |NON_UNIQUE|**smallint**|指示索引是否唯一：<br /><br /> 0 = 唯一<br /><br /> 1 = 不唯一|  
-|INDEX_QUALIFER|**sysname**|索引所有者的名称。 某些 DBMS 产品允许表所有者之外的用户创建索引。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，此列始终与**TABLE_NAME**相同。|  
+|INDEX_QUALIFER|**sysname**|索引所有者的名称。 某些 DBMS 产品允许表所有者之外的用户创建索引。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此列始终与**TABLE_NAME**相同。|  
 |INDEX_NAME|**sysname**|索引的名称。|  
 |TYPE|**smallint**|索引的类型：<br /><br /> 0 = 表的统计信息<br /><br /> 1 = 聚集<br /><br /> 2 = 哈希<br /><br /> 3 = 其他|  
 |ORDINAL_POSITION|**int**|列在索引中的序号位置。 索引中的第一列为 1。 该列始终返回值。|  

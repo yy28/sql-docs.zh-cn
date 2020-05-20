@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replqueuemonitor
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d3c84d15087c3cb6bb63380bc6cf0c75e773b883
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 526b0a5b968b85854b7818212413e02a1478c878
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74055220"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82817184"
 ---
 # <a name="sp_replqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  列出对指定发布的排队[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]更新订阅[!INCLUDE[msCoName](../../includes/msconame-md.md)]的队列或消息队列的队列消息。 如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 队列，则将在订阅服务器上的订阅数据库上执行此存储过程。 如果使用消息队列，则将在分发服务器上的分发数据库上执行此存储过程。  
+  列出对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 指定发布的排队更新订阅的队列或消息队列的队列消息。 如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 队列，则将在订阅服务器上的订阅数据库上执行此存储过程。 如果使用消息队列，则将在分发服务器上的分发数据库上执行此存储过程。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

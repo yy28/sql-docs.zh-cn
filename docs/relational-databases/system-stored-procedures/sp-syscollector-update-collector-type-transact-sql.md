@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_update_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 393b5622964ea3f240d31a2a90c555f7020c500d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 224ee81383c247d3b2ba8d02aaa99f5a649d0e74
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010539"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816347"
 ---
 # <a name="sp_syscollector_update_collector_type-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,9 +50,9 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
   
 `[ @parameter_schema = ] 'parameter_schema'`此收集器类型的 XML 架构。 *parameter_schema*是**xml** ，可能是某些收集器类型所必需的。 如果它不是必需的，此参数可为 NULL。  
   
-`[ @collection_package_id = ] collection_package_id`是指向收集组使用的[!INCLUDE[ssIS](../../includes/ssis-md.md)]收集包的本地唯一标识符。 *collection_package_id* **uniqueidentifer** ，并且是必需的。 若要获取*collection_package_id*的值，请查询 msdb 数据库中的 dbo. syscollector_collector_types 系统视图。  
+`[ @collection_package_id = ] collection_package_id`是指向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 收集组使用的收集包的本地唯一标识符。 *collection_package_id* **uniqueidentifer** ，并且是必需的。 若要获取*collection_package_id*的值，请查询 msdb 数据库中的 dbo. syscollector_collector_types 系统视图。  
   
-`[ @upload_package_id = ] upload_package_id`是指向收集组使用的[!INCLUDE[ssIS](../../includes/ssis-md.md)]上载包的本地唯一标识符。 *upload_package_id*是**uniqueidentifier** ，且是必需的。 若要获取*upload_package_id*的值，请查询 msdb 数据库中的 dbo. syscollector_collector_types 系统视图。  
+`[ @upload_package_id = ] upload_package_id`是指向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 收集组使用的上载包的本地唯一标识符。 *upload_package_id*是**uniqueidentifier** ，且是必需的。 若要获取*upload_package_id*的值，请查询 msdb 数据库中的 dbo. syscollector_collector_types 系统视图。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
