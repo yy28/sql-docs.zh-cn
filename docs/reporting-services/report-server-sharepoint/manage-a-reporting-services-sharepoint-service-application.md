@@ -146,7 +146,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  选择此选项可指定一个帐户。  
   
  **帐户**  
- 输入一个 Windows 域用户帐户。 使用如下格式：*domain>\<<user account\\\>* 。  
+ 输入一个 Windows 域用户帐户。 使用如下格式：\<domain>\\<user account\>。  
   
  **密码**  
  键入密码。  

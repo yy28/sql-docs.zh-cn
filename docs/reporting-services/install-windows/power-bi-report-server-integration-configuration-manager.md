@@ -17,7 +17,7 @@ ms.locfileid: "68265640"
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-**配置管理器中的“Power BI 集成”** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]页用于向所需的 Azure Active Directory (AD) 托管租户注册报表服务器，以允许报表服务器用户将支持的报表项固定到 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 仪表板。 有关可以固定的支持项目列表，请参阅 [将 Reporting Services 项目固定到 Power BI 仪表板](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)。
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器中的“Power BI 集成”页用于向所需的 Azure Active Directory (AD) 托管租户注册报表服务器，以允许报表服务器用户将支持的报表项固定到 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 仪表板。 有关可以固定的支持项目列表，请参阅 [将 Reporting Services 项目固定到 Power BI 仪表板](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)。
 
 ## <a name="requirements-for-power-bi-integration"></a><a name="bkmk_requirements"></a> Power BI 集成的要求
 
@@ -58,7 +58,7 @@ ms.locfileid: "68265640"
 
 4. 注册完成后，“Power BI 注册详细信息”部分将记下 Azure 租户 ID 和重定向 URL  。  URL 用作 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 仪表板登录和通信过程的一部分，以回传给已注册的报表服务器。
 
-5. 选择“结果”  窗口中的“复制”  按钮，以将注册详细信息复制到 Windows 剪贴板，这样你便可以将它们保存起来供以后参考。
+5. 选择“结果”窗口中的“复制”按钮，以将注册详细信息复制到 Windows 剪贴板，这样你便可以将它们保存起来供以后参考。
 
 ## <a name="unregister-with-power-bi"></a><a name="bkmk_unregister"></a> 注销 Power BI
 
@@ -82,7 +82,7 @@ ms.locfileid: "68265640"
 
      选择“高级”。 
 
-- 选择“添加”为  **添加新 HTTP 标识 ，然后选择“确定”** [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]  。
+- 选择“添加”为 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 添加新 HTTP 标识 ，然后选择“确定”。
 
      [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 图标将发生更改以指示已更改服务器配置。  ![ssrs_powebi_icon_warning](../../reporting-services/install-windows/media/ssrs-powebi-icon-warning.png "ssrs_powebi_icon_warning")
 

@@ -27,7 +27,7 @@ ms.locfileid: "68015410"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  ISSAsynchStatus 公接口开对  **异步操作的支持**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 这一可选接口继承自核心 OLE DB 接口 IDBAsynchStatus  。 除了从 IDBAsynchStatus 继承的 Abort 和 GetStatus 方法外，ISSAsynchStatus 还提供一个新方法，用于在完成异步操作或发生超时前等待     。  
+  ISSAsynchStatus 公接口开对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 异步操作的支持。 这一可选接口继承自核心 OLE DB 接口 IDBAsynchStatus  。 除了从 IDBAsynchStatus 继承的 Abort 和 GetStatus 方法外，ISSAsynchStatus 还提供一个新方法，用于在完成异步操作或发生超时前等待     。  
   
 |方法|说明|  
 |------------|-----------------|  

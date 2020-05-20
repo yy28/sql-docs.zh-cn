@@ -43,7 +43,7 @@ ms.locfileid: "63194040"
     <Extension Name="ExtensionName" Type="CompanyName.ExtensionName.MyConnectionClass, AssemblyName" />  
     ```  
   
-     Name 的值是数据处理扩展插件的唯一名称  。 Type 的值是以逗号分隔的列表，包括实现 **和** 接口的类的完全限定命名空间的条目，后跟程序集的名称（不包括 .dll 文件扩展名）<xref:Microsoft.ReportingServices.Interfaces.IExtension><xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>。 默认情况下，数据处理扩展插件是可见的。 若要从用户界面（如报表设计器）中隐藏扩展插件，请将 Visible 属性添加到 Extension 元素，并将其设置为 false    。  
+     Name 的值是数据处理扩展插件的唯一名称  。 Type 的值是以逗号分隔的列表，包括实现 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 接口的类的完全限定命名空间的条目，后跟程序集的名称（不包括 .dll 文件扩展名）。 默认情况下，数据处理扩展插件是可见的。 若要从用户界面（如报表设计器）中隐藏扩展插件，请将 Visible 属性添加到 Extension 元素，并将其设置为 false    。  
   
 5.  最后，为自定义程序集添加一个代码组，以便为扩展插件授予 FullTrust 权限  。 要完成该操作，将该代码组添加到 rspreviewpolicy.config 文件中即可，该文件在默认情况下位于 C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies 中。 代码组可能如下所示：  
   

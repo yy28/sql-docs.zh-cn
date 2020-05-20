@@ -56,7 +56,7 @@ ms.locfileid: "75252362"
   
 若要查看计划运行的作业、当前会话期间运行的作业的最新结果以及当前正在运行或空闲的作业，请使用作业活动监视器。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务意外失败，您可以参考作业活动监视器中的上一次会话来确定正在执行的作业。  
   
-若要打开作业活动监视器，请在  **对象资源管理器中展开“SQL Server 代理”** [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，右键单击“作业活动监视器”  ，再单击“查看作业活动”  。  
+若要打开作业活动监视器，请在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 对象资源管理器中展开“SQL Server 代理”，右键单击“作业活动监视器”，再单击“查看作业活动”。  
   
 也可以使用存储过程 **sp_help_jobactivity**查看当前会话的作业活动。  
   

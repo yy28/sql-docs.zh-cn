@@ -40,7 +40,7 @@ ms.locfileid: "77004706"
 
 **enclaveAttestationProtocol：** 证明服务的协议。 目前唯一支持的值是 HGS（主机保护者服务）  。
 
-用户必须启用 columnEncryptionSetting 并正确设置上述两个连接字符串属性，才能从  **中启用具有安全 Enclave 的 Always Encrypted**  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]。
+用户必须启用 columnEncryptionSetting 并正确设置上述两个连接字符串属性，才能从 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 中启用具有安全 Enclave 的 Always Encrypted。
 
 ## <a name="working-with-secure-enclaves"></a>使用安全 Enclave
 如果正确设置了 Enclave 连接属性，此功能将以透明方式工作。 驱动程序将确定查询是否需要自动使用安全 Enclave。 下面是触发 Enclave 计算的查询示例。 可以在 [Always Encrypted Enclave 入门](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md)中找到数据库和表的设置。

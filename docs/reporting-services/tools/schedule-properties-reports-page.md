@@ -29,7 +29,7 @@ ms.locfileid: "65571407"
  4. 右键单击共享计划，选择“属性”  。
  5. 单击“报表”  。  
   
-  还可以从  **Web 门户的“站点设置”管理共享计划**[!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]。
+  还可以从 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 门户的“站点设置”管理共享计划。
   
 > [!NOTE]  
 >  并非在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2017 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  

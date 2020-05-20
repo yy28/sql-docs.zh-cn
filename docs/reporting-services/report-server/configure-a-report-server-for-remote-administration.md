@@ -60,7 +60,7 @@ ms.locfileid: "65580417"
   
 1.  单击 **“开始”** ，依次指向 **“程序”** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”** ，然后单击 **“SQL Server 配置管理器”** 。  
   
-2.  在左窗格中，展开“SQL Server 网络配置”，然后针对  **实例单击“协议”**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+2.  在左窗格中，展开“SQL Server 网络配置”，然后针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例单击“协议”。  
   
 3.  在详细信息窗格中，启用“TCP/IP”和“命名管道”协议，然后重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "65580417"
   
 9. 键入您的用户帐户名，然后单击 **“确定”** 。  
   
-10. 在“**用户或组> 权限”的“允许”列中，选择“远程启动”和“远程激活”，然后单击“确定”\<**     。  
+10. 在“\<用户或组> 权限”的“允许”列中，选择“远程启动”和“远程激活”，然后单击“确定”。  
   
 ### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>为非管理员设置报表服务器 WMI 命名空间的权限  
   

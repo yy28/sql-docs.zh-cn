@@ -38,7 +38,7 @@ ms.locfileid: "75255560"
   
 6.  向“组或用户名称”  框中添加一个组或用户，并将其选中。  
   
-7.  在“ **权限”** _<group or user>_ 框中，为希望远程检测服务状态的用户选择“远程启用”  权限的“允许”  列。  
+7.  在“<group or user> 权限”框中，为希望远程检测服务状态的用户选择“远程启用”权限的“允许”列。  
   
 ## <a name="see-also"></a>另请参阅  
 [启动、停止或暂停 SQL Server 代理服务](../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  

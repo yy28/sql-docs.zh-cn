@@ -37,7 +37,7 @@ Microsoft SQL Server 2012 提供称作 SQL Server Express 本地数据库运行�
   
     默认情况下，SSDT 将使用本地数据库服务器实例来调试数据库项目。 在这种情况下，SSDT 将首先尝试生成该项目，如果没有错误，该项目（及其实体）将部署到本地数据库中。 如果您在以后调试相同的项目，SSDT 将检测到您在上次调试会话后进行的任何更改，并且仅将这些更改部署到本地数据库。  
   
-4.  再次展开“本地”  数据库服务器中 TradeDev  下的节点。 这一次，注意到表、视图和函数已部署到该本地数据库服务器。  
+4.  再次展开“本地”数据库服务器中 TradeDev 下的节点。 这一次，注意到表、视图和函数已部署到该本地数据库服务器。  
   
 5.  右键单击 TradeDev  节点并选择“新建查询”  。  
   
@@ -49,7 +49,7 @@ Microsoft SQL Server 2012 提供称作 SQL Server Express 本地数据库运行�
   
 7.  “消息”  窗格将显示“(0 行受影响)”并且“结果”  窗格将不返回任何行。 这是因为我们对本地数据库进行查询，而非对包含实际数据的连接的数据库进行查询。  
   
-    可以通过右键单击这个本地 TradeDev  数据库下方的 Products  表，然后选择“查看数据”  ，对此进行确认。 请注意，该表是空的。  
+    可以通过右键单击这个本地 TradeDev 数据库下方的 Products 表，然后选择“查看数据”，对此进行确认。 请注意，该表是空的。  
   
 ### <a name="to-replicate-real-data-to-the-local-database"></a>将实际数据复制到本地数据库  
   
@@ -63,7 +63,7 @@ Microsoft SQL Server 2012 提供称作 SQL Server Express 本地数据库运行�
   
 4.  将 `INSERT` 语句粘贴到此查询窗口中并执行查询。  
   
-5.  重复上述步骤，将数据从连接的 TradeDev  数据库的 Products  和 Fruits  表复制到本地 TradeDev  数据库。  
+5.  重复上述步骤，将数据从连接的 TradeDev 数据库的 Products 和 Fruits 表复制到本地 TradeDev 数据库。  
   
 6.  右键单击该“本地”  服务器实例，然后选择“刷新”  。 使用“查看数据”  对这些表进行检查，以便确认已填充该本地数据库。  
   
@@ -75,5 +75,5 @@ Microsoft SQL Server 2012 提供称作 SQL Server Express 本地数据库运行�
     select * from dbo.GetProductsBySupplier(1)  
     ```  
   
-9. 在 Transact**SQL 编辑器窗格下的“结果”** \-窗格中，将看到返回 `Products` 表的 Apples 和 Potato Chips 行。  
+9. 在 Transact\-SQL 编辑器窗格下的“结果”窗格中，将看到返回 `Products` 表的 Apples 和 Potato Chips 行。  
   

@@ -66,7 +66,7 @@ ms.locfileid: "63225702"
 ##  <a name="additional-configuration"></a><a name="bkmk_additional"></a> 附加配置  
  可以优化扩展部署中的单个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器以仅执行后台处理，从而不与交互式报表执行争用资源。 后台处理包括计划、订阅和数据警报。  
   
- 若要更改单个报表服务器的行为，请在 RSreportServer.config 配置文件中将 **IsWebServiceEnable> 设置为 false\<**  。  
+ 若要更改单个报表服务器的行为，请在 RSreportServer.config 配置文件中将 \<IsWebServiceEnable> 设置为 false。  
   
  默认情况下，将配置报表服务器且 \<IsWebServiceEnable> 将设置为 TRUE。 当所有服务器都配置为 TRUE 时，将在场中的所有节点上均衡交互式操作和后台处理的负载。  
   

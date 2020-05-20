@@ -26,4 +26,4 @@ ms.locfileid: "75247640"
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-本节介绍了  **中“对象资源管理器”的“操作员”** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]节点的 F1 帮助。
+本节介绍了 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中“对象资源管理器”的“操作员”节点的 F1 帮助。

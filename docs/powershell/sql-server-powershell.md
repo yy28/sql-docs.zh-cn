@@ -24,7 +24,7 @@ ms.locfileid: "67912215"
 > [!NOTE]
 > SQL Server PowerShell 模块有两种；SqlServer 和 SQLPS   。 虽然 SQL Server 安装附带了 SQLPS 模块（用于向后兼容），但该模块不再更新  。 最新的 PowerShell 模块是 SqlServer 模块  。 SqlServer 模块不仅包含 SQLPS 更新版本的 cmdlet，并且还包含新的 cmdlet 以支持最新的 SQL 功能   。  
 > 虽然 SQL Server Management Studio (SSMS) 随附了以前版本的 SqlServer 模块，但仅限 16.x 版本的 SSMS   。 要在 SSMS 17.0 和更高版本中使用 PowerShell，则必须从 PowerShell 库安装 SqlServer  模块。
-> 要安装 SqlServer 模块，请参阅[安装 SQL Server PowerShell](download-sql-server-ps-module.md)  。
+> 要安装 SqlServer 模块，请参阅[安装 SQL Server PowerShell](download-sql-server-ps-module.md)。
 
 **为什么模块从 SQLPS 更改为 SqlServer？**
 
@@ -42,7 +42,7 @@ SqlServer  模块加载两个 Windows PowerShell 管理单元：
   
 -   一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序（允许使用类似于文件系统路径的简单导航机制）。 您可以生成类似于文件系统路径的路径，在该路径中，驱动器与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理对象模型关联，节点基于对象模型类。 然后，你可以使用熟悉的命令（如 **cd** 和 **dir** ），按照在命令提示符窗口中导航文件夹的类似方式导航路径。 可以使用其他命令（如 **ren** 或 **del**）对路径中的节点执行操作。  
   
--   一组 cmdlet，它支持运行包含 [!INCLUDE[tsql](../includes/tsql-md.md)] 或 XQuery 语句的 sqlcmd 脚本等操作  。  
+-   一组 cmdlet，它支持运行包含 [!INCLUDE[tsql](../includes/tsql-md.md)] 或 XQuery 语句的 sqlcmd 脚本等操作。  
   
   
 ## <a name="sql-server-versions"></a>SQL Server 版本  

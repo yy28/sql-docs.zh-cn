@@ -45,7 +45,7 @@ ms.locfileid: "75252207"
   
     存储用户主题书签，以便于以后访问。  
   
-对“帮助”的帮助（[!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer 帮助）可将用户链接到有关帮助查看器的文档，但这些主题位于一个独立于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书的集合中。 有关帮助查看器的信息，请从  **联机丛书的“帮助”菜单上选择“帮助之帮助”** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+对“帮助”的帮助（[!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer 帮助）可将用户链接到有关帮助查看器的文档，但这些主题位于一个独立于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书的集合中。 有关帮助查看器的信息，请从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书的“帮助”菜单上选择“帮助之帮助”。  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN Online 和 SQL Server 社区  
 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中的“帮助”还允许用户通过访问网站上的 MSDN Online 和专门针对于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的社区两种途径来获取信息。 可以：  
@@ -91,7 +91,7 @@ ms.locfileid: "75252207"
 还可以在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中将联机丛书作为文档窗口打开。 当屏幕空间有限，并且要使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 及其隐藏窗口的功能时，最好使用这种方法。  
   
 > [!NOTE]  
-> 若要使联机丛书完全独立于 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，请从“开始”[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]**菜单打开**  联机丛书，这样它便不再响应你在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 环境中执行的操作，也不会在你退出 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 时关闭。  
+> 若要使联机丛书完全独立于 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，请从“开始”菜单打开 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书，这样它便不再响应你在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 环境中执行的操作，也不会在你退出 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 时关闭。  
   
 #### <a name="to-configure-help-and-sql-server-books-online-to-launch-inside-the-management-studio-window"></a>将帮助和 SQL Server 联机丛书配置为在 Management Studio 窗口中启动  
   
