@@ -54,13 +54,13 @@ ms.locfileid: "75257032"
   
 2. 将文件 Class1.cs 重命名为 AvoidWaitForDelayRule.cs。  
   
-3. 在解决方案资源管理器中，右键单击项目节点，然后单击“添加引用”  。  
+3. 在解决方案资源管理器中，右键单击项目节点，然后单击“添加引用”。  
   
 4. 在“框架”选项卡上，选择“System.ComponentModel.Composition”。  
   
-5. 单击“浏览”  并导航到 C:\Program Files (x86)\\MicrosoftSQL Server\120\SDK\Assemblies 目录，选择 Microsoft.SqlServer.TransactSql.ScriptDom.dll，然后单击“确定”。  
+5. 单击“浏览”并导航到 C:\Program Files (x86)\\MicrosoftSQL Server\120\SDK\Assemblies 目录，选择 Microsoft.SqlServer.TransactSql.ScriptDom.dll，然后单击“确定”。  
   
-6. 接下来，安装所需的 DACFx 引用。 单击“浏览”  并导航到 <Visual Studio Install Dir>\Common7\IDE\Extensions\\Microsoft\SQLDB\DAC\120 目录。 选择“Microsoft.SqlServer.Dac.dll”、“Microsoft.SqlServer.Dac.Extensions.dll”和“Microsoft.Data.Tools.Schema.Sql.dll”条目，并单击“添加”  ，然后单击“确定”  。  
+6. 接下来，安装所需的 DACFx 引用。 单击“浏览”并导航到 <Visual Studio Install Dir>\Common7\IDE\Extensions\\Microsoft\SQLDB\DAC\120 目录。 选择“Microsoft.SqlServer.Dac.dll”、“Microsoft.SqlServer.Dac.Extensions.dll”和“Microsoft.Data.Tools.Schema.Sql.dll”条目，并单击“添加”，然后单击“确定”。  
   
     现在，DACFx 二进制文件已安装到 Visual Studio 安装目录中。 对于 Visual Studio 2012，<Visual Studio Install Dir> 通常位于 C:\Program Files (x86)\\MicrosoftVisual Studio 11.0 中。 对于 Visual Studio 2013，该目录通常位于 C:\Program Files (x86)\\MicrosoftVisual Studio 12.0 中。  
   
@@ -74,11 +74,11 @@ ms.locfileid: "75257032"
   
 ### <a name="defining-the-waitfordelayvisitor-class"></a>定义 WaitForDelayVisitor 类  
   
-1. 在“解决方案资源管理器”  中，选择 SampleRules 项目。  
+1. 在“解决方案资源管理器”中，选择 SampleRules 项目。  
   
-2. 在“项目”  菜单上，选择“添加类”  。 此时会显示“添加新项”对话框。   
+2. 在“项目”菜单上，选择“添加类”。 此时会显示“添加新项”对话框。  
   
-3. 在“名称”  文本框中，键入 WaitForDelayVisitor.cs，然后单击“添加”  按钮。 WaitForDelayVisitor.cs 文件将添加到“解决方案资源管理器”  中的项目。  
+3. 在“名称”文本框中，键入 WaitForDelayVisitor.cs，然后单击“添加”按钮。 WaitForDelayVisitor.cs 文件将添加到“解决方案资源管理器”中的项目。  
   
 4. 打开 WaitForDelayVisitor.cs 文件并更新内容，以与以下代码相匹配：  
   
@@ -122,17 +122,17 @@ ms.locfileid: "75257032"
   
     此方法访问模型中的 WAITFOR 语句，并且将指定了 DELAY 选项的语句添加到 WAITFOR DELAY 语句列表中。 此处引用的关键类为 [WaitForStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.waitforstatement.aspx)。  
   
-9. 在“文件”  菜单上，单击“保存”  。  
+9. 在“文件”菜单上，单击“保存”。  
   
 第二种类为 LocalizedExportCodeAnalysisRuleAttribute.cs。 这是框架提供的内置 Microsoft.SqlServer.Dac.CodeAnalysis.ExportCodeAnalysisRuleAttribute 扩展，它支持从资源文件中读取由你的规则所使用的 DisplayName 和 Description。 如果之前计划在多种语言中使用规则，此类会很有用。  
   
 ### <a name="defining-the-localizedexportcodeanalysisruleattribute-class"></a>定义 LocalizedExportCodeAnalysisRuleAttribute 类  
   
-1. 在“解决方案资源管理器”  中，选择 SampleRules 项目。  
+1. 在“解决方案资源管理器”中，选择 SampleRules 项目。  
   
-2. 在“项目”  菜单上，选择“添加类”  。 此时会显示“添加新项”对话框。   
+2. 在“项目”菜单上，选择“添加类”。 此时会显示“添加新项”对话框。  
   
-3. 在“名称”  文本框中，键入 LocalizedExportCodeAnalysisRuleAttribute.cs，然后单击“添加”  按钮。 该文件将添加到“解决方案资源管理器”  中的项目。  
+3. 在“名称”文本框中，键入 LocalizedExportCodeAnalysisRuleAttribute.cs，然后单击“添加”按钮。 该文件将添加到“解决方案资源管理器”中的项目。  
   
 4. 打开该文件并更新内容，以与以下代码相匹配：  
   
@@ -240,15 +240,15 @@ ms.locfileid: "75257032"
   
 ### <a name="to-add-a-resource-file-and-three-resource-strings"></a>添加一个资源文件和三个资源字符串  
   
-1. 在“解决方案资源管理器”  中，选择 SampleRules 项目。  
+1. 在“解决方案资源管理器”中，选择 SampleRules 项目。  
   
-2. 在“项目”  菜单上，选择“添加新项”  。 此时会显示“添加新项”对话框。   
+2. 在“项目”菜单上，选择“添加新项”。 此时会显示“添加新项”对话框。  
   
-3. 在“已安装的模板”  列表中，单击“常规”  。  
+3. 在“已安装的模板”列表中，单击“常规”。  
   
-4. 在详细信息窗格中，单击“资源文件”  。  
+4. 在详细信息窗格中，单击“资源文件”。  
   
-5. 在“名称”  中，键入 RuleResources.resx。 资源编辑器随即出现，其中未定义任何资源。  
+5. 在“名称”中，键入 RuleResources.resx。 资源编辑器随即出现，其中未定义任何资源。  
   
 6. 定义 4 个资源字符串，如下所示：  
   
@@ -259,17 +259,17 @@ ms.locfileid: "75257032"
     |CategorySamples|SamplesCategory|  
     |CannotCreateResourceManager|无法从 {1} 创建 {0} 的 ResourceManager。|  
   
-7. 在“文件”  菜单上，单击“保存RuleResources.resx”  。  
+7. 在“文件”菜单上，单击“保存RuleResources.resx”。  
   
 接下来，定义某个类（该类引用资源文件中由 Visual Studio 使用的资源），以在用户界面中显示有关规则的信息。  
   
 ### <a name="defining-the-sampleconstants-class"></a>定义 SampleConstants 类  
   
-1. 在“解决方案资源管理器”  中，选择 SampleRules 项目。  
+1. 在“解决方案资源管理器”中，选择 SampleRules 项目。  
   
-2. 在“项目”  菜单上，选择“添加类”  。 此时会显示“添加新项”对话框。   
+2. 在“项目”菜单上，选择“添加类”。 此时会显示“添加新项”对话框。  
   
-3. 在“名称”  文本框中，键入 SampleRuleConstants.cs，然后单击“添加”  按钮。 SampleRuleConstants.cs 文件将添加到“解决方案资源管理器”  中的项目。  
+3. 在“名称”文本框中，键入 SampleRuleConstants.cs，然后单击“添加”按钮。 SampleRuleConstants.cs 文件将添加到“解决方案资源管理器”中的项目。  
   
 4. 打开 SampleRuleConstants.cs 文件并且将以下 using 语句添加到该文件：  
   
@@ -305,7 +305,7 @@ ms.locfileid: "75257032"
     }  
     ```  
   
-5. 单击“文件”   > “保持”  。  
+5. 单击“文件” > “保持”。  
   
 ## <a name="creating-the-custom-code-analysis-rule-class"></a>创建自定义代码分析规则类。
 
@@ -313,11 +313,11 @@ ms.locfileid: "75257032"
   
 ### <a name="creating-the-avoidwaitfordelayrule-class"></a>创建 AvoidWaitForDelayRule 类  
   
-1. 在“解决方案资源管理器”  中，选择 SampleRules 项目。  
+1. 在“解决方案资源管理器”中，选择 SampleRules 项目。  
   
-2. 在“项目”  菜单上，选择“添加类”  。 此时会显示“添加新项”对话框。   
+2. 在“项目”菜单上，选择“添加类”。 此时会显示“添加新项”对话框。  
   
-3. 在“名称”  文本框中，键入 AvoidWaitForDelayRule.cs，然后单击“添加”  。 AvoidWaitForDelayRule.cs 文件将添加到“解决方案资源管理器”  中的项目。  
+3. 在“名称”文本框中，键入 AvoidWaitForDelayRule.cs，然后单击“添加”。 AvoidWaitForDelayRule.cs 文件将添加到“解决方案资源管理器”中的项目。  
   
 4. 打开 AvoidWaitForDelayRule.cs 文件并且将以下 using 语句添加到该文件：  
   
@@ -488,27 +488,27 @@ ms.locfileid: "75257032"
     }  
     ```  
   
-10. 单击“文件”   > “保持”  。  
+10. 单击“文件” > “保持”。  
   
 ### <a name="building-the-class-library"></a>正在生成类库  
   
-1. 在“项目”  菜单上，单击“SampleRules 属性”  。  
+1. 在“项目”菜单上，单击“SampleRules 属性”。  
   
 2. 单击“签名”  选项卡。  
   
-3. 单击“对程序集签名”  。  
+3. 单击“对程序集签名” 。  
   
-4. 在“选择强名称密钥文件”  中，单击 **<New>** 。  
+4. 在“选择强名称密钥文件”中，单击 **<New>** 。  
   
-5. 在“创建强名称密钥”  对话框的“密钥文件名称”  中，键入 MyRefKey。  
+5. 在“创建强名称密钥”对话框的“密钥文件名称” 中，键入 MyRefKey。  
   
 6. （可选）可以为强名称密钥文件指定密码。  
   
-7. 单击“确定”。   
+7. 单击“确定”。  
   
-8. 在“文件”  菜单上，单击“全部保存”  。  
+8. 在“文件”  菜单上，单击“全部保存” 。  
   
-9. 在“生成”  菜单中，单击“生成解决方案”  。  
+9. 在“生成”菜单中，单击“生成解决方案”。  
   
 接下来，你必须安装程序集，以便在生成和部署 SQL Server 项目时加载该程序集。  
   
@@ -530,19 +530,19 @@ ms.locfileid: "75257032"
   
 1. 启动 Visual Studio 的第二个会话。  
   
-2. 单击“文件” > “新建” > “项目”。  
+2. 单击“文件” > “新建” > “项目”。    
   
-3. 在“新建项目”  对话框内的“已安装模板”  列表中，展开“SQL Server”  节点，然后再单击“SQL Server 数据库项目”  。  
+3. 在“新建项目”对话框内的“已安装模板”列表中，展开“SQL Server”节点，然后再单击“SQL Server 数据库项目”。  
   
-4. 在“名称”  文本框中，键入 SampleRulesDB，然后单击“确定”  。  
+4. 在“名称”文本框中，键入 SampleRulesDB，然后单击“确定”。  
   
 最后，将看到在 SQL Server 项目中显示的新规则。 查看新的 AvoidWaitForRule 代码分析规则：  
   
-1. 在“解决方案资源管理器”  中，选择 SampleRulesDB 项目。  
+1. 在“解决方案资源管理器”中，选择 SampleRulesDB 项目。  
   
 2. 在 **“项目”** 菜单上，单击 **“属性”** 。 SampleRulesDB 属性页随即显示。  
   
-3. 单击“代码分析”  。 应看到一个名为 RuleSamples.CategorySamples 的新类别。  
+3. 单击“代码分析”。 应看到一个名为 RuleSamples.CategorySamples 的新类别。  
   
 4. 展开 RuleSamples .CategorySamples。 应看到 SR1004：在存储过程、触发器和函数中避免使用 WAITFOR DELAY 语句。  
   

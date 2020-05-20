@@ -22,7 +22,7 @@ ms.locfileid: "68115663"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>维护计划（子计划属性）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用“维护计划(子计划属性)”  对话框可以为维护计划的子计划指定名称、说明和计划。 在维护计划的“设计”  选项卡上单击“子计划属性”  ，或者在设计器网格中双击某子计划可显示此对话框。  
+  使用“维护计划(子计划属性)”  对话框可以为维护计划的子计划指定名称、说明和计划。 在维护计划的“设计”选项卡上单击“子计划属性”，或者在设计器网格中双击某子计划可显示此对话框。  
   
 ## <a name="options"></a>选项  
  **名称**  

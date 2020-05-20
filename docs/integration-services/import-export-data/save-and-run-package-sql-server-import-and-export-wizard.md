@@ -53,7 +53,7 @@ ms.locfileid: "71284943"
 
 ## <a name="specify-options-for-saving-the-package"></a>指定用于保存包的选项
 **SQL Server**  
- 选择此选项可将包保存在 sysssispackages 表的 msdb 数据库的 SQL Server 中   。
+ 选择此选项可将包保存在 sysssispackages 表的 msdb 数据库的 SQL Server 中 。
  
 > [!IMPORTANT]
 > 此选项不会将包保存到 SSIS 目录数据库 (SSISDB)。  

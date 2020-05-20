@@ -53,7 +53,7 @@ ms.locfileid: "63194834"
 ## <a name="requirements"></a>要求  
 数据驱动订阅通常由报表服务器管理员创建和维护。 创建数据驱动订阅的步骤要求具有生成查询的相关知识、了解包含订阅服务器数据的数据源，同时还要拥有对报表服务器的提升权限。  
   
-本教程使用教程[创建基本表报表（SSRS 教程）](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)中创建的销售订单报表和示例数据库 AdventureWorks2014 中的数据   。  
+本教程使用教程[创建基本表报表（SSRS 教程）](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)中创建的销售订单报表和示例数据库 AdventureWorks2014 中的数据。  
   
 您的计算机必须安装以下软件才能使用此教程：  
   

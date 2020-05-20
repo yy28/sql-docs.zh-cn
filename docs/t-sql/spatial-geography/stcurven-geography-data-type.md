@@ -55,9 +55,9 @@ ms.locfileid: "68042447"
   
 -   geography 实例为空   
   
--   n 超过 geography 实例中的曲线数目（请参阅 [STNumCurves（geography 数据类型）](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)）   
+-   n 超过 geography 实例中的曲线数目（请参阅 [STNumCurves（geography 数据类型）](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)）  
   
--   geography 实例的维度不相等（请参阅 [STDimension（geography 数据类型）](../../t-sql/spatial-geography/stdimension-geography-data-type.md)）   
+-   geography 实例的维度不相等（请参阅 [STDimension（geography 数据类型）](../../t-sql/spatial-geography/stdimension-geography-data-type.md)）  
   
 ## <a name="examples"></a>示例  
   

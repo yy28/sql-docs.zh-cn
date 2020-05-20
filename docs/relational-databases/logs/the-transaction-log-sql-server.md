@@ -63,9 +63,9 @@ ms.locfileid: "79287801"
 
 在 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 方案中，数据库的每个更新（主要副本）在数据库的完整且独立的副本（次要副本）中直接再现。 主要副本直接将每个日志记录发送到次要副本，这可将传入日志记录应用到可用性组数据库，并不断前滚。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)
 
-在日志传送方案中，主服务器将主数据库的活动事务日志发送到一个或多个目标服务器  。 每个辅助服务器将该日志还原为其本地的辅助数据库。 有关详细信息，请参阅 [关于日志传送](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。 
+在日志传送方案中，主服务器将主数据库的活动事务日志发送到一个或多个目标服务器。 每个辅助服务器将该日志还原为其本地的辅助数据库。 有关详细信息，请参阅 [关于日志传送](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。 
 
-在数据库镜像方案中，数据库（主体数据库）的每次更新都在独立的、完整的数据库（镜像数据库）副本中立即重新生成  。 主体服务器实例立即将每个日志记录发送到镜像服务器实例，镜像服务器实例将传入的日志记录应用于镜像数据库，从而将其继续前滚。 有关详细信息，请参阅 [数据库镜像](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。
+在数据库镜像方案中，数据库（主体数据库）的每次更新都在独立的、完整的数据库（镜像数据库）副本中立即重新生成。 主体服务器实例立即将每个日志记录发送到镜像服务器实例，镜像服务器实例将传入的日志记录应用于镜像数据库，从而将其继续前滚。 有关详细信息，请参阅 [数据库镜像](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。
 
 ##  <a name="transaction-log-characteristics"></a><a name="Characteristics"></a>事务日志特征
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 事务日志的特征： 
@@ -123,7 +123,7 @@ ms.locfileid: "79287801"
 |16|XTP_CHECKPOINT|需要执行内存中 OLTP 检查点。对于内存优化表，如果上次检查点后事务日志文件变得大于 1.5 GB（包括基于磁盘的表和内存优化表），则执行自动检查点<br /> 有关详细信息，请参阅[内存优化表的检查点操作](../../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md)和[内存中优化表的日志记录和检查点流程](https://blogs.msdn.microsoft.com/sqlcat/2016/05/20/logging-and-checkpoint-process-for-memory-optimized-tables-2/)
   
 ##  <a name="operations-that-can-be-minimally-logged"></a><a name="MinimallyLogged"></a> 可尽量减少日志量的操作  
-最小日志记录  是指只记录在不支持时间点恢复的情况下恢复事务所需的信息。 本主题介绍在大容量日志 [恢复模式](../backup-restore/recovery-models-sql-server.md) 下（以及简单恢复模式下）按最小方式记录、但在运行备份时例外的操作。  
+最小日志记录是指只记录在不支持时间点恢复的情况下恢复事务所需的信息。 本主题介绍在大容量日志 [恢复模式](../backup-restore/recovery-models-sql-server.md) 下（以及简单恢复模式下）按最小方式记录、但在运行备份时例外的操作。  
   
 > [!NOTE]
 > 内存优化表不支持最小日志记录。  
@@ -133,7 +133,7 @@ ms.locfileid: "79287801"
   
  下列操作在完整恢复模式下执行完整日志记录，而在简单和大容量日志恢复模式下按最小方式记录日志：  
   
--   批量导入操作（[bcp](../../tools/bcp-utility.md)、 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)和 [INSERT...SELECT](../../t-sql/statements/insert-transact-sql.md)）。 有关在何时对大容量导入表按最小方式进行记录的详细信息，请参阅 [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
+-   批量导入操作（[bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 和 [INSERT...SELECT](../../t-sql/statements/insert-transact-sql.md)）。 有关在何时对大容量导入表按最小方式进行记录的详细信息，请参阅 [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
   
 启用事务复制时，将完全记录 `BULK INSERT` 操作，即使处于大容量日志恢复模式下。  
   
@@ -143,10 +143,10 @@ ms.locfileid: "79287801"
   
 -   插入或追加新数据时，使用 [UPDATE](../../t-sql/queries/update-transact-sql.md) 语句中的 `.WRITE` 子句部分更新到大型值数据类型。 注意，在更新现有值时没有使用最小日志记录。 有关大型值数据类型的详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。  
   
--   在[nUPDATETEXT{11} 、 [nUPDATETEXT{12} 和 UPDATETEXT, nUPDATETEXT, 、 UPDATETEXT 语句。 注意，在更新现有值时没有使用最小日志记录。  
+-   在[nUPDATETEXT](../../t-sql/queries/writetext-transact-sql.md) 、 [nUPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) 和 **UPDATETEXT**, **nUPDATETEXT**, 、 **UPDATETEXT** 语句。 注意，在更新现有值时没有使用最小日志记录。  
   
     > [!WARNING]
-    > `WRITETEXT` 和 `UPDATETEXT` 语句已被弃用；请避免在新的应用程序中使用它们  。  
+    > `WRITETEXT` 和 `UPDATETEXT` 语句已被弃用；请避免在新的应用程序中使用它们。  
   
 -   如果数据库设置为简单或大容量日志恢复模式，则无论是脱机还是联机执行操作，都会按最小方式记录一些索引 DDL 操作。 按最小方式记录的索引操作如下：  
   
@@ -155,9 +155,9 @@ ms.locfileid: "79287801"
     -   [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) REBUILD 或 DBCC DBREINDEX 操作。  
   
         > [!WARNING]
-        > `DBCC DBREINDEX` 语句已被弃用；请勿在新的应用程序中使用该语句  。  
+        > `DBCC DBREINDEX` 语句已被弃用；请勿在新的应用程序中使用该语句。  
   
-    -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 新堆重新生成（如果适用）。 `DROP INDEX` 操作期间将始终完整记录索引页的释放操作  。
+    -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 新堆重新生成（如果适用）。 `DROP INDEX` 操作期间将始终完整记录索引页的释放操作。
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
 **管理事务日志**  

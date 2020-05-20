@@ -60,7 +60,7 @@ ms.locfileid: "68013226"
   
 -   在“关联 I/O 掩码”  选项中为 0，在“关联掩码”  选项中为 1。  
   
- “关联 I/O 掩码”  选项是一个高级选项。 如果使用 **sp_configure** 系统存储过程来更改该设置，则仅当“显示高级选项”  设置为 1 时，才可以更改**关联 I/O 掩码**。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，重新配置“关联 I/O 掩码”  选项要求重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
+ “关联 I/O 掩码”  选项是一个高级选项。 如果使用 **sp_configure** 系统存储过程来更改该设置，则仅当“显示高级选项”设置为 1 时，才可以更改**关联 I/O 掩码**。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，重新配置“关联 I/O 掩码”  选项要求重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
 > [!CAUTION]  
 >  请不要在 Windows 操作系统中配置 CPU 关联后，还在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中配置关联掩码。 这些设置实现的效果相同，如果配置不一致，则可能会得到意外的结果。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最好使用 **中的** sp_configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选项配置 CPU 关联。  

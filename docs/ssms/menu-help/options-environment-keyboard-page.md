@@ -22,7 +22,7 @@ ms.locfileid: "75255885"
 ---
 # <a name="options-environment---keyboard-page"></a>选项（“环境”-“键盘”页）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用“选项”  对话框，可以自定义 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的键盘方案。 使用此选项可以选择键盘方案。 若要访问此页，请单击“工具”  菜单上的“选项”  ，选择“环境”  文件夹，再单击“键盘”  。  
+使用“选项”  对话框，可以自定义 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的键盘方案。 使用此选项可以选择键盘方案。 若要访问此页，请单击“工具”菜单上的“选项”，选择“环境”文件夹，再单击“键盘”。  
   
 “键盘方案”  下拉列表提供了可用快捷键的集合。 若要加载特定的方案，请从列表中选择该方案。 在准备离开“选项”  对话框时，单击“确定”  。 选定的方案将被加载到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中。  
   

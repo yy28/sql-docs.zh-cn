@@ -76,7 +76,7 @@ ms.locfileid: "75244404"
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
-1. 通过使用由 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]提供的 autogenerate 功能，生成一个验证密钥和解密密钥。 最后，必须具有单个 \<MachineKey> 条目，以便将该条目粘贴到扩展部署中每个报表服务器实例的 RSReportServer.config 文件中  。
+1. 通过使用由 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]提供的 autogenerate 功能，生成一个验证密钥和解密密钥。 最后，必须具有单个 \<MachineKey> 条目，以便将该条目粘贴到扩展部署中每个报表服务器实例的 RSReportServer.config 文件中。
 
     下面的示例说明了您必须获得的值。 请不要将该示例复制到配置文件中，其中的密钥值是无效的。 报表服务器需要正确的大小写。
 
@@ -88,7 +88,7 @@ ms.locfileid: "75244404"
 
 3. 对扩展部署中的每个报表服务器重复上述步骤。  
 
-4. 确保 \Reporting Services\Report Server 文件夹中所有 RSReportServer.Config 文件都包含相同的 \<MachineKey> 元素  。
+4. 确保 \Reporting Services\Report Server 文件夹中所有 RSReportServer.Config 文件都包含相同的 \<MachineKey> 元素。
 
 ::: moniker-end
 
@@ -108,15 +108,15 @@ ms.locfileid: "75244404"
   
 1. 在文本编辑器中打开 RSReportServer.config。  
   
-2. 查找 \<Service> 部分，并将以下信息添加到配置文件，将 Hostname 值替换为 NLB 服务器的虚拟服务器名：  
+2. 查找 \<Service> 部分，并将以下信息添加到配置文件，将 Hostname 值替换为 NLB 服务器的虚拟服务器名 ：  
   
     ```xml
     <Hostname>virtual_server</Hostname>  
     ```  
   
-3. 查找 **UrlRoot**。 此元素未在该配置文件中指定，但是所使用的默认值是采用 https:// 或 `https://<computername>/<reportserver>` 格式的 URL，其中 \<reportserver> 是报表服务器 Web 服务的虚拟目录名称  。  
+3. 查找 **UrlRoot**。 此元素未在该配置文件中指定，但是所使用的默认值是采用 https:// 或 `https://<computername>/<reportserver>` 格式的 URL，其中 \<reportserver> 是报表服务器 Web 服务的虚拟目录名称。  
   
-4. 为“UrlRoot”键入一个包括群集虚拟名称的值，其格式为：https:// 或 `https://<virtual_server>/<reportserver>`。  
+4. 为“UrlRoot”键入一个包括群集虚拟名称的值，其格式为： https:// 或 `https://<virtual_server>/<reportserver>`。  
   
 5. 保存文件。  
   
@@ -136,9 +136,9 @@ ms.locfileid: "75244404"
   
 1. 在文本编辑器中打开 RSReportServer.config 文件。  
   
-2. 查找 \<Hostname>、\<ReportServerUrl> 和 \<UrlRoot>，并检查每个设置的主机名。 如果该值不是预期的主机名，请将其替换为正确的主机名。  
+2. 查找 \<Hostname>、\<ReportServerUrl> 和 \<UrlRoot>，并检查每个设置的主机名  。 如果该值不是预期的主机名，请将其替换为正确的主机名。  
   
- 如果在做出以下更改后启动 Reporting Services 配置工具，则该工具可能会将 \<ReportServerUrl> 设置更改为默认值  。 请始终保留一份配置文件的备份副本，以备需要用包含要使用的设置的版本替换该配置文件时使用。  
+ 如果在做出以下更改后启动 Reporting Services 配置工具，则该工具可能会将 \<ReportServerUrl> 设置更改为默认值。 请始终保留一份配置文件的备份副本，以备需要用包含要使用的设置的版本替换该配置文件时使用。  
   
 ## <a name="see-also"></a>另请参阅
 

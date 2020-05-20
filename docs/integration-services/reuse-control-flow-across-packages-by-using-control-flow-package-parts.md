@@ -119,7 +119,7 @@ ms.locfileid: "71295788"
 -   **值**。 配置的值。 此值将覆盖默认值。  
   
 ### <a name="connection-managers-tab"></a>“连接管理器”选项卡  
- 使用“包部件配置”  对话框的“连接管理器”  选项卡指定部件实例的连接管理器的属性。  
+ 使用“包部件配置”对话框的“连接管理器”选项卡指定部件实例的连接管理器的属性。  
   
  ![“模板配置”对话框的“连接管理器”选项卡](../integration-services/media/template-configuration-connection-managers-tab.png "“模板配置”对话框的“连接管理器”选项卡")  
   

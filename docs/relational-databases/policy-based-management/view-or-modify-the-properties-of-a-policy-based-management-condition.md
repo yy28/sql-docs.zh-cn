@@ -46,7 +46,7 @@ ms.locfileid: "75558119"
   
 4.  单击加号以便展开 **“条件”** 文件夹。  
   
-5.  右键单击要查看或编辑的条件，然后选择“属性”  。 若要深入了解“打开条件 - condition_name”对话框中的可用选项，请参阅[“创建新条件”或“打开条件”对话框，“常规”页](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)、[“打开条件”对话框，“依赖策略”页](../../relational-databases/policy-based-management/open-condition-dialog-box-dependent-policies-page.md)、[“创建新条件”或“打开条件”对话框，“说明”页](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-description-page.md)和[“高级编辑”（条件）对话框](../../relational-databases/policy-based-management/advanced-edit-condition-dialog-box.md)   。  
+5.  右键单击要查看或编辑的条件，然后选择“属性”  。 若要深入了解“打开条件 - condition_name”对话框中的可用选项，请参阅[“创建新条件”或“打开条件”对话框，“常规”页](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)、[“打开条件”对话框，“依赖策略”页](../../relational-databases/policy-based-management/open-condition-dialog-box-dependent-policies-page.md)、[“创建新条件”或“打开条件”对话框，“说明”页](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-description-page.md)和[“高级编辑”（条件）对话框](../../relational-databases/policy-based-management/advanced-edit-condition-dialog-box.md)。  
   
 6.  完成后，单击 **“确定”** 。  
 
