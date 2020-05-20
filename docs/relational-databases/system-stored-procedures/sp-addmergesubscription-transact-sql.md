@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergesubscription
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b501a2c06a6d9e8e3573ef5d5814c3318c4e623b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: af9bd2035106502da6ccb83a9a8818ca6bd0c47a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769127"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820695"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |值|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
-|**4**|每日|  
+|**4**|每天|  
 |**8**|每周|  
 |**10**|每月一次|  
 |**0.2**|每月，相对于频率间隔|  
@@ -111,7 +111,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**5**|星期四|  
 |**6**|星期五|  
 |**7**|星期六|  
-|**8**|日期|  
+|**8**|天|  
 |**900**|工作日|  
 |**10**|周末|  
 |NULL（默认值）||  
@@ -136,7 +136,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**1**|一次|  
 |**2**|秒|  
 |**4**|Minute|  
-|**8**|Hour|  
+|**8**|小时|  
 |NULL（默认值）||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`每次合并之间*frequency_subday*发生的频率。 *frequency_subday_interval*的值为**int**，默认值为 NULL。  
@@ -153,7 +153,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @description = ] 'description'`是此合并订阅的简短说明。 *description*的值为**nvarchar （255）**，默认值为 NULL。 此值由复制监视器在 "**友好名称**" 列中显示，可用于对被监视的发布的订阅进行排序。  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`指定是否可以通过[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同步管理器同步订阅。 *enabled_for_syncmgr*为**nvarchar （5）**，默认值为 FALSE。 如果**为 false**，则不向同步管理器注册订阅。 如果**为 true**，则会向同步管理器注册订阅，并在不[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]启动的情况下同步订阅。  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`指定是否可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同步管理器同步订阅。 *enabled_for_syncmgr*为**nvarchar （5）**，默认值为 FALSE。 如果**为 false**，则不向同步管理器注册订阅。 如果**为 true**，则会向同步管理器注册订阅，并在不启动的情况下同步订阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
 `[ @offloadagent = ] remote_agent_activation`指定可以远程激活代理。 *remote_agent_activation*为**bit** ，默认值为**0**。  
   
@@ -164,7 +164,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @use_interactive_resolver = ] 'use_interactive_resolver'`允许交互式解决允许交互式解决的所有项目的冲突。 *use_interactive_resolver*为**nvarchar （5）**，默认值为 FALSE。  
   
-`[ @merge_job_name = ] 'merge_job_name'`Merge_job_name 参数已弃用，无法设置。 * \@* *merge_job_name*的默认值为**sysname**，默认值为 NULL。  
+`[ @merge_job_name = ] 'merge_job_name'`* \@ Merge_job_name*参数已弃用，无法设置。 *merge_job_name*的默认值为**sysname**，默认值为 NULL。  
   
 `[ @hostname = ] 'hostname'`当在参数化筛选器的 WHERE 子句中使用此函数时，将重写[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)返回的值。 *Hostname*的值为**sysname**，默认值为 NULL。  
   
@@ -177,7 +177,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="remarks"></a>备注  
  **sp_addmergesubscription**用于合并复制。  
   
- 当由**sysadmin**固定服务器角色的成员执行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sp_addmergesubscription**以创建推送订阅时，合并代理作业将被隐式创建并在代理服务帐户下运行。 建议你执行[sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) ，并为** \@job_login**和** \@job_password**指定其他特定于代理的 Windows 帐户的凭据。 有关详细信息，请参阅[复制代理安全模式](../../relational-databases/replication/security/replication-agent-security-model.md)。  
+ 当由**sysadmin**固定服务器角色的成员执行**sp_addmergesubscription**以创建推送订阅时，合并代理作业将被隐式创建并在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户下运行。 建议你执行[sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) ，并为** \@ job_login**和** \@ Job_password**指定其他特定于代理的 Windows 帐户的凭据。 有关详细信息，请参阅[复制代理安全模式](../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  

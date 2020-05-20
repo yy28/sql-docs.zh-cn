@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.tables catalog view
 ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1a6d6be7a51cf03442bb5576556b10c5c099ab0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 25661cc9d9166da61bd7cef8e3368c2a393a931e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983311"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821284"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "73983311"
 |-----------------|---------------|-----------------|  
 |\<继承列>||有关此视图所继承的列的列表，请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |lob_data_space_id|**int**|对于该表，非零值是存放二进制大型对象 (LOB) 数据的数据空间（文件组或分区方案）的 ID。 LOB 数据类型的示例包括**varbinary （max）**、 **varchar （max）**、 **geography**或**xml**。<br /><br /> 0 = 该表没有 LOB 数据。|  
-|filestream_data_space_id|**int**|FILESTREAM 文件组或包含 FILESTREAM 文件组的分区方案的数据空间 ID。<br /><br /> 若要报告 FILESTREAM 文件组的名称，请执行查询`SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables`。<br /><br /> sys.tables 可以按 filestream_data_space_id = data_space_id 与下列视图联接。<br /><br /> -sys.databases. 文件组<br /><br /> -sys. partition_schemes<br /><br /> -sys. 索引<br /><br /> -sys. allocation_units<br /><br /> -sys. fulltext_catalogs<br /><br /> -sys. data_spaces<br /><br /> -sys. destination_data_spaces<br /><br /> -sys. master_files<br /><br /> -sys. database_files<br /><br /> -backupfilegroup （加入 filegroup_id）|  
+|filestream_data_space_id|**int**|FILESTREAM 文件组或包含 FILESTREAM 文件组的分区方案的数据空间 ID。<br /><br /> 若要报告 FILESTREAM 文件组的名称，请执行查询 `SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables` 。<br /><br /> sys.tables 可以按 filestream_data_space_id = data_space_id 与下列视图联接。<br /><br /> -sys.databases. 文件组<br /><br /> -sys. partition_schemes<br /><br /> -sys. 索引<br /><br /> -sys. allocation_units<br /><br /> -sys. fulltext_catalogs<br /><br /> -sys. data_spaces<br /><br /> -sys. destination_data_spaces<br /><br /> -sys. master_files<br /><br /> -sys. database_files<br /><br /> -backupfilegroup （加入 filegroup_id）|  
 |max_column_id_used|**int**|此表曾使用的最大列 ID。|  
 |lock_on_bulk_load|**bit**|大容量加载期间将锁定表。 有关详细信息，请参阅 [sp_tableoption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)。|  
 |uses_ansi_nulls|**bit**|在创建表时，将 SET ANSI_NULLS 数据库选项设置为 ON。|  
@@ -57,8 +57,8 @@ ms.locfileid: "73983311"
 |temporal_type|**tinyint**|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 表示表类型的数值：<br /><br /> 0 = NON_TEMPORAL_TABLE<br /><br /> 1 = HISTORY_TABLE<br /><br /> 2 = SYSTEM_VERSIONED_TEMPORAL_TABLE|  
 |temporal_type_desc|**nvarchar(60)**|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 表类型的文本说明：<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
 |history_table_id|**int**|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。<br /><br /> 当中 temporal_type （2，4）时，将返回维护历史数据的表 object_id，否则返回 NULL。|  
-|is_remote_data_archive_enabled|**bit**|**适用**于： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]和更高版本和[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> 指示该表是否已启用延伸。<br /><br /> 0 = 该表未启用延伸。<br /><br /> 1 = 表启用 Stretch。<br /><br /> 有关详细信息，请参阅 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。|  
-|is_external|**bit**|**适用**于： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]和更高[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]版本、 [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)]和。<br /><br /> 指示表为外部表。<br /><br /> 0 = 该表不是外部表。<br /><br /> 1 = 该表是外部表。| 
+|is_remote_data_archive_enabled|**bit**|**适用**于： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更高版本和[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> 指示该表是否已启用延伸。<br /><br /> 0 = 该表未启用延伸。<br /><br /> 1 = 表启用 Stretch。<br /><br /> 有关详细信息，请参阅 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。|  
+|is_external|**bit**|**适用**于： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更高版本、 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] 。<br /><br /> 指示表为外部表。<br /><br /> 0 = 该表不是外部表。<br /><br /> 1 = 该表是外部表。| 
 |history_retention_period|**int**|**适用于**： [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>表示时态历史记录保持期持续时间（以 history_retention_period_unit 指定的单位）的数字值。 |  
 |history_retention_period_unit|**int**|**适用于**： [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>表示临时历史记录保持期单位类型的数值。 <br /><br />-1：无限大 <br /><br />3：日 <br /><br />4：周 <br /><br />5：月 <br /><br />6：年 |  
 |history_retention_period_unit_desc|**nvarchar （10）**|**适用于**： [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>临时历史记录保持期单位类型的文本说明。 <br /><br />INFINITE <br /><br />DAY <br /><br />WEEK <br /><br />MONTH <br /><br />YEAR |  

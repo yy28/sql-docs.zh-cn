@@ -19,15 +19,15 @@ helpviewer_keywords:
 - PolyBase
 - dm_exec_distributed_sql_requests management view
 ms.assetid: c041d416-d8c6-435e-a563-6a310abd33e3
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37fd17f17d8b6aa1a30f48d75258d27f4a45561a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 52a1ee453d0a516bc2dc1fd42dcd4439272d844c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097799"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821127"
 ---
 # <a name="sysdm_exec_distributed_requests-transact-sql"></a>sys.dm_exec_distributed_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68097799"
 |-----------------|---------------|-----------------|-----------|  
 |sql_handle|**varbinary(64)**|此视图的键。 与请求关联的唯一数字 id。|系统中所有请求都是唯一的。|  
 |execution_id|**nvarchar （32**|与运行此查询的会话相关联的唯一数字 id。||  
-|status|**nvarchar （32**|请求的当前状态。|"挂起"、"授权"、"AcquireSystemResources"、"正在初始化"、"计划"、"正在分析"、"AquireResources"、"正在运行"、"正在取消"、"完成"、"失败"、"已取消"。|  
+|状态|**nvarchar （32**|请求的当前状态。|"挂起"、"授权"、"AcquireSystemResources"、"正在初始化"、"计划"、"正在分析"、"AquireResources"、"正在运行"、"正在取消"、"完成"、"失败"、"已取消"。|  
 |error_id|**nvarchar （36）**|与请求关联的错误的唯一 id （如果有）。|如果未发生错误，则设置为 NULL。|  
 |start_time|**datetime**|开始执行请求的时间。|对于排队请求，为 0;否则，有效的日期时间小于或等于当前时间。|  
 |end_time|**datetime**|引擎完成编译请求的时间。|对于排队或活动的请求为 Null;否则，有效的日期时间小于或等于当前时间。|  

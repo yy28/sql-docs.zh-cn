@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_droppublication
 ms.assetid: b52b37e6-4fec-40cf-abba-7dce4ff395fd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2bbcd4c8c70d2d381df77ccf8a4a99cec82d3e49
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3ef56f46696a2cb145804105d4d5f22fded6fe1f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768231"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829995"
 ---
 # <a name="sp_droppublication-transact-sql"></a>sp_droppublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_droppublication [ @publication= ] 'publication'
   
  **sp_droppublication**以递归方式删除与发布关联的所有项目，然后删除该发布本身。 如果发布包含一个或更多对它的订阅，则不能删除。 有关如何删除订阅的信息，请参阅[删除推送订阅](../../relational-databases/replication/delete-a-push-subscription.md)和[删除请求订阅](../../relational-databases/replication/delete-a-pull-subscription.md)。  
   
- 执行删除发布的**sp_droppublication**不会删除发布数据库中的已发布对象，也不会删除订阅数据库中的相应对象。 如有\<必要，请使用 DROP object> 手动删除这些对象。  
+ 执行删除发布的**sp_droppublication**不会删除发布数据库中的已发布对象，也不会删除订阅数据库中的相应对象。 \<如有必要，请使用 DROP object> 手动删除这些对象。  
   
 ## <a name="permissions"></a>权限  
  只有**sysadmin**固定服务器角色的成员才能**sp_droppublication**执行。  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAMethod
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7f0196a710f9349e109bcf956eca6e2310c1e051
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 98a8b4ce231c907231646379a3730ab0c1c535db
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252193"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828261"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,13 +68,13 @@ sp_OAMethod objecttoken , methodname
   
  若要获取 output 参数的返回值，*参数*必须是相应数据类型的局部变量，并且必须指定**output** 。 如果指定了常量参数，或未指定**output** ，则将忽略输出参数的任何返回值。  
   
- 如果指定，则*parametername*必须是[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]命名参数的名称。 请注意**@**，_parametername_is 不[!INCLUDE[tsql](../../includes/tsql-md.md)]是局部变量。 删除 at 符号（**@**），并将*parametername*作为参数名传递给 OLE 对象。 指定了所有位置参数后，才能指定命名参数。  
+ 如果指定，则*parametername*必须是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 命名参数的名称。 请注意， **@** _parametername_is 不是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 局部变量。 删除 at 符号（ **@** ），并将*parametername*作为参数名传递给 OLE 对象。 指定了所有位置参数后，才能指定命名参数。  
   
  *n*  
  指示可以指定多个参数的占位符。  
   
 > [!NOTE]
->  parametername 可以是命名参数，因为它是指定方法的一部分并且传递给对象。 * \@* 此存储过程的其他参数是按位置（而不是名称）指定的。  
+>  * \@ parametername*可以是命名参数，因为它是指定方法的一部分并且传递给对象。 此存储过程的其他参数是按位置（而不是名称）指定的。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或非零数字（失败），是由 OLE 自动化对象返回的 HRESULT 整数值。  
@@ -92,7 +92,7 @@ sp_OAMethod objecttoken , methodname
   
  如果一列中的所有数据值具有相同的数据类型，此数据类型将用于整个列。 当列中的数据值为其他数据类型时，将基于下表选择整个列的数据类型。  
   
-||int|FLOAT|money|datetime|varchar|nvarchar|  
+||int|float|money|datetime|varchar|nvarchar|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -110,7 +110,7 @@ sp_OAMethod objecttoken , methodname
 ## <a name="examples"></a>示例  
   
 ### <a name="a-calling-a-method"></a>A. 调用一个方法  
- 下面的示例调用以前`Connect`创建的**SQLServer**对象的方法。  
+ 下面的示例调用 `Connect` 以前创建的**SQLServer**对象的方法。  
   
 ```  
 EXEC @hr = sp_OAMethod @object, 'Connect', NULL, 'my_server',  
@@ -123,7 +123,7 @@ END;
 ```  
   
 ### <a name="b-getting-a-property"></a>B. 获取一个属性  
- 下面的示例获取`HostName`属性（以前创建的**SQLServer**对象的属性），并将其存储在本地变量中。  
+ 下面的示例获取 `HostName` 属性（以前创建的**SQLServer**对象的属性），并将其存储在本地变量中。  
   
 ```  
 DECLARE @property varchar(255);  

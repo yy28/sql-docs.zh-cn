@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_certify_removable
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c39665f54a915282a6c59fe7d57b24d0cde0a5e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 64621f1d675fc7cd4e64b690b1e440a1dbad2d1c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68045936"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826641"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 -   将数据文件组标记为只读，以便将这些文件复制到只读介质中。  
   
- 系统管理员必须是数据库和所有数据库对象的所有者。 系统管理员是一种已知用户，该用户存在于运行[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有服务器上，并且在以后分发和安装数据库时可能会存在。  
+ 系统管理员必须是数据库和所有数据库对象的所有者。 系统管理员是一种已知用户，该用户存在于运行的所有服务器上 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并且在以后分发和安装数据库时可能会存在。  
   
  如果在没有**自动**值的情况下运行**sp_certify_removable** ，则将返回以下任何条件的相关信息：  
   
@@ -73,7 +73,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
  可以使用下列方法更正这些情况：  
   
--   使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]工具和过程，然后再次运行**sp_certify_removable** 。  
+-   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具和过程，然后再次运行**sp_certify_removable** 。  
   
 -   只需用**自动**值运行**sp_certify_removable** 。  
   
@@ -90,7 +90,7 @@ EXEC sp_certify_removable inventory, AUTO;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [数据库分离和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_create_removable &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [sp_dbremove &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   

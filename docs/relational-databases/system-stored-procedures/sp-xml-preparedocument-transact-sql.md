@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_xml_preparedocument
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 56468767e60d49d0fc92864cd613a4f36e84132a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 65ec62997eb25564e19696a8df2895b980d728be
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67950528"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827479"
 ---
 # <a name="sp_xml_preparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ OUTPUT
  [ *xpath_namespaces* ]  
  指定在 OPENXML 的行和列 XPath 表达式中使用的命名空间声明。 *xpath_namespaces*是一个文本参数： **char**、 **nchar**、 **varchar**、 **nvarchar**、 **text**、 **ntext**或**xml**。  
   
- 默认值为** \<root xmlns： mp = "urn： xml-metaprop" >**。 *xpath_namespaces*通过格式正确的 XML 文档为在 OPENXML 中的 xpath 表达式中使用的前缀提供命名空间 uri。 *xpath_namespaces*声明必须用于引用命名空间**urn：架构的前缀-microsoft-xml-metaprop**;这将提供有关已分析的 XML 元素的元数据。 虽然可以使用这项技术来为元属性命名空间重新定义命名空间前缀，但该命名空间不会丢失。 即使*xpath_namespaces*不包含这样的声明，前缀**mp**对于**urn：架构 xml-metaprop**仍有效。  
+ 默认值为** \< root xmlns： mp = "urn： xml-metaprop" >**。 *xpath_namespaces*通过格式正确的 XML 文档为在 OPENXML 中的 xpath 表达式中使用的前缀提供命名空间 uri。 *xpath_namespaces*声明必须用于引用命名空间**urn：架构的前缀-microsoft-xml-metaprop**;这将提供有关已分析的 XML 元素的元数据。 虽然可以使用这项技术来为元属性命名空间重新定义命名空间前缀，但该命名空间不会丢失。 即使*xpath_namespaces*不包含这样的声明，前缀**mp**对于**urn：架构 xml-metaprop**仍有效。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 >0 （失败）  
@@ -127,7 +127,7 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc;
 ```  
   
 ### <a name="c-specifying-a-namespace-uri"></a>C. 指定命名空间 URI  
- 以下示例返回作为输入提供的 XML 文档的新建内部表示形式的句柄。 调用可`sp_xml_preparedocument`将`mp`前缀保留到元属性命名空间映射，并将`xyz`映射前缀添加到命名`urn:MyNamespace`空间。  
+ 以下示例返回作为输入提供的 XML 文档的新建内部表示形式的句柄。 调用可将 `sp_xml_preparedocument` 前缀保留 `mp` 到元属性命名空间映射，并将 `xyz` 映射前缀添加到命名空间 `urn:MyNamespace` 。  
   
 ```  
 DECLARE @hdoc int;  

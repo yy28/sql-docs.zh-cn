@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_stop_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3e09efe938dabb031e1c57020f051cd5ab03e55a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6385f4dd17f4b3f04d145db7ce5a59169dbc4ccb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010568"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828216"
 ---
 # <a name="sp_syscollector_stop_collection_set-transact-sql"></a>sp_syscollector_stop_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +43,13 @@ sp_syscollector_stop_collection_set
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @collection_set_id = ]*collection_set_id*  
+ [ @collection_set_id =] *collection_set_id*  
  收集组的唯一本地标识符。 *collection_set_id*为**int** ，默认值为 NULL。 如果*name*为 NULL，则*collection_set_id*必须具有值。  
   
- [ @name = ]"*name*"  
+ [ @name =] "*name*"  
  收集组的名称。 *名称*为**sysname** ，默认值为 NULL。 如果*collection_set_id*为 NULL，则*name*必须具有值。  
   
- [ @stop_collection_job = ]*stop_collection_job*  
+ [ @stop_collection_job =] *stop_collection_job*  
  指定应停止收集组的收集作业（如果正在运行）。 *stop_collection_job*为**bit** ，默认值为1。  
   
  *stop_collection_job*仅适用于集合模式设置为 "已缓存" 的收集组。 有关详细信息，请参阅[&#40;transact-sql&#41;sp_syscollector_create_collection_set ](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)。  

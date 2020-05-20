@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_memory_grants dynamic management view
 ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a833e5d1c3c67e61c4d81b4b575ab90b23f75fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d2e3cfbea2f7ff9bb7cd976142db28acec3105fc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097698"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829411"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68097698"
  在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，动态管理视图不能公开将影响数据库包含的信息，也不能公开有关用户可以访问的其他数据库的信息。 为了避免公开此信息，每个包含不属于所连接的租户的数据的行都将被筛选掉。此外，筛选列中的值**scheduler_id**、 **wait_order**、 **pool_id**和**group_id** 。列值设置为 NULL。  
   
 > [!NOTE]  
-> 若要从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]调用此，请使用名称**dm_pdw_nodes_exec_query_memory_grants**。  
+> 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_exec_query_memory_grants**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -52,7 +52,7 @@ ms.locfileid: "68097698"
 |**max_used_memory_kb**|**bigint**|到此刻为止所用的最大物理内存 (KB)。|  
 |**query_cost**|**float**|估计查询开销。|  
 |**timeout_sec**|**int**|查询放弃内存授予请求前的超时时间（秒）。|  
-|**resource_semaphore_id**|**smallint**|此查询正在等待的资源信号量的非唯一 ID。<br /><br /> **注意：** 此 ID 在早于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]的版本中是唯一的。 此更改会对故障排除查询执行造成影响。 有关详细信息，请参阅本主题后面的“备注”部分。|  
+|**resource_semaphore_id**|**smallint**|此查询正在等待的资源信号量的非唯一 ID。<br /><br /> **注意：** 此 ID 在早于的版本中是唯一的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。 此更改会对故障排除查询执行造成影响。 有关详细信息，请参阅本主题后面的“备注”部分。|  
 |**queue_id**|**smallint**|查询等待内存授予时所在等待队列的 ID。 如果已授予内存，则为 NULL。|  
 |**wait_order**|**int**|等待查询在指定的 **queue_id** 中的顺序。 如果其他查询获得内存授予或超时，则给定查询的此值可能会发生变化。如果已授予内存，则为 NULL。|  
 |**is_next_candidate**|**bit**|下一个内存授予的候选对象。<br /><br /> 1 = 是<br /><br /> 0 = 否<br /><br /> NULL = 已授予内存。|  
@@ -63,11 +63,11 @@ ms.locfileid: "68097698"
 |**pool_id**|**int**|该工作负荷组所属的资源池的 ID。|  
 |**is_small**|**tinyint**|如果设置为 1，则指示此授予使用小型资源信号量。 如果设置为 0，则指示使用常规信号量。|  
 |**ideal_memory_kb**|**bigint**|将所有内容存放在物理内存中所需的内存授予的大小（以 KB 为单位）。 这基于基数估计。|  
-|**pdw_node_id**|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|**pdw_node_id**|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限  
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要权限。   
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 上，需要在数据库中拥有 `VIEW DATABASE STATE` 权限。   
    
 ## <a name="remarks"></a>备注  
@@ -110,9 +110,9 @@ ms.locfileid: "68097698"
   
 -   如果怀疑有失控查询，请检查来自 [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) 的显示计划和来自 [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) 的批处理文本。  
   
- 使用包含`ORDER BY`或聚合的动态管理视图的查询可能会增加内存占用，从而导致其故障排除的问题。  
+ 使用包含或聚合的动态管理视图的查询 `ORDER BY` 可能会增加内存占用，从而导致其故障排除的问题。  
   
- 数据库管理员可以使用资源调控器功能在多个资源池之间分发服务器资源，最多可为 64 个池。 从开始[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，每个池的行为类似于小型独立的服务器实例，并且需要2个信号量。 从**dm_exec_query_resource_semaphores sys.databases**返回的行数可以比中[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]返回的行多出20倍。  
+ 数据库管理员可以使用资源调控器功能在多个资源池之间分发服务器资源，最多可为 64 个池。 从开始 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ，每个池的行为类似于小型独立的服务器实例，并且需要2个信号量。 从**dm_exec_query_resource_semaphores sys.databases**返回的行数可以比中返回的行多出 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 20 倍。  
   
 ## <a name="see-also"></a>另请参阅  
  [sys. dm_exec_query_resource_semaphores &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_copysubscription
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5d3f67794eb2825c10b822ce719459b563f046d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b3a2a2405b4ca22f780576135c66ee32d058ed10
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304822"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826259"
 ---
 # <a name="sp_copysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ sp_copysubscription [ @filename = ] 'file_name'
 ## <a name="arguments"></a>参数  
 `[ @filename = ] 'file_name'`用于指定要保存数据文件（.mdf）副本的完整路径（包括文件名）的字符串。 *文件名为* **nvarchar （260）**，无默认值。  
   
-`[ @temp_dir = ] 'temp_dir'`包含临时文件的目录的名称。 *temp_dir*的默认值为**nvarchar （260）**，默认值为 NULL。 如果为 NULL， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]则将使用默认数据目录。 该目录应有足够的空间可容纳具有保持所有组合的订阅服务器数据库文件大小的文件。  
+`[ @temp_dir = ] 'temp_dir'`包含临时文件的目录的名称。 *temp_dir*的默认值为**nvarchar （260）**，默认值为 NULL。 如果为 NULL，则 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将使用默认数据目录。 该目录应有足够的空间可容纳具有保持所有组合的订阅服务器数据库文件大小的文件。  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'`一个可选的布尔型标志，指定是否覆盖** \@filename**中指定的同名的现有文件。 *overwrite_existing_file*为**bit**，默认值为**0**。 如果为**1**，则它将覆盖** \@文件名**指定的文件（如果存在）。 如果为**0**，则如果文件存在，则存储过程将失败，并且不覆盖该文件。  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'`一个可选的布尔型标志，指定是否覆盖** \@ filename**中指定的同名的现有文件。 *overwrite_existing_file*为**bit**，默认值为**0**。 如果为**1**，则它将覆盖** \@ 文件名**指定的文件（如果存在）。 如果为**0**，则如果文件存在，则存储过程将失败，并且不覆盖该文件。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubstatus
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5c10e05098a611e51583b2b1132f811d36b0f20a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 12ee833860c4131b6dc9634d7f1da926968c1e14
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771331"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824052"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -64,23 +64,23 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，默认值为**%**。 如果未指定*发布*，将影响所有发布。  
+`[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，默认值为 **%** 。 如果未指定*发布*，将影响所有发布。  
   
-`[ @article = ] 'article'`项目的名称。 该名称对发布必须是唯一的。 *项目*的默认值为**sysname**，默认**%** 值为。 如果未指定*项目*，将影响所有项目。  
+`[ @article = ] 'article'`项目的名称。 该名称对发布必须是唯一的。 *项目*的默认值为**sysname**，默认值为 **%** 。 如果未指定*项目*，将影响所有项目。  
   
-`[ @subscriber = ] 'subscriber'`要更改其状态的订阅服务器的名称。 *订阅服务器*的默认值为**sysname**， **%** 默认值为。 如果未指定*订阅服务器*，则会更改指定项目的所有订阅服务器的状态。  
+`[ @subscriber = ] 'subscriber'`要更改其状态的订阅服务器的名称。 *订阅服务器*的默认值为**sysname**，默认值为 **%** 。 如果未指定*订阅服务器*，则会更改指定项目的所有订阅服务器的状态。  
   
 `[ @status = ] 'status'`**Syssubscriptions**表中的订阅状态。 *状态*为**sysname**，无默认值，可以是下列值之一。  
   
 |值|说明|  
 |-----------|-----------------|  
-|**正在**|订阅服务器已被同步并且正在接收数据。|  
+|**active**|订阅服务器已被同步并且正在接收数据。|  
 |**不用**|存在订阅服务器项，但没有订阅。|  
 |**subscribed**|订阅服务器正在请求数据，但尚未同步。|  
   
 `[ @previous_status = ] 'previous_status'`订阅的前一状态。 *previous_status*的默认值为**sysname**，默认值为 NULL。 此参数允许你更改当前具有该状态的所有订阅，从而允许组在一组特定订阅上运行（例如，将所有活动订阅设置回**订阅**）。  
   
-`[ @destination_db = ] 'destination_db'`目标数据库的名称。 *destination_db*的默认值为**sysname**，默认**%** 值为。  
+`[ @destination_db = ] 'destination_db'`目标数据库的名称。 *destination_db*的默认值为**sysname**，默认值为 **%** 。  
   
 `[ @frequency_type = ] frequency_type`用于计划分发任务的频率。 *frequency_type*的值为**int**，默认值为 NULL。  
   
@@ -106,7 +106,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |**1**|一次|  
 |**2**|秒|  
 |**4**|Minute|  
-|**8**|Hour|  
+|**8**|小时|  
 |NULL（默认值）||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*的间隔。 *frequency_subday_interval*的值为**int**，默认值为 NULL。  
@@ -135,7 +135,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  > [!NOTE]  
 >  已不推荐使用远程代理激活，也不再支持该功能。 支持此参数只是为了让脚本能够向后兼容。 将*remote_agent_server_name*设置为任何非 NULL 值将生成错误。  
   
-`[ @dts_package_name = ] 'dts_package_name'`指定数据转换服务（DTS）包的名称。 *dts_package_name*是**sysname**，默认值为 NULL。 例如，对于名为**DTSPub_Package**的包，你将`@dts_package_name = N'DTSPub_Package'`指定。  
+`[ @dts_package_name = ] 'dts_package_name'`指定数据转换服务（DTS）包的名称。 *dts_package_name*是**sysname**，默认值为 NULL。 例如，对于名为**DTSPub_Package**的包，你将指定 `@dts_package_name = N'DTSPub_Package'` 。  
   
 `[ @dts_package_password = ] 'dts_package_password'`指定包的密码。 *dts_package_password*的默认**值为 NULL** ，默认值为 NULL，指定密码属性保持不变。  
   
@@ -148,10 +148,10 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @distribution_job_name = ] 'distribution_job_name'`分发作业的名称。 *distribution_job_name*的默认值为**sysname**，默认值为 NULL。  
   
-`[ @publisher = ] 'publisher'`指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'`指定一个非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  *publisher*更改[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器上的项目属性时，不应使用 publisher。  
+>  更改发布服务器上的项目属性时，不应使用*publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  

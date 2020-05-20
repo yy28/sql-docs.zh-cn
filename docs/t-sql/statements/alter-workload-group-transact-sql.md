@@ -18,12 +18,12 @@ ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e79848b26d664eeb23a567c41178cc94ee8a3ad
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: d4b70d64da9d87a8bab61f1881473dd7daaefb28
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886475"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606789"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 
@@ -141,20 +141,20 @@ ALTER WORKLOAD GROUP wgDataLoads WITH
 
 根据要更改的工作负荷组的属性，设置生效的时间将有所不同。
 
-重要性或 query_execution_timeout  - 对于重要性和 query_execution_timeout 属性，未分类的请求选取新的配置值。  正在等待且正在运行的请求将通过旧配置执行。  无论工作负荷组中是否存在正在运行的查询，`ALTER WORKLOAD GROUP` 请求都会立即执行。
+重要性或 query_execution_timeout - 对于重要性和 query_execution_timeout 属性，未分类的请求选取新的配置值。  正在等待且正在运行的请求将通过旧配置执行。  无论工作负荷组中是否存在正在运行的查询，`ALTER WORKLOAD GROUP` 请求都会立即执行。
 
-Request_min_resource_grant_percent 或 request_max_resource_grant_percent  - 对于 request_min_resource_grant_percent 和 request_max_resource_grant_percent，正在运行的请求将通过旧配置执行。  正在等待的请求和未分类的请求选取新的配置值。  无论工作负荷组中是否存在正在运行的查询，`ALTER WORKLOAD GROUP` 请求都会立即执行。
+Request_min_resource_grant_percent 或 request_max_resource_grant_percent - 对于 request_min_resource_grant_percent 和 request_max_resource_grant_percent，正在运行的请求将通过旧配置执行。  正在等待的请求和未分类的请求选取新的配置值。  无论工作负荷组中是否存在正在运行的查询，`ALTER WORKLOAD GROUP` 请求都会立即执行。
 
-Min_percentage_resource 或 cap_percentage_resource  - 对于 min_percentage_resource 和 cap_percentage_resource，正在运行的请求将通过旧配置执行。  正在等待的请求和未分类的请求选取新的配置值。 
+Min_percentage_resource 或 cap_percentage_resource - 对于 min_percentage_resource 和 cap_percentage_resource，正在运行的请求将通过旧配置执行。  正在等待的请求和未分类的请求选取新的配置值。 
 
 更改 min_percentage_resource 和 cap_percentage_resource 需要用尽要更改的工作负荷组中正在运行的请求。  当减少 min_percentage_resource 时，释放的资源将返回到共享池，这样，来自其他工作负荷组的请求就可以利用它。  相反，增加 min_percentage_resource 会等到只利用共享池中所需资源的请求完成。  更改工作负荷组操作可以优先访问共享资源，而不是在共享池上等待执行的其他请求。  如果 min_percentage_resource 的总和超过 100%，ALTER WORKLOAD GROUP 请求会立即失败。 
 
-锁定行为  - 更改工作负荷组要求对所有工作负荷组进行全局锁定。  更改工作负荷组的请求排在已提交的创建或删除工作负荷组请求后面。  如果立即提交一批更改语句，它们将按照提交的顺序进行处理。  
+锁定行为 - 更改工作负荷组要求对所有工作负荷组进行全局锁定。  更改工作负荷组的请求排在已提交的创建或删除工作负荷组请求后面。  如果立即提交一批更改语句，它们将按照提交的顺序进行处理。  
 
 ## <a name="see-also"></a>另请参阅
 
 - [CREATE WORKLOAD GROUP (Transact-SQL)](create-workload-group-transact-sql.md)
-- [DROP WORKLOAD GROUP (Transact-SQL)](drop-workload-group-transact-sql.md)
+- [DROP 工作负荷组 (Transact-SQL)](drop-workload-group-transact-sql.md)
 - [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md)
 - [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md)
 - [快速入门：使用 T-SQL 配置工作负荷隔离](/azure/sql-data-warehouse/quickstart-configure-workload-isolation-tsql)

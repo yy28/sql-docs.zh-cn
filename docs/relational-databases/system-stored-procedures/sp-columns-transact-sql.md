@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_columns
 ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8eb18a81ff7910418e5b3c8a3b36a0e4cd94cc36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbc724b9178ec867768fde3dc3d9ff58add554e9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070347"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826264"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,9 +51,9 @@ sp_columns [ @table_name = ] object
   
  如果当前用户拥有一个具有指定名称的对象，则返回该对象的列。 如果未指定*owner* ，并且当前用户没有具有指定*对象*的对象， **sp_columns**将查找具有数据库所有者拥有的指定*对象*的对象。 如果存在这样的对象，则返回该对象的列。  
   
-`[ \@table_qualifier = ] qualifier`对象限定符的名称。 *限定符*的值为**sysname**，默认值为 NULL。 各种 DBMS 产品支持对象的三部分命名（_限定符_**。**_所有者_**。**_名称_）。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，此列表示数据库名称。 在某些产品中，它表示对象数据库环境的服务器名称。  
+`[ \@table_qualifier = ] qualifier`对象限定符的名称。 *限定符*的值为**sysname**，默认值为 NULL。 各种 DBMS 产品支持对象的三部分命名（_限定符_**。**_所有者_**。**_名称_）。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此列表示数据库名称。 在某些产品中，它表示对象数据库环境的服务器名称。  
   
-`[ \@column_name = ] column`是单个列，只需要目录信息的一列时使用。 *列*的值为**nvarchar （384）**，默认值为 NULL。 如果未指定*column* ，则返回所有列。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，*列*表示**syscolumns**表中列出的列名称。 支持通配符模式匹配。 为了获得最大互操作性，网关客户端应只采用 SQL-92 标准模式匹配（% 和 _ 通配符）。  
+`[ \@column_name = ] column`是单个列，只需要目录信息的一列时使用。 *列*的值为**nvarchar （384）**，默认值为 NULL。 如果未指定*column* ，则返回所有列。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，*列*表示**syscolumns**表中列出的列名称。 支持通配符模式匹配。 为了获得最大互操作性，网关客户端应只采用 SQL-92 标准模式匹配（% 和 _ 通配符）。  
   
 `[ \@ODBCVer = ] ODBCVer`所使用的 ODBC 的版本。 *ODBCVer*的值为**int**，默认值为2。 这指示 ODBC 版本 2。 有效值为 2 或 3。 有关版本2和3之间的行为差异，请参阅 ODBC **SQLColumns**规范。  
   
@@ -74,7 +74,7 @@ sp_columns [ @table_name = ] object
 |**PRECISION**|**int**|有效数字位数。 **PRECISION**列的返回值以10为底。|  
 |**LENGTH**|**int**|数据的传输大小。<sup>1</sup>|  
 |**纵向**|**smallint**|小数点右边的数字位数。|  
-|**RADIX**|**smallint**|数值数据类型的基数。|  
+|**基数**|**smallint**|数值数据类型的基数。|  
 |**可以为 NULL**|**smallint**|指定为 Null 性。<br /><br /> 1 = 可以为 NULL。<br /><br /> 0 = 不可以为 NULL。|  
 |**备注**|**varchar （254）**|该字段总是返回 NULL。|  
 |**COLUMN_DEF**|**nvarchar(4000)**|列的默认值。|  

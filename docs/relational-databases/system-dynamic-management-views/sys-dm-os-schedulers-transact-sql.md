@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_schedulers dynamic management view
 ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2597289894f3a037e9ad8ada499b5f2d259ff3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: abf872e708b04e7c31b65bec3d90d357520b5c7b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72289391"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829331"
 ---
 # <a name="sysdm_os_schedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "72289391"
   对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（每个计划程序都映射到其中的单个处理器）中的每个计划程序，相应地返回一行。 使用此视图可以监视计划程序的情况或标识失控任务。 有关计划程序的详细信息，请参阅[线程和任务体系结构指南](../../relational-databases/thread-and-task-architecture-guide.md)。  
   
 > [!NOTE]  
->  若要从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]调用此，请使用名称**dm_pdw_nodes_os_schedulers**。  
+>  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_os_schedulers**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |scheduler_address|**varbinary(8)**|计划程序的内存地址。 不可为 null。|  
 |parent_node_id|**int**|计划程序所属的节点的 ID，也称为父节点。 它代表非一致性内存访问 (NUMA) 节点。 不可为 null。|  
 |scheduler_id|**int**|计划程序的 ID。 用来运行定期查询的所有计划程序都有小于 1048576 的 ID 号。 那些 ID 大于或等于 1048576 的计划程序（例如，专用管理员连接计划程序）则供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部使用。 不可为 null。|  
-|cpu_id|**smallint**|分配给计划程序的 CPU ID。<br /><br /> 不可为 null。<br /><br /> **注意：** 255 不指示与在中[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的关联。 有关其他关联信息，请参阅[sys.databases &#40;transact-sql&#41;dm_os_threads](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) 。|  
-|status|**nvarchar(60)**|指示计划程序的状态。 可以是以下其中一个值：<br /><br /> -联机隐藏<br />-脱机隐藏<br />-联机可见<br />-脱机可见<br />-联机可见（DAC）<br />-HOT_ADDED<br /><br /> 不可为 null。<br /><br /> HIDDEN 计划程序用于处理[!INCLUDE[ssDE](../../includes/ssde-md.md)]的内部请求。 VISIBLE 计划程序用于处理用户请求。<br /><br /> OFFLINE 计划程序在关联掩码中映射到处于脱机状态的处理器，因此不用于处理任何请求。 ONLINE 计划程序在关联掩码中映射到处于联机状态的处理器，并且可用于处理线程。<br /><br /> DAC 指示计划程序正在专用管理员连接下运行。<br /><br /> HOT ADDED 指示已添加了计划程序以响应一个热添加 CPU 事件。|  
+|cpu_id|**smallint**|分配给计划程序的 CPU ID。<br /><br /> 不可为 null。<br /><br /> **注意：** 255 不指示与在中的关联 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 有关其他关联信息，请参阅[sys.databases &#40;transact-sql&#41;dm_os_threads](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) 。|  
+|状态|**nvarchar(60)**|指示计划程序的状态。 可以是以下其中一个值：<br /><br /> -联机隐藏<br />-脱机隐藏<br />-联机可见<br />-脱机可见<br />-联机可见（DAC）<br />-HOT_ADDED<br /><br /> 不可为 null。<br /><br /> HIDDEN 计划程序用于处理[!INCLUDE[ssDE](../../includes/ssde-md.md)]的内部请求。 VISIBLE 计划程序用于处理用户请求。<br /><br /> OFFLINE 计划程序在关联掩码中映射到处于脱机状态的处理器，因此不用于处理任何请求。 ONLINE 计划程序在关联掩码中映射到处于联机状态的处理器，并且可用于处理线程。<br /><br /> DAC 指示计划程序正在专用管理员连接下运行。<br /><br /> HOT ADDED 指示已添加了计划程序以响应一个热添加 CPU 事件。|  
 |is_online|**bit**|如果将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为只使用服务器中某些可用的处理器，那么此配置可以表示某些计划程序被映射到不在关联掩码中的处理器。 如果情况是这样，则此列将返回 0。 此值表示此计划程序不会用来处理查询或批。<br /><br /> 不可为 null。|  
 |is_idle|**bit**|1 = 计划程序空闲。 当前未运行工作线程。 不可为 null。|  
 |preemptive_switches_count|**int**|此计划程序的工作线程已切换到抢先模式的次数。<br /><br /> 若要执行在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外的代码（例如，扩展存储过程和分布式查询），则必须在非抢先计划程序的控制范围以外执行该线程。 若要这样做，工作线程将切换到抢先模式。|  
@@ -61,15 +61,15 @@ ms.locfileid: "72289391"
 |memory_object_address|**varbinary(8)**|计划程序内存对象的内存地址。 不可为 NULL。|  
 |task_memory_object_address|**varbinary(8)**|任务内存对象的内存地址。 不可为 null。 有关详细信息，请参阅[sys.databases&#41;dm_os_memory_objects &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)。|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]公开 SQLOS 使用的计划程序量程。|  
-| total_cpu_usage_ms |**bigint**|**适用**于： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]和更高版本 <br><br> 由非抢先式辅助角色报告的计划程序消耗的 CPU 总量。 不可为 null。|
-|total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]指示基于[服务级别目标](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective)的限制对于非 Azure 版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，将始终为0。 可以为 Null。|
-|total_scheduler_delay_ms|**bigint**|**适用**于： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]和更高版本 <br><br> 一个工作线程切换到另一个工作线程之间切换的时间。 这可能是由于抢先式辅助角色延迟了下一个非抢先式辅助角色的计划，或是由于 OS 计划线程来自其他进程。 不可为 null。|
-|ideal_workers_limit|**int**|**适用**于： [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]和更高版本 <br><br> 在计划程序上，理想情况下应该有多少辅助角色。 如果当前工作线程超出了不均衡任务加载的限制，则在这些工作人员处于空闲状态时，将会对其进行修剪。 不可为 null。|
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+| total_cpu_usage_ms |**bigint**|**适用**于： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更高版本 <br><br> 由非抢先式辅助角色报告的计划程序消耗的 CPU 总量。 不可为 null。|
+|total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]指示基于[服务级别目标](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective)的限制对于非 Azure 版本的，将始终为 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 可以为 Null。|
+|total_scheduler_delay_ms|**bigint**|**适用**于： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更高版本 <br><br> 一个工作线程切换到另一个工作线程之间切换的时间。 这可能是由于抢先式辅助角色延迟了下一个非抢先式辅助角色的计划，或是由于 OS 计划线程来自其他进程。 不可为 null。|
+|ideal_workers_limit|**int**|**适用**于： [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和更高版本 <br><br> 在计划程序上，理想情况下应该有多少辅助角色。 如果当前工作线程超出了不均衡任务加载的限制，则在这些工作人员处于空闲状态时，将会对其进行修剪。 不可为 null。|
+|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要权限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层上，需要`VIEW DATABASE STATE`具有数据库中的权限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
 ## <a name="examples"></a>示例  
   

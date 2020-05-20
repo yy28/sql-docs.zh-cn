@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_trigger_stats dynamic management function
 ms.assetid: 863498b4-849c-434d-b748-837411458738
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65e54b90fa036e738f2e1e6a28498559051011a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 65072bd42e1e1f85189afe8bb832a2b0811417e2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262215"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824546"
 ---
 # <a name="sysdm_exec_trigger_stats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68262215"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|触发器所在的数据库 ID。|  
 |**object_id**|**int**|触发器的对象标识号。|  
-|**type**|**char(2)**|对象的类型：<br /><br /> TA = 程序集 (CLR) 触发器<br /><br /> TR = SQL 触发器|  
+|type |**char(2)**|对象的类型：<br /><br /> TA = 程序集 (CLR) 触发器<br /><br /> TR = SQL 触发器|  
 |**Type_desc**|**nvarchar(60)**|对对象类型的说明：<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**sql_handle**|**varbinary(64)**|这可以用来与从该触发器内执行的**dm_exec_query_stats**中的查询相关联。|  
 |**plan_handle**|**varbinary(64)**|内存中计划的标识符。 该标识符是瞬态的，仅当计划保留在缓存中时，它才保持不变。 此值可用于**sys.databases dm_exec_cached_plans**动态管理视图。|  
@@ -63,10 +63,10 @@ ms.locfileid: "68262215"
 |**last_elapsed_time**|**bigint**|最近完成此触发器的执行所用的时间（微秒）。|  
 |**min_elapsed_time**|**bigint**|完成此触发器的执行所用的最短时间（微秒）。|  
 |**max_elapsed_time**|**bigint**|完成此触发器的执行所用的最长时间（微秒）。| 
-|**total_spills**|**bigint**|此触发器自编译后的执行溢出的总页数。<br /><br /> **适用**于：从[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
-|**last_spills**|**bigint**|上次执行触发器时溢出的页数。<br /><br /> **适用**于：从[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
-|**min_spills**|**bigint**|此触发器在单次执行期间所溢出的最小页数。<br /><br /> **适用**于：从[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
-|**max_spills**|**bigint**|此触发器在单次执行期间所用的最大页数。<br /><br /> **适用**于：从[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
+|**total_spills**|**bigint**|此触发器自编译后的执行溢出的总页数。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
+|**last_spills**|**bigint**|上次执行触发器时溢出的页数。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
+|**min_spills**|**bigint**|此触发器在单次执行期间所溢出的最小页数。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
+|**max_spills**|**bigint**|此触发器在单次执行期间所用的最大页数。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
 |**total_page_server_reads**|**bigint**|此触发器自编译后执行的总页数。<br /><br /> **适用**于： Azure SQL 数据库超大规模|  
 |**last_page_server_reads**|**bigint**|上次执行触发器时所执行的页服务器读取次数。<br /><br /> **适用**于： Azure SQL 数据库超大规模|  
 |**min_page_server_reads**|**bigint**|此触发器在单次执行期间所执行的最少页数。<br /><br /> **适用**于： Azure SQL 数据库超大规模|  
@@ -80,8 +80,8 @@ ms.locfileid: "68262215"
   
 ## <a name="permissions"></a>权限  
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要权限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层上，需要`VIEW DATABASE STATE`具有数据库中的权限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
   
 ## <a name="examples"></a>示例  
  以下示例返回有关按平均占用时间衡量的前五个触发器的信息。  

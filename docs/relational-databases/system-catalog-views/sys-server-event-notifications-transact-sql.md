@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_event_notifications catalog view
 ms.assetid: 1a83a044-3130-4551-95ca-162525846ff5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8e3eaa1bdfa45e0c3e0b0412b8852e134c43c3eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d7bf9ae81bf9f6c65790bc05b7b21c14a106a90e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124994"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820902"
 ---
 # <a name="sysserver_event_notifications-transact-sql"></a>sys.server_event_notifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68124994"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|name |**sysname**|服务器事件通知名称。 在所有服务器级事件通知中是唯一的。|  
+|**name**|**sysname**|服务器事件通知名称。 在所有服务器级事件通知中是唯一的。|  
 |**object_id**|**int**|对象标识号。 在**master**数据库中是唯一的。|  
 |**parent_class**|**tinyint**|父级的类。 始终为 100 = Server。|  
 |**parent_class_desc**|**nvarchar(60)**|父类的说明。 始终为 SERVER。|  

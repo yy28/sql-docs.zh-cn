@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 ms.assetid: 32494df1-7ab7-4b88-a858-6b1021d67433
-author: MightyPen
-ms.author: genemi
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16aa77224f45a07540f7c5e688f9e3b6bc9bb6ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c05c2535a0bd2694fc85905648c909f0b77065cc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67915151"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823552"
 ---
 # <a name="sysdatabase_event_session_actions-azure-sql-database"></a>sys.database_event_session_actions（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "67915151"
 |event_id|**int**|事件的 ID。 此 ID 在事件会话对象中是唯一的。 不可为 null。|  
 |name|**sysname**|操作的名称。 可以为 Null。|  
 |包|**sysname**|包含事件的事件包的名称。 可以为 Null。|  
-|module|**sysname**|包含事件的模块的名称。 可以为 Null。|  
+|name|**sysname**|包含事件的模块的名称。 可以为 Null。|  
   
 ## <a name="permissions"></a>权限  
  要求对服务器具有 VIEW DATABASE STATE 权限。  
@@ -43,7 +43,7 @@ ms.locfileid: "67915151"
   
 ||||  
 |-|-|-|  
-|From|到|关系|  
+|From|功能|关系|  
 |sys. database_event_session_actions event_session_id|sys. database_event_sessions. event_session_id|多对一|  
 |sys. database_event_session_actions event_id<br /><br /> sys. database_event_session_actions event_session_id|sys. database_event_session_events event_session_id<br /><br /> sys. database_event_session_events event_id|多对一|  
   

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_reinitsubscription
 ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: eaeeaa5009cb119b40dcde9b8f9baa170d8f7bef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ee9af1ee7057b7a64a62e0ead12ba7e386839587
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762533"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828236"
 ---
 # <a name="sp_reinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,10 +54,10 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
   
 `[ @for_schema_change = ] 'for_schema_change'`指示是否由于发布数据库中的架构更改而发生重新初始化。 *for_schema_change*为**bit**，默认值为0。 如果为**0**，则只要整个发布（而不仅仅是部分项目）重新初始化，就会重新激活允许即时更新的发布的活动订阅。 这意味着，架构更改导致启动重新初始化。 如果为**1**，则在快照代理运行之前，不会重新激活活动订阅。  
   
-`[ @publisher = ] 'publisher'`指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'`指定一个非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  *发布服务器*不应用于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
+>  *发布服务器*不应用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。  
   
 `[ @ignore_distributor_failure = ] ignore_distributor_failure`即使分发服务器不存在或脱机，也可以重新初始化。 *ignore_distributor_failure*为**bit**，默认值为0。 如果为**0**，则在分发服务器不存在或处于脱机状态时重新初始化失败。  
   

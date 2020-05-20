@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscriptiondtsinfo
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a091df0cbbeb2883ff9905d7c5b3718d50efa86b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fd0d08a045f67b436bd732b01a2279c923fc9461
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762553"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824065"
 ---
 # <a name="sp_changesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ## <a name="arguments"></a>参数  
 `[ @job_id = ] job_id`推送订阅的分发代理的作业 ID。 *job_id*为**varbinary （16）**，无默认值。 若要查找分发作业 ID，请运行**sp_helpsubscription**或**sp_helppullsubscription**。  
   
-`[ @dts_package_name = ] 'dts_package_name'`指定 DTS 包的名称。 *dts_package_name*是**sysname**，默认值为 NULL。 例如，若要指定名为**DTSPub_Package**的包，请指定`@dts_package_name = N'DTSPub_Package'`。  
+`[ @dts_package_name = ] 'dts_package_name'`指定 DTS 包的名称。 *dts_package_name*是**sysname**，默认值为 NULL。 例如，若要指定名为**DTSPub_Package**的包，请指定 `@dts_package_name = N'DTSPub_Package'` 。  
   
 `[ @dts_package_password = ] 'dts_package_password'`指定包的密码。 *dts_package_password*的默认**值为 NULL** ，默认值为 NULL，指定密码属性保持不变。  
   

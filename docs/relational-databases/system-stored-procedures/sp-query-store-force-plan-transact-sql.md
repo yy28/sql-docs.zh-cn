@@ -18,22 +18,22 @@ helpviewer_keywords:
 - sys.sp_query_store_force_plan
 - sp_query_store_force_plan
 ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b34cf94a2ab6cfec601d41b02bf32b00f0eb3b41
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 880cdae24004936b1d27321499ceac759b554ea3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71207720"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824382"
 ---
 # <a name="sp_query_store_force_plan-transact-sql"></a>sp_query_store_force_plan （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   为特定查询启用强制特定计划。  
   
- 当对特定查询强制执行某个计划时，每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]遇到该查询时，它都会尝试在查询优化器中强制执行该计划。 如果计划强制失败，将触发扩展事件，并指示查询优化器以正常方式进行优化。  
+ 当对特定查询强制执行某个计划时，每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 遇到该查询时，它都会尝试在查询优化器中强制执行该计划。 如果计划强制失败，将触发扩展事件，并指示查询优化器以正常方式进行优化。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

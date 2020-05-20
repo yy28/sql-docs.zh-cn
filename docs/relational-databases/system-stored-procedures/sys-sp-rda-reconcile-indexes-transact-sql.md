@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_indexes stored procedure
 ms.assetid: 96b31ab9-bf84-46d6-9990-81f5c51f885a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0e439a04e55816f25cae318a8451452bf09dee0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 504085ff53415a7cf84bdb4aabf5eff567391a0c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905038"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827393"
 ---
 # <a name="syssp_rda_reconcile_indexes-transact-sql"></a>sys. sp_rda_reconcile_indexes （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_rda_reconcile_indexes [@objname = ] 'objname'
 ```  
   
 ## <a name="arguments"></a>参数  
- [@objname = ]*' objname '*  
+ [ @objname =] *"objname"*  
  要对其对索引进行协调的已启用延伸的表的限定或非限定名称。 仅当指定限定对象时，才需要使用引号。  
   
 ## <a name="return-code-values"></a>返回代码值  

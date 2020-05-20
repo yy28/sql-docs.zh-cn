@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpullsubscription_agent
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 79bca732108776b66a2e5750015a27e5931b617a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ea558eafb665538b90cc4d9e41d16166dd9475c5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69028954"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820701"
 ---
 # <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。  
   
-`[ @subscriber_security_mode = ] subscriber_security_mode`同步时连接到订阅服务器时使用的安全模式。 *subscriber_security_mode*的值为**int，** 默认值为 NULL。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 **1**指定 Windows 身份验证。  
+`[ @subscriber_security_mode = ] subscriber_security_mode`同步时连接到订阅服务器时使用的安全模式。 *subscriber_security_mode*的值为**int，** 默认值为 NULL。 **0**指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 **1**指定 Windows 身份验证。  
   
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 分发代理始终使用 Windows 身份验证连接到本地订阅服务器。 如果为此参数指定了 NULL 或**1**以外的值，则返回一条警告消息。  
@@ -114,7 +114,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @distribution_db = ] 'distribution_db'`分发数据库的名称。 *distribution_db*的值为**sysname**，默认值为 NULL。  
   
-`[ @distributor_security_mode = ] distributor_security_mode`同步时连接到分发服务器时使用的安全模式。 *distributor_security_mode*的值为**int**，默认值为**1**。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 **1**指定 Windows 身份验证。  
+`[ @distributor_security_mode = ] distributor_security_mode`同步时连接到分发服务器时使用的安全模式。 *distributor_security_mode*的值为**int**，默认值为**1**。 **0**指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 **1**指定 Windows 身份验证。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -124,7 +124,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 `[ @distributor_password = ] 'distributor_password'`分发服务器密码。 如果*distributor_security_mode*设置为**0**，则*distributor_password*是必需的。 *distributor_password*的默认值为**sysname**，默认值为 NULL。  
   
 > [!IMPORTANT]  
->  不要使用空密码。 请使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
+>  不要使用空密码。 使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
 `[ @optional_command_line = ] 'optional_command_line'`是提供给分发代理的可选命令提示符。 例如， **-DefinitionFile** C:\Distdef.txt 或 **-CommitBatchSize** 10。 *optional_command_line*为**nvarchar （4000）**，默认值为空字符串。  
   
@@ -134,7 +134,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 |-----------|-----------------|  
 |**1**|一次性|  
 |**2** （默认值）|按需|  
-|**4**|每日|  
+|**4**|每天|  
 |**8**|每周|  
 |**超过**|每月一次|  
 |**32**|与“每月”选项相关|  
@@ -165,7 +165,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 |**1** （默认值）|一次|  
 |**2**|秒|  
 |**4**|Minute|  
-|**8**|Hour|  
+|**8**|小时|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*的间隔。 *frequency_subday_interval*的值为**int**，默认值为**1**。  
   
@@ -181,7 +181,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @encrypted_distributor_password = ] encrypted_distributor_password`不再支持设置*encrypted_distributor_password* 。 尝试将此**位**参数设置为**1**将导致错误。  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`指示是否可以通过[!INCLUDE[msCoName](../../includes/msconame-md.md)]同步管理器同步订阅。 *enabled_for_syncmgr*为**nvarchar （5）**，默认值为 FALSE。 如果**为 false**，则不向同步管理器注册订阅。 如果**为 true**，则会向同步管理器注册订阅，并在不[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]启动的情况下同步订阅。  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`指示是否可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 同步管理器同步订阅。 *enabled_for_syncmgr*为**nvarchar （5）**，默认值为 FALSE。 如果**为 false**，则不向同步管理器注册订阅。 如果**为 true**，则会向同步管理器注册订阅，并在不启动的情况下同步订阅 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
 `[ @ftp_address = ] 'ftp_address'`仅用于向后兼容。  
   

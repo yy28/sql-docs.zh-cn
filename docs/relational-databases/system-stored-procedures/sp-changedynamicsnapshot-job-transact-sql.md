@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedynamicsnapshot_job
 ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4db6a29d92fe093e9704f88fcc528c9fa687ccff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 67aeb7243b52ef4675b9effea27d3c81c1078538
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768950"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829617"
 ---
 # <a name="sp_changedynamicsnapshot_job-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |-----------|-----------------|  
 |**1**|一次性|  
 |**2**|按需|  
-|**4**|每日|  
+|**4**|每天|  
 |**8**|每周|  
 |**超过**|每月一次|  
 |**32**|与“每月”选项相关|  
@@ -82,7 +82,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**5**|星期四|  
 |**6**|星期五|  
 |**7**|星期六|  
-|**8**|日期|  
+|**8**|天|  
 |**900**|工作日|  
 |**10**|周末|  
 |NULL（默认值）||  
@@ -94,7 +94,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**1**|一次|  
 |**2**|秒|  
 |**4**|Minute|  
-|**8**|Hour|  
+|**8**|小时|  
 |NULL（默认值）||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*的间隔。 *frequency_subday_interval*的值为**int**，默认值为 NULL。  
@@ -120,7 +120,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @active_end_time_of_day = ] active_end_time_of_day`停止计划合并代理的时间，格式为 HHMMSS。 *active_end_time_of_day*的值为**int**，默认值为 NULL。  
   
-`[ @job_login = ] 'job_login'`为使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]参数化行筛选器的订阅生成快照时，运行快照代理所用的 Windows 帐户。 *job_login*为**nvarchar （257）**，默认值为 NULL。  
+`[ @job_login = ] 'job_login'`为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 使用参数化行筛选器的订阅生成快照时，运行快照代理所用的 Windows 帐户。 *job_login*为**nvarchar （257）**，默认值为 NULL。  
   
 `[ @job_password = ] 'job_password'`使用参数化行筛选器为订阅生成快照时，运行快照代理的 Windows 帐户的密码。 *job_password*为**nvarchar （257）**，默认值为 NULL。  
   

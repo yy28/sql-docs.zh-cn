@@ -17,19 +17,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_database_replica_states dynamic management view
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 83b3c369add51a853078dd64a8861d633ac330ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2edfbd187835a321f513f3fb9d14aaa1aef65ec5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982269"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827950"
 ---
 # <a name="sysdm_hadr_database_replica_states-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  为参与 Always On 可用性组的每个数据库返回一行，其中的本地实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在为其承载可用性副本。 此动态管理视图公开与主副本和辅助副本有关的状态信息。 在辅助副本上，此视图为服务器实例上的每个辅助数据库都返回一行。 在主副本上，此视图为每个主数据库都返回一行，并且为相应的辅助数据库另外返回一行。  
+  为参与 Always On 可用性组的每个数据库返回一行，其中的本地实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在为其承载可用性副本。 此动态管理视图公开与主副本和辅助副本有关的状态信息。 在辅助副本上，此视图为服务器实例上的每个辅助数据库都返回一行。 在主副本上，此视图为每个主数据库都返回一行，并且为相应的辅助数据库另外返回一行。  
   
 > [!IMPORTANT]
 > 根据操作和更高级别的状态，数据库状态信息可能不可用或过期。 此外，这些值仅具有本地相关性。 例如，在主副本上，" **last_hardened_lsn** " 列的值反映了当前对主副本可用的给定辅助数据库的相关信息，而不是辅助副本当前可能拥有的实际强制的 lsn 值。  

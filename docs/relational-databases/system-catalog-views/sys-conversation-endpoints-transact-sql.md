@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.conversation_endpoints catalog view
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 16d29272e4229ac93b3dd5b1eaf5502a07fb0a2a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 11beb90fe3bf0be71d31f5e330c3588d6e1e0aaa
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68109541"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821955"
 ---
 # <a name="sysconversation_endpoints-transact-sql"></a>sys.conversation_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "68109541"
 |conversation_group_id|**uniqueidentifier**|此会话所属的会话组的标识符。 不可为 NULL。|  
 |service_id|**int**|会话的这一端的服务的标识符。 不可为 NULL。|  
 |lifetime|**datetime**|此会话的过期日期/时间。 不可为 NULL。|  
-|state|**char(2)**|会话的当前状态。 不可为 NULL。 即以下函数之一：<br /><br /> 这样就开始出站。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已处理此会话的 BEGIN 会话，但尚未发送消息。<br /><br /> SI 已开始入站。 另一个实例已开始与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新会话，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尚未完全收到第一条消息。 如果第一条消息含有碎片或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 收到消息的顺序不对，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以在此状态下创建会话。 但是，如果会话接收的第一次传输包含完整的第一条消息，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以在 CO（正在转换）状态下创建会话。<br /><br /> 合作。 会话已建立，会话的双方都可以发送消息。 典型服务的大部分通信都在会话处于此状态时发生。<br /><br /> DI   已断开入站。 会话的远程端已发出 END CONVERSATION。 会话将保持此状态，直到会话的本地端发出 END CONVERSATION。 应用程序可能仍会接收会话消息。 由于会话的远程端已经结束了会话，因此应用程序无法通过此会话发送消息。 当应用程序发出 END CONVERSATION 时，会话将转为 CD（关闭）状态。<br /><br /> DO   已断开出站。 会话的本地端已发出 END CONVERSATION。 会话将保持此状态，直到会话的远程端确认 END CONVERSATION。 应用程序将无法发送或接收会话消息。 当会话的远程端确认 END CONVERSATION 之后，会话将转为 CD（关闭）状态。<br /><br /> ER 错误。 此端点发生错误。 此错误消息放入应用程序队列中。 如果应用程序队列为空，则表示应用程序已使用此错误消息。<br /><br /> CD   关闭。 会话端点不再使用。|  
-|state_desc|**nvarchar(60)**|终结点对话状态的说明。 此列可以为 NULL。 即以下函数之一：<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **工作组**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **CLOSED**<br /><br /> **条**|  
+|state|**char(2)**|会话的当前状态。 不可为 NULL。 下列其中一项：<br /><br /> 这样就开始出站。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已处理此会话的 BEGIN 会话，但尚未发送消息。<br /><br /> SI 已开始入站。 另一个实例已开始与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新会话，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尚未完全收到第一条消息。 如果第一条消息含有碎片或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 收到消息的顺序不对，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以在此状态下创建会话。 但是，如果会话接收的第一次传输包含完整的第一条消息，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以在 CO（正在转换）状态下创建会话。<br /><br /> 合作。 会话已建立，会话的双方都可以发送消息。 典型服务的大部分通信都在会话处于此状态时发生。<br /><br /> DI   已断开入站。 会话的远程端已发出 END CONVERSATION。 会话将保持此状态，直到会话的本地端发出 END CONVERSATION。 应用程序可能仍会接收会话消息。 由于会话的远程端已经结束了会话，因此应用程序无法通过此会话发送消息。 当应用程序发出 END CONVERSATION 时，会话将转为 CD（关闭）状态。<br /><br /> DO   已断开出站。 会话的本地端已发出 END CONVERSATION。 会话将保持此状态，直到会话的远程端确认 END CONVERSATION。 应用程序将无法发送或接收会话消息。 当会话的远程端确认 END CONVERSATION 之后，会话将转为 CD（关闭）状态。<br /><br /> ER 错误。 此端点发生错误。 此错误消息放入应用程序队列中。 如果应用程序队列为空，则表示应用程序已使用此错误消息。<br /><br /> CD   关闭。 会话端点不再使用。|  
+|state_desc|**nvarchar(60)**|终结点对话状态的说明。 此列可以为 NULL。 下列其中一项：<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **工作组**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **闭**<br /><br /> **条**|  
 |far_service|**nvarchar(256)**|会话的远程端上的服务的名称。 不可为 NULL。|  
 |far_broker_instance|**nvarchar(128)**|会话的远程端的 Broker 实例。 可以为 null.|  
 |principal_id|**int**|对话的本地端所使用的证书所属的主体的标识符。 不可为 NULL。|  

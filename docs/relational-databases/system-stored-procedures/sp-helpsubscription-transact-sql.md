@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscription
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bf7712ceb55fc368d493be9999cd0b8d4d9f474c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f6ad28ace9f8b3a1b4852c54e3e4f427bd22c06d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771570"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824426"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publication = ] 'publication'`关联发布的名称。 *发布*为**sysname**，默认值为**%**，它返回此服务器的所有订阅信息。  
+`[ @publication = ] 'publication'`关联发布的名称。 *发布*为**sysname**，默认值为 **%** ，它返回此服务器的所有订阅信息。  
   
-`[ @article = ] 'article'`项目的名称。 *项目*的默认值为**sysname**，默认**%** 值为，它返回所选发布和订阅服务器的所有订阅信息。 如果为**all**，则只为发布的完整订阅返回一个条目。  
+`[ @article = ] 'article'`项目的名称。 *项目*的默认值为**sysname**，默认值为 **%** ，它返回所选发布和订阅服务器的所有订阅信息。 如果为**all**，则只为发布的完整订阅返回一个条目。  
   
-`[ @subscriber = ] 'subscriber'`要获取订阅信息的订阅服务器的名称。 *订阅服务器*的默认值为**sysname**， **%** 默认值为，它返回所选发布和项目的所有订阅信息。  
+`[ @subscriber = ] 'subscriber'`要获取订阅信息的订阅服务器的名称。 *订阅服务器*的默认值为**sysname**，默认值为 **%** ，它返回所选发布和项目的所有订阅信息。  
   
-`[ @destination_db = ] 'destination_db'`目标数据库的名称。 *destination_db*的默认值为**sysname**，默认**%** 值为。  
+`[ @destination_db = ] 'destination_db'`目标数据库的名称。 *destination_db*的默认值为**sysname**，默认值为 **%** 。  
   
 `[ @found = ] 'found'OUTPUT`指示返回行的标志。 *找到* **int**和 OUTPUT 参数，默认值为23456。  
   
@@ -81,7 +81,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**offload_server**|**sysname**|启用了远程代理激活的服务器的名称。 如果为 NULL，则使用[MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md)表中列出的当前 offload_server。|  
 |**dts_package_name**|**sysname**|指定 Data Transformation Services (DTS) 包的名称。|  
 |**dts_package_location**|**int**|为订阅分配了一个 DTS 包时，此包的位置。 如果有一个包，则值为**0**时，将在**分发服务器**上指定包的位置。 如果值为**1** ，则指定**订阅服务器**。|  
-|**subscriber_security_mode**|**smallint**|订阅服务器上的安全模式，其中**1**表示 Windows 身份验证， **0**表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。|  
+|**subscriber_security_mode**|**smallint**|订阅服务器上的安全模式，其中**1**表示 Windows 身份验证， **0**表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。|  
 |**subscriber_login**|**sysname**|在订阅服务器上的登录名。|  
 |**subscriber_password**||永远不会返回实际的订阅服务器密码。 结果由 "**&#42;&#42;&#42;&#42;&#42;&#42;**" 字符串屏蔽。|  
 |**job_login**|**sysname**|分发代理运行时所用的 Windows 帐户的名称。|  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.parameters catalog view
 - table-valued parameters,sys.parameters
 ms.assetid: 24e2764b-c8e5-4322-97a4-7407d8b8a92b
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f91339990e5d12d1b2b674ea9fd124fc4161424
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b478dcb30bbe95c9c8f3aa6256330634bbc0c1b3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125347"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825002"
 ---
 # <a name="sysparameters-transact-sql"></a>sys.parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "68125347"
 |**scale**|**tinyint**|如果参数是基于数值的，则表示参数的小数位数；否则为 0。|  
 |**is_output**|**bit**|1 = 参数为 OUTPUT 或 RETURN；否则为 0。|  
 |**is_cursor_ref**|**bit**|1 = 参数是游标引用参数。|  
-|**has_default_value**|**bit**|1 = 参数具有默认值。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只维护该目录视图中的 CLR 对象的默认值；因此，对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 对象，此列包含值 0。 若要查看[!INCLUDE[tsql](../../includes/tsql-md.md)]对象中参数的默认值，请查询[sys.databases sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目录视图的**定义**列，或使用[OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)系统函数。|  
+|**has_default_value**|**bit**|1 = 参数具有默认值。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只维护该目录视图中的 CLR 对象的默认值；因此，对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 对象，此列包含值 0。 若要查看对象中参数的默认值 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，请查询[sys.databases sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目录视图的**定义**列，或使用[OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)系统函数。|  
 |**is_xml_document**|**bit**|1 = 内容为完整的 XML 文档。<br /><br /> 0 = 内容是文档片段，或列的数据类型不是**xml**。|  
 |**default_value**|**sql_variant**|如果**has_default_value**为1，则此列的值为参数的默认值; 否则为。否则为 NULL。|  
 |**xml_collection_id**|**int**|如果参数的数据类型为**xml** ，并且已键入 xml，则为非零值。 此值为包含验证参数的 XML 架构命名空间的集合的 ID。<br /><br /> 0 = 没有 XML 架构集合。|  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_downloadlist
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 40345ed8ad1a10da0088c5c1388c44fa24cad929
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9dd52e6d2e4bf8a1a099ea2391a2c6ce2d6decdc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055189"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827721"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 `[ @operation = ] 'operation'`指定作业的有效操作。 *操作*为**varchar （64）**，默认值为 NULL，可以是下列值之一。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**故障**|请求目标服务器脱离主**SQLServerAgent**服务的服务器操作。|  
 |**DELETE**|作业操作，删除整个作业。|  
@@ -87,7 +87,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|指令的唯一整数标识号。|  
-|**source_server**|**nvarchar(30)**|发出指令的服务器的计算机名。 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本7.0 中，这始终是主服务器（MSX）的计算机名。|  
+|**source_server**|**nvarchar(30)**|发出指令的服务器的计算机名。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本7.0 中，这始终是主服务器（MSX）的计算机名。|  
 |**operation_code**|**nvarchar(4000)**|指令的操作代码。|  
 |**object_name**|**sysname**|受指令影响的对象。|  
 |**object_id**|**uniqueidentifier**|受指令影响的对象的标识号（对于作业对象为**job_id** ，对于服务器对象则为0x00，或特定于**operation_code**的数据值。|  

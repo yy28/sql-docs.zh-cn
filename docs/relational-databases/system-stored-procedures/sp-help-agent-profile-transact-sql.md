@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_agent_profile
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6f7b63875d7c4c4c5ab5f3880c133448fe6da240
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ae3e555f48958aec87ed012244fae9775fae1619
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771459"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826093"
 ---
 # <a name="sp_help_agent_profile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**profile_id**|**int**|配置文件的 ID。|  
 |**profile_name**|**sysname**|对代理类型唯一。|  
 |**agent_type**|**int**|**1** = 快照代理<br /><br /> **2** = 日志读取器代理<br /><br /> **3** = 分发代理<br /><br /> **4** = 合并代理<br /><br /> **9** = 队列读取器代理|  
-|**类型**|**int**|**0** = 系统<br /><br /> **1** = 自定义|  
+|**Type**|**int**|**0** = 系统<br /><br /> **1** = 自定义|  
 |**2008**|**varchar （3000）**|配置文件的说明。|  
 |**def_profile**|**bit**|指定该配置文件是否是该代理类型的默认值。|  
   

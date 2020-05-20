@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepublication
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7bcedfb666b5fffb2f31b6bf73ee02972ea30067
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3cc0e6bb77c49b7eefc17e5d1f16a185834f2061
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097686"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829585"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  下表描述了可以更改的发布属性，并描述了这些属性的值的限制。  
   
-|properties|值|说明|  
+|Property|值|说明|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|允许匿名订阅。|  
 ||**false**|不允许匿名订阅。|  
@@ -110,7 +110,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|快照文件存储在*alt_snapshot_folder*指定的备用位置。 此组合指定将快照文件同时存储在默认位置和备用位置中。|  
 |**snapshot_ready**|**true**|用于发布的快照已准备就绪。|  
 ||**false**|用于发布的快照尚未准备就绪。|  
-|**status**|**活动**|发布处于活动状态。|  
+|**status**|**active**|发布处于活动状态。|  
 ||**不用**|发布处于非活动状态。|  
 |**sync_mode**|**本机**或<br /><br /> **bcp 本机**|将所有表的本机模式大容量复制程序输出用于初始快照。|  
 ||**字符**<br /><br /> 或**bcp 字符**|将所有表的字符模式大容量复制程序输出用于初始快照，所有非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器必须执行此操作。|  
@@ -178,7 +178,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
 -   **validate_subscriber_info**  
   
- 若要通过使用*publish_to_active_directory*列出要 Active Directory 的发布对象， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]必须已经在 Active Directory 中创建了对象。  
+ 若要通过使用*publish_to_active_directory*列出要 Active Directory 的发布对象， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须已经在 Active Directory 中创建了对象。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_changemergepublication](../../relational-databases/replication/codesnippet/tsql/sp-changemergepublicatio_1.sql)]  

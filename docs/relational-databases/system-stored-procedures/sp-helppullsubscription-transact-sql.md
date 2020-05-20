@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppullsubscription
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1ab2afba10ff754b5bd99d36df02d642cc5c6bb0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ce6fe81cc037e8e704758155aa302c61418ce65b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771437"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824482"
 ---
 # <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @publisher = ] 'publisher'`远程服务器的名称。 *发布服务器*的默认值为**sysname**， **%** 默认值为，它返回所有发布服务器的信息。  
+`[ @publisher = ] 'publisher'`远程服务器的名称。 *发布服务器*的默认值为**sysname**，默认值为 **%** ，它返回所有发布服务器的信息。  
   
-`[ @publisher_db = ] 'publisher_db'`发布服务器数据库的名称。 *publisher_db*的默认值为**sysname**，默认**%** 值为，表示将返回所有发布服务器数据库。  
+`[ @publisher_db = ] 'publisher_db'`发布服务器数据库的名称。 *publisher_db*的默认值为**sysname**，默认值为 **%** ，表示将返回所有发布服务器数据库。  
   
-`[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，默认值为**%**，表示将返回所有发布。 如果此参数等于 ALL，则仅返回 independent_agent = **0**的请求订阅。  
+`[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，默认值为 **%** ，表示将返回所有发布。 如果此参数等于 ALL，则仅返回 independent_agent = **0**的请求订阅。  
   
 `[ @show_push = ] 'show_push'`指示是否要返回所有推送订阅。 *show_push*为**nvarchar （5）**，默认值为 FALSE，表示不返回推送订阅。  
   
@@ -65,16 +65,16 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**update mode**|**tinyint**|允许的更新类型。|  
 |**distribution agent job_id**|**int**|分发代理的作业 ID。|  
 |**enabled_for_synmgr**|**int**|指示是否可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 同步管理器同步订阅。|  
-|**subscription guid**|**binary(16)**|发布上订阅版本的全局标识符。|  
+|**订阅 guid**|**binary(16)**|发布上订阅版本的全局标识符。|  
 |**subid**|**binary(16)**|匿名订阅的全局标识符。|  
 |**immediate_sync**|**bit**|表示是否在每次快照代理运行时创建或重新创建同步文件。|  
 |**publisher login**|**sysname**|在发布服务器上用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录 ID。|  
 |**publisher password**|**nvarchar （524）**|在发布服务器上用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的密码（加密）。|  
-|**publisher security_mode**|**int**|在发布服务器上实现的安全模式：<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** = Windows 身份验证<br /><br /> **2** = 同步触发器使用静态**sysservers**项执行远程过程调用（RPC），并且*发布*服务器必须在**sysservers**表中定义为远程服务器或链接服务器。|  
+|**publisher security_mode**|**int**|在发布服务器上实现的安全模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证<br /><br /> **1** = Windows 身份验证<br /><br /> **2** = 同步触发器使用静态**sysservers**项执行远程过程调用（RPC），并且*发布*服务器必须在**sysservers**表中定义为远程服务器或链接服务器。|  
 |**发行人**|**sysname**|分发服务器的名称。|  
 |**distributor_login**|**sysname**|在分发服务器上用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录 ID。|  
 |**distributor_password**|**nvarchar （524）**|在分发服务器上用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的密码（加密）。|  
-|**distributor_security_mode**|**int**|在分发服务器上实施的安全模式：<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** = Windows 身份验证|  
+|**distributor_security_mode**|**int**|在分发服务器上实施的安全模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证<br /><br /> **1** = Windows 身份验证|  
 |**ftp_address**|**sysname**|仅为保持向后兼容。|  
 |**ftp_port**|**int**|仅为保持向后兼容。|  
 |**ftp_login**|**sysname**|仅为保持向后兼容。|  
@@ -90,8 +90,8 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**last_sync_status**|**int**|订阅状态：<br /><br /> **0** = 所有作业都在等待启动<br /><br /> **1** = 一个或多个作业正在启动<br /><br /> **2** = 所有作业都已成功执行<br /><br /> **3** = 至少有一个作业正在执行<br /><br /> **4** = 所有作业都已计划且空闲<br /><br /> **5** = 在上次失败后至少有一个作业正在尝试执行<br /><br /> **6** = 至少有一个作业无法成功执行|  
 |**last_sync_summary**|**sysname**|对上一次同步结果的说明。|  
 |**last_sync_time**|**datetime**|订阅信息上次更新的时间。 这是由 ISO 日期 (114) 和 ODBC 时间 (121) 组成的 UNICODE 字符串。 格式为 yyyymmdd hh:mi:sss.mmm，其中“yyyy”表示年，“mm”表示月，“dd”表示日，“hh”表示小时，“mi”表示分钟，“sss”表示秒，“mmm”表示毫秒。|  
-|**job_login**|**nvarchar(512)**|用于运行分发代理的 Windows 帐户，以*域*\\*用户名*的格式返回。|  
-|**job_password**|**sysname**|出于安全原因，始终返回值**\*\*\*\*\*\*\*\*"\***"。|  
+|**job_login**|**nvarchar(512)**|用于运行分发代理的 Windows 帐户，以*域* \\ *用户名*的格式返回。|  
+|**job_password**|**sysname**|出于安全原因，始终返回值 " **\*\*\*\*\*\*\*\*\*\*** "。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  

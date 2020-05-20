@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_describe_first_result_set_for_object catalog view
 ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c500967b83581cc3bc108232f12c9a0f4d008da6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9bf2dff5e5d7a3cb1581de9c0b15ff8a58dc6be7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71199332"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827983"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  此动态管理函数采用@object_id作为参数，并描述具有该 ID 的模块的第一个结果元数据。 指定@object_id的可以是[!INCLUDE[tsql](../../includes/tsql-md.md)]存储过程或[!INCLUDE[tsql](../../includes/tsql-md.md)]触发器的 ID。 如果它是其他任何对象（如视图、表、函数或 CLR 过程）的 ID，则会在结果的错误列中指定错误。  
+  此动态管理函数采用 @object_id 作为参数，并描述具有该 ID 的模块的第一个结果元数据。 @object_id指定的可以是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程或触发器的 ID [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 如果它是其他任何对象（如视图、表、函数或 CLR 过程）的 ID，则会在结果的错误列中指定错误。  
   
  **sys. dm_exec_describe_first_result_set_for_object**具有与 dm_exec_describe_first_result_set sys.databases 相同的结果集定义[&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) ，与[sp_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)类似。  
   
@@ -44,7 +44,7 @@ sys.dm_exec_describe_first_result_set_for_object
   
 ## <a name="arguments"></a>参数  
  *\@object_id*  
- 存储过程或[!INCLUDE[tsql](../../includes/tsql-md.md)]触发器的。 @object_id [!INCLUDE[tsql](../../includes/tsql-md.md)]  的类型为 int@object_id****。  
+ @object_id [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 触发器的。  的类型为 int@object_id****。  
   
  *\@include_browse_information*  
  @include_browse_information的类型为**bit**。 如果设置为 1，则分析每个查询，就好像它在查询中使用 FOR BROWSE 选项。 返回其他键列和源表信息。  
@@ -89,7 +89,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**ordinal_in_order_by_list**|**smallint**|此列在 ORDER BY 列表中的位置：如果在 ORDER BY 列表中不显示该列或无法唯一确定 ORDER BY 列表，则返回 NULL。|  
 |**order_by_list_length**|**smallint**|ORDER BY 列表的长度。 如果没有 ORDER BY 列表，或者无法唯一确定 ORDER BY 列表，则返回 NULL。 请注意，对于 sp_describe_first_result_set 返回的所有行，该值是相同的。|  
 |**order_by_is_descending**|**smallint NULL**|如果 ordinal_in_order_by_list 不为 NULL，则 **order_by_is_descending** 列报告此列的 ORDER BY 子句的方向。 否则，它报告 NULL。|  
-|**error_number**|**int**|包含函数返回的错误号。 如果列中未发生错误，则包含 NULL。|  
+|error_number |**int**|包含函数返回的错误号。 如果列中未发生错误，则包含 NULL。|  
 |**error_severity**|**int**|包含函数返回的严重性。 如果列中未发生错误，则包含 NULL。|  
 |**error_state**|**int**|包含函数返回的状态消息。 如果未发生错误， 则该列包含 NULL。|  
 |**error_message**|**nvarchar （4096）**|包含函数返回的消息。 如果未发生错误，则该列包含 NULL。|  
@@ -114,11 +114,11 @@ sys.dm_exec_describe_first_result_set_for_object
 |9|RECURSION|由于批处理包含递归语句，无法确定结果。|  
 |10|TEMPORARY_TABLE|由于批处理包含临时表且 **sp_describe_first_result_set** 不支持该临时表，无法确定结果。|  
 |11|UNSUPPORTED_STATEMENT|由于批处理包含 **sp_describe_first_result_set** 不支持的语句（例如，FETCH、REVERT 等），无法确定结果。|  
-|12|OBJECT_ID_NOT_SUPPORTED|不@object_id支持传递给函数的（即，不是存储过程）|  
-|13|OBJECT_ID_DOES_NOT_EXIST|在@object_id系统目录中找不到传递给函数的。|  
+|12|OBJECT_ID_NOT_SUPPORTED|@object_id不支持传递给函数的（即，不是存储过程）|  
+|13|OBJECT_ID_DOES_NOT_EXIST|在 @object_id 系统目录中找不到传递给函数的。|  
   
 ## <a name="permissions"></a>权限  
- 需要权限才能执行@tsql参数。  
+ 需要权限才能执行 @tsql 参数。  
   
 ## <a name="examples"></a>示例  
   
@@ -138,7 +138,7 @@ GO
 ```  
   
 ### <a name="b-combining-the-sysdm_exec_describe_first_result_set_for_object-function-and-a-table-or-view"></a>B. 结合使用 sys.dm_exec_describe_first_result_set_for_object 函数和表或视图  
- 下面的示例使用 sys.databases 系统目录视图和**sys.databases. dm_exec_describe_first_result_set_for_object**函数显示[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]数据库中所有存储过程的结果集的元数据。  
+ 下面的示例使用 sys.databases 系统目录视图和**sys.databases. dm_exec_describe_first_result_set_for_object**函数显示数据库中所有存储过程的结果集的元数据 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 。  
   
 ```  
 USE AdventureWorks2012;  

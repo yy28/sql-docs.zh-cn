@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_plan_attributes dynamic management function
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4b6e5b28612efccafa9e2de0606eef821e341081
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1c3e0e4f48037f471ad260f709879ea7ce8ff5e8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68255603"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829436"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|属性|**varchar（128**|与此计划关联的属性的名称。 紧靠此的下表列出了可能的属性、数据类型及其说明。|  
+|attribute|**varchar（128**|与此计划关联的属性的名称。 紧靠此的下表列出了可能的属性、数据类型及其说明。|  
 |value|**sql_variant**|与此计划关联的属性的值。|  
 |is_cache_key|**bit**|指示此属性是否用作计划的缓存查找密钥的一部分。|  
 
 在上表中，**属性**可具有以下值：
 
-|特性|数据类型|说明|  
+|属性|数据类型|说明|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|指示编译计划所使用的选项值。|  
 |objectid|**int**|用于在缓存中查找对象的主键之一。 这是存储在数据库对象（过程、视图、触发器等）的[sys.databases](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)中的对象 ID。 对于类型为“即席”或“已准备好”的计划，它是批处理文本的内部哈希。|  
@@ -62,7 +62,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |language_id|**smallint**|创建缓存对象的连接的语言 ID。 有关详细信息，请参阅[sys.syslanguages &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)。|  
 |date_format|**smallint**|创建缓存对象的连接的日期格式。 有关详细信息，请参阅 [SET DATEFORMAT (Transact-SQL)](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |date_first|**tinyint**|第一个日期值。 有关详细信息，请参阅 [SET DATEFIRST (Transact-SQL)](../../t-sql/statements/set-datefirst-transact-sql.md).|  
-|status|**int**|缓存查找密钥中的内部状态位。|  
+|状态|**int**|缓存查找密钥中的内部状态位。|  
 |required_cursor_options|**int**|用户指定的游标选项，例如游标类型。|  
 |acceptable_cursor_options|**int**|为了支持语句的执行，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以隐式转换采用的游标选项。 例如，用户可能指定一个动态游标，但允许查询优化器将此游标类型转换为静态游标。|  
 |inuse_exec_context|**int**|使用查询计划并且当前正在执行的批处理的数目。|  
@@ -80,8 +80,8 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="permissions"></a>权限  
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要权限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层上，需要`VIEW DATABASE STATE`具有数据库中的权限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
 ## <a name="remarks"></a>备注  
   
@@ -111,7 +111,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |DATEFORMAT|32768|  
 |LanguageID|65536|  
 |UPON<br /><br /> 指示编译计划时数据库选项 PARAMETERIZATION 设置为 FORCED。|131072|  
-|ROWCOUNT|**适用于：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]到[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
+|ROWCOUNT|**适用于：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]自[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
   
 ## <a name="cursors"></a>游标  
  不活动游标缓存在编译的计划中，以便游标的并发用户可以重用存储游标所使用的内存。 例如，假设某批处理声明并使用了一个游标，但未释放该游标。 如果有两个用户执行同一个批处理，将有两个活动游标。 游标释放（可能在不同批处理中）后，用于存储该游标的内存就会缓存但不释放。 此不活动游标列表保存在编译的计划中。 下次用户执行该批处理时，缓存的游标内存将重用并相应地初始化为活动游标。  

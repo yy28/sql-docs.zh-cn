@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_proxy
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c091872c7e79a45fd6fb135d20c0910f9cd0158d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085280"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828402"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_help_proxy
   
  下表列出了每个子系统的值。  
   
-|值|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX 脚本|  
 |CmdExec|操作系统 (CmdExec)|  
@@ -65,7 +65,7 @@ sp_help_proxy
 |Dts|SSIS 包执行|  
 |PowerShell|PowerShell 脚本|  
   
-`[ @name = ] 'name'`要列出其代理[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的登录名。 名称为**nvarchar （256）**，默认值为 NULL。 指定*name*时，还必须指定*subsystem_name* 。  
+`[ @name = ] 'name'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要列出其代理的登录名。 名称为**nvarchar （256）**，默认值为 NULL。 指定*name*时，还必须指定*subsystem_name* 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  

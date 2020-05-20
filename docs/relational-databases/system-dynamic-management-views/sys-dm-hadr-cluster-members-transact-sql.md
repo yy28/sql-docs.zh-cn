@@ -19,20 +19,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_cluster_members catalog view
 ms.assetid: feb20b3a-8835-41d3-9a1c-91d3117bc170
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b28b708aabfdf3ec4e569aab6d8a95e2330b370
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ffa67137c4b7d99cd0aa394319e9415a72b73103
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900767"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829376"
 ---
 # <a name="sysdm_hadr_cluster_members-transact-sql"></a>sys.dm_hadr_cluster_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  如果承载启用了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 本地实例的 WSFC 节点具有 SQL 仲裁，则为构成仲裁的每一个成员及各个成员的状态都返回一行。 这包括群集中的所有节点（使用**Clusterenum**函数返回 CLUSTER_ENUM_NODE 类型）以及磁盘或文件共享见证（如果有）。 为给定成员返回的行包含有关该成员状态的信息。 例如，对于具有多数节点仲裁（其中一个节点处于关闭状态）的五个节点群集，当从为驻留在具有**dm_hadr_cluster_members**仲裁的节点上[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]的节点上启用的服务器实例（即 "NODE_DOWN"）中查询 " **sys. dm_hadr_cluster_members**时。  
+  如果承载启用了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 本地实例的 WSFC 节点具有 SQL 仲裁，则为构成仲裁的每一个成员及各个成员的状态都返回一行。 这包括群集中的所有节点（使用**Clusterenum**函数返回 CLUSTER_ENUM_NODE 类型）以及磁盘或文件共享见证（如果有）。 为给定成员返回的行包含有关该成员状态的信息。 例如，对于具有多数节点仲裁（其中一个节点处于关闭状态）的五个节点群集**sys.dm_hadr_cluster_members** ，当从为 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 驻留在具有**dm_hadr_cluster_members**仲裁的节点上的节点上启用的服务器实例（即 "NODE_DOWN"）中查询 "sys. dm_hadr_cluster_members 时。  
   
  如果 WSFC 节点没有仲裁，则不会返回任何行。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67900767"
 -   WSFC 群集可以容忍多少次失败，之后才会在多数节点情况下失去仲裁？  
 
  > [!TIP]
- > 从开始[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，此动态管理视图除了支持 Always On 可用性组外，还支持 Always On 故障转移群集实例。  
+ > 从开始 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ，此动态管理视图除了支持 Always On 可用性组外，还支持 Always On 故障转移群集实例。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  

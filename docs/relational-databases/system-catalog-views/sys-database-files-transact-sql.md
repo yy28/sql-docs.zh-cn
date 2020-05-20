@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_files catalog view
 ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41132cc875898b98a793e84a35b5c93eee2699e3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f51c090baea876c662b3fa31210d1eec59139bf4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983175"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823480"
 ---
 # <a name="sysdatabase_files-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "73983175"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|数据库内文件的 ID。|  
-|**file_guid**|**uniqueidentifier**|文件的 GUID。<br /><br /> NULL = 数据库已从的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早期版本升级（适用于 SQL Server 2005 及更早版本）。|  
-|**type**|**tinyint**|文件类型：<br/><br /> 0 = 行<br /><br/> 1 = 日志<br/><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 全文|  
+|**file_guid**|**uniqueidentifier**|文件的 GUID。<br /><br /> NULL = 数据库已从的早期版本升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （适用于 SQL Server 2005 及更早版本）。|  
+|type |**tinyint**|文件类型：<br/><br /> 0 = 行<br /><br/> 1 = 日志<br/><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 全文|  
 |**type_desc**|**nvarchar(60)**|文件类型的说明：<br /><br /> ROWS <br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT|  
 |**data_space_id**|**int**|该值可以是 0 或大于 0。 值为 0 表示数据库日志文件，值大于 0 表示存储此数据文件的文件组的 ID。|  
 |**name**|**sysname**|数据库中文件的逻辑名称。|  
 |**physical_name**|**nvarchar(260)**|操作系统文件名。 如果数据库由 AlwaysOn[可读辅助副本](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)承载，则**physical_name**指示主副本数据库的文件位置。 对于可读辅助数据库的正确文件位置，请查询[sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)。|  
-|**state**|**tinyint**|文件状态：<br /><br /> 0 = ONLINE <br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT <br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE <br /><br /> 7 = DEFUNCT|  
+|State |**tinyint**|文件状态：<br /><br /> 0 = ONLINE <br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT <br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE <br /><br /> 7 = DEFUNCT|  
 |**state_desc**|**nvarchar(60)**|文件状态的说明：<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 有关详细信息，请参阅[文件状态](../../relational-databases/databases/file-states.md)。|  
 |size |**int**|文件的当前大小（以 8 KB 页为单位）。<br /><br /> 0 = 不适用<br /><br /> 对于数据库快照来说，size 表示该快照可以一直用于文件的最大空间。<br /><br /> 对于 FILESTREAM 文件组容器，大小反映容器的当前已用大小。|  
 |**max_size**|**int**|最大文件大小（以 8 KB 为单位的页数）：<br /><br /> 0 = 不允许增长。<br /><br /> -1 = 文件将一直增长到磁盘充满为止。<br /><br /> 268435456 = 日志文件将增长到最大大小 2 TB。<br /><br /> 对于 FILESTREAM 文件组容器，max_size 反映容器的最大大小。<br /><br /> 请注意，使用不受限制的日志文件大小升级的数据库将报告为-1，表示日志文件的最大大小。|  
@@ -79,7 +79,7 @@ size/128.0 - CAST(FILEPROPERTY(name, 'SpaceUsed') AS int)/128.0
    AS EmptySpaceInMB
 FROM sys.database_files;
 ```
-有关使用[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]的详细信息，请参阅 SQL 客户顾问团队博客上的[在 Azure sql 数据库 V12 中确定数据库大小](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/)。
+有关使用的详细信息 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ，请参阅 SQL 客户顾问团队博客上的[在 Azure Sql 数据库 V12 中确定数据库大小](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/)。
   
 ## <a name="see-also"></a>另请参阅  
  [数据库和文件目录视图 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   

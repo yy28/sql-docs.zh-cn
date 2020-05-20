@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_operator
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f410024e1458d20e436df72cc2978ce41b5d60df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 080933e13c2f72deef536885b9d3b5c1c4c7593b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "74095503"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821070"
 ---
 # <a name="sp_add_operator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_add_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @name = ] 'name'`操作员（通知收件人）的名称。 此名称必须唯一，并且不能包含百分号（**%**）字符。 *名称*为**sysname**，无默认值。  
+`[ @name = ] 'name'`操作员（通知收件人）的名称。 此名称必须唯一，并且不能包含百分号（ **%** ）字符。 *名称*为**sysname**，无默认值。  
   
 `[ @enabled = ] enabled`指示运算符的当前状态。 *enabled*为**tinyint**，默认值为**1** （已启用）。 如果为**0**，则不启用操作员且不会收到通知。  
   
@@ -60,7 +60,7 @@ sp_add_operator [ @name = ] 'name'
   
  可以为*email_address*指定物理电子邮件地址或别名。 例如：  
   
- "**jdoe**" 或 "**jdoe\@xyz.com**"  
+ "**jdoe**" 或 "**jdoe \@ xyz.com**"  
   
 > [!NOTE]  
 >  必须对数据库邮件使用电子邮件地址。  
@@ -79,9 +79,9 @@ sp_add_operator [ @name = ] 'name'
   
 `[ @sunday_pager_end_time = ] sunday_pager_end_time`时间，在此之后， **SQLServerAgent**服务不再将寻呼通知发送到星期日上的指定操作员。 *sunday_pager_end_time*的值为**int**，默认值为**180000**，表示 6:00 P.M.。 并且必须使用 HHMMSS 格式输入。  
   
-`[ @pager_days = ] pager_days`一个数字，用于指示操作员可用于页面的日期（受限于指定的开始/结束时间）。 *pager_days*为**tinyint**，默认值为**0** ，表示运算符从不可用于接收页面。 有效值为**0**至**127**。 *pager_days*是通过添加所需日期的各个值来计算的。 例如，从星期一到星期五是**2**+**4**+**8**+**16**+**32** = **62**。 下表列出了一周中每天的值。  
+`[ @pager_days = ] pager_days`一个数字，用于指示操作员可用于页面的日期（受限于指定的开始/结束时间）。 *pager_days*为**tinyint**，默认值为**0** ，表示运算符从不可用于接收页面。 有效值为**0**至**127**。 *pager_days*是通过添加所需日期的各个值来计算的。 例如，从星期一到星期五是**2** + **4** + **8** + **16** + **32**  =  **62**。 下表列出了一周中每天的值。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**1**|星期日|  
 |**2**|星期一|  

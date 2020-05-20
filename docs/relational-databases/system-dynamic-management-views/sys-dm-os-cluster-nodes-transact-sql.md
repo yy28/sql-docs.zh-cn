@@ -16,29 +16,29 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_cluster_nodes dynamic management view
 ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 44c42bfebdd1a5b4e74a4a95243fb0c0606e9908
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5af8ef828e6d05fc221a410692b057f9fc5054ed
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900258"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820872"
 ---
 # <a name="sysdm_os_cluster_nodes-transact-sql"></a>sys.dm_os_cluster_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   为故障转移群集实例配置中的每个节点返回一行。 如果当前实例是故障转移群集实例，则会返回已定义此故障转移群集实例（以前称为 "虚拟服务器"）的节点的列表。 如果当前服务器实例不是故障转移群集实例，则返回空行集。  
   
-> **注意：** 若要从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]调用此，请使用名称**dm_pdw_nodes_os_cluster_nodes**。  
+> **注意：** 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_os_cluster_nodes**。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**NodeName**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例（虚拟服务器）配置中的节点名称。|  
-|status|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]故障转移群集实例中节点的状态：0、1、2、3、-1。 有关详细信息，请参阅[GetClusterNodeState 函数](https://go.microsoft.com/fwlink/?LinkId=204794)。|  
+|状态|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]故障转移群集实例中节点的状态：0、1、2、3、-1。 有关详细信息，请参阅[GetClusterNodeState 函数](https://go.microsoft.com/fwlink/?LinkId=204794)。|  
 |status_description|**nvarchar （20）**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集节点的状态的描述。<br /><br /> 0 = 正常运行<br /><br /> 1 = 停止<br /><br /> 2 = 已暂停<br /><br /> 3 = 正在联接<br /><br /> -1 = 未知|  
 |is_current_owner|bit|1 表示此节点是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集资源的当前所有者。|  
-|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="remarks"></a>备注  
  启用故障转移群集时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例可在指定为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例（虚拟服务器）配置一部分的故障转移群集的任何节点上运行。  
@@ -58,7 +58,7 @@ FROM sys.dm_os_cluster_nodes;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|NodeName|status|status_description|is_current_owner|  
+|NodeName|状态|status_description|is_current_owner|  
 |--------------|------------|-------------------------|------------------------|  
 |node1|0|已启动|1|  
 |node2|0|已启动|0|  

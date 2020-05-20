@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cycle_errorlog
 ms.assetid: 61a12cbf-78a3-4052-8604-3b29d07573fd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c15a36678bf0bd1ff5fc933eb79bff96b6780b60
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 59f21f3ce4c69bf9cb0df0d2fbd078c7614bd1a7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108340"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826221"
 ---
 # <a name="sp_cycle_errorlog-transact-sql"></a>sp_cycle_errorlog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_cycle_errorlog
  无  
   
 ## <a name="remarks"></a>备注  
- 每次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]启动时，当前错误日志都会重命名为**错误日志。 1**;**错误日志**将变成**错误日志。 2**，**错误日志 2**变成**错误日志。 3**，依此类推。 **sp_cycle_errorlog**使你能够在不停止和启动服务器的情况下循环错误日志文件。  
+ 每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 启动时，当前错误日志都会重命名为**错误日志。 1**;**错误日志**将变成**错误日志。 2**，**错误日志 2**变成**错误日志。 3**，依此类推。 **sp_cycle_errorlog**使你能够在不停止和启动服务器的情况下循环错误日志文件。  
   
 ## <a name="permissions"></a>权限  
  **Sp_cycle_errorlog**的执行权限仅限于**sysadmin**固定服务器角色的成员。  

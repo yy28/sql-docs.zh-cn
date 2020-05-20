@@ -17,14 +17,14 @@ helpviewer_keywords:
 - dm_os_cluster_properties
 - sys.dm_os_cluster_properties
 ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3fd3c53f5603567e0f6c2b6ee4f1712f742c1137
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ca7b6c657170c4e1afe5792d6e58a8e2a4aab277
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900231"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830534"
 ---
 # <a name="sysdm_os_cluster_properties-transact-sql"></a>sys.dm_os_cluster_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "67900231"
  使用这些属性设置的值将影响故障检测、故障响应时间以及用于监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例的运行状况的日志记录。  
   
 
-|列名|属性|说明|  
+|列名|Property|说明|  
 |-----------------|--------------|-----------------|  
 |VerboseLogging|bigint|SQL Server 故障转移群集的日志记录级别。 可以通过启用详细日志记录在错误日志中提供更多详细信息以排除故障。 以下值之一：<br /><br /> 0 - 关闭日志记录（默认值）<br /><br /> 1 - 仅限错误<br /><br /> 2 - 错误和警告<br /><br /> 有关详细信息，请参阅[ALTER SERVER CONFIGURATION &#40;transact-sql&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)。|  
 |SqlDumperDumpFlags|bigint|SQLDumper 转储标志确定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的转储文件的类型。 默认设置为 0。|  

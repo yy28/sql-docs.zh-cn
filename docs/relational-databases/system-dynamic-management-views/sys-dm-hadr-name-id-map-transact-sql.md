@@ -17,19 +17,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_name_id_map dynamic management view
 ms.assetid: e07bb8a9-37de-4a39-a257-950d7c3ae8fb
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4fc446efc410ff13d5697c7ab195e3e3895b4839
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ef571a14c0d4679930f04ed0353231ba5a0c44aa
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900423"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827934"
 ---
 # <a name="sysdm_hadr_name_id_map-transact-sql"></a>sys.dm_hadr_name_id_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  显示当前实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已联接到三个唯一 id Always On 可用性组的映射：一个可用性组 id、一个 WSFC 资源 id 和一个 WSFC 组 id。 此映射旨在处理重命名 WSFC 资源/组的情形。  
+  显示当前实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已联接到三个唯一 id Always On 可用性组的映射：一个可用性组 id、一个 wsfc 资源 id 和一个 Wsfc 组 id。 此映射旨在处理重命名 WSFC 资源/组的情形。  
    
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  

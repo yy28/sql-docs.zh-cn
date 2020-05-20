@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector view
 - syscollector_execution_log_full view
 ms.assetid: 6c8db22d-2e4c-4b7c-ac5a-8762ef1b175b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4bcbbf3d4e0e0b77156b7adceedbdc5aad97afdc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7bd195499313eaa24afd12ab424ae3bf832841b1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060357"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824894"
 ---
 # <a name="syscollector_execution_log_full-transact-sql"></a>syscollector_execution_log_full (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68060357"
 |log_id|**bigint**|标识收集组的每次执行。 用于将此视图与其他详细日志联接起来。 可以为 Null。|  
 |parent_log_id|**bigint**|标识父包或父收集组。 不可为 null。 各个 ID 以父子关系链接在一起，这样，您便可以确定哪个包是由哪个收集组启动的。 此视图将日志项按其父子链接进行分组并缩进包的名称，从而使调用链清晰可见。|  
 |name|**nvarchar(4000)**|此日志项所表示的收集组或包的名称。 可以为 Null。|  
-|status|**smallint**|指示收集组或包的当前状态。 可以为 Null。<br /><br /> 值为：<br /><br /> 0 = 正在运行<br /><br /> 1 = 完成<br /><br /> 2 = 失败|  
+|状态|**smallint**|指示收集组或包的当前状态。 可以为 Null。<br /><br /> 值为：<br /><br /> 0 = 正在运行<br /><br /> 1 = 完成<br /><br /> 2 = 失败|  
 |runtime_execution_mode|**smallint**|指示收集组活动是收集数据还是上载数据。 可以为 Null。|  
 |start_time|**datetime**|收集组或包的开始时间。 可以为 Null。|  
 |last_iteration_time|**datetime**|对于连续运行的包而言，是包上次捕获快照的时间。 可以为 Null。|  

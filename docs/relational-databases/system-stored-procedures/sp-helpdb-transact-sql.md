@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpdb
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7acc14d3950e0e2d1004727b2efbffd2e4963a2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fb3ab70170f1b96bcfd62a9d7108792871ccd5d7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67903021"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828951"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,22 +48,22 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|name |**sysname**|数据库名称。|  
+|**name**|**sysname**|数据库名称。|  
 |**db_size**|**nvarchar （13）**|数据库总计大小。|  
 |**owner**|**sysname**|数据库所有者，如**sa**。|  
 |**dbid**|**smallint**|数据库 ID。|  
 |**created**|**nvarchar(11)**|数据库创建的日期。|  
-|**status**|**nvarchar （600）**|以逗号分隔的值列表，这些值是当前在数据库上设置的数据库选项的值。<br /><br /> 只有启用布尔值选项时，才将这些选项列出。 非布尔选项以*option_name*=*值*的形式列出了其相应的值。<br /><br /> 有关详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。|  
+|**status**|**nvarchar （600）**|以逗号分隔的值列表，这些值是当前在数据库上设置的数据库选项的值。<br /><br /> 只有启用布尔值选项时，才将这些选项列出。 非布尔选项以*option_name*值的形式列出了其相应的值 = *value*。<br /><br /> 有关详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。|  
 |**compatibility_level**|**tinyint**|数据库兼容级别：60、65、70、80 或 90。|  
   
  如果指定*name* ，则会出现一个额外的结果集，其中显示指定数据库的文件分配。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|name |**nchar(128)**|逻辑文件名。|  
+|**name**|**nchar(128)**|逻辑文件名。|  
 |**fileid**|**smallint**|文件 ID。|  
 |**名字**|**nchar （260）**|操作系统文件名（物理文件名称）。|  
-|**文件**|**nvarchar(128)**|文件所属的文件组。<br /><br /> NULL = 文件为日志文件。 它决不是文件组的一部分。|  
+|**filegroup**|**nvarchar(128)**|文件所属的文件组。<br /><br /> NULL = 文件为日志文件。 它决不是文件组的一部分。|  
 |size |**nvarchar （18）**|文件大小 (MB)。|  
 |**maxsize**|**nvarchar （18）**|文件大小可达到的最大值。 此字段中的 UNLIMITED 值表示文件可以一直增长到磁盘变满为止。|  
 |**growth**|**nvarchar （18）**|文件的增量。 此值指示每次需要新空间时添加到文件中的空间量。|  

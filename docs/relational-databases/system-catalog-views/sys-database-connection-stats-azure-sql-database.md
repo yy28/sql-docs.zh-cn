@@ -16,22 +16,22 @@ helpviewer_keywords:
 - sys.database_connection_stats
 - database_connection_stats
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 7eb05640fbc702d5c9b01081d462e2c9f0204457
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 719f7ea686f1a93842d837c002ef2bca4a8c7a78
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73844472"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828519"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  包含[!INCLUDE[ssSDS](../../includes/sssds-md.md)]数据库连接事件的统计信息，**提供数据库连接**成功和失败的概述。 有关连接事件的详细信息，请参阅 sys.databases 中的事件类型[event_log &#40;AZURE SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)。  
+  包含数据库连接 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 事件**connectivity**的统计信息，提供数据库连接成功和失败的概述。 有关连接事件的详细信息，请参阅 sys.databases 中的事件类型[event_log &#40;AZURE SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)。  
   
 |统计信息|类型|说明|  
 |---------------|----------|-----------------|  
@@ -41,8 +41,8 @@ ms.locfileid: "73844472"
 |**success_count**|**int**|成功连接数。|  
 |**total_failure_count**|**int**|失败连接的总数。 这是**connection_failure_count**、 **terminated_connection_count**和**throttled_connection_count**的总和，不包括死锁事件。|  
 |**connection_failure_count**|**int**|登录失败数。|  
-|**terminated_connection_count**|**int**|**_仅适用于[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11。_**<br /><br /> 终止连接数。|  
-|**throttled_connection_count**|**int**|**_仅适用于[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11。_**<br /><br /> 中止的连接数。|  
+|**terminated_connection_count**|**int**|**_仅适用于 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11。_**<br /><br /> 终止连接数。|  
+|**throttled_connection_count**|**int**|**_仅适用于 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11。_**<br /><br /> 中止的连接数。|  
   
 ## <a name="remarks"></a>备注  
   
@@ -79,9 +79,9 @@ start_time                    end_time
 
  此视图可能并未包含所有连接和错误信息：  
   
-- 此视图不包含可能会[!INCLUDE[ssSDS](../../includes/sssds-md.md)]发生的所有数据库错误，只包括在 Sys.databases 的事件类型中指定的所有错误[EVENT_LOG &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)。  
+- 此视图不包含 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 可能会发生的所有数据库错误，只包括在 sys.databases 的事件类型中指定的所有错误[Event_log &#40;Azure SQL 数据库&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)。  
   
-- 如果[!INCLUDE[ssSDS](../../includes/sssds-md.md)]数据中心内存在计算机故障，则事件表中可能缺少少量数据。  
+- 如果数据中心内存在计算机故障 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，则事件表中可能缺少少量数据。  
   
 - 如果通过 DoSGuard 拦截了 IP 地址，则无法收集来自该 IP 地址的连接尝试事件，这些事件不会出现在此视图中。  
   

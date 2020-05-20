@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setstatus
 ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1e6d3ed9c31307fb032d4ccc3cc950565c39c52c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 98eaa39475b58c7fad5b20c4f6a65101d33b103d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095935"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809609"
 ---
 # <a name="sp_trace_setstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 |**900**|指定的跟踪句柄无效。|  
 |**9**|内存不足。 在没有足够内存执行指定的操作时返回此代码。|  
   
- 如果跟踪已处于指定的状态， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]则将返回**0**。  
+ 如果跟踪已处于指定的状态， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 则将返回**0**。  
   
 ## <a name="remarks"></a>备注  
  所有 SQL 跟踪存储过程的参数（**sp_trace_xx**）都是严格类型化的。 如果没有用正确的输入参数数据类型（参数说明中指定的类型）来调用这些参数，则存储过程将返回错误。  

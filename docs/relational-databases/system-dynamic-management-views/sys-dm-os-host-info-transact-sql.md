@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_host_info dynamic management view
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 052402d3a394e8da3e08828992127d3cd89b95ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8275ed39d49c8fdb64c1d2f26cc1d218c525500c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900161"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830505"
 ---
 # <a name="sysdm_os_host_info-transact-sql"></a>sys. dm_os_host_info （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ ms.locfileid: "67900161"
 ## <a name="security"></a>安全性  
   
 ### <a name="permissions"></a>权限  
-默认`SELECT`情况下`sys.dm_os_host_info` ，对`public`角色授予权限。 如果已吊销， `VIEW SERVER STATE`则需要对服务器的权限。   
+`SELECT` `sys.dm_os_host_info` `public` 默认情况下，对角色授予权限。 如果已吊销，则需要 `VIEW SERVER STATE` 对服务器的权限。   
  
 > [!CAUTION]
->  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]从版本 CTP 1.3 开始， [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]版本17需要`SELECT`权限`sys.dm_os_host_info`才能连接到。 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 如果`SELECT`撤消了权限`public`，则只有具有`VIEW SERVER STATE`权限的登录名可以连接到最新版本的 SSMS。 （其他工具（例如） `sqlcmd.exe`无需`SELECT`权限即可连接`sys.dm_os_host_info`。）
+>  从版本 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.3 开始， [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 版本17需要 `SELECT` 权限才能 `sys.dm_os_host_info` 连接到 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 。 如果 `SELECT` 撤消了权限 `public` ，则只有具有权限的登录名 `VIEW SERVER STATE` 可以连接到最新版本的 SSMS。 （其他工具（例如 `sqlcmd.exe` ）无需 `SELECT` 权限即可连接 `sys.dm_os_host_info` 。）
 
   
 ## <a name="examples"></a>示例  

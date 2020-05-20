@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpeer_request system table
 ms.assetid: ed048c46-7a2f-4ad0-bc7c-c2d65e83b4fb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 25e9a7f2e13af0aafacdfa1882bb6ac5da37b91c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1d24825e87c65e998d00a02339f07b6f87b27175
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68026716"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824853"
 ---
 # <a name="mspeer_request-transact-sql"></a>MSpeer_request (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,10 +31,10 @@ ms.locfileid: "68026716"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|ID|**int**|标识一个请求。|  
+|id|**int**|标识一个请求。|  
 |publication|**sysname**|为其发起状态请求的发布的名称。|  
 |sent_date|**datetime**|发起状态请求的日期和时间。|  
-|description|**nvarchar(4000)**|可用于标识各个状态请求的用户定义信息。|  
+|说明|**nvarchar(4000)**|可用于标识各个状态请求的用户定义信息。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Transact-sql&#41;&#40;复制表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
