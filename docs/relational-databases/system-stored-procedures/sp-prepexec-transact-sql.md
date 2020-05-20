@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_prepexec
 ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 670b64cb107610fe8b5506654b9e655b0da5fb16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ee9e291a0ff8b2fc14e7bc249ceea8320facedf9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68794723"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830974"
 ---
 # <a name="sp_prepexec-transact-sql"></a>sp_prepexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  准备并执行参数化[!INCLUDE[tsql](../../includes/tsql-md.md)]的语句。 sp_prepexec 结合了 sp_prepare 和 sp_execute 的函数。 在表格格式数据流（TDS）包中，此操作由 ID = 13 调用。  
+  准备并执行参数化的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 sp_prepexec 结合了 sp_prepare 和 sp_execute 的函数。 在表格格式数据流（TDS）包中，此操作由 ID = 13 调用。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,7 +41,7 @@ sp_prepexec handle OUTPUT, params , stmt
   
 ## <a name="arguments"></a>参数  
  *柄*  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是生成的*句柄*标识符。 *句柄*是带有**int**返回值的必需参数。  
+ 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的*句柄*标识符。 *句柄*是带有**int**返回值的必需参数。  
   
  *params*  
  标识参数化语句。 变量的参数定义将替换为语句*中的参数*标记。 *params*是调用**ntext**、 **nchar**或**nvarchar**输入值的必需参数。 如果语句未参数化，则输入一个 NULL 值。  

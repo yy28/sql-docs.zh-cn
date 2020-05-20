@@ -17,22 +17,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_checkpoint_files dynamic management view
 ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb3aa62880de7013cf503e61eb2d86a3454c2350
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3db08ac05d88bcea9f6b138ab08a48fd61a675fd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68026908"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830841"
 ---
 # <a name="sysdm_db_xtp_checkpoint_files-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   显示有关检查点文件的信息，包括文件大小、物理位置和事务 ID。  
   
-> **注意：** 对于尚未关闭的当前检查点，的 "状态" 列`ys.dm_db_xtp_checkpoint_files`将针对新文件进行构造。 自最后一个检查点后，如果存在足够的事务日志增长，或者发出`CHECKPOINT`命令（[checkpoint &#40;transact-sql&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)），则检查点将自动关闭。  
+> **注意：** 对于尚未关闭的当前检查点，的 "状态" 列 `ys.dm_db_xtp_checkpoint_files` 将针对新文件进行构造。 自最后一个检查点后，如果存在足够的事务日志增长，或者发出 `CHECKPOINT` 命令（[Checkpoint &#40;transact-sql&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)），则检查点将自动关闭。  
   
  内存优化文件组在内部使用仅限追加的文件存储内存中表的插入行和已删除行。 有两种类型的文件。 数据文件包含插入的行，而差异文件包含对已删除行的引用。 
   
@@ -41,7 +41,7 @@ ms.locfileid: "68026908"
  有关详细信息，请参阅[创建和管理内存优化对象的存储](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)。  
   
 ##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]及更高版本  
- 下表描述了从开始的`sys.dm_db_xtp_checkpoint_files`列**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**。  
+ 下表描述了 `sys.dm_db_xtp_checkpoint_files` 从开始的列 **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** 。  
   
 |列名称|类型|说明|  
 |-----------------|----------|-----------------|  
@@ -67,7 +67,7 @@ ms.locfileid: "68026908"
 |encryption_status_desc|**nvarchar(60)**|0 => UNENCRTPTED<br /><br /> 1 => 用密钥1加密<br /><br /> 2 => 密钥2加密。 仅对活动文件有效。|  
   
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- 下表对的列`sys.dm_db_xtp_checkpoint_files`进行了说明。 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**  
+ 下表对的列进行了说明 `sys.dm_db_xtp_checkpoint_files` **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 。  
   
 |列名称|类型|说明|  
 |-----------------|----------|-----------------|  

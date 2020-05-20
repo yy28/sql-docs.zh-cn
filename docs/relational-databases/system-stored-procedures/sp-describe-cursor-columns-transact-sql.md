@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor_columns
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1dffb53a2b6436725a2b7dc19dfb209a58b1134e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 963fa56dfba33c13eb2ce4d317f69a22b5cdd259
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053111"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830240"
 ---
 # <a name="sp_describe_cursor_columns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,28 +47,28 @@ sp_describe_cursor_columns
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @cursor_return= ]*output_cursor_variable*输出  
+ [ @cursor_return =] *output_cursor_variable*输出  
  声明的用于接收游标输出的游标变量的名称。 *output_cursor_variable*是**游标**，无默认值，并且在调用 sp_describe_cursor_columns 时，不能与任何游标相关联。 返回的游标是可滚动的动态只读游标。  
   
- [ @cursor_source= ]{N'local ' |N'global ' |N'variable' }  
+ [ @cursor_source =] {N'local ' |N'global ' |N'variable' }  
  指定使用以下哪一名称来指定所报告的游标：本地游标、全局游标或游标变量的名称。 参数为**nvarchar （30）**。  
   
- [ @cursor_identity= ]N '*local_cursor_name*'  
+ [ @cursor_identity =] N '*local_cursor_name*'  
  由具有 LOCAL 关键字或默认设置为 LOCAL 的 DECLARE CURSOR 语句创建的游标名称。 *local_cursor_name*为**nvarchar （128）**。  
   
- [ @cursor_identity= ]N '*global_cursor_name*'  
+ [ @cursor_identity =] N '*global_cursor_name*'  
  由具有 GLOBAL 关键字或默认设置为 GLOBAL 的 DECLARE CURSOR 语句创建的游标名称。 *global_cursor_name*为**nvarchar （128）**。  
   
  *global_cursor_name*还可以是由 ODBC 应用程序打开，然后通过调用 SQLSetCursorName 进行命名的 API 服务器游标的名称。  
   
- [ @cursor_identity= ]N '*input_cursor_variable*'  
+ [ @cursor_identity =] N '*input_cursor_variable*'  
  与打开的游标关联的游标变量的名称。 *input_cursor_variable*为**nvarchar （128）**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  无  
   
 ## <a name="cursors-returned"></a>返回的游标  
- sp_describe_cursor_columns 将[!INCLUDE[tsql](../../includes/tsql-md.md)]其报表封装为**cursor**输出参数。 这样，[!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理、存储过程和触发器即可逐行处理输出。 这也意味着无法直接从数据库 API 函数调用该过程。 **游标**输出参数必须绑定到程序变量，但是数据库 api 不支持绑定**游标**参数或变量。  
+ sp_describe_cursor_columns 将其报表封装为 [!INCLUDE[tsql](../../includes/tsql-md.md)] **cursor**输出参数。 这样，[!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理、存储过程和触发器即可逐行处理输出。 这也意味着无法直接从数据库 API 函数调用该过程。 **游标**输出参数必须绑定到程序变量，但是数据库 api 不支持绑定**游标**参数或变量。  
   
  下表显示了通过使用 sp_describe_cursor_columns 返回的游标的格式。  
   

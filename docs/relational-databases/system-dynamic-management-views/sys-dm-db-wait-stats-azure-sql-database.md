@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sys.dm_db_wait_stats dynamic management view
 - dm_db_wait_stats
 ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0c32af194a1e74e0fd11e65a75109165e81cc4c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56dd563d63518c18db6448d2c86f21e6ad676144
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090867"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830849"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "68090867"
   
  尽管线程不再处于等待状态，但是它不必立即开始运行。 这是因为此类线程首先放入可运行工作线程的队列中，并且必须等待量程在计划程序中运行。  
   
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，等待时间计数器是**bigint**值，因此，在早期版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，它们并不像等效的计数器那样易于作为计数器滚动更新。  
+ 在中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 等待时间计数器是**bigint**值，因此，在早期版本的中，它们并不像等效的计数器那样易于作为计数器滚动更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
  下表列出各任务所遇到的等待类型。  
   

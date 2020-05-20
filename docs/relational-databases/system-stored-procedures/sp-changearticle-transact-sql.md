@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticle
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8fe752b17af683f59078bd7c37eb702a9408a530
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 664f503aa6d3c6d3d0f8c32d83fc2ea9f238ff3b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771404"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829690"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  下表说明项目的属性和这些属性的值。  
   
-|属性|值|说明|  
+|Property|值|说明|  
 |--------------|------------|-----------------|  
 |**creation_script**||用于创建目标表的项目架构脚本的路径和名称。 默认值为 NULL。|  
 |**del_cmd**||要执行的 DELETE 语句，否则从日志构造。|  
@@ -103,17 +103,17 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x4000000**|复制**xml**列的索引。|  
 ||**0x8000000**|创建订阅服务器中尚不存在的任何架构。|  
 ||**0x10000000**|将订阅服务器上的**xml**列转换为**ntext** 。|  
-||**0x20000000**|将中[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]引入的大型对象数据类型（ [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]**nvarchar （max）**、 **varchar （max）** 和**varbinary （max**））转换为支持的数据类型。|  
+||**0x20000000**|将中引入的大型对象数据类型（**nvarchar （max）**、 **varchar （max）** 和**varbinary （max**））转换 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 为支持的数据类型 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 。|  
 ||**0x40000000**|复制权限。|  
 ||**0x80000000**|尝试删除不属于发布一部分的任何对象的依赖项。|  
-||**0x100000000**|如果 FILESTREAM 属性是在**varbinary （max）** 列上指定的，则使用此选项复制该属性。 如果要将表复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 订阅服务器，请勿指定此选项。 不管如何设置此架构选项， [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]都不支持将包含 FILESTREAM 列的表复制到订阅服务器。<br /><br /> 请参阅相关选项**0x800000000**。|  
-||**0x200000000**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]将中引入的日期和时间数据类型（**date**、 **time**、 **datetimeoffset**和 datetime2）转换为早期版本支持的数据类型。 **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+||**0x100000000**|如果 FILESTREAM 属性是在**varbinary （max）** 列上指定的，则使用此选项复制该属性。 如果要将表复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 订阅服务器，请勿指定此选项。 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]不管如何设置此架构选项，都不支持将包含 FILESTREAM 列的表复制到订阅服务器。<br /><br /> 请参阅相关选项**0x800000000**。|  
+||**0x200000000**|将中引入的日期和时间数据类型（**date**、 **time**、 **datetimeoffset**和**datetime2**）转换 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 为早期版本支持的数据类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 ||**0x400000000**|复制数据和索引的压缩选项。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。|  
 ||**0x800000000**|设置此选项可将 FILESTREAM 数据存储到订阅服务器上其自身的文件组中。 如果不设置此选项，FILESTREAM 数据将存储在默认文件组中。 由于复制操作不创建文件组，因此如果您设置此选项，您必须先创建文件组，然后在订阅服务器上应用快照。 有关如何在应用快照之前创建对象的详细信息，请参阅[在应用快照之前和之后执行脚本](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。<br /><br /> 请参阅相关选项**0x100000000**。|  
-||**0x1000000000**|将大于8000字节的公共语言运行时（CLR）用户定义类型（Udt）转换为**varbinary （max）** ，以使类型为 UDT 的列能够复制到运行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的订阅服务器。|  
-||**0x2000000000**|将**hierarchyid**数据类型转换为**varbinary （max）** ，以便可以将**hierarchyid**类型的列复制到运行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的订阅服务器。 有关如何在复制的表中使用**hierarchyid**列的详细信息，请参阅[hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)。|  
+||**0x1000000000**|将大于8000字节的公共语言运行时（CLR）用户定义类型（Udt）转换为**varbinary （max）** ，以使类型为 UDT 的列能够复制到运行的订阅服务器 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。|  
+||**0x2000000000**|将**hierarchyid**数据类型转换为**varbinary （max）** ，以便可以将**hierarchyid**类型的列复制到运行的订阅服务器 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 有关如何在复制的表中使用**hierarchyid**列的详细信息，请参阅[hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)。|  
 ||**0x4000000000**|复制表的任何筛选的索引。 有关筛选索引的详细信息，请参阅[创建筛选索引](../../relational-databases/indexes/create-filtered-indexes.md)。|  
-||**0x8000000000**|将**geography**和**geometry**数据类型转换为**varbinary （max）** ，以便可以将这些类型的列复制到运行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的订阅服务器。|  
+||**0x8000000000**|将**geography**和**geometry**数据类型转换为**varbinary （max）** ，以便可以将这些类型的列复制到运行的订阅服务器 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。|  
 ||**0x10000000000**|复制**地域**和**几何图形**类型的列上的索引。|  
 ||**0x20000000000**|复制列的 SPARSE 属性。 有关此属性的详细信息，请参阅[使用稀疏列](../../relational-databases/tables/use-sparse-columns.md)。|  
 ||**0x40000000000**|允许快照代理编写脚本，以便在订阅服务器上创建内存优化表。|  
@@ -129,7 +129,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**sync_object**||用于生成同步输出文件的表或视图的名称。 默认值为 NULL。 Oracle 发布服务器不支持。|  
 |**表空间**||标识从 Oracle 数据库发布的项目的日志记录表所使用的表空间。 有关详细信息，请参阅[管理 Oracle 表空间](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)。|  
 |**阀**||用于控制分发代理何时分配新标识范围的百分比值。 对等复制不支持此属性。|  
-|**type**||Oracle 发布服务器不支持。|  
+|type ||Oracle 发布服务器不支持。|  
 ||**logbased**|基于日志的项目。|  
 ||**logbased manualboth**|具有手动筛选器和手动视图并且基于日志的项目。 此选项要求同时设置 " *sync_object* " 和 "*筛选器*" 属性。 Oracle 发布服务器不支持。|  
 ||**logbased manualfilter**|具有手动筛选器并且基于日志的项目。 此选项要求同时设置 " *sync_object* " 和 "*筛选器*" 属性。 Oracle 发布服务器不支持。|  
@@ -157,10 +157,10 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  有关在更改时需要重新初始化所有现有订阅的属性，请参阅“备注”部分。  
   
-`[ @publisher = ] 'publisher'`指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'`指定一个非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  *publisher*更改[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器上的项目属性时，不应使用 publisher。  
+>  更改发布服务器上的项目属性时，不应使用*publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
@@ -228,7 +228,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**indexed view schema only**|**0x01**、 **0x010**、 **0x020**、 **0x040**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000 处**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x40000000**和**0x80000000**|**0x01**、 **0x010**、 **0x020**、 **0x040**、 **0x0100**、 **0x2000**、 **0x40000**、 **0x100000**、 **0x200000**、 **0x400000 处**、 **0x800000**、 **0x2000000**、 **0x8000000**、 **0x40000000**和**0x80000000**|  
   
 > [!NOTE]
->  对于排队更新发布，必须启用*schema_option*值**0x80** 。 非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布支持的*schema_option*值包括： **0x01**、 **0x02**、 **0x10**、 **0x40**、 **0x80**、 **0x1000**和**0x4000**。  
+>  对于排队更新发布，必须启用*schema_option*值**0x80** 。 非发布支持的*schema_option*值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括： **0x01**、 **0x02**、 **0x10**、 **0x40**、 **0x80**、 **0x1000**和**0x4000**。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_changetranarticle](../../relational-databases/replication/codesnippet/tsql/sp-changearticle-transac_1.sql)]  

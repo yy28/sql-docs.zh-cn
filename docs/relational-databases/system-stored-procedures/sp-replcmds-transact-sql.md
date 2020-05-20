@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replcmds
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3d60de0f459ec1224f6023e8ee848227fdc17ece
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 85dd8567599de98af1abb72394fef747bd2da6b5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771010"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829970"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
  在第一个客户端断开连接之前，尝试在同一数据库内运行**sp_replcmds**的客户端将收到错误18752。 第一个客户端断开连接后，其他客户端可以**sp_replcmds**运行，并成为新的日志读取器。  
   
- 如果 sp_replcmds 无法复制文本命令，则会向[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]错误日志和[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 应用程序日志添加**sp_replcmds**警告消息编号18759，因为不会在同一事务中检索文本指针。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果 sp_replcmds 无法复制文本命令，则会向错误日志和 Windows 应用程序日志添加警告消息编号18759， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 因为不会在同一事务中检索文本指针。 **sp_replcmds**  
   
 ## <a name="permissions"></a>权限  
  只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_replcmds**。  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_showrowreplicainfo
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d0c750fd35dce98c1d754f192214cd96cfc56143
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 34fa326c5982ee36cf0ee00fb66c8bac1714c06a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032891"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830941"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,9 +56,9 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|生成此项目的数据库的名称。|  
 |**db_nickname**|**binary(6)**|生成此项目的数据库的别名。|  
 |**version**|**int**|项的版本。|  
-|**current_state**|**nvarchar （9）**|返回有关行的当前状态的信息。<br /><br /> **y**行数据表示行的当前状态。<br /><br /> **n**行数据不表示行的当前状态。<br /><br /> 不适用>-不适用。 ** \<**<br /><br /> 未知>-无法确定当前状态。 ** \<**|  
+|**current_state**|**nvarchar （9）**|返回有关行的当前状态的信息。<br /><br /> **y**行数据表示行的当前状态。<br /><br /> **n**行数据不表示行的当前状态。<br /><br /> 不适用** \<>** -不适用。<br /><br /> ** \< 未知>** -无法确定当前状态。|  
 |**rowversion_table**|**nchar （17）**|指示是否将行版本存储在[MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)表或[MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)表中。|  
-|**条**|**nvarchar(255)**|有关此行版本项目的附加信息。 通常，该字段为空。|  
+|**comment**|**nvarchar(255)**|有关此行版本项目的附加信息。 通常，该字段为空。|  
   
 ## <a name="result-sets-for-column-information"></a>列信息的结果集  
   
@@ -69,7 +69,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_nickname**|**binary(6)**|生成此项目的数据库的别名。|  
 |**version**|**int**|项的版本。|  
 |**colname**|**sysname**|列版本项目表示的项目列的名称。|  
-|**条**|**nvarchar(255)**|有关此列版本项目的附加信息。 通常，该字段为空。|  
+|**comment**|**nvarchar(255)**|有关此列版本项目的附加信息。 通常，该字段为空。|  
   
 ## <a name="result-set-for-both"></a>行信息和列信息的结果集  
  如果为*show*选择了**两个**值，则返回行和列结果集。  

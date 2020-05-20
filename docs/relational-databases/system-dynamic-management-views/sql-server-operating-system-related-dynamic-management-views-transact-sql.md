@@ -14,23 +14,23 @@ helpviewer_keywords:
 - SQL OS dynamic management objects [SQL Server]
 - dynamic management objects [SQL Server], SQL OS
 ms.assetid: 3030c86a-0a74-4fed-ac0f-392e244cb965
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 862f54351eb67d2170d8e9806347eb8608178c23
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5ea0bbe308e3b0e49f6250dd02d2c6c1f636751c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71342036"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830902"
 ---
 # <a name="sql-server-operating-system-related-dynamic-management-views-transact-sql"></a>与 SQL Server 操作系统相关的动态管理视图 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-本部分介绍与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]操作系统（SQLOS）关联的动态管理视图（DMV）。 SQLOS 负责管理特定于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的操作系统资源。
+本部分介绍与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作系统（SQLOS）关联的动态管理视图（DMV）。 SQLOS 负责管理特定于的操作系统资源 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。
 
-目录中列出了 SQLOS Dmv。 其中的大多数和都命名`sys.dm_os_<description>`为。
+目录中列出了 SQLOS Dmv。 其中的大多数和都命名为 `sys.dm_os_<description>` 。
 
- 下面[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]与操作系统相关的动态管理视图。  
+ 下面 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是与操作系统相关的动态管理视图 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 。  
   
 |||  
 |-|-|  

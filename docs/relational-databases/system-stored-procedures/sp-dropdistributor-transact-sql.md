@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropdistributor
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a82a3bedf78eb69dfc4a1736e212164341077601
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 55ebb2b9c42c0690bcffe409cbc6a5bf5bf68fc0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304975"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830145"
 ---
 # <a name="sp_dropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="remarks"></a>备注  
  **sp_dropdistributor**在所有类型的复制中使用。  
   
- 如果服务器上存在其他发布服务器或分发对象， **sp_dropdistributor**将失败，除非** \@no_checks**设置为**1**。  
+ 如果服务器上存在其他发布服务器或分发对象， **sp_dropdistributor**将失败，除非** \@ no_checks**设置为**1**。  
   
  在通过执行**sp_dropdistributiondb**删除分发数据库后，必须执行此存储过程。  
   

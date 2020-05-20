@@ -18,19 +18,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC
 - sys.sys.dm_hadr_instance_node_map dynamic management view
 ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: edd2ea7a215f01c25539753dff4bd170cf9d422f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2ae75aa570b20a21c31d75b66ddf5c01635eee51
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900420"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830561"
 ---
 # <a name="sysdm_hadr_instance_node_map-transact-sql"></a>sys.dm_hadr_instance_node_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  对于承载联接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]其 Always On 可用性组的可用性副本的每个实例，将返回承载该服务器实例的 Windows Server 故障转移群集（WSFC）节点的名称。 此动态管理视图具有以下用法：  
+  对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 承载联接到其 Always On 可用性组的可用性副本的每个实例，将返回承载该服务器实例的 Windows Server 故障转移群集（WSFC）节点的名称。 此动态管理视图具有以下用法：  
   
 -   此动态管理视图对于检测包含承载于同一 WSFC 节点上的多个可用性副本的可用性组很有用，这是一个不受支持的配置，如果可用性组的配置不正确，则在进行 FCI 故障转移后可能出现此配置。 有关详细信息，请参阅[故障转移群集和 AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67900420"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**ag_resource_id**|**nvarchar(256)**|作为 WSFC 中的资源的可用性组的唯一 ID。|  
-|**instance_name**|**nvarchar(256)**|名称-*服务器*/*实例*-承载可用性组的副本的服务器实例。|  
+|**instance_name**|**nvarchar(256)**|名称-*服务器* / *实例*-承载可用性组的副本的服务器实例。|  
 |**node_name**|**nvarchar(256)**|WSFC 节点的名称。|  
   
 ## <a name="permissions"></a>权限  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_marksubscriptionvalidation
 ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bb8c38d24fbf6c96c61a7b2e83874d15218797c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6ea2b5a6120395ad287a372b9d0edb3de7cb2b71
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68092676"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831011"
 ---
 # <a name="sp_marksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
   
 `[ @destination_db = ] 'destination_db'`目标数据库的名称。 *destination_db* **sysname**，无默认值。  
   
-`[ @publisher = ] 'publisher'`指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'`指定一个非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  *发布服务器*不应用于属于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器的发布。  
+>  *发布服务器*不应用于属于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器的发布。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
@@ -57,9 +57,9 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ## <a name="remarks"></a>备注  
  **sp_marksubscriptionvalidation**用于事务复制。  
   
- **sp_marksubscriptionvalidation**不支持非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器。  
+ **sp_marksubscriptionvalidation**不支持非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。  
   
- 对于非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器，不能在显式事务中执行**sp_marksubscriptionvalidation** 。 这是因为在用于访问发布服务器的链接服务器连接上，不支持显式事务。  
+ 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器，不能在显式事务中执行**sp_marksubscriptionvalidation** 。 这是因为在用于访问发布服务器的链接服务器连接上，不支持显式事务。  
   
  **sp_marksubscriptionvalidation**必须与[sp_article_validation &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)一起使用，并将值**1**指定给*subscription_level*，并可与**sp_marksubscriptionvalidation**的其他调用一起使用，以便为其他订阅服务器标记当前的打开事务。  
   

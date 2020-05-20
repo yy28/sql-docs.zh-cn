@@ -16,14 +16,14 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e836fb2bd64a4fb0be15288322aa8fee30dc763e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cbf1658fd1567d9cdd3c35e02195435b6e86adcc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942286"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830388"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ sp_filestream_force_garbage_collection
 
 由于有两个阶段的操作，存储过程应该运行两次，以实际删除底层的 Filestream 文件。  
 
-垃圾回收（GC）依赖于日志截断。 因此，如果使用完整恢复模式最近在数据库上删除了文件，则只有在创建了这些事务日志部分的日志备份并将日志部分标记为非活动后，它们才是 GC。 在使用简单恢复模式的数据库上，在对数据库发出后`CHECKPOINT`发生日志截断。  
+垃圾回收（GC）依赖于日志截断。 因此，如果使用完整恢复模式最近在数据库上删除了文件，则只有在创建了这些事务日志部分的日志备份并将日志部分标记为非活动后，它们才是 GC。 在使用简单恢复模式的数据库上，在对数据库发出后发生日志截断 `CHECKPOINT` 。  
 
 
 ## <a name="permissions"></a>权限  
@@ -106,7 +106,7 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
 ```  
   
 ## <a name="see-also"></a>另请参阅  
-[文件流](../../relational-databases/blob/filestream-sql-server.md)
+[Filestream](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetable](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Filestream 和 FileTable 动态管理视图 (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 <br>[Filestream 和 FileTable 目录视图 (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)

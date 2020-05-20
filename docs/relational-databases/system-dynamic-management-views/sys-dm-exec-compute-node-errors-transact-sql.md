@@ -19,15 +19,15 @@ helpviewer_keywords:
 - dm_exec_compute_node_errors
 - sys.dm_exec_compute_node_errors management view
 ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b074da717a2c5deac9d576da938d1229dafeac77
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5de36530fcf50a403558cb97fa72ad6a2d126e32
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73532793"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830679"
 ---
 # <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "73532793"
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |error_id|`nvarchar(36)`|与错误关联的唯一数字 id。|系统中所有查询错误的唯一性|  
-|source|`nvarchar(255)`|源线程或进程说明||  
-|type|`nvarchar(255)`|错误类型。||  
+|源|`nvarchar(255)`|源线程或进程说明||  
+|类型|`nvarchar(255)`|错误类型。||  
 |create_time|`datetime`|发生错误的时间||  
 |compute_node_id|`int`|特定计算节点的标识符|请参阅 compute_node_id [dm_exec_compute_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
 |rexecution_id|`nvarchar(36)`|PolyBase 查询的标识符（如果有）。||  

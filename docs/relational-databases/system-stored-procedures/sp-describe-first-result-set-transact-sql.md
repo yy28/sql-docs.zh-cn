@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_first_result_set
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc58447e9893647dfa73643f14455d715625478e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2033ae81a030fa57e2f4aaf962e5dd35f9a9a318
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053052"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831177"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  返回[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理的第一个可能结果集的元数据。 如果批处理没有返回结果，则返回一个空的结果集。 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]无法通过执行静态分析来确定将执行的第一个查询的元数据，则将引发错误。 动态管理视图[sys.databases dm_exec_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)返回相同的信息。  
+  返回批处理的第一个可能结果集的元数据 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 如果批处理没有返回结果，则返回一个空的结果集。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 无法通过执行静态分析来确定将执行的第一个查询的元数据，则将引发错误。 动态管理视图[sys.databases dm_exec_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)返回相同的信息。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,11 +42,11 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ \@tsql = ] 'Transact-SQL_batch'`一个或多[!INCLUDE[tsql](../../includes/tsql-md.md)]个语句。 *Transact-sql SQL_batch*可以是**nvarchar （***n***）** 或**nvarchar （max）**。  
+`[ \@tsql = ] 'Transact-SQL_batch'`一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 *Transact-sql SQL_batch*可以是**nvarchar （***n***）** 或**nvarchar （max）**。  
   
-`[ \@params = ] N'parameters'`\@params 为[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理参数提供声明字符串，这与 sp_executesql 类似。 参数可以为**nvarchar （n）** 或**nvarchar （max）**。  
+`[ \@params = ] N'parameters'`\@params 为批处理参数提供声明字符串 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，这与 sp_executesql 类似。 参数可以为**nvarchar （n）** 或**nvarchar （max）**。  
   
- 一个字符串，其中包含已嵌入到[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*中的所有参数的定义。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n*是表示附加参数定义的占位符。 语句中指定的每个参数都必须在\@params 中定义。 如果语句[!INCLUDE[tsql](../../includes/tsql-md.md)]中的语句或批处理不包含参数， \@则无需参数。 该参数的默认值为 NULL。  
+ 一个字符串，其中包含已嵌入到 _batch 中的所有参数的定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n*是表示附加参数定义的占位符。 语句中指定的每个参数都必须在 \@ params 中定义。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中的语句或批处理不包含参数， \@ 则无需参数。 该参数的默认值为 NULL。  
   
 `[ \@browse_information_mode = ] tinyint`指定是否返回其他键列和源表信息。 如果设置为 1，则分析每个查询，就好像它在查询中包含 FOR BROWSE 选项一样。 将返回其他键列和源表信息。  
   
@@ -113,17 +113,17 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  在以下任何情况下， **sp_describe_first_result_set**都将返回错误。  
   
--   如果输入\@tsql 不是有效[!INCLUDE[tsql](../../includes/tsql-md.md)]的批处理。 有效性是通过分析和分析该批来[!INCLUDE[tsql](../../includes/tsql-md.md)]决定的。 在确定[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理是否有效时，不考虑批处理在查询优化期间或执行期间引发的任何错误。  
+-   如果输入 \@ tsql 不是有效的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理。 有效性是通过分析和分析该批来决定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 在确定批处理是否有效时，不考虑批处理在查询优化期间或执行期间引发的任何错误 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
--   如果\@参数不为 NULL，并且包含一个字符串，该字符串不是参数的语法有效声明字符串，或者包含多次声明任何参数的字符串。  
+-   如果参数 \@ 不为 NULL，并且包含一个字符串，该字符串不是参数的语法有效声明字符串，或者包含多次声明任何参数的字符串。  
   
--   如果输入[!INCLUDE[tsql](../../includes/tsql-md.md)]批声明一个局部变量，该局部变量与 params 中\@声明的参数同名。  
+-   如果输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批声明一个局部变量，该局部变量与 params 中声明的参数同名 \@ 。  
   
 -   如果该语句将使用某个临时表。  
   
 -   查询包括创建随后要查询的永久表。  
   
- 如果所有其他检查都获得成功，则将考虑输入批处理内所有可能的控制流路径。 这将考虑所有控制流语句（GOTO，IF/ELSE、WHILE 和[!INCLUDE[tsql](../../includes/tsql-md.md)] TRY/CATCH 块，以及由 EXEC 语句从输入批处理中调用[!INCLUDE[tsql](../../includes/tsql-md.md)]的任何过程、动态批处理或触发器、导致 ddl 触发器被激发的 ddl 语句，或导致在目标表或由于 foreign key 约束的级联操作而修改的表上触发触发器的 DML 语句。 在很多可能的控制路径的情况下，算法将在某个点停止。  
+ 如果所有其他检查都获得成功，则将考虑输入批处理内所有可能的控制流路径。 这将考虑所有控制流语句（GOTO，IF/ELSE、WHILE 和 [!INCLUDE[tsql](../../includes/tsql-md.md)] TRY/CATCH 块 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，以及由 EXEC 语句从输入批处理中调用的任何过程、动态批处理或触发器、导致 ddl 触发器被激发的 ddl 语句，或导致在目标表或由于 foreign key 约束的级联操作而修改的表上触发触发器的 DML 语句。 在很多可能的控制路径的情况下，算法将在某个点停止。  
   
  对于每个控制流路径，返回结果集的第一个语句（如果有）由**sp_describe_first_result_set**确定。  
   
@@ -152,7 +152,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
  **sp_describe_first_result_set**不支持间接递归。  
   
 ## <a name="permissions"></a>权限  
- 要求具有执行 tsql 参数\@的权限。  
+ 要求具有执行 \@ tsql 参数的权限。  
   
 ## <a name="examples"></a>示例  
   
@@ -269,7 +269,7 @@ ELSE
     SELECT d FROM t2; '  
 ```  
   
- Result： \<未知列名称> **varchar （20） NULL**  
+ Result： \< 未知列名称> **varchar （20） NULL**  
   
 #### <a name="column-name-forced-to-be-identical-through-aliasing"></a>通过别名强制列名称完全相同  
  与前面的例子相同，但通过列别名，列具有相同名称。  

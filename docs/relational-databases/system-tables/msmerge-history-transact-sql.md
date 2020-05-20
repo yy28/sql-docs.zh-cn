@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_history system table
 ms.assetid: 936195ad-ca07-41a8-a1a0-6699b6e63403
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7de3f8de87804facf6670cf0dd261464143c2aeb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: de9c51e35bab142bd54a81224057f1eda05c5fb1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017688"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829893"
 ---
 # <a name="msmerge_history-transact-sql"></a>MSmerge_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68017688"
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|合并代理作业的 ID。|  
 |**agent_id**|**int**|合并代理的 ID。|  
-|**提出**|**nvarchar(255)**|消息文本。|  
+|**注释**|**nvarchar(255)**|消息文本。|  
 |**error_id**|**int**|[MSrepl_errors](../../relational-databases/system-tables/msrepl-errors-transact-sql.md)系统表中的错误的 ID。|  
 |**timestamp**|**timestamp**|该表的时间戳列。|  
 |**updatable_row**|**bit**|如果可以覆盖历史记录行，则设置为**1** 。|  

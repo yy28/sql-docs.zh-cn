@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergearticlecolumn
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ff669af64b6aed312481264127d69eee1ad674e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 20967420eeb22a1c6418d06a9be3fc728106c141
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078162"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830989"
 ---
 # <a name="sp_mergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
 `[ @article = ] 'article'`发布中项目的名称。 *项目*是**sysname**，无默认值。  
   
-`[ @column = ] 'column'`标识要在其中创建垂直分区的列。 *列*的值为**sysname**，默认值为 NULL。 如果为 NULL 和 `@operation = N'add'`，默认情况下，源表中的所有列将添加到项目。 将*操作*设置为**drop**时，*列*不能为 NULL。 若要从项目中排除列，请执行**sp_mergearticlecolumn** ，并`@operation = N'drop'`指定要从指定*项目*中删除的*列*以及每个列。  
+`[ @column = ] 'column'`标识要在其中创建垂直分区的列。 *列*的值为**sysname**，默认值为 NULL。 如果为 NULL 和 `@operation = N'add'`，默认情况下，源表中的所有列将添加到项目。 将*操作*设置为**drop**时，*列*不能为 NULL。 若要从项目中排除列，请执行**sp_mergearticlecolumn** ，并指定*column* `@operation = N'drop'` 要从指定*项目*中删除的列以及每个列。  
   
 `[ @operation = ] 'operation'`是复制状态。 *操作*为**nvarchar （4）**，默认值为 ADD。 **添加**标记列以进行复制。 **drop**清除列。  
   

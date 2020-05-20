@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_connections dynamic management view
 ms.assetid: d9e20433-67fe-4fcc-80e3-b94335b2daef
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2df4786147a5301e4e9167cbe121b9151e72190f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 43f5c110aaf9b492d70eb7220b6eccc249222609
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68099164"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830893"
 ---
 # <a name="sysdm_broker_connections-transact-sql"></a>sys.dm_broker_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,8 +33,8 @@ ms.locfileid: "68099164"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**connection_id**|**uniqueidentifier**|连接的标识符。 可以为 null.|  
-|**transport_stream_id**|**uniqueidentifier**|此连接为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tcp/ip 通信使用的网络接口（SNI）连接的标识符。 可以为 null.|  
-|**state**|**smallint**|连接的当前状态。 可以为 null. 可能的值：<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = 已关闭|  
+|**transport_stream_id**|**uniqueidentifier**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]此连接为 tcp/ip 通信使用的网络接口（SNI）连接的标识符。 可以为 null.|  
+|State |**smallint**|连接的当前状态。 可以为 null. 可能的值：<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = 已关闭|  
 |**state_desc**|**nvarchar(60)**|连接的当前状态。 可以为 null. 可能的值：<br /><br /> 新增功能<br /><br /> CONNECTING<br /><br /> CONNECTED<br /><br /> LOGGED_IN<br /><br /> CLOSED|  
 |**connect_time**|**datetime**|打开连接的日期和时间。 可以为 null.|  
 |**login_time**|**datetime**|连接登录成功的日期和时间。 可以为 null.|  
@@ -68,7 +68,7 @@ ms.locfileid: "68099164"
   
 ## <a name="relationship-cardinalities"></a>关系基数  
   
-|From|到|关系|  
+|From|功能|关系|  
 |----------|--------|------------------|  
 |**dm_broker_connections.connection_id**|**dm_exec_connections.connection_id**|一对一|  
   

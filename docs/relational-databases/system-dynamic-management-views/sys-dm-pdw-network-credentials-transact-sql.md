@@ -9,20 +9,20 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d4fee3ad-6285-4ea5-8513-5e6eb617abb0
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b75eb53da9961025e3310f27e4a12608dd4fda78
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87134a4898b0eb5e314aa4c0f860755a9618b4c5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899360"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830477"
 ---
 # <a name="sysdm_pdw_network_credentials-transact-sql"></a>sys. dm_pdw_network_credentials （Transact-sql）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  返回所有目标服务器在[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]设备中存储的所有网络凭据的列表。 为控制节点和每个计算节点列出结果。  
+  返回所有目标服务器在设备中存储的所有网络凭据的列表 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 。 为控制节点和每个计算节点列出结果。  
   
 |列名|数据类型|说明|  
 |-----------------|---------------|-----------------|  

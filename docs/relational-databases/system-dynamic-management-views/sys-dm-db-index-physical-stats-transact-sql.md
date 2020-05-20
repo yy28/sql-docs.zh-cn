@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.dm_db_index_physical_stats dynamic management function
 - fragmentation [SQL Server]
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d7fe788192aac7f7bd3e4723b615391c5d8c6e86
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97339050b2bb6b81945b6bc7604befdfd45f360b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811519"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829509"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ sys.dm_db_index_physical_stats (
  *object_id* |NULL |0 |缺省值  
  索引所在的表或视图的对象 ID。 *object_id* 是 **int**。  
   
- 有效的输入包括表和视图的 ID 号、NULL、0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。 在[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中，有效输入还包括 service broker 队列名称或队列内部表名称。 当应用默认参数（即所有对象、所有索引等）时，所有队列的碎片信息都将包含在结果集中。  
+ 有效的输入包括表和视图的 ID 号、NULL、0 或 DEFAULT。 默认值为 0。 在此上下文中，NULL、0 和 DEFAULT 是等效值。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，有效输入还包括 service broker 队列名称或队列内部表名称。 当应用默认参数（即所有对象、所有索引等）时，所有队列的碎片信息都将包含在结果集中。  
   
  指定 NULL 可返回指定数据库中的所有表和视图的信息。 如果为*object_id*指定 null，则还必须为*index_id*和*partition_number*指定 null。  
   
@@ -102,7 +102,7 @@ sys.dm_db_index_physical_stats (
 |avg_fragment_size_in_pages|**float**|IN_ROW_DATA 分配单元的叶级别中的一个碎片的平均页数。<br /><br /> 对于索引的非叶级别，以及 LOB_DATA 或 ROW_OVERFLOW_DATA 分配单元，为 NULL。<br /><br /> 如果*模式*= 采样，则为 NULL。|  
 |page_count|**bigint**|索引或数据页的总数。<br /><br /> 对于索引，表示 IN_ROW_DATA 分配单元中 b 树的当前级别中的索引页总数。<br /><br /> 对于堆，表示 IN_ROW_DATA 分配单元中的数据页总数。<br /><br /> 对于 LOB_DATA 或 ROW_OVERFLOW_DATA 分配单元，表示该分配单元中的总页数。|  
 |avg_page_space_used_in_percent|**float**|所有页中使用的可用数据存储空间的平均百分比。<br /><br /> 对于索引，平均百分比应用于 IN_ROW_DATA 分配单元中 b 树的当前级别。<br /><br /> 对于堆，表示 IN_ROW_DATA 分配单元中所有数据页的平均百分比。<br /><br /> 对于 LOB_DATA 或 ROW_OVERFLOW DATA 分配单元，表示该分配单元中所有页的平均百分比。<br /><br /> 当*mode* = 有限时，为 NULL。|  
-|record_count|**bigint**|总记录数。<br /><br /> 对于索引，记录的总数应用于 IN_ROW_DATA 分配单元中 b 树的当前级别。<br /><br /> 对于堆，表示 IN_ROW_DATA 分配单元中的总记录数。<br /><br /> **注意：** 对于堆，此函数返回的记录数可能与通过对堆运行 SELECT COUNT （\*）返回的行数不匹配。 这是因为一行可能包含多个记录。 例如，在某些更新情况下，单个堆行可能由于更新操作而包含一条前推记录和一条被前推记录。 此外，多数大型 LOB 行在 LOB_DATA 存储中拆分为多个记录。<br /><br /> 对于 LOB_DATA 或 ROW_OVERFLOW_DATA 分配单元，表示整个分配单元中总记录数。<br /><br /> 当*mode* = 有限时，为 NULL。|  
+|record_count|**bigint**|总记录数。<br /><br /> 对于索引，记录的总数应用于 IN_ROW_DATA 分配单元中 b 树的当前级别。<br /><br /> 对于堆，表示 IN_ROW_DATA 分配单元中的总记录数。<br /><br /> **注意：** 对于堆，此函数返回的记录数可能与通过对堆运行 SELECT COUNT （）返回的行数不匹配 \* 。 这是因为一行可能包含多个记录。 例如，在某些更新情况下，单个堆行可能由于更新操作而包含一条前推记录和一条被前推记录。 此外，多数大型 LOB 行在 LOB_DATA 存储中拆分为多个记录。<br /><br /> 对于 LOB_DATA 或 ROW_OVERFLOW_DATA 分配单元，表示整个分配单元中总记录数。<br /><br /> 当*mode* = 有限时，为 NULL。|  
 |ghost_record_count|**bigint**|分配单元中将被虚影清除任务删除的虚影记录数。<br /><br /> 对于 IN_ROW_DATA 分配单元中索引的非叶级别，为 0。<br /><br /> 当*mode* = 有限时，为 NULL。|  
 |version_ghost_record_count|**bigint**|由分配单元中未完成的快照隔离事务保留的虚影记录数。<br /><br /> 对于 IN_ROW_DATA 分配单元中索引的非叶级别，为 0。<br /><br /> 当*mode* = 有限时，为 NULL。|  
 |min_record_size_in_bytes|**int**|最小记录大小（字节）。<br /><br /> 对于索引，为 IN_ROW_DATA 分配单元中 b 树当前级别的最小记录大小。<br /><br /> 对于堆，表示 IN_ROW_DATA 分配单元中的最小记录大小。<br /><br /> 对于 LOB_DATA 或 ROW_OVERFLOW_DATA 分配单元，表示整个分配单元中的最小记录大小。<br /><br /> 当*mode* = 有限时，为 NULL。|  
@@ -110,9 +110,9 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|平均记录大小（字节）。<br /><br /> 对于索引，为 IN_ROW_DATA 分配单元中 b 树当前级别的平均记录大小。<br /><br /> 对于堆，表示 IN_ROW_DATA 分配单元中的平均记录大小。<br /><br /> 对于 LOB_DATA 或 ROW_OVERFLOW_DATA 分配单元，表示整个分配单元中的平均记录大小。<br /><br /> 当*mode* = 有限时，为 NULL。|  
 |forwarded_record_count|**bigint**|堆中具有指向另一个数据位置的转向指针的记录数。 （在更新过程中，如果在原始位置存储新行的空间不足，将会出现此状态。）<br /><br /> 除 IN_ROW_DATA 分配单元外，对于堆的其他所有分配单元都为 NULL。<br /><br /> 当*mode* = 有限时，堆为 NULL。|  
 |compressed_page_count|**bigint**|压缩页的数目。<br /><br /> 对于堆，新分配的页未进行 PAGE 压缩。 堆在以下两种特殊情况下进行 PAGE 压缩：大量导入数据时和重新生成堆时。 导致页分配的典型 DML 操作不会进行 PAGE 压缩。 当 compressed_page_count 值增长到超过您所需的阈值时，将重新生成堆。<br /><br /> 对于具有聚集索引的表，compressed_page_count 值表示 PAGE 压缩的效率。|  
-|hobt_id|bigint|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /><br /> 对于列存储索引，这是跟踪分区内部列存储数据的行集的 ID。 行集存储为数据堆或二进制树。 它们与父列存储索引具有相同的索引 ID。 有关详细信息，请参阅[sys.databases&#41;internal_partitions &#40;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)。<br /><br /> 如果为 NULL|  
-|column_store_delete_buffer_state|tinyint|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = 排出<br /><br /> 3 = 正在刷新<br /><br /> 4 = 停用<br /><br /> 5 = 就绪|  
-|column_store_delete_buff_state_desc||**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /><br /> 无效-父索引不是列存储索引。<br /><br /> Deleters 和扫描器使用此项。<br /><br /> Deleters 正在排出，但扫描仪仍在使用它。<br /><br /> 刷新-缓冲区已关闭，缓冲区中的行被写入删除位图。<br /><br /> 正在注销-已关闭删除缓冲区中的行已写入 delete 位图，但缓冲区未被截断，因为扫描仪仍在使用它。 新扫描程序不需要使用停用的缓冲区，因为打开的缓冲区已足够。<br /><br /> 就绪-此删除缓冲区已准备就绪，可供使用。|  
+|hobt_id|bigint|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。<br /><br /> 对于列存储索引，这是跟踪分区内部列存储数据的行集的 ID。 行集存储为数据堆或二进制树。 它们与父列存储索引具有相同的索引 ID。 有关详细信息，请参阅[sys.databases&#41;internal_partitions &#40;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)。<br /><br /> 如果为 NULL|  
+|column_store_delete_buffer_state|tinyint|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = 排出<br /><br /> 3 = 正在刷新<br /><br /> 4 = 停用<br /><br /> 5 = 就绪|  
+|column_store_delete_buff_state_desc||**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。<br /><br /> 无效-父索引不是列存储索引。<br /><br /> Deleters 和扫描器使用此项。<br /><br /> Deleters 正在排出，但扫描仪仍在使用它。<br /><br /> 刷新-缓冲区已关闭，缓冲区中的行被写入删除位图。<br /><br /> 正在注销-已关闭删除缓冲区中的行已写入 delete 位图，但缓冲区未被截断，因为扫描仪仍在使用它。 新扫描程序不需要使用停用的缓冲区，因为打开的缓冲区已足够。<br /><br /> 就绪-此删除缓冲区已准备就绪，可供使用。|  
   
 ## <a name="remarks"></a>备注  
  sys.dm_db_index_physical_stats 动态管理函数将替换 DBCC SHOWCONTIG 语句。  
@@ -129,7 +129,7 @@ sys.dm_db_index_physical_stats (
  从 LIMITED 到 DETAILED 模式，速度将越来越慢，因为在每个模式中执行的任务越来越多。 若要快速测量表或索引的大小或碎片级别，请使用 LIMITED 模式。 它的速度最快，并且不会为索引 IN_ROW_DATA 分配单元中的每个非叶级别分别返回一行。  
   
 ## <a name="using-system-functions-to-specify-parameter-values"></a>使用系统函数指定参数值  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]您可以使用函数[DB_ID](../../t-sql/functions/db-id-transact-sql.md)和[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)来指定*database_id*和*object_id*参数的值。 但是，将无效的值传递给这些函数可能会导致意外结果。 例如，如果找不到数据库或对象名（因为它们不存在或拼写错误），则两个函数都返回 NULL。 sys.dm_db_index_physical_stats 函数将 NULL 解释为指定所有数据库或所有对象的通配符值。  
+ 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数[DB_ID](../../t-sql/functions/db-id-transact-sql.md)和[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)来指定*database_id*和*object_id*参数的值。 但是，将无效的值传递给这些函数可能会导致意外结果。 例如，如果找不到数据库或对象名（因为它们不存在或拼写错误），则两个函数都返回 NULL。 sys.dm_db_index_physical_stats 函数将 NULL 解释为指定所有数据库或所有对象的通配符值。  
   
  此外，在调用 dm_db_index_physical_stats 函数之前处理 OBJECT_ID 函数，因此在当前数据库的上下文中进行计算，而不是在*database_id*中指定的数据库中进行计算。 此行为可能会导致 OBJECT_ID 函数返回 NULL 值；或者，如果当前数据库上下文和指定数据库中都存在对象名，则可能返回一条错误消息。 以下示例演示了这些意外的结果。  
   
@@ -168,7 +168,7 @@ GO
 ```  
   
 ### <a name="best-practice"></a>最佳做法  
- 请始终确保使用 DB_ID 或 OBJECT_ID 时返回了有效的 ID。 例如，使用 OBJECT_ID 时，请指定由三部分组成的名称（如`OBJECT_ID(N'AdventureWorks2012.Person.Address')`），或在 dm_db_index_physical_stats 函数中使用函数之前测试函数返回的值。 下面的示例 A 和 B 演示了一种指定数据库和对象 ID 的安全方法。  
+ 请始终确保使用 DB_ID 或 OBJECT_ID 时返回了有效的 ID。 例如，使用 OBJECT_ID 时，请指定由三部分组成的名称（如 `OBJECT_ID(N'AdventureWorks2012.Person.Address')` ），或在 dm_db_index_physical_stats 函数中使用函数之前测试函数返回的值。 下面的示例 A 和 B 演示了一种指定数据库和对象 ID 的安全方法。  
   
 ## <a name="detecting-fragmentation"></a>检测碎片  
  在对表进而对表中定义的索引进行数据修改（INSERT、UPDATE 和 DELETE 语句）的整个过程中都会出现碎片。 由于这些修改通常并不在表和索引的行中平均分布，所以每页的填充度会随时间而改变。 对于扫描表的部分或全部索引的查询，这种碎片会导致额外的页读取。 这会妨碍数据的并行扫描。  

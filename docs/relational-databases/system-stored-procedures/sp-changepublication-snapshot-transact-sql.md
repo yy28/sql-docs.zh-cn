@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changepublication_snapshot
 ms.assetid: 518a4618-3592-4edc-8425-cbc33cdff891
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8d7252f0335e2fc83c5b8e5e27f5e41535fdc7bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ef9a2fd87ac283ee2a7072cfccac838df7f16d04
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762257"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829566"
 ---
 # <a name="sp_changepublication_snapshot-transact-sql"></a>sp_changepublication_snapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |-----------|-----------------|  
 |**1**|一次性|  
 |**2**|按需|  
-|**4**|每日|  
+|**4**|每天|  
 |**8**|每周|  
 |**超过**|每月一次|  
 |**32**|与“每月”选项相关|  
@@ -84,7 +84,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |**5**|星期四|  
 |**6**|星期五|  
 |**7**|星期六|  
-|**8**|日期|  
+|**8**|天|  
 |**900**|工作日|  
 |**10**|周末|  
 |NULL（默认值）||  
@@ -96,7 +96,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |**1**|一次|  
 |**2**|秒|  
 |**4**|Minute|  
-|**8**|Hour|  
+|**8**|小时|  
 |NULL（默认值）||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*的间隔。 *frequency_subday_interval*的值为**int**，默认值为 NULL。  
@@ -115,7 +115,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
   
 `[ @snapshot_job_name = ] 'snapshot_agent_name'`如果正在使用现有作业，则为现有快照代理作业名称。 *snapshot_agent_name*的默认值为**nvarchar （100）** ，默认值为 NULL。  
   
-`[ @publisher_security_mode = ] publisher_security_mode`连接到发布服务器时代理所使用的安全模式。 *publisher_security_mode*为**smallint**，默认值为 NULL。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证， **1**指定 Windows 身份验证。 对于非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器，必须指定**0**值。  
+`[ @publisher_security_mode = ] publisher_security_mode`连接到发布服务器时代理所使用的安全模式。 *publisher_security_mode*为**smallint**，默认值为 NULL。 **0**指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证， **1**指定 Windows 身份验证。 对于非发布服务器，必须指定**0**值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -125,19 +125,19 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 `[ @publisher_password = ] 'publisher_password'`连接到发布服务器时使用的密码。 *publisher_password*的默认值为**sysname**，默认值为 NULL。  
   
 > [!IMPORTANT]  
->  不要使用空密码。 请使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
+>  不要使用空密码。 使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
-`[ @job_login = ] 'job_login'`用于运行代理的 Windows 帐户的登录名。 *job_login*为**nvarchar （257）**，默认值为 NULL。 此 Windows 帐户总是用于与分发服务器建立代理连接。 创建新的快照代理作业时，必须提供此参数。 对于非发布服务器，不能更改[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]此项。  
+`[ @job_login = ] 'job_login'`用于运行代理的 Windows 帐户的登录名。 *job_login*为**nvarchar （257）**，默认值为 NULL。 此 Windows 帐户总是用于与分发服务器建立代理连接。 创建新的快照代理作业时，必须提供此参数。 对于非发布服务器，不能更改此项 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 `[ @job_password = ] 'job_password'`运行代理所用的 Windows 帐户的密码。 *job_password*的默认值为**sysname**，默认值为 NULL。 创建新的快照代理作业时，必须提供此参数。  
   
 > [!IMPORTANT]  
 >  如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
-`[ @publisher = ] 'publisher'`指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
+`[ @publisher = ] 'publisher'`指定一个非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*的**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  *publisher*在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器上创建快照代理时，不应使用 publisher。  
+>  在发布服务器上创建快照代理时，不应使用*publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  

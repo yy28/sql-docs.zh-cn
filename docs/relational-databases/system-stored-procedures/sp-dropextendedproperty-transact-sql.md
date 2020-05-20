@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropextendedproperty
 ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 560cecf8b6cc0aff5b503602c521e503e7cc7fcf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2b581c09345b3eba21d53cbf0993b541e3b9422f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67934015"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830127"
 ---
 # <a name="sp_dropextendedproperty-transact-sql"></a>sp_dropextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sp_dropextendedproperty
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @name= ]{'*property_name*'}  
+ [ @name =] {'*property_name*'}  
  要删除的属性的名称。 *property_name*为**sysname** ，且不能为 NULL。  
   
- [ @level0type= ]{'*level0_object_type*'}  
+ [ @level0type =] {'*level0_object_type*'}  
  所指定的级别 0 对象类型的名称。 *level0_object_type*的值为**varchar （128）**，默认值为 NULL。  
   
  有效输入包括：ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、USER、TRIGGER、TYPE 和 NULL。  
@@ -61,26 +61,26 @@ sp_dropextendedproperty
 > [!IMPORTANT]  
 >  作为级别 0 类型的 USER 和 TYPE 将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中删除。 请避免在新的开发工作中使用这些功能，并考虑修改当前使用这些功能的应用程序。 改用 SCHEMA 替代 USER 作为级别 0 类型。 对于 TYPE，请使用 SCHEMA 作为级别 0 类型，使用 TYPE 作为级别 1 类型。  
   
- [ @level0name= ]{'*level0_object_name*'}  
+ [ @level0name =] {'*level0_object_name*'}  
  所指定的级别 0 对象类型的名称。 *level0_object_name*的值为**sysname** ，默认值为 NULL。  
   
- [ @level1type= ]{'*level1_object_type*'}  
+ [ @level1type =] {'*level1_object_type*'}  
  级别 1 对象的类型。 *level1_object_type*的值为**varchar （128）** ，默认值为 NULL。 有效的输入包括：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TABLE_TYPE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
   
- [ @level1name= ]{'*level1_object_name*'}  
+ [ @level1name =] {'*level1_object_name*'}  
  所指定的级别 1 对象类型的名称。 *level1_object_name*的值为**sysname** ，默认值为 NULL。  
   
- [ @level2type= ]{'*level2_object_type*'}  
+ [ @level2type =] {'*level2_object_type*'}  
  级别 2 对象的类型。 *level2_object_type*的值为**varchar （128）** ，默认值为 NULL。 有效的输入包括：COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER 和 NULL。  
   
- [ @level2name= ]{'*level2_object_name*'}  
+ [ @level2name =] {'*level2_object_name*'}  
  所指定的级别 2 对象类型的名称。 *level2_object_name*的值为**sysname** ，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="remarks"></a>备注  
- 为了指定扩展属性，将[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库中的对象分为三个级别：0、1和2。 级别0是最高级别，定义为数据库作用域内包含的对象。 级别 1 的对象包含在架构作用域或用户作用域中，而级别 2 的对象包含在级别 1 对象中。 可以为这些级别中任一级别的对象定义扩展属性。 引用某个级别中的对象必须用所有更高级别对象的类型和名称进行限制。  
+ 为了指定扩展属性，将数据库中的对象分为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 三个级别：0、1和2。 级别0是最高级别，定义为数据库作用域内包含的对象。 级别 1 的对象包含在架构作用域或用户作用域中，而级别 2 的对象包含在级别 1 对象中。 可以为这些级别中任一级别的对象定义扩展属性。 引用某个级别中的对象必须用所有更高级别对象的类型和名称进行限制。  
   
  给定有效的*property_name*，如果所有对象类型和名称都为空，并且当前数据库中存在属性，则删除该属性。 请参阅本主题后面部分中的示例 B。  
   
@@ -121,7 +121,7 @@ GO
 ```  
   
 ### <a name="b-dropping-an-extended-property-on-a-database"></a>B. 删除数据库中的扩展属性  
- 下面的示例从`MS_Description` [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]示例数据库中删除名为的属性。 由于属性位于数据库本身中，因此不指定对象类型和名称。  
+ 下面的示例 `MS_Description` 从示例数据库中删除名为的属性 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 。 由于属性位于数据库本身中，因此不指定对象类型和名称。  
   
 ```  
 USE AdventureWorks2012;  

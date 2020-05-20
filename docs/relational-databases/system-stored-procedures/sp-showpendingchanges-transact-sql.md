@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_showpendingchanges
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6b09069cb5289e28d978a4f3b3483e14e63cebb2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0f2430e334d5e7de4225a9c2022a719058837261
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632747"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829951"
 ---
 # <a name="sp_showpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,8 +62,8 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 |article_name|**sysname**|产生更改的表的项目名称。|  
 |pending_deletes|**int**|等待复制的删除数。|  
 |pending_ins_and_upd|**int**|等待复制的插入数和更新数。|  
-|is_delete|**bit**|指示挂起更改是否为删除操作。 如果值为**1** ，则表示更改为删除。 需要的值为**1** @show_rows。|  
-|rowguid|**uniqueidentifier**|标识已更改的行的 GUID。 需要的值为**1** @show_rows。|  
+|is_delete|**bit**|指示挂起更改是否为删除操作。 如果值为**1** ，则表示更改为删除。 需要的值为**1** @show_rows 。|  
+|rowguid|**uniqueidentifier**|标识已更改的行的 GUID。 需要的值为**1** @show_rows 。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  

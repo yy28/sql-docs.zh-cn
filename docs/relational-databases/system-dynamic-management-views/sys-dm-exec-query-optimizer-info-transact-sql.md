@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_optimizer_info dynamic management view
 ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6195ee80fb851a9875e4a95a6e5aab87deb905e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d15b171b20e81ea928528dc2124a0f33b697d2a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68255356"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829386"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,22 +33,22 @@ ms.locfileid: "68255356"
   返回有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器的操作的详细统计信息。 在优化工作负荷以确定查询优化的问题或改进之处时，可以使用此视图。 例如，可以用总优化次数、占用时间值以及最终开销值来对当前工作负荷的查询优化和优化过程中发现的任何变化进行比较。 某些计数器提供仅与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部诊断使用相关的数据。 这些计数器标记为“仅供内部使用”。  
   
 > [!NOTE]  
->  若要从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]调用此，请使用名称**dm_pdw_nodes_exec_query_optimizer_info**。  
+>  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_exec_query_optimizer_info**。  
   
-|名称|数据类型|说明|  
+|“属性”|数据类型|说明|  
 |----------|---------------|-----------------|  
-|**counter**|**nvarchar(4000)**|优化器统计信息事件的名称。|  
+|**对抗**|**nvarchar(4000)**|优化器统计信息事件的名称。|  
 |**occurrence**|**bigint**|此计数器的优化事件的发生次数。|  
 |**value**|**float**|每次发生事件的平均属性值。|  
-|**pdw_node_id**|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
+|**pdw_node_id**|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
 ## <a name="permissions"></a>权限  
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要权限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层上，需要`VIEW DATABASE STATE`具有数据库中的权限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
     
 ## <a name="remarks"></a>备注  
- **sys. dm_exec_query_optimizer_info**包含以下属性（计数器）。 出现的所有值将累积并在系统重新启动时设置为 0。 系统重新启动时，值字段的所有值都设置为 NULL。 指定平均值的所有“值-列”的值使用同一行中的出现次数值作为计算平均值的分母。 在确定对**dm_exec_query_optimizer_info**的更改[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时测量所有查询优化，包括用户和系统生成的查询。 如果执行已缓存的计划，则不会更改**dm_exec_query_optimizer_info**中的值，只优化很重要。  
+ **sys. dm_exec_query_optimizer_info**包含以下属性（计数器）。 出现的所有值将累积并在系统重新启动时设置为 0。 系统重新启动时，值字段的所有值都设置为 NULL。 指定平均值的所有“值-列”的值使用同一行中的出现次数值作为计算平均值的分母。 在确定对 dm_exec_query_optimizer_info 的更改时测量所有查询优化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，包括用户和系统生成的查询。 **dm_exec_query_optimizer_info** 如果执行已缓存的计划，则不会更改**dm_exec_query_optimizer_info**中的值，只优化很重要。  
   
 |计数器|出现次数|值|  
 |-------------|----------------|-----------|  

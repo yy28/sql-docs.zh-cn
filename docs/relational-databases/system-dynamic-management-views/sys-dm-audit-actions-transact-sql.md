@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_audit_actions dynamic management view
 ms.assetid: b987c2b9-998a-4a5f-a82d-280dc6963cbe
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5e6a6c91cb31c9c3036bc95239f0aff9c75fda7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 10558ea4d489ad39fe762f360affdaae372ddee6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936979"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830891"
 ---
 # <a name="sysdm_audit_actions-transact-sql"></a>sys.dm_audit_actions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  为可在审核日志中报告的每项审核操作以及可配置为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 一部分的每个审核操作组返回一行。 有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]审核的详细信息，请参阅[SQL Server audit &#40;数据库引擎&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
+  为可在审核日志中报告的每项审核操作以及可配置为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 一部分的每个审核操作组返回一行。 有关审核的详细信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅[SQL Server audit &#40;数据库引擎&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  

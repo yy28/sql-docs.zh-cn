@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_log_space_usage dynamic management view
 ms.assetid: f6b40060-c17d-472f-b0a3-3b350275d487
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bfa102163012456e9b2660d26cb54dec3d58cfbb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a4ded8d065c43dcabdf9e57b5940e7c1baa0edd8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264583"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829497"
 ---
 # <a name="sysdm_db_log_space_usage-transact-sql"></a>sys. dm_db_log_space_usage （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ ms.locfileid: "68264583"
 |total_log_size_in_bytes |**bigint** |日志的大小  |
 |used_log_space_in_bytes |**bigint** |日志的占用大小  |     
 |used_log_space_in_percent |**real** |日志大小占总日志大小的百分比 |
-|log_space_in_bytes_since_last_backup |**bigint** |自上次日志备份后使用的空间量 <br />**适用范围：** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)]到[!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)]、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|
+|log_space_in_bytes_since_last_backup |**bigint** |自上次日志备份后使用的空间量 <br />**适用于：** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)]到 [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] ， [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。|
     
   
 ## <a name="permissions"></a>权限  
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要权限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层上，需要`VIEW DATABASE STATE`具有数据库中的权限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
   
 ## <a name="examples"></a>示例  
   

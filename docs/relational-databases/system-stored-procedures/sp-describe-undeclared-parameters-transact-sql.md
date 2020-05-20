@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_undeclared_parameters
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: efa15bffc3b00dfce2c1c5d11bc3705f2b6f677e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a3745f00e8e2e6d7ed0386a128ee6bcec2adebea
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78180122"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831163"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)] 
 
-  返回一个结果集，其中包含有关在[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理中未声明的参数的元数据。 考虑在** \@tsql**批处理中使用但未在** \@params**中声明的每个参数。 每个此类参数在返回的结果集中各占一行，并包含推断的参数类型信息。 如果** \@tsql**输入批处理没有参数中** \@** 声明的参数，则该过程返回一个空结果集。  
+  返回一个结果集，其中包含有关在批处理中未声明的参数的元数据 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 考虑在** \@ tsql**批处理中使用但未在** \@ params**中声明的每个参数。 每个此类参数在返回的结果集中各占一行，并包含推断的参数类型信息。 如果** \@ tsql**输入批处理没有参数中声明的** \@ 参数，则**该过程返回一个空结果集。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,11 +45,11 @@ sp_describe_undeclared_parameters
 > 若要在 Azure Synapse Analytics （以前称为 SQL DW）中使用此存储过程，数据库的兼容级别需要大于10。 
 
 ## <a name="arguments"></a>参数  
-`[ \@tsql = ] 'Transact-SQL\_batch'`一个或多[!INCLUDE[tsql](../../includes/tsql-md.md)]个语句。 *Transact-sql SQL_batch*可以是**nvarchar （**_n_**）** 或**nvarchar （max）**。  
+`[ \@tsql = ] 'Transact-SQL\_batch'`一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 *Transact-sql SQL_batch*可以是**nvarchar （**_n_**）** 或**nvarchar （max）**。  
   
-`[ \@params = ] N'parameters'`\@params 为[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理参数提供声明字符串，类似于 sp_executesql 的工作方式。 *参数*可以为**nvarchar （**_n_**）** 或**nvarchar （max）**。  
+`[ \@params = ] N'parameters'`\@params 为批处理参数提供声明字符串 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，类似于 sp_executesql 的工作方式。 *参数*可以为**nvarchar （**_n_**）** 或**nvarchar （max）**。  
   
- 一个字符串，其中包含已嵌入到*SQL_batch*中的所有参数的定义。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 n 是表示附加参数定义的占位符。 如果语句中的 Transact-sql 语句或批处理不包含参数， \@则无需参数。 该参数的默认值为 NULL。  
+ 一个字符串，其中包含已嵌入到*SQL_batch*中的所有参数的定义。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 n 是表示附加参数定义的占位符。 如果语句中的 Transact-sql 语句或批处理不包含参数， \@ 则无需参数。 该参数的默认值为 NULL。  
   
  数据类型  
  参数的数据类型。  
@@ -96,17 +96,17 @@ sp_describe_undeclared_parameters
   
  在以下任何情况下， **sp_describe_undeclared_parameters**都将返回错误。  
   
--   如果输入\@tsql 不是有效[!INCLUDE[tsql](../../includes/tsql-md.md)]的批处理。 有效性是通过分析和分析该批来[!INCLUDE[tsql](../../includes/tsql-md.md)]决定的。 在确定[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理是否有效时，不考虑批处理在查询优化期间或执行期间引发的任何错误。  
+-   如果输入 \@ tsql 不是有效的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理。 有效性是通过分析和分析该批来决定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 在确定批处理是否有效时，不考虑批处理在查询优化期间或执行期间引发的任何错误 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
--   如果\@参数不为 NULL，并且包含一个字符串，该字符串不是参数的语法有效声明字符串，或者包含多次声明任何参数的字符串。  
+-   如果参数 \@ 不为 NULL，并且包含一个字符串，该字符串不是参数的语法有效声明字符串，或者包含多次声明任何参数的字符串。  
   
--   如果输入[!INCLUDE[tsql](../../includes/tsql-md.md)]批声明一个局部变量，该局部变量与 params 中\@声明的参数同名。  
+-   如果输入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批声明一个局部变量，该局部变量与 params 中声明的参数同名 \@ 。  
   
 - 如果语句引用临时表，则为。
 
 - 查询包括创建随后要查询的永久表。
   
- 如果\@tsql 没有参数中\@声明的参数，则该过程返回一个空结果集。  
+ 如果 \@ tsql 没有参数中声明的参数， \@ 则该过程返回一个空结果集。  
   
 ## <a name="parameter-selection-algorithm"></a>参数选择算法  
  对于具有未声明的参数的查询，将通过三个步骤推断未声明的参数的数据类型。  
@@ -121,7 +121,7 @@ sp_describe_undeclared_parameters
   
 -   数据类型不依赖于所有输入的未声明参数的表达式。  
   
- 例如，请考虑 `SELECT dbo.tbl(@p1) + c1 FROM t1 WHERE c2 = @p2 + 2` 查询。 表达式 dbo.tbl （\@p1） + c1 和 c2 具有数据类型，并且 expression \@p1 和\@p2 + 2 不存在。  
+ 例如，请考虑 `SELECT dbo.tbl(@p1) + c1 FROM t1 WHERE c2 = @p2 + 2` 查询。 表达式 dbo.tbl （ \@ p1） + c1 和 c2 具有数据类型，并且 expression \@ p1 和 \@ p2 + 2 不存在。  
   
  在执行此步骤后，如果任何表达式（对 UDF 的调用除外）有两个没有数据类型的参数，类型推断将失败并发生错误。 例如，下面的语句均产生错误：  
   
@@ -139,7 +139,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  **步骤 2**  
   
- 对于给定的未声明\@参数 p，类型推导算法将查找包含\@ \@p 并且是以下各项之一的最内层表达式 E （p）：  
+ 对于给定的未声明参数 \@ p，类型推导算法将查找 \@ 包含 \@ p 并且是以下各项之一的最内层表达式 E （p）：  
   
 -   比较或赋值运算符的参数。  
   
@@ -149,7 +149,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   **强制转换**或**转换**的参数。  
   
- 类型推导算法查找 E （\@\@p）的目标数据类型 TT （p）。 上述示例的目标数据类型如下所示：  
+ 类型推导算法查找 \@ E （p）的目标数据类型 TT （p） \@ 。 上述示例的目标数据类型如下所示：  
   
 -   比较或赋值语句的另一侧的数据类型。  
   
@@ -159,32 +159,32 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   要将语句转换到的数据类型。  
   
- 例如，请考虑 `SELECT * FROM t WHERE @p1 = dbo.tbl(@p2 + c1)` 查询。 Then E （\@p1） = \@p1，e （\@p2） = \@p2 + c1，TT （\@P1）是声明的返回数据类型 dbo.tbl，tt （\@p2）是 dbo.tbl 的声明的参数数据类型。  
+ 例如，请考虑 `SELECT * FROM t WHERE @p1 = dbo.tbl(@p2 + c1)` 查询。 Then E （ \@ p1） = \@ P1，e （ \@ p2） = \@ P2 + c1，TT （ \@ p1）是声明的返回数据类型 dbo.tbl，tt （ \@ p2）是 dbo.tbl 的声明的参数数据类型。  
   
- 如果\@p 不包含在步骤2开头列出的任何表达式中，则类型推导算法将确定 e\@（p）是包含\@p 的最大标量表达式，而类型推导算法不会计算 e （\@\@p）的目标数据类型 TT （p）。 例如，如果查询为`@p + 2` SELECT，则 E （\@p） = \@p + 2，并且没有 TT （\@p）。  
+ 如果 \@ p 不包含在步骤2开头列出的任何表达式中，则类型推导算法将确定 e （ \@ p）是包含 p 的最大标量表达式 \@ ，而类型推导算法不会计算 e （p）的目标数据类型 TT （ \@ p） \@ 。 例如，如果查询为 SELECT， `@p + 2` 则 E （ \@ p） = \@ p + 2，并且没有 TT （ \@ p）。  
   
  **步骤 3**  
   
- 现在已标识 E\@（p）和 TT\@（p），类型推导算法使用以下两种方法之一为\@p 推导数据类型：  
+ 现在 \@ 已标识 E （p）和 TT （ \@ p），类型推导算法使用 \@ 以下两种方法之一为 p 推导数据类型：  
   
 -   简单推断  
   
-     如果 E （\@p） = \@p 和 TT （\@p）存在，即，如果\@p 直接成为步骤2开头列出的表达式之一的参数，则类型推导算法会将\@p 的数据类型推导为 TT （\@p）。 例如：  
+     如果 E （ \@ p） = \@ p 和 TT （ \@ p）存在，即，如果 \@ p 直接成为步骤2开头列出的表达式之一的参数，则类型推导算法会将 p 的数据类型推导 \@ 为 TT （ \@ p）。 例如：  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
     ```  
   
-     \@P1、 \@p2 和\@p3 的数据类型将为 c1 的数据类型、dbo.tbl 的返回数据类型，以及 dbo.tbl 的参数数据类型。  
+     \@P1、 \@ p2 和 p3 的数据类型 \@ 将为 c1 的数据类型、dbo.tbl 的返回数据类型，以及 dbo.tbl 的参数数据类型。  
   
-     一种特殊情况，如果\@p 是、>、 \< \<= 或 >= 运算符的参数，则简单的扣缴规则将不适用。 类型推断算法使用下一节介绍的一般推断规则。 例如，如果 c1 是 char(30) 数据类型的列，请考虑下面两个查询：  
+     一种特殊情况，如果 \@ p 是 \< 、>、 \< = 或 >= 运算符的参数，则简单的扣缴规则将不适用。 类型推断算法使用下一节介绍的一般推断规则。 例如，如果 c1 是 char(30) 数据类型的列，请考虑下面两个查询：  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p  
     SELECT * FROM t WHERE c1 > @p  
     ```  
   
-     在第一种情况下，类型推导算法推导**char （30）** 作为\@p 的数据类型，如本主题前面所述。 在第二种情况下，类型推导算法将根据下一节中的常规扣缴规则推导**varchar （8000）** 。  
+     在第一种情况下，类型推导算法推导**char （30）** 作为 p 的数据类型， \@ 如本主题前面所述。 在第二种情况下，类型推导算法将根据下一节中的常规扣缴规则推导**varchar （8000）** 。  
   
 -   一般推断  
   
@@ -215,7 +215,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
 ### <a name="selection-criteria"></a>选择条件  
  在候选数据类型中，将拒绝使查询无效的任何数据类型。 在其余候选数据类型中，类型推断算法将根据以下规则选择一种数据类型。  
   
-1.  选择在 E （\@p）中生成最小数量的隐式转换的数据类型。 如果特定\@的数据类型为 e （p）生成了不同于 TT （\@p）的数据类型，则类型推导算法会将此数据类型视为从 E （\@p）到 TT （\@p）的数据类型的额外隐式转换。  
+1.  选择在 E （p）中生成最小数量的隐式转换的数据类型 \@ 。 如果特定的数据类型为 E （p）生成了 \@ 不同于 TT （p）的数据类型 \@ ，则类型推导算法会将此数据类型视为从 E （ \@ p）到 TT （p）的数据类型的额外隐式转换 \@ 。  
   
      例如：  
   
@@ -223,7 +223,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  
     ```  
   
-     在这种情况下，\@E （p） Col_Int \@+ p，TT\@（p）是**Int**。**int**为\@p 选择 int，因为它不生成隐式转换。 选择任何其他数据类型都会产生至少一次隐式转换。  
+     在这种情况下，E （ \@ p） Col_Int + \@ p，TT （ \@ p）是**Int**。为 p 选择**int** ， \@ 因为它不生成隐式转换。 选择任何其他数据类型都会产生至少一次隐式转换。  
   
 2.  如果多种数据类型都产生次数最少的转换，则使用具有较高优先级的数据类型。 例如  
   
@@ -231,9 +231,9 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
     ```  
   
-     在这种情况下， **int**和**smallint**产生一个转换。 每种其他数据类型产生多次转换。 由于**int**优先于**smallint**，因此**int**用于\@p。 有关数据类型优先级的详细信息，请参阅[数据类型优先级 &#40;transact-sql&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
+     在这种情况下， **int**和**smallint**产生一个转换。 每种其他数据类型产生多次转换。 由于**int**优先于**smallint**，因此**int**用于 \@ p。 有关数据类型优先级的详细信息，请参阅[数据类型优先级 &#40;transact-sql&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
-     只有在每种数据类型之间的隐式转换次数相同（按照规则 1）并且某种数据类型具有最高优先级时，此规则才适用。 如果没有隐式转换，数据类型推断将失败并发生错误。 例如，在查询`SELECT @p FROM t`中，数据类型推导失败，因为 p 的任何\@数据类型都是相同的。 例如，没有从**int**到**xml**的隐式转换。  
+     只有在每种数据类型之间的隐式转换次数相同（按照规则 1）并且某种数据类型具有最高优先级时，此规则才适用。 如果没有隐式转换，数据类型推断将失败并发生错误。 例如，在查询中 `SELECT @p FROM t` ，数据类型推导失败，因为 p 的任何数据类型 \@ 都是相同的。 例如，没有从**int**到**xml**的隐式转换。  
   
 3.  如果两个相似的数据类型在规则1下关联（例如**varchar （8000）** 和**varchar （max））**，则选择较小的数据类型（**varchar （8000）**）。 同一原则适用于**nvarchar**和**varbinary**数据类型。  
   
@@ -247,12 +247,12 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     4.  任何其他转换。  
   
- 例如，对于查询`SELECT * FROM t WHERE [Col_varchar(30)] > @p`，选择**varchar （8000）** ，因为转换（a）是最佳的。 对于查询`SELECT * FROM t WHERE [Col_char(30)] > @p`，仍选择**varchar （8000）** ，因为它导致类型（b）转换，而另一个选择（如**varchar （4000）**）将导致类型（d）转换。  
+ 例如，对于查询 `SELECT * FROM t WHERE [Col_varchar(30)] > @p` ，选择**varchar （8000）** ，因为转换（a）是最佳的。 对于查询 `SELECT * FROM t WHERE [Col_char(30)] > @p` ，仍选择**varchar （8000）** ，因为它导致类型（b）转换，而另一个选择（如**varchar （4000）**）将导致类型（d）转换。  
   
- 作为最后一个示例，提供查询`SELECT NULL + @p`时，将为\@p 选择**int** ，因为这会导致类型（c）转换。  
+ 作为最后一个示例，提供查询时 `SELECT NULL + @p` ，将为 p 选择**int** ， \@ 因为这会导致类型（c）转换。  
   
 ## <a name="permissions"></a>权限  
- 要求具有执行 tsql 参数\@的权限。  
+ 要求具有执行 \@ tsql 参数的权限。  
   
 ## <a name="examples"></a>示例  
  以下示例返回一些信息，例如，未声明的 `@id` 和 `@name` 参数的预期数据类型。  

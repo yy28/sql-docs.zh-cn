@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_droplinkedsrvlogin
 ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ff6abaef6fc19a1bc646aab7ff30e4fcf6e13380
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3040f585e10816d4f8664566be8af1523048db88
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097657"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830119"
 ---
 # <a name="sp_droplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @rmtsrvname = ] 'rmtsrvname'`应用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录映射的链接服务器的名称。 *rmtsrvname*的值为**sysname**，无默认值。 *rmtsrvname*必须已存在。  
+`[ @rmtsrvname = ] 'rmtsrvname'`应用登录映射的链接服务器的名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *rmtsrvname*的值为**sysname**，无默认值。 *rmtsrvname*必须已存在。  
   
-`[ @locallogin = ] 'locallogin'`本地服务器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上的登录名，它具有到链接服务器的映射*rmtsrvname*。 *locallogin*的值为**sysname**，无默认值。 必须已经存在*locallogin*到*rmtsrvname*的映射。 如果为 NULL，则会删除**sp_addlinkedserver**创建的默认映射，该映射将本地服务器上的所有登录名映射到链接服务器上的登录名。  
+`[ @locallogin = ] 'locallogin'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本地服务器上的登录名，它具有到链接服务器的映射*rmtsrvname*。 *locallogin*的值为**sysname**，无默认值。 必须已经存在*locallogin*到*rmtsrvname*的映射。 如果为 NULL，则会删除**sp_addlinkedserver**创建的默认映射，该映射将本地服务器上的所有登录名映射到链接服务器上的登录名。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

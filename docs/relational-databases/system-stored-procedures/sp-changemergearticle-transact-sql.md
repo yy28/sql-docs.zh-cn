@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergearticle
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 35d1ef721df6f67e4cd5c0f993458238394ac0e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6c59b4ba84981ff4cb1240d78e1d6d472be61289
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68104514"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829634"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_changemergearticle [ @publication = ] 'publication'
   
  下表说明项目的属性和这些属性的值。  
   
-|属性|值|说明|  
+|Property|值|说明|  
 |--------------|------------|-----------------|  
 |**allow_interactive_resolver**|**true**|允许对项目使用交互式冲突解决程序。|  
 ||**false**|不允许对项目使用交互式冲突解决程序。|  
@@ -64,10 +64,10 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**column_tracking**|**true**|打开列级跟踪。 仅适用于表项目。<br /><br /> 注意：发布的列超过246列时，不能使用列级跟踪。|  
 ||**false**|关闭列级跟踪，保留行级冲突检测。 仅适用于表项目。|  
 |**compensate_for_errors**|**true**|同步过程中发生错误时执行补救措施。 有关详细信息，请参阅[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。|  
-||**false**|不执行补救措施，这是默认行为。 有关详细信息，请参阅[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。<br /><br /> ** \* \*重要\*提示**尽管受影响的行中的数据可能看起来不收敛，但一旦你解决了任何错误，就可以应用更改，并且数据将聚合在一起。 如果某个项目的源表已在另一个发布中发布，则这两个项目的*compensate_for_errors*的值必须相同。|  
+||**false**|不执行补救措施，这是默认行为。 有关详细信息，请参阅[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。<br /><br /> ** \* \* 重要 \* 提示 \* ：** 尽管受影响的行中的数据可能看起来不收敛，但一旦你解决了任何错误，就可以应用更改，并且数据将聚合在一起。 如果某个项目的源表已在另一个发布中发布，则这两个项目的*compensate_for_errors*的值必须相同。|  
 |**creation_script**||用于在订阅数据库中创建项目的可选项目架构脚本的路径和名称。|  
 |**delete_tracking**|**true**|复制 DELETE 语句，这是默认行为。|  
-||**false**|不复制 DELETE 语句。<br /><br /> ** \* \*重要\*提示**将**delete_tracking**设置为**false**会导致非收敛性，需要手动删除删除的行。|  
+||**false**|不复制 DELETE 语句。<br /><br /> ** \* \* 重要 \* 的 \* **设置**delete_tracking**为**false**会导致非收敛性，需要手动删除删除的行。|  
 |**2008**||项目的说明项。|  
 |**destination_owner**||订阅数据库中对象的所有者的名称（如果不是**dbo**）。|  
 |**identity_range**||**用于指定**在分配新标识值时要使用的范围大小（如果项目的**identityrangemanagementoption**设置为**auto**或**auto_identity_range**设置为**true**。 仅适用于表项目。 有关详细信息，请参阅[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)的 "合并复制" 部分。|  
@@ -118,28 +118,28 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x4000000**|复制**xml**列的索引。|  
 ||**0x8000000**|创建订阅服务器中尚不存在的任何架构。|  
 ||**0x10000000**|将订阅服务器上的**xml**列转换为**ntext** 。|  
-||**0x20000000**|将中[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]引入的大型对象数据类型（ [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]**nvarchar （max）**、 **varchar （max）** 和**varbinary （max**））转换为支持的数据类型。|  
+||**0x20000000**|将中引入的大型对象数据类型（**nvarchar （max）**、 **varchar （max）** 和**varbinary （max**））转换 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 为支持的数据类型 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 。|  
 ||**0x40000000**|复制权限。|  
 ||**0x80000000**|尝试删除不属于发布一部分的任何对象的依赖项。|  
-||**0x100000000**|如果 FILESTREAM 属性是在**varbinary （max）** 列上指定的，则使用此选项复制该属性。 如果要将表复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 订阅服务器，请勿指定此选项。 不管如何设置此架构选项， [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]都不支持将包含 FILESTREAM 列的表复制到订阅服务器。 请参阅相关选项**0x800000000**。|  
-||**0x200000000**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]将中引入的日期和时间数据类型（**date**、 **time**、 **datetimeoffset**和 datetime2）转换为早期版本支持的数据类型。 **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+||**0x100000000**|如果 FILESTREAM 属性是在**varbinary （max）** 列上指定的，则使用此选项复制该属性。 如果要将表复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 订阅服务器，请勿指定此选项。 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]不管如何设置此架构选项，都不支持将包含 FILESTREAM 列的表复制到订阅服务器。 请参阅相关选项**0x800000000**。|  
+||**0x200000000**|将中引入的日期和时间数据类型（**date**、 **time**、 **datetimeoffset**和**datetime2**）转换 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 为早期版本支持的数据类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 ||**0x400000000**|复制数据和索引的压缩选项。 有关详细信息，请参阅 [Data Compression](../../relational-databases/data-compression/data-compression.md)。|  
 ||**0x800000000**|设置此选项可将 FILESTREAM 数据存储到订阅服务器上其自身的文件组中。 如果不设置此选项，FILESTREAM 数据将存储在默认文件组中。 由于复制操作不创建文件组，因此如果您设置此选项，您必须先创建文件组，然后在订阅服务器上应用快照。 有关如何在应用快照之前创建对象的详细信息，请参阅[在应用快照之前和之后执行脚本](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。<br /><br /> 请参阅相关选项**0x100000000**。|  
-||**0x1000000000**|将公共语言运行时（CLR）用户定义类型（Udt）转换为**varbinary （max）** ，以使类型为 UDT 的列能够复制到运行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的订阅服务器。|  
-||**0x2000000000**|将**hierarchyid**数据类型转换为**varbinary （max）** ，以便可以将**hierarchyid**类型的列复制到运行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的订阅服务器。 有关如何在复制的表中使用**hierarchyid**列的详细信息，请参阅[hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)。|  
+||**0x1000000000**|将公共语言运行时（CLR）用户定义类型（Udt）转换为**varbinary （max）** ，以使类型为 UDT 的列能够复制到运行的订阅服务器 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。|  
+||**0x2000000000**|将**hierarchyid**数据类型转换为**varbinary （max）** ，以便可以将**hierarchyid**类型的列复制到运行的订阅服务器 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。 有关如何在复制的表中使用**hierarchyid**列的详细信息，请参阅[hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)。|  
 ||**0x4000000000**|复制表的任何筛选的索引。 有关筛选索引的详细信息，请参阅[创建筛选索引](../../relational-databases/indexes/create-filtered-indexes.md)。|  
-||**0x8000000000**|将**geography**和**geometry**数据类型转换为**varbinary （max）** ，以便可以将这些类型的列复制到运行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的订阅服务器。|  
+||**0x8000000000**|将**geography**和**geometry**数据类型转换为**varbinary （max）** ，以便可以将这些类型的列复制到运行的订阅服务器 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。|  
 ||**0x10000000000**|复制**地域**和**几何图形**类型的列上的索引。|  
 ||Null|系统自动为项目生成一个有效的架构选项。|  
-|**status**|**正在**|用于发布表的初始处理脚本已运行。|  
+|**status**|**active**|用于发布表的初始处理脚本已运行。|  
 ||**unsynced**|用于发布表的初始处理脚本在下一次运行快照代理时运行。|  
-|**stream_blob_columns**|**true**|复制二进制大型对象列时使用数据流优化。 但是，某些合并复制功能（如逻辑记录）仍可阻止使用流优化。 启用 FILESTREAM 时， *stream_blob_columns*设置为 true。 这使复制 FILESTREAM 数据的性能达到最佳并减少内存使用率。 若要强制 FILESTREAM 表项目不使用 blob 流式处理，请将*stream_blob_columns*设置为 false。<br /><br /> ** \* \*重要\*提示**在同步过程中，启用此内存优化可能会损害合并代理的性能。 仅当复制包含数兆字节数据的列时，才应使用此选项。|  
+|**stream_blob_columns**|**true**|复制二进制大型对象列时使用数据流优化。 但是，某些合并复制功能（如逻辑记录）仍可阻止使用流优化。 启用 FILESTREAM 时， *stream_blob_columns*设置为 true。 这使复制 FILESTREAM 数据的性能达到最佳并减少内存使用率。 若要强制 FILESTREAM 表项目不使用 blob 流式处理，请将*stream_blob_columns*设置为 false。<br /><br /> ** \* \* 重要 \* 说明 \* **在同步过程中，启用此内存优化可能会影响合并代理的性能。 仅当复制包含数兆字节数据的列时，才应使用此选项。|  
 ||**false**|复制二进制大型对象列时不使用优化。|  
 |**subscriber_upload_options**|**0**|不限制在包含客户端订阅的订阅服务器上进行更新；将更改上载到发布服务器。 更改此属性可能需要重新初始化现有的订阅服务器。|  
 ||**1**|允许在包含客户端订阅的订阅服务器上进行更改，但不将更改上载到发布服务器。|  
 ||**2**|不允许在包含客户端订阅的订阅服务器上进行更改。|  
-|**subset_filterclause**||用于指定水平筛选的 WHERE 子句。 仅适用于表项目。<br /><br /> ** \* \*重要\*提示**出于性能原因，我们建议不要将函数应用于参数化行筛选器子句（如）中的`LEFT([MyColumn]) = SUSER_SNAME()`列名称。 如果在筛选子句中使用[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)并重写 HOST_NAME 值，则可能需要使用[convert](../../t-sql/functions/cast-and-convert-transact-sql.md)转换数据类型。 有关此情况的最佳实践的详细信息，请参阅[参数化行筛选器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)中的 "重写 HOST_NAME （）值" 部分。|  
-|**阀**||用于运行[!INCLUDE[ssEW](../../includes/ssew-md.md)]或早期版本的的订阅服务器的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]百分比值。 **阈值**控制合并代理分配新标识范围的时间。 如果使用了在阈值中指定的百分比值，合并代理将创建新的标识范围。 当**identityrangemanagementoption**设置为**auto**或**auto_identity_range**设置为**true**时使用。 仅适用于表项目。 有关详细信息，请参阅[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)的 "合并复制" 部分。|  
+|**subset_filterclause**||用于指定水平筛选的 WHERE 子句。 仅适用于表项目。<br /><br /> 由于性能原因，建议不要对参数化行筛选器子句（如）中的列名应用函数。 ** \* \* \* \* ** `LEFT([MyColumn]) = SUSER_SNAME()` 如果在筛选子句中使用[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)并重写 HOST_NAME 值，则可能需要使用[convert](../../t-sql/functions/cast-and-convert-transact-sql.md)转换数据类型。 有关此情况的最佳实践的详细信息，请参阅[参数化行筛选器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)中的 "重写 HOST_NAME （）值" 部分。|  
+|**阀**||用于运行 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 或早期版本的的订阅服务器的百分比值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 **阈值**控制合并代理分配新标识范围的时间。 如果使用了在阈值中指定的百分比值，合并代理将创建新的标识范围。 当**identityrangemanagementoption**设置为**auto**或**auto_identity_range**设置为**true**时使用。 仅适用于表项目。 有关详细信息，请参阅[复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)的 "合并复制" 部分。|  
 |**verify_resolver_signature**|**1**|通过验证自定义冲突解决程序的数字签名来确定该签名是否来自可信来源。|  
 ||**0**|不通过验证自定义冲突解决程序的数字签名来确定该签名是否来自可信来源。|  
 |NULL（默认值）||返回*属性*的支持值的列表。|  

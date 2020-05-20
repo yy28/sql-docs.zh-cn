@@ -19,15 +19,15 @@ helpviewer_keywords:
 - PolyBase management views
 - dm_exec_compute_nodes management view
 ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 44664805dc9b728ecbd48acbf38c4565601c631a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8b7148904df1a9c59bb6b12fd521945b70e2f4d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71326148"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830651"
 ---
 # <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "71326148"
 |列名|数据类型|说明|范围|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|与节点关联的唯一数字 id。 此视图的键。|在扩展群集中唯一，而不考虑类型。|  
-|type|**nvarchar(32)**|节点的类型。|"COMPUTE"、"HEAD"|  
+|类型|**nvarchar(32)**|节点的类型。|"COMPUTE"、"HEAD"|  
 |name|**nvarchar(32)**|节点的逻辑名称。|任何适当长度的字符串。|  
 |address|**nvarchar(32)**|此节点的 IP 地址。|IP 地址范围|  
   

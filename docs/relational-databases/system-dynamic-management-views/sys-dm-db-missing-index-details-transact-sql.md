@@ -18,15 +18,15 @@ helpviewer_keywords:
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_details dynamic management view
 - sys.dm_db_missing_index_details dynamic management view
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8218ff5c92613b0f152c699a81314cb6a3530885
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 77b3faae57764a936e6115d22ac00ca855d3acb9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68263791"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829431"
 ---
 # <a name="sysdm_db_missing_index_details-transact-sql"></a>sys.dm_db_missing_index_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "68263791"
 |**index_handle**|**int**|标识特定的缺失索引。 该标识符在服务器中是唯一的。 **index_handle**是此表的键。|  
 |**database_id**|**smallint**|标识带有缺失索引的表所驻留的数据库。|  
 |**object_id**|**int**|标识索引缺失的表。|  
-|**equality_columns**|**nvarchar(4000)**|构成相等谓词的列的逗号分隔列表，谓词的形式如下：<br /><br /> *表列* =*constant_value*|  
-|**inequality_columns**|**nvarchar(4000)**|构成不等谓词的列的逗号分隔列表，例如以下形式的谓词：<br /><br /> *表列* > *constant_value*<br /><br /> “=”之外的任何比较运算符都表示不相等。|  
+|**equality_columns**|**nvarchar(4000)**|构成相等谓词的列的逗号分隔列表，谓词的形式如下：<br /><br /> *表列*  =*constant_value*|  
+|**inequality_columns**|**nvarchar(4000)**|构成不等谓词的列的逗号分隔列表，例如以下形式的谓词：<br /><br /> *表列*  > *constant_value*<br /><br /> “=”之外的任何比较运算符都表示不相等。|  
 |**included_columns**|**nvarchar(4000)**|用于查询的涵盖列的逗号分隔列表。 有关覆盖列或包含列的详细信息，请参阅[创建包含列的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。<br /><br /> 对于内存优化索引（哈希和内存优化非聚集），忽略**included_columns**。 每个内存优化索引中均包含表的所有列。|  
 |**损益**|**nvarchar(4000)**|索引缺失的表的名称。|  
   
@@ -64,8 +64,8 @@ ms.locfileid: "68263791"
   
 ## <a name="permissions"></a>权限
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要权限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层上，需要`VIEW DATABASE STATE`具有数据库中的权限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
 
 ## <a name="see-also"></a>另请参阅  
  [sys. dm_db_missing_index_columns &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   

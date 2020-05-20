@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_semantic_register_language_statistics_db
 ms.assetid: bef1b104-5a44-4327-9ae4-45eae3000f7e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 59cf70574a73827887542221f556e65e46090395
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 263ea7b2bb0da7822554bbdcad934ef20ec54d3b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124214"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830025"
 ---
 # <a name="sp_fulltext_semantic_register_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ GO
 ```  
   
 ##  <a name="arguments"></a><a name="Arguments"></a>形参  
- [ @dbname = ]"*database_name*"  
+ [ @dbname =] "*database_name*"  
  要为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的当前实例注册的语义语言统计数据库的名称。 必须已经附加数据库。 *database_name* **sysname**，并且不能为 NULL。  
   
 ## <a name="return-code-value"></a>返回代码值  
@@ -73,7 +73,7 @@ GO
  有关详细信息，请参阅 [安装和配置语义搜索](../../relational-databases/search/install-and-configure-semantic-search.md)。  
   
 ## <a name="metadata"></a>元数据  
- 有关实例上安装的语义语言统计信息数据库的信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请查询目录视图[Fulltext_semantic_language_statistics_database sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)。  
+ 有关实例上安装的语义语言统计信息数据库的信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请查询目录视图[fulltext_semantic_language_statistics_database Sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)。  
   
 ## <a name="security"></a>安全性  
   

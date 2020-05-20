@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_depends
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9ee6b9df37e61dcb4eed45bc11431d49b160cf87
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9076d4bdda58a851e358371375b71f8934a945fe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053101"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830225"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,22 +63,22 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="result-sets"></a>结果集  
  **sp_depends**显示两个结果集。  
   
- 以下结果集显示* \<对象>* 所依赖的对象。  
+ 以下结果集显示* \< 对象>* 所依赖的对象。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|name |**nvarchar （257** **）**|存在依赖项的项名称。|  
-|**type**|**nvarchar （16）**|项的类型。|  
-|**时更新**|**nvarchar （7）**|是否更新项。|  
-|**已选定**|**nvarchar(8)**|项是否用于 SELECT 语句。|  
-|**该列**|**sysname**|存在依赖项的列或参数。|  
+|**name**|**nvarchar （257** **）**|存在依赖项的项名称。|  
+|type |**nvarchar （16）**|项的类型。|  
+|**已更新**|**nvarchar （7）**|是否更新项。|  
+|**选择**|**nvarchar(8)**|项是否用于 SELECT 语句。|  
+|**column**|**sysname**|存在依赖项的列或参数。|  
   
- 下面的结果集显示依赖于* \<对象>* 的对象。  
+ 下面的结果集显示依赖于* \< 对象>* 的对象。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|name |**nvarchar （257** **）**|存在依赖项的项名称。|  
-|**type**|**nvarchar （16）**|项的类型。|  
+|**name**|**nvarchar （257** **）**|存在依赖项的项名称。|  
+|type |**nvarchar （16）**|项的类型。|  
   
 ## <a name="permissions"></a>权限  
  要求 **公共** 角色具有成员身份。  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_detach_db
 - detaching databases [SQL Server]
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ec7758ad2f9443ad29f0da799e3f286612f95cab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 25d292ed7f45d921d2fc9eafbc1d2d5fe5912dbe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278182"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830221"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 `[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`指定在数据库分离操作过程中不会删除与所分离的数据库关联的全文索引文件。 *KeepFulltextIndexFile*的值为**nvarchar （10）** ，默认值为**true**。 如果*KeepFulltextIndexFile*为**false**，则将删除与数据库关联的所有全文索引文件和全文索引的元数据，除非该数据库是只读的。 如果为 NULL 或**true**，则保留与全文相关的元数据。  
   
 > [!IMPORTANT]
->  未来版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中将删除** \@keepfulltextindexfile**参数。 请不要在新的开发工作中使用此参数，并尽快修改当前仍在使用此参数的应用程序。  
+>  未来版本的中将删除** \@ keepfulltextindexfile**参数 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 请不要在新的开发工作中使用此参数，并尽快修改当前仍在使用此参数的应用程序。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -102,7 +102,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 
  在将数据库设置为 SINGLE_USER 之前，应验证 AUTO_UPDATE_STATISTICS_ASYNC 选项是否设置为 OFF。 在此选项设置为 ON 时，用于更新统计信息的后台线程将与数据库建立连接，您将无法以单用户模式访问数据库。 有关详细信息，请参阅[将数据库设置为单用户模式](../databases/set-a-database-to-single-user-mode.md)。
 
- 例如，下面`ALTER DATABASE`的语句在所有当前用户从数据库[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]断开连接后，获得对数据库的独占访问权限。  
+ 例如，下面的 `ALTER DATABASE` 语句在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 所有当前用户从数据库断开连接后，获得对数据库的独占访问权限。  
   
 ```  
 USE master;  
@@ -121,7 +121,7 @@ GO
  要求具有**sysadmin**固定服务器角色的成员身份或数据库**db_owner**角色的成员身份。  
   
 ## <a name="examples"></a>示例  
- 下面的示例将[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] *skipchecks*设置为 true 的数据库进行分离。  
+ 下面的示例将 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] *skipchecks*设置为 true 的数据库进行分离。  
   
 ```  
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
@@ -136,7 +136,7 @@ exec sp_detach_db @dbname='AdventureWorks2012'
   
 ## <a name="see-also"></a>另请参阅  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [数据库分离和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [分离数据库](../../relational-databases/databases/detach-a-database.md)  
   

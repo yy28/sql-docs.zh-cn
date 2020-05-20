@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changeqreader_agent
 ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b636eb929d74aec7b0f3555ce511372f6592c5b0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2258510d8e28230d238d4187cb3d454078d60842
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68099141"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829551"
 ---
 # <a name="sp_changeqreader_agent-transact-sql"></a>sp_changeqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>参数  
-`[ @job_login = ] 'job_login'`用于运行代理的[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的登录名。 *job_login*为**nvarchar （257）**，默认值为 NULL。  
+`[ @job_login = ] 'job_login'`用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 运行代理的 Windows 帐户的登录名。 *job_login*为**nvarchar （257）**，默认值为 NULL。  
   
 `[ @job_password = ] 'job_password'`运行代理所用的 Windows 帐户的密码。 *job_password*的默认值为**sysname**，默认值为 NULL。  
   

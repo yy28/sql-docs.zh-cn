@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.types catalog view
 - table-valued parameters,sys.types
 ms.assetid: a5dbc842-71a0-4f62-b5e0-f560a99b7f8c
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff4cd58fcd7d11679cf410c9f379b101d42ce4bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc3072c78ed74324345832daeb709fc6090b8763
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095573"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831286"
 ---
 # <a name="systypes-transact-sql"></a>sys.types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,9 +35,9 @@ ms.locfileid: "68095573"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|name |**sysname**|类型的名称。 在架构内是唯一的。|  
+|**name**|**sysname**|类型的名称。 在架构内是唯一的。|  
 |**system_type_id**|**tinyint**|类型的内部系统类型的 ID。|  
-|**user_type_id**|**int**|类型的 ID。 在该数据库中是唯一的。 对于系统数据类型， **user_type_id** = **system_type_id**。|  
+|**user_type_id**|**int**|类型的 ID。 在该数据库中是唯一的。 对于系统数据类型， **user_type_id**  =  **system_type_id**。|  
 |**schema_id**|**int**|类型所属架构的 ID。|  
 |**principal_id**|**int**|如果个体所有者与架构所有者不同，则表示该所有者的 ID。 默认情况下，架构包含的对象由架构所有者拥有。 不过，通过使用 ALTER AUTHORIZATION 语句更改所有权可以指定备用所有者。<br /><br /> 如果没有另外的个体所有者，则值为 NULL。|  
 |**max_length**|**smallint**|类型的最大长度（字节）。<br /><br /> -1 = 列数据类型为**varchar （max）**、 **nvarchar （max）**、 **varbinary （max）** 或**xml**。<br /><br /> 对于**text**列， **max_length**值将为16。|  

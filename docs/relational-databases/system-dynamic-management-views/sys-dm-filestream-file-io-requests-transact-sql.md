@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_file_io_requests catalog view
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4fb51b33655756d9c3c65dfcb5de3bae380ee9a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b7b44d76ad893775216e6566add3636603ea7dce
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67951038"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830621"
 ---
 # <a name="sysdm_filestream_file_io_requests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "67951038"
 |**request_id**|**int**|显示驱动程序分配给此请求的唯一请求 ID。 不可为 null。|  
 |**irp_id**|**int**|显示唯一 IRP ID。 该值用于标识与给定 IRP 相关的所有 I/O 请求。 不可为 null。|  
 |**handle_id**|**int**|指示命名空间句柄 ID。 这是 NSO 特定的标识符，并且在实例之间是唯一的。 不可为 null。|  
-|**client_thread_id**|**varbinary(8)**|显示发出请求的客户端应用程序的线程 ID。<br /><br /> ** \*警告\* \* **仅当客户端应用程序在与 SQL Server 相同的计算机上运行时，这才有意义。 当客户端应用程序远程运行时， **client_thread_id**显示代表远程客户端工作的某个系统进程的线程 id。<br /><br /> 可以为 Null。|  
+|**client_thread_id**|**varbinary(8)**|显示发出请求的客户端应用程序的线程 ID。<br /><br /> 警告：仅当客户端应用程序在与 SQL Server 相同的计算机上运行时，这才有意义。 ** \* \* \* \* ** 当客户端应用程序远程运行时， **client_thread_id**显示代表远程客户端工作的某个系统进程的线程 id。<br /><br /> 可以为 Null。|  
 |**client_process_id**|**varbinary(8)**|如果客户端应用程序在 SQL Server 所在的同一台计算机上运行，则显示客户端应用程序的进程 ID。 对于远程客户端，这将显示代表客户端应用程序工作的系统进程 ID。 可以为 Null。|  
 |**handle_context_address**|**varbinary(8)**|显示与客户端的句柄关联的内部 NSO 结构的地址。 可以为 Null。|  
 |**filestream_transaction_id**|**varbinary(128)**|显示与给定句柄相关联的事务的 ID 以及与该句柄相关联的所有请求。 它是**get_filestream_transaction_context**函数返回的值。 可以为 Null。|  

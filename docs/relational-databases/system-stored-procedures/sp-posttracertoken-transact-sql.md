@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_posttracertoken
 ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7629c25264f0b45d68e29e947b1d5c40d02707e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 42401f5d99d7cf89563a0088260ab21e9df9fd67
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72041180"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831001"
 ---
 # <a name="sp_posttracertoken-transact-sql"></a>sp_posttracertoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_posttracertoken [ @publication = ] 'publication'
   
 `[ @tracer_token_id = ] _tracer_token_id OUTPUT`插入的跟踪令牌的 ID。 *tracer_token_id*的默认值为**int** ，默认值为 NULL，它是一个 OUTPUT 参数。 此值可用于执行[sp_helptracertokenhistory &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)或[sp_deletetracertokenhistory &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) ，而无需首先执行[sp_helptracertokens &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)。  
   
-`[ @publisher = ] 'publisher'`指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*的**sysname**为，默认值为 NULL，不应为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器指定。  
+`[ @publisher = ] 'publisher'`指定一个非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*的**sysname**为，默认值为 NULL，不应为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器指定。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  

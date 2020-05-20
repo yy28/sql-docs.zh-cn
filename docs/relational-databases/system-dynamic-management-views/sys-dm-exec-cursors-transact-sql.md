@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_cursors dynamic management function
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1ebffa740abe55a176c8577f754cf1a18db65022
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 79959d61b1753d833523e0618a41eef89dcb5e58
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097841"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830636"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,13 +59,13 @@ dm_exec_cursors (session_id | 0 )
 |**is_open**|**bit**|指定游标是否处于打开状态。|  
 |**is_async_population**|**bit**|指定后台线程是否仍异步填充 KEYSET 或 STATIC 游标。|  
 |**is_close_on_commit**|**bit**|指定是否使用 CURSOR_CLOSE_ON_COMMIT 声明游标。<br /><br /> 1 = 事务结束时将关闭游标。|  
-|**fetch_status**|**int**|返回游标的上一提取状态。 这是最后返回的 @@FETCH_STATUS值。|  
+|**fetch_status**|**int**|返回游标的上一提取状态。 这是最后返回的 @ @FETCH_STATUS 值。|  
 |**fetch_buffer_size**|**int**|返回有关提取缓冲区大小的信息。<br /><br /> 1 = Transact-SQL 游标。 对于 API 游标，可以将该参数设置为更高的值。|  
 |**fetch_buffer_start**|**int**|对于 FAST_FORWARD 和 DYNAMIC 游标，如果游标未打开或被放在第一行之前，则该参数返回 0。 否则，返回 -1。<br /><br /> 对于 STATIC 和 KEYSET 游标，如果游标未打开，则该参数返回 0；如果游标放在最后一行之外，则该参数返回 -1。<br /><br /> 在其他情况下，该参数返回游标所在的行号。|  
 |**ansi_position**|**int**|游标在提取缓冲区中的位置。|  
 |**worker_time**|**bigint**|辅助线程执行此游标所用的时间（毫秒）。|  
-|**reads**|**bigint**|游标所执行的读取次数。|  
-|**Writes**|**bigint**|游标所执行的写入次数。|  
+|**内容**|**bigint**|游标所执行的读取次数。|  
+|**写**|**bigint**|游标所执行的写入次数。|  
 |**dormant_duration**|**bigint**|自上次对此游标启动查询（打开或提取）以来所经过的时间（毫秒）。|  
   
 ## <a name="permissions"></a>权限  
@@ -74,14 +74,14 @@ dm_exec_cursors (session_id | 0 )
 ## <a name="remarks"></a>备注  
  下表提供了有关游标声明接口的信息，并列出了这些属性列的可能值。  
   
-|属性|说明|  
+|Property|描述|  
 |--------------|-----------------|  
 |API|使用一个数据访问 API（ODBC、OLEDB）声明游标。|  
 |TSQL|使用 Transact-SQL DECLARE CURSOR 语法声明游标。|  
   
  下表提供了有关游标类型的信息，并列出了这些属性列的可能值。  
   
-|类型|说明|  
+|类型|描述|  
 |----------|-----------------|  
 |Keyset|将游标声明为键集。|  
 |动态|将游标声明为动态。|  
@@ -101,7 +101,7 @@ dm_exec_cursors (session_id | 0 )
 |范围|说明|  
 |-----------|-----------------|  
 |本地|指定该游标的范围对在其中创建它的批处理、存储过程或触发器是局部的。|  
-|Global|指定该游标范围对连接是全局的。|  
+|全球|指定该游标范围对连接是全局的。|  
   
 ## <a name="examples"></a>示例  
   

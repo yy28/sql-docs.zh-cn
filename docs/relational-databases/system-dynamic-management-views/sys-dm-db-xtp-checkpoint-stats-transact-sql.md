@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_checkpoint_stats dynamic management view
 ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84cbfafdba3bca9b06f250ed9996f0a87e71a18c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c93cc5f34d86e15645b4d53c02244e2705bbeda5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68026865"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830823"
 ---
 # <a name="sysdm_db_xtp_checkpoint_stats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]与更新的版本有很大差异，在[SQL Server 2014](#bkmk_2014)的主题中对此进行了深入讨论。**
   
 ## <a name="sssql15-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]及更高版本  
- 下表对中`sys.dm_db_xtp_checkpoint_stats`的列进行**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** 了说明，从开始。  
+ 下表对中的列进行了说明 `sys.dm_db_xtp_checkpoint_stats` ，从开始 **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** 。  
   
 |列名称|类型|说明|  
 |-----------------|----------|-----------------|  
 |last_lsn_processed|**bigint**|控制器观察到的最后一个 LSN。|  
 |end_of_log_lsn|**numeric （38）**|日志结尾的 LSN。|  
-|bytes_to_end_of_log|**bigint**|控制器处理的日志字节数，对应于和`last_lsn_processed` `end_of_log_lsn`之间的字节数。|  
+|bytes_to_end_of_log|**bigint**|控制器处理的日志字节数，对应于和之间的字节数 `last_lsn_processed` `end_of_log_lsn` 。|  
 |log_consumption_rate|**bigint**|控制器使用事务日志的速率（KB/秒）。|  
 |active_scan_time_in_ms|**bigint**|控制器主动扫描事务日志所花费的时间。|  
 |total_wait_time_in_ms|**bigint**|控制器在未扫描日志时的累积等待时间。|  
@@ -84,7 +84,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |bytes_of_large_data_serialized|**bigint**|已序列化的数据量。 |  
   
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- 下表对中`sys.dm_db_xtp_checkpoint_stats`的列进行**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 了说明。  
+ 下表对中的列 `sys.dm_db_xtp_checkpoint_stats` 进行了说明 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 。  
   
 |列名称|类型|说明|  
 |-----------------|----------|-----------------|  

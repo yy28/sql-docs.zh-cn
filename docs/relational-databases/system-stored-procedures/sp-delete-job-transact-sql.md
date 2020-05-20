@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_job
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fc733ca2b56ef9fa96be5ab2adf6486419e0e250
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 53bb2daacf55bf86693f2e083262083d7cbff22b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72306270"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831238"
 ---
 # <a name="sp_delete_job-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 `[ @delete_history = ] delete_history`指定是否删除作业的历史记录。 *delete_history*为**bit**，默认值为**1**。 当*delete_history*为**1**时，将删除该作业的作业历史记录。 当*delete_history*为**0**时，不会删除作业历史记录。  
   
- 请注意，在删除作业并且未删除历史记录时，作业的历史信息将不会显示在 " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理图形用户界面作业历史记录" 中，但该信息仍将驻留在**msdb**数据库的**sysjobhistory**表中。  
+ 请注意，在删除作业并且未删除历史记录时，作业的历史信息将不会显示在 " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理图形用户界面作业历史记录" 中，但该信息仍将驻留在**msdb**数据库的**sysjobhistory**表中。  
   
 `[ @delete_unused_schedule = ] delete_unused_schedule`指定是否删除附加到该作业的计划（如果它们未附加到任何其他作业）。 *delete_unused_schedule*为**bit**，默认值为**1**。 当*delete_unused_schedule*为**1**时，如果没有其他作业引用该计划，则将删除附加到此作业的计划。 如果*delete_unused_schedule*为**0**，则不会删除计划。  
   
@@ -64,9 +64,9 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  无  
   
 ## <a name="remarks"></a>备注  
- Originating_server 参数保留供内部使用。 ** \@**  
+ ** \@ Originating_server**参数保留供内部使用。  
   
- Delete_unused_schedule 参数通过自动删除未附加到任何作业的计划，提供与以前版本的 SQL Server 的向后兼容性。 ** \@** 请注意，此参数默认为向后兼容行为。 若要保留未附加到作业的计划，则必须提供值**0**作为** \@delete_unused_schedule**参数。  
+ ** \@ Delete_unused_schedule**参数通过自动删除未附加到任何作业的计划，提供与以前版本的 SQL Server 的向后兼容性。 请注意，此参数默认为向后兼容行为。 若要保留未附加到作业的计划，则必须提供值**0**作为** \@ delete_unused_schedule**参数。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为管理作业提供了一种图形化的简便方法，建议使用此方法来创建和管理作业基础结构。  
   

@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_describe_first_result_set catalog view
 ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 523a94718f123fab9d501de9497ca5ecc2b09c95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e1591c84de006308e96a3b8079ea05ef9ad6802b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097817"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830608"
 ---
 # <a name="sysdm_exec_describe_first_result_set-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  此动态管理函数将[!INCLUDE[tsql](../../includes/tsql-md.md)]语句作为参数，并描述该语句的第一个结果集的元数据。  
+  此动态管理函数将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句作为参数，并描述该语句的第一个结果集的元数据。  
   
  **sys. dm_exec_describe_first_result_set**具有与 dm_exec_describe_first_result_set_for_object sys.databases 相同的结果集定义[&#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md) ，与[sp_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)类似。  
   
@@ -46,10 +46,10 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
  *\@tsql*  
  一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 *Transact-sql SQL_batch*可以是**nvarchar （***n***）** 或**nvarchar （max）**。  
   
- *\@化*  
- \@params 为[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理参数提供声明字符串，类似于 sp_executesql。 参数可以为**nvarchar （n）** 或**nvarchar （max）**。  
+ *\@params*  
+ \@params 为批处理参数提供声明字符串 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，类似于 sp_executesql。 参数可以为**nvarchar （n）** 或**nvarchar （max）**。  
   
- 一个字符串，其中包含已嵌入到[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*中的所有参数的定义。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n*是表示附加参数定义的占位符。 必须在参数中\@定义 stmt 中指定的每个参数。 如果语句[!INCLUDE[tsql](../../includes/tsql-md.md)]中的语句或批处理不包含参数， \@则无需参数。 该参数的默认值为 NULL。  
+ 一个字符串，其中包含已嵌入到 _batch 中的所有参数的定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 *n*是表示附加参数定义的占位符。 必须在参数中定义 stmt 中指定的每个参数 \@ 。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中的语句或批处理不包含参数， \@ 则无需参数。 该参数的默认值为 NULL。  
   
  *\@include_browse_information*  
  如果设置为 1，则分析每个查询，就好像它在查询中使用 FOR BROWSE 选项。 将返回其他键列和源表信息。  
@@ -94,7 +94,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**ordinal_in_order_by_list**|**smallint**|此列在 ORDER BY 列表中的位置。 如果在 ORDER BY 列表中不显示该列或无法唯一确定 ORDER BY 列表，则返回 NULL。|  
 |**order_by_list_length**|**smallint**|ORDER BY 列表的长度。 如果没有 ORDER BY 列表，或者无法唯一确定 ORDER BY 列表，则返回 NULL。 请注意，对于 sp_describe_first_result_set 返回的所有行，该值是相同的。|  
 |**order_by_is_descending**|**smallint NULL**|如果 ordinal_in_order_by_list 不为 NULL，则 **order_by_is_descending** 列报告此列的 ORDER BY 子句的方向。 否则，它报告 NULL。|  
-|**error_number**|**int**|包含函数返回的错误号。 如果未发生错误，则该列包含 NULL。|  
+|error_number |**int**|包含函数返回的错误号。 如果未发生错误，则该列包含 NULL。|  
 |**error_severity**|**int**|包含函数返回的严重性。 如果未发生错误，则该列包含 NULL。|  
 |**error_state**|**int**|包含函数返回的 状态消息。 如果未发生错误，则该列包含 NULL。|  
 |**error_message**|**nvarchar （4096）**|包含函数返回的消息。 如果未发生错误，则该列包含 NULL。|  
@@ -119,11 +119,11 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |9|RECURSION|由于批处理包含递归语句，无法确定结果。|  
 |10|TEMPORARY_TABLE|由于批处理包含临时表且 **sp_describe_first_result_set** 不支持该临时表，无法确定结果。|  
 |11|UNSUPPORTED_STATEMENT|由于批处理包含 **sp_describe_first_result_set** 不支持的语句（例如，FETCH、REVERT 等），无法确定结果。|  
-|12|OBJECT_TYPE_NOT_SUPPORTED|不\@支持传递给函数的 object_id （即，不是存储过程）|  
-|13|OBJECT_DOES_NOT_EXIST|在\@系统目录中找不到传递给函数的 object_id。|  
+|12|OBJECT_TYPE_NOT_SUPPORTED|\@不支持传递给函数的 object_id （即，不是存储过程）|  
+|13|OBJECT_DOES_NOT_EXIST|\@在系统目录中找不到传递给函数的 object_id。|  
   
 ## <a name="permissions"></a>权限  
- 要求具有执行 tsql 参数\@的权限。  
+ 要求具有执行 \@ tsql 参数的权限。  
   
 ## <a name="examples"></a>示例  
  本主题中的其他示例[sp_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)可以改编为使用**sys. dm_exec_describe_first_result_set**。  

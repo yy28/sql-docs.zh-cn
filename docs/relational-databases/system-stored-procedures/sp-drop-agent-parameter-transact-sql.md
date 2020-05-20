@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_drop_agent_parameter
 ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8356ee01b0c14a9cb87542d750a93ea537fac5cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ce01a218fd2185c5904baf41014bc0c7caa5ec25
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016544"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830199"
 ---
 # <a name="sp_drop_agent_parameter-transact-sql"></a>sp_drop_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
 ## <a name="arguments"></a>参数  
 `[ @profile_id = ] profile_id`要删除其参数的配置文件的 ID。 *profile_id*为**int**，没有默认值。  
   
-`[ @parameter_name = ] 'parameter_name'`要删除的参数的名称。 *parameter_name*的默认值为**sysname**，默认**%** 值为。 如果**%** 为，则删除指定配置文件的所有参数。  
+`[ @parameter_name = ] 'parameter_name'`要删除的参数的名称。 *parameter_name*的默认值为**sysname**，默认值为 **%** 。 如果为 **%** ，则删除指定配置文件的所有参数。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  

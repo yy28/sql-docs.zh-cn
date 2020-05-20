@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_create_collection_set
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e859ed97afdc3dfbb4e39a93b8691d044ceca37d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3998211b12b942df15ebb4e7978c1e989486e013
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032642"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830946"
 ---
 # <a name="sp_syscollector_create_collection_set-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ sp_syscollector_create_collection_set
   
 `[ @days_until_expiration = ] days_until_expiration`收集的数据保存在管理数据仓库中的天数。 *days_until_expiration*为**smallint** ，默认值为730（两年）。 *days_until_expiration*必须是0或正整数。  
   
-`[ @proxy_id = ] proxy_id`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理的代理帐户的唯一标识符。 *proxy_id*为**int** ，默认值为 NULL。 如果已指定，则*proxy_name*必须为 NULL。 若要获取*proxy_id*，请查询 sysproxies 系统表。 dc_admin 固定数据库角色必须拥有访问代理的权限。 有关详细信息，请参阅[创建 SQL Server 代理代理](../../ssms/agent/create-a-sql-server-agent-proxy.md)。  
+`[ @proxy_id = ] proxy_id`代理的代理帐户的唯一标识符 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *proxy_id*为**int** ，默认值为 NULL。 如果已指定，则*proxy_name*必须为 NULL。 若要获取*proxy_id*，请查询 sysproxies 系统表。 dc_admin 固定数据库角色必须拥有访问代理的权限。 有关详细信息，请参阅[创建 SQL Server 代理代理](../../ssms/agent/create-a-sql-server-agent-proxy.md)。  
   
 `[ @proxy_name = ] 'proxy_name'`代理帐户的名称。 *proxy_name*的默认值为 NULL，则为**sysname** 。 如果已指定，则*proxy_id*必须为 NULL。 若要获取*proxy_name*，请查询 sysproxies 系统表。  
   

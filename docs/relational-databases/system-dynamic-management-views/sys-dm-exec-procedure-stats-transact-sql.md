@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_procedure_stats dynamic management view
 ms.assetid: ab8ddde8-1cea-4b41-a7e4-697e6ddd785a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ff5a1f816d0ade76ed6e39db3e8cfc3048ba632
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a3620efe22d2a285aed7f78f6573bdc2280be47f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68742903"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829421"
 ---
 # <a name="sysdm_exec_procedure_stats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,14 +36,14 @@ ms.locfileid: "68742903"
   
 > [!NOTE]
 > 每次执行时， **sys.databases dm_exec_procedure_stats**的结果可能会有所不同，因为数据只反映完成的查询，而不是仍在进行中的查询。
-> 若要从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]调用此，请使用名称**dm_pdw_nodes_exec_procedure_stats**。 
+> 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_exec_procedure_stats**。 
 
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------| 
 |**database_id**|**int**|存储过程所在的数据库 ID。|  
 |**object_id**|**int**|存储过程的对象标识号。|  
-|**type**|**char(2)**|对象的类型：<br /><br /> P = SQL 存储过程<br /><br /> PC = 程序集 (CLR) 存储过程<br /><br /> X = 扩展存储过程|  
+|type |**char(2)**|对象的类型：<br /><br /> P = SQL 存储过程<br /><br /> PC = 程序集 (CLR) 存储过程<br /><br /> X = 扩展存储过程|  
 |**type_desc**|**nvarchar(60)**|对对象类型的说明：<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
 |**sql_handle**|**varbinary(64)**|这可以用来与从该存储过程中执行的**dm_exec_query_stats**中的查询相关联。|  
 |**plan_handle**|**varbinary(64)**|内存中计划的标识符。 该标识符是瞬态的，仅当计划保留在缓存中时，它才保持不变。 此值可用于**sys.databases dm_exec_cached_plans**动态管理视图。<br /><br /> 当本机编译的存储过程查询内存优化的表时，此项将始终为 0x000。|  
@@ -70,11 +70,11 @@ ms.locfileid: "68742903"
 |**last_elapsed_time**|**bigint**|最近一次完成此存储过程的执行所用的时间（微秒）。|  
 |**min_elapsed_time**|**bigint**|任何完成此存储过程的执行所用的最短时间（微秒）。|  
 |**max_elapsed_time**|**bigint**|任何完成此存储过程的执行所用的最长时间（微秒）。|  
-|**total_spills**|**bigint**|此存储过程自编译以来的执行溢出的总页数。<br /><br /> **适用**于：从[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
-|**last_spills**|**bigint**|上次执行存储过程时溢出的页数。<br /><br /> **适用**于：从[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
-|**min_spills**|**bigint**|此存储过程在单次执行期间所溢出的最小页数。<br /><br /> **适用**于：从[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
-|**max_spills**|**bigint**|此存储过程在单次执行期间所用的最大页数。<br /><br /> **适用**于：从[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
-|**pdw_node_id**|**int**|此分发所在的节点的标识符。<br /><br />**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|**total_spills**|**bigint**|此存储过程自编译以来的执行溢出的总页数。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
+|**last_spills**|**bigint**|上次执行存储过程时溢出的页数。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
+|**min_spills**|**bigint**|此存储过程在单次执行期间所溢出的最小页数。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
+|**max_spills**|**bigint**|此存储过程在单次执行期间所用的最大页数。<br /><br /> **适用**于：从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 开始|  
+|**pdw_node_id**|**int**|此分发所在的节点的标识符。<br /><br />**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
 |**total_page_server_reads**|**bigint**|此存储过程自编译以来执行的页服务器读取的总次数。<br /><br /> **适用**于： Azure SQL 数据库超大规模|  
 |**last_page_server_reads**|**bigint**|上次执行存储过程时所执行的页服务器读取次数。<br /><br /> **适用**于： Azure SQL 数据库超大规模|  
 |**min_page_server_reads**|**bigint**|此存储过程在单次执行期间所执行的最少页面服务器读取次数。<br /><br /> **适用**于： Azure SQL 数据库超大规模|  
@@ -84,8 +84,8 @@ ms.locfileid: "68742903"
   
 ## <a name="permissions"></a>权限  
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要权限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]高级层上，需要`VIEW DATABASE STATE`具有数据库中的权限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。   
+在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 高级层上，需要具有 `VIEW DATABASE STATE` 数据库中的权限。 在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 标准层和基本层上，需要**服务器管理员**或**Azure Active Directory 管理员**帐户。   
    
 ## <a name="remarks"></a>备注  
  存储过程执行完成后，将更新该视图中的统计信息。  

@@ -17,18 +17,18 @@ helpviewer_keywords:
 - sys.dm_resource_governor_external_resource_pool_affinity
 - dm_resource_governor_external_resource_pool_affinity
 ms.assetid: e32fac49-5161-47c0-8540-af3fe730c00c
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 77d0d322139be1f1c6086622855600a7c24fc4c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3f3b22b1889380be3aeeacc70877987f080ac766
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80664324"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830461"
 ---
 # <a name="sysdm_resource_governor_external_resource_pool_affinity-transact-sql"></a>sys. dm_resource_governor_external_resource_pool_affinity （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-**适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]和[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**适用于：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]和 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 返回有关当前外部资源池配置的 CPU 关联信息。
   
@@ -40,7 +40,7 @@ ms.locfileid: "80664324"
   
 ## <a name="remarks"></a>备注
 
-使用关联的`AUTO`创建的池不会出现在此视图中，因为它们没有关联。 有关详细信息，请参阅[CREATE EXTERNAL RESOURCE pool &#40;transact-sql&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)和[ALTER external Resource pool &#40;transact-sql&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)语句。
+使用关联的创建的池 `AUTO` 不会出现在此视图中，因为它们没有关联。 有关详细信息，请参阅[CREATE EXTERNAL RESOURCE pool &#40;transact-sql&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)和[ALTER external Resource pool &#40;transact-sql&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)语句。
 
 ## <a name="permissions"></a>权限
 

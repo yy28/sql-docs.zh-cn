@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_sql_text dynamic management function
 ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ff8d99bd31e2638aa63393fb5ba052f442bf75f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: de6ed0a0b8f91157b61c7d38564c8ab0941f1c6c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936894"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830629"
 ---
 # <a name="sysdm_exec_sql_text-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 ### <a name="a-conceptual-example"></a>A. 概念示例
 下面是一个基本示例，演示如何直接或通过**交叉应用**传递**sql_handle** 。
   1.  创建活动。  
-在的新查询窗口中执行以下 T-sql [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。   
+在的新查询窗口中执行以下 T-sql [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。   
       ```sql
       -- Identify current spid (session_id)
       SELECT @@SPID;
@@ -111,7 +111,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
       ```
       
     2.  使用**交叉应用**。  
-    将使用**跨应用**将**dm_exec_requests**中的 sql_handle 传递给**dm_exec_sql_text sys.databases** 。 打开一个新的查询窗口，并传递步骤1中标识的 spid。 在此示例中，spid 的行为`59`是。
+    将使用**跨应用**将**dm_exec_requests**中的 sql_handle 传递给**dm_exec_sql_text sys.databases** 。 打开一个新的查询窗口，并传递步骤1中标识的 spid。 在此示例中，spid 的行为是 `59` 。
 
         ```sql
         SELECT t.*
@@ -121,7 +121,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
          ```      
  
     2.  直接传递**sql_handle** 。  
-从**dm_exec_requests sys.databases**获取**sql_handle** 。 然后，将**sql_handle**直接传递到**sys.databases。 dm_exec_sql_text**。 打开一个新的查询窗口，并将步骤1中标识的 spid 传递到**sys.databases. dm_exec_requests**。 在此示例中，spid 的行为`59`是。 然后将返回的**sql_handle**作为参数传递给**sys.databases。 dm_exec_sql_text**。
+从**dm_exec_requests sys.databases**获取**sql_handle** 。 然后，将**sql_handle**直接传递到**sys.databases。 dm_exec_sql_text**。 打开一个新的查询窗口，并将步骤1中标识的 spid 传递到**sys.databases. dm_exec_requests**。 在此示例中，spid 的行为是 `59` 。 然后将返回的**sql_handle**作为参数传递给**sys.databases。 dm_exec_sql_text**。
 
         ```sql
         -- acquire sql_handle
@@ -186,5 +186,5 @@ ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;
  [sys. dm_exec_cursors &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
  [sys. dm_exec_xml_handles &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
  [sys. dm_exec_query_memory_grants &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
- [使用 APPLY](../../t-sql/queries/from-transact-sql.md#using-apply)   [dm_exec_text_query_plan &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
+ [使用 APPLY](../../t-sql/queries/from-transact-sql.md#using-apply)  [sys. dm_exec_text_query_plan &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
 

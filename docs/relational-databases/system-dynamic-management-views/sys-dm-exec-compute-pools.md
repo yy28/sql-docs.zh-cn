@@ -16,29 +16,29 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_compute_pools dynamic management view
 ms.assetid: ''
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: d749b9a7d9689426bffafe20ee7ab46ce199ffbb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f546d338e838f13751cfdd172cc843cd0d51bdae
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75254615"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830659"
 ---
 # <a name="sysdm_exec_compute_pools-transact-sql"></a>sys. dm_exec_compute_pools （Transact-sql）
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|name|`sysname`|计算池的名称。 不可为 null。 返回`default`默认计算池的。 |
+|name|`sysname`|计算池的名称。 不可为 null。 返回 `default` 默认计算池的。 |
 |compute_pool_id|`int`|池的唯一标识符。 此视图的键。|  
-|location|`sysname`|SQL 大数据群集中的控制器的终结点。 不可为 null。 |
+|位置|`sysname`|SQL 大数据群集中的控制器的终结点。 不可为 null。 |
 
 ## <a name="permissions"></a>权限
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]上， `VIEW SERVER STATE`需要权限。
+在上 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ，需要 `VIEW SERVER STATE` 权限。
 
 ## <a name="see-also"></a>另请参阅
 
-[什么是[!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)] ](../../big-data-cluster/big-data-cluster-overview.md)？
+[什么是 [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)] ](../../big-data-cluster/big-data-cluster-overview.md)？

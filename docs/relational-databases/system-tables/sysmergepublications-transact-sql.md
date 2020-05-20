@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergepublications system table
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9a2c2802f0bd077c64800225590b2346205fb30a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 96708a8109594e0978757a163840d605d09cb522
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029772"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829814"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "68029772"
 |**alt_snapshot_folder**|**nvarchar(255)**|快照的备用文件夹位置。|  
 |**pre_snapshot_script**|**nvarchar(255)**|指向的指针。在订阅服务器上应用快照时，合并代理在任何复制对象脚本之前运行的**sql**文件。|  
 |**post_snapshot_script**|**nvarchar(255)**|指向的指针。在初始同步过程中应用了其他所有复制对象脚本和数据之后合并代理运行的**sql**文件。|  
-|**compress_snapshot**|**bit**|指定是否将写入**alt_snapshot_folder**位置的快照压缩为[!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 格式。 **0**指定不压缩文件。|  
+|**compress_snapshot**|**bit**|指定是否将写入**alt_snapshot_folder**位置的快照压缩为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 格式。 **0**指定不压缩文件。|  
 |**ftp_address**|**sysname**|分发服务器的文件传输协议（FTP）服务的网络地址。 如果启用了 FTP，则指定合并代理要拾取的发布快照文件所在的位置。|  
 |**ftp_port**|**int**|分发服务器的 FTP 服务的端口号。|  
 |**ftp_subdirectory**|**nvarchar(255)**|合并代理可拾取的快照文件所在的子目录。|  
@@ -65,7 +65,7 @@ ms.locfileid: "68029772"
 |**allow_synctoalternate**|**bit**|指定是否允许备用同步伙伴与该发布服务器同步。 **0**表示不允许同步伙伴。|  
 |**validate_subscriber_info**|**nvarchar （500）**|列出用于检索订阅服务器信息和验证订阅服务器上的参数化行筛选条件的函数。|  
 |**ad_guidname**|**sysname**|指定是否在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中发布该发布。 有效的 GUID 指定发布在 Active Directory 中发布，GUID 是对应的 Active Directory 发布对象**objectGUID**。 如果为 NULL，则将不在 Active Directory 中发布该发布。|  
-|**backward_comp_level**|**int**|数据库兼容级别。 可以是以下其中一个值：<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。|  
+|**backward_comp_level**|**int**|数据库兼容级别。 可以是以下其中一个值：<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。|  
 |**max_concurrent_merge**|**int**|允许的最大并发合并进程数。 如果此属性的值为**0** ，则表示在任何给定时间运行的并发合并进程数没有限制。 此属性设置一次可以对合并发布运行的并发合并进程数的限制。 如果同时调度的快照进程数比允许运行的进程数多，则多出的作业将放置在队列中等待，直到当前正在运行的合并进程完成。|  
 |**max_concurrent_dynamic_snapshots**|**int**|允许针对合并发布运行的最大并发筛选数据快照会话数。 如果为**0**，则在任意给定时间，可同时对发布运行的并发筛选数据快照会话的最大数量没有限制。 此属性对可以同时对合并发布运行的最大并发快照进程数设置限制。 如果同时调度的快照进程数比允许运行的进程数多，则多出的作业将放置在队列中等待，直到当前正在运行的合并进程完成。|  
 |**use_partition_groups**|**smallint**|指定发布是否使用预计算分区。|  

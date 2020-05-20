@@ -18,21 +18,21 @@ helpviewer_keywords:
 - smart_admin.sp_backup_on_demand
 - sp_backup_on_demand
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e34cf20585ea7dcd3690d80ee415fc274bf852ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bb2bda2d58504033469e8ed0f6455784efb113b8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155402"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830429"
 ---
 # <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup sp_backup_on_demand （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   请求 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 执行对指定数据库的备份。  
   
- 使用此存储过程可对使用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 配置的数据库执行即席备份。 这会阻止备份链中的任何中断[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ，进程可感知，备份存储在同一个 Azure Blob 存储容器中。  
+ 使用此存储过程可对使用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 配置的数据库执行即席备份。 这会阻止备份链中的任何中断， [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 进程可感知，备份存储在同一个 Azure Blob 存储容器中。  
   
  成功完成备份后，将返回完整的备份文件路径。 其中包括备份操作中生成的新备份文件的名称和位置。  
   

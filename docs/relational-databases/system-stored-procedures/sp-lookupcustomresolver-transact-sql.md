@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_lookupcustomresolver
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 274276a55a7b3e91ff85330a0810f01786a5a080
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: eba554a2472a17f67d0b03faceb8d546da4996c3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67937904"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831053"
 ---
 # <a name="sp_lookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
   
 `[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT`实现业务逻辑处理程序的程序集的名称。 *dotnet_assembly_name*为**nvarchar （255）**，默认值为 NULL。  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT`是重写<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>以实现业务逻辑处理程序的类的名称。 *dotnet_class_name*为**nvarchar （255）**，默认值为 NULL。  
+`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT`是重写 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 以实现业务逻辑处理程序的类的名称。 *dotnet_class_name*为**nvarchar （255）**，默认值为 NULL。  
   
 `[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**，默认值为 NULL。 未从发布服务器调用该存储过程时使用此参数。 如果未指定，则假定本地服务器是发布服务器。  
   

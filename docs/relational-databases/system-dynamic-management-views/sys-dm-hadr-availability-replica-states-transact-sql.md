@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_availability_replica_states dynamic management view
 ms.assetid: d2e678bb-51e8-4a61-b223-5c0b8d08b8b1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 05964e0557cb08e874424af542b8fc8a57ce0835
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: be2e9ce380f9d761c29e86cef20f87556b634c3c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900629"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829371"
 ---
 # <a name="sysdm_hadr_availability_replica_states-transact-sql"></a>sys.dm_hadr_availability_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "67900629"
 |**replica_id**|**uniqueidentifier**|副本的唯一标识符。|  
 |**group_id**|**uniqueidentifier**|可用性组的唯一标识符。|  
 |**is_local**|**bit**|副本是否为本地副本，请执行以下操作之一：<br /><br /> 0 = 指示某一可用性组中其主副本由本地服务器实例承载的远程辅助副本。 此值仅在主副本位置上出现。<br /><br /> 1 = 表示本地副本。 在辅助副本上，这是副本所属的可用性组的唯一可用值。|  
-|**role**|**tinyint**|本地[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]副本或连接的远程副本的当前角色，如下所示：<br /><br /> 0 = 正在解析<br /><br /> 1 = 主<br /><br /> 2 = 辅助<br /><br /> 有关 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 角色的详细信息，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。|  
+|**role**|**tinyint**|[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]本地副本或连接的远程副本的当前角色，如下所示：<br /><br /> 0 = 正在解析<br /><br /> 1 = 主<br /><br /> 2 = 辅助<br /><br /> 有关 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 角色的详细信息，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。|  
 |**role_desc**|**nvarchar(60)**|**角色**说明，其中之一：<br /><br /> RESOLVING<br /><br /> PRIMARY<br /><br /> SECONDARY|  
 |**operational_state**|**tinyint**|副本的当前操作状态，如下所示：<br /><br /> 0 = 挂起故障转移<br /><br /> 1 = 挂起<br /><br /> 2 = 联机<br /><br /> 3 = 脱机<br /><br /> 4 = 失败<br /><br /> 5 = 失败，无仲裁<br /><br /> NULL = 副本不在本地。<br /><br /> 有关详细信息，请参阅本主题后面的[角色和操作状态](#RolesAndOperationalStates)。|  
-|**操作\_状态\_desc**|**nvarchar(60)**|**操作\_状态**的说明，如下所示：<br /><br /> PENDING_FAILOVER<br /><br /> PENDING<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> FAILED<br /><br /> FAILED_NO_QUORUM<br /><br /> Null|  
-|**恢复\_运行状况**|**tinyint**|[Sys. dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)动态管理视图的**\_数据库状态**列的汇总。 下面是可能的值及其说明。<br /><br /> 0：正在进行。  至少一个已联接的数据库具有联机数据库状态（**数据库\_状态**不是0）。<br /><br /> 1：联机。 所有联接的数据库的数据库状态都为 ONLINE （**database_state**为0）。<br /><br /> NULL： **is_local** = 0|  
+|**操作 \_ 状态 \_ desc**|**nvarchar(60)**|**操作 \_ 状态**的说明，如下所示：<br /><br /> PENDING_FAILOVER<br /><br /> PENDING<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> FAILED<br /><br /> FAILED_NO_QUORUM<br /><br /> Null|  
+|**恢复 \_ 运行状况**|**tinyint**|[Sys. dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)动态管理视图的**数据库 \_ 状态**列的汇总。 下面是可能的值及其说明。<br /><br /> 0：正在进行。  至少一个已联接的数据库具有联机数据库状态（**数据库 \_ 状态**不是0）。<br /><br /> 1：联机。 所有联接的数据库的数据库状态都为 ONLINE （**database_state**为0）。<br /><br /> NULL： **is_local** = 0|  
 |**recovery_health_desc**|**nvarchar(60)**|**Recovery_health**的说明，请执行以下操作之一：<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> Null|  
-|**同步\_运行状况**|**tinyint**|反映所有联接的可用性数据库（也称为*副本*）和副本的可用性模式（同步提交或异步提交模式）的数据库同步状态（**synchronization_state**）的汇总。 汇总将反映副本上的数据库的运行状况不正常的最小状态。 下面是可能的值及其说明。<br /><br /> 0：不正常。   至少有一个联接的数据库处于 NOT SYNCHRONIZING 状态。<br /><br /> 1：部分运行正常。 一些副本未处于目标同步状态：同步提交副本应已同步，异步提交副本应正在同步。<br /><br /> 2：正常。 所有副本均处于目标同步状态：同步提交副本已同步，异步提交副本正在同步。|  
+|**同步 \_ 运行状况**|**tinyint**|反映所有联接的可用性数据库（也称为*副本*）和副本的可用性模式（同步提交或异步提交模式）的数据库同步状态（**synchronization_state**）的汇总。 汇总将反映副本上的数据库的运行状况不正常的最小状态。 下面是可能的值及其说明。<br /><br /> 0：不正常。   至少有一个联接的数据库处于 NOT SYNCHRONIZING 状态。<br /><br /> 1：部分运行正常。 一些副本未处于目标同步状态：同步提交副本应已同步，异步提交副本应正在同步。<br /><br /> 2：正常。 所有副本均处于目标同步状态：同步提交副本已同步，异步提交副本正在同步。|  
 |**synchronization_health_desc**|**nvarchar(60)**|**Synchronization_health**的说明，请执行以下操作之一：<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
 |**connected_state**|**tinyint**|辅助副本当前是否连接到主副本。 可能的值如下所示。<br /><br /> 0：已断开连接。 可用性副本到断开连接状态的响应取决于其角色：在主副本上，如果辅助副本断开连接，则其辅助数据库将在主副本上标记为不同步，这将等待辅助副本重新连接;在辅助副本上，检测到它已断开连接后，辅助副本会尝试重新连接到主副本。<br /><br /> 1：已连接。<br /><br /> 每个主副本都会跟踪同一可用性组中每个辅助副本的连接状态。 辅助副本仅跟踪主副本的连接状态。|  
 |**connected_state_desc**|**nvarchar(60)**|**Connection_state**的说明，请执行以下操作之一：<br /><br /> DISCONNECTED<br /><br /> CONNECTED|  
