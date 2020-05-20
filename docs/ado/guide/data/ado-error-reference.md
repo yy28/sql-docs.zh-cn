@@ -12,19 +12,19 @@ helpviewer_keywords:
 - errors [ADO], ErrorValueEnum
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: da9d7d2374f8e3410598bfdfbd97e59eb505b255
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 774a1c17f579c9274b700e4e1fea682cc462ed29
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926247"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761383"
 ---
 # <a name="ado-errors"></a>ADO 错误
 **ErrorValueEnum**常数描述 ADO 错误值。 有关这些枚举常量（包括值）的完整列表，请参阅[附录 B： ADO 错误](../../../ado/guide/appendixes/appendix-b-ado-errors.md)。 本部分将介绍一些更有趣的错误，并说明一些可能引发这些错误的特定情况，或解决问题的解决方案。 同时列出了**ErrorValueEnum**常量和短的十进制数字。
 
-|数字|ErrorValueEnum 常量|说明/可能的原因|
+|Number|ErrorValueEnum 常量|说明/可能的原因|
 |------------|-----------------------------|----------------------------------|
 |**3000**|**adErrProviderFailed**|提供程序无法执行所请求的操作。|
 |**3001**|**adErrInvalidArgument**|参数的类型错误，不在可接受的范围内，或者相互冲突。 此错误通常是由 SQL SELECT 语句中的打字错误引起的。 例如，拼写错误的字段名称或表名称可能会生成此错误。 当在 SELECT 语句中指定的字段或表在数据存储中不存在时，也会发生此错误。|
@@ -63,7 +63,7 @@ ms.locfileid: "67926247"
 |**3724**|**adErrCantConvertvalue**|由于除符号不匹配或数据溢出之外的其他原因，无法转换数据值。 例如，转换可能会截断数据。|
 |**3725**|**adErrCantCreate**|由于字段数据类型未知，或者提供程序没有足够的资源来执行操作，因此无法设置或检索数据值。|
 |**3726**|**adErrColumnNotOnThisRow**|记录不包含该字段。 指定的字段名称不正确，或引用的字段不在当前记录的**字段**集合中。|
-|**3727**|**adErrURLDoesNotExist**|源 URL 或目标 URL 的父项不存在。 源或目标 URL 中存在录入错误。 您可能会`https://mysite/photo/myphoto.jpg`遇到这样的情况`https://mysite/photos/myphoto.jpg` 。 父 URL 中的打字错误（在本例中为*照片*而不是*照片*）导致了此错误。|
+|**3727**|**adErrURLDoesNotExist**|源 URL 或目标 URL 的父项不存在。 源或目标 URL 中存在录入错误。 您可能会遇到这样的 `https://mysite/photo/myphoto.jpg` 情况 `https://mysite/photos/myphoto.jpg` 。 父 URL 中的打字错误（在本例中为*照片*而不是*照片*）导致了此错误。|
 |**3728**|**adErrTreePermissionDenied**|权限不足以访问树或子树。 连接字符串中指定的用户没有适当的权限。|
 |**3729**|**adErrInvalidURL**|URL 包含无效字符。 请确保正确键入了 URL。 URL 遵循注册到当前提供程序的方案（例如，为 http 注册了 Internet 发布提供程序）。|
 |**3730**|**adErrResourceLocked**|由指定的 URL 表示的对象已被一个或多个进程锁定。 请等待该进程完成，然后重试该操作。 您尝试访问的对象已被其他用户或应用程序中的其他进程锁定。 这很可能出现在多用户环境中。|

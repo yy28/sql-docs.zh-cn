@@ -11,14 +11,14 @@ helpviewer_keywords:
 - events [ADO], about event handlers
 - event handlers [ADO]
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d4fef63ff610ad85e353c2ef1dc0f8e5987c74ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 78c3b19c63025bc77862e7f88f6c4d83350c0313
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926201"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761363"
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO 连接和记录集事件
 两个 ADO 对象可以引发事件：[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象和[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 **ConnectionEvent**系列适用于**连接**对象上的操作， **RecordsetEvent**系列与**Recordset**对象上的操作相关。

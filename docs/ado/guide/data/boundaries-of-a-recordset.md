@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Recordset object [ADO], boundaries of a Recordset
 - BOF property [ADO], boundaries of a Recordset
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8f4efddad1b55ce57c62ce52418539ec06599bb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3819ba4951307a6f1ada11030fdc2808e568df0d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925914"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761223"
 ---
 # <a name="boundaries-of-a-recordset"></a>记录集的边界
 **Recordset**支持**BOF**和**EOF**属性，分别描绘数据集的开头和结尾。 可以将**BOF**和**EOF**视为位于**记录集**开头和结尾的 "虚拟" 记录。 计算**BOF**和**EOF**后，示例**记录集**现在如下所示：  

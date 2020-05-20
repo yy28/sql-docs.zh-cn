@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ADO, VBScript
 - VBScript [ADO]
 ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f242a3596735a4bc43256d05b87100e71295a3da
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2029b6d661e520a4ed18631c611ed9e283e4aa7c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926431"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761535"
 ---
 # <a name="vbscript-ado-programming"></a>VBScript ADO 编程
 ## <a name="creating-an-ado-project"></a>创建 ADO 项目  
@@ -81,6 +81,6 @@ Response.Write("Success!")
   
 -   VBScript 仅支持 Variant 数据类型，该类型可以保存不同类型的数据。 您可以在变量数据类型中存储所需的数据，数据将正常运行，因为 VBScript 执行了强制转换。 它识别 ADO 所需的类型，并相应地转换变量中的值。  
   
--   在 VBScript 中，不能使用**on error goto \<label>** 。  
+-   在 VBScript 中，不能使用**on error goto \< label>** 。  
   
 -   VBScript 支持某些内置 Visual Basic 函数，例如**Msgbox**、 **Date**和**IsNumeric**。 但是，由于 VBScript 是 Visual Basic 的子集，因此并非所有内置函数都受支持。 例如，VBScript 不支持**Format**函数和文件 i/o 函数。

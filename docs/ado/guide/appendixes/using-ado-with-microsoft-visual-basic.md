@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ADO, Visual Basic
 - Visual Basic [ADO]
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22286cbe571420475cf273ca377d16e79610fc3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e86bc925313a24a390dffc8f4e2d9e91e4db1c61
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926560"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761585"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>使用 ADO 与 Microsoft Visual Basic 和 Visual Basic for Applications
 无论你使用 Visual Basic 还是 Visual Basic for Applications，设置 ADO 项目和编写 ADO 代码都是类似的。 本主题介绍如何将 ADO 与 Visual Basic 和 Visual Basic for Applications 结合使用，并注意所有差异。
@@ -42,7 +42,7 @@ ms.locfileid: "67926560"
 
     -   OLE 自动化
 
-3.  单击“确定”。 
+3.  单击 **“确定”** 。
 
  例如，使用 Microsoft Access 就可以轻松地使用 ADO，使用 Visual Basic for Applications。
 
@@ -60,7 +60,7 @@ ms.locfileid: "67926560"
 
     -   Microsoft DAO 3.5 对象库（或更高版本）
 
-4.  单击“确定”。 
+4.  单击 **“确定”** 。
 
 ## <a name="creating-ado-objects-in-visual-basic"></a>在 Visual Basic 中创建 ADO 对象
  若要为该变量创建自动化变量和对象的实例，可以使用两种方法： **Dim**或**CreateObject**。
@@ -80,7 +80,7 @@ Set conn = New ADODB.Connection
 ```
 
 > [!NOTE]
->  假设您已在项目中正确引用`ADODB` ADO 库，则不需要使用**Dim**语句显式使用 progid。 但是，使用它可以确保不会与其他库发生命名冲突。
+>  `ADODB`假设您已在项目中正确引用 ADO 库，则不需要使用**Dim**语句显式使用 progid。 但是，使用它可以确保不会与其他库发生命名冲突。
 
 > [!NOTE]
 >  例如，如果在同一个项目中同时包含对 ADO 和 DAO 的引用，则应包括一个限定符，以指定实例化**记录集**对象时要使用的对象模型，如以下代码所示：

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1890d554367b2a21bcd46a6d2ebddf00013957e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3c7b428e1127ac2431f6e0988774315c12ebd74f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926425"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761525"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++ ADO 编程
 ADO API 参考介绍了使用类似于 Microsoft Visual Basic 的语法的 ADO 应用程序编程接口（API）的功能。 尽管目标受众是所有用户，但 ADO 程序员使用各种语言，如 Visual Basic、Visual C++ （带有和不带 **#import**指令）和 Visual j + + （带有 ADO/WFC 类包）。  
@@ -64,7 +64,7 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```
   
- 编译器将根据声明的替代语法以及是否读取或写入属性，生成相应的**Get**_-_、 **Put**或**PutRef**_属性_调用。  
+ 编译器将根据**Get** _-_ 声明的替代语法以及是否读取或写入属性，生成相应的 Get、 **Put**或**PutRef**_属性_调用。  
   
  **__Declspec （属性 ...）** 编译器指令只能声明**get**、 **put**或**get**和**put**函数的替代语法。 只读操作仅具有**get**声明;只写操作只有**put**声明;读取和写入操作都具有**get**和**put**声明。  
   
@@ -84,7 +84,7 @@ variable = objectPtr->GetProperty;  // get property value
 collectionPtr->Item[index];  
 ```
   
- 例如，将一个值分配给**记录集**对象（名为**_rs_**）的字段，该字段是从**pubs**数据库的**authors**表派生的。 使用**Item （）** 属性可以访问**Recordset**对象**字段**集合的第三个**字段**（集合从零开始编制索引; 假设第三个字段名**_为\_au fname_**）。 然后对**字段**对象调用**Value （）** 方法，以指定字符串值。  
+ 例如，将一个值分配给**记录集**对象（名为**_rs_**）的字段，该字段是从**pubs**数据库的**authors**表派生的。 使用**Item （）** 属性可以访问**Recordset**对象**字段**集合的第三个**字段**（集合从零开始编制索引; 假设第三个字段名**_为 \_ au fname_**）。 然后对**字段**对象调用**Value （）** 方法，以指定字符串值。  
   
  这可以通过以下四种方式在 Visual Basic 中表示（最后两种形式对于 Visual Basic 是唯一的; 其他语言没有等效项）：  
   
@@ -116,7 +116,7 @@ rs->Fields->Item["au_fname"]->Value = "value";
   
  此规则的例外情况是特定于 COM 的数据类型： **Variant**、 **BSTR**和**SafeArray**。  
   
-### <a name="variant"></a>Variant  
+### <a name="variant"></a>变体  
  **变体**是一种结构化的数据类型，它包含值成员和数据类型成员。 **变量**可以包含各种其他数据类型，包括其他变体、BSTR、Boolean、IDispatch 或 IUnknown 指针、货币、日期等。 COM 还提供了一些方法，使您可以轻松地将一种数据类型转换为另一种数据类型。  
   
  **_Variant_t**类封装并管理**variant**数据类型。  
@@ -148,18 +148,18 @@ rs->Fields->Item["au_fname"]->Value = "value";
         long Options );  
 ```
   
- 参数采用对 **_variant_t**的引用，你可以将其编码为连接字符串或指向打开的连接对象的指针。 **Connection** `ActiveConnection`  
+ `ActiveConnection`参数采用对 **_variant_t**的引用，你可以将其编码为连接字符串或指向打开的**连接**对象的指针。  
   
- 如果传递 **_variant_t**字符串（如 "`DSN=pubs;uid=MyUserName;pwd=MyPassword;`"）或指针（如 "`(IDispatch *) pConn`"），则将隐式构造正确的 _variant_t。  
+ 如果传递 **_variant_t**字符串（如 " `DSN=pubs;uid=MyUserName;pwd=MyPassword;` "）或指针（如 ""），则将隐式构造正确的 _variant_t `(IDispatch *) pConn` 。  
   
 > [!NOTE]
 >  如果要连接到支持 Windows 身份验证的数据源提供程序，应在连接字符串中指定**Trusted_Connection = yes**或**集成安全性 = SSPI**而不是用户 ID 和密码信息。  
   
- 或者，您可以对包含 **_variant_t**指针（例如 "`_variant_t((IDispatch *) pConn, true)`"）的 _variant_t 进行显式编码。 强制转换`(IDispatch *)`使用采用指向 IUnknown 接口的指针的另一个构造函数解析多义性。  
+ 或者，您可以对包含指针（例如 ""）的 **_variant_t**进行显式编码 `_variant_t((IDispatch *) pConn, true)` 。 强制转换 `(IDispatch *)` 使用采用指向 IUnknown 接口的指针的另一个构造函数解析多义性。  
   
  这是一种很重要的情况，虽然很少提到这一事实，但 ADO 却是一个 IDispatch 接口。 只要指向 ADO 对象的指针必须作为**变量**传递，则必须将该指针强制转换为指向 IDispatch 接口的指针。  
   
- 最后一种情况下，将构造函数的第二个布尔参数（其可选的`true`默认值）显式编码。 此参数会导致**变体**构造函数调用它的**AddRef**（）方法，该方法可在 ado 方法或属性调用完成时补偿 ado 自动调用 **_variant_t：： Release**（）方法。  
+ 最后一种情况下，将构造函数的第二个布尔参数（其可选的默认值）显式编码 `true` 。 此参数会导致**变体**构造函数调用它的**AddRef**（）方法，该方法可在 ado 方法或属性调用完成时补偿 ado 自动调用 **_variant_t：： Release**（）方法。  
   
 ### <a name="safearray"></a>SafeArray  
  **SafeArray**是一种结构化的数据类型，它包含其他数据类型的数组。 **SafeArray**称为*safe* ，因为它包含每个数组维度的边界相关信息，并且限制对这些边界内数组元素的访问。  
@@ -187,7 +187,7 @@ _RecordsetPtr <A HREF="mdmthnextrec.htm">NextRecordset</A>( VARIANT * Record
   
  参数*RecordsAffected*和*参数*是指向**变量**的指针。 *参数*是一个输入参数，该参数指定包含单个参数的**变量**的地址或参数数组，这些参数将修改所执行的命令。 *RecordsAffected*是一个输出参数，它指定变量的地址，该**变量**的值由该方法所影响的行数。  
   
- 在**Command** object **Execute**方法中，通过将*参数*设置为`&vtMissing` （建议的）或 null 指针（即**null**或零（0））来指示未指定任何参数。 如果将*参数*设置为 null 指针，则该方法在内部替换等效的**vtMissing**，然后完成该操作。  
+ 在**Command** object **Execute**方法中，通过将*参数*设置为 `&vtMissing` （建议的）或 null 指针（即**null**或零（0））来指示未指定任何参数。 如果将*参数*设置为 null 指针，则该方法在内部替换等效的**vtMissing**，然后完成该操作。  
   
  在所有方法中，通过将*RecordsAffected*设置为 null 指针，指示不应返回受影响的记录数。 在这种情况下，null 指针不太多，因此缺少参数，这是因为方法应丢弃受影响的记录数。  
   
@@ -200,7 +200,7 @@ pRecordset->NextRecordset(NULL);
 ```
   
 ## <a name="error-handling"></a>错误处理  
- 在 COM 中，大多数操作都返回一个 HRESULT 返回代码，该代码指示函数是否已成功完成。 **#Import**指令围绕每个 "原始" 方法或属性生成包装代码，并检查返回的 HRESULT。 如果 HRESULT 指示失败，则包装代码通过调用 _com_issue_errorex （），并将 HRESULT 返回代码作为参数来引发 COM 错误。 COM 错误对象可以在**try**-**catch**块中捕获。 （为提高效率，请捕获对 **_com_error**对象的引用。）  
+ 在 COM 中，大多数操作都返回一个 HRESULT 返回代码，该代码指示函数是否已成功完成。 **#Import**指令围绕每个 "原始" 方法或属性生成包装代码，并检查返回的 HRESULT。 如果 HRESULT 指示失败，则包装代码通过调用 _com_issue_errorex （），并将 HRESULT 返回代码作为参数来引发 COM 错误。 COM 错误对象可以在**try** - **catch**块中捕获。 （为提高效率，请捕获对 **_com_error**对象的引用。）  
   
  请记住，这些是 ADO 错误：它们是由于 ADO 操作失败导致的。 基础提供程序返回的错误显示为**连接**对象**错误**集合中的**错误**对象。  
   
@@ -216,7 +216,7 @@ pRecordset->NextRecordset(NULL);
 Dim rst As ADODB.Recordset  
 ```
   
- 子句 "`ADODB.Recordset`" 是在注册表中定义的**Recordset**对象的 ProgID。 **记录**对象的新实例声明如下：  
+ 子句 " `ADODB.Recordset` " 是在注册表中定义的**Recordset**对象的 ProgID。 **记录**对象的新实例声明如下：  
   
 ```vb
 Dim rst As New ADODB.Recordset  
@@ -261,9 +261,9 @@ rs.CreateInstance(__uuidof(_Recordset));
 rs->Open(...);  
 ```
   
- 请注意，在一种情况下`.`，将使用 "" 运算符，就像变量是类的实例（`rs.CreateInstance`），而在另一种情况下`->`，使用 "" 运算符，就像变量是指向接口的指针（`rs->Open`）。  
+ 请注意，在一种情况下，将 `.` 使用 "" 运算符，就像变量是类的实例（ `rs.CreateInstance` ），而在另一种情况下， `->` 使用 "" 运算符，就像变量是指向接口的指针（ `rs->Open` ）。  
   
- 可以通过两种方式使用一个变量，因为 "`->`" 运算符会重载，以允许类的实例的行为类似于指向接口的指针。 实例变量的私有类成员包含指向 **_Recordset**接口的指针;"`->`" 运算符返回该指针;返回的指针访问 **_Recordset**对象的成员。  
+ 可以通过两种方式使用一个变量，因为 " `->` " 运算符会重载，以允许类的实例的行为类似于指向接口的指针。 实例变量的私有类成员包含指向 **_Recordset**接口的指针;" `->` " 运算符返回该指针; 返回的指针访问 **_Recordset**对象的成员。  
   
 ### <a name="coding-a-missing-parameter---string"></a>编码缺少的参数字符串  
  如果需要在 Visual Basic 中编写缺少的**字符串**操作数的代码，则只需省略操作数。 必须在 Visual C++ 中指定操作数。 将包含空字符串的 **_bstr_t**编码为值。  
@@ -326,7 +326,7 @@ End Sub
   
  下面的 Visual C++ 示例演示如何使用用于 **_variant_t**的**SafeArray** 。  
   
-#### <a name="notes"></a>说明  
+#### <a name="notes"></a>备注  
  以下说明对应于代码示例中的注释部分。  
   
 1.  同样，TESTHR （）内联函数定义为利用现有的错误处理机制。  
@@ -344,7 +344,7 @@ End Sub
   
      返回的**记录集**由多个列组成，其中的一个子集是约束列。 每个返回行的约束列的值必须与相应的约束值相同。  
   
-4.  熟悉**safearray**的人可能会惊讶于退出前未调用**SafeArrayDestroy**（）。 事实上，在这种情况下，调用**SafeArrayDestroy**（）将导致运行时异常。 原因是，在 **_variant_t**超出范围`vtCriteria`时，的析构函数将调用**VariantClear**（），这将释放**SafeArray**。 调用**SafeArrayDestroy**时，如果不手动清除 **_variant_t**，将导致析构函数尝试清除无效的**SafeArray**指针。  
+4.  熟悉**safearray**的人可能会惊讶于退出前未调用**SafeArrayDestroy**（）。 事实上，在这种情况下，调用**SafeArrayDestroy**（）将导致运行时异常。 原因是，在 `vtCriteria` **_variant_t**超出范围时，的析构函数将调用**VariantClear**（），这将释放**SafeArray**。 调用**SafeArrayDestroy**时，如果不手动清除 **_variant_t**，将导致析构函数尝试清除无效的**SafeArray**指针。  
   
      如果调用了**SafeArrayDestroy** ，则代码将如下所示：  
   
@@ -433,14 +433,14 @@ cn.Close
 End Sub  
 ```
   
- 此 Visual C++ 示例演示了**Get**/**Put**/**PutRef**_属性_。  
+ 此 Visual C++ 示例演示了**Get** / **Put** / **PutRef**_属性_。  
   
-#### <a name="notes"></a>说明  
+#### <a name="notes"></a>备注  
  以下说明对应于代码示例中的注释部分。  
   
 1.  此示例使用两种形式的缺少字符串参数：显式常量、 **strMissing**和字符串，编译器将使用该字符串来创建在**Open**方法范围内将存在的临时 **_bstr_t** 。  
   
-2.  不需要将的操作数转换`rs->PutRefActiveConnection(cn)`为， `(IDispatch *)`因为操作数的类型已经存在。 `(IDispatch *)`  
+2.  不需要将的操作数转换 `rs->PutRefActiveConnection(cn)` 为， `(IDispatch *)` 因为操作数的类型已经存在 `(IDispatch *)` 。  
   
 ```cpp
 // Visual_CPP_ado_prog_2.cpp  
@@ -554,14 +554,14 @@ void main() {
 ### <a name="casting-ado-object-pointers-with-idispatch-"></a>将 ADO 对象指针转换为（IDispatch *）  
  下面的 Visual C++ 示例演示如何使用（IDispatch *）来强制转换 ADO 对象指针。  
   
-#### <a name="notes"></a>说明  
+#### <a name="notes"></a>备注  
  以下说明对应于代码示例中的注释部分。  
   
-1.  在显式编码的**变量**中指定打开的**连接**对象。 将其转换为（ \*IDispatch），以便调用正确的构造函数。 此外，请将第二个 **_variant_t**参数显式设置为默认值**true**，以便在**Recordset：： Open**操作结束时，对象引用计数将是正确的。  
+1.  在显式编码的**变量**中指定打开的**连接**对象。 将其转换为（IDispatch \* ），以便调用正确的构造函数。 此外，请将第二个 **_variant_t**参数显式设置为默认值**true**，以便在**Recordset：： Open**操作结束时，对象引用计数将是正确的。  
   
-2.  `(_bstr_t)`表达式不是强制转换，而是一个 **_variant_t**运算符，用于从**值**返回的**变量**中提取 **_bstr_t**字符串。  
+2.  表达式不是 `(_bstr_t)` 强制转换，而是一个 **_variant_t**运算符，用于从**值**返回的**变量**中提取 **_bstr_t**字符串。  
   
- 表达式`(char*)`不是强制转换，而是一个 **_bstr_t**运算符，它提取指向 **_bstr_t**对象中封装的字符串的指针。  
+ 表达式不是 `(char*)` 强制转换，而是一个 **_bstr_t**运算符，它提取指向 **_bstr_t**对象中封装的字符串的指针。  
   
  此代码段演示 **_variant_t**和 **_bstr_t**运算符的一些有用行为。  
   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Java (Microsoft SDK for)
 - Microsoft SDK for Java [ADO]
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b0e6c5f2eb5ad792141e77122ff9e132d97f62ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ae18edeeb66691f0875a196e11e10f9f761b30c5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926469"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761555"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>使用 Java 适用的 Microsoft SDK
 
@@ -29,7 +29,7 @@ Microsoft SDK for Java 是适用于 Microsoft Internet Explorer 环境的开发�
   
  Jactivex 实用工具将从类型库生成类，但只能在命令行上调用。 此功能未与 Visual j + + 开发环境集成。 与 Java 类型库向导生成的类不同，可以单步执行由 SDK 创建的类包装。 这适用于调试代码使用 ADO 包装类的方式。  
   
- 此机制读取 ADO 类型库，并生成可在应用程序中实例化的类。 它在以下位置生成这些类： \\<windows 目录 \Java\trustlib\msado15.\>  
+ 此机制读取 ADO 类型库，并生成可在应用程序中实例化的类。 它在以下位置生成这些类： \\<windows 目录 \> \Java\trustlib\msado15。  
   
  使用 Microsoft SDK for Java 在 Java 中创建 ADO 应用程序与使用 Java 类型库向导在本质上完全相同。 有关示例代码，请参阅[ADO Java 类包装](../../../ado/guide/appendixes/ado-java-class-wrappers.md)。 唯一的区别在于首先如何生成包装类，如以下步骤中所示。  
   

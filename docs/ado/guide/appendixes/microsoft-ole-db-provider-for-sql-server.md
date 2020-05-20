@@ -12,14 +12,14 @@ helpviewer_keywords:
 - OLE DB provider for SQL Server [ADO]
 - SQLOLEDB [ADO]
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bd28ece0e82c4551409920c876d54fbd7dc501ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f1b66cf9d8e2e284dba2eea888ddc1eda061dabb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926618"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761615"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>适用于 SQL Server 的 Microsoft OLE DB 提供程序概述
 适用于 SQL Server 的 Microsoft OLE DB 提供程序，SQLOLEDB 允许 ADO 访问 Microsoft SQL Server。
@@ -151,7 +151,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |列定义|DBPROP_COLUMNDEFINITION|
 |连接超时值|DBPROP_INIT_TIMEOUT|
 |当前目录|DBPROP_CURRENTCATALOG|
-|“数据源”|DBPROP_INIT_DATASOURCE|
+|数据源|DBPROP_INIT_DATASOURCE|
 |数据源名称|DBPROP_DATASOURCENAME|
 |数据源对象线程模型|DBPROP_DSOTHREADMODEL|
 |DBMS 名称|DBPROP_DBMSNAME|
@@ -180,7 +180,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |选择列表中的 ORDER BY 列|DBPROP_ORDERBYCOLUMNSINSELECT|
 |输出参数可用性|DBPROP_OUTPUTPARAMETERAVAILABILITY|
 |通过引用访问器传递|DBPROP_BYREFACCESSORS|
-|密码|DBPROP_AUTH_PASSWORD|
+|Password|DBPROP_AUTH_PASSWORD|
 |持久性安全信息|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
 |永久性 ID 类型|DBPROP_PERSISTENTIDTYPE|
 |准备中止行为|DBPROP_PREPAREABORTBEHAVIOR|

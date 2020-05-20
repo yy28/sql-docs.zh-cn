@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, programmer's guide
 ms.assetid: e3c50eee-964a-4abd-810d-1bd51978e814
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 91200b79a075f594968fd5700993d96219e35b40
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 399dd83a531267ada3456ccbe9c71308a7c99b92
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67927040"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761685"
 ---
 # <a name="ado-programmers-guide-for-using-ado-objects"></a>ADO 用于使用 ADO 对象的程序员指南
 本文档概述了如何使用 ADO 对象处理来自各种数据源的数据。 首先，简介概述了用于安装、使用和重新分发 ADO 组件的新功能和要求。 以下各节讨论各种类型的 ADO 对象的用法。 最后，附录还讨论了各种 Microsoft 提供的数据和服务提供程序、错误消息以及有关如何在多种编程语言中使用 ADO 以及示例和术语表的提示。
