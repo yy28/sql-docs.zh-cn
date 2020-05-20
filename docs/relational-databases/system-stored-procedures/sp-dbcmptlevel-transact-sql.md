@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_dbcmptlevel
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0f6ffcb7a43fbfc2a840cbbbeb95de4bbb875cbe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 69b98f779a30e15a83e7ce6eed681f8c7c0df04b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108210"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831661"
 ---
 # <a name="sp_dbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ## <a name="arguments"></a>参数  
 `[ @dbname = ] name`要更改其兼容级别的数据库的名称。 数据库名称必须符合标识符的规则。 *名称*为**sysname**，默认值为 NULL。  
   
-`[ @new_cmptlevel = ] version`要使数据库兼容[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的的版本。 *版本*为**tinyint**，默认值为 NULL。 该值必须为下列值之一：  
+`[ @new_cmptlevel = ] version`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要使数据库兼容的的版本。 *版本*为**tinyint**，默认值为 NULL。 该值必须为下列值之一：  
   
  **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   
@@ -63,7 +63,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ## <a name="result-sets"></a>结果集  
  如果未指定参数，或未指定*name*参数， **sp_dbcmptlevel**将返回错误。  
   
- 如果未指定*名称*，*则*将[!INCLUDE[ssDE](../../includes/ssde-md.md)]返回一条消息，显示指定数据库的当前兼容级别。  
+ 如果未指定*名称*，*则*将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 返回一条消息，显示指定数据库的当前兼容级别。  
   
 ## <a name="remarks"></a>备注  
  有关兼容性级别的说明，请参阅[ALTER DATABASE 兼容级别 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  

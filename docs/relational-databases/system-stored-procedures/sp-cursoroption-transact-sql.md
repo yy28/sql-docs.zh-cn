@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoroption
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: dce66e74f7415a8ff5ac6de4505d8a1f0632391b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 560c425c5bda4ee1f9dd7ecf454c65d3ba7eab1e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108448"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831717"
 ---
 # <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,15 +40,15 @@ sp_cursoroption cursor, code, value
   
 ## <a name="arguments"></a>参数  
  *cursor*  
- 是由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]生成并由 sp_cursoropen 存储过程返回的*句柄*值。 *游标*需要用于执行的**int**输入值。  
+ 是由*handle*生成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并由 sp_cursoropen 存储过程返回的句柄值。 *游标*需要用于执行的**int**输入值。  
   
  *code*  
  用于规定游标返回值的不同因素。 *代码*需要以下**int**输入值之一：  
   
 |值|名称|说明|  
 |-----------|----------|-----------------|  
-|0x0001|TEXTPTR_ONLY|返回某些指定文本或图像列的文本指针，而非实际数据。<br /><br /> TEXTPTR_ONLY 允许将文本指针用作 blob 对象的*句柄*，稍后可以使用[!INCLUDE[tsql](../../includes/tsql-md.md)]或 DBLIB 设施（例如[!INCLUDE[tsql](../../includes/tsql-md.md)] READTEXT 或 DBLIB DBWRITETEXT）有选择地检索或更新它们。<br /><br /> 如果分配了值“0”，则选择列表中的所有文本和图像列将返回文本指针而非数据。|  
-|0x0002|CURSOR_NAME|将 "*值*" 中指定的名称分配给游标。 这反过来允许 ODBC 对通过 sp_cursoropen 打开的[!INCLUDE[tsql](../../includes/tsql-md.md)]游标使用定位的 UPDATE/DELETE 语句。<br /><br /> 可以将此字符串指定为任何字符或 Unicode 数据类型。<br /><br /> 由于[!INCLUDE[tsql](../../includes/tsql-md.md)]定位的 UPDATE/DELETE 语句在默认情况下会在 fat 游标的第一行中运行，因此在发出定位的 UPDATE/DELETE 语句之前，应使用 sp_cursor SETPOSITION 来定位游标。|  
+|0x0001|TEXTPTR_ONLY|返回某些指定文本或图像列的文本指针，而非实际数据。<br /><br /> TEXTPTR_ONLY 允许将文本指针用作 blob 对象的*句柄*，稍后可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 DBLIB 设施（例如 [!INCLUDE[tsql](../../includes/tsql-md.md)] READTEXT 或 DBLIB DBWRITETEXT）有选择地检索或更新它们。<br /><br /> 如果分配了值“0”，则选择列表中的所有文本和图像列将返回文本指针而非数据。|  
+|0x0002|CURSOR_NAME|将 "*值*" 中指定的名称分配给游标。 这反过来允许 ODBC 对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 通过 sp_cursoropen 打开的游标使用定位的 UPDATE/DELETE 语句。<br /><br /> 可以将此字符串指定为任何字符或 Unicode 数据类型。<br /><br /> 由于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定位的 update/DELETE 语句在默认情况下会在 fat 游标的第一行中运行，因此在发出定位的 UPDATE/DELETE 语句之前，应使用 SP_CURSOR SETPOSITION 来定位游标。|  
 |0x0003|TEXTDATA|为后续提取中的某些文本或图像列返回实际数据，而非文本指针（也即，此操作撤消了 TEXTPTR_ONLY 的效果）。<br /><br /> 如果为某特定列启用了 TEXTDATA，则将重新提取或刷新此行，然后将它发送回 TEXTPTR_ONLY。 借助于 TEXTPTR_ONLY，值参数是一个整数，它指定列编号，并且零值返回所有文本或图像列。|  
 |0x0004|SCROLLOPT|滚动选项。 有关其他信息，请参阅本主题后面的“返回代码值”。|  
 |0x0005|CCOPT|并发控制选项。 有关其他信息，请参阅本主题后面的“返回代码值”。|  

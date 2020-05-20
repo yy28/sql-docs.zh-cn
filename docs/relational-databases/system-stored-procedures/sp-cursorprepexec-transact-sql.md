@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorprepexec
 ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 660a75f1e6fea9b5a825372501c2e65f2dd3874b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e82a82df5f532df05ad0f04a14c95b24850484bd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69652438"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831664"
 ---
 # <a name="sp_cursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
   
 ## <a name="arguments"></a>参数  
  *准备的句柄*  
- 是生成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的已准备的*句柄*标识符。 需要*准备的句柄*并返回**int**。  
+ 是生成的已 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 准备的*句柄*标识符。 需要*准备的句柄*并返回**int**。  
   
  *cursor*  
  是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的游标标识符。 *cursor*是必需的参数，必须在对此游标执行操作的所有后续过程（例如 sp_cursorfetch）上提供。  
@@ -59,7 +59,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 > [!NOTE]  
 >  用于指定 stmt 值的规则与 sp_cursoropen 的规则相同，但*stmt*字符串数据类型必须为**ntext**。  
   
- *选项*  
+ *options*  
  一个可选参数，它返回游标结果集列的说明。 * 选项需要以下**int**输入值。  
   
 |值|说明|  
@@ -86,7 +86,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
- 因为请求的选项可能不适合于* \<stmt>* 所定义的游标，所以，此参数可同时用作输入和输出。 在此类情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分配一个适当的类型并修改此值。  
+ 因为请求的选项可能不适合于* \< stmt>* 所定义的游标，所以，此参数可同时用作输入和输出。 在此类情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分配一个适当的类型并修改此值。  
   
  *ccopt*  
  并发控制选项。 *ccopt*是一个可选参数，它需要以下**整数**输入值之一。  
@@ -105,7 +105,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- 与*scrollpt*一样， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以分配一个与请求的值不同的值。  
+ 与*scrollpt*一样， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以分配一个与请求的值不同的值。  
   
  *数*  
  一个可选参数，指示要用于 AUTO_FETCH 的提取缓冲区行数。 默认值为 20 行。 指定为输入值与返回值时，*行计数*的行为不同。  

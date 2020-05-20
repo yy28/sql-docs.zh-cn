@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorfetch
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4635bffa5b5b681d0ff202c4231c4d8b8d10ae26
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a1cb929158a6d17a7a7c16e5e303c403a2c03112
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108512"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831763"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_cursorfetch cursor
   
 ## <a name="arguments"></a>参数  
  *cursor*  
- 是由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]生成并由 sp_cursoropen 返回的*句柄*值。 *cursor*是为**int**输入值调用的必需参数。 有关详细信息，请参阅本主题后面的 "备注" 部分。  
+ 是由生成并由 sp_cursoropen 返回的*句柄*值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *cursor*是为**int**输入值调用的必需参数。 有关详细信息，请参阅本主题后面的 "备注" 部分。  
   
  *fetchtype*  
  指定要提取的游标缓冲区。 *fetchtype*是一个可选参数，它需要以下整数输入值之一。  

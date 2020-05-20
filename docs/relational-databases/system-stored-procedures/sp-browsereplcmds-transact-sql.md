@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsereplcmds
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d049a5e96d9c7212467595aa70cd44db727bdf6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5e4f5b003eccda5fdada81e49d2a1f5347591869
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768999"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831774"
 ---
 # <a name="sp_browsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 `[ @agent_id = ] agent_id`指定仅返回特定复制代理的命令。 *agent_id*的值为**int**，默认值为 NULL。  
   
-`[ @compatibility_level = ] compatibility_level`[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Compatibility_level*的**版本，其默认值为 9000000**。  
+`[ @compatibility_level = ] compatibility_level`Compatibility_level 的版本 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，其默认值*compatibility_level*为 9000000 **int**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
@@ -71,7 +71,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**originator_srvname**|**sysname**|发起事务的服务器。|  
 |**originator_db**|**sysname**|发起事务的数据库。|  
 |**article_id**|**int**|项目的 ID。|  
-|**type**|**int**|命令的类型。|  
+|type |**int**|命令的类型。|  
 |**partial_command**|**bit**|指示是否为部分命令。|  
 |**hashkey**|**int**|仅限内部使用。|  
 |**originator_publication_id**|**int**|发起事务的发布的 ID。|  

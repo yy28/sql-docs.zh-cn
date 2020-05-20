@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_copysnapshot
 ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d8b34915371b164a4167058729d2720d9e60cdcd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c9d9eca16209dd9cfc5695ae56daf929d067ab6e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154600"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831785"
 ---
 # <a name="sp_copysnapshot-transact-sql"></a>sp_copysnapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  将指定发布的快照文件夹复制到** \@destination_folder**中列出的文件夹。 此存储过程在发布服务器上对发布数据库执行。 此存储过程用于将快照复制到可移动介质（如 CD-ROM）上。  
+  将指定发布的快照文件夹复制到** \@ destination_folder**中列出的文件夹。 此存储过程在发布服务器上对发布数据库执行。 此存储过程用于将快照复制到可移动介质（如 CD-ROM）上。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
  **0** （成功）或**1** （失败）  
   
 ## <a name="remarks"></a>备注  
- **sp_copysnapshot**在所有类型的复制中使用。 运行[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本7.0 及更早版本的订阅服务器不能使用备用快照位置。  
+ **sp_copysnapshot**在所有类型的复制中使用。 运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本7.0 及更早版本的订阅服务器不能使用备用快照位置。  
   
 ## <a name="permissions"></a>权限  
  只有**sysadmin**固定服务器角色的成员或**db_owner**固定数据库角色的成员才能执行**sp_copysnapshot**。  

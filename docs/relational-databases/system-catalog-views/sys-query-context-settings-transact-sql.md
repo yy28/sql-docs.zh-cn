@@ -17,20 +17,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.query_context_settings catalog view
 ms.assetid: 3c1887df-6bd8-491e-82fc-d25ad9589faf
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7736c0001c8e22b6cc7c72b2e721e31519d035b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d39fe1b573e038459853857496c651e9ad2af83b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68068057"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831463"
 ---
 # <a name="sysquery_context_settings-transact-sql"></a>sys. query_context_settings （Transact-sql）
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  包含影响与查询关联的上下文设置的语义的相关信息。 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有多个可用的上下文设置，它们会影响查询语义（定义正确的查询结果）。 在不同设置下编译的相同查询文本可能会产生不同的结果（具体取决于基础数据）。  
+  包含影响与查询关联的上下文设置的语义的相关信息。 中有多个可用的上下文设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，它们会影响查询语义（定义正确的查询结果）。 在不同设置下编译的相同查询文本可能会产生不同的结果（具体取决于基础数据）。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
@@ -58,7 +58,7 @@ ms.locfileid: "68068057"
  [sys. query_store_runtime_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys. query_store_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)   
  [sys. query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [使用查询存储监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [相关视图、函数和过程](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Transact-sql&#41;的目录视图 &#40;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查询存储存储过程 &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  

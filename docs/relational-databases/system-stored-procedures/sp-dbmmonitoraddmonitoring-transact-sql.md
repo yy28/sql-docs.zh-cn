@@ -16,14 +16,14 @@ helpviewer_keywords:
 - database mirroring [SQL Server], monitoring
 - sp_dbmmonitoraddmonitoring
 ms.assetid: 9489dc30-af29-4363-a172-4645947fc95e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4ed53c6a72b201129cf9f75214261bbdd47d6fb9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4b8ddf9753578f6d73cd6baf7511c73d90377e1a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108149"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831642"
 ---
 # <a name="sp_dbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 ## <a name="remarks"></a>备注  
  此过程要求允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在服务器实例上运行，为了运行数据库镜像监视器作业，必须运行该代理。  
   
- 如果从[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]开始数据库镜像，则**sp_dbmmonitoraddmonitoring**过程会自动运行。 如果使用 ALTER DATABASE 语句手动开始镜像，若要监视服务器实例上的镜像数据库，则必须手动运行**sp_dbmmonitoraddmonitoring** 。  
+ 如果从开始数据库镜像 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，则**sp_dbmmonitoraddmonitoring**过程会自动运行。 如果使用 ALTER DATABASE 语句手动开始镜像，若要监视服务器实例上的镜像数据库，则必须手动运行**sp_dbmmonitoraddmonitoring** 。  
   
 > [!NOTE]  
 >  如果在设置数据库镜像之前运行**sp_dbmmonitoraddmonitoring** ，则监视作业将运行，但不会更新存储数据库镜像监视器历史记录的状态表。  

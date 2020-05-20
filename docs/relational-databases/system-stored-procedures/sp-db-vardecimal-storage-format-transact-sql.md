@@ -20,14 +20,14 @@ helpviewer_keywords:
 - database compression [SQL Server]
 - table compression [SQL Server]
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 28628ee5dc8ff1bde7906dfea7fca60470720e11
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 91667feca7974f66233b7549af9f75838d2ce32d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108226"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831697"
 ---
 # <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @dbname= ]"*database_name*"  
+ [ @dbname =] "*database_name*"  
  要更改其存储格式的数据库的名称。 *database_name* **sysname**，无默认值。 如果省略数据库名称，则返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所有数据库的 vardecimal 存储格式状态。  
   
- [ @vardecimal_storage_format= ]{"ON" | "关闭 "}  
+ [ @vardecimal_storage_format =] {' 上的 ' | '关闭 "}  
  指定是否启用 vardecimal 存储格式。 @vardecimal_storage_format 可以是 ON 或 OFF。 参数的值为**varchar （3）**，无默认值。 如果提供数据库名称但却省略 @vardecimal_storage_format，则返回指定数据库的当前设置。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本中，此参数不起作用。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -59,7 +59,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
 ## <a name="result-sets"></a>结果集  
  如果无法更改数据库存储格式，则 sp_db_vardecimal_storage_format 返回错误。 如果数据库已处于指定的状态，则此存储过程无效。  
   
- 如果未@vardecimal_storage_format提供参数，则返回列数据库名称和 Vardecimal 状态。  
+ 如果 @vardecimal_storage_format 未提供参数，则返回列数据库名称和 Vardecimal 状态。  
   
 ## <a name="remarks"></a>备注  
  sp_db_vardecimal_storage_format 将返回 vardecimal 状态，但不能更改 vardecimal 状态。  

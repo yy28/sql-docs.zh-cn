@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoropen
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f5127d041817a41dcf2d6fb4ed65070c87d05dd4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8f439fa61b8bfecfba9d03589af0d09ff737f3bc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108484"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831754"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  打开游标。 sp_cursoropen 定义与游标和游标选项相关联的 SQL 语句，然后填充游标。 sp_cursoropen 等效于 DECLARE_CURSOR 和 OPEN [!INCLUDE[tsql](../../includes/tsql-md.md)]语句的组合。 此过程通过在表格格式数据流 (TDS) 数据包中指定 ID = 2 来调用。  
+  打开游标。 sp_cursoropen 定义与游标和游标选项相关联的 SQL 语句，然后填充游标。 sp_cursoropen 等效于 [!INCLUDE[tsql](../../includes/tsql-md.md)] DECLARE_CURSOR 和 OPEN 语句的组合。 此过程通过在表格格式数据流 (TDS) 数据包中指定 ID = 2 来调用。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -88,7 +88,7 @@ sp_cursoropen cursor OUTPUT, stmt
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- 与*scrollopt*一样， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以覆盖请求的*ccopt*值。  
+ 与*scrollopt*一样， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以覆盖请求的*ccopt*值。  
   
  *数*  
  要用于 AUTO_FETCH 的提取缓冲区行数。 默认值为 20 行。 指定为输入值与返回值时，*行计数*的行为不同。  
@@ -154,7 +154,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  *Stmt*参数允许的内容取决于*ccopt* ALLOW_DIRECT 返回值是由链接还是链接到*ccopt*值的其余部分，例如：  
   
--   如果未指定 ALLOW_DIRECT，则必须使用[!INCLUDE[tsql](../../includes/tsql-md.md)]为包含单个 SELECT 语句的存储过程调用的 SELECT 语句或执行语句。 此外，SELECT 语句必须限定为一个游标；也即，它不能包含关键字 SELECT INTO 或 FOR BROWSE。  
+-   如果未指定 ALLOW_DIRECT，则 [!INCLUDE[tsql](../../includes/tsql-md.md)] 必须使用为包含单个 SELECT 语句的存储过程调用的 SELECT 语句或执行语句。 此外，SELECT 语句必须限定为一个游标；也即，它不能包含关键字 SELECT INTO 或 FOR BROWSE。  
   
 -   如果指定了 ALLOW_DIRECT，则这可能导致一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，包括那些依次执行其他存储过程以及多个语句的语句。 将只执行非 SELECT 语句或包含关键字 SELECT INTO 或 FOR BROWSE 的任何 SELECT 语句，而不会导致创建游标。 这同样适用于在一批多个语句中包含的任何 SELECT 语句。 在 SELECT 语句包含只与游标相关的子句的情况下，将忽略这些子句。 例如，当*ccopt*的值为0x2002 时，这是对的请求：  
   
@@ -169,7 +169,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  AUTO_FETCH 和 AUTO_CLOSE 可以由 OR 链接到 FAST_FORWARD。  
   
- 如果 CHECK_ACCEPTED_TYPES 为 ON，则最后五个*scrollopt*值中至少有一个（`,` KEYSET_ACCEPTABLE DYNAMIC_ACCEPTABLE，FORWARD_ONLY_ACCEPTABLE，STATIC_ACCEPTABLE 或 FAST_FORWARD_ACCEPTABLE）也必须为 ON。  
+ 如果 CHECK_ACCEPTED_TYPES 为 ON，则最后五个*scrollopt*值中至少有一个（KEYSET_ACCEPTABLE `,` DYNAMIC_ACCEPTABLE，FORWARD_ONLY_ACCEPTABLE，STATIC_ACCEPTABLE 或 FAST_FORWARD_ACCEPTABLE）也必须为 ON。  
   
  STATIC 游标始终打开为 READ_ONLY。 这意味着无法通过此游标更新基础表。  
   

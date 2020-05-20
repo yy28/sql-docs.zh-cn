@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_prepare
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2719e330ec2fde61b91ca11ef93784983c6c418c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 641086797c9d6b8ddf6a86a83de1b5d7b69dcb39
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165910"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831705"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 > [!NOTE]  
 >  用于指定*stmt*值的规则与 sp_cursoropen 的规则相同，但*stmt*字符串数据类型必须为**ntext**。  
   
- *选项*  
+ *options*  
  一个可选参数，它返回游标结果集列的说明。 *选项*需要以下**int**输入值。  
   
 |值|说明|  
@@ -104,14 +104,14 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- 与*scrollpt*一样， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以从所请求的值分配不同的值。  
+ 与*scrollpt*一样， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以从所请求的值分配不同的值。  
   
 ## <a name="remarks"></a>备注  
  RPC 状态参数为以下值之一：  
   
 |值|说明|  
 |-----------|-----------------|  
-|0|成功|  
+|0|Success|  
 |0x0001|失败|  
 |1FF6|无法返回元数据。<br /><br /> 注意：此操作的原因是语句不生成结果集;例如，它是 INSERT 或 DDL 语句。|  
   
@@ -144,7 +144,7 @@ exec sp_cursorclose @p2
  
  如果对*stmt*进行参数化，并且*scrollopt* PARAMETERIZED_STMT 值为 ON，则字符串的格式如下所示：  
   
- { * \<局部变量名称> * *\<数据类型>* }[ ,...*n* ]  
+ { * \< 局部变量名称> * * \< 数据类型>* } [,.。。*n* ]  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_cursorexecute &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
