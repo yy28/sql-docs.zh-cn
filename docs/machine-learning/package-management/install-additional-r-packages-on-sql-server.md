@@ -1,6 +1,6 @@
 ---
 title: 安装新 R 包
-description: 了解如何使用 sqlmlutils 将新的 R 包安装到 SQL Server 机器学习服务或 SQL Server R Services 的实例。
+description: 了解如何使用 sqlmlutils 将新的 R 包安装到 SQL Server 机器学习服务的实例。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/11/2020
@@ -10,18 +10,18 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b2c561791b88340fd0a77977843f582fa60c648
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: efea0d4306c71607de93652e08f347586a17450e
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269426"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606865"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>使用 sqlmlutils 安装新的 R 包
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本文介绍如何使用 [sqlmlutils](https://github.com/Microsoft/sqlmlutils) 包中的函数以将新的 R 包安装到 SQL Server 机器学习服务或 SQL Server R Services 的实例。 安装的包可用于使用 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL 语句在数据库中运行的 R 脚本。
+本文介绍如何使用 [sqlmlutils](https://github.com/Microsoft/sqlmlutils) 包中的函数来将新的 R 包安装到 SQL Server 机器学习服务的实例。 安装的包可用于使用 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL 语句在数据库中运行的 R 脚本。
 
 > [!NOTE]
 > 本文中所述的 sqlmlutils 包用于将 R 包添加到 SQL Server 2019 或更高版本。 对于 SQL Server 2017 及更早版本，请参阅[使用 R 工具安装包](https://docs.microsoft.com/sql/machine-learning/package-management/install-r-packages-standard-tools?view=sql-server-2017&viewFallbackFrom=sql-server-ver15)。
@@ -30,7 +30,7 @@ ms.locfileid: "83269426"
 
 - 在用于连接到 SQL Server 的客户端计算机上安装 [R](https://www.r-project.org) 和 [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/)。 可以使用任何 R IDE 来运行脚本，但本文假定使用 RStudio。
 
-- 在用于连接到 SQL Server 的客户端计算机上安装 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) 或 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) (SSMS)。 可以使用其他数据库管理或查询工具，但本文假定使用 Azure Data Studio 或 SSMS。
+- 在用于连接到 SQL Server 的客户端计算机上安装 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is)。 你可以使用其他数据库管理或查询工具，但本文采用 Azure Data Studio。
 
 ### <a name="other-considerations"></a>其他注意事项
 
@@ -194,7 +194,6 @@ sqlmlutils 包中包含一个文件，可以将该文件复制到客户端计算
    ```
    ::: moniker-end
 
-
    至于 `Rversion` 值，请使用安装在 SQL Server 上的 R 版本。 若要验证已安装的版本，请使用以下 T-SQL 命令。
 
    ```sql
@@ -227,7 +226,7 @@ sqlmlutils 包中包含一个文件，可以将该文件复制到客户端计算
 
 安装 glue 包后，可以通过 T-SQL sp_execute_external_script 命令在 SQL Server 中的 R 脚本中使用它 。
 
-1. 打开 Azure Data Studio 或 SSMS 并连接到 SQL Server 数据库。
+1. 打开 Azure Data Studio 并连接到 SQL Server 数据库。
 
 1. 运行以下命令：
 
