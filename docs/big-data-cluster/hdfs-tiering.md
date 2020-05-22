@@ -1,7 +1,7 @@
 ---
 title: 配置 HDFS 分层
 titleSuffix: SQL Server big data clusters
-description: 本文介绍如何配置 HDFS 分层，以将外部 Azure Data Lake Storage 文件系统装载到 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 上的 HDFS 中。
+description: 本文介绍如何配置 HDFS 分层，以将外部 Azure Data Lake Storage 文件系统装载到 SQL Server 2019 大数据群集上的 HDFS 中。
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 008a62d3d36acf96b0c63559cd4d8ecbf27641c1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c156e117b3a26c09feb5afb3bb2f3ee1c594c43b
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190395"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606599"
 ---
 # <a name="configure-hdfs-tiering-on-big-data-clusters-2019"></a>在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上配置 HDFS 分层
 
@@ -43,7 +43,7 @@ ms.locfileid: "74190395"
 
 HDFS 分层支持刷新。 刷新现有装载可获取远程数据的最新快照。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 - [部署大数据群集](deployment-guidance.md)
 - [大数据工具](deploy-big-data-tools.md)

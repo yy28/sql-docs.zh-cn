@@ -1,36 +1,40 @@
 ---
 title: 什么是 SQL Server 机器学习服务（Python 和 R）？
 titleSuffix: ''
-description: 机器学习服务是 SQL Server 中一项支持使用关系数据运行 Python 和 R 脚本的功能。 可以使用开源包和框架，以及 Microsoft Python 和 R 包进行预测分析和机器学习。 脚本在数据库中执行，而不将数据移动到 SQL Server 外部或是在网络上移动。 本文介绍 SQL Server 机器学习服务的基础知识。
+description: 机器学习服务是 SQL Server 中一项支持使用关系数据运行 Python 和 R 脚本的功能。 可以使用开源包和框架，以及 Microsoft Python 和 R 包进行预测分析和机器学习。 脚本在数据库中执行，而不将数据移动到 SQL Server 外部或是在网络上移动。 本文介绍 SQL Server 机器学习服务的基础知识以及如何开始使用该服务。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/06/2020
+ms.date: 04/16/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: afce689bffe69de78970006aea51ddd49481e614
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 8a3ce585c69cd0ee026d81c4bd1f75c235af4752
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220652"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606579"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>什么是 SQL Server 机器学习服务（Python 和 R）？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-机器学习服务是 SQL Server 中一项支持使用关系数据运行 Python 和 R 脚本的功能。 可以使用开源包和框架，以及 [Microsoft Python 和 R 包](#packages)进行预测分析和机器学习。 脚本在数据库中执行，而不将数据移动到 SQL Server 外部或是在网络上移动。 本文介绍 SQL Server 机器学习服务的基础知识。
+机器学习服务是 SQL Server 中一项支持使用关系数据运行 Python 和 R 脚本的功能。 可以使用开源包和框架，以及 [Microsoft Python 包和 R 包](#packages)进行预测分析和机器学习。 脚本在数据库中执行，而不将数据移动到 SQL Server 外部或是在网络上移动。 本文介绍 SQL Server 机器学习服务的基础知识以及如何开始使用该服务。
+
+有关其他 SQL 平台上的机器学习，请参阅 [SQL 机器学习文档](index.yml)。
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 > [!NOTE]
 > 要在 SQL Server 中执行 Java，请参阅[语言扩展文档](../language-extensions/language-extensions-overview.md)。
 ::: moniker-end
 
-## <a name="what-is-machine-learning-services"></a>什么是机器学习服务？
+## <a name="execute-python-and-r-scripts-in-sql-server"></a>在 SQL Server 中执行 Python 和 R 脚本
 
 使用 SQL Server 机器学习服务，你可以在数据库中执行 Python 和 R 脚本。 可以使用它来准备和清理数据、执行特征工程以及在数据库中定型、评估和部署机器学习模型。 此功能在数据所在的位置运行脚本，无需通过网络将数据传输到其他服务器。
 
-Python 和 R 的基本分发包含在机器学习服务中。 除了用于 Python 的 [revoscalepy](python/ref-py-revoscalepy.md) 和 [microsoftml](python/ref-py-microsoftml.md) Microsoft 包，以及用于 R 的 [RevoScaleR](r/ref-r-revoscaler.md)、[MicrosoftML](r/ref-r-microsoftml.md)、[olapR](r/ref-r-olapr.md) 和 [sqlrutils](r/ref-r-sqlrutils.md) 外，还可以安装和使用开源包和框架，如 PyTorch、TensorFlow 和 scikit-learn。
+你可以通过存储过程 [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 在 SQL Server 实例上执行 Python 和 R 脚本。
+
+Python 和 R 的基本分发包含在机器学习服务中。 除了 Microsoft 包之外，还可以安装和使用开源包和框架，例如 PyTorch、TensorFlow 和 scikit-learn。
 
 机器学习服务使用扩展性框架在 SQL Server 中运行 Python 和 R 脚本。 详细了解工作原理：
 
@@ -38,39 +42,41 @@ Python 和 R 的基本分发包含在机器学习服务中。 除了用于 Pytho
 + [Python 扩展](concepts/extension-python.md)
 + [R 扩展](concepts/extension-r.md)
 
-## <a name="what-can-i-do-with-machine-learning-services"></a>机器学习服务可以用于执行哪些操作？
+## <a name="get-started-with-machine-learning-services"></a>机器学习服务入门
 
-可以使用机器学习服务在 SQL Server 中生成和定型机器学习和深度学习模型。 还可以将现有模型部署到机器学习服务，并使用关系数据进行预测。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+1. [在 Windows 上](install/sql-machine-learning-services-windows-install.md)或[在 Linux 上](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json)安装 SQL Server 机器学习服务。 还可以使用[大数据群集上的机器学习服务](../big-data-cluster/machine-learning-services.md)。
 
-以下为可以使用 SQL Server 机器学习服务进行的预测的示例类型：
+1. 配置开发工具。 可以参阅[在 Azure Data Studio 笔记本中运行 Python 和 R 脚本](install/sql-machine-learning-azure-data-studio.md)。 还可以在 [Azure Data Studio](../azure-data-studio/what-is.md) 中运行 T-SQL。
 
-|||
-|-|-|
-|分类/类别|自动将客户反馈分为积极和消极两类|
-|回归/预测连续值|根据面积和地段预测房价|
-|异常检测|检测欺诈性的银行交易 |
-|建议|根据网购者以前的购买情况，推荐他们可能想购买的产品|
+1. 编写你的第一个 Python 或 R 脚本。
 
-### <a name="how-to-execute-python-and-r-scripts"></a>如何执行 Python 和 R 脚本
+    + [适用于 SQL 机器学习的 Python 教程](tutorials/python-tutorials.md)
+    + [适用于 SQL 机器学习的 R 教程](tutorials/r-tutorials.md)
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+1. [在 Windows 上安装 SQL Server 机器学习服务](install/sql-machine-learning-services-windows-install.md)。
 
-在机器学习服务中有两种执行 Python 和 R 脚本的方法：
+1. 配置开发工具。 可以参阅[在 Azure Data Studio 笔记本中运行 Python 和 R 脚本](install/sql-machine-learning-azure-data-studio.md)。 还可以在 [Azure Data Studio](../azure-data-studio/what-is.md) 中使用 T-SQL。
 
-+ 最常见的方法是使用 T-SQL 存储过程 [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
+1. 编写你的第一个 Python 或 R 脚本。
 
-+ 还可以使用首选的 Python 或 R 客户端并编写将执行（称为“远程计算上下文”）推送到远程 SQL Server 的脚本  。 有关详细信息，请参阅如何为 [Python 开发](python/setup-python-client-tools-sql.md)和 [R 开发](r/set-up-a-data-science-client.md)设置数据科学客户端。
+    + [适用于 SQL 机器学习的 Python 教程](tutorials/python-tutorials.md)
+    + [适用于 SQL 机器学习的 R 教程](tutorials/r-tutorials.md)
+::: moniker-end
 
 <a name="versions"></a>
 
 ## <a name="python-and-r-versions"></a>Python 和 R 版本
 
-下面列出每个 SQL Server 版本的机器学习服务中包含的 Python 和 R 版本。
+下面列出了机器学习服务中包含的 Python 和 R 版本。
 
 | SQL Server 版本 | Python 版本 | R 版本 |
 |-|-|-|
 | SQL Server 2017 | 3.5.2 | 3.3.3 |
 | SQL Server 2019 | 3.7.3 | 3.5.2 |
 
-有关 SQL Server 2016 中的 R 版本，请参阅[“什么是 R 服务？”中的“R 版本”部分](r/sql-server-r-services.md#version)
+有关 SQL Server 2016 中的 R 版本，请参阅[“什么是 R 服务？”中的“R 版本”部分](r/sql-server-r-services.md?view=sql-server-2016#version)
 
 <a name="packages"></a>
 
@@ -90,28 +96,21 @@ Python 和 R 的基本分发包含在机器学习服务中。 除了用于 Pytho
 
 有关与机器学习服务一并安装的包以及如何安装其他包的详细信息，请参阅：
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 + [获取 Python 包信息](package-management/python-package-information.md)
 + [使用 sqlmlutils 安装 Python 包](package-management/install-additional-python-packages-on-sql-server.md)
 + [获取 R 包信息](package-management/r-package-information.md)
 + [使用 sqlmlutils 安装 新的 R 包](package-management/install-additional-r-packages-on-sql-server.md)。
-
-## <a name="how-do-i-get-started-with-machine-learning-services"></a>如何开始使用机器学习服务入门？
-
-1. [安装 SQL Server 机器学习服务](install/sql-machine-learning-services-windows-install.md)
-
-1. 配置开发工具。 可用工具如下：
-
-    + 通过 [Azure Data Studio](../azure-data-studio/what-is.md) 或 [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) 来使用 T-SQL 和存储过程 [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 执行 Python 或 R 脚本。
-    + 在自己的开发便携式计算机或工作站上使用 Python 或 R 来执行脚本。 你可以在本地请求数据，也可以使用 [revoscalepy](python/ref-py-revoscalepy.md) 和 [RevoScaleR](r/ref-r-revoscaler.md) 将执行远程推送到 SQL Server。 有关详细信息，请参阅如何为 [Python 开发](python/setup-python-client-tools-sql.md)和 [R 开发](r/set-up-a-data-science-client.md)设置数据科学客户端。
-
-1. 编写你的第一个 Python 或 R 脚本
-
-    + 快速入门：[运行简单的 Python 脚本](tutorials/quickstart-python-create-script.md)
-    + 快速入门：[运行简单的 R 脚本](tutorials/quickstart-r-create-script.md)
-    + 教程：[在 T-SQL 中使用 Python](tutorials/sqldev-in-database-python-for-sql-developers.md)：探索数据、执行特征工程、定型和部署模型，并进行预测（五部分构成的系列）
-    + 教程：[在 T-SQL 中使用 R](tutorials/sqldev-in-database-r-for-sql-developers.md)：探索数据、执行特征工程、定型和部署模型，并进行预测（五部分构成的系列）
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
++ [获取 Python 包信息](package-management/python-package-information.md)
++ [使用 Python 工具在 SQL Server 上安装包](package-management/install-python-packages-standard-tools.md)
++ [获取 R 包信息](package-management/r-package-information.md)
++ [使用 T-SQL (CREATE EXTERNAL LIBRARY) 将 R 包安装在 SQL Server 上](package-management/install-r-packages-with-tsql.md)。
+::: moniker-end
 
 ## <a name="next-steps"></a>后续步骤
 
-+ [安装 SQL Server 机器学习服务](install/sql-machine-learning-services-windows-install.md)
-+ 设置用于 [Python 开发](python/setup-python-client-tools-sql.md)和 [R 开发](r/set-up-a-data-science-client.md)的数据科学客户端
++ [在 Windows 上](install/sql-machine-learning-services-windows-install.md)或[在 Linux 上](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json)安装 SQL Server 机器学习服务
++ [适用于 SQL 机器学习的 Python 教程](tutorials/python-tutorials.md)
++ [适用于 SQL 机器学习的 R 教程](tutorials/r-tutorials.md)

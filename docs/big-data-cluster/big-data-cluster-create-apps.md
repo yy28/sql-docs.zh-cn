@@ -1,7 +1,7 @@
 ---
 title: 使用 azdata 部署应用程序
 titleSuffix: SQL Server Big Data Clusters
-description: 在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 上将 Python 或 R 脚本部署为应用程序。
+description: 在 SQL Server 2019 大数据群集上将 Python 或 R 脚本部署为应用程序。
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 33b5bf6061e9168fd150adcb4a7ccf29302bce63
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ab28a6bbe7bbf108305f065dcdf7b870c0f76602
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253150"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606619"
 ---
 # <a name="how-to-deploy-an-app-on-big-data-clusters-2019"></a>如何在 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上部署应用
 
@@ -37,14 +37,14 @@ ms.locfileid: "75253150"
 - MLeap 服务
 - SQL Server Integration Services (SSIS)
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 - [SQL Server 2019 大数据群集](deployment-guidance.md)
 - [azdata 命令行工具](deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>功能
 
-在 SQL Server 2019 中，可以创建、删除、描述、初始化、列出运行和更新应用程序。 下表介绍了可以与 azdata 一起使用的应用程序部署命令  。
+在 SQL Server 2019 中，可以创建、删除、描述、初始化、列出运行和更新应用程序。 下表介绍了可以与 azdata 一起使用的应用程序部署命令。
 
 |Command |说明 |
 |:---|:---|
@@ -106,7 +106,7 @@ azdata app create --spec <directory containing spec file>
 azdata app create --spec ./addpy
 ```
 
-这假设你的应用程序存储在 `addpy` 文件夹中。 此文件夹还应包含应用程序的规范文件 `spec.yaml`。 有关 [ 文件的详细信息，请参阅](concept-application-deployment.md)“应用程序部署”页`spec.yaml`。
+这假设你的应用程序存储在 `addpy` 文件夹中。 此文件夹还应包含应用程序的规范文件 `spec.yaml`。 有关 `spec.yaml` 文件的详细信息，请参阅[“应用程序部署”页](concept-application-deployment.md)。
 
 要部署此应用示例应用，请在名为 `addpy` 的目录中创建以下文件：
 

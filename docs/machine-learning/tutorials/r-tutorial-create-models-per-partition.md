@@ -9,12 +9,12 @@ ms.author: davidph
 author: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 997896520a72f7803e656a42d2e38ebc6bf59d3d
-ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
+ms.openlocfilehash: 9c45fa9db06980f05bdaf059aae857a36b326c24
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619660"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606679"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>教程：在 SQL Server 中使用 R 创建基于分区的模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,8 +23,8 @@ ms.locfileid: "82619660"
 
 基于分区的建模可通过 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 上的两个新参数启用：
 
-+ input_data_1_partition_by_columns，指定要按其进行分区的列  。
-+ input_data_1_order_by_columns，指定要按其进行排序的列  。 
++ input_data_1_partition_by_columns，指定要按其进行分区的列。
++ input_data_1_order_by_columns，指定要按其进行排序的列。 
 
 本教程介绍如何使用经典纽约市出租车示例数据和 R 脚本进行基于分区的建模。 分区列是付款方式。
 
@@ -45,9 +45,9 @@ ms.locfileid: "82619660"
 
 + SQL Server 2019 数据库引擎实例，集成了机器学习服务和 R。
 
-+ 该教程使用 [ODBC 上从 R 脚本到 SQL Server 的环回连接](../connect/loopback-connection.md]。 因此，需要[为 SQLRUserGroup 创建登录名](../security/create-a-login-for-sqlrusergroup.md)。
++ 该教程使用[通过 ODBC 进行的从 R 脚本到 SQL Server 的环回连接](../connect/loopback-connection.md)。 因此，需要[为 SQLRUserGroup 创建登录名](../security/create-a-login-for-sqlrusergroup.md)。
 
-通过在查询工具中以 T-SQL 查询的形式执行 `SELECT @@Version` 来检查版本  。
+通过在查询工具中以 T-SQL 查询的形式执行 `SELECT @@Version` 来检查版本。
 
 通过返回当前与数据库引擎实例一起安装的所有 R 包的格式正确的列表，检查 R 包的可用性：
 
@@ -69,9 +69,9 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 ## <a name="create-calculatedistance"></a>创建 CalculateDistance
 
-演示数据库附带一个用于计算距离的标量函数，但我们的存储过程更适合使用表值函数。 通过运行以下脚本创建 CalculateDistance 函数，稍后的[训练步骤](#training-step)中会使用该函数  。
+演示数据库附带一个用于计算距离的标量函数，但我们的存储过程更适合使用表值函数。 通过运行以下脚本创建 CalculateDistance 函数，稍后的[训练步骤](#training-step)中会使用该函数。
 
-要确认该函数已创建，请在对象资源管理器的 NYCTaxi_Sample 数据库下检查 \Programmability\Functions\Table-valued Functions  。
+要确认该函数已创建，请在对象资源管理器的 NYCTaxi_Sample 数据库下检查 \Programmability\Functions\Table-valued Functions。
 
 ```sql
 USE NYCTaxi_sample
@@ -105,11 +105,11 @@ GO
 
 本教程将 R 脚本包装在存储过程中。 在本步骤中，你将创建一个存储过程，该存储过程使用 R 创建输入数据集，生成用于预测提示结果的分类模型，然后将该模型存储在数据库中。
 
-在此脚本使用的参数输入中，可看到 input_data_1_partition_by_columns 和 input_data_1_order_by_columns   。 请记住，这些参数分区建模所依据的机制。 这些参数作为输入传递到 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 以处理分区，且外部脚本对每个分区执行一次。 
+在此脚本使用的参数输入中，可看到 input_data_1_partition_by_columns 和 input_data_1_order_by_columns 。 请记住，这些参数分区建模所依据的机制。 这些参数作为输入传递到 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 以处理分区，且外部脚本对每个分区执行一次。 
 
 为了加快完成速度，此存储过程[使用并行执行](#parallel)。
 
-运行此脚本后，应会在对象资源管理器中 NYCTaxi_Sample 数据库下的 \Programmability\Stored Procedures 中看到 train_rxLogIt_per_partition   。 还应看到用于存储模型的新表：nyctaxi_models  。
+运行此脚本后，应会在对象资源管理器中 NYCTaxi_Sample 数据库下的 \Programmability\Stored Procedures 中看到 train_rxLogIt_per_partition 。 还应看到用于存储模型的新表：nyctaxi_models。
 
 ```sql
 USE NYCTaxi_Sample
@@ -206,7 +206,7 @@ GO
 
 ## <a name="check-results"></a>检查结果
 
-模型表中的结果应该为 5 个不同的模型，这些模型基于 5 个划分为 5 种付款类型的分区。 模型位于 ml_models 数据源中  。
+模型表中的结果应该为 5 个不同的模型，这些模型基于 5 个划分为 5 种付款类型的分区。 模型位于 ml_models 数据源中。
 
 ```sql
 SELECT *

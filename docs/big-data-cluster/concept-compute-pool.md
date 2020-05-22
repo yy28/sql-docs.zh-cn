@@ -1,7 +1,7 @@
 ---
 title: 什么是计算池？
 titleSuffix: SQL Server big data clusters
-description: 本文介绍 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 中的计算池。
+description: 本文介绍 SQL Server 2019 大数据群集中的计算池。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e54ee601b180e8883ec9fea49fff810c52fe5f49
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: be8766f00a8c6b4d9fd47c976c5a2e1235cacd41
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253145"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606339"
 ---
 # <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>什么是 SQL Server 大数据群集中的计算池？
 

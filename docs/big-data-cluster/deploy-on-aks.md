@@ -1,7 +1,7 @@
 ---
 title: 配置 Azure Kubernetes 服务
 titleSuffix: SQL Server Big Data Clusters
-description: 了解如何为 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 部署配置 Azure Kubernetes 服务 (AKS)。
+description: 了解如何为 SQL Server 2019 大数据群集部署配置 Azure Kubernetes 服务 (AKS)。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d23ae15a277c866c62f3e9be9e2eab19c5255c10
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6a725cdbc5424da3820e5cd404306465482b3d94
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77173607"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606929"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>为 SQL Server 大数据群集部署配置 Azure Kubernetes 服务
 
@@ -28,9 +28,9 @@ ms.locfileid: "77173607"
 本文介绍使用 Azure CLI 在 AKS 上部署 Kubernetes 的步骤。 如果没有 Azure 订阅，请在开始操作前先创建一个免费帐户。
 
 > [!TIP]
-> 还可以将 AKS 和大数据群集的部署脚本编写成一个步骤。 有关详细信息，请参阅 [python 脚本](quickstart-big-data-cluster-deploy.md)或 Azure Data Studio [笔记本](deploy-notebooks.md)，了解如何实现此操作。
+> 还可以将 AKS 和大数据群集的部署脚本编写成一个步骤。 有关详细信息，请参阅 [python 脚本](quickstart-big-data-cluster-deploy.md)或 Azure Data Studio [笔记本](notebooks-deploy.md)，了解如何实现此操作。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 - [部署 SQL Server 2019 大数据工具](deploy-big-data-tools.md)：
    - **Kubectl**
@@ -76,7 +76,7 @@ Azure 资源组是一个逻辑组，用于部署和管理 Azure 资源。 通过
    az account list-locations -o table
    ```
 
-1. 使用“**az group create**”命令创建资源组。 以下示例在 `sqlbdcgroup` 位置创建名为 `westus2` 的资源组。
+1. 使用“**az group create**”命令创建资源组。 以下示例在 `westus2` 位置创建名为 `sqlbdcgroup` 的资源组。
 
    ```azurecli
    az group create --name sqlbdcgroup --location westus2
@@ -110,7 +110,7 @@ Azure 资源组是一个逻辑组，用于部署和管理 Azure 资源。 通过
 
 ## <a name="create-a-kubernetes-cluster"></a>创建 Kubernetes 群集
 
-1. 使用 [az aks create](https://docs.microsoft.com/cli/azure/aks) 命令在 AKS 中创建 Kubernetes 群集。 以下示例创建一个名为“kubcluster”的 Kubernetes 群集，该群集具有一个 Standard_L8s 大小的 Linux 代理节点   。
+1. 使用 [az aks create](https://docs.microsoft.com/cli/azure/aks) 命令在 AKS 中创建 Kubernetes 群集。 以下示例创建一个名为“kubcluster”的 Kubernetes 群集，该群集具有一个 Standard_L8s 大小的 Linux 代理节点。
 
    在运行该脚本之前，请将 `<version number>` 替换为在上一步中标识的版本号。
 

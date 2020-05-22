@@ -1,7 +1,7 @@
 ---
 title: 部署单节点 kubeadm 群集
 titleSuffix: SQL Server Big Data Clusters
-description: 使用 bash 部署脚本将 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 部署到单节点 kubeadm 群集。
+description: 使用 bash 部署脚本将 SQL Server 2019 大数据群集部署到单节点 kubeadm 群集。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f60256e58339387323f923c85d2b880459455663
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b69073a903a94435c8e73120e45109f1719d2ac6
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252102"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606779"
 ---
 # <a name="deploy-with-a-bash-script-to-a-single-node-kubeadm-cluster"></a>使用 bash 脚本部署到单个节点 kubeadm 群集
 
@@ -25,7 +25,7 @@ ms.locfileid: "75252102"
 
 ## <a name="prerequisites"></a>先决条件
 
-- Vanilla Ubuntu 18.04 或 16.04 服务器虚拟机或物理计算机  。 所有依赖项都由脚本设置，你可以从 VM 内部运行该脚本。
+- Vanilla Ubuntu 18.04 或 16.04 服务器虚拟机或物理计算机。 所有依赖项都由脚本设置，你可以从 VM 内部运行该脚本。
 
   > [!NOTE]
   > 尚不支持使用 Azure Linux VM。
@@ -60,15 +60,15 @@ ms.locfileid: "75252102"
    chmod +x setup-bdc.sh
    ```
 
-3. 运行该脚本（请确保使用 sudo 运行） 
+3. 运行该脚本（请确保使用 sudo 运行）
 
    ```bash
    sudo ./setup-bdc.sh
    ```
 
-   出现提示时，请输入供以下外部终结点使用的密码：控制器、SQL Server master 和网关。 根据现有的 SQL Server 密码规则，密码应足够复杂。 控制器用户名默认为 admin  。
+   出现提示时，请输入供以下外部终结点使用的密码：控制器、SQL Server master 和网关。 根据现有的 SQL Server 密码规则，密码应足够复杂。 控制器用户名默认为 admin。
 
-4. 设置 azdata 工具的别名  。
+4. 设置 azdata 工具的别名。
 
    ```bash
    source ~/.bashrc

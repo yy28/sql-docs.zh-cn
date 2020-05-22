@@ -1,6 +1,6 @@
 ---
 title: Python 教程：部署群集模型
-description: 在这个由四部分组成的教程系列的第四部分中，你将通过 SQL Server 机器学习服务在 Python 中部署聚类分析模型。
+description: 此系列教程由四个部分组成，这是第四部分。你将通过 SQL 机器学习在 Python 中部署聚类分析模型。
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
@@ -11,28 +11,33 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: df0fd7cb27977679a6ca879d7ae01045ed3fa8c8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0343c3c410c8cf7b76b391fecd6ff57bff5e80d3
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116560"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606429"
 ---
-# <a name="tutorial-deploy-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>教程：在 Python 中部署模型以通过 SQL Server 机器学习服务对客户进行分类
+# <a name="python-tutorial-deploy-a-model-to-categorize-customers-with-sql-machine-learning"></a>Python 教程：部署一个模型以通过 SQL 机器学习对客户进行分类
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+此系列教程由四个部分组成，这是第四部分。你将在 SQL Server 机器学习服务中或大数据群集上将在 Python 中开发的聚类分析模型部署到 SQL 数据库中。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 在这个由四个部分组成的教程系列的第四部分中，你将使用 SQL Server 机器学习服务将 Python 中开发的聚类分析模型部署到 SQL 数据库中。
+::: moniker-end
 
-为了定期执行聚类分析，在新客户注册时，你需要能够从任何应用调用 Python 脚本。 为此，可以通过将 Python 脚本置于数据库中的 SQL 存储过程中，在 SQL Server 中部署 Python 脚本。 由于模型在 SQL 数据库中执行，因此可以轻松地针对存储在数据库中的数据对其进行定型。
+为了定期执行聚类分析，在新客户注册时，你需要能够从任何应用调用 Python 脚本。 为此，可以通过将 Python 脚本置于 SQL 存储过程中，在数据库中部署 Python 脚本。 由于模型在数据库中执行，因此可以轻松地使用存储在数据库中的数据对其进行训练。
 
-在本部分中，你会将刚刚编写的 Python 代码移到 SQL Server，并借助 SQL Server 机器学习服务部署聚类分析。
+在本部分中，你将把刚刚编写的 Python 代码移到服务器上并部署聚类分析。
 
 本文将指导如何进行以下操作：
 
 > [!div class="checklist"]
 > * 创建生成模型的存储过程
-> * 在 SQL Server 中执行聚类分析
+> * 在服务器上执行聚类分析
 > * 使用聚类分析信息
 
 在[第一部分](python-clustering-model.md)中，你安装了必备条件并还原了示例数据库。
@@ -43,7 +48,7 @@ ms.locfileid: "81116560"
 
 ## <a name="prerequisites"></a>先决条件
 
-* 本教程系列的第四部分假设你已完成[第一部分](python-clustering-model.md)的必备条件，并完成了[第二部分](python-clustering-model-prepare-data.md)和[第三部分](python-clustering-model-build.md)的步骤    。
+* 本教程系列的第四部分假设你已完成[第一部分](python-clustering-model.md)的必备条件，并完成了[第二部分](python-clustering-model-prepare-data.md)和[第三部分](python-clustering-model-build.md)的步骤  。
 
 ## <a name="create-a-stored-procedure-that-generates-the-model"></a>创建生成模型的存储过程
 
@@ -171,23 +176,22 @@ SELECT customer.[c_email_address], customer.c_customer_sk
   WHERE c.cluster = 0
 ```
 
-你可以更改 c.cluster 值，以返回其他群集中客户的电子邮件地址  。
+你可以更改 c.cluster 值，以返回其他群集中客户的电子邮件地址。
 
 ## <a name="clean-up-resources"></a>清理资源
 
-如果已学完本教程，可以从 SQL Server 中删除 tpcxbb_1gb 数据库。
+完成本教程后，可以删除 tpcxbb_1gb 数据库。
 
 ## <a name="next-steps"></a>后续步骤
 
 在本教程系列的第四部分中，你完成了这些步骤：
 
 * 创建生成模型的存储过程
-* 在 SQL Server 中执行聚类分析
+* 在服务器上执行聚类分析
 * 使用聚类分析信息
 
-若要了解关于在 SQL Server 机器学习服务中使用 Python 的详细信息，请参阅：
+若要详细了解如何在 SQL 机器学习中使用 Python，请参阅：
 
-* [快速入门：通过 SQL Server 机器学习服务创建和运行简单的 Python 脚本](quickstart-python-create-script.md)
-* [SQL Server 机器学习服务的其他 Python 教程](sql-server-python-tutorials.md)
+* [快速入门：创建并运行简单的 Python 脚本](quickstart-python-create-script.md)
+* [适用于 SQL 机器学习的其他 Python 教程](python-tutorials.md)
 * [使用 sqlmlutils 安装 Python 包](../package-management/install-additional-python-packages-on-sql-server.md)
-

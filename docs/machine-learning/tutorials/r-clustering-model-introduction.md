@@ -1,51 +1,52 @@
 ---
-title: Python 教程：对客户进行聚类分析
-titleSuffix: SQL machine learning
-description: 本系列教程由四个部分组成。你将使用 K-Means 在数据库中组合使用 Python 和 SQL 机器学习，对客户进行聚类分析。
+title: 教程：在 R 中开发聚类分析模型
+titleSuffix: SQL Machine Learning
+description: 本系列教程由四个部分组成。你将开发一个模型，以便通过 SQL 机器学习在 R 中执行聚类分析。
 ms.prod: sql
 ms.technology: machine-learning
-ms.devlang: python
-ms.date: 04/15/2020
 ms.topic: tutorial
-author: garyericson
-ms.author: garye
-ms.reviewer: davidph
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye, davidph
+ms.date: 05/04/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8b3be490a6da01d34f8c762bf9c6cae1a35dbe40
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 558d6b9aaa47288de7c75e61ee38d379a3fc1e68
 ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606535"
+ms.locfileid: "83607100"
 ---
-# <a name="python-tutorial-categorizing-customers-using-k-means-clustering-with-sql-machine-learning"></a>Python 教程：将 K-Means 聚类分析与 SQL 机器学习配合使用，对客户进行聚类分析
+# <a name="tutorial-prepare-data-to-perform-clustering-in-r-with-sql-machine-learning"></a>教程：准备数据以通过 SQL 机器学习在 R 中执行聚类分析
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-本系列教程由四个部分组成，引导你使用 Python 在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中或在[大数据群集](../../big-data-cluster/machine-learning-services.md)上开发和部署 K-Means 聚类分析模型，以便对客户数据进行聚类分析。
+本系列教程由四个部分组成，引导你使用 R 在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中或在[大数据群集](../../big-data-cluster/machine-learning-services.md)上开发和部署 K-Means 聚类分析模型，以便对客户数据进行聚类分析。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-本系列教程由四个部分组成，引导你使用 Python 在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中开发和部署 K-Means 群集模型，以便对客户数据进行聚类分析。
+本系列教程由四个部分组成，引导你使用 R 在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中开发和部署 K-Means 聚类分析模型，以便对客户数据进行聚类分析。
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+本系列教程由四个部分组成，引导你使用 R 在 [SQL Server R Services](../r/sql-server-r-services.md) 中开发和部署 K-Means 聚类分析模型，以便对客户数据进行聚类分析。
 ::: moniker-end
 
-在本系列的第一部分中，你将设置本教程的先决条件，然后将示例数据集还原到一个数据库。 在本系列的后续部分中，使用这些数据在 Python 中通过 SQL 机器学习来训练和部署聚类分析模型。
-
-在本系列的第二和第三部分中，在 Azure Data Studio 笔记本中开发一些 Python 脚本，用于分析和准备数据以及定型机器学习模型。 然后，在第四部分中，使用存储过程在数据库中运行这些 Python 脚本。
+在本系列的第一部分中，你将设置本教程的先决条件，然后将示例数据集还原到一个数据库。 在第二和第三部分中，你将在 Azure Data Studio 笔记本中开发一些 R 脚本，用于分析和准备此示例数据以及训练机器学习模型。 然后，在第四部分中，你将使用存储过程在数据库中运行这些 R 脚本。
 
 聚类分析可解释为将数据组织成组，其中一个组的成员在某些方面类似。 对于本系列教程，假设你拥有一家零售企业。 你将使用 K-Means 算法在产品购买及退货的数据集中执行针对客户的聚类分析。 通过对客户进行聚类分析，可以将特定组定为目标，更加高效地专注于市场营销工作。 K-Means 群集是一种无监督式学习算法，该算法根据相似性寻找数据中的规律。
+
 
 本文将指导如何进行以下操作：
 
 > [!div class="checklist"]
 > * 还原示例数据库
+> 
+[第二部分](r-clustering-model-prepare-data.md)介绍如何从数据库准备数据以执行聚类分析。
 
-[第二部分](python-clustering-model-prepare-data.md)介绍如何从数据库准备数据以执行聚类分析。
+[第三部分](r-clustering-model-build.md)介绍如何在 R 中创建和训练 K-Means 聚类分析模型。
 
-[第三部分](python-clustering-model-build.md)介绍如何在 Python 中创建和定型 K-Means 群集模型。
-
-在[第四部分](python-clustering-model-deploy.md)中，你将了解如何在数据库中创建存储过程，以便基于新数据在 Python 中执行聚类分析。
+在[第四部分](r-clustering-model-deploy.md)中，你将了解如何在数据库中创建存储过程，以便基于新数据在 R 中执行聚类分析。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -53,22 +54,14 @@ ms.locfileid: "83606535"
 * 支持 Python 语言的 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md) - 按照 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安装指南](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning?toc=%2fsql%2fmachine-learning%2ftoc.json&view=sql-server-linux-ver15)中的安装说明进行操作。 还可以[启用 SQL Server 大数据群集上的机器学习服务](../../big-data-cluster/machine-learning-services.md)。
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-* 支持 Python 语言的 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md) - 按照 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)中的安装说明进行操作。
+* 支持 R 语言的 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md) - 按照 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)中的安装说明进行操作。
 ::: moniker-end
 
-* [Azure Data Studio](../../azure-data-studio/what-is.md)。 你将使用 Azure Data Studio 中同时适用于 Python 和 SQL 的笔记本。 若要详细了解笔记本，请参阅[如何使用 Azure Data Studio 中的笔记本](../../azure-data-studio/sql-notebooks.md)。
+* [Azure Data Studio](../../azure-data-studio/what-is.md)。 你将使用 Azure Data Studio 中适用于 SQL 的笔记本。 若要详细了解笔记本，请参阅[如何使用 Azure Data Studio 中的笔记本](../../azure-data-studio/notebooks-guidance.md)。
 
-* 附加 Python 包 - 在本教程系列中的示例所使用的 Python 包中，有些可能是你已经安装了的，有些可能是你尚未安装的。
+* R IDE - 此教程使用 [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/)。
 
-  打开命令提示符，并更改为 Azure Data Studio 中使用的 Python 版本的安装路径。 例如，`cd %LocalAppData%\Programs\Python\Python37-32` 。 然后，运行下面的命令，以安装所有尚未安装的包。
-
-  ```console
-  pip install matplotlib
-  pip install pandas
-  pip install pyodbc
-  pip install scipy
-  pip install sklearn
-  ```
+* RODBC - 此驱动程序用于你在本教程中开发的 R 脚本。 如果尚未安装，请使用 R 命令 `install.packages("RODBC")` 安装它。 有关 RODBC 的详细信息，请参阅 [CRAN - RODBC 包](https://CRAN.R-project.org/package=RODBC)。
 
 ## <a name="restore-the-sample-database"></a>还原示例数据库
 
@@ -101,9 +94,10 @@ ms.locfileid: "83606535"
 
 在本系列教程的第一部分中，你已完成以下步骤：
 
-* 还原示例数据库
+* 安装必备组件
+* 将示例数据库还原成 SQL Server
 
 若要为机器学习模型准备数据，按本系列教程的第二部分进行操作：
 
 > [!div class="nextstepaction"]
-> [Python 教程：准备数据以执行聚类分析](python-clustering-model-prepare-data.md)
+> [准备数据以执行聚类分析](r-clustering-model-prepare-data.md)

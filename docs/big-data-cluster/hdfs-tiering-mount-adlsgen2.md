@@ -1,7 +1,7 @@
 ---
 title: 为 HDFS 分层装入 ADLS Gen2
 titleSuffix: How to mount ADLS Gen2
-description: 本文介绍如何配置 HDFS 分层，以将外部 Azure Data Lake Storage 文件系统装载到 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 上的 HDFS 中。
+description: 本文介绍如何配置 HDFS 分层，以将外部 Azure Data Lake Storage 文件系统装载到 SQL Server 2019 大数据群集上的 HDFS 中。
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 481e0170e14b978f9fa26689a71383d981313a57
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 543db5b96f9a2b02d579b7b6686049ff19af99d7
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80215377"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606519"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>如何在大数据群集中装载 ADLS Gen2 以实现 HDFS 分层
 
@@ -46,9 +46,9 @@ ms.locfileid: "80215377"
 1. 转到 [Azure 门户](https://portal.azure.com)
 1. 导航到“Azure Active Directory”。 可在左侧导航栏上看到此服务。
 1. 在右侧导航栏中选择“应用注册”，并创建新的注册
-1. 创建 Web 应用程序，然后按照向导操作。 记住在此处创建的应用的名称  。 稍后需要以授权用户的身份将此名称添加到 ADLS 帐户。 在选择应用程序时，另请注意概述中的应用程序客户端 ID。
-1. 创建 web 应用程序后，请转到“证书和密码”，创建“新客户端密码”并选择密钥持续时间  。 “添加”密码  。
-1.     返回“应用注册”页面，然后单击顶部的“终结点”。 记下“OAuth 令牌终结点(v2)”URL 
+1. 创建 Web 应用程序，然后按照向导操作。 记住在此处创建的应用的名称。 稍后需要以授权用户的身份将此名称添加到 ADLS 帐户。 在选择应用程序时，另请注意概述中的应用程序客户端 ID。
+1. 创建 web 应用程序后，请转到“证书和密码”，创建“新客户端密码”并选择密钥持续时间。 “添加”密码。
+1.     返回“应用注册”页面，然后单击顶部的“终结点”。 记下“OAuth 令牌终结点(v2)”URL
 1. 现在应为 OAuth 记下以下内容：
 
     - Web 应用程序的“应用程序客户端 ID”
@@ -69,7 +69,7 @@ ms.locfileid: "80215377"
 
 在可以访问大数据群集的客户端计算机上打开命令提示符。 使用以下格式设置环境变量。凭据需要包含在逗号分隔列表中。 在 Windows 上需使用“set”命令。 如果使用的是 Linux，请改用“export”。
 
-请注意，在提供凭据时，需要删除逗号“,”之间的所有换行符或空格  。 下面的格式设置只是为了便于阅读。
+请注意，在提供凭据时，需要删除逗号“,”之间的所有换行符或空格。 下面的格式设置只是为了便于阅读。
 
    ```text
     set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
@@ -92,7 +92,7 @@ ms.locfileid: "80215377"
 
 1. 在可以访问大数据群集的客户端计算机上打开命令提示符。 使用以下格式设置环境变量。 凭据需要包含在逗号分隔列表中。 在 Windows 上需使用“set”命令。 如果使用的是 Linux，请改用“export”。
 
-请注意，在提供凭据时，需要删除逗号“,”之间的所有换行符或空格  。 下面的格式设置只是为了便于阅读。
+请注意，在提供凭据时，需要删除逗号“,”之间的所有换行符或空格。 下面的格式设置只是为了便于阅读。
 
    ```text
    set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
@@ -103,20 +103,20 @@ ms.locfileid: "80215377"
 
 现在已为访问密钥或为使用 OAuth 设置了 MOUNT_CREDENTIALS 环境变量，可以开始装载了。 以下步骤将 Azure Data Lake 中的远程 HDFS 存储装载到大数据群集的本地 HDFS 存储中。
 
-1. 使用 kubectl 查找大数据群集中终结点 controller-svc-external 服务的 IP 地址   。 查找“外部 IP”  。
+1. 使用 kubectl 查找大数据群集中终结点 controller-svc-external 服务的 IP 地址 。 查找“外部 IP”。
 
    ```bash
    kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
 
-1. 使用 azdata，同时使用控制器终结点的外部 IP 地址和群集用户名及密码登录  ：
+1. 使用 azdata，同时使用控制器终结点的外部 IP 地址和群集用户名及密码登录：
 
    ```bash
    azdata login -e https://<IP-of-controller-svc-external>:30080
    ```
 1. 设置环境变量 MOUNT_CREDENTIALS（向上滚动获取说明）
 
-1. 使用 azdata bdc hdfs mount create 在 Azure 中装载远程 HDFS 存储  。 在运行以下命令之前替换占位符值：
+1. 使用 azdata bdc hdfs mount create 在 Azure 中装载远程 HDFS 存储。 在运行以下命令之前替换占位符值：
 
    ```bash
    azdata bdc hdfs mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
@@ -151,7 +151,7 @@ azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 
 ## <a name="delete-the-mount"></a><a id="delete"></a> 删除装载
 
-要删除装载，请使用 azdata bdc hdfs mount delete 命令，并在 HDFS 中指定装载路径  ：
+要删除装载，请使用 azdata bdc hdfs mount delete 命令，并在 HDFS 中指定装载路径：
 
 ```bash
 azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>

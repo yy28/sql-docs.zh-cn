@@ -1,7 +1,7 @@
 ---
 title: 将数据引入 SQL Server 数据池
 titleSuffix: SQL Server big data clusters
-description: 本教程演示如何将数据引入 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 数据池中。
+description: 本教程演示如何将数据引入 SQL Server 2019 大数据群集的数据池中。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b389f8ba8e99678f98ef4eb22d3fe51d8b04bee3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e7daf0dab9725320cf674db04cc2e306726810f9
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75325413"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606459"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>教程：使用 Transact-SQL 将数据引入 SQL Server 数据池
 
@@ -42,15 +42,15 @@ ms.locfileid: "75325413"
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>在数据池中创建外部表
 
-以下步骤将在名为 web_clickstream_clicks_data_pool 的数据池中创建一个外部表  。 然后，可以将此表用作将数据引入到大数据群集的位置。
+以下步骤将在名为 web_clickstream_clicks_data_pool 的数据池中创建一个外部表。 然后，可以将此表用作将数据引入到大数据群集的位置。
 
 1. 在 Azure Data Studio 中，连接到大数据群集的 SQL Server 主实例。 有关详细信息，请参阅[连接到 SQL Server 主实例](connect-to-big-data-cluster.md#master)。
 
-1. 双击“服务器”窗口中的连接，以显示 SQL Server 主实例的服务器仪表板  。 选择“新建查询”  。
+1. 双击“服务器”窗口中的连接，以显示 SQL Server 主实例的服务器仪表板。 选择“新建查询”。
 
    ![SQL Server 主实例查询](./media/tutorial-data-pool-ingest-sql/sql-server-master-instance-query.png)
 
-1. 运行以下 Transact-SQL 命令，将上下文更改为主实例中的 Sales 数据库  。
+1. 运行以下 Transact-SQL 命令，将上下文更改为主实例中的 Sales 数据库。
 
    ```sql
    USE Sales
@@ -65,7 +65,7 @@ ms.locfileid: "75325413"
      WITH (LOCATION = 'sqldatapool://controller-svc/default');
    ```
 
-1. 在数据池中创建一个名为 web_clickstream_clicks_data_pool 的外部表  。
+1. 在数据池中创建一个名为 web_clickstream_clicks_data_pool 的外部表。
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_tables WHERE name = 'web_clickstream_clicks_data_pool')
@@ -84,7 +84,7 @@ ms.locfileid: "75325413"
 
 以下步骤使用在先前步骤中创建的外部表将示例 Web 点击流数据引入该数据池。
 
-1. 使用 `INSERT INTO` 语句将查询结果插入数据池（web_clickstream_clicks_data_pool 外部表）  。
+1. 使用 `INSERT INTO` 语句将查询结果插入数据池（web_clickstream_clicks_data_pool 外部表）。
 
    ```sql
    INSERT INTO web_clickstream_clicks_data_pool
@@ -105,7 +105,7 @@ ms.locfileid: "75325413"
 
 ## <a name="query-the-data"></a>查询数据
 
-在包含 Sales 表中本地数据的数据池中，联接查询的存储结果  。
+在包含 Sales 表中本地数据的数据池中，联接查询的存储结果。
 
 ```sql
 SELECT TOP (100)

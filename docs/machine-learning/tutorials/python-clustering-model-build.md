@@ -1,28 +1,34 @@
 ---
 title: Python 教程：创建群集模型
-description: 在这个由四部分组成的教程系列的第三部分中，你将创建一个 K-Means 模型，以便通过 SQL Server 机器学习服务在 Python 中执行聚类分析。
+titleSuffix: SQL machine learning
+description: 此系列教程由四个部分组成，这是第三部分。你将构建一个 K-Means 模型，以便通过 SQL 机器学习在 Python 中执行聚类分析。
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/27/2019
+ms.date: 05/14/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9669686d0163b9ce1c362e7cdf2814c7a95bfaa8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 6e0aa1bcbf1bc79b6f77fc0b564d840194ffa8ec
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116590"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606431"
 ---
-# <a name="tutorial-build-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>教程：在 Python 中创建模型以通过 SQL Server 机器学习服务对客户进行分类
+# <a name="python-tutorial-build-a-model-to-categorize-customers-with-sql-machine-learning"></a>Python 教程：构建一个模型以通过 SQL 机器学习对客户进行聚类分析
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-在这个由四部分组成的教程系列的第三部分中，你将在 Python 中创建一个 K-Means 模型来执行聚类分析。 在本系列的下一部分中，你将使用 SQL Server 机器学习服务在 SQL 数据库中部署此模型。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+在这个由四部分组成的教程系列的第三部分中，你将在 Python 中创建一个 K-Means 模型来执行聚类分析。 在本系列的下一部分中，你将在 SQL Server 机器学习服务中或大数据群集上将此模型部署到数据库中。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+在这个由四部分组成的教程系列的第三部分中，你将在 Python 中创建一个 K-Means 模型来执行聚类分析。 在本系列的下一部分中，你将使用 SQL Server 机器学习服务将此模型部署到数据库中。
+::: moniker-end
 
 本文将指导如何进行以下操作：
 
@@ -33,21 +39,21 @@ ms.locfileid: "81116590"
 
 在[第一部分](python-clustering-model.md)中，你安装了必备条件并还原了示例数据库。
 
-在[第二部分](python-clustering-model-prepare-data.md)中，你学习了如何从 SQL 数据库准备数据以执行聚类分析。
+在[第二部分](python-clustering-model-prepare-data.md)中，你了解了如何从数据库准备数据以执行聚类分析。
 
-在[第四部分](python-clustering-model-deploy.md)中，你将了解如何在 SQL 数据库中创建存储过程，以便基于新数据在 Python 中执行聚类分析。
+在[第四部分](python-clustering-model-deploy.md)中，你将了解如何在数据库中创建存储过程，以便基于新数据在 Python 中执行聚类分析。
 
 ## <a name="prerequisites"></a>先决条件
 
-* 本教程的第三部分假设你已完成[第一部分](python-clustering-model.md)的必备条件，并完成了[第二部分](python-clustering-model-prepare-data.md)中的步骤   。
+* 本教程的第三部分假设你已完成[第一部分](python-clustering-model.md)的必备条件，并完成了[第二部分](python-clustering-model-prepare-data.md)中的步骤 。
 
 ## <a name="define-the-number-of-clusters"></a>定义群集数
 
-若要对客户数据进行聚类分析，需要使用 K-Means 聚类分析算法，这是最简单、最常见的数据分组方法之一  。
+若要对客户数据进行聚类分析，需要使用 K-Means 聚类分析算法，这是最简单、最常见的数据分组方法之一。
 有关 K-Means 的详细信息，请参阅 [K-means 聚类分析算法的完整指南](https://www.kdnuggets.com/2019/05/guide-k-means-clustering-algorithm.html)。
 
-该算法接受两个输入：数据本身，以及代表要生成的群集数的预定义数字“k”  。
-输出是 K 个群集，输入数据在群集之间进行分区  。
+该算法接受两个输入：数据本身，以及代表要生成的群集数的预定义数字“k”。
+输出是 K 个群集，输入数据在群集之间进行分区。
 
 K-Means 的目标是将项目分组为 K 个群集，以使同一群集中的所有项目彼此相似，并且与其他群集中的项目尽可能不同。
 
@@ -76,7 +82,7 @@ plt.show()
 
 ![肘形图](./media/python-tutorial-elbow-graph.png)
 
-根据该图，看起来 k = 4 将是一个不错的尝试值  。 该 ķ 值将客户分组为四个群集  。
+根据该图，看起来 k = 4 将是一个不错的尝试值。 该 ķ 值将客户分组为四个群集。
 
 ## <a name="perform-clustering"></a>执行聚类分析
 
@@ -132,10 +138,10 @@ cluster
 
 使用[第一部分](python-clustering-model-prepare-data.md#separate-customers)中定义的变量给出四种群集平均值：
 
-* orderRatio = 退单率（部分或全部退货的订单总数与订单总数的比率） 
-* itemsRatio = 退货率（退货总数与购买商品数量的比率） 
-* monetaryRatio = 退款率（退货的总货币金额与购买总金额的比率） 
-* frequency = 退货频率 
+* orderRatio = 退单率（部分或全部退货的订单总数与订单总数的比率）
+* itemsRatio = 退货率（退货总数与购买商品数量的比率）
+* monetaryRatio = 退款率（退货的总货币金额与购买总金额的比率）
+* frequency = 退货频率
 
 使用 K-Means 进行数据挖掘通常需要对结果进行进一步的分析，并采取进一步的步骤以更好地理解每个群集，但是它可以提供一些优秀的潜在顾客。
 下面通过以下几种方法来解释这些结果：
@@ -147,7 +153,7 @@ cluster
 
 ## <a name="clean-up-resources"></a>清理资源
 
-如果不打算继续学习本教程，请从 SQL Server 中删除 tpcxbb_1gb 数据库。
+如果不打算继续学习本教程，请删除 tpcxbb_1gb 数据库。
 
 ## <a name="next-steps"></a>后续步骤
 
@@ -160,4 +166,4 @@ cluster
 若要部署已创建的机器学习模型，请按照本系列教程的第四部分进行操作：
 
 > [!div class="nextstepaction"]
-> [教程：通过 SQL Server 机器学习服务在 Python 中部署群集模型](python-clustering-model-deploy.md)
+> [Python 教程：部署聚类分析模型](python-clustering-model-deploy.md)

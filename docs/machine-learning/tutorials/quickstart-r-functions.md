@@ -1,38 +1,55 @@
 ---
 title: 快速入门：R 函数
-description: 本快速入门介绍如何通过 SQL Server 机器学习服务使用 R 数学和实用工具函数。
+titleSuffix: SQL machine learning
+description: 本快速入门介绍如何通过 SQL 机器学习使用 R 数学和实用程序函数。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/23/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fd3c3326fe0b186ade24cbcf95f587abba1cb6bc
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: c769862ab2ab1b06169ae5191217945cf8220c9b
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487273"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606644"
 ---
-# <a name="quickstart-r-functions-with-sql-server-machine-learning-services"></a>快速入门：SQL Server 机器学习服务中的 R 函数
+# <a name="quickstart-r-functions-with-sql-machine-learning"></a>快速入门：通过 SQL 机器学习使用 R 函数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本快速入门介绍如何通过 SQL Server 机器学习服务使用 R 数学和实用工具函数。 通常在 T-SQL 中难以实现的统计函数在 R 中只需几行代码就可以实现。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+本快速入门介绍如何在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中或[大数据群集](../../big-data-cluster/machine-learning-services.md)上使用 R 数学和实用程序函数。 通常在 T-SQL 中难以实现的统计函数在 R 中只需几行代码就可以实现。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+本快速入门介绍如何通过 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)使用 R 数学和实用程序函数。 通常在 T-SQL 中难以实现的统计函数在 R 中只需几行代码就可以实现。
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+本快速入门介绍如何通过 [SQL Server R Services](../r/sql-server-r-services.md) 使用 R 数学和实用程序函数。 通常在 T-SQL 中难以实现的统计函数在 R 中只需几行代码就可以实现。
+::: moniker-end
 
 ## <a name="prerequisites"></a>先决条件
 
-- 本快速入门需要使用安装了 R 语言的 [SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)访问 SQL Server 实例。
+若要运行本快速入门，需要具备以下先决条件。
 
-  SQL Server 实例可以位于 Azure 虚拟机中，也可以位于本地。 请注意，默认情况下禁用外部脚本编写功能，因此可能需要在开始之前[启用外部脚本编写](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)并验证 SQL Server Launchpad 服务是否正在运行  。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server 机器学习服务。 有关如何安装机器学习服务的信息，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安装指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。 还可以[启用 SQL Server 大数据群集上的机器学习服务](../../big-data-cluster/machine-learning-services.md)。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server 机器学习服务。 有关如何安装机器学习服务的信息，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)。 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+- SQL Server 2016 R Services。 有关如何安装 R Services 的信息，请参阅 [Windows 安装指南](../install/sql-r-services-windows-install.md)。
+::: moniker-end
 
-- 你还需要一个工具来运行包含 R 脚本的 SQL 查询。 可使用任何数据库管理或查询工具运行这些脚本，只要它可以连接到 SQL Server 实例，并运行 T-SQL 查询或存储过程即可。 本快速入门使用 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)。
+- 一个用于运行包含 R 脚本的 SQL 查询的工具。 本快速入门使用 [Azure Data Studio](../../azure-data-studio/what-is.md)。
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>创建一个存储过程来生成随机数字
 
-为简单起见，让我们使用 R `stats` 包，此包默认安装并加载到装有 R 的 SQL Server 机器学习服务中。 此包中包含数百个用于执行常用统计任务的函数，其中，`rnorm` 函数在给定了标准差和平均数的情况下使用正态分布生成指定数量的随机数字。
+为简单起见，我们使用默认安装并加载的 R `stats` 包。 此包中包含数百个用于执行常用统计任务的函数，其中，`rnorm` 函数在给定了标准差和平均数的情况下使用正态分布生成指定数量的随机数字。
 
 例如，以下 R 代码在标准偏差为 3 的情况下返回平均值为 50 的 100 个数字。
 
@@ -53,7 +70,7 @@ EXECUTE sp_execute_external_script
 
 如果你希望更轻松地生成不同的一组随机数字，那该怎么办？
 
-与 SQL Server 结合使用时操作非常简单。 定义一个存储过程，从用户那里获取参数，然后将这些参数作为变量传递给 R 脚本。
+与 T-SQL 结合使用时操作非常简单。 定义一个存储过程，从用户那里获取参数，然后将这些参数作为变量传递给 R 脚本。
 
 ```sql
 CREATE PROCEDURE MyRNorm (
@@ -107,11 +124,7 @@ WITH RESULT SETS (([Col1] int not null));
 
 ## <a name="next-steps"></a>后续步骤
 
-若要在 SQL Server 中使用 R 创建机器学习模型，请遵循以下快速入门：
+若要通过 SQL 机器学习使用 R 创建机器学习模型，请按以下快速入门操作：
 
 > [!div class="nextstepaction"]
-> [通过 SQL Server 机器学习服务在 R 中创建预测模型并对其进行评分](quickstart-r-train-score-model.md)
-
-有关 SQL Server 机器学习服务的详细信息，请参阅：
-
-- [什么是 SQL Server 机器学习服务（Python 和 R）？](../sql-server-machine-learning-services.md)
+> [通过 SQL 机器学习在 R 中创建预测模型并对其进行评分](quickstart-r-train-score-model.md)

@@ -1,7 +1,7 @@
 ---
 title: 安装大数据工具
 titleSuffix: SQL Server big data clusters
-description: 了解如何安装与 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 一起使用的工具。
+description: 了解如何安装与 SQL Server 2019 大数据群集配合使用的工具。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 77acaa43c1360c1f5d1126f46b5d79dc6d74b4ce
-ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+ms.openlocfilehash: cafec0d1542cd2ec6a02557b400a17b6d0d0ddad
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81002702"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606660"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>安装 SQL Server 2019 大数据工具
 
@@ -60,7 +60,7 @@ ms.locfileid: "81002702"
 - **Azure Data Studio**
 - **数据虚拟化扩展**
 
-其余工具仅在某些情况下需要。 **Azure CLI** 可用于管理与 AKS 部署相关联的 Azure 服务。 **mssql-cli** 是一个可选但有用的工具，可用于连接到群集中的 SQL Server 主实例并从命令行运行查询。 如果计划使用 GitHub 脚本安装示例数据，则需要 sqlcmd 和 `curl`  。
+其余工具仅在某些情况下需要。 **Azure CLI** 可用于管理与 AKS 部署相关联的 Azure 服务。 **mssql-cli** 是一个可选但有用的工具，可用于连接到群集中的 SQL Server 主实例并从命令行运行查询。 如果计划使用 GitHub 脚本安装示例数据，则需要 sqlcmd 和 `curl`。
 
 ### <a name="install-python-offline"></a><a id="python"></a> 脱机安装 python
 

@@ -1,25 +1,31 @@
 ---
 title: Python 教程：定型模型
-description: 本教程系列由四个部分组成。在第三部分中，你将在 Python 中定型线性回归模型，以在 SQL Server 机器学习服务中预测雪橇租赁次数。
+titleSuffix: SQL machine learning
+description: 此系列教程由四个部分组成，这是第三部分。你将在 Python 中训练线性回归模型，以通过 SQL 机器学习预测雪橇租赁次数。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/20/2020
+ms.date: 04/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c564ac26c5706e67d9a633a05f81cb48d00fb771
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2d2335c982a75d924bfc60293632650b2d887527
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116430"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606529"
 ---
-# <a name="python-tutorial-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Python 教程：在 SQL Server 机器学习服务中定型线性回归模型
+# <a name="python-tutorial-train-a-linear-regression-model-with-sql-machine-learning"></a>Python 教程：通过 SQL 机器学习训练线性回归模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+此系列教程由四个部分组成。在第三部分中，引导你在 Python 中定型线性回归模型。 在本系列的下一部分中，你将在机器学习服务中或大数据群集上将此模型部署到 SQL Server 数据库中。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 此系列教程由四个部分组成。在第三部分中，引导你在 Python 中定型线性回归模型。 在本系列的下一部分中，使用机器学习服务在 SQL Server 数据库中部署此模型。
+::: moniker-end
 
 本文将指导如何进行以下操作：
 
@@ -29,9 +35,9 @@ ms.locfileid: "81116430"
 
 在[第一部分](python-ski-rental-linear-regression.md)中，你了解了如何还原示例数据库。
 
-在[第二部分](python-ski-rental-linear-regression-prepare-data.md)中，你了解了如何将数据从 SQL Server 加载到 Python 数据框架，并在 Python 中准备数据。
+在[第二部分](python-ski-rental-linear-regression-prepare-data.md)中，你了解了如何将数据从数据库加载到 Python 数据帧中，并在 Python 中准备数据。
 
-[第四部分](python-ski-rental-linear-regression-deploy-model.md)介绍如何将模型存储到 SQL Server，然后根据在第二和第三部分中开发的 Python 脚本来创建存储过程。 存储过程将在 SQL Server 中运行，以便基于新数据进行预测。
+在[第四部分](python-ski-rental-linear-regression-deploy-model.md)中，你将了解如何将模型存储到数据库中，然后根据你在第二和第三部分中开发的 Python 脚本来创建存储过程。 存储过程将在服务器上运行，以便基于新数据进行预测。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -39,9 +45,9 @@ ms.locfileid: "81116430"
 
 ## <a name="train-the-model"></a>定型模型
 
-为进行预测，必须找到一个最能描述数据集中变量之间的依赖关系的函数（模型）。 这称为定型模型。 定型数据集是在此系列第二部分中创建的 pandas 数据帧“df”中的整个数据集的一个子集  。
+为进行预测，必须找到一个最能描述数据集中变量之间的依赖关系的函数（模型）。 这称为定型模型。 定型数据集是在此系列第二部分中创建的 pandas 数据帧“df”中的整个数据集的一个子集。
 
-使用线性回归算法定型模型 lin_model  。
+使用线性回归算法定型模型 lin_model。
 
 ```python
 # Store the variable we'll be predicting on.
@@ -73,7 +79,7 @@ Testing set shape: (91, 7)
 
 ## <a name="make-predictions"></a>作出预测
 
-使用 PREDICT 函数预测使用模型 lin_model 的租赁计数  。
+使用 PREDICT 函数预测使用模型 lin_model 的租赁计数。
 
 ```python
 # Generate our predictions for the test set.

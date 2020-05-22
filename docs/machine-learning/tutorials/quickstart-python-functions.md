@@ -3,32 +3,39 @@ title: 快速入门：Python 函数
 description: 本快速入门介绍了如何将 Python 数学和实用工具函数与 SQL Server 机器学习服务结合使用。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/28/2020
 ms.topic: quickstart
-author: garyericson
-ms.author: garye
-ms.reviewer: davidph
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 577bb4e6d956c53182a20f0e363642946c33c92c
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 6afe1685956c43e30ace59f3e5cc794a2abbd88f
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487312"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606696"
 ---
 # <a name="quickstart-python-functions-with-sql-server-machine-learning-services"></a>快速入门：结合使用 Python 函数和 SQL Server 机器学习服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本快速入门介绍了如何将 Python 数学和实用工具函数与 SQL Server 机器学习服务结合使用。 统计函数在 T-SQL 中实现起来通常很复杂，但在 Python 中只需几行代码就可以完成。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+本快速入门介绍如何在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中或[大数据群集](../../big-data-cluster/machine-learning-services.md)上使用 Python 数学和实用程序函数。 统计函数在 T-SQL 中实现起来通常很复杂，但在 Python 中只需几行代码就可以完成。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+本快速入门介绍如何将 Python 数学和实用程序函数与 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)结合使用。 统计函数在 T-SQL 中实现起来通常很复杂，但在 Python 中只需几行代码就可以完成。
+::: moniker-end
 
 ## <a name="prerequisites"></a>先决条件
 
 - 本快速入门需要使用安装了 Python 语言的 [SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)访问 SQL Server 实例。
 
-  SQL Server 实例可以位于 Azure 虚拟机中，也可以位于本地。 请注意，默认情况下禁用外部脚本编写功能，因此可能需要在开始之前[启用外部脚本编写](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)并验证 SQL Server Launchpad 服务是否正在运行  。
+  SQL Server 实例可以位于 Azure 虚拟机中，也可以位于本地。 请注意，默认情况下禁用外部脚本编写功能，因此可能需要在开始之前[启用外部脚本编写](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)并验证 SQL Server Launchpad 服务是否正在运行。
 
-- 你还需要一个工具来运行包含 Python 脚本的 SQL 查询。 可使用任何数据库管理或查询工具运行这些脚本，只要它可以连接到 SQL Server 实例，并运行 T-SQL 查询或存储过程即可。 本快速入门使用 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)。
+- 你还需要一个工具来运行包含 Python 脚本的 SQL 查询。 可使用任何数据库管理或查询工具运行这些脚本，只要它可以连接到 SQL Server 实例，并运行 T-SQL 查询或存储过程即可。 本快速入门使用 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)。
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>创建一个存储过程来生成随机数字
 

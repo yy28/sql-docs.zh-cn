@@ -1,0 +1,108 @@
+---
+title: 教程：使用 R 开发预测模型
+titleSuffix: SQL machine learning
+description: 此系列教程由四个部分组成。你将开发数据，以便通过 SQL 机器学习在 R 中训练预测模型。
+ms.prod: sql
+ms.technology: machine-learning
+ms.topic: tutorial
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye, davidph
+ms.date: 05/04/2020
+ms.custom: seo-lt-2019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 237b8d5ac797b6e17a48bde2fff12de55844755e
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83607140"
+---
+# <a name="tutorial-prepare-data-to-train-a-predictive-model-in-r-with-sql-machine-learning"></a>教程：准备数据以通过 SQL 机器学习在 R 中训练预测模型。
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+此系列教程由四个部分组成。你将在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中或[大数据群集](../../big-data-cluster/machine-learning-services.md)上使用 R 和一个机器学习模型来预测雪橇租赁次数。
+::: moniker-end
+
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+此系列教程由四个部分组成。你将在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中使用 R 和一个机器学习模型来预测雪橇租赁次数。
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+此系列教程由四个部分组成。你将在 [SQL Server R Services](../r/sql-server-r-services.md) 中使用 R 和一个机器学习模型来预测雪橇租赁次数。
+::: moniker-end
+
+假设你有一家雪橇租赁公司，你希望预测未来某个日期的雪橇租赁次数。 此信息可帮助你准备好库存、人员和设施。
+
+在本系列的第一部分，你将设置必备组件。 在第二和第三部分，你将在某个笔记本中开发一些 R 脚本，以准备数据并训练机器学习模型。 然后，在第三部分，你将使用 T-SQL 存储过程在 SQL Server 中运行这些 R 脚本。
+
+本文将指导如何进行以下操作：
+
+> [!div class="checklist"]
+> * 将示例数据库还原成 SQL Server 
+
+在[第二部分](r-predictive-model-prepare-data.md)中，你将了解如何将数据从数据库加载到 Python 数据帧中，并在 R 中准备数据。
+
+在[第三部分](r-predictive-model-train.md)中，你将了解如何在 R 中训练机器学习模型。
+
+在[第四部分](r-predictive-model-deploy.md)中，你将了解如何将模型存储到数据库中，然后通过你在第二和第三部分中开发的 R 脚本来创建存储过程。 存储过程将在服务器上运行，以便基于新数据进行预测。
+
+## <a name="prerequisites"></a>先决条件
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+* SQL Server 机器学习服务 — 有关如何安装机器学习服务的信息，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安装指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。 还可以[启用 SQL Server 大数据群集上的机器学习服务](../../big-data-cluster/machine-learning-services.md)。
+::: moniker-end
+
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+* SQL Server 机器学习服务 - 有关如何安装机器学习服务的信息，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)。 
+::: moniker-end
+
+* R IDE - 此教程使用 [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/)。
+
+* RODBC - 此驱动程序用于你在本教程中开发的 R 脚本。 如果尚未安装，请使用 R 命令 `install.packages("RODBC")` 安装它。 有关 RODBC 的详细信息，请参阅 [CRAN - RODBC 包](https://CRAN.R-project.org/package=RODBC)。
+
+* SQL 查询工具 - 本教程假定使用的是 [Azure Data Studio](../../azure-data-studio/what-is.md)。 有关详细信息，请参阅[如何使用 Azure Data Studio 中的笔记本](../../azure-data-studio/sql-notebooks.md)。
+
+## <a name="restore-the-sample-database"></a>还原示例数据库
+
+本教程中使用的示例数据库已保存到 .bak 数据库备份文件，以供下载和使用。
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+> [!NOTE]
+> 如果在大数据群集上使用机器学习服务，请了解如何[将数据库还原成 SQL Server 大数据群集主实例](../../big-data-cluster/data-ingestion-restore-database.md)。
+::: moniker-end
+
+1. 下载文件 [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak)。
+
+1. 使用以下详细信息，按 Azure Data Studio 中[从备份文件还原数据库](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file)中的说明操作：
+
+   * 从下载的 **TutorialDB.bak** 文件中导入
+   * 将目标数据库命名为“TutorialDB”
+
+1. 可以通过查询 dbo.rental_data 表来验证是否存在还原的数据集：
+
+   ```sql
+   USE TutorialDB;
+   SELECT * FROM [dbo].[rental_data];
+   ```
+
+1. 通过运行以下 SQL 命令来启用外部脚本：
+
+    ```sql
+    sp_configure 'external scripts enabled', 1;
+    RECONFIGURE WITH override;
+    ```
+
+## <a name="next-steps"></a>后续步骤
+
+在本系列教程的第一部分中，你已完成以下步骤：
+
+* 安装必备组件
+* 将示例数据库还原成 SQL Server
+
+若要为机器学习模型准备数据，按本系列教程的第二部分进行操作：
+
+> [!div class="nextstepaction"]
+> [准备数据以在 R 中训练预测模型](r-predictive-model-prepare-data.md)

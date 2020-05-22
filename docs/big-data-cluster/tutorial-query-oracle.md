@@ -1,7 +1,7 @@
 ---
 title: 查询 Oracle 中的外部数据
 titleSuffix: SQL Server big data clusters
-description: 本教程演示如何从 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 中查询 Oracle 数据。 为 Oracle 中的数据创建外部表，然后运行查询。
+description: 本教程演示如何从 SQL Server 2019 大数据群集中查询 Oracle 数据。 为 Oracle 中的数据创建外部表，然后运行查询。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b880e3758481e5b061221bd2753b5a26f01ed856
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0955875255acc695133700fd0b5a0b30cdf9045e
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "71708364"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606050"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>教程：从 SQL Server 大数据群集中查询 Oracle
 
@@ -59,7 +59,7 @@ ms.locfileid: "71708364"
     CREATE INDEX INV_ITEM ON HR.INVENTORY(INV_ITEM);
     ```
 
-1. 将 inventory.csv 文件的内容导入到此表中  。 此文件由[先决条件](#prereqs)部分中的示例创建脚本创建。
+1. 将 inventory.csv 文件的内容导入到此表中。 此文件由[先决条件](#prereqs)部分中的示例创建脚本创建。
 
 ## <a name="create-an-external-data-source"></a>创建外部数据源
 
@@ -67,11 +67,11 @@ ms.locfileid: "71708364"
 
 1. 在 Azure Data Studio 中，连接到大数据群集的 SQL Server 主实例。 有关详细信息，请参阅[连接到 SQL Server 主实例](connect-to-big-data-cluster.md#master)。
 
-1. 双击“服务器”窗口中的连接，以显示 SQL Server 主实例的服务器仪表板  。 选择“新建查询”  。
+1. 双击“服务器”窗口中的连接，以显示 SQL Server 主实例的服务器仪表板。 选择“新建查询”。
 
    ![SQL Server 主实例查询](./media/tutorial-query-oracle/sql-server-master-instance-query.png)
 
-1. 运行以下 Transact-SQL 命令，将上下文更改为主实例中的 Sales 数据库  。
+1. 运行以下 Transact-SQL 命令，将上下文更改为主实例中的 Sales 数据库。
 
    ```sql
    USE Sales
@@ -94,7 +94,7 @@ ms.locfileid: "71708364"
 
 ## <a name="create-an-external-table"></a>创建外部表
 
-接下来，在 Oracle 服务器上的 `INVENTORY` 表上创建名为 iventory_ora 的外部表  。
+接下来，在 Oracle 服务器上的 `INVENTORY` 表上创建名为 iventory_ora 的外部表。
 
 ```sql
 CREATE EXTERNAL TABLE [inventory_ora]

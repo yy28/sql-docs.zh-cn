@@ -1,26 +1,35 @@
 ---
 title: 快速入门：R 数据结构、数据类型和对象
-description: 本快速入门介绍了如何在 SQL Server 机器学习服务中使用 R 时使用数据结构、数据类型和对象。 你将了解如何在 R 与 SQL Server 之间迁移数据，以及可能出现的常见问题。
+titleSuffix: SQL machine learning
+description: 在本快速入门中，你将了解在通过 SQL 机器学习使用 R 时如何使用数据结构、数据类型和对象。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2019
+ms.date: 04/23/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 07d167ddc39f281a3330ffd80460d9cc34ccfa65
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: e5b5f4e90b680f5ae06944eedc997a43b8a40024
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487301"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606569"
 ---
-# <a name="quickstart-data-structures-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>快速入门：在 SQL Server 机器学习服务中使用 R 时使用数据结构、数据类型和对象
+# <a name="quickstart-data-structures-data-types-and-objects-using-r-with-sql-machine-learning"></a>快速入门：通过 SQL 机器学习使用 R 时的数据结构、数据类型和对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-本快速入门介绍了如何在 SQL Server 机器学习服务中使用 R 时使用数据结构和数据类型。 你将了解如何在 R 与 SQL Server 之间迁移数据，以及可能出现的常见问题。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+本快速入门介绍了在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中或[大数据群集](../../big-data-cluster/machine-learning-services.md)上使用 R 时如何使用数据结构和数据类型。 你将了解如何在 R 与 SQL Server 之间迁移数据，以及可能出现的常见问题。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+本快速入门介绍了在 [SQL Server 机器学习服务](../sql-server-machine-learning-services.md)中使用 R 时如何使用数据结构和数据类型。 你将了解如何在 R 与 SQL Server 之间迁移数据，以及可能出现的常见问题。
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+本快速入门介绍了在 [SQL Server R Services](../r/sql-server-r-services.md) 中使用 R 时如何使用数据结构和数据类型。 你将了解如何在 R 与 SQL Server 之间迁移数据，以及可能出现的常见问题。
+::: moniker-end
 
 要预先了解的常见问题包括：
 
@@ -31,11 +40,19 @@ ms.locfileid: "81487301"
 
 ## <a name="prerequisites"></a>先决条件
 
-- 本快速入门需要使用安装了 R 语言的 [SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)访问 SQL Server 实例。
+若要运行本快速入门，需要具备以下先决条件。
 
-  SQL Server 实例可以位于 Azure 虚拟机中，也可以位于本地。 请注意，默认情况下禁用外部脚本编写功能，因此可能需要在开始之前[启用外部脚本编写](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)并验证 SQL Server Launchpad 服务是否正在运行  。
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server 机器学习服务。 有关如何安装机器学习服务的信息，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)或 [Linux 安装指南](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)。 还可以[启用 SQL Server 大数据群集上的机器学习服务](../../big-data-cluster/machine-learning-services.md)。
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server 机器学习服务。 有关如何安装机器学习服务的信息，请参阅 [Windows 安装指南](../install/sql-machine-learning-services-windows-install.md)。 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+- SQL Server 2016 R Services。 有关如何安装 R Services 的信息，请参阅 [Windows 安装指南](../install/sql-r-services-windows-install.md)。 
+::: moniker-end
 
-- 你还需要一个工具来运行包含 R 脚本的 SQL 查询。 可使用任何数据库管理或查询工具运行这些脚本，只要它可以连接到 SQL Server 实例，并运行 T-SQL 查询或存储过程即可。 本快速入门使用 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)。
+- 一个用于运行包含 R 脚本的 SQL 查询的工具。 本快速入门使用 [Azure Data Studio](../../azure-data-studio/what-is.md)。
 
 ## <a name="always-return-a-data-frame"></a>始终返回数据框架
 
@@ -68,7 +85,7 @@ EXECUTE sp_execute_external_script
 
 结果为何有这么大的差别？
 
-使用 R `str()` 命令通常可以找到答案。 在 R 脚本中的任何位置添加函数 `str(object_name)` 可使指定 R 对象的数据架构作为信息性消息返回。 若要查看消息，请查看 Visual Studio Code 中的“消息”窗格，或者查看 SSMS 中的“消息”选项卡。  
+使用 R `str()` 命令通常可以找到答案。 在 R 脚本中的任何位置添加函数 `str(object_name)` 可使指定 R 对象的数据架构作为信息性消息返回。
 
 若要找出示例 1 和示例 2 的结果为何有这么大的差别，请在每个语句的 `@script` 变量定义末尾插入 `str(OutputDataSet)` 行，如下所示：
 
@@ -94,7 +111,7 @@ EXECUTE sp_execute_external_script
   @input_data_1 = N'  ';
 ```
 
-现在，查看“消息”中的文本，了解输出为何不相同的原因。 
+现在，查看“消息”中的文本，了解输出为何不相同的原因。
 
 **结果 - 示例 1**
 
@@ -114,7 +131,7 @@ $ X...      : Factor w/ 1 level " ": 1
 $ c..world..: Factor w/ 1 level "world": 1
 ```
 
-可以看到，对 R 语法进行轻微的更改会给结果的架构造成很大的影响。 本文不会深究原因，但 [Hadley Wickham 所著的“Advanced R”](http://adv-r.had.co.nz)中的“Data Structures”（数据结构）一节详细介绍了 R 数据类型的差异  。
+可以看到，对 R 语法进行轻微的更改会给结果的架构造成很大的影响。 本文不会深究原因，但 [Hadley Wickham 所著的“Advanced R”](http://adv-r.had.co.nz)中的“Data Structures”（数据结构）一节详细介绍了 R 数据类型的差异。
 
 暂时，你只需在将 R 对象强制转换成数据框架时注意检查预期的结果。
 
@@ -189,7 +206,7 @@ execute sp_execute_external_script
 
 > [!TIP]
 > 
-> 出现错误？ 确保在包含表的数据库的上下文中运行存储过程，而不是在 master 或其他数据库中运行  。
+> 出现错误？ 确保在包含表的数据库的上下文中运行存储过程，而不是在 master 或其他数据库中运行。
 >
 > 此外，建议避免在这些示例中使用临时表。 某些 R 客户端将停止批次之间的连接，从而删除临时表。
 
@@ -225,7 +242,7 @@ EXECUTE sp_execute_external_script
 
 请记住，数据框架只是看起来像表，但实际上是向量列表。
 
-## <a name="cast-or-convert-sql-server-data"></a>强制转换或转换 SQL Server 数据
+## <a name="cast-or-convert-data"></a>强制转换或转换数据
 
 R 和 SQL Server 使用的数据类型不同，因此，如果你在 SQL Server 中运行查询来获取数据，然后将该数据传递给 R 运行时，通常会发生某种类型的隐式转换。 将数据从 R 返回到 SQL Server 时，会发生另一套转换。
 
@@ -283,7 +300,7 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 ```
 
 - 日期时间列已使用 R 数据类型 **POSIXct** 进行处理。
-- 文本列“ProductSeries”已标识为因子，意味着它是一个分类变量  。 默认情况下，字符串值将作为因子处理。 如果将某个字符串传递给 R，该字符串将转换为整数供内部使用，然后映射回到输出中的字符串。
+- 文本列“ProductSeries”已标识为因子，意味着它是一个分类变量。 默认情况下，字符串值将作为因子处理。 如果将某个字符串传递给 R，该字符串将转换为整数供内部使用，然后映射回到输出中的字符串。
 
 ### <a name="summary"></a>总结
 
@@ -292,20 +309,13 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 - 在将数据传递给 R 代码之前，请预先测试数据并验证架构中可能会造成问题的列或值。
 - 在输入数据源中单独指定列而不要使用 `SELECT *`，并知道如何处理每个列。
 - 准备输入数据时请根据需要执行显式强制转换，避免出现意外。
-- 避免传递导致错误以及对建模无用的数据列（例如 GUIDS 或 rowguids）。
+- 避免传递导致错误以及对建模无用的数据列（例如 GUID 或 rowguid）。
 
 若要详细了解受支持和不受支持的数据类型，请参阅 [R 库和数据类型](../r/r-libraries-and-data-types.md)。
 
-有关在运行时将字符串转换为数字因子对性能造成的影响的信息，请参阅 [SQL Server R Services 性能优化](../r/sql-server-r-services-performance-tuning.md)。
-
 ## <a name="next-steps"></a>后续步骤
 
-若要了解如何在 SQL Server 中编写高级 R 函数，请参阅以下快速入门：
+若要了解如何通过 SQL 机器学习编写高级 R 函数，请参阅以下快速入门：
 
 > [!div class="nextstepaction"]
-> [使用 SQL Server 机器学习服务编写高级 R 函数](quickstart-r-functions.md)
-
-有关在 SQL Server 机器学习服务中使用 R 的详细信息，请参阅以下文章：
-
-- [通过 SQL Server 机器学习服务在 R 中创建预测模型并对其进行评分](quickstart-r-train-score-model.md)
-- [什么是 SQL Server 机器学习服务（Python 和 R）？](../sql-server-machine-learning-services.md)
+> [通过 SQL 机器学习编写高级 R 函数](quickstart-r-functions.md)
