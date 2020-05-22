@@ -43,10 +43,10 @@ ms.locfileid: "80215738"
 | real          | Single                    | FLOAT          | FloatWritable         |
 | money         | Decimal                   | double         | DoubleWritable        |
 | smallmoney    | Decimal                   | double         | DoubleWritable        |
-| nchar         | String<br /><br /> Char[] | 字符串         | Varchar               |
-| nvarchar      | String<br /><br /> Char[] | 字符串         | Varchar               |
-| char          | String<br /><br /> Char[] | 字符串         | Varchar               |
-| varchar       | String<br /><br /> Char[] | 字符串         | Varchar               |
+| nchar         | String<br /><br /> Char[] | string         | Varchar               |
+| nvarchar      | String<br /><br /> Char[] | string         | Varchar               |
+| char          | String<br /><br /> Char[] | string         | Varchar               |
+| varchar       | String<br /><br /> Char[] | string         | Varchar               |
 | binary        | Byte[]                    | binary         | BytesWritable         | 适用于 Hive 0.8 及更高版本。 |
 | varbinary     | Byte[]                    | binary         | BytesWritable         | 适用于 Hive 0.8 及更高版本。 |
 | date          | DateTime                  | timestamp      | TimestampWritable     |
