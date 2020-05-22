@@ -245,7 +245,7 @@ PolyBase 将尝试访问 HDFS 并将失败，因为请求不包含必要的服�
     - 有两种类型的 Kerberos 身份验证：Active Directory Kerberos 身份验证和 MIT Kerberos 身份验证。
     - 确保用户存在于域帐户中，并在尝试访问 HDFS 时使用相同的用户帐户。
 
-3. 对于活动目录 Kerberos，请确保可在 Windows 上使用 `klist` 命令查看缓存的票证。
+3. 对于Active Directory Kerberos，请确保可在 Windows 上使用 `klist` 命令查看缓存的票证。
     - 登录到 PolyBase 计算机并在命令提示符中运行 `klist` 和 `klist tgt` 以查看 KDC、用户名和加密类型是否正确。
 
 4. 如果 KDC 仅支持 AES256，请确保已安装 [JCE 策略文件](http://www.oracle.com/technetwork/java/javase/downloads/index.html)。
