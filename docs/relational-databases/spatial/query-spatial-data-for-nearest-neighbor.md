@@ -66,7 +66,7 @@ SELECT TOP ( number )
   
 5.  **ORDER BY** 子句中的第一个表达式必须使用 `STDistance()` 方法。  
   
-6.  `STDistance()` ORDER BY **子句中第一个** 表达式的排序顺序必须是 **ASC**。  
+6.  **ORDER BY**子句中第一个 `STDistance()` 表达式的排序必须是 **ASC**。  
   
 7.  必须筛选掉 `STDistance` 返回 **NULL** 的所有行。  
   
