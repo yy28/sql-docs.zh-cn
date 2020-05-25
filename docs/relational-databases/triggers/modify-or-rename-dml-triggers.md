@@ -63,7 +63,7 @@ ms.locfileid: "68056014"
   
     -   [sys.dm_sql_referencing_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   
-###  <a name="security"></a><a name="Security"></a> Security  
+###  <a name="security"></a><a name="Security"></a> 安全  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  若要更改 DML 触发器，需要对于定义该触发器所在的表或视图拥有 ALTER 权限。  
