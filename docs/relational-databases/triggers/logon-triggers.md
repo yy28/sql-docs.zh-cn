@@ -71,7 +71,7 @@ END;
 ## <a name="disabling-a-logon-trigger"></a>禁用登录触发器  
  登录触发器可以有效地阻止所有用户（包括 [!INCLUDE[ssDE](../../includes/ssde-md.md)] sysadmin **固定服务器角色的成员）与** 的成功连接。 在登录触发器正在阻止连接时， **sysadmin** 固定服务器角色的成员可通过使用专用管理员连接，或者通过以最小配置模式 (-f) 启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，来进行连接。 有关详细信息，请参阅 [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>相关任务  
   
 |任务|主题|  
 |----------|-----------|  
