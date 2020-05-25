@@ -88,7 +88,7 @@ JOIN Person.Person AS p
 ON e.BusinessEntityID = p.BusinessEntityID;  
 ```  
   
- 此视图的结果集有三列：一个 **int** 列和两个 **nvarchar** 列。 传递给视图上定义的 INSTEAD OF 触发器的插入和删除的表也有一个名为 **的** int `BusinessEntityID`列、一个名为 **的** nvarchar `LName`列和一个名为 **的** nvarchar `FName`列。  
+ 此视图的结果集有三列：一个 **int** 列和两个 **nvarchar** 列。 传递给视图上定义的 INSTEAD OF 触发器的插入和删除的表也有一个名为 `BusinessEntityID` 的 **int** 列、一个名为 `LName` 的 **nvarchar** 列和一个名为 `FName` 的 **nvarchar** 列。  
   
  视图的选择列表还可以包含不直接映射到单个基表列的表达式。 一些视图表达式（例如常量调用或函数调用）可能不引用任何列，并且这些表达式会被忽略。 复杂的表达式会引用多个列，但在插入的和删除的表中，每个插入的行仅有一个相应的值。 如果视图中的简单表达式引用包含复杂表达式的计算列，则这些简单表达式也有同样的问题。 视图上的 INSTEAD OF 触发器必须处理这些类型的表达式。  
   
