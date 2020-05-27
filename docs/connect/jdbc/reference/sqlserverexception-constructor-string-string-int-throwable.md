@@ -23,7 +23,7 @@ ms.locfileid: "67971087"
 # <a name="sqlserverexception-constructor-javalangstring-javalangstring-int-javalangthrowable"></a>SQLServerException 构造函数 (java.lang.String, java.lang.String, int, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  在给定 string  对象、string  对象、int  和throwable  时初始化 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 类的新实例。
+  在给定 string 对象、string 对象、int 和throwable 时初始化 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 类的新实例。
 
 ## <a name="syntax"></a>语法  
   

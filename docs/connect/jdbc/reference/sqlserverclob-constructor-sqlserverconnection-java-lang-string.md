@@ -25,10 +25,10 @@ ms.locfileid: "67971800"
 # <a name="sqlserverclob-constructor-sqlserverconnection-javalangstring"></a>SQLServerClob 构造函数 (SQLServerConnection, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  在给定 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverclob-class.md) 对象和数据字符串时，初始化 [SQLServerClob](../../../connect/jdbc/reference/sqlserverconnection-class.md) 类的新实例。  
+  在给定 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象和数据字符串时，初始化 [SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md) 类的新实例。  
   
 > [!NOTE]  
->  JDBC 驱动程序 2.0 版已不推荐使用此方法， 而是使用 [SQLServerConnection](../../../connect/jdbc/reference/createclob-method-sqlserverconnection.md) 类的 [createClob](../../../connect/jdbc/reference/sqlserverconnection-class.md) 方法。  
+>  JDBC 驱动程序 2.0 版已不推荐使用此方法， 而是使用 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [createClob](../../../connect/jdbc/reference/createclob-method-sqlserverconnection.md) 方法。  
   
 ## <a name="syntax"></a>语法  
   

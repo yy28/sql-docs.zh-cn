@@ -31,7 +31,7 @@ ms.locfileid: "77037003"
 
  从 JSON 字符串中提取标量值。  
   
- 若要从 JSON 字符串而不是标量值中提取对象或数组，请参阅 [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)。 有关 JSON_VALUE 和 JSON_QUERY 之间差异的信息，请参阅[比较 JSON_VALUE 和 JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare)   。  
+ 若要从 JSON 字符串而不是标量值中提取对象或数组，请参阅 [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)。 有关 JSON_VALUE 和 JSON_QUERY 之间差异的信息，请参阅[比较 JSON_VALUE 和 JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare) 。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -106,7 +106,7 @@ SET @jsonInfo=N'{
 ## <a name="examples"></a>示例  
   
 ### <a name="example-1"></a>示例 1
- 以下示例在查询结果中使用 JSON 属性 `town` 和 `state` 的值。 由于 JSON_VALUE 保留了源的排序规则，因此结果的排序顺序取决于 `jsonInfo` 列的排序规则  。 
+ 以下示例在查询结果中使用 JSON 属性 `town` 和 `state` 的值。 由于 JSON_VALUE 保留了源的排序规则，因此结果的排序顺序取决于 `jsonInfo` 列的排序规则。 
 
 > [!NOTE]
 > （此示例假定名为 `Person.Person` 的表包含 JSON 文本的 `jsonInfo` 列，且此列具有先前宽松模式和严格模式讨论中所示的结构。 在 AdventureWorks 示例数据库中，`Person` 表实际上不包含 `jsonInfo` 列。）

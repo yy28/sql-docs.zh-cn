@@ -96,7 +96,7 @@ ALTER MASTER KEY <alter_option>
 
 ## <a name="arguments"></a>参数
 
-PASSWORD ='*password*' 指定用于加密或解密数据库主密钥的密码。 password 必须符合运行  *实例的计算机的 Windows 密码策略要求*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
+PASSWORD ='*password*' 指定用于加密或解密数据库主密钥的密码。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。
 
 ## <a name="remarks"></a>备注
 

@@ -144,7 +144,7 @@ WITH
  指定存储过程以当前用户身份执行。 （执行该 ALTER QUEUE 语句的数据库主体。）  
   
  'user_name'   
- 存储过程执行时所用的用户的名称。 user_name 必须是指定为 *标识符的有效* 用户[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 当前用户必须对指定的 user_name 具有 IMPERSONATE 权限  。  
+ 存储过程执行时所用的用户的名称。 user_name 必须是指定为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符的有效 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户。 当前用户必须对指定的 user_name 具有 IMPERSONATE 权限  。  
   
  OWNER  
  指定存储过程以队列的所有者身份执行。  
@@ -191,7 +191,7 @@ ALTER QUEUE ExpenseQueue
 ```  
   
 ### <a name="c-changing-the-number-of-queue-readers"></a>C. 更改队列读取器数  
- 以下示例将 `7` 为此队列启动的最大存储过程实例数设置为 [!INCLUDE[ssSB](../../includes/sssb-md.md)]。  
+ 以下示例将 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 为此队列启动的最大存储过程实例数设置为 `7`。  
   
 ```  
 ALTER QUEUE ExpenseQueue WITH ACTIVATION (MAX_QUEUE_READERS = 7) ;  

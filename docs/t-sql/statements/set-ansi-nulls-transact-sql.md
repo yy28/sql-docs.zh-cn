@@ -57,9 +57,9 @@ SET ANSI_NULLS ON
 ```
 
 ## <a name="remarks"></a>备注  
-当 ANSI_NULLS 为 ON 时，即使 column_name 中包含空值，使用 WHERE column_name*NULL 的 SELECT 语句仍返回零行* =    。 即使 column_name 中包含非空值，使用 WHERE column_name*NULL 的 SELECT 语句仍返回零行* <>    。  
+当 ANSI_NULLS 为 ON 时，即使 column_name 中包含空值，使用 WHERE column_name = NULL 的 SELECT 语句仍返回零行。 即使 column_name 中包含非空值，使用 WHERE column_name <> NULL 的 SELECT 语句仍返回零行。  
   
-当 ANSI_NULLS 为 OFF 时，等于 (=) 和不等于 (<>) 比较运算符不遵守 ISO 标准。 使用 WHERE column_name*NULL 的 SELECT 语句返回 column_name 中包含空值的行* =    。 使用 WHERE column_name*NULL 的 SELECT 语句返回列中包含非空值的行* <>   。 此外，使用 WHERE column_name*XYZ_value 的 SELECT 语句返回所有不为 XYZ_value 也不为 NULL 的行* <>    。  
+当 ANSI_NULLS 为 OFF 时，等于 (=) 和不等于 (<>) 比较运算符不遵守 ISO 标准。 使用 WHERE column_name = NULL 的 SELECT 语句返回 column_name 中包含空值的行。 使用 WHERE column_name <> NULL 的 SELECT 语句返回列中包含非空值的行。 此外，使用 WHERE column_name <> XYZ_value 的 SELECT 语句返回所有不为 XYZ_value 也不为 NULL 的行  。  
   
 当 ANSI_NULLS 为 ON 时，所有对 null 值的比较均取值为 UNKNOWN。 当 SET ANSI_NULLS 为 OFF 时，如果数据值为 NULL，则所有数据对空值的比较将取值为 TRUE。 如果未指定 SET ANSI_NULLS，则应用当前数据库的 ANSI_NULLS 选项设置。 有关 ANSI_NULLS 数据库选项的详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。  
 

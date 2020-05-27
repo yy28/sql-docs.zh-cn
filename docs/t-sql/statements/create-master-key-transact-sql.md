@@ -48,7 +48,7 @@ CREATE MASTER KEY [ ENCRYPTION BY PASSWORD ='password' ]
 
 ## <a name="arguments"></a>参数
 
-PASSWORD ='password' 是用于加密数据库主密钥的密码  。 password 必须符合运行  *实例的计算机的 Windows 密码策略要求*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 password 在 *和*  中是可选的[!INCLUDE[ssSDS](../../includes/sssds-md.md)][!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]。
+PASSWORD ='password' 是用于加密数据库主密钥的密码  。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。 password 在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 中是可选的。
 
 ## <a name="remarks"></a>备注
 

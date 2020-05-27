@@ -21,7 +21,7 @@ ms.locfileid: "69026545"
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-若要使用不带参数的 SQL 语句处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据，可以使用 [SQLServerStatement](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 类的 [executeQuery](../../connect/jdbc/reference/sqlserverstatement-class.md) 方法返回包含所需数据的 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)。 若要执行此操作，必须首先使用 [SQLServerConnection](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) 类的 [createStatement](../../connect/jdbc/reference/sqlserverconnection-class.md) 方法创建一个 SQLServerStatement 对象。
+若要使用不带参数的 SQL 语句处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据，可以使用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 类的 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 方法返回包含所需数据的 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)。 若要执行此操作，必须首先使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) 方法创建一个 SQLServerStatement 对象。
 
 在下面的实例中，将向此函数传递 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库的打开连接，构造并运行一条 SQL 语句，然后从结果集读取结果。
 

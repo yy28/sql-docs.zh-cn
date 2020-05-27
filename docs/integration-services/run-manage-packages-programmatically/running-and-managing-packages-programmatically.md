@@ -32,7 +32,7 @@ ms.locfileid: "71295688"
   
  您可以只编写几行代码，从客户端应用程序加载和运行现有包。  
   
- 本节介绍并演示如何以编程方式运行现有包，以及如何从其他应用程序访问数据流的输出。 作为高级编程选项，可以按照[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]以编程方式生成包[主题中的说明，已编程方式逐行创建 ](../../integration-services/building-packages-programmatically/building-packages-programmatically.md) 包。  
+ 本节介绍并演示如何以编程方式运行现有包，以及如何从其他应用程序访问数据流的输出。 作为高级编程选项，可以按照[以编程方式生成包](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)主题中的说明，已编程方式逐行创建 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。  
   
  本节还讨论其他可以用编程方式执行的管理任务，用于管理存储的包、正在运行的包和包角色。  
   

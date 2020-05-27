@@ -180,7 +180,7 @@ GO
 ```  
   
 ### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>C. 撤消应用程序角色对用户的 IMPERSONATE 权限  
- 下面的示例撤消 `IMPERSONATE` 应用程序角色 `HamithaL` 对用户 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 的 `AccountsPayable17` 权限。  
+ 下面的示例撤消 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 应用程序角色 `IMPERSONATE` 对用户 `HamithaL` 的 `AccountsPayable17` 权限。  
   
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   

@@ -136,7 +136,7 @@ SELECT TOP (1) - ( - 17) FROM DimEmployee;
 ```  
   
 ### <a name="e-returning-the-negative-of-a-column"></a>E. 返回列的负值  
- 下面的示例返回 `BaseRate` 表中每位员工的 `dimEmployee` 值的负值。  
+ 下面的示例返回 `dimEmployee` 表中每位员工的 `BaseRate` 值的负值。  
   
 ```  
 USE ssawPDW;  

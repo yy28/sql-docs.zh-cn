@@ -109,7 +109,7 @@ GO
 ```  
   
 ### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>B. 使用 GRANT OPTION 授予 TAKE OWNERSHIP 权限  
- 以下示例使用 `TAKE OWNERSHIP`，将对可用性组 `MyAg` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 权限授予 `PKomosinski` 用户 `GRANT OPTION`。  
+ 以下示例使用 `TAKE OWNERSHIP`，将对可用性组 `MyAg` 的 `PKomosinski` 权限授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户 `GRANT OPTION`。  
   
 ```  
 USE master;  

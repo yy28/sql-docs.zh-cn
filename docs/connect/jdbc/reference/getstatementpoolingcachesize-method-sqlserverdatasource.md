@@ -29,7 +29,7 @@ public boolean getStatementPoolingCacheSize();
 ```  
   
 ## <a name="return-value"></a>返回值  
- 返回“statementPoolingCacheSize”  连接属性的“int”  值。  
+ 返回“statementPoolingCacheSize”连接属性的“int”值。  
 
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

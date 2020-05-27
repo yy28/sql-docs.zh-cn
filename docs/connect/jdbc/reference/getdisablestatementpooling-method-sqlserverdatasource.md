@@ -30,7 +30,7 @@ public boolean getDisableStatementPooling();
 ```  
   
 ## <a name="return-value"></a>返回值  
- 包含 disableStatementPooling  连接属性的布尔  值。
+ 包含 disableStatementPooling 连接属性的布尔值。
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

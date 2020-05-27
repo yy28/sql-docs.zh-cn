@@ -20,7 +20,7 @@ ms.locfileid: "67954121"
 # <a name="getasciistream-method-sqlservernclob"></a>getAsciiStream 方法 (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索由此 NClob  对象指定的 NCLOB  值作为 ASCII 流。  
+  检索由此 NClob 对象指定的 NCLOB 值作为 ASCII 流。  
   
 ## <a name="syntax"></a>语法  
   

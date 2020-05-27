@@ -80,7 +80,7 @@ SELECT [ ALL | DISTINCT ]
  \*  
  指定返回 FROM 子句中的所有表和视图中的所有列。 这些列按 FROM 子句中指定的表或视图顺序返回，并对应于它们在表或视图中的顺序。  
   
- table_name*view_name*table_alias.* |    |     
+ table_name | view_name | table_alias.*     
  将 \* 的作用域限制为指定的表或视图。  
   
  column_name   

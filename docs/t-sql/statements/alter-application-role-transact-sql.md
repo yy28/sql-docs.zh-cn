@@ -55,7 +55,7 @@ ALTER APPLICATION ROLE application_role_name
  指定应用程序角色的新名称。 该名称一定不能被用于引用数据库中任何主体。  
   
  PASSWORD ='password'   
- 指定应用程序角色的密码。 password 必须符合运行  *实例的计算机的 Windows 密码策略要求*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 应始终使用强密码。  
+ 指定应用程序角色的密码。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。 应始终使用强密码。  
   
  DEFAULT_SCHEMA =schema_name   
  指定服务器在解析对象名时将搜索的第一个架构。 schema_name 可以是数据库中不存在的架构  。  

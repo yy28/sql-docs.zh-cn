@@ -134,7 +134,7 @@ ms.locfileid: "72908889"
   
  **基本 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法**  
   
- RESTORE LOG database_name FROM <backup_device> WITH STOPAT *time, RECOVERY…* **=**    
+ RESTORE LOG database_name FROM <backup_device> WITH STOPAT =time, RECOVERY…  
   
  恢复点是在 **time** 指定的 *datetime*值或之前发生的最新的事务提交。  
   

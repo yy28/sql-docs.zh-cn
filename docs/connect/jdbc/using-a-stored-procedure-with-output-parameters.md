@@ -23,7 +23,7 @@ ms.locfileid: "69026835"
 
 可以调用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程是返回一个或多个 OUT 参数的存储过程，存储过程使用这些参数将数据返回到调用它的应用程序。 可以使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供的 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类，调用此类存储过程并处理其返回的数据。
 
-使用 JDBC 驱动程序调用此类存储过程时，必须结合 `call`SQLServerConnection[ 类的 ](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)prepareCall[ 方法使用 ](../../connect/jdbc/reference/sqlserverconnection-class.md) SQL 转义序列。 带有 OUT 参数的 `call` 转义序列的语法如下所示：
+使用 JDBC 驱动程序调用此类存储过程时，必须结合 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 方法使用 `call` SQL 转义序列。 带有 OUT 参数的 `call` 转义序列的语法如下所示：
 
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 

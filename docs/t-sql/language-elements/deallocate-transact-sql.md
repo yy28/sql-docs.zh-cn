@@ -43,7 +43,7 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
   
 ## <a name="arguments"></a>参数  
  cursor_name   
- 已声明游标的名称。 当同时存在以 cursor_name 作为名称的全局游标和局部游标时，如果指定 *，则 cursor_name 指全局游标，如果未指定* ，则指局部游标  `GLOBAL``GLOBAL`。  
+ 已声明游标的名称。 当同时存在以 cursor_name 作为名称的全局游标和局部游标时，如果指定 `GLOBAL`，则 cursor_name 指全局游标，如果未指定 `GLOBAL`，则指局部游标 。  
   
  @cursor_variable_name   
  cursor 变量的名称  。 @cursor_variable_name 必须为 cursor 类型   。  

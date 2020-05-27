@@ -123,7 +123,7 @@ DBCC CHECKALLOC 命令完成后，会将一条消息写入 [!INCLUDE[ssNoVersion
 |5|出现终止了 DBCC 命令的未知错误。|  
   
 ## <a name="error-reporting"></a>错误报告  
-只要 DBCC CHECKALLOC 检测到损坏错误，就将在  *LOG 目录中创建微型转储文件 (SQLDUMPnnnn.txt)* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用了“功能使用情况数据收集”和“错误报告”功能，该文件将被自动转发给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 收集的数据将用于改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。
+只要 DBCC CHECKALLOC 检测到损坏错误，就将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] LOG 目录中创建微型转储文件 (SQLDUMPnnnn.txt)。 如果为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用了“功能使用情况数据收集”和“错误报告”功能，该文件将被自动转发给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。 收集的数据将用于改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。
 转储文件包含 DBCC CHECKALLOC 命令的结果以及其他诊断输出数据。 该文件拥有任意访问控制列表 (DACL)。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户和 sysadmin 角色的成员有权进行访问。 默认情况下，sysadmin 角色包含 Windows BUILTIN\Administrators 组和本地管理员组的所有成员。 如果数据收集进程失败，DBCC 命令不会失败。
   
 ## <a name="resolving-errors"></a>纠正错误  

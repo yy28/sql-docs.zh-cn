@@ -70,13 +70,13 @@ WAITFOR
  有效的 RECEIVE 语句。  
   
 > [!IMPORTANT]  
->  包含 receive_statement 的 WAITFOR 仅适用于  *消息*[!INCLUDE[ssSB](../../includes/sssb-md.md)]。 有关详细信息，请参阅 [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)。  
+>  包含 receive_statement 的 WAITFOR 仅适用于 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 消息。 有关详细信息，请参阅 [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)。  
   
  *get_conversation_group_statement*  
  有效的 GET CONVERSATION GROUP 语句。  
   
 > [!IMPORTANT]  
->  包含 get_conversation_group_statement 的 WAITFOR 仅适用于  *消息*[!INCLUDE[ssSB](../../includes/sssb-md.md)]。 有关详细信息，请参阅 [GET CONVERSATION GROUP (Transact-SQL)](../../t-sql/statements/get-conversation-group-transact-sql.md)。  
+>  包含 get_conversation_group_statement 的 WAITFOR 仅适用于 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 消息。 有关详细信息，请参阅 [GET CONVERSATION GROUP (Transact-SQL)](../../t-sql/statements/get-conversation-group-transact-sql.md)。  
   
  TIMEOUT timeout   
  指定消息到达队列前等待的时间（以毫秒为单位）。  

@@ -62,7 +62,7 @@ DISTINCT
 `CHECKSUM_AGG` 具有类似于其他聚合函数的功能。 有关详细信息，请参阅[聚合函数 (Transact-SQL)](../../t-sql/functions/aggregate-functions-transact-sql.md)。
   
 ## <a name="examples"></a>示例  
-这些示例使用 `CHECKSUM_AGG` 检测 `Quantity` 数据库中 `ProductInventory` 表的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 列中的更改。
+这些示例使用 `CHECKSUM_AGG` 检测 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `ProductInventory` 表的 `Quantity` 列中的更改。
   
 ```sql
 --Get the checksum value before the column value is changed.  

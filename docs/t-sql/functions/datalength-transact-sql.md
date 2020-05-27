@@ -70,7 +70,7 @@ DATALENGTH ( expression )
 > 使用 [LEN](../../t-sql/functions/len-transact-sql.md) 返回编码到给定字符串表达式中的字符数，使用 [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) 返回给定字符串表达式的字节大小。 这些输出可能会因列中使用的数据类型和编码类型而异。 若要详细了解不同编码类型的存储区别，请参阅[排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。
 
 ## <a name="examples"></a>示例  
-此示例查找 `Name` 表中的 `Product` 列的长度：
+此示例查找 `Product` 表中的 `Name` 列的长度：
   
 ```sql
 USE AdventureWorks2016  

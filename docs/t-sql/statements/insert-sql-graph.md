@@ -27,7 +27,7 @@ ms.locfileid: "68071174"
 # <a name="insert-sql-graph"></a>INSERT（SQL 图形）
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-向 `node` 中的 `edge` 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表格添加一行或多行。 
+向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 `node` 或 `edge` 表格添加一行或多行。 
 
 > [!NOTE]   
 >  有关标准 TRANSACT-SQL 语句，请参阅 [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)。
@@ -123,7 +123,7 @@ edge_table_column_list
 
 节点表的 BULK 插入与关系表的 BULK 插入相同。
 
-批量插入边缘表之前，必须导入节点表。 然后才可从节点表的 `$from_id` 列中提取 `$to_id` 和 `$node_id` 的值，并将其作为边插入。 
+批量插入边缘表之前，必须导入节点表。 然后才可从节点表的 `$node_id` 列中提取 `$from_id` 和 `$to_id` 的值，并将其作为边插入。 
 
   
 ### <a name="permissions"></a>权限  

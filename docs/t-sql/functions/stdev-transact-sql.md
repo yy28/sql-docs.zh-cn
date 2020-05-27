@@ -68,7 +68,7 @@ STDEV ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-stdev"></a>A：使用 STDEV  
- 以下示例返回 `SalesPerson` 数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表中所有奖金值的标准偏差。  
+ 以下示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `SalesPerson` 表中所有奖金值的标准偏差。  
   
 ```  
 SELECT STDEV(Bonus)  

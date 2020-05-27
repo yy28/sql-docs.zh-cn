@@ -51,7 +51,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
  *区域性*  
  可选字符串，它标识对 string_value 进行格式化的区域性  。  
   
- 如果未提供 culture 参数，则使用当前会话的语言  。 可以使用 SET LANGUAGE 语句隐式或显式设置此语言。 culture 接受 .NET Framework 支持的任何区域性；它不局限于  *显式支持的语言*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果 culture 参数无效，PARSE 将引发错误  。  
+ 如果未提供 culture 参数，则使用当前会话的语言  。 可以使用 SET LANGUAGE 语句隐式或显式设置此语言。 culture 接受 .NET Framework 支持的任何区域性；它不局限于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 显式支持的语言。 如果 culture 参数无效，PARSE 将引发错误  。  
   
 ## <a name="return-types"></a>返回类型  
  返回表达式的结果（已转换为请求的数据类型）；如果强制转换失败，则返回 Null。  

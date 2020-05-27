@@ -57,7 +57,7 @@ MOVE CONVERSATION conversation_handle
  MOVE CONVERSATION 语句将由 conversation_handle 指定的会话移动到由 conversation_group_id 标识的会话组   。 只能在与相同队列关联的会话组之间重定向对话框。  
   
 > [!IMPORTANT]  
->  如果 MOVE CONVERSATION 语句不是批处理或存储过程中的第一个语句，前面的语句必须以分号 (;)（ **语句终止符）结尾**[!INCLUDE[tsql](../../includes/tsql-md.md)]。  
+>  如果 MOVE CONVERSATION 语句不是批处理或存储过程中的第一个语句，前面的语句必须以分号 (;)（[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句终止符）结尾。  
   
  MOVE CONVERSATION 语句将锁定与 conversation_handle 关联的会话组和由 conversation_group_id 指定的会话组，直到包含该语句的事务提交或回滚   。  
   

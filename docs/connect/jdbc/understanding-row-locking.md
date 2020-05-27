@@ -29,7 +29,7 @@ ms.locfileid: "69027328"
 锁定用于确保事务完整性和数据库一致性。 锁定可以防止用户读取其他用户正在更改的数据，并防止多个用户同时更改相同的数据。 如果不使用锁定，数据库中的数据可能在逻辑上变得不正确，而针对这些数据进行查询可能会产生想不到的结果。
 
 > [!NOTE]  
-> 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的行锁定的详细信息，请参阅 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 联机丛书中的“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的锁定”。
+> 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的行锁定的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“[!INCLUDE[ssDE](../../includes/ssde_md.md)] 中的锁定”。
 
 ## <a name="see-also"></a>另请参阅
 

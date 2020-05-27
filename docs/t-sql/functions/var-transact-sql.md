@@ -68,7 +68,7 @@ VAR ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-var"></a>A. 使用 VAR  
- 以下示例将返回 `SalesPerson` 数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表中所有奖金值的方差。  
+ 以下示例将返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `SalesPerson` 表中所有奖金值的方差。  
   
 ```  
 SELECT VAR(Bonus)  

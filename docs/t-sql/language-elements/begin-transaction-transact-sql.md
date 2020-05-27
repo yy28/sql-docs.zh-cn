@@ -68,7 +68,7 @@ BEGIN { TRAN | TRANSACTION }
  transaction_name   
  适用范围：SQL Server（从 2008 版开始）和 Azure SQL Database 
  
- 分配给事务的名称。 transaction_name 必须符合标识符规则，但标识符所包含的字符数不能大于 32  。 仅在最外面的 BEGIN...COMMIT 或 BEGIN...ROLLBACK 嵌套语句对中使用事务名。 transaction_name 始终区分大小写，即使  *实例不区分大小写也是如此*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 分配给事务的名称。 transaction_name 必须符合标识符规则，但标识符所包含的字符数不能大于 32  。 仅在最外面的 BEGIN...COMMIT 或 BEGIN...ROLLBACK 嵌套语句对中使用事务名。 transaction_name 始终区分大小写，即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例不区分大小写也是如此。  
   
  @tran_name_variable   
  适用范围：SQL Server（从 2008 版开始）和 Azure SQL Database 

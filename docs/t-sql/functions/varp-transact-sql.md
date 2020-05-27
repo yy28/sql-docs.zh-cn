@@ -68,7 +68,7 @@ VARP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-varp"></a>A：使用 VARP  
- 以下示例返回 `SalesPerson` 数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表中所有奖金值的总体方差。  
+ 以下示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `SalesPerson` 表中所有奖金值的总体方差。  
   
 ```  
 SELECT VARP(Bonus)  
@@ -79,7 +79,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-using-varp"></a>B：使用 VARP  
- 下面的示例返回表 `VARP` 中的销售配额值的 `dbo.FactSalesQuota`。 第一列中包含所有非重复值的方差，第二列中包含所有值（包括任何重复值）的方差。  
+ 下面的示例返回表 `dbo.FactSalesQuota` 中的销售配额值的 `VARP`。 第一列中包含所有非重复值的方差，第二列中包含所有值（包括任何重复值）的方差。  
   
 ```  
 -- Uses AdventureWorks  

@@ -35,7 +35,7 @@ ms.locfileid: "78896577"
   
 可以为 SELECT 和 EXECUTE 语句设置通知。 使用 EXECUTE 语句时，SQL Server 将为执行的命令（而不是 EXECUTE 语句本身）注册一个通知。 命令必须满足 SELECT 语句的要求和限制。 当注册通知的命令包含多条语句时，数据库引擎将为批处理中的每条语句创建一个通知。  
   
-如果你正在开发需要在数据发生更改时提供可靠的次秒级通知的应用程序，请查看 SQL Server 联机丛书中[计划通知](https://go.microsoft.com/fwlink/?LinkId=211984)主题中的“计划高效的查询通知策略”和“查询通知的替代方法”部分   。 有关查询通知和 SQL Server Service Broker 的详细信息，请参阅以下指向 SQL Server 联机丛书中主题的链接。  
+如果你正在开发需要在数据发生更改时提供可靠的次秒级通知的应用程序，请查看 SQL Server 联机丛书中[计划通知](https://go.microsoft.com/fwlink/?LinkId=211984)主题中的“计划高效的查询通知策略”和“查询通知的替代方法”部分 。 有关查询通知和 SQL Server Service Broker 的详细信息，请参阅以下指向 SQL Server 联机丛书中主题的链接。  
   
 **SQL Server 文档**  
   

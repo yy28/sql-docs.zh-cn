@@ -68,7 +68,7 @@ minute_offset
 整数表达式，用于指定时区偏移量的分钟部分。  
   
 *精度*  
-整数文本值，用于指定  **要返回的 datetimeoffset**`DATETIMEOFFSETFROMPARTS` 值的精度。  
+整数文本值，用于指定 `DATETIMEOFFSETFROMPARTS` 要返回的 datetimeoffset 值的精度。  
   
 ## <a name="return-types"></a>返回类型
 datetimeoffset( precision )     

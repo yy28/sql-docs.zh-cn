@@ -30,7 +30,7 @@ public boolean isClosed()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 如果此 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象已关闭，则为 true  ，如果仍打开，则为 false  。  
+ 如果此 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象已关闭，则为 true，如果仍打开，则为 false。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

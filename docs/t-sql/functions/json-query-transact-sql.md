@@ -31,7 +31,7 @@ ms.locfileid: "68109375"
 
  从 JSON 字符串中提取对象或数组。  
   
- 若要从 JSON 字符串提取标量值而不是对象或数组，请参阅 [JSON_VALUE (Transact SQL)](../../t-sql/functions/json-value-transact-sql.md)。 有关 JSON_VALUE 和 JSON_QUERY 之间差异的信息，请参阅[比较 JSON_VALUE 和 JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare)   。  
+ 若要从 JSON 字符串提取标量值而不是对象或数组，请参阅 [JSON_VALUE (Transact SQL)](../../t-sql/functions/json-value-transact-sql.md)。 有关 JSON_VALUE 和 JSON_QUERY 之间差异的信息，请参阅[比较 JSON_VALUE 和 JSON_QUERY](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare) 。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

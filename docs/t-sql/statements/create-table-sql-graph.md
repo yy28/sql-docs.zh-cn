@@ -98,10 +98,10 @@ CREATE TABLE
 ## <a name="arguments"></a>参数  
 本文档仅列出与 SQL 图形相关的参数。 有关受支持参数的完整列表和说明，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)
 
- database_name      
+ database_name    
  要在其中创建表的数据库的名称。 database_name 须指定现有数据库的名称  。 如果未指定，则 database_name 默认为当前数据库  。 当前连接的登录名必须与 database_name 所指定数据库中的一个现有用户 ID 关联，并且该用户 ID 必须具有 CREATE TABLE 权限  。  
   
- schema_name      
+ schema_name    
  新表所属架构的名称。  
   
  *table_name*      

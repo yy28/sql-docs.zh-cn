@@ -116,7 +116,7 @@ DBCC SHRINKDATABASE 以每个文件为单位对数据文件进行收缩。然而
   
 假设拥有几个日志文件、一个数据文件和一个名为 **mydb** 的数据库。 数据文件和日志文件分别是 10 MB，并且数据文件包含 6 MB 数据。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 计算每个文件的目标大小。 此值是文件要收缩到的大小。 如果使用 _target\_percent_ 指定 DBCC SHRINKDATABASE ，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 计算得出的目标大小为收缩后文件中可用空间的 _target\_percent_ 数量。 
 
-例如，如果为收缩 _mydb\_ 将_ target**percent** 指定为 25，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 计算得出此文件的目标大小为 8 MB（6 MB 数据加上 2 MB 可用空间）。 因此，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 将数据文件后 2 MB 中的所有数据移动到数据文件前 8 MB 的任何可用空间中，然后对该文件进行收缩。
+例如，如果为收缩 **mydb** 将 _target\_percent_ 指定为 25，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 计算得出此文件的目标大小为 8 MB（6 MB 数据加上 2 MB 可用空间）。 因此，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 将数据文件后 2 MB 中的所有数据移动到数据文件前 8 MB 的任何可用空间中，然后对该文件进行收缩。
   
 假设 mydb 的数据文件包含 7 MB 的数据  。 将 _target\_percent_ 指定为 30，以允许将此数据文件收缩到可用空间的 30%。 但是，将 _target\_percent_ 指定为 40 不会收缩数据文件，因为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将文件收缩到的大小不能小于数据当前占用的空间大小。 
 
@@ -144,7 +144,7 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
-此错误表示时间戳早于 109 的快照事务将阻止收缩操作。 该事务是收缩操作完成的最后一个事务。 它还说明 **sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)** 动态管理视图中的 **transaction_sequence_num** 或 [first_snapshot_sequence_num](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 列包含值 15。 该视图中的 **transaction_sequence_num** 或 **first_snapshot_sequence_num** 列可能包含小于收缩操作完成的最后一个事务 (109) 的数字。 如果是这样，收缩操作将等待这些事务完成。
+此错误表示时间戳早于 109 的快照事务将阻止收缩操作。 该事务是收缩操作完成的最后一个事务。 它还说明 [sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 动态管理视图中的 **transaction_sequence_num** 或 **first_snapshot_sequence_num** 列包含值 15。 该视图中的 **transaction_sequence_num** 或 **first_snapshot_sequence_num** 列可能包含小于收缩操作完成的最后一个事务 (109) 的数字。 如果是这样，收缩操作将等待这些事务完成。
   
 若要解决此问题，请执行下列任务之一：
 -   终止阻止收缩操作的事务。  

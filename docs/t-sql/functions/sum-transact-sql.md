@@ -107,7 +107,7 @@ White           19.00                 6.7926
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. 使用 OVER 子句  
- 以下示例将 SUM 函数与 OVER 子句结合使用，以便为 `Sales.SalesPerson` 数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表中的每个地区提供年度销售额的累计合计。 数据按 `TerritoryID` 分区并在逻辑上按 `SalesYTD` 排序。 这意味着将基于年度销售额为每个地区计算 SUM 函数。 请注意，对于 `TerritoryID` 1，为 2005 销售年度存在两行，分别表示在该年度有销售业绩的两个销售人员。 将计算这两行的累积销售总额，然后在计算中包括表示 2006 年销售额的第三行。  
+ 以下示例将 SUM 函数与 OVER 子句结合使用，以便为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Sales.SalesPerson` 表中的每个地区提供年度销售额的累计合计。 数据按 `TerritoryID` 分区并在逻辑上按 `SalesYTD` 排序。 这意味着将基于年度销售额为每个地区计算 SUM 函数。 请注意，对于 `TerritoryID` 1，为 2005 销售年度存在两行，分别表示在该年度有销售业绩的两个销售人员。 将计算这两行的累积销售总额，然后在计算中包括表示 2006 年销售额的第三行。  
   
 ```  
 SELECT BusinessEntityID, TerritoryID   

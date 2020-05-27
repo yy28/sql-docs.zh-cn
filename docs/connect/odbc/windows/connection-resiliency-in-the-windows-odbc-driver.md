@@ -71,7 +71,7 @@ ms.locfileid: "68008431"
 |IMC06|连接已断开，且不能恢复。 客户端驱动程序将连接标记为不可恢复。 未尝试还原连接。|  
   
 ## <a name="example"></a>示例  
- 以下示例包含两个函数。 func1 演示如何通过使用 Windows 上的 ODBC Driver for  **的数据源名称 (DSN) 建立连接**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 DSN 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证，并指定用户 ID。 然后，func1  使用 SQL_COPT_SS_CONNECT_RETRY_COUNT  检索连接重试次数。  
+ 以下示例包含两个函数。 func1 演示如何通过使用 Windows 上的 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的数据源名称 (DSN) 建立连接。 DSN 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证，并指定用户 ID。 然后，func1  使用 SQL_COPT_SS_CONNECT_RETRY_COUNT  检索连接重试次数。  
   
  **func2** 使用 **SQLDriverConnect**、 **ConnectRetryCount** 连接字符串关键字和连接属性，检索连接重试和重试间隔的设置。  
   

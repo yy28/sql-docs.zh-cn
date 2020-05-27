@@ -48,7 +48,7 @@ UPDATE ( column )
   
 ## <a name="arguments"></a>参数  
  *column*  
- 要为 INSERT 或 UPDATE 操作测试的列的名称。 由于表名是在触发器的 ON 子句中指定的，因此不要在列名前包含表名。 列可以是 [ 支持的任何](../../t-sql/data-types/data-types-transact-sql.md)数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 但是，计算列不能用于此上下文。  
+ 要为 INSERT 或 UPDATE 操作测试的列的名称。 由于表名是在触发器的 ON 子句中指定的，因此不要在列名前包含表名。 列可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的任何[数据类型](../../t-sql/data-types/data-types-transact-sql.md)。 但是，计算列不能用于此上下文。  
   
 ## <a name="return-types"></a>返回类型  
  Boolean  
@@ -63,7 +63,7 @@ UPDATE ( column )
 > [!NOTE]  
 >  IF UPDATE(column) 子句的功能等同于 IF、IF...ELSE 或 WHILE 子句，并且可以使用 BEGIN...END 语句块  。 有关详细信息，请参阅[控制流语言 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)。  
   
- 可以在  *触发器主体中的任意位置使用 UPDATE(column)* [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
+ 可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 触发器主体中的任意位置使用 UPDATE(column)。  
  
 如果将触发器应用于列，`UPDATED` 值将返回为 `true` 或 `1`，即使列值保持不变也是如此。 这是有意为之，并且触发器应实现确定是否允许插入/更新/删除操作的业务逻辑。 
   

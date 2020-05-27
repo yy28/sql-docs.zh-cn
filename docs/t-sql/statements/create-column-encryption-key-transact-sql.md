@@ -61,15 +61,15 @@ WITH VALUES
 ```  
   
 ## <a name="arguments"></a>参数  
-key_name\__  
+key\_name  
 列加密密钥在数据库中所使用的名称。  
   
-column_master\_key\_name\__ 指定用于加密列加密密钥的自定义 CMK 的名称。  
+column\_master\_key\_name 指定用于加密列加密密钥的自定义 CMK 的名称。  
   
-algorithm_name\__  
+algorithm\_name  
 用于对列加密密钥进行加密的加密算法的名称。 系统提供程序的算法必须为 RSA_OAEP  。  
   
-varbinary_literal\__  
+varbinary\_literal  
 已加密的列加密密钥值 BLOB。  
   
 > [!WARNING]  

@@ -42,7 +42,7 @@ REVERSE ( string_expression )
   
 ## <a name="arguments"></a>参数  
  string_expression   
- string_expression 是字符串或二进制数据类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)  。 string_expression 可以是常量、变量，也可以是字符列或二进制数据列  。  
+ string_expression 是字符串或二进制数据类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 string_expression 可以是常量、变量，也可以是字符列或二进制数据列  。  
   
 ## <a name="return-types"></a>返回类型  
  varchar 或 nvarchar    

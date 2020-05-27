@@ -30,7 +30,7 @@ ms.locfileid: "75721922"
 # <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-此函数将返回 varbinary 位模式，它指示表或视图中已插入或已更新的列  。 可以在 `COLUMNS_UPDATED` INSERT 或 UPDATE 触发器主体中的任意位置使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]，以测试触发器是否应执行某些操作。
+此函数将返回 varbinary 位模式，它指示表或视图中已插入或已更新的列  。 可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 或 UPDATE 触发器主体中的任意位置使用 `COLUMNS_UPDATED`，以测试触发器是否应执行某些操作。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,9 +50,9 @@ COLUMNS_UPDATED ( )
   
 若要检测针对特定列的更新或插入操作，请使用按位运算符和已测试列的整数位掩码的语法。 例如，假设表 t1 包含列 C1、C2、C3、C4 和 C5       。 若要验证列 C2、C3 和 C4 是否已全部成功更新（使用具有 UPDATE 触发器的表 t1），请使用 & 14 的语法      。 若要测试是否只更新了列 C2，请指定 & 2   。 有关实际示例，请参阅[示例 A](#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) 和[示例 B](#b-using-columns_updated-to-test-more-than-eight-columns)。
   
-可以在 `COLUMNS_UPDATED` INSERT 或 UPDATE 触发器内部的任意位置使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。
+可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 或 UPDATE 触发器内部的任意位置使用 `COLUMNS_UPDATED`。
   
-INFORMATION_SCHEMA.COLUMNS 视图的 ORDINAL_POSITION 列与 `COLUMNS_UPDATED` 所返回列的位模式不兼容。 若要获取与 `COLUMNS_UPDATED` 兼容的位模式，请在查询 `ColumnID` 视图时引用 `COLUMNPROPERTY` 系统函数的 `INFORMATION_SCHEMA.COLUMNS` 属性，如以下示例所示。
+INFORMATION_SCHEMA.COLUMNS 视图的 ORDINAL_POSITION 列与 `COLUMNS_UPDATED` 所返回列的位模式不兼容。 若要获取与 `COLUMNS_UPDATED` 兼容的位模式，请在查询 `INFORMATION_SCHEMA.COLUMNS` 视图时引用 `COLUMNPROPERTY` 系统函数的 `ColumnID` 属性，如以下示例所示。
   
 ```sql
 SELECT TABLE_NAME, COLUMN_NAME,  
@@ -184,7 +184,7 @@ GO
 ```  
   
 ### <a name="b-using-columns_updated-to-test-more-than-eight-columns"></a>B. 使用 COLUMNS_UPDATED 测试八个以上的列  
-若要对影响表中前八列以外的列的更新进行检测，请使用 `SUBSTRING` 函数测试由 `COLUMNS_UPDATED` 返回的正确位。 此示例对影响 `3` 表中的列 `5`、`9` 和 `AdventureWorks2012.Person.Person` 的更新进行检测。
+若要对影响表中前八列以外的列的更新进行检测，请使用 `SUBSTRING` 函数测试由 `COLUMNS_UPDATED` 返回的正确位。 此示例对影响 `AdventureWorks2012.Person.Person` 表中的列 `3`、`5` 和 `9` 的更新进行检测。
   
 ```sql
 USE AdventureWorks2012;  

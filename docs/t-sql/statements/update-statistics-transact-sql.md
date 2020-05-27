@@ -151,7 +151,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
  有关 AUTO_STATISTICS_UPDATE 选项的详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
  INCREMENTAL = { ON | OFF }  
- 为 ON 时，根据分区统计信息重新创建统计信息  。 为 OFF 时，删除统计信息树并且  **重新计算统计信息**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 默认为 **OFF**。  
+ 为 ON 时，根据分区统计信息重新创建统计信息  。 为 OFF 时，删除统计信息树并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新计算统计信息。 默认为 **OFF**。  
   
  如果不支持每个分区统计信息，将生成错误。 对于以下统计信息类型，不支持增量统计信息：  
   
@@ -284,14 +284,14 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-update-statistics-on-a-table"></a>E. 更新表的统计信息  
- 以下示例更新 `CustomerStats1` 表的 `Customer` 统计信息。  
+ 以下示例更新 `Customer` 表的 `CustomerStats1` 统计信息。  
   
 ```sql  
 UPDATE STATISTICS Customer ( CustomerStats1 );  
 ```  
   
 ### <a name="f-update-statistics-by-using-a-full-scan"></a>F. 使用完全扫描更新统计信息  
- 以下示例基于扫描 `CustomerStats1` 表中的所有行来更新 `Customer` 统计信息。  
+ 以下示例基于扫描 `Customer` 表中的所有行来更新 `CustomerStats1` 统计信息。  
   
 ```sql  
 UPDATE STATISTICS Customer (CustomerStats1) WITH FULLSCAN;  

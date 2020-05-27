@@ -20,7 +20,7 @@ ms.locfileid: "68015105"
 # <a name="converting-data-types"></a>转换数据类型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-当向 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 发送数据或从其中检索数据时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许指定数据类型。 指定数据类型是可选的。 如果不指定数据类型，将使用默认类型。 此部分的主题介绍如何指定数据类型并提供有关默认数据类型的详细信息。  
+当向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发送数据或从其中检索数据时，[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 允许指定数据类型。 指定数据类型是可选的。 如果不指定数据类型，将使用默认类型。 此部分的主题介绍如何指定数据类型并提供有关默认数据类型的详细信息。  
   
 ## <a name="in-this-section"></a>本节内容  
   

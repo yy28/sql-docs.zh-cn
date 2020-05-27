@@ -67,7 +67,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
 </myRoot>  
 ```  
   
- 由于结果为 **xml** 类型，因此可以对此 XML 直接指定 **xml** 数据类型方法之一，如以下查询所示。 在此查询中，[query() 方法（xml 数据类型）](../../t-sql/xml/query-method-xml-data-type.md)用于检索 <`row`> 元素的第一个 <`myRoot`> 子元素。  
+ 由于结果为 **xml** 类型，因此可以对此 XML 直接指定 **xml** 数据类型方法之一，如以下查询所示。 在此查询中，[query() 方法（xml 数据类型）](../../t-sql/xml/query-method-xml-data-type.md)用于检索 <`myRoot`> 元素的第一个 <`row`> 子元素。  
   
 ```  
 SELECT  (SELECT ProductModelID, Name  

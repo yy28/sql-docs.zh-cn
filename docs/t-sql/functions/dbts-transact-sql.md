@@ -47,7 +47,7 @@ ms.locfileid: "68136031"
 事务隔离级别的更改不会影响 @@DBTS 函数。
   
 ## <a name="examples"></a>示例  
-此示例从  **数据库返回当前的 timestamp**[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。
+此示例从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库返回当前的 timestamp。
   
 ```sql
 USE AdventureWorks2012;  

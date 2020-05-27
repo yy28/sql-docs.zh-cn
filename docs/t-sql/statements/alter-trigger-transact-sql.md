@@ -142,7 +142,7 @@ AS { sql_statement
  trigger_name   
  要修改的现有触发器。  
   
- table*view* |    
+ table | view   
  对其执行 DML 触发器的表或视图。 可以选择指定表或视图的完全限定名称。  
   
  DATABASE  
@@ -214,7 +214,7 @@ AS { sql_statement
  EXTERNAL NAME \<method_specifier>  
  **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
- 指定要与触发器绑定的程序集的方法。 该方法不能带有任何参数，并且必须返回空值。 class_name 必须是有效的  *标识符，并且它必须作为类存在于可见程序集中*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 该类不能为嵌套类。  
+ 指定要与触发器绑定的程序集的方法。 该方法不能带有任何参数，并且必须返回空值。 class_name 必须是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符，并且它必须作为类存在于可见程序集中。 该类不能为嵌套类。  
   
 ## <a name="remarks"></a>备注  
  有关 ALTER TRIGGER 的详细信息，请参阅 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md) 中的“备注”部分。  

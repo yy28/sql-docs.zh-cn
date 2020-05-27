@@ -67,7 +67,7 @@ ms.locfileid: "73982018"
 ```  
   
 ## <a name="arguments"></a>参数  
- PAD_INDEX  **{ ON | OFF }=**   
+ PAD_INDEX = { ON | OFF }   
  **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  指定索引填充。 默认为 OFF。  
@@ -78,7 +78,7 @@ ms.locfileid: "73982018"
  OFF 或未指定 fillfactor   
  考虑到中间级页上的键集，可以将中间级页几乎填满，但至少要为最大索引行留出足够空间。  
   
- FILLFACTOR **fillfactor=**   
+ FILLFACTOR =fillfactor  
  **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  指定一个百分比，指示在[!INCLUDE[ssDE](../../includes/ssde-md.md)]创建或修改索引的过程中，应将每个索引页面的叶级填充到什么程度。 指定的值必须是 1 到 100 之间的整数。 默认值为 0。  
@@ -86,7 +86,7 @@ ms.locfileid: "73982018"
 > [!NOTE]  
 >  填充因子值 0 和 100 在所有方面都是相同的。  
   
- IGNORE_DUP_KEY  **{ ON | OFF }=**   
+ IGNORE_DUP_KEY = { ON | OFF }   
  指定在插入操作尝试向唯一索引插入重复键值时的响应类型。 IGNORE_DUP_KEY 选项仅适用于创建或重新生成索引后发生的插入操作。 当执行 [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)、[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) 或 [UPDATE](../../t-sql/queries/update-transact-sql.md) 时，该选项无效。 默认为 OFF。  
   
  ON  
@@ -101,7 +101,7 @@ ms.locfileid: "73982018"
   
  在向后兼容的语法中，WITH IGNORE_DUP_KEY 等效于 WITH IGNORE_DUP_KEY = ON。  
   
- STATISTICS_NORECOMPUTE  **{ ON | OFF }=**   
+ STATISTICS_NORECOMPUTE = { ON | OFF }   
  指定是否重新计算统计信息。 默认为 OFF。  
   
  ON  
@@ -110,7 +110,7 @@ ms.locfileid: "73982018"
  OFF  
  启用统计信息自动更新功能。  
   
- ALLOW_ROW_LOCKS  **{ ON | OFF }=**   
+ ALLOW_ROW_LOCKS = { ON | OFF }   
  **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  指定是否允许行锁。 默认值为 ON。  
@@ -121,7 +121,7 @@ ms.locfileid: "73982018"
  OFF  
  不使用行锁。  
   
- ALLOW_PAGE_LOCKS  **{ ON | OFF }=**   
+ ALLOW_PAGE_LOCKS = { ON | OFF }   
  **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  指定是否允许使用页锁。 默认值为 ON。  
@@ -138,7 +138,7 @@ ms.locfileid: "73982018"
 
 指定是否针对最后一页插入争用进行优化。 默认为 OFF。 有关详细信息，请参阅“CREATE INDEX”页的[顺序键](./create-index-transact-sql.md#sequential-keys)部分。
  
- SORT_IN_TEMPDB  **{ ON | OFF }=**   
+ SORT_IN_TEMPDB = { ON | OFF }   
  **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  指定是否将排序结果存储在 tempdb 中  。 默认为 OFF。  
@@ -149,7 +149,7 @@ ms.locfileid: "73982018"
  OFF  
  中间排序结果与索引存储在同一数据库中。  
   
- ONLINE  **{ ON | OFF }=**   
+ ONLINE = { ON | OFF }   
  **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  指定在索引操作期间基础表和关联的索引是否可用于查询和数据修改操作。 默认为 OFF。 REBUILD 可作为 ONLINE 操作执行。  
@@ -171,7 +171,7 @@ ms.locfileid: "73982018"
 > [!NOTE]
 >  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
- MAXDOP **max_degree_of_parallelism=**   
+ MAXDOP =max_degree_of_parallelism  
  **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
  在索引操作期间替代 max degree of parallelism 配置选项  。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
@@ -254,12 +254,12 @@ DATA_COMPRESSION = COLUMNSTORE_ARCHIVE ON PARTITIONS (2, 4, 6 TO 8)
 **low_priority_lock_wait**  
  **适用于**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本。  
   
- 当此表没有阻塞操作时，SWITCH 或联机索引重新生成便已完成  。 WAIT_AT_LOW_PRIORITY 指示如果 SWITCH 或联机索引重新生成操作由于其他阻塞操作而无法立即完成，则进行等待   。 该操作持有低优先级锁，允许持有与 DDL 语句冲突的锁的其他操作继续进行。 省略 WAIT AT LOW PRIORITY 选项与  **等效**`WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`。  
+ 当此表没有阻塞操作时，SWITCH 或联机索引重新生成便已完成  。 WAIT_AT_LOW_PRIORITY 指示如果 SWITCH 或联机索引重新生成操作由于其他阻塞操作而无法立即完成，则进行等待   。 该操作持有低优先级锁，允许持有与 DDL 语句冲突的锁的其他操作继续进行。 省略 WAIT AT LOW PRIORITY 选项与 `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)` 等效。  
   
 MAX_DURATION = time [MINUTES ]    
  执行 DDL 命令时 SWITCH 或必须获取的联机索引重新生成锁将等待的时间（以分钟为单位指定的整数值）  。 SWITCH 或联机索引重新生成操作试图立即完成。 如果操作被阻塞的时间达到 MAX_DURATION，则将执行某一 ABORT_AFTER_WAIT 操作   。 MAX_DURATION 时间始终以分钟为单位，MINUTES 一词可以省略   。  
   
-ABORT_AFTER_WAIT = [NONE**SELF**BLOCKERS } ] |    |    
+ABORT_AFTER_WAIT = [NONE | SELF | BLOCKERS } ]    
  无  
  不更改锁优先级（使用常规优先级），继续 SWITCH 或联机索引重新生成操作  。  
   

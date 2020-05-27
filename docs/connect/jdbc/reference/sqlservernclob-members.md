@@ -36,13 +36,13 @@ ms.locfileid: "67970943"
 |名称|说明|  
 |----------|-----------------|  
 |[free](../../../connect/jdbc/reference/free-method-sqlservernclob.md)|此方法释放 NCLOB  对象以及它所持有的资源。|  
-|[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservernclob.md)|检索由 java.sql.NClob  对象指定的 NCLOB  值作为 ASCII 流。|  
-|[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)|检索由 java.sql.NClob  对象指定的 NCLOB  值。|  
-|[getSubString](../../../connect/jdbc/reference/getsubstring-method-sqlservernclob.md)|在由 java.sql.NClob  对象指定的 NCLOB  值中检索指定子字符串的副本。|  
-|[length](../../../connect/jdbc/reference/length-method-sqlservernclob.md)|在由 java.sql.NClob  对象指定的 NCLOB  值中检索字符数。|  
+|[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservernclob.md)|检索由 java.sql.NClob 对象指定的 NCLOB 值作为 ASCII 流。|  
+|[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)|检索由 java.sql.NClob 对象指定的 NCLOB 值。|  
+|[getSubString](../../../connect/jdbc/reference/getsubstring-method-sqlservernclob.md)|在由 java.sql.NClob 对象指定的 NCLOB 值中检索指定子字符串的副本。|  
+|[length](../../../connect/jdbc/reference/length-method-sqlservernclob.md)|在由 java.sql.NClob 对象指定的 NCLOB 值中检索字符数。|  
 |[position](../../../connect/jdbc/reference/position-method-sqlservernclob.md)|根据指定的起始位置，检索指定 java.sql.NClob  对象的字符位置，或 java.sql.NClob  中的子字符串。|  
-|[setAsciiStream](../../../connect/jdbc/reference/setasciistream-method-sqlservernclob.md)|检索用于在指定起始位置将 ASCII 字符写入此 java.sql.NClob  对象表示的 NCLOB  值的流。|  
-|[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlservernclob.md)|检索用于在指定起始位置将 Unicode 字符流写入此 java.sql.NClob  对象表示的 NCLOB  值的流。|  
+|[setAsciiStream](../../../connect/jdbc/reference/setasciistream-method-sqlservernclob.md)|检索用于在指定起始位置将 ASCII 字符写入此 java.sql.NClob 对象表示的 NCLOB 值的流。|  
+|[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlservernclob.md)|检索用于在指定起始位置将 Unicode 字符流写入此 java.sql.NClob 对象表示的 NCLOB 值的流。|  
 |[setString](../../../connect/jdbc/reference/setstring-method-sqlservernclob.md)|将指定的 String  写入起始于指定位置的 NCLOB  。|  
 |[truncate](../../../connect/jdbc/reference/truncate-method-sqlservernclob.md)|将 NCLOB  值截断为指定长度。|  
   

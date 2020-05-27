@@ -64,14 +64,14 @@ YEAR ( date )
 SELECT YEAR('2010-04-30T01:01:01.1234567-07:00');  
 ```  
   
- 下面的语句将返回 `1900, 1, 1`。 date 的参数为数字  `0`。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `0` 解释为 1900 年 1 月 1 日。  
+ 下面的语句将返回 `1900, 1, 1`。 date 的参数为数字 `0`。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `0` 解释为 1900 年 1 月 1 日。  
   
 ```  
 SELECT YEAR(0), MONTH(0), DAY(0);  
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下面的语句将返回 `1900, 1, 1`。 date 的参数为数字  `0`。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `0` 解释为 1900 年 1 月 1 日。  
+ 下面的语句将返回 `1900, 1, 1`。 date 的参数为数字 `0`。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 `0` 解释为 1900 年 1 月 1 日。  
   
 ```  
 SELECT TOP 1 YEAR(0), MONTH(0), DAY(0);  

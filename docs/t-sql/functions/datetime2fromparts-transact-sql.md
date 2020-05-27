@@ -61,15 +61,15 @@ fractions
 指定秒的小数形式值的整数表达式。
   
 *精度*  
-整数表达式，用于指定  **将返回的 datetime2 值的精度**`DATETIME2FROMPARTS`。
+整数表达式，用于指定 `DATETIME2FROMPARTS` 将返回的 datetime2 值的精度。
   
 ## <a name="return-types"></a>返回类型
 datetime2( precision )   
   
 ## <a name="remarks"></a>备注  
-`DATETIME2FROMPARTS` 返回完全初始化的 datetime2 值  。 如果至少有一个必需参数具有无效值，`DATETIME2FROMPARTS` 将引发错误。 如果至少有一个必需参数具有 NULL 值，则 `DATETIME2FROMPARTS` 返回 NULL。 但是，如果 precision 参数具有 NULL 值， *将引发错误*`DATETIME2FROMPARTS`。
+`DATETIME2FROMPARTS` 返回完全初始化的 datetime2 值  。 如果至少有一个必需参数具有无效值，`DATETIME2FROMPARTS` 将引发错误。 如果至少有一个必需参数具有 NULL 值，则 `DATETIME2FROMPARTS` 返回 NULL。 但是，如果 precision 参数具有 NULL 值，`DATETIME2FROMPARTS` 将引发错误。
 
-fractions 参数取决于 precision 参数   。 例如，如果 precision 值为 7，则每个分数表示 100 纳秒；如果 precision 为 3，则每个分数表示 1 毫秒   。 如果 precision 的值为零，则 fractions 的值也必须为零；否则  *将引发错误*  `DATETIME2FROMPARTS`。
+fractions 参数取决于 precision 参数   。 例如，如果 precision 值为 7，则每个分数表示 100 纳秒；如果 precision 为 3，则每个分数表示 1 毫秒   。 如果 precision 的值为零，则 fractions 的值也必须为零；否则 `DATETIME2FROMPARTS` 将引发错误 。
   
 此函数支持在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 及更高版本的服务器上远程执行。 但不支持在版本低于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的服务器上远程执行。
   

@@ -33,7 +33,7 @@ ms.locfileid: "69027774"
   
 -   若要从 SQLXML 对象中检索 xml  数据，请使用 SQLXML 接口中指定的以下方法之一：getSource、getCharacterStream、getBinaryStream 或 getString。  
   
--   要更新 SQLXML 对象中的 xml  数据，请使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 [updateSQLXML](../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md) 方法。  
+-   要更新 SQLXML 对象中的 xml 数据，请使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 [updateSQLXML](../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md) 方法。  
   
 -   要将 SQLXML 对象存储在 xml  类型的数据库表列中，请使用 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 类或 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类的 setSQLXML 方法。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "69027774"
   
 -   要为 SQLXML 对象设置数据，应用程序必须在返回的对象中使用相应的 setter 方法和函数。  
   
--   如果基础列为 null  ，[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类和 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 getSQLXML 方法将返回 null  数据。  
+-   如果基础列为 null，[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类和 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 getSQLXML 方法将返回 null 数据。  
   
 -   setter 对象可以在创建它们的连接期间内保持有效。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "69027774"
   
     -   [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类和 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 类的 setObject 方法。  
   
-    -   参数值为 null  的 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类和 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 类的 setSQLXML 方法。  
+    -   参数值为 null 的 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类和 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 类的 setSQLXML 方法。  
   
 -   处理 XML 文档时，出于性能方面的考虑，建议使用 Simple API for XML (SAX) 和 Streaming API for XML (StAX) 分析器，而不要使用文档对象模型 (DOM) 分析器。  
   

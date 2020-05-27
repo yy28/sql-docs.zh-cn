@@ -23,7 +23,7 @@ ms.locfileid: "67993619"
 本主题讨论如何使用 PDO::SQLSRV_ATTR_DIRECT_QUERY 属性指定直接语句执行而非默认执行，即已准备的语句执行。 如果使用参数绑定多次执行准备的语句，那么使用此语句可以提升性能。  
   
 ## <a name="remarks"></a>备注  
-若要将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句直接发送到服务器，而无需由驱动程序进行语句准备，可以使用 [PDO::setAttribute](../../connect/php/pdo-setattribute.md) 或在调用 [PDO::prepare](../../connect/php/pdo-construct.md) 时设置 PDO::SQLSRV_ATTR_DIRECT_QUERY 属性（或作为传递到 [PDO::__construct](../../connect/php/pdo-prepare.md) 的驱动程序选项）。 PDO::SQLSRV_ATTR_DIRECT_QUERY 的默认值为 False（即使用准备的语句执行）。  
+若要将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句直接发送到服务器，而无需由驱动程序进行语句准备，可以使用 [PDO::setAttribute](../../connect/php/pdo-setattribute.md) 或在调用 [PDO::prepare](../../connect/php/pdo-prepare.md) 时设置 PDO::SQLSRV_ATTR_DIRECT_QUERY 属性（或作为传递到 [PDO::__construct](../../connect/php/pdo-construct.md) 的驱动程序选项）。 PDO::SQLSRV_ATTR_DIRECT_QUERY 的默认值为 False（即使用准备的语句执行）。  
   
 如果使用 [PDO::query](../../connect/php/pdo-query.md)，不妨设置直接语句执行。 调用 [PDO::query](../../connect/php/pdo-query.md) 前，请先调用 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)，并将 PDO::SQLSRV_ATTR_DIRECT_QUERY 设置为 True。  每次调用 [PDO::query](../../connect/php/pdo-query.md) 都可以使用不同的 PDO::SQLSRV_ATTR_DIRECT_QUERY 设置来执行。  
   

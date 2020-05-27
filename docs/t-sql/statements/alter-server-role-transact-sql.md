@@ -64,7 +64,7 @@ ADD MEMBER server_principal
 DROP MEMBER server_principal   
 从服务器角色中删除指定的服务器主体。 server_principal 可以是登录名或用户定义的服务器角色  。 server_principal 不能是固定服务器角色、数据库角色或 sa  。  
   
-WITH NAME **new_server_role_name=**   
+WITH NAME =new_server_role_name  
 指定用户定义的服务器角色的新名称。 服务器中不能已存在此名称。  
   
 ## <a name="remarks"></a>备注  
@@ -105,14 +105,14 @@ GO
 ```  
   
 ### <a name="b-adding-a-domain-account-to-a-server-role"></a>B. 在服务器角色中添加域帐户  
-以下示例在名为 `adventure-works\roberto0` 的用户定义服务器角色中添加一个名为 `Production` 的域帐户。  
+以下示例在名为 `Production` 的用户定义服务器角色中添加一个名为 `adventure-works\roberto0` 的域帐户。  
   
 ```  
 ALTER SERVER ROLE Production ADD MEMBER [adventure-works\roberto0] ;  
 ```  
   
 ### <a name="c-adding-a-sql-server-login-to-a-server-role"></a>C. 在服务器角色中添加 SQL Server 登录名  
-以下示例在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定服务器角色中添加一个名为 `Ted` 的 `diskadmin` 登录名。  
+以下示例在 `diskadmin` 固定服务器角色中添加一个名为 `Ted` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
   
 ```  
 ALTER SERVER ROLE diskadmin ADD MEMBER Ted ;  
@@ -120,14 +120,14 @@ GO
 ```  
   
 ### <a name="d-removing-a-domain-account-from-a-server-role"></a>D. 从服务器角色中删除域帐户  
-以下示例从名为 `adventure-works\roberto0` 的用户定义服务器角色中删除一个名为 `Production` 的域帐户。  
+以下示例从名为 `Production` 的用户定义服务器角色中删除一个名为 `adventure-works\roberto0` 的域帐户。  
   
 ```  
 ALTER SERVER ROLE Production DROP MEMBER [adventure-works\roberto0] ;  
 ```  
   
 ### <a name="e-removing-a-sql-server-login-from-a-server-role"></a>E. 从服务器角色中删除 SQL Server 登录名  
-以下示例从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定服务器角色中删除 `Ted` 登录名 `diskadmin`。  
+以下示例从 `diskadmin` 固定服务器角色中删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `Ted`。  
   
 ```  
 ALTER SERVER ROLE Production DROP MEMBER Ted ;  
@@ -143,7 +143,7 @@ GO
 ```  
   
 ### <a name="g-to-view-role-membership"></a>G. 查看角色成员身份  
-若要查看角色成员身份，请使用  **中的服务器角色（成员）页或执行以下查询**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：  
+若要查看角色成员身份，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的服务器角色（成员）页或执行以下查询：  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   

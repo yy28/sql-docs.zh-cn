@@ -58,7 +58,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 ```  
   
 ## <a name="arguments"></a>参数  
- ( { plan_handle | sql_handle | pool_name } )     
+ ( { plan_handle | sql_handle | pool_name } )    
 plan_handle 用于唯一标识已执行并且其计划驻留在计划缓存中的批处理的查询计划  。 plan_handle 为 varbinary(64)，可以从下列动态管理对象中获得计划句柄   ：  
  -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
@@ -72,7 +72,7 @@ sql_handle 是要清除的批处理的 SQL 句柄  。 sql_handle 为 varbinary(
  -   [sys.dm_exec_xml_handles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
 
-pool_name 是资源调控器资源池的名称  。 pool_name 的数据类型为 sysname，可通过查询 [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) 动态管理视图获得此参数   。  
+pool_name 是资源调控器资源池的名称  。 pool_name 的数据类型为 sysname，可通过查询 [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) 动态管理视图获得此参数。  
  若要将资源调控器工作负荷组与资源池相关联，请查询 [sys.dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) 动态管理视图。 有关会话的工作负荷组的信息，请查询 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 动态管理视图。  
 
   

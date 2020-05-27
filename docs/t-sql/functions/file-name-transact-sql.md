@@ -56,7 +56,7 @@ file_id
 file_ID  与 sys.master_files 目录视图或 sys.database_files 目录视图中的 file_id 列相对应。  
   
 ## <a name="examples"></a>示例  
-此示例返回 `file_ID 1` 数据库中的 `file_ID` 和 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 的文件名。  
+此示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 `file_ID 1` 和 `file_ID` 的文件名。  
   
 ```sql  
 SELECT FILE_NAME(1) AS 'File Name 1', FILE_NAME(2) AS 'File Name 2';  

@@ -26,7 +26,7 @@ ms.locfileid: "76934442"
 > [!NOTE]  
 > 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 JDBC 驱动程序数据类型的详细说明（包括它们的区别以及如何将它们转换为 Java 语言数据类型），请参阅[了解 JDBC 驱动程序数据类型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)。  
   
-为了使用 SQL Server 数据类型，JDBC 驱动程序为 \<SQLServerPreparedStatement\< 和 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 类提供了 get[Type> 和 set](../../connect/jdbc/reference/sqlservercallablestatement-class.md)Type> 方法，为 \<SQLServerResultSet\< 类提供了 get[Type> 和 update](../../connect/jdbc/reference/sqlserverresultset-class.md)Type> 方法。 要使用哪个方法取决于所使用的数据类型以及是否要使用结果集和查询。  
+为了使用 SQL Server 数据类型，JDBC 驱动程序为 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类提供了 get\<Type> 和 set\<Type> 方法，为 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 类提供了 get\<Type> 和 update\<Type> 方法。 要使用哪个方法取决于所使用的数据类型以及是否要使用结果集和查询。  
   
 此部分的主题说明了如何在 Java 应用程序中使用 JDBC 驱动程序数据类型来访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "76934442"
 |-----------|-----------------|  
 |[基本数据类型示例](../../connect/jdbc/basic-data-types-sample.md)|说明如何使用结果集的 getter 方法来检索基本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型值，以及如何使用结果集的 update 方法来更新这些值。|  
 |[SQLXML 数据类型示例](../../connect/jdbc/sqlxml-data-type-sample.md)|说明如何在关系数据库中存储 XML 数据，如何从数据库中检索 XML 数据，以及如何使用 SQLXML Java 数据类型分析 XML 数据  。|  
-|[空间数据类型示例](../../connect/jdbc/spatial-data-types-sample.md)|描述如何使用 Microsoft JDBC 驱动程序定义的 Geometry[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **和 Geography** **Java 类型来存储和检索** 数据库中空间数据类型“Geometry”和“Geography”的数据。|
+|[空间数据类型示例](../../connect/jdbc/spatial-data-types-sample.md)|描述如何使用 Microsoft JDBC 驱动程序定义的 Geometry 和 Geography Java 类型来存储和检索 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中空间数据类型“Geometry”和“Geography”的数据。|
 
 ## <a name="see-also"></a>另请参阅
 

@@ -88,7 +88,7 @@ varbinary（最大大小为 8,000 个字节）  。
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，证书和非对称密钥都用作 RSA 密钥的包装器。  
   
 ## <a name="examples"></a>示例  
-此示例将用非对称密钥 `@cleartext` 加密 `JanainaAsymKey02` 中存储的文本。 该语句将加密数据插入到 `ProtectedData04` 表中。  
+此示例将用非对称密钥 `JanainaAsymKey02` 加密 `@cleartext` 中存储的文本。 该语句将加密数据插入到 `ProtectedData04` 表中。  
   
 ```  
 INSERT INTO AdventureWorks2012.Sales.ProtectedData04   

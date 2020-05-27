@@ -43,7 +43,7 @@ RAND ( [ seed ] )
   
 ## <a name="arguments"></a>参数  
  seed   
- 提供种子值的整数[表达式](../../t-sql/language-elements/expressions-transact-sql.md)（tinyint、smallint 或 int）    。 如果未指定 seed，则  *随机分配种子值*[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 对于指定的种子值，返回的结果始终相同。  
+ 提供种子值的整数[表达式](../../t-sql/language-elements/expressions-transact-sql.md)（tinyint、smallint 或 int）    。 如果未指定 seed，则 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 随机分配种子值。 对于指定的种子值，返回的结果始终相同。  
   
 ## <a name="return-types"></a>返回类型  
  **float**  

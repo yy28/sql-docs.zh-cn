@@ -60,7 +60,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 ## <a name="remarks"></a>备注  
  请使用 IS_ROLEMEMBER 确定当前用户是否可以执行需要数据库角色权限的操作。  
   
- 如果 database_principal 基于 Windows 登录名，如 Contoso\Mary5，则 IS_ROLEMEMBER 返回 NULL，除非为  *授予或拒绝了 database_principal 的直接访问权限*  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 如果 database_principal 基于 Windows 登录名，如 Contoso\Mary5，则 IS_ROLEMEMBER 返回 NULL，除非为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 授予或拒绝了 database_principal 的直接访问权限 。  
   
  如果未提供可选的 database_principal 参数，并且 database_principal 基于 Windows 域登录名，则它可能是通过 Windows 组成员身份而成为的数据库角色成员   。 要解析这种间接成员身份，IS_ROLEMEMBER 将从域控制器中请求 Windows 组成员身份信息。 如果无法访问域控制器或域控制器没有响应，则 IS_ROLEMEMBER 在返回角色成员身份信息时只考虑用户及其本地组。 如果指定的用户不是当前用户，则 IS_ROLEMEMBER 返回的值可能不同于验证器（如 Active Directory）上次进行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据更新。  
   

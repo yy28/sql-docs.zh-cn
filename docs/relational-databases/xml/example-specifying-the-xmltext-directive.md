@@ -49,9 +49,9 @@ FOR XML EXPLICIT;
   
  在所得到的 XML 文档中：  
   
--   因为 *列没有指定*AttributeName`Overflow`，但却指定了 `xmltext` 指令，所以 <`overflow`> 元素中的属性被追加到封闭的 <`Parent`> 元素的属性列表中。  
+-   因为 `Overflow` 列没有指定 *AttributeName*，但却指定了 `xmltext` 指令，所以 <`overflow`> 元素中的属性被追加到封闭的 <`Parent`> 元素的属性列表中。  
   
--   因为 <`PersonID`> 元素中的 `xmltext` 属性与相同元素级上检索到的 `PersonID` 属性冲突，所以忽略 <`xmltext`> 元素中的此属性，即使 `PersonID` 为 NULL 也是如此。 通常情况下，属性将覆盖溢出中具有相同名称的属性。  
+-   因为 <`xmltext`> 元素中的 `PersonID` 属性与相同元素级上检索到的 `PersonID` 属性冲突，所以忽略 <`xmltext`> 元素中的此属性，即使 `PersonID` 为 NULL 也是如此。 通常情况下，属性将覆盖溢出中具有相同名称的属性。  
   
  结果如下：  
   
@@ -97,7 +97,7 @@ FOR XML EXPLICIT;
  </Parent>
  ```  
   
- 如果使用 *指令指定了*AttributeName`xmltext`，则 <`overflow`> 元素的属性将作为封闭的 <`Parent`> 元素的子元素属性添加。 为 *AttributeName* 指定的名称将成为子元素的名称。  
+ 如果使用 `xmltext` 指令指定了 *AttributeName*，则 <`overflow`> 元素的属性将作为封闭的 <`Parent`> 元素的子元素属性添加。 为 *AttributeName* 指定的名称将成为子元素的名称。  
   
  在此查询中，将 *AttributeName* <`overflow`> 与 `xmltext` 指令一起指定 *：*  
   

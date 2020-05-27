@@ -60,7 +60,7 @@ GRANT permission [ ,...n ]
  ON SYMMETRIC KEY ::asymmetric_key_name   
  指定要对其授予权限的对称密钥。 需要作用域限定符 ::。  
   
- TO \<database_principal  >  
+ TO \<database_principal>  
  指定要向其授予权限的主体。  
   
  WITH GRANT OPTION  

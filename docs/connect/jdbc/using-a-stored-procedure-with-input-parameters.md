@@ -23,7 +23,7 @@ ms.locfileid: "69026897"
 
 可以调用包含一个或多个 IN 参数的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程，这些参数可用于向存储过程传递数据。 可以使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供的 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 类，调用此类存储过程并处理其返回的数据。
 
-使用 JDBC 驱动程序调用带 IN 参数的存储过程时，必须结合 `call`SQLServerConnection[ 类的 ](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)prepareCall[ 方法使用 ](../../connect/jdbc/reference/sqlserverconnection-class.md) SQL 转义序列。 带有 IN 参数的 `call` 转义序列的语法如下所示：
+使用 JDBC 驱动程序调用带 IN 参数的存储过程时，必须结合 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 方法使用 `call` SQL 转义序列。 带有 IN 参数的 `call` 转义序列的语法如下所示：
 
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 

@@ -57,7 +57,7 @@ DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
   
 ## <a name="arguments"></a>参数
  *IF EXISTS*    
- 只有在函数已存在时才对其进行有条件地删除。 在 [!INCLUDE[ssnoversion_md](../../includes/ssnoversion-md.md)] 中以及从 [!INCLUDE[sssds_md](../../includes/sssds-md.md)] 2016 开始可用。
+ 只有在函数已存在时才对其进行有条件地删除。 在 [!INCLUDE[sssds_md](../../includes/sssds-md.md)] 中以及从 [!INCLUDE[ssnoversion_md](../../includes/ssnoversion-md.md)] 2016 开始可用。
   
  *schema_name*  
  用户定义函数所属的架构的名称。  
@@ -76,7 +76,7 @@ DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
 ## <a name="examples"></a>示例  
   
 ### <a name="a-dropping-a-function"></a>A. 删除函数  
- 以下示例从 `fn_SalesByStore` 示例数据库的 `Sales` 架构中删除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 用户定义函数。 若要创建此函数，请参阅 [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md) 中的示例 B。  
+ 以下示例从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 示例数据库的 `Sales` 架构中删除 `fn_SalesByStore` 用户定义函数。 若要创建此函数，请参阅 [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md) 中的示例 B。  
   
 ```  
 DROP FUNCTION Sales.fn_SalesByStore;  

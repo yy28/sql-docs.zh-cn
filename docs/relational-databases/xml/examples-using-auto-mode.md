@@ -137,7 +137,7 @@ FOR XML AUTO;
 <SOH Name="Eugene Huang" SalesOrderID="43767" />  
 ```  
   
- 若要检索具有 `IndividualCustomer` 属性（包含销售订单表头信息，并将每条信息作为一个子元素）的 <`Name`> 元素，应使用嵌套的 SELECT 子句重写查询。 内部 SELECT 子句创建临时的 `IndividualCustomer` 表，此表具有计算列，其中包含各个客户的名称。 然后，此表与 `SalesOrderHeader` 表联接以获得结果。  
+ 若要检索具有 `Name` 属性（包含销售订单表头信息，并将每条信息作为一个子元素）的 <`IndividualCustomer`> 元素，应使用嵌套的 SELECT 子句重写查询。 内部 SELECT 子句创建临时的 `IndividualCustomer` 表，此表具有计算列，其中包含各个客户的名称。 然后，此表与 `SalesOrderHeader` 表联接以获得结果。  
   
  请注意， `Sales.Customer` 表存储有单个客户信息，其中包括该客户的 `PersonID` 值。 然后，此 `PersonID` 用于从 `Person.Person` 表中查找联系人姓名。  
   
@@ -266,7 +266,7 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
   
 -   通过使用相应的 Unicode 字符的十六进制值，对查询结果中返回的元素名及属性名中的特殊 XML 和 URL 字符进行编码。 在上面的结果中，元素名 <`Special Chars`> 作为 <`Special_x0020_Chars`> 返回。 属性名称 <`Col#&2`> 作为 <`Col_x0023__x0026_2`> 返回。 XML 和 URL 特殊字符都进行了编码。  
   
--   如果元素值或属性值包含 5 个标准 XML 字符实体（'、""、\<、> 和 &）中的任何一个，将始终使用 XML 字符编码对这些特殊 XML 字符进行编码。 在上面的结果中，属性 <`&`> 的值中的 `Col1` 值被编码为 `&`。 但是，# 字符仍保留为 #，因为它是有效的 XML 字符，而不是特殊的 XML 字符。  
+-   如果元素值或属性值包含 5 个标准 XML 字符实体（'、""、\<、> 和 &）中的任何一个，将始终使用 XML 字符编码对这些特殊 XML 字符进行编码。 在上面的结果中，属性 <`Col1`> 的值中的 `&` 值被编码为 `&`。 但是，# 字符仍保留为 #，因为它是有效的 XML 字符，而不是特殊的 XML 字符。  
   
 -   如果元素值或属性值包含 URL 中有特殊意义的任何特殊 URL 字符，则只能在 DBOBJECT URL 值中对它们进行编码，而且只有当该特殊字符是表名或列名的一部分时，才会对它们进行编码。 在结果中，作为表名 `#` 的一部分的字符 `Col#&2` 被编码为 `_x0023_ in the DBOJBECT URL`。  
   

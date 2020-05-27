@@ -54,7 +54,7 @@ FOR(
   
  **示例**  
   
- 下面的示例说明 ALTER INDEX 语句。 该语句将路径 `'/a/b/m'` 添加到索引的 XQuery 部分，并且从在 `'/a/b/e'`CREATE SELECTIVE XML INDEX (Transact-SQL)[ 主题的示例中创建的索引的 SQL 部分删除路径 ](../../t-sql/statements/create-selective-xml-index-transact-sql.md)。 要删除的路径由在创建时提供给它的名称标识。  
+ 下面的示例说明 ALTER INDEX 语句。 该语句将路径 `'/a/b/m'` 添加到索引的 XQuery 部分，并且从在 [CREATE SELECTIVE XML INDEX (Transact-SQL)](../../t-sql/statements/create-selective-xml-index-transact-sql.md) 主题的示例中创建的索引的 SQL 部分删除路径 `'/a/b/e'`。 要删除的路径由在创建时提供给它的名称标识。  
   
 ```sql  
 ALTER INDEX sxi_index  

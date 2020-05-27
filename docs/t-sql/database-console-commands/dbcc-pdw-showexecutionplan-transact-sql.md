@@ -22,7 +22,7 @@ ms.locfileid: "68809838"
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-显示在特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 计算节点或控制节点上运行的查询的 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 执行计划。 在计算节点和控制节点上运行查询时，使用它来解决查询性能问题。
+显示在特定 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 计算节点或控制节点上运行的查询的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行计划。 在计算节点和控制节点上运行查询时，使用它来解决查询性能问题。
   
 了解在计算节点上运行的 SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询的查询性能问题后，可通过几种方法来提高性能。 可提高计算节点上查询性能的方法包括创建多列统计信息、创建非聚集索引或使用查询提示。
   

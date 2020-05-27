@@ -48,7 +48,7 @@ public java.sql.Savepoint setSavepoint(java.lang.String sName)
 ## <a name="remarks"></a>备注  
  此 setSavePoint 方法是由 java.sql.Connection 接口中的 setSavePoint 方法指定的。  
   
- *会自动转义 sName*[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 参数。  
+ [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 会自动转义 sName 参数。  
   
 ## <a name="see-also"></a>另请参阅  
  [setSavepoint 方法 &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md)   

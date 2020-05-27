@@ -25,7 +25,7 @@ ms.locfileid: "69026267"
 
 如果 execute 方法返回 true，则运行的语句已返回了一个或多个结果集  。 通过调用 getResultSet 方法可以访问第一个结果集。 若要确定是否提供了多个结果集，可以调用 [getMoreResults](../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md) 方法，如果提供了多个结果集，则该方法返回布尔值 true   。 如果有多个结果集可用，则可以再次调用 getResultSet 方法进行访问，继续使用这个过程直到所有的结果集都得到处理。 如果 getMoreResults 方法返回 false  ，则没有多个结果集要处理。
 
-如果 execute 方法返回 false，则所运行的语句返回了更新计数值，可以通过调用 [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) 方法检索此值  。
+如果 execute 方法返回 false，则所运行的语句返回了更新计数值，可以通过调用 [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) 方法检索此值。
 
 > [!NOTE]  
 > 有关更新计数的详细信息，请参阅[使用带有更新计数的存储过程](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)。

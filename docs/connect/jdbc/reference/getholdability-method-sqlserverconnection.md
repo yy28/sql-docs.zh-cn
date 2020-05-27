@@ -25,7 +25,7 @@ ms.locfileid: "67982928"
 # <a name="getholdability-method-sqlserverconnection"></a>getHoldability 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索使用此 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象创建的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象的当前可保持性。  
+  检索使用此 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象创建的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前可保持性。  
   
 ## <a name="syntax"></a>语法  
   

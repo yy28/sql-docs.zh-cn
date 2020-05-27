@@ -54,7 +54,7 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  permission   
  指定可对类型拒绝的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- ON TYPE :: [ schema_name.    ] type_name   
+ ON TYPE :: [ schema_name.  ] type_name   
  指定要对其拒绝权限的类型。 需要使用作用域限定符 (::)  。 如果未指定 schema_name，则使用默认架构  。 如果指定了 schema_name，则需要使用架构作用域限定符 (.)   。  
   
  TO \<database_principal>  

@@ -55,7 +55,7 @@ FOR SERVER AUDIT audit_name
  audit_action_group_name   
  服务器级别可审核操作组的名称。 要获取审核操作组列表，请参阅 [SQL Server 审核操作组和操作](../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)。  
   
- WITH ( STATE  **{ ON | OFF } )** **=**   
+ WITH ( STATE = { ON | OFF } )    
  允许或禁止审核收集此审核规范的记录。  
   
 ## <a name="remarks"></a>备注  

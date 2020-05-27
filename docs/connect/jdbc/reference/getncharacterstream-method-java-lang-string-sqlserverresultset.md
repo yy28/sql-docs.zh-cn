@@ -43,7 +43,7 @@ public java.io.Reader getNCharacterStream(java.lang.String columnLabel)
 ## <a name="remarks"></a>备注  
  此 getNCharacterStream 方法是由 java.sql.ResultSet 接口中的 getNCharacterStream 方法指定的。  
   
- 此方法可用于检索 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中 nvarchar  、nchar  、nvarchar(max)  、ntext  或 xml  列的值。 如果尝试使用此方法检索其他数据类型的值，则会引发异常。  
+ 此方法可用于检索 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中 nvarchar、nchar、nvarchar(max)、ntext 或 xml 列的值。 如果尝试使用此方法检索其他数据类型的值，则会引发异常。  
   
 ## <a name="see-also"></a>另请参阅  
  [getNCharacterStream 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getncharacterstream-method-sqlserverresultset.md)   

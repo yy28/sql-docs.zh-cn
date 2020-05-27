@@ -40,7 +40,7 @@ ms.locfileid: "69028462"
 
 ## <a name="example"></a>示例
 
-在下面的示例中，示例代码将建立与 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 数据库的连接，然后从 DataTypesTable 测试表中检索一行数据。 然后，将调用自定义的 displayRow 方法，以使用 \<SQLServerResultSet[ 类的各种 get](../../connect/jdbc/reference/sqlserverresultset-class.md)Type> 方法来显示结果集中的所有数据。
+在下面的示例中，示例代码将建立与 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 数据库的连接，然后从 DataTypesTable 测试表中检索一行数据。 然后，将调用自定义的 displayRow 方法，以使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 类的各种 get\<Type> 方法来显示结果集中的所有数据。
 
 接下来，示例代码使用 SQLServerResultSet 类的各种 update\<Type> 方法来更新结果集中的数据，然后调用 [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 方法将输入更新到数据库中。
 

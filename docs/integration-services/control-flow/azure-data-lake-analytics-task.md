@@ -83,7 +83,7 @@ SourceType  指定的是 U-SQL 脚本源。 脚本在 SSIS 包执行期间提交
 
 ## <a name="parameter-mapping-page-configuration"></a>“参数映射”页配置
 
-在“Azure Data Lake Analytics 任务编辑器”  对话框的“参数映射”  页中，可以将变量映射到 U-SQL 脚本中的参数（U-SQL 变量）。
+在“Azure Data Lake Analytics 任务编辑器”对话框的“参数映射”页中，可以将变量映射到 U-SQL 脚本中的参数（U-SQL 变量）。
 
 - **变量名：** 通过选择“添加”  添加参数映射后，从列表中选择系统变量或用户定义的变量。 也可以选择“<新建变量...>”  ，以通过“添加变量”  对话框来添加新变量。 若要了解相关信息，请参阅 [Integration Services &#40;SSIS&#41; 变量](../../integration-services/integration-services-ssis-variables.md)。  
 
@@ -119,7 +119,7 @@ OUTPUT @rs1
       USING Outputters.Tsv(quoting:false, dateTimeFormat:null);
 ```
 
-请注意，输入和输出路径是在 **in\@** 和 **out\@** 参数中进行定义。 U-SQL 脚本中的 **in\@** 和 **out\@** 参数值是通过“参数映射”配置动态传递。
+请注意，输入和输出路径是在 \@in 和 \@out 参数中进行定义。 U-SQL 脚本中的 \@in 和 \@out 参数值是通过“参数映射”配置动态传递。
 
 |变量名称|参数名称|
 |-------------|--------------|

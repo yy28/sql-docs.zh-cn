@@ -28,7 +28,7 @@ Microsoft SQL Server 2012 中引入了序列。 序列是一种用户定义的�
   
 ### <a name="to-add-a-new-sequence-object-to-your-project"></a>向您的项目添加一个新的序列对象  
   
-1.  在“解决方案资源管理器”  中，右键单击“TradeDev”  数据库项目，选择“添加”  ，然后选择“新项”  。  
+1.  在“解决方案资源管理器”中，右键单击“TradeDev”数据库项目，选择“添加”，然后选择“新项”。  
   
 2.  在左窗格上单击“可编程性”  ，然后选择“序列”  。 单击“添加”  ，将新对象添加到项目中。  
   
@@ -44,7 +44,7 @@ Microsoft SQL Server 2012 中引入了序列。 序列是一种用户定义的�
     CACHE 10  
     ```  
   
-4.  如果项目的目标平台未设置为 Microsoft SQL Server 2012，则“错误列表”将显示  **语句的语法错误**`CREATE SEQUENCE`。 若要更正此问题，请按照[如何：更改目标平台和发布数据库项目](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)主题所述相应地更改目标平台。  
+4.  如果项目的目标平台未设置为 Microsoft SQL Server 2012，则“错误列表”将显示 `CREATE SEQUENCE` 语句的语法错误。 若要更正此问题，请按照[如何：更改目标平台和发布数据库项目](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)主题所述相应地更改目标平台。  
   
 5.  请按照[如何：更改目标平台和发布数据库项目](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)主题所述，将项目发布到已连接的 Microsoft SQL Server 2012 服务器中的数据库。  
   

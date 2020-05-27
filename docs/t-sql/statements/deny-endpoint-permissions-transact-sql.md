@@ -51,7 +51,7 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  permission   
  指定可对端点拒绝的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- ON ENDPOINT ::endpoint_name    
+ ON ENDPOINT ::endpoint_name  
  指定要对其拒绝权限的端点。 需要使用作用域限定符 (::)  。  
   
  TO \<server_principal>  
@@ -96,7 +96,7 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ## <a name="examples"></a>示例  
   
 ### <a name="a-denying-view-definition-permission-on-an-endpoint"></a>A. 拒绝对端点的 VIEW DEFINITION 权限  
- 以下示例拒绝 `VIEW DEFINITION` 登录名 `Mirror7` 对终结点 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `ZArifin` 权限。  
+ 以下示例拒绝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `ZArifin` 对终结点 `Mirror7` 的 `VIEW DEFINITION` 权限。  
   
 ```  
 USE master;  
@@ -105,7 +105,7 @@ GO
 ```  
   
 ### <a name="b-denying-take-ownership-permission-with-cascade-option"></a>B. 使用 CASCADE 选项拒绝 TAKE OWNERSHIP 权限  
- 以下示例拒绝 `TAKE OWNERSHIP` 用户 `Shipping83` 以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 授予 `PKomosinski` 权限的主体对端点 `PKomosinski` 的 `TAKE OWNERSHIP` 权限。  
+ 以下示例拒绝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户 `TAKE OWNERSHIP` 以及 `Shipping83` 授予 `PKomosinski` 权限的主体对端点 `PKomosinski` 的 `TAKE OWNERSHIP` 权限。  
   
 ```  
 USE master;  

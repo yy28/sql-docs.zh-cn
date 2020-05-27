@@ -29,7 +29,7 @@ ms.locfileid: "68026450"
 # <a name="cume_dist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此函数会计算某个值在某个值组内的累积分布。 换言之，`CUME_DIST` 计算某指定值在一组值中的相对位置。 假定采用升序，行 `CUME_DIST`r_中_ 的值定义为低于或等于行 _r_ 的值的行数除以在分区或查询结果集中求出的行数。 `CUME_DIST` 类似于 `PERCENT_RANK` 函数。
+对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此函数会计算某个值在某个值组内的累积分布。 换言之，`CUME_DIST` 计算某指定值在一组值中的相对位置。 假定采用升序，行 _r_ 中 `CUME_DIST` 的值定义为低于或等于行 _r_ 的值的行数除以在分区或查询结果集中求出的行数。 `CUME_DIST` 类似于 `PERCENT_RANK` 函数。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   

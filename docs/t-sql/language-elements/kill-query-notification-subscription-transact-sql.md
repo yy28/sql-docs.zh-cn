@@ -54,7 +54,7 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
 ## <a name="remarks"></a>备注  
  KILL QUERY NOTIFICATION SUBSCRIPTION 语句删除查询通知订阅，而不生成通知消息。  
   
- subscription_id 是动态管理视图 [sys.dm_qn_subscriptions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md) 中显示的订阅 ID  。  
+ subscription_id 是动态管理视图 [sys.dm_qn_subscriptions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md) 中显示的订阅 ID。  
   
  如果指定的订阅 ID 不存在，该语句将生成错误。  
   

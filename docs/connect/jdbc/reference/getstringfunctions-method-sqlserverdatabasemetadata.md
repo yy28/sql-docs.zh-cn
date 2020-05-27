@@ -35,7 +35,7 @@ public java.lang.String getStringFunctions()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 一个包含字符串  函数的字符串  。  
+ 一个包含字符串函数的字符串。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

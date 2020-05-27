@@ -47,7 +47,7 @@ sqlsrv_next_result( resource $stmt )
 如果下一个结果成功进入活动状态，将返回布尔值 **true** 。 如果在使下一个结果处于活动状态时发生错误，将返回 **false** 。 如果没有更多可用结果，将返回 **NULL** 。  
   
 ## <a name="example"></a>示例  
-以下示例创建和执行将产品评论插入 *Production.ProductReview* 表的存储过程，然后选择指定产品的所有评论。 执行存储过程后，无需调用 sqlsrv_next_result 即可使用第一个结果（存储过程中受 INSERT 查询影响的行数）  。 通过调用 sqlsrv_next_result 可获取下一个结果（存储过程中 SELECT 查询返回的行），并可通过 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) 使用该结果  。  
+以下示例创建和执行将产品评论插入 *Production.ProductReview* 表的存储过程，然后选择指定产品的所有评论。 执行存储过程后，无需调用 sqlsrv_next_result 即可使用第一个结果（存储过程中受 INSERT 查询影响的行数）  。 通过调用 sqlsrv_next_result 可获取下一个结果（存储过程中 SELECT 查询返回的行），并可通过 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) 使用该结果。  
   
 > [!NOTE]  
 > 建议使用规范语法来调用存储过程。 有关规范语法的详细信息，请参阅[调用存储过程](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)。  

@@ -52,7 +52,7 @@ MIN_ACTIVE_ROWVERSION
  MIN_ACTIVE_ROWVERSION 函数不受事务隔离级别中的更改影响。  
   
 ## <a name="examples"></a>示例  
- 下例使用 **和** 返回 rowversion 值`MIN_ACTIVE_ROWVERSION``@@DBTS`。 请注意，当数据库中没有活动事务时，值会有所不同。  
+ 下例使用 `MIN_ACTIVE_ROWVERSION` 和 `@@DBTS` 返回 rowversion 值。 请注意，当数据库中没有活动事务时，值会有所不同。  
   
 ```  
 -- Create a table that has a ROWVERSION column in it.  

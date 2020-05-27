@@ -36,7 +36,7 @@ ms.locfileid: "67948103"
   允许对现有的 text、ntext 或 image 列执行最小日志记录的交互式更新    。 WRITETEXT 将覆盖受其影响的列中的所有现有数据。 WRITETEXT 语句不能用于视图中的 text、ntext 或 image 列    。  
   
 > [!IMPORTANT]
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]请改用大值数据类型和 [UPDATE](../../t-sql/queries/update-transact-sql.md) 语句的 .WRITE 子句  。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]请改用大值数据类型和 [UPDATE](../../t-sql/queries/update-transact-sql.md) 语句的 .WRITE 子句。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,7 +60,7 @@ WRITETEXT [BULK]
  要更新的表以及 text、ntext 或 image 列的名称    。 表名和列名必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 可以选择是否指定数据库名和所有者名。  
   
  text_ptr   
- 存储指向 text、ntext 或 image 数据的指针的值    。 text_ptr 必须是 binary(16)。若要创建文本指针，请对非 NULL 值的 text、ntext 或 image 列数据执行 [INSERT](../../t-sql/statements/insert-transact-sql.md) 或 [UPDATE](../../t-sql/queries/update-transact-sql.md) 语句      。  
+ 存储指向 text、ntext 或 image 数据的指针的值    。 text_ptr 必须是 binary(16)。若要创建文本指针，请对非 NULL 值的 text、ntext 或 image 列数据执行 [INSERT](../../t-sql/statements/insert-transact-sql.md) 或 [UPDATE](../../t-sql/queries/update-transact-sql.md) 语句   。  
   
  WITH LOG  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 忽略此参数。 日志记录由数据库的当前恢复模式决定。  

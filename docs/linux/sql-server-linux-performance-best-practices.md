@@ -31,7 +31,7 @@ ms.locfileid: "79286841"
 
 - **对节点和/或 Cpu 使用 PROCESS AFFINITY**
 
-   对于所有用于 Linux 操作系统上的 SQL Server 的 NUMANODE`ALTER SERVER CONFIGURATION``PROCESS AFFINITY` 和/或 CPU（通常是所有节点和 CPU），建议使用 **设置**。 处理器关联有助于保持高效的 Linux 和 SQL 计划行为。 使用 NUMANODE  选项是最简单的方法。 请注意，即使你的计算机上只有一个 NUMA 节点，也应该使用 PROCESS AFFINITY  。  有关如何设置 [PROCESS AFFINITY](../t-sql/statements/alter-server-configuration-transact-sql.md) 的详细信息，请参阅**更改服务器配置**文档。
+   对于所有用于 Linux 操作系统上的 SQL Server 的 NUMANODE 和/或 CPU（通常是所有节点和 CPU），建议使用 `ALTER SERVER CONFIGURATION` 设置 `PROCESS AFFINITY`。 处理器关联有助于保持高效的 Linux 和 SQL 计划行为。 使用 NUMANODE  选项是最简单的方法。 请注意，即使你的计算机上只有一个 NUMA 节点，也应该使用 PROCESS AFFINITY  。  有关如何设置 **PROCESS AFFINITY** 的详细信息，请参阅[更改服务器配置](../t-sql/statements/alter-server-configuration-transact-sql.md)文档。
 
 - **配置多个 tempdb 数据文件**
 

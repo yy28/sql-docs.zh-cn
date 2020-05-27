@@ -60,7 +60,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
 |列名称|说明|  
 |-----------------|-----------------|  
-|**StmtText**|对于不是 PLAN_ROW 类型的行，该列包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的文本。 对于 PLAN_ROW 类型的行，此列包含对操作的说明。 此列包含物理运算符，也可以选择包含逻辑运算符。 该列的后面还可以跟有由物理运算符决定的说明。 有关物理运算符的详细信息，请参阅 [SET SHOWPLAN_ALL (Transact-SQL)](../../t-sql/statements/set-showplan-all-transact-sql.md) 中的 Argument 列  。|  
+|**StmtText**|对于不是 PLAN_ROW 类型的行，该列包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的文本。 对于 PLAN_ROW 类型的行，此列包含对操作的说明。 此列包含物理运算符，也可以选择包含逻辑运算符。 该列的后面还可以跟有由物理运算符决定的说明。 有关物理运算符的详细信息，请参阅 [SET SHOWPLAN_ALL (Transact-SQL)](../../t-sql/statements/set-showplan-all-transact-sql.md) 中的 Argument 列。|  
   
  有关可以在显示计划输出中看到的物理和逻辑运算符的详细信息，请参阅[显示计划逻辑运算符和物理运算符参考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  
   
@@ -73,7 +73,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
 -   对包含 Transact-SQL 语句所引用的对象（如表、视图等）的所有数据库拥有 SHOWPLAN 权限。  
   
- 对于其他所有语句，如 DDL、USE database_name、SET、DECLARE、动态 SQL 等，只需要具有执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的相应权限  。  
+ 对于其他所有语句，如 DDL、USE database_name、SET、DECLARE、动态 SQL 等，只需要具有执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的相应权限。  
   
 ## <a name="examples"></a>示例  
  此例显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在处理语句时如何使用索引。  

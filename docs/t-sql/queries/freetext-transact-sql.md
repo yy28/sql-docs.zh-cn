@@ -42,7 +42,7 @@ ms.locfileid: "67902105"
 > [!NOTE]  
 >  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的全文搜索形式的信息，请参阅[使用全文搜索查询](../../relational-databases/search/query-with-full-text-search.md)。  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）  。
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,7 +67,7 @@ FREETEXT ( { column_name | (column_list) | * }
  *freetext_string*  
  要在 column_name 中搜索的文本  。 可以输入任何文本，包括单词、短语或句子。 只要在全文索引中找到任何术语或术语格式，就会生成匹配项。  
   
- 与 AND 作为关键字的 CONTAINS 和 CONTAINSTABLE 搜索条件不同，当在 freetext_string 中使用单词“and”时，会将它视为干扰词或[非索引字](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)，因此会丢弃它  。  
+ 与 AND 作为关键字的 CONTAINS 和 CONTAINSTABLE 搜索条件不同，当在 freetext_string 中使用单词“and”时，会将它视为干扰词或[非索引字](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)，因此会丢弃它。  
   
  不允许使用 WEIGHT、FORMSOF、通配符、NEAR 和其他语法。 系统将通过同义词库对 freetext_string 进行断字处理、词干分析，然后执行同义词库查询  。  
   
@@ -106,7 +106,7 @@ WHERE FREETEXT(Description, @SearchWord);
   
  如果将不同语言的文档一起作为二进制大型对象 (BLOB) 存储在单个列中，则指定文档的区域设置标识符 (LCID) 将决定对其内容编制索引时使用哪种语言。 在对这种列进行查询时，指定 LANGUAGE language_term 可增大找到有效匹配项的可能性  。  
   
- 如果指定为字符串，language_term 将对应于 [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 兼容性视图中的 alias 列值   。  字符串必须用单引号引起来，如 'language_term'  。 如果指定为整数，则 language_term 就是标识该语言的实际 LCID  。 如果指定为十六进制值，则 language_term 将以 0x 开头，后跟 LCID 的十六进制值  。 十六进制值不能超过八位（包括前导零在内）。  
+ 如果指定为字符串，language_term 将对应于 [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 兼容性视图中的 alias 列值。  字符串必须用单引号引起来，如 'language_term'  。 如果指定为整数，则 language_term 就是标识该语言的实际 LCID  。 如果指定为十六进制值，则 language_term 将以 0x 开头，后跟 LCID 的十六进制值  。 十六进制值不能超过八位（包括前导零在内）。  
   
  如果该值是双字节字符集 (DBCS) 格式，则 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将其转换为 Unicode 格式。  
   

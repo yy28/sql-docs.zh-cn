@@ -25,7 +25,7 @@ ms.locfileid: "67981854"
 # <a name="getmetadata-method-sqlserverpreparedstatement"></a>getMetaData 方法 (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索一个 [SQLServerResultSetMetaData Class](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) 对象，该对象包含有关执行此 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象时将返回的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 对象的列信息。  
+  检索一个 [SQLServerResultSetMetaData Class](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) 对象，该对象包含有关执行此 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 对象时将返回的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的列信息。  
   
 ## <a name="syntax"></a>语法  
   

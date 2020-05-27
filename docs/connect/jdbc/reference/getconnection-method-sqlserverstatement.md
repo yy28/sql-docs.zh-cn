@@ -25,7 +25,7 @@ ms.locfileid: "67952687"
 # <a name="getconnection-method-sqlserverstatement"></a>getConnection 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索生成此 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象的 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象。  
+  检索生成此 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象的 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象。  
   
 ## <a name="syntax"></a>语法  
   

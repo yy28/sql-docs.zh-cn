@@ -27,7 +27,7 @@ ms.locfileid: "66499995"
   
 -   对报表生成器的访问权限。 可以在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 报表服务器上或 SharePoint 集成模式下的 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 报表服务器上运行报表生成器。 在其他服务器上只有第一步不同，即如何打开报表生成器。  
   
-    在报表服务器上，选择“新建” **“分页报表”**  >   。
+    在报表服务器上，选择“新建” > “分页报表” 。
   
     在 SharePoint 集成模式下的报表服务器上，在“文档”选项卡上选择“新建文档”，然后从下拉列表中，选择“报表生成器报表”    。 例如，`https://<servername>/sites/mySite/reports` 。 SharePoint 管理员必须为每个文档库启用“报表生成器报表”功能。  
   

@@ -103,7 +103,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
 GO  
 ```  
   
- 当名字中包含的字符数小于 20 时，char 变量 (`FindEmployee`) 将包含尾随空格，这导致  **过程中没有行返回**`@EmpLName`。 由于 `LastName` 列为 varchar 类型，因此没有尾随空格  。 因为尾随空格是有意义的，所以此过程失败。  
+ 当名字中包含的字符数小于 20 时，char 变量 (`@EmpLName`) 将包含尾随空格，这导致 `FindEmployee` 过程中没有行返回。 由于 `LastName` 列为 varchar 类型，因此没有尾随空格  。 因为尾随空格是有意义的，所以此过程失败。  
   
  但以下示例会成功，因为没有向 varchar  变量中添加尾随空格。  
   
@@ -268,7 +268,7 @@ Gail                  Westover             305-555-0100
 ```
 
 ### <a name="c-using-the-escape-clause"></a>C. 使用 ESCAPE 子句  
- 以下示例使用 `ESCAPE` 子句和转义符在 `10-15%` 表的列 `c1` 中查找精确字符串 `mytbl2`。  
+ 以下示例使用 `ESCAPE` 子句和转义符在 `mytbl2` 表的列 `c1` 中查找精确字符串 `10-15%`。  
   
 ```sql
 USE tempdb;  
@@ -343,7 +343,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="g-using-like-with-the-_-wildcard-character"></a>G. 使用带 _ 通配符的 LIKE  
- 以下示例在 `6` 表中查找区号以 `2` 开头、以 `DimEmployee` 结尾的所有电话号码。 搜索模式的末尾包含 % 通配符，用于匹配电话列值中的所有后续字符。  
+ 以下示例在 `DimEmployee` 表中查找区号以 `6` 开头、以 `2` 结尾的所有电话号码。 搜索模式的末尾包含 % 通配符，用于匹配电话列值中的所有后续字符。  
   
 ```sql  
 -- Uses AdventureWorks  

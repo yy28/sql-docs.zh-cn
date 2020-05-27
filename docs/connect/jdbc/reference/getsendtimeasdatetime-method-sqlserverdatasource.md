@@ -35,7 +35,7 @@ public boolean getSendTimeAsDatetime();
  如果 java.sql.Time 值将作为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime  类型发送到服务器，则为 true  。 如果 java.sql.Time 值将作为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] time  类型发送到服务器，则为 false  。  
   
 ## <a name="remarks"></a>备注  
- 有关 sendTimeAsDatetime  连接属性的详细信息，请参阅[设置连接属性](../../../connect/jdbc/setting-the-connection-properties.md)。  
+ 有关 sendTimeAsDatetime 连接属性的详细信息，请参阅[设置连接属性](../../../connect/jdbc/setting-the-connection-properties.md)。  
   
  [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md) 使你能够以编程方式设置“sendTimeAsDatetime”连接属性  。  
   

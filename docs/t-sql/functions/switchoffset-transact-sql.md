@@ -54,7 +54,7 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
  是一个格式为 [+|-]TZH:TZM 的字符串，或是一个表示时区偏移量的带符号的整数（分钟数），假定它能够感知夏时制并作出相应的调整。  
   
 ## <a name="return-type"></a>返回类型  
- 具有 DATETIMEOFFSET 参数小数精度的 datetimeoffset   。  
+ 具有 DATETIMEOFFSET 参数小数精度的 datetimeoffset。  
   
 ## <a name="remarks"></a>备注  
  使用 SWITCHOFFSET 可选择与最初存储的时区偏移量不同的时区偏移量的 datetimeoffset 值  。 SWITCHOFFSET 不会更新存储的 time_zone 值  。  

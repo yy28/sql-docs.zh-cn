@@ -60,7 +60,7 @@ SET REMOTE_PROC_TRANSACTIONS { ON | OFF }
   
  当 REMOTE_PROC_TRANSACTIONS 为 OFF 时，远程存储过程调用不能成为本地事务的一部分。 远程存储过程所做的修改将在存储过程完成时提交或回滚。 由调用远程存储过程的连接发出的后续 COMMIT TRANSACTION 或 ROLLBACK TRANSACTION 语句对该过程所做的处理无效。  
   
- REMOTE_PROC_TRANSACTIONS 选项是一个兼容性选项，只影响对使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_addserver**定义为远程服务器的** 实例所进行的远程存储过程调用。 该选项不适用于在使用 **sp_addlinkedserver** 定义为链接服务器的实例上执行存储过程的分布式查询。  
+ REMOTE_PROC_TRANSACTIONS 选项是一个兼容性选项，只影响对使用 **sp_addserver** 定义为远程服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例所进行的远程存储过程调用。 该选项不适用于在使用 **sp_addlinkedserver** 定义为链接服务器的实例上执行存储过程的分布式查询。  
   
  SET REMOTE_PROC_TRANSACTIONS 的设置是在执行或运行时设置，而不是在分析时设置。  
   

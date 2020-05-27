@@ -38,7 +38,7 @@ public javax.naming.Reference getReference()
  Reference 对象。  
   
 ## <a name="remarks"></a>备注  
- 此 getReference 方法是由 javax.naming.Referenceable 接口中的 getReference 方法指定的。 此方法覆盖 [SQLServerDataSource](../../../connect/jdbc/reference/getreference-method-sqlserverdatasource.md) 类的 [getReference](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 方法。  
+ 此 getReference 方法是由 javax.naming.Referenceable 接口中的 getReference 方法指定的。 此方法覆盖 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 类的 [getReference](../../../connect/jdbc/reference/getreference-method-sqlserverdatasource.md) 方法。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerConnectionPoolDataSource 方法](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-methods.md)   

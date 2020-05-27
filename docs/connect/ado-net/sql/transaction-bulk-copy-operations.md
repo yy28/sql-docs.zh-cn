@@ -25,7 +25,7 @@ ms.locfileid: "78896006"
 
 大容量复制操作可以作为独立操作或作为多步事务的一部分执行。 后面这个选项使你能够在同一事务中执行多个大容量复制操作，以及执行其他数据库操作（例如插入、更新和删除），同时仍能够提交或回滚整个事务。  
   
-默认情况下，大容量复制操作作为独立的操作执行。 大容量复制操作以非事务方式执行，不可以对其进行回滚。 如果需要在出错时回滚全部大容量复制或它的一部分，可以使用 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 托管的事务，在现有事务中执行大容量复制操作，或者在 System.Transactions **中登记它**<xref:System.Transactions.Transaction>。  
+默认情况下，大容量复制操作作为独立的操作执行。 大容量复制操作以非事务方式执行，不可以对其进行回滚。 如果需要在出错时回滚全部大容量复制或它的一部分，可以使用 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 托管的事务，在现有事务中执行大容量复制操作，或者在 System.Transactions<xref:System.Transactions.Transaction> 中登记它。  
   
 ## <a name="performing-a-non-transacted-bulk-copy-operation"></a>执行非事务大容量复制操作  
 下面的控制台应用程序演示了非事务大容量复制操作在操作中途遇到错误时将发生什么情况。  
@@ -42,7 +42,7 @@ ms.locfileid: "78896006"
 ## <a name="performing-a-dedicated-bulk-copy-operation-in-a-transaction"></a>在事务中执行专用的大容量复制操作  
 默认情况下，大容量复制操作是其自己的事务。 在你要执行专用的大容量复制操作时，使用连接字符串创建 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 的新实例，或者在没有活动事务的情况下使用现有 <xref:Microsoft.Data.SqlClient.SqlConnection> 对象。 在每个方案中，将创建大容量复制操作，然后提交或回滚该事务。  
   
-可以在 <xref:Microsoft.Data.SqlClient.SqlBulkCopyOptions.UseInternalTransaction> 类构造函数中显式指定 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 选项，使大容量复制操作在其自己的事务中以显式方式执行，从而导致每批大容量复制操作在单独的事务中执行。  
+可以在 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 类构造函数中显式指定 <xref:Microsoft.Data.SqlClient.SqlBulkCopyOptions.UseInternalTransaction> 选项，使大容量复制操作在其自己的事务中以显式方式执行，从而导致每批大容量复制操作在单独的事务中执行。  
   
 > [!NOTE]
 >  因为不同批在不同的事务中执行，因此如果在大容量复制操作期间出现错误，将回滚当前批中的所有行，但之前批中的行将保留在数据库中。  
@@ -57,7 +57,7 @@ ms.locfileid: "78896006"
 ## <a name="using-existing-transactions"></a>使用现有事务  
 可以指定现有 <xref:Microsoft.Data.SqlClient.SqlTransaction> 对象作为 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 构造函数中的参数。 在这种情况下，大容量复制操作在现有事务中执行，并且不对事务状态进行任何更改（即，既不提交也不中止该事务）。 这允许应用程序将大容量复制操作包含在带有其他数据库操作的事务中。 不过，如果未指定 <xref:Microsoft.Data.SqlClient.SqlTransaction> 对象并传递空引用，且连接有活动事务，异常就会抛出。  
   
-如果由于出现错误而需要回滚整个大容量复制操作，或如果大容量复制应在可以回滚的较大进程中执行，你可以向 <xref:Microsoft.Data.SqlClient.SqlTransaction> 构造函数提供 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 对象。  
+如果由于出现错误而需要回滚整个大容量复制操作，或如果大容量复制应在可以回滚的较大进程中执行，你可以向 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 构造函数提供 <xref:Microsoft.Data.SqlClient.SqlTransaction> 对象。  
   
 下面的控制台应用程序与第一个（非事务）示例类似，但有一个例外：在此示例中，大容量复制操作包含在较大的外部事务中。 发生主键冲突错误时，将回滚整个事务，并且不会向目标表添加任何行。  
   

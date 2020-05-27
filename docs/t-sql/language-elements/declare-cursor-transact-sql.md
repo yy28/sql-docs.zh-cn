@@ -65,7 +65,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  定义一个游标，以创建将由该游标使用的数据的临时副本。 对游标的所有请求都从 tempdb 中的这一临时表中得到应答；因此，在对该游标进行提取操作时返回的数据中不反映对基表所做的修改，并且该游标不允许修改  。 使用 ISO 语法时，如果省略 `INSENSITIVE`，则已提交的（任何用户）对基础表的删除和更新则会反映在后面的提取操作中。  
   
  SCROLL  
- 指定所有的提取选项（`FIRST`、`LAST`、`PRIOR`、`NEXT`、`RELATIVE` 和 `ABSOLUTE`）均可用。 如果未在 ISO `SCROLL` 中指定 `DECLARE CURSOR`，则 `NEXT` 是唯一支持的提取选项。 如果还指定了 `SCROLL`，则无法指定 `FAST_FORWARD`。 如果未指定 `SCROLL`，则只有提取选项 `NEXT` 可用，且游标将变为 `FORWARD_ONLY`。
+ 指定所有的提取选项（`FIRST`、`LAST`、`PRIOR`、`NEXT`、`RELATIVE` 和 `ABSOLUTE`）均可用。 如果未在 ISO `DECLARE CURSOR` 中指定 `SCROLL`，则 `NEXT` 是唯一支持的提取选项。 如果还指定了 `FAST_FORWARD`，则无法指定 `SCROLL`。 如果未指定 `SCROLL`，则只有提取选项 `NEXT` 可用，且游标将变为 `FORWARD_ONLY`。
   
  select_statement   
  是定义游标结果集的标准 `SELECT` 语句。 在游标声明的 select_statement 中不允许使用关键字 `FOR BROWSE` 和 `INTO`  。  
@@ -73,7 +73,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  如果 select_statement 中的子句与所请求的游标类型的功能有冲突，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将游标隐式转换为其他类型  。  
   
  READ ONLY  
- 禁止通过该游标进行更新。 无法在 `WHERE CURRENT OF` 或 `UPDATE` 语句的 `DELETE` 子句中引用游标。 该选项优先于要更新的游标的默认功能。  
+ 禁止通过该游标进行更新。 无法在 `UPDATE` 或 `DELETE` 语句的 `WHERE CURRENT OF` 子句中引用游标。 该选项优先于要更新的游标的默认功能。  
   
  UPDATE [OF column_name [,...n]]     
  定义游标中可更新的列。 如果指定了 OF <column_name> [, <... n>]，则只允许修改所列出的列。 如果指定了 `UPDATE`，但未指定列的列表，则可以更新所有列。  
@@ -109,19 +109,19 @@ DYNAMIC
 定义一个游标，无论更改是发生于游标内部还是由游标外的其他用户执行，在你四处滚动游标并提取新纪录时，该游标均能反映对其结果集中的行所做的所有数据更改。 因此，所有用户做的全部 UPDATE、INSERT 和 DELETE 语句均通过游标可见。 行的数据值、顺序和成员身份在每次提取时都会更改。 动态游标不支持 `ABSOLUTE` 提取选项。 在游标外部所做的更新直到提交时才可见（除非将游标的事务隔离级别设为 `UNCOMMITTED`）。 例如，假设动态游标提取两行，然后另一个应用程序将更新这两行之一并删除另一行。 然后，如果动态游标提取这两行，它将找不到已删除的行，但会显示已更新行的新值。 
   
 FAST_FORWARD  
-指定已启用了性能优化的 `FORWARD_ONLY` 和 `READ_ONLY` 游标。 如果还指定了 `FAST_FORWARD` 或 `SCROLL`，则无法指定 `FOR_UPDATE`。 此类型的游标不允许从游标内修改数据。  
+指定已启用了性能优化的 `FORWARD_ONLY` 和 `READ_ONLY` 游标。 如果还指定了 `SCROLL` 或 `FOR_UPDATE`，则无法指定 `FAST_FORWARD`。 此类型的游标不允许从游标内修改数据。  
   
 > [!NOTE]  
-> 可以在相同的 `FAST_FORWARD` 语句中使用 `FORWARD_ONLY` 和 `DECLARE CURSOR`。  
+> 可以在相同的 `DECLARE CURSOR` 语句中使用 `FAST_FORWARD` 和 `FORWARD_ONLY`。  
   
 READ_ONLY  
-禁止通过该游标进行更新。 无法在 `WHERE CURRENT OF` 或 `UPDATE` 语句的 `DELETE` 子句中引用游标。 该选项优先于要更新的游标的默认功能。  
+禁止通过该游标进行更新。 无法在 `UPDATE` 或 `DELETE` 语句的 `WHERE CURRENT OF` 子句中引用游标。 该选项优先于要更新的游标的默认功能。  
   
 SCROLL_LOCKS  
-指定通过游标进行的定位更新或删除一定会成功。 将行读入游标时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将锁定这些行，以确保随后可对它们进行修改。 如果还指定了 `SCROLL_LOCKS` 或 `FAST_FORWARD`，则无法指定 `STATIC`。  
+指定通过游标进行的定位更新或删除一定会成功。 将行读入游标时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将锁定这些行，以确保随后可对它们进行修改。 如果还指定了 `FAST_FORWARD` 或 `STATIC`，则无法指定 `SCROLL_LOCKS`。  
   
 OPTIMISTIC  
-指定如果行自读入游标以来已得到更新，则通过游标进行的定位更新或定位删除不成功。 当将行读入游标时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不锁定行。 相反，它使用 timestamp 列值的比较，或者如果表没有 timestamp 列则使用校验和值，以确定将行读入游标后是否已修改该行   。 如果已修改该行，尝试进行的定位更新或定位删除将失败。 如果还指定了 `OPTIMISTIC`，则无法指定 `FAST_FORWARD`。  
+指定如果行自读入游标以来已得到更新，则通过游标进行的定位更新或定位删除不成功。 当将行读入游标时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不锁定行。 相反，它使用 timestamp 列值的比较，或者如果表没有 timestamp 列则使用校验和值，以确定将行读入游标后是否已修改该行   。 如果已修改该行，尝试进行的定位更新或定位删除将失败。 如果还指定了 `FAST_FORWARD`，则无法指定 `OPTIMISTIC`。  
   
  TYPE_WARNING  
  指定如果游标从所请求的类型隐式转换为另一种类型，则向客户端发送警告消息。  
@@ -130,7 +130,7 @@ OPTIMISTIC
  定义游标结果集的标准 SELECT 语句。 在游标声明的 select_statement 中不允许使用关键字 `COMPUTE`、`COMPUTE BY`、`FOR BROWSE` 和 `INTO`  。  
   
 > [!NOTE]  
-> 可以在游标声明中使用查询提示；但如果还使用 `FOR UPDATE OF` 子句，请在 `OPTION (<query_hint>)` 之后指定 `FOR UPDATE OF`。  
+> 可以在游标声明中使用查询提示；但如果还使用 `FOR UPDATE OF` 子句，请在 `FOR UPDATE OF` 之后指定 `OPTION (<query_hint>)`。  
   
 如果 select_statement 中的子句与所请求的游标类型的功能有冲突，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将游标隐式转换为其他类型  。 有关详细信息，请参阅“隐式游标转换”。  
   
@@ -142,9 +142,9 @@ FOR UPDATE [OF column_name [,...n]]
   
 `DECLARE CURSOR` 语句的第一种格式采用 ISO 语法来声明游标行为。 `DECLARE CURSOR` 的第二种格式使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 扩展插件，这些扩展插件允许使用在 ODBC 或 ADO 的数据库 API 游标函数中所使用的相同游标类型来定义游标。  
   
-不能混淆这两种格式。 如果在 `SCROLL` 关键字前指定 `INSENSITIVE` 或 `CURSOR` 关键字，则不能在 `CURSOR` 和 `FOR <select_statement>` 关键字之间使用任何关键字。 如果在 `CURSOR` 和 `FOR <select_statement>` 关键字之间指定了任何关键字，则无法在 `SCROLL` 关键字前指定 `INSENSITIVE` 或 `CURSOR`。  
+不能混淆这两种格式。 如果在 `CURSOR` 关键字前指定 `SCROLL` 或 `INSENSITIVE` 关键字，则不能在 `CURSOR` 和 `FOR <select_statement>` 关键字之间使用任何关键字。 如果在 `CURSOR` 和 `FOR <select_statement>` 关键字之间指定了任何关键字，则无法在 `CURSOR` 关键字前指定 `SCROLL` 或 `INSENSITIVE`。  
   
-如果使用 `DECLARE CURSOR` 语法的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 未指定 `READ_ONLY`、`OPTIMISTIC` 或 `SCROLL_LOCKS`，则默认值如下所示：  
+如果使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法的 `DECLARE CURSOR` 未指定 `READ_ONLY`、`OPTIMISTIC` 或 `SCROLL_LOCKS`，则默认值如下所示：  
   
 -   如果 `SELECT` 语句不支持更新（由于权限不够、访问的远程表不支持更新等等），则游标为 `READ_ONLY`。  
   

@@ -50,7 +50,7 @@ GET_FILESTREAM_TRANSACTION_CONTEXT ()
  调用 GET_FILESTREAM_TRANSACTION_CONTEXT 时，系统将在事务持续期间授予调用方对事务的文件系统访问权。 若要允许其他用户通过文件系统访问事务，则使用 EXECUTE AS 以其他用户身份运行 GET_FILESTREAM_TRANSACTION_CONTEXT。  
   
 ## <a name="examples"></a>示例  
- 下面的示例在 `GET_FILESTREAM_TRANSACTION_CONTEXT` 事务中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 获取事务上下文。  
+ 下面的示例在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 事务中使用 `GET_FILESTREAM_TRANSACTION_CONTEXT` 获取事务上下文。  
   
 ```csharp  
 using System;  

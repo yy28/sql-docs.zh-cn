@@ -47,7 +47,7 @@ COLUMNPROPERTY ( id , column , property )
 一个表达式，其中包含列或参数的名称。
   
 *property*  
-对于 id 自变量，property 自变量指定  *函数将返回的信息类型*  `COLUMNPROPERTY`。 property 自变量可具有下列值之一  ：
+对于 id 自变量，property 自变量指定 `COLUMNPROPERTY` 函数将返回的信息类型 。 property 自变量可具有下列值之一  ：
   
 |值|说明|返回的值|  
 |---|---|---|

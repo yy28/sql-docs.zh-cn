@@ -41,16 +41,16 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
   
 ## <a name="arguments"></a>参数  
  \<column_expression>  
- 是 [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) 子句中的 column_expression  。  
+ 是 [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) 子句中的 column_expression。  
   
 ## <a name="return-type"></a>返回类型  
  **int**  
   
 ## <a name="remarks"></a>备注  
- GROUPING_ID \<column_expression> 必须与 GROUP BY 列表中的表达式完全匹配。 例如，如果按 DATEPART (yyyy, \<column name>) 进行分组，则使用 GROUPING_ID (DATEPART (yyyy, \<column name>))；或者如果按 \<column name> 进行分组，则使用 GROUPING_ID (\<column name>)     。  
+ GROUPING_ID \<column_expression> 必须与 GROUP BY 列表中的表达式完全匹配。 例如，如果按 DATEPART (yyyy, \<column name>) 进行分组，则使用 GROUPING_ID (DATEPART (yyyy, \<column name>))；或者如果按 \<column name> 进行分组，则使用 GROUPING_ID (\<column name>)   。  
   
 ## <a name="comparing-grouping_id--to-grouping-"></a>比较 GROUPING_ID () 与 GROUPING ()  
- GROUPING_ID (\<column_expression> [ ,...n ]) 将 GROUPING (\<column_expression>) 在每个输出行中为其列列表中的每个列返回的对应值作为 0、1 字符串输入   。 GROUPING_ID 将该字符串解释为二进制数并返回对应的整数。 例如，请考虑以下语句：`SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`。 下表显示了 GROUPING_ID () 的输入值和输出值。  
+ GROUPING_ID (\<column_expression> [ ,...n ]) 将 GROUPING (\<column_expression>) 在每个输出行中为其列列表中的每个列返回的对应值作为 0、1 字符串输入。 GROUPING_ID 将该字符串解释为二进制数并返回对应的整数。 例如，请考虑以下语句：`SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`。 下表显示了 GROUPING_ID () 的输入值和输出值。  
   
 |聚合的列|GROUPING_ID (a, b, c) 输入 = GROUPING(a) + GROUPING(b) + GROUPING(c)|GROUPING_ID () 输出|  
 |------------------------|---------------------------------------------------------------------------------------|------------------------------|  

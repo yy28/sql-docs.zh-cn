@@ -86,9 +86,9 @@ ms.locfileid: "71952727"
   
 4.  检查任务列表中的每个操作，了解每个操作的作用。  
   
-     在“删除  **服务应用程序”[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** 中，你可以选择删除与服务应用程序相关联的应用程序数据。 应用程序数据是随服务应用程序创建的 SQL Server 数据库，目的在于存储数据刷新计划、数据库实例信息、使用情况数据，以及 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 所使用的其他数据。 它并不存储用户文件，如 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿。 除非您有特定原因要保留应用程序数据（例如，您有与数据刷新或数据访问相关的数据保留策略），否则您可以删除应用程序数据库，而不删除 SharePoint 用户创建或保存的任何文件。  
+     在“删除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序”中，你可以选择删除与服务应用程序相关联的应用程序数据。 应用程序数据是随服务应用程序创建的 SQL Server 数据库，目的在于存储数据刷新计划、数据库实例信息、使用情况数据，以及 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 所使用的其他数据。 它并不存储用户文件，如 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿。 除非您有特定原因要保留应用程序数据（例如，您有与数据刷新或数据访问相关的数据保留策略），否则您可以删除应用程序数据库，而不删除 SharePoint 用户创建或保存的任何文件。  
   
-     若要删除该数据库，请选择“删除  **服务应用程序”[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** ，然后选择“删除与此服务应用程序相关联的应用程序数据”  。  
+     若要删除该数据库，请选择“删除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序”，然后选择“删除与此服务应用程序相关联的应用程序数据”。  
   
 5.  或者，检查 **“输出”** 选项卡或 **“脚本”** 选项卡中的详细信息。  
   
@@ -154,9 +154,9 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 1.  在管理中心的“管理服务器上的服务”  中，连接到卸载了 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的服务器。  
   
-2.  -   如果卸载了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013，请验证“SQL Server  **系统服务”[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** 不再显示在列表中。  
+2.  -   如果卸载了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013，请验证“SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务”不再显示在列表中。  
   
-    -   如果卸载了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010，请验证“SQL Server Analysis Services”  和“SQL Server  **系统服务”[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** 不再显示在列表中。  
+    -   如果卸载了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010，请验证“SQL Server Analysis Services”和“SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务”不再显示在列表中。  
   
 3.  卸载场中的最后一个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 服务器后，请执行以下操作：  
   
@@ -166,7 +166,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
     3.  在“监视”的“配置诊断日志记录”  和“配置使用情况和运行状况数据收集”  中，验证 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 事件和事件类别不再出现。  
   
-    4.  在“常规应用程序设置”中，验证“ **管理面板”[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** 不再出现在该页上。  
+    4.  在“常规应用程序设置”中，验证“[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理面板”不再出现在该页上。  
   
 ##  <a name="step-6-post-uninstall-checklist"></a><a name="bkmk_post"></a> 步骤 6：卸载后一览表  
  使用下表删除在卸载过程中未删除的软件和文件。  

@@ -59,7 +59,7 @@ DENY permission [ ,...n ]
  ON SYMMETRIC KEY ::asymmetric_key_name   
  指定要对其拒绝权限的对称密钥。 需要作用域限定符 ::。  
   
- TO \<database_principal  >  
+ TO \<database_principal>  
  指定要从中撤消权限的主体。  
   
  CASCADE  

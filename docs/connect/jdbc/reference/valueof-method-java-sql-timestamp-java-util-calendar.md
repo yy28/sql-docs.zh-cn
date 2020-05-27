@@ -36,7 +36,7 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, java.util.Cal
   
  calendar   
   
- 偏移值。  将根据 timestamp  值设置 calendar  的日期和时间组件。  
+ 偏移值。  将根据 timestamp 值设置 calendar 的日期和时间组件。  
   
 ## <a name="return-value"></a>返回值  
  返回一个 DateTimeOffset 对象，该对象表示在给定 java.util.Calendar 对象的时区由 java.sql.Timestamp 对象给定的时间点。  

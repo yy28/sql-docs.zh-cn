@@ -35,7 +35,7 @@ public final java.lang.String getResponseBuffering()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 包含小写 full  或 adaptive  的 String  。  
+ 包含小写 full 或 adaptive 的 String。  
   
 ## <a name="remarks"></a>备注  
  “adaptive”  指定在必要时缓冲尽可能少的数据。  

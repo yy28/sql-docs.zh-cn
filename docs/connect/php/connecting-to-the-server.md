@@ -20,7 +20,7 @@ ms.locfileid: "68015146"
 # <a name="connecting-to-the-server"></a>连接到服务器
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-本部分中的主题介绍使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接到 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 的选项和过程。  
+本部分中的主题介绍使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的选项和过程。  
 
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 可以使用 Windows 身份验证或使用 SQL Server 身份验证连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 默认情况下， [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 尝试使用 Windows 身份验证连接到服务器。  
 

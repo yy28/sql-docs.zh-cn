@@ -66,10 +66,10 @@ WITH
  WITH  
  介绍用于定义要创建的路由的子句。  
   
- SERVICE_NAME = **'** service_name\__ **'**  
+ SERVICE_NAME = **'** service\_name **'**  
  指定此路由指向的远程服务的名称。 service_name 必须与远程服务使用的名称完全匹配  。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会逐字节进行比较以便与 service_name 匹配  。 也就是说，这种比较区分大小写，并且不考虑当前的排序规则。 如果省略 SERVICE_NAME，则此路由将与任何服务名称匹配，但比指定 SERVICE_NAME 的路由的匹配优先级低。 服务名称为 'SQL/ServiceBroker/BrokerConfiguration' 的路由是指向 Broker Configuration Notice 服务的路由  。 指向此服务的路由不能指定 Broker 实例。  
   
- BROKER_INSTANCE = **'** broker_instance\_identifier\__ **'**  
+ BROKER_INSTANCE = **'** broker\_instance\_identifier **'**  
  指定承载目标服务的数据库。 broker_instance_identifier 参数必须是远程数据库的 Broker 实例标识符，该标识符可以通过在所选数据库中运行以下查询获得  ：  
   
 ```  
@@ -80,17 +80,17 @@ WHERE database_id = DB_ID()
   
  如果省略 BROKER_INSTANCE 子句，则此路由将与任何 Broker 实例匹配。 如果会话没有指定 Broker 实例，则匹配任何 Broker 实例的路由的匹配优先级高于具有显式 Broker 实例的路由的匹配优先级。 对于指定了 Broker 实例的会话，具有 Broker 实例的路由的优先级高于匹配任何 Broker 实例的路由的优先级。  
   
- LIFETIME **=** route_lifetime\__  
+ LIFETIME **=** route\_lifetime  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在路由表中保留路由的时间（秒）。 在生存期结束后，相应的路由即过期，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在为新会话选择路由时将不再考虑该路由。 如果省略此子句，则 route_lifetime 为 NULL，并且路由始终不过期  。  
   
- ADDRESS **='** next_hop\_address\__ **'**  
+ ADDRESS **='** next\_hop\_address **'**  
 对于 SQL 数据库托管实例，`ADDRESS` 必须是本地的。 
 
 指定此路由的网络地址。 next_hop_address 按以下格式指定 TCP/IP 地址  ：  
   
- TCP://{ dns_name**netbios_name**ip_address } :port*number* |    |    _\__  
+ TCP://{ dns_name | netbios_name | ip_address } :port\_number    
   
- 指定的 port_number 必须与指定计算机上 *实例的* 端点的端口号匹配[!INCLUDE[ssSB](../../includes/sssb-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这可以通过在选定数据库中运行如下查询获得：  
+ 指定的 port_number 必须与指定计算机上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 端点的端口号匹配。 这可以通过在选定数据库中运行如下查询获得：  
   
 ```  
 SELECT tcpe.port  
@@ -102,16 +102,16 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  如果服务驻留在镜像数据库中，那么，还必须为驻留镜像数据库的其他实例指定 MIRROR_ADDRESS。 否则，此路由不会故障转移到此镜像。  
   
- 当路由为 next_hop_address 指定 'LOCAL' 时，消息将传递给当前  **实例中的服务**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 当路由为 next_hop_address 指定 'LOCAL' 时，消息将传递给当前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的服务。  
   
  当路由为 next_hop_address 指定 'TRANSPORT' 时，根据服务名称中的网络地址确定网络地址   。 指定了 'TRANSPORT' 的路由不能指定服务名称或 Broker 实例  。  
   
- MIRROR_ADDRESS **='** next_hop\_mirror\_address\__ **'**  
+ MIRROR_ADDRESS **='** next\_hop\_mirror\_address **'**  
  指定有一个镜像数据库驻留在 next_hop_address 的镜像数据库的网络地址  。 next_hop_mirror_address 按以下格式指定 TCP/IP 地址  ：  
   
  **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
- 指定的 port_number 必须与指定计算机上 *实例的* 端点的端口号匹配[!INCLUDE[ssSB](../../includes/sssb-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这可以通过在选定数据库中运行如下查询获得：  
+ 指定的 port_number 必须与指定计算机上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 端点的端口号匹配。 这可以通过在选定数据库中运行如下查询获得：  
   
 ```  
 SELECT tcpe.port  
@@ -134,7 +134,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 不会从路由表中删除过期路由。 可以使用 ALTER ROUTE 语句激活过期路由。  
   
- 路由不能是临时对象。 允许路由名称以  **开头，但仅限于永久对象#** 。  
+ 路由不能是临时对象。 允许路由名称以 # 开头，但仅限于永久对象。  
   
 ## <a name="permissions"></a>权限  
  默认情况下，db_ddladmin 或 db_owner 固定数据库角色和 sysadmin 固定服务器角色的成员拥有创建路由的权限    。  

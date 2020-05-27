@@ -23,7 +23,7 @@ ms.locfileid: "69026201"
 
 默认情况下，事务中创建的结果集将在事务提交到数据库后保持打开状态，或在回滚时保持打开状态。 但是，在事务提交后，使结果集关闭有时也会很有用。 为此，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支持使用结果集的保持能力。
 
-可通过使用 [SQLServerConnection](../../connect/jdbc/reference/setholdability-method-sqlserverconnection.md) 类的 [setHoldability](../../connect/jdbc/reference/sqlserverconnection-class.md) 方法设置结果集的保持能力。 使用 setHoldability 方法设置保持能力时，可使用 `ResultSet.HOLD_CURSORS_OVER_COMMIT` 或 `ResultSet.CLOSE_CURSORS_AT_COMMIT` 的结果集保持能力的常量。
+可通过使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [setHoldability](../../connect/jdbc/reference/setholdability-method-sqlserverconnection.md) 方法设置结果集的保持能力。 使用 setHoldability 方法设置保持能力时，可使用 `ResultSet.HOLD_CURSORS_OVER_COMMIT` 或 `ResultSet.CLOSE_CURSORS_AT_COMMIT` 的结果集保持能力的常量。
 
 创建语句对象之一时，JDBC Driver 也支持设置保持能力。 创建语句对象时，如果该对象包含带有结果集保持能力参数的重载，则语句对象的保持能力必须与连接的保持能力匹配。 如果不匹配，将引发异常。 这是因为 SQL Server 仅在连接级别支持保持能力。
 

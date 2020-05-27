@@ -138,7 +138,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-transferring-ownership-of-a-table"></a>C. 传递表的所有权  
- 下面的示例在 `Region` 架构中创建一个表 `dbo`，创建一个 `Sales` 架构，然后将 `Region` 表从 `dbo` 架构移动到 `Sales` 架构。  
+ 下面的示例在 `dbo` 架构中创建一个表 `Region`，创建一个 `Sales` 架构，然后将 `Region` 表从 `dbo` 架构移动到 `Sales` 架构。  
   
 ```  
 CREATE TABLE dbo.Region   

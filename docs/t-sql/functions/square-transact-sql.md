@@ -65,7 +65,7 @@ Cyl Vol
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下面的示例返回 `volume` 表 `containers` 列中每个值的平方。  
+ 下面的示例返回 `containers` 表 `volume` 列中每个值的平方。  
   
 ```  
 -- Uses AdventureWorks  

@@ -80,7 +80,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  用户只能查看符合如下条件的安全对象的元数据：该安全对象为该用户所有，或已授予该用户对该安全对象的权限。 也就是说，如果用户对该对象没有任何权限，则那些会生成元数据的内置函数（如 INDEXPROPERTY）可能返回 NULL。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>示例  
- 以下示例针对 **数据库中** 表的  **索引返回 IsClustered、IndexDepth 和 IndexFillFactor 属性的值**  `PK_Employee_BusinessEntityID``Employee`[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。  
+ 以下示例针对 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `Employee` 表的 `PK_Employee_BusinessEntityID` 索引返回 IsClustered、IndexDepth 和 IndexFillFactor 属性的值  。  
   
 ```  
 SELECT   

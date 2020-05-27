@@ -36,7 +36,7 @@ ms.locfileid: "68066116"
   通过修改程序集的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录属性更改程序集。 ALTER ASSEMBLY 将它刷新为保存其实现的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 模块的最新副本，并添加或删除与之关联的文件。 可以使用 [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) 创建程序集。  
 
 > [!WARNING]
->  CLR 在 .NET Framework 中使用代码访问安全性 (CAS)（不可再作为安全边界）。 使用 `PERMISSION_SET = SAFE` 创建的 CLR 程序集可以访问外部系统资源、调用非托管代码以及获取 sysadmin 特权。 从 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 开始，引入了名为 `sp_configure` 的 `clr strict security` 选项，以增强 CLR 程序集的安全性。 默认启用 `clr strict security`，并将 `SAFE` 和 `EXTERNAL_ACCESS` 程序集与标记为 `UNSAFE` 的程序集同等对待。 可禁用 `clr strict security` 选项以实现后向兼容性，但不建议这样做。 Microsoft 建议所有程序集都通过证书或非对称密钥进行签名，且该证书或非对称密钥具有已在主数据库中获得 `UNSAFE ASSEMBLY` 权限的相应登录名。 有关详细信息，请参阅 [CLR 严格安全性](../../database-engine/configure-windows/clr-strict-security.md)。  
+>  CLR 在 .NET Framework 中使用代码访问安全性 (CAS)（不可再作为安全边界）。 使用 `PERMISSION_SET = SAFE` 创建的 CLR 程序集可以访问外部系统资源、调用非托管代码以及获取 sysadmin 特权。 从 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 开始，引入了名为 `clr strict security` 的 `sp_configure` 选项，以增强 CLR 程序集的安全性。 默认启用 `clr strict security`，并将 `SAFE` 和 `EXTERNAL_ACCESS` 程序集与标记为 `UNSAFE` 的程序集同等对待。 可禁用 `clr strict security` 选项以实现后向兼容性，但不建议这样做。 Microsoft 建议所有程序集都通过证书或非对称密钥进行签名，且该证书或非对称密钥具有已在主数据库中获得 `UNSAFE ASSEMBLY` 权限的相应登录名。 有关详细信息，请参阅 [CLR 严格安全性](../../database-engine/configure-windows/clr-strict-security.md)。  
 
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -120,7 +120,7 @@ ALTER ASSEMBLY assembly_name
 >  这种方法不适用于包含的数据库或 Azure SQL 数据库。  
   
  [ ADD FILE FROM { client_file_specifier [ AS file_name] | file_bitsAS file_name}      
- 将与程序集关联的文件（如源代码、调试文件或其他相关信息）上传到服务器中并使其在 sys.assembly_files 目录视图中可见  。 client_file_specifier 指定上传文件的源位置  。 可以改用 file_bits 来指定构成该文件的二进制值的列表  。 file_name 指定将文件存储到  *实例中时所采用的名称*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果指定 file_bits，则必须指定 file_name，如果指定 client_file_specifier，则可以选择指定 file_name    。 如果未指定 file_name，则 client_file_specifier 的 file_name 部分可用作 file_name    。  
+ 将与程序集关联的文件（如源代码、调试文件或其他相关信息）上传到服务器中并使其在 sys.assembly_files 目录视图中可见  。 client_file_specifier 指定上传文件的源位置  。 可以改用 file_bits 来指定构成该文件的二进制值的列表  。 file_name 指定将文件存储到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中时所采用的名称。 如果指定 file_bits，则必须指定 file_name，如果指定 client_file_specifier，则可以选择指定 file_name    。 如果未指定 file_name，则 client_file_specifier 的 file_name 部分可用作 file_name    。  
   
 > [!NOTE]  
 >  这种方法不适用于包含的数据库或 Azure SQL 数据库。  

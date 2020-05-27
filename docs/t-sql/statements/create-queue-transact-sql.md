@@ -100,7 +100,7 @@ EXECUTE AS 指定用于运行激活存储过程的 [!INCLUDE[ssNoVersion](../../
 
 SELF 指定存储过程以当前用户身份执行。 （执行该 CREATE QUEUE 语句的数据库主体。）
 
-'*user_name*' 执行存储过程时所用的用户名。 user_name 参数必须是指定为 *标识符的有效* 用户[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 当前用户必须对指定的 user_name 具有 IMPERSONATE 权限  。
+'*user_name*' 执行存储过程时所用的用户名。 user_name 参数必须是指定为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符的有效 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户。 当前用户必须对指定的 user_name 具有 IMPERSONATE 权限  。
 
 OWNER 指定存储过程以队列所有者身份执行。
 
@@ -114,7 +114,7 @@ ON *filegroup |* [**DEFAULT**] 指定从中创建此队列的 [!INCLUDE[ssNoVers
 
 队列可以是 SELECT 语句的目标。 但是，只能使用在 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会话中运行的语句（如 SEND、RECEIVE 和 END CONVERSATION）来修改队列的内容。 队列不能是 INSERT、UPDATE、DELETE 或 TRUNCATE 语句的目标。
 
-队列可能不是临时对象。 因此，以  **开头的队列名称无效#** 。
+队列可能不是临时对象。 因此，以 # 开头的队列名称无效。
 
 通过以不可用状态创建队列，可以先准备好服务的基础结构，然后再允许在队列中接收消息。
 
@@ -150,9 +150,9 @@ ON *filegroup |* [**DEFAULT**] 指定从中创建此队列的 [!INCLUDE[ssNoVers
 
 `db_ddladmin` 或 `db_owner` 固定数据库角色或 `sysadmin` 固定服务器角色的成员拥有创建队列的权限。
 
-默认情况下，队列所有者、`REFERENCES` 或 `db_ddladmin` 固定数据库角色的成员或 `db_owner` 固定服务器角色的成员拥有队列的 `sysadmin` 权限。
+默认情况下，队列所有者、`db_ddladmin` 或 `db_owner` 固定数据库角色的成员或 `sysadmin` 固定服务器角色的成员拥有队列的 `REFERENCES` 权限。
 
-默认情况下，队列所有者、`RECEIVE` 固定数据库角色的成员或 `db_owner` 固定服务器角色的成员具有队列的 `sysadmin` 权限。
+默认情况下，队列所有者、`db_owner` 固定数据库角色的成员或 `sysadmin` 固定服务器角色的成员具有队列的 `RECEIVE` 权限。
 
 ## <a name="examples"></a>示例
 

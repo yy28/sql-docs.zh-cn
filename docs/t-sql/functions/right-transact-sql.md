@@ -45,7 +45,7 @@ RIGHT ( character_expression , integer_expression )
  字符或二进制数据的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 character_expression 可以是常量、变量或列  。 character_expression 可以是除 text 或 ntext 外的任何数据类型，可隐式转换为 varchar 或 nvarchar      。 否则，请使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 函数显式转换 character_expression  。  
   
  *integer_expression*  
- 指定要返回的 character_expression 的字符数的正整数  。 如果 integer_expression 为负，则返回错误  。 如果 integer_expression 的数据类型为 bigint，且包含较大的值，则 character_expression 必须是较大的数据类型，如 varchar(max)     。  
+ 指定要返回的 character_expression 的字符数的正整数  。 如果 integer_expression 为负，则返回错误  。 如果 integer_expression 的数据类型为 bigint，且包含较大的值，则 character_expression 必须是较大的数据类型，如 varchar(max)。  
   
 ## <a name="return-types"></a>返回类型  
  character_expression 为非 Unicode 字符数据类型时，返回 varchar   。  

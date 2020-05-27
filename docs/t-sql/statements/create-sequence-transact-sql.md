@@ -88,7 +88,7 @@ INCREMENT BY \<constant>
 > [!NOTE]
 > 循环 SEQUENCE 从最小值或最大值（而不是从起始值）重新开始。  
   
-[ CACHE [\<constant> ] | NO CACHE ]   
+[ CACHE [\<constant> ] | NO CACHE ]  
 通过最大限度地减少生成序列编号所需的磁盘 IO 数，可以提高使用序列对象的应用程序的性能。 默认值为 CACHE。  
   
 例如，如果选择的缓存大小为 50，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并不会缓存 50 个单个值。 它只是缓存当前值和缓存中保留的值数。 这意味着，存储缓存所需的内存量始终为序列对象的数据类型的两个实例。  
@@ -174,7 +174,7 @@ GRANT CREATE SEQUENCE ON SCHEMA::Test TO [AdventureWorks\Larry]
  若要审核 CREATE SEQUENCE，请监视 SCHEMA_OBJECT_CHANGE_GROUP   。  
   
 ## <a name="examples"></a>示例  
- 有关创建序列和使用 NEXT VALUE FOR 函数生成序列号的示例，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)  。  
+ 有关创建序列和使用 NEXT VALUE FOR 函数生成序列号的示例，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
   
  下面的大多数示例都在名为 Test 的架构中创建序列对象。  
   

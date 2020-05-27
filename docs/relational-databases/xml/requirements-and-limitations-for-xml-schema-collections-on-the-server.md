@@ -38,7 +38,7 @@ ms.locfileid: "75257624"
 |Item|限制|  
 |----------|----------------|  
 |**minOccurs** 和 **maxOccurs**|**minOccurs** 和 **maxOccurs** 属性的值必须符合 4 字节整数。 服务器拒绝不符合的架构。|  
-|**\<xsd:choice>**|如果架构中包含无子级的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xsd:choice>\< 粒子，则**  拒绝该架构，除非该粒子的 **minOccurs** 属性值定义为零。|  
+|**\<xsd:choice>**|如果架构中包含无子级的 **\<xsd:choice>** 粒子，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拒绝该架构，除非该粒子的 **minOccurs** 属性值定义为零。|  
 |**\<xsd:include>**|当前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持此元素。 服务器拒绝包含此元素的 XML 架构。<br /><br /> 一种解决方法是，可以预处理包括 **\<xsd:include>** 指令的 XML 架构，来复制所有包含的架构的内容并将其合并为单个架构，以上载到服务器。 有关详细信息，请参阅 [预处理架构以便合并包括的架构](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md)。|  
 |**\<xsd:key>** 、 **\<xsd:keyref>** 和 **\<xsd:unique>**|当前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持这些用于强制唯一性或建立键和键引用的基于 XSD 的约束。 无法注册包含这些元素的 XML 架构。|  
 |**\<xsd:redefine>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持此元素。 有关更新架构的其他方法的信息，请参阅 [<xsd: redefine> 元素](../../relational-databases/xml/the-xsd-redefine-element.md)一起使用。|  
@@ -49,7 +49,7 @@ ms.locfileid: "75257624"
 |规范格式和模式限制|值的规范表示形式不能违反其类型的模式限制。 有关详细信息，请参阅 [Canonical Forms and Pattern Restrictions](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)。|  
 |枚举方面|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持包含以下类型的 XML 架构：具有模式方面或违反这些方面的枚举的类型。|  
 |方面长度|**length**、 **minLength**和 **maxLength** 方面作为 **long** 类型存储。 此类型为 32 位类型。 因此，这些值的可接受值的范围是 2^31。|  
-|ID 属性|每个 XML 架构组件可在其上具有 ID 属性。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对 **ID\< 类型的** **xsd:attribute>** 声明强制唯一性，但不存储这些值。 唯一性的强制的作用范围是 {CREATE &#124; ALTER} XML SCHEMA COLLECTION 语句。|  
+|ID 属性|每个 XML 架构组件可在其上具有 ID 属性。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对 **ID** 类型的 **\<xsd:attribute>** 声明强制唯一性，但不存储这些值。 唯一性的强制的作用范围是 {CREATE &#124; ALTER} XML SCHEMA COLLECTION 语句。|  
 |ID 类型|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持类型为 **xs:ID**、 **xs:IDREF**或 **xs:IDREFS**的元素。 架构不会声明这种类型的元素或者从这种类型的限制或扩展派生的元素。|  
 |本地命名空间|必须为 **\<xsd:any>** 元素显式指定本地命名空间。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拒绝使用空字符串 ("") 作为命名空间属性的值的架构。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 而是要求显式使用“##local”以指示作为通配符实例的未限定元素或属性。|  
 |混合类型和简单内容|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持将混合类型限制为简单内容。 有关详细信息，请参阅 [Mixed Type and Simple Content](../../relational-databases/xml/mixed-type-and-simple-content.md)。|  

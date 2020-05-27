@@ -61,7 +61,7 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
  需要对证书具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  
- 以下示例将用证书 `@SensitiveData` 来签署 `ABerglundCert07` 中的文本，该证书已用密码“pGFD4bb925DGvbd2439587y”进行解密。 然后，它在 `SignedData04` 表中插入明文和签名。  
+ 以下示例将用证书 `ABerglundCert07` 来签署 `@SensitiveData` 中的文本，该证书已用密码“pGFD4bb925DGvbd2439587y”进行解密。 然后，它在 `SignedData04` 表中插入明文和签名。  
   
 ```  
 DECLARE @SensitiveData nvarchar(max);  

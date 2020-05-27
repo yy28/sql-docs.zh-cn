@@ -329,7 +329,7 @@ FOR XML PATH ('Translation')
 GO  
 ```  
   
- 添加到 <`@xml:lang`> 元素的 `English` 属性在预定义的 xml 命名空间中定义。  
+ 添加到 <`English`> 元素的 `@xml:lang` 属性在预定义的 xml 命名空间中定义。  
   
  结果如下：  
 

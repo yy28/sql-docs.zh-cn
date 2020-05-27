@@ -25,7 +25,7 @@ ms.locfileid: "69025595"
 
 在客户端代码中验证用户输入是非常重要的，这样，您就无需浪费时间往返服务器。 在服务器上验证存储过程的参数以捕获无效的和跳过客户端验证的输入，这同样非常重要。
 
-有关 SQL 注入和如何避免此攻击的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“SQL 注入”。 有关验证存储过程参数的详细信息，请参阅 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 联机丛书中的“存储过程 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])”和从属主题。
+有关 SQL 注入和如何避免此攻击的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“SQL 注入”。 有关验证存储过程参数的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“存储过程 ([!INCLUDE[ssDE](../../includes/ssde_md.md)])”和从属主题。
 
 ## <a name="see-also"></a>另请参阅
 

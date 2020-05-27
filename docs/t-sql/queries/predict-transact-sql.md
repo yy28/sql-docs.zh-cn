@@ -110,7 +110,7 @@ Windows 和 Linux 上的所有版本的 SQL Server 2017 或更高版本都支持
 
 ### <a name="using-predict-in-a-from-clause"></a>在 FROM 子句中使用 PREDICT
 
-此示例引用 `PREDICT` 语句的 `FROM` 子句中的 `SELECT` 函数：
+此示例引用 `SELECT` 语句的 `FROM` 子句中的 `PREDICT` 函数：
 
 ```sql
 SELECT d.*, p.Score
@@ -118,7 +118,7 @@ FROM PREDICT(MODEL = @logit_model,
   DATA = dbo.mytable AS d) WITH (Score float) AS p;
 ```
 
-**参数中为表源指定的别名 d 用于引用属于 dbo.mytable 的列**`DATA`。 为 PREDICT 函数指定的别名 p 用于引用 PREDICT 函数返回的列   。
+`DATA` 参数中为表源指定的别名 d 用于引用属于 dbo.mytable 的列。 为 PREDICT 函数指定的别名 p 用于引用 PREDICT 函数返回的列   。
 
 ### <a name="combining-predict-with-an-insert-statement"></a>将 PREDICT 与 INSERT 语句相结合
 

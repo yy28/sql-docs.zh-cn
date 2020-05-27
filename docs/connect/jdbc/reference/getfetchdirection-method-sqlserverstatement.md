@@ -38,7 +38,7 @@ public final int getFetchDirection()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 指示由 [setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md) 方法指定的提取方向的 int  值。  
+ 指示由 [setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md) 方法指定的提取方向的 int 值。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -113,7 +113,7 @@ identifier
   
  [WITH XMLNAMESPACES (  \<xmlnamespace_list>  )] 是要建立索引的路径使用的命名空间的列表。 有关 WITH XMLNAMESPACES 子句的语法的信息，请参阅 [WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md)。  
   
- (**promoted_node_path_list>) 是要使用可选优化提示建立索引的路径列表**\<  。 有关可以在 CREATE 或 ALTER 语句中指定的路径和优化提示的信息，请参阅[为选择性 XML 索引指定路径和优化提示](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)。  
+ (\<promoted_node_path_list>) 是要使用可选优化提示建立索引的路径列表 。 有关可以在 CREATE 或 ALTER 语句中指定的路径和优化提示的信息，请参阅[为选择性 XML 索引指定路径和优化提示](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)。  
   
  有关通过 *\<* index_options> 获取索引选项的信息，请参阅 [CREATE XML INDEX（选择性 XML 索引）](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)。  
   

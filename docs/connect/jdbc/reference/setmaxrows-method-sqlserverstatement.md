@@ -49,7 +49,7 @@ public final void setMaxRows(int max)
   
  当调用 setMaxRows 方法时，[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 会在运行应用程序的查询时执行 SET ROWCOUNT SQL 语句。 这将导致 JDBC 驱动程序会限制受到由该查询执行的所有 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句所影响的行的最大数量，而不仅仅是该查询所返回的行数。 如果应用程序需要设置仅针对顶级 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的限制，则应在查询中使用 SELECT TOP N SQL 语法，而非 setMaxRows 方法。  
   
- 有关 SET ROWCOUNT SQL 语句的详细信息，请参阅 [ 联机丛书中的“](https://go.microsoft.com/fwlink/?LinkId=139522)SET ROWCOUNT (Transact-SQL)[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]”主题。  
+ 有关 SET ROWCOUNT SQL 语句的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书中的“[SET ROWCOUNT (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=139522)”主题。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerStatement 成员](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

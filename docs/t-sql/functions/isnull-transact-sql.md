@@ -170,7 +170,7 @@ ORDER BY ResellerName;
 |  可接受的销售和服务  |     0.0000         |
   
 ### <a name="f-using-is-null-to-test-for-null-in-a-where-clause"></a>F. 使用 IS NULL 在 WHERE 子句中测试 NULL  
- 下面的示例查找 `NULL` 列中存在 `Weight` 的所有产品。 请注意 `IS` 和 `NULL` 之间的空格。  
+ 下面的示例查找 `Weight` 列中存在 `NULL` 的所有产品。 请注意 `IS` 和 `NULL` 之间的空格。  
   
 ```  
 -- Uses AdventureWorks  

@@ -25,7 +25,7 @@ ms.locfileid: "67977872"
 # <a name="insertsaredetected-method-sqlserverdatabasemetadata"></a>insertsAreDetected 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索是否可通过调用 [SQLServerResultSet](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) 类的 [rowInserted](../../../connect/jdbc/reference/sqlserverresultset-class.md) 方法检测可见的行插入。  
+  检索是否可通过调用 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 [rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) 方法检测可见的行插入。  
   
 ## <a name="syntax"></a>语法  
   

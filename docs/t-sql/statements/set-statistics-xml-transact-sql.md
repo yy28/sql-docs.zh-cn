@@ -60,7 +60,7 @@ SET STATISTICS XML { ON | OFF }
  SET STATISTICS PROFILE 和 SET STATISTICS XML 彼此互为对等物。 前者生成文本输出；后者生成 XML 输出。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，新的查询执行计划信息将只通过 SET STATISTICS XML 语句显示，而不通过 SET STATISTICS PROFILE 语句显示。  
   
 > [!NOTE]  
->  如果在  **中选择了“包括实际的执行计划”，则该 SET 选项不会生成 XML 显示计划输出**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 请在使用该 SET 选项之前清除“包括实际的执行计划”按钮  。  
+>  如果在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中选择了“包括实际的执行计划”，则该 SET 选项不会生成 XML 显示计划输出。 请在使用该 SET 选项之前清除“包括实际的执行计划”按钮  。  
   
 ## <a name="permissions"></a>权限  
  若要使用 SET STATISTICS XML 并查看输出，用户必须具有以下权限：  

@@ -44,7 +44,7 @@ END
 ```  
   
 ## <a name="arguments"></a>参数  
- { sql_statement*statement_block}* |    
+ { sql_statement| statement_block}   
  任何有效的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或用语句块定义的语句分组。 若要定义语句块（批处理），请使用控制流语言关键字 BEGIN 和 END。 虽然所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在 BEGIN...END 块内都有效，但有些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句不能组合到同一个批（语句块）中。  
   
 ## <a name="result-types"></a>结果类型  

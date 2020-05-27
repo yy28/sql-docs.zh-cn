@@ -65,7 +65,7 @@ SQL Server 的每个实例都有多组系统消息，每组消息使用不同的
 
 ### <a name="connect-retry-interval-seconds"></a>连接重试时间间隔(秒)
 
-指定每次连接重试尝试之间的秒数。 有关此操作和“连接重试计数”选项的详细信息，请参阅 [Windows ODBC 驱动程序中的连接弹性](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)  。
+指定每次连接重试尝试之间的秒数。 有关此操作和“连接重试计数”选项的详细信息，请参阅 [Windows ODBC 驱动程序中的连接弹性](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)。
 
 ### <a name="back"></a>后退
 

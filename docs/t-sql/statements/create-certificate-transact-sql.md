@@ -139,7 +139,7 @@ CREATE CERTIFICATE certificate_name
 > 此选项在包含的数据库或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中不可用。  
   
  BINARY = private_key_bits   
- **适用对象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定为二进制常量的专有键位。 这些位可采用加密形式。 如果加密，则用户必须提供解密密码。 不会对此密码执行密码策略检查。 私钥位应该采用 PVK 文件格式。  
   
@@ -147,7 +147,7 @@ CREATE CERTIFICATE certificate_name
  指定对从文件中检索的私钥进行解密所需的密码。 如果私钥受空密码的保护，则该子句为可选项。 建议不要将私钥保存到无密码保护的文件中。 如果需要密码，但是未指定密码，则该语句将失败。  
   
  ENCRYPTION BY PASSWORD = 'password'   
- 指定用于加密私钥的密码。 只有在需要使用密码对证书进行加密时，才使用该选项。 如果省略该子句，则使用数据库主密钥对私钥进行加密。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求  。 有关详细信息，请参阅 [Password Policy](../../relational-databases/security/password-policy.md)。  
+ 指定用于加密私钥的密码。 只有在需要使用密码对证书进行加密时，才使用该选项。 如果省略该子句，则使用数据库主密钥对私钥进行加密。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。 有关详细信息，请参阅 [Password Policy](../../relational-databases/security/password-policy.md)。  
   
  SUBJECT = 'certificate_subject_name  '  
  根据 X.509 标准中的定义，术语 subject 是指证书的元数据中的字段  。 主题的长度应不超过 64 个字符，并且在 Linux 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中强制执行此限制。 对于 Windows 上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，主题的长度最多是 128 个字符。 将主题存储到目录中时，如果主题的长度超过 128 个字节，则主题会被截断，但是包含证书的二进制大型对象 (BLOB) 将保留完整的主题名称。  
@@ -181,7 +181,7 @@ CREATE CERTIFICATE certificate_name
 > [!NOTE]  
 > 内置的加密和签名功能不会检查证书的过期日期。 使用这些功能的用户必须决定何时检查证书的过期日期。  
   
- 可以使用 [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md) 和 [CERTPRIVATEKEY (Transact-SQL)](../../t-sql/functions/certprivatekey-transact-sql.md) 函数创建证书的二进制说明。 有关使用 CERTPRIVATEKEY 和 CERTENCODED 将证书复制到其他数据库中的示例，请参阅文章 [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md) 中的示例 B   。  
+ 可以使用 [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md) 和 [CERTPRIVATEKEY (Transact-SQL)](../../t-sql/functions/certprivatekey-transact-sql.md) 函数创建证书的二进制说明。 有关使用 CERTPRIVATEKEY 和 CERTENCODED 将证书复制到其他数据库中的示例，请参阅文章 [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md) 中的示例 B 。  
 
 已在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中弃用 MD2、MD4、MD5、SHA 和 SHA1 算法。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前，需使用 SHA1 创建自签名证书。 从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始，可使用 SHA2_256 创建自签名证书。
 

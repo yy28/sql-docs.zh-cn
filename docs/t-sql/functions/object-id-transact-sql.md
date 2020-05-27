@@ -55,7 +55,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
  要使用的对象。 object_name 为 varchar 或 nvarchar    。 如果 object_name 为 varchar，则它会隐式转换为 nvarchar    。 可以选择是否指定数据库和架构名称。  
   
  **'** *object_type* **'**  
- 架构范围的对象类型。 object_type 为 varchar 或 nvarchar    。 如果 object_type 为 varchar，则它会隐式转换为 nvarchar    。 有关对象类型的列表，请参阅 [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 中的 type 列  。  
+ 架构范围的对象类型。 object_type 为 varchar 或 nvarchar    。 如果 object_type 为 varchar，则它会隐式转换为 nvarchar    。 有关对象类型的列表，请参阅 [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 中的 type 列。  
   
 ## <a name="return-types"></a>返回类型  
  **int**  

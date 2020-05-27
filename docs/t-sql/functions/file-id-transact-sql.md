@@ -55,7 +55,7 @@ file_name
 ## <a name="remarks"></a>备注  
 file_name  对应于 sys.master_files 或 sys.database_files 目录视图的 name 列中所显示的逻辑文件名。  
 
-如果 file_name`FILE_ID``NULL` 不对应当前数据库组件文件的逻辑名称，*将返回*。
+如果 file_name 不对应当前数据库组件文件的逻辑名称，`FILE_ID` 将返回 `NULL`。
   
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，分配给全文目录的文件标识号大于 32767。 因为 `FILE_ID` 函数具有 smallint  返回类型，`FILE_ID` 将不支持全文文件。 改用 [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md)。  
   

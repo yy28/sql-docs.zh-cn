@@ -20,7 +20,7 @@ ms.locfileid: "67953271"
 # <a name="getcharacterstream-method-long-long-sqlservernclob"></a>getCharacterStream 方法 (long, long) (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索具有指定位置和长度且作为 Reader  对象或字符流的 NCLOB  数据。  
+  检索具有指定位置和长度且作为 Reader 对象或字符流的 NCLOB 数据。  
   
 ## <a name="syntax"></a>语法  
   

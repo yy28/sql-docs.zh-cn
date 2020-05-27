@@ -69,7 +69,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 
 ## <a name="examples"></a>示例  
 ### <a name="return-the-hash-of-a-variable"></a>返回变量的哈希  
- 以下示例返回变量 `SHA2_256` 中存储的 nvarchar 数据的  **哈希值**`@HashThis`。  
+ 以下示例返回变量 `@HashThis` 中存储的 nvarchar 数据的 `SHA2_256` 哈希值。  
   
 ```sql  
 DECLARE @HashThis nvarchar(32);  
@@ -78,7 +78,7 @@ SELECT HASHBYTES('SHA2_256', @HashThis);
 ```  
   
 ### <a name="return-the-hash-of-a-table-column"></a>返回表列的哈希  
- 下面的示例返回 `c1` 表 `Test1` 列中值的 SHA2_256 哈希。  
+ 下面的示例返回 `Test1` 表 `c1` 列中值的 SHA2_256 哈希。  
   
 ```sql  
 CREATE TABLE dbo.Test1 (c1 nvarchar(32));  

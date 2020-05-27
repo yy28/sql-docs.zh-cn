@@ -131,7 +131,7 @@ GRANT permission [ ,...n ]
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中添加了以下三个服务器权限。  
   
  CONNECT ANY DATABASE 权限   
- 将 CONNECT ANY DATABASE 授予某个登录名，该登录名必须连接到当前存在的所有数据库和将来可能创建的任何新数据库。  不要在任何数据库中授予超过连接的任何权限。 与 SELECT ALL USER SECURABLES 或 VIEW SERVER STATE 结合使用，可审核进程查看所有数据或  **实例上的所有数据库状态。**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ 将 CONNECT ANY DATABASE 授予某个登录名，该登录名必须连接到当前存在的所有数据库和将来可能创建的任何新数据库。  不要在任何数据库中授予超过连接的任何权限。 与 SELECT ALL USER SECURABLES 或 VIEW SERVER STATE 结合使用，可审核进程查看所有数据或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的所有数据库状态。   
   
  IMPERSONATE ANY LOGIN 权限   
  授予后，当连接到数据库时，允许中间层进程模拟连接到它的客户端帐户。 被拒绝时，高特权的登录名可以阻止模拟其他登录名。 例如，可通过模拟其他登录名来阻止具有 CONTROL SERVER 权限的登录名。   
@@ -154,7 +154,7 @@ GO
 ```  
   
 ### <a name="b-granting-a-permission-that-has-grant-permission"></a>B. 授予具有 GRANT 权限的权限  
- 以下示例为 `ALTER ANY EVENT NOTIFICATION` 登录名 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 授予 `JanethEsteves` 权限以及为其他登录名授予该权限的权限。  
+ 以下示例为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `ALTER ANY EVENT NOTIFICATION` 授予 `JanethEsteves` 权限以及为其他登录名授予该权限的权限。  
   
 ```  
 USE master;  

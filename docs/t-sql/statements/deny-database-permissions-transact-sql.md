@@ -201,7 +201,7 @@ GO
 
 ### <a name="c-denying-view-definition-with-cascade"></a>C. 使用 CASCADE 拒绝 VIEW DEFINITION
 
-以下示例拒绝用户 `VIEW DEFINITION` 以及 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 已授予 `CarmineEs` 权限的所有主体对 `CarmineEs` 数据库的 `VIEW DEFINITION` 权限。
+以下示例拒绝用户 `CarmineEs` 以及 `CarmineEs` 已授予 `VIEW DEFINITION` 权限的所有主体对 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的 `VIEW DEFINITION` 权限。
 
 ```sql
 USE AdventureWorks2012;

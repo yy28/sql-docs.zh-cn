@@ -56,7 +56,7 @@ Connection cn = pcon.getConnection();
 UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();  
 ```  
   
- 无论连接到什么版本的服务器，getClientConnectionID 都有效，但是在  **2008 R2 及更早版本中将不会提供扩展事件日志和连接环形缓冲区上的条目**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ 无论连接到什么版本的服务器，getClientConnectionID 都有效，但是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 R2 及更早版本中将不会提供扩展事件日志和连接环形缓冲区上的条目。  
   
  如果启用记录连接 ID 的扩展事件，您可以在扩展事件日志中查找连接 ID，以查看失败是否源自服务器。 还可以针对某些连接错误在连接环形缓冲区（[在 SQL Server 2008 中使用连接环形缓冲区解决连接问题](https://go.microsoft.com/fwlink/?LinkId=207752)）中查找连接 ID。 如果在连接环形缓冲区中找不到连接 ID，可以认为是网络错误。  
   

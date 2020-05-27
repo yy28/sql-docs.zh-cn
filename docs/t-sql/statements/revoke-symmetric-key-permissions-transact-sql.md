@@ -70,7 +70,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  如果对授予了 WITH GRANT OPTION 权限的权限执行级联撤消，将同时撤消该权限的 GRANT 和 DENY 权限。  
   
- { TO | FROM } \<database_principal  >  
+ { TO | FROM } \<database_principal>  
  指定要从中撤消权限的主体。  
   
  AS \<database_principal> 指定一个主体，执行此查询的主体从该主体获得撤销该权限的权利。  

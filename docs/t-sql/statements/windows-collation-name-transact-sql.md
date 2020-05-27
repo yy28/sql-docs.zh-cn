@@ -72,12 +72,12 @@ WidthSensitivity
 省略此选项指定不区分全半角，WS 指定区分全半角  。
 
 VariationSelectorSensitivity   
-- 适用范围：从  **开始**[!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+- 适用范围：从 [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 开始 
 
 - 省略此选项指定区分不区分选择器，VSS 指定区分区分选择器  。
 
 **UTF8**  
-- 适用范围：从  **开始**[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+- 适用范围：从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始   
 
 - 指定用于符合条件的数据类型的 UTF-8 编码。 有关详细信息，请参阅 [排序规则和 Unicode 支持](../../relational-databases/collations/collation-and-unicode-support.md)。
 

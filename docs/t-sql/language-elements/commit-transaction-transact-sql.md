@@ -81,7 +81,7 @@ COMMIT [ TRAN | TRANSACTION ]
   
  如果所提交的事务是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 分布式事务，COMMIT TRANSACTION 将触发 MS DTC 使用两阶段提交协议，以便提交所有涉及该事务的服务器。 如果本地事务跨越同一 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例上的两个或多个数据库，则该实例将使用内部的两阶段提交来提交所有涉及该事务的数据库。  
   
- 如果用于嵌套事务，内部事务的提交并不释放资源，也不使其修改成为永久修改。 只有在提交了外部事务时，数据修改才具有永久性，而且资源才会被释放。 当 @@TRANCOUNT 大于 1 时，每发出一个 COMMIT TRANSACTION 命令只会使 @@TRANCOUNT 按 1 递减。 当 @@TRANCOUNT 最终递减为 0 时，将提交整个外部事务。 因为 transaction_name 被  *忽略，所以当存在显著内部事务时，发出一个引用外部事务名称的 COMMIT TRANSACTION 只会使 @* 按 1 递减[!INCLUDE[ssDE](../../includes/ssde-md.md)]@TRANCOUNT。  
+ 如果用于嵌套事务，内部事务的提交并不释放资源，也不使其修改成为永久修改。 只有在提交了外部事务时，数据修改才具有永久性，而且资源才会被释放。 当 @@TRANCOUNT 大于 1 时，每发出一个 COMMIT TRANSACTION 命令只会使 @@TRANCOUNT 按 1 递减。 当 @@TRANCOUNT 最终递减为 0 时，将提交整个外部事务。 因为 transaction_name 被 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 忽略，所以当存在显著内部事务时，发出一个引用外部事务名称的 COMMIT TRANSACTION 只会使 @@TRANCOUNT 按 1 递减。  
   
  当 @@TRANCOUNT 为 0 时，发出 COMMIT TRANSACTION 将会导致出现错误；因为没有相应的 BEGIN TRANSACTION。  
   

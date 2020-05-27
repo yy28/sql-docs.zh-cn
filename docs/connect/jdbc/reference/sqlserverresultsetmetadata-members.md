@@ -39,7 +39,7 @@ ms.locfileid: "67970528"
 |名称|说明|  
 |----------|-----------------|  
 |[getCatalogName](../../../connect/jdbc/reference/getcatalogname-method-sqlserverresultsetmetadata.md)|获取包括指定列的表的目录名称。|  
-|[getColumnClassName](../../../connect/jdbc/reference/getcolumnclassname-method-sqlserverresultsetmetadata.md)|如果调用 [SQLServerResultSet](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) 类的 [getObject](../../../connect/jdbc/reference/sqlserverresultset-class.md) 方法来从列中检索值，则返回生成其实例的 Java 类的完全限定名称。|  
+|[getColumnClassName](../../../connect/jdbc/reference/getcolumnclassname-method-sqlserverresultsetmetadata.md)|如果调用 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 [getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) 方法来从列中检索值，则返回生成其实例的 Java 类的完全限定名称。|  
 |[getColumnCount](../../../connect/jdbc/reference/getcolumncount-method-sqlserverresultsetmetadata.md)|返回结果集中的列数。|  
 |[getColumnDisplaySize](../../../connect/jdbc/reference/getcolumndisplaysize-method-sqlserverresultsetmetadata.md)|返回指定列的正常最大宽度（以字符数计）。|  
 |[getColumnLabel](../../../connect/jdbc/reference/getcolumnlabel-method-sqlserverresultsetmetadata.md)|获取在打印输出和显示屏中使用的指定列的建议标题。|  

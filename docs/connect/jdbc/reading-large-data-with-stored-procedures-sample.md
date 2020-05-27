@@ -40,7 +40,7 @@ ms.locfileid: "69027807"
 
 ## <a name="example"></a>示例
 
-在下面的示例中，示例代码建立与 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 数据库的连接。 接下来，示例代码创建示例数据并使用参数化查询更新 Production.Document 表。 然后，示例代码通过使用 [SQLServerStatement](../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md) 类的 [getResponseBuffering](../../connect/jdbc/reference/sqlserverstatement-class.md) 方法获取自适应缓冲模式，并执行 GetLargeDataValue 存储过程。 从 JDBC Driver 2.0 发行版开始，responseBuffering 连接属性默认情况下设置为“adaptive”。
+在下面的示例中，示例代码建立与 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 数据库的连接。 接下来，示例代码创建示例数据并使用参数化查询更新 Production.Document 表。 然后，示例代码通过使用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 类的 [getResponseBuffering](../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md) 方法获取自适应缓冲模式，并执行 GetLargeDataValue 存储过程。 从 JDBC Driver 2.0 发行版开始，responseBuffering 连接属性默认情况下设置为“adaptive”。
 
 最后，示例代码显示使用 OUT 参数返回的数据，同时还演示如何在流中使用 `mark` 和 `reset` 方法以重新读取数据的任何部分。
 

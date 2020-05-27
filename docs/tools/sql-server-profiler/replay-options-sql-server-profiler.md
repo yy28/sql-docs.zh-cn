@@ -74,7 +74,7 @@ ms.locfileid: "75307498"
  设置阻塞进程监视器搜索已阻塞的进程或正在阻塞的进程的频率。  
   
 ## <a name="about-the-health-monitor"></a>关于 Health Monitor  
- Health Monitor 是一个应用程序线程，用于监视重播跟踪过程中涉及的模拟进程，并结束在重播过程中阻塞的那些进程。 在“重播配置”  对话框的“高级重播选项”  选项卡中，可以指定 Health Monitor 在结束阻塞进程之前应等待的秒数（**Health Monitor 等待间隔**）。 如果将此间隔设置为 0，则在重播跟踪过程中，Health Monitor 永远不会结束模拟阻塞进程。  
+ Health Monitor 是一个应用程序线程，用于监视重播跟踪过程中涉及的模拟进程，并结束在重播过程中阻塞的那些进程。 在“重播配置”对话框的“高级重播选项”选项卡中，可以指定 Health Monitor 在结束阻塞进程之前应等待的秒数（**Health Monitor 等待间隔**）。 如果将此间隔设置为 0，则在重播跟踪过程中，Health Monitor 永远不会结束模拟阻塞进程。  
   
 ## <a name="see-also"></a>另请参阅  
  [重播跟踪](../../tools/sql-server-profiler/replay-traces.md)   

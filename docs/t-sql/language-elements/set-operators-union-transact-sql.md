@@ -36,7 +36,7 @@ ms.locfileid: "68495473"
 - **UNION ALL** - 包括重复行。
 - **UNION** - 排除重复行。
 
-UNION 操作不同于 [JOIN](../queries/from-transact-sql.md) 操作   ：
+UNION 操作不同于 [JOIN](../queries/from-transact-sql.md) 操作 ：
 
 - UNION 连接两个查询中的结果集  。 但 UNION 不会从两个表收集的列中创建单独的行  。
 - JOIN 比较两个表中的列，以创建由两个表中的列组成的结果行  。

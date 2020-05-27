@@ -40,7 +40,7 @@ public void setIntegratedSecurity(boolean enable)
  如果启用了 integratedSecurity，则为“true”  。 否则为 **false**。  
   
 ## <a name="remarks"></a>备注  
- 设置为“true”表示  **将使用 Windows 凭据来对应用程序用户进行身份验证**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 如果为“true”， **则将搜索本地计算机凭据缓存，以寻找在登录计算机或网络时已提供的凭据**[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]。 如果为“false”，则必须提供用户名和密码  。  
+ 设置为“true”表示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将使用 Windows 凭据来对应用程序用户进行身份验证。 如果为“true”，[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 则将搜索本地计算机凭据缓存，以寻找在登录计算机或网络时已提供的凭据。 如果为“false”，则必须提供用户名和密码  。  
   
 > [!NOTE]  
 >  只有 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] Windows 操作系统才支持此属性。  

@@ -25,7 +25,7 @@ ms.locfileid: "67998336"
 # <a name="updatesaredetected-method-sqlserverdatabasemetadata"></a>updatesAreDetected 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索是否可通过调用 [SQLServerResultSet](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) 类的 [rowUpdated](../../../connect/jdbc/reference/sqlserverresultset-class.md) 方法检测到可见行更新。  
+  检索是否可通过调用 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 [rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) 方法检测到可见行更新。  
   
 ## <a name="syntax"></a>语法  
   

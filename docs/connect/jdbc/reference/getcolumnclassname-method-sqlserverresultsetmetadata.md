@@ -25,7 +25,7 @@ ms.locfileid: "67952996"
 # <a name="getcolumnclassname-method-sqlserverresultsetmetadata"></a>getColumnClassName 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  如果调用 [SQLServerResultSet](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) 类的 [getObject](../../../connect/jdbc/reference/sqlserverresultset-class.md) 方法来从列中检索值，则返回生成其实例的 Java 类的完全限定名称。  
+  如果调用 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 [getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) 方法来从列中检索值，则返回生成其实例的 Java 类的完全限定名称。  
   
 ## <a name="syntax"></a>语法  
   

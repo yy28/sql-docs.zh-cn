@@ -62,7 +62,7 @@ FOR XML AUTO
   
 -   CustomerID 引用 Cust 表。 因此，创建一个 <`Cust`> 元素，CustomerID 作为其属性添加。  
   
--   接下来的三列 OrderHeader.CustomerID、OrderHeader.SaleOrderID 和 OrderHeader.Status 引用 OrderHeader 表。 因此，为 <`OrderHeader`> 元素添加 <`Cust`> 子元素，这三列作为 <`OrderHeader`> 的属性添加。  
+-   接下来的三列 OrderHeader.CustomerID、OrderHeader.SaleOrderID 和 OrderHeader.Status 引用 OrderHeader 表。 因此，为 <`Cust`> 元素添加 <`OrderHeader`> 子元素，这三列作为 <`OrderHeader`> 的属性添加。  
   
 -   接着，Cust.CustomerType 列再次引用 Cust 表，该表已由 Cust.CustomerID 列标识。 因此，不创建新元素， 而是为以前创建的 <`Cust`> 元素添加 CustomerType 属性。  
   

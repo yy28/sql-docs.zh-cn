@@ -186,10 +186,10 @@ CREATE SPATIAL INDEX index_name
  **object>::=\<**     
  要为其建立索引的完全限定对象或非完全限定对象。  
   
- database_name        
+ database_name      
  数据库的名称。  
   
- schema_name       
+ schema_name     
  表所属架构的名称。  
   
  *table_name*      
@@ -325,7 +325,7 @@ PAD_INDEX 选项只有在指定了 FILLFACTOR 时才有用，因为 PAD_INDEX �
 FILLFACTOR =fillfactor       
  **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- 指定一个百分比，指示在[!INCLUDE[ssDE](../../includes/ssde-md.md)]创建或重新生成索引的过程中，应将每个索引页面的叶级填充到什么程度。 fillfactor 必须是 1 到 100 之间的整数  。 默认值为 0。 如果 fillfactor 为 100 或 0，*会创建完全填充叶级页的索引*[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+ 指定一个百分比，指示在[!INCLUDE[ssDE](../../includes/ssde-md.md)]创建或重新生成索引的过程中，应将每个索引页面的叶级填充到什么程度。 fillfactor 必须是 1 到 100 之间的整数  。 默认值为 0。 如果 fillfactor 为 100 或 0，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会创建完全填充叶级页的索引。  
   
 > [!NOTE]  
 > 填充因子的值 0 和 100 在所有方面都是相同的。
@@ -516,7 +516,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col2
 ```  
   
 ### <a name="c-creating-a-spatial-index-on-a-geometry-column"></a>C. 对 geometry 列创建空间索引
-以下示例对 `SIndx_SpatialTable_geometry_col3` 表中的 `geometry_col` 列创建第三个空间索引 `SpatialTable`。 该示例使用默认分割方案。 该示例指定了边界框，并为第三和第四级网格使用不同的单元格密度，同时指定每个对象采用默认单元格数。  
+以下示例对 `SpatialTable` 表中的 `geometry_col` 列创建第三个空间索引 `SIndx_SpatialTable_geometry_col3`。 该示例使用默认分割方案。 该示例指定了边界框，并为第三和第四级网格使用不同的单元格密度，同时指定每个对象采用默认单元格数。  
   
 ```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col3  

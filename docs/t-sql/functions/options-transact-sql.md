@@ -47,9 +47,9 @@ ms.locfileid: "73982472"
   
  可以使用 SET 语句更改特定用户会话的语言和查询处理选项。 “\@\@ 选项”只能检测到设置为 ON 或 OFF 的选项  。  
   
- “\@\@ 选项”函数返回选项的位图，转换为基数为 10 的（十进制）整数  。 主题[配置 user options 服务器配置选项](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)提供的表中介绍了位设置的存放位置。  
+ “\@\@ 选项”函数返回选项的位图，转换为基数为 10 的（十进制）整数。 主题[配置 user options 服务器配置选项](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)提供的表中介绍了位设置的存放位置。  
   
- 要解码“\@\@ 选项”值，将“\@\@选项返回的整数转换为二进制，然后查找[配置用户选择服务器配置选项](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)中的表中的值   。 例如，如果 `SELECT @@OPTIONS;` 返回值 `5496`，使用 Windows 编程人员计算器 (calc.exe) 将十进制 `5496` 转换为二进制  。 结果为 `1010101111000`。 最右边的字符（二进制 1、2 和 4）为 0，指示表中的前三项为关闭状态。 查询该表，可以看到这三项是 DISABLE_DEF_CNST_CHK、IMPLICIT_TRANSACTIONS 和 CURSOR_CLOSE_ON_COMMIT    。 下一项（`1000` 位置中的 ANSI_WARNINGS）为启用状态  。 继续向左处理位图并向下处理选项列表。 如果最左边的选项是 0，则它们被类型转换截断。 位图 `1010101111000` 实际上是 `001010101111000`，代表全部 15 个选项。  
+ 要解码“\@\@ 选项”值，将“\@\@选项返回的整数转换为二进制，然后查找[配置用户选择服务器配置选项](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)中的表中的值 。 例如，如果 `SELECT @@OPTIONS;` 返回值 `5496`，使用 Windows 编程人员计算器 (calc.exe) 将十进制 `5496` 转换为二进制。 结果为 `1010101111000`。 最右边的字符（二进制 1、2 和 4）为 0，指示表中的前三项为关闭状态。 查询该表，可以看到这三项是 DISABLE_DEF_CNST_CHK、IMPLICIT_TRANSACTIONS 和 CURSOR_CLOSE_ON_COMMIT    。 下一项（`1000` 位置中的 ANSI_WARNINGS）为启用状态。 继续向左处理位图并向下处理选项列表。 如果最左边的选项是 0，则它们被类型转换截断。 位图 `1010101111000` 实际上是 `001010101111000`，代表全部 15 个选项。  
   
 ## <a name="examples"></a>示例  
   

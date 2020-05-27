@@ -48,7 +48,7 @@ ms.locfileid: "68026409"
   
 此函数是 ANSI SQL，等价于 [GETDATE](../../t-sql/functions/getdate-transact-sql.md)。
   
-有关所有 [ 日期和时间数据类型及函数的概述，请参阅](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)日期和时间数据类型及函数[!INCLUDE[tsql](../../includes/tsql-md.md)]。
+有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   

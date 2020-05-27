@@ -24,7 +24,7 @@ ms.locfileid: "68006694"
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-此示例与 [指定 ELEMENTXSINIL 指令](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) 示例几乎相同。 唯一的差别在于查询指定的是 **ID** 和 **IDREF** 指令。 这些指令覆盖 < **> 和 <** > 元素中 `OrderHeader`SalesPersonID`OrderDetail` 属性的类型。 这会形成文档内链接。 您需要使用架构才能查看被覆盖的类型。 因此，该查询在 FOR XML 子句中指定 **XMLDATA** 选项来检索架构。  
+此示例与 [指定 ELEMENTXSINIL 指令](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) 示例几乎相同。 唯一的差别在于查询指定的是 **ID** 和 **IDREF** 指令。 这些指令覆盖 <`OrderHeader`> 和 <`OrderDetail`> 元素中 **SalesPersonID** 属性的类型。 这会形成文档内链接。 您需要使用架构才能查看被覆盖的类型。 因此，该查询在 FOR XML 子句中指定 **XMLDATA** 选项来检索架构。  
   
 ```sql
 USE AdventureWorks2012;  
@@ -79,7 +79,7 @@ ORDER BY [OrderHeader!1!SalesOrderID!id],
 FOR XML EXPLICIT, XMLDATA;
 ```  
   
- 下面是部分结果： 请注意，在架构中，**ID** 和 **IDREF** 指令已经覆盖了 < **> 和 <** > 元素中 `OrderHeader`SalesOrderID`OrderDetail` 属性的数据类型。 如果删除这些指令，架构将返回这些属性的原始类型。  
+ 下面是部分结果： 请注意，在架构中，**ID** 和 **IDREF** 指令已经覆盖了 <`OrderHeader`> 和 <`OrderDetail`> 元素中 **SalesOrderID** 属性的数据类型。 如果删除这些指令，架构将返回这些属性的原始类型。  
   
 ```xml
 <Schema

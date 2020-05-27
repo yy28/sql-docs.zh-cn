@@ -25,7 +25,7 @@ ms.locfileid: "67969262"
 # <a name="supportsmultipleopenresults-method-sqlserverdatabasemetadata"></a>supportsMultipleOpenResults 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象能否同时返回多个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 对象。  
+  检索 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 对象能否同时返回多个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
   
 ## <a name="syntax"></a>语法  
   

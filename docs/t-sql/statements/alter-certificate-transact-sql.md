@@ -95,9 +95,9 @@ ALTER CERTIFICATE certificate_name
  指定解密私钥所需的密码。  
   
  ENCRYPTION BY PASSWORD = new_password   
- 指定用于对数据库中的证书私钥进行加密的密码。 new_password 必须符合运行  *实例的计算机的 Windows 密码策略要求*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关详细信息，请参阅 [Password Policy](../../relational-databases/security/password-policy.md)。  
+ 指定用于对数据库中的证书私钥进行加密的密码。 new_password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。 有关详细信息，请参阅 [Password Policy](../../relational-databases/security/password-policy.md)。  
   
- ACTIVE FOR BEGIN_DIALOG  **{ ON | OFF }=**  
+ ACTIVE FOR BEGIN_DIALOG = { ON | OFF }  
  使证书可用于 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对话会话的发起方。  
   
 ## <a name="remarks"></a>备注  

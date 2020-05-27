@@ -67,7 +67,7 @@ varbinary（最大大小为 8,000 个字节）  。
 `DECRYPTBYCERT` 需要对证书具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  
-此示例从 `[AdventureWorks2012].[ProtectedData04]` 选择行，选择范围标记为最初使用证书 `JanainaCert02` 加密的数据。 该示例首先使用证书 `JanainaCert02` 的密码解密证书 `pGFD4bb925DGvbd2439587y` 的私钥。 然后使用此私钥解密已加密文本。 该示例将解密后的数据从 varbinary 转换为 nvarchar   。  
+此示例从 `[AdventureWorks2012].[ProtectedData04]` 选择行，选择范围标记为最初使用证书 `JanainaCert02` 加密的数据。 该示例首先使用证书 `pGFD4bb925DGvbd2439587y` 的密码解密证书 `JanainaCert02` 的私钥。 然后使用此私钥解密已加密文本。 该示例将解密后的数据从 varbinary 转换为 nvarchar   。  
 
 ```  
 SELECT convert(nvarchar(max), DecryptByCert(Cert_Id('JanainaCert02'),  

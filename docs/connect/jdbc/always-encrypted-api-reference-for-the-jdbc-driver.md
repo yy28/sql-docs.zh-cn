@@ -156,7 +156,7 @@ microsoft.sql.Types  类中的新类型
 
 |名称|说明|  
 |----------|-----------------|  
-|DATETIME、SMALLDATETIME、MONEY、SMALLMONEY、GUID|使用  **API 方法将参数值发送到加密**`setObject()/updateObject()`列 datetime、smalldatetime、money、smallmoney、uniqueidentifier 时，将这些类型用作目标 SQL 类型。|  
+|DATETIME、SMALLDATETIME、MONEY、SMALLMONEY、GUID|使用 `setObject()/updateObject()` API 方法将参数值发送到加密列 datetime、smalldatetime、money、smallmoney、uniqueidentifier 时，将这些类型用作目标 SQL 类型。|  
   
   
  **SQLServerStatementColumnEncryptionSetting Enum**  

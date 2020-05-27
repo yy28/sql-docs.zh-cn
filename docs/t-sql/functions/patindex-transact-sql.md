@@ -70,7 +70,7 @@ PATINDEX 基于输入的排序规则执行比较。 若要以指定排序规则�
 ## <a name="examples"></a>示例  
   
 ### <a name="a-simple-patindex-example"></a>A. 简单 PATINDEX 示例  
- 以下示例检查字符 `interesting data` 起始位置的短字符串 (`ter`)。  
+ 以下示例检查字符 `ter` 起始位置的短字符串 (`interesting data`)。  
   
 ```sql  
 SELECT position = PATINDEX('%ter%', 'interesting data');  
@@ -85,7 +85,7 @@ position
 ```
   
 ### <a name="b-using-a-pattern-with-patindex"></a>B. 在 PATINDEX 中使用模式  
-以下示例查找模式 `ensure` 在 `DocumentSummary` 数据库的 `Document` 表中 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 列特定行中的开始位置。  
+以下示例查找模式 `ensure` 在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `DocumentSummary` 表中 `Document` 列特定行中的开始位置。  
   
 ```sql  
 SELECT position = PATINDEX('%ensure%',DocumentSummary)  

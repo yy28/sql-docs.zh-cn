@@ -55,7 +55,7 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
   
 ## <a name="arguments"></a>参数  
  IF EXISTS   
- 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）  。  
+ 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
   
  有条件地删除过程（仅当其已存在时）。  
   

@@ -45,7 +45,7 @@ ms.locfileid: "71295106"
   
 -   .tmp 调试转储文件。 这是一个文本格式文件。  
   
- 默认情况下，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将这些文件存储在 *drive>:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 文件夹中\<* 。  
+ 默认情况下，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将这些文件存储在 \<drive>:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 文件夹中。  
   
  下表仅介绍 .tmp 文件中的某些部分。 .tmp 文件还包含该表中未列出的其他数据。  
   

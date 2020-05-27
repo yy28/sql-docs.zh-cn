@@ -38,7 +38,7 @@ ms.locfileid: "69028227"
   
  可以通过使用 sendTimeAsDatetime 连接属性配置如何发送 java.sql.Time 值  。 有关详细信息，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。  
   
- 可以通过编程使用 [SQLServerDataSource.setSendTimeAsDatetime](../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md) 修改 sendTimeAsDatetime 连接属性的值  。  
+ 可以通过编程使用 [SQLServerDataSource.setSendTimeAsDatetime](../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md) 修改 sendTimeAsDatetime 连接属性的值。  
   
  低于 [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本不支持 time  数据类型，因此使用 java.sql.Time 的应用程序通常会将 java.sql.Time 值作为 datetime  或 smalldatetime  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型进行存储。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "69028227"
   
  为了确保无论 sendTimeAsDatetime 连接属性的默认值为什么，应用程序都能正常工作，可以  ：  
   
--   在使用 time[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型时使用 java.sql.Time  。  
+-   在使用 time[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型时使用 java.sql.Time。  
   
 -   处理 datetime  、smalldatetime  和 datetime2  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型时，请使用 java.sql.Timestamp。  
   

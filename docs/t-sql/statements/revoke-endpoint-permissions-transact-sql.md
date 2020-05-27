@@ -51,7 +51,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  permission   
  指定可对端点授予的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- ON ENDPOINT ::endpoint_name    
+ ON ENDPOINT ::endpoint_name  
  指定要授予对其的权限的端点。 需要使用作用域限定符 (::)  。  
   
  { FROM | TO } \<server_principal> 指定要从中撤消权限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。  
@@ -104,7 +104,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="examples"></a>示例  
   
 ### <a name="a-revoking-view-definition-permission-on-an-endpoint"></a>A. 撤消对端点的 VIEW DEFINITION 权限  
- 以下示例从 `VIEW DEFINITION` 登录名 `Mirror7` 中撤消对端点 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `ZArifin` 权限。  
+ 以下示例从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `VIEW DEFINITION` 中撤消对端点 `Mirror7` 的 `ZArifin` 权限。  
   
 ```  
 USE master;  
@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>B. 使用 CASCADE 选项撤消 TAKE OWNERSHIP 权限  
- 以下示例从 `TAKE OWNERSHIP` 用户 `Shipping83` 以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 授予对 `PKomosinski` 的 `PKomosinski` 权限的所有主体中撤消对终结点 `TAKE OWNERSHIP` 的 `Shipping83` 权限。  
+ 以下示例从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户 `PKomosinski` 以及 `PKomosinski` 授予对 `Shipping83` 的 `TAKE OWNERSHIP` 权限的所有主体中撤消对终结点 `Shipping83` 的 `TAKE OWNERSHIP` 权限。  
   
 ```  
 USE master;  

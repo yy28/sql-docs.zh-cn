@@ -65,7 +65,7 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
   
  由此系统函数返回的结果集将使用当前数据库的排序规则。  
   
- 如果未指定 database_id，则  *假定 object_id 在当前数据库上下文中*[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  。 在其他数据库中引用 object_id 的查询将返回 NULL 或错误的结果  。 例如，以下查询中当前数据库上下文是 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]将尝试返回在该数据库（而非查询的 FROM 子句中指定的数据库）中指定的对象 ID 的对象架构名称。 因此，会返回不正确的信息。  
+ 如果未指定 database_id，则 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 假定 object_id 在当前数据库上下文中 。 在其他数据库中引用 object_id 的查询将返回 NULL 或错误的结果  。 例如，以下查询中当前数据库上下文是 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]将尝试返回在该数据库（而非查询的 FROM 子句中指定的数据库）中指定的对象 ID 的对象架构名称。 因此，会返回不正确的信息。  
   
 ```sql
 SELECT DISTINCT OBJECT_SCHEMA_NAME(object_id)  

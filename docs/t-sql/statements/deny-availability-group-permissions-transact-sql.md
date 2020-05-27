@@ -98,7 +98,7 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ## <a name="examples"></a>示例  
   
 ### <a name="a-denying-view-definition-permission-on-an-availability-group"></a>A. 拒绝可用性组的 VIEW DEFINITION 权限  
- 以下示例拒绝 `VIEW DEFINITION` 登录名 `MyAg` 对可用性组 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `ZArifin` 权限。  
+ 以下示例拒绝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `VIEW DEFINITION` 对可用性组 `MyAg` 的 `ZArifin` 权限。  
   
 ```  
 USE master;  
@@ -107,7 +107,7 @@ GO
 ```  
   
 ### <a name="b-denying-take-ownership-permission-with-the-cascade-option"></a>B. 使用 CASCADE 选项拒绝 TAKE OWNERSHIP 权限  
- 以下示例使用 `TAKE OWNERSHIP` 选项来拒绝 `MyAg` 用户 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对可用性组 `PKomosinski` 的 `CASCADE` 权限。  
+ 以下示例使用 `TAKE OWNERSHIP` 选项来拒绝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户 `MyAg` 对可用性组 `PKomosinski` 的 `CASCADE` 权限。  
   
 ```  
 USE master;  

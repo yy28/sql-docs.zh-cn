@@ -26,7 +26,7 @@ ms.locfileid: "67955120"
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索是否可通过调用 [SQLServerResultSet](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) 类的 [rowDeleted](../../../connect/jdbc/reference/sqlserverresultset-class.md) 方法检测到可见行删除。  
+  检索是否可通过调用 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) 方法检测到可见行删除。  
   
 ## <a name="syntax"></a>语法  
   

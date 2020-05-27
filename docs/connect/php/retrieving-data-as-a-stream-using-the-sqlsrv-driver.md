@@ -30,7 +30,7 @@ ms.locfileid: "67992898"
   
 2.  使用 [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) 在结果集中移动到下一行。  
   
-3.  使用 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 从行中检索字段。 通过将 SQLSRV_PHPTYPE_STREAM( **) 用作函数调用中的第三个函数，指定数据将以流的形式进行检索<encoding>** 。 此表列出了用于指定编码及其描述符的常量：  
+3.  使用 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 从行中检索字段。 通过将 SQLSRV_PHPTYPE_STREAM(<encoding>) 用作函数调用中的第三个函数，指定数据将以流的形式进行检索。 此表列出了用于指定编码及其描述符的常量：  
   
     |SQLSRV 常量|说明|  
     |-------------------|---------------|  

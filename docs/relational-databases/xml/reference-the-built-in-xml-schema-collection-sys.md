@@ -148,7 +148,7 @@ data(/ns:root[1]) instance of sqltypes:varchar?')
 GO  
 ```  
   
- 由于 <`instance of sqltypes:varchar?`> 元素值的类型是根据与 `root` 变量关联的架构从 **varchar** 中派生，因此，`@var` 表达式返回 TRUE。  
+ 由于 <`root`> 元素值的类型是根据与 `@var` 变量关联的架构从 **varchar** 中派生，因此，`instance of sqltypes:varchar?` 表达式返回 TRUE。  
   
 ## <a name="see-also"></a>另请参阅  
  [XML 架构集合 (SQL Server)](../../relational-databases/xml/xml-schema-collections-sql-server.md)  

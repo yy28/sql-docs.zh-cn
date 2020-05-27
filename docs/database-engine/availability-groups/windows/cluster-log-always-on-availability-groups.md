@@ -46,7 +46,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
 4.  单击“属性”  选项卡。  
   
-5.  修改“VerboseLogging”属性  。 默认情况下，VerboseLogging 设置为 **，它会报告信息、警告和错误**`0`。 可以将“VerboseLogging”从 **设置为**`0``2`。  
+5.  修改“VerboseLogging”属性  。 默认情况下，VerboseLogging 设置为 `0`，它会报告信息、警告和错误。 可以将“VerboseLogging”从 `0` 设置为 `2`。  
   
 6.  单击“确定”。   
   

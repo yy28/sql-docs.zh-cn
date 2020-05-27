@@ -41,9 +41,9 @@ XQuery
 本节提供使用 xml 数据类型的 query() 方法的示例  。  
   
 ### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>A. 对 xml 类型的变量使用 query() 方法  
-以下示例声明了 xml 类型的变量 **myDoc 并将 XML 实例分配给它\@**  。 然后使用 query() 方法对文档指定 XQuery  。  
+以下示例声明了 xml 类型的变量 \@myDoc 并将 XML 实例分配给它 。 然后使用 query() 方法对文档指定 XQuery  。  
   
-该查询检索 <`Features`> 元素的 <`ProductDescription`> 子元素：  
+该查询检索 <`ProductDescription`> 元素的 <`Features`> 子元素：  
   
 ```  
 declare @myDoc xml  
@@ -86,7 +86,7 @@ declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-
   
 -   CatalogDescription 列是类型化 xml  列，这意味着它有关联的架构集合。 在 [XQuery Prolog](../../xquery/modules-and-prologs-xquery-prolog.md) 中，namespace  关键字定义稍后用于查询主体的前缀。  
   
--   query() 方法构造 XML，即包含 ProductModelID 属性的 < **> 元素，其中 ProductModelID 属性值是从数据库中检索的**`Product`   。 有关 XML 构造的详细信息，请参阅 [XML 构造 (XQuery)](../../xquery/xml-construction-xquery.md)。  
+-   query() 方法构造 XML，即包含 ProductModelID 属性的 <`Product`> 元素，其中 ProductModelID 属性值是从数据库中检索的  。 有关 XML 构造的详细信息，请参阅 [XML 构造 (XQuery)](../../xquery/xml-construction-xquery.md)。  
   
 -   WHERE 子句中的 [exist() 方法（XML 数据类型）](../../t-sql/xml/exist-method-xml-data-type.md)仅查找在 XML 中包含 <`Warranty`> 元素的行。 同样，namespace  关键字定义两个命名空间前缀。  
   

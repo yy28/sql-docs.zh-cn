@@ -31,7 +31,7 @@ ms.locfileid: "68121925"
 # <a name="open-transact-sql"></a>OPEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  打开 [!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器游标，然后通过执行在 DECLARE CURSOR 或 SET [!INCLUDE[tsql](../../includes/tsql-md.md)]cursor_variable*语句中指定的* 语句填充游标。  
+  打开 [!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器游标，然后通过执行在 DECLARE CURSOR 或 SET *cursor_variable* 语句中指定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句填充游标。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

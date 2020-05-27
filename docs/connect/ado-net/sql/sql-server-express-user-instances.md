@@ -113,7 +113,7 @@ private static void OpenSqlConnection()
 ```  
   
 > [!NOTE]
->  在 SQL Server 中运行的公共语言运行时 (CLR) 代码不支持用户实例。 如果在连接字符串中有 <xref:System.InvalidOperationException> 的 `Open` 上调用 <xref:Microsoft.Data.SqlClient.SqlConnection>，将引发 `User Instance=true`。  
+>  在 SQL Server 中运行的公共语言运行时 (CLR) 代码不支持用户实例。 如果在连接字符串中有 `User Instance=true` 的 <xref:Microsoft.Data.SqlClient.SqlConnection> 上调用 `Open`，将引发 <xref:System.InvalidOperationException>。  
   
 ## <a name="lifetime-of-a-user-instance-connection"></a>用户实例连接的生存期  
 与作为服务运行的 SQL Server 版本不同，SQL Server Express 实例无需手动启动和停止。 用户每次登录并连接到用户实例时，如果用户实例尚未运行，则启动该实例。 用户实例数据库设置了 `AutoClose` 选项，以便在一段非活动期后自动关闭数据库。 在实例的最后一个连接关闭后，启动的 sqlservr.exe 进程将在有限的超时期限内持续运行，因此，如果在超时过期之前打开另一个连接，无需重新启动。 如果在超时期限过期之前没有打开新连接，用户实例将自动关闭。 父实例的系统管理员可为用户实例设置超时期限的持续时间，方法为：使用 sp_configure 更改“用户实例超时”选项   。 默认值为 60 分钟。  

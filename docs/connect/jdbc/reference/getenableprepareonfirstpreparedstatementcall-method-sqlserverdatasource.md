@@ -29,7 +29,7 @@ public boolean getEnablePrepareOnFirstPreparedStatementCall();
 ```  
   
 ## <a name="return-value"></a>返回值  
- 返回 enablePrepareOnFirstPreparedStatementCall  连接属性的布尔  值。  
+ 返回 enablePrepareOnFirstPreparedStatementCall 连接属性的布尔值。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

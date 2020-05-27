@@ -57,7 +57,7 @@ ms.locfileid: "75501911"
 ## <a name="configure-the-power-query-connection-manager"></a>配置 Power Query 连接管理器
 
 在 SSDT 上使用 Power Query 源设计数据流时，可以通过以下方式创建新的 Power Query 连接管理器：
-- 在选择“添加  /检测数据源”  按钮并从下拉菜单选择“<New connection...>”  后（如上所述），在 Power Query Source 的“连接管理器”  选项卡上间接创建它。
+- 在选择“添加/检测数据源”按钮并从下拉菜单选择“<New connection...>”后（如上所述），在 Power Query Source 的“连接管理器”选项卡上间接创建它。
 - 通过右键单击程序包的“连接管理器”  面板，然后从下拉菜单选择“新建连接...”  ，直接创建它。
 
 ![PQ 源连接管理器面板“添加”](media/power-query-source/pq-source-connection-managers-panel-add.png)
@@ -82,7 +82,7 @@ ms.locfileid: "75501911"
 
 ### <a name="current-limitations"></a>当前限制
 
--   暂无法在 Azure-SSIS IR 上使用“Oracle”  数据源，因为无法在其上安装 Oracle ADO.NET 驱动程序，所以请暂时改为安装 Oracle ODBC 驱动程序，并使用“ODBC”  数据源连接到 Oracle，具体请参阅[自定义 Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 一文中的“ORACLE STANDARD ODBC”  示例。
+-   暂无法在 Azure-SSIS IR 上使用“Oracle”数据源，因为无法在其上安装 Oracle ADO.NET 驱动程序，所以请暂时改为安装 Oracle ODBC 驱动程序，并使用“ODBC”数据源连接到 Oracle，具体请参阅[自定义 Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 一文中的“ORACLE STANDARD ODBC”示例。
 
 -   暂无法在经过自定义设置的 Azure-SSIS IR 上使用“Web”  数据源，所以请暂时在未经过自定义设置的 Azure-SSIS IR 上使用它。
 

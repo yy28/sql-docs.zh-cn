@@ -45,7 +45,7 @@ public void setClientInfo (java.lang.String name,
 ## <a name="remarks"></a>备注  
  此 setClientInfo 方法是由 java.sql.Connection 接口中的 setClientInfo 方法指定的。  
   
- [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 不支持任何客户端信息属性。 在 2.0 JDBC 驱动程序中，此方法生成属性的警告。 应用程序应使用 [SQLServerConnection](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md) 的 [getWarnings](../../../connect/jdbc/reference/sqlserverconnection-class.md) 方法来检索警告。  
+ [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 不支持任何客户端信息属性。 在 2.0 JDBC 驱动程序中，此方法生成属性的警告。 应用程序应使用 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 的 [getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md) 方法来检索警告。  
   
 ## <a name="see-also"></a>另请参阅  
  [setClientInfo 方法 &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/setclientinfo-method-sqlserverconnection.md)   

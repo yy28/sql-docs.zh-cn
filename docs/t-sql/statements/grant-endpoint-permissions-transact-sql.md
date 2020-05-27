@@ -51,7 +51,7 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  permission   
  指定可对端点授予的权限。 有关权限的列表，请参阅本主题后面的“备注”部分。  
   
- ON ENDPOINT ::endpoint_name    
+ ON ENDPOINT ::endpoint_name  
  指定要授予对其的权限的端点。 需要使用作用域限定符 (::)  。  
   
  TO \<server_principal>  
@@ -105,7 +105,7 @@ GO
 ```  
   
 ### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>B. 使用 GRANT OPTION 授予 TAKE OWNERSHIP 权限  
- 以下示例使用 `TAKE OWNERSHIP`，将对端点 `Shipping83` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 权限授予 `PKomosinski` 用户 `GRANT OPTION`。  
+ 以下示例使用 `TAKE OWNERSHIP`，将对端点 `Shipping83` 的 `PKomosinski` 权限授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户 `GRANT OPTION`。  
   
 ```  
 USE master;  

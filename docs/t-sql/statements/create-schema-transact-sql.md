@@ -123,7 +123,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  若要允许基于 Windows 组的用户创建和拥有对象，此行为很有必要。 但这种行为可能将导致意外创建架构和用户。 为了避免隐式创建用户和架构，请尽可能显式创建数据库主体和分配默认架构。 或者，在数据库中创建对象时，使用由两部分或三部分组成的对象名称显式声明现有架构。  
 
 > [!NOTE]
->  不能在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上隐式创建 Azure Active Directory 用户。 从外部提供程序创建 Azure AD 用户必须检查 AAD 中的用户状态，因此创建用户将会失败，并出现错误 2760：指定的架构名称 " **\<>" 不存在或不具有使用权限user_name@domain** 。 然后出现错误 2759：由于前面的错误，CREATE SCHEMA 失败  。 要解决这些错误，请首先从外部提供程序创建 Azure AD 用户，然后重新运行创建该对象的语句。
+>  不能在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上隐式创建 Azure Active Directory 用户。 从外部提供程序创建 Azure AD 用户必须检查 AAD 中的用户状态，因此创建用户将会失败，并出现错误 2760：指定的架构名称 "\<user_name@domain>" 不存在或不具有使用权限。 然后出现错误 2759：由于前面的错误，CREATE SCHEMA 失败  。 要解决这些错误，请首先从外部提供程序创建 Azure AD 用户，然后重新运行创建该对象的语句。
  
   
 ## <a name="deprecation-notice"></a>不推荐使用的声明  
@@ -171,7 +171,7 @@ GO
 ```  
   
 ### <a name="c-setting-the-owner-of-a-schema"></a>C. 设置架构的所有者  
- 下面的示例将创建由 `Production` 拥有的 `Mary` 架构。  
+ 下面的示例将创建由 `Mary` 拥有的 `Production` 架构。  
   
 ```  
 CREATE SCHEMA Production AUTHORIZATION [Contoso\Mary];  

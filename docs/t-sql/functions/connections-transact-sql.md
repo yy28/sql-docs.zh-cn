@@ -47,7 +47,7 @@ ms.locfileid: "68132083"
 ## <a name="remarks"></a>备注  
 连接与用户不同。 应用程序可以打开多个与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接，而不需要用户观察这些连接。
   
-为包含几个  **统计信息的报表运行“sp_monitor”** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，包括试图连接统计信息。
+为包含几个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 统计信息的报表运行“sp_monitor”，包括试图连接统计信息。
   
 @@MAX_CONNECTIONS 是允许同时连接到服务器的最大连接数。 @@CONNECTIONS 随每次登录尝试而增加，因此 @@CONNECTIONS 可以超过 @@MAX_CONNECTIONS。
   

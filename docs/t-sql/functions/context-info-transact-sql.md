@@ -31,7 +31,7 @@ ms.locfileid: "68132065"
 # <a name="context_info--transact-sql"></a>CONTEXT_INFO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-此函数返回通过使用 [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) 语句为当前会话或批处理设置的“context_info”  值。
+此函数返回通过使用 [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) 语句为当前会话或批处理设置的“context_info”值。
   
 ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   

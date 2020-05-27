@@ -59,7 +59,7 @@ WHILE Boolean_expression
  *Boolean_expression*  
  返回 TRUE 或 FALSE 的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)   。 如果布尔表达式中含有 SELECT 语句，则必须用括号将 SELECT 语句括起来。  
   
- {sql_statement*statement_block}*  |    
+ {sql_statement | statement_block}   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或用语句块定义的语句分组。 若要定义语句块，请使用控制流关键字 BEGIN 和 END。  
   
  BREAK  

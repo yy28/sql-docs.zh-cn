@@ -30,7 +30,7 @@ ms.locfileid: "68893685"
 更改一个 Resource Governor 外部池，该池用于指定外部进程可使用的资源。 
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-对于 [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 中的[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，外部池控制 `rterm.exe`、`BxlServer.exe` 以及它们生成的其他进程。
+对于 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中的[!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]，外部池控制 `rterm.exe`、`BxlServer.exe` 以及它们生成的其他进程。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -83,7 +83,7 @@ MAX_PROCESSES =value
 
 ## <a name="remarks"></a>备注
 
-执行 [!INCLUDE[ssDE](../../includes/ssde-md.md)]ALTER RESOURCE GOVERNOR RECONFIGURE[ 语句时，](../../t-sql/statements/alter-resource-governor-transact-sql.md)实现资源池。
+执行 [ALTER RESOURCE GOVERNOR RECONFIGURE](../../t-sql/statements/alter-resource-governor-transact-sql.md) 语句时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]实现资源池。
 
 有关资源池的常规信息，请参阅 [Resource Governor 资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)、[sys.resource_governor_external_resource_pools (Transact-SQL)](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md) 和 [sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)。  
 

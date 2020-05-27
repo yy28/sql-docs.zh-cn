@@ -76,7 +76,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 ```
 
 > [!NOTE]
-> 当由于 PHP 的[浮点数](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)具有有限精确度而将值绑定到[十进制或数值列](https://php.net/manual/en/language.types.float.php)以确保精确度和准确度时，建议将字符串用作输入。 这同样适用于 bigint 列，尤其是在值超出[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)范围的情况下。
+> 当由于 PHP 的[浮点数](https://php.net/manual/en/language.types.float.php)具有有限精确度而将值绑定到[十进制或数值列](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)以确保精确度和准确度时，建议将字符串用作输入。 这同样适用于 bigint 列，尤其是在值超出[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)范围的情况下。
 
 ## <a name="example"></a>示例  
 此代码示例演示如何将十进制值作为输入参数进行绑定。  

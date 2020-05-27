@@ -45,7 +45,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
   
 ## <a name="arguments"></a>参数  
  *database_name*  
- 在其中创建远程表的数据库。 database_name 是  *数据库*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 默认情况下，用户使用默认数据库登录到目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
+ 在其中创建远程表的数据库。 database_name 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。 默认情况下，用户使用默认数据库登录到目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
  *schema_name*  
  新表的架构。 默认情况下，用户使用默认架构登录到目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
@@ -126,7 +126,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
 ## <a name="security"></a>安全性  
  CREATE REMOTE TABLE 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接到远程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，而不使用 Windows 身份验证。  
   
- 除 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 端口、管理端口和托管端口外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 面向外部的网络必须启用防火墙。  
+ 除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 端口、管理端口和托管端口外，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 面向外部的网络必须启用防火墙。  
   
  为了帮助防止数据意外丢失或损坏，用于从设备复制到目标数据库的用户帐户应仅具有对目标数据库的最低要求的权限。  
   
@@ -135,7 +135,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
 ##  <a name="examples"></a><a name="Examples"></a> 示例  
   
 ### <a name="a-creating-a-remote-table"></a>A. 创建远程表  
- 此示例在数据库 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和架构 `MyOrdersTable` 上创建名为 `OrderReporting` 的 `Orders` SMP 远程表。 `OrderReporting` 数据库在名为 `SQLA` 的服务器上，该服务器侦听默认端口 1433。 连接到服务器时使用用户 `David` 的凭据，密码为 `e4n8@3`。  
+ 此示例在数据库 `OrderReporting` 和架构 `Orders` 上创建名为 `MyOrdersTable` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP 远程表。 `OrderReporting` 数据库在名为 `SQLA` 的服务器上，该服务器侦听默认端口 1433。 连接到服务器时使用用户 `David` 的凭据，密码为 `e4n8@3`。  
   
 ```  
 CREATE REMOTE TABLE OrderReporting.Orders.MyOrdersTable  

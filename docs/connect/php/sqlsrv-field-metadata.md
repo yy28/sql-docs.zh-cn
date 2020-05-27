@@ -128,7 +128,7 @@ sqlsrv_close($conn);
 
 ## <a name="sensitivity-data-classification-metadata"></a>敏感度数据分类元数据
 
-版本 5.8.0 中引入了新选项 `DataClassification`，用户可以使用该选项通过 [（需要 Microsoft ODBC Driver 17.4.2 或更高版本）来访问 Microsoft SQL Server 2019 中的](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)敏感度数据分类元数据`sqlsrv_field_metadata`。
+版本 5.8.0 中引入了新选项 `DataClassification`，用户可以使用该选项通过 `sqlsrv_field_metadata`（需要 Microsoft ODBC Driver 17.4.2 或更高版本）来访问 Microsoft SQL Server 2019 中的[敏感度数据分类元数据](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)。
 
 默认情况下，选项 `DataClassification` 为 `false`，但设置为 `true` 后，将使用敏感度数据分类元数据（如果存在）填充 `sqlsrv_field_metadata` 返回的数组。 
 

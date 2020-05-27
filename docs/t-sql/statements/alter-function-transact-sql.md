@@ -216,15 +216,15 @@ RETURNS return_data_type
   
  一个函数最多可以有 2,100 个参数。 执行函数时，如果未定义参数的默认值，则用户必须提供每个已声明参数的值。  
   
- 通过将 at 符号 (@) 用作第一个字符来指定参数名称  。 参数名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 参数是对应于函数的局部参数；其他函数中可使用相同的参数名称。 参数只能代替常量，而不能用于代替表名、列名或其他数据库对象的名称。  
+ 通过将 at 符号 (@) 用作第一个字符来指定参数名称。 参数名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 参数是对应于函数的局部参数；其他函数中可使用相同的参数名称。 参数只能代替常量，而不能用于代替表名、列名或其他数据库对象的名称。  
   
 > [!NOTE]  
 >  在存储过程和用户定义函数中传递参数，或者在批处理语句中声明和设置变量时，不执行 ANSI_WARNINGS。 例如，如果将一个变量定义为 char(3)，然后将其值设置为大于三个字符，则数据会被截断为定义的大小，并且 INSERT 或 UPDATE 语句可以成功执行  。  
   
  [ type_schema_name.  ] *parameter_data_type*  
- 参数的数据类型及其所属的架构（可选）。 对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，可以使用除 timestamp 数据类型之外的所有数据类型（包括 CLR 用户定义类型）  。 对于 CLR 函数，允许使用除 text、ntext、image 和 timestamp 数据类型之外的所有数据类型（包括 CLR 用户定义类型）     。 不能将非标量类型 cursor 和 table 指定为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数或 CLR 函数中的参数数据类型   。  
+ 参数的数据类型及其所属的架构（可选）。 对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，可以使用除 timestamp 数据类型之外的所有数据类型（包括 CLR 用户定义类型）  。 对于 CLR 函数，允许使用除 text、ntext、image 和 timestamp 数据类型之外的所有数据类型（包括 CLR 用户定义类型）     。 不能将非标量类型 cursor 和 table 指定为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数或 CLR 函数中的参数数据类型 。  
   
- 如果未指定 type_schema_name，则 [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)] 按照下列顺序查找 parameter_data_type   ：  
+ 如果未指定 type_schema_name，则 [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)] 按照下列顺序查找 parameter_data_type ：  
   
 -   包含 SQL Server 系统数据类型名称的架构。  
   
@@ -232,7 +232,7 @@ RETURNS return_data_type
   
 -   当前数据库中的 **dbo** 架构。  
   
- [ =default ]    
+ [ =default ]  
  参数的默认值。 如果定义了 default 值，则无需指定此参数的值即可执行函数  。  
   
 > [!NOTE]  
@@ -241,24 +241,24 @@ RETURNS return_data_type
  如果函数的参数有默认值，则调用函数来检索默认值时必须指定 DEFAULT 关键字。 此行为与在存储过程中使用具有默认值的参数不同，在后一种情况下，不提供参数同样意味着使用默认值。  
   
  return_data_type   
- 标量用户定义函数的返回值。 对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，可以使用除 timestamp 数据类型之外的所有数据类型（包括 CLR 用户定义类型）  。 对于 CLR 函数，允许使用除 text、ntext、image 和 timestamp 数据类型之外的所有数据类型（包括 CLR 用户定义类型）     。 不能将非标量类型 cursor 和 table 指定为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数或 CLR 函数中的返回数据类型   。  
+ 标量用户定义函数的返回值。 对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，可以使用除 timestamp 数据类型之外的所有数据类型（包括 CLR 用户定义类型）  。 对于 CLR 函数，允许使用除 text、ntext、image 和 timestamp 数据类型之外的所有数据类型（包括 CLR 用户定义类型）     。 不能将非标量类型 cursor 和 table 指定为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数或 CLR 函数中的返回数据类型 。  
   
  function_body   
  指定一系列定义函数值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，这些语句在一起使用不会产生负面影响（例如修改表）。 function_body 仅用于标量函数和多语句表值函数  。  
   
- 在标量函数中，function_body 是一系列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，这些语句一起使用可计算出标量值  。  
+ 在标量函数中，function_body 是一系列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，这些语句一起使用可计算出标量值。  
   
- 在多语句表值函数中，function_body 是一系列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，这些语句将填充 TABLE 返回变量  。  
+ 在多语句表值函数中，function_body 是一系列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，这些语句将填充 TABLE 返回变量。  
   
  *scalar_expression*  
  指定标量函数返回标量值。  
   
  TABLE  
- 指定表值函数的返回值为表。 只有常量和 @  local\_variables  可以传递到表值函数。  
+ 指定表值函数的返回值为表。 只有常量和 @local\_variables 可以传递到表值函数。  
   
  在内联表值函数中，TABLE 返回值是通过单个 SELECT 语句定义的。 内联函数没有关联的返回变量。  
   
- 在多语句表值函数中，@  return\_variable  是 TABLE 变量，用于存储和汇总应作为函数值返回的行。 只能将 @  return\_variable  指定用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，而不能用于 CLR 函数。  
+ 在多语句表值函数中，@return\_variable 是 TABLE 变量，用于存储和汇总应作为函数值返回的行。 只能将 @  return\_variable  指定用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，而不能用于 CLR 函数。  
   
  select-stmt   
  定义内联表值函数返回值的单个 SELECT 语句。  
@@ -266,7 +266,7 @@ RETURNS return_data_type
  EXTERNAL NAME \<method_specifier>assembly_name.class_name.method_name    
  **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
- 指定要与函数绑定的程序集的方法。 assembly_name 必须与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中当前数据库内具有可见性的现有程序集匹配  。 class_name 必须是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符，并且必须作为类存在于程序集中  。 如果类包含一个使用句点 (.) 分隔命名空间各部分的限定命名空间的名称，则必须使用方括号 ([]) 或引号 ("") 将类名称分隔开    。 method_name 必须是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符，并且必须作为静态方法存在于指定类中  。  
+ 指定要与函数绑定的程序集的方法。 assembly_name 必须与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中当前数据库内具有可见性的现有程序集匹配。 class_name 必须是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符，并且必须作为类存在于程序集中。 如果类包含一个使用句点 (.) 分隔命名空间各部分的限定命名空间的名称，则必须使用方括号 ([]) 或引号 ("") 将类名称分隔开    。 method_name 必须是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符，并且必须作为静态方法存在于指定类中。  
   
 > [!NOTE]  
 >  默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能执行 CLR 代码。 可以创建、修改和删除引用公共语言运行时模块的数据库对象；不过，只有在启用 [clr enabled 选项](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)之后，才能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中执行这些引用。 若要启用该选项，请使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。  
@@ -336,7 +336,7 @@ RETURNS return_data_type
  表中列的名称。 列名称必须遵循标识符的规则，且在表中必须唯一。 column_name 可以包含 1 到 128 个字符  。  
   
  data_type   
- 指定列数据类型。 对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，可以使用除 timestamp 之外的所有数据类型（包括 CLR 用户定义类型）  。 对于 CLR 函数，可以使用除 text、ntext、image、char、varchar、varchar(max) 和 timestamp 之外的所有数据类型（包括 CLR 用户定义类型）。在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数或 CLR 函数中，不能将非标量类型 cursor 指定为列数据类型         。  
+ 指定列数据类型。 对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，可以使用除 timestamp 之外的所有数据类型（包括 CLR 用户定义类型）  。 对于 CLR 函数，可以使用除 text、ntext、image、char、varchar、varchar(max) 和 timestamp 之外的所有数据类型（包括 CLR 用户定义类型）。在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数或 CLR 函数中，不能将非标量类型 cursor 指定为列数据类型       。  
   
  DEFAULT constant_expression   
  如果在插入过程中未显式提供值，则指定为列提供的值。 constant_expression 可以是常量、NULL 或系统函数值  。 DEFAULT 定义可以应用于除具有 IDENTITY 属性的列之外的任何列。 不能为 CLR 表值函数指定 DEFAULT。  

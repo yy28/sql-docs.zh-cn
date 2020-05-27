@@ -32,7 +32,7 @@ Microsoft SQL Server 包含一个名为 bcp 的受欢迎的命令行实用工具
 - 事务中的大容量复制操作  
   
 > [!NOTE]
->  在使用 .NET Framework 1.1 版或更低版本时（不支持 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 类），可以使用  **对象执行 SQL Server Transact-SQL BULK INSERT 语句**<xref:Microsoft.Data.SqlClient.SqlCommand>。  
+>  在使用 .NET Framework 1.1 版或更低版本时（不支持 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 类），可以使用 <xref:Microsoft.Data.SqlClient.SqlCommand> 对象执行 SQL Server Transact-SQL BULK INSERT 语句。  
   
 ## <a name="in-this-section"></a>在本节中  
 [大容量复制示例设置](bulk-copy-example-setup.md)  

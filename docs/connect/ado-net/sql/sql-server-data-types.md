@@ -29,7 +29,7 @@ SQL Server 2008 引入了新的数据类型，这些数据类型旨在满足企�
   
 ## <a name="in-this-section"></a>在本节中  
 [SqlTypes 和 DataSet](sqltypes-dataset.md)  
-介绍对 `SqlTypes` 中 `DataSet` 的类型支持。  
+介绍对 `DataSet` 中 `SqlTypes` 的类型支持。  
   
 [处理 null 值](handle-null-values.md)  
 演示如何处理 null 值和三值逻辑。  

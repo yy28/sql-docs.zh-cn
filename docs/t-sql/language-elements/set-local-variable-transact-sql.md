@@ -67,7 +67,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
 ## <a name="arguments"></a>参数  
 **@** _local_variable_  
-除 **cursor**、**text**、**ntext**、**image** 或 **table** 之外的任何类型的变量的名称。 变量名称必须以 at 符号 ( **) 开头@** 。 变量名称必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
+除 **cursor**、**text**、**ntext**、**image** 或 **table** 之外的任何类型的变量的名称。 变量名称必须以 at 符号 (@) 开头。 变量名称必须遵循有关[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   
 property_name   
 用户定义类型的属性。  
@@ -184,7 +184,7 @@ SET **@** _cursor_variable_ 的语法规则不包含 LOCAL 和 GLOBAL 关键字�
 不要在 SELECT 语句中使用变量来连接值（即，计算聚合值）。 可能发生了意外查询结果。 因为，SELECT 列表中的所有表达式（包括赋值）不一定对于每个输出行仅执行一次。 有关详细信息，请参阅[此知识库文章](https://support.microsoft.com/kb/287515)。  
   
 ## <a name="permissions"></a>权限  
-要求具有 public 角色的成员身份。 所有用户都可以使用 SET **local_variable@**  。  
+要求具有 public 角色的成员身份。 所有用户都可以使用 SET @local_variable。  
   
 ## <a name="examples"></a>示例  
   
@@ -288,7 +288,7 @@ GO
 ```  
   
 ### <a name="h-assigning-a-value-to-a-user-defined-type-variable-by-invoking-a-method-of-the-type"></a>H. 通过调用类型的方法为用户定义类型的变量赋值  
-以下示例通过调用类型的  **方法设置用户定义类型 point 的值**`SetXY`。  
+以下示例通过调用类型的 `SetXY` 方法设置用户定义类型 point 的值。  
   
 ```  
 DECLARE @p Point;  

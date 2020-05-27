@@ -56,7 +56,7 @@ DISTINCT
 指定 `COUNT` 返回唯一非 Null 值的数量。
   
 *expression*  
-任意类型（“image”  、“ntext”  或“text”  除外）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 注意，`COUNT` 不支持表达式中的聚合函数或子查询。
+任意类型（“image”、“ntext”或“text”除外）的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。 注意，`COUNT` 不支持表达式中的聚合函数或子查询。
   
 \*  
 指定 `COUNT` 应对所有行计数，以确定要返回的总表行计数。 `COUNT(*)` 不采用任何参数，也不支持使用 DISTINCT。 `COUNT(*)` 不需要“expression”  参数，因为根据定义，该函数不使用有关任何特定列的信息。 `COUNT(*)` 返回指定表中的行数，但保留副本行。 它对各行分别计数。 包括包含空值的行。

@@ -35,8 +35,8 @@ ms.locfileid: "70929690"
 - 哈希索引  
 - 内存优化表的非聚集索引（即 B 树的默认内部结构） 
   
-[内存优化表的哈希索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)更深入地介绍了哈希  索引。  
-[内存优化表的非聚集索引](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)更深入地介绍了非聚集  索引。  
+[内存优化表的哈希索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)更深入地介绍了哈希索引。  
+[内存优化表的非聚集索引](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)更深入地介绍了非聚集索引。  
 *另一篇文章* 介绍了 [Columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)索引。  
 
 ## <a name="syntax-for-memory-optimized-indexes"></a>内存优化索引的语法  

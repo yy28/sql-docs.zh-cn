@@ -107,7 +107,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ## <a name="examples"></a>示例  
   
 ### <a name="a-revoking-view-definition-permission-on-an-availability-group"></a>A. 撤消对可用性组的 VIEW DEFINITION 权限  
- 以下示例从 `VIEW DEFINITION` 登录名 `MyAg` 撤消对可用性组 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `ZArifin` 权限。  
+ 以下示例从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名 `VIEW DEFINITION` 撤消对可用性组 `MyAg` 的 `ZArifin` 权限。  
   
 ```  
 USE master;  
@@ -116,7 +116,7 @@ GO
 ```  
   
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade"></a>B. 使用 CASCADE 撤消 TAKE OWNERSHIP 权限  
- 以下示例从 `TAKE OWNERSHIP` 用户 `MyAg` 以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 授予对 MyAg 的 TAKE OWNERSHIP 权限的所有主体撤消对可用性组 `PKomosinski` 的 `PKomosinski` 权限。  
+ 以下示例从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户 `TAKE OWNERSHIP` 以及 `MyAg` 授予对 MyAg 的 TAKE OWNERSHIP 权限的所有主体撤消对可用性组 `PKomosinski` 的 `PKomosinski` 权限。  
   
 ```  
 USE master;  

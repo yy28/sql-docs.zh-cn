@@ -71,7 +71,7 @@ SELECT name FROM sys.registered_search_property_lists;
  property_name   
  指定要用来标识全文查询中的属性的名称。 property_name 必须唯一标识属性集中的属性  。 属性名称可以包含内部空格。 property_name 的最大长度为 256 个字符  。 此名称可以是“作者”或“家庭地址”等此类用户友好名称，也可以是 Windows 的属性规范名称，如 System.Author 或 System.Contact.HomeAddress   。  
   
- 开发人员将需要使用你为 property_name 指定的值在 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 谓词中标识该属性  。 因此，在添加属性时，务必指定一个在含义上可表示由指定的属性集 GUID (property_set_guid) 和属性标识符 (property_int_id) 定义属性的值   。 有关属性名称的详细信息，请参阅本主题后面的“备注”。  
+ 开发人员将需要使用你为 property_name 指定的值在 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 谓词中标识该属性。 因此，在添加属性时，务必指定一个在含义上可表示由指定的属性集 GUID (property_set_guid) 和属性标识符 (property_int_id) 定义属性的值   。 有关属性名称的详细信息，请参阅本主题后面的“备注”。  
   
  若要查看当前数据库的搜索属性列表中当前存在的属性的名称，请使用 [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) 目录视图，如下所示：  
   

@@ -78,7 +78,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  如果运行时语句错误以外的错误使显式事务无法成功完成，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 将自动回滚事务并释放该事物占用的所有资源。 例如，如果客户端与 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 实例的网络连接中断或客户端已注销应用程序，那么当网络向实例通知该中断后，该连接的所有未提交事务均会被回滚。  
   
- 如果批处理中出现运行时语句错误，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的行为将与设置为 ON 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XACT_ABORT 的行为一致，并且整个事务都将回滚   。 有关 XACT_ABORT 设置的详细信息，请参阅 [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx)  。  
+ 如果批处理中出现运行时语句错误，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的行为将与设置为 ON 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XACT_ABORT 的行为一致，并且整个事务都将回滚   。 有关 XACT_ABORT 设置的详细信息，请参阅 [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx)。  
   
 ## <a name="general-remarks"></a>一般备注  
  给定时间内，一个会话只能运行一个事务；不支持保存点和嵌套事务。  

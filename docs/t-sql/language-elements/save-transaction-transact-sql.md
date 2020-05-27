@@ -49,7 +49,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
   
 ## <a name="arguments"></a>参数  
  savepoint_name   
- 分配给保存点的名称。 保存点名称必须符合标识符的规则，但长度不能超过 32 个字符。 savepoint_name 始终区分大小写，即使  *实例不区分大小写也是如此*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 分配给保存点的名称。 保存点名称必须符合标识符的规则，但长度不能超过 32 个字符。 savepoint_name 始终区分大小写，即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例不区分大小写也是如此。  
   
  @*savepoint_variable*  
  包含有效保存点名称的用户定义变量的名称。 必须使用 char、varchar、nchar 或 nvarchar 数据类型声明该变量     。 如果长度超过 32 个字符，也可以传递到变量，但只使用前 32 个字符。  

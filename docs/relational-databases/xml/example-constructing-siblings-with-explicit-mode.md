@@ -33,7 +33,7 @@ ms.locfileid: "68006830"
 <OrderHeader ...</OrderHeader>  
 ```  
   
- 以下 EXPLICIT 模式查询将构造此 XML。 请注意，查询将 <`Tag`> 元素的 `OrderHeader` 值指定为 1，将 <`SalesPerson`> 元素的此值指定为 2，将 <`OrderDetail`> 元素的此值指定为 3。 因为 <`SalesPerson`> 和 <`OrderDetail`> 是同级，所以该查询将 `Parent` 标记值都指定为 1，从而标识 <`OrderHeader`> 元素。  
+ 以下 EXPLICIT 模式查询将构造此 XML。 请注意，查询将 <`OrderHeader`> 元素的 `Tag` 值指定为 1，将 <`SalesPerson`> 元素的此值指定为 2，将 <`OrderDetail`> 元素的此值指定为 3。 因为 <`SalesPerson`> 和 <`OrderDetail`> 是同级，所以该查询将 `Parent` 标记值都指定为 1，从而标识 <`OrderHeader`> 元素。  
   
 ```  
 USE AdventureWorks2012;  

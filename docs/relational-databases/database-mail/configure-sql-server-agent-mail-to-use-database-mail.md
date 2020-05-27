@@ -37,7 +37,7 @@ ms.locfileid: "74095778"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
   > [!NOTE]
-  > 托管实例上的 SQL 代理始终配置为使用数据库邮件，因此在托管实例上此内容不适用。 在托管实例中，需要具有必须调用的配置文件 **AzureManagedInstance_dbmail_profile[，才能将 SQL 代理与数据库邮件绑定](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** 。 
+  > 托管实例上的 SQL 代理始终配置为使用数据库邮件，因此在托管实例上此内容不适用。 在托管实例中，需要具有必须调用的配置文件 [AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)，才能将 SQL 代理与数据库邮件绑定。 
   
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
   

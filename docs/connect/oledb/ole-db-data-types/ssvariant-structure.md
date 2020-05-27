@@ -69,7 +69,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |fBitVal|DBTYPE_BOOL|**VARIANT_BOOL**|**VT_SS_BIT**|支持 bit  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。|  
 |rgbGuidVal|DBTYPE_GUID|**GUID**|**VT_SS_GUID**|支持 uniqueidentifier  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。|  
 |numNumericVal|DBTYPE_NUMERIC|**DB_NUMERIC**|**VT_SS_NUMERIC**|支持 numeric  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。|  
-|dDateVal|DBTYPE_DATE|**DBDATE**|**VT_SS_DATE**|支持 date **数据类型**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。|  
+|dDateVal|DBTYPE_DATE|**DBDATE**|**VT_SS_DATE**|支持 date[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。|  
 |tsDateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_SMALLDATETIME VT_SS_DATETIME VT_SS_DATETIME2**|支持 smalldatetime  、datetime  和 datetime2  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。|  
 |Time2Val|DBTYPE_DBTIME2|**DBTIME2**|**VT_SS_TIME2**|支持 time  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。<br /><br /> 包括以下成员：<br /><br /> tTime2Val  (DBTIME2  )<br /><br /> bScale  (BYTE  ) 指定 tTime2Val  值的小数位数。|  
 |DateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_DATETIME2**|支持 datetime2  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。<br /><br /> 包括以下成员：<br /><br /> tsDataTimeVal  (DBTIMESTAMP)<br /><br /> bScale  (BYTE  ) 指定 tsDataTimeVal  值的小数位数。|  

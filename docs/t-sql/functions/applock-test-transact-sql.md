@@ -68,7 +68,7 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
 **Nonparallelizable**
   
 ## <a name="examples"></a>示例  
-具有不同会话的两个用户（用户 A 和用户 B）按以下顺序运行  **语句**  [!INCLUDE[tsql](../../includes/tsql-md.md)]。
+具有不同会话的两个用户（用户 A 和用户 B）按以下顺序运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句 。
   
 用户 A 运行  ：
   

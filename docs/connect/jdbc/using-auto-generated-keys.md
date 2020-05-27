@@ -23,7 +23,7 @@ ms.locfileid: "69026607"
 
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支持可选的 JDBC 3.0 API 以检索自动生成的行标识符。 这项功能的主要意义在于，为更新数据库表的应用程序提供获得 IDENTITY 值的方法，从而无需执行查询以及对服务器进行再次往返通信。
 
-由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持标识符的伪列，因此必须使用自动生成键功能的更新，必须对包含 IDENTITY 列的表进行操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅允许每个表包含一个 IDENTITY 列。 [SQLServerStatement](../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md) 类的 [getGeneratedKeys](../../connect/jdbc/reference/sqlserverstatement-class.md) 方法返回的结果集仅包含一列，并且返回的列名为 GENERATED_KEYS。 如果对不包含 IDENTITY 列的表请求生成的键，则 JDBC 驱动程序将返回空结果集。
+由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持标识符的伪列，因此必须使用自动生成键功能的更新，必须对包含 IDENTITY 列的表进行操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅允许每个表包含一个 IDENTITY 列。 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 类的 [getGeneratedKeys](../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md) 方法返回的结果集仅包含一列，并且返回的列名为 GENERATED_KEYS。 如果对不包含 IDENTITY 列的表请求生成的键，则 JDBC 驱动程序将返回空结果集。
 
 例如，在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库中创建下表：
 

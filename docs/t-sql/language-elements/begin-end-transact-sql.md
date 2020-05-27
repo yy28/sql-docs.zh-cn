@@ -47,7 +47,7 @@ END
 ```  
   
 ## <a name="arguments"></a>参数  
- { sql_statement*statement_block }*  |    
+ { sql_statement | statement_block }   
  使用语句块定义的任何有效的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或语句组。  
   
 ## <a name="remarks"></a>备注  

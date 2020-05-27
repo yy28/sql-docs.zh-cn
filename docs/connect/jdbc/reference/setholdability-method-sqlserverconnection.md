@@ -25,7 +25,7 @@ ms.locfileid: "68213667"
 # <a name="setholdability-method-sqlserverconnection"></a>setHoldability 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  将使用此 [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象创建的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserversavepoint-class.md) 对象的可保持性更改为给定可保持性。  
+  将使用此 [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) 对象创建的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的可保持性更改为给定可保持性。  
   
 ## <a name="syntax"></a>语法  
   

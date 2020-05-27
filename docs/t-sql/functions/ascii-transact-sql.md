@@ -49,7 +49,7 @@ char 或 varchar 类型的[表达式](../../t-sql/language-elements/expressions-
  **int**  
   
 ## <a name="remarks"></a>备注
-ASCII 表示美国信息交换标准码      。 它是现代计算机的一种字符编码标准。 要获取 ASCII 字符列表，请参阅 [ASCII](https://www.wikipedia.org/wiki/ASCII) 的“可打印字符”部分  。
+ASCII 表示美国信息交换标准码      。 它是现代计算机的一种字符编码标准。 要获取 ASCII 字符列表，请参阅 [ASCII](https://www.wikipedia.org/wiki/ASCII) 的“可打印字符”部分。
 
 ASCII 是一个 7 位字符集。 扩展的 ASCII（或称 High ASCII）是不由 `ASCII` 函数处理的 8 位字符集。 
 

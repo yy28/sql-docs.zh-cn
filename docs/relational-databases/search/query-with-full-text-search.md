@@ -36,7 +36,7 @@ ms.locfileid: "68053571"
 以下示例使用 AdventureWorks 示例数据库。 有关 AdventureWorks 的最终版本，请参阅[适用于 SQL Server 2016 CTP3 的 AdventureWorks 数据库和脚本](https://www.microsoft.com/download/details.aspx?id=49502)。 要运行示例查询，还需要设置全文搜索。 有关详细信息，请参阅[全文搜索入门](get-started-with-full-text-search.md)。 
 
 ### <a name="example---contains"></a>示例 - CONTAINS  
-下面的示例查找包含 `$80.99` 一词且价格为 `"Mountain"` 的所有产品：
+下面的示例查找包含 `"Mountain"` 一词且价格为 `$80.99` 的所有产品：
   
 ```sql
 USE AdventureWorks2012  
@@ -175,7 +175,7 @@ GO
 ## <a name="specific-types-of-searches"></a><a name="examples_specific"></a>特定搜索类型
 
 ###  <a name="search-for-a-specific-word-or-phrase-simple-term"></a><a name="Simple_Term"></a>搜索特定的单词或短语（简单词）  
- 可以使用 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 或 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 在表中搜索特定单词或短语。 例如，如果要在  **数据库的“ProductReview”** [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]表中进行搜索，以查找关于某种产品的包含“learning curve”短语的所有注释，可以使用 CONTAINS 谓词，如下所示：  
+ 可以使用 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、[FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 或 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 在表中搜索特定单词或短语。 例如，如果要在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的“ProductReview”表中进行搜索，以查找关于某种产品的包含“learning curve”短语的所有注释，可以使用 CONTAINS 谓词，如下所示：  
   
 ```sql
 USE AdventureWorks2012  
@@ -227,7 +227,7 @@ GO
 ###  <a name="search-for-inflectional-forms-of-a-specific-word-generation-term"></a><a name="Inflectional_Generation_Term"></a>搜索特定单词的变形（派生词）  
 可以使用 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)或 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 搜索动词的所有不同时态和语态形式或搜索名词的单数和复数形式（变形搜索）或者搜索特定词的同义词形式（同义词库搜索）。  
   
-以下示例在 `Comments` 数据库的 `ProductReview` 表的 `AdventureWorks` 列搜索“foot”的任意变形（“foot”、“feet”等）： 
+以下示例在 `AdventureWorks` 数据库的 `ProductReview` 表的 `Comments` 列搜索“foot”的任意变形（“foot”、“feet”等）： 
   
 ```sql  
 USE AdventureWorks2012  

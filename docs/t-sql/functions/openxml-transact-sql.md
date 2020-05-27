@@ -56,7 +56,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**0**|默认为“以属性为中心”的映射  。|  
 |**1**|使用“以属性为中心”的映射  。 可以与 XML_ELEMENTS 一起使用。 在这种情况下，“以属性为中心”  映射先应用。 接下来，对任何剩余列应用“以元素为中心”  映射。|  
 |**2**|使用“以元素为中心”的映射  。 可以与 XML_ATTRIBUTES 一起使用。 在这种情况下，“以属性为中心”  映射先应用。 接下来，对任何剩余列应用“以元素为中心”  映射。|  
-|**8**|可与 XML_ATTRIBUTES 或 XML_ELEMENTS 组合使用（逻辑或）。 在检索上下文中，此标志指明不得将已用数据复制到溢出属性 **mp:xmltext\@** 。|  
+|**8**|可与 XML_ATTRIBUTES 或 XML_ELEMENTS 组合使用（逻辑或）。 在检索上下文中，此标志指明不得将已用数据复制到溢出属性 \@mp:xmltext。|  
   
  _SchemaDeclaration_  
  是窗体的架构定义：_ColName_*ColType* [_ColPattern_ | _MetaProperty_] [ **,** _ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
@@ -68,9 +68,9 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  行集中列的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。 如果列类型不同于属性的基础 xml 数据类型，则将发生类型强制  。  
   
  *ColPattern*  
- 可选的通用 XPath 模式，它说明应如何将 XML 节点映射到列。 如果未指定 ColPattern  ，发生的是默认映射（由 flags  指定的“以属性为中心”  或“以元素为中心”  映射）。  
+ 可选的通用 XPath 模式，它说明应如何将 XML 节点映射到列。 如果未指定 ColPattern，发生的是默认映射（由 flags 指定的“以属性为中心”或“以元素为中心”映射）。  
   
- 指定为 ColPattern  的 XPath 模式用于，指定重写或增强由 flags  指明的默认映射的映射的特殊性质（对于“以属性为中心”  和“以元素为中心”  映射）。  
+ 指定为 ColPattern 的 XPath 模式用于，指定重写或增强由 flags 指明的默认映射的映射的特殊性质（对于“以属性为中心”和“以元素为中心”映射）。  
   
  指定为 ColPattern 的通用 XPath 模式也支持元属性  。  
   
@@ -102,7 +102,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 ### <a name="a-using-a-simple-select-statement-with-openxml"></a>A. 使用带 OPENXML 的简单 SELECT 语句  
  以下示例使用 `sp_xml_preparedocument` 创建 XML 图像的内部表示形式。 然后对 XML 文档的内部表示形式执行使用 `SELECT` 行集提供程序的 `OPENXML` 语句。  
   
- flag 值设为  `1`。 此值表示“以属性为中心”  映射。 因此，XML 属性映射到行集中的列。 指定为 *的 rowpattern 标识要处理的* 节点`/ROOT/Customer``<Customers>`。  
+ flag 值设为 `1`。 此值表示“以属性为中心”  映射。 因此，XML 属性映射到行集中的列。 指定为 `/ROOT/Customer` 的 rowpattern 标识要处理的 `<Customers>` 节点。  
   
  未指定可选的 ColPattern  （列模式）参数，因为列名与 XML 属性名匹配。  
   
@@ -143,7 +143,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- 如果将 flags`SELECT`*设置为*（表示“以元素为中心”`2`**映射），并执行相同的**  语句，那么 XML 文档中针对两个客户的 `CustomerID` 和 `ContactName` 的值都返回为 NULL，因为 XML 文档中没有任何元素名为 `CustomerID` 或 `ContactName`。  
+ 如果将 flags 设置为 `2`（表示“以元素为中心”映射），并执行相同的 `SELECT` 语句，那么 XML 文档中针对两个客户的 `CustomerID` 和 `ContactName` 的值都返回为 NULL，因为 XML 文档中没有任何元素名为 `CustomerID` 或 `ContactName`。  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
@@ -155,7 +155,7 @@ NULL       NULL
 ```  
   
 ### <a name="b-specifying-colpattern-for-mapping-between-columns-and-the-xml-attributes"></a>B. 为列和 XML 属性之间的映射指定 ColPattern  
- 下面的查询从 XML 文档返回客户 ID、订单日期、产品 ID 和数量属性。 rowpattern 标识  *元素*`<OrderDetails>`。 `ProductID` 和 `Quantity` 是 `<OrderDetails>` 元素的属性。 而 `OrderID`、`CustomerID` 和 `OrderDate` 是父元素 (`<Orders>`) 的属性。  
+ 下面的查询从 XML 文档返回客户 ID、订单日期、产品 ID 和数量属性。 rowpattern 标识 `<OrderDetails>` 元素。 `ProductID` 和 `Quantity` 是 `<OrderDetails>` 元素的属性。 而 `OrderID`、`CustomerID` 和 `OrderDate` 是父元素 (`<Orders>`) 的属性。  
   
  下面的映射指定了可选 ColPattern  ：  
   
@@ -211,7 +211,7 @@ OrderID CustomerID           OrderDate                 ProdID    Qty
 ### <a name="c-obtaining-results-in-an-edge-table-format"></a>C. 获得边缘表格式的结果  
  以下示例中的示例 XML 文档由 `<Customers>`、`<Orders>` 和 `<Order_0020_Details>` 元素组成。 首先调用 sp_xml_preparedocument 以获得文档句柄  。 此文档句柄传递给 `OPENXML`。  
   
- 在 `OPENXML` 语句中，rowpattern ( *) 标识要处理的*  节点`/ROOT/Customers``<Customers>`。 由于未提供 WITH 子句，因此 `OPENXML` 以 edge  表格式返回行集。  
+ 在 `OPENXML` 语句中，rowpattern (`/ROOT/Customers`) 标识要处理的 `<Customers>` 节点。 由于未提供 WITH 子句，因此 `OPENXML` 以 edge  表格式返回行集。  
   
  最后，`SELECT` 语句检索“边缘”表中的所有列  。  
   

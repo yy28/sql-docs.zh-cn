@@ -50,7 +50,7 @@ SUSER_SNAME ( [ server_user_sid ] )
  server_user_sid   
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
- 可选的登录安全标识号。 server_user_sid 为 varbinary(85)   。 server_user_sid 可以是任何 *登录或* Windows 用户或组的安全标识号[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)]。 如果未指定 server_user_sid，则返回有关当前用户的信息  。 如果此参数包含词 NULL，将返回 NULL。  
+ 可选的登录安全标识号。 server_user_sid 为 varbinary(85)   。 server_user_sid 可以是任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户或组的安全标识号。 如果未指定 server_user_sid，则返回有关当前用户的信息  。 如果此参数包含词 NULL，将返回 NULL。  
   
 ## <a name="return-types"></a>返回类型  
  **nvarchar(128)**  

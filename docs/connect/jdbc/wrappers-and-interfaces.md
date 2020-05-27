@@ -27,7 +27,7 @@ ms.locfileid: "69025581"
 
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支持 java.sql.Wrapper 接口。 该接口提供一种机制，通过代理接口访问特定于 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 的 JDBC API 扩展。
 
-java.sql.Wrapper 接口定义两个方法：isWrapperFor  和 unwrap  。 isWrapperFor 方法检查指定的输入对象是否实现此接口  。 unwrap 方法返回一个实现此接口的对象，从而允许访问特定于  **的方法**[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]。
+java.sql.Wrapper 接口定义两个方法：isWrapperFor  和 unwrap  。 isWrapperFor 方法检查指定的输入对象是否实现此接口  。 unwrap 方法返回一个实现此接口的对象，从而允许访问特定于 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 的方法。
 
 按如下方式公开了 isWrapperFor  和 unwrap  方法：
 

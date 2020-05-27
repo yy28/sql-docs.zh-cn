@@ -56,7 +56,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
 ```  
   
 ## <a name="arguments"></a>参数  
- BEGIN CONVERSATION TIMER (conversation**handle)** _\__   
+ BEGIN CONVERSATION TIMER (conversation\_handle)  
  指定要计时的会话。 conversation_handle 的类型必须为 uniqueidentifier   。  
   
  TIMEOUT  
@@ -67,7 +67,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
   
  例如，可以使用会话计时器避免应用程序过久地等待过期响应。 如果希望应用程序在 30 秒内完成对话，则可将对话的会话计时器设置为 60 秒（30 秒加 30 秒的宽限期）。 如果对话 60 秒后仍处于打开状态，则应用程序将收到一条关于该对话队列的超时消息。  
   
- 此外，应用程序可以使用会话计时器请求在特定时间进行激活。 例如，可以创建一个服务，每隔几分钟报告活动连接数；或者创建一种服务，每天晚上报告未清的采购订单。 该服务将会话计时器设置为在所需时间过期；计时器过期时，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 将发送一条 DialogTimer 消息  。 DialogTimer 消息导致  **启动队列的激活存储过程**[!INCLUDE[ssSB](../../includes/sssb-md.md)]。 该存储过程将向远程服务发送一条消息，并重新启动会话计时器。  
+ 此外，应用程序可以使用会话计时器请求在特定时间进行激活。 例如，可以创建一个服务，每隔几分钟报告活动连接数；或者创建一种服务，每天晚上报告未清的采购订单。 该服务将会话计时器设置为在所需时间过期；计时器过期时，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 将发送一条 DialogTimer 消息  。 DialogTimer 消息导致 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 启动队列的激活存储过程。 该存储过程将向远程服务发送一条消息，并重新启动会话计时器。  
   
  BEGIN CONVERSATION TIMER 在用户定义函数中无效。  
   

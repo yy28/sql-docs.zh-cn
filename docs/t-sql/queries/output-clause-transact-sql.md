@@ -81,7 +81,7 @@ ms.locfileid: "75952439"
   
  如果未指定 column_list，则 table 变量必须与 OUTPUT 结果集具有相同的列数   。 标识列和计算列除外，这两种列必须跳过。 如果指定了 column_list，则任何省略的列都必须允许 NULL 值，或者都分配有默认值  。  
   
- 有关 table 变量的详细信息，请参阅 [table (Transact-SQL)](../../t-sql/data-types/table-transact-sql.md)  。  
+ 有关 table 变量的详细信息，请参阅 [table (Transact-SQL)](../../t-sql/data-types/table-transact-sql.md)。  
   
  output_table   
  指定一个表，返回的行将插入该表中而不是返回到调用方。 output_table 可以为临时表  。  
@@ -133,13 +133,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  column_name   
- 显式列引用。 任何对正在修改的表的引用都必须使用相应的 INSERTED 或 DELETED 前缀正确限定，例如：INSERTED **.** _column\_name_。  
+ 显式列引用。 任何对正在修改的表的引用都必须使用相应的 INSERTED 或 DELETED 前缀正确限定，例如：INSERTED.column\_name。  
   
  $action  
  仅可用于 MERGE 语句。 在 MERGE 语句的 OUTPUT 子句中指定一个 **nvarchar(10)** 类型的列，该子句为每行返回以下三个值之一：“INSERT”、“UPDATE”或“DELETE”（具体视对相应行执行的操作而定）。  
   
 ## <a name="remarks"></a>备注  
- OUTPUT \<dml_select_list> 子句和 OUTPUT \<dml_select_list> INTO { \@  table\_variable   | output\_table  }子句可以在单个 INSERT、UPDATE、DELETE 或 MERGE 语句中进行定义。  
+ OUTPUT \<dml_select_list> 子句和 OUTPUT \<dml_select_list> INTO { \@table\_variable | output\_table }子句可以在单个 INSERT、UPDATE、DELETE 或 MERGE 语句中进行定义。  
   
 > [!NOTE]  
 >  除非另行指定，否则，对 OUTPUT 子句的引用将同时引用 OUTPUT 子句和 OUTPUT INTO 子句。  

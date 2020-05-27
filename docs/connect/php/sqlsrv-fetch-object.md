@@ -230,7 +230,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-sqlsrv_fetch_object 函数将始终根据[默认 PHP 数据类型](../../connect/php/default-php-data-types.md)返回数据  。 有关如何指定 PHP 数据类型的信息，请参阅[如何：指定 PHP 数据类型](../../connect/php/how-to-specify-php-data-types.md)。  
+sqlsrv_fetch_object 函数将始终根据[默认 PHP 数据类型](../../connect/php/default-php-data-types.md)返回数据。 有关如何指定 PHP 数据类型的信息，请参阅[如何：指定 PHP 数据类型](../../connect/php/how-to-specify-php-data-types.md)。  
   
 如果返回不含名称的字段， **sqlsrv_fetch_object** 会丢弃该字段值并发出一条警告。 例如，考虑可将某个值插入数据库表并检索服务器生成的主键的 Transact-SQL 语句：  
   

@@ -174,7 +174,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-in-and-not-in"></a>D. 使用 IN 和 NOT IN  
- 下面的示例查找 `FactInternetSales` 表中与 `SalesReasonKey` 表中的 `DimSalesReason` 值相匹配的所有条目。  
+ 下面的示例查找 `FactInternetSales` 表中与 `DimSalesReason` 表中的 `SalesReasonKey` 值相匹配的所有条目。  
   
 ```  
 -- Uses AdventureWorks  
@@ -184,7 +184,7 @@ WHERE SalesReasonKey
 IN (SELECT SalesReasonKey FROM DimSalesReason);   
 ```  
   
- 下面的示例查找 `FactInternetSalesReason` 表中与 `SalesReasonKey` 表中的 `DimSalesReason` 值不匹配的所有条目。  
+ 下面的示例查找 `FactInternetSalesReason` 表中与 `DimSalesReason` 表中的 `SalesReasonKey` 值不匹配的所有条目。  
   
 ```  
 -- Uses AdventureWorks  

@@ -56,7 +56,7 @@ REPLICATE ( string_expression ,integer_expression )
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-replicate"></a>A. 使用 REPLICATE  
- 以下示例在 `0` 数据库中生产行代码的前面将 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 字符复制四次。  
+ 以下示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中生产行代码的前面将 `0` 字符复制四次。  
   
 ```  
 SELECT [Name]  
@@ -120,7 +120,7 @@ Varchar Column        Char Column
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-replicate"></a>C. 使用 REPLICATE  
- 以下示例在 `0` 值的前面将 `ItemCode` 字符复制四次。  
+ 以下示例在 `ItemCode` 值的前面将 `0` 字符复制四次。  
   
 ```  
 -- Uses AdventureWorks  

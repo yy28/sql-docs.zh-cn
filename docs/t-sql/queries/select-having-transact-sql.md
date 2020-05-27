@@ -60,7 +60,7 @@ ORDER BY SalesOrderID ;
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 以下示例使用 `HAVING` 子句来对 `SalesAmount` 表中的每个 `80000` 检索超过 `OrderDateKey` 的总 `FactInternetSales`。  
+ 以下示例使用 `HAVING` 子句来对 `FactInternetSales` 表中的每个 `OrderDateKey` 检索超过 `80000` 的总 `SalesAmount`。  
   
 ```sql
 -- Uses AdventureWorks  

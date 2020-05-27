@@ -39,10 +39,10 @@ CRYPT_GEN_RANDOM ( length [ , seed ] )
   
 ## <a name="arguments"></a>参数  
 *length*  
-`CRYPT_GEN_RANDOM` 将创建数的长度数，以字节为单位。 length 参数的数据类型为“int”  且值范围在 1 和 8000 之间  。 `CRYPT_GEN_RANDOM` 为此范围外的“int”  值返回 NULL。 
+`CRYPT_GEN_RANDOM` 将创建数的长度数，以字节为单位。 length 参数的数据类型为“int”且值范围在 1 和 8000 之间。 `CRYPT_GEN_RANDOM` 为此范围外的“int”  值返回 NULL。 
   
 seed   
-一个可选的十六进制数字，用作随机种子值。 种子的长度必须匹配 length 参数的值   。 种子参数的数据类型为“varbinary (8000)”   。
+一个可选的十六进制数字，用作随机种子值。 种子的长度必须匹配 length 参数的值   。 种子参数的数据类型为“varbinary (8000)”。
   
 ## <a name="returned-types"></a>返回类型  
 varbinary(8000) 

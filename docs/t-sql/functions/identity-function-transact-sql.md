@@ -78,7 +78,7 @@ FROM OldTable;
 ```  
   
 ## <a name="examples"></a>示例  
- 下面的示例将来自 `Contact` 数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表的所有行都插入到名为 `NewContact` 的新表。 使用 IDENTITY 函数在 `NewContact` 表中从 100 而不是 1 开始编标识号。  
+ 下面的示例将来自 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Contact` 表的所有行都插入到名为 `NewContact` 的新表。 使用 IDENTITY 函数在 `NewContact` 表中从 100 而不是 1 开始编标识号。  
   
 ```  
 USE AdventureWorks2012;  

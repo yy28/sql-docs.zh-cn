@@ -54,7 +54,7 @@ SYSTEM_USER
   
  如果用户名与登录名不同，则 SYSTEM_USER 返回登录名。  
   
- 如果当前用户使用 Windows 身份验证登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则 SYSTEM_USER 返回如下形式的 Windows 登录标识名称：DOMAIN*user_login_name*\\  。 但是，如果当前用户使用 SQL Server 身份验证登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则 SYSTEM_USER 返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录标识名称，例如为作为  `WillisJo` 登录的用户返回 `WillisJo`。  
+ 如果当前用户使用 Windows 身份验证登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则 SYSTEM_USER 返回如下形式的 Windows 登录标识名称：DOMAIN\\user_login_name 。 但是，如果当前用户使用 SQL Server 身份验证登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则 SYSTEM_USER 返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录标识名称，例如为作为  `WillisJo` 登录的用户返回 `WillisJo`。  
   
  SYSTEM_USER 返回当前执行的上下文的名称。 如果已使用 EXECUTE AS 语句进行上下文切换，则 SYSTEM_USER 将返回模拟的上下文的名称。  
 

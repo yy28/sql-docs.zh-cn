@@ -193,7 +193,7 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
  可以通过将目标命名空间指定为 **XML_SCHEMA_NAMESPACE()** 的第三个参数，获取集合中单个 XML 架构作为 **xml**数据类型实例。 下面的示例说明了这一点。  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>示例：从 XML 架构集合输出指定的架构  
- 以下语句从关系架构 dbo 中的 XML 架构集合“myCollection”输出假定目标命名空间为“https/_www.microsoft.com/was-books”的 XML 架构。_ \/  
+ 以下语句从关系架构 dbo 中的 XML 架构集合“myCollection”输出假定目标命名空间为“https/\/www.microsoft.com/was-books”的 XML 架构。  
   
 ```sql
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   

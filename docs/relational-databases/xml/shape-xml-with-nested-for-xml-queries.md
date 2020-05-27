@@ -62,7 +62,7 @@ for XML AUTO, TYPE, XMLSCHEMA
   
  请注意上述查询的以下方面：  
   
--   外部 SELECT 语句构造具有 `Product`ProductID **属性和两个 <** > 子元素的 <`Price`> 元素。  
+-   外部 SELECT 语句构造具有 **ProductID** 属性和两个 <`Price`> 子元素的 <`Product`> 元素。  
   
 -   两个内部 SELECT 语句构造两个 <`Price`> 元素，每一个都具有一个 **PriceType** 属性和可以返回产品价格的 XML。  
   

@@ -54,7 +54,7 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
 ```  
   
 ## <a name="arguments"></a>参数  
- table*view* |    
+ table | view   
  其删除统计信息的目标表或索引视图的名称。 表和视图的名称必须符合[数据库标识符](../../relational-databases/databases/database-identifiers.md)规则。 可以选择是否指定表或视图所有者名称。  
   
  *statistics_name*  
@@ -93,7 +93,7 @@ DROP STATISTICS Purchasing.Vendor.VendorCredit, Sales.SalesOrderHeader.CustomerT
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-dropping-statistics-from-a-table"></a>B. 从表中删除统计信息  
- 以下示例从表 `CustomerStats1` 中删除 `Customer` 统计信息。  
+ 以下示例从表 `Customer` 中删除 `CustomerStats1` 统计信息。  
   
 ```  
 DROP STATISTICS Customer.CustomerStats1;  

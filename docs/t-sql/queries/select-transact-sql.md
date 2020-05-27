@@ -147,7 +147,7 @@ SELECT <select_criteria>
 下面的示例使用 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 数据库。
   
 ### <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. 使用 SELECT 检索行和列  
- 本部分演示三个代码示例。 此第一个代码示例返回 `*` 表中的所有行（未指定 WHERE 子句）和所有列（使用了 `DimEmployee`）。  
+ 本部分演示三个代码示例。 此第一个代码示例返回 `DimEmployee` 表中的所有行（未指定 WHERE 子句）和所有列（使用了 `*`）。  
   
 ```sql  
 SELECT *  
@@ -163,7 +163,7 @@ FROM DimEmployee AS e
 ORDER BY LastName;  
 ```  
   
- 此示例返回 `FirstName` 数据库的 `LastName` 表中的所有行（未指定 WHERE 子句）以及列（`StartDate`、`DimEmployee`、`AdventureWorksPDW2012`）的子集。 第三个列标题重命名为 `FirstDay`。  
+ 此示例返回 `AdventureWorksPDW2012` 数据库的 `DimEmployee` 表中的所有行（未指定 WHERE 子句）以及列（`FirstName`、`LastName`、`StartDate`）的子集。 第三个列标题重命名为 `FirstDay`。  
   
 ```sql  
 SELECT FirstName, LastName, StartDate AS FirstDay  

@@ -26,7 +26,7 @@ ms.locfileid: "78896591"
 执行 SQL Server 大容量复制操作的最简单方法是针对数据库执行单次操作。 默认情况下，大容量复制操作作为独立的操作执行：复制操作以非事务的方式执行，不可对其进行回滚。  
   
 > [!NOTE]
->  如果在发生错误时需要回滚全部或部分大容量复制，可以使用 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 托管的事务，或者在现有事务内执行大容量复制操作。 如果连接在 System.Transactions 事务中（显式或隐式）登记，SqlBulkCopy 也将适用于  <xref:System.Transactions>  。  
+>  如果在发生错误时需要回滚全部或部分大容量复制，可以使用 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 托管的事务，或者在现有事务内执行大容量复制操作。 如果连接在 System.Transactions 事务中（显式或隐式）登记，SqlBulkCopy 也将适用于 <xref:System.Transactions> 。  
 >   
 >  有关详细信息，请参阅[事务和大容量复制操作](transaction-bulk-copy-operations.md)。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "78896591"
 7. 调用 <xref:Microsoft.Data.SqlClient.SqlBulkCopy.Close%2A>，或在 `Using` 语句中包装大容量复制操作。  
   
 > [!CAUTION]
->  我们建议使源列与目标列数据类型相匹配。 如果数据类型不匹配，则 SqlBulkCopy 会尝试使用由  **部署的规则将每个源值转换为目标数据类型**<xref:Microsoft.Data.SqlClient.SqlParameter.Value%2A>。 转换可能会影响性能，也可能会导致意外错误。 例如，在多数情况下，`Double` 数据类型可转换为 `Decimal` 数据类型，但并非总是如此。  
+>  我们建议使源列与目标列数据类型相匹配。 如果数据类型不匹配，则 SqlBulkCopy 会尝试使用由 <xref:Microsoft.Data.SqlClient.SqlParameter.Value%2A> 部署的规则将每个源值转换为目标数据类型。 转换可能会影响性能，也可能会导致意外错误。 例如，在多数情况下，`Double` 数据类型可转换为 `Decimal` 数据类型，但并非总是如此。  
   
 ## <a name="example"></a>示例  
 下面的控制台应用程序演示了如何使用 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 类加载数据。 在此示例中，<xref:Microsoft.Data.SqlClient.SqlDataReader> 用于将数据从 SQL Server AdventureWorks 数据库的 Production.Product 表复制到相同数据库的一个类似的表中   。  

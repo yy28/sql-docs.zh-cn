@@ -32,7 +32,7 @@ ms.locfileid: "68006724"
 </Employee>  
 ```  
   
- 查询依然相同，只是在列名中添加了 `ELEMENT` 指令。 因此，向 <`FName`> 元素添加了 <`LName`> 和 <`Name`> 元素子级，而不是添加属性。 因为 `Employee!1!EmpID` 列没有指定 `ELEMENT` 指令，所以将 `EmpID` 作为 <`Employee`> 元素的属性添加。  
+ 查询依然相同，只是在列名中添加了 `ELEMENT` 指令。 因此，向 <`Name`> 元素添加了 <`FName`> 和 <`LName`> 元素子级，而不是添加属性。 因为 `Employee!1!EmpID` 列没有指定 `ELEMENT` 指令，所以将 `EmpID` 作为 <`Employee`> 元素的属性添加。  
   
 ```  
 SELECT 1    as Tag,  

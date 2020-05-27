@@ -62,7 +62,7 @@ property_name
 **sql_variant**
   
 ## <a name="examples"></a>示例  
-此示例假定在 `HelloWorld` 数据库中注册了 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 程序集。 有关详细信息，请参阅 [Hello World 示例](https://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7)。
+此示例假定在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中注册了 `HelloWorld` 程序集。 有关详细信息，请参阅 [Hello World 示例](https://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7)。
   
 ```sql
 USE AdventureWorks2012;  

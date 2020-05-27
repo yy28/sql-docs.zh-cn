@@ -50,7 +50,7 @@ CREATE SERVICE service_name
  要创建的服务的名称。 新服务在当前数据库中创建，由 AUTHORIZATION 子句中指定的主体数据库所有。 不能指定服务器、数据库和架构名称。 service_name 必须是有效的 sysname   。  
   
 > [!NOTE]  
-> 不要创建将关键字 ANY 用于 service_name 的服务  。 在 `ANY` 中为服务名称指定 `CREATE BROKER PRIORITY` 时，优先级被视为针对所有服务。 此情况不限于名称为 ANY 的服务。  
+> 不要创建将关键字 ANY 用于 service_name 的服务  。 在 `CREATE BROKER PRIORITY` 中为服务名称指定 `ANY` 时，优先级被视为针对所有服务。 此情况不限于名称为 ANY 的服务。  
   
  AUTHORIZATION owner_name   
  将服务所有者设置为指定的数据库用户或角色。 如果当前用户为 dbo 或 sa，则 owner_name 可能为任意有效用户或角色的名称    。 否则，owner_name 必须是当前用户的名称，或者是当前用户对其有 IMPERSONATE 权限的用户的名称，或者是当前用户所属的角色的名称  。  
@@ -74,9 +74,9 @@ CREATE SERVICE service_name
 ## <a name="permissions"></a>权限  
  默认情况下，`db_ddladmin` 或 `db_owner` 固定数据库角色和 `sysadmin` 固定服务器角色的成员拥有创建服务的权限。 执行 `CREATE SERVICE` 语句的用户必须对队列和指定的所有约定具有 `REFERENCES` 权限。  
   
- 默认情况下，服务的所有者、`REFERENCES` 或 `db_ddladmin` 固定数据库角色的成员以及 `db_owner` 固定服务器角色的成员拥有该服务的 `sysadmin` 权限。 默认情况下，服务所有者、`SEND` 固定数据库角色的成员以及 `db_owner` 固定服务器角色的成员拥有服务的 `sysadmin` 权限。  
+ 默认情况下，服务的所有者、`db_ddladmin` 或 `db_owner` 固定数据库角色的成员以及 `sysadmin` 固定服务器角色的成员拥有该服务的 `REFERENCES` 权限。 默认情况下，服务所有者、`db_owner` 固定数据库角色的成员以及 `sysadmin` 固定服务器角色的成员拥有服务的 `SEND` 权限。  
   
- 服务不能是临时对象。 允许服务名称以  **开头，但仅限于永久对象#** 。  
+ 服务不能是临时对象。 允许服务名称以 # 开头，但仅限于永久对象。  
   
 ## <a name="examples"></a>示例  
   

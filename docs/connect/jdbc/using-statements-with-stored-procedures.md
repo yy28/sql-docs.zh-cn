@@ -37,14 +37,14 @@ ms.locfileid: "69025866"
 > [!NOTE]  
 > 存储过程还可以返回更新计数和多个结果集。 有关详细信息，请参阅[使用带有更新计数的存储过程](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)和[使用多个结果集](../../connect/jdbc/using-multiple-result-sets.md)。  
   
-使用 JDBC 驱动程序调用带参数的存储过程时，必须结合 `call`SQLServerConnection[ 类的 ](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)prepareCall[ 方法使用 ](../../connect/jdbc/reference/sqlserverconnection-class.md) SQL 转义序列。 `call` 转义序列的完整语法如下：  
+使用 JDBC 驱动程序调用带参数的存储过程时，必须结合 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 方法使用 `call` SQL 转义序列。 `call` 转义序列的完整语法如下：  
   
  `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`  
   
 > [!NOTE]  
 > 有关`call` 和其他 SQL 转义序列的详细信息，请参阅[使用 SQL 转义序列](../../connect/jdbc/using-sql-escape-sequences.md)。  
   
-本部分中的主题说明使用 JDBC 驱动程序和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL 转义序列调用 `call` 存储过程的可用方法。  
+本部分中的主题说明使用 JDBC 驱动程序和 `call` SQL 转义序列调用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程的可用方法。  
   
 ## <a name="in-this-section"></a>在本节中  
   

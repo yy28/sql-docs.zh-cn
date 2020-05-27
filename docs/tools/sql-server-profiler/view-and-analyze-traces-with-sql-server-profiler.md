@@ -66,7 +66,7 @@ AND     CPU < (Duration * 1000)
   
     -   打开跟踪文件或表，并展开所需事件类的节点，例如， **Deadlock Chain**。 有关详细信息，请参阅 [打开跟踪文件 (SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md) 或 [打开跟踪表 (SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)一起提供的预定义优化模板。  
   
-    -   在跟踪数据中搜索直到找到所需的事件（使用  **的“编辑”** **菜单上的“查找”** [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]命令帮助查找跟踪中的值）。 记录所跟踪事件的“ClientProcessID”  和“开始时间”  数据列中的值。  
+    -   在跟踪数据中搜索直到找到所需的事件（使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的“编辑”菜单上的“查找”命令帮助查找跟踪中的值）。 记录所跟踪事件的“ClientProcessID”  和“开始时间”  数据列中的值。  
   
 3.  在上下文中显示事件。  
   

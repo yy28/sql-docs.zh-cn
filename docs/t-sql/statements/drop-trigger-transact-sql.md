@@ -104,7 +104,7 @@ ON ALL SERVER
 ## <a name="examples"></a>示例  
   
 ### <a name="a-dropping-a-dml-trigger"></a>A. 删除 DML 触发器  
- 以下示例将删除 `employee_insupd` 数据库中的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 触发器。 （从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，可使用 DROP TRIGGER IF EXISTS 语句。）  
+ 以下示例将删除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 `employee_insupd` 触发器。 （从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，可使用 DROP TRIGGER IF EXISTS 语句。）  
   
 ```  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  

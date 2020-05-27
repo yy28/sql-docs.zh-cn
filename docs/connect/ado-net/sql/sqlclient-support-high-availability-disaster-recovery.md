@@ -76,9 +76,9 @@ Microsoft SqlClient Data Provider for SQL Server 支持以下连接属性：
 如果将主副本配置为拒绝只读工作负荷且连接字符串包含 `ApplicationIntent=ReadOnly`，连接将失败。  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>从数据库镜像升级到使用多子网群集  
-如果连接字符串中已存在 <xref:System.ArgumentException> 和 `MultiSubnetFailover` 连接关键字，或者如果使用了 `Failover Partner` 和除 TCP 以外的其他协议，将出现连接错误 (`MultiSubnetFailover=True`)。 如果使用 <xref:Microsoft.Data.SqlClient.SqlException> 且 SQL Server 返回一个故障转移伙伴响应指示它是数据库镜像对的一部分，也将出现错误 (`MultiSubnetFailover`)。  
+如果连接字符串中已存在 `MultiSubnetFailover` 和 `Failover Partner` 连接关键字，或者如果使用了 `MultiSubnetFailover=True` 和除 TCP 以外的其他协议，将出现连接错误 (<xref:System.ArgumentException>)。 如果使用 `MultiSubnetFailover` 且 SQL Server 返回一个故障转移伙伴响应指示它是数据库镜像对的一部分，也将出现错误 (<xref:Microsoft.Data.SqlClient.SqlException>)。  
   
-如果你将当前使用数据库镜像的 SqlClient 应用程序升级到多子网方案，则应删除 `Failover Partner` 连接属性并使用设置为 `MultiSubnetFailover` 的 `True` 替换它，并且还应使用可用性组侦听程序替换连接字符串中的服务器名称。 如果连接字符串使用 `Failover Partner` 和 `MultiSubnetFailover=True`，则驱动程序将生成错误。 但是，如果连接字符串使用 `Failover Partner` 和 `MultiSubnetFailover=False`（或 `ApplicationIntent=ReadWrite`），则应用程序将使用数据库镜像。  
+如果你将当前使用数据库镜像的 SqlClient 应用程序升级到多子网方案，则应删除 `Failover Partner` 连接属性并使用设置为 `True` 的 `MultiSubnetFailover` 替换它，并且还应使用可用性组侦听程序替换连接字符串中的服务器名称。 如果连接字符串使用 `Failover Partner` 和 `MultiSubnetFailover=True`，则驱动程序将生成错误。 但是，如果连接字符串使用 `Failover Partner` 和 `MultiSubnetFailover=False`（或 `ApplicationIntent=ReadWrite`），则应用程序将使用数据库镜像。  
   
 如果在 AG 的主数据库中使用数据库镜像，同时在连接到主数据库而不是可用性组侦听程序的连接字符串中使用 `MultiSubnetFailover=True`，则驱动程序将返回一条错误。  
   
@@ -87,7 +87,7 @@ Microsoft SqlClient Data Provider for SQL Server 支持以下连接属性：
   
 `ApplicationIntent` 关键字不适用于早期的只读数据库。  
   
-数据库可允许或禁止目标 AlwaysOn 数据库上的读取工作负荷。 （这是通过 `ALLOW_CONNECTIONS` 和 `PRIMARY_ROLE`Transact-SQL 语句的 `SECONDARY_ROLE` 子句实现的。）  
+数据库可允许或禁止目标 AlwaysOn 数据库上的读取工作负荷。 （这是通过 `PRIMARY_ROLE` 和 `SECONDARY_ROLE`Transact-SQL 语句的 `ALLOW_CONNECTIONS` 子句实现的。）  
   
 `ApplicationIntent` 关键字用于启用只读路由。  
   

@@ -20,7 +20,7 @@ ms.locfileid: "67975377"
 # <a name="setasciistream-method-sqlservernclob"></a>setAsciiStream 方法 (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索用于在指定起始位置将 ASCII 字符写入此 java.sql.NClob  对象表示的 NCLOB  值的流。  
+  检索用于在指定起始位置将 ASCII 字符写入此 java.sql.NClob 对象表示的 NCLOB 值的流。  
   
 ## <a name="syntax"></a>语法  
   

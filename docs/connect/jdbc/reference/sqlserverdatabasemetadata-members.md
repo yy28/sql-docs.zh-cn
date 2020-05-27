@@ -43,7 +43,7 @@ ms.locfileid: "67971547"
 |[autoCommitFailureClosesAllResultSets](../../../connect/jdbc/reference/autocommitfailureclosesallresultsets-method-sqlserverdatabasemetadata.md)|启用自动提交并引发异常时，指示 JDBC 驱动程序是否关闭所有打开的结果集，包括可保持的结果集。|  
 |[dataDefinitionCausesTransactionCommit](../../../connect/jdbc/reference/datadefinitioncausestransactioncommit-method-sqlserverdatabasemetadata.md)|检索事务内的数据定义语句是否强制事务提交。|  
 |[dataDefinitionIgnoredInTransactions](../../../connect/jdbc/reference/datadefinitionignoredintransactions-method-sqlserverdatabasemetadata.md)|检索此数据库是否忽略事务内的数据定义语句。|  
-|[deletesAreDetected](../../../connect/jdbc/reference/deletesaredetected-method-sqlserverdatabasemetadata.md)|检索是否可通过调用 [SQLServerResultSet](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) 类的 [rowDeleted](../../../connect/jdbc/reference/sqlserverresultset-class.md) 方法检测到可见行删除。|  
+|[deletesAreDetected](../../../connect/jdbc/reference/deletesaredetected-method-sqlserverdatabasemetadata.md)|检索是否可通过调用 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) 方法检测到可见行删除。|  
 |[doesMaxRowSizeIncludeBlobs](../../../connect/jdbc/reference/doesmaxrowsizeincludeblobs-method-sqlserverdatabasemetadata.md)|检索 [getMaxRowSize](../../../connect/jdbc/reference/getmaxrowsize-method-sqlserverdatabasemetadata.md) 方法的返回值是否包括 SQL 数据类型 LONGVARCHAR 和 LONGVARBINARY。|  
 |[getAttributes](../../../connect/jdbc/reference/getattributes-method-sqlserverdatabasemetadata.md)|检索给定架构和目录中可用的用户定义类型的给定类型的给定属性的说明。|  
 |[getBestRowIdentifier](../../../connect/jdbc/reference/getbestrowidentifier-method-sqlserverdatabasemetadata.md)|检索表中唯一标识一行的最佳列集的说明。|  
@@ -118,7 +118,7 @@ ms.locfileid: "67971547"
 |[getURL](../../../connect/jdbc/reference/geturl-method-sqlserverdatabasemetadata.md)|检索此数据库的 URL。|  
 |[getUserName](../../../connect/jdbc/reference/getusername-method-sqlserverdatabasemetadata.md)|检索此数据库可识别的用户名。|  
 |[getVersionColumns](../../../connect/jdbc/reference/getversioncolumns-method-sqlserverdatabasemetadata.md)|检索在某行内的任何值更新时会随之自动更新的表列的说明。|  
-|[insertsAreDetected](../../../connect/jdbc/reference/insertsaredetected-method-sqlserverdatabasemetadata.md)|检索是否可通过调用 [SQLServerResultSet](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) 类的 [rowInserted](../../../connect/jdbc/reference/sqlserverresultset-class.md) 方法检测可见的行插入。|  
+|[insertsAreDetected](../../../connect/jdbc/reference/insertsaredetected-method-sqlserverdatabasemetadata.md)|检索是否可通过调用 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 [rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) 方法检测可见的行插入。|  
 |[isCatalogAtStart](../../../connect/jdbc/reference/iscatalogatstart-method-sqlserverdatabasemetadata.md)|检索目录是否出现在完全限定表名的开始位置。|  
 |[isReadOnly](../../../connect/jdbc/reference/isreadonly-method-sqlserverdatabasemetadata.md)|检索此数据库是否处于只读模式。|  
 |[locatorsUpdateCopy](../../../connect/jdbc/reference/locatorsupdatecopy-method-sqlserverdatabasemetadata.md)|指示是将对 LOB 的更新应用到副本还是直接应用到 LOB。|  
@@ -170,8 +170,8 @@ ms.locfileid: "67971547"
 |[supportsMinimumSQLGrammar](../../../connect/jdbc/reference/supportsminimumsqlgrammar-method-sqlserverdatabasemetadata.md)|检索此数据库是否支持 ODBC 最小 SQL 语法。|  
 |[supportsMixedCaseIdentifiers](../../../connect/jdbc/reference/supportsmixedcaseidentifiers-method-sqlserverdatabasemetadata.md)|检索此数据库是否将未用双引号引起来的大小写混合的 SQL 标识符视为不区分大小写，并以混合大小写方式存储它们。|  
 |[supportsMixedCaseQuotedIdentifiers](../../../connect/jdbc/reference/supportsmixedcasequotedidentifiers-method-sqlserverdatabasemetadata.md)|检索此数据库是否将用双引号引起来的大小写混合的 SQL 标识符视为不区分大小写，并以混合大小写方式存储它们。|  
-|[supportsMultipleOpenResults](../../../connect/jdbc/reference/supportsmultipleopenresults-method-sqlserverdatabasemetadata.md)|检索 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象能否同时返回多个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 对象。|  
-|[supportsMultipleResultSets](../../../connect/jdbc/reference/supportsmultipleresultsets-method-sqlserverdatabasemetadata.md)|检索此数据库是否支持通过一次调用 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 [execute](../../../connect/jdbc/reference/execute-method.md) 方法获取多个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 对象。|  
+|[supportsMultipleOpenResults](../../../connect/jdbc/reference/supportsmultipleopenresults-method-sqlserverdatabasemetadata.md)|检索 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 对象能否同时返回多个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。|  
+|[supportsMultipleResultSets](../../../connect/jdbc/reference/supportsmultipleresultsets-method-sqlserverdatabasemetadata.md)|检索此数据库是否支持通过一次调用 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类的 [execute](../../../connect/jdbc/reference/execute-method.md) 方法获取多个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。|  
 |[supportsMultipleTransactions](../../../connect/jdbc/reference/supportsmultipletransactions-method-sqlserverdatabasemetadata.md)|检索此数据库是否允许在不同连接上同时打开多个事务。|  
 |[supportsNamedParameters](../../../connect/jdbc/reference/supportsnamedparameters-method-sqlserverdatabasemetadata.md)|检索此数据库是否支持可调用语句中的命名参数。|  
 |[supportsNonNullableColumns](../../../connect/jdbc/reference/supportsnonnullablecolumns-method-sqlserverdatabasemetadata.md)|检索此数据库中的列是否可定义为不可为 Null 的值。|  
@@ -205,7 +205,7 @@ ms.locfileid: "67971547"
 |[supportsTransactions](../../../connect/jdbc/reference/supportstransactions-method-sqlserverdatabasemetadata.md)|检索此数据库是否支持事务。|  
 |[supportsUnion](../../../connect/jdbc/reference/supportsunion-method-sqlserverdatabasemetadata.md)|检索此数据库是否支持 SQL UNION。|  
 |[supportsUnionAll](../../../connect/jdbc/reference/supportsunionall-method-sqlserverdatabasemetadata.md)|检索此数据库是否支持 SQL UNION ALL。|  
-|[updatesAreDetected](../../../connect/jdbc/reference/updatesaredetected-method-sqlserverdatabasemetadata.md)|检索是否可通过调用 [SQLServerResultSet](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) 类的 [rowUpdated](../../../connect/jdbc/reference/sqlserverresultset-class.md) 方法检测到可见行更新。|  
+|[updatesAreDetected](../../../connect/jdbc/reference/updatesaredetected-method-sqlserverdatabasemetadata.md)|检索是否可通过调用 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 [rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) 方法检测到可见行更新。|  
 |[usesLocalFilePerTable](../../../connect/jdbc/reference/useslocalfilepertable-method-sqlserverdatabasemetadata.md)|检索此数据库是否为每个表使用一个文件。|  
 |[usesLocalFiles](../../../connect/jdbc/reference/useslocalfiles-method-sqlserverdatabasemetadata.md)|检索此数据库是否将表存储在本地文件中。|  
   

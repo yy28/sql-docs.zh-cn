@@ -69,7 +69,7 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
   
 ### <a name="b-using-newid-in-a-create-table-statement"></a>B. 在 CREATE TABLE 语句中使用 NEWID  
   
-适用范围：  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
  以下示例创建数据类型为 uniqueidentifier 的 `cust` 表，并使用 NEWID 作为默认值填充该表  。 为 `NEWID()` 赋予默认值时，每个新行和现有行均对 `CustomerID` 列具有唯一值。  
   

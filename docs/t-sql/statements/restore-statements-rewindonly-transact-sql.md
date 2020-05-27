@@ -64,7 +64,7 @@ FROM <backup_device> [ ,...n ]
  由 sp_addumpdevice  创建的、用于还原数据库的备份设备的逻辑名称，该名称必须符合有关标识符的规则。 如果作为变量 ( **@** _logical\_backup\_device\_name\_var_) 提供，则可以将该备份设备名称指定为字符串常量 ( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) 或字符字符串数据类型（ntext  或 text  数据类型除外）的变量。  
   
  {DISK | TAPE } **=** { **'** _physical\_backup\_device\_name_ **'**  |  **@** _physical\_backup\_device\_name\_var_ }  
- 允许从指定的磁盘或磁带设备还原备份。 应使用设备的实际名称（例如，完整的路径和文件名）指定磁盘和磁带的设备类型：DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' or TAPE = '\\\\.\TAPE0'。 如果指定为变量 (**physical@backup**device_name\_var)，则可以将该设备名称指定为字符串常量 (\_physical\_backup\_device_name**var = 'physical_backup_device_name') 或字符字符串数据类型（ntext 或 text 数据类型除外）的变量@** _\_\_\_\__    。  
+ 允许从指定的磁盘或磁带设备还原备份。 应使用设备的实际名称（例如，完整的路径和文件名）指定磁盘和磁带的设备类型：DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' or TAPE = '\\\\.\TAPE0'。 如果指定为变量 (@physical\_backup\_device\_name\_var)，则可以将该设备名称指定为字符串常量 (@physical\_backup\_device\_name\_var = 'physical_backup_device_name') 或字符字符串数据类型（ntext 或 text 数据类型除外）的变量 。  
   
  如果使用的是具有 UNC 名称（必须包含计算机名称）的网络服务器，请指定磁盘的设备类型。 有关如何使用 UNC 名称的详细信息，请参阅[备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
   

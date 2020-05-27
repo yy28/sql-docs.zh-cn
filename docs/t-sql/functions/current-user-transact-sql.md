@@ -46,7 +46,7 @@ CURRENT_USER
 **sysname**
   
 ## <a name="remarks"></a>备注  
-`CURRENT_USER` 返回当前安全上下文的名称。 如果在 `CURRENT_USER` 的调用切换上下文后执行 `EXECUTE AS`，`CURRENT_USER` 将返回被模拟上下文的名称。 如果 Windows 主体通过某组中的成员身份访问数据库，则 `CURRENT_USER` 将返回 Windows 主体的名称，而不是该组名。
+`CURRENT_USER` 返回当前安全上下文的名称。 如果在 `EXECUTE AS` 的调用切换上下文后执行 `CURRENT_USER`，`CURRENT_USER` 将返回被模拟上下文的名称。 如果 Windows 主体通过某组中的成员身份访问数据库，则 `CURRENT_USER` 将返回 Windows 主体的名称，而不是该组名。
   
 若要了解如何返回当前用户的登录名，请参阅 [SUSER_NAME (Transact-SQL)](../../t-sql/functions/suser-name-transact-sql.md) 和 [SYSTEM_USER (Transact-SQL)](../../t-sql/functions/system-user-transact-sql.md)。
   

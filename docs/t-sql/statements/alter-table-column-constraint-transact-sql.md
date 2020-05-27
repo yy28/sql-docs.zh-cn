@@ -85,13 +85,13 @@ ms.locfileid: "73982006"
   
  无法将 ntext、text、varchar(max)、nvarchar(max)、varbinary(max)、xml 或 image 数据类型的列指定为索引的列        。  
   
- WITH FILLFACTOR **fillfactor=**   
+ WITH FILLFACTOR =fillfactor  
  指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]在存储索引数据时使用的每个索引页的填充程度。 用户指定的填充因子值的范围可以为 1 到 100。 如果未指定值，则默认值为 0。  
   
 > [!IMPORTANT]  
 >  将 WITH FILLFACTOR = fillfactor 记录为适用于 PRIMARY KEY 或 UNIQUE 约束的唯一索引选项是为了保持向后兼容，但在未来的版本中将不会以此方式进行记录  。 可在 ALTER TABLE 的 [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) 子句中指定其他索引选项。  
   
- ON { partition_scheme_name(partition_column_name)_filegroup_"default" } 适用于： **及更高版本**    |    |     [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。  
+ ON { partition_scheme_name(partition_column_name) | filegroup | "default" } 适用于：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本  。  
   
  指定为约束创建的索引的存储位置。 如果指定了 partition_scheme_name，则将对该索引进行分区，并将分区映射到由 partition_scheme_name 指定的文件组   。 如果指定了 filegroup，则将在命名文件组内创建索引  。 如果指定了 "default" 或者根本没有指定 ON，将在创建表的同一个文件组中创建索引   。 当为 PRIMARY KEY 约束或 UNIQUE 约束添加聚集索引时，如果指定了 ON，则创建聚集索引时将把整个表移动到指定的文件组中。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "73982006"
   
  例如，在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中，ProductVendor 表与 Vendor 表有引用关系   。 ProductVendor.VendorID 外键引用 Vendor.VendorID 主键   。  
   
- 如果对 Vendor 表的某行执行 DELETE 语句，并且为 ProductVendor.VendorID 指定 ON DELETE CASCADE 操作，则**将检查 ProductVendor 表中的一个或多个依赖行**  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  。 如果存在依赖行，则除了删除 Vendor 表中被引用的行外，还将删除 ProductVendor 表中的依赖行   。  
+ 如果对 Vendor 表的某行执行 DELETE 语句，并且为 ProductVendor.VendorID 指定 ON DELETE CASCADE 操作，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]将检查 ProductVendor 表中的一个或多个依赖行  。 如果存在依赖行，则除了删除 Vendor 表中被引用的行外，还将删除 ProductVendor 表中的依赖行   。  
   
  相反，如果指定了 NO ACTION，并且 ProductVendor 表中至少有一行引用 Vendor 行，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将引发错误并回滚对 Vendor 行执行的删除操作   。  
   
@@ -155,7 +155,7 @@ ms.locfileid: "73982006"
   
  例如，在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中，ProductVendor 表与 Vendor 表有引用关系   。 ProductVendor.VendorID 外键引用 Vendor.VendorID 主键   。  
   
- 如果对 Vendor 表中的某行执行了 UPDATE 语句，并且为 ProductVendor.VendorID 指定了 ON UPDATE CASCADE 操作，则  **将检查 ProductVendor 表中是否有一个或多个依赖行**  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  。 如果存在依赖行，则 ProductVendor 表中的依赖行将随 Vendor 表中的被引用行一同更新   。  
+ 如果对 Vendor 表中的某行执行了 UPDATE 语句，并且为 ProductVendor.VendorID 指定了 ON UPDATE CASCADE 操作，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将检查 ProductVendor 表中是否有一个或多个依赖行  。 如果存在依赖行，则 ProductVendor 表中的依赖行将随 Vendor 表中的被引用行一同更新   。  
   
  相反，如果指定了 NO ACTION，则当 ProductVendor 表中至少有一行引用了 Vendor 行时，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 将引发错误，并回滚对 Vendor 行的更新操作   。  
   

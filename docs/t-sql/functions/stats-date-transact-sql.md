@@ -59,7 +59,7 @@ STATS_DATE ( object_id , stats_id )
  
  统计信息更新日期连同[直方图](../../relational-databases/statistics/statistics.md#histogram)和[密度矢量](../../relational-databases/statistics/statistics.md#density)一起存储在[统计信息 blob 对象](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)中，而不是存储在元数据中。 如果未读取到任何数据，无法生成统计信息数据，则不会创建统计信息 blob，且该日期不可用。 针对谓词不返回任何行或新的空表，筛选的统计信息便是这种情况。
  
- 如果统计信息对应于索引，则 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 目录视图中的 stats_id 值与 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 目录视图中的 index_id 值相同   。
+ 如果统计信息对应于索引，则 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 目录视图中的 stats_id 值与 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 目录视图中的 index_id 值相同 。
   
 ## <a name="permissions"></a>权限  
  若要查看表或索引视图的元数据，需要 db_owner 固定数据库角色中的成员身份或权限。  
@@ -79,7 +79,7 @@ WHERE object_id = OBJECT_ID('Person.Address');
 GO  
 ```  
   
- 如果统计信息对应于索引，则 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 目录视图中的 stats_id 值与 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 目录视图中的 index_id 值相同，以下查询返回与上一查询相同的结果   。 如果统计信息不对应于索引，则它们位于 sys.stats 结果中，但是不在 sys.indexes 结果中。  
+ 如果统计信息对应于索引，则 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 目录视图中的 stats_id 值与 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 目录视图中的 index_id 值相同，以下查询返回与上一查询相同的结果 。 如果统计信息不对应于索引，则它们位于 sys.stats 结果中，但是不在 sys.indexes 结果中。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -140,7 +140,7 @@ WHERE s.object_id = OBJECT_ID('dbo.DimCustomer');
 GO  
 ```  
   
- 如果统计信息对应于索引，则 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 目录视图中的 stats_id 值与 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 目录视图中的 index_id 值相同，以下查询返回与上一查询相同的结果   。 如果统计信息不对应于索引，则它们位于 sys.stats 结果中，但是不在 sys.indexes 结果中。  
+ 如果统计信息对应于索引，则 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 目录视图中的 stats_id 值与 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 目录视图中的 index_id 值相同，以下查询返回与上一查询相同的结果 。 如果统计信息不对应于索引，则它们位于 sys.stats 结果中，但是不在 sys.indexes 结果中。  
   
 ```sql  
 USE AdventureWorksPDW2012;  

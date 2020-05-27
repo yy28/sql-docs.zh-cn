@@ -32,7 +32,7 @@ ms.locfileid: "67993486"
 ## <a name="example"></a>示例  
 以下示例从 AdventureWorks 数据库的 *Production.ProductPhoto* 表中检索二进制数据（在本例中为图像）。 图像以流的形式检索，并显示在浏览器中。  
   
-通过使用 [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) 和 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) （其中返回类型指定为二进制流）来完成以流的形式检索图像数据操作。 返回类型通过使用常量 SQLSRV_PHPTYPE_STREAM 指定  。 有关 sqlsrv 常量的信息，请参阅[常量 (Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  。  
+通过使用 [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) 和 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) （其中返回类型指定为二进制流）来完成以流的形式检索图像数据操作。 返回类型通过使用常量 SQLSRV_PHPTYPE_STREAM 指定  。 有关 sqlsrv 常量的信息，请参阅[常量 (Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。  
   
 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 当从浏览器运行该示例时，所有输出都将写入该浏览器。  
   

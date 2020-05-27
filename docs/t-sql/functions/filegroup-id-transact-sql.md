@@ -51,7 +51,7 @@ filegroup_name  是类型 sysname  的表达式，它表示文件组 ID `FILEGRO
 filegroup_name 与 sys.filegroups 目录视图中的 name 列相对应    。  
   
 ## <a name="examples"></a>示例  
-此示例将返回 `PRIMARY` 数据库中名为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 的文件组的文件组 ID。  
+此示例将返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中名为 `PRIMARY` 的文件组的文件组 ID。  
   
 ```  
 SELECT FILEGROUP_ID('PRIMARY') AS [Filegroup ID];  

@@ -48,7 +48,7 @@ public java.sql.ResultSet executeQuery(java.lang.String sql)
 ## <a name="remarks"></a>备注  
  此 executeQuery 方法是由 java.sql.Statement 接口中的 executeQuery 方法指定的。  
   
- 如果给定的 SQL 语句没有生成单一的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverexception-class.md) 对象，则会引发 [SQLServerException](../../../connect/jdbc/reference/sqlserverresultset-class.md)。  
+ 如果给定的 SQL 语句没有生成单一的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象，则会引发 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)。  
   
  如果执行存储过程将产生大于 1 的更新计数，或生成多个结果集，则请使用 [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 方法执行存储过程。  
   

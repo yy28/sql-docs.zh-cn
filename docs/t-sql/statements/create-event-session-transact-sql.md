@@ -107,7 +107,7 @@ ON { SERVER | DATABASE }
 
 ## <a name="arguments"></a>参数
 
-event_session_name  ：事件会话的用户定义名称。 event_session_name 由字母数字组成，最多可包含 128 个字符，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中必须是唯一的，并且必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则  。
+event_session_name  ：事件会话的用户定义名称。 event_session_name 由字母数字组成，最多可包含 128 个字符，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中必须是唯一的，并且必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。
 
 ADD EVENT [ event_module_guid  ].event_package_name  .event_name  ：与事件会话关联的事件，其中：
 

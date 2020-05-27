@@ -32,7 +32,7 @@ ms.locfileid: "68070333"
   
  序列对象是通过使用 [CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md) 语句创建的。 序列是整数值，可以是返回整数的任何数据类型。 使用 ALTER SEQUENCE 语句无法更改数据类型。 若要更改数据类型，请删除或创建序列对象。  
   
- 序列对象是用户定义的绑定到架构的对象，用于可根据规范生成数值序列。 通过调用 NEXT VALUE FOR 函数，从序列中生成新值。 使用 **sp_sequence_get_range** 同时获取多个序列号。 有关同时使用 CREATE SEQUENCE、sp_sequence_get_range 和 NEXT VALUE FOR 函数的信息和方案，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)  。  
+ 序列对象是用户定义的绑定到架构的对象，用于可根据规范生成数值序列。 通过调用 NEXT VALUE FOR 函数，从序列中生成新值。 使用 **sp_sequence_get_range** 同时获取多个序列号。 有关同时使用 CREATE SEQUENCE、sp_sequence_get_range 和 NEXT VALUE FOR 函数的信息和方案，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -100,7 +100,7 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
  若要审核 ALTER SEQUENCE，请监视 SCHEMA_OBJECT_CHANGE_GROUP   。  
   
 ## <a name="examples"></a>示例  
- 有关创建序列和使用 NEXT VALUE FOR 函数生成序列号的示例，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)  。  
+ 有关创建序列和使用 NEXT VALUE FOR 函数生成序列号的示例，请参阅[序列号](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
   
 ### <a name="a-altering-a-sequence"></a>A. 更改序列  
  下面的示例使用 int 数据类型（范围为 100 到 200 之间）创建一个名为 Test 的架构和一个名为 TestSeq 的序列  。 序列以 125 开始，每次生成数字时递增 25。 因为该序列配置为可循环，所以，当值超过最大值 200 时，序列将从最小值 100 重新开始。  

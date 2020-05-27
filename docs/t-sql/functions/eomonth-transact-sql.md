@@ -45,7 +45,7 @@ start_date
 month_to_add   
 可选的整数表达式，指定要加到 start_date 的月份数  。  
   
-如果 month_to_add 参数具有值，则  *向 start_date 添加指定月份数，然后返回结果日期所在月份的最后一天*`EOMONTH`  。 如果增加后超过有效的日期范围，`EOMONTH` 将引发错误。  
+如果 month_to_add 参数具有值，则 `EOMONTH` 向 start_date 添加指定月份数，然后返回结果日期所在月份的最后一天 。 如果增加后超过有效的日期范围，`EOMONTH` 将引发错误。  
   
 ## <a name="return-type"></a>返回类型  
  **date**  

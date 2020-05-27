@@ -529,7 +529,7 @@ FROM    [dbo].[FactInternetSales]
 
 <a name="ctas-replace-implicit-joins-bk"></a>
 
-### <a name="j-use-ctas-and-implicit-joins-to-replace-ansi-joins-in-the-from-clause-of-an-update-statement"></a>J. 使用 CTAS 和隐式联接替换 `FROM` 语句中 `UPDATE` 子句的 ANSI 联接  
+### <a name="j-use-ctas-and-implicit-joins-to-replace-ansi-joins-in-the-from-clause-of-an-update-statement"></a>J. 使用 CTAS 和隐式联接替换 `UPDATE` 语句中 `FROM` 子句的 ANSI 联接  
 适用范围：Azure SQL 数据仓库和并行数据仓库  
 
 可能会发现更新很复杂，它使用 ANSI 联接语法将两个以上的表联接在一起，以执行 UPDATE 或 DELETE 操作。
@@ -574,7 +574,7 @@ AND [acs].[CalendarYear]                = [fis].[CalendarYear]
 ;
 ```
 
-由于 SQL 数据仓库不支持 `FROM` 语句中 `UPDATE` 子句的 ANSI 联接，因此需要稍作更改才能使用此 SQL Server 代码。
+由于 SQL 数据仓库不支持 `UPDATE` 语句中 `FROM` 子句的 ANSI 联接，因此需要稍作更改才能使用此 SQL Server 代码。
 
 可以将 `CTAS` 和隐式联接结合使用来替换此代码：
 
@@ -615,7 +615,7 @@ DROP TABLE CTAS_acs
 ### <a name="k-use-ctas-to-specify-which-data-to-keep-instead-of-using-ansi-joins-in-the-from-clause-of-a-delete-statement"></a>K. 使用 CTAS 指定要保留的数据而不是使用 DELETE 语句中 FROM 子句的 ANSI 联接  
 适用范围：Azure SQL 数据仓库和并行数据仓库  
 
-有时，删除数据的最佳方法是使用 `CTAS`。 只需选择希望保留的数据，而不是删除数据。 这尤其适用于使用 ansi 联接语法的 `DELETE` 语句，因为 SQL 数据仓库不支持 `FROM` 语句中 `DELETE` 子句中的 ANSI 联接。
+有时，删除数据的最佳方法是使用 `CTAS`。 只需选择希望保留的数据，而不是删除数据。 这尤其适用于使用 ansi 联接语法的 `DELETE` 语句，因为 SQL 数据仓库不支持 `DELETE` 语句中 `FROM` 子句中的 ANSI 联接。
 
 转换后的 DELETE 语句示例如下：
 
@@ -736,7 +736,7 @@ from ctas_r
 
 我们发现这两种结果之间出现这种差异的原因是隐式类型转换。 在第一个示例中，表定义了列的定义。 插入行时会发生隐式类型转换。 在第二个示例中未发生隐式类型转换，因为表达式定义列的数据类型。 另请注意，第二个示例中的列已定义为可为 Null 的列，而第一个示例中并未如此。 在第一个示例中创建表时，显式定义了列的为 Null 性。 在第二个示例中，仅将它留给表达式，在默认情况下会产生 NULL 定义。  
 
-若要解决这些问题，则必须在 `SELECT` 语句的 `CTAS` 部分中显式设置类型转换和为 Null 性。 在创建表的部分无法设置这些属性。
+若要解决这些问题，则必须在 `CTAS` 语句的 `SELECT` 部分中显式设置类型转换和为 Null 性。 在创建表的部分无法设置这些属性。
 
 以下示例演示如何修复代码：
 

@@ -40,7 +40,7 @@ ms.locfileid: "78896729"
 由于 null 被视为未知，因此两个 null 值之间的比较不被视为相等。 在使用算术运算符的表达式中，如果有任何操作数为 null，则结果也为 null。  
   
 ## <a name="nulls-and-sqlboolean"></a>null 和 SqlBoolean  
-任何 <xref:System.Data.SqlTypes> 之间的比较将返回一个 <xref:System.Data.SqlTypes.SqlBoolean>。 每个 `IsNull` 的 `SqlType` 函数都返回 <xref:System.Data.SqlTypes.SqlBoolean>，并可用于检查 null 值。 以下真值表显示了 AND、OR 和 NOT 运算符在存在 null 值的情况下的工作方式。 （T=true、F=false 以及 U=未知或 null。）  
+任何 <xref:System.Data.SqlTypes> 之间的比较将返回一个 <xref:System.Data.SqlTypes.SqlBoolean>。 每个 `SqlType` 的 `IsNull` 函数都返回 <xref:System.Data.SqlTypes.SqlBoolean>，并可用于检查 null 值。 以下真值表显示了 AND、OR 和 NOT 运算符在存在 null 值的情况下的工作方式。 （T=true、F=false 以及 U=未知或 null。）  
   
 ![真值表](../media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
@@ -75,7 +75,7 @@ WHERE TerritoryID IN (1, 2, 3)
 ## <a name="assigning-null-values"></a>分配 null 值  
 null 值为特殊值，其存储和赋值语义在不同类型系统和存储系统之间是不同的。 `Dataset` 旨在与不同的类型和存储系统一起使用。  
   
-本部分介绍 null 语义，该语义用于将 null 值分配给不同类型系统中 <xref:System.Data.DataColumn> 的 <xref:System.Data.DataRow>。  
+本部分介绍 null 语义，该语义用于将 null 值分配给不同类型系统中 <xref:System.Data.DataRow> 的 <xref:System.Data.DataColumn>。  
   
 `DBNull.Value`  
 该赋值对于任何类型的 `DataColumn` 都有效。 如果类型实现 `INullable`，则会将 `DBNull.Value` 强制转换为相应的强类型 Null 值。  
@@ -84,20 +84,20 @@ null 值为特殊值，其存储和赋值语义在不同类型系统和存储系
 所有 <xref:System.Data.SqlTypes> 数据类型都实现 `INullable`。 如果可使用隐式强制转换运算符将强类型的 null 值转换为列的数据类型，则应执行赋值。 否则，将引发无效强制转换异常。  
   
 `null`  
-如果“null”是给定 `DataColumn` 数据类型的合法值，则会将其强制转换为与 `DbNull.Value` 类型 (`Null`) 关联的相应 `INullable` 或 `SqlType.Null`  
+如果“null”是给定 `DataColumn` 数据类型的合法值，则会将其强制转换为与 `INullable` 类型 (`SqlType.Null`) 关联的相应 `DbNull.Value` 或 `Null`  
   
 `derivedUdt.Null`  
 对于 UDT 列，将始终基于与 `DataColumn` 关联的类型存储 null 值。 请考虑与 `DataColumn` 关联的 UDT 的情况，它不实现 `INullable`，但其子类会实现。 在这种情况下，如果分配了与派生类关联的强类型 null 值，则会将其存储为非类型化的 `DbNull.Value`，因为 null 存储始终与 DataColumn 的数据类型一致。  
   
 > [!NOTE]
->  `Nullable<T>` 当前不支持 <xref:System.Nullable> 或 `DataSet` 结构。  
+>  `DataSet` 当前不支持 `Nullable<T>` 或 <xref:System.Nullable> 结构。  
   
 ### <a name="multiple-column-row-assignment"></a>多列（行）赋值  
 `DataTable.Add`、`DataTable.LoadDataRow` 或接受映射到行的 <xref:System.Data.DataRow.ItemArray%2A> 的其他 API，请将“null”映射到 DataColumn 的默认值。 如果数组中的对象包含 `DbNull.Value` 或其强类型对应项，则将应用上述规则。  
   
 此外，以下规则适用于 `DataRow.["columnName"]` null 赋值的实例：  
   
-- 对于所有列，默认值为 *，但强类型 NULL 列除外，强类型 NULL 列的默认值是相应的强类型 NULL 值*`DbNull.Value`。  
+- 对于所有列，默认值为 `DbNull.Value`，但强类型 NULL 列除外，强类型 NULL 列的默认值是相应的强类型 NULL 值。  
   
 - 在序列化为 XML 文件时，不会写出 null 值（如在“xsi:nil”中）。  
   
@@ -105,7 +105,7 @@ null 值为特殊值，其存储和赋值语义在不同类型系统和存储系
   
 - 从 XML 输入读取的行的所有缺少列值都将分配为 NULL。 将向使用 <xref:System.Data.DataTable.NewRow%2A> 或类似方法创建的行分配 DataColumn 的默认值。  
   
-- <xref:System.Data.DataRow.IsNull%2A> 方法为 `true` 和 `DbNull.Value` 返回 `INullable.Null`。  
+- <xref:System.Data.DataRow.IsNull%2A> 方法为 `DbNull.Value` 和 `INullable.Null` 返回 `true`。  
   
 ## <a name="assigning-null-values"></a>分配 null 值  
 任何 <xref:System.Data.SqlTypes> 实例的默认值为 null。  
@@ -127,7 +127,7 @@ isColumnNull=True, ID=Null, Description=Null
 ```  
   
 ## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>将 null 值与 SqlTypes 和 CLR 类型进行比较  
-比较 null 值时，务必要了解 `Equals` 方法计算 <xref:System.Data.SqlTypes> 中 null 值的方式与它在 CLR 类型中的工作方式相比之间的差异。 所有 <xref:System.Data.SqlTypes>`Equals` 方法都使用数据库语义计算 null 值：如果两个值中的一个或两个都为 null，则比较结果为 null。 另一方面，如果两个 `Equals` 都为 null，则对两者使用 CLR <xref:System.Data.SqlTypes> 方法将生成 true。 这反映了使用实例方法（如 CLR `String.Equals` 方法）和使用静态/共享方法 (`SqlString.Equals`) 的差异。  
+比较 null 值时，务必要了解 `Equals` 方法计算 <xref:System.Data.SqlTypes> 中 null 值的方式与它在 CLR 类型中的工作方式相比之间的差异。 所有 <xref:System.Data.SqlTypes>`Equals` 方法都使用数据库语义计算 null 值：如果两个值中的一个或两个都为 null，则比较结果为 null。 另一方面，如果两个 <xref:System.Data.SqlTypes> 都为 null，则对两者使用 CLR `Equals` 方法将生成 true。 这反映了使用实例方法（如 CLR `String.Equals` 方法）和使用静态/共享方法 (`SqlString.Equals`) 的差异。  
   
 下面的示例演示了 `SqlString.Equals` 方法与 `String.Equals` 方法在分别传递一对 null 值和一对空字符串时的结果差异。  
   

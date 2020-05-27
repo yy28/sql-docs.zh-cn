@@ -60,7 +60,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
 ## <a name="remarks"></a>备注  
  ALL 要求 scalar_expression 与子查询返回的每个值进行比较时都应满足比较条件  。 例如，如果子查询返回的值为 2 和 3，则对于值为 2 的 scalar_expression，scalar_expression <= ALL（子查询）的计算结果为 TRUE   。 如果子查询返回值 2 和 3，*scalar_expression* = ALL（子查询）的计算结果为 FALSE，因为子查询的某些值（值 3）不符合表达式的条件。  
   
- 有关要求 scalar_expression 只与子查询返回的某一个值比较时满足比较条件的语句，请参阅 [SOME | ANY (Transact-SQL)](../../t-sql/language-elements/some-any-transact-sql.md)  。  
+ 有关要求 scalar_expression 只与子查询返回的某一个值比较时满足比较条件的语句，请参阅 [SOME | ANY (Transact-SQL)](../../t-sql/language-elements/some-any-transact-sql.md)。  
   
  本文讨论了 ALL 用于子查询的情况。 ALL 也可以与 [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) 和 [SELECT](../../t-sql/queries/select-transact-sql.md) 一起使用。  
   

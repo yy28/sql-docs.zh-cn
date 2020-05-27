@@ -35,7 +35,7 @@ ms.locfileid: "68893895"
 创建用于定义外部进程资源的外部池。 资源池表示数据库引擎实例的物理资源（内存和 CPU）的子集。 数据库管理员可以使用资源调控器在多个资源池之间分发服务器资源，最多可为 64 个池。
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-对于 [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 中的[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，外部池控制 `rterm.exe`、`BxlServer.exe` 以及它们生成的其他进程。
+对于 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中的[!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]，外部池控制 `rterm.exe`、`BxlServer.exe` 以及它们生成的其他进程。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -88,7 +88,7 @@ MAX_PROCESSES =value
 
 ## <a name="remarks"></a>备注
 
-执行 [!INCLUDE[ssDE](../../includes/ssde-md.md)]ALTER RESOURCE GOVERNOR RECONFIGURE[ 语句时，](../../t-sql/statements/alter-resource-governor-transact-sql.md)实现资源池。
+执行 [ALTER RESOURCE GOVERNOR RECONFIGURE](../../t-sql/statements/alter-resource-governor-transact-sql.md) 语句时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]实现资源池。
 
 有关资源池的常规信息，请参阅 [Resource Governor 资源池](../../relational-databases/resource-governor/resource-governor-resource-pool.md)、[sys.resource_governor_external_resource_pools (Transact-SQL)](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md) 和 [sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)。
 

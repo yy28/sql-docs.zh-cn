@@ -45,7 +45,7 @@ ms.locfileid: "73843318"
  **integer**  
   
 ## <a name="remarks"></a>备注  
- BEGIN TRANSACTION 语句将 @@TRANCOUNT 增加 1。 ROLLBACK TRANSACTION 将 @@TRANCOUNT 递减到 0，但 ROLLBACK TRANSACTION savepoint_name 除外，它不影响 @  @TRANCOUNT。 COMMIT TRANSACTION 或 COMMIT WORK 将 @@TRANCOUNT 递减 1。  
+ BEGIN TRANSACTION 语句将 @@TRANCOUNT 增加 1。 ROLLBACK TRANSACTION 将 @@TRANCOUNT 递减到 0，但 ROLLBACK TRANSACTION savepoint_name 除外，它不影响 @@TRANCOUNT。 COMMIT TRANSACTION 或 COMMIT WORK 将 @@TRANCOUNT 递减 1。  
   
 ## <a name="examples"></a>示例  
   

@@ -110,7 +110,7 @@ INFORMATION_TYPE_ID
 
 ### <a name="a-classifying-two-columns"></a>A. 对两个列进行分类
 
-以下示例使用敏感度标签“高度机密”  和信息类型“财务”  对列 dbo.sales.price  和 dbo.sales.discount  进行分类。
+以下示例使用敏感度标签“高度机密”和信息类型“财务”对列 dbo.sales.price 和 dbo.sales.discount 进行分类。
 
 ```sql
 ADD SENSITIVITY CLASSIFICATION TO
@@ -119,7 +119,7 @@ ADD SENSITIVITY CLASSIFICATION TO
 ```  
 
 ### <a name="b-classifying-only-a-label"></a>B. 仅对一个标签进行分类
-以下示例使用标签“机密”  和标签 ID 643f7acd-776a-438d-890c-79c3f2a520d6  对列 dbo.customer.comments  进行分类。 未对此列进行信息类型分类。
+以下示例使用标签“机密”和标签 ID 643f7acd-776a-438d-890c-79c3f2a520d6 对列 dbo.customer.comments 进行分类。 未对此列进行信息类型分类。
 
 ```sql
 ADD SENSITIVITY CLASSIFICATION TO

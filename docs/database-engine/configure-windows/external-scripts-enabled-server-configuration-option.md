@@ -40,7 +40,7 @@ ms.locfileid: "72006045"
 
     [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] 使用与 SQL Server 2016 相同的体系结构，但支持 Python 语言。
 
-    在  **安装过程中安装“高级分析扩展”功能，以启用外部脚本的执行**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 确保在初始安装过程中至少选择一种语言：R 和/或 Python。 
+    在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中安装“高级分析扩展”功能，以启用外部脚本的执行。 确保在初始安装过程中至少选择一种语言：R 和/或 Python。 
 
 ## <a name="additional-requirements"></a>其他需求
 

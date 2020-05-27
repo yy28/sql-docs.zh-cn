@@ -62,7 +62,7 @@ TYPE_NAME ( type_id )
  系统函数可以在选择列表、WHERE 子句和任何允许使用表达式的地方使用。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md) 和 [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  
- 以下示例针对 `Vendor` 数据库的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表中的每列返回对象名称、列名以及类型名称。  
+ 以下示例针对 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的 `Vendor` 表中的每列返回对象名称、列名以及类型名称。  
   
 ```  
 SELECT o.name AS obj_name, c.name AS col_name,  
@@ -92,7 +92,7 @@ Vendor          PurchasingWebServiceURL  nvarchar
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下面的示例返回具有 `TYPE ID` ID 的数据类型的 `1`。  
+ 下面的示例返回具有 `1` ID 的数据类型的 `TYPE ID`。  
   
 ```  
 SELECT TYPE_NAME(36) AS Type36, TYPE_NAME(239) AS Type239;  

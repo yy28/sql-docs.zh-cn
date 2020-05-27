@@ -43,7 +43,7 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
   
 ## <a name="arguments"></a>参数  
  \<partition_by_clause>  
-首先将 [FROM](../../t-sql/queries/from-transact-sql.md) 子句生成的结果集划分到分区，然后将 `DENSE_RANK` 函数应用到每个分区。 有关 [ 语法，请参阅 ](../../t-sql/queries/select-over-clause-transact-sql.md)OVER 子句 &#40;Transact-SQL&#41;`PARTITION BY`。  
+首先将 [FROM](../../t-sql/queries/from-transact-sql.md) 子句生成的结果集划分到分区，然后将 `DENSE_RANK` 函数应用到每个分区。 有关 `PARTITION BY` 语法，请参阅 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
  \<order_by_clause>  
 确定将 `DENSE_RANK` 函数应用于分区中的行时所基于的顺序。  

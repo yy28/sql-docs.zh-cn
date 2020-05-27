@@ -21,7 +21,7 @@ ms.locfileid: "69026647"
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-若要使用包含 IN 参数的 SQL 语句处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据，可使用 [SQLServerPreparedStatement](../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md) 类的 [executeQuery](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 方法返回包含所请求数据的 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)。 若要执行此操作，必须首先使用 [SQLServerConnection](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) 类的 [prepareStatement](../../connect/jdbc/reference/sqlserverconnection-class.md) 方法创建一个 SQLServerPreparedStatement 对象。
+若要使用包含 IN 参数的 SQL 语句处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据，可使用 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 类的 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md) 方法返回包含所请求数据的 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)。 若要执行此操作，必须首先使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) 方法创建一个 SQLServerPreparedStatement 对象。
 
 构造 SQL 语句时，可使用 ?（问号）字符指定 IN 参数， 该问号将用作随后传递到 SQL 语句中的参数值的占位符。 可以使用 SQLServerPreparedStatement 类的 setter 方法之一为参数指定值。 使用的 setter 方法由要传递到 SQL 语句中的值的数据类型确定。
 

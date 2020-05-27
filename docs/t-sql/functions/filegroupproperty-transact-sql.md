@@ -57,10 +57,10 @@ FILEGROUPPROPERTY ( filegroup_name, property )
 **int**  
   
 ## <a name="remarks"></a>备注  
-filegroup_name  与 sys.filegroups  目录视图中的 name  列相对应。  
+filegroup_name 与 sys.filegroups 目录视图中的 name 列相对应。  
   
 ## <a name="examples"></a>示例  
-此示例返回 `IsDefault` 数据库中主文件组的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 属性设置。  
+此示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中主文件组的 `IsDefault` 属性设置。  
   
 ```  
 SELECT FILEGROUPPROPERTY('PRIMARY', 'IsDefault') AS 'Default Filegroup';  

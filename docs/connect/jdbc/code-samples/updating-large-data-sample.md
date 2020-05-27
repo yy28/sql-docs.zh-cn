@@ -40,7 +40,7 @@ ms.locfileid: "69028258"
 
 在下面的示例中，示例代码建立与 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 数据库的连接。 接下来，示例代码创建一个 Statement 对象并使用 [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) 方法来检查 Statement 对象是否是指定的 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 类的包装。 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) 方法用于访问特定于驱动程序的响应缓冲方法。
 
-接下来，示例代码使用 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 类的 [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法将响应缓冲模式设置为“adaptive”，并演示如何获取自适应缓冲模式  。
+接下来，示例代码使用 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 类的 [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 方法将响应缓冲模式设置为“adaptive”，并演示如何获取自适应缓冲模式。
 
 然后，它运行 SQL 语句，并将自己返回的数据放入可更新的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象中。
 

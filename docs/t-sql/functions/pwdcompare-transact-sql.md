@@ -50,7 +50,7 @@ PWDCOMPARE ( 'clear_text_password'
  密码的加密哈希。 password_hash 是 varbinary(128)   。  
   
  *version*  
- 已过时参数；如果 password_hash 表示来自早于 *（已迁移到*  或更高版本但从未转换为 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 系统）的登录名的值，则该参数可设置为 1[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]。 version 是 int   。  
+ 已过时参数；如果 password_hash 表示来自早于 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]（已迁移到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本但从未转换为 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 系统）的登录名的值，则该参数可设置为 1。 version 是 int   。  
   
 > [!CAUTION]  
 >  此参数用于向后兼容，但由于密码哈希 blob 现在包含自身的版本说明，因此忽略此参数。 [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]  

@@ -69,7 +69,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 ## <a name="remarks"></a>备注  
  使用 IS_SRVROLEMEMBER 可确定当前用户是否可以执行需要服务器角色权限的操作。  
   
- 如果为 login 指定了 Windows 登录名（例如 Contoso\Mary5），那么除非针对该登录名授予或拒绝了对  *的直接访问权限，否则 IS_SRVROLEMEMBER 将返回 NULL*   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 如果为 login 指定了 Windows 登录名（例如 Contoso\Mary5），那么除非针对该登录名授予或拒绝了对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的直接访问权限，否则 IS_SRVROLEMEMBER 将返回 NULL 。  
   
  如果未提供可选的 login 参数，且 login 是 Windows 域登录名，则它可以通过 Windows 组中的成员身份作为固定服务器角色的成员   。 要解析这种间接成员身份，IS_SRVROLEMEMBER 将从域控制器中请求 Windows 组成员身份信息。 如果无法访问域控制器或域控制器没有响应，则 IS_SRVROLEMEMBER 在返回角色成员身份信息时只考虑用户及其本地组  。 如果指定的用户不是当前用户，则 IS_SRVROLEMEMBER 返回的值可能不同于验证器（例如 Active Directory）对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进行的最后一次数据更新。  
   

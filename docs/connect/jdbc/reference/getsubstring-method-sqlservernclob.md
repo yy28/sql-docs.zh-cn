@@ -40,7 +40,7 @@ public java.lang.String getSubString(long pos,
  要复制的连续字符数。  
   
 ## <a name="return-value"></a>返回值  
- 作为 NCLOB  中指定子字符串的 String  。  
+ 作为 NCLOB 中指定子字符串的 String。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -82,7 +82,7 @@ CREATE MESSAGE TYPE message_type_name
   
  会话双方必须定义相同的消息类型名称。 为便于排除故障，尽管 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 不要求会话双方使用相同的验证，但通常会话双方还是会为消息类型指定相同的验证。  
   
- 消息类型不能是临时对象。 允许使用以 **#** 开头的消息类型名称，但它们是永久对象。  
+ 消息类型不能是临时对象。 允许使用以 # 开头的消息类型名称，但它们是永久对象。  
   
 ## <a name="permissions"></a>权限  
  默认情况下，db_ddladmin 或 db_owner 固定数据库角色和 sysadmin 固定服务器角色的成员拥有创建消息类型的权限    。  

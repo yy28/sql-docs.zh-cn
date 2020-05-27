@@ -88,11 +88,11 @@ ms.locfileid: "67989419"
 
 ### <a name="application-name"></a>应用程序名称
 
-（可选）指定将要存储在 sys.sysprocesses  中该连接所在行的 program_name  列的应用程序名称。
+（可选）指定将要存储在 sys.sysprocesses 中该连接所在行的 program_name 列的应用程序名称。
 
 ### <a name="workstation-id"></a>工作站 ID
 
-（可选）指定将要存储在 sys.sysprocesses  中该连接所在行的 hostname  列的工作站 ID。
+（可选）指定将要存储在 sys.sysprocesses 中该连接所在行的 hostname 列的工作站 ID。
 
 ### <a name="use-strong-encryption-for-data"></a>对数据使用强加密
 

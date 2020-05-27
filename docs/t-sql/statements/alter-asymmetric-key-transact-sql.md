@@ -60,10 +60,10 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  WITH PRIVATE KEY  
  更改私钥的保护。  
   
- ENCRYPTION BY PASSWORD ='strongPassword' ****  
- 指定用于保护私钥的新密码。 password 必须符合运行  *实例的计算机的 Windows 密码策略要求*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果省略该选项，则使用数据库主密钥对私钥进行加密。  
+ ENCRYPTION BY PASSWORD ='strongPassword'  
+ 指定用于保护私钥的新密码。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。 如果省略该选项，则使用数据库主密钥对私钥进行加密。  
   
- DECRYPTION BY PASSWORD ='oldPassword' ****  
+ DECRYPTION BY PASSWORD ='oldPassword'  
  指定当前用于保护私钥的旧密码。 如果私钥使用数据库主密钥进行加密，则不需要指定旧密码。  
   
 ## <a name="remarks"></a>备注  

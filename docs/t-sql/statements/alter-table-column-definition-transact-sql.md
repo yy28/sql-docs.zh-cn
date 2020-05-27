@@ -121,7 +121,7 @@ DOCUMENT
  xml_schema_collection   
  **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本。  
   
- 仅适用于 xml 数据类型，用于将 XML 架构集合与该类型相关联  。 在架构中键入 xml 列之前，须先使用 [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) 在数据库中创建该架构  。  
+ 仅适用于 xml 数据类型，用于将 XML 架构集合与该类型相关联  。 在架构中键入 xml 列之前，须先使用 [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) 在数据库中创建该架构。  
   
 FILESTREAM  
  还可以为拥有数据类型为 varbinary(max) 的 type_name 的列指定 FILESTREAM 存储属性   。  
@@ -145,7 +145,7 @@ COLLATE collation_name
  确定列中是否允许空值。 严格来讲，NULL 不是约束，但可以像指定 NOT NULL 那样指定它。  
   
 [ CONSTRAINT constraint_name  ]  
- 指定 DEFAULT 值定义的开头。 为了与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本兼容，可以为 DEFAULT 分配约束名称。 除了不能以数字符号 (#) 开头以外，约束名称还必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则  。 如果未指定 constraint_name，则 DEFAULT 定义使用系统生成的名称  。  
+ 指定 DEFAULT 值定义的开头。 为了与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本兼容，可以为 DEFAULT 分配约束名称。 除了不能以数字符号 (#) 开头以外，约束名称还必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 如果未指定 constraint_name，则 DEFAULT 定义使用系统生成的名称  。  
   
 DEFAULT  
  指定列的默认值的关键字。 DEFAULT 定义可用于为表中现有数据行的新列提供值。 DEFAULT 定义不能应用于 timestamp 列，或具有 IDENTITY 属性的列  。 如果为用户定义类型列指定了默认值，则该类型必须支持从 constant_expression 到用户定义类型的隐式转换  。  

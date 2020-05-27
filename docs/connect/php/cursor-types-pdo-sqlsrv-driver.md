@@ -48,7 +48,7 @@ ms.locfileid: "67993691"
 
 如果使用客户端游标时缓冲区不够大，无法容纳整个结果集，则查询将返回 false。 可以将缓冲区大小增加到 PHP 内存限制。
 
-可以使用 `PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE`PDO::setAttribute[ 或 ](../../connect/php/pdo-setattribute.md)PDOStatement::setAttribute[ 的 ](../../connect/php/pdostatement-setattribute.md) 属性配置保留结果集的缓冲区的大小。 还可以使用 pdo_sqlsrv.client_buffer_max_kb_size 在 php.ini 文件中设置最大缓冲区大小（例如，pdo_sqlsrv.client_buffer_max_kb_size = 1024）。
+可以使用 [PDO::setAttribute](../../connect/php/pdo-setattribute.md) 或 [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md) 的 `PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE` 属性配置保留结果集的缓冲区的大小。 还可以使用 pdo_sqlsrv.client_buffer_max_kb_size 在 php.ini 文件中设置最大缓冲区大小（例如，pdo_sqlsrv.client_buffer_max_kb_size = 1024）。
 
 可以使用 [PDO::prepare](../../connect/php/pdo-prepare.md) 来请求客户端游标，指定 `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL` 游标类型，然后指定 `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE => PDO::SQLSRV_CURSOR_BUFFERED`。
 

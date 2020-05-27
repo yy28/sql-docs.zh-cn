@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="c-updating-page-or-row-counts-or-both-for-the-employee-table"></a>C. 为 Employee 表更新页计数或行计数，或同时更新这两者  
-下面的示例报告 `Employee` 数据库中 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 表的已更新页计数或行计数信息。
+下面的示例报告 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中 `Employee` 表的已更新页计数或行计数信息。
   
 ```sql
 DBCC UPDATEUSAGE (AdventureWorks2012,'HumanResources.Employee');  

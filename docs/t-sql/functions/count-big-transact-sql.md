@@ -60,7 +60,7 @@ DISTINCT
 *\**  
 指定 `COUNT_BIG` 应对所有行计数，以确定要返回的总表行计数。 `COUNT_BIG(*)` 不采用任何参数，也不支持使用 DISTINCT。 `COUNT_BIG(*)` 不需要“expression”  参数，因为根据定义，该函数不使用有关任何特定列的信息。 `COUNT_BIG(*)` 返回指定表中的行数，但保留副本行。 它会单独为每一行计数，包括包含 null 值的行。
   
-OVER **(** [ partition_by_clause ] [ order_by_clause ] *)*    
+OVER **(** [ partition_by_clause ] [ order_by_clause ] **)**    
 “partition_by_clause”  将 `FROM` 子句生成的结果集划分为要应用 `COUNT_BIG` 函数的分区。 如果未指定，则此函数将查询结果集的所有行视为单个组。 “order_by_clause”  确定操作的逻辑顺序。 请参阅 [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) 获取详细信息。
   
 ## <a name="return-types"></a>返回类型

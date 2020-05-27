@@ -99,7 +99,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  index_name   
  索引的名称。 索引名称在表中必须唯一，但在数据库中不必唯一。 索引名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)的规则。  
   
- 主 XML 索引名不得以下列字符开头： **、#、** 或 **##** **@** **@@** 。  
+ 主 XML 索引名不得以下列字符开头：#、##、@ 或 @@   。  
   
  xml_column_name   
  索引所基于的 xml 列  。 在一个 XML 索引定义中只能指定一个 xml 列；但可以为一个 xml 列创建多个辅助 XML 索引   。  
@@ -136,7 +136,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  指定创建索引时要使用的选项。  
   
- PAD_INDEX  **{ ON | OFF }=**   
+ PAD_INDEX = { ON | OFF }   
  指定索引填充。 默认为 OFF。  
   
  ON  
@@ -147,8 +147,8 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  PAD_INDEX 选项只有在指定了 FILLFACTOR 时才有用，因为 PAD_INDEX 使用由 FILLFACTOR 指定的百分比。 如果为 FILLFACTOR 指定的百分比不够大，无法容纳一行，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将在内部覆盖该百分比以允许最小值。 无论 fillfactor 的值有多小，中间级索引页上的行数永远都不会小于两行  。  
   
- FILLFACTOR **fillfactor=**   
- 指定一个百分比，指示在[!INCLUDE[ssDE](../../includes/ssde-md.md)]创建或重新生成索引的过程中，应将每个索引页面的叶级填充到什么程度。 fillfactor 必须是 1 到 100 之间的整数  。 默认值为 0。 如果 fillfactor 为 100 或 0，*会创建完全填充叶级页的索引*[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+ FILLFACTOR =fillfactor  
+ 指定一个百分比，指示在[!INCLUDE[ssDE](../../includes/ssde-md.md)]创建或重新生成索引的过程中，应将每个索引页面的叶级填充到什么程度。 fillfactor 必须是 1 到 100 之间的整数  。 默认值为 0。 如果 fillfactor 为 100 或 0，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会创建完全填充叶级页的索引。  
   
 > [!NOTE]  
 >  填充因子的值 0 和 100 在所有方面都是相同的。  
@@ -160,7 +160,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  有关详细信息，请参阅 [为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
   
- SORT_IN_TEMPDB  **{ ON | OFF }=**   
+ SORT_IN_TEMPDB = { ON | OFF }   
  指定是否在 tempdb 中存储临时排序结果  。 默认为 OFF。  
   
  ON  
@@ -174,7 +174,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  IGNORE_DUP_KEY =OFF   
  对 XML 索引不起作用，这是因为此索引类型永远不唯一。 请不要将此选项设置为 ON，否则会引发错误。  
   
- DROP_EXISTING **=** { ON | OFF  }  
+ DROP_EXISTING = { ON | OFF }  
  指定删除并重新生成已命名的先前存在的 XML 索引。 默认为 OFF。  
   
  ON  
@@ -193,7 +193,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 > [!NOTE]
 >  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
- ALLOW_ROW_LOCKS  **{ ON | OFF }=**   
+ ALLOW_ROW_LOCKS = { ON | OFF }   
  指定是否允许行锁。 默认值为 ON。  
   
  ON  
@@ -202,7 +202,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF  
  不使用行锁。  
   
- ALLOW_PAGE_LOCKS  **{ ON | OFF }=**   
+ ALLOW_PAGE_LOCKS = { ON | OFF }   
  指定是否允许使用页锁。 默认值为 ON。  
   
  ON  
@@ -211,7 +211,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF  
  不使用页锁。  
   
- MAXDOP **max_degree_of_parallelism=**   
+ MAXDOP =max_degree_of_parallelism  
  在索引操作期间覆盖[配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)配置选项。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   
 > [!IMPORTANT]  

@@ -78,7 +78,7 @@ ALL SERVER
 ## <a name="examples"></a>示例  
   
 ### <a name="a-enabling-a-dml-trigger-on-a-table"></a>A. 在表中启用 DML 触发器  
-以下示例禁用在 AdventureWorks 数据库的表 `uAddress` 中创建的触发器 `Address`，然后再启用它。  
+以下示例禁用在 AdventureWorks 数据库的表 `Address` 中创建的触发器 `uAddress`，然后再启用它。  
   
 ```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  

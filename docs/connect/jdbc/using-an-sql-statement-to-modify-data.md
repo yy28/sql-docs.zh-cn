@@ -21,16 +21,16 @@ ms.locfileid: "69026753"
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-若要使用 SQL 语句修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中包含的数据，可以使用 [SQLServerStatement](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) 类的 [executeUpdate](../../connect/jdbc/reference/sqlserverstatement-class.md) 方法。 executeUpdate 方法会将 SQL 语句传递到数据库进行处理，然后返回一个表示受影响的行数的值。
+若要使用 SQL 语句修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中包含的数据，可以使用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 类的 [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) 方法。 executeUpdate 方法会将 SQL 语句传递到数据库进行处理，然后返回一个表示受影响的行数的值。
 
-若要执行此操作，必须首先使用 [SQLServerConnection](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) 类的 [createStatement](../../connect/jdbc/reference/sqlserverconnection-class.md) 方法创建一个 SQLServerStatement 对象。
+若要执行此操作，必须首先使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) 方法创建一个 SQLServerStatement 对象。
 
 在下面的实例中，将向此函数传递 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库的打开连接，并构造一条向表中添加新数据的 SQL 语句，然后运行该语句并显示返回值。
 
 [!code[JDBC#UsingSQLToModifyData1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-t_1_1.java)]
 
 > [!NOTE]  
-> 如果需要使用包含参数的 SQL 语句来修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据，则应使用 [SQLServerPreparedStatement](../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md) 类的 [executeUpdate](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 方法。
+> 如果需要使用包含参数的 SQL 语句来修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据，则应使用 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 类的 [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md) 方法。
 >
 > 如果试图向其中插入数据的列包含特殊字符（例如空格），则必须提供要插入的值，即使它们是默认值也必须提供。 如果不执行此操作，插入操作就会失败。
 >

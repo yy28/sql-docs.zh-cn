@@ -74,7 +74,7 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
  Azure SQL 数据库支持由三部分组成的名称格式 database_name.[schema_name].object_name，其中 database_name 为当前数据库，database_name 为 tempdb，object_name 以 # 开头。 Azure SQL 数据库不支持由四部分组成的名称。  
   
  IF EXISTS   
- 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）  。  
+ 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
   
  有条件地删除表（仅当其已存在时）。  
   
@@ -120,7 +120,7 @@ DROP TABLE AdventureWorks2012.dbo.SalesPerson2 ;
 ```  
   
 ### <a name="c-dropping-a-temporary-table"></a>C. 删除临时表  
- 以下示例将创建一个临时表，测试该表是否存在，删除该表，然后再次测试该表是否存在。 此示例不使用 IF EXISTS 语法，该语法适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及以上版本  。  
+ 以下示例将创建一个临时表，测试该表是否存在，删除该表，然后再次测试该表是否存在。 此示例不使用 IF EXISTS 语法，该语法适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及以上版本。  
   
 ```  
 CREATE TABLE #temptable (col1 int);  
@@ -140,7 +140,7 @@ SELECT * FROM #temptable;
   
 ### <a name="d-dropping-a-table-using-if-exists"></a>D. 使用 IF EXISTS 删除表  
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）  。  
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
   
  以下示例创建名为 T1 的表。 然后，第二条语句删除表。 第三条语句不执行任何操作，因为此表已删除，但这不会引起错误。  
   

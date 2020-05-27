@@ -176,7 +176,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-sqlsrv_fetch_array 函数将始终根据[默认 PHP 数据类型](../../connect/php/default-php-data-types.md)返回数据  。 有关如何指定 PHP 数据类型的信息，请参阅[如何：指定 PHP 数据类型](../../connect/php/how-to-specify-php-data-types.md)。  
+sqlsrv_fetch_array 函数将始终根据[默认 PHP 数据类型](../../connect/php/default-php-data-types.md)返回数据。 有关如何指定 PHP 数据类型的信息，请参阅[如何：指定 PHP 数据类型](../../connect/php/how-to-specify-php-data-types.md)。  
   
 如果检索没有名称的字段，阵列元素的关联键将为空字符串 ("")。 有关详细信息，请参阅 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)。  
   

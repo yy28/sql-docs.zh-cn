@@ -62,7 +62,7 @@ ms.locfileid: "76909827"
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 标量函数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  可以在 [ 语句中使用 ](https://go.microsoft.com/fwlink/?LinkID=88579)ODBC 标量函数[!INCLUDE[tsql](../../includes/tsql-md.md)]。 这些语句由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 解释。 它们可以用在存储过程和用户定义函数中。 这些函数包括字符串函数、数值函数、时间函数、日期函数、时间间隔函数和系统函数。  
+  可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中使用 [ODBC 标量函数](https://go.microsoft.com/fwlink/?LinkID=88579)。 这些语句由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 解释。 它们可以用在存储过程和用户定义函数中。 这些函数包括字符串函数、数值函数、时间函数、日期函数、时间间隔函数和系统函数。  
   
 ## <a name="usage"></a>使用情况  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  

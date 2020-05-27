@@ -113,7 +113,7 @@ ORDER BY SchemaName + ''; -- wrong
  **ASC** | DESC  
  指定按升序或降序排列指定列中的值。 ASC 按从最低值到最高值的顺序进行排序。 DESC 按从最高值到最低值的顺序进行排序。 ASC 是默认排序顺序。 Null 值被视为最低的可能值。  
   
- OFFSET { integer_constant*offset_row_count_expression } { ROW | ROWS }*  |    
+ OFFSET { integer_constant | offset_row_count_expression } { ROW | ROWS }   
  指定开始从查询表达式返回行之前跳过的行数。 该值可以是大于或等于零的整数常量或表达式。  
   
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].s  
@@ -124,7 +124,7 @@ ORDER BY SchemaName + ''; -- wrong
   
  在查询执行计划中，将在 TOP 查询运算符的 Offset 属性中显示偏移行数值  。  
   
- FETCH { FIRST | NEXT } { integer_constant*fetch_row_count_expression } { ROW | ROWS } ONLY* |    
+ FETCH { FIRST | NEXT } { integer_constant | fetch_row_count_expression } { ROW | ROWS } ONLY   
  指定在处理 OFFSET 子句后返回的行数。 该值可以是大于或等于 1 的整数常量或表达式。  
   
 **适用于**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -537,7 +537,7 @@ WHERE LastName LIKE 'A%'
 ORDER BY LastName;  
 ```  
   
- 以下示例按照两列进行排序。 此查询首先按 `FirstName` 列以升序排序，然后按 `FirstName` 列以降序对常见 `LastName` 值降序排序。  
+ 以下示例按照两列进行排序。 此查询首先按 `FirstName` 列以升序排序，然后按 `LastName` 列以降序对常见 `FirstName` 值降序排序。  
   
 ```sql
 -- Uses AdventureWorks  

@@ -53,7 +53,7 @@ ms.locfileid: "70152570"
 
 如果选择“使用用户输入的登录 ID 和密码进行 SQL Server 身份验证”  或“使用输入用户的登录 ID 和密码进行 Active Directory 密码身份验证”  ，则指定驱动程序连接到 SQL Server 时使用的密码。 这仅适用于为确定服务器默认设置建立的连接；不适用于使用新数据源建立的后续连接。
 
-如果选择“使用集成 Windows 身份验证”  或“使用 Active Directory 集成身份验证”  ，则禁用“登录 ID”  和“密码”  。
+如果选择“使用集成 Windows 身份验证”或“使用 Active Directory 集成身份验证”，则禁用“登录 ID”和“密码”。
 
 ### <a name="next"></a>Next
 

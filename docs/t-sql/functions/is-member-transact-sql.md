@@ -52,7 +52,7 @@ IS_MEMBER ( { 'group' | 'role' } )
  **'** *group* **'**  
 **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本
   
- 正在检查的 Windows 组的名称；必须采用格式 Domain*Group*\\  。 group 的数据类型为 sysname   。  
+ 正在检查的 Windows 组的名称；必须采用格式 Domain\\Group 。 group 的数据类型为 sysname   。  
   
  **'** *role* **'**  
  要检查的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 角色的名称。 role 的数据类型为 sysname，它可以包括数据库固定角色或用户定义的角色，但不能包括服务器角色   。  

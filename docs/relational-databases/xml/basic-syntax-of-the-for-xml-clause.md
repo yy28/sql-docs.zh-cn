@@ -67,7 +67,7 @@ XML
 
 ### <a name="syntax-for-azure-sql-database"></a>Azure SQL 数据库的语法
 
-有关同样适用于 Azure SQL 数据库的 SELECT...“FOR XML”子句的文档，请参阅 [FOR XML (SQL Server)](../../relational-databases/xml/for-xml-sql-server.md)  。
+有关同样适用于 Azure SQL 数据库的 SELECT...“FOR XML”子句的文档，请参阅 [FOR XML (SQL Server)](../../relational-databases/xml/for-xml-sql-server.md)。
 
 ## <a name="arguments"></a>参数
 

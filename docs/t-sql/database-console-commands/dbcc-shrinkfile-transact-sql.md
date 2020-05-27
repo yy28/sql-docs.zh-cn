@@ -161,7 +161,7 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
-此消息指明，时间戳早于 109（收缩操作完成的最后一个事务）的快照事务正在阻止收缩操作。 它还指明，[sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 动态管理视图中的 transaction_sequence_num  或 first_snapshot_sequence_num  列包含值 15。 如果 transaction_sequence_num  或 first_snapshot_sequence_num  视图列包含的数字小于收缩操作完成的最后一个事务 (109)，收缩操作会等待这些事务完成。
+此消息指明，时间戳早于 109（收缩操作完成的最后一个事务）的快照事务正在阻止收缩操作。 它还指明，[sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 动态管理视图中的 transaction_sequence_num 或 first_snapshot_sequence_num 列包含值 15。 如果 transaction_sequence_num  或 first_snapshot_sequence_num  视图列包含的数字小于收缩操作完成的最后一个事务 (109)，收缩操作会等待这些事务完成。
   
 若要解决此问题，请执行下列任务之一：
 -   终止阻止收缩操作的事务。

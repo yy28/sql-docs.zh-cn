@@ -84,7 +84,7 @@ SELECT COUNT(*)
 ```
 
 *WLM_CONTEXT*  
-指定可作为请求分类依据的会话上下文值。  上下文是类型为 nvarchar(255) 的可选参数。  在提交设置会话上下文的请求之前，请使用变量名称为 [ 的 ](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest)sys.sp_set_session_context`wlm_context`。
+指定可作为请求分类依据的会话上下文值。  上下文是类型为 nvarchar(255) 的可选参数。  在提交设置会话上下文的请求之前，请使用变量名称为 `wlm_context` 的 [sys.sp_set_session_context](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest)。
 
 示例：
 

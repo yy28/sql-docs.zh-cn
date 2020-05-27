@@ -62,8 +62,8 @@ FOR CONVERSATION
  SET  
  指定用于确定会话优先级是否应用于会话的条件。 如果指定了 SET，则它必须至少包含以下条件之一：CONTRACT_NAME、LOCAL_SERVICE_NAME、REMOTE_SERVICE_NAME 或 PRIORITY_LEVEL。 如果未指定 SET，则全部三个条件都设置为默认值。  
   
- CONTRACT_NAME = {ContractName*ANY}*  |    
- 指定要用作会话优先级是否应用于会话的判定条件的约定的名称。 ContractName 是一个  *标识符，并且必须指定当前数据库中的协定的名称*[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+ CONTRACT_NAME = {ContractName | ANY}  
+ 指定要用作会话优先级是否应用于会话的判定条件的约定的名称。 ContractName 是一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 标识符，并且必须指定当前数据库中的协定的名称。  
   
  ContractName   
  指定此会话优先级只能应用于启动会话的 BEGIN DIALOG 语句指定了 ON CONTRACT ContractName 的会话  。  
@@ -73,10 +73,10 @@ FOR CONVERSATION
   
  默认值为 ANY。  
   
- LOCAL_SERVICE_NAME = {LocalServiceName*ANY}*  |    
+ LOCAL_SERVICE_NAME = {LocalServiceName | ANY}  
  指定要用作确定会话优先级是否应用于会话端点的条件的服务名称。  
   
- LocalServiceName 是  *标识符。* [!INCLUDE[ssDE](../../includes/ssde-md.md)] 它必须指定当前数据库中的服务的名称。  
+ LocalServiceName 是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 标识符。 它必须指定当前数据库中的服务的名称。  
   
  LocalServiceName   
  指定此会话优先级可以应用于以下各项：  
@@ -107,7 +107,7 @@ FOR CONVERSATION
   
  默认值为 ANY。  
   
- PRIORITY_LEVEL = { PriorityValue*DEFAULT }*  |    
+ PRIORITY_LEVEL = { PriorityValue | DEFAULT }  
  指定要分配给使用在会话优先级中指定的约定和服务的任何会话端点的优先级。 PriorityValue 必须是一个从 1（优先级最低）到 10（优先级最高）的整数文本  。 默认值为 5。  
   
 ## <a name="remarks"></a>备注  

@@ -50,7 +50,7 @@ SEND
 ```  
   
 ## <a name="arguments"></a>参数  
-ON CONVERSATION conversation_handle [.. *]@conversation_handle_n*  
+ON CONVERSATION conversation_handle [.. @conversation_handle_n]  
 指定消息所属的会话。 conversation_handle 必须包含一个有效的会话标识符。  不能多次使用相同的会话句柄。  
   
 MESSAGE TYPE message_type_name   

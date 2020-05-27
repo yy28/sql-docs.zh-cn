@@ -274,9 +274,9 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  请注意该内联 XSD 架构的以下方面：  
   
--   ListPrice 和 DealerPrice 属于同一类型 ( `money`)，在表中都可以为 NULL。 因此，由于产生的 XML 中可能不返回它们，所以在 minOccurs=0 且 maxOccurs=2 的 <`Price`> 元素的复杂类型声明中仅有一个 <`row`> 子元素。  
+-   ListPrice 和 DealerPrice 属于同一类型 ( `money`)，在表中都可以为 NULL。 因此，由于产生的 XML 中可能不返回它们，所以在 minOccurs=0 且 maxOccurs=2 的 <`row`> 元素的复杂类型声明中仅有一个 <`Price`> 子元素。  
   
--   在结果中，由于表中的 `DealerPrice` 值为 NULL，所以只有 `ListPrice` 被作为一个 <`Price`> 元素返回。 如果将 `XSINIL` 参数添加到 ELEMENTS 指令，则假如将对应于 DealerPrice 的 <`xsi:nil`> 元素的 `Price` 值设置为 TRUE，返回的结果中将包括这两个元素。 如果将两个元素的 `Price` 属性设置为 TRUE，还将收到内联 XSD 架构的 <`row`> 复杂类型定义中的两个 <`nillable`> 子元素。 下面是部分结果：  
+-   在结果中，由于表中的 `DealerPrice` 值为 NULL，所以只有 `ListPrice` 被作为一个 <`Price`> 元素返回。 如果将 `XSINIL` 参数添加到 ELEMENTS 指令，则假如将对应于 DealerPrice 的 <`Price`> 元素的 `xsi:nil` 值设置为 TRUE，返回的结果中将包括这两个元素。 如果将两个元素的 `nillable` 属性设置为 TRUE，还将收到内联 XSD 架构的 <`row`> 复杂类型定义中的两个 <`Price`> 子元素。 下面是部分结果：  
   
  `...`  
   

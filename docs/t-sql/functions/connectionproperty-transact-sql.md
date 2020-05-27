@@ -53,7 +53,7 @@ CONNECTIONPROPERTY ( property )
 |\<任何其他字符串>||对无效输入返回 NULL。|  
   
 ## <a name="remarks"></a>备注  
-local_net_address 和 local_tcp_port 在  **中返回 NULL**  [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
+local_net_address 和 local_tcp_port 在 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 中返回 NULL 。
   
 返回的值匹配为 [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md) 动态管理视图中的相应列显示的选项。 例如：
   

@@ -59,7 +59,7 @@ SQL Server 2016 Analysis Services 提升了兼容性级别为 1200  的表格模
 - 新增的数据库一致性检查器 (DBCC)  在内部运行，以检测潜在的数据损坏问题。
 -  直接查询是查询实时外部数据，而不是先导入数据。现在支持更多的数据源，包括 Azure SQL、Oracle 和 Teradata。 
 - 新增了许多 DAX（数据访问表达式）函数  。
-- 新增的 [Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)  命名空间管理表格模式实例和模型。 
+- 新增的 [Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx) 命名空间管理表格模式实例和模型。 
 - [Analysis Services 管理对象 (AMO)](https://msdn.microsoft.com/library/mt436122.aspx) 经过重新设计，包含另一个程序集，即 Microsoft.AnalysisServices.Core.dll  。
 
 请参阅 [Analysis Services 引擎 (SSAS)](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)。 

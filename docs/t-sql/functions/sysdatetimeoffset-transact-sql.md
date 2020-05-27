@@ -40,7 +40,7 @@ ms.locfileid: "68117515"
 # <a name="sysdatetimeoffset-transact-sql"></a>SYSDATETIMEOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  返回包含计算机的日期和时间的 datetimeoffset(7) 值， **的实例正在该计算机上运行**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 时区偏移量包含在内。  
+  返回包含计算机的日期和时间的 datetimeoffset(7) 值，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例正在该计算机上运行。 时区偏移量包含在内。  
   
  有关所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和时间数据类型及函数的概述，请参阅[日期和时间数据类型及函数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
   

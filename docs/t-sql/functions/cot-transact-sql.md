@@ -41,7 +41,7 @@ COT ( float_expression )
   
 ## <a name="arguments"></a>参数  
 *float_expression*  
-“float”  类型或可隐式转换为“float”  类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。
+“float”类型或可隐式转换为“float”类型的[表达式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>返回类型
 **float**

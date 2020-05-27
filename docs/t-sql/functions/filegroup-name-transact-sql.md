@@ -53,10 +53,10 @@ FILEGROUP_NAME ( filegroup_id )
 **nvarchar(128)**  
   
 ## <a name="remarks"></a>备注  
-filegroup_id  对应于 sys.filegroups  目录视图的 data_space_id  列。  
+filegroup_id 对应于 sys.filegroups 目录视图的 data_space_id 列。  
   
 ## <a name="examples"></a>示例  
-此示例将返回 `1` 数据库中文件组 ID [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 的文件组名称。  
+此示例将返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中文件组 ID `1` 的文件组名称。  
   
 ```  
 SELECT FILEGROUP_NAME(1) AS [Filegroup Name];  

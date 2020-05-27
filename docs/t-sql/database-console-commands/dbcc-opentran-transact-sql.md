@@ -55,7 +55,7 @@ DBCC OPENTRAN
 ```  
   
 ## <a name="arguments"></a>参数  
- database_name*database_id| 0* |    
+ database_name | database_id| 0   
  显示其中的最早事务信息的数据库名称或 ID。 如果未指定，或者指定为 0，则使用当前数据库。 数据库名称必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。  
   
  TABLERESULTS  

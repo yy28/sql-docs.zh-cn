@@ -50,9 +50,9 @@ CREATE APPLICATION ROLE application_role_name
  指定应用程序角色的名称。 该名称一定不能被用于引用数据库中任何主体。  
   
  PASSWORD ='password'     
- 指定数据库用户将用于激活应用程序角色的密码。 应始终使用强密码。 password 必须符合运行  *实例的计算机的 Windows 密码策略要求*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 指定数据库用户将用于激活应用程序角色的密码。 应始终使用强密码。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。  
   
- DEFAULT_SCHEMA **=schema**name _\__  
+ DEFAULT_SCHEMA =_schema\_name_  
  指定服务器在解析该角色的对象名时将搜索的第一个架构。 如果未定义 DEFAULT_SCHEMA，则应用程序角色将使用 DBO 作为其默认架构。 schema_name 可以是数据库中不存在的架构  。  
   
 ## <a name="remarks"></a>备注  

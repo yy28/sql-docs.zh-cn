@@ -25,7 +25,7 @@ ms.locfileid: "67982103"
 # <a name="getmaxfieldsize-method-sqlserverstatement"></a>getMaxFieldSize 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索可为由此 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象生成的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象中的字符和二进制列值返回的最大字节数。  
+  检索可为由此 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 对象生成的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象中的字符和二进制列值返回的最大字节数。  
   
 ## <a name="syntax"></a>语法  
   

@@ -44,7 +44,7 @@ public void setDateTimeOffset(String sCol, microsoft.sql.DateTimeOffset t)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>备注  
- 可以使用 [SQLServerCallableStatement.getDateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) 检索 [DateTimeOffset 类](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)值。  
+ 可以使用 [SQLServerCallableStatement.getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md) 检索 [DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)值。  
   
  [setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md) 获取列的序号。  
   

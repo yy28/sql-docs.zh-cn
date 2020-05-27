@@ -75,7 +75,7 @@ JavaDoc.io 提供了从版本 6.0 开始的 JDBC 参考文档。
 |--------------------|-----------------|  
 |[ISQLServerCallableStatement 接口](../../../connect/jdbc/reference/isqlservercallablestatement-interface.md)|允许你指定要与输入和输出参数一起使用的要调用的存储过程名称。|  
 |[ISQLServerConnection 接口](../../../connect/jdbc/reference/isqlserverconnection-interface.md)|表示连接至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的 JDBC 连接。|  
-|[SQLServerDataSource 类](../../../connect/jdbc/reference/sqlserverdatasource-class.md)|表示特定于使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ISQLServerConnection[ 对象连接到 ](../../../connect/jdbc/reference/sqlserverconnection-class.md) 数据库的属性列表。|  
+|[SQLServerDataSource 类](../../../connect/jdbc/reference/sqlserverdatasource-class.md)|表示特定于使用 [ISQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的属性列表。|  
 |[ISQLServerPreparedStatement](../../../connect/jdbc/reference/isqlserverpreparedstatement-interface.md)|表示 JDBC 预定义语句功能的基本实现。|  
 |[ISQLServerResultSet](../../../connect/jdbc/reference/isqlserverresultset-interface.md)|表示 JDBC 结果集。|  
 |[ISQLServerStatement](../../../connect/jdbc/reference/isqlserverstatement-interface.md)|表示 JDBC 语句功能的基本实现。|
@@ -94,7 +94,7 @@ JavaDoc.io 提供了从版本 6.0 开始的 JDBC 参考文档。
 |[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)|实现 ISQLServerConnection。|  
 |[SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)|表示用于连接池管理器的物理数据库连接。|  
 |[SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)|表示数据库的元数据。|  
-|[SQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md)|表示特定于使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]SQLServerConnection[ 对象连接到 ](../../../connect/jdbc/reference/sqlserverconnection-class.md) 数据库的属性的列表。|  
+|[SQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md)|表示特定于使用 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的属性的列表。|  
 |[SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md)|表示将来自 Java 命名和目录接口 (JNDI) 的数据源具体化的对象工厂。|  
 |[SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)|表示 JDBC 驱动程序。 此类包括连接至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的方法以及取得 JDBC 驱动程序相关信息的方法。|  
 |[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)|表示 SQL 语句运行不成功或不完整。|  

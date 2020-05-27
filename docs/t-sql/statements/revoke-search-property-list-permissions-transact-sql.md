@@ -54,7 +54,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  permission   
  权限的名称。 本主题后面的“备注”部分中介绍了不同权限与安全对象之间的有效映射。  
   
- ON SEARCH PROPERTY LIST ::search_property_list_name    
+ ON SEARCH PROPERTY LIST ::search_property_list_name  
  指定要撤消权限的搜索属性列表。 需要使用作用域限定符 ::  。  
   
  database_principal   

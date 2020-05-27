@@ -149,7 +149,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-power-to-return-the-cube-of-a-number"></a>D：使用 POWER 返回一个数字的立方  
- 下例演示将返回 `POWER` 的 3 次幂的 `2.0` 结果。  
+ 下例演示将返回 `2.0` 的 3 次幂的 `POWER` 结果。  
   
 ```  
 SELECT POWER(2.0, 3);  

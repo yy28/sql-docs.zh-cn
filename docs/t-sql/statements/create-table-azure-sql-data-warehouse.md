@@ -155,7 +155,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 | 参数 | 说明 |
 | -------- | ----------- |
-|partition_column_name | 指定 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 将用于行分区的列。 此列可以是任何数据类型。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 按升序对分区列值进行排序。 在 `LEFT` 规范中，由低到高的排序是从 `RIGHT` 到 `RANGE`。 |  
+|partition_column_name | 指定 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 将用于行分区的列。 此列可以是任何数据类型。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 按升序对分区列值进行排序。 在 `RANGE` 规范中，由低到高的排序是从 `LEFT` 到 `RIGHT`。 |  
 | `RANGE LEFT` | 指定属于左侧分区的边界值（较低值）。 默认为“左”。 |
 | `RANGE RIGHT` | 指定属于右侧分区的边界值（较高值）。 | 
 | `FOR VALUES` ( boundary_value [,...n] )   | 指定分区的边界值。 boundary_value 是一个常数表达式  。 它不得为 NULL。 它必须匹配或可以隐式转换为 partition_column_name 的数据类型  。 无法在隐式转换期间截断它，这样值的大小和确定位数与 partition_column_name  的数据类型不匹配<br></br><br></br>如果你指定 `PARTITION` 子句，但不指定边界值，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 会创建包含一个分区的已分区表。 如果适用，稍后可以将表拆分成两个分区。<br></br><br></br>如果指定一个边界值，生成的表格有两个分区；一个用于低于边界值的值，另一个用于高于边界值的值。 如果你将分区移到未分区表中，未分区表会接收数据，但它的元数据中不会有分区边界。| 
@@ -185,7 +185,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  n 的默认值为 7  。  
   
  `datetime2` [ ( n ) ]   
-与 `datetime` 相同，只不过可以指定秒小数的数值。 n 的默认值为  `7`。  
+与 `datetime` 相同，只不过可以指定秒小数的数值。 n 的默认值为 `7`。  
   
 |n 值 |Precision|缩放|  
 |--:|--:|-:|  
@@ -208,31 +208,31 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  根据公历，使用最多 10 个字符的年、月和日来存储日期。 存储大小为 3 个字节。 日期存储为整数。  
   
  `time` [ ( n ) ]   
- n 的默认值为  `7`。  
+ n 的默认值为 `7`。  
   
  `float` [ ( n ) ]   
- 用于表示浮点数值数据的近似数值数据类型。 浮点数据为近似值；也就是说，并非数据类型范围内的所有值都能精确地表示。 n 指定用于存储科学记数法中  *尾数的字节数*`float`。 n  表示精度和存储大小。 如果指定了 n，它必须是介于 *和* 之间的某个值`1``53`。 n 的默认值为  `53`。  
+ 用于表示浮点数值数据的近似数值数据类型。 浮点数据为近似值；也就是说，并非数据类型范围内的所有值都能精确地表示。 n 指定用于存储科学记数法中 `float` 尾数的字节数。 n  表示精度和存储大小。 如果指定了 n，它必须是介于 `1` 和 `53` 之间的某个值。 n 的默认值为 `53`。  
   
 | n 值  | Precision | 存储大小 |  
 | --------: | --------: | -----------: |  
 | 1-24   | 7 位数  | 4 个字节      |  
 | 25-53  | 15 位数 | 8 字节      |  
   
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 将 n 视为下列两个可能值之一  。 如果 `1`<= n  ，将 n 视为  <= `24`  `24`。 如果 `25` <= n  ，将 n 视为  <= `53`  `53`。  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 将 n 视为下列两个可能值之一  。 如果 `1`<= n <= `24`，将 n 视为 `24` 。 如果 `25` <= n <= `53`，将 n 视为 `53` 。  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]`float` 数据类型从 *到* 之间的所有 n 值均符合 ISO 标准`1``53`。 double precision 的同义词是 `float(53)`。  
   
  `real` [ ( n ) ]   
  real 的定义与 float 相同。 `real` 的 ISO 同义词为 `float(24)`。  
   
- `decimal` [ ( precision [ , scale ] ) ] |  *[ ( precision [ , scale ] ) ]*  `numeric`    
+ `decimal` [ ( precision [ , scale ] ) ] | `numeric` [ ( precision [ , scale ] ) ]     
  存储固定的精度和小数位数。  
   
  *精度*  
  最多可以存储的十进制数字的总位数，包括小数点左边和右边的位数。 该精度的取值范围必须为 `1` 到最大精度 `38`。 默认精度为 `18`。  
   
  *scale*  
- 小数点右边可以存储的十进制数字的最大位数。 小数位数的取值范围必须为  *到精度*`0`  。 只有指定了精度，才能指定小数位数   。 默认确定位数为 `0`；因此，`0` <= 确定位数   <= 精度  。 最大存储大小基于精度而变化。  
+ 小数点右边可以存储的十进制数字的最大位数。 小数位数的取值范围必须为 `0` 到精度 。 只有指定了精度，才能指定小数位数   。 默认确定位数为 `0`；因此，`0` <= 确定位数   <= 精度  。 最大存储大小基于精度而变化。  
   
 | Precision | 存储字节数  |  
 | ---------: |-------------: |  
@@ -262,23 +262,23 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  `bit`  
  可以取值为 `1`、`0` 或 `NULL 的 integer 数据类型。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 可优化 bit 列的存储。 如果表中的 bit 列为 8 列或更少，这些列作为 1 个字节存储。 如果 bit 列为 9 到 16 列，这些列作为 2 个字节存储，以此类推。  
   
- `nvarchar` [ ( n  ) ]  --  |  仅适用于 `max``max`[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
+ `nvarchar` [ ( n | `max` ) ]  -- `max` 仅适用于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
  可变长度 Unicode 字符数据。 n 的取值范围为 1 至 4,000  。 `max` 指示最大存储大小是 2^31-1 个字节 (2 GB)。 存储大小（以字节为单位）是所输入字符个数的两倍 + 2 个字节。 已输入数据的长度可以为 0 个字符。  
   
  `nchar` [ ( n ) ]   
- 固定长度 Unicode 字符数据，长度为 n 个字节  。 n 的取值范围必须为 *到*`1``4000`。 存储大小为 n  字节的两倍。  
+ 固定长度 Unicode 字符数据，长度为 n 个字节  。 n 的取值范围必须为 `1` 到 `4000`。 存储大小为 n  字节的两倍。  
   
- `varchar` [ ( n  ) ]  --   |  仅适用于 `max``max`[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。   
- 可变长度非 Unicode 字符数据，长度为 n 个字节  。 n 的取值范围必须为 *到*`1``8000`。 `max` 指示最大存储大小为 2 ^31-1 个字节 (2 GB)。存储大小是输入数据的实际长度 + 2 个字节。  
+ `varchar` [ ( n  | `max` ) ]  -- `max` 仅适用于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。   
+ 可变长度非 Unicode 字符数据，长度为 n 个字节  。 n 的取值范围必须为 `1` 到 `8000`。 `max` 指示最大存储大小为 2 ^31-1 个字节 (2 GB)。存储大小是输入数据的实际长度 + 2 个字节。  
   
  `char` [ ( n ) ]   
- 固定长度非 Unicode 字符数据，长度为 n 个字节  。 n 的取值范围必须为 *到*`1``8000`。 存储大小为 n 字节  。 n 的默认值为  `1`。  
+ 固定长度非 Unicode 字符数据，长度为 n 个字节  。 n 的取值范围必须为 `1` 到 `8000`。 存储大小为 n 字节  。 n 的默认值为 `1`。  
   
- `varbinary` [ ( n  ) ]  --   |  仅适用于 `max``max`[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
- 可变长度二进制数据。 n 的取值范围为 *到*`1``8000`。 `max` 指示最大存储大小是 2^31-1 个字节 (2 GB)。 存储大小是输入数据的实际长度加 2 个字节。 n 的默认值为 7  。  
+ `varbinary` [ ( n  | `max` ) ]  -- `max` 仅适用于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
+ 可变长度二进制数据。 n 的取值范围为 `1` 到 `8000`。 `max` 指示最大存储大小是 2^31-1 个字节 (2 GB)。 存储大小是输入数据的实际长度加 2 个字节。 n 的默认值为 7  。  
   
  `binary` [ ( n ) ]   
- 固定长度二进制数据，长度为 n 个字节  。 n 的取值范围为 *到*`1``8000`。 存储大小为 n 字节  。 n 的默认值为  `7`。  
+ 固定长度二进制数据，长度为 n 个字节  。 n 的取值范围为 `1` 到 `8000`。 存储大小为 n 字节  。 n 的默认值为 `7`。  
   
  `uniqueidentifier`  
  16 字节 GUID。  

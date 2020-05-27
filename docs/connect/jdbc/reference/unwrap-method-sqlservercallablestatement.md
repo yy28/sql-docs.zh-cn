@@ -45,7 +45,7 @@ public <T> T unwrap(Class<T> iface)
   
  应用程序可能需要访问特定于 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 的 JDBC API 扩展。 如果类公开供应商扩展，则 unwrap 方法支持对此对象扩展的公共类取消包装。  
   
- [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 实现自 [ISQLServerStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 扩展而来的 [ISQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。 当此方法获调用时，对象会取消对下列类的包装：[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)、[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)。  
+ [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 实现自 [ISQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 扩展而来的 [ISQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)。 当此方法获调用时，对象会取消对下列类的包装：[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)、[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)。  
   
  有关详细信息，请参阅[包装器和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
   

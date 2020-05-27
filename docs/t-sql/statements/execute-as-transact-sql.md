@@ -69,7 +69,7 @@ ms.locfileid: "76287834"
 > [!IMPORTANT]  
 >  当到数据库用户的上下文切换处于活动状态时，任何对数据库以外资源的访问尝试都将导致语句失败。 这包括 USE database 语句、分布式查询以及引用其他数据库（使用由三或四部分构成的标识符）的查询  。  
   
- 'name  ' 是有效的用户或登录名。 name 必须是 sysadmin 固定服务器角色的成员，或者分别作为 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 或 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 中的主体而存在   。  
+ 'name  ' 是有效的用户或登录名。 name 必须是 sysadmin 固定服务器角色的成员，或者分别作为 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 或 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 中的主体而存在。  
   
  可以将 name 指定为局部变量  。  
   
@@ -110,13 +110,13 @@ ms.locfileid: "76287834"
 可以通过对多个主体多次调用 EXECUTE AS 语句来创建执行上下文堆栈。 在调用时，REVERT 语句将把上下文切换为上下文堆栈中上一级的登录帐户或用户。 有关此行为的示例，请参阅[示例 A](#_exampleA)。  
   
 ##  <a name="specifying-a-user-or-login-name"></a><a name="_user"></a>指定用户名或登录名  
- EXECUTE AS \<context_specification> 中指定的用户或登录名必须分别作为 sys.database_principals 或 sys.server_principals 中的主体存在，否则 EXECUTE AS 语句将失败   。 此外，还必须为该主体授予 IMPERSONATE 权限。 除非调用方是数据库所有者或 sysadmin 固定服务器角色的成员，否则即使用户通过 Windows 组成员身份访问数据库或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，主体也必须存在  。 例如，假设条件如下： 
+ EXECUTE AS \<context_specification> 中指定的用户或登录名必须分别作为 sys.database_principals 或 sys.server_principals 中的主体存在，否则 EXECUTE AS 语句将失败   。 此外，还必须为该主体授予 IMPERSONATE 权限。 除非调用方是数据库所有者或 sysadmin 固定服务器角色的成员，否则即使用户通过 Windows 组成员身份访问数据库或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，主体也必须存在。 例如，假设条件如下： 
   
 -   CompanyDomain\SQLUsers 组拥有 Sales 数据库的访问权限   。  
   
 -   CompanyDomain\SqlUser1 是 SQLUsers 的成员，因此具有对 Sales 数据库的隐式访问权限    。  
   
- 虽然 CompanyDomain\SqlUser1 可通过 SQLUsers 组的成员身份访问数据库，但语句 `EXECUTE AS USER = 'CompanyDomain\SqlUser1'` 失败，因为 `CompanyDomain\SqlUser1` 未在数据库中作为主体存在   。  
+ 虽然 CompanyDomain\SqlUser1 可通过 SQLUsers 组的成员身份访问数据库，但语句 `EXECUTE AS USER = 'CompanyDomain\SqlUser1'` 失败，因为 `CompanyDomain\SqlUser1` 未在数据库中作为主体存在 。  
   
 如果用户处于孤立状态（关联登录名不再存在），并且该用户不是使用 WITHOUT LOGIN 创建的，EXECUTE AS 将针对此用户失败   。  
   
@@ -129,9 +129,9 @@ ms.locfileid: "76287834"
 ## <a name="using-with-no-revert"></a>使用 WITH NO REVERT  
  当 EXECUTE AS 语句包含可选的 WITH NO REVERT 子句时，不能通过 REVERT 语句或执行另一个 EXECUTE AS 语句来重置会话的执行上下文。 由该语句设置的上下文在删除会话之前一直保持有效。  
   
- 当指定 WITH NO REVERT COOKIE = @varbinary_variable 子句时，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 将 cookie 值传递给 @varbinary_variable   。 只有执行调用的 REVERT WITH COOKIE = @varbinary_variable 语句包含相同的 \@varbinary_variable 值，该语句设置的执行上下文才能恢复为以前的上下文   。  
+ 当指定 WITH NO REVERT COOKIE = @varbinary_variable 子句时，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 将 cookie 值传递给 @varbinary_variable 。 只有执行调用的 REVERT WITH COOKIE = @varbinary_variable 语句包含相同的 \@varbinary_variable 值，该语句设置的执行上下文才能恢复为以前的上下文 。  
   
- 该选项在使用连接池的环境中非常有用。 连接池是指维护一组数据库连接，以使应用程序服务器上的应用程序能够重用它们。 由于传递给 \@varbinary_variable 的值仅对于 EXECUTE AS 语句的调用方是已知的，因此该调用方可以保证它们建立的执行上下文不能被任何其他用户更改  。  
+ 该选项在使用连接池的环境中非常有用。 连接池是指维护一组数据库连接，以使应用程序服务器上的应用程序能够重用它们。 由于传递给 \@varbinary_variable 的值仅对于 EXECUTE AS 语句的调用方是已知的，因此该调用方可以保证它们建立的执行上下文不能被任何其他用户更改。  
   
 ## <a name="determining-the-original-login"></a>确定原始登录  
  使用 [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) 函数可以返回连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的登录名。 您可以在具有众多显式或隐式上下文切换的会话中使用该函数返回原始登录的标识。  

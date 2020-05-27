@@ -69,7 +69,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  指定用于对对称密钥进行加密的证书。 该证书必须已存在于数据库中。  
   
  PASSWORD ='password'     
- 指定用于对对称密钥进行加密的密码。 password 必须符合运行  *实例的计算机的 Windows 密码策略要求*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 指定用于对对称密钥进行加密的密码。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。  
   
  SYMMETRIC KEY Symmetric_Key_Name   
  指定用于对要更改的对称密钥进行加密的对称密钥。 该对称密钥必须已存在于数据库中，并且必须打开。  
