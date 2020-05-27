@@ -62,8 +62,8 @@ $params [可选]：对应于参数化查询中参数的值的阵列   。 该阵
     |-----------|---------------|  
     |*$value*|文字值或对 PHP 变量的引用。|  
     |*$direction*[可选]|用于指示参数方向的以下 **SQLSRV_PARAM_\*** 常量之一：**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**。 默认值为 SQLSRV_PARAM_IN  。<br /><br />有关 PHP 常量的详细信息，请参阅[常量 (Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
-    |*$phpType*[可选]|SQLSRV_PHPTYPE_ **常量，用于指定返回的值的 PHP 数据类型\*** 。|  
-    |*$sqlType*[可选]|SQLSRV_SQLTYPE_ **常量，用于指定输入值的 SQL Server 数据类型\*** 。|  
+    |*$phpType*[可选]|SQLSRV_PHPTYPE_\* 常量，用于指定返回的值的 PHP 数据类型。|  
+    |*$sqlType*[可选]|SQLSRV_SQLTYPE_\* 常量，用于指定输入值的 SQL Server 数据类型。|  
   
 *$options* [可选]：关联阵列，用于设置<a name="properties">查询属性</a>。 下表列出了受支持的键和相应值：
 
@@ -222,7 +222,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> 当由于 PHP 的[浮点数](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)具有有限精确度而将值绑定到[十进制或数值列](https://php.net/manual/en/language.types.float.php)以确保精确度和准确度时，建议将字符串用作输入。 这同样适用于 bigint 列，尤其是在值超出[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)范围的情况下。
+> 当由于 PHP 的[浮点数](https://php.net/manual/en/language.types.float.php)具有有限精确度而将值绑定到[十进制或数值列](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)以确保精确度和准确度时，建议将字符串用作输入。 这同样适用于 bigint 列，尤其是在值超出[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)范围的情况下。
 
 ## <a name="example"></a>示例  
 此代码示例演示如何将十进制值作为输入参数进行绑定。  

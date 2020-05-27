@@ -61,7 +61,7 @@ ms.locfileid: "79286991"
 ##  <a name="endpoints"></a><a name="Endpoints"></a> Endpoints  
  必须正确配置端点。  
   
-1.  确保要托管可用性副本（每个副本位置[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *）的各个*  实例都具有数据库镜像终结点。 若要确定给定服务器实例上是否存在数据库镜像终结点，请使用 [sys.database_mirroring_endpoints](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) 目录视图。 有关详细信息，请参阅[创建 Windows 身份验证的数据库镜像终结点 (Transact-SQL)](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) 或[允许数据库镜像终结点使用证书进行出站连接 (Transact-SQL)](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)。  
+1.  确保要托管可用性副本（每个副本位置）的各个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例都具有数据库镜像终结点。 若要确定给定服务器实例上是否存在数据库镜像终结点，请使用 [sys.database_mirroring_endpoints](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md) 目录视图。 有关详细信息，请参阅[创建 Windows 身份验证的数据库镜像终结点 (Transact-SQL)](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md) 或[允许数据库镜像终结点使用证书进行出站连接 (Transact-SQL)](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)。  
   
 2.  检查端口号是否正确。  
   

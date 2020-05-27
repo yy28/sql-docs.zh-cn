@@ -311,14 +311,14 @@ READ_ONLY | READONLY 指定文件组为只读。 不允许更新其中的对象�
 - 在只读数据库中不会进行锁定。 这可以加快查询速度。
 
 > [!NOTE]
-> 在 `READONLY`[!INCLUDE[msCoName](../../includes/msconame-md.md)] 的未来版本中，将删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关键字。 请避免在新的开发工作中使用 `READONLY`，并计划修改当前使用 `READONLY` 的应用程序。 请改用 `READ_ONLY`。
+> 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，将删除 `READONLY` 关键字。 请避免在新的开发工作中使用 `READONLY`，并计划修改当前使用 `READONLY` 的应用程序。 请改用 `READ_ONLY`。
 
 READ_WRITE | READWRITE 指定组是 READ_WRITE。 允许更新文件组中的对象。 若要更改此状态，您必须对数据库有独占访问权限。 有关详细信息，请参阅 SINGLE_USER 子句。
 
 > [!NOTE]
-> 在 `READWRITE`[!INCLUDE[msCoName](../../includes/msconame-md.md)] 的未来版本中，将删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关键字。 请避免在新的开发工作中使用 `READWRITE`，并计划将当前使用 `READWRITE` 的应用程序修改为使用 `READ_WRITE`。
+> 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，将删除 `READWRITE` 关键字。 请避免在新的开发工作中使用 `READWRITE`，并计划将当前使用 `READWRITE` 的应用程序修改为使用 `READ_WRITE`。
 > [!TIP]
-> 可通过查看 **sys.databases** 目录视图中的**is_read_only** 列，或者查看 **函数的**Updateability`DATABASEPROPERTYEX` 属性，来确定这些选项的状态。
+> 可通过查看 **sys.databases** 目录视图中的**is_read_only** 列，或者查看 `DATABASEPROPERTYEX` 函数的 **Updateability** 属性，来确定这些选项的状态。
 
 ## <a name="remarks"></a>备注
 
@@ -337,9 +337,9 @@ READ_WRITE | READWRITE 指定组是 READ_WRITE。 允许更新文件组中的对
 
 无法为内存优化文件组设置 SIZE 和 FILEGROWTH 参数。
 
-在 `READONLY`[!INCLUDE[msCoName](../../includes/msconame-md.md)] 的未来版本中，将删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关键字。 请避免在新的开发工作中使用 `READONLY`，并计划修改当前使用 READONLY 的应用程序。 请改用 `READ_ONLY`。
+在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，将删除 `READONLY` 关键字。 请避免在新的开发工作中使用 `READONLY`，并计划修改当前使用 READONLY 的应用程序。 请改用 `READ_ONLY`。
 
-在 `READWRITE`[!INCLUDE[msCoName](../../includes/msconame-md.md)] 的未来版本中，将删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关键字。 请避免在新的开发工作中使用 `READWRITE`，并计划将当前使用 `READWRITE` 的应用程序修改为使用 `READ_WRITE`。
+在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，将删除 `READWRITE` 关键字。 请避免在新的开发工作中使用 `READWRITE`，并计划将当前使用 `READWRITE` 的应用程序修改为使用 `READ_WRITE`。
 
 ## <a name="moving-files"></a>移动文件
 
@@ -397,7 +397,7 @@ GO
 
 ### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. 向数据库中添加由两个文件组成的文件组
 
-以下示例在 `Test1FG1` 数据库中创建文件组 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]，然后将两个 5 MB 的文件添加到该文件组。
+以下示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中创建文件组 `Test1FG1`，然后将两个 5 MB 的文件添加到该文件组。
 
 ```sql
 USE master
@@ -844,9 +844,9 @@ READ_ONLY | READONLY 指定文件组为只读。 不允许更新其中的对象�
 READ_WRITE | READWRITE 指定组是 READ_WRITE。 允许更新文件组中的对象。 若要更改此状态，您必须对数据库有独占访问权限。 有关详细信息，请参阅 SINGLE_USER 子句。
 
 > [!NOTE]
-> 在 `READWRITE`[!INCLUDE[msCoName](../../includes/msconame-md.md)] 的未来版本中，将删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关键字。 请避免在新的开发工作中使用 `READWRITE`，并计划将当前使用 `READWRITE` 的应用程序修改为使用 `READ_WRITE`。
+> 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中，将删除 `READWRITE` 关键字。 请避免在新的开发工作中使用 `READWRITE`，并计划将当前使用 `READWRITE` 的应用程序修改为使用 `READ_WRITE`。
 
-可通过查看 **sys.databases** 目录视图中的**is_read_only** 列，或者查看 **函数的**Updateability`DATABASEPROPERTYEX` 属性，来确定这些选项的状态。
+可通过查看 **sys.databases** 目录视图中的**is_read_only** 列，或者查看 `DATABASEPROPERTYEX` 函数的 **Updateability** 属性，来确定这些选项的状态。
 
 ## <a name="remarks"></a>备注
 
@@ -878,7 +878,7 @@ GO
 
 ### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. 向数据库中添加由两个文件组成的文件组
 
-以下示例在 `Test1FG1` 数据库中创建文件组 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]，然后将两个 5 MB 的文件添加到该文件组。
+以下示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中创建文件组 `Test1FG1`，然后将两个 5 MB 的文件添加到该文件组。
 
 ```sql
 USE master

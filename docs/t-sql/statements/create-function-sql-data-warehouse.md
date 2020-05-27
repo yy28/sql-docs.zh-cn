@@ -98,7 +98,7 @@ RETURNS return_data_type
  function_body   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句系列。  function_body 不能包含 SELECT 语句且不能引用数据库数据。  function_body 不能引用表或视图。 function body 可以调用其他确定性的函数但不能调用不确定性函数。 
   
- 在标量函数中，function_body 是一系列  *语句，这些语句一起使用可计算出标量值*[!INCLUDE[tsql](../../includes/tsql-md.md)]。  
+ 在标量函数中，function_body 是一系列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，这些语句一起使用可计算出标量值。  
   
  *scalar_expression*  
  指定标量函数返回的标量值。  

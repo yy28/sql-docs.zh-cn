@@ -214,7 +214,7 @@ Database_user_with_no_login  指定无相应服务器级主体的数据库用户
 
 ### <a name="a-granting-permission-to-create-tables"></a>A. 授予创建表的权限
 
-以下示例授予用户 `CREATE TABLE` 对 `AdventureWorks` 数据库的 `MelanieK` 权限。
+以下示例授予用户 `MelanieK` 对 `AdventureWorks` 数据库的 `CREATE TABLE` 权限。
 
 ```sql
 USE AdventureWorks;
@@ -246,7 +246,7 @@ GO
 
 ### <a name="d-granting-control-permission-to-a-database-user"></a>D. 将 CONTROL 权限授予数据库用户
 
- 以下示例授予数据库用户 `CONTROL` 对 `AdventureWorks2012` 数据库的 `Sarah` 权限。 用户必须存在于数据库中，并且必须将上下文设置为数据库。
+ 以下示例授予数据库用户 `Sarah` 对 `AdventureWorks2012` 数据库的 `CONTROL` 权限。 用户必须存在于数据库中，并且必须将上下文设置为数据库。
 
 ```sql
 USE AdventureWorks2012;

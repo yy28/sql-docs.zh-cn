@@ -30,7 +30,7 @@ ms.locfileid: "80215986"
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  返回  **中指定 float 表达式的自然对数**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+  返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中指定 float 表达式的自然对数。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
