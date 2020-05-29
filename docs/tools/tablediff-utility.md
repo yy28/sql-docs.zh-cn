@@ -188,10 +188,10 @@ tablediff
 |**timestamp**|**varbinary**|  
 |**varchar(max)**|**text**|  
 |**nvarchar(max)**|**ntext**|  
-|**varbinary(max)**|**图像**|  
+|**varbinary(max)**|**image**|  
 |**text**|**varchar(max)**|  
 |**ntext**|**nvarchar(max)**|  
-|**图像**|**varbinary(max)**|  
+|**image**|**varbinary(max)**|  
   
  使用 **-strict** 选项可禁止这些映射，并执行严格验证。  
   
@@ -213,7 +213,7 @@ tablediff
   
 -   **ntext**  
   
--   **图像**  
+-   **image**  
   
 ## <a name="permissions"></a>权限  
  若要比较表，您必须有要比较的表对象的 SELECT ALL 权限。  
