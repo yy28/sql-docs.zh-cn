@@ -154,7 +154,7 @@ sqldiag
  请注意， **SQLdiag** 使用运行实用工具的计算机上的本地时间。  
   
  **/A**  _SQLdiag_application_name_  
- 使你可针对同一个实例运行多个 **SQLdiag** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具的实例。  
+ 允许对同一个 SQL Server 实例运行 SQLdiag ****实用工具的多个实例。  
   
  每个 *SQLdiag_application_name* 标识不同的 **SQLdiag**的实例。 *SQLdiag_application_name* 实例和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例名称之间没有任何关系。  
   
@@ -189,7 +189,7 @@ sqldiag
  **/G**  
  在常规模式下运行 **SQLdiag** 。 指定 **/G** 后， **SQLdiag** 在启动时不会强制执行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 连接检查或验证用户是否为 **sysadmin** 固定服务器角色的成员。 **SQLdiag** 会让 Windows 来确定用户是否具有收集各个请求的诊断信息的相应权限。  
   
- 如果未指定 **/G** ，则 **SQLdiag** 将进行检查，以确定用户是否为 Windows **Administrators** 组的成员，如果该用户不是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **Administrators** 组成员，则不收集诊断信息。  
+ 如果未指定 /G****，SQLdiag**** 将进行检查，确定该用户是否是 Windows 管理员组****的成员；如果该用户不是管理员组****的成员，SQLdiag 不收集 SQL Server 诊断信息。  
   
  **/R**  
  将 **SQLdiag** 注册为服务。 你将 **SQLdiag** 注册为服务时指定的所有命令行参数，都将留到以后用来运行该服务。  
