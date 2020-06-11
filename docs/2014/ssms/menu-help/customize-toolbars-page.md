@@ -12,17 +12,17 @@ ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f16133abfa0d16e4b5614bdfefa5cf7c163516e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32e57b44b759ba36ea92cd7d08a600738ff2b4dd
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62470004"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859229"
 ---
 # <a name="customize-toolbars-page"></a>自定义（“工具栏”页）
-  使用“工具栏”  选项卡可以创建、重命名、删除和重置工具栏。 通过在“工具”  菜单上单击“自定义”  ，再单击“工具栏”  ，可以访问此选项卡。  
+  使用“工具栏”  选项卡可以创建、重命名、删除和重置工具栏。 通过在“工具”菜单上单击“自定义”，再单击“工具栏”，可以访问此选项卡。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **工具栏**  
  显示内置的工具栏以及您所创建的所有其他工具栏。 显示某个工具栏时，在此对话框中该工具栏左侧会出现一个复选标记。  
   
@@ -51,4 +51,4 @@ ms.locfileid: "62470004"
  指定工具栏上命令的快捷键组合是否显示在工具提示中。  
   
  **键盘**  
- 显示“选项”  对话框的“键盘”  窗格，使用该窗格，可以更改和定义命令的快捷键组合。  
+ 显示“选项”对话框的“键盘”窗格，使用该窗格，可以更改和定义命令的快捷键组合。  

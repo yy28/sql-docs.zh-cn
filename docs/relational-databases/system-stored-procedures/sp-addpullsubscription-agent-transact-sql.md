@@ -1,7 +1,7 @@
 ---
 title: sp_addpullsubscription_agent （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 08/08/2019
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ea558eafb665538b90cc4d9e41d16166dd9475c5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f0704ff7d6764ca06c7de37d0d02bfbcb9148ce7
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820701"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627433"
 ---
 # <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -80,6 +80,9 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>参数  
 `[ @publisher = ] 'publisher'`发布服务器的名称。 *发布服务器*的**sysname**，无默认值。  
+
+> [!NOTE]
+> 服务器名称可指定为 `<Hostname>,<PortNumber>` 。 如果在 Linux 或 Windows 上使用自定义端口部署 SQL Server，并且禁用了 browser 服务，则可能需要指定连接的端口号。
   
 `[ @publisher_db = ] 'publisher_db'_`发布服务器数据库的名称。 *publisher_db*的值为**sysname**，默认值为 NULL。 Oracle 发布服务器将忽略*publisher_db* 。  
   
@@ -124,7 +127,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 `[ @distributor_password = ] 'distributor_password'`分发服务器密码。 如果*distributor_security_mode*设置为**0**，则*distributor_password*是必需的。 *distributor_password*的默认值为**sysname**，默认值为 NULL。  
   
 > [!IMPORTANT]  
->  不要使用空密码。 使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
+>  不要使用空密码。 请使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
 `[ @optional_command_line = ] 'optional_command_line'`是提供给分发代理的可选命令提示符。 例如， **-DefinitionFile** C:\Distdef.txt 或 **-CommitBatchSize** 10。 *optional_command_line*为**nvarchar （4000）**，默认值为空字符串。  
   
@@ -136,7 +139,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 |**2** （默认值）|按需|  
 |**4**|每天|  
 |**8**|每周|  
-|**超过**|每月一次|  
+|**超过**|每月|  
 |**32**|与“每月”选项相关|  
 |**64**|自动启动|  
 |**128**|重复执行|  
@@ -150,7 +153,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 |值|说明|  
 |-----------|-----------------|  
-|**1** （默认值）|第一个|  
+|**1** （默认值）|First|  
 |**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
@@ -230,7 +233,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **sp_addpullsubscription_agent**用于快照复制和事务复制。  
   
 ## <a name="example"></a>示例  

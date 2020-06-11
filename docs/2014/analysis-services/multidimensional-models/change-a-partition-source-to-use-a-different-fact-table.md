@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5508312f-8e46-4802-9362-6688ca03d098
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 94ab489420b4661cea27b942c39dff91a219a38d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0063a6023d769dc6dccd616655d10e0bd3c65a98
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076707"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537160"
 ---
 # <a name="change-a-partition-source-to-use-a-different-fact-table"></a>更改分区源以使用不同的事实数据表
   在创建多维数据集的分区时，可以选择使用不同的事实数据表。 不同的数据表可能来自单个数据源视图，也可能来自不同的数据源视图或不同的数据源。 数据源视图也可能包含来自多个数据源的不同表。  

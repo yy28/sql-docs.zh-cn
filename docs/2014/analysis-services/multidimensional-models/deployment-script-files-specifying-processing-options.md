@@ -15,19 +15,18 @@ helpviewer_keywords:
 ms.assetid: e9e50817-908e-4210-bc3d-8e2957568241
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ea766d26034b9ee0d1fcefbd215f41c19da1f9ef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da6b52d4b1d6b4179a88860b5fe1dc79b92657cf
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075229"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546824"
 ---
 # <a name="specifying-processing-options"></a>指定处理选项
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署向导从\<*项目名称*> d 文件中读取处理选项。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]在生成[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目时创建此文件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]使用在 " * \<项目名称>* **属性页**" 对话框的 "**部署**" 页上指定的处理选项\<来创建*项目名称*> d 文件。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署向导从 d 文件中读取处理选项 \<*project name*> 。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]在生成项目时创建此文件 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]使用在 "属性页" 对话框的 "**部署**" 页上指定的处理选项 *\<project name>* **Properties Pages**来创建 \<*project name*> d 文件。  
   
 ## <a name="reviewing-the-processing-options-for-deployment"></a>检查部署的处理选项  
- D \<*文件> 中存储的*配置设置如下所示：  
+ D 文件中存储的配置设置如下所示 \<*project name*> ：  
   
 -   **处理方法** 此设置将控制在部署后是否处理部署的对象以及将执行的处理的类型。 有以下三个处理选项：  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66075229"
     -   如果此选项为 `False`，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将在单个事务中部署元数据更改，并在其自己的事务中部署每个处理命令。  
   
 ## <a name="modifying-the-processing-options-for-deployment"></a>修改部署的处理选项  
- 但是，你可能需要使用不同于[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] \<*项目名称*> d 文件中存储的处理选项来部署项目。 例如，您也可能要完全处理所有对象，使用默认处理选项进行处理，也可不进行任何处理。 如果多维数据集或维度启用了写操作，则可以指定是使用新的写回表还是现有的写回表。  
+ 但是，你可能需要 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用与 d 文件中存储的选项不同的处理选项来部署项目 \<*project name*> 。 例如，您也可能要完全处理所有对象，使用默认处理选项进行处理，也可不进行任何处理。 如果多维数据集或维度启用了写操作，则可以指定是使用新的写回表还是现有的写回表。  
   
  若要修改部署过程中使用的处理选项，可以编辑和重新生成项目，也可以通过使用下列步骤中介绍的方法之一来更改输入文件中的处理选项。  
   
@@ -60,13 +59,13 @@ ms.locfileid: "66075229"
   
 -   以交互方式运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导。 在 **“处理选项”** 页上，为要部署的项目指定处理选项。  
   
-     \- 或 -  
+     -或-  
   
 -   在命令提示符下运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导，并设置向导，使其以应答文件模式运行。 有关应答文件模式的详细信息，请参阅 [Running the Analysis Services Deployment Wizard](running-the-analysis-services-deployment-wizard.md)。  
   
-     \- 或 -  
+     -或-  
   
--   \<使用任意文本编辑器修改*项目名称*> d 文件。  
+-   \<*project name*>使用任意文本编辑器修改 d 文件。  
   
 ## <a name="see-also"></a>另请参阅  
  [指定安装目标](deployment-script-files-specifying-the-installation-target.md)   

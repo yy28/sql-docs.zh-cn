@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8431de73b450179592bda39066c72550991a393c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0537d9e23eaf77cb1645de9ac7e0fb8fe49e4af3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217080"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544059"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问
   此文章介绍了如何设置用于访问 Analysis Services 实例的 HTTP 端点。 你可以通过配置 MSMDPUMP.dll（一种在 Internet Information Services (IIS) 中运行的 ISAPI 扩展，可以在客户端应用程序和 Analysis Services 服务器之间抽送数据）实现对 HTTP 的访问。 在您的 BI 解决方案需要以下功能时，此方法可替代用于连接到 Analysis Services 的方法：  
@@ -65,30 +64,30 @@ ms.locfileid: "79217080"
   
  下表列出您为不同情形启用 HTTP 访问时需要注意的其他事项。  
   
-|方案|配置|  
+|方案|Configuration|  
 |--------------|-------------------|  
 |IIS 和 Analysis Services 位于同一台计算机上|这是最简单的配置，因为它允许您使用默认配置（其中，服务器名称为 localhost）、本地 Analysis Services OLE DB 访问接口以及与 NTLM 的 Windows 集成安全性。 假定客户端也在同一域中，用户意识不到身份验证的存在，并且您不需要做其他工作。|  
 |IIS 和 Analysis Services 位于不同计算机上|对于此拓扑，您必须将 Analysis Services OLE DB 访问接口安装在 Web 服务器上。 您还必须编辑 msmdpump.ini 文件，以便指定 Analysis Services 实例在远程计算机上的位置。<br /><br /> 此拓扑添加了双跃点身份验证步骤，其中，凭据必须从客户端流到 Web 服务器，然后流到后端 Analysis Services 服务器上。 如果您在使用 Windows 凭据和 NTLM，系统将会显示错误消息，因为 NTLM 不允许将客户端凭据委托给第二个服务器。 最常见的解决方案是将基本身份验证用于安全套接字层 (SSL)，但是，这就要求用户在访问 MSMDPUMP 虚拟目录时提供用户名和密码。 一个更为直接的方法可能是启用 Kerberos 并且配置 Analysis Services 约束委派，以便用户能够以透明的方式访问 Analysis Services。 有关详细信息，请参阅 [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md) 。<br /><br /> 考虑要在 Windows 防火墙中取消阻止的端口。 您将需要取消阻止这两台服务器上的端口，以便允许访问 IIS 上的 Web 应用程序以及远程服务器上的 Analysis Services。|  
 |客户端连接来自不可信域或 extranet 连接|来自不可信域的客户端连接对身份验证带来进一步的限制。 默认情况下，Analysis Services 使用 Windows 集成身份验证，这要求用户与服务器处于同一域中。 如果您具有从域的外部连接到 IIS 的 Extranet 用户，则在服务器配置为使用默认设置时，这些用户将会收到连接错误。<br /><br /> 解决方法包括让 Extranet 用户使用域凭据通过 VPN 进行连接。 但是，一个更好的方法可能是在您的 IIS 网站上启用基本身份验证和 SSL。|  
   
-##  <a name="prerequisites"></a><a name="bkmk_prereq"></a>先决条件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 先决条件  
  本文中的说明是假定已配置 IIS 并且已安装 Analysis Services。 Windows Server 2012 附带 IIS 8.x 作为服务器角色，你可以在系统上启用它。  
   
  **IIS 8.0 中的额外配置**  
   
  IIS 8.0 的默认配置缺少 HTTP 访问 Analysis Services 所必需的组件。 位于“ **Web 服务器 (IIS)** ”角色的“ **安全性** ”和“ **应用程序开发** ”功能区的这些组件包括：  
   
--   **安全** | **Windows 身份验证**、**基本身份验证**和数据访问方案所需的任何其他安全功能。  
+-   **安全**  | **Windows 身份验证**、**基本身份验证**和数据访问方案所需的任何其他安全功能。  
   
--   **应用程序开发** | **CGI**  
+-   **应用程序开发**  | **CGI**  
   
--   **应用程序开发** | **ISAPI 扩展**  
+-   **应用程序开发**  | **ISAPI 扩展**  
   
- 若要验证或添加这些组件，请使用**服务器管理器** | **管理** | "**添加角色和功能**"。 逐步执行向导直至到达 **“服务器角色”**。 向下滚动以查找“ **Web 服务器 (IIS)**”。  
+ 若要验证或添加这些组件，请使用**服务器管理器**  |  **管理**"  |  **添加角色和功能**"。 逐步执行向导直至到达 **“服务器角色”**。 向下滚动以查找“ **Web 服务器 (IIS)**”。  
   
-1.  打开**Web 服务器** | **安全**，然后选择身份验证方法。  
+1.  打开**Web 服务器**  |  **安全**，然后选择身份验证方法。  
   
-2.  打开**Web 服务器** | **应用程序开发**，然后选择**CGI**和**ISAPI 扩展**。  
+2.  打开**Web 服务器**  |  **应用程序开发**，然后选择**CGI**和**ISAPI 扩展**。  
   
      ![添加 Web 服务器角色的功能页](../media/ssas-httpaccess-isapicgi.png "添加 Web 服务器角色的功能页")  
   
@@ -112,21 +111,21 @@ ms.locfileid: "79217080"
   
  必须为 NTFS 文件系统格式化该驱动器。 指向您创建的文件夹的路径不得包含任何空格。  
   
-1.  复制以下文件，这些文件位于\<驱动器>： \Program Files\Microsoft SQL Server\\<实例\>\OLAP\bin\isapi： MSMDPUMP。DLL MSMDPUMP。INI 和 Resources 文件夹。  
+1.  复制以下文件，该文件位于 \<drive> ： \Program Files\Microsoft SQL Server \\<instance \> \OLAP\bin\isapi： MSMDPUMP.DLL、MSMDPUMP.INI 和 Resources 文件夹。  
   
      ![显示要复制的文件的文件资源管理器](../media/ssas-httpaccess-msmdpumpfilecopy.PNG "显示要复制的文件的文件资源管理器")  
   
-2.  在 web 服务器上，创建一个新文件夹： \<驱动器>： \inetpub\wwwroot\\**OLAP**  
+2.  在 web 服务器上，创建一个新文件夹： \<drive> ： \Inetpub\wwwroot \\ **OLAP**  
   
 3.  将先前复制的文件粘贴到这个新文件夹。  
   
 4.  确认 Web 服务器上的 \inetpub\wwwroot\OLAP 文件夹含有以下各项：MSMDPUMP.DLL、MSMDPUMP.INI 和 Resources 文件夹。 文件夹结构应类似于此：  
   
-    -   \<驱动器>： \inetpub\wwwroot\OLAP\MSMDPUMP.dll  
+    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
-    -   \<驱动器>： \inetpub\wwwroot\OLAP\MSMDPUMP.ini  
+    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
-    -   \<驱动器>： \inetpub\wwwroot\OLAP\Resources  
+    -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
   
 ##  <a name="step-2-create-an-application-pool-and-virtual-directory-in-iis"></a><a name="bkmk_appPool"></a> 第 2 步：在 IIS 中创建应用程序池和虚拟目录  
  接下来，创建应用程序池和抽取端点。  
@@ -157,7 +156,7 @@ ms.locfileid: "79217080"
   
      ![“添加应用程序”对话框](../media/ssas-httpaccess-convertedapp.png "“添加应用程序”对话框")  
   
-4.  单击“确定”。  刷新网站，请注意默认网站下 OLAP 文件夹现在是一个应用程序。 MSMDPUMP 文件的虚拟路径现已创建。  
+4.  单击“确定”。 刷新网站，请注意默认网站下 OLAP 文件夹现在是一个应用程序。 MSMDPUMP 文件的虚拟路径现已创建。  
   
      ![应用程序转换后的 OLAP 文件夹](../media/ssas-httpaccess-convertfolderafter.png "应用程序转换后的 OLAP 文件夹")  
   
@@ -215,7 +214,7 @@ ms.locfileid: "79217080"
   
      ![功能页中的处理程序映射图标](../media/ssas-httpaccess-handlermapping.png "功能页中的处理程序映射图标")  
   
-7.  右键单击该页上的任何地方，然后选择“ **添加脚本映射**”。 在 "添加脚本映射" 对话框中，指定** \*.dll**作为请求路径，指定 c:\inetpub\wwwroot\OLAP\msmdpump.dll 作为可执行文件，并键入**OLAP**作为名称。 保持所有默认限制与此脚本映射相关联。  
+7.  右键单击该页上的任何地方，然后选择“ **添加脚本映射**”。 在 "添加脚本映射" 对话框中，将** \* .dll**指定为请求路径，将 c:\inetpub\wwwroot\OLAP\msmdpump.dll 指定为可执行文件，并键入**OLAP**作为名称。 保持所有默认限制与此脚本映射相关联。  
   
      ![“添加脚本映射”对话框的屏幕快照](../media/ssas-httpaccess-addscript.png "“添加脚本映射”对话框的屏幕快照")  
   
@@ -237,16 +236,16 @@ ms.locfileid: "79217080"
   
 ```  
   
- 如果您为其配置 HTTP 访问的 Analysis Services 实例位于本地计算机上并且作为默认实例安装，则无需更改该设置。 否则，必须指定服务器名称（例如， \<SERVERNAME>S R V-SRV01\</ServerName>）。 对于作为命名实例安装的服务器，请确保追加实例名称（例如， \<ServerName>ADWRKS-SRV01\Tabular\</ServerName>）。  
+ 如果您为其配置 HTTP 访问的 Analysis Services 实例位于本地计算机上并且作为默认实例安装，则无需更改该设置。 否则，必须指定服务器名称（例如 \<ServerName> s r v-SRV01 \</ServerName> ）。 对于作为命名实例安装的服务器，请确保追加实例名称（例如， \<ServerName> ADWRKS-SRV01\Tabular \</ServerName> ）。  
   
- 默认情况下，Analysis Services 侦听 TCP/IP 端口 2383。 如果将 Analysis Services 作为默认实例安装，则无需指定 ServerName> 中的\<任何端口，因为 Analysis Services 知道如何自动侦听端口2383。 但是，您确实需要在 Windows 防火墙中允许与该端口的入站连接。 有关详细信息，请参阅 [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
+ 默认情况下，Analysis Services 侦听 TCP/IP 端口 2383。 如果将 Analysis Services 作为默认实例安装，则无需在中指定任何端口， \<ServerName> 因为 Analysis Services 知道如何自动侦听端口2383。 但是，您确实需要在 Windows 防火墙中允许与该端口的入站连接。 有关详细信息，请参阅 [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
- 如果已将 Analysis Services 的命名实例或默认实例配置为侦听固定端口，则必须将端口号添加到服务器名称（例如\<SERVERNAME>AW-SRV01： 55555\</ServerName>），并且必须允许 Windows 防火墙中的入站连接到该端口。  
+ 如果已将 Analysis Services 的命名实例或默认实例配置为侦听固定端口，则必须将端口号添加到服务器名称（例如， \<ServerName> AW-SRV01： 55555 \</ServerName> ），并且必须允许 Windows 防火墙中的入站连接到该端口。  
   
 ## <a name="step-5-grant-data-access-permissions"></a>第 5 步：授予数据访问权限  
  如上所述，你需要向 Analysis Services 实例授权。 每个数据库对象都将具有提供给定级别权限（读或读/写）的角色，而每个角色都将具有由 Windows 用户标识组成的成员。  
   
- 若要设置权限，可使用 SQL Server Management Studio。 在 "**数据库** | **角色**" 文件夹下，您可以创建角色、指定数据库权限、向 Windows 用户或组帐户分配成员身份，然后授予对特定对象的读或写权限。 通常，使用但不更新模型数据的客户端连接只需对多维数据集的 **“读取”** 权限即可。  
+ 若要设置权限，可使用 SQL Server Management Studio。 在 "**数据库**  |  **角色**" 文件夹下，您可以创建角色、指定数据库权限、向 Windows 用户或组帐户分配成员身份，然后授予对特定对象的读或写权限。 通常，使用但不更新模型数据的客户端连接只需对多维数据集的 **“读取”** 权限即可。  
   
  角色分配根据配置身份验证的方式而异。  
   
@@ -261,7 +260,7 @@ ms.locfileid: "79217080"
 ##  <a name="step-6-test-your-configuration"></a><a name="bkmk_test"></a>步骤6：测试您的配置  
  针对 MSMDPUMP 的连接字符串语法是指向 MSMDPUMP.dll 文件的 URL。  
   
- 如果 web 应用程序正在侦听固定端口，请将端口号附加到服务器名称或 IP 地址，例如`http://my-web-srv01:8080/OLAP/msmdpump.dll`或。 `http://123.456.789.012:8080/OLAP/msmdpump.dll`  
+ 如果 web 应用程序正在侦听固定端口，请将端口号附加到服务器名称或 IP 地址，例如 `http://my-web-srv01:8080/OLAP/msmdpump.dll` 或 `http://123.456.789.012:8080/OLAP/msmdpump.dll` 。  
   
  若要快速测试连接，你可以使用 Microsoft Excel 或 SQL Server Management Studio 打开连接  
   

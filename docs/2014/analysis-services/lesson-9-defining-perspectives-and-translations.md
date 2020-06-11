@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d7e9edcba3a9645f1b327e698af2336b838915bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b28fb295525821aa2ee8fbbf07db16dc2d06286
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530828"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542099"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>第 9 课：定义透视和翻译
   在本课中，您将了解如何定义透视和翻译。 可以定义透视，以降低多维数据集的明显的复杂性，还可以定义翻译，以便让用户能够以他们选择的语言来查看多维数据集元数据。  

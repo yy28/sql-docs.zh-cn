@@ -3,9 +3,9 @@ title: sys. dm_resource_governor_resource_pools_history_ex （Transact-sql） |M
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
-ms.technology: system-objects
 ms.prod_service: sql-database
 ms.reviewer: ''
+ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governor
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: ae34c89fd570921bec26d8a11537c58b6bba2302
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 04f0346e15043c105030b94eb96633e1f31b64d9
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247307"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627311"
 ---
 # <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys. dm_resource_governor_resource_pools_history_ex （Transact-sql）
 
@@ -103,7 +103,7 @@ ms.locfileid: "75247307"
 
 此视图需要 VIEW SERVER STATE 权限。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 用户可以使用此动态管理视图来监视用户工作负荷池的近乎实时的资源消耗以及 Azure SQL 数据库实例的系统内部池。
 

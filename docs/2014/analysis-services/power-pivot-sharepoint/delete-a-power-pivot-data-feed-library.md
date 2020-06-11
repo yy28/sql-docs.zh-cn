@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5dbfc67e-7260-445a-8210-a9d33827db7f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f2e12e536cfaf91bab25e958ba279b072b39259
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 414dfff0d98d127d11c8fa0e01da78d8b723918d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071475"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540442"
 ---
 # <a name="delete-a-powerpivot-data-feed-library"></a>删除 PowerPivot 数据馈送库
   您必须是站点所有者才能删除数据馈送库。 如果库中包含项，则它们将随同库一起被删除。  
@@ -30,7 +29,7 @@ ms.locfileid: "66071475"
   
 3.  在“网站管理”下单击 **“网站库和列表”**。  
   
-4.  单击 **"\<自定义库名称>"**  
+4.  单击 "**自 \<your library name> 定义"**  
   
 5.  在“权限和管理”下单击 **“删除此库”**。  
   

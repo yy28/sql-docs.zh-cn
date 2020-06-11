@@ -19,23 +19,23 @@ ms.assetid: 69617642-0f54-4b25-b62f-5f39c8909601
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 16b2a23c696b4da405e4983689217abb15074f03
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b9da138ea801881ebbef5c7380c818563908b738
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078434"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669479"
 ---
 # <a name="schemata-transact-sql"></a>SCHEMATA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  为当前数据库中的每个架构返回一行。 若要从这些视图中检索信息，请指定 INFORMATION_SCHEMA 的完全限定名称 **。**_view_name_。 若要检索有关实例中所有数据库的信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请查询[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)目录视图。  
+  为当前数据库中的每个架构返回一行。 若要从这些视图中检索信息，请指定 INFORMATION_SCHEMA 的完全限定名称 **。**_view_name_。 若要检索有关实例中所有数据库的信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请查询[Sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)目录视图。  
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**CATALOG_NAME**|**sysname**|当前数据库的名称|  
 |**SCHEMA_NAME**|**nvarchar （** 128 **）**|返回架构名称。|  
-|**SCHEMA_OWNER**|**nvarchar （** 128 **）**|架构所有者名称。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠的方式是查询 sys.objects 目录视图。|  
+|**SCHEMA_OWNER**|**nvarchar （** 128 **）**|架构所有者名称。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 INFORMATION_SCHEMA 视图仅表示对象的元数据的子集。 查找对象架构的唯一可靠的方式是查询 sys.objects 目录视图。|  
 |**DEFAULT_CHARACTER_SET_CATALOG**|**varchar （** 6 **）**|始终返回 NULL。|  
 |**DEFAULT_CHARACTER_SET_SCHEMA**|**varchar （** 3 **）**|始终返回 NULL。|  
 |**DEFAULT_CHARACTER_SET_NAME**|**sysname**|返回默认字符集的名称。|  
@@ -51,6 +51,6 @@ SELECT * FROM master.INFORMATION_SCHEMA.SCHEMATA;
  [&#40;Transact-sql&#41;的信息架构视图](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)   
- [syscharsets &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syscharsets-transact-sql.md)  
+ [sys.sys字符集 &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-syscharsets-transact-sql.md)  
   
   

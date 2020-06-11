@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c414dabe-9bad-49b7-9a3c-dfca87fef92b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2102d28a61a99ed9ed6786dd8f2dee196066045c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6732e8f00dc0d01e0d3b708794a1d9c497ae4cf5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072146"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540949"
 ---
 # <a name="partition-source-dialog-box-analysis-services---multidimensional-data"></a>“分区源”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “分区源” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，为分区指定事实数据表的数据源。 您可以通过执行以下操作之一显示 **“分区源”** 对话框：  
@@ -31,7 +30,7 @@ ms.locfileid: "66072146"
 |选项|定义|  
 |------------|----------------|  
 |**绑定类型**|选择用于指定分区的源的绑定类型。 提供了以下选项：<br /><br /> **表绑定**：选择此项可显示 "**表绑定详细信息**" 窗格并指示分区绑定到数据源或数据源视图中表的内容。 有关“表绑定详细信息”**** 窗格的详细信息，请参阅[表绑定详细信息（“分区源”对话框）（Analysis Services - 多维数据）](table-binding-partition-source-dialog-analysis-services-multidimensional-data.md)。<br /><br /> **详细信息**：选择此选择可以显示 "**查询绑定详细信息**" 窗格并指示分区绑定到对数据源执行的查询的内容。 有关“查询绑定详细信息”**** 窗格的详细信息，请参阅[查询绑定详细信息（“分区源”对话框）（Analysis Services - 多维数据）](query-binding-partition-source-dialog-analysis-services-multidimensional-data.md)。|  
-|Detail****|根据 **“绑定类型”** 选项的值的不同，显示 **“表绑定详细信息”** 对话框，或显示 **“查询绑定详细信息”** 对话框。|  
+|**详细信息**|根据 **“绑定类型”** 选项的值的不同，显示 **“表绑定详细信息”** 对话框，或显示 **“查询绑定详细信息”** 对话框。|  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;多维数据集设计器&#41; &#40;Analysis Services 多维数据的分区&#41;](partitions-cube-designer-analysis-services-multidimensional-data.md)   

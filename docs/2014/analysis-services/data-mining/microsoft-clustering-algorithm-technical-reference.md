@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d48dd57d71d04611947e0ec6158b29c97a6b7646
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee9019f821c5608527e0bdca5eddc8f1ead52f41
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084024"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522119"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft 聚类分析算法技术参考
   本节说明 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法的实现，包括可用来控制聚类分析模型的行为的参数。 还提供关于在创建和处理聚类分析模型时如何提高性能的指南。  

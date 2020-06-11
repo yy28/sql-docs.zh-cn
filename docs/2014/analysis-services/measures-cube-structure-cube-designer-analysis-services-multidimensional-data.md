@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: be70f63b-58f2-4eff-81bc-c86d8229e617
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cbd64cd4eb3ca686fdbdd1a59c9e84fa387e6a7f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc38d7977e13fb76c33a0399fd6a7325783abb1e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077915"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541580"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>度量值（“多维数据集结构”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用 **“度量值”** 窗格，操作多维数据集设计器中的 **“多维数据集结构”** 选项卡上的度量值组和成员。  
   
 ## <a name="options"></a>选项  
- 度量值组  
+ 度量值  
  根据所选视图显示多维数据集中包含的度量值组和度量值：  
   
  树  
@@ -63,7 +62,7 @@ ms.locfileid: "66077915"
 |选项|定义|  
 |------------|----------------|  
 |**视图**|在树视图中显示度量值组和度量值。|  
-|**Grid**|在网格中显示度量值组和度量值。|  
+|**网格**|在网格中显示度量值组和度量值。|  
   
  **重命名**  
  选择此选项可重命名所选度量值组或度量值。  

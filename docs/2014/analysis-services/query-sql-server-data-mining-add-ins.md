@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16af4a6f-18d4-496a-a304-7a13aa32ee76
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dcddeb64b14301f08a7dc723ef89737102f257ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d0f0212795adcaed220806f8cc1349f95c2a6f3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070479"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539569"
 ---
 # <a name="query-sql-server-data-mining-add-ins"></a>查询（SQL Server 数据挖掘外接程序）
   ![“数据挖掘”功能区中的“查询模型”按钮](media/dmc-query.gif "“数据挖掘”功能区中的“查询模型”按钮")  
@@ -48,7 +47,7 @@ ms.locfileid: "66070479"
  你随时都可以单击 "**高级**" 以切换到 "**数据挖掘高级查询编辑器**"，这使你可以更好地控制 DMX 语句的每个部分。 有关如何使用高级查询编辑工具的详细信息，请参阅[高级数据挖掘查询编辑器](advanced-data-mining-query-editor.md)。  
   
 ### <a name="requirements"></a>要求  
- 若要使用**查询**向导，您必须连接到的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例。 此外，服务器必须至少包含一个具有适当类型的数据挖掘模型。 如果没有可用的挖掘模型，您可以使用 Excel 数据挖掘客户端中提供的向导创建一个。 有关如何使用向导创建新挖掘模式的信息，请参阅[创建数据挖掘模型](creating-a-data-mining-model.md)。  
+ 若要使用**查询**向导，您必须连接到的实例 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 此外，服务器必须至少包含一个具有适当类型的数据挖掘模型。 如果没有可用的挖掘模型，您可以使用 Excel 数据挖掘客户端中提供的向导创建一个。 有关如何使用向导创建新挖掘模式的信息，请参阅[创建数据挖掘模型](creating-a-data-mining-model.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;Excel 数据挖掘外接程序部署和缩放挖掘模型&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)   

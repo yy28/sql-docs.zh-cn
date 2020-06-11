@@ -12,17 +12,17 @@ ms.assetid: 858a0263-2f04-4692-b8bf-63e93c998ead
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f862f2067a1a85663754ab795822f2859b6c416a
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: defc499412d059542262ec978d47f4c93c8bac23
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000597"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858609"
 ---
 # <a name="query-options-execution-general-page"></a>“查询选项”中的“执行”（“常规”页）
   使用此页可指定用于运行查询的选项 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 若要访问此对话框，请右键单击“查询编辑器”窗口的主体，再单击“查询选项”****。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **SET ROWCOUNT**  
  默认值为 0，指示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在收到所有结果之前将一直等待结果。 如果希望 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在获取指定数目的行后暂停查询，请提供一个大于 0 的值。 若要关闭此选项（以便返回所有的行），请将 SET ROWCOUNT 指定为 0。  
   

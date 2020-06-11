@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 9184d344-e96d-4025-ad6f-3f75129746df
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 47a46bfd482463de2377470cd11186bd3bfbd5db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d75bf3ec0aa6e7199b1e6f8d31e2602deb8efeff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077060"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544663"
 ---
 # <a name="define-attribute-relationships"></a>定义属性关系
-  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，属性是维度的基本构造块。 维度包含一组在属性关系基础上组织而成的属性。  
+  在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，属性是维度的基本构造块。 维度包含一组在属性关系基础上组织而成的属性。  
   
  对于维度中包含的每个表，都存在将表的键属性与该表的其他属性相关联的属性关系。 创建维度时可创建此关系。  
   

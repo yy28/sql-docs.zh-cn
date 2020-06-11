@@ -12,17 +12,17 @@ ms.assetid: c90d7cdf-3309-46f4-b900-220521bb9552
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1b383c290bb507cdafaf824c16b3a1587b998bd3
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: b20ab1851d02e493035414dd4682fc5330296b19
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000614"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858619"
 ---
 # <a name="query-options-execution-ansi-page"></a>“查询选项”中的“执行”（ANSI 页）
   使用此页可以指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将使用 ISO （ANSI）标准中指定的全部或部分设置运行查询。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **SET ANSI_DEFAULTS**  
  选择所有默认的 ISO 设置。 默认情况下，此框不可用，因为只配置了部分 ISO 设置。  
   

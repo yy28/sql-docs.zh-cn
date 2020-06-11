@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b0f0388e-3d75-450d-b5fb-8a1d31cf8376
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 85046febbaa348216a48e51860f7dbcf604f9f8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5693369574a7c7fc8ea357248347fb89dee0f214
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079396"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543643"
 ---
 # <a name="kpi-organizer-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 组织程序（KPI 选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器的“KPI”**** 选项卡中的“KPI 组织程序”**** 窗格，访问和重新排列指定的多维数据集中包含的关键绩效指标 (KPI)。  
@@ -26,7 +25,7 @@ ms.locfileid: "66079396"
 >  在窗体视图中不显示此窗格。  
   
 ## <a name="options"></a>选项  
- **成员列表**  
+ **列表**  
  显示 KPI 的名称。  
   
  选择一个 KPI 可以在窗体视图中显示 **KPI 窗体编辑器** 。  

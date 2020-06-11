@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f567da3318c7b8fff799475c638c1086613f45b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fabd1de8361d9cc8753b42c35e0597769545c6b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67826338"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540319"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>PowerPivot 身份验证和授权
   在 SharePoint 2010 场中运行的 PowerPivot for SharePoint 部署使用 SharePoint 服务器提供的身份验证子系统和授权模型。 SharePoint 安全基础结构扩展至 PowerPivot 内容和操作，因为所有与 PowerPivot 相关的内容都存储在 SharePoint 内容数据库中，并且通过场中的 PowerPivot 共享服务执行所有与 PowerPivot 相关的操作。 使用基于对应 Windows 用户标识的 SharePoint 用户标识对请求包含 PowerPivot 数据的工作簿的用户进行身份验证。 工作簿上的查看权限决定了是同意还是拒绝请求。  

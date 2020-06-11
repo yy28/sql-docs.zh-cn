@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 76b1f8ac9a5f7ad584f42110f2c3b22e5c1918ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9ce963b2322e19e4e3a98982a88f99d3546cabc2
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008143"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83668737"
 ---
 # <a name="or-dmx"></a>OR (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,16 +28,16 @@ Expression1 OR Expression2
 ```  
   
 #### <a name="parameters"></a>参数  
- *Expression1*  
+ Expression1  
  一个返回数值的有效数据挖掘扩展 (DMX) 表达式。  
   
- Expression2**  
+ Expression2  
  一个返回数值的有效 DMX 表达式。  
   
 ## <a name="return-value"></a>返回值  
  如果任意一个参数或两个参数的计算结果为 TRUE，则返回 TRUE 布尔值；否则将返回 FALSE。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  在运算符执行逻辑或运算之前，两个参数均被视为布尔值（0 为 FALSE；否则为 TRUE）。 如果任何一个参数或两个参数的计算结果均为 TRUE，则该运算符将返回 TRUE。 如果*表达式*2 的计算结果为 TRUE 并且*表达式*2 的计算结果为 FALSE，则运算符返回 TRUE。  
   
  下表阐释了执行逻辑或运算的方式。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6908998b-9302-4a90-976e-770106b48d18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 94718b35efdcf31a0c9de19930cc765f7d9db5d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d686d8100e30d7608e8d90f135022bdf46785723
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082330"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528953"
 ---
 # <a name="data-sources-ssas-tabular"></a>数据源（SSAS 表格）
   数据源提供要包含在表格模型解决方案中的数据。 您可以将数据从各种源导入您的模型，如关系数据库、数据馈送、多维数据源（如 Analysis Services 多维数据集）以及从文本文件（如 Microsoft Excel 工作簿）。 本节中的主题提供有关您可以从中导入的数据源类型、可以导入的各种数据类型以及说明如何从这些源导入数据的任务的信息。  

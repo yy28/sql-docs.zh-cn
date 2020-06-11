@@ -12,17 +12,17 @@ ms.assetid: 69928b3e-53c8-4e6c-83a5-3dd3cf7ece7c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5afadecc745057344fd86df21b4479dabc1f7685
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c657b4670acaab008bafa24def05102938a99d0e
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068827"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858037"
 ---
 # <a name="set-advanced-properties-ssas"></a>设置高级属性 (SSAS)
   **“表导入向导”** 的这一页可用于为数据源连接指定其他属性设置。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **提供程序**  
  选择要用于数据源连接的访问接口。 若要连接到数据源，必须在计算机上安装适当的访问接口。  
   

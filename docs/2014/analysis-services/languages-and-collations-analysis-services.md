@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 62956774e203b1438de1ea07708940d0711053ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 641f161ede6daebdd879c3316ce73a2e446c21c1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079382"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543656"
 ---
 # <a name="languages-and-collations-analysis-services"></a>语言和排序规则 (Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 操作系统提供的语言和排序规则。 `Language` 和 `Collation` 属性最初是在安装期间的实例级别设置的，但之后可在对象层次结构的不同级别进行更改。  
@@ -51,7 +50,7 @@ ms.locfileid: "66079382"
 -   [Analysis Services 中的 GB18030 支持](#bkmk_gb18030)  
   
 ##  <a name="objects-that-support-language-and-collation-properties"></a><a name="bkmk_object"></a>支持语言和排序规则属性的对象  
- `Language`和`Collation`属性通常一起公开-你可以在其中设置`Language`，还可以设置`Collation`。  
+ `Language`和 `Collation` 属性通常一起公开-你可以在其中设置 `Language` ，还可以设置 `Collation` 。  
   
  你可在这些对象上设置 `Language` 和 `Collation`：  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66079382"
   
      你在此多维数据集上设置的任何语言和排序方式由此多维数据集中包含的所有测量值和维度使用。 更细颗粒度的设置排序规则属性的唯一方法是在维度属性上创建翻译。 否则，假设在属性级别上没有翻译，则每个多维数据集上有一个排序规则。  
   
- 此外，还可以在`Language`**翻译**对象上自行设置。  
+ 此外，还可以 `Language` 在**翻译**对象上自行设置。  
   
  当你将翻译添加到多维数据集或维度时，将创建翻译对象。 `Language`是翻译定义的一部分。 而另一方面，`Collation` 则设置在多维数据集或更高级别上，并由所有翻译共享。 这在包含翻译的多维数据集的 XMLA 中很明显，你可从中发现多个语言属性（每个翻译一个属性），但只有一个排序规则。 注意：对维度属性翻译例外，你可覆盖多维数据集排序规则以指定与源列匹配的属性排序规则（数据库引擎支持各列上的排序规则，通常配置各翻译以从不同源列获取成员数据）。 但是，对于所有其他翻译，`Language` 自行使用，无需 `Collation` 推论。 有关详细信息，请参阅[翻译 (Analysis Services)](translations-analysis-services.md)。  
   
@@ -83,7 +82,7 @@ ms.locfileid: "66079382"
   
  虽然 Analysis Services 按名称列出了语言，为属性存储的实际值是 LCID。 当通过编程方式或 msmdsrv.ini 文件设置语言属性时，请使用 [区域设置标识符 (LCID)](http://en.wikipedia.org/wiki/Locale) 作为值。 LCID 是 32 位的值，其包含标识特定语言的语言 ID、排序 ID 和保留位。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用 LCID 指定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例和对象的所选语言。  
   
- 你可使用十六进制或十进制格式设置 LCID。 此`Language`属性的有效值的一些示例包括：  
+ 你可使用十六进制或十进制格式设置 LCID。 此属性的有效值的一些示例 `Language` 包括：  
   
 -   0x0409 或 1033 为“英语（美国）” ****  
   
@@ -140,9 +139,9 @@ ms.locfileid: "66079382"
   
 -   更新排序规则后，重新处理分隔和维度。  
   
- 你可使用 SQL Server Management Studio 或 AMO PowerShell 更改服务器级别的默认语言或排序规则。 或者，你可以在 msmdsrv.ini 文件中修改** \<语言>** 和** \<CollationName>** 设置，并指定语言的 LCID。  
+ 你可使用 SQL Server Management Studio 或 AMO PowerShell 更改服务器级别的默认语言或排序规则。 或者，你可以 **\<Language>** **\<CollationName>** 在 msmdsrv.ini 文件中修改和设置，并指定语言的 LCID。  
   
-1.  在 Management Studio 中，右键单击 "服务器名称" |**Properties** | **语言/排序规则**。  
+1.  在 Management Studio 中，右键单击 "服务器名称" |**属性**  | **语言/排序规则**。  
   
 2.  选择排序选项。 要选择 **** “二进制”或 ****“二进制 2”，首先清除 ****“区分重音”复选框。  
   
@@ -169,7 +168,7 @@ ms.locfileid: "66079382"
   
  在使用 XMLA 修改现有数据库前，请确保你不会引入数据库和用于创建数据库的源文件之间的差异。 例如，可能需要使用 XMLA 快速更改语言和排序规则进行概念证明测试，但希望随后通过使用现有的操作过程重新部署解决方案来更改源文件（请参阅 [更改多维数据集上的语言或排序规则](#bkmk_cube)）。  
   
-1.  在 Management Studio 中，右键单击数据库 |**编写数据库脚本为** | **更改为新的** | **查询编辑器窗口**。  
+1.  在 Management Studio 中，右键单击数据库 |**编写数据库脚本为**  | **更改为**  | **新的查询编辑器窗口**。  
   
 2.  用其他值搜索和替换现有语言或排序规则。  
   

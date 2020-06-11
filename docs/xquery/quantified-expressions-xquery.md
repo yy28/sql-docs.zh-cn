@@ -1,5 +1,6 @@
 ---
 title: 量化表达式（XQuery） |Microsoft Docs
+description: 了解如何使用 XQuery 中的定量表达式对一个或多个序列中的表达式应用存在性或通用定量。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: a3a75a6c-8f67-4923-8406-1ada546c817f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1cdbff23d2158dec00b6b8d050d6a4a90341bd23
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5f7c79cd185b88b8681460d2811f0d0ac4c20557
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946377"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215242"
 ---
 # <a name="quantified-expressions-xquery"></a>限定表达式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "67946377"
   
  可以在查询中使用这些表达式，来对作用于一个或多个序列上的表达式显式应用存在限定或全称限定。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，`satisfies` 子句中表达式的结果可以为：节点序列、空序列或布尔值。 限定中将使用该表达式结果的有效布尔值。 如果限定符绑定的值中至少有一个值在满足表达式中的结果为 True，则使用**some**的存在性定量将返回 true。 使用**每个**的通用定量对于由限定符绑定的所有值都必须为 True。  
   
- 例如，下面的查询检查每个\<位置> 元素，以查看它是否具有 LocationID 属性。  
+ 例如，下面的查询检查每个 \<Location> 元素，以查看它是否具有 LocationID 属性。  
   
 ```  
 SELECT Instructions.query('  
@@ -64,7 +65,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- 由于 LocationID 是> 元素\<位置所必需的属性，因此收到预期结果：  
+ 由于 LocationID 是元素的必需属性 \<Location> ，因此你会收到预期结果：  
   
 ```  
 <Result>All work centers have Location ID</Result>   

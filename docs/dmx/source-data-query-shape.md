@@ -4,23 +4,23 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c928d4c96917479f8c37415d5ebe2db9b7f9eb98
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c16a1b25542e38bfc434fbe994ad6bb462069796
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938117"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669999"
 ---
-# <a name="ltsource-data-querygt---shape"></a>&lt;源数据查询&gt; -形状
+# <a name="ltsource-data-querygt---shape"></a>&lt;源数据查询 &gt; -形状
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   将多个数据源中的查询合并到一个层次结构表中（即具有嵌套表的表），该表将成为挖掘模型的事例表。  
   
- 数据访问组件（MDAC）软件开发工具包（SDK）中介绍了 SHAPE 命令的完整语法。 **SHAPE** [!INCLUDE[msCoName](../includes/msconame-md.md)]  
+ **SHAPE** [!INCLUDE[msCoName](../includes/msconame-md.md)] 数据访问组件（MDAC）软件开发工具包（SDK）中介绍了 SHAPE 命令的完整语法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,7 +54,7 @@ APPEND ({ <child table query> }
  *列表名称*  
  在父表中为嵌套表新追加的列名。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  必须按与父表和子表都相关的列对查询排序。  
   
 ## <a name="examples"></a>示例  

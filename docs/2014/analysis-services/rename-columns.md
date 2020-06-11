@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef23d99b4542880d9756bbdad2e5cfb368b4f43c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070321"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539359"
 ---
 # <a name="lesson-3-rename-columns"></a>第 3 课：对列重命名
   在本课中，您将重命名您导入的每个表中的很多列。 通过重命名，您可以更易于识别列，且更易于在模型设计器中以及通过用户在客户端应用程序中选择字段来进行导航列。 若要了解详细信息，请参阅[重命名表或列（SSAS 表格）](tabular-models/rename-a-table-or-column-ssas-tabular.md)。  
@@ -36,7 +35,7 @@ ms.locfileid: "66070321"
   
      单击某个选项卡时，该表将在模型设计器窗口中变为活动状态。  
   
-2.  双击 " **CustomerKey** " 列名称，然后键入`Customer  Id`，然后按 enter。  
+2.  双击 " **CustomerKey** " 列名称，然后键入 `Customer  Id` ，然后按 enter。  
   
     > [!TIP]  
     >  您还可以在列的 "**属性**" 窗口或关系图视图中重命名列**名称**属性中的列。  
@@ -73,7 +72,7 @@ ms.locfileid: "66070321"
   
     |源名称|友好名称|  
     |-----------------|-------------------|  
-    |FullDateAlternateKey|日期|  
+    |FullDateAlternateKey|Date|  
     |DayNumberOfWeek|Day Number of Week|  
     |EnglishDayNameOfWeek|Day Name|  
     |DayNumberOfMonth|Day of Month|  
@@ -170,7 +169,7 @@ ms.locfileid: "66070321"
     |DueDate|Due Date|  
     |ShipDate|Ship Date|  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
  若要继续学习本教程，请转到下一课： [第 4 课：标记为日期表](lesson-3-mark-as-date-table.md)。  
   
   

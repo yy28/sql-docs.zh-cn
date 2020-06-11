@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d09f32cb21762ca56eab156701ee013ef2c03ec3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0943e3f98ae65ec6c142fb1b98f86da054e88638
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083775"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521614"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>挖掘模型内容（Analysis Services - 数据挖掘）
   使用基础挖掘结构中的数据设计并处理挖掘模型后，该挖掘模型就已完成，包含有“ ** 挖掘模型内容”。 可以使用此内容来预测或分析您的数据。  
@@ -79,7 +78,7 @@ ms.locfileid: "66083775"
 |1|型号|元数据和根内容节点。 适用于所有模型类型。|  
 |2|树|分类树的根节点。 适用于决策树模型。|  
 |3|Interior|树中的内部拆分节点。 适用于决策树模型。|  
-|4|分发|树的终端节点。 适用于决策树模型。|  
+|4|分布|树的终端节点。 适用于决策树模型。|  
 |5|群集|算法检测到的分类。 适用于聚类分析模型以及顺序分析和聚类分析模型。|  
 |6|Unknown|未知节点类型。|  
 |7|ItemSet|算法检测到的项集。 适用于关联模型或顺序分析和聚类分析模型。|  
@@ -88,7 +87,7 @@ ms.locfileid: "66083775"
 |10|InputAttribute|输入属性。 适用于决策树和 Naïve Bayes 模型。|  
 |11|InputAttributeState|有关输入属性状态的统计信息。 适用于决策树和 Naïve Bayes 模型。|  
 |13|序列|序列分类的 Markov 模型组件的顶端节点。 适用于顺序分析和聚类分析模型。|  
-|14|过渡|Markov 转换矩阵。 适用于顺序分析和聚类分析模型。|  
+|14|切换|Markov 转换矩阵。 适用于顺序分析和聚类分析模型。|  
 |15|TimeSeries|时序树的非根节点。 仅适用于时序模型。|  
 |16|TsTree|对应于可预测时序的时序树的根节点。 适用于时序模型，并仅限于使用 MIXED 参数创建的模型。|  
 |17|NNetSubnetwork|一个子网络。 适用于神经网络模型。|  
@@ -228,7 +227,7 @@ ms.locfileid: "66083775"
 |13|自动回归阶数|指示一个值，该值表示自动回归序列的数目。<br /><br /> 适用于使用 ARIMA 算法的时序模型。|  
 |14|移动平均值阶数|表示一个值，该值表示一个序列中的移动平均值数。<br /><br /> 适用于使用 ARIMA 算法的时序模型。|  
 |15|差分阶数|指示一个值，用于表示差分时序的次数。<br /><br /> 适用于使用 ARIMA 算法的时序模型。|  
-|16|布尔|表示布尔型。|  
+|16|布尔值|表示布尔型。|  
 |17|其他|表示一个由该算法定义的自定义值。|  
 |18|预呈现的字符串|表示一个由算法作为字符串呈现的自定义值。 对象模型不应用格式。|  
   

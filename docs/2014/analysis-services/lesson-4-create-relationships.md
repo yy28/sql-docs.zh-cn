@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7a80f607c3187e967404ce018b7eed00497d9c01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63fe9b7d83eea026a9a0f61213e2ccd30bba3591
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078583"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542899"
 ---
 # <a name="lesson-5-create-relationships"></a>第 5 课：创建关系
   在本课中，将验证导入数据时自动创建的关系并在不同表之间添加新关系。 关系是在两个表之间建立的连接，用于确立这些表中的数据应该如何相关。 例如，Product 表和 Product Subcategory 表基于每个产品属于某个子类别的事实具有某种关系。 有关详细信息，请参阅[关系（SSAS 表格）](tabular-models/relationships-ssas-tabular.md)  
@@ -74,7 +73,7 @@ ms.locfileid: "66078583"
   
      将显示一条点划线，说明已在 **Internet Sales** 表的 **Ship Date** 列与 **Date** 表的 **Date** 列之间创建了非活动的关系。  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
  若要继续学习本课程，请转到下一课： [第 6 课：创建计算列](lesson-5-create-calculated-columns.md)。  
   
   

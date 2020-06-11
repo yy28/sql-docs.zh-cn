@@ -1,5 +1,6 @@
 ---
 title: SqlXmlParameter 对象（SQLXML）
+description: 了解 SqlXmlParameter 对象（SQLXML 托管类）支持的属性。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d86e6d3a6e910dbd18f2038f127ba99bfd65369
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5570b159f45bc06efd0fee082101e0c9b0f9fc5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252618"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529896"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlparameter-object"></a>SQLXML 托管类 - SqlXmlParameter 对象
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

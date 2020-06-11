@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f6b7ca79cefee4d19593d20320da13b4253a89ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03ce064e08e28e4a5245c2cf18d110797e3ebce4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076279"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535989"
 ---
 # <a name="create-calculated-members"></a>创建计算成员
   可以组合使用多维数据集数据、算术运算符、数字和函数以创建自定义度量值或维度成员，这些度量值和维度成员称为计算成员。 例如，通过将换算比率和现有美元度量值相乘，可以创建将美元转换成欧元的计算成员 Euros。 然后，Euros 会在一个单独的行或列中显示给最终用户。  

@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 299b40b92b3d2f8c5559a5e10e511f80ab5a5bc9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: de11cdaf304b3010dcf21725edd2d3cbfa84ae0a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175656"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540226"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
-  使用 PowerPivot 配置工具配置、修复或删除[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]使用 PowerPivot 配置工具配置、修复或删除 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 。
 
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导将安装用于 SharePoint 2010 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具以及用于 SharePoint 2013 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具。 本主题说明了两种工具的常规使用方法及它们之间的差异。
 
@@ -62,7 +61,7 @@ ms.locfileid: "78175656"
 |PowerPivot for SharePoint 2013 配置|PowerPivot 配置工具|
 |--------------------------------------------------|-----------------------------------|
 |主页提供了用于 **PowerPivot Server for Excel Services**的新选项。 此选项对于在 SharePoint 场外部运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持新的体系结构。 您可以将 Excel Services 配置为使用一个或多个在 SharePoint 模式下运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器。<br /><br /> ![新配置工具中的 PowerPivot 服务器](../media/as-powerpivot-configtool-differences-new-mainpage.gif "新配置工具中的 PowerPivot 服务器")||
-||2010工具包括**本地服务器上的 SQL Server Analysis Services （PowerPivot）** 页，以配置的本地实例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 该页面不是 2013 工具的组成部分，因为没有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的本地实例。<br /><br /> ![作为旧配置工具中的服务帐户](../media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "作为旧配置工具中的服务帐户")|
+||2010工具包括**本地服务器上的 SQL Server Analysis Services （PowerPivot）** 页，以配置的本地实例 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。 该页面不是 2013 工具的组成部分，因为没有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的本地实例。<br /><br /> ![作为旧配置工具中的服务帐户](../media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "作为旧配置工具中的服务帐户")|
 ||**“创建 PowerPivot 服务应用程序”** 页具有一个额外选项，即 **“升级工作簿以启用数据刷新”**。 此选项在 2013 工具中不可用。<br /><br /> ![升级旧配置工具中的工作簿](../media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "升级旧配置工具中的工作簿")|
 |2013 工具具有一个新页面 **“配置 PowerPivot 服务器”**。 此页支持在 SharePoint 场外部运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的新体系结构。 默认情况下，在主页的 **PowerPivot Server for Excel Services**文本框中键入的服务器名称也列在 **“配置 PowerPivot 服务器”** 上。<br /><br /> ![注册 PowerPivot 服务器新配置工具](../media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "注册 PowerPivot 服务器新配置工具")||
 |2013 工具具有一个新页，即 **“将 PowerPivot 外接程序注册为 Excel Services 用法跟踪程序”**。 SharePoint 2010 Excel Services 不跟踪 PowerPivot 的使用数据。||
@@ -75,14 +74,14 @@ ms.locfileid: "78175656"
 
  此外，该工具可以检测是否已配置场，或者是否缺少必需的功能。 如果已安装 SharePoint 程序文件但未配置场，该工具将提供用来配置场和 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安装的操作。
 
- 您可以检查 **“脚本”** 选项卡，以了解如何使用 Windows PowerShell 配置 PowerPivot 和 SharePoint。 有关详细信息，请参阅以下主题：
+ 您可以检查 **“脚本”** 选项卡，以了解如何使用 Windows PowerShell 配置 PowerPivot 和 SharePoint。 有关详细信息，请参阅以下部分：
 
 -   [使用 Windows PowerShell 配置 PowerPivot](power-pivot-configuration-using-windows-powershell.md)
 
 -   [针对 PowerPivot for SharePoint 的 PowerShell 参考](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)
 
 > [!NOTE]
->  该工具不配置 Reporting Services。 如果要将 Reporting Services 添加到您的 SharePoint 环境，需要单独安装和配置 Reporting Services。 有关详细信息，请参阅以下主题：
+>  该工具不配置 Reporting Services。 如果要将 Reporting Services 添加到您的 SharePoint 环境，需要单独安装和配置 Reporting Services。 有关详细信息，请参阅以下部分：
 > 
 >  -   [安装 sharepoint 2013 Reporting Services Sharepoint 模式](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)。
 > -   [安装 sharepoint 2010 Reporting Services Sharepoint 模式](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)。
@@ -91,11 +90,11 @@ ms.locfileid: "78175656"
 
 1.  在 "**开始**" 屏幕上，键入`powerpivot`
 
-     在 "**开始**" 屏幕上`powerpivot` ，键入或，在 "**开始**" 菜单上， [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]依次单击 "**所有程序**"、"**配置工具**"，然后单击以下项之一：
+     在 "**开始**" 屏幕上，键入 `powerpivot` 或，在 "**开始**" 菜单上，依次单击 "**所有程序**"、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] "**配置工具**"，然后单击以下项之一：
 
     -   **PowerPivot 配置工具**。
 
-    -   **或**
+    -   **OR**
 
     -   **PowerPivot for SharePoint 2013 配置**。
 

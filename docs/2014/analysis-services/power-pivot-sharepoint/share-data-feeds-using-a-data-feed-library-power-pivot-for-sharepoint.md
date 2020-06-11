@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 4ec98dec-0cd2-4727-bb79-5bf6f8a865d6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 00ecb4487119251f1b86c2daf29b7481966f09f7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b4f5a2949d82f612ed9a85c81a89a4ab1588bbe
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071144"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547769"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-powerpivot-for-sharepoint"></a>使用数据馈送库共享数据馈送 (PowerPivot for SharePoint)
-  数据馈送是从以 Atom 线路格式显示数据的服务或应用程序中生成的 XML 数据流。 它越来越多地用于在应用程序之间传输数据以及将数据传输到客户端查看器。 在 PowerPivot for SharePoint 部署中，数据馈送用于用识别 Atom 的[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]应用程序或服务中的数据填充数据源。  
+  数据馈送是从以 Atom 线路格式显示数据的服务或应用程序中生成的 XML 数据流。 它越来越多地用于在应用程序之间传输数据以及将数据传输到客户端查看器。 在 PowerPivot for SharePoint 部署中，数据馈送用于用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 识别 Atom 的应用程序或服务中的数据填充数据源。  
   
  如果您已使用识别 Atom 的应用程序组合，则可能始终不需要知道如何生成和使用馈送，因为数据传输是在应用程序之间无缝进行的。 但是，使用自定义解决方案发布 Atom 馈送的组织通常需要一种方法使信息工作者可以获得馈送。 一种方法是创建并共享数据服务文档 (.atomsvc) 文件，此类文件提供到生成馈送的联机源之间的连接。 一个名为数据馈送库的特殊用途库支持在 SharePoint Web 应用程序中创建和共享数据服务文档。  
   
@@ -39,8 +38,8 @@ ms.locfileid: "66071144"
 > [!NOTE]  
 >  虽然数据馈送用于将 Web 数据添加到你在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 中创建的 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]数据源，但可以读取 Atom 馈送的任何客户端应用程序都可以处理数据服务文档。  
   
-##  <a name="prerequisites"></a><a name="prereq"></a>先决条件  
- 您必须具有将查询处理[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]添加[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]到 SharePoint 场的 PowerPivot for SharePoint 部署。 通过 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案包可部署数据馈送支持。  
+##  <a name="prerequisites"></a><a name="prereq"></a> 先决条件  
+ 您必须具有 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 查询处理添加到 SharePoint 场的 PowerPivot for SharePoint 部署。 通过 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 解决方案包可部署数据馈送支持。  
   
  您必须具有支持数据服务文档内容类型的 SharePoint 库。 建议将默认数据馈送库用于此目的，但您可以手动将内容类型添加到任何库。 有关详细信息，请参阅[创建或自定义数据馈送库 &#40;PowerPivot for SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md)。  
   

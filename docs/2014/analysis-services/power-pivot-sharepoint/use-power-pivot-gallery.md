@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f8c14a123fcdb23efade07e78dec94d242df7fc7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f634f6c0a435c733af7f223de333cb52d95ce897
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175686"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547709"
 ---
 # <a name="use-powerpivot-gallery"></a>使用 PowerPivot 库
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库是一种专用的 SharePoint 文档库，它为包含 PowerPivot 数据的已发布 Excel 工作簿和 Reporting Services 报表提供丰富的预览和文档管理功能。
@@ -23,7 +22,7 @@ ms.locfileid: "78175686"
 > [!NOTE]
 >  根据配置您的服务器的方式，您可能会在特定文档的预览区域中看到警告或错误消息。 在 Excel 工作簿设置为只要打开它就自动刷新其数据时，可能会显示消息。 如果 Excel Services 配置为显示“数据刷新时警告”错误消息，则数据刷新警告消息将以预览图像出现。 场或服务管理员可以修改配置设置，以允许显示实际工作表的预览。 有关详细信息，请参阅 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。
 
-##  <a name="in-this-topic"></a><a name="bkmk_top"></a>本主题中的
+##  <a name="in-this-topic"></a><a name="bkmk_top"></a> 在本主题中
 
 -   [PowerPivot 库中的图标](#icons)
 
@@ -43,7 +42,7 @@ ms.locfileid: "78175686"
 
  [先决条件](#prereq)
 
-##  <a name="prerequisites"></a><a name="prereq"></a>先决条件
+##  <a name="prerequisites"></a><a name="prereq"></a> 先决条件
 
 > [!NOTE]
 >  Power Pivot 库需要 Microsoft Silverlight。  Microsoft Edge 浏览器不支持 Silverlight。 若要在 Microsoft Edge 中查看库内容，请单击 Power Pivot 库中的 "**库**" 选项卡，然后将文档库视图更改为 "**所有文档**"。  
@@ -55,7 +54,7 @@ ms.locfileid: "78175686"
 ##  <a name="icons-in-powerpivot-gallery"></a><a name="icons"></a>PowerPivot 库中的图标
  图标提供针对内容可用性和状态的可视指示器。
 
-|图标|说明|
+|图标|描述|
 |----------|-----------------|
 |![GMNI_PowerPivotGalleryIcon_Hourglass](../media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|当正在为文档中的每一页生成缩略图时，沙漏图标将出现。 刷新该页以显示图像的更新。|
 |![GMNI_PowerPivotGalleryIcon_Truncated](../media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|当工作簿或报表所具有的页面数目超过可在 PowerPivot 库中显示的页面数目时，页面图标将出现。 若要查看所有这些页面，您必须使用客户端应用程序。|
@@ -66,7 +65,7 @@ ms.locfileid: "78175686"
 ##  <a name="save-an-excel-workbook-to-powerpivot-gallery"></a><a name="add"></a>将 Excel 工作簿保存到 PowerPivot 库
  您可以使用 Excel 2010 提供的所有共享方法将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿发布到库。 例如，在 Excel 2010 中，您可以使用“另存为”来指定库的完整或部分 SharePoint 路径。
 
-1.  保存文件。
+1.  保存该文件。
 
 2.  1.  **Excel 2010：** 在“文件”菜单中，单击“保存并发送”****。
 
@@ -146,7 +145,7 @@ ms.locfileid: "78175686"
 
 3.  单击右侧的向下箭头，然后选择 **“编辑属性”**。
 
-4.  单击“ **保存**”。 保存文档将强制快照服务重新生成预览图像。
+4.  单击“保存” 。 保存文档将强制快照服务重新生成预览图像。
 
 ##  <a name="known-issues"></a><a name="bkmk_known_issues"></a>已知问题
 
@@ -155,7 +154,7 @@ ms.locfileid: "78175686"
 
 -   "新文档" 需要与 Microsoft Sharepoint Foundation 兼容的应用程序和 web 浏览器。 若要将文档添加到此文档库，请单击 "上载文档" 按钮。
 
--   "Internet 地址" http：//[server name]/Testsite/powerpivot gallery 库/ReportGallery/Forms/Template "无效。" "Microsoft Excel 无法访问文件 "http：//[server name]/Testsite/powerpivot gallery 库/ReportGallery/Forms/Template"。 下面是几种可能的原因：
+-   "Internet 地址" http：//[server name]/Testsite/powerpivot gallery 库/ReportGallery/Forms/Template.xlsx "无效。" "Microsoft Excel 无法访问文件 "http：//[server name]/Testsite/powerpivot gallery 库/ReportGallery/Forms/Template.xlsx"。 下面是几种可能的原因：
 
  **“PowerPivot 库文档”** 内容类型不是自动添加到文档库的。除非您启用不支持的内容类型，否则不会遇到此问题。
 

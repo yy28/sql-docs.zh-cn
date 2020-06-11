@@ -1,7 +1,7 @@
 ---
 title: sp_addpushsubscription_agent （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 06/15/2018
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 740437178b6d9ab444cabdbda3e37febc65b3897
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 22957ce497f47c56ace0f264cc2068014a2f43af
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820692"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627381"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -72,7 +72,10 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 `[ @publication = ] 'publication'`发布的名称。 *发布*为**sysname**，无默认值。  
   
 `[ @subscriber = ] 'subscriber'`订阅服务器实例的名称，如果订阅服务器数据库为可用性组，则为 AG 侦听器的名称。 *订阅服务器*的值为**sysname**，默认值为 NULL。 
-  
+
+> [!NOTE]
+> 服务器名称可指定为 `<Hostname>,<PortNumber>` 。 如果在 Linux 或 Windows 上使用自定义端口部署 SQL Server，并且禁用了 browser 服务，则可能需要指定连接的端口号。
+
 `[ @subscriber_db = ] 'subscriber_db'`订阅数据库的名称。 *subscriber_db*的默认值为**sysname**，默认值为 NULL。 对于非 SQL Server 订阅服务器，为*subscriber_db*指定 " **（默认目标）** " 的值。  
   
 `[ @subscriber_security_mode = ] subscriber_security_mode`同步时连接到订阅服务器时使用的安全模式。 *subscriber_security_mode*的值为**int**，默认值为1。 **0**指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 **1**指定 Windows 身份验证。  
@@ -85,7 +88,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 `[ @subscriber_password = ] 'subscriber_password'`订阅服务器密码。 如果*subscriber_security_mode*设置为**0**，则*subscriber_password*是必需的。 *subscriber_password*的默认值为**sysname**，默认值为 NULL。 如果使用订阅服务器密码，将自动对密码进行加密。  
   
 > [!IMPORTANT]  
->  不要使用空密码。 使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
+>  不要使用空密码。 请使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
 `[ @job_login = ] 'job_login'`运行代理时所用的帐户的登录名。 在 Azure SQL 数据库托管实例使用 SQL Server 帐户。 *job_login*为**nvarchar （257）**，默认值为 NULL。 使用 Windows 集成身份验证时，此 Windows 帐户始终用于代理与分发服务器的连接，以及与订阅服务器的连接。  
   
@@ -104,7 +107,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |**2**|按需|  
 |**4**|每天|  
 |**8**|每周|  
-|**超过**|每月一次|  
+|**超过**|每月|  
 |**32**|与“每月”选项相关|  
 |**64** （默认值）|自动启动|  
 |**128**|重复执行|  
@@ -118,7 +121,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 |值|说明|  
 |-----------|-----------------|  
-|**1** （默认值）|第一个|  
+|**1** （默认值）|First|  
 |**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
@@ -173,7 +176,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **sp_addpushsubscription_agent**用于快照复制和事务复制。  
   
 ## <a name="example"></a>示例  

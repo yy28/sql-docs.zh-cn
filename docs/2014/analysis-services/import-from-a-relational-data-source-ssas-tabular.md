@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 043201cc-fbef-4ed0-bde8-dc5e3a3e8bea
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 61fb30ea21ea810eab8d30a3a040fac4a1bd2128
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9504ae981e301c6f602a5930eecef47fc6667630
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080524"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544199"
 ---
 # <a name="import-from-a-relational-data-source-ssas-tabular"></a>从关系数据源导入（SSAS 表格）
   通过使用表导入向导，你可以从各种关系数据库导入数据。 该向导在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的“模型”菜单中提供 **** 。 若要连接到数据源，必须在计算机上安装适当的访问接口。 有关支持的数据源和提供程序的详细信息，请参阅 [支持的数据源（SSAS 表格）](tabular-models/data-sources-supported-ssas-tabular.md)。  

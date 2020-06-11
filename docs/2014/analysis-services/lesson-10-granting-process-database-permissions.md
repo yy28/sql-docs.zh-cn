@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 69ba952e-09ae-49a9-9297-00e32e8e89a8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aca2cd956850de245f507e8cf24b93e87404429b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39a1622ceccf6465b616fcc23de7093b4aa45d8c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174259"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543550"
 ---
 # <a name="granting-process-database-permissions"></a>授予处理数据库权限
   在安装 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例后，该实例中 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务器管理员角色的所有成员都将具有在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例中执行任何任务的服务器范围权限。 默认情况下，其他用户都不具有在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例中管理或查看任何对象的任何权限。
@@ -30,7 +29,7 @@ ms.locfileid: "78174259"
 
 2.  单击“处理数据库”**** 复选框。
 
-3.  在属性窗口中，将此新角色的 "**名称**" 属性`Process Database Objects Role`更改为。
+3.  在属性窗口中，将此新角色的 "**名称**" 属性更改为 `Process Database Objects Role` 。
 
      ![角色设计器](../../2014/tutorials/media/l10-security-1.png "角色设计器")
 

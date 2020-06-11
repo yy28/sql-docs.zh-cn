@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 64997cb3db784ea78a72a7c812c8f88034c2358d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a48211455a8ac3de9ef0f4b0c7e2fb3cba5f473
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071576"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540500"
 ---
 # <a name="create-and-configure-a-powerpivot-service-application-in-central-administration"></a>在管理中心中创建和配置 PowerPivot 服务应用程序
   PowerPivot 服务应用程序是 PowerPivot 系统服务的共享服务实例。 每个服务应用程序都具有自己的应用程序标识、配置设置、属性和内部数据存储。  
@@ -57,13 +56,13 @@ ms.locfileid: "66071576"
   
 3.  选择**SQL Server PowerPivot 服务应用程序**。 如果该服务未在列表中出现，则表示 PowerPivot for SharePoint 未安装或者配置不正确。  
   
-4.  在 "**创建新的 PowerPivot 服务应用程序**" 页中，输入应用程序的名称。 默认值为 Get-powerpivotserviceapplication\<number>。 如果您创建多个 PowerPivot 服务应用程序，则说明性的名称将有助于其他管理员理解应用程序的使用方式。  
+4.  在 "**创建新的 PowerPivot 服务应用程序**" 页中，输入应用程序的名称。 默认值为 Get-powerpivotserviceapplication \<number> 。 如果您创建多个 PowerPivot 服务应用程序，则说明性的名称将有助于其他管理员理解应用程序的使用方式。  
   
 5.  在“应用程序池”中，为该应用程序创建一个新的应用程序池（推荐）。 为该应用程序池选择或创建一个托管帐户。 请确保指定一个域用户帐户。 通过域用户帐户，可以使用 SharePoint 的托管帐户功能，从而使您可以在一个位置中更新密码和帐户信息。 如果您计划扩展部署以便包括将在同一标识下运行的附加服务实例，则域帐户是必需的。  
   
 6.  在 **“数据库服务器”** 中，默认值是承载场配置数据库的 SQL Server 数据库引擎实例。 您可以使用该服务器或者选择其他的 SQL Server。  
   
-7.  在 "**数据库名称**" 中，默认值\<为 PowerPivotServiceApplication1_ guid>。 您必须为每个 PowerPivot 服务应用程序都创建唯一的数据库。 默认数据库名称对应于服务应用程序的默认名称。 如果您输入了唯一的服务应用程序名称，则遵循您的数据库名称的类似命名约定，以便可以一起管理它们。  
+7.  在 "**数据库名称**" 中，默认值为 PowerPivotServiceApplication1_ \<guid> 。 您必须为每个 PowerPivot 服务应用程序都创建唯一的数据库。 默认数据库名称对应于服务应用程序的默认名称。 如果您输入了唯一的服务应用程序名称，则遵循您的数据库名称的类似命名约定，以便可以一起管理它们。  
   
 8.  在 **“数据库身份验证”** 中，默认值是 “Windows 身份验证”。 如果您选择 **“SQL 身份验证”**，请参考 SharePoint 管理员指南以便了解有关如何在 SharePoint 部署中使用此身份验证类型的最佳实践。  
   
@@ -75,7 +74,7 @@ ms.locfileid: "66071576"
   
      有关服务关联的详细信息，请参阅[将 PowerPivot 服务应用程序连接到管理中心中的 SharePoint Web 应用程序](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)。  
   
-10. 单击“确定”****。 。该服务将在场的服务应用程序列表中与其他托管服务显示在一起。  
+10. 单击“确定”  。该服务将在场的服务应用程序列表中与其他托管服务显示在一起。  
   
 ##  <a name="configure-powerpivot-service-application"></a><a name="ConfigApp"></a>配置 PowerPivot 服务应用程序  
  PowerPivot 服务应用程序使用默认配置创建。 对于大多数情况，建议您采用这些默认设置。 仅在您遇到响应时间较长或删除的连接时，或者您在为特定的 SharePoint Web 应用程序改变 PowerPivot 服务配置时，才更改这些默认设置。  
@@ -118,7 +117,7 @@ ms.locfileid: "66071576"
   
 15. 在“使用情况数据收集”的各查询响应阈值中，指定确定一个类别从哪里结束、另一个类别从哪里开始的上限。 这些类别建立对查询行为进行度量的基准。 您可以使用这些类别监视系统的查询响应时间中的趋势。 此信息将出现在 PowerPivot 管理面板中。  
   
-16. 单击 **“确定”** 以保存你的更改。  
+16.  单击“确定”以保存你的更改。  
   
      对加载超时或分配方法的更改只应用于新的传入请求。 已在进行中的请求将受到接收请求时有效的值的影响。  
   
@@ -139,9 +138,9 @@ ms.locfileid: "66071576"
   
 4.  在“编辑以下关联组”**** 中，选择“默认值”**** 或“[自定义]”****。  
   
-5.  对于“[自定义]”****，选中要使用的每个服务应用程序连接旁边的复选框。 如果有多个 PowerPivot 服务应用程序（由设置为`PowerPivot Service Application Proxy`的类型指示），请确保仅选择一个。  
+5.  对于“[自定义]”****，选中要使用的每个服务应用程序连接旁边的复选框。 如果有多个 PowerPivot 服务应用程序（由设置为的类型指示 `PowerPivot Service Application Proxy` ），请确保仅选择一个。  
   
-6.  单击" **确定**"。  
+6.  单击“确定”。  
   
 ##  <a name="edit-service-application-properties"></a><a name="EditGSA"></a>编辑服务应用程序属性  
  使用下面的说明可重新打开指定服务应用程序名称、应用程序池、数据库设置和服务关联的属性页。  

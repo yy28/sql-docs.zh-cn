@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d90a12f8-7bc3-4fdb-95a1-7c89058f0d9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 18bf54b7b97598c6c61d7e282ad5791d926cc25a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab9289705bbea8d1e2c21d5f5820746e58b48cc5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080757"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544279"
 ---
 # <a name="highlight-exceptions-table-analysis-tools-for-excel"></a>突出显示异常值（Excel 表分析工具）
   ![功能区中的“突出显示异常值”按钮](media/tat-highlightex.gif "功能区中的“突出显示异常值”按钮")  
@@ -37,9 +36,9 @@ ms.locfileid: "66080757"
   
 2.  指定要分析的列。  
   
-3.  单击“运行”****。  
+3.  单击 **“运行”** 。  
   
-4.  打开标题\<为 "表名"> "离群值" 的工作表，以查看找到的离群值摘要。  
+4.  打开标题为 "离群值" 的工作表 \<table name> ，以查看找到的离群值摘要。  
   
 5.  若要更改突出显示的数量，请单击 "**突出显示异常" 报表**的 "**异常阈值**" 行中的向上和向下箭头。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "66080757"
 ## <a name="related-tools"></a>相关工具  
  在清除或检查数据以为数据挖掘作准备时，您还可以尝试使用 Excel 数据挖掘客户端中的数据浏览功能。 此外接程序提供了更高级的工具，可以帮助您查找离散值、重新标记数据或者查看数据的分布情况。 有关 Excel 数据挖掘客户端中的数据浏览工具的详细信息，请参阅[浏览和清理数据](exploring-and-cleaning-data.md)。  
   
- **突出显示异常**工具使用[!INCLUDE[msCoName](../includes/msconame-md.md)]聚类分析算法。 聚类分析模型检测各组具有相似特征的行。 Excel 数据挖掘客户端提供一个**浏览**窗口，该窗口使用图形和特征配置文件来浏览群集所创建的数据挖掘模型。 有关如何浏览**突出显示异常**工具创建的聚类分析模型的信息，请参阅[浏览模型（Excel 数据挖掘客户端）](highlight-exceptions-table-analysis-tools-for-excel.md)。  
+ **突出显示异常**工具使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 聚类分析算法。 聚类分析模型检测各组具有相似特征的行。 Excel 数据挖掘客户端提供一个**浏览**窗口，该窗口使用图形和特征配置文件来浏览群集所创建的数据挖掘模型。 有关如何浏览**突出显示异常**工具创建的聚类分析模型的信息，请参阅[浏览模型（Excel 数据挖掘客户端）](highlight-exceptions-table-analysis-tools-for-excel.md)。  
   
  有关 [!INCLUDE[msCoName](../includes/msconame-md.md)] 聚类分析算法的详细信息，请参阅 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书中的主题“Microsoft 聚类分析算法”。  
   

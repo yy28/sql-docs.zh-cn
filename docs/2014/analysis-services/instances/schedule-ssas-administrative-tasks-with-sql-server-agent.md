@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9b24e99ac31b126888a1fa49f3ef5547a4f82dda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd751efccc038c131bc61338d7adcd8e10a67d93
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079674"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543769"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>使用 SQL Server 代理来计划 SSAS 管理任务
   使用 SQL Server 代理服务，你可以根据所需顺序和时间来计划要运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理任务。 通过计划任务，可以自动运行定期或以可预测周期运行的进程。 您可以计划管理任务（例如多维数据集处理）以在周期长的业务活动期间运行。 还可以通过在 SQL Server 代理作业中创建作业步骤来确定任务的执行顺序。 例如，可以处理多维数据集，然后对该多维数据集进行备份。  
@@ -27,7 +26,7 @@ ms.locfileid: "66079674"
 ## <a name="prerequisites"></a>先决条件  
  必须安装 SQL Server 代理服务。  
   
- 默认情况下，作业在服务帐户下运行。 在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中，SQL Server 代理的默认帐户为 NT Service\SQLAgent $\<instancename>。 若要执行备份或处理任务，此帐户必须是 Analysis Services 实例的系统管理员。 有关详细信息，请参阅[&#40;Analysis Services&#41;授予服务器管理员权限](grant-server-admin-rights-to-an-analysis-services-instance.md)。  
+ 默认情况下，作业在服务帐户下运行。 在中 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ，SQL Server 代理的默认帐户是 NT Service\SQLAgent $ \<instancename> 。 若要执行备份或处理任务，此帐户必须是 Analysis Services 实例的系统管理员。 有关详细信息，请参阅[&#40;Analysis Services&#41;授予服务器管理员权限](grant-server-admin-rights-to-an-analysis-services-instance.md)。  
   
  您还应拥有要使用的测试数据库。 可以部署 AdventureWorks 多维示例数据库或 Analysis Services 多维教程中的项目以在本演练中使用。 有关详细信息，请参阅[安装 Analysis Services 多维建模教程的示例数据和项目](../install-sample-data-and-projects.md)。  
   
@@ -81,15 +80,15 @@ ms.locfileid: "66079674"
   
 6.  在 **“新建作业步骤”** 对话框的 **“步骤名称”** 中，输入步骤名称。  
   
-7.  在“服务器”**** 中，为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的默认实例键入“localhost”****，并为命名实例键入“localhost”\\****\<实例名称**>。  
+7.  在 "**服务器**" 中，键入默认实例的**localhost** ， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 并为命名实例键入**localhost \\ ** \<*instance name*> 。  
   
-     如果您将从远程计算机运行作业，请使用将运行作业的服务器和实例的名称。 对于默认实例\<，请使用格式*服务器名称*>， \<为命名实例使用*服务器名称*>\\<*实例名称*>。  
+     如果您将从远程计算机运行作业，请使用将运行作业的服务器和实例的名称。 对于 \<*server name*> 命名实例，请使用格式> 默认实例和 \<*server name*> \\ < *实例名称*。  
   
 8.  在 **“类型”** 中，选择 **“SQL Server Analysis Services 命令”**。  
   
 9. 在“命令”**** 中，右键单击并选择“粘贴”****。 上一步中生成的 XMLA 脚本应显示在命令窗口中。  
   
-10. 单击" **确定**"。  
+10. 单击“确定”。  
   
 11. 在 **“选择页”** 下，单击 **“计划”**，然后单击 **“新建”**。  
   
@@ -205,7 +204,7 @@ ms.locfileid: "66079674"
   
 10. 在“命令”**** 中，右键单击并选择“粘贴”****。  
   
-11. 单击" **确定**"。  
+11. 单击“确定”。  
   
 12. 在 **“计划”** 页上，单击 **“新建”**。  
   
@@ -213,7 +212,7 @@ ms.locfileid: "66079674"
   
      此步骤将创建一个于星期日 12:00 AM 启动的计划。 下一步将说明如何手动执行作业。 您还可选择将在监视作业时执行作业的计划。  
   
-14. 单击 **“确定”** 关闭对话框。  
+14. 单击“确定”  关闭对话框。  
   
 15. 在“对象资源管理器”**** 中，展开“作业”****，右键单击创建的作业，然后选择“作业开始步骤”****。  
   

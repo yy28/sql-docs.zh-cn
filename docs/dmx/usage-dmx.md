@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b961282ba6bc25caa260a3e156f843a413a5ef1a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dc1ae000166f075a3c6bac347cd7e3e8a605042b
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893115"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670371"
 ---
 # <a name="usage-dmx"></a>用法 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  使用数据挖掘扩展插件（DMX）在中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]定义新的数据挖掘模型时，必须指定生成模型的数据挖掘算法将如何使用每个列。 可以将列指定为下列类型之一：  
+  使用数据挖掘扩展插件（DMX）在中定义新的数据挖掘模型时 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，必须指定生成模型的数据挖掘算法将如何使用每个列。 可以将列指定为下列类型之一：  
   
 -   **密钥**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68893115"
   
  指定为**预测**类型的列用作输入列和输出列。 指定为**PredictOnly**的列仅用作输出列。 具体的算法可能会以不同的方式处理预测列。  
   
- 有关[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支持的列使用类型的详细信息，请参阅[挖掘模型列](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)。  
+ 有关支持的列使用类型的详细信息 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，请参阅[挖掘模型列](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   

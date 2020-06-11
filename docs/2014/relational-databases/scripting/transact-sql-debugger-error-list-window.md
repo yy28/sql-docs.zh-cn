@@ -15,12 +15,12 @@ ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c88fb6beda0bef5a9e3d1980c1ffa78ed4944b70
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b4ee09b1cd960a58dbf26ecc1b1cc898af4fad96
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718402"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83857839"
 ---
 # <a name="error-list-window-management-studio"></a>“错误列表”窗口 (Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]“错误列表”  用于显示由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中的 IntelliSense 代码生成的语法和语义错误。  
@@ -67,7 +67,7 @@ ms.locfileid: "82718402"
 > [!NOTE]  
 >  “错误列表”  仅显示来源于 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器的错误，而不显示来源于 MDX、DMX 或 XML/A 编辑器的错误。 所有 MDX、DMX 和 XML/A 错误均显示在这些编辑器的“消息”  选项卡中。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **“错误列表”** 后，将在以下列中显示相关信息：  
   
  **默认顺序**  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5702e3e2e5b12edecff4dd6d6f46b632575d211d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1af06d7ffe12301f6b8b678f41665e5c3146a13
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084269"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522314"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>逻辑体系结构（Analysis Services - 数据挖掘）
   数据挖掘过程涉及多个组件的交互。  
@@ -41,7 +40,7 @@ ms.locfileid: "66084269"
 ##  <a name="data-mining-source-data"></a><a name="bkmk_SourceData"></a>数据挖掘源数据  
  在数据挖掘中使用的数据并不会存储在数据挖掘解决方案中，而仅存储绑定。 该数据可能驻留在 SQL Server 早期版本创建的数据库、CRM 系统，或者甚至平面文件中。 通过处理定型结构或模型时，将创建数据的统计汇总并在缓存中存储它，这样可以将其持久化以供以后的操作使用它；或者在处理后删除数据的统计汇总。 有关详细信息，请参阅[挖掘结构（Analysis Services - 数据挖掘）](mining-structures-analysis-services-data-mining.md)。  
   
- 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源视图 (DSV) 对象中组合不同数据，将在你的数据源上提供一个抽象层。 您可以指定表之间的联接，或添加具有多对一关系的表以便创建嵌套表列。 这些对象的定义、数据源和数据源视图存储在解决方案内，文件扩展名为 *.ds 和 \*.dsv。 有关创建和使用[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据源和数据源视图的详细信息，请参阅[&#40;SSAS 多维&#41;支持的数据源](../multidimensional-models/supported-data-sources-ssas-multidimensional.md)。  
+ 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源视图 (DSV) 对象中组合不同数据，将在你的数据源上提供一个抽象层。 您可以指定表之间的联接，或添加具有多对一关系的表以便创建嵌套表列。 这些对象的定义、数据源和数据源视图存储在解决方案内，文件扩展名为 *.ds 和 \*.dsv。 有关创建和使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源和数据源视图的详细信息，请参阅[&#40;SSAS 多维&#41;支持的数据源](../multidimensional-models/supported-data-sources-ssas-multidimensional.md)。  
   
  还可以使用 AMO 或 XMLA 定义和更改数据源以及数据源视图。 有关以编程方式使用这些对象的详细信息，请参阅[逻辑体系结构概述（Analysis Services - 多维数据）](../multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md)。  
   

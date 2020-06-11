@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5193c976-9dcd-459c-abba-8c3c44e7a7f2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 535d1e05fc82882e0a2b5ea43ac9b2147e62338b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b60d721a69213ad52536830b49b40d6bb82a3811
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388017"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545909"
 ---
 # <a name="olap-engine-server-components"></a>OLAP 引擎服务器组件
-  的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]服务器组件是作为 Windows 服务运行的**msmdsrv.ini**应用程序。 该应用程序包含安全组件、一个 XML for Analysis (XMLA) 侦听器组件、一个查询处理器组件以及执行下列功能的多个其他内部组件：
+  的服务器组件 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 是作为 Windows 服务运行的**msmdsrv.exe**应用程序。 该应用程序包含安全组件、一个 XML for Analysis (XMLA) 侦听器组件、一个查询处理器组件以及执行下列功能的多个其他内部组件：
 
 -   分析从客户端接收的语句
 
@@ -51,13 +50,13 @@ ms.locfileid: "81388017"
  ![Analysis Services 系统体系结构关系图](../../../analysis-services/dev-guide/media/analysisservicessystemarchitecture.gif "Analysis Services 系统体系结构关系图")
 
 ## <a name="xmla-listener"></a>XMLA 侦听器
- XMLA 侦听器组件处理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 与其客户端之间的所有 XMLA 通信。 Msmdsrv.ini [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] `Port`文件中的配置设置可用于指定[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例侦听的端口。 此文件中的值 0 指示 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 侦听默认端口。 除非另有指定，否则 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 使用下列默认的 TCP 端口：
+ XMLA 侦听器组件处理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 与其客户端之间的所有 XMLA 通信。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] `Port` msmdsrv.ini 文件中的配置设置可用于指定 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例侦听的端口。 此文件中的值 0 指示 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 侦听默认端口。 除非另有指定，否则 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 使用下列默认的 TCP 端口：
 
 |端口|说明|
 |----------|-----------------|
-|2383|的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]默认实例。|
-|2382|其他实例的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]重定向程序。|
-|在服务器启动时动态分配|的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]命名实例。|
+|2383|的默认实例 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。|
+|2382|其他实例的重定向程序 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。|
+|在服务器启动时动态分配|的命名实例 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。|
 
  有关更多详细信息，请参阅[配置 Windows 防火墙以允许 Analysis Services 访问](../../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。
 

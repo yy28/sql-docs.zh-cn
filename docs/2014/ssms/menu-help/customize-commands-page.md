@@ -12,17 +12,17 @@ ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 805d500f33c661756d211f081254608eb389f298
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56df884317c13b860ba19d66d9680c79356c9080
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62470014"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859239"
 ---
 # <a name="customize-commands-page"></a>自定义（“命令”页）
   使用此对话框，您可以在工具栏和菜单上添加和删除命令，以及更改用于工具栏按钮或菜单命令的图像。 可以通过在“工具”  菜单上单击“自定义  ”，再单击“命令”  ，来访问“命令”  页。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **类别**  
  指定在“命令”  列表框中显示的命令集。 命令的类别基于环境当前支持的工具和设计器所提供的菜单标题。 此标题列表是动态的，所以根据工具和设计器的不同，以及对它们所做的任何自定义设置，类别和菜单标题的顺序会有所变化。 因此，来自不同设计器的两个菜单可能具有相同的名称，所以相同的标题可以会出现两次，却提供不同的命令集。  
   

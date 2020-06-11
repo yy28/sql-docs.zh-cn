@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c2ae90886d6469802543f62bf5636ccaafeb32fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 610d304f2634a4de8f8578fff3258f4b1f2dbc67
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008087"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669290"
 ---
 # <a name="predictadjustedprobability-dmx"></a>PredictAdjustedProbability (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,12 +33,12 @@ PredictAdjustedProbability(<scalar column reference>, [<predicted state>])
 ## <a name="return-type"></a>返回类型  
  一个标量值。  
   
-## <a name="remarks"></a>备注  
- 如果未提供预测状态，将使用具有最大可预测概率的状态，不包括缺少状态存储桶。 若要包含缺少的状态存储桶， \<请将预测状态> 设置为**INCLUDE_NULL**。  
+## <a name="remarks"></a>注解  
+ 如果未提供预测状态，将使用具有最大可预测概率的状态，不包括缺少状态存储桶。 若要包含缺少的状态存储桶，请将 \< 预测状态> 设置为**INCLUDE_NULL**。  
   
- 若要为缺少的状态返回调整后的概率， \<请将预测状态> 设置为 NULL。  
+ 若要为缺少的状态返回调整后的概率，请将 \< 预测状态> 设置为 NULL。  
   
- **PredictAdjustedProbability**函数[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]是数据挖掘规范[!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB 的扩展。  
+ **PredictAdjustedProbability**函数是 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] 数据挖掘规范 OLE DB 的扩展。  
   
 ## <a name="examples"></a>示例  
  以下示例根据 TM Decision Tree 挖掘模型，使用自然预测联接确定某个人是否可能购买自行车，并且还确定该测校正后的概率。  

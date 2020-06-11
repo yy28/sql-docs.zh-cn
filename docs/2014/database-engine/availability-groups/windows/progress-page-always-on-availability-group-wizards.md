@@ -19,17 +19,17 @@ ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3c87b2a3c6ac2156a4d52ece48efa2982bb4ca2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25b16d4380157b49031cd05fb1ecbe5dac1ba811
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789107"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858699"
 ---
 # <a name="progress-page-alwayson-availability-group-wizards"></a>“进度”页（AlwaysOn 可用性组向导）
   使用此对话框可以查看您在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中运行的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]向导的进度。 进度栏指示该向导正在执行的步骤的相对进度。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **更多详细信息**  
  单击下箭头可显示进度网格，其中按顺序列出所有已完成的步骤，后面跟有当前正在进行的操作。 该网格包含以下列：  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fd074e705c5ae135eb8161a0ea5d2919d1c183e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c87de5fb72036848088afd2fbfd651be5d7b850
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076256"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536119"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>创建和管理远程分区 (Analysis Services)
   对度量值组进行分区时，可将远程 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上的辅助数据库配置为分区存储。  
@@ -45,7 +44,7 @@ ms.locfileid: "66076256"
 -   您必须确保灾难恢复计划适合远程分区的备份和还原。 使用远程分区可能使备份和还原操作变得复杂。 请确保仔细测试您的计划，以确保能够还原必需的数据。  
   
 ## <a name="configure-remote-partitions"></a>配置远程分区  
- 运行实例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]两个单独的计算机都是创建远程分区方式所必需的，它将一个计算机指定为主服务器，将另一台计算机指定为从属服务器。  
+ 运行实例的两个单独的计算机 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 都是创建远程分区方式所必需的，它将一个计算机指定为主服务器，将另一台计算机指定为从属服务器。  
   
  以下过程假定您有两个服务器实例，且在主服务器上部署了多维数据集数据库。 为了实现此过程的目的，我们将多维数据集数据库称为 db-master。 将包含远程分区的存储数据库称为 db-storage。  
   
@@ -80,7 +79,7 @@ ms.locfileid: "66076256"
   
 #### <a name="set-the-masterdatasourceid-database-property-on-the-remote-server-in-ssms"></a>设置远程服务器上的 MasterDataSourceID 数据库属性（在 SSMS 中）  
   
-1.  在从属服务器上：右键单击存储数据库 "数据库存储"，指向 "**编写数据库脚本为** | "，**将其更改为新的** | **查询编辑器窗口**。  
+1.  在从属服务器上：右键单击存储数据库 "数据库存储"，指向 "**编写数据库脚本为**"，  |  **将其更改为**  |  **新的查询编辑器窗口**。  
   
 2.  将 **MasterDataSourceID** 添加到 XMLA，然后将多维数据集数据库 db-master 的 ID 指定为值。 XMLA 应类似以下示例。  
   

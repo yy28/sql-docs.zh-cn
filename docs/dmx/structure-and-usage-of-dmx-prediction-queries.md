@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 99d8ef98ad4e86bce0e1beff819a8d140662aaf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 167bf7e17b172b9d3e6c58df1f52510f93a668aa
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938062"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669997"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>DMX 预测查询的结构和用法
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  在[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中，您可以使用数据挖掘扩展插件（DMX）中的预测查询，根据挖掘模型的结果来预测新数据集中的未知列值。  
+  在中 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，您可以使用数据挖掘扩展插件（DMX）中的预测查询，根据挖掘模型的结果来预测新数据集中的未知列值。  
   
  使用何种查询类型取决于您要从模型中获取的具体信息。 如果要实时创建简单预测，例如要知道网站上的一位潜在客户是否符合自行车购买者的特征，则可以使用单独查询。 如果要根据数据源中包含的一组事例创建一批预测，则可使用常规预测查询。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "67938062"
   
 -   **TOP**  
   
--   **FROM***从\<模型>***预测联接**      
+-   **从*** \< 模型>***预测联接**      
   
 -   **ON**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67938062"
   
 -   可以返回一列数据的函数。  
   
- **FROM** *FROM \<model>* **预测联接**元素定义要用于创建预测的源数据。 对于单独查询，即为分配给列的一系列值。 对于空预测联接，该项将保留为空。  
+ **FROM** * \< model>* **预测联接**元素定义要用于创建预测的源数据。 对于单独查询，即为分配给列的一系列值。 对于空预测联接，该项将保留为空。  
   
  **ON**元素将挖掘模型中定义的列映射到外部数据集中的列。 如果要创建空预测联接查询或自然预测联接，则不必包括该元素。  
   

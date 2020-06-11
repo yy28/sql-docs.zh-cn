@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: a37f7a46-7451-4582-ba19-2595196d97bc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 962df497e804011e69e2a350c24ce41f4c273b6d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66ac0c2a120e0981ce23c794b97427121ae5eb23
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076439"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536737"
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>通过在数据源中生成非时间表来创建维度
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以使用中的维度[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]向导在不使用现有数据源的情况下创建维度。 在维度向导的“选择创建方法”页上选择“在数据源中生成非时间表”选项可执行此操作********。 若要在基础数据源中创建新维度，必须具有在基础数据源中创建对象的权限。 在不使用预定义数据源视图的情况下定义维度时，可以从头开始定义维度，也可以使用维度模板来定义维度。  
+  在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，您可以使用中的维度向导在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 不使用现有数据源的情况下创建维度。 在维度向导的“选择创建方法”页上选择“在数据源中生成非时间表”选项可执行此操作********。 若要在基础数据源中创建新维度，必须具有在基础数据源中创建对象的权限。 在不使用预定义数据源视图的情况下定义维度时，可以从头开始定义维度，也可以使用维度模板来定义维度。  
   
  维度向导提供了示例维度模板，您可以使用这些模板生成常用的维度类型。 可以从下列维度类型中选择：  
   
@@ -31,7 +30,7 @@ ms.locfileid: "66076439"
   
 -   客户  
   
--   日期  
+-   Date  
   
 -   部门  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66076439"
   
 -   组织  
   
--   Products  
+-   产品  
   
 -   Promotion  
   

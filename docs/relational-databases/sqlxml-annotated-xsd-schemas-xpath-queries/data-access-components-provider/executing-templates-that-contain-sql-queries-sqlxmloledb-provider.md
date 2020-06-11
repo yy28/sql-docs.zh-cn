@@ -1,5 +1,6 @@
 ---
 title: 执行包含 SQL 查询的模板（SQLXMLOLEDB）
+description: 查看使用 SQLXMLOLEDB 提供程序执行包含 SQL 查询的服务器端 XML 模板的客户端 ADO 应用程序的示例。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6a1df48e97877aeca05e1aa72a248ec5bbcf659
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82f770d8b17ee1ec93e33efa07b6658363b0de2d
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246672"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215659"
 ---
 # <a name="executing-templates-that-contain-sql-queries-sqlxmloledb-provider"></a>执行包含 SQL 查询的模板（SQLXMLOLEDB 访问接口）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "75246672"
   
  由于 ClientSideXML 属性设置为 True，因此将不带 FOR XML 子句的 SELECT 语句发送到服务器。 服务器执行该查询并将一个行集返回给客户端。 然后客户端对行集应用 FOR XML 转换，并生成 XML 文档。  
   
- XML 模板为生成的 XML 文档提供一个顶级根元素\<（根>）;因此，未提供 xml 根属性。  
+ XML 模板为生成的 XML 文档提供一个顶级根元素（ \<ROOT> ）; 因此，不提供 xml 根属性。  
   
  若要执行 XML 模板，必须指定方言 {5d531cb2-e6ed-11d2-b252-00c04f681b71}。  
   

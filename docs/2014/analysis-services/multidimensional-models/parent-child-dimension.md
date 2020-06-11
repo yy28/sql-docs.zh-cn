@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4657f5dc-d88e-48d2-a448-08f79bc89546
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d0eac17d30d8a8870d03a0b5b81610fad1344333
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b08641e9ba17e6ad2e2f4112e01073d448aa8564
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073384"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545849"
 ---
 # <a name="parent-child-hierarchy"></a>父子层次结构
   父子层次结构是标准维度中包含父属性的层次结构。 父属性用于说明维度主表内部的自引用关系或自联接****。 父子层次结构是根据单个父属性构造的。 层次结构中出现的级别是通过与父属性关联的成员之间的父子关系形成的，因此只为一个父子层次结构分配一个级别。 父子层次结构内成员的位置由父特性的 `KeyColumns` 和 `RootMemberIf` 属性确定，而级别内成员的位置则由父特性的 `OrderBy` 属性确定。 有关特性属性的详细信息，请参阅 [属性和属性层次结构](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)。  

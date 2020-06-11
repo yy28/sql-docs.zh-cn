@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: eec8da8f-eab4-4ac4-a81d-995c814f88ca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 59bff3eac690b7352b75d02bd7b266dfa8f303f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4207f617b4f6fafde5392fdea013196c54501314
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070205"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547429"
 ---
 # <a name="restrict-rows-partition-wizard"></a>限制行（分区向导）
   可以使用 **“限制行”** 页，限制从指定表中检索、聚合并包括到分区中的行。  
@@ -40,7 +39,7 @@ ms.locfileid: "66070205"
 > [!IMPORTANT]  
 >  通过指定 WHERE 子句，可以将记录的子集用于此分区。 当多个分区都基于单一事实数据表时，防止数据重复很重要。  
   
- **查阅**  
+ **勾选标记**  
  验证“查询”**** 中的语句是否为有效的 SQL 语句。  
   
 ## <a name="see-also"></a>另请参阅  

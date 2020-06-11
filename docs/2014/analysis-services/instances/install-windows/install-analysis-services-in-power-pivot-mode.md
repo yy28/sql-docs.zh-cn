@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 95642654da9492087b3720e1b85c369131b55ed2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 82836ab9b7d4d191f48895e215ffb9293f4ffe97
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487388"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543939"
 ---
 # <a name="powerpivot-for-sharepoint-2013-installation"></a>PowerPivot for SharePoint 2013 安装
   本主题中的过程将指导您以 SharePoint 部署模式在单台服务器上安装 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务器。 涉及的步骤包括运行 SQL Server 安装向导以及使用 SharePoint 2013 管理中心的配置任务。  
@@ -53,7 +52,7 @@ ms.locfileid: "81487388"
   
     -   [&#40;SharePoint 2013&#41;配置 PowerPivot 和部署解决方案](https://docs.microsoft.com/analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013)  
   
-##  <a name="prerequisites"></a><a name="bkmk_prereq"></a>先决条件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 先决条件  
   
 1.  您必须是本地管理员才能运行 SQL Server 安装程序。  
   
@@ -65,14 +64,14 @@ ms.locfileid: "81487388"
   
 5.  [在 SharePoint 模式下查看 Analysis Services 服务器的硬件和软件要求 &#40;SQL Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md)。  
   
-6.  查看[SQL Server 2012 Service Pack 1 发行说明](https://go.microsoft.com/fwlink/?LinkID=248389)（https://go.microsoft.com/fwlink/?LinkID=248389)）中的发行说明。  
+6.  查看[SQL Server 2012 Service Pack 1 发行说明](https://go.microsoft.com/fwlink/?LinkID=248389)（）中的发行说明 https://go.microsoft.com/fwlink/?LinkID=248389) 。  
   
 ###  <a name="sql-server-edition-requirements"></a><a name="bkmk_sqleditions"></a> SQL Server 版本要求  
- 并不是所有的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]版本中都提供了商业智能功能。 有关详细信息，请参阅[SQL Server 2012 的版本支持的功能https://go.microsoft.com/fwlink/?linkid=232473) （](https://go.microsoft.com/fwlink/?linkid=232473)以及[SQL Server 2014 的版本和组件](../../../sql-server/editions-and-components-of-sql-server-2016.md)。  
+ 并不是所有的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]版本中都提供了商业智能功能。 有关详细信息，请参阅[SQL Server 2012 的版本支持的功能 https://go.microsoft.com/fwlink/?linkid=232473) （](https://go.microsoft.com/fwlink/?linkid=232473)以及[SQL Server 2014 的版本和组件](../../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
- 当前发行说明可在[SQL Server 2012 SP1 发行说明](https://go.microsoft.com/fwlink/?LinkID=248389)（https://go.microsoft.com/fwlink/?LinkID=248389)。  
+ 当前发行说明可在[SQL Server 2012 SP1 发行说明](https://go.microsoft.com/fwlink/?LinkID=248389)（ https://go.microsoft.com/fwlink/?LinkID=248389) 。  
   
- [Microsoft SQL Server 2012 发行说明（https://go.microsoft.com/fwlink/?LinkId=236893)](https://go.microsoft.com/fwlink/?LinkId=236893)。  
+ [Microsoft SQL Server 2012 发行说明（ https://go.microsoft.com/fwlink/?LinkId=236893) ](https://go.microsoft.com/fwlink/?LinkId=236893)。  
   
 ##  <a name="step-1-install-powerpivot-for-sharepoint"></a><a name="InstallSQL"></a>步骤1：安装 PowerPivot for SharePoint  
  在此步骤中，您将运行 SQL Server 安装程序以便在 SharePoint 模式下安装 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。 在后续步骤中，将 Excel Services 配置为使用此服务器的工作簿数据模型。  
@@ -83,7 +82,7 @@ ms.locfileid: "81487388"
   
 3.  单击 **“全新 SQL Server 独立安装或向现有安装添加功能”**。  
   
-4.  如果看到 **“产品密钥”** 页，请指定 Evaluation Edition 或者为 Enterprise Edition 的许可副本输入产品密钥。 单击“下一步”。  有关版本的详细信息，请参阅 [Editions and Components of SQL Server 2014](../../../sql-server/editions-and-components-of-sql-server-2016.md)。  
+4.  如果看到 **“产品密钥”** 页，请指定 Evaluation Edition 或者为 Enterprise Edition 的许可副本输入产品密钥。 单击“下一步”。 有关版本的详细信息，请参阅 [Editions and Components of SQL Server 2014](../../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
 5.  查看并接受 Microsoft 软件许可协议条款，然后单击 **“下一步”**。  
   
@@ -103,13 +102,13 @@ ms.locfileid: "81487388"
   
      如果添加数据库引擎，则将其作为 **PowerPivot** 命名实例安装。 在指定此实例的连接时，按以下格式输入数据库名称：[`servername`]\PowerPivot。  
   
-     单击“下一步”。   
+     单击“下一步”。  
   
      ![设置角色](../../../sql-server/install/media/gmni-setupui-featurerole-sql2012sp1.gif "安装角色")  
   
-11. “功能选择”中会显示功能的只读列表以便供您参考。 不能添加或删除为此角色预先选择的项。 单击“下一步”。   
+11. “功能选择”中会显示功能的只读列表以便供您参考。 不能添加或删除为此角色预先选择的项。 单击“下一步”。  
   
-12. 在 **“实例配置”** 页中，将显示“PowerPivot”的只读实例名称供您参考。 该实例名称是必需的并且不能修改。 但是，您可以输入唯一的实例 ID 以便指定说明性的目录名称和注册表项。 单击“下一步”。   
+12. 在 **“实例配置”** 页中，将显示“PowerPivot”的只读实例名称供您参考。 该实例名称是必需的并且不能修改。 但是，您可以输入唯一的实例 ID 以便指定说明性的目录名称和注册表项。 单击“下一步”。  
   
 13. 在 **“服务器配置”** 页上，为自动的 **启动类型**配置所有服务。 为 **SQL Server Analysis Services**指定所需的域帐户和密码，即下图中的 **(1)** 。  
   
@@ -119,13 +118,13 @@ ms.locfileid: "81487388"
   
     -   切勿使用您自己的域用户帐户来设置服务帐户。 这样做会向服务器授予您在网络中对资源拥有的相同权限。 如果恶意用户威胁服务器，则该用户将基于您的域凭据登录。 并且该用户有权下载或使用您所能下载或使用的相同数据和应用程序。  
   
-     单击“下一步”。   
+     单击“下一步”。  
   
      ![SSAS Server 配置](../../../sql-server/install/media/ssas-powerpivotsetupsql2012sp1-serverconfiguration.gif "SSAS Server 配置")  
   
 14. 如果安装 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]，则将显示 **“数据库引擎配置”** 页。 在“ [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 配置”中，单击 **“添加当前用户”** 以便授予您的用户帐户对数据库引擎实例的管理员权限。  
   
-     单击“下一步”。   
+     单击“下一步”。  
   
 15. 在 **“Analysis Services 配置”** 页中，单击 **“添加当前用户”** 以便向您的用户帐户授予管理权限。 在完成安装程序后，您将需要管理权限以便对服务器进行配置。  
   
@@ -134,7 +133,7 @@ ms.locfileid: "81487388"
     -   > [!NOTE]  
         >  所有需要具有对 Analysis Services 服务器实例的访问权限的服务应用程序均需要具有 Analysis Services 管理权限。 例如，分别为 Excel Services、Power View 和 Performance Point Services 添加服务帐户。 此外，添加 SharePoint 场帐户，该帐户用作承载管理中心的 Web 应用程序的标识。  
   
-     单击“下一步”。   
+     单击“下一步”。  
   
 16. 在“错误报告”**** 页上，单击“下一步”****。  
   
@@ -259,13 +258,13 @@ ms.locfileid: "81487388"
   
 -   [&#40;SharePoint 2013&#41;配置 PowerPivot 和部署解决方案](https://docs.microsoft.com/analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013)  
   
- **冗余性和服务器负荷：** 在 SharePoint 模式下安装第二台或更多的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务器将提供 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务器功能的冗余性。 附加的服务器还将在各服务器上分散负荷。 有关详细信息，请参阅以下主题：  
+ **冗余性和服务器负荷：** 在 SharePoint 模式下安装第二台或更多的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务器将提供 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务器功能的冗余性。 附加的服务器还将在各服务器上分散负荷。 有关详细信息，请参阅以下部分：  
   
--   [配置 Analysis Services 以便在 Excel Services 中处理数据模型](https://technet.microsoft.com/library/jj614437\(v=office.15\))（https://technet.microsoft.com/library/jj614437(v=office.15))。  
+-   [配置 Analysis Services 以便在 Excel Services 中处理数据模型](https://technet.microsoft.com/library/jj614437\(v=office.15\))（ https://technet.microsoft.com/library/jj614437(v=office.15)) 。  
   
--   [管理 Excel Services 数据模型设置（SharePoint Server 2013）](https://technet.microsoft.com/library/jj219780\(v=office.15\)) （https://technet.microsoft.com/library/jj219780(v=office.15))。  
+-   [管理 Excel Services 数据模型设置（SharePoint Server 2013）](https://technet.microsoft.com/library/jj219780\(v=office.15\)) （ https://technet.microsoft.com/library/jj219780(v=office.15)) 。  
   
- ![SharePoint 设置](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")https://connect.microsoft.com/SQLServer/Feedback)[通过 Microsoft SQL Server Connect （）提交反馈和联系信息](https://connect.microsoft.com/SQLServer/Feedback)。  
+ ![SharePoint 设置](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")[通过 Microsoft SQL Server Connect （）提交反馈和联系信息](https://connect.microsoft.com/SQLServer/Feedback) https://connect.microsoft.com/SQLServer/Feedback) 。  
   
 ## <a name="see-also"></a>另请参阅  
  [将 PowerPivot 迁移到 SharePoint 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013)   

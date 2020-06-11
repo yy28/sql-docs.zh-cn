@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 22bb0b5e-78f5-484e-883d-2b5985a12749
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dc620811209d854af5a9c874956847236819f462
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a08cdf759ad3accd1f3c1405cefff9cde6b5319f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081049"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544473"
 ---
 # <a name="forecast-table-analysis-tools-for-excel"></a>预测（Excel 表分析工具）
   ![“表分析工具”功能区中的“预测”按钮](media/tat-forecast.gif "“表分析工具”功能区中的“预测”按钮")  
@@ -41,11 +40,11 @@ ms.locfileid: "66081049"
   
 3.  指定要预测的列。 该工具会自动选择数据中具有可预测数据类型的列，即连续数值数据。 如果某些具有连续数值数据的列包含许多 null 值或零值，由于缺少数据可能影响结果，该工具可能不会选择这些列。 如果发生这种情况，可以使用 "重新[标记 &#40;SQL Server 数据挖掘外接程序"&#41;](relabel-sql-server-data-mining-add-ins.md)工具来修复数据。  
   
-4.  指定包含日期、时间或其他序列标识符的列。 如果选择选项** \<"无时间戳">** 则该工具将基于源数据中的行序列创建一个序列。  
+4.  指定包含日期、时间或其他序列标识符的列。 如果选择该选项 **\<no time stamp>** ，该工具将基于源数据中的行序列创建一个序列。  
   
 5.  指定要进行的预测数。  
   
-6.  或者，为算法提供关于您希望数据每周、每月还是按其他时间间隔重复的提示。 如果数据不符合任何给定模式，或者不知道任何模式，请选择** \<"自动检测">** 以使该工具查找重复的时间段。  
+6.  或者，为算法提供关于您希望数据每周、每月还是按其他时间间隔重复的提示。 如果数据不符合任何给定模式，或者不知道任何模式，请选择 **\<detect automatically>** 使该工具查找重复的时间段。  
   
 7.  向导将预测添加到源表中，并在新的工作表中创建预测报表。  
   
@@ -83,7 +82,7 @@ ms.locfileid: "66081049"
 ## <a name="related-tools"></a>相关工具  
  Excel 数据挖掘客户端是一个独立的外接程序，它提供了更高级的数据挖掘功能，而且还包含一个用来进行预测的向导。  
   
- **预测**工具（在 Excel 表分析工具中）和**预测**向导（在 Excel 数据挖掘客户端中）均使用[!INCLUDE[msCoName](../includes/msconame-md.md)]时序算法。  
+ **预测**工具（在 Excel 表分析工具中）和**预测**向导（在 Excel 数据挖掘客户端中）均使用时序 [!INCLUDE[msCoName](../includes/msconame-md.md)] 算法。  
   
 -   **预测**工具更易于使用，因为它会自动将算法配置为使用最适合您的数据的设置。  
   

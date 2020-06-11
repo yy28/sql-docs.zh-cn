@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 701d8fb43b468f6bbd33fbff9ff7cfc8deb386f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7a6509980065c2293a0b2697beacae1ba2d4b0d1
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893829"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83667195"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,12 +31,12 @@ PredictSupport(<scalar column reference>, [<predicted state>])
  标量列。  
   
 ## <a name="return-type"></a>返回类型  
- *\<* 标量列引用*>* 指定的类型的标量值。  
+ 标量列引用指定的类型的标量值 *\<* *>* 。  
   
-## <a name="remarks"></a>备注  
- 如果未提供预测状态，将使用具有最大可预测概率的状态，不包括缺少状态存储桶。 若要包含缺少的状态存储桶， \<请将预测状态> 设置为**INCLUDE_NULL**。  
+## <a name="remarks"></a>注解  
+ 如果未提供预测状态，将使用具有最大可预测概率的状态，不包括缺少状态存储桶。 若要包含缺少的状态存储桶，请将 \< 预测状态> 设置为**INCLUDE_NULL**。  
   
- 若要返回对缺少状态的支持，请将\<预测状态> 设置为 NULL。  
+ 若要返回对缺少状态的支持，请将 \< 预测状态> 设置为 NULL。  
   
 > [!NOTE]  
 >  支持值都以不同方式计算，或可能有不同的解释，具体取决于所查询的模型类型。 有关如何为任何特定模型类型计算支持的详细信息，请参阅挖掘模型内容中的单个算法类型[&#40;Analysis Services-数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)。  

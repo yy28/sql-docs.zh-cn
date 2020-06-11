@@ -10,19 +10,19 @@ ms.assetid: 1e2b22b8-5811-4f50-875b-685f3ddbd1ee
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f095429070a16cb4a99dabd84ffe99d169ce35a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5453bb0f67f670d20f239957ebc1e7bc799d0170
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095328"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859573"
 ---
 # <a name="feature-review"></a>查看功能
   “查看功能”页是已准备好并且将在完成映像步骤结束时配置并完成的功能的只读列表。 该功能列表在准备映像步骤中选择，并且在完成映像步骤中无法修改。 除了显示的功能外，已准备实例还包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Writer 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client。  
   
  在完成了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备实例的配置后，可以添加在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的已准备实例中未包括的其他功能。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
   
 |组件组|组件和功能|  
 |---------------------|-----------------------------|  

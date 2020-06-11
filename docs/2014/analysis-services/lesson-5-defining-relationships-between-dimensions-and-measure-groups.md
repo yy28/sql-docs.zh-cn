@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 31aeb271-47a1-433b-a8a5-120bcb4584d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 765d983bcd3c9e12b29235eb5ee5dac91e3c2d8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 250c1ec9e384eaac7613cb15ae51d0bf9c982245
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078422"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542699"
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>第 5 课：定义维度和度量值组之间的关系
   在本教程前面的课程中，您已了解到可以将添加到多维数据集中的数据库维度作为一个或多个多维数据集维度的基础。 在本课中，您将了解如何定义多维数据集维度和度量值组之间的各种关系类型，以及如何指定这些关系的属性。  

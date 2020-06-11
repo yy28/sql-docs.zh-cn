@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 1b9cae0a-8990-4194-af5f-a1ea5f2aff06
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 074659d42e1960c5f24cf4afa20668a3d8c823b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d93361fb14bc6544ffa7376439c2da0c8e06c3fb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725472"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545949"
 ---
 # <a name="logical-architecture-analysis-services---multidimensional-data"></a>逻辑体系结构（Analysis Services - 多维数据）
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]同时使用服务器组件和客户端组件为商业智能应用程序提供联机分析处理（OLAP）和数据挖掘[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]功能：  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 同时使用服务器组件和客户端组件为商业智能应用程序提供联机分析处理（OLAP）和数据挖掘功能：  
   
--   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的服务器组件是作为 Microsoft Windows 服务来实现。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支持同一台计算机上的多个实例，每个[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例都实现为 Windows 服务的单独实例。  
+-   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的服务器组件是作为 Microsoft Windows 服务来实现。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支持同一台计算机上的多个实例，每个实例都 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实现为 Windows 服务的单独实例。  
   
 -   客户端使用公用标准 XML for Analysis (XMLA) 与 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 进行通信，作为一项 Web 服务，XMLA 是基于 SOAP 的协议，用于发出命令和接收响应。 还可以通过 XMLA 提供客户端对象模型，可以使用托管提供程序（例如，ADOMD.NET）或本机 OLE DB 访问接口来访问该模型。  
   

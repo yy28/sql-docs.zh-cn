@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 825343c58feeb7ffb217a8b1c8c53d8f81ae7441
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19754c99e87c50121fc79b80649d7555b79ca59e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077495"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544871"
 ---
 # <a name="actions-in-multidimensional-models"></a>多维模型中的操作
   操作是指最终用户针对所选多维数据集或其个部分启动的操作。 操作可以通过将所选项目作为参数来启动应用程序，也可以检索有关所选项目的信息。 有关操作的详细信息，请参阅[操作（Analysis Services - 多维数据）](actions-analysis-services-multidimensional-data.md)。  
@@ -57,13 +56,13 @@ ms.locfileid: "66077495"
  **操作内容**  
  选择操作的类型。 下表总结了可用的类型。  
   
-|类型|说明|  
+|类型|描述|  
 |----------|-----------------|  
 |数据集|检索数据集。|  
 |专有|使用除此表列出的这些类型以外的其他接口执行操作。|  
 |行集|检索行集。|  
 |语句|运行 OLE DB 命令。|  
-|代码|在 Internet 浏览器中显示可变页。|  
+|URL|在 Internet 浏览器中显示可变页。|  
   
  对于 **“操作表达式”**，请指定运行操作时所传递的参数。 该语法的计算结果必须为字符串，并且必须包含以 MDX 编写的表达式。 例如，MDX 表达式可以指示该语法所包含的多维数据集的一部分。 MDX 表达式在传递参数之前得到取值。 MDX 生成器也可以帮助生成 MDX 表达式。  
   
@@ -72,10 +71,10 @@ ms.locfileid: "66077495"
   
 |属性|说明|  
 |--------------|-----------------|  
-|**调用**|指定如何运行操作。 “交互”（默认）指定在用户访问对象时运行操作。 可能的设置是：<br /><br /> Batch<br /><br /> Interactive (交互)<br /><br /> 处于打开状态|  
+|**调用**|指定如何运行操作。 “交互”（默认）指定在用户访问对象时运行操作。 可能的设置是：<br /><br /> Batch<br /><br /> 交互<br /><br /> 处于打开状态|  
 |**应用程序**|说明操作的应用程序。|  
 |**说明**|说明操作。|  
-|**Caption**|提供为操作显示的标题。 如果标题是 MDX，请将`True` for **CAPTION**指定为 mdx。|  
+|**Caption**|提供为操作显示的标题。 如果标题是 MDX，请 `True` 将 For **caption**指定为 mdx。|  
 |**标题是 MDX**|如果标题是 MDX，请指定 `True`，如果不是，则指定 `False`。|  
   
 > [!NOTE]  

@@ -1,7 +1,7 @@
 ---
 title: sp_adddistpublisher （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 06/15/2018
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 2190e31245cde19eca4c5a47f21ac48e12f57f53
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f341a881ca33c66121d6b87ee30d437c621f973
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68771390"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627147"
 ---
 # <a name="sp_adddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,12 +48,15 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 ## <a name="arguments"></a>参数  
 `[ @publisher = ] 'publisher'`发布服务器名称。 *发布服务器*的**sysname**，无默认值。  
+
+> [!NOTE]
+> 服务器名称可指定为 `<Hostname>,<PortNumber>` 。 如果在 Linux 或 Windows 上使用自定义端口部署 SQL Server，并且禁用了 browser 服务，则可能需要指定连接的端口号。
   
 `[ @distribution_db = ] 'distribution_db'`分发数据库的名称。 *distributor_db* **sysname**，无默认值。 复制代理使用该参数连接到发布服务器。  
   
-`[ @security_mode = ] security_mode`实现的安全模式。 此参数仅供复制代理用于连接到排队更新订阅的发布服务器或非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *security_mode*为**int**，可以是下列值之一。  
+`[ @security_mode = ] security_mode`实现的安全模式。 此参数仅供复制代理用于连接到排队更新订阅的发布服务器或非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *security_mode*为**int**，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**0**|分发服务器中的复制代理使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接到发布服务器。|  
 |**1** （默认值）|分发服务器中的复制代理使用 Windows 身份验证连接到发布服务器。|  
@@ -65,9 +68,9 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 > [!IMPORTANT]  
 >  不要使用空密码。 请使用强密码。  
   
-`[ @working_directory = ] 'working_directory'`用于存储发布的数据和架构文件的工作目录的名称。 *working_directory*为**nvarchar （255）**，而默认为此实例的 ReplData 文件夹[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，例如。 `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData` 名称应按 UNC 格式指定。  
+`[ @working_directory = ] 'working_directory'`用于存储发布的数据和架构文件的工作目录的名称。 *working_directory*为**nvarchar （255）**，而默认为此实例的 ReplData 文件夹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，例如 `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData` 。 名称应按 UNC 格式指定。  
 
- 对于 Azure SQL 数据库，请`\\<storage_account>.file.core.windows.net\<share>`使用。
+ 对于 Azure SQL 数据库，请使用 `\\<storage_account>.file.core.windows.net\<share>` 。
 
 `[ @storage_connection_string = ] 'storage_connection_string'`对于 SQL 数据库是必需的。 使用 Azure 门户中的 "存储 > 设置" 下的访问密钥。
 
@@ -77,16 +80,16 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 `[ @encrypted_password = ] encrypted_password`不再支持设置*encrypted_password* 。 尝试将此**位**参数设置为**1**将导致错误。  
   
-`[ @thirdparty_flag = ] thirdparty_flag`发布服务器是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时为。 *thirdparty_flag*是**bit**，可以是下列值之一。  
+`[ @thirdparty_flag = ] thirdparty_flag`发布服务器是时为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *thirdparty_flag*是**bit**，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**0** （默认值）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据.|  
 |**1**|非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
   
-`[ @publisher_type = ] 'publisher_type'`当发布服务器不[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是时指定发布服务器类型。 *publisher_type* sysname，可以是下列值之一。  
+`[ @publisher_type = ] 'publisher_type'`当发布服务器不是时指定发布服务器类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 *publisher_type* sysname，可以是下列值之一。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**MSSQLSERVER**<br /><br /> （默认值）|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。|  
 |**联手**|指定标准的 Oracle 发布服务器。|  
@@ -97,7 +100,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **sp_adddistpublisher**用于快照复制、事务复制和合并复制。  
   
 ## <a name="example"></a>示例  

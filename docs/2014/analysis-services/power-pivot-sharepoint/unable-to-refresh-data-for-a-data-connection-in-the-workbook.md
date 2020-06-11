@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81e99fc17cb8f369967ff4c26699e67f0ed91d33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81a72e0009659e06fd27e9c402f17ddab259d228
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070934"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540169"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>无法刷新工作簿中用于数据连接的数据。 请重试，或与系统管理员联系。 以下连接无法刷新：PowerPivot 数据
   对于包含 PowerPivot 数据的 Excel 工作簿，如果 Excel Services 提交对某一 PowerPivot 服务器的连接请求并且该请求失败，则会返回此错误。  
@@ -24,7 +23,7 @@ ms.locfileid: "66070934"
   
 |||  
 |-|-|  
-|适用对象：|PowerPivot for SharePoint 安装|  
+|适用于：|PowerPivot for SharePoint 安装|  
 |产品版本|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|请参阅下文。|  
 |消息正文|无法刷新工作簿中用于数据连接的数据。 请重试，或与系统管理员联系。 以下连接无法刷新：PowerPivot 数据|  
@@ -40,7 +39,7 @@ ms.locfileid: "66070934"
   
  您正尝试打开的工作簿可能是在 SQL Server 2008 R2 版本的 PowerPivot for Excel 中创建的。 数据连接字符串中指定的 Analysis Services 数据访问接口很可能在要处理请求的计算机上不存在。  
   
- 如果是这种情况，你将在 ULS 日志中找到此消息： "将工作簿的\<URL 中的 PowerPivot 数据刷新失败"> ""，后跟 "无法获取连接"。  
+ 如果是这种情况，你将在 ULS 日志中找到此消息： "刷新工作簿 ' ' 中的 ' PowerPivot 数据 ' 失败" \<URL to workbook> ，后跟 "无法获取连接"。  
   
  若要确定工作簿的版本，请在 Excel 中打开它，然后查看连接字符串中指定的数据访问接口。 SQL Server 2008 R2 工作簿将 MSOLAP.4 用作其数据访问接口。  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66070934"
   
  若要解决此问题，请将计算机加入到与 PowerPivot 服务器相同的域中，或在本地计算机上安装一个域控制器。 第二种解决方案是安装域控制器，这将要求您为所有服务和用户创建本地域帐户。 您将需要为您定义的帐户配置服务帐户和 SharePoint 权限。  
   
- 如果您的目标是在脱机状态下使用 PowerPivot for SharePoint，则在计算机上安装域控制器将非常有用。 有关如何脱机使用 PowerPivot 的详细说明，请参阅中的 "从网络中[http://www.powerpivotgeek.com](https://go.microsoft.com/fwlink/?LinkId=184241)获取 PowerPivot 服务器" 博客条目。  
+ 如果您的目标是在脱机状态下使用 PowerPivot for SharePoint，则在计算机上安装域控制器将非常有用。 有关如何脱机使用 PowerPivot 的详细说明，请参阅中的 "从网络中获取 PowerPivot 服务器" 博客条目 [http://www.powerpivotgeek.com](https://go.microsoft.com/fwlink/?LinkId=184241) 。  
   
  **应用场景 4：服务器不稳定**  
   

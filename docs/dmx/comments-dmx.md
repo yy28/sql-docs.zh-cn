@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 26a529d6eb15997ccb48ad25d8d4fcb11cd2ddfb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 834e31fcc9d8e0887929dae356c7b2068aeeff2d
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68071053"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669339"
 ---
 # <a name="comments-dmx"></a>（注释）(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  数据挖掘扩展插件（DMX）中的注释是不执行的[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]程序代码中的文本字符串。 注释又称为备注。 您可以使用注释对代码进行说明，或在诊断代码时临时禁用部分 DMX 语句或脚本。  
+  数据挖掘扩展插件（DMX）中的注释是不执行的程序代码中的文本字符串 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 注释又称为备注。 您可以使用注释对代码进行说明，或在诊断代码时临时禁用部分 DMX 语句或脚本。  
   
  使用注释对程序代码加以说明，可使您以后更为方便的维护代码。 可以使用注释记录一些详细信息，如程序名称、编写代码的开发人员姓名以及代码进行重要更改的日期等。 也可以使用注释说明复杂的计算过程或编程方法。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68071053"
   
 -   **--（双连字符）。** 使用这些注释字符，您既可以在要执行的代码的行上编写注释，也可以在单独的行上编写注释。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 会将从双连字符到行尾之间的所有内容均作为注释部分进行处理。 若要创建多行注释，请在每行注释的开头使用双连字符。 有关此注释字符的详细信息，请参阅 " [&#40;注释"&#41; &#40;DMX&#41; 摘要](../dmx/comment-dmx-summary.md)"。  
   
--   **/\*...\*/（正斜杠-星号字符对）。** 使用这些注释字符，您既可以在要执行的代码的行上编写注释，也可以在单独的行上编写注释，甚至还可以在可执行代码中编写注释。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]将从打开的注释对（/*）到结束注释对（\*/）的所有内容作为注释的一部分进行计算。 若要创建多行注释，请使用打开注释字符对（/\*）开始注释，并使用注释字符对（\*/）结束注释。 该类注释的任何行中都不应包含其他注释字符。 有关此注释字符的详细信息，请参阅[斜线&#41;&#41; &#40;斜线 &#40;注释](../dmx/slash-star-comment-dmx.md)。  
+-   **/\*... \*/（正斜杠-星号字符对）。** 使用这些注释字符，您既可以在要执行的代码的行上编写注释，也可以在单独的行上编写注释，甚至还可以在可执行代码中编写注释。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]将从打开的注释对（/*）到结束注释对（/）的所有内容 \* 作为注释的一部分进行计算。 若要创建多行注释，请使用打开注释字符对（/）开始注释 \* ，并使用注释字符对（ \* /）结束注释。 该类注释的任何行中都不应包含其他注释字符。 有关此注释字符的详细信息，请参阅[斜线&#41;&#41; &#40;斜线 &#40;注释](../dmx/slash-star-comment-dmx.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;DMX&#41; 的数据挖掘扩展插件](../dmx/data-mining-extensions-dmx-reference.md)   

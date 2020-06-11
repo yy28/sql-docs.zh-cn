@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 050ceeaa8eb5700f108b7135616817e09c0031cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 33c84ada33abee06a78fe0a9f8cc3f37242458ac
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889041"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670228"
 ---
 # <a name="istestcase-dmx"></a>IsTestCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ IsTestCase()
 ## <a name="result-type"></a>结果类型  
  如果事例是测试数据集的一部分，则返回**true** ;否则**为 false**。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果使用数据挖掘向导创建挖掘结构和相关的挖掘模型，则默认情况下将留出 30% 的事例用作测试数据集。 其余事例用于定型数据挖掘模型。 同一测试数据集可用于所有基于该结构的模型。 但是，如果使用 DMX 创建挖掘模型，则默认情况下所有数据都将用于定型模型，而不创建任何测试集。 若要允许创建测试数据集，必须使用 WITH 维持子句设置参数。  
   
  通过查看 <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> 和 <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A> 属性的值，可以确定是否已对特定的挖掘结构创建测试集。  
@@ -41,7 +41,7 @@ IsTestCase()
  若要返回定型数据集中的事例，请使用函数[则 istrainingcase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)。  
   
 ## <a name="examples"></a>示例  
- 下面的示例使用在`Targeted Mailing` [数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中创建的挖掘结构。 查询将返回该结构中所有用于测试的事例。  
+ 下面的示例使用 `Targeted Mailing` 在[数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中创建的挖掘结构。 查询将返回该结构中所有用于测试的事例。  
   
 ```  
 SELECT *  

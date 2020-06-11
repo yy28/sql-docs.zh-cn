@@ -19,12 +19,12 @@ ms.assetid: 0f3ae521-6b19-43ad-b2c4-3822adb19591
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0936e74b3c48a2fe3298215107ae48d0c3b63cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0176185aab7de80b844e3d1502aea40b1c8aeb18
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67950789"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669528"
 ---
 # <a name="constraint_column_usage-transact-sql"></a>CONSTRAINT_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "67950789"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar （** 128 **）**|表限定符。|  
-|**TABLE_SCHEMA**|**nvarchar （** 128 **）**|包含表所有者的架构名。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
+|**TABLE_SCHEMA**|**nvarchar （** 128 **）**|包含表所有者的架构名。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 INFORMATION_SCHEMA 视图仅表示对象的元数据的子集。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
 |**TABLE_NAME**|**nvarchar （** 128 **）**|表名。|  
 |**COLUMN_NAME**|**nvarchar （** 128 **）**|列名称。|  
 |**CONSTRAINT_CATALOG**|**nvarchar （** 128 **）**|约束限定符。|  
-|**CONSTRAINT_SCHEMA**|**nvarchar （** 128 **）**|包含该约束的架构的名称。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
+|**CONSTRAINT_SCHEMA**|**nvarchar （** 128 **）**|包含该约束的架构的名称。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 INFORMATION_SCHEMA 视图仅表示对象的元数据的子集。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
 |**CONSTRAINT_NAME**|**nvarchar （** 128 **）**|约束名称。|  
   
 ## <a name="see-also"></a>另请参阅  

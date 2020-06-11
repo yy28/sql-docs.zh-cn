@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ac516c63-1e79-4ae8-bca6-32d3c1a09c00
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3b6e367d0bc73de31f46b8533cded824bdb19504
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7a43ec4c52de9be2c0345e520743cc2a9fb14a7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071814"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547551"
 ---
 # <a name="configure-maximum-file-upload-size-powerpivot-for-sharepoint"></a>配置最大文件上载大小 (PowerPivot for SharePoint)
   PowerPivot 工作簿常常包含大量的数据，导致文件超出为 SharePoint 上载所允许的最大文件大小。 尝试上载超过该上限的文件时，SharePoint 会显示以下错误：  
@@ -44,7 +43,7 @@ ms.locfileid: "66071814"
   
      您可以指定的最大值是 2 GB（或“管理中心”中指定的 2047 MB）。  
   
-7.  单击" **确定**"。  
+7.  单击“确定”。  
   
 ### <a name="configure-maximum-file-size-for-a-sharepoint-web-application"></a>为 SharePoint Web 应用程序配置最大文件大小  
   
@@ -63,6 +62,6 @@ ms.locfileid: "66071814"
   
 6.  将该属性设置为与 Excel Services 中的“工作簿最大大小”相同或更大的数值。  
   
-7.  单击" **确定**"。  
+7.  单击 **“确定”** 。  
   
   

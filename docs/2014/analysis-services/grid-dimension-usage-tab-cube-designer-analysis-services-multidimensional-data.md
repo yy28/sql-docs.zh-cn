@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ed63b1da-0fce-4f24-a722-5cff378831e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 294b40d07731f588267e94ff748adaf871a8ac3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d14dced8054edc2f744d309e6c8f0d8d4966c79
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080810"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544281"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>网格（“维度用法”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“维度用法”** 选项卡上的 **“网格”** 窗格，查看和编辑多维数据集维度和度量值组之间的维度关系。 每个维度关系均以网格中的单元来表示，在网格中，度量值组显示为列，而维度则显示为行。  

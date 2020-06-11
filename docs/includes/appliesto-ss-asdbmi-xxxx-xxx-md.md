@@ -1,1 +1,1 @@
-<Token>**适用于：** ![是](media/yes-icon.png)SQL Server ![是](media/yes-icon.png)Azure SQL 数据库（仅限托管实例）![否](media/no-icon.png)Azure Synapse Analytics (SQL DW) ![否](media/no-icon.png)并行数据仓库 </Token>
+<Token>**适用于：** ![是 ](media/yes-icon.png) SQL Server ![ 是 ](media/yes-icon.png) azure SQL 托管实例 ![ 无 ](media/no-icon.png) AZURE Synapse Analytics （SQL DW） ![ no ](media/no-icon.png) 并行数据仓库</Token>

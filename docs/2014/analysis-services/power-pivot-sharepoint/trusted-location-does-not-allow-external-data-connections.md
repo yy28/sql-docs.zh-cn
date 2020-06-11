@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dc0cedfd-a7d0-40ef-bdd6-ea508130640a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b10a4a80b74bf64741784edc4fc1974dc0464805
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30838d33cc6d4d71eaaaf820cd929a57f60f6e34
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070980"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547729"
 ---
 # <a name="the-trusted-location-where-the-workbook-is-stored-does-not-allow-external-data-connections-the-following-connections-failed-to-refresh-powerpivot-data"></a>存储工作簿的受信任位置不允许外部数据连接。 以下连接无法刷新：PowerPivot 数据
   对于包含 PowerPivot 数据的 Excel 工作簿，如果 Excel Services 无法连接到嵌入数据源，则会返回此错误。  
@@ -45,7 +44,7 @@ ms.locfileid: "66070980"
   
 5.  在“外部数据”的“允许外部数据”中，单击 **“受信任的数据连接库和嵌入连接”**。  
   
-6.  单击" **确定**"。  
+6.  单击“确定”。  
   
  此外，您还可以为包含 PowerPivot 工作簿的站点创建新的受信任位置，然后仅修改该站点的配置设置。 有关详细信息，请参阅 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   

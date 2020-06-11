@@ -14,19 +14,19 @@ ms.assetid: 4ed75956-ebb8-4d8c-9c16-fc0eb00bd3a0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 33f037f4d82cbf5bbdebde01a5c4492128ecc8ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff7f60ce2ed883c47ef608c0964703bd1b98518d
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206026"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859269"
 ---
 # <a name="execute-sql-server-agent-job-task-maintenance-plan"></a>“执行 SQL Server 代理作业”任务（维护计划）
   使用 **“‘执行 SQL Server 代理作业’任务”** 对话框可以执行维护计划中的 Microsoft SQL Server 代理作业。 如果所选连接上没有 SQL Server 代理作业，此选项将不可用。  
   
  此任务将使用 **.sp_start_job** 语句。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **Connection**  
  选择执行此任务时使用的服务器连接。  
   

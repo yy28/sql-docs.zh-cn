@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: efb505be-354f-4d23-8f2d-3e76fa50d27b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 05d840d4e43d9856dedeb3fd446c8158f23275b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 434eb332c7fc8829d515ac33102604dd9ca46d5e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081064"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544394"
 ---
 # <a name="general-partition-properties-dialog-box-ssms"></a>常规（“分区属性”对话框）(SSMS)
   对于 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中的多维数据集，可以在 SQL Server Management Studio 中使用“分区属性”**** 对话框的“常规”**** 页，为其度量值组中的分区设置常规属性。  
@@ -37,13 +36,13 @@ ms.locfileid: "66081064"
 |**上次处理时间**|显示上次处理分区的日期和时间。|  
 |**上次架构更新时间**|显示上次更新分区元数据的日期和时间。|  
 |**名称**|显示分区的名称。|  
-|**处理模式**|选择分区的处理模式。 有关[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]对象处理模式的详细信息，请参阅[多维模型对象处理](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。|  
+|**处理模式**|选择分区的处理模式。 有关对象处理模式的详细信息 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，请参阅[多维模型对象处理](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。|  
 |**远程数据源 ID**|显示从中检索分区的源数据的远程数据源的标识符。<br /><br /> 注意：只有对于远程分区，此属性才会包含值。|  
 |**饼图**|显示用于标识分区所表示的数据切片的表达式。|  
-|**源**|显示为分区提供源数据的表或查询。|  
-|**状态**|显示分区的当前处理状态。|  
+|**Source**|显示为分区提供源数据的表或查询。|  
+|**State**|显示分区的当前处理状态。|  
 |**存储位置**|显示用于存储分区的数据的文件夹。<br /><br /> 注意：只有在为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例指定了默认存储位置以外的存储位置时，此属性才会包含值。|  
-|**类型**|显示分区的类型。|  
+|类型|显示分区的类型。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Analysis Services 多维数据 &#40;分区&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   

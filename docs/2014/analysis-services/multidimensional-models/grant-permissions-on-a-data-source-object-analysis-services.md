@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b4e302d3-c93b-4383-aa4a-37d15c129830
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4a869d2033adaa57be0ace522787332c03a69bcb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d0a7de676f5863187c2c137e056392a605af474f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075003"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546669"
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>授予数据源对象的权限 (Analysis Services)
   通常，大多数 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 用户无需访问作为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目基础的数据源。 用户通常只查询 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的数据。 但是，在数据挖掘上下文中（如根据挖掘模型执行预测），用户必须将挖掘模型的已学习数据与用户提供的数据联接起来。 为了连接到包含用户提供数据的数据源，用户将使用包含 [OPENQUERY (DMX)](/sql/dmx/source-data-query-openquery) 或 [OPENROWSET (DMX)](/sql/dmx/source-data-query-openrowset) 子句的数据挖掘扩展插件 (DMX) 查询。  

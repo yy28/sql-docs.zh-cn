@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 208268eb-4e14-44db-9c64-6f74b776adb6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0c08690cd2f5b77471392cab3aad1587b4cb0f9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92c7e91e090b8e82e2844cf1999328c6ef7a8684
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080744"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544269"
 ---
 # <a name="impact-analysis-dialog-box-analysis-services---multidimensional-data"></a>“影响分析”对话框（Analysis Services - 多维数据）
   如果 **“处理”** 对话框中列出的对象已处理，则使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 **“影响分析”** 对话框来标识和处理受影响的依赖对象。 通过在 **“处理”** 对话框中单击 **“影响分析”** ，可以显示 **“影响分析”** 对话框。  
@@ -32,13 +31,13 @@ ms.locfileid: "66080744"
  **Object Name**  
  显示可能需要处理的依赖对象的名称。 名称左侧的图标指示对象类型。  
   
- **类型**  
+ 类型  
  显示可能需要处理的依赖对象的类型。  
   
  **影响类型**  
  显示处理“处理”**** 对话框中的对象对依赖对象的影响。 下表列出了处理的可能影响，并说明每种影响将导致警告还是错误：  
   
-|影响|消息|  
+|影响|Message|  
 |------------|-------------|  
 |将清除对象（不处理）|警告|  
 |对象将无效|错误|  

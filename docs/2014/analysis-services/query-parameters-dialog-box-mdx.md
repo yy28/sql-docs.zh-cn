@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: e69b9542-7b54-42bf-b2de-c091e81af7ee
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c7ad326f5205aa7efc3be9aee79af3671d892130
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3be4b3cdfbaf3ed7579fab7a89cc96c5beb0d5e7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070531"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539579"
 ---
 # <a name="query-parameters-dialog-box-mdx"></a>“查询参数”对话框 (MDX)
   使用 **和** 中的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] “查询参数” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框可以将参数添加到用于定义集、维度和子维度的 MDX 查询。 您可以通过在 **“MDX 查询生成器”** 对话框中单击 **“参数”** 图标，显示 **“查询参数”** 对话框。  
   
 ## <a name="options"></a>选项  
- **参数**  
+ **Parameter**  
  键入一个参数名称以便开始创建新参数，或者编辑现有参数的名称。  
   
- **维度**  
+ **维数**  
  从列表中选择现有维度。  
   
  **层次结构**  

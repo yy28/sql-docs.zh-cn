@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d4b91b06470c9cb22e98ac76ea52494728a7ca11
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f93df1c1388f6a85272ced6bf419140c74105ddc
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893104"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669953"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,13 +28,13 @@ TopCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>应用于  
- 返回表的表达式，如\<表列引用> 或返回表的函数。  
+ 返回表的表达式，如 \< 表列引用> 或返回表的函数。  
   
 ## <a name="return-type"></a>返回类型  
  \<表表达式>  
   
-## <a name="remarks"></a>备注  
- \<排名表达式> 参数提供的值确定在\<表表达式> 参数中提供的行的降序顺序，并返回在\<count> 参数中指定的最前面的行的数目。  
+## <a name="remarks"></a>注解  
+ \<排名表达式> 参数提供的值确定在表表达式> 参数中提供的行的降序顺序 \< ，并返回在 count> 参数中指定的最前面的行的数目 \< 。  
   
  最初引入的 TopCount 函数用于启用关联预测，并且通常会生成与包含**SELECT TOP**和**ORDER BY**子句的语句相同的结果。 如果使用**预测（DMX）** 函数，则可以获得更好的关联预测性能，此函数支持指定要返回的预测数。  
   

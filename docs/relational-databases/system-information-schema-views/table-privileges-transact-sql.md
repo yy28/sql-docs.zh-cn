@@ -19,12 +19,12 @@ ms.assetid: 70269d26-b085-4a98-8a9f-b4742c2848bd
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db49815f367c9fe0100189e418db90e0bcddd9ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 25706317e628e0f6d5eb864deaac8deb3656e35c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078458"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670327"
 ---
 # <a name="table_privileges-transact-sql"></a>TABLE_PRIVILEGES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68078458"
 |**授权者**|**nvarchar （** 128 **）**|授权者。|  
 |**被授权者**|**nvarchar （** 128 **）**|被授权者。|  
 |**TABLE_CATALOG**|**nvarchar （** 128 **）**|表限定符。|  
-|**TABLE_SCHEMA**|**nvarchar （** 128 **）**|包含该表的架构的名称。<br /><br /> <strong> \* \*重要\*提示</strong>不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
+|**TABLE_SCHEMA**|**nvarchar （** 128 **）**|包含该表的架构的名称。<br /><br /> <strong> \* \* 重要 \* 信息 \* ：</strong>查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
 |**TABLE_NAME**|**sysname**|表名。|  
 |**PRIVILEGE_TYPE**|**varchar （** 10 **）**|特权的类型。|  
 |**IS_GRANTABLE**|**varchar （** 3 **）**|指定被授权者是否可以向其他人授予权限。|  

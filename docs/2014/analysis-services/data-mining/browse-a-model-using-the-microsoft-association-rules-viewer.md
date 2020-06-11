@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 538fc01b-8eb1-467a-9b66-3cd57cf7489f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e7c3764d18d26d739023bbbb744236273e5cfd1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9cb289f4825dfbfdf55fdacb72229355f8cb815b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086161"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525320"
 ---
 # <a name="browse-a-model-using-the-microsoft-association-rules-viewer"></a>使用 Microsoft 关联规则查看器浏览模型
-  中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的关联规则查看器显示用[!INCLUDE[msCoName](../../includes/msconame-md.md)]关联算法生成的挖掘[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法是用于创建可用于市场篮分析的数据挖掘模型的关联算法。 有关此算法的详细信息，请参阅 [Microsoft Association Algorithm](microsoft-association-algorithm.md)。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]中的关联规则查看器 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 显示用关联算法生成的挖掘模型 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法是用于创建可用于市场篮分析的数据挖掘模型的关联算法。 有关此算法的详细信息，请参阅 [Microsoft Association Algorithm](microsoft-association-algorithm.md)。  
   
  以下是使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法的主要原因：  
   

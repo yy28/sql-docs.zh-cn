@@ -1,6 +1,7 @@
 ---
 title: sp_addsubscription （Transact-sql） |Microsoft Docs
-ms.date: 10/28/2015
+description: 将订阅添加到发布并设置订阅服务器的状态。 此存储过程在发布服务器的发布数据库上运行。
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73789c16cbea481cc159774e6c629d3a131d7478
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a87ba30f69027849ea5444163291465dec00d9be
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833622"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627623"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,6 +84,9 @@ sp_addsubscription [ @publication = ] 'publication'
   
  [ @subscriber =] '*订阅服务器*'  
  订阅服务器的名称。 *订阅服务器*的值为**sysname**，默认值为 NULL。  
+
+> [!NOTE]
+> 服务器名称可指定为 `<Hostname>,<PortNumber>` 。 如果在 Linux 或 Windows 上使用自定义端口部署 SQL Server，并且禁用了 browser 服务，则可能需要指定连接的端口号。
   
  [ @destination_db =] "*destination_db*"  
  用于放置复制数据的目标数据库的名称。 *destination_db*的默认值为**sysname**，默认值为 NULL。 为 NULL 时， *destination_db*设置为发布数据库的名称。 对于 Oracle 发布服务器，必须指定*destination_db* 。 对于非 SQL Server 订阅服务器，为*destination_db*指定 "（默认目标）" 的值。  
@@ -133,7 +137,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |值|说明|  
 |-----------|-----------------|  
-|是|分发代理不将从订阅服务器上发起的事务发送回该订阅服务器。 与双向事务复制一起使用。 有关详细信息，请参阅[双向事务复制](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)。|  
+|true|分发代理不将从订阅服务器上发起的事务发送回该订阅服务器。 与双向事务复制一起使用。 有关详细信息，请参阅[双向事务复制](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)。|  
 |false|分发代理将在订阅服务器上发起的事务发送回订阅服务器。|  
 |NULL（默认值）|对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器，自动设置为 true，对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器，则设置为 false。|  
   
@@ -146,7 +150,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |2|按需|  
 |4|每天|  
 |8|每周|  
-|16|每月一次|  
+|16|每月|  
 |32|与“每月”选项相关|  
 |64（默认值）|自动启动|  
 |128|重复执行|  
@@ -159,7 +163,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |值|说明|  
 |-----------|-----------------|  
-|1|第一个|  
+|1|First|  
 |2|秒|  
 |4|第三个|  
 |8|第四个|  
@@ -288,7 +292,7 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  sp_addsubscription 用于快照复制和事务复制。  
   
  当 sysadmin 固定服务器角色的成员执行 sp_addsubscription 以创建推送订阅时，将隐式创建分发代理作业并将在 SQL Server 代理服务帐户下运行该作业。 建议你执行[sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) ，并为和指定不同的、特定于代理的 Windows 帐户的凭据 @job_login @job_password 。 有关详细信息，请参阅[复制代理安全模式](../../relational-databases/replication/security/replication-agent-security-model.md)。  

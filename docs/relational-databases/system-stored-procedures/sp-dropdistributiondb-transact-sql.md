@@ -1,5 +1,6 @@
 ---
 title: sp_dropdistributiondb （Transact-sql） |Microsoft Docs
+description: 如果一个分发数据库和其他数据库未使用该数据库，则删除该数据库所使用的文件。 此存储过程在分发服务器上的任何数据库上运行。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7171c1e80260f28f85e2b7490f7ac21bea217173
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ff09552fcc8a79abcae877191b4456c0958d1ea2
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830168"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807753"
 ---
 # <a name="sp_dropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ sp_dropdistributiondb [ @database= ] 'database'
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **sp_dropdistributiondb**在所有类型的复制中使用。  
   
  在删除分发服务器之前，必须通过执行**sp_dropdistributor**来执行此存储过程。  

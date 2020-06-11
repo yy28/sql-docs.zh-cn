@@ -1,5 +1,6 @@
 ---
 title: Sequence 和 QNames （XQuery） |Microsoft Docs
+description: 在 XQuery 中了解序列和 QNames 的基本概念。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c71a7139c3adb354923b3c953b367ab506f30545
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 017c2289864b8d2d475bea63a5828d37543b7292
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80380778"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305744"
 ---
 # <a name="sequence-and-qnames-xquery"></a>序列和 QName (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +112,7 @@ SELECT @x.query('/Root/a');
   
  在表达式 (`/Root/a`) 中，`Root` 和 `a` 是 QNames。  
   
- 在下面的示例中，对类型化的**xml**列指定了一个查询。 查询将在第一个\<workcenter 位置上循环访问所有步骤> 元素。  
+ 在下面的示例中，对类型化的**xml**列指定了一个查询。 查询将循环访问 \<step> 第一个 workcenter 位置的所有元素。  
   
 ```  
 SELECT Instructions.query('  
@@ -146,7 +147,7 @@ WHERE ProductModelID=7;
  你创建的每个数据库都有**sys** XML 架构集合。 它包含着这些架构，以便可以从任何用户创建的 XML 架构集合中访问这些架构。  
   
 > [!NOTE]  
->  此实现不支持`local`前缀，如的 XQuery 规范中http://www.w3.org/2004/07/xquery-local-functions所述。  
+>  此实现不支持前缀， `local` 如的 XQuery 规范中所述 http://www.w3.org/2004/07/xquery-local-functions 。  
   
 ## <a name="see-also"></a>另请参阅  
  [XQuery 基础知识](../xquery/xquery-basics.md)  

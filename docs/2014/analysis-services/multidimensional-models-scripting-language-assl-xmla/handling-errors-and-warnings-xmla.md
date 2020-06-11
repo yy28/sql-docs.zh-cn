@@ -19,22 +19,21 @@ helpviewer_keywords:
 ms.assetid: ab895282-098d-468e-9460-032598961f45
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 856886a5edfa5dcae604b44f5c2dca356ba0addb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07b88d800237e5b4b06af0c1ff11cbd0af846600
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702136"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545009"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>处理错误和警告 (XMLA)
   当 XML for Analysis （XMLA）[发现](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)或[执行](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)方法调用不运行、运行成功但生成错误或警告，或成功运行但返回包含错误的结果时，需要进行错误处理。  
   
-|错误|报告|  
+|错误|报表|  
 |-----------|---------------|  
-|XMLA 方法调用不能运行|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返回包含失败详细信息的 SOAP 错误[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]消息。<br /><br /> 有关详细信息，请参阅[处理 SOAP 错误](#handling_soap_faults)一节。|  
+|XMLA 方法调用不能运行|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 返回包含失败详细信息的 SOAP 错误消息。<br /><br /> 有关详细信息，请参阅[处理 SOAP 错误](#handling_soap_faults)一节。|  
 |方法调用运行成功，但生成了错误或警告|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]在包含方法调用结果的[root](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/root-element-xmla)元素的[Messages](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/messages-element-xmla)属性中，分别为每个错误或警告分别包含[错误](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/error-element-xmla)或[警告](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/warning-element-xmla)元素。<br /><br /> 有关详细信息，请参阅[处理错误和警告](#handling_errors_and_warnings)一节。|  
-|方法调用运行成功，但结果中包含错误|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]在方法调用`error`结果`warning`的相应[单元格或](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla)[行](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/row-element-xmla)元素中，分别包含错误或警告的内联或元素。<br /><br /> 有关详细信息，请参阅[处理内联错误和警告](#handling_inline_errors_and_warnings)一节。|  
+|方法调用运行成功，但结果中包含错误|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]`error` `warning` 在方法调用结果的相应[单元格或](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla)[行](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/row-element-xmla)元素中，分别包含错误或警告的内联或元素。<br /><br /> 有关详细信息，请参阅[处理内联错误和警告](#handling_inline_errors_and_warnings)一节。|  
   
 ##  <a name="handling-soap-faults"></a><a name="handling_soap_faults"></a>处理 SOAP 错误  
  出现以下情况时，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会返回 SOAP 错误：  
@@ -91,17 +90,17 @@ HelpFile="" />
   
   属性出现在  元素中包含的所有其他属性之后，该属性可包含一个或多个  元素。 而每个 `Message` 元素又可以包含一个 `error` 或 `warning` 元素，这些元素分别描述了指定命令产生的所有错误或警告。  
   
- 有关`Messages`属性中包含的错误和警告的详细信息，请参阅[MESSAGES 元素 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/messages-element-xmla)。  
+ 有关属性中包含的错误和警告的详细信息 `Messages` ，请参阅[Messages 元素 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/messages-element-xmla)。  
   
 ### <a name="handling-errors-during-serialization"></a>处理序列化期间发生的错误  
- 如果在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例已经开始序列化已成功运行命令的输出后发生错误， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]则会在错误发生时返回不同命名空间中的[异常](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/exception-element-xmla)元素。  实例随后会关闭所有已打开的元素，以确保发送到客户端的 XML 文档为有效文档。 该实例还会返回包含错误说明的 `Messages` 元素。  
+ 如果在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例已经开始序列化已成功运行命令的输出后发生错误，则会在错误发生时 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 返回不同命名空间中的[异常](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/exception-element-xmla)元素。  实例随后会关闭所有已打开的元素，以确保发送到客户端的 XML 文档为有效文档。 该实例还会返回包含错误说明的 `Messages` 元素。  
   
 ##  <a name="handling-inline-errors-and-warnings"></a><a name="handling_inline_errors_and_warnings"></a>处理内联错误和警告  
  如果 XMLA 方法本身没有失败，但在 XMLA 方法调用成功后，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上出现了特定于该方法返回结果中的数据元素的错误，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会为命令返回内联 `error` 或 `warning`。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]如果出现`error`特定`warning`于单元格的问题或对使用`root` [MDDataSet](https://docs.microsoft.com/bi-reference/xmla/xml-data-types/mddataset-data-type-xmla)数据类型的元素中包含的其他数据的问题（如单元的安全性错误或格式设置错误），则提供内联和元素。 在这类情况下，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会在包含错误或警告的 `error` 或 `warning` 元素中返回 `Cell` 或 `row` 元素。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]`error` `warning` 如果出现特定于单元格的问题或对使用 MDDataSet 数据类型的元素中包含的其他数据的问题（ `root` 如单元的安全性错误或格式设置错误）， [MDDataSet](https://docs.microsoft.com/bi-reference/xmla/xml-data-types/mddataset-data-type-xmla)则提供内联和元素。 在这类情况下，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会在包含错误或警告的 `error` 或 `warning` 元素中返回 `Cell` 或 `row` 元素。  
   
- 下面的示例说明了一个结果集，该结果集在使用[语句](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla)命令从`Execute`方法返回的行集中包含错误。  
+ 下面的示例说明了一个结果集，该结果集在 `Execute` 使用[语句](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla)命令从方法返回的行集中包含错误。  
   
 ```  
 <return>  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 16715b85-0630-4a8e-99b0-c0d213cade26
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1a1106c4b374b34351e3375adae102686f7e41fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 17e870a2b20125132342db1845689b7c2481d623
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072568"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535772"
 ---
 # <a name="create-user-defined-hierarchies"></a>创建用户定义层次结构
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]允许您创建用户定义的层次结构。 层次结构是基于属性的级别集合。 例如，时间层次结构可能包含年、季、月、周和日级别。 在某些层次结构中，每个成员属性唯一对应于它上面的成员属性。 这有时也称为自然层次结构。 最终用户可使用层次结构来浏览多维数据集数据。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，可使用维度设计器的“层次结构”窗格定义层次结构。  

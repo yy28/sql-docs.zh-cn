@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 6c7b5f3b-8808-433f-ad58-25e75b140604
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4ff5758d465703800cd4f847b03f87e1dd762043
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 392849d24d21775defe1ab9335a9f9c14fd74458
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077655"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537509"
 ---
 # <a name="mining-structure-properties-dialog-analysis-services---data-mining"></a>“挖掘结构属性”对话框（Analysis Services - 数据挖掘）
   可以使用 **SQL Server Management Studio** 中的 **“挖掘结构属性”** 对话框，设置 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中的挖掘结构的属性。 通过右键单击“对象资源管理器”**** 中的挖掘结构，再从上下文菜单中选择“属性”****，可以显示“挖掘结构属性”**** 对话框。  
   
  **“挖掘结构属性”** 对话框包含以下页：  
   
-## <a name="pages"></a>页  
+## <a name="pages"></a>Pages  
   
 |页|说明|  
 |----------|-----------------|  

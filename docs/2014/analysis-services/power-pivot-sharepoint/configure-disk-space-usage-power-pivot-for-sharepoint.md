@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc45827a349dc38054db98e3a435f18a42bdaa0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ed6668b4e9b35cb6c311fbbbbc7b17be88d6296
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071812"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547550"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>配置磁盘空间使用情况 (PowerPivot for SharePoint)
   PowerPivot for SharePoint 部署使用主机上的磁盘空间来缓存 PowerPivot 数据库以便更快地重新加载。 在内存中加载的每个 PowerPivot 数据库首先缓存到磁盘，以便以后可以更快地重新加载来支持新请求。 默认情况下，PowerPivot for SharePoint 使用所有可用磁盘空间来缓存其数据库，但是可以通过设置限制磁盘空间使用量的属性来修改此行为。  
@@ -42,7 +41,7 @@ ms.locfileid: "66071812"
   
  备份文件夹为在本地计算机的内存中加载的所有 PowerPivot 数据库提供公共的缓存存储区。 如果您在场中定义了多个 PowerPivot 服务应用程序，则这些应用程序都可以使用本地服务器来加载并随后缓存 PowerPivot 数据。 数据加载和缓存都是 Analysis Services 服务器操作。 同样，将在 Analysis Services 实例级别在备份文件夹上管理总磁盘空间使用量。 因此在 SharePoint 应用程序服务器上运行的单个 SQL Server Analysis Services 实例上设置限制磁盘空间使用的配置设置。  
   
- 缓存仅包含 PowerPivot 数据库。 PowerPivot 数据库存储在单个父文件夹（备份文件夹）下的多个文件中。 因为 PowerPivot 数据库旨在用作 Excel 工作簿的内部数据，所以，数据库名称是基于 GUID 的，而非说明性名称。 ** \<V i c**下的 GUID 文件夹>是 PowerPivot 数据库的父文件夹。 在多个 PowerPivot 数据库加载到服务器上时，为每个数据库都创建附加的文件夹。  
+ 缓存仅包含 PowerPivot 数据库。 PowerPivot 数据库存储在单个父文件夹（备份文件夹）下的多个文件中。 因为 PowerPivot 数据库旨在用作 Excel 工作簿的内部数据，所以，数据库名称是基于 GUID 的，而非说明性名称。 下的 GUID 文件夹 **\<serviceApplicationName>** 是 PowerPivot 数据库的父文件夹。 在多个 PowerPivot 数据库加载到服务器上时，为每个数据库都创建附加的文件夹。  
   
  因为 PowerPivot 数据可以加载到场中的任何 Analysis Services 实例上，所以，也可以在场中的多个计算机上缓存相同的数据。 与磁盘空间使用情况相比，此行为更为看重性能，但如果数据已经可用于磁盘，用户可以更快地访问数据。  
   
@@ -50,11 +49,11 @@ ms.locfileid: "66071812"
   
  在系统级别，您可以创建电子邮件警报，在磁盘空间不足时通知您。 Microsoft 系统中心包括电子邮件警报功能。 您还可以使用文件服务器资源管理器、任务计划程序或 PowerShell 脚本来设置警报。 以下链接提供一些有用的信息，可帮助您设置在磁盘空间不足时发出的通知：  
   
--   [文件服务器资源管理器中的新增功能](https://technet.microsoft.com/library/hh831746.aspx)（https://technet.microsoft.com/library/hh831746.aspx)。  
+-   [文件服务器资源管理器中的新增功能](https://technet.microsoft.com/library/hh831746.aspx)（ https://technet.microsoft.com/library/hh831746.aspx) 。  
   
--   [文件服务器资源管理器 Windows Server 2008 R2 的循序渐进指南](https://go.microsoft.com/fwlink/?LinkID=204875)（https://go.microsoft.com/fwlink/?LinkID=204875)。  
+-   [文件服务器资源管理器 Windows Server 2008 R2 的循序渐进指南](https://go.microsoft.com/fwlink/?LinkID=204875)（ https://go.microsoft.com/fwlink/?LinkID=204875) 。  
   
--   [在 Windows Server 2008 上设置磁盘空间不足警报](https://go.microsoft.com/fwlink/?LinkID=204870)（ https://go.microsoft.com/fwlink/?LinkID=204870)。  
+-   [在 Windows Server 2008 上设置磁盘空间不足警报](https://go.microsoft.com/fwlink/?LinkID=204870)（ https://go.microsoft.com/fwlink/?LinkID=204870) 。  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>如何限制用于存储缓存文件的磁盘空间量  
   
@@ -88,7 +87,7 @@ ms.locfileid: "66071812"
   
      **“在缓存中保留非活动数据库”** 指定非活动数据库在文件系统上保留多长时间后，将会从内存中卸载。 清除作业将使用此设置来确定要删除的文件。 168 小时（48 小时在内存中，120 小时在缓存中）处于非活动状态的所有 PowerPivot 数据库都将由清除作业从磁盘中删除。  
   
-5.  单击 **“确定”** 以保存你的更改。  
+5.   单击“确定”以保存你的更改。  
   
 ## <a name="next-steps"></a>后续步骤  
  PowerPivot for SharePoint 安装提供运行状况规则，以便您可以在服务器运行状况、配置或可用性中检测到问题时采取纠正措施。 其中某些规则使用配置设置来确定触发运行状况规则的条件。 如果您在主动优化服务器性能，则最好还要检查这些设置以便确保默认值最适合您的系统。 有关详细信息，请参阅[PowerPivot 运行状况规则-配置](configure-power-pivot-health-rules.md)。  

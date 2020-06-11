@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ce717071-193b-4c99-9654-c7a613e16327
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6a1564a2b190703e011624162ad4bc25fd5de794
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 509f44565a1535e1502cb3862250cf04f654711e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079193"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543539"
 ---
 # <a name="lesson-13-analyze-in-excel"></a>第 13 课：在 Excel 中分析
   在本课中，您将使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中的“在 Excel 中分析”功能打开 Microsoft Excel、自动创建到模型工作区的数据源连接以及自动将数据透视表添加到工作表。 “在 Excel 中分析”功能提供一种快速简单的方法在部署模型之前测试模型的功效。 在本课中，将执行数据分析。 本课的目的是让你（模型作者）熟悉可以用来测试模型设计的工具。 与模型作者使用“在 Excel 中分析”功能所不同的是，最终用户将使用客户端报告应用程序（如 Excel 或 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] ）来连接和浏览部署的模型数据。  

@@ -12,12 +12,12 @@ ms.assetid: 5e8121cc-03f0-4168-98cf-63c5c032bb0b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8ff8ada00af8b70659a19f863a52a5f1005e20b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf29721888fb672c242baa8a5984da4de40cd020
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069240"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858133"
 ---
 # <a name="select-tables-and-views-ssas"></a>选择表和视图 (SSAS)
   **“表导入向导”** 的这一页可用于选择要从其导入数据的表和视图。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  
@@ -26,8 +26,8 @@ ms.locfileid: "66069240"
   
  对于使用 Windows 身份验证的数据源，当前用户的凭据用于在“选择表和视图”对话框中提取表和视图。 对于其他数据源，在连接字符串中提供的凭据用于提取数据。  
   
-## <a name="uielement-list"></a>UIElement 列表  
- **服务器**  
+## <a name="ui-element-list"></a>UI 元素列表  
+ **Server**  
  显示连接到的服务器。  
   
  **Database**  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d84f66ae-7551-49bf-99d0-88368ca2dd0e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e23d4af96b5ce7c740f1b29893e6ee760104b871
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d545f57db8b2c20630ef9443d84b9a8b30448234
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076429"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536499"
 ---
 # <a name="create-a-dimension-using-the-dimension-wizard"></a>使用维度向导创建维度
   可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的维度向导创建新维度。  
@@ -45,7 +44,7 @@ ms.locfileid: "66076429"
   
          如果 **“键列”** 列表包含多个键列，则必须指定为键属性提供成员值的名称列。 为此，可在数据源视图中创建命名计算，然后使用该命名计算作为名称列。  
   
-    5.  单击 **下一步**。  
+    5.  单击“下一步”。  
   
 4.  在 **“选择相关表”** 页上，选择要在维度中包含的相关表，然后单击 **“下一步”**。  
   

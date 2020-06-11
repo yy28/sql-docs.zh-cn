@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ed38e8f28894143fd32b233870bc3aab2b24c464
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec7d1aa9a432b9d54e00427deb7b47ea5fd77fbc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078989"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543463"
 ---
 # <a name="deploying-an-analysis-services-project"></a>部署 Analysis Services 项目
   若要查看位于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集中的对象的多维数据集和维度数据，必须将该项目部署到指定的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中，然后再处理该多维数据集及其维度。 ** 部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目将在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中创建定义的对象。 处理**[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例中的对象会将基础数据源中的数据复制到多维数据集对象中。 有关详细信息，请参阅 [部署 Analysis Services 项目 (SSDT)](multidimensional-models/deploy-analysis-services-projects-ssdt.md) 和 [配置 Analysis Services 项目属性 (SSDT)](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
@@ -35,9 +34,9 @@ ms.locfileid: "66078989"
      查看项目的部署属性。 默认情况下， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目模板将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目配置为将所有项目增量部署到本地计算机上的默认 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例，以创建一个与此项目同名的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库，并在部署后使用默认处理选项处理这些对象。 有关详细信息，请参阅 [配置 Analysis Services 项目属性 (SSDT)](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
   
     > [!NOTE]  
-    >  如果要将项目部署到本地计算机[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]上的命名实例或远程服务器上的实例，请将**服务器**属性更改为相应的实例名称，例如\< *ServerName**>\\**InstanceName * * >*。  
+    >  如果要将项目部署到本地计算机上的命名实例 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 或远程服务器上的实例，请将**服务器**属性更改为相应的实例名称，例如 \<*ServerName**> \\ < **InstanceName**> *。  
   
-3.  单击" **确定**"。  
+3.  单击“确定”。  
   
 4.  在解决方案资源管理器中，右键单击“Analysis Services 教程”**** 项目，然后单击“部署”****。 您可能需要等待。  
   

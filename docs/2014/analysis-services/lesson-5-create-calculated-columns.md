@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d126766a-5699-4e9f-8213-8c7eea0fc14e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 58ba761f3e32f13ddcf81dc9875057195298c705
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b39909acacb29f68b0de49ba2093c9b812510172
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078563"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542709"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>第 6 课：创建计算列
   在本课中，将通过添加计算列在模型中创建新数据。 计算列基于模型中的现有数据。 了解详细信息，请参阅[计算列（SSAS 表格）](tabular-models/ssas-calculated-columns.md)。  
@@ -52,7 +51,7 @@ ms.locfileid: "66078563"
     > [!NOTE]  
     >  如果收到错误提示，请验证确保公式中的列名与在 [第 3 课：重命名列](rename-columns.md)中更改的列名是否匹配。  
   
-5.  将此列重`Month Calendar`命名为。  
+5.  将此列重命名为 `Month Calendar` 。  
   
  Month Calendar 计算列提供可排序的月份名称。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66078563"
   
      在您完成公式的建立后，按 Enter。  
   
-3.  将列重命名`Day of Week`为。  
+3.  将列重命名为 `Day of Week` 。  
   
 4.  单击列标题，然后将此列拖到“Day Name”**** 列与“Day of Month”**** 列之间。  
   
@@ -89,7 +88,7 @@ ms.locfileid: "66078563"
   
      在您完成公式的建立后，按 Enter。  
   
-4.  将列重命名`Product Subcategory Name`为。  
+4.  将列重命名为 `Product Subcategory Name` 。  
   
  Product Subcategory Name 计算列用于在 Product 表中创建一个层次结构，其中包括来自 Product Subcategory 表中 Product Subcategory Name 列的数据。 层次结构不能跨多个表。 您将在第 7 课中创建层次结构。  
   
@@ -103,7 +102,7 @@ ms.locfileid: "66078563"
   
      在您完成公式的建立后，按 Enter。  
   
-3.  将列重命名`Product Category Name`为。  
+3.  将列重命名为 `Product Category Name` 。  
   
  Product Category Name 计算列用于在 Product 表中创建一个层次结构，其中包括来自 Product Category 表中 Product Category Name 列的数据。 层次结构不能跨多个表。  
   
@@ -119,13 +118,13 @@ ms.locfileid: "66078563"
   
      在您完成公式的建立后，按 Enter。  
   
-4.  将列重命名`Margin`为。  
+4.  将列重命名为 `Margin` 。  
   
 5.  将此列拖到“Sales Amount”**** 列与“Tax Amt”**** 列之间。  
   
  Margin 计算列用来分析每个（产品）行的毛利润率。  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
  若要继续学习本课程，请转到下一课： [第 7 课：创建度量值](lesson-6-create-measures.md)。  
   
   

@@ -19,12 +19,12 @@ ms.assetid: 5770b696-6c04-4d5c-a8db-9eb92022fa42
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ab9d3531ba38c37ee46ce8be7cb3d650809ba11
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 99c4e9f79bb0080c5977be0dff3a4da8757671b6
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67950777"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669520"
 ---
 # <a name="constraint_table_usage-transact-sql"></a>CONSTRAINT_TABLE_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "67950777"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar （** 128 **）**|表限定符。|  
-|**TABLE_SCHEMA**|**nvarchar （** 128 **）**|包含该表的架构的名称。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
+|**TABLE_SCHEMA**|**nvarchar （** 128 **）**|包含该表的架构的名称。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 INFORMATION_SCHEMA 视图仅表示对象的元数据的子集。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
 |**TABLE_NAME**|**sysname**|表名。|  
 |**CONSTRAINT_CATALOG**|**nvarchar （** 128 **）**|约束限定符。|  
-|**CONSTRAINT_SCHEMA**|**nvarchar （** 128 **）**|包含该约束的架构的名称。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
+|**CONSTRAINT_SCHEMA**|**nvarchar （** 128 **）**|包含该约束的架构的名称。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 INFORMATION_SCHEMA 视图仅表示对象的元数据的子集。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
 |**CONSTRAINT_NAME**|**sysname**|约束名称。|  
   
 ## <a name="see-also"></a>另请参阅  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c4f5a06b-e2e4-4660-a3a8-6fd356742c02
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c0bcc06655333dfef073757218d9a740c1dfb0dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3dc10280e2ee957cd2245bb6a4993d7dcf536680
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080359"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544107"
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>SQL Server Management Studio 中的 Analysis Services 脚本项目
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中创建分析服务器脚本项目，将相关脚本分组到一起，以便用于开发、管理和源代码管理。 如果 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中当前未加载任何解决方案，则创建新的分析服务器脚本项目将自动创建一个新的解决方案。 否则，新的分析服务器脚本项目可以添加到现有解决方案中，或者在新的解决方案中进行创建。  
@@ -54,7 +53,7 @@ ms.locfileid: "66080359"
 |XMLA 脚本文件 (.xmla)|包含一个包括在项目中的 XMLA 脚本。|  
   
 ## <a name="analysis-services-templates"></a>Analysis Services 模板  
- 向分析服务器脚本项目添加新的 MDX、DMX 或 XMLA 脚本时，您可以选择使用模板资源管理器来查找 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模板，这些模板是演示如何执行指定操作的预定义脚本或语句的集合。 模板资源管理器在 "**视图**" 菜单上提供， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]并且[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]包括、 [!INCLUDE[ssEW](../../includes/ssew-md.md)]和模板。 有关详细信息，请参阅 [Use Analysis Services Templates in SQL Server Management Studio](use-analysis-services-templates-in-sql-server-management-studio.md)。  
+ 向分析服务器脚本项目添加新的 MDX、DMX 或 XMLA 脚本时，您可以选择使用模板资源管理器来查找 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模板，这些模板是演示如何执行指定操作的预定义脚本或语句的集合。 模板资源管理器在 "**视图**" 菜单上提供，并且包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和模板 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 。 有关详细信息，请参阅 [Use Analysis Services Templates in SQL Server Management Studio](use-analysis-services-templates-in-sql-server-management-studio.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用 SQL Server Data Tools &#40;SSDT 创建多维模型&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   

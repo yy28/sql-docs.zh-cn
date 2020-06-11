@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4b5eb5a-366d-4fc8-ad0d-5bdb8e7b4163
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6051f62caac2878b689a50e5773b047cb8df7afe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2164c617bae69264dce2a237ca48a125b096765
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076853"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544539"
 ---
 # <a name="enable-dimension-writeback"></a>“启用维度写回”
   通过为多维数据集或维度添加维度写回增强功能，可以使用户手动修改维度结构和成员。 对允许写维度的更新直接记录在该维度表中。 此增强功能更改了维度的 `WriteEnabled` 属性设置。  
@@ -40,7 +39,7 @@ ms.locfileid: "66076853"
 ## <a name="setting-dimension-writeback-capability"></a>设置维度写回功能  
  在向导的第二个 **“启用维度写回”** 页中，实际设置 **“在维度中启用写回”** 选项。 选择此选项将使维度的 `WriteEnabled` 属性自动设置为 `True`。 清除此选项将使该属性自动设置为 `False`。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  创建新成员时，必须包括维度中的所有属性。 您不能插入未指定维度的键属性值的成员。 因此，创建成员时，应服从对维度表定义的任何约束（例如，非空键值）。 您还应该考虑可能由维度属性指定的列，例如在 `CustomRollupColumn`、`CustomRollupPropertiesColumn` 或 `UnaryOperatorColumn` 维度属性中指定的列。  
   
 > [!WARNING]  

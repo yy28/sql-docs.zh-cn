@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3ef94fc86c78e896eab03bffb318b58e4b328245
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f92fdd7ea01cb9a373bafc3357de65fd2e622add
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079622"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543779"
 ---
 # <a name="rename-an-analysis-services-instance"></a>重命名 Analysis Services 实例
-  您可以使用 " [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **重命名实例**" 对话框重命名现有的实例。  
+  您可以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用 "**重命名实例**" 对话框重命名现有的实例。  
   
 > [!IMPORTANT]  
 >  重命名该实例时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例重命名工具将以提升的权限运行，更新与该实例关联的 Windows 服务名称、安全帐户和注册表项。 为确保执行这些操作，请务必以本地系统管理员身份运行此工具。  
@@ -35,7 +34,7 @@ ms.locfileid: "66079622"
   
 ### <a name="to-rename-an-instance-of-analysis-services"></a>重命名 Analysis Services 的实例  
   
-1.  从 C:\Program Files\Microsoft SQL Server\110\tools\binn\managementstudio 启动 "**实例重命名**" 工具**asinstancerename。**  
+1.  从 C:\Program Files\Microsoft SQL Server\110\tools\binn\managementstudio 启动**实例重命名**工具**asinstancerename.exe**  
   
 2.  在 **“重命名实例”** 对话框中，从 **“要重命名的实例”** 列表中选择要重命名的实例。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66079622"
   
      下面的示例进行了这方面的演示。 假设你使用默认虚拟帐户将表格模式服务器安装为名为 "表格" 的实例，从而导致以下配置：  
   
-    1.  实例名称 = \<服务器> \tabular  
+    1.  实例名称 = \<server> \TABULAR  
   
     2.  服务名称 = MSOLAP$TABULAR  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66079622"
   
      现在假定您将该实例重命名为 "TAB2"。 更改名称后将生成如下配置：  
   
-    1.  实例名称 = \<服务器> \tab2  
+    1.  实例名称 = \<server> \TAB2  
   
     2.  服务名称 = MSOLAP$TAB2  
   

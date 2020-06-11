@@ -1,5 +1,6 @@
 ---
 title: 错误处理（XQuery） |Microsoft Docs
+description: 了解 XQuery 中的错误处理，并查看处理动态错误的示例。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1be899b95a4e132c3b5aa42a73df9bd1b0ee057c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b80fda53a6ce0acfd326f6f897cb6cde1bf0e610
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038961"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305882"
 ---
 # <a name="error-handling-xquery"></a>错误处理 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "68038961"
  通常，在谓词内出现动态错误的情况下，不引发错误就不会更改语义，因为 () 映射到 False。 但是，在某些情况下，返回 () 而不返回动态错误可能导致意外结果。 下列示例说明了这一点。  
   
 ### <a name="example-using-the-avg-function-with-a-string"></a>示例：使用带字符串的 avg() 函数  
- 在下面的示例中，调用[avg 函数](../xquery/aggregate-functions-avg.md)来计算三个值的平均值。 这些值中的一个是字符串。 由于此情况下的 XML 实例是非类型化的，因此其中的所有数据都是非类型化的原子类型。 **Avg （）** 函数先将这些值转换为**xs： double** ，然后再计算平均值。 但是，不能将`"Hello"`值强制转换为**xs： double** ，并创建动态错误。 在这种情况下，将转换`"Hello"`为**xs： double**会导致空序列，而不是返回动态错误。 **Avg （）** 函数忽略此值，计算两个值的平均值，并返回150。  
+ 在下面的示例中，调用[avg 函数](../xquery/aggregate-functions-avg.md)来计算三个值的平均值。 这些值中的一个是字符串。 由于此情况下的 XML 实例是非类型化的，因此其中的所有数据都是非类型化的原子类型。 **Avg （）** 函数先将这些值转换为**xs： double** ，然后再计算平均值。 但是， `"Hello"` 不能将值强制转换为**xs： double** ，并创建动态错误。 在这种情况下，将转换 `"Hello"` 为**xs： double**会导致空序列，而不是返回动态错误。 **Avg （）** 函数忽略此值，计算两个值的平均值，并返回150。  
   
 ```  
 DECLARE @x xml  
@@ -58,7 +59,7 @@ SELECT @x.query('avg(//*)')
 ```  
   
 ### <a name="example-using-the-not-function"></a>示例：使用 not 函数  
- 如果在谓词中使用[not 函数](../xquery/functions-on-boolean-values-not-function.md)（例如`/SomeNode[not(Expression)]`），并且表达式导致动态错误，则将返回空序列而不是错误。 将**not （）** 应用于空序列将返回 True，而不是错误。  
+ 如果在谓词中使用[not 函数](../xquery/functions-on-boolean-values-not-function.md)（例如）， `/SomeNode[not(Expression)]` 并且表达式导致动态错误，则将返回空序列而不是错误。 将**not （）** 应用于空序列将返回 True，而不是错误。  
   
 ### <a name="example-casting-a-string"></a>示例：转换字符串  
  在下面的示例中，文字字符串“NaN”先转换为 xs:string，再转换为 xs:double。 结果是一个空行集。 虽然字符串“NaN”无法成功转换为 xs:double，但直到运行时才能确定，因为该字符串首先转换为 xs:string。  

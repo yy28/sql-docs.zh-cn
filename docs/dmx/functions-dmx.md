@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f68a66e778d44059a83ca6eca3cee35b4dffca9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad02b8414f2b59bf8e226b8d3d2cbbc05f161d9c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892767"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670180"
 ---
 # <a name="functions-dmx"></a>函数 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  使用数据挖掘扩展插件（DMX）在中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]查询对象时，您可以使用函数返回比数据挖掘模型或输入数据集中的列中的值更多的信息。 例如，使用 DMX 查询不仅可以返回列的预测值，还可以返回预测正确的概率。 您不仅可以使用 DMX 函数，还可以使用 Microsoft Visual Basic for Applications (VBA)、Microsoft Excel 和存储过程中的函数。  
+  使用数据挖掘扩展插件（DMX）在中查询对象时 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，您可以使用函数返回比数据挖掘模型或输入数据集中的列中的值更多的信息。 例如，使用 DMX 查询不仅可以返回列的预测值，还可以返回预测正确的概率。 您不仅可以使用 DMX 函数，还可以使用 Microsoft Visual Basic for Applications (VBA)、Microsoft Excel 和存储过程中的函数。  
   
 ## <a name="dmx-functions"></a>DMX 函数  
  使用 DMX 函数可以执行下列任务：  

@@ -1,7 +1,7 @@
 ---
 title: sys. all_objects （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/20/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -19,12 +19,12 @@ ms.assetid: 547e4be4-a8e4-48ce-9d8d-37b169985081
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 983ecdb8a80c6be5e7641fee7ab6770cb63b3e0e
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: ffd6d98cec5b495b395a915bd6f53308d474333c
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152016"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83731894"
 ---
 # <a name="sysall_objects-transact-sql"></a>sys.all_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "83152016"
 |类型|**char(2)**|对象类型：<br /><br /> AF = 聚合函数 (CLR)<br /><br /> C = CHECK 约束<br /><br /> D = DEFAULT（约束或独立）<br /><br /> F = FOREIGN KEY 约束<br /><br /> FN = SQL 标量函数<br /><br /> FS = 程序集 (CLR) 标量函数<br /><br /> FT = 程序集 (CLR) 表值函数<br /><br /> IF = SQL 内联表值函数<br /><br /> IT = 内部表<br /><br /> P = SQL 存储过程<br /><br /> PC = 程序集（CLR）存储过程<br /><br /> PG = 计划指南<br /><br /> PK = PRIMARY KEY 约束<br /><br /> R = 规则（旧式，独立）<br /><br /> RF = 复制筛选过程<br /><br /> S = 系统基表<br /><br /> SN = 同义词<br /><br /> SO = 序列对象<br /><br /> SQ = 服务队列<br /><br /> TA = 程序集 (CLR) DML 触发器<br /><br /> TF = SQL 表值函数<br /><br /> TR = SQL DML 触发器<br /><br /> TT = 表类型<br /><br /> U = 表（用户定义类型）<br /><br /> UQ = UNIQUE 约束<br /><br /> V = 视图<br /><br /> X = 扩展存储过程|  
 |type_desc|**nvarchar(60)**|对象类型的说明。 AGGREGATE_FUNCTION<br /><br /> CHECK_CONSTRAINT<br /><br /> DEFAULT_CONSTRAINT<br /><br /> FOREIGN_KEY_CONSTRAINT<br /><br /> SQL_SCALAR_FUNCTION<br /><br /> CLR_SCALAR_FUNCTION<br /><br /> CLR_TABLE_VALUED_FUNCTION<br /><br /> SQL_INLINE_TABLE_VALUED_FUNCTION<br /><br /> INTERNAL_TABLE<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> PLAN_GUIDE<br /><br /> PRIMARY_KEY_CONSTRAINT<br /><br /> RULE<br /><br /> REPLICATION_FILTER_PROCEDURE<br /><br /> SYSTEM_TABLE<br /><br /> SYNONYM<br /><br /> SERVICE_QUEUE<br /><br /> CLR_TRIGGER<br /><br /> SQL_TABLE_VALUED_FUNCTION<br /><br /> SQL_TRIGGER<br /><br /> TABLE_TYPE<br /><br /> USER_TABLE<br /><br /> UNIQUE_CONSTRAINT<br /><br /> VIEW<br /><br /> EXTENDED_STORED_PROCEDURE|  
 |create_date|**datetime**|对象的创建日期。|  
-|modify_date|**datetime**|上次使用 ALTER 语句修改对象的日期。 如果对象是表或视图，则创建或修改表或视图的聚集索引时，modify_date 也会更改。|  
+|modify_date|**datetime**|上次使用 ALTER 语句修改对象的日期。 如果对象是表或视图，则在创建或修改表或视图的索引时，modify_date 也会发生更改。|  
 |is_ms_shipped|**bit**|内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件所创建的对象。|  
 |is_published|**bit**|对象为发布对象。|  
 |is_schema_published|**bit**|仅发布对象的架构。|  

@@ -12,17 +12,17 @@ ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36b0d8b5d91b18ad4b97ac873ad3073ca97b133e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b43cc124ff6f5147a3255cbdf164679bae55d18
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871983"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858535"
 ---
 # <a name="database-properties-files-page"></a>数据库属性（“文件”页）
   使用此页可以创建新的数据库，也可以查看或修改所选数据库的属性。 对于现有数据库，本主题适用于 **数据库属性（“文件”页）** ；另外，本主题还适用于 **新建数据库（“常规”页）** 。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **数据库名称**  
  添加或显示数据库的名称。  
   

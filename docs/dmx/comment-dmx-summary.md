@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 241ab17847a040e33c1fdb5e116e39fbc535d16d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 71e6c616cef5a2f4945a1335e1297aa3ad3a2ce4
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68073092"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669374"
 ---
 # <a name="---comment-dmx-summary"></a>--（注释）（DMX）摘要
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68073092"
  *Comment_Text*  
  包含注释文本的字符串。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  该运算符用于单行或嵌套的注释。 通过使用 -- 插入的注释由换行符分隔。  
   
  注释没有最大长度限制。  

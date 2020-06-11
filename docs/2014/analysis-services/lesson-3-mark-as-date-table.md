@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c32cc336-b7d8-4122-9d62-4936344d2315
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 26877c4892b050cbf9c8dcc6553530dff513f8fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b714999109d4935130d7787983e18b76f9a442a7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078788"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543379"
 ---
 # <a name="lesson-4-mark-as-date-table"></a>第 4 课：标记为日期表
   在“第 2 课：添加数据”中，您导入了名为 DimDate 的维度表。 然后您在“第 3 课：重命名列”中将 DimDate 表重命名为简单的 Date。 虽然在模型中该表已命名为 Date，它也可以称为“日期表”**，该表中包含日期和时间数据。  

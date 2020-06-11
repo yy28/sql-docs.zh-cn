@@ -1,5 +1,6 @@
 ---
 title: 映射 Oracle 和 SQL Server 数据类型（OracleToSQL） |Microsoft Docs
+description: 了解如何自定义 Oracle 数据类型与 SQL Server 的 Oracle 映射的 SSMA 或接受默认值。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,15 +13,15 @@ ms.assetid: 05da1495-63b9-47b7-86e2-6746394a2d8a
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: e5f14f79c355317f5e5d7a047b2d2c1ca71a4acb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8a9cb39213ed2809b7074a474edf5e4e20bd9122
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262960"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293830"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>映射 Oracle 和 SQL Server 数据类型 (OracleToSQL)
-Oracle 数据库类型与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库类型不同。 将 Oracle 数据库对象转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象时，必须指定如何将数据类型从 oracle 映射到。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 你可以接受默认的数据类型映射，也可以自定义映射，如以下部分所示。  
+Oracle 数据库类型与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库类型不同。 将 Oracle 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象时，必须指定如何将数据类型从 oracle 映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 你可以接受默认的数据类型映射，也可以自定义映射，如以下部分所示。  
   
 ## <a name="default-mappings"></a>默认映射  
 SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，请参阅[项目设置 &#40;类型映射&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md)。  
@@ -51,7 +52,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
 2.  若要添加新映射，请执行以下操作：  
   
-    1.  单击 **“添加”** 。  
+    1.  单击“添加”。  
   
     2.  在 "**源类型**" 下，选择要映射的 Oracle 数据类型。  
   
@@ -59,7 +60,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
         这使您可以为相同数据类型的较小值和较大值自定义数据映射。  
   
-    4.  在 "**目标类型**" 下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选择目标数据类型。  
+    4.  在 "**目标类型**" 下，选择目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。  
   
         某些类型需要目标数据类型长度。 如果需要，请在 "**替换为**" 框中输入新的数据长度。  
   
@@ -67,7 +68,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
 3.  若要修改数据类型映射，请执行以下操作：  
   
-    1.  单击 **“编辑”**。  
+    1.  单击 **“编辑”** 。  
   
     2.  在 "**源类型**" 下，选择要映射的 Oracle 数据类型。  
   
@@ -75,7 +76,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
         这使您可以为相同数据类型的较小值和较大值自定义数据映射。  
   
-    4.  在 "**目标类型**" 下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选择目标数据类型。  
+    4.  在 "**目标类型**" 下，选择目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。  
   
         某些类型需要目标数据类型长度。 如果需要，请在 "**替换为**" 框中输入新的数据长度，然后[!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -83,7 +84,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
     1.  在 "类型映射" 列表中选择包含要删除的数据类型映射的行。  
   
-    2.  单击 **“删除”**。  
+    2.  单击“删除”。  
   
         不能删除继承的映射。 但是，在特定对象或对象类别上，自定义映射会重写继承的映射。  
   

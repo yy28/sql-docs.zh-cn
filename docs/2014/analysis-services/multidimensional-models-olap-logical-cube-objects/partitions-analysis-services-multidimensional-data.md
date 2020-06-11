@@ -22,20 +22,19 @@ helpviewer_keywords:
 ms.assetid: cd10ad00-468c-4d49-9f8d-873494d04b4f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 47a7b4c2b11a6d17a52af20aef71ee13863ea29c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86057c14655b3fd2f0322387beb16a4a94717b68
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702620"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545259"
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>分区（Analysis Services - 多维数据）
   分区是一部分度量值组数据的容器。 从 MDX 查询是看不到分区的，任何查询反映的均是度量值组的全部内容，这与为度量值组定义的分区数量无关。 分区的数据内容由分区的查询绑定和切片表达式定义。  
   
  简单 <xref:Microsoft.AnalysisServices.Partition> 对象由基本信息、切片定义、聚合设计等组成。 基本信息包括分区的名称、存储模式和处理模式等。 切片定义是指定元组或集的 MDX 表达式。 切片定义具有的限制与 StrToSet MDX 函数相同。 借助 CONSTRAINED 参数，切片定义可使用多维数据集中的维度、层次结构、级别和成员名称、键、唯一名称或其他命名对象，但不能使用 MDX 函数。 聚合设计是可由多个分区共享的聚合定义的集合。 默认聚合设计取自父多维数据集的聚合设计。  
   
- 使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]分区来管理和存储多维数据集中的度量值组的数据和聚合。 每个度量值组至少有一个分区；该分区在定义度量值组时创建。 为度量值组创建新分区时，该新分区将添加到此度量值组已有的分区集合中。 度量值组反映了其所有分区中所包含的组合数据。 这意味着必须确保度量值组中某分区的数据不同于此度量值组中任何其他分区的数据，从而确保未在度量值组中多次反映此数据。 度量值组的原始分区基于多维数据集的数据源视图中的单个事实数据表。 当度量值组有多个分区时，每个分区可以引用数据源视图中的或者多维数据集的基本关系数据源中的不同表。 如果将每个分区限制到表中的不同行，则度量值组中的多个分区可以引用同一个表。  
+ 使用分区 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 来管理和存储多维数据集中的度量值组的数据和聚合。 每个度量值组至少有一个分区；该分区在定义度量值组时创建。 为度量值组创建新分区时，该新分区将添加到此度量值组已有的分区集合中。 度量值组反映了其所有分区中所包含的组合数据。 这意味着必须确保度量值组中某分区的数据不同于此度量值组中任何其他分区的数据，从而确保未在度量值组中多次反映此数据。 度量值组的原始分区基于多维数据集的数据源视图中的单个事实数据表。 当度量值组有多个分区时，每个分区可以引用数据源视图中的或者多维数据集的基本关系数据源中的不同表。 如果将每个分区限制到表中的不同行，则度量值组中的多个分区可以引用同一个表。  
   
  分区是用来管理多维数据集（尤其是大型多维数据集）的强大而灵活的工具。 例如，某个包含销售信息的多维数据集可以包含存储过去每一年数据的分区和存储当年每一季度数据的分区。 将当前信息添加到多维数据集时，只需处理当前季度分区；如果处理的数据量越少，则会通过缩短处理时间来提高处理性能。 在年末，这四个针对季度的分区可以合并成一个单独的针对全年的分区，并为新一年的第一季度创建新分区。 此外，该新分区的创建过程可以作为数据仓库加载和多维数据集处理过程的一部分自动执行。  
   

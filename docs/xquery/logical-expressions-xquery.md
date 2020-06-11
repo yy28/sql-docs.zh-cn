@@ -1,5 +1,6 @@
 ---
 title: 逻辑表达式（XQuery） |Microsoft Docs
+description: 了解 XQuery 中支持的逻辑表达式。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b1dc7b961dd0b85824ea180cbc4815d5488a360
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 62552e4e533126bc1e6b53e78e2b0456557e7f45
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004503"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689017"
 ---
 # <a name="logical-expressions-xquery"></a>逻辑表达式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ expression1 and expression2
 expression1 or expression2  
 ```  
   
- 中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的测试表达式`expression1,``expression2`可以导致空序列、一个或多个节点的序列或单个布尔值。 根据结果，按照下列方式确定它们的有效布尔值：  
+ 中的测试表达式 `expression1,``expression2` [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以导致空序列、一个或多个节点的序列或单个布尔值。 根据结果，按照下列方式确定它们的有效布尔值：  
   
 -   如果测试表达式的结果是空序列，则表达式的结果为 False。  
   
@@ -47,7 +48,7 @@ expression1 or expression2
   
  然后，将逻辑**and**和**or**运算符应用于带有标准逻辑语义的表达式的结果布尔值。  
   
- 下面的查询从产品目录中检索特定产品型号的前一小图片（ `Picture` <> 元素）。 请注意，对于每一个产品说明文档，目录都可以存储具有不同属性（如大小和角度）的一个或多个产品图片。  
+ 下面的查询从产品目录中检索特定产品型号的前一小图片（<`Picture`> 元素）。 请注意，对于每一个产品说明文档，目录都可以存储具有不同属性（如大小和角度）的一个或多个产品图片。  
   
 ```  
 SELECT CatalogDescription.query('  

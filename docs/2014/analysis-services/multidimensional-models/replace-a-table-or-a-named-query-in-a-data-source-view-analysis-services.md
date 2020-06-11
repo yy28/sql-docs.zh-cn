@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 60c2a018-1299-4915-b60e-e73316524def
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b9f1863fc3d707614b7c957dc5ef49561272d6e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b625081a4b7cafaab537e91f9c2730578d37efab
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073130"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545743"
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>在数据源视图中替换表或命名查询 (Analysis Services)
   在数据源视图设计器中，可以将数据源视图 (DSV) 中的表、视图或命名查询替换为来自相同数据源或不同数据源的其他表或视图，或者替换为 DSV 中定义的命名查询。 替换表时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中的所有其他对象或引用了该表的项目将继续引用该表，因为 DSV 中表的对象 ID 不会发生更改。 任何仍然相关（基于名称和列类型匹配）的关系仍然保留。 与此不同的是，如果删除后再添加表，则将丢失引用和关系，因此必须重新创建引用和关系。  
@@ -59,7 +58,7 @@ ms.locfileid: "66073130"
   
     2.  选择要用以替换表或命名查询的表  
   
-5.  单击" **确定**"。  
+5.  单击“确定”。  
   
 6.  保存已修改的数据源视图。  
   

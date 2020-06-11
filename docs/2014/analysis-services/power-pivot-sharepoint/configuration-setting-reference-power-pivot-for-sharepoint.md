@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 45ef593e13643ac38184f8b88cbe4cdf38f0126c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf17937a53d6f2f85640e80e9123f8329864e174
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071891"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547589"
 ---
 # <a name="configuration-setting-reference-powerpivot-for-sharepoint"></a>配置设置参考 (PowerPivot for SharePoint)
   本主题提供有关 SharePoint 场中的 PowerPivot 服务应用程序使用的配置设置的参考文档。 如果您使用 PowerShell 脚本来配置服务器，或如果您要查找特定设置的信息，则本主题中的信息可提供详细的说明。  
@@ -30,7 +29,7 @@ ms.locfileid: "66071891"
   
  [连接池](#ConnectionPool)  
   
- [负载平衡](#AllocationScheme)  
+ [负载均衡](#AllocationScheme)  
   
  [数据刷新](#DataRefresh)  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66071891"
   
 |名称|默认|有效值|说明|  
 |----------|-------------|------------------|-----------------|  
-|分配方法|循环|循环<br /><br /> 基于运行状况|用于在两个或更多 Analysis Services 服务器实例之间分配负载请求的方案。<br /><br /> 默认情况下，PowerPivot 服务将基于服务器运行状况平均分配请求。 “基于运行状况”选项基于可用内存和 CPU 利用率，将请求分配到具有最多可用系统资源的服务器。<br /><br /> 循环将按先后顺序在可用的服务器之间循环分配请求，而不考虑当前负载或服务器运行状况。|  
+|分配方法|循环|轮循机制<br /><br /> 基于运行状况|用于在两个或更多 Analysis Services 服务器实例之间分配负载请求的方案。<br /><br /> 默认情况下，PowerPivot 服务将基于服务器运行状况平均分配请求。 “基于运行状况”选项基于可用内存和 CPU 利用率，将请求分配到具有最多可用系统资源的服务器。<br /><br /> 循环将按先后顺序在可用的服务器之间循环分配请求，而不考虑当前负载或服务器运行状况。|  
   
 ##  <a name="data-refresh"></a><a name="DataRefresh"></a>数据刷新  
  指定为组织定义正常或典型工作日的小时数范围。 这些配置设置确定在工作时间后何时进行数据处理以便执行数据刷新操作。 工作时间后处理可在工作日结束时开始。 对于希望使用在正常工作时间内生成的事务数据来刷新 PowerPivot 数据源的文档所有者而言，工作时间后处理是一个计划选项。  
@@ -77,7 +76,7 @@ ms.locfileid: "66071891"
 |开始时间|上午 04:00|1 至 12 小时，其中，该值为此范围内的有效整数。<br /><br /> 类型为 Time。|设置工作时间范围的下限。|  
 |结束时间|晚上 08:00|1 至 12 小时，其中，该值为此范围内的有效整数。<br /><br /> 类型为 Time。|设置工作时间范围的上限。|  
 |PowerPivot 无人参与的数据刷新帐户|无|目标应用程序 ID|此帐户用于代表计划所有者运行数据刷新作业。<br /><br /> 无人参与的数据刷新帐户必须事先定义，然后才能在服务应用程序配置页中引用。 有关详细信息，请参阅[配置 PowerPivot 无人参与的数据刷新帐户 &#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)。|  
-|允许用户输入自定义 Windows 凭据|启用|布尔|确定计划的数据刷新配置页是否显示一个选项，让计划所有者能够指定用于运行数据刷新作业的 Windows 用户帐户和密码。<br /><br /> 必须启用安全存储区服务才能使用此选项。 有关详细信息，请参阅为[PowerPivot 数据刷新配置存储的凭据 &#40;PowerPivot for SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)。|  
+|允许用户输入自定义 Windows 凭据|已启用|布尔值|确定计划的数据刷新配置页是否显示一个选项，让计划所有者能够指定用于运行数据刷新作业的 Windows 用户帐户和密码。<br /><br /> 必须启用安全存储区服务才能使用此选项。 有关详细信息，请参阅为[PowerPivot 数据刷新配置存储的凭据 &#40;PowerPivot for SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)。|  
 |最大处理历史记录长度|365|1 到 5000 天|确定数据刷新历史记录在 PowerPivot 服务应用程序数据库中保留多长的时间。 有关详细信息，请参阅 [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md)。|  
   
 ##  <a name="usage-data-collection"></a><a name="UsageData"></a>使用情况数据收集  

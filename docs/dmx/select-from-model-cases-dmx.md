@@ -1,21 +1,21 @@
 ---
-title: 选择 " &lt;从&gt;模型"。事例（DMX） |Microsoft Docs
+title: 选择 "从 &lt; 模型" &gt; 。事例（DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5f0334c37eeedafee7066f01d61745fcb82d1629
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6753f90b76f70de9f7368a5656ba93b16a3740d1
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892846"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669617"
 ---
-# <a name="select-from-ltmodelgtcases-dmx"></a>选择 " &lt;从&gt;模型"。事例（DMX）
+# <a name="select-from-ltmodelgtcases-dmx"></a>选择 "从 &lt; 模型" &gt; 。事例（DMX）
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   支持钻取功能，并返回用于为模型定型的事例。 如果对挖掘结构和挖掘模型都启用了钻取功能，并且具有相应的权限，则还可以返回未包括在模型中的结构列。  
@@ -44,7 +44,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
   
  若要包括挖掘模型中没有包括的结构列，请使用函数 `StructureColumn('<structure column name>')`。  
   
- *模型*  
+ *model*  
  模型标识符。  
   
  *条件表达式*  
@@ -53,7 +53,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  *expression*  
  可选。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果对挖掘模型和挖掘结构都启用了钻取功能，那么作为具有模型和结构钻取权限的角色成员的用户，可以访问没有包括在挖掘模型中的挖掘结构列。 因此，为了保护敏感数据或个人信息，应构造数据源视图来屏蔽个人信息，并且仅在必要时才对挖掘结构授予**AllowDrillthrough**权限。  
   
  [Lag &#40;DMX&#41;](../dmx/lag-dmx.md)函数可与时序模型一起使用，以返回或筛选每个事例与初始时间之间的时间延迟。  
@@ -61,7 +61,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  使用**WHERE**子句中的[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)函数仅返回与架构行集的 NODE_UNIQUE_NAME 列指定的节点关联的事例。  
   
 ## <a name="examples"></a>示例  
- 下面的示例基于挖掘结构目标邮件，该邮件基于数据库及其关联的[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]挖掘模型。 有关详细信息，请参阅[数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
+ 下面的示例基于挖掘结构目标邮件，该邮件基于 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 数据库及其关联的挖掘模型。 有关详细信息，请参阅[数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
   
 ### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>示例 1：钻取到模型事例和结构列  
  以下示例返回用于测试目标邮件模型的所有事例的列。 如果建立模型所依据的挖掘结构不存在维持测试数据集，此查询将返回 0 个事例。 可以使用表达式列表仅返回需要的列。  

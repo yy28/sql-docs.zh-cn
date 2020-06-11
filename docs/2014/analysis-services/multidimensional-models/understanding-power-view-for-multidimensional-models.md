@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 53c14ed48d2b95988b1d7d794e4ea711be659dd1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ddd54c22af1e7130940fb8ff3073de0821f4fc90
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79525458"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536019"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>了解多维模型的 Power View
   本文介绍 Microsoft SQL Server 2014 中用于多维模型的 Power View 功能，并为希望在组织中实现多维模型的 Power View 的 BI 专业人员和管理员提供重要信息。  
@@ -142,7 +141,7 @@ ms.locfileid: "79525458"
   
  ![Power View 中不可聚合的层次结构](../media/daxmd-nonaggrattrib.gif "Power View 中不可聚合的层次结构")  
   
-## <a name="images"></a>图像  
+## <a name="images"></a>映像  
  Power View 可呈现图像。 在多维模型中，您向 Power View 提供图像的方式之一是公开图像的包含 URL（统一资源定位符）的列。 在此版本中，Analysis Services 支持将维度属性标记为类型 ImageURL。 然后通过表格元数据将此数据类型提供给 Power View。 Power View 然后可以下载并在可视化对象内显示 URL 中指定的图像。  
   
  **SSDT 中的 ImageURL 维度属性类型**  

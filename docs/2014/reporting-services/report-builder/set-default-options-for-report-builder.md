@@ -12,17 +12,17 @@ ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e119a0f4423b07a4c97339d843fbc60181886eb3
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66107619"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858589"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>“报表生成器选项”对话框 -&gt;“设置”（报表生成器）
   单击 "**报表生成器**" 按钮，然后单击 "**选项**" 以设置用于显示最近的文件和连接的选项。 您也可以更改默认报表服务器，如果没有默认报表服务器则可以添加一个。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **默认使用此报表服务器或 SharePoint 站点**  
  您的管理员可能已配置了此选项。 此值可以为以 http:// 或 https:// 开头的格式正确的 URL。 此设置决定了默认情况下在表/矩阵和图表向导中显示哪些数据源连接。 另外，报表将在此服务器上进行处理，并且您可以引用此服务器上的资源。  
   

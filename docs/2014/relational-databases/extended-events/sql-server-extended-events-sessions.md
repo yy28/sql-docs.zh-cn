@@ -1,7 +1,7 @@
 ---
 title: SQL Server 扩展事件会话 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 05/26/2020
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xevents
@@ -14,12 +14,12 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 83440163bdb1e03690fe4f5dcf93fdfc6779057f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 63a94ef98eeb1b460672e50657b5ece6ef491764
+ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706609"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83868338"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 扩展事件会话是在用于承载 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 扩展事件引擎的进程中创建的。 扩展事件会话的以下各方面信息可为您理解扩展事件基础结构和所发生的常规处理提供有关背景知识：  
@@ -30,9 +30,9 @@ ms.locfileid: "82706609"
   
 ## <a name="session-states"></a>会话状态  
  下图说明了扩展事件会话的不同状态。  
-  
- ![扩展事件会话状态](../../database-engine/media/xesessionstate.gif "扩展事件会话状态")  
-  
+
+![扩展事件会话状态](../../database-engine/media/xesessionstate.png "扩展事件会话状态")
+
  对照前面的图，可以注意到在对事件会话发出不同的 DDL 命令时会话状态将发生更改。 下表说明了这些状态更改。  
   
 |图例标签|DDL 语句|说明|  

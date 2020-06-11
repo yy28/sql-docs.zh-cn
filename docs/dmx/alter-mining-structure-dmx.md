@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5535428d89a0d14b60e3ac79d281f63b4c69bfb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4f4cd71f7ecfaa0f8221f599a2814c153af97be
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889866"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669873"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ USING <algorithm> [(<parameter list>)]
  *构造*  
  要向其中添加挖掘模型的挖掘结构的名称。  
   
- *模型*  
+ *model*  
  挖掘模型的唯一名称。  
   
  *列定义列表*  
@@ -55,7 +55,7 @@ USING <algorithm> [(<parameter list>)]
  由提供程序定义的数据挖掘算法的名称。  
   
 > [!NOTE]  
->  可以使用[DMSCHEMA_MINING_SERVICES 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)来检索当前提供程序支持的算法的列表。 若要查看当前实例中支持的算法[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，请参阅[数据挖掘属性](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)。  
+>  可以使用[DMSCHEMA_MINING_SERVICES 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)来检索当前提供程序支持的算法的列表。 若要查看当前实例中支持的算法 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，请参阅[数据挖掘属性](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)。  
   
  *参数列表*  
  可选。 由提供程序定义的算法所需参数的逗号分隔列表。  
@@ -63,7 +63,7 @@ USING <algorithm> [(<parameter list>)]
  *筛选条件*  
  应用于事例表中的列的筛选表达式。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果挖掘结构中包含组合键，则挖掘模型必须包括该结构中定义的所有键列。  
   
  如果模型不需要可预测列（例如，使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 聚类分析和 [!INCLUDE[msCoName](../includes/msconame-md.md)] 顺序分析和聚类分析算法生成的模型），则不必在语句中包括列定义。 生成的模型中的所有属性都将被视为输入。  
@@ -161,7 +161,7 @@ USING Microsoft_Naive_Bayes (MAXIMUM_STATES = 50)
 ```  
   
 ## <a name="example-2-add-a-filtered-model-to-a-structure"></a>示例 2：向结构中添加筛选后的模型  
- 下面的示例向**新的邮件**挖掘`Naive Bayes Women`结构中添加挖掘模型。 新模型有着与示例 1 中添加的挖掘模型相同的基本结构；但是，此模型将挖掘结构中的事例限定为 50 岁以上的女性客户。  
+ 下面的示例向 `Naive Bayes Women` **新的邮件**挖掘结构中添加挖掘模型。 新模型有着与示例 1 中添加的挖掘模型相同的基本结构；但是，此模型将挖掘结构中的事例限定为 50 岁以上的女性客户。  
   
 ```  
 ALTER MINING STRUCTURE [New Mailing]  

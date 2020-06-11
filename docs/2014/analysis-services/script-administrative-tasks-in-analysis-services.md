@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 106415df-81ff-4ec3-b2e1-ca66324f4cab
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 69ccdaf9bf0f8b67309a1f88c0c44a90f3167b6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 660f0d52d4057a9bdb9e2a0af0ed268d64a7747a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530917"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538843"
 ---
 # <a name="script-administrative-tasks-in-analysis-services"></a>在 Analysis Services 中编写管理任务脚本
   您可以通过编写或生成可手动执行或通过 SQL Server 代理来计划的脚本自动执行 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 管理任务。 下表总结了可供您使用的脚本编写选项，并提供指向更多信息的链接。  
@@ -33,7 +32,7 @@ ms.locfileid: "69530917"
 |MDX 脚本|.mdx|多维表达式 (MDX) 语言是一种用于分析数据源的业界标准查询语言，它同样也是 XMLA 规范的一部分。<br /><br /> 您可以创建用来查询数据或系统信息的独立 MDX 脚本文件。 例如，可以通过 MDX Select 语句来访问公开与本地服务器操作和服务器运行状况有关的信息的动态管理视图 (DMV)。<br /><br /> MDX 脚本可在多维和表格模式的服务器上运行。 您可以使用 `Invoke-ASCmd` 从 SQL Server Management Studio 或 PowerShell 会话以交互方式运行该脚本。|[MDX 脚本编写基础知识 (Analysis Services)](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)<br /><br /> [使用动态管理视图 (DMV) 监视 Analysis Services](instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)<br /><br /> [Use Analysis Services Templates in SQL Server Management Studio](instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |DMX 脚本|.dmx|数据挖掘扩展插件 (DMX) 是用于数据挖掘模型的数据定义、数据操作和数据查询语言。 您可以借助模板来入门。|[在 SQL Server Management Studio 中创建一个 DMX 查询](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [Use Analysis Services Templates in SQL Server Management Studio](instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |[!INCLUDE[ssIS](../includes/ssis-md.md)] 包|.dtsx|[!INCLUDE[ssIS](../includes/ssis-md.md)] 提供的任务和数据流可用于创建、修改、删除和处理 Analysis Services 对象（包括数据挖掘模型）。 可以使用 SQL Server 代理调度要运行的包。|[Analysis Services 执行 DDL 任务](../integration-services/control-flow/analysis-services-execute-ddl-task.md)<br /><br /> [Analysis Services 处理任务](../integration-services/control-flow/analysis-services-processing-task.md)<br /><br /> [数据挖掘查询任务](../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [数据挖掘模型定型目标](../integration-services/data-flow/data-mining-model-training-destination.md)<br /><br /> [维度处理目标](../integration-services/data-flow/dimension-processing-destination.md)<br /><br /> [分区处理目标](../integration-services/data-flow/partition-processing-destination.md)|  
-|分析管理对象||分析管理对象 (AMO) 是一种托管接口，编程人员可用它来开发自动执行管理操作的自定义应用程序。 使用 AMO，您可以开发运行您提供的 XMLA、MDX 或 DMX 脚本的自定义应用程序。|[使用 AMO 对管理任务进行编程](https://docs.microsoft.com/bi-reference/amo/programming-administrative-tasks-with-amo)|  
+|分析管理对象||分析管理对象 (AMO) 是一种托管接口，编程人员可用它来开发自动执行管理操作的自定义应用程序。 使用 AMO，您可以开发运行您提供的 XMLA、MDX 或 DMX 脚本的自定义应用程序。|[利用 AMO 对管理任务进行编程](https://docs.microsoft.com/bi-reference/amo/programming-administrative-tasks-with-amo)|  
   
 ## <a name="see-also"></a>另请参阅  
  [Analysis Services 脚本语言 &#40;ASSL&#41; 参考](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   

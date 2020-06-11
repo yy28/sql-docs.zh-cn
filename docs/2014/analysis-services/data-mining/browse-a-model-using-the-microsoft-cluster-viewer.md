@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: 591fe30b-d88f-4a71-94d4-4a3907fc275d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e13882cf6186632b893b18369aef263e6cdd6445
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 98ab519dd75d6d491d80e790e9afe06833c5597b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086053"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525432"
 ---
 # <a name="browse-a-model-using-the-microsoft-cluster-viewer"></a>使用 Microsoft 分类查看器浏览模型
-  中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的分类查看器显示用[!INCLUDE[msCoName](../../includes/msconame-md.md)]聚类分析算法生成的挖掘[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法是一种分段算法，用于浏览数据以标识数据中的变体并创建预测。 有关此算法的详细信息，请参阅 [Microsoft Clustering Algorithm](microsoft-clustering-algorithm.md)。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]中的分类查看器 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 显示用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法生成的挖掘模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法是一种分段算法，用于浏览数据以标识数据中的变体并创建预测。 有关此算法的详细信息，请参阅 [Microsoft Clustering Algorithm](microsoft-clustering-algorithm.md)。  
   
 > [!NOTE]  
 >  若要查看有关模型中使用的公式以及所发现的模式的详细信息，请使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般内容树查看器。 有关详细信息，请参阅[使用 Microsoft 一般内容树查看器浏览模型](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般内容树查看器（数据挖掘）](../microsoft-generic-content-tree-viewer-data-mining.md)。  

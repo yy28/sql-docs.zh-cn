@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a79cd87f-2a55-4020-90f7-9ee627379588
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 901d8e0adc923ec5f70fbf1097cc806b30318809
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 871f985333e1681eadfeed53544ed0fb5c1f18dc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069750"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538419"
 ---
 # <a name="select-a-data-source-view-cube-wizard"></a>选择数据源视图（多维数据集向导）
   可以使用 **“选择数据源视图”** 页，为空多维数据集选择数据源视图。  

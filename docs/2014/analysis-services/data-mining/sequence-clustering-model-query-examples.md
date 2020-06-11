@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d871ba87147f24fdd60c9effe5f279d9ea355db1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d56924f27f7986861895cf4fff21fa758cc47070
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082915"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520425"
 ---
 # <a name="sequence-clustering-model-query-examples"></a>顺序分析和聚类分析模型查询示例
   在对数据挖掘模型创建查询时，可以创建内容查询，也可以创建预测查询。内容查询提供有关模型中存储的信息的详细信息，预测查询使用模型中的模式并基于您提供的新数据进行预测。 对于顺序分析和聚类分析模型，内容查询通常会提供所发现的分类的更多详细信息，或这些分类中的转换。 您还可以使用查询来检索有关模型的元数据。  

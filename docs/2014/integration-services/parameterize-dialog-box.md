@@ -12,17 +12,17 @@ ms.assetid: fac02b6d-d247-447a-8940-e8700c7ac350
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7d60820ba7c384347aeeec80d8c41f934078eca8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e63db637566cd9e2e481731c4d742f02c261ddd
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056865"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856469"
 ---
 # <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
   通过 **“参数化”** 对话框，可以将新参数或现有参数与某个任务的属性相关联。 可通过以下方式打开该对话框：在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中右键单击一个任务或“控制流”选项卡，然后单击“参数化”。**** 以下列表介绍了此对话框中的 UI 元素。 有关参数的详细信息，请参阅 [Integration Services (SSIS) 参数](integration-services-ssis-package-and-project-parameters.md)。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **属性**  
  选择要与参数相关联的任务属性。 此列表包含可参数化的所有属性。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66056865"
  **值**  
  指定参数的默认值。 这也称作设计默认值，以后在部署时可以覆盖该值。  
   
- **Scope**  
+ **范围**  
  通过选择“项目”或“包”选项指定参数的范围。******** 项目参数可用于向项目中的一个或多个包提供项目接收的任何外部输入。 利用包参数，您不必编辑和重新部署包就可以修改包执行。  
   
  **光敏**  
@@ -53,5 +53,5 @@ ms.locfileid: "66056865"
  **必需**  
  指定参数是否要求在执行包之前指定设计默认值之外的值。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
   

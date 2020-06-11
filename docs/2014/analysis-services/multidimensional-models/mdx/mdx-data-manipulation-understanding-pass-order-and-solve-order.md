@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d7c17bf520f1feaf454d784658c8abc423dbe7a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d92ccd9d1eeb05272a95c6f429f8c756bcb0022e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75229433"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546369"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>理解传递次序和求解次序 (MDX)
   当某个多维数据集是 MDX 脚本的计算结果时，该多维数据集可能会经历许多计算阶段，具体取决于与计算有关的各种功能的使用情况。 每个阶段称为一个计算传递。  
@@ -37,7 +36,7 @@ ms.locfileid: "75229433"
 ## <a name="solve-order"></a>求解次序  
  求解次序决定了出现相互竞争的表达式时的计算优先级。 在一个传递中，求解次序决定了两点：  
   
--   计算维度、成员[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 、计算成员、自定义汇总和计算单元的顺序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 计算维度、成员、计算成员、自定义汇总和计算单元的顺序。  
   
 -   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 计算自定义成员、计算成员、自定义汇总和计算单元的次序。  
   

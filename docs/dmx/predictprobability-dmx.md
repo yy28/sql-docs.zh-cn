@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bd8365b2d3aac82c184af549ef21952fd4c8e649
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d6f5d30d107bb2011a470849dd78e940b74a38d6
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893907"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666951"
 ---
 # <a name="predictprobability-dmx"></a>PredictProbability (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,8 +33,8 @@ PredictProbability(<scalar column reference>, [<predicted state>])
 ## <a name="return-type"></a>返回类型  
  一个标量值。  
   
-## <a name="remarks"></a>备注  
- 如果省略预测状态，则将使用概率最大的状态，不包括“缺失状态”存储桶。 若要包含缺少的状态存储桶， \<请将预测状态> 设置为**INCLUDE_NULL**。 若要返回缺少状态的概率，请将\<预测状态> 设置为 NULL。  
+## <a name="remarks"></a>注解  
+ 如果省略预测状态，则将使用概率最大的状态，不包括“缺失状态”存储桶。 若要包含缺少的状态存储桶，请将 \< 预测状态> 设置为**INCLUDE_NULL**。 若要返回缺少状态的概率，请将 \< 预测状态> 设置为 NULL。  
   
 > [!NOTE]  
 >  某些挖掘模型不提供概率值，因此不能使用此函数。 此外，任何特定目标值的概率值都以不同方式计算，或可能有不同的解释，具体取决于所查询的模型类型。 有关如何为特定模型类型计算概率的详细信息，请参阅挖掘模型内容中的单个算法主题[&#40;Analysis Services-数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)。  

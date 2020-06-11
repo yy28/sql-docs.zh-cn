@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c4ce1b1485885719bcd31cb085d43379239612d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5578bed4ce59ffb3c431c30e33418abe693a4165
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079869"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543839"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>验证 PowerPivot for SharePoint 安装
   您在 SharePoint 场中安装的 PowerPivot for SharePoint 实例通过 SharePoint 管理中心进行管理。 至少，您可以检查管理中心和 SharePoint 网站上的页面以便确认 PowerPivot 服务器组件和功能可用。 但是，若要完全验证某一安装，您必须具有可发布到 SharePoint 并从库中访问的 PowerPivot 工作簿。 出于测试目的，您可以发布已包含 PowerPivot 数据的示例工作簿并使用它来确认 SharePoint 集成已正确配置。  
@@ -59,7 +58,7 @@ ms.locfileid: "66079869"
 ## <a name="verify-integration-at-the-site-level"></a>验证网站级别的集成  
  若要验证 PowerPivot 与 SharePoint 网站的集成，请执行以下操作：  
   
-1.  在浏览器中，打开您创建的 Web 应用程序。 如果使用了默认值，则可以在 URL\<地址中指定 http://计算机名>。  
+1.  在浏览器中，打开您创建的 Web 应用程序。 如果使用了默认值，则可以 \<your computer name> 在 URL 地址中指定 http://。  
   
 2.  验证 PowerPivot 数据访问和处理功能在应用程序中可用。 您可以通过验证 PowerPivot 提供的库模板是否存在来验证此可用性：  
   
@@ -84,14 +83,14 @@ ms.locfileid: "66079869"
   
 6.  从“开始”菜单中的 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 程序组启动 SQL Server Management Studio。 如果未在您的服务器上安装此工具，则可以跳到最后一步以便确认缓存文件是否存在。  
   
-7.  在“服务器类型”中，选择 **“Analysis Services”**。  
+7.  在 "服务器类型" 中选择**Analysis Services**。  
   
-8.  在 "服务器名称" 中，输入** \<服务器名称> \powerpivot**，其中** \<，服务器名称>** 是安装了 PowerPivot for SharePoint 的计算机的名称。  
+8.  在 "服务器名称" 中，输入** \<server-name> \powerpivot**，其中 **\<server-name>** 是安装了 PowerPivot for SharePoint 的计算机的名称。  
   
-9. 单击“连接”  。 这将验证 Analysis Services 服务器是否可用。  
+9. 单击“连接”。 这将验证 Analysis Services 服务器是否可用。  
   
 10. 在对象资源管理器中，可以单击 "**数据库**" 查看加载的 PowerPivot 数据文件的列表。  
   
-11. 在计算机文件系统上，检查以下文件夹以便确定文件是否已缓存到磁盘。 存在缓存文件将进一步证实您的部署正常工作。 若要查看文件缓存，请前往\<驱动器>： \PROGRAM Files\Microsoft SQL Server\MSAS11。POWERPIVOT\OLAP\Backup\Sandboxes\Default PowerPivot 服务应用程序文件夹。 每个缓存数据库均存储在自己的文件夹中，可使用基于 GUID 的命名约定来确保唯一名称。  
+11. 在计算机文件系统上，检查以下文件夹以便确定文件是否已缓存到磁盘。 存在缓存文件将进一步证实您的部署正常工作。 若要查看文件缓存，请参阅 \<drive> ： \Program FILES\MICROSOFT SQL Server\MSAS11。POWERPIVOT\OLAP\Backup\Sandboxes\Default PowerPivot 服务应用程序文件夹。 每个缓存数据库均存储在自己的文件夹中，可使用基于 GUID 的命名约定来确保唯一名称。  
   
   

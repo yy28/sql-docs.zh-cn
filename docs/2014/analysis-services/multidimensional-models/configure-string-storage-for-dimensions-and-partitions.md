@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7fd9d9b293287d76b50c351b29b74df509793168
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cbac2e675a08bbcdba6a43727e3de6896a52e56c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076543"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536879"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>配置维度和分区的字符串存储
   可以重新配置字符串存储，以在维度属性或分区中容纳超过 4 GB 文件大小的字符串存储限制的极大字符串。 如果你的维度或分区包含此大小的字符串存储，则对于本地和链接（本地或远程）对象，你可以通过在维度或分区级别更改“StringStoresCompatibilityLevel”**** 属性来解决文件大小限制。  
@@ -24,7 +23,7 @@ ms.locfileid: "66076543"
   
  此属性的有效值包括以下项：  
   
-|“值”|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |**1050**|指定默认的字符串存储体系结构，即受到每个存储 4 GB 的最大文件大小的约束。|  
 |**1100**|指定较大的字符串存储空间，支持每个存储区最多 40 亿个唯一字符串。|  
@@ -36,7 +35,7 @@ ms.locfileid: "66076543"
   
 -   [关于字符串存储](#bkmk_background)  
   
--   [必备条件](#bkmk_prereq)  
+-   [先决条件](#bkmk_prereq)  
   
 -   [步骤 1：在 SQL Server Data Tools 中设置 StringStoreCompatiblityLevel 属性](#bkmk_step1)  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66076543"
   
  与限制物理文件大小的默认字符串存储体系结构相反，较大的字符串存储空间基于字符串的最大数目。 较大的字符串存储空间的上限是 40 亿个唯一字符串或 40 亿条记录（以二者中最先达到限制条件的为准）。 较大的字符串存储空间创建同样大小的记录，每个记录等于 64K 页。 如果您具有在单个记录中放不下的非常长的字符串，则有效限制将小于 40 亿个字符串。  
   
-##  <a name="prerequisites"></a><a name="bkmk_prereq"></a>先决条件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 先决条件  
  你必须具有 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或更高版本的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
   
  维度和分区必须使用 MOLAP 存储。  

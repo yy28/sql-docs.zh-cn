@@ -19,12 +19,12 @@ ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ec3836db241320beabfbd4672ffad9b22ccaf58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e302d454ba0bf243f702b90b24cf7076ed97cb6
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078524"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669462"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,10 +39,10 @@ ms.locfileid: "68078524"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar （** 128 **）**|特定的目录名称。 该名称与 ROUTINE_CATALOG 相同。|  
-|SPECIFIC_SCHEMA|**nvarchar （** 128 **）**|特定的架构名称。<br /><br /> ** \* \*重要\*提示**不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
+|SPECIFIC_SCHEMA|**nvarchar （** 128 **）**|特定的架构名称。<br /><br /> ** \* \* 重要 \* 说明 \* **不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 INFORMATION_SCHEMA 视图仅表示对象的元数据的子集。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
 |SPECIFIC_NAME|**nvarchar （** 128 **）**|特定的目录名称。 该名称与 ROUTINE_NAME 相同。|  
 |ROUTINE_CATALOG|**nvarchar （** 128 **）**|函数的目录名。|  
-|ROUTINE_SCHEMA|**nvarchar （** 128 **）**|包含此函数的架构的名称。<br /><br /> ** \* \*重要\*提示**不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
+|ROUTINE_SCHEMA|**nvarchar （** 128 **）**|包含此函数的架构的名称。<br /><br /> ** \* \* 重要 \* 说明 \* **不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 INFORMATION_SCHEMA 视图仅表示对象的元数据的子集。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
 |ROUTINE_NAME|**nvarchar （** 128 **）**|函数的名称。|  
 |ROUTINE_TYPE|**nvarchar （** 20 **）**|为存储过程返回 PROCEDURE；为函数返回 FUNCTION。|  
 |MODULE_CATALOG|**nvarchar （** 128 **）**|NULL。 保留供将来使用。|  

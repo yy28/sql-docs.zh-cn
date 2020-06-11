@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 42c896ee-e5ee-4017-b66e-31d1fe66d369
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f28d0503497fd066de2d328e75813f7b77026b2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 618732bfe48f7b1fe777f7841d686b07877d10ae
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085241"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523653"
 ---
 # <a name="create-drillthrough-queries-using-dmx"></a>使用 DMX 来创建钻取查询
   对于支持钻取的所有模型，可以通过在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或任何其他支持 DMX 的客户端中创建 DMX 查询来检索事例数据和结构数据。  

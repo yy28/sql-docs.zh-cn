@@ -1,21 +1,21 @@
 ---
-title: SELECT DISTINCT FROM &lt;model &gt; （DMX） |Microsoft Docs
+title: SELECT DISTINCT FROM &lt; model &gt; （DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 67ed5236aad0549fa6850114280ee15d8cebcaeb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea538271bf84d7d5b4e0fbea0a860f68bb1f62b6
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892532"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669619"
 ---
-# <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;model &gt; （DMX）
+# <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt; model &gt; （DMX）
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   返回模型中所选列的所有可能状态。 所返回的值会因指定列包含离散值、离散化数值或连续数值而有所变化。  
@@ -35,7 +35,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  *表达式列表*  
  相关列标识符（从模型中派生）或表达式的以逗号分隔的列表。  
   
- *模式*  
+ *model*  
  模型标识符。  
   
  *条件列表*  
@@ -44,7 +44,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  *expression*  
  可选。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **SELECT DISTINCT FROM**语句仅适用于单个列或具有一组相关列。 该子句不可用于一组不相关的列。  
   
  **SELECT DISTINCT FROM**语句允许直接引用嵌套表中的列。 例如：  
@@ -53,7 +53,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 <model>.<table column reference>.<column reference>  
 ```  
   
- **SELECT DISTINCT FROM \<model>** 语句的结果不同，具体取决于列的类型。 下表说明了所支持的列类型和该语句的输出结果。  
+ **SELECT DISTINCT FROM \< model>** 语句的结果不同，具体取决于列的类型。 下表说明了所支持的列类型和该语句的输出结果。  
   
 |列类型|输出|  
 |-----------------|------------|  
@@ -62,7 +62,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 |连续|列中各值的中点。|  
   
 ## <a name="discrete-column-example"></a>离散列示例  
- 下面的代码示例基于您在`[TM Decision Tree]` [数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中创建的模型。 查询返回离散列 `Gender` 中存在的唯一值。  
+ 下面的代码示例基于 `[TM Decision Tree]` 您在[数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中创建的模型。 查询返回离散列 `Gender` 中存在的唯一值。  
   
 ```  
 SELECT DISTINCT [Gender]  
@@ -99,7 +99,7 @@ FROM [TM Decision Tree]
  查询还返回一行表示缺失值的 Null 值。  
   
 ## <a name="discretized-column-example"></a>离散化列示例  
- 下面的代码示例返回算法为 [`Yearly Income]` 列创建的所有存储桶的中点值、最大值和最小值。 若要重新生成此示例的结果，则必须创建一个与 `[Targeted Mailing]` 相同的新挖掘结构。 在向导中，将`Yearly Income`列的内容类型从**连续**更改为**离散**化。  
+ 下面的代码示例返回算法为 [`Yearly Income]` 列创建的所有存储桶的中点值、最大值和最小值。 若要重新生成此示例的结果，则必须创建一个与 `[Targeted Mailing]` 相同的新挖掘结构。 在向导中，将列的内容类型 `Yearly Income` 从**连续**更改为**离散**化。  
   
 > [!NOTE]  
 >  您还可以更改在基础挖掘教程中创建的挖掘模型，以离散化挖掘结构列 [`Yearly Income]`。 有关如何执行此操作的信息，请参阅[更改挖掘模型中列的离散](https://docs.microsoft.com/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model)化。 但是，当您更改列的离散化时，系统会强制要求重新处理挖掘结构，这将会更改您使用该结构生成的其他模型的结果。  

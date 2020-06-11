@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2f05edb30344b63781a89540ade8de4743bb715e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 360a8b93c20dd57d3dd3d382c843a2f65d5f3c27
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071844"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547579"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>配置和查看 SharePoint 日志文件和诊断日志记录 (PowerPivot for SharePoint)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器操作、事件和消息均记录在 SharePoint 日志文件中。 使用此主题中的信息可配置日志记录级别和查看日志文件信息。 您可以控制要将哪些 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器事件记录到文件中。 还可以控制所记录的消息的严重性。 有关详细信息，请参阅[为 &#40;PowerPivot for SharePoint 配置使用情况数据收集](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。  
   
  本主题内容：  
   
--   [日志文件的位置](#bkmk_filelocation)  
+-   [日志文件位置](#bkmk_filelocation)  
   
 -   [修改单独事件类别的诊断日志记录级别](#bkmk_modifyloglevels)  
   
@@ -64,7 +63,7 @@ ms.locfileid: "66071844"
   
 8.  选择 **“详细”** ，可将所有事件记录到跟踪日志中。  
   
-9. 单击" **确定**"。  
+9. 单击“确定”。  
   
 ##  <a name="how-to-view-sharepoint-log-files"></a><a name="bkmk_how2viewlogfiles"></a>如何查看 SharePoint 日志文件  
  日志文件是文本文件。 可以在任何文本编辑器中打开它们。 还可以使用第三方日志查看器应用程序。  
@@ -119,10 +118,10 @@ ms.locfileid: "66071844"
 |进程|区域|类别|级别|消息|详细信息|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
 |w3wp.exe|“PowerPivot 服务”|使用情况|“详细”|不存在当前请求统计信息，无信息可供记录。|按照预定义的间隔，服务将查询响应统计信息作为使用情况事件向使用情况数据收集系统报告。 此消息指示没有查询统计信息可供报告。|  
-|w3wp.exe|“PowerPivot 服务”|Web 前端|“详细”|开始查找数据源 =\<*路径*的应用程序服务器>|收到连接请求时， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务确定可用的 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 以处理该请求。 如果场中只有一个服务器，则在所有情况下都是本地服务器接受请求。|  
+|w3wp.exe|“PowerPivot 服务”|Web 前端|“详细”|开始查找数据源的应用程序服务器 =\<*path*>|收到连接请求时， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务确定可用的 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 以处理该请求。 如果场中只有一个服务器，则在所有情况下都是本地服务器接受请求。|  
 |w3wp.exe|“PowerPivot 服务”|Web 前端|“详细”|定位应用程序服务器成功。|请求已分配到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序。|  
-|w3wp.exe|“PowerPivot 服务”|Web 前端|“详细”|将\< *PowerPivotdata 源*> 的请求重定向到[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]。|请求已转发给 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]。|  
-|w3wp.exe|“PowerPivot 服务”|请求处理|“详细”|将用户名\<*SharePoint 用户*> 的请求重定向到数据库|已代表 SharePoint 用户创建了与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据源的模拟连接。|  
+|w3wp.exe|“PowerPivot 服务”|Web 前端|“详细”|将请求重定向 \<*PowerPivotdata source*> 到 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 。|请求已转发给 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]。|  
+|w3wp.exe|“PowerPivot 服务”|请求处理|“详细”|将用户名请求重定向 \<*SharePoint user*> 到数据库|已代表 SharePoint 用户创建了与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据源的模拟连接。|  
   
 ## <a name="see-also"></a>另请参阅  
  [PowerPivot 使用情况数据收集](power-pivot-usage-data-collection.md)   

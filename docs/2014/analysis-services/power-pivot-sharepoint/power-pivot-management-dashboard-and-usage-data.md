@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ece3d8a1e9a66ecc6ad05508c975e617c523a9c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c6b4df30ec422df0dd79b2fc9d58766e6dbcf7d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071122"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535039"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot 管理面板和使用情况数据
   PowerPivot 管理面板是 SharePoint 管理中心中预定义报表和 Web 部件的集合，可以帮助您管理 SQL Server PowerPivot for SharePoint 部署。 管理面板提供了与服务器运行状况、工作簿活动以及数据刷新相关的信息。 该面板使用的数据来自于 SharePoint 使用情况数据集合。  
@@ -32,7 +31,7 @@ ms.locfileid: "66071122"
   
  [为 PowerPivot 管理面板创建自定义报表](#reports)  
   
-##  <a name="prerequisites"></a><a name="prereq"></a>先决条件  
+##  <a name="prerequisites"></a><a name="prereq"></a> 先决条件  
  您必须是服务管理员才能为您管理的 PowerPivot 服务应用程序打开 PowerPivot 管理面板。  
   
 ##  <a name="overview-of-the-sections-of-the-dashboard"></a><a name="items"></a> “面板”各个部分的概述  
@@ -46,7 +45,7 @@ ms.locfileid: "66071122"
 |工作簿活动 - 列表|有关数据访问频率的报表。 您可以了解每天或每周与 PowerPivot 数据源建立连接的频率。|  
 |数据刷新 - 最近的活动|有关数据刷新作业（包括运行失败的作业）的状态的报表。 此报表针对在应用程序级别执行的数据刷新操作提供了一个组合视图。 管理员可以快速查看为整个 PowerPivot 服务应用程序定义的数据刷新作业的数目。|  
 |数据刷新 - 最近的失败|列出未成功完成数据刷新的 PowerPivot 工作簿。|  
-|报告|包含指向可以在 Excel 中打开的报表的链接。|  
+|报表|包含指向可以在 Excel 中打开的报表的链接。|  
   
 ##  <a name="open-powerpivot-management-dashboard"></a><a name="open"></a>打开 PowerPivot 管理面板  
  面板中一次显示一个 PowerPivot 服务应用程序的信息。 您可以从两个不同的位置打开管理面板。  
@@ -140,7 +139,7 @@ ms.locfileid: "66071122"
   
     5.  在文件路径中，指定 .odc 文件。  
   
-    6.  单击“打开”  。 此时，将使用指向包含使用情况数据的 PowerPivot 工作簿的连接字符串启动“表导入向导”。  
+    6.  单击“打开” 。 此时，将使用指向包含使用情况数据的 PowerPivot 工作簿的连接字符串启动“表导入向导”。  
   
     7.  单击 **“测试连接”** 以确认您具有访问权限。  
   

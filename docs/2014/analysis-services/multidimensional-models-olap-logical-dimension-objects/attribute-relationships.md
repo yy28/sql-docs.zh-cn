@@ -23,16 +23,15 @@ helpviewer_keywords:
 ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81d51c8778cfbc6e3891dfb3b6783db48f0c65a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 122638a2728a8a85ee58661196797383da20eef8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62728513"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545199"
 ---
 # <a name="attribute-relationships"></a>的维度设计器中，可以在“维度结构”视图的
-  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，维度中的属性始终直接或间接与键属性相关。 当您基于星型架构（在该架构中，所有维度属性都派生自同一关系表）定义维度时，维度的键属性和每个非键属性之间会自动定义属性关系。 当您基于雪花架构（在该架构中，维度属性派生自多个相关的表）定义维度时，会自动按如下方式定义属性关系：  
+  在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，维度中的属性始终直接或间接与键属性相关。 当您基于星型架构（在该架构中，所有维度属性都派生自同一关系表）定义维度时，维度的键属性和每个非键属性之间会自动定义属性关系。 当您基于雪花架构（在该架构中，维度属性派生自多个相关的表）定义维度时，会自动按如下方式定义属性关系：  
   
 -   在键属性与绑定到主维度表中各列的每个非键属性之间定义。  
   
@@ -82,7 +81,7 @@ ms.locfileid: "62728513"
   
  级别的 `SourceAttribute` 属性确定用于说明该级别的特性。 特性的 `KeyColumns` 属性指定数据源视图中提供成员的列。 特性的 `NameColumn` 属性可以指定成员的其他名称列。  
   
- 若要使用定义用户定义层次结构中的级别[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，可以使用**维度设计器**来选择维度属性、维度表中的列或多维数据集的数据源视图中包含的相关表中的列。 有关创建用户定义的层次结构的详细信息，请参阅[创建用户定义的层次结构](../multidimensional-models/user-defined-hierarchies-create.md)。  
+ 若要使用定义用户定义层次结构中的级别 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ，可以使用**维度设计器**来选择维度属性、维度表中的列或多维数据集的数据源视图中包含的相关表中的列。 有关创建用户定义的层次结构的详细信息，请参阅[创建用户定义的层次结构](../multidimensional-models/user-defined-hierarchies-create.md)。  
   
  在 Analysis Services 中，通常对成员的内容进行假定。 叶成员没有后代，并且包含派生自基础数据源的数据。 非叶成员则具有后代，并且包含派生自对子成员执行的聚合的数据。 在聚合级别中，各成员基于其从属级别的聚合。 因此，当级别源特性的 `IsAggregatable` 属性设置为 `False` 时，不应添加可聚合的特性作为该级别上面的级别。  
   

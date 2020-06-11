@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a0008004-e2b7-47db-acad-5fe7e12b130f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 25eb8fe00c523d4a94b7f6f0325bfd2c1f55e7be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d0db849551bdb38615f280b123c98f0e9d3053d6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074941"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546634"
 ---
 # <a name="grant-permissions-on-data-mining-structures-and-models-analysis-services"></a>授予数据挖掘结构和模型的权限 (Analysis Services)
   在默认情况下，仅 Analysis Services 服务器管理员有权限查看数据库中的数据挖掘结构或挖掘模型。 请遵循以下说明，以向非管理员用户授予权限。  
@@ -53,7 +52,7 @@ ms.locfileid: "66074941"
   
  若要向数据库角色授予读取或读/写权限，用户必须为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器角色的成员或为拥有完全控制（管理员）权限的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库角色的成员。  
   
-1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到实例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，在对象资源管理器中展开相应数据库的 "**角色**"，然后单击某个数据库角色（或创建一个新的数据库角色）。  
+1.  在中 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，连接到实例 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，在对象资源管理器中展开相应数据库的 "**角色**"，然后单击某个数据库角色（或创建一个新的数据库角色）。  
   
 2.  在“挖掘结构”窗格中的“挖掘模型”列表中找到“挖掘模型”，然后为此挖掘模型选择“读取”、“读/写”、“钻取”或“浏览”************************。  
   

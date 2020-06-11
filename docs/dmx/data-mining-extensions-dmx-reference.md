@@ -4,26 +4,26 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c47514f551ec07a8c8837533cb38c0e6283645cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eeaeef25f27f29234aaa5a96a9272b4bea43dca3
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892886"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670405"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>数据挖掘扩展插件 (DMX) 参考
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  数据挖掘扩展插件（DMX）是一种可用于在中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]创建和使用数据挖掘模型的语言。 可以使用 DMX 创建新数据挖掘模型的结构、为这些模型定型并对其进行浏览、管理和预测。 DMX 由数据定义语言 (DDL) 语句、数据操作语言 (DML) 语句以及函数和运算符组成。  
+  数据挖掘扩展插件（DMX）是一种可用于在中创建和使用数据挖掘模型的语言 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 可以使用 DMX 创建新数据挖掘模型的结构、为这些模型定型并对其进行浏览、管理和预测。 DMX 由数据定义语言 (DDL) 语句、数据操作语言 (DML) 语句以及函数和运算符组成。  
   
 ## <a name="microsoft-ole-db-for-data-mining-specification"></a>Microsoft OLE DB for Data Mining 规范  
- 中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的数据挖掘功能的构建符合数据挖掘规范[!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB。  
+ 中的数据挖掘功能的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 构建符合 [!INCLUDE[msCoName](../includes/msconame-md.md)] 数据挖掘规范 OLE DB。  
   
- 数据[!INCLUDE[msCoName](../includes/msconame-md.md)]挖掘规范 OLE DB 定义以下各项：  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)]数据挖掘规范 OLE DB 定义以下各项：  
   
 -   一种用于保存有关定义数据挖掘模型信息的结构。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68892886"
   
  使用 DMX 中的数据操作语句可以执行下列任务：  
   
--   使用[INSERT INTO](../dmx/insert-into-dmx.md)语句为挖掘模型定型。 执行该语句不会将实际源数据插入数据挖掘模型对象，但会创建有关说明算法所创建的挖掘模型的摘要信息。 " [ \<源数据查询">](../dmx/source-data-query.md)中介绍了 INSERT INTO 语句的源查询。  
+-   使用[INSERT INTO](../dmx/insert-into-dmx.md)语句为挖掘模型定型。 执行该语句不会将实际源数据插入数据挖掘模型对象，但会创建有关说明算法所创建的挖掘模型的摘要信息。 " [ \< 源数据查询">](../dmx/source-data-query.md)中介绍了 INSERT INTO 语句的源查询。  
   
 -   扩展 SELECT 语句以浏览模型定型过程中计算并存储在数据挖掘模型中的信息，如源数据的统计信息。 以下子句可用于扩展 SELECT 语句的强大功能：  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68892886"
   
     -   [从 &#60;模型&#62; 中进行选择。DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)  
   
--   使用 SELECT 语句的[预测联接](../dmx/select-from-model-prediction-join-dmx.md)子句创建基于现有挖掘模型的预测。 在[ \<源数据查询>](../dmx/source-data-query.md)中介绍了预测联接语句的源查询。  
+-   使用 SELECT 语句的[预测联接](../dmx/select-from-model-prediction-join-dmx.md)子句创建基于现有挖掘模型的预测。 在[ \< 源数据查询>](../dmx/source-data-query.md)中介绍了预测联接语句的源查询。  
   
 -   使用[DELETE &#40;DMX&#41;](../dmx/delete-dmx.md)语句，从模型或结构中删除所有定型的数据。  
   

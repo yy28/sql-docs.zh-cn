@@ -12,17 +12,17 @@ ms.assetid: 0f4c6887-0562-417e-806c-b5cffb1e7c5c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 23e46eaf73be4f14e90065627379bb778525051a
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 49727ad5168bbd5438a57ae161f669482e412cae
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000837"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856811"
 ---
 # <a name="options-query-execution-sql-server-ansi-page"></a>选项（查询执行-SQL Server-ANSI 页）
   这些 ANSI (ISO) 标准 SET 选项共同定义了用户查询、运行触发器或存储过程执行期间的查询处理环境。 不过，这些 SET 选项并未包括遵守 ISO 标准所需的所有选项。 使用此页可以指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将使用 ISO 标准中指定的全部或部分设置运行查询。 对这些选项所做的更改只应用于新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询。 若要更改当前查询的选项，请在 "**查询**" 菜单上单击 "**查询选项**"，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询窗口中右键单击并选择 "**查询选项**"。 在 **“查询选项”** 对话框中的 **“执行”** 下，单击 **ANSI**。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **SET ANSI_DEFAULTS**  
  选中此复选框可以选择所有默认的 ISO 设置。 默认情况下，不会选择所有 ISO 选项。  
   

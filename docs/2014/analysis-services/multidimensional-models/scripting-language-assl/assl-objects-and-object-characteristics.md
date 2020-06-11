@@ -18,19 +18,18 @@ helpviewer_keywords:
 ms.assetid: 6e5c28b5-c0bc-4ccd-82e5-e174bbb71386
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aee5e7b94aaaca2b35e34f8c4d49c2834189f114
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76d57bb421a7f486983476a6549a5121ce88ee9b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736611"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545689"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>ASSL 对象和对象特征
   Analysis Services 脚本语言 (ASSL) 中的对象遵循关于对象组、继承、命名、扩展和处理的特定准则。  
   
 ## <a name="object-groups"></a>对象组  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]所有[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]对象均具有 XML 表示形式。 这些对象分为以下两组：  
+ 所有 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 对象均具有 XML 表示形式。 这些对象分为以下两组：  
   
  **主要对象**  
  可以单独创建、更改和删除主要对象。 主要对象包括：  
@@ -73,9 +72,9 @@ ms.locfileid: "62736611"
   
 -   层次结构和级别  
   
--   特性  
+-   属性  
   
--   度量值组  
+-   度量值  
   
 -   挖掘模型列  
   
@@ -86,7 +85,7 @@ ms.locfileid: "62736611"
 ## <a name="object-expansion"></a>对象扩展  
  `ObjectExpansion` 限制可用于控制服务器返回的 ASSL XML 扩展的程度。 此限制具有下表所列的选项。  
   
-|枚举值|允许\<Alter>|说明|  
+|枚举值|允许用于\<Alter>|说明|  
 |-----------------------|---------------------------|-----------------|  
 |*ReferenceOnly*|否|只返回请求对象以及以递归方式包含的所有主要对象的名称、ID 和时间戳。|  
 |*ObjectProperties*|是|展开请求的对象和次要包含对象，但不返回主要包含对象。|  

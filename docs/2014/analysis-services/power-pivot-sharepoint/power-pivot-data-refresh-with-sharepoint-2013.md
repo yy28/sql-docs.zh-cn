@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4076e27a800f9c9653e8a191c1fd53467cba9f75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13e33fbc80dc7253ee67dc55235765bcd1e6250c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071224"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535173"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>使用 SharePoint 2013 进行 PowerPivot 数据刷新
-  在 sharepoint 2013 中刷新[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]数据模型的设计使用 Excel Services 作为主要组件来在 SharePoint 模式下运行的[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例上加载和刷新数据模型。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器在 SharePoint 场的外部运行。  
+  在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sharepoint 2013 中刷新数据模型的设计使用 Excel Services 作为主要组件来在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] SharePoint 模式下运行的实例上加载和刷新数据模型。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器在 SharePoint 场的外部运行。  
   
  以前的数据刷新体系结构专门依赖于 PowerPivot 系统服务在 SharePoint 模式 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上加载和刷新数据模型。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例在 PowerPivot 应用程序服务器上在本地运行。 这个新的体系结构还引入了一个新方法，以便将计划信息作为文档库中工作簿项的元数据维护。 SharePoint 2013 Excel Services 中的体系结构支持“交互式数据刷新” **** 和“计划数据刷新” ****。  
   
@@ -39,7 +38,7 @@ ms.locfileid: "66071224"
 -   [详细信息](#bkmk_moreinformation)  
   
 ## <a name="background"></a>背景  
- Sharepoint Server 2013 excel Services 管理 excel 2013 工作簿的数据刷新，并触发在 SharePoint 模式下[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]运行的服务器上的数据模型处理。 对于 Excel 2010 工作簿，Excel Services 还管理工作簿和数据模型的加载和保存。 但是，Excel Services 依赖于 PowerPivot 系统服务将处理命令发送到数据模型。 下表根据工作簿的版本总结了为数据刷新发送处理命令的组件。 假定的环境是 SharePoint 2013 场，它配置为使用在 SharePoint 模式下运行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Server。  
+ SharePoint Server 2013 Excel Services 管理 Excel 2013 工作簿的数据刷新，并触发在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] SharePoint 模式下运行的服务器上的数据模型处理。 对于 Excel 2010 工作簿，Excel Services 还管理工作簿和数据模型的加载和保存。 但是，Excel Services 依赖于 PowerPivot 系统服务将处理命令发送到数据模型。 下表根据工作簿的版本总结了为数据刷新发送处理命令的组件。 假定的环境是 SharePoint 2013 场，它配置为使用在 SharePoint 模式下运行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Server。  
   
 ||||  
 |-|-|-|  
@@ -55,11 +54,11 @@ ms.locfileid: "66071224"
   
 |工作簿的创建位置|计划的数据刷新|交互式刷新|  
 |-------------------------|----------------------------|-------------------------|  
-|2008 R2 PowerPivot for Excel|不支持。 升级工作簿 **（\*）**|不支持。 升级工作簿 **（\*）**|  
-|2012 PowerPivot for Excel|支持|不支持。 升级工作簿 **（\*）**|  
+|2008 R2 PowerPivot for Excel|不支持。 升级工作簿 **（ \* ）**|不支持。 升级工作簿 **（ \* ）**|  
+|2012 PowerPivot for Excel|支持|不支持。 升级工作簿 **（ \* ）**|  
 |Excel 2013|支持|支持|  
   
- **（\*）** 有关工作簿升级的详细信息，请参阅[升级工作簿和计划的数据刷新 &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
+ **（ \* ）** 有关工作簿升级的详细信息，请参阅[升级工作簿和计划的数据刷新 &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
   
 ##  <a name="interactive-data-refresh"></a><a name="bkmk_interactive_refresh"></a> 交互式数据刷新  
  SharePoint Server 2013 Excel Services 中的交互式或手动数据刷新可以使用原始数据源中的数据来刷新数据模型。 在您通过注册 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器来配置 Excel Services 应用程序并在 SharePoint 模式下运行后，交互式数据刷新将可用。 有关详细信息，请参阅 [管理 Excel Services 数据模型设置 (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx)。  
@@ -114,7 +113,7 @@ ms.locfileid: "66071224"
   
 1.  在 SharePoint 模式下运行的 Analysis Services 服务器上，将 Analysis Services 服务帐户添加到 "**作为操作系统的一部分**" 权限：  
   
-    1.  运行 "`secpol.msc`"  
+    1.  运行 " `secpol.msc` "  
   
     2.  依次单击 **“本地安全策略”**、 **“本地策略”** 和 **“用户权限分配”**。  
   
@@ -128,7 +127,7 @@ ms.locfileid: "66071224"
   
  有关详细信息，请参阅["作为操作系统的一部分"](https://technet.microsoft.com/library/cc784323\(WS.10\).aspx)。  
   
-##  <a name="scheduled-data-refresh"></a><a name="bkmk_scheduled_refresh"></a> 计划的数据刷新  
+##  <a name="scheduled-data-refresh"></a><a name="bkmk_scheduled_refresh"></a>计划的数据刷新  
  **计划的数据刷新的关键相关点：**  
   
 -   要求部署 PowerPivot for SharePoint 外接程序。 有关详细信息，请参阅[在 SharePoint 2013&#41;中安装或卸载 PowerPivot for SharePoint 外接程序 &#40;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。  
@@ -143,7 +142,7 @@ ms.locfileid: "66071224"
   
 -   **凭据：** 使用存储的凭据。 不要使用当前用户的标识。  
   
--   **支持的工作簿：** 使用 2010 Excel 的[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot 外接程序创建的工作簿或使用 excel 2013 创建的工作簿。 不支持在具有 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot 外接程序的 Excel 2010 中创建的工作簿。 请将工作簿升级到至少是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot 格式。 有关升级工作簿的详细信息，请参阅[升级工作簿和计划的数据刷新 (SharePoint 2013)](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
+-   **支持的工作簿：** 使用 2010 Excel 的 PowerPivot 外接程序创建的工作簿 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或使用 excel 2013 创建的工作簿。 不支持在具有 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot 外接程序的 Excel 2010 中创建的工作簿。 请将工作簿升级到至少是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot 格式。 有关升级工作簿的详细信息，请参阅[升级工作簿和计划的数据刷新 (SharePoint 2013)](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
   
  要显示 **“管理数据刷新”** 页，请执行以下操作：  
   
@@ -166,7 +165,7 @@ ms.locfileid: "66071224"
  ![管理数据刷新上下文菜单](../media/as-manage-datarefresh-sharepoint2013.gif "管理数据刷新上下文菜单")  
   
 > [!TIP]  
->  有关从 SharePoint online 刷新工作簿的信息，请参阅[从 Sharepoint Online 刷新 Excel 工作簿（白皮书）](https://technet.microsoft.com/library/jj992650.aspx) （https://technet.microsoft.com/library/jj992650.aspx)）。  
+>  有关从 SharePoint online 刷新工作簿的信息，请参阅[从 Sharepoint Online 刷新 Excel 工作簿（白皮书）（）](https://technet.microsoft.com/library/jj992650.aspx) https://technet.microsoft.com/library/jj992650.aspx) 。  
   
 ##  <a name="scheduled-data-refresh-architecture-in-sharepoint-2013"></a><a name="bkmk_refresh_architecture"></a>SharePoint 2013 中计划的数据刷新体系结构  
  下图总结了 SharePoint 2013 和 SQL Server 2012 SP1 中的数据刷新体系结构。  
@@ -175,7 +174,7 @@ ms.locfileid: "66071224"
   
 ||说明||  
 |-|-----------------|-|  
-|**2**|Analysis Services 引擎|在 SharePoint 模式下运行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器上的数据模型处理。 该服务器在 SharePoint 场的外部运行。|  
+|**(1)**|Analysis Services 引擎|在 SharePoint 模式下运行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器上的数据模型处理。 该服务器在 SharePoint 场的外部运行。|  
 |**pps-2**|用户界面|该用户界面由两页构成。 一页用于定义计划，另一页用于查看刷新历史记录。 这两页并不直接访问 PowerPivot 服务应用程序数据库，但使用 PowerPivot 系统服务访问这些数据库。|  
 |**三维空间**|PowerPivot 系统服务|在您部署 PowerPivot for SharePoint 外接程序时安装该服务。 该服务用于以下目的：<br /><br /> 该服务承载刷新计划引擎，该引擎调用 Excel Services API 以便进行 Excel 2013 工作簿的数据刷新。 对于 Excel 2010 工作簿，该服务直接执行数据模型处理，但继续依赖 Excel Services 加载数据模型和更新工作簿。<br /><br /> 该服务为组件（例如用户界面页）提供与系统服务进行通信的方法。<br /><br /> 管理对作为数据源的工作簿的外部访问的请求，这些请求是通过 PowerPivot Web 服务接收的。<br /><br /> 对计时器作业和配置页的计划的数据刷新请求管理。 该服务管理从服务应用程序数据库读入和读出数据的请求，并且使用 Excel Services 触发数据刷新。<br /><br /> 使用情况处理和相关计时器作业。|  
 |**4**|Excel 计算服务|负责加载数据模型。|  

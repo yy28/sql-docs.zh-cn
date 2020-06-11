@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: 49ce2094-c4dc-4e46-8cef-c17c5db084ca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a58f7f8620924d4f707fe61c45ae87e19737471f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a060efe0c4d6a3ed34d59d755398e0079402cc4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070173"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547409"
 ---
 # <a name="review-aggregation-usage-usage-based-optimiation-wizard"></a>查看聚合使用情况（基于使用情况的优化向导）
   可以使用 **“查看聚合使用情况”** 页配置聚合使用情况设置。  
   
 ## <a name="options"></a>选项  
- **缺省值**  
+ **默认**  
  选择此选项可以将属性的聚合使用情况设置设置为默认设置。 通过使用此设置，设计器可以根据属性和维度的类型应用默认规则。  
   
- **达到**  
+ **完整**  
  选择此选项可以将属性的聚合使用情况设置设置为完全。 使用此设置后，多维数据集的每个聚合都必须包含此属性或属性链中较低的相关属性。 如果属性包含有多个成员，则应避免使用 Full 聚合使用情况设置。 如果为多个属性或具有多个成员的属性指定了此设置，则此设置可能会以尺寸过大为由，阻止设计聚合。  
   
  **无**  

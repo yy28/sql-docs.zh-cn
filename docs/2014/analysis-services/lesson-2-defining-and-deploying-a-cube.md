@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: bb62e3c9-462f-4ad2-ac8e-92e2f9e9cc28
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 298f07b5a73e7dfd38ef8eef19893813d96e1892
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e149d5f7a6a8e14fbedc8e85ef31cbf42438b751
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078939"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543459"
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>第 2 课：定义和部署多维数据集
-  在[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]项目中定义数据源视图后，便可以定义初始[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]多维数据集。  
+  在项目中定义数据源视图后，便可以 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 定义初始 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集。  
   
  可以使用多维数据集向导，通过单个步骤定义一个多维数据集及其维度。 也可以先定义一个或多个维度，然后使用多维数据集向导定义一个使用这些维度的多维数据集。 如果要设计一个复杂的解决方案，通常是先定义维度。 有关详细信息，请参阅 [多维模型中的维度](multidimensional-models/dimensions-in-multidimensional-models.md) 或 [多维模型中的多维数据集](multidimensional-models/cubes-in-multidimensional-models.md)。  
   

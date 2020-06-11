@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 71e884a9-7ec4-4459-a4c4-87f6c796d478
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 554c7c0f375d63710c86e37666ee98c6dac6daf6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6102fe9c623e785c0ca207660697bffebce82bb5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081165"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544481"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>“筛选器”对话框（挖掘准确性图表）
   **“筛选器”** 对话框有助于生成可应用于数据集的条件。 数据集可以是用于测试的外部数据集，也可以是定型挖掘模型所使用的事例数据。 此对话框有助于生成可在 **“数据集筛选器”** 对话框或 **“模型筛选器”** 对话框中作为较复杂筛选条件的一部分进行保存的条件。  
@@ -38,11 +37,11 @@ ms.locfileid: "66081165"
  **Conditions**  
  一个网格，其中包含为在“数据集筛选器”**** 对话框中选择的表中的列指定条件的列。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**And/Or**|单击此项可指定是将 AND 运算符还是 OR 运算符应用于此行中的条件。 仅在从 **“挖掘结构列”** 列表中选择一列后，这些值才可用。|  
 |**挖掘结构列**|单击此项可从表中包含的列的列表中选择一列，该表是从 **“数据集筛选器”** 对话框的数据源中选择的。|  
-|**操作员**|从列表中选择运算符。 可用的运算符取决于列的数据类型。<br /><br /> 如果列包含离散值，则只有以下运算符可用：<br /><br /> =（等于）、<>（不等于）、IS NOT NULL、IS NULL。<br /><br /> 如果列包含连续值，则还支持进行大于和小于运算的运算符。|  
+|**运算符**|从列表中选择运算符。 可用的运算符取决于列的数据类型。<br /><br /> 如果列包含离散值，则只有以下运算符可用：<br /><br /> =（等于）、<>（不等于）、IS NOT NULL、IS NULL。<br /><br /> 如果列包含连续值，则还支持进行大于和小于运算的运算符。|  
 |**值**|键入要用作条件的值。|  
   
 ## <a name="see-also"></a>另请参阅  

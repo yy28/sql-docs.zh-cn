@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2c664138-e8a1-4c47-8e7d-ee01c57e4692
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ab618eaa2d8d54b08e3d01fa238d19451084eff8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3fd3d7607cad8c8e721e21f4e5ad00255817792
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069621"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538259"
 ---
 # <a name="select-conversion-type-business-intelligence-wizard"></a>选择换算类型（商业智能向导）
   可以使用 **“选择换算类型”** 页，为使用多种货币存储的事务定义本地货币和报表货币之间的关系。 本地货币是存储 **“选择度量值”** 页中所选度量值的事务时使用的货币。 报表货币是转换 **“选择度量值”** 页中所选事务时使用的货币。  

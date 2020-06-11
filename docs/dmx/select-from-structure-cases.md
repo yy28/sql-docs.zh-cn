@@ -1,28 +1,28 @@
 ---
-title: 选择 " &lt;源&gt;结构"。事例 |Microsoft Docs
+title: 选择 "源 &lt; 结构" &gt; 。事例 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 041d6ade2363b4a33528bd44438a2fcb440d61ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: baa7ed6209daf3de76c20d8ff67a9b76a36be4e8
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928297"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670107"
 ---
-# <a name="select-from-ltstructuregtcases"></a>选择 " &lt;源&gt;结构"。这
+# <a name="select-from-ltstructuregtcases"></a>选择 "源 &lt; 结构" &gt; 。这
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   返回用于创建挖掘结构的事例。  
   
  如果未对结构启用钻取功能，则该语句将失败。 此外，如果用户在挖掘结构上没有钻取权限，则该语句也会失败。  
   
- 在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中，默认情况下将启用对新挖掘结构的钻取功能。 若要验证是否为特定结构启用了钻取，请检查**CacheMode**属性的值是否设置为**KeepTrainingCases**。  
+ 在中 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，默认情况下将启用对新挖掘结构的钻取功能。 若要验证是否为特定结构启用了钻取，请检查**CacheMode**属性的值是否设置为**KeepTrainingCases**。  
   
  如果**CacheMode**的值更改为**ClearAfterProcessing**，则将从缓存中清除结构事例，并且不能使用钻取。  
   
@@ -55,7 +55,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
  *expression*  
  可选。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果对模型和结构都启用了钻取功能，则拥有挖掘结构和模型钻取权限的角色的任何成员都可以使用下面的语法返回模型中未包括的结构列。  
   
 ```  
@@ -65,7 +65,7 @@ SELECT StructureColumn('<column name>') FROM <model>.CASES
  因此，为了保护敏感数据或个人信息，应构造数据源视图来屏蔽个人信息，并且仅在需要时才授予对挖掘结构或挖掘模型的**AllowDrillthrough**权限。  
   
 ## <a name="examples"></a>示例  
- 下面的示例基于挖掘结构，目标邮件基于[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]数据库和关联的挖掘模型。 有关详细信息，请参阅[数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
+ 下面的示例基于挖掘结构，目标邮件基于 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] 数据库和关联的挖掘模型。 有关详细信息，请参阅[数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
   
 ### <a name="example-1-drill-through-to-structure-cases"></a>示例 1：钻取到结构事例  
  下面的示例返回挖掘结构“目标邮件”中 500 名年龄最大的客户的列表。 查询返回挖掘模型中的所有列，但将行限制为购买过自行车的客户，并且按年龄进行排序。 您还可以编辑表达式列表以便仅返回需要的列。  

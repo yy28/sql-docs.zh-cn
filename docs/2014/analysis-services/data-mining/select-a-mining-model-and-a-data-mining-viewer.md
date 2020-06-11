@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3e5fb89d-3ab8-4d2e-9926-feeb38c02d3f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4da674a33d71655b161820cacbfd7ce2f16232af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3ab24c6ccb8a87879cbab8439d06d625e304061
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082881"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520435"
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>选择挖掘模型和数据挖掘查看器
   可以使用数据挖掘设计器的 **“挖掘模型查看器”** 选项卡中的一种查看器来浏览挖掘模型。 可以轻松切换模型或更改使用的浏览器。  

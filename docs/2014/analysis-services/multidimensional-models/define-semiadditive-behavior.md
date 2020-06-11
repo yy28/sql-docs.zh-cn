@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c72cc6b3798d790b4787cb5fcfe3e560b6580fc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd433f05f17a046ed49f49ea9fbdd9f36b90a3e2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075541"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546929"
 ---
 # <a name="define-semiadditive-behavior"></a>定义半累加性行为
   在很多业务方案中，半累加性度量值是非常常见的，它不在所有维度中统一进行聚合。 每个基于余额快照的多维数据集都会随着时间的推移而出现此问题。 您可以在用于处理证券、帐户余额、预算、人力资源、保险策略和法律事务以及很多其他业务领域的应用程序中找到这些快照。  
@@ -50,7 +49,7 @@ ms.locfileid: "66075541"
   
 -   无  
   
- 此选项不会更改使用常规聚合函数的度量值`Sum`： `Min`、 `Max`、 `Count`、或`Distinct``Count`。  
+ 此选项不会更改使用常规聚合函数的度量值： `Sum` 、 `Min` 、 `Max` 、 `Count` 或 `Distinct``Count` 。  
   
  **向导检测到包含半累加性成员的 "账户" 帐户维度。服务器将根据为每种帐户类型指定的半累加性行为聚合此维度的成员。**  
  导致系统将按“帐户”类型维度进行维度化的度量值组中的所有度量值设置为“按帐户”聚合函数，并且服务器将根据为每个帐户类型指定的半累加性行为聚合此维度的成员。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dabb7335-887b-442a-b67c-4901ba1242b7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c55a596461e03ce91a822e4578f7de56fe27f8f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 553503b9d35142bcc998b4ec12ad2e29d4c66318
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702196"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545069"
 ---
 # <a name="level-properties"></a>级别属性 
   下表列出了用户定义层次结构中的一个级别的属性并对其进行了说明。  

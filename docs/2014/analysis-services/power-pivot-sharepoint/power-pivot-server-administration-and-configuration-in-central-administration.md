@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: de72001ced1b7e2690f90b2de4c59bb35aca6ce4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0bea6bb558e6ccafefbbb068fa3799eddff748a5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071105"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547803"
 ---
 # <a name="powerpivot-server-administration-and-configuration-in-central-administration"></a>在管理中心中管理和配置 PowerPivot 服务器
   PowerPivot 服务器管理和配置由 SharePoint 服务应用程序管理员使用 SharePoint 管理中心来执行。  
@@ -49,10 +48,10 @@ ms.locfileid: "66071105"
   
 |链接|类型|任务说明|  
 |----------|----------|----------------------|  
-|[将 PowerPivot 解决方案部署到 SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)|必须|此步骤安装解决方案文件，这些文件将程序文件和应用程序页添加到场和站点集合。|  
-|[在管理中心中创建和配置 PowerPivot 服务应用程序](create-and-configure-power-pivot-service-application-in-ca.md)|必须|此步骤设置 PowerPivot 系统服务。|  
-|[在管理中心中针对网站集激活 PowerPivot 功能集成](activate-power-pivot-integration-for-site-collections-in-ca.md)|必须|此步骤在站点集合级别启用 PowerPivot 功能。|  
-|[将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口](add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|必须|此步骤将 Analysis Services OLE DB 访问接口添加为 Excel Services 中的受信访问接口。|  
+|[将 PowerPivot 解决方案部署到 SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)|必需|此步骤安装解决方案文件，这些文件将程序文件和应用程序页添加到场和站点集合。|  
+|[在管理中心中创建和配置 PowerPivot 服务应用程序](create-and-configure-power-pivot-service-application-in-ca.md)|必需|此步骤设置 PowerPivot 系统服务。|  
+|[在管理中心中针对网站集激活 PowerPivot 功能集成](activate-power-pivot-integration-for-site-collections-in-ca.md)|必需|此步骤在站点集合级别启用 PowerPivot 功能。|  
+|[将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口](add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|必需|此步骤将 Analysis Services OLE DB 访问接口添加为 Excel Services 中的受信访问接口。|  
 |[使用 SharePoint 2010 进行 PowerPivot 数据刷新](../powerpivot-data-refresh-with-sharepoint-2010.md)|建议|数据刷新是可选的，但建议执行刷新。 它允许您对已发布的 Excel 工作簿中的 PowerPivot 数据计划执行无人参与的更新。|  
 |[将 PowerPivot 无人参与的数据刷新帐户配置 &#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)|建议|此步骤设置特殊目的的帐户，该帐户可用于在服务器上运行数据刷新作业。|  
 |[为 &#40;配置使用情况数据收集 PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)|可选|默认情况下，配置使用情况数据收集。 您可以使用这些步骤修改默认设置。|  

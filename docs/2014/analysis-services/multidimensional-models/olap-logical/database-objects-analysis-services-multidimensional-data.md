@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: f76d869b-fc1d-4807-9f28-da09c7be382d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 39116b4bf8c4c361dfa82ca0d8a38dc6977de217
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d61e3213356146e1cf9e452e0b62e02c96bd4902
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725652"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546020"
 ---
 # <a name="database-objects-analysis-services---multidimensional-data"></a>数据库对象（Analysis Services - 多维数据）
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)]用于联机分析处理（OLAP）和数据挖掘的数据库对象和程序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]集。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例包含用于联机分析处理（OLAP）和数据挖掘的数据库对象和程序集。  
   
 -   数据库包含 OLAP 和数据挖掘对象，例如数据源、数据源视图、多维数据集、度量值、度量值组、维度、属性、层次结构、挖掘结构、挖掘模型和角色。  
   
