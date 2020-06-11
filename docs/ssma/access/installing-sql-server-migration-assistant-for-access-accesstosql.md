@@ -1,5 +1,6 @@
 ---
 title: 安装访问 SQL Server 迁移助手（AccessToSQL） |Microsoft Docs
+description: 了解 SQL Server 迁移助手（SSMA）的安装先决条件，以及如何安装、许可、升级和卸载。
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/15/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: cbbb7ed7a20937d9963af7080fb16be4f6c78da5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ca42e406bb7483617afe6364027014650e838f2
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79111905"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293748"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>安装访问 SQL Server 迁移助手（AccessToSQL）
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用基于 Windows Installer 的向导安装访问的迁移助手（SSMA）。 本主题提供了有关安装先决条件的信息、SSMA 的最新版本的链接，以及安装、授权、卸载和升级 SSMA 的说明。  
@@ -39,9 +40,9 @@ ms.locfileid: "79111905"
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 或更高版本。  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework 版本4.0 或更高版本。 .NET Framework 版本4.0 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]产品光盘上提供，并使用[Microsoft .NET 指南](https://docs.microsoft.com/dotnet/framework/)中的信息。
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)].NET Framework 版本4.0 或更高版本。 .NET Framework 版本4.0 在产品光盘上提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并使用[Microsoft .NET 指南](https://docs.microsoft.com/dotnet/framework/)中的信息。
   
--   在承载要将数据库对象和数据迁移到的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure DB 目标实例的计算机上，访问和足够的权限。  
+-   在承载要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将数据库对象和数据迁移到的/SQL AZURE DB 目标实例的计算机上，访问和足够的权限。  
   
 -   Microsoft 数据访问对象（DAO）提供程序版本12.0 或14.0。 可以从 Microsoft Office 2010/2007 产品安装 DAO 提供程序，也可以从 Microsoft 网站下载。  
   

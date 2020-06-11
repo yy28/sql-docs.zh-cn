@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 83bcd95d6eb946d15884d57550b826bc7379fb64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 13beb2a9a99ceea1d517e9ef2c77a071d7c72d30
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68041691"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666860"
 ---
 # <a name="predictvariance-dmx"></a>PredictVariance (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,9 +31,9 @@ PredictVariance(<scalar column reference>)
  标量列。  
   
 ## <a name="return-type"></a>返回类型  
- 标量列引用>指定的类型的标量值。 * \< *  
+ * \< 标量列引用>* 指定的类型的标量值。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果列引用是离散的，则**PredictVariance**将返回0，因为不能从离散值计算方差。  
   
 ## <a name="examples"></a>示例  

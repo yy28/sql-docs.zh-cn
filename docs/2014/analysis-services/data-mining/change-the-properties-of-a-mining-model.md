@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: aefaeb7f-d174-48d1-a188-0987a3b1196b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c34cbfd2ea88d863239c068300c65531fd19f5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44313ce14beee0390f12ed0e6566502327b17795
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085880"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525033"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>更改挖掘模型的属性
   某些挖掘模型属性应用于整个模型，而其他一些模型属性应用于单独的列。 例如，`Drillthrough` 属性就应用于整个模型，它指定事例数据是否应该可用于查询；`Description` 属性也是此类属性。 应用于列的属性包括 `Usage` 和 `ModelingFlags`；它们控制列中的数据在模型内的使用方式。  
@@ -46,7 +45,7 @@ ms.locfileid: "66085880"
 2.  在屏幕右侧的 **“属性”** 窗口中，突出显示与要更改的属性对应的值，然后输入新的值。  
   
     > [!NOTE]  
-    >  如果列用法设置为`Ignore`，则列的 "**属性**" 窗口为空。  
+    >  如果列用法设置为，则 `Ignore` 列的 "**属性**" 窗口为空。  
   
      在设计器中选择一个不同的元素后，新值即生效。  
   

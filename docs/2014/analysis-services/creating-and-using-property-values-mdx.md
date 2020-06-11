@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0cafb269-03c8-4183-b6e9-220f071e4ef2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1be27b268e46a874678618104c199ae294f392f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67eadc6bc2f0bf6f318f20ad42a5cc9e7a5afa5e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086692"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526273"
 ---
 # <a name="creating-and-using-property-values-mdx"></a>创建和使用属性值 (MDX)
   多维表达式 (MDX) 支持维度、级别、成员和单元的内部属性以及用户定义属性。 内部属性为各个单元提供唯一的名称、标题甚至格式和字体大小。 而用户定义属性可以为成员提供几乎所有类型的其他特性。  

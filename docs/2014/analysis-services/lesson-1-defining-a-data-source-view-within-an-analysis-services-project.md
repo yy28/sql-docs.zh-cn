@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7d3ffabd-78ae-4204-8323-29949d030c16
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 08d4d24f9049c2fd68e827664ecb07393262d8bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f224afd100c0869e8e8683cc3bea39498a342ad0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079212"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543589"
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>第 1 课：在 Analysis Services 项目中定义数据源视图
   若要在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中设计商业智能应用程序，请先在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中创建一个 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]项目。 在此项目中，您将从数据源视图开始定义解决方案的所有元素。  

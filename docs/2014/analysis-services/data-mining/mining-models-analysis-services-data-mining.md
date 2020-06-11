@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57f62b125872e6b851235c1517925c6ee10058d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b23f250a5589d47ac6e26baf48a40b0979a1895
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174426"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521253"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>挖掘模型（Analysis Services - 数据挖掘）
   “挖掘模型”是通过将算法应用于数据创建的 ** ，但挖掘模型并不仅仅是算法或元数据容器：它是可应用于新数据以便生成预测和对关系进行推断的数据、统计信息和模式的集合。
@@ -90,7 +89,7 @@ ms.locfileid: "78174426"
 
  此外，每个挖掘模型还包含两个特殊属性： <xref:Microsoft.AnalysisServices.MiningModel.Algorithm%2A> 和 <xref:Microsoft.AnalysisServices.MiningModelColumn.Usage%2A>。
 
--   **Algorithm 属性** 指定创建模型所使用的算法。 可用的算法取决于您所使用的访问接口。 有关附带[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的算法的列表，请参阅[数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)。 `Algorithm` 属性应用于挖掘模型，并且对于每个模型，只能设置该属性一次。 以后您可以更改算法，但如果挖掘模型中的某些列不受您所选算法的支持，则这些列可能会无效。 在对此属性进行更改后，您必须始终重新处理该模型。
+-   **Algorithm 属性** 指定创建模型所使用的算法。 可用的算法取决于您所使用的访问接口。 有关附带的算法的列表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，请参阅[数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)。 `Algorithm` 属性应用于挖掘模型，并且对于每个模型，只能设置该属性一次。 以后您可以更改算法，但如果挖掘模型中的某些列不受您所选算法的支持，则这些列可能会无效。 在对此属性进行更改后，您必须始终重新处理该模型。
 
 -   **Usage 属性** 定义模型使用每个列的方式。 您可以将列用法定义为 `Input`、`Predict`、`Predict Only` 或 `Key`。 `Usage` 属性应用于挖掘模型的各个列，且必须为模型中包含的每个列分别设置此属性。 如果结构包含在模型中不使用的列，则用法设置为 `Ignore`。 您可以在挖掘结构中包括、但不在分析中使用的数据示例可以是客户名称或电子邮件地址。 这样，您可以在以后查询它们，而不必在分析阶段包括它们。
 

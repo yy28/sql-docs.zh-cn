@@ -24,16 +24,15 @@ helpviewer_keywords:
 ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8d86734023080c9b7fc62cff636d4f1952d00d0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f921fc106adb88bcf2f9b9e863165153981f904
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072993"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545639"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>设置分区存储（Analysis Services - 多维）
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为存储模式和缓存选项提供了几种标准存储[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]配置。 它们为更新通知、滞后时间和重新生成数据提供了常用的配置。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为存储模式和缓存选项提供了几种标准存储配置。 它们为更新通知、滞后时间和重新生成数据提供了常用的配置。  
   
  您可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中多维数据集的“分区”选项卡中或在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的分区属性页面指定分区存储。  
   

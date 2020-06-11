@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8d6d418bcdefbb3977a98f04743b7e1b2a58bf54
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 044b5e79ba558dd5bb38331d9b2a07410a3a50de
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82810473"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84294000"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,9 +58,9 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 |列|数据类型|说明|  
 |------------|---------------|-----------------|  
-|**creation_time**|**datetime**|指示行创建的时间戳。 单个行集中的每一行都具有相同的时间戳。|  
+|**create_time**|**datetime**|指示行创建的时间戳。 单个行集中的每一行都具有相同的时间戳。|  
 |**component_type**|**sysname**|指示行是否包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例级组件或 Always On 可用性组的信息：<br /><br /> instance<br /><br /> Always On： AvailabilityGroup|  
-|**component_name**|**sysname**|指示组件的名称或可用性组的名称：<br /><br /> system<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> events<br /><br /> *\<可用性组的名称>*|  
+|**component_name**|**sysname**|指示组件的名称或可用性组的名称：<br /><br /> system<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> events<br /><br /> *\<name of the availability group>*|  
 |State |**int**|指示组件的运行状况状态：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|描述状态列。 与状态列中的值对应的说明：<br /><br /> 0：未知<br /><br /> 1：清理<br /><br /> 2：警告<br /><br /> 3：错误|  
 |**数据**|**varchar （max）**|指定特定于组件的数据。|  
@@ -77,9 +77,9 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **事件**：通过存储过程收集有关服务器记录的错误和事件的数据和图面，其中包括有关环形缓冲区异常的详细信息、有关内存代理的环形缓冲区事件、内存不足、计划程序监视器、缓冲池、旋转锁、安全性和连接性。 事件将始终显示 0 作为状态。  
   
--   ** \< 可用性组>的名称**：为指定的可用性组收集数据（如果 component_type = "Always On： AvailabilityGroup"）。  
+-   **\<name of the availability group>**：收集指定可用性组的数据（如果 component_type = "Always On： AvailabilityGroup"）。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 从故障角度而言，系统、资源和 query_processing 组件可用于故障检测，而 io_subsystem 和事件组件只能用于诊断用途。  
   
 下表将组件映射到其关联的运行状态。  

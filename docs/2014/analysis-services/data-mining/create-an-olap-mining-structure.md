@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: adf29f6f73020ddc265072b3b9f3f67042200506
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5650323524aa0b2146332f76b5582cc58950e203
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085253"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523693"
 ---
 # <a name="create-an-olap-mining-structure"></a>创建 OLAP 挖掘结构
   基于 OLAP 多维数据集或其他多维数据存储区创建数据挖掘模型有很多好处。 OLAP 解决方案已经包含大量的组织良好、整洁且格式正确的数据；但是，这些数据十分复杂，以致用户难以通过即席浏览找到有意义的模式。 数据挖掘提供发现新关联和提供可操作意见的能力。  
   
  本主题介绍如何基于现有多维解决方案中的维度和相关度量值创建 OLAP 挖掘结构。  
   
- [惠?](#bkmk_Reqs)  
+ [要求](#bkmk_Reqs)  
   
  [OLAP 数据挖掘过程的概述](#bkmk_Overview)  
   

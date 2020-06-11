@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: 8d913e83-7246-44cc-8fc7-31729023c0d8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1fefc72d81129ac4691f35209f25c4f348272c81
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8bb8afc256881c96f70a3dd53a31e75c8fa2b5ce
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081437"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528443"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>“编辑表属性”对话框 (SSAS)
   **“编辑表属性”** 对话框可用于查看和修改通过使用“表导入向导”导入到模型设计器中的表的属性。 若要访问此对话框，请在模型设计器中选择表，然后在 **“表”** 菜单中单击 **“表属性”**。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  根据您最初是通过从列表中选择表还是通过使用 SQL 查询导入数据的，此对话框的选项将有所不同。  
   
 ## <a name="table-preview-mode"></a>表预览模式  
- **表名称**  
+ **表名**  
  显示模型中数据表的名称。  
   
 > [!NOTE]  
@@ -46,8 +45,8 @@ ms.locfileid: "66081437"
  **列名来自**  
  |||  
 |-|-|  
-|**源**|选择此选项可用来自所选源表的列名替换当前列名。|  
-|**型号**|选择此选项可使用当前列名，因为它们在模型中存在。|  
+|**Source**|选择此选项可用来自所选源表的列名替换当前列名。|  
+|**模式**|选择此选项可使用当前列名，因为它们在模型中存在。|  
   
  **刷新预览**  
  单击以查看当前所选源表中的数据列。  
@@ -71,7 +70,7 @@ ms.locfileid: "66081437"
  单击以应用您所做的所有更改，包括替换列。  
   
 ## <a name="query-design-mode"></a>查询设计模式  
- **表名称**  
+ **表名**  
  显示模型中数据表的名称。  
   
 > [!NOTE]  
@@ -89,7 +88,7 @@ ms.locfileid: "66081437"
  **Sql 语句**  
  显示对当前数据源发出的用于检索行的 SQL 语句。 默认情况下将检索所有行，但您可以通过设计筛选器或手动编辑 SQL 语句来检索行的子集。  
   
- **验证**  
+ **Validate**  
  单击以验证该语句对于所选数据源和提供程序在语法方面是否正确。  
   
  **设计**  

@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 58303326-1361-4c0e-9f3d-642ce69c4f6a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b54bfbdb03f6f2220cf66cb988456b2e6e6a0070
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: af1cc0c5838c942d8f04eb5246c9c1714d08d786
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076293"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536399"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>通过生成时间表来创建时间维度
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，当源数据库中没有可用[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的时间表时，可以使用中的维度向导创建时间维度。 在 **“选择创建方法”** 页上选择下列选项之一可执行此操作。  
+  在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 当源数据库中没有可用的时间表时，可以使用中的维度向导创建时间维度。 在 **“选择创建方法”** 页上选择下列选项之一可执行此操作。  
   
 -   **在数据源中生成时间表** 如果您具有在基础数据源中创建对象的权限，可选择此选项。 该向导将生成一个时间表并将此表存储在数据源中。 然后，该向导根据此时间表创建时间维度。  
   

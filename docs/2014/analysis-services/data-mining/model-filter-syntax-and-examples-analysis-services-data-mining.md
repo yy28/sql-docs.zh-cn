@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3e8fea8d2a7b92ccca9b139b62d429fafe3a9bc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e52fae59d05447ef28eac7b9be408279ffcefb96
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083367"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521070"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>模型筛选器语法和示例（Analysis Services – 数据挖掘）
   本节提供有关模型筛选器语法的详细信息以及示例表达式。  
   
  
   
-##  <a name="filter-syntax"></a><a name="bkmk_Syntax"></a> Filter Syntax  
+##  <a name="filter-syntax"></a><a name="bkmk_Syntax"></a>筛选器语法  
  筛选表达式通常等同于 WHERE 子句的内容。 您可以使用逻辑运算符 `AND`、`OR` 和 `NOT` 连接多个条件。  
   
  在嵌套表中，您还可以使用 `EXISTS` 和 `NOT EXISTS` 运算符。 如果子查询至少返回一行，则 `EXISTS` 条件的计算结果为 `true`。 当您要将模型限制为包含嵌套表中的特殊值的事例时，这将非常有用。例如，客户至少购买过一次某种物品。  
@@ -238,9 +237,9 @@ FILTER (EXISTS (Products))
 
   
 ###  <a name="example-7-complex-filter-combinations"></a><a name="bkmk_Ex7"></a> 示例 7：复杂的筛选器组合  
- 此模型的应用场景类似于示例 4，但比示例 4 要复杂得多。 嵌套表**ProductsOnSale**具有筛选条件`(OnSale)` ，这意味着**OnSale**的值必须`true`为**ProductName**中列出的产品。 此处 **OnSale** 是一个结构列。  
+ 此模型的应用场景类似于示例 4，但比示例 4 要复杂得多。 嵌套表**ProductsOnSale**具有筛选条件， `(OnSale)` 这意味着**OnSale**的值必须 `true` 为**ProductName**中列出的产品。 此处 **OnSale** 是一个结构列。  
   
- 筛选器的第二部分（对于**ProductsNotOnSale**）重复此语法，但筛选**OnSale**的值为`not true``(!OnSale)`的产品。  
+ 筛选器的第二部分（对于**ProductsNotOnSale**）重复此语法，但筛选**OnSale**的值为的产品 `not true``(!OnSale)` 。  
   
  最后，这些条件将组合在一起，同时另一个限制将添加到事例表中。 结果是可以对年龄在 25 岁以上的所有客户根据在 **ProductsOnSale** 列表中包含的事例预测其在 **ProductsNotOnSale** 列表中的产品的购买情况。  
   

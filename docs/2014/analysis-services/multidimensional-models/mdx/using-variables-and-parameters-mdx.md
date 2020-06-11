@@ -14,22 +14,21 @@ helpviewer_keywords:
 ms.assetid: a4754d16-d9c4-49f6-9be0-392180b912e4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eeb258266c489056994d8f78f80a6856602a174a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd01cf78ea5e3284aa51cad7dc848176a5dc9298
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073710"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546139"
 ---
 # <a name="using-variables-and-parameters-mdx"></a>使用变量和参数 (MDX)
-  在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中，可以参数化多维表达式（MDX）语句。 参数化语句允许您创建可在运行时自定义的一般语句。  
+  在中 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ，可以参数化多维表达式（MDX）语句。 参数化语句允许您创建可在运行时自定义的一般语句。  
   
- 在创建参数化语句时，通过在参数名称前面添加 at 符号 (@) 来标识参数名称。 例如， @Year是一个有效的参数名称  
+ 在创建参数化语句时，通过在参数名称前面添加 at 符号 (@) 来标识参数名称。 例如， @Year 是一个有效的参数名称  
   
  MDX 仅支持文字值或标量值的参数。 若要创建引用成员、集或元组的参数，必须使用函数，如 [StrToMember](/sql/mdx/strtomember-mdx) 或 [StrToSet](/sql/mdx/strtoset-mdx)。  
   
- 在下面的 XML for Analysis （XMLA）示例中， @CountryName参数将包含检索其客户数据的国家/地区：  
+ 在下面的 XML for Analysis （XMLA）示例中， @CountryName 参数将包含检索其客户数据的国家/地区：  
   
 ```  
 <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">  

@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d5a5126048928e66fd8351bc00226cadb2de54d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 226b8c52fde4c9c4190c9c6c0c1e91c578643f53
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084892"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522722"
 ---
 # <a name="data-mining-solutions"></a>数据挖掘解决方案
   数据挖掘解决方案是一个包含一个或多个数据挖掘项目的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 解决方案。  
   
- 本节中的主题提供有关如何使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]设计和实现集成数据挖掘解决方案的信息。 有关数据挖掘设计过程和相关工具的概述，请参阅 [Data Mining Concepts](data-mining-concepts.md)。  
+ 本节中的主题提供有关如何使用设计和实现集成数据挖掘解决方案的信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。 有关数据挖掘设计过程和相关工具的概述，请参阅 [Data Mining Concepts](data-mining-concepts.md)。  
   
  有关对数据挖掘有用的其他项目类型的详细信息，请参阅 [数据挖掘解决方案的相关项目](data-mining-solutions.md)。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66084892"
 ## <a name="related-tasks-and-topics"></a>相关任务和主题  
  在创建一个基本数据挖掘解决方案（包括数据源和挖掘结构）后，可通过添加新模型、测试并比较模型、创建预测和试用数据子集来基于该解决方案进行生成。  
   
- 有关更多信息，请参见下列链接：  
+ 有关详细信息，请参阅以下链接：  
   
 |任务|主题|  
 |-----------|------------|  

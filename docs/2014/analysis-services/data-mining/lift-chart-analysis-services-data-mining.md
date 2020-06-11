@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: feba3688947362847a95aea2d800c1fc6f15f6cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9f7e4f7c9d97878be9f2cd2f3251ac463332faf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174677"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522293"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>提升图（Analysis Services - 数据挖掘）
   "**提升图**" 以图形方式表示与随机推测相比挖掘模型提供的改进，并测量*提升*分数的变化。 通过比较您的数据集的各个部分和不同模型的提升分数，您可以确定哪种模型是最佳的，而数据集中的事例百分比将从应用模型的预测中受益。
@@ -65,7 +64,7 @@ ms.locfileid: "78174677"
 
  **“挖掘图例”** 还包含有助于您解释此图表的分数和统计信息。 这些结果表示模型在灰线位置的准确性，在此应用场景中，将灰线定位到包含 30% 的整体测试事例的位置。
 
-|序列和模型|分数|目标总体|预测概率|
+|序列和模型|Score|目标总体|预测概率|
 |-----------------------|-----------|-----------------------|-------------------------|
 |向所有客户发送目标邮件|0.71|47.40%|61.38%|
 |向 30 岁以下的客户发送目标邮件|0.85|51.81%|46.62%|
@@ -95,7 +94,7 @@ ms.locfileid: "78174677"
 
  在图表内部单击可以移动垂直灰条， **“挖掘图例”** 显示所有事例的百分比以及准确预测的事例的百分比。 例如，如果将灰色滑动条移至 50% 标记处， **“挖掘图例”** 显示下列准确性分数。 这些数字基于在数据挖掘基础教程中创建的 TM_Decision Tree 模型。
 
-|序列、模型|分数|目标总体|预测概率|
+|序列、模型|Score|目标总体|预测概率|
 |-------------------|-----------|-----------------------|-------------------------|
 |TM_Decision Tree|0.77|40.50%|72.91%|
 |理想模型||50.00%||

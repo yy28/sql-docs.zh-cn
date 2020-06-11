@@ -1,5 +1,6 @@
 ---
 title: 在 SQL Server 上安装 SSMA 组件（OracleToSQL） |Microsoft Docs
+description: 了解如何在运行 SQL Server 的计算机上安装 SSMA 扩展包和 Oracle 提供程序以支持 Oracle 数据库转换。
 ms.prod: sql
 ms.custom: ''
 ms.date: 10/01/2019
@@ -13,26 +14,26 @@ ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 1f0cea859e9465eebefebc061ee51107dc7844aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3df476f5fa14840af0b023253b79702ed7a85c8a
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71713313"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292918"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>在 SQL Server 上安装 SSMA 组件（OracleToSQL）
 
-除了安装 SSMA 外，还必须在运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的计算机上安装组件。 这些组件包括支持数据迁移的 SSMA 扩展包和用于启用服务器到服务器连接的 Oracle 提供程序。  
+除了安装 SSMA 外，还必须在运行的计算机上安装组件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 这些组件包括支持数据迁移的 SSMA 扩展包和用于启用服务器到服务器连接的 Oracle 提供程序。  
   
 ## <a name="ssma-for-oracle-extension-pack"></a>Oracle 扩展包的 SSMA
 
-SSMA 扩展包将**sysdb**和**ssmatesterdb**数据库添加到的指定实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 数据库**sysdb**包含迁移数据所需的表和存储过程，以及用于模拟 Oracle 系统功能的用户定义函数。 **Ssmatesterdb**数据库包含测试人员组件所需的表和过程。  
+SSMA 扩展包将**sysdb**和**ssmatesterdb**数据库添加到的指定实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 数据库**sysdb**包含迁移数据所需的表和存储过程，以及用于模拟 Oracle 系统功能的用户定义函数。 **Ssmatesterdb**数据库包含测试人员组件所需的表和过程。  
   
-此外，在将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]会在服务器端数据迁移引擎用于迁移数据时创建代理作业。  
+此外，在将数据迁移到时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会在服务器端数据迁移引擎用于迁移数据时创建代理作业。  
   
 ### <a name="prerequisites"></a>先决条件
 
-在上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装用于 Oracle 服务器组件的 SSMA 之前，请确保系统满足以下要求：  
+在上安装用于 Oracle 服务器组件的 SSMA 之前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请确保系统满足以下要求：  
   
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已安装实例。 SSMA 不支持 SQL Server 2008 Express Edition。
   
@@ -40,17 +41,17 @@ SSMA 扩展包将**sysdb**和**ssmatesterdb**数据库添加到的指定实例[!
   
 - Oracle 客户端提供程序或用于 Oracle 的 OLE DB 提供程序，以及与要迁移的 Oracle 数据库的连接。 你可以从 Oracle 产品媒体或 Oracle 网站安装提供程序。  
   
-- 必须[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在安装过程中运行 Browser 服务。 这用于在安装向导中填充实例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列表。 你可以在安装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]后禁用 Browser 服务。  
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]必须在安装过程中运行 Browser 服务。 这用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在安装向导中填充实例的列表。 你可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装后禁用 Browser 服务。  
   
     > [!NOTE]  
-    > 如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务正在运行，但你仍未在安装程序中看到实例列表，则必须解除 UDP 端口1434的阻止。 可以使用 Windows 防火墙暂时取消阻止端口，也可以暂时禁用 Windows 防火墙。 你可能还必须暂时禁用防病毒软件。 请确保在安装后启用防火墙和防病毒软件。  
+    > 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务正在运行，但你仍未在安装程序中看到实例列表，则必须解除 UDP 端口1434的阻止。 可以使用 Windows 防火墙暂时取消阻止端口，也可以暂时禁用 Windows 防火墙。 你可能还必须暂时禁用防病毒软件。 请确保在安装后启用防火墙和防病毒软件。  
   
 ### <a name="installing-the-extension-pack"></a>安装扩展包
 
-在将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，你可以随时安装扩展包。  
+在将数据迁移到之前，你可以随时安装扩展包 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 > [!IMPORTANT]  
-> 若要安装扩展包，您必须是实例上**sysadmin**服务器角色的成员[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+> 若要安装扩展包，您必须是实例上**sysadmin**服务器角色的成员 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 **安装扩展包**
   
@@ -58,29 +59,29 @@ SSMA 扩展包将**sysdb**和**ssmatesterdb**数据库添加到的指定实例[!
   
     根据你所拥有的 WinZip 版本，可以双击该文件，或者右键单击该文件，然后选择 "**全部提取**" 或 **"在 WinZip 中打开**"。 按照 WinZip 用户界面中的说明提取文件。  
   
-2. 复制**Oracle 扩展包的 SSMA。*n*。** 在运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的计算机上安装 .exe （其中*n*为内部版本号）。  
+2. 复制**Oracle 扩展包的 SSMA。*n*.Install.exe** （其中*n*是内部版本号）到运行的计算机 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-3. 双击 " **SSMA For Oracle Extension Pack"。*n*。安装 .exe**。  
+3. 双击 " **SSMA For Oracle Extension Pack"。*n*.Install.exe**。  
   
-4. 在“欢迎”页上，选择“下一步”。    
+4. 在“欢迎”页上，选择“下一步”。   
   
 5. 在 "**最终用户许可协议**" 页上，阅读许可协议。 如果同意，请选中 "**我接受许可协议中的条款**" 复选框，然后选择 "**下一步**"。  
   
 6. 在 "**选择安装类型**" 页上，选择 "**典型**"。  
   
-7. 在“准备安装” **** 页上，选择“安装” ****。  
+7. 在 "**准备安装**" 页上，选择 "**安装**"。  
   
 8. 在 "**完成第一步安装**" 页上，选择 "**下一**步"。  
   
-    此时将显示一个新对话框，您可以在其中选择[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用于安装扩展包的实例。  
+    此时将显示一个新对话框，您可以在其中选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于安装扩展包的实例。  
   
-9. 选择要将 Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]架构迁移到的实例，然后选择 "**下一步**"。  
+9. 选择要将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle 架构迁移到的实例，然后选择 "**下一步**"。  
   
     默认实例与计算机的名称相同。 命名实例后跟反斜杠和实例名称。  
   
 10. 在 "连接" 页上，选择身份验证方法，然后选择 "**下一步**"。  
   
-    Windows 身份验证将使用您的 Windows 凭据来尝试登录到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果选择[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "身份验证"，则必须[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]输入登录名和密码。  
+    Windows 身份验证将使用您的 Windows 凭据来尝试登录到的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "身份验证"，则必须输入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和密码。  
   
 11. 在下一页上，选择 "**安装实用程序数据库** *n*"，其中*n*是版本号，然后选择 "**下一步**"。  
   
@@ -88,9 +89,9 @@ SSMA 扩展包将**sysdb**和**ssmatesterdb**数据库添加到的指定实例[!
   
     如果选中了 "**安装测试器数据库**" 选项，则将创建测试**ssmatesterdb**数据库。  
   
-12. 若要将实用工具安装到的另[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一个实例，请选择 **"是**"，然后选择 "**下一步**"，或者单击 "**否**" 以退出向导。  
+12. 若要将实用工具安装到的另一个实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请选择 **"是**"，然后选择 "**下一步**"，或者单击 "**否**" 以退出向导。  
   
-13. 在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或使用 sqlcmd 实用工具，运行以下脚本以启用 CLR：  
+13. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或使用 sqlcmd 实用工具，运行以下脚本以启用 CLR：  
   
     ```
     sp_configure 'clr enabled', 1  
@@ -99,7 +100,7 @@ SSMA 扩展包将**sysdb**和**ssmatesterdb**数据库添加到的指定实例[!
     GO  
     ```
 
-    如果未启用 CLR，则当 SSMA 连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，你将收到以下错误：  
+    如果未启用 CLR，则当 SSMA 连接到时，你将收到以下错误 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：  
   
     SSMA 无法检索扩展包程序集版本信息。 在数据库服务器上重新安装扩展包。  
   
@@ -107,7 +108,7 @@ SSMA 扩展包将**sysdb**和**ssmatesterdb**数据库添加到的指定实例[!
 
 安装扩展包后， **sysdb**数据库中会出现一个**ssma_oracle bcp_migration_packages**表。
 
-每次将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，SSMA 会[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]创建代理作业。 这些作业**ssma_oracle 数据迁移包 {GUID}** 命名，在 "作业" 文件夹的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "代理" [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]节点中可见。  
+每次将数据迁移到时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，SSMA 会创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。 这些作业**ssma_oracle 数据迁移包 {GUID}** 命名，在 "作业" 文件夹的 "代理" 节点中可见 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
 ## <a name="see-also"></a>另请参阅
 

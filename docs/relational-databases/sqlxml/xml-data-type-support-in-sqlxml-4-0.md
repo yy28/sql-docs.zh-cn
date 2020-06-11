@@ -1,5 +1,6 @@
 ---
 title: SQLXML 4.0 中的 xml 数据类型支持
+description: 了解 SQLXML 4.0 如何识别 xml 数据类型的实例并实现对它的支持。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,16 +15,16 @@ ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c56efd6c79b7ce7d74af621963f4b12e734d5f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: afaee239422b557b53117441f36c79d1180802db
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252173"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306096"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>SQLXML 4.0 中的 xml 数据类型支持
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  从开始[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持使用**xml**数据类型的 xml 类型化数据。 本主题提供有关 SQLXML 4.0 如何识别**xml**数据类型的实例并实现对这些实例的支持的信息。  
+  从开始 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持使用**xml**数据类型的 xml 类型化数据。 本主题提供有关 SQLXML 4.0 如何识别**xml**数据类型的实例并实现对这些实例的支持的信息。  
   
 ## <a name="working-with-xml-data-types"></a>使用 xml 数据类型  
  若要详细了解如何使用实现**xml**数据类型列的 SQL 表，提供了以下示例：  
@@ -36,11 +37,11 @@ ms.locfileid: "75252173"
   
 ## <a name="guidelines-and-limitations"></a>准则和限制  
   
--   xsd：任何>都无法映射到包含**xml**数据类型的列。 ** \<** 对于此方案，SQLXML 中的支持通过**sql：溢出字段**批注提供。 另一种解决方法是将**xml**数据类型字段映射为**xsd： anyType**的元素。 上表中引用的“将 XML 元素映射到 XML 数据类型列”示例介绍了这种解决办法。  
+-   **\<xsd:any>** 无法映射到包含**xml**数据类型的列。 对于此方案，SQLXML 中的支持通过**sql：溢出字段**批注提供。 另一种解决方法是将**xml**数据类型字段映射为**xsd： anyType**的元素。 上表中引用的“将 XML 元素映射到 XML 数据类型列”示例介绍了这种解决办法。  
   
 -   不支持将 XPath 查询到**xml**数据类型列的内容。  
   
--   如果在不支持**xml**数据类型列的批注中使用该数据类型列（如**sql： relationship**和**sql：键字段**）或 "允许" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则会导致错误，这些错误将不会由实现 SQLXML 4.0 的中间层组件捕获。 其原因在于 SQLXML 不要求 SQL 类型信息。 这类似于其他数据类型（如 BLOB 和二进制类型）的 SQLXML 的行为。  
+-   如果在不支持**xml**数据类型列的批注中使用该数据类型列（如**sql： relationship**和**sql：键字段**）或 "允许"，则会导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误，这些错误将不会由实现 SQLXML 4.0 的中间层组件捕获。 其原因在于 SQLXML 不要求 SQL 类型信息。 这类似于其他数据类型（如 BLOB 和二进制类型）的 SQLXML 的行为。  
   
 -   仅 XSD 架构支持映射**xml**列。 XDR 架构不支持映射**xml**列。  
   
@@ -48,7 +49,7 @@ ms.locfileid: "75252173"
   
 -   SQLXML 4.0 依赖于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中提供的对于 DTD 的有限支持。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]允许在**xml**数据类型的数据中使用内部 DTD，该数据可用于提供默认值，并将实体引用替换为其扩展的内容。 SQLXML 将 XML 数据“按原样”（包括内部 DTD）传递到服务器。 可以通过使用第三方工具将 DTD 转换为 XML 架构 (XSD)，然后使用内联 XSD 架构将数据加载到数据库中。  
   
--   SQLXML 4.0 不会基于的行为保留 XML 声明处理指令（例如） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 相反，XML 声明被视为对[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] xml 分析器的指令，并且在将数据转换为**xml**数据类型后，其特性（版本、编码和独立）将丢失。 XML 数据在内部存储为 UCS-2。 XML 实例中的所有其他处理指令都将保留;它们在**xml**列中是允许的，并且可以由 SQLXML 支持。  
+-   SQLXML 4.0 不会基于的行为保留 XML 声明处理指令（例如） [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 相反，XML 声明被视为对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] xml 分析器的指令，并且在将数据转换为**xml**数据类型后，其特性（版本、编码和独立）将丢失。 XML 数据在内部存储为 UCS-2。 XML 实例中的所有其他处理指令都将保留;它们在**xml**列中是允许的，并且可以由 SQLXML 支持。  
   
 ## <a name="see-also"></a>另请参阅  
  [XML 数据 (SQL Server)](../../relational-databases/xml/xml-data-sql-server.md)  

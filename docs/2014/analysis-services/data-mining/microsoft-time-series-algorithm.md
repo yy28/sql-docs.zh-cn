@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97132ff64405df19c56c080cc5a1baa704a700d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d840d581fe4dba1ce9d65dfef6878a1e5a697864
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083771"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521631"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft 时序算法
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]时序算法提供了针对连续值（例如产品销售额）预测进行了优化的回归算法。 虽然其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法（如决策树）也能预测趋势，但是他们需要使用其他新信息列作为输入才能进行预测，而时序模型则不需要。 时序模型仅根据用于创建该模型的原始数据集就可以预测趋势。 进行预测时您还可以向模型添加新数据，随后新数据会自动纳入趋势分析范围内。  
@@ -47,11 +46,11 @@ ms.locfileid: "66083771"
  每个季度，该公司都会计划用最近的销售数据来更新模型，并更新其预测以描绘出最近的趋势。 有些商店不能准确地或始终如一地更新销售数据，为了弥补这一点造成的误差，他们将创建一个通用预测模型，并用该模型对所有区域进行预测。  
   
 ## <a name="how-the-algorithm-works"></a>算法的原理  
- 在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中， [!INCLUDE[msCoName](../../includes/msconame-md.md)]时序算法使用了单个算法 ARTXP。 ARTXP 算法针对短期预测进行了优化，因此预测了序列中的下一个可能值。 从开始[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]， [!INCLUDE[msCoName](../../includes/msconame-md.md)]时序算法同时使用 ARTXP 算法和另一种算法 ARIMA。 ARIMA 算法针对长期预测进行了优化。 有关 ARTXP 和 ARIMA 算法的实现的详细说明，请参阅 [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)。  
+ 在中 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法使用了单个算法 ARTXP。 ARTXP 算法针对短期预测进行了优化，因此预测了序列中的下一个可能值。 从开始 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法同时使用 ARTXP 算法和另一种算法 ARIMA。 ARIMA 算法针对长期预测进行了优化。 有关 ARTXP 和 ARIMA 算法的实现的详细说明，请参阅 [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)。  
   
  默认情况下， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法在分析模式和进行预测时混合使用这两种算法。 该算法将两个单独的模型定型到相同的数据：一个模型使用 ARTXP 算法，另一个模型使用 ARIMA 算法。 然后，该算法结合这两个模型的结果来产生可变数量时间段的最佳预测。 因为 ARTXP 最适合于短期预测，所以在一系列预测的开始时它十分重要。 但是，随着预测的时间段不断地向将来延伸，ARIMA 就比较重要了。  
   
- 您还可以控制这两种算法的混合方式，以在时序中优先采用短期预测或长期预测。 从[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]标准开始，可以指定[!INCLUDE[msCoName](../../includes/msconame-md.md)]时序算法使用以下设置之一：  
+ 您还可以控制这两种算法的混合方式，以在时序中优先采用短期预测或长期预测。 从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 标准开始，可以指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法使用以下设置之一：  
   
 -   对短期预测仅使用 ARTXP。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66083771"
   
 -   使用这两种算法的默认混合。  
   
- 从开始[!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]，可以自定义时序算法[!INCLUDE[msCoName](../../includes/msconame-md.md)]如何混合用于预测的模型。 采用混合模型时， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法按以下方式混合这两种算法：  
+ 从开始 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] ，可以自定义时序 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法如何混合用于预测的模型。 采用混合模型时， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法按以下方式混合这两种算法：  
   
 -   在进行前几步预测时始终只使用 ARTXP。  
   
@@ -101,7 +100,7 @@ ms.locfileid: "66083771"
 ### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>示例 1：具有表示为列值的序列的时序数据集  
  该示例使用下表中的输入事例：  
   
-|TimeID|Products|Sales|数据量(Volume)|  
+|TimeID|产品|Sales|数据量(Volume)|  
 |------------|-------------|-----------|------------|  
 |1/2001|A|1000|600|  
 |2/2001|A|1100|500|  
@@ -142,7 +141,7 @@ ms.locfileid: "66083771"
   
 -   服务器使用的 64 位操作系统不同，时序模型作出的预测也可能不同（有时差异会很大）。 出现这些差异的原因是基于 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]的系统表示和处理浮点算术数字的方式与基于 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]的系统处理这些计算的方式不同。 由于预测结果可能是特定于操作系统的，因此建议您在评估模型时使用与将用于生产的操作系统相同的操作系统。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 -   不支持使用预测模型标记语言 (PMML) 创建挖掘模型。  
   

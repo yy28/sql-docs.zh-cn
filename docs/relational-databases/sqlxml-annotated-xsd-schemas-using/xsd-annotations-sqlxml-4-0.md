@@ -1,5 +1,6 @@
 ---
 title: XSD 批注（SQLXML）
+description: 查看 SQL Server 2005 （6.x）中引入的 XSD 批注（SQLXML 4.0）列表，并与 SQL Server 2000 （）中引入的 XDR 批注进行比较。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: acd1dc15531f2e4830993eed1404db4d7205feef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: baf79cfd4048bad018df2314b9d891c47871f0d6
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246801"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689232"
 ---
 # <a name="xsd-annotations-sqlxml-40"></a>XSD 批注 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75246801"
 |**sql： guid**|允许您指定是要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的 GUID 值，还是使用在该列的 updategram 中提供的值。|[使用 sql:identity 和 sql:guid 批注](../../relational-databases/sqlxml-annotated-xsd-schemas-using/using-the-sql-identity-and-sql-guid-annotations.md)|不支持|  
 |**sql:hide**|隐藏在最终 XML 文档的架构中指定的元素或属性。|[使用 sql:hide 隐藏元素和属性](../../relational-databases/sqlxml-annotated-xsd-schemas-using/hiding-elements-and-attributes-by-using-sql-hide.md)|不支持|  
 |**sql:identity**|可对映射到 IDENTITY 类型数据库列的任何节点指定。 为此批注指定的值定义如何更新数据库中相应 IDENTITY 类型的列。|[使用 sql:identity 和 sql:guid 批注](../../relational-databases/sqlxml-annotated-xsd-schemas-using/using-the-sql-identity-and-sql-guid-annotations.md)|不支持|  
-|**sql:inverse**|指示 updategram 逻辑使用** \<sql： relationship>** 反转其对父子关系的解释。|[在 sql： relationship 上指定 sql：反向特性 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)|不支持|  
+|**sql:inverse**|指示 updategram 逻辑使用** \< sql： relationship>** 反转其对父子关系的解释。|[在 sql： relationship 上指定 sql：反向特性 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)|不支持|  
 |**sql:is-constant**|创建不映射到任何表的 XML 元素。 该元素出现在查询输出中。|[使用 sql 创建常量元素：是常量 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md)|相同|  
 |**sql:key-fields**|允许规定唯一标识表中的行的列。|[使用 sql：键字段 &#40;SQLXML 4.0&#41;标识键列](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)|相同|  
 |**sql:limit-field**<br /><br /> **sql:limit-value**|允许限制基于限制值返回的值。|[使用 sql： limit 字段和 sql： limit-value &#40;SQLXML 4.0&#41;筛选值](../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)|相同|  
@@ -43,7 +44,7 @@ ms.locfileid: "75246801"
 |**sql:use-cdata**|允许指定要用于 XML 文档中的某些元素的 CDATA 部分。|[使用 sql： use-CDATA 创建 CDATA 节 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md)|相同|  
   
 > [!NOTE]  
->  XSD native **targetNamespace**属性替换[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] XDR 映射架构中引入的**目标命名空间**批注。  
+>  XSD native **targetNamespace**属性替换 XDR 映射架构中引入的**目标命名空间**批注 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用 targetNamespace 属性指定目标命名空间 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md)  

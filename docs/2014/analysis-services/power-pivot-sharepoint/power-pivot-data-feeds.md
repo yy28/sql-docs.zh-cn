@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6b1337c5-50a0-4fc2-b079-377dc241d2cc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b3080996eca3395e8be3cab5e17eaea7305dbfa2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3dd788c51867924882eba80fb9cbed280143fd6d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071270"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535125"
 ---
 # <a name="powerpivot-data-feeds"></a>PowerPivot 数据馈送
-  数据馈送从联机数据源按需向客户端应用程序提供数据流。 在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以使用数据馈送将来自 Atom 感知的 Web 服务或应用程序的数据添加到 Excel 工作簿中的 PowerPivot 数据源。  
+  数据馈送从联机数据源按需向客户端应用程序提供数据流。 在中 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，可以使用数据馈送将来自 Atom 感知的 Web 服务或应用程序的数据添加到 Excel 工作簿中的 PowerPivot 数据源。  
   
  本节中提供的信息可帮助您充分利用数据馈送以便将现有的公司或工作组数据提取到 PowerPivot 工作簿中。 它还提供有关如何与组织中的其他人共享数据馈送以及在需要解决出现的任何问题时如何构造和使用数据馈送的信息。  
   

@@ -1,5 +1,6 @@
 ---
 title: 天花板函数（XQuery） |Microsoft Docs
+description: 了解如何使用 XQuery 天花板（）函数返回没有小于函数参数值的小数部分的最小数字。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe18f488b83c1a8c9236c642751c1dc80bfe7e6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd1d131fadf2fb594b9ad2799791313d0136f39b
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946570"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689770"
 ---
 # <a name="numeric-values-functions---ceiling"></a>数值函数 - ceiling 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ fn:ceiling ( $arg as numeric?) as numeric?
  *$arg*  
  将应用该函数的数字。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果 *$arg*的类型为三个数值基类型之一 **： xs： float**、 **xs： double**或**xs： decimal**，则返回类型与 *$arg*类型相同。  
   
  如果 *$arg*的类型是派生自其中一个数值类型的类型，则返回类型为基本数值类型。  
@@ -75,11 +76,11 @@ WHERE ProductModelID=7
   
 -   **说明**是一个**xml**类型列。 因此， [query （）方法（XML 数据类型）](../t-sql/xml/query-method-xml-data-type.md)用于指定 XQuery。 XQuery 语句指定为该查询方法的参数。  
   
--   **对于 .。。返回**为循环构造。 在查询中， **for**循环标识\<位置> 元素的列表。 对于每个工作中心位置， **for**循环中的**return**语句描述要生成的 XML：  
+-   **对于 .。。返回**为循环构造。 在查询中， **for**循环标识 \< 位置> 元素的列表。 对于每个工作中心位置， **for**循环中的**return**语句描述要生成的 XML：  
   
-    -   具有\<LocationID 和 LaborHrs 属性的位置> 元素。 大括号 ({ }) 中对应的表达式从文档中检索所需的值。  
+    -   \<具有 LocationID 和 LaborHrs 属性的位置> 元素。 大括号 ({ }) 中对应的表达式从文档中检索所需的值。  
   
-    -   {$i/@LotSize } 表达式从文档中检索 LotSize 属性（如果存在）。  
+    -   {$ i/@LotSize } 表达式从文档中检索 LotSize 属性（如果存在）。  
   
     -   结果如下：  
   

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7d4952724f19a3c7010884feac0254f4f75d90ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: caf111b2d78032b0a127f978562b2e0138df0109
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073354"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545790"
 ---
 # <a name="multidimensional-model-object-processing"></a>多维模型对象处理
   处理是 Analysis Services 将数据从关系数据源加载到多维模型的一个步骤或一系列步骤。 对于使用 MOLAP 存储的对象，数据将保存到磁盘的数据库文件所在文件夹中。 对于 ROLAP 存储，按需执行处理，以响应对象的 MDX 查询。 对于使用 ROLAP 存储的对象，处理是指在返回查询结果之前更新缓存。  
@@ -43,7 +42,7 @@ ms.locfileid: "66073354"
   
  [重新处理对象](#bkmk_reproc)  
   
-##  <a name="prerequisites"></a><a name="bkmk_prereq"></a>先决条件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 先决条件  
   
 -   处理需要对 Analysis Services 实例的管理权限。 如果正在从 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 或 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]以交互方式进行处理，您必须是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上服务器管理员角色的成员。 对于以无人参与方式运行的处理，例如使用通过 SQL Server 代理计划运行的 SSIS 包，用于运行该包的帐户必须是服务器管理员角色的成员。 有关设置管理员权限的详细信息，请参阅[&#40;Analysis Services&#41;授予服务器管理员权限](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。  
   

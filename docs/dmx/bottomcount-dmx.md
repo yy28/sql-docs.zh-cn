@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0bbd80998f7a6fd74f76f641cc16fe81ba715dde
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: be257e4da206c1c30d54341fbfda4c0aed894ab2
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889851"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669850"
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,13 +28,13 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>应用于  
- 返回表的表达式，如\<表列引用> 或返回表的函数。  
+ 返回表的表达式，如 \< 表列引用> 或返回表的函数。  
   
 ## <a name="return-type"></a>返回类型  
  \<表表达式>  
   
-## <a name="remarks"></a>备注  
- \<排名表达式> 参数提供的值确定在\<表表达式> 参数中提供的行的排名的递增顺序，并返回在\<count> 参数中指定的最底部的行数。  
+## <a name="remarks"></a>注解  
+ \<排名表达式> 参数提供的值确定在表表达式> 参数中提供的行的排名的递增顺序 \< ，并返回在 count> 参数中指定的最底部的行数 \< 。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建一个针对使用[数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)生成的关联模型的预测查询。  

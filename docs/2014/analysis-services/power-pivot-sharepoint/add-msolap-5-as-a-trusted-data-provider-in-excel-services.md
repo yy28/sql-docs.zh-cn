@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c1f40fa4-de6d-41ee-8124-14b4d65988f5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9095c1fa767e1854c300df1ad08bf5d1900af860
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e12c9b4001f0b07deafda8278ac634d595d807a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071927"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547619"
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口
   MSOLAP.5 指代用于 SQL Server 2012 的 Analysis Services OLE DB 访问接口。 Excel Services 必须信任此访问接口，然后才能发出连接请求，请求在服务器上提供 PowerPivot 数据。  

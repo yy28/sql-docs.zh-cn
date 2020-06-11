@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3bbd5ef006674a61830bf07de31f73c3915b0d4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bfe876f6874193fd0885f16d91caa9f6fe8b172
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62701999"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544939"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>管理连接和会话 (XMLA)
   *有状态*是服务器在方法调用之间保留客户端的标识和上下文的条件。 *情形*是在方法调用完成后服务器不记得客户端的标识和上下文的情况。  
@@ -72,7 +71,7 @@ ms.locfileid: "62701999"
     </SOAP-ENV:Envelope>  
     ```  
   
-2.  提供程序中的 SOAP 响应消息使用 XMLA 标头标记\<SessionId> 在返回标头区域中包含会话 ID。  
+2.  提供程序中的 SOAP 响应消息使用 XMLA 标头标记在返回标头区域中包含会话 ID \<SessionId> 。  
   
     ```  
     <SOAP-ENV:Header>  
@@ -93,7 +92,7 @@ ms.locfileid: "62701999"
     </SOAP-ENV:Header>  
     ```  
   
-4.  会话完成时，将\<使用 EndSession> 标记，其中包含相关的会话 ID 值。  
+4.  会话完成时，将 \<EndSession> 使用标记，其中包含相关的会话 ID 值。  
   
     ```  
     <SOAP-ENV:Header>  

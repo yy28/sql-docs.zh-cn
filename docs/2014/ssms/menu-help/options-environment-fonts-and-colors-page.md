@@ -10,19 +10,19 @@ ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40bd2c5735b68a165bcdff4a26069505994dbd85
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21c4f3a480b039b4853c112831341b6448a7d6a7
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211259"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859376"
 ---
 # <a name="options-environment-fonts-and-colors-page"></a>选项（“环境”:“字体和颜色”页）
   使用“选项”对话框可以为   中的各种用户界面元素建立自定义的字体和配色方案[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 在“工具”  菜单上，单击“选项”  ，展开“环境”  文件夹，然后选择“字体和颜色”  。  
   
  在更改配色方案的会话期间，更改不会生效。 您可以通过打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的另一个实例，并将其设置为您的更改要应用的环境，来评估颜色更改效果。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **显示其设置**  
  列出可以为其更改字体和配色方案的所有用户界面元素。 从此列表中选择某项后，即可自定义“显示项”  中所选项的颜色设置。  
   

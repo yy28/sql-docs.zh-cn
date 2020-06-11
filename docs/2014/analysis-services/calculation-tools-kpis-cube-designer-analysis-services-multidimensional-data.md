@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c030c725-7763-4c23-9988-4b274a88fc31
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ecd16965c81ccb091d70320bd91c56112d3c15a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b26c912791a18d4bbdcf3def6d282e025b5af89b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088273"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527603"
 ---
 # <a name="calculation-tools-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>计算工具（KPI 选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集中的“KPI”**** 选项卡上的“计算工具”**** 窗格，浏览在关键绩效指标 (KPI) 中可用的元数据、函数和模板。  

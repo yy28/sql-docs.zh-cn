@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 68bf3b78-dc12-497c-898f-b43a45646123
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c96ee3cbaa5ae25404d61054dccd1860c6596f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bb1484ff3bad80979c9421e8d46ec4f46e866b1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085688"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524807"
 ---
 # <a name="classified-columns-data-mining"></a>已分类列（数据挖掘）
   定义已分类列时，在挖掘结构中创建当前列和另一个列之间的关系。 指定为已分类列的挖掘结构列中的数据包含描述挖掘结构中另一个列的值的分类信息。  

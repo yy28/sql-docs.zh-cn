@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b4a28c6be2c956636f303ccc561936f799c63b64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 23aaa06f7da6c29cf1f082c27071d68fa0c6958a
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008249"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669193"
 ---
 # <a name="not-dmx"></a>NOT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,13 +28,13 @@ NOT Expression1
 ```  
   
 #### <a name="parameters"></a>参数  
- *Expression1*  
+ Expression1  
  一个返回数值的有效 DMX 表达式。  
   
 ## <a name="return-value"></a>返回值  
  一个布尔值，在参数的计算结果为 TRUE 时返回 FALSE；否则将返回 FALSE。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  在运算符执行逻辑非运算之前，该参数被视为布尔值（0 为 FALSE；否则为 TRUE）。 如果*表达式*值为 TRUE，则运算符返回 FALSE。 如果*表达式*值为 FALSE，则运算符返回 TRUE。 下表阐释了执行逻辑与运算的方式。  
   
 |如果 Expression1 为|则返回值为|  

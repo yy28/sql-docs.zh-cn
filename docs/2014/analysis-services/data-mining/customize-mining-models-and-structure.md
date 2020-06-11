@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1b890514422a6b9b16cdfe2eb5b07d796a46bd60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a85819955e167c2356be51c5f3abcc2897bb42b9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174441"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523359"
 ---
 # <a name="customize-mining-models-and-structure"></a>自定义挖掘模型和结构
   在选择满足业务需要的算法后，可以按照以下方式自定义挖掘模型，从而有可能使结果得到改善。
@@ -61,7 +60,7 @@ ms.locfileid: "78174441"
 ### <a name="creating-aliases-for-model-columns"></a>为模型列创建别名
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 创建挖掘模型时，它将使用挖掘结构中的列名称。 您可以为挖掘模型中的任何列添加别名。 这样可以使列内容或用法更易于理解，还可以缩短名称从而便于创建查询。 当您要创建列的副本并使用描述性名称时，别名也很有帮助。
 
- 通过编辑挖掘模型列的 `Name` 属性来创建别名。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]继续将原始名称用作列的 ID，为`Name`输入的新值将成为列别名，并显示在网格中的列用法旁边的括号中。
+ 通过编辑挖掘模型列的 `Name` 属性来创建别名。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]继续将原始名称用作列的 ID，为输入的新值 `Name` 将成为列别名，并显示在网格中的列用法旁边的括号中。
 
  ![对挖掘模型列使用别名](../media/modelcolumnalias-income.gif "对挖掘模型列使用别名")
 

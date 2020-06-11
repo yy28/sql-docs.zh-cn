@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 304cd31b4d89d56bee5dbc903c784ee4bf7af5fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6e2322553eef361f0131e3558cd591bc32525ef
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637529"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522146"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft 决策树算法技术参考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法是一种混合算法，它综合了多种不同的创建树的方法，并支持多种分析任务，包括回归、分类以及关联。 Microsoft 决策树算法支持对离散属性和连续属性进行建模。  
@@ -64,7 +63,7 @@ ms.locfileid: "73637529"
   
  所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据挖掘算法都会自动使用功能选择来改善分析效果和减轻处理工作量。 用于功能选择的方法取决于生成模型所用的算法。 控制决策树模型的功能选择的算法参数为 MAXIMUM_INPUT_ATTRIBUTES 和 MAXIMUM_OUTPUT。  
   
-|算法|分析方法|说明|  
+|算法|分析方法|注释|  
 |---------------|------------------------|--------------|  
 |决策树|兴趣性分数<br /><br /> Shannon 平均信息量<br /><br /> Bayesian with K2 Prior<br /><br /> 使用统一先验的 Bayesian Dirichlet（默认）|如果任何列包含非二进制连续值，则兴趣性分数将用于所有列，以确保一致性。 否则，将使用默认方法或指定的方法。|  
 |线性回归|兴趣性分数|线形回归仅使用兴趣性分数，原因是它仅支持连续列。|  
@@ -99,7 +98,7 @@ ms.locfileid: "73637529"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法支持多个参数，这些参数可影响所生成的挖掘模型的性能和准确性。 您还可以对挖掘模型列或挖掘结构列设置建模标志来控制数据的处理方式。  
   
 > [!NOTE]  
->  在所有版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中均提供 Microsoft 决策树算法；但是，用于自定义 Microsoft 决策树算法行为的某些高级参数仅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的特定版本中提供。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2012 的各个[版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)（。https://go.microsoft.com/fwlink/?linkid=232473)  
+>  在所有版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中均提供 Microsoft 决策树算法；但是，用于自定义 Microsoft 决策树算法行为的某些高级参数仅在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的特定版本中提供。 有关各个版本支持的功能列表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅 SQL Server 2012 的各个[版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)（ https://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 ### <a name="setting-algorithm-parameters"></a>设置算法参数  
  下表介绍了可用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法的参数。  
@@ -183,7 +182,7 @@ ms.locfileid: "73637529"
   
  您无需指定连续数值数据列表示回归量。 即使不对列设置 REGRESSOR 标志， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法也会自动将列用作潜在回归量，并会将数据集分区成具有一定意义的模式的区域。  
   
- 您可以使用 FORCE_REGRESSOR 参数来确保算法将使用某一特定回归量。 此参数只可用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法。 设置建模标志时，算法会尝试查找窗体 a * C1 + b\*C2 + .。。以适应树节点中的模式。 将对剩余的总和进行计算，如果偏差过大，则在树中执行强制拆分。  
+ 您可以使用 FORCE_REGRESSOR 参数来确保算法将使用某一特定回归量。 此参数只可用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法。 设置建模标志时，算法会尝试查找窗体 a * C1 + b \* C2 + .。。以适应树节点中的模式。 将对剩余的总和进行计算，如果偏差过大，则在树中执行强制拆分。  
   
  例如，如果要将 **Income** 用作属性来预测客户的购买行为，并对列设置 REGRESSOR 建模标志，则算法将会先通过使用标准回归公式来尝试拟合 **Income** 值。 如果偏差过大，则会放弃回归公式，并根据其他属性对树进行拆分。 拆分完毕后，决策树算法将尝试拟合每个分支中的 Income 的回归量。  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0f2902b5-796a-4eb0-be03-01514dc01b9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: faf96ad02005c0385ec56e1f8763da2e82f093ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be4a5f265d83c9346756e82f04d25616551b1af3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086825"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526493"
 ---
 # <a name="create-polling-query-dialog-box-analysis-services---multidimensional-data"></a>“创建轮询查询”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “创建轮询查询” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，在 **“存储选项”** 对话框的 **“通知”** 选项卡中创建轮询查询。 轮询查询通常是返回某个值的单独查询， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可以使用该返回值确定是否已对表或其他关系对象进行了更改。 在“存储选项”对话框的“通知”选项卡上的“按计划轮询”选项中，单击该网格的“轮询查询”列上的省略号按钮 (**...**)，可以显示“创建轮询查询”对话框。******************** 有关“存储选项”**** 对话框的“通知”**** 选项卡的详细信息，请参阅[通知（“存储选项”对话框）（Analysis Services - 多维数据）](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)。  
@@ -57,7 +56,7 @@ ms.locfileid: "66086825"
  **Toolbar**  
  使用工具栏可以管理数据集、选择要显示的窗格以及控制各种查询函数。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**切换到一般查询生成器**|选择此选项将只显示可用于一般查询生成器视图的选项。 仅显示下列选项：<br /><br /> **SQL 窗格**<br /><br /> **结果窗格**<br /><br /> **“工具栏”**，只包含 **“切换到 VDT 查询生成器”** 和 **“运行”**<br /><br /> <br /><br /> 注意：只有在选择了“切换到 VDT 查询生成器”时，才会显示此选项。 ****|  
 |**“切换到 VDT 查询生成器”**|选择此选项将显示可用于 Visual Database Tools (VDT) 查询生成器视图的所有选项。<br /><br /> 注意：只有选定了“切换到一般查询生成器” **** ，才会显示此选项。|  
@@ -65,7 +64,7 @@ ms.locfileid: "66086825"
 |**显示/隐藏网格窗格**|显示或隐藏 **网格窗格**。<br /><br /> 注意：只有在选择了“切换到 VDT 查询生成器”时，才会显示此选项。 ****|  
 |**显示/隐藏 SQL 窗格**|显示或隐藏 **SQL 窗格**。<br /><br /> 注意：只有在选择了“切换到 VDT 查询生成器”时，才会显示此选项。 ****|  
 |**显示/隐藏结果窗格**|显示或隐藏 **结果窗格**。<br /><br /> 注意：只有在选择了“切换到 VDT 查询生成器”时，才会显示此选项。 ****|  
-|**用**|运行查询。 结果将显示在 "**结果" 窗格**中。|  
+|**运行**|运行查询。 结果将显示在 "**结果" 窗格**中。|  
 |**验证 SQL**|验证查询中的 SQL 语句。<br /><br /> 注意：只有在选择了“切换到 VDT 查询生成器”时，才会显示此选项。 ****|  
 |**升序排序**|依据 **网格窗格**中的所选列对输出行按升序排序。<br /><br /> 注意：只有在选择了“切换到 VDT 查询生成器”时，才会显示此选项。 ****|  
 |**降序排序**|依据 **网格窗格**中的所选列对输出行按降序排序。<br /><br /> 注意：只有在选择了“切换到 VDT 查询生成器”时，才会显示此选项。 ****|  

@@ -12,17 +12,17 @@ ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a96b77c3f1243bc3d95cf38242463724348134b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b215ff16f5e4a42a6d43f0a6e5f9758f158a682
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68188505"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859833"
 ---
 # <a name="options-environment-general-page"></a>选项（“环境”-“常规”页）
   使用“选项”  对话框可以配置 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 启动操作、常规窗口管理选项和其他常规设置。 在“工具”  菜单上，单击“选项”  ，展开“环境”  文件夹，再单击“常规”  。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **启动时**  
  选择 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在启动时执行的操作。 选项包括：  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68188505"
  **“自动隐藏”按钮只影响活动选项卡**  
  指定在选中此复选框时，仅自动隐藏当前具有焦点的工具窗口，而非自动隐藏停靠的所有工具窗口。 默认情况下，此复选框已清除。  
   
-## <a name="display"></a>显示器  
+## <a name="display"></a>显示  
  **显示 n 个文件(在最近使用的列表中)**  
  自定义“文件”**** 菜单上显示的最近所使用项目和文件的数量。 键入一个介于 1 和 24 之间的数字。 默认值为 4。 通过此方法可以轻松地检索最近使用的脚本项目和文件。  
   

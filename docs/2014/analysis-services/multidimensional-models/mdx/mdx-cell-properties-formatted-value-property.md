@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a116be708dd714a48d1cc936a08350237ca98ddf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dbc390b046eed3e0caa0394d9e463625e054192e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074401"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546409"
 ---
 # <a name="language-and-format_string-on-formated_value"></a>基于 LANGUAGE 和 FORMAT_STRING 的 FORMATED_VALUE
   FORMATTED_VALUE 属性是基于单元的 VALUE、FORMAT_STRING 和 LANGUAGE 属性的交互生成的。 本主题说明这些属性通过何种方式进行交互来生成 FORMATTED_VALUE 属性。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b463035cc83fafd2b283d85a577616fa962fcd1c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3232e4344b94e0b812df72ddebdc9a8d389d9f05
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083614"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521363"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）
   本主题介绍使用 Microsoft 逻辑回归算法的模型特有的挖掘模型内容。 有关如何解释所有模型类型共享的统计信息和结构，以及与挖掘模型内容相关的常规术语定义的说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
@@ -51,14 +50,14 @@ ms.locfileid: "66083614"
  ATTRIBUTE_NAME  
  与此节点对应的属性的名称。  
   
-|节点|内容|  
+|节点|Content|  
 |----------|-------------|  
-|模型根|空白|  
-|边际统计信息|空白|  
-|输入层|空白|  
+|模型根|空|  
+|边际统计信息|空|  
+|输入层|空|  
 |输入节点|输入属性名称|  
-|隐藏层|空白|  
-|输出层|空白|  
+|隐藏层|空|  
+|输出层|空|  
 |输出节点|输出属性名称|  
   
  NODE_NAME  
@@ -89,7 +88,7 @@ ms.locfileid: "66083614"
  CHILDREN_CARDINALITY  
  对节点所具有的子节点数的估计。  
   
-|节点|内容|  
+|节点|Content|  
 |----------|-------------|  
 |模型根|指示子节点的计数，其中至少包括 1 个网络，1 个必需边际节点和 1 个必需输入层。 例如，如果值为 5，则具有 3 个子网。|  
 |边际统计信息|始终为 0。|  
@@ -107,27 +106,27 @@ ms.locfileid: "66083614"
  NODE_DESCRIPTION  
  节点的用户友好说明。  
   
-|节点|内容|  
+|节点|Content|  
 |----------|-------------|  
-|模型根|空白|  
-|边际统计信息|空白|  
-|输入层|空白|  
+|模型根|空|  
+|边际统计信息|空|  
+|输入层|空|  
 |输入节点|输入属性名称|  
-|隐藏层|空白|  
-|输出层|空白|  
+|隐藏层|空|  
+|输出层|空|  
 |输出节点|如果输出属性是连续的，则包含输出属性的名称。<br /><br /> 如果输出属性是离散或离散化属性，则包含属性的名称和值。|  
   
  NODE_RULE  
  嵌入节点的规则的 XML 说明。  
   
-|节点|内容|  
+|节点|Content|  
 |----------|-------------|  
-|模型根|空白|  
-|边际统计信息|空白|  
-|输入层|空白|  
+|模型根|空|  
+|边际统计信息|空|  
+|输入层|空|  
 |输入节点|包含与 NODE_DESCRIPTION 列相同的信息的 XML 片段。|  
-|隐藏层|空白|  
-|输出层|空白|  
+|隐藏层|空|  
+|输出层|空|  
 |输出节点|包含与 NODE_DESCRIPTION 列相同的信息的 XML 片段。|  
   
  MARGINAL_RULE  
@@ -151,14 +150,14 @@ ms.locfileid: "66083614"
  若要获取定型事例中对特定值的支持信息，请参阅边际统计信息节点。  
   
  MSOLAP_MODEL_COLUMN  
- |节点|内容|  
+ |节点|Content|  
 |----------|-------------|  
-|模型根|空白|  
-|边际统计信息|空白|  
-|输入层|空白|  
+|模型根|空|  
+|边际统计信息|空|  
+|输入层|空|  
 |输入节点|输入属性名称。|  
-|隐藏层|空白|  
-|输出层|空白|  
+|隐藏层|空|  
+|输出层|空|  
 |输出节点|输入属性名称。|  
   
  MSOLAP_NODE_SCORE  

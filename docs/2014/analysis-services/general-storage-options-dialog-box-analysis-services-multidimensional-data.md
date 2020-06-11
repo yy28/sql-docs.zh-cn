@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ee1fac79-ae15-4c3c-9a98-33db04388817
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3c7ddd5311232ae12b3eb9f66adc0cd1f5714b32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f67e3f7a3c9d84c8095286707c3dd6ce2c22c3bd
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081011"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544389"
 ---
 # <a name="general-storage-options-dialog-box-analysis-services---multidimensional-data"></a>常规（“存储选项”对话框）（Analysis Services - 多维数据）
   可以使用 **中的** “存储选项” **对话框上的** “常规” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 选项卡，设置维度、多维数据集、度量值组或分区的存储模式和主动缓存设置。  
@@ -37,7 +36,7 @@ ms.locfileid: "66081011"
 |**放弃过时缓存**|指定开始创建新的 MOLAP 缓存和删除现有 MOLAP 缓存之间间隔的时间段。<br /><br /> 注意：除非选择“启用主动缓存” **** ，否则将禁用此选项。 另请注意，如果 "**存储模式**" 设置为 HOLAP，则不应设置此选项。|  
 |**延迟**|为开始创建新的 MOLAP 缓存和删除现有 MOLAP 缓存之间间隔的时间段选择时间间隔和时间单位。<br /><br /> 注意：除非选择“放弃过时缓存” **** ，否则将禁用此选项。 另请注意，如果 "**存储模式**" 设置为**HOLAP**，则不应设置此选项。|  
 |**定期更新缓存**|不管是否收到通知，都将定期更新 MOLAP 映像。<br /><br /> 注意：除非选择“启用主动缓存” **** ，否则将禁用此选项。 另请注意，如果 "**存储模式**" 设置为**HOLAP**，则不应设置此选项。|  
-|**重新生成间隔**|选择在创建[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]新的 MOLAP 映像之后，该时间段的时间间隔和时间单位，无论有无通知，都将再次为对象启动 MOLAP 映像进程。 在达到此间隔后接收的通知不会取消此间隔所触发的 MOLAP 映像进程。<br /><br /> 注意：除非选择“定期更新缓存” **** ，否则将禁用此选项。 另请注意，如果 "**存储模式**" 设置为**HOLAP**，则不应设置此选项。|  
+|**重新生成间隔**|选择在创建新的 MOLAP 映像之后，该时间段的时间间隔和时间单位，无论有无通知，都将 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 再次为对象启动 MOLAP 映像进程。 在达到此间隔后接收的通知不会取消此间隔所触发的 MOLAP 映像进程。<br /><br /> 注意：除非选择“定期更新缓存” **** ，否则将禁用此选项。 另请注意，如果 "**存储模式**" 设置为**HOLAP**，则不应设置此选项。|  
 |**立即联机**|使对象立即联机。 如果设置此选项，则在重新生成 MOLAP 缓存时，对象将使用基础 ROLAP 存储区来解析查询。 如果未设置此选项，则只有在完成对象的 MOLAP 缓存之后，对象才会联机。|  
 |**启用 ROLAP 聚合**|使用基础数据源的具体化视图来存储聚合。<br /><br /> 注意：如果基础数据源不支持具体化视图，则会在处理对象时发生错误。|  
 |**对维度应用设置**|将存储模式和主动缓存设置应用于所关联的维度。|  

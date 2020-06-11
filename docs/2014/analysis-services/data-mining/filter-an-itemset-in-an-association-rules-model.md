@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3ed919ea-8598-45d2-a4a0-b1b3357a4ab1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bef576a32bebc1c80b2ded8ee4831696811ba819
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f841280a6dd39a5f824f2e6a10975b0f80ed0761
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084360"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522453"
 ---
 # <a name="filter-an-itemset-in-an-association-rules-model"></a>在关联规则模型中筛选项集
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以筛选 **关联规则查看器的** “项集” [!INCLUDE[msCoName](../../includes/msconame-md.md)] 选项卡中显示的项集。  

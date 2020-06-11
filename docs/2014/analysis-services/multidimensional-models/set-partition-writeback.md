@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3359e26ace467bbf8446aac6b68a0ef2716d09a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d6056fcd26a8fdef16d17178cd12e8d5f27e97c6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072896"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547379"
 ---
 # <a name="set-partition-writeback"></a>设置分区写回
   如果对度量值组执行写启用操作，则最终用户可在浏览多维数据集数据时对其进行更改，所做的更改保存在一个称为“写回表”的单独表中，而不是多维数据集数据或源数据中。 浏览已启用写操作的分区的最终用户将看到对该分区在这个写回表中所做的全部更改的实际结果。  

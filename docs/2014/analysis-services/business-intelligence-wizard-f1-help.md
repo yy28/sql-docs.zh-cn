@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 155ac80c-63ae-47aa-9e86-9396e3d920eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 25496be8f8cfc877b72ab6fd511446d9e194e2b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e78754c93393f172e7282df19166536b29a2e640
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088402"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527673"
 ---
 # <a name="business-intelligence-wizard-f1-help"></a>商业智能向导的 F1 帮助
   可以使用商业智能向导定义商业智能功能，以及设置有关多维数据集和维度的高级选项。 通过该向导可以设置现有对象的属性，创建新的对象，还可以生成多维表达式 (MDX) 脚本，以提供诸如维度智能和货币换算之类的功能。  

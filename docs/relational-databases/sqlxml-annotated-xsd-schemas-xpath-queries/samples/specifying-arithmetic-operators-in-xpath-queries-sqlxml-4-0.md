@@ -1,5 +1,6 @@
 ---
 title: 在 XPath 查询中使用算术运算符（SQLXML）
+description: 了解如何在 SQLXML 4.0 XPath 查询中指定算术运算符。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44b03e86ae2667b669d85533b04a2d973cef1833
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64b13492b7359fa6baad7cee21dfb291f655cdea
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252626"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529873"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定算数运算符 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,13 +31,13 @@ ms.locfileid: "75252626"
 ## <a name="examples"></a>示例  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>A. 指定 * 算数运算符  
- 此 XPath 查询返回** \<** 满足指定谓词的 OrderDetail>元素：  
+ 此 XPath 查询返回 **\<OrderDetail>** 满足指定谓词的元素：  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- 在查询中， `child` `OrderDetail`是轴，是节点测试（如果**OrderDetail**是** \<元素节点>**，则为 TRUE，因为>节点的** \<元素**是**子**轴的主节点）。 对于所有** \<OrderDetail>** 元素节点，将应用谓词中的测试，并只返回满足条件的那些节点。  
+ 在查询中， `child` 是轴， `OrderDetail` 是节点测试（如果**OrderDetail**为，则为 TRUE **\<element node>** ，因为 **\<element>** 节点是**子**轴的主节点）。 对于所有 **\<OrderDetail>** 元素节点，将应用谓词中的测试，并只返回满足条件的那些节点。  
   
 > [!NOTE]  
 >  XPath 中的数字是双精度浮点数，对本示例中的浮点数进行比较将导致舍入。  

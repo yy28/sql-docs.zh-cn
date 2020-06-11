@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bed286de-1e9b-49de-b09e-3cd076aba152
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2304f664178ab1f5d3718cccdcb4b1775a72948e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76af68a7f9668b46a55a3bf28f9cf07dd64766aa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063064"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527923"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>“翻译属性数据”对话框（Analysis Services - 多维数据）
   可以使用 **“翻译属性数据”** 对话框设置包含翻译标题数据的列，以及与翻译数据一起使用的排序规则和排序顺序。 通过执行以下操作可以显示 **“翻译属性数据”** 对话框：  
@@ -29,7 +28,7 @@ ms.locfileid: "66063064"
 -   在**维度设计器**的“翻译”选项卡上，右键单击“翻译详细信息”窗格，再选择“新建标题列”或“编辑标题列”。****************  
   
 ## <a name="options"></a>选项  
- **属性**  
+ **特性**  
  显示所选属性。  
   
  **语言**  

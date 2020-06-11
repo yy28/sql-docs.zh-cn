@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2540db5b-2bf3-4b6c-87c8-79c48d71acce
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b0a54a0ae2bab2c8019b706a51b94f0338dcb3cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 98176d54f6cdf29be5c06563ec1dbd7fd6275724
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085112"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523160"
 ---
 # <a name="data-mining-designer"></a>Data Mining Designer
-  数据挖掘设计器是在中使用挖掘模型[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的主要环境。 您可以通过选择一个现有挖掘结构或使用数据挖掘向导创建一个新的挖掘结构和挖掘模型来访问该设计器。 可以使用数据挖掘设计器执行以下任务：  
+  数据挖掘设计器是在中使用挖掘模型的主要环境 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。 您可以通过选择一个现有挖掘结构或使用数据挖掘向导创建一个新的挖掘结构和挖掘模型来访问该设计器。 可以使用数据挖掘设计器执行以下任务：  
   
 -   修改最初由数据挖掘向导创建的挖掘结构和挖掘模型。  
   

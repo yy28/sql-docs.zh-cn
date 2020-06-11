@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b32b0fa678df98494f91c1026adebe701d807342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a876a11f51731fdd7ff6de679f80cdb8d62fff94
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062614"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528095"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>“分析服务器属性”对话框 (Analysis Services)
   可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“分析服务器属性”**** 对话框，为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例设置常规、语言/排序规则和安全设置。 通过在“对象资源管理器”中右键单击某个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例，再从上下文菜单中选择“属性”，可以显示“分析服务器属性”************ 对话框。 **“分析服务器属性”** 对话框包含下列属性。  
@@ -28,7 +27,7 @@ ms.locfileid: "66062614"
 ## <a name="information-properties"></a>信息属性  
  使用此页可查看服务器模式、版本和兼容性级别。 每个实例均在表格或多维服务器模式下进行安装，且能够加载表格或多维模型。 如果您需要支持这两种模式，则必须安装两个实例。  
   
- **支持的兼容级别**等效于 AMO `DefaultCompatibilityLevel`中的属性。 它是只读的，且基于安装期间指定的服务器部署模式。 服务器在执行因服务器模式或版本而异的操作（如将表格数据库的备份还原到表格服务器实例上）时会检查此属性。 请不要将其与表格模型或多维模型的数据库兼容模式混淆，它们具有类似的名称和值。 此服务器属性的有效值包括：  
+ **支持的兼容级别**等效于 `DefaultCompatibilityLevel` AMO 中的属性。 它是只读的，且基于安装期间指定的服务器部署模式。 服务器在执行因服务器模式或版本而异的操作（如将表格数据库的备份还原到表格服务器实例上）时会检查此属性。 请不要将其与表格模型或多维模型的数据库兼容模式混淆，它们具有类似的名称和值。 此服务器属性的有效值包括：  
   
 -   对于多维模式和数据挖掘模式，**1100** 是部署模式 0 的默认兼容级别。  
   
@@ -45,9 +44,9 @@ ms.locfileid: "66062614"
   
 -   [数据挖掘属性](server-properties/data-mining-properties.md)  
   
--   [功能属性](server-properties/feature-properties.md)  
+-   [Feature 属性](server-properties/feature-properties.md)  
   
--   [FileStore 属性](server-properties/filestore-properties.md)  
+-   [每个属性](server-properties/filestore-properties.md)  
   
 -   [锁管理器属性](server-properties/lock-manager-properties.md)  
   

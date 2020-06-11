@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f385577-a2e5-4527-ab88-b27e73112591
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 129e1df9463064baafa38fb860f415b9c01ab38b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0995ac659de7ffd4c36c584b5a16b46f79fe8d5d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080904"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544369"
 ---
 # <a name="generate-named-query-dialog-box-analysis-services---multidimensional-data"></a>“生成命名查询”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “生成命名查询” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，创建基于图表序列、图表序列值或图表筛选器（从 **“浏览数据”** 对话框的 **“透视图”** 选项卡上显示的表中选择）的命名查询。 单击 **“浏览数据”** 对话框中的 **“生成命名查询”** ，可以显示 **“生成命名查询”** 对话框。  

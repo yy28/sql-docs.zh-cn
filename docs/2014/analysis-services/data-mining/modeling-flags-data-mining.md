@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 37263c42e4e9f37b1b782dc07b8df03f77092b14
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f1c802f6503b84ff4f6879c18d3bffebb46d7ad
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083312"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521065"
 ---
 # <a name="modeling-flags-data-mining"></a>建模标志（数据挖掘）
-  您可以使用中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]建模标志为数据挖掘算法提供有关事例表中定义的数据的其他信息。 该算法可以使用该附加信息生成更精确的数据挖掘模型。  
+  您可以使用中的建模标志 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为数据挖掘算法提供有关事例表中定义的数据的其他信息。 该算法可以使用该附加信息生成更精确的数据挖掘模型。  
   
  某些建模标志是在挖掘结构级别定义的，而其他标志则是在挖掘模型列级别定义的。 例如，可以将 `NOT NULL` 建模标志与挖掘结构列一起使用。 您可以根据用于创建模型的算法，在挖掘模型列上定义其他建模标志。  
   

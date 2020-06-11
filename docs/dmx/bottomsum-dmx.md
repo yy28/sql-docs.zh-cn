@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: de7fb2d398979bb1f3ced1319f068b70bff54c63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1fdb72a4067a9b48e648cffe1d12b29b23f1652a
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889763"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669840"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,13 +28,13 @@ BottomSum(<table expression>, <rank expression>, <sum>)
 ```  
   
 ## <a name="applies-to"></a>应用于  
- 返回表的表达式，如\<表列引用> 或返回表的函数。  
+ 返回表的表达式，如 \< 表列引用> 或返回表的函数。  
   
 ## <a name="return-type"></a>返回类型  
  \<表表达式>  
   
-## <a name="remarks"></a>备注  
- **BottomSum**函数以升序顺序返回最底层的行。 排名基于每行> 参数的\<排名表达式的计算值，因此， \<排名表达式> 值的总和至少是\<sum> 参数指定的给定总计。 当仍满足指定的 sum 值时， **BottomSum**将返回尽可能少数量的元素。  
+## <a name="remarks"></a>注解  
+ **BottomSum**函数以升序顺序返回最底层的行。 排名基于 \< 每行> 参数的排名表达式的计算值，因此， \< 排名表达式> 值的总和至少是 \< sum> 参数指定的给定总计。 当仍满足指定的 sum 值时， **BottomSum**将返回尽可能少数量的元素。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建一个针对使用[数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)生成的关联模型的预测查询。  

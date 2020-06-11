@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e7b0d6e4d99c08556cefb31c33deb5238f33c636
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d06ba5f85dadeeaf53616f54b6502754a66852fd
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75225390"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544329"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Analysis Services Multidimensional 的全球化方案
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在表格数据模型和多维数据模型中存储和操作多语言数据和元数据。 数据以 Unicode (UTF-16) 格式存储为使用 Unicode 编码的字符集。 如果将 ANSI 数据加载进一个数据模型，字符会使用 Unicode 等效码位进行存储。  

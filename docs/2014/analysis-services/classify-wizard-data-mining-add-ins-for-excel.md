@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 409c5076-c4c3-4f09-8f30-d3297df45f13
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a62d937a733ea41b85a83224a043ff4ad7ecdd29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18cbc54053ddabf79ac6bfa30c8d43d05720c840
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087924"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527503"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>分类向导（Excel 数据挖掘外接程序）
   ![“数据挖掘”功能区中的分类向导](media/dmc-classify.gif "“数据挖掘”功能区中的分类向导")  
@@ -79,7 +78,7 @@ ms.locfileid: "66087924"
  [Microsoft 神经网络算法技术参考](data-mining/microsoft-neural-network-algorithm-technical-reference.md)  
   
 ### <a name="requirements"></a>要求  
- 若要使用**分类**向导，必须连接到[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据库。 有关如何创建连接的信息，请参阅[连接到源数据 &#40;Excel 数据挖掘客户端&#41;](connect-to-source-data-data-mining-client-for-excel.md)。  
+ 若要使用**分类**向导，必须连接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库。 有关如何创建连接的信息，请参阅[连接到源数据 &#40;Excel 数据挖掘客户端&#41;](connect-to-source-data-data-mining-client-for-excel.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [创建数据挖掘模型](creating-a-data-mining-model.md)  

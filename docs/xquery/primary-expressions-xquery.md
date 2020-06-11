@@ -1,5 +1,6 @@
 ---
 title: 主表达式（XQuery） |Microsoft Docs
+description: 了解 XQuery 主表达式，这些表达式包括文本、变量引用、上下文项表达式、构造函数和函数调用。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e3504b4f04b1b9842f786eeef3ecf1f105563f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: efa06923eeceff312def44ff13ab12b8371439c7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74200517"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529771"
 ---
 # <a name="primary-expressions-xquery"></a>主表达式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   XQuery 主表达式包含文字、变量引用、上下文项表达式、构造函数和函数调用。  
   
-## <a name="literals"></a>文本  
+## <a name="literals"></a>文字  
  XQuery 文字可以是数字或字符串。 字符串可包括预定义的实体引用，实体引用就是字符序列。 这种序列以“and”符为开头，此符号表示单个字符，如果不加此符号则可能具有语法意义。 以下是 XQuery 中的预定义的实体引用。  
   
 |实体引用|表示|  
@@ -42,7 +43,7 @@ ms.locfileid: "74200517"
 |`&quot;`|"|  
 |`&apos;`|'|  
   
- 字符串还可以包含字符引用，对 Unicode 字符（由其十进制或十六进制码位标识）的 XML 样式的引用。 例如，欧元符号可以用字符引用 "&\#8364;" 表示。  
+ 字符串还可以包含字符引用，对 Unicode 字符（由其十进制或十六进制码位标识）的 XML 样式的引用。 例如，欧元符号可以用字符引用 "&\# 8364;" 表示。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 XML 1.0 版作为分析基础。  
@@ -156,7 +157,7 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
 ## <a name="context-item-expressions"></a>上下文项表达式  
  上下文项是路径表达式的上下文中当前正在处理的项。 该项在带有文档节点的非空 XML 数据类型实例中进行初始化。 它也可以在 XPath 表达式或 [] 谓词的上下文中通过节点（）方法进行更改。  
   
- 上下文项由包含点 (.) 的表达式返回。 例如，下面的查询将评估每个元素`a` <> 是否存在属性`attr`。 如果存在此属性，则返回该元素。 请注意，谓词中的条件指定使用单个句点指定上下文节点。  
+ 上下文项由包含点 (.) 的表达式返回。 例如，下面的查询将评估每个元素 <`a`> 是否存在属性 `attr` 。 如果存在此属性，则返回该元素。 请注意，谓词中的条件指定使用单个句点指定上下文节点。  
   
 ```  
 DECLARE @var XML  
@@ -172,7 +173,7 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
  `<a attr="1">2</a>`  
   
 ## <a name="function-calls"></a>函数调用  
- 可以调用内置 XQuery 函数和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sql： variable （）和 sql： column （）函数。 有关已实现函数的列表，请参阅[针对 Xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)。  
+ 可以调用内置 XQuery 函数和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sql： variable （）和 sql： column （）函数。 有关已实现函数的列表，请参阅[针对 Xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)。  
   
 #### <a name="implementation-limitations"></a>实现限制  
  实现限制如下：  

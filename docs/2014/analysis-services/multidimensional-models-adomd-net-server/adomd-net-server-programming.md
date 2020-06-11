@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7f7ff5be-3826-43a5-b94d-ddeec5ddb2eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 843d3037d2acb2876a21ae25d1bf15e52686e327
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 522478af0b19f1745d80f167e40345d4751136b7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217158"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545441"
 ---
 # <a name="adomdnet-server-programming"></a>ADOMD.NET 服务器编程
-  ADOMD.NET 的 ADOMD.NET 服务器组件位于 `Microsoft.AnalysisServices.AdomdServer` 命名空间中（在 msmgdsrv.dll 中）。 您可以使用这些服务器组件来创建自定义多维表达式（MDX）函数和在的实例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]上运行的存储过程。 服务器对象可提供查询多维数据集和挖掘模型以及在给定上下文计算表达式的功能。 创建自定义函数和存储过程的优点包括执行速度快、部署集中且可维护性得以改进。  
+  ADOMD.NET 的 ADOMD.NET 服务器组件位于 `Microsoft.AnalysisServices.AdomdServer` 命名空间中（在 msmgdsrv.dll 中）。 您可以使用这些服务器组件来创建自定义多维表达式（MDX）函数和在的实例上运行的存储过程 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。 服务器对象可提供查询多维数据集和挖掘模型以及在给定上下文计算表达式的功能。 创建自定义函数和存储过程的优点包括执行速度快、部署集中且可维护性得以改进。  
   
  下表中的主题将有助于您开发 ADOMD.NET 服务器应用程序。  
   

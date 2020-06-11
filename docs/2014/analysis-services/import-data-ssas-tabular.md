@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6617b2a2-9f69-433e-89e0-4c5dc92982cf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b7eb3fe1157ba40466cc619f504255084aa845fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96948f8a256b90429e45ac6ce1068cf3d88baa9a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080619"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544209"
 ---
 # <a name="import-data-ssas-tabular"></a>导入数据（SSAS 表格）
   可以从各种源将数据导入表格模型中。 本节中的主题说明如何使用数据导入向导连接并选择要导入模型项目的数据。  

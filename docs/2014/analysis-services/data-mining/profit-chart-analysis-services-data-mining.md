@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 760ee051-6fd8-48e3-8d2e-82db3ab45e45
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1a64eacb1219e239ad894d9922db5a5032ed525b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e574aaf4ab748ad61dc47984360e531ca98a3238
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083091"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520623"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>利润图（Analysis Services - 数据挖掘）
   利润图显示与使用挖掘模型相关联的估计利润。 例如，假设您的模型预测公司应在业务方案中联系哪些客户。 在该情形下，您要向利润图添加与目标邮递活动的成本有关的信息。 然后，在已完成的利润图中，您可以看到与随机联系客户相比，正确定位客户情况下的估计的利润。  
@@ -59,7 +58,7 @@ ms.locfileid: "66083091"
   
      此对话框帮助您指定与目标邮递活动关联的成本和收益。 对于这些示例中所示的图表，我们使用了以下值：  
   
-    |设置|Value|说明|  
+    |设置|Value|注释|  
     |-------------|-----------|--------------|  
     |**总数**|20,000|设置总目标人数的值<br /><br /> 您的数据库可能包含很多客户，但是为了节省邮递开支，您可能选择仅对最有可能回复的前 20,000 个客户发邮件。 您可以通过运行预测查询并且由预测模型按概率输出排序，获得此列表。|  
     |**固定成本**|500|输入为 20,000 人设置目标邮递活动的一次性成本。 这可能包括印刷成本或者设置电子邮件活动的成本。|  

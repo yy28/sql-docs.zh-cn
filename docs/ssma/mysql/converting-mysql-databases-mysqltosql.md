@@ -1,5 +1,6 @@
 ---
 title: 转换 MySQL 数据库（MySQLToSQL） |Microsoft Docs
+description: 了解如何在连接和设置项目和数据映射选项后，通过 SSMA 将 MySQL 数据库对象转换为 SQL Server 或 Azure SQL 数据库对象。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 1ad4cbbdf80422f87c850c44e47f82899de4c82a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 51604ba389e103798ab067245f210bd565a719e7
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103052"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293664"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>转换 MySQL 数据库 (MySQLToSQL)
-连接到 MySQL、连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，并设置项目和数据映射选项后，可以将 MySQL 数据库对象转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库对象。  
+连接到 MySQL、连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure，并设置项目和数据映射选项后，可以将 MySQL 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 数据库对象。  
   
 ## <a name="the-conversion-process"></a>转换过程  
-转换数据库对象将获取 MySQL 中的对象定义，然后将其[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]转换为类似或 SQL Azure 的对象，然后将此信息加载到 SSMA 元数据。 它不会将信息加载到的实例中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 然后，可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 元数据资源管理器查看对象及其属性。  
+转换数据库对象将获取 MySQL 中的对象定义，然后将其转换为类似 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 的对象，然后将此信息加载到 SSMA 元数据。 它不会将信息加载到的实例中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 然后，可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 元数据资源管理器查看对象及其属性。  
   
 在转换过程中，SSMA 会将输出消息打印到 "输出" 窗格，并将错误消息打印到 "错误列表" 窗格。 使用输出和错误信息来确定是否必须修改 MySQL 数据库或转换过程以获取所需的转换结果。  
   
@@ -28,12 +29,12 @@ ms.locfileid: "68103052"
 转换对象之前，请在 "**项目设置**" 对话框中查看项目转换选项。 使用此对话框，可以设置 SSMA 转换表和索引的方式。 有关详细信息，请参阅[MySQLToSQL&#41; &#40;的项目设置 &#40;转换&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
   
 ## <a name="conversion-results"></a>转换结果  
-下表显示了转换哪些 MySQL 对象以及生成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的对象：  
+下表显示了转换哪些 MySQL 对象以及生成的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象：  
   
 |||  
 |-|-|  
 |**MySQL 对象**|**生成的 SQL Server 对象**|  
-|具有依赖对象（如索引）的表|SSMA 创建具有依赖对象的表。 表将与所有索引和约束一起转换。 索引将转换为单独[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的对象。<br /><br />**空间数据类型映射**只能在表节点级执行。<br /><br />有关表转换设置的详细信息，请参阅[转换设置](conversion-settings-mysqltosql.md)|  
+|具有依赖对象（如索引）的表|SSMA 创建具有依赖对象的表。 表将与所有索引和约束一起转换。 索引将转换为单独 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的对象。<br /><br />**空间数据类型映射**只能在表节点级执行。<br /><br />有关表转换设置的详细信息，请参阅[转换设置](conversion-settings-mysqltosql.md)|  
 |函数|如果该函数可以直接转换为 Transact-sql，则 SSMA 将创建一个函数。 在某些情况下，该函数必须转换为存储过程。 可以通过在项目设置中使用**函数转换**来完成此操作。 在这种情况下，SSMA 创建存储过程和调用存储过程的函数。<br /><br />**提供的选项：**<br /><br />根据项目设置进行转换<br /><br />转换为函数<br /><br />转换为存储过程<br /><br />有关函数转换设置的详细信息，请参阅[转换设置](conversion-settings-mysqltosql.md)|  
 |过程|如果可以将该过程直接转换为 Transact-sql，SSMA 会创建一个存储过程。 在某些情况下，必须在自治事务中调用存储过程。 在这种情况下，SSMA 创建两个存储过程：一个用于实现过程，另一个用于调用实现存储过程。|  
 |数据库转换|作为 MySQL 对象的数据库不是由 SSMA for MySQL 直接转换而成。 MySQL 数据库处理起来更像架构名称，并且在转换过程中所有物理参数都将丢失。 SSMA for MySQL 使用[映射 mysql SQL Server 数据库 &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)将对象从 MySQL 数据库映射到适当的 SQL Server 数据库/架构对。|  
@@ -103,9 +104,9 @@ ms.locfileid: "68103052"
   
 -   可以修改 MySQL 数据库中的对象，以删除或修改有问题的代码。 若要将更新的代码加载到 SSMA 中，必须更新元数据。 有关详细信息，请参阅[连接到 MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
--   可以从迁移中排除对象。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 元数据资源管理器和 MySQL 元数据资源管理器中，先清除项旁边的复选[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]框，然后将对象加载到中或 SQL Azure 并从 MySQL 迁移数据。  
+-   可以从迁移中排除对象。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 元数据资源管理器和 MySQL 元数据资源管理器中，先清除项旁边的复选框，然后将对象加载到中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 并从 MySQL 迁移数据。  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
 迁移过程的下一步是将[转换的数据库对象加载到 SQL Server &#40;MySQLToSQL 中&#41;](../../ssma/mysql/loading-converted-database-objects-into-sql-server-mysqltosql.md)  
   
 ## <a name="see-also"></a>另请参阅  

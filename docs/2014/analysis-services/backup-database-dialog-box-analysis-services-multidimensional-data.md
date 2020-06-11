@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7811ce7d-6c37-4189-bfa6-ef36fb4932db
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a99ce67c4b42cc1def10127c8b1862a859d20723
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96ddf88bd6f071c667a021678b6f5cd2613ae8db
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064382"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527823"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>“备份数据库”对话框（Analysis Services - 多维数据）
   可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的****“备份数据库”对话框，使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 备份文件 (.abf) 格式将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库备份到备份文件中。  
@@ -89,7 +88,7 @@ ms.locfileid: "66064382"
   
 |列|说明|  
 |------------|-----------------|  
-|**服务器**|显示管理远程分区的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例。|  
+|**Server**|显示管理远程分区的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例。|  
 |**Database**|显示包含远程分区的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库。|  
 |**分区列表**|显示 **“数据库”** 中显示的数据库所包含的远程分区列表。|  
 |**“远程备份文件”**|键入要使用的远程备份文件的完整路径和文件名，或单击省略号按钮 (**...**) 以显示“文件另存为”对话框，再选择要使用的远程备份文件的路径和文件名。**** 有关“文件另存为”**** 对话框的详细信息，请参阅[“文件另存为”对话框（Analysis Services - 多维数据）](save-file-as-dialog-box-analysis-services-multidimensional-data.md)。|  

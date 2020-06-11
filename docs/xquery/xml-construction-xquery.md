@@ -1,5 +1,6 @@
 ---
 title: XML 构造（XQuery） |Microsoft Docs
+description: 了解如何使用直接和计算构造函数在 XQuery 中构造 XML 结构。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 51c1898ddaee1ecf878944a3b43c3d8adbb38590
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e285c82ce8c8b451fb673b6864391bd0e394ad8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946171"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520013"
 ---
 # <a name="xml-construction-xquery"></a>XML 构造 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,15 +41,15 @@ ms.locfileid: "67946171"
  使用直接构造函数时，可以在构造 XML 时指定类似 XML 的语法。 下列示例说明了直接构造函数的 XML 构造。  
   
 ### <a name="constructing-elements"></a>构造元素  
- 使用 XML 表示法时，可以构造元素。 下面的示例使用直接元素构造函数表达式并创建\<ProductModel> 元素。 构造的元素有三个子元素。  
+ 使用 XML 表示法时，可以构造元素。 下面的示例使用直接元素构造函数表达式并创建一个 \<ProductModel> 元素。 构造的元素有三个子元素。  
   
 -   一个文本节点。  
   
--   两个元素节点\<：摘要> \<和功能>。  
+-   两个元素节点： \<Summary> 和 \<Features> 。  
   
-    -   \<Summary> 元素具有一个文本节点子级，其值为 "部分说明"。  
+    -   \<Summary>元素有一个文本节点子级，其值为 "部分说明"。  
   
-    -   \<功能> 元素具有三个元素节点子项、 \<颜色>、 \<权重> 和\<保修>。 这些节点中，每个节点都有一个子文本节点，它们的值分别为 Red、25、2 years parts and labor。  
+    -   \<Features>元素有三个子元素节点：、 \<Color> \<Weight> 和 \<Warranty> 。 这些节点中，每个节点都有一个子文本节点，它们的值分别为 Red、25、2 years parts and labor。  
   
 ```sql
 declare @x xml;  
@@ -78,7 +79,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- 尽管从常量表达式构造元素（如本例所示）很有用，但是此 XQuery 语言功能的真正作用是构造能够从数据库动态提取数据的 XML。 可以使用大括号指定查询表达式。 在生成的 XML 中，表达式将由其值取代。 例如，下面的查询使用一个子元素`NewRoot` （<`e`>）构造一个 <> 元素。 元素 <`e`> 的值是通过在大括号（"{...}"）内指定路径表达式来计算的。  
+ 尽管从常量表达式构造元素（如本例所示）很有用，但是此 XQuery 语言功能的真正作用是构造能够从数据库动态提取数据的 XML。 可以使用大括号指定查询表达式。 在生成的 XML 中，表达式将由其值取代。 例如，下面的查询 `NewRoot` 使用一个子元素（<>）构造一个 <> 元素 `e` 。 元素 <> 的值 `e` 是通过在大括号（"{...}"）内指定路径表达式来计算的。  
   
 ```sql
 DECLARE @x xml;  
@@ -98,7 +99,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
 </NewRoot>  
 ```  
   
- 下面的查询与上一个查询类似。 但是，大括号中的表达式指定**data （）** 函数来检索 <`root`> 元素的原子值，并将其分配给构造的元素 <`e`>。  
+ 下面的查询与上一个查询类似。 但是，大括号中的表达式指定**data （）** 函数来检索 <> 元素的原子值， `root` 并将其分配给构造的元素 <`e`>。  
   
 ```sql
 DECLARE @x xml;  
@@ -136,7 +137,7 @@ SELECT @y;
 <NewRoot> Hello, I can use { and  } as part of my text</NewRoot>  
 ```  
   
- 下面的查询是使用直接元素构造函数来构造元素的另一个示例。 此外，还可以通过执行大`FirstLocation`括号中的表达式来获取 <> 元素的值。 该查询表达式返回 Production.ProductModel 表的 Instructions 列中的第一个生产车间的生产步骤。  
+ 下面的查询是使用直接元素构造函数来构造元素的另一个示例。 此外，还可以 `FirstLocation` 通过执行大括号中的表达式来获取 <> 元素的值。 该查询表达式返回 Production.ProductModel 表的 Instructions 列中的第一个生产车间的生产步骤。  
   
 ```sql
 SELECT Instructions.query('  
@@ -344,7 +345,7 @@ where ProductModelID=7;
     select @x.query( '<a attr="{''Item'', /x }" />')  
     ```  
   
-     如果您应用**data （）** 函数，则该查询将起作用，因为它检索与字符串连接的`/x`表达式的原子值。 下面是原子值的序列：  
+     如果您应用**data （）** 函数，则该查询将起作用，因为它检索与字符串连接的表达式的原子值 `/x` 。 下面是原子值的序列：  
   
     ```sql
     SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
@@ -381,7 +382,7 @@ where ProductModelID=7;
 -   在 XQuery prolog 中。  
   
 #### <a name="using-a-namespace-declaration-attribute-to-add-namespaces"></a>使用命名空间声明属性添加命名空间  
- 下面的示例使用元素 <`a`> 构造中的命名空间声明特性来声明默认命名空间。 子元素的构造 <`b`> 撤消父元素中声明的默认命名空间的声明。  
+ 下面的示例使用元素 <> 构造中的命名空间声明特性 `a` 来声明默认命名空间。 子元素的构造 <`b`> 撤消父元素中声明的默认命名空间的声明。  
   
 ```sql
 declare @x xml  
@@ -400,7 +401,7 @@ select @x.query( '
 </a>  
 ```  
   
- 可以将前缀指定给命名空间。 前缀是在元素 <`a`> 的构造中指定的。  
+ 可以将前缀指定给命名空间。 前缀是在元素 <> 的构造中指定的 `a` 。  
   
 ```sql
 declare @x xml  
@@ -419,7 +420,7 @@ select @x.query( '
 </x:a>  
 ```  
   
- 您可以不声明 XML 构造中的默认命名空间，但是必须声明命名空间前缀。 下面的查询将返回一个错误，因为不能按照元素 <`b`> 构造中指定的方式来取消声明前缀。  
+ 您可以不声明 XML 构造中的默认命名空间，但是必须声明命名空间前缀。 下面的查询将返回一个错误，因为不能按照元素 <> 构造中指定的方式来取消声明前缀 `b` 。  
   
 ```sql
 declare @x xml  
@@ -444,7 +445,7 @@ FROM  Production.ProductModel
 where ProductModelID=7  
 ```  
   
- 注意，用此方法创建新的命名空间前缀将覆盖此前缀以前存在的所有命名空间声明。 例如，查询序言中的命名`AWMI="https://someURI"`空间声明由 <`FirstLocation`> 元素中的命名空间声明重写。  
+ 注意，用此方法创建新的命名空间前缀将覆盖此前缀以前存在的所有命名空间声明。 例如，查询序言中的命名空间声明 `AWMI="https://someURI"` 由 <> 元素中的命名空间声明重写 `FirstLocation` 。  
   
 ```sql
 SELECT Instructions.query('  
@@ -548,7 +549,7 @@ test
   
  **注意**有关使用显式文本节点构造函数的示例，请参阅[insert &#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md)中的特定示例。  
   
- 在下面的查询中，构造的 XML 包括一个元素、两个属性、一个注释和一个处理指令。 请注意，由于正在构造序列，因此`FirstLocation`在 <> 之前会使用逗号。  
+ 在下面的查询中，构造的 XML 包括一个元素、两个属性、一个注释和一个处理指令。 请注意 `FirstLocation` ，由于正在构造序列，因此在 <> 之前会使用逗号。  
   
 ```sql
 SELECT Instructions.query('  
@@ -587,7 +588,7 @@ where ProductModelID=7;
   
 -   element  
   
--   属性  
+-   attribute  
   
 -   text  
   

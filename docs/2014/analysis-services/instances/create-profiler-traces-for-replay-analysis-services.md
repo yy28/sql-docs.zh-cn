@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 93b2fc46-7cfb-4ab5-abeb-1475a7d6f0f2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc494fa63064d5c48c94e44cb91db5b1fe0f988d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 994fa58d9def8048f7fb88e09721055d2b184bb0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080137"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543999"
 ---
 # <a name="create-profiler-traces-for-replay-analysis-services"></a>为重播创建事件探查器跟踪 (Analysis Services)
-  若要将查询、发现和用户[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提交到的命令重播， [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]必须收集所需的事件。 为了启动这些事件的集合，必须在 **“跟踪属性”** 对话框的 **“事件选择”** 选项卡中选择相应的事件类。 例如，如果选择了 Query Begin 事件类，则将收集包含查询的事件，并将其用于重播。 此外，跟踪文件还包含足够的信息，以支持在分布式环境中以原始顺序重播服务器事务。  
+  若要将查询、发现和用户提交到的命令重播， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 必须收集所需的事件。 为了启动这些事件的集合，必须在 **“跟踪属性”** 对话框的 **“事件选择”** 选项卡中选择相应的事件类。 例如，如果选择了 Query Begin 事件类，则将收集包含查询的事件，并将其用于重播。 此外，跟踪文件还包含足够的信息，以支持在分布式环境中以原始顺序重播服务器事务。  
   
 ## <a name="replay-for-queries"></a>重播查询  
  若要重播查询， [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 必须捕获下列事件：  
@@ -44,7 +43,7 @@ ms.locfileid: "66080137"
   
 -   Audit Login 事件类及其所有数据列。 此事件类提供有关登录的用户以及会话设置的信息。 SPID 提供对用户会话的引用。 有关详细信息，请参阅 [Security Audit Data Columns](https://docs.microsoft.com/bi-reference/trace-events/security-audit-data-columns)。  
   
--   Discover Begin 事件类及其所有数据列。 TextData 列提供发现请求\<的 RequestType> 部分，RequestProperties 列提供发现请求> 部分\<属性。 EventSubclass 列提供发现类型。 有关详细信息，请参阅 [Discover Events Data Columns](https://docs.microsoft.com/bi-reference/trace-events/discover-events-data-columns)。  
+-   Discover Begin 事件类及其所有数据列。 TextData 列提供 \<RequestType> 发现请求的部分，RequestProperties 列提供 \<Properties> 发现请求的部分。 EventSubclass 列提供发现类型。 有关详细信息，请参阅 [Discover Events Data Columns](https://docs.microsoft.com/bi-reference/trace-events/discover-events-data-columns)。  
   
 -   Discover End 事件类及其所有数据列。 此事件类验证发现请求的状态。 有关详细信息，请参阅 [Discover Events Data Columns](https://docs.microsoft.com/bi-reference/trace-events/discover-events-data-columns)。  
   

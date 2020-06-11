@@ -46,20 +46,19 @@ helpviewer_keywords:
 ms.assetid: fcdc3f85-813d-4279-90b0-16e26edd008d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e902272c58f1e841a3108199e53d51ac12f8ae4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d89f8e1724875268e27a29c2df9053704f0883d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062599"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528123"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>算法参数（SQL Server 数据挖掘外接程序）
   使用 Excel 表分析工具执行数据挖掘时，无需配置数据挖掘算法或参数；每一种工具都将对数据进行分析并自动选择最佳参数。 但是，如果您要修改模型，或要从头开始创建挖掘模型，可以使用 Excel 数据挖掘客户端提供的多种选项进行自定义。  
   
 -   手动创建数据挖掘模型，方法是单击 "**高级**"，然后单击 "**将模型添加到结构**"。  
   
--   使用数据挖掘客户端中的任意建模向导，然后单击 "**参数**" 来控制[!INCLUDE[msCoName](../includes/msconame-md.md)]数据挖掘算法的行为。  
+-   使用数据挖掘客户端中的任意建模向导，然后单击 "**参数**" 来控制 [!INCLUDE[msCoName](../includes/msconame-md.md)] 数据挖掘算法的行为。  
   
 -   单击 "**查询**" 以打开 "查询模型向导"，然后单击 "**高级**" 以打开**数据挖掘高级查询编辑器**。 在此编辑器中，可以使用 DMX 模板创建模型。  
   
@@ -113,7 +112,7 @@ ms.locfileid: "66062599"
 |SPLIT_METHOD|Microsoft 决策树算法|确定用于拆分节点的方法。 可用选项有：Binary (1)、Complete (2) 或 Both (3)。<br /><br /> 默认值为 3。|  
 |STOPPING_TOLERANCE|Microsoft 聚类分析算法技术参考|指定一个值，它可确定何时达到收敛而且算法完成建模。 当分类概率中的整体变化小于 STOPPING_TOLERANCE 参数与模型大小之比时，即达到收敛。<br /><br /> 默认值为 10。|  
   
-### <a name="comments"></a>说明  
+### <a name="comments"></a>注释  
  有关算法的更多详细信息，请参阅 SQL Server 联机丛书。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 45c6453a-bbe2-4ca5-836e-c7ef11cfcb65
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ca81dda4ce34a498aa471ceed5ea86729b1df508
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f86ba3b79638c73c403b208158ceb72500eaf5bf
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079453"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543666"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 窗体编辑器（KPI 选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的“KPI”选项卡上的“KPI 窗体编辑器”窗格，创建或修改所选的关键绩效指标 (KPI)。********  
@@ -106,7 +105,7 @@ ms.locfileid: "66079453"
 > [!IMPORTANT]  
 >  MDX 表达式必须在与“关联的度量值组”中指定的度量值组关联的时间维度内返回唯一的成员名称。****  
   
- **重量**  
+ **Weight**  
  展开此项可以查看或编辑 KPI 加权系数的 MDX 表达式。  
   
  将所选元素从 **“计算工具”** 窗格拖至此选项中，可包含所选元素的 MDX 语法。  

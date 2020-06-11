@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 02c0df7b-6ca5-4bd0-ba97-a5826c9da120
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5e984fe2ea57ab175e3224d099f5392f96287c74
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: feca59697c1c78a08e629b62856053f2d2ce6d6d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084639"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522553"
 ---
 # <a name="discretization-methods-data-mining"></a>离散化方法（数据挖掘）
-  用于在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]创建数据挖掘模型的某些算法需要特定的内容类型才能正常工作。 例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法的输入不能为连续列，并且不能预测连续值。 另外，有些列可能会因包含的值太多而导致算法不易标识数据中据以创建模型的相关模式。  
+  用于在中创建数据挖掘模型的某些算法 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 需要特定的内容类型才能正常工作。 例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法的输入不能为连续列，并且不能预测连续值。 另外，有些列可能会因包含的值太多而导致算法不易标识数据中据以创建模型的相关模式。  
   
  在这些情况下，可以将列中的数据离散化，以便能够使用算法来生成挖掘模型。 “离散化** ”是将值放入存储桶中以便得到有限数目的可能状态的过程。 存储桶本身是作为有序且离散的值处理的。 数值列和字符串列都可以进行离散化。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "66084639"
 |`CLUSTERS`|该算法可以对定型数据采样，初始化为一些随机点，然后使用 Expectation Maximization (EM) 聚类分析方法运行几次 Microsoft 聚类分析算法迭代，以此将数据分组。 由于 `CLUSTERS` 方法可用于所有分布曲线，所以该方法很有用。 但是，该方法所需的处理时间比其他离散化方法的处理时间长。<br /><br /> 此方法只能用于数值列。|  
 |`EQUAL_AREAS`|该算法将数据分成值数目相同的若干个组。 此方法最适用于正常分布曲线，但如果分布包含的值数量很大，并且这些值在连续数据的窄组中，则此方法的使用效果不是很好。 例如，如果项有一半的成本为 0，那么这一半数据将位于曲线上的某个点以下。 在这种分布中，此方法将对数据进行分解，以便在多个区域中建立相同的离散化。 这样一来，生成的数据表示形式就会不准确。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 -   您可以使用 `EQUAL_AREAS` 方法来离散化字符串。  
   

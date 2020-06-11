@@ -27,18 +27,17 @@ helpviewer_keywords:
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 159760722a62969b79ce738e7928739ff2bb15ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b34fc9d18866572056126b1df408d91c3934e85
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082803"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520415"
 ---
 # <a name="testing-and-validation-data-mining"></a>测试和验证（数据挖掘）
   验证是评估挖掘模型对实际数据执行情况的过程。 在将挖掘模型部署到生产环境之前，务必通过了解其质量和特征来对其进行验证。  
   
- 本部分介绍与模型质量有关的一些基本概念，并介绍中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供的模型验证的策略。 有关模型验证如何适合更大数据挖掘过程的概述，请参阅 [数据挖掘解决方案](data-mining-solutions.md)。  
+ 本部分介绍与模型质量有关的一些基本概念，并介绍中提供的模型验证的策略 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。 有关模型验证如何适合更大数据挖掘过程的概述，请参阅 [数据挖掘解决方案](data-mining-solutions.md)。  
   
 ## <a name="methods-for-testing-and-validation-of-data-mining-models"></a>测试和验证数据挖掘模型的方法  
  可以使用多种方法评估数据挖掘模型的质量和特征。  
@@ -81,7 +80,7 @@ ms.locfileid: "66082803"
   
  本节中的主题提供了每个方法的概述，并引导您使用 SQL Server 数据挖掘完成度量您生成的模型准确性的过程。  
   
-### <a name="related-topics"></a>“相关主题”  
+### <a name="related-topics"></a>相关主题  
   
 |主题|链接|  
 |------------|-----------|  

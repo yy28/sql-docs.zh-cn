@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 030ebd318b310b2c7ca4f85d1f736d168a7adda8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa158dba22938d347030ada0c9b2ea8e589cab5d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083505"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521229"
 ---
 # <a name="mining-model-properties"></a>挖掘模型属性
   挖掘模型具有以下几种属性：  
@@ -43,14 +42,14 @@ ms.locfileid: "66083505"
 |--------------|-----------------|  
 |**算法**|设置挖掘模型的算法类型。|  
 |**AlgorithmParameters**|设置各个算法类型可用的算法参数的值。|  
-|**筛选器**|设置筛选器，以筛选用于定型和测试挖掘模型的数据。 筛选器定义与挖掘模型存储在一起，并可在创建预测查询或测试模型的准确性时根据需要使用。<br /><br /> 定型模型时模型筛选器不是可选项。|  
+|**Filter**|设置筛选器，以筛选用于定型和测试挖掘模型的数据。 筛选器定义与挖掘模型存储在一起，并可在创建预测查询或测试模型的准确性时根据需要使用。<br /><br /> 定型模型时模型筛选器不是可选项。|  
 |**名称**|设置挖掘模型的名称。|  
 |**AllowDrillThrough**|指定是否为挖掘模型启用钻取。|  
   
 ## <a name="properties-of-model-columns"></a>模型列的属性  
  可以为挖掘模型中的各个列设置以下特定于数据挖掘的属性。 针对挖掘模型中的各个列，可以将这些属性设置为不同的值。  
   
-|属性|说明|  
+|属性|描述|  
 |--------------|-----------------|  
 |**说明**|说明挖掘列的目的。|  
 |**名称**|设置挖掘模型列的名称。 可以键入一个新名称，以便为挖掘模型列提供一个别名。|  

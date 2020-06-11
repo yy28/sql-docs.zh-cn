@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e642bd7d-5afa-4dfb-8cca-4f84aadf61b0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b713d9918dabcbaabba2085710dfaa5ed5d3a33b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9694826bf2f74daef7b6d024e51e31d4ee448671
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083282"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520925"
 ---
 # <a name="naive-bayes-model-query-examples"></a>Naive Bayes 模型查询示例
   在创建针对数据挖掘模型的查询时，您既可以创建内容查询，也可创建预测查询；内容查询提供有关分析过程中发现的模式的详细信息，而预测查询则使用模型中的模式来对新数据进行预测。 您还可以通过使用针对数据挖掘架构行集的查询来检索元数据。 本节说明如何创建针对基于 Microsoft Naive Bayes 算法的模型的查询。  

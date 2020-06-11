@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 210ab8c5750fdcb38bcbca324d77eecd926042d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a66897fe02d33c3f614ad5a24e5b2f9a78e1e4c9
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892725"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670081"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
 ```  
   
 ## <a name="arguments"></a>参数  
- *模型*  
+ *model*  
  模型标识符。  
   
  *构造*  
@@ -43,12 +43,12 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *源数据查询*  
  采用提供程序所定义格式的源查询。  
   
-## <a name="remarks"></a>备注  
- 如果未指定**挖掘模型**或**挖掘结构**， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]将根据名称搜索对象类型，并处理正确的对象。 如果服务器包含同名的挖掘结构和挖掘模型，将返回错误。  
+## <a name="remarks"></a>注解  
+ 如果未指定**挖掘模型**或**挖掘结构**，将根据 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 名称搜索对象类型，并处理正确的对象。 如果服务器包含同名的挖掘结构和挖掘模型，将返回错误。  
   
- 通过使用第二种语法形式，将插入到*\<对象>* 中。COLUMN_VALUES，可以将数据直接插入模型列中，而无需定型模型。 该方法以一种简练、有序的方式向模型提供列数据，在处理包含层次结构或有序列的数据集时，该方法很有用。  
+ 通过使用第二种语法形式，将插入到* \< 对象>* 中。COLUMN_VALUES，可以将数据直接插入模型列中，而无需定型模型。 该方法以一种简练、有序的方式向模型提供列数据，在处理包含层次结构或有序列的数据集时，该方法很有用。  
   
- 如果对挖掘模型或挖掘结构使用**INSERT INTO** ，并离开\<映射的模型列> 和\<源数据查询> 参数，则该语句的行为类似于**ProcessDefault**，并使用已存在的绑定。 如果绑定不存在，则语句将返回错误。 有关**ProcessDefault**的详细信息，请参阅[Analysis Services&#41;&#40;处理选项和设置](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services)。 下例说明了该语法：  
+ 如果对挖掘模型或挖掘结构使用**INSERT INTO** ，并离开 \< 映射的模型列> 和 \< 源数据查询> 参数，则该语句的行为类似于**ProcessDefault**，并使用已存在的绑定。 如果绑定不存在，则语句将返回错误。 有关**ProcessDefault**的详细信息，请参阅[Analysis Services&#41;&#40;处理选项和设置](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services)。 下例说明了该语法：  
   
 ```  
 INSERT INTO [MINING MODEL] <model>  
@@ -60,14 +60,14 @@ INSERT INTO [MINING MODEL] <model>
   
 |语句|对象状态|结果|  
 |---------------|----------------------|------------|  
-|插入挖掘模型*\<模型>*|处理挖掘结构。|处理挖掘模型。|  
+|插入挖掘模型* \< 模型>*|处理挖掘结构。|处理挖掘模型。|  
 ||未处理挖掘结构。|处理挖掘模型和挖掘结构。|  
 ||挖掘结构包含其他挖掘模型。|进程失败。 必须重新处理结构和关联的挖掘模型。|  
-|插入挖掘结构*\<结构>*|处理或未处理挖掘结构。|处理挖掘结构和关联的挖掘模型。|  
-|插入包含源查询的挖掘模型*\<模型>*<br /><br /> 或<br /><br /> 插入包含源查询*\<>* 挖掘结构结构中|结构或模型已包含内容。|进程失败。 在执行此操作之前，必须通过使用[DELETE &#40;DMX&#41;](../dmx/delete-dmx.md)来清除这些对象。|  
+|插入挖掘结构* \< 结构>*|处理或未处理挖掘结构。|处理挖掘结构和关联的挖掘模型。|  
+|插入包含源查询的挖掘模型* \< 模型>*<br /><br /> 或<br /><br /> 插入包含源查询* \<>* 挖掘结构结构中|结构或模型已包含内容。|进程失败。 在执行此操作之前，必须通过使用[DELETE &#40;DMX&#41;](../dmx/delete-dmx.md)来清除这些对象。|  
   
 ## <a name="mapped-model-columns"></a>映射的模型列  
- 通过使用映射\<的模型列> 元素，您可以将数据源中的列映射到挖掘模型中的列。 映射\<的模型列> 元素具有以下格式：  
+ 通过使用 \< 映射的模型列> 元素，您可以将数据源中的列映射到挖掘模型中的列。 \<映射的模型列> 元素具有以下格式：  
   
 ```  
 <column identifier> | SKIP | <table identifier> (<column identifier> | SKIP), ...  
@@ -93,7 +93,7 @@ INSERT INTO [MINING MODEL] <model>
  有关数据源类型的详细信息，请参阅[&#60;源数据查询&#62;](../dmx/source-data-query.md)。  
   
 ## <a name="basic-example"></a>基本示例  
- 下面的示例使用**OPENQUERY**基于[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]数据库中的目标邮件数据来训练 Naive Bayes 模型。  
+ 下面的示例使用**OPENQUERY**基于数据库中的目标邮件数据来训练 Naive Bayes 模型 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 。  
   
 ```  
 INSERT INTO NBSample (CustomerKey, Gender, [Number Cars Owned],  

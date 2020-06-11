@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: d765c89e-9512-40fb-984a-8200c2541df6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f09e8b4e31d9826d0988b293e2236676125fc7d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da91cfa80ef7b63857d3de938296d3a5645e3e37
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076051"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547214"
 ---
 # <a name="start-the-business-intelligence-wizard-in-dimension-designer"></a>在维度设计器中启动商业智能向导
-  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以使用商业智能向导或维度设计器创建自定义汇总运算符和自定义成员公式，并配置用于写回的维度。 您可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的解决方案资源管理器或多维数据集设计器启动商业智能向导。 可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]访问维度设计器。  
+  在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，您可以使用商业智能向导或维度设计器创建自定义汇总运算符和自定义成员公式，并配置用于写回的维度。 您可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的解决方案资源管理器或多维数据集设计器启动商业智能向导。 可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]访问维度设计器。  
   
 ### <a name="to-start-the-business-intelligence-wizard"></a>启动商业智能向导  
   

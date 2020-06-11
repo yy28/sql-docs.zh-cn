@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eb5e1179-b0e6-4ec8-bf4c-d67a1e329117
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2a8dfe06f3f05dead3686d0319ba0958388994ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a76f4cad33ac9c168d39f9878e297896da77d441
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088319"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527663"
 ---
 # <a name="calculation-properties-dialog-box-analysis-services---multidimensional-data"></a>“计算属性”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “计算属性” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，查看或编辑在选定多维数据集的多维数据集设计器中的 **“计算”** 选项卡上定义的计算的显示文件夹和关联的度量值组属性。 通过单击多维数据集设计器中 **“计算”** 选项卡上 **“工具栏”** 窗格中的 **“计算属性”** ，可以显示 **“计算属性”** 对话框。  

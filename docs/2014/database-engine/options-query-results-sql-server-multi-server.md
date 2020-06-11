@@ -13,19 +13,19 @@ ms.assetid: d6768bd8-9cb5-4606-a726-a33a1df9e1bb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c8b7c8a3653fd54112d4f5639832e25727ce67b5
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: c52b48ffdfc0e837525447eff3813b3d91b57700
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000767"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856521"
 ---
 # <a name="options-query-results-sql-server-multi-server"></a>选项（“查询结果”-“SQL Server”-“多服务器”）
   在同时查询多个服务器时，可使用此页指定显示结果集的选项。 “合并结果”可将所有服务器中的结果集合并为单个结果集。 合并结果时，响应的第一个服务器将设置结果集的架构。 若要合并结果集，查询必须从每个服务器中返回具有相同列名的相同列数。 在合并结果时，如果某个服务器与第一个服务器在返回结果时返回的架构（列计数和列名称）不匹配，则会为该服务器显示一条消息。  
   
  如果不合并结果，每个服务器中的结果集将显示在其自己的网格中，并使用其自己的架构。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **合并结果**  
  选中此复选框可将几个服务器组中的结果集合并到相同的网格中。  
   

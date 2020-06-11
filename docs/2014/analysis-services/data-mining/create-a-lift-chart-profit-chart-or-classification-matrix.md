@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 033965a6152edaf3d62fcd8c29476651648c1697
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 82514e49b8e991c45bab4d1c32365765cefeeb65
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085406"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523883"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>创建提升图、利润图或分类矩阵
   可以使用五个基本步骤为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据挖掘模型创建准确性图表：  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 20cbf433-70d1-4b61-a462-41a8435b27b4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1c843a74b831315c98deda9a9d6fb0c3a463bc5c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f23403b4e58b17441f3e828c9a9e536dcb652359
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083406"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521167"
 ---
 # <a name="mining-structure-columns"></a>挖掘结构列
   创建挖掘结构时，通过选择外部数据的列，然后指定如何将数据用于建模来定义挖掘结构中的列。 因此，挖掘结构列不仅仅是数据源的数据副本：它们定义挖掘模型要如何使用数据源的数据。 您可以分配确定数据如何离散化的属性以及说明数据值如何分布的属性。  

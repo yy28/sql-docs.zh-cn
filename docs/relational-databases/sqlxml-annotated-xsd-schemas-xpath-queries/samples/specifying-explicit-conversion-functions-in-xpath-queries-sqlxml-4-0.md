@@ -1,5 +1,6 @@
 ---
 title: 在 XPath 查询中使用转换函数（SQLXML）
+description: 了解如何在 SQLXML 4.0 XPath 查询中指定显式转换函数 string （）和 number （）。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58611edabcfeaeb9a97de3da6c7305fb169c14ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f38cb1b18b096fe73f9d6b587162e7fcbe6f69a8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252557"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529880"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定显式转换函数 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "75252557"
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. 使用 number() 显式转换函数  
  **Number （）** 函数将参数转换为数字。  
   
- 假设**ContactID**的值是非数字的，则以下查询会将**ContactID**转换为数字，并将其与值4进行比较。 然后，该查询将返回上下文节点的所有** \<Employee>** 元素子级，其中**ContactID**属性的数值为4：  
+ 假设**ContactID**的值是非数字的，则以下查询会将**ContactID**转换为数字，并将其与值4进行比较。 然后，该查询将返回 **\<Employee>** 上下文节点的所有子元素，该属性的**ContactID**属性的数值为4：  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -81,7 +82,7 @@ ms.locfileid: "75252557"
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. 使用 string() 显式转换函数  
  **String （）** 函数将参数转换为字符串。  
   
- 以下查询将**ContactID**转换为字符串，并将其与字符串值 "4" 进行比较。 该查询将返回上下文节点的所有** \<雇员>** 元素子级，其中**ContactID**的字符串值为 "4"：  
+ 以下查询将**ContactID**转换为字符串，并将其与字符串值 "4" 进行比较。 查询返回 **\<Employee>** 上下文节点的所有子元素，其**ContactID**的字符串值为 "4"：  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  

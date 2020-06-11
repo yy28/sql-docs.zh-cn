@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9bec249e483c5736ee7cf0e66f4aff0af98e08c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 589a1f64a3bed5455f8004e51f6cddf84e83fec5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088024"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527580"
 ---
 # <a name="choosing-data-for-data-mining"></a>为数据挖掘选择数据
   开始数据挖掘时，您可能会问 "我需要多少数据？" 或者 "在清理数据或设置数据格式时，我是否需要了解一些特殊要求？"  
@@ -205,7 +204,7 @@ ms.locfileid: "66088024"
   
  通常，键列是数值或文本标识符，不应该用于分析，只应用于跟踪记录。 时序键和序列键是例外。  
   
- 仅当从已定义为[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据源视图的外部数据源获取数据时，才使用**嵌套表键**。 有关嵌套表的详细信息，请[https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx)参阅：  
+ 仅当从已定义为数据源视图的外部数据源获取数据时，才使用**嵌套表键** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 有关嵌套表的详细信息，请参阅 [https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx) ：  
   
  此内容类型可用于以下数据类型：`Date`、`Double`、`Long` 和 `Text`。  
   
@@ -219,7 +218,7 @@ ms.locfileid: "66088024"
   
  以下数据类型支持此内容类型：`Double`、`Long` 和 `Date`。  
   
- **表**  
+ **表格**  
  只有在您从已定义为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据源视图的外部数据源获取数据时，还可以使用此内容类型。  
   
  这意味着，数据的每一行都实际包含嵌套数据表，并且具有一个或多个列以及一个或多个行。  

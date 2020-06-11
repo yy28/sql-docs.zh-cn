@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3a1a62e4-9fb5-4cdb-a6c6-1b8b30d417ef
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6e0bf6c0c1126dff29107636e0956d92d4b314a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a73ce5a538756a740afd2db72d585fa54f03cae
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086510"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525926"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>数据挖掘算法（SQL Server 数据挖掘外接程序）
   Office 数据挖掘外接程序支持使用以下数据挖掘算法创建分析模型。 所有算法基于已知的计算机学习方法，并已由 Microsoft 研究院实现。  

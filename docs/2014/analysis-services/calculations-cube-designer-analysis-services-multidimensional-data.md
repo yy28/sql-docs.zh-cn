@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 46e2fbe2-bb41-4eaa-91f8-eb2bd3b8d00d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 07138beba90f3f863d81a24c7c92b2d9fd4a4276
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 603d5ea6f1e71abd469738b9f116927ca0b69e7d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088292"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527593"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>计算（多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的“计算”**** 选项卡查看和编辑计算，包括所选多维数据集的计算成员、命名集和多维表达式 (MDX) 脚本命令。  

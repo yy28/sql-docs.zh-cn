@@ -1,7 +1,7 @@
 ---
 title: 动态 SQL |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 56419723540114f122be2582f0de7c7e7d0c54f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fa4ac69602761f7c2a8d28e56db76bbfc39fc753
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306685"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423251"
 ---
 # <a name="dynamic-sql"></a>动态 SQL
 虽然静态 SQL 在许多情况下都可以很好地工作，但有一类应用程序无法提前确定数据访问。 例如，假设电子表格允许用户输入查询，电子表格随后会将查询发送到 DBMS 以检索数据。 编写电子表格程序时，程序员不知道此查询的内容。  
@@ -39,4 +39,4 @@ ms.locfileid: "81306685"
   
 3.  该程序可以重复使用 EXECUTE 语句，在每次执行动态语句时提供不同的参数值。  
   
- 准备好的执行仍与静态 SQL 不同。 在静态 SQL 中，处理 SQL 语句的前四个步骤在编译时进行。 在准备好的执行中，这些步骤仍会在运行时进行，但它们只执行一次;只有在调用 EXECUTE 时才会执行计划。 这有助于消除动态 SQL 体系结构固有的一些性能缺点。 下图显示静态 SQL、动态 SQL 与立即执行之间的差异，以及包含已准备执行的动态 SQL。
+ 准备好的执行仍与静态 SQL 不同。 在静态 SQL 中，处理 SQL 语句的前四个步骤在编译时进行。 在准备好的执行中，这些步骤仍会在运行时进行，但它们只执行一次;只有在调用 EXECUTE 时才会执行计划。 这有助于消除动态 SQL 体系结构固有的一些性能缺点。

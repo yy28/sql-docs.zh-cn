@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ee926e04dc5b845be152e96150c99cb17182a7c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8450107e9d591b8d789037303edbcaeea1ec08e5
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042115"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669632"
 ---
 # <a name="rangemid-dmx"></a>RangeMid (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ RangeMid(<scalar column reference>)
 ## <a name="return-type"></a>返回类型  
  一个标量值。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  与[SELECT FROM &#60;模型一起使用时&#62; 预测联接 &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)， **RangeMin**、 **RangeMid**和**RangeMax**函数返回指定 bucket 的实际边界值。 例如，如果对一个离散化列执行预测，查询将返回该离散化列中存储桶数的预测值。 **RangeMin**、 **RangeMid**和**RangeMax**函数描述了预测指定的存储桶。 当**RangeMid**函数与预测联接语句一起使用时，标量列引用只能包含离散的可预测列。  
   
 ## <a name="examples"></a>示例  

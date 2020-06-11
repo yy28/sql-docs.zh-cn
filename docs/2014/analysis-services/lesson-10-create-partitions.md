@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 92eb21a8-5fc4-4999-ad37-1332ce26431d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 06ffe60802e52bd0ae141435628fc3812dc2c7c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 545c6f45339047d3a632f9e18d69108f3c8b5111
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079203"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543579"
 ---
 # <a name="lesson-11-create-partitions"></a>第 11 课：创建分区
   在本课中，您将创建分区，以便将 Internet Sales 表划分为可独立于其他分区进行处理（刷新）的更小逻辑部分。 默认情况下，模型中包含的每个表都有一个分区，其中包含表的所有列和行。 对于 Internet Sales 表，我们希望按年份划分数据;每个表的5年的一个分区。  然后，每个分区可独立进行处理。 若要了解详细信息，请参阅[分区（SSAS 表格）](tabular-models/partitions-ssas-tabular.md)。  
@@ -35,7 +34,7 @@ ms.locfileid: "66079203"
   
 2.  在 "**分区管理器**" 对话框的 "**分区**" 中，单击 " **Internet 销售**" 分区。  
   
-3.  在 "**分区名称**" 中，将`Internet Sales 2005`名称更改为。  
+3.  在 "**分区名称**" 中，将名称更改为 `Internet Sales 2005` 。  
   
     > [!TIP]  
     >  在继续执行下一步之前，您将注意到“表预览”窗口中的列名显示模型表中包含的、但其列名来自源中的这些列（已勾选）。 这是因为“表预览”窗口显示源表（而非模型表）中的列。  
@@ -83,9 +82,9 @@ ms.locfileid: "66079203"
   
 #### <a name="to-create-a-partition-for-the-2006-year-in-the-internet-sales-table"></a>在 Internet Sales 表中创建2006年的分区  
   
-1.  在 "**分区管理器**" 对话框的 "**分区**" 中`Internet Sales 2005` ，单击刚创建的分区，然后**复制**。  
+1.  在 "**分区管理器**" 对话框的 "**分区**" 中，单击 `Internet Sales 2005` 刚创建的分区，然后**复制**。  
   
-2.  在 "**分区名称**" `Internet Sales 2006`中，键入。  
+2.  在 "**分区名称**" 中，键入 `Internet Sales 2006` 。  
   
 3.  在 SQL 语句中，要使分区只包含2006年的那些行，请将 WHERE 子句替换为以下内容：  
   
@@ -97,7 +96,7 @@ ms.locfileid: "66079203"
   
 1.  在“分区管理器”**** 对话框中，单击“复制”****。  
   
-2.  在 "**分区名称**" `Internet Sales 2007`中，键入。  
+2.  在 "**分区名称**" 中，键入 `Internet Sales 2007` 。  
   
 3.  在 "**切换到**" 中，选择 "**查询编辑器**"。  
   
@@ -111,7 +110,7 @@ ms.locfileid: "66079203"
   
 1.  在“分区管理器”**** 对话框中，单击“新建”****。  
   
-2.  在 "**分区名称**" `Internet Sales 2008`中，键入。  
+2.  在 "**分区名称**" 中，键入 `Internet Sales 2008` 。  
   
 3.  在 "**切换到**" 中，选择 "**查询编辑器**"。  
   
@@ -125,7 +124,7 @@ ms.locfileid: "66079203"
   
 1.  在“分区管理器”**** 对话框中，单击“新建”****。  
   
-2.  在 "**分区名称**" `Internet Sales 2009`中，键入。  
+2.  在 "**分区名称**" 中，键入 `Internet Sales 2009` 。  
   
 3.  在 "**切换到**" 中，选择 "**查询编辑器**"。  
   

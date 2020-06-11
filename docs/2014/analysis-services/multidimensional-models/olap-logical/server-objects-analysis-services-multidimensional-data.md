@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 365bfd63-c55a-433d-9e1a-a788bc149a25
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5c70c0ba8e402f41a7936c4d70bd3d5ac9a51ad7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f41a930bd5054583918180d7c50eca46c3ea5e22
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62699327"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545969"
 ---
 # <a name="server-objects-analysis-services---multidimensional-data"></a>服务器对象（Analysis Services - 多维数据）
     
 ## <a name="introducing-server-objects"></a>服务器对象简介  
- <xref:Microsoft.AnalysisServices.Server>对象表示要使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的服务器和实例。  
+ <xref:Microsoft.AnalysisServices.Server>对象表示 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 要使用的服务器和实例。  
   
  连接到 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的实例后，您可马上看到：  
   

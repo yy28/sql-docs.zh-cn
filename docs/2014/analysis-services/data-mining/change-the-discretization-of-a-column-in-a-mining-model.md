@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c49862b-595d-4fa4-b890-e2e1bde1d74f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d2296eadc16d5ca1745fe940d1f5e7582ef30db6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f5dfbc1ab2481afc1b4f4b152c7748f9ac5a03a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085898"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525063"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>更改挖掘模型中列的离散化
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]自动离散化值-也就是说，在某些情况下，它会将数据置于数值列中。 例如，如果数据包含连续数值数据，并且创建了决策树模型，则将依据数据的分布，自动将连续数据的所有列都存入 bin 目录中。 如果要控制数据的离散化方式，则必须更改挖掘结构列的属性，这些属性可控制数据在模型中的使用方式。  
@@ -39,18 +38,18 @@ ms.locfileid: "66085898"
   
 ### <a name="to-change-the-discretization-method"></a>更改离散化方法  
   
-1.  在 "**挖掘属性**" 窗口中，单击 "**内容**" 旁的文本框， `Discretized`然后从下拉列表中选择。  
+1.  在 "**挖掘属性**" 窗口中，单击 "**内容**" 旁的文本框，然后 `Discretized` 从下拉列表中选择。  
   
      <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 和 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 属性均处于启用状态。  
   
-2.  在 "**属性**" 窗口中，单击旁边的文本框<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> ，然后选择下列值之一： `Automatic`、 `EqualAreas`或。 `Cluster`  
+2.  在 "**属性**" 窗口中，单击旁边的文本框， <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 然后选择下列值之一： `Automatic` 、 `EqualAreas` 或 `Cluster` 。  
   
     > [!NOTE]  
-    >  如果列用法设置为`Ignore`，则列的 "**属性**" 窗口为空。  
+    >  如果列用法设置为，则 `Ignore` 列的 "**属性**" 窗口为空。  
   
      在设计器中选择一个不同的元素后，新值即生效。  
   
-3.  在 "**属性**" 窗口中，单击旁边的文本框<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> ，然后键入一个数值。  
+3.  在 "**属性**" 窗口中，单击旁边的文本框， <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 然后键入一个数值。  
   
     > [!NOTE]  
     >  如果更改这些属性，则必须重新处理该结构以及要对其使用新设置的所有模型。  

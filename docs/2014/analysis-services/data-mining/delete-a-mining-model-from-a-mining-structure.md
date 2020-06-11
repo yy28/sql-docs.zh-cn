@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9ab1506b-856e-4762-a663-5adf15ac71e3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7d4e32a40946eb9e513ad22cd837773187843151
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72c79dcdccf6225b8e75144f8b090dcab7506c10
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084774"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522605"
 ---
 # <a name="delete-a-mining-model-from-a-mining-structure"></a>从挖掘结构中删除挖掘模型
   您可以使用数据挖掘设计器、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 DMX 语句删除挖掘模型。  
@@ -33,7 +32,7 @@ ms.locfileid: "66084774"
   
      将打开 **“删除对象”** 对话框。  
   
-3.  单击" **确定**"。  
+3.  单击“确定”。  
   
 ### <a name="delete-a-mining-model-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 删除挖掘模型  
   

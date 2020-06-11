@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4af5b7db-790b-459c-b2b4-00f0cf6b5ce4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc810f56d552fa17cb027598a25bde114a696375
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9027ff3928f40d43f16bb31b52e0c1d52e072847
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084803"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522721"
 ---
 # <a name="data-types-data-mining"></a>数据类型（数据挖掘）
-  在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]创建挖掘模型或挖掘结构时，必须为挖掘结构中的每个列定义数据类型。 数据类型告知数据挖掘引擎数据源中的数据是数值还是文本以及应如何处理数据。 例如，如果数据源中包含数值数据，则可以指定是将数字作为整数处理还是使用小数位数来处理。  
+  在中创建挖掘模型或挖掘结构时 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，必须为挖掘结构中的每个列定义数据类型。 数据类型告知数据挖掘引擎数据源中的数据是数值还是文本以及应如何处理数据。 例如，如果数据源中包含数值数据，则可以指定是将数字作为整数处理还是使用小数位数来处理。  
   
  每种数据类型支持一种或多种内容类型。 通过设置内容类型，您可以自定义在挖掘模型中如何处理或计算列中的数据。  
   

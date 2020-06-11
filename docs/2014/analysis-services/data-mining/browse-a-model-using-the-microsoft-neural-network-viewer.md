@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2343d746-c4f4-499b-9d3c-17d63310a9a3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1628eff6e5c440071126ce3508b977f9f7508ba5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c9ad60ad7602222572bd1649d2ac503e0535205
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086059"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525290"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>使用 Microsoft 神经网络查看器浏览模型
-  中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的神经网络查看器显示用[!INCLUDE[msCoName](../../includes/msconame-md.md)]神经网络算法生成的挖掘[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法创建可分析多个输入和输出的分类和回归挖掘模型，它对于开放的分析和浏览十分有用。 有关此算法的详细信息，请参阅 [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]中的神经网络查看器 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 显示用神经网络算法生成的挖掘模型 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法创建可分析多个输入和输出的分类和回归挖掘模型，它对于开放的分析和浏览十分有用。 有关此算法的详细信息，请参阅 [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)。  
   
  在您使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络查看器浏览某一模型时，通常会选择某个目标属性和状态，然后使用该查看器来查看输入属性是如何影响结果的。  
   

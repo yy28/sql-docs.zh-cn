@@ -4,18 +4,18 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8be3fe8cbf30121ec2895f59306c925a422d5c39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 125fe829c3b76be0d92a3519249df571890efbf2
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938127"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670021"
 ---
-# <a name="ltsource-data-querygt---openrowset"></a>&lt;源数据查询&gt; -OPENROWSET
+# <a name="ltsource-data-querygt---openrowset"></a>&lt;源数据查询 &gt; -OPENROWSET
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   使用对外部访问接口的查询替换源数据查询。 INSERT，选择 "从预测联接"，然后从 "自然预测联接语句" 中选择 "支持**OPENROWSET**"。  
@@ -37,7 +37,7 @@ OPENROWSET(provider_name,provider_string,query_syntax)
  *query_syntax*  
  一个返回行集的查询语法。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  数据挖掘提供程序将使用*provider_name*和 provider_string 建立与数据源对象的连接，并将执行*query_syntax*中指定的查询 *，* 以便从源数据中检索行集。  
   
 ## <a name="examples"></a>示例  

@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: ad35a528-1949-4048-8678-3b9760c1c88c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 830aea002e8000feeda061f42af9084696ed6fe8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: acf5d2f16271cf525194c1df48ac02c4c4241467
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088493"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527697"
 ---
 # <a name="browsing-a-forecasting-model"></a>浏览预测模型
-  使用 "**浏览**" 打开预测模型时，该模型将显示在交互式查看器中，类似于中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的时序模型查看器。 查看器有助于您探索趋势、比较序列、创建预测以及获取有关模型和基础数据的信息。  
+  使用 "**浏览**" 打开预测模型时，该模型将显示在交互式查看器中，类似于中的时序模型查看器 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 查看器有助于您探索趋势、比较序列、创建预测以及获取有关模型和基础数据的信息。  
   
 ##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>浏览模型  
  用于预测模型的**浏览**查看器提供了一个图表视图，其中显示了一段时间内的趋势，并使您可以创建预测和模型视图，它将时间序列表示为决策树或回归树。  

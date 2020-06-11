@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 112696db-3838-4b50-91bd-d2ce5fa04ee5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74561047f149ae6a6bdcd0cd54347d842e49569f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5bfc4b3a0890ebf662fd5a4ac2697aa3c63464c6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079086"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543519"
 ---
 # <a name="defining-a-dimension"></a>定义维度
   在以下任务中，将使用维度向导生成“日期”维度。  
@@ -35,7 +34,7 @@ ms.locfileid: "66079086"
   
 5.  在“主表”**** 列表中，选择“日期”****。  
   
-6.  单击“下一步”  。  
+6.  单击“下一步”。  
   
 7.  在“选择维度属性”**** 页上，选中下列属性旁的复选框：  
   
@@ -45,13 +44,13 @@ ms.locfileid: "66079086"
   
     -   **英文月份名称**  
   
-    -   **Calendar Quarter**  
+    -   **日历季度**  
   
-    -   **Calendar Year**  
+    -   **日历年**  
   
     -   **Calendar Semester**  
   
-8.  将“完整日期备用键”**** 属性的“属性类型”**** 列的设置从“常规”**** 更改为“日期”****。 为此，请单击“属性类型”**** 列中的“常规”****。 然后单击箭头展开选项。 接下来，单击 "**日期** > **日历** > **日期**"。 单击" **确定**"。 重复这些步骤，更改属性的属性类型，具体如下所示：  
+8.  将“完整日期备用键”**** 属性的“属性类型”**** 列的设置从“常规”**** 更改为“日期”****。 为此，请单击“属性类型”**** 列中的“常规”****。 然后单击箭头展开选项。 接下来，单击 "**日期**  >  **日历**  >  **日期**"。 单击“确定”。 重复这些步骤，更改属性的属性类型，具体如下所示：  
   
     -   “英文月份名称”**** 更改为“月份”****  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66079086"
   
     -   “日历半期”**** 更改为“半年”****  
   
-9. 单击“下一步”  。  
+9. 单击“下一步”。  
   
 10. 在“完成向导”**** 页的“预览”窗格中，可以看到“日期”**** 维度及其属性。  
   
@@ -69,7 +68,7 @@ ms.locfileid: "66079086"
   
      在解决方案资源管理器的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目中，“日期”维度将在“维度”**** 文件夹中显示。 在开发环境的中央，维度设计器显示“日期”维度。  
   
-12. 在“文件” **** 菜单上，单击“全部保存” ****。  
+12. 在“文件”菜单上，单击“全部保存” 。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [定义多维数据集](lesson-2-2-defining-a-cube.md)  

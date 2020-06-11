@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a260598d62a3c5fc1304e8b71b8631546731ed07
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 283ce289d890d9a4d76801a59709463324f45f88
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070868"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670227"
 ---
 # <a name="data-mining-extensions-dmx-syntax-conventions"></a>数据挖掘扩展插件 (DMX) 语法约定
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的数据挖掘扩展插件（DMX）参考文档使用以下约定来描述 DMX 语言。  
+  中的数据挖掘扩展插件（DMX）参考文档 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用以下约定来描述 DMX 语言。  
   
 |约定|使用情况|  
 |----------------|-----------|  
@@ -28,7 +28,7 @@ ms.locfileid: "68070868"
 |`[ ]`（方括号）|包含可选语法项。 不要键入方括号。|  
 |{}（大括号）|包含必选的语法项。 不要键入大括号。|  
 |, ...|指示逗号前面的项可重复任意次。 各项用逗号分隔。|  
-|\<label> ::=|语法块的名称。 此约定用于对可在语句中的多个位置使用的过长语法段或语法单元进行分组和标记。 可以在其中使用语法块的每个位置都用括在括号中的标签表示，如> \<标签。|  
+|\<label> ::=|语法块的名称。 此约定用于对可在语句中的多个位置使用的过长语法段或语法单元进行分组和标记。 可以在其中使用语法块的每个位置都用括在括号中的标签表示，如 \<> 标签。|  
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘扩展插件 (DMX) 参考](../dmx/data-mining-extensions-dmx-reference.md)  

@@ -1,5 +1,6 @@
 ---
 title: 客户端 XML 格式（SQLXML）
+description: 使用 FOR XML 子句了解 SQLXML 4.0 中的客户端 XML 格式。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 968af0ed24f14b4766e312a0cec0e9d3e7b5022b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b03c1cb91c17e330d73f192bbd364c95591c721
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247015"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529991"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>客户端 XML 格式化 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "75247015"
 > [!NOTE]  
 >  本主题提供了有关使用客户端上的 FOR XML 子句的其他信息，并假定您已熟悉 FOR XML 子句。 有关 FOR XML 的详细信息，请参阅[使用 FOR Xml 构造 XML](../../../relational-databases/xml/for-xml-sql-server.md)。  
   
- **重要提示**若要将客户端 FOR XML 功能与新的**xml**数据类型一起使用，客户端应[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]始终使用 Native client （SQLNCLI11）数据访问接口，而不是 SQLOLEDB 访问接口。 SQLNCLI11 为 SQL Server 访问接口的最新版本，且完全识别 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的数据类型。 通过 SQLOLEDB 提供程序的客户端 FOR XML 的行为将**xml**数据类型视为字符串。  
+ **重要提示**若要将客户端 FOR XML 功能与新的**xml**数据类型一起使用，客户端应始终使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE client （SQLNCLI11）数据访问接口，而不是 SQLOLEDB 访问接口。 SQLNCLI11 为 SQL Server 访问接口的最新版本，且完全识别 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的数据类型。 通过 SQLOLEDB 提供程序的客户端 FOR XML 的行为将**xml**数据类型视为字符串。  
   
 ## <a name="formatting-xml-documents-on-the-client-side"></a>对客户端上的 XML 文档进行格式化  
  当客户端应用程序执行以下查询时：  
@@ -54,7 +55,7 @@ FROM   Person.Contact
   
  下表显示了可以使用客户端 FOR XML 指定的模式。  
   
-|客户端 FOR XML 模式|注释|  
+|客户端 FOR XML 模式|评论|  
 |-------------------------------|-------------|  
 |RAW|在客户端或服务器端 FOR XML 中指定时产生相同的结果。|  
 |NESTED|与服务器端上的 FOR XML AUTO 模式类似。|  
@@ -119,7 +120,7 @@ AS
      通过将 SQLXML 托管类的此属性设置为 True，可指定客户端格式。  
   
 ## <a name="enhanced-xml-template-support"></a>增强的 XML 模板支持  
- 从开始[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的 XML 模板已通过添加**客户端-xml**特性得以增强。 如果此属性设置为 True，将在客户端上进行 XML 格式化。 请注意，此模板特性在功能上与特定于 SQLXMLOLEDB 提供程序的 ClientSideXML 属性相同。  
+ 从开始 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ，中的 XML 模板已 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 通过添加**客户端-xml**特性得以增强。 如果此属性设置为 True，将在客户端上进行 XML 格式化。 请注意，此模板特性在功能上与特定于 SQLXMLOLEDB 提供程序的 ClientSideXML 属性相同。  
   
 > [!NOTE]  
 >  如果你在使用 SQLXMLOLEDB 提供程序的 ADO 应用程序中执行 XML 模板，并且在模板中同时指定了**客户端-XML**特性和 Provider ClientSideXML 属性，则模板中指定的值优先。  

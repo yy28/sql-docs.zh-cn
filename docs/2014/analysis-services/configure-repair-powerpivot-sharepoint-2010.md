@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d61f49c5-efaa-4455-98f2-8c293fa50046
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d89de37de81311b1f4a884eeaf434e8247da633
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b5ace027c052090e2f0ce5bca77e02df9516da4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174466"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527263"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>配置或修复 PowerPivot for SharePoint 2010（PowerPivot 配置工具）
   要配置或修复 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot for SharePoint 2010 的安装，请使用 PowerPivot 配置工具。 该配置工具开始是扫描系统，然后返回完成或修复安装所需的操作列表。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 安装向导将安装用于 SharePoint 2010 的 PowerPivot 配置工具以及用于 SharePoint 2013 的 PowerPivot 配置工具。 本主题介绍用于 SharePoint 2010 的 PowerPivot 配置工具。 有关 SharePoint 2010 的详细信息，请参阅[PowerPivot for SharePoint 2013 &#40;PowerPivot 配置工具&#41;中配置或修复](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)。
@@ -88,7 +87,7 @@ ms.locfileid: "78174466"
 
  下表说明了用于配置服务器的值。
 
-|页|输入值|源|说明|
+|页面|输入值|源|说明|
 |----------|-----------------|------------|-----------------|
 |**“配置或修复 PowerPivot for SharePoint”**|默认帐户|当前用户|默认帐户是用于在场中设置共享服务的域 Windows 用户帐户。 该帐户用于设置 PowerPivot 服务应用程序、Secure Store Service、Excel Services、Web 应用程序池标识、网站集管理员和 PowerPivot 无人参与的数据刷新帐户。<br /><br /> 默认情况下，该工具将输入当前用户的域帐户。 除非您是为评估目的配置服务器，否则，应该使用其他域用户帐户替换该默认帐户。<br /><br /> 您还可以在以后使用管理中心来更改服务标识。<br /><br /> 或者，在 PowerPivot 配置工具中，您可为以下项指定专用的帐户：<br /><br /> Web 应用程序，使用 **“创建默认的 Web 应用程序”** 页（假定该工具正在为场创建 Web 应用程序）。<br /><br /> PowerPivot 无人参与的数据刷新帐户，使用此工具中的 **“为数据刷新创建无人参与的帐户”** 页。|
 ||数据库服务器|本地 PowerPivot 命名实例（如果可用）|如果数据库引擎实例作为 PowerPivot 命名实例安装，则该工具将使用此实例填充数据库服务器字段。 如果您没有安装数据库引擎，此字段将为空。 您必须提供一个实例。 该实例可以是支持 SharePoint 场的任何 SQL Server 版本或发行版。|
@@ -101,12 +100,12 @@ ms.locfileid: "78174466"
 ||PowerPivot 服务应用程序数据库名称|默认|默认数据库名称基于服务应用程序名称，后跟 GUID 以便确保名称唯一。 您可以在该工具中替换为不同的值。|
 ||升级工作簿以启用数据刷新|用户输入|数据刷新失败，并且 SQL Server 2008 R2 PowerPivot 工作簿不支持此功能。 **“升级工作簿以启用数据刷新”** 选项将工作簿升级到 SQL Server 2012 PowerPivot 版本。|
 |**创建默认的 Web 应用程序**|Web 应用程序名称|默认值（如果需要）|如果不存在任何 Web 应用程序，该工具将创建一个。 Web 应用程序配置为使用经典模式身份验证，并侦听 **端口 80**。 最大文件上载大小设为 2047 MB，这是 SharePoint 所允许的最大值。 较大的文件上载大小用于容纳大型 PowerPivot 文件。|
-||代码|默认值（如果需要）|该工具将基于服务器名称创建一个 URL，并且使用与 SharePoint 相同的文件命名约定。|
+||URL|默认值（如果需要）|该工具将基于服务器名称创建一个 URL，并且使用与 SharePoint 相同的文件命名约定。|
 ||Web 应用程序池|默认值（如果需要）|该工具在 IIS 中创建默认应用程序池。|
 ||Web 应用程序池帐户和密码|默认值（如果需要）|该应用程序池帐户基于默认帐户，但您可以在该工具中替换它。|
 ||Web 应用程序数据库服务器|默认值（如果需要）|将预先选择默认数据库实例以便存储应用程序数据库，但您可以在该工具中指定不同的 SQL Server 实例。|
 ||Web 应用程序数据库名称|默认值（如果需要）|该数据库名称基于 SharePoint 的文件命名约定，但您可以选择其他名称。|
-|**部署 Web 应用程序解决方案**|代码|默认值（如果需要）|默认 URL 来自默认的 Web 应用程序。|
+|**部署 Web 应用程序解决方案**|URL|默认值（如果需要）|默认 URL 来自默认的 Web 应用程序。|
 ||最大文件大小(MB)|默认值（如果需要）|默认设置为 2047。 SharePoint 文档库也有一个最大大小，且 PowerPivot 设置不应超过此文档库设置。 有关详细信息，请参阅[&#40;PowerPivot for SharePoint&#41;配置最大文件上传大小](power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)。|
 |**创建网站集**|站点管理员|默认值（如果需要）|此工具将使用默认帐户。 您可以在 **“创建网站集”** 页中覆盖默认帐户。|
 ||联系人电子邮件|默认值（如果需要）|如果在服务器上配置了 Microsoft Outlook，则该工具将使用当前用户的电子邮件地址。 否则，将使用占位符值。|
@@ -181,7 +180,7 @@ ms.locfileid: "78174466"
  一段时间后，如果您确定需要附加的数据存储和处理能力，则可以将第二个 PowerPivot for SharePoint 服务器实例添加到场中。 有关说明，请参阅[部署清单：通过将 PowerPivot 服务器添加到 SharePoint 2010 场进行扩展](../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)。
 
 ## <a name="additional-resources"></a>其他资源
- ![SharePoint 设置](media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")https://connect.microsoft.com/SQLServer/Feedback)[通过 Microsoft SQL Server Connect （）提交反馈和联系信息](https://connect.microsoft.com/SQLServer/Feedback)。
+ ![SharePoint 设置](media/as-sharepoint2013-settings-gear.gif "SharePoint 设置")[通过 Microsoft SQL Server Connect （）提交反馈和联系信息](https://connect.microsoft.com/SQLServer/Feedback) https://connect.microsoft.com/SQLServer/Feedback) 。
 
 ## <a name="see-also"></a>另请参阅
  [Powerpivot 配置工具](power-pivot-sharepoint/power-pivot-configuration-tools.md)[管理中心中的 powerpivot 服务器管理和配置](power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)

@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: abba4d24-3619-44c1-8279-88f27ad627d3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9abaf092d00a8acaf6c0b3ef963c940199068ce9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f5fada79acb9a4dcac8ce3707ede13cfac96cc2f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082712"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520294"
 ---
 # <a name="view-and-save-the-results-of-a-prediction-query"></a>查看和保存预测查询的结果
-  使用预测查询生成器在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]定义查询后，可通过切换到查询结果视图来运行查询并查看结果。  
+  使用预测查询生成器在中定义查询后 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，可通过切换到查询结果视图来运行查询并查看结果。  
   
- 您可以将预测查询的结果保存到[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目中定义的任何数据源中的表。 可以创建新的表，也可以将查询结果保存到现有表中。 如果将结果保存到现有表中，可以选择覆盖表中当前存储的数据；否则，查询结果将追加到表中现有数据的末尾。  
+ 您可以将预测查询的结果保存到项目中定义的任何数据源中的表 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。 可以创建新的表，也可以将查询结果保存到现有表中。 如果将结果保存到现有表中，可以选择覆盖表中当前存储的数据；否则，查询结果将追加到表中现有数据的末尾。  
   
 ### <a name="run-a-query-and-view-the-results"></a>运行查询并查看结果  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66082712"
   
 4.  如果希望将表添加到数据源视图中，请从 **“添加到数据源视图”** 中选择数据源视图。  
   
-5.  单击“保存”  。  
+5.  单击“保存” 。  
   
     > [!WARNING]  
     >  如果目标不支持分层行集，则可以向结果中添加 FALTTENED 关键字以另存为平面表。  

@@ -1,24 +1,24 @@
 ---
-title: 选择 " &lt;从&gt;模型"。DIMENSION_CONTENT （DMX） |Microsoft Docs
+title: 选择 "从 &lt; 模型" &gt; 。DIMENSION_CONTENT （DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7fac89454cd31c1334e41d4c2367143f31476e20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7ffc372ad0c44208d246a2afc9259428e354e480
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928360"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669582"
 ---
-# <a name="select-from-ltmodelgtdimension_content-dmx"></a>选择 " &lt;从&gt;模型"。DIMENSION_CONTENT （DMX）
+# <a name="select-from-ltmodelgtdimension_content-dmx"></a>选择 "从 &lt; 模型" &gt; 。DIMENSION_CONTENT （DMX）
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  挖掘模型可用作 OLAP 多维数据集中的一个维度，模型中的每个节点表示一个维度成员。 **从模型中\<选择>。Dimension_CONTENT**语句以维度形式返回与其使用情况有关的模型的内容。  
+  挖掘模型可用作 OLAP 多维数据集中的一个维度，模型中的每个节点表示一个维度成员。 **从模型中选择 \<>。Dimension_CONTENT**语句以维度形式返回与其使用情况有关的模型的内容。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,7 +36,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
  *表达式列表*  
  基于内容架构行集派生的一组以逗号分隔的相关列标识符。  
   
- *模型*  
+ *model*  
  模型标识符。  
   
  *条件表达式*  
@@ -45,7 +45,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
  *expression*  
  可选。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  算法提供程序定义要返回的内容以及这些内容的组织方式。 例如，提供程序可能会限制维度内容中说明的节点数。  
   
  下表列出了可进行维度内容查询的列，以及每个列作为数据挖掘维度来执行的函数。  

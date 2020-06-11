@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: db55e226-601a-4026-8651-573195555a59
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 174d4ab61cf56f4916babb1639e110162d20e6fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 634ad200cc8c46282eeb6146a8a590811e6d69a3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077582"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537369"
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>多维建模（Adventure Works 教程）
   欢迎使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程。 本教程通过在所有示例中使用虚构公司 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] ，说明如何使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 开发和部署 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 项目。  
@@ -64,7 +63,7 @@ ms.locfileid: "66077582"
 > [!NOTE]  
 >  您将在本教程中创建的多维数据集数据库是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维模型项目的简化版本，此项目是可在 codeplex 站点上下载的 Adventure Works 示例数据库的一部分。 对 Adventure Works 多维数据库的教程版本进行了简化，以便重点关注您将要立即掌握的特定技能。 在完成该教程后，请考虑自己探索该多维模型项目，以便进一步理解 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维建模。  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
  要开始学习本教程，请转到第一课： [Lesson 1: Defining a Data Source View within an Analysis Services Project](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)。  
   
   

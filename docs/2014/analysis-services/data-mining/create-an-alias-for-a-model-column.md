@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c80ebe66-a8f8-4f24-9fe8-8288de9d13bc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1df04621d87aa028a2aea43d758fa613dcedccf2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 908c0a8d8caa810badf4b82dc3dd3f411d09f323
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085318"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523683"
 ---
 # <a name="create-an-alias-for-a-model-column"></a>为模型列创建别名
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，可以为模型列创建别名。 当挖掘结构名称太长而不便使用，或者当您需要重命名列以便更清楚地说明其内容或在模型中的用法时，这可能很有用。 例如，如果复制一个结构列，然后以不同的方式为特定模型离散化该列，可以重命名该列，以便更准确地反映其内容。  

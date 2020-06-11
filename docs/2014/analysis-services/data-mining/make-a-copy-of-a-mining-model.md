@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7975bb02-f188-49a0-b7de-5b9b216254ad
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7464c7d780a420b0f95b59ebde02494bd40661e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 776de6d17b1e17197b331f9578da018b740f0138
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084221"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522183"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>生成挖掘模型的副本
   在要快速创建基于相同数据的多个挖掘模型时，创建挖掘模型的副本将很有用。 在您复制模型后，可以通过更改参数或添加筛选器，编辑新副本。  
@@ -37,7 +36,7 @@ ms.locfileid: "66084221"
   
 3.  选择模型，然后右键单击打开快捷菜单。  
   
-     \- 或 -  
+     -或-  
   
      选择该模型。 在 **“挖掘模型”** 菜单中，选择 **“新建挖掘模型”**。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66084221"
   
      有关如何使用筛选器编辑器对话框的详细信息，请参阅 [对挖掘模型应用筛选器](apply-a-filter-to-a-mining-model.md)。  
   
-4.  在 "**属性**" 窗口的`AlgorithmParameters`文本框中，单击 "**需要参数**"，然后根据需要更改算法参数。  
+4.  在 "**属性**" 窗口的文本框中， `AlgorithmParameters` 单击 "**需要参数**"，然后根据需要更改算法参数。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

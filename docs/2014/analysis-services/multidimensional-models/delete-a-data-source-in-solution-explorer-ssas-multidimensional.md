@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b45441ef-f909-4736-98b9-cc80d0acac99
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1e3b6dc676c11444c8dd45d1874f77942316a462
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d6101c8704579894590994d88e0286197148b694
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075501"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546909"
 ---
 # <a name="delete-a-data-source-in-solution-explorer-ssas-multidimensional"></a>在解决方案资源管理器中删除数据源（SSAS 多维）
   您可以删除某一数据源对象以便从 Analysis Services 多维模型项目中永久删除该对象。  

@@ -1,5 +1,6 @@
 ---
 title: 条件表达式（XQuery） |Microsoft Docs
+description: 了解 XQuery 支持的条件表达式。
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f593455269b8c005a3b4d3725f4360db77ea48f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76570b6b7cbb1ecb55a881d58683e158736e85d0
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68039016"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689706"
 ---
 # <a name="conditional-expressions-xquery"></a>条件表达式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +50,13 @@ else
   
 -   否则，将引发静态错误。  
   
- 另请注意下列事项：  
+ 另请注意以下几点：  
   
 -   测试表达式必须用括号括起来。  
   
 -   **Else**表达式是必需的。 如果不需要该表达式，可以返回“( )”，如本主题中的示例所示。  
   
- 例如，下面的查询是针对**xml**类型变量指定的。 **If**条件使用[sql： variable （）函数](../xquery/xquery-extension-functions-sql-variable.md)扩展函数@v测试 XQuery 表达式内的 sql 变量（）的值。 如果变量值为 "FirstName"，它将返回 <`FirstName`> 元素。 否则，它将返回 <`LastName`> 元素。  
+ 例如，下面的查询是针对**xml**类型变量指定的。 **If**条件 @v 使用[sql： variable （）函数](../xquery/xquery-extension-functions-sql-variable.md)扩展函数测试 XQuery 表达式内的 sql 变量（）的值。 如果变量值为 "FirstName"，它将返回 <`FirstName`> 元素。 否则，它将返回 <`LastName`> 元素。  
   
 ```  
 declare @x xml  
@@ -80,7 +81,7 @@ if ( sql:variable("@v")="FirstName" ) then
 <FirstName>fname</FirstName>  
 ```  
   
- 以下查询从特定产品样式的产品目录说明中检索前两个功能说明。 如果文档中有多个功能，则会添加一个包含`there-is-more`空内容的 <> 元素。  
+ 以下查询从特定产品样式的产品目录说明中检索前两个功能说明。 如果文档中有多个功能，则会添加一个 `there-is-more` 包含空内容的 <> 元素。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -104,7 +105,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 在前面的查询中， **if**表达式中的条件将检查 <`Features`> 中是否存在两个以上的子元素。 如果有，则在结果中返回 `\<there-is-more/>` 元素。  
+ 在前面的查询中， **if**表达式中的条件将检查 <> 中是否存在两个以上的子元素 `Features` 。 如果有，则在结果中返回 `\<there-is-more/>` 元素。  
   
  结果如下：  
   
@@ -122,7 +123,7 @@ WHERE ProductModelID = 19
 </Product>  
 ```  
   
- 在下面的查询中，如果`Location`工作中心位置未指定设置时间，则返回具有 LocationID 属性的 <> 元素。  
+ 在下面的查询中， `Location` 如果工作中心位置未指定设置时间，则返回具有 LocationID 属性的 <> 元素。  
   
 ```  
 SELECT Instructions.query('  

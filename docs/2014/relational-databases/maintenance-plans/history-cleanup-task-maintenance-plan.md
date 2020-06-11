@@ -14,12 +14,12 @@ ms.reviewer: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a2b398a9910926ca2ced339395feaf938c31d519
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96d63f314fd72ba91985d8e2f16759ef05ed9fc2
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67412708"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859249"
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>“清除历史记录”任务（维护计划）
 
@@ -27,7 +27,7 @@ ms.locfileid: "67412708"
   
  此语句使用 **sp_purge_jobhistory** 和 **sp_delete_backuphistory** 语句。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **Connection**  
  选择执行此任务时使用的服务器连接。  
   

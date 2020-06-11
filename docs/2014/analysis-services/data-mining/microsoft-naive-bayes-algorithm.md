@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b53e011-3b1a-4cd1-bdc2-456768ba31b5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4a65630dc42e74aef762913775688ce5221f79fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c0fc3ae439f3502458e71fca1700302d745788a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174456"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521773"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes Algorithm
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 算法是一种基于 Bayes ' 定理的分类算法，由[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供以便在预测建模中使用。 Naïve Bayes 名称中的 Naïve 一词派生自这样一个事实：该算法使用贝叶斯技术，但未将可能存在的依赖关系考虑在内。
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]Naive Bayes 算法是一种基于 Bayes ' 定理的分类算法，由提供 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 以便在预测建模中使用。 Naïve Bayes 名称中的 Naïve 一词派生自这样一个事实：该算法使用贝叶斯技术，但未将可能存在的依赖关系考虑在内。
 
  和其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法相比，此算法所需运算量较少，因而有助于快速生成挖掘模型，从而发现输入列与可预测列之间的关系。 可以使用该算法进行初始数据探测，然后根据该算法的结果使用其他运算量较大、更加精确的算法创建其他挖掘模型。
 
@@ -81,7 +80,7 @@ ms.locfileid: "78174456"
 
  有关如何创建针对数据挖掘模型的查询的信息，请参阅 [数据挖掘查询](data-mining-queries.md)。 有关如何使用针对 Naive Bayes 模型的查询的示例，请参阅 [Naive Bayes 模型查询示例](naive-bayes-model-query-examples.md)。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 -   支持使用预测模型标记语言 (PMML) 创建挖掘模型。
 

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8f61e0e04c5ca96da69098b58c38b1ef73eba206
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ac7db8cdf02b2d38004aadfe67d0e154fc5d450
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530838"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542479"
 ---
 # <a name="lesson-6-defining-calculations"></a>第 6 课：定义计算
   在此课程中，将了解如何定义计算（多维表达式 (MDX) 表达式或脚本）。 计算功能允许您定义计算成员、命名集并执行其他脚本命令，以扩展 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集的功能。 例如，您可以运行脚本命令来定义子多维数据集，然后为该子多维数据集中的单元分配计算。  

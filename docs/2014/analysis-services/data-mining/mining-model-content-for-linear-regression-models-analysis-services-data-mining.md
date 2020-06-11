@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 933b56aaa6e364ce55cac8832fc577acc061d510
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae4ee781a5c15e38676ca11c4385f271988ba615
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083641"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521574"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）
   本主题介绍使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法的模型特有的挖掘模型内容。 有关所有模型类型的挖掘模型内容的常规说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
@@ -138,7 +137,7 @@ ms.locfileid: "66083641"
  MSOLAP_NODE_SHORT_CAPTION  
  用于显示的标签。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法创建模型时，数据挖掘引擎创建决策树模型的特殊实例，并提供约束树的参数，将树约束为在单个节点中包含所有定型数据。 将标记所有连续输入并将其视为潜在回归量，但仅将适合数据的回归量作为回归量保留在最终模型中。 分析过程要么为每个回归量各生成一个回归公式，要么根本不生成任何回归公式。  
   
  你可以在“挖掘图例”中查看完整的回归公式，方法是在 [Microsoft 树查看器](browse-a-model-using-the-microsoft-tree-viewer.md)中单击“(全部)”节点。********  
@@ -180,7 +179,7 @@ ms.locfileid: "66083641"
 #### <a name="intercept"></a>截距  
  通常，回归公式中的“截距”(VALUETYPE = 11) 或“残差”指示当输入属性为 0 时可预测属性的值。**** 在大多数情况下都不可能发生这种情况，该情况可能产生不够直观的结果。  
   
- 例如，在根据年龄预测收入的模型中，了解 0 岁时的收入毫无用处。 在现实生活中，了解与平均值有关的人类行为通常更有用。 因此， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]会修改截距，以表示与平均值的关系中的每个回归量。  
+ 例如，在根据年龄预测收入的模型中，了解 0 岁时的收入毫无用处。 在现实生活中，了解与平均值有关的人类行为通常更有用。 因此，会 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 修改截距，以表示与平均值的关系中的每个回归量。  
   
  在挖掘模型内容中很难显示此调整，但是如果在 **Microsoft 树查看器** 的 **“挖掘图例”** 中查看完成后的公式，则可以很清楚地显示这一调整。 回归公式从点 0 移向表示平均值的点。 这样，可以根据当前数据呈现一个更直观的视图。  
   

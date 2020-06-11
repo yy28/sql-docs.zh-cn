@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 655ac93c-5c5c-4565-914b-915327f7d349
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3aa29cede2849158162aba27332d5fe7f8f5fae5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 136f81e374878a9af8241175f1519c87a266515f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082694"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520174"
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>使用 SQL Server 事件探查器监视数据挖掘（Analysis Services – 数据挖掘）
   如果您具有必要的权限，可以使用 SQL Server Profiler 监视作为请求发送到 SQL Server Analysis Services 实例的数据挖掘活动。 数据挖掘活动可以包括处理模型或结构、预测查询或内容查询或者创建新模型或结构。  
@@ -36,7 +35,7 @@ ms.locfileid: "66082694"
 |**进度报告开始**<br /><br /> **进度报告结束**|**34 - DataMiningProgress**|提供有关数据挖掘算法的进度的信息：例如，如果正在生成聚类分析模型，则此进度消息指出正在生成哪一个候选分类。|  
 |**查询开始**<br /><br /> **查询结束**|EXECUTESQL|包含正在执行的 Transact-SQL 查询的文本|  
 |**查询开始**<br /><br /> **查询结束**|**2-SQLQuery**|包含任意针对以系统表形式存在的架构行集的查询的文本。|  
-|**发现开始**<br /><br /> **DISCOVER End**|多个|包含封装在 XMLA 中的 DMX 函数调用或 DISCOVER 语句的文本。|  
+|**发现开始**<br /><br /> **DISCOVER End**|多种|包含封装在 XMLA 中的 DMX 函数调用或 DISCOVER 语句的文本。|  
 |**错误**|（无）|包含服务器发送到客户端的错误的文本。<br /><br /> 以“错误(数据挖掘):”**** 或“信息(数据挖掘):”**** 开头的错误消息专门在响应 DMX 请求时生成。 但只查看这些错误消息是不够的。 其他错误（例如由分析器生成的错误）虽然不具有此前缀，但也与数据挖掘有关。|  
   
  通过查看跟踪日志中的命令语句，还可以看到由客户端发送到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器的复杂语句（包括对系统存储过程的调用）的语法。 您可以借助该信息进行调试，或者也可以将有效语句用作创建新预测查询或模型的模板。 有关可以通过跟踪捕获的存储过程调用的一些示例，请参阅 [群集模型查询示例](clustering-model-query-examples.md)。  

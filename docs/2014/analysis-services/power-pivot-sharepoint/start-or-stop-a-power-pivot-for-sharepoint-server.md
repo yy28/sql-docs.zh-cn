@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 312afc0336405ca530f731ad4fec55a26a960e7a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 237f4dfaa615718f7fa4301b8d64cab0c45600b0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071051"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547759"
 ---
 # <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>启动或停止 PowerPivot for SharePoint 服务器
-  PowerPivot 系统服务和[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]实例在同一台本地应用程序服务器上一起运行，以支持 SharePoint 场中的协调请求和数据处理。  
+  PowerPivot 系统服务和 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 实例在同一台本地应用程序服务器上一起运行，以支持 SharePoint 场中的协调请求和数据处理。  
   
  本主题包含以下各节：  
   

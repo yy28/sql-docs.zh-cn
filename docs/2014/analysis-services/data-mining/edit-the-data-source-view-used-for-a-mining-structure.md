@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f790df70-ff21-42ce-b38c-a360e8e01bcd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ec3175fd9979b6b0a781492fb7ae0cde532db366
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f6a5db00e6b25741cb9367d0b4a42101ca06650
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084519"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522469"
 ---
 # <a name="edit-the-data-source-view-used-for-a-mining-structure"></a>编辑用于挖掘结构的数据源视图
   可以从数据挖掘设计器中打开数据源视图，以便对其进行修改。  

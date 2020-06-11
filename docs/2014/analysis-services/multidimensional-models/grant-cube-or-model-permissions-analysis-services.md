@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12eb2a2f6ea7501e03830724b24c5808375db7c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 491a863031af677a719db97503ce8aac57686fb6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075024"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546709"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>授予多维数据集或模型权限 (Analysis Services)
   多维数据集或表格模型是 Analysis Services 数据模型中的主要查询对象。 为进行即席数据浏览从 Excel 连接到多维或表格数据时，用户通常选择一个特定多维数据集或表格模型作为透视报表对象背后的数据结构，以此开始。 本主题说明了如何授予对多维数据集或表格数据的访问权限。  
@@ -58,7 +57,7 @@ ms.locfileid: "66075024"
   
 #### <a name="step-3-set-cube-permissions"></a>步骤 3：设置多维数据集权限  
   
-1.  在 "**多维数据集**" 窗格中，选择一个多维`Read`数据集，然后单击或**读/写**访问权限。  
+1.  在 "**多维数据集**" 窗格中，选择一个多维数据集，然后单击 `Read` 或**读/写**访问权限。  
   
      `Read`访问足以满足大多数操作。 “读/写”**** 仅用于回写，而非处理。 有关此功能的详细信息，请参阅 [Set Partition Writeback](set-partition-writeback.md) 。  
   
@@ -93,11 +92,11 @@ ms.locfileid: "66075024"
   
 2.  在 SSMS 中，导航到“角色”文件夹，右键单击一个现有角色。****  
   
-3.  选择 "**脚本角色" 作为** | "**创建到** | **文件**"。  
+3.  选择 "**脚本角色" 作为**"  |  **创建到**  |  **文件**"。  
   
 4.  以 .xmla 文件扩展名保存文件。 要测试脚本，删除当前角色，在 SSMS 中打开文件，按 F5 执行该脚本。  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
  你可以优化多维数据集权限来限制对单元或纬度数据的访问。 有关详细信息，请参阅[授予对维度数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-dimension-data-analysis-services.md) 和[授予单元数据的自定义访问权限 (Analysis Services)](grant-custom-access-to-cell-data-analysis-services.md)。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -1,5 +1,6 @@
 ---
 title: sp_droppublication （Transact-sql） |Microsoft Docs
+description: 删除发布及其关联的快照代理。 此存储过程在发布服务器的发布数据库上运行。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b52b37e6-4fec-40cf-abba-7dce4ff395fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3ef56f46696a2cb145804105d4d5f22fded6fe1f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 46faa94ed9a85433b9212856ea5d95f43fb01972
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829995"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807795"
 ---
 # <a name="sp_droppublication-transact-sql"></a>sp_droppublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ sp_droppublication [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **sp_droppublication**用于快照复制和事务复制。  
   
  **sp_droppublication**以递归方式删除与发布关联的所有项目，然后删除该发布本身。 如果发布包含一个或更多对它的订阅，则不能删除。 有关如何删除订阅的信息，请参阅[删除推送订阅](../../relational-databases/replication/delete-a-push-subscription.md)和[删除请求订阅](../../relational-databases/replication/delete-a-pull-subscription.md)。  

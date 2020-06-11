@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c2204472-c500-47a5-9afa-7ce2ca78b233
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fd2506e835f634937d5bf135ed7eec7cfa259b5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9aa0d177d7fc3da967c4143a71e0852928a6e81c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083096"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520813"
 ---
 # <a name="process-a-mining-model"></a>处理挖掘模型
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的数据挖掘设计器的“挖掘模型”选项卡中，您可以处理与挖掘结构关联的特定挖掘模型，也可以处理与结构关联的所有模型。  
@@ -38,13 +37,13 @@ ms.locfileid: "66083096"
   
      如果更改了挖掘结构，系统将提示您在处理模型之前重新部署结构。 单击 **“是”** 。  
   
-3.  在 "**处理挖掘模型- \<模型>** " 对话框中，单击 "**运行**"。  
+3.  在 "**处理挖掘模型 \<model> ** " 对话框中，单击 "**运行**"。  
   
      此时，将打开 **“处理进度”** 对话框，以显示模型处理的详细信息。  
   
 4.  成功处理完模型之后，在 **“处理进度”** 对话框中，单击 **“关闭”** 。  
   
-5.  在 "**处理挖掘模型- \<模型>** " 对话框中单击 "**关闭**"。  
+5.  在 "**处理挖掘模型 \<model> -** " 对话框中单击 "**关闭**"。  
   
  只有挖掘结构和所选挖掘模型被处理。  
   
@@ -54,13 +53,13 @@ ms.locfileid: "66083096"
   
 2.  如果更改了挖掘结构，系统将提示您在处理模型之前重新部署结构。 单击 **“是”** 。  
   
-3.  在 "**处理挖掘结构- \<结构>** " 对话框中，单击 "**运行**"。  
+3.  在 "**处理挖掘结构 \<structure> ** " 对话框中，单击 "**运行**"。  
   
 4.  此时，将打开 **“处理进度”** 对话框，以显示模型处理的详细信息。  
   
 5.  成功处理完模型之后，在 **“处理进度”** 对话框中，单击 **“关闭”** 。  
   
-6.  单击 "**处理\<模型>** " 对话框中的 "**关闭**"。  
+6.  在 "**处理 \<model> ** " 对话框中单击 "**关闭**"。  
   
  挖掘结构和所有关联的挖掘模型被处理。  
   

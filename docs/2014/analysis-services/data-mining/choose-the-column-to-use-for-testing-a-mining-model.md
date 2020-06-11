@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c6a8f23a-da21-4f31-9521-99460d624649
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 719e4dc2e934ac430ab4910612265d4b3532ed14
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f0d8a59ac40364a9e28c1bc52b49d04a785bd3a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085725"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524873"
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>选择用于测试挖掘模型的列
   您必须决定要访问哪个结果才能度量挖掘模型的准确性。 大多数数据挖掘模型都要求您在创建模型时至少选择一列用作可预测属性。 因此，在测试模型准确性时，您一般必须选择要测试的属性。  

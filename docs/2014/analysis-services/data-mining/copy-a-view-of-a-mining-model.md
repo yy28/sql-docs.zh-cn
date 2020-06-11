@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 768372db-e5b4-4990-b459-03d854fd9a6d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 84abbb855673183910099f0a34d70702d34da7fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b91ee04b375a1329eb5f215e65a607ced8415ca
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085601"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524003"
 ---
 # <a name="copy-a-view-of-a-mining-model"></a>复制挖掘模型的视图
   对于每种类型的挖掘模型， **中数据挖掘设计器的** “挖掘模型查看器” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 选项卡使用单独的查看器。 其中有数种查看器包含可以从中将内容复制到剪贴板的组件，并包含可以从中将内容粘贴到文档或图像处理软件的组件。 下列组件提供了这项功能：  

@@ -1,5 +1,6 @@
 ---
 title: 序列表达式（XQuery） |Microsoft Docs
+description: 了解用于构造、筛选和组合项序列的 XQuery 序列表达式。
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fa45029557cc217b89293fa7963bf29b39f373f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 72b8a066ce1480cd70f46658c8756b2548174b5b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946305"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529761"
 ---
 # <a name="sequence-expressions-xquery"></a>序列表达式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +100,7 @@ go
 ```  
   
 ### <a name="example-c"></a>示例 C  
- 下面的查询是针对 Contact 表中**xml**类型的 AdditionalContactInfo 列指定的。 此列存储附加联系信息，如一个或多个附加电话号码、寻呼机号码和地址。 \<TelephoneNumber>、 \<寻呼> 和其他节点可以出现在文档中的任何位置。 查询将构造一个序列，该序列包含\<上下文节点的所有 telephoneNumber> 子级，后跟\<页导航> 子级。 注意返回表达式 (`($a//act:telephoneNumber, $a//act:pager)`) 中逗号序列运算符的使用。  
+ 下面的查询是针对 Contact 表中**xml**类型的 AdditionalContactInfo 列指定的。 此列存储附加联系信息，如一个或多个附加电话号码、寻呼机号码和地址。 \<telephoneNumber>、 \<pager> 和其他节点可以出现在文档中的任何位置。 查询将构造一个序列，该序列包含 \<telephoneNumber> 上下文节点的所有子级，后跟 \<pager> 子元素。 注意返回表达式 (`($a//act:telephoneNumber, $a//act:pager)`) 中逗号序列运算符的使用。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
@@ -151,7 +152,7 @@ SELECT @x.query('/root/a')
 <a />  
 ```  
   
- 若要仅检索`a` attrA 属性 <> 元素，可以在谓词中指定一个筛选器。 生成的序列将只有一个 <`a`> 元素。  
+ 若要仅检索 `a` attrA 属性 <> 元素，可以在谓词中指定一个筛选器。 生成的序列将只有一个 <`a`> 元素。  
   
 ```  
 declare @x xml  
@@ -202,7 +203,7 @@ SELECT @x.query('
 <c>C under b</c>  
 ```  
   
- 下面的示例应用谓词筛选器。 表达式查找 <`a`> 和> <`b`包含元素 <`c`> 的元素。  
+ 下面的示例应用谓词筛选器。 表达式查找 <`a`> 和 `b`> <包含元素 <> 的元素 `c` 。  
   
 ```  
 declare @x xml  

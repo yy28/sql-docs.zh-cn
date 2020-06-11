@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a249a83aba62c7881be024caa3931cb5ad07204
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7154ce0ad66346634225734fe829c36e7bf3ad58
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083286"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520887"
 ---
 # <a name="neural-network-model-query-examples"></a>神经网络模型查询示例
   在对数据挖掘模型创建查询时，可以创建内容查询，也可以创建预测查询。内容查询提供有关分析时发现的模式的详细信息，预测查询使用模型中的模式来对新数据进行预测。 例如，神经网络模型的内容查询可能会检索模型元数据，如隐藏层数。 而预测查询会基于输入提供分类建议，还可以选择是否提供每个分类的概率。  
@@ -181,7 +180,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
 ###  <a name="sample-query-5-creating-a-singleton-prediction"></a><a name="bkmk_Query5"></a> 示例查询 5：创建单独预测  
  对神经网络模型生成预测查询的最简单方法是使用预测查询生成器，在 **和** 的数据挖掘设计器的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “挖掘预测” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]选项卡中都提供了该生成器。 您可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络查看器中浏览模型来筛选感兴趣的属性并查看趋势，然后切换到 **“挖掘预测”** 选项卡来创建一个查询并预测那些趋势的新值。  
   
- 例如，您可以浏览呼叫中心模型来查看订单量和其他属性之间的相关性。 为此，请在查看器中打开模型，然后为 "**输入**" 选择** \<"所有>**"。  接下来，为 **“输出”** 选择 **“订单数”**。 对于 **“值 1”**，请选择表示最多订单的范围，对于 **“值 2”**，请选择表示最少订单的范围。 然后您将对模型将其与订单量关联的所有属性一目了然。  
+ 例如，您可以浏览呼叫中心模型来查看订单量和其他属性之间的相关性。 为此，请在查看器中打开模型，然后为 "**输入**" 选择 **\<All>** 。  接下来，为 **“输出”** 选择 **“订单数”**。 对于 **“值 1”**，请选择表示最多订单的范围，对于 **“值 2”**，请选择表示最少订单的范围。 然后您将对模型将其与订单量关联的所有属性一目了然。  
   
  通过浏览查看器中的结果，您将发现一周中的某些天订单量较少，而操作员数的增加似乎与较高的销售额相关联。 然后您可以使用针对模型的预测查询来测试假设情况，询问在订单量少的日子增加级别 2 操作员的人数是否能增加订单量。 为此，请创建如下所示的查询：  
   

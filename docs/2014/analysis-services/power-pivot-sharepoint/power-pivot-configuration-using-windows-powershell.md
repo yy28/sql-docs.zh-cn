@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4d83e53e-04f1-417d-9039-d9e81ae0483d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9282fce8e0004495ae8c10b0b3f75fec205d6b34
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 83b42da3e676a291bb021c02ee52e9a810207397
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782809"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535099"
 ---
 # <a name="powerpivot-configuration-using-windows-powershell"></a>使用 Windows PowerShell 配置 PowerPivot
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供 Windows PowerShell cmdlet，您可以使用这些 cmdlet 配置安装的 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]。 使用 PowerShell 完全配置已安装的软件需要使用 SharePoint cmdlet 和 PowerPivot for SharePoint cmdlet。 大多数配置可使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工具之一来完成。 有关这些工具的详细信息，请参阅[PowerPivot 配置工具](power-pivot-configuration-tools.md)。  
@@ -27,7 +26,7 @@ ms.locfileid: "72782809"
  可以生成 Windows PowerShell 脚本 (.ps1) 文件来自动执行配置任务。 如果您需要可以在任何服务器上运行的脚本化的安装和配置步骤，则推荐使用上述做法。 您可能需要这样一个脚本，将其纳入出现硬件故障时用来重新构建服务器的灾难恢复计划。  
   
 ## <a name="view-a-list-of-the-powerpivot-cmdlets-on-a-server"></a>查看服务器上 PowerPivot Cmdlet 的列表  
- 若要查看[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cmdlet 的内容和示例，请参阅[PowerShell 参考了解 PowerPivot for SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)。  
+ 若要查看 cmdlet 的内容和示例 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ，请参阅[PowerShell 参考了解 PowerPivot for SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)。  
   
  使用 PowerShell 查看 PowerPivot cmdlet 列表：  
   
@@ -45,7 +44,7 @@ ms.locfileid: "72782809"
   
     -   17 个 cmdlet 以及在 SharePoint 模式下配置的 SQL Server 2012 Analysis Services 服务器，以及 SharePoint 2010。  
   
-     如果列表中未返回任何命令或者您看到类似于 "`get-help could not find *powerpivot* in a help file in this session.`" 的错误消息，请参阅本主题的下一节，了解有关如何在服务器上启用 PowerPivot cmdlet 的说明。  
+     如果列表中未返回任何命令或者您看到类似于 "" 的错误消息 `get-help could not find *powerpivot* in a help file in this session.` ，请参阅本主题的下一节，了解有关如何在服务器上启用 PowerPivot cmdlet 的说明。  
   
      所有 cmdlet 都有联机帮助。 下面的示例显示如何查看 `New-PowerPivotServiceApplication` cmdlet 的联机帮助：  
   
@@ -78,7 +77,7 @@ ms.locfileid: "72782809"
     Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-4.  关闭“服务” 窗口。 使用 **“以管理员身份运行”** 选项重新打开该窗口。  
+4.  关闭窗口。 使用 **“以管理员身份运行”** 选项重新打开该窗口。  
   
 ## <a name="related-content"></a>相关内容  
  [在管理中心中管理和配置 PowerPivot 服务器](power-pivot-server-administration-and-configuration-in-central-administration.md)  

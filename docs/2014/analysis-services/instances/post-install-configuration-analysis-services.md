@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6a339ee307ed7a10f2ff7d2b1ce51d2e2177ee37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d5299fb250858a0c75ea3f80e254bd143e49df2b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079659"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543789"
 ---
 # <a name="post-install-configuration-analysis-services"></a>安装后配置 (Analysis Services)
   安装 Analysis Services 后，需要进行进一步配置以使服务器正常运行并可供常规使用。 本节介绍完成安装后的附加任务。 根据连接要求，还可能需要配置身份验证（请参阅 [连接到 Analysis Services](connect-to-analysis-services.md)）。  

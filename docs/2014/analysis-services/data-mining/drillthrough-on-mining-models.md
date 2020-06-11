@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b955ade0251f43d6a482abe346c286c6bafd0ce7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8cb5e932e2121efb9bd19375dfd2ff329c001812
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084599"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522495"
 ---
 # <a name="drillthrough-on-mining-models"></a>对挖掘模型的钻取功能
   “钻取”** 意味着能够查询挖掘模型或挖掘结构并且获取在模型中未公开的详细数据。  
@@ -48,7 +47,7 @@ ms.locfileid: "66084599"
 |Microsoft Naïve Bayes 算法|不支持。<br /><br /> 这些算法不为内容中的特定节点分配事例。|  
 |Microsoft 神经网络算法|不支持。<br /><br /> 这些算法不为内容中的特定节点分配事例。|  
 |Microsoft 逻辑回归算法|不支持。<br /><br /> 这些算法不为内容中的特定节点分配事例。|  
-|Microsoft 线性回归算法|支持。<br /><br /> 但是，由于该模型创建一个节点， `All`因此，钻取将返回该模型的所有定型事例。 如果定型集非常大，则加载结果可能会需要很长时间。|  
+|Microsoft 线性回归算法|支持。<br /><br /> 但是，由于该模型创建一个节点，因此 `All` ，钻取将返回该模型的所有定型事例。 如果定型集非常大，则加载结果可能会需要很长时间。|  
 |Microsoft 时序算法|支持。<br /><br /> 但是，不能通过使用数据挖掘设计器的 **“挖掘模型查看器”** 来钻取到结构或事例数据， 而必须创建一个 DMX 查询。<br /><br /> 同样，不能钻取到特定节点，也不能编写一个 DMX 查询来检索时序模型内特定节点中的事例。 可以通过使用其他条件（如日期或属性值）来从模型或结构中检索事例数据。<br /><br /> 如果希望查看由 Microsoft 时序算法创建的 ARTXP 和 ARIMA 节点的详细信息，使用 [Microsoft 一般内容树查看器（数据挖掘）](../microsoft-generic-content-tree-viewer-data-mining.md)可能简单一些。|  
   
 ## <a name="related-tasks"></a>Related Tasks  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e57080ba-ce96-40f8-bca7-6701d1725b3c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 161e2cb9dd9eeae4f2ed369b77ab0799ae12a33a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4931c3aff70758113b6a0250319d6dec722d8650
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081995"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528753"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>定义半累加行为（商业智能向导）
   可以使用“定义半累加性行为”**** 页启用或禁用针对度量值的半累加行为。 半累加行为确定多维数据集所包含的度量值在一定时间维度内如何聚合。  
@@ -29,7 +28,7 @@ ms.locfileid: "66081995"
  **关闭半累加性行为**  
  在多维数据集所包含的所有度量值中禁用半累加性行为。  
   
- **向导检测到包含半\<累加性成员的维度名称> 帐户维度。服务器将根据为每种帐户类型指定的半累加性行为聚合此维度的成员。**  
+ **向导检测到 \<dimension name> 包含半累加性成员的帐户维度。服务器将根据为每种帐户类型指定的半累加性行为聚合此维度的成员。**  
  对包含半累加性成员的帐户维度启用半累加性行为。 选择此选项将把引用该帐户维度的度量值组中所有度量值的聚合函数设置为 `ByAccount`。  
   
  有关帐户维度的详细信息，请参阅 [创建父子类型维度的财务帐户](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)。  
@@ -37,13 +36,13 @@ ms.locfileid: "66081995"
  **为各个成员定义半累加性行为**  
  为特定度量值启用半累加性行为，并指定半累加性聚合函数。 该聚合函数将应用于包含该度量值的度量值组所引用的所有维度。  
   
- **度量值组**  
+ **措施**  
  显示多维数据集所包含的度量值的名称。  
   
  **半累加性函数**  
  为所选度量值选择聚合函数。 下表列出了可用的聚合函数：  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**AverageOfChildren**|通过返回度量值子成员的平均值进行聚合。|  
 |`ByAccount`|通过与帐户维度中属性的指定帐户类型关联的聚合函数进行聚合。|  

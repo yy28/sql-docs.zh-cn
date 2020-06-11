@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e075e2de-11cc-4f71-9603-0b161bca8a24
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9c2f11ecbdf90aeeb5e0e5a3ef097152898042d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f41ffd3091ccf38498f1484d9a1bf5a908e50e39
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086433"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525923"
 ---
 # <a name="data-mining-client-for-excel-sql-server-data-mining-add-ins"></a>Excel 数据挖掘客户端（SQL Server 数据挖掘外接程序）
   Excel 数据挖掘客户端是一组工具，通过这些工具，可执行常用的数据挖掘任务，包括从数据清理到建模和预测查询。 可使用 Excel 表或范围中的数据，也可访问外部数据源。  
@@ -140,15 +139,15 @@ ms.locfileid: "66086433"
  如果具有所需的权限，您可以在不离开 Excel 的情况下删除、修改、重命名或处理现有挖掘模型和结构。  
   
  [&#40;Excel&#41;的数据挖掘客户端跟踪](trace-data-mining-client-for-excel.md)  
- 单击 "**跟踪**" 可查看 Excel 客户端与[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]服务器之间的交互的持续捕获。 所有活动都作为 DMX 或 XMLA 语句存储，这样便于排除数据挖掘会话中的故障，也便于保存信息以备日后使用。  
+ 单击 "**跟踪**" 可查看 Excel 客户端与服务器之间的交互的持续捕获 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 所有活动都作为 DMX 或 XMLA 语句存储，这样便于排除数据挖掘会话中的故障，也便于保存信息以备日后使用。  
   
  [连接到数据挖掘服务器](connect-to-a-data-mining-server.md)  
  若要将 Excel 用作数据挖掘客户端，您必须与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例建立连接。 通过该连接可以访问 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 引擎。 如果有相应权限，您还可以通过该连接存储已发现的所有模式，并修改现有数据挖掘对象。  
   
- "**连接**" 工具栏提供了用于管理与实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]连接的向导。 为了使用数据挖掘工具和算法，必须定义与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例的连接。 您可以在安装外接程序时创建连接，也可以在以后添加连接。  
+ "**连接**" 工具栏提供了用于管理与实例的连接的向导 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 为了使用数据挖掘工具和算法，必须定义与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例的连接。 您可以在安装外接程序时创建连接，也可以在以后添加连接。  
   
  **入门**  
- 单击 "**入门**" 按钮启动配置向导，该向导将引导您完成创建实例连接的过程[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，并获取执行数据挖掘所需的权限。  
+ 单击 "**入门**" 按钮启动配置向导，该向导将引导您完成创建实例连接的过程 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，并获取执行数据挖掘所需的权限。  
   
  **帮助**  
  "**帮助**" 下拉菜单提供了指向联机帮助、网站和配置向导的链接，可帮助您完成设置和启动数据挖掘。  

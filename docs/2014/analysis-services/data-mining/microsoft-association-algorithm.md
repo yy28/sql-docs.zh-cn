@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 44fd6a97cd355ab9bcdd5481fe4ebaa5d13d17c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 237618a07f7a6f541257ed0ad18fc2967723b93c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174720"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522107"
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft 关联算法
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法是指 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的关联算法，对建议引擎非常有用。 建议引擎根据客户已购买的项或者客户已对其表现出兴趣的项向他们推荐产品。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法对市场篮分析也非常有用。 有关市场篮分析的示例，请参阅数据挖掘教程中的[第3课：生成市场篮方案 &#40;中级数据挖掘教程&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) 。
@@ -78,7 +77,7 @@ ms.locfileid: "78174720"
  有关如何创建针对数据挖掘模型的查询的信息，请参阅 [数据挖掘查询](data-mining-queries.md)。
 
 ## <a name="performance"></a>性能
- 创建项集和对关联进行计数的过程可能会非常耗时。 尽管[!INCLUDE[msCoName](../../includes/msconame-md.md)]关联规则算法使用优化技术来节省空间并使处理速度更快，但您应知道在下列情况下可能会发生性能问题：
+ 创建项集和对关联进行计数的过程可能会非常耗时。 尽管 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法使用优化技术来节省空间并使处理速度更快，但您应知道在下列情况下可能会发生性能问题：
 
 -   数据集很大，包含许多单个项。
 
@@ -86,7 +85,7 @@ ms.locfileid: "78174720"
 
  若要尽量缩短处理时间，并降低项集的复杂度，可以在分析数据之前尝试按照类别对关联项进行分组。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 -   不支持使用预测模型标记语言 (PMML) 创建挖掘模型。
 

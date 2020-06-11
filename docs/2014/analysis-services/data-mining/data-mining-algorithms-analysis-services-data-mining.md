@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 082241af377c8817c3adbc394a46f1ebc7d6a4e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81d86ba50c76c167e0f6d17cd0dee7e00e6ac938
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085134"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523273"
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>数据挖掘算法（Analysis Services – 数据挖掘）
   *数据挖掘算法*是从数据创建数据挖掘模型的一组试探法和计算。 为了创建模型，算法将首先分析您提供的数据，并查找特定类型的模式和趋势。 算法使用此分析的结果来定义用于创建挖掘模型的最佳参数。 然后，这些参数应用于整个数据集，以便提取可行模式和详细统计信息。  
@@ -41,7 +40,7 @@ ms.locfileid: "66085134"
   
 -   说明在事务中如何将产品分组到一起的一组规则，以及一起购买产品的概率。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供了多个用于数据挖掘解决方案的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]算法。 这些算法是在数据挖掘中使用的一些最流行方法的实现方式。 通过使用提供的 API 或者使用 SQL Server Integration Services 中的数据挖掘组件，所有 Microsoft 数据挖掘算法都是可以自定义且完全可编程的。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了多个用于数据挖掘解决方案的算法。 这些算法是在数据挖掘中使用的一些最流行方法的实现方式。 通过使用提供的 API 或者使用 SQL Server Integration Services 中的数据挖掘组件，所有 Microsoft 数据挖掘算法都是可以自定义且完全可编程的。  
   
  您还可以使用符合 OLE DB for Data Mining 规范的第三方算法，或者开发可注册为服务、然后在 SQL Server 数据挖掘框架中使用的自定义算法。  
   

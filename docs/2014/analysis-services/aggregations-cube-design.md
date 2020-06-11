@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0e20da00-519e-40bb-a7b7-6233a0ec9a06
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 35c862d89d5f98bee968f0e980c784e35c43e74d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ef1a6713ef90e04a2d507913a40fd5fd5294361
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062659"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528143"
 ---
 # <a name="aggregations-cube-design"></a>聚合（多维数据集设计）
   可以使用多维数据集设计器中的 **“聚合”** 选项卡创建和修改聚合设计。  

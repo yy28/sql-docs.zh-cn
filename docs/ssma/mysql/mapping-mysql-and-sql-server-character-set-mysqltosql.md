@@ -1,5 +1,6 @@
 ---
 title: 映射 MySQL 和 SQL Server 字符集（MySQLToSQL） |Microsoft Docs
+description: 了解如何为 mysql 字符数据类型、表达式和文本指定字符集，以便在 SSMA for MySQL 的字符数据类型转换期间使用。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 32d5e23579b99b323da870d2608b2d197520f99f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b52f18f8a7247faae24f266c6d8dba3d6c2ea4c
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67909022"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293634"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>映射 MySQL 和 SQL Server 字符集 (MySQLToSQL)
 可以为 MySQL 字符数据类型、表达式和文本指定字符集（字符集）。  

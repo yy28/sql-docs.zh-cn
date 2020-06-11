@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 370e368843fa1e9584cc341397853fcdad26922a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e18298e152089f361faa839228415909133663f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078964"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543449"
 ---
 # <a name="lesson-2-add-data"></a>第 2 课：添加数据
   在本课程中，您将使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中的“表导入向导”连接到 AdventureWorksDW SQL 数据库，选择数据，预览并筛选数据，然后将数据导入到模型工作区中。  
@@ -39,7 +38,7 @@ ms.locfileid: "66078964"
   
 2.  在“表导入向导”**** 的“关系数据库”**** 下，单击“Microsoft SQL Server”****，然后单击“下一步”****。  
   
-3.  在 "**连接到 Microsoft SQL Server 数据库**" 页的 "**友好连接名称**" 中`Adventure Works DB from SQL`，键入。  
+3.  在 "**连接到 Microsoft SQL Server 数据库**" 页的 "**友好连接名称**" 中，键入 `Adventure Works DB from SQL` 。  
   
 4.  在“服务器名称”**** 中，键入安装了 AdventureWorksDW 数据库的服务器的名称。  
   
@@ -60,9 +59,9 @@ ms.locfileid: "66078964"
   
     |源名称|友好名称|  
     |-----------------|-------------------|  
-    |DimDate|日期|  
+    |DimDate|Date|  
     |DimGeography|地理位置|  
-    |DimProduct|Products|  
+    |DimProduct|产品|  
     |DimProductCategory|产品类别|  
     |DimProductSubcategory|Product Subcategory|  
     |FactInternetSales|Internet Sales|  
@@ -95,7 +94,7 @@ ms.locfileid: "66078964"
   
 4.  通过针对每个表中的以下各列清除复选框，筛选其余的表：  
   
-    |日期|  
+    |Date|  
     |----------|  
     |**DateKey**|  
     |**SpanishDayNameOfWeek**|  
@@ -109,7 +108,7 @@ ms.locfileid: "66078964"
     |**FrenchCountryRegionName**|  
     |**IpAddressLocator**|  
   
-    |Products|  
+    |产品|  
     |-------------|  
     |**SpanishProductName**|  
     |**FrenchProductName**|  
@@ -152,7 +151,7 @@ ms.locfileid: "66078964"
     > [!TIP]  
     >  若要查看在导入的表之间自动创建的关系，请在“数据准备”**** 行上单击“详细信息”****。  
   
-2.  单击“**关闭**”。  
+2.  单击“关闭” 。  
   
      该向导将关闭并且模型设计器将可见。 每个表都已作为新的选项卡添加到模型设计器中。  
   
@@ -163,7 +162,7 @@ ms.locfileid: "66078964"
   
 -   在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，单击“文件”**** 菜单，然后单击“全部保存”****。  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
  若要继续学习本教程，请转到下一课： [第 3 课：重命名列](rename-columns.md)。  
   
   

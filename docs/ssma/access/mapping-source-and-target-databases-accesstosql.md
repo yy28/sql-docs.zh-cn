@@ -1,5 +1,6 @@
 ---
 title: 映射源和目标数据库（AccessToSQL） |Microsoft Docs
+description: 了解如何指定用于迁移到 SQL Server 或 Azure SQL 数据库的目标数据库，包括多个数据库的多个数据库。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 192db2e6c074305ca258d76652351175c8a82751
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 894dec18ab2d487eca22a65542e1d77d6c2e2f77
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907148"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293742"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>映射源和目标数据库（AccessToSQL）
-当连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 时，需要为迁移指定目标数据库。 如果有多个访问数据库，则可以将它们映射[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到多个数据库（或架构），或映射到连接 SQL Azure 数据库下的多个架构。  
+当连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 时，需要为迁移指定目标数据库。 如果有多个访问数据库，则可以将它们映射到多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库（或架构），或映射到连接 SQL Azure 数据库下的多个架构。  
   
 ## <a name="sql-server-or-sql-azure-database-schemas"></a>SQL Server 或 SQL Azure 数据库架构  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库使用架构的概念将数据库中的对象分为多个逻辑组。 例如，库数据库可以使用三个名为**书籍**、**音频**和**视频**的架构来分隔书籍、音频和视频对象。 默认情况下，access 数据库将映射到**master**数据库， **dbo**将中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 dbo 架构映射到 SQL Azure 中的连接数据库和**dbo**架构。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库使用架构的概念将数据库中的对象分为多个逻辑组。 例如，库数据库可以使用三个名为**书籍**、**音频**和**视频**的架构来分隔书籍、音频和视频对象。 默认情况下，access 数据库将映射到**master**数据库，将中的**dbo**架构映射到 SQL Azure 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接数据库和**dbo**架构。  
   
-除非自定义每个 Access 数据库和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库和架构之间的映射，否则，SSMA 会将与 Access 数据库相关联的所有架构和数据迁移到映射的默认数据库。  
+除非自定义每个 Access 数据库和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库和架构之间的映射，否则，SSMA 会将与 Access 数据库相关联的所有架构和数据迁移到映射的默认数据库。  
   
 ## <a name="modifying-the-target-database-and-schema"></a>修改目标数据库和架构  
-SSMA 使你可以将每个访问[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库映射到或 SQL Azure 数据库和架构。 下面的过程介绍如何自定义每个数据库的映射。  
+SSMA 使你可以将每个访问数据库映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 数据库和架构。 下面的过程介绍如何自定义每个数据库的映射。  
   
 **修改目标数据库和架构**  
   
@@ -53,20 +54,20 @@ SSMA 使你可以将每个访问[!INCLUDE[ssNoVersion](../../includes/ssnoversio
   
 -   映射到 SQL Server  
   
-您可以将源数据库映射到任何目标数据库。 默认情况下，源数据库映射到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 SSMA 连接的目标数据库。 如果要映射的目标数据库在上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不存在，则系统会提示您提供消息 **"目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据中不存在数据库和/或架构。它将在同步过程中创建。是否要继续？ "** 单击“是”。 同样，你可以将架构映射到目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库下将在同步过程中创建的非现有架构。  
+您可以将源数据库映射到任何目标数据库。 默认情况下，源数据库映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 SSMA 连接的目标数据库。 如果要映射的目标数据库在上不存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则系统会提示您提供消息 **"目标元数据中不存在数据库和/或架构 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。它将在同步过程中创建。是否要继续？ "** 单击“是”。 同样，你可以将架构映射到目标数据库下将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 同步过程中创建的非现有架构。  
   
 -   映射到 SQL Azure  
   
-您可以将源数据库映射到连接目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库或连接的目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库中的任何架构。 如果将源架构映射到已连接目标数据库下的任何非现有架构，则系统会提示您输入消息 **"目标元数据中不存在架构"。它将在同步过程中创建。是否要继续？"** 单击" 是 "。  
+您可以将源数据库映射到连接目标数据库 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或连接的目标数据库中的任何架构 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果将源架构映射到已连接目标数据库下的任何非现有架构，则系统会提示您输入消息 **"目标元数据中不存在架构"。它将在同步过程中创建。是否要继续？"** 单击" 是 "。  
   
 ## <a name="reverting-to-your-initial-database-and-schema"></a>恢复到初始数据库和架构  
-如果在 Access 数据库和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库与架构之间自定义映射，则可以将映射恢复到您连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 时所指定的数据库。  
+如果在 Access 数据库和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 数据库与架构之间自定义映射，则可以将映射恢复到您连接到或 SQL Azure 时所指定的数据库 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 **重置为默认数据库和架构**  
   
 1.  在 "架构映射" 选项卡下，选择任意行，然后单击 "**重置为默认值**" 以还原为默认数据库和架构。  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
 迁移过程的下一步是[转换数据库对象](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>另请参阅  

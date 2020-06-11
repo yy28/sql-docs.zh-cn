@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 816183a7-d2f7-4e14-8e5b-2a4c1798fbc1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0da9467d293c0081309accd99fb46d7589fb4b8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2e18917b56d40f8b813ba10083cc1b408e51a98
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736571"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545645"
 ---
 # <a name="xmla-concepts"></a>XMLA 概念
-  XML for Analysis (XMLA) 开放标准支持对位于万维网上的数据源的数据访问。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]按 xmla 1.1 规范实现[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] xmla。  
+  XML for Analysis (XMLA) 开放标准支持对位于万维网上的数据源的数据访问。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 按 xmla 1.1 规范实现 xmla。  
   
- XML for Analysis (XMLA) 是一种基于简单对象访问协议 (SOAP) 的 XML 协议，它是专为对驻留在 Web 上的任何标准多维数据源的通用数据访问而设计的。 XMLA 还无需部署向组件对象模型（COM）或[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 接口公开的客户端组件。 如果与服务器之间的往返通信要占用大量时间和资源，并且对数据源的有状态连接会限制服务器上的用户连接数，则 XMLA 会针对 Internet 进行优化。  
+ XML for Analysis (XMLA) 是一种基于简单对象访问协议 (SOAP) 的 XML 协议，它是专为对驻留在 Web 上的任何标准多维数据源的通用数据访问而设计的。 XMLA 还无需部署向组件对象模型（COM）或 .NET Framework 接口公开的客户端组件 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。 如果与服务器之间的往返通信要占用大量时间和资源，并且对数据源的有状态连接会限制服务器上的用户连接数，则 XMLA 会针对 Internet 进行优化。  
   
- XMLA 是[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的本机协议，用于客户端应用程序和实例之间的所有交互[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 完全支持 XML for Analysis 1.1，并且还提供了支持元数据管理、会话管理和锁定功能的扩展。 与 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例进行通信时，分析管理对象 (AMO) 和 ADOMD.NET 都使用 XMLA 协议。  
+ XMLA 是的本机协议 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ，用于客户端应用程序和实例之间的所有交互 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 完全支持 XML for Analysis 1.1，并且还提供了支持元数据管理、会话管理和锁定功能的扩展。 与 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例进行通信时，分析管理对象 (AMO) 和 ADOMD.NET 都使用 XMLA 协议。  
   
 ## <a name="handling-xmla-communications"></a>处理 XMLA 通信  
  XMLA 开放标准介绍了以下两种常规访问方法：`Discover` 和 `Execute`。 这些方法使用 XML 支持的松散耦合客户端和服务器体系结构处理有关 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例的传入和传出信息。  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3a0b4dc9-5b64-4be1-aa5f-6ff26f43dbf8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 451efaa1bb6968c2e2f43e5fad01646e507ae8ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8616afd3049a73e808bb014821de14e1d36c6f17
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082873"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520323"
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>测试和验证任务和操作指南（数据挖掘）
   可以使用 **中的数据挖掘设计器的** “挖掘准确性图表” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 选项卡，比较挖掘结构中的挖掘模型的预测准确性。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 68e1934a-e147-4d53-b122-fa15e3fd5485
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12aad369e9a8614041bccaa08ee507d723c6c51f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf196f1c026fe8878f572a6797ba2e738ba5b782
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083567"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521269"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>顺序分析和聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）
   本主题介绍使用 Microsoft 顺序分析和聚类分析算法的模型特有的挖掘模型内容。 有关与适用于所有模型类型的挖掘模型内容相关的常规术语和统计术语的说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
@@ -154,7 +153,7 @@ ms.locfileid: "66083567"
 ###  <a name="node_distribution-table"></a><a name="bkmk_NODEDIST"></a> NODE_DISTRIBUTION 表  
  NODE_DISTRIBUTION 表提供特定分类的转换和序列的概率和支持详细信息。  
   
- 将始终向转换表添加一行，表示可能的 `Missing` 值。 有关值的`Missing`含义以及它如何影响计算的信息，请参阅[Analysis Services 数据挖掘&#41;&#40;缺少值](missing-values-analysis-services-data-mining.md)。  
+ 将始终向转换表添加一行，表示可能的 `Missing` 值。 有关 `Missing` 值的含义以及它如何影响计算的信息，请参阅[Analysis Services 数据挖掘&#41;&#40;缺少值](missing-values-analysis-services-data-mining.md)。  
   
  支持和概率的计算各不相同，这取决于计算是应用于定型事例还是完成的模型。 其原因在于默认聚类分析方法 Expectation Maximization (EM) 假定任何事例均可以属于多个分类。 计算模型中事例的支持时，可以使用原始计数和原始概率。 但是，分类中任何特定序列的概率必须通过所有可能的序列和分类组合之和进行权衡。  
   
@@ -230,7 +229,7 @@ ORDER BY Count(*) DESC
   
  下表显示了 NODE_DISTRIBUTION 表的结果以及图形查看器中所显示的舍入概率值。  
   
-|Products|支持（NODE_DISTRIBUTION 表）|概率（NODE_DISTRIBUTION 表）|概率（源自图形）|  
+|产品|支持（NODE_DISTRIBUTION 表）|概率（NODE_DISTRIBUTION 表）|概率（源自图形）|  
 |-------------|------------------------------------------|------------------------------------------------|--------------------------------|  
 |Missing|48.447887|0.138028169|（未显示）|  
 |Cycling Cap|10.876056|0.030985915|0.03|  

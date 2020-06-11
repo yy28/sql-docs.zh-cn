@@ -1,24 +1,29 @@
 ---
 title: SSMA for DB2 中的新增功能（DB2ToSQL） |Microsoft Docs
+description: 了解每个版本的 DB2 （SSMA）对 SQL Server 迁移助手（DB2ToSQL）的更改。
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/27/2020
+ms.date: 6/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 3b3fca46fb5e30cfa446e0ca9de8dc0324d2f7f8
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 73a0afb17e8c44aea6cdb25d590cedeecdc274cf
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220084"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293974"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 中的新增功能（DB2ToSQL）
 
 本文列出了每个版本中的 DB2 更改 SQL Server 迁移助手（SSMA）。
+
+## <a name="ssma-v810"></a>SSMA 8.10
+
+SSMA for DB2 的 v2.0 版本解决了外键发现中的回归，并包含了极小的性能改进。
 
 ## <a name="ssma-v89"></a>SSMA v 8。9
 
@@ -52,7 +57,7 @@ SSMA for DB2 的 v4.0 版本包括全新的 DB2 语法分析器，以及图形�
 * 改进了 `COUNT` MQ 表中函数的转换。
 * 语句的转换 `SAVEPOINT` 。
 * 转换用于模拟 `NULL` 子句中值的 DB2's 行为 `ORDER BY` 。
-* 分析对关联 RESULT SET 语句的支持。
+* 分析语句支持 `ASSOCIATE RESULT SET` 。
 
 > [!IMPORTANT]
 > 对于 SSMA 的8.5 和更高版本，.NET 4.7.2 是必备组件。 如果需要安装此版本，可以从[此处](https://dotnet.microsoft.com/download/dotnet-framework/net472)下载运行时文件。

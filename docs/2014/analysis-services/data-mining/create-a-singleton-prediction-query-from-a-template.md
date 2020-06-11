@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 15dcb2c8241b8b4cf7cdb2780ed532e863cf52ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54523b9c2302deafb0faa9c23708224470bd69b8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085493"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523753"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>通过模板创建单独预测查询
   当您具有要用于预测的模型，但不希望将该模型映射到外部输入数据集或进行大容量预测时，单独查询很有用。 对于单独查询，您可以向模型提供一个或多个值，并且立即会看到预测值。  
@@ -47,7 +46,7 @@ AS [t]
   
 3.  在 **“连接到 Analysis Services”** 对话框中，键入服务器的名称，该服务器具有包含要查询的挖掘模型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
   
-4.  单击“连接”  。  
+4.  单击“连接”。  
   
 5.  模板在指定的数据库中打开，同时打开的还有挖掘模型对象浏览器，其中包含数据挖掘函数和数据挖掘结构以及相关模型的列表。  
   
@@ -69,20 +68,20 @@ AS [t]
   
 5.  在 **“挖掘模型”** 行，键入显示在 **“对象资源管理器”** 中的挖掘模型列表中的挖掘模型的名称。  
   
-     对于本主题开头部分显示的示例代码，"**挖掘模型**" 行设置为名称`TM_Decision_Tree`。  
+     对于本主题开头部分显示的示例代码，"**挖掘模型**" 行设置为名称 `TM_Decision_Tree` 。  
   
 6.  在 **“值”** 行中，键入您要对其进行预测的新数据值。  
   
-     对于本主题开头部分显示的示例代码，"**值**" 行设置为`2` ，以根据家里子女数预测自行车购买行为。  
+     对于本主题开头部分显示的示例代码，"**值**" 行设置为， `2` 以根据家里子女数预测自行车购买行为。  
   
 7.  在 **“列”** 行中，键入新数据映射到的挖掘模型中列的名称。  
   
-     对于本主题开头部分显示的示例代码，"**列**" 行设置为`Number Children at Home`。  
+     对于本主题开头部分显示的示例代码，"**列**" 行设置为 `Number Children at Home` 。  
   
     > [!NOTE]  
     >  使用 **“指定模板参数的值”** 对话框时，不必将列名称用方括号括起来。 括号会自动添加。  
   
-8.  将**输入别名**保留为`t`。  
+8.  将**输入别名**保留为 `t` 。  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -90,7 +89,7 @@ AS [t]
   
      对于本主题开头部分显示的示例代码，其他查询条件设置为 `'45' as [Age]`。  
   
-11. 单击“执行” ****。  
+11. 单击“执行”  。  
   
 ## <a name="see-also"></a>另请参阅  
  [创建预测（数据挖掘基础教程）](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  

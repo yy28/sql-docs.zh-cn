@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e107dde8a3f811cbc1a24533705863c954dd85c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b5979ed2e4733609a504d852b5a0bcc8d7660b87
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112153"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523175"
 ---
 # <a name="data-mining-projects"></a>数据挖掘项目
   数据挖掘项目是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 解决方案的一部分。 在设计过程中，在此项目中创建的对象作为工作区数据库的一部分可用于测试和查询。 当您希望用户能够查询或浏览此项目中的对象时，必须将此项目部署到在多维模型中运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
@@ -86,7 +85,7 @@ ms.locfileid: "79112153"
   
 
   
-###  <a name="data-source-views"></a><a name="bkmk_DSV"></a> Data Source Views  
+###  <a name="data-source-views"></a><a name="bkmk_DSV"></a>数据源视图  
  定义数据源的此连接之后，可以创建标识与模型相关的特定数据的视图。  
   
  利用数据源视图，还可以自定义向挖掘模型提供数据源中的数据的方式。 您可以修改数据结构，使其与项目的关系更密切，或者仅选择某些种类的数据。  

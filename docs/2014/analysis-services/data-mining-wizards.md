@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: f949a5f0-d8f5-4da1-a9f8-200b918e29ff
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7db22d59ffa9ce2fcb8b4875bd1dafcf7018e567
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ea224a6c0d435b0d4818a1d86fa2c084ac74b09
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086308"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525783"
 ---
 # <a name="data-mining-wizards"></a>数据挖掘向导
-  [!INCLUDE[msCoName](../includes/msconame-md.md)]提供了在[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]和中[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]使用的向导。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供了在和中使用的向导 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 。  
   
  下表介绍了可用于创建数据挖掘源、视图和对象的向导。  
   

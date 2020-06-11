@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1da4224387e70ccc76e069aa3ce411dddb79b805
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5cb21b733fd1663f0e26c765f519544597aa9063
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087764"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527423"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>比较表格和多维解决方案 (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 为数据建模提供两种不同方法：表格和多维。 虽然它们之间有明显的重叠现象，但也有重要的差异，你可以通过差异决定如何继续。 在本主题中，我们提供功能比较，并解释每种方法如何满足常见项目要求。 例如，如果对特定数据源的支持是最重要的因素，则有关数据源的部分有助于指导您决定采用哪种建模方法。  
@@ -101,7 +100,7 @@ ms.locfileid: "66087764"
 |Aggregation 对象|[是](multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)|否|  
 |计算度量值|[是](multidimensional-models/create-calculated-members.md)|是|  
 |自定义程序集|[是](multidimensional-models/multidimensional-model-assemblies-management.md)|否|  
-|自定义汇总|是|否|  
+|自定义汇总|是|No|  
 |Distinct Count|[是](multidimensional-models/use-aggregate-functions.md)|是（通过 DAX） *|  
 |钻取|[是](multidimensional-models/actions-in-multidimensional-models.md)|是|  
 |层次结构|[是](multidimensional-models/user-defined-hierarchies-create.md)|是|  

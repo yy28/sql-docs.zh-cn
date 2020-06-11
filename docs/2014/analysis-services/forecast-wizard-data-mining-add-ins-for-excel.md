@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c5b33f75-42d4-4598-89e7-94815c142ce6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f0717d8a81cc89897de005144dd631d23da42137
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3c4d728f810da7abf96d1addc6ef91156a3d5ea
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081026"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544419"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>预测向导（Excel 数据挖掘外接程序）
   ![“数据挖掘”功能区中的关联向导](media/dmc-forecast.gif "“数据挖掘”功能区中的关联向导")  
@@ -41,7 +40,7 @@ ms.locfileid: "66081026"
   
 3.  在 "**预测**" 页上，对于 "**时间戳**"，请选择包含可用作事例序列的唯一数值（包括日期和时间值）的列。 必须按此列以升序顺序对数据源进行排序。  
   
-     如果数据没有这样的列，则可以使用选项\<"无时间戳>。 此向导将为输入数据添加一个唯一的排序列；因此，您必须确保首先按照您希望的方式对数据进行排序，然后再运行此向导和选择此选项。  
+     如果数据没有此类列，可以使用选项 \<no time stamp> 。 此向导将为输入数据添加一个唯一的排序列；因此，您必须确保首先按照您希望的方式对数据进行排序，然后再运行此向导和选择此选项。  
   
 4.  或者，您可以单击 "**参数**" 并自定义挖掘模型的行为。  
   

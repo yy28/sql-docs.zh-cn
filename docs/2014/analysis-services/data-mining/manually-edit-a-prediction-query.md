@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9f6a9298-49d5-4675-ad49-977a47dff5a6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ce2086e998704e893beaa92aabd2e51129a0450f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8809e025a60a47acb2db5dae312702ee2e3effd3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084212"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522066"
 ---
 # <a name="manually-edit-a-prediction-query"></a>手动编辑预测查询
   在使用预测查询生成器设计查询后，可通过在数据挖掘设计器的 **“挖掘模型预测”** 选项卡上切换到“查询文本”视图来修改查询。 屏幕的底部会出现文本编辑器，显示查询生成器创建的查询。  

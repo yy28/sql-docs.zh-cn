@@ -1,5 +1,6 @@
 ---
 title: 在 XPath 查询中使用布尔函数（SQLXML）
+description: 了解如何在 XPath 查询中指定 SQLXML 4.0 布尔函数 true （）、false （）和 not （）。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18d1f66cde1a40e68d95fa4ef98c4df7c1a608b0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a1839d9bbf5776457828d39ab4a9242ae8d86631
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252591"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529872"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定布尔函数 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75252591"
 ## <a name="examples"></a>示例  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. 指定 not() 布尔函数  
- 此查询将返回上下文节点的所有** \<客户>** 子元素，这些子元素没有** \<Order>** 子元素：  
+ 此查询返回 **\<Customer>** 不具有子元素的上下文节点的所有子元素 **\<Order>** ：  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -79,7 +80,7 @@ ms.locfileid: "75252591"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. 指定 true() 和 false() 布尔函数  
- 此查询将返回** \<** 上下文节点的所有不具有** \<Order>** 子元素的 Customer>元素子级。 就关系而言，此查询返回未下订单的所有客户。  
+ 此查询返回 **\<Customer>** 不具有子元素的上下文节点的所有子元素 **\<Order>** 。 就关系而言，此查询返回未下订单的所有客户。  
   
 ```  
 /child::Customer[child::Order=false()]  

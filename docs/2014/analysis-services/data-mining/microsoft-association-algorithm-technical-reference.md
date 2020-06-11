@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30310cf891d8b5e7ef9a32b5a8e7254cbca2ecd0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ca9eab174a146ebd4dcd38d682fd52ee9e820ec
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084132"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522103"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft 关联算法技术参考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法是熟知的 Apriori 算法的简单实现。  
@@ -73,7 +72,7 @@ ms.locfileid: "66084132"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法支持多个参数，这些参数可以影响生成的挖掘模型的行为、性能和准确性。  
   
 ### <a name="setting-algorithm-parameters"></a>设置算法参数  
- 在任何时候均可使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的数据挖掘设计器来更改挖掘模型的参数。 还可以通过使用 AMO 中的<xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A>集合或使用 XMLA 中的[MININGMODELS 元素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl)以编程方式更改参数。 下表对各参数进行了说明：  
+ 在任何时候均可使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的数据挖掘设计器来更改挖掘模型的参数。 还可以通过使用 <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> AMO 中的集合或使用 XMLA 中的[MiningModels 元素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl)以编程方式更改参数。 下表对各参数进行了说明：  
   
 > [!NOTE]  
 >  不能使用 DMX 语句更改现有模型中的参数;您必须指定 DMX CREATE MODEL 或 ALTER STRUCTURE .。。创建模型时添加模型。  

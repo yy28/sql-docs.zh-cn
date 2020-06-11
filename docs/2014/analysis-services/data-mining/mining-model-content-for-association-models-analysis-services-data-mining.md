@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d5849bcb-4b8f-4f71-9761-7dc5bb465224
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a1e525d7b42d058343e41ea154f0687fb969839
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1836cb414e8ea7f6e0bedbf0b4fb75cf0bfa264e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083690"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521580"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>关联模型的挖掘模型内容（Analysis Services – 数据挖掘）
   本主题讲述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法的模型特有的挖掘模型内容。 有关与适用于所有模型类型的挖掘模型内容相关的常规术语和统计术语的说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
@@ -63,7 +62,7 @@ ms.locfileid: "66083690"
 |节点类型 ID|类型|  
 |------------------|----------|  
 |1（模型）|根节点或父节点。|  
-|7（项集）|项集，或属性-值对的集合。 示例：<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> 或<br /><br /> `Gender = Male`.|  
+|7（项集）|项集，或属性-值对的集合。 例如：<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> 或<br /><br /> `Gender = Male`.|  
 |8（规则）|用于定义项相互关联的方式的规则。<br /><br /> 示例：<br /><br /> `Product 1 = Existing, Product 2 = Existing -> Product 3 = Existing`.|  
   
  NODE_CAPTION  
@@ -95,7 +94,7 @@ ms.locfileid: "66083690"
   
  **父节点** 包括一个逗号分隔列表，该列表包含有关该模型的以下信息：  
   
-|项|说明|  
+|Item|说明|  
 |----------|-----------------|  
 |ITEMSET_COUNT|模型中所有项集的计数。|  
 |RULE_COUNT|模型中所有规则的计数。|  

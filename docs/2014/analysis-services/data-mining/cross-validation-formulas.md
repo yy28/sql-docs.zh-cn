@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fd1ea582-29a1-4154-8de2-47bab3539b4d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ccdf0285dc110cde89e08778f6badf56f586a5ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a97fd6800bbdcb8e8d2fb5ce7982ee53fce84bd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085149"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523395"
 ---
 # <a name="cross-validation-formulas"></a>交叉验证公式
   生成交叉验证报表后，它将包含每个模型的准确性度量值，具体取决于挖掘模型的类型（即，用于创建模型的算法）、可预测属性的数据类型和可预测属性值（如果有）。  

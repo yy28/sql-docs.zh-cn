@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 45db581de7b7aef2822597ef60d3b43ebad3acbd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 341468d521cebe1fda33d73ea999f3b6571cb01e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074268"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546349"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>使用 RollupChildren 函数 (MDX)
   多维表达式（MDX） [RollupChildren](/sql/mdx/rollupchildren-mdx) [用于搜索和替换的脚本] 函数汇总成员的子级，对每个子级应用不同的一元运算符，并以数字的形式返回此汇总值。 一元运算符可通过与子成员关联的成员属性提供，也可以是直接提供给函数的字符串表达式。  
@@ -64,7 +63,7 @@ RollupChildren([Net Sales], [Net Sales].CurrentMember.Properties("SALES_OPERATOR
  当调用函数时，使用该成员属性中存储的运算符将每个子级的值应用于总数。 将忽略国内盈利和国外盈利的成员，并将 `RollupChildren` 函数返回的汇总总数乘以 1.1。  
   
 ### <a name="using-the-iif-function"></a>使用 IIf 函数  
- 如果示例操作不太常见，或者操作仅适用于一个 MDX 查询，则可以将[IIf](/sql/mdx/iif-mdx)函数与`RollupChildren`函数结合使用，以提供相同的结果。 下列 MDX 查询提供的结果与前面的 MDX 示例相同，但这里没有使用自定义成员属性：  
+ 如果示例操作不太常见，或者操作仅适用于一个 MDX 查询，则可以将[IIf](/sql/mdx/iif-mdx)函数与函数结合使用， `RollupChildren` 以提供相同的结果。 下列 MDX 查询提供的结果与前面的 MDX 示例相同，但这里没有使用自定义成员属性：  
   
 ```  
 RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPERATOR") = "-", "~", [Net Sales].CurrentMember.Properties("UNARY_OPERATOR))) * 1.1  

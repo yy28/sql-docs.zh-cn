@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9a054e59a830895d43d861e6d6533ad5bb876c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b3de498bcd5643bb8f83d00c9536f57560d30b1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174511"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523205"
 ---
 # <a name="data-mining-concepts"></a>数据挖掘概念
   数据挖掘是从大型数据集中发现可行信息的过程。 数据挖掘使用数学分析来派生存在于数据中的模式和趋势。 通常，由于这些模式的关系过于复杂或涉及数据过多，因此使用传统数据浏览无法发现这些模式。
@@ -60,7 +59,7 @@ ms.locfileid: "78174511"
 
 6.  [部署和更新模型](#DeployingandUpdatingModels)
 
- 下图描述了过程中每个步骤之间的关系，以及中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可用于完成每个步骤的技术。
+ 下图描述了过程中每个步骤之间的关系，以及中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可用于完成每个步骤的技术。
 
  ![数据挖掘过程中的关键步骤](../media/data-mining-process.gif "数据挖掘过程中的关键步骤")
 
@@ -110,7 +109,7 @@ ms.locfileid: "78174511"
 
  需要特别注意的是用于数据挖掘的数据不必存储在联机分析处理 (OLAP) 多维数据集中，或者甚至不必存储在关系数据库中，但是您可以将它们作为数据源使用。 您可以使用已被定义为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源的任何数据源执行数据挖掘。 这些数据源可以包括文本文件、Excel 工作簿或来自其他外部提供程序的数据。 有关详细信息，请参阅[&#40;SSAS 多维&#41;支持的数据源](../multidimensional-models/supported-data-sources-ssas-multidimensional.md)。
 
-##  <a name="exploring-data"></a><a name="ExploringData"></a>浏览数据
+##  <a name="exploring-data"></a><a name="ExploringData"></a> 浏览数据
  如以下关系图中突出显示的那样，数据挖掘过程的第三步就是浏览已准备的数据。
 
  ![数据挖掘的第三个步骤：浏览数据](../media/dmprocess-exploring.gif "数据挖掘的第三个步骤：浏览数据")

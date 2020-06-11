@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7ac877a1-0f29-46b9-9a51-73b02172bef1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3be28b0a402743e4d9c26b346386202127c5f74d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc14281cebe3a8e5e401acb7b84367f1688ad0ea
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081569"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528497"
 ---
 # <a name="dmx-query-editor-analysis-services---data-mining"></a>DMX 查询编辑器（Analysis Services - 数据挖掘）
   可以使用 DMX 查询编辑器，设计和执行使用数据挖掘扩展插件 (DMX) 语言编写的语句。  
@@ -44,8 +43,8 @@ ms.locfileid: "66081569"
 |**更改连接**|打开 **“连接到服务器”** 对话框，以便与其他 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例建立连接。|  
 |**使用当前连接新建查询**|使用当前“DMX 查询编辑器”窗口中的连接信息，打开一个新的“DMX 查询编辑器”窗口。|  
 |**可用数据库**|将连接更改到同一实例的其他 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库。|  
-|**执行**|执行所选的代码；如果没有选择任何代码，则执行 DMX 查询编辑器中的全部代码。|  
-|**Parse**|检查所选代码的语法。 如果没有选择任何代码，则检查整个“DMX 查询编辑器”窗口的语法。|  
+|**运行**|执行所选的代码；如果没有选择任何代码，则执行 DMX 查询编辑器中的全部代码。|  
+|**分析**|检查所选代码的语法。 如果没有选择任何代码，则检查整个“DMX 查询编辑器”窗口的语法。|  
 |**取消执行查询**|向服务器发送取消请求。 有些查询不能立即取消，而必须等待适当的取消条件。 如果进行取消，在回滚事务时可能会发生延迟。|  
   
 ## <a name="dmx-query-editor-window"></a>“DMX 查询编辑器”窗口  
@@ -53,11 +52,11 @@ ms.locfileid: "66081569"
   
 |术语|定义|  
 |----------|----------------|  
-|**查询编辑器窗口**|使用 DMX 查询编辑器键入要执行的 DMX 语句和脚本。<br /><br /> 查询编辑器的上下文菜单提供有以下选项：<br /><br /> **剪切**：将当前选定内容复制到剪贴板，并从查询编辑器窗口中删除选定内容。<br /><br /> **复制**：将当前选定内容复制到剪贴板。<br /><br /> **粘贴**：将剪贴板的内容粘贴到当前所选内容。<br /><br /> **连接**：打开“连接到服务器” **** 对话框，以便与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例建立连接。<br /><br /> **断开连接**：断开当前查询编辑器与[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例的连接。<br /><br /> **断开所有查询**：断开所有打开的查询编辑器。<br /><br /> **更改连接**：打开 "**连接到服务器**" 对话框，以便与其他[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例建立连接。<br /><br /> **在对象资源管理器中打开服务器**：在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] **对象资源管理器**中打开当前查询编辑器连接到的实例。<br /><br /> **Execute**：执行所选代码，如果没有选择任何代码，则执行当前查询编辑器中的整个代码。<br /><br /> "**属性" 窗口**：显示当前查询窗口的中[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的 "**属性**" 窗口。<br /><br /> **查询选项**：显示 "**查询选项**" 对话框。|  
+|**查询编辑器窗口**|使用 DMX 查询编辑器键入要执行的 DMX 语句和脚本。<br /><br /> 查询编辑器的上下文菜单提供有以下选项：<br /><br /> **剪切**：将当前选定内容复制到剪贴板，并从查询编辑器窗口中删除选定内容。<br /><br /> **复制**：将当前选定内容复制到剪贴板。<br /><br /> **粘贴**：将剪贴板的内容粘贴到当前所选内容。<br /><br /> **连接**：打开“连接到服务器” **** 对话框，以便与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例建立连接。<br /><br /> **断开连接**：断开当前查询编辑器与实例的连接 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。<br /><br /> **断开所有查询**：断开所有打开的查询编辑器。<br /><br /> **更改连接**：打开 "**连接到服务器**" 对话框，以便与其他实例建立连接 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。<br /><br /> **在对象资源管理器中打开服务器**：在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] **对象资源管理器**中打开当前查询编辑器连接到的实例。<br /><br /> **Execute**：执行所选代码，如果没有选择任何代码，则执行当前查询编辑器中的整个代码。<br /><br /> "**属性" 窗口**：显示当前查询窗口的中的 "**属性**" 窗口 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 。<br /><br /> **查询选项**：显示 "**查询选项**" 对话框。|  
 |**元数据窗口**|显示当前连接的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库的元数据。|  
 |**Cube**|在当前连接的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中选择一个多维数据集，以显示与 **“元数据”** 选项卡中的多维数据集关联的元数据。|  
-|**元数据**|显示在 **“多维数据集”** 中选定的多维数据集的元数据，包括度量值组和度量值、关键绩效指标 (KPI)、维度、层次结构、级别、成员和成员属性。 若要检索对象的完全限定键，请执行下列操作之一：<br /><br /> 将该对象从 **“元数据”** 选项卡拖到查询窗格。<br /><br /> 或：<br /><br /> 右键单击该对象并选择 **“复制”**，再右键单击查询窗格并选择 **“粘贴”**。|  
-|**函数**|按照从 DMSCHEMA_MINING_FUNCTIONS 架构行集的检索结果，显示对 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库可用的 DMX 函数的元数据。<br /><br /> 若要检索函数的语法，请执行下列操作之一：<br /><br /> 将该对象从 **“函数”** 选项卡拖到查询窗格。<br /><br /> 或：<br /><br /> 右键单击该函数并选择 **“复制”**，再右键单击该查询窗格并选择 **“粘贴”**。|  
+|**元数据**|显示在 **“多维数据集”** 中选定的多维数据集的元数据，包括度量值组和度量值、关键绩效指标 (KPI)、维度、层次结构、级别、成员和成员属性。 若要检索对象的完全限定键，请执行下列操作之一：<br /><br /> 将该对象从 **“元数据”** 选项卡拖到查询窗格。<br /><br /> 或者：<br /><br /> 右键单击该对象并选择 **“复制”**，再右键单击查询窗格并选择 **“粘贴”**。|  
+|**函数**|按照从 DMSCHEMA_MINING_FUNCTIONS 架构行集的检索结果，显示对 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库可用的 DMX 函数的元数据。<br /><br /> 若要检索函数的语法，请执行下列操作之一：<br /><br /> 将该对象从 **“函数”** 选项卡拖到查询窗格。<br /><br /> 或者：<br /><br /> 右键单击该函数并选择 **“复制”**，再右键单击该查询窗格并选择 **“粘贴”**。|  
 |**结果窗口**|在一个网格中显示 DMX 语句的结果。|  
 |**消息窗口**|显示有关 DMX 语句执行情况的信息。 例如，此窗口可显示执行过程中遇到的所有错误，或执行完成后检索到的单元数。|  
   

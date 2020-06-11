@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b4d3f350-e543-4ea9-b3a2-b4f7c0a9ae27
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6d683c9dc9a201b1f4351ee00d718ad0d7917606
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b71ca6e81a11b53d7a614fcffb498a1bf5fa2b32
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084611"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522515"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>从挖掘模型钻取到事例数据
   如果挖掘模型已配置为允许钻取到模型事例，在浏览此模型时，可以检索与用于创建此模型的事例的详细信息。 此外，如果基础挖掘结构已配置为允许钻取到结构事例，并且您具备相应的权限，则可返回挖掘结构的信息。 其中可以包括挖掘模型中未包含的列。  
@@ -31,7 +30,7 @@ ms.locfileid: "66084611"
   
 |查看器名称|窗格或选项卡名称|选择节点|  
 |-----------------|----------------------|-----------------|  
-|**Microsoft 树查看器**|**决策树**选项卡|单击树节点。<br /><br /> **注意**避免在`All`节点上使用钻取，因为可能需要很长时间才能返回结果。|  
+|**Microsoft 树查看器**|**决策树**选项卡|单击树节点。<br /><br /> **注意**避免在节点上使用钻取 `All` ，因为可能需要很长时间才能返回结果。|  
 |**Microsoft 分类查看器**|**分类关系图**|单击群集节点。|  
 |**Microsoft 分类查看器**|**分类剖面图**|单击分类列中的任意位置。|  
 |**Microsoft 关联查看器**|**规则**选项卡|单击包含一组规则的行。|  

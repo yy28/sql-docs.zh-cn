@@ -1,5 +1,6 @@
 ---
 title: 将转换后的数据库对象加载到 SQL Server （OracleToSQL） |Microsoft Docs
+description: 了解如何使用 SSMA for Oracle 将从 Oracle 转换的数据库对象加载到 SQL Server 实例中。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,20 +14,20 @@ ms.assetid: a8ae33b2-1883-4785-922b-ea0e31c0b37a
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 97c34beb0cbe27e8d3c88b922690dc369fb7103b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69c4d30b3a803cfd5eb8e196f540c33952de3bf5
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262990"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293844"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>将转换数据库对象加载到 SQL Server (OracleToSQL)
 将 Oracle 架构转换为 SQL Server 后，可以将生成的数据库对象加载到 SQL Server 中。 您可以使用 SSMA 创建这些对象，也可以编写对象脚本并自己运行脚本。 此外，SSMA 使你可以通过 SQL Server 数据库的实际内容来更新目标元数据。  
   
 ## <a name="choosing-between-synchronization-and-scripts"></a>在同步和脚本之间进行选择  
-如果要在不进行修改的情况下将转换后的数据库对象加载到 SQL Server，则可以让 SSMA 直接创建或重新创建数据库对象。 这种方法既简单又简单，但不允许自定义除存储[!INCLUDE[tsql](../../includes/tsql-md.md)]过程之外的 SQL Server 对象的代码自定义。  
+如果要在不进行修改的情况下将转换后的数据库对象加载到 SQL Server，则可以让 SSMA 直接创建或重新创建数据库对象。 这种方法既简单又简单，但不允许自定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] 除存储过程之外的 SQL Server 对象的代码自定义。  
   
-如果要修改用于创建对象[!INCLUDE[tsql](../../includes/tsql-md.md)]的，或者如果想要对对象创建进行更多的控制，请使用 SSMA 创建脚本。 然后，你可以修改这些脚本，单独创建每个对象，甚至使用 SQL Server 代理来计划创建这些对象。  
+如果要修改 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用于创建对象的，或者如果想要对对象创建进行更多的控制，请使用 SSMA 创建脚本。 然后，你可以修改这些脚本，单独创建每个对象，甚至使用 SQL Server 代理来计划创建这些对象。  
   
 ## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>使用 SSMA 将对象与 SQL Server 同步  
 若要使用 SSMA 创建 SQL Server 数据库对象，请在 SQL Server 元数据资源管理器中选择对象，然后将对象与 SQL Server 同步，如以下过程中所示。 默认情况下，如果对象已存在于 SQL Server 中，并且 SSMA 元数据比 SQL Server 中的对象新，则 SSMA 将更改 SQL Server 中的对象定义。 您可以通过编辑**项目设置**来更改默认行为。  
@@ -61,7 +62,7 @@ ms.locfileid: "68262990"
 单击操作符号以更改状态。 当单击 "**与数据库同步**" 对话框中的 **"确定"** 按钮时，将执行实际同步。  
   
 ## <a name="scripting-objects"></a>脚本对象  
-若要[!INCLUDE[tsql](../../includes/tsql-md.md)]保存转换后的数据库对象的定义，或自行更改对象定义并运行脚本，可以将转换后的数据库对象定义保存[!INCLUDE[tsql](../../includes/tsql-md.md)]到脚本中。  
+若要保存 [!INCLUDE[tsql](../../includes/tsql-md.md)] 转换后的数据库对象的定义，或自行更改对象定义并运行脚本，可以将转换后的数据库对象定义保存到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本中。  
   
 **将对象保存为脚本**  
   
@@ -72,7 +73,7 @@ ms.locfileid: "68262990"
 2.  在 "**另存为**" 对话框中，找到要将脚本保存到的文件夹，在 **"文件名" 框中**输入文件名，然后单击 "确定" SSMA 将追加 .sql 文件扩展名。  
   
 ### <a name="modifying-scripts"></a>修改脚本  
-将 SQL Server 对象定义作为一个或多个脚本保存后，可以使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]来查看和修改脚本。  
+将 SQL Server 对象定义作为一个或多个脚本保存后，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 来查看和修改脚本。  
   
 **修改脚本**  
   
@@ -87,7 +88,7 @@ ms.locfileid: "68262990"
 4.  若要保存脚本，请在 "文件" 菜单上单击 "**保存**"。  
   
 ### <a name="running-scripts"></a>运行脚本  
-您可以在中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]运行脚本或单独的语句。  
+您可以在中运行脚本或单独的语句 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
 **运行脚本**  
   
@@ -99,14 +100,14 @@ ms.locfileid: "68262990"
   
 4.  若要运行一组语句，请在 "查询编辑器" 窗口中选择语句，然后按**F5**键。  
   
-有关如何使用查询编辑器来运行脚本的详细信息，请参阅 SQL Server 联机丛书中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]的 "查询"。  
+有关如何使用查询编辑器来运行脚本的详细信息，请参阅 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] SQL Server 联机丛书中的 "查询"。  
   
 还可以通过使用**sqlcmd**实用程序和 SQL Server 代理从命令行运行脚本。 有关**sqlcmd**的详细信息，请参阅 SQL Server 联机丛书中的 "sqlcmd 实用工具"。 有关 SQL Server 代理的详细信息，请参阅 SQL Server 联机丛书中的 "自动执行管理任务（SQL Server 代理）"。  
   
 ## <a name="securing-objects-in-sql-server"></a>在 SQL Server 中保护对象  
 将转换后的数据库对象加载到 SQL Server 后，您可以对这些对象授予和拒绝权限。 在将数据迁移到 SQL Server 之前，最好先执行此操作。 有关如何帮助保护 SQL Server 中对象的信息，请参阅 SQL Server 联机丛书中的 "数据库和数据库应用程序的安全注意事项"。  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
 迁移过程的下一步是将[数据迁移到 SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md)。  
   
 ## <a name="see-also"></a>另请参阅  

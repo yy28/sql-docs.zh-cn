@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 17dc6903-c239-46aa-a3b0-6e3156accacc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 482d3b072eaa4db2c3aee84986590dd9d505b347
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fba1d5801f325400b228920fffa06512f4db8de2
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088141"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527543"
 ---
 # <a name="choose-how-to-import-the-data-ssas"></a>选择如何导入数据 (SSAS)
   **“表导入向导”** 的这一页可用于选择从所选数据源导入数据的方式。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **从表和视图的列表中进行选择，以便选择要导入的数据**  
  如果要通过从列表中选择来导入数据，请选择此选项。  
   

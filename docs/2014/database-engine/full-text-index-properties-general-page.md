@@ -12,26 +12,26 @@ ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 187366d9f289804942ba6e7d331a47bfaae68232
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 1701479fe7469769d75f4b8ad3d8e65dcc75af91
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000927"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858667"
 ---
 # <a name="full-text-index-properties-general-page"></a>全文索引属性（“常规”页）
   **查看或更改全文索引的可修改属性**  
   
 -   [管理全文索引](../relational-databases/indexes/indexes.md)  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **全文目录**  
  显示全文索引所关联的全文目录的名称。  
   
  **Database**  
  显示驻留全文索引的数据库的名称。  
   
- **表**  
+ **表格**  
  显示定义全文索引的表的名称。  
   
  **全文索引键**  
@@ -129,7 +129,7 @@ ms.locfileid: "83000927"
   
 |||  
 |-|-|  
-|**Off**|不以基础数据的更改来更新全文索引。|  
+|**关**|不以基础数据的更改来更新全文索引。|  
 |**手动**|基础数据发生更改时，不自动更新全文索引。 但是，会维护基础数据的更改，并且可以使用 SQL Server 代理定期或手动将它们传播到 全文索引。|  
 |**自动**|当基表中的基础数据发生更改时，则自动更新全文索引。|  
   

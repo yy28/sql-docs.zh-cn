@@ -1,5 +1,6 @@
 ---
 title: 使用 Updategram 修改 SQLXML 4.0 中的数据
+description: 查看有关 updategram 以及如何使用它们来修改 SQLXML 4.0 中的数据的信息和示例。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -25,16 +26,16 @@ ms.assetid: b8b3b892-cb73-41d0-b945-bce148d81d9b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 56a1d4b0243645c1d54b47145740f84fda29e841
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 85df62ad3d31bdddbb37540c0c386ad2bcd260e5
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247107"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215265"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>使用 Updategram 修改 SQLXML 4.0 中的数据
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  通过使用 updategram 或 OPENXML [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../../includes/tsql-md.md)]函数，可以从现有的 XML 文档中修改（插入、更新或删除）数据库。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 通过使用 UPDATEGRAM 或 OPENXML 函数，可以从现有的 XML 文档中修改（插入、更新或删除）数据库 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 。  
   
  本节提供有关 updategram 的信息及其使用示例。  
   

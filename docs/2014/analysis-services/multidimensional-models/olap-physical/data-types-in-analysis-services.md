@@ -9,28 +9,27 @@ ms.topic: reference
 ms.assetid: 910be4f4-3010-41cd-9fdc-f0a79a0ce823
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4ecdc64918e582f25f0e017d263c66e78c0d1bee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 06b93090918a0fffc9c98e1560b338177eff3d84
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725381"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545925"
 ---
 # <a name="data-types-in-analysis-services"></a>Analysis Services 中的数据类型
-  对于所有<xref:Microsoft.AnalysisServices.DataItem>对象， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支持的以下子集`System.Data.OleDb.OleDbType`。 若要设置或读取数据类型，请使用[DataItem 数据类型 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl)。  
+  对于所有 <xref:Microsoft.AnalysisServices.DataItem> 对象， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持的以下子集 `System.Data.OleDb.OleDbType` 。 若要设置或读取数据类型，请使用[DataItem 数据类型 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl)。  
   
 ## <a name="supported-data-types"></a>支持的数据类型  
   
 |||  
 |-|-|  
 |BigInt|64 位有符号整数。 *BigInt*值类型表示其值范围从负9223372036854775808到正9223372036854775807的整数。|  
-|Binary|**Byte**类型的二进制数据的流。 **Byte**是一种值类型，它表示值介于0到255之间的无符号整数。|  
-|布尔|此类型的实例具有 `true` 或 `false` 值。|  
+|二进制|**Byte**类型的二进制数据的流。 **Byte**是一种值类型，它表示值介于0到255之间的无符号整数。|  
+|布尔值|此类型的实例具有 `true` 或 `false` 值。|  
 |货币|一个*货币*值，范围为-922337203685477.5808 到 + 922337203685477.5807，精确到货币单位的万分之一（四位数）。|  
-|日期|以双精度存储的日期和时间数据。 整数部分是自 1899 年 12 月 30 日以来的天数，而小数部分是不足一天的部分或一天中的某个时间。|  
+|Date|以双精度存储的日期和时间数据。 整数部分是自 1899 年 12 月 30 日以来的天数，而小数部分是不足一天的部分或一天中的某个时间。|  
 |Double|浮点数，范围在 -1.79769313486232E +308 到 1.79769313486232E +308 之间。 Double 值存储精度最高为 15 个小数位的数字信息。|  
-|Integer|32 位有符号整数，表示其值范围在负的 2,147,483,648 到正的 2,147,483,647 之间的有符号整数。|  
+|整数|32 位有符号整数，表示其值范围在负的 2,147,483,648 到正的 2,147,483,647 之间的有符号整数。|  
 |Single|浮点数，范围在 - 3.4028235E +38 到 3.4028235E +38 之间。 Single 值存储精度最高为 7 个小数位的数字信息。|  
 |Smallint|16 位有符号整数。 *Smallint*值类型表示其值范围从负32768到正32767的带符号整数。|  
 |Tinyint|一个 8 位有符号整数。 Tinyint 值类型表示其值范围从负的 128 到正的 127 的整数。|  

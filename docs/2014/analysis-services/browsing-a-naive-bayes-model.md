@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f9160b48-3beb-439c-9694-f084e1afa625
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 65b8bb26a72903644b5985d69efc8adb362fe412
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cceead32ca14d2a5261c0ef35cb4444be2effcf5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088483"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527713"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>浏览 Naive Bayes 模型
   使用 "**浏览**" 打开一个简单的 Bayes 模型时，该模型将显示在具有四个不同窗格的交互式查看器中。 使用该查看器，可以探索相关性，获取有关模型和基础数据的信息。  

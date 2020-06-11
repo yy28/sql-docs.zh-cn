@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: edd96fbe-1b1c-445a-95d6-7a025e0ee868
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5e65c2b8d543455a168bddc1be5ae5594c2ba8c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef89ce093e9cf97926ceae3cc75e17941594e7ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076423"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536639"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>使用现有表创建维度
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以使用中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的维度向导，通过现有表创建维度。 在维度向导的 **“选择创建方法”** 页上选择 **“使用现有表”** 选项可执行此操作。 选择此选项后，向导将基于现有数据源视图中的维度表、维度表中的列以及表中各列之间的任何关系构建维度结构。 该向导从源表和相关表中抽取样本数据。 此数据用于定义基于维度表中的列的属性列，以及定义属性的层次结构（称为“用户定义”** 的层次结构）。 使用维度向导创建维度后，可以使用维度设计器来添加、删除和配置维度中的属性和层次结构。  
+  在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，您可以使用中的维度向导， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 通过现有表创建维度。 在维度向导的 **“选择创建方法”** 页上选择 **“使用现有表”** 选项可执行此操作。 选择此选项后，向导将基于现有数据源视图中的维度表、维度表中的列以及表中各列之间的任何关系构建维度结构。 该向导从源表和相关表中抽取样本数据。 此数据用于定义基于维度表中的列的属性列，以及定义属性的层次结构（称为“用户定义”** 的层次结构）。 使用维度向导创建维度后，可以使用维度设计器来添加、删除和配置维度中的属性和层次结构。  
   
  如果您要使用现有表来创建维度，则维度向导将指导您执行以下操作：  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66076423"
 ## <a name="selecting-dimension-attributes"></a>选择维度属性  
  选择维度表后，可以使用 **“选择维度属性”** 页来基于这些表选择要包含在维度中的属性。 所有这些表中的全部基础列都可用作潜在维度属性。 必须选择并启用维度键属性才能进行浏览。  
   
- 默认情况下，向导将属性类型设置为 `Regular`。 不过，您可能希望将特定属性映射到另一种可更好地表达数据的属性类型。 例如， [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW 示例数据库中的 dbo.DimAccount 表包含提供帐号的 AccountCodeAlternateKey 列。 你可能希望将此属性`Regular`映射到`Account Number`类型，而不是将此属性的类型设置为。  
+ 默认情况下，向导将属性类型设置为 `Regular`。 不过，您可能希望将特定属性映射到另一种可更好地表达数据的属性类型。 例如， [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW 示例数据库中的 dbo.DimAccount 表包含提供帐号的 AccountCodeAlternateKey 列。 `Regular`你可能希望将此属性映射到类型，而不是将此属性的类型设置为 `Account Number` 。  
   
 > [!NOTE]  
 >  如果创建维度时没有设置维度类型和标准属性类型，则在创建维度后可使用商业智能向导设置这些值。 有关详细信息，请参阅 [向维度中添加维度智能](bi-wizard-add-dimension-intelligence-to-a-dimension.md) 或（对账户类型维度而言） [向维度中添加帐户智能](bi-wizard-add-account-intelligence-to-a-dimension.md)。  

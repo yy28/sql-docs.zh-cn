@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b90944c3260af69f29fbae8a93f5865c1f3c6d1e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4053c7a15d0131773b72f347caab7cbc42d6044
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071862"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547529"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>配置 PowerPivot 服务帐户
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安装包括支持服务器操作的两个服务。 **SQL Server Analysis Services （PowerPivot）** 服务是一种 Windows 服务，它在应用程序服务器上提供 PowerPivot 数据处理和查询支持。 当您在 SharePoint 集成模式下安装 Analysis Services 时，在 SQL Server 安装期间始终为此服务指定登录帐户。  
@@ -78,7 +77,7 @@ ms.locfileid: "66071862"
   
 5.  在 **“为此服务选择帐户”** 中，选择某个现有托管帐户或创建一个新帐户。 该帐户必须是域用户帐户。  
   
-6.  单击" **确定**"。  
+6.  单击“确定”。  
   
 ##  <a name="create-or-change-the-application-pool-for-a-powerpivot-service-application"></a><a name="bkmk_appPool"></a>创建或更改 PowerPivot 服务应用程序的应用程序池  
   
@@ -101,9 +100,9 @@ ms.locfileid: "66071862"
   
 |要求|说明|  
 |-----------------|-----------------|  
-|设置要求|使用安装向导中的 " **Analysis Services 配置" 页**（或命令行安装程序中的`ASSVCACCOUNT`安装参数），必须在 SQL Server 安装过程中指定此帐户。<br /><br /> 您可以使用管理中心、PowerShell 或 PowerPivot 配置工具修改用户名或密码。 不支持使用其他工具更改帐户和密码。|  
+|设置要求|使用安装向导中的 " **Analysis Services 配置" 页**（或 `ASSVCACCOUNT` 命令行安装程序中的安装参数），必须在 SQL Server 安装过程中指定此帐户。<br /><br /> 您可以使用管理中心、PowerShell 或 PowerPivot 配置工具修改用户名或密码。 不支持使用其他工具更改帐户和密码。|  
 |域用户帐户要求|此帐户必须是 Windows 域用户帐户。 禁止使用内置计算机帐户（如 Network Service 或 Local Service）。 SQL Server 安装程序通过在指定计算机帐户时就阻止安装来强制执行域用户帐户要求。|  
-|权限要求|此帐户必须是本地计算机上的 SQLServerMSASUser $\<server>$PowerPivot 安全组和 WSS_WPG 安全组的成员。 应自动授予这些权限。 有关如何检查或授予权限的详细信息，请参阅本主题中[的手动授予 PowerPivot 服务帐户管理权限](#updatemanually)和[初始配置 &#40;PowerPivot for SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)。|  
+|权限要求|此帐户必须是 \<server> 本地计算机上 SQLServerMSASUser $ $PowerPivot 安全组和 WSS_WPG 安全组的成员。 应自动授予这些权限。 有关如何检查或授予权限的详细信息，请参阅本主题中[的手动授予 PowerPivot 服务帐户管理权限](#updatemanually)和[初始配置 &#40;PowerPivot for SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)。|  
 |扩展要求|如果您在场中安装多个 PowerPivot for SharePoint 服务器实例，则所有 Analysis Services 服务器实例都必须在同一域用户帐户下运行。 例如，如果你将第一个 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 实例配置为以 Contoso\ssas-srv01 身份运行，则随后在同一场中部署的所有其他 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 实例也必须以 Contoso\ssas-srv01（或碰巧为当前帐户）身份运行。<br /><br /> 如果将所有服务实例配置为在同一帐户下运行，则 PowerPivot 系统服务可以将查询处理或数据刷新作业分配到场中的任何 Analysis Services 服务实例。 此外，它还可将管理中心的“托管帐户”功能用于 Analysis Services 服务器实例。 通过对所有 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 实例使用同一帐户，您可以只更改帐户或密码一次，而所有使用这些凭据的服务实例都会自动更新。<br /><br /> SQL Server 安装程序强制执行使用同一帐户的要求。 在 SharePoint 场已安装 PowerPivot for SharePoint 实例的扩展部署中，如果您指定的 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]帐户与场中已使用的帐户不同，安装程序将阻止执行新的安装。|  
   
 #### <a name="powerpivot-service-application-pool"></a>PowerPivot 服务应用程序池  
@@ -124,17 +123,17 @@ ms.locfileid: "66071862"
   
 3.  单击 "**立即运行**"。  
   
- 作为最后的手段，您可以通过向 PowerPivot 服务应用程序授予 Analysis Services 系统管理权限，然后专门将服务应用程序标识添加到 SQLServerMSASUser $\<servername>$PowerPivot Windows 安全组，从而确保正确的权限。 必须对与 SharePoint 场集成的每个 Analysis Services 实例重复这些步骤。  
+ 作为最后的手段，您可以通过向 PowerPivot 服务应用程序授予 Analysis Services 系统管理权限，然后专门将服务应用程序标识添加到 SQLServerMSASUser $ \<servername> $PowerPivot Windows 安全组，从而确保正确的权限。 必须对与 SharePoint 场集成的每个 Analysis Services 实例重复这些步骤。  
   
  您必须是本地管理员才能更新 Windows 安全组。  
   
-1.  在 SQL Server Management Studio 中，作为\<服务器名称连接到 Analysis Services 实例> \powerpivot。  
+1.  在 SQL Server Management Studio 中，以 \Powerpivot。连接到 Analysis Services 实例。 \<server name>  
   
 2.  右键单击服务器名称并选择“属性”****。  
   
 3.  单击 **“安全”**。  
   
-4.  单击 **“添加”** 。  
+4.  单击“添加”。  
   
 5.  键入用于 PowerPivot 服务应用程序池的帐户名称，然后单击 **"确定"**。  
   
@@ -144,9 +143,9 @@ ms.locfileid: "66071862"
   
 8.  打开 **“组”**。  
   
-9. 双击 "SQLServerMSASUser $\<servername>" $PowerPivot "。  
+9. 双击 "SQLServerMSASUser $ \<servername> $PowerPivot。  
   
-10. 单击 **“添加”** 。  
+10. 单击“添加”。  
   
 11. 键入用于 PowerPivot 服务应用程序池的帐户名称，然后单击 **"确定"**。  
   

@@ -1,5 +1,6 @@
 ---
 title: XPath 数据类型（SQLXML）
+description: 了解 SQLXML 4.0 中的 XPath 数据类型，以及它们如何与 Microsoft SQL Server 和 XML 架构（XSD）数据类型进行比较。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -28,27 +29,27 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 089b2b006d0159c63e480c8627762ac37dec98b8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 17ad196110a68a83618e5048f53bfa84fb7e0f51
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247090"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306013"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 数据类型 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、XPATH 和 XML 架构（XSD）的数据类型非常不同。 例如，XPath 没有整数或日期数据类型，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 XSD 则具有许多此类数据类型。 XSD 可将纳秒精度用于时间值，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最高只能使用 1/300 秒的精度。 因此，将一种数据类型映射到另一种数据类型并不是始终可行的。 有关将数据类型映射[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到 XSD 数据类型的详细信息，请参阅[数据类型强制转换和 Sql： DATATYPE 批注 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、XPath 和 XML 架构（XSD）的数据类型非常不同。 例如，XPath 没有整数或日期数据类型，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 XSD 则具有许多此类数据类型。 XSD 可将纳秒精度用于时间值，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最高只能使用 1/300 秒的精度。 因此，将一种数据类型映射到另一种数据类型并不是始终可行的。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将数据类型映射到 XSD 数据类型的详细信息，请参阅[数据类型强制转换和 sql： datatype 批注 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)。  
   
  XPath 包含三种数据类型：**字符串**、**数字**和**布尔值**。 **Number**数据类型始终为 IEEE 754 双精度浮点。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Float （53）** 数据类型是最接近的 XPath**数字**。 但是， **float （53）** 并不完全是 IEEE 754。 例如，NaN（非数字）和 infinity 均未使用。 尝试将非数字字符串转换为**数字**，并尝试除以零会导致错误。  
   
 ## <a name="xpath-conversions"></a>XPath 转换  
- 在您使用 `OrderDetail[@UnitPrice > "10.0"]` 之类的 XPath 查询时，隐式和显式数据类型转换可能会对查询的意义产生细微的变化。 因此，理解 XPath 数据类型的实现方式十分重要。 有关 XPath 语言规范，XML 路径语言（XPath）版本 1.0 W3C 建议的建议8年10月1999，可在 W3C 网站上http://www.w3.org/TR/1999/PR-xpath-19991008.html找到。  
+ 在您使用 `OrderDetail[@UnitPrice > "10.0"]` 之类的 XPath 查询时，隐式和显式数据类型转换可能会对查询的意义产生细微的变化。 因此，理解 XPath 数据类型的实现方式十分重要。 有关 XPath 语言规范，XML 路径语言（XPath）版本 1.0 W3C 建议的建议8年10月1999，可在 W3C 网站上找到 http://www.w3.org/TR/1999/PR-xpath-19991008.html 。  
   
  XPath 运算符分为四个类别：  
   
 -   布尔运算符（and、or）  
   
--   关系运算符（\<、>、 \<=、>=）  
+-   关系运算符（ \<, > ， \<=, > =）  
   
 -   相等运算符（=、!=）  
   
@@ -71,9 +72,9 @@ ms.locfileid: "75247090"
  节点集转换并非始终都是直观的。 通过只采用集内第一个节点的字符串值，将节点集转换为**字符串**。 通过将节点集转换为**字符串**，然后将**字符串**转换为**数字**，将该节点集转换为**数字**。 节点集通过测试是否存在将其转换为**布尔值**。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不执行针对节点集的位置选择：例如，XPath 查询 `Customer[3]` 意味着第三个客户；但在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不支持此类型的位置选择。 因此，不会实现 XPath 规范所述的节点集到**字符串**或节点集到**数字**的转换。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用“任何”语义，而 XPath 规范指定“第一个”语义。 例如，根据 W3C XPath 规范，XPath 查询`Order[OrderDetail/@UnitPrice > 10.0]`会选择包含**单价**大于10.0 的第一个**OrderDetail**的订单。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，此 XPath 查询选择具有**单价**大于10.0 的所有**OrderDetail**的订单。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不执行针对节点集的位置选择：例如，XPath 查询 `Customer[3]` 意味着第三个客户；但在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不支持此类型的位置选择。 因此，不会实现 XPath 规范所述的节点集到**字符串**或节点集到**数字**的转换。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用“任何”语义，而 XPath 规范指定“第一个”语义。 例如，根据 W3C XPath 规范，XPath 查询 `Order[OrderDetail/@UnitPrice > 10.0]` 会选择包含**单价**大于10.0 的第一个**OrderDetail**的订单。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此 XPath 查询选择具有**单价**大于10.0 的所有**OrderDetail**的订单。  
   
- 转换为**布尔值**将生成一个存在测试;因此，XPath 查询`Products[@Discontinued=true()]`等效于 sql 表达式 "Products. 废止 is not null"，而不是 sql 表达式 "Products. 废止 = 1"。 若要使查询等效于后面的 SQL 表达式，请首先将节点集转换为非**布尔**类型，如**number**。 例如，`Products[number(@Discontinued) = true()]` 。  
+ 转换为**布尔值**将生成一个存在测试;因此，XPath 查询 `Products[@Discontinued=true()]` 等效于 sql 表达式 "products. 废止 is not null"，而不是 sql 表达式 "products. 废止 = 1"。 若要使查询等效于后面的 SQL 表达式，请首先将节点集转换为非**布尔**类型，如**number**。 例如 `Products[number(@Discontinued) = true()]`。  
   
  因为如果运算符对于节点集中任一节点为 TRUE，则大多数运算符均定义为 TRUE；所以，在节点集为空时，这些运算的计算结果始终为 FALSE。 因此，如果 A 为空，则 `A = B` 和 `A != B` 均为 FALSE，并且 `not(A=B)` 和 `not(A!=B)` 均为 TRUE。  
   
@@ -89,15 +90,15 @@ ms.locfileid: "75247090"
   
 |XDR 数据类型|等效<br /><br /> XPath 数据类型|使用的 SQL Server 转换|  
 |-------------------|------------------------------------|--------------------------------|  
-|Nonebin.base64bin.hex|不适用|NoneEmployeeID|  
+|Nonebin.base64bin.hex|空值|NoneEmployeeID|  
 |boolean|boolean|CONVERT(bit, EmployeeID)|  
-|number、int、float、i1、i2、i4、i8、r4、r8、ui1、ui2、ui4、ui8|数字|CONVERT(float(53), EmployeeID)|  
+|number、int、float、i1、i2、i4、i8、r4、r8、ui1、ui2、ui4、ui8|number|CONVERT(float(53), EmployeeID)|  
 |id、idref、idrefsentity、entities、enumerationnotation、nmtoken、nmtokens、chardate、Timedate、Time.tz、string、uri、uuid|字符串|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|无（在 XPath 中没有等效于 fixed14.4 XDR 数据类型的数据类型）|CONVERT(money, EmployeeID)|  
 |date|字符串|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
 |time<br /><br /> time.tz|字符串|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
- 日期和时间转换的设计目的是在数据库中使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**数据类型还是**字符串**存储该值。 请注意， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**数据类型不使用**时区**，其精度比 XML **time**数据类型的精度更小。 若要包括**时区**数据类型或其他精度，请使用**字符串**类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将数据存储在中。  
+ 日期和时间转换的设计目的是在数据库中使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**数据类型还是**字符串**存储该值。 请注意， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**数据类型不使用**时区**，其精度比 XML **time**数据类型的精度更小。 若要包括**时区**数据类型或其他精度，请 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用**字符串**类型将数据存储在中。  
   
  在某一节点从其 XDR 数据类型转换为 XPath 数据类型时，有时候可能需要执行附加的转换（从一个 XPath 数据类型转换为另一个 XPath 数据类型）。 例如，请考虑下面的 XPath 查询：  
   
@@ -105,13 +106,13 @@ ms.locfileid: "75247090"
 (@m + 3) = 4  
 ```  
   
- 如果@m是固定的**14.4** XDR 数据类型，则使用以下内容完成从 XDR 数据类型到 XPath 数据类型的转换：  
+ 如果 @m 是固定的**14.4** XDR 数据类型，则使用以下内容完成从 XDR 数据类型到 XPath 数据类型的转换：  
   
 ```  
 CONVERT(money, m)  
 ```  
   
- 在此转换中，将`m`节点从**固定的 14.4**转换为**money**。 但如果添加值 3，则要求附加的转换：  
+ 在此转换中，将节点 `m` 从**固定的 14.4**转换为**money**。 但如果添加值 3，则要求附加的转换：  
   
 ```  
 CONVERT(float(CONVERT(money, m))  
@@ -152,7 +153,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 ### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B. 在 XPath 查询中执行若干数据类型转换  
  考虑以下根据带批注的 XSD 架构指定的 XPath 查询：`OrderDetail[@UnitPrice * @OrderQty > 98]`  
   
- 此 XPath 查询返回满足该谓词`@UnitPrice * @OrderQty > 98`的所有** \<OrderDetail>** 元素。 如果在带批注的架构中使用**固定的 14.4**数据类型对**单价**进行批注，则此谓词等效于 SQL 表达式：  
+ 此 XPath 查询返回 **\<OrderDetail>** 满足该谓词的所有元素 `@UnitPrice * @OrderQty > 98` 。 如果在带批注的架构中使用**固定的 14.4**数据类型对**单价**进行批注，则此谓词等效于 SQL 表达式：  
   
  `CONVERT(float(53), CONVERT(money, OrderDetail.UnitPrice)) * CONVERT(float(53), OrderDetail.OrderQty) > CONVERT(float(53), 98)`  
   
@@ -181,6 +182,6 @@ CONVERT(float(53), 98)
 ```  
   
 > [!NOTE]  
->  如果在该架构中使用的 XSD 数据类型与数据库中的基础 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型不兼容，或者不可能执行 XPath 数据类型转换，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能会返回错误。 例如，如果使用**id 前缀**批注批注了 "**雇员**id" 属性，则 XPath `Employee[@EmployeeID=1]`将生成一个错误，因为**雇员** **id 具有 id 前缀**批注，因此不能转换为**数字**。  
+>  如果在该架构中使用的 XSD 数据类型与数据库中的基础 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型不兼容，或者不可能执行 XPath 数据类型转换，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能会返回错误。 例如，如果使用**id 前缀**批注批注了 "**雇员**id" 属性，则 XPath 将 `Employee[@EmployeeID=1]` 生成一个错误，因为**雇员** **id 具有 id 前缀**批注，因此不能转换为**数字**。  
   
   

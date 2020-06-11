@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2f0ab717-05f3-427e-b8cd-a8bdca374add
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6a09984f089a88f90798c2ca8f4c2514c06bc1cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b98037ea9f26c339cdf7aba22c37e2cfb3dfbb97
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079749"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543809"
 ---
 # <a name="monitor-an-analysis-services-instance"></a>监视 Analysis Services 实例
   可以使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或性能监视器（此应用程序有时称为 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] PerfMon **）监视**的性能。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 用于创建和管理跟踪并分析和重播跟踪结果。 性能监视器报告服务器状态（通过某些计数器进行索引），下一节中将对此进行讨论。  

@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7a7a9c18599d13c4db510793a1d75c85bbb7a829
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54489088aa6edc540dd2da0fb0d9121fc0c6d4b9
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070865"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670412"
 ---
 # <a name="data-mining-extensions-dmx-statements"></a>数据挖掘扩展插件 (DMX) 语句
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  在中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]使用数据挖掘模型涉及以下主要任务：  
+  在中使用数据挖掘模型 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 涉及以下主要任务：  
   
 -   创建挖掘结构和挖掘模型  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68070865"
  使用[SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md)语句将现有挖掘模型的结构复制到新的挖掘模型中，并使用相同的数据为新模型定型。  
   
  浏览挖掘模型  
- 使用[SELECT &#40;DMX&#41;](../dmx/select-dmx.md)语句来浏览数据挖掘算法在模型定型过程中计算并存储在数据挖掘模型中的信息。 与[!INCLUDE[tsql](../includes/tsql-md.md)]类似，可以在 SELECT 语句中使用多个子句来扩展其功能。 这些子句包括模型> 中[ \< ](../dmx/select-distinct-from-model-dmx.md) [ \<不同于模型>。事例](../dmx/select-from-model-cases-dmx.md)，[从\<模型>。SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)，[从\<模型>。内容](../dmx/select-from-model-content-dmx.md)和[从\<模型>。DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)。  
+ 使用[SELECT &#40;DMX&#41;](../dmx/select-dmx.md)语句来浏览数据挖掘算法在模型定型过程中计算并存储在数据挖掘模型中的信息。 与类似 [!INCLUDE[tsql](../includes/tsql-md.md)] ，可以在 SELECT 语句中使用多个子句来扩展其功能。 这些子句包括模型> 中[不同于 \< 模型>](../dmx/select-distinct-from-model-dmx.md) [ \< 。事例](../dmx/select-from-model-cases-dmx.md)，[从 \< 模型>。SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)，[从 \< 模型>。内容](../dmx/select-from-model-content-dmx.md)和[从 \< 模型>。DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)。  
   
  对挖掘模型进行预测  
  使用 SELECT 语句的[预测联接](../dmx/select-from-model-prediction-join-dmx.md)子句来创建基于现有挖掘模型的预测。  

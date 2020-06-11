@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17c7e7ae-273c-4a6b-9a35-e8b9b8e65999
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b2bb75ec06d9b5c14ce5c2dcc85561412b362b40
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4df97455d2fae8cb3375967a8e37a2329a7509fa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063173"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527906"
 ---
 # <a name="attribute-profiles-tab-mining-model-viewer"></a>“属性配置文件”选项卡（挖掘模型查看器）
   可以使用 **“属性配置文件”** 选项卡，来查看 Naive Bayes 模型状态中输入值的分布如何生成结果属性的每个状态。 值的分布会显示为一个彩色直方图且所有分布都以表格格式显示，以便能更轻松地比较值。  
@@ -46,7 +45,7 @@ ms.locfileid: "66063173"
  **属性配置文件**  
  该表包含以下列：  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**特性**|列出挖掘模型中包含的挖掘模型列。|  
 |**状态**|一个说明相应属性行中的颜色所表示的状态的可选列。 通过使用 **“显示图例”** 复选框进行添加或删除。|  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c133d624-f35e-486e-be9f-ceafd906f168
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 225f5d757ee6b1d1da5c57b457d599fe4bb42d6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 185ea27c344ccb9e06f914507faca3fea9554dae
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086769"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526425"
 ---
 # <a name="create-processing-query-dialog-box-analysis-services---multidimensional-data"></a>“创建处理查询”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “创建处理查询” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，在 **“存储选项”** 对话框的 **“通知”** 选项卡中创建处理查询。 处理查询返回的行集包含与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象相关联的表自上次轮询之后所做的更改，用于增量更新该对象的多维 OLAP (MOLAP) 缓存。 Analysis Services 使用另一种称为轮询查询的查询，来轮询与对象相关联的表并确定该表是否已经更改。 完全更新对象的 MOLAP 缓存时，不需要处理查询。  
@@ -59,7 +58,7 @@ ms.locfileid: "66086769"
  **Toolbar**  
  使用工具栏可以管理数据集、选择要显示的窗格以及控制各种查询函数。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**切换到一般查询生成器**|选择此选项将只显示可用于一般查询生成器视图的选项。 仅显示下列选项：<br /><br /> **SQL 窗格**<br /><br /> **结果窗格**<br /><br /> **“工具栏”**，只包含 **“切换到 VDT 查询生成器”** 和 **“运行”**<br /><br /> 注意：只有在选择了“切换到 VDT 查询生成器”时，才会显示此选项。 ****|  
 |**“切换到 VDT 查询生成器”**|选择此选项将显示可用于 Visual Database Tools (VDT) 查询生成器视图的所有选项。<br /><br /> 注意：只有选定了“切换到一般查询生成器” **** ，才会显示此选项。|  
@@ -67,7 +66,7 @@ ms.locfileid: "66086769"
 |**显示/隐藏网格窗格**|显示或隐藏 **网格窗格**。<br /><br /> 注意：只有在选择了“切换到 VDT 查询生成器”时，才会显示此选项。 ****|  
 |**显示/隐藏 SQL 窗格**|显示或隐藏 **SQL 窗格**。<br /><br /> 注意：只有在选择了“切换到 VDT 查询生成器”时，才会显示此选项。 ****|  
 |**显示/隐藏结果窗格**|显示或隐藏 **结果窗格**。<br /><br /> 注意：只有在选择了“切换到 VDT 查询生成器”时，才会显示此选项。 ****|  
-|**用**|运行查询。 结果将显示在 "**结果" 窗格**中。|  
+|**运行**|运行查询。 结果将显示在 "**结果" 窗格**中。|  
 |**验证 SQL**|验证查询中的 SQL 语句。<br /><br /> 注意：只有在选择了“切换到 VDT 查询生成器”时，才会显示此选项。 ****|  
 |**升序排序**|依据 **网格窗格**中的所选列对输出行按升序排序。<br /><br /> 注意：只有在选择了“切换到 VDT 查询生成器”时，才会显示此选项。 ****|  
 |**降序排序**|依据 **网格窗格**中的所选列对输出行按降序排序。<br /><br /> 注意：只有在选择了“切换到 VDT 查询生成器”时，才会显示此选项。 ****|  

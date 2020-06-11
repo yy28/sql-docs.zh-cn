@@ -1,5 +1,6 @@
 ---
 title: SSMA for MySQL （MySQLToSQL）的入门 |Microsoft Docs
+description: 了解 MySQL 安装过程的 SQL Server 迁移助手（SSMA），并熟悉 SSMA 用户界面。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 5a1adb6d9354dc870c11fab0a68f6c92e704ebfb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6dce90d0c8626032d92c9ecec61cbbaf2556e90
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67984535"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293794"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL 入门 (MySQLToSQL)
 利用适用于 MySQL 的 SQL Server 迁移助手（SSMA），你可以快速将 MySQL 数据库架构转换为 SQL Server 或 Azure SQL 数据库架构，将生成的架构上传到 SQL Server 或 Azure SQL 数据库，以及将数据从 MySQL 迁移到 SQL Server 或 Azure SQL DB。  
@@ -37,7 +38,7 @@ ms.locfileid: "67984535"
   
 若要开始迁移，必须执行以下操作：  
   
-1.  创建新项目。  
+1.  创建一个新的项目。  
   
 2.  连接到 MySQL 数据库。  
   
@@ -96,11 +97,11 @@ SSMA 有两个工具栏：项目工具栏和迁移工具栏。
   
 |||  
 |-|-|  
-|**Button**|**函数**|  
+|**Button**|**Function**|  
 |**创建报表**|将所选 MySQL 对象转换为 SQL Server 或 Azure SQL DB 对象，然后创建一个报告，该报告显示转换成功的方式。<br /><br />除非在 MySQL 元数据资源管理器中选择了对象，否则将禁用此命令。|  
 |**转换架构**|将所选 MySQL 对象转换为 SQL Server 或 Azure SQL DB 对象。<br /><br />除非在 MySQL 元数据资源管理器中选择了对象，否则将禁用此命令。|  
 |**迁移数据**|将数据从 MySQL 数据库迁移到 SQL Server 或 Azure SQL DB。 在运行此命令之前，必须将 MySQL 架构转换为 SQL Server 或 Azure SQL 数据库架构，然后将对象加载到 SQL Server 或 Azure SQL DB 中。<br /><br />除非在 MySQL 元数据资源管理器中选择了对象，否则将禁用此命令。|  
-|**停止**|停止当前进程。|  
+|**Stop**|停止当前进程。|  
   
 ### <a name="menus"></a>菜单  
 下表显示了 SSMA 菜单。  
@@ -110,7 +111,7 @@ SSMA 有两个工具栏：项目工具栏和迁移工具栏。
 |**菜单**|**说明**|  
 |**File**|包含用于处理项目、连接到 MySQL 以及连接到 SQL Server 或 Azure SQL 数据库的命令。|  
 |**编辑**|包含用于查找和处理详细信息页中的文本的命令。 若要打开 "**管理书签**" 对话框，请在 "编辑" 菜单上单击 "管理书签"。 在对话框中，您将看到现有书签的列表。 您可以使用对话框右侧的按钮来管理书签。|  
-|**查看**|包含**同步元数据**资源管理器命令。 这会同步 MySQL 元数据资源管理器与 SQL Server 或 Azure SQL DB 元数据资源管理器之间的对象。 还包含用于显示和隐藏 "**输出**" 和 "**错误列表**" 窗格以及用于管理布局的选项**布局**的命令。|  
+|**视图**|包含**同步元数据**资源管理器命令。 这会同步 MySQL 元数据资源管理器与 SQL Server 或 Azure SQL DB 元数据资源管理器之间的对象。 还包含用于显示和隐藏 "**输出**" 和 "**错误列表**" 窗格以及用于管理布局的选项**布局**的命令。|  
 |**工具**|包含用于创建报表、转换架构、从数据库刷新、迁移对象和数据，并另存为脚本的命令。 还提供对**全局设置、"默认项目设置**" 和 "**项目设置**" 对话框的访问。|  
 |**帮助**|提供对 SSMA 帮助和的 "**关于**" 对话框的访问。|  
   
