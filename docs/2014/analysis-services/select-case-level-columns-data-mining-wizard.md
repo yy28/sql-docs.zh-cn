@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b110af78-8eee-4817-93da-d63c1603f6c8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1f41b6138093b5ecbd6793a5c5210a9e8c6c412b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e36019b36426dd596edc616a739aba6730cf62b0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069654"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538339"
 ---
 # <a name="select-case-level-columns-data-mining-wizard"></a>选择事例级别列（数据挖掘向导）
   可以使用 **“选择事例级别列”** 页，从基础源多维数据集维度中选择要作为挖掘结构的事例级别列的属性和度量值。  

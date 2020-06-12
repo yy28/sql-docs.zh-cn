@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a663e11-e40c-4708-ad18-fabb6c976fa4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: afe304e3fa76be805a64e9bd662bc21500ac2fa7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92ed5c43fa2b7484485b915d42946121487386d9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081591"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528483"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>记录挖掘模型（Excel 数据挖掘外接程序）
   ![“数据挖掘”功能区中的“文档模型”按钮](media/dmc-docmodel.gif "“数据挖掘”功能区中的“文档模型”按钮")  
@@ -37,7 +36,7 @@ ms.locfileid: "66081591"
   
 4.  在 "**选择文档详细信息**" 对话框中，选择以下两个选项之一：**完整信息**或**摘要信息**。  
   
-5.  单击“完成”  。  
+5.  单击“完成”。  
   
 6.  向导将自动创建一个新的工作表，其中包含名为**Model 文档**的指定报表  
   
@@ -57,7 +56,7 @@ ms.locfileid: "66081591"
 |-|-|-|  
 |**元数据**|模型名称<br /><br /> 模型说明<br /><br /> 算法名称<br /><br /> 上次处理日期||  
 |**模型结果**|关联|项集计数<br /><br /> 规则计数|  
-||聚类分析|分类计数<br /><br /> 对每个分类的支持|  
+||群集|分类计数<br /><br /> 对每个分类的支持|  
 ||决策树|树数<br /><br /> 每个树中的节点数|  
 ||线性回归|树数（始终为 1）<br /><br /> 节点数（始终为 1）|  
 ||Naïve Bayes|重要属性|  

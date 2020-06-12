@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7f811e02-0fe6-45c9-a7b7-29c61032d96b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 866bdea710033a0cfa3bdadb34282c96c810d730
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69f68beecc8f4ce7f8f4da3e36f2f9f400575c9d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072398"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541259"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>名称匹配（数据源视图向导）(Analysis Services)
   可以使用 **“名称匹配”** 页，针对为数据源视图选择的表以及架构中的其他表，选择用于检测它们之间可能存在的关系的条件。 如果这些表之间不存在物理外键关系，则可以使用所选的条件帮助标识相关的表并将这些表添加到数据源视图中。 通过名称匹配标识的逻辑关系也可以添加到数据源视图中。  

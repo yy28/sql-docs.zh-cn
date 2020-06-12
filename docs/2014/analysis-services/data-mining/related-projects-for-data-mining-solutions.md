@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: af175693a93535b21b399cf4916ca4291fc94dfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc0f235871607363b436867d44affd561876bf1e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082991"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520593"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>数据挖掘解决方案的相关项目
   数据挖掘解决方案中至少要包含数据挖掘项目，该项目定义了数据源、数据源视图、挖掘结构和挖掘模型。 但是，在使用数据挖掘模型做出日常决策时，将数据挖掘与预测分析解决方案的其他部分集成非常重要，其中可包含以下过程和组成部分：  

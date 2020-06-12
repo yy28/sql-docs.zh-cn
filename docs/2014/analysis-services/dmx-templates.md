@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3bf7682ce42422efb0e47e4272e53933eba92a4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6973256746d668569d977cedbc2500ee007cd6ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081562"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528509"
 ---
 # <a name="dmx-templates"></a>DMX 模板
   数据挖掘模板可帮助您快速生成复杂的查询。 虽然 DMX 查询的常规语法具有详细说明，但借助于这些模板，可通过单击并且指向参数和数据源，更轻松地生成查询。  
@@ -42,7 +41,7 @@ ms.locfileid: "66081562"
   
      但要注意，如果在使用查询编辑器时切换视图，则上一视图中的所有信息都将被清除。 更改视图前，请将 DMX 语句复制并粘贴到一个单独的文件中，保存好您的工作结果。  
   
-8.  单击“完成”  。 在 "**选择目标**" 对话框中，指定要将结果保存到的位置。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+8.  单击“完成”。 在 "**选择目标**" 对话框中，指定要将结果保存到的位置。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 > [!NOTE]  
 >  如果成功执行语句，则发送到服务器的 DMX 语句也将记录在**跟踪**窗口中。 有关如何使用跟踪功能的详细信息，请参阅[trace &#40;Excel 数据挖掘客户端&#41;](trace-data-mining-client-for-excel.md)。  
@@ -74,7 +73,7 @@ ms.locfileid: "66081562"
   
  **创建**  
   
- 使用这些模板可生成自定义模型或数据结构。 您不仅限于向导支持的模型，您可以使用您连接到[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的实例所支持的任何数据挖掘算法，包括插件算法。  
+ 使用这些模板可生成自定义模型或数据结构。 您不仅限于向导支持的模型，您可以使用您连接到的实例所支持的任何数据挖掘算法 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，包括插件算法。  
   
 -   挖掘模型  
   

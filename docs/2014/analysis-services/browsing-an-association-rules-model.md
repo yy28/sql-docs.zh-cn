@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: faffe208-7a64-4ec6-825f-ecbaa79caff7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30ff9705949be3fb9bf99d985d0db1aa17d93ab1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69002d17205a5631d555e1022b8adeb9e51d3db2
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088471"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527728"
 ---
 # <a name="browsing-an-association-rules-model"></a>浏览关联规则模型
-  使用 "**浏览**" 打开关联模型时，该模型将显示在交互式查看器中，类似于中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的关联规则查看器。  此查看器让您能对彼此关联的项一目了然，并显示可用于预测或提出建议的规则。  
+  使用 "**浏览**" 打开关联模型时，该模型将显示在交互式查看器中，类似于中的关联规则查看器 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。  此查看器让您能对彼此关联的项一目了然，并显示可用于预测或提出建议的规则。  
   
 ##  <a name="explore-the-model"></a><a name="BKMK_ViewerTabs"></a>浏览模型  
- 当您打开使用[!INCLUDE[msCoName](../includes/msconame-md.md)]关联规则算法创建的挖掘模型时，"**浏览**" 窗口包括以下视图，每个视图都允许您浏览模型的不同方面：  
+ 当您打开使用关联规则算法创建的挖掘模型时 [!INCLUDE[msCoName](../includes/msconame-md.md)] ，"**浏览**" 窗口包括以下视图，每个视图都允许您浏览模型的不同方面：  
   
 -   [项集](#BKMK_Itemsets)  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66088471"
   
  可以通过更改 "**最低支持**" 和 "**最大行**数" 值来筛选选项卡中显示的项集的数目。 如果增加**最小支持**值，列表将显示较少的项集，但项集将是输入数据中更常见的值。 与 "重要" 是否相同是 "重要" 是另一个问题，你可以使用 "**规则**" 选项卡浏览。  
   
- 请注意，更改 "**项集**" 选项卡上的支持值或其他控件仅更改显示的项，而不会影响基础模型。 如果要生成更少或更多的项集或限制其大小，应使用 "**算法参数**" `MINIMUM_SUPPORT`对话框`MAXIMUM_SUPPORT`中提供的参数和。  
+ 请注意，更改 "**项集**" 选项卡上的支持值或其他控件仅更改显示的项，而不会影响基础模型。 如果要生成更少或更多的项集或限制其大小，应使用 `MINIMUM_SUPPORT` `MAXIMUM_SUPPORT` "**算法参数**" 对话框中提供的参数和。  
   
 ##### <a name="explore-the-itemsets-list"></a>探索项集列表  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66088471"
   
 2.  若要将重点放在可能的一个或多个组合中，请在 "**筛选**项集" 框中键入一些文本。  
   
-     这里，我们`Gloves`键入了。 应用此筛选器时，列表将会刷新，仅显示包含手套的项集。 这样一来，您可以重点关注顾客购买手套及其他一些商品的交易。  
+     这里，我们键入了 `Gloves` 。 应用此筛选器时，列表将会刷新，仅显示包含手套的项集。 这样一来，您可以重点关注顾客购买手套及其他一些商品的交易。  
   
      **“筛选项集”** 选项还会显示您以前使用过的筛选器列表。  
   
@@ -142,7 +141,7 @@ ms.locfileid: "66088471"
  [返回页首](#BKMK_ViewerTabs)  
   
 ## <a name="more-about-association-models"></a>有关关联模型的详细信息  
- 您可以使用 "**浏览**" 功能打开并浏览使用 Microsoft 关联规则算法创建的任何模型。 这包括使用[购物篮分析 &#40;Table AnalysisTools For Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md)工具、**表分析工具**功能区中或中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]生成的模型。  
+ 您可以使用 "**浏览**" 功能打开并浏览使用 Microsoft 关联规则算法创建的任何模型。 这包括使用[购物篮分析 &#40;Table AnalysisTools For Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md)工具、**表分析工具**功能区中或中生成的模型 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。  
   
  如果使用购物篮分析工具创建关联规则模型，则会自动为您配置许多高级选项。  
   

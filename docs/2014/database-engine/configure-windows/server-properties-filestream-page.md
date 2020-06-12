@@ -14,17 +14,17 @@ ms.assetid: 8a8d38d3-e97a-4b09-a40b-659b2e3a5c47
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 70531800a43b0c8680dac3b0c5bd2633e5c09bce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe1d0efb6669a5b001793712bfe6f6e5990e0c5b
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809126"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858709"
 ---
 # <a name="sql-server-properties-filestream-page"></a>SQL Server 属性（FILESTREAM 页）
   使用此页可针对此 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安装启用 FILESTREAM。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **针对 Transact-SQL 访问启用 FILESTREAM**  
  选中此项可针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 访问启用 FILESTREAM。 必须选中此控制选项，才能使用其他控制选项。  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c12f202-2ed9-41fa-bee2-0f7ab3ff058a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 22f8733c816014bbdd29b44c4ed85d5fc3d2127d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac1067bf817051f28c939ce5f438dd617e4a9495
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085793"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524829"
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>分类矩阵（Analysis Services - 数据挖掘）
   “分类矩阵” ** 通过确定预测值是否与实际值匹配，将模型中的所有事例分为不同的类别。 然后会对每个类别中的所有事例进行计数，并在矩阵中显示总计。 分类矩阵是评估统计模型的标准工具，有时被称为“混淆矩阵” **。  

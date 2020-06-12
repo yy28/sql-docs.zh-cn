@@ -1,5 +1,6 @@
 ---
 title: min 函数（XQuery） |Microsoft Docs
+description: 了解 XQuery min （）函数，该函数返回某个序列中的某一项，其值小于其他值的值。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: db0b7d94-3fa6-488f-96d6-6a9a7d6eda23
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 29e5718debadb4725bc9d9ebcd499c261ed23d54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b209f6d46c47de5a604eee3c14c681a333bcdec8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67985757"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529957"
 ---
 # <a name="aggregate-functions---min"></a>聚合函数 - min
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  要返回其最小值的一组数值。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  传递给**min （）** 的原子化值的所有类型都必须是同一基类型的子类型。 接受的基类型是支持**gt**操作的类型。 这些类型包括三种内置数值基类型、日期/时间基类型、xs:string、xs:boolean 和 xdt:untypedAtomic。 类型为 xdt:untypedAtomic 的值将转换为 xs:double。 如果有这些类型的混合，或者如果传递其他类型的其他值，则会引发静态错误。  
   
  **Min （）** 的结果接收传入类型的基类型，例如，在 Xdt： untypedAtomic 的情况下，xs： double。 如果输入静态为空，则隐含为空并返回静态错误。  
@@ -70,7 +71,7 @@ WHERE ProductModelID=7
   
 -   XQuery prolog 中的**namespace**关键字定义命名空间前缀。 然后，将此前缀用于 XQuery 主体中。  
   
- XQuery 体构造具有\<位置> 元素与 WCID 和**LABORHRS**属性的 XML。  
+ XQuery 体构造具有 \<Location> WCID 和**LaborHrs**属性的元素的 XML。  
   
 -   该查询也检索 ProductModelID 和名称值。  
   

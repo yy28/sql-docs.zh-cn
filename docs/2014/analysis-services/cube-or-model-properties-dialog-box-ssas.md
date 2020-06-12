@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 97e367f9-f95a-4163-add1-c74fd22db249
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6857ece2f81ffdba839ec1a7f0ef420ec5d0acdf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: adeb16a91ef4d7b540e09b5e1f8b5b004be472e4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086602"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526253"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>“多维数据集或模型属性”对话框 (SSAS)
   可以使用 **中的** “数据库属性” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框设置多维数据集或模型数据库的属性。 通过右键单击“对象资源管理器”**** 中的多维数据集或模型，再选择“属性”****，即可显示此对话框。  
@@ -42,7 +41,7 @@ ms.locfileid: "66086602"
 |**脚本缓存处理模式**|选择多维数据集或模型的脚本缓存所使用的处理模式。 有关此属性的值的详细信息，请参阅 <xref:Microsoft.AnalysisServices.Cube.ScriptCacheProcessingMode%2A>。|  
 |**处理模式**|选择多维数据集或模型所使用的处理模式。 有关此属性的值的详细信息，请参阅 <xref:Microsoft.AnalysisServices.Cube.ProcessingMode%2A>。|  
 |**存储位置**|键入的文件夹将用作与多维数据集或模型关联的度量值组和分区的默认存储位置，或通过单击省略号按钮 (**...**) 显示“查找远程文件夹”**** 对话框以选择文件夹。 有关“查找远程文件夹”**** 对话框的详细信息，请参阅[“查找远程文件夹”对话框（Analysis Services - 多维数据）](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)。<br /><br /> 有关此属性的值的详细信息，请参阅 <xref:Microsoft.AnalysisServices.Cube.StorageLocation%2A>。|  
-|**状态**|显示多维数据集或模型的处理状态。 有关此属性的值的详细信息，请参阅 <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>。|  
+|**State**|显示多维数据集或模型的处理状态。 有关此属性的值的详细信息，请参阅 <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>。|  
 |**LastProcessed**|显示多维数据集或模型的上次处理日期和时间。|  
   
 ## <a name="see-also"></a>另请参阅  

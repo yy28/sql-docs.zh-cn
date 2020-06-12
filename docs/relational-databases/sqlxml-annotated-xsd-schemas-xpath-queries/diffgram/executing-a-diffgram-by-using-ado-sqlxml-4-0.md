@@ -1,5 +1,6 @@
 ---
 title: 使用 ADO 执行 DiffGram （SQLXML）
+description: 了解如何在 Microsoft Visual Basic 应用程序中使用 ADO （SQLXML 4.0）执行 DiffGram 文件以建立与 Microsoft SQL Server 实例的连接。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7ca55bdea021127d73bcef8bb2e695a5fe45123
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64835df5e298f85af2cf4560273a1ece16683b0c
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246653"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306204"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>使用 ADO 执行 DiffGram (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "75246653"
   
 -   该命令的输出流设置为**StrmOut**对象（adodb.recordset）**。流**）接收任何返回的数据。  
   
--   当使用 SQLOLEDB 访问接口时，默认情况下，您将获取 Sqlxmlx.dll 提供的 Microsoft SQLXML 功能。 若要将 Sqlxml4.dll 与 SQLOLEDB 提供程序一起使用，必须在 SQLOLEDB 提供程序**连接**对象上将**sqlxml 版本**属性设置为**sqlxml。**  
+-   当使用 SQLOLEDB 访问接口时，默认情况下，您将获取 Sqlxmlx.dll 提供的 Microsoft SQLXML 功能。 若要将 Sqlxml4.dll 与 SQLOLEDB 提供程序一起使用，必须在 SQLOLEDB 提供程序**连接**对象上将**sqlxml Version**属性设置为**sqlxml。**  
   
 -   执行该命令 (DiffGram)。  
   

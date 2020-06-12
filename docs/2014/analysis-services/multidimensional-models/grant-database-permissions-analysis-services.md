@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: be7e5f64-af43-47d6-84a5-c5c1c277d644
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9529fbcb784d0f6a2a2ae88f5a976e8607e0705a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9b4e5ac88a81728d6e29d32b0d330ba8fd408633
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175728"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546679"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>授予数据库权限 (Analysis Services)
   如果你在介绍关系数据库中具有后台的 Analysis Services 数据库管理，则需要理解的首要事项为在数据访问方面，数据库不是 Analysis Services 中的主要安全对象。
@@ -61,7 +60,7 @@ ms.locfileid: "78175728"
 
 #### <a name="create-roles-in-ssms"></a>在 SSMS 中创建角色
 
-1.  在[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中，连接到[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例，打开 "**数据库**" 文件夹，选择数据库，然后右键单击 "**角色** | " "**新建角色**"。
+1.  在中 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，连接到实例 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ，打开 "**数据库**" 文件夹，选择数据库，然后右键单击 "**角色**" "  |  **新建角色**"。
 
 2.  在“常规” **** 窗格中，输入名称（例如：DBAdmin）。
 
@@ -72,10 +71,10 @@ ms.locfileid: "78175728"
 5.  单击“确定” **** ，完成角色创建。
 
 ## <a name="process-database"></a>Process Database
- 定义授予数据库权限的角色时，可以跳过`Full Control`并选择 "只`Process Database`是"。 在数据库级别设置的该权限允许对数据库内的所有对象进行处理。 有关详细信息，请参阅 [授予处理权限 (Analysis Services)](grant-process-permissions-analysis-services.md)
+ 定义授予数据库权限的角色时，可以跳过 `Full Control` 并选择 "只是" `Process Database` 。 在数据库级别设置的该权限允许对数据库内的所有对象进行处理。 有关详细信息，请参阅 [授予处理权限 (Analysis Services)](grant-process-permissions-analysis-services.md)
 
 ## <a name="read-definition"></a>Read Definition
- 与`Process Database`一样， `Read Definition`在数据库级别设置权限会对数据库中的其他对象产生级联影响。 如果想在更为精细的级别上设置“读取定义”权限，则必须清除“常规”窗格中作为数据库属性的“读取定义”。 有关详细信息，请参阅[授予对象元数据的读取定义权限 (Analysis Services)](grant-read-definition-permissions-on-object-metadata-analysis-services.md)。
+ 与一样 `Process Database` ， `Read Definition` 在数据库级别设置权限会对数据库中的其他对象产生级联影响。 如果想在更为精细的级别上设置“读取定义”权限，则必须清除“常规”窗格中作为数据库属性的“读取定义”。 有关详细信息，请参阅[授予对象元数据的读取定义权限 (Analysis Services)](grant-read-definition-permissions-on-object-metadata-analysis-services.md)。
 
 ## <a name="see-also"></a>另请参阅
  [授予服务器管理员权限 &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) [授予过程权限 &#40;Analysis Services](grant-process-permissions-analysis-services.md)&#41;

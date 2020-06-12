@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17f24c8d-43cd-4f4d-83b3-a41ee8fbe8e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 743eefc1bd13dec480ec8773a8602773ded7ca6b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32ac73a2d6fde38d15d1f45a8439293695749ea4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081853"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528693"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>“设计”窗格（“挖掘模型预测”视图）
   **“设计”** 窗格包含可用于生成数据挖掘预测的预测查询生成器。 您可以设计使用数据源视图中的输入数据表的预测查询来生成大量预测，也可以创建允许您提供各个值的单独预测查询。  
@@ -68,12 +67,12 @@ ms.locfileid: "66081853"
  **单独查询输入**  
  选择“单独查询”**** 按钮时，会启用此选项。 包含以下列：  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**挖掘模型列**|列出在 **“挖掘模型”** 表中选择的挖掘模型中包含的挖掘模型列。|  
 |**值**|从包含所选挖掘模型列的各个可能状态的列表中选择一个值。<br /><br /> 如果该列为嵌套表列，单击值单元可以打开 **“嵌套表输入”** 对话框。|  
   
- **源**  
+ **Source**  
  选择包含要为该列使用的字段的源。 你可以使用在“挖掘模型”**** 表中选择的挖掘模型、在“选择输入表”**** 表中选择的输入表、预测函数或自定义表达式。  
   
  可以将列从包含挖掘模型的表和输入表中拖动到单元。  
@@ -82,10 +81,10 @@ ms.locfileid: "66081853"
  从派生自源表的列的列表中选择列。 如果在 **“源”** 中选择了 **“预测函数”**，则此字段将包含所选挖掘模型中可用的预测函数。  
   
  **组**  
- 与“和/或”**** 列一起使用，将表达式组合到一起。 例如，`(expr1 Or expr2) And expr3` 。  
+ 与“和/或”**** 列一起使用，将表达式组合到一起。 例如 `(expr1 Or expr2) And expr3`。  
   
  **And/Or**  
- 用于创建逻辑查询。 例如，`(expr1 Or expr2) And expr3` 。  
+ 用于创建逻辑查询。 例如 `(expr1 Or expr2) And expr3`。  
   
  **条件/参数**  
  指定应用于该列的条件表达式或用户表达式。 可以将列从包含挖掘模型的表和输入表中拖动到单元。  

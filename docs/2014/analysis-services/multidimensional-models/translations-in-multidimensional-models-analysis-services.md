@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a80c7950ec4079021bbcf03d9ccee6970d68786b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d01aeb00c7cf96bf993867388d6a2cbbede82d90
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072735"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547305"
 ---
 # <a name="translations-in-multidimensional-models"></a>多维模型中的翻译
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的多语言支持是使用翻译实现的。 翻译包含一个语言标识符，以及可以以多种语言显示的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象属性的绑定。 例如，您可以为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库定义一种翻译，从而以指定的语言显示数据库的标题和说明。 有关翻译的详细信息，请参阅[多维数据集翻译](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)。  
+  中的多语言支持 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 是使用翻译实现的。 翻译包含一个语言标识符，以及可以以多种语言显示的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象属性的绑定。 例如，您可以为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库定义一种翻译，从而以指定的语言显示数据库的标题和说明。 有关翻译的详细信息，请参阅[多维数据集翻译](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)。  
   
 ## <a name="defining-translations"></a>定义翻译  
  可以通过使用要翻译的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 对象的相应设计器，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中定义翻译。 定义翻译时，将创建一个与相应的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象关联的 `Translation` 对象。对于关联的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的属性，被创建的对象具有以指定语言表示的指定的显式文字值。  
@@ -40,11 +39,11 @@ ms.locfileid: "66072735"
 |命名集|`Caption`|[翻译 &#40;多维数据集设计器&#41; &#40;Analysis Services 多维数据&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |“计算成员”|`Caption`|[翻译 &#40;多维数据集设计器&#41; &#40;Analysis Services 多维数据&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |数据库维度 (Database dimension)|`Caption`, `AttributeAllMember`|[&#41; &#40;Analysis Services 多维&#41;数据的翻译 &#40;维度设计器](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
-|属性|`Caption`、 `CaptionColumn` <sup>1</sup>、 `AttributeHierarchyDisplayFolder`、 `NamingTemplate`、`MembersWithDataCaption`|[&#41; &#40;Analysis Services 多维&#41;数据的翻译 &#40;维度设计器](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
+|特性|`Caption`、 `CaptionColumn` <sup>1</sup>、 `AttributeHierarchyDisplayFolder` 、 `NamingTemplate` 、`MembersWithDataCaption`|[&#41; &#40;Analysis Services 多维&#41;数据的翻译 &#40;维度设计器](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
 |层次结构|`Caption`, `AllMemberName`|[&#41; &#40;Analysis Services 多维&#41;数据的翻译 &#40;维度设计器](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
 |级别|`Caption`|[&#41; &#40;Analysis Services 多维&#41;数据的翻译 &#40;维度设计器](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
   
- <sup>1</sup>属性`CaptionColumn`的属性可以绑定到数据源视图中的列，并且可以使用除了为实例指定的 Windows 排序规则以外的其他翻译。  
+ <sup>1</sup> `CaptionColumn` 属性的属性可以绑定到数据源视图中的列，并且可以使用除了为实例指定的 Windows 排序规则以外的其他翻译。  
   
 ### <a name="defining-attribute-translations"></a>定义属性翻译  
  与数据库维度中的属性关联的翻译在以下方面与其他翻译的处理方式不同：  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a16469d9-9d53-4e35-9982-fc06327a9d33
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bf51e9e73d1748d2be0a514d17ea727941391829
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7cbf22bb2524d94e3665fd79c5ceeeab5b5c88af
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076035"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547179"
 ---
 # <a name="data-sources-in-multidimensional-models"></a>多维模型中的数据源
   您导入或加载到多维模型中的所有数据都来自外部数据源。 通常源数据来自用于报告目的数据仓库，但它也可以来自可直接访问或通过媒介（如 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包）间接访问的任意关系数据库。  

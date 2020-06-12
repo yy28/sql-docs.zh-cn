@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ec69c7225d4c509d93787e667612269c4de91e23
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77b65e8361287ba09fa7f28cd74dd5f88d188f97
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085549"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523963"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>使用 XMLA 创建数据挖掘查询
   可以使用 AMO、DMX 或 XML/A 创建针对数据挖掘对象的各种查询。  
@@ -44,9 +43,9 @@ ms.locfileid: "66085549"
   
      **“结果”** 窗格中将显示返回的架构行集列表，该列表中包含当前实例中可用的所有行集的名称和行集列。  
   
-2.  在 "**查询**" 窗格中，将光标放在** \<限制列表之后>** 然后按 enter 添加新行。  
+2.  在**查询**窗格中，将光标置于后， **\<Restriction List>** 按 enter 添加新行。  
   
-3.  将光标置于空行上，然后键入** \<"SchemaName>DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName">**  
+3.  将光标置于空行上，然后键入** \<SchemaName> DMSCHEMA_MINING_MODEL_CONTENT \</SchemaName> **  
   
      完整的限制部分应如下所示：  
   
@@ -60,7 +59,7 @@ ms.locfileid: "66085549"
   
      `</Restrictions>`  
   
-4.  单击“执行” ****。  
+4.  单击“执行”  。  
   
      **“结果”** 窗格将显示指定架构行集的列名列表。  
   
@@ -94,7 +93,7 @@ ms.locfileid: "66085549"
   
      `</Restrictions>`  
   
-5.  单击“执行” ****。  
+5.  单击“执行”  。  
   
      “结果”窗格将显示架构定义以及指定模型的值。  
   

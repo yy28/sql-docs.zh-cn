@@ -1,5 +1,6 @@
 ---
 title: not 函数（XQuery） |Microsoft Docs
+description: 了解如何将 XQuery not （）函数与布尔值一起使用。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8711190a6d3cbae0c716f7f62af478b70b9473e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 24235099ec742d4c6d62e3d97ee1f551af24f7d4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038911"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524387"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>基于布尔值的函数 - not Function 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ fn:not($arg as item()*) as xs:boolean
 ## <a name="examples"></a>示例  
  本主题提供了对存储在 AdventureWorks 数据库的各种**xml**类型列中的 xml 实例的 XQuery 示例。  
   
-### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. 使用 not （） XQuery 函数查找其目录说明不包括规范> 元素的\<产品型号。  
+### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. 使用 not （） XQuery 函数查找其目录说明不包括元素的产品型号 \<Specifications> 。  
  下面的查询将构造包含产品型号的 XML，该产品型号的目录说明中不包括 <`Specifications`> 元素。  
   
 ```  
@@ -63,16 +64,16 @@ WHERE CatalogDescription.exist('
   
 -   由于文档使用命名空间，因此示例将使用 WITH NAMESPACES 语句。 另一种方法是在[XQuery 序言](../xquery/modules-and-prologs-xquery-prolog.md)中使用**declare namespace**关键字来定义前缀。  
   
--   然后，该查询将构造包含 <`Product`> 元素及其**PRODUCTMODELID**属性的 XML。  
+-   然后，该查询将构造包含 <`Product`> 元素及其**ProductModelID**属性的 XML。  
   
--   WHERE 子句使用[现有（）方法（XML 数据类型）](../t-sql/xml/exist-method-xml-data-type.md)来筛选行。 如果存在没有> 子元素\< \<规范的 ProductDescription> 元素，则**存在（）** 方法返回 True。 请注意**not （）** 函数的使用。  
+-   WHERE 子句使用[现有（）方法（XML 数据类型）](../t-sql/xml/exist-method-xml-data-type.md)来筛选行。 如果**存在** \<ProductDescription> 不具有子元素的元素，则存在（）方法返回 True \<Specification> 。 请注意**not （）** 函数的使用。  
   
- 此结果集为空，因为每个产品型号目录说明都\<包括规范> 元素。  
+ 此结果集为空，因为每个产品型号目录说明都包含 \<Specifications> 元素。  
   
 ### <a name="b-using-the-not-xquery-function-to-retrieve-work-center-locations-that-do-not-have-a-machinehours-attribute"></a>B. 使用 not() XQuery 函数检索没有 MachineHours 属性的生产车间  
  对 Instructions 列指定以下查询。 此列将存储产品型号的生产说明。  
   
- 对于特殊的产品型号，查询将检索未指定 MachineHours 的生产车间。 也就是说，> 元素的**MachineHours** \<位置未指定属性 MachineHours。  
+ 对于特殊的产品型号，查询将检索未指定 MachineHours 的生产车间。 也就是说，没有为元素指定属性**MachineHours** \<Location> 。  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -91,7 +92,7 @@ WHERE ProductModelID=7
   
 -   [XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md)中的**Declarenamespace**定义艾德作品的生产说明命名空间前缀。 它表示在生产说明文档中使用了相同的命名空间。  
   
--   在查询中，如果没有**MachineHours**属性，则**not （@MachineHours）** 谓词返回 True。  
+-   在查询中，如果没有**MachineHours**属性，则**not （ @MachineHours ）** 谓词返回 True。  
   
  结果如下：  
   

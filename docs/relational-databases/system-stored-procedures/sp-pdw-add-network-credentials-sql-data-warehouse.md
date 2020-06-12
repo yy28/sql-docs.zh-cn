@@ -1,7 +1,6 @@
 ---
 title: sp_pdw_add_network_credentials
 titleSuffix: Azure SQL Data Warehouse
-ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.service: sql-data-warehouse
 ms.reviewer: ''
@@ -12,17 +11,18 @@ ms.assetid: 0729eeff-ac7e-43f0-80fa-ff5346a75985
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 88ddae78b3c866556edbd9e3026e3cb86c747f51
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.custom: seo-dt-2019
+ms.openlocfilehash: a4f4fac6f7b7dc1f7809042bd9b784b754bec1a2
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73844412"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627489"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials （SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  这会在中[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]存储网络凭据，并将其与服务器关联。 例如，使用此存储过程可提供[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]适当的读/写权限，以便在目标服务器上执行数据库备份和还原操作，或创建用于 TDE 的证书的备份。  
+  这会在中存储网络凭据 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ，并将其与服务器关联。 例如，使用此存储过程可提供 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 适当的读/写权限，以便在目标服务器上执行数据库备份和还原操作，或创建用于 TDE 的证书的备份。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "“主题链接”图标") [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,7 +60,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
  如果在控制节点和所有计算节点上添加凭据失败，则会发生错误。  
   
 ## <a name="general-remarks"></a>一般备注  
- 此存储过程将向的 NetworkService 帐户添加网络凭据[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。 NetworkService 帐户在控制节点和计算节点[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上运行 SMP 的每个实例。 例如，在运行备份操作时，控制节点和每个计算节点将使用 NetworkService 帐户凭据获取目标服务器的读取和写入权限。  
+ 此存储过程将向的 NetworkService 帐户添加网络凭据 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 。 NetworkService 帐户 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在控制节点和计算节点上运行 SMP 的每个实例。 例如，在运行备份操作时，控制节点和每个计算节点将使用 NetworkService 帐户凭据获取目标服务器的读取和写入权限。  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

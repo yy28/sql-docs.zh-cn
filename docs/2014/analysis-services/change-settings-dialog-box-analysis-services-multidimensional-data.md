@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0041e042-d7ce-48f9-a690-a6dc65471ff3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 43dfc1dca2e60fe2f5e467556ee36c3add1a9da3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 717eabb3db136f048f7a39f2fc40f61ee60c253c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088253"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527633"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>“更改设置”对话框（Analysis Services - 多维数据）
   使用 **和** 中的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] “更改设置” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框，可以更改对 **“处理”** 对话框中所列对象的处理进行控制的设置。 单击 **“处理”** 对话框中的 **“更改设置”** ，将显示 **“更改设置”** 对话框。  
@@ -29,7 +28,7 @@ ms.locfileid: "66088253"
  **处理选项**  
  使用此选项卡可以修改与处理顺序、写回表和受处理操作影响的对象相关的设置。 该选项卡包含下列选项：  
   
- **并行**  
+ **Parallel**  
  单击此项可并行处理对象。  
   
  **最大并行任务数**  

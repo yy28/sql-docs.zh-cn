@@ -1,5 +1,6 @@
 ---
 title: sql：溢出字段（SQLXML）
+description: 了解如何使用 sql：溢出字段批注将列标识为将从 XML 文档接收所有未使用的数据的溢出列。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5757ce66dd0905f6c381d05caa99c6bb664021e9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8909a0eee54667ea74af44e774bb5262599084b
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246809"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689237"
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>批注解释 - sql:overflow-field
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75246809"
   
  由于它在溢出列中存储数据，XML 大容量加载还会存储为其定义了**sql：溢出字段**的父元素的开始标记和结束标记。  
   
- 例如，下面的架构描述>和** \<CustOrder>** 元素的** \<客户**。 上述每个元素都标识一个溢出列：  
+ 例如，下面的架构描述>和** \< CustOrder>** 元素的** \< 客户**。 上述每个元素都标识一个溢出列：  
   
 ```  
 <?xml version="1.0" ?>  
@@ -75,9 +76,9 @@ ms.locfileid: "75246809"
 </xsd:schema>  
 ```  
   
- 在架构中， ** \<Customer>** 元素映射到 Customer 表， ** \<Order>** 元素映射到 CustOrder 表。  
+ 在架构中， ** \< Customer>** 元素映射到 Customer 表， ** \< Order>** 元素映射到 CustOrder 表。  
   
- Customer>和** \<Order>** 元素都标识溢出列。 ** \<** 因此，XML 大容量加载将 Customer 表的 "溢出" 列中的** \<Customer>** 元素的所有未用子元素和属性，以及 CustOrder 表的溢出列中** \<Order>** 元素的所有未用子元素和属性。  
+ ** \< Customer>** 和** \< Order>** 元素都标识溢出列。 因此，XML 大容量加载将 Customer 表的 "溢出" 列中的** \< Customer>** 元素的所有未用子元素和属性，以及 CustOrder 表的溢出列中** \< Order>** 元素的所有未用子元素和属性。  
   
 ### <a name="to-test-a-working-sample"></a>测试工作示例  
   

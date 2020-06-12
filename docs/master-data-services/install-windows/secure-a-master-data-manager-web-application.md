@@ -5,17 +5,17 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0ac70d45886904032e1f61c01c35ee8542351029
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: c87fd72a7257615ab83a7e9845fdd4c6a80d70f7
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606509"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83731578"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>保护主数据管理器 Web 应用程序
 
@@ -41,13 +41,13 @@ ms.locfileid: "83606509"
   
 3.  在“操作”**** 窗格中，单击“绑定”****。  
   
-4.  单击 **添加**。  
+4.  单击“添加”。  
   
 5.  从列表中选择 **https**。  
   
 6.  选择 TLS/SSL 证书。  
   
-7.  单击 **“确定”** 。  
+7.  单击“确定”。  
   
 8.  可选。 若要删除 HTTP 以便用户只能使用 HTTPS 访问站点，请单击含有 **http**的行。 单击 **“删除”** ，然后在确认对话框上单击 **“是”**。  
   

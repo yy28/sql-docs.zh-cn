@@ -1,5 +1,6 @@
 ---
 title: SQLXMLOLEDB 提供程序（SQLXML）简介
+description: 了解 SQLXMLOLEDB 提供程序，它是通过 ActiveX 数据对象（ADO）公开 SQLXML 功能的 OLE DB 提供程序。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f94cf5002f0f587332df9ccc9a77e24010b8824
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 15375e7aaf860c5419e68cc64bb8e6e2cac125c1
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246675"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215899"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB 访问接口简介 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ oTestCommand.Execute , , adExecuteStream
   
  SQLXMLOLEDB 访问接口公开下列特定于访问接口的命令属性。  
   
-|命令<br /><br /> property|默认<br /><br /> （如果有）|说明|  
+|Command<br /><br /> property|默认<br /><br /> （如果有）|说明|  
 |--------------------------|----------------------------|-----------------|  
 |基路径|""|指定基本文件路径。 基本文件路径用于指定 XML 样式表语言 (XSL) 或映射架构文件的位置。 基文件路径还用于解析 xsl 或映射架构文件的相对路径，该路径已在 XSL 或 Mapping 架构属性中指定。<br /><br /> 有关使用此属性的示例，请参阅[&#40;SQLXMLOLEDB Provider&#41;执行 XPath 查询](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)。|  
 |ClientSideXML|False|如果希望在客户端上执行行集到 XML 的转换过程，而不是在服务器上执行，请将此属性设置为 True。 在希望将性能负载移到中间层时，此操作很有用。<br /><br /> 有关使用此属性的示例，请参阅[&#40;SQLXMLOLEDB 提供程序中执行 Sql 查询&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md)或[执行包含 &#40;SQLXMLOLEDB PROVIDER&#41;的 Sql 查询的模板](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md)。|  

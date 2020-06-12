@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1827cf0acf8e600c58efca82bb3223a00efb3e41
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e3ea13dc58815e82d82a3f3b5ffdd3c5d666d7e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217122"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543712"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>使用动态管理视图 (DMV) 监视 Analysis Services
   Analysis Services 动态管理视图 (DMV) 是公开与本地服务器操作和服务器运行状况有关信息的查询结构。 该查询结构是返回与 Analysis Services 实例有关的元数据和监视信息的架构行集的接口。  
@@ -98,7 +97,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  如果 DMV 不可用于给定行集，服务器将返回以下错误： "服务器无法识别\<t> 请求类型"。 所有其他错误均与语法问题有关。  
+>  如果 DMV 不适用于给定行集，服务器将返回以下错误： " \<schemarowset> 服务器无法识别请求类型"。 所有其他错误均与语法问题有关。  
   
 |行集|说明|  
 |------------|-----------------|  

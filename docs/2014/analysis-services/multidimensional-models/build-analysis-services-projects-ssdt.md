@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: caac03cb-b2b4-4652-8913-3dd39c4b0127
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97e32b80d19675b3763101d1c226529a48e23e68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e239176c970a73b5a110c47bca77d8963017487e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076772"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537309"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>生成 Analysis Services 项目 (SSDT)
   可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中生成 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目，就像在 Visual Studio 中生成任何编程项目一样。 生成项目时，会在输出目录中创建一组 XML 文件。 这些 XML 文件使用 Analysis Services 脚本语言 (ASSL)，此脚本语言是 XML 方言，可供包括 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 在内的客户端应用程序用来与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例进行通信以创建或修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象。 这些 XML 文件用于将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象定义部署到指定的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
@@ -47,13 +46,13 @@ ms.locfileid: "66076772"
 |*Projectname*.configsettings|包含部署过程中使用的配置设置，可以直接修改或在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导中修改这些设置（例如用于数据源的连接字符串）。|  
 |*Projectname*.deploymenttargets|包含部署过程中使用的目标设置，您可以直接修改或在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导中修改这些目标设置（例如服务器名称和数据库名称）。|  
 |*Projectname*.deploymentoptions|包含在部署过程中使用的各种选项设置，可以直接修改或在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导中修改这些选项设置（例如存储位置）|  
-|*Assemblyname*/*dllname。*.dll|用于每个被引用程序集的各个文件夹；每个文件夹包含程序集、被引用程序集以及输出调试信息的所有关联 .pdb 文件的 DLL。|  
+|*Assemblyname* /*dllname。*.dll|用于每个被引用程序集的各个文件夹；每个文件夹包含程序集、被引用程序集以及输出调试信息的所有关联 .pdb 文件的 DLL。|  
   
 |文件（在 obj 文件夹中）|说明|  
 |-----------------------------|-----------------|  
-|\<配置名称> \LastBuilt.xml|包含用来标识 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的上次生成时间的时间戳和哈希代码。|  
+|\<Configuration Name>\LastBuilt.xml|包含用来标识 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的上次生成时间的时间戳和哈希代码。|  
   
- 这些 XML 文件不包含\<Create> 和\<Alter> 标记，这些标记是在部署过程中构造的。  
+ 这些 XML 文件不包含 \<Create> 和 \<Alter> 标记，这些文件是在部署过程中构造的。  
   
  还会将被引用程序集（不包括标准系统和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 程序集）复制到输出目录。 引用解决方案中的其他项目时，首先使用相应的项目配置以及由项目引用建立的生成依赖项生成这些项目，然后将这些项目复制到项目输出文件夹。  
   

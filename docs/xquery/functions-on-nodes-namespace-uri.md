@@ -1,5 +1,6 @@
 ---
 title: 命名空间 uri 函数（XQuery） |Microsoft Docs
+description: 了解如何使用 XQuery 中的命名空间 uri 函数返回指定 QName 的命名空间 URI。
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 05412c69aa121b9de14f2bab16555db2a8a4fdb4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a87e6108e68c3b9a2648abf7394f03f7e5c8d1ea
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929945"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306056"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>基于节点的函数 - namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ fn:namespace-uri($arg as node()?) as xs:string
  *$arg*  
  将检索其命名空间 URI 部分的节点名称。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 -   如果省略该参数，则默认值为上下文节点。  
   
@@ -61,7 +62,7 @@ SELECT @x.query('namespace-uri(/ROOT[1])')
   
  由于指定的 QName 没有命名空间 URI 部分而只有本地名称部分，因此结果是长度为零的字符串。  
   
- 下面的查询是针对指令类型化的**xml**列指定的。 表达式`namespace-uri(/AWMI:root[1]/AWMI:Location[1])`返回 <`Location` `root`> 元素的第一个 <> 元素子级的命名空间 URI。  
+ 下面的查询是针对指令类型化的**xml**列指定的。 表达式 `namespace-uri(/AWMI:root[1]/AWMI:Location[1])` 返回 <> 元素的第一个 <`Location`> 元素子级的命名空间 URI `root` 。  
   
 ```  
 SELECT Instructions.query('  
@@ -98,7 +99,7 @@ WHERE ProductModelID=19
 ...  
 ```  
   
- 可以将以前查询中的命名空间 URI 更改为 `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`。 然后，您将收到 <`ProductDescription`> 元素的所有元素节点子级，该元素的命名空间 URI 部分为已`https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`展开的 QName。  
+ 可以将以前查询中的命名空间 URI 更改为 `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`。 然后，您将收到 <> 元素的所有元素节点子级，该 `ProductDescription` 元素的命名空间 URI 部分为已展开的 QName `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain` 。  
   
 ### <a name="implementation-limitations"></a>实现限制  
  限制如下：  

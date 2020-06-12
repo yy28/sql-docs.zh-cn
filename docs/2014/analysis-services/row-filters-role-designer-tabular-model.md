@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7f7a6759-82b8-44d9-9cca-a61ba214eb22
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fdc5f0326152eaa62bd41364ace48d7e02fbd0f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2cc232f6c861a3b7dbde44b342deaa831de6c99c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070126"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547389"
 ---
 # <a name="row-filters-role-designertabular-model"></a>行筛选器（角色设计器）（表模型）
   使用角色设计器的 **“行筛选器”** 页可以定义关联角色的行级别筛选器。 可仅为具有“读取”和“读取和处理”权限的角色定义行筛选器。  
@@ -26,13 +25,13 @@ ms.locfileid: "66070126"
 >  如果在角色设计器的“常规”页上选择了“完全控制(管理员)”，或如果角色权限设置为“处理”，则将禁用此页上的所有选项************。  
   
 ## <a name="options"></a>选项  
- **表**  
+ **表格**  
  为其定义筛选器的模型表。  
   
  **DAX 筛选器**  
  计算结果为布尔条件的 DAX 公式。  
   
- **DAX 筛选器\<-tablename>**  
+ **DAX 筛选器-\<tablename>**  
  键入计算结果为布尔条件的 DAX 公式。  
   
 ## <a name="see-also"></a>另请参阅  

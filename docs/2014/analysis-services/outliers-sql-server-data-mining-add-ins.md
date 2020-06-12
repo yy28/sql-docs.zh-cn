@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e6fa7c62-4005-4792-9211-3b699377a517
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3043c8f63433396f059f5c456512ad4ba2bffd93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ecc7cba81a394664b2bdb6a60b6c5f8110760f44
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072134"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547274"
 ---
 # <a name="outliers-sql-server-data-mining-add-ins"></a>离群值（SQL Server 数据挖掘外接程序）
   ![“数据挖掘”功能区中的离群值向导](media/dmc-outliers.gif "“数据挖掘”功能区中的离群值向导")  
@@ -69,7 +68,7 @@ ms.locfileid: "66072134"
   
 3.  在 "**选择列**" 对话框中，选择**单个**列。  
   
-     单击“下一步”  。  
+     单击“下一步”。  
   
 4.  在 "**指定阈值**" 对话框中，查看数据的分布情况。  
   
@@ -79,7 +78,7 @@ ms.locfileid: "66072134"
   
     -   如果列中包含数值数据，则可以在条形图或折线图中，单击 "**以离散形式显示视图**" 或 "**按数值显示视图**"，以在查看条形图或折线图中的值之间进行切换。  
   
-5.  在 "**指定阈值**" 对话框中，通过键入最小值和最大值，或者通过拖动滑块来选择想要保留的数据的范围。 单击“下一步”  。  
+5.  在 "**指定阈值**" 对话框中，通过键入最小值和最大值，或者通过拖动滑块来选择想要保留的数据的范围。 单击“下一步”。  
   
 6.  在 "**离群处理**" 对话框中，指定是否要删除或替换值，然后单击 "**下一步**"。  
   

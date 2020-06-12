@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8b43e36072e7151570c0b0fa610c3b7e4709616a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b2473157bed334345f6c18177f97ac0415612232
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175276"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542779"
 ---
 # <a name="defining-a-fact-relationship"></a>定义事实关系
   用户有时需要按事实数据表中的数据项定义度量值的维度，或者查询事实数据表中其他特定的相关信息，例如与特定销售情况有关的发票号或采购订单号。 当根据此类事实数据表项定义维度时，则将该维度称为“事实维度”**。 事实维度也称为退化维度。 若要将相关的事实数据表行（例如所有与特定发票号有关的行）组合在一起，事实维度将非常有用。 尽管可以将此信息置于关系数据库中一个单独的维度表内，但为此信息创建单独的维度表没有任何益处，因为维度表与事实数据表按照同一速度增长，只会创建重复的数据并增加不必要的复杂性。
@@ -51,7 +50,7 @@ ms.locfileid: "78175276"
 
 7.  在“名称列”**** 列表中，选择“SalesOrderLineNumber”****。
 
-8.  单击“下一步”。 
+8.  单击“下一步”。
 
 9. 在“选择相关表”**** 页面上，清除所有表旁边的复选框，然后单击“下一步”****。
 
@@ -61,7 +60,7 @@ ms.locfileid: "78175276"
 
 12. 在“完成向导”**** 页上，将名称更改为“Internet 销售订单详细信息”****，然后单击“完成”**** 来完成向导。
 
-13. 在“文件” **** 菜单上，单击“全部保存” ****。
+13. 在“文件”菜单上，单击“全部保存” 。
 
 14. 在 " **Internet 销售订单详细信息**" 维度的 "维度设计器" 的 "**属性**" 窗格中，选择 "**销售订单号**"，然后将 "属性窗口中的"**名称**"属性更改为`Item Description.`
 
@@ -69,9 +68,9 @@ ms.locfileid: "78175276"
 
 16. 将“数据源视图”**** 窗格中“InternetSales”**** 表内的“SalesOrderNumber”**** 列拖到“特性”**** 窗格，以将“销售订单编号”**** 属性添加到维度中。
 
-17. 将新的 "**销售订单编号**" 属性的 " `Order Number`**名称**" 属性更改为，并将 " **OrderBy** " 属性更改为 "**键**"。
+17. 将新的 "**销售订单编号**" 属性的 "**名称**" 属性更改为 `Order Number` ，并将 " **OrderBy** " 属性更改为 "**键**"。
 
-18. 在 "**层次结构**" 窗格中，按顺序创建包含和**项说明**级别的 " `Order Number` **Internet 销售订单**" 用户层次结构。
+18. 在 "**层次结构**" 窗格中，按顺序创建包含和项说明级别的 " **Internet 销售订单**" 用户层次结构 `Order Number` 。 **Item Description**
 
 19. 在 **“特性”** 窗格中，选择 **“Internet 销售订单详细信息”**，然后查看“属性”窗口中 **StorageMode** 属性的值。
 
@@ -95,7 +94,7 @@ ms.locfileid: "78175276"
 
      !["定义关系" 对话框](../../2014/tutorials/media/l5-factrelationship-2.gif "“定义关系”对话框")
 
-3.  单击“取消”  。
+3.  单击“取消” 。
 
 ## <a name="browsing-the-cube-by-using-the-fact-dimension"></a>使用事实维度浏览多维数据集
 

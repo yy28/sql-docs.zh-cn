@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e7215f50705b593130a69cfe076f0878b0ac03d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c0355c8f0286fe894b7c723177c4146b1e460758
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889080"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669470"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 ```  
   
 ## <a name="arguments"></a>参数  
- *模型*  
+ *model*  
  模型的唯一名称。  
   
  *列定义列表*  
@@ -47,7 +47,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  当前提供程序定义的数据挖掘算法的名称。  
   
 > [!NOTE]  
->  可以使用[DMSCHEMA_MINING_SERVICES 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)来检索当前提供程序支持的算法的列表。 若要查看当前实例中支持的算法[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，请参阅[数据挖掘属性](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)。  
+>  可以使用[DMSCHEMA_MINING_SERVICES 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)来检索当前提供程序支持的算法的列表。 若要查看当前实例中支持的算法 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，请参阅[数据挖掘属性](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)。  
   
  *参数列表*  
  可选。 由提供程序定义的算法所需参数的逗号分隔列表。  
@@ -68,7 +68,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   日期类型（必需）  
   
--   分发  
+-   分布  
   
 -   建模标志列表  
   
@@ -102,7 +102,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   [建模标志（数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
- 您可以向语句中添加子句，说明两个列之间的关系。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支持使用以下\<列关系> 子句。  
+ 您可以向语句中添加子句，说明两个列之间的关系。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支持使用以下 \< 列关系> 子句。  
   
  **相关**  
  此窗体指示值的层次结构。 RELATED TO 列的目标可以是嵌套表的键列、事例行中具有离散值的列或另一个包含 RELATED TO 子句并指示更深层次结构的列。  
@@ -123,7 +123,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  有关与每种算法关联的参数的列表，请参阅[数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果要创建具有内置测试数据集的模型，则应当使用 CREATE MINING STRUCTURE 语句，然后再使用 ALTER MINING STRUCTURE 语句。 但是，并非所有挖掘模型类型都支持维持数据集。 有关详细信息，请参阅 [CREATE MINING STRUCTURE (DMX)](../dmx/create-mining-structure-dmx.md)。  
   
  有关如何使用 CREATEMODEL 语句创建挖掘模型的演练，请参阅[时序预测 DMX 教程](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)。  
@@ -174,7 +174,7 @@ USING Microsoft_Sequence_Clustering
  下面的示例使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 时序算法和 ARTxp 算法创建新的挖掘模型。 ReportingDate 是时序的键列，ModelRegion 是数据序列的键列。 在此示例中，假定数据出现的频率为每 12 个月一次。 因此， *PERIODICITY_HINT*参数设置为12。  
   
 > [!NOTE]  
->  必须使用大括号字符指定*PERIODICITY_HINT*参数。 此外，因为值是一个字符串，所以必须用单引号引起来： "{\<数值>}"。  
+>  必须使用大括号字符指定*PERIODICITY_HINT*参数。 此外，因为值是一个字符串，所以必须用单引号引起来： "{ \< 数值>}"。  
   
 ```  
 CREATE MINING MODEL SalesForecast (  

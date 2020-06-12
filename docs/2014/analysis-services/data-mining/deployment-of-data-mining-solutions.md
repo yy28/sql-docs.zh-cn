@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7dc221f6a81281970a9ad62ba7b16397e40e0648
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9cf77bf6c583a2f286c2b02d392314e9a2dad2e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084723"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522563"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>部署数据挖掘解决方案
   数据挖掘过程的最后一步是将模型部署到生产环境中。 部署非常重要，这是因为它使用户可以利用模型，以便执行以任何任务：  

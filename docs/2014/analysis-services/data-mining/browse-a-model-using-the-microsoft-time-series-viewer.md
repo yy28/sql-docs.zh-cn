@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: a77c16cd-1cd0-4fc5-afeb-d1dab30d1e25
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 85767ce54991950e75b39bf909d6d0ff3cb2cd8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 069199c648b883f85dcddb2538efc154c1ee7ebf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085982"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525184"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>使用 Microsoft 时序查看器浏览模型
-  中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的时序查看器显示用[!INCLUDE[msCoName](../../includes/msconame-md.md)]时序算法生成的挖掘[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法是一种回归算法，用于在预测方案中创建数据挖掘模型以预测连续列（如产品销量）。 这些时序模型可以包含基于不同算法的信息：  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]中的时序查看器 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 显示用时序算法生成的挖掘模型 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法是一种回归算法，用于在预测方案中创建数据挖掘模型以预测连续列（如产品销量）。 这些时序模型可以包含基于不同算法的信息：  
   
 -   ARTxp 算法，针对短期预测进行了优化。  
   
@@ -42,7 +41,7 @@ ms.locfileid: "66085982"
 ##  <a name="viewer-tabs"></a><a name="BKMK_ViewerTabs"></a>查看器选项卡  
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中浏览挖掘模型时，该模型会显示在其相应查看器的数据挖掘设计器的 **“挖掘模型查看器”** 选项卡上。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序查看器包含下列选项卡：  
   
--   [型号](#BKMK_Tree)  
+-   [模式](#BKMK_Tree)  
   
 -   [图表](#BKMK_Charts)  
   

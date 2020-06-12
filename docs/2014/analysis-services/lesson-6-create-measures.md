@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 01bd2ad7-09b7-49ae-ad80-83f25da301aa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef207028ab1b4f6bc084f3f4e515ae37630b771d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef487927098e63c7fc870aa65e55f57faa26767d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078430"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542559"
 ---
 # <a name="lesson-7-create-measures"></a>第 7 课：创建度量值
   在本课中，您将创建要包括在您的模型中的度量值。 与您在前一课中创建的计算列类似，度量值从根本上来说是使用 DAX 公式创建的计算。 但是，与计算列不同，度量值是基于用户选择的 *筛选器*进行计算的；例如，添加到数据透视表中的“行标签”字段中的特定列或切片器。   然后，所应用的度量值将计算筛选器中每个单元格的值。 度量值是功能强大的、灵活的计算，您可以将其包含在几乎所有表格模型中，以便对数值数据执行动态计算。 若要了解详细信息，请参阅[度量值（SSAS 表格）](tabular-models/measures-ssas-tabular.md)。  
@@ -49,7 +48,7 @@ ms.locfileid: "66078430"
   
      请注意，左上角的单元格现在包含度量值名称、**度量值 1**，后跟结果**30**。 在编辑栏中，度量值名称也位于公式前。  
   
-5.  若要重命名该度量值，请在编辑栏中突出显示名称、**度量值 1**，然后键入`Days Current Quarter to Date`，然后按 enter。  
+5.  若要重命名该度量值，请在编辑栏中突出显示名称、**度量值 1**，然后键入 `Days Current Quarter to Date` ，然后按 enter。  
   
     > [!TIP]  
     >  在编辑栏中键入公式时，您还可以首先键入度量值名称后跟冒号 (:)，然后输入一个空格，最后输入公式。 使用此方法，您不必重命名度量值。  
@@ -88,7 +87,7 @@ ms.locfileid: "66078430"
   
 1.  使用“自动求和”功能创建并命名以下度量值：  
   
-    |“度量值名称”|列|自动求和 (∑)|公式|  
+    |“度量值名称”|列|自动求和 (∑)|Formula|  
     |------------------|------------|-------------------|-------------|  
     |Internet Order Lines Count|Sales Order Line Number|Count|=COUNT([Sales Order Line Number])|  
     |Internet Total Units|Order Quantity|SUM|=SUM([Order Quantity])|  
@@ -104,7 +103,7 @@ ms.locfileid: "66078430"
     > [!IMPORTANT]  
     >  您必须按顺序创建下列度量值；后面度量值中的公式引用较早的度量值。  
   
-    |“度量值名称”|公式|  
+    |“度量值名称”|Formula|  
     |------------------|-------------|  
     |Internet Previous Quarter Margin|=CALCULATE([Internet Total Margin],PREVIOUSQUARTER('Date'[Date]))|  
     |Internet Current Quarter Margin|=TOTALQTD([Internet Total Margin],'Date'[Date])|  
@@ -115,7 +114,7 @@ ms.locfileid: "66078430"
   
  为 Internet Sales 表创建的度量值可用来分析关键的财务数据，如用户选择的筛选器定义的物料的销售、成本和毛利润率。  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
  若要继续学习本教程，请转到下一课： [第 8 课：创建关键绩效指标](lesson-7-create-key-performance-indicators.md)。  
   
   

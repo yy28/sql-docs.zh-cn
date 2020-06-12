@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7f6f3532165b8e958eb03cdf4954543159309a08
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2ef32a9e133c199aae0779c819736d77e0d15c45
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67937718"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670061"
 ---
 # <a name="isdescendant-dmx"></a>IsDescendant (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ IsDescendant(<NodeID>)
 ## <a name="return-type"></a>返回类型  
  一种布尔值类型。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **IsDescendant**仅用于[&#62; &#60;模型中进行选择。内容 &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)并[从 &#60;模型&#62; 中进行选择。DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)查询。  
   
 ## <a name="examples"></a>示例  

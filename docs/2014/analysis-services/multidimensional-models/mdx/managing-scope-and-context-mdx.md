@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 631e7c20-8be9-4c35-8609-76516aef19d1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bec0dc51a4f91ba4ca8f71a0a3caba387d37bf1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7cf1e6cea8df00b632e114a5a8756373738ca6e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074634"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546519"
 ---
 # <a name="managing-scope-and-context-mdx"></a>管理作用域和上下文 (MDX)
-  在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中，多维表达式（MDX）脚本可以在脚本执行中的特定点应用于整个多维数据集或多维数据集的特定部分。 MDX 脚本可以通过使用计算传递采取分层方法在多维数据集内进行计算。  
+  在中 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ，多维表达式（MDX）脚本可以在脚本执行中的特定点应用于整个多维数据集或多维数据集的特定部分。 MDX 脚本可以通过使用计算传递采取分层方法在多维数据集内进行计算。  
   
 > [!NOTE]  
 >  有关计算传递如何影响计算的详细信息，请参阅[理解传递次序和求解次序 (MDX)](mdx-data-manipulation-understanding-pass-order-and-solve-order.md)。  
@@ -58,7 +57,7 @@ SCOPE([Customer].&[Redmond].MEMBERS,
 END SCOPE;  
 ```  
   
- 有关`This`函数的语法的详细信息，请参阅[此 &#40;MDX&#41;](/sql/mdx/this-mdx)。  
+ 有关函数的语法的详细信息 `This` ，请参阅[此 &#40;MDX&#41;](/sql/mdx/this-mdx)。  
   
 ## <a name="using-the-scope-statement"></a>使用 SCOPE 语句  
  SCOPE 语句定义包含 MDX 脚本内其他 MDX 表达式和语句并指定这些表达式和语句的作用域的当前子多维数据集。 MDX 在该子多维数据集的上下文内计算其他 MDX 表达式和语句，包括 `This` 函数和 CALCULATE 语句。  

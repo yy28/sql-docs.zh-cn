@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd24dd4a-624f-478a-9c94-b1361e857680
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6d9f375eb2d55c396000b7c2d7a14614153861e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 907fba85ff44fc0c22cd3a4743f5ab1475f2dd25
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085814"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524923"
 ---
 # <a name="choose-an-accuracy-chart-type-and-set-chart-options"></a>选择准确性图表类型和设置图表选项
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供多种方法来确定挖掘模型的有效性。 您可以为每个模型或结构创建的准确性图表的类型取决于以下因素：  

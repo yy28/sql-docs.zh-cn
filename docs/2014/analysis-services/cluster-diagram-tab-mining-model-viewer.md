@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 180e6f48-5c4d-4160-b84d-608b98f7b840
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 127ff0c386a1f93c00178624b54499e33cf9042a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1855150cdfbb4d2132c1edc7c08604dd90b87a9d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088009"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527453"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>“分类关系图”选项卡（挖掘模型查看器）
   **“分类关系图”** 选项卡提供聚类分析模型中包含的所有分类的图形视图。  
@@ -63,7 +62,7 @@ ms.locfileid: "66088009"
  **“明暗度变量”**  
  选择一个属性以在分类图中显示。  
   
- **状态**  
+ **State**  
  选择“明暗度变量”**** 的单个状态以在分类图中使用。  
   
  **链接**  

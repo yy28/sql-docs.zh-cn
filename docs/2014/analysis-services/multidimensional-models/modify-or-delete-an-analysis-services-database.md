@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e48e3988-c091-4379-aabc-4da62f709a7e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f806501ffbb52f3839fa343a05a8db57917533ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27b3e2e27b3e24a448e4f164ffdf78bb5b669a40
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073686"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546109"
 ---
 # <a name="modify-or-delete-an-analysis-services-database"></a>修改或删除 Analysis Services 数据库
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中部署之前以及在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中部署之后，可以更改 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]数据库的名称和说明。 您还可以调整 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库上的其他设置，这取决于环境。  
@@ -34,7 +33,7 @@ ms.locfileid: "66073686"
  一旦 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的部署完成，您就可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 来更改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在连接到该数据库包含的数据源时使用的模拟模式。 模拟模式允许您指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在试图连接到某个数据源进行处理、浏览或钻取时使用的安全上下文。  
   
 ## <a name="modifying-databases-using-sql-server-data-tools"></a>使用 SQL Server Data Tools 修改数据库  
- 您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 在项目模式下修改用于定义数据库的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的标题和说明的翻译。 有关在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库中使用翻译的详细信息，请参阅[Analysis Services Multidimensional 的全球化方案](../globalization-scenarios-for-analysis-services-multiidimensional.md)。  
+ 您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 在项目模式下修改用于定义数据库的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的标题和说明的翻译。 有关在数据库中使用翻译的详细信息 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，请参阅[Analysis Services Multidimensional 的全球化方案](../globalization-scenarios-for-analysis-services-multiidimensional.md)。  
   
  您还可以设置与由数据库中包含的维度的帐户属性使用的帐户类型相关联的别名和聚合函数。 别名允许您为帐户图表中的帐户类型选择您的组织使用的特定于业务的术语。 帐户属性的成员使用帐户类型来指示如何使用为数据库中包含的各个帐户类型指定的聚合函数来针对各个成员聚合度量值。 有关帐户属性的详细信息，请参阅 [属性和属性层次结构](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)。  
   

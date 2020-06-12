@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2ba74e81-5b4b-407e-acdf-deb2f6accf0a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 28a7cf6b3a712144daead54d521fb3cc6936c99e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ad3c9733003a22b2d75b483e792e097ae229233
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075923"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547129"
 ---
 # <a name="create-a-finance-account-of-parent-child-type-dimension"></a>创建父子类型的财务帐户维度
-  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，"帐户类型" 维度是指其属性表示用于财务报表用途的会计科目表的维度。  
+  在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，"帐户类型" 维度是指其属性表示用于财务报表用途的会计科目表的维度。  
   
  使用帐户维度，您可以有选择地管理一段时间内帐户间的聚合行为。 帐户维度还允许您使用标准机制来解决通常在处理财务数据的商业智能解决方案中遇到的大多非标准聚合问题。 如果不具有此标准机制，那么，解决这些非标准聚合问题就需要自定义汇总公式、计算成员或多维表达式 (MDX) 脚本。  
   

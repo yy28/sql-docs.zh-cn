@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6aef1548-35eb-42fd-ae87-63650a79eda1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 95b1e9822296e26a187b333140ea89c47cb05466
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4fea2db082448fa96ad26733a2fad5f294575a74
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087713"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527363"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>完成向导（数据挖掘向导）
   可以使用 **“完成向导”** 页查看在完成向导后创建的挖掘结构。 您还可以设置挖掘结构的名称。  

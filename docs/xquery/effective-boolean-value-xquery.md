@@ -1,5 +1,6 @@
 ---
 title: 有效的布尔值（XQuery） |Microsoft Docs
+description: 了解 XQuery 中的有效布尔值。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 506682b1-b6c9-45e2-aa54-7abd5844c3f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4eb94e51896e08f60389edde0c2a6cd0461e8538
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 282f88f92d8ed5e0bb811783363e05b456bc37c8
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929950"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305846"
 ---
 # <a name="effective-boolean-value-xquery"></a>有效的布尔值 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -66,13 +67,13 @@ go
   
  查询类型化的**xml**列或变量时，可以具有布尔类型的节点。 此情况下的**数据（）** 将返回一个布尔值。 如果查询表达式返回布尔值 True，则有效的布尔值为 True，如下例所示。 本例中对下列各项也进行了说明：  
   
--   创建一个 XML 架构集合。 集合中\<的元素 b> 为布尔类型。  
+-   创建一个 XML 架构集合。 \<b>集合中的元素的类型为 Boolean。  
   
 -   创建并查询类型化的**xml**变量。  
   
 -   表达式 `data(/b[1])` 返回布尔值 True。 因此，这种情况下，有效的布尔值为 True。  
   
--   表达式`data(/b[2])`返回布尔值 false。 因此，这种情况下，有效的布尔值为 False。  
+-   表达式 `data(/b[2])` 返回布尔值 false。 因此，这种情况下，有效的布尔值为 False。  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  

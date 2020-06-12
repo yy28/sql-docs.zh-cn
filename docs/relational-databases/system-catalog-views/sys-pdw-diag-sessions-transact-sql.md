@@ -11,12 +11,12 @@ ms.assetid: 4d23688a-cddb-4eed-8231-ecde2a0b0e65
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fa06005679e31381f723b30b9f68e5ce0d89ae1e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f1771f9cb3a922854b2556477eb100a14b593e1a
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68127690"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627339"
 ---
 # <a name="syspdw_diag_sessions-transact-sql"></a>sys. pdw_diag_sessions （Transact-sql）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68127690"
 |**xml_data**|**nvarchar(4000)**|描述会话的 XML 有效负载。||  
 |**is_active**|**bit**|指示标志是否处于活动状态的标记。||  
 |**host_address**|**nvarchar(255)**|承载会话定义的计算机的地址（控制节点）。||  
-|**principal_id**|**int**|在数据库级别创建会话的用户的 ID。||  
+|principal_id|**int**|在数据库级别创建会话的用户的 ID。||  
 |**database_id**|**int**|作为诊断会话范围的数据库的 ID。|  
   
 ## <a name="see-also"></a>另请参阅  

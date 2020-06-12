@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: b1f037d1-ce47-4e47-a1c2-5ec9e781cff6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9d967d1275c7b682c79313b95af06f3088e7acf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e0cfd7aa0b6d7f401510add51f3938c4c297a31
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075974"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547149"
 ---
 # <a name="create-a-currency-type-dimension"></a>创建货币类型维度
-  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，货币类型维度是指其属性表示用于财务报表的货币列表的维度。  
+  在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，货币类型维度是指其属性表示用于财务报表的货币列表的维度。  
   
  通过货币维度，您可以为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中的多维数据集添加货币换算功能。 若要为多维数据集添加货币换算功能，请使用商业智能向导定义一个多维表达式 (MDX) 脚本命令，该命令可将货币度量值换算为适用于客户端应用程序区域设置的值。 若要创建此 MDX 脚本，商业智能向导需要以下信息：  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9de2fc2a-fca5-456b-b2bd-13586e7951e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c4a8124d929faa22ec9429ca8bf15e4f0148ab71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8abee369a99bb2fa7d0590ca85d87c1bda76ba2c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085932"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525073"
 ---
 # <a name="change-the-colors-used-in-the-data-mining-viewer"></a>更改数据挖掘查看器中使用的颜色
   您可以更改数据挖掘查看器中使用的颜色以显示数据序列、节点或群集。 可以通过设置 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的选项来执行此操作。 更改这些设置之后，颜色选择将应用于使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]查看的所有模型；但是您必须关闭 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 并在查看器中重新打开模型才能看到新颜色。  

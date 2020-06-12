@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fb7a64ca-d021-4926-b92d-83476fbc40a3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 089b99663753a9e9424e991ca5245c73ea577e49
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cad4c1f70743cafcc428835b3dcd11e2fa26ee79
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175756"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546769"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>编辑或删除分区（Analysis Services - 多维）
   多维数据集分区可在 **中使用多维数据集设计器中的** “分区” [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]选项卡来修改。 **“分区”** 选项卡列出了多维数据集中的所有度量值组的分区。 它还列出了已启用写回的写回分区。

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 50570bb4-fcac-411e-b530-0398437efda7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 05c0a25ceded07264e4dbe10467e9dc6f093f6c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42285f94057441d01259c5fd54ce896dd0316b94
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077623"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537359"
 ---
 # <a name="model-tab-mining-model-viewers"></a>“模型”选项卡（挖掘模型查看器）
   Microsoft 时序查看器中的 **“模型”** 选项卡会将时序的表示形式显示为图形中的节点，这与决策树模型中采用的方式类似。  

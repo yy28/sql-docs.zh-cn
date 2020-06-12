@@ -1,5 +1,6 @@
 ---
 title: SQLXML 托管类
+description: 了解在 Microsoft .NET 框架内公开 SQLXML 4.0 功能的 Microsoft SQLXML 托管类。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +24,12 @@ ms.assetid: 73a5faeb-dabf-4895-acb5-a9651b646065
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7511dc12bea8a83544ddb39ff427b6400128294e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9b73fff4ba541e0f9b25c1b8dc84419dd5db1b2b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246922"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529941"
 ---
 # <a name="sqlxml-40-net-framework-support---managed-classes"></a>SQLXML 4.0 .NET Framework 支持 - 托管类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,12 +42,12 @@ ms.locfileid: "75246922"
 > [!NOTE]  
 >  .NET Framework 包括 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .NET 数据访问接口。 该访问接口可用于从 .NET 环境访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]；但是，它只能处理传统 SQL 查询（即除 FOR XML 查询以外的关系数据库查询）。 您不能在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中执行 XML 模板或服务器端 XPath 查询。  
 
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]有关访问和修改[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 中的数据以及如何使用 diffgram 更新[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]表中的数据的信息，请参阅[在 .net 环境中访问 SQLXML 功能](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)。  
+ 有关访问和修改 .NET Framework 中的数据以及如何使用 Diffgram 更新表中的数据的信息 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，请参阅[在 .NET 环境中访问 SQLXML 功能](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)。  
   
 > [!NOTE]  
 >  您还可以编写 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio 应用程序，以便使用 XML 大容量加载对 XML 文档执行大容量加载。 有关详细信息，请参阅[&#40;SQLXML 4.0&#41;执行 XML 数据的大容量加载](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)。 必须在应用程序中添加指向 XML 大容量加载 DLL (Xblkld4.dll) 的引用。 Visual Studio .NET 将为此 COM DLL 自动创建包装库。  
   
-  本部分提供了演示如何使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 托管类的示例应用程序：  
+  本部分提供了演示如何使用 SQLXML 托管类的示例应用程序 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ：  
  [&#40;SQLXML 托管类执行 SQL 查询&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)  
   [使用 ExecuteXMLReader 方法执行 SQL 查询](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)  
   [&#40;SQLXML 托管类在客户端处理 XML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/processing-xml-on-the-client-side-sqlxml-managed-classes.md)  

@@ -1,5 +1,6 @@
 ---
 title: 正在连接到 SQL Server （MySQLToSQL） |Microsoft Docs
+description: 了解如何连接到 SQL Server 的目标实例以迁移 MySQL 数据库。 SSMA 获取有关 SQL Server 中的数据库的元数据。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0ec33e462f1b68d70a86a0fbf4f7cf0214d25770
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0bed8dee876546cf418f3f547b0ddce092d3cfce
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103130"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293954"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>连接到 SQL Server (MySQLToSQL)
 若要将 MySQL 数据库迁移到 SQL Server，你必须连接到 SQL Server 的目标实例。 在连接时，SSMA 将获取 SQL Server 实例中所有数据库的元数据，并在 SQL Server 元数据资源管理器中显示数据库元数据。 SSMA 存储连接到但不存储密码的 SQL Server 实例的信息。  
@@ -29,7 +30,7 @@ ms.locfileid: "68103130"
 ## <a name="required-sql-server-permissions"></a>必需的 SQL Server 权限  
 用于连接 SQL Server 的帐户需要不同的权限，具体取决于帐户执行的操作：  
   
--   若要将 MySQL 对象[!INCLUDE[tsql](../../includes/tsql-md.md)]转换为语法、从 SQL Server 更新元数据，或者将转换的语法保存到脚本中，该帐户必须有权登录到 SQL Server 实例。  
+-   若要将 MySQL 对象转换为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法、从 SQL Server 更新元数据，或者将转换的语法保存到脚本中，该帐户必须有权登录到 SQL Server 实例。  
   
 -   若要将数据库对象加载到 SQL Server 中，最低权限要求是目标数据库中**db_owner**数据库角色的成员身份。  
   
@@ -67,13 +68,13 @@ ms.locfileid: "68103130"
   
 允许连接/重新连接到 SQL Server 的更高版本。  
   
-1.  如果创建的项目[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "2005"，则可以连接到2008或2012、2014或2016。  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果创建的项目是 "2005"，则可以连接到2008或2012、2014或 2016 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-2.  如果创建的项目[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008，则可以连接到2012或2014或2016，但不允许连接到较低的版本，即[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005。  
+2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如果创建的项目为2008，则可以连接到2012或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 但不允许连接到较低的版本，即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005。  
   
-3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如果创建的项目是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012，你将能够连接到2012或2014或2016。  
+3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果创建的项目是2012，你将能够连接到2012或2014或 2016 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-4.  如果创建的项目为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014，你将只能连接到2014或2016。  
+4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果创建的项目为2014，你将只能连接到2014或 2016 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 5.  较高的版本兼容性对于 "SQL Azure" 无效。  
   
@@ -88,7 +89,7 @@ ms.locfileid: "68103130"
 |SQL Azure||||||是|  
   
 > [!IMPORTANT]  
-> 数据库对象的转换是根据项目类型执行的，而不是按连接到的的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本执行。 如果项目为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005，则即使连接到更高版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016），也会按照2005执行转换。  
+> 数据库对象的转换是根据项目类型执行的，而不是按连接到的的版本执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果项目为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 即使连接到更高版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016），也会按照2005执行转换。  
   
 ## <a name="synchronizing-sql-server-metadata"></a>同步 SQL Server 元数据  
 不会自动更新与 SQL Server 数据库有关的元数据。 SQL Server 元数据资源管理器中的元数据是首次连接到 SQL Server 或上次手动更新元数据时的元数据的快照。 您可以为所有数据库或任何单个数据库或数据库对象手动更新元数据。  
@@ -103,7 +104,7 @@ ms.locfileid: "68103130"
   
 3.  右键单击 "数据库"、"数据库" 或 "数据库架构"，然后选择 "**与数据库同步**"。  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
 迁移的下一步取决于你的项目需求：  
   
 -   若要自定义 MySQL 架构与 SQL Server 数据库和架构之间的映射，请参阅[将 Mysql 数据库映射到 SQL Server 架构 &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  

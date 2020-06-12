@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0dea40f9c4e4c0672db78ca7e841cb7cedca857e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 755b38d1f42432818f87d92b0d2bf097d58795f0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174346"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543945"
 ---
 # <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>清单：使用 PowerShell 验证 PowerPivot for SharePoint
   若非通过可靠的验证测试确认服务和数据运行正常， [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 安装或恢复操作就不算完成。 在本文中，我们将介绍如何使用 Windows PowerShell 执行这些步骤。 我们将每个步骤作为一个章节，方便您跳转到特定的任务。 例如，如果您需要安排服务应用程序和内容数据库的维护或备份操作，则可运行此主题中 [“数据库”](#bkmk_databases) 章节的脚本，以验证服务应用程序和内容数据库的名称。
@@ -47,7 +46,7 @@ ms.locfileid: "78174346"
 
  在运行 SharePoint 相关 cmdlet 时，如果显示类似以下内容的错误消息，请运行 Add-PSSnapin 命令：
 
- 无法将“Get-PowerPivotSystemService”项 **识别为 cmdlet**、函数、脚本文件或可运行程序的名称。 检查名称的拼写，如果包含路径，请验证该路径是否正确，并重试。
+ 无法将“Get-PowerPivotSystemService”项 **识别为 cmdlet**、函数、脚本文件或可运行程序的名称。 请检查名称的拼写，如果包含路径，请验证该路径是否正确，并重试。
 
 ```
 Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0
@@ -69,7 +68,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0
 |未运行数据刷新|请参阅 [Timer Jobs](#bkmk_timer_jobs) 章节，并验证 **“联机 PowerPivot 数据刷新计时器作业”** 是否处于联机状态。|
 |管理面板数据陈旧|请参阅 [计时器作业](#bkmk_timer_jobs) 章节，并验证 **“管理面板处理计时器作业”** 是否处于联机状态。|
 |管理面板的某些部分|如果您将 PowerPivot for SharePoint 安装到具有管理中心拓扑但没有 Excel Services 或 PowerPivot for SharePoint 的场中，并且希望对 PowerPivot 管理面板中的内置报表具有完全访问权限，则必须下载和安装 Microsoft ADOMD.NET 客户端库。 该面板中的某些报表将使用 ADOMD.NET 来访问内部数据，内部数据可提供有关 PowerPivot 查询处理和场中服务器运行状况的报告数据。 请参阅 [ADOMD.Net 客户端库](#bkmk_adomd) 章节和 [在运行管理中心的 Web 前端服务器上安装 ADOMD.NET](../../../sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md)主题。|
-|\<未来内容>||
+|\<future content>||
 
 ##  <a name="analysis-services-windows-service"></a><a name="bkmk_windows_service"></a>Analysis Services Windows 服务
  本章节中的脚本用于验证 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint 模式下的实例。 验证服务是否**正在运行**。
@@ -153,7 +152,7 @@ Status      : Online
 > [!NOTE]
 >  下面的代码示例首先返回默认 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 服务应用程序的 applicationpool 属性。 系统从此字符串解析出名称，并用其获取应用程序池对象的状态。
 > 
->  验证状态是否为 "**联机**"。 如果状态为 "未联机"，或在浏览[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]站点时出现 "http 错误"，请验证 IIS 应用程序池中的标识凭据是否仍正确。 IIS 池名称将为 Get-SPServiceApplicationPool 命令返回的 ID 属性的值。
+>  验证状态是否为 "**联机**"。 如果状态为 "未联机"，或在浏览站点时出现 "http 错误" [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ，请验证 IIS 应用程序池中的标识凭据是否仍正确。 IIS 池名称将为 Get-SPServiceApplicationPool 命令返回的 ID 属性的值。
 
 ```powershell
 $poolname = [string](Get-PowerPivotServiceApplication | Select -Property applicationpool)
@@ -319,7 +318,7 @@ Message     : EXCEPTION: System.TimeoutException: The request channel timed out 
 ```
 
 ##  <a name="msolap-provider"></a><a name="bkmk_msolap"></a>MSOLAP 提供程序
- 验证 MSOLAP 访问接口。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]和[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]需要 MSOLAP. 5。
+ 验证 MSOLAP 访问接口。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]和 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 需要 MSOLAP. 5。
 
 ```powershell
 $excelApp = Get-SPExcelServiceApplication

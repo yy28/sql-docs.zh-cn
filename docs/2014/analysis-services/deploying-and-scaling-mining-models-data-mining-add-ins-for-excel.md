@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4c617375-6b01-4a71-9680-de0cbf2cff05
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f32d0adb196fbe23e90ae2bc28d8f65ad1326c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 682987b276a850104b6c4e10811423666eb4ffb0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081931"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528723"
 ---
 # <a name="deploying-and-scaling-mining-models-data-mining-add-ins-for-excel"></a>部署和缩放挖掘模型（Excel 数据挖掘外接程序）
   提供 "**模型使用情况**" 和 "**管理**" 组中的工具以帮助你管理和浏览现有挖掘模型。 您可以使用这些工具来查看在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例上存储的任意模型，而不仅仅是使用外接程序创建的那些模型。  

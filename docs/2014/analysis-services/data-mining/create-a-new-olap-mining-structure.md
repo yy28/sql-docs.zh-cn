@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 62f8fc247986609e3822168bff5aace34f3d1aa9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1e36f718ebef46a63b52f309ccd28eed15a8e2b4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085462"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523783"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>创建新的 OLAP 挖掘结构
-  您可以使用中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的数据挖掘向导来创建使用多维模型中的数据的挖掘结构。 基于 OLAP 多维数据集的挖掘模型可以使用事实表、维度和度量值组中的列和值作为分析属性。  
+  您可以使用中的数据挖掘向导 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 来创建使用多维模型中的数据的挖掘结构。 基于 OLAP 多维数据集的挖掘模型可以使用事实表、维度和度量值组中的列和值作为分析属性。  
   
 ### <a name="to-create-a-new-olap-mining-structure"></a>创建新的 OLAP 挖掘结构  
   
@@ -42,13 +41,13 @@ ms.locfileid: "66085462"
   
      例如，如果你正在尝试标识客户分组，则可以选择“客户”维度；如果你正在尝试分析交易中的购买行为，则可以选择“Internet 销售订单详细信息”维度。 您不会被局限为仅使用此维度中的数据，但该维度应该包含要在分析中使用的重要属性。  
   
-     单击“下一步”  。  
+     单击“下一步”。  
   
 6.  在 **“选择事例键”** 页的 **“属性”** 下，选择将成为挖掘结构键的属性，然后单击 **“下一步”**。  
   
      通常，您用作挖掘架结构的键的属性也是用于维度的键并且将预先选择。  
   
-7.  在 **“选择事例级别列”** 页的 **“相关属性和度量值”** 下，选择包含您要作为事例数据添加到挖掘架构的值的属性和度量值。 单击“下一步”  。  
+7.  在 **“选择事例级别列”** 页的 **“相关属性和度量值”** 下，选择包含您要作为事例数据添加到挖掘架构的值的属性和度量值。 单击“下一步”。  
   
 8.  在 **“指定挖掘模型列用法”** 页的 **“挖掘模型结构”** 下，首先选择可预测列，然后选择要用作输入的列。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "66085462"
   
      请注意，已指定为键的列不能用于输入或预测。  
   
-     单击“下一步”  。  
+     单击“下一步”。  
   
 9. 在 **“指定挖掘模型列用法”** 页上，您还可以使用 **“添加嵌套表”** 和 **“删除嵌套表”**，添加和删除挖掘模型中的嵌套表。  
   
@@ -89,7 +88,7 @@ ms.locfileid: "66085462"
     > [!NOTE]  
     >   OLAP 挖掘模型不支持使用 **“检测”** 功能自动检测列包含连续数据还是离散数据。  
   
-     单击“下一步”  。  
+     单击“下一步”。  
   
 11. 在 **“对源多维数据集进行切片”** 页上，您可以筛选用于创建挖掘结构的数据。  
   
@@ -107,15 +106,15 @@ ms.locfileid: "66085462"
   
     -   **参数**：忽略此复选框。 此对话框支持多个多维数据集筛选方案，并且此选项不针对生成挖掘结构。  
   
-     单击“下一步”  。  
+     单击“下一步”。  
   
-12. 在 **“将数据拆分为定型集和测试集”** 页上，指定为测试保留的挖掘结构数据的百分比，或者指定最大测试事例数。 单击“下一步”  。  
+12. 在 **“将数据拆分为定型集和测试集”** 页上，指定为测试保留的挖掘结构数据的百分比，或者指定最大测试事例数。 单击“下一步”。  
   
      如果指定两个值，则使用这两个限制值中的最小值。  
   
 13. 在 **“完成向导”** 页上，提供新的 OLAP 挖掘结构的名称以及初始挖掘模型。  
   
-14. 单击“完成”  。  
+14. 单击“完成”。  
   
 15. 在“完成向导”页上，还具有创建挖掘模型维度的选项和/或使用挖掘模型维度的多维数据集。**** 只有使用下列算法生成的模型才支持这些选项：  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 258304e2-d900-4013-97e3-871f51dfdce2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 969a8f11926957ae19512e92b68e02d12011dd03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f5fab8618e18b6a6983f98cca58bc2b2c55d63fa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077280"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544745"
 ---
 # <a name="define-custom-member-formulas"></a>定义自定义成员公式
   可以定义称为自定义成员公式的多维表达式 (MDX) 表达式，以便为指定属性的成员提供值。 数据源视图内表中的列为属性中的每个成员提供了用于为其提供值的表达式。  
@@ -29,7 +28,7 @@ ms.locfileid: "66077280"
   
  特性的 `CustomRollupColumn` 属性指定包含该特性成员的自定义成员公式的列。 如果列中的某行为空，则通常返回成员的单元值。 如果列中的公式无效，则每当检索使用该成员的单元值时，都会出现运行时错误。  
   
- 在为特性指定自定义成员公式前，请确保包含该特性的维度表或直接相关的表具有用于存储自定义成员公式的字符串列。 如果是这种情况，则可以手动设置特性`CustomRollupColumn`的属性，或使用商业智能向导的 "设置自定义成员公式增强功能" 启用属性的自定义成员公式。 有关如何使用此增强功能的详细信息，请参阅 [为维度中的属性设置自定义成员公式](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)。  
+ 在为特性指定自定义成员公式前，请确保包含该特性的维度表或直接相关的表具有用于存储自定义成员公式的字符串列。 如果是这种情况，则可以 `CustomRollupColumn` 手动设置特性的属性，或使用商业智能向导的 "设置自定义成员公式增强功能" 启用属性的自定义成员公式。 有关如何使用此增强功能的详细信息，请参阅 [为维度中的属性设置自定义成员公式](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)。  
   
 ## <a name="evaluating-custom-member-formulas"></a>对自定义成员公式求值  
  自定义成员公式不同于计算成员。 自定义成员公式应用于维度表中存在的成员，并且仅提供成员的值。 相反，计算成员并未存储在维度表中，并且计算成员表达式可定义维度或层次结构中包含的其他成员的数据和元数据。  

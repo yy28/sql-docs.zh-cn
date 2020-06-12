@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 442d8c29-07c7-45de-9a15-d556059f68d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30a4a503b16693a3774aa7f68771fb0f9dd70810
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8775ec4dbfb7d851d98e0a943d052589f45b1ade
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084911"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523063"
 ---
 # <a name="querying-the-data-mining-schema-rowsets-analysis-services---data-mining"></a>查询数据挖掘架构行集（Analysis Services - 数据挖掘）
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，许多现有 OLE DB 数据挖掘架构行集已作为可以使用数据挖掘扩展插件 (DMX) 语句轻松查询的一组系统表公开。 通过针对数据挖掘架构行集创建查询，可以标识可用的服务，获取您的模型和结构的状态更新，并查找有关模型内容或参数的详细信息。 有关数据挖掘架构行集的说明，请参阅 [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)。  

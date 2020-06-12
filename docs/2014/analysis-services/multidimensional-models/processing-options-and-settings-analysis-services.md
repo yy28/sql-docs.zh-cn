@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: 2e858c74-ad3e-45f1-8745-efe2c0c3a7fa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fe4851712f56acd5d23e8762584968b1cecad03c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 684d7aaa7612af86a369567cfb278296c0c85fb8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073219"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545793"
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>处理选项和设置 (Analysis Services)
-  在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]处理对象时，您可以选择处理选项以控制每个对象发生的处理的类型。 处理类型因对象而异，并基于自上次处理对象后对象所发生的更改。 如果允许 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自动选择处理方法，则将使用以最少时间将对象返回已完全处理状态的方法。  
+  在中处理对象时 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，您可以选择处理选项以控制每个对象发生的处理的类型。 处理类型因对象而异，并基于自上次处理对象后对象所发生的更改。 如果允许 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自动选择处理方法，则将使用以最少时间将对象返回已完全处理状态的方法。  
   
  通过处理设置可以控制要处理的对象以及用来处理这些对象的方法。 某些处理设置主要用于批处理作业。 有关批处理的详细信息，请参阅[批处理 (Analysis Services)](batch-processing-analysis-services.md)。  
   
@@ -39,7 +38,7 @@ ms.locfileid: "66073219"
 ## <a name="processing-options"></a>处理选项  
  下表介绍了可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中使用的处理方法，并标识了支持每种方法的对象。  
   
-|“模式”|适用于|说明|  
+|Mode|适用于|说明|  
 |----------|----------------|-----------------|  
 |**处理默认值**|多维数据集、数据库、维度、度量值组、挖掘模型、挖掘结构和分区。|检测数据库对象的处理状态，进行必要的处理，将未处理对象或部分处理的对象转变成为已完全处理的对象。 如果更改数据绑定，“处理默认值”将对受影响的对象执行“处理全部”。|  
 |**处理全部**|多维数据集、数据库、维度、度量值组、挖掘模型、挖掘结构和分区。|处理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象及其包含的所有对象。 对已被处理的对象执行“处理全部”时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将删除该对象中的所有数据，然后再处理该对象。 如果对对象进行了结构更改（例如，添加、删除或重命名属性层次结构），则需要此类处理。|  
@@ -56,7 +55,7 @@ ms.locfileid: "66073219"
   
 |处理选项|说明|  
 |-----------------------|-----------------|  
-|**并行**|用于批处理。 此设置会使 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将处理任务分开在单个事务内并行执行。 如果出现故障，则结果是回滚所有更改。 您可以显式设置并行任务的最大数目，或者让服务器确定最佳分布。 “并行”选项对于提高处理速度十分有用。|  
+|**Parallel**|用于批处理。 此设置会使 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将处理任务分开在单个事务内并行执行。 如果出现故障，则结果是回滚所有更改。 您可以显式设置并行任务的最大数目，或者让服务器确定最佳分布。 “并行”选项对于提高处理速度十分有用。|  
 |**按顺序（事务模式）**|控制处理作业的执行行为。 使用 **“一项事务”** 进行处理时，将在处理作业成功后提交所有更改。 也就是说，受特定处理作业影响的所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象将保持对查询可用，直到提交进程为止。 这样，对象会暂时不可用。 使用 **“单独的事务”** 将使处理作业中受某进程影响的所有对象一旦在该进程成功后就无法用于查询。 两个可用选项是：<br /><br /> **一项事务**。 处理作业作为事务运行。 如果处理作业内的所有进程都成功，则提交处理作业所做的所有更改。 如果有一个进程失败，则回滚处理作业所做的所有更改。 **“一项事务”** 是默认值。<br /><br /> **单独的事务**。 处理作业中的每个进程都作为独立的作业运行。 如果某个进程失败，则仅回滚该进程，处理作业继续执行。 每个作业将在作业结束时提交所有进程更改。|  
 |**写回表选项**|控制在处理过程中如何处理写回表。 此选项应用于多维数据集中的写回分区，有下列选项可供使用：<br /><br /> **使用现有**的。 使用现有的写回表。 这是默认值。<br /><br /> **Create**。 创建一个新的写回表，如果已经存在一个写回表，则会导致进程失败。<br /><br /> **始终创建**。 即使已经存在一个写回表，也要创建一个新的写回表。 现有表将被删除和替换。|  
 |**处理受影响的对象**|控制处理作业的对象范围。 受影响的对象由对象依赖关系定义。 例如，分区依赖于确定聚合的维度，但是维度不依赖于分区。 您可以使用下列选项：<br /><br /> **False**。 作业将处理作业中显式命名的对象以及所有依赖对象。 例如，如果处理作业仅包含维度，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 仅处理作业中显式标识的那些对象。 如果处理作业包含分区，分区处理将自动调用受影响维度的处理。 **“False”** 是默认设置。<br /><br /> **True**。 作业将处理作业中显式命名的对象、所有依赖对象以及受正在处理的对象影响的所有对象（不更改受影响对象的状态）。 例如，如果处理作业仅包含维度， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还将处理受当前已处理分区的维度处理影响的所有分区。 如果受影响分区当前处于未处理状态，则不会对其进行处理。 不过，由于分区依赖于维度，因此如果处理作业仅包含分区，分区处理将自动调用受影响维度的处理，即使维度当前处于未处理状态也是如此。|  

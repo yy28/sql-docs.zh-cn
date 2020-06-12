@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a8e2b976fca00293d93cbf1e9987e115631bd81
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 05cd74af77cc62dc637eeb4141478a79fee4ad02
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070932"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547719"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>在 Excel 或 Reporting Services 中使用 BI 语义模型连接
   本主题说明如何使用 BI 语义模型连接，这些连接是使用其他主题中的说明创建的。 如果尚未创建 BI 语义模型，请参阅[创建与 PowerPivot 工作簿的 Bi 语义模型连接](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)和[创建与表格模型数据库的 Bi 语义模型连接](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)。  
@@ -39,7 +38,7 @@ ms.locfileid: "66070932"
   
 2.  单击 **“从 Analysis Services”** 并且使用数据连接向导导入数据。  
   
-3.  输入 BI 语义模型连接文件的 SharePoint URL （例如** http://mysharepoint/shared documents/myData. bism**）。 接受默认登录凭据选项 **“使用 Windows 身份验证”**。 单击“下一步”  。  
+3.  输入 BI 语义模型连接文件的 SharePoint URL （例如** http://mysharepoint/shared Documents/myData. bism**）。 接受默认登录凭据选项 **“使用 Windows 身份验证”**。 单击“下一步”。  
   
 4.  在下一页上，再次单击 **“下一步”** 。 尽管系统会提示您选择某个数据库，但您只能使用在 BI 语义模型连接中指定的一个数据库。  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c4467b08-ce59-4de7-a2d9-c22e246bdd52
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 08db0d81ac198795386391f977d09d20ff8d22ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 112f8944bd20b2b6a464b0d84fb8ac1a0e89d976
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076880"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544569"
 ---
 # <a name="set-custom-member-formulas-for-attributes-in-a-dimension"></a>为维度中的属性设置自定义成员公式
   通过在多维数据集或维度中添加自定义成员公式增强功能，可以使用多维表达式 (MDX) 表达式的结果替换与维度成员关联的默认聚合。 （此增强功能将设置维度中的指定特性的 `CustomRollupColumn` 属性。）  

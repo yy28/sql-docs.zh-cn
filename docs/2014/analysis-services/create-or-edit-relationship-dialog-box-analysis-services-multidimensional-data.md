@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: da3c7074-623e-4ddf-a707-d3276a47cf1c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: de19592ec5a94e99cc87c40dac476e75546c7968
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b18a0b6c79a3787af4a55a473e5203daf9c7308f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086779"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526477"
 ---
 # <a name="create-or-edit-relationship-dialog-box-analysis-services---multidimensional-data"></a>“创建或编辑关系”对话框（Analysis Services - 多维数据）
   可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的“创建/编辑关系”**** 对话框，定义或修改数据源视图中的关系。 通过执行以下操作之一，可以显示“创建/编辑关系”对话框****：  

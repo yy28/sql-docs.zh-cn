@@ -1,5 +1,6 @@
 ---
 title: SqlXmlCommand 对象（SQLXML）
+description: 了解 SqlXmlCommand 对象的方法和属性。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -31,12 +32,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb307599c48c72697f696e78eb7ed988dc03ca37
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: afebd1c659015e3daf4a357b12871687207b607e
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252644"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306156"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>SQLXML 托管类 - SqlXmlCommand 对象
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "75252644"
 public SqlXmlCommand(string cnString)  
 ```  
   
- 其中`cnString` ，是用于标识服务器、数据库和登录信息的 ADO 或 OLEDB 连接字符串，例如`Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`。  
+ 其中， `cnString` 是用于标识服务器、数据库和登录信息的 ADO 或 OLEDB 连接字符串，例如 `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"` 。  
   
  在该连接字符串中，`Provider` 必须是 SQLOLEDB，并且 `Data Provider` 不应包括在访问接口字符串中。  
   
@@ -65,7 +66,7 @@ public SqlXmlCommand(string cnString)
  将查询结果写入到现有流中。 如果你有需要追加结果的流（例如，将查询结果写入 Httpresponse.cache. OutputStream），则此方法非常有用。 有关工作示例，请参阅[执行 SQL 查询 &#40;SQLXML 托管类&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)。  
   
  XmlReader ExecuteXmlReader （）  
- 返回 XmlReader 对象。 您可以使用此方法直接在 XmlReader 对象中操作数据，或插入可链的体系结构。 有关详细信息，请参阅 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 文档。 有关工作示例，请参阅[使用 ExecuteXMLReader 方法执行 SQL 查询](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)。  
+ 返回 XmlReader 对象。 您可以使用此方法直接在 XmlReader 对象中操作数据，或插入 System.Xml 的可链体系结构。 有关详细信息，请参阅 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 文档。 有关工作示例，请参阅[使用 ExecuteXMLReader 方法执行 SQL 查询](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)。  
   
  TheSqlXmlCommand 对象还支持以下附加方法：  
   

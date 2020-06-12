@@ -1,5 +1,6 @@
 ---
 title: 菜单命令和其他快捷键（MySQLToSQL） |Microsoft Docs
+description: 了解访问菜单命令的键盘快捷方式，以及在 SSMA for MySQL 应用程序的各种对话框中使用的其他快捷键。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 585243f46296808a5ed190c3e6d9448eec1c63da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04450495d85eed7ab198090afcc2a4ac9cffb4c0
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908803"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293598"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>菜单命令和其他快捷键 (MySQLToSQL)
 以下部分介绍了访问菜单命令的键盘快捷方式，以及 SSMA for MySQL 应用程序的各种对话框中使用的其他快捷键。  

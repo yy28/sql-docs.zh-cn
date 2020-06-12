@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 790e509dd29e388dfb697ba577958395a4a046ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d028c4ca47567a1f0f6b7d4b874ad78c98ea2d1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072889"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547330"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>在 ReadOnly 和 ReadWrite 模式之间切换 Analysis Services 数据库
   通常情况下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 需要更改表格的读/写模式或多维数据库。 根据业务需要（如在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器池中共享数据库以获得更好的用户体验），经常需要进行上述操作。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 60bb9610-7229-42eb-a95f-a377268a8720
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f75298a4701f15a1fc0f3f471bf7628f4a7030c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a6bbeab13d3a29c9dd7cf769dd28d776d3ae229
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782644"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528023"
 ---
 # <a name="analysis-services-powershell"></a>Analysis Services PowerShell
   [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] 包括 Analysis Services PowerShell (SQLAS) 提供程序和 cmdlet，以便您可以使用 Windows PowerShell 导航、管理和查询 Analysis Services 对象。  
@@ -39,14 +38,14 @@ ms.locfileid: "72782644"
 
 有关语法和示例的详细信息，请参阅[Analysis Services PowerShell 参考](/sql/analysis-services/powershell/analysis-services-powershell-reference)。
 
-##  <a name="prerequisites"></a><a name="bkmk_prereq"></a>先决条件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 先决条件  
  必须安装有 Windows PowerShell 2.0。 该软件默认安装在 Windows 操作系统的较新版本上。 有关详细信息，请参阅[安装 Windows PowerShell 2.0](https://msdn.microsoft.com/library/ff637750.aspx)
 
 <!-- ff637750.aspx above is linked to by:  (https://go.microsoft.com/fwlink/?LinkId=227613). -->
   
  您必须安装包括 SQL Server PowerShell (SQLPS) 模块和客户端库在内的 SQL Server 功能。 最简单的操作方式是安装 SQL Server Management Studio，其中自动包括 PowerShell 功能和客户端库。 SQL Server PowerShell (SQLPS) 模块包含用于所有 SQL Server 功能的 PowerShell 提供程序和 cmdlet，包括用于导航 Analysis Services 对象层次结构的 SQLASCmdlets 模块和 SQLAS 提供程序。  
   
- 你必须导入**SQLPS**模块，然后才能使用该`SQLAS`提供程序和 cmdlet。 SQLAS 提供程序是`SQLServer`提供程序的扩展。 有几种方法可以导入 SQLPS 模块。 有关详细信息，请参阅 [导入 SQLPS 模块](../../2014/database-engine/import-the-sqlps-module.md)。  
+ 你必须导入**SQLPS**模块，然后才能使用该 `SQLAS` 提供程序和 cmdlet。 SQLAS 提供程序是提供程序的扩展 `SQLServer` 。 有几种方法可以导入 SQLPS 模块。 有关详细信息，请参阅 [导入 SQLPS 模块](../../2014/database-engine/import-the-sqlps-module.md)。  
   
  远程访问 Analysis Services 实例要求您启用远程管理和文件共享。 有关详细信息，请参阅本主题中的[启用远程管理](#bkmk_remote)。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "72782644"
 |表格实例和数据库|支持本地和远程管理。<br /><br /> 有关详细信息，请参阅8月2011博客，了解如何[使用 PowerShell 管理表格模型](https://go.microsoft.com/fwlink/?linkID=227685)。|  
 |PowerPivot for SharePoint 实例和数据库|有限支持。 您可以使用 HTTP 连接和 SQLAS 提供程序查看实例和数据库信息。<br /><br /> 但是，不支持使用 cmdlet。 切勿使用 Analysis Services PowerShell 备份和还原内存中 PowerPivot 数据库，也不应添加或删除角色、处理数据或运行任意 XMLA 脚本。<br /><br /> 出于配置目的，PowerPivot for SharePoint 具有单独提供的内置 PowerShell 支持。 有关详细信息，请参阅[PowerShell Reference for PowerPivot for SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)。|  
 |与本地多维数据集的本机连接<br /><br /> "Data Source = c:\backup\test.cub"|不支持。|  
-|与 SharePoint 中的 BI 语义模型 (.bism) 连接文件的 HTTP 连接<br /><br /> "Data Source =http://server/shared_docs/name.bism"|不支持。|  
+|与 SharePoint 中的 BI 语义模型 (.bism) 连接文件的 HTTP 连接<br /><br /> "Data Source = http://server/shared_docs/name.bism "|不支持。|  
 |与 PowerPivot 数据库的嵌入式连接<br /><br /> "Data Source = $Embedded $"|不支持。|  
 |Analysis Services 存储过程中的本地服务器环境<br /><br /> "Data Source = *"|不支持。|  
   
@@ -82,7 +81,7 @@ ms.locfileid: "72782644"
   
 3.  凭据对象提供的用户名和密码解析为 Windows 用户标识。 Analysis Services 将此标识用作当前用户的标识。 如果该用户不是 Windows 用户，或是缺少足够的权限来执行请求的操作，该请求将失败。  
   
- 若要创建凭据对象，您可以使用 Get-Credential cmdlet 从操作员处收集凭据。 随后可以在连接 Analysis Services 的命令中使用该凭据对象。 下面的示例演示了一种方法。 在此示例中，连接到配置为使用 HTTP 访问`SQLSERVER:\SQLAS\HTTP_DS`的本地实例（）。  
+ 若要创建凭据对象，您可以使用 Get-Credential cmdlet 从操作员处收集凭据。 随后可以在连接 Analysis Services 的命令中使用该凭据对象。 下面的示例演示了一种方法。 在此示例中，连接到 `SQLSERVER:\SQLAS\HTTP_DS` 配置为使用 HTTP 访问的本地实例（）。  
   
 ```powershell
 $cred = Get-Credential adventureworks\dbadmin  
@@ -201,7 +200,7 @@ PS SQLSERVER\sqlas\localhost\default:> dir
   
  如果你使用本主题中的说明配置了用于 HTTP 访问的服务器，则 HTTP 连接很有用：[配置 Http 访问以对 Internet Information Services &#40;IIS&#41; 8.0 上的 Analysis Services](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
- 假设的服务器 URL http://localhost/olap/msmdpump.dll，连接可能如下所示：  
+ 假设的服务器 URL http://localhost/olap/msmdpump.dll ，连接可能如下所示：  
   
 ```  
 PS SQLSERVER\sqlas:> cd http_ds  

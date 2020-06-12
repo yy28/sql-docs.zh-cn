@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7b0ebc58-94b9-4523-8994-e7bc796b0bd8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: def616b09e6d5378257c3e5c377f2724c9d09676
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c01db1cdafc0a3e624cc8e92815a791c08ee4188
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077168"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544709"
 ---
 # <a name="set-usage-property"></a>设置用法属性
   可以使用维度设计器中的 **“维度结构”** 视图来设置属性的用法，可通过 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]访问维度设计器。  
@@ -33,11 +32,11 @@ ms.locfileid: "66077168"
   
 2.  在“属性”中，右键单击要为其设置用法的属性，指向“设置属性用法”，再单击下列选项之一：********  
   
-    -   **正则**  
+    -   **常规**  
   
     -   **密钥**  
   
-    -   **Parent**  
+    -   **父级**  
   
 ## <a name="see-also"></a>另请参阅  
  [属性和属性层次结构](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   

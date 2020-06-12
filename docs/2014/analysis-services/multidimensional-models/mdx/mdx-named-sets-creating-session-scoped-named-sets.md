@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b751e1e4-6d4c-4d36-a28d-ffdaaee0f1c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 545bbdb171388f06c28644e0b8caa48db95e7e7f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d35bd61dcc59eca8bcb920ed99f2e791631047c7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074049"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546279"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>创建会话作用域的命名集 (MDX)
   若要创建在整个多维表达式 (MDX) 会话期间都可用的命名集，请使用 [CREATE SET](/sql/mdx/mdx-data-definition-create-set) 语句。 直到 MDX 会话关闭后才会删除使用 CREATE SET 语句创建的命名集。  

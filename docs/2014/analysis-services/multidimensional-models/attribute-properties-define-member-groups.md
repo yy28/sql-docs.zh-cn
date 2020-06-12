@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 006cc915-c499-4781-b9a7-01ad31bebf6a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2da7f19fa9626792a117ffa0108a28c50f32c5f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95f9516c7a0077e97af348afa863fe15c8d4528b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077300"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544739"
 ---
 # <a name="define-member-groups"></a>定义成员组
   如果属性有很多成员，可以选择将这些成员分组到存储桶中，以减少用户在浏览某个层次结构中的数据时看到的成员数。 确定用于放置成员组的存储桶的数目，并为存储桶设置命名架构。 有关详细信息，请参阅[对属性成员分组（离散化）](attribute-properties-group-attribute-members.md)。  

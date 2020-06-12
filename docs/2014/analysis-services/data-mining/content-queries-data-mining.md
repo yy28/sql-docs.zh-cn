@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f6b20c32ee955023ea24af2f70a83a7793ba1d64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44b162c34f5f505462a713205d8434484473afa4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085652"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524053"
 ---
 # <a name="content-queries-data-mining"></a>内容查询（数据挖掘）
   内容查询是一种提取有关内部统计信息以及挖掘模型结构信息的一种方式。 有时，内容查询可提供在查看器中不易查看的详细信息。 您还可以使用内容查询的结果以编程方式提取信息以供他用。  

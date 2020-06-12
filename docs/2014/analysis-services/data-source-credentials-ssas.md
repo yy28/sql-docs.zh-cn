@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: c1089021-20d9-4d73-820f-819a0bfd66fc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 88f33a6e2ae78efbe64d7a84af676812df743e60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8ea205d13a9f626e39dad8a1ca0a6e406a8f8fa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082579"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529024"
 ---
 # <a name="data-source-credentials-ssas"></a>数据源凭据 (SSAS)
   **“表导入向导”** 的这一页可用于输入您选择的现有数据源连接的用户名和密码。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **用户名**  
  输入数据源连接的用户名。  
   

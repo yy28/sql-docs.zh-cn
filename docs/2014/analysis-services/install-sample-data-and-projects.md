@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6185d3d9aeb3221b1ae194790b89265787e4621
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530817"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544110"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>安装 Analysis Services 多维建模教程的示例数据和项目
   可使用本主题中提供的说明和链接来安装 Analysis Services 教程中使用的所有数据和项目文件。  
@@ -65,7 +64,7 @@ ms.locfileid: "69530817"
   
 4.  右键单击“数据库”，然后单击“附加”****。  
   
-5.  单击 **“添加”** 。  
+5.  单击“添加”。  
   
 6.  选择 **AdventureWorksDW2012_Data.mdf** 数据库文件，并单击“确定”****。 如果未列出该文件，请检查 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data 文件夹，以便确保该文件在该路径下存在。  
   
@@ -98,7 +97,7 @@ ms.locfileid: "69530817"
   
      2012 教程对于 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本有效。  
   
-     "Analysis Services 教程 SQL Server 2012 .zip" 文件将保存到您的计算机上的 "下载" 文件夹中。  
+     "Analysis Services 教程 SQL Server 2012.zip" 文件将保存到计算机上的 "下载" 文件夹中。  
   
 2.  将 .zip 文件移到根驱动器下一级的文件夹（例如 C:\Tutorial）。 如果你尝试在 "下载" 文件夹中解压缩这些文件，则此步骤将会缓解有时会发生的 "路径过长" 错误。  
   
@@ -126,7 +125,7 @@ ms.locfileid: "69530817"
   
     -   Lesson 10 Complete  
   
-4.  取消对这些文件的只读权限。 右键单击父文件夹“Analysis Services Tutorial SQL Server 2012”，选择“属性”****，然后清除“只读”**** 复选框。 单击“确定”。  将更改应用至此文件夹、子文件夹和文件。  
+4.  取消对这些文件的只读权限。 右键单击父文件夹“Analysis Services Tutorial SQL Server 2012”，选择“属性”****，然后清除“只读”**** 复选框。 单击“确定”。 将更改应用至此文件夹、子文件夹和文件。  
   
 5.  启动 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   
@@ -144,12 +143,12 @@ ms.locfileid: "69530817"
   
 8.  启动 SQL Server Management Studio。 在 SQL Server Management Studio 中，连接到 Analysis Services。 验证名为 **Analysis Services Tutorial** 的数据库是否正在服务器上运行。  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
  您现在可以使用本教程了。 有关如何入门的详细信息，请参阅[多维建模（Adventure Works 教程）](multidimensional-modeling-adventure-works-tutorial.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [从安装向导安装 SQL Server 2014 &#40;安装程序&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
  [将 Windows 防火墙配置为允许 Analysis Services 访问](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
- [Configure the Windows Firewall to Allow SQL Server Access](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
+ [将 Windows 防火墙配置为允许 SQL Server 访问](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   
   

@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: e0a5dd60-35a3-4a4f-b36f-52ecea814886
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6b04669080a9dedd84d3e7c218f6360486076fdc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b7589a98636e56e8c592cef213785544e18f4ea
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073914"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546183"
 ---
 # <a name="querying-multidimensional-data-with-mdx"></a>使用 MDX 查询多维数据
-  多维表达式（MDX）是用于在中[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]处理和检索多维数据的查询语言。 MDX 基于 XML for Analysis （XMLA）规范，具有特定的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]扩展名。 MDX 使用由标识符、值、语句、函数和运算符组成的表达式， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 可以通过计算表达式来检索某个对象（如集或成员）或标量值（如字符串或数字）。  
+  多维表达式（MDX）是用于在中处理和检索多维数据的查询语言 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。 MDX 基于 XML for Analysis （XMLA）规范，具有特定的扩展名 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。 MDX 使用由标识符、值、语句、函数和运算符组成的表达式， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 可以通过计算表达式来检索某个对象（如集或成员）或标量值（如字符串或数字）。  
   
- 中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的 MDX 查询和表达式用于执行以下操作：  
+ 中的 MDX 查询和表达式 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 用于执行以下操作：  
   
--   将数据从[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]多维数据集返回到客户端应用程序。  
+-   将数据从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多维数据集返回到客户端应用程序 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。  
   
 -   设置查询结果的格式。  
   
@@ -41,9 +40,9 @@ ms.locfileid: "66073914"
   
 |主题|说明|  
 |-----------|-----------------|  
-|[MDX 中的重要概念 (Analysis Services)](../key-concepts-in-mdx-analysis-services.md)|您可以使用多维表达式（MDX）查询多维数据或创建在多维数据集中使用的 MDX 表达式，但首先应了解[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]维度的概念和术语。|  
+|[MDX 中的重要概念 (Analysis Services)](../key-concepts-in-mdx-analysis-services.md)|您可以使用多维表达式（MDX）查询多维数据或创建在多维数据集中使用的 MDX 表达式，但首先应了解维度的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 概念和术语。|  
 |[MDX 查询基础知识 (Analysis Services)](mdx-query-fundamentals-analysis-services.md)|多维表达式 (MDX) 使您可以查询多维对象（如多维数据集）并返回包含该多维数据集的数据的多维单元集。 本主题及其子主题提供 MDX 查询的概述。|  
-|[MDX 脚本编写基础知识 (Analysis Services)](mdx-scripting-fundamentals-analysis-services.md)|在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中，多维表达式（MDX）脚本由一个或多个 MDX 表达式或语句构成，这些表达式或语句使用计算结果填充多维数据集。<br /><br /> MDX 脚本定义多维数据集的计算过程。 MDX 脚本也被视为多维数据集的一部分。 因此，更改与多维数据集相关联的 MDX 脚本将会立即更改多维数据集的计算过程。<br /><br /> 要创建 MDX 脚本，您可以使用 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中的“多维数据集设计器”。|  
+|[MDX 脚本编写基础知识 (Analysis Services)](mdx-scripting-fundamentals-analysis-services.md)|在中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ，多维表达式（MDX）脚本由一个或多个 MDX 表达式或语句构成，这些表达式或语句使用计算结果填充多维数据集。<br /><br /> MDX 脚本定义多维数据集的计算过程。 MDX 脚本也被视为多维数据集的一部分。 因此，更改与多维数据集相关联的 MDX 脚本将会立即更改多维数据集的计算过程。<br /><br /> 要创建 MDX 脚本，您可以使用 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中的“多维数据集设计器”。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Mdx 语法元素 &#40;MDX&#41;](/sql/mdx/mdx-syntax-elements-mdx)   

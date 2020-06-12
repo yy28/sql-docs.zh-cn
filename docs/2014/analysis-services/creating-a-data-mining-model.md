@@ -18,23 +18,22 @@ helpviewer_keywords:
 ms.assetid: 804b7db3-1f6a-4f73-a81d-bbe02520d7c6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1a8893960b5177563ccf98dbd21cb528ce399ea3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cce03fab2757b366fbe67dc6c68cb3be1c075e3c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086729"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526423"
 ---
 # <a name="creating-a-data-mining-model"></a>创建数据挖掘模型
   数据建模是数据挖掘的一个步骤，通过将*算法*应用于数据来构建模式和趋势。 之后，可以使用这些模式进行分析或预测。  
   
  Office 数据挖掘外接程序通过向导（使用这些向导可轻松地创建模型）支持数据挖掘。 这些向导对数据进行分析、标识关联、计算所有变量的统计重要性，以及自动选择最佳模型。  
   
- 尽管此功能的功能与[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]和[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]提供的数据挖掘工具一样强大，但向导和熟悉的 Excel 界面的组合使你可以轻松地创建、修改和使用数据挖掘。  
+ 尽管此功能的功能与和提供的数据挖掘工具一样强大 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，但 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 向导和熟悉的 Excel 界面的组合使你可以轻松地创建、修改和使用数据挖掘。  
   
 ## <a name="advanced-data-mining"></a>高级（数据挖掘）  
- 使用高级向导，您可以通过使用中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的数据挖掘算法之一，基于在 Excel 中存储的数据创建新的数据挖掘模型。  
+ 使用高级向导，您可以通过使用中的数据挖掘算法之一，基于在 Excel 中存储的数据创建新的数据挖掘模型 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。  
   
 ### <a name="create-mining-structure"></a>创建挖掘结构  
  创建挖掘结构向导可帮助您生成新的数据挖掘结构并将其用作多个挖掘模型的基础。 通过该向导，可以选择保留要用作测试集的数据部分，因此，您可以按照一致的测试标准来对所有使用相同数据的模型进行评估。  

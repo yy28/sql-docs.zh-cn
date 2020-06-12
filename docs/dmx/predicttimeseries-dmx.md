@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 48b656283cbe251b0c8ecb4e7c7b41681cddc7ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d0888082380c7380e5fb025bb70d4bd3c2e518b
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893881"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666692"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ```  
   
 ## <a name="arguments"></a>参数  
- 表列引用>， * \< * * \<标量列引用>*  
+ * \< 表列引用>*， * \< 标量列引用>*  
  指定要预测的列的名称。 列可以包含标量数据或表格格式数据。  
   
  *n*  
@@ -65,9 +65,9 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  这些参数仅在使用 PREDICTION JOIN 语句添加新数据时才可用。 如果使用 PREDICTION JOIN 查询并且没有指定参数，则默认值为 EXTEND_MODEL_CASES。  
   
 ## <a name="return-type"></a>返回类型  
- > \<的*表表达式*。  
+ > 的 \< *表表达式*。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  当使用 PREDICTION JOIN 语句添加新数据时，[!INCLUDE[msCoName](../includes/msconame-md.md)] 时序算法不支持历史预测。  
   
  在 PREDICTION JOIN 中，预测过程总是从原始定型系列的末尾之后的时间步长立即开始。 即使您添加新的数据也是如此。 因此， *n*参数和*n 启动*参数值必须是大于0的整数。  
@@ -90,7 +90,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 >  您可能会从模型中获取不同的结果；下面提供的示例结果仅用于说明结果格式。  
   
 ### <a name="example-1-predicting-a-number-of-time-slices"></a>示例 1：预测时间段数  
- 下面的示例使用**PredictTimeSeries**函数返回下三个时间步长的预测，并将结果限制为欧洲和太平洋地区的 M200 系列。 在此特定模型中，可预测属性是数量，因此您必须`[Quantity]`使用作为 PredictTimeSeries 函数的第一个参数。  
+ 下面的示例使用**PredictTimeSeries**函数返回下三个时间步长的预测，并将结果限制为欧洲和太平洋地区的 M200 系列。 在此特定模型中，可预测属性是数量，因此您必须使用 `[Quantity]` 作为 PredictTimeSeries 函数的第一个参数。  
   
 ```  
 SELECT FLATTENED  
@@ -185,7 +185,7 @@ WHERE ([Model Region] = 'M200 Europe'
  OR [Model Region] = 'M200 Pacific')  
 ```  
   
- 由于查询使用*EXTEND_MODEL_CASES*选项， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]因此会对其预测执行以下操作：  
+ 由于查询使用*EXTEND_MODEL_CASES*选项，因此 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 会对其预测执行以下操作：  
   
 -   向模型中添加两个月的新数据，从而增加了定型事例的总大小。  
   
@@ -220,7 +220,7 @@ WHERE ([Model Region] = 'M200 Europe'
 ## <a name="example-4-returning-statistics-in-a-time-series-prediction"></a>示例 4：返回时序预测中的统计信息  
  **PredictTimeSeries**函数不支持作为参数*INCLUDE_STATISTICS* 。 但是，可以使用以下查询来返回时序查询的预测统计信息。 此方法还可以与具有嵌套表列的模型结合使用。  
   
- 在此特定模型中，可预测属性是数量，因此您必须`[Quantity]`使用作为 PredictTimeSeries 函数的第一个参数。 如果模型使用不同的可预测属性，则可以替换为不同的列名。  
+ 在此特定模型中，可预测属性是数量，因此您必须使用 `[Quantity]` 作为 PredictTimeSeries 函数的第一个参数。 如果模型使用不同的可预测属性，则可以替换为不同的列名。  
   
 ```  
 SELECT FLATTENED [Model Region],  

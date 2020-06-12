@@ -19,22 +19,21 @@ helpviewer_keywords:
 ms.assetid: 5b7e9cef-ff68-4d8e-99bc-e0094ced1baa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2e63ef1a2463f65e108ade9a43b748e02831da57
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e62abaab5a8f74dfee7d51962f2fb243dc6eb20a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725251"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545989"
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>安全角色（Analysis Services - 多维数据）
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]使用角色来管理对象和数据[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的安全性。 在基本术语中，角色与 Microsoft Windows 用户和用户组的安全性标识符 (SID) 相关联，用户和用户组具有为 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例管理的对象定义的特定访问权限和权限。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]提供了两类角色：  
+  中使用角色 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 来管理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 对象和数据的安全性。 在基本术语中，角色与 Microsoft Windows 用户和用户组的安全性标识符 (SID) 相关联，用户和用户组具有为 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例管理的对象定义的特定访问权限和权限。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]提供了两类角色：  
   
 -   服务器角色，它是一个固定角色，用于提供对 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例的管理员访问权限。  
   
 -   数据库角色，这些角色由管理员定义，用于控制非管理员用户对对象和数据的访问权限。  
   
- 安全中[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的安全通过使用角色和权限来管理。 角色为用户组。 用户（也称为成员）既可向角色中添加，也可从中删除。 对象的权限按照角色来指定，对于某一角色拥有权限的对象，该角色中的所有成员都可使用。 角色中的所有成员对这些对象具有相等的权限。 各对象都有其特定权限。 每个对象都对应一个所授权限的集合；对于同一对象，可授予不同的权限集。 对于对象权限集合中的单个权限，只能向其分配一个角色。  
+ 安全中的安全 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 通过使用角色和权限来管理。 角色为用户组。 用户（也称为成员）既可向角色中添加，也可从中删除。 对象的权限按照角色来指定，对于某一角色拥有权限的对象，该角色中的所有成员都可使用。 角色中的所有成员对这些对象具有相等的权限。 各对象都有其特定权限。 每个对象都对应一个所授权限的集合；对于同一对象，可授予不同的权限集。 对于对象权限集合中的单个权限，只能向其分配一个角色。  
   
 ## <a name="role-and-role-member-objects"></a>角色和角色成员对象  
  角色是用户（成员）集合的包含对象。 角色定义可在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中建立用户的成员身份。 由于权限是按角色分配的，所以用户必须先是某个角色的成员，然后才能访问对象。  
@@ -77,10 +76,10 @@ ms.locfileid: "62725251"
   
 |操作|值|说明|  
 |------------|------------|-----------------|  
-|进程|{`true`, `false`}<br /><br /> Default=|如果值为 `true`，则成员可以处理该对象以及该对象中包含的任何对象。<br /><br /> 处理权限不适用于挖掘模型。 <xref:Microsoft.AnalysisServices.MiningModel> 权限始终从 <xref:Microsoft.AnalysisServices.MiningStructure> 继承。|  
+|过程|{`true`, `false`}<br /><br /> Default=|如果值为 `true`，则成员可以处理该对象以及该对象中包含的任何对象。<br /><br /> 处理权限不适用于挖掘模型。 <xref:Microsoft.AnalysisServices.MiningModel> 权限始终从 <xref:Microsoft.AnalysisServices.MiningStructure> 继承。|  
 |读取定义|{`None`, `Basic`, `Allowed`}<br /><br /> Default=|指定成员是否能读取与对象关联的数据定义 (ASSL)。<br /><br /> 如果值为 `Allowed`，则成员可读取与对象关联的 ASSL。<br /><br /> `Basic` 和 `Allowed` 由对象中包含的对象继承。 `Allowed` 可覆盖 `Basic` 和 `None`。<br /><br /> 对象的 DISCOVER_XML_METADATA 要求值为 `Allowed`。 创建链接对象和本地多维数据集时，要求值为 `Basic`。|  
 |读取|{`None`, `Allowed`}<br /><br /> Default=`None`（DimensionPermission 除外，其中 default=`Allowed`）|指定成员是否可读取架构行集和数据内容。<br /><br /> `Allowed`授予对数据库的读取访问权限，使您能够发现数据库。<br /><br /> 对于多维数据集，如果值为 `Allowed`，则可读取架构行集内部并可访问多维数据集内容（除非受到 <xref:Microsoft.AnalysisServices.CellPermission> 和 <xref:Microsoft.AnalysisServices.CubeDimensionPermission> 的约束）。<br /><br /> 对于维度，如果值为 `Allowed`，则可读取维度中的所有属性（除非受到 <xref:Microsoft.AnalysisServices.CubeDimensionPermission> 的约束）。 读取权限仅用于对 <xref:Microsoft.AnalysisServices.CubeDimensionPermission> 的静态继承。 对于维度，如果值为 `None`，则将隐藏维度，且仅授予对可聚合属性的默认成员的访问权限；如果维度包含不可聚合属性，则将会引发错误。<br /><br /> 对于 <xref:Microsoft.AnalysisServices.MiningModelPermission>，如果值为 `Allowed`，则将授予查看架构行集中对象并执行预测联接的权限。<br /><br /> 若要读取或写入数据库中的任何对象，需要**NoteAllowed** 。|  
-|写入|{`None`, `Allowed`}<br /><br /> Default=|指定成员是否拥有对父对象的数据的写入权限。<br /><br /> 该权限适用于 <xref:Microsoft.AnalysisServices.Dimension>、<xref:Microsoft.AnalysisServices.Cube> 和 <xref:Microsoft.AnalysisServices.MiningModel> 子类。 但不适用于数据库 <xref:Microsoft.AnalysisServices.MiningStructure> 子类，这将会生成验证错误。<br /><br /> 对于 <xref:Microsoft.AnalysisServices.Dimension>，如果值为 `Allowed`，则将授予对维度中所有属性的写入权限。<br /><br /> 对于 <xref:Microsoft.AnalysisServices.Cube>，如果值为 `Allowed`，则对于定义为 Type=writeback 的分区，则将授予对其多维数据集的单元的写入权限。<br /><br /> 对于 <xref:Microsoft.AnalysisServices.MiningModel>，如果值为 `Allowed`，则将授予修改模型内容的权限。<br /><br /> 对于 <xref:Microsoft.AnalysisServices.MiningStructure>，值 `Allowed` 在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中没有特定含义。 **注意：** 如果 read 也设置为`Allowed` ，则不能将写入设置为`Allowed`|  
+|写入|{`None`, `Allowed`}<br /><br /> Default=|指定成员是否拥有对父对象的数据的写入权限。<br /><br /> 该权限适用于 <xref:Microsoft.AnalysisServices.Dimension>、<xref:Microsoft.AnalysisServices.Cube> 和 <xref:Microsoft.AnalysisServices.MiningModel> 子类。 但不适用于数据库 <xref:Microsoft.AnalysisServices.MiningStructure> 子类，这将会生成验证错误。<br /><br /> 对于 <xref:Microsoft.AnalysisServices.Dimension>，如果值为 `Allowed`，则将授予对维度中所有属性的写入权限。<br /><br /> 对于 <xref:Microsoft.AnalysisServices.Cube>，如果值为 `Allowed`，则对于定义为 Type=writeback 的分区，则将授予对其多维数据集的单元的写入权限。<br /><br /> 对于 <xref:Microsoft.AnalysisServices.MiningModel>，如果值为 `Allowed`，则将授予修改模型内容的权限。<br /><br /> 对于 <xref:Microsoft.AnalysisServices.MiningStructure>，值 `Allowed` 在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中没有特定含义。 **注意：** `Allowed`如果 read 也设置为，则不能将写入设置为`Allowed`|  
 |管理**注意：** 仅在数据库权限中|{`true`, `false`}<br /><br /> Default=|指定成员是否可管理数据库。<br /><br /> 如果值为 `true`，则将授予成员对数据库中所有对象的访问权限。<br /><br /> 成员可以拥有特定数据库的管理权限，但却不能拥有其他数据库的管理权限。|  
   
 ## <a name="see-also"></a>另请参阅  

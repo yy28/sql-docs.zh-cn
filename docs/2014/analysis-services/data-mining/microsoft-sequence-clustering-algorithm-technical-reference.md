@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6ae48fe00fb9c24e2d6d0ddde61302cff3ceba0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e09018fad9c291ec1f47bbb776797d634950381
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083839"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521646"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft 顺序分析和聚类分析算法技术参考
   Microsoft 顺序分析和聚类分析算法是一种综合算法，它使用 Markov 链分析来识别有序序列，并会综合利用此分析结果和聚类分析技术基于模型中的序列和其他属性生成分类。 本主题介绍该算法的实现以及如何自定义算法，最后还对顺序分析和聚类分析模型的特殊要求进行了说明。  
@@ -46,10 +45,10 @@ ms.locfileid: "66083839"
 ### <a name="feature-selection-in-a-sequence-clustering-model"></a>顺序分析和聚类分析模型中的功能选择  
  生成序列时不会调用功能选择，但会在聚类分析阶段应用功能选择。  
   
-|模型类型|功能选择方法|说明|  
+|模型类型|功能选择方法|注释|  
 |----------------|------------------------------|--------------|  
 |顺序分析和聚类分析|未使用|不调用功能选择；但可以通过设置参数 MINIMUM_SUPPORT 和 MINIMUM_PROBABILIITY 的值来控制算法的行为。|  
-|聚类分析|兴趣性分数|尽管聚类分析算法可能使用离散算法或离散化算法，但每个属性的分数仍将作为间距进行计算，并且是连续的，因此使用兴趣性分数。|  
+|群集|兴趣性分数|尽管聚类分析算法可能使用离散算法或离散化算法，但每个属性的分数仍将作为间距进行计算，并且是连续的，因此使用兴趣性分数。|  
   
  有关详细信息，请参阅 [Feature Selection](../../sql-server/install/feature-selection.md)。  
   
@@ -99,7 +98,7 @@ ms.locfileid: "66083839"
  默认值为 64。  
   
  MAXIMUM_STATES  
- 指定算法支持的非序列属性的最大状态数。 如果非序列属性的状态数大于最大状态数，则算法将使用属性的最常用状态，并将剩余状态视为`Missing`。  
+ 指定算法支持的非序列属性的最大状态数。 如果非序列属性的状态数大于最大状态数，则算法将使用属性的最常用状态，并将剩余状态视为 `Missing` 。  
   
  默认值为 100。  
   
@@ -134,9 +133,9 @@ ms.locfileid: "66083839"
 |输入属性|Continuous、Cyclical、Discrete、Discretized、Key、Key Sequence、Table 和 Ordered|  
 |可预测属性|Continuous、Cyclical、Discrete、Discretized、Table 和 Ordered|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
--   将 [PredictSequence (DMX)](/sql/dmx/predictsequence-dmx) 函数用于序列预测。 有关支持序列预测的版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的详细信息，请参阅 SQL Server 2012 的各个[版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)（。https://go.microsoft.com/fwlink/?linkid=232473)  
+-   将 [PredictSequence (DMX)](/sql/dmx/predictsequence-dmx) 函数用于序列预测。 有关支持序列预测的版本的详细信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅[SQL Server 2012 的各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)（ https://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法不支持使用预测性模型标记语言 (PMML) 来创建挖掘模型。  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 238a4a4b-84bd-4b3d-9f02-f3adf57fa3af
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c775bc01f78af7d5d5f0dad39eb93c77348ea31d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab210a7763569a018e0283a3b74d708fcbfe456b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069851"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538809"
 ---
 # <a name="security-context-dialog-box-analysis-services---multidimensional-data"></a>“安全上下文”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “安全上下文” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，更改用于检查 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象的数据或元数据的用户和角色。 在多维数据集设计器的 **“计算”** 选项卡或 **“浏览器”** 选项卡上，单击 **“工具栏”** 窗格中的 **“安全上下文”** 可以显示 **“安全上下文”** 对话框。  
@@ -31,7 +30,7 @@ ms.locfileid: "66069851"
   
  用户或组的域和用户名使用下面的格式：  
   
- **\\** * \<域名* *>\<用户帐户名>*  
+ *\<Domain name>* **\\** *\<User account name>*  
   
  **角色**  
  选择此选项可以在查看 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象的数据和元数据时使用一个或多个指定的角色。 如果在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中定义了多个角色，则可以选择要使用的角色。  

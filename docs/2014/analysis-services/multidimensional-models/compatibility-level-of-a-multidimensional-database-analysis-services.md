@@ -9,21 +9,20 @@ ms.topic: conceptual
 ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c5eedfb396b33d33ceb9fbfad0245c4eb730997
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5edbd0ab8f713d227e4ef06307090b6079390869
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076692"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537119"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>设置多维数据库的兼容级别 (Analysis Services)
-  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，数据库兼容级别属性确定数据库的功能级别。 兼容级别对于每个模型类型都是唯一的。 例如，兼容级别`1100`具有不同的含义，具体取决于该数据库是多维数据库还是表格数据库。  
+  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，数据库兼容级别属性确定数据库的功能级别。 兼容级别对于每个模型类型都是唯一的。 例如，兼容级别 `1100` 具有不同的含义，具体取决于该数据库是多维数据库还是表格数据库。  
   
  本主题仅描述多维数据库的兼容级别。 有关表格解决方案的详细信息，请参阅[&#40;SSAS 表格 SP1&#41;兼容级别](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)。  
   
 > [!NOTE]  
->  表格模型具有其他一些不适用于多维模型的数据库兼容级别。 多维模型不具有兼容级别 `1103`。 有关表格解决方案的详细信息`1103` ，请参阅[SQL Server 2012 SP1 和兼容性级别中表格模型的新增功能](https://go.microsoft.com/fwlink/?LinkId=301727)。  
+>  表格模型具有其他一些不适用于多维模型的数据库兼容级别。 多维模型不具有兼容级别 `1103`。 有关表格解决方案的详细信息，请参阅[SQL Server 2012 SP1 和兼容性级别中表格模型的新增功能](https://go.microsoft.com/fwlink/?LinkId=301727) `1103` 。  
   
  **多维数据库的兼容级别**  
   
@@ -34,10 +33,10 @@ ms.locfileid: "66076692"
 |设置|说明|  
 |-------------|-----------------|  
 |`1050`|此值在脚本或工具中不可见，但它对应于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]中创建的数据库。 对于任何没有显式设置 `CompatibilityLevel` 的数据库，都将在 `1050` 级别隐式运行。|  
-|`1100`|这是在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中创建的新数据库的默认值。 您还可以为在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的早期版本中创建的数据库指定该值，以便使用仅在此兼容级别支持的功能（也就是说，增大了用于包含字符串数据的维度属性或非重复计数度量值的字符串存储空间）。<br /><br /> 如果数据库`CompatibilityLevel`设置为`1100`获取附加属性`StringStoresCompatibilityLevel`，则可以为分区和维度选择其他字符串存储。|  
+|`1100`|这是在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中创建的新数据库的默认值。 您还可以为在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的早期版本中创建的数据库指定该值，以便使用仅在此兼容级别支持的功能（也就是说，增大了用于包含字符串数据的维度属性或非重复计数度量值的字符串存储空间）。<br /><br /> `CompatibilityLevel`如果数据库设置为 `1100` 获取附加属性， `StringStoresCompatibilityLevel` 则可以为分区和维度选择其他字符串存储。|  
   
 > [!WARNING]  
->  将数据库兼容级别设置为更高级别是不可逆的。 将兼容级别提高到`1100`后，必须继续在更高版本的服务器上运行数据库。 不能回滚到`1050`。 不能在早于`1100` [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的服务器版本上附加或还原数据库。  
+>  将数据库兼容级别设置为更高级别是不可逆的。 将兼容级别提高到后 `1100` ，必须继续在更高版本的服务器上运行数据库。 不能回滚到 `1050` 。 不能 `1100` 在早于或的服务器版本上附加或还原数据库 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。  
   
 ## <a name="prerequisites"></a>先决条件  
  在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入数据库兼容级别。 你必须具有 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或更高版本才能查看或设置数据库兼容级别。  
@@ -84,7 +83,7 @@ ms.locfileid: "66076692"
   
 1.  只有在两个不同的数据库共享相同的兼容级别时，才支持从这两个不同的数据库合并分区。  
   
-2.  使用来自其他数据库的链接维度要求相同的兼容级别。 例如， [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]如果要使用[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]数据库中的数据库的链接维度，则必须将[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]数据库移植到[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]服务器，并将兼容级别设置为。 `1100`  
+2.  使用来自其他数据库的链接维度要求相同的兼容级别。 例如，如果要使用数据库中的数据库的链接维度 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ，则必须将 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 数据库移植到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 服务器，并将兼容级别设置为 `1100` 。  
   
 3.  仅对于共享相同版本和数据库兼容级别的服务器，才支持同步服务器。  
   

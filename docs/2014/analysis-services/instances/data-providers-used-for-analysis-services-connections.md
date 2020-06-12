@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 16e691ab6c6a6fcff4cb59fe54884fbb1b52268e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a48316bb89f92ba8b44e3160a6b38e77762f3be
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080102"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543979"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>用于 Analysis Services 连接的数据提供程序
   Analysis Services 为服务器和数据访问提供了三个数据访问接口。 连接到 Analysis Services 的所有应用程序均使用以下访问接口之一来进行数据访问操作。 ADOMD.NET 和 Analysis Services 管理对象 (AMO) 这两个访问接口为托管数据访问接口。 Analysis Services OLE DB 访问接口 (MSOLAP DLL) 为本地数据访问接口。  
@@ -54,7 +53,7 @@ ms.locfileid: "66080102"
   
 1.  转到 \Program Files\Microsoft Analysis Services\AS OLEDB\120。  
   
-2.  右键单击 "为 msolap120.dll"，然后单击 "**属性**"。  
+2.  右键单击 msolap120.dll，然后单击 "**属性**"。  
   
  如果在此位置找不到文件，或文件夹路径包含 AS OLEDB\110 或 AS OLEDB\90，则表示您在使用较旧的版本，现在必须安装较新的版本 (AS OLEDB\11) 来连接到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
@@ -86,7 +85,7 @@ ms.locfileid: "66080102"
   
  MSOLAP130.dll 是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中附带的 Analysis Services OLE DB 提供程序版本。 其他最近早期版本有 MSOLAP10.dll（对于 SQL Server 2008 和 2008 R2）和 MSOLAP90.dll（对于 SQL Server 2005）。  
   
- OLE DB 访问接口经常在连接字符串上指定。 Analysis Services 连接字符串使用不同的命名法来指代 OLE DB 提供程序： MSOLAP。\<版本> .dll  
+ OLE DB 访问接口经常在连接字符串上指定。 Analysis Services 连接字符串使用不同的命名法来指代 OLE DB 提供程序： MSOLAP. \<version> 。.dll  
   
  MSOLAP.5.dll 是随 Excel 2013 安装的当前 Analysis Services OLE DB 访问接口。 以前的版本（如 MSOLAP.4.dll 或 MSOLAP.3.dll）经常可在运行早期 Excel 版本的工作站上找到。 一些 Analysis Services 功能（如 PowerPivot 外接程序）需要特定版本的 OLE DB 访问接口。 有关详细信息，请参阅[连接字符串属性 (Analysis Services)](connection-string-properties-analysis-services.md)。  
   
@@ -101,12 +100,12 @@ ms.locfileid: "66080102"
   
  有关以编程方式连接的详细信息，请参阅 [Establishing Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net)。  
   
-##  <a name="amo"></a><a name="blkmk_AMO"></a> AMO  
+##  <a name="amo"></a><a name="blkmk_AMO"></a>AMO  
  AMO 是用于服务器管理和数据定义的托管数据访问接口。 例如，SQL Server Management Studio 使用 AMO 连接 Analysis Services。  
   
  AMO 由 SQL Server 安装程序进行安装，SQL Server 客户端应用程序使用它来连接 Analysis Services。 在自定义代码中使用 AMO 时，还可以下载并手动安装它（请参阅本主题中的 [如何确定 Analysis Services 数据提供程序的版本](#bkmk_LibUpdate) ）。 AMO 可以在全局程序集高速缓存中找到，例如 `Microsoft.AnalysisServices`。  
   
- 使用 AMO 的连接通常最小，由 "data source =\<servername>" 构成。 建立连接后，可以使用 API 来处理数据库集合和主要对象。 SSDT 和 SSMS 都使用 AMO 连接到 Analysis Services 实例。  
+ 使用 AMO 的连接通常最小，由 "data source = \<servername> " 构成。 建立连接后，可以使用 API 来处理数据库集合和主要对象。 SSDT 和 SSMS 都使用 AMO 连接到 Analysis Services 实例。  
   
  有关以编程方式连接的详细信息，请参阅 [Programming AMO Fundamental Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-fundamental-objects)。  
   

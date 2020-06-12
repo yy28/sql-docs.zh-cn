@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: 62bc9fc5-c6ff-4517-b598-d92df76743a2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e4d9b0eaa65eada55fec398b058d8e17aaa53a03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63034ac9d8ba601070f716830b3b9173575a8775
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084371"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522327"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>使用 Analysis Services 导入向导导入数据挖掘项目
   本主题介绍如何通过使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的模板“从服务器导入（多维和数据挖掘）项目”**** 从另一台服务器上的现有数据挖掘项目导入元数据，来创建新的数据挖掘项目。  
   
 ## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>从现有数据挖掘项目导入数据源、挖掘结构和挖掘模型  
- 使用模板 "**从服务器导入（多维和数据挖掘）项目**" 时， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]将创建一个新的数据挖掘项目，然后从指定的数据挖掘项目复制元数据。 该新项目包含与从中进行导入的 ssASnoversion 数据库相同的数据源、数据源视图、挖掘结构和挖掘模型。 但是，在您更新特定属性并处理对象之前将无法使用该项目，如下所述：  
+ 使用模板 "**从服务器导入（多维和数据挖掘）项目**" 时，将 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 创建一个新的数据挖掘项目，然后从指定的数据挖掘项目复制元数据。 该新项目包含与从中进行导入的 ssASnoversion 数据库相同的数据源、数据源视图、挖掘结构和挖掘模型。 但是，在您更新特定属性并处理对象之前将无法使用该项目，如下所述：  
   
 -   数据本身不会从源服务器复制到新的数据挖掘项目-仅导入数据源和数据源视图的定义。 因此，在完成导入过程并创建对象后，您必须通过定型挖掘结构和依赖模型来用数据填充对象。 可以在数据挖掘设计器中使用命令 **“全部处理”** 来定型模型和结构。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66084371"
     > [!WARNING]  
     >  无法指定要导入的对象；在选择现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库时，会导入所有多维和数据挖掘对象。  
   
-     单击“下一步”  。  
+     单击“下一步”。  
   
 5.  **“完成向导”** 页将显示导入操作的进度。 无法取消该操作或更改正在导入的对象。 完成操作后，请单击 **“完成”** 。  
   

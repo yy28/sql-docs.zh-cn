@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c0b0abaa-5c9b-4182-9d5f-fc16cd941d54
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6fb2888ba5cba2d3ab2701d934f83dc55cf362ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f909dae8db02007ee69a240d0b29c6c5cc566d8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077440"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544839"
 ---
 # <a name="bind-an-attribute-to-a-key-column"></a>将属性绑定到键列
   此过程说明如何更改维度中的特性的 `Name` 属性设置。  
@@ -35,6 +34,6 @@ ms.locfileid: "66077440"
 4.  键入新名称。  
   
     > [!NOTE]  
-    >  您还可以在的`Name` "**属性**" 窗口中设置所选属性的[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]属性。  
+    >  您还可以 `Name` 在的 "**属性**" 窗口中设置所选属性的属性 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 。  
   
   

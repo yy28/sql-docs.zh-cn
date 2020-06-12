@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 56bac170-6777-472a-8a09-549b2ee0d909
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5ac09961db83c8c0f8906f2bd04ea20638e39b22
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d5940acf827ee8cff73527d211f6bb8249a6e19
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070509"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539529"
 ---
 # <a name="refresh-data-source-view-dialog-box"></a>“刷新数据源视图”对话框
   可以使用 **中的** “刷新数据源视图” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，接受或取消刷新数据源视图导致的更改。 该对话框显示对数据源视图的更改，此更改是由更改基础数据源所引发。 您可以单击 **“确定”** 以接受更改并刷新数据源视图，或单击 **“取消”** 以忽略更改并保持数据源视图不变。 通过执行以下操作之一，即可显示 **“刷新数据源视图”** 对话框：  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d8d98d2a45ff50c60a37ee04e576567db7f96e26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2018c557b8fd7dffdceb14c0a872595a3ce21da
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874413"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544338"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>全球化提示和最佳实践 (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** 仅多维  
@@ -102,7 +101,7 @@ ms.locfileid: "70874413"
   
 -   将 `Locale Identifier=1036` 添加到连接字符串。 保存并关闭该文件。  
   
--   打开 Excel |**数据** | **现有连接**。 在列表中筛选此计算机上的连接文件。 查找 Adventure Works 的连接（仔细查看名称；你可能发现不止一个）。 打开连接。  
+-   打开 Excel |**数据**  | **现有连接**。 在列表中筛选此计算机上的连接文件。 查找 Adventure Works 的连接（仔细查看名称；你可能发现不止一个）。 打开连接。  
   
      你会看到 Adventure Works 示例数据库的法语翻译。  
   
@@ -112,7 +111,7 @@ ms.locfileid: "70874413"
   
  在 Management Studio 中，你可以指定服务器连接上的区域设置标识符。  
   
--   在对象资源管理器 |**连接** | **Analysis Services**Analysis Services | **选项**，单击 "**其他连接参数**" 选项卡。  
+-   在对象资源管理器 |**连接**  | **Analysis Services**  | **选项**，单击 "**其他连接参数**" 选项卡。  
   
 -   输入 `Local Identifier=1036` ，然后单击 ****“连接”。  
   

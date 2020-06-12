@@ -1,5 +1,6 @@
 ---
 title: 非重复值函数（XQuery） |Microsoft Docs
+description: 了解如何使用 XQuery 中的 distinct 值函数从序列中删除重复值。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2f856c9b351c776651f08e66f90c7f567a5dcfc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c6e52209713ca94ab9cecc9f3c7910b6fc76ce9
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68223735"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215829"
 ---
 # <a name="functions-on-sequences---distinct-values"></a>基于序列的函数 - distinct-values
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*
  *$arg*  
  原子值序列。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  传递给**非重复值（）** 的所有原子化值的类型都必须是同一基类型的子类型。 接受的基类型是支持**eq**操作的类型。 这些类型包括三种内置数值基类型、日期/时间基类型、xs:string、xs:boolean 和 xdt:untypedAtomic。 类型 xdt:untypedAtomic 的值转换为 xs:string。 如果这些类型混合在一起，或者传递了其他类型的其他值，则会引发静态错误。  
   
  **非重复值（）** 的结果接收传入类型的基类型，例如，Xdt： untypedAtomic 的 xs： string，其中包含原始基数。 如果输入在静态上为空，则暗示为空，并且会引发静态错误。  

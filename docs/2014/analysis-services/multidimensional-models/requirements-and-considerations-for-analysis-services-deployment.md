@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d41f61233bbbcb6c49d4980a3265726280627860
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc862bcad512123dd7c31ce59a8c777c2423bedc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073165"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545729"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Analysis Services 部署的要求和注意事项
   解决方案的性能和可用性取决于许多因素，包括基础硬件的性能、服务器部署的拓扑结构、您的解决方案特性（例如，具有跨多个服务器分布的分区或者使用要求对关系引擎的直接访问权限的 ROLAP 存储区）、服务级别协议和您的数据模型的复杂程度。  
@@ -48,7 +47,7 @@ ms.locfileid: "66073165"
   
  [安装 SQL Server 2014 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
- [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
+ [按版本 SQL Server 计算容量限制](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
   
  [SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
@@ -87,7 +86,7 @@ ms.locfileid: "66073165"
  若要透明处理对源数据的增量更新，请启用主动缓存。 主动缓存将以新的源数据更新多维数据集，而不需要手动处理，并且不会影响多维数据集的可用性。 有关详细信息，请参阅[主动缓存（分区）](../multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)。  
   
 ##  <a name="scalability-considerations"></a><a name="BKMK_Scalability"></a>可伸缩性注意事项  
- 同一台计算机[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的多个和实例可能导致性能问题。 若要解决这些问题，一个选项可能是增加服务器的处理器、内存和磁盘资源。 但是，可能还需要将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例分散到多个计算机。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 同一台计算机上的多个和实例 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可能导致性能问题。 若要解决这些问题，一个选项可能是增加服务器的处理器、内存和磁盘资源。 但是，可能还需要将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例分散到多个计算机。  
   
 ### <a name="scaling-analysis-services-across-multiple-computers"></a>将 Analysis Services 分散到多个计算机  
  有几种方式将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 安装分散到多个计算机。 以下列表描述了这些选项。  

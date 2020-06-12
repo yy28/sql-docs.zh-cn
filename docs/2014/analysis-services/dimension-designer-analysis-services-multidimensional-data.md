@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 46bf7d1c-a354-4212-9bfa-258361203b0e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 79dfdc1534820d3637dfc06e42bd696e26db3501
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 70ff168f2be759c7c5bb405868d7e569362f8430
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081778"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528607"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>维度设计器（Analysis Services - 多维数据）
   可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的维度设计器浏览维度包含的数据，以及修改现有维度的各种属性：特性、层次结构、级别、特性关系和翻译。  
@@ -28,11 +27,11 @@ ms.locfileid: "66081778"
   
     -   右键单击维度，然后单击“打开”或“视图设计器”********。  
   
-         \- 或 -  
+         -或-  
   
     -   双击维度。  
   
-## <a name="pages"></a>页  
+## <a name="pages"></a>Pages  
  维度设计器包含以下页：  
   
  [维度结构](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)  

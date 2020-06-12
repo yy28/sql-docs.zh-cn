@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b6b34b5a-43b3-4a75-9f3b-b2ad1084b1b6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0a0f168dabd237fe685eb90d2caeeba0db4eed97
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25eb4d4424223449052ab1f65b41cf270da81fb0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070723"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540069"
 ---
 # <a name="preview-selected-table-ssas"></a>预览选择的表 (SSAS)
   **“表导入向导”** 的这一页可用于预览所选表中的数据，选择要在数据导入中包括的列，并且筛选所选列中的数据。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  
@@ -28,7 +27,7 @@ ms.locfileid: "66070723"
   
  此页上数据的外观将不会确保导入将成功。 如果在“模拟信息”页中指定的用户名没有足够的权限从所选数据库中读取，则导入将失败。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **列标题中的复选框**  
  选中该复选框可在数据导入中包括列。 取消选中该复选框则从数据导入中删除列。  
   

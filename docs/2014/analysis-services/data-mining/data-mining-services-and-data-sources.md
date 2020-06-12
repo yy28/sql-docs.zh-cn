@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9d83a7111bbea13733190eeb612373d9136dd058
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: afba038563ec5934a874811c804dd7a4aa9fff1e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217130"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523073"
 ---
 # <a name="data-mining-services-and-data-sources"></a>数据挖掘服务和数据源
   数据挖掘需要连接到 SQL Server Analysis Services 实例才能工作。 数据挖掘不需要多维数据集中的数据，建议使用关系源；但是，数据挖掘使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 引擎提供的组件。  
@@ -23,7 +22,7 @@ ms.locfileid: "79217130"
  本主题提供了在连接到 SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例以创建、处理、部署或查询数据挖掘模型时需要了解的信息。  
   
 ## <a name="data-mining-services"></a>数据挖掘服务  
- 的服务器组件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]是 msmdsrv.ini 应用程序，通常以 Windows 服务的形式运行。 该应用程序包含安全组件、一个 XML for Analysis (XMLA) 侦听器组件、一个查询处理器组件以及执行下列功能的多个其他内部组件：  
+ 的服务器组件 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 是 msmdsrv.exe 应用程序，通常以 Windows 服务的形式运行。 该应用程序包含安全组件、一个 XML for Analysis (XMLA) 侦听器组件、一个查询处理器组件以及执行下列功能的多个其他内部组件：  
   
 -   分析从客户端接收的语句  
   
@@ -44,13 +43,13 @@ ms.locfileid: "79217130"
 -   管理服务器资源  
   
 ### <a name="xmla-listener"></a>XMLA 侦听器  
- XMLA 侦听器组件处理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 与其客户端之间的所有 XMLA 通信。 Msmdsrv.ini [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port`文件中的配置设置可用于指定[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例侦听的端口。 此文件中的值 0 指示 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 侦听默认端口。 除非另有指定，否则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用下列默认的 TCP 端口：  
+ XMLA 侦听器组件处理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 与其客户端之间的所有 XMLA 通信。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` msmdsrv.ini 文件中的配置设置可用于指定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例侦听的端口。 此文件中的值 0 指示 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 侦听默认端口。 除非另有指定，否则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用下列默认的 TCP 端口：  
   
 |端口|说明|  
 |----------|-----------------|  
-|2383|的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]默认实例。|  
-|2382|其他实例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]重定向程序。|  
-|在服务器启动时动态分配|的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]命名实例。|  
+|2383|的默认实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。|  
+|2382|其他实例的重定向程序 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。|  
+|在服务器启动时动态分配|的命名实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。|  
   
  有关控制此服务所用端口的详细信息，请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
@@ -88,7 +87,7 @@ ms.locfileid: "79217130"
  还可以设置允许用户优化服务器并控制客户端使用的安全性的属性。 有关详细信息，请参阅 [Feature Properties](../server-properties/feature-properties.md)。  
   
 > [!NOTE]  
->  有关各个版本对插件算法的支持的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2012 的各个[版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)（。https://go.microsoft.com/fwlink/?linkid=232473)  
+>  有关各个版本对插件算法的支持的详细信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅[SQL Server 2012 的各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)（ https://go.microsoft.com/fwlink/?linkid=232473) 。  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>对数据挖掘对象的编程访问  
  您可以使用下列对象模型创建与 Analysis Services 数据库的连接和处理数据挖掘对象：  

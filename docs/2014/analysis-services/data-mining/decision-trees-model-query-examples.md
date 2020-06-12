@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 009e8d203d9262ee14702b99ad7d0e31d8a16dbb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a6b158a42c9ca90bf2cfd2e9b981a1e2a735ccc
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084759"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522711"
 ---
 # <a name="decision-trees-model-query-examples"></a>决策树模型查询示例
   在创建针对数据挖掘模型的查询时，您既可以创建内容查询，也可以创建预测查询。内容查询提供有关分析过程中发现的模式的详细信息，而预测查询则使用模型中的模式对新数据进行预测。 例如，决策树模型的内容查询可能提供有关树在每个级别上的事例数的统计信息或者区分事例的规则。 而预测查询则是将模型映射到新数据，以生成建议、分类等等。 您还可以使用查询来检索有关模型的元数据。  
@@ -107,7 +106,7 @@ WHERE [PARENT_UNIQUE_NAME] = '000000001'
 |00000000101|Number Cars Owned = 3|Bike Buyer|0|678|  
 |00000000101|Number Cars Owned = 3|Bike Buyer|1|473|  
   
- 根据这些结果，你可以判断买了自行车的客户（= 1）`[Bike Buyer]` ，1067的客户有0个汽车，473个客户有3辆车。  
+ 根据这些结果，你可以判断买了自行车的客户（ `[Bike Buyer]` = 1），1067的客户有0个汽车，473个客户有3辆车。  
   
 ###  <a name="sample-query-3-retrieving-subtrees-from-the-model"></a><a name="bkmk_Query3"></a>示例查询3：从模型中检索子树  
  假定您希望查找有关购买了自行车的客户的更多信息。 你可以通过在查询中使用 [IsDescendant (DMX)](/sql/dmx/isdescendant-dmx) 函数来查看任何子树的其他详细信息，如下面的示例所示。 通过从包含 42 岁以上的客户的树中检索叶节点 (NODE_TYPE = 4)，查询将返回自行车购买者的计数。 查询将嵌套表中的行限定为其中 Bike Buyer = 1 的行。  

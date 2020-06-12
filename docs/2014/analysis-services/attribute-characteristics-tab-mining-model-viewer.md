@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f0c3350d-84c0-4ab8-9fb8-1527c2647299
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e35cf7db00effb5ce700a1ac883877f67650d3cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e62e42dc1cc405f5515e40b0b050036b673a7b89
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063047"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527933"
 ---
 # <a name="attribute-characteristics-tab-mining-model-viewer"></a>“属性特征”选项卡（挖掘模型查看器）
   可以使用 **“属性特征”** 窗格浏览 Naïve Bayes 模型中结果和输入属性之间的关系。 可以选择目标属性的值，然后查看对结果产生的影响最大的输入属性的列表。  
@@ -34,16 +33,16 @@ ms.locfileid: "66063047"
  **查看器**  
  选择用于浏览所选挖掘模型的查看器。 对于每个模型，您可以选择自定义查看器或 [!INCLUDE[msCoName](../includes/msconame-md.md)] 挖掘内容查看器。 插件查看器也将出现在此列表中（如果有）。  
   
- **属性**  
+ **特性**  
  选择要分析的可预测属性。  
   
  **值**  
  选择在“属性”中设置的可预测属性的状态。**** 由于 Naïve Bayes 模型不支持连续变量，因此，所有目标属性都包含离散或离散化结果。 始终会自动将 Missing 属性添加到列表。  
   
- **可预测\<状态的特征>**  
+ **特性\<predictable state>**  
  图形包含以下列，这些列对输入属性状态与所选可预测属性状态之间的关系进行了说明：  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**变量**|列出挖掘模型中的输入属性。|  
 |**值**|列出 **“变量”** 中每个输入属性状态。|  

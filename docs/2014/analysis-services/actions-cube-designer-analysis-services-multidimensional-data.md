@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 50e3afbc-7789-46b1-bcd3-50497f5b493f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 67c2def091fe6e1282e00c65c23e8d98544e970f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3da39338fd5f5e86de083ec30cd0ce4bbe531f30
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062894"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528203"
 ---
 # <a name="actions-cube-designer-analysis-services---multidimensional-data"></a>操作（多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“操作”** 选项卡，查看和编辑所选多维数据集的操作，包括钻取操作和报表操作。  

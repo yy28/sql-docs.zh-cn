@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f8a95c5819d88013a0e4f0e0be0aa21c11c1949
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6044c22f84abdc17adf7015804627266ccff09b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175246"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542429"
 ---
 # <a name="defining-and-browsing-kpis"></a>定义和浏览 KPI
   若要定义关键绩效指标 (KPI)，应该先定义与 KPI 关联的 KPI 名称和度量值组。 KPI 可以与所有度量值组或与单个度量值组关联。 然后定义以下 KPI 元素：
@@ -67,7 +66,7 @@ ms.locfileid: "78175246"
 
      ![显示窗格中的空白 KPI 模板](../../2014/tutorials/media/l7-kpi-2.gif "显示窗格中的空白 KPI 模板")
 
-3.  在 "**名称**" 框中`Reseller Revenue`，键入，然后选择 "关联的**度量值组**" 列表中的 "**分销商销售额**"。
+3.  在 "**名称**" 框中，键入 `Reseller Revenue` ，然后选择 "关联的**度量值组**" 列表中的 "**分销商销售额**"。
 
 4.  在“计算工具”**** 窗格中的“元数据”**** 选项卡上，展开“度量值”****，再展开“分销商销售”****，然后将“分销商销售额”**** 度量值拖到“值表达式”**** 框中。
 
@@ -152,7 +151,7 @@ ms.locfileid: "78175246"
 
 1.  在“KPI”**** 选项卡的工具栏上单击“窗体视图”**** 按钮，然后单击“新建 KPI”**** 按钮。
 
-2.  在 "**名称**" 框中`Product Gross Profit Margin`，键入，然后验证 " ** \<所有>都**显示在"**关联的度量值组**"列表中。
+2.  在 "**名称**" 框中键入 `Product Gross Profit Margin` ，然后验证是否 **\<All>** 出现在 "**关联的度量值组**" 列表中。
 
 3.  在“计算工具”**** 窗格内的“元数据”**** 选项卡中，将“总 GPM”**** 度量值拖到“值表达式”**** 框中。
 
@@ -261,7 +260,7 @@ ms.locfileid: "78175246"
 
 2.  成功完成部署后，在“KPI”**** 选项卡的工具栏上单击“重新连接”****，然后单击“浏览器视图”****。
 
-     此时`Product Gross Profit Margin`将显示 kpi，并显示**Q3 CY 2007**和**北美**销售区域的 KPI 值。
+     `Product Gross Profit Margin`此时将显示 kpi，并显示**Q3 CY 2007**和**北美**销售区域的 KPI 值。
 
 3.  在“筛选器”**** 窗格中，依次选择“维度”**** 列表中的“产品”****、“层次结构”**** 列表中的“类别”****、“运算符”**** 列表中的“等于”**** 和“筛选表达式”**** 列表中的“自行车”****，然后单击“确定”****。
 

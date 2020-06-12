@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 10015ac40948c95f8c912ba6fdb71147e50bb880
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 94b9935f5ab13431033accf7431c1a9b6394569a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082893"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520507"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>SQL Server Office 数据挖掘外接程序
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Office 数据挖掘外接程序是用于预测分析的一组轻型工具，允许您使用 Excel 中的数据生成分析模型来用于预测、建议或浏览。  
@@ -46,7 +45,7 @@ ms.locfileid: "66082893"
   
 -   **浏览和展现。** 数据挖掘不是可完全自动进行的活动-需要探索并理解结果才能采取有意义的操作。 该外接程序帮助您探索各种内容，其中在 Excel、Visio 模板中提供交互式查看器，使您可自定义模型关系图，还可将图表和表导出到 Excel 供进一步筛选或修改。  
   
--   **部署和集成。** 创建有用的模型后，通过使用管理工具将模型从试验服务器导出到另一个实例，使模型进入生产环境中[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
+-   **部署和集成。** 创建有用的模型后，通过使用管理工具将模型从试验服务器导出到另一个实例，使模型进入生产环境中 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。  
   
      您还可以将模型保留在服务器上创建它时的位置，但使用 Integration Services 或 DMX 脚本刷新定型数据并运行预测。  
   
@@ -75,11 +74,11 @@ ms.locfileid: "66082893"
   
  数据挖掘外接程序要求与以下 SQL Server Analysis Services 版本之一的连接：  
   
--   Enterprise  
+-   企业  
   
 -   商业智能  
   
--   标准  
+-   Standard  
   
  根据所连接的 SQL Server Analysis Services 版本，某些高级算法可能不可用。 有关信息，请参阅[SQL Server 2014 的各个版本支持的功能](https://msdn.microsoft.com/library/cc645993.aspx)。  
   

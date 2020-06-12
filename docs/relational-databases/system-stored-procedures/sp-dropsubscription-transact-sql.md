@@ -1,5 +1,6 @@
 ---
 title: sp_dropsubscription （Transact-sql） |Microsoft Docs
+description: 删除对发布服务器上的项目、发布或订阅的订阅。 此存储过程在发布服务器的发布数据库上运行。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2f800ef185145e63a17db3855989bebde91b48bc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 483fc481e78c1a879f2858addf6925e987066010
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831146"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807968"
 ---
 # <a name="sp_dropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **sp_dropsubscription**用于快照复制和事务复制。  
   
  如果删除即时同步发布中的一个项目上的订阅，则不能再对其进行重新添加，除非是删除发布中所有项目上的订阅并同时对它们进行重新添加。  

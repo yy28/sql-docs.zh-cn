@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8bb8c318-e85f-4fd6-b32b-4cdfb13ca1b5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e57aee7142da5c256a213ddd2eb0390a0f3b042a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa763516511f3d2fd68ca5275cdeb6fe0af7d57b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070862"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547659"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>预测计算器（Excel 表分析工具）
   ![“预测计算器”工具](media/tat-predcal.gif "“预测计算器”工具")  
@@ -48,13 +47,13 @@ ms.locfileid: "66070862"
   
 5.  单击 "**选择要用于分析的列**"。  
   
-6.  在 "**高级列选择**" 对话框中，选择包含有用信息的列。 删除与分析无关的所有列。 单击" **确定**"。  
+6.  在 "**高级列选择**" 对话框中，选择包含有用信息的列。 删除与分析无关的所有列。 单击“确定”。  
   
      为了避免使结果产生偏差，还应删除包含重复信息的列。 例如，如果具有包含数值数据的 Income 列以及包含 High、Medium 和 Low 标签的 Income Group 列，则不应在同一模型中包含这两列， 而是应为每个列创建单独的模型。  
   
 7.  在 "**输出选项**" 部分，选择 "**操作计算器**" 以在 Excel 工作簿中创建分析和记分卡。 选择 "**打印机就绪计算器**" 以创建分析，还可以生成可打印并用于手动计分的报表。  
   
-8.  单击“运行”****。  
+8.  单击 **“运行”** 。  
   
      该工具将创建一个包含报表和记分卡的新工作表。  
   
@@ -73,12 +72,12 @@ ms.locfileid: "66070862"
 -   本节介绍每个报表中的信息以及如何使用各种报表选项。  
   
 ### <a name="prediction-report-with-graphs"></a>带有图形的预测报表  
- 第一个预测报表的标题为 **"预测计算器报表\<"，表示目标\<特性>的目标状态> **。 它包含从分析得出的因素表，以及有助于评估特定分析的财务影响的工具。  
+ 第一个预测报表的标题为** \<target state> 的 \<target attribute> "预测计算器报表" **。 它包含从分析得出的因素表，以及有助于评估特定分析的财务影响的工具。  
   
 #### <a name="table-for-specifying-costs-and-profits"></a>用于指定成本和利润的表  
  此报表左上角中的第一个工具是一个表，可在该表中指定与正确预测值和错误预算值相关联的成本和利润。  计算该计算器的最佳分数阈值时需要这些成本和利润。  
   
-|项|说明和示例|  
+|Item|说明和示例|  
 |----------|-----------------------------|  
 |假正成本|假设模型正确预测出正结果而实际上预测是错误时的成本。<br /><br /> 例如，模型预测客户将购买某些产品，然后您根据这个预测针对该客户开展促销活动。 可在此输入针对客户展开促销活动所需的成本。|  
 |假负成本|假设模型正确预测出负结果而实际上预测是错误时的成本。<br /><br /> 例如，模型可能预测年龄较大的客户不太可能购买自行车，但是您发现模型出现偏差，结果失去了面向年龄较大的客户的机会。 可在此指定该已失去机会的成本。|  
@@ -97,7 +96,7 @@ ms.locfileid: "66070862"
   
  "**相对影响**" 列中的值为概率，以百分比表示。 该单元格带有阴影，以便直观地表示此值对结果的影响。  
   
-|属性|值|相对影响|  
+|Attribute|值|相对影响|  
 |---------------|-----------|---------------------|  
 |婚姻状况|已婚|0|  
 |婚姻状况|Single|71|  
@@ -120,14 +119,14 @@ ms.locfileid: "66070862"
  例如，虽然第一个图表建议将模型预测的前 500 位客户作为目标客户是获得最大利润的方法，但您在查看第二个图表后可能会认为错误定位目标客户的成本太高，而决定将市场营销活动减少为面向前 400 位客户。  
   
 ### <a name="interactive-prediction-calculator"></a>交互式预测计算器  
- 预测计算器工具创建的第二个工作表的标题为 **"目标\<状态> 目标属性\<>的" 预测计算器 " **。 这是可用于计算各个分数的交互式工作表。 由于此工作表使用存储在模型中的模式和统计信息，因此可以试用各值并查看它们如何影响预测分数。 此报表也有两部分：一部分是交互式的，另一部分是作为参考提供的。  
+ 预测计算器工具创建的第二个工作表的标题为** \<target state> 的 \<target attribute> "预测计算器" **。 这是可用于计算各个分数的交互式工作表。 由于此工作表使用存储在模型中的模式和统计信息，因此可以试用各值并查看它们如何影响预测分数。 此报表也有两部分：一部分是交互式的，另一部分是作为参考提供的。  
   
 #### <a name="first-table"></a>第一个表  
  您可以在表的 "**值**" 列中选择或键入新值，以查看更改值对分数的影响。  
   
  例如，如果报表包含以下值，则可将“汽车”的值减少到 1，再减少到 0，以查看对客户购买行为的影响。 将**汽车**的值更改为0时，底部的预测将更改为 TRUE。  
   
-|属性|值|相对影响|  
+|Attribute|值|相对影响|  
 |---------------|-----------|---------------------|  
 |婚姻状况|已婚|0|  
 |性别|男|0|  
@@ -152,11 +151,11 @@ ms.locfileid: "66070862"
  此表显示了输入列每个可能状态的各分数，以及这些分数对结果的相对影响。 此表为静态表，仅适用于参考。  
   
 ### <a name="printable-prediction-calculator"></a>可打印的预测计算器  
- "预测计算器" 工具创建的第三个工作表的标题为 **"PrintablePrediction 计算器\<" \<作为目标属性>的目标状态> **。 此记分卡可用于打印，以便能够在没有计算机的情况下手动计算分数。  
+ 预测计算器工具创建的第三个工作表** \<target state> 的 \<target attribute> **标题为 PrintablePrediction 的计算器。 此记分卡可用于打印，以便能够在没有计算机的情况下手动计算分数。  
   
 ##### <a name="to-print-and-use-the-scoring-report-generated-by-the-prediction-calculator"></a>打印和使用预测计算器生成的记分报表  
   
-1.  单击标题为 "**可打印的\<预测计算器">属性**的选项卡。  
+1.  单击标题为**可打印预测计算器 \<attribute> **的选项卡。  
   
 2.  在 "Excel 文件" 菜单上，选择 "**打印预览**"。  
   
@@ -175,7 +174,7 @@ ms.locfileid: "66070862"
 8.  使用在 "**总计**" 行后面的工作表上打印的条件，将评分转换为预测结果。  
   
 ## <a name="related-tools"></a>相关工具  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供的 Microsoft 逻辑回归算法可用于这种类型的分析。 如果已熟悉逻辑回归，则可以使用 Excel 数据挖掘客户端的 "**高级**" 选项轻松创建逻辑回归模型。 有关详细信息，请参阅[高级建模 &#40;Excel 数据挖掘外接程序&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)。 有关逻辑回归模型的选项和参数的详细信息，请参阅联机丛书中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的主题 "Microsoft 逻辑回归算法"。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供的 Microsoft 逻辑回归算法可用于这种类型的分析。 如果已熟悉逻辑回归，则可以使用 Excel 数据挖掘客户端的 "**高级**" 选项轻松创建逻辑回归模型。 有关详细信息，请参阅[高级建模 &#40;Excel 数据挖掘外接程序&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)。 有关逻辑回归模型的选项和参数的详细信息，请参阅联机丛书中的主题 "Microsoft 逻辑回归算法" [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
 ## <a name="see-also"></a>另请参阅  
  [Excel 表分析工具](table-analysis-tools-for-excel.md)  

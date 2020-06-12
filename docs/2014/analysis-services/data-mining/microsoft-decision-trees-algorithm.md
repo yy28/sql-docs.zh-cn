@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: 95ffe66f-c261-4dc5-ad57-14d2d73205ff
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 809cbf259f9eddbb684170fd320c44972e56c90f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd55af5914bcc6409a3e5d6c899cbfd8b7f939f5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174592"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522143"
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Microsoft 决策树算法
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]决策树算法是提供[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的一种分类和回归算法，用于对离散属性和连续属性进行预测性建模。
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]决策树算法是提供的一种分类和回归算法， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 用于对离散属性和连续属性进行预测性建模。
 
  对于离散属性，该算法根据数据集中输入列之间的关系进行预测。 它使用这些列的值（也称之为状态）预测指定为可预测的列的状态。 具体地说，该算法标识与可预测列相关的输入列。 例如，在预测哪些客户可能购买自行车的方案中，假如在十名年轻客户中有九名购买了自行车，但在十名年龄较大的客户中只有两名购买了自行车，则该算法从中推断出年龄是自行车购买情况的最佳预测因子。 决策树根据朝向特定结果发展的趋势进行预测。
 
@@ -92,7 +91,7 @@ ms.locfileid: "78174592"
 
  有关如何创建针对挖掘模型的查询的常规信息，请参阅 [数据挖掘查询](data-mining-queries.md)。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 -   支持使用预测模型标记语言 (PMML) 创建挖掘模型。
 

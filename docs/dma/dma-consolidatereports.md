@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 456d71e2abccdddb4b14c06dc2ad9b2e4ce9a032
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: e7a3c58612761e046b71cddf35c87680bb6e9528
+ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886164"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83868376"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>使用 DMA 评估企业和合并评估报告
 
@@ -33,7 +33,7 @@ ms.locfileid: "82886164"
   - [PowerShell](https://aka.ms/wmf5download) 5.0 或更高版本。
   - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) 4.5 或更高版本。
   - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 或更高版本。
-  - [Power BI 桌面](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)。
+  - [Power BI 桌面](/power-bi/fundamentals/desktop-get-the-desktop)。
   - [Azure PowerShell 模块](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - 下载并解压缩：
   - [DMA 报告 Power BI 模板](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip)。

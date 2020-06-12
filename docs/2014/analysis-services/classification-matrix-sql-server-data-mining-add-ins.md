@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d6f620f4-39af-4714-9628-28ce3c361fca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 78f8581839b6b4bdd761c25a1a207e942ae37f62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8af87605bb8c4c2cf4bcd53cce3f7ab0019b7d94
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087972"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527513"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>分类矩阵（SQL Server 数据挖掘外接程序）
   ![“数据挖掘”功能区中的“分类矩阵”按钮](media/dmc-cmatrix.gif "“数据挖掘”功能区中的“分类矩阵”按钮")  
@@ -37,8 +36,8 @@ ms.locfileid: "66087972"
 ||铜卡（实际数）|金卡（实际数）|银卡（实际数）|  
 |-|-----------------------|---------------------|-----------------------|  
 |铜卡|**94.45%**|15.18%|1.70%|  
-|金卡|2.72%|**84.82%**|0.00%|  
-|银卡|1.84%|0.00%|**93.80%**|  
+|Gold|2.72%|**84.82%**|0.00%|  
+|Silver|1.84%|0.00%|**93.80%**|  
 |*恰当*|*95.45%*|*84.82%*|*98.30%*|  
 |*分类错误*|*4.55%*|*15.18%*|*1.70%*|  
   

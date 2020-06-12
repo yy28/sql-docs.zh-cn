@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5f591a5a8c8099e496c10958b43694e98ae7a24b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 322b755357da597d3bdcb41e4a83685075f4d991
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077032"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544637"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>备份和还原 Analysis Services 数据库
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括备份和还原功能，以便您能从特定时间点恢复数据库及其对象。 此外，备份和还原是一项用于将数据库迁移到升级后的服务器、在服务器之间移动数据库或将数据库部署到生产服务器的有效方法。 出于数据恢复目的，如果您还没有制定备份计划并且您的数据十分重要，则应尽快设计和实施备份计划。  
@@ -45,7 +44,7 @@ ms.locfileid: "66077032"
   
 -   [还原 Analysis Services 数据库](#bkmk_restore)  
   
-##  <a name="prerequisites"></a><a name="bkmk_prereq"></a>先决条件  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 先决条件  
  您必须对 Analysis Services 实例具有管理权限，或对要备份的数据库拥有完全控制（管理员）权限。  
   
  还原位置所在的 Analysis Services 实例版本必须与执行备份的实例版本相同或比它更高的版本。 尽管你不能将数据库从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例还原到更低版本的 Analysis Services，但是通常可在更高的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例上还原更低版本的数据库（如 SQL Server 2012）。  
