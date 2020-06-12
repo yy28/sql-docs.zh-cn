@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4996ba378319e442df07a4ff09af3404034474d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe12b82ce2d237acd060b1e387e7a6dfbf958851
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085722"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524155"
 ---
 # <a name="clustering-model-query-examples"></a>聚类分析模型查询示例
   依据数据挖掘模型创建查询时，可以检索有关模型的元数据，或者创建内容查询以提供有关分析时发现的模式的详细信息。 或者，可以创建预测查询，以使用模型中的模式来对新数据进行预测。 每一类查询都提供不同的信息。 例如，内容查询可能提供有关发现的分类的更多详细信息，而预测查询可能指出新数据点最有可能属于哪个分类。  
@@ -192,7 +191,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterCh
   
  示例结果：  
   
-|特性|值|频率|支持|  
+|属性|值|频率|支持|  
 |----------------|------------|---------------|-------------|  
 |Number Children at Home|0|0.999999829076798|899|  
 |区域|北美|0.999852875241508|899|  
@@ -216,12 +215,12 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
   
  示例结果：  
   
-|特性|值|分数|  
+|属性|值|Score|  
 |----------------|------------|-----------|  
 |区域|北美|100|  
 |English Occupation|技术工人|94.9003803898654|  
 |区域|欧洲|-72.5041051379789|  
-|English Occupation|Manual|-69.6503163202722|  
+|English Occupation|手动|-69.6503163202722|  
   
  这与当你从第一个下拉列表中选择分类 9，从第二个下拉列表中选择分类 7 时， **分类对比** 查看器的图中所显示的信息相同。 若要将分类 9 与其补数进行比较，应在第二个参数中使用空字符串，如下面的示例所示：  
   
@@ -328,7 +327,7 @@ NATURAL PREDICTION JOIN
 |--------------|----------------|  
 |Cluster 2|0.397918596951617|  
   
- **注意**默认情况下， `ClusterProbability`函数返回最可能分类的概率。 但是，您可以通过使用语法 `ClusterProbability('cluster name')`来指定另一分类。 如果这样做，请注意每个预测函数的结果都独立于其他结果。 因此，第二列中的概率分数可能引用另一个分类，而不是第一列中所指定的分类。  
+ **注意**默认情况下， `ClusterProbability` 函数返回最可能分类的概率。 但是，您可以通过使用语法 `ClusterProbability('cluster name')`来指定另一分类。 如果这样做，请注意每个预测函数的结果都独立于其他结果。 因此，第二列中的概率分数可能引用另一个分类，而不是第一列中所指定的分类。  
   
  [返回页首](#bkmk_top2)  
   

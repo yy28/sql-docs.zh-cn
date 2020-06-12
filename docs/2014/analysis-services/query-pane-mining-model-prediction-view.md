@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: fdeec72e-d0bd-4453-9eaa-46436e4d6edc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6bfb0a0c4e8284173a102b034a8b19457340a286
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e17a27190891ea9e00be21d5013d0767d61ac148
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070519"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539663"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>“查询”窗格（“挖掘模型预测”视图）
   “查询”**** 窗格显示预测查询生成器创建的数据挖掘表达式 (DMX) 语句。 您可以修改这些语句，再单击 **“切换到查询结果视图”** 按钮以返回结果。 如果切换回 **“设计”** 视图，则对语句所做的所有更改都将丢失。  

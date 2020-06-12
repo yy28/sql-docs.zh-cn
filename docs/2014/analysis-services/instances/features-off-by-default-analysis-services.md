@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a9529edf-337e-4fdd-9a13-99cfe96b4fa1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 59c27d5f34d6e5a3f33e0f153a9077995bd99650
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a71a43eaced5100d48a386c60d39254b1266aaef
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080023"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543919"
 ---
 # <a name="features-off-by-default-analysis-services"></a>默认情况下功能关闭 (Analysis Services)
   默认情况下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例在设计上是安全的。 因此，可能危及安全的功能默认处于禁用状态。 下列功能在安装后处于禁用状态，如果要使用它们，则必须专门进行启用。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bde0035ae3c855d2add02003ca9ea84357146f90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea26856075d37d815d819fa0eada61d677f77819
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68809853"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523633"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>交叉验证（Analysis Services – 数据挖掘）
   *交叉验证*是分析中的一个标准工具，是帮助你开发和优化数据挖掘模型的一项重要功能。 在创建了一个挖掘结构及其关联的挖掘模型之后，可使用交叉验证来确定该模型的有效性。  交叉验证具有以下应用：  
@@ -82,7 +81,7 @@ ms.locfileid: "68809853"
 ### <a name="choosing-models-and-columns-to-validate"></a>选择要验证的模型和列  
  在使用数据挖掘设计器中的 **“交叉验证”** 选项卡时，必须首先从列表中选择可预测列。 通常，一个挖掘结构可以支持许多挖掘模型，但这些挖掘模型并不使用同一可预测列。 在运行交叉验证时，只有使用同一可预测列的那些模型可以包括在报表中。  
   
- 若要选择可预测属性，请单击 **“目标属性”** 并从列表中选择列。 如果目标属性是嵌套列或嵌套表中的列，则必须使用 "嵌套表名> （键）" 格式\<键入嵌套列的名称。\<嵌套列>。 如果嵌套表中使用的唯一列是键列，则可以使用\<嵌套表名称> （键）。  
+ 若要选择可预测属性，请单击 **“目标属性”** 并从列表中选择列。 如果目标属性是嵌套列或嵌套表中的列，则必须使用格式 \<Nested Table Name> （键）输入嵌套列的 \<Nested Column> 名称。 如果嵌套表中使用的唯一列是键列，则可以使用 \<Nested Table Name> （键）。  
   
  选择可预测属性后， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将自动测试使用同一可预测属性的所有模型。 如果目标属性包含离散值，则在选择可预测列后，您可以根据需要键入目标状态（如果有要预测的特定值）。  
   

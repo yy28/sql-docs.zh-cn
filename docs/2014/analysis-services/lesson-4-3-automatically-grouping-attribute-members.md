@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7fc8bed16488f1688576d6c5b265811cdc9705a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 887e3b8c57d0aaf13cc88dea944cf8b74e78266a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175336"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543389"
 ---
 # <a name="automatically-grouping-attribute-members"></a>自动将属性成员分组
-  在浏览多维数据集时，通常根据一个属性层次结构的成员来确定另一个属性层次结构的成员的维度。 例如，可以按城市、购买的产品或性别将客户销售分组。 但是，对于某些类型的属性，根据属性层次结构中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的成员分布自动创建属性成员的分组非常有用。 例如，可以让 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 创建客户的年收入值组。 进行此操作时，浏览属性层次结构的用户将看到组的名称和值，而不是成员本身。 这就限制了向用户显示的级别的数量，从而更有助于进行分析。
+  在浏览多维数据集时，通常根据一个属性层次结构的成员来确定另一个属性层次结构的成员的维度。 例如，可以按城市、购买的产品或性别将客户销售分组。 但是，对于某些类型的属性， [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 根据属性层次结构中的成员分布自动创建属性成员的分组非常有用。 例如，可以让 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 创建客户的年收入值组。 进行此操作时，浏览属性层次结构的用户将看到组的名称和值，而不是成员本身。 这就限制了向用户显示的级别的数量，从而更有助于进行分析。
 
  **DiscretizationMethod** 属性可以确定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 是否创建分组，并可确定要执行的分组类型。 默认情况下， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 不执行任何分组。 如果启用了自动分组，则可以让 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 根据属性的结构自动确定最佳分组方法，也可以选择下面列表中的一个分组算法来指定分组方法：
 
  **EqualAreas** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]创建组范围，以便在各个组之间平均分配维度成员的总体人口数。
 
- **群集** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]通过对输入值执行一维聚类分析来创建组，方法是将 K 平均值聚类分析方法与高斯分布结合使用。 此选项只对数值列有效。
+ **群集** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]通过对输入值执行一维聚类分析，通过将 K 平均值聚类分析方法与高斯分布结合使用来创建组。 此选项只对数值列有效。
 
  指定了一种分组方法后，必须使用 **DiscretizationBucketCount** 属性指定分组的数量。 有关详细信息，请参阅[组属性成员 &#40;离散化&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)
 
@@ -42,7 +41,7 @@ ms.locfileid: "78175336"
 
 4.  在“属性”**** 窗格中，选择“年收入”****。
 
-5.  在属性窗口中，将**DiscretizationMethod**属性的值更改为 "**自动**"，并将 " **DiscretizationBucketCount** " 属性的`5`值更改为。
+5.  在属性窗口中，将**DiscretizationMethod**属性的值更改为 "**自动**"，并将 " **DiscretizationBucketCount** " 属性的值更改为 `5` 。
 
      下图显示了修改后的“年收入”**** 属性。
 
@@ -60,11 +59,11 @@ ms.locfileid: "78175336"
 
 4.  在“属性”**** 窗格中，选择“病假时间”****。
 
-5.  在属性窗口中，将**DiscretizationMethod**属性的值更改为 "**分类**"，并将 " **DiscretizationBucketCount** " 属性的`5`值更改为 ""。
+5.  在属性窗口中，将**DiscretizationMethod**属性的值更改为 "**分类**"，并将 " **DiscretizationBucketCount** " 属性的值更改为 "" `5` 。
 
 6.  在“属性”窗格中，选择“休假时间”。********
 
-7.  在属性窗口中，将**DiscretizationMethod**属性的值更改为**相等的区域**，并将**DiscretizationBucketCount**属性的值更改为`5`。
+7.  在属性窗口中，将**DiscretizationMethod**属性的值更改为**相等的区域**，并将**DiscretizationBucketCount**属性的值更改为 `5` 。
 
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>浏览已修改的属性层次结构
 

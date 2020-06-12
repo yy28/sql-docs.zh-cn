@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2bb5ad7c-2962-4559-8c95-cf7148bd2e72
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9cc86a5712dae9c231fa6e03d86a82d7dc172a75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9af22f47531f468c3ba43d119644790af0c48457
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072189"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540969"
 ---
 # <a name="object-binding-dialog-box"></a>“对象绑定”对话框
   使用 **中的** “对象绑定” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，可以定义 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象的属性与数据源视图中的表或列之间的绑定。 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的“属性”**** 窗口中，通过从 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象的下列属性值的下拉列表中选择“(新建)”****，可以显示“对象绑定”**** 对话框：  

@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d2b99362f242ff7f815e9ceb9f67db9c80983c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27d4202774107795eaddf76c27e21010d534d977
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727643"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545249"
 ---
 # <a name="cube-properties"></a>多维数据集属性
   可以在多维数据集中设置很多属性以影响整个多维数据集的行为。 下表总结了这些属性。  
@@ -58,13 +57,13 @@ ms.locfileid: "62727643"
 |`Language`|指定多维数据集的默认语言标识符。|  
 |`Name`|指定多维数据集的用户友好名称。|  
 |`ProactiveCaching`|定义多维数据集的主动缓存设置。|  
-|`ProcessingMode`|指示在处理期间或之后是否进行索引和聚合。 选项为**常规**或`lazy`。|  
-|`ProcessingPriority`|确定在后台操作（例如，惰性聚合和索引）期间多维数据集的处理优先级。 默认值为 **0**。|  
-|`ScriptCacheProcessingMode`|指示在处理期间或之后是否生成脚本缓存。 选项为**regular** "常规`lazy`" 和。|  
+|`ProcessingMode`|指示在处理期间或之后是否进行索引和聚合。 选项为**常规**或 `lazy` 。|  
+|`ProcessingPriority`|确定在后台操作（例如，惰性聚合和索引）期间多维数据集的处理优先级。 默认值为**0**。|  
+|`ScriptCacheProcessingMode`|指示在处理期间或之后是否生成脚本缓存。 选项为 "**常规**" 和 `lazy` 。|  
 |`ScriptErrorHandlingMode`|确定错误处理。 选项是 `IgnoreNone` 或 `IgnoreAll`|  
 |`Source`|显示用于多维数据集的数据源视图|  
 |`StorageLocation`|指定多维数据集的文件系统存储位置。 如果未指定任何位置，则从包含多维数据集对象的数据库中继承位置。|  
-|`StorageMode`|指定多维数据集的存储模式。 值为`MOLAP`、 `ROLAP`或`HOLAP``.`|  
+|`StorageMode`|指定多维数据集的存储模式。 值为 `MOLAP` 、 `ROLAP` 或`HOLAP``.`|  
 |`Visible`|确定多维数据集的可见性。|  
   
 > [!NOTE]  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b38aa670-b8a4-4abb-8b32-c29dc52362f5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1a013ed1ca80e17f89baba65b89c460b6ee68691
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d98cba034ecb77f88b63f9adb46bea2ae76eb68d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078030"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541869"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>“定位数据库文件”对话框（Analysis Services - 多维数据）
   **“定位数据库文件”** 对话框显示一组可用文件的列表，这些文件位于为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例定义的日志和数据文件夹中。 您可以选择一个列出的文件，如果需要的话，您也可以指定另一个文件夹和文件。 您可以通过执行以下操作之一显示 **“定位数据库文件”** 对话框：  
@@ -33,7 +32,7 @@ ms.locfileid: "66078030"
  **所选路径**  
  键入以修改从“选择文件夹”**** 中选定的路径，或者选择一个“选择文件夹”**** 中没有列出的文件。  
   
- **文件名称**  
+ **文件名**  
  键入以修改从“选择文件夹”**** 中选定的文件，或者选择一个“选择文件夹”**** 中没有列出的文件。  
   
 ## <a name="see-also"></a>另请参阅  

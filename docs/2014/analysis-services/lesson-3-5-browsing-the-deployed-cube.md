@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d958fa21380272aa770a9880e294a86fede29de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9035079fc94e0e39344fa89d9e7cf1b6e77fb8de
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493978"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543399"
 ---
 # <a name="browsing-the-deployed-cube"></a>浏览已部署的多维数据集
   在下面的任务中，将浏览 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集。 因为我们的分析将比较多个维度的度量值，所以，您将使用 Excel 数据透视表来浏览您的数据。 使用数据透视表使您可以将客户、日期和产品信息放置于不同的轴上，这样，您可以在查看时看到在特定的时间段、客户人口统计信息和产品系列上 Internet 销售是如何变化的。  
   
 ### <a name="to-browse-the-deployed-cube"></a>浏览部署的多维数据集  
   
-1.  若要切换到中[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]的多维数据集设计器，请双击解决方案资源管理器的**cube 文件夹中**的 " ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]教程**" 多维数据集。  
+1.  若要切换到中的多维数据集设计器 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] ，请双击解决方案资源管理器**Cubes**的 cube 文件夹中的 " ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程**" 多维数据集。  
   
 2.  打开“浏览器”**** 选项卡，然后单击设计器工具栏上的“重新连接”**** 按钮。  
   

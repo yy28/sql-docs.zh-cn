@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f8a31fd2e6659f4d971ebb30bad7b2876dafa6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6c55141db6491fe1532dfcdc37a6d7a688c7274
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493943"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543359"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>使用 Analysis Services Tutorial 项目的修改版本
   本教程中的其余几节课基于您已在前三课中完成的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目的增强版本。 已向 **Adventure Works DW 2012[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据源视图中添加了额外的表和命名计算；已向该项目添加了额外的维度，并且已将这些新维度添加到 ** Tutorial 多维数据集内。 此外，还添加了另一个度量值组，该组包含另一个事实数据表中的度量值。 这一增强项目使您无需重复学习前面已了解的技能，即可继续学习如何在商业智能应用程序中添加功能。  
@@ -40,7 +39,7 @@ ms.locfileid: "69493943"
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>加载和处理增强的项目  
   
-1.  在[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]的 "**文件**" 菜单上，单击 "**关闭解决方案**" 关闭不使用的文件。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的 "**文件**" 菜单上，单击 "**关闭解决方案**" 关闭不使用的文件。  
   
 2.  在“文件”**** 菜单中，指向“打开”****，然后单击“项目”/“解决方案”****。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "69493943"
 ### <a name="data-source-view"></a>“数据源视图”  
  该增强的项目的数据源视图中新增了来自 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 数据库的一个事实数据表和四个维度表。  
   
- 请注意，数据源视图中包含十个表， \<"所有表"> 关系图变得很拥挤。 因此很难轻松理解各表之间的关系并找到特定表。 为了解决这一问题，将这些表组织为两个逻辑关系图：“Internet 销售”关系图和“分销商销售”关系图。******** 这两个关系图均围绕一个事实数据表进行组织。 通过创建逻辑关系图，您可以在数据源视图中查看和使用表的特定子集，而无需始终在一个关系图中查看所有表及其关系。  
+ 可以看到该数据源视图包含十个表， \<All Tables> 关系图变得很拥挤， 因此很难轻松理解各表之间的关系并找到特定表。 为了解决这一问题，将这些表组织为两个逻辑关系图：“Internet 销售”关系图和“分销商销售”关系图。******** 这两个关系图均围绕一个事实数据表进行组织。 通过创建逻辑关系图，您可以在数据源视图中查看和使用表的特定子集，而无需始终在一个关系图中查看所有表及其关系。  
   
 #### <a name="internet-sales-diagram"></a>“Internet 销售”关系图  
  “Internet 销售”关系图包含与直接通过 Internet 向客户销售 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 产品相关的表。**** 该关系图包含四个维度表和一个事实表，在第 1 课中已经将这些表添加到 **Adventure Works DW 2012** 数据源视图。 这些表包括：  

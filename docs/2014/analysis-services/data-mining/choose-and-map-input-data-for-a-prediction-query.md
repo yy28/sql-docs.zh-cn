@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 00d330a0-879d-4da0-9f29-53c288116f4d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 89eaf3b59f6d779a01168b00d51acbee1e96ca7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20a10c066fc77e8d760bde456be54b366def8f59
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085847"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524883"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>为预测查询选择和映射输入数据
   在您根据挖掘模型创建预测时，通常通过向模型馈送新数据来创建预测。 （时序模型是个例外情况，它只能基于历史数据进行预测。）若要向模型提供新数据，您必须确保数据可作为数据源视图的一部分提供。 如果您事先知道哪些数据将用于预测，则可以在用于创建模型的数据源视图中包括这些数据。 否则，您可能需要创建一个新的数据源视图。 有关详细信息，请参阅 [多维模型中的数据源视图](../multidimensional-models/data-source-views-in-multidimensional-models.md)。  
@@ -48,7 +47,7 @@ ms.locfileid: "66085847"
   
 3.  在“表/视图名称”**** 下，选择包含希望用于测试模型的数据的表。  
   
-4.  单击" **确定**"。  
+4.  单击“确定”。  
   
      挖掘结构中的列将自动映射到输入表中相同名称的列。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "66085847"
   
 4.  从外部数据源可用列的列表中选择一个新列。 选择列表中的空白项以删除列映射。  
   
-5.  单击" **确定**"。  
+5.  单击“确定”。  
   
      设计器中将显示新的列映射。  
   
@@ -78,7 +77,7 @@ ms.locfileid: "66085847"
   
 3.  单击 **“删除关系”**。  
   
-4.  单击" **确定**"。  
+4.  单击“确定”。  
   
      这样便可删除事例表和嵌套表之间的关系。  
   

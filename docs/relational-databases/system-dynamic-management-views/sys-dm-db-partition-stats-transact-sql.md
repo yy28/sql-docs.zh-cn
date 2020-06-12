@@ -1,7 +1,7 @@
 ---
 title: sys. dm_db_partition_stats （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 05/31/2019
+ms.date: 05/28/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eff14464f5913508d8d95fec8a11a70438f95880
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a947396f3706c877770a10259838f6b860ab34b9
+ms.sourcegitcommit: 38639b67a135ca1a50a8e38fa61a089efe90e3f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828025"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454420"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,12 +33,12 @@ ms.locfileid: "82828025"
   返回当前数据库中每个分区的页和行计数信息。  
   
 > [!NOTE]  
->  若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_db_partition_stats**。 Dm_pdw_nodes_db_partition_stats sys.databases 中的 partition_id 不同于 Azure SQL 数据仓库的 sys.databases 目录视图中的 partition_id。
+> 若要从或调用此 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ，请使用名称**dm_pdw_nodes_db_partition_stats**。 Dm_pdw_nodes_db_partition_stats sys.databases 中的 partition_id 不同于 Azure SQL 数据仓库的 sys.databases 目录视图中的 partition_id。
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|分区 ID。 在数据库中是唯一的。 除了 Azure SQL 数据仓库以外，此值与**sys.databases**目录视图中**partition_id**的值相同。|  
-|**object_id**|**int**|包含该分区的表或索引视图的对象 ID。|  
+|object_id|**int**|包含该分区的表或索引视图的对象 ID。|  
 |**index_id**|**int**|包含该分区的堆或索引的 ID。<br /><br /> 0 = 堆<br /><br /> 1 = 聚集索引。<br /><br /> > 1 = 非聚集索引|  
 |**partition_number**|**int**|索引或堆中从 1 开始的分区号。|  
 |**in_row_data_page_count**|**bigint**|分区中存储行内数据所用的页数。 如果分区是堆的一部分，则该值为堆中的数据页数。 如果分区是索引的一部分，则该值为叶级别中的页数。 （B 树中的非叶页不包含在计数中。）在这两种情况下，不包括 IAM （索引分配映射）页。 对于 xVelocity 内存优化列存储索引，始终为 0。|  
@@ -54,7 +54,7 @@ ms.locfileid: "82828025"
 |**pdw_node_id**|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
 |**distribution_id**|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 与分布关联的唯一数字 id。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **sys.dm_db_partition_stats** 显示用于存储和管理数据库中全部分区的行内数据 LOB 数据和行溢出数据的空间的有关信息。 每个分区对应一行。  
   
  作为输出数据依据的计数缓存在内存中，或存储在磁盘中的各种系统表中。  
@@ -66,14 +66,14 @@ ms.locfileid: "82828025"
  可以通过求全部相关分区计数的和来获取单个表或单个索引的总计数。  
   
 ## <a name="permissions"></a>权限  
- 查询 **sys.dm_db_partition_stats** 动态管理视图要求具备 VIEW DATABASE STATE 权限。 有关动态管理视图权限的详细信息，请参阅[&#40;transact-sql&#41;中的动态管理视图和函数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
+ 要求 `VIEW DATABASE STATE` 和 `VIEW DEFINITION` 权限查询**sys.databases dm_db_partition_stats**动态管理视图。 有关动态管理视图权限的详细信息，请参阅[&#40;transact-sql&#41;中的动态管理视图和函数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-returning-all-counts-for-all-partitions-of-all-indexes-and-heaps-in-a-database"></a>A. 返回数据库中全部索引和堆的全部分区的所有计数  
  以下示例演示了 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中全部索引和堆的全部分区的所有计数。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT * FROM sys.dm_db_partition_stats;  
@@ -83,7 +83,7 @@ GO
 ### <a name="b-returning-all-counts-for-all-partitions-of-a-table-and-its-indexes"></a>B. 返回表及其索引的全部分区的所有计数  
  以下示例演示了 `HumanResources.Employee` 表及其索引的全部分区的所有计数。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT * FROM sys.dm_db_partition_stats   
@@ -94,7 +94,7 @@ GO
 ### <a name="c-returning-total-used-pages-and-total-number-of-rows-for-a-heap-or-clustered-index"></a>C. 返回堆或聚集索引使用的总页数和总行数  
  以下示例返回 `HumanResources.Employee` 表的堆或聚集索引使用的总页数和总行数。 因为默认情况不对 `Employee` 表分区，请注意和仅包含一个分区。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SUM(used_page_count) AS total_number_of_used_pages,   

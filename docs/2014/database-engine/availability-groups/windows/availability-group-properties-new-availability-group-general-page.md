@@ -12,12 +12,12 @@ ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 248ffe57906052c0d7dafcd187bb1b2b34cd6e64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31976f23109e7e8e64684618b88dfcc4177e2860
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815650"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858902"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>可用性组属性和新建可用性组（“常规”页）
   本主题同时适用于“新建可用性组”对话框和“可用性组属性”对话框的“常规”选项卡************。  **“新建可用性组”** 对话框支持您无需使用 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]即创建新的可用性组。 **“可用性组属性”** 对话框支持您查看和修改现有的可用性组的配置。  
@@ -28,29 +28,29 @@ ms.locfileid: "62815650"
   
 -   [使用 AlwaysOn 面板 (SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **可用性组名称**  
  可用性组的名称。 这是在 Windows Server 故障转移群集 (WSFC) 内必须唯一的用户指定的名称。  
   
 ## <a name="availability-databases"></a>可用性数据库  
- **数据库名称**  
+ **Database Name**  
  已添加到可用性组中的数据库的名称。  
   
  **添加**  
  单击此选项可将数据库添加到可用性组。  
   
- **删除**  
+ **移除**  
  单击此选项可从可用性组中删除所选数据库。  
   
 ## <a name="availability-replicas"></a>可用性副本  
  **服务器实例**  
  承载此副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务器名称；对于非默认实例，则为其实例名称。  
   
- **Role**  
- **基本**  
+ **角色**  
+ **主要节点**  
  当前主副本。  
   
- **辅助副本**  
+ **辅助节点**  
  当前辅助副本。  
   
  **正在解析**  
@@ -83,7 +83,7 @@ ms.locfileid: "62815650"
  主副本中的数据库允许所有连接。 这是默认设置。  
   
  **允许读/写连接**  
- 不允许 Application Intent 连接属性设置为 **ReadOnly** 的连接。 当应用程序意向属性设置为**ReadWrite**或未设置 application 意向连接属性时，将允许连接。 有关 Application Intent 连接属性的详细信息，请参阅 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
+ 不允许 Application Intent 连接属性设置为 **ReadOnly** 的连接。 在 Application Intent 属性设置为 **ReadWrite** 或者未设置 Application Intent 连接属性时，将允许连接。 有关 Application Intent 连接属性的详细信息，请参阅 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
  **可读辅助**  
  正在履行辅助角色的可用性副本（也就是辅助副本）是否可以接受来自客户端的连接，可为下列值之一：  
@@ -106,7 +106,7 @@ ms.locfileid: "62815650"
  **添加**  
  单击此选项可将辅助副本添加到可用性组。  
   
- **删除**  
+ **移除**  
  单击此选项可从可用性组中删除辅助副本。  
   
 ## <a name="see-also"></a>另请参阅  

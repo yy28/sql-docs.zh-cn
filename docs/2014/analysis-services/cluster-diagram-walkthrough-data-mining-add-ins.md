@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 761bef6a-37d4-4b19-944e-f2aadc75a242
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc2df250b0728934f258c8217d29adfb91e66ff5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 578b5b8e55fd3ae660db985eed2e608667dc768b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087904"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527483"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>分类关系图演练（数据挖掘外接程序）
   创建了聚类分析模型之后，可以使用 "**分类**" 形状将其导入 Visio，然后继续自定义并增强布局。 **Visio 数据挖掘形状**包含以下用于处理数据挖掘关系图的自定义控件：  
@@ -43,13 +42,13 @@ ms.locfileid: "66087904"
   
 1.  如果在 "**形状**" 列表中看不到 " **Microsoft 数据挖掘形状**"，请单击 "**更多形状**"，选择 "**打开模具**"，然后从默认安装位置打开模板。  
   
-     \<驱动器>： \Program files\Microsoft SQL Server 2012 DM 外接程序  
+     \<drive>： \Program files\Microsoft SQL Server 2012 DM 外接程序  
   
 2.  将**群集**形状拖到页面上。  
   
 3.  在**群集 Visio 形状向导**的 "欢迎" 页上，单击 "**下一步**"。  
   
-4.  在**群集向导**的 " [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] **选择数据源**" 页上，选择一个与服务器的连接，该服务器包含要显示的数据挖掘模型。  
+4.  在**群集向导**的 "**选择数据源**" 页上，选择一个与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务器的连接，该服务器包含要显示的数据挖掘模型。  
   
 5.  选择适当的挖掘模型，然后单击 "**下一步**"。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "66087904"
   
      但是，此选项将作为图表数据的筛选器，因此不能再增加项的数量。  
   
-8.  单击“高级”****。  
+8.  单击 **“高级”** 。  
   
      在 "**群集选项**" 对话框中，您可以自定义在关系图中使用的形状的可视外观。 您可以更改图形中使用的颜色和用于分类的形状。  
   
@@ -123,7 +122,7 @@ ms.locfileid: "66087904"
   
      但是，如果您使用任意特殊格式而不是向导默认生成的格式，包括一些背景，这些数字可能不会显示。  
   
-     **Slider**  
+     **滑块**  
      筛选分类之间的线条。 向上移动滑块会删除最重要关联外的所有关联。  
   
      **明暗度**  

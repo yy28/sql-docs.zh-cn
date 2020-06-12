@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a9602174-b7e2-4e16-8ded-dfd8eb9264d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 89ba538c3ac3dfd7a262e4ae17cb9ddd6cf7265c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fbc9c9b7a09b0d7f06db624be9d94978ab996621
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082613"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529013"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>“数据集筛选器或模型筛选器”对话框
   此对话框帮助您生成可应用于数据集的筛选器。  数据集可以是用于测试的外部数据集，也可以是挖掘模型的事例数据。 根据筛选器是用于外部数据集还是用于挖掘模型，对话框的名称会发生更改。  
@@ -37,11 +36,11 @@ ms.locfileid: "66082613"
  **Conditions**  
  显示表名，后跟带有条件的列名。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**And/Or**|选择运算符以联接多个条件。|  
 |**挖掘结构列**|单击此项可选择数据源，然后单击网格中的连续行可添加数据源中的列。<br /><br /> 网格中的第一行指定数据源视图。 选择数据源视图后， **“挖掘结构列”** 会显示一个表图标， **“值”** 字段显示为此数据源定义的所有条件的组合。<br /><br /> 选择数据源后， **“挖掘结构列”** 框提供一个显示该数据源中各个列的下拉列表。|  
-|**操作员**|从列表中选择运算符。|  
+|**运算符**|从列表中选择运算符。|  
 |**值**|对于表， **“值”** 字段显示应用于数据源的所有筛选器的组合。 您也可以单击文本框右侧的 "生成" **（...）** 按钮以打开 "**筛选器**" 对话框并生成条件。|  
   
  **表达式**  

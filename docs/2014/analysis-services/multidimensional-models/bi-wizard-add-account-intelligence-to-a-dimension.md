@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 111948911c0fe7bdc0e7ce260a15b8efee50e9db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6279c738ada597984465ff0c1c3db6fa8fbaeb38
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076899"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544591"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>向维度中添加帐户智能
-  在多维数据集或维度中添加帐户智能增强功能，以向具有某一帐户属性的成员分配标准帐户分类，如收入和支出。 这种增强功能还可以标识帐户类型（如“资产”和“负债”）并为每种帐户类型分配适当的聚合。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以使用分类来聚合帐户一段[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]时间。  
+  在多维数据集或维度中添加帐户智能增强功能，以向具有某一帐户属性的成员分配标准帐户分类，如收入和支出。 这种增强功能还可以标识帐户类型（如“资产”和“负债”）并为每种帐户类型分配适当的聚合。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可以使用分类来聚合帐户一段时间。  
   
 > [!NOTE]  
 >  帐户智能仅可用于基于现有数据源的维度。 对于不使用数据源创建的维度，必须先运行架构生成向导创建数据源视图，然后再添加帐户智能。  

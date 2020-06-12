@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a6bcc8e830c682c800f7dbdd586b25b88ca8577f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d2b28ecf29adc8240f76ec9888f9d4cb06dda887
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530938"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547319"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>用于处理的工具和方法 (Analysis Services)
   处理是指这样一项操作：Analysis Services 查询关系数据源并使用该数据填充 Analysis Services 对象。  
@@ -74,7 +73,7 @@ ms.locfileid: "69530938"
   
 5.  还可以单击 **“更改设置”** 来修改处理顺序、与特定类型的错误相关的处理行为或其他设置。  
   
-6.  单击“确定”。   
+6.  单击“确定”。  
   
      “处理进度”对话框为每个命令提供当前状态。 如果状态消息被截断，则可以单击 **“查看详细信息”** 来读取完整消息。  
   
@@ -88,7 +87,7 @@ ms.locfileid: "69530938"
   
 4.  在 **“处理维度”** 对话框的 **“对象列表”** 下的 **“处理选项”** 列中，验证此列的选项是否为 **“处理全部”**。 如果不是，则在“处理选项”中单击选项，并从下拉列表中选择“处理全部”********。  
   
-5.  单击“运行”****。  
+5.  单击 **“运行”** 。  
   
 6.  处理结束时，单击 **“关闭”**。  
   

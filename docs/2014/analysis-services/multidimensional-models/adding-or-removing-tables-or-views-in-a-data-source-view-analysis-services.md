@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 98307d04-6548-4d7d-9244-2371dd165249
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: da7169cc95b768324e18f1ab5fd7b0a33615f99a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da1bc2b1ac0af7576cfe3c3593b451f78d6a9fae
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077472"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544849"
 ---
 # <a name="adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services"></a>在数据源视图中添加或删除表或视图 (Analysis Services)
   在您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创建了数据源视图 (DSV) 后，可以通过添加或删除表和列，包括来自其他数据源的表和列，在数据源视图设计器中修改数据源视图。  
@@ -39,7 +38,7 @@ ms.locfileid: "66077472"
   
  在将表添加到 DSV 中或者从 DSV 中删除表时，还会将该表添加到 DSV 的当前选定关系图中或从中删除。 有关关系图的详细信息，请参阅 [使用数据源视图设计器中的关系图 (Analysis Services)](work-with-diagrams-in-data-source-view-designer-analysis-services.md)。  
   
- 在“添加/删除表”**** 对话框中将表移至“包含的对象”**** 列表后，可以添加所有相关表。 如果数据源中存在外键约束，此操作将根据该外键约束添加表。 如果不存在外键约束，则可以使用数据源视图的 `NameMatchingCriteria` 属性通过为表中匹配的列名指定生成适当关系的条件来确定关系。 如果为`NameMatchingCriteria`数据源视图指定了属性，则单击 "**添加相关表**" 以从数据源中添加具有匹配列名称的表。 有关设置`NameMatchingCriteria`属性的详细信息，请参阅[多维模型中的数据源视图](data-source-views-in-multidimensional-models.md)。  
+ 在“添加/删除表”**** 对话框中将表移至“包含的对象”**** 列表后，可以添加所有相关表。 如果数据源中存在外键约束，此操作将根据该外键约束添加表。 如果不存在外键约束，则可以使用数据源视图的 `NameMatchingCriteria` 属性通过为表中匹配的列名指定生成适当关系的条件来确定关系。 如果为 `NameMatchingCriteria` 数据源视图指定了属性，则单击 "**添加相关表**" 以从数据源中添加具有匹配列名称的表。 有关设置属性的详细信息 `NameMatchingCriteria` ，请参阅[多维模型中的数据源视图](data-source-views-in-multidimensional-models.md)。  
   
 > [!NOTE]  
 >  向数据源视图中添加对象或从中删除对象不会影响基础数据源。  

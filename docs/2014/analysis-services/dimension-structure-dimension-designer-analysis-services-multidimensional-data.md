@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 88409278-4f8a-4f1f-8730-e602866dbb36
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cb5c593d07d0df235fb173c02229bcf784847306
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00bcf528f8f2c9a1541016d716d9d41c2ea7ee62
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081751"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528579"
 ---
 # <a name="dimension-structure-dimension-designer-analysis-services---multidimensional-data"></a>维度结构（维度设计器）（Analysis Services - 多维数据）
   可以使用维度设计器中的 **“维度结构”** 页修改所选维度的属性、层次结构和级别。 **“维度结构”** 页包含一个工具栏和三个窗格。  
@@ -28,7 +27,7 @@ ms.locfileid: "66081751"
   
      默认情况下，首次在维度设计器中打开维度时将会显示 **“维度结构”** 页。  
   
-## <a name="toolbar"></a>工具栏  
+## <a name="toolbar"></a>Toolbar  
  使用工具栏可以执行维度设计器的 **“维度结构”** 页中的一般操作。 有关此窗格的详细信息，请参阅[工具栏（“维度结构”选项卡，维度设计器）（Analysis Services - 多维数据）](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)。  
   
 ## <a name="panes"></a>窗格  

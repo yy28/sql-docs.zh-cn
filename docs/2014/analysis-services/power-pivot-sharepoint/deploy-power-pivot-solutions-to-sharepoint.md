@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c91225761c76a58b81d8895698ca059014969f0f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7345ae056c97bb0d84433e9cf15b8ca3d8cffd5e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782832"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540309"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>将 PowerPivot 解决方案部署到 SharePoint
   使用以下说明可手动部署两个解决方案包，这两个解决方案包将 PowerPivot 功能添加到 SharePoint Server 2010 环境。 部署解决方案是在 SharePoint 2010 服务器上配置 PowerPivot for SharePoint 所必需的步骤。 若要查看所需步骤的完整列表，请参阅[在管理中心中管理和配置 PowerPivot 服务器](power-pivot-server-administration-and-configuration-in-central-administration.md)。  
@@ -39,7 +38,7 @@ ms.locfileid: "72782832"
  [关于 PowerPivot 解决方案](#intro)  
   
 ##  <a name="prerequisite-verify-the-web-application-uses-classic-mode-authentication"></a><a name="bkmk_classic"></a> 先决条件：确认 Web 应用程序使用经典模式身份验证  
- 只有使用 Windows 经典模式身份验证的 Web 应用程序才支持 PowerPivot for SharePoint。 若要检查应用程序是否使用经典模式，请从**sharepoint 2010 命令行管理**程序中运行以下 PowerShell `http://<top-level site name>` cmdlet，并将替换为您的 sharepoint 站点的名称：  
+ 只有使用 Windows 经典模式身份验证的 Web 应用程序才支持 PowerPivot for SharePoint。 若要检查应用程序是否使用经典模式，请从**sharepoint 2010 命令行管理**程序中运行以下 PowerShell cmdlet， `http://<top-level site name>` 并将替换为您的 sharepoint 站点的名称：  
   
 ```powershell
 Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthentication  
@@ -106,7 +105,7 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
 4.  在 **"部署到？**" 中，选择要为其添加 PowerPivot 功能支持的 SharePoint web 应用程序。  
   
-5.  单击“确定”。   
+5.  单击“确定”。  
   
 6.  对也要支持 PowerPivot 数据访问的其他 SharePoint Web 应用程序重复此过程。  
   

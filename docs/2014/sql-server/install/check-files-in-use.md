@@ -10,12 +10,12 @@ ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 34b51b26454766498ee601baae3ccc52cd1c5768
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3610ad08d34942dd7dbc1af1371a6c5d86e7890
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096533"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856595"
 ---
 # <a name="check-files-in-use"></a>检查正在使用的文件
   若要避免在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新后重新启动 Windows，请使用“检查正在使用的文件”页来识别锁定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新安装程序所需文件的进程。  
@@ -42,11 +42,11 @@ ms.locfileid: "66096533"
   
 -   锁定的文件的名称  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
   
 |名称|说明|  
 |----------|-----------------|  
-|进程|显示以下进程的全名，该进程正在使用要更新的文件。|  
+|过程|显示以下进程的全名，该进程正在使用要更新的文件。|  
 |类型|显示进程的类型。|  
 |帐户|显示运行进程的帐户。|  
 |进程 ID|显示进程 ID。|  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3b6d7053-aeef-4d9e-af70-f5b40256e859
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 86976ac183fc592deab50ebdf5599ef3e7231c28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 257f6decac024126228d0da2462bc1615be58d83
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072125"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547639"
 ---
 # <a name="partition-wizard-f1-help-analysis-services---multidimensional-data"></a>分区向导的 F1 帮助（Analysis Services - 多维数据）
   可以使用分区向导为多维数据集中的度量值组定义分区。 默认情况下，会对多维数据集中每个度量值组定义单个分区。 不过，如果是大型分区，这样将会降低访问和处理性能。 通过创建多个分区，使每个分区都包含度量值组的一部分数据，这样可以提高该度量值组的访问和处理性能。  

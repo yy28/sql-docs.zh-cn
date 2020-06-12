@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: db8b36fbccc4139071f54ddf9f73f876e9517799
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20acb57a4c2ddb60d2daefc6733ac7ef52310f3c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084063"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521993"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 线性回归算法技术参考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法是 Microsoft 决策树算法的特殊版本，该线性回归算法针对连续属性的建模对进行了优化。 本主题说明该算法的实现，介绍如何自定义该算法的行为，并提供指向有关模型查询的其他信息的链接。  
@@ -34,7 +33,7 @@ ms.locfileid: "66084063"
 ### <a name="scoring-methods-and-feature-selection"></a>计分方法和功能选择  
  所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据挖掘算法都会自动使用功能选择来改善分析效果和减轻处理工作量。 线形回归中所用的功能选择方法为兴趣性分数，原因是该模型仅支持连续列。 下表列出了线性回归算法和决策树算法中功能选择上的差异，以供参考。  
   
-|算法|分析方法|说明|  
+|算法|分析方法|注释|  
 |---------------|------------------------|--------------|  
 |线性回归|兴趣性分数|默认。<br /><br /> 决策树算法中可用的其他功能选择方法仅适用于离散变量，因此不适用于线性回归模型。|  
 |决策树|兴趣性分数<br /><br /> Shannon 平均信息量<br /><br /> Bayesian with K2 Prior<br /><br /> 使用统一先验的 Bayesian Dirichlet（默认）|如果任何列包含非二进制连续值，则兴趣性分数将用于所有列，以确保一致性。 否则，将使用默认方法或指定的方法。|  
@@ -64,7 +63,7 @@ ms.locfileid: "66084063"
 ### <a name="regressors-in-linear-regression-models"></a>线性回归模型中的回归量  
  线性回归模型基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法。 但是，即使不使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法，任何决策树模型也都可以包含表示连续属性的回归的树或节点。  
   
- 您无需指定连续列表示回归量。 即使不对列设置 REGRESSOR 标志， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法也会将数据集分区成具有有意义模式的区域。 不同之处在于，在设置建模标志时，算法会尝试查找窗体 a * C1 + b\*C2 + .。。以适应树节点中的模式。 将对剩余的总和进行计算，如果偏差过大，则在树中执行强制拆分。  
+ 您无需指定连续列表示回归量。 即使不对列设置 REGRESSOR 标志， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法也会将数据集分区成具有有意义模式的区域。 不同之处在于，在设置建模标志时，算法会尝试查找窗体 a * C1 + b \* C2 + .。。以适应树节点中的模式。 将对剩余的总和进行计算，如果偏差过大，则在树中执行强制拆分。  
   
  例如，如果是将 **Income** 用作属性来预测客户购买行为，并对该列设置了 REGRESSOR 建模标志，则该算法将使用标准回归公式先尝试适合 **Income** 值。 如果偏差过大，则放弃使用回归公式，并根据其他一些属性对树进行拆分。 拆分后，决策树算法将尝试在每个分支中拟合收入的回归量。  
   

@@ -1,5 +1,6 @@
 ---
 title: 字符串长度函数（XQuery） |Microsoft Docs
+description: 了解如何使用 XQuery 函数字符串长度（）。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 12ae1efbf900a505a5f257f9684842a0ad9ff21f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40cd82dac9c33e6718e4f3bf3270a065af824115
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004651"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689245"
 ---
 # <a name="functions-on-string-values---string-length"></a>基于字符串值的函数 - string-length
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ fn:string-length($arg as xs:string?) as xs:integer
  *$arg*  
  要计算其长度的源字符串。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果 *$arg*的值是空序列，则返回**xs： integer**值0。  
   
  XQuery 函数中代理对的行为依赖于数据库兼容级别。 如果该兼容级别为 110 或更高，则每个代理对都作为单个字符计数。 对于更低的兼容级别，它们会作为两个字符计数。 有关详细信息，请参阅[ALTER DATABASE 兼容级别 &#40;transact-sql&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)和[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md)。  
@@ -101,7 +102,7 @@ Result
 ### <a name="b-using-the-string-length-xquery-function-to-retrieve-products-whose-warranty-descriptions-are-short"></a>B. 使用 string-length() XQuery 函数检索保修说明较短的产品  
  对于其保修说明长度少于20个字符的产品，下面的查询将检索包含产品 ID、长度、保修说明和 <`Warranty`> 元素本身的 XML。  
   
- 保修是厂商为产品提供的服务之一。 在 <`Features`> `Warranty`元素之后> 子元素的可选 <。  
+ 保修是厂商为产品提供的服务之一。 在 `Warranty` <> 元素之后> 子元素的可选 <`Features` 。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -129,7 +130,7 @@ WHERE CatalogDescription.exist('/pd:ProductDescription')=1;
   
 -   **pd**和**wm**是在此查询中使用的命名空间前缀。 它们标识正在查询的文档中使用的相同命名空间。  
   
--   XQuery 指定嵌套 FOR 循环。 需要外部 FOR 循环，因为要检索 <`ProductDescription`> 元素的**ProductModelID**属性。 内部 FOR 循环也是必需的，因为您只需检索那些保修功能说明少于 20 个字符的产品。  
+-   XQuery 指定嵌套 FOR 循环。 需要外部 FOR 循环，因为要检索 <> 元素的**ProductModelID**属性 `ProductDescription` 。 内部 FOR 循环也是必需的，因为您只需检索那些保修功能说明少于 20 个字符的产品。  
   
  下面是部分结果：  
   

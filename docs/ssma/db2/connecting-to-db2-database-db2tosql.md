@@ -1,5 +1,6 @@
 ---
 title: 连接到 DB2 数据库（DB2ToSQL） |Microsoft Docs
+description: 了解如何连接到 DB2 数据库的目标实例以迁移 DB2 数据库。 SSMA 获取有关所有 DB2 架构的元数据。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: b49e5f53e1efbff6febe37a6f3d02fbb3e9cfc05
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d31a20aa0aa4b00feaf7d0af5aeb13b5b73c381d
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68141071"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292930"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>连接到 DB2 数据库（DB2ToSQL）
-若要将 DB2 数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]迁移到，你必须连接到要迁移的 db2 数据库。 当你连接时，SSMA 将获取有关所有 DB2 架构的元数据，然后在 DB2 元数据资源管理器窗格中显示它。 SSMA 存储有关数据库服务器的信息，但不存储密码。  
+若要将 DB2 数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，你必须连接到要迁移的 db2 数据库。 当你连接时，SSMA 将获取有关所有 DB2 架构的元数据，然后在 DB2 元数据资源管理器窗格中显示它。 SSMA 存储有关数据库服务器的信息，但不存储密码。  
   
 在关闭项目之前，与数据库的连接保持活动状态。 重新打开项目时，如果要连接到数据库，则必须重新连接。  
   
@@ -31,7 +32,7 @@ ms.locfileid: "68141071"
 -   数据迁移的数据访问需要 DATAACCESS  
   
 ## <a name="establishing-a-connection-to-db2"></a>建立与 DB2 的连接  
-连接到数据库时，SSMA 将读取数据库元数据，然后将此元数据添加到项目文件。 当 SSMA 将对象转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语法以及将其迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，将使用此元数据。 您可以在 DB2 元数据资源管理器窗格中浏览此元数据，并查看各个数据库对象的属性。  
+连接到数据库时，SSMA 将读取数据库元数据，然后将此元数据添加到项目文件。 当 SSMA 将对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语法以及将其迁移到时，将使用此元数据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 您可以在 DB2 元数据资源管理器窗格中浏览此元数据，并查看各个数据库对象的属性。  
   
 > [!IMPORTANT]  
 > 尝试连接之前，请确保数据库服务器正在运行，并且可以接受连接。  
@@ -77,7 +78,7 @@ ms.locfileid: "68141071"
     有关详细信息，请参阅[连接到 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)。  
   
 ## <a name="reconnecting-to-db2"></a>重新连接到 DB2  
-与数据库服务器的连接会一直保持活动状态，直到关闭该项目。 重新打开项目时，如果要连接到数据库，则必须重新连接。 你可以脱机工作，直至你要更新元数据、将数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]加载到和迁移数据。  
+与数据库服务器的连接会一直保持活动状态，直到关闭该项目。 重新打开项目时，如果要连接到数据库，则必须重新连接。 你可以脱机工作，直至你要更新元数据、将数据库对象加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和迁移数据。  
   
 ## <a name="refreshing-db2-metadata"></a>刷新 DB2 元数据  
 不会自动刷新有关 DB2 数据库的元数据。 DB2 元数据资源管理器中的元数据是首次连接时或上次手动刷新元数据时的元数据的快照。 可以手动更新所有架构、单个架构或单个数据库对象的元数据。  
@@ -104,7 +105,7 @@ ms.locfileid: "68141071"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
   
 -   迁移过程的下一步是[连接到 SQL Server](https://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e)。  
   

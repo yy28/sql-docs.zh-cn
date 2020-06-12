@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c7772d73-31c9-4b22-a899-bac424d603bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1b3448891baed6fe91bb0339030f74569a096377
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2925542236adfc7e79ea1dccd0ca3ca1008e7de1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064632"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527763"
 ---
 # <a name="browser-dimension-designer-analysis-services---multidimensional-data"></a>浏览器（维度设计器）（Analysis Services - 多维数据）
   可以使用维度设计器的 **“浏览器”** 选项卡浏览维度的维度数据和元数据。 如果为当前所选维度启用了维度写回，则使用此视图可以更改该维度的成员数据。  

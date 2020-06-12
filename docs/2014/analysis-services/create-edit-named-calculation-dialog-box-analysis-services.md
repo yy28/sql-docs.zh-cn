@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 66fb30ae-f5c5-4bfc-80ca-8c8a3a9bb30d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a53db9413ce7877182ca5f9c768bb1e1ef71e383
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d6a3d94e2e003410bfdeb632d30fc0e5e3f8a0d4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086846"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526633"
 ---
 # <a name="create-edit-named-calculation-dialog-box-analysis-services"></a>"创建-编辑命名计算" 对话框（Analysis Services）
   可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的“创建/编辑命名计算”**** 对话框，为数据源视图中的表定义或修改命名计算。 通过执行以下操作之一，可以显示“创建/编辑命名计算”**** 对话框：  

@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a2e9fb0dfd3607adc1773d4a43561f32ba650ee5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf2e0f2d57ce8bf1834813d4e39d06afc9724fd7
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68887674"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670090"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ FROM <existing model>
  *现有模型*  
  要复制的现有模型的名称。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果现有模型已定型，则此语句执行时将自动处理新模型。 否则，新模型将保持未处理状态。  
   
  **SELECT INTO**语句仅在现有模型的结构与新模型的算法兼容时才起作用。 因此，此语句在快速创建并测试基于同一算法的模型时最为有用。 如果更改算法类型，则新算法必须支持现有模型中所有列的数据类型，否则处理模型时可能会出错。  
@@ -53,7 +53,7 @@ FROM <existing model>
  **WITH 钻取**子句对新挖掘模型启用钻取功能。 只有在创建模型时，才能启用钻取功能。  
   
 ## <a name="example-1-altering-the-parameters-of-the-model"></a>示例 1：更改模型参数  
- 下面的示例基于您在[数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中创建的现有挖掘`TM_Clustering`模型创建新的挖掘模型。 在新模型中，对 CLUSTER_COUNT 参数进行了修改；因而，新模型中的最大分类数为 5。 而现有模型使用的是默认值 10。  
+ 下面的示例基于 `TM_Clustering` 您在[数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中创建的现有挖掘模型创建新的挖掘模型。 在新模型中，对 CLUSTER_COUNT 参数进行了修改；因而，新模型中的最大分类数为 5。 而现有模型使用的是默认值 10。  
   
 ```  
 SELECT * INTO [New_Clustering]  

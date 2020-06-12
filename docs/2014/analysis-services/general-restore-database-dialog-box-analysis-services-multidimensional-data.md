@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 319e7ef5-c9c7-4e50-8690-02a90aed006f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2ebc1bc72a15545412adcc71d10feb08f3f05b16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 787488570627e2c8c7fc9a37e8f814847c40f3ca
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080945"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544379"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>常规（“还原数据库”对话框）（Analysis Services - 多维数据）
   在 **中，可以使用** “还原数据库” **对话框的** “常规” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 页指定在还原 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库时使用的备份文件和常规设置。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: db487856-ee21-49c3-aa08-d9136e193374
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 959645223eacec6c000ddbfa23615b7949d10d5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e781e26dc2e45c6637b6868304be08452d31a996
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077422"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544799"
 ---
 # <a name="define-a-default-member"></a>定义默认成员
   在查询中不包括特性层次结构的情况下，可以使用特性层次结构的默认成员来计算表达式。 如果查询包括的特性层次结构或用户层次结构包含产生特性层次结构的特性，那么将忽略默认成员。 这是因为将使用查询中指定的成员。  
@@ -33,11 +32,11 @@ ms.locfileid: "66077422"
  如果没有为特性层次结构指定任何默认成员，并且特性层次结构是可聚合的（特性的 `IsAggregatable` 属性设置为 `True`），则“(全部)”成员将作为默认成员。 如果未指定任何默认成员并且特性是不可聚合的（特性的 `IsAggregatable` 属性设置为 `False`），则将从特性层次结构顶层中选择默认成员。  
   
 ## <a name="specifying-the-default-member"></a>指定默认成员  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]维度中的每个属性都具有一个默认成员，可以使用特性的`DefaultMember`属性指定该成员。 如果属性没有包含在查询中，则使用该设置计算表达式。 如果查询在维度中指定了层次结构，则忽略层次结构中属性的默认成员。 如果查询未在维度中指定层次结构，则维度属性`DefaultMember`的设置将生效。  
+ 中维度中的每个属性 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 都具有一个默认成员，可以使用特性的属性指定该成员 `DefaultMember` 。 如果属性没有包含在查询中，则使用该设置计算表达式。 如果查询在维度中指定了层次结构，则忽略层次结构中属性的默认成员。 如果查询未在维度中指定层次结构，则 `DefaultMember` 维度属性的设置将生效。  
   
- 如果特性`DefaultMember`的设置为空，并且其`IsAggregatable`属性设置为`True`，则默认成员为 "全部" 成员。 如果将`IsAggregatable`属性设置为`False`，则默认成员为第一个可见级别的第一个成员。  
+ 如果 `DefaultMember` 特性的设置为空，并且其 `IsAggregatable` 属性设置为，则 `True` 默认成员为 "全部" 成员。 如果将 `IsAggregatable` 属性设置为 `False` ，则默认成员为第一个可见级别的第一个成员。  
   
- 特性`DefaultMember`的设置适用于该属性所参与的每个层次结构。 您不能在一个维度中针对不同的层次结构使用不同的设置。 例如，如果 [1998] 成员是“[年]”属性的默认成员，则该设置应用于维度中的每个层次结构。 这`DefaultMember`种情况下的设置不能在一个层次结构中为 [1998]，而在另一个层次结构中为 [1997]。  
+ `DefaultMember`特性的设置适用于该属性所参与的每个层次结构。 您不能在一个维度中针对不同的层次结构使用不同的设置。 例如，如果 [1998] 成员是“[年]”属性的默认成员，则该设置应用于维度中的每个层次结构。 `DefaultMember`这种情况下的设置不能在一个层次结构中为 [1998]，而在另一个层次结构中为 [1997]。  
   
  如果您为不自然聚合的层次结构中特定级别定义默认成员，则必须定义在层次结构中位于该级别之上的所有级别的默认成员。 例如，在层次结构的所有国家/地区中，除非定义了国家/地区的默认成员，否则不能为气候定义默认成员。 执行此操作失败会导致查询时错误。  
   

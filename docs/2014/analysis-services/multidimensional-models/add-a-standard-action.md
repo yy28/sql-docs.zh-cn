@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f2a4a4eb3ddbf272968485f37fd3ceb25e973864
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9d8293cd61ef105352e6c6e1aaccb7f44494b2d5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077473"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544859"
 ---
 # <a name="add-a-standard-action"></a>添加标准操作
   您可以通过在多维数据集设计器中使用“操作”视图，向数据库添加操作。 可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]访问该“操作”视图。 在您创建了某一操作后，该操作可在您重新处理相关的多维数据集后供用户使用。 有关详细信息，请参阅 [Processing Analysis Services Objects](processing-analysis-services-objects.md)。  
@@ -47,13 +46,13 @@ ms.locfileid: "66077473"
   
     -   从“类型”下拉列表中，选择要创建的操作的类型。**** 下表列出了可用操作的类型：  
   
-        |类型|说明|  
+        |类型|描述|  
         |----------|-----------------|  
         |数据集|检索数据集。|  
         |专有|使用除此表列出的这些类型以外的其他接口执行操作。|  
         |行集|检索行集。|  
         |语句|运行 OLE DB 命令。|  
-        |代码|在 Internet 浏览器中显示网页。|  
+        |URL|在 Internet 浏览器中显示网页。|  
   
     -   在 **“操作表达式”** 中，创建定义操作的表达式。 表达式的计算结果必须为字符串。 您可以手动键入表达式，或者可以从 **“元数据”** 和 **“函数”** 选项卡中拖动项。  
   
@@ -63,7 +62,7 @@ ms.locfileid: "66077473"
   
         |选项|说明|  
         |------------|-----------------|  
-        |Interactive (交互)|该操作由用户交互触发。|  
+        |交互|该操作由用户交互触发。|  
         |Batch|该操作将作为批处理操作运行。|  
         |处于打开状态|在用户打开多维数据集时该操作运行。|  
   
@@ -72,7 +71,7 @@ ms.locfileid: "66077473"
         > [!NOTE]  
         >  专有操作将不返回到服务器，除非客户端应用程序显式将架构行级限制为仅返回与“应用程序”**** 中指定的名称匹配的操作。  
   
-    -   在 "**操作内容**" 中，如果使用的是 URL 类型，请将 Internet 地址括在引号中，http://www.adventure-works.com例如 ""。  
+    -   在 "**操作内容**" 中，如果使用的是 URL 类型，请将 Internet 地址括在引号中，例如 " http://www.adventure-works.com "。  
   
     -   在 **“说明”** 中，键入操作的说明。  
   

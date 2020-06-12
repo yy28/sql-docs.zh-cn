@@ -1,5 +1,6 @@
 ---
 title: 将 MySQL 数据库映射到 SQL Server 架构（MySQLToSQL） |Microsoft Docs
+description: 了解如何为 MySQL 架构与 SQL Server 或 Azure SQL 数据库之间的 MySQL 映射自定义 SSMA 或接受默认值。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,25 +13,25 @@ helpviewer_keywords:
 ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 215833c96fae02ae7877e00173fb5a920a47ee0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f70cf22db8d4a9c957465ea86f286c41098538c5
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908981"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293704"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>将 MySQL 数据库映射到 SQL Server 架构 (MySQLToSQL)
-默认情况下，SSMA for MySQL 将 MySQL 架构中的所有对象迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到名为的或 SQL Azure 数据库的架构。 不过，你可以自定义 MySQL 架构和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库之间的映射。  
+默认情况下，SSMA for MySQL 将 MySQL 架构中的所有对象迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名为的或 SQL Azure 数据库的架构。 不过，你可以自定义 MySQL 架构和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 数据库之间的映射。  
   
 ## <a name="mysql-and-sql-server-or-sql-azure-schemas"></a>MySQL、SQL Server 或 SQL Azure 架构  
 架构的 MySQL 概念映射到数据库的 SQL Server 概念及其架构之一。 SSMA 是指作为架构的数据库和架构的 SQL Server 组合。  
   
-架构的 MySQL 概念映射到数据库的 SQL Server 概念及其架构之一。 例如，MySQL 可能有一个名为**HR**的架构。 SQL Server 的实例可能有一个名为**HR**的数据库，该数据库中的数据库是架构。 一个架构是**dbo** （或数据库所有者）架构。 默认情况下，MySQL schema **hr**将映射到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库，架构**hr. dbo**。 SSMA 是指作为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]架构的数据库和架构的组合。  
+架构的 MySQL 概念映射到数据库的 SQL Server 概念及其架构之一。 例如，MySQL 可能有一个名为**HR**的架构。 SQL Server 的实例可能有一个名为**HR**的数据库，该数据库中的数据库是架构。 一个架构是**dbo** （或数据库所有者）架构。 默认情况下，MySQL schema **hr**将映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，架构**hr. dbo**。 SSMA 是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为架构的数据库和架构的组合。  
   
-可以修改 MySQL 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure 架构之间的映射。  
+可以修改 MySQL 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Azure 架构之间的映射。  
   
 ## <a name="modifying-the-target-database-and-schema"></a>修改目标数据库和架构  
-在 SSMA 中，可以将 MySQL 架构映射到任何可用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 架构。  
+在 SSMA 中，可以将 MySQL 架构映射到任何可用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 架构。  
   
 **修改数据库和架构**  
   
@@ -40,7 +41,7 @@ ms.locfileid: "67908981"
   
 2.  在右侧窗格中，单击 "**架构映射**" 选项卡。  
   
-    你将看到所有 MySQL 架构的列表，后跟目标值。 此目标以两部分表示法（*数据库*）表示，其中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 将迁移对象和数据的位置。  
+    你将看到所有 MySQL 架构的列表，后跟目标值。 此目标以两部分表示法（*数据库*）表示， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 其中，或 SQL Azure 将迁移对象和数据的位置。  
   
 3.  选择包含要更改的映射的行，然后单击 "**修改**"。  
   
@@ -52,11 +53,11 @@ ms.locfileid: "67908981"
   
 -   映射到 SQL Server  
   
-您可以将源数据库映射到任何目标数据库。 默认情况下，源数据库映射到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 SSMA 连接的目标数据库。 如果要映射的目标数据库在上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不存在，则系统会提示你提供消息 **"目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据中不存在数据库和/或架构。它将在同步过程中创建。是否要继续？ "** 单击“是”。 同样，你可以将架构映射到目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库下将在同步过程中创建的非现有架构。  
+您可以将源数据库映射到任何目标数据库。 默认情况下，源数据库映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 SSMA 连接的目标数据库。 如果要映射的目标数据库在上不 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存在，则系统会提示你提供消息 **"目标元数据中不存在数据库和/或架构 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。它将在同步过程中创建。是否要继续？ "** 单击“是”。 同样，你可以将架构映射到目标数据库下将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 同步过程中创建的非现有架构。  
   
 -   映射到 SQL Azure  
   
-您可以将源数据库映射到连接目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库或连接的目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库中的任何架构。 如果将源架构映射到已连接目标数据库下的任何非现有架构，则系统会提示您输入消息 **"目标元数据中不存在架构"。它将在同步过程中创建。是否要继续？"** 单击" 是 "。  
+您可以将源数据库映射到连接目标数据库 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或连接的目标数据库中的任何架构 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果将源架构映射到已连接目标数据库下的任何非现有架构，则系统会提示您输入消息 **"目标元数据中不存在架构"。它将在同步过程中创建。是否要继续？"** 单击" 是 "。  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>恢复到默认数据库和架构  
 如果自定义 MySQL 架构与 SQL Server 架构之间的映射，则可以将映射恢复为默认值。  

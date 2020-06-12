@@ -1,5 +1,6 @@
 ---
 title: 安装 SSMA for MySQL Client （MySQLToSQL） |Microsoft Docs
+description: 了解适用于 MySQL 客户端的 SQL Server 迁移助手（SSMA）的安装先决条件，以及如何安装。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,25 +12,25 @@ helpviewer_keywords:
 ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 9dcdeaff1c4782453a9fd57cc709e17ad3200d28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf1a3c8c5a01bb2553f773d5b650805667c116a3
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68086817"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293894"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>安装 SSMA for MySQL 客户端 (MySQLToSQL)
 SSMA for MySQL 客户端包含执行以下任务的程序文件：  
   
 -   连接到 MySQL 数据库。  
   
--   连接到实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。  
+-   连接到实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure。  
   
--   将 MySQL 数据库对象转换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 对象。  
+-   将 MySQL 数据库对象转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure 对象。  
   
--   将对象加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。  
+-   将对象加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure。  
   
--   将数据迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到或 SQL Azure。  
+-   将数据迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Azure。  
   
 本主题提供安装 SSMA for MySQL 客户端的安装先决条件和说明。  
   
@@ -42,7 +43,7 @@ SSMA for MySQL 旨在与 MySQL 4.1 或更高版本以及所有版本的 SQL Serv
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 或更高版本。  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)]版本4.0 或更高[!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)]版本。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)]版本4.0 在 SQL Server 产品媒体上提供。 你还可以从[.NET Framework 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=48882)获取它。  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 版本4.0 或更高版本。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)]版本4.0 在 SQL Server 产品媒体上提供。 你还可以从[.NET Framework 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=48882)获取它。  
   
 -   MySQL ODBC 5.1 驱动程序和与要迁移的 MySQL 数据库的连接。 你可以从 MySQL 网站安装 MySQL。 有关连接的详细信息，请参阅[连接到 MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
@@ -59,7 +60,7 @@ SSMA 是一款可以从 Web 下载的工具。 若要下载最新版本，请参
   
 **安装 SSMA 客户端**  
   
-1.  双击 "SSMA for MySQL *n*"。Setup.exe，其中*n*是生成号。  
+1.  双击 "SSMA for MySQL *n*.Install.exe"，其中*n*是生成号。  
   
 2.  在欢迎页上，单击 "**下一步**"。  
   

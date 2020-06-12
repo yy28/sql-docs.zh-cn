@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 003ada6a-0bcd-4f16-8c34-1a9ffc75cd2c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dd0e6b696e692a9e88edd234d22f41983acbe961
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4be2f343f0fb7969f76b63ec1eb1677c1c9e589f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084826"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522851"
 ---
 # <a name="data-mining-tools"></a>数据挖掘工具
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供了以下工具，可用于创建数据挖掘[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]解决方案：  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了以下工具，可用于创建数据挖掘解决方案：  
   
 -   利用 **中的** 数据挖掘向导 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ，可以使用关系数据源或多维数据集中的多维数据来轻松创建挖掘结构和挖掘模型。  
   

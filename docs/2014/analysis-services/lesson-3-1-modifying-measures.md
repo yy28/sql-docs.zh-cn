@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7bd48810-15ce-45ff-862b-372d08606995
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 663ef21dc9c4d0f3698ae468637fe0a8fd55a16e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ce255a2dfe9e959ed0d68da62266e3a8acc353e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078903"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543429"
 ---
 # <a name="modifying-measures"></a>修改度量值
   可以使用“FormatString”**** 属性定义控制如何向用户显示度量值的格式设置。 在此任务中，您将为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集中的货币和百分比度量值指定格式设置属性。  
@@ -56,13 +55,13 @@ ms.locfileid: "66078903"
   
 7.  在“属性”窗口顶部（标题栏正下方）的下拉列表中，选择“Unit Price Discount Pct”**** 度量值，然后在“FormatString”**** 列表中选择“Percent”****。  
   
-8.  在属性窗口中，将 "**单价折扣 Pct** " 度量值的 "**名称**" `Unit Price Discount Percentage`属性更改为。  
+8.  在属性窗口中，将 "**单价折扣 Pct** " 度量值的 "**名称**" 属性更改为 `Unit Price Discount Percentage` 。  
   
-9. 在 "**度量值**" 窗格中，单击 "**税金 Amt** "，然后将`Tax Amount`此度量值的名称更改为。  
+9. 在 "**度量值**" 窗格中，单击 "**税金 Amt** "，然后将此度量值的名称更改为 `Tax Amount` 。  
   
 10. 在“属性”窗口中，单击“自动隐藏”**** 图标隐藏“属性”窗口，然后在“多维数据集结构”**** 选项卡的工具栏上单击“显示度量值树”****。  
   
-11. 在“文件” **** 菜单上，单击“全部保存” ****。  
+11. 在“文件”菜单上，单击“全部保存” 。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [修改“客户”维度](lesson-3-2-modifying-the-customer-dimension.md)  

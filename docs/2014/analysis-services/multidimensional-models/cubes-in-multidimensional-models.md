@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e0f7acf3-4b07-41fc-a5fc-ac30b4a56c54
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c7ce00bc87ca17c97996023d7cb9a4745b9882f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab1051981ddcac948a447e814c278fab4fb61496
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076107"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547197"
 ---
 # <a name="cubes-in-multidimensional-models"></a>多维模型中的多维数据集
   多维数据集是包含用于分析的信息的多维结构；多维数据集主要由维度和度量值构成。 维度定义您用来对其执行切片操作的多维数据集的结构，而度量值提供最终用户感兴趣的聚合数值。 作为逻辑结构，多维数据集允许客户端应用程序检索度量值的值，就像它们包含在多维数据集的单元中一样；将为每个可能的摘要值都定义单元。 多维数据集中的单元通过维度成员的交集定义，并且包含该特定交集处的度量值的聚合值。  
@@ -40,7 +39,7 @@ ms.locfileid: "66076107"
 |层次结构|[创建用户定义层次结构](user-defined-hierarchies-create.md)|  
 |操作|[多维模型中的操作](actions-in-multidimensional-models.md)|  
 |关键绩效指标 (KPI)|[多维模型中的关键绩效指标 (KPI)](key-performance-indicators-kpis-in-multidimensional-models.md)|  
-|“新建命名集”|[多维模型中的计算](calculations-in-multidimensional-models.md)|  
+|计算|[多维模型中的计算](calculations-in-multidimensional-models.md)|  
 |翻译|[多维模型中的翻译](translations-in-multidimensional-models-analysis-services.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  

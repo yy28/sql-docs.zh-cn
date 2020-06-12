@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: cdeecd50-1d91-4162-a4a2-01c7799b02a8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a0af68d7aa25d00f257399ade415e0287dd275fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c0348a23a6def4c3cdbd083354083947ce1390b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62732183"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528658"
 ---
 # <a name="analysis-services-ole-db-provider-analysis-services---multidimensional-data"></a>Analysis Services OLE DB 访问接口（Analysis Services - 多维数据）
-  Analysis Services OLE DB Provider 是与[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]交互的应用程序的接口。 它用于生成与多维数据进行交互的客户端应用程序。 此访问接口还提供对多维数据和关系数据进行联机或脱机数据挖掘分析的方法，且为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的一部分。 它可由第三方客户端应用程序进行再分发。  
+  Analysis Services OLE DB Provider 是与交互的应用程序的接口 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。 它用于生成与多维数据进行交互的客户端应用程序。 此访问接口还提供对多维数据和关系数据进行联机或脱机数据挖掘分析的方法，且为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的一部分。 它可由第三方客户端应用程序进行再分发。  
   
  Analysis Services OLE DB 访问接口是用于与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 进行交互以完成以下任务的主要方法：连接到多维数据集或数据挖掘模型、查询多维数据集或数据挖掘模型，以及检索架构信息。  
   

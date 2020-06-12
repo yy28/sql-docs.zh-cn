@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 213b0035-e96d-4ba0-83f2-ded206905603
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98d363ab09e75905b13503687fe425a981c790e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91296f8c5d47afb15c67f0b60435c7f961734573
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074149"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546299"
 ---
 # <a name="building-named-sets-in-mdx-mdx"></a>在 MDX 中生成命名集 (MDX)
   集表达式可能是较长且非常复杂的声明，因此很难理解。 或者，可能非常频繁地使用集表达式，以致于重复定义集成为一种负担。 为了使长而复杂的表达式或常用的表达式更易于使用，多维表达式 (MDX) 允许使用“命名集”表达式**。  

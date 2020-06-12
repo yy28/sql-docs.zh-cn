@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 35b629ae-b1ef-44b1-b556-96956aeb56e7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5025d76d439933f7392d55661ca52d3f33992db8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c39d03d60cb66f3b2e26b2e660bd85f4e5e9d4ec
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073769"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546129"
 ---
 # <a name="tuples"></a>元组
   一个元组唯一标识多维数据集中数据的一个切片。 只要没有两个或多个成员属于相同的层次结构，元组就由维度成员的组合构成。  

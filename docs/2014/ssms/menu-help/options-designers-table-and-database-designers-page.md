@@ -12,17 +12,17 @@ ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e0157b94227a36db7f1f961ab0b0a69518a8163b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2cabbd38f05ffd45976eac6d18c8ea5f6615816
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63283659"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859819"
 ---
 # <a name="options-designers-table-and-database-designers-page"></a>选项（设计器-"表和数据库设计器" 页）
   使用此页可确定设计器的默认行为。 若要访问这些设置，请在“工具”  菜单上，单击“选项  ”，展开“设计器”  文件夹，再单击“表设计器”  。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **为表设计器更新重写连接字符串的超时值**  
  允许为表设计器的操作设置新的超时值。 这在表设计器影响大型表，需要更多的时间完成表修改时非常有用。  
   

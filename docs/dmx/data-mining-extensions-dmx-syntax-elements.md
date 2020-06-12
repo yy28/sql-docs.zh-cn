@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 17d24c6924b03e4ed0415e73bfefc0d372ca45bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7cfd0e6846fc377cda6fe9655fa3770748748e2c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070851"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669800"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>数据挖掘扩展插件 (DMX) 语法元素
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  在[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中，您可以使用各种语法元素来定义可用于生成、管理和使用数据挖掘模型的数据挖掘扩展插件（DMX）语句。 下面各部分对这些语法元素进行了说明。  
+  在中 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，您可以使用各种语法元素来定义可用于生成、管理和使用数据挖掘模型的数据挖掘扩展插件（DMX）语句。 下面各部分对这些语法元素进行了说明。  
   
 ## <a name="in-this-section"></a>本节内容  
  [&#40;DMX&#41;的标识符](../dmx/identifiers-dmx.md)  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fd3cf312-57a1-44b6-b772-fce6fc1c26d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 917e41f6053aa499c7d3d7ca51a32b033591bdc1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02d4b7309d7b5ea3d6295089f0fb2e778b1c9b4b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084300"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522324"
 ---
 # <a name="linear-regression-model-query-examples"></a>线性回归模型查询示例
   在创建针对数据挖掘模型的查询时，您既可以创建内容查询，也可以创建预测查询。内容查询提供有关分析过程中发现的模式的详细信息，而预测查询则使用模型中的模式对新数据进行预测。 例如，内容查询可能会提供有关回归公式的更多详细信息，而预测查询则可能会告诉您新数据点是否适合模型。 您还可以使用查询来检索有关模型的元数据。  
@@ -146,7 +145,7 @@ FROM LR_PredictIncome.CONTENT
  [返回页首](#bkmk_top)  
   
 ###  <a name="sample-query-4-predicting-income-using-a-singleton-query"></a><a name="bkmk_Query4"></a> 示例查询 4：使用单独查询预测收入  
- 创建针对回归模型的单个查询的最简便方法是使用 **“单独查询输入”** 对话框。 例如，您可以通过选择相应的回归模型，选择 "**单独查询**"，然后键入`20`作为**Age**值，来生成以下 DMX 查询。  
+ 创建针对回归模型的单个查询的最简便方法是使用 **“单独查询输入”** 对话框。 例如，您可以通过选择相应的回归模型，选择 "**单独查询**"，然后键入 `20` 作为**Age**值，来生成以下 DMX 查询。  
   
 ```  
 SELECT [LR_PredictIncome].[Yearly Income]  

@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 151b899b-c27a-4a09-bcf5-5c9f0ec24168
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b7f41394c2adb8cbaaee2011e52ba6155a24e2e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd144d3adba59fd179ab756f95223ea5e0e2968c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082693"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520224"
 ---
 # <a name="view-or-change-algorithm-parameters"></a>查看或更改算法参数
   可以更改随用于生成数据挖掘模型的算法一起提供的参数，以自定义模型的结果。  
   
- 更改中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供的算法参数不仅仅是模型的属性，它们可用于从根本上更改处理、分组和显示数据的方式。 例如，您可以使用算法参数执行下列操作：  
+ 更改中提供的算法参数不仅仅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 是模型的属性，它们可用于从根本上更改处理、分组和显示数据的方式。 例如，您可以使用算法参数执行下列操作：  
   
 -   更改分析方法，如聚类分析方法。  
   
@@ -47,7 +46,7 @@ ms.locfileid: "66082693"
   
      如果未在 **“值”** 列中输入值， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将使用默认参数值。 **“范围”** 列说明了您可以输入的可能值。  
   
-3.  单击" **确定**"。  
+3.  单击“确定”。  
   
      此时，算法参数被设置为新值。 重新处理挖掘模型后，参数更改才反映在该模型中。  
   

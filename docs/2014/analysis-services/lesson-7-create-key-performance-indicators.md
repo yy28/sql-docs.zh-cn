@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a6c8ac2b-64ba-456f-b418-7bf0afe145d1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d9d3145583670fb849321bac5b57928caacfbc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 123393c061d151240949f41e59e5d14b19056c52
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078371"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542316"
 ---
 # <a name="lesson-8-create-key-performance-indicators"></a>第 8 课：创建关键绩效指标
   在本课中，您将创建关键绩效指标 (KPI)。 KPI 用来衡量由基度量值定义的某个值的绩效（与同样由度量值或绝对值定义的目标值进行对比）。**** 在报告客户端应用程序中，KPI 可以为业务专业人员提供一种快速简单的方法来了解业务成功摘要情况或查明趋势。 若要了解详细信息，请参阅 [KPI（SSAS 表格）](tabular-models/kpis-ssas-tabular.md)。  
@@ -47,9 +46,9 @@ ms.locfileid: "66078371"
   
 5.  在“关键绩效指标”**** 对话框的“定义目标值”**** 中，选择“绝对值”**** 选项。  
   
-6.  在 "**绝对值**" 字段中， `1.1`键入，然后按 enter。  
+6.  在 "**绝对值**" 字段中，键入 `1.1` ，然后按 enter。  
   
-7.  在 "**定义状态阈值**" 中，在左侧（低）滑块字段`1`中键入，然后在右侧（高）滑块字段中， `1.07`键入。  
+7.  在 "**定义状态阈值**" 中，在左侧（低）滑块字段中键入 `1` ，然后在右侧（高）滑块字段中，键入 `1.07` 。  
   
 8.  在“选择图标样式”中，选择菱形（红色）、三角形（黄色）、圆形（绿色）图标类型。****  
   
@@ -74,13 +73,13 @@ ms.locfileid: "66078371"
   
 4.  在“关键绩效指标”**** 对话框的“定义目标值”**** 中，选择“绝对值”**** 选项。  
   
-5.  在 "**绝对值**" 字段中， `1.25`键入。  
+5.  在 "**绝对值**" 字段中，键入 `1.25` 。  
   
 6.  在“定义状态阈值”**** 中，滑动左侧（低）滑块字段，直到此字段显示 **0.8**，然后滑动右侧（高）滑块字段，直到此字段显示 **1.03**。  
   
 7.  在“选择图标样式”中，选择菱形（红色）、三角形（黄色）、圆形（绿色）图标类型，并单击“确定”。********  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
  若要继续学习本教程，请转到下一课： [第 9 课：创建透视](lesson-8-create-perspectives.md)。  
   
   

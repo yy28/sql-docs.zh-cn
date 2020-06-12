@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 65688b553aab7bf35313a45e9c945f6d3031d127
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 268203d044734bb4e6a1d2acf6311ee7ef828a53
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074207"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546359"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>内部成员属性 (MDX)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 公开您可以包含在查询中的维度成员的内部属性，以返回要在自定义应用程序中使用的额外数据或元数据，或帮助进行模型调查或构建。 如果您正在使用 SQL Server 客户端工具，可以在 SQL Server Management Studio (SSMS) 中查看内部属性。  
@@ -29,12 +28,12 @@ ms.locfileid: "66074207"
  有关如何使用和查看维度成员属性的说明，请参阅 [在 SSMS 的“MDX 查询”窗口中查看 SSAS 成员属性](https://go.microsoft.com/fwlink/?LinkId=317362)。  
   
 > [!NOTE]  
->  如果提供程序符合 2.6 1999 年3月 OLE DB 规范的 OLAP 部分， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]则支持本主题中列出的内部成员属性。  
+>  如果提供程序符合 2.6 1999 年3月 OLE DB 规范的 OLAP 部分，则 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持本主题中列出的内部成员属性。  
 >   
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 以外的提供程序可能支持其他内部成员属性。 有关其他访问接口支持的内部成员属性的详细信息，请参阅这些访问接口附带的文档。  
   
 ## <a name="types-of-member-properties"></a>成员属性的类型  
- 支持[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的内部成员属性有两种类型：  
+ 支持的内部成员属性 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 有两种类型：  
   
  上下文相关的成员属性  
  这些成员属性必须在特定层次结构或级别的上下文中使用，用于为指定维度或级别的每个成员提供值。  
@@ -54,7 +53,7 @@ ms.locfileid: "66074207"
   
 -   使用 `PROPERTIES` 关键字查询属性。  
   
- 以下各节介绍中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]提供的各种上下文相关和非上下文相关内部成员属性，以及如何将`PROPERTIES`关键字用于每种类型的属性。  
+ 以下各节介绍中提供的各种上下文相关和非上下文相关内部成员属性 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ，以及如何将关键字用于每种 `PROPERTIES` 类型的属性。  
   
 ## <a name="context-sensitive-member-properties"></a>上下文相关的成员属性  
  所有维度成员和级别成员都支持一列上下文相关的内部成员属性。 下表列出了这些上下文相关的属性。  
@@ -84,10 +83,10 @@ ms.locfileid: "66074207"
 ## <a name="non-context-sensitive-member-properties"></a>非上下文相关的成员属性  
  所有成员都支持一列内部成员属性，这些属性不因上下文而改变。 这些属性提供了一些附加信息，可供应用程序用来改善用户的体验。  
   
- 下表列出了支持[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的非上下文相关的内部属性。  
+ 下表列出了支持的非上下文相关的内部属性 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。  
   
 > [!NOTE]  
->  MEMBERS 架构行集中的列支持下表中列出的内部成员属性。 有关`MEMBERS`架构行集的详细信息，请参阅[MDSCHEMA_MEMBERS 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)。  
+>  MEMBERS 架构行集中的列支持下表中列出的内部成员属性。 有关 `MEMBERS` 架构行集的详细信息，请参阅[MDSCHEMA_MEMBERS 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)。  
   
 |属性|说明|  
 |--------------|-----------------|  
@@ -101,7 +100,7 @@ ms.locfileid: "66074207"
 |`IS_DATAMEMBER`|一个指示成员是否为数据成员的布尔值。|  
 |`IS_PLACEHOLDERMEMBER`|用来指明成员是否为占位符的布尔值。|  
 |`KEYx`|成员键，其中 x 是成员键的序号，起始值为零。 KEY0 可用于组合键和非组合键。<br /><br /> 如果键不是组合键，则 KEY0 与 `Key` 等效。<br /><br /> 对于组合键，KEY0、KEY1、KEY2 等共同构成了组合键。 您可以在查询中独立引用它们以返回组合键的该部分。 例如，指定 KEY0 返回组合键的第一部分，指定 KEY1 返回组合键的下一部分等等。<br /><br /> 请注意，`KEYx` 可以在上下文中使用，也可以不带上下文使用。 因此，它显示在两个列表中。<br /><br /> 有关如何使用此成员属性的示例，请参阅 [简单的 MDX 小组件：Key0、Key1、Key2](https://go.microsoft.com/fwlink/?LinkId=317364)。|  
-|`LCID` x |区域设置 ID 十六进制值中的成员标题的翻译，其中 *x* 是区域设置 ID 十进制值（例如，LCID1009 表示加拿大英语）。 这仅适用于翻译具有绑定到数据源的标题列的情况。|  
+|`LCID` *x*|区域设置 ID 十六进制值中的成员标题的翻译，其中 *x* 是区域设置 ID 十进制值（例如，LCID1009 表示加拿大英语）。 这仅适用于翻译具有绑定到数据源的标题列的情况。|  
 |`LEVEL_NUMBER`|成员距层次结构的根的距离。 根级别为零。|  
 |`LEVEL_UNIQUE_NAME`|成员所属的级别的唯一名称。 对于通过限定生成唯一名称的访问接口，此名称的各组成部分之间用分隔符分隔。|  
 |`MEMBER_CAPTION`|与成员相关的标签或标题。 标题主要用于显示目的。 如果不存在标题，查询将返回 `MEMBER_NAME`。|  
@@ -128,7 +127,7 @@ ms.locfileid: "66074207"
   
  `DIMENSION PROPERTIES DESCRIPTION`  
   
- 此语句返回轴维度中各个成员的说明。 如果尝试使用维度或级别限定属性，如*维度*`.DESCRIPTION`或*级别*`.DESCRIPTION`，则不会验证语句。  
+ 此语句返回轴维度中各个成员的说明。 如果尝试使用维度或级别限定属性，如*维度* `.DESCRIPTION` 或*级别* `.DESCRIPTION` ，则不会验证语句。  
   
 ### <a name="example"></a>示例  
  以下示例显示返回内部属性的 MDX 查询。  

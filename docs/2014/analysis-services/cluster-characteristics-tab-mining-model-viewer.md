@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8e33ed1d-1ce4-405d-895b-7e995b2c910d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c0b4a798f9a395741ae831d3b22fc06a71f55607
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f753564c3be308f986a48e8a40203b7d338292f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087992"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527463"
 ---
 # <a name="cluster-characteristics-tab-mining-model-viewer"></a>“分类特征”选项卡（挖掘模型查看器）
   利用 **“分类特征”** 选项卡，可以浏览聚类分析模型中分类的特征或该模型中所有事例的集。 图形会将每个属性-值对的重要性显示为定义分类的特征（与其他分类相比）。  
@@ -37,10 +36,10 @@ ms.locfileid: "66087992"
  **聚集**  
  选择要查看的分类，或选择“总体(全部)”以查看模型的属性的整体分布情况。****  
   
- **群集>\<的特征**  
+ **特性\<cluster>**  
  图形包含以下列，这些列对所选分类的特征进行了说明。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**变量**|列出在所选分类中找到的挖掘模型中的属性。|  
 |**值**|列出在当前所选分类中找到的当前属性的值。|  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1018bb2e-b89b-489e-aead-450dec5dca3b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fb8ade48f56a6b8bec4a8de5094a271080a1eab7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42d48d088b72c28c6e44b6f96aab1e1493e47577
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175764"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536049"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>在多维模型中创建度量值和度量值组
   *度量值* 是数字数据值的聚合，如求和、计数、最小值、最大值、平均值或你创建的自定义 MDX 表达式。 *度量值组* 是一个或多个度量值的容器。 所有度量值存在于一个度量值组中，即使只有一个度量值。 一个多维数据集必须至少有一个度量值和度量值组。
@@ -49,7 +48,7 @@ ms.locfileid: "78175764"
 
 |||
 |-|-|
-|**源程序**|大多数度量值都来自外部数据仓库的事实数据表中的数值列（比如 AdventureWorks 数据仓库中“Internet 销售”和“分销商销售”表中的“销售额”列），但是你也可以完全根据你定义的计算来创建新度量值。<br /><br /> 维度表中的属性列可以用于定义度量值，但是这些度量值通常在聚合行为方面具有半累加性或非累加性。 有关半累加性行为的详细信息，请参阅 [定义半累加性行为](define-semiadditive-behavior.md)。|
+|**source**|大多数度量值都来自外部数据仓库的事实数据表中的数值列（比如 AdventureWorks 数据仓库中“Internet 销售”和“分销商销售”表中的“销售额”列），但是你也可以完全根据你定义的计算来创建新度量值。<br /><br /> 维度表中的属性列可以用于定义度量值，但是这些度量值通常在聚合行为方面具有半累加性或非累加性。 有关半累加性行为的详细信息，请参阅 [定义半累加性行为](define-semiadditive-behavior.md)。|
 |**聚合**|默认情况下，度量值按每个维度进行求和。 但是，通过 `AggregateFunction` 属性，您可以修改此行为。 有关列表，请参阅 [Use Aggregate Functions](use-aggregate-functions.md) 。|
 |**属性**|有关附加属性说明，请参阅 [Configure Measure Properties](configure-measure-properties.md) 。|
 

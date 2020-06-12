@@ -4,25 +4,25 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0e1bd5fa1ba4d4ff8b97436ac6e44b901f578187
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8a5c057197e0603c800f2ca5538652ab06609db8
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68074842"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670280"
 ---
 # <a name="expressions-dmx"></a>表达式 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  在数据挖掘扩展插件（DMX）中，表达式是标识符、值和运算符的组合，可以[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]计算该值以获得结果。  
+  在数据挖掘扩展插件（DMX）中，表达式是标识符、值和运算符的组合， [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可以计算该值以获得结果。  
   
  DMX 表达式可能很简单，也可能很复杂。 简单表达式可以是下列几种形式之一：  
   
- Constant  
+ 返回的常量  
  常量是表示单个特定值的符号。 常量可以是字符串、数值或日期值。 必须使用单引号 (') 来分隔字符串和日期常量。  
   
  标量函数  

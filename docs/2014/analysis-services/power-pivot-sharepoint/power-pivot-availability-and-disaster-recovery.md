@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bf560d489a1631e31f470134d497d3d897f6f35e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c98b677aab756d4fd2b35c6751e925c463665441
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175676"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540429"
 ---
 # <a name="powerpivot-availability-and-disaster-recovery-sql-server-2014"></a>PowerPivot 可用性和灾难恢复 (SQL Server 2014)
-  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 的可用性和灾难恢复计划主要依赖于 SharePoint 场的设计、不同的组件可接受的停机时间量以及针对 SharePoint 可用性实现的工具和最佳实践。 本主题概述了技术，并包括在规划[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]部署的可用性和灾难恢复时要考虑的示例拓扑关系图。
+  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 的可用性和灾难恢复计划主要依赖于 SharePoint 场的设计、不同的组件可接受的停机时间量以及针对 SharePoint 可用性实现的工具和最佳实践。 本主题概述了技术，并包括在规划部署的可用性和灾难恢复时要考虑的示例拓扑关系图 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 。
 
 ||
 |-|
@@ -43,11 +42,11 @@ ms.locfileid: "78175676"
 
 -   **(1)** Web 前端服务器。 使用 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 外接程序在每台服务器上安装数据提供程序。 有关详细信息，请参阅[在 SharePoint 2013&#41;中安装或卸载 PowerPivot for SharePoint 外接程序 &#40;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。
 
--   **（2）** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]共享服务**在每台**应用程序服务器上运行，并允许服务应用程序**跨**应用程序服务器运行。 因此，如果单一应用程序服务器处于脱机状态，则 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 应用程序仍将可用。
+-   **（2）** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 共享服务**在每台**应用程序服务器上运行，并允许服务应用程序**跨**应用程序服务器运行。 因此，如果单一应用程序服务器处于脱机状态，则 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 应用程序仍将可用。
 
 -   **(3)** Excel Calculation Services 在每台应用程序服务器上运行，并允许服务应用程序跨多台应用程序服务器运行。 因此，如果单一应用程序服务器处于脱机状态改，则 Excel Calculation Services 仍将可用。
 
--   **（4）** 和 **（6）** sharepoint 模式[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]下的实例在 sharepoint 场外部的服务器上运行，这包括 Windows 服务**SQL Server Analysis Services （POWERPIVOT）**。 所有这些实例都注册到 Excel Services 中 **(3)**。 Excel Services 管理向 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服务器请求的负载平衡。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 体系结构使您能够拥有多台 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服务器，以便能根据需要轻松添加多个实例。 有关详细信息，请参阅 [管理 Excel Services 数据模型设置 (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780\(v=office.15\).aspx)。
+-   **（4）** 和 **（6）** [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sharepoint 模式下的实例在 sharepoint 场外部的服务器上运行，这包括 Windows 服务**SQL Server Analysis Services （POWERPIVOT）**。 所有这些实例都注册到 Excel Services 中 **(3)**。 Excel Services 管理向 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服务器请求的负载平衡。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 体系结构使您能够拥有多台 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服务器，以便能根据需要轻松添加多个实例。 有关详细信息，请参阅 [管理 Excel Services 数据模型设置 (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780\(v=office.15\).aspx)。
 
 -   **(5)** 用于内容、配置和应用程序数据库的 SQL Server 数据库。 这包括 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务应用程序数据库。 您的 DR 计划应包括数据库层。 在此设计中，数据库在 **(4)** 某个 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 实例所在的服务器上运行。 **(4)** 和 **(5)** 还可以位于不同的服务器上。
 
@@ -62,7 +61,7 @@ ms.locfileid: "78175676"
 
 -   **(1)** Web 前端服务器。 在每台服务器上安装数据访问接口。 有关详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)。
 
--   **（2）** 两个[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]共享服务和 **（4）** 在 SharePoint 应用程序服务器上安装了 Windows Service **SQL Server Analysis Services （POWERPIVOT）** 。
+-   **（2）** 两个 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 共享服务和 **（4）** 在 SharePoint 应用程序服务器上安装了 Windows Service **SQL Server Analysis Services （POWERPIVOT）** 。
 
      [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系统服务 **** 在每台应用程序服务器上运行，并允许服务应用程序跨多台 **** 应用程序服务器运行。 如果单一应用程序服务器处于脱机状态，则 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服务应用程序仍将可用。
 
@@ -77,7 +76,7 @@ ms.locfileid: "78175676"
 ##  <a name="powerpivot-service-application-database-and-sql-server-availability-and-recovery-technologies"></a><a name="bkmk_sql_server_technologies"></a>PowerPivot 服务应用程序数据库和 SQL Server 可用性和恢复技术
  包括 SharePoint 高可用性规划中的 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服务应用程序数据库。 此数据库的默认名称是 `DefaultPowerPivotServiceApplicationDB-<GUID>`。 下面总结了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可用性技术以及与 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 数据库结合使用时的一些建议。 有关详细信息，请参阅 [SharePoint 数据库支持的高可用性和灾难恢复选项 (SharePoint 2013)](https://technet.microsoft.com/library/jj841106.aspx)。
 
-||说明|
+||注释|
 |-|--------------|
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 和 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 同步镜像以实现可用性。|支持，但不建议这样做。 建议使用同步提交模式下的 AlwaysOn。|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)]在同步提交模式下|支持，建议这样做。|
@@ -91,7 +90,7 @@ ms.locfileid: "78175676"
  有关如何使用 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]计划冷备用方案的详细信息，请参阅 [PowerPivot 灾难恢复](https://social.technet.microsoft.com/wiki/contents/articles/22137.sharepoint-powerpivot-disaster-recovery.aspx)。
 
 ## <a name="verification"></a>验证
- 有关帮助您在灾难恢复周期前后验证[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]部署的指导和脚本，请参阅[清单：使用 PowerShell 验证 PowerPivot for SharePoint](../instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)。
+ 有关帮助您在 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 灾难恢复周期前后验证部署的指导和脚本，请参阅[清单：使用 PowerShell 验证 PowerPivot for SharePoint](../instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)。
 
 ##  <a name="links-to-more-information"></a><a name="bkmk_more_resources"></a>指向详细信息的链接
 

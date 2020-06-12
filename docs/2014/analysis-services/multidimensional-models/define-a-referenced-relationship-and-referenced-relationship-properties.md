@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5bb44b41-635b-4398-8fe9-0bfbb142553e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 00305d00bb3a11cc4237e005a057c70d4c5f3397
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a84cf2ed95ab3660c5a6b3c039dc58351dc43264
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075754"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547061"
 ---
 # <a name="define-a-referenced-relationship-and-referenced-relationship-properties"></a>定义引用的关系和引用的关系属性
   引用维度关系是在多维数据集设计器的 **“维度用法”** 选项卡中定义的。 可通过指定下列各项来定义引用维度关系：  

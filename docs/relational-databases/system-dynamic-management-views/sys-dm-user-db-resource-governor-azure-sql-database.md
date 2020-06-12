@@ -3,9 +3,9 @@ title: sys. dm_user_db_resource_governance （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2019
 ms.prod: sql
-ms.technology: system-objects
 ms.prod_service: sql-database
 ms.reviewer: ''
+ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governance
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: aa7c7e7a7c510f797377c3cbbceb7c2751418da3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f853f1778a62b345accff745aade5fb5608322fd
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165917"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627401"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys. dm_user_db_resource_governance （Transact-sql）
 
@@ -38,7 +38,7 @@ ms.locfileid: "74165917"
 |**database_id**|int|数据库的 ID，在 Azure SQL 数据库服务器中是唯一的。|
 |**logical_database_guid**|uniqueidentifier|用户数据库的逻辑 GUID，用于保持用户数据库的使用。  重命名数据库或更改其服务级别目标将不会更改此值。|
 |**physical_database_guid**|uniqueidentifier|用户数据库的物理 GUID，该 GUID 贯穿用户数据库的物理实例。 更改数据库服务级别目标将导致此值更改。|
-|server_name |nvarchar|逻辑服务器名称。|
+|server_name|nvarchar|逻辑服务器名称。|
 |**database_name**|nvarchar|逻辑数据库名称。|
 |**slo_name**|nvarchar|服务级别目标，包括硬件生成。|
 |**dtu_limit**|int|数据库的 DTU 限制（对于 vCore 为 NULL）。|
@@ -61,7 +61,7 @@ ms.locfileid: "74165917"
 |**initial_db_file_size_in_mb**|bigint|新数据文件的默认大小，以 MB 为单位。 请参阅[database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)。|
 |**log_size_in_mb**|bigint|新日志文件的默认大小，以 MB 为单位。 请参阅[database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)。|
 |**instance_cap_cpu**|int|仅限内部使用。|
-|**instance_max_log_rate**|bigint|SQL Server 实例的日志生成速率限制（以字节/秒为单位）。 适用于由实例生成的所有日志，包括`tempdb`和其他系统数据库。 在弹性池中，适用于池中所有数据库生成的日志。|
+|**instance_max_log_rate**|bigint|SQL Server 实例的日志生成速率限制（以字节/秒为单位）。 适用于由实例生成的所有日志，包括 `tempdb` 和其他系统数据库。 在弹性池中，适用于池中所有数据库生成的日志。|
 |**instance_max_worker_threads**|int|SQL Server 实例的工作线程限制。|
 |**replica_type**|int|副本类型，其中0是主要副本，1为辅助副本。|
 |**max_transaction_size**|bigint|任何事务使用的最大日志空间，以 KB 为单位。|
@@ -94,7 +94,7 @@ ms.locfileid: "74165917"
 
 此视图需要拥有 VIEW DATABASE STATE 权限。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 有关 Azure SQL 数据库中资源调控的说明，请参阅[SQL 数据库资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server)。
 

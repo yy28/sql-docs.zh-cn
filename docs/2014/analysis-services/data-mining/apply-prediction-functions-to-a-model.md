@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41c7c447af3eb7e0f40c10b98be827caa59867e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fde9de00adaa1712a9db6e18aabc6a83dd660efb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086142"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525313"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>将预测函数应用于模型
   若要创建预测查询，必须先选择查询基于的挖掘模型。 可以选择当前项目中存在的任何挖掘模型。  
@@ -67,7 +66,7 @@ ms.locfileid: "66086142"
   
     |||  
     |-|-|  
-    |**\<模型名称>**|选择此选项将在输出中包含挖掘模型的值。 只能添加可预测的列。<br /><br /> 从模型添加列时，返回的结果是该列中值的重复列表。<br /><br /> 使用此选项添加的列将包含在生成的 DMX 语句的 SELECT 部分。|  
+    |**\<model name>**|选择此选项将在输出中包含挖掘模型的值。 只能添加可预测的列。<br /><br /> 从模型添加列时，返回的结果是该列中值的重复列表。<br /><br /> 使用此选项添加的列将包含在生成的 DMX 语句的 SELECT 部分。|  
     |**Prediction Function**|选择此选项将浏览预测函数的列表。<br /><br /> 您选择的值或函数将添加到生成的 DMX 语句的 SELECT 部分。<br /><br /> 已选择的模型的类型不会筛选或约束预测函数的列表。 因此，如果对当前模型类型是否支持该函数有任何疑问，则可以只将函数添加到列表并查看是否出错。<br /><br /> 前置有 $ 的列表项（如 $AdjustedProbability）表示您使用函数 `PredictHistogram` 时输出的嵌套表中的列。 这些是可用于返回单个列而不返回嵌套表的快捷方式。|  
     |**自定义表达式**|选择此选项将键入自定义表达式然后向输出分配别名。<br /><br /> 自定义表达式将添加到生成的 DMX 预测查询的 SELECT 部分。<br /><br /> 如果要为每行的输出添加文本、调用 VB 函数或调用自定义存储过程，则此选项会很有用。<br /><br /> 有关使用 DMX 中的 VBA 和 Excel 函数的信息，请参阅 [MDX 和 DAX 中的 VBA 函数](/sql/mdx/vba-functions-in-mdx-and-dax)。|  
   
@@ -92,9 +91,9 @@ ms.locfileid: "66086142"
   
 5.  在查询网格中，为“源”**** 选择 TM_Clustering 挖掘模型并添加列 [Bike Buyer]。  
   
-6.  对于 "**源**"，选择 "**预测函数**" 并添加`Cluster`函数。  
+6.  对于 "**源**"，选择 "**预测函数**" 并添加函数 `Cluster` 。  
   
-7.  对于 "**源**"，选择 "**预测函数**"， `PredictSupport`添加函数，并将 "模型" 列 [自行车买家] 拖到 "**条件/参数**" 框中。 在“别名”列中键入 **Support** 。 ****  
+7.  对于 "**源**"，选择 "**预测函数**"，添加函数， `PredictSupport` 并将 "模型" 列 [自行车买家] 拖到 "**条件/参数**" 框中。 在“别名”列中键入 **Support** 。 ****  
   
      从“条件/参数”**** 框复制表示预测函数和列引用的表达式。  
   

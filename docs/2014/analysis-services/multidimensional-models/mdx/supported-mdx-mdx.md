@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 308bc0b3-4fd6-4435-972b-5e40d9e3c99b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 93baa6beffcb75e11c0ac389b7f0f5172c30d770
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 17e8df6a2aa6da6b88a07a2abdef99d6ea03d8eb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073870"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546155"
 ---
 # <a name="supported-mdx-mdx"></a>支持的 MDX (MDX)
   支持在多维表达式 (MDX) 脚本中使用下列语句和函数：  
@@ -53,7 +52,7 @@ ms.locfileid: "66073870"
  [此 (MDX)](/sql/mdx/this-mdx)  
   
 > [!NOTE]  
->  MDX 支持为下列单元属性赋值：`BACK_COLOR`、`FORE_COLOR`、`FORMAT_STRING`、`FONT_FLAGS`、`FONT_NAME` 和 `FONT_SIZE`。 有关详细信息，请参阅[使用单元属性 (MDX)](mdx-cell-properties-using-cell-properties.md)。 MDX 还支持为`NON_EMPTY_BEHAVIOR` [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member)语句的属性赋值。  
+>  MDX 支持为下列单元属性赋值：`BACK_COLOR`、`FORE_COLOR`、`FORMAT_STRING`、`FONT_FLAGS`、`FONT_NAME` 和 `FONT_SIZE`。 有关详细信息，请参阅[使用单元属性 (MDX)](mdx-cell-properties-using-cell-properties.md)。 MDX 还支持为 `NON_EMPTY_BEHAVIOR` [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member)语句的属性赋值。  
   
  [SCOPE 语句 (MDX)](/sql/mdx/mdx-scripting-scope)  
   

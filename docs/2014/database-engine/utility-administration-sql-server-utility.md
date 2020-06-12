@@ -10,17 +10,17 @@ ms.assetid: 3e5a00c3-8905-40f0-9ddc-d924df9c2f0d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e67ee4d0ff2dba6edb8b9f485dc5efd903b100cf
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773749"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83857844"
 ---
 # <a name="utility-administration-sql-server-utility"></a>实用工具管理（SQL Server 实用工具）
   使用“实用工具管理”选项卡可以管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具的策略、安全性和数据仓库设置。 有关 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具概念的详细信息，请参阅 [SQL Server 实用工具功能和任务](../relational-databases/manage/sql-server-utility-features-and-tasks.md)。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  “策略”选项卡 - 使用“策略”选项卡可查看或指定全局监视策略。  
   
  设置全局数据层应用程序监视策略。 若要展开此选项的值列表，请单击策略名称旁的箭头，或者单击策略标题。  
@@ -64,7 +64,7 @@ ms.locfileid: "62773749"
  减少高度易失性资源中的策略违反干扰。 若要展开此功能的控件，请单击显示右侧的向下箭头。  
  有关详细信息，请参阅[减少 CPU 使用策略中的干扰 &#40;SQL Server 实用工具&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  “安全性”选项卡 - 显示有权管理 UCP 或从 UCP 进行读取的登录名。  
   
  从将添加到实用工具读取者角色的 UCP 选择登录名。  
@@ -80,7 +80,7 @@ ms.locfileid: "62773749"
   
  要作为实用工具管理员，您必须对 SQL Server 的实例具有 sysadmin 权限。 若要添加或更改 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP 的用户帐户，请使用 SSMS 中的对象资源管理器将该用户添加到 SQL Server 的 UCP 实例的服务器登录名中。 有关详细信息，请参阅 [sp_addlogin (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql)。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  “数据仓库”选项卡 - 为实用工具管理数据仓库显示配置详细信息。  
   
  数据保留  

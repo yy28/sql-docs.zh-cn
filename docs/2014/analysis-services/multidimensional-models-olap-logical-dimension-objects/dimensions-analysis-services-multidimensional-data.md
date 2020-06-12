@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 2b114135-2572-4479-8c81-3ccf0cfeb9f7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bc4a06bd637d6fce460fb15739f8b291c95a3361
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e0e15d4f74c2c6cec06edaf692199e48534c7e9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702423"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545129"
 ---
 # <a name="dimensions-analysis-services---multidimensional-data"></a>维度（Analysis Services - 多维数据）
-  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，维度是多维数据集的基本组件。 维度可将和相关领域（如客户、商店或雇员）关联的数据与用户组织起来。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的维度包含与维度表中的列相对应的属性。 这些属性显示为属性结构，并且可以组织成用户定义层次结构，或者可以基于基础维度表中的列定义为父子层次结构。 层次结构用于组织多维数据集中包含的度量值。 下列主题概述了维度、属性和层次结构。  
+  在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，维度是多维数据集的基本组件。 维度可将和相关领域（如客户、商店或雇员）关联的数据与用户组织起来。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的维度包含与维度表中的列相对应的属性。 这些属性显示为属性结构，并且可以组织成用户定义层次结构，或者可以基于基础维度表中的列定义为父子层次结构。 层次结构用于组织多维数据集中包含的度量值。 下列主题概述了维度、属性和层次结构。  
   
 ## <a name="in-this-section"></a>本节内容  
   

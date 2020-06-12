@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 87b27f9e1c5927392b4ea221dcb6b7468a42ff9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07cda29c288f574fd960398f8a607c04f1d8dce7
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892825"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669451"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -61,7 +61,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  默认值：REPEATABLE(0)  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  通过指定列的列表可以定义挖掘结构；如果需要，还可以指定列之间的层次结构关系，然后再根据需要将挖掘结构分为定型数据集和测试数据集。  
   
  可选的 SESSION 关键字指示该结构是一个只能在当前会话持续期间使用的临时结构。 会话终止时，该结构以及基于该结构的所有模型都将被删除。 若要创建临时挖掘结构和模型，必须首先设置数据库属性 AllowSessionMiningModels。 有关详细信息，请参阅 [Data Mining Properties](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)。  
@@ -73,7 +73,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
 -   日期类型（必需）  
   
--   分发  
+-   分布  
   
 -   建模标志列表  
   
@@ -106,7 +106,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  可以为一个列定义多个建模标志值。 但是，一个列只能有一个内容类型和数据类型。  
   
 ### <a name="column-relationships"></a>列关系  
- 您可以向任何列定义语句中添加子句，以说明两个列之间的关系。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支持使用以下\<列关系> 子句。  
+ 您可以向任何列定义语句中添加子句，以说明两个列之间的关系。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支持使用以下 \< 列关系> 子句。  
   
  **相关**  
  指示值的层次结构。 RELATED TO 列的目标可以是嵌套表的键列、事例行中具有离散值的列或另一个包含 RELATED TO 子句并指示更深层次结构的列。  
@@ -131,7 +131,7 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
  维持种子控制随机将事例分配给定型数据集或测试数据集这一过程的起点。 通过设置维持种子，可以确保该分区可重复执行。 如果没有指定维持种子，则 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用挖掘结构的名称来创建种子。 如果重命名结构，则种子值会更改。 维持种子参数可以与一个或多个其他维持参数一起使用。  
   
 > [!NOTE]  
->  由于分区信息与定型数据缓存在一起，若要使用维持，必须确保将挖掘结构的**CacheMode**属性设置为**KeepTrainingData**。 在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中，新的挖掘结构的默认设置即是如此。 对于包含维持分区的现有挖掘结构，将**CacheMode**属性更改为**ClearTrainingCases**将不会影响任何已处理的挖掘模型。 但是，如果<xref:Microsoft.AnalysisServices.MiningStructureCacheMode>未设置为**KeepTrainingData**，则维持参数将不起作用。 这意味着所有源数据都用于定型而没有提供测试集。 分区定义是使用结构进行缓存的；如果清理了定型事例的缓存，则同时将清理测试数据的缓存以及维持集的定义。  
+>  由于分区信息与定型数据缓存在一起，若要使用维持，必须确保将挖掘结构的**CacheMode**属性设置为**KeepTrainingData**。 在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中，新的挖掘结构的默认设置即是如此。 对于包含维持分区的现有挖掘结构，将**CacheMode**属性更改为**ClearTrainingCases**将不会影响任何已处理的挖掘模型。 但是，如果未 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 设置为**KeepTrainingData**，则维持参数将不起作用。 这意味着所有源数据都用于定型而没有提供测试集。 分区定义是使用结构进行缓存的；如果清理了定型事例的缓存，则同时将清理测试数据的缓存以及维持集的定义。  
   
 ## <a name="examples"></a>示例  
  下面的示例演示如何使用 DMX 创建包含维持的挖掘结构。  

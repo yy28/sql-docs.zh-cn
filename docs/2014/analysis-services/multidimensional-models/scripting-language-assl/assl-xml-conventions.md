@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41e0a3fcf4348efcb2108a1205c1d2d8eabfb85c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b70742b07fd6450b01cf205147a05f40c4b6121
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736390"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545669"
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 约定
   Analysis Services 脚本语言 (ASSL) 将对象层次结构表示为一组元素类型，其中的每个元素类型定义了可包含的子元素。  
@@ -135,10 +134,10 @@ ms.locfileid: "62736390"
   
 -   保留内部空格。  
   
- `Name` 和 `ID` 属性对字符串元素中的有效字符具有特殊限制。 有关`Name`和`ID`约定的其他信息，请参阅[ASSL 对象和对象特性](assl-objects-and-object-characteristics.md)。  
+ `Name` 和 `ID` 属性对字符串元素中的有效字符具有特殊限制。 有关和约定的其他信息 `Name` `ID` ，请参阅[ASSL 对象和对象特性](assl-objects-and-object-characteristics.md)。  
   
  `DateTime`  
- .NET Framework `DateTime`中的结构。  值不能为 NULL。 `DataTime` 数据类型支持的最早日期为 1601 年 1 月 1 日，程序员可将该日期作为 `DateTime.MinValue`。 该最早支持日期指示缺少 `DateTime` 值。  
+ `DateTime`.NET Framework 中的结构。  值不能为 NULL。 `DataTime` 数据类型支持的最早日期为 1601 年 1 月 1 日，程序员可将该日期作为 `DateTime.MinValue`。 该最早支持日期指示缺少 `DateTime` 值。  
   
  `Boolean`  
  仅具有两个值的枚举，例如 {true, false} 或 {0, 1}。  
@@ -151,7 +150,7 @@ ms.locfileid: "62736390"
 |`Boolean`|False|  
 |`String`|""（空字符串）|  
 |`Integer` 或 `Long`|0（零）|  
-|`Timestamp`|12:00:00 AM、1/1/0001 （对应于具有0刻度的`System.DateTime` .net 框架）|  
+|`Timestamp`|12:00:00 AM、1/1/0001 （对应于 `System.DateTime` 具有0刻度的 .Net 框架）|  
   
  存在但为空的元素被解释为具有 Null 字符串值，而非默认值。  
   

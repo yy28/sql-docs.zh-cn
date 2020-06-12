@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3072b7e0-6961-42ad-a287-16f391f2cec4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 307d2ff0419cf5def9f422f08daf349b80bcad2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be0997335faab5ddebe189f9c4460879941cd198
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075211"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546799"
 ---
 # <a name="designing-aggregations-analysis-services---multidimensional"></a>设计聚合（Analysis Services - 多维）
   聚合是预先计算的多维数据集数据的汇总，可帮助启用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 以提供快速的查询响应。  

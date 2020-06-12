@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 9945773c-a43b-40d4-91cf-3d2ebc90bca5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 73967427b97a00d88b3d6c372a0228aa28c2024c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0b55e940f75319a965fb1441520a7e16ce7ab2f6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387907"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545299"
 ---
 # <a name="cube-cells-analysis-services---multidimensional-data"></a>多维数据集单元（Analysis Services - 多维数据）
   多维数据集由单元组成，单元按度量值组和维度进行组织。 单元表示多维数据集中来自多维数据集内每个维度的一个成员的唯一逻辑交集。 例如，以下关系图说明的多维数据集包含了一个有两个度量值的度量值组，它们通过三个名为“源”、“路线”和“时间”的维度组织在一起。  
@@ -76,7 +75,7 @@ ms.locfileid: "81387907"
   
  ![标识空单元的多维数据集关系图](../../analysis-services/dev-guide/media/as-cubeintro7.gif "标识空单元的多维数据集关系图")  
   
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，空单元格是具有特殊质量的单元格。 因为空单元可扭曲交叉联接、计数等的结果，因此为了进行计算，许多 MDX 函数都提供了忽略空单元的功能。 有关详细信息，请参阅 mdx [&#41; 引用 &#40;多维表达式](/sql/mdx/multidimensional-expressions-mdx-reference)和[Mdx 中的重要概念 &#40;Analysis Services&#41;](../multidimensional-models/key-concepts-in-mdx-analysis-services.md)。  
+ 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，空单元格是具有特殊质量的单元格。 因为空单元可扭曲交叉联接、计数等的结果，因此为了进行计算，许多 MDX 函数都提供了忽略空单元的功能。 有关详细信息，请参阅 mdx [&#41; 引用 &#40;多维表达式](/sql/mdx/multidimensional-expressions-mdx-reference)和[Mdx 中的重要概念 &#40;Analysis Services&#41;](../multidimensional-models/key-concepts-in-mdx-analysis-services.md)。  
   
 ## <a name="security"></a>安全性  
  对单元数据的访问是在角色级别通过 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 来进行管理的，并且可以使用 MDX 表达式进行严格控制。 有关详细信息，请参阅[授予对维度数据的自定义访问权限 &#40;Analysis Services&#41;](../multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)，并[授予对单元数据的自定义访问 &#40;Analysis Services ](../multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)&#41;。  

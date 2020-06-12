@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c922c35-fbcb-45b2-96b1-c7a846d8b419
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: debf1257667ea3aa3380117bbbc4c31399283252
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28db322a38ae90206ae0c43db1c8c039e6395b8b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075133"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546739"
 ---
 # <a name="explore-data-in-a-data-source-view-analysis-services"></a>在数据源视图中浏览数据 (Analysis Services)
   可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的数据源视图设计器中的“浏览数据”**** 对话框，在数据源视图 (DSV) 中浏览表、视图或命名查询的数据。 在数据源视图设计器中浏览数据时，可以查看所选表、视图或命名查询中每个数据列的内容。 查看实际内容将帮助您确定是否需要所有列，是否需要命名计算来提高用户友好性和可用性，以及现有命名计算或命名查询是否返回预期值。  
@@ -38,15 +37,15 @@ ms.locfileid: "66075133"
   
 3.  右键单击包含要查看的数据的表、视图或命名查询，再单击“浏览数据”****。  
   
-     数据源视图中表、视图或命名查询的基础数据源是查询，结果显示在 "**浏览\<对象名称> 表**" 选项卡中。  
+     数据源视图中表、视图或命名查询的基础数据源是查询，结果显示在 "**浏览 \<object name> 表**" 选项卡中。  
   
-4.  在 "**浏览\<对象名称> 表格**工具栏上，单击"**抽样选项**"图标。  
+4.  在 "**浏览 \<object name> 表**" 工具栏上，单击 "**抽样选项**" 图标。  
   
      此时将打开 **“数据浏览选项”** 对话框。 在该对话框中可以指定抽样方法（记录少于或多于默认抽样大小 5000 行）或抽样计数。  
   
 5.  根据需要单击 **“确定”** 或 **“取消”** 。  
   
-6.  若要重新对数据进行抽样，请单击 **" \<浏览对象名称"> 表**工具栏上的 "重新**采样数据**"。  
+6.  若要对数据重新抽样，请单击 "**浏览 \<object name> 表**" 工具栏上的 "对**数据重新取样**"  
   
 ## <a name="see-also"></a>另请参阅  
  [多维模型中的数据源视图](data-source-views-in-multidimensional-models.md)  

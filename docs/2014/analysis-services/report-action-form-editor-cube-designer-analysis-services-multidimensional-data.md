@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cebfdd07-e376-46d6-86ef-b6f816a2f360
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eeb3df670097c0d511a9f5b779b6705f40a5e897
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b514d2d85a01fdb4b13c922e81a39e694308334
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070298"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539281"
 ---
 # <a name="report-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>报表操作窗体编辑器（“操作”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“操作”** 选项卡上的 **“报表操作窗体编辑器”** 窗格，修改在 **“操作组织程序”** 窗格中选择的报表操作。  
@@ -32,7 +31,7 @@ ms.locfileid: "66070298"
  **目标类型**  
  选择要与该操作关联的对象的类型。 服务器只向客户端返回适用于指定类型的对象的操作。 如果满足 **“条件”** ，并且选择了下表中指定的对象，则客户端可使用该操作。  
   
-|Value|所选对象|  
+|值|所选对象|  
 |-----------|---------------------|  
 |属性成员|从 **“目标对象”** 中的属性所处的级别中选择成员。<br /><br /> 注意：使用所选属性的其他用户层次结构将继承报表操作。|  
 |单元|**“目标对象”** 中的命名集处于选中状态。 选择 **“所有单元”** 可以选择多维数据集中的所有单元。|  
@@ -55,7 +54,7 @@ ms.locfileid: "66070298"
  展开该选项可以查看“服务器名称”、“服务器路径”和“报表格式”选项。************  
   
  **服务器名称**  
- 键入操作在其上[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]运行报表的实例的名称。  
+ 键入 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 操作在其上运行报表的实例的名称。  
   
  **服务器路径**  
  键入 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 实例上的报表的路径。 例如，键入 **Sales/YearlySalesByCategory**。  
@@ -63,7 +62,7 @@ ms.locfileid: "66070298"
  **报表格式**  
  选择返回报表时所采用的格式。 下表对可用的格式进行了说明：  
   
-|Value|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |HTML5|报表以 HTML 5.0 标准格式返回。|  
 |HTML3|报表以 HTML 3.2 标准格式返回。|  
@@ -89,10 +88,10 @@ ms.locfileid: "66070298"
   
  下表对可用的设置进行了说明：  
   
-|Value|描述|  
+|值|说明|  
 |-----------|-----------------|  
-|Batch|操作应作为批处理操作或[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]任务的一部分运行。|  
-|Interactive (交互)|在用户调用该操作时运行。|  
+|Batch|操作应作为批处理操作或任务的一部分运行 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 。|  
+|交互|在用户调用该操作时运行。|  
 |处于打开状态|第一次打开多维数据集时运行该操作。|  
   
  **应用程序**  

@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8cc28e9394cabee4dd32e8e84ee02517de415a75
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 689e04acc8177a55a751ffa8e8e2e46848732fd1
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893072"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669229"
 ---
 # <a name="understanding-the-dmx-select-statement"></a>了解 DMX Select 语句
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [SELECT](../dmx/select-dmx.md)语句是通过中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的数据挖掘扩展插件（DMX）创建的大多数查询的基础。 该语句可以执行多种任务，例如对数据挖掘模型进行浏览和预测。  
+  [SELECT](../dmx/select-dmx.md)语句是通过中的数据挖掘扩展插件（DMX）创建的大多数查询的基础 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 该语句可以执行多种任务，例如对数据挖掘模型进行浏览和预测。  
   
  下面是可以使用**SELECT**语句完成的任务：  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68893072"
 |查询类型|说明|  
 |----------------|-----------------|  
 |从 [自然] 预测联接中选择|返回一个预测，该预测是通过将挖掘模型中的列与内部数据源中的列联接而创建的。<br /><br /> 此查询类型的域是来自模型的可预测列和来自输入数据源的列。<br /><br /> [从 &#60;模型中选择&#62; 预测联接 &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)<br /><br /> [预测查询（数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/prediction-queries-data-mining)|  
-|从* \<模型中选择>*|仅根据挖掘模型返回可预测列的最可能状态。 该查询类型是使用空预测联接创建预测的快捷方式。<br /><br /> 该查询类型的域是来自模型的可预测列。<br /><br /> [从 &#60;模型中选择&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)<br /><br /> [预测查询（数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/prediction-queries-data-mining)|  
+|从模型中选择* \<>*|仅根据挖掘模型返回可预测列的最可能状态。 该查询类型是使用空预测联接创建预测的快捷方式。<br /><br /> 该查询类型的域是来自模型的可预测列。<br /><br /> [从 &#60;模型中选择&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)<br /><br /> [预测查询（数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/prediction-queries-data-mining)|  
   
  [返回到选择类型](#Select_Types)  
   
@@ -72,10 +72,10 @@ ms.locfileid: "68893072"
   
 |查询类型|说明|  
 |----------------|-----------------|  
-|选择不同于* \<模型>*|为指定的列返回所有来自挖掘模型的状态值。<br /><br /> 此查询类型的数据域是数据挖掘模型。<br /><br /> [选择 "与 &#60;模型不同" &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [内容查询（数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
-|从* \<模型>* 中选择。CONTENT|返回说明挖掘模型的内容。<br /><br /> 此查询类型的数据域是内容架构行集。<br /><br /> [从 &#60;模型&#62; 中进行选择。内容 &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [内容查询（数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
-|从* \<模型>* 中选择。DIMENSION_CONTENT|返回说明挖掘模型的内容。<br /><br /> 此查询类型的数据域是内容架构行集。<br /><br /> [从 &#60;模型&#62; 中进行选择。DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)|  
-|从* \<模型>* 中选择。PMML|返回挖掘模型的预测模型标记语言 (PMML) 表示形式，用于支持该功能的算法。<br /><br /> 该查询类型的域是 PMML 架构行集。<br /><br /> [DMSCHEMA_MINING_MODEL_CONTENT_PMML 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset)|  
+|选择不同于* \< 模型>*|为指定的列返回所有来自挖掘模型的状态值。<br /><br /> 此查询类型的数据域是数据挖掘模型。<br /><br /> [选择 "与 &#60;模型不同" &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [内容查询（数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
+|从* \< 模型>* 中选择。CONTENT|返回说明挖掘模型的内容。<br /><br /> 此查询类型的数据域是内容架构行集。<br /><br /> [从 &#60;模型&#62; 中进行选择。内容 &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [内容查询（数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
+|从* \< 模型>* 中选择。DIMENSION_CONTENT|返回说明挖掘模型的内容。<br /><br /> 此查询类型的数据域是内容架构行集。<br /><br /> [从 &#60;模型&#62; 中进行选择。DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)|  
+|从* \< 模型>* 中选择。PMML|返回挖掘模型的预测模型标记语言 (PMML) 表示形式，用于支持该功能的算法。<br /><br /> 该查询类型的域是 PMML 架构行集。<br /><br /> [DMSCHEMA_MINING_MODEL_CONTENT_PMML 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset)|  
   
  [返回到选择类型](#Select_Types)  
   
@@ -84,7 +84,7 @@ ms.locfileid: "68893072"
   
 |查询类型|说明|  
 |----------------|-----------------|  
-|选择到* \<新模型>*|创建挖掘模型的副本。<br /><br /> 该查询类型的域是内容架构行集。<br /><br /> [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md)|  
+|选择到* \< 新模型>*|创建挖掘模型的副本。<br /><br /> 该查询类型的域是内容架构行集。<br /><br /> [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md)|  
   
  [返回到选择类型](#Select_Types)  
   
@@ -93,9 +93,9 @@ ms.locfileid: "68893072"
   
 |查询类型|说明|  
 |----------------|-----------------|  
-|从* \<模型>* 中选择。这|返回用于为挖掘模型定型的事例。<br /><br /> 该查询类型的域是内容架构行集。<br /><br /> [从 &#60;模型&#62; 中进行选择。DMX&#41;&#40;情况](../dmx/select-from-model-cases-dmx.md)<br /><br /> [使用 DMX 来创建钻取查询](https://docs.microsoft.com/analysis-services/data-mining/create-drillthrough-queries-using-dmx)|  
-|从* \<模型>* 中选择。SAMPLE_CASES|返回一个示例事例，该事例代表用于为挖掘模型定型的事例。<br /><br /> 该查询类型的域是内容架构行集。<br /><br /> [从 &#60;模型&#62; 中进行选择。SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)|  
-|从* \<结构>* 中选择。 这|从基础挖掘结构返回详细数据行，即使某些详细信息并未用于对该挖掘模型定型。<br /><br /> [从 &#60;结构&#62; 中进行选择。这](../dmx/select-from-structure-cases.md)<br /><br /> [钻取查询（数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/drillthrough-queries-data-mining)|  
+|从* \< 模型>* 中选择。这|返回用于为挖掘模型定型的事例。<br /><br /> 该查询类型的域是内容架构行集。<br /><br /> [从 &#60;模型&#62; 中进行选择。DMX&#41;&#40;情况](../dmx/select-from-model-cases-dmx.md)<br /><br /> [使用 DMX 来创建钻取查询](https://docs.microsoft.com/analysis-services/data-mining/create-drillthrough-queries-using-dmx)|  
+|从* \< 模型>* 中选择。SAMPLE_CASES|返回一个示例事例，该事例代表用于为挖掘模型定型的事例。<br /><br /> 该查询类型的域是内容架构行集。<br /><br /> [从 &#60;模型&#62; 中进行选择。SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)|  
+|从* \< 结构>* 中选择。 这|从基础挖掘结构返回详细数据行，即使某些详细信息并未用于对该挖掘模型定型。<br /><br /> [从 &#60;结构&#62; 中进行选择。这](../dmx/select-from-structure-cases.md)<br /><br /> [钻取查询（数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/drillthrough-queries-data-mining)|  
   
  [返回到选择类型](#Select_Types)  
   

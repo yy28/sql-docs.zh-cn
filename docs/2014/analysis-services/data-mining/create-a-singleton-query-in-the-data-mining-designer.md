@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 795347e0ef2bdee226daff57e85e2b02f8b00c9e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fa1d14c1a96a89cbd890dbf4d133d84897b9197
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085311"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523673"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>在数据挖掘设计器中创建单独查询
   如果需要为单个事例创建预测，单独查询是非常有用的。 有关单独查询的详细信息，请参阅 [数据挖掘查询](data-mining-queries.md)。  
@@ -57,7 +56,7 @@ AS [t]
   
 4.  在 **“单独查询输入”** 表中，选择 **“值”** 列中的值，用以说明要为其创建预测的事例。  
   
-     例如，选择 " **2** " 作为 "家庭中的**子女数**" `45` ，然后键入 " **Age**"。  
+     例如，选择 " **2** " 作为 "家庭中的**子女数**"，然后键入 " `45` **Age**"。  
   
 5.  将一个可预测列从 "**挖掘模型**" 表拖到该选项卡底部的 "**源**" 列。或者，您也可以为列键入一个别名。  
   

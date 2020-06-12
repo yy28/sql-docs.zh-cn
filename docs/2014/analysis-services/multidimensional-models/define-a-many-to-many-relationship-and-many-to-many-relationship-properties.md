@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f679387dd1282dba3a4521f40bd11a2e0ba4b26f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e60456afe700d3bfb793d214331871445190eb10
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075779"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547079"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>定义多对多关系和多对多关系属性
   本主题介绍 Analysis Services 中的多对多维度，包括何时使用它们以及如何创建它们。  
   
-## <a name="introduction"></a>介绍  
+## <a name="introduction"></a>简介  
  Analysis Services 支持多对多维度，并且允许更复杂的分析，从而超越了传统的星型架构所能提供的功能。 在传统的星型架构中，所有维度都具有针对事实表的一对多关系。 每个事实都联接到一个维度成员；单个维度成员与多个事实相关联。  
   
  多对多通过实现了将事实（例如帐户余额）与相同维度的多个成员相关联（联接帐户的余额可能会影响联接帐户的两个或多个所有者），消除了这一模型限制。  
@@ -142,7 +141,7 @@ ms.locfileid: "66075779"
   
 1.  部署该项目，然后浏览多维数据集以便确认聚合有效。  
   
-2.  在 Excel 中，单击 "来自**Analysis Services**的**其他源** | 中的**数据** | "。 输入服务器的名称，选择数据库和多维数据集。  
+2.  在 Excel 中， **Data**单击 "  |  **来自 Analysis Services 的其他源**中的数据"  |  **From Analysis Services**。 输入服务器的名称，选择数据库和多维数据集。  
   
 3.  创建一个数据透视表，它使用以下内容：  
   

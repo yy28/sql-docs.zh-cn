@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 82c406ce-9e92-40c7-8374-cdbaf8b63d8f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0cc1b7eec5ceb3b74e575dce9fd5d1d71897a3f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8311b2c3a2cfec2e3bac00a9082ca83d2d927b25
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081661"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528573"
 ---
 # <a name="dimension-wizard-f1-help"></a>维度向导的 F1 帮助
-  使用中的维度向导[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]在[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]项目中创建数据库维度。 创建数据库维度后，可以使用维度设计器修改其属性。 有关维度设计器的详细信息，请参阅[维度设计器（Analysis Services - 多维数据）](dimension-designer-analysis-services-multidimensional-data.md)。  
+  使用中的维度向导在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 项目中创建数据库维度 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 创建数据库维度后，可以使用维度设计器修改其属性。 有关维度设计器的详细信息，请参阅[维度设计器（Analysis Services - 多维数据）](dimension-designer-analysis-services-multidimensional-data.md)。  
   
  **打开维度向导**  
   

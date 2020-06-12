@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: bd3195da-e762-4c98-b643-34c76e842343
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cbe1c8932c082ce537cd5dc3f2b12d98c05c3811
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e0c16a57081aa1d9ed3cc6964d1f17fa7135986
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62728553"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545179"
 ---
 # <a name="dimension-types"></a>维度类型
   `Type` 属性设置为服务器和客户端应用程序提供有关维度内容的信息。 在某些情况下，`Type` 设置只为客户端应用程序提供指导信息，并且为可选项。 在其他情况下，例如 `Accounts` 维度或 `Time` 维度，维度及其特性的 `Type` 属性设置可以确定基于服务器的特定行为，并且实现多维数据集中的某些行为也可能需要该属性设置。 例如，维度的 `Type` 属性可以设置为 `Accounts`，从而向客户端应用程序指示标准维度包含帐户特性。 有关时间、帐户和货币维度的详细信息，请参阅[创建日期类型维度](../multidimensional-models/database-dimensions-create-a-date-type-dimension.md)、[创建父子类型维度的财务帐户](../multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)和[创建货币类型维度](../multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)。  
@@ -40,7 +39,7 @@ ms.locfileid: "62728553"
  维度类型的默认设置为 `Regular`，该设置不对维度内容进行任何假设。 当您初始定义维度时，该设置为所有维度的默认设置，除非您在使用维度向导定义维度时指定了 `Time`。 如果维度向导没有为维度类型列出合适的类型，则还应当将 `Regular` 继续用做维度类型。  
   
 ## <a name="available-dimension-types"></a>可用维度类型  
- 下表描述了中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]可用的维度类型。  
+ 下表描述了中可用的维度类型 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。  
   
 |维度类型|说明|  
 |--------------------|-----------------|  
@@ -51,13 +50,13 @@ ms.locfileid: "62728553"
 |BillOfMaterials|一种其属性表示库存或制造信息（如产品的部件列表）的维度。|  
 |帐户|一种其属性表示用于财务报表用途的科目表的维度。|  
 |客户|一种其属性表示客户信息或联系信息的维度。|  
-|Products|一种其属性表示产品信息的维度。|  
+|产品|一种其属性表示产品信息的维度。|  
 |方案|一种其属性表示计划或策略分析信息的维度。|  
 |Quantitative|一种其属性表示定量信息的维度。|  
 |实用工具|一种其属性表示杂项信息的维度。|  
 |货币|该类型的维度包含货币数据和元数据。|  
 |Rates|一种其属性表示货币汇率信息的维度。|  
-|通道|一种其属性表示渠道信息的维度。|  
+|Channel|一种其属性表示渠道信息的维度。|  
 |Promotion|一种其属性表示营销促销信息的维度。|  
   
 ## <a name="see-also"></a>另请参阅  

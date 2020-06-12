@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0197417dfef604f3cb90b5fa032dae892de272c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: df52a83c2e60395e72b6f81903d0372d1dc05614
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889051"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670241"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,12 +29,12 @@ EXISTS(<subquery>)
   
 ## <a name="arguments"></a>参数  
  *量子*  
- Select 语句，格式为 SELECT * FROM \<列名> [WHERE \<谓词 list>]。  
+ Select 语句，格式为 SELECT * FROM \< 列名> [WHERE \< 谓词 list>]。  
   
 ## <a name="result-type"></a>结果类型  
  如果子查询返回的结果集至少包含一行，则返回**true** ;否则，返回**false**。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  可以在 EXISTS 前面使用 NOT 关键字：例如 `WHERE NOT EXISTS (<subquery>)`。  
   
  添加到 EXISTS 的子查询参数中的列的列表是无关紧要的；函数仅检查满足条件的行是否存在。  
@@ -42,7 +42,7 @@ EXISTS(<subquery>)
 ## <a name="examples"></a>示例  
  可使用 EXISTS 和 NOT EXISTS 检查嵌套表中的条件。 这在创建控制定型或测试数据挖掘模型所使用的数据的筛选器时，将很有用。 有关详细信息，请参阅[挖掘模型筛选器（Analysis Services - 数据挖掘）](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining)。  
   
- 下面的示例基于您在`[Association]` [数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中创建的挖掘结构和挖掘模型。 该查询仅返回其中客户至少购买一个 patch kit 的那些事例。  
+ 下面的示例基于 `[Association]` 您在[数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)中创建的挖掘结构和挖掘模型。 该查询仅返回其中客户至少购买一个 patch kit 的那些事例。  
   
 ```  
 SELECT * FROM [Association].CASES  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3cd99acc-368d-4e21-ad18-298fff056acd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 88e48fb2bfae9711b6d8f303287f2e26dff18d9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aad6b1f02ad5fc10eb254a50eefe67166ddb563d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079428"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543631"
 ---
 # <a name="kpis-cube-designer-analysis-services---multidimensional-data"></a>KPI（多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的“KPI”**** 选项卡查看和编辑所选多维数据集的关键绩效指标 (KPI)。  

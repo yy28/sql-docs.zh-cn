@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: bdc81de9-b390-4654-b62a-cd6c0c9ca10d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9b57155285b4758e37af43b0fb4f079d660b97fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8454d2cbe9153c6a547ae2813c85bf1e45f269ad
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387917"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537381"
 ---
 # <a name="adomdnet-server-object-architecture"></a>ADOMD.NET 服务器对象体系结构
-  ADOMD.NET 服务器对象是 helper 对象，可用于在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]创建用户定义的函数（udf）或存储过程。  
+  ADOMD.NET 服务器对象是 helper 对象，可用于在中创建用户定义的函数（Udf）或存储过程 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。  
   
 > [!NOTE]  
 >  若要使用 `Microsoft.AnalysisServices.AdomdServer` 命名空间（以及这些对象），必须将对 msmgdsrv.dll 的引用添加到 UDF 项目或存储过程。  

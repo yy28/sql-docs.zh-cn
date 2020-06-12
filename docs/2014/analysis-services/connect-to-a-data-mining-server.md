@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3c9abd1b891d47f1711db21eec017ec755526e02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e7fca367c72aaff5f02280829740942a36915ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087349"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527233"
 ---
 # <a name="connect-to-a-data-mining-server"></a>连接到数据挖掘服务器
   ![“连接”按钮](media/misc-connection.gif "“连接”按钮")  
   
- 单击 "**连接**" 按钮以选择现有连接，或创建到实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]新连接。  
+ 单击 "**连接**" 按钮以选择现有连接，或创建到实例的新连接 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。  
   
  **为什么需要连接到服务器？**  
   
@@ -57,7 +56,7 @@ ms.locfileid: "66087349"
   
  **收到一条消息，显示 "找不到连接"。**  
   
- 如果按钮下半部分的文本显示 "**无连接**"，则表示尚未创建与[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据库的连接或连接失败。 您可以继续处理来自 Access 或其他数据源的 Excel 中的数据，但如果要创建数据挖掘模型或运行预测查询，则必须拥有活动连接。  
+ 如果按钮下半部分的文本显示 "**无连接**"，则表示尚未创建与数据库的连接 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 或连接失败。 您可以继续处理来自 Access 或其他数据源的 Excel 中的数据，但如果要创建数据挖掘模型或运行预测查询，则必须拥有活动连接。  
   
  **假设我无权使用该服务器？**  
   

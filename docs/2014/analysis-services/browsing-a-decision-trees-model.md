@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 17b3a2765781813c832b0b654e4a02475b3ab623
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a4f41e548746d443ff9cbed5eca17e557127240
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064672"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527743"
 ---
 # <a name="browsing-a-decision-trees-model"></a>浏览决策树模型
-  使用 "**浏览**" 打开分类模型时，该模型将显示在交互式决策树查看器中，类似于[!INCLUDE[msCoName](../includes/msconame-md.md)]中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的决策树查看器。 该查看器将分类结果显示为一个图形，图形设计可以突出将一组数据与其他数据区分开来的条件。 您还可以深化到树的各个子集并检索基础数据。  
+  使用 "**浏览**" 打开分类模型时，该模型将显示在交互式决策树查看器中，类似于 [!INCLUDE[msCoName](../includes/msconame-md.md)] 中的决策树查看器 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 该查看器将分类结果显示为一个图形，图形设计可以突出将一组数据与其他数据区分开来的条件。 您还可以深化到树的各个子集并检索基础数据。  
   
 ##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>浏览模型  
  基于决策树算法的模型有很多有趣的信息值得探索。 "**浏览**" 窗口包括以下选项卡和窗格，可帮助您了解使用图形的模式并预测结果：  
@@ -87,13 +86,13 @@ ms.locfileid: "66064672"
   
      只通过阴影强度您就可以锁定一些感兴趣的组，获取更详细的数据进行比较。 例如，这些组购买自行车的概率相当高：  
   
-    -   Age >= 32， \< 53，年收入 >= 26000，子代 = 0  
+    -   Age >= 32， \< 53 and Yearly Income > = 26000，子代 = 0  
   
          事例总大小：1150  
   
          自行车购买者概率：18%  
   
-    -   Age >= 32， \< 53，年收入 >= 26000 并且子女数不等于0，婚姻状况 = "Single"  
+    -   Age >= 32， \< 53 and Yearly Income > = 26000，子元素不 = 0，婚姻状态 = ' 单个 '  
   
          Total cases: 402  
   

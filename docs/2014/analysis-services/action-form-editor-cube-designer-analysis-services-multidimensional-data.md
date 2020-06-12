@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c363a29b-6099-473c-9625-460cc15b3d95
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f7c0a9b232a30fbaa4358bf9b23eb28ff16d79b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0353d2af250f620237a165a3f9878a4efc14fdf0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062961"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528263"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>操作窗体编辑器（“操作”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“操作”** 选项卡上的“操作窗体编辑器”窗格创建和修改标准操作。  
@@ -32,7 +31,7 @@ ms.locfileid: "66062961"
  **目标类型**  
  选择要与该操作关联的对象的类型。 服务器只向客户端返回适用于指定类型的对象的操作。 如果满足 **“条件”** ，并且选择了下表中指定的对象，则客户端可使用该操作。  
   
-|Value|所选对象|  
+|值|所选对象|  
 |-----------|---------------------|  
 |属性成员|从 **“目标对象”** 中的属性所处的级别中选择成员。|  
 |单元|**“目标对象”** 中的命名集处于选中状态。 选择 **“所有单元”** 可以选择多维数据集中的所有单元。|  
@@ -54,16 +53,16 @@ ms.locfileid: "66062961"
  **操作内容**  
  展开此项可以查看“类型”和“操作表达式”选项。********  
   
- **类型**  
+ 类型  
  选择在运行操作时要执行的操作类型。 可用的操作类型包括：  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |数据集|返回将由客户端应用程序运行和显示的表示多维数据集的多维表达式 (MDX) 语句。|  
 |专有|对于此操作的 **“应用程序”** 设置所关联的客户端应用程序，返回该程序能够解释的专有字符串。|  
 |行集|返回将由客户端应用程序运行和显示的表示表格格式行集的多维表达式 (MDX) 语句。|  
 |语句|返回将由客户端应用程序运行的命令字符串。|  
-|代码|返回将由客户端应用程序通常使用 Internet 浏览器打开的统一资源定位器 (URL) 字符串。|  
+|URL|返回将由客户端应用程序通常使用 Internet 浏览器打开的统一资源定位器 (URL) 字符串。|  
   
  有关操作类型的详细信息，请参阅[操作（Analysis Services - 多维数据）](multidimensional-models/actions-analysis-services-multidimensional-data.md)。  
   
@@ -81,10 +80,10 @@ ms.locfileid: "66062961"
   
  下表对可用的设置进行了说明：  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |Batch|该操作将作为批处理操作或 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 任务的一部分运行。|  
-|Interactive (交互)|在用户调用该操作时运行。|  
+|交互|在用户调用该操作时运行。|  
 |处于打开状态|第一次打开多维数据集时运行该操作。|  
   
  **应用程序**  

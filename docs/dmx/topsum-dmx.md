@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 373fe2f1458b30412f4ee5852baa57b930af4878
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a616db3e2fd0927faf9273bfaf55bb31e94391c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893044"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669900"
 ---
 # <a name="topsum-dmx"></a>TopSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,13 +28,13 @@ TopSum(<table expression>, <rank expression>, <sum>)
 ```  
   
 ## <a name="applies-to"></a>应用于  
- 返回表的表达式，如\<表列引用> 或返回表的函数。  
+ 返回表的表达式，如 \< 表列引用> 或返回表的函数。  
   
 ## <a name="return-type"></a>返回类型  
  \<表表达式>  
   
-## <a name="remarks"></a>备注  
- **TopSum**函数根据每行> 参数的\<排名表达式的计算所得值返回最顶层的行，这样， \<排名表达式> 值的总和至少是\<sum> 参数所指定的给定的总计。 当仍满足指定的 sum 值时， **TopSum**将返回尽可能少数量的元素。  
+## <a name="remarks"></a>注解  
+ **TopSum**函数根据每行> 参数的排名表达式的计算所得值返回最顶层的行 \< ，这样， \< 排名表达式> 值的总和至少是 sum> 参数所指定的给定的总计 \< 。 当仍满足指定的 sum 值时， **TopSum**将返回尽可能少数量的元素。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建一个针对使用[数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)生成的关联模型的预测查询。  

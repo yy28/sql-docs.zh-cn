@@ -1,5 +1,6 @@
 ---
 title: 在路径表达式中使用缩写语法 |Microsoft Docs
+description: 了解如何在 XQuery 路径表达式中使用缩写语法。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e75db08f283631cf9b5daf064790786a1abc10f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eeb7026f341af60f289a1d3854e24656073add61
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946419"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306006"
 ---
 # <a name="path-expressions---using-abbreviated-syntax"></a>路径表达式 - 使用缩写语法
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +38,11 @@ child::ProductDescription[attribute::ProductModelID=19]
   
 -   **子**轴为默认轴。 因此，可以在表达式中的步骤中省略**child：：** 轴。 例如，`/child::ProductDescription/child::Summary` 可以写为 `/ProductDescription/Summary`。  
   
--   **特性**轴可以缩写为@。 例如，`/child::ProductDescription[attribute::ProductModelID=10]` 可以写为 `/ProudctDescription[@ProductModelID=10]`。  
+-   **特性**轴可以缩写为 @ 。 例如，`/child::ProductDescription[attribute::ProductModelID=10]` 可以写为 `/ProudctDescription[@ProductModelID=10]`。  
   
 -   **/Descendant-or-self：： node （）/** 可以缩写为//。 例如，`/descendant-or-self::node()/child::act:telephoneNumber` 可以写为 `//act:telephoneNumber`。  
   
-     上一个查询检索了存储在 Contact 表的 AdditionalContactInfo 列中的所有电话号码。 AdditionalContactInfo 的架构的定义方式是\<telephoneNumber> 元素可以出现在文档中的任何位置。 因此，若要检索所有电话号码，必须搜索文档中的每一个节点。 从文档的根节点开始搜索，接下来搜索所有后代节点。  
+     上一个查询检索了存储在 Contact 表的 AdditionalContactInfo 列中的所有电话号码。 AdditionalContactInfo 的架构的定义方式是 \<telephoneNumber> 元素可以出现在文档中的任何位置。 因此，若要检索所有电话号码，必须搜索文档中的每一个节点。 从文档的根节点开始搜索，接下来搜索所有后代节点。  
   
      以下查询将检索某一特定客户的联系人的所有电话号码：  
   

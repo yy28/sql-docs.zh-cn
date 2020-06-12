@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c3a012b4-9ca0-4fb8-9c26-5ecc0e2e2b2b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b663f86b16576360083050c5709433eed7d4dc4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a6a6da73815f06aa5ab80f6ad5a9d06227ed842
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074713"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546561"
 ---
 # <a name="cube-space"></a>多维数据集空间
   “多维数据集空间”是多维数据集属性层次结构的成员与多维数据集的度量值的乘积。 因此，多维数据集空间由多维数据集中所有属性层次结构成员和多维数据集的度量值的组合乘积确定，并且定义多维数据集的最大大小。 需要特别注意的是，此空间包括属性层次结构成员的所有可能组合；甚至包括在真实世界可能会认定为不可能的组合，例如城市是巴黎而国家/地区是英国、西班牙、日本、印度或其他地方的组合。  
@@ -78,7 +77,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  虽然结果集中的元数据将不同，但返回的单元值将是相同的。 例如，在前面的查询中，Country 层次结构已移到切片器轴（在 WHERE 子句中），因此没有显式显示在结果集中。  
   
- 这三个前面的查询都说明了中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的自动共存行为的影响。  
+ 这三个前面的查询都说明了中的自动共存行为的影响 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。  
   
 ## <a name="user-defined-hierarchies-and-cube-space"></a>用户定义的层次结构和多维数据集空间  
  本主题前面的示例使用属性层次结构定义了多维数据集空间中的位置。 不过，您还可以使用根据维度中属性层次结构所定义的用户定义的层次结构来定义多维数据集空间中的位置。 用户定义的层次结构是属性层次结构的层次结构，旨在帮助用户浏览多维数据集数据。  
@@ -112,7 +111,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  请注意， `WITH`关键字与[CurrentMember （Mdx）](/sql/mdx/current-mdx)和[Name （mdx）](/sql/mdx/members-string-mdx)函数一起使用，以创建在查询中使用的计算成员。 有关详细信息，请参阅[基本 MDX 查询 (MDX)](mdx-query-the-basic-query.md)。  
+>  请注意， `WITH` 关键字与[CURRENTMEMBER （mdx）](/sql/mdx/current-mdx)和[Name （mdx）](/sql/mdx/members-string-mdx)函数一起使用，以创建在查询中使用的计算成员。 有关详细信息，请参阅[基本 MDX 查询 (MDX)](mdx-query-the-basic-query.md)。  
   
  在前面的查询中，返回了与 State 属性层次结构各成员相关联的 Country 属性层次结构的成员名称。 出现了预期的 Country 成员（因为定义了 City 和 Country 属性之间的属性关系）。 不过，如果在同一维度中没有定义属性层次结构间的任何属性关系，将返回“(全部)”成员，如以下查询所示。  
   

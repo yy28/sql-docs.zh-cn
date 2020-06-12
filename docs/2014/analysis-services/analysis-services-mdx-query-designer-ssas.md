@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: a2fb0b79-802a-4dac-bd9a-32dfe2e8c4d4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 23bdc92e18a7f2cae351faddd69370c9e08a7371
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b9088dc5dc222d8dd1c0c861746f225e6f5b469
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062509"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528068"
 ---
 # <a name="analysis-services-mdx-query-designer-ssas"></a>Analysis Services MDX 查询设计器 (SSAS)
-  Analysis Services 多维表达式（MDX）查询设计器提供了图形用户界面，可帮助您为[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据源创建 MDX 查询。 MDX 图形查询设计器有两种模式：设计模式和查询模式。 每种模式都提供一个“元数据”窗格，从该窗格中可以拖动所选多维数据集的成员，以生成可检索要使用的数据的 MDX 查询。  
+  Analysis Services 多维表达式（MDX）查询设计器提供了图形用户界面，可帮助您为数据源创建 MDX 查询 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 MDX 图形查询设计器有两种模式：设计模式和查询模式。 每种模式都提供一个“元数据”窗格，从该窗格中可以拖动所选多维数据集的成员，以生成可检索要使用的数据的 MDX 查询。  
   
 > [!IMPORTANT]  
 >  用户创建和运行查询时访问数据源。 您应授予对数据源的最小权限（如只读权限）。  
@@ -64,7 +63,7 @@ ms.locfileid: "66062509"
 ### <a name="graphical-mdx-query-designer-toolbar-in-design-mode"></a>设计模式下的图形 MDX 查询设计器工具栏  
  查询设计器工具栏提供了可以帮助您使用图形界面来设计 MDX 查询的按钮。 下表列出了这些按钮及其功能。  
   
-|Button|说明|  
+|Button|描述|  
 |------------|-----------------|  
 |**编辑为文本**|不可用于此数据源类型。|  
 |**导入**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。|  
@@ -74,7 +73,7 @@ ms.locfileid: "66062509"
 |![切换显示空单元](media/rsqdicon-showemptycells.gif "切换为显示空单元格")|在“数据”窗格中的显示或不显示空单元格之间切换。 （这等同于在 MDX 中使用 NON EMPTY 子句）。|  
 |![自动执行查询](media/rsqdicon-autoexecute.gif "自动执行查询")|在每次进行更改时自动运行查询并显示结果。 结果将显示在“数据”窗格中。|  
 |![“显示聚合”按钮](media/rsqdicon-showaggregations.gif "“显示聚合”按钮")|在“数据”窗格中显示聚合。|  
-|![删除](media/rsqdicon-delete.gif "Delete")|通过查询在“数据”窗格中删除选定列。|  
+|![删除](media/rsqdicon-delete.gif "删除")|通过查询在“数据”窗格中删除选定列。|  
 |![“查询参数”对话框图标](media/iconqueryparameter.gif "“查询参数”对话框图标")|显示 **“查询参数”** 对话框。 指定查询参数的值时，会自动创建一个同名参数。|  
 |![“准备查询”按钮](media/rsqdicon-preparequery.gif "“准备查询”按钮")|准备查询。|  
 |![运行查询](media/rsqdicon-run.gif "运行查询")|运行查询并在“数据”窗格中显示结果。|  

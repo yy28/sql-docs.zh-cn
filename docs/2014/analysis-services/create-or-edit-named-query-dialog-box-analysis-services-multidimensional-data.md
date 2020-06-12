@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8e192ad6-a0b1-4e21-bb3f-087c93e62941
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97f01b0bbf3d1ddc54ea4db2b771723e12d168d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87253123e42349aac4a6fef204de0bffb63c101c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086812"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526573"
 ---
 # <a name="create-or-edit-named-query-dialog-box-analysis-services---multidimensional-data"></a>“创建或编辑命名查询”对话框（Analysis Services - 多维数据）
   可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的“创建/编辑命名查询”对话框，在数据源视图设计器中创建或编辑命名查询。******** 可以将命名查询视为表，基于该表可以建立其他 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象。 可以通过执行以下操作之一显示“创建/编辑命名查询”对话框：****  
@@ -56,7 +55,7 @@ ms.locfileid: "66086812"
  **Toolbar**  
  使用工具栏可以管理数据集、选择要显示的窗格以及控制各种查询函数。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**切换到一般查询生成器**|选择此选项将只显示可用于一般查询生成器视图的选项。 仅显示下列选项：<br />**SQL 窗格**<br />**结果窗格**<br />**“工具栏”**，只包含 **“切换到 VDT 查询生成器”** 和 **“运行”**<br /><br /> <br /><br /> 注意：只有在选择了“切换到 VDT 查询生成器”时，才会显示此选项。 ****|  
 |**“切换到 VDT 查询生成器”**|选择此选项将显示可用于 Visual Database Tools (VDT) 查询生成器视图的所有选项。<br /><br /> 注意：只有选定了“切换到一般查询生成器” **** ，才会显示此选项。|  
@@ -64,7 +63,7 @@ ms.locfileid: "66086812"
 |**显示/隐藏网格窗格**|显示或隐藏 **网格窗格**。<br /><br /> 注意：只有在选择了“切换到 VDT 查询生成器”时，才会显示此选项。 ****|  
 |**显示/隐藏 SQL 窗格**|显示或隐藏 **SQL 窗格**。<br /><br /> 注意：只有在选择了“切换到 VDT 查询生成器”时，才会显示此选项。 ****|  
 |**显示/隐藏结果窗格**|显示或隐藏 **结果窗格**。<br /><br /> 注意：只有在选择了“切换到 VDT 查询生成器”时，才会显示此选项。 ****|  
-|**用**|运行查询。 结果将显示在 "**结果" 窗格**中。|  
+|**运行**|运行查询。 结果将显示在 "**结果" 窗格**中。|  
 |**验证 SQL**|验证查询中的 SQL 语句。<br /><br /> 注意：只有在选择了“切换到 VDT 查询生成器”时，才会显示此选项。 ****|  
 |**升序排序**|依据 **网格窗格**中的所选列对输出行按升序排序。<br /><br /> 注意：只有在选择了“切换到 VDT 查询生成器”时，才会显示此选项。 ****|  
 |**降序排序**|依据 **网格窗格**中的所选列对输出行按降序排序。<br /><br /> 注意：只有在选择了“切换到 VDT 查询生成器”时，才会显示此选项。 ****|  

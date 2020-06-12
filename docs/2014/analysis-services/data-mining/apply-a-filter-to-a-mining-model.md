@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0370d4fceada5c0a287c4a071691ea20d5a28f6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a7f00e4d9ecbcc539b470cf5b2afe5864eb6114
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086221"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525503"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>对挖掘模型应用筛选器
   如果挖掘结构包含嵌套表，则可以对事例表、嵌套表或两者同时应用筛选器。  
@@ -46,7 +45,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 3.  选择模型，然后右键单击打开快捷菜单。  
   
-     \- 或 -  
+     -或-  
   
      选择该模型。 然后，在 **“挖掘模型”** 菜单上，选择 **“设置模型筛选器”**。  
   
@@ -66,7 +65,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  单击 **“值”** 文本框，然后在此框中键入一个值。  
   
-     例如，选择`Income`作为列，选择大于运算符（>），然后键入`30000`。  
+     例如，选择 `Income` 作为列，选择大于运算符（>），然后键入 `30000` 。  
   
 9. 单击网格中的下一行。  
   
@@ -74,11 +73,11 @@ WHERE [Model] <> 'Water Bottle' )
   
 10. 单击网格下一行中的**和/或**文本框，以添加条件。  
   
-     例如，若要创建 BETWEEN 条件，请从`AND`逻辑操作数下拉列表中选择。  
+     例如，若要创建 BETWEEN 条件，请 `AND` 从逻辑操作数下拉列表中选择。  
   
 11. 按步骤 7 和 8 中所述选择一个运算符并键入一个值。  
   
-     例如，再次选择`Income`作为列，选择小于运算符（<），然后键入`40000`。  
+     例如，再次选择 `Income` 作为列，选择小于运算符（<），然后键入 `40000` 。  
   
 12. 单击网格中的下一行。  
   
@@ -86,7 +85,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 ### <a name="to-add-a-filter-on-the-nested-table-in-a-mining-model"></a>向挖掘模型中的嵌套表添加筛选器  
   
-1.  在 " ** \<名称>模型筛选器**" 对话框中，单击 "**挖掘结构列**" 下网格中的空行。  
+1.  在 " ** \<name> 模型筛选器**" 对话框中，单击 "**挖掘结构列**" 下网格中的空行。  
   
 2.  从下拉列表中选择嵌套表的名称。  
   
@@ -98,7 +97,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 4.  单击 "**值**" 框，然后单击 " **（...）** " 按钮以生成表达式。  
   
-     " ** \<名称>筛选器**" 对话框随即打开。 此对话框只能设置当前表的条件，本例中当前表是嵌套表。  
+     此时将打开 " ** \<name> 筛选器**" 对话框。 此对话框只能设置当前表的条件，本例中当前表是嵌套表。  
   
 5.  单击 **“挖掘结构列”** 框并从嵌套表列下拉列表中选择一个列名。  
   
@@ -106,7 +105,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 7.  单击 **“值”** 并键入一个值。  
   
-     例如，对于 "**挖掘结构列"，** 选择`Model`。 对于 "**运算符**" `<>`，选择，然后键入`Water Bottle`值。 此条件将创建如下的筛选表达式：  
+     例如，对于 "**挖掘结构列"，** 选择 `Model` 。 对于 "**运算符**"，选择 `<>` ，然后键入值 `Water Bottle` 。 此条件将创建如下的筛选表达式：  
   
 ```  
 EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )   
@@ -115,7 +114,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
 > [!NOTE]  
 >  由于嵌套表数属性的数量不受限制，因此， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 不提供可供选择的可能值的列表。 必须键入一个确切的值。 此外，不能在嵌套表中使用 LIKE 运算符。  
   
-1.  根据需要添加更多条件，并通过在 " `AND`条件`OR` " 网格左侧的 "**和/或**" 框中选择**Conditions**或来组合条件。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+1.  根据需要添加更多条件， `AND` `OR` 并通过在 "**条件**" 网格左侧的 "**和/或**" 框中选择或来组合条件。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 2.  在 **“模型筛选器”** 对话框中，使用 **“筛选器”** 对话框检查创建的条件。 嵌套表的条件表将附加到事例表条件中，并在 **“表达式”** 文本框中显示一组完整的筛选条件。  
   
