@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b8b1eedc-4d6d-4429-a578-e629ec573934
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ae5244110e6b95434f9008fd7dc99cee259acf8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 485a3e12b46700319c760b878ecbdcfb8c97545d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086820"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526673"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>创建挖掘结构（SQL Server 数据挖掘外接程序）
   ![“数据挖掘”功能区中的“创建挖掘结构”按钮](media/dmc-createstruct.gif "“数据挖掘”功能区中的“创建挖掘结构”按钮")  
@@ -37,7 +36,7 @@ ms.locfileid: "66086820"
   
 2.  在 "**选择源数据**" 对话框中，指定包含要用于分析的数据的 excel 区域、excel 数据表或外部数据源。  
   
-     单击“下一步”  。  
+     单击“下一步”。  
   
 3.  在 "**选择列**" 对话框中，查看所选数据源中可用列的列表。  
   
@@ -62,9 +61,9 @@ ms.locfileid: "66086820"
     >   
     >  有关详细信息，请参阅为[数据挖掘选择数据](choosing-data-for-data-mining.md)中有关内容类型的部分。  
   
-     单击 **“确定”** 关闭对话框。  
+     单击“确定”  关闭对话框。  
   
-6.  单击“下一步”  。  
+6.  单击“下一步”。  
   
      根据所用数据的类型，您可能希望在此步骤之后完成向导。 在这种情况下，请跳转到 "**完成**" 页，为挖掘结构命名。  
   
@@ -74,17 +73,17 @@ ms.locfileid: "66086820"
   
      可以选择键入要用于测试的最大行数。  
   
-     单击“下一步”  。  
+     单击“下一步”。  
   
 8.  在 "**完成**" 对话框中，键入新挖掘结构的名称和描述。  
   
-9. 单击“完成”  。  
+9. 单击“完成”。  
   
 ### <a name="related-options"></a>相关选项  
   
-|选项|说明|  
+|选项|注释|  
 |------------|--------------|  
-|"**选择源数据**" 对话框|选择 Excel 表时，您应指示数据是否已具有标题。 如果跳过此操作，则第一行数据将用作列名。<br /><br /> 如果使用选项 "**外部数据源**"，则可以使用可在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据源中定义的任何类型的数据。 但是，外接程序中用于创建新数据源的对话框并非包含 Analysis Services 支持的所有数据源，因此我们建议您提前在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务器上创建数据源，然后使用外接程序进行连接。|  
+|"**选择源数据**" 对话框|选择 Excel 表时，您应指示数据是否已具有标题。 如果跳过此操作，则第一行数据将用作列名。<br /><br /> 如果使用选项 "**外部数据源**"，则可以使用可在数据源中定义的任何类型的数据 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 但是，外接程序中用于创建新数据源的对话框并非包含 Analysis Services 支持的所有数据源，因此我们建议您提前在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务器上创建数据源，然后使用外接程序进行连接。|  
 |"**数据源查询编辑器**" 对话框|连接到指定数据源之后，可以添加列，或创建自定义查询以生成自定义列。|  
 |**将数据拆分为定型数据集和测试数据集**|对于定型和测试集，建议的值为70% （对于测试，则为30%）;但是，如果有大量数据，则可以指定用于测试的最大行数。|  
 |“完成”对话框|用于钻取的选项对某些模型类型可用，如果您在挖掘结构中包含详细信息列，则这些选项非常有用。 例如，如果您创建一个聚类分析模型，则可以包含详细信息（如名称或电子邮件地址）用于钻取但不用于分析，以方便联系特定群集中的客户。|  

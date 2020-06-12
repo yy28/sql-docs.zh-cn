@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dac57d8f-1c65-4878-8ea0-9c680df5e4fb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d1e09e439469f23412c84ea7bab65c0aa748f286
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3894f8ea42c0c5c91c3b6a5c5e7a6677b763b02
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081321"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528343"
 ---
 # <a name="fill-from-example-table-analysis-tools-for-excel"></a>从示例填充（Excel 表分析工具）
   ![表分析工具中的“从示例填充”按钮](media/tat-fillex.gif "表分析工具中的“从示例填充”按钮")  
@@ -41,9 +40,9 @@ ms.locfileid: "66081321"
   
      例如，如果根据经验，您知道一列和包含缺失值的列之间存在因果关系，您可以取消选择其他列，以获得更佳结果。  
   
-     单击" **确定**"。  
+     单击“确定”。  
   
-5.  单击“运行”****。  
+5.  单击 **“运行”** 。  
   
      分析完成后，该工具会创建一个包含分析结果的新**模式**工作表。 报表列出找到的规则或关键影响因素，并显示每个规则的概率。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66081321"
   
  例如，如果您尝试填写一张显示订单发货距离的工作表，您可能会很自然地想到目的地对发货距离有重要影响。 在这种情况下，报表可能包含以下行：  
   
-|列|Value|倾向于|相对影响|  
+|列|值|倾向于|相对影响|  
 |------------|-----------|------------|---------------------|  
 |StateProvinceCode|AB|>500 千米|80%|  
   
@@ -70,7 +69,7 @@ ms.locfileid: "66081321"
 > [!NOTE]  
 >  **相对影响**显示为灰色条。 该条越长，此规则对所填充的值的预测概率就越大。  
   
- 该工具还会在原始数据表中添加一个名\<为 "列名称>" 的新列。  
+ 该工具还会将一个新列添加到名为 Extended 的原始数据表中 \<column name> 。  
   
  如果原始数据列中包含值，则该值将被复制到新列中。 但是，如果原始列包含空白单元，则在新列的相应位置将包含该向导预测的值。  
   

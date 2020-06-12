@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 52770f78381da2eb686aa445d19e6923f0f0a275
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 75f02dd54992e9cc4f94d9845e0e25de5ed988f2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889501"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545939"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>本地多维数据集（Analysis Services - 多维数据）
   若要创建、更新或删除本地多维数据集，必须编写并执行 ASSL 脚本或 AMO 程序。  
@@ -34,11 +33,11 @@ ms.locfileid: "68889501"
 >  不支持使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 来管理本地多维数据集。  
   
 ## <a name="local-cubes"></a>本地多维数据集  
- 可以从[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例中的现有多维数据集或从关系数据源创建和填充本地多维数据集。  
+ 可以从实例中的现有多维数据集 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 或从关系数据源创建和填充本地多维数据集。  
   
 |本地多维数据集的数据源|创建方法|  
 |------------------------------------|---------------------|  
-|基于服务器的多维数据集|您可以使用 CREATE GLOBAL CUBE 语句或[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]脚本语言（ASSL）脚本，从基于服务器的多维数据集创建和填充多维数据集。 有关详细信息，请参阅[CREATE GLOBAL CUBE 语句 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube)或[Analysis Services 脚本语言 &#40;ASSL&#41; 引用](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)。|  
+|基于服务器的多维数据集|您可以使用 CREATE GLOBAL CUBE 语句或 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 脚本语言（ASSL）脚本，从基于服务器的多维数据集创建和填充多维数据集。 有关详细信息，请参阅[CREATE GLOBAL CUBE 语句 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube)或[Analysis Services 脚本语言 &#40;ASSL&#41; 引用](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)。|  
 |关系数据源|可以使用 ASSL 脚本从 OLE DB 关系数据库创建和填充多维数据集。 若要使用 ASSL 创建本地多维数据集，只需连接到本地多维数据集文件 (*.cub)，并以与针对 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例执行 ASSL 脚本创建服务器多维数据集的相同方式执行 ASSL 脚本。 有关详细信息，请参阅[Analysis Services 脚本语言 &#40;ASSL&#41; 引用](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)。|  
   
  使用 REFRESH CUBE 语句可重新生成本地多维数据集并更新其数据。 有关详细信息，请参阅[REFRESH CUBE 语句 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-refresh-cube)。  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 228d1d91-7524-4773-9c83-39b04e8534d3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 08d01bb328bcf3e693724475532b6c9a39c79be2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c5113ec1a554f2ae74c3f024fd6cbe8f6398d8bf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063191"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527873"
 ---
 # <a name="attribute-relationships-dimension-designer-analysis-services---multidimensional-data"></a>属性关系（维度设计器）（Analysis Services - 多维数据）
   可以使用维度设计器中的 **“属性关系”** 选项卡，创建、修改或删除所选维度的属性关系。  

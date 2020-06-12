@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef011559-9ab9-4a19-b5da-265064fea521
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 860025d25b106964add87b77e95e1e4107af2ef9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da5921f6a1a3b7fa628ca8ee694837978fd987ea
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072501"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535569"
 ---
 # <a name="view-attributes-in-a-tree-list-or-grid-in-dimension-designer"></a>在维度设计器中查看树、列表或网格中的属性
   此过程介绍如何更改属性在维度设计器中的显示方式。  

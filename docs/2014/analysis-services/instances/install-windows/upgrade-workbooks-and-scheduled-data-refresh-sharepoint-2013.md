@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57fe740bdd02c96eb21994f5996c734620793616
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da4e685a1ebc05e27070873b12de99e8cc480a31
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079839"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543869"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>升级工作簿和计划的数据刷新 (SharePoint 2013)
   本主题说明在以前的 PowerPivot 环境中创建的工作簿的用户体验，以及如何升级 PowerPivot 工作簿以便您可以利用此版本中引入的新功能。 若要了解有关新功能的详细信息，请参阅[PowerPivot 中的新增](https://go.microsoft.com/fwlink/?LinkID=203917)功能。  
@@ -152,7 +151,7 @@ PS C:\Windows\system32> Set-PowerPivotSystemService -WorkbookUpgradeOnDataRefres
 ###  <a name="how-to-check-for-msolap-data-provider-information-in-a-powerpivot-workbook"></a><a name="bkmk_msolapxslx"></a>如何检查 PowerPivot 工作簿中的 MSOLAP 数据访问接口信息  
  使用下面的说明检查 PowerPivot 工作簿中使用的是哪个 OLE DB 访问接口。 检查数据连接信息不需要安装 [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] 外接程序。  
   
-1.  在 Excel 中的“数据”选项卡上，单击 **“连接”**。 单击“属性”****。  
+1.  在 Excel 中的“数据”选项卡上，单击 **“连接”**。 单击“属性”。  
   
 2.  在 **“定义”** 选项卡上，访问接口的版本显示在连接字符串的开头。  
   

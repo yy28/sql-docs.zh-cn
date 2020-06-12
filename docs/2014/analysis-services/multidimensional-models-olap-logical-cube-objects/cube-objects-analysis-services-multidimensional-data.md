@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 5cee362e-3f95-4467-bc6c-29b1518ecbf3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc9b813f5310acad9d6dfa2b844adae6168fc1f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e6dfb75be696ab26893e668b99dc36c7340f86c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702635"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545290"
 ---
 # <a name="cube-objects-analysis-services---multidimensional-data"></a>多维数据集对象（Analysis Services - 多维数据）
     
 ## <a name="introducing-cube-objects"></a>多维数据集对象介绍  
  简单 <xref:Microsoft.AnalysisServices.Cube> 对象由基本信息、维度和度量值组组成。 基本信息包括多维数据集的名称、多维数据集的默认度量值、数据源和存储模式等。  
   
- 维度集合包含在数据库维度集合的多维数据集中使用的实际维度集。 所有维度都必须先在数据库的维度集合中定义，然后才能在多维数据集中引用。 专用维度在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]不可用。  
+ 维度集合包含在数据库维度集合的多维数据集中使用的实际维度集。 所有维度都必须先在数据库的维度集合中定义，然后才能在多维数据集中引用。 专用维度在中不可用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。  
   
  度量值组是多维数据集中的度量值集。 度量值组是具有常见数据源视图和维度集的度量值的集合。 度量值组是度量值的处理单元；可先对度量值组进行单独处理，然后再浏览。  
   
@@ -35,7 +34,7 @@ ms.locfileid: "62702635"
 |主题||  
 |[操作（Analysis Services - 多维数据）](../multidimensional-models/actions-analysis-services-multidimensional-data.md)||  
 |[聚合和聚合设计](aggregations-and-aggregation-designs.md)||  
-|[“新建命名集”](calculations.md)||  
+|[计算](calculations.md)||  
 |[多维数据集单元 &#40;Analysis Services 多维数据&#41;](cube-cells-analysis-services-multidimensional-data.md)||  
 |[多维数据集属性](cube-properties-multidimensional-model-programming.md)||  
 |[多维数据集存储 &#40;Analysis Services 多维数据&#41;](cube-storage-analysis-services-multidimensional-data.md)||  

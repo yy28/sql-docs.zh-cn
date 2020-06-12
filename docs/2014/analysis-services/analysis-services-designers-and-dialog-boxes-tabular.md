@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cd2af1f3-cd8b-4651-9e4d-7c4c94353d7e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f049e8a91b072bc49c3c555101fdf9fb1398944c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3fab71693a437906c0458d2231193d828d5a3edd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062569"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528063"
 ---
 # <a name="analysis-services-designers-and-dialog-boxes-tabular"></a>Analysis Services 设计器和对话框（表格）
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的表格项目创作环境以及 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的表格模型管理工具都包含许多对话框、属性页和向导页。 您可以单击“帮助”按钮或按 F1 键来了解详细信息。  

@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 0420a2f6-6d11-4d6c-a889-31e8ef55bbee
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 596011e40eb6ed7ca2276da58dbbc1379e5b032c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f06781ea61a1958d41f37a55026a60cba67b387
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081501"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528463"
 ---
 # <a name="analysis-services-duplicate-security-role-dialog-box-analysis-services---multidimensional-data"></a>“Analysis Services 重复的安全角色”对话框（Analysis Services - 多维数据）
-  使用 " **Analysis Services 重复安全角色- \<数据库名称>- \<从中** [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的角色名称>" 对话框复制[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据库中的现有角色。 右键单击对象资源管理器中的角色并选择“复制”****，可以显示“复制角色”**** 对话框。  
+  使用中的 " **Analysis Services 重复的 \<database name>  -  \<copy from role name> 安全角色**" 对话框 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 可复制数据库中的现有角色 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 右键单击对象资源管理器中的角色并选择“复制”****，可以显示“复制角色”**** 对话框。  
   
 ## <a name="options"></a>选项  
   

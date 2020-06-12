@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3df71a2facc01abcb3ebdec57aaf243c0b7fda7d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fddf96a5d6ae1089ca2acd67f08ab0989ce75173
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083828"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521624"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft 顺序分析和聚类分析算法
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]顺序分析和聚类分析算法是提供[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的一种序列分析算法。 您可以使用此算法浏览包含可通过以下路径或*序列*链接的事件的数据。 该算法通过对相同的顺序进行分组或分类来查找最常见的顺序。 下面是一些数据示例，其中包含可用于数据挖掘的序列，旨在帮助您深入了解常见问题或业务方案：  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]顺序分析和聚类分析算法是提供的一种序列分析算法 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。 您可以使用此算法浏览包含可通过以下路径或*序列*链接的事件的数据。 该算法通过对相同的顺序进行分组或分类来查找最常见的顺序。 下面是一些数据示例，其中包含可用于数据挖掘的序列，旨在帮助您深入了解常见问题或业务方案：  
   
 -   用户在导航或浏览网站时创建的单击路径。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66083828"
  该算法在许多方面都类似于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法。 不过， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法不是查找包含类似属性的事例的分类，而是查找顺序中包含类似路径的事例的分类。  
   
 ## <a name="example"></a>示例  
- 网站[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]将收集有关站点用户所访问的页面以及页面访问顺序的信息。 因为该公司提供在线订购，所以用户必须登录到此站点。 这可以为该公司的各个客户配置文件提供点击信息。 通过对此数据使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法，该公司可以查找具有相同的点击模式或点击顺序的客户组或分类。 然后，该公司可以使用这些分类来分析用户如何在网站中移动，来识别哪些页面与特定商品的销售关系最密切及预测接下来哪些页面最有可能被访问。  
+ 网站将 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 收集有关站点用户所访问的页面以及页面访问顺序的信息。 因为该公司提供在线订购，所以用户必须登录到此站点。 这可以为该公司的各个客户配置文件提供点击信息。 通过对此数据使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法，该公司可以查找具有相同的点击模式或点击顺序的客户组或分类。 然后，该公司可以使用这些分类来分析用户如何在网站中移动，来识别哪些页面与特定商品的销售关系最密切及预测接下来哪些页面最有可能被访问。  
   
 ## <a name="how-the-algorithm-works"></a>算法的原理  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法是一种混合算法，它综合了聚类分析方法和 Markov 链分析，以识别分类及其顺序。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 顺序分析和聚类分析算法的特点之一是使用顺序数据。 此数据通常表示数据集中状态之间的一系列事件或转换，例如，特定用户的一系列产品购买或 Web 点击操作。 该算法会检查所有转换概率，并测量数据集中所有可能顺序之间的差异或距离，以确定最好使用哪些顺序作为聚类分析的输入。 在创建候选顺序列表后，该算法将该顺序信息用作聚类分析的 EM 方法的输入。  
@@ -68,7 +67,7 @@ ms.locfileid: "66083828"
   
  有关如何创建针对数据挖掘模型的查询的信息，请参阅 [数据挖掘查询](data-mining-queries.md)。 有关如何针对顺序分析和聚类分析模型使用查询的示例，请参阅 [顺序分析和聚类分析模型查询示例](clustering-model-query-examples.md)。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 -   不支持使用预测模型标记语言 (PMML) 创建挖掘模型。  
   

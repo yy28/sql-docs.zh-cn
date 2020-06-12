@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5a3e83c9-8788-431e-85b0-a68c79377ff3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9b2b248207d19f99aae3b07837d624fb9bb9cf6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b206facd1a8dc3faa58c58ae97e783d8a5c630b6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079338"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543619"
 ---
 # <a name="defining-a-data-source"></a>定义数据源
   在创建 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目后，通常通过定义项目使用的一个或多个数据源来开始使用项目。 定义数据源时，将定义要用于连接此数据源的连接字符串信息。 有关详细信息，请参阅 [创建数据源（SSAS 多维）](multidimensional-models/create-a-data-source-ssas-multidimensional.md)。  
@@ -34,9 +33,9 @@ ms.locfileid: "66079338"
   
      [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]还支持其他提供程序，这些提供程序显示在**提供程序**列表中。  
   
-5.  在 "**服务器名称**" 文本框中， `localhost`键入。  
+5.  在 "**服务器名称**" 文本框中，键入 `localhost` 。  
   
-     若要连接到本地计算机上的命名实例，请**键入\\ localhost<实例\>名称**。 若要连接到特定的计算机而不是本地计算机，请键入该计算机名称或 IP 地址。  
+     若要连接到本地计算机上的命名实例，请键入**localhost \\<实例 \> 名称**。 若要连接到特定的计算机而不是本地计算机，请键入该计算机名称或 IP 地址。  
   
 6.  确保已选中“使用 Windows 身份验证”****。 在“选择或输入数据库名称”**** 列表中，选择 **AdventureWorksDW2012**。  
   

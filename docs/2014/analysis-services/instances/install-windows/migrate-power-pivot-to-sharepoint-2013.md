@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cd90dd467d0e09f96901847b6a167477f35eeab8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63a3d08a4458ce9347f4e26238d8a28c2b49a22a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175236"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543889"
 ---
 # <a name="migrate-powerpivot-to-sharepoint-2013"></a>将 PowerPivot 迁移到 SharePoint 2013
 
@@ -52,7 +51,7 @@ ms.locfileid: "78175236"
 
 2.  安装新的 SharePoint Server 2013 场。
 
-3.  在 SharePoint 模式下安装[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]服务器的实例。 有关详细信息，请参阅 [PowerPivot for SharePoint 2013 Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)。
+3.  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 在 SharePoint 模式下安装服务器的实例。 有关详细信息，请参阅 [PowerPivot for SharePoint 2013 Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)。
 
 4.  在 SharePoint 场中的每台服务器上运行 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013 安装包 **spPowerPivot.msi** 。 有关详细信息，请参阅[在 SharePoint 2013&#41;中安装或卸载 PowerPivot for SharePoint 外接程序 &#40;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)。
 
@@ -72,7 +71,7 @@ ms.locfileid: "78175236"
 5.  **将数据库设为读写：** 将“数据库只读”**** 设置为 **False**。
 
 ##  <a name="3-prepare-web-applications-and-mount-content-databases"></a><a name="bkmk_prepare_mount_databases"></a>3）准备 Web 应用程序并装载内容数据库
- 有关以下过程的详细说明，请参阅[将数据库从 SharePoint 2010 升级到 sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) （https://go.microsoft.com/fwlink/p/?LinkId=256690)。
+ 有关以下过程的详细说明，请参阅[将数据库从 SharePoint 2010 升级到 sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) （ https://go.microsoft.com/fwlink/p/?LinkId=256690) 。
 
 1.  **使数据库脱机：**
 
@@ -96,7 +95,7 @@ ms.locfileid: "78175236"
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]
     ```
 
-     有关详细信息，请参阅[附加或分离内容数据库（SharePoint Server 2010）](https://technet.microsoft.com/library/ff628582.aspx) （https://technet.microsoft.com/library/ff628582.aspx)。
+     有关详细信息，请参阅[附加或分离内容数据库（SharePoint Server 2010）](https://technet.microsoft.com/library/ff628582.aspx) （ https://technet.microsoft.com/library/ff628582.aspx) 。
 
      **步骤完成时的状态：**  在装入操作完成时，用户可以看到已处于旧的内容数据库中的文件。 因此，用户可以在文档库中看到和打开工作簿。
 
@@ -129,7 +128,7 @@ ms.locfileid: "78175236"
 
 -   **迁移计划选项 1：SharePoint 场管理员**
 
-    1.  在 SharePoint 2013 管理中，使用`Set-PowerPivotServiceApplication` `-StartMigratingRefreshSchedules`开关运行 cmdlet，以便启用自动的按需计划迁移![与 PowerShell 相关的内容](../../../reporting-services/media/rs-powershellicon.jpg "PowerShell 相关内容")。 下面的 Windows PowerShell 脚本假定只有一个 PowerPivot 服务应用程序。
+    1.  在 SharePoint 2013 管理中， `Set-PowerPivotServiceApplication` 使用开关运行 cmdlet， `-StartMigratingRefreshSchedules` 以便启用自动的按需计划迁移![与 PowerShell 相关的内容](../../../reporting-services/media/rs-powershellicon.jpg "PowerShell 相关内容")。 下面的 Windows PowerShell 脚本假定只有一个 PowerPivot 服务应用程序。
 
         ```powershell
         $app = Get-PowerPivotServiceApplication
@@ -170,8 +169,8 @@ ms.locfileid: "78175236"
 
 -   [升级工作簿和计划的数据刷新 (SharePoint 2013)](https://docs.microsoft.com/analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013)。
 
--   [SharePoint 2013 升级过程概述](https://go.microsoft.com/fwlink/p/?LinkId=256688)（https://go.microsoft.com/fwlink/p/?LinkId=256688)。
+-   [SharePoint 2013 升级过程概述](https://go.microsoft.com/fwlink/p/?LinkId=256688)（ https://go.microsoft.com/fwlink/p/?LinkId=256688) 。
 
--   https://go.microsoft.com/fwlink/p/?LinkId=256689)[升级到 SharePoint 2013 （之前的准备](https://go.microsoft.com/fwlink/p/?LinkId=256689)工作。
+-   [升级到 SharePoint 2013 （之前的准备](https://go.microsoft.com/fwlink/p/?LinkId=256689)工作 https://go.microsoft.com/fwlink/p/?LinkId=256689) 。
 
--   [将数据库从 sharepoint 2010 升级到 sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) （https://go.microsoft.com/fwlink/p/?LinkId=256690)。
+-   [将数据库从 sharepoint 2010 升级到 sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) （ https://go.microsoft.com/fwlink/p/?LinkId=256690) 。

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ec4bad8ef036e8f19ce0a856f3d9c04bafd0e7c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69d44846f37960ebebf4bce03924270163dabe8e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079271"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543553"
 ---
 # <a name="lesson-12-create-roles"></a>第 12 课：创建角色
   在本课中，您将创建角色。 角色通过只限作为角色成员的那些 Windows 用户进行访问，提供模型数据库对象和数据的安全性。 每个角色都定义有单一权限：无、读取、读取和处理、处理，或管理员。 通过使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中的“角色管理器”对话框，可在模型创作期间定义角色。 在部署模型后，可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]管理角色。 若要了解详细信息，请参阅[角色（SSAS 表格）](tabular-models/roles-ssas-tabular.md)。  
@@ -48,7 +47,7 @@ ms.locfileid: "66079271"
   
      随后会将一个“无”权限的新角色添加到列表中。  
   
-3.  单击新角色，然后在 "**名称**" 列中，将角色重命名为`Internet Sales Manager`。  
+3.  单击新角色，然后在 "**名称**" 列中，将角色重命名为 `Internet Sales Manager` 。  
   
 4.  在“权限”列中，单击下拉列表，并选择“读取”权限。********  
   
@@ -66,7 +65,7 @@ ms.locfileid: "66079271"
   
      随后会将一个“无”权限的新角色添加到列表中。  
   
-3.  单击新角色，然后在 "**名称**" 列中，将角色重命名为`Internet Sales US`。  
+3.  单击新角色，然后在 "**名称**" 列中，将角色重命名为 `Internet Sales US` 。  
   
 4.  在“权限”列中，单击下拉列表，并选择“读取”权限。********  
   
@@ -88,7 +87,7 @@ ms.locfileid: "66079271"
   
 1.  在 **“角色管理器”** 对话框中，单击 **“新建”**。  
   
-2.  单击新角色，然后在 "**名称**" 列中，将角色重命名为`Internet Sales Administrator`。  
+2.  单击新角色，然后在 "**名称**" 列中，将角色重命名为 `Internet Sales Administrator` 。  
   
 3.  在“权限”列中，单击下拉列表，然后选择“管理员”权限。********  
   

@@ -25,16 +25,15 @@ helpviewer_keywords:
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1cf75c9f6fc12ea84d15aebff5c50d11dd0fd924
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e3400d904bc857bc282bb1ad9220c1e01fe5a4d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085663"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524033"
 ---
 # <a name="content-types-data-mining"></a>内容类型（数据挖掘）
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以为挖掘结构中的列定义物理数据类型，并在模型中使用该列时定义该列的逻辑内容类型。  
+  在中， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 您可以为挖掘结构中的列定义物理数据类型，并在模型中使用该列时定义该列的逻辑内容类型。  
   
  “数据类型 ** ”确定在您创建挖掘模型时算法如何处理这些列中的数据。 定义列的数据类型可为算法提供有关列中的数据类型以及如何处理数据的信息。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的每种数据类型均支持用于数据挖掘的一种或多种内容类型。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66085663"
   
  以下数据类型支持 `Discretized` 内容类型：`Date`、`Double`、`Long` 和 `Text`。  
   
-## <a name="key"></a>键  
+## <a name="key"></a>密钥  
  “key ** ”内容类型意味着该列唯一标识一行。 在事例表中，键列通常为数值或文本标识符。 将内容类型设置为 `key` 可指示该列不应该用于分析，而仅应用于跟踪记录。  
   
  嵌套表也有键，但嵌套表键的用法稍有不同。 如果某列是您需要分析的属性，则在嵌套表中将内容类型设置为 `key`。 嵌套表键的值对于每个事例来说都必须唯一，但在整个事例集中可以重复。  

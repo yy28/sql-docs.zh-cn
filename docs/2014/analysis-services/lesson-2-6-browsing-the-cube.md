@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3819946e-d3fa-4c1d-afe3-599c938b1b2e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 910bb7a425e62221dce932392e1aedfaa401a992
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 62d688230a43305ae0c652891213ba529a378e70
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078982"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543475"
 ---
 # <a name="browsing-the-cube"></a>浏览多维数据集
   在部署多维数据集后，可以在多维数据集设计器的“浏览器”**** 选项卡中查看多维数据集数据，以及在维度设计器的“浏览器”**** 选项卡中查看维度数据。 浏览多维数据集和维度数据是以增量方式检查您的工作的方式。 您可以在处理对象后，验证对属性、关系和其他对象的细微更改是否具有期望的效果。 在使用“浏览器”选项卡来查看多维数据集和维度数据时，该选项卡将基于您正在浏览的对象提供不同的功能。  
@@ -30,7 +29,7 @@ ms.locfileid: "66078982"
   
 1.  切换到 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的“产品”维度的“维度设计器”****。 为此，请双击解决方案资源管理器的“维度”**** 节点的“产品”**** 维度。  
   
-2.  单击 "**浏览器**" 选项卡**All**以显示`Product Key`属性层次结构的 "所有" 成员。 在第 3 课中，你将定义“产品”维度的用户层次结构，利用此结构可浏览该维度。  
+2.  单击 "**浏览器**" 选项卡以显示属性层次结构的 "**所有**" 成员 `Product Key` 。 在第 3 课中，你将定义“产品”维度的用户层次结构，利用此结构可浏览该维度。  
   
 3.  切换到 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的“多维数据集设计器”****。 为此，请双击解决方案资源管理器的 "**多维数据集**" 节点中的**Analysis Services 教程**多维数据集。  
   

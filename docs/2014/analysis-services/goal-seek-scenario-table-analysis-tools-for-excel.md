@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: efe50306-cf7c-46b3-9cc4-e7f0b6968b0c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d547c52bc5d4cb02870fc647469b5f63af9ab7cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f535aa831824b2ab283b2b596d0de49ef0e72515
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080741"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544344"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>目标查找应用场景（Excel 表分析工具）
   ![表分析工具中的“目标查找”按钮](media/tat-goalseek.gif "表分析工具中的“目标查找”按钮")  
@@ -99,7 +98,7 @@ ms.locfileid: "66080741"
 ## <a name="related-tools"></a>相关工具  
  Excel 数据挖掘客户端是一个独立的外接程序，它提供更高级的数据挖掘功能，还包含用于创建可预测行为的数据挖掘模型的向导。 有关详细信息，请参阅[创建数据挖掘模型](creating-a-data-mining-model.md)。  
   
- 有关 "**目标查找**" 方案工具使用的算法的详细信息，请参阅联机丛书中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的主题 "Microsoft 逻辑回归算法"。  
+ 有关 "**目标查找**" 方案工具使用的算法的详细信息，请参阅联机丛书中的主题 "Microsoft 逻辑回归算法" [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
 ## <a name="see-also"></a>另请参阅  
  [Excel 表分析工具](table-analysis-tools-for-excel.md)  

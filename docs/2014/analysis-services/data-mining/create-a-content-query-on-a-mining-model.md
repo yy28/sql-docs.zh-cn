@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0ce837a-89ed-46cf-9ce1-801ccb75fa04
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d2e3607426ecbc51b1d04dfc97b12f83faf328b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a963743dff12a239fb5d45a05c0af91af00620eb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085574"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524013"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>针对挖掘模型创建内容查询
   使用 AMO 或 XML/A 可以采用编程方式查询挖掘模型内容，但是使用 DMX 创建查询更简单。 您还可以通过建立与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的连接并使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供的 DMV 创建查询，来针对数据挖掘架构行集创建查询。  
@@ -40,17 +39,17 @@ ms.locfileid: "66085574"
   
      此时将在相应代码编辑器中打开 **“内容查询”** 模板。 元数据窗格列出了当前数据库中的可用模型。 若要更改数据库，请从 **“可用数据库”** 列表中选择不同的数据库。  
   
-5.  在 " `FROM` *\<挖掘模型"、"名称"、"mymodel>>*" 行中输入挖掘模型的`.CONTENT`名称。 如果挖掘模型的名称包含空格，则必须用方括号将该名称括起来。  
+5.  在 [] 行中输入挖掘模型的名称 `FROM` *\<mining model, name, MyModel>* `.CONTENT` 。 如果挖掘模型的名称包含空格，则必须用方括号将该名称括起来。  
   
      如果不希望键入名称，则可以在 **对象资源管理器** 中选择某个挖掘模型，并将其拖放到模板中。  
   
-6.  在行中， `SELECT` * \<选择 "列表，expr 列表\*" *，键入挖掘模型内容架构行集中的列的名称。  
+6.  在行中 `SELECT` *\<select list, expr list, \*>* ，键入挖掘模型内容架构行集中的列的名称。  
   
      若要查看可在挖掘模型内容查询中返回的列的列表，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)提供的 DMV 创建查询，来针对数据挖掘架构行集创建查询。  
   
 7.  或者，您也可以在模板的 WHERE 子句中键入条件，以将返回的行限制为特定的节点或值。  
   
-8.  单击“执行” ****。  
+8.  单击“执行”  。  
   
 ## <a name="querying-the-data-mining-schema-rowsets"></a>查询数据挖掘架构行集  
   
@@ -70,7 +69,7 @@ ms.locfileid: "66085574"
   
      `WHERE MODEL_NAME = '<model name>'`  
   
-4.  单击“执行” ****。  
+4.  单击“执行”  。  
   
      “结果”窗格将显示模型的内容。  
   

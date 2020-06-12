@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7c59d3a18c1fd36f82e8ea60e42d1b9f6e2f34c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1702ad82c65b5a7370a62c4bc31a08007f374c9f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084983"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523154"
 ---
 # <a name="data-mining-query-interfaces"></a>数据挖掘查询接口
   数据挖掘基于数据挖掘扩展插件 (DMX) 语言。 您可以为所有预测和建模任务使用 DMX，这些任务包括分类、风险分析、生成建议和线性回归。 您还可以检索在处理模型时生成的模式和统计信息。  
@@ -60,8 +59,8 @@ ms.locfileid: "66084983"
   
  使用该查询生成器时，可以使用图形工具来选择挖掘模型、添加新事例数据和添加预测函数。 预测查询生成器包括一个可用于手动修改查询的文本编辑器，以及一个用于查看查询结果的简单 "**结果**" 窗格。  
   
-###  <a name="query-editor"></a><a name="bkmk_QueryEditor"></a> 查询编辑器  
- 中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的查询编辑器提供了可用于生成和运行 DMX 查询的工具。 可以连接到 SQL Server Analysis Services 的实例，然后选择数据库、挖掘结构列和挖掘模型。 **“元数据浏览器”** 包含可浏览的预测函数的列表。  
+###  <a name="query-editor"></a><a name="bkmk_QueryEditor"></a>查询编辑器  
+ 中的查询编辑器 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了可用于生成和运行 DMX 查询的工具。 可以连接到 SQL Server Analysis Services 的实例，然后选择数据库、挖掘结构列和挖掘模型。 **“元数据浏览器”** 包含可浏览的预测函数的列表。  
   
 ###  <a name="dmx-templates"></a><a name="bkmk_Templates"></a>DMX 模板  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了可用于生成 DMX 查询的交互式 DMX 查询模板。 如果看不到模板列表，请单击工具栏上的 **“视图”** ，然后选择 **“模板资源管理器”**。 若要查看所有 Analysis Services 模板，包括用于 DMX、MDX 和 XMLA 的模板，请单击多维数据集图标。  
@@ -74,7 +73,7 @@ ms.locfileid: "66084983"
 >  针对 Microsoft Office Excel 的数据挖掘外接程序还包含多个模板以及可帮助您编写复杂的 DMX 语句的交互式查询生成器。 若要使用模板，请单击 **“查询”**，再单击数据挖掘客户端中的 **“高级”** 。  
   
 ###  <a name="integration-services-data-mining-components"></a><a name="bkmk_SSIS"></a>Integration Services 数据挖掘组件  
- 还可以将[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]预测查询包括为包的一部分。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的以下任务和转换支持创建和执行 DMX 预测查询和 DMX 语句。  
+ 还可以将预测查询包括为包的一部分 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的以下任务和转换支持创建和执行 DMX 预测查询和 DMX 语句。  
   
 |组件|说明|  
 |---------------|-----------------|  

@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 03d7cb5c-7ff0-4e15-bcd2-7075d1b0dd69
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d775b8fbfb7d50b5db245073fdc52fc274638eb9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 723eb7c1c0e8547ee411fc54ecd4aca613011b38
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075864"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547109"
 ---
 # <a name="database-readwritemodes"></a>数据库 ReadWriteMode
-  通常会出现这样的情况， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 希望将读/写数据库更改为只读数据库，或者恰好相反。 通常根据业务需要进行相应的更改，例如：为制定解决方案和提高性能，在多个服务器之间共享同一数据库文件夹。 在`ReadWriteMode`这些情况下，数据库属性使[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 可以轻松地更改数据库运行模式。  
+  通常会出现这样的情况， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 希望将读/写数据库更改为只读数据库，或者恰好相反。 通常根据业务需要进行相应的更改，例如：为制定解决方案和提高性能，在多个服务器之间共享同一数据库文件夹。 在这些情况下， `ReadWriteMode` 数据库属性使 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 可以轻松地更改数据库运行模式。  
   
 ## <a name="readwritemode-database-property"></a>ReadWriteMode 数据库属性  
   数据库属性指定了数据库是处于读/写模式还是只读模式。 只可能有两个属性值。 在数据库处于只读模式时，不能对数据库应用更改或更新。 但是，在数据库处于读/写模式时，可能会出现更改和更新。  数据库属性被定义为只读属性；只能通过  命令设置该属性。  
@@ -38,7 +37,7 @@ ms.locfileid: "66075864"
 ## <a name="readwritemode-usage"></a>ReadWriteMode 用法  
  `ReadWriteMode` 数据库属性将用作 `Attach` 数据库命令的一部分。  命令允许将数据库属性设置为  或 。 因为 `ReadWriteMode` 数据库属性被定义为只读，所以不能直接更新该属性值。 通过将 `ReadWriteMode` 属性设置为 `ReadWrite` 可创建数据库。 不能在只读模式下创建数据库。  
   
- 若要在`ReadWriteMode`和`ReadWrite` `ReadOnly`之间切换数据库属性，必须发出一系列`Detach/Attach`命令。  
+ 若要在 `ReadWriteMode` 和之间切换数据库属性 `ReadWrite` `ReadOnly` ，必须发出一系列 `Detach/Attach` 命令。  
   
  除 `Attach` 外的所有数据库操作将保持 `ReadWriteMode` 数据库属性的当前状态。 例如，`Alter`、`Backup`、`Restore` 和 `Synchronize` 等操作会保留 `ReadWriteMode` 值。  
   

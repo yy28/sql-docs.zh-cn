@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 585f27f2-d5eb-4516-b29a-2084010b7d51
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 26eb85c97c970f9fe1cfaf63ca9861c2be0b4695
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0758c814a7edce134be01ebf766a12832e942a61
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079467"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543699"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>“键列”对话框（Analysis Services - 多维数据）
   可以使用 **“键列”** 对话框更改特性的 **KeyColumns** 属性。 有关详细信息，请参阅 [修改特性的 KeyColumn 属性](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md)。  
@@ -42,13 +41,13 @@ ms.locfileid: "66079467"
   
  若要从“键列”列表中删除列，请选择列，然后单击 **“键列”** 按钮 **\<** 。  
   
- **Up**  
+ **向上**  
  单击此项可在****“键列”中将所选列上移一个位置。  
   
 > [!NOTE]  
 >  仅当列表中包含一个以上列并且选定某列时，才启用此选项。  
   
- **分解**  
+ **向下**  
  单击此项可在“键列”**** 中将所选列下移一个位置。  
   
 > [!NOTE]  

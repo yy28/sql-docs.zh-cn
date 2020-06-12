@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 76b5027f19eade18aa07187c1673f6ad27079391
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c34380e901590062b679129ad66838bbdfff897a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075940"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547139"
 ---
 # <a name="create-a-date-type-dimension"></a>创建日期类型维度
-  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，时间维度是指其属性表示时间段（如年、半期、季度、月和天）的维度类型。 时间维度中的时间段可提供用于分析和报告的基于时间的粒度级别。 属性将按层次结构进行组织，并且时间维度的粒度主要由历史数据的业务和报表需求决定。 例如，商业智能应用程序中的大多数财务数据和销售数据使用月粒度或季度粒度。  
+  在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，时间维度是指其属性表示时间段（如年、半期、季度、月和天）的维度类型。 时间维度中的时间段可提供用于分析和报告的基于时间的粒度级别。 属性将按层次结构进行组织，并且时间维度的粒度主要由历史数据的业务和报表需求决定。 例如，商业智能应用程序中的大多数财务数据和销售数据使用月粒度或季度粒度。  
   
  通常， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的多维数据集会以某种形式合并一个时间维度。 多维数据集可能包含多个时间维度，也可以包含来自同一时间维度的多个层次结构，具体将取决于数据的粒度和报表需求。 但是，并非所有多维数据集都需要时间维度。 某些 OLAP 应用程序（例如，基于活动的开销）不需要时间维度，因为基于活动的维度内的开销是基于活动的，而不是基于时间的。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "66075940"
   
  可以在维度设计器中手动构造这些不同的日历。 但是，在创建时间维度或服务器时间维度时，维度向导会提供几个层次结构模板，可用于自动生成若干种类型的日历。 下表说明了可通过维度向导生成的各种日历。  
   
-|Calendar|说明|  
+|日历|说明|  
 |--------------|-----------------|  
 |标准日历|十二个月的公历，从 1 月 1 日开始，到 12 月 31 日结束。<br /><br /> 无论使用维度向导创建时间维度还是服务器时间维度，在定义了表示维度的时间段属性之后，该向导都会生成一个标准日历的层次结构。 如果使用维度向导创建服务器时间维度，则可将标准日历的开始日期调整为 1 月 1 日以外的某一天。|  
 |会计日历|十二个月会计日历。 如果选择该日历，则要为单位使用的会计日历指定开始的月份和日期。<br /><br /> 注意：只有在使用维度向导创建服务器时间维度时，该日历才可用。|  

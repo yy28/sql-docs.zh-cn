@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b7222318-7307-4afb-b585-9358426103a0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c1236a9cdffc4dd06764da1f2988df80d568798c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2020119f0561de92f4829f7d03d0f5e7ecd930fa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175646"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540454"
 ---
 # <a name="delete-powerpivot-gallery"></a>删除 PowerPivot 库
   删除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库还会删除它的所有项，包括为计划的数据刷新配置的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的数据刷新历史记录。

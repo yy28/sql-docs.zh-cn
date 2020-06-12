@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c8d65325f8008756a65a584a2538b9d56ebd579
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83cdc571019cffd8ae99e00f119541736c6f503b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072717"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541279"
 ---
 # <a name="use-aggregate-functions"></a>使用聚合函数
   使用维度来切分度量值时，按该维度中包含的层次结构汇总该度量值。 汇总行为取决于为度量值指定的聚合函数。 对于包含数字数据的度量值，聚合函数是 `Sum`。 度量值的值的总和将根据活动的层次结构的级别而异。  
   
- 在 Analysis Services 中，你创建的每一个度量值均由确定该度量值的操作的聚合函数备份。 预定义的聚合`Sum`类型`Min`包括`Max`、 `Count`、、、**非重复计数**和几个其他更专用的函数。 或者，如果需要基于复杂或自定义公式的聚合，可以生成 MDX 计算，而非使用预生成的聚合函数。 例如，如果想定义一个百分比值的度量值，你将在 MDX 中使用计算度量值执行该操作。 请参阅 [CREATE MEMBER 语句 (MDX)](/sql/mdx/mdx-data-definition-create-member)。  
+ 在 Analysis Services 中，你创建的每一个度量值均由确定该度量值的操作的聚合函数备份。 预定义的聚合类型包括 `Sum` 、 `Min` 、 `Max` 、 `Count` 、**非重复计数**和几个其他更专用的函数。 或者，如果需要基于复杂或自定义公式的聚合，可以生成 MDX 计算，而非使用预生成的聚合函数。 例如，如果想定义一个百分比值的度量值，你将在 MDX 中使用计算度量值执行该操作。 请参阅 [CREATE MEMBER 语句 (MDX)](/sql/mdx/mdx-data-definition-create-member)。  
   
  对通过“多维数据集向导”创建的度量值分配了作为度量值定义的一部分的聚合类型。 聚合类型始终是 `Sum`，假设源列包含数字数据。 在不考虑源列的数据类型的情况下分配 `Sum`。 例如，如果你使用“多维数据集向导”创建度量值并从事实数据表中拉入所有列，则你将注意到所有所得度量值均具有 `Sum` 的聚合，即使源是日期时间列。 始终检查通过向导创建的度量值的预分配的聚合方法，以确保聚合函数恰当。  
   
@@ -31,7 +30,7 @@ ms.locfileid: "66072717"
 ##  <a name="aggregate-functions"></a><a name="AggFunction"></a>聚合函数  
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 提供了几种函数，用来针对包含在度量值组中的维度聚合度量值。 聚合函数的 *累加性* 可确定度量值如何在多维数据集的所有维度中进行聚合。 聚合函数具有三个级别的累加性：  
   
- 加法  
+ 累加性  
  累加性度量值也称为完全累加性度量值，可针对包含度量值的度量值组中包括的所有维度进行聚合，没有任何限制。  
   
  半累加性  
@@ -44,8 +43,8 @@ ms.locfileid: "66072717"
   
 |聚合函数|累加性|返回值|  
 |--------------------------|----------------|--------------------|  
-|`Sum`|加法|对所有子成员的值求和。 这是默认的聚合函数。|  
-|`Count`|加法|检索所有子成员的计数。|  
+|`Sum`|累加性|对所有子成员的值求和。 这是默认的聚合函数。|  
+|`Count`|累加性|检索所有子成员的计数。|  
 |`Min`|半累加性|检索所有子成员的最低值。|  
 |`Max`|半累加性|检索所有子成员的最高值。|  
 |`DistinctCount`|非累加性|检索所有唯一子成员的计数。 有关详细信息，请参阅下一节中的 [About Distinct Count Measures](use-aggregate-functions.md#bkmk_distinct) 。|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 01793166-a3e5-4856-8302-21b82d494e69
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a363336af1bee8c3f84ff620f667c7c0d510b73
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 960b0ef3f050b780998a0f86dcd7b7edf121676d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080733"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544309"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>授予对存储过程的权限 (Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的存储过程或程序集是使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET 编程语言编写的外部例程，扩展了 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的功能。 通过程序集，开发人员可以利用跨语言集成、异常处理、版本支持、部署支持以及调试支持。  
@@ -29,7 +28,7 @@ ms.locfileid: "66080733"
   
  下面便是用于运行存储过程的权限集：  
   
--   **Safe**使用 Safe 权限集，存储过程无法访问[!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Framework 中的受保护资源。 此权限集仅允许执行计算。 它是最安全的权限集；不会将信息泄露到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 之外，不能评估权限，并且最大限度地减低了数据篡改攻击的风险。  
+-   **Safe**使用 Safe 权限集，存储过程无法访问 .NET Framework 中的受保护资源 [!INCLUDE[msCoName](../includes/msconame-md.md)] 。 此权限集仅允许执行计算。 它是最安全的权限集；不会将信息泄露到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 之外，不能评估权限，并且最大限度地减低了数据篡改攻击的风险。  
   
 -   **外部访问**使用外部访问权限集，存储过程可以使用托管代码访问外部资源。 将存储过程设置为此权限集不会导致可引起服务器不稳定的编程错误。 但是，此权限集可能导致信息泄露到服务器之外，并可能导致权限提升以及数据篡改攻击。  
   

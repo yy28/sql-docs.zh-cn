@@ -1,5 +1,6 @@
 ---
 title: sp_repldone （Transact-sql） |Microsoft Docs
+description: 更新用于标识服务器的最后一个已分发事务的记录。 此存储过程在发布服务器的发布数据库上运行。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4e504a1fd074f198a62c94ffa773a08026d1e9c0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b89dcde2aab76fcb6760f2788503485ef42182ac
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834302"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807887"
 ---
 # <a name="sp_repldone-transact-sql"></a>sp_repldone (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ sp_repldone [ @xactid= ] xactid
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功）或**1** （失败）  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  **sp_repldone**用于事务复制。  
   
  日志读取器进程使用**sp_repldone**来跟踪已分发的事务。  

@@ -1,5 +1,6 @@
 ---
 title: SQL Server 迁移助手 |Microsoft Docs
+description: 了解 SQL Server 迁移助手，它是一种可自动执行数据库迁移以便从 Microsoft Access、DB2、MySQL、Oracle 和 SAP ASE SQL Server 的工具。
 ms.custom: ''
 ms.date: 10/10/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Jtoland
 ms.author: Jtoland
-ms.openlocfilehash: fa87f4ac6f5a4caf5da8d5b00200b1dd8c92d53a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f03fdab2cf2f2593d43c16cef572614b36731ef9
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252122"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84294024"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 
@@ -68,7 +69,7 @@ SSMA 支持以下目标版本。
   
   - [SQL Server Developer 中心社区](https://go.microsoft.com/fwlink/?LinkId=42456)-对 SQL Server 开发人员有用的新闻组、论坛和其他社区资源  
   
-- **辅助支持**-请参阅[https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts)并搜索 "SQL Server 迁移助手"。  选择你的版本，然后选择 "启动请求"。  SQL Server 迁移助手工具附带了辅助支持。  
+- **辅助支持**-请参阅 [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) 并搜索 "SQL Server 迁移助手"。  选择你的版本，然后选择 "启动请求"。  SQL Server 迁移助手工具附带了辅助支持。  
   
 - **顶级支持**-如果你拥有顶级合同，则可以在[premier Online 门户](https://premier.microsoft.com/)上获得顶级支持。  
   

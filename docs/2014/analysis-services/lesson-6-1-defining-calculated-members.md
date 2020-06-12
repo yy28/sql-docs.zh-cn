@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ede0a23a6e37c47a1af242748233ca49b0cdfab7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9be99e5f5107491e2bac14c3a1590ccb1e1c778f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493886"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542837"
 ---
 # <a name="defining-calculated-members"></a>定义计算成员
   计算成员是基于多维数据集数据、算术运算符、数字和函数组合定义的维度或度量值组成员。 例如，可以创建用于计算多维数据集中的两个物理度量值之和的计算成员。 计算成员定义将存储在多维数据集中，但它们的值将在查询时计算。  
@@ -42,7 +41,7 @@ ms.locfileid: "69493886"
   
      ![“计算表达式”窗格窗体](../../2014/tutorials/media/l6-calculatedmembers-02.gif "“计算表达式”窗格窗体")  
   
-3.  在 "**名称**" 框中，将计算度量值的名称`[Total Sales Amount]`更改为。  
+3.  在 "**名称**" 框中，将计算度量值的名称更改为 `[Total Sales Amount]` 。  
   
      如果计算成员的名称包含空格，则该计算成员名称必须放在方括号中。  
   
@@ -85,9 +84,9 @@ ms.locfileid: "69493886"
   
      ![“计算表达式”窗格中的脚本](../../2014/tutorials/media/l6-calculatedmembers-04.gif "“计算表达式”窗格中的脚本")  
   
-12. 在 "**计算**" 选项卡的工具栏上，单击 "**窗体视图**"，确认`[Total Sales Amount]`已在 "**脚本组织**程序" 窗格中选择，然后单击 "**新建计算成员**"。  
+12. 在 "**计算**" 选项卡的工具栏上，单击 "**窗体视图**"，确认 `[Total Sales Amount]` 已在 "**脚本组织**程序" 窗格中选择，然后单击 "**新建计算成员**"。  
   
-13. 将这个新计算成员的名称更改为`[Total Product Cost]`，然后在 "**表达式**" 框中创建以下表达式：  
+13. 将这个新计算成员的名称更改为 `[Total Product Cost]` ，然后在 "**表达式**" 框中创建以下表达式：  
   
     ```  
     [Measures].[Internet Sales-Total Product Cost] + [Measures].[Reseller Sales-Total Product Cost]  
@@ -101,9 +100,9 @@ ms.locfileid: "69493886"
   
 ## <a name="defining-gross-profit-margin-calculations"></a>定义毛利润率计算  
   
-1.  验证是否`[Total Product Cost]`已在 "**脚本组织**程序" 窗格中选择，然后在 "**计算**" 选项卡的工具栏上单击 "**新建计算成员**"。  
+1.  验证 `[Total Product Cost]` 是否已在 "**脚本组织**程序" 窗格中选择，然后在 "**计算**" 选项卡的工具栏上单击 "**新建计算成员**"。  
   
-2.  在 "**名称**" 框中，将此新计算度量值的`[Internet GPM]`名称更改为。  
+2.  在 "**名称**" 框中，将此新计算度量值的名称更改为 `[Internet GPM]` 。  
   
 3.  在“表达式”**** 框中，创建以下 MDX 表达式：  
   
@@ -119,7 +118,7 @@ ms.locfileid: "69493886"
   
 6.  在“计算”**** 选项卡的工具栏上，单击“新建计算成员”****。  
   
-7.  在 "**名称**" 框中，将此新计算度量值的`[Reseller GPM]`名称更改为。  
+7.  在 "**名称**" 框中，将此新计算度量值的名称更改为 `[Reseller GPM]` 。  
   
 8.  在“表达式”**** 框中，创建以下 MDX 表达式：  
   
@@ -135,7 +134,7 @@ ms.locfileid: "69493886"
   
 11. 在“计算”**** 选项卡的工具栏上，单击“新建计算成员”****。  
   
-12. 在 "**名称**" 框中，将此计算度量值的`[Total GPM]`名称更改为。  
+12. 在 "**名称**" 框中，将此计算度量值的名称更改为 `[Total GPM]` 。  
   
 13. 在“表达式”**** 框中，创建以下 MDX 表达式：  
   
@@ -153,7 +152,7 @@ ms.locfileid: "69493886"
   
 16. 在“计算”**** 选项卡的工具栏上，单击“脚本视图”****，然后检查刚才添加到计算脚本中的三个计算。  
   
-17. 在计算脚本中紧靠`[Internet GPM]`计算之前添加新行，然后在脚本中将以下文本添加到脚本中：  
+17. 在计算脚本中紧靠计算之前添加新行 `[Internet GPM]` ，然后在脚本中将以下文本添加到脚本中：  
   
     ```  
     /* Calculations to calculate gross profit margin */  
@@ -167,11 +166,11 @@ ms.locfileid: "69493886"
   
 1.  在“计算”**** 选项卡的工具栏上，单击“窗体视图”****。  
   
-2.  在 "**脚本组织**程序" 窗格`[Total GPM]`中，选择，然后在 "**计算**" 选项卡的工具栏上单击 "**新建计算成员**"。  
+2.  在 "**脚本组织**程序" 窗格中，选择 `[Total GPM]` ，然后在 "**计算**" 选项卡的工具栏上单击 "**新建计算成员**"。  
   
      在单击“新建计算成员”**** 之前单击“脚本组织程序”**** 窗格中的最后一个计算成员，可以保证在脚本末尾输入新计算成员。 脚本按它们出现在“脚本组织程序”**** 窗格中的顺序执行。  
   
-3.  将这个新计算成员的名称更改为`[Internet Sales Ratio to All Products]`。  
+3.  将这个新计算成员的名称更改为 `[Internet Sales Ratio to All Products]` 。  
   
 4.  在“表达式”**** 框中键入以下表达式：  
   
@@ -194,7 +193,7 @@ ms.locfileid: "69493886"
   
 7.  在“计算”**** 选项卡的工具栏上，单击“新建计算成员”****。  
   
-8.  将此计算成员的名称更改为`[Reseller Sales Ratio to All Products]`。  
+8.  将此计算成员的名称更改为 `[Reseller Sales Ratio to All Products]` 。  
   
 9. 在“表达式”**** 框中键入以下表达式：  
   
@@ -215,7 +214,7 @@ ms.locfileid: "69493886"
   
 12. 在“计算”**** 选项卡的工具栏上，单击“新建计算成员”****。  
   
-13. 将此计算成员的名称更改为`[Total Sales Ratio to All Products]`。  
+13. 将此计算成员的名称更改为 `[Total Sales Ratio to All Products]` 。  
   
 14. 在“表达式”**** 框中键入以下表达式：  
   
@@ -236,7 +235,7 @@ ms.locfileid: "69493886"
   
 17. 在“计算”**** 选项卡的工具栏上，单击“脚本视图”****，然后检查刚才添加到计算脚本中的三个计算。  
   
-18. 在计算脚本中紧靠`[Internet Sales Ratio to All Products]`计算之前添加新行，然后在脚本中将以下文本添加到脚本中：  
+18. 在计算脚本中紧靠计算之前添加新行 `[Internet Sales Ratio to All Products]` ，然后在脚本中将以下文本添加到脚本中：  
   
     ```  
     /* Calculations to calculate percentage of product to total product sales */  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ddd97483-a76d-43c1-8b40-fc7cc57fb0c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b6e43196f5bc318630a52073e22969dc58a0e64a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44e7142da8c639f63b198983b1fda829c9099d38
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079224"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543609"
 ---
 # <a name="modifying-default-table-names"></a>修改默认表名
   可以在数据源视图中更改 **FriendlyName** 属性的值，以使它们更易于受人关注和使用。  
@@ -33,11 +32,11 @@ ms.locfileid: "66079224"
   
      在“属性”窗口保持打开状态时，更容易更改数据源视图中各个表的属性。 如果不使用“自动隐藏”**** 按钮使窗口保持打开状态，则在“关系图”**** 窗格中单击其他对象时，该窗口将会关闭。  
   
-3.  将**FactInternetSales**对象的*`InternetSales`* **FriendlyName**属性更改为。  
+3.  将**FactInternetSales**对象的**FriendlyName**属性更改为 *`InternetSales`* 。  
   
      如果在 **FriendlyName** 属性单元格外单击，则应用此更改。 在下一课中，将定义一个基于该事实数据表的度量值组。 由于您在本课中进行了更改，因此该事实数据表的名称将为 InternetSales，而不是 FactInternetSales。  
   
-4.  在“表”**** 窗格中单击 **DimProduct**。 在属性窗口中，将**FriendlyName**属性更改为*`Product`*。  
+4.  在“表”**** 窗格中单击 **DimProduct**。 在属性窗口中，将**FriendlyName**属性更改为 *`Product`* 。  
   
 5.  使用同样的方法更改数据源视图中剩余的各个表的 **FriendlyName** 属性，删除“**Dim**”前缀。  
   

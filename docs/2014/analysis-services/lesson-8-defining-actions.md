@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 15459396-83c9-48a0-b10a-99ae38768c79
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8293bb8d1f0465d09b296cbd18702b569f073766
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5299599a2431d68e3ea13370f51aceef58efaf14
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078231"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542229"
 ---
 # <a name="lesson-8-defining-actions"></a>第 8 课：定义操作
   在本课中，将了解如何在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目中定义操作。 操作只是存储在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中并且可以合并到客户端应用程序中并被用户启动的多维表达式 (MDX) 语句。  
@@ -35,7 +34,7 @@ ms.locfileid: "66078231"
 |报表|将基于参数化 URL 的请求提交到报表服务器，并将报表返回到客户端应用程序。|  
 |行集|将行集返回到客户端应用程序。|  
 |语句|运行 OLE DB 命令。|  
-|代码|在 Internet 浏览器中显示动态网页。|  
+|URL|在 Internet 浏览器中显示动态网页。|  
   
  操作让用户能够在所选项的上下文中启动应用程序或执行其他步骤。 有关详细信息，请参阅 [操作（Analysis Services - 多维数据）](multidimensional-models/actions-analysis-services-multidimensional-data.md)和 [多维模型中的操作](multidimensional-models/actions-in-multidimensional-models.md)  
   

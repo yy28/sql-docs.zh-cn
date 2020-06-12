@@ -1,5 +1,5 @@
 ---
-title: dbo. sysjobsteps （Transact-sql） |Microsoft Docs
+title: dbo.sysjobsteps （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d98b1ccc4dc8da3ba9d494a78bfea3727102da07
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4bf7ed1c52aedb63ffe1e2e257022e004b327787
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827304"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423367"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,11 @@ ms.locfileid: "82827304"
 |**flag**|**int**|保留。|  
 |**additional_parameters**|**ntext**|保留。|  
 |**cmdexec_success_code**|**int**|**CmdExec**子系统步骤返回的错误级别值指示成功。|  
-|**on_success_action**|**tinyint**|成功执行了某个步骤时将要执行的操作。|  
+|**on_success_action**|**tinyint**|成功执行了某个步骤时将要执行的操作。<br /><br /> **1** = （默认值）成功退出<br /><br /> **2** = 失败时退出<br /><br /> **3** = 中转到下一步<br /><br /> **4** = 中转到步骤_on_success_step_id_|
 |**on_success_step_id**|**int**|成功执行了某个步骤时将要执行的下一个步骤的 ID。|  
-|**on_fail_action**|**tinyint**|未成功执行某个步骤时将要执行的操作。|  
+|**on_fail_action**|**tinyint**|未成功执行某个步骤时将要执行的操作。<br /><br /> **1** = 成功退出<br /><br /> **2** = （默认值）在失败的情况下退出<br /><br /> **3** = 中转到下一步<br /><br /> **4** = 中转到步骤_on_fail_step_id_|
 |**on_fail_step_id**|**int**|未成功执行某个步骤时将要执行的下一个步骤的 ID。|  
-|**服务**|**sysname**|保留。|  
+|服务器|**sysname**|保留。|  
 |**database_name**|**sysname**|如果**子系统**为 TSQL，则在其中执行**命令**的数据库的名称。|  
 |**database_user_name**|**sysname**|执行该步骤时使用的帐户所属的数据库用户的名称。|  
 |**retry_attempts**|**int**|步骤失败时的重试次数。|  

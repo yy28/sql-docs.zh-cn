@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e4224cb7-115b-4889-ac07-03f096fb55fc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b32db07a67e309d304aeb145be59fd79c0af5f49
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e47f887425c2294785bd6e6624961727bf65eb17
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174196"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527723"
 ---
 # <a name="browsing-a-neural-network-model"></a>浏览神经网络模型
   使用“浏览”**** 打开神经网络或逻辑回归模型时，该模型显示在交互式查看器（类似于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的神经网络模型查看器）中。 该查看器有助于您探索相关性并获取有关该模型和基础数据中各种模式的信息。
@@ -89,7 +88,7 @@ ms.locfileid: "78174196"
 
 1.  假设要以特定组为目标，查看组中最影响购买行为的因素。
 
-     在 "**输入**" 窗格中，单击 "**属性**" 下的 " ** \<所有>** " 单元，然后选择 "**年龄**"。
+     在 "**输入**" 窗格中，单击 " **\<All>** **属性**" 下的单元格，然后选择 "**年龄**"。
 
      对于“值”****，请选择最年轻的年龄类别。
 

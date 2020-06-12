@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 019f0c2853006be8213d0f6766f9d462492b7105
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c8daa38dd1bda5c23d60478394cd1f6450d41ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175220"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543739"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Use Analysis Services Templates in SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供一组模板来帮助您快速创建 XMLA 脚本、DMX 或 MDX 查询，在多维数据集或表格模型中创建 KPI，执行脚本备份和还原操作，以及执行其他许多任务。 模板位于 **的** “模板资源管理器” [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中。
@@ -69,15 +68,15 @@ ms.locfileid: "78175220"
 
 3.  使用 **“元数据资源管理器”**，将下列字段和度量值拖到查询模板：
 
-    1.  将\<row_axis mdx_set> 替换为 **[Product Category]. [Product Category Name]**。
+    1.  替换 \<row_axis, mdx_set> 为 **[Product Category]. [Product Category Name]**。
 
-    2.  将\<column_axis、mdx_set> 替换为 **[日期]. [日历年]。[日历年]**。
+    2.  替换 \<column_axis, mdx_set> 为 **[Date]. [日历年]。[日历年]**。
 
-    3.  将\<from_clause mdx_name> 替换为 **[Internet Sales]**。
+    3.  替换 \<from_clause, mdx_name> 为 **[Internet Sales]**。
 
-    4.  将\<where_clause、mdx_set> 替换为 **[度量值]. [Internet 总销售额]**。
+    4.  替换 \<where_clause, mdx_set> 为 **[度量值]. [Internet 总销售额]**。
 
-4.  您可以按原样执行此查询，但您可能会想要进行某些更改，例如添加函数以便返回特定成员。 例如，键入`.members` **[Product Category]. [Product Category Name]**。 有关详细信息，请参阅 [Using Member Expressions](/sql/mdx/using-member-expressions)。
+4.  您可以按原样执行此查询，但您可能会想要进行某些更改，例如添加函数以便返回特定成员。 例如，键入 `.members` **[Product Category]. [Product Category Name]**。 有关详细信息，请参阅 [Using Member Expressions](/sql/mdx/using-member-expressions)。
 
 ##  <a name="create-xmla-script-from-a-template"></a><a name="bkmk_backup"></a> 从模板创建 XMLA 脚本
  在模板资源管理器中提供的 XMLA 命令模板可用于为监视和更新 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象创建脚本，而与实例是处于多维和数据挖掘模式下还是表格模式下无关。 **XMLA** 模板包含针对下列类型的脚本的示例：
@@ -99,13 +98,13 @@ ms.locfileid: "78175220"
     > [!WARNING]
     >  您不能通过更改限制列表或通过在连接对话框中指定数据库来设置 XMLA 查询的上下文。 您必须从要查询的数据库打开 XMLA 查询窗口。
 
-2.  将`Backup`模板拖动到空查询窗口中。
+2.  将 `Backup` 模板拖动到空查询窗口中。
 
-3.  双击\<DatabaseID> 元素中的文本。
+3.  双击元素中的文本 \<DatabaseID> 。
 
 4.  在对象资源管理器中，选择要备份的数据库，然后将该数据库拖放到 DatabaseID 元素的括号之间。
 
-5.  双击\<文件> 元素中的文本。 键入备份文件的名称，包括 .abf 文件扩展名。 如果您不使用默认的备份位置，则指定完整的文件路径。 有关详细信息，请参阅[备份、还原和同步数据库 (XMLA)](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。
+5.  双击元素中的文本 \<File> 。 键入备份文件的名称，包括 .abf 文件扩展名。 如果您不使用默认的备份位置，则指定完整的文件路径。 有关详细信息，请参阅[备份、还原和同步数据库 (XMLA)](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。
 
 ##  <a name="generate-a-schema-rowset-query-using-an-xmla-template"></a><a name="bkmk_schemarowset"></a> 使用 XMLA 模板生成架构行集查询
  **“模板资源管理器”** 对于架构行集查询仅包含一个模板。 若要使用此模板，您必须熟悉要使用的单独架构行集的要求，并且包含所需所有元素以及可用作限制的列。 有关详细信息，请参阅 [Analysis Services 架构行集](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)。
@@ -145,7 +144,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 
 3.  在模板中，将[RequestType 元素替换 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla)元素，其中包含以下文本：`<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`
 
-4.  单击“执行” ****。
+4.  单击“执行”  。
 
      预期的结果：
 
@@ -167,12 +166,12 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 
 |类别|项模板|说明|
 |--------------|-------------------|-----------------|
-|DMX\模型内容|内容查询|演示如何使用 DMX SELECT FROM * \<model>*。用于检索指定挖掘模型的挖掘模型架构行集内容的内容语句。|
-||连续列值|演示如何将 dmx SELECT DISTINCT FROM * \<model>* 语句与 DMX `RangeMin`和`RangeMax`函数一起使用来从指定挖掘模型中的连续列检索指定范围内的一组值。|
-||离散列值|演示如何使用 DMX SELECT DISTINCT FROM * \<model>* 语句从指定挖掘模型中的离散列检索完整的一组值。|
+|DMX\模型内容|内容查询|演示如何使用 DMX SELECT FROM *\<model>* 。用于检索指定挖掘模型的挖掘模型架构行集内容的内容语句。|
+||连续列值|演示如何将 DMX SELECT DISTINCT FROM *\<model>* 语句与 DMX `RangeMin` 和函数一起使用 `RangeMax` 来从指定挖掘模型中的连续列检索指定范围内的一组值。|
+||离散列值|演示如何使用 DMX SELECT DISTINCT FROM *\<model>* 语句从指定挖掘模型中的离散列检索完整的一组值。|
 ||钻取查询|演示如何将 DMX SELECT * FROM Model.CASES 语句与 DMX IsInNode 函数一起使用来执行钻取查询|
 ||模型属性|演示如何使用 DMX System.GetModelAttributes 函数返回模型所用属性的列表。|
-||PMML 内容|演示如何使用 DMX SELECT \* FROM * \<model>*。用于检索挖掘模型的预测模型标记语言（PMML）表示形式的 PMML 语句，适用于支持此功能的算法。|
+||PMML 内容|演示如何使用 DMX SELECT \* FROM *\<model>* 。用于检索挖掘模型的预测模型标记语言（PMML）表示形式的 PMML 语句，适用于支持此功能的算法。|
 |DMX\模型管理|添加模型|演示如何使用 DMX ALTER MINING MODEL STRUCTURE 语句添加挖掘模型|
 ||清除模型|演示如何使用 DMX DELETE * FROM MINING MODEL 语句删除指定挖掘模型的内容。|
 ||清除结构事例|演示如何使用 DMX DELETE FROM MINING STRUCTURE 语句清除挖掘模型结构事例|
@@ -190,10 +189,10 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||训练模型|演示如何使用 DMX INSERT INTO MINING MODEL 语句在先前定型的结构内部定型挖掘模型。|
 ||定型嵌套结构|演示如何将 DMX INSERT INTO MINING STRUCTURE 语句和 SHAPE 源数据查询组合使用来定型这样的挖掘模型，该挖掘模型包含嵌套列，而嵌套列中的数据包含使用查询从现有数据源检索到的嵌套表。|
 ||定型结构|演示如何将 DMX INSERT INTO MINING STRUCTURE 语句和 OPENQUERY 源数据查询组合使用来定型挖掘结构。|
-|DMX\预测查询|基准预测|演示如何组合使用 DMX SELECT FROM * \<model>* 预测联接语句和 OPENQUERY 源数据查询，通过现有数据源使用查询检索的数据对挖掘模型执行预测查询。|
-||嵌套预测|演示如何将 DMX SELECT FROM * \<model>* 预测联接语句与 SHAPE 和 OPENQUERY 源数据查询组合在一起，以使用包含嵌套表的数据对挖掘模型执行预测查询，该数据包含使用查询从现有数据源检索到的嵌套表。|
-||嵌套单独预测|演示如何使用 DMX SELECT FROM * \<model>* 自然预测联接子句通过在预测查询中显式指定的单个值针对挖掘模型执行预测查询，该查询中的名称与挖掘模型中的列相匹配，并在嵌套表中包含一组值，这些值也与挖掘模型中的嵌套列相匹配。|
-||单独预测|演示如何使用 DMX SELECT FROM \<MODEL> 自然预测联接语句，使用在预测查询中显式指定的单个值对挖掘模型执行预测查询，该查询的名称与挖掘模型中的某列相匹配。|
+|DMX\预测查询|基准预测|演示如何将 DMX SELECT FROM *\<model>* 预测联接语句与 OPENQUERY 源数据查询组合在一起，以使用从现有数据源检索到的数据对挖掘模型执行预测查询。|
+||嵌套预测|演示如何将 DMX SELECT FROM *\<model>* 预测联接语句与 SHAPE 和 OPENQUERY 源数据查询组合在一起，以使用包含使用查询从现有数据源检索到的嵌套表的数据对挖掘模型执行预测查询。|
+||嵌套单独预测|演示如何使用 DMX SELECT FROM *\<model>* 自然预测联接子句通过在预测查询中显式指定的单个值针对挖掘模型执行预测查询，该查询中的名称与挖掘模型中的列相匹配，并在嵌套表中包含一组值，这些值也与挖掘模型中的嵌套列相匹配。|
+||单独预测|演示如何使用 DMX SELECT FROM \<model> 自然预测联接语句对挖掘模型执行预测查询，该挖掘模型使用预测查询中显式指定的单个值，在其名称与挖掘模型中的列相匹配的列中执行。|
 ||存储过程调用|演示如何使用 DMX CALL 语句调用存储过程|
 |MDX\表达式|变动平均值 - 固定|演示如何使用 MDX `ParallelPeriod` 和 `CurrentMember` 函数及自然排序集生成一个计算度量值，以便提供一个度量值在时间维度的一个层次结构所包含的一个固定数量时间段上的变动平均值。|
 ||变动平均值 - 可变|演示如何在 `CASE` 函数内使用 MDX `Avg` 语句来生成一个计算度量值，以便提供一个度量值在时间维度的一个层次结构所包含的一个可变数量时间段上的变动平均值。|

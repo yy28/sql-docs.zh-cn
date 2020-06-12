@@ -23,12 +23,12 @@ ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6a19bfa830b8f57d8df891fb2cfea9435c2716b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49625e9ef5311b261bc309a90cfa9d6b315953f6
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63249681"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858859"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>“管理分区向导”的 F1 帮助
   使用 **管理分区向导** 可以通过分区切换或实现可调窗口应用场景来管理和修改现有已分区表。 使用此向导，可以轻松管理分区，并可简化表中数据的定期迁入和迁出。  
@@ -75,7 +75,7 @@ ms.locfileid: "63249681"
 ### <a name="sliding-window-scenario"></a>滑动窗口应用场景  
  若要管理滑动窗口应用场景中的分区，请选择“管理滑动窗口应用场景中的分区数据”  。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **“为分区切换创建临时表”**  
  为切入和切出现有已分区表的数据创建临时表。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "63249681"
 ##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> 选择分区切入选项页  
  使用“选择分区切入选项”  页可以选择要切入到已分区表中的临时表。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **显示所有分区**  
  选择此选项可以显示所有分区，包括当前位于已分区表的分区。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "63249681"
 ##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> 选择分区切出选项页  
  使用“选择分区切出选项”  页可以选择用于保存要从已分区表中切出的分区数据的分区和临时表。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **分区网格**  
  显示所选分区的分区名称、“左边界”  、“右边界”  、“文件组”  和“行计数”  。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "63249681"
   
  您可以在位于源分区的临时表中创建相同的索引。 临时表会自动基于源分区的元素包含约束。 此约束通常根据源分区的边界值生成。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **临时表名**  
  为临时表创建名称，或接受编辑框中显示的默认名称。  
   
@@ -258,7 +258,7 @@ ms.locfileid: "63249681"
 ##  <a name="summary-page"></a><a name="Summary"></a> 摘要页  
  使用 **“摘要”** 可检查您在前面的页中选择的选项。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **检查所做选择**  
  显示您在向导的每一页中所做的选择。 单击节点可展开和查看以前选择的选项。  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d46d659c-3a4e-4364-94ac-f5eb6ba0ec25
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7ffd5880120184249d89c4d702b30c8d6e01e1f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79a675d0d27c5bfe033075c92e7ed06aa9c914c5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076494"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536705"
 ---
 # <a name="create-a-cube-using-the-cube-wizard"></a>使用多维数据集向导创建多维数据集
   可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的多维数据集向导来创建新的多维数据集。  
@@ -37,7 +36,7 @@ ms.locfileid: "66076494"
   
     2.  在 **“度量值组表”** 列表中，选择将用于创建度量值组的表。  
   
-    3.  单击 **下一步**。  
+    3.  单击“下一步”。  
   
 4.  在 **“选择度量值”** 页上，选择要在多维数据集中包含的度量值，然后单击 **“下一步”**。  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: dc88606f-ba7c-4f8d-af65-bfa17ec16e2b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cee721aca66f5266a29d3bf61babf9060e9aef32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b13eb819edc2a33117d45954423466343f5de18a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082303"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528871"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>“决策树”选项卡（挖掘模型查看器）
   “决策树”**** 窗格直观地显示在决策树模型中创建的决策规则。 决策规则描述通向某个特定结果的路径。  

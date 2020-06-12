@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6d835269f77e563b94c89c3a68c5c82844edc773
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e26faf2ef80f416858665893e14e405eab7254d6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493973"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543896"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>配置 PowerPivot 和部署解决方案 (SharePoint 2013)
   本主题介绍如何部署和配置 [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] 中 PowerPivot 功能的中间层增强功能，包括 PowerPivot 库、计划数据刷新、管理面板和数据提供程序。 运行 **PowerPivot for SharePoint 2013 配置** 工具以便完成以下任务：  
@@ -24,7 +23,7 @@ ms.locfileid: "69493973"
   
 -   创建 PowerPivot 服务应用程序。  
   
--   将 Excel Services 应用程序配置为在 SharePoint 模式下使用 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务器。 有关后端服务和在 SharePoint 模式[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]下安装服务器的信息，请参阅[PowerPivot for SharePoint 2013 安装](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)。  
+-   将 Excel Services 应用程序配置为在 SharePoint 模式下使用 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务器。 有关后端服务和 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 在 SharePoint 模式下安装服务器的信息，请参阅[PowerPivot for SharePoint 2013 安装](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)。  
   
  有关安装 PowerPivot for SharePoint 2013 配置工具的信息，请参阅[&#40;SharePoint 2013 安装或卸载 PowerPivot for SharePoint 外接程序&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)  
   
@@ -79,7 +78,7 @@ ms.locfileid: "69493973"
  有关详细信息，请参阅[配置或修复 PowerPivot for SharePoint 2010 &#40;PowerPivot 配置工具&#41;](../../configure-repair-powerpivot-sharepoint-2010.md)  
   
 ##  <a name="verify-powerpivot-configuration"></a><a name="bkmk_verify_powerpivot"></a>验证 PowerPivot 配置  
- **服务器**  
+ **服务：**  
   
 1.  在管理中心的 "系统设置" 中，单击 "**管理服务器上的服务**"。  
   
@@ -132,9 +131,9 @@ ms.locfileid: "69493973"
   
 4.  确认选择了 **“启用运行状况数据收集”** 。  
   
-5.  单击“确定”。   
+5.  单击“确定”。  
   
- 有关排除数据刷新问题的详细信息，请参阅[PowerPivot 数据刷新故障排除](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)（https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)。  
+ 有关排除数据刷新问题的详细信息，请参阅[PowerPivot 数据刷新故障排除](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)（ https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) 。  
   
  有关配置工具的详细信息，请参阅 [PowerPivot Configuration Tools](../../power-pivot-sharepoint/power-pivot-configuration-tools.md)。  
   

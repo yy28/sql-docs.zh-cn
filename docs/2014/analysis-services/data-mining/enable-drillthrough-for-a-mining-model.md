@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4fa44f60-ef9a-4b59-98c0-c0baf1195c8e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 06ce3967bf9258e9b8f6cd4a28cb28a29a1e0588
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a6adfc389776f91132e527130f50f61c9783d9f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084534"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522463"
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>对挖掘模型启用钻取
   如果为挖掘模型启用了钻取，则可以在浏览模型时检索用于创建模型的事例的详细信息。 若要查看这些信息，则您必须拥有必要的权限，且挖掘结构已经过处理。  
@@ -27,7 +26,7 @@ ms.locfileid: "66084534"
   
 -   即使不具有结构的钻取权限，模型的钻取权限也允许您从模型进行钻取。  
   
--   如果拥有结构的钻取权限，则可通过使用 [StructureColumn (DMX)](/sql/dmx/structurecolumn-dmx) 函数，将结构列包含到模型钻取查询中。 您还可以使用 "选择 ..." 来查询结构中的定型和测试用例。FROM \<结构>。Case 语法。  
+-   如果拥有结构的钻取权限，则可通过使用 [StructureColumn (DMX)](/sql/dmx/structurecolumn-dmx) 函数，将结构列包含到模型钻取查询中。 您还可以使用 "选择 ..." 来查询结构中的定型和测试用例。FROM \<structure> 。Case 语法。  
   
  **缓存定型事例** 钻取就是检索挖掘结构中的定型事例的相关信息。 这些信息是在处理结构时缓存的。 因此，如果通过将 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 属性更改为 `ClearAfterProcessing`，选择清除了缓存的所有数据，则钻取功能将无法正常工作。  
   

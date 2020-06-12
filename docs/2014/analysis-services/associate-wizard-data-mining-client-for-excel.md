@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4db6462f-93c7-443f-8ff7-39474dc7029e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 15a86cc55e67b2000eabee62d02fa04de4874f59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52542ac1b15b59ecebca4ea26ba530298157ed50
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062306"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527938"
 ---
 # <a name="associate-wizard-data-mining-client-for-excel"></a>关联向导（Excel 数据挖掘客户端）
   ![“数据挖掘”功能区中的关联向导](media/dmc-associate.gif "“数据挖掘”功能区中的关联向导")  

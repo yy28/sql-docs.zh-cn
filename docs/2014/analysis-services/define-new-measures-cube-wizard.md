@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f97698f8-6f0f-49d8-86b0-5bfac3c4e627
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8f526c1327f67bdcf84dce44e670eb195de9a96a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00ccbf26d040eb5285595a43a9eead93d1eeddbb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082112"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528803"
 ---
 # <a name="define-new-measures-cube-wizard"></a>定义新度量值（多维数据集向导）
   可以使用 **“定义新度量值”** 页，为在不使用数据源的情况下创建的多维数据集创建新的度量值。  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 85ed1433-81f9-468a-a14d-60c6f82bee76
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 439f46ba0fa58253572d017057bb236aa1bf2d67
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 99f98507289acd8f8fd0f2ff9ef8fed49813d80f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081328"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528433"
 ---
 # <a name="enable-dimension-writeback-dimension-business-intelligence-wizard"></a>启用维度写回（维度）（商业智能向导）
   可以使用 **“启用维度写回”** 页，选择商业智能向导将为其启用写回功能的维度。  
@@ -26,7 +25,7 @@ ms.locfileid: "66081328"
 >  如果从维度设计器或者通过在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的解决方案资源管理器中右键单击维度启动了商业智能向导，则将不会显示此页。  
   
 ## <a name="options"></a>选项  
- **维度**  
+ **维数**  
  选择该向导将为其启用写回功能的维度。  
   
 ## <a name="see-also"></a>另请参阅  

@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7b6b436527aa36fb8f048a3b3c8fc55b970ef284
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82317f4a4e5f4c4fddd4ffaf45c5897dfd4d0df5
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68065379"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669980"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,14 +32,14 @@ StructureColumn('structure column name')
  事例或嵌套表挖掘结构列的名称。  
   
 ## <a name="result-type"></a>结果类型  
- 返回的类型取决于在\<结构列名称> 参数中引用的列的类型。 例如，如果引用的挖掘结构列包含标量值，函数将返回标量值。  
+ 返回的类型取决于在 \< 结构列名称> 参数中引用的列的类型。 例如，如果引用的挖掘结构列包含标量值，函数将返回标量值。  
   
  如果引用的挖掘结构列是嵌套表，函数将返回表值。 返回的表值可用于 sub-SELECT 语句的 FROM 子句中。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  此函数是多态函数，可在允许有表达式（包括 SELECT 表达式列表、WHERE 条件表达式和 ORDER BY 表达式）的语句中的任意位置使用。  
   
- 挖掘结构中的列的名称是字符串值，因此必须用单引号引起来：例如， `StructureColumn('`**列 1**`')`。 如果多个列具有相同的名称，则该名称在包含 SELECT 语句的上下文中解析。  
+ 挖掘结构中的列的名称是字符串值，因此必须用单引号引起来：例如， `StructureColumn('` **列 1** `')` 。 如果多个列具有相同的名称，则该名称在包含 SELECT 语句的上下文中解析。  
   
  使用**StructureColumn**函数从查询返回的结果受模型上的任何筛选器的存在的影响。 也就是说，模型筛选器控制包含在挖掘模型中的事例。 因此，结构列查询可以只返回挖掘模型中使用的那些事例。 有关说明挖掘模型筛选器对事例表和嵌套表的影响的代码示例，请参阅本主题的“示例”部分。  
   
@@ -112,10 +112,10 @@ SELECT CustomerName, Age,
 WHERE StructureColumn('Occupation') = 'Architect'  
 ```  
   
- 请注意，在此示例中，筛选器将应用于结构列，以将事例限制为其职业为 "架构师"`WHERE StructureColumn('Occupation') = 'Architect'`（）的客户。 由于创建模型时模型筛选条件始终应用于事例，因此只有在 `Products` 表中至少包含一个合格行的事例才包含在模型事例中。 因此，将应用针对嵌套表 `Products` 的筛选器和针对事例 `('Occupation')` 的筛选器。  
+ 请注意，在此示例中，筛选器将应用于结构列，以将事例限制为其职业为 "架构师" （）的客户 `WHERE StructureColumn('Occupation') = 'Architect'` 。 由于创建模型时模型筛选条件始终应用于事例，因此只有在 `Products` 表中至少包含一个合格行的事例才包含在模型事例中。 因此，将应用针对嵌套表 `Products` 的筛选器和针对事例 `('Occupation')` 的筛选器。  
   
 ### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>示例查询 3：选择嵌套表中的列  
- 以下示例查询从模型中返回用作培训事例的客户的姓名。 对于每个客户，查询还返回包含购买详细信息的嵌套表。 尽管模型包含`ProductName`列，但模型不使用`ProductName`列的值。 该模型仅检查产品是否是按常规（`NOT``OnSale`）价格购买的。 此查询不仅返回产品名称，而且返回未包含在模型中的购买的数量。  
+ 以下示例查询从模型中返回用作培训事例的客户的姓名。 对于每个客户，查询还返回包含购买详细信息的嵌套表。 尽管模型包含 `ProductName` 列，但模型不使用列的值 `ProductName` 。 该模型仅检查产品是否是按常规（ `NOT``OnSale` ）价格购买的。 此查询不仅返回产品名称，而且返回未包含在模型中的购买的数量。  
   
 ```  
 SELECT CustomerName,    

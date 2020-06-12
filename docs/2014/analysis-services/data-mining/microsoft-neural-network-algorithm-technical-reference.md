@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 94c36ba87310c5dc86b7a1f70efab5a3ef97bf61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf7db49fd2b6a86e9b113dbede785379f910b978
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083863"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521763"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft 神经网络算法技术参考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络使用由最多三层神经元（即感知器**）组成的“多层感知器”** 网络（也称为“反向传播 Delta 法则”网络**）。 这些层分别是输入层、可选隐藏层和输出层。  
@@ -86,7 +85,7 @@ ms.locfileid: "66083863"
   
  所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据挖掘算法都会自动使用功能选择来改善分析效果以及减轻处理工作量。 神经网络模型中用于功能选择的方法取决于属性的数据类型。 下表列出了用于神经网络模型的功能选择方法，以及用于逻辑回归算法（基于神经网络算法）的功能选择方法，以供参考。  
   
-|算法|分析方法|说明|  
+|算法|分析方法|注释|  
 |---------------|------------------------|--------------|  
 |神经网络|兴趣性分数<br /><br /> Shannon 平均信息量<br /><br /> Bayesian with K2 Prior<br /><br /> 使用统一先验的 Bayesian Dirichlet（默认）|只要数据包含连续列，神经网络算法就可同时使用基于平均信息量的方法和 Bayesian 计分方法。<br /><br /> 默认。|  
 |逻辑回归|兴趣性分数<br /><br /> Shannon 平均信息量<br /><br /> Bayesian with K2 Prior<br /><br /> 使用统一先验的 Bayesian Dirichlet（默认）|因为无法将参数传递给此算法来控制功能选择行为，所以将使用默认值。 因此，如果所有属性均为离散或离散化属性，则默认值为 BDEU。|  

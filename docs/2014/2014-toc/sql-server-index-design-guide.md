@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fe493927d269c092e775970b3089550203271f0e
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 6327f7e825906635864777e9c993ae16790e6116
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000497"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528365"
 ---
 # <a name="sql-server-index-design-guide"></a>SQL Server 索引设计指南
 
@@ -37,17 +36,17 @@ ms.locfileid: "83000497"
   
  [唯一索引设计指南](#Unique)  
   
- [筛选索引设计准则](#Filtered)  
+ [筛选索引设计指南](#Filtered)  
   
  [其他阅读材料](#Additional_Reading)  
   
-##  <a name="index-design-basics"></a><a name="Basics"></a>索引设计基础知识  
+##  <a name="index-design-basics"></a><a name="Basics"></a> 索引设计基础知识  
 
  索引是与表或视图关联的磁盘上结构，可以加快从表或视图中检索行的速度。 索引包含由表或视图中的一列或多列生成的键。 这些键存储在一个结构（B 树）中，使 SQL Server 可以快速高效地找到与键值关联的行。  
   
  为数据库及其工作负荷选择正确的索引是一项需要在查询速度与更新所需开销之间取得平衡的复杂任务。 如果索引较窄，或者说索引关键字中只有很少的几列，则需要的磁盘空间和维护开销都较少。 而另一方面，宽索引可覆盖更多的查询。 您可能需要试验若干不同的设计，才能找到最有效的索引。 可以添加、修改和删除索引而不影响数据库架构或应用程序设计。 因此，应试验多个不同的索引而无需犹豫。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的查询优化器可在大多数情况下可靠地选择最高效的索引。 总体索引设计策略应为查询优化器提供可供选择的多个索引，并依赖查询优化器做出正确的决定。 这在多种情况下可减少分析时间并获得良好的性能。 若要查看查询优化器对特定查询使用的索引，请在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“查询”**** 菜单上选择“包括实际的执行计划”****。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的查询优化器可在大多数情况下可靠地选择最高效的索引。 总体索引设计策略应为查询优化器提供可供选择的多个索引，并依赖查询优化器做出正确的决定。 这在多种情况下可减少分析时间并获得良好的性能。 若要查看查询优化器对特定查询使用的索引，请在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“查询”菜单上选择“包括实际的执行计划”。  
   
  不要总是将索引的使用等同于良好的性能，或者将良好的性能等同于索引的高效使用。 如果只要使用索引就能获得最佳性能，那查询优化器的工作就简单了。 但事实上，不正确的索引选择并不能获得最佳性能。 因此，查询优化器的任务是只在索引或索引组合能提高性能时才选择它，而在索引检索有碍性能时则避免使用它。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "83000497"
   
      或者，聚集索引和非聚集索引也可以使用跨越多个文件组的分区方案。 在维护整个集合的完整性时，使用分区可以快速而有效地访问或管理数据子集，从而使大型表或索引更易于管理。 有关详细信息，请参阅 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)。 在考虑分区时，应确定是否应对齐索引，即，是按实质上与表相同的方式进行分区，还是单独分区。  
   
-##  <a name="general-index-design-guidelines"></a><a name="General_Design"></a>常规索引设计指南  
+##  <a name="general-index-design-guidelines"></a><a name="General_Design"></a> 常规索引设计指南  
 
  经验丰富的数据库管理员能够设计出好的索引集，但是，即使对于不特别复杂的数据库和工作负荷来说，这项任务也十分复杂、耗时和易于出错。 了解数据库、查询和数据列的特征可以帮助您设计出最佳索引。  
   
@@ -137,7 +136,7 @@ ms.locfileid: "83000497"
   
  您也可以通过设置选项（例如 FILLFACTOR）自定义索引的初始存储特征以优化其性能或维护。 而且，通过使用文件组或分区方案可以确定索引存储位置来优化性能。  
   
-###  <a name="index-placement-on-filegroups-or-partitions-schemes"></a><a name="Index_placement"></a>文件组或分区方案的索引放置  
+###  <a name="index-placement-on-filegroups-or-partitions-schemes"></a><a name="Index_placement"></a> 文件组或分区方案的索引设置  
 
  开发索引设计策略时，应该考虑在与数据库相关联的文件组上放置索引。 仔细选择文件组或分区方案可以改进查询性能。  
   
@@ -165,7 +164,7 @@ ms.locfileid: "83000497"
   
  有关详细信息，请参阅 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
   
-###  <a name="index-sort-order-design-guidelines"></a><a name="Sort_Order"></a>索引排序顺序设计指南  
+###  <a name="index-sort-order-design-guidelines"></a><a name="Sort_Order"></a> 索引排序顺序设计指南  
 
  定义索引时，应该考虑索引键列的数据是按升序还是按降序存储。 升序是默认设置，保持与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]早期版本的兼容性。 CREATE INDEX、CREATE TABLE 和 ALTER TABLE 语句的语法在索引和约束中的各列上支持关键字 ASC（升序）和 DESC（降序）：  
   
@@ -200,7 +199,7 @@ ON Purchasing.PurchaseOrderDetail
   
  [本指南中与 "](#Top) ![返回页首" 链接一起使用的箭头图标](media/uparrow16x16.gif "用于返回页首链接的箭头图标")  
   
-##  <a name="clustered-index-design-guidelines"></a><a name="Clustered"></a>聚集索引设计指南  
+##  <a name="clustered-index-design-guidelines"></a><a name="Clustered"></a> 聚集索引设计指南  
 
  聚集索引基于数据行的键值在表内排序和存储这些数据行。 每个表只能有一个聚集索引，因为数据行本身只能按一个顺序存储。 每个表几乎都对列定义聚集索引来实现下列功能：  
   
@@ -275,7 +274,7 @@ ON Purchasing.PurchaseOrderDetail
   
  [本指南中与 "](#Top) ![返回页首" 链接一起使用的箭头图标](media/uparrow16x16.gif "用于返回页首链接的箭头图标")  
   
-##  <a name="nonclustered-index-design-guidelines"></a><a name="Nonclustered"></a>非聚集索引设计指南  
+##  <a name="nonclustered-index-design-guidelines"></a><a name="Nonclustered"></a> 非聚集索引设计指南  
 
  非聚集索引包含索引键值和指向表数据存储位置的行定位器。 可以对表或索引视图创建多个非聚集索引。 通常，设计非聚集索引是为改善经常使用的、没有建立聚集索引的查询的性能。  
   
@@ -343,7 +342,7 @@ ON Purchasing.PurchaseOrderDetail
   
      如果只有很少的非重复值，例如仅有 1 和 0，则大多数查询将不使用索引，因为此时表扫描通常更有效。 对于这种类型的数据，应考虑对仅出现在少数行中的非重复值创建筛选索引。 例如，如果大部分值都是 0，则查询优化器可以对包含 1 的数据行使用筛选查询。  
   
-####  <a name="use-included-columns-to-extend-nonclustered-indexes"></a><a name="Included_Columns"></a>使用包含列扩展非聚集索引  
+####  <a name="use-included-columns-to-extend-nonclustered-indexes"></a><a name="Included_Columns"></a> 使用包含列扩展非聚集索引  
 
  您可以通过将非键列添加到非聚集索引的叶级，扩展非聚集索引的功能。 通过包含非键列，可以创建覆盖更多查询的非聚集索引。 这是因为非键列具有下列优点：  
   
@@ -455,7 +454,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  [本指南中与 "](#Top) ![返回页首" 链接一起使用的箭头图标](media/uparrow16x16.gif "用于返回页首链接的箭头图标")  
   
-##  <a name="unique-index-design-guidelines"></a><a name="Unique"></a>唯一索引设计指南  
+##  <a name="unique-index-design-guidelines"></a><a name="Unique"></a> 唯一索引设计指南  
 
  唯一索引能够保证索引键中不包含重复的值，从而使表中的每一行从某种方式上具有唯一性。 只有当唯一性是数据本身的特征时，指定唯一索引才有意义。 例如，如果要确保 `NationalIDNumber` 表中 `HumanResources.Employee` 列的值是唯一的，当主键为 `EmployeeID`时，对 `NationalIDNumber` 列创建 UNIQUE 约束。 如果用户尝试在该列中为多个雇员输入相同的值，将显示错误消息并且不能输入重复的值。  
   
@@ -481,7 +480,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  [本指南中与 "](#Top) ![返回页首" 链接一起使用的箭头图标](media/uparrow16x16.gif "用于返回页首链接的箭头图标")  
   
-##  <a name="filtered-index-design-guidelines"></a><a name="Filtered"></a>筛选索引设计指南  
+##  <a name="filtered-index-design-guidelines"></a><a name="Filtered"></a> 筛选索引设计指南  
 
  筛选索引是一种经过优化的非聚集索引，尤其适用于涵盖从定义完善的数据子集中选择数据的查询。 筛选索引使用筛选谓词对表中的部分行进行索引。 与全表索引相比，设计良好的筛选索引可以提高查询性能、减少索引维护开销并可降低索引存储开销。  
   
@@ -495,7 +494,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
      设计良好的筛选索引可以提高查询性能和执行计划质量，因为它比全表非聚集索引小并且具有经过筛选的统计信息。 与全表统计信息相比，经过筛选的统计信息更加准确，因为它们只涵盖筛选索引中的行。  
   
--   **减少了索引维护成本**  
+-   **减少了索引维护开销**  
   
      仅在数据操作语言 (DML) 语句对索引中的数据产生影响时，才对索引进行维护。 与全表非聚集索引相比，筛选索引减少了索引维护开销，因为它更小并且仅在对索引中的数据产生影响时才进行维护。 筛选索引的数量可以非常多，特别是在其中包含很少受影响的数据时。 同样，如果筛选索引只包含频繁受影响的数据，则索引大小较小时可以减少更新统计信息的开销。  
   

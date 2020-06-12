@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 429b35f6865deb5c0c3dd79e21cfe16cac7fae91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cfbd8496a700f03ae91e81f1fcf442c1a12bcfa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070011"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538919"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>计划数据刷新 (PowerPivot for SharePoint)
   您可以计划数据刷新，以便自动获取对您发布到 SharePoint 站点的 Excel 工作簿内的 PowerPivot 数据的更新。  
@@ -39,7 +38,7 @@ ms.locfileid: "66070011"
 > [!NOTE]  
 >  PowerPivot 数据刷新由 SharePoint 场中的 Analysis Services 服务器实例执行。 它与 Excel Services 中提供的数据刷新功能无关。 PowePivot 计划数据刷新功能不会刷新非 PowerPivot 数据。  
   
-##  <a name="prerequisites"></a><a name="prereq"></a>先决条件  
+##  <a name="prerequisites"></a><a name="prereq"></a> 先决条件  
  若要创建数据刷新计划，您必须对工作簿具有“参与讨论”或更高级别的权限。  
   
  在数据刷新过程中访问的外部数据必须可用，并且您在计划中指定的凭据必须具有访问这些数据源的权限。 计划的数据刷新要求可通过网络连接访问的数据源位置（例如，从网络文件共享而非工作站上的本地文件夹）。  
@@ -98,7 +97,7 @@ ms.locfileid: "66070011"
   
 7.  在“电子邮件通知”中，输入应该在发生处理错误时接到通知的人员的电子邮件地址。  
   
-8.  在“凭据”中，指定用于运行数据刷新作业的帐户。 该帐户对于该工作簿必须具有“参与讨论”权限，以便可以打开该工作簿来刷新其数据。 该帐户必须是 Windows 域用户帐户。 在许多情况下，该帐户还必须对在数据刷新过程中使用的外部数据源具有读取权限。 具体来说，如果您最初使用“使用 Windows 身份验证”选项导入了数据，则将生成连接字符串以便使用当前用户的 Windows 凭据。 如果当前用户是数据刷新帐户，则该帐户必须对外部数据源具有读取权限，这样数据刷新才能成功完成。 选择以下选项之一：  
+8.  在“凭据”中，指定用于运行数据刷新作业的帐户。 该帐户对于该工作簿必须具有“参与讨论”权限，以便可以打开该工作簿来刷新其数据。 该帐户必须是 Windows 域用户帐户。 在许多情况下，该帐户还必须对在数据刷新过程中使用的外部数据源具有读取权限。 具体来说，如果您最初使用“使用 Windows 身份验证”选项导入了数据，则将生成连接字符串以便使用当前用户的 Windows 凭据。 如果当前用户是数据刷新帐户，则该帐户必须对外部数据源具有读取权限，这样数据刷新才能成功完成。 选择下列选项之一：  
   
     1.  选择 **“使用管理员配置的数据刷新帐户”** 以使用 PowerPivot 无人参与的数据刷新帐户处理数据刷新操作。  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 303973b4-71c0-4cfc-b7bc-92218b52509d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ebe159aed7b27bf00ef47a110de1c7ec5ee70adb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15ba71b6beb46280f1fc3ad972c6252f95842eaa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062991"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528275"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>准确性图表（SQL Server 数据挖掘外接程序）
   ![“数据挖掘”功能区中的“准确性图表”按钮](media/dmc-accchart.gif "“数据挖掘”功能区中的“准确性图表”按钮")  
@@ -49,12 +48,12 @@ ms.locfileid: "66062991"
   
 2.  在 "**准确性和验证**" 组中，单击 "**准确性图表**"。  
   
-3.  在 "**选择结构或模型**" 对话框中，选择要评估的模型。 单击“下一步”  。  
+3.  在 "**选择结构或模型**" 对话框中，选择要评估的模型。 单击“下一步”。  
   
     > [!NOTE]  
     >  必须选择与要测试的数据最相匹配的模型。  
   
-4.  在 "**指定要预测的列和要预测的值**" 对话框中，选择要预测的列和目标值（如果适用）。 单击“下一步”  。  
+4.  在 "**指定要预测的列和要预测的值**" 对话框中，选择要预测的列和目标值（如果适用）。 单击“下一步”。  
   
      例如，在上面的示例中，您可以选择用来建立顾客答复模型的列，并将目标值指定为“可能购买”。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66062991"
   
      如果列名称类似，向导将自动映射它们。 虽然输入数据中的某些列可能与分析无关，可以忽略，但某些列是数据挖掘模型处理输入所必需的。 这样的列可能包括事务 ID、目标值或用于预测的列。 如果无法映射所需的列，向导将提供一则警告消息。  
   
-7.  单击“完成”  。  
+7.  单击“完成”。  
   
      向导将创建一个包括提升图和基础数据的报表。  
   

@@ -1,5 +1,6 @@
 ---
 title: 复制视图（Transact-sql） |Microsoft Docs
+description: 复制视图包含 SQL Server 中的复制所使用的信息。 使用这些视图可以更轻松地访问复制系统表中的数据。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 51cc9434805fbd14204d74edae1594ae01c06bb2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae0c1245bdf9ff7fe1d1eb712745cbc15d2479af
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68129569"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807939"
 ---
 # <a name="replication-views-transact-sql"></a>复制视图 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  这些视图包含中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的复制所使用的信息。 利用这些视图，可以更方便地访问[复制系统表](../../relational-databases/system-tables/replication-tables-transact-sql.md)中的数据。 将某个用户数据库启用为发布数据库或订阅数据库时，便会在该数据库中创建视图。 从复制拓扑中删除用户数据库时，便会删除该数据库中的所有复制对象。 访问复制元数据的首选方法是使用[复制存储过程](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)。  
+  这些视图包含中的复制所使用的信息 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 利用这些视图，可以更方便地访问[复制系统表](../../relational-databases/system-tables/replication-tables-transact-sql.md)中的数据。 将某个用户数据库启用为发布数据库或订阅数据库时，便会在该数据库中创建视图。 从复制拓扑中删除用户数据库时，便会删除该数据库中的所有复制对象。 访问复制元数据的首选方法是使用[复制存储过程](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)。  
   
 > [!IMPORTANT]  
 >  任何用户都不应直接更改系统视图。  

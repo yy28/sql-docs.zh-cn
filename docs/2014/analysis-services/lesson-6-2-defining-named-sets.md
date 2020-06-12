@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 450a42a4564d3a59b5b609f2ca8faf6c1f99a128
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e02f4624dc0ec25ee0c3d8950c83550ca3d9ed57
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175263"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542729"
 ---
 # <a name="defining-named-sets"></a>定义命名集
   命名集是一个返回一组维度成员的多维表达式 (MDX)。 可以定义命名集，并将它们另存为多维数据集定义的一部分；还可以在客户端应用程序中创建命名集。 通过合并多维数据集数据、算术运算符、数字和函数，可以创建命名集。 命名集可以由用户在客户端应用程序的 MDX 查询中使用，还可以用来定义子多维数据集中的集合。 子多维数据集是交叉联接集的集合，它将多维数据集空间限制为随后语句的定义的子空间。 定义受限的多维数据集空间是 MDX 脚本的一个基本概念。
@@ -32,11 +31,11 @@ ms.locfileid: "78175263"
 
      在“计算”**** 选项卡上定义新计算时，请记住，计算的解决是按它们出现在“脚本组织程序”**** 窗格中的顺序来进行的。 在创建新计算时该窗格中的焦点确定了计算的执行顺序；新的计算将定义于紧靠有焦点的计算之后。
 
-3.  在 "**名称**" 框中，将新命名集的名称更改`[Core Products]`为。
+3.  在 "**名称**" 框中，将新命名集的名称更改为 `[Core Products]` 。
 
      在“脚本组织程序”**** 窗格中，注意用于将命名集与脚本命令或计算成员区分开来的唯一图标。
 
-4.  在 "**计算工具**" 窗格的 "**元数据**" 选项卡上，依次展开`Members`"**产品**"、"**类别**" 和 "**所有产品**"。
+4.  在 "**计算工具**" 窗格的 "**元数据**" 选项卡上，依次展开 "**产品**"、"**类别**" `Members` 和 "**所有产品**"。
 
     > [!NOTE]
     >  如果无法在“计算工具”**** 窗格中查看任何元数据，请在工具栏上单击“重新连接”****。 如果该操作失败，则可能必须处理多维数据集，或启动 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例。
@@ -47,11 +46,11 @@ ms.locfileid: "78175263"
 
 ## <a name="defining-a-large-resellers-named-set"></a>定义“大型分销商”命名集
 
-1.  右键单击`[Core Products]` "**脚本组织**程序" 窗格，然后单击 "**新建命名集**"。
+1.  右键单击 `[Core Products]` "**脚本组织**程序" 窗格，然后单击 "**新建命名集**"。
 
-2.  在 "**名称**" 框中，将此命名集的名称`[Large Resellers]`更改为。
+2.  在 "**名称**" 框中，将此命名集的名称更改为 `[Large Resellers]` 。
 
-3.  在 "**表达式**" 框中`Exists()`，键入。
+3.  在 "**表达式**" 框中，键入 `Exists()` 。
 
      使用 Exists 函数来从“分销商名称”属性层次结构返回成员集合，而“分销商名称”属性层次结构将与有最大雇员数的“雇员数”属性层次结构中的成员集合相交互。
 
@@ -69,29 +68,29 @@ ms.locfileid: "78175263"
 
      现在，您已定义了 Exists 集表达式的第一个集，接下来您可以添加第二组-"分销商" 维度的成员集，其中包含数量最多的雇员。
 
-7.  在 "**计算工具**" 窗格的 "**元数据**" 选项卡上，展开 "分销商" `Members`维度中**的员工数**，展开，然后展开 "**所有分销商**"。
+7.  在 "**计算工具**" 窗格的 "**元数据**" 选项卡上，展开 "分销商" 维度中**的员工数**，展开 `Members` ，然后展开 "**所有分销商**"。
 
      注意，此属性层次结构的成员没有分组。
 
 8.  打开“分销商”**** 维度设计器，然后在“属性”**** 窗格中单击“雇员数目”****。
 
-9. 在属性窗口中， `DiscretizationMethod`将属性更改为 "**自动**"，然后将`DiscretizationBucketCount`属性更改`5`为。 有关详细信息，请参阅[对属性成员分组（离散化）](multidimensional-models/attribute-properties-group-attribute-members.md)。
+9. 在属性窗口中，将 `DiscretizationMethod` 属性更改为 "**自动**"，然后将 `DiscretizationBucketCount` 属性更改为 `5` 。 有关详细信息，请参阅[对属性成员分组（离散化）](multidimensional-models/attribute-properties-group-attribute-members.md)。
 
 10. 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的“生成”菜单上，单击“部署 Analysis Services 教程”********。
 
 11. 成功完成部署后，切换到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器，然后在“计算”**** 选项卡的工具栏上单击“重新连接”****。
 
-12. 在 "**计算工具**" 窗格的 "**元数据**" 选项卡上，展开 "**分销商**" `Members`维度中**的员工数**，展开，然后展开 "**所有分销商**"。
+12. 在 "**计算工具**" 窗格的 "**元数据**" 选项卡上，展开 "**分销商**" 维度中**的员工数**，展开 `Members` ，然后展开 "**所有分销商**"。
 
      请注意，此属性层次结构的成员现在包含在编号为 0 到 4 的五个组中。 若要查看组的编号，请将指针暂停在组上以查看 InfoTip。 对于范围 `2 -17`，InfoTip 应包含 `[Reseller].[Number of Employees].&[0]`。
 
-     此属性层次结构的成员被分组，因为 DiscretizationBucketCount 属性设置为`5` ，并且 DiscretizationMethod 属性设置为 "**自动**"。
+     此属性层次结构的成员被分组，因为 DiscretizationBucketCount 属性设置为 `5` ，并且 DiscretizationMethod 属性设置为 "**自动**"。
 
 13. 在“表达式”**** 框中，在 Exists 集表达式中的 Members 函数之后和右括号之前添加逗号，再将 **83 - 100** 从“元数据”**** 窗格拖放到逗号之后。
 
      现在，将“大型分销商”命名集放在轴上，便已经完成了将会返回与两个指定集合（所有分销商集合和有 83 到 100 名雇员的分销商集合）相交互的成员集合的 Exists 集表达式。
 
-     下图显示了`[Large Resellers]`命名集的 "**计算表达式**" 窗格。
+     下图显示了命名集的 "**计算表达式**" 窗格 `[Large Resellers]` 。
 
      ![[大型分销商] 的“计算表达式”窗格](../../2014/tutorials/media/l6-named-set-02.gif "[大型分销商] 的“计算表达式”窗格")
 

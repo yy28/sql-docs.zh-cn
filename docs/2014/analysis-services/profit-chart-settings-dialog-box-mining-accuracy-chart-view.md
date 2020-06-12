@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e534b40b-f4d2-4fbc-80e7-3b1dd8784cfd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c9c44aa6060a9b626b3de0cde5a3c82e1e55b1dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf009e45e97586a50c01f6e949120c09e3625ebc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070689"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539869"
 ---
 # <a name="profit-chart-settings-dialog-box-mining-accuracy-chart-view"></a>“利润图设置”对话框（“挖掘准确性图表”视图）
   可以使用 **“利润图设置”** 对话框配置用于生成利润图的设置。 有关利润图的详细信息，请参阅[提升图（Analysis Services - 数据挖掘）](data-mining/lift-chart-analysis-services-data-mining.md)。  

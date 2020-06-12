@@ -5,17 +5,17 @@ ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ad7041700d2ded9b20eb79b648d170333961745f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6b85fcb83b9268701f0b717faf41f07552073e37
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728102"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83732465"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services 的高可用性和灾难恢复
 
@@ -23,7 +23,7 @@ ms.locfileid: "73728102"
 
 本文介绍 Always On 可用性组配置上托管的 Master Data Service （MDS）解决方案。 本文介绍如何在 SQL 2016 Always On 可用性组（AG）上安装和配置 SQL 2016 Master Data Services。 此解决方案的主要目的是改善 SQL Server 数据库上托管的 MDS 后端数据的高可用性和灾难恢复。
 
-## <a name="introduction"></a>介绍
+## <a name="introduction"></a>简介
 
 本文介绍了在 Always On 可用性组配置上托管的 Master Data Service （MDS）解决方案。 本文介绍如何在 SQL 2016 Always On 可用性组（AG）上安装和配置 SQL 2016 MDS。 此解决方案的主要目的是改善 SQL Server 数据库上托管的 MDS 后端数据的高可用性和灾难恢复。
 
@@ -323,7 +323,7 @@ AG 只能在现有数据库上创建。 因此，可在一个节点上创建 MDS
 
    图 18
 
-9. 在“选择数据同步”页上，单击“完整”，然后指定每个节点都能访问的网络共享********。 单击“下一步”继续。 请参阅图 19。
+9. 在“选择数据同步”页上，单击“完整”，然后指定每个节点都能访问的网络共享********。 单击 **“下一步”** 以继续。 请参阅图 19。
 
    此网络共享用于存储数据库备份以创建次要副本。 如果它不适用于你的组织，请选择其他数据同步选项。 请参阅[SQL Server 2016 Always On 可用性组](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)，了解如何使用其他选项创建辅助副本。 图 17 还列出了其他选项。
 
@@ -331,7 +331,7 @@ AG 只能在现有数据库上创建。 因此，可在一个节点上创建 MDS
 
    图 19 
 
-10. 在“验证”页上，确保所有验证均传递成功，并更正所有错误****。 单击“下一步”继续。
+10. 在“验证”页上，确保所有验证均传递成功，并更正所有错误****。 单击 **“下一步”** 以继续。
 
 11. 在“摘要”页上查看所有配置设置，然后单击“完成”********。 此操作将创建并配置可用性组。
 
@@ -385,7 +385,7 @@ AG 只能在现有数据库上创建。 因此，可在一个节点上创建 MDS
 
    有关 Master Data Service 的详细信息，请参阅 [Master Data Services](../master-data-services-overview-mds.md)。
 
-## <a name="conclusion"></a>结束语
+## <a name="conclusion"></a>结论
 
 在此白皮书中，我们已了解如何将 Master Data Services 后端数据库设置为 AG 的一部分并进行配置。 此配置在 Master Data Services 后端数据库上提供高可用性和灾难恢复。 若要实现此配置，需要安装和配置 Windows Server 故障转移群集、AG 和 Master Data Services。
 

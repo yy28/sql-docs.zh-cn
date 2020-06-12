@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: c11380f0-7c24-4668-9cdf-9c53e4aff665
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6d5f0619e7291cc08b1750c0b35f9639cb7a9872
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f37939fea1188c18079fc7e619cee6a336876e24
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078040"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541849"
 ---
 # <a name="manage-models-sql-server-data-mining-add-ins"></a>管理模型（SQL Server 数据挖掘外接程序）
   ![“数据挖掘”功能区中的“管理模型”按钮](media/dmc-manage.gif "“数据挖掘”功能区中的“管理模型”按钮")  
   
- 利用 "**管理模型**" 对话框，您可以与当前连接到的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]服务器中存储的现有挖掘模型和挖掘结构进行交互。 您还可以查看和管理已在当前会话期间创建的临时结构和模型。 如果您同时使用会话模型和存储在服务器上的模型，则这两种模型在该对话框中都是可见的。  
+ 利用 "**管理模型**" 对话框，您可以与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 当前连接到的服务器中存储的现有挖掘模型和挖掘结构进行交互。 您还可以查看和管理已在当前会话期间创建的临时结构和模型。 如果您同时使用会话模型和存储在服务器上的模型，则这两种模型在该对话框中都是可见的。  
   
 ## <a name="using-the-manage-models-wizard"></a>使用管理模型向导  
  单击 "**管理模型**" 时，将打开 "**管理挖掘结构和模型**" 对话框，为管理现有数据挖掘模型和结构提供以下功能的访问权限：  

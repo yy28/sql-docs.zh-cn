@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 705d5492-b58f-45d9-94d7-ed57b7025823
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fca78578046122a1598df096e45965367b7880ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07617e2a49d784352911088f7c5e09bc727ab7d0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070101"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539009"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>“规则”选项卡（挖掘模型查看器）
   可以使用关联模型中的 **“规则”** 窗格来查看算法从数据中提取的规则。 规则不仅说明了各项之间相互关联的方式，并且可用于创建建议。  
@@ -76,7 +75,7 @@ ms.locfileid: "66070101"
   
  可以单击列标题来按概率进行排序。  
   
- **仅次于**  
+ **重要性**  
  此列将在图表中显示每个规则的重要性。  
   
  可以单击列标题来按重要性进行排序。  

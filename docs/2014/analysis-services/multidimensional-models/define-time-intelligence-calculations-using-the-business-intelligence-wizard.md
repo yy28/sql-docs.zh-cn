@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: be36e8fc-f46e-4553-8623-b27d695c330b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c665c894a4e0bb3691c483a8d8bab084ac2fa276
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c0ebb99e8368254e085cc9a4f4b0dc9a040b24c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075435"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546953"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>使用商业智能向导定义时间智能计算
   时间智能增强功能是一项多维数据集增强功能，它可以将时间计算（或时间视图）添加到所选层次结构中。 此增强功能支持以下计算类别：  
@@ -43,7 +42,7 @@ ms.locfileid: "66075435"
   
  时间智能应用于有时间维度的多维数据集。 （时间维度是其 `Type` 属性设置为 `Time` 的维度）。 另外，该维度的时间特性的 `Type` 属性还必须有适当的设置（如年份或月份）。 如果使用维度向导创建时间维度，将会正确设置维度及其特性的 `Type` 属性。  
   
- 若要向多维数据集添加时间智能，请使用商业智能向导，并在 **“选择增强功能”** 页上选择 **“定义时间智能”** 选项。 然后此向导将指引您完成相应的步骤，以选择将向其添加时间智能的层次结构，并指定将对层次结构中的哪些成员应用时间智能。 在向导的最后一页上，您可以查看将对[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库进行的更改以添加所选的时间智能。  
+ 若要向多维数据集添加时间智能，请使用商业智能向导，并在 **“选择增强功能”** 页上选择 **“定义时间智能”** 选项。 然后此向导将指引您完成相应的步骤，以选择将向其添加时间智能的层次结构，并指定将对层次结构中的哪些成员应用时间智能。 在向导的最后一页上，您可以查看将对数据库进行的更改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 以添加所选的时间智能。  
   
 ## <a name="selecting-a-time-hierarchy"></a>选择时间层次结构  
  在 **“选择目标层次结构和计算”** 页中，选择将应用时间增强功能的时间层次结构。 每次运行商业智能向导时，只能向一个时间层次结构应用时间增强功能。 如果希望向多个时间层次结构应用增强功能，请再次运行向导。  

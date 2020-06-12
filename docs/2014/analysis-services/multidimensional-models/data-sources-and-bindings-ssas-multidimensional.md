@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b909423c431507d7709d814bfa4061eaf0a0e342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e3631310e55089647559191dbefed67778d0241
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076080"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547189"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>数据源和绑定（SSAS 多维）
   可将多维数据集、维度和其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象绑定到数据源。 数据源可为以下对象之一：  
@@ -61,9 +60,9 @@ ms.locfileid: "66076080"
 |BigInt|64 位有符号整数。 此数据类型映射到 Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Int64 数据类型和 OLE DB 中的 DBTYPE_I8 数据类型。|  
 |Bool|一个布尔值。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Boolean 数据类型和 OLE DB 中的 DBTYPE_BOOL 数据类型。|  
 |货币|货币值，范围在 -263（或 -922,337,203,685,477.5808）到 263-1（或 +922,337,203,685,477.5807）之间，精确到货币单位的万分之一。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Decimal 数据类型和 OLE DB 中的 DBTYPE_CY 数据类型。|  
-|日期|日期数据，以双精度浮点数存储。 整数部分是自 1899 年 12 月 30 日以来的天数，而小数部分是不足一天的部分。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 DateTime 数据类型和 OLE DB 中的 DBTYPE_DATE 数据类型。|  
+|Date|日期数据，以双精度浮点数存储。 整数部分是自 1899 年 12 月 30 日以来的天数，而小数部分是不足一天的部分。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 DateTime 数据类型和 OLE DB 中的 DBTYPE_DATE 数据类型。|  
 |Double|双精度浮点数，范围在 -1.79E +308 到 1.79E +308 之间。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Double 数据类型或 OLE DB 中的 DBTYPE_R8 数据类型。|  
-|Integer|32 位有符号整数。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Int32 数据类型和 OLE DB 中的 DBTYPE_I4 数据类型。|  
+|整数|32 位有符号整数。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Int32 数据类型和 OLE DB 中的 DBTYPE_I4 数据类型。|  
 |Single|单精度浮点数，范围在 -3.40E +38 到 3.40E +38 之间。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Single 数据类型和 OLE DB 中的 DBTYPE_R4 数据类型。|  
 |SmallInt|16 位有符号整数。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 Int16 数据类型和 OLE DB 中的 DBTYPE_I2 数据类型。|  
 |TinyInt|一个 8 位有符号整数。 此数据类型映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 中的 SByte 数据类型和 OLE DB 中 DBTYPE_I1 数据类型。<br /><br /> 注意：如果数据源包含的字段属于 tinyint 数据类型，并且 AutoIncrement 属性设置为 True，则它们会在数据源视图中转换成整数。|  
@@ -177,9 +176,9 @@ ms.locfileid: "66076080"
  与外部绑定相关的所有元素都是可选的。 对于所有未指定的元素，ASSL 将应用持久化对象的 DDL 中包含的规范。 `DataSource` 命令中的 `DataSourceView` 或 `Process` 的规范是可选的。 如果指定 `DataSource` 或 `DataSourceView`，则将不对它们进行实例化，并且在 `Process` 命令完成后，不会保留它们。  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>外部绑定类型的定义  
- 在外部 `Bindings` 集合内，ASSL 允许将绑定集合用于多个对象，每个对象对应一个 `Binding`。 每个 `Binding` 都有一个扩展的对象引用，该引用与对象引用类似，但它还可以引用次级对象（例如，维度属性和度量值组属性）。 `Object`此对象在命令中`Process`采用元素的典型窗体，只不过\<*对象*>\<*/Object*> 标记不存在。  
+ 在外部 `Bindings` 集合内，ASSL 允许将绑定集合用于多个对象，每个对象对应一个 `Binding`。 每个 `Binding` 都有一个扩展的对象引用，该引用与对象引用类似，但它还可以引用次级对象（例如，维度属性和度量值组属性）。 此对象 `Object` 在命令中采用元素的典型窗体 `Process` ，只不过 \<*Object*> \<*/Object*> 标记不存在。  
   
- 为其指定绑定的每个对象都由>ID 的 form \<*对象*的 XML 元素标识（例如`DimensionID`）。 在您使用 form \<*对象*>ID 明确地识别出对象之后，就可以确定为其指定绑定的元素，该元素通常`Source`为。 有一个常见情况需要注意，即 `Source` 为 `DataItem` 的属性，这属于属性中的列绑定。 在这种情况下，您不需要指定 `DataItem` 标记，而只需要简单地指定 `Source` 属性，就如同该属性直接位于要绑定的列上一样。  
+ 为其指定绑定的每个对象都由 ID 为的 XML 元素 \<*object*> （例如 `DimensionID` ）标识。 使用窗体 ID 明确地标识对象后 \<*object*> ，可以标识为其指定绑定的元素，该元素通常为 `Source` 。 有一个常见情况需要注意，即 `Source` 为 `DataItem` 的属性，这属于属性中的列绑定。 在这种情况下，您不需要指定 `DataItem` 标记，而只需要简单地指定 `Source` 属性，就如同该属性直接位于要绑定的列上一样。  
   
  `KeyColumns` 由它们在 `KeyColumns` 集合内的顺序标识。 无法只指定属性的第一个键列和第三个键列，因为没有办法指示跳过第二个键列。 所有键列都必须存在于维度属性的外部绑定中。  
   

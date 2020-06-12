@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: af041b39-fdd1-4cb5-a5ef-2f3ddab84614
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7f7d0accb835eb7da23ade6aec405066204fc415
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7473f9c4dd9080fc03d3b1dea106f8b10c9c2916
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175596"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539434"
 ---
 # <a name="relabel-sql-server-data-mining-add-ins"></a>重新标记（SQL Server 数据挖掘外接程序）
   ![重新标记工具的 Office 13 图标](media/dm13-relabel.gif "重新标记工具的 Office 13 图标")

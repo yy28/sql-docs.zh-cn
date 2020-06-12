@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: bba922b5-8b88-4051-9506-ff055248182a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98da3e0f7a9b61b178372d9b24b8b595ab6b6626
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aef124abc8398f1b314a391291b52340a90689ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727161"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544971"
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>插入、更新和删除成员 (XMLA)
   您可以使用 XML for Analysis （XMLA）中的[Insert](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla)、 [update](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)和[Drop](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla)命令分别从启用写的维度中插入、更新或删除成员。 有关启用了写功能的维度的详细信息，请参阅[启用写功能的维度](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)。  
@@ -75,13 +74,13 @@ ms.locfileid: "62727161"
     > [!NOTE]  
     >  必须包括 `Attribute` 元素的所有属性。 否则，可能会出错。  
   
--   [Where](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/where-element-xmla)属性，其中包含一个或多个`Attribute`约束要在其中更新成员的属性的元素。 属性`Where`对于将`Update`命令限定为成员的特定实例是至关重要的。 如果未`Where`指定属性，则将更新给定成员的所有实例。 例如，有三个客户，您希望将他们的市县名称从 Redmond 更改为 Bellevue。 若要更改市县名称，您必须提供 `Where` 属性，该属性将标识 Customer 特性的三个成员中应更改其 City 特性的成员。 如果您不提供此 `Where` 属性，则运行 `Update` 命令后，其市县名称当前为 Redmond 的每个客户的市县名称都将更改为 Bellevue。  
+-   [Where](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/where-element-xmla)属性，其中包含一个或多个 `Attribute` 约束要在其中更新成员的属性的元素。 `Where`属性对于将 `Update` 命令限定为成员的特定实例是至关重要的。 如果 `Where` 未指定属性，则将更新给定成员的所有实例。 例如，有三个客户，您希望将他们的市县名称从 Redmond 更改为 Bellevue。 若要更改市县名称，您必须提供 `Where` 属性，该属性将标识 Customer 特性的三个成员中应更改其 City 特性的成员。 如果您不提供此 `Where` 属性，则运行 `Update` 命令后，其市县名称当前为 Redmond 的每个客户的市县名称都将更改为 Bellevue。  
   
     > [!NOTE]  
     >  除了新成员以外，`Update` 命令只能更新 `Where` 子句中未包括的特性的特性键值。 例如，更新客户时不能更新市县名称；否则，会更改所有客户的市县名称。  
   
 ### <a name="updating-members-in-parent-attributes"></a>更新父特性中的成员  
- 若要支持父属性， `Update`请在命令中提供可选的[MoveWithDescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/movewithdescendants-element-xmla)MovewithDescedants 属性。 如果将 `MoveWithDescendants` 属性设置为 True，则表示当父成员的标识符发生更改时，该父成员的后代也应与该父成员一起移动。 如果将此值设置为 False，则移动某父成员将导致该父成员的直接后代提升到该父成员先前所处的级别。  
+ 若要支持父属性，请在命令中提供 `Update` 可选的[MoveWithDescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/movewithdescendants-element-xmla)MovewithDescedants 属性。 如果将 `MoveWithDescendants` 属性设置为 True，则表示当父成员的标识符发生更改时，该父成员的后代也应与该父成员一起移动。 如果将此值设置为 False，则移动某父成员将导致该父成员的直接后代提升到该父成员先前所处的级别。  
   
  更新父特性中的成员时，`Update` 命令无法更新其他特性中的成员。  
   

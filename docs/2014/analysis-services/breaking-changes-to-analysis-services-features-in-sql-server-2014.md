@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: aeb02542-5a6c-458c-a110-13413dd3e9d9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 65b70cf2bb85bca60a372f09a5d3fc9ffedb90cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d6aac37a1287e597f1c34936e8aae4af8571aa5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064421"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527830"
 ---
 # <a name="breaking-changes-to-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014 中 Analysis Services 功能的重大更改
   本主题介绍 [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]中的重大更改。 这些更改可能导致基于 SQL Server 早期版本的应用程序、脚本或功能无法继续使用。  
@@ -60,7 +59,7 @@ ms.locfileid: "66064421"
 |-----------|-----------------|  
 |shallow exists 函数与包含枚举成员或枚举集叉积的命名集结合使用的方式已更改。|在 [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)]中，shallow exists 函数不可用于包含枚举成员或枚举集叉积的命名集。 若要实现与 [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)]的原始发布版本和 SP1 的向后兼容，可将配置属性 ConfigurationSettings\OLAP\Query\NamedSetShallowExistsMode 设置为 1；若要实现与 [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] SP2 的向后兼容，则应将其设置为 2。|  
 |VBA 函数对 Null 值和空值的处理方式与 [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] 中的方式有所不同。|在 [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)]中，如果将 Null 值或空值用作参数，VBA 函数将返回 0 或空字符串。 在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]中，它们将返回 Null。|  
-|迁移向导将因默认情况下不安装 DSO 而失败。|默认情况下，SQL Server 2008 不会安装 DSO（决策支持对象）向后兼容组件。 默认情况下将安装向后兼容包，但将禁用该包的 DSO 组件。 由于 SQL Server Analysis Services 迁移向导依赖此组件，因此在未安装该组件的情况下该迁移向导将失败。 若要安装 DSO 组件，请执行下列操作：<br /><br /> 1）打开 "控制面板"。<br />2）在 Windows XP 或 Windows Server 2003 中，选择 "**添加或删除程序**"。 在 Windows Vista 和 Windows Server 2008 中，选择 **“程序和功能”**。<br />3）右键单击**Microsoft SQL Server 2005 向后兼容性**，然后选择 "**更改**"。<br />4）在后向兼容性安装向导中，单击 "**下一步**"。<br />5）在 "程序维护" 页上，选择 "**修改**"，然后单击 "**下一步**"。<br />6）在 "功能选择" 页上，如果 "决策支持对象（DSO）" 不可用，请单击向下箭头，然后选择 "**此功能将安装在本地硬盘上**"。 单击“下一步”  。<br />7）在 "准备修改程序" 页上，单击 "**安装**"。<br />8）安装完成后，单击 "**完成**"。<br /><br /> <br /><br /> 完成迁移后，可以按照上述步骤删除 DSO，将 DSO 的选项更改为 "**此功能将不可用**"。<br /><br /> 如果未安装向后兼容包，则可以从 SQL Server 2008 分发介质进行安装。 请注意，存在针对各目标体系结构的版本 (x86、x64、ia64)。 可在以下位置找到这些版本：<br /><br /> x86\Setup\x86\SQLServer2005_BC.msi<br /><br /> x64\Setup\x64\SQLServer2005_BC.msi<br /><br /> ia64\Setup\ia64\SQLServer2005_BC.msi|  
+|迁移向导将因默认情况下不安装 DSO 而失败。|默认情况下，SQL Server 2008 不会安装 DSO（决策支持对象）向后兼容组件。 默认情况下将安装向后兼容包，但将禁用该包的 DSO 组件。 由于 SQL Server Analysis Services 迁移向导依赖此组件，因此在未安装该组件的情况下该迁移向导将失败。 若要安装 DSO 组件，请执行下列操作：<br /><br /> 1）打开 "控制面板"。<br />2）在 Windows XP 或 Windows Server 2003 中，选择 "**添加或删除程序**"。 在 Windows Vista 和 Windows Server 2008 中，选择 **“程序和功能”**。<br />3）右键单击**Microsoft SQL Server 2005 向后兼容性**，然后选择 "**更改**"。<br />4）在后向兼容性安装向导中，单击 "**下一步**"。<br />5）在 "程序维护" 页上，选择 "**修改**"，然后单击 "**下一步**"。<br />6）在 "功能选择" 页上，如果 "决策支持对象（DSO）" 不可用，请单击向下箭头，然后选择 "**此功能将安装在本地硬盘上**"。 单击“下一步”。<br />7）在 "准备修改程序" 页上，单击 "**安装**"。<br />8）安装完成后，单击 "**完成**"。<br /><br /> <br /><br /> 完成迁移后，可以按照上述步骤删除 DSO，将 DSO 的选项更改为 "**此功能将不可用**"。<br /><br /> 如果未安装向后兼容包，则可以从 SQL Server 2008 分发介质进行安装。 请注意，存在针对各目标体系结构的版本 (x86、x64、ia64)。 可在以下位置找到这些版本：<br /><br /> x86\Setup\x86\SQLServer2005_BC.msi<br /><br /> x64\Setup\x64\SQLServer2005_BC.msi<br /><br /> ia64\Setup\ia64\SQLServer2005_BC.msi|  
 |不建议将分区位置放置在 Data 文件夹中。|服务器管理 Data 文件夹，并将在创建、删除和更改对象时创建或删除相应文件夹。 因此，强烈建议不要在 Data 文件夹内指定分区存储位置，尤其是不要在数据库、多维数据集和维度的子文件夹中指定。 尽管服务器允许您使用 Create 或 Alter 命令来执行此操作，但它会显示警告。 如果您将 Data 文件夹中包含有分区存储位置的数据库从 SQL Server 2005 Analysis Services 升级到 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Analysis Services，则此升级操作将成功完成。 还原或同步操作将需要您将分区存储位置移出 Data 文件夹。|  
 |您可能会从在 ProClarity Analytics Server 和 Microsoft Office PerformancePoint Server 2007 中使用“EXISTING”MDX 关键字的查询获得意外结果。|某些情况下，ProClarity Analytics Server 和 Microsoft Office PerformancePoint Server 2007 会在 MDX 中错误地使用 EXISTING 关键字。 由于已对 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Analysis Services 进行了更改，因此这些查询可能会返回意外结果。|  
   

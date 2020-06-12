@@ -1,5 +1,6 @@
 ---
 title: XML 大容量加载（SQLXML）简介
+description: 了解 XML 大容量加载实用工具，它是 SQLXML 4.0 中的独立 COM 对象，可用于将半结构化 XML 数据加载到 Microsoft SQL Server 表中。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4116bef21a70e6de699046019fd404798826bf18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11b89a9d6981281bdb2e89bb5511c2f803c91b31
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246737"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529711"
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>XML 大容量加载简介 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML 大容量加载是一个独立的 COM 对象，可用于将半结构化 XML 数据加载到 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]表中。  
+  XML 大容量加载是一个独立的 COM 对象，可用于将半结构化 XML 数据加载到 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表中。  
   
  您可以使用 INSERT 语句和 OPENXML 函数将 XML 数据插入到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库；但是，当需要插入大量 XML 数据时，大容量加载实用工具提供了更好的性能。  
   
@@ -47,7 +48,7 @@ ms.locfileid: "75246737"
 ## <a name="streaming-of-xml-data"></a>XML 数据流式处理  
  由于源 XML 文档可能很大，因此无法将整个文档读入内存以进行大容量加载处理。 XML 大容量加载而是将 XML 数据解释为流并读取它。 当该实用工具读取数据时，该工具标识数据库表，并根据 XML 数据源生成相应记录，然后再将这些记录发送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以便插入。  
   
- 例如，以下源 XML 文档包含** \<Customer>** 元素和** \<Order>** 子元素：  
+ 例如，以下源 XML 文档包含 **\<Customer>** 元素和 **\<Order>** 子元素：  
   
 ```  
 <Customer ...>  
@@ -58,7 +59,7 @@ ms.locfileid: "75246737"
 ...  
 ```  
   
- 当 XML 大容量加载读取** \<Customer>** 元素时，它将为 Customertable 生成一条记录。 当它读取** \</Customer>** 结束标记时，XML 大容量加载将该记录插入到中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的表中。 同样，在读取** \<Order>** 元素时，XML 大容量加载将为 orderaddeddate 生成一条记录，然后在读取** \</order>** 结束标记时将[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]该记录插入到表中。  
+ XML 大容量加载读取元素时，将为 **\<Customer>** Customertable 生成记录。 读取 **\</Customer>** 结束标记后，XML 大容量加载会将该记录插入到中的表中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 同样，在读取 **\<Order>** 元素时，XML 大容量加载将为 orderaddeddate 生成一条记录，然后在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 读取结束标记时将该记录插入到表中 **\</Order>** 。  
   
 ## <a name="transacted-and-nontransacted-xml-bulk-load-operations"></a>事务和非事务 XML 大容量加载操作  
  XML 大容量加载可以以事务或非事务模式运行。 如果在非事务模式下进行大容量加载，则性能通常是最佳的：也就是说，Transaction 属性设置为 FALSE，并且以下条件之一成立：  

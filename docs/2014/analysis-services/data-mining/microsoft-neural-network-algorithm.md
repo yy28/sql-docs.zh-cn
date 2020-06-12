@@ -22,16 +22,15 @@ helpviewer_keywords:
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a7330fab8b4c0ecdff296e0daa5e529442fd8b94
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c8462d5965685986bbb68565ccb24de0f18c645
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083869"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521753"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
-  在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中， [!INCLUDE[msCoName](../../includes/msconame-md.md)]神经网络算法将输入属性的每个可能状态与可预测属性的每个可能状态相结合，并使用定型数据来计算概率。 之后，可以根据输入属性，将这些概率用于分类或回归，并预测被预测属性的结果。  
+  在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法将输入属性的每个可能状态与可预测属性的每个可能状态相结合，并使用定型数据来计算概率。 之后，可以根据输入属性，将这些概率用于分类或回归，并预测被预测属性的结果。  
   
  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经元网络算法构造的挖掘模型可以包含多个网络，这取决于用于输入和预测的列的数量，或者取决于仅用于预测的列的数量。 一个挖掘模型包含的网络数取决于挖掘模型使用的输入列和预测列包含的状态数。  
   
@@ -78,7 +77,7 @@ ms.locfileid: "66083869"
   
  有关如何创建针对数据挖掘模型的查询的信息，请参阅 [数据挖掘查询](data-mining-queries.md)。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 -   不支持钻取或数据挖掘维度， 这是因为挖掘模型中节点的结构不一定直接与基础数据对应。  
   
