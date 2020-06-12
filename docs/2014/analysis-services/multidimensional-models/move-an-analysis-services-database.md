@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 02d084aea4491982d560f1cf0b8dc449b8502f09
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f10901625ece0a154248f99370e427c7a999c87
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073601"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546059"
 ---
 # <a name="move-an-analysis-services-database"></a>移动 Analysis Services 数据库
   很多情况下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 希望将多维或表格模型数据库移到另一个位置。 根据业务需要（例如，将数据库移到另一个磁盘以获得更好的性能、为数据库扩容获取空间或升级产品），经常需要进行上述操作。  
@@ -55,7 +54,7 @@ ms.locfileid: "66073601"
   
 7.  在 **“文件夹”** 文本框中，键入数据库文件夹的新位置。 或者，您可以使用浏览按钮（**...**）查找数据库文件夹。  
   
-8.  选择数据库`ReadWrite`的模式。  
+8.  选择 `ReadWrite` 数据库的模式。  
   
 9. 键入步骤 3 中使用的密码，然后单击 **“确定”** 执行附加命令。  
   

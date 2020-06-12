@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0e056c95-ba06-413e-8dc1-4d411a447c3b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a20fde7ebe09a3e57af504846cf010c8120ffbc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 099f97ac1195f58ae9bf9dbc7c6b0671e6aada2c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088151"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527553"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>数据挖掘准备清单
   虽然数据挖掘外接程序让创建和试验模型变得简单有趣，但在需要可重复、可操作的结果时，必须有足够的时间制定基本业务需求以及获取和准备数据。 本节提供了一个清单，可帮助对您的调查进行计划，并且描述常见问题。  

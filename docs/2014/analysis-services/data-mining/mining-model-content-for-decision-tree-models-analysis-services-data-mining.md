@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ee2142c117a2e46b024a7e2bd639e6739ffd00ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a5d8d0591c99e52071270689941adc45af7a835
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083664"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521581"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）
   本主题介绍使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法的模型特有的挖掘模型内容。 有关所有模型类型的挖掘模型内容的常规说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。 请务必记住，Microsoft 决策树算法是一种混合算法，它可以创建功能相差很大的多种模型：决策树可以表示关联和规则，甚至线性回归。 树的结构实质上都是相同的，但如何解释信息则取决于您创建模型的目的。  
@@ -157,7 +156,7 @@ ms.locfileid: "66083664"
  MSOLAP_NODE_SHORT_CAPTION  
  用于显示的标签。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  决策树模型没有用于存储整个模型的统计信息的单独节点，这与 Naive Bayes 或神经网络模型中的边际统计信息节点不同。 该模型为每个可预测属性创建一个单独的树，树的顶部为“(全部)”节点。 每个树独立于其他树。 如果模型仅包含一个可预测属性，则只有一个树，因此只有一个“(全部)”节点。  
   
  表示输出属性的每个树还进一步细分为表示拆分的内部分支 (NODE_TYPE = 3)。 其中的每个树都包含有关目标属性的分布的统计信息。 此外，每个叶节点 (NODE_TYPE = 4) 包含说明输入属性及其值以及支持每个属性值对的事例数目的统计信息。 因此，在决策树的任何分支中，可以方便地查看数据的概率或分布，而不需要查询源数据。 树的每个级别必须表示其直接子节点的总和。  
@@ -176,7 +175,7 @@ ms.locfileid: "66083664"
 |Age >= 30|Age >= 30 且 Gender = Male|  
 ||Age >= 30 且 Gender = Female|  
 |Age < 30|Age < 30 且 Gender = Male|  
-||年龄\< 30 和性别 = 女性|  
+||年龄 \< 30 和性别 = 女性|  
   
  当使用决策树模型进行预测时，该模型将为其提供的属性用作参数，并沿着属性的路径向下通过整个树。 通常，所有预测都转到叶，而内部节点仅用于分类。  
   
@@ -189,7 +188,7 @@ ms.locfileid: "66083664"
   
 |||  
 |-|-|  
-|**NODE_CAPTION**|显示区分相对于父节点的特定节点的属性。 节点标题基于拆分条件定义总体的子段。 例如，如果 split 处于开启 [Age] 且是三向拆分，则三个子节点的节点标题可能为 "[Age] < 40"、"40 <= [Age] \< 50"、"[age] >= 50"。|  
+|**NODE_CAPTION**|显示区分相对于父节点的特定节点的属性。 节点标题基于拆分条件定义总体的子段。 例如，如果 split 处于开启 [Age] 且是三向拆分，这三个子节点的节点标题可能为 "[Age] < 40"，"40 <= [Age] \< 50", "[Age] > = 50"。|  
 |**NODE_DESCRIPTION**|包含将该节点与其他节点（从模型父节点开始）区分开来的属性的完整列表。 例如，Product name = Apple 且 Color = Red。|  
   
 ###  <a name="node-rule-and-marginal-rule"></a><a name="NodeRule"></a> 节点规则和边际规则  
@@ -225,7 +224,7 @@ ms.locfileid: "66083664"
 |Age < 30|40|Age < 30 且 Gender = Male|30|30/40 = .75|30/100 = .30|  
 |||Age < 30 且 Gender = Female|10|10/40 = .25|10/100 = .10|  
   
- 在所有模型中进行小幅调整，以便将可能的 Missing 值的情况考虑在内。 对于连续属性，每个值或值的范围表示为状态（例如，年龄\<30、age = 30 和 age >30），概率计算如下：状态存在（值 = 1），某些其他状态存在（值 = 0），状态为。 `Missing` 有关如何调整概率以表示 Missing 值的详细信息，请参阅[缺失值（Analysis Services - 数据挖掘）](missing-values-analysis-services-data-mining.md)。  
+ 在所有模型中进行小幅调整，以便将可能的 Missing 值的情况考虑在内。 对于连续属性，每个值或值的范围表示为状态（例如，年龄 \<30, Age = 30, and Age > 30），概率计算如下：状态存在（值 = 1），其他状态存在（值 = 0），状态为 `Missing` 。 有关如何调整概率以表示 Missing 值的详细信息，请参阅[缺失值（Analysis Services - 数据挖掘）](missing-values-analysis-services-data-mining.md)。  
   
  每个节点的概率几乎是通过分布情况直接计算出的，如下所示：  
   

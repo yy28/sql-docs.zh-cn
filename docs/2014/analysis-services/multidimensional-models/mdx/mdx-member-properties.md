@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 26b5ad08-3799-4a5e-89f3-dca25e637d45
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8c0326d45af68db966f120fa12e35eb59f30becc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b7fdf989fc23ea70be7d7863f5d4c6ac0b61d8a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074160"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546319"
 ---
 # <a name="using-member-properties-mdx"></a>使用成员属性 (MDX)
   成员属性提供有关各个元组中的每个成员的基本信息。 此基本信息包括成员名、父级别、子成员数目等等。 成员属性适用于给定级别的所有成员。 就组织结构而言，成员属性可视为存储在单个维度上按维度组织的数据。  
@@ -40,10 +39,10 @@ ms.locfileid: "66074160"
   
  有关详细信息，请参阅[用户定义的成员属性 (MDX)](mdx-member-properties-user-defined-member-properties.md)。  
   
- 内部成员属性和用户定义成员属性都可以通过使用`PROPERTIES`关键字或[properties](/sql/mdx/properties-mdx)函数进行检索。  
+ 内部成员属性和用户定义成员属性都可以通过使用 `PROPERTIES` 关键字或[properties](/sql/mdx/properties-mdx)函数进行检索。  
   
 ## <a name="using-the-properties-keyword"></a>使用 PROPERTIES 关键字  
- `PROPERTIES` 关键字指定要用于给定轴维度的成员属性。 关键字隐藏在 MDX SELECT 语句`<axis specification>`的子句中： [SELECT](/sql/mdx/mdx-data-manipulation-select) `PROPERTIES`  
+ `PROPERTIES` 关键字指定要用于给定轴维度的成员属性。 `PROPERTIES`关键字隐藏在 `<axis specification>` MDX [SELECT](/sql/mdx/mdx-data-manipulation-select)语句的子句中：  
   
 ```  
 SELECT [<axis_specification>  
@@ -69,9 +68,9 @@ SELECT [<axis_specification>
   
  `<property>` 语法的细分因要查询的属性而异：  
   
--   上下文相关的内部成员属性前必须是维度或级别的名称。 但是，非上下文相关的内部成员属性不能由维度或级别的名称限定。 有关如何将关键字与内部成员属性`PROPERTIES`一起使用的详细信息，请参阅[&#40;MDX&#41;的内部成员属性](mdx-member-properties-intrinsic-member-properties.md)。  
+-   上下文相关的内部成员属性前必须是维度或级别的名称。 但是，非上下文相关的内部成员属性不能由维度或级别的名称限定。 有关如何将 `PROPERTIES` 关键字与内部成员属性一起使用的详细信息，请参阅[&#40;MDX&#41;的内部成员属性](mdx-member-properties-intrinsic-member-properties.md)。  
   
--   用户定义成员属性前应是其所在级别的名称。 有关如何将关键字与用户定义的`PROPERTIES`成员属性一起使用的详细信息，请参阅[&#40;MDX&#41;的用户定义的成员属性](mdx-member-properties-user-defined-member-properties.md)。  
+-   用户定义成员属性前应是其所在级别的名称。 有关如何将 `PROPERTIES` 关键字与用户定义的成员属性一起使用的详细信息，请参阅[&#40;MDX&#41;的用户定义的成员属性](mdx-member-properties-user-defined-member-properties.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [创建和使用属性值 (MDX)](../../creating-and-using-property-values-mdx.md)  

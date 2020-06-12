@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8ad62267358ac48525a4c933a796ac70f3638665
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8dc9c46cf4ddcc7ff04f0c9002bff59cdb3ba370
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175716"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545993"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>逻辑体系结构概述（Analysis Services - 多维数据）
   Analysis Services 在服务器部署模式下运行，该模式可确定不同 Analysis Services 模型类型使用的内存体系结构和运行时环境。 服务器模式在安装过程中确定。 **多维和数据挖掘模式**支持传统的 OLAP 和数据挖掘。 **表格模式**支持表格模型。 **SharePoint 集成模式**是指作为 PowerPivot for SharePoint 安装的 Analysis Services 实例，用于在工作簿中加载和查询 Excel 或 PowerPivot 数据模型。
@@ -26,7 +25,7 @@ ms.locfileid: "78175716"
  本主题介绍 Analysis Services 在多维和数据挖掘模式下操作时的基本体系结构。 有关其他模式的详细信息，请参阅[&#40;Ssas 表格的表格建模&#41;](../../tabular-models/tabular-models-ssas.md)和[比较 &#40;SSAS&#41;的表格和多维解决方案](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)。
 
 ## <a name="basic-architecture"></a>基本体系结构
- 一个 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例可包含多个数据库，一个数据库中可同时包含 OLAP 对象和数据挖掘对象。 应用程序可以连接到指定的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例和指定的数据库。 一个服务器计算机可以承载多个 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例。 的[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例命名为 "\<ServerName>\\<InstanceName\>"。 下图显示了对象之间[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]的所有关系。
+ 一个 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例可包含多个数据库，一个数据库中可同时包含 OLAP 对象和数据挖掘对象。 应用程序可以连接到指定的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例和指定的数据库。 一个服务器计算机可以承载多个 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例。 的实例 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 被命名为 " \<ServerName> \\<InstanceName \> "。 下图显示了对象之间的所有关系 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。
 
  ![AMO 运行对象关系](../../dev-guide/media/amo-runningobjects.gif "AMO 运行对象关系")
 
@@ -36,14 +35,14 @@ ms.locfileid: "78175716"
 
  多维数据集由维度和度量值组生成。 多维数据集的维度集合中的维度属于数据库的维度集合。 度量值组是同时拥有相同数据源视图和来自多维数据集的相同维度子集的度量值的集合。 度量值组拥有一个或多个分区，以便管理物理数据。 度量值组可有默认聚合设计。 度量值组中的所有分区都可以使用默认聚合设计；当然，每个分区也可以有自己的聚合设计。
 
- 服务器对象的[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]每个实例在 AMO 中被视为不同的服务器对象;每个不同的实例通过不同<xref:Microsoft.AnalysisServices.Server>的连接连接到对象。 每个服务器对象都包含一个或多个数据源、数据源视图、数据库对象、程序集和安全角色。
+ 服务器对象 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 在 AMO 中，每个实例都被视为不同的服务器对象; 每个不同的实例 <xref:Microsoft.AnalysisServices.Server> 通过不同的连接连接到对象。 每个服务器对象都包含一个或多个数据源、数据源视图、数据库对象、程序集和安全角色。
 
  Dimension 对象每个数据库对象都包含多个维度对象。 每个维度对象都包含一个或多个属性，这些属性组织为层次结构。
 
  Cube 对象每个数据库对象都包含一个或多个多维数据集对象。 多维数据集通过其度量值和维度定义。 多维数据集中的度量值和维度派生自数据源视图中的表和视图，此数据源视图是多维数据集所基于的视图，或者是通过度量值定义和维度定义生成的视图。
 
 ## <a name="object-inheritance"></a>对象继承
- ASSL 对象模型包含有多个重复元素组。 例如，元素组 "`Dimensions`包含`Hierarchies`" 定义元素的维度层次结构。 `Cubes` 和 `MeasureGroups` 都包含元素组“`Dimensions` contain `Hierarchies`”。
+ ASSL 对象模型包含有多个重复元素组。 例如，元素组 " `Dimensions` 包含" `Hierarchies` 定义元素的维度层次结构。 `Cubes` 和 `MeasureGroups` 都包含元素组“`Dimensions` contain `Hierarchies`”。
 
  除非显式重写，否则元素将会从更高级别继承这些重复元素组的详细信息。 例如，`Translations` 的 `CubeDimension` 与其祖先元素 `Translations` 的 `Cube` 相同。
 
@@ -62,7 +61,7 @@ ms.locfileid: "78175716"
 
  多维数据集周围更小的字母数字值是维度的成员。 示例成员为“陆地”（“路线”维度的成员）、“非洲”（“源”维度的成员）以及“第一季度”（“时间”维度的成员）。
 
-### <a name="measures"></a>度量值组
+### <a name="measures"></a>度量值
  多维数据集单元中的值表示两个度量值：“包”和“上一次”。 “包”度量值表示进口包的数量，并使用 `Sum` 函数来聚合事实数据。 “上一次”度量值表示收到的日期，并使用 `Max` 函数来聚合事实数据。
 
 ### <a name="dimensions"></a>维度

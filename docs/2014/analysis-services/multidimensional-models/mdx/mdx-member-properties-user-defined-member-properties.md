@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b64cc581-e784-42c4-bec8-932abd687423
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ead5a45bf163ca4e7998c30ab5c83f94cca9075b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75e5df5a0677ee205b5517f4c7ca89a390426971
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074263"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546289"
 ---
 # <a name="user-defined-member-properties-mdx"></a>用户定义的成员属性 (MDX)
   用户定义的成员属性可作为属性关系添加到维度的特定命名级别中。 用户定义的成员属性不能添加到层次结构的 `(All)` 级别，也不能添加到层次结构本身中。  
@@ -30,7 +29,7 @@ ms.locfileid: "66074263"
 -   若要通过编程方式添加用户定义的成员属性，您的应用程序可以使用 Analysis Manager 对象 (AMO) 或者结合使用 XML for Analysis (XMLA) 和 Analysis Services 脚本语言 (ASSL)。 有关详细信息，请参阅 [属性关系](../../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)。  
   
 ## <a name="retrieving-user-defined-member-properties"></a>检索用户定义的成员属性  
- 您可以使用`PROPERTIES`关键字或[properties](/sql/mdx/properties-mdx)函数检索用户定义的成员属性。  
+ 您可以使用 `PROPERTIES` 关键字或[properties](/sql/mdx/properties-mdx)函数检索用户定义的成员属性。  
   
 ### <a name="using-the-properties-keyword-to-retrieve-user-defined-member-properties"></a>使用 PROPERTIES 关键字检索用户定义的成员属性  
  检索用户定义的成员属性的语法与用来检索内部级别成员属性的语法相似，如下列语法所示：  

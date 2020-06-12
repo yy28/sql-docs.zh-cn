@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 876920c8-9d6f-4d09-abb2-53d78161a289
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b327a0a350e88fd197a52c710f8a991c892a0aea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6aedd88a380ad8790d5492524a24028c6df03db3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086538"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525913"
 ---
 # <a name="data-exploration-options-dialog-box-analysis-services---data-mining"></a>“数据浏览选项”对话框（Analysis Services - 数据挖掘）
   可以使用 **中的** “数据浏览选项” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，为 **“浏览数据”** 对话框设置抽样和图表选项。 通过单击 **“浏览数据”** 对话框中的 **“抽样选项”** ，可以显示 **“数据浏览选项”** 对话框。  

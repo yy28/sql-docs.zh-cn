@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d6962452b5615b9b2607007ed86c09eed495f6f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d17fa458e1699ab73bb8105fa2cc4cccc44dd597
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077015"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544659"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>授予对对象和操作的访问权限 (Analysis Services)
   非管理用户对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库内的多维数据集、维度和挖掘模型的访问权限可通过一个或多个数据库角色的成员身份获得。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理员创建这些数据库角色，从而授予对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的读取或读/写权限，然后向每个角色分配 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 用户和组。  
@@ -37,7 +36,7 @@ ms.locfileid: "66077015"
 ## <a name="list-roles-defined-for-your-database"></a>列出为你的数据库所定义的角色  
  管理员可以在 SQL Server Management Studio 中运行一个简单的 DMV 查询，获取在服务器上定义的全部角色的列表。  
   
-1.  在 SSMS 中，右键单击数据库，然后选择 "**新建查询** | **MDX**"。  
+1.  在 SSMS 中，右键单击数据库，然后选择 "**新建查询**  |  **MDX**"。  
   
 2.  键入以下查询并按下 F5 执行：  
   
@@ -73,7 +72,7 @@ ms.locfileid: "66077015"
   
  你还可以根据用户标识更改权限。 通常这称为动态安全，可使用 [UserName (MDX)](/sql/mdx/username-mdx) 函数实现  
   
-## <a name="best-practices"></a>最佳实践  
+## <a name="best-practices"></a>最佳做法  
  要更好地管理权限，建议采取类似于以下所述的方法：  
   
 1.  按函数（例如，dbadmin、cubedeveloper、processadmin）创建角色，这样，维护这些角色的任何人都可以一眼看出角色所允许的权限。 正如其他地方所述，你可以在模型定义中定义角色，从而在后续解决方案的部署中保留这些角色。  

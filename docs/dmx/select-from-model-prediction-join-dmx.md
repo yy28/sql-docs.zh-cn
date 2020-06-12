@@ -1,21 +1,21 @@
 ---
-title: 从模型&lt;&gt;预测联接（DMX）中选择 |Microsoft Docs
+title: 从 &lt; 模型 &gt; 预测联接（DMX）中选择 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b592aef0ba3831c5513e039ee4552d826468e819
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0156d12fe2d3d3f62105dccf05f99c2eebab8833
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928332"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670136"
 ---
-# <a name="select-from-ltmodelgt-prediction-join-dmx"></a>选择&lt;模型&gt;预测联接（DMX）
+# <a name="select-from-ltmodelgt-prediction-join-dmx"></a>选择 &lt; 模型 &gt; 预测联接（DMX）
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   使用挖掘模型来预测外部数据源中的列状态。 此**预测联接**语句将源查询中的每个事例与该模型匹配。  
@@ -38,7 +38,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  *选择表达式列表*  
  从挖掘模型中派生的一组以逗号分隔的列标识符和表达式。  
   
- *模型*  
+ *model*  
  模型标识符。  
   
  *子选择*  
@@ -56,7 +56,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  *expression*  
  可选。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  ON 子句定义了源查询中的列与挖掘模型中的列之间的映射。 该映射用于将源查询中的列定向到挖掘模型中的列，这样便可将这些列用作输入以便创建预测。 \<*联接映射列表*中的列> 通过使用等号（=）进行关联，如下面的示例中所示：  
   
 ```  
@@ -69,7 +69,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  用于预测联接的源查询可以是表，也可以是单独查询。  
   
- 您可以在 " \<*选择表达式" 列表*中指定不返回表表达式> 和\<*条件表达式*> 的预测函数。  
+ 您可以在 "选择表达式" 列表中指定不返回表表达式 \< *select expression list*> 和 \< *条件表达式*> 的预测函数。  
   
  **自然预测联接**自动将源查询中的列名称与模型中的列名称相匹配。 如果使用**自然预测**，则可以省略 ON 子句。  
   
@@ -105,7 +105,7 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="example-2-using-openquery"></a>示例 2：使用 OPENQUERY  
- 下面的示例演示如何通过使用存储在外部数据集中的潜在客户列表来创建批预测查询。 由于表是在实例上定义的数据源视图的一部分[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，因此查询可以使用[OPENQUERY](../dmx/source-data-query-openquery.md)检索数据。 因为表中各列的名称与挖掘模型中的列的名称不同，所以必须使用**ON**子句将表中的列映射到模型中的列。  
+ 下面的示例演示如何通过使用存储在外部数据集中的潜在客户列表来创建批预测查询。 由于表是在实例上定义的数据源视图的一部分 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，因此查询可以使用[OPENQUERY](../dmx/source-data-query-openquery.md)检索数据。 因为表中各列的名称与挖掘模型中的列的名称不同，所以必须使用**ON**子句将表中的列映射到模型中的列。  
   
  查询返回表中每个人的姓氏和名字，以及指示每个人是否会购买自行车的布尔列；其中，0 表示“可能不会购买自行车”，1 表示“可能会购买自行车”。 最后一列包含预测结果的概率。  
   

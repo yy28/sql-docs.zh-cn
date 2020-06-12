@@ -11,26 +11,25 @@ helpviewer_keywords:
 ms.assetid: 9fd77b16-0b89-44ce-bcf1-7c04b62499da
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9d18e97a60bf1c6108b3672f40747e8b612ad6e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd4bd48b5914d5fda89f94c0a959e670ffec3321
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62732220"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528673"
 ---
 # <a name="data-mining-programming"></a>数据挖掘编程
   如果您觉得 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的内置工具和查看器不符合您的要求，您可以编写自己的扩展插件代码来扩展 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的功能。 如果采用这种方法，您有两种选择：  
   
 -   **XMLA**  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]支持 XML FOR ANALYSIS （XMLA）作为与客户端应用程序进行通信的协议。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还支持其他扩展了 XML for Analysis 规范的命令。  
+     [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]支持 XML for Analysis （XMLA）作为与客户端应用程序进行通信的协议。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还支持其他扩展了 XML for Analysis 规范的命令。  
   
      由于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将 XMLA 用于数据定义、数据操作和数据控制支持，因此您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供的可视化工具创建挖掘结构和挖掘模型，然后扩展已使用数据挖掘扩展插件 (DMX) 和 Analysis Services 脚本语言 (ASSL) 脚本创建的数据挖掘对象。  
   
      您可以创建和修改 XMLA 脚本中的全部数据挖掘对象，并以编程方式从您自己的应用程序对模型运行预测查询。  
   
--   **分析管理对象（AMO）**  
+-   **分析管理对象 (AMO)**  
   
      [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还提供了一个完整的框架，该框架使第三方数据挖掘访问接口能够将数据挖掘对象集成到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中。  
   

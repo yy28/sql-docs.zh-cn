@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: c30016f0-7e50-44de-b45d-df11b8b34320
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bf63755b657ae55085decc9c84e25ee1dd51c553
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3173e382cfc2dbbba8eabf5b84db9bd95725c4bf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082413"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528943"
 ---
 # <a name="database-designer-analysis-services---multidimensional-data"></a>数据库设计器（Analysis Services - 多维数据）
-  使用中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的数据库设计器更改的属性，并查看[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据库生成的警告。  
+  使用中的数据库设计器 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 更改的属性，并查看数据库生成的警告 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。  
   
 ## <a name="tabs"></a>制表符  
  该数据库设计器包含以下选项卡：  

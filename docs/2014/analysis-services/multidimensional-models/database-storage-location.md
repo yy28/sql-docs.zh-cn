@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: cf88c62e-581e-42f2-846f-a9bf1d7c3292
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2dd3659aed11e4e1cee791fcb5e541471320c82a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e904333dc25e7ae58d8eae29ba00279d7e599033
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075902"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547099"
 ---
 # <a name="database-storage-location"></a>数据库存储位置
-  通常会出现这样的情况， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 希望某个数据库驻留在服务器数据文件夹之外。 这些情况通常是由于业务需要，如提高性能或扩展存储。 对于这些情况， `DbStorageLocation`数据库属性使[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 能够指定本地磁盘或网络设备中的数据库位置。  
+  通常会出现这样的情况， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 希望某个数据库驻留在服务器数据文件夹之外。 这些情况通常是由于业务需要，如提高性能或扩展存储。 对于这些情况， `DbStorageLocation` 数据库属性使 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 能够指定本地磁盘或网络设备中的数据库位置。  
   
 ## <a name="dbstoragelocation-database-property"></a>DbStorageLocation 数据库属性  
  `DbStorageLocation` 数据库属性指定了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 创建和管理所有数据库数据和元数据文件的文件夹。 除数据库元数据文件之外（它存储在服务器数据文件夹中），所有元数据文件都存储在 `DbStorageLocation` 文件夹中。 在设置 `DbStorageLocation` 数据库属性的值时，需考虑两个重要的注意事项：  
@@ -36,10 +35,10 @@ ms.locfileid: "66075902"
  `DbStorageLocation` 指定了所有数据库数据和元数据文件所在的文件夹，而 `StorageLocation` 指定了多维数据集的一个或多个分区所在的文件夹。 `StorageLocation` 可以独立于 `DbStorageLocation` 进行设置。 这是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 根据预期的结果做出的决定，很多时候一个属性或另一个属性的使用会重叠。  
   
 ## <a name="dbstoragelocation-usage"></a>DbStorageLocation 用法  
- 在`DbStorageLocation`数据库命令序列、 `Create` `Detach` / `Attach` `Backup` /数据库命令序列或`Synchronize`数据库命令中，将数据库属性用作数据库命令的`Restore`一部分。 更改 `DbStorageLocation` 数据库属性被认为是数据库对象的结构更改。 这意味着必须重新创建所有元数据并且重新处理数据。  
+ 在数据库命令 `DbStorageLocation` `Create` `Detach` / `Attach` 序列、 `Backup` / `Restore` 数据库命令序列或 `Synchronize` 数据库命令中，将数据库属性用作数据库命令的一部分。 更改 `DbStorageLocation` 数据库属性被认为是数据库对象的结构更改。 这意味着必须重新创建所有元数据并且重新处理数据。  
   
 > [!IMPORTANT]  
->  不应使用 `Alter` 命令更改数据库存储位置。 相反，我们建议你使用`Detach` / `Attach`一系列数据库命令（请参阅[移动 Analysis Services 数据库](move-an-analysis-services-database.md)、[附加和分离 Analysis Services 数据库](attach-and-detach-analysis-services-databases.md)）。  
+>  不应使用 `Alter` 命令更改数据库存储位置。 相反，我们建议你使用一系列 `Detach` / `Attach` 数据库命令（请参阅[移动 Analysis Services 数据库](move-an-analysis-services-database.md)、[附加和分离 Analysis Services 数据库](attach-and-detach-analysis-services-databases.md)）。  
   
 ## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   

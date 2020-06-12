@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b34883d3dfa5a3d38f26a7ed905b5f00e7bcf8e6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493826"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542309"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>定义和使用钻取操作
   如果按事实维度来维度化事实数据，而不正确筛选查询返回的数据，则可能导致查询速度变慢。 若要避免出现这种情况，可以定义对返回的总行数进行限制的钻取操作。 这将极大地提高查询性能。  
@@ -38,7 +37,7 @@ ms.locfileid: "69493826"
   
      ![显示窗格中的空白操作模板](../../2014/tutorials/media/l8-action2.gif "显示窗格中的空白操作模板")  
   
-3.  在 "**名称**" 框中，将此操作的名称`Internet Sales Details Drillthrough Action`更改为。  
+3.  在 "**名称**" 框中，将此操作的名称更改为 `Internet Sales Details Drillthrough Action` 。  
   
 4.  在“度量值组成员”**** 列表中，选择“Internet 销售”****。  
   
@@ -52,9 +51,9 @@ ms.locfileid: "69493826"
   
      ![“附加属性”框](../../2014/tutorials/media/l8-action4.gif "“附加属性”框")  
   
-8.  在 "**最大行数**" `10`框中，键入。  
+8.  在 "**最大行数**" 框中，键入 `10` 。  
   
-9. 在 "**标题**" 框中`Drillthrough to Order Details...`，键入。  
+9. 在 "**标题**" 框中，键入 `Drillthrough to Order Details...` 。  
   
      这些设置将限制返回的行数，并指定在客户端应用程序菜单中将出现的标题。 下图显示了“附加属性”**** 框中的这些设置。  
   
@@ -104,11 +103,11 @@ ms.locfileid: "69493826"
   
     -   ShipDateKey  
   
-6.  将 "**订单日期键**" 特性的 "**名称**" `Order Date`属性更改为，然后单击 "**名称列**" 属性的 "浏览" 按钮，然后在 "**名称列**" 对话框中，选择 "**日期**" 作为源表，并选择 SimpleDate 作为源列。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  将 "**订单日期键**" 特性的 "**名称**" 属性更改为 `Order Date` ，然后单击 "**名称列**" 属性的 "浏览" 按钮，然后在 "**名称列**" 对话框中，选择 "**日期**" 作为源表，并选择 SimpleDate 作为源列。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  将 "**截止日期键**" 特性的 "**名称**" `Due Date`属性更改为，然后通过使用与 "**订单日期键**" 特性相同的方法，将此特性的 "**名称列**" 属性更改为**SimpleDate （WChar）**。  
+7.  将 "**截止日期键**" 特性的 "**名称**" 属性更改为 `Due Date` ，然后通过使用与 "**订单日期键**" 特性相同的方法，将此特性的 "**名称列**" 属性更改为**SimpleDate （WChar）**。  
   
-8.  将 "**发货日期键**" 特性的 "**名称**" `Ship Date`属性更改为，然后将此属性的 "**名称列**" 属性更改为**SimpleDate （WChar）**。  
+8.  将 "**发货日期键**" 特性的 "**名称**" 属性更改为 `Ship Date` ，然后将此属性的 "**名称列**" 属性更改为**SimpleDate （WChar）**。  
   
 9. 切换到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教程多维数据集的多维数据集设计器的“操作”**** 选项卡。  
   

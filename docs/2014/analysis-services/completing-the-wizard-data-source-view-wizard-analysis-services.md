@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5e18d9d8-4a5e-45db-b721-6b7968239b48
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d5dce0aa56997537e4911b0607ca9fba392dd847
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2eac3b37a2d627fe5550e5a7eb41f2539d0323d3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087635"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527353"
 ---
 # <a name="completing-the-wizard-data-source-view-wizard-analysis-services"></a>完成向导（数据源视图向导）(Analysis Services)
   可以使用向导的 **“完成向导”** 页，为数据源视图提供名称以及查看视图中包含的表和视图。 在单击 **“完成”** 后，可以使用数据源视图设计器在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中编辑该视图的属性。 有关数据源视图设计器的详细信息，请参阅[数据源视图设计器（Analysis Services - 多维数据）](data-source-view-designer-analysis-services-multidimensional-data.md)。  

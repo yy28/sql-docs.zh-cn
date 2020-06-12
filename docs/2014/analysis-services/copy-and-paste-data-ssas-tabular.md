@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2f8d8b3d-810b-4c31-98f2-341015e13da8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ad25ecae16a9b5e5f32554350a315156e9818241
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30d7e6aafe613e5ca43307aa75540d8fb1cea3ec
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086971"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526833"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>复制并粘贴数据（SSAS 表格）
   可以从外部应用程序复制表数据并将它粘贴到模型设计器中的新表或现有表。 从剪贴板粘贴的数据必须是 HTML 格式，例如，从 Excel 或 Word 中复制的数据。 模型设计器将对粘贴数据自动检测并应用数据类型。 您也可以手动修改列的数据类型或显示格式。  
@@ -34,7 +33,7 @@ ms.locfileid: "66086971"
   
 -   [“粘贴预览”对话框](#bkmk_paste_preview)  
   
-##  <a name="prerequisites"></a><a name="bkmk_prerequisites"></a>先决条件  
+##  <a name="prerequisites"></a><a name="bkmk_prerequisites"></a> 先决条件  
  粘贴数据时存在一些限制：  
   
 -   粘贴的表的行数不能超过 10,000。  
@@ -65,7 +64,7 @@ ms.locfileid: "66086971"
  根据您是将数据粘贴到全新的表中，将数据粘贴到现有表中并用新数据替换现有数据，还是将数据追加到现有表中，此对话框的选项将有所不同。  
   
 ### <a name="paste-to-new-table"></a>粘贴到新表中  
- **表名称**  
+ **表名**  
  指定将在设计器窗口中创建的表的名称。  
   
  **要粘贴的数据**  

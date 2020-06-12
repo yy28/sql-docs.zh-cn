@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2b34abdc-7ed4-4ec1-8780-052a704d6dbe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 85968aef6452acb6aac75c5c6d4a093964e8d923
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91bc709d61c786c165711cfdb31ff696456997ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083360"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521199"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Missing 值（Analysis Services - 数据挖掘）
   正确处理“Missing 值”  ** 是有效建模的重要组成部分。 本节说明什么是 Missing 值，并介绍在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的、用于处理在生成数据挖掘结构和挖掘模型时的 Missing 值的功能。  
@@ -44,17 +43,17 @@ ms.locfileid: "66083360"
   
  创建挖掘模型时，对于所有离散列，`Missing` 状态会自动添加到模型中。 例如，如果输入列 [性别] 包含两个可能的值（男和女），将自动添加第三个值来表示 `Missing` 值，而且显示该列所有值分布的直方图将始终包含一个具有 `Missing` 值的事例的计数。 如果性别列不缺少任何值，则直方图显示发现 0 个事例的状态为 Missing。  
   
- 当您认为数据可能不具有所有可能值的示例，并且不希望仅仅因为数据中没有任何示例而使模型排除该可能性时，则默认包含 `Missing` 状态很有必要。 例如，即使某商店的销售数据显示所有购买某种产品的客户恰巧都为女性，您也不希望创建一个预测只有女性才可能购买此产品的模型。 相反， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]会为额外的未知值（称为`Missing`）添加占位符，以适应可能的其他状态。  
+ 当您认为数据可能不具有所有可能值的示例，并且不希望仅仅因为数据中没有任何示例而使模型排除该可能性时，则默认包含 `Missing` 状态很有必要。 例如，即使某商店的销售数据显示所有购买某种产品的客户恰巧都为女性，您也不希望创建一个预测只有女性才可能购买此产品的模型。 相反，会为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 额外的未知值（称为）添加占位符， `Missing` 以适应可能的其他状态。  
   
  例如，下表显示了为自行车购买者教程创建的决策树模型中的（所有）节点的值的分布。 在示例方案中，[Bike Buyer] 列为可预测属性，其中，1 表示“是”，0 表示“否”。  
   
-|Value|案例|  
+|值|案例|  
 |-----------|-----------|  
 |0|9296|  
 |1|9098|  
 |Missing|0|  
   
- 此分布显示大约一半的客户已经购买了自行车，而一半的客户还没有购买自行车。 此特定数据集十分清晰；因此，每个事例的 [Bike Buyer] 列中都有一个值，并且 `Missing` 值的计数为 0。 但是，如果任何事例在 [自行车购买者] 字段中都为 null [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，则会将该行计为具有`Missing`值的事例。  
+ 此分布显示大约一半的客户已经购买了自行车，而一半的客户还没有购买自行车。 此特定数据集十分清晰；因此，每个事例的 [Bike Buyer] 列中都有一个值，并且 `Missing` 值的计数为 0。 但是，如果任何事例在 [自行车购买者] 字段中都为 null，则 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会将该行计为具有值的事例 `Missing` 。  
   
  如果输入为连续的列，则模型将属性的两个可能的状态 `Existing` 和 `Missing` 排列成表格报表的形式。 也就是说，该列或者包含某种数值数据类型的值，或者不包含任何值。 对于有值的事例，模型会计算平均值、标准偏差以及其他有意义的统计。 对于没有值的事例，模型将提供 `Missing` 值的计数并相应调整预测。 调整预测的方法因算法而异，下面一节将对其进行介绍。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "66083360"
 ## <a name="adjusting-probability-for-missing-states"></a>调整 Missing 状态的概率  
  除了对值进行计数外， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 还计算整个数据集中的任何值的概率。 这对于 `Missing` 值同样适用。 例如，下表显示了前面示例中事例的概率：  
   
-|Value|案例|概率|  
+|值|案例|概率|  
 |-----------|-----------|-----------------|  
 |0|9296|50.55%|  
 |1|9098|49.42%|  

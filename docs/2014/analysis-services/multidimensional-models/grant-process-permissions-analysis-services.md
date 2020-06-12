@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1531c23-6b46-46a8-9ba3-b6d3f2016443
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 49b8a1c8ce566b18143b6b693a227fba4a5bd094
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02d34bd76a4e5a0ecb183d8e8db5b96bf3e98114
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074891"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546649"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>授予处理权限 (Analysis Services)
   作为管理员，你可以创建专用于 Analysis Services 处理操作的角色，从而可以委派特定任务到其他用户，或者委派到用于无人参与的预定处理的应用程序。 可以在数据库、多维数据集、维度和挖掘结构级别授予处理权限。 除非你正在使用非常大型的多维数据集或表格数据库工作，否则我们建议授予数据库级别的处理权限，包括所有对象，也包括彼此互有相关性的对象。  
@@ -35,9 +34,9 @@ ms.locfileid: "66074891"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的实例，打开“数据库”文件夹，并选择一个数据库。  
   
-2.  右键单击 "**角色** | " "**新建角色**"。 输入名称和说明。  
+2.  右键单击 "**角色**" "  |  **新建角色**"。 输入名称和说明。  
   
-3.  在 "**常规**" 窗格中， `Process Database`选中相应的复选框。 此外，还`Read Definition`可以选择通过一个 SQL Server 工具（例如）启用交互式处理[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+3.  在 "**常规**" 窗格中，选中相应的 `Process Database` 复选框。 此外， `Read Definition` 还可以选择通过一个 SQL Server 工具（例如）启用交互式处理 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
 4.  在“成员身份” **** 窗格，添加有权限处理此数据库中的任何对象的 Windows 用户和组帐户。  
   
@@ -50,11 +49,11 @@ ms.locfileid: "66074891"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的实例，打开“数据库”文件夹，并选择一个数据库。  
   
-2.  右键单击 "**角色** | " "**新建角色**"。 输入名称和说明。  
+2.  右键单击 "**角色**" "  |  **新建角色**"。 输入名称和说明。  
   
-3.  在 "**常规**" 窗格中， `Process Database`清除复选框。 数据库权限通过使角色选项显示为灰色或不可选来覆盖在更低级别对象上设置权限的功能。  
+3.  在 "**常规**" 窗格中，清除 `Process Database` 复选框。 数据库权限通过使角色选项显示为灰色或不可选来覆盖在更低级别对象上设置权限的功能。  
   
-     技术上来说，专用处理角色不需要数据库权限。 但如果`Read Definition`没有数据库级别，则无法查看中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的数据库，从而使测试变得更加困难。  
+     技术上来说，专用处理角色不需要数据库权限。 但 `Read Definition` 如果没有数据库级别，则无法查看中的数据库 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，从而使测试变得更加困难。  
   
 4.  选择单个对象来处理：  
   
@@ -77,11 +76,11 @@ ms.locfileid: "66074891"
 ## <a name="set-processing-permissions-on-a-data-mining-structure"></a>设置数据挖掘结构的处理权限  
  你可以创建一个授予处理数据挖掘结构权限的角色。 这包括处理所有挖掘模型。  
   
- 用于浏览挖掘`Read Definition`模型和结构的 "**钻取**" 和 "权限" 是原子的，可以添加到相同的角色，也可以分成不同的角色。  
+ 用于浏览挖掘模型和结构的 "**钻取**" 和 " `Read Definition` 权限" 是原子的，可以添加到相同的角色，也可以分成不同的角色。  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的实例，打开“数据库”文件夹，并选择一个数据库。  
   
-2.  右键单击 "**角色** | " "**新建角色**"。 输入名称和说明。 在“常规” **** 窗格，确保数据库权限复选框处于清空状态。 数据库权限将通过使角色选项显示为灰色或不可选来覆盖在更低级别对象上设置权限的功能。  
+2.  右键单击 "**角色**" "  |  **新建角色**"。 输入名称和说明。 在“常规” **** 窗格，确保数据库权限复选框处于清空状态。 数据库权限将通过使角色选项显示为灰色或不可选来覆盖在更低级别对象上设置权限的功能。  
   
 3.  在“挖掘结构” **** 窗格，为每个挖掘结构选中“处理” **** 复选框。  
   

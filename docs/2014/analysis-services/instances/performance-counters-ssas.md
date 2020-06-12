@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aa9d5a5352afd10617358a032824d275b14b6c5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2909ec00d184dc06eaa5ee05108752b47ac7186b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079713"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543829"
 ---
 # <a name="performance-counters-ssas"></a>性能计数器 (SSAS)
   使用性能监视器，您可以通过性能计数器监视 Microsoft SQL Server Analysis Services (SSAS) 实例的性能。  
@@ -32,11 +31,11 @@ ms.locfileid: "66079713"
   
 |组|说明|  
 |-----------|-----------------|  
-|[缓存](#bkmk_Cache)|与 Analysis Services 聚合缓存相关的统计信息。|  
+|[Cache](#bkmk_Cache)|与 Analysis Services 聚合缓存相关的统计信息。|  
 |[连接](#bkmk_Connection)|与 Microsoft Analysis Services 连接相关的统计信息。|  
 |[数据挖掘预测](#bkmk_DataMiningPrediction)|与处理数据挖掘模型相关的统计信息。|  
 |[数据挖掘模型处理](#bkmk_DataMiningModelProcessing)|与根据数据挖掘模型创建预测相关的统计信息。|  
-|[锁](#bkmk_Locks)|与 Microsoft Analysis Services 内部服务器锁相关的统计信息。|  
+|[锁定](#bkmk_Locks)|与 Microsoft Analysis Services 内部服务器锁相关的统计信息。|  
 |[MDX](#bkmk_MDX)|与 Microsoft Analysis Services MDX 计算相关的统计信息。|  
 |[内存](#bkmk_Memory)|与 Microsoft Analysis Services 内部服务器内存相关的统计信息。|  
 |[主动缓存](#bkmk_ProactiveCaching)|与 Microsoft Analysis Services 主动缓存相关的统计信息。|  
@@ -74,9 +73,9 @@ ms.locfileid: "66079713"
 |计数器|说明|  
 |-------------|-----------------|  
 |当前连接数|当前已建立的客户端连接的数量。|  
-|请求数/秒|连接请求的速率。  这些请求是到达的请求。|  
-|请求总数|连接请求总数。  这些请求是到达的请求。|  
-|Successes/sec|连接成功完成速率。|  
+|请求数/秒|连接请求的速率。  这些是到达的请求。|  
+|请求总数|连接请求总数。  这些是到达的请求。|  
+|Successes/sec|连接成功完成率。|  
 |Total successes|成功连接总数。|  
 |Failures/sec|连接失败速率。|  
 |Total failures|失败的连接尝试总数。|  
@@ -222,7 +221,7 @@ ms.locfileid: "66079713"
 |In-memory Other File KB|当前内存中其他文件的大小 (KB)。|  
 |In-memory Other File KB/sec|写入内存中其他文件的速率 (KB)。|  
 |Potential In-memory Other File KB|潜在内存中其他文件的大小 (KB)。|  
-|Other Files|其他文件的数量。|  
+|其他文件|其他文件的数量。|  
 |VertiPaq Paged KB|用于内存中数据的分页内存量 (KB)。|  
 |VertiPaq Nonpaged KB|工作集中锁定供内存中引擎使用的内存量 (KB)。|  
 |VertiPaq Memory-Mapped KB|用于内存中数据的可分页内存量 (KB)。|  
@@ -332,7 +331,7 @@ ms.locfileid: "66079713"
 |长分析作业队列长度|长分析线程池队列中的作业数。|  
 |Long parsing job rate|作业通过长分析线程池的速率。|  
 |查询池空闲线程数|查询线程池中的空闲线程数。|  
-|Query pool busy threads|查询线程池中的繁忙线程数。|  
+|Query pool busy threads|查询线程池中的忙线程数。|  
 |查询池作业队列长度|查询线程池队列中的作业数。|  
 |Query pool job rate|作业通过查询线程池的速率。|  
 |处理池空闲非 I/O 线程数|处理线程池中专用于非 I/O 作业的空闲线程数。|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 00c9c42b-db2b-4620-8fb6-1e165ff0cbdd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bf87f2441488810286523a75137a3285aabc1956
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1e7b2e1e72263d8edf362941985bb775457fc6d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081084"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544466"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>常规（数据库设计器）（Analysis Services - 多维数据）
   可使用“常规”**** 选项卡更改 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库的属性。  
@@ -48,7 +47,7 @@ ms.locfileid: "66081084"
  **语言**  
  为指定事务选择语言。  
   
- 若要将新翻译添加到网格，请单击** \<"添加新翻译">**。  
+ 若要将新翻译添加到网格，请单击 **\<Add new translation>** 。  
   
  **翻译后的标题**  
  以翻译的相应语言键入数据库的标题。 如果为空，将使用默认的数据库标题。  
@@ -67,7 +66,7 @@ ms.locfileid: "66081084"
  **名称**  
  键入帐户类型的名称。  
   
- 若要添加新的帐户类型，请单击 " ** \<添加新帐户类型">**。  
+ 若要添加新的帐户类型，请单击 **\<Add new account type>** 。  
   
  **A**  
  设置帐户类型的默认名称，以供商业智能向导使用。 如果此列为空，则将使用默认的 **“名称”** 列。  

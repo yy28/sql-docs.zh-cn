@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 92624ca4-de67-4ebd-aab2-8adb527d327e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c8c8484089bf3aa1f9c88b3b2163a49b445bf8d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 494b3a6e4c05a88e68da34aca34bfbdce2944fbe
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069925"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538559"
 ---
 # <a name="script-organizer-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>脚本组织程序（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“计算”** 选项卡上的 **“脚本组织程序”** 窗格，访问和重新排序指定多维数据集的多维数据集脚本中包含的计算成员、命名集和脚本命令。  
@@ -31,7 +30,7 @@ ms.locfileid: "66069925"
   
  单击 **“工具栏”** 窗格或上下文菜单中的 **“上移”** 或 **“下移”** ，可以更改计算的执行顺序。  
   
- **类型**  
+ 类型  
  显示将计算标识为计算成员、命名集或脚本命令的图标。  
   
  **命令**  

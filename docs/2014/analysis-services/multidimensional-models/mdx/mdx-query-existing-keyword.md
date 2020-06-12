@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 651ee9ac-04ef-4316-87c9-a3df5ac27d22
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a6c5e8dbe3e1b1ad44286bcbb79132010cad618a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 115444c832fe8fe9b258a0c23b97b97553f32e8e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073969"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546209"
 ---
 # <a name="existing-keyword-mdx"></a>EXISTING 关键字 (MDX)
   强制在当前上下文中计算所指定的集。  
@@ -35,11 +34,11 @@ Existing Set_Expression
  *Set_Expression*  
  有效的多维表达式 (MDX) 集表达式。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  默认情况下，在包含集成员的多维数据集的上下文中对集进行求值。 但 `Existing` 关键字强制在当前上下文中对指定的集进行求值。  
   
 ## <a name="example"></a>示例  
- 下例将根据使用 `Aggregate` 函数求出并由用户选择的 State-Province 成员值，返回在上一时间段内销售额下降的分销商的计数。 但 [Hierarchize (MDX)](/sql/mdx/hierarchize-mdx) 和 [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) 函数用于返回 Product 维度中产品类别的销售额下降值。 `Existing`关键字强制在当前上下文中计算`Filter`函数集中的集，即州/省属性层次结构的华盛顿成员和俄勒冈成员。  
+ 下例将根据使用 `Aggregate` 函数求出并由用户选择的 State-Province 成员值，返回在上一时间段内销售额下降的分销商的计数。 但 [Hierarchize (MDX)](/sql/mdx/hierarchize-mdx) 和 [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) 函数用于返回 Product 维度中产品类别的销售额下降值。 `Existing`关键字强制在 `Filter` 当前上下文中计算函数集中的集，即州/省属性层次结构的华盛顿成员和俄勒冈成员。  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  

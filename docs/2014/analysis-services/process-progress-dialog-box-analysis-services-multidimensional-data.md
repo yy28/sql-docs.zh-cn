@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f3bd5278-3a83-4fd9-9903-e81bdd4b6892
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f4720d361fdd9a7d93d91f5e8fe873473816c2ef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a96e3e434e8f4ff3d8df4b4837bffb0d96649741
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070681"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539999"
 ---
 # <a name="process-progress-dialog-box-analysis-services---multidimensional-data"></a>“处理进度”对话框（Analysis Services - 多维数据）
   可以使用 **和** 中的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] “处理进度” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框监视 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中的处理。 当处理从 **对象开始时将显示** “处理进度” [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对话框。  
@@ -29,7 +28,7 @@ ms.locfileid: "66070681"
  **状态说明**  
  显示处理操作的当前状态。  
   
- **停止**  
+ **Stop**  
  单击此项将停止处理操作。  
   
  **重新处理**  

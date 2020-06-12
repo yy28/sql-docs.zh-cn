@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3199a6c2-a06d-47b9-bd1c-604dbb085318
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e647b32d8f94ebd545a9d8d85d066a25dde6e77c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed843b8b0005ff62f05b13ebd20024d528857388
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076912"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544603"
 ---
 # <a name="add-a-custom-aggregation-to-a-dimension"></a>向维度中添加自定义聚合
   在多维数据集或维度中添加自定义聚合增强功能，以使用其他一元运算符替换与维度成员关联的默认聚合。 这种增强功能指定维度表中定义父子层次结构中的成员汇总的一元运算符列。 一元运算符对父子层次结构中的父属性进行操作。  
@@ -38,8 +37,8 @@ ms.locfileid: "66076912"
  在向导的第一个 **“指定一元运算符”** 页中，指定要应用自定义聚合的维度。 已添加到该选定维度中的自定义聚合将会使维度发生更改。 所有包含选定维度的多维数据集都将继承这些更改。  
   
 ## <a name="adding-custom-aggregation-unary-operator"></a>添加自定义聚合（一元运算符）  
- 在第二个 **“指定一元运算符”** 页中，为自定义聚合指定所需的父属性，并为一元运算符指定维度表中的源列。 **Parent 特性**列出了`Usage`属性设置为`Parent`的特性。 如果具有多个父属性，则选择对应于要使用的父子关系的父属性。 如果没有列出父属性，则维度不存在有效的父子层次结构。  
+ 在第二个 **“指定一元运算符”** 页中，为自定义聚合指定所需的父属性，并为一元运算符指定维度表中的源列。 **Parent 特性**列出了 `Usage` 属性设置为的特性 `Parent` 。 如果具有多个父属性，则选择对应于要使用的父子关系的父属性。 如果没有列出父属性，则维度不存在有效的父子层次结构。  
   
- 在 **“源列”** 中，选择包含一元运算符的字符串列。 （此选择将设置`UnaryOperatorColumn`父特性的属性。）维度表还应具有指定一元汇总运算符的字符串列。 该列中的字符串值应包含有效的聚合运算符。 如果某行为空，则通常计算对应的成员。 如果列中的公式无效，则当检索使用成员的单元值时，会出现运行时错误。 有关详细信息，请参阅 [父子维度中的一元运算符](parent-child-dimension-attributes-unary-operators.md)。  
+ 在 **“源列”** 中，选择包含一元运算符的字符串列。 （此选择将设置 `UnaryOperatorColumn` 父特性的属性。）维度表还应具有指定一元汇总运算符的字符串列。 该列中的字符串值应包含有效的聚合运算符。 如果某行为空，则通常计算对应的成员。 如果列中的公式无效，则当检索使用成员的单元值时，会出现运行时错误。 有关详细信息，请参阅 [父子维度中的一元运算符](parent-child-dimension-attributes-unary-operators.md)。  
   
   

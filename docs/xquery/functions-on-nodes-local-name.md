@@ -1,5 +1,6 @@
 ---
 title: 本地名称函数（XQuery） |Microsoft Docs
+description: 了解如何使用 XQuery 函数本地名称（）返回节点的本地名称部分。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 382bbc9aeedacf37c7fe38abd592bcee7e154f5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3a10ab445bfcf9f61b7eb6c952100af9b6fadbb
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038869"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689572"
 ---
 # <a name="functions-on-nodes---local-name"></a>基于节点的函数 - local-name
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ fn:local-name($arg as node()?) as xs:string
  *$arg*  
  将检索其本地名称部分的节点名称。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 -   在 SQL Server 中，不带参数的**fn： local name （）** 只能用于上下文相关的谓词的上下文中。 特别要指出的是，它只能在方括号 (`[ ]`) 内使用。  
   
@@ -71,7 +72,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-using-local-name-without-argument-in-a-predicate"></a>B. 在谓词中使用不带参数的本地名称  
- 下面的查询是针对 ProductModel 表的说明列类型化**xml**列指定的。 表达式将返回 QName 的本地名称部分为 " `root` Location" <> 元素的所有元素子级。 局部变量中指定了**本地名称（）** 函数，但该函数未使用上下文节点。  
+ 下面的查询是针对 ProductModel 表的说明列类型化**xml**列指定的。 表达式将返回 `root` QName 的本地名称部分为 "Location" <> 元素的所有元素子级。 局部变量中指定了**本地名称（）** 函数，但该函数未使用上下文节点。  
   
 ```  
 SELECT Instructions.query('  
@@ -81,7 +82,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- 查询返回 <`root`> 元素的`Location`所有 <> 元素子级。  
+ 查询返回 `Location` <> 元素的所有 <> 元素子级 `root` 。  
   
 ## <a name="see-also"></a>另请参阅  
  [节点上的函数](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 15574819cf0f0fec0d95fa2353c187cc55091e56
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae3e672932dd320c6b369f23f03c1f056d30d4ba
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084194"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522173"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>管理数据挖掘解决方案和对象
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供可用于管理现有挖掘结构和挖掘模型的客户端工具。 本节介绍使用每种环境可以执行的管理操作。  
@@ -35,7 +34,7 @@ ms.locfileid: "66084194"
 ## <a name="location-of-data-mining-objects"></a>数据挖掘对象的位置  
  已处理的挖掘结构和挖掘模型通常存储在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的实例中。  
   
- 如果在开发数据挖掘对象时[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]在模式`Immediate`下创建了与数据库的连接，则在工作时，所创建的任何对象都会立即添加到服务器中。 但是，如果在 **“脱机”** 模式下设计数据挖掘对象，这也是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中工作时的默认设置，则您创建的挖掘对象在部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例之前只是一些元数据容器。 因此，无论任何时候，只要对对象进行了更改，则就必须将对象重新部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器。 有关数据挖掘体系结构的详细信息，请参阅[物理体系结构（Analysis Services - 数据挖掘）](physical-architecture-analysis-services-data-mining.md)。  
+ 如果在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Immediate` 开发数据挖掘对象时在模式下创建了与数据库的连接，则在工作时，所创建的任何对象都会立即添加到服务器中。 但是，如果在 **“脱机”** 模式下设计数据挖掘对象，这也是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中工作时的默认设置，则您创建的挖掘对象在部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例之前只是一些元数据容器。 因此，无论任何时候，只要对对象进行了更改，则就必须将对象重新部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器。 有关数据挖掘体系结构的详细信息，请参阅[物理体系结构（Analysis Services - 数据挖掘）](physical-architecture-analysis-services-data-mining.md)。  
   
 > [!NOTE]  
 >  诸如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007 数据挖掘外接程序之类的客户端还可用于创建会话挖掘模型和挖掘结构，它们使用到实例的连接，但只在会话期间在服务器中存储挖掘结构和挖掘模型。 您仍然可以通过客户端管理这些模型，就如同管理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中存储的结构和模型一样，但断开与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例的连接后，不会持久化这些对象。  

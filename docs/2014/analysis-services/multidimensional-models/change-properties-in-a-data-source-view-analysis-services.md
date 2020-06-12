@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a508cbfb3d5a348fa07e33b686359f5f0d5531a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 201ff28999efb006b80157125c85242d538d756a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076739"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537099"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>在数据源视图中更改属性 (Analysis Services)
   在使用数据源视图向导定义数据源视图并将表、视图、命名计算和命名查询添加到数据源视图后，可能需要更改与下列各项相关的属性：  
@@ -45,7 +44,7 @@ ms.locfileid: "66076739"
   
 |属性|说明|  
 |--------------|-----------------|  
-|“数据源”|指定要查看其属性的数据源视图中的数据源|  
+|数据源|指定要查看其属性的数据源视图中的数据源|  
 |说明|指定数据源视图的说明|  
 |名称|指定在解决方案资源管理器或 Analysis Services 数据库中显示的数据源视图的名称。 可以在此或在解决方案资源管理器中更改数据源视图的名称。|  
 |NameMatchingCriteria|数据源的名称匹配条件。 如果数据源视图向导检测到主键-外键关系，则默认值为（无）。 无论数据源视图向导是否设置此属性，都可以在此指定一个值。 如果数据库关系存在并指定了名称匹配条件，则可以使用这些关系和条件来推断现有表和新添加的表之间的关系。|  

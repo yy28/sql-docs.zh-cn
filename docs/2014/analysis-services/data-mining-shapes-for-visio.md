@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 11a821d9-1c0a-442e-b735-92208ce479dc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6ebe206d4f4942e9a9456ba10b00d33514ef6212
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d30456ac3685aa3dc40af6f1c79f92796fc1404
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086399"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525773"
 ---
 # <a name="data-mining-shapes-for-visio"></a>Visio 数据挖掘形状
   Visio 数据挖掘形状提供为显示数据挖掘模型而自定义的各种模板。 通过使用这些模板，您可以连接到已创建的模型和创建交互式演示文稿来说明数据挖掘的结果。  
@@ -38,7 +37,7 @@ ms.locfileid: "66086399"
 -   **分类关系图：** 使用此向导为分段模型创建彩色图形。 您可以在两个视图间切换（如属性对比、分类剖面图和依赖关系），并自定义分类的外观。  
   
 ## <a name="installation"></a>安装  
- 安装 Visio 数据挖掘模板时，默认情况下会将以下文件安装到\<驱动器> \program Files\Microsoft SQL SERVER 2012 DM 外接程序（或\<驱动器> \ 或 Program files （x86） \Microsoft SQL Server 2012 DM 外接程序）：  
+ 在安装 Visio 数据挖掘模板时，默认情况下会将以下文件安装到 \<drive> \Program Files\Microsoft SQL Server 2012 Dm 外接程序（或 \<drive> \ 或 Program files （x86） \Microsoft SQL SERVER 2012 DM 外接程序）：  
   
 -   **Microsoft 数据挖掘**此模板包含预先设计的格式设置、布局和向导，可帮助您使用数据挖掘形状。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66086399"
   
      有关如何创建连接的信息，请参阅[连接到源数据 &#40;Excel 数据挖掘客户端&#41;](connect-to-source-data-data-mining-client-for-excel.md)。  
   
--   如果使用的是表分析工具，请确保将模型保存到[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]服务器，且不要使用临时模型。  
+-   如果使用的是表分析工具，请确保将模型保存到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务器，且不要使用临时模型。  
   
 -   必须已使用所支持的某种算法创建模型：聚类、决策树、神经网络、Naïve Bayes 或逻辑回归。  
   

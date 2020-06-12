@@ -1,5 +1,5 @@
 ---
-title: sys.databases （Transact-sql） |Microsoft Docs
+title: sys.configurations （Transact-sql） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 885b736424dfa0b1a83f0d0c854fc11b80f67ade
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7986fc4286cf681507a80a72f2f308b6a96f413a
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832762"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215859"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +43,38 @@ ms.locfileid: "82832762"
 |**is_dynamic**|**bit**|1 = 执行 RECONFIGURE 语句时生效的变量。|  
 |**is_advanced**|**bit**|1 = 只有在设置了**show advancedoption**时才会显示变量。|  
   
- 有关所有服务器配置选项的列表，请参阅[服务器配置选项 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
+ ## <a name="remarks"></a>注解
+  有关所有服务器配置选项的列表，请参阅[服务器配置选项 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
 > [!NOTE]  
 >  有关数据库级配置选项，请参阅[ALTER DATABASE 作用域配置 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。 若要配置软件 NUMA，请参阅[软 numa &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)。  
-  
+ 
+sys.configurations 目录视图可用于确定 config_value （值列）、run_value （value_in_use 列）以及配置选项是否为动态（无需重新启动服务器引擎或 is_dynamic 列）。
+
+> [!NOTE]
+> Sp_configure 的结果集中的 config_value 与**sys.config的 urations**列相同。 **Run_value**等效于**sys.configurations. value_in_use**列。
+
+以下查询可用于确定是否已安装了任何配置值：
+
+```SQL
+select * from sys.configurations where value != value_in_use
+```
+
+如果值等于所做的配置选项的更改，但**value_in_use**不相同，请重新配置命令未运行或失败，或者必须重新启动服务器引擎。
+
+有些配置选项的值和 value_in_use 可能不相同，这是预期的行为。 例如：
+
+"max server memory （MB）"-默认配置值0将显示为 value_in_use = 2147483647 "min server memory （MB）"-默认配置值0可能显示为 value_in_use = 8 （32位）或16（64位）。 
+
+在某些情况下， **value_in_use**将为0。 在这种情况下，"true" **value_in_use**为8（32位）或16（64位）
+
+**Is_dynamic**列可用于确定配置选项是否需要重新启动。 is_dynamic = 1 表示当执行重新配置（T-sql）命令时，新值会立即生效（在某些情况下，服务器引擎可能不会立即计算新值，而是在执行的正常过程中执行此操作）。 is_dynamic = 0 表示在重新启动服务器之前更改的配置值将不会生效，即使执行了重新配置（T-sql）命令也是如此。
+
+对于非动态的配置选项，没有办法判断是否已运行重新配置（T-sql）命令，以执行安装配置更改的第一步。 在重新启动 SQL Server 以安装配置更改之前，请运行重新配置（T-sql）命令，以确保所有配置更改将在 SQL Server 重新启动后生效。 
+ 
+ 
 ## <a name="permissions"></a>权限  
- 要求 **公共** 角色具有成员身份。  有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 要求 **公共** 角色具有成员身份。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [服务器范围内的配置目录视图 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   

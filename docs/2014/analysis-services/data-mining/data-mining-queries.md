@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2bfce63f3686f06c0289c818daac82f336fb2b17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab6725ddd86d18132de9c408125fa9084161a187
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084973"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523103"
 ---
 # <a name="data-mining-queries"></a>数据挖掘查询
-  数据挖掘查询可用于多种目的。 你可以：  
+  数据挖掘查询可用于多种目的。 可以：  
   
 -   将模型应用于新数据以进行单个或多个预测。 可以将输入值作为参数提供，也可以使用批处理文件提供输入值。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "66084973"
   
  [不同模型类型的查询](#bkmk_ModelTypes)  
   
- [惠?](#bkmk_Reqs)  
+ [要求](#bkmk_Reqs)  
   
 ##  <a name="understanding-data-mining-queries"></a><a name="bkmk_Understand"></a>了解数据挖掘查询  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据挖掘支持以下查询类型：  
@@ -95,7 +94,7 @@ ms.locfileid: "66084973"
   
  以下列表汇总了可在查询中使用的函数：  
   
--   **一般预测函数：** 此`Predict`函数是多态函数，这意味着它适用于所有模型类型。 该函数将自动检测要使用的模型类型，并提示您输入其他参数。 有关详细信息，请参阅[预测 (DMX)](/sql/dmx/predict-dmx)。  
+-   **一般预测函数：** 此 `Predict` 函数是多态函数，这意味着它适用于所有模型类型。 该函数将自动检测要使用的模型类型，并提示您输入其他参数。 有关详细信息，请参阅[预测 (DMX)](/sql/dmx/predict-dmx)。  
   
     > [!WARNING]  
     >  并非所有模型都用于进行预测。 例如，可以创建不具有可预测属性的聚类分析模型。 但是，即使模型不具有可预测属性，您也可以创建返回模型中其他类型的有用信息的预测查询。  
@@ -130,7 +129,7 @@ ms.locfileid: "66084973"
   
      在模型内容中，返回的表中的每个行或节点的含义是不同的，具体取决于用于生成模型的算法的类型以及列的数据类型。 有关详细信息，请参阅 [内容查询（数据挖掘）](content-queries-data-mining.md)。  
   
-##  <a name="requirements"></a><a name="bkmk_Reqs"></a> 要求  
+##  <a name="requirements"></a><a name="bkmk_Reqs"></a>要求  
  必须先处理数据挖掘模型，然后才能创建针对模型的查询。 处理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象需要特殊权限。 有关处理挖掘模型的详细信息，请参阅[处理要求和注意事项（数据挖掘）](processing-requirements-and-considerations-data-mining.md)。  
   
  执行针对数据挖掘模型的查询需要不同的权限级别，这取决于您运行的查询的类型。 例如，钻取事例或结构数据通常需要可在挖掘结构对象或挖掘模型对象上设置的附加权限。  

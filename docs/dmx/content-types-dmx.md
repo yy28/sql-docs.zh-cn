@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: da8a5e5602b877c12284d8410f6b2a1c7da6bc58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 30f5496247bb817d4ea7da08f95fe4a1b54dea5d
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889147"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669792"
 ---
 # <a name="content-types-dmx"></a>内容类型 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "68889147"
   
  每种算法可支持特定的内容类型。 例如，[!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes 算法不能使用连续列。 若要在 [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes 模型中使用连续列，必须对列中的数据进行离散化处理。 有些算法要求提供特定的内容类型才能正常工作。 例如，[!INCLUDE[msCoName](../includes/msconame-md.md)] 时序算法要求一个 Key Time 列来标识收集数据的时间。  
   
- 有关[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支持的内容类型的完整说明，请参阅[&#40;数据挖掘&#41;的内容类型](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)。  
+ 有关支持的内容类型的完整说明 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，请参阅[&#40;数据挖掘&#41;的内容类型](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   

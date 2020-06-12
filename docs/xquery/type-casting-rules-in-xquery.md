@@ -1,5 +1,6 @@
 ---
 title: XQuery 中的类型转换规则 |Microsoft Docs
+description: 了解在 XQuery 中显式或隐式转换为另一种数据类型时应用的规则。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8372e5079b79cc694ccf51f1b6f7cddcf0fed43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9dcae8facc642d43620bde77ab7f01467a8a54d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946212"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520124"
 ---
 # <a name="type-casting-rules-in-xquery"></a>XQuery 中的类型转换规则
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "67946212"
   
  本主题介绍了使用下列方法之一从一种类型转换到另一种类型时所应用的类型转换规则：  
   
--   使用**cast 作为**或类型构造函数（例如， `xs:integer("5")`）进行的显式强制转换。  
+-   使用**cast 作为**或类型构造函数（例如，）进行的显式强制转换 `xs:integer("5")` 。  
   
 -   类型升级过程中发生的隐式转换  
   
@@ -95,7 +96,7 @@ create xml schema collection myCollection as N'
 go  
 ```  
   
- 下面的查询将返回一个静态错误，因为您不知道文档实例中> 元素`root`有多少个顶级 <。  
+ 下面的查询将返回一个静态错误，因为您不知道 `root` 文档实例中> 元素有多少个顶级 <。  
   
 ```  
 declare @x xml(myCollection)  
@@ -105,7 +106,7 @@ select @x.query('/root/A cast as xs:string?')
 go  
 ```  
   
- 通过在表达式中指定`root`单一实例 <> 元素，查询将成功。 该查询将返回被类型化为 xs:string 的简单类型值序列。  
+ 通过在表达式中指定单一实例 <`root`> 元素，查询将成功。 该查询将返回被类型化为 xs:string 的简单类型值序列。  
   
 ```  
 declare @x xml(myCollection)  
@@ -115,7 +116,7 @@ select @x.query('/root[1]/A cast as xs:string?')
 go  
 ```  
   
- 在以下示例中，xml 类型变量包含了指定 XML 架构集合的文档关键字。 这说明 XML 实例必须是具有单个顶级元素的文档。 如果在 XML 实例中`root`创建两个 <> 元素，它将返回一个错误。  
+ 在以下示例中，xml 类型变量包含了指定 XML 架构集合的文档关键字。 这说明 XML 实例必须是具有单个顶级元素的文档。 如果在 XML 实例中创建两个 <`root`> 元素，它将返回一个错误。  
   
 ```  
 declare @x xml(document myCollection)  
@@ -167,7 +168,7 @@ min(xs:integer("1"), xs:double("1.1"))
  如果由字符串类型或 untypedAtomic 类型转换为二进制类型（如 xs:base64Binary 或 xs:hexBinary），则输入值必须分别为 base64 编码形式或 hex 编码形式。  
   
 ##### <a name="casting-a-value-to-a-string-or-untypedatomic-type"></a>将一个值转换为字符串类型或 untypedAtomic 类型  
- 转换为字符串类型或 untypedAtomic 类型会将值转换为其 XQuery 规范词汇表示形式。 确切地说，这表示在输入时遵守特定模式或其他约束的值将不会按照该约束表示。  若要通知用户这一点[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，可以通过在将这些类型加载到架构集合中时提供警告，来标记类型约束可成为问题的标记类型。  
+ 转换为字符串类型或 untypedAtomic 类型会将值转换为其 XQuery 规范词汇表示形式。 确切地说，这表示在输入时遵守特定模式或其他约束的值将不会按照该约束表示。  若要通知用户这一点，可以通过在将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 这些类型加载到架构集合中时提供警告，来标记类型约束可成为问题的标记类型。  
   
  将 xs:float 或 xs:double 类型或者它们任意子类型的值转换为字符串类型或 untypedAtomic 类型的值时，该值将以科学记数法表示。 只有当值的绝对值小于 1.0E-6，或者大于或等于 1.0E6 时才会这样表示。 这表示 0 按科学记数法的形式序列化为 0.0E0。  
   

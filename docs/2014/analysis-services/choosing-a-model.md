@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 444bbf9c-cec8-460e-881d-38784fb146fa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd75efa13d6761c058b9e3b1f1878036d3d3e928
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f3b1e504b7e027e888458b8cc2eaee169ca272f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088085"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527533"
 ---
 # <a name="choosing-a-model"></a>选择模型
   **挖掘算法：** 数据挖掘*算法*是从数据创建模式的机制。 此算法可定义如何对数据进行计数、如何推断出关系以及如何存储模式。 算法的选择部分取决于要分析的数据的类型。 例如，一些算法仅适用于连续数字，而其他算法则适用于有限数目的非重复值。  
@@ -75,7 +74,7 @@ ms.locfileid: "66088085"
   
      汇总数据中的常见顺序或事件，如用户在浏览网站时所遵循的路径。  
   
- SQL Server Office 数据挖掘外接程序所使用的算法基于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供的算法。 如果您连接[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]到的实例已配置为允许第三方算法，则还可以使用符合数据挖掘规范 OLE DB 的第三方算法。  
+ SQL Server Office 数据挖掘外接程序所使用的算法基于 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供的算法。 如果 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 您连接到的实例已配置为允许第三方算法，则还可以使用符合数据挖掘规范 OLE DB 的第三方算法。  
   
 ## <a name="requirements"></a>要求  
  每种算法可以使用的数据类型不同。  

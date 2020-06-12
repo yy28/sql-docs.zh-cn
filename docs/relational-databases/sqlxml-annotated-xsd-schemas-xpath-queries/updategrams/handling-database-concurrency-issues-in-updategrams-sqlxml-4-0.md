@@ -1,5 +1,6 @@
 ---
 title: Updategram 中的数据库并发问题（SQLXML）
+description: 了解如何使用 updategram （SQLXML 4.0）中的乐观并发控制机制处理数据库并发问题。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,23 +22,23 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb77a6499472d116ad3b30028ce1566b68b81122
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbb10145e8d660fa02ebefefc09da4aa04eb1778
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75241293"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215280"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>在 Updategram 中处理数据库并发问题 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  与其他数据库更新机制一样，updategram 必须处理多用户环境下对数据的并发更新。 Updategram 使用乐观并发控制，该模式将选择字段数据与快照进行比较，以确保要更新的数据自从在数据库中读取后，其他用户应用程序未更改过该数据。 Updategram 在 updategram 的** \<前面>** 块中包含这些快照值。 更新数据库之前，updategram 会根据数据库中当前的值检查在 " ** \<>** 块" 中指定的值，以确保更新有效。  
+  与其他数据库更新机制一样，updategram 必须处理多用户环境下对数据的并发更新。 Updategram 使用乐观并发控制，该模式将选择字段数据与快照进行比较，以确保要更新的数据自从在数据库中读取后，其他用户应用程序未更改过该数据。 Updategram 在 updategram 的块中包含这些快照值 **\<before>** 。 更新数据库之前，updategram 会根据数据库中当前的值检查在块中指定的值， **\<before>** 以确保更新有效。  
   
  乐观并发控制在 updategram 中提供三种保护级别：低（无）、中间和高。 通过相应指定 updategram，可以确定需要的保护级别。  
   
 ## <a name="lowest-level-of-protection"></a>最低保护级别  
- 此级别为盲目更新，它不参照自上次读取数据库后已进行的其他更新来处理更新。 在这种情况下，只会在** \<之前>** 块中指定主键列来标识记录，并在** \<>块后**指定更新后的信息。  
+ 此级别为盲目更新，它不参照自上次读取数据库后已进行的其他更新来处理更新。 在这种情况下，只在块中指定主键列 **\<before>** 来标识记录，并在块中指定更新后的信息 **\<after>** 。  
   
- 例如，无论以前的电话号码是什么，以下 updategram 中的新联系人电话号码都是正确的。 请注意， ** \<>块之前**如何仅指定主键列（ContactID）。  
+ 例如，无论以前的电话号码是什么，以下 updategram 中的新联系人电话号码都是正确的。 请注意 **\<before>** 块如何仅指定主键列（ContactID）。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -55,9 +56,9 @@ ms.locfileid: "75241293"
 ## <a name="intermediate-level-of-protection"></a>中间保护级别  
  在此保护级别中，updategram 将要更新的数据的当前值与数据库列中的值进行比较，以确保自您的事务读取记录后，这（个）些值未被任何其他事务更改过。  
   
- 您可以通过指定要在** \<>块之前**更新的主键列和列来获得此级别的保护。  
+ 您可以通过指定要在块中更新的主键列和列来获得此级别的保护 **\<before>** 。  
   
- 例如，此 updategram 为 ContactID 是 1 的联系人更新 Person.Contact 表的 Phone 列中的值。 Before>块指定**电话**属性，以确保在应用更新的值之前此属性值与数据库中相应列的值匹配。 ** \<**  
+ 例如，此 updategram 为 ContactID 是 1 的联系人更新 Person.Contact 表的 Phone 列中的值。 **\<before>** 块指定**电话**属性，以确保在应用更新的值之前此属性值与数据库中相应列的值匹配。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -77,11 +78,11 @@ ms.locfileid: "75241293"
   
  可以通过两种方法实现针对并发更新的此类高保护级别：  
   
--   指定** \<>块之前**的表中的其他列。  
+-   指定块中的表中的其他列 **\<before>** 。  
   
-     如果在** \<>块之前**指定其他列，则在应用更新之前，updategram 会将为这些列指定的值与数据库中的值进行比较。 如果自您的事务读取记录后有记录列被更改过，updategram 将不执行更新。  
+     如果在块中指定其他列 **\<before>** ，则在应用更新之前，updategram 会将为这些列指定的值与数据库中的值进行比较。 如果自您的事务读取记录后有记录列被更改过，updategram 将不执行更新。  
   
-     例如，以下 updategram 将更新 shift 名称，但在** \<>之前**指定其他列（StartTime，EndTime），这会要求对并发更新的更高保护级别。  
+     例如，以下 updategram 更新了 shift 名称，但在块中指定了附加列（StartTime，EndTime） **\<before>** ，因此请求更高级别的保护以应对并发更新。  
   
     ```  
     <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -99,11 +100,11 @@ ms.locfileid: "75241293"
     </ROOT>  
     ```  
   
-     此示例通过指定** \<before>** 块中记录的所有列值来指定最高保护级别。  
+     此示例通过指定块中记录的所有列值来指定最高保护级别 **\<before>** 。  
   
--   在** \<>块之前**指定时间戳列（如果可用）。  
+-   指定块中的时间戳列（如果可用） **\<before>** 。  
   
-     你只需指定 "时间戳" 列（如果表有一个）以及 " ** \<之前">** 块中的主键列，而不是在** \<前面**> 块中指定所有记录列。 在每次更新记录后，数据库将时间戳列更新为唯一值。 在这种情况下，updategram 将时间戳的值与数据库中的相应值进行比较。 在数据库中存储的时间戳值为二进制值。 因此，必须在架构中将 timestamp 列指定为**dt： type = "bin. hex"**、 **dt： type = "bin"** 或**sql： datatype = "timestamp"**。 （可以指定**xml**数据类型或[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型。）  
+     不是在 * * 块中指定所有记录列 \<before**> ，只需指定时间戳列（如果表有一个），并在块中指定主键列 **\<before>** 。 在每次更新记录后，数据库将时间戳列更新为唯一值。 在这种情况下，updategram 将时间戳的值与数据库中的相应值进行比较。 在数据库中存储的时间戳值为二进制值。 因此，必须在架构中将 timestamp 列指定为**dt： type = "bin. hex"**、 **dt： type = "bin"** 或**sql： datatype = "timestamp"**。 （可以指定**xml**数据类型或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型。）  
   
 #### <a name="to-test-the-updategram"></a>测试 updategram  
   

@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c56cd6ee0e2a52ca523a9273e3c705eab2540191
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2334c1a97bb4172fff70550dbece5376eb1cb9d7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797618"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545274"
 ---
 # <a name="dimension-relationships"></a>维度关系
-  维度用法定义了多维数据集维度与多维数据集中的度量值组之间的关系。 多维数据集维度是在特定多维数据集中使用的数据库维度的实例。 多维数据集可以（并且通常）具有与度量值组不直接相关的多维数据集维度，但是这些维度可以通过另一个维度或度量值组与某度量值组间接相关。 向多维数据集添加数据库维度或度量值组时， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]将尝试通过检查多维数据集的数据源视图中的维度表和事实数据表之间的关系，并检查维度中各属性之间的关系，从而确定维度的使用情况。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可自动为其所检测到的关系设置维度用法设置。  
+  维度用法定义了多维数据集维度与多维数据集中的度量值组之间的关系。 多维数据集维度是在特定多维数据集中使用的数据库维度的实例。 多维数据集可以（并且通常）具有与度量值组不直接相关的多维数据集维度，但是这些维度可以通过另一个维度或度量值组与某度量值组间接相关。 向多维数据集添加数据库维度或度量值组时，将 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 尝试通过检查多维数据集的数据源视图中的维度表和事实数据表之间的关系，并检查维度中各属性之间的关系，从而确定维度的使用情况。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可自动为其所检测到的关系设置维度用法设置。  
   
  维度与度量值组之间的关系包括参与该关系的维度和事实数据表以及一个指定特定度量值组中维度粒度的粒度属性。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "72797618"
  有关引用关系的详细信息，请参阅[定义引用的关系和引用的关系属性](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)。  
   
 ## <a name="fact-dimension-relationships"></a>事实维度关系  
- 事实维度（通常称为退化维度）是通过事实数据表而非维度表中的属性列构造的标准维度。 有用的维度数据有时存储在事实数据表中以减少重复。 例如，下面的关系图显示了**FactResellerSales** [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]示例数据库中的 FactResellerSales 事实数据表。  
+ 事实维度（通常称为退化维度）是通过事实数据表而非维度表中的属性列构造的标准维度。 有用的维度数据有时存储在事实数据表中以减少重复。 例如，下面的关系图显示了示例数据库中的**FactResellerSales**事实数据表 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] 。  
   
  ![事实数据表中的列可支持维度](../../analysis-services/dev-guide/media/as-factdim.gif "事实数据表中的列可支持维度")  
   

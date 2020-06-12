@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2aaf5cb8-294b-4031-94b3-fe605d7fc4c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a62a05c8908391b9ce925ecfe08ae30540b8fa29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23f7debc1d2253938f235461279f39bb085c2b2f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081653"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528543"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>DirectQuery 部署方案（SSAS 表格）
   本主题提供 DirectQuery 模型的设计和部署过程的演练。 您可以将 DirectQuery 配置为只使用关系数据（仅限 DirectQuery），也可以将模型配置为在仅使用缓存数据或仅使用关系数据之间进行切换（混合模式）。 本主题说明了两种模式的实现过程，并根据模式和安全配置描述有关查询结果的可能的差异。  
@@ -39,7 +38,7 @@ ms.locfileid: "66081653"
   
  默认情况下，DirectQuery 将被禁用。 因此，您必须配置设计环境以便支持 DirectQuery 模式。  
   
- 在解决方案资源管理器中右键单击 " **model.bim** " 节点，并将属性 " **DirectQuery 模式**" 设置为`On`。  
+ 在解决方案资源管理器中右键单击 " **model.bim** " 节点，并将属性 " **DirectQuery 模式**" 设置为 `On` 。  
   
  您可以随时启用 DirectQuery；但是，为了确保您不会创建与 DirectQuery 模式不兼容的列或公式，我们建议您从一开始就启用 DirectQuery 模式。  
   
@@ -111,8 +110,8 @@ ms.locfileid: "66081653"
   
 |||  
 |-|-|  
-|**无缓存的 DirectQuery**|不向缓存中加载任何数据。 永远不能处理模型。<br /><br /> 只能通过使用支持 DAX 查询的客户端对模型进行查询。 查询结果始终从原始数据源返回。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode** = **DirectQuery**|  
-|**DirectQuery 并且查询仅针对缓存**|部署失败。 不支持该配置。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode** = **内存中**|  
+|**无缓存的 DirectQuery**|不向缓存中加载任何数据。 永远不能处理模型。<br /><br /> 只能通过使用支持 DAX 查询的客户端对模型进行查询。 查询结果始终从原始数据源返回。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode**  = **DirectQuery**|  
+|**DirectQuery 并且查询仅针对缓存**|部署失败。 不支持该配置。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode**  = **内存中**|  
   
  **混合模式**  
  在混合模式中部署您的模型具有许多好处：您可以根据需要从 SQL Server 数据源获取最新数据，但通过保留缓存，您能够使用内存中的数据以便在设计报表或测试模型时提高速度。  
@@ -123,8 +122,8 @@ ms.locfileid: "66081653"
   
 |||  
 |-|-|  
-|**缓存为首选的混合模式**|可以处理模型，并且可以将数据加载到缓存中。 默认情况下，查询使用缓存。  如果某一客户端想要使用 DirectQuery 源，则一个参数必须插入到连接字符串中。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode** = **内存中的 DirectQuery**|  
-|**DirectQuery 为首选的混合模式**|对模型进行处理，并且可以将数据加载到缓存中。 但是，查询在默认情况下使用 DirectQuery。 如果某一客户端想要使用缓存数据，则一个参数必须插入到连接字符串中。 如果对模型中的表进行了分区，则缓存的主分区也设置为 **“内存中以及 DirectQuery”**。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode** = **包含内存中**的 QueryMode DirectQuery|  
+|**缓存为首选的混合模式**|可以处理模型，并且可以将数据加载到缓存中。 默认情况下，查询使用缓存。  如果某一客户端想要使用 DirectQuery 源，则一个参数必须插入到连接字符串中。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode**  = **内存中的 DirectQuery**|  
+|**DirectQuery 为首选的混合模式**|对模型进行处理，并且可以将数据加载到缓存中。 但是，查询在默认情况下使用 DirectQuery。 如果某一客户端想要使用缓存数据，则一个参数必须插入到连接字符串中。 如果对模型中的表进行了分区，则缓存的主分区也设置为 **“内存中以及 DirectQuery”**。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode**  = **DirectQuery 以及内存中**|  
   
 ## <a name="see-also"></a>另请参阅  
  [DirectQuery 模式 &#40;SSAS 表格&#41;](tabular-models/directquery-mode-ssas-tabular.md)   

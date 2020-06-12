@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 81ed0f44-8782-462d-af8f-0ba5b975df27
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b33e09d4dc7471f6447f1205f5c39746bc247ae7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9bcfdde8b3536bbbf8b2429d51a9ee9aecf0d437
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071633"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547499"
 ---
 # <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>无法加载文件或程序集 &#39;3.5.0.0，Version =，Culture = 中立，PublicKeyToken = b77a5c561934e089&#39; 或其依赖项之一。 系统找不到指定的文件。
   在具有 PowerPivot for SharePoint 的 SharePoint 2010 环境中，如果您尝试执行数据馈送导出并且系统缺少 Microsoft ADO.NET Data Services 的必需版本，则会出现此错误。  
@@ -36,7 +35,7 @@ ms.locfileid: "66071633"
   
 ## <a name="user-action"></a>用户操作  
   
-1.  请参阅 SharePoint 2010 的硬件和软件要求文档，[确定硬件和软件要求（sharepoint 2010）](https://go.microsoft.com/fwlink/?LinkId=169734) （https://go.microsoft.com/fwlink/?LinkId=169734)。  
+1.  请参阅 SharePoint 2010 的硬件和软件要求文档，[确定硬件和软件要求（sharepoint 2010）](https://go.microsoft.com/fwlink/?LinkId=169734) （ https://go.microsoft.com/fwlink/?LinkId=169734) 。  
   
 2.  在 "**安装必备软件**" 中，找到与所使用的操作系统相对应的 ADO.NET Data Services 3.5 的链接。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74f81deb2d9f5e4fcb770217a228a8b081098d89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00554c9e56bebe12a5e63c9d50e4a2fa59149599
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289135"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543819"
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services 中的日志操作
   Analysis Services 实例会将服务器通知、错误和警告记录到 msmdsrv.ini 文件中-每个安装的实例一个。 管理员参考此日志，了解例程和异常事件等信息。 在最新版本中，已增强日志记录，能容纳更多信息。 日志记录现在包括产品版本和版本信息以及处理器、内存、连接性和阻止事件。 你可在 [日志记录改进](https://support.microsoft.com/kb/2965035)中查看整个更改列表。  
@@ -34,7 +33,7 @@ ms.locfileid: "79289135"
   
 -   [Mini dump (.mdmp) 文件](#bkmk_mdmp)  
   
--   [提示和最佳实践](#bkmk_tips)  
+-   [技巧与最佳做法](#bkmk_tips)  
   
 > [!NOTE]  
 >  如果你要查找日志记录的信息，你可能也对跟踪显示处理和查询执行路径的操作感兴趣。 临时跟踪目标和持续跟踪目标（例如审核多维数据集访问）以及如何最大程度利用 Flight Recorder、SQL Server Profiler 和 xEvents 的建议可通过此页中的链接找到： [监视 Analysis Services 实例](monitor-an-analysis-services-instance.md)。  
@@ -42,11 +41,11 @@ ms.locfileid: "79289135"
 ##  <a name="location-and-types-of-logs"></a><a name="bkmk_location"></a>日志的位置和类型  
  Analysis Services 提供有以下所述日志。  
   
-|文件名或位置|类型|用于|在默认情况下启用|  
+|文件名或位置|类型|用途|默认开启|  
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|错误日志|例程监控和基本故障排除|是|  
 |关系数据库中的 OlapQueryLog 表|查询日志|为使用情况优化向导收集输入|否|  
-|SQLDmp\<guid>. .mdmp 文件|崩溃和异常|深度故障排除|否|  
+|SQLDmp \<guid> . .mdmp 文件|崩溃和异常|深度故障排除|否|  
   
  我们强烈建议使用以下链接查看此主题中未涉及的其他信息资源： [来自 Microsoft 支持的初始数据集合提示](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)。  
   
@@ -92,7 +91,7 @@ ms.locfileid: "79289135"
   
 4.  如果这些值与你要的值不同，请对其进行编辑。  
   
-5.  保存文件。  
+5.  保存该文件。  
   
 6.  重启服务。  
   
@@ -109,7 +108,7 @@ ms.locfileid: "79289135"
   
 2.  授予 Analysis Services 帐户有关数据库的足够权限。 帐户需要创建表、写入表和从表读取的权限。  
   
-3.  在 SQL Server Management Studio 中，右键单击**Analysis Services** | **属性** | "**常规**"，将**CreateQueryLogTable**设置为 true。  
+3.  在 SQL Server Management Studio 中，右键单击**Analysis Services**  |  **属性**  |  "**常规**"，将**CreateQueryLogTable**设置为 true。  
   
 4.  或者，如果你要以不同速率取样查询，或者使用表的不同名称，则更改 **QueryLogSampling** 或 **QueryLogTableName** 。  
   

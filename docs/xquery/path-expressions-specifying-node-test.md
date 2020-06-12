@@ -1,5 +1,6 @@
 ---
 title: 指定路径表达式步骤中的节点测试 |Microsoft Docs
+description: 了解如何在 XQuery 路径表达式的轴步骤中指定节点测试。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28ac10e211d57fc9e118f47ccb9d506d6cb846e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dba7904f4e28b6bea50c802fd83b9c24c147defb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946438"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524407"
 ---
 # <a name="path-expressions---specifying-node-test"></a>路径表达式 - 指定节点测试
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,9 +70,9 @@ child::ProductDescription
   
  路径表达式 `/child::PD:ProductDescription/child::PD:Features/descendant::*,` 包含三个步骤。 这些步骤将指定 child 轴和 descendant 轴。 在每个步骤中，都指定节点名来作为节点测试。 第三个步骤中的通配符 (`*`) 指明了属于 descendant 轴的主要节点类型的所有节点。 该轴的主要节点类型确定了选定节点的类型以及这些节点所选择的节点名筛选器。  
   
- 因此，在对**ProductModel**表中的产品目录 XML 文档执行此表达式时，它将检索\< \<ProductDescription> 元素的所有元素节点子级> 元素节点子级。  
+ 因此，在对**ProductModel**表中的产品目录 XML 文档执行此表达式时，它将检索元素的元素节点子级的所有元素节点子级 \<Features> \<ProductDescription> 。  
   
- 路径表达式`/child::PD:ProductDescription/attribute::ProductModelID`由两个步骤组成。 这两个步骤都指定节点名作为节点测试。 此外，第二个步骤将使用 attribute 轴。 因此，每个步骤都将选择属于其轴的主要节点类型的、具有指定名称的节点来作为节点测试。 因此，该表达式将**ProductModelID**返回\<ProductDescription> 元素节点的 ProductModelID 属性节点。  
+ 路径表达式由 `/child::PD:ProductDescription/attribute::ProductModelID` 两个步骤组成。 这两个步骤都指定节点名作为节点测试。 此外，第二个步骤将使用 attribute 轴。 因此，每个步骤都将选择属于其轴的主要节点类型的、具有指定名称的节点来作为节点测试。 因此，该表达式将返回元素节点的**ProductModelID**属性节点 \<ProductDescription> 。  
   
  指定节点名作为节点测试时，还可以使用通配符 (*) 来指定节点的本地名称或作为其命名空间前缀，如以下示例所示：  
   
@@ -105,7 +106,7 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
 child::comment()  
 ```  
   
- 同样， `/child::ProductDescription/child::Features/child::comment()`检索\<ProductDescription> 元素节点> \<元素节点子级的功能的注释节点子级。  
+ 同样， `/child::ProductDescription/child::Features/child::comment()` 检索 \<Features> 元素节点的元素节点子级的注释节点子级 \<ProductDescription> 。  
   
 ## <a name="examples"></a>示例  
  下列示例将比较节点名和节点类型。  
@@ -169,7 +170,7 @@ select @x.query('
 /child::a/child::b/descendant::node()  
 ```  
   
- 由于`node()`是节点类型，因此您将收到子代轴的所有节点。 结果如下：  
+ 由于 `node()` 是节点类型，因此您将收到子代轴的所有节点。 结果如下：  
   
 ```  
 text1  
@@ -201,7 +202,7 @@ text3
 ### <a name="b-specifying-a-node-name-in-the-node-test"></a>B. 指定节点测试中的节点名  
  以下示例将指定节点名作为所有路径表达式中的节点测试。 因此，所有表达式都将返回属于轴的主要节点类型的、具有节点测试中所指定的节点名的节点。  
   
- 下面的查询表达式从`Warranty` `Production.ProductModel`表中存储的产品目录 XML 文档中返回 <> 元素：  
+ 下面的查询表达式 `Warranty` 从表中存储的产品目录 XML 文档中返回 <> 元素 `Production.ProductModel` ：  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -221,7 +222,7 @@ WHERE ProductModelID=19
   
 -   不能在表达式的任何一个步骤中指定轴步骤的可选步骤限定符部分。  
   
- 查询将返回 <`Warranty` `Features` `ProductDescription`> 元素的 <> 元素子级的 <> 元素子级。  
+ 查询将返回 `Warranty` <> 元素的 <> 元素子级的 <> 元素子级 `Features` `ProductDescription` 。  
   
  结果如下：  
   
@@ -244,7 +245,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- 该通配符用来表示节点名。 因此，该查询将返回 <`Features` `ProductDescription`> 元素节点的 <> 元素节点子级的所有元素节点子级。  
+ 该通配符用来表示节点名。 因此，该查询将返回 `Features` <> 元素节点的 <> 元素节点子级的所有元素节点子级 `ProductDescription` 。  
   
  下面的查询类似于上一个查询，只不过除了该通配符以外，它还指定了一个命名空间。 因此，将返回该命名空间中的所有元素节点子级。 请注意，<`Features`> 元素可以包含来自不同命名空间的元素。  
   
@@ -270,7 +271,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- 此查询将从产品`Maintenance`目录 XML 文档中返回所有命名空间中的 <> 元素节点子级。  
+ 此查询将 `Maintenance` 从产品目录 XML 文档中返回所有命名空间中的 <> 元素节点子级。  
   
 ### <a name="c-specifying-node-kind-in-the-node-test"></a>C. 指定节点测试中的节点类型  
  以下示例将指定节点类型作为路径表达式中的节点测试。 因此，所有表达式都将返回节点测试中所指定类型的节点。  
@@ -295,7 +296,7 @@ WHERE ProductModelID=19
   
 -   前两个步骤指定节点名作为节点测试，第三个步骤指定节点类型作为节点测试。  
   
--   表达式返回 <`Features` `ProductDescription`> 元素节点 <> 元素子级的文本节点子级。  
+-   表达式返回 `Features` <> 元素节点 <> 元素子级的文本节点子级 `ProductDescription` 。  
   
  仅返回了一个文本节点。 结果如下：  
   
@@ -303,7 +304,7 @@ WHERE ProductModelID=19
 These are the product highlights.   
 ```  
   
- 下面的查询返回 <`ProductDescription`> 元素的注释节点子级：  
+ 下面的查询返回 <> 元素的注释节点子级 `ProductDescription` ：  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -319,7 +320,7 @@ WHERE ProductModelID=19
   
 -   第二个步骤指定节点类型作为节点测试。  
   
--   因此，表达式将返回 <`ProductDescription`> 元素节点的注释节点子级。  
+-   因此，表达式将返回 <> 元素节点的注释节点子级 `ProductDescription` 。  
   
  结果如下：  
   

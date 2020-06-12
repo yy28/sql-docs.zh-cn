@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 68323f23-121e-44fc-be85-6f9915d6d3c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f7e8d9593cd45ec5a92ea07051fe424698d8ece6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69a03f1580b525707ccadbd018d9d270b0cc7740
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063125"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527903"
 ---
 # <a name="attribute-discrimination-tab-mining-model-viewer"></a>“属性对比”选项卡（挖掘模型查看器）
   可以使用 **“属性对比”** 选项卡，比较输入属性的状态并查看这些状态与结果属性相关的方式。 两个所选的可预测属性状态之间差别最大的属性值会首先列出。  
@@ -34,7 +33,7 @@ ms.locfileid: "66063125"
  **查看器**  
  选择用于浏览所选挖掘模型的查看器。 对于每个模型，您可以选择自定义查看器或 [!INCLUDE[msCoName](../includes/msconame-md.md)] 挖掘内容查看器。 还可以使用插件查看器（如果有）。  
   
- **属性**  
+ **特性**  
  选择一个可预测属性。  
   
  **值 1**  
@@ -43,15 +42,15 @@ ms.locfileid: "66063125"
  **值 2**  
  选择可预测属性的状态以与 **“值 1”** 中所包含状态进行比较。 你还可以选择 "**所有其他状态**"，以将**值 1**中的值与其补数（即除值1之外的所有其他值）进行比较。  
   
- **值1的\<对比分数> 和\<值 2>**  
+ **和的歧视分数 \<Value 1>\<Value 2>**  
  图形包含以下列，这些列说明了目标属性与输入属性的特定状态关联的方式。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**特性**|挖掘模型中的输入属性。|  
 |**值**|**“属性”** 中列出的属性的状态。|  
-|**优选\<值 1>**|条形指示当前属性和值是否倾向于“值 1” **** 中所选的目标结果。|  
-|**优选\<值 2>**|条形指示当前属性和值是否倾向于 **“值 2”** 中所选的目标结果。|  
+|**有利\<Value 1>**|条形指示当前属性和值是否倾向于“值 1” **** 中所选的目标结果。|  
+|**有利\<Value 2>**|条形指示当前属性和值是否倾向于 **“值 2”** 中所选的目标结果。|  
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

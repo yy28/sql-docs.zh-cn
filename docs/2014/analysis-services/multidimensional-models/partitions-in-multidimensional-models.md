@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 26e01dc7-fa49-4b1f-99eb-7799d1b4dcd2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 00d17af3ce46ee5b20a730e536321140bb69f4ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a36489037607ad046689e55825f5958cb9ee611
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073333"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545830"
 ---
 # <a name="partitions-in-multidimensional-models"></a>多维模型中的分区
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，“分区” ** 提供加载到度量值组中的事实数据的物理存储。 对于每个度量值组都会自动创建一个分区，但是，常见的情况是创建更多分区以进一步对数据进行分段，从而使处理更高效，查询性能更佳。  
@@ -42,7 +41,7 @@ ms.locfileid: "66073333"
 ## <a name="partition-merging-and-editing"></a>分区合并和编辑  
  如果两个分区使用同样的聚合设计，则可以将两个分区合并为一个。 例如，如果有一个按月分区的库存维度，则在每个日历月月末，可以将该月分区与现有的年初至今分区合并。 这样一来，就可对当前月分区进行快速处理和分析，而该年剩下的月只需要在合并时重新处理。 此类重新处理需要较长的处理时间，运行效率也可能较低。 有关管理分区合并过程的详细信息，请参阅 [在 Analysis Services 中合并分区（SSAS - 多维）](merge-partitions-in-analysis-services-ssas-multidimensional.md)。 若要使用多维数据集设计器中的 "**分区**" 选项卡编辑多维数据集分区，请参阅[编辑或删除 Analysis Services 多维&#41;&#40;分区](edit-or-delete-partitions-analyisis-services-multidimensional.md)。  
   
-## <a name="related-topics"></a>“相关主题”  
+## <a name="related-topics"></a>相关主题  
   
 |主题|说明|  
 |-----------|-----------------|  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 11991c4658514ecf7b596a039bf5c4668a302cd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a9b2613c4ca9c706e549aca9ed577a6defacd0e0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174506"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521843"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft 逻辑回归算法技术参考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 逻辑回归算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 神经网络算法的一种变体，其中， *HIDDEN_NODE_RATIO* 参数设置为 0。 这样设置以后，所创建的神经网络模型就不包含隐藏层，因此等效于逻辑回归。
@@ -84,7 +83,7 @@ WHERE NODE_TYPE = 23
 
  对于每个输出值，此查询返回系数以及指回相关输入节点的 ID。 此外，还会返回包含输出和截距的行。 每个输入 X 都有自己的系数（Ci），但嵌套表还包含一个 "free" 系数（Co），根据以下公式计算得出：
 
- F （X） = X1 * C1 + X2\*C2 + ... + Xn\*Cn + X0
+ F （X） = X1 * C1 + X2 \* C2 + ... + Xn \* Cn + X0
 
  激活：exp(F(X)) / (1 + exp(F(X)) )
 
@@ -129,7 +128,7 @@ WHERE NODE_TYPE = 23
 
  适用于挖掘结构列。
 
- MODEL_EXISTENCE_ONLY 意味着列将被视为具有两个可能的状态： `Missing`和。 `Existing` Null 表示缺失值。
+ MODEL_EXISTENCE_ONLY 意味着列将被视为具有两个可能的状态： `Missing` 和 `Existing` 。 Null 表示缺失值。
 
  适用于挖掘模型列。
 

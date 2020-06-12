@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7f3f0949-d791-403a-88e2-54cb1a803dae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4b2662a08974c0eee0eed58b21d77421b3b75749
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3682d65ac06d970fed2d5346e9d39684485c5dfe
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064683"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527753"
 ---
 # <a name="browsing-a-clustering-model"></a>浏览聚类分析模型
-  使用 "**浏览**" 打开聚类分析模型时，该模型将显示在交互式查看器中，类似于中[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的聚类分析查看器。 该查看器可帮助您浏览已创建的分类并了解分类特征。 您还可以将各个段与其他段或填充进行比较和对比。  
+  使用 "**浏览**" 打开聚类分析模型时，该模型将显示在交互式查看器中，类似于中的聚类分析查看器 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 该查看器可帮助您浏览已创建的分类并了解分类特征。 您还可以将各个段与其他段或填充进行比较和对比。  
   
 ##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>浏览模型  
  "**浏览**" 窗口包含以下工具，可帮助您了解聚类分析模型并探索底层数据组的属性：  
@@ -65,7 +64,7 @@ ms.locfileid: "66064683"
   
 5.  现在，单击 "**明暗度变量**" 下拉列表，然后选择 " **Age** " 变量。 这样做时，"**状态**" 文本框中将出现一个值列表。  
   
-     用作此模型的输入的“Age”列包含连续数值，但为了聚类分析，该算法始终将数字离散化。 可在此处查看该算法创建的箱或组，例如 "极低（\<= 27）" 和 "非常高（>= 63）"。  
+     用作此模型的输入的“Age”列包含连续数值，但为了聚类分析，该算法始终将数字离散化。 可在此处查看该算法创建的箱或组，例如 "非常低（ \<=27)" and "Very High (> = 63）"。  
   
 6.  从 "**状态**" 下拉列表中，选择 "**非常高**"，并查看关系图如何变化。  
   

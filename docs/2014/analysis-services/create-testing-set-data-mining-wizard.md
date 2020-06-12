@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d0a44b59-ffbd-45fc-baa8-6b8046b1a2f5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9f0e4d1a384995c0c49c346102f8fddbcdf47f68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84dd9e307279c83b955d6569571772414123f0f5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086793"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526448"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>创建测试集（数据挖掘向导）
   可以使用 **“创建测试集”** 页指定用于定型的数据量，以及为用作测试集而保留的数据量。 在创建挖掘结构时将数据分成定型集和测试集，可以更方便地评估以后创建的挖掘模型的准确性。  
@@ -26,9 +25,9 @@ ms.locfileid: "66086793"
   
  默认情况下， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 生成用于启动分区的数值种子。 此种子基于挖掘结构的名称。 如果希望即使在挖掘结构名称更改的情况下分区仍保持不变，则可以设置挖掘结构的 HoldoutSeed 属性，为种子指定一个值。 如果更改维持种子，则必须重新处理该结构。  
   
- 如果以后要更改测试数据量或定型数据量，则可以使用 "**属性**" `HoldoutMaxCases`窗口`HoldoutMaxPercent`修改数据挖掘结构的和属性。 不过，进行更改后，必须重新处理挖掘结构及所有关联挖掘模型。 还存在下列限制：  
+ 如果以后要更改测试数据量或定型数据量，则可以 `HoldoutMaxCases` `HoldoutMaxPercent` 使用 "**属性**" 窗口修改数据挖掘结构的和属性。 不过，进行更改后，必须重新处理挖掘结构及所有关联挖掘模型。 还存在下列限制：  
   
--   仅当数据挖掘结构存储在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]中时，才支持数据挖掘结构的分区。 的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]早期版本不支持缓存挖掘结构的分区信息。  
+-   仅当数据挖掘结构存储在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]中时，才支持数据挖掘结构的分区。 的早期版本 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 不支持缓存挖掘结构的分区信息。  
   
 -   如果挖掘结构包含 Key Time 列（这是时序挖掘模型所必需的），则无法对挖掘结构进行分区。  
   

@@ -1,21 +1,21 @@
 ---
-title: 选择 " &lt;从&gt;模型"。SAMPLE_CASES （DMX） |Microsoft Docs
+title: 选择 "从 &lt; 模型" &gt; 。SAMPLE_CASES （DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e0838c688b0518bf1fc7ed6c5d65c3ef03d0a7aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9e88ec6673a00e3776032f33390451207c2f399f
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928312"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670109"
 ---
-# <a name="select-from-ltmodelgtsample_cases-dmx"></a>选择 " &lt;从&gt;模型"。SAMPLE_CASES （DMX）
+# <a name="select-from-ltmodelgtsample_cases-dmx"></a>选择 "从 &lt; 模型" &gt; 。SAMPLE_CASES （DMX）
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   返回示例事例，用于代表为数据挖掘模型定型所用的事例。  
@@ -37,7 +37,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
  *表达式列表*  
  相关列标识符的逗号分隔列表。  
   
- *模型*  
+ *model*  
  模型标识符。  
   
  *条件列表*  
@@ -46,10 +46,10 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
  *expression*  
  可选。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  可能生成样本事例，但其可能并不实际存在于定型数据中。 返回的事例代表指定的内容节点。  
   
- 尽管[!INCLUDE[msCoName](../includes/msconame-md.md)]顺序分析和聚类分析算法[!INCLUDE[msCoName](../includes/msconame-md.md)]是唯一支持使用 SELECT FROM \<model> 的算法。SAMPLE_CASES，第三方算法还可以支持该算法。  
+ 尽管 [!INCLUDE[msCoName](../includes/msconame-md.md)] 顺序分析和聚类分析算法是唯一 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支持使用 SELECT FROM \< model> 的算法。SAMPLE_CASES，第三方算法还可以支持该算法。  
   
 ## <a name="examples"></a>示例  
  以下示例可返回为目标邮件挖掘模型定型所用的样本事例。 在**WHERE**子句中使用[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)函数只返回与 "000000003" 节点关联的事例。 可以在架构行集的 NODE_UNIQUE_NAME 列中找到节点字符串。  

@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8bf766c6f0a7fd757b280b0f950a43cfdc025929
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 544071565a18ade74b3dd4f26945991987295cbc
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928428"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669605"
 ---
 # <a name="select-dmx"></a>SELECT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,11 +46,11 @@ FROM <model/structure>[.aspect]
 SELECT FLATTENED <select list> FROM ...  
 ```  
   
-## <a name="top-n-and-order-by"></a>TOP \<n> 和 ORDER BY  
- 您可以使用表达式对查询结果进行排序，然后可以通过组合使用**ORDER by**和**TOP**子句来返回结果的子集。 如果在确定邮件目标时，只想将结果发送给最可能的答复者，以及类似的情况，上述选项就很有用。 您可以按预测概率对目标邮件预测查询的结果进行排序，然后只返回前\<n 个> 结果。  
+## <a name="top-n-and-order-by"></a>TOP \< n> 和 ORDER BY  
+ 您可以使用表达式对查询结果进行排序，然后可以通过组合使用**ORDER by**和**TOP**子句来返回结果的子集。 如果在确定邮件目标时，只想将结果发送给最可能的答复者，以及类似的情况，上述选项就很有用。 您可以按预测概率对目标邮件预测查询的结果进行排序，然后只返回前 \< n 个> 结果。  
   
 ## <a name="select-list"></a>选择列表  
- 选择列表>可以包含标量列引用、预测函数和表达式。 * \<* 可用的选项取决于算法以及下列上下文：  
+ * \< 选择列表>* 可以包含标量列引用、预测函数和表达式。 可用的选项取决于算法以及下列上下文：  
   
 -   是否正在查询挖掘结构或挖掘模型  
   
@@ -76,7 +76,7 @@ JOIN <source data query>
 ```  
   
 ## <a name="where"></a>WHERE  
- 您可以使用**WHERE**子句限制查询返回的事例。 **Where**子句指定**where**表达式中的列引用必须与**select**语句的* \<select list>* 中的列引用具有相同的语义，并且只能返回布尔表达式。 **WHERE**子句的语法如下所示  
+ 您可以使用**WHERE**子句限制查询返回的事例。 **Where**子句指定**where**表达式中的列引用必须与**select**语句的* \< select list>* 中的列引用具有相同的语义，并且只能返回布尔表达式。 **WHERE**子句的语法如下所示  
   
 ```  
 WHERE < condition expression >  

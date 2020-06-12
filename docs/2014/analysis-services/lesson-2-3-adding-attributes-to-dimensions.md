@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 80551dad-97ac-40d0-90af-b810780321ce
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7a30424ce322ed356870465422c4f82fb8d7d88d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c0411e2e19fbec88ab9c1bae8536d96725554f5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079024"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543489"
 ---
 # <a name="adding-attributes-to-dimensions"></a>向维度添加属性
   现在，您已经定义了维度，可以用表示维度中各数据元素的属性填充这些维度。 属性通常基于数据源视图中的字段。 在向维度中添加属性时，您可以在数据源视图中包括来自任何表的字段。  
@@ -56,7 +55,7 @@ ms.locfileid: "66079024"
   
     -   **NumberCarsOwned**  
   
-    -   **移动**  
+    -   **电话**  
   
     -   **DateFirstPurchase**  
   
@@ -72,7 +71,7 @@ ms.locfileid: "66079024"
   
     -   **PostalCode**  
   
-6.  在“文件”  菜单上，单击“全部保存” ****。  
+6.  在 "文件" 菜单上，单击 "**全部保存**"。  
   
 ## <a name="adding-attributes-to-the-product-dimension"></a>向“产品”维度中添加属性  
   
@@ -100,7 +99,7 @@ ms.locfileid: "66079024"
   
     -   **SizeRange**  
   
-    -   **重量**  
+    -   **Weight**  
   
     -   **DaysToManufacture**  
   
@@ -120,7 +119,7 @@ ms.locfileid: "66079024"
   
     -   **状态**  
   
-5.  在“文件”  菜单上，单击“全部保存” ****。  
+5.  在 "文件" 菜单上，单击 "**全部保存**"。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [检查多维数据集和维度属性](lesson-2-4-reviewing-cube-and-dimension-properties.md)  
