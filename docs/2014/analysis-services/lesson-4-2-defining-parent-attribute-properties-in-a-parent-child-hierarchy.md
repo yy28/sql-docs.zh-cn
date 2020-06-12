@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f4e3e06280ad91c59984b91e7383213f73f95343
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 838d96fc7db5ae4bf1930d159c7fee56d0a0408f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175326"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543369"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>定义父子层次结构中的父特性属性
   父子层次结构是基于两个表列的维度中的层次结构。 这两个表列一起定义维度成员之间的层次结构关系。 第一列称为“成员键列”**，用于标识每个维度成员。 另一列称为“父列”**，用于标识每个维度成员的父项。 父特性的“NamingTemplate”**** 属性决定父子层次结构中的每个级别的名称，而“MembersWithData”**** 属性则决定是否应显示父成员的数据。
@@ -73,7 +72,7 @@ ms.locfileid: "78175326"
 
      在“级别命名模板”**** 对话框中，将定义用于确定父子层次结构中的级别名称的级别命名模板，用户在浏览多维数据集时将显示级别名称。
 
-4.  在第二行**\*** 中，在 "**名称**" 列中键入**Employee Level \* ** ，然后单击第三行。
+4.  在第二行中，在 " **\*** **名称**" 列中键入**Employee \* Level** ，然后单击第三行。
 
      注意，在“结果”**** 下面，每个级别现在将命名为“雇员级别”，并且后跟按顺序增加的数字。
 
@@ -81,7 +80,7 @@ ms.locfileid: "78175326"
 
      !["级别命名模板" 对话框](../../2014/tutorials/media/l4-namingtemplate.gif "“级别命名模板”对话框")
 
-5.  单击“确定”。 
+5.  单击“确定”。
 
 6.  在“雇员”**** 特性的“属性”窗口中，选择“MembersWithData”**** 属性单元中的“NonLeafDataHidden”****，以便为“雇员”**** 特性更改此值。
 

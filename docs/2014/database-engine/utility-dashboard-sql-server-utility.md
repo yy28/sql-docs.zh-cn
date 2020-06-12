@@ -10,19 +10,19 @@ ms.assetid: 999eb741-4a60-43f6-ab37-2df7dce845c1
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ce0c700e7e53ef1b055fa476e1e259fefe6c0aa
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773809"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83857749"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>实用工具面板（SQL Server 实用工具）
   若要在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具仪表板中查看数据，请在标有“Utility<UCP_Name>\\(ComputerName\UCP)”的实用工具资源管理器树中选择顶端节点。 该面板包括来自 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的所有托管实例和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具中所有数据层应用程序的摘要和详细信息数据。 若要刷新仪表板中的数据，请在实用工具资源管理器树中右键单击该顶端节点，然后选择“刷新”****。  
   
  有关如何创建实用工具控制点的详细信息点，请参阅 [创建 SQL Server 实用工具控制点（SQL Server 实用工具）](../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)。 有关如何将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例添加到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具的详细信息，请参阅 [注册 SQL Server 实例（SQL Server 实用工具）](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  托管实例运行状况  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的托管实例的运行状态显示在实用工具资源管理器内容窗格的左侧。  
   

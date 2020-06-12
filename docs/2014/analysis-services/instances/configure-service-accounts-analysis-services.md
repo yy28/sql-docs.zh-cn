@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8dfde906f7cadc01b9c7a4abbe32be1bd0408986
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c48dbe2f224b9b7e2d5e47f6771105adc0524ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080191"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544049"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>配置服务帐户 (Analysis Services)
   产品范围的帐户设置在 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)中有文档介绍，该主题提供有关所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务（包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]）的全面服务帐户信息。 请参阅该主题以了解有关有效帐户类型、安装分配的 Windows 特权、文件系统权限、注册表权限等方面的信息。  
@@ -49,7 +48,7 @@ ms.locfileid: "66080191"
   
  可以在本地安全设置中查看此安全组：  
   
--   运行 compmgmt.msc |**本地用户和组** | **组** | `SQLServerMSASUser$`\<服务器名称>`$MSSQLSERVER` （对于默认实例）。  
+-   运行 compmgmt.msc |**本地用户和组**  | **Groups**  |  `SQLServerMSASUser$` 组 \<server-name> `$MSSQLSERVER`（对于默认实例）。  
   
 -   双击安全组，查看其成员。  
   
@@ -68,13 +67,13 @@ ms.locfileid: "66080191"
 |-|-|  
 |**增加进程工作集** (SeIncreaseWorkingSetPrivilege)|默认情况下，此特权通过 **用户** 安全组对所有用户可用。 如果你通过移除此组的特权来锁定服务器，Analysis Services 可能无法启动，并且将记录此错误：“客户端没有所需的特权。” 此错误发生后，通过将特权授予正确的 Analysis Services 安全组，将特权还原到 Analysis Services。|  
 |**调整进程的内存配额** (SeIncreaseQuotaSizePrivilege)|此特权用于当进程因受制于为实例建立的内存阀值而没有足够资源来完成其执行时请求更多内存。|  
-|**锁定内存页** (SeLockMemoryPrivilege)|此特权仅在完全关闭分页时所需。 默认情况下，表格服务器实例使用 Windows 分页文件，但你通过将 `VertiPaqPagingPolicy` 设置时为 0 来阻止其使用 Windows 分页。<br /><br /> 将 `VertiPaqPagingPolicy` 设置为 1 （默认情况下），指示表格服务器实例使用 Windows 分页文件。 分配未锁定，允许 Windows 按需移出分页。 由于正在使用分页，不需要锁定内存页。 因此，对于默认配置（其中`VertiPaqPagingPolicy` = 1），无需向表格实例授予 "**锁定内存页**" 特权。<br /><br /> `VertiPaqPagingPolicy`为0。 假定对表格实例授予了 **锁定内存页** 特权，如果关闭 Analysis Services 的分页，则锁定分配。 考虑到此设置和 **锁定内存页** 特权，当系统在内存压力下时，Windows 不能分页出对 Analysis Services 执行的内存分配。 Analysis Services 依赖于 "**锁定内存中的页**" 权限，因为`VertiPaqPagingPolicy` "强制执行 = 0"。 请注意，不建议关闭 Windows 分页。 它会增加操作的内存不足错误率，而如果允许分页，该操作可能成功。 有关的详细信息，请参阅`VertiPaqPagingPolicy`[内存属性](../server-properties/memory-properties.md)。|  
+|**锁定内存页** (SeLockMemoryPrivilege)|此特权仅在完全关闭分页时所需。 默认情况下，表格服务器实例使用 Windows 分页文件，但你通过将 `VertiPaqPagingPolicy` 设置时为 0 来阻止其使用 Windows 分页。<br /><br /> 将 `VertiPaqPagingPolicy` 设置为 1 （默认情况下），指示表格服务器实例使用 Windows 分页文件。 分配未锁定，允许 Windows 按需移出分页。 由于正在使用分页，不需要锁定内存页。 因此，对于默认配置（其中 `VertiPaqPagingPolicy` = 1），无需向表格实例授予 "**锁定内存页**" 特权。<br /><br /> `VertiPaqPagingPolicy`为0。 假定对表格实例授予了 **锁定内存页** 特权，如果关闭 Analysis Services 的分页，则锁定分配。 考虑到此设置和 **锁定内存页** 特权，当系统在内存压力下时，Windows 不能分页出对 Analysis Services 执行的内存分配。 Analysis Services 依赖于 "**锁定内存中的页**" 权限，因为 "强制执行 `VertiPaqPagingPolicy` = 0"。 请注意，不建议关闭 Windows 分页。 它会增加操作的内存不足错误率，而如果允许分页，该操作可能成功。 有关的详细信息，请参阅[内存属性](../server-properties/memory-properties.md) `VertiPaqPagingPolicy` 。|  
   
 #### <a name="to-view-or-add-windows-privileges-on-the-service-account"></a>若要在服务账户上查看或添加 Windows 特权  
   
 1.  请运行“GPEDIT.msc | 本地计算机策略 | 计算机配置 | Windows 设置 | 安全设置 | 本地策略 | 用户权限分配”。  
   
-2.  查看包括`SQLServerMSASUser$`的现有策略。 这是在安装 Analysis Services 的计算机上找到的本地安全组。 Windows 特权和文件文件夹权限都授予此安全组。 双击 **作为服务登录** 策略，查看如何在你的系统上指定安全组。 安全组的全名会根据你是否将 Analysis Services 作为命名实例安装而变化。 添加账户特权时，使用此安全组，而不是实际的服务账户。  
+2.  查看包括的现有策略 `SQLServerMSASUser$` 。 这是在安装 Analysis Services 的计算机上找到的本地安全组。 Windows 特权和文件文件夹权限都授予此安全组。 双击 **作为服务登录** 策略，查看如何在你的系统上指定安全组。 安全组的全名会根据你是否将 Analysis Services 作为命名实例安装而变化。 添加账户特权时，使用此安全组，而不是实际的服务账户。  
   
 3.  若要在 GPEDIT 中添加账户特权，右键单击 **“增加进程工作集”** ，然后选择 **“属性”**。  
   
@@ -104,7 +103,7 @@ ms.locfileid: "66080191"
   
  数据文件、程序可执行文件、配置文件、日志文件和临时文件上的权限持有者是由 SQL Server 安装程序创建的一个本地安全组。  
   
- 有一个安全组是为你安装的每个实例而创建的。 安全组在实例─之后命名为默认实例的**SQLServerMSASUser $ MSSQLSERVER** ，对于命名实例， `SQLServerMSASUser$` \<则以 servername\<>$ instancename> 命名。 该安装程序为此安全组配置执行服务器操作所需的文件权限。 如果您检查 \MSAS12.MSSQLSERVER\OLAP\BIN 目录上的安全权限，则会看到该安全组（而非服务帐户或其 per-service SID）是该目录的权限持有者。  
+ 有一个安全组是为你安装的每个实例而创建的。 安全组在实例─之后命名为默认实例的**SQLServerMSASUser $ MSSQLSERVER** ，或命名实例的名称 `SQLServerMSASUser$` \<servername> $ \<instancename> 。 该安装程序为此安全组配置执行服务器操作所需的文件权限。 如果您检查 \MSAS12.MSSQLSERVER\OLAP\BIN 目录上的安全权限，则会看到该安全组（而非服务帐户或其 per-service SID）是该目录的权限持有者。  
   
  该安全组仅包含一个成员： [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例启动帐户的 per-service 安全标识符 (SID)。 安装程序将 Per-service SID 添加到本地安全组。 与部署 Database Engine 相比， SQL Server 安装程序部署 Analysis Services 小而明显的不同之处在于使用了本地安全组及其 SID 成员身份。  
   
@@ -118,14 +117,14 @@ ms.locfileid: "66080191"
   
      `SC showsid MSOlap$Tabular`  
   
-2.  使用**计算机管理器** | **本地用户和组** | **组**检查 SQLServerMSASUser $\<servername>$\<instancename> 安全组的成员身份。  
+2.  使用**计算机管理器**"  |  **本地用户和组**"  |  **组**检查 SQLServerMSASUser $ \<servername> $ \<instancename> 安全组的成员身份。  
   
      成员 SID 应与步骤 1 的 per-service SID 匹配。  
   
-3.  使用**Windows 资源管理器** | **程序文件** | **Microsoft SQL Server** |Msasxx.mssqlserver. MSSQLServer |对步骤2中的安全组授予用于验证文件夹安全属性的**OLAP** | **bin** 。  
+3.  使用**Windows 资源管理器**  |  **程序文件**  |  **Microsoft SQL Server** |Msasxx.mssqlserver. MSSQLServer |**OLAP**  | 用于验证在步骤2中向安全组授予了文件夹安全属性的**bin** 。  
   
 > [!NOTE]  
->  切勿删除或修改 SID。 若要还原无意中删除的每个服务 SID，请[https://support.microsoft.com/kb/2620201](https://support.microsoft.com/kb/2620201)参阅。  
+>  切勿删除或修改 SID。 若要还原无意中删除的每个服务 SID，请参阅 [https://support.microsoft.com/kb/2620201](https://support.microsoft.com/kb/2620201) 。  
   
  **了解关于 per-service SID 的详细信息**  
   

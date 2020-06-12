@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f525c45e71c290d3eaab410c0fa0fa62d1e9a61d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55812c7df95b49fecbdbf8ed1a17c7403c04fbcb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071636"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547479"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>创建与 PowerPivot 工作簿的 BI 语义模型连接
   使用本主题中的信息可设置一个 BI 语义模型连接，该连接重定向到同一个场中的 PowerPivot 工作簿。  
@@ -24,7 +23,7 @@ ms.locfileid: "66071636"
   
  本主题包含以下各节。 按给出的顺序执行每个任务。  
   
- [查看先决条件](#bkmk_prereq)  
+ [检查必备条件](#bkmk_prereq)  
   
  [创建连接](#bkmk_create)  
   
@@ -39,7 +38,7 @@ ms.locfileid: "66071636"
   
  您必须具有支持 BI 语义模型连接内容类型的库。 有关详细信息，请参阅[将 BI 语义模型连接内容类型添加到库 &#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)。  
   
- 您必须知道您为其设置 BI 语义模型连接的 PowerPivot 工作簿的 URL （例如http://adventure-works/shared documents/myworkbook.xlsx)）。 工作簿必须位于同一场中。  
+ 您必须知道您为其设置 BI 语义模型连接的 PowerPivot 工作簿的 URL （例如 http://adventure-works/shared 文档/myworkbook.xlsx）。 工作簿必须位于同一场中。  
   
  参与连接序列的所有计算机和用户都必须处于同一个域或可信域（双向信任）中。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "66071636"
   
      ![SharePoint 库中的“新建文档”子菜单](../media/ssas-bismconnection-new.gif "SharePoint 库中的“新建文档”子菜单")  
   
-2.  将**服务器**属性设置为 PowerPivot 工作簿的 SharePoint URL （例如** http://mysharepoint/shared documents/myworkbook.xlsx)**。 在 PowerPivot for SharePoint 部署中，数据可从场中的任何服务器上加载。 因此，与 PowerPivot 数据的数据源连接仅指定指向工作簿的路径。 PowerPivot 系统服务将确定哪一服务器将加载数据。  
+2.  将**服务器**属性设置为 PowerPivot 工作簿的 SharePoint URL （例如， ** http://mysharepoint/shared documents/myWorkbook.xlsx**。 在 PowerPivot for SharePoint 部署中，数据可从场中的任何服务器上加载。 因此，与 PowerPivot 数据的数据源连接仅指定指向工作簿的路径。 PowerPivot 系统服务将确定哪一服务器将加载数据。  
   
      不要使用**数据库**属性;它在指定 PowerPivot 工作簿的位置时不使用。  
   

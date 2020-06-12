@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 365f89286a59057efa39b503eedaedebb875c039
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65f7c51f3bba2431ce78f6a9287aedeef0fff7b6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073652"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546079"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>在 Analysis Services 中合并分区（SSAS - 多维）
   您可以将现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中的分区进行合并，以整合来自相同度量值组的多个分区的事实数据。  
   
  [常见方案](#bkmk_Scenario)  
   
- [惠?](#bkmk_prereq)  
+ [要求](#bkmk_prereq)  
   
  [在合并分区后更新分区源](#bkmk_Where)  
   
@@ -42,7 +41,7 @@ ms.locfileid: "66073652"
   
  正如这种情况所示，合并分区可能成为定期执行的一项例行任务，这可以为整合与组织历史数据提供一种渐进的方法。  
   
-##  <a name="requirements"></a><a name="bkmk_prereq"></a> 要求  
+##  <a name="requirements"></a><a name="bkmk_prereq"></a>要求  
  只有符合下列所有条件的分区才能合并：  
   
 -   分区具有相同的度量值组。  
@@ -117,7 +116,7 @@ ms.locfileid: "66073652"
   
 1.  在对象资源管理器中，展开包含要合并分区的多维数据集的“度量值组”**** 节点，展开“分区”****，右键单击要被合并或要合并到的分区。 例如，如果您要将每个季度的事实数据移到存储年度事实数据的分区，请选择包含年度事实数据的分区。  
   
-2.  单击 "**合并分区**" 打开 "**合并\<分区分区名称>** " 对话框。  
+2.  单击 "**合并分区**" 打开 "**合并 \<partition name> 分区**" 对话框。  
   
 3.  在 **“源分区”** 下，选中要与目标分区合并的每个源分区旁边的复选框，然后单击 **“确定”**。  
   
@@ -126,7 +125,7 @@ ms.locfileid: "66073652"
   
 4.  右键单击包含累积数据的分区，然后选择“属性”****。  
   
-5.  打开`Source`属性，并修改 WHERE 子句，使之包括您刚合并的分区数据。 请记住， `Source`属性不会自动更新。 如果在不首先更新的`Source`情况下重新处理，则可能不会获得所有预期的数据。  
+5.  打开 `Source` 属性，并修改 WHERE 子句，使之包括您刚合并的分区数据。 请记住， `Source` 属性不会自动更新。 如果在不首先更新的情况下重新处理 `Source` ，则可能不会获得所有预期的数据。  
   
 ##  <a name="how-to-merge-partitions-using-xmla"></a><a name="bkmk_partitionsXMLA"></a> 如何使用 XMLA 合并分区  
  有关信息，请参阅此主题[合并分区 (XMLA)](../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md)。  

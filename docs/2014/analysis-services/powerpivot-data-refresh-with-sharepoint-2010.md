@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01b54e6f-66e5-485c-acaa-3f9aa53119c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9f042a937b1ce2a51bc6d8dbb50b8fc39c4fb78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18c879aaaa5bc63b4312f0461404e830dcbc2029
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175626"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547689"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>使用 SharePoint 2010 进行 PowerPivot 数据刷新
   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 数据刷新是在服务器端计划的操作，它对外部数据源进行查询以便更新在内容库中存储的 Excel 2010 工作簿中嵌入的 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 数据。
@@ -75,7 +74,7 @@ ms.locfileid: "78175626"
 
 5.  在 "**数据库**" 中，指定将承载此服务应用程序的数据库的 SQL Server 实例。 默认值是承载场配置数据库的 SQL Server 数据库引擎实例。
 
-6.  在 "**数据库名称**" 中，输入服务应用程序数据库的名称。 默认值为 Secure_Store_Service_DB_\<guid>。 该默认名称对应于服务应用程序的默认名称。 如果您输入了唯一的服务应用程序名称，则遵循您的数据库名称的类似命名约定，以便可以一起管理它们。
+6.  在 "**数据库名称**" 中，输入服务应用程序数据库的名称。 默认值为 Secure_Store_Service_DB_ \<guid> 。 该默认名称对应于服务应用程序的默认名称。 如果您输入了唯一的服务应用程序名称，则遵循您的数据库名称的类似命名约定，以便可以一起管理它们。
 
 7.  在 **“数据库身份验证”** 中，默认值是 “Windows 身份验证”。 如果您选择“SQL 身份验证”，请参考 SharePoint 管理员指南中有关如何在场中使用该身份验证类型的说明。
 
@@ -93,7 +92,7 @@ ms.locfileid: "78175626"
 
 14. 输入然后确认通行短语。 该通行短语将用于添加其他安全存储区共享服务应用程序。
 
-15. 单击“确定”。 
+15. 单击“确定”。
 
  必须先启用存储区服务操作的日志记录审核功能（有助于故障排除），然后才能使用该功能。 有关如何启用日志记录的详细信息，请参阅[Configure Secure Store Service （SharePoint 2010）](https://go.microsoft.com/fwlink/p/?LinkID=223294)。
 
@@ -116,7 +115,7 @@ ms.locfileid: "78175626"
 
  ![SSAS_PPS_ScheduleDataRefreshCreds](media/ssas-pps-scheduledatarefreshcreds.gif "SSAS_PPS_ScheduleDataRefreshCreds")
 
- 默认情况下启用此凭据选项。 启用此凭据选项后，PowerPivot 系统服务将在 Secure Store Service 中生成一个目标应用程序，用来存储计划所有者输入的用户名和密码。 使用此命名约定创建生成的目标应用程序： PowerPivotDataRefresh_\<guid>。 为每一组 Windows 凭据都创建一个目标应用程序。 如果由 PowerPivot 系统服务拥有的目标应用程序已存在，并且该应用程序存储着计划定义者输入的用户名和密码，则 PowerPivot 系统服务将使用该目标应用程序而不会另外新建。
+ 默认情况下启用此凭据选项。 启用此凭据选项后，PowerPivot 系统服务将在 Secure Store Service 中生成一个目标应用程序，用来存储计划所有者输入的用户名和密码。 使用此命名约定创建生成的目标应用程序： PowerPivotDataRefresh_ \<guid> 。 为每一组 Windows 凭据都创建一个目标应用程序。 如果由 PowerPivot 系统服务拥有的目标应用程序已存在，并且该应用程序存储着计划定义者输入的用户名和密码，则 PowerPivot 系统服务将使用该目标应用程序而不会另外新建。
 
  此凭据选项的主要优点是简便易用。 由于系统为您创建了目标应用程序，所以几乎不需要执行进一步的工作。 此外，使用计划所有者（很可能就是工作簿创建者）的凭据运行数据刷新简化了之后的权限要求。 此用户很可能已经拥有针对目标数据库的权限。 当数据刷新在此人的 Windows 用户标识下运行时，指定 "当前用户" 的任何数据连接都将自动运行。
 
@@ -204,7 +203,7 @@ ms.locfileid: "78175626"
 
  如果在连接字符串中看到 "**集成安全性 = SSPI** "，则不能在连接字符串中覆盖凭据。 将始终使用当前用户身份连接， 忽略您提供的所有凭据。
 
- 如果你看到 "**持久性安全信息 = False，Password\*\*\*\*\*\*\*\*\*\*\*=，UserID\<= userlogin>**"，则会获得一个将接受凭据替代的连接字符串。 连接字符串中显示的凭据（如 UserID 和密码）并不是 Windows 凭据，而是对目标数据源有效的数据库登录名或其他登录帐户。
+ 如果你看到 "**持久性安全信息 = False，Password = \* \* \* \* \* \* \* \* \* \* \* ，UserID \<userlogin> =**"，则会获得一个将接受凭据替代的连接字符串。 连接字符串中显示的凭据（如 UserID 和密码）并不是 Windows 凭据，而是对目标数据源有效的数据库登录名或其他登录帐户。
 
  **如何覆盖连接字符串中的凭据**
 
@@ -254,7 +253,7 @@ ms.locfileid: "78175626"
 
      如果您不希望定义非工作时间处理期间，可以在“开始时间”和“结束时间”中输入同样的值（例如，两个时间均为 12:00）。 但应注意，SharePoint 站点上的计划定义页仍将“在工作时间后”作为一个选项。 在未定义非工作时间处理范围的场中选择该选项的用户将最终获得数据刷新错误，因为处理作业无法开始。
 
-5.  单击“确定”。 
+5.  单击“确定”。
 
 ###  <a name="limit-how-long-data-refresh-history-is-retained"></a><a name="usagehist"></a>限制数据刷新历史记录的保留时间
  数据刷新历史记录用于详细记录数据刷新操作随着时间推移生成的成功和失败消息。 通过场中的使用情况数据收集系统可以收集和管理历史记录信息。 因此，您对使用情况数据历史记录设置的限制也适用于数据刷新历史记录。 因为使用情况活动报表将来自整个 PowerPivot 系统的数据收集在一起，所以，单个历史记录设置用于同时为数据刷新历史记录和所收集和存储的所有其他使用情况数据控制数据保留事宜。
@@ -269,7 +268,7 @@ ms.locfileid: "78175626"
 
      默认值为 365 天。 最小值为 1 天，最大值为 5000 天。 0 指定保留期不受限制；数据始终不会被删除。 请注意，不存在用于关闭历史记录的设置。
 
-5.  单击“确定”。 
+5.  单击“确定”。
 
  当 SharePoint 用户在具有数据刷新历史记录的工作簿上选择“管理数据刷新”选项时，这些用户将可以使用历史记录信息。 场管理员用来管理 PowerPivot 服务操作的 PowerPivot 管理面板中也使用了此信息。 有关详细信息，请参阅[查看数据刷新历史记录 &#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)。
 

@@ -1,5 +1,6 @@
 ---
 title: 连接到 Azure SQL DB （AccessToSQL） |Microsoft Docs
+description: 了解如何连接到 Azure SQL 数据库的目标实例以迁移 Access 数据库。 SSMA 获取有关 Azure SQL 数据库中的数据库的元数据。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 6c35168f1c77f0574b202b77da515dab497a3ec7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f07d63387a6abd55aa2a130f2809681b00a71b19
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006654"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293124"
 ---
 # <a name="connecting-to-azure-sql-db-accesstosql"></a>连接到 Azure SQL DB （AccessToSQL）
 若要将 Access 数据库迁移到 SQL Azure，你必须连接到 SQL Azure 的目标实例。 在连接时，SSMA 将获取 SQL Azure 实例中所有数据库的元数据，并在 SQL Azure 元数据资源管理器中显示数据库元数据。 SSMA 存储有关连接到的 SQL Azure 实例的信息，但不存储密码。  
@@ -35,7 +36,7 @@ ms.locfileid: "68006654"
 ## <a name="required-sql-azure-permissions"></a>必需的 SQL Azure 权限  
 用于连接 SQL Azure 的帐户需要不同的权限，具体取决于帐户执行的操作：  
   
--   若要将 Access 对象[!INCLUDE[tsql](../../includes/tsql-md.md)]转换为语法、从 SQL Azure 更新元数据或将转换的语法保存到脚本中，该帐户必须有权登录到 SQL Azure 的实例。  
+-   若要将 Access 对象转换为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法、从 SQL Azure 更新元数据或将转换的语法保存到脚本中，该帐户必须有权登录到 SQL Azure 的实例。  
   
 -   若要将数据库对象加载到 SQL Azure 中，最低权限要求是目标数据库中**db_owner**数据库角色的成员身份。  
   
@@ -63,7 +64,7 @@ ms.locfileid: "68006654"
   
 6.  SSMA 建议将加密连接 SQL Azure。  
   
-7.  单击“连接”  。  
+7.  单击“连接”。  
   
 > [!IMPORTANT]  
 > SSMA for Access 不支持连接到 SQL Azure 中的**master**数据库。  
@@ -95,7 +96,7 @@ ms.locfileid: "68006654"
   
 重新连接到 SQL Azure 的过程与建立连接的过程相同。  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
 迁移的下一步取决于你的项目需求：  
   
 -   若要自定义访问架构与 SQL Azure 数据库和架构之间的映射，请参阅[将访问数据库映射到 SQL Server 架构](mapping-source-and-target-databases-accesstosql.md)。  

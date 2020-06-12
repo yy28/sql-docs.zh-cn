@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a44187fc41409d149501c4cda7e99817be034a12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4c9f5fe3a3fa9a58b8c1a103bcb2cf359d842190
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488414"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83806755"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR 标量值函数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  标量值函数 (SVF) 返回单个值，例如字符串、整数或位值。 您可以使用任何 .NET Framework 的编程语言在托管代码中创建标量值用户定义函数。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他托管代码可访问这些函数。 有关 CLR 集成的优点以及如何在托管代码和[!INCLUDE[tsql](../../includes/tsql-md.md)]之间进行选择的信息，请参阅[clr 集成概述](../../relational-databases/clr-integration/clr-integration-overview.md)。  
+  标量值函数 (SVF) 返回单个值，例如字符串、整数或位值。 您可以使用任何 .NET Framework 的编程语言在托管代码中创建标量值用户定义函数。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他托管代码可访问这些函数。 有关 CLR 集成的优点以及如何在托管代码和之间进行选择的信息 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，请参阅[Clr 集成概述](../../relational-databases/clr-integration/clr-integration-overview.md)。  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>CLR 标量值函数的要求  
- 在 .NET Framework 程序集中 .NET Framework  SVF 将实现为类的方法。 输入参数和从 SVF 返回的类型可以是支持的任何标量数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， **varchar**、 **char**、 **rowversion**、 **text**、 **ntext**、 **image**、 **timestamp**、 **table**或**cursor**除外。 SVF 必须确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型和实现方法的返回数据类型相匹配。 有关类型转换的详细信息，请参阅[映射 CLR 参数数据](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。  
+ 在 .NET Framework 程序集中 .NET Framework  SVF 将实现为类的方法。 输入参数和从 SVF 返回的类型可以是支持的任何标量数据类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， **varchar**、 **char**、 **rowversion**、 **text**、 **ntext**、 **image**、 **timestamp**、 **table**或**cursor**除外。 SVF 必须确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型和实现方法的返回数据类型相匹配。 有关类型转换的详细信息，请参阅[映射 CLR 参数数据](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。  
   
  使用 .NET Framework 语言实现 .NET Framework SVF 时，可以指定**SqlFunction**自定义属性以包括有关函数的其他信息。 **SqlFunction**特性指示函数是否访问或修改数据（如果该函数是确定性的），以及该函数是否涉及浮点运算。  
   
@@ -81,17 +81,17 @@ Public Class T
 End Class  
 ```  
   
- 第一行代码引用 SqlClient 来**访问**ADO.NET 命名空间，以访问属性和**System.Data.SqlClient** 。 （此命名空间包含**SqlClient**，它是的 .NET Framework [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据提供程序。）  
+ 第一行代码引用 SqlClient 来**访问**ADO.NET 命名空间，以访问属性和**System.Data.SqlClient** 。 （此命名空间包含**SqlClient**，它是的 .NET Framework 数据提供程序 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。）  
   
  接下来，该函数接收在**SqlFunction** **命名空间**中找到的自定义属性。 该自定义属性指示用户定义函数 (UDF) 是否使用进程内访问接口来读取服务器中的数据。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允许 UDF 更新、插入或删除数据。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以优化执行不使用进程内访问接口的 UDF。 这可通过将**dataaccesskind.read**设置为**dataaccesskind.read**来指示。 在下一行中，目标方法为公共静态方法（在 Visual Basic .NET 中为 shared）。  
   
- 然后，位于 SqlContext**命名空间**中的**SqlContext**类可以使用连接到已设置的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接来访问**SqlCommand**对象。 尽管此处未使用，但当前事务上下文还可通过**System.** transaction 应用程序编程接口（API）来使用。  
+ 然后，位于 SqlContext**命名空间中的** **SqlContext**类可以使用连接到已设置的实例的连接来访问**SqlCommand**对象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 尽管此处未使用，但当前事务上下文还可通过**System.** transaction 应用程序编程接口（API）来使用。  
   
  编写使用**SqlClient**命名空间中的类型的客户端应用程序的开发人员应熟悉函数体中的大部分代码行。  
   
  [C#]  
   
-```  
+```csharp
 using(SqlConnection conn = new SqlConnection("context connection=true"))   
 {  
    conn.Open();  
@@ -103,7 +103,7 @@ using(SqlConnection conn = new SqlConnection("context connection=true"))
   
  [Visual Basic]  
   
-```  
+```vb
 Using conn As New SqlConnection("context connection=true")  
    conn.Open()  
    Dim cmd As New SqlCommand( _  
@@ -132,11 +132,11 @@ vbc.exe /t:library /out:FirstUdf.dll FirstUdf.vb
 >  `/t:library` 指示应生成一个库，而非可执行程序。 可执行程序无法在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中进行注册。  
   
 > [!NOTE]  
->  不支持在上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]执行的 Visual C++ 用 **/clr： pure**编译的数据库对象。 例如，此类数据库对象包含标量值函数。  
+>  不支持在上执行的 Visual C++ 用 **/clr： pure**编译的数据库对象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 例如，此类数据库对象包含标量值函数。  
   
  用于注册程序集和 UDF 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询及示例调用如下：  
   
-```  
+```sql
 CREATE ASSEMBLY FirstUdf FROM 'FirstUdf.dll';  
 GO  
   

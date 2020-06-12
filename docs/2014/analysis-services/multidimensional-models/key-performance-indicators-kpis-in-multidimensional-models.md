@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 35482dc6206f0ad8807cb0f9a3e46902d14061ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6ae3a34da62ed24d1971540e825f9f8347f413f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074797"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546629"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>多维模型中的关键绩效指标 (KPI)
   在业务术语中，关键绩效指标 (KPI) 是一个用于测定业务绩效的可计量度量值。  
@@ -37,7 +36,7 @@ ms.locfileid: "66074797"
   
  在业务术语中，关键绩效指标 (KPI) 是一个用于测定业务绩效的可计量度量值。 经常会在一段时间内评估 KPI。 例如，一个单位的销售部门可以使用每月的毛利润作为 KPI，但同一单位的人力资源部门可以使用每季度流失的雇员作为 KPI。 这两个都是 KPI 的示例。 业务主管经常使用以业务计分卡形式分组在一起的 KPI 获取迅速且精确的业务绩效历史摘要。  
   
- 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，KPI 是与多维数据集中的度量值组关联的计算的集合，用于评估业务成功。 这些计算通常是多维表达式 (MDX) 和计算成员的组合。 KPI 还包括其他的元数据，该元数据提供有关客户端应用程序如何显示 KPI 计算结果的信息。  
+ 在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，KPI 是与多维数据集中的度量值组关联的计算的集合，用于评估业务成功。 这些计算通常是多维表达式 (MDX) 和计算成员的组合。 KPI 还包括其他的元数据，该元数据提供有关客户端应用程序如何显示 KPI 计算结果的信息。  
   
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中使用 KPI 的一个主要优点为，它们是基于服务器的 KPI，可以由不同的客户端应用程序使用。 与来自个别客户端应用程序的个别真实版本相比较，基于服务器的 KPI 只提供单个真实版本。 此外，在服务器上而不是在每台客户端计算机上执行有时很复杂的计算可能对性能有好处。  
   
@@ -47,7 +46,7 @@ ms.locfileid: "66074797"
 |术语|定义|  
 |----------|----------------|  
 |目标|一个返回 KPI 目标值的 MDX 数值表达式或计算。|  
-|Value|一个返回 KPI 实际值的 MDX 数值表达式。|  
+|值|一个返回 KPI 实际值的 MDX 数值表达式。|  
 |状态|一个表示指定时间点 KPI 状态的 MDX 表达式。<br /><br /> 状态 MDX 表达式应返回介于 -1 到 1 之间的标准化值。 等于或小于 -1 的值将作为“差值”或“低值”。 零值 (0) 被理解为“可接受值”或“中间值”。 等于或大于 1 的值将作为“优值”或“高值”。<br /><br /> 如果受客户端应用程序支持，则可以有选择地返回不限制数目的中间值，并使用这些值来显示任意数目的附加状态。|  
 |趋势|评估一段时间内 KPI 值的 MDX 表达式。 走向可以是任何基于时间的条件，该条件在特定的业务上下文中很有用。<br /><br /> 使用走向 MDX 表达式，业务用户可以确定 KPI 是随时间升高还是随时间降低。|  
 |状态指示器|一个提供 KPI 状态快速指示的可见元素。 该元素的显示内容由评估状态的 MDX 表达式的值确定。|  

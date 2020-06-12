@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2d28df68512f9c97faebf3ee00b2aa34a2b8d1a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c4f8c1b48ccc6b3f2c2363671f5e3c072f77042
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028668"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669170"
 ---
 # <a name="update-dmx"></a>UPDATE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ SET NODE_CAPTION='new caption'
 ```  
   
 ## <a name="arguments"></a>参数  
- *模型*  
+ *model*  
  模型标识符。  
   
  *新标题*  
@@ -40,7 +40,7 @@ SET NODE_CAPTION='new caption'
  可选。 一个限制条件，用于限制从列列表返回的值。  
   
 ## <a name="examples"></a>示例  
- 在下面的示例中， **UPDATE**语句将群集`Cluster 1` `001`的默认名称更改为更具描述性的名称。 `Likely Customers`  
+ 在下面的示例中， **UPDATE**语句将群集的默认名称更改 `Cluster 1` `001` 为更具描述性的名称 `Likely Customers` 。  
   
 ```  
 UPDATE [TM Clustering].CONTENT  

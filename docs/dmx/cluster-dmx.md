@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fa7df2782b8102e386c70d5e874a25f7868dbb1c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c14bc8189bdea705ab37c66863d74bcef66e23c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68071081"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669820"
 ---
 # <a name="cluster-dmx"></a>Cluster (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,10 +33,10 @@ Cluster()
 ## <a name="return-type"></a>返回类型  
  **群集**函数不需要参数。  
   
- **Cluster**函数返回群集名称的标量值。 但是，如果使用此函数作为另一个函数的参数，则必须将其视为\<群集列引用>。  
+ **Cluster**函数返回群集名称的标量值。 但是，如果使用此函数作为另一个函数的参数，则必须将其视为 \< 群集列引用>。  
   
-## <a name="remarks"></a>备注  
- **群集**还可以用作**PredictHistogram**函数的`<`群集列引用`>` 。  
+## <a name="remarks"></a>注解  
+ **群集**还可以用作 `<` PredictHistogram 函数的群集列引用 `>` 。 **PredictHistogram**  
   
 ## <a name="examples"></a>示例  
  下面的示例使用带有[PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md)和群集函数的单独查询，以返回 TM 群集挖掘模型的每个分类中单个事例的距离，以及单个事例在每个分类中的概率。  

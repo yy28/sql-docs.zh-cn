@@ -1,5 +1,6 @@
 ---
 title: 在 sql 中创建常量元素：是常量（SQLXML）
+description: 了解如何使用 SQLXML 4.0 中的 sql： is 常量批注在不映射到任何数据库表或列的 XSD 架构中创建常量元素。
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,12 +20,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45ab0c13ad2c631a438e2a8637e36d192165094b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 854378b57a4798375e4f97841c8bd72ef0d7d0f3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257481"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524900"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>使用 sql:is-constant 创建常量元素 (SQLXML 4.0)
 
@@ -35,17 +36,17 @@ ms.locfileid: "75257481"
   
 -   将顶级元素添加到 XML 文档。 XML 要求为文档提供一个顶级元素（根元素）。  
   
--   创建容器元素，例如** \<>** 包装所有订单的元素。  
+-   创建容器元素，例如 **\<Orders>** 包装所有订单的元素。  
   
- 可以将**sql： is 常量**批注添加到** \<complexType>** 元素。  
+ 可以将**sql： is 常量**批注添加到 **\<complexType>** 元素。  
   
 ## <a name="examples"></a>示例  
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. 指定 sql:is-constant 以添加容器元素  
- 在这个带批注的 XSD 架构中，通过指定** \<>CustomerOrders**属性，其值为 1 **，将其**定义为常量元素。 因此， ** \<CustomerOrders>** 不会映射到任何数据库表或列。 此常量元素由** \<Order>** 子元素组成。  
+ 在此带批注的 XSD 架构中， **\<CustomerOrders>** 通过指定值为1的**sql： is 常量**属性将定义为常量元素。 因此， **\<CustomerOrders>** 不会映射到任何数据库表或列。 此常量元素由 **\<Order>** 子元素组成。  
   
- 尽管** \<CustomerOrders>** 未映射到任何数据库表或列，但它仍显示在生成的 XML 中，该元素包含>子元素的** \<顺序**。  
+ 尽管不 **\<CustomerOrders>** 会映射到任何数据库表或列，但它仍将作为包含子元素的容器元素出现在生成的 XML 中 **\<Order>** 。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

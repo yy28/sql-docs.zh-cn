@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 105f52e1-ad3b-4cd0-b67b-06dbb451c304
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3975bee14daad82291b5d343999ef4ebca7e6fbc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e315d21eb6e7b8d5e590ca4cfb655ce232ddf945
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085083"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523185"
 ---
 # <a name="data-mining-architecture"></a>数据挖掘体系结构
   本节介绍在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例中托管的数据挖掘解决方案的体系结构。 本节中的主题介绍支持数据挖掘的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的逻辑和物理体系结构，并提供可用于与数据挖掘服务器通信以及通过本地或远程方式处理数据挖掘对象的客户端、访问接口和协议的相关信息。  

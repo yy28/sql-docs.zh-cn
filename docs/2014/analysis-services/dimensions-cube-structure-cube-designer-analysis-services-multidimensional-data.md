@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 37eb7525-b423-4df5-9e62-9f4680d47b9b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a21ca5383d63d14908df0e7b08fb8419c0ff94a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb68b07a4e14e16a8df5acde7bea986733564253
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081698"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528553"
 ---
 # <a name="dimensions-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>维度（“多维数据集结构”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用 **“维度”** 窗格，在多维数据集设计器的 **“多维数据集结构”** 选项卡上查看和编辑多维数据集维度（包括层次结构和属性）。  
@@ -26,12 +25,12 @@ ms.locfileid: "66081698"
  **层次结构**  
  单击此项可以显示可用的多维数据集维度及其相关联的多维数据集层次结构。  
   
- 展开一个多维数据集维度，选择 " ** \<编辑维度>** " 以显示维度设计器，然后编辑多维数据集维度所基于的数据库维度。 有关维度设计器的详细信息，请参阅[维度设计器（Analysis Services - 多维数据）](dimension-designer-analysis-services-multidimensional-data.md)。  
+ 展开一个多维数据集维度，然后选择 "**编辑 \<dimension> ** " 以显示维度设计器，然后编辑多维数据集维度所基于的数据库维度。 有关维度设计器的详细信息，请参阅[维度设计器（Analysis Services - 多维数据）](dimension-designer-analysis-services-multidimensional-data.md)。  
   
  **特性**  
  单击此项可以显示可用的多维数据集维度及其相关联的多维数据集属性。  
   
- 展开一个多维数据集维度，选择 " ** \<编辑维度>** " 以显示维度设计器，然后编辑多维数据集维度所基于的数据库维度。 有关维度设计器的详细信息，请参阅[维度设计器（Analysis Services - 多维数据）](dimension-designer-analysis-services-multidimensional-data.md)。  
+ 展开一个多维数据集维度，然后选择 "**编辑 \<dimension> ** " 以显示维度设计器，然后编辑多维数据集维度所基于的数据库维度。 有关维度设计器的详细信息，请参阅[维度设计器（Analysis Services - 多维数据）](dimension-designer-analysis-services-multidimensional-data.md)。  
   
 ## <a name="context-menu"></a>上下文菜单  
  右键单击“维度”**** 窗格，可以从所显示的上下文菜单中访问以下选项：  

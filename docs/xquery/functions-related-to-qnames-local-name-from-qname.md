@@ -1,5 +1,6 @@
 ---
 title: 本地名称-从-QName （XQuery） |Microsoft Docs
+description: 了解如何使用本地名称 from-QName （）函数返回 QName 的本地名称部分。
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fafed718-8c3c-403f-93ee-ec51fc157a6e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 765d412b9f3f0395a9bca6fd52c74135ddde3ff4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 26cee403b1ded39555662009fc0273a40f8bd644
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004567"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689371"
 ---
 # <a name="functions-related-to-qnames---local-name-from-qname"></a>与 QName 相关的函数 - local-name-from-QName
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ fn:local-name-from-QName($arg as xs:QName?) as xs:NCName?
  它是应从中提取本地名称的 QName。  
   
 ## <a name="examples"></a>示例  
- 本主题提供针对[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库中各种**xml**类型列中存储的 xml 实例的 XQuery 示例。  
+ 本主题提供针对数据库中各种**xml**类型列中存储的 xml 实例的 XQuery 示例 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 。  
   
  下面的示例使用**本地名称 from-qname （）** 函数检索 QName 类型值中的本地名称和命名空间 URI 部分。 该示例执行以下操作：  
   

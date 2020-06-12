@@ -12,12 +12,12 @@ ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 07652cec7b3b7a17c4b994eb68afd939e15244a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c1455e4330ef4d9c8c0c6e3e07e285cf548c7b4
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62791901"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858896"
 ---
 # <a name="availability-replica-properties-general-page"></a>可用性副本属性（“常规”页）
   使用此对话框可以查看可用性副本的属性。  
@@ -29,18 +29,18 @@ ms.locfileid: "62791901"
   
 -   [使用 AlwaysOn 面板 (SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **可用性组名称**  
  可用性组的名称。 这是在 Windows Server 故障转移群集 (WSFC) 内必须唯一的用户指定的名称。  
   
  **服务器实例**  
  承载此副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务器名称；对于非默认实例，则为其实例名称。  
   
- **Role**  
- **基本**  
+ **角色**  
+ **主要节点**  
  当前主副本。  
   
- **辅助副本**  
+ **辅助节点**  
  当前辅助副本。  
   
  **正在解析**  

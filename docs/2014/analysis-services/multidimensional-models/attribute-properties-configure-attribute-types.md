@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: c2c6a3da-555e-4362-a83f-88da28427520
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e5223444f58326b7530388f3fe2fc06d72488a5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c73600d934bb87540487e0d82874650d708e034f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077411"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544789"
 ---
 # <a name="configure-attribute-types"></a>配置属性类型
-  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，特性类型可帮助根据业务功能对特性进行分类。 特性类型的数目很多，其中的大部分都可由客户端应用程序用来显示或支持特性。 但是，某些特性类型对于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]还有特定的含义。 例如，一些特性类型在时间维度的各种日历中用于标识代表时间段的特性。  
+  在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，特性类型可帮助根据业务功能对特性进行分类。 特性类型的数目很多，其中的大部分都可由客户端应用程序用来显示或支持特性。 但是，某些特性类型对于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]还有特定的含义。 例如，一些特性类型在时间维度的各种日历中用于标识代表时间段的特性。  
   
 ##  <a name="setting-attribute-types"></a><a name="setting_attibute_types"></a> 设置特性类型  
  特性的 `Type` 属性值将确定该特性的特性类型。 在定义维度或特性时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的若干个向导可以对特性类型进行设置。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 向导在维度中添加功能时，也会设置特性类型。 例如，当商业智能向导添加帐户智能时，该向导将几个特性类型应用于维度中的特性，以标识包含维度中的名称、代码、编号和帐户结构的特性。 商业智能向导还可使用属性类型，例如用于货币换算。 有关详细信息，请参阅 [创建货币类型维度](database-dimensions-create-a-currency-type-dimension.md)。  

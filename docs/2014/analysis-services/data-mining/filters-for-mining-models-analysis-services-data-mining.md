@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 44e60d60764396361122ed16a4e34f76fc3a6ab6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a7695bef91ace5eb6ff8d642c51b379343fb0b1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084431"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522344"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>挖掘模型的筛选器（Analysis Services - 数据挖掘）
   基于数据的模型筛选有助于创建利用挖掘结构中的数据子集的挖掘模型。 使用筛选功能，可以基于全面的数据源视图来创建单个挖掘结构，因此可以灵活地设计挖掘结构和数据源。 随后即可以创建筛选器，以便仅将该数据的一部分用于对各种模型进行定型和测试，而不是为数据的每个子集均生成不同的结构和相关模型。  
@@ -43,14 +42,14 @@ ms.locfileid: "66084431"
   
 -   使用数据挖掘设计器中的 **“挖掘模型”** 选项卡，并借助筛选器编辑器对话框生成各个条件。  
   
--   在挖掘模型的`Filter`属性中直接键入筛选表达式。  
+-   在挖掘模型的属性中直接键入筛选表达式 `Filter` 。  
   
 -   使用 AMO 以编程方式对模型设置筛选条件。  
   
 ### <a name="creating-model-filters-using-data-mining-designer"></a>使用数据挖掘设计器创建模型筛选器  
  可以通过更改挖掘模型的 `Filter` 属性在数据挖掘设计器中筛选模型。 可以在 **“属性”** 窗格中直接键入筛选表达式，也可以打开一个筛选器对话框来生成条件。  
   
- 共有两个筛选器对话框。 第一个对话框可用来创建应用于事例表的条件。 如果数据源中包含多个表，请首先选择一个表，然后选择一列并指定应用于该列的运算符和条件。 可以通过使用`AND` / `OR`运算符来链接多个条件。 可用于定义值的运算符取决于该列是包含离散值还是连续值。 例如，对于连续值，可以使用 `greater than` 和 `less than` 运算符。 但是，对于离散值，只能使用 `= (equal to)`、`!= (not equal to)` 和 `is null` 运算符。  
+ 共有两个筛选器对话框。 第一个对话框可用来创建应用于事例表的条件。 如果数据源中包含多个表，请首先选择一个表，然后选择一列并指定应用于该列的运算符和条件。 可以通过使用运算符来链接多个条件 `AND` / `OR` 。 可用于定义值的运算符取决于该列是包含离散值还是连续值。 例如，对于连续值，可以使用 `greater than` 和 `less than` 运算符。 但是，对于离散值，只能使用 `= (equal to)`、`!= (not equal to)` 和 `is null` 运算符。  
   
 > [!NOTE]  
 >  不支持使用 `LIKE` 关键字。 如果您希望包括多个离散属性，则必须创建不同条件并使用 `OR` 运算符来链接它们。  
@@ -82,7 +81,7 @@ ms.locfileid: "66084431"
 ### <a name="how-can-i-tell-whether-a-filter-is-being-used"></a>我如何分辨是否正在使用筛选器？  
  可以使用多种方法确定是否对模型应用了筛选器：  
   
--   在设计器中，单击 "**挖掘模型**" 选项卡，打开 "**属性**"，然后查看挖掘模型的`Filter`属性。  
+-   在设计器中，单击 "**挖掘模型**" 选项卡，打开 "**属性**"，然后查看 `Filter` 挖掘模型的属性。  
   
 -   DMV DMSCHEMA_MINING_MODELS 将输出一个包含筛选器文本的列。 您可以使用以下有关 DMV 的查询来返回模型的名称及其筛选器：  
   

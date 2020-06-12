@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 013a56ef71c33a283fb298ca322ed0e30b8933eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b0b1d50095584a86074ebe1fb7eac9b7de98256
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175286"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542849"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>定义多对多关系
   在定义维度时，通常每个事实联接且仅联接到一个维度成员，而一个维度成员可以与许多不同的事实相关联。 例如，每个客户可以具有很多订单，但每个订单只属于一个客户。 在关系数据库术语中，这称为 "一对多*关系*"。 但有时一个事实可联接多个维度成员。 在关系数据库术语中，这称为“多对多关系”**。 例如，一个客户进行采购的原因可以有多个，而一个采购原因可以与多个采购相关联。 联接表用于定义与每个采购相关的销售原因。 在由此类关系构建的 Sales Reason 维度中，将有多个成员与一个销售事务相关联。 多对多维度可将维度模型扩展到经典星型架构范围之外，并在维度不直接与事实数据表相关联的情况下支持复杂分析。
@@ -35,7 +34,7 @@ ms.locfileid: "78175286"
 
 1.  打开 **Adventure Works DW 2012** 数据源视图的数据源视图设计器。
 
-2.  右键单击 "**关系图组织**程序" 窗格中的任意位置，单击 " `Internet Sales Order Reasons` **新建关系图**"，并将指定为此新关系图的名称。
+2.  右键单击 "**关系图组织**程序" 窗格中的任意位置，单击 "**新建关系图**"，并 `Internet Sales Order Reasons` 将指定为此新关系图的名称。
 
 3.  将 **InternetSales** 表从“表”**** 窗格拖动到“关系图”**** 窗格中。
 
@@ -47,13 +46,13 @@ ms.locfileid: "78175286"
 
 6.  在“格式”**** 菜单上，指向“自动布局”****，再单击“关系图”****。
 
-7.  在属性窗口中，将**DimSalesReason**表的`SalesReason` **friendlyname**属性更改为，然后将 FactInternetSalesReason 表的**friendlyname**属性更改为**FactInternetSalesReason** `InternetSalesReason`。
+7.  在属性窗口中，将**DimSalesReason**表的**friendlyname**属性更改为 `SalesReason` ，然后将**FactInternetSalesReason**表的**friendlyname**属性更改为 `InternetSalesReason` 。
 
 8.  在“表”**** 窗格中，展开“InternetSalesReason (dbo.FactInternetSalesReason)”****，单击“SalesOrderNumber”****，然后在“属性”窗口中查看此数据列的“DataType”**** 属性。
 
      注意，“SalesOrderNumber”**** 列的数据类型为字符串数据类型。
 
-9. 查看`InternetSalesReason`表中其他列的数据类型。
+9. 查看表中其他列的数据类型 `InternetSalesReason` 。
 
      您会看到此表中其他两列的数据类型为数值数据类型。
 
@@ -69,7 +68,7 @@ ms.locfileid: "78175286"
 
 2.  右键单击“度量值”**** 窗格中的任意位置，然后单击“新建度量值组”****。 有关详细信息。请参阅 [在多维模型中创建度量值和度量值组](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)。
 
-3.  在 "**新建度量值组**" 对话框中`InternetSalesReason` ，在 "**从数据源视图中选择一个表**" 列表中选择，然后单击 **"确定"**。
+3.  在 "**新建度量值组**" 对话框中，在 `InternetSalesReason` "**从数据源视图中选择一个表**" 列表中选择，然后单击 **"确定"**。
 
      请注意，“Internet 销售原因”**** 度量值组现在显示在“度量值”**** 窗格中。
 
@@ -99,33 +98,33 @@ ms.locfileid: "78175286"
 
 4.  在“指定源信息”**** 页上，确保选中 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 2012 数据源视图。
 
-5.  在 "**主表**" 列表中`SalesReason`，选择。
+5.  在 "**主表**" 列表中，选择 `SalesReason` 。
 
 6.  在“键列”**** 列表中，确保列出了“SalesReasonKey”****。
 
 7.  在“名称列”**** 列表中，选择“SalesReasonName”****。
 
-8.  单击“下一步”。 
+8.  单击“下一步”。
 
-9. 在“选择维度属性”**** 页上，由于“销售原因键”**** 属性是键属性，因此它将自动处于选中状态。 选中 "**销售原因原因类型**" 属性旁边的复选框，将其名称`Sales Reason Type`更改为，然后单击 "**下一步**"。
+9. 在“选择维度属性”**** 页上，由于“销售原因键”**** 属性是键属性，因此它将自动处于选中状态。 选中 "**销售原因原因类型**" 属性旁边的复选框，将其名称更改为 `Sales Reason Type` ，然后单击 "**下一步**"。
 
 10. 在“完成向导”**** 页上，单击“完成”**** 创建“销售原因”维度。
 
-11. 在“文件” **** 菜单上，单击“全部保存” ****。
+11. 在“文件”菜单上，单击“全部保存” 。
 
 12. 在 "**销售原因**" 维度的 "维度设计器" 的 "**属性**" 窗格中，选择 "**销售原因键**"，然后将属性窗口中的 "**名称**" 属性更改为。`Sales Reason.`
 
-13. 在维度设计器的 "**层次结构**" 窗格中，以该顺序创建包含 " `Sales Reason Type`级别" 和 "**销售原因**" 级别的 "**销售原因**" 用户层次结构。
+13. 在维度设计器的 "**层次结构**" 窗格中，以该顺序创建包含 "级别" 和 "销售原因" 级别的 "**销售原因**" 用户层次结构 `Sales Reason Type` **Sales Reason** 。
 
-14. 在属性窗口中，将`All Sales Reasons`定义为 "销售原因" 层次结构的 " **AllMemberName** " 属性的值。
+14. 在属性窗口中，将定义 `All Sales Reasons` 为 "销售原因" 层次结构的 " **AllMemberName** " 属性的值。
 
-15. 将`All Sales Reasons`定义为 "销售原因" 维度的 " **AttributeAllMemberName** " 属性的值。
+15. `All Sales Reasons`将定义为 "销售原因" 维度的 " **AttributeAllMemberName** " 属性的值。
 
 16. 若要将新建的维度作为多维数据集维度添加到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 多维数据集，请切换到“多维数据集设计器”****。 在“多维数据集结构”**** 选项卡上，右键单击“维度”**** 窗格，并选择“添加多维数据集维度”****。
 
 17. 在“添加多维数据集维度”**** 对话框中，选择“销售原因”****，然后单击“确定”****。
 
-18. 在“文件” **** 菜单上，单击“全部保存” ****。
+18. 在“文件”菜单上，单击“全部保存” 。
 
 ## <a name="defining-the-many-to-many-relationship"></a>定义多对多关系
 
@@ -145,7 +144,7 @@ ms.locfileid: "78175286"
 
      !["定义关系" 对话框](../../2014/tutorials/media/l5-many-to-many-3.gif "“定义关系”对话框")
 
-5.  单击“确定”。 
+5.  单击“确定”。
 
      您将看到表示“销售原因”维度和“Internet 销售”度量值组之间关系的多对多图标。
 
@@ -161,7 +160,7 @@ ms.locfileid: "78175286"
 
 5.  在元数据窗格中，依次展开“客户”****、“位置”****、“客户所在地域”****、“成员”****、“所有客户”****、“澳大利亚”****，然后右键单击“Queensland”****，再单击“添加到筛选器”****。
 
-6.  展开`Sales Reason Type`级别的每个成员，以查看与 Queensland 中的客户为其通过 Internet 购买[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)]产品的每个原因相关联的美元值。
+6.  展开级别的每个成员 `Sales Reason Type` ，以查看与 Queensland 中的客户为其通过 Internet 购买产品的每个原因相关联的美元值 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 。
 
      您会看到与所有销售原因相关联的合计超过了销售总额。 这是因为某些客户为其采购陈述了多个原因。
 

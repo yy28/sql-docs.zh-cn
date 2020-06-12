@@ -1,5 +1,6 @@
 ---
 title: 从具有 sql 的 XML 文档中排除架构元素：已映射
+description: 了解如何使用 sql：映射批注在不映射到数据库表（视图）或列的 XSD 架构中创建元素。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -23,12 +24,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6cf2f3302d4e609975ebb993e5388cbd6561c2bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2753924d37734d0f3198949f9e75102ff6030744
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257445"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689396"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>使用 sql:mapped 从 XML 文档中排除架构元素
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,11 +43,11 @@ ms.locfileid: "75257445"
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. 指定 sql:mapped 批注  
- 假定您有来自其他源的 XSD 架构。 此 XSD 架构由一个** \<人员组成。请联系>** 元素与**ContactID**、 **FirstName**、 **LastName**和**HomeAddress**属性。  
+ 假定您有来自其他源的 XSD 架构。 此 XSD 架构由一个** \< 人员组成。请联系>** 元素**与 ContactID**、 **FirstName**、 **LastName**和**HomeAddress**属性。  
   
  在将此 XSD 架构映射到 AdventureWorks 数据库中的 Contact 表时，将在**HomeAddress**属性中指定**sql：** mapping，因为 employees 表不会存储员工的家庭地址。 因此，在针对映射架构指定 XPath 查询时，此属性不会映射到数据库，并且不会在生成的 XML 文档中返回此属性。  
   
- 为架构的其余部分进行默认映射。 Person>元素映射到 person 表，所有属性都映射到 person 表中具有相同名称的列。 ** \<**  
+ 为架构的其余部分进行默认映射。 ** \< Person>** 元素映射到 person 表，所有属性都映射到 person 表中具有相同名称的列。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

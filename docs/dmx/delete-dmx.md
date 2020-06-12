@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c1c75a6ff18b26bee65365acbc068de87678a9c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 600f3bc6d5ad4b9f7f67e15b894185123dccca8b
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070757"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669761"
 ---
 # <a name="delete-dmx"></a>DELETE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,22 +29,22 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
 ```  
   
 ## <a name="arguments"></a>参数  
- *模型*  
+ *model*  
  模型标识符。  
   
  *构造*  
  结构标识符。  
   
-## <a name="remarks"></a>备注  
- 如果未指定**挖掘模型**或**挖掘结构**， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]将根据名称搜索对象类型，并处理正确的对象。 如果服务器包含同名的挖掘结构和挖掘模型，将返回错误。  
+## <a name="remarks"></a>注解  
+ 如果未指定**挖掘模型**或**挖掘结构**，将根据 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 名称搜索对象类型，并处理正确的对象。 如果服务器包含同名的挖掘结构和挖掘模型，将返回错误。  
   
  下表说明了使用不同形式的语法所产生的结果。  
   
 |语句|结果|  
 |---------------|------------|  
-|从挖掘结构*\<结构中删除>*<br /><br /> 或<br /><br /> 从挖掘结构*\<结构>* 删除。CONTENT|对挖掘结构执行 ProcessClear。 从挖掘结构及其关联的挖掘模型中清除所有内容。|  
-|从挖掘结构*\<结构>* 删除。这|对挖掘结构执行 ProcessClearStructureOnly。 从挖掘结构中清除所有内容，但不改变与其关联的挖掘模型。 清除挖掘结构后，将无法钻取关联的挖掘模型。|  
-|从挖掘模型*\<模型中删除>*<br /><br /> 或<br /><br /> 从挖掘模型*\<模型>* 删除。CONTENT|对挖掘模型执行 ProcessClear，但保持状态值不变。 状态值是列的可能状态。 例如，性别列的状态值是男性和女性。|  
+|从挖掘结构结构中删除* \<>*<br /><br /> 或<br /><br /> 从挖掘结构* \< 结构>* 删除。CONTENT|对挖掘结构执行 ProcessClear。 从挖掘结构及其关联的挖掘模型中清除所有内容。|  
+|从挖掘结构* \< 结构>* 删除。这|对挖掘结构执行 ProcessClearStructureOnly。 从挖掘结构中清除所有内容，但不改变与其关联的挖掘模型。 清除挖掘结构后，将无法钻取关联的挖掘模型。|  
+|从挖掘模型模型中删除* \<>*<br /><br /> 或<br /><br /> 从挖掘模型* \< 模型>* 删除。CONTENT|对挖掘模型执行 ProcessClear，但保持状态值不变。 状态值是列的可能状态。 例如，性别列的状态值是男性和女性。|  
   
  有关处理类型的详细信息，请参阅[Type Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla)。  
   

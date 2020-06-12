@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d154477d-3e4b-4e9b-a306-8166a0d83d21
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41579af945bcf546eb2c32b5a337ba10bd59510a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ec2b1ec7c4f9a3dc0053ad323fcc54cf36522da
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070183"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547419"
 ---
 # <a name="result-pane-mining-model-prediction-view"></a>“结果”窗格（“挖掘模型预测”视图）
   **“结果”** 窗格显示在预测查询生成器的 **“设计”** 视图中设计的数据挖掘预测查询的结果。 您可以将结果网格中的所选内容或整个网格复制到剪贴板。  

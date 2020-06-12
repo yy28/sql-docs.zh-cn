@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02eb89db44e08daf7de5d89a932a097df277b961
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084419"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522474"
 ---
 # <a name="feature-selection-data-mining"></a>功能选择（数据挖掘）
   *功能选择*是数据挖掘中常用的一种术语，用于描述可用于将输入减少到可管理的大小以进行处理和分析的工具和技术。 功能选择不仅意味着*基数降低*，还意味着对在生成模型时可以考虑的属性数量施加任意或预定义的截止时间，同时也意味着选择属性，这意味着分析师或建模工具会根据分析的有用性主动选择或放弃属性。  
@@ -103,13 +102,13 @@ ms.locfileid: "66084419"
 ### <a name="feature-selection-methods-used-by-analysis-services-algorithms"></a>Analysis Services 算法使用的功能选择方法  
  下表列出了支持功能选择的算法、该算法所使用的功能选择方法以及设置用于控制功能选择行为的参数：  
   
-|算法|分析方法|说明|  
+|算法|分析方法|注释|  
 |---------------|------------------------|--------------|  
 |Naive Bayes|Shannon 平均信息量<br /><br /> Bayesian with K2 Prior<br /><br /> 使用统一先验的 Bayesian Dirichlet（默认）|Microsoft Naïve Bayes 算法仅接受离散或离散化的属性，因此它不能使用兴趣性分数。<br /><br /> 有关此算法的详细信息，请参阅 [Microsoft Naive Bayes Algorithm Technical Reference](microsoft-naive-bayes-algorithm-technical-reference.md)。|  
 |决策树|兴趣性分数<br /><br /> Shannon 平均信息量<br /><br /> Bayesian with K2 Prior<br /><br /> 使用统一先验的 Bayesian Dirichlet（默认）|如果任何列包含非二进制连续值，则兴趣性分数将用于所有列，以确保一致性。 否则，将使用默认的功能选择方法或者您在创建模型时指定的方法。<br /><br /> 有关此算法的详细信息，请参阅 [Microsoft Decision Trees Algorithm Technical Reference](microsoft-decision-trees-algorithm-technical-reference.md)。|  
 |神经网络|兴趣性分数<br /><br /> Shannon 平均信息量<br /><br /> Bayesian with K2 Prior<br /><br /> 使用统一先验的 Bayesian Dirichlet（默认）|只要数据包含连续列，Microsoft 神经网络算法就可同时使用基于平均信息量的方法和 Bayesian 方法。<br /><br /> 有关此算法的详细信息，请参阅 [Microsoft Neural Network Algorithm Technical Reference](microsoft-neural-network-algorithm-technical-reference.md)。|  
 |逻辑回归|兴趣性分数<br /><br /> Shannon 平均信息量<br /><br /> Bayesian with K2 Prior<br /><br /> 使用统一先验的 Bayesian Dirichlet（默认）|虽然 Microsoft 逻辑回归算法基于 Microsoft 神经网络算法，但您不能自定义逻辑回归模型以控制功能选择行为；因此，功能选择始终默认为最适合该属性的方法。<br /><br /> 如果所有属性均为离散或离散化属性，则默认值为 BDEU。<br /><br /> 有关此算法的详细信息，请参阅 [Microsoft Logistic Regression Algorithm Technical Reference](microsoft-logistic-regression-algorithm-technical-reference.md)。|  
-|聚类分析|兴趣性分数|Microsoft 聚类分析算法可以使用离散或离散化数据。 但是，每个属性的分数仍将作为距离进行计算并且表示为连续数字，因此必须使用兴趣性分数。<br /><br /> 有关此算法的详细信息，请参阅 [Microsoft Clustering Algorithm Technical Reference](microsoft-clustering-algorithm-technical-reference.md)。|  
+|群集|兴趣性分数|Microsoft 聚类分析算法可以使用离散或离散化数据。 但是，每个属性的分数仍将作为距离进行计算并且表示为连续数字，因此必须使用兴趣性分数。<br /><br /> 有关此算法的详细信息，请参阅 [Microsoft Clustering Algorithm Technical Reference](microsoft-clustering-algorithm-technical-reference.md)。|  
 |线性回归|兴趣性分数|因为仅支持连续列，Microsoft 线性回归性算法只能使用兴趣性分数。<br /><br /> 有关此算法的详细信息，请参阅 [Microsoft Linear Regression Algorithm Technical Reference](microsoft-linear-regression-algorithm-technical-reference.md)。|  
 |关联规则<br /><br /> 顺序分析和聚类分析|未使用|不使用这些算法调用功能选择。<br /><br /> 但在必要时，可以通过设置参数 MINIMUM_SUPPORT 和 MINIMUM_PROBABILIITY 的值来控制算法的行为和减小输入数据的大小。<br /><br /> 有关详细信息，请参阅 [Microsoft Association Algorithm Technical Reference](microsoft-association-algorithm-technical-reference.md) 和 [Microsoft Sequence Clustering Algorithm Technical Reference](microsoft-sequence-clustering-algorithm-technical-reference.md)。|  
 |时序|未使用|功能选择不适用于时序模型。<br /><br /> 有关此算法的详细信息，请参阅 [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)。|  

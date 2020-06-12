@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b383621408cc84a65e5f9c5adb711dd9f047be64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 699cc312b2f4b0a716d08259daf189276551e5d4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073206"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545765"
 ---
 # <a name="remote-processing-analysis-services"></a>远程处理 (Analysis Services)
   可在远程 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上运行计划处理或无人参与的处理，其中在一台计算机上发出处理请求，而在同一网络上的另一台计算机上执行该请求。  
@@ -48,7 +47,7 @@ ms.locfileid: "66073206"
   
  使用以下链接设置权限：  
   
--   [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)  
+-   [配置 SQL Server 代理](../../ssms/agent/configure-sql-server-agent.md)  
   
 -   如果不可能授予[SQL Server Agent Components](../../ssms/agent/sql-server-agent.md#Components) 权限，则 **SQL Server Agent Components** 建议另外的固定服务器角色。  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 63b035bd0ce315ccf1334c53e7ee1718c7569dac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 066969ef47dbe72732d7ee873f162a6a1e5915d5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073668"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546089"
 ---
 # <a name="measures-and-measure-groups"></a>度量值和度量值组
   多维数据集包括 *度量值组* 中的 *度量值*、业务逻辑和给出上下文用于计算度量值提供的数值数据的维度集合。 度量值和度量值组都是多维数据集的必备组件。 多维数据集不能缺少其中的任何一项。  
@@ -46,7 +45,7 @@ ms.locfileid: "66073668"
   
  每个多维数据集必须至少具有一个度量值，不过大多数都有很多个度量值，有时达到数百个。 从结构上来说，度量值通常映射到事实数据表中的源列，该列提供用于加载度量值的值。 或者，你还可以用 MDX 定义度量值。  
   
- 度量值与上下文相关，在上下文的数值数据上运行，该上下文由碰巧包含在查询中的任何维度成员确定。 例如，计算**分销商销售额**的度量值将由`Sum`运算符支持，并且将添加查询中包含的每个维度成员的销售额。 无论查询指定单个产品、 汇总到一个类别，还是按时间或地域进行切分，该度量值都应生成对查询中所含维度有效的操作。  
+ 度量值与上下文相关，在上下文的数值数据上运行，该上下文由碰巧包含在查询中的任何维度成员确定。 例如，计算**分销商销售额**的度量值将由 `Sum` 运算符支持，并且将添加查询中包含的每个维度成员的销售额。 无论查询指定单个产品、 汇总到一个类别，还是按时间或地域进行切分，该度量值都应生成对查询中所含维度有效的操作。  
   
  在此示例中，“分销商销售”沿“销售区域”层次结构聚合为各种级别********。  
   

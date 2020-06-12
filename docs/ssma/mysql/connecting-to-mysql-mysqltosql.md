@@ -1,5 +1,6 @@
 ---
 title: 连接到 MySQL （MySQLToSQL） |Microsoft Docs
+description: 了解如何连接到目标 iMySQL 数据库以迁移 MySQL 数据库。 SSMA 获取有关 Azure SQL 数据库中的数据库的元数据。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 6cb47c0f06d7133b8c7454a4fa538937a0e78e19
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d82a23735cde22773c693dce5f6e8dc86b9654b4
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103173"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293654"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>连接到 MySQL (MySQLToSQL)
 若要将 MySQL 数据库迁移到 SQL Server 或 SQL Azure，你必须连接到要迁移的 MySQL 数据库。 在连接时，SSMA 将获取有关所有 MySQL 架构的元数据，然后在 "MySQL 元数据资源管理器" 窗格中显示该架构。 SSMA 存储有关数据库服务器的信息，但不存储密码。  
@@ -108,9 +109,9 @@ ms.locfileid: "68103173"
   
     -   若要查看颜色编码的定义，请单击 "**图例**" 按钮。  
   
-5.  单击“确定”。   
+5.  单击“确定”。  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
 迁移过程的下一步是[连接到 SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
 ## <a name="see-also"></a>另请参阅  

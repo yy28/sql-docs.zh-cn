@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d7451c82261e23c75b748d4b1cde473191b7749
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f6b6ed2674d5f1d852b6281c6244af4f2f6ad3a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082752"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520314"
 ---
 # <a name="time-series-model-query-examples"></a>时序模型查询示例
   在创建针对数据挖掘模型的查询时，您既可以创建内容查询，也可创建预测查询；内容查询提供有关分析过程中发现的模式的详细信息，而预测查询则使用模型中的模式来对新数据进行预测。 例如，时序模型的内容查询可能提供有关检测到的周期性结构的其他详细信息，而预测查询可能给出接下来 5-10 个时间段的预测。 您还可以使用查询来检索有关模型的元数据。  
@@ -66,7 +65,7 @@ WHERE MODEL_NAME = '<model name>'
   
 |MINING_PARAMETERS|  
 |------------------------|  
-|COMPLEXITY_PENALTY = 0.1，MINIMUM_SUPPORT = 10，PERIODICITY_HINT ={1,3},..。。|  
+|COMPLEXITY_PENALTY = 0.1，MINIMUM_SUPPORT = 10，PERIODICITY_HINT = {1,3} ,..。。|  
   
  默认周期提示为 {1}，将出现在所有模型中；此示例模型是使用可能不在最终模型中出现的附加提示创建的。  
   
@@ -156,7 +155,7 @@ AND NODE_TYPE = 15
   
  例如，假定现有模型具有六个月积累的数据。 您想通过添加最近三个月的销售数字来扩展该模型。 同时，您还想对接下来三个月进行预测。 添加新数据时如果只想获得新的预测，则将起点指定为时间段 4，将终点指定为时间段 7。 您可能还要请求全部六个预测，但是，前三个预测的时间段会与刚添加的新数据重叠。  
   
- 有关使用`REPLACE_MODEL_CASES`和`EXTEND_MODEL_CASES`的语法的查询示例和详细信息，请参阅[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)。  
+ 有关使用和的语法的查询示例和详细信息 `REPLACE_MODEL_CASES` `EXTEND_MODEL_CASES` ，请参阅[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)。  
   
 ###  <a name="making-predictions-with-extend_model_cases"></a><a name="bkmk_EXTEND"></a> 使用 EXTEND_MODEL_CASES 进行预测  
  根据您是要扩展还是替换模型事例，预测行为会有所不同。 如果要扩展模型，新数据会附加到序列的末尾，并且定型集的大小会增加。 但是，用于预测查询的时间段始终从原始序列的末尾开始。 因此，如果您要添加三个新数据点并请求六个预测，返回的前三个预测将会与新数据重叠。 在这种情况下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会返回实际的新数据点，而不是进行预测，直到所有新数据点用完为止。 然后， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会根据组合序列进行预测。  
@@ -198,10 +197,10 @@ AND NODE_TYPE = 15
     > [!NOTE]  
     >  对于 REPLACE_MODEL_CASES，从时间戳 1 开始获取基于新数据的新预测，这会替换旧的定型数据。  
   
- 有关使用`REPLACE_MODEL_CASES`和`EXTEND_MODEL_CASES`的语法的查询示例和详细信息，请参阅[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)。  
+ 有关使用和的语法的查询示例和详细信息 `REPLACE_MODEL_CASES` `EXTEND_MODEL_CASES` ，请参阅[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)。  
   
 ###  <a name="missing-value-substitution-in-time-series-models"></a><a name="bkmk_MissingValues"></a>时序模型中缺少值替换  
- 在通过 `PREDICTION JOIN` 语句在时序模型中添加新数据时，新数据集不能有任何缺失值。 如果有任何序列不完整，则该模型必须使用 Null、数值平均值、特定数值平均值或预测值来替换缺失的值。 如果指定了 `EXTEND_MODEL_CASES`，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会将缺失值替换为基于原始模型的预测。 如果你使用`REPLACE_MODEL_CASES`， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]则会将缺失值替换为你在*MISSING_VALUE_SUBSTITUTION*参数中指定的值。  
+ 在通过 `PREDICTION JOIN` 语句在时序模型中添加新数据时，新数据集不能有任何缺失值。 如果有任何序列不完整，则该模型必须使用 Null、数值平均值、特定数值平均值或预测值来替换缺失的值。 如果指定了 `EXTEND_MODEL_CASES`，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会将缺失值替换为基于原始模型的预测。 如果你使用，则会将 `REPLACE_MODEL_CASES` [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 缺失值替换为你在*MISSING_VALUE_SUBSTITUTION*参数中指定的值。  
   
 ## <a name="list-of-prediction-functions"></a>预测函数的列表  
  所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法均支持一组通用的函数。 但 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法支持下表中列出的其他函数。  

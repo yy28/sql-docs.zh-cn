@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4ba391d5-c97b-4848-ba7c-7d096fa4b7dd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9458f2c1fb3d170bf1b4a2887acae94b55ed877e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a08f7fbccf1192f946043ebe932020d0fe5d3409
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175799"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537569"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>挖掘模型查看器（数据挖掘模型设计器）
   可以使用 **“挖掘模型查看器”** 选项卡浏览挖掘结构包含的挖掘模型。
@@ -31,7 +30,7 @@ ms.locfileid: "78175799"
 
  **挖掘模型** 选择一个包含在当前挖掘结构中的挖掘模型以进行查看。 挖掘模型将首先在其关联的自定义查看器中打开。
 
- **查看器** 选择用于浏览所选挖掘模型的查看器。 此列表包括为每个[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]挖掘模型提供的查看器、 [!INCLUDE[msCoName](../includes/msconame-md.md)]挖掘内容查看器以及所有插件查看器。
+ **查看器** 选择用于浏览所选挖掘模型的查看器。 此列表包括 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 为每个挖掘模型提供的查看器、 [!INCLUDE[msCoName](../includes/msconame-md.md)] 挖掘内容查看器以及所有插件查看器。
 
  下列关系图显示相同模型的自定义查看器和一般查看器。
 

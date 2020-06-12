@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 987eff0f-bcfe-4bbd-81e0-9aca993a2a75
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 23f35c8998b204182f25f85f8f7694fb60d042b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c29d27d38a72954b1471db21c199c0372cac4036
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087461"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527253"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>为 PowerPivot 数据刷新配置存储的凭据 (PowerPivot for SharePoint)
   只要您在 Secure Store Service 中创建一个目标应用程序来存储要使用的凭据，PowerPivot 数据刷新作业就可以在任何 Windows 用户帐户下运行。 同样，如果您想要提供的数据库登录名不同于最初用于导入 PowerPivot for Excel 中的数据的数据库登录名，则可以将这些凭据映射到 Secure Store Service 目标应用程序，然后在数据刷新计划中指定该目标应用程序。  
@@ -75,7 +74,7 @@ ms.locfileid: "66087461"
   
 8.  跳过“目标应用程序页 URL”。 PowerPivot 数据刷新不会使用它。  
   
-9. 单击“下一步”  。  
+9. 单击“下一步”。  
   
 10. 在 "**为安全存储目标应用程序指定凭据字段**" 页上，接受默认值。 字段名称和类型应该是 Windows 用户名和 Windows 密码。  
   
@@ -91,7 +90,7 @@ ms.locfileid: "66087461"
   
     3.  在数据刷新计划中添加将输入此目标应用程序的 Windows 用户和组帐户。  
   
-14. 单击" **确定**"。  
+14. 单击“确定”。  
   
 15. 选择刚创建的目标应用程序，单击向下箭头并选择 "**设置凭据"。**  
   
@@ -99,7 +98,7 @@ ms.locfileid: "66087461"
   
      在“Windows 用户名”和“Windows 密码”中，键入将用于运行数据刷新的 Windows 用户帐户的凭据。  
   
-17. 单击" **确定**"。  
+17. 单击“确定”。  
   
 ###  <a name="step-2-grant-contribute-permissions-to-the-account"></a><a name="bkmk_grant"></a>步骤2：向帐户授予 "参与讨论" 权限  
  在您可以使用存储的凭据之前，对于使用该帐户的任何 PowerPivot 工作簿，必须授予“参与讨论”权限。 此权限级别是从库中打开工作簿、然后在刷新数据后将其保存回库中所必需的。  
@@ -108,7 +107,7 @@ ms.locfileid: "66087461"
   
 1.  在 SharePoint 站点上的 "站点操作" 中，单击 "**网站权限**"。  
   
-2.  单击“授予权限”****。  
+2.  单击“授予权限”  。  
   
 3.  在“选择用户”中，键入您在目标应用程序中指定的 Windows 域用户帐户的名称。  
   
@@ -162,7 +161,7 @@ ms.locfileid: "66087461"
   
 8.  跳过“目标应用程序页 URL”。 PowerPivot 数据刷新不会使用它。  
   
-9. 单击“下一步”  。  
+9. 单击“下一步”。  
   
 10. 在 "**为安全存储目标应用程序指定凭据字段**" 页中，仅在数据源使用 Windows 身份验证时才接受默认值。 否则，选择对您的数据源有效的字段类型，然后编辑字段名称以便匹配您选择的类型。  
   
@@ -180,13 +179,13 @@ ms.locfileid: "66087461"
   
     3.  在数据刷新计划页的数据源部分中添加将输入此目标应用程序的 Windows 用户和组帐户。  
   
-14. 单击" **确定**"。  
+14. 单击“确定”。  
   
 15. 选择刚创建的目标应用程序，单击向下箭头并选择 "**设置凭据"。**  
   
 16. 输入将用于连接到数据源的凭据（例如，SQL Server 登录名的用户名和密码）。  
   
-17. 单击" **确定**"。  
+17. 单击“确定”。   
   
 ## <a name="see-also"></a>另请参阅  
  [计划数据刷新 &#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)   

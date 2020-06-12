@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fb9ca011cdbbe32ebd6c71cb9ca64967cfbccb9e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f21d1805eda75bfa0008214e2f46f54b67ab48f5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079309"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543592"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>第 1 课：创建新的表格模型项目
   在本课中，您将在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中创建一个新的空白表格模型项目。 创建新项目之后，您可以使用表导入向导开始添加数据。 除了创建新项目之外，本课还简要介绍了 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中的表格模型创作环境。  
@@ -35,20 +34,20 @@ ms.locfileid: "66079309"
   
 2.  在 "**新建项目**" 对话框的 "**已安装的模板**" 下，单击 "**商业智能**"，然后单击 " **Analysis Services**"，然后单击 " **Analysis Services 表格项目**"。  
   
-3.  在 "**名称**" `AW Internet Sales Tabular Model`中，键入，然后指定项目文件的位置。  
+3.  在 "**名称**" 中，键入 `AW Internet Sales Tabular Model` ，然后指定项目文件的位置。  
   
      默认情况下，“解决方案名称”与项目名称相同；但是，可以键入不同的解决方案名称。****  
   
-4.  单击" **确定**"。  
+4.  单击“确定”。  
   
 ## <a name="understanding-the-sql-server-data-tools-tabular-model-authoring-environment"></a>了解 SQL Server Data Tools 表格模型创作环境  
- 创建新的表格模型项目后，让我们花点时间来了解（Visual Studio 2010 或更高版本） [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中的表格模型创作环境。  
+ 创建新的表格模型项目后，让我们花点时间来了解 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] （Visual Studio 2010 或更高版本）中的表格模型创作环境。  
   
- 创建了项目后，该项目将在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中打开。 空模型将出现在模型设计器中，并且将在“解决方案资源管理器”**** 窗口中选中“Model.bim”**** 文件。 当您添加数据时，表和列将出现在设计器中。 如果看不到设计器（具有 model.bim 选项卡的空窗口），请在**解决方案资源管理器** `AW Internet Sales Tabular Model`中，双击 " **model.bim** " 文件。  
+ 创建了项目后，该项目将在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中打开。 空模型将出现在模型设计器中，并且将在“解决方案资源管理器”**** 窗口中选中“Model.bim”**** 文件。 当您添加数据时，表和列将出现在设计器中。 如果看不到设计器（具有 model.bim 选项卡的空窗口），请在**解决方案资源管理器**中， `AW Internet Sales Tabular Model` 双击 " **model.bim** " 文件。  
   
- 可以在“属性”**** 窗口中查看基本项目属性。 在**解决方案资源管理器**中， `AW Internet Sales Tabular Model`单击 ""。 请注意，在“属性”**** 窗口的“项目文件”**** 中，将看到“AW Internet Sales Tabular Model.smproj”****。 这是项目文件名称，并且在“项目文件夹”**** 中，将看到项目文件位置。  
+ 可以在“属性”**** 窗口中查看基本项目属性。 在**解决方案资源管理器**中，单击 "" `AW Internet Sales Tabular Model` 。 请注意，在“属性”**** 窗口的“项目文件”**** 中，将看到“AW Internet Sales Tabular Model.smproj”****。 这是项目文件名称，并且在“项目文件夹”**** 中，将看到项目文件位置。  
   
- 在**解决方案资源管理器**中，右键单击该`AW Internet Sales Tabular Model`项目，然后单击 "**属性**"。 “AW Internet Sales Tabular Model Property Pages”**** 对话框将出现。 这是一些高级项目属性。 稍后，当您准备好部署模型时，将设置其中一些属性。  
+ 在**解决方案资源管理器**中，右键单击该 `AW Internet Sales Tabular Model` 项目，然后单击 "**属性**"。 “AW Internet Sales Tabular Model Property Pages”**** 对话框将出现。 这是一些高级项目属性。 稍后，当您准备好部署模型时，将设置其中一些属性。  
   
  现在，让我们看看模型属性。 在“解决方案资源管理器”**** 中，单击“Model.bim”****。 在“属性”**** 窗口中，现在将看到模型属性，其中最重要的是“DirectQuery 模式”**** 属性。 此属性指定模型是否在内存中模式（关闭）或 DirectQuery 模式（打开）下部署。 本教程会在内存中模式下创作并部署模型。  
   

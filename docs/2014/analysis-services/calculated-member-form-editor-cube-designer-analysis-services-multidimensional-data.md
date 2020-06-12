@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f7719b9e-b1e6-4792-90a6-30d9d8eb1196
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 432300f54a7678970f394b27712bcb28ba8a7e7d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35c9ee36bf30b18859fa3ded540e607a48d0beb9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088370"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527654"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>计算成员窗体编辑器（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“计算”** 选项卡上的 **“计算成员窗体编辑器”** 窗格创建或修改计算成员。  
@@ -65,7 +64,7 @@ ms.locfileid: "66088370"
  选择用于为计算成员解析 MDX 中的 NON EMPTY 查询的度量值名称。 如果 **“非空行为”** 属性为空白，则必须对计算成员进行反复计算以确定成员是否为空。 如果 **“非空行为”** 属性包含度量值的名称，则在指定的度量值为空的情况下将计算成员视为空。  
   
 > [!WARNING]  
->  不推荐使用此属性。 避免将其设置。 有关详细信息，请参阅[SQL Server 2014 中不推荐使用的 Analysis Services 功能](deprecated-analysis-services-features-in-sql-server-2014.md)。  
+>  此属性已弃用。 避免将其设置。 有关详细信息，请参阅[SQL Server 2014 中不推荐使用的 Analysis Services 功能](deprecated-analysis-services-features-in-sql-server-2014.md)。  
   
  **颜色表达式**  
  展开此项可以查看“前景色”和“背景色”选项********。  
@@ -94,7 +93,7 @@ ms.locfileid: "66088370"
   
  单击字体选择按钮可显示 **“字体”** 对话框，使用该对话框可以向 MDX 表达式中插入指定字体的属性值。 有关属性值的详细信息，请参阅[创建和使用属性值 (MDX)](creating-and-using-property-values-mdx.md)。  
   
- **字号**  
+ **字体大小**  
  键入提供计算成员所用字体大小的 MDX 表达式。  
   
  将所选元素从 **“计算工具”** 窗格拖至此选项中，可包含所选元素的 MDX 语法。  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 42b78399-143d-4f44-90e0-b545ffb79e10
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c065e36dd20646312d04379ea61b96d37a47a262
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91ebeb4d4e357c8c56ad1c9b26e123a49d78875b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081487"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528473"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>“钻取”对话框（挖掘模型查看器）
   在使用数据挖掘设计器的 **“挖掘模型查看器”** 选项卡查看挖掘模型时，可以钻取到有关事例数据的详细信息（假定模型已启用钻取功能）。 而且，如果基础挖掘结构已启用钻取功能，则还可以查看挖掘结构中的列，即使挖掘模型中没有包含这些列也是如此。 在列列表中，结构列的前缀为标签 “Structure”。  
@@ -36,7 +35,7 @@ ms.locfileid: "66081487"
   
  **注意** 仅当对挖掘结构启用了钻取功能并且选中选项 **“模型和结构列”** 时才会显示结构列。 此外，您还必须具有对要查看列的挖掘模型和挖掘结构的钻取权限。  
   
- 未包含在模型中的结构列显示为 "**结构"\< 。列名称>**。  
+ 未包含在模型中的结构列显示为 "**结构" \<column name> 。**  
   
 > [!NOTE]  
 >  可在列网格中右键单击任意位置，并选择“全部复制”****，以将钻取数据以制表符分隔的格式复制到剪贴板。 复制的数据只包含事例数据，而不包含节点定义。  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 54445ee7-720c-4683-99a6-e75b3dcca904
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 27b143a9cc5c888c6e464d300d2ccfea114ef9bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2f5455b71306b3dd75406f107e5c1e971f6b923b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80380678"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544999"
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>在 Analysis Services 中使用 XMLA 开发
   XML for Analysis (XMLA) 是一种基于 SOAP 的 XML 协议，它专门设计用于可通过 HTTP 连接访问的任何标准多维数据源的通用数据访问。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用 XMLA 作为与客户端应用程序通信的唯一协议。 从根本上说，Analysis Services 支持的所有客户端库都可以采用 XMLA 来表示请求和响应。  
@@ -41,16 +40,16 @@ ms.locfileid: "80380678"
 |[&#40;XMLA&#41;管理事务](managing-transactions-xmla.md)|详细说明如何使用[BeginTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/begintransaction-element-xmla)、 [CommitTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/committransaction-element-xmla)和[RollbackTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/rollbacktransaction-element-xmla)命令在当前 XMLA 会话上显式定义和管理事务。|  
 |[&#41;XMLA &#40;取消命令](../multidimensional-models-scripting-language-assl-xmla/canceling-commands-xmla.md)|介绍如何使用[cancel](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla)命令取消 XMLA 中的命令、会话和连接。|  
 |[&#40;XMLA&#41;执行批处理操作](performing-batch-operations-xmla.md)|介绍如何使用[Batch](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla)命令以串行或并行方式在同一事务中或使用单个 xmla [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)方法运行多个 xmla 命令。|  
-|[&#40;XMLA&#41;创建和更改对象](creating-and-altering-objects-xmla.md)|描述如何使用[Create](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)、 [Alter](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla)和[Delete](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/delete-element-xmla)命令以及 Analysis Services 脚本语言（ASSL）元素来定义、更改或删除[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例中的对象。|  
-|[&#40;XMLA&#41;锁定和解锁数据库](locking-and-unlocking-databases-xmla.md)|详细说明如何使用[lock](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla)和[unlock](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla)命令锁定和解锁[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库。|  
-|[处理对象 (XMLA)](processing-objects-xmla.md)|介绍如何使用[process](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla)命令处理[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象。|  
-|[&#40;XMLA&#41;合并分区](merging-partitions-xmla.md)|介绍如何使用[MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla)命令合并[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例上的分区。|  
-|[&#40;XMLA&#41;设计聚合](designing-aggregations-xmla.md)|介绍如何使用迭代或批处理模式下的[DesignAggregations](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/designaggregations-element-xmla)命令在中[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]设计聚合设计的聚合。|  
-|[备份、还原和同步数据库 (XMLA)](backing-up-restoring-and-synchronizing-databases-xmla.md)|描述如何使用[备份](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla)和[还原](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/restore-element-xmla)命令来备份和还原备份文件中的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库。<br /><br /> 还介绍了如何使用[synchronize](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)命令将[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库与同一实例或不同实例上的现有数据库同步。|  
+|[&#40;XMLA&#41;创建和更改对象](creating-and-altering-objects-xmla.md)|描述如何使用[Create](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)、 [Alter](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla)和[Delete](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/delete-element-xmla)命令以及 Analysis Services 脚本语言（ASSL）元素来定义、更改或删除实例中的对象 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。|  
+|[&#40;XMLA&#41;锁定和解锁数据库](locking-and-unlocking-databases-xmla.md)|详细说明如何使用[lock](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla)和[unlock](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla)命令锁定和解锁 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。|  
+|[处理对象 (XMLA)](processing-objects-xmla.md)|介绍如何使用[process](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla)命令处理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象。|  
+|[&#40;XMLA&#41;合并分区](merging-partitions-xmla.md)|介绍如何使用[MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla)命令合并实例上的分区 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。|  
+|[&#40;XMLA&#41;设计聚合](designing-aggregations-xmla.md)|介绍如何使用迭代或批处理模式下的[DesignAggregations](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/designaggregations-element-xmla)命令在中设计聚合设计的聚合 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。|  
+|[备份、还原和同步数据库 (XMLA)](backing-up-restoring-and-synchronizing-databases-xmla.md)|描述如何使用[备份](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla)和[还原](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/restore-element-xmla)命令来备份和还原 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 备份文件中的数据库。<br /><br /> 还介绍了如何使用[synchronize](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)命令将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库与同一实例或不同实例上的现有数据库同步。|  
 |[&#40;XMLA 中插入、更新和删除成员&#41;](inserting-updating-and-dropping-members-xmla.md)|介绍如何使用[Insert](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla)、 [Update](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)和[Drop](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla)命令添加、更改或删除启用了写操作的维度中的成员。|  
 |[&#40;XMLA&#41;更新单元](updating-cells-xmla.md)|介绍如何使用[UpdateCells](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/updatecells-element-xmla)命令更改启用了写操作的分区中的单元值。|  
-|[&#40;XMLA 中管理缓存&#41;](managing-caches-xmla.md)|详细说明如何使用[ClearCache](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/clearcache-element-xmla)命令清除[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象的缓存。|  
-|[监视跟踪 &#40;XMLA&#41;](monitoring-traces-xmla.md)|介绍如何使用 "[订阅](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla)" 命令订阅和监视[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例上的现有跟踪。|  
+|[&#40;XMLA 中管理缓存&#41;](managing-caches-xmla.md)|详细说明如何使用[ClearCache](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/clearcache-element-xmla)命令清除对象的缓存 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。|  
+|[监视跟踪 &#40;XMLA&#41;](monitoring-traces-xmla.md)|介绍如何使用 "[订阅](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla)" 命令订阅和监视实例上的现有跟踪 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。|  
   
 ## <a name="data-mining-with-xmla"></a>使用 XMLA 进行数据挖掘  
  XML for Analysis 完全支持数据挖掘架构行集。 这些行集提供使用[发现](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)方法查询数据挖掘模型的信息。 有关数据挖掘架构行集的详细信息，请参阅[数据挖掘架构行集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
@@ -60,7 +59,7 @@ ms.locfileid: "80380678"
 ## <a name="namespace-and-schema"></a>命名空间和架构  
   
 ### <a name="namespace"></a>命名空间  
- 在此规范中定义的架构使用 XML 命名`https://schemas.microsoft.com/AnalysisServices/2003/Engine`空间和标准缩写 "DDL"。  
+ 在此规范中定义的架构使用 XML 命名空间 `https://schemas.microsoft.com/AnalysisServices/2003/Engine` 和标准缩写 "DDL"。  
   
 ### <a name="schema"></a>架构  
  用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象定义语言的 XML 架构定义语言 (XSD) 架构的定义基于本节中架构元素和层次结构的定义。  

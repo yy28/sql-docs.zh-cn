@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0a561b348b30afcbfe5305681f56e4f8314fa510
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e3f47b6cfe97806f093ee4ac1c9c8574056042d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072853"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547349"
 ---
 # <a name="synchronize-analysis-services-databases"></a>同步 Analysis Services 数据库
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括一个数据同步功能，该功能通过将数据和元数据从源服务器上的数据库复制到目标服务器上的数据库，使两个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库等同。 使用“同步数据库”功能可完成以下任务之一：  
@@ -129,7 +128,7 @@ ms.locfileid: "66072853"
   
      选择 **“位置”** 选项将显示一个网格，其中列出了源数据库的远程分区所在存储位置的详细信息，包括可以从所选数据库中获取的源信息、目标信息和每个位置所使用的存储大小。 该网格包含以下列：  
   
-     **同步**  
+     **Sync**  
      选择此项将在同步期间包括包含远程分区的位置。  
   
     > [!NOTE]  

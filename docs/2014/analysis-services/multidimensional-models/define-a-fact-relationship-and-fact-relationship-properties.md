@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d8e41724-da77-4ac1-bc42-956b5d91ea5d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 471a65cb8f7560b409e6ddf8f73969d83d42a346
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15f67a4bdf699bbc6443fc76ce54bcfb35831827
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075786"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547089"
 ---
 # <a name="define-a-fact-relationship-and-fact-relationship-properties"></a>定义事实关系和事实关系属性
   在定义新的多维数据集维度或新的度量值组时，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将试图检测是否存在事实维度关系，然后将维度用法设置为 `Fact`。 您可以在多维数据集设计器的 **“维度用法”** 选项卡中查看或编辑事实维度关系。 维度与度量值组之间的事实关系具有以下约束：  

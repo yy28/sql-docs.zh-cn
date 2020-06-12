@@ -1,7 +1,7 @@
 ---
 title: sys.databases （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 02/11/2020
+ms.date: 06/08/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0cc6509f3bdd5a7ca64dc739bf4db24dc96c709
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 05901a97ea85deb6f45b5ee440d0eefaac1c8fd6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828173"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529368"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 
@@ -37,11 +37,11 @@ ms.locfileid: "82828173"
   
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|数据库名称，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中或在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 服务器中是唯一的。|  
+|name|**sysname**|数据库名称，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中或在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 服务器中是唯一的。|  
 |**database_id**|**int**|数据库的 ID，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中或在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 服务器中是唯一的。|  
 |**source_database_id**|**int**|Non-NULL = 该数据库快照的源数据库 ID。<br /> NULL = 非数据库快照。|  
 |**owner_sid**|**varbinary （85）**|注册到服务器的数据库外部所有者的 SID（安全标识符）。 有关谁可以拥有数据库的信息，请参阅[ALTER authorization](../../t-sql/statements/alter-authorization-transact-sql.md)中的**alter authorization for** database 部分。|  
-|**create_date**|**datetime**|数据库的创建或重命名日期。 对于**tempdb**，每次服务器重启时，此值都会发生更改。|  
+|create_date|**datetime**|数据库的创建或重命名日期。 对于**tempdb**，每次服务器重启时，此值都会发生更改。|  
 |**compatibility_level**|**tinyint**|对应于兼容行为的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的整数：<br /> **值**&#124;**适用**于<br /> 70 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /> 80 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /> 90 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /> 100 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 110 &#124; [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 120 &#124; [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 及更高版本和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 130 &#124; [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本<br /> 140 &#124; [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 及更高版本 <br /> 150 &#124;[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]  |  
 |**collation_name**|**sysname**|数据库的排序规则。 作为数据库中的默认排序规则。<br /> NULL = 数据库不处于联机状态，或者 AUTO_CLOSE 设置为 ON 且数据库已关闭。|  
 |**user_access**|**tinyint**|用户访问设置：<br /> 0 = 已指定 MULTI_USER<br /> 1 = 已指定 SINGLE_USER<br /> 2 = 已指定 RESTRICTED_USER|  
@@ -82,7 +82,7 @@ ms.locfileid: "82828173"
 |**is_parameterization_forced**|**bit**|1 = 参数化为 FORCED<br /> 0 = 参数化为 SIMPLE|  
 |**is_master_key_encrypted_by_server**|**bit**|1 = 数据库具有加密的主密钥<br /> 0 = 数据库没有加密的主密钥|  
 |**is_query_store_on**|**bit**|1 = 为此数据库启用查询存储。 查看[sys.databases database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)以查看查询存储状态。<br /> 0 = 未启用查询存储<br /> **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本）。|  
-|**is_published**|**bit**|1 = 数据库为事务复制拓扑或快照复制拓扑中的发布数据库<br /> 0 = 不是发布数据库|  
+|is_published|**bit**|1 = 数据库为事务复制拓扑或快照复制拓扑中的发布数据库<br /> 0 = 不是发布数据库|  
 |**is_subscribed**|**bit**|未使用此列。 它将始终返回 0，而与数据库的订阅服务器状态无关。|  
 |**is_merge_published**|**bit**|1 = 数据库为合并复制拓扑中的发布数据库<br /> 0 = 不是合并复制拓扑中的发布数据库|  
 |**is_distributor**|**bit**|1 = 数据库为复制拓扑的分发数据库<br /> 0 = 不是复制拓扑的分发数据库|  
@@ -93,8 +93,8 @@ ms.locfileid: "82828173"
 |**log_reuse_wait_desc**|**nvarchar(60)**|日志空间的重复使用正在等待最后一个检查点的描述。|  
 |**is_date_correlation_on**|**bit**|1 = DATE_CORRELATION_OPTIMIZATION 为 ON<br /> 0 = DATE_CORRELATION_OPTIMIZATION 为 OFF|  
 |**is_cdc_enabled**|**bit**|1 = 对数据库启用变更数据捕获。 有关详细信息，请参阅[sys.databases&#41;sp_cdc_enable_db &#40;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)。|  
-|**is_encrypted**|**bit**|指示是否对数据库进行加密（反映上次使用子句设置的状态 `ALTER DATABASE SET ENCRYPTION` ）。 可以是以下其中一个值：<br /> 1 = 已加密<br /> 0 = 未加密<br /> 有关数据库加密的详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。<br /> 如果数据库正处于解密过程中，将 `is_encrypted` 显示值0。 您可以使用[sys. dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)动态管理视图来查看加密过程的状态。|  
-|**is_honor_broker_priority_on**|**bit**|指示数据库是否接受会话优先级（反映使用子句最后设置的状态 `ALTER DATABASE SET HONOR_BROKER_PRIORITY` ）。 可以是以下其中一个值：<br /> 1 = HONOR_BROKER_PRIORITY 为 ON<br /> 0 = HONOR_BROKER_PRIORITY 为 OFF<br /> 默认情况下，还原的数据库或附加的数据库的 broker 优先级为 off。|  
+|**is_encrypted**|**bit**|指示是否对数据库进行加密（反映上次使用子句设置的状态 `ALTER DATABASE SET ENCRYPTION` ）。 可以是以下值之一：<br /> 1 = 已加密<br /> 0 = 未加密<br /> 有关数据库加密的详细信息，请参阅[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)。<br /> 如果数据库正处于解密过程中，将 `is_encrypted` 显示值0。 您可以使用[sys. dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)动态管理视图来查看加密过程的状态。|  
+|**is_honor_broker_priority_on**|**bit**|指示数据库是否接受会话优先级（反映使用子句最后设置的状态 `ALTER DATABASE SET HONOR_BROKER_PRIORITY` ）。 可以是以下值之一：<br /> 1 = HONOR_BROKER_PRIORITY 为 ON<br /> 0 = HONOR_BROKER_PRIORITY 为 OFF<br /> 默认情况下，还原的数据库或附加的数据库的 broker 优先级为 off。|  
 |**replica_id**|**uniqueidentifier**|数据库参与的可用性组（如果有）的本地 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]可用性副本的唯一标识符。<br /> NULL = 数据库不是可用性组中的可用性副本的一部分。<br /> **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**group_database_id**|**uniqueidentifier**|数据库参与到 Always On 可用性组（如果有）内的数据库的唯一标识符。 对于主副本上的此数据库以及已将数据库联接到可用性组的每个辅助副本， **group_database_id**都是相同的。<br /> NULL = 数据库不是任何可用性组中的可用性副本的一部分。<br /> **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**resource_pool_id**|**int**|映射到此数据库的资源池的 ID。 此资源池控制对该数据库中的内存优化表可用的总内存。<br /> **适用**于： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更高版本|  
@@ -102,9 +102,9 @@ ms.locfileid: "82828173"
 |**default_language_name**|**nvarchar(128)**|指示包含数据库的默认语言。<br /> 对于非包含数据库，此值为**null** 。<br /> **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**default_fulltext_language_lcid**|**int**|指示包含数据库的默认全文语言的区域设置 id （lcid）。<br /> **注意：** 函数作为默认的默认[全文语言服务器配置选项](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md) `sp_configure` 。 对于非包含数据库，此值为**null** 。<br /> **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**default_fulltext_language_name**|**nvarchar(128)**|指示包含数据库的默认全文语言。<br /> 对于非包含数据库，此值为**null** 。<br /> **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|**is_nested_triggers_on**|**bit**|指示包含数据库中是否允许使用嵌套触发器。<br /> 0 = 不允许使用嵌套触发器<br /> 1 = 允许使用嵌套触发器<br /> **注意：** 作为的[配置嵌套触发器服务器配置选项](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md) `sp_configure` 。 对于非包含数据库，此值为**null** 。 有关详细信息，请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 。<br /> **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|**is_transform_noise_words_on**|**bit**|指示是否应在包含数据库中转换干扰词。<br /> 0 = 不应转换干扰词。<br /> 1 = 应转换干扰词。<br /> **注意：** 作为的[转换干扰词服务器配置选项](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md) `sp_configure` 。 对于非包含数据库，此值为**null** 。 有关详细信息，请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 。<br /> **适用**于： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本|  
-|**two_digit_year_cutoff**|**smallint**|指示 1753 到 9999 之间的数字值，以表示将两位数的年份解释为四位数的年份的截止年份。<br /> **注意：** 作为 "[配置两位数年份截止" 服务器配置选项](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)的功能 `sp_configure` 。 对于非包含数据库，此值为**null** 。 有关详细信息，请参阅[sys.databases &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 。<br /> **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**is_nested_triggers_on**|**bit**|指示包含数据库中是否允许使用嵌套触发器。<br /> 0 = 不允许使用嵌套触发器<br /> 1 = 允许使用嵌套触发器<br /> **注意：** 作为的[配置嵌套触发器服务器配置选项](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md) `sp_configure` 。 对于非包含数据库，此值为**null** 。 有关详细信息，请参阅[sys.configurations &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 。<br /> **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**is_transform_noise_words_on**|**bit**|指示是否应在包含数据库中转换干扰词。<br /> 0 = 不应转换干扰词。<br /> 1 = 应转换干扰词。<br /> **注意：** 作为的[转换干扰词服务器配置选项](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md) `sp_configure` 。 对于非包含数据库，此值为**null** 。 有关详细信息，请参阅[sys.configurations &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 。<br /> **适用**于： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本|  
+|**two_digit_year_cutoff**|**smallint**|指示 1753 到 9999 之间的数字值，以表示将两位数的年份解释为四位数的年份的截止年份。<br /> **注意：** 作为 "[配置两位数年份截止" 服务器配置选项](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)的功能 `sp_configure` 。 对于非包含数据库，此值为**null** 。 有关详细信息，请参阅[sys.configurations &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 。<br /> **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**包含**|**tinyint not null**|指示数据库的包含状态。<br />  0 = 数据库包含状态为 OFF。 **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 1 = 数据库在部分包容中**适用**于： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本|  
 |**containment_desc**|**nvarchar （60） not null**|指示数据库的包含状态。<br /> NONE = 早期数据库（零包含）<br /> PARTIAL = 部分包含的数据库<br /> **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**target_recovery_time_in_seconds**|**int**|恢复数据库的估计时间（秒）。 可以为 NULL。<br /> **适用于**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更高版本）和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
@@ -117,8 +117,9 @@ ms.locfileid: "82828173"
 |**is_temporal_retention_enabled**|**bit**|指示是否启用时态保留策略清理任务。<br /> 适用于  ：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|目录排序规则设置：<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> 适用于  ：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|目录排序规则设置：<br />COLLATE<br />SQL_Latin_1_General_CP1_CI_AS<br /> 适用于  ：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
+|**physical_database_name**|**nvarchar(128)**|对于 SQL Server，则为数据库的物理名称。 对于 Azure SQL 数据库，为服务器上数据库的一个通用 id。 <br />**适用**于： SQL Server 2019 （）及更高版本以及 Azure SQL 数据库|
 |**is_result_set_caching_on**|**bit**|1 = is_result_set_caching_on 为 on</br>0 = is_result_set_caching_on 为 off</br>**适用**于： Azure SQL 数据仓库 Gen2。 虽然此功能已推出到所有区域，但请查看部署到实例的版本，以及最新的[AZURE SQL DW 发行说明](/azure/sql-data-warehouse/release-notes-10-0-10106-0)，了解功能可用性。|
-|**is_memory_optimized_enabled**|**bit**|指示是否为数据库启用了某些内存中功能（如[混合缓冲池](../../database-engine/configure-windows/hybrid-buffer-pool.md)）。 不反映[内存中 OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)的可用性或配置状态。 <br />**适用于**： SQL Server 2019 （）|
+|**is_memory_optimized_enabled**|**bit**|指示是否为数据库启用了某些内存中功能（如[混合缓冲池](../../database-engine/configure-windows/hybrid-buffer-pool.md)）。 不反映[内存中 OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)的可用性或配置状态。 <br />**适用**于： SQL Server 2019 （）及更高版本以及 Azure SQL 数据库|
   
 ## <a name="permissions"></a>权限
 

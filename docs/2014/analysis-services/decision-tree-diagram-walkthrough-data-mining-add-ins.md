@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9566f6a2-c750-4125-ba5e-42c7251a78c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef951825144f381ab37a83526ec96321fe43cfec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 755a7f9c8708664dbb3a65c223873cf1dd4e20c8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082281"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528863"
 ---
 # <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>决策树关系图演练（数据挖掘外接程序）
   如果您已创建决策树模型，则可以使用决策树形状或依赖关系网络形状在 Visio 创建自定义关系图。 本主题介绍使用**决策树**形状和这些控件可以执行的自定义：  
@@ -40,13 +39,13 @@ ms.locfileid: "66082281"
   
 1.  如果在 "**形状**" 列表中看不到 " **Microsoft 数据挖掘形状**"，请单击 "**更多形状**"，选择 "**打开模具**"，然后从默认安装位置打开模板。  
   
-     \<驱动器>： \Program files （x85） \Microsoft SQL Server 2012 DM 外接程序  
+     \<drive>： \Program files （x85） \Microsoft SQL Server 2012 DM 外接程序  
   
 2.  将**决策树**形状拖到页面上。  
   
 3.  在**决策树 Visio 形状向导**的 "欢迎" 页上，单击 "**下一步**"。  
   
-4.  在**群集向导**的 "**选择数据源**" 页上，选择与要可视化的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]模型的服务器之间的连接。  
+4.  在**群集向导**的 "**选择数据源**" 页上，选择与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 要可视化的模型的服务器之间的连接。  
   
 5.  选择适当的挖掘模型，然后单击 "**下一步**"。  
   

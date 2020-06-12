@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 579ca818-f33d-4060-906d-c8bfee93bf99
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6a6c5cb8c8ca0492edf9798f972b458054ae5b58
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c02d57e8d24e625dc0613f25d97765c9ae018803
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075741"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547039"
 ---
 # <a name="define-cube-attribute-properties"></a>定义多维数据集特性属性
   通过使用多维数据集特性属性，您可以为基于同一数据库维度的多维数据集维度中的维度特性指定唯一的设置。 下表介绍了多维数据集特性的属性。  

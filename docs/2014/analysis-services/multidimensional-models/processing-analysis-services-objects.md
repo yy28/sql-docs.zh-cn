@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9d83baaecbfdba3612acbdcf7a80c9093aac519
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f67384dc44710cc71ae30b8a558746410171dcbb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073292"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545805"
 ---
 # <a name="processing-analysis-services-objects"></a>处理 Analysis Services 对象
-  处理会影响以下[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]对象类型： [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库、多维数据集、维度、度量值组、分区、数据挖掘结构和模型。 对于每个对象，可以指定对象的处理级别，也可以指定“处理默认值”选项以允许 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自动选择最优的处理级别。 有关每个对象的不同处理等级的详细信息，请参阅[处理选项和设置 (Analysis Services)](processing-options-and-settings-analysis-services.md)。  
+  处理会影响以下 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象类型： [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库、多维数据集、维度、度量值组、分区、数据挖掘结构和模型。 对于每个对象，可以指定对象的处理级别，也可以指定“处理默认值”选项以允许 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自动选择最优的处理级别。 有关每个对象的不同处理等级的详细信息，请参阅[处理选项和设置 (Analysis Services)](processing-options-and-settings-analysis-services.md)。  
   
  应注意处理行为的后果以减少负面影响。 例如，完全处理某个维度会将所有依赖于此维度的分区自动设置为未处理状态。 这将使受影响的多维数据集在依赖分区得到处理之前变得无法查询。  
   
@@ -54,11 +53,11 @@ ms.locfileid: "66073292"
 ##  <a name="processing-a-dimension"></a><a name="bkmk_procdim"></a> 处理维度  
  处理维度时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 依照维度表编写和运行查询以返回处理所需的信息。  
   
-|国家/地区|销售区域|State|  
+|国家/地区|销售区域|状态|  
 |-------------|------------------|-----------|  
-|United States|West|California|  
-|United States|West|Oregon|  
-|United States|West|Washington|  
+|美国|West|California|  
+|美国|West|Oregon|  
+|美国|West|Washington|  
   
  处理操作本身可将表格格式数据转换为可用的层次结构。 这些层次结构使用非常清楚的成员名称，内部采用唯一的数字路径表示。 以下示例是层次结构的一个文本表示形式。  
   

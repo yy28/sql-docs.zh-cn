@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f28b9b22-3dc7-4a45-b4eb-2d023f2c94b8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: caa3b6f49ce778b78f066abf687a3a51b61cc487
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 184c998bb4bd27d077cca78e792a7e7712f87666
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075819"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547049"
 ---
 # <a name="define-assignments-and-other-script-commands"></a>定义赋值和其他脚本命令
   在多维数据集设计器的“计算”**** 选项卡上，单击工具栏中的“新建脚本命令”**** 图标以创建空脚本。 创建新脚本时，该脚本最初在 "计算" 选项卡的 "**脚本组织**程序" 窗格中显示为空白。您在 "计算表达式" 窗格中键入的字符将在 "**脚本组织**程序" 中显示为项的名称。 因此，您可能要在第一行中键入被注释的名称，以更方便地标识 **“脚本组织程序”** 窗格中的脚本。 有关详细信息，请参阅 [对 Microsoft SQL Server 2005 中的 MDX 脚本编写的介绍](https://go.microsoft.com/fwlink/?LinkId=81892)。 有关与 MDX 查询和计算相关的性能问题的详细信息，请参阅[SQL Server 2005 Analysis Services 性能指南](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide)中的 "编写有效的 MDX" 一节。  

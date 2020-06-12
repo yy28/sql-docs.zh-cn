@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 96ffa6445d46f1e68efa907330d0945a499bf3b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b930734fa70578d10e107bc3d1e8d865f9e7e2d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079142"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543529"
 ---
 # <a name="lesson-14-deploy"></a>第 14 课：部署
   在本课中，您将配置部署属性；同时指定在表格模式下运行的 Analysis Services 的部署服务器实例以及为您要部署的模型指定名称。 然后，将模型部署到该实例。 部署此模型之后，用户可以使用报表客户端应用程序连接到该模型。 若要了解详细信息，请参阅[表格模型解决方案部署（SSAS 表格）](tabular-models/tabular-model-solution-deployment-ssas-tabular.md)。  
@@ -41,9 +40,9 @@ ms.locfileid: "66079142"
     > [!NOTE]  
     >  在 DirectQuery 模式下，不支持使用本教程创建的模型。  
   
-4.  在 "**数据库**" 属性中`Adventure Works Internet Sales Model`，键入。  
+4.  在 "**数据库**" 属性中，键入 `Adventure Works Internet Sales Model` 。  
   
-5.  在 "**多维数据集**名称" `Adventure Works Internet Sales Model`属性中，键入。  
+5.  在 "**多维数据集**名称" 属性中，键入 `Adventure Works Internet Sales Model` 。  
   
 6.  验证你的选择，并单击“确定”。****  
   
@@ -53,8 +52,8 @@ ms.locfileid: "66079142"
   
      “部署”对话框将出现，并且显示模型中包括的元数据和每个表的部署状态。  
   
-## <a name="conclusion"></a>结束语  
- 祝贺你！ 您已完成了创作和部署第一个 Analysis Services 表格模型的过程。 本教程已帮助指导您完成了创建表格模型的最常见任务。 既然已部署了 Adventure Works Internet Sales Model，就可以使用 SQL Server Management Studio 来管理此模型、创建进程脚本和备份计划。 用户可以使用报表客户端应用程序（如 Microsoft Excel 或 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]）连接到此模型。  
+## <a name="conclusion"></a>结论  
+ 恭喜！ 您已完成了创作和部署第一个 Analysis Services 表格模型的过程。 本教程已帮助指导您完成了创建表格模型的最常见任务。 既然已部署了 Adventure Works Internet Sales Model，就可以使用 SQL Server Management Studio 来管理此模型、创建进程脚本和备份计划。 用户可以使用报表客户端应用程序（如 Microsoft Excel 或 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]）连接到此模型。  
   
 ## <a name="additional-resources"></a>其他资源  
  若要了解有关支持 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 报表的表格模型属性的详细信息，请参阅 [Power View 报表属性（SSAS 表格）](tabular-models/properties-ssas-tabular.md)。  

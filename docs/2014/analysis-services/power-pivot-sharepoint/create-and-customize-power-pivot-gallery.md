@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a912bab0c43764c0c09844fd26ca66a708b3c495
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d75636280033ff0dcedfc3c281939a2484a4cac0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175666"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540609"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>创建和自定义 PowerPivot 库
   PowerPivot 库是一种特殊类型的 SharePoint 文档库，它为包含 PowerPivot 数据的已发布 Excel 工作簿和 Reporting Services 报表提供丰富的预览和文档管理功能。
 
-##  <a name="in-this-topic"></a><a name="bkmk_top"></a>本主题中的
+##  <a name="in-this-topic"></a><a name="bkmk_top"></a> 在本主题中
 
 -   [先决条件](#prereq)
 
@@ -34,7 +33,7 @@ ms.locfileid: "78175666"
 
 -   [切换到影院视图或图库视图](#switch)
 
-##  <a name="prerequisites"></a><a name="prereq"></a>先决条件
+##  <a name="prerequisites"></a><a name="prereq"></a> 先决条件
 
 -   您必须具有 Silverlight。 可以通过 Microsoft 更新来下载和安装 Silverlight。 如果使用不具备 Silverlight 的浏览器查看“ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库”库，则单击该页上的链接可以安装它。 安装后，必须关闭再重新打开浏览器。
 
@@ -73,11 +72,11 @@ ms.locfileid: "78175666"
 
     2.  单击 **“添加应用程序”**。
 
-    3.  单击 **“PowerPivot 库”**。
+    3.  单击 **“PowerPivot 库”** 。
 
 2.  为库键入名称。 务必要包含描述性信息，以帮助用户将此库识别为 PowerPivot 工作簿和 Reporting Services 报表的丰富预览。
 
-3.  单击“创建”。 
+3.  单击“创建”。
 
 4.  请场或服务管理员将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库添加为 Excel Services 的可信位置。 如果用户为 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据刷新配置工作簿，则为了避免出现错误，必须执行此步骤。 有关此任务的详细信息，请参阅[在管理中心中为 PowerPivot 站点创建受信任的位置](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。
 
@@ -113,7 +112,7 @@ ms.locfileid: "78175666"
 
 6.  在“项目限制”中，指定对包含大量文档的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库有用的选项。 您可以限制列表中显示的实际项数，或分批显示项。
 
-7.  单击 **“确定”** 以保存你的更改。
+7.   单击“确定”以保存你的更改。
 
 ####  <a name="disable-or-hide-the-refresh-button"></a><a name="bkmk_hide_refresh_button"></a>禁用或隐藏 "刷新" 按钮
  您不能隐藏 **“管理数据刷新”** 按钮。 但是，如果用户没有足够权限，将禁用该按钮。
@@ -131,7 +130,7 @@ ms.locfileid: "78175666"
 
  下表介绍了使用不同的布局来显示每个预览网页的缩略图草图：
 
-|查看|说明|
+|视图|说明|
 |----------|-----------------|
 |图库视图（默认）|图库视图是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库的默认视图。 预览显示在左侧。 每个工作表的更小缩略图按从左至右的顺序显示在预览旁边。|
 |所有文档|这是文档库的标准布局。 您可以选择此视图，以管理单独的文档或以列表格式查看库内容。<br /><br /> 使用此视图可以编辑属性、删除或移动各个文档。<br /><br /> 如果您启用了版本控制，您必须使用此视图向库中签入文档或从库中签出文档。|

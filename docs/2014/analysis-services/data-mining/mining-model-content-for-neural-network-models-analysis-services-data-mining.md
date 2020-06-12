@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7e19dfcdc284f048cffbb3a95e076b6e3a57294d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2de6fad32057abdbebab86b880c4edb23b1440e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083587"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521403"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>神经网络模型的挖掘模型内容（Analysis Services - 数据挖掘）
   本主题介绍使用 Microsoft 神经网络算法的模型特有的挖掘模型内容。 有关如何解释所有模型类型共享的统计信息和结构，以及与挖掘模型内容相关的常规术语定义的说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
@@ -66,15 +65,15 @@ ms.locfileid: "66083587"
  ATTRIBUTE_NAME  
  与此节点对应的属性的名称。  
   
-|节点|内容|  
+|节点|Content|  
 |----------|-------------|  
-|模型根|空白|  
-|边际统计信息|空白|  
-|输入层|空白|  
+|模型根|空|  
+|边际统计信息|空|  
+|输入层|空|  
 |输入节点|输入属性名称|  
-|隐藏层|空白|  
-|隐藏节点|空白|  
-|输出层|空白|  
+|隐藏层|空|  
+|隐藏节点|空|  
+|输出层|空|  
 |输出节点|输出属性名称|  
   
  NODE_NAME  
@@ -106,7 +105,7 @@ ms.locfileid: "66083587"
  CHILDREN_CARDINALITY  
  对节点所具有的子节点数的估计。  
   
-|节点|内容|  
+|节点|Content|  
 |----------|-------------|  
 |模型根|指示子节点的计数，其中至少包括 1 个网络，1 个必需边际节点和 1 个必需输入层。 例如，如果值为 5，则具有 3 个子网。|  
 |边际统计信息|始终为 0。|  
@@ -125,29 +124,29 @@ ms.locfileid: "66083587"
  NODE_DESCRIPTION  
  节点的用户友好说明。  
   
-|节点|内容|  
+|节点|Content|  
 |----------|-------------|  
-|模型根|空白|  
-|边际统计信息|空白|  
-|输入层|空白|  
+|模型根|空|  
+|边际统计信息|空|  
+|输入层|空|  
 |输入节点|输入属性名称|  
-|隐藏层|空白|  
+|隐藏层|空|  
 |隐藏节点|指示该隐藏节点在隐藏节点列表中的顺序的整数。|  
-|输出层|空白|  
+|输出层|空|  
 |输出节点|如果输出属性是连续的，则包含输出属性的名称。<br /><br /> 如果输出属性是离散或离散化属性，则包含属性的名称和值。|  
   
  NODE_RULE  
  嵌入节点的规则的 XML 说明。  
   
-|节点|内容|  
+|节点|Content|  
 |----------|-------------|  
-|模型根|空白|  
-|边际统计信息|空白|  
-|输入层|空白|  
+|模型根|空|  
+|边际统计信息|空|  
+|输入层|空|  
 |输入节点|包含与 NODE_DESCRIPTION 列相同的信息的 XML 片段。|  
-|隐藏层|空白|  
+|隐藏层|空|  
 |隐藏节点|指示该隐藏节点在隐藏节点列表中的顺序的整数。|  
-|输出层|空白|  
+|输出层|空|  
 |输出节点|包含与 NODE_DESCRIPTION 列相同的信息的 XML 片段。|  
   
  MARGINAL_RULE  
@@ -171,15 +170,15 @@ ms.locfileid: "66083587"
  若要获取定型事例中对特定值的支持信息，请参阅边际统计信息节点。  
   
  MSOLAP_MODEL_COLUMN  
- |节点|内容|  
+ |节点|Content|  
 |----------|-------------|  
-|模型根|空白|  
-|边际统计信息|空白|  
-|输入层|空白|  
+|模型根|空|  
+|边际统计信息|空|  
+|输入层|空|  
 |输入节点|输入属性名称。|  
-|隐藏层|空白|  
-|隐藏节点|空白|  
-|输出层|空白|  
+|隐藏层|空|  
+|隐藏节点|空|  
+|输出层|空|  
 |输出节点|输入属性名称。|  
   
  MSOLAP_NODE_SCORE  
@@ -188,7 +187,7 @@ ms.locfileid: "66083587"
  MSOLAP_NODE_SHORT_CAPTION  
  对于神经网络模型，始终为空白。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  定型神经网络模型的目的是确定与从输入到中点、再从中点到终结点的每个转换关联的权重。 因此，该模型的输入层的主要存在目的是存储用于生成该模型的实际值。 隐藏层存储计算的权重，并提供回指到输入属性的指针。 输出层存储可预测值，并提供回指到隐藏层的中点的指针。  
   
 ##  <a name="using-node-names-and-ids"></a><a name="bkmk_NodeIDs"></a>使用节点名称和 Id  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f1674e2e-d38e-40c7-b8d1-5585ce9a0168
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 66f0d74a3ced6b803249afb93eac85f2681eca6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d083611d7a72164cf2ad7cf63663cfadb0d77a51
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078094"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541889"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>“提升图”选项卡（“挖掘准确性图表”视图）
   可以使用 **“提升图”** 窗格，查看比较所选挖掘结构中的所有选定挖掘模型的图表。  

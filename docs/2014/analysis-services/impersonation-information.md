@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 42319d60-ccd0-46b8-af0b-f0968c390d8a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9314494230469cca5e8db9926ddf71cb790b96ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd1a2952c54974d924fdeca23d3173a690579d2b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080646"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544239"
 ---
 # <a name="impersonation-information"></a>模拟信息
   使用 **“模拟信息”** 页可以指定 Analysis Services 将用于连接到数据源的凭据。  
@@ -27,7 +26,7 @@ ms.locfileid: "66080646"
  **用户名**  
  键入所选 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象将使用的用户帐户的域和名称。 使用以下格式：  
   
- **\\** * \<域名* *>\<用户帐户名>*  
+ *\<Domain name>* **\\** *\<User account name>*  
   
  只有选定了 **“使用特定名称和密码”** ，才启用此选项。  
   

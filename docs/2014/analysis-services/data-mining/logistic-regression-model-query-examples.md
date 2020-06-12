@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d156a8f015a45ca257bf4f988cf69d229eafe5f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d432d38794e65e8b8bea69608479e330649ee395
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084231"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522223"
 ---
 # <a name="logistic-regression-model-query-examples"></a>逻辑回归模型查询示例
   在对数据挖掘模型创建查询时，可以创建内容查询，也可以创建预测查询。内容查询提供有关分析时发现的模式的详细信息，预测查询使用模型中的模式来应用新数据进行预测。  
@@ -145,7 +144,7 @@ NATURAL PREDICTION JOIN
   
 ##### <a name="to-create-a-discretized-version-of-the-call-center-mining-structure-and-models"></a>创建 Call Center 挖掘结构和模型的离散化版本  
   
-1.  在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的解决方案资源管理器中，展开 "**挖掘结构**"。  
+1.  在的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 解决方案资源管理器中，展开 "**挖掘结构**"。  
   
 2.  右键单击 Call Center.dmm 并选择****“复制”。  
   
@@ -157,7 +156,7 @@ NATURAL PREDICTION JOIN
   
 6.  在“挖掘结构”选项卡中，右键单击 Service Grade 对应的列，然后选择“属性”。********  
   
-7.  将属性`Content`从 "**连续**" 更改为 "**离散**化"。 将属性`DiscretizationMethod`更改为 "**分类**"。 对于 Discretization BucketCount，键入 **3**。  
+7.  将 `Content` 属性从 "**连续**" 更改为 "**离散**化"。 将 `DiscretizationMethod` 属性更改为 "**分类**"。 对于 Discretization BucketCount，键入 **3**。  
   
     > [!NOTE]  
     >  这些参数仅用于演示过程，不一定生成有效模型。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 554ea10e-b0b0-4987-add8-19113d824787
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6618a7c5023f140fdaee0b512c797c01586c62ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3739728631ae0273150c010600f099623bb98c2a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082341"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528885"
 ---
 # <a name="define-a-new-attribute-manually"></a>手动定义新属性
   此过程介绍如何使用维度设计器中的 "**属性**" 窗格在维度中创建新属性。  
@@ -31,7 +30,7 @@ ms.locfileid: "66082341"
   
      右键单击 "**属性**" 窗格，指向 "**在中显示属性**"，然后单击 "**网格**"。  
   
-3.  滚动到网格的最后一行，然后单击** \<"新建属性">**。  
+3.  滚动到网格的最后一行，然后单击 "下一步" **\<new attribute>** 。  
   
 4.  键入属性的名称以设置 `Name` 属性，然后按 Enter 键。  
   

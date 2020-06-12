@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 225fd818-b5ea-494f-b67b-66e09798274a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 33d20da736308b4436c40a50b8b01da7445663c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 546448bd05f3af45b7093acb2dbb9d1e1a8f1bd5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081459"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528493"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>钻取操作窗体编辑器（“操作”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“操作”** 选项卡上的 **“钻取操作窗体编辑器”** 窗格，修改在 **“操作组织程序”** 窗格中选择的钻取操作。 有关钻取操作的详细信息，请参阅[操作（Analysis Services - 多维数据）](multidimensional-models/actions-analysis-services-multidimensional-data.md)。  
@@ -56,10 +55,10 @@ ms.locfileid: "66081459"
  **附加属性**  
  展开可查看“默认值”、“最大行数”、“调用”、“应用程序”、“说明”、“标题”和“标题是 MDX”选项。****************************  
   
- **缺省值**  
+ **默认**  
  若要将此钻取操作设置为默认的钻取操作，请选择 **True** ，否则选择 **False**。  
   
- 如果从`RETURN`客户端应用程序所执行`DRILLTHROUGH`的 MDX 语句中省略子句，则[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例将评估所有默认钻取操作并运行返回非空集的第一个默认钻取操作。 有关 MDX `DRILLTHROUGH`语句的详细信息，请参阅[钻取语句 &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-drillthrough)。  
+ 如果 `RETURN` 从 `DRILLTHROUGH` 客户端应用程序所执行的 MDX 语句中省略子句，则 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例将评估所有默认钻取操作并运行返回非空集的第一个默认钻取操作。 有关 MDX 语句的详细信息 `DRILLTHROUGH` ，请参阅[钻取语句 &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-drillthrough)。  
   
 > [!NOTE]  
 >  使用此选项只是为了向后兼容。  
@@ -75,10 +74,10 @@ ms.locfileid: "66081459"
   
  下表对可用的设置进行了说明：  
   
-|Value|描述|  
+|值|说明|  
 |-----------|-----------------|  
 |Batch|该操作将作为批处理操作或 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 任务的一部分运行。|  
-|Interactive (交互)|在用户调用该操作时运行。|  
+|交互|在用户调用该操作时运行。|  
 |处于打开状态|第一次打开多维数据集时运行该操作。|  
   
  **应用程序**  

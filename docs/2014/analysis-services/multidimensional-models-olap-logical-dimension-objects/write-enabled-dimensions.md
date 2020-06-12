@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 0bac050d-cd3b-427b-884a-65a91be89500
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f76ba993508807e57e73d5e53ea25a4cbe382529
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f8f0f1c959d44b4d3e133e5676e9aca9365a628d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727433"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545087"
 ---
 # <a name="write-enabled-dimensions"></a>启用写操作的维度
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
- 维度中的数据通常为只读数据。 但在某些情况下，可能需要为维度启用写操作。 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，允许业务用户修改维度内容并查看对维度层次结构所做的更改的即时影响。 基于单个表的任何维度均可启用写操作。 在启用写操作的维度中，业务用户和管理员都可以更改、移动、添加和删除维度中的属性成员。 这些更新统称为*维度写回*。  
+ 维度中的数据通常为只读数据。 但在某些情况下，可能需要为维度启用写操作。 在中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，允许业务用户修改维度内容并查看对维度层次结构所做的更改的即时影响。 基于单个表的任何维度均可启用写操作。 在启用写操作的维度中，业务用户和管理员都可以更改、移动、添加和删除维度中的属性成员。 这些更新统称为*维度写回*。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持对所有维度属性的维度写回，维度的任何成员均可修改。 对于启用写操作的多维数据集或分区，更新存储在独立于多维数据集的源表的写回表中。 不过，对于启用写操作的维度，更新直接记录在维度的表中。 同样，如果启用写操作的维度包括在具有多个分区的多维数据集中（其中，某些数据源或所有数据源具有维度表的副本），则在写回过程中只更新原始维度表。  
   

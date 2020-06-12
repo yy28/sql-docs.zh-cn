@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 590383cd-30b3-4e3f-a1cf-3f9ec7ba48e3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f406885d607827c4ed29102164c6fe89ea621508
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f98a69e87c21d48e42627e4fe95df0d41196c41f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082618"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520175"
 ---
 # <a name="data-sample-viewer-dialog-box-analysis-services---multidimensional-data"></a>“数据示例查看器”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “数据示例查看器” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，查看用于为新多维数据集提供度量值的事实数据表的前 1000 条记录。  

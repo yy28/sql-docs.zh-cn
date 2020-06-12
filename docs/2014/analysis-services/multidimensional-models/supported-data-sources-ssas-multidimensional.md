@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5a8cdeb912d1ead21571f1ec7f86e15b0d009514
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e750e286d7a58bee8c6979515fe163119175d529
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072859"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547331"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>支持的数据源（SSAS 多维）
   本主题介绍可以在多维模型中使用的数据源的类型。  
@@ -46,9 +45,9 @@ ms.locfileid: "66072859"
   
  <sup>1</sup>多维解决方案不支持 ODBC 数据源。 尽管 Analysis Services 可自行处理连接，但 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中用于生成解决方案的设计器不能连接到 ODBC 数据源，即使在使用 MSDASQL 驱动程序时也是如此。 如果您的业务需求包括 ODBC 数据源，请考虑改为生成表格解决方案。  
   
- <sup>2</sup>有关详细信息，请[!INCLUDE[ssSDS](../../includes/sssds-md.md)]参阅[azure.microsoft.com](https://go.microsoft.com/fwlink/?LinkID=157856)上的。  
+ <sup>2</sup>有关详细信息，请参阅 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] [azure.microsoft.com](https://go.microsoft.com/fwlink/?LinkID=157856)上的。  
   
- <sup>3</sup>有关[!INCLUDE[ssSDS](../../includes/sssds-md.md)] PDW 的详细信息，请参阅[SQL Server 并行数据仓库](https://go.microsoft.com/fwlink/?LinkId=150895)。  
+ <sup>3</sup>有关 PDW 的详细信息 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，请参阅[SQL Server 并行数据仓库](https://go.microsoft.com/fwlink/?LinkId=150895)。  
   
  <sup>4</sup>在某些情况下，使用 MSDAORA OLE DB 提供程序可能会导致连接错误，特别是在较新版本的 Oracle 上。 如果您遇到任何错误，我们建议您使用为 Oracle 列出的其他访问接口之一。  
   

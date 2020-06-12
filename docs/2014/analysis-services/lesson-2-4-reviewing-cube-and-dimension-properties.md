@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dda922b8-6d75-4662-b09e-8a317c6a1c70
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c95d241d136f290110ac8a2b72540011a3922e24
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e30096bcd23f517e640903b0c9036633ad5427d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079002"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543499"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>检查多维数据集和维度属性
   在定义多维数据集后，可以使用多维数据集设计器检查结果。 在下面的任务中，您将检查 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目中多维数据集的结构。  
@@ -52,7 +51,7 @@ ms.locfileid: "66079002"
   
 9. 在解决方案资源管理器中，右键单击“多维数据集”**** 节点中的“Analysis Services 教程”****，然后单击“查看代码”****。 您可能需要等待。  
   
-     教程多维数据集的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] XML 代码显示在 "教程" 的** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] "多维数据集 [XML]** " 选项卡上。这是在部署[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]期间在实例中创建多维数据集所用的实际代码。 有关详细信息，请参阅[查看 Analysis Services 项目的 XML (SSDT)](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md)。  
+     教程 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集的 XML 代码显示在 "教程" 的 " ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集 [XML]** " 选项卡上。这是在部署期间在实例中创建多维数据集所用的实际代码 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 有关详细信息，请参阅[查看 Analysis Services 项目的 XML (SSDT)](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md)。  
   
 10. 关闭 XML 代码选项卡。  
   

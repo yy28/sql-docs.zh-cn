@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 69f306df-8038-463f-91c3-5413503246c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7662514939526bd8cdc12d19e5b53e3a4a2f913d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33f77ae9b70046ff8391c7a260519d618e3ad43f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62732032"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528636"
 ---
 # <a name="ole-db-for-data-mining"></a>OLE DB for Data Mining
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的数据挖掘功能符合2000年[!INCLUDE[msCoName](../../includes/msconame-md.md)] 6 月发布的数据挖掘1.0 规范的 OLE DB。  
+  中的数据挖掘功能 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 符合 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2000 年6月发布的数据挖掘1.0 规范的 OLE DB。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 扩展了该规范，包括添加新的架构行集、在现有架构行集中添加列以及向数据挖掘扩展插件 (DMX) 语言添加用于创建和管理挖掘结构的语法。  
   

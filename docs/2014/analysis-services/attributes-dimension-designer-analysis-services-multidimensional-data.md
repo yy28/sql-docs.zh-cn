@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 627eaa08-7638-4edd-bdfa-0d8175a7cde5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9eab7de49abaf06446fbd03f7b80c381d102f20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c5e1d6b92dce1a1be42ae1bc30ae3a3d5e48d59
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064403"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527843"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>属性（“维度结构”选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用此窗格管理与所选维度关联的属性。 可以将属性从此窗格拖到 **“层次结构”** 窗格，以创建层次结构和级别。 有关详细信息，请参阅[层次结构 &#40;维度结构 "选项卡、维度设计器&#41; &#40;Analysis Services 多维数据&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)。  
@@ -55,14 +54,14 @@ ms.locfileid: "66064403"
  **使用情况**  
  设置所选属性的用法。 单击下箭头可以从下列选项中进行选择：  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |常规|标识常规属性。|  
-|键|标识维度的键属性。 此项对应于维度的叶成员。 每个维度只能有一个键属性。 若要修改此项，请在“属性”**** 窗格中单击“KeyColumns”**** 属性旁边的省略号按钮 (**...**)。|  
+|密钥|标识维度的键属性。 此项对应于维度的叶成员。 每个维度只能有一个键属性。 若要修改此项，请在“属性”**** 窗格中单击“KeyColumns”**** 属性旁边的省略号按钮 (**...**)。|  
 |Parent|表示父子关系中的父属性。 此关系中的子属性必须始终为键属性。|  
 |AccountType|表示帐户类型属性。 当度量值的聚合函数设置为“by account”时，服务器或引擎将使用此项。|  
   
- **类型**  
+ 类型  
  设置属性的类型。 单击下箭头可以从可用的选项中进行选择。  
   
  **键列**  

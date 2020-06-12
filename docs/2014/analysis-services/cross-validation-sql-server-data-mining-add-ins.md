@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf9483b3-4099-41c4-bbc5-da7005e07bcd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0cc3a132792cca8ecdf5a33a2fe4e4d40116c497
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65a6c852200c72fb9040cf5e93efbac02bb065b3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086653"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526333"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>交叉验证（SQL Server 数据挖掘外接程序）
   ![“数据挖掘”功能区中的“交叉验证”按钮](media/dmc-xvalid.gif "“数据挖掘”功能区中的“交叉验证”按钮")  
@@ -62,7 +61,7 @@ ms.locfileid: "66086653"
   
      如果可预测列包含连续数值数据，则此选项不可用。  
   
-8.  单击“完成”  。 将创建一个名为 "**交叉验证**" 的新工作表。  
+8.  单击“完成”。 将创建一个名为 "**交叉验证**" 的新工作表。  
   
     > [!NOTE]  
     >  在将模型分区到折叠中并对每个折叠进行测试时，Microsoft Excel 可能会暂时停止响应。  
@@ -75,7 +74,7 @@ ms.locfileid: "66086653"
  如果您选择同时支持聚类分析模型和其他类型模型的结构，则不会对聚类分析模型进行测试。  
   
 ## <a name="understanding-cross-validation-results"></a>了解交叉验证结果  
- 交叉验证的结果显示在一个新的工作表中，其中标题**为 "属性名称\<>" 的交叉验证报表**。 新工作表包括多个部分：第一部分是一个摘要，提供有关已测试模型的重要元数据，以便您了解这些结果分别属于哪个模型或结构。  
+ 交叉验证的结果显示在一个新的工作表中，标题为**的 \<attribute name> 交叉验证报表**。 新工作表包括多个部分：第一部分是一个摘要，提供有关已测试模型的重要元数据，以便您了解这些结果分别属于哪个模型或结构。  
   
  报表中的第二部分提供一个统计信息摘要，指示原始模型的有效程度。 在此摘要中，将分析为每个折叠创建的模型之间的差异，其中包含三个关键度量值：*根本平均方形错误*、*平均绝对错误*和*日志分数*。 这些是标准的统计度量值，不仅用于数据挖掘，还用在大多数类型的统计分析中。  
   

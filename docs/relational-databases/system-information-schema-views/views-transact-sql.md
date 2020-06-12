@@ -19,12 +19,12 @@ ms.assetid: 6119bc94-0b22-45d4-a34b-967afd810a9d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4e2a969450c2ec4593c7daec1b9c9b203b18410
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a24df8a9c4c85e94259f663b8319d1145a15b565
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078357"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670301"
 ---
 # <a name="views-transact-sql"></a>VIEWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68078357"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar （** 128 **）**|视图限定符。|  
-|**TABLE_SCHEMA**|**nvarchar （** 128 **）**|包含该视图的架构名称。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 不要使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠方法是查询 sys.databases 目录视图。|  
+|**TABLE_SCHEMA**|**nvarchar （** 128 **）**|包含该视图的架构名称。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 只是查找对象架构的可靠方法是查询 sys.databases 目录视图。|  
 |**TABLE_NAME**|**nvarchar （** 128 **）**|视图名。|  
 |**VIEW_DEFINITION**|**nvarchar （** 4000 **）**|如果定义的长度大于**nvarchar （** 4000 **）**，则此列为 NULL。 否则，该列是视图定义文本。|  
 |**CHECK_OPTION**|**varchar （** 7 **）**|WITH CHECK OPTION 的类型。 如果最初的视图是使用 WITH CHECK OPTION 创建的，那么就为 CASCADE。 否则，返回 NONE。|  

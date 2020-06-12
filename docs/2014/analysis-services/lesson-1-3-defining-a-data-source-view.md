@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: af00938a-5a06-4fae-b2fc-f3fb0ca3cea5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 939186d48f7dd8a0cc33b24778bf8948f9938a70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b1810eb23a8d0d0541606cb69197b8030463748
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079275"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543629"
 ---
 # <a name="defining-a-data-source-view"></a>定义数据源视图
   定义了将在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目中使用的数据源后，下一步通常是定义项目的数据源视图。 数据源视图是元数据的单个统一视图，这些元数据来自数据源在项目中定义的指定表和视图。 通过在数据源视图中存储元数据，可以在开发过程中使用元数据，而无需打开与任何基础数据源的连接。 有关详细信息，请参阅 [多维模型中的数据源视图](multidimensional-models/data-source-views-in-multidimensional-models.md)。  
@@ -26,9 +25,9 @@ ms.locfileid: "66079275"
   
 1.  在解决方案资源管理器中（在 Microsoft Visual Studio 窗口的右侧），右键单击“数据源视图”****，然后单击“新建数据源视图”****。  
   
-2.  在“欢迎使用数据源视图向导”**** 页上，单击“下一步”****。 此时将显示“选择数据源”**** 页。  
+2.  在“欢迎使用数据源视图向导”  页上，单击“下一步” 。 此时将显示“选择数据源”**** 页。  
   
-3.  已选中“关系数据源”**** 下的 **Adventure Works DW 2012** 数据源。 单击“下一步”  。  
+3.  已选中“关系数据源”**** 下的 **Adventure Works DW 2012** 数据源。 单击“下一步”。  
   
     > [!NOTE]  
     >  若要创建一个基于多个数据源的数据源视图，必须先定义一个基于单一数据源的数据源视图。 此数据源将被称为主数据源。 随后，可以添加来自辅助数据源的表和视图。 在基于多个数据源中的相关表设计包含属性的维度时，可能需要将 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据源定义为主数据源，以使用其分布式查询引擎功能。  
@@ -50,7 +49,7 @@ ms.locfileid: "66079275"
   
     -   **FactInternetSales (dbo)**  
   
-5.  单击**>** 此选项可将所选表添加到 "**包含的对象**" 列表。  
+5.  单击此 **>** 选项可将所选表添加到 "**包含的对象**" 列表。  
   
 6.  单击“下一步”。  
   

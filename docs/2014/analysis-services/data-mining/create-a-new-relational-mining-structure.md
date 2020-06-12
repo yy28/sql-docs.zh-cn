@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 55bac3bd-700e-4f91-bcc6-f3cd8c026da1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b4ec4bc871723b829d9ce9ec805d4b52b1c649e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 534b27d024feb521be133329c7fe0aef06d9814a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085386"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523873"
 ---
 # <a name="create-a-new-relational-mining-structure"></a>创建新的关系挖掘结构
-  使用数据挖掘向导可以使用关系数据库或其他源中的数据创建新的挖掘结构，然后将该结构和任何相关模型保存到[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库中。  
+  使用数据挖掘向导可以使用关系数据库或其他源中的数据创建新的挖掘结构，然后将该结构和任何相关模型保存到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中。  
   
 ### <a name="to-create-a-relational-mining-structure"></a>创建关系挖掘结构  
   
@@ -48,14 +47,14 @@ ms.locfileid: "66085386"
   
      选择可预测列后，可以单击 **“建议”** 按钮以打开 **“提供相关列建议”** 对话框。 在该对话框中，单击 **“确定”** 可以接受建议的列，以将所选列包含到挖掘结构中；也可以在 **“输入”** 列中先更改选择的列，再单击 **“确定”**。 若要忽略建议，请单击 **“取消”**。  
   
-8.  单击“下一步”  。  
+8.  单击“下一步”。  
   
 9. 在 **“指定列的内容和数据类型”** 页的 **“挖掘模型结构”** 下，可以调整每列的内容类型和数据类型。  
   
     > [!NOTE]  
     >  您可以单击 **“检测”** 以自动检测列包含的是连续数据还是离散数据。 单击该按钮后，系统即会更新 **“内容类型”** 和 **“数据类型”** 两列中的列内容类型和数据类型。 有关内容类型和数据类型的详细信息，请参阅[内容类型（数据挖掘）](content-types-data-mining.md)和[数据类型（数据挖掘）](data-types-data-mining.md)。  
   
-10. 单击“下一步”  。  
+10. 单击“下一步”。  
   
 11. 在 **“完成向导”** 页中，为将要创建的挖掘结构和相关的初始挖掘模型提供一个名称，再单击 **“完成”**。  
   

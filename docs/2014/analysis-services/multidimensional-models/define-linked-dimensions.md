@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ca4b3c0b2f2a6c63e62a44499d6e33e651ca9bae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c120afe4f4cd873c91ae67bad73b2baab2d18fa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075579"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547001"
 ---
 # <a name="define-linked-dimensions"></a>定义链接维度
   链接维度基于在具有相同版本和兼容性级别的另一个 Analysis Services 数据库中创建和存储的维度。 通过使用链接维度，您可以创建、存储以及维护某个数据库上的维度，同时可让多个数据库的用户使用该维度。 对于用户，链接维度在外观上就像其他任意维度一样。  
@@ -62,7 +61,7 @@ ms.locfileid: "66075579"
   
 2.  在连接管理器中，确保提供程序设置为“本机 OLE DB\Microsoft OLE DB Provider for Analysis Services 11.0”****。  
   
-3.  输入服务器的名称（将*servername*\\*instancename*用于命名实例）<sup>1</sup> ，或键入**localhost**以连接到在同一台计算机上运行的 Analysis Services 服务器。  
+3.  输入服务器的名称（将*servername* \\ *instancename*用于命名实例）<sup>1</sup> ，或键入**localhost**以连接到在同一台计算机上运行的 Analysis Services 服务器。  
   
 4.  使用 Windows 身份验证进行连接。  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c7e9ebb-d0c9-498e-a9ba-cc13eaa43520
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1c54c6f369d519812bb79cacf51bd1ad00a1dfb5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a507e0d77cd81165b0220e3d09ec10227d32d853
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175216"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528703"
 ---
 # <a name="detect-categories-table-analysis-tools-for-excel"></a>检测类别（Excel 表分析工具）
   ![功能区中的“检测类别”按钮](media/tat-detectcat.gif "功能区中的“检测类别”按钮")
@@ -78,13 +77,13 @@ ms.locfileid: "78175216"
 >  使用 "**检测类别**" 工具时，它会在原始数据表中创建新的列 "类别"。 如果将此列保留在数据表中，然后执行后续数据挖掘操作，则此列的存在可能会影响您的分析结果。 为了确保这不会影响其他操作，您应制作一份不包含“类别”列的数据表副本，然后再使用其他数据挖掘工具。
 
 ## <a name="related-tools"></a>相关工具
- 当 "**检测类别**" 工具分析您的数据时，它将使用[!INCLUDE[msCoName](../includes/msconame-md.md)]聚类分析算法创建数据挖掘结构和数据挖掘模型。
+ 当 "**检测类别**" 工具分析您的数据时，它将使用聚类分析算法创建数据挖掘结构和数据挖掘模型 [!INCLUDE[msCoName](../includes/msconame-md.md)] 。
 
  使用 "**分析关键影响因素**" 工具创建数据挖掘模型之后，您可以使用 Excel 数据挖掘客户端浏览该模型并更详细地浏览关系。 Excel 数据挖掘客户端是一个独立的外接程序，它提供了更多的高级数据挖掘功能。 有关信息，请参阅[在 Excel 中浏览模型 &#40;SQL Server 数据挖掘外接程序&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)。
 
  有关使用 Excel 数据挖掘客户端中的数据建模功能的详细信息，请参阅[创建数据挖掘模型](creating-a-data-mining-model.md)。
 
- 有关 "**检测类别**" 工具使用的算法的详细信息，请参阅联机丛书中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的主题 "Microsoft 聚类分析算法"。
+ 有关 "**检测类别**" 工具使用的算法的详细信息，请参阅联机丛书中的主题 "Microsoft 聚类分析算法" [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。
 
 ## <a name="see-also"></a>另请参阅
  [Excel 表分析工具](table-analysis-tools-for-excel.md)

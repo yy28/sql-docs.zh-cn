@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 838185def1d562f51d810cebdf79684f341a5903
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 620eb875dfb4b3e7594000777feb23993d9e129e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493851"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528303"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>指定用户定义层次结构中属性之间的属性关系
   您已了解本教程中的内容，现在可以将属性层次结构组织到用户层次结构内的级别中，以便在多维数据集中为用户提供导航路径。 用户层次结构可以表示自然层次结构（如市/县、州/省/自治区和国家/地区），或者可以只表示导航路径（如雇员姓名、职务和部门名称）。 对于在层次结构中导航的用户而言，这两类用户层次结构应相同。  
@@ -42,7 +41,7 @@ ms.locfileid: "69493851"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     因为此关系是冗余关系，所以在关系图中会显示警告图标。 关系**全名** -> **地理位置**-> **代码**已存在，您刚刚创建了关系**全名** -> **邮政编码**。 此关系**地理位置**-> **邮政编码**现在是冗余的，因此我们将其删除。  
+     因为此关系是冗余关系，所以在关系图中会显示警告图标。 关系**全名**  ->  **地理位置** ->  **代码**已存在，您刚刚创建了关系**全名**  ->  **邮政编码**。 此关系**地理位置** ->  **邮政编码**现在是冗余的，因此我们将其删除。  
   
 6.  在“属性关系”窗格中，右键单击“地域”-> “邮政编码”，然后单击“删除”****************。  
   
@@ -54,9 +53,9 @@ ms.locfileid: "69493851"
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     关系**地理**-> **城市**现在是冗余的，因此我们将其删除。  
+     关系**地理** ->  **城市**现在是冗余的，因此我们将其删除。  
   
-11. 在 "属性关系" 窗格中，右键单击**Geography**-> **City** ，然后单击 "**删除**"。  
+11. 在 "属性关系" 窗格中，右键单击**Geography** ->  **City** ，然后单击 "**删除**"。  
   
 12. 显示“删除对象”对话框时，单击“确定”********。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "69493851"
   
 20. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-21. 在 "属性关系" 窗格中，右键单击 "**地理**-> **国家/地区**"，然后单击 "**删除**"。  
+21. 在 "属性关系" 窗格中，右键单击 "**地理** ->  **国家/地区**"，然后单击 "**删除**"。  
   
 22. 显示“删除对象”对话框时，单击“确定”********。  
   
@@ -84,7 +83,7 @@ ms.locfileid: "69493851"
   
      请注意，在你删除“地域”和其他属性之间的最后一个属性关系后，“地域”本身也将被删除********。 这是因为不再使用该属性。  
   
-24. 在“文件”  菜单上，单击“全部保存” ****。  
+24. 在 "文件" 菜单上，单击 "**全部保存**"。  
   
 ## <a name="defining-attribute-relationships-for-attributes-in-the-sales-territory-hierarchy"></a>为“销售区域”层次结构中的属性定义属性关系  
   
@@ -176,7 +175,7 @@ ms.locfileid: "69493851"
   
 12. 将 **AttributeHierarchyOptimizedState** 属性设置为 **NotOptimized**，将 **AttributeHierarchyOrdered** 属性设置为 **False**，并将 **AttributeHierarchyVisible** 属性设置为 **False**。  
   
-13. 在“文件” **** 菜单上，单击“全部保存” ****。  
+13. 在“文件”菜单上，单击“全部保存” 。  
   
 14. 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的“生成”菜单上，单击“部署 Analysis Services 教程”********。  
   

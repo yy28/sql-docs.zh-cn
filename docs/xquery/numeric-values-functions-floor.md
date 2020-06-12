@@ -1,5 +1,6 @@
 ---
 title: floor 函数（XQuery） |Microsoft Docs
+description: 了解 XQuery floor （）函数，该函数返回没有小数部分且不大于其参数值的最大值。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4ace57dd-b66e-4b60-a2b9-a1b0f1a0831d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1c27e432dc258b4d2b9d21bfe0ab28df8ee5b510
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15bdca46fc62832ecd97932b1b71f999f1f80324
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946535"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524388"
 ---
 # <a name="numeric-values-functions---floor"></a>数值函数 - floor
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ fn:floor ($arg as numeric?) as numeric?
  *$arg*  
  将应用该函数的数字。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果 *$arg*的类型为三个数值基类型之一 **： xs： float**、 **xs： double**或**xs： decimal**，则返回类型与 *$arg*类型相同。 如果 *$arg*的类型是派生自其中一个数值类型的类型，则返回类型为基本数值类型。  
   
  如果向 fn： floor、fn：天花板或 fn： round 函数的输入为**xdt： untypedAtomic**，非类型化数据，则它将隐式转换为**xs： double**。 任何其他类型都会生成静态错误。  

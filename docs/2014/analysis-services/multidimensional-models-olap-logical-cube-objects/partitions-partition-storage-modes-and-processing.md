@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74f53ddb6e7e3fc6b9d14ddcc726c2766a598860
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b97bee2099ea82508ba9e66414bb9527a3c3a8c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727573"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545317"
 ---
 # <a name="partition-storage-modes-and-processing"></a>分区存储模式和处理
   分区的存储模式影响分区及其父度量值组和多维数据集的查询和处理性能、存储要求以及存储位置。 存储模式的选择也会影响处理选择。  
@@ -39,7 +38,7 @@ ms.locfileid: "62727573"
   
 -   混合 OLAP (HOLAP)  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持所有三种基本存储[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]模式。 它还支持主动缓存，使用主动缓存，您可以组合 ROLAP 和 MOLAP 存储的特征，从而满足数据的即时性和查询性能的要求。 有关详细信息，请参阅[主动缓存（分区）](partitions-proactive-caching.md)。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持所有三种基本存储模式。 它还支持主动缓存，使用主动缓存，您可以组合 ROLAP 和 MOLAP 存储的特征，从而满足数据的即时性和查询性能的要求。 有关详细信息，请参阅[主动缓存（分区）](partitions-proactive-caching.md)。  
   
 ## <a name="molap"></a>MOLAP  
  在 MOLAP 存储模式下，处理分区时，分区的聚合及其源数据副本将存储在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 内的多维结构中。 此 MOLAP 结构在得到高度优化后，可以最大程度地提高查询性能。 该存储位置可以位于用来定义分区的计算机上，也可以位于其他运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的计算机上。 由于源数据副本位于多维结构中，因此，可以在不访问分区源数据的情况下直接解析查询。 使用聚合可以显著缩短查询响应时间。 分区 MOLAP 结构中的数据与分区的最新处理完全保持同步。  
@@ -72,14 +71,14 @@ ms.locfileid: "62727573"
   
     -   QUOTED_IDENTIFIER  
   
--   在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 中，索引键的总计大小不能超过 900 字节。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]处理 CREATE INDEX 语句时，将基于固定长度键列断言此条件。 但是，如果索引键中有可变长度的列， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]则还会为基表的每次更新都断言此条件。 因为不同的聚合具有不同的视图定义，所以使用索引视图的 ROLAP 处理可能成功，也可能失败，具体取决于聚合设计。  
+-   在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 中，索引键的总计大小不能超过 900 字节。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]处理 CREATE INDEX 语句时，将基于固定长度键列断言此条件。 但是，如果索引键中有可变长度的列，则 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 还会为基表的每次更新都断言此条件。 因为不同的聚合具有不同的视图定义，所以使用索引视图的 ROLAP 处理可能成功，也可能失败，具体取决于聚合设计。  
   
 -   创建索引视图的会话的下列选项必须为 ON：ARITHABORT、CONCAT_NULL_YIELDS_NULL、QUOTED_IDENTIFIER、ANSI_NULLS、ANSI_PADDING 和 ANSI_WARNING。 可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中对此进行设置。  
   
 -   创建索引视图的会话的以下选项必须为 OFF：NUMERIC_ROUNDABORT。 可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中对此进行设置。  
   
 ## <a name="holap"></a>HOLAP  
- HOLAP 存储模式结合了 MOLAP 和 ROLAP 二者的特性。 像 MOLAP 一样，HOLAP 导致分区的聚合存储在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例的多维结构中。 HOLAP 不会使源数据的副本存储起来。 就只访问分区聚合中的汇总数据的查询而言，HOLAP 与 MOLAP 相同。 访问源数据的查询（例如，如果您想要深化到没有聚合数据的原子多维数据集单元），则必须从关系数据库检索数据，并且如果源数据存储在 MOLAP 结构中，就不会像在数据库中一样快。 在 HOLAP 存储模式下，通常用户执行各查询所用的时间明显不同，具体取决于是根据缓存或聚合解析查询还是根据源数据本身解析查询。  
+ HOLAP 存储模式结合了 MOLAP 和 ROLAP 二者的特性。 像 MOLAP 一样，HOLAP 导致分区的聚合存储在实例的多维结构中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。 HOLAP 不会使源数据的副本存储起来。 就只访问分区聚合中的汇总数据的查询而言，HOLAP 与 MOLAP 相同。 访问源数据的查询（例如，如果您想要深化到没有聚合数据的原子多维数据集单元），则必须从关系数据库检索数据，并且如果源数据存储在 MOLAP 结构中，就不会像在数据库中一样快。 在 HOLAP 存储模式下，通常用户执行各查询所用的时间明显不同，具体取决于是根据缓存或聚合解析查询还是根据源数据本身解析查询。  
   
  按 HOLAP 存储的分区小于相应按 MOLAP 存储的分区（因为前者不包含源数据），而比 ROLAP 分区响应涉及汇总数据的查询要快。 一般情况下，HOLAP 存储模式适用于多维数据集中要求快速响应基于大量源数据的汇总的查询的分区。 但是，当用户生成必须涉及叶级数据的查询时（例如，计算中值），通常最好选择 MOLAP。  
   

@@ -1,5 +1,6 @@
 ---
 title: 其他批注（SQLXML）
+description: 查看 SQLXML 批注列表，其中包含有关 XML 大容量加载如何解释每个批注的说明。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -22,12 +23,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7eb01a084ec968adbd9fe8ff86623bcca5f9eb26
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 30e59d3fc049d56e8142f241dc5c75c054db837c
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246831"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306256"
 ---
 # <a name="annotation-interpretation---other-annotations"></a>批注解释 - 其他批注
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

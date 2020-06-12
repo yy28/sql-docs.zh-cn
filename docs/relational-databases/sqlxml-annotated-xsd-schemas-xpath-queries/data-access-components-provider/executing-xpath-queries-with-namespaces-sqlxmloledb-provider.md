@@ -1,5 +1,6 @@
 ---
 title: 执行带有命名空间的 XPath 查询（SQLXMLOLEDB）
+description: 了解如何在通过 SQLXMLOLEDB 提供程序执行 XPath 查询时，在 SQLXML 4.0 中指定命名空间。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b1559beee9838920c5e219c4e13e5a8b0c130b51
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81d8b40501df0cd18765c684a4cce217d2b87ef2
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257298"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215863"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>执行带命名空间的 XPath 查询（SQLXMLOLEDB 访问接口）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75257298"
   
  由于 SQLXML 4.0 中不支持使用通配符 (*)，因此必须使用命名空间前缀来指定 XPath 查询。 若要解析此前缀，请使用 namespace 属性来指定命名空间绑定。  
   
- 在下面的示例中，XPath 查询使用通配符（\*）和本地名称（）和命名空间 uri （） XPath 函数指定命名空间。 此 XPath 查询返回本地名称为**Contact**的所有元素，命名空间 URI 为**urn： myschema.xml： Contacts**。  
+ 在下面的示例中，XPath 查询使用通配符（ \* ）和本地名称（）和命名空间 uri （） XPath 函数指定命名空间。 此 XPath 查询返回本地名称为**Contact**的所有元素，命名空间 URI 为**urn： myschema.xml： Contacts**。  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: aac732a8-5262-4649-b7d7-3ccf6f9cfa8b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: db069b243a0d06c142651ab4dcadd68e1e06657f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8138cef980e7b040a99a6e1db21f1b67fd84aeb5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081972"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528773"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>依赖关系网络关系图演练（数据挖掘外接程序）
   几种不同的数据挖掘模型将网络图用作探索数据中各种关系的方法。 您可以使用 "**依赖关系网络**" 形状将这些模型导入 Visio，然后继续自定义并增强布局。 **Visio 数据挖掘形状**包含以下用于处理依赖关系网络关系图的自定义控件：  
@@ -43,13 +42,13 @@ ms.locfileid: "66081972"
   
 1.  如果在 "**形状**" 列表中看不到 " **Microsoft 数据挖掘形状**"，请单击 "**更多形状**"，选择 "**打开模具**"，然后从默认安装位置打开模板。  
   
-     \<驱动器>： \Program files （x85） \Microsoft SQL Server 2012 DM 外接程序  
+     \<drive>： \Program files （x85） \Microsoft SQL Server 2012 DM 外接程序  
   
-2.  将 "**依赖关系网络**" 形状拖到页面上以启动向导。 单击“下一步”  。  
+2.  将 "**依赖关系网络**" 形状拖到页面上以启动向导。 单击“下一步”。  
   
 3.  在 "**依赖关系网络 Visio 形状向导**" 的 "欢迎" 页上，单击 "**下一步**"。  
   
-4.  在 "**依赖关系网络 Visio 形状向导**" 的 "**选择数据源**" 页上，选择与[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]要可视化的模型的服务器之间的连接。  
+4.  在 "**依赖关系网络 Visio 形状向导**" 的 "**选择数据源**" 页上，选择与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 要可视化的模型的服务器之间的连接。  
   
 5.  选择适当的挖掘模型，然后单击 "**下一步**"。  
   
@@ -105,7 +104,7 @@ ms.locfileid: "66081972"
      **边缘强度**  
      切换整个图形的边缘强度的显示。 边缘是节点间的连接。 您可以使用滑块控件筛选掉弱连接。  
   
-     **Slider**  
+     **滑块**  
      **滑块**可帮助控制依赖关系网络关系图中显示的关系的强度。  
   
      该图形中的每个节点都代表一个状态。 箭头代表两个状态之间的转换以及与该转换相关联的概率。 若要减少该图形中的节点数量，可向上移动滑动条。  

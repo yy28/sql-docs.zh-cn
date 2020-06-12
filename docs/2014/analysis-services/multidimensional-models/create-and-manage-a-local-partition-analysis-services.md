@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c06e40e452fa0db682e2f79b523ddcd90d0450c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7251f9e9422a79c214d27d913112a28ff43d56b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175786"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536207"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>创建和管理本地分区 (Analysis Services)
   您可以为度量值组创建更多分区以提高处理性能。 通过多个分区，您可以跨本地以及远程服务器上对应数目的物理数据文件分配事实数据。 在 Analysis Services 中，可以独立和并行处理分区，从而可更好地控制服务器上的处理工作负荷。
@@ -27,7 +26,7 @@ ms.locfileid: "78175786"
  可以在模型设计期间在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中创建分区，或在部署解决方案后使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 XMLA 来创建分区。 建议您仅选择一种方法。 如果您交替使用这些工具，可能会发现，在随后从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 重新部署该解决方案时，在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中对已部署的数据库所进行的更改将被覆盖。
 
 ## <a name="before-you-start"></a>开始之前
- 检查所用版本是否为 Business Intelligence 或 Enterprise。 Standard 版不支持多个分区。 若要检查版本，请在中右键单击服务器节点[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，然后选择 "**报表** | " "**常规**"。 有关功能可用性的详细信息，请参阅[SQL Server 2014 的各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。
+ 检查所用版本是否为 Business Intelligence 或 Enterprise。 Standard 版不支持多个分区。 若要检查版本，请在中右键单击服务器节点， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 然后选择 "**报表**" "  |  **常规**"。 有关功能可用性的详细信息，请参阅[SQL Server 2014 的各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。
 
  如果您想以后将分区合并，则从一开始就须知道各分区必须具有相同的聚合设计。 仅当分区具有相同的聚合设计和存储模式时，才能将分区合并。
 
@@ -108,7 +107,7 @@ ms.locfileid: "78175786"
 
 7.  在最后的“完成向导”页上，为分区提供一个描述性名称。
 
-8.  单击 **“完成”** 。
+8.  单击“完成”。
 
 9. 重复前面的步骤以创建其余分区，每次选择不同的命名查询以选择下一个数据切片。
 
@@ -116,7 +115,7 @@ ms.locfileid: "78175786"
 
 11. 浏览该多维数据集以验证是否返回了正确的数据。
 
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a>后续步骤
  在为分区创建互斥查询时，应确保组合分区数据包含需要多维数据集包含的所有数据。
 
  在最后一个步骤中，通常需要删除基于表本身的默认分区（如果该分区仍存在），否则基于分区的查询将与基于完整表的查询重叠。

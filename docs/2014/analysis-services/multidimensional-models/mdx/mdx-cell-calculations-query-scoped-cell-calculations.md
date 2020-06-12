@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 575bac6ba111259fe20540fd0b40f193f0a54b38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a9c9d529bfeb26b959b2521e4ce3c3d7f10d082
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074416"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546441"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>创建查询作用域的单元计算 (MDX)
   在多维表达式 (MDX) 中，可以使用 `WITH` 关键字描述查询上下文中的计算单元。 `WITH` 关键字的语法如下：  
@@ -34,7 +33,7 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
 |空集|解析为空集的 MDX 集表达式。 在这种情况下，计算单元的作用域是整个多维数据集。|  
 |单个成员集|解析为单个成员的 MDX 集表达式。|  
 |级别成员集|解析为单个级别的成员的 MDX 集表达式。 此类集表达式的一个示例是*Level_Expression*。`Members` MDX 函数。 若要包括计算成员，请使用*Level_Expression*。`AllMembers` MDX 函数。 有关详细信息，请参阅 [AllMembers (MDX)](/sql/mdx/allmembers-mdx)。|  
-|后代集|解析为指定成员的后代的 MDX 集表达式。 此类集表达式的一个示例`Descendants`是（*Member_Expression*、 *Level_Expresion* *Desc_Flag*） MDX 函数。 有关详细信息，请参阅 [Descendants (MDX)](/sql/mdx/descendants-mdx)。|  
+|后代集|解析为指定成员的后代的 MDX 集表达式。 此类集表达式的一个示例是 `Descendants` （*Member_Expression*、 *Level_Expresion* *Desc_Flag*） MDX 函数。 有关详细信息，请参阅 [Descendants (MDX)](/sql/mdx/descendants-mdx)。|  
   
  如果 `String_Expression` 参数不描述维度，出于构造计算子多维数据集的目的，MDX 将假设包含所有成员。 因此，如果 `String_Expression` 参数为 NULL，计算单元的定义将应用于整个多维数据集。  
   

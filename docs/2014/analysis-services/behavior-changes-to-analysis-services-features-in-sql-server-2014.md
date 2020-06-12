@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 92ebd5cb-afb6-4b62-968f-39f5574a452b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5a5525984fa4b1f1823f526097d271780a072bd4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4856a924bcea68b98336dd77adfdc8762733d548
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284811"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527863"
 ---
 # <a name="behavior-changes-to-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014 中 Analysis Services 功能的行为更改
   本主题针对多维、表格、数据挖掘和 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 部署介绍 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 中的行为更改。 与早期版本的 SQL Server 相比，当前版本中的功能的工作或交互方式会受到行为更改的影响。  
@@ -48,7 +47,7 @@ ms.locfileid: "67284811"
 ### <a name="analysis-services-multidimensional-mode"></a>Analysis Services，多维模式  
   
 #### <a name="nullprocessing-option-set-to-preserve-is-no-longer-supported-for-distinct-count-measures"></a>非重复计数度量值不再支持设置为“保留”的 NullProcessing 选项  
- 在之前[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]，可以为非重复计数度量值将[NULLPROCESSING 元素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/nullprocessing-element-assl)设置为`Preserve` 。  遗憾的是，这种做法通常生成无效的结果，有时甚至损坏处理作业。 因此，此配置在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中不再有效。 尝试使用该配置将导致出现以下验证错误：“元数据管理器发生错误。 对于\<measurename> 非重复计数度量值，Preserve 不是有效的 NullProcessing 值。 "  
+ 在之前 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ，可以为非重复计数度量值将[NullProcessing 元素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/nullprocessing-element-assl)设置为 `Preserve` 。  遗憾的是，这种做法通常生成无效的结果，有时甚至损坏处理作业。 因此，此配置在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中不再有效。 尝试使用该配置将导致出现以下验证错误：“元数据管理器发生错误。 对于非重复计数度量值，Preserve 不是有效的 NullProcessing 值 \<measurename> 。 "  
   
 #### <a name="cube-browser-in-management-studio-and-cube-designer-has-been-removed"></a>Management Studio 和多维数据集设计器中的多维数据集浏览器已被删除  
  可用于在 Management Studio 或多维数据集设计器中将字段拖放到数据透视表结构中的多维数据集浏览器控件已从产品中删除。 该控件是 Office Web Control (OWC) 组件。 OWC 在 Office 中已不推荐使用，并且不再继续提供。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0b00a3b-f9db-4289-a8cb-ddf600cd64ac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 71212f81a2f42fbbff28e04b4632bc2120362089
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8b3dad28227547f88956f1ac49e2878b2940f91
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084580"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522525"
 ---
 # <a name="drillthrough-on-mining-structures"></a>对挖掘结构的钻取功能
   “钻取”** 意味着能够查询挖掘模型或挖掘结构并且获取在模型中未公开的详细数据。  
@@ -36,9 +35,9 @@ ms.locfileid: "66084580"
   
 -   如果您使用 DMX 来创建挖掘结构，请使用 WITH DRILLTHROUGH 子句。 有关详细信息，请参阅 [CREATE MINING STRUCTURE (DMX)](/sql/dmx/create-mining-structure-dmx)。  
   
--   钻取就是检索在处理挖掘结构时缓存的定型事例的相关信息。 因此，如果通过将<xref:Microsoft.AnalysisServices.MiningStructureCacheMode>属性更改为来`ClearAfterProcessing`清除缓存的数据，则钻取功能将不起作用。 若要对结构列启用钻取，则必须将 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 属性更改为 `KeepTrainingCases`，然后重新处理结构。  
+-   钻取就是检索在处理挖掘结构时缓存的定型事例的相关信息。 因此，如果通过将属性更改为来清除缓存的数据，则 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> `ClearAfterProcessing` 钻取功能将不起作用。 若要对结构列启用钻取，则必须将 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 属性更改为 `KeepTrainingCases`，然后重新处理结构。  
   
--   验证挖掘结构和挖掘模型都已将[AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl)属性设置为`True`。 而且，您必须是对挖掘结构和挖掘模型都具有钻取权限的角色的成员。  
+-   验证挖掘结构和挖掘模型都已将[AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl)属性设置为 `True` 。 而且，您必须是对挖掘结构和挖掘模型都具有钻取权限的角色的成员。  
   
 ## <a name="security-issues-for-drillthrough"></a>钻取的安全问题  
  挖掘结构和挖掘模型的钻取权限是分开设置的。 即使不具有结构的钻取权限，模型的钻取权限也会允许您从模型进行钻取。 如果拥有结构的钻取权限，则可通过使用 [StructureColumn (DMX)](/sql/dmx/structurecolumn-dmx) 函数，将结构列包含到模型钻取查询中。  

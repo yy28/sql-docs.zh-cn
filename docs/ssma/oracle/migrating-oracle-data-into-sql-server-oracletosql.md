@@ -1,5 +1,6 @@
 ---
 title: 将 Oracle 数据迁移到 SQL Server （OracleToSQL） |Microsoft Docs
+description: 了解如何在同步已转换的对象之后，使用 SSMA for Oracle 应用程序将数据从 Oracle 数据库迁移到 SQL Server。
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,21 +14,21 @@ ms.assetid: e23c5268-41ed-4e55-9fe7-a11376202a13
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: c37f9c8e39a8a9dd87eabecba445b5ce7cef9028
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f617b850482383400d599d7608644f27da58f17e
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264680"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293814"
 ---
 # <a name="migrating-oracle-data-into-sql-server-oracletosql"></a>将 Oracle 数据迁移到 SQL Server (OracleToSQL)
-使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]成功同步转换后的对象后，可以将数据从 Oracle 迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+使用成功同步转换后的对象后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，可以将数据从 Oracle 迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 > [!IMPORTANT]  
 > 如果正在使用的引擎是服务器端数据迁移引擎，则必须在运行 SSMA 的计算机上安装 Oracle 扩展包和 Oracle 提供程序的 SSMA，然后才能迁移数据。 SQL Server 代理服务也必须正在运行。 有关如何安装扩展包的详细信息，请参阅[安装服务器组件（OracleToSQL）](https://msdn.microsoft.com/33070e5f-4e39-4b70-ae81-b8af6e4983c5)  
   
 ## <a name="setting-migration-options"></a>设置迁移选项  
-在将数据迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到之前，请在 "**项目设置**" 对话框中查看项目迁移选项。  
+在将数据迁移到之前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请在 "**项目设置**" 对话框中查看项目迁移选项。  
   
 -   使用此对话框，您可以设置迁移批大小、表锁定、约束检查、null 值处理和标识值处理等选项。 有关项目迁移设置的详细信息，请参阅[项目设置（迁移）（OracleToSQL）](https://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60)。  
   
@@ -53,7 +54,7 @@ ms.locfileid: "68264680"
 -   若要在服务器端启动迁移，请在 "**项目设置**" 对话框中选择 "**服务器端数据迁移引擎**" 选项。  
   
 ## <a name="migrating-data-to-sql-server"></a>将数据迁移到 SQL Server  
-迁移数据是一种大容量加载操作，用于将数据行从 Oracle 表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移入事务中的表。 在项目设置中配置每[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]个事务中加载的行数。  
+迁移数据是一种大容量加载操作，用于将数据行从 Oracle 表移入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务中的表。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 项目设置中配置每个事务中加载的行数。  
   
 若要查看迁移消息，请确保输出窗格可见。 否则，请在 "**视图**" 菜单中选择 "**输出**"。  
   
@@ -63,7 +64,7 @@ ms.locfileid: "68264680"
   
     -   Oracle 提供程序安装在运行 SSMA 的计算机上。  
   
-    -   已将转换的对象与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库同步。  
+    -   已将转换的对象与数据库同步 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 2.  在 Oracle 元数据资源管理器中，选择包含要迁移的数据的对象：  
   
@@ -81,7 +82,7 @@ ms.locfileid: "68264680"
   
     -   在服务器端执行数据迁移之前，请确保：  
   
-        1.  在的实例上安装了 SSMA for Oracle 扩展包[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+        1.  在的实例上安装了 SSMA for Oracle 扩展包 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
         2.  SQL Server 代理服务正在 SQL Server 的实例上运行。  
   
@@ -90,11 +91,11 @@ ms.locfileid: "68264680"
 4.  在 Oracle 元数据资源管理器中右键单击 "**架构**"，然后单击 "**迁移数据**"。 您还可以迁移各个对象或对象类别的数据：右键单击对象或其父文件夹;选择 "**迁移数据**" 选项。  
   
     > [!NOTE]  
-    > 如果的实例上未安装 SSMA for Oracle 扩展包[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，并且选择了**服务器端数据迁移引擎**，则在将数据迁移到目标数据库时，将遇到以下错误： "SSMA 数据迁移组件在 SQL Server 上找不到。 请检查是否正确安装了扩展包。 单击 "**取消**" 以终止数据迁移。  
+    > 如果的实例上未安装 SSMA for Oracle 扩展包 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并且选择了**服务器端数据迁移引擎**，则在将数据迁移到目标数据库时，将遇到以下错误： "SSMA 数据迁移组件在 SQL Server 上找不到。 请检查是否正确安装了扩展包。 单击 "**取消**" 以终止数据迁移。  
   
 5.  在 "**连接到 Oracle** " 对话框中，输入连接凭据，然后单击 "**连接**"。 有关连接到 Oracle 的详细信息，请参阅[连接到 oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)  
   
-    若要连接到目标数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请在 "**连接到 SQL Server** " 对话框中输入连接凭据，然后单击 "**连接**"。 有关连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的详细信息，请参阅[连接到 SQL Server](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
+    若要连接到目标数据库 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请在 "**连接到 SQL Server** " 对话框中输入连接凭据，然后单击 "**连接**"。 有关连接到的详细信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅[连接到 SQL Server](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
   
     消息将显示在 "**输出**" 窗格中。 迁移完成后，将显示 "**数据迁移" 报表**。 如果任何数据未迁移，请单击包含错误的行，然后单击 "**详细信息**"。 完成报表后，单击 "**关闭**"。 有关数据迁移报表的详细信息，请参阅[数据迁移报表（SSMA Common）](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   

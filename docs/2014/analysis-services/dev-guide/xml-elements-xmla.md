@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 40ab2360-efb6-4ba6-bf23-e84964e51008
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0c86975f273b2efa5d1384df676519ee622a1677
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c1e5b046bfa57302baefc43a4da989be9c70e08
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62731982"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528633"
 ---
 # <a name="xml-elements-xmla"></a>XML 元素 (XMLA)
-  以下主题介绍支持[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的各种 XML for Analysis （XMLA）元素类别。  
+  以下主题介绍支持的各种 XML for Analysis （XMLA）元素类别 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|属性|描述|  
+|属性|说明|  
 |--------------|-----------------|  
 |[&#40;XMLA&#41;标头](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/xml-elements-headers)|介绍由应用程序或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例为管理协议级别的功能在 SOAP 信封的 SOAP 标头里发送的那些元素。|  
 |[XMLA &#40;方法&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods)|介绍应用程序为检索数据或元数据或为了对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例进行操作而在 SOAP 信封里发送给该实例的最顶端元素。|  

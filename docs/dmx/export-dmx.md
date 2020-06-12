@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 622f575541d1a111e5cda6a28617ad400a977292
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 59e4a78c9432c5ba8f75eb7bfaa6ab46a0b052cf
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892799"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670274"
 ---
 # <a name="export-dmx"></a>EXPORT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,13 +34,13 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  *对象名称*  
  可选。 要导出的对象的名称。  
   
- *名字*  
+ *filename*  
  要作为字符串导出的文件的名称和位置。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果语句指定了挖掘模型，则结果文件也将包含关联的挖掘结构。 如果语句指定**具有依赖项**，则处理对象所需的所有对象（例如，数据源和数据源视图）都包含在 .abf 文件中。  
   
- 您必须是数据库或服务器管理员才能从[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据库中导出或导入对象。  
+ 您必须是数据库或服务器管理员才能从数据库中导出或导入对象 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。  
   
 ## <a name="export-mining-structure-example"></a>导出挖掘结构示例  
  在下例中，将目标邮件和预测挖掘结构以及关联挖掘模型导出到一个特定的文件位置。 由于关联模型是 Market Basket 挖掘结构的一部分，所以该示例也将导出 Market Basket 结构。 由于关联模型是使用**挖掘模型**而不是**挖掘结构**导出的，因此不会导出任何其他可能作为市场篮挖掘结构一部分存在的挖掘模型。  

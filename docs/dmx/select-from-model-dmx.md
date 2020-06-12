@@ -1,21 +1,21 @@
 ---
-title: 从模型&lt;&gt;中选择（DMX） |Microsoft Docs
+title: 从模型中选择 &lt; &gt; （DMX） |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5611ce3da4f12bca5cb271cabe8af3e149dcbf35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6f6371df8d1ab987bf1f49d149ff7856ba2d111c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928326"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666659"
 ---
-# <a name="select-from-ltmodelgt-dmx"></a>从模型&lt;&gt;中选择（DMX）
+# <a name="select-from-ltmodelgt-dmx"></a>从模型中选择 &lt; &gt; （DMX）
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   执行空预测联接，并为指定列返回一个或多个最可能的值。 创建预测时只使用来自挖掘模型的内容。  
@@ -36,7 +36,7 @@ SELECT <expression list> [TOP <n>] FROM <model>
  *n*  
  可选。 一个指定返回行数的整数。  
   
- *模型*  
+ *model*  
  模型标识符。  
   
  *条件列表*  
@@ -45,7 +45,7 @@ SELECT <expression list> [TOP <n>] FROM <model>
  *expression*  
  可选。 一个返回标量值的表达式。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  *表达式列表*中的列必须仅定义为预测或预测，或与可预测列相关。  
   
 ## <a name="naive-bayes-example"></a>Naive Bayes 示例  

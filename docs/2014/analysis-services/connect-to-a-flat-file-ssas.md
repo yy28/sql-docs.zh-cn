@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a365991e-eded-4cd8-89c0-0daf6d658d15
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b6eeb17662c0cac290a7a455d0925cd05560e5e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 970a55b709e164da573fbd224c13cc641a3ba06a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087359"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527193"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>连接到平面文件 (SSAS)
   “表导入向导”**** 的这一页可用于连接到平面文件 (.txt)、制表符分隔的文件 (.tab) 或逗号分隔的文件 (.csv)。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  
@@ -27,7 +26,7 @@ ms.locfileid: "66087359"
 > [!NOTE]  
 >  在此页中选择文件时，将使用当前用户的凭据。 但是，如果在“模拟信息”页中指定的用户没有足够的权限从所选文件中读取，则导入将不会成功。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **友好的连接名称**  
  键入此数据源连接的唯一名称。 这是必填字段。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66087359"
  **列分隔符**  
  从可用列分隔符的列表中进行选择。 选择不可能出现在文本中的分隔符。  
   
-|Value|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |制表符 (t)|列由制表符 (t) 分隔。|  
 |逗号 (,)|列由逗号 (,) 分隔。|  

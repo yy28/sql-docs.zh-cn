@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4447f58baaa5ea88a48c67a9a32fcda77681d8d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a0c62698f1aed231128803cb91c80264a2fbdbf4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077489"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544829"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>附加和分离 Analysis Services 数据库
-  在某些情况下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 经常需要将数据库脱机一段时间，然后在同一服务器实例或其他服务器实例上将数据库恢复联机。 根据业务需要（例如，将数据库移到另一个磁盘以获得更好的性能、为数据库扩容获取空间或升级产品），经常需要进行上述操作。 对于所有这些情况和更多情况`Attach` ， `Detach`和命令使[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 能够使数据库脱机，并使其重新联机，只需很少的精力。  
+  在某些情况下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 经常需要将数据库脱机一段时间，然后在同一服务器实例或其他服务器实例上将数据库恢复联机。 根据业务需要（例如，将数据库移到另一个磁盘以获得更好的性能、为数据库扩容获取空间或升级产品），经常需要进行上述操作。 对于所有这些情况和更多情况， `Attach` 和 `Detach` 命令使 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 能够使数据库脱机，并使其重新联机，只需很少的精力。  
   
 ## <a name="attach-and-detach-commands"></a>附加和分离命令。  
  通过 `Attach` 命令可使已脱机的数据库恢复联机。 可以将该数据库附加到原始的服务器实例，也可以附加到另一个实例。 在附加数据库时，用户可以为该数据库指定 **ReadWriteMode** 设置。 使用 `Detach` 命令可使数据库与服务器脱机。  
@@ -48,7 +47,7 @@ ms.locfileid: "66077489"
 |--------------------------------------|-------------------------------------|  
 |1) 服务器会对数据库上的 CommitExclusive 锁发出请求<br />2) 服务器会等待，直到提交或回滚所有正在进行的事务<br />3) 服务器会构建分离数据库必须具备的所有元数据<br />4) 将数据库标记为已删除<br />5) 服务器提交事务|1) 将数据库标记为已删除<br />2) 服务器提交事务<br /><br /> <br /><br /> 注意：不能更改只读数据库的分离密码。 如果为已包含密码的附加数据库提供密码参数，则会产生错误。|  
   
-  和  命令必须作为单独的操作执行。 在同一事务中，不能将它们与其他操作一起执行。 此外， `Attach`和`Detach`命令都是原子事务命令。 这意味着操作只有成功或失败两种情况。 数据库不会处于未完成的状态。  
+  和  命令必须作为单独的操作执行。 在同一事务中，不能将它们与其他操作一起执行。 此外， `Attach` 和 `Detach` 命令都是原子事务命令。 这意味着操作只有成功或失败两种情况。 数据库不会处于未完成的状态。  
   
 > [!IMPORTANT]  
 >  执行 `Detach` 命令需要服务器或数据库管理员权限。  

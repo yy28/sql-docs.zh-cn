@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 560d1846-8da2-475f-b021-13ff31fb49d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2b8c46cc7bb06a66c358c0be4adc9be050774172
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fe64248d34db8a1e0cf1e24dc77446e8b9fa6b8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082502"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528967"
 ---
 # <a name="data-source-view-properties-dialog-box-ssas"></a>“数据源视图属性”对话框 (SSAS)
   可以使用 **中的** “数据源视图属性” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框，设置 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中的数据源视图的属性。 通过右键单击**对象资源管理器**中的数据源视图，再选择“属性”****，即可显示“数据源视图属性”**** 对话框。  

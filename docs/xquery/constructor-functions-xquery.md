@@ -1,5 +1,6 @@
 ---
 title: 构造函数（XQuery） |Microsoft Docs
+description: 了解 XQuery 中的构造函数，它们允许您创建 XSD 内置或用户定义的原子类型的实例。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f64c9ff6664410983d9c3ce7ebdbf07e493ca03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 105ba6fb68e8d8031858fcf54dddc56b655ddcea
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038989"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529203"
 ---
 # <a name="constructor-functions-xquery"></a>构造函数 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  *TYP*  
  任意内置 XSD 类型。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  支持用于基本和派生原子 XSD 类型的构造函数。 但是，不支持**xs： duration**的子类型，**包括 xdt： yearMonthDuration 和 xdt： dayTimeDuration**，以及**xs： QName**、 **xs： NMTOKEN**和**xs： NOTATION** 。 倘若它们是直接或间接从以下类型中派生的，则相关联的架构集合中提供的用户定义原子类型也可用。  
   
 #### <a name="supported-base-types"></a>支持的基类型  
@@ -138,7 +139,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  本主题提供了对存储在 AdventureWorks 数据库的各种**xml**类型列中的 xml 实例的 XQuery 示例。  
   
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. 使用 dateTime() XQuery 函数检索以前的产品说明  
- 在此示例中，首先将示例 XML 文档分配给**xml**类型的变量。 本文档包含三个示例`ProductDescription` <> 元素，其中每个元素都包含`DateCreated`一个 <> 子元素。  
+ 在此示例中，首先将示例 XML 文档分配给**xml**类型的变量。 本文档包含三个示例 <`ProductDescription`> 元素，其中每个元素都包含一个 <`DateCreated`> 子元素。  
   
  然后，查询该变量以便仅检索在特定日期之前创建的那些产品说明。 为了进行比较，该查询使用**xs： dateTime （）** 构造函数来键入日期。  
   
@@ -173,7 +174,7 @@ select @x.query('
   
  请注意上述查询的以下方面：  
   
--   用于 .。。WHERE 循环结构用于检索满足 WHERE 子句\<中指定的条件的 ProductDescription> 元素。  
+-   用于 .。。WHERE 循环结构用于检索 \<ProductDescription> 满足 WHERE 子句中指定的条件的元素。  
   
 -   **Datetime （）** 构造函数用于构造**datetime**类型的值，以便可以对它们进行相应的比较。  
   

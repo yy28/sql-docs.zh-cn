@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a0c28420d711fd009dfc2b1e36ef4a613b3ecfaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 489076bed7238f9367eeb8a353da358239673edb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072107"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540729"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>分区（“还原数据库”对话框）（Analysis Services - 多维数据）
   可以使用 **中的** “还原数据库” **对话框上的** “分区” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 页，指定还原本地分区的位置、是否还原远程分区以及在还原远程分区时使用的远程备份文件。  
@@ -63,7 +62,7 @@ ms.locfileid: "66072107"
 |------------|-----------------|  
 |**Cube**|显示包含本地分区的多维数据集的名称。|  
 |**MeasureGroup**|显示包含本地分区的度量值组的名称。|  
-|**依据**|显示本地分区的名称。|  
+|**分区**|显示本地分区的名称。|  
 |**大小(MB)**|显示本地分区的大小 (MB)。|  
 |**原始文件夹**|显示存储本地分区的原始文件夹的名称。|  
 |**还原文件夹**|键入本地分区的还原文件夹的名称，或单击省略号按钮 (**...**) 以显示“查找远程文件夹”**** 对话框，再选择要使用的文件夹的路径。 有关“查找远程文件夹”**** 对话框的详细信息，请参阅[“查找远程文件夹”对话框（Analysis Services - 多维数据）](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)。|  
@@ -78,7 +77,7 @@ ms.locfileid: "66072107"
   
 |列|说明|  
 |------------|-----------------|  
-|**服务器**|显示管理远程分区的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例的名称。|  
+|**Server**|显示管理远程分区的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例的名称。|  
 |**数据源**|显示备份文件中数据源的名称，该数据源代表包含远程分区的数据库。|  
 |**备份文件**|键入要使用的远程备份文件的完整路径和文件名，或单击省略号按钮 (**...**) 以显示“定位数据库文件”**** 对话框，再选择要使用的远程备份文件的路径和文件名。 有关“定位数据库文件”**** 对话框的详细信息，请参阅[“定位数据库文件”对话框（Analysis Services - 多维数据）](locate-database-files-dialog-box-analysis-services-multidimensional-data.md)。|  
 |**...**|单击此按钮可以显示“远程分区 - 高级设置”**** 对话框，以便修改用于还原远程分区的高级选项，例如数据源的连接字符串。 有关“远程分区 - 高级设置”**** 对话框的详细信息，请参阅[对话框（Analysis Services - 多维数据）](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md)。|  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a593c74d-8c5e-485e-bd92-08f9d22451d4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3c2c3d4838d0e21a1520197612dd08c679df843a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8888414e3ceefa237cb4f2317d3d78926765d691
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074343"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546439"
 ---
 # <a name="using-cell-properties-mdx"></a>使用单元属性 (MDX)
   多维表达式 (MDX) 中的单元属性包含有关多维数据源（如多维数据集）中的单元的内容和格式的信息。  
@@ -63,7 +62,7 @@ SELECT [<axis_specification>
 |`UPDATEABLE`|指示单元是否可更新的值。 此属性可以具有下列值之一：<br /><br /> `MD_MASK_ENABLED`（0x00000000）可更新单元。<br /><br /> `MD_MASK_NOT_ENABLED`（0x10000000）无法更新该单元。<br /><br /> `CELL_UPDATE_ENABLED`（0x00000001）可在单元集中更新单元。<br /><br /> `CELL_UPDATE_ENABLED_WITH_UPDATE`（0x00000002）可使用 update 语句更新单元。 如果更新的叶单元未启用写操作，更新可能会失败。<br /><br /> `CELL_UPDATE_NOT_ENABLED_FORMULA`（0x10000001）无法更新单元，因为该单元在其坐标中有一个计算成员;使用 where 子句中的集检索该单元。 即使公式影响单元值或单元值上存在计算单元（在沿聚合路径的某个位置），仍可以更新单元。 在这种情况下，单元的最终值可能不是更新后的值，因为计算将影响结果。<br /><br /> `CELL_UPDATE_NOT_ENABLED_NONSUM_MEASURE`（0x10000002）无法更新单元，因为不能更新非 sum 度量值（计数、最小值、最大值、非重复计数、半累加性）。<br /><br /> `CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE`（0x10000003）无法更新该单元，因为该单元不是位于度量值和与该度量值的度量值组无关的维度成员的交点处。<br /><br /> `CELL_UPDATE_NOT_ENABLED_SECURE`（0x10000005）无法更新单元，因为该单元受保护。<br /><br /> `CELL_UPDATE_NOT_ENABLED_CALCLEVEL`（0x10000006）保留供将来使用。<br /><br /> `CELL_UPDATE_NOT_ENABLED_CANNOTUPDATE`（0x10000007）由于内部原因，无法更新该单元。<br /><br /> `CELL_UPDATE_NOT_ENABLED_INVALIDDIMENSIONTYPE`（0x10000009）无法更新该单元，因为在挖掘模型、间接或数据挖掘维度中不支持更新。|  
 |`VALUE`|单元的未格式化值。|  
   
- 只有 `CELL_ORDINAL`、`FORMATTED_VALUE` 和 `VALUE` 单元属性是必需的。 所有的单元属性（内部单元属性或特定于提供程序的单元属性）都在 `PROPERTIES` 架构行集中进行定义，包括它们的数据类型和提供程序支持。 有关`PROPERTIES`架构行集的详细信息，请参阅[MDSCHEMA_PROPERTIES 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset)。  
+ 只有 `CELL_ORDINAL`、`FORMATTED_VALUE` 和 `VALUE` 单元属性是必需的。 所有的单元属性（内部单元属性或特定于提供程序的单元属性）都在 `PROPERTIES` 架构行集中进行定义，包括它们的数据类型和提供程序支持。 有关 `PROPERTIES` 架构行集的详细信息，请参阅[MDSCHEMA_PROPERTIES 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset)。  
   
  默认情况下，如果未使用 `CELL PROPERTIES` 关键字，返回的单元属性为 `VALUE`、`FORMATTED_VALUE` 和 `CELL_ORDINAL`（按这里显示的顺序）。 如果使用了 `CELL PROPERTIES` 关键字，将只返回用该关键字显式声明的那些单元属性。  
   
@@ -80,7 +79,7 @@ CELL PROPERTIES VALUE, FORMATTED_VALUE, FORMAT_STRING, FORE_COLOR, BACK_COLOR
  对于返回简化格式的行集的 MDX 查询，不返回单元属性；这种情况下，每个单元表现为似乎只返回了 `FORMATTED_VALUE` 单元属性。  
   
 ## <a name="setting-cell-properties"></a>设置单元属性  
- 可以在不同位置设置[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]单元属性。 例如，可以在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]的多维数据集编辑器的“多维数据集结构”选项卡上为常规度量值设置格式字符串属性；可以为在多维数据集编辑器的“计算”选项卡上的多维数据集上定义的计算度量值设置相同属性；在查询的 WITH 子句中定义的计算度量值也具有其在此处定义的格式字符串。以下查询演示了如何在计算的度量值上设置单元属性：  
+ 可以在不同位置设置单元属性 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 。 例如，可以在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]的多维数据集编辑器的“多维数据集结构”选项卡上为常规度量值设置格式字符串属性；可以为在多维数据集编辑器的“计算”选项卡上的多维数据集上定义的计算度量值设置相同属性；在查询的 WITH 子句中定义的计算度量值也具有其在此处定义的格式字符串。以下查询演示了如何在计算的度量值上设置单元属性：  
   
 ```  
 WITH MEMBER MEASURES.CELLPROPERTYDEMO AS [Measures].[Internet Sales Amount]  

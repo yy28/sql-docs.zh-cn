@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 00076475-d687-4376-90f4-6536f17631a0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a3c99733ca6853a2e0a5503868e2270fa6585eae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04b6eb40999ca009184d438e0c0dc514d2c3f009
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083474"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521201"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>挖掘模型查看器任务和操作指南
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的数据挖掘设计器包含几种可用于浏览挖掘模型的工具。 下列主题提供了有关如何完成与使用设计器中的“挖掘模型查看器”**** 选项卡具体相关的任务的分步说明。  

@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6c4f57e12754fc8e32fba8f483a2dfc360d7edc0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4c7a09c9a1c411b639ac1b91027e42899dec158f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073528"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546069"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>多维模型程序集管理
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供了许多用于多维表达式（MDX）和数据挖掘扩展插件（DMX）语言的内部函数，旨在完成从标准统计计算到层次结构中的成员的所有[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]操作。 但是，任何复杂且健壮的产品都需要不断地扩展其功能，本产品也不例外。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了许多用于多维表达式（MDX）和数据挖掘扩展插件（DMX）语言的内部函数，旨在完成从标准统计计算到层次结构中的成员的所有操作。 但是，任何复杂且健壮的产品都需要不断地扩展其功能，本产品也不例外。  
   
  因此，通过 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，您可以将程序集添加到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例或数据库。 使用程序集，您可以使用任何公共语言运行时 (CLR) 语言（如 Microsoft Visual Basic .NET 或 Microsoft Visual C#）来创建用户定义的外部函数。 还可以使用组件对象模型 (COM) 自动化语言，如 Microsoft Visual Basic 或 Microsoft Visual C++。  
   
@@ -105,7 +104,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
 -   如果某个中间 EXECUTE AS 更改了执行上下文，使之不再是原始调用方的上下文，则访问外部资源的尝试将失败。  
   
- `ImpersonationMode` 属性可设置为 `ImpersonateCurrentUser` 或 `ImpersonateAnonymous`。 默认设置 `ImpersonateCurrentUser` 在当前用户的网络登录帐户下运行程序集。 如果使用`ImpersonateAnonymous`设置，则执行上下文对应于服务器上 IUSER_*servername*的 Windows 登录用户帐户。 这是 Internet guest 帐户，在服务器上只有有限的权限。 在此上下文中运行的程序集只能访问本地服务器上的有限资源。  
+ `ImpersonationMode` 属性可设置为 `ImpersonateCurrentUser` 或 `ImpersonateAnonymous`。 默认设置 `ImpersonateCurrentUser` 在当前用户的网络登录帐户下运行程序集。 如果 `ImpersonateAnonymous` 使用设置，则执行上下文对应于服务器上 IUSER_*Servername*的 Windows 登录用户帐户。 这是 Internet guest 帐户，在服务器上只有有限的权限。 在此上下文中运行的程序集只能访问本地服务器上的有限资源。  
   
 ### <a name="application-domains"></a>应用程序域  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 不直接显示应用程序域。 由于一组程序集运行于同一个应用程序域中，因此应用程序域可以在执行期间使用 .NET Framework 中的 `System.Reflection` 命名空间或以其他方式发现彼此，并且可以用后期绑定的方式调用这些程序集。 此类调用将受到基于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 授权的安全性所使用的权限检查的约束。  

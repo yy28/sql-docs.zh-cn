@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bd215a68-1ad7-4046-9c44-ec8e2be13a64
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f5a8508218ed6a2b4407943fe962959e3cd4f97d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 867bd6d1abffb29ec3eb2a8a78e562e5cbcc5b29
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086619"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526343"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>“交叉验证”选项卡（“挖掘准确性图表”视图）
   通过使用交叉验证，可以将挖掘结构分区为交叉部分，并针对每个交叉部分循环定型和测试模型。 您可以指定要将数据划分成多少个折叠，每个折叠反过来会用作测试数据，而其余的数据用于为新模型定型。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 然后为每个模型生成一组标准准确性指标。 通过比较为每个交叉部分生成的模型的指标，可以清楚地了解挖掘模型对于整个数据集的可靠程度。  
@@ -41,7 +40,7 @@ ms.locfileid: "66086619"
   
 -   单击“获取结果”**** 可显示交叉验证的结果。  
   
-## <a name="uielement-list"></a>UIElement 列表  
+## <a name="ui-element-list"></a>UI 元素列表  
  **折叠计数**  
  指定要创建的折叠数或分区数。 最小值是 2，这表示数据集的一半用于测试，另一半用于定型。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "66086619"
   
  如果使用 **0**，则源数据中的所有事例都用于交叉验证。  
   
- 没有默认值。  
+ 无默认值。  
   
 > [!NOTE]  
 >  如果增加事例数，处理时间也会增加。  
@@ -96,7 +95,7 @@ ms.locfileid: "66086619"
   
  例如，假设对特定目标状态进行了三次预测，每次预测的概率分别是 0.05、0.15 和 0.8。 如果将阈值设置为 0.5，则仅有一个预测计为正确。 如果将 **“目标阈值”** **** 设置为 0.10，则两个预测将计为正确。  
   
- 如果将 "**目标****阈值**" `null`设置为（默认值），则每个事例的最可能预测将计为正确。 在上面的示例中，0.05、0.15 和 0.8 是三个不同事例中的预测概率。 虽然概率差别较大，但每个预测都记为正确，因为每个事例只生成一个预测，而这些预测是这些事例的最佳预测。  
+ 如果将 "**目标****阈值**" 设置为 `null` （默认值），则每个事例的最可能预测将计为正确。 在上面的示例中，0.05、0.15 和 0.8 是三个不同事例中的预测概率。 虽然概率差别较大，但每个预测都记为正确，因为每个事例只生成一个预测，而这些预测是这些事例的最佳预测。  
   
 ## <a name="see-also"></a>另请参阅  
  [测试和验证 &#40;数据挖掘&#41;](data-mining/testing-and-validation-data-mining.md)   

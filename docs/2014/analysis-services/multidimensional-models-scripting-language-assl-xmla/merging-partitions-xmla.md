@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f09255372478bdb9956b64283c8b94477598239
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65840066d3e95571db511a2015a1bee64aa8d922
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702047"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544949"
 ---
 # <a name="merging-partitions-xmla"></a>合并分区 (XMLA)
   如果分区具有相同的聚合设计和结构，则可以使用 XML for Analysis （XMLA）中的[MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla)命令合并分区。 合并分区是将在管理分区时执行的一项重要操作，特别是那些包含按日期分区的历史数据的分区。  
@@ -34,7 +33,7 @@ ms.locfileid: "62702047"
  这两个分区使用不同的存储设置，但使用相同的聚合设计。 除了在年末处理所有年度的历史数据的多维数据集，还可以使用 `MergePartitions` 命令将当年的分区合并到以往年度的分区。 这样将保留聚合数据，而不需要对多维数据集进行潜在耗时的完全处理。  
   
 ## <a name="specifying-partitions-to-merge"></a>指定要合并的分区  
- 运行该`MergePartitions`命令时，将在[source](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla)属性中指定的源分区中存储的聚合数据添加到[目标](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla)属性中指定的目标分区。  
+ 运行该 `MergePartitions` 命令时，将在[source](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla)属性中指定的源分区中存储的聚合数据添加到[目标](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla)属性中指定的目标分区。  
   
 > [!NOTE]  
 >  `Source` 属性可包含多个分区对象引用。 但是，`Target` 属性则没有此功能。  
@@ -46,7 +45,7 @@ ms.locfileid: "62702047"
 ## <a name="examples"></a>示例  
   
 ### <a name="description"></a>说明  
- 下面的示例将**艾德公司 DW**示例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库中的 "**客户计数**"**度量**值组中的所有分区合并到**Customers_2004**分区。  
+ 下面的示例将**艾德公司 DW**示例数据库中的 "**客户计数**"**度量**值组中的所有分区合并 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 到**Customers_2004**分区。  
   
 ### <a name="code"></a>代码  
   

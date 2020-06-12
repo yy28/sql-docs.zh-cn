@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3efce85f27db9d0695ea56e9940ab563ed40537a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 626211f974b41ce44655d0b79cf82eb9cb8373ab
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074959"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546659"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>授予维度的权限 (Analysis Services)
   维度安全用于设置维度对象（而非其数据）的权限。 通常，允许或拒绝访问处理操作是在设置维度权限时的主要目标。  
@@ -45,7 +44,7 @@ ms.locfileid: "66074959"
 ## <a name="set-permissions-on-a-database-dimension"></a>设置数据库维度权限  
  数据库维度是数据库内的独立对象，允许在相同模型内重复使用维度。 请考虑在模型中多次使用的“日期”数据库维度，如 Order Date、Ship Date 和 Due Date 多维数据集维度。 因为多维数据集维度和数据库维度为数据库中的同等对象，所以可以独立设置每个对象的处理权限。  
   
-1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到实例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，在对象资源管理器中展开相应数据库的 "**角色**"，然后单击某个数据库角色（或创建一个新的数据库角色）。  
+1.  在中 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，连接到实例 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，在对象资源管理器中展开相应数据库的 "**角色**"，然后单击某个数据库角色（或创建一个新的数据库角色）。  
   
 2.  在“维度” **** 窗格中，维度集应该设置为“所有数据库维度” ****。  
   
@@ -58,9 +57,9 @@ ms.locfileid: "66074959"
 ## <a name="set-permissions-on-a-cube-dimension"></a>设置多维数据集维度权限  
  多维数据集维度是已添加到多维数据集的数据库维度。 因此，其在结构上依赖于关联的度量值组。 虽然可以在授权方面自动处理这些对象，但将多维数据集和多维数据集维度作为一个整体才有意义。  
   
-1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到实例[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，在对象资源管理器中展开相应数据库的 "**角色**"，然后单击某个数据库角色（或创建一个新的数据库角色）。  
+1.  在中 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，连接到实例 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，在对象资源管理器中展开相应数据库的 "**角色**"，然后单击某个数据库角色（或创建一个新的数据库角色）。  
   
-2.  在 "**维度**" 窗格中，将维度集\<更改为 cube-name>**多维数据集维度**。  
+2.  在 "**维度**" 窗格中，将维度集更改为 " \<cube-name> **多维数据集维度**"。  
   
      默认情况下，权限继承自相应的数据库维度。 清除“继承”复选框，将权限从“读取”更改为“读/写”************。 在使用“读/写”权限之前****，请务必阅读上一节中的备注。  
   

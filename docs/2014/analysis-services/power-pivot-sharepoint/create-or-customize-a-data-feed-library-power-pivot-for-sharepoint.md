@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 853798cd1e78757684d16f7b964787dfa13d208a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0b67fffa3bac581382112d9c37fb84c31ea5a5ab
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175636"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540490"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>创建或自定义数据馈送库 (PowerPivot for SharePoint)
   *数据馈送库* 是一种特殊用途的 SharePoint 库，允许注册和共享 Atom 数据服务文档 (.atomsvc)。 这些文档向 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿或支持 Atom 数据馈送格式的其他客户端应用程序提供 XML 数据馈送。 数据馈送库与其他 SharePoint 库不同，因为它使你能够：
@@ -39,7 +38,7 @@ ms.locfileid: "78175636"
 
  [向任何库添加数据馈送内容类型](#addtolib)
 
-##  <a name="prerequisites"></a><a name="prereq"></a>先决条件
+##  <a name="prerequisites"></a><a name="prereq"></a> 先决条件
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能集成。 如果数据源库模板类型不可用，最可能的原因就是未满足此先决条件。 有关详细信息，请参阅[在管理中心为网站集激活 PowerPivot 功能集成](activate-power-pivot-integration-for-site-collections-in-ca.md)。
 
  您必须是网站所有者才能创建该库。
@@ -57,7 +56,7 @@ ms.locfileid: "78175636"
 
 4.  键入名称、说明、启动和版本首选项。 包含说明性信息，以帮助用户将此库识别为用于数据服务文档的存储。
 
-5.  单击“创建”。 
+5.  单击“创建”。
 
  当前网站的导航“快速启动”窗格中将显示指向数据馈送库的链接。
 
@@ -76,7 +75,7 @@ ms.locfileid: "78175636"
 
 2.  在 SharePoint 功能区的“库工具”中，单击 **“库”**。
 
-3.  单击“设置”  。
+3.  单击“设置”。
 
 4.  单击 **“库设置”**。
 
@@ -84,7 +83,7 @@ ms.locfileid: "78175636"
 
 6.  在“内容类型”的“允许内容类型的管理?”部分中， 单击 **“是”**。
 
-7.  单击“确定”。 
+7.  单击“确定”。
 
 #### <a name="step-2-add-the-data-service-document-content-type"></a>步骤 2：添加数据服务文档内容类型
 
@@ -96,7 +95,7 @@ ms.locfileid: "78175636"
 
 4.  在“可用网站内容类型”中，单击 **“数据服务文档”**，然后单击 **“添加”** 将所选内容类型移至“要添加的内容类型”列表中。
 
-5.  单击“确定”。 
+5.  单击“确定”。
 
 #### <a name="step-3-verify-data-service-document-configuration"></a>步骤 3：验证数据服务文档配置
 

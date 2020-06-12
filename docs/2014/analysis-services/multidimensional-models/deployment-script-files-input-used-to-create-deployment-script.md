@@ -17,29 +17,28 @@ helpviewer_keywords:
 ms.assetid: 20e080cd-6a0e-4591-b022-ea4cd3638e36
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dec93494dd21412c067af293832066087ca3ed37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2eb377b29ef798b4cbdd02666b866c52eb8f8599
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075405"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546869"
 ---
 # <a name="understanding-the-input-files-used-to-create-the-deployment-script"></a>了解用于创建部署脚本的输入文件
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]生成[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目时， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]将为该项目生成 XML 文件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 将这些 XML 文件放在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的输出文件夹中。 默认情况下，输出将输出到 \Bin 文件夹之中。 下表列出了 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 创建的 XML 文件。  
+  生成 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目时， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 将为该项目生成 XML 文件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 将这些 XML 文件放在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的输出文件夹中。 默认情况下，输出将输出到 \Bin 文件夹之中。 下表列出了 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 创建的 XML 文件。  
   
 |XMLA 文件|说明|  
 |---------------|-----------------|  
-|\<*项目名称*>. .asdatabase|包含项目中所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的声明性定义。|  
-|\<*项目名称*>. .deploymenttargets|包含将在其中创建 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例和数据库的名称。|  
-|\<*项目名称*>. .configsettings|包含特定于环境的设置，如数据源连接信息和对象存储位置。 此文件中的设置将覆盖\<*项目名称*> .asdatabase 文件中的设置。|  
-|\<*项目名称*>. d|包含部署选项，例如部署是否是事务性的，以及是否在部署后处理已部署的对象。|  
+|\<*project name*>。 .asdatabase|包含项目中所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的声明性定义。|  
+|\<*project name*>。 .deploymenttargets|包含将在其中创建 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例和数据库的名称。|  
+|\<*project name*>。 .configsettings|包含特定于环境的设置，如数据源连接信息和对象存储位置。 此文件中的设置将替代 .asdatabase 文件中的设置 \<*project name*> 。|  
+|\<*project name*>。 d|包含部署选项，例如部署是否是事务性的，以及是否在部署后处理已部署的对象。|  
   
 > [!NOTE]  
 >  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 从不在其项目文件中存储密码。  
   
 ## <a name="modifying-the-input-files"></a>修改输入文件  
- 修改输入文件中的值，或从输入文件中检索的值，就可以更改部署目标、配置设置和部署选项，而无需编辑整个\<*项目名称*> .asdatabase 文件（如果是从现有[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库生成脚本，则为整个 XMLA 脚本文件）。 能够修改各个文件使您可以轻松地创建用于不同用途的不同部署脚本。  
+ 如果修改输入文件中的值或从输入文件中检索的值，则可以更改部署目标、配置设置和部署选项，而无需编辑整个 \<*project name*> .asdatabase 文件（如果从现有数据库生成脚本，则可以更改整个 XMLA 脚本文件 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ）。 能够修改各个文件使您可以轻松地创建用于不同用途的不同部署脚本。  
   
  以下主题解释了如何修改各个输入文件中的值：  
   

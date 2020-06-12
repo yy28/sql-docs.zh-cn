@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e02836e5-dd8c-4c97-a078-840ae79d3660
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 73a3058b0e7836c96f15e876f5cf4b5f2cf8bedc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 759830666c3da1faa8deccb754fc2955b47e5bd7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085353"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523713"
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>使用预测查询生成器创建预测查询
   可在 BI Development Studio 中生成数据挖掘解决方案时创建预测查询，或在 SQL Server Management Studio 中右键单击现有挖掘模型，然后选择“生成预测查询”**** 选项以创建预测查询。  
@@ -33,7 +32,7 @@ ms.locfileid: "66085353"
   
  利用 **“设计”** 模式，您可生成预测查询，方式为选择输入数据，将数据映射到模型中，然后将预测函数添加到使用网格生成的语句中。 设计网格包含以下生成块：  
   
- **源**  
+ **Source**  
  选择新列的源。 您可使用挖掘模型中的列、数据源视图中包含的输入表、预测函数或自定义表达式。  
   
  **字段**  

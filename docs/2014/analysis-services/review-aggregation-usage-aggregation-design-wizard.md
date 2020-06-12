@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 107ee872-3df2-4931-b56c-af11e38f6745
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f52ec05ddadc6bb23968f6b5f8ee7fda9adc65a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a248721ee64ff815c1b5b73a81d3b29fc5d2b84
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070222"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547399"
 ---
 # <a name="review-aggregation-usage-aggregation-design-wizard"></a>查看聚合使用情况（聚合设计向导）
   可以使用 **“查看聚合使用情况”** 页配置聚合使用情况设置。  
   
 ## <a name="options"></a>选项  
- **缺省值**  
+ **默认**  
  选择此选项可以将属性的聚合使用情况设置设置为默认设置。 通过使用此设置，设计器可以根据属性和维度的类型应用默认规则。  
   
  `Full`  
