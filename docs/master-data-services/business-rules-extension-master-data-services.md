@@ -1,5 +1,6 @@
 ---
 title: 业务规则扩展
+description: 您可以将用户定义的 SQL 脚本作为 Master Data Services 中预定义的业务规则条件和操作的扩展。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 24df0fcbece66a86786550e81f3e385d6454f4b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4a8a5215438a7cbed7796c5b9afaae5f8d59db9a
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728685"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796528"
 ---
 # <a name="business-rules-extension-master-data-services"></a>业务规则扩展 (Master Data Services)
 
@@ -91,7 +92,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 5.  从“成员类型” **** 下拉列表中，选择要应用业务规则的成员类型。  
   
-6.  单击 **“添加”** 。  
+6.  单击“添加”。  
   
 7.  执行以下操作以将用户定义脚本创建为条件。  
   
@@ -103,7 +104,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     4.  向每个参数赋值  
   
-    5.  单击“保存”  。  
+    5.  单击 **“保存”** 。  
   
 8.  执行以下操作以将用户定义脚本用作操作。  
   
@@ -111,7 +112,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     2.  从“运算符”下拉列表中，选择“用户定义脚本”下的用户定义函数。********  
   
-    3.  单击“保存”  。  
+    3.  单击 **“保存”** 。  
   
 ## <a name="see-also"></a>另请参阅  
  [业务规则 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   

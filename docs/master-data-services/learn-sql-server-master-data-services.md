@@ -1,5 +1,6 @@
 ---
 title: 了解 SQL Server Master Data Services
+description: 通过自控进度的培训、视频、示例和 SQL Server 认证，浏览 SQL Server 2019 Master Data Services 的特性和功能。
 ms.custom: ''
 ms.date: 02/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ keywords:
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a98dd5e9ac6c3f343e0d91edbb3137e5d1c01c5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1143636402af33512a65d7057f7acccdf455b034
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487861"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796615"
 ---
 # <a name="learn-sql-server-master-data-services"></a>了解 SQL Server Master Data Services
 
@@ -26,8 +27,8 @@ ms.locfileid: "81487861"
   
   
 ## <a name="training"></a>培训  
-* 若要探索中[!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]引入的新特性和功能，请尝试执行[自进度实验室](https://www.microsoft.com/handsonlabs/selfpacedlabs)（需要使用你的 Microsoft 帐户登录）。  
-* 若要开发[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]解决方案来存储和管理地理数据的主列表（使用 Excel 外接程序和[!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]），请尝试执行自控进度的[实验室](https://www.microsoft.com/handsonlabs/selfpacedlabs)。 你将创建实体和层次结构，并使用 [!INCLUDE[ssIS_md](../includes/ssis-md.md)] 来填充维度表。  
+* 若要探索中引入的新特性和功能 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] ，请尝试执行[自进度实验室](https://www.microsoft.com/handsonlabs/selfpacedlabs)（需要使用你的 Microsoft 帐户登录）。  
+* 若要开发 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 解决方案来存储和管理地理数据的主列表（使用 Excel 外接程序和 [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)] ），请尝试执行自控[进度的实验室](https://www.microsoft.com/handsonlabs/selfpacedlabs)。 你将创建实体和层次结构，并使用 [!INCLUDE[ssIS_md](../includes/ssis-md.md)] 来填充维度表。  
   
 ## <a name="videos"></a>视频  
 * 若要了解 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 版本 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]中的新功能，请 [**观看此视频**](https://www.youtube.com/watch?v=cKA72FpOVxI)。  

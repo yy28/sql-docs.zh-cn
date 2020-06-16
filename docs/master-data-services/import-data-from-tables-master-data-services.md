@@ -1,5 +1,6 @@
 ---
 title: 从表导入数据
+description: 批量导入表中的数据，并对模型进行数据更改。 使用此过程在 Master Data Services 数据库中添加、更新和删除数据。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 08cb402143cd5290d0f228d2dcab242c3139408a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6e10a3facdec9b5b412b1c9b93396d2d0a94886e
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729244"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796301"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>从表导入数据 (Master Data Services)
 
@@ -25,9 +26,9 @@ ms.locfileid: "73729244"
   
  **先决条件**  
   
--   必须有权将数据插入到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中的 stg. \<name>_Leaf、stg. \<name>_Consolidated、stg. \<name>_Relationship 表。  
+-   您必须有权将数据插入 stg.<name。 \<name>_Leaf stg.<name。 \<name>_Consolidated stg.<name。 \<name>数据库中的 _Relationship 表 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 。  
   
--   必须有权执行 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中的 stg.udp_\<name>_Leaf、stg.udp\_\<name>_Consolidated 或 \_\<name>_Relationship 存储过程。  
+-   您必须具有 \<name> 在数据库中执行 udp_ stg.<name _Leaf、stg.<name \_ \<name> _Consolidated 或 stg.<name \_ \<name> _Relationship 存储过程 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 的权限。  
   
 -   模型的状态不能是“已提交” ****。  
   
@@ -35,11 +36,11 @@ ms.locfileid: "73729244"
   
 1.  准备要导入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中相应临时表的成员，包括必需字段的提供值。 有关临时表的概述，请参阅[概述：导入表中数据 (Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)。  
   
-    -   叶成员的表为 stg.\<name>_Leaf，其中 \<name> 指代相应的实体。 有关所需字段的信息，请参阅[叶成员临时表 (Master Data Services)](../master-data-services/leaf-member-staging-table-master-data-services.md)  
+    -   对于叶成员，表是 stg.<name。 \<name>_Leaf，其中 \<name> 指对应的实体。 有关所需字段的信息，请参阅[叶成员临时表 (Master Data Services)](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   
-    -   合并成员的表为 stg.\<name>_Consolidated。 有关所需字段的信息，请参阅[合并成员临时表 (Master Data Services)](../master-data-services/consolidated-member-staging-table-master-data-services.md)。  
+    -   对于合并成员，表是 stg.<name。 \<name>_Consolidated。 有关所需字段的信息，请参阅[合并成员临时表 (Master Data Services)](../master-data-services/consolidated-member-staging-table-master-data-services.md)。  
   
-    -   用于移动显式层次结构中成员的位置的表为 stg.\<name>_Relationship。 有关所需字段的信息，请参阅[关系临时表 (Master Data Services)](../master-data-services/relationship-staging-table-master-data-services.md)。  
+    -   为了移动显式层次结构中成员的位置，表是 stg.<name。 \<name>_Relationship。 有关所需字段的信息，请参阅[关系临时表 (Master Data Services)](../master-data-services/relationship-staging-table-master-data-services.md)。  
   
          有关移动显式层次结构中成员的概述，请参阅[概述：导入表中数据 (Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)。  
   

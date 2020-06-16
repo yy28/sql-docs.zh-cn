@@ -1,5 +1,6 @@
 ---
 title: 实体
+description: 实体是 Master Data Services 模型中包含的对象。 每个实体都包含成员，它们是您管理的主数据的行。
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9326cafa216ad11e7b7a818d34fe035220402c33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b3f7a2645af68f6470aa971feef46fa103556a0
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728153"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796312"
 ---
 # <a name="entities-master-data-services"></a>实体 (Master Data Services)
 

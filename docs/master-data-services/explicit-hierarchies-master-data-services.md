@@ -1,5 +1,6 @@
 ---
 title: 显式层次结构
+description: 使用显式层次结构，以任意方式组织来自 Master Data Services 实体的成员，而不是基于基于域的属性关系。
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b80665b6a3b3167b362be7912c70f81ce2add2ef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0221cb07a1b50c0d30ec9314b13070c21ac60048
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729255"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796295"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>显式层次结构 (Master Data Services)
 

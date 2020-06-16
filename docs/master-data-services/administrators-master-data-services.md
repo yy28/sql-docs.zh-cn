@@ -1,5 +1,6 @@
 ---
 title: 管理员
+description: 了解 Master Data Services 中的管理员类型：模型管理员、实体管理员和超级用户。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 056975a05f697851d1fc0eac773c917c1f22b738
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1a4393881b05c21a690c06bfa39fd2114da0b18
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729801"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796571"
 ---
 # <a name="administrators-master-data-services"></a>管理员 (Master Data Services)
 
@@ -28,7 +29,7 @@ ms.locfileid: "73729801"
   本文介绍 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中的管理员类型：模型管理员、实体管理员和超级用户。  
   
 ## <a name="model-administrators"></a>模型管理员  
- 在[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，模型管理员是对 "**模型对象**" 选项卡上的顶级模型对象拥有 "**管理员**" 权限的用户。当用户对特定模型具有管理员权限时，该模型的子对象上的任何其他权限（模型对象和成员权限）都将被模型**管理员**权限超越并有效地忽略。  
+ 在中 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ，模型管理员是对 "**模型对象**" 选项卡上的顶级模型对象拥有 "**管理员**" 权限的用户。当用户对特定模型具有管理员权限时，该模型的子对象上的任何其他权限（模型对象和成员权限）都将被模型**管理员**权限超越并有效地忽略。  
   
 -   如果用户具有对 **“资源管理器”** 功能区域的访问权限，此用户可以添加、删除和更新此区域中的所有主数据。  
   
@@ -39,7 +40,7 @@ ms.locfileid: "73729801"
  可以在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中或通过编程方式将用户配置为模型管理员。 有关详细信息，请参阅 [创建模型管理员 (Master Data Services)](../master-data-services/create-a-model-administrator-master-data-services.md)。  
   
 ## <a name="entity-administrators"></a>实体管理员  
- 在[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，实体管理员是对 "模型对象" 选项卡上的实体对象具有 "管理员" 权限的用户。当用户对实体具有管理员权限时，该实体子对象上的任何其他权限（模型对象和成员权限）都将被管理员权限取代，并将被忽略。  
+ 在中 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ，实体管理员是对 "模型对象" 选项卡上的实体对象具有 "管理员" 权限的用户。当用户对实体具有管理员权限时，该实体子对象上的任何其他权限（模型对象和成员权限）都将被管理员权限取代，并将被忽略。  
   
 -   如果用户具有对 **“资源管理器”** 功能区域的访问权限，此用户可以添加、删除和更新此区域中的所有主数据。  
   

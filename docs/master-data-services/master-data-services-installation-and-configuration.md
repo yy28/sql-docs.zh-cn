@@ -1,5 +1,6 @@
 ---
 title: 安装和配置
+description: 了解如何在 Windows Server 2012 R2 计算机上安装 Master Data Services，配置 MDS 数据库和网站，以及部署示例模型和数据。
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 60ee313b41a3882c07c98dce08382a98fec9c962
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f9a0a43bb913437e4818c46fc81c0794019639c7
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289775"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796278"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 的安装和配置
 
@@ -34,7 +35,7 @@ ms.locfileid: "79289775"
 有关可帮助你了解 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]的视频以及其他培训资源的链接，请参阅 [了解 Master Data Services](../master-data-services/learn-sql-server-master-data-services.md)。 
   
 > **下载**  
-> -     若要下载 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，请转到  **[评估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**。  
+> -   若要下载 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，请转到  **[评估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** 。  
 > -   已经拥有 Azure 帐户？  然后转到[此处](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)，启动已安装 SQL Server 的虚拟机****。  
 > 
 > **无法创建 MDS 网站？**
@@ -46,7 +47,7 @@ ms.locfileid: "79289775"
 - 在使用 Web 应用程序时，Silverlight 5 必须安装在客户端计算机上。 如果不具有所需版本的 Silverlight，则在导航到需要 Silverlight 的 Web 应用程序区域时，系统将提示安装 Silverlight。 可以从[此处](https://www.microsoft.com/silverlight/)安装 Silverlight 5****。
 
 ## <a name="ssmdsshort_md-on-an-azure-virtual-machine"></a>Azure 虚拟机上的 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
-默认情况下，当你使用[!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)]已安装的创建 Azure 虚拟机时， [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]还将安装。 
+默认情况下，当你使用已安装的创建 Azure 虚拟机时 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] ， [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 还将安装。 
 
 下一步是安装 Internet 信息服务 (IIS)。 请参阅[安装和配置 IIS](#InstallIIS) 部分。 
 
@@ -131,21 +132,21 @@ ms.locfileid: "79289775"
 
     >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]添加对 SQL Server 托管实例的支持。 将**SQL Server 实例**的值设置为 Azure SQL 数据库托管实例的主机。 例如，`xxxxxx.xxxxxx.database.windows.net` 。
 
-4. 选择**身份验证类型**，然后单击 "**测试连接**" 以确认你可以使用所选身份验证类型的凭据连接到数据库。 单击“下一步”。 
+4. 选择**身份验证类型**，然后单击 "**测试连接**" 以确认你可以使用所选身份验证类型的凭据连接到数据库。 单击“下一步”。
 
-    >对于[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]，若要连接到 Azure SQL 数据库托管实例，请使用以下身份验证类型之一：
+    >对于 [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] ，若要连接到 AZURE SQL 数据库托管实例，请使用以下身份验证类型之一：
     >
     >- Azure Active Directory 集成身份验证：**当前用户– Active Directory 集成**
     >- SQL Server 身份验证： **SQL Server 帐户**。
     >
-    >在 Azure SQL 数据库托管实例中，用户必须是`sysadmin`固定服务器角色的成员。
+    >在 Azure SQL 数据库托管实例中，用户必须是 `sysadmin` 固定服务器角色的成员。
 
     > [!NOTE]  
     >  选择“当前用户 - 集成安全性”作为身份验证类型时，“用户名”框为只读，并且显示登录到计算机的 Windows 用户帐户的名称********。 如果在 Azure 虚拟计算机 (VM) 上运行 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]，“用户名”框显示 VM 名称以及该 VM 上本地管理员帐户的用户名****。 
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
-4.  在“数据库名称”**** 字段中键入名称。 （可选）若要选择 Windows 排序规则，请清除“SQL Server 默认排序规则”复选框，单击一个或多个可用选项，如“区分大小写”********。 单击“下一步”。 
+4.  在“数据库名称”**** 字段中键入名称。 （可选）若要选择 Windows 排序规则，请清除“SQL Server 默认排序规则”复选框，单击一个或多个可用选项，如“区分大小写”********。 单击“下一步”。
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   
@@ -155,7 +156,7 @@ ms.locfileid: "79289775"
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_AdminPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-adminpage.png)  
   
-6.  单击 "**下一步**" 查看[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]数据库的设置摘要，然后再次单击 "**下一步**" 以创建数据库。 出现“进度和完成”页****。
+6.  单击 "**下一步**" 查看数据库的设置摘要 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ，然后再次单击 "**下一步**" 以创建数据库。 出现“进度和完成”页****。
 
 7. 创建和配置数据库后，单击“完成”****。  
   
@@ -203,7 +204,7 @@ ms.locfileid: "79289775"
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. 单击“应用”  。 显示“配置完成”消息框****。 在消息框中单击“确定”，启动 Web 应用程序****。 网站地址为 "https://*server 名称*/*web 应用程序*/"。 
+15. 单击“应用” 。 显示“配置完成”消息框****。 在消息框中单击“确定”，启动 Web 应用程序****。 网站地址为 "https://*server 名称* / *web 应用程序*/"。 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
@@ -281,13 +282,13 @@ ms.locfileid: "79289775"
   
     1.  导航到你设置的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 网站。 请参阅 [设置数据库和网站](#SetUpWeb) 部分。  
   
-         网站地址为 "https://*server 名称*/*web 应用程序*/"。  
+         网站地址为 "https://*server 名称* / *web 应用程序*/"。  
   
     2.  从“模型”**** 列表框中选择模型，然后单击“资源管理器”****。  
   
          ![MDS 网站、主页。](../master-data-services/media/mds-mdswebsite-homepage-selectsamplemodel.png "MDS 网站、主页。")  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
  为你的数据创建一个新的模型和实体。 请参阅[创建模型 (Master Data Services)](../master-data-services/create-a-model-master-data-services.md) 和[创建实体 (Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)。  
   
  有关如何使用模型和实体为 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中的数据生成结构的概述，请参阅 [Master Data Services 概述 (MDS)](../master-data-services/master-data-services-overview-mds.md)  

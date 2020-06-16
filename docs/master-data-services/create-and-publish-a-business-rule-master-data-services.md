@@ -1,5 +1,6 @@
 ---
 title: 创建和发布业务规则
+description: 了解如何在 Master Data Services 中创建业务规则，以确保主数据的准确性。 创建规则后，将其发布以应用规则。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e8deee97bd80404df5851f0845aa02b51bfe0cfc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2dfc03bc292d7c39024116eca9cf49a5179a5b7c
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729451"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796390"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>创建和发布业务规则 (Master Data Services)
 
@@ -45,7 +46,7 @@ ms.locfileid: "73729451"
   
 5.  从“成员类型” **** 下拉列表中，选择要应用业务规则的成员类型。  
   
-6.  单击 **“添加”** 。  
+6.  单击“添加”。  
   
 7.  在“名称” **** 框中，键入业务规则的名称。  
   
@@ -79,7 +80,7 @@ ms.locfileid: "73729451"
   
 19. 填写所有必填字段。  
   
-20. 单击“保存”  。 此时，系统会在“Then” **** 网格中新添加一行。  
+20. 单击 **“保存”** 。 此时，系统会在“Then” **** 网格中新添加一行。  
   
 21. （可选）若要添加“Else” **** 操作，请完成以下步骤。  
   
@@ -91,9 +92,9 @@ ms.locfileid: "73729451"
   
     4.  填写所有必填字段。  
   
-    5.  单击“保存”  。 此时，系统会在“Else” **** 网格中新添加一行。  
+    5.  单击 **“保存”** 。 此时，系统会在“Else” **** 网格中新添加一行。  
   
-22. 单击“保存”  。 此时，系统会在业务规则网格中新添加一行。  
+22. 单击 **“保存”** 。 此时，系统会在业务规则网格中新添加一行。  
   
 23. 单击“全部发布” ****。  
   

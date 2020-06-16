@@ -1,5 +1,6 @@
 ---
 title: 主数据管理器 Web 应用程序
+description: 了解如何使用主数据管理器 web 应用程序对 Master Data Services 执行管理任务。
 ms.custom: ''
 ms.date: 12/20/2016
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cc881f7d3b232e8d2ae31041fd990e833acac901
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ce1a7470b6304b924f3fcc7ae0fcec70b08b634
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729087"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796572"
 ---
 # <a name="master-data-manager-web-application"></a>主数据管理器 Web 应用程序
 
@@ -24,7 +25,7 @@ ms.locfileid: "73729087"
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序主要由管理员用于执行管理任务。 例如，只有管理员才能创建模型、业务规则或数据版本。 有关管理员的详细信息，请参阅[管理员 (Master Data Services)](../master-data-services/administrators-master-data-services.md)。  
   
 > [!IMPORTANT]
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]仅适用于 Internet EXPLORER （IE）9或更高版本。 IE 8 及早期版本、Microsoft Edge 和 Chrome 均不受支持。  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]仅适用于 Internet Explorer （IE）9或更高版本。 IE 8 及早期版本、Microsoft Edge 和 Chrome 均不受支持。  
 > 
 > **无法创建 MDS 网站？**
 > >请查看此 Microsoft 支持文章以获取有关如何解决此问题的说明。

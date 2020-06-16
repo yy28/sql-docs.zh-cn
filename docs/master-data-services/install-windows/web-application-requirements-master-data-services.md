@@ -1,5 +1,6 @@
 ---
 title: Web 应用程序要求
+description: 了解安装和运行 Internet Information Services 承载 Master Data Services web 应用程序的要求。
 ms.custom: ''
 ms.date: 02/13/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ keywords:
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 851452cd5170abb6328210ecb35bd95b2bb951a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6e5e80c3e4e9437efa41b43e7bf6469d06432745
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728086"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796261"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web 应用程序要求 (Master Data Services)
 

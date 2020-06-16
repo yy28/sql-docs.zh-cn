@@ -1,5 +1,6 @@
 ---
 title: 业务规则操作
+description: 在 Master Data Services 中，业务规则会导致操作。 了解默认值操作、更改值操作、验证操作和外部操作。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3aa704289844143dc07f63a384269a1ff45f31b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: adb0a6798291148cc03c7e9a0a80ca8a59f3952f
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729733"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796542"
 ---
 # <a name="business-rule-actions-master-data-services"></a>业务规则操作 (Master Data Services)
 
@@ -50,7 +51,7 @@ ms.locfileid: "73729733"
   
 |验证名称|说明|  
 |---------------------|-----------------|  
-|**必需**|所选属性是 **“必需”** 的，这意味着它不能为 Null 或为空。<br /><br /> 此操作对文本、数字、日期和链接值有效。|  
+|**是必需的**|所选属性是 **“必需”** 的，这意味着它不能为 Null 或为空。<br /><br /> 此操作对文本、数字、日期和链接值有效。|  
 |**无效**|所选属性 **“无效”**。<br /><br /> 此操作对文本、数字、日期和链接值有效。|  
 |**必须包含模式**|所选属性 **必须包含指定的模式** 。 使用 .NET Framework 正则表达式可以指定模式。<br /><br /> 有关正则表达式的详细信息，请参阅 MSDN Library 中的[正则表达式语言元素](https://go.microsoft.com/fwlink/?LinkId=164401)。<br /><br /> 此操作对文本和链接值有效。|  
 |**必须是唯一的**|所选属性 **“必须是唯一的”** ，无论它们是独立的，还是与其他定义属性组合。<br /><br /> **最佳实践：** 将此操作与必需条件相结合，以确保订阅系统中索引字段的有效性。<br /><br /> 此操作对文本、数字、日期和链接值有效。<br /><br /> **注意**：如果第一个属性的类型为 DateTime，则不能将其与 Numeric 属性或 Text 属性类型结合使用。 如果第一个属性的类型为 Numeric，则不能将其与 DateTime 类型的属性结合使用。|  
