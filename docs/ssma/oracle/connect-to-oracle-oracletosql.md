@@ -1,7 +1,7 @@
 ---
 title: 连接到 Oracle （OracleToSQL） |Microsoft Docs
 description: 了解如何使用 SSMA for Oracle 连接到 Oracle 数据库以开始迁移。 使用 "连接到 Oracle" 对话框。
-authors: nahk-ivanov
+author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
 ms.author: alexiva
-ms.openlocfilehash: 1c69ace09cccd3d87017fef5bae86e3c03a60ad8
-ms.sourcegitcommit: 38639b67a135ca1a50a8e38fa61a089efe90e3f1
+ms.openlocfilehash: 497c3df711c2cfacbb2774edf791e4c36837bb87
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454520"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779039"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>连接到 Oracle （OracleToSQL）
 

@@ -1,5 +1,6 @@
 ---
 title: 选择网络协议 |Microsoft Docs
+description: 比较和对比可用于连接到 SQL Server 数据库引擎的网络协议，如共享内存、TCP/IP 和命名管道。
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,12 +24,12 @@ ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9046541411d472c7fe557cfad78ca903107513ab
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 0b1212117f5428da0a2b1a8e01232a2b97e5cc12
+ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001082"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716694"
 ---
 # <a name="choosing-a-network-protocol"></a>选择网络协议
   若要连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，必须启用网络协议。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以同时对多个协议的请求进行服务。 客户端用单个协议连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果客户端程序不知道 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在侦听哪个协议，可以配置客户端按顺序尝试多个协议。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器启用、禁用以及配置网络协议。  

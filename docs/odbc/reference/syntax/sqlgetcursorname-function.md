@@ -1,7 +1,7 @@
 ---
 title: SQLGetCursorName 函数 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 06/12/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d3ac65dc07897ddc789ee03b06b1bc1f71d37c3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 413b1a6982a5411d9af204a54536c4778b5593b9
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285545"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779059"
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName 函数
 **度**  
@@ -54,10 +54,10 @@ SQLRETURN SQLGetCursorName(
  如果*CursorName*为 NULL，则*NameLengthPtr*仍将返回可用于在*CursorName*所指向的缓冲区中返回的字符总数（字符数据的 NULL 终止字符除外）。  
   
  *BufferLength*  
- 送\* *CursorName*的长度，以字符为长度。 如果* \*CursorName*中的值是 Unicode 字符串（在调用**SQLGetCursorNameW**时），则*BufferLength*参数必须是偶数。  
+ 送\* *CursorName*的长度，以字符为长度。 
   
  *NameLengthPtr*  
- 输出一个指向内存的指针，将在此内存中返回可在\* *CursorName*中返回的字符总数（不包括 null 终止字符）。 如果可返回的字符数大于或等于*BufferLength*，则\* *CursorName*中的游标名称将被截断为*BufferLength*减去 null 终止字符的长度。  
+ 输出一个指向内存的指针，将在此内存中返回可在 CursorName 中返回的字符总数（不包括 null 终止字符） \* *CursorName*。 如果可返回的字符数大于或等于*BufferLength*，则 CursorName 中的游标名称将 \* *CursorName*被截断为*BufferLength*减去 null 终止字符的长度。  
   
 ## <a name="returns"></a>返回  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR 或 SQL_INVALID_HANDLE。  
@@ -65,11 +65,11 @@ SQLRETURN SQLGetCursorName(
 ## <a name="diagnostics"></a>诊断  
  当**SQLGetCursorName**返回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO 时，可以通过使用*HandleType*的 SQL_HANDLE_STMT 和*StatementHandle*的*句柄*调用**SQLGetDiagRec**来获取关联的 SQLSTATE 值。 下表列出了通常由**SQLGetCursorName**返回的 SQLSTATE 值，并对该函数的上下文中的每个值进行了说明："（DM）" 表示法位于驱动程序管理器返回的 SQLSTATEs 的说明之前。 除非另有说明，否则与每个 SQLSTATE 值相关联的返回代码将 SQL_ERROR。  
   
-|SQLSTATE|错误|说明|  
+|SQLSTATE|错误|描述|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|驱动程序特定的信息性消息。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|01004|字符串数据，右截断|缓冲区\* *CursorName*不够大，无法返回整个游标名称，因此游标名称已被截断。 在 **NameLengthPtr*中返回未截断游标名称的长度。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
-|HY000|常规错误|发生了一个错误，该错误没有特定的 SQLSTATE，没有为其定义实现特定的 SQLSTATE。 MessageText 缓冲区中的**SQLGetDiagRec**返回的错误消息描述了错误及其原因。 * \**|  
+|01004|字符串数据，右截断|缓冲区 \* *CursorName*不够大，无法返回整个游标名称，因此游标名称已被截断。 在 **NameLengthPtr*中返回未截断游标名称的长度。 （函数返回 SQL_SUCCESS_WITH_INFO。）|  
+|HY000|常规错误|发生了一个错误，该错误没有特定的 SQLSTATE，没有为其定义实现特定的 SQLSTATE。 * \* MessageText*缓冲区中的**SQLGetDiagRec**返回的错误消息描述了错误及其原因。|  
 |HY001|内存分配错误|驱动程序无法分配支持执行或完成此函数所需的内存。|  
 |HY010|函数序列错误|（DM）为与*StatementHandle*关联的连接句柄调用了异步执行的函数。 调用**SQLGetCursorName**函数时，此异步函数仍在执行。<br /><br /> 为*StatementHandle*调用了**SQLExecute**、 **SQLExecDirect**或**SQLMoreResults** ，并返回 SQL_PARAM_DATA_AVAILABLE。 在检索所有流式处理参数的数据之前调用此函数。<br /><br /> （DM）为*StatementHandle*调用了异步执行的函数，并且在调用此函数时仍在执行该函数。<br /><br /> （DM） **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**或**SQLSetPos**调用了*StatementHandle*并返回 SQL_NEED_DATA。 在为所有执行时数据参数或列发送数据之前，将调用此函数。|  
 |HY013|内存管理错误|未能处理函数调用，原因可能是由于内存不足而无法访问基础内存对象。|  
@@ -79,7 +79,7 @@ SQLRETURN SQLGetCursorName(
 |HYT01|连接超时已过期|连接超时期限在数据源响应请求之前过期。 连接超时期限通过**SQLSetConnectAttr**设置，SQL_ATTR_CONNECTION_TIMEOUT。|  
 |IM001|驱动程序不支持此功能|（DM）与*StatementHandle*关联的驱动程序不支持该函数。|  
   
-## <a name="comments"></a>说明  
+## <a name="comments"></a>注释  
  游标名称仅用于定位的 update 和 delete 语句（例如，**更新**_表名称_.。。光标的**当前**_名称_）。 有关详细信息，请参阅[定位更新和删除语句](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)。 如果应用程序不调用**SQLSetCursorName**来定义游标名称，则驱动程序将生成一个名称。 此名称以字母开头 SQL_CUR。  
   
 > [!NOTE]

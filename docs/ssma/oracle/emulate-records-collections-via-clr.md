@@ -1,18 +1,19 @@
 ---
 title: 通过 CLR UDT 模拟记录和集合
 description: 介绍了如何使用 SQL Server 公共语言运行时（CLR）用户定义数据类型（UDT）来模拟 Oracle 记录和集合，SQL Server 迁移助手（SSMA）用于 Oracle。
-authors: nahk-ivanov
-ms.service: ssma
+author: nahk-ivanov
+ms.prod: sql
+ms.technology: ssma
 ms.devlang: sql
 ms.topic: article
 ms.date: 1/22/2020
 ms.author: alexiva
-ms.openlocfilehash: 39a7e8d59425db7ce2d7e81083012321caac35ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 73991999cf0a6e7bd2c8cd541ec58a37d1f18f09
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76762811"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779377"
 ---
 # <a name="emulating-records-and-collections-via-clr-udt"></a>通过 CLR UDT 模拟记录和集合
 
@@ -26,7 +27,7 @@ SSMA 创建三个基于 CLR 的 Udt：
 * `CollectionIndexString`
 * `Record`
 
-此`CollectionIndexInt`类型用于模拟按整数索引的集合，如`VARRAY`s、嵌套表和基于整数键的关联数组。 `CollectionIndexString`类型用于按字符键编制索引的关联数组。 Oracle 记录功能由`Record`类型进行模拟。
+此 `CollectionIndexInt` 类型用于模拟按整数索引的集合，如 `VARRAY` s、嵌套表和基于整数键的关联数组。 `CollectionIndexString`类型用于按字符键编制索引的关联数组。 Oracle 记录功能由类型进行模拟 `Record` 。
 
 记录或集合类型的所有声明都转换为此 Transact-sql 声明：
 
@@ -34,7 +35,7 @@ SSMA 创建三个基于 CLR 的 Udt：
 declare @Collection$TYPE varchar(max) = '<type definition>'
 ```
 
-下面`<type definition>`是唯一标识源 PL/SQL 类型的描述性文本。
+下面 `<type definition>` 是唯一标识源 PL/SQL 类型的描述性文本。
 
 请看下面的示例：
 
@@ -101,7 +102,7 @@ BEGIN
 END
 ```
 
-此处，由于`Manager`表与数值索引（`INDEX BY PLS_INTEGER`）相关联，因此所使用的相应 t-sql 声明为类型。 `@CollectionIndexInt$TYPE` 如果表与字符集索引相关联（例如`VARCHAR2`），则相应的 t-sql 声明的类型`@CollectionIndexString$TYPE`为：
+此处，由于 `Manager` 表与数值索引（）相关联 `INDEX BY PLS_INTEGER` ，因此所使用的相应 t-sql 声明为类型 `@CollectionIndexInt$TYPE` 。 如果表与字符集索引相关联（例如 `VARCHAR2` ），则相应的 t-sql 声明的类型为 `@CollectionIndexString$TYPE` ：
 
 ```sql
 -- Oracle
@@ -112,13 +113,13 @@ TYPE Manager_table is TABLE OF Manager INDEX BY VARCHAR2(40);
     ' TABLE INDEX BY STRING OF ( RECORD ( MGRID INT , MGRNAME STRING , HIREDATE DATETIME ) )'
 ```
 
-Oracle 记录功能只能通过`Record`类型进行模拟。
+Oracle 记录功能只能通过类型进行模拟 `Record` 。
 
-每`CollectionIndexInt`个类型、 `CollectionIndexString`、和`Record`都有一个返回空实例的`[Null]`静态属性。 调用`SetType`方法接收特定类型的空对象（如上面的示例所示）。
+每个类型、、 `CollectionIndexInt` `CollectionIndexString` 和 `Record` 都有一个 `[Null]` 返回空实例的静态属性。 `SetType`调用方法接收特定类型的空对象（如上面的示例所示）。
 
 ## <a name="constructor-call-conversions"></a>构造函数调用转换
 
-构造函数表示法只能用于嵌套表和`VARRAY`，因此所有显式构造函数调用都使用`CollectionIndexInt`类型进行转换。 空构造函数调用通过`SetType`调用的`CollectionIndexInt`null 实例调用。 `[Null]`属性返回空实例。 如果构造函数包含元素的列表，则按顺序应用特殊方法调用以将值添加到集合中。
+构造函数表示法只能用于嵌套表和 `VARRAY` ，因此所有显式构造函数调用都使用类型进行转换 `CollectionIndexInt` 。 空构造函数调用通过调用 `SetType` 的 null 实例调用 `CollectionIndexInt` 。 `[Null]`属性返回空实例。 如果构造函数包含元素的列表，则按顺序应用特殊方法调用以将值添加到集合中。
 
 例如：
 
@@ -166,7 +167,7 @@ END
 
 ## <a name="referencing-and-assigning-record-and-collection-elements"></a>引用和分配记录和集合元素
 
-每个 Udt 都具有一组使用各种数据类型的元素的方法。 例如， `SetDouble`方法会将一个`float(53)`值分配给记录或集合，并且`GetDouble`可以读取此值。 下面是方法的完整列表：
+每个 Udt 都具有一组使用各种数据类型的元素的方法。 例如， `SetDouble` 方法会将一个 `float(53)` 值分配给记录或集合，并且 `GetDouble` 可以读取此值。 下面是方法的完整列表：
 
 ```sql
 GetCollectionIndexInt(@key <KeyType>) returns CollectionIndexInt;
@@ -235,7 +236,7 @@ SET @c = @c.SetRecord(1, @c.GetOrCreateRecord(1).SetInt(N'ID', 1))
 
 SSMA 使用以下 UDT 方法来模拟 PL/SQL 集合的内置方法。
 
-Oracle 收集方法 | `CollectionIndexInt`和`CollectionIndexString`等效项
+Oracle 收集方法 | `CollectionIndexInt`和 `CollectionIndexString` 等效项
 --- | ---
 COUNT | `Count returns int`
 DELETE | `RemoveAll() returns <UDT_type>`
@@ -247,7 +248,7 @@ EXISTS | `ContainsElement(@index int) returns bit`
 扩展（n，i） | `ExtendDefault(@count int, @def int) returns <UDT_type>`
 FIRST | `First() returns int`
 LAST | `Last() returns int`
-LIMIT | 不适用
+LIMIT | 空值
 PRIOR | `Prior(@current int) returns int`
 NEXT | `Next(@current int) returns int`
 TRIM | `Trim() returns <UDT_type>`
@@ -255,16 +256,16 @@ TRIM （n） | `TrimN(@count int) returns <UDT_type>`
 
 ## <a name="bulk-collect-operation"></a>大容量收集操作
 
-SSMA 将`BULK COLLECT INTO`语句转换为`SELECT ... FOR XML PATH` SQL Server 语句，该语句的结果包装为以下函数之一：
+SSMA 将 `BULK COLLECT INTO` 语句转换为 SQL Server `SELECT ... FOR XML PATH` 语句，该语句的结果包装为以下函数之一：
 
 * `ssma_oracle.fn_bulk_collect2CollectionSimple`
 * `ssma_oracle.fn_bulk_collect2CollectionComplex`
 
-选择取决于目标对象的类型。 这些函数返回可由分析的`CollectionIndexInt`XML 值`CollectionIndexString`和`Record`类型。 特殊`AssignData`函数将基于 XML 的集合分配给 UDT。
+选择取决于目标对象的类型。 这些函数返回可由分析的 XML 值 `CollectionIndexInt` `CollectionIndexString` 和 `Record` 类型。 特殊 `AssignData` 函数将基于 XML 的集合分配给 UDT。
 
-SSMA 识别三种`BULK COLLECT INTO`语句。
+SSMA 识别三种 `BULK COLLECT INTO` 语句。
 
-### <a name="the-collection-contains-elements-with-scalar-types-and-the-select-list-contains-one-column"></a>集合包含具有标量类型的元素，且`SELECT`列表包含一列
+### <a name="the-collection-contains-elements-with-scalar-types-and-the-select-list-contains-one-column"></a>集合包含具有标量类型的元素，且 `SELECT` 列表包含一列
 
 ```sql
 -- Oracle
@@ -279,7 +280,7 @@ SET @<collection_name_1> =
             (SELECT column_name_1 FROM <data_source> FOR XML PATH)))
 ```
 
-### <a name="the-collection-contains-elements-with-record-types-and-the-select-list-contains-one-column"></a>集合包含具有记录类型的元素，且`SELECT`列表包含一列
+### <a name="the-collection-contains-elements-with-record-types-and-the-select-list-contains-one-column"></a>集合包含具有记录类型的元素，且 `SELECT` 列表包含一列
 
 ```sql
 -- Oracle
@@ -301,7 +302,7 @@ SET @<collection_name_1> =
             FOR XML PATH)))
 ```
 
-### <a name="the-collection-contains-elements-with-scalar-type-and-the-select-list-contains-multiple-columns"></a>该集合包含具有标量类型的元素，并且`SELECT`该列表包含多个列
+### <a name="the-collection-contains-elements-with-scalar-type-and-the-select-list-contains-multiple-columns"></a>该集合包含具有标量类型的元素，并且该 `SELECT` 列表包含多个列
 
 ```sql
 -- Oracle
@@ -340,4 +341,4 @@ SELECT
 
 ## <a name="select-into-record"></a>选择记录
 
-当 Oracle 查询的结果保存在 PL/SQL 记录变量中时，您有两个选项，具体取决于**将记录转换为分隔变量列表的**SSMA 设置（在 "**工具**" 菜单、"**项目设置**"、"**常规** -> **转换**" 下提供）。 如果此设置的值为 **"是"** （默认值），则 SSMA 不创建记录类型的实例。 而是通过为每个记录字段创建单独的 Transact-sql 变量，将记录拆分为构成字段。 如果设置为 "**否**"，则会实例化记录，并使用`Set`方法为每个字段分配一个值。
+当 Oracle 查询的结果保存在 PL/SQL 记录变量中时，您有两个选项，具体取决于**将记录转换为分隔变量列表的**SSMA 设置（在 "**工具**" 菜单、"**项目设置**"、"**常规**  ->  **转换**" 下提供）。 如果此设置的值为 **"是"** （默认值），则 SSMA 不创建记录类型的实例。 而是通过为每个记录字段创建单独的 Transact-sql 变量，将记录拆分为构成字段。 如果设置为 "**否**"，则会实例化记录，并使用方法为每个字段分配一个值 `Set` 。

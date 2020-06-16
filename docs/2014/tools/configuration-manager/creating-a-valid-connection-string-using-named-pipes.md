@@ -1,5 +1,6 @@
 ---
 title: 使用 Named Pipes 创建有效的连接字符串 |Microsoft Docs
+description: 了解如何在使用 named pipes 协议连接到 SQL Server 实例时创建有效的连接字符串。 查看有效管道名称的示例。
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,12 +17,12 @@ ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1c22ee167318fb6e37194a3558637d9afc642111
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 65fcebc3bbe12061e699106fb23eed15a5498414
+ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001027"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716704"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>使用 Named Pipes 创建有效的连接字符串
   除非用户进行了更改，否则当的默认实例 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 侦听 named pipes 协议时，它将使用 `\\.\pipe\sql\query` 作为管道名称。 句点指示该计算机是本地计算机， `pipe` 指示该连接是命名管道， `sql\query` 是管道的名称。 若要连接到默认管道，别名必须使用 `\\<computer_name>\pipe\sql\query` 作为管道名称。 如果已将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为侦听其他管道，则管道名称必须使用该管道。 例如，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 `\\.\pipe\unit\app` 作为管道，则别名必须使用 `\\<computer_name>\pipe\unit\app` 作为管道名称。  
@@ -116,7 +117,7 @@ Server             .
 ```  
   
 > [!NOTE]  
->  若要将网络协议指定为**sqlcmd**参数，请参阅联机丛书中的 "如何使用 sqlcmd 连接到数据库引擎" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+>  若要将网络协议指定为**sqlcmd**参数，请参阅联机丛书中的 "如何使用 sqlcmd.exe 连接到数据库引擎" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用 Shared Memory 协议创建有效的连接字符串](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
