@@ -1,5 +1,6 @@
 ---
 title: 原子化（XQuery） |Microsoft Docs
+description: 了解 XQuery 中的原子化的过程，在此过程中，将提取项的类型化值。
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e034e6464e395c1516eed874ed1c0cff2c32238f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 70d623d8583535aae7ddcc23f26ab7c5e4e36fc7
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67985705"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886884"
 ---
 # <a name="atomization-xquery"></a>原子化 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')
   
 -   构造 OrignialLaborHours 属性时，原子化隐式应用于 `$WC/@LaborHours` 返回的单独序列。 LaborHours 属性的类型化值被分配给 OrignialLaborHours。  
   
--   在构造 UpdatedLaborHoursV1 属性时，算术运算符需要原子值。 因此， **data （）** 隐式应用于（`$WC/@LaborHours`）返回的 LaborHours 属性。 然后，原子值 1 添加到该属性。 属性 UpdatedLaborHoursV2 的构造显示数据的显式应用 **（）**，但不是必需的。  
+-   在构造 UpdatedLaborHoursV1 属性时，算术运算符需要原子值。 因此， **data （）** 隐式应用于（）返回的 LaborHours 属性 `$WC/@LaborHours` 。 然后，原子值 1 添加到该属性。 属性 UpdatedLaborHoursV2 的构造显示数据的显式应用 **（）**，但不是必需的。  
   
 ```  
 SELECT Instructions.query('  

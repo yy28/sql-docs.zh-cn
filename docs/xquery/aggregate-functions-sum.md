@@ -1,5 +1,6 @@
 ---
 title: sum 函数（XQuery） |Microsoft Docs
+description: 了解返回数字序列的总和的 XQuery 函数 sum （）。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9e9095fdecf9bdf9782815c8b44c2131313568c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b6efd2cc3d5793d4524c4ab3d058a6375d23892
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67985744"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886930"
 ---
 # <a name="aggregate-functions---sum"></a>聚合函数 - sum
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,11 +35,11 @@ ms.locfileid: "67985744"
 fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *$arg*  
  要计算和的一列原子值。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  传递给**sum （）** 的原子化值的所有类型都必须是同一基类型的子类型。 接受的基类型为三种内置数字基类型或 xdt:untypedAtomic。 类型为 xdt:untypedAtomic 的值将转换为 xs:double。 如果有这些类型的混合，或者如果传递其他类型的其他值，则会引发静态错误。  
   
  **Sum （）** 的结果会接收传入类型的基类型（如 Xdt： untypedAtomic），即使输入是空序列也是如此。 如果输入在静态下为空，则对于 xs:integer 的静态和动态类型，结果都为 0。  
@@ -48,7 +49,7 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  当发生溢出或超出范围异常时，函数将返回一个运行时错误。  
   
 ## <a name="examples"></a>示例  
- 本主题提供针对[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库中各种**xml**类型列中存储的 xml 实例的 XQuery 示例。  
+ 本主题提供针对数据库中各种**xml**类型列中存储的 xml 实例的 XQuery 示例 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 。  
   
 ### <a name="a-using-the-sum-xquery-function-to-find-the-total-combined-number-of-labor-hours-for-all-work-center-locations-in-the-manufacturing-process"></a>A. 使用 sum() XQuery 函数查找计算生产过程中所有生产车间的总工时  
  下面的查询查找在生产（已存储其生产说明的）所有产品型号的过程中所有生产车间的总工时。  

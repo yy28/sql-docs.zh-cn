@@ -1,5 +1,6 @@
 ---
 title: 小写函数（XQuery） |Microsoft Docs
+description: 了解将指定字符串中的每个字符转换为其小写等效项的 XQuery 函数小写（）。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a80d869afe67317476a1d68c28afa5456a4a7366
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9202f357ebf09bef666edfe9a9e18d6dc685545
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68077658"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886586"
 ---
 # <a name="functions-on-string-values---lower-case"></a>基于字符串值的函数 - lower-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +42,13 @@ fn:lower-case($arg as xs:string?) as xs:string
 |术语|定义|  
 |*$arg*|要转换为小写的字符串值。|  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果 *$arg*的值为空，则返回零长度字符串。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>A. 将字符串更改为大写  
- 下面的示例将输入字符串 "abcDEF！@4' 到小写。  
+ 下面的示例更改输入字符串 "abcDEF！ @4 "小写。  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  

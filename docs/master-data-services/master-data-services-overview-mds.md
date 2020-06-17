@@ -1,5 +1,6 @@
 ---
 title: 概述
+description: 了解 Master Data Services 的关键数据组织和管理功能。 Master Data Services 使你能够管理数据的主集。
 ms.custom: ''
 ms.date: 02/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 44723e33929c71b51cdf61d675644a4bf9f6068d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb6d1967173c4379b54ca8596b34eadbd8ab46e9
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729053"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84800514"
 ---
 # <a name="master-data-services-overview-mds"></a>Master Data Services 概述 (MDS)
 
@@ -30,7 +31,7 @@ ms.locfileid: "73729053"
   
  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 帮助管理组织的主数据集。 可以将数据整理到模型中，创建更新数据的规则，并控制由谁更新数据。 通过使用 Excel 可以和组织中的其他用户共享主数据集。 
   
- >  有关 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 体系结构的说明，请在 simple-talk.com 上参阅文章 [Master Data Services - 基础知识](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) 。 有关中[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]的新功能的信息，请参阅[Master Data Services &#40;MDS 中的新增功能&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
+ >  有关 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 体系结构的说明，请在 simple-talk.com 上参阅文章 [Master Data Services - 基础知识](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) 。 有关中的新功能的信息 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ，请参阅[MASTER DATA SERVICES &#40;MDS 中的新增功能&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
    **有关如何安装 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]、设置数据库和网站以及部署示例模型的说明，请参阅** [Master Data Services 安装和配置](../master-data-services/master-data-services-installation-and-configuration.md)。  
   
  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，模型是你的主数据结构中的最高级别的容器。 创建一个模型来管理类似数据的组，例如管理联机产品数据。 模型包含一个或多个实体，而实体包含属于数据记录的成员。 实体类似于表。  
@@ -56,7 +57,7 @@ ms.locfileid: "73729053"
 > [!NOTE]  
 >  您最好在测试环境中完成以下任务并且使用在按照 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]时提供的示例数据。 有关详细信息，请参阅[部署模型 (Master Data Services)](../master-data-services/deploying-models-master-data-services.md)。  
   
-|操作|详细信息|“相关主题”|  
+|操作|详细信息|相关主题|  
 |------------|-------------|--------------------|  
 |创建模型|在您创建一个模型时，该模型将被视作 VERSION_1。|[模型 (Master Data Services)](../master-data-services/models-master-data-services.md)<br /><br /> [创建模型 (Master Data Services)](../master-data-services/create-a-model-master-data-services.md)|  
 |创建实体|可以创建所需的任何数目的实体以便包含您的成员。|[实体 (Master Data Services)](../master-data-services/entities-master-data-services.md)<br /><br /> [创建实体 (Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)|  

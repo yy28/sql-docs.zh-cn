@@ -1,5 +1,6 @@
 ---
 title: Description 属性 |Microsoft Docs
+description: 了解 ADO 中 Error 对象的 description 属性，该属性返回包含错误说明的字符串值。
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4b5d6790-6c29-42aa-bf78-d9cfb8ad7965
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25130c94ce9491fa8e61b1bba38246498880568a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5bbaa998c419ba1a0af49ffa28e32fe91ffc96b9
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757243"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880544"
 ---
 # <a name="description-property"></a>Description 属性
 描述[错误](../../../ado/reference/ado-api/error-object.md)对象。  
@@ -30,7 +31,7 @@ ms.locfileid: "82757243"
 ## <a name="return-value"></a>返回值  
  返回一个**字符串**值，该值包含对错误的说明。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  使用**Description**属性可获取错误的简短说明。 显示此属性以提醒用户无法或不想处理的错误。 该字符串来自 ADO 或提供程序。  
   
  提供程序负责向 ADO 传递特定的错误文本。 ADO 将[错误](../../../ado/reference/ado-api/error-object.md)对象添加到每个提供程序错误或它收到的警告的**错误**集合中。 枚举**errors**集合以跟踪提供程序传递的错误。  

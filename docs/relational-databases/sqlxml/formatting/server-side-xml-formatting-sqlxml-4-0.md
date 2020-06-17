@@ -1,5 +1,6 @@
 ---
 title: 服务器端 XML 格式（SQLXML）
+description: 了解针对 Microsoft SQL Server 数据库执行的 SQLXML 4.0 查询生成的文档的服务器端 XML 格式。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec84fdfad468124f59cefde73486d5b19a5a4110
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: be657e9fa17be6c6ea2b0441d852f51efa6882be
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75255903"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882145"
 ---
 # <a name="server-side-xml-formatting-sqlxml-40"></a>服务器端 XML 格式 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "75255903"
   
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，可以将 XML 文档存储到数据库表中，或者从数据库表中检索 XML 文档。 若要检索某一 XML 文档，请在 SELECT 查询中使用 FOR XML 查询扩展插件。  
   
- 例如，假设客户端应用程序执行一个命令[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，该命令包含以下[!INCLUDE[tsql](../../../includes/tsql-md.md)]查询：  
+ 例如，假设客户端应用程序执行一个命令 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，该命令包含以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查询：  
   
 ```  
 SELECT FirstName, LastName  

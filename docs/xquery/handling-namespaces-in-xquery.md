@@ -1,5 +1,6 @@
 ---
 title: 处理 XQuery 中的命名空间 |Microsoft Docs
+description: 查看在 XQuery 中处理命名空间的示例，其中包括如何声明新命名空间和默认命名空间。
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 07158d4131c60cf46f49a860721333c78213c982
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7b427dfa3756b83eb3d0a73f6ff5dd0be23b0c7
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004529"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880714"
 ---
 # <a name="handling-namespaces-in-xquery"></a>处理 XQuery 中的命名空间
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +116,7 @@ where ProductModelID=19
 ```  
   
 ### <a name="d-construction-using-default-namespaces"></a>D. 使用默认命名空间进行构造  
- 您还可以定义要在 XML 构造中使用的默认命名空间。 例如，下面的查询演示如何指定默认命名空间 "uri： SomeNamespace"\\，以用作构造的本地命名元素（例如`<Result>`元素）的默认命名空间。  
+ 您还可以定义要在 XML 构造中使用的默认命名空间。 例如，下面的查询演示如何指定默认命名空间 "uri： SomeNamespace" \\ ，以用作构造的本地命名元素（例如元素）的默认命名空间 `<Result>` 。  
   
 ```  
 SELECT CatalogDescription.query('  

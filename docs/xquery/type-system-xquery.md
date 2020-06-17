@@ -1,5 +1,6 @@
 ---
 title: 类型系统（XQuery） |Microsoft Docs
+description: 了解包含内置类型的 XML 架构和在 xpath 数据类型命名空间中定义的类型的 XQuery 类型系统。
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -23,21 +24,21 @@ helpviewer_keywords:
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0736bc39ceaa6d9a0aa541d2af3b2b784614322b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f82cfc060b021e28c5b5e73602285b1edc3fcf20
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946205"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886550"
 ---
 # <a name="type-system-xquery"></a>类型系统 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery 对于架构类型是强类型语言，对于非类型化的数据是弱类型语言。 预定义的 XQuery 类型包括：  
   
--   **http://www.w3.org/2001/XMLSchema**命名空间中的内置类型的 XML 架构。  
+-   命名空间中的内置类型的 XML 架构 **http://www.w3.org/2001/XMLSchema** 。  
   
--   **http://www.w3.org/2004/07/xpath-datatypes**命名空间中定义的类型。  
+-   命名空间中定义的类型 **http://www.w3.org/2004/07/xpath-datatypes** 。  
   
  本主题还说明了下列内容：  
   
@@ -50,7 +51,7 @@ ms.locfileid: "67946205"
 ## <a name="built-in-types-of-xml-schema"></a>XML 架构的内置类型  
  XML 架构的内置类型具有预定义的命名空间前缀 xs。 其中一些类型包括**xs： integer**和**xs： string**。 所有这些内置类型都支持。 您可以在创建 XML 架构集合时使用这些类型。  
   
- 当查询类型化的 XML 时，节点的静态和动态类型由与正被查询的列或变量相关联的 XML 构架集合确定。 有关静态和动态类型的详细信息，请参阅[表达式上下文和查询计算 &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)。 例如，对于类型化的**xml**列（`Instructions`），将指定以下查询。 表达式使用 `instance of` 验证返回的 `LotSize` 属性的类型化值是 `xs:decimal` 类型。  
+ 当查询类型化的 XML 时，节点的静态和动态类型由与正被查询的列或变量相关联的 XML 构架集合确定。 有关静态和动态类型的详细信息，请参阅[表达式上下文和查询计算 &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)。 例如，对于类型化的**xml**列（），将指定以下查询 `Instructions` 。 表达式使用 `instance of` 验证返回的 `LotSize` 属性的类型化值是 `xs:decimal` 类型。  
   
 ```  
 SELECT Instructions.query('  
@@ -64,7 +65,7 @@ WHERE ProductModelID=7
  此类型化信息是由与该列关联的 XML 架构集合提供的。  
   
 ## <a name="types-defined-in-xpath-data-types-namespace"></a>在 XPath 数据类型命名空间中定义的类型  
- **http://www.w3.org/2004/07/xpath-datatypes**命名空间中定义的类型具有预定义的**xdt**前缀。 这些类型的限制条件如下：  
+ 命名空间中定义的类型 **http://www.w3.org/2004/07/xpath-datatypes** 具有预定义的**xdt**前缀。 这些类型的限制条件如下：  
   
 -   在创建 XML 架构集合时无法使用这些类型。 这些类型在 XQuery 类型系统中使用，并用于[xquery 和静态](../xquery/xquery-and-static-typing.md)类型化。 可以在**xdt**命名空间中强制转换为原子类型，例如， **xdt： untypedAtomic**。  
   
@@ -105,7 +106,7 @@ SELECT @x.query( '/a[1] instance of element()')
   
 -   [字符串函数 &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md)返回节点的字符串值。  
   
- 在下面的 XML 架构集合中，定义`root`了整数类型的 <> 元素：  
+ 在下面的 XML 架构集合中， `root` 定义了整数类型的 <> 元素：  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -132,7 +133,7 @@ SET @x='<root>5</root>'
 SELECT @x.query('string(/root[1]) + 3')  
 ```  
   
- 下面的示例计算 `LaborHours` 属性的总计。 `data()`函数从产品型号的所有 <`LaborHours` `Location`> 元素中检索属性的类型化值。 根据与`Instruction`列关联的 XML 架构， `LaborHours`为**xs： decimal**类型。  
+ 下面的示例计算 `LaborHours` 属性的总计。 `data()`函数 `LaborHours` 从产品型号的所有 <> 元素中检索属性的类型化值 `Location` 。 根据与列关联的 XML 架构 `Instruction` ， `LaborHours` 为**xs： decimal**类型。  
   
 ```  
 SELECT Instructions.query('   

@@ -1,5 +1,6 @@
 ---
 title: concat 函数（XQuery） |Microsoft Docs
+description: 了解 XQuery 函数 concat （），该函数返回通过将指定为参数的零个或多个字符串串联而创建的字符串。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 063eca49a6a4d69e84e8a3d05221b632d0690bef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02d3762f419789732406564606ad7a3b990e30fd
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68099832"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881810"
 ---
 # <a name="functions-on-string-values---concat"></a>基于字符串值的函数 - concat
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +37,11 @@ fn:concat ($string as xs:string?
            [, ...]) as xs:string  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *$string*  
  可选择进行连接的字符串。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  此函数必须至少包含两个参数。 如果一个参数为空序列，则将被作为零长度字符串处理。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>补充字符（代理项对）  
@@ -50,7 +51,7 @@ fn:concat ($string as xs:string?
  本主题提供了针对在 AdventureWorks 示例数据库的各种**xml**类型列中存储的 xml 实例的 XQuery 示例。  
   
 ### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>A. 使用 concat() XQuery 函数连接字符串  
- 对于特定产品型号，此查询将返回通过连接保修期和保修说明而创建的字符串。 在目录说明文档中，<`Warranty`> 元素由 <`WarrantyPeriod`> 和 <`Description`的子元素组成。  
+ 对于特定产品型号，此查询将返回通过连接保修期和保修说明而创建的字符串。 在目录说明文档中，<`Warranty`> 元素由 <`WarrantyPeriod`> 和 <的 `Description` 子元素组成。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -83,7 +84,7 @@ WHERE  PD.ProductModelID=28
 <Product ProductModelID="28" ProductModelName="Road-450">1 year-parts and labor</Product>  
 ```  
   
- 上一个查询检索了有关特定产品的信息。 以下查询将针对为其存储了 XML 目录说明的所有产品检索同样的信息。 如果行中的 XML 文档具有**xml** <`ProductDescription`> 元素，则 WHERE 子句中的 xml 数据类型的**存在（）** 方法将返回 True。  
+ 上一个查询检索了有关特定产品的信息。 以下查询将针对为其存储了 XML 目录说明的所有产品检索同样的信息。 如果行中的 XML 文档具有 <> 元素，则 WHERE 子句中的**xml**数据类型的**存在（）** 方法将返回 True `ProductDescription` 。  
   
 ```  
 WITH XMLNAMESPACES (  

@@ -1,5 +1,6 @@
 ---
 title: string 函数（XQuery） |Microsoft Docs
+description: 了解 XQuery 函数 string （），它返回以字符串表示的参数值。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9cb30d81102c17f2c3ce04b31ac7ff2b9689343e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 59c90ce7e0bdbe46fa1ca577e2b16e6576650751
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038941"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881895"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>数据取值函数 - string (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,11 +36,11 @@ fn:string() as xs:string
 fn:string($arg as item()?) as xs:string  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *$arg*  
  一个节点或原子值。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
   
 -   如果 *$arg*是空序列，则返回长度为零的字符串。  
   
@@ -55,7 +56,7 @@ fn:string($arg as item()?) as xs:string
  本主题提供了对存储在 AdventureWorks 数据库的各种**xml**类型列中的 xml 实例的 XQuery 示例。  
   
 ### <a name="a-using-the-string-function"></a>A. 使用 string 函数  
- 下面的查询检索 <`Features` `ProductDescription`> 元素的 <> 子元素节点。  
+ 下面的查询检索 `Features` <> 元素的 <> 子元素节点 `ProductDescription` 。  
   
 ```  
 SELECT CatalogDescription.query('  

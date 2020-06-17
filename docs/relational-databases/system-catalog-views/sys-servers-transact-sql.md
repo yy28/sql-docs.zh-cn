@@ -20,12 +20,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7b9cb03b97660bedc9c8e86cc72ae2bf9ebdd56d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c4b141520b21902c4dadb26a3ac013b1ee334928
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832691"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818221"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "82832691"
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|链接服务器的本地 ID。|  
-|**name**|**sysname**|当**server_id** = 0 时，返回的值是服务器名称。<br /><br /> 如果**server_id** > 0，则返回的值为链接服务器的本地名称。|  
-|**产品**|**sysname**|链接服务器的产品名。 值 "SQL Server" 指示的另一个实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
+|name|**sysname**|当**server_id** = 0 时，返回的值是服务器名称。<br /><br /> 如果**server_id** > 0，则返回的值为链接服务器的本地名称。|  
+|**product**|**sysname**|链接服务器的产品名。 值 "SQL Server" 指示的另一个实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |**程序**|**sysname**|用于连接到链接服务器的 OLE DB 访问接口名称。|  
 |**data_source**|**nvarchar(4000)**|OLE DB 数据源连接属性。|  
-|**location**|**nvarchar(4000)**|OLE DB 位置连接属性。 如果没有，则为 NULL。|  
+|**位置**|**nvarchar(4000)**|OLE DB 位置连接属性。 如果没有，则为 NULL。|  
 |**provider_string**|**nvarchar(4000)**|OLE DB 访问接口字符串连接属性。<br /><br /> 除非调用方拥有 ALTER ANY LINKED SERVER 权限，否则为 NULL。|  
 |**分类**|**sysname**|OLEDB 目录连接属性。 如果没有，则为 NULL。|  
 |**connect_timeout**|**int**|以秒为单位的连接超时，0 表示没有超时。|  
@@ -58,7 +58,8 @@ ms.locfileid: "82832691"
 |**is_distributor**|**bit**|服务器为复制分发服务器。|  
 |**is_nonsql_subscriber**|**bit**|服务器为非 SQL Server 复制订阅服务器。|  
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|如果是 1，则调用远程存储过程将启动分布式事务，并用 MS DTC 登记该事务。 有关详细信息，请参阅 [sp_serveroption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)的数据。|  
-|**modify_date**|**datetime**|上次更改服务器信息的日期。|  
+|modify_date|**datetime**|上次更改服务器信息的日期。|  
+|**is_rda_server**|**bit**|服务器启用远程数据存档（启用 stretch）。 有关详细信息，请参阅在[服务器上启用 Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/enable-stretch-database-for-a-database#EnableTSQLServer)。 适用于 SQL Server 2016 和更高版本。|
   
 ## <a name="permissions"></a>权限  
  **Provider_string**中的值始终为 NULL，除非调用方具有 ALTER ANY 链接服务器权限。  

@@ -1,5 +1,6 @@
 ---
 title: sql： column （）函数（XQuery） |Microsoft Docs
+description: 了解如何使用 XQuery 函数 sql： column （）在 XML 内绑定非 XML 关系数据并将关系数据和 XML 数据组合在一起。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df46abb8efdd5761797a599cf5a8cdebe02e5158
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb52e949b706f7e1af51f1c067d38ce23bb777f2
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946011"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881506"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>XQuery 扩展函数 - sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ sql:column("columnName")
 ## <a name="remarks"></a>备注  
  请注意，对在 XQuery 内的**sql： column （）** 函数中指定的列的引用将引用正在处理的行中的列。  
   
- 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中，只能在 XML-DML insert 语句的源表达式的上下文中引用**xml**实例;否则，不能引用类型为**xml**的列或 CLR 用户定义类型的列。  
+ 在中 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，只能在 xml-DML insert 语句的源表达式的上下文中引用**xml**实例; 否则，不能引用类型为**xml**或 CLR 用户定义类型的列。  
   
  联接操作中不支持**sql： column （）** 函数。 可改用 APPLY 操作。  
   
@@ -105,7 +106,7 @@ ProductID               Result
 ...  
 ```  
   
- 下面的查询构造了包含产品特定信息的 XML。 此信息包括 ProductID、ProductName、ProductPrice 以及属于特定产品型号 (ProductModelID=19) 的所有产品的 ProductModelName（如果有）。 然后，将 XML 分配给@x **xml**类型的变量。  
+ 下面的查询构造了包含产品特定信息的 XML。 此信息包括 ProductID、ProductName、ProductPrice 以及属于特定产品型号 (ProductModelID=19) 的所有产品的 ProductModelName（如果有）。 然后，将 XML 分配给 @x **xml**类型的变量。  
   
 ```sql
 declare @x xml  

@@ -1,5 +1,6 @@
 ---
 title: substring 函数（XQuery） |Microsoft Docs
+description: 了解返回源字符串的指定部分的 XQuery 函数 substring （）。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2188cff20411fe90d4858763f65cff7f6fe9c9d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 694fb912675a15055688956a18714185e25995c4
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004640"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881927"
 ---
 # <a name="functions-on-string-values---substring"></a>基于字符串值的函数 - substring
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ fn:substring($sourceString as xs:string?,
                           $length as xs:decimal?) as xs:string?  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *$sourceString*  
  资源字符串。  
   
@@ -49,7 +50,7 @@ fn:substring($sourceString as xs:string?,
  *$length*  
  [可选] 要检索的字符数。 如果未指定，它将返回 *$startingLoc*中指定的位置中的所有字符，直到字符串的末尾。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  带有三个参数的函数将返回 `$sourceString` 中其位置 `$p` 遵守以下指定的字符串：  
   
  `fn:round($startingLoc) <= $p < fn:round($startingLoc) + fn:round($length)`  
@@ -69,10 +70,10 @@ fn:substring($sourceString as xs:string?,
  SQL Server 允许 *$startingLoc*和 *$length*为空序列，因为空序列是一个可能的值，导致动态错误被映射到（）。  
   
 ## <a name="examples"></a>示例  
- 本主题提供了针对[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库中各种**xml**类型列中存储的 xml 实例的 XQuery 示例。  
+ 本主题提供了针对数据库中各种**xml**类型列中存储的 xml 实例的 XQuery 示例 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 。  
   
 ### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>A. 使用 substring() XQuery 函数来检索部分概要产品型号说明  
- 查询检索描述产品型号的文本的前50个字符，<`Summary`文档中> 元素。  
+ 查询检索描述产品型号的文本的前50个字符，<`Summary` 文档中> 元素。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -85,7 +86,7 @@ where CatalogDescription.exist('/pd:ProductDescription')  = 1;
   
  请注意上述查询的以下方面：  
   
--   **String （）** 函数返回<`Summary`> 元素的字符串值。 使用此函数，因为 <`Summary`> 元素同时包含文本和子元素（html 格式设置元素），并且因为将跳过这些元素并检索所有文本。  
+-   **String （）** 函数返回<> 元素的字符串值 `Summary` 。 使用此函数，因为 <`Summary`> 元素同时包含文本和子元素（html 格式设置元素），并且因为将跳过这些元素并检索所有文本。  
   
 -   **Substring （）** 函数检索**字符串（）** 检索到的字符串值中的前50个字符。  
   

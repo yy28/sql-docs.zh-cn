@@ -1,5 +1,6 @@
 ---
 title: SQL Server XML 大容量加载对象模型（SQLXML）
+description: 了解用于在 SQLXML 4.0 中大容量加载 XML 的 SQLXMLBulkLoad 对象的方法和属性。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -32,12 +33,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a71a5c756953c6b70e51422b5c1032b117eb7785
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56dff7936e236ae76333543e902f588fa8ead1be
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246713"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882565"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 大容量加载对象模型 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -139,13 +140,13 @@ ms.locfileid: "75246713"
  默认值是 FALSE。  
   
  TempFilePath  
- 指定文件路径，该路径中包含 XML 大容量加载为事务性大容量加载创建的临时文件。 （仅当 Transaction 属性设置为 TRUE 时，此属性才有用。）必须确保用于 XML 大[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]容量加载的帐户有权访问此路径。 如果未设置此属性，XML 大容量加载将 TEMP 环境变量上指定的位置中存储临时文件。  
+ 指定文件路径，该路径中包含 XML 大容量加载为事务性大容量加载创建的临时文件。 （仅当 Transaction 属性设置为 TRUE 时，此属性才有用。）必须确保 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用于 XML 大容量加载的帐户有权访问此路径。 如果未设置此属性，XML 大容量加载将 TEMP 环境变量上指定的位置中存储临时文件。  
   
  事务  
  指定大容量加载是否应作为事务实现，在此情况下，如果大容量加载失败，则确保回滚。 此属性是一个布尔属性。 如果此属性设置为 TRUE，则大容量加载将在事务上下文中发生。 仅当 Transaction 设置为 TRUE 时，TempFilePath 属性才有用。  
   
 > [!NOTE]  
->  如果要将二进制数据（如 node.js、bin .xml XML 数据类型加载到二进制文件、图像[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型），则必须将 Transaction 属性设置为 FALSE。  
+>  如果要将二进制数据（如 node.js、bin .xml XML 数据类型加载到二进制文件、图像 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型），则必须将 Transaction 属性设置为 FALSE。  
   
  默认值是 FALSE。  
   

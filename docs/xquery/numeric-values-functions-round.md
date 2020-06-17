@@ -1,5 +1,6 @@
 ---
 title: round 函数（XQuery） |Microsoft Docs
+description: 了解 XQuery 函数 round （），该函数返回的数字与指定的参数最接近的小数部分。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 320b572f-bd5b-4055-95a6-dec5718c0041
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1927d6e483683699196cfc7e87928f27bf23446a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53686410ff6dc36af5cc50a0210e33e9a1fb6ad1
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946547"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881487"
 ---
 # <a name="numeric-values-functions---round"></a>数值函数 - round
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +43,11 @@ ms.locfileid: "67946547"
 fn:round ( $arg as numeric?) as numeric?  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *$arg*  
  将应用该函数的数字。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果 *$arg*的类型为三个数值基类型之一 **： xs： float**、 **xs： double**或**xs： decimal**，则返回类型与 *$arg*类型相同。 如果 *$arg*的类型是派生自其中一个数值类型的类型，则返回类型为基本数值类型。  
   
  如果向**fn： floor**、 **fn：天花板**或**fn： round**函数的输入为**xdt： untypedAtomic**，非类型化数据，则它将隐式转换为**xs： double**。  

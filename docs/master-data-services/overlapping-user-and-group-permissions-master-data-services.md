@@ -1,5 +1,6 @@
 ---
 title: 重叠的用户和组权限
+description: 了解如何在 Master Data Services 中的 "模型" 和 "层次结构成员" 选项卡中，分配给用户的组成员身份和权限之间的权限交互。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2df45ce2a08e545bc7da11ab3f97df8aa86b0c26
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8f98fdc789ab534898a3cb08dde3222ebc1b71b
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727933"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84800525"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>重叠的用户和组权限（主数据服务）
 

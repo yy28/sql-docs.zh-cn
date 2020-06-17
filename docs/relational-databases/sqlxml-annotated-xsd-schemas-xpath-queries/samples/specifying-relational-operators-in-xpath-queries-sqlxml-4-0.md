@@ -1,5 +1,6 @@
 ---
 title: 在 XPath 查询中使用关系运算符（SQLXML）
+description: 了解如何在 SQLXML 4.0 XPath 查询中使用关系运算符。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1961cc90c303e789c4bfbb847cea5e0eb80049ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e1d3f5b7832d15121cde56dd27e7cf9bf9e26704
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252544"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84883661"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定关系运算符 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,13 +31,13 @@ ms.locfileid: "75252544"
 ## <a name="examples"></a>示例  
   
 ### <a name="a-specify-relational-operator"></a>A. 指定关系运算符  
- 此 XPath 查询返回** \<Customer>** 元素的子元素，其中**CustomerID**属性值为 "1"，其中任何子** \<顺序>** 元素包含具有值大于3的**OrderQty**特性的** \<OrderDetail>** 子元素：  
+ 此 XPath 查询返回元素的子元素， **\<Customer>** 其中**CustomerID**属性值为 "1"，其中任何子 **\<Order>** 元素包含 **\<OrderDetail>** 具有值大于3的**OrderQty**属性的子元素：  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- 方括号中指定的谓词用于筛选** \<Customer>** 元素。 仅返回** \<客户>** 元素，这些元素至少具有一个** \<OrderDetail**为 OrderQty 特性值大于3的>孙。  
+ 方括号中指定的谓词筛选 **\<Customer>** 元素。 仅 **\<Customer>** 返回至少一个具有 **\<OrderDetail>** 大于3的 OrderQty 特性值的孙元素。  
   
  **子**轴是默认值。 因此，可以将该查询指定为：  
   
@@ -81,7 +82,7 @@ ms.locfileid: "75252544"
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. 在 XPath 查询中指定关系运算符并使用布尔函数比较该结果  
- 此查询将返回**SalesPersonID**属性值小于270的上下文节点>元素子级的所有** \<顺序**：  
+ 此查询返回 **\<Order>** 上下文节点的所有子元素子级，该节点的**SalesPersonID**属性值小于270：  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  
@@ -94,7 +95,7 @@ ms.locfileid: "75252544"
 ```  
   
 > [!NOTE]  
->  在模板中指定该查询时，必须对 < 字符进行实体编码，因为 < 字符在 XML 文档中具有特殊含义。 在模板中，使用`<`指定 < 字符。  
+>  在模板中指定该查询时，必须对 < 字符进行实体编码，因为 < 字符在 XML 文档中具有特殊含义。 在模板中，使用 `<` 指定 < 字符。  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>针对映射架构测试 XPath 查询  
   

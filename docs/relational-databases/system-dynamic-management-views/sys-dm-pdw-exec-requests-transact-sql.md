@@ -12,12 +12,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 982096893cdce9c4b604df9c3fb0258cefaaf93d
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: a3ee27ca4f92efb950c35ab0d8174676246c14b3
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796518"
+ms.locfileid: "84818047"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests （Transact-sql）
 
@@ -34,8 +34,8 @@ ms.locfileid: "84796518"
 |start_time|**datetime**|开始执行请求的时间。|对于排队的请求为 NULL;否则，有效的**日期时间**小于或等于当前时间。|  
 |end_compile_time|**datetime**|引擎完成编译请求的时间。|对于尚未编译的请求，为 NULL;否则，有效的**日期时间**小于 start_time 且小于或等于当前时间。|
 |end_time|**datetime**|请求执行完成、失败或已取消的时间。|对于排队或活动的请求为 Null;否则，有效的**日期**时间小于或等于当前时间。|  
-|total_elapsed_time|**int**|自请求开始后执行所用的时间（以毫秒为单位）。|介于0与 start_time 与 end_time 之间的差异。</br></br> 如果 total_elapsed_time 超过整数的最大值，则 total_elapsed_time 将继续作为最大值。 此条件将生成警告 "已超过最大值。"</br></br> 最大值（以毫秒为单位）与24.8 天相同。|  
-|标签|**nvarchar(255)**|与某些 SELECT 查询语句相关联的可选标签字符串。|包含 "a-z"、"a-z"、"0-9" 和 "_" 的任何字符串。|  
+|total_elapsed_time|**int**|自请求开始后执行所用的时间（以毫秒为单位）。|介于0与 submit_time 与 end_time 之间的差异。</br></br> 如果 total_elapsed_time 超过整数的最大值，则 total_elapsed_time 将继续作为最大值。 此条件将生成警告 "已超过最大值。"</br></br> 最大值（以毫秒为单位）与24.8 天相同。|  
+|label|**nvarchar(255)**|与某些 SELECT 查询语句相关联的可选标签字符串。|包含 "a-z"、"a-z"、"0-9" 和 "_" 的任何字符串。|  
 |error_id|**nvarchar （36）**|与请求关联的错误的唯一 ID （如果有）。|请参阅[dm_pdw_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md);如果未发生错误，则设置为 NULL。|  
 |database_id|**int**|显式上下文使用的数据库的标识符（例如，使用 DB_X）。|请参阅 sys.databases 中的 ID [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。|  
 |命令|**nvarchar(4000)**|保存用户提交的请求的完整文本。|任何有效的查询或请求文本。 超过4000字节的查询将被截断。|  
@@ -47,7 +47,7 @@ ms.locfileid: "84796518"
 |result_cache_hit|**decimal**|详细说明已完成的查询是否使用了结果集缓存。  </br>适用于：Azure SQL 数据仓库| 1 = 结果集缓存命中 </br> 0 = 结果集缓存未命中 </br> 负值 = 未使用结果集缓存的原因。  有关详细信息，请参阅备注部分。|
 ||||
   
-## <a name="remarks"></a>备注 
+## <a name="remarks"></a>注解 
  有关此视图保留的最大行的信息，请参阅[容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)主题中的元数据部分。
 
  Result_cache_hit 是查询对结果集缓存的使用的位掩码。  此列可以是[|（位或）](../../t-sql/language-elements/bitwise-or-transact-sql.md)以下一个或多个值的产品：  

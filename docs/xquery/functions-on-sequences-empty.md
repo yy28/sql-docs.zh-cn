@@ -1,5 +1,6 @@
 ---
 title: 空函数（XQuery） |Microsoft Docs
+description: 了解 XQuery 函数 empty （），它返回一个值，该值指示指定的项序列是否为空。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 888739807a79163a8188f3b2f27b7f7860032bc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b80437f4c5a51fa649a291673fc212483fd43ae
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004670"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881834"
 ---
 # <a name="functions-on-sequences---empty"></a>基于序列的函数 - empty
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,11 +35,11 @@ ms.locfileid: "68004670"
 fn:empty($arg as item()*) as xs:boolean  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *$arg*  
  项序列。 如果该序列为空，则此函数返回 True。 否则，该函数返回 False。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  不支持**fn： exists （）** 函数。 作为替代方法，可以使用**not （）** 函数。  
   
 ## <a name="examples"></a>示例  

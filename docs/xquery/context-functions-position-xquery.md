@@ -1,5 +1,6 @@
 ---
 title: position 函数（XQuery） |Microsoft Docs
+description: 了解 XQuery 函数 position （），它返回一个整数值，指示上下文项在项序列中的位置。
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: de9f30c3c63030aa956366c222b7cbda94e2becb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45dffc809f223f9b18cd1dae1c5b951d5a8f1463
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038980"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881935"
 ---
 # <a name="context-functions---position-xquery"></a>上下文函数 - position (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,13 +36,13 @@ fn:position() as xs:integer
 ```  
   
 ## <a name="remarks"></a>备注  
- 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中， **fn： position （）** 只能用于上下文相关的谓词的上下文中。 确切地说，仅可用在方括号 ([ ]) 内。与此函数比较不会在静态类型推导过程中减少基数。  
+ 在中 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ， **fn： position （）** 只能用于上下文相关的谓词的上下文中。 确切地说，仅可用在方括号 ([ ]) 内。与此函数比较不会在静态类型推导过程中减少基数。  
   
 ## <a name="examples"></a>示例  
- 本主题提供针对[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]数据库中各种**xml**类型列中存储的 xml 实例的 XQuery 示例。  
+ 本主题提供针对数据库中各种**xml**类型列中存储的 xml 实例的 XQuery 示例 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 。  
   
 ### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. 使用 position() XQuery 函数检索前两个产品功能  
- 下面的查询从产品型号目录说明中检索前两个功能，即 <`Features`> 元素的前两个子元素。 如果有更多功能，则会将 <`there-is-more/`> 元素添加到结果中。  
+ 下面的查询 `Features` 从产品型号目录说明中检索前两个功能，即 <> 元素的前两个子元素。 如果有更多功能，则会将 <`there-is-more/`> 元素添加到结果中。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -69,11 +70,11 @@ WHERE CatalogDescription is not null
   
 -   [XQuery Prolog](../xquery/modules-and-prologs-xquery-prolog.md)中的**namespace**关键字用于定义在查询主体中使用的命名空间前缀。  
   
--   查询主体构造具有\<product> 元素的 XML，该元素具有**ProductModelID**和**ProductModelName**属性，并且产品功能作为子元素返回。  
+-   查询主体构造具有 \<Product> **ProductModelID**和**ProductModelName**属性的元素的 XML，并将产品功能作为子元素返回。  
   
--   **Position （）** 函数用于在上下文中确定\<功能> 子元素的位置。 如果是第一个或第二个功能，将返回该子元素。  
+-   **Position （）** 函数用于在谓词中确定 \<Features> 子元素的位置。 如果是第一个或第二个功能，将返回该子元素。  
   
--   如果产品目录中有\<两个以上的功能，if 语句会向结果中添加一个包含-> 元素。  
+-   如果产品目录中有两个以上的功能，IF 语句将向 \<there-is-more/> 结果中添加一个元素。  
   
 -   由于不是所有产品型号都将其目录说明存储在表中，因此使用 WHERE 子句来放弃 CatalogDescriptions 为 NULL 的行。  
   

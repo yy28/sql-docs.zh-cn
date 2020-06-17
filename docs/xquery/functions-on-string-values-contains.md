@@ -1,5 +1,6 @@
 ---
 title: contains 函数（XQuery） |Microsoft Docs
+description: 了解如何在 XQuery 中使用 contains 函数来确定指定的字符串值是否包含指定的子字符串值。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d65e533f8bc808a7f3828cad797f22441905cea8
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899032"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881866"
 ---
 # <a name="functions-on-string-values---contains"></a>基于字符串值的函数 - contains
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,14 +35,14 @@ ms.locfileid: "67899032"
 fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?  
 ```  
   
-## <a name="arguments"></a>参数  
- *$arg1*  
+## <a name="arguments"></a>自变量  
+ *$arg 1*  
  要测试的字符串值。  
   
  *$arg2*  
  要查找的子字符串。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果 *$arg 2*的值是长度为零的字符串，则函数将返回**True**。 如果 *$arg 1*的值是长度为零的字符串，而 *$arg 2*的值不是长度为零的字符串，则该函数返回**False**。  
   
  如果 *$arg 1*或 *$arg 2*的值是空序列，则该参数将被视为长度为零的字符串。  
@@ -59,7 +60,7 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
  本主题提供针对 AdventureWorks 数据库中各种 xml 类型列中存储的 XML 实例的 XQuery 示例。  
   
 ### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>A. 使用 contains() XQuery 函数搜索特定的字符串  
- 以下查询将查找概要说明中包含单词 Aerodynamic 的产品。 查询返回此类产品的 ProductID 和`Summary` <> 元素。  
+ 以下查询将查找概要说明中包含单词 Aerodynamic 的产品。 查询返回此类产品的 ProductID 和 <`Summary`> 元素。  
   
 ```  
 --The product model description document uses  

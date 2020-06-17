@@ -1,5 +1,6 @@
 ---
 title: 涉及层次结构的 Xquery |Microsoft Docs
+description: 查看涉及层次结构的 Xquery 的示例。
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8aa762af8e08c72f7f00369219771c371ce39aac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c4ab17b99dc1d90d867689c5f79425fde0775a4b
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946105"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880630"
 ---
 # <a name="xqueries-involving-hierarchy"></a>涉及层次结构的 XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,9 +31,9 @@ ms.locfileid: "67946105"
 ## <a name="examples"></a>示例  
   
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. 从生产说明文档检索生产车间以及这些生产车间的第一个生产步骤  
- 对于产品型号7，该查询将`ManuInstr`构造包含 <> 元素的 XML，其中包含**ProductModelID**和**ProductModelName**属性以及一个或多个`Location` <> 子元素。  
+ 对于产品型号7，该查询将构造包含 <> 元素的 XML，其中包含 `ManuInstr` **ProductModelID**和**ProductModelName**属性以及一个或多个 <`Location`> 子元素。  
   
- 每个`Location` <> 元素都有其自己的一组属性`step`和一个 <> 子元素。 此 <`step`> 子元素是工作中心位置的第一个生产步骤。  
+ 每个 <`Location`> 元素都有其自己的一组属性和一个 <`step`> 子元素。 此 <`step`> 子元素是工作中心位置的第一个生产步骤。  
   
 ```sql
 SELECT Instructions.query('  
@@ -63,7 +64,7 @@ WHERE ProductModelID=7
   
 -   在构造 <`Location`> 元素中，$wc/@ * 检索所有工作中心位置属性。  
   
--   **String （）** 函数从 <`step`> 元素返回字符串值。  
+-   **String （）** 函数从 <> 元素返回字符串值 `step` 。  
   
  下面是部分结果：  
   
@@ -84,7 +85,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>B. 在 AdditionalContactInfo 列中查找所有电话号码  
- 下面的查询通过搜索整个层次结构中 <`telephoneNumber`> 元素来检索特定客户联系人的其他电话号码。 由于 <`telephoneNumber`> 元素可以出现在层次结构中的任何位置，因此，该查询在搜索中使用了子代和自行运算符（//）。  
+ 下面的查询通过搜索整个层次结构中 <> 元素来检索特定客户联系人的其他电话号码 `telephoneNumber` 。 由于 <`telephoneNumber`> 元素可以出现在层次结构中的任何位置，因此，该查询在搜索中使用了子代和自行运算符（//）。  
   
 ```sql
 SELECT AdditionalContactInfo.query('  
@@ -111,7 +112,7 @@ WHERE ContactID = 1
 \</act:number>  
 ```  
   
- 若要仅检索顶级电话号码（特别是 <`telephoneNumber` `AdditionalContactInfo`> 的 <> 子元素），则查询中的 FOR 表达式将更改为  
+ 若要仅检索顶级电话号码（特别是 `telephoneNumber` <> 的 <> 子元素 `AdditionalContactInfo` ），则查询中的 FOR 表达式将更改为  
   
  `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`.  
   

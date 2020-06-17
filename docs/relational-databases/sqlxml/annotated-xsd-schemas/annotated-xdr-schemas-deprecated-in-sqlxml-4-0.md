@@ -1,5 +1,6 @@
 ---
 title: 带批注的 XDR 架构（在 SQLXML 4.0 中不推荐使用）
+description: 查看有关 SQLXML 4.0 中带批注的 XDR 架构的弃用的信息。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 874c6dca-8a0c-4a2e-891c-ba6e326154d2
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d187528a8d965cb767f7e79da140a08ad21abe4d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 30485d70da701939d97e86b7b54c2860705b06cd
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247039"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84883658"
 ---
 # <a name="annotated-xdr-schemas-deprecated-in-sqlxml-40"></a>带批注的 XDR 架构（在 SQLXML 4.0 中不推荐使用）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

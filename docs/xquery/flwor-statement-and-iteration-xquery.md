@@ -1,5 +1,6 @@
 ---
 title: FLWOR 语句和迭代（XQuery） |Microsoft Docs
+description: 了解在 XQuery 中构成 FLOWR 迭代语法的 for、let、where、order by 和 return 子句。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9deb87d506e167d3de3439e0a07cfbb8bc040fac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c03c6c2faa156aff513cfcc44fc99dcf461a62f5
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038903"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880962"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>FLWOR 语句和迭代 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "68038903"
   
 -   `return` 表达式。 `return` 子句中的表达式用于构造 FLWOR 语句的结果。  
   
- 例如，下面的查询将在第一个制造`Step`位置上循环访问 <> 元素，并返回 <`Step`> 节点的字符串值：  
+ 例如，下面的查询将 `Step` 在第一个制造位置上循环访问 <> 元素，并返回 <> 节点的字符串值 `Step` ：  
   
 ```sql
 declare @x xml  
@@ -79,7 +80,7 @@ SELECT @x.query('
 Manu step 1 at Loc 1 Manu step 2 at Loc 1 Manu step 3 at Loc 1  
 ```  
   
- 以下查询与上一个查询相似，只不过它是针对 ProductModel 表中的 Instructions 列（类型化的 xml 列）指定的。 该查询将循环访问特定产品第一个生产`step`位置的所有生产步骤，<> 元素。  
+ 以下查询与上一个查询相似，只不过它是针对 ProductModel 表中的 Instructions 列（类型化的 xml 列）指定的。 该查询将循环访问特定产品第一个生产位置的所有生产步骤，<`step`> 元素。  
   
 ```sql
 SELECT Instructions.query('  
@@ -96,13 +97,13 @@ where ProductModelID=7
   
 -   `$Step` 是迭代器变量。  
   
--   [路径表达式](../xquery/path-expressions-xquery.md) `//AWMI:root/AWMI:Location[1]/AWMI:step`生成输入序列。 此顺序是第一个 <`step` `Location`> 元素节点 <> 元素节点子项的顺序。  
+-   [路径表达式](../xquery/path-expressions-xquery.md) `//AWMI:root/AWMI:Location[1]/AWMI:step` 生成输入序列。 此顺序是 `step` 第一个 <> 元素节点 <> 元素节点子项的顺序 `Location` 。  
   
 -   不使用可选的谓词子句 `where`。  
   
--   `return`表达式返回 <`step`> 元素的字符串值。  
+-   `return`表达式返回 <> 元素的字符串值 `step` 。  
   
- [字符串函数（XQuery）](../xquery/data-accessor-functions-string-xquery.md)用于检索 <`step`> 节点的字符串值。  
+ [字符串函数（XQuery）](../xquery/data-accessor-functions-string-xquery.md)用于检索 <> 节点的字符串值 `step` 。  
   
  下面是部分结果：  
   
@@ -155,7 +156,7 @@ SELECT @x.query('
 ...  
 ```  
   
- 下面的查询将构造新的 XML，该`Location` XML 具有作为子元素返回的工作中心位置属性> 元素 <：  
+ 下面的查询将构造新的 XML，该 XML 具有 `Location` 作为子元素返回的工作中心位置属性> 元素 <：  
   
 ```xml
 <Location>  
@@ -187,7 +188,7 @@ where ProductModelID=7
   
  请注意上述查询的以下方面：  
   
--   FLWOR 语句检索特定产品的 <`Location`> 元素的序列。  
+-   FLWOR 语句检索 `Location` 特定产品的 <> 元素的序列。  
   
 -   [数据函数（XQuery）](../xquery/data-accessor-functions-data-xquery.md)用于提取每个属性的值，以便将它们作为文本节点（而不是属性）添加到生成的 XML 中。  
   
@@ -226,7 +227,7 @@ where ProductModelID=7
 ```  
   
 ## <a name="using-the-where-clause"></a>使用 where 子句  
- 可以使用`where`子句来筛选迭代的结果。 下面的示例说明了这一点。  
+ 可以使用 `where` 子句来筛选迭代的结果。 下面的示例说明了这一点。  
   
  在生产自行车时，生产过程经过了一系列生产车间。 每个生产车间定义一个生产步骤序列。 以下查询仅检索那些生产某个自行车型号并且生产步骤少于三步的生产车间。 也就是说，它们具有小于三个 <`step`> 元素。  
   
@@ -246,7 +247,7 @@ where ProductModelID=7
   
  请注意上述查询的以下方面：  
   
--   关键字使用**count （）** 函数来计算每个工作中心位置中`step`> 子元素的 <数量。 `where`  
+-   `where`关键字使用**count （）** 函数来计算 `step` 每个工作中心位置中> 子元素的 <数量。  
   
 -   `return` 表达式将构造您希望从迭代结果生成的 XML。  
   
@@ -267,7 +268,7 @@ where ProductModelID=7
 4.  否则，它将出现静态错误。  
   
 ## <a name="multiple-variable-binding-in-flwor"></a>FLWOR 中的多个变量绑定  
- 可以用单个 FLWOR 表达式将多个变量绑定到输入序列。 在下面的示例中，查询针对非类型化的 xml 变量指定。 FLOWR 表达式返回每个 <`Step` `Location`> 元素中的第一个 <> 元素子级。  
+ 可以用单个 FLWOR 表达式将多个变量绑定到输入序列。 在下面的示例中，查询针对非类型化的 xml 变量指定。 FLOWR 表达式返回 `Step` 每个 <> 元素中的第一个 <> 元素子级 `Location` 。  
   
 ```sql
 declare @x xml  
@@ -293,11 +294,11 @@ SELECT @x.query('
   
  请注意上述查询的以下方面：  
   
--   `for`表达式定义`$Loc`和 $`FirstStep`变量。  
+-   `for`表达式定义 `$Loc` 和 $ `FirstStep` 变量。  
   
 -   `two` 和 `/ManuInstructions/Location``$FirstStep in $Loc/Step[1]` 表达式相互关联，`$FirstStep` 的值取决于 `$Loc` 的值。  
   
--   与`$Loc`相关联的表达式将生成 <`Location`> 元素的序列。 对于每个`Location` <> 元素`$FirstStep` ，将生成一个 <`Step`> 元素的序列，即单一实例。  
+-   与相关联的表达式将 `$Loc` 生成 <`Location`> 元素的序列。 对于每个 <`Location`> 元素，将 `$FirstStep` 生成一个 <`Step`> 元素的序列，即单一实例。  
   
 -   `$Loc` 在与 `$FirstStep` 变量相关联的表达式中指定。  
   
@@ -328,7 +329,7 @@ WHERE ProductModelID=7
   
 -   `for` 子句定义了两个变量：`$WC` 和 `$S`。 在生产某个自行车产品型号时，与 `$WC` 相关联的表达式将生成一系列生产车间。 分配给 `$S` 变量的路径表达式将为 `$WC` 中的每个生产车间序列生成一个相应的步骤序列。  
   
--   Return 语句构造了包含 <`Step`> 元素的 XML，该元素包含生产步骤和**LocationID**作为其属性。  
+-   Return 语句构造了 `Step` 包含 <> 元素的 XML，该元素包含生产步骤和**LocationID**作为其属性。  
   
 -   **Declare 默认元素命名空间**在 XQuery 序言中使用，因此生成的 XML 中的所有命名空间声明都显示在顶级元素上。 这使结果的可读性更强。 有关默认命名空间的详细信息，请参阅[在 XQuery 中处理命名空间](../xquery/handling-namespaces-in-xquery.md)。  
   
@@ -352,7 +353,7 @@ WHERE ProductModelID=7
 ```  
   
 ## <a name="using-the-order-by-clause"></a>使用 order by 子句  
- 通过使用 FLWOR 表达式中的 `order by` 子句可在 XQuery 中进行排序。 传递给`order by`子句的排序表达式必须返回其类型对**gt**运算符有效的值。 每个排序表达式必须针对每一项生成一个单独的序列。 默认情况下，按升序进行排序。 您也可以选择为每个排序表达式指定升序或降序顺序。  
+ 通过使用 FLWOR 表达式中的 `order by` 子句可在 XQuery 中进行排序。 传递给子句的排序表达式 `order by` 必须返回其类型对**gt**运算符有效的值。 每个排序表达式必须针对每一项生成一个单独的序列。 默认情况下，按升序进行排序。 您也可以选择为每个排序表达式指定升序或降序顺序。  
   
 > [!NOTE]  
 >  通过在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中实现 XQuery 进行的字符串值的排序比较始终是使用二进制 Unicode 码位排序规则来执行的。  
@@ -373,7 +374,7 @@ FROM Person.Person
 WHERE BusinessEntityID=291;  
 ```  
   
- 请注意，[原子化（XQuery）](../xquery/atomization-xquery.md)进程先检索 <`number`> 元素的原子值，然后再将其`order by`传递给。 您可以通过使用**data （）** 函数来编写表达式，但这不是必需的。  
+ 请注意，[原子化（XQuery）](../xquery/atomization-xquery.md)进程先检索 <> 元素的原子值， `number` 然后再将其传递给 `order by` 。 您可以通过使用**data （）** 函数来编写表达式，但这不是必需的。  
   
 ```  
 order by data($a/act:number[1]) descending  
@@ -450,7 +451,7 @@ where ProductModelID=19;
   
  请注意上述查询的以下方面：  
   
--   `/p1:ProductDescription/p1:Specifications/*`表达式返回 <`Specifications`> 的元素子级。  
+-   `/p1:ProductDescription/p1:Specifications/*`表达式返回 <> 的元素子级 `Specifications` 。  
   
 -   `order by (local-name($a))` 表达式将按元素名称的本地部分对序列进行排序。  
   
@@ -489,7 +490,7 @@ select @x.query('
 <Person Name="B" />  
 ```  
   
- 您可以指定多个排序条件，如以下示例中所示。 本示例中的查询首先按`Employee`标题和管理员属性值对 <> 元素进行排序。  
+ 您可以指定多个排序条件，如以下示例中所示。 本示例中的查询 `Employee` 首先按标题和管理员属性值对 <> 元素进行排序。  
   
 ```sql
 declare @x xml  

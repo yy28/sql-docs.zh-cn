@@ -1,5 +1,6 @@
 ---
 title: Xquery 涉及订单 |Microsoft Docs
+description: 查看 Xquery 的示例，这些示例基于节点在文档中的显示顺序。
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36c7e512c1e691d0341cb802a61e57d46d4b076a
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946115"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880514"
 ---
 # <a name="xqueries-involving-order"></a>涉及顺序的 XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  关系数据库没有顺序的概念。 例如，您不能发出诸如“从数据库中获取第一个客户”这样的请求。 不过，您可以查询 XML 文档并检索第一个\<Customer> 元素。 这样总是会检索到同一个客户。  
+  关系数据库没有顺序的概念。 例如，您不能发出诸如“从数据库中获取第一个客户”这样的请求。 但是，您可以查询 XML 文档并检索第一个 \<Customer> 元素。 这样总是会检索到同一个客户。  
   
  本主题介绍了基于文档中节点的显示顺序的查询。  
   
@@ -63,7 +64,7 @@ WHERE ProductModelID=7
   
 -   **@\*** 检索第二个工作中心位置的所有属性。  
   
--   FLWOR 迭代（适用于 .。。返回）检索第二个`step`工作中心位置的所有 <> 子元素。  
+-   FLWOR 迭代（适用于 .。。返回）检索 `step` 第二个工作中心位置的所有 <> 子元素。  
   
 -   [Sql： column （）函数（XQuery）](../xquery/xquery-extension-functions-sql-column.md)包括正在构造的 XML 中的关系值。  
   
@@ -81,7 +82,7 @@ WHERE ProductModelID=7
 </ManuStep>    
 ```  
   
- 上述查询只检索文本节点。 如果要改为返回整个`step` <> 元素，请从查询中删除**string （）** 函数：  
+ 上述查询只检索文本节点。 如果要改为返回整个 <`step`> 元素，请从查询中删除**string （）** 函数：  
   
 ### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. 查找产品生产过程中在第二个生产车间使用的所有材料和工具  
  以下查询针对某个特定产品型号，检索生产过程中一系列生产车间中第二个生产车间使用的工具和材料。  
@@ -115,7 +116,7 @@ where ProductModelID=7
   
  请注意上述查询的以下方面：  
   
--   查询构造 <Loca`tion`> 元素，并从数据库中检索其属性值。  
+-   查询构造 <Loca `tion`> 元素，并从数据库中检索其属性值。  
   
 -   它使用了两个 FLWOR (for...return) 迭代：一个用于检索工具，一个用于检索使用的材料。  
   
@@ -137,7 +138,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>C. 从产品目录中检索前两个产品的功能说明  
- 对于特定的产品型号，查询将从产品型号目录中 <`Features`> 元素中检索前两个功能说明。  
+ 对于特定的产品型号，查询将从 `Features` 产品型号目录中 <> 元素中检索前两个功能说明。  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -157,7 +158,7 @@ where ProductModelID=19
   
  请注意上述查询的以下方面：  
   
- 查询主体构造包含 ProductModelID 和 ProductModelName 属性的`ProductModel` <> 元素的 XML。  
+ 查询主体构造包含 `ProductModel` ProductModelID 和 ProductModelName 属性的 <> 元素的 XML。  
   
 -   查询使用 FOR .。。返回循环来检索产品型号功能说明。 **Position （）** 函数用于检索前两个功能。  
   

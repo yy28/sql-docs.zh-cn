@@ -1,5 +1,6 @@
 ---
 title: number 函数（XQuery） |Microsoft Docs
+description: 了解返回指定参数数值的 XQuery 函数编号（）。
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dff6d19b-765c-4df9-afff-9a0e7be9b91b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 31a52f86692d5769fe22f4cf0b5a04ad324c3ac0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19e94b01667d666a714db22d85d866b0df2ec3fc
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930119"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881839"
 ---
 # <a name="functions-on-nodes---number"></a>基于节点的函数 - number
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,11 +36,11 @@ fn:number() as xs:double?
 fn:number($arg as node()?) as xs:double?  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *$arg*  
  将以数字返回其值的节点。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果未指定 *$arg* ，则返回上下文节点的数值，转换为双精度值。 在 SQL Server 中，不带参数的**fn： number （）** 只能用于上下文相关的谓词的上下文中。 特别要指出的是，它只能在方括号 ([ ]) 内使用。 例如，下面的表达式将返回 <`ROOT`> 元素。  
   
 ```  

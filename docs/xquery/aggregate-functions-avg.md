@@ -1,5 +1,6 @@
 ---
 title: avg 函数（XQuery） |Microsoft Docs
+description: 了解 XQuery function avg （），它返回指定数字序列的平均值。
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b659aa13a8704a060be12bb015bd0de0fd126562
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7e7b88b5e28794ff8bc27c02b64b49471af92a05
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67985992"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882036"
 ---
 # <a name="aggregate-functions---avg"></a>聚合函数 - avg
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,11 +35,11 @@ ms.locfileid: "67985992"
 fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
  *$arg*  
  一组要计算平均值的原子值。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  传递到**avg （）** 的所有原子化值的类型必须是三个内置数值基类型或 Xdt： untypedAtomic 中的一个的子类型。 不能使用不同的数值类型。 类型为 xdt:untypedAtomic 的值视为 xs:double。 **Avg （）** 的结果接收传入类型的基类型，例如，在 Xdt： untypedAtomic 的情况下，xs： double。  
   
  如果输入在静态上为空，则暗示为空，并且会引发静态错误。  

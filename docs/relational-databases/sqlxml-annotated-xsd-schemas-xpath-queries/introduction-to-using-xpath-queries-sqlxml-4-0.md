@@ -1,5 +1,6 @@
 ---
 title: 使用 XPath 查询（SQLXML）简介
+description: 了解在 SQLXML 4.0 中使用 XPath 查询的基础知识。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f82c330e2d18f05d0f358171a4ffeabc63ac9c3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ed8de737a350181a62eb12b8c9f2f19a762a44c
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246585"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882244"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath 查询使用简介 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,17 +48,17 @@ ms.locfileid: "75246585"
 </root>  
 ```  
   
- 在本文档中， ** \<Customer>** 是元素节点， **cid**是属性节点， **"重要"** 是文本节点。  
+ 在本文档中， **\<Customer>** 是元素节点， **cid**是属性节点， **"重要"** 是文本节点。  
   
- XPath 是图形导航语言，用于从 XML 文档中选择节点集。 每个 XPath 运算符根据前一个 XPath 运算符所选择的节点集来选择节点集。 例如，给定一组** \<Customer>** 节点，XPath 可以选择**日期**属性值为 **"7/14/1999"** 的所有** \<顺序>** 节点。 生成的节点集包含订单日期为 7/14/1999 的所有订单。  
+ XPath 是图形导航语言，用于从 XML 文档中选择节点集。 每个 XPath 运算符根据前一个 XPath 运算符所选择的节点集来选择节点集。 例如，给定一组 **\<Customer>** 节点，XPath 可以选择 **\<Order>** **日期**属性值为 **"7/14/1999"** 的所有节点。 生成的节点集包含订单日期为 7/14/1999 的所有订单。  
   
- 万维网联盟 (W3C) 将 XPath 语言规定为标准导航语言。 SQLXML 4.0 实现了位于的 W3C XPath 规范的子集http://www.w3.org/TR/1999/PR-xpath-19991008.html。  
+ 万维网联盟 (W3C) 将 XPath 语言规定为标准导航语言。 SQLXML 4.0 实现了位于的 W3C XPath 规范的子集 http://www.w3.org/TR/1999/PR-xpath-19991008.html 。  
   
  以下是 W3C XPath 实现与 SQLXML 4.0 实现之间的主要差异。  
   
 -   **根查询**  
   
-     SQLXML 4.0 不支持根查询 (/)。 每个 XPath 查询必须在该架构中的顶级** \<ElementType>** 开始。  
+     SQLXML 4.0 不支持根查询 (/)。 每个 XPath 查询必须在架构的顶级开始 **\<ElementType>** 。  
   
 -   **报告错误**  
   
@@ -91,11 +92,11 @@ ms.locfileid: "75246585"
 ## <a name="supported-functionality"></a>支持的功能  
  下表显示了 SQLXML 4.0 中实现的 XPath 语言功能。  
   
-|功能|项|示例查询链接|  
+|Feature|项|示例查询链接|  
 |-------------|----------|----------------------------|  
 |Axes|**attribute**、 **child**、 **parent**和**self**轴|[&#40;SQLXML 4.0&#41;在 XPath 查询中指定轴](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |包含连续谓词和嵌套谓词的布尔值谓词||[&#40;SQLXML 4.0&#41;在 XPath 查询中指定算术运算符](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|所有关系运算符|=、！ =、<、 \<=、>、>=|[&#40;SQLXML 4.0&#41;在 XPath 查询中指定关系运算符](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|所有关系运算符|=、！ =、<、 \<=, > >=|[&#40;SQLXML 4.0&#41;在 XPath 查询中指定关系运算符](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |算术运算符|+、-、*、div|[&#40;SQLXML 4.0&#41;在 XPath 查询中指定算术运算符](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |显式转换函数|**number （）**， **string （）**， **Boolean （）**|[&#40;SQLXML 4.0&#41;在 XPath 查询中指定显式转换函数](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |布尔运算符|AND、OR|[在 &#40;SQLXML 4.0&#41;的 XPath 查询中指定布尔运算符](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
@@ -105,7 +106,7 @@ ms.locfileid: "75246585"
 ## <a name="unsupported-functionality"></a>不支持的功能  
  下表显示了 SQLXML 4.0 中未实现的 XPath 语言功能。  
   
-|功能|项|  
+|Feature|项|  
 |-------------|----------|  
 |Axes|**祖先**、**祖先或-self**、**子代**、**子代-或-self （//）**，**后面**是**后同辈**、**命名空间**、**前面**和**同级**|  
 |数值谓词||  
@@ -113,7 +114,7 @@ ms.locfileid: "75246585"
 |节点函数|**祖先**、**祖先或-self**、**子代**、**子代-或-self （//）**，**后面**是**后同辈**、**命名空间**、**前面**和**同级**|  
 |字符串函数|**string （）**， **concat （）**，**开头为（）**，**包含（）**，**子字符串-before （）**， **substring （）**， **substring （**），**字符串长度（**），**规范化（）**，**转换（）**|  
 |布尔函数|**lang （）**|  
-|数值函数|**sum （）**， **floor （）**，**天花板（）**， **round （）**|  
+|数字函数|**sum （）**， **floor （）**，**天花板（）**， **round （）**|  
 |Union 运算符|&#124;|  
   
  在模板中指定 XPath 查询时，请注意以下行为：  

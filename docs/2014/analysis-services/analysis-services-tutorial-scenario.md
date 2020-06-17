@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 71e2d7f2bce555cca469a46a95a1fc3e000eea76
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 7609ecdf63f1bec0a344c9c6c8456a009ca3bbfa
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84528033"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880665"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services 教程方案
   本教程基于 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]，这是一家虚构的公司。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 是一家大型跨国制造公司，生产金属复合材料的自行车，产品远销北美、欧洲和亚洲市场。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 公司总部设在华盛顿州的伯瑟尔市，雇佣了 500 名工人。 此外，在 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 市场中还活跃着一些地区销售团队。  
@@ -26,7 +26,7 @@ ms.locfileid: "84528033"
 ## <a name="current-analysis-environment"></a>当前分析环境  
  为了支持销售和营销团队以及高级管理人员的数据分析需要，公司当前从 [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] 数据库中提取事务数据，从电子表格中提取诸如销售配额之类的非事务信息，并将这些信息合并到 **AdventureWorksDW2012** 关系数据仓库。 但是，关系数据仓库存在下列问题：  
   
--   报表是静态的。 用户无法通过交互方式探测报表中的数据以获取更详细的信息，例如他们可以处理 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 透视表。 虽然现有的一组预定义报表足以供许多用户使用，但更高级的用户却需要对数据库进行直接查询访问，以进行交互式查询和访问专用报表。 但是，由于 **AdventureWorksDW2012** 数据库非常复杂，因此，这类用户需要花费大量时间来掌握如何创建有效查询。  
+-   报表是静态的。 用户无法通过交互方式探测报表中的数据以获取更详细的信息，例如他们可以处理 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 透视表。 虽然现有的一组预定义报表足以供许多用户使用，但更高级的用户却需要对数据库进行直接查询访问，以进行交互式查询和访问专用报表。 但是，由于**AdventureWorksDW2012**数据库的复杂性，此类用户需要花费太多时间来了解如何创建有效查询。  
   
 -   查询性能差异很大。 例如，有些查询只需几秒钟便可非常迅速地返回结果，而另一些查询需要几分钟才能返回结果。  
   

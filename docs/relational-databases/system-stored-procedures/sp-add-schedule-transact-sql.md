@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dcaf10a680540a533e539783a1fc9ed289998a40
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: c12d6650023fcb3473a834d8145437d8a013df5e
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151972"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818136"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -50,11 +50,10 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
     [ , [ @owner_login_name = ] 'owner_login_name' ]  
     [ , [ @schedule_uid = ] schedule_uid OUTPUT ]  
     [ , [ @schedule_id = ] schedule_id OUTPUT ]
-    [ , [ @schedule_uid = ] _schedule_uid OUTPUT ]
     [ , [ @originating_server = ] server_name ] /* internal */  
 ```  
   
-## <a name="arguments"></a>参数  
+## <a name="arguments"></a>自变量  
 `[ @schedule_name = ] 'schedule_name'`计划的名称。 *schedule_name* **sysname**，无默认值。  
   
 `[ @enabled = ] enabled`指示计划的当前状态。 *enabled*为**tinyint**，默认值为**1** （已启用）。 如果为**0**，则不启用计划。 如果不启用计划，则作业不会按此计划运行。  
@@ -64,9 +63,9 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |值|说明|  
 |-----------|-----------------|  
 |**1**|一次|  
-|**4**|每天|  
+|**4**|每日|  
 |**8**|每周|  
-|**超过**|每月一次|  
+|**16**|每月|  
 |**32**|每月，相对于*freq_interval*|  
 |**64**|SQL 代理服务启动时运行|  
 |**128**|计算机处于空闲状态时运行（ [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)中不支持） |  
@@ -98,11 +97,11 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 |值|说明（单位）|  
 |-----------|--------------------------|  
-|**1**|第一个|  
+|**1**|First|  
 |**2**|秒|  
 |**4**|第三个|  
 |**8**|第四个|  
-|**超过**|最后一个|  
+|**16**|最后一个|  
   
 `[ @freq_recurrence_factor = ] freq_recurrence_factor`作业的计划执行之间的周数或月数。 仅当*freq_type*为**8**、 **16**或**32**时才使用*freq_recurrence_factor* 。 *freq_recurrence_factor*的值为**int**，默认值为**0**。  
   

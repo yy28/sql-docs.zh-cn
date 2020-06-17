@@ -1,5 +1,6 @@
 ---
 title: 指定轴（SQLXML）
+description: 了解如何在 SQLXML 4.0 XPath 查询中指定轴指定 location 步骤所选的节点与上下文节点之间的关系。
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a219c2093832b979171584d5559da359b574552e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 43daf972eacd67dcd7e75eabd1aca87bb3f67932
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75253057"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882187"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>指定轴 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "75253057"
   
      包含上下文节点的子级。  
   
-     以下 XPath 表达式（位置路径）从当前上下文节点中选择所有** \<客户>** 子女：  
+     以下 XPath 表达式（位置路径）从当前上下文节点选择所有 **\<Customer>** 子级：  
   
     ```  
     child::Customer  
@@ -47,7 +48,7 @@ ms.locfileid: "75253057"
   
      包含上下文节点的父级。  
   
-     下面的 XPath 表达式选择** \<订单>** 子项的所有** \<客户>** 父级：  
+     下面的 XPath 表达式选择子级的所有 **\<Customer>** 父级 **\<Order>** ：  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
@@ -69,7 +70,7 @@ ms.locfileid: "75253057"
   
      包含上下文节点本身。  
   
-     下面的 XPath 表达式选择当前节点（如果它是** \<Order>** 节点）：  
+     下面的 XPath 表达式选择当前节点（如果它是 **\<Order>** 节点）：  
   
     ```  
     self::Order  

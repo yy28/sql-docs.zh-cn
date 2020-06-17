@@ -1,5 +1,6 @@
 ---
 title: 到表/列的自定义 XSD 映射（SQLXML）
+description: 了解如何在用于 XSD 架构的元素和属性与关系数据库的表和列之间的 SQLXML XPath 查询中创建自定义映射。
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -29,12 +30,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5fafcd918dda0001c316fd68cae3b19e6cd805a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8e4d7e4c58234ff5db68cdf51265100b88df5cef
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257432"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84885600"
 ---
 # <a name="custom-xsd-mappings-to-tablescolumns-sqlxml"></a>到表/列的自定义 XSD 映射（SQLXML）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "75257432"
   
  在元素上指定**sql： relation**时，此批注的范围适用于该元素的复杂类型定义中所述的所有属性和子元素，因此在编写批注时提供了一个快捷方式。  
   
- 当中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有效的标识符在 XML 中无效时， **sql：关系**批注也很有用。 例如，“Order Details”是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的有效表名，但该名称在 XML 中无效。 在这种情况下，可以使用**sql： relation**批注指定映射，例如：  
+ 当中有效的标识符在 XML 中无效时， **sql：关系**批注也很有用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 例如，“Order Details”是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的有效表名，但该名称在 XML 中无效。 在这种情况下，可以使用**sql： relation**批注指定映射，例如：  
   
 ```  
 <xsd:element name="OD" sql:relation="[Order Details]">  
@@ -60,9 +61,9 @@ ms.locfileid: "75257432"
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. 指定 sql:relation 和 sql:field 批注  
- 在此示例中，XSD 架构包含一个** \<Contact>** 包含** \<FName>** 和** \<LName>** 子元素和**ContactID**属性的复杂类型的元素。  
+ 在此示例中，XSD 架构包含 **\<Contact>** 带有和子元素的复杂类型的元素 **\<FName>** **\<LName>** 和**ContactID**属性。  
   
- **Sql： relation**批注将** \<Contact>** 元素映射到 AdventureWorks 数据库中的 contact 表。 **Sql： field**批注将** \<FName>** 元素映射到 FirstName 列，并且将** \<LName>** 元素映射到 LastName 列。  
+ **Sql： relation**批注将元素映射 **\<Contact>** 到 AdventureWorks 数据库中的 Person 表。 **Sql： field**批注将元素映射 **\<FName>** 到 FirstName 列，并将 **\<LName>** 元素映射到 LastName 列。  
   
  没有为**ContactID**属性指定批注。 这导致将属性默认映射为具有相同名称的列。  
   

@@ -1,5 +1,6 @@
 ---
 title: 数据访问器函数 |Microsoft Docs
+description: 了解如何使用 XQuery 数据访问器函数 fn： data （）、fn： string （）和 text （）。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 31bad04f-7c74-4773-9f83-612704fdd21c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3726686a2c0e5229a0fccf4d9f51c0e1404f1a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d25fa2236feb02ba8ed726dc56b946dc09350d1c
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038948"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881886"
 ---
 # <a name="data-accessor-functions"></a>数据取值函数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -27,11 +28,11 @@ ms.locfileid: "68038948"
   本节中的主题介绍数据取值函数并提供相应的示例代码。  
   
 ## <a name="understanding-fndata-fnstring-and-text"></a>了解 fn:data()、fn:string() 和 text()  
- XQuery 具有一个函数**fn： data （）** ，用于从节点提取标量、类型化的值、节点测试**文本（）** 以返回文本节点，以及返回节点的字符串值的函数**fn： string （）** 。 它们的用法容易混淆。 以下是在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中正确使用它们的准则。 XML 实例\<age>12\</age> 用于说明目的。  
+ XQuery 具有一个函数**fn： data （）** ，用于从节点提取标量、类型化的值、节点测试**文本（）** 以返回文本节点，以及返回节点的字符串值的函数**fn： string （）** 。 它们的用法容易混淆。 以下是在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中正确使用它们的准则。 XML 实例 \<age> 12 \</age> 用于说明目的。  
   
 -   非类型化的 XML：路径表达式 /age/text() 返回文本节点“12”。 函数 fn:data(/age) 返回字符串值“12”，fn:string(/age) 也是如此。  
   
--   类型化的 XML： expression/age/text （）为任何简单类型\<的 age> 元素返回一个静态错误。 另一方面，fn:data(/age) 返回整数 12。 fn:string(/age) 产生字符串“12”。  
+-   类型化的 XML： expression/age/text （）为任何简单类型化元素返回一个静态错误 \<age> 。 另一方面，fn:data(/age) 返回整数 12。 fn:string(/age) 产生字符串“12”。  
   
 ## <a name="in-this-section"></a>本节内容  
   

@@ -1,5 +1,6 @@
 ---
 title: 使用 ADO 执行 SQLXML 4.0 查询
+description: 了解如何通过使用 SQLXML 扩展来 ActiveX 数据对象（ADO），在基于 COM 的应用程序中执行 SQLXML 4.0 查询。
 ms.custom: ''
 ms.date: 12/15/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 436ec564e4cf5de21647eb5cd667741ce246e99d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e0a26c534aeb25bd445deb087bef06a2137bfa3
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75254143"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882108"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>使用 ADO 执行 SQLXML 4.0 查询
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -121,11 +122,11 @@ ms.locfileid: "75254143"
     3.  在当前安装的程序列表中，验证列表中是否出现**Microsoft SQL Server Native Client** 。  
   
         > [!NOTE]  
-        >  如果需要安装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，请参阅[安装 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)。  
+        >  如果需要安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，请参阅[安装 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)。  
   
-2.  验证客户端计算机上安装的 MDAC 版本是否为 2.6 版或更高版本。 如果需要验证 MDAC 版本信息，你可以使用从 Microsoft 网站免费下载提供的 MDAC 组件检查器工具[http://www.microsoft.com](https://www.microsoft.com)。 有关详细信息，请在此 Microsoft 网站中搜索“MDAC Component 检查器”。  
+2.  验证客户端计算机上安装的 MDAC 版本是否为 2.6 版或更高版本。 如果需要验证 MDAC 版本信息，你可以使用从 Microsoft 网站免费下载提供的 MDAC 组件检查器工具 [http://www.microsoft.com](https://www.microsoft.com) 。 有关详细信息，请在此 Microsoft 网站中搜索“MDAC Component 检查器”。  
   
-3.  执行脚本。  
+3.  执行该脚本。  
   
      您可以在命令行使用 Cscript.exe 来执行 VBScript 文件，也可以通过双击 Sqlxml4test.vbs 文件调用 Windows 脚本宿主 (WScript.exe) 来执行该文件。  
   

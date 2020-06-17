@@ -1,5 +1,6 @@
 ---
 title: 表达式上下文和查询计算（XQuery） |Microsoft Docs
+description: 了解如何使用 XQuery 表达式的静态和动态上下文中的信息来对其进行分析和计算。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d665b16c6b635da8b267ac0549ab8d918af8c06b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cadfc71bdbb137650d897dc8374ed1caa8d193ab
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038919"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881902"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>表达式上下文和查询计算 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "68038919"
   
     -   使用 WITH XMLNAMESPACES 定义的所有命名空间。 有关详细信息，请参阅通过 with [XMLNAMESPACES 将命名空间添加到查询](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)中。  
   
-    -   查询 Prolog 中定义的所有命名空间。 请注意，Prolog 中的命名空间声明可覆盖 WITH XMLNAMESPACES 中的命名空间声明。 例如，在下面的查询中，WITH XMLNAMESPACES 声明了一个将其绑定到命名空间（`https://someURI`）的前缀（pd）。 但是，在 WHERE 子句中，查询 Prolog 覆盖该绑定。  
+    -   查询 Prolog 中定义的所有命名空间。 请注意，Prolog 中的命名空间声明可覆盖 WITH XMLNAMESPACES 中的命名空间声明。 例如，在下面的查询中，WITH XMLNAMESPACES 声明了一个将其绑定到命名空间（）的前缀（pd） `https://someURI` 。 但是，在 WHERE 子句中，查询 Prolog 覆盖该绑定。  
   
         ```  
         WITH XMLNAMESPACES ('https://someURI' AS pd)  
@@ -119,7 +120,7 @@ ms.locfileid: "68038919"
   
 2.  解析在表达式中指定的函数和类型名称。  
   
-3.  对查询执行静态类型化。 这可确保查询类型安全。 例如，下面的查询将返回一个静态错误，因为**+** 运算符需要数值基元类型参数：  
+3.  对查询执行静态类型化。 这可确保查询类型安全。 例如，下面的查询将返回一个静态错误，因为 **+** 运算符需要数值基元类型参数：  
   
     ```  
     declare @x xml  
@@ -127,7 +128,7 @@ ms.locfileid: "68038919"
     SELECT @x.query('"x" + 4')  
     ```  
   
-     在下面的示例中， **value （）** 运算符要求单一实例。 根据 XML 架构中的指定，可以有多个\<Elem> 元素。 对表达式进行的静态分析确定它是非类型安全，并返回静态错误。 若要解决该错误，必须重写表达式以显式指定单一参数 (`data(/x:Elem)[1]`)。  
+     在下面的示例中， **value （）** 运算符要求单一实例。 根据 XML 架构中的指定，可以有多个 \<Elem> 元素。 对表达式进行的静态分析确定它是非类型安全，并返回静态错误。 若要解决该错误，必须重写表达式以显式指定单一参数 (`data(/x:Elem)[1]`)。  
   
     ```  
     DROP XML SCHEMA COLLECTION SC  

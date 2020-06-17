@@ -1,5 +1,6 @@
 ---
 title: 在位置路径中指定节点测试（SQLXML）
+description: 了解如何在 SQLXML 4.0 XPath 查询的位置路径中指定节点测试。
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,32 +17,32 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f94f155ee86df6daf0c039a18f27c30e294d57df
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc00f51a357bf87b5031b669528c72c261a21017
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75254741"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882174"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>在位置路径中指定节点测试 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  节点测试指定根据位置步骤选择的节点类型。 每个轴（**子级**、 **parent**、 **attribute**或**self**）都具有一个主体节点类型。 对于**属性**轴，主体节点类型为** \<attribute>**。 对于**parent**、 **child**和**self**轴，主体节点类型为** \<元素>**。  
+  节点测试指定根据位置步骤选择的节点类型。 每个轴（**子级**、 **parent**、 **attribute**或**self**）都具有一个主体节点类型。 对于**属性**轴，主体节点类型为 **\<attribute>** 。 对于**parent**、 **child**和**self**轴，主体节点类型为 **\<element>** 。  
   
 > [!NOTE]  
 >  不支持通配符节点测试 *（例如 `child::*`）。  
   
 ## <a name="node-test-example-1"></a>节点测试：示例1  
- 位置路径`child::Customer`选择** \<** 上下文节点的 Customer>元素子级。  
+ 位置路径 `child::Customer` 选择 **\<Customer>** 上下文节点的子元素。  
   
- 在本示例中，`child` 是轴，`Customer` 是节点测试。 **子**轴的主体节点类型为** \<元素>**。 因此，如果** \<Customer>** 节点是>节点的** \<元素**，则节点测试为 TRUE。 如果上下文节点没有** \<客户>** 子级，则返回一组空节点。  
+ 在本示例中，`child` 是轴，`Customer` 是节点测试。 **子**轴的主体节点类型为 **\<element>** 。 因此，如果节点是节点，则节点测试为 TRUE **\<Customer>** **\<element>** 。 如果上下文节点没有任何 **\<Customer>** 子级，则返回一组空节点。  
   
 ## <a name="node-test-example-2"></a>节点测试：示例 2  
- 位置路径`attribute::CustomerID`选择上下文节点的**CustomerID**属性。  
+ 位置路径 `attribute::CustomerID` 选择上下文节点的**CustomerID**属性。  
   
- 在此示例中`attribute` ，是轴， `CustomerID`是节点测试。 **特性**轴的主要节点类型为** \<attribute>**。 因此，如果**CustomerID**是>节点的** \<属性**，则节点测试为 TRUE。 如果上下文节点没有**CustomerID**，则返回一组空节点。  
+ 在此示例中， `attribute` 是轴， `CustomerID` 是节点测试。 **特性**轴的主要节点类型为 **\<attribute>** 。 因此，如果**CustomerID**是节点，则节点测试为 TRUE **\<attribute>** 。 如果上下文节点没有**CustomerID**，则返回一组空节点。  
   
 > [!NOTE]  
->  在此 XPath 实现中，如果定位步骤引用** \<元素>** 或未在架构中声明的** \<特性>** 类型，则会生成错误。 这与 MSXML 中的 XPath 实现不同，在 MSXML 中返回空节点集。  
+>  在此 XPath 实现中，如果定位步骤引用 **\<element>** **\<attribute>** 架构中未声明的或类型，则会生成错误。 这与 MSXML 中的 XPath 实现不同，在 MSXML 中返回空节点集。  
   
 ## <a name="abbreviated-syntax-for-the-axes"></a>轴的缩写语法  
  支持以下位置路径的缩写语法：  

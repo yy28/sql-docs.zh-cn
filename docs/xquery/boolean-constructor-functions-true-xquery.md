@@ -1,5 +1,6 @@
 ---
 title: true 函数（XQuery） |Microsoft Docs
+description: 了解返回布尔值 True 的 XQuery 函数 true （）。
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56f2dde1899340f036024253405379e094de59a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb3625b1377d11907ca118faee8d81c06b8d6af6
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68039041"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886575"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>布尔构造函数 - true (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +48,9 @@ go
 -- result = 1  
 ```  
   
- 在下面的示例中，对类型化的**xml**列指定了查询。 `if`表达式检查 <`ROOT`> 元素的类型化布尔值，并相应地返回构造的 XML。 该示例执行以下操作：  
+ 在下面的示例中，对类型化的**xml**列指定了查询。 `if`表达式检查 <> 元素的类型化布尔值， `ROOT` 并相应地返回构造的 XML。 该示例执行以下操作：  
   
--   创建定义 xs： boolean 类型的 <`ROOT`> 元素的 XML 架构集合。  
+-   创建定义 `ROOT` xs： boolean 类型的 <> 元素的 XML 架构集合。  
   
 -   使用 XML 架构集合创建包含类型化**xml**列的表。  
   

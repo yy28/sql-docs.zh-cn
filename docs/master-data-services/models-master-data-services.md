@@ -1,5 +1,6 @@
 ---
 title: 模型
+description: 模型定义了您的主数据管理解决方案中的数据结构。 模型是 Master Data Services 中最高级别的数据组织。
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6bee1ab1716eac70d51006b8bb4315b204be67ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ba07d02389ed15b93e8a67992514c76f80906224
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727945"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84800544"
 ---
 # <a name="models-master-data-services"></a>模型 (Master Data Services)
 

@@ -1,5 +1,6 @@
 ---
 title: 在 XPath 查询中使用布尔运算符（SQLXML）
+description: 了解如何在 SQLXML 4.0 XPath 查询中使用布尔运算符。
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 00a53f9d1b04d0f96e854a9e85c1588aa33e60fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 41c521f2e8d1984ab8c10b8970c83c7ebe495f99
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252579"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84884179"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定布尔运算符 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75252579"
 ## <a name="examples"></a>示例  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>A. 指定 OR 布尔运算符  
- 此 XPath 查询将返回**CustomerID**属性值为13或31的上下文节点的** \<Customer>** 元素子级：  
+ 此 XPath 查询将返回 **\<Customer>** **CustomerID**属性值为13或31的上下文节点的子元素：  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -43,7 +44,7 @@ ms.locfileid: "75252579"
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- 在谓词中， `attribute`是轴， `CustomerID`是节点测试（如果**CustomerID**是** \<>** 节点的属性，则为 TRUE，因为** \<属性>** 节点是**属性**轴的主节点）。 谓词筛选** \<Customer>** 元素，并仅返回满足谓词中指定的条件的元素。  
+ 在谓词中， `attribute` 是轴， `CustomerID` 是节点测试（如果**CustomerID**是节点，则为 TRUE **\<attribute>** ，因为 **\<attribute>** 节点是**属性**轴的主节点）。 谓词筛选 **\<Customer>** 元素并仅返回满足谓词中指定的条件的元素。  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>针对映射架构测试 XPath 查询  
   
