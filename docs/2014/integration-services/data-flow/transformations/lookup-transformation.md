@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69ed33b3967b3c807b21df0ab8a3a4a1cd07bebc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900219"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939475"
 ---
 # <a name="lookup-transformation"></a>查找转换
   查找转换通过联接输入列中的数据和引用数据集中的列来执行查找。 可以使用该查找在基于通用列的值的相关表中访问其他信息。  
@@ -74,7 +73,7 @@ ms.locfileid: "62900219"
 -   无匹配输出。 无匹配输出处理输入中在引用数据集内没有任何匹配项的行。 如果将查找转换配置为将无匹配项的行视为错误，则这些行会重定向到错误输出。 否则，转换会将这些行重定向到无匹配输出。  
   
     > [!NOTE]  
-    >  在 [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)] 中，查找转换只有一个输出。 有关如何运行在中[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]创建的查找转换的详细信息，请参阅[升级查找转换](../../../sql-server/install/upgrade-lookup-transformations.md)。  
+    >  在 [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)] 中，查找转换只有一个输出。 有关如何运行在中创建的查找转换的详细信息 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ，请参阅[升级查找转换](../../../sql-server/install/upgrade-lookup-transformations.md)。  
   
 -   错误输出。  
   

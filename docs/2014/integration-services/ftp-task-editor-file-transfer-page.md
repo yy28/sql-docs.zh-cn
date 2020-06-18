@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37e52220-feb2-474c-ad88-fa1b1059acd4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9386070902022e29ba191f24eb8fbfb10ed92b9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5d8fd967b70b0b3470ceee0c6a6311499ed4696
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058438"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966347"
 ---
 # <a name="ftp-task-editor-file-transfer-page"></a>FTP 任务编辑器（“文件传输”页）
   可以使用 **“FTP 任务编辑器”** 对话框的 **“文件传输”** 页配置任务执行的 FTP 操作。  
@@ -30,7 +29,7 @@ ms.locfileid: "66058438"
  **IsRemotePathVariable**  
  指示远程路径是否存储在变量中。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**True**|目标路径存储在变量中。 选择该值将显示动态选项 **RemoteVariable**。|  
 |**False**|目标路径在文件连接管理器中指定。 选择该值将显示动态选项 **RemotePath**。|  
@@ -41,7 +40,7 @@ ms.locfileid: "66058438"
  **IsLocalPathVariable**  
  指示本地路径是否存储在变量中。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**True**|目标路径存储在变量中。 选择该值将显示动态选项 **LocalVariable**。|  
 |**False**|目标路径在文件连接管理器中指定。 选择该值将显示动态选项 **LocalPath**。|  
@@ -49,7 +48,7 @@ ms.locfileid: "66058438"
  **操作**  
  选择要执行的 FTP 操作。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**发送文件**|发送文件。 选择此值将显示动态选项 **LocalVariable**、 **LocalPathRemoteVariable** 和 **RemotePath**。|  
 |**接收文件**|接收文件。 选择此值将显示动态选项 **LocalVariable**、 **LocalPathRemoteVariable** 和 **RemotePath**。|  
@@ -67,13 +66,13 @@ ms.locfileid: "66058438"
   
 ### <a name="isremotepathvariable--true"></a>IsRemotePathVariable = True  
  **RemoteVariable**  
- 选择现有的用户定义变量，或单击 " \<**新建变量 ...** "> 以创建用户定义变量。  
+ 选择现有的用户定义变量，或单击 \<**New variable...**> 以创建用户定义变量。  
   
  **相关主题：** [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)、添加变量  
   
 ### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
- 选择现有的 FTP 连接管理器，或\<单击 "**新建连接 ...** "> 创建连接管理器。  
+ 选择现有的 FTP 连接管理器，或单击 \<**New connection...**> 以创建连接管理器。  
   
  **相关主题** [FTP 连接管理器](connection-manager/ftp-connection-manager.md)、 [FTP 连接管理器编辑器](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
@@ -81,13 +80,13 @@ ms.locfileid: "66058438"
   
 ### <a name="islocalpathvariable--true"></a>IsLocalPathVariable = True  
  **LocalVariable**  
- 选择现有的用户定义变量，或单击 " \<**新建变量 ...** "> 创建变量。  
+ 选择现有的用户定义变量，或单击 \<**New variable...**> 以创建变量。  
   
  **相关主题：** [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)、添加变量  
   
 ### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  
- 选择现有文件连接管理器，或单击\<"**新建连接 ...** "> 创建连接管理器。  
+ 选择现有文件连接管理器，或单击 \<**New connection...**> 以创建连接管理器。  
   
  **相关主题**： [Flat File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   

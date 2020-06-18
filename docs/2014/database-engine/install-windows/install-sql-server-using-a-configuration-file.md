@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 38cd8aeb157a94a28b1cfd831bcfacfb3e93ea6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 89215c16f958848942c64d2427d7201bc13cb282
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775280"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932373"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>使用配置文件安装 SQL Server 2014
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序提供了基于系统默认值和运行时输入生成配置文件的功能。 可以使用配置文件在整个企业中部署具有相同配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 通过创建一个启动 Setup.exe 的批处理文件，还可以使企业范围内的手动安装得以标准化。  
@@ -56,7 +55,7 @@ FEATURES=SQL,Tools
     >   
     >  SETUP.exe /UIMODE=Normal /ACTION=INSTALL  
   
-2.  按照向导操作，直到出现 **“准备安装”** 页。 配置文件的路径是在 **“准备安装”** 页的配置文件路径部分中指定的。 有关如何安装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的详细信息，请参阅安装[向导中的安装 SQL Server 2014 &#40;安装&#41;](install-sql-server-from-the-installation-wizard-setup.md)。  
+2.  按照向导操作，直到出现 **“准备安装”** 页。 配置文件的路径是在 **“准备安装”** 页的配置文件路径部分中指定的。 有关如何安装的详细信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅安装[向导中的安装 SQL Server 2014 &#40;安装&#41;](install-sql-server-from-the-installation-wizard-setup.md)。  
   
 3.  取消安装并且不要真正完成安装，以便生成 INI 文件。  
   
@@ -71,7 +70,7 @@ FEATURES=SQL,Tools
   
 #### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-ssnoversion-instance"></a>如何使用配置文件安装独立的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例  
   
--   通过命令提示符运行安装，然后使用 *ConfigurationFile* 参数提供 ConfigurationFile.ini 文件。  
+-   在命令提示符下运行安装，并使用*configurationfile.ini*参数提供 ConfigurationFile.ini。  
   
 #### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-ssnoversion-instance-sysprep"></a>如何使用配置文件准备和完成独立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的映像 (SysPrep)  
   

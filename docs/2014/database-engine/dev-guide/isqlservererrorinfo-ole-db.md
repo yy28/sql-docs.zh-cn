@@ -13,22 +13,21 @@ helpviewer_keywords:
 ms.assetid: a8323b5c-686a-4235-a8d2-bda43617b3a1
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d15b7ca5ed84f2cc828696c6a7fe8b8771e8a374
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 222349bcaa88058dea1d9c5302883667c22d4092
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781043"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933518"
 ---
 # <a name="isqlservererrorinfo-ole-db"></a>ISQLServerErrorInfo (OLE DB)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序定义**ISQLServerErrorInfo**错误接口。 此接口从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误返回详细信息，包括其严重性和状态。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序定义**ISQLServerErrorInfo**错误接口。 此接口从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误返回详细信息，包括其严重性和状态。  
   
 ## <a name="in-this-section"></a>本节内容  
   
 |方法|说明|  
 |------------|-----------------|  
-|[ISQLServerErrorInfo：： GetErrorInfo &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md)|返回一个指针，该[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指针指向包含[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]错误详细信息的 NATIVE Client OLE DB provider SSERRORINFO 结构。|  
+|[ISQLServerErrorInfo：： GetErrorInfo &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md)|返回一个指针，该指针指向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误详细信息的 Native Client OLE DB provider SSERRORINFO 结构。|  
   
 ## <a name="see-also"></a>另请参阅  
  [接口 &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/interfaces-ole-db.md)   

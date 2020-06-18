@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772d9064-c91d-4cac-8b60-fcc16bf76e10
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: acd65a4dfc708c88dd30b6d2e15b189c0d340849
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19314f4edf21559208193728856b26731c6e173d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780792"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933418"
 ---
 # <a name="processing-results-how-to-topics-odbc"></a>处理结果操作指南主题 (ODBC)
   ODBC 应用程序中的处理结果包括首先确定结果集的特征，然后使用[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)或[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)将数据检索到程序变量中。  

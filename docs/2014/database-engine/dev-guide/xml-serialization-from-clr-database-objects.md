@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ac84339b-9384-4710-bebc-01607864a344
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 646d15dc3091323e6e7db2af757640122fb2f0fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee93ee4b7bf9cba3f11b329244d4523636cb7704
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779775"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933135"
 ---
 # <a name="xml-serialization-from-clr-database-objects"></a>从 CLR 数据库对象进行 XML 序列化
   XML 序列化是以下两种情况所必需的：  
@@ -29,9 +28,9 @@ ms.locfileid: "62779775"
   
 -   将用户定义类型 (UDT) 转换为 XML。  
   
- 通过调用 `XmlSerializer` 类执行 XML 序列化通常将生成一个附加的序列化程序集，该程序集将重载到具有源程序集的项目中。 但出于安全原因，此重载在 CLR 中被禁用。 因此，若要调用 web 服务或执行从 UDT 到 XML 的转换[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则必须**使用随 .NET Framework 提供的**工具来手动创建程序集，该工具可生成所需的序列化程序集。 在调用 `XmlSerializer` 时，必须通过以下步骤手动创建序列化程序集：  
+ 通过调用 `XmlSerializer` 类执行 XML 序列化通常将生成一个附加的序列化程序集，该程序集将重载到具有源程序集的项目中。 但出于安全原因，此重载在 CLR 中被禁用。 因此，若要调用 web 服务或执行从 UDT 到 XML 的转换 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，必须使用一个名为 .NET Framework **Sgen.exe**的工具手动创建该程序集，该工具可生成所需的序列化程序集。 在调用 `XmlSerializer` 时，必须通过以下步骤手动创建序列化程序集：  
   
-1.  运行 .NET Framework SDK 提供的**Sgen**工具，以创建包含源程序集的 XML 序列化程序的程序集。  
+1.  运行与 .NET Framework SDK 一起提供的**Sgen.exe**工具，以创建包含源程序集的 XML 序列化程序的程序集。  
   
 2.  使用 `CREATE ASSEMBLY` 语句在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中注册生成的程序集。  
   

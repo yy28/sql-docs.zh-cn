@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c18cf801-f893-4fbc-8e2b-c563f6108acf
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 99973fe28d18dc28a0d6690567eb3923e74eb812
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e2545f41db1571276b3eba53fbe34533ac6a62d6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780510"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933320"
 ---
 # <a name="sqlxml-40-net-framework-support"></a>SQLXML 4.0 .NET Framework 支持
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 支持多种功能，例如可用于编写应用程序以便从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例访问 XML 数据、将数据置于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 环境中、处理数据以及将更新发送回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 本节介绍 .NET Framework 支持功能并提供其用法示例。  

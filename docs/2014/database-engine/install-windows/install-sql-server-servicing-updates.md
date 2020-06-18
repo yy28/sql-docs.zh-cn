@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 07f438f86a22b866351a0b83ee7634338f3ad2cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c36fbe634fbc2b17547f127290cfbaed6e745c7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775340"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932517"
 ---
 # <a name="install-sql-server-2014-servicing-updates"></a>安装 SQL Server 2014 服务更新
   本主题提供了有关为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安装更新的信息。 本节提供有关以下方面的信息：  
@@ -37,10 +36,10 @@ ms.locfileid: "62775340"
   
 -   网络共享  
   
- 在找到最新版本的适用更新后，安装程序将下载这些更新并将其与当前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程集成在一起。 产品更新可包括累积更新、Service Pack 或者 Service Pack 连同累积更新。 产品更新功能是 PCU1 中[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]提供的补充[功能](https://go.microsoft.com/fwlink/?LinkId=219945)的扩展。  
+ 在找到最新版本的适用更新后，安装程序将下载这些更新并将其与当前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程集成在一起。 产品更新可包括累积更新、Service Pack 或者 Service Pack 连同累积更新。 产品更新功能是 PCU1 中提供的补充[功能](https://go.microsoft.com/fwlink/?LinkId=219945)的扩展 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 。  
   
 ## <a name="installing-updates-for-sscurrent-after-it-has-already-been-installed"></a>在已安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 后为其安装更新  
- 在的已安装实例[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]上，我们建议你应用所有可用的更新：常规分发版本（GDR-安全/关键更新）、Service PACK （SP）以及最新的可用累积更新（CU）。  
+ 在的已安装实例上 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，我们建议你应用所有可用的更新：常规分发版本（GDR-安全/关键更新）、Service pack （SP）以及最新的可用累积更新（CU）。  
   
  根据服务发布的类型，可以通过 Microsoft 更新（MU）、Microsoft 下载中心和/或客户支持服务修补程序服务器提供 SQL Server 更新。 Microsoft 更新自动提供 SQL Server 的安全更新和关键更新（通过控制面板中的 Windows 更新，可以查看需要选择加入 MU 的这些更新）。 在 MU 上，Service Pack 可作为可选/重要下载和下载中心提供。 在 CU 知识库文章中提供的 Microsoft 修补程序下载服务器上提供了累积更新。  
   

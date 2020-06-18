@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73c83969-7b0e-479d-a436-0a46b2068d01
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7924570253bf2f805d91c4dfabc3d5facf44cccc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b8dbb9847f3591d0f26a2dc7ca6e31f1b22da83
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054470"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972447"
 ---
 # <a name="web-service-task-editor-output-page"></a>Web 服务任务编辑器（“输出”页）
   可以使用 **“Web 服务任务编辑器”** 对话框的 **“输出”** 页，指定 Web 方法返回的结果的存储位置。  
@@ -30,7 +29,7 @@ ms.locfileid: "66054470"
  **OutputType**  
  选择存储结果时所使用的存储类型。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**文件连接**|将结果存储在文件中。 选择此值将显示动态选项 **File**。|  
 |**变量**|将结果存储在变量中。 选择此值将显示动态选项 **Variable**。|  
@@ -39,13 +38,13 @@ ms.locfileid: "66054470"
   
 ### <a name="outputtype--file-connection"></a>OutputType = 文件连接  
  **File**  
- 在列表中选择一个文件连接管理器， \<或单击 "**新建连接 ...** "> 创建新的连接管理器。  
+ 在列表中选择一个文件连接管理器，或单击 " \<**New Connection...**> 新建连接管理器"。  
   
  **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="outputtype--variable"></a>OutputType = 变量  
  **变量**  
- 在列表中选择变量，或单击\<"**新建变量 ...** "> 创建新变量。  
+ 在列表中选择变量，或单击 \<**New Variable...**> 创建新变量。  
   
  **相关主题：**  [Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
   

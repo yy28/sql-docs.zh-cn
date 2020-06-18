@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d682257669753665ac397133fcdec0f52e46dedd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f7930cd63150b385cd84f48e1bb1c4fdaa9ec0a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010351"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955737"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>比较用于存储 Blob 的选项 (SQL Server)
   讨论和比较用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中存储文件和文档的选项。  
@@ -40,12 +39,12 @@ ms.locfileid: "66010351"
 ##  <a name="filestream"></a><a name="Filestream"></a> FILESTREAM  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已有 FILESTREAM 功能，它为作为文件存储在文件系统中的非结构化数据提供了高效的存储、管理和流式处理方法。 但是，FILESTREAM 解决方案要求自定义的编程，并且不满足上文所述的完全 Windows 应用程序兼容性的要求。  
   
-##  <a name="filetables"></a><a name="FileTables"></a>Filetable  
+##  <a name="filetables"></a><a name="FileTables"></a> FileTable  
  FileTable 功能以现有的 FILESTREAM 功能为基础，使企业客户只要满足对基于文件的数据的非事务性访问和 Windows 应用程序兼容性要求，就可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中存储非结构化文件数据和目录层次结构。  
   
-##  <a name="comparing-filestream-and-filetable"></a><a name="CompareFileTable"></a>比较 FILESTREAM 和 FileTable  
+##  <a name="comparing-filestream-and-filetable"></a><a name="CompareFileTable"></a> FILESTREAM 和 FileTable 的比较  
   
-|功能|文件服务器和数据库解决方案|FILESTREAM 解决方案|FileTable 解决方案|  
+|Feature|文件服务器和数据库解决方案|FILESTREAM 解决方案|FileTable 解决方案|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
 |**用于管理任务的单个存储区**|否|是|**是**|  
 |**单组服务**：搜索、报告、查询等|否|是|**是**|  
@@ -55,7 +54,7 @@ ms.locfileid: "66010351"
 |**Windows 应用程序兼容性**|是|否|**是**|  
 |**对文件属性的关系访问**|否|否|**是**|  
   
-##  <a name="comparing-filestream-and-remote-blob-store-rbs"></a><a name="CompareRBS"></a>比较 FILESTREAM 和远程 BLOB 存储（RBS）  
+##  <a name="comparing-filestream-and-remote-blob-store-rbs"></a><a name="CompareRBS"></a> FILESTREAM 和远程 BLOB 存储区 (RBS) 的比较  
  有关这两种功能的比较，请参阅来自 RBS 团队的以下博客： [SQL Server 远程 BLOB 存储区和 FILESTREAM 功能比较](https://go.microsoft.com/fwlink/?LinkId=210317)。  
   
 ##  <a name="more-information"></a><a name="more"></a> 详细信息  

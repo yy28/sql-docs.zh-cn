@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: dd820d75-b8a7-4515-aea4-3553ba5b442e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dcebe499eb80fbe01b9aa36a4e07785846eaf621
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a476770e120cd620f01096cc20f9eab7f9f4404
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058370"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966307"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>模糊分组转换编辑器（“高级”选项卡）
   可以使用 **“模糊分组转换编辑器”** 对话框的 **“高级”** 选项卡，指定输入和输出列，设置相似性阈值以及定义分隔符。  
   
 > [!NOTE]  
->  模糊`Exhaustive`分组转换`MaxMemoryUsage`的和属性在 "**模糊分组转换编辑器**" 中不可用，但可以使用 "**高级编辑器**" 进行设置。 有关这些属性的详细信息，请参阅 [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)的“模糊分组转换”部分。  
+>  `Exhaustive` `MaxMemoryUsage` 模糊分组转换的和属性在 "**模糊分组转换编辑器**" 中不可用，但可以使用 "**高级编辑器**" 进行设置。 有关这些属性的详细信息，请参阅 [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)的“模糊分组转换”部分。  
   
  若要了解有关模糊分组转换的详细信息，请参阅 [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md)。  
   

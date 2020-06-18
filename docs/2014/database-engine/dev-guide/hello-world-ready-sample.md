@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8303c387ff38ab5448d15e478534df165e05bddf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64a693738df444e91fa4c9277b8a7dbc3eaca1a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637658"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933553"
 ---
 # <a name="hello-world-ready-sample"></a>Hello World Ready 示例
   Hello World Ready 示例说明了创建、部署和测试基于公共语言运行时 (CLR) 集成的简单且全球通用存储过程所涉及的基本操作。 不用更改全球通用组件的源代码就可以将它轻松地本地化为全世界各个市场的各种语言。 此示例还说明了如何通过输出参数和记录返回由存储过程动态构建并返回到客户端的数据。此示例与 Hello World 示例基本相同，只不过在对此应用程序进行本地化时，此示例更容易且更安全。 更改已本地化的文本需要执行下列操作：  
@@ -30,7 +29,7 @@ ms.locfileid: "73637658"
   
  CLR 存储过程本身的源代码和程序集并不更改。 提供了 `build.cmd` 脚本，用来说明如何编译和链接资源程序集。尽管应用程序的源代码基于当前执行的程序集创建了资源管理器，但是您不必在包含存储过程的 DLL 中嵌入独立于区域性的资源。 `System.Resources.NeutralResourcesLanguage attribute` 允许附属 DLL 中存在独立于区域性的资源。 因此，最好使用单独的 DLL，以便在需要添加或更改本地化文本时，不必更改包含 CLR 存储过程的主 DLL。 这对于可能含有列和其他相关性，造成类型难以删除和重新添加的 CLR 用户定义类型而言，尤为有用。通常，附属 DLL 版本必须与主程序集版本相同。 但是，使用 `SatelliteContractVersion` 属性可以允许仅更新主程序集，而不更新附属程序集。 有关详细信息，请参阅 Microsoft .NET 文档中的 `ResourceManager` 类。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  此示例仅适用于 SQL Server 2005 和更高版本。  
   
  若要创建和运行此项目，必须安装下列软件：  
@@ -76,9 +75,9 @@ ms.locfileid: "73637658"
   
 3.  在 c:\MySample 中，创建 `HelloWorld.vb`（用于 Visual Basic 示例）或 `HelloWorld.cs`（用于 C# 示例），并将相应的 Visual Basic 或 C# 示例代码（如下所示）复制到该文件中。  
   
-4.  在 c:\MySample 中，创建文件`messages.resx`并将示例代码复制到该文件中。  
+4.  在 c:\MySample 中，创建文件 `messages.resx` 并将示例代码复制到该文件中。  
   
-5.  在 c:\MySample 中，通过将`messages.de.resx`文件`messages.resx`保存为更改行`messages.de.resx`后的方式来创建文件  
+5.  在 c:\MySample 中，通过将 `messages.de.resx` 文件保存 `messages.resx` 为 `messages.de.resx` 更改行后的方式来创建文件  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -86,7 +85,7 @@ ms.locfileid: "73637658"
   
     -   `<value xml:space="preserve">Hallo Welt!</value>`  
   
-6.  在 c:\MySample 中，通过将`messages.es.resx`文件`messages.resx`保存为更改行`messages.es.resx`后的方式来创建文件  
+6.  在 c:\MySample 中，通过将 `messages.es.resx` 文件保存 `messages.resx` 为 `messages.es.resx` 更改行后的方式来创建文件  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -94,7 +93,7 @@ ms.locfileid: "73637658"
   
     -   `<value xml:space="preserve">Hola a todos</value>`  
   
-7.  在 c:\MySample 中，通过将`messages.fr.resx`文件`messages.resx`保存为更改行`messages.fr.resx`后的方式来创建文件  
+7.  在 c:\MySample 中，通过将 `messages.fr.resx` 文件保存 `messages.resx` 为 `messages.fr.resx` 更改行后的方式来创建文件  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -102,7 +101,7 @@ ms.locfileid: "73637658"
   
     -   `<value xml:space="preserve">BonjourÂ !</value>`  
   
-8.  在 c:\MySample 中，通过将`messages.fr-FR.resx`文件`messages.resx`保存为更改行`messages.fr-FR.resx`后的方式来创建文件  
+8.  在 c:\MySample 中，通过将 `messages.fr-FR.resx` 文件保存 `messages.resx` 为 `messages.fr-FR.resx` 更改行后的方式来创建文件  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -110,7 +109,7 @@ ms.locfileid: "73637658"
   
     -   `<value xml:space="preserve">Bonjour de France!</value>`  
   
-9. 在 c:\MySample 中，通过将`messages.it.resx`文件`messages.resx`保存为更改行`messages.it.resx`后的方式来创建文件  
+9. 在 c:\MySample 中，通过将 `messages.it.resx` 文件保存 `messages.resx` 为 `messages.it.resx` 更改行后的方式来创建文件  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -118,7 +117,7 @@ ms.locfileid: "73637658"
   
     -   `<value xml:space="preserve">Buongiorno</value>`  
   
-10. 在 c:\MySample 中，通过将`messages.ja.resx`文件`messages.resx`保存为更改行`messages.ja.resx`后的方式来创建文件  
+10. 在 c:\MySample 中，通过将 `messages.ja.resx` 文件保存 `messages.resx` 为 `messages.ja.resx` 更改行后的方式来创建文件  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -142,7 +141,7 @@ ms.locfileid: "73637658"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-16. 将[!INCLUDE[tsql](../../includes/tsql-md.md)]测试命令脚本复制到文件中，并将`test.sql`其另存为示例目录中的。  
+16. 将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 测试命令脚本复制到文件中，并将其另存为 `test.sql` 示例目录中的。  
   
 17. 使用以下命令执行测试脚本：  
   

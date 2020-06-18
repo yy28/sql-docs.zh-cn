@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 53b4752b-055d-4716-b2bc-75b4cce84101
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 889158e04cbadb63c712ead73a61a7002ea61eae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9f4da839f25da8f8aab3e21fa98547eff72d2140
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175366"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933638"
 ---
 # <a name="data-collector-programming"></a>数据收集器编程
   <xref:Microsoft.SqlServer.Management.Collector> 中的数据收集器 API 允许通过对象模型来对所有配置操作进行编程控制。 此外，很多使用此 API 的数据收集操作都是以服务器上安装的存储过程方式实现的。

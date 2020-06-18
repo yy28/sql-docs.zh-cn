@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6dc94409e607c91944a2263ac5dfb3e8a3f4ce54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 752447d6c38a2df0fcbdce72fbba12edd7a9eeb3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920685"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956157"
 ---
 # <a name="transaction-log-backups-sql-server"></a>事务日志备份 (SQL Server)
   本主题仅与使用完整恢复模式或大容量日志恢复模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关。 本主题讨论备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的事务日志。  
@@ -29,7 +28,7 @@ ms.locfileid: "62920685"
   
  **本主题内容：**  
   
--   [日志备份顺序的工作方式](#LogBackupSequence)  
+-   [一系列日志备份的工作原理](#LogBackupSequence)  
   
 -   [建议](#Recommendations)  
   
@@ -38,7 +37,7 @@ ms.locfileid: "62920685"
 -   [相关内容](#RelatedContent)  
   
 ##  <a name="how-a-sequence-of-log-backups-works"></a><a name="LogBackupSequence"></a>一系列日志备份的工作原理  
- 事务日志备份“日志链” ** 的序列与数据备份无关。 例如，假设有下列事件顺序。  
+ 事务日志备份“日志链”  的序列与数据备份无关。 例如，假设有下列事件顺序。  
   
 |时间|事件|  
 |----------|-----------|  

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 88ab6a4e91b98a2e6551f6a01cbca29738513b61
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 79a49a7029e404e370987e73527ff199e2fd0e34
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69028634"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919951"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Azure HDInsight 创建群集任务
 “Azure HDInsight 创建群集任务”  启用一个 SSIS 包来创建指定的 Azure 订阅和资源组中的一个 Azure HDInsight 群集。
@@ -39,7 +38,7 @@ ms.locfileid: "69028634"
 |SubscriptionId|指定将在其中创建 HDInsight 群集的订阅的 ID。|
 |ResourceGroup|指定将在其中创建 HDInsight 群集的 Azure 资源组。|
 |位置|指定 HDInsight 群集的位置。 必须在与指定的 Azure 存储账户相同的位置创建群集。|  
-|群集名称|指定要创建的 HDInsight 群集的名称。|  
+|ClusterName|指定要创建的 HDInsight 群集的名称。|  
 |clusterSize|指定要在群集中创建的节点数。|  
 |BlobContainer|指定要与 HDInsight 群集相关联的默认存储容器的名称。|  
 |UserName|指定用于连接到 HDInsight 群集的用户名。|  

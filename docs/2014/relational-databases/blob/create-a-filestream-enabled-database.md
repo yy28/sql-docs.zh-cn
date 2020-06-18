@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0fc16356-76f7-44b8-a58b-f0b7c43694ec
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 810b1d36eefb99d6e1bcf855dc7710495429751a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0fe6e5bc6e4f60bc0703482f3bf4d761104b3c5f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010318"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955657"
 ---
 # <a name="create-a-filestream-enabled-database"></a>创建启用了 FILESTREAM 的数据库
   本主题说明如何创建支持 FILESTREAM 的数据库。 由于 FILESTREAM 使用一种特殊类型的文件组，因此，在创建数据库时，必须至少为一个文件组指定 CONTAINS FILESTREAM 子句。  
@@ -28,7 +27,7 @@ ms.locfileid: "66010318"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，单击 **“新建查询”** 以显示查询编辑器。  
   
-2.  复制[!INCLUDE[tsql](../../includes/tsql-md.md)]代码会创建一个名为 Archive 的启用了 FILESTREAM 的数据库。  
+2.  复制 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码会创建一个名为 Archive 的启用了 FILESTREAM 的数据库。  
   
     > [!NOTE]  
     >  对于此脚本，C:\Data 目录必须存在。  

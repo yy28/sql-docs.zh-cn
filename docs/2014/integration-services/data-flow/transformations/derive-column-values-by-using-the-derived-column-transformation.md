@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 39b8e065b6b3cbd013089700de07376edc9a656c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d36026ea8543beaed20577bf87f5eb7b0b04f1cb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770656"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939608"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>使用派生列转换派生列值
   若要添加和配置派生列转换，包必须已包含至少一个数据流任务和一个源。  
@@ -44,7 +43,7 @@ ms.locfileid: "62770656"
     > [!NOTE]  
     >  如果表达式无效，表达式文本将突出显示，列上的工具提示将对错误进行说明。  
   
-7.  在“派生列”  列表中，选择“**作为新列添加>”\<** 以将表达式的计算结果写入新列，或选择一个现有列以用计算结果对其进行更新。  
+7.  在 "**派生列**" 列表中，选择 **\<add as new column>** 将表达式的计算结果写入新列，或选择一个现有列以使用计算结果进行更新。  
   
      如果选择使用新列， **“派生列转换编辑器”** 对话框将对表达式求值，并根据数据类型、长度、精度、小数位数和代码页为列指定数据类型。  
   

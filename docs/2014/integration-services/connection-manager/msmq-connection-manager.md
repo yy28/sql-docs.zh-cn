@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 78377fe5eaf5b9f0639533f17fa7a45cca69a537
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a92d6ee495c31e788e7924f00d5469d538155da3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833644"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920688"
 ---
 # <a name="msmq-connection-manager"></a>MSMQ 连接管理器
   MSMQ 连接管理器使包能够连接到使用“消息队列”（也称为 MSMQ）的消息队列。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的消息队列任务使用 MSMQ 连接管理器。  
@@ -37,8 +36,8 @@ ms.locfileid: "62833644"
   
 |队列类型|示例路径|  
 |----------------|-----------------|  
-|公共|\<computer name>\\<queue name\>|  
-|专用|\<computer name>\Private$\\<queue name\>|  
+|公共|\<computer name>\\<队列名称\>|  
+|专用|\<computer name>\Private $ \\<队列名称\>|  
   
  可以用句点 (.) 代表本地计算机。  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4bc7254d8a3eafa3c7c7d152d323051a3c5bea94
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 889080301109938f0514bd6b81265c100237ab60
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875083"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956103"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>查看或更改数据库的恢复模式 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看或更改数据库的恢复模式。 “恢复模式”  是一种数据库属性，它控制如何记录事务，事务日志是否需要（以及允许）进行备份，以及可以使用哪些类型的还原操作。 有三种恢复模式：简单恢复模式、完整恢复模式和大容量日志恢复模式。 通常，数据库使用完整恢复模式或简单恢复模式。 数据库可以随时切换为其他恢复模式。 **model** 数据库将设置新数据库的默认恢复模式。  
@@ -74,15 +73,15 @@ ms.locfileid: "62875083"
   
 1.  连接到相应的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例之后，在对象资源管理器中，单击服务器名称以展开服务器树。  
   
-2.  展开 **“数据库”**，然后根据数据库的不同，选择用户数据库，或展开 **“系统数据库”** ，再选择系统数据库。  
+2.  展开 **“数据库”** ，然后根据数据库的不同，选择用户数据库，或展开 **“系统数据库”** ，再选择系统数据库。  
   
-3.  右键单击该数据库，再单击“属性”****，这将打开“数据库属性”**** 对话框。  
+3.  右键单击该数据库，再单击“属性”  ，这将打开“数据库属性”  对话框。  
   
-4.  在 **“选择页”** 窗格中，单击 **“选项”**。  
+4.  在 **“选择页”** 窗格中，单击 **“选项”** 。  
   
 5.  当前恢复模式显示在 **“恢复模式”** 列表框中。  
   
-6.  也可以从列表中选择不同的模式来更改恢复模式。 可以选择“完整”****、“大容量日志”**** 或“简单”****。  
+6.  也可以从列表中选择不同的模式来更改恢复模式。 可以选择“完整”  、“大容量日志”  或“简单”  。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -94,7 +93,7 @@ ms.locfileid: "62875083"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何对 [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 目录视图执行查询以了解 **模型** 数据库的恢复模式。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何对 [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 目录视图执行查询以了解 **模型** 数据库的恢复模式。  
   
 ```sql  
 SELECT name, recovery_model_desc  
@@ -154,7 +153,7 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 -   [创建作业](../../ssms/agent/create-a-job.md)  
   
--   [禁用或启用作业](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 相关内容  
   

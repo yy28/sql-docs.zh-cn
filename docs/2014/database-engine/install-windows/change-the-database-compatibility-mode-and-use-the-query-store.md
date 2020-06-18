@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dafd3a5f8a460bb08e63919c2cb853ad74dc2f1f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779109"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932753"
 ---
 # <a name="migrate-query-plans"></a>迁移查询计划
   大多数情况下，将数据库升级到最新版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会提高查询性能。 但是，如果您具有已针对性能进行过认真优化的任务关键查询，在升级前最好为每个查询创建一个计划指南，以保留这些查询的查询计划。 如果在升级后，查询优化器为一个或多个查询选择了效率较低的计划，则可以启用这些计划指南并强制查询优化器使用升级前的计划。  
@@ -50,7 +49,7 @@ ms.locfileid: "62779109"
   
 -   查询[sys.databases dm_exec_query_plan](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql)动态管理函数的 query_plan 列。  
   
--   显示[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [计划](../../relational-databases/event-classes/showplan-xml-event-class.md)xml、显示[计划 xml 统计信息](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)以及[用于查询编译](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md)事件类的显示计划 xml。  
+-   显示 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [计划](../../relational-databases/event-classes/showplan-xml-event-class.md)xml、显示[计划 Xml 统计信息](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)以及[用于查询编译](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md)事件类的显示计划 xml。  
   
  下面的示例通过查询动态管理视图收集语句 `SELECT City, StateProvinceID, PostalCode FROM Person.Address ORDER BY PostalCode DESC;` 的查询计划。  
   
@@ -92,8 +91,8 @@ GO
  再次运行查询，并检查生成的查询计划。 您应看到该计划与您在计划指南中指定的计划相符。  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_create_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
- [Transact-sql&#41;的查询提示 &#40;](/sql/t-sql/queries/hints-transact-sql-query)   
+ [sp_create_plan_guide (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [查询提示 (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query)   
  [计划指南](../../relational-databases/performance/plan-guides.md)  
   
   

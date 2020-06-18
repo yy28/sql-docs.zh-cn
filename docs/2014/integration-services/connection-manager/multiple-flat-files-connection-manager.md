@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7235f5f333ac7bb4520a6244e103baafba343ea3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5dcad5e767f16054385f30e95e15bd8a598d9fdd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833698"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920628"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>多平面文件连接管理器
   多平面文件连接管理器使包可以访问多个平面文件中的数据。 例如，数据流任务在循环容器（例如 For 循环容器）内时，平面文件源可以使用多平面文件连接管理器。 在容器的每个循环中，平面文件源从多平面文件连接管理器提供的下一个文件名加载数据。  
   
- 将多平面文件连接管理器添加到包时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]将创建一个连接管理器，该连接管理器将在运行时解析为多平面文件连接，设置多平面文件连接管理器的属性，并将多平面文件连接管理`Connections`器添加到包的集合。  
+ 将多平面文件连接管理器添加到包时，将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 创建一个连接管理器，该连接管理器将在运行时解析为多平面文件连接，设置多平面文件连接管理器的属性，并将多平面文件连接管理器添加到 `Connections` 包的集合。  
   
  该连接管理器的 `ConnectionManagerType` 属性设置为 `MULTIFLATFILE`。  
   
@@ -47,9 +46,9 @@ ms.locfileid: "62833698"
   
  当多平面文件连接管理器引用多个文件时，文件的路径由竖线 (|) 分隔。 连接管理器的 `ConnectionString` 属性的格式如下：  
   
- \<路径  路径>|\<  >  
+ \<*path*>|\<*path*>  
   
- 也可以使用通配符来指定多个文件。 例如，若要引用 C 驱动器上的所有文本文件，可以将`ConnectionString`属性的值设置为 c：\\* .txt。  
+ 也可以使用通配符来指定多个文件。 例如，若要引用 C 驱动器上的所有文本文件， `ConnectionString` 可以将属性的值设置为 c： \\ * .txt。  
   
  如果多平面文件连接管理器引用多个文件，则所有文件必须具有相同格式。  
   

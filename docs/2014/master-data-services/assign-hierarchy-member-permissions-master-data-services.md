@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: e1b8b46a-7cd1-4a7d-9345-dd7df081e145
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a12a46c1a250ce3d93c9ec2091dc5048ceebd61e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d543045fc5aac67b266ceb94c569a226bfd36f53
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483734"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972217"
 ---
 # <a name="assign-hierarchy-member-permissions-master-data-services"></a>分配层次结构成员权限 (Master Data Services)
   向层次结构成员分配权限，以便使用户或组具有在 **的** “资源管理器” [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]功能区域中查看数据的权限。  
   
  层次结构成员权限是可选的。 它们增加了模型对象权限所需的粒度。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“用户和组权限”** 功能区域。  
@@ -48,13 +47,13 @@ ms.locfileid: "65483734"
   
 7.  从 **“层次结构”** 列表中，选择某一层次结构。  
   
-8.  单击 **“编辑”**。  
+8.  单击 **“编辑”** 。  
   
 9. 展开树，单击要向其分配权限的层次结构节点。  
   
 10. 从菜单中，选择 "**只读**"、"**更新**" 或 "**拒绝**"。  
   
-11. 单击“保存”  。  
+11. 单击“ **保存**”。  
   
     > [!NOTE]  
     >  层次结构成员权限不立即生效。 有关详细信息，请参阅[立即应用成员权限 (Master Data Services)](../../2014/master-data-services/immediately-apply-member-permissions-master-data-services.md)。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 24f4539f-2a9f-4acd-acc7-06228a07f7df
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a97225797380294968f1af595f1299e478d548d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 26ba2fc6a8cfdfb6855d7d5b29cc3be31f1d53da
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058359"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966317"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>模糊分组转换编辑器（“列”选项卡）
   可以使用 **“模糊分组转换编辑器”** 对话框的 **“列”** 选项卡，指定用于对带有重复值的行进行分组的列。  
@@ -57,7 +56,7 @@ ms.locfileid: "66058359"
  **数字**  
  指定比较列数据时前导数字和尾随数字的重要性。 例如，如果前导数字重要，则“123 Main Street”将不会与“456 Main Street”分组在一起。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**两者均未选中**|前导数字和尾随数字都不重要。|  
 |**Leading**|只有前导数字重要。|  

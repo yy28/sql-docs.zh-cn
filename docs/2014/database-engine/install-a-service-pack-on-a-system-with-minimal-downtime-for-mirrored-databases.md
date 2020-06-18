@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e878d31ec926f8b2cc460854f422b4d01d32d414
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779591"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932781"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>在系统上安装 Service Pack 并且尽量缩短镜像数据库停机时间
   本主题介绍了如何在安装 Service Pack 和修补程序时尽量减少镜像服务器的停机时间。 此过程包括按顺序升级参与数据库镜像的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 实例。 这种形式的更新称为 "*滚动更新*"，可将停机时间减少为只进行一次故障转移。 请注意，对于镜像服务器与主体服务器在地理位置上有一定距离的高性能模式会话而言，滚动更新可能不适合。  
@@ -72,7 +71,7 @@ ms.locfileid: "62779591"
   
 ### <a name="to-change-a-session-from-high-performance-mode-to-high-safety-mode"></a>将会话从高性能模式更改为高安全模式  
   
-1.  如果镜像会话在高性能模式下运行，则在执行滚动更新之前，将运行模式更改为不带自动故障转移功能的高安全模式。 使用下列方法之一：  
+1.  如果镜像会话在高性能模式下运行，则在执行滚动更新之前，将运行模式更改为不带自动故障转移功能的高安全模式。 使用以下方法之一：  
   
     -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中：使用“数据库属性”**** 对话框中的[镜像页](../relational-databases/databases/database-properties-mirroring-page.md)将“操作模式”**** 选项更改为“不带自动故障转移功能的高安全(同步)”****。 有关如何访问此页的详细信息，请参阅[启动配置数据库镜像安全向导 (SQL Server Management Studio)](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)。  
   
@@ -125,7 +124,7 @@ ms.locfileid: "62779591"
   
     -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中：使用“数据库属性”**** 对话框中的 [镜像页](../relational-databases/databases/database-properties-mirroring-page.md)将“操作模式”**** 选项更改为“高性能(同步)”****。  
   
-    -   在[!INCLUDE[tsql](../includes/tsql-md.md)]中：使用[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)将事务安全设置为 OFF。  
+    -   在中 [!INCLUDE[tsql](../includes/tsql-md.md)] ：使用[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)将事务安全设置为 OFF。  
   
 ### <a name="to-return-a-witness-to-a-mirroring-session"></a>将见证服务器返回镜像会话  
   

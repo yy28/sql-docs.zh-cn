@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: b5af5f65-c087-44fd-b5ae-d0441245fef2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f8fda95b51f568098b0ac9fc13b8a204adb71c51
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f882aae9062d97914c86644a7be0ea126ed9dd8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058613"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966437"
 ---
 # <a name="flat-file-source-editor-columns-page"></a>平面文件源编辑器（“列”页）
   可以使用“平面文件源编辑器”**** 对话框的“列”**** 节点，将输出列映射到每个外部（源）列。  
   
 > [!NOTE]  
->  平面`FileNameColumnName`文件源的属性和其输出列`FastParse`的属性在**平面文件源编辑器**中不可用，但可以使用**高级编辑器**进行设置。 有关这些属性的详细信息，请参阅 [Flat File Custom Properties](data-flow/flat-file-custom-properties.md)的“平面文件源”部分。  
+>  `FileNameColumnName`平面文件源的属性和 `FastParse` 其输出列的属性在**平面文件源编辑器**中不可用，但可以使用**高级编辑器**进行设置。 有关这些属性的详细信息，请参阅 [Flat File Custom Properties](data-flow/flat-file-custom-properties.md)的“平面文件源”部分。  
   
  若要了解有关平面文件源的详细信息，请参阅 [Flat File Source](data-flow/flat-file-source.md)。  
   

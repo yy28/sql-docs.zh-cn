@@ -9,18 +9,17 @@ ms.topic: reference
 ms.assetid: cfcf8516-0e7b-4ca4-8bd8-8b2511a50308
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c2636d417bb9956ac56885686b3512cc3c119cd7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2a8d632b538104e490fb70542cdd0f8bd73b87f9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929495"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933720"
 ---
 # <a name="calendar-aware-date-and-time-udt-sample"></a>日历感知日期和时间 UDT 示例
   将日期作为字符串存储会导致混乱，因为在不识别所使用日历系统的情况下日期毫无意义。`CADatetime` 示例定义两个用户定义数据类型（`CADatetime` 和 `CADate`），通过它们可以按日历方式对日期和时间进行处理。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要创建和运行此项目，必须安装下列软件：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](https://www.microsoft.com/sql-server/sql-server-editions-express)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
@@ -64,7 +63,7 @@ ms.locfileid: "76929495"
   
 3.  在 c:\MySample 中，创建 `CalendarAware.cs` 并将 C# 示例代码（如下所示）复制到该文件中。  
   
-4.  在 c:\MySample 中，创建文件`calendars.txt`并将示例代码复制到该文件中。  
+4.  在 c:\MySample 中，创建文件 `calendars.txt` 并将示例代码复制到该文件中。  
   
 5.  在 c:\MySample 中，创建文件 `calendars.ar-SA.txt` 并将以下代码复制到该文件中：  
   
@@ -116,7 +115,7 @@ ms.locfileid: "76929495"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-14. 将[!INCLUDE[tsql](../../includes/tsql-md.md)]测试命令脚本复制到文件中，并将`test.sql`其另存为示例目录中的。  
+14. 将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 测试命令脚本复制到文件中，并将其另存为 `test.sql` 示例目录中的。  
   
 15. 使用以下命令执行测试脚本：  
   

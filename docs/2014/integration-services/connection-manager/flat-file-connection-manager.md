@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4466ebd24647520c7cbba2bf0baa93a0f60a72bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e46c1ea54ba178fba73a1bfb2cc8ee296ca2b0d0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833806"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920855"
 ---
 # <a name="flat-file-connection-manager"></a>平面文件连接管理器
   平面文件连接管理器使包可以访问平面文件中的数据。 例如，平面文件源和目标可以使用平面文件连接管理器提取和加载数据。  
@@ -35,13 +34,13 @@ ms.locfileid: "62833806"
  在已添加并配置使用连接管理器的平面文件源之后，如果在平面文件连接管理器中更新列长度，则不必在平面文件源中手动调整输出列的大小。 打开 **“平面文件源”** 对话框时，平面文件源将提供同步列元数据的选项。  
   
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>平面文件连接管理器的配置  
- 将平面文件连接管理器添加到包时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]会创建将在运行时解析为平面文件连接的连接管理器，设置平面文件连接属性，并将平面文件连接管理器添加到包的`Connections`集合。  
+ 将平面文件连接管理器添加到包时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建将在运行时解析为平面文件连接的连接管理器，设置平面文件连接属性，并将平面文件连接管理器添加到包的 `Connections` 集合。  
   
  该连接管理器的 `ConnectionManagerType` 属性设置为 `FLATFILE`。  
   
  默认情况下，平面文件连接管理器始终检查未被引号引起的数据中的行分隔符，在找到行分隔符时开始一个新行。 这使连接管理器可以正确地分析具有缺少列字段的行的文件。  
   
- 在某些情况下，禁用此功能可以提高包性能。 通过将平面文件连接管理器属性**AlwaysCheckForRowDelimiters**设置为`False`，可以禁用此功能。  
+ 在某些情况下，禁用此功能可以提高包性能。 通过将平面文件连接管理器属性**AlwaysCheckForRowDelimiters**设置为，可以禁用此功能 `False` 。  
   
  可以按下列方式配置平面文件连接管理器：  
   

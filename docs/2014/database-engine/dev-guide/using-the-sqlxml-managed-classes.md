@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 3f021290-00ee-44e1-af4b-33d3ba8c6302
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ad1756d3943f6a9db68633c59013bcb85037ffa7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 634a0e4110b13931201edd026ee95028cb94e859
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780326"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933188"
 ---
 # <a name="using-the-sqlxml-managed-classes"></a>使用 SQLXML 托管类
   本部分提供了演示如何使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 托管类的示例应用程序。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有关访问和修改[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 中的数据以及如何使用 diffgram 更新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表中的数据的信息，请参阅[在 .net 环境中访问 SQLXML 功能](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)。  
+ 有关访问和修改 .NET Framework 中的数据以及如何使用 Diffgram 更新表中的数据的信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅[在 .NET 环境中访问 SQLXML 功能](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)。  
   
 > [!NOTE]  
 >  您还可以编写 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 应用程序，以便使用 XML 大容量加载对 XML 文档执行大容量加载。 有关详细信息，请参阅[&#40;SQLXML 4.0&#41;执行 XML 数据的大容量加载](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)。 必须在应用程序中添加指向 XML 大容量加载 DLL (Xblkld4.dll) 的引用。 Visual Studio .NET 将为此 COM DLL 自动创建包装库。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b9622c48-3243-4408-a1de-9ba20e32ff70
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: aa0f92cc3275810b73d1dbe661a1f8473c7234df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 26055dde636d299a2a58fdfe0bdbd3fdfbdab012
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054281"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972347"
 ---
 # <a name="xml-task-editor-general-page"></a>XML 任务编辑器（“常规”页）
   可以使用 **“XML 任务编辑器”** 对话框的 **“常规节点”** ，指定操作类型以及配置操作。  
@@ -30,32 +29,32 @@ ms.locfileid: "66054281"
  **OperationType**  
  从列表中选择操作类型。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
-|**验证**|根据文档类型定义 (DTD) 或 XML 架构定义 (XSD) 架构验证 XML 文档。 选择此选项将在 **Validate**部分中显示动态选项。|  
+|**证实**|根据文档类型定义 (DTD) 或 XML 架构定义 (XSD) 架构验证 XML 文档。 选择此选项将在 **Validate**部分中显示动态选项。|  
 |**XSLT**|对 XML 文档执行 XSL 转换。 选择此选项将在 **XSLT**部分中显示动态选项。|  
 |**XPATH**|执行 XPath 查询和计算。 选择此选项将在 **XPATH**部分中显示动态选项。|  
-|**Merge**|合并两个 XML 文档。 选择此选项将在 **Merge**部分中显示动态选项。|  
-|**差异**|比较两个 XML 文档。 选择此选项将在 **Diff**部分中显示动态选项。|  
+|**合并**|合并两个 XML 文档。 选择此选项将在 **Merge**部分中显示动态选项。|  
+|**差别**|比较两个 XML 文档。 选择此选项将在 **Diff**部分中显示动态选项。|  
 |**跳**|应用 Diff 运算的输出以创建新文档。 选择此选项将在 **Patch**部分中显示动态选项。|  
   
  **SourceType**  
  选择 XML 文档的源类型。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  
 |**变量**|将源设置为包含 XML 文档的变量。|  
   
- **源**  
+ **Source**  
  如果将“源”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮 (…)，再使用“文档源编辑器”对话框提供 XML 代码****************。  
   
- 如果将“源”设置为“文件连接”，请选择文件连接管理器，或单击“\<新建连接...>”，创建新的连接管理器************。  
+ 如果将 "**源**" 设置为 "**文件连接**"，请选择文件连接管理器，或单击 " \<**New connection...**> 新建连接管理器"。  
   
  **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- 如果将“源”设置为“变量”，请选择现有变量，或单击“\<新建变量...>”，创建新的变量************。  
+ 如果 "**源**" 设置为 "**变量**"，请选择现有变量，或单击 **\<New variable...>** 创建新变量。  
   
  **相关主题**：[Integration Services (SSIS) 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)。  
   
@@ -71,14 +70,14 @@ ms.locfileid: "66054281"
  指定是否覆盖目标文件或变量。  
   
  **目标**  
- 选择现有文件连接管理器，或单击\<"**新建连接 ...** "> 创建新的连接管理器。  
+ 选择现有文件连接管理器，或单击 \<**New connection...**> 以创建新的连接管理器。  
   
  **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **目标类型**  
  选择 XML 文档的目标类型。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**文件连接**|选择包含 XML 文档的文件。|  
 |**变量**|将源设置为包含 XML 文档的变量。|  
@@ -86,7 +85,7 @@ ms.locfileid: "66054281"
  **ValidationType**  
  选择验证类型。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**DTD**|使用文档类型定义 (DTD)。|  
 |**XSD**|使用 XML 架构定义 (XSD) 架构。 选择此选项将在 **ValidationType**部分中显示动态选项。|  
@@ -103,7 +102,7 @@ ms.locfileid: "66054281"
  **SecondOperandType**  
  选择第二个 XML 文档的源类型。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  
@@ -112,11 +111,11 @@ ms.locfileid: "66054281"
  **SecondOperand**  
  如果将“SecondOperandType”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮 (…)，再使用“源编辑器”对话框提供 XML 代码****************。  
   
- 如果将“SecondOperandType”设置为“文件连接”，请选择文件连接管理器，或单击“\<新建连接...>”，创建新的连接管理器************。  
+ 如果将**SecondOperandType**设置为 "**文件连接**"，请选择文件连接管理器，或单击 " \<**New connection...**> 新建连接管理器"。  
   
  **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- 如果将“XPathStringSourceType”设置为“变量”，请选择现有变量，或单击“\<新建变量...>”，创建一个新变量************。  
+ 如果将 " **XPathStringSourceType** " 设置为 "**变量**"，请选择现有变量，或单击 \<**New variable...**> 创建新变量。  
   
  **相关主题**：[Integration Services (SSIS) 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)。  
   
@@ -130,18 +129,18 @@ ms.locfileid: "66054281"
  指定是否覆盖目标文件或变量。  
   
  **目标**  
- 如果将“DestinationType”设置为“文件连接”，请选择文件连接管理器，或单击“\<新建连接...>”，创建新的连接管理器************。  
+ 如果将**DestinationType**设置为 "**文件连接**"，请选择文件连接管理器，或单击 " \<**New connection...**> 新建连接管理器"。  
   
  **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- 如果将“DestinationType”设置为“变量”，请选择现有变量，或单击“\<新建变量...>”，创建一个新变量************。  
+ 如果将 " **DestinationType** " 设置为 "**变量**"，请选择现有变量，或单击 \<**New variable...**> 创建新变量。  
   
  **相关主题**：[Integration Services (SSIS) 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)。  
   
  **目标类型**  
  选择 XML 文档的目标类型。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**文件连接**|选择包含 XML 文档的文件。|  
 |**变量**|将源设置为包含 XML 文档的变量。|  
@@ -149,7 +148,7 @@ ms.locfileid: "66054281"
  **SecondOperandType**  
  选择第二个 XML 文档的源类型。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  
@@ -158,11 +157,11 @@ ms.locfileid: "66054281"
  **SecondOperand**  
  如果将“SecondOperandType”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮 (…)，再使用“源编辑器”对话框提供 XML 代码****************。  
   
- 如果将“SecondOperandType”设置为“文件连接”，请选择文件连接管理器，或单击“\<新建连接...>”，创建新的连接管理器************。  
+ 如果将**SecondOperandType**设置为 "**文件连接**"，请选择文件连接管理器，或单击 " \<**New connection...**> 新建连接管理器"。  
   
  **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- 如果将“XPathStringSourceType”设置为“变量”，请选择现有变量，或单击“\<新建变量...>”，创建一个新变量************。  
+ 如果将 " **XPathStringSourceType** " 设置为 "**变量**"，请选择现有变量，或单击 \<**New variable...**> 创建新变量。  
   
  **相关主题**：[Integration Services (SSIS) 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)。  
   
@@ -176,18 +175,18 @@ ms.locfileid: "66054281"
  指定是否覆盖目标文件或变量。  
   
  **目标**  
- 如果将“DestinationType”设置为“文件连接”，请选择文件连接管理器，或单击“\<新建连接...>”，创建新的连接管理器************。  
+ 如果将**DestinationType**设置为 "**文件连接**"，请选择文件连接管理器，或单击 " \<**New connection...**> 新建连接管理器"。  
   
  **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- 如果将“DestinationType”设置为“变量”，请选择现有变量，或单击“\<新建变量...>”，创建一个新变量************。  
+ 如果将 " **DestinationType** " 设置为 "**变量**"，请选择现有变量，或单击 \<**New variable...**> 创建新变量。  
   
  **相关主题**：[Integration Services (SSIS) 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)。  
   
  **目标类型**  
  选择 XML 文档的目标类型。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**文件连接**|选择包含 XML 文档的文件。|  
 |**变量**|将源设置为包含 XML 文档的变量。|  
@@ -195,7 +194,7 @@ ms.locfileid: "66054281"
  **SecondOperandType**  
  选择第二个 XML 文档的源类型。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  
@@ -204,11 +203,11 @@ ms.locfileid: "66054281"
  **SecondOperand**  
  如果将“SecondOperandType”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮 (…)，再使用“源编辑器”对话框提供 XML 代码****************。  
   
- 如果将“SecondOperandType”设置为“文件连接”，请选择文件连接管理器，或单击“\<新建连接...>”，创建新的连接管理器************。  
+ 如果将**SecondOperandType**设置为 "**文件连接**"，请选择文件连接管理器，或单击 " \<**New connection...**> 新建连接管理器"。  
   
  **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- 如果将“XPathStringSourceType”设置为“变量”，请选择现有变量，或单击“\<新建变量...>”，创建一个新变量************。  
+ 如果将 " **XPathStringSourceType** " 设置为 "**变量**"，请选择现有变量，或单击 \<**New variable...**> 创建新变量。  
   
  **相关主题**：[Integration Services (SSIS) 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)。  
   
@@ -218,9 +217,9 @@ ms.locfileid: "66054281"
  **XPathOperation**  
  选择 XPath 结果类型。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
-|**评估**|返回 XPath 函数的结果。|  
+|**估算**|返回 XPath 函数的结果。|  
 |**Node list**|将所选节点返回为 XML 片段。|  
 |**值**|返回所有所选节点的内部文本值，将其连接为字符串。|  
   
@@ -230,7 +229,7 @@ ms.locfileid: "66054281"
  **XPathStringSourceType**  
  选择 XML 文档的源类型。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  
@@ -239,11 +238,11 @@ ms.locfileid: "66054281"
  **XPathStringSource**  
  如果将“XPathStringSourceType”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮 (…)，再使用“文档源编辑器”对话框提供 XML 代码****************。  
   
- 如果将“XPathStringSourceType”设置为“文件连接”，请选择文件连接管理器，或单击“\<新建连接...>”，创建新的连接管理器************。  
+ 如果将**XPathStringSourceType**设置为 "**文件连接**"，请选择文件连接管理器，或单击 " \<**New connection...**> 新建连接管理器"。  
   
  **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- 如果将“XPathStringSourceType”设置为“变量”，请选择现有变量，或单击“\<新建变量...>”，创建一个新变量************。  
+ 如果将 " **XPathStringSourceType** " 设置为 "**变量**"，请选择现有变量，或单击 \<**New variable...**> 创建新变量。  
   
  **相关主题**： [Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
   
@@ -256,18 +255,18 @@ ms.locfileid: "66054281"
  指定是否覆盖目标文件或变量。  
   
  **目标**  
- 如果将“DestinationType”设置为“文件连接”，请选择文件连接管理器，或单击“\<新建连接...>”，创建新的连接管理器************。  
+ 如果将**DestinationType**设置为 "**文件连接**"，请选择文件连接管理器，或单击 " \<**New connection...**> 新建连接管理器"。  
   
  **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- 如果将“DestinationType”设置为“变量”，请选择现有变量，或单击“\<新建变量...>”，创建一个新变量************。  
+ 如果将 " **DestinationType** " 设置为 "**变量**"，请选择现有变量，或单击 \<**New variable...**> 创建新变量。  
   
  **相关主题**：[Integration Services (SSIS) 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)。  
   
  **目标类型**  
  选择 XML 文档的目标类型。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**文件连接**|选择包含 XML 文档的文件。|  
 |**变量**|将源设置为包含 XML 文档的变量。|  
@@ -275,7 +274,7 @@ ms.locfileid: "66054281"
  **SecondOperandType**  
  选择第二个 XML 文档的目标类型。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  
@@ -284,11 +283,11 @@ ms.locfileid: "66054281"
  **SecondOperand**  
  如果将“SecondOperandType”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮 (…)，再使用“文档源编辑器”对话框提供 XML 代码****************。  
   
- 如果将“SecondOperandType”设置为“文件连接”，请选择文件连接管理器，或单击“\<新建连接...>”，创建新的连接管理器************。  
+ 如果将**SecondOperandType**设置为 "**文件连接**"，请选择文件连接管理器，或单击 " \<**New connection...**> 新建连接管理器"。  
   
  **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- 如果将“SecondOperandType”设置为“变量”，请选择现有变量，或单击“\<新建变量...>”，创建一个新变量************。  
+ 如果将 " **SecondOperandType** " 设置为 "**变量**"，请选择现有变量，或单击 \<**New variable...**> 创建新变量。  
   
  **相关主题**： [Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
   
@@ -298,16 +297,16 @@ ms.locfileid: "66054281"
  **DiffAlgorithm**  
  选择在比较文档时要使用的 Diff 算法。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**自动**|由 XML 任务确定是使用快速算法还是使用精确算法。|  
-|**快速**|使用快速但精确度较低的 Diff 算法。|  
+|**Fast**|使用快速但精确度较低的 Diff 算法。|  
 |**Precise**|使用精确的 Diff 算法。|  
   
  **Diff 选项**  
  将 Diff 选项设置为应用于 Diff 运算。 下表中列出了这些选项：  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**IgnoreXMLDeclaration**|指定是否比较 XML 声明。|  
 |**IgnoreDTD**|指定是否忽略文档类型定义 (DTD)。|  
@@ -331,18 +330,18 @@ ms.locfileid: "66054281"
  指定是否覆盖目标文件或变量。  
   
  **目标**  
- 如果将“DestinationType”设置为“文件连接”，请选择文件连接管理器，或单击“\<新建连接...>”，创建新的连接管理器************。  
+ 如果将**DestinationType**设置为 "**文件连接**"，请选择文件连接管理器，或单击 " \<**New connection...**> 新建连接管理器"。  
   
  **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- 如果将“DestinationType”设置为“变量”，请选择现有变量，或单击“\<新建变量...>”，创建一个新变量************。  
+ 如果将 " **DestinationType** " 设置为 "**变量**"，请选择现有变量，或单击 \<**New variable...**> 创建新变量。  
   
  **相关主题**：[Integration Services (SSIS) 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)。  
   
  **目标类型**  
  选择 XML 文档的目标类型。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**文件连接**|选择包含 XML 文档的文件。|  
 |**变量**|将源设置为包含 XML 文档的变量。|  
@@ -350,7 +349,7 @@ ms.locfileid: "66054281"
  **SecondOperandType**  
  选择 XML 文档的目标类型。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  
@@ -359,11 +358,11 @@ ms.locfileid: "66054281"
  **SecondOperand**  
  如果将“SecondOperandType”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮 (…)，再使用“文档源编辑器”对话框提供 XML 代码****************。  
   
- 如果将“SecondOperandType”设置为“文件连接”，请选择文件连接管理器，或单击“\<新建连接...>”，创建新的连接管理器************。  
+ 如果将**SecondOperandType**设置为 "**文件连接**"，请选择文件连接管理器，或单击 " \<**New connection...**> 新建连接管理器"。  
   
  **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- 如果将“SecondOperandType”设置为“变量”，请选择现有变量，或单击“\<新建变量...>”，创建一个新变量************。  
+ 如果将 " **SecondOperandType** " 设置为 "**变量**"，请选择现有变量，或单击 \<**New variable...**> 创建新变量。  
   
  **相关主题**： [Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
   
@@ -377,18 +376,18 @@ ms.locfileid: "66054281"
  指定是否覆盖目标文件或变量。  
   
  **目标**  
- 如果将“DestinationType”设置为“文件连接”，请选择文件连接管理器，或单击“\<新建连接...>”，创建新的连接管理器************。  
+ 如果将**DestinationType**设置为 "**文件连接**"，请选择文件连接管理器，或单击 " \<**New connection...**> 新建连接管理器"。  
   
  **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- 如果将“DestinationType”设置为“变量”，请选择现有变量，或单击“\<新建变量...>”，创建一个新变量************。  
+ 如果将 " **DestinationType** " 设置为 "**变量**"，请选择现有变量，或单击 \<**New variable...**> 创建新变量。  
   
  **相关主题**：[Integration Services (SSIS) 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)。  
   
  **目标类型**  
  选择 XML 文档的目标类型。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**文件连接**|选择包含 XML 文档的文件。|  
 |**变量**|将源设置为包含 XML 文档的变量。|  
@@ -396,7 +395,7 @@ ms.locfileid: "66054281"
  **SecondOperandType**  
  选择 XML 文档的目标类型。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为 XML 文档。|  
 |**文件连接**|选择包含 XML 文档的文件。|  
@@ -405,11 +404,11 @@ ms.locfileid: "66054281"
  **SecondOperand**  
  如果将“SecondOperandType”设置为“直接输入”，请提供 XML 代码，或单击省略号按钮 (…)，再使用“文档源编辑器”对话框提供 XML 代码****************。  
   
- 如果将“SecondOperandType”设置为“文件连接”，请选择文件连接管理器，或单击“\<新建连接...>”，创建新的连接管理器************。  
+ 如果将**SecondOperandType**设置为 "**文件连接**"，请选择文件连接管理器，或单击 " \<**New connection...**> 新建连接管理器"。  
   
  **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- 如果将“SecondOperandType”设置为“变量”，请选择现有变量，或单击“\<新建变量...>”，创建一个新变量************。  
+ 如果将 " **SecondOperandType** " 设置为 "**变量**"，请选择现有变量，或单击 \<**New variable...**> 创建新变量。  
   
  **相关主题**： [Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
   

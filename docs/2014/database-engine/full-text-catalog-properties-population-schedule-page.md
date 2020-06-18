@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8681506b-5dc6-4165-beb6-1e76ca470425
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1e8ac94f235e08f2217edb9504722ebac998cb28
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 62d69cdc42745fcbb5eb7d2cb05f90b710e5c70d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000929"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932998"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>全文目录属性（“填充计划”页）
   使用此对话框可以添加或修改确定何时填充或重新填充全文目录的计划。  
@@ -25,13 +24,13 @@ ms.locfileid: "83000929"
 ## <a name="schedules-grid"></a>计划网格  
  每一行表示一个填充或重新填充目录的计划操作。  
   
- **Name**  
+ **名称**  
  显示计划的名称。  
   
  **填充类型**  
  查看或修改填充操作：完全、增量或优化操作。  
   
- **Enabled**  
+ **已启用**  
  选中或清除此复选框可以启用或禁用计划操作。  
   
  **说明**  

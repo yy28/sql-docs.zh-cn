@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ddfed959b0f8147a8a4e48a011f65ec011f3846c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdd2baa136cbd61862d014fd90bc8fca561c9578
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833666"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920656"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-cache-connection-manager"></a>在完全缓存模式下使用缓存连接管理器实现查找转换
   可以将查找转换配置为使用完全缓存模式和缓存连接管理器。 在完全缓存模式下，在查找转换运行前，引用数据集会加载到缓存中。  
@@ -166,7 +165,7 @@ ms.locfileid: "62833666"
   
     -   双击在步骤 4 中创建的缓存连接管理器，单击“列”  ，选择行，然后按 Ctrl+C 复制列元数据。  
   
-9. 在子包中，右键单击“连接管理器”  区域，单击“新建连接”  ，在“添加 SSIS 连接管理器”  对话框中选择“缓存”  ，单击“添加”  ，即可创建缓存连接管理器。  
+9. 在子包中，右键单击“连接管理器”区域，单击“新建连接”，在“添加 SSIS 连接管理器”对话框中选择“缓存”，单击“添加”，即可创建缓存连接管理器。  
   
      **“连接管理器”** 区域显示在 **设计器的**“控制流” **、** “数据流” **和** “事件处理程序” [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 选项卡的底部。  
   
@@ -190,7 +189,7 @@ ms.locfileid: "62833666"
   
     2.  双击源或前一转换以配置组件。  
   
-    3.  双击查找转换，在“查找转换编辑器”  的“常规”  页上选择“完全缓存”  。  
+    3.  双击查找转换，在“查找转换编辑器”的“常规”页上选择“完全缓存”。  
   
     4.  在 **“连接类型”** 区域，选择 **“缓存连接管理器”** 。  
   

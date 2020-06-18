@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c6f993f1f2386782bf8225f22b285b9385e2f8e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 254680ce380b88aca01184bb744a7dde1b8e5611
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054543"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972475"
 ---
 # <a name="web-service-task-editor-general-page"></a>Web 服务任务编辑器（“常规”页）
   使用“Web 服务任务编辑器”**** 对话框的“常规”**** 页，可以指定 HTTP 连接管理器，指定 Web 服务任务所使用的 Web 服务描述语言 (WSDL) 文件的位置，对 Web 服务任务进行说明，以及下载 WSDL 文件。  
@@ -28,7 +27,7 @@ ms.locfileid: "66054543"
   
 ## <a name="options"></a>选项  
  **HTTPConnection**  
- 在列表中选择一个连接管理器，或\<单击 "**新建连接 ...** "> 创建新的连接管理器。  
+ 在列表中选择一个连接管理器，或单击 " \<**New connection...**> 新建连接管理器"。  
   
 > [!IMPORTANT]  
 >  HTTP 连接管理器仅支持匿名身份验证和基本身份验证， 而不支持 Windows 身份验证。  
@@ -44,7 +43,7 @@ ms.locfileid: "66054543"
   
 -   为 **WSDLFile** 选项选择此空文件。  
   
--   将**OverwriteWSDLFile**的值设置为`True` ，以允许使用实际的 WSDL 文件覆盖空文件。  
+-   将**OverwriteWSDLFile**的值设置为 `True` ，以允许使用实际的 WSDL 文件覆盖空文件。  
   
 -   单击 **“下载 WSDL”** 下载实际 WSDL 文件，并覆盖空文件。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66054543"
  **OverwriteWSDLFile**  
  指示是否可以覆盖 Web 服务任务的 WSDL 文件。  
   
- 如果要使用 "**下载 wsdl** " 按钮下载 WSDL 文件，请将此值设置为`True`。  
+ 如果要使用 "**下载 wsdl** " 按钮下载 WSDL 文件，请将此值设置为 `True` 。  
   
  **名称**  
  为 Web 服务任务提供唯一的名称。 此名称用作任务图标中的标签。  

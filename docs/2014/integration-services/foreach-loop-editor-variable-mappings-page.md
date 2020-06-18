@@ -11,24 +11,23 @@ f1_keywords:
 ms.assetid: aa847b87-f391-48a5-9849-eeda2d6b00b9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 03488e4cfd3a0cc905a58166f381f68eb3292c49
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 396c43f0b7adaf9d2a9dcd6124194aa82a9f8cc0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058526"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966377"
 ---
 # <a name="foreach-loop-editor-variable-mappings-page"></a>Foreach 循环编辑器（“变量映射”页）
   可以使用 **“Foreach 循环编辑器”** 对话框的 **“变量映射”** 页，将变量映射到集合值。 循环每次迭代时，都会用集合值更新变量的值。  
   
  若要了解如何在 Integration Services 包中使用 Foreach 循环容器，请参阅 [Foreach Loop Container](control-flow/foreach-loop-container.md) 。 若要了解如何配置该循环容器，请参阅 [配置 Foreach 循环容器](../../2014/integration-services/configure-a-foreach-loop-container.md)。  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)]介绍如何创建一个简单的 ETL 包教程，其中包含一个讲解如何添加和配置 Foreach 循环的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]课程。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 本教程介绍如何创建一个简单的 ETL 包教程，其中包含一个讲解如何添加和配置 Foreach 循环的课程。  
   
 ## <a name="options"></a>选项  
  **变量**  
- 选择现有变量，或单击 " \<**新建变量 ...** "> 创建新变量。  
+ 选择现有变量，或单击 \<**New variable...**> 创建新变量。  
   
 > [!NOTE]  
 >   映射一个变量之后， **“变量”** 列表中会自动增加一行。  

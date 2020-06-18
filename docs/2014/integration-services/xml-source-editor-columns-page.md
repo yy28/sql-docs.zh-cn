@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5162c400-b2fc-4711-af0f-609132fbaaad
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 403e9394f23ba0d6ce503dbea3e46ad7f37b9cd9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6659c148d20e08f3f7417400269dc89355d6c492
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054320"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972377"
 ---
 # <a name="xml-source-editor-columns-page"></a>XML 源编辑器（“列”页）
   可以使用“XML 源编辑器”对话框的“列”节点，将输出列映射到外部（源）列。********  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 517ba30e4565ec05e5fa15a650bb39909d24dd02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c3b1be3f11e3a53ad291ff774cc72468af0d66ca
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894761"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966204"
 ---
 # <a name="save-and-execute-package-sql-server-import-and-export-wizard"></a>保存并执行包（SQL Server 导入和导出向导）
   使用 "**保存并执行包**" 对话框可以立即运行包，将其保存到稍后运行。  
@@ -40,7 +39,7 @@ ms.locfileid: "62894761"
 >  在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 中，未提供用来保存该向导所创建的包的选项。  
   
  **SQL Server**  
- 选择此选项可将包保存到[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb`数据库。  
+ 选择此选项可将包保存到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` 数据库。  
   
 > [!NOTE]  
 >  仅当选择了 "**保存 SSIS 包**" 选项时，此选项才可用。  

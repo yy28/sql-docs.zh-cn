@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 16ef63a4-367a-46ac-917d-9eebc81ab29b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f00d643088634c918eb626917eae64a001ce3678
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779221"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932868"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>在内存优化表上使用索引的指导原则
   索引用于高效访问 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表中的数据。 指定正确索引可以显著提高查询性能。 例如，请考虑以下查询：  
@@ -71,7 +70,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
 |---------------|-------------------------------------------------|------------------------------------------|-----------------------|  
 |索引扫描，检索所有表行。|是|是|是|  
 |采用相等谓词 (=) 的索引查找。|是<br /><br /> （需要完整的键。）|是<sup>1</sup>|是|  
-|对不相等谓词（>、<、 \<=、>=、BETWEEN）的索引查找。|否（索引扫描中的结果）|是<sup>1</sup>|是|  
+|对不相等谓词（>、<、 \<=, > =、BETWEEN）的索引查找。|否（索引扫描中的结果）|是<sup>1</sup>|是|  
 |按与索引定义匹配的排序顺序检索行。|否|是|是|  
 |按与索引定义相反的排序顺序检索行。|否|否|是|  
   

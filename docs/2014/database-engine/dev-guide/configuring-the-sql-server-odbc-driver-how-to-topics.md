@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e26fbc87-9483-4a2e-99f1-bf52a58360db
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c2e64b667d0bbdc8dd886dc0e9fef9d260d473b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f3510f0ddae4cc6b375421255ef46e76c82466c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753669"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933655"
 ---
 # <a name="configuring-the-sql-server-odbc-driver-how-to-topics"></a>配置 SQL Server ODBC 驱动程序操作指南主题
   将 ODBC 应用程序用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本之前，必须了解如何升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本上的目录存储过程的版本，以及如何添加、删除和测试数据源。  

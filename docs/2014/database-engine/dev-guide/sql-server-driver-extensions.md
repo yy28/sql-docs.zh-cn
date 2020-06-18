@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1043bc93-965d-4939-bd1c-21e9d8d3e9ac
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1cee588e7db1e219f3d2810e29bb77a68a21b7ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b690b93a99578e5cb9c7cf876c4a4b3fd6440e1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780838"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933348"
 ---
 # <a name="sql-server-driver-extensions"></a>SQL Server 驱动程序扩展
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序实现了允许 ODBC 应用程序访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能的特定于驱动程序的函数。  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 60a56b6d64957198292146d392ea22a572fb8a4e
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 9e2411daea2d4b1c4028e9ed0b3143762f2db592
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000957"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933018"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>全文目录属性（“常规”页）
   本节介绍在 **“全文目录属性”** 对话框的 **“常规”** 页上可用的选项和功能。  
@@ -27,18 +26,18 @@ ms.locfileid: "83000957"
   
 ## <a name="options"></a>选项  
   
-### <a name="properties"></a>属性  
+### <a name="properties"></a>“属性”  
  **默认目录**  
  显示目录是否为数据库的默认目录。  
   
  **填充状态**  
- 指示目录的状态。 可能的值有：  
+ 指示目录的状态。 可能的值包括：  
   
--   **闲置**  
+-   **空闲**  
   
 -   **正在进行爬网**  
   
--   **暂停**  
+-   **已暂停**  
   
 -   **已中止**  
   
@@ -52,7 +51,7 @@ ms.locfileid: "83000957"
   
 -   **磁盘已满-已暂停**  
   
--   **更改跟踪**  
+-   **Change tracking**  
   
  **项计数**  
  显示目录中的全文项数。  
@@ -60,7 +59,7 @@ ms.locfileid: "83000957"
  **目录大小**  
  显示全文目录的大小 (MB)。  
   
- **Name**  
+ **名称**  
  全文目录的名称。  
   
  **区分重音**  

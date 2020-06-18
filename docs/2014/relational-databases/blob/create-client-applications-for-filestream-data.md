@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 77f7144231bda8be36334513584df16cf9c0e22b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7170ff88c0c7c9fd40c372467d2e3fd407a90cf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010175"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955597"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>为 FILESTREAM 数据创建客户端应用程序
   可以使用 Win32 在 FILESTREAM BLOB 中读取和写入数据。 您需要执行以下步骤：  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c2220182-a23d-4475-b353-77a77ab613d6
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8c40d064da4cd518e77d724a2ea38217124d6b8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 532a211f0e765547c6f15eb762b8dcc3048302a1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781751"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933385"
 ---
 # <a name="running-stored-procedures-how-to-topics-odbc"></a>运行存储过程操作指南主题 (ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序支持将存储过程作为远程存储过程执行。 通过将存储过程作为远程存储过程执行，可使驱动程序和服务器能够优化存储过程的执行性能。  

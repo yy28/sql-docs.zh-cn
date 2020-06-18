@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c8ea6a5fcfe99926c264fc2116a637f8d30c05df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a6ac6668ff362a986646c4e01b1f0e5e722611c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010146"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955337"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable 与其他 SQL Server 功能的兼容性
   说明 FileTable 如何与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的其他功能配合使用。  
@@ -111,7 +110,7 @@ ms.locfileid: "66010146"
   
     -   无论数据库选项如何（READ_COMMITTED_SNAPSHOT 或 ALLOW_SNAPSHOT_ISOLATION），全文索引编制始终会成功。  
   
-##  <a name="readable-secondary-databases"></a><a name="readsec"></a> 可读辅助数据库  
+##  <a name="readable-secondary-databases"></a><a name="readsec"></a>可读辅助数据库  
  有关快照的注意事项同样适用于可读辅助数据库，如上一节 [快照隔离和 FileTable](#OtherSnapshots)中所述。  
   
 ##  <a name="contained-databases-and-filetables"></a><a name="CDB"></a>包含的数据库和 Filetable  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c771985b-149c-459a-b3cb-7b15fde01150
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 316afc6d5f3a87ff7431240681066ac5ee66ede6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52fc203075b06485c89fe4d2d3149472c57719f9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780689"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933401"
 ---
 # <a name="program-exception-message-box"></a>对异常消息框编程
   可以使用应用程序中的异常消息框，它与 <xref:System.Windows.Forms.MessageBox> 类相比，可以大大提高对消息传送的控制。 有关详细信息，请参阅[异常消息框编程](../../../2014/database-engine/dev-guide/exception-message-box-programming.md)。 有关如何获取和部署异常消息框 .dll 的信息，请参阅 [Deploying an Exception Message Box Application](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md)。  
@@ -29,11 +28,11 @@ ms.locfileid: "62780689"
   
 1.  将托管代码项目中的某个引用添加到 Microsoft.ExceptionMessageBox.dll 程序集。  
   
-2.  可有可无添加`using` （c #）或`Imports` （[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .net）指令以使用<xref:Microsoft.SqlServer.MessageBox>命名空间。  
+2.  可有可无添加 `using` （c #）或 `Imports` （ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .net）指令以使用 <xref:Microsoft.SqlServer.MessageBox> 命名空间。  
   
 3.  创建 try-catch 块处理预期异常。  
   
-4.  在 `catch` 块中，创建 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 类的实例。 传递由`try` - <xref:System.Exception> `catch`块处理的对象。  
+4.  在 `catch` 块中，创建 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 类的实例。 传递 <xref:System.Exception> 由块处理的对象 `try` - `catch` 。  
   
 5.  （可选）为 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 设置下列一个或多个属性：  
   
@@ -47,15 +46,15 @@ ms.locfileid: "62780689"
   
 6.  调用 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> 方法。 传递异常消息框所属的父窗口。  
   
-7.  可有可无如果需要确定用户单击<xref:System.Windows.Forms.DialogResult>的是哪个按钮，请注意返回的枚举值。  
+7.  可有可无<xref:System.Windows.Forms.DialogResult>如果需要确定用户单击的是哪个按钮，请注意返回的枚举值。  
   
 #### <a name="to-display-the-exception-message-box-without-an-exception"></a>显示没有异常的异常消息框  
   
 1.  将托管代码项目中的某个引用添加到 Microsoft.ExceptionMessageBox.dll 程序集。  
   
-2.  可有可无添加`using` （c #）或`Imports` （Visual Basic .net）指令以使用<xref:Microsoft.SqlServer.MessageBox>命名空间。  
+2.  可有可无添加 `using` （c #）或 `Imports` （Visual Basic .net）指令以使用 <xref:Microsoft.SqlServer.MessageBox> 命名空间。  
   
-3.  创建的 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 类的实例。 将消息文本作为 <xref:System.String> 值传递。  
+3.  创建 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 类的一个实例。 将消息文本作为 <xref:System.String> 值传递。  
   
 4.  （可选）为 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 设置下列一个或多个属性：  
   
@@ -77,11 +76,11 @@ ms.locfileid: "62780689"
   
 1.  将托管代码项目中的某个引用添加到 Microsoft.ExceptionMessageBox.dll 程序集。  
   
-2.  可有可无添加`using` （c #）或`Imports` （Visual Basic .net）指令以使用<xref:Microsoft.SqlServer.MessageBox>命名空间。  
+2.  可有可无添加 `using` （c #）或 `Imports` （Visual Basic .net）指令以使用 <xref:Microsoft.SqlServer.MessageBox> 命名空间。  
   
 3.  按以下两种方式之一创建 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 类的实例：  
   
-    -   传递由`try` - <xref:System.Exception> `catch`块处理的对象。  
+    -   传递 <xref:System.Exception> 由块处理的对象 `try` - `catch` 。  
   
     -   将消息文本作为 <xref:System.String> 值传递。  
   
@@ -111,11 +110,11 @@ ms.locfileid: "62780689"
   
 1.  将托管代码项目中的某个引用添加到 Microsoft.ExceptionMessageBox.dll 程序集。  
   
-2.  可有可无添加`using` （c #）或`Imports` （Visual Basic .net）指令以使用<xref:Microsoft.SqlServer.MessageBox>命名空间。  
+2.  可有可无添加 `using` （c #）或 `Imports` （Visual Basic .net）指令以使用 <xref:Microsoft.SqlServer.MessageBox> 命名空间。  
   
 3.  按以下两种方式之一创建 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 类的实例：  
   
-    -   传递由`try` - <xref:System.Exception> `catch`块处理的对象。  
+    -   传递 <xref:System.Exception> 由块处理的对象 `try` - `catch` 。  
   
     -   将消息文本作为 <xref:System.String> 值传递。  
   

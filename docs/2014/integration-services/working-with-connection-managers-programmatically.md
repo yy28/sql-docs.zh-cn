@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 973cb7dcfe7eb95e003428adf0c8a0beb7e68e87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6053418c624c2ab107a35a02c382576dcb41a534
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62877698"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972437"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>以编程方式使用连接管理器
   在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中，关联的连接管理器类的 AcquireConnection 方法是以托管代码方式使用连接管理器时最常调用的方法。 编写托管代码时，必须调用 AcquireConnection 方法以使用连接管理器的功能。 无论是在脚本任务、脚本组件、自定义对象还是自定义应用程序中编写托管代码，都必须调用此方法。  
@@ -55,13 +54,13 @@ ms.locfileid: "62877698"
 |连接管理器类型|连接管理器名称|返回值的类型|其他信息|  
 |-----------------------------|-----------------------------|--------------------------|----------------------------|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|[!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接管理器|`System.Data.SqlClient.SqlConnection`||  
-|FILE|文件连接管理器|`System.String`|文件的路径。|  
+|文件|文件连接管理器|`System.String`|文件的路径。|  
 |FLATFILE|平面文件连接管理器|`System.String`|文件的路径。|  
 |MSMQ|MSMQ 连接管理器|`System.Messaging.MessageQueue`||  
 |MULTIFILE|多文件连接管理器|`System.String`|其中一个文件的路径。|  
 |MULTIFLATFILE|多平面文件连接管理器|`System.String`|其中一个文件的路径。|  
 |SMOServer|SMO 连接管理器|`Microsoft.SqlServer.Management.Smo.Server`||  
-|SMTP|SMTP 连接管理器|`System.String`|例如：`SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
+|SMTP|SMTP 连接管理器|`System.String`|例如： `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
 |WMI|WMI 连接管理器|`System.Management.ManagementScope`||  
 |SQLMOBILE|SQL Server Compact 连接管理器|`System.Data.SqlServerCe.SqlCeConnection`||  
   
