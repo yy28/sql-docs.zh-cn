@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4406eb225002bbf5df93f8c67385694922d7d2c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81349af5984f7fafda863f0091cae3375f3dd8d5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482764"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961457"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>更改属性类型（用于 Excel 的 MDS 外接程序）
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，数据类型或允许的字符数不正确时，管理员可以更改属性类型。  
@@ -25,7 +24,7 @@ ms.locfileid: "65482764"
 > [!NOTE]  
 >  不能更新“名称”**** 或“代码”**** 列的类型或长度。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域和 **“资源管理器”** 功能区域。  
@@ -44,7 +43,7 @@ ms.locfileid: "65482764"
   
 4.  在 **“特性属性”** 对话框中，根据需要更新设置。  
   
-5.  单击" **确定**"。  
+5.  单击“确定”。  
   
 ## <a name="what-happens-when-you-change-the-attribute-type"></a>在更改属性类型时会发生什么情况？  
  如果属性有任何依赖项，例如属性由任何 MDS 业务规则引用或属性包含在订阅视图中，则您更改属性的数据类型时，MDS 将：  

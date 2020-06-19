@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9763385093db6e649e60ab7a6be74f8f28466e1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0dc29dbdc8432a4abd197a2a1a3f15b6ff5f6d52
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754603"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934058"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>数据库镜像的前提条件、限制和建议
     
@@ -44,7 +43,7 @@ ms.locfileid: "62754603"
   
 
   
-##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 先决条件  
   
 -   若要建立镜像会话，伙伴双方和见证服务器（如果有）必须在相同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上运行。  
   

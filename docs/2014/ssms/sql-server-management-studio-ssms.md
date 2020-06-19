@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6918d5542ddda98a0182bc327fbff9eb9af9714e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0644d2bfc49ecd34869c134f163897990c147713
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63154992"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061993"
 ---
 # <a name="sql-server-management-studio"></a>SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是用于管理您的 SQL Server 基础架构的集成环境。  提供用于配置、监视和管理 SQL Server 实例的工具。 此外，它还提供了用于部署、监视和升级数据层组件（如应用程序使用的数据库和数据仓库）的工具以生成查询和脚本。  

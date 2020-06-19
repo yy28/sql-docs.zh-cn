@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 747357f2-007c-4586-a371-c7fbe6a2c288
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c29053daaef4e24d89ee92fc4b6653616999205a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 70cf3a1a0edb8cb38d59a2b79ef1891d3bdd0e9f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62710503"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044219"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>保存数据库关系图 (Visual Database Tools)
   通过保存数据库关系图，可以保存对其所做的所有更改，包括对表、列和其他数据库对象所做的任何更改。  
   
 ### <a name="to-save-the-database-diagram"></a>保存数据库关系图  
   
-1.  从 "**文件**" 菜单中，选择 "**保存 <*`tablename`* **。  
+1.  从 "**文件**" 菜单中，选择 "**保存 <*`tablename`* > **。  
   
 2.  如果这是一个以前从未保存过的新关系图，则将显示“另存为”  对话框。 键入关系图的名称。  
   

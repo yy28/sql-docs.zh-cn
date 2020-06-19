@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f13a16e7c8f507914abe8529e02b76161072c5bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 168a343c208c7b9d98f3f03a802e40488602a7d0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035396"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007068"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB 实用工具
-  使用`SqlLocalDB`实用程序创建[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB**实例。 `SqlLocalDB`实用工具（SqlLocalDB）是一个简单的命令行工具，可让用户和开发人员创建和管理[!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**实例。 有关如何使用**LocalDB**的信息，请参阅[SQL Server 2014 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)。  
+  使用 `SqlLocalDB` 实用程序创建 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB**实例。 `SqlLocalDB`实用工具（SqlLocalDB.exe）是一个简单的命令行工具，可让用户和开发人员创建和管理 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**实例。 有关如何使用**LocalDB**的信息，请参阅[SQL Server 2014 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,8 +42,8 @@ SqlLocalDB.exe
 ```  
   
 ## <a name="arguments"></a>参数  
- [ create   | c  ] *instance-name>\<* *instance-version>\<* [-s  ]  
- 新建 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**实例。 `SqlLocalDB`[!INCLUDE[ssExpress](../includes/ssexpress-md.md)] *使用\<实例-版本>* 参数指定的二进制文件版本。 版本号以数字格式指定，至少有一个小数点。 次要版本号 (Service Pack） 是可选的。 例如，下面的两个版本号均可接受：11.0 或 11.0.1186。 必须在计算机上安装指定的版本。 如果未指定，版本号默认为`SqlLocalDB`实用工具的版本。 添加 -s  可启动新的 LocalDB  实例。  
+ [**创建**  | **c** ] *\<instance-name>* *\<instance-version>* [**-s** ]  
+ 新建 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**实例。 `SqlLocalDB`使用 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 参数指定的二进制文件版本 *\<instance-version>* 。 版本号以数字格式指定，至少有一个小数点。 次要版本号 (Service Pack） 是可选的。 例如，下面的两个版本号均可接受：11.0 或 11.0.1186。 必须在计算机上安装指定的版本。 如果未指定，版本号默认为实用工具的版本 `SqlLocalDB` 。 添加 -s 可启动新的 LocalDB 实例。  
   
  [ **共享** | **h** ]  
  使用指定的共享名称共享指定的 **LocalDB** 私有实例。 如果省略该用户 SID 或帐户名称，则默认为当前用户。  
@@ -52,25 +51,25 @@ SqlLocalDB.exe
  [ **unshared** | **u** ]  
  停止共享指定的 **LocalDB**共享实例。  
   
- [ **delete** | **d** ] *\<instance-name>*  
+ [**删除**  | **d** ]*\<instance-name>*  
  删除指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**实例。  
   
- [ **start** | **s** ] " *\<instance-name>* "  
+ [**开始**  | **s** ] " *\<instance-name>* "  
  启动指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**实例。 成功后，该语句返回 **LocalDB**的命名管道地址。  
   
- [ **stop** | **p** ] *\<instance-name>* [ **-i** ] [ **-k** ]  
- 停止指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**实例。 添加 **-i**用`NOWAIT`选项请求关闭实例。 添加 -k  可终止实例进程，而无需联系它。  
+ [**停止**  | **p** ] *\<instance-name>* [**-i** ] [**-k** ]  
+ 停止指定的 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**实例。 添加 **-i**用选项请求关闭实例 `NOWAIT` 。 添加 -k 可终止实例进程，而无需联系它。  
   
- [ **info** | **i** ] [ *\<instance-name>* ]  
+ [**信息**  | **i** ] [ *\<instance-name>* ]  
  列出当前用户拥有的所有 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** 实例。  
   
- *instance-name> 返回指定的 \<LocalDB 实例的名称、版本、状态（正在运行或已停止）、上次启动时间，以及 LocalDB 的本地管道名称*[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]   。  
+ *\<instance-name>* 返回指定的 localdb 实例的名称、版本、状态（正在运行或已停止）、上次启动时间 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**，以及**localdb**的本地管道名称。  
   
  [ **trace** | **t** ] **on** | **off**  
- **上的 trace**启用对当前`SqlLocalDB`用户的 API 调用的跟踪。 **trace off** 禁用跟踪。  
+ **上的 trace**启用对 `SqlLocalDB` 当前用户的 API 调用的跟踪。 **trace off** 禁用跟踪。  
   
  **-?**  
- 返回每个`SqlLocalDB`选项的简短说明。  
+ 返回每个选项的简短说明 `SqlLocalDB` 。  
   
 ## <a name="remarks"></a>备注  
  *实例名称* 参数必须遵循 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 标识符规则，或者必须将该参数放入双引号。  

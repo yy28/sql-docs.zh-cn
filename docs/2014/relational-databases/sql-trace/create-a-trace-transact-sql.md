@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2ebd2a138451f3ebb7da267284f110790f2db058
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35644891b2dca8359d6dc68fbddb67288d241cb4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62714780"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068334"
 ---
 # <a name="create-a-trace-transact-sql"></a>创建跟踪 (Transact-SQL)
   本主题介绍了如何使用存储过程创建跟踪。  
@@ -34,7 +33,7 @@ ms.locfileid: "62714780"
      **sp_trace_setevent** 和 **sp_trace_setfilter** 只能在已停止的现有跟踪上执行。  
   
     > [!IMPORTANT]  
-    >  与常规存储过程不同的是，必须严格键入所有 SQL Server Profiler 存储过程的参数 (<strong>sp_trace_xx *)，而且这些参数不支持数据类型自动转换*</strong>。 如果这些参数不是使用正确的输入参数数据类型（正如参数说明中指定的一样）调用的，则存储过程会返回错误。  
+    >  与常规存储过程不同的是，必须严格键入所有 SQL Server Profiler 存储过程的参数 (<strong>sp_trace_xx</strong>)，而且这些参数不支持数据类型自动转换。 如果这些参数不是使用正确的输入参数数据类型（正如参数说明中指定的一样）调用的，则存储过程会返回错误。  
   
 ## <a name="example"></a>示例  
  下面的代码演示如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]创建跟踪。 代码分为三部分：创建跟踪、填充跟踪文件以及停止跟踪。 通过添加要跟踪的事件来自定义跟踪。 有关事件和列的列表，请参阅 [sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)创建跟踪。  

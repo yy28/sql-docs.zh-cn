@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 232beed45a62ad9cef9f43b122d23cb4d0728a78
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fee3411a65d7e2b5f91e503b1314aa004b6a12bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191713"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023178"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>使用实用工具资源管理器管理 SQL Server 实用工具
   实用工具资源管理器是 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的一个组件，它连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例以便提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中所有对象的树视图。 实用工具资源管理器内容窗格提供了几种方法来查看与 SQL Server 的托管实例的运行状态有关的摘要数据和详细数据。 实用工具资源管理器还提供一个用户界面来查看和管理策略定义。 实用工具资源管理器的功能根据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中的对象而稍有不同，但通常包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具管理的对象、数据和策略。 有关详细信息，请参阅 [SQL Server 实用工具功能和任务](sql-server-utility-features-and-tasks.md)。  
@@ -26,7 +25,7 @@ ms.locfileid: "63191713"
 ## <a name="enroll-an-instance-of-sql-server-or-a-data-tier-application-from-utility-explorer"></a>从实用工具资源管理器注册 SQL Server 的实例或数据层应用程序  
  您可以轻松地将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例注册到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中。 在实用工具资源管理器中，右键单击 **“托管实例”** 节点，然后单击 **“添加托管实例”** 。 按照向导的步骤完成操作。 有关详细信息，请参阅[注册 SQL Server 的实例（SQL Server 实用工具）](enroll-an-instance-of-sql-server-sql-server-utility.md)。  
   
- 若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中将数据层应用程序部署到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例上，请单击“对象资源管理器”  选项卡，展开“管理”  节点，然后右键单击“数据层应用程序”  。 从右键菜单中，选择“部署数据层应用程序”  。 有关详细信息，请参阅[部署数据层应用程序](../data-tier-applications/deploy-a-data-tier-application.md)。  
+ 若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中将数据层应用程序部署到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例上，请单击“对象资源管理器”选项卡，展开“管理”节点，然后右键单击“数据层应用程序”。 从右键菜单中，选择“部署数据层应用程序”  。 有关详细信息，请参阅[部署数据层应用程序](../data-tier-applications/deploy-a-data-tier-application.md)。  
   
 ## <a name="viewing-utility-explorer"></a>查看实用工具资源管理器  
  默认情况下，实用工具资源管理器在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中不可见。 如果您在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 用户界面中看不到实用工具资源管理器，请在 **“视图”** 菜单上，单击 **“实用工具资源管理器”** 。 若要查看实用工具资源管理器内容窗格，请在 **“视图”** 菜单上，单击 **“实用工具资源管理器内容”** 。  

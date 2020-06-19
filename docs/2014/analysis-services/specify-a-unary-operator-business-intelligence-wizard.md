@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 07e4a56c-37b3-43bf-a404-bf22b2b8cfca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b6343f26e6aa54fa6206c739d3d7b52b632e1519
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85433710db04cfd5184ab8b374fea32cfcd8735d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068528"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940449"
 ---
 # <a name="specify-a-unary-operator-business-intelligence-wizard"></a>指定一元运算符（商业智能向导）
   使用 "**指定一元运算符**" 页可以标识包含一元运算符（用于常规聚合）或表示权重系数（对于加权聚合）的列的父子关系。有关常规聚合和加权聚合的详细信息，请参阅[聚合和聚合设计](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  

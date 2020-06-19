@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bbcea29ad75eb84b9c8099e5998e307ecbd7943c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 142cef139d315d3db492651716c2ec8fb9b6e03c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62895026"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968487"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>使用脚本任务查询 Active Directory
   企业数据处理应用程序（如 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包）通常需要根据 Active Directory 中存储的雇员的级别、职务或其他特征来以不同方式处理数据。 Active Directory 是一个 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 目录服务，它不仅提供集中存储有关用户的元数据，还可以提供集中存储有关其他组织资产（如计算机和打印机）的元数据。 Microsoft .NET Framework 中的 `System.DirectoryServices` 命名空间提供使用 Active Directory 的类，以帮助您根据 Active Directory 中存储的信息来定向数据处理工作流。  
@@ -37,7 +36,7 @@ ms.locfileid: "62895026"
   
 1.  创建三个字符串变量：`email`、`name` 和 `title`。 输入一个有效的企业电子邮件地址作为 `email` 变量的值。  
   
-2.  在 "**脚本任务编辑器**" 的 "**脚本**" 页中`email` ，将变量`ReadOnlyVariables`添加到属性中。  
+2.  在 "**脚本任务编辑器**" 的 "**脚本**" 页中，将 `email` 变量添加到属性中 `ReadOnlyVariables` 。  
   
 3.  将 `name` 和 `title` 变量添加到 `ReadWriteVariables` 属性中。  
   

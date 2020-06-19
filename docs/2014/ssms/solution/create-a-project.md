@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3c36d070701712158587f283df0f55cffadac2ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11af4a71ae5c0eb45395b71f8eac83ef27daf4f4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67197595"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062042"
 ---
 # <a name="create-a-project"></a>创建项目
   可以在现有解决方案中创建一个或多个项目。  
@@ -84,7 +83,7 @@ ms.locfileid: "67197595"
      **解决方案名称**  
      输入要在其中创建项目的新解决方案的名称。 默认情况下，此字段使用的名称与在“名称”  字段中输入的名称相同。  
   
-     **注意**若要访问此选项，必须同时选中“解决方案”  中的“创建新的解决方案”  复选框和“创建解决方案的目录”  复选框。 某些项目模板不支持此选项，例如 Web 应用程序。  
+     **注意**若要访问此选项，必须同时选中“解决方案”中的“创建新的解决方案”复选框和“创建解决方案的目录”复选框。 某些项目模板不支持此选项，例如 Web 应用程序。  
   
      **添加到源代码管理**  
      选中此复选框后，在单击“确定”  时即会打开源代码管理应用程序。 填写源代码管理应用程序所要求的所有信息以继续进行操作。 必须安装源代码管理客户端应用程序才能使用此选项。  
