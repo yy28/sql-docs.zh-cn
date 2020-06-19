@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 00208b1c0f11faf8f392e47e275c7e239249d3d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2344ff0b95e82bd83e801df9ff6bd60328a2ae33
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783073"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970276"
 ---
 # <a name="deploy-a-data-tier-application"></a>部署数据层应用程序
   您可使用向导或 PowerShell 脚本将数据层应用程序 (DAC) 从 DAC 包部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的现有实例。 该部署过程通过在 **msdb** 系统数据库（在**中为** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)]）中存储 DAC 定义来注册一个 DAC 实例，创建一个数据库，然后使用在该 DAC 中定义的所有数据库对象来填充该数据库。  
@@ -54,7 +53,7 @@ ms.locfileid: "72783073"
 ###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 限制和局限  
  可以将 DAC 部署到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 4 (SP4) 或更高版本的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 实例。 如果使用更高版本创建 DAC，则 DAC 可能包含 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]不支持的对象。 您不能将这些 DAC 部署到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]实例。  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 先决条件  
  建议您不要从未知或不可信源部署 DAC 包。 此类包可能包含恶意代码，这些代码可能会执行非预期的 Transact-SQL 代码，或者通过修改架构导致错误。 在使用来自未知或不可信源的包之前，请解压缩该 DAC 并检查代码，例如存储过程或者其他用户定义的代码。 有关如何执行这些检查的详细信息，请参阅 [Validate a DAC Package](validate-a-dac-package.md)。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  
@@ -107,7 +106,7 @@ ms.locfileid: "72783073"
   
  “说明”****- 一个只读框，它显示创作 DAC 或者从某一数据库中提取 DAC 时编写的版本。  
   
- "上**Introduction** **一步"-返回到 "简介" \< **页。  
+ " ** \< 上一步**"-返回到 "**简介**" 页。  
   
  “下一步 >”****- 显示进度栏，因为向导已确认所选文件为有效的 DAC 包。  
   
@@ -118,7 +117,7 @@ ms.locfileid: "72783073"
   
  “正在验证 DAC 的内容”****- 报告验证过程的当前状态的进度栏。  
   
- "上一步"-返回到 "**选择包**" 页的初始状态。 ** \< **  
+ " ** \< 上一步**"-返回到 "**选择包**" 页的初始状态。  
   
  “下一步 >”****- 继续到“选择包”**** 页的最终版本。  
   
@@ -133,7 +132,7 @@ ms.locfileid: "72783073"
   
  “忽略违反策略情况”****- 使用此复选框可以在未能满足一个或多个策略条件的情况下继续进行部署。 只有在您确保未满足的所有条件都不会阻碍 DAC 操作成功条件的情况下，才选择此选项。  
   
- "上一步"-返回到 "**选择包**" 页。 ** \< **  
+ " ** \< 上一步**"-返回到 "**选择包**" 页。  
   
  “下一步 >”****- 继续到“更新配置”**** 页。  
   
@@ -158,7 +157,7 @@ ms.locfileid: "72783073"
   
  “日志文件路径和名称”****：- 指定日志文件的完整路径和文件名。 该框将用默认路径和文件名填充。 编辑该框中的字符串可以更改默认值，或者使用 **“浏览”** 按钮可以导航到要用于放置日志文件的文件夹。  
   
- "上一步"-返回到 "**选择 DAC 包**" 页。 ** \< **  
+ " ** \< 上一步**"-返回到 "**选择 DAC 包**" 页。  
   
  “下一步 >”****- 继续到“摘要”**** 页。  
   
@@ -169,7 +168,7 @@ ms.locfileid: "72783073"
   
  **将使用以下设置部署 DAC。** - 查看显示的信息以便确保将执行的操作正确。 该窗口显示您选择的 DAC 包，以及您为部署的 DAC 实例选择的名称。 该窗口还显示在创建与该 DAC 相关联的数据库时将使用的设置。  
   
- "上一步"-返回到 "**更新配置**" 页以更改你的选择。 ** \< **  
+ " ** \< 上一步**"-返回到 "**更新配置**" 页以更改你的选择。  
   
  “下一步 >”****- 部署 DAC，并在“部署 DAC”**** 页中显示结果。  
   
@@ -195,7 +194,7 @@ ms.locfileid: "72783073"
   
 4.  使用 `add_DacActionStarted` 和 `add_DacActionFinished` 订阅 DAC 部署事件。  
   
-5.  设置`DatabaseDeploymentProperties`。  
+5.  设置 `DatabaseDeploymentProperties` 。  
   
 6.  使用 `DacStore.Install` 方法部署 DAC。  
   

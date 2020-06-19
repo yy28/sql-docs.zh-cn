@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: eac9f39478b66df98de0483f8dc68d3e671ce045
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8985a8758f3e9be0bf15f48283f20220a47ece84
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789143"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936538"
 ---
 # <a name="replication-subscribers-and-alwayson-availability-groups-sql-server"></a>复制订阅服务器和 AlwaysOn 可用性组 (SQL Server)
   当包含作为复制订阅服务器的数据库的 AlwaysOn 可用性组发生故障转移时，复制订阅可能会失败。 对于事务复制推送订阅服务器，如果订阅是使用 AG 侦听器名称创建的，则在故障转移后，分发代理会自动继续复制。 对于事务复制拉取订阅服务器，如果订阅是使用 AG 侦听器名称创建的，且原始订阅服务器已启动并正在运行，则在故障转移后，分发代理会自动继续复制。 这是因为仅在原始订阅服务器（AG 的主要副本）上创建分发代理作业。 对于合并订阅服务器，复制管理员必须通过重新创建订阅手动重新配置订阅服务器。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b614a2e405501e2c41cae1add9e8e6b47d372dae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4cfacb7f7c75875d4f5d0b0b435d282b3f537cc7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874469"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936638"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>可用性副本之间的会话期间的可能故障 (SQL Server)
   物理故障、操作系统故障或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障都可能导致两个可用性副本之间的会话失败。 可用性副本不会定期检查 Sqlservr.exe 所依赖的组件来验证这些组件是在正常运行还是已出现故障。 但对于某些类型的故障，受影响的组件将向 Sqlservr.exe 报告错误。 由另一个组件报告的错误称为“硬错误 **”。 为了检测可能忽略的其他故障，[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]实施了自己的会话超时机制。 以秒为单位指定会话超时期限。 此超时期限是一个服务器实例在考虑断开另一实例的连接之前，等待接收来自该实例的 PING 消息的最长时间。 两个可用性副本之间发生会话超时时，可用性副本将假定已发生故障并声明一个“软错误 **”。  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c018a020fd86925ff14efcb37e2f5734c7e5f141
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 078f38058c612037a8013f7955349e94d6db610e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925006"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936658"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-alwayson-availability-groups-sql-server"></a>针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)
   本主题介绍在部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]时的注意事项，包括针对主机、Windows Server 故障转移群集 (WSFC) 群集、服务器实例和可用性组的先决条件、限制和建议。 对于上述各组件，还指出了安全注意事项和所需权限（如果有）。  
@@ -99,7 +98,7 @@ ms.locfileid: "82925006"
   
 3.  使用 `Get-ClusterResource` cmdlet 查找网络名称资源，然后使用 `Set-ClusterParameter` cmdlet 设置 `HostRecordTTL` 值，如下所示：  
   
-     Get-clusterresource "* \< w>*" |Set-clusterparameter HostRecordTTL * \< TimeInSeconds>*  
+     Get-clusterresource " *\<NetworkResourceName>* " |Set-clusterparameter HostRecordTTL*\<TimeInSeconds>*  
   
      下面的 PowerShell 示例为名为“`SQL Network Name (SQL35)`”的网络名称资源将 HostRecordTTL 设置为 300 秒。  
   

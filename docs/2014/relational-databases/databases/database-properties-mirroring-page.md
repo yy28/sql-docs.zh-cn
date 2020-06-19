@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9cf17ecc4219ed0ee0b917bdecb94f936246f225
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 47ec51a82b1369210447b7d853d39a5a61e055ba
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871942"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970147"
 ---
 # <a name="database-properties-mirroring-page"></a>数据库属性（“镜像”页）
   从主体数据库中访问此页，并用它来配置并修改数据库的数据库镜像的属性。 还可以使用该页来启动配置数据库镜像安全向导，以查看镜像会话的状态，并可以暂停或删除数据库镜像会话。  
@@ -49,7 +48,7 @@ ms.locfileid: "62871942"
   
  TCP **://**_fully_qualified_domain_name_**:**_port_  
   
- where  
+ 其中  
   
 -   *fully_qualified_domain_name* 是服务器实例所在的服务器。  
   
@@ -134,7 +133,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
 |状态|说明|  
 |------------|-----------------|  
 |**尚未配置此数据库用于镜像**|不存在数据库镜像会话，并且没有要在 **“镜像”** 页上报告的活动。|  
-|**暂停**|主体数据库可用，但没有向镜像服务器发送任何日志。|  
+|**已暂停**|主体数据库可用，但没有向镜像服务器发送任何日志。|  
 |**无连接**|主体服务器实例无法与其伙伴建立连接。|  
 |**正在同步**|镜像数据库的内容滞后于主体数据库的内容。 主体服务器实例正在向镜像服务器实例发送日志记录，这会对镜像数据库应用更改，使其前滚。<br /><br /> 在数据库镜像会话开始时，镜像数据库和主体数据库处于此状态。|  
 |**故障转移**|在主体服务器实例中，手动故障转移（角色切换）已开始，服务器当前正转换为镜像角色。 在此状态中，到主体数据库的用户连接将快速终止，并且数据库将立即接管镜像角色。|  
@@ -142,10 +141,10 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
  有关详细信息，请参阅[镜像状态 (SQL Server)](../../database-engine/database-mirroring/mirroring-states-sql-server.md)。  
   
- **全部**  
+ **刷新**  
  单击此项可更新“状态”**** 框。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  如果你不熟悉数据库镜像，请参阅 [数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
 ### <a name="adding-a-witness-to-an-existing-session"></a>向现有会话中添加见证服务器  

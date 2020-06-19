@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 61faaa7854aa362e7d269cf3f00911470126f42c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49751128273fd052dd0ecd9423238f6c71a15925
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176837"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063315"
 ---
 # <a name="full-text-search"></a>全文搜索
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的全文搜索为用户和应用程序提供了对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中基于字符的数据运行全文查询的功能。 在可以对某一表运行全文查询之前，数据库管理员必须对该表创建全文索引。 全文索引包括表中一个或多个基于字符的列。 这些列可以具有下列任何一种数据类型：`char`、`varchar`、`nchar`、`nvarchar`、`text`、`ntext`、`image`、`xml` 或 `varbinary(max)` 和 FILESTREAM。 每个全文索引都对表中的一个或多个列创建索引，并且每个列都可以使用特定语言。
@@ -134,7 +133,7 @@ ms.locfileid: "78176837"
 ###  <a name="full-text-indexing-process"></a><a name="indexing"></a>全文索引过程
  全文填充（也称为爬网）开始后，全文引擎会将大批数据存入内存并通知筛选器后台程序宿主。 宿主对数据进行筛选和断字，并将转换的数据转换为倒排词列表。 然后，全文搜索从词列表中提取转换的数据，对其进行处理以删除非索引字，然后将某一批次的词列表永久保存到一个或多个倒排索引中。
 
- 对`varbinary(max)`存储在`image`或列中的数据编制索引时，筛选器（实现**IFilter**接口）根据指定的文件格式（例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word）来提取文本。 在某些情况下，筛选器组件要求`varbinary(max)`将或`image`数据写出到 filterdata 文件夹，而不是推送到内存。
+ 对存储在或列中的数据编制索引时 `varbinary(max)` `image` ，筛选器（实现**IFilter**接口）根据指定的文件格式（例如，Word）来提取文本 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。 在某些情况下，筛选器组件要求将 `varbinary(max)` 或 `image` 数据写出到 filterdata 文件夹，而不是推送到内存。
 
  在处理过程中，通过断字符将收集到的文本数据分隔成各个单独的标记或关键字。 用于词汇切分的语言将在列级指定，或者也可以通过筛选器组件在 `varbinary(max)`、`image` 或 `xml` 数据内标识。
 

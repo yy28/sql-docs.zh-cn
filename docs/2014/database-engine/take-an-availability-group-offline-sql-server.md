@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 50f5aad8-0dff-45ef-8350-f9596d3db898
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 87dff347bd0aee1211093d9e3406a24670a80e7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: db2f56befe6905b9c3de6bd1ab6a2e5a4a00b1b3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228173"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928478"
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>使可用性组脱机 (SQL Server)
   本主题介绍如何在 [!INCLUDE[tsql](../includes/tsql-md.md)] 和更高版本中通过使用 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] ，将某一 AlwaysOn 可用性组从 ONLINE 状态转换为 OFFLINE 状态。 对于同步提交数据库没有数据丢失，因为如果任何同步提交副本未同步，OFFLINE 操作将引发错误并且保持可用性组处于 ONLINE 状态。 保持可用性组处于联机状态将保护未同步的同步提交数据库，以防可能的数据丢失。 可用性组脱机后，其数据库将不可用于客户端，并且您无法使可用性组重新联机。 因此，使某一可用性组处于脱机状态只会将该可用性组的资源从一个 WSFC 群集迁移到另一个 WSFC 群集。  
@@ -32,7 +31,7 @@ ms.locfileid: "75228173"
 > [!CAUTION]  
 >  仅将 OFFLINE 选项用于可用性组资源的跨群集迁移。  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 先决条件  
   
 -   您对其输入 OFFLINE 命令的服务器实例必须正在运行 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 或更高版本（Enterprise Edition 或更高）。  
   

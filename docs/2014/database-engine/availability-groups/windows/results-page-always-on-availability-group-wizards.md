@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7a76c87b38dc333f55745c61620398f086a3db5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9211f91d81d1da1d3c1b96286aac0fa53306f6e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789008"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936508"
 ---
 # <a name="results-page-alwayson-availability-group-wizards"></a>“结果”页（AlwaysOn 可用性组向导）
   本帮助主题介绍 **“结果”** 页中的选项。 本主题适用于 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用此页可查看该向导的结果。  
@@ -37,7 +36,7 @@ ms.locfileid: "62789008"
 |结果|说明|  
 |------------|-----------------|  
 |**错误**|指示验证步骤失败。 单击该链接可以查看错误消息。|  
-|**成功**|指示此验证步骤已成功完成。|  
+|**辉煌**|指示此验证步骤已成功完成。|  
   
 
   

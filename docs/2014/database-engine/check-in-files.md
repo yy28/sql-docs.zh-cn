@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0657a387-8411-4406-bef9-d262a5bfa269
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5debb7c80e7365e67d8661709b09b16f5d25b7b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 052859e4605162daa87789b5c61d2ef9d33d4177
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812581"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936038"
 ---
 # <a name="check-in-files"></a>签入文件
   若要将已修改的源代码管理文件用于其他用户，必须将这些文件签入到源代码管理中。 签入文件时，所签入的版本将写入源代码管理提供程序，并成为文件的最新版本。  
@@ -38,7 +37,7 @@ ms.locfileid: "62812581"
      **“列”**  
      标识要显示的列及其显示顺序。  
   
-     **备注**  
+     **注释**  
      为签入操作添加相关注释。  
   
      **签入项时不显示“签入”对话框**  

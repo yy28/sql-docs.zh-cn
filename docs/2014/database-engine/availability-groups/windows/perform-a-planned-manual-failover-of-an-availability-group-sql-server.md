@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c81f5b22aa61dce596896ccd90bfb1d56054742d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c62942eaa8f4ab4472bca5c7123e5999eb069216
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782973"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936668"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>执行可用性组的计划手动故障转移 (SQL Server)
-  本主题介绍如何通过在中[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../../includes/tsql-md.md)] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]使用、或 PowerShell，对 AlwaysOn 可用性组执行手动故障转移（计划的*手动故障转移*）。 可用性组在可用性副本级别进行故障转移。 计划的手动故障转移（类似于任何 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 故障转移）将辅助副本转换为主角色，同时将以前的主副本转换为辅助角色。  
+  本主题介绍如何通过在中使用、或 PowerShell，对 AlwaysOn 可用性组执行手动故障转移（*计划的手动故障转移*） [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../../includes/tsql-md.md)] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 。 可用性组在可用性副本级别进行故障转移。 计划的手动故障转移（类似于任何 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 故障转移）将辅助副本转换为主角色，同时将以前的主副本转换为辅助角色。  
   
  仅当主副本和目标辅助副本在同步提交模式下运行且当前同步时，才支持计划的手动故障转移，这种故障转移保留加入到目标辅助副本上的可用性组的辅助数据库中的所有数据。 一旦以前的主副本转换为辅助角色，其数据库将变成辅助数据库，并开始与新的主数据库进行同步。 在将其全部转换为 SYNCHRONIZED 状态之后，新的辅助副本将变成适于充当将来计划的手动故障转移的目标。  
   

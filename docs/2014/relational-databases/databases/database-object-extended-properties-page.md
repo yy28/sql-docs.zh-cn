@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7575fc5d539c31e901b5229d215a3bfeb42b221c
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 8ebd204401a69777f4d128337e66f7bc4a502f8c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859441"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970187"
 ---
 # <a name="database-object-extended-properties-page"></a>数据库对象（“扩展属性”页）
   使用扩展属性，您可以向数据库对象添加自定义属性。 使用此页可以查看或修改所选对象的扩展属性。 **“扩展属性”** 页对于所有类型的数据库对象都是相同的。  

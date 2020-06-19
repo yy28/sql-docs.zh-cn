@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8672a9ea9eab9cda291576cf2336f8f3e7ba6f2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9261f692dfed61174181fce1ff6b9aeb72ab69cc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789243"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936678"
 ---
 # <a name="options-sql-server-alwayson-dashboard-page"></a>选项（SQL Server AlwaysOn、“仪表板”页）
-  使用 " [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**选项**" 对话框的 " **SQL Server alwayson 面板**" 页配置 AlwaysOn 面板。  
+  使用 "选项" 对话框的 " **SQL Server Alwayson 面板**" 页 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] **Options**配置 AlwaysOn 面板。  
   
  **若要访问此页，请执行以下操作：**  
   

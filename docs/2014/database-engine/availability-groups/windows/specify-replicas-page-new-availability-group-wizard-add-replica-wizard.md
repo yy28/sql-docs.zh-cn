@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a552b5847f1abda254da1d6c7348088ee0e8a03
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97cf01d12e56b238b02d1c36c14cf8094dfd74d2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76923043"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936412"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>“指定副本”页（新建可用性组向导：添加副本向导）
   本主题介绍“指定副本”**** 页的选项。 本页适用于 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 使用 **“指定副本”** 页可以指定和配置一个或多个要添加到可用性组的可用性副本。 此页包含四个选项卡，下表将逐一介绍。 单击表中的选项卡名称可转到本主题后面的相应部分。  
@@ -27,7 +26,7 @@ ms.locfileid: "76923043"
 |选项卡|简要说明|  
 |---------|-----------------------|  
 |[副本](#ReplicasTab)|使用此选项卡可以指定将承载或当前承载辅助副本的每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 请注意，您当前连接的服务器实例必须承载主副本。<br /><br /> 提示：请首先在“副本”**** 选项卡上完成对所有副本的指定，再开始其他选项卡。|  
-|[终结点](#EndpointsTab)|使用此选项卡可以验证任何现有数据库镜像端点，此外，如果在其服务帐户使用 Windows 身份验证的服务器实例上缺少该端点，则会自动创建该端点。|  
+|[端点](#EndpointsTab)|使用此选项卡可以验证任何现有数据库镜像端点，此外，如果在其服务帐户使用 Windows 身份验证的服务器实例上缺少该端点，则会自动创建该端点。|  
 |[备份首选项](#BackupPreferencesTab)|使用此选项卡可以整体为可用性组指定您的备份首选项，并为各个可用性副本指定备份优先级。|  
 |[侦听器](#Listener)|使用此选项卡（如果可用）可以创建可用性组侦听器。 默认情况下不创建侦听器。<br /><br /> 注意：仅当正在运行 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 时，此选项卡才可用。|  
   
@@ -53,7 +52,7 @@ ms.locfileid: "76923043"
  **可读取的辅助角色**  
  从“可读取辅助角色”**** 下拉列表中选择一个值，如下所示：  
   
- **否**  
+ **是**  
  不允许与此副本的辅助数据库的直接连接。 它们不可用于读访问。 这是默认设置。  
   
  **仅限读意向**  
@@ -115,7 +114,7 @@ ms.locfileid: "76923043"
  **仅辅助**  
  指定备份应该永远不会在主副本上执行。 如果主副本是唯一的联机副本，则备份应不会发生。  
   
- **基本**  
+ **主要节点**  
  指定备份应该始终在主副本上发生。 如果您需要在对辅助副本运行备份时不支持的备份功能，例如创建差异备份，此选项将很有用。  
   
  **任何副本**  
@@ -146,12 +145,12 @@ ms.locfileid: "76923043"
  为该可用性组指定侦听器首选项。如下所示：  
   
  **侦听器 DNS 名称**  
- 指定侦听器的网络名称。 此名称在域中必须唯一，并且只能以任意顺序包含字母数字字符**-**、短划线（）和连字符（**_**）。 如果使用 **“侦听器”** 选项卡指定该名称，则 DNS 名称的长度可多达 15 个字符。  
+ 指定侦听器的网络名称。 此名称在域中必须唯一，并且只能以任意顺序包含字母数字字符、短划线（ **-** ）和连字符（**_**）。 如果使用 **“侦听器”** 选项卡指定该名称，则 DNS 名称的长度可多达 15 个字符。  
   
 > [!IMPORTANT]  
 >  如果在“侦听程序”**** 选项卡上输入无效的 DNS 侦听程序名称（或端口号），则在“指定副本”**** 页上将禁用“下一步”**** 按钮。  
   
- 端口   
+ **端口**  
  指定该侦听器使用的 TPC 端口。  
   
 > [!NOTE]  
@@ -210,7 +209,7 @@ ms.locfileid: "76923043"
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [&#40;Transact-sql&#41;创建可用性组](/sql/t-sql/statements/create-availability-group-transact-sql)   
+ [CREATE AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/create-availability-group-transact-sql)   
  [AlwaysOn 可用性组 &#40;SQL Server 的先决条件、限制和建议&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

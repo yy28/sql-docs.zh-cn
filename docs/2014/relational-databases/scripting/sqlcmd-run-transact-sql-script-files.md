@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1c6d747fe98e08ee21305525302563d1c8025aa2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1ba44f1bf0906dfd4265ce07cf6f7dd5d350ee5b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703679"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063407"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>使用 sqlcmd 运行 Transact-SQL 脚本文件
   您可以使用 `sqlcmd` 运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本文件。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本文件是一个文本文件，它可以包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、`sqlcmd` 命令以及脚本变量的组合。  

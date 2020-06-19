@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 0fa8785b-0830-4a52-aff5-fcf8268b72fc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d98194f5dead58b738c39503445923d9df49be06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec0736326a4da0708d125bfc480996d54bb86c8a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787034"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935722"
 ---
 # <a name="configure-the-default-full-text-language-server-configuration-option"></a>配置 default full-text language 服务器配置选项
-  `default full-text language`本主题说明如何使用[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]在中配置服务器配置选项。 `default full-text language`选项指定全文索引的默认语言值。 语言分析将对全文索引的所有数据执行，并且取决于数据的语言。 该选项的默认值为服务器的语言。 对于的本地化版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，安装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]程序会将`default full-text language`选项设置为服务器的语言（如果存在合适的匹配项）。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的非本地化版本，`default full-text language` 选项为“英语”。  
+  本主题说明如何 `default full-text language` 使用或在中配置服务器配置选项 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 `default full-text language`选项指定全文索引的默认语言值。 语言分析将对全文索引的所有数据执行，并且取决于数据的语言。 该选项的默认值为服务器的语言。 对于的本地化版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序会将 `default full-text language` 选项设置为服务器的语言（如果存在合适的匹配项）。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的非本地化版本，`default full-text language` 选项为“英语”。  
   
  **本主题内容**  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62787034"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
--   如果未通过 " `default full-text language`创建全文索引" 或 "更改全文索引" 语句中的 "语言" **language_term**选项为列指定语言，则将在全文索引中使用此选项的值。 如果不支持默认全文语言，或者语言分析包不可用，则 CREATE 或 ALTER 操作将失败，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回说明指定语言无效的错误消息。  
+-   `default full-text language`如果未通过 "创建全文索引" 或 "更改全文索引" 语句中的 "语言" **language_term**选项为列指定语言，则将在全文索引中使用此选项的值。 如果不支持默认全文语言，或者语言分析包不可用，则 CREATE 或 ALTER 操作将失败，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回说明指定语言无效的错误消息。  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  
   

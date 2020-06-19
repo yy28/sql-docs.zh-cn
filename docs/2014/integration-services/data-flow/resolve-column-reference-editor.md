@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: bb3ee33c-79c4-4c76-a82f-71581b4a60f1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 63d14790e0690882dd23527d52d5de282637d2d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f810a24baec565a7870fb6602b76ff8f3ba119f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770783"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914617"
 ---
 # <a name="resolve-column-reference-editor"></a>解析列引用编辑器
   在某一输入路径断开连接或者在该路径中存在任何未映射的列时，在相应的数据路径旁将显示一个错误图标。 为了简化列引用错误的解决方法，对于执行树中的所有路径，可以使用新的“解决引用”编辑器将未映射的输出列与未映射的输入列相链接。 “解决引用”编辑器还将突出显示路径以便指示正在解决的路径。  

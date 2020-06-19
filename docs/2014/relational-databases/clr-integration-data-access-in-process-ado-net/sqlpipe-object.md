@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bcf462f82d7455f83bb0bee8a3b0af991ec2e7db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91ac39b10cc5670a7b6a8a5243c19334d15989f3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920056"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955079"
 ---
 # <a name="sqlpipe-object"></a>SqlPipe 对象
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本中，编写向调用客户端发送结果或输出参数的存储过程（或扩展存储过程）非常常见。  
@@ -29,7 +28,7 @@ ms.locfileid: "62920056"
  对于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中运行的公共语言运行时 (CLR) 数据库对象，您可以使用 `Send` 对象的 `SqlPipe` 方法将结果发送到连接的管道中。 访问 `Pipe` 对象的 `SqlContext` 属性可以获取 `SqlPipe` 对象。 从概念上来说，`SqlPipe` 类与 ASP.NET 中的 `Response` 类相似。 有关详细信息，请参阅 .NET Framework 软件开发包中的 SqlPipe 类参考文档。  
   
 ## <a name="returning-tabular-results-and-messages"></a>返回表格结果和消息  
- `SqlPipe` 包含 `Send` 方法，该方法具有三次重载。 它们分别是：  
+ `SqlPipe` 包含 `Send` 方法，该方法具有三次重载。 它们具有以下特点：  
   
 -   `void Send(string message)`  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4b97d62e7dede1cbbe4229f824407946f2fe43ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 103dd8eef782dfa7a4d13929b0b832dba9bc46e0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789816"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936702"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>监视可用性组 (Transact-SQL)
   为了使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]来监视可用性组和副本及关联的数据库， [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 提供了一组目录视图和动态管理视图及服务器属性。 通过使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT 语句，您可以使用这些视图监视可用性组及其副本和数据库。 为给定可用性组返回的信息取决于您连接到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例承载的是主副本还是辅助副本。  
@@ -80,7 +79,7 @@ ms.locfileid: "62789816"
 > [!NOTE]  
 >  另请参阅本主题后面[监视可用性副本](#AvReplicas)部分的 **sys.dm_hadr_availability_replica_cluster_nodes** 和 **sys.dm_hadr_availability_replica_cluster_states** 以及[监视可用性数据库](#AvDbs)部分的 **sys.availability_databases_cluster** 和 **sys.dm_hadr_database_replica_cluster_states**。  
   
- 有关 WSFC 群集和[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的信息，请参阅[Windows Server 故障转移群集 &#40;WSFC&#41; 与 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)和[故障转移群集并 AlwaysOn 可用性组 &#40;](failover-clustering-and-always-on-availability-groups-sql-server.md)SQL Server&#41;。  
+ 有关 WSFC 群集和的信息 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ，请参阅[Windows Server 故障转移群集 &#40;WSFC&#41; 与 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)和[故障转移群集并 AlwaysOn 可用性组 &#40;](failover-clustering-and-always-on-availability-groups-sql-server.md)SQL Server&#41;。  
   
 ##  <a name="monitoring-availability-groups"></a><a name="AvGroups"></a>监视可用性组  
  若要监视服务器实例为其承载可用性副本的可用性组，请使用以下视图：  
@@ -148,7 +147,7 @@ ms.locfileid: "62789816"
  [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
  为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例中的每个数据库都包含一行。 如果数据库属于某个可用性副本，该数据库对应的行将显示该副本的 GUID，以及该数据库在其可用性组中的唯一标识符。  
   
- 列名： replica_id、group_database_id ** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] **  
+ ** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 列名：** replica_id、group_database_id  
   
  [sys.dm_hadr_auto_page_repair](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql)  
  为针对任何可用性数据库（位于服务器实例为任何可用性组承载的可用性副本上）的每一个自动页修复尝试都返回一行。 该视图包含对应于给定主/辅助数据库上最新自动页修复尝试的行，每个数据库最多可对应 100 行。 只要一个数据库对应的行达到最大值，则它的下个自动页修复尝试对应的行将替换现有的一个项。  

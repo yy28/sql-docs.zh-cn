@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d15db702cb196842a5ddba25dbc3fa9cc18df5f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 017a8b10376279af6a8c89dda08452b0f61a9d73
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917112"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970097"
 ---
 # <a name="database-snapshots-sql-server"></a>数据库快照 (SQL Server)
   数据库快照是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库（源数据库  ）的只读静态视图。 自创建快照那刻起，数据库快照在事务上与源数据库一致。 数据库快照始终与其源数据库位于同一服务器实例上。 当源数据库更新时，数据库快照也将更新。 因此，数据库快照存在的时间越长，就越有可能用完其可用磁盘空间。  
@@ -192,7 +191,7 @@ ms.locfileid: "62917112"
     > [!NOTE]  
     >  对数据库快照执行的 SELECT 语句不能指定 FILESTREAM 列；否则，将返回如下错误消息： `Could not continue scan with NOLOCK due to data movement.`  
   
--   当有关只读快照的统计信息丢失或变得陈旧时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将创建临时统计信息并在 tempdb 中进行维护。 有关详细信息，请参阅[统计](../statistics/statistics.md)信息。  
+-   当有关只读快照的统计信息丢失或变得陈旧时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将创建临时统计信息并在 tempdb 中进行维护。 有关详细信息，请参阅[统计信息](../statistics/statistics.md)。  
   
 ###  <a name="disk-space-requirements"></a><a name="DiskSpace"></a>磁盘空间要求  
  数据库快照占用磁盘空间。 如果数据库快照用尽了磁盘空间，将被标记为可疑，必须将其删除。 （但是，源数据库不会受到影响，对其执行的操作仍能继续正常进行。）然而，与一份完整的数据库相比，快照具有高度空间有效性。 快照仅需足够存储空间来存储在其生存期中更改的页。 通常情况下，快照只会保留一段有限的时间，因此其大小不是主要问题。  

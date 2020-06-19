@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e1892f24-7272-4d5d-8926-6150cc82b2c3
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 64896beeb2e815f22662cd7d16aaf263135f8122
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3644ecee04dd177c792efcb02ad75f91baa46c9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089582"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928292"
 ---
 # <a name="trace-properties-events-selection-tab"></a>跟踪属性（“事件选择”选项卡）
   使用 **“跟踪属性”** 对话框的 **“事件选择”** 选项卡可以查看或指定跟踪的事件和数据列。  

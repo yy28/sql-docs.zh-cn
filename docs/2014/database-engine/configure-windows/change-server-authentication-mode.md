@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43919e335700a23a4174eb1bdf42c36c0c08fe2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8bda31ca7d0c5949173a9a3e5ea656c1757c04f7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812293"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935855"
 ---
 # <a name="change-server-authentication-mode"></a>更改服务器身份验证模式
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中更改服务器身份验证模式。 安装过程中， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 设置为 **“Windows 身份验证模式”** 或 **“SQL Server 和 Windows 身份验证模式”** 。 安装完成后，您可以随时更改身份验证模式。  
@@ -58,7 +57,7 @@ ms.locfileid: "62812293"
   
 #### <a name="to-enable-the-sa-login"></a>启用 sa 登录名  
   
-1.  在对象资源管理器中，展开 "**安全性**"，展开 "登录`sa`名"，右键单击，然后单击 "**属性**"。  
+1.  在对象资源管理器中，展开 "**安全性**"，展开 "登录名"，右键单击 `sa` ，然后单击 "**属性**"。  
   
 2.  在 **“常规”** 页上，您可能需要为登录名创建密码并确认该密码。  
   

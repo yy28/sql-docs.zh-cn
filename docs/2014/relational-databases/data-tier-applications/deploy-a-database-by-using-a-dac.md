@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0da23febcc1f2e97b1dfaff29a5df5ced16c7e4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873028"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970267"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>使用 DAC 部署数据库
   使用“将数据库部署到 SQL Azure”  向导在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例与 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 服务器之间，或在两台 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]服务器之间部署数据库。  
@@ -100,7 +99,7 @@ ms.locfileid: "62873028"
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]数据库设置：**  
   
--   版本- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]从下拉菜单中选择的版本。 ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] **  
+-   ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 版本**- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 从下拉菜单中选择的版本。  
   
 -   **最大数据库大小** - 从下拉菜单中选择最大数据库大小。  
   
@@ -111,7 +110,7 @@ ms.locfileid: "62873028"
 ##  <a name="summary-page"></a><a name="Summary"></a> 摘要页  
  使用此页可查看操作的指定的源和目标设置。 若要使用指定设置完成部署操作，请单击 **“完成”**。 若要取消部署操作并退出向导，请单击 **“取消”**。  
   
-##  <a name="progress-page"></a><a name="Progress"></a>进度页面  
+##  <a name="progress-page"></a><a name="Progress"></a> “进度”页  
  此页将显示一个指示操作状态的进度栏。 若要查看详细状态，请单击 **“查看详细信息”** 选项。  
   
 ##  <a name="results-page"></a><a name="Results"></a>结果页  

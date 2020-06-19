@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7de13f529dc0aab0c897ebe3dc1cb19220b13fd7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea3da64ce6da8cbcb32b5854f14e8d24349c0c25
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154586"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970077"
 ---
 # <a name="databases"></a>数据库
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的数据库由表的集合组成，这些表用于存储一组特定的结构化数据。 表中包含行（也称为记录或元组）和列（也称为属性）的集合。 表中的每一列都用于存储某种类型的信息，例如，日期、名称、金额和数字。  
@@ -42,7 +41,7 @@ ms.locfileid: "70154586"
 |-|-|  
 |[系统数据库](system-databases.md)|[删除数据库中的数据文件或日志文件](delete-data-or-log-files-from-a-database.md)|  
 |[包含的数据库](contained-databases.md)|[显示数据库的数据和日志空间信息](display-data-and-log-space-information-for-a-database.md)|  
-|[Azure 中的 SQL Server 数据文件](sql-server-data-files-in-microsoft-azure.md)|[增加数据库的大小](increase-the-size-of-a-database.md)|  
+|[SQL Server Azure 中的数据文件](sql-server-data-files-in-microsoft-azure.md)|[增加数据库的大小](increase-the-size-of-a-database.md)|  
 |[数据库文件和文件组](database-files-and-filegroups.md)|[重命名数据库](rename-a-database.md)|  
 |[数据库状态](database-states.md)|[将数据库设置为单用户模式](set-a-database-to-single-user-mode.md)|  
 |[文件状态](file-states.md)|[收缩数据库](shrink-a-database.md)|  

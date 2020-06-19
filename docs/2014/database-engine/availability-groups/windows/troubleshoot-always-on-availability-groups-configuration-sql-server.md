@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5041882c3eadb4e7f6f28a118e45c6e42f13cea6
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 165036ba539c3392b1944282bd9d6126eb471a97
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82924888"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936338"
 ---
 # <a name="troubleshoot-alwayson-availability-groups-configuration-sql-server"></a>解决 AlwaysOn 可用性组配置问题 (SQL Server)
   本主题提供的信息可帮助您解决在为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]配置服务器实例时遇到的典型问题。 典型配置问题包括 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 被禁用、帐户配置不当、数据库镜像端点不存在、端点无法访问（SQL Server 错误 1418）、网络访问不存在，以及联接数据库命令失败（SQL Server 错误 35250）。
@@ -33,7 +32,7 @@ ms.locfileid: "82924888"
 |-------------|-----------------|
 |[未启用 AlwaysOn 可用性组](#IsHadrEnabled)|如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例未启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，该实例则不支持创建可用性组，也无法承载任何可用性副本。|
 |[帐户](#Accounts)|介绍了正确配置运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 所用的帐户的相关要求。|
-|[终结点](#Endpoints)|介绍如何诊断与服务器实例的数据库镜像端点有关的问题。|
+|[端点](#Endpoints)|介绍如何诊断与服务器实例的数据库镜像端点有关的问题。|
 |[系统名称](#SystemName)|概述了在端点 URL 中指定服务器实例的系统名称的备选方法。|
 |[网络访问](#NetworkAccess)|记录了承载可用性副本的每个服务器实例必须能够通过 TCP 访问其他各个服务器实例的端口的要求。|
 |[端点访问（SQL Server 错误 1418）](#Msg1418)|包含有关此 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 错误消息的信息。|

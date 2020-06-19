@@ -15,18 +15,17 @@ topic_type:
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 889e5eee49363c71a18808e7c71434110241bc84
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1bac043c4a194c904154e2c97cd0544c8c941078
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63130530"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027767"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>LocalDBGetInstanceInfo 函数
   返回有关指定的 SQL Server Express LocalDB 实例的信息，如该实例是否存在、实例使用的 LocalDB 版本以及实例是否正在运行等。  
   
- 此信息将在`struct`名为**LocalDBInstanceInfo**的中返回，该名称具有以下定义。  
+ 此信息将在 `struct` 名为**LocalDBInstanceInfo**的中返回，该名称具有以下定义。  
   
 ```  
 typedef struct _LocalDBInstanceInfo  
@@ -127,9 +126,9 @@ HRESULT LocalDBGetInstanceInfo(
  发生了意外错误。 有关详细信息，请参阅事件日志。  
   
 ## <a name="details"></a>详细信息  
- 引入`struct`大小参数（*lpInstanceInfoSize*）背后的基本原理是使 API 能够返回不同版本的**LocalDBInstanceInfostruct**，从而有效地实现向前和向后兼容性。  
+ 引入 `struct` 大小参数（*lpInstanceInfoSize*）背后的基本原理是使 API 能够返回不同版本的**LocalDBInstanceInfostruct**，从而有效地实现向前和向后兼容性。  
   
- 如果`struct`大小参数（*lpInstanceInfoSize*）与已知版本的**LocalDBInstanceInfostruct**的大小匹配，则返回该版本`struct`的。 否则，返回 LOCALDB_ERROR_INVALID_PARAMETER。  
+ 如果 `struct` 大小参数（*lpInstanceInfoSize*）与已知版本的**LocalDBInstanceInfostruct**的大小匹配，则返回该版本的 `struct` 。 否则，返回 LOCALDB_ERROR_INVALID_PARAMETER。  
   
  **LocalDBGetInstanceInfo** API 用法的典型示例如下所示：  
   

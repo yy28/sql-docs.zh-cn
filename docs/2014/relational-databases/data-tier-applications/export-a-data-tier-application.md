@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3335c5a7fcb46b901777de0404b5206aa6a876f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d73724cd1aebd1d06048f634da3a1ad32ff8e49c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175975"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970247"
 ---
 # <a name="export-a-data-tier-application"></a>导出数据层应用程序
   导出部署的数据层应用程序 (DAC) 或数据库将创建一个导出文件，其中同时包括该数据库中的对象定义和表中包含的所有数据。 然后，可将该导出文件导入到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的其他实例或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中。 可以将导出-导入操作组合起来以在实例之间迁移 DAC，或者创建一个逻辑备份，或者创建部署在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中的数据库的本地副本。  
@@ -100,12 +99,12 @@ ms.locfileid: "70175975"
 ##  <a name="validation-page"></a><a name="Validation"></a>验证页  
  使用验证页可查看阻止操作的任何问题。 若要继续，请解决阻止问题，然后单击“重新运行验证”**** 确保验证成功。  
   
- 要继续，请单击“下一步”****。  
+ 若要继续，请单击 **“下一步”** 。  
   
 ##  <a name="summary-page"></a><a name="Summary"></a> 摘要页  
  使用此页可查看操作的指定的源和目标设置。 若要使用指定设置完成导出操作，请单击 **“完成”**。 若要取消导出操作并退出向导，请单击 **“取消”**。  
   
-##  <a name="progress-page"></a><a name="Progress"></a>进度页面  
+##  <a name="progress-page"></a><a name="Progress"></a> “进度”页  
  此页将显示一个指示操作状态的进度栏。 若要查看详细状态，请单击 **“查看详细信息”** 选项。  
   
 ##  <a name="results-page"></a><a name="Results"></a>结果页  

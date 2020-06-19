@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2e38b572535011737f33ba1e4c438540ecdd6849
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae89ee9f60e740a4e20486e7dcbe99316fd4ed04
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811228"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935398"
 ---
 # <a name="database-engine-instances-sql-server"></a>数据库引擎实例 (SQL Server)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例是作为操作系统服务运行的 `sqlservr.exe` 可执行程序的副本。 每个实例管理几个系统数据库以及一个或多个用户数据库。 每台计算机都可以运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的多个实例。 应用程序连接到实例，以便在实例管理的数据库中执行任务。  

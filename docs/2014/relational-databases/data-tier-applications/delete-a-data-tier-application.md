@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: efbd01499940490fd85dfaf1e0786d26b722749c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3fd058eb14b45fe9f5aaaea4e9e37c8741c19d6f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782735"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970271"
 ---
 # <a name="delete-a-data-tier-application"></a>删除数据层应用程序
   您可以通过使用“删除数据层应用程序向导”或 Windows PowerShell 脚本，删除数据层应用程序。 您可以指定是保留、分离还是删除关联数据库。  
@@ -101,7 +100,7 @@ ms.locfileid: "72782735"
   
  数据库的数据和日志文件被永久删除。  
   
- "上**Introduction** **一步"-返回到 "简介" \< **页。  
+ " ** \< 上一步**"-返回到 "**简介**" 页。  
   
  “下一步 >”****- 继续到“摘要”**** 页。  
   
@@ -112,7 +111,7 @@ ms.locfileid: "72782735"
   
  **查看选择摘要** - 查看在该框中显示的 DAC、数据库和删除方法。 如果信息正确，则选择 **“下一步”** 或者 **“完成”** 以便删除 DAC。 如果 DAC 和数据库信息不正确，则选择 **“取消”** 并且选择正确的 DAC。 如果删除方法不正确，则选择 **“上一步”** 返回到 **“选择方法”** 页并且选择其他方法。  
   
- "上一步"-返回到 "**选择方法**" 页以选择其他删除方法。 ** \< **  
+ " ** \< 上一步**"-返回到 "**选择方法**" 页以选择其他删除方法。  
   
  **下一步 >** - 使用你在上一页中选择的方法删除 DAC 实例，并且继续到“删除数据层应用程序”**** 页。  
   
@@ -223,5 +222,5 @@ $dacName  = "MyApplication"
  [数据层应用程序](data-tier-applications.md)   
  [部署数据层应用程序](deploy-a-data-tier-application.md)   
  [将数据库注册为 DAC](register-a-database-as-a-dac.md)   
- [备份和还原 SQL Server 数据库](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [SQL Server 数据库的备份和还原](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [数据库分离和附加 (SQL Server)](../databases/database-detach-and-attach-sql-server.md)  

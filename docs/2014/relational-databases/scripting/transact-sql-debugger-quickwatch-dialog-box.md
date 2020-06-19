@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0b25d06e69b24cf31d3bc84d69ccdcbc8a034588
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 48e4bda558b75bec0c81815c90feff9d6500a803
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718315"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063275"
 ---
 # <a name="quickwatch-dialog-box"></a>“快速监视”对话框
   使用“快速监视”对话框可以在调试 **代码时快速查看一个** 表达式（例如变量或参数）的数据类型和值。 [!INCLUDE[tsql](../../includes/tsql-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] 若要监视多个表达式，也可以将这些表达式添加到 **“监视”** 窗口。  

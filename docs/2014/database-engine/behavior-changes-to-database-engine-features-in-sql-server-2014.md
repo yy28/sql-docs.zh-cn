@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b9d174bb43388af9ea3fe02d839c7a3fcfec202c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9072b851f3512113b23dedc91f8c9b7151136a57
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77646326"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936170"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中数据库引擎功能的行为更改
   本主题介绍[!INCLUDE[ssDE](../includes/ssde-md.md)]中的行为更改。 与早期版本的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 相比， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的功能的工作或交互方式会受到行为更改的影响。  
@@ -30,15 +29,15 @@ ms.locfileid: "77646326"
 ## <a name="behavior-changes-in-sssql11"></a><a name="Denali"></a>中的行为更改[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="metadata-discovery"></a>元数据发现  
- 从 " [!INCLUDE[ssDE](../includes/ssde-md.md)] [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]允许 SQLDescribeCol" 开始获得的改进，可获得比早期版本的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]SQLDescribeCol 返回的预期结果更准确的说明。 有关详细信息，请参阅[元数据发现](../relational-databases/native-client/features/metadata-discovery.md)。  
+ [!INCLUDE[ssDE](../includes/ssde-md.md)]从 "允许 SQLDescribeCol" 开始获得的改进， [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 可获得比早期版本的 SQLDescribeCol 返回的预期结果更准确的说明 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 有关详细信息，请参阅[元数据发现](../relational-databases/native-client/features/metadata-discovery.md)。  
   
  用于确定响应格式的[SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql)选项（未实际运行查询）将替换为[sp_describe_first_result_set &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)， [sp_describe_undeclared_parameters &#40;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql)transact-sql&#41;， [sys.databases ](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql)dm_exec_describe_first_result_set &#40;transact-sql&#41;，dm_exec_describe_first_result_set_for_object [&#40;transact-sql&#41;。 ](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql)  
   
 ### <a name="changes-to-behavior-in-scripting-a-sql-server-agent-task"></a>有关为 SQL Server 代理任务编写脚本的行为的更改  
-从开始[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]，如果通过复制现有作业中的脚本来创建新作业，则新作业可能会意外影响现有作业。 若要使用现有作业中的脚本来创建新作业，请手动删除参数* \@schedule_uid*该参数通常是在现有作业中创建作业计划的部分的最后一个参数。 这将为新作业创建新的独立计划而不影响现有作业。  
+从开始 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ，如果通过复制现有作业中的脚本来创建新作业，则新作业可能会意外影响现有作业。 若要使用现有作业中的脚本来创建新作业，请手动删除参数* \@ schedule_uid*该参数通常是在现有作业中创建作业计划的部分的最后一个参数。 这将为新作业创建新的独立计划而不影响现有作业。  
   
 ### <a name="constant-folding-for-clr-user-defined-functions-and-methods"></a>CLR 用户定义函数和方法的常量折叠  
-从开始[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]，现在可折叠以下用户定义的 CLR 对象：  
+从开始 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ，现在可折叠以下用户定义的 CLR 对象：  
 
 -   确定性的标量值 CLR 用户定义函数。  
 -   确定性的 CLR 用户定义类型的方法。  
@@ -83,10 +82,10 @@ SELECT geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
   
 |源 XS 数据类型|目标 SQL Server 数据类型|  
 |-------------------------|--------------------------------------|  
-|字节<br /><br /> short<br /><br /> int<br /><br /> 整数<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|tinyint<br /><br /> smallint<br /><br /> int<br /><br /> bigint<br /><br /> Decimal<br /><br /> numeric|  
-|Decimal|Decimal<br /><br /> numeric|  
+|字节<br /><br /> short<br /><br /> int<br /><br /> integer<br /><br /> long<br /><br /> unsignedByte<br /><br /> unsignedShort<br /><br /> unsignedInt<br /><br /> unsignedLong<br /><br /> positiveInteger<br /><br /> nonPositiveInteger<br /><br /> negativeInteger<br /><br /> nonNegativeInteger|tinyint<br /><br /> smallint<br /><br /> int<br /><br /> bigint<br /><br /> Decimal<br /><br /> numeric|  
+|decimal|Decimal<br /><br /> numeric|  
 |FLOAT|real|  
-|Double|float|  
+|Double|FLOAT|  
   
  新行为改进了可跳过中间转换时的性能。 但是，当数据类型转换失败时，您看到的错误消息将有别于从中间 xs:string 值进行转换时引发的错误消息。 例如，如果 value 方法未能将 `int` 值 100000 转换为 `smallint`，则之前的错误消息为：  
   
@@ -97,15 +96,15 @@ SELECT geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  `Arithmetic overflow error converting expression to data type smallint.`  
   
 ### <a name="sqlcmdexe-behavior-change-in-xml-mode"></a>XML 模式中的 sqlcmd.exe 行为更改  
- 如果对 xml 模式使用 sqlcmd （： XML ON 命令），则在执行 SELECT * from T FOR XML ... 时，会发生行为更改。  
+ 如果对 xml 模式（： XML ON 命令）使用 sqlcmd.exe，则在执行 SELECT * from T FOR XML ... 时，会发生行为更改。  
   
 ### <a name="dbcc-checkident-revised-message"></a>DBCC CHECKIDENT 修改了消息  
- 在[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中，DBCC CHECKIDENT 命令返回的消息仅当与种子设定项一起使用*new_reseed_value*更改当前标识值时才发生更改。 新消息为 *"正在检查标识信息：当前标识值 '\<当前标识值> '"*。 DBCC 执行完毕。 如果 DBCC 输出了错误消息，请与系统管理员联系。”  
+ 在中 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ，DBCC CHECKIDENT 命令返回的消息仅当与种子设定项一起使用*new_reseed_value*更改当前标识值时才发生更改。 新消息为 *"正在检查标识信息：当前标识值 ' \<current identity value> '"*。 DBCC 执行完毕。 如果 DBCC 输出了错误消息，请与系统管理员联系。”  
   
- 在早期版本中，消息为 *"正在检查标识信息：当前标识值\<' 当前标识值> '，当前列值 '\<当前列值>"。DBCC 执行完毕。如果 DBCC 打印了错误消息，请与系统管理员联系。 "* 当使用`NORESEED`、而不`DBCC CHECKIDENT`是第二个参数，或者没有种子设定值时，消息将保持不变。 有关详细信息，请参阅 [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)。  
+ 在早期版本中，消息为 *"正在检查标识信息：当前标识值 ' \<current identity value> '，当前列值 ' \<current column value> '。DBCC 执行完毕。如果 DBCC 打印了错误消息，请与系统管理员联系。 "* 当 `DBCC CHECKIDENT` 使用 `NORESEED` 、而不是第二个参数，或者没有种子设定值时，消息将保持不变。 有关详细信息，请参阅 [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)。  
   
 ### <a name="behavior-of-exist-function-on-xml-datatype-has-changed"></a>XML 数据类型的 exist() 函数的行为已更改  
- 将 XML 数据类型`exist()`与 null 值进行比较时，函数的行为已更改为0（零）。 请看下面的示例：  
+ 将 `exist()` XML 数据类型与 null 值进行比较时，函数的行为已更改为0（零）。 请考虑以下示例：  
   
 ```sql  
 DECLARE @test XML;  

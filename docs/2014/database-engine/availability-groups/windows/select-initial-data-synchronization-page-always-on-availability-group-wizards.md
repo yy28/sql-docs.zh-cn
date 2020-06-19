@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 329bc7fb351406f0c53c69e4addb4513dca1c556
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ad98184856d2860316be35f0b83acbd53b3234a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789465"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936498"
 ---
 # <a name="select-initial-data-synchronization-page-alwayson-availability-group-wizards"></a>“选择初始数据同步”页（AlwaysOn 可用性组向导）
   使用 AlwaysOn **“选择初始数据同步”** 页可为新的辅助数据库的初始数据同步指示您的首选项。 此页为三个向导所共有：[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]、[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 和 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]。  
@@ -87,7 +86,7 @@ ms.locfileid: "62789465"
   
 -   使用 RESTORE WITH NORECOVERY 手动还原主数据库的最新数据库备份，然后使用 RESTORE WITH NORECOVERY 还原各个后续日志备份。 如果主数据库和辅助数据库具有不同的文件路径，则必须使用 WITH MOVE 选项。 在每个承载可用性组的辅助副本的服务器实例上执行此还原序列。  您可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 执行这些备份和还原操作。  
   
-     **参考信息：**  
+     **更多相关信息：**  
   
      [为可用性组手动准备辅助数据库 (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
@@ -96,7 +95,7 @@ ms.locfileid: "62789465"
     > [!NOTE]  
     >  在您为可用性组创建了所有辅助数据库后，如果您想要在辅助副本上执行备份，将需要重新配置该可用性组的自动备份首选项。  
   
-     **参考信息：**  
+     **更多相关信息：**  
   
      [从日志传送迁移到 AlwaysOn 可用性组 &#40;SQL Server 的先决条件&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 290454026cc87819bf9ffcf73329bb562e3dc5a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d430825fd862ff49b867790f366200a524df3c1c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916751"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969998"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>使用分离和附加来升级数据库 (Transact-SQL)
   本主题说明如何使用分离和附加操作在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中升级数据库。 在附加到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，数据库将立即变为可用，然后会自动进行升级。  
@@ -88,7 +87,7 @@ ms.locfileid: "62916751"
     > [!IMPORTANT]  
     >  对于生产数据库，请将数据库和事务日志存放在不同的磁盘上。  
   
-     若要通过网络将文件复制到远程计算机的磁盘上，请使用远程位置的通用命名约定 (UNC) 名称。 ** \\ **UNC 名称采用的格式为_Servername_**\\**_共享_**\\**名_路径_**\\**_Filename_。 将文件写入本地硬盘时，必须对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例使用的用户帐户授予读写远程磁盘文件所需的相应权限。  
+     若要通过网络将文件复制到远程计算机的磁盘上，请使用远程位置的通用命名约定 (UNC) 名称。 UNC 名称采用的格式为 **\\\\** _Servername_ **\\** _共享_名 **\\** _路径_ **\\** _Filename_。 将文件写入本地硬盘时，必须对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例使用的用户帐户授予读写远程磁盘文件所需的相应权限。  
   
 3.  通过执行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句来附加移动的数据库及其日志（日志为可选项）：  
   
@@ -111,7 +110,7 @@ ms.locfileid: "62916751"
  如果升级前用户数据库的兼容级别为 100 或更高，升级后将保持相应级别。 如果升级前兼容级别为 90，则在升级后的数据库中，兼容级别将设置为 100，该级别为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]支持的最低兼容级别。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)。  
   
 ### <a name="managing-metadata-on-the-upgraded-server-instance"></a>管理已升级服务器实例上的元数据  
- 将数据库附加到其他服务器实例时，为了给用户和应用程序提供一致的体验，您可能需要在其他服务器实例上为数据库重新创建部分或全部元数据（例如登录名、作业和权限）。 有关详细信息，请参阅在[使数据库在其他服务器实例上可用时管理元数据 &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md)。  
+ 将数据库附加到其他服务器实例时，为了给用户和应用程序提供一致的体验，您可能需要在其他服务器实例上为数据库重新创建部分或全部元数据（例如登录名、作业和权限）。 有关详细信息，请参阅 [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
 ### <a name="service-master-key-and-database-master-key-encryption-changes-from-3des-to-aes"></a>服务主密钥和数据库主密钥加密从 3DES 更改为 AES  
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以及更高版本使用 AES 加密算法来保护服务主密钥 (SMK) 和数据库主密钥 (DMK)。 AES 是一种比早期版本中使用的 3DES 更新的加密算法。 当数据库第一次附加或还原到新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例时，数据库主密钥（由服务主密钥加密）的副本尚未存储在服务器中。 必须使用 `OPEN MASTER KEY` 语句解密数据库主密钥 (DMK)。 一旦 DMK 解密后，通过使用 `ALTER MASTER KEY REGENERATE` 语句向服务器提供 DMK（使用服务主密钥 (SMK) 加密）的副本，即可拥有将来启用自动解密的选项。 当数据库已从较早版本升级后，应重新生成 DMK 以使用更新的 AES 算法。 有关重新生成 DMK 的详细信息，请参阅 [ALTER MASTER KEY (Transact-SQL)](/sql/t-sql/statements/alter-master-key-transact-sql)。 重新生成 DMK 密钥以升级到 AES 所需的时间取决于 DMK 保护的对象数。 重新生成 DMK 密钥以升级到 AES 只在必需时执行一次，不影响将来作为密钥循环策略的一部分而重新生成的过程。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7a2dc38d5e916cf67c09162c86db9ab31728804f
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: c517850e7dfc7dfb134389b50feee77b3d1cbfbf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922033"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936628"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>从日志传送迁移到 AlwaysOn 可用性组的先决条件 (SQL Server)
   本主题介绍将日志传送主数据库与其一个或多个辅助数据库一起转换为 AlwaysOn 主数据库和辅助数据库的先决条件。  
@@ -44,7 +43,7 @@ ms.locfileid: "82922033"
 |可用性组的自动备份首选项|仅在主副本上|  
 |主副本的备份优先级。|>0|  
   
- **有关详细信息：**  
+ **更多相关信息：**  
   
  [查看可用性组属性 (SQL Server)](view-availability-group-properties-sql-server.md)  
   
@@ -64,7 +63,7 @@ ms.locfileid: "82922033"
   
  在您为可用性组创建了所有辅助数据库后，如果您想要在辅助副本上执行备份，则需要重新配置该可用性组的自动备份首选项。  
   
- **有关详细信息：**  
+ **更多相关信息：**  
   
  [将日志传送配置转换为可用性组](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) （SQL Server 博客）  
   
@@ -110,7 +109,7 @@ ms.locfileid: "82922033"
      [SQL Server 客户咨询团队白皮书](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>另请参阅  
- [关于 &#40;SQL Server 的日志传送&#41;](../../log-shipping/about-log-shipping-sql-server.md)   
+ [关于日志传送 (SQL Server)](../../log-shipping/about-log-shipping-sql-server.md)   
  [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [监视可用性组 (SQL Server)](monitoring-of-availability-groups-sql-server.md)  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2464bb8d-1139-4b2b-8f98-0983e62167ea
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bf665b0ea1cae89257d6368af9b307845a2cb3c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f9dfa0d120460ea6a2d6501ba93bab9e00ea4be
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089606"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928338"
 ---
 # <a name="trace-file-properties-general-tab"></a>跟踪文件属性（“常规”选项卡）
   使用 **“跟踪文件属性”** 对话框中的 **“常规”** 选项卡可以查看跟踪文件的属性。  
@@ -27,7 +26,7 @@ ms.locfileid: "66089606"
  若要查看此窗口，请打开跟踪文件。 然后在 **“文件”** 菜单上，单击 **“属性”**。  
   
 ## <a name="options"></a>选项  
- **文件名称**  
+ **文件名**  
  所显示的跟踪文件的路径和名称。  
   
  **跟踪提供程序名称**  
@@ -42,10 +41,10 @@ ms.locfileid: "66089606"
  **文件大小(KB)**  
  跟踪文件的大小 (KB)。  
   
- **建立**  
+ **创建时间**  
  创建跟踪文件的日期和时间。  
   
- **修改时间**  
+ **时间**  
  修改跟踪文件的日期和时间。  
   
 ## <a name="see-also"></a>另请参阅  

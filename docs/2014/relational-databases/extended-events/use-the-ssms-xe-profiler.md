@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 6ea2e46b38919ae72ea70440523d75517e6efa92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f96be882208a9570c36ef8da63f1efb265f752f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62512544"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027259"
 ---
 # <a name="use-the-system_health-session"></a>使用 system_health 会话
   system_health 会话是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]默认包含的扩展事件会话。 该会话在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 启动时自动启动，并且运行时不会对性能造成任何明显影响。 该会话收集的系统数据可用于帮助对 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的性能问题进行故障排除。 因此，我们建议您不要停止或删除该会话。  
@@ -70,7 +69,7 @@ WHERE xe.name = 'system_health'
 ## <a name="restoring-the-system_health-session"></a>还原 system_health 会话  
  如果删除 system_health 会话，则可以通过在查询编辑器中执行 **u_tables.sql** 文件来还原该会话。 该文件位于下面的文件夹中，其中 C: 表示您安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程序文件的驱动器：  
   
- C:\Program Files\Microsoft SQL Server\MSSQL12。\< *instanceid*> \mssql\install  
+ C:\Program Files\Microsoft SQL Server\MSSQL12. \<*instanceid*>\MSSQL\Install  
   
  请注意，在还原该会话后，必须使用 ALTER EVENT SESSION 语句或使用对象资源管理器中的 **“扩展事件”** 节点启动会话。 否则，该会话会在您下次重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务时自动启动。  
   

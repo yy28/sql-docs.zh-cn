@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 862957db-bbc6-4dda-bc0e-591457f1baa7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5396a6a94e1d5c4bfde39153081f3c4137a2c922
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bcd16fe757a079860845dd30369313d2e2feeee2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901012"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914587"
 ---
 # <a name="sap-bw-destination-editor-advanced-page"></a>SAP BW 目标编辑器（“高级”页）
   可以使用“SAP BW 目标编辑器”的“高级”页设置高级设置，如包大小和超时信息   。  

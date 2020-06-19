@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e5bd2489-097a-490e-8ea1-34fe48378ad1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 39ee8bfc079445e177aa9b175019ae385b9f9f36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c38c2d59a46b15fc9a1dca77ae6a67e8e59e1b80
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797656"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936758"
 ---
 # <a name="join-a-secondary-replica-to-an-availability-group-sql-server"></a>将辅助副本联接到可用性组 (SQL Server)
   本主题说明如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 来将辅助副本联接到 AlwaysOn 可用性组。 在将某一辅助副本添加到一个 AlwaysOn 可用性组后，这个辅助副本必须联接到该可用性组。 该联接副本操作必须在承载辅助副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例上执行。  
@@ -125,6 +124,6 @@ ms.locfileid: "72797656"
 2.  将每个辅助数据库联接到可用性组。 有关详细信息，请参阅 [将辅助数据库联接到可用性组 (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;SQL Server&#41;创建和配置可用性组](creation-and-configuration-of-availability-groups-sql-server.md)   
+ [创建和配置可用性组 (SQL Server)](creation-and-configuration-of-availability-groups-sql-server.md)   
  [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [&#41;删除 AlwaysOn 可用性组配置 &#40;SQL Server 的疑难解答](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  

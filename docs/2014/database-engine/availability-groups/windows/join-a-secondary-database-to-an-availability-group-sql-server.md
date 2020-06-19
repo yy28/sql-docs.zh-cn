@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fd7efe79-c1f9-497d-bfe7-b2a2b2321cf5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5de4600d4f4c3d52d1757218e1f2d9b32f554286
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b0d79325bcde33d13688003de079a42a9601cc41
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797671"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936764"
 ---
 # <a name="join-a-secondary-database-to-an-availability-group-sql-server"></a>将辅助数据库联接到可用性组 (SQL Server)
   本主题说明如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 来将辅助数据库联接到 AlwaysOn 可用性组。 在您为辅助副本准备了辅助数据库后，需要尽快将该数据库联接到可用性组。 这将启动从相应的主数据库到辅助数据库的数据移动。  
@@ -120,6 +119,6 @@ ms.locfileid: "72797671"
 -   [为可用性组手动准备辅助数据库 (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [更改可用性组 &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)   
+ [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)   
  [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [&#41;删除 AlwaysOn 可用性组配置 &#40;SQL Server 的疑难解答](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  

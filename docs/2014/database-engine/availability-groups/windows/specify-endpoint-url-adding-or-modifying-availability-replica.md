@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 524f9d4b3173a70d3491f2efc0f00f4061c4d6b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da1eb2bacd4d5a2f7d0b2a623343f62b5e89597d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797965"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936395"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>在添加或修改可用性副本时指定端点 URL (SQL Server)
   若要为某一可用性组承载可用性副本，服务器实例必须拥有数据库镜像端点。 该服务器实例使用此端点来侦听来自其他服务器实例承载的可用性副本的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 消息。 若要为某一可用性组定义可用性副本，您必须指定将承载该副本的服务器实例的端点 URL。 *终结点 URL*标识数据库镜像端点的传输协议-TCP、服务器实例的系统地址以及与终结点关联的端口号。  
@@ -39,11 +38,11 @@ ms.locfileid: "72797965"
 ##  <a name="syntax-for-an-endpoint-url"></a><a name="SyntaxOfURL"></a> 端点 URL 的语法  
  端点 URL 的语法采用以下形式：  
   
- TCP：/<strong>/</strong>*\<system-address>* <strong>：</strong>*\<port>*  
+ TCP：<strong>//</strong> *\<system-address>* <strong>：</strong>*\<port>*  
   
- where  
+ 其中  
   
--   系统地址>是明确标识目标计算机系统的字符串。 * \<* 通常，服务器地址是系统名称（如果各系统都在同一个域中）、完全限定域名或 IP 地址：  
+-   *\<system-address>* 是明确标识目标计算机系统的字符串。 通常，服务器地址是系统名称（如果各系统都在同一个域中）、完全限定域名或 IP 地址：  
   
     -   因为 Windows Server 故障转移群集 (WSFC) 群集的节点处于相同的域，所以，您可以使用计算机系统的名称，例如 `SYSTEM46`。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "72797965"
   
          在公司或组织内确定域段的内容和数量。 有关详细信息，请参阅本主题后面的 [查找完全限定域名](#Finding_FQDN)。  
   
--   端口>是伙伴服务器实例的镜像端点使用的端口号。 * \<*  
+-   *\<port>* 是伙伴服务器实例的镜像端点使用的端口号。  
   
      数据库镜像端点可以使用计算机系统上的任意可用端口。 每个端口号只能与一个端点相关联，而每个端点与一个服务器实例相关联；这样，同一服务器上的不同服务器实例便可使用不同端口来侦听各个端点。 因此，在您指定可用性副本时在端点 URL 中指定的端口会始终将传入消息定向到其端点与该端口关联的服务器实例。  
   
@@ -151,6 +150,6 @@ ms.locfileid: "72797965"
 -   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;SQL Server&#41;创建和配置可用性组](creation-and-configuration-of-availability-groups-sql-server.md)   
+ [创建和配置可用性组 (SQL Server)](creation-and-configuration-of-availability-groups-sql-server.md)   
  [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE ENDPOINT (Transact-SQL)](/sql/t-sql/statements/create-endpoint-transact-sql)  

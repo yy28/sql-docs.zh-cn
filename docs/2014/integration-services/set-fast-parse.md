@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dcd1dc09-6eaf-440b-9ce6-fef779ff794f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7d41b15325586733ab54a37f4c3f007ce0253eaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb0fefd2f9c06d6bcff44c211904a951ebe01937
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055817"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963347"
 ---
 # <a name="set-fast-parse"></a>设置快速分析
   必须为使用快速分析的源或转换的每个列设置快速分析属性。 若要设置该属性，请使用平面文件源和数据转换的高级编辑器。  
@@ -28,8 +27,8 @@ ms.locfileid: "66055817"
   
 3.  在 **“输入和输出”** 窗格中，单击要为其启用快速分析的列。  
   
-4.  在属性窗口中，展开 "**自定义属性**" 节点，然后将`FastParse`属性设置`True`为。  
+4.  在属性窗口中，展开 "**自定义属性**" 节点，然后将 `FastParse` 属性设置为 `True` 。  
   
-5.  单击" **确定**"。  
+5.  单击 **“确定”** 。  
   
   

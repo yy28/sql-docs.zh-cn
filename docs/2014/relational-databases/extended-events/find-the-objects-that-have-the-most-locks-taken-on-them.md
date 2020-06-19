@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fcbadbda-c91c-43f0-a1b5-601e40110e07
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6e533f823d69f10af28084eecd714c303735957d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 345c5f179358bd7b8df587b76c9c6053235d3a73
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706639"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027490"
 ---
 # <a name="find-the-objects-that-have-the-most-locks-taken-on-them"></a>查找具有最多锁定的对象
   数据库管理员通常需要识别影响数据库性能的锁定来源。  
