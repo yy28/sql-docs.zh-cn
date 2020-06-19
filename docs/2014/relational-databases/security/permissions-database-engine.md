@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c233a5e9755e910a53a53fa1366faef733370474
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5c58abd60ecc6236e52e302f6e11daaaa244ff21
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487152"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063181"
 ---
 # <a name="permissions-database-engine"></a>权限（数据库引擎）
   每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全对象都有可以授予主体的关联权限。 本主题提供了下列信息：  
@@ -49,11 +48,11 @@ ms.locfileid: "81487152"
   
      授予更改特定安全对象的属性（所有权除外）的权限。 当授予对某个范围的 ALTER 权限时，也授予更改、创建或删除该范围内包含的任何安全对象的权限。 例如，对架构的 ALTER 权限包括在该架构中创建、更改和删除对象的权限。  
   
--   ALTER ANY \<*Server Securable*>，其中 *Server Securable* 可为任何服务器安全对象。  
+-   ALTER ANY \<*Server Securable*> ，其中*服务器安全*对象可以是任何服务器安全对象。  
   
      授予创建、更改或删除“服务器安全对象” ** 的各个实例的权限。 例如，ALTER ANY LOGIN 将授予创建、更改或删除实例中的任何登录名的权限。  
   
--   ALTER ANY \<*Database Securable*>，其中 *Database Securable* 可为数据库级别的任何安全对象。  
+-   ALTER ANY \<*Database Securable*> ，其中*数据库安全*对象可以是数据库级别的任何安全对象。  
   
      授予创建、更改或删除“数据库安全对象” ** 的各个实例的权限。 例如，ALTER ANY SCHEMA 将授予创建、更改或删除数据库中的任何架构的权限。  
   
@@ -61,23 +60,23 @@ ms.locfileid: "81487152"
   
      允许被授权者获取所授予的安全对象的所有权。  
   
--   模拟\<*登录*>  
+-   假冒\<*Login*>  
   
      允许被授权者模拟该登录名。  
   
--   模拟\<*用户*>  
+-   假冒\<*User*>  
   
      允许被授权者模拟该用户。  
   
--   创建\<*服务器安全*对象>  
+-   创建\<*Server Securable*>  
   
      授予被授权者创建“服务器安全对象” ** 的权限。  
   
--   创建\<*数据库安全*对象>  
+-   创建\<*Database Securable*>  
   
      授予被授权者创建“数据库安全对象” ** 的权限。  
   
--   创建\<*包含架构的安全*对象>  
+-   创建\<*Schema-contained Securable*>  
   
      授予创建包含在架构中的安全对象的权限。 但是，若要在特定架构中创建安全对象，必须对该架构具有 ALTER 权限。  
   
@@ -92,7 +91,7 @@ ms.locfileid: "81487152"
      对象的 REFERENCES 权限是使用引用该对象的 `WITH SCHEMABINDING` 子句创建 FUNCTION 或 VIEW 时所必需的。  
   
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 权限图表  
- 有关 pdf 格式的所有[!INCLUDE[ssDE](../../includes/ssde-md.md)]权限的海报大小的图表，请[https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)参阅。  
+ 有关 pdf 格式的所有权限的海报大小的图表 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，请参阅 [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf) 。  
   
 ##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a>适用于特定安全对象的权限  
  下表列出了主要的权限类别以及可应用这些权限的安全对象的种类。  
@@ -157,7 +156,7 @@ ms.locfileid: "81487152"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> 注意：仅适用于[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> 注意：仅适用于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +164,7 @@ ms.locfileid: "81487152"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|更改任何安全策略|ALSP<br /><br /> 注意：仅适用于[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|CONTROL SERVER|  
+|DATABASE|更改任何安全策略|ALSP<br /><br /> 注意：仅适用于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -204,7 +203,7 @@ ms.locfileid: "81487152"
 |DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 注意：仅适用于[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中使用 ALTER ANY CONNECTION。|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 注意：仅适用于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中使用 ALTER ANY CONNECTION。|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  

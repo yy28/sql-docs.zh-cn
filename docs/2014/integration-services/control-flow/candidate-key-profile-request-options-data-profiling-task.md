@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d682bacdc2bce10a118190108a2237419d4b9e27
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a7597e5ebf967bd9da590057a085a72ee8b1a17
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832952"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919888"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>候选键配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选定的 **“候选键配置文件请求”** 设置选项。 候选键配置文件报告某个列或列集对于选定的表是键还是近似键。 此配置文件还有助于标识数据中的问题，如潜在键列中存在重复值。  
@@ -34,7 +33,7 @@ ms.locfileid: "62832952"
   
 -   如果在 **KeyColumns**中选择了多个列，则该任务将计算由所有选定列组成的组合键的键强度。  
   
--   如果在 **KeyColumns\* 中选择通配符** ( **)** ，则该任务将计算表或视图中的每个列的键强度。  
+-   如果在 **KeyColumns** 中选择通配符 **(\*)**，则该任务将计算表或视图中的每个列的键强度。  
   
  例如，假定有一个包含列 A、B 和 C 的示例表，则您可以在 **KeyColumns**中进行以下选择：  
   
@@ -81,7 +80,7 @@ ms.locfileid: "62832952"
  有关详细信息，请参阅本主题前面的“了解如何为 KeyColumns 属性选择列”部分。  
   
  **IsWildcard**  
- 指定是否已选择通配符 **(\*)** 。 如果已选择 **(** ) **来对所有列进行事件探查，则此选项设置为 \*True**。 如果您已选择要对单独列进行事件探查，则为 **False** 。 此选项是只读的。  
+ 指定是否已选择通配符 **(\*)** 。 如果已选择 **(\*)** 来对所有列进行事件探查，则此选项设置为 **True**。 如果您已选择要对单独列进行事件探查，则为 **False** 。 此选项是只读的。  
   
  **ColumnName**  
  显示所选列的名称。 如果已选择 **(\*)** 来对所有列进行事件探查，则此选项空白。 此选项是只读的。  

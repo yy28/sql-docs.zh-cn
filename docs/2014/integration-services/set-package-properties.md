@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ea7f5f06816b6dd4ddf840f63119bebb0ebf80e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 917c5af173fa1e7087d47789b17b0845ab426dad
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889210"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963357"
 ---
 # <a name="set-package-properties"></a>设置包属性
   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的图形界面创建包时，可以在“属性”窗口中设置包对象的各个属性。  
@@ -74,7 +73,7 @@ ms.locfileid: "62889210"
 |`SaveCheckpoints`|指定在包运行时，是否将检查点写入检查点文件。 此属性的默认值为 `False`。|  
   
 > [!NOTE]  
->  dtexec 的 `/CheckPointing on` 选项等同于将包的 `SaveCheckpoints` 属性设置为 True 并将 `CheckpointUsage` 属性设置为“Always”。 有关详细信息，请参阅 [dtexec Utility](packages/dtexec-utility.md)。  
+>  dtexec 的 `/CheckPointing on` 选项等同于将包的 `SaveCheckpoints` 属性设置为 True 并将 `CheckpointUsage` 属性设置为“Always”。 有关详细信息，请参阅 [dtexec 实用工具](packages/dtexec-utility.md)。  
   
 ###  <a name="execution"></a><a name="Execution"></a> 执行  
  此类别中的属性可配置包对象的运行时行为。  
@@ -82,7 +81,7 @@ ms.locfileid: "62889210"
 |属性|说明|  
 |--------------|-----------------|  
 |`DelayValidation`|指示是否将包验证推迟至包运行之时进行。 此属性的默认值为 `False`。|  
-|**禁用**|指示包是否已禁用。 此属性的默认值为 `False`。|  
+|**Disable**|指示包是否已禁用。 此属性的默认值为 `False`。|  
 |`DisableEventHandlers`|指定包事件处理程序是否运行。 此属性的默认值为 `False`。|  
 |`FailPackageOnFailure`|指定如果包组件中出现错误时，包是否失败。 此属性的唯一有效值为 `False`。|  
 |`FailParentOnError`|指定如果子容器中出现错误，父容器是否失败。 该属性的默认值为 `False`。|  
@@ -95,7 +94,7 @@ ms.locfileid: "62889210"
   
 |属性|说明|  
 |--------------|-----------------|  
-|`ForcedExecutionValue`|如果 ForceExecutionValue 设置为`True`，则为指定包返回的可选执行值的值。 此属性的默认值为 **0**。|  
+|`ForcedExecutionValue`|如果 ForceExecutionValue 设置为 `True` ，则为指定包返回的可选执行值的值。 此属性的默认值为 **0**。|  
 |`ForcedExecutionValueType`|ForcedExecutionValue 的数据类型。 此属性的默认值为 `Int32`。|  
 |`ForceExecutionValue`|指定容器的可选执行值是否应强制包含特定值的布尔值。 此属性的默认值为 `False`。|  
   
@@ -108,7 +107,7 @@ ms.locfileid: "62889210"
 |`CreatorComputerName`|创建包的计算机的名称。|  
 |`CreatorName`|包创建者的姓名。|  
 |`Description`|包功能说明。|  
-|`ID`|包 GUID，该属性是在创建包时分配的。 此属性为只读。 若要为`ID`属性生成新的随机值，请在下拉列表中选择** \<"生成新 ID>** 。|  
+|`ID`|包 GUID，该属性是在创建包时分配的。 此属性为只读。 若要为属性生成新的随机值 `ID` ，请 **\<Generate New ID>** 在下拉列表中选择。|  
 |`Name`|包的名称。|  
 |`PackageType`|包类型。 其值为：`Default`、`DTSDesigner`、`DTSDesigner100`、`DTSWizard`、`SQLDBMaint` 和 `SQLReplication`。 此属性的默认值为 `Default`。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>。|  
   
@@ -131,15 +130,15 @@ ms.locfileid: "62889210"
   
 |属性|说明|  
 |--------------|-----------------|  
-|`PackagePassword`|要求密码的包保护级别（`EncryptSensitiveWithPassword`和`EncryptAllWithPassword`）的密码。|  
-|`ProtectionLevel`|包的保护级别。 这些值为`DontSaveSensitive`、 `EncryptSensitiveWithUserKey` `EncryptSensitiveWithPassword` `EncryptAllWithPassword`、、和**ServerStorage**。 此属性的默认值为 `EncryptSensitiveWithUserKey`。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel>。|  
+|`PackagePassword`|要求密码的包保护级别（ `EncryptSensitiveWithPassword` 和 `EncryptAllWithPassword` ）的密码。|  
+|`ProtectionLevel`|包的保护级别。 这些值为 `DontSaveSensitive` 、、、 `EncryptSensitiveWithUserKey` `EncryptSensitiveWithPassword` `EncryptAllWithPassword` 和**ServerStorage**。 此属性的默认值为 `EncryptSensitiveWithUserKey`。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel>。|  
   
 ###  <a name="transactions"></a><a name="Transactions"></a>记录  
  此类别中的属性用于配置包的隔离级别和事务选项。 有关详细信息，请参阅 [Integration Services 事务](integration-services-transactions.md)。  
   
 |属性|说明|  
 |--------------|-----------------|  
-|`IsolationLevel`|包事务的隔离级别。  此属性的默认值为 `Serializable`。 有效值为 <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot`.<br /><br /> 仅当 `IsolationLevel` 属性的值设为 `TransactionOption` 时，系统才将 `Required` 属性应用到包事务。<br /><br /> 在以下条件成立时，将忽略子容器请求的 `IsolationLevel` 属性的值：<br /><br /> 子容器的 `TransactionOption` 属性的值为 `Supported`。<br />子容器联接父容器的事务。<br /><br /> 只有在容器开始新的事务时，才遵从该容器请求的 `IsolationLevel` 属性的值。 在以下条件成立时，容器将开始新的事务：<br /><br /> 容器的`TransactionOption`属性的值为`Required`。<br />父级已开始一个事务。<br /><br /> <br /><br /> 注意：`IsolationLevel` 属性的 `Snapshot` 值与包事务不兼容。 因此，您无法使用 `IsolationLevel` 属性将包事务的隔离级别设为 `Shapshot`。 而是使用 SQL 查询将包事务设为 `Snapshot`。 有关详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)。<br /><br /> 有关 `IsolationLevel` 属性的详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>。|  
+|`IsolationLevel`|包事务的隔离级别。  此属性的默认值为 `Serializable`。 有效值为 <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot`.<br /><br /> 仅当 `IsolationLevel` 属性的值设为 `TransactionOption` 时，系统才将 `Required` 属性应用到包事务。<br /><br /> 在以下条件成立时，将忽略子容器请求的 `IsolationLevel` 属性的值：<br /><br /> 子容器的 `TransactionOption` 属性的值为 `Supported`。<br />子容器联接父容器的事务。<br /><br /> 只有在容器开始新的事务时，才遵从该容器请求的 `IsolationLevel` 属性的值。 在以下条件成立时，容器将开始新的事务：<br /><br /> 容器的属性的值 `TransactionOption` 为 `Required` 。<br />父级已开始一个事务。<br /><br /> <br /><br /> 注意：`IsolationLevel` 属性的 `Snapshot` 值与包事务不兼容。 因此，您无法使用 `IsolationLevel` 属性将包事务的隔离级别设为 `Shapshot`。 而是使用 SQL 查询将包事务设为 `Snapshot`。 有关详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)。<br /><br /> 有关 `IsolationLevel` 属性的详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>。|  
 |`TransactionOption`|包的事务参与情况。 其值为：`NotSupported`、`Supported`、`Required`。 此属性的默认值为 `Supported`。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>。|  
   
 ###  <a name="version"></a><a name="Version"></a>版本  

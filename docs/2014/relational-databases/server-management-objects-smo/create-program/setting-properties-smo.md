@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f07d9b2f613ca1face8be3bb23bac78202da6655
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e82debe452a1fb4214c297d781e3a95146ec52aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192145"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063152"
 ---
 # <a name="setting-properties"></a>设置属性
-  属性是存储有关对象的说明性信息的值。 例如， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]配置选项由<xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A>对象的属性表示。 使用属性集合可以直接或间接访问属性。 直接访问属性使用以下语法：  
+  属性是存储有关对象的说明性信息的值。 例如， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置选项由 <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> 对象的属性表示。 使用属性集合可以直接或间接访问属性。 直接访问属性使用以下语法：  
   
  `objInstance.PropertyName`  
   

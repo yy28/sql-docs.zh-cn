@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 537ea93edb56b84be0cbeff5633b943252a98ff8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e991accfd0e6fdd4fa25746499308455eff85ce3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62870899"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969917"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>错误和事件参考（数据库引擎）
 
 本部分包含需要进一步说明的选定数据库引擎错误消息。
   
 ## <a name="in-this-section"></a>本节内容  
- [数据库引擎事件和错误](database-engine-events-and-errors.md)介绍[!INCLUDE[ssDE](../../includes/ssde-md.md)]错误消息的格式，并说明如何查看错误消息并将错误消息返回给应用程序。  
+ [数据库引擎事件和错误](database-engine-events-and-errors.md)介绍 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 错误消息的格式，并说明如何查看错误消息并将错误消息返回给应用程序。  
   
  介绍 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 错误消息、可能原因以及为更正问题可以采取的所有操作。  
   

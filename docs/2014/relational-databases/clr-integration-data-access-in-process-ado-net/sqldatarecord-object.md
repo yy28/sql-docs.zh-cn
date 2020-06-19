@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c688d41a1f27c6f3d620e9395d2a908d9b9cddd1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd49c2d32a5a3035bb76aa73a56d31e00a95549a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874685"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955091"
 ---
 # <a name="sqldatarecord-object"></a>SqlDataRecord 对象
   `SqlDataRecord` 对象表示一行数据及其相关元数据。  
   
  托管存储过程可以发送到并非来自于 `SqlDataReader` 的客户端结果集。 `SqlDataRecord` 类以及 `SendResultsStart` 对象的 `SendResultsRow`、`SendResultsEnd` 和 `SqlPipe` 方法允许存储过程将自定义结果集发送到客户端。  
   
- 有关详细信息，请参阅`Microsoft.SqlServer.Server.SqlDataRecord` .NET Framework SDK 文档中的类参考文档。  
+ 有关详细信息，请参阅 `Microsoft.SqlServer.Server.SqlDataRecord` .NET FRAMEWORK SDK 文档中的类参考文档。  
   
 ## <a name="example"></a>示例  
  下面的示例创建一个新雇员记录并将其返回到调用方。  

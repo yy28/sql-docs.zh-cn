@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 772dbb86188bf164a2e135f7bb9b71a1cc030745
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6d9779209b3ffb317658243c168d74740f6731b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011771"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026445"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>使用格式化文件大容量导入数据 (SQL Server)
-  本主题说明如何在大容量导入操作中使用格式化文件。 格式化文件将数据文件的各字段映射到表的各列。  使用**bcp**命令或 BULK INSERT 或 INSERT ... 时，可以使用非 XML 或 XML 格式化文件大容量导入数据。SELECT * FROM OPENROWSET （BULK ...）[!INCLUDE[tsql](../../includes/tsql-md.md)]命令。  
+  本主题说明如何在大容量导入操作中使用格式化文件。 格式化文件将数据文件的各字段映射到表的各列。  使用**bcp**命令或 BULK INSERT 或 INSERT ... 时，可以使用非 XML 或 XML 格式化文件大容量导入数据。SELECT * FROM OPENROWSET （BULK ...） [!INCLUDE[tsql](../../includes/tsql-md.md)]command.  
   
 > [!IMPORTANT]  
 >  对于用于 Unicode 字符数据文件的格式化文件，所有输入字段必须为 Unicode 文本字符串（即固定大小 Unicode 字符串或字符终止 Unicode 字符串）。  

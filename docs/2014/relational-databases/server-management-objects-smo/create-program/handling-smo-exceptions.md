@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c725ff2-6588-44ca-b86a-87979e164153
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 595da161660b60845c02d71e22411a2a4eba009c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e96ef9eb6c4dd1537413b50c808673c47904b39
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192102"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063120"
 ---
 # <a name="handling-smo-exceptions"></a>处理 SMO 异常
   在托管代码中，如果出现错误，便会引发异常。 SMO 方法和属性不在返回值中报告成功或失败信息。 相反，可以通过异常处理程序捕获和处理异常。  
@@ -33,7 +32,7 @@ ms.locfileid: "63192102"
  异常可能是常规异常，也可能是特定异常。 常规异常包含一组特定异常。 可使用几条 `Catch` 语句处理预计可能出现的错误，并使用常规异常处理代码处理其余错误。 通常，异常按照级联顺序发生。 很多情况下，SMO 异常可能是由 SQL 异常导致的。 检测是否为这种情况的方法便是连续使用 `InnerException` 属性确定导致最终顶级异常的原始异常。  
   
 > [!NOTE]  
->  此`SQLException`异常在**SqlClient**命名空间中声明。  
+>  此 `SQLException` 异常在**SqlClient**命名空间中声明。  
   
  ![显示级别的关系图](../../../database-engine/dev-guide/media/exception-flow.gif "显示级别的关系图")  
   

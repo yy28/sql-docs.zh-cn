@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 7bd529f67f9184f86d4a9ec704e9cf7af972f3f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dccec5ca3c42f605145853b2e864e861b17535fb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014058"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063024"
 ---
 # <a name="spatial-data-sql-server"></a>空间数据 (SQL Server)
   空间数据表示有关物理位置和几何对象形状的信息。 这些对象可能是点位置或更复杂的对象，例如国家/地区、道路或湖泊。  
@@ -55,7 +54,7 @@ ms.locfileid: "66014058"
  [空间数据类型概述](spatial-data-types-overview.md)  
  介绍空间数据类型。  
   
--   [点](point.md)  
+-   [Point](point.md)  
   
 -   [LineString](linestring.md)  
   
@@ -63,7 +62,7 @@ ms.locfileid: "66014058"
   
 -   [CompoundCurve](compoundcurve.md)  
   
--   [Polygon](polygon.md)  
+-   [多边形](polygon.md)  
   
 -   [CurvePolygon](curvepolygon.md)  
   

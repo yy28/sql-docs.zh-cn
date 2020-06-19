@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dfaeec04-93d3-4214-9fc1-38b80179b36b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 81ed454290a5ca62093fe9bdb619179106ca9985
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 141cfe63151f65e171550beda1c20e232a6205e0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088859"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928678"
 ---
 # <a name="sql-server-profiler---find-dialog-box"></a>SQL Server Profiler -“查找”对话框
   使用 **“查找”** 对话框可以在跟踪中搜索特定字符或字词。 若要取消正在进行的搜索，请按 Esc。  
@@ -31,7 +30,7 @@ ms.locfileid: "66088859"
  输入要搜索的文本。 该搜索匹配包含指定字符串的任何字符串。 例如，针对“Completed”的搜索匹配“SQL:BatchCompleted”。 不支持通配符（*、? 等）。  
   
  **在列中搜索**  
- 单击要搜索的数据列，或单击 " ** \<所有列">** 搜索跟踪中的所有数据列。  
+ 单击要搜索的数据列，或单击 " **\<All columns>** 搜索" 以搜索跟踪中的所有数据列。  
   
  **匹配大小写**  
  查找与“查找内容”**** 框中的大小写完全匹配的文本。 清除此复选框将在跟踪中不区分文本字符的大小写形式查找匹配项。  

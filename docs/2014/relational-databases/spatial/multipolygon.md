@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 182a0f4b7e74490f9600b7ef43cd2baa511080f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f18fd2485c9b2e62586d9f3e81f76f6cf680dbfc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176637"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063013"
 ---
 # <a name="multipolygon"></a>MultiPolygon
   `MultiPolygon` 实例是零个或更多个 `Polygon` 实例的集合。
@@ -38,9 +37,9 @@ ms.locfileid: "78176637"
 
 -   它是空的 `MultiPolygon` 实例。
 
--   组成 `MultiPolygon` 实例的所有实例是接受的 `Polygon` 实例。 有关接受`Polygon`的实例的详细信息，请参阅[多边形](../spatial/polygon.md)。
+-   组成 `MultiPolygon` 实例的所有实例是接受的 `Polygon` 实例。 有关接受的实例的详细信息 `Polygon` ，请参阅[多边形](../spatial/polygon.md)。
 
- 下面的示例显示接受`MultiPolygon`的实例。
+ 下面的示例显示接受 `MultiPolygon` 的实例。
 
 ```
 DECLARE @g1 geometry = 'MULTIPOLYGON EMPTY';
@@ -59,7 +58,7 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
 ### <a name="valid-instances"></a>有效实例
  如果 `MultiPolygon` 实例是空的 `MultiPolygon` 实例或者它满足以下条件，则前者有效。
 
-1.  组成 `MultiPolygon` 实例的所有实例是有效的 `Polygon` 实例。 有关有效`Polygon`的实例，请参阅[多边形](../spatial/polygon.md)。
+1.  组成 `MultiPolygon` 实例的所有实例是有效的 `Polygon` 实例。 有关有效的 `Polygon` 实例，请参阅[多边形](../spatial/polygon.md)。
 
 2.  组成 `Polygon` 实例的所有 `MultiPolygon` 实例都不会重叠。
 

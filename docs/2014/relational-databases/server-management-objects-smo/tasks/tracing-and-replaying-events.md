@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f41b3f85-2f6c-4c3e-9776-8c73d2cc7a53
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d478fa9203988d043212e4187792d816a69c0402
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd75fdae7fc871101aa07785561c8277783a424f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62724786"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063062"
 ---
 # <a name="tracing-and-replaying-events"></a>跟踪和重播事件
   在 SMO 中，`Trace` 命名空间中的 `Replay` 和 <xref:Microsoft.SqlServer.Management.Trace> 对象提供对 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 功能（用于监视 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的实例）的编程访问。 您可以捕获有关每个事件的数据并将其保存到文件或表中供以后分析。 例如，可以监视生产环境，了解哪些过程由于执行速度太慢影响了性能。  
@@ -51,7 +50,7 @@ ms.locfileid: "62724786"
   
 -   重播跟踪文件或跟踪表。  
   
- SMO 应用程序可以使用`Trace`和`Replay`对象中的跟踪数据，也可以使用[SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md)手动对其进行检查。 跟踪数据还与同时提供跟踪功能的[SQL 跟踪](../../sql-trace/sql-trace.md)存储过程兼容。  
+ `Trace` `Replay` SMO 应用程序可以使用和对象中的跟踪数据，也可以使用[SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md)手动对其进行检查。 跟踪数据还与同时提供跟踪功能的[SQL 跟踪](../../sql-trace/sql-trace.md)存储过程兼容。  
   
  SMO 跟踪对象驻留在 <xref:Microsoft.SqlServer.Management.Trace> 命名空间中，该命名空间要求引用 Microsoft.SQLServer.ConnectionInfo.dll 文件。  
   

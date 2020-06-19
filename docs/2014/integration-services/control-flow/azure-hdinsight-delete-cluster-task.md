@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 839350610bdcc55d185fa06c122e71b50c5ca753
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bfe15444cd4d6b9346364ecb554cf0a8d3fd2708
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832651"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919938"
 ---
 # <a name="azure-hdinsight-delete-cluster-task"></a>Azure HDInsight 删除群集任务
 Azure HDInsight 删除群集任务启用一个 SSIS 包来删除指定的 Azure 订阅和资源组中的一个 Azure HDInsight 群集  。
@@ -36,5 +35,5 @@ Azure HDInsight 删除群集任务启用一个 SSIS 包来删除指定的 Azure 
 |AzureResourceManagerConnection|选择一个现有 Azure 资源管理器连接管理器，或创建一个用于删除 HDInsight 群集的新连接管理器。|
 |SubscriptionId|指定 HDInsight 群集所在的订阅的 ID。|
 |ResourceGroup|指定 HDInsight 群集所在的 Azure 资源组。|
-|群集名称|指定要删除的群集的名称。|  
+|ClusterName|指定要删除的群集的名称。|  
 |FailIfNotExists|指定如果群集不存在时任务是否会失败。|

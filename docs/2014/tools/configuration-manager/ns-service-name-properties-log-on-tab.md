@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5e6816ec-d4c5-4429-8033-b97427584890
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 14a5fbd6b30003b4eaa0ec1592c9a01c150b7e87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a811e815cf4321dca126ecb584cd226a225a306
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63049229"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008009"
 ---
 # <a name="nsltservice-namegt-properties-log-on-tab"></a>NS$&lt;服务名称&gt; 属性（“登录”选项卡）
   使用 **“Notification Services 属性”** 对话框中的 **“登录”** 选项卡可以指定 [!INCLUDE[ssNS](../../includes/ssns-md.md)] 服务使用的帐户，还可以启动和停止该服务。  

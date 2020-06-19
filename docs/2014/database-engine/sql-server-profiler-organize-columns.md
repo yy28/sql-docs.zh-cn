@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: bf5674f4-da5e-43f9-aeb2-76ca37993790
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f0ad3d1204e8c27d91ecb3b586d56a27d45eeb4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 449f8000db655012ca7e66e5f186467b5671ea56
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089758"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928618"
 ---
 # <a name="sql-server-profiler---organize-columns"></a>SQL Server Profiler - 组织列
   使用 **“组织列”** 对话框可为跟踪中所显示的分组或聚合事件选择数据列，以便查看和分析较大的跟踪文件或跟踪表。  
   
- 通过聚合，可以在跟踪中移动和折叠其相应的事件类类型下的所有事件。 事件类名称的左侧**+** 将显示一个加号（）。 单击加号可展开相应的事件类，以便查看该类型的所有事件。  
+ 通过聚合，可以在跟踪中移动和折叠其相应的事件类类型下的所有事件。 **+** 事件类名称的左侧将显示一个加号（）。 单击加号可展开相应的事件类，以便查看该类型的所有事件。  
   
  通过分组，可以在跟踪显示窗口中将特定类型的所有事件组织起来。 但是，这些事件在其事件类类型下并不折叠显示。  
   
@@ -34,23 +33,23 @@ ms.locfileid: "66089758"
  **组**  
  将数据列名称移动到“组”**** 下，可以在跟踪窗口中对事件类进行分组或聚合。  
   
- 若要对事件进行聚合，请将一个数据列移动到 **“组”** 中。 这会导致在跟踪显示窗口中相应的事件类类型名称下折叠所有特定类型的事件。 事件类名称的左侧**+** 将显示一个加号（）。 单击加号可展开相应的事件类类型，以便查看所有事件。 您可以通过单击 **“视图”** 菜单上的 **“聚合视图”** 或 **“分组视图”** 来启用或禁用聚合和分组功能。  
+ 若要对事件进行聚合，请将一个数据列移动到 **“组”** 中。 这会导致在跟踪显示窗口中相应的事件类类型名称下折叠所有特定类型的事件。 **+** 事件类名称的左侧将显示一个加号（）。 单击加号可展开相应的事件类类型，以便查看所有事件。 您可以通过单击 **“视图”** 菜单上的 **“聚合视图”** 或 **“分组视图”** 来启用或禁用聚合和分组功能。  
   
  若要对事件进行分组，请将多个数据列移动到 **“组”** 中。 这会将跟踪显示窗口中所有特定类型的事件分到一组中，但是不会在各事件类类型名称下折叠事件。 您可以通过单击“视图”菜单上的 **“分组视图”** 在分组视图和未分组视图之间来回切换。 当多个数据列移动到 **“组”** 中时，将无法切换到 **“聚合视图”** 。  
   
  **“列”**  
- 列出可移动到“组”**** 中的数据列。 单击 "列" 左侧**+** 的加号（）展开**Columns**列表。  
+ 列出可移动到“组”**** 中的数据列。 单击 "列" 左侧的加号（ **+** ）展开**Columns**列表。  
   
- **Up**  
+ **向上**  
  选择数据列之后，单击“向上”**** 可将数据列移动到“组”**** 中。 您也可以单击 **“向上”** 在跟踪显示窗口中对列的显示顺序重新进行排列。  
   
- **分解**  
+ **向下**  
  选择数据列之后，单击“向下”**** 可将数据列从“组”**** 中移出。 您也可以单击 **“向下”** 在跟踪显示窗口中对列的显示顺序重新进行排列。  
   
 ## <a name="see-also"></a>另请参阅  
  [组织跟踪中显示的列 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
  [创建跟踪 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
- [SQL Server Profiler 创建跟踪模板 &#40;&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [创建跟踪模板 (SQL Server Profiler)](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [打开跟踪文件 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [打开跟踪表 (SQL Server Profiler)](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)  
   
