@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 223111874ca34ba4df4968c550e6cc47edf2b390
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72ff29ff35f1f09898b6f6e890aae5aba1d3d2d3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920045"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955207"
 ---
 # <a name="sqlcontext-object"></a>SqlContext 对象
   当您调用过程或函数，或对公共语言运行时 (CLR) 用户定义类型调用方法，或者当您所执行的操作激发任何 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 语言中定义的触发器时，您就会调用服务器中的托管代码。 由于在用户连接过程中需要执行此代码，因此需要从服务器上运行的代码访问调用方的上下文。 此外，某些数据访问操作只有在调用方的上下文中运行时才有效。 例如，访问触发器操作中使用的插入和删除的伪表只在调用方的上下文中有效。  
@@ -28,9 +27,9 @@ ms.locfileid: "62920045"
   
  `SqlContext` 提供了对以下组件的访问：  
   
--   `SqlPipe`：`SqlPipe` 对象表示结果流向客户端时所使用的“管道”。 有关`SqlPipe`对象的详细信息，请参阅[SqlPipe 对象](sqlpipe-object.md)。  
+-   `SqlPipe`：`SqlPipe` 对象表示结果流向客户端时所使用的“管道”。 有关对象的详细信息 `SqlPipe` ，请参阅[SqlPipe 对象](sqlpipe-object.md)。  
   
--   `SqlTriggerContext`：`SqlTriggerContext` 对象只能从 CLR 触发器内部检索。 它提供有关导致触发器被激发的操作的信息，以及所更新的列的映射。 有关`SqlTriggerContext`对象的详细信息，请参阅[SqlTriggerContext 对象](sqltriggercontext-object.md)。  
+-   `SqlTriggerContext`：`SqlTriggerContext` 对象只能从 CLR 触发器内部检索。 它提供有关导致触发器被激发的操作的信息，以及所更新的列的映射。 有关对象的详细信息 `SqlTriggerContext` ，请参阅[SqlTriggerContext 对象](sqltriggercontext-object.md)。  
   
 -   `IsAvailable`：`IsAvailable` 属性用于确定上下文的可用性。  
   

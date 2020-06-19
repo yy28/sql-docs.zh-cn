@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c4aa26ea-5465-40cc-8b83-f50603cb9db1
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 698af283d24598c7ccd669b7e1d14ebcfd26d8d6
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: c2ef4a0546dfced643fb50900e6b56002b617e09
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849811"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928798"
 ---
 # <a name="sql-server-managed-backup-to-azure---retention-and-storage-settings"></a>针对 Azure 的 SQL Server 托管备份 - 保留和存储设置
   本主题介绍为数据库配置 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 以及为实例配置默认设置的基本步骤。 本主题还介绍为实例暂停和恢复 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 服务所需的步骤。  
@@ -148,7 +147,7 @@ ms.locfileid: "82849811"
 > [!IMPORTANT]  
 >  在某一实例上配置 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 前，它对于检查现有配置（如果有）可能会很有用。 在本节的后面将介绍查看数据库的配置设置的步骤。  
   
- **SQL Server Management Studio：** 若要在 SQL Server Management Studio 中执行此任务，请转到对象资源管理器，展开 **“管理”** 节点，然后右键单击 **“托管备份”**。 选择“配置”  。 这将打开 **“托管备份”** 对话框。 使用此对话框可指定保持期、SQL 凭据、存储 URL 和加密设置。 有关此对话框的特定帮助，请参阅[配置托管备份 &#40;SQL Server Management Studio&#41;](configure-managed-backup-sql-server-management-studio.md)。  
+ **SQL Server Management Studio：** 若要在 SQL Server Management Studio 中执行此任务，请转到对象资源管理器，展开 **“管理”** 节点，然后右键单击 **“托管备份”**。 选择“配置”。 这将打开 **“托管备份”** 对话框。 使用此对话框可指定保持期、SQL 凭据、存储 URL 和加密设置。 有关此对话框的特定帮助，请参阅[配置托管备份 &#40;SQL Server Management Studio&#41;](configure-managed-backup-sql-server-management-studio.md)。  
   
 #### <a name="using-transact-sql"></a>“使用 Transact-SQL”  
   

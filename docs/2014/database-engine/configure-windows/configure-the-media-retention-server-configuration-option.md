@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 12e9fe6a-20a5-4c6e-9cc9-d500c003b70a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d9e936c25db4522a949fb97257e136ba6799697f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 092e0a2b5cfc30fd2d2362645fc1242bf4a1651e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811338"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935651"
 ---
 # <a name="configure-the-media-retention-server-configuration-option"></a>配置 media retention 服务器配置选项
   本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] media retention [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **media retention** 选项指定保留每个备份集的时间长度。 此选项可以防止在指定的天数前覆盖备份。 配置了 **media retention** 选项后，无需在每次进行备份时都指定系统备份的保持时间。 默认值为 0 天，最大值为 365 天。  

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 07788d27d71dc320ef72bc68ba90e8022705380b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 66f417b943f5f7c2472120076f5fd45d09f94427
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707307"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047978"
 ---
 # <a name="date-and-time-improvements"></a>日期和时间改进
   本主题介绍 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 对于 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中已添加的日期和时间数据类型的支持。  

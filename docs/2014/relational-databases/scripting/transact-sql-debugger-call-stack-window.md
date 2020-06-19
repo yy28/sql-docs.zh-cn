@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ddb0b19c-87cd-4883-bcb8-ec09ffb30369
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34b01bc737e35705a7ec4f49ea07a47faaf2b11d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 720a42b2b3ddf46318ac5412181d70a79b142026
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718439"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063355"
 ---
 # <a name="call-stack-window"></a>“调用堆栈”窗口
   **“调用堆栈”** 窗口显示调用堆栈中的模块以及传递给这些模块的任意参数的数据类型和值。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模块包括存储过程、函数和触发器。 只有在调试模式下才可以显示调用堆栈。  

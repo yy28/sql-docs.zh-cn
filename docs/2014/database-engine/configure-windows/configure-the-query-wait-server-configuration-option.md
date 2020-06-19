@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0fc4aa01-65a3-4a33-9ef4-caca41add238
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7f5aa6fd5a6ebc10cc91f749ee4745e3676c4a3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 638afff2aa05a9fc4e61bc71e8610dba1dda8cf6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811361"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935578"
 ---
 # <a name="configure-the-query-wait-server-configuration-option"></a>配置查询等待值服务器配置选项
   本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] “查询等待值” [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 当没有足够的内存来运行查询时，大量占用内存的查询（如那些涉及排序和哈希操作的查询）将排队等待。 **“查询等待值”** 选项指定一个查询在超时前等待所需资源的时间（以秒为单位，范围从 0 到 2147483647）。该选项的默认值为 -1。 这意味着超时值计算为估计的查询开销的 25 倍。  

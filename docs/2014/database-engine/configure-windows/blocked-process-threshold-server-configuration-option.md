@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3d46d143-bc6a-4220-8b55-6baa37547c25
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 02f2fcfd3534a4ae1902a2984d2bd0fac0fc727c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9d5b61aaf23a8e74cb11afbf4e8bdb958fde6abe
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786326"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935878"
 ---
 # <a name="blocked-process-threshold-server-configuration-option"></a>blocked process threshold 服务器配置选项
   **blocked process threshold** 选项用于指定阈值（以秒为单位），超过该阈值将生成阻塞的进程报告。 该阈值可介于 0 到 86,400 之间。 默认情况下，不生成阻塞的进程报告。 对于系统任务或正在等待未生成可检测死锁的资源的任务，不生成该事件。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e9dd5357-ee3d-420a-9a89-d12ab5404e73
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 112d0297243ebdd778f21db69037b5a3cbd67d10
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73194c7da553bf27acb78d8c4e7d71bc93f457d0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916247"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969827"
 ---
 # <a name="mssqlserver_10509"></a>MSSQLSERVER_10509
     
@@ -39,7 +38,7 @@ ms.locfileid: "62916247"
  请提供一个有效的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或者该语句在批中的有效起始位置。 若要获取有效的起始位置，请在 sys.dm_exec_query_stats 动态管理函数中查询 statement_start_offset 列。  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_create_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [计划指南](../performance/plan-guides.md)   
  [sys. dm_exec_query_stats &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql)   
  [sp_create_plan_guide_from_handle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  

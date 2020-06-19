@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6338c7a306f163f786f2c1e7d44ae4dbc66504ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c013a531fe5e432da690bf10c6c1463d375af1ee
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62902430"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915497"
 ---
 # <a name="flat-file-source"></a>平面文件源
   平面文件源从文本文件中读取数据。 文本文件可以为带分隔符格式、固定宽度格式或混合格式。  
@@ -44,7 +43,7 @@ ms.locfileid: "62902430"
   
  平面文件源输出中的输出列包含 FastParse 属性。 FastParse 指示该列是使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的速度较快但不区分区域设置的较快分析例程，还是使用区分区域设置的标准分析例程。 有关详细信息，请参阅 [Fast Parse](../fast-parse.md) 和 [Standard Parse](../standard-parse.md)。  
   
- 输出列还包含 UseBinaryFormat 属性。 使用该属性可在文件中实现对二进制数据（如带有组合型十进制格式的数据）的支持。 默认情况下，UseBinaryFormat 设置`false`为。 如果要使用二进制格式，请将 UseBinaryFormat 设置为`true` ，并将输出列上的数据类型设置`DT_BYTES`为。 执行上述操作时，平面文件源将跳过数据转换并将数据原样传递到输出列。 然后，可以使用“派生列”或“数据转换”等转换将 `DT_BYTES` 数据转换为不同的数据类型，或者在脚本转换中编写自定义脚本来解释数据。 也可以编写自定义数据流组件来解释数据。 有关可强制转换`DT_BYTES`为的数据类型的详细信息，请参阅[Cast &#40;SSIS 表达式&#41;](../expressions/cast-ssis-expression.md)。  
+ 输出列还包含 UseBinaryFormat 属性。 使用该属性可在文件中实现对二进制数据（如带有组合型十进制格式的数据）的支持。 默认情况下，UseBinaryFormat 设置为 `false` 。 如果要使用二进制格式，请将 UseBinaryFormat 设置为， `true` 并将输出列上的数据类型设置为 `DT_BYTES` 。 执行上述操作时，平面文件源将跳过数据转换并将数据原样传递到输出列。 然后，可以使用“派生列”或“数据转换”等转换将 `DT_BYTES` 数据转换为不同的数据类型，或者在脚本转换中编写自定义脚本来解释数据。 也可以编写自定义数据流组件来解释数据。 有关可强制转换为的数据类型的详细信息 `DT_BYTES` ，请参阅[CAST &#40;SSIS 表达式&#41;](../expressions/cast-ssis-expression.md)。  
   
  此源使用平面文件连接管理器访问文本文件。 通过设置平面文件连接管理器的属性，可以提供关于文件和文件中每列的信息，并可以指定平面文件源应如何处理文本文件中的数据。 例如，可以指定文件中分隔列和行的字符，以及每列的数据类型和长度。 有关详细信息，请参阅 [Flat File Connection Manager](../connection-manager/file-connection-manager.md)。  
   
@@ -72,6 +71,6 @@ ms.locfileid: "62902430"
   
 ## <a name="see-also"></a>另请参阅  
  [平面文件目标](flat-file-destination.md)   
- [数据流](data-flow.md)  
+ 数据流  
   
   

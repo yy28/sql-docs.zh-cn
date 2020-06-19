@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9e435ab4cec86d439a7e2fba31f6099bf8668ec0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42a8873f4046a307e3b8ec1ce703a34bf8cb0df2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175426"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935888"
 ---
 # <a name="buffer-pool-extension"></a>缓冲池扩展
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]中引入的缓冲池扩展提供 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 缓冲池的非易失性随机存取内存（即固态硬盘）扩展的无缝集成，从而显著提高 I/O 吞吐量。 并非每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本均提供了缓冲池扩展。 有关详细信息，请参阅 [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。
@@ -46,11 +45,11 @@ ms.locfileid: "78175426"
 
  固态硬盘（SSD）固态硬盘以持久方式将数据存储在内存（RAM）中。 有关详细信息，请参阅 [此定义](http://en.wikipedia.org/wiki/Solid-state_drive)。
 
- 缓冲区在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，缓冲区是内存中的 8 KB 页，其大小与数据页或索引页相同。 因此，缓冲区缓存被划分为多个 8-KB 页。 缓冲区缓存中会保留一页，直到缓冲区管理器需要该缓冲区读入更多数据。 数据只有在被修改后才重新写入磁盘。 这些内存中已修改的页称为脏页。 当一页等同于它在磁盘上的数据库映像时，该页就是干净页。 在将缓冲区缓存中的数据写回磁盘之前，可对其进行多次修改。
+ 缓冲区在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，缓冲区是内存中的 8 KB 页，其大小与数据页或索引页相同。 因此，缓冲区缓存被划分为多个 8-KB 页。 缓冲区缓存中会保留一页，直到缓冲区管理器需要该缓冲区读入更多数据。 数据只有在被修改后才重新写入磁盘。 这些内存中已修改的页称为脏页。 当一页等同于它在磁盘上的数据库映像时，该页就是干净页。 在将缓冲区缓存中的数据写回磁盘之前，可对其进行多次修改。
 
  缓冲池也称为缓冲区缓存。 缓冲池是一个由所有数据库共享的全局资源，用于存放其缓存数据页。 缓冲池缓存的最大和最小大小是在启动期间或使用 sp_configure 动态重新配置 SQL Server 实例时确定的。 此大小确定了运行的实例中在任何时候都可以缓存在缓冲池中的最大页数。
 
- 检查点：检查点创建一个已知的正常点[!INCLUDE[ssDE](../../includes/ssde-md.md)] ，在意外关闭或崩溃后，可以在恢复期间开始应用事务日志中包含的更改。 检查点将脏页和事务日志信息从内存写入磁盘，并记录有关事务日志的信息。 有关详细信息，请参阅[数据库检查点 (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md)。
+ 检查点：检查点创建一个已知的正常点，在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 意外关闭或崩溃后，可以在恢复期间开始应用事务日志中包含的更改。 检查点将脏页和事务日志信息从内存写入磁盘，并记录有关事务日志的信息。 有关详细信息，请参阅[数据库检查点 (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md)。
 
 ## <a name="buffer-pool-extension-details"></a>缓冲池扩展详细信息
  SSD 存储用作内存子系统的扩展而不是磁盘存储子系统的扩展。 也就是说，通过缓冲池扩展文件，缓冲池管理器可以使用 DRAM 和 NAND 闪存，在由固态硬盘支持的非易失性随机存取内存中保持一个大得多的温热页缓冲池。 这会在固态硬盘上创建一个多级缓存层次结构，级别 1 (L1) 作为 DRAM，级别 2 (L2) 作为缓冲池扩展文件。 仅将干净页写入 L2 缓存，以帮助确保数据安全。 缓冲区管理器会处理 L1 和 L2 缓存之间的干净页移动。
@@ -61,7 +60,7 @@ ms.locfileid: "78175426"
 
  启用缓冲池扩展后，该功能会指定固态硬盘上缓冲池缓存文件的大小和文件路径。 此文件是固态硬盘上的一个连续存储范围，是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例启动期间静态配置的。 只有在禁用了缓冲池扩展功能的情况下，才能修改此文件的配置参数。 禁用缓冲池扩展后，将从注册表中删除所有相关的配置设置。 SQL Server 实例关闭时，将会删除缓冲池扩展文件。
 
-## <a name="best-practices"></a>最佳方案
+## <a name="best-practices"></a>最佳实践
  我们建议您遵循以下最佳做法。
 
 -   首次启用缓冲池扩展后，建议重新启动 SQL Server 实例，以获得最大的性能优势。
@@ -92,7 +91,7 @@ ms.locfileid: "78175426"
 
 |||
 |-|-|
-|**任务说明**|**主题**|
+|**任务说明**|**标题**|
 |启用和配置缓冲池扩展。|[ALTER SERVER CONFIGURATION &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
 |修改缓冲池扩展配置|[ALTER SERVER CONFIGURATION &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
 |查看缓冲池扩展配置|[sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)|

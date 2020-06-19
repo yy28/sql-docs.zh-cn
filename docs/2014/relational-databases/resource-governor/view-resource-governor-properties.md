@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 35d4720a8fe8b8c1b404a97e27b36896f36dd5f7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3cd7af8f4f8eb3cd0531bc907011846f73f94f6f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209684"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063515"
 ---
 # <a name="view-resource-governor-properties"></a>查看资源调控器属性
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的“资源调控器属性”页创建或配置资源调控器实体（如资源池和工作负荷组）。  
@@ -98,7 +97,7 @@ ms.locfileid: "63209684"
  **名称**  
  指定工作负荷组的名称。  
   
- **仅次于**  
+ **重要性**  
  指定工作负荷组中的请求的相对重要性。 可用设置分为低、中和高三个级别。  
   
  **最大请求数**  
@@ -126,10 +125,10 @@ ms.locfileid: "63209684"
 2.  若要查看资源调控器实体的当前配置，请使用[与资源调控器相关的动态管理视图 (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Resource Governor](resource-governor.md)   
- [启用 Resource Governor](enable-resource-governor.md)   
- [Resource Governor 资源池](resource-governor-resource-pool.md)   
- [Resource Governor 工作负荷组](resource-governor-workload-group.md)   
- [Resource Governor Classifier Function](resource-governor-classifier-function.md)  
+ [资源调控器](resource-governor.md)   
+ [启用资源调控器](enable-resource-governor.md)   
+ [资源调控器资源池](resource-governor-resource-pool.md)   
+ [资源调控器工作负荷组](resource-governor-workload-group.md)   
+ [资源调控器分类器函数](resource-governor-classifier-function.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c1c423bad8742b0a9760945e3823d6ef159c1e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f2780a4eadfc27ed2db15881d676965fca81e35
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67046699"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026600"
 ---
 # <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>准备用于大容量导出或导入的数据 (SQL Server)
   本部分讨论计划大容量导出操作时的相关注意事项以及大容量导入操作的要求。  
@@ -55,7 +54,7 @@ ms.locfileid: "67046699"
 -   数据文件中的每个字段都必须与目标表中的对应列兼容。 例如，不能将 `int` 字段加载到 `datetime` 列。 有关详细信息，请参阅[用于批量导入或导出的数据格式 (SQL Server)](data-formats-for-bulk-import-or-bulk-export-sql-server.md)[在使用 bcp 时指定数据格式以获得兼容性 (SQL Server)](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)  
   
     > [!NOTE]  
-    >  要指定从数据文件导入的行子集而并非整个文件，可以使用带有 -F first_row 开关和/或 -L last_row 开关的 bcp 命令      。 有关详细信息，请参阅 [bcp Utility](../../tools/bcp-utility.md)。  
+    >  要指定从数据文件导入的行子集而并非整个文件，可以使用带有 -F first_row 开关和/或 -L last_row 开关的 bcp 命令 。 有关详细信息，请参阅 [bcp Utility](../../tools/bcp-utility.md)。  
   
 -   若要从包含固定长度或固定宽度字段的数据文件导入数据，则必须使用格式化文件。 有关详细信息，请参阅 [XML 格式化文件 (SQL Server)](xml-format-files-sql-server.md)。  
   

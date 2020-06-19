@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 765f1e83-dd52-44fb-b0c8-1078f213607b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d75f292ea86b4b619fec81ea7a6f7aafc83fdc15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f42d7d2022e07dcac3039557295dc70e4500583d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812269"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935613"
 ---
 # <a name="configure-the-priority-boost-server-configuration-option"></a>配置 priority boost 服务器配置选项
   本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] priority boost [!INCLUDE[tsql](../../includes/tsql-md.md)]配置选项。 使用 priority boost 选项可以指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否应当以比相同计算机上的其他进程更高的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2008 或 Windows 2008 R2 计划优先级运行  。 如果将此选项设置为 1， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将以优先级基数 13 在 Windows 2008 或 Windows Server 2008 R2 计划程序中运行。 默认值为 0，其优先级基数为 7。  

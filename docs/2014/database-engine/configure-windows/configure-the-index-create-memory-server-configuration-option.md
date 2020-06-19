@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3d722d9b-bada-4bf5-a9d7-bfc556bb4915
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 280d4edef062429304d5c6e1d6c65ea63fac2eee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6cd0aeb93d3fb68089338335068fdaaae19919fa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786932"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935684"
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>配置 index create memory 服务器配置选项
   本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] index create memory [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **index create memory** 选项控制最初为创建索引分配的最大内存量。 此选项的默认值为 0（自动配置）。 如果随后创建索引时需要更多内存，而且有内存可供使用，服务器将使用可用的内存，从而超出此选项的设置。 如果没有内存可供使用，则继续使用已分配的内存来创建索引。  
@@ -81,7 +80,7 @@ ms.locfileid: "62786932"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 将 `index create memory` 选项的值设置为 `4096`。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 将 `index create memory` 选项的值设置为 `4096`。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -101,7 +100,7 @@ GO
  该设置将立即生效，无需重新启动服务器。  
   
 ## <a name="see-also"></a>另请参阅  
- [sys.databases &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-configurations-transact-sql)   
+ [sys.configurations &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-configurations-transact-sql)   
  [RECONFIGURE (Transact-SQL)](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [服务器内存服务器配置选项](server-memory-server-configuration-options.md)   
  [服务器配置选项 (SQL Server)](server-configuration-options-sql-server.md)   

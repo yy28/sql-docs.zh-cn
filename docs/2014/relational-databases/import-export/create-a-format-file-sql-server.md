@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9596aefb51c8b895abdb69ddf179282d5d930d76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa0d34f100af614a1e2187c265bf01a24f3be7ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66265149"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026888"
 ---
 # <a name="create-a-format-file-sql-server"></a>创建格式化文件 (SQL Server)
   当对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表进行大容量的数据导入或导出时，您可使用格式化文件提供一个灵活的系统，用于写入需要少量编辑或不需要编辑即可符合其他数据格式的数据文件，或用于从其他软件程序读取数据文件。  
@@ -27,7 +26,7 @@ ms.locfileid: "66265149"
  通常，XML 与非 XML 格式化文件可以互换。 但是，建议您为新的格式化文件使用 XML 语法，因为与非 XML 格式化文件相比，格式化文件具有多项优点。  
   
 > [!NOTE]  
->  读取格式化文件所用的 **bcp** 实用工具 (Bcp.exe) 的版本必须与创建格式化文件所用的版本相同或更高。 例如， [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**可以读取由[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**生成的版本10.0 格式文件，但[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**无法读取[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**生成的版本11.0 格式文件。  
+>  读取格式化文件所用的 **bcp** 实用工具 (Bcp.exe) 的版本必须与创建格式化文件所用的版本相同或更高。 例如， [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**可以读取由 bcp 生成的版本10.0 格式文件， [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**但 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**无法读取 bcp 生成的版本11.0 格式文件 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**。  
   
  本主题说明了如何使用 [bcp 实用工具](../../tools/bcp-utility.md) 为特定表创建格式化文件。 格式化文件基于指定的数据类型选项（ **-n**、 **-c**、 **-w**或 **-N**）以及表或视图分隔符。  
   

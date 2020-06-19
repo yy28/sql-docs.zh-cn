@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8f41e323faeb898be1f44159760bb1c28b7ab024
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 274c984d6ecec8af8f5bea27496450a45fc2f1df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011918"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026799"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，可以通过将 **bcp** 与 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-V [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]开关一起使用，从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 、 **或** 中导入本机和字符格式数据。 **-V** 开关将使 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 使用指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早期版本中的数据类型，并且数据文件格式与早期版本中的格式相同。  
@@ -52,15 +51,15 @@ ms.locfileid: "66011918"
  <sup>1</sup> UDT 表示用户定义的类型。  
   
 ## <a name="exporting-using--v-80"></a>使用 -V 80 进行导出  
- 使用 **-V80**开关大容量导出数据时，纯模式`nvarchar(max)`下`varchar(max)`的`varbinary(max)`、、、XML 和 UDT 数据将存储为带有4个字节的前缀， `text`例如、 `image`和`ntext`数据，而不是使用8字节前缀，这是[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更高版本的默认值。  
+ 使用 **-V80**开关大容量导出数据时， `nvarchar(max)` 纯模式下的、、、 `varchar(max)` `varbinary(max)` XML 和 UDT 数据将存储为带有4个字节的前缀，例如 `text` 、 `image` 和 `ntext` 数据，而不是使用8字节前缀，这是 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本的默认值。  
   
 ## <a name="copying-date-values"></a>复制日期值  
  **bcp** 将使用 ODBC 大容量复制 API。 因此，为了将日期值导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中， **bcp** 使用了 ODBC 日期格式 (*yyyy-mm-dd hh:mm:ss*[ *.f...* ])。  
   
- **Bcp**命令使用和`datetime` `smalldatetime`值的 ODBC 默认格式导出字符格式的数据文件。 例如，包含日期 `12 Aug 1998` 的 `datetime` 列将以字符串 `1998-08-12 00:00:00.000` 的形式大容量复制到数据文件中。  
+ **Bcp**命令使用和值的 ODBC 默认格式导出字符格式的数据 `datetime` 文件 `smalldatetime` 。 例如，包含日期 `12 Aug 1998` 的 `datetime` 列将以字符串 `1998-08-12 00:00:00.000` 的形式大容量复制到数据文件中。  
   
 > [!IMPORTANT]  
->  使用 bcp 将数据导`smalldatetime`入到**bcp**字段中时，请确保秒数值为 00.000;否则，操作将失败。 `smalldatetime` 数据类型仅支持最接近的分钟值。 BULK INSERT 和 INSERT ...SELECT * FROM OPENROWSET(BULK...) 在这种情况下不会失败，但会截断秒值。  
+>  使用 bcp 将数据导入到字段中时 `smalldatetime` ，请确保秒数值为00.000，否则操作将失败。 **bcp** `smalldatetime` 数据类型仅支持最接近的分钟值。 BULK INSERT 和 INSERT ...SELECT * FROM OPENROWSET(BULK...) 在这种情况下不会失败，但会截断秒值。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **使用数据格式进行大容量导入或大容量导出**  

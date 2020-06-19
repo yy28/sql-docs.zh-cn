@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 301a6b6970c03b620783af7ca176de34846557d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a3c73fddf9c47938086c57f1b6d8b63f9bf07f1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900791"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84913717"
 ---
 # <a name="cache-transform"></a>缓存转换
   “缓存转换”转换通过将所连接数据源中的数据写入流入缓存连接管理器的数据流，可以为查找转换生成一个引用数据集。 查找转换通过将所连接数据源输入列中的数据与引用数据库中的列进行联接来执行查找。  
@@ -57,6 +56,6 @@ ms.locfileid: "62900791"
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 转换](integration-services-transformations.md)   
- [数据流](../data-flow.md)  
+ 数据流  
   
   

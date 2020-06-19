@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34c367d6ea7663a262c7ccead1e85702af9cf499
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 55f247af30b5278f614b6505a94266cc07ec6c54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706828"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027593"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows 事件跟踪目标
   在将 Windows 事件跟踪 (ETW) 作为目标使用前，建议您先掌握 ETW 的相关使用知识。 ETW 跟踪或者与扩展事件结合使用，或者用作扩展事件的事件使用者。 您可以从以下外部链接入手，获取有关 ETW 的背景信息：  
@@ -75,7 +74,7 @@ ms.locfileid: "82706828"
     > [!IMPORTANT]  
     >  当第一个会话启动后不能再更改该文件路径。  
   
--   托管对象格式（MOF）文件位于* \< 安装路径中>* \Microsoft SQL server\shared。 有关详细信息，请参阅 MSDN 上的 [托管对象格式](https://go.microsoft.com/fwlink/?LinkId=92851) 。  
+-   托管对象格式（MOF）文件位于 *\<your install path>* \MICROSOFT SQL server\shared。中。 有关详细信息，请参阅 MSDN 上的 [托管对象格式](https://go.microsoft.com/fwlink/?LinkId=92851) 。  
   
 ## <a name="adding-the-target-to-a-session"></a>将目标添加到会话  
  若要将 ETW 目标添加到扩展事件会话中，您必须在创建或更改事件会话时包括下面的语句：  

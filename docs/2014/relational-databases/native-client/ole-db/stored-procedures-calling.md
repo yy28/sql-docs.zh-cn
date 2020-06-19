@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 33fedf2957203b1a750aba8fd086087c03ffc934
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 695848c8633d310f5e8ee21e9e738749d1550e4a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704187"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055862"
 ---
 # <a name="calling-a-stored-procedure-ole-db"></a>调用存储过程 (OLE DB)
   存储过程可以有零个或多个参数。 它还可以返回值。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序时，可以通过以下方式传递存储过程的参数：  

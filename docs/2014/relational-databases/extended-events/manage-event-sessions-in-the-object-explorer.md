@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a229b02f60c56b9979d2d31788910b3faa63cb2f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b2db0f80599be6f4437636d978532f640af3cdd9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706647"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027573"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>在对象资源管理器中管理事件会话
   本主题讨论您可以在 **“对象资源管理器”** 中执行的将影响扩展事件的操作：  
@@ -96,7 +95,7 @@ STATE = STOP
   
 4.  展开 **“模板”** 下拉框。  
   
-5.  单击 " ** \< 文件 ..." >打开**并浏览到要导入的会话（XML 文件）。  
+5.  单击 " ** \<File From ...> 打开**"，浏览到要导入的会话（XML 文件）。  
   
  会话将出现在 **“会话”** 节点下。 默认情况下，不会启动会话。  
   

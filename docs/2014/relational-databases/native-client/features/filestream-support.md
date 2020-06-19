@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ab8ca7912db7607acbca716f733184ed57dc681e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 18e9a002bfb205e2c0807234550998fe48120d20
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707288"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047989"
 ---
 # <a name="filestream-support"></a>FILESTREAM 支持
   FILESTREAM 允许通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或通过直接访问 Windows 文件系统来存储和访问大型二进制值。 大型二进制值是大于 2 GB 的值。 若要详细了解增强的 FILESTREAM 支持，请参阅 [FILESTREAM (SQL Server)](../../blob/filestream-sql-server.md)。  
@@ -27,7 +26,7 @@ ms.locfileid: "82707288"
   
  还可以使用 Windows 文件系统 API 访问和更新 FILESTREAM 列。  
   
- 有关详细信息，请参阅以下主题：  
+ 有关详细信息，请参阅下列主题：  
   
 -   [FILESTREAM 支持 &#40;OLE DB&#41;](../ole-db/filestream-support-ole-db.md)  
   
@@ -42,7 +41,7 @@ ms.locfileid: "82707288"
   
  若要创建 FILESTREAM 列或检测哪些现有列是 FILESTREAM 列，可以使用 `is_filestream` [sys.databases](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql)目录视图的列。  
   
- 以下是一个示例：  
+ 下面是一个示例：  
   
 ```  
 -- Create a table with a FILESTREAM column.  

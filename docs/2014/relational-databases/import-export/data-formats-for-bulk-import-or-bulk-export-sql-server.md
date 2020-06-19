@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 73fe6741-9437-4b26-b030-28b863e74399
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c43cb42cffba31f20b0e9717204f5475b5bb156d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b92ac8c038362ff18a1459a8bf3c55b6b596a17
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012077"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026836"
 ---
 # <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>用于批量导入或导出的数据格式 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以接受字符数据格式或本机二进制数据格式的数据。 当在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他应用程序（例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel）或其他数据库服务器（例如，Oracle 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）之间移动数据时，请使用字符格式。 只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例之间传输数据时才可以使用本机格式。  
@@ -41,7 +40,7 @@ ms.locfileid: "66012077"
 |将数据大容量导出到要在其他程序中使用的文本文件中。|-|-|是|-|  
 |使用包含 Unicode 数据而不包含任何扩展字符或 DBCS 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间进行大容量的数据传输。|-|-|-|是|  
   
- <sup>1</sup>使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **bcp**时从大容量导出数据的最快方法。  
+ <sup>1</sup> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用**bcp**时从大容量导出数据的最快方法。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   

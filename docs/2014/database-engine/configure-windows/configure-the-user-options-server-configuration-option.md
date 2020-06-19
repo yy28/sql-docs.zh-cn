@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b0588bbc8c21c9946ac72a2db92c593e48973dfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7ee40d0f6de532b93ce9d8075b609c80f09df7e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787062"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935478"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>配置 user options 服务器配置选项
   本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] user options [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **user options** 选项指定了适用于所有用户的全局默认值。 将建立一个用户工作会话期间使用的默认查询处理选项的列表。 **user options** 选项允许您更改 SET 选项的默认值（如果服务器的默认设置不合适）。  

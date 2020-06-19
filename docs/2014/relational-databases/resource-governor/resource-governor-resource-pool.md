@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4177d7e8ebc96e40e831a6558c7d8b5073c86bc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6d724d5dc6a9859674f8ae64c9e08486b3ea7cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209878"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063569"
 ---
 # <a name="resource-governor-resource-pool"></a>资源调控器资源池
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源调控器中，资源池表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的部分物理资源。 通过资源调控器，您可以指定针对传入应用程序请求可在资源池内使用的 CPU、物理 IO 和内存的使用量的限制。 每个资源池均可包含一个或多个工作负荷组。 在某个会话启动时，资源调控器分类器会将此会话分配给一个特定的工作负荷组，并且此会话必须使用分配给该工作负荷组的资源运行。  
@@ -63,10 +62,10 @@ ms.locfileid: "63209878"
   
 -   共享百分比 = 有效 MAX 百分比 - MIN 百分比。  
   
-|池名称|MIN 百分比设置|MAX 百分比设置|计算的有效 MAX 百分比|计算的共享百分比|备注|  
+|池名称|MIN 百分比设置|MAX 百分比设置|计算的有效 MAX 百分比|计算的共享百分比|注释|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
 |internal|0|100|100|0|有效 MAX 百分比和共享百分比不适用于内部池。|  
-|default|0|100|30|30|有效 MAX 值的计算如下：min(100,100-(20+50)) = 30。 计算的共享百分比为有效 MAX - MIN = 30。|  
+|默认值|0|100|30|30|有效 MAX 值的计算如下：min(100,100-(20+50)) = 30。 计算的共享百分比为有效 MAX - MIN = 30。|  
 |池 1|20|100|50|30|有效 MAX 值的计算方式为：min(100,100-50) = 50。 计算的共享百分比为有效 MAX - MIN = 30。|  
 |池 2|50|70|70|20|有效 MAX 值的计算方式为：min(70,100-20) = 70。 共享百分比的计算方式为：有效 MAX - MIN = 20。|  
   
@@ -117,10 +116,10 @@ ms.locfileid: "63209878"
 |说明如何删除资源池。|[删除资源池](delete-a-resource-pool.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- [Resource Governor](resource-governor.md)   
- [Resource Governor 工作负荷组](resource-governor-workload-group.md)   
+ [资源调控器](resource-governor.md)   
+ [资源调控器工作负荷组](resource-governor-workload-group.md)   
  [Resource Governor 分类器函数](resource-governor-classifier-function.md)   
- [使用模板配置 Resource Governor](configure-resource-governor-using-a-template.md)   
+ [使用模板配置资源调控器](configure-resource-governor-using-a-template.md)   
  [查看资源调控器属性](view-resource-governor-properties.md)  
   
   

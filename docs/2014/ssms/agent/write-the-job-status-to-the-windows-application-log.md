@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b813702-8f61-40ec-bf3b-ce9deb7e68be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ec615911233227c15f43e55125adfd6166cb51e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a439b9d5076114d57d5b3bfd317e95911d52fcc3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783371"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001622"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Write the Job Status to the Windows Application Log
-  本主题介绍如何在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]配置代理，以便通过使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]或 SQL Server 管理对象将作业状态写入 Windows 应用程序事件日志。  
+  本主题介绍如何 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在中配置代理 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，以便通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 、或 SQL Server 管理对象将作业状态写入 Windows 应用程序事件日志 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
  作业响应可确保数据库管理员知道作业完成的时间和作业运行频率。 典型的作业响应包括：  
   

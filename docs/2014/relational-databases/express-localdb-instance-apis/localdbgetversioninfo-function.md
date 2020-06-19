@@ -15,18 +15,17 @@ topic_type:
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 4350badedcaf2a4e2b977b57cf9e6cfde6c1b275
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cce316685bccb2724eb89965e4e466fe58fb807e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032234"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027730"
 ---
 # <a name="localdbgetversioninfo-function"></a>LocalDBGetVersionInfo 函数
   返回有关指定的 SQL Server Express LocalDB 版本的信息，如该版本是否存在以及完整的 LocalDB 版本号（包括内部版本号和发行版本号）。  
   
- 此信息以`struct`名为**LocalDBVersionInfo**的形式返回，该格式具有以下定义。  
+ 此信息以名为 LocalDBVersionInfo 的形式返回 `struct` ， **LocalDBVersionInfo**该格式具有以下定义。  
   
 ```  
 typedef struct _LocalDBVersionInfo  
@@ -85,9 +84,9 @@ HRESULT LocalDBGetVersionInfo(
  发生了意外错误。 有关详细信息，请参阅事件日志。  
   
 ## <a name="details"></a>详细信息  
- 引入`struct`大小参数（*lpVersionInfoSize*）背后的基本原理是使 API 能够返回不同版本的**LocalDBVersionInfostruct**，从而有效地实现向前和向后兼容性。  
+ 引入 `struct` 大小参数（*lpVersionInfoSize*）背后的基本原理是使 API 能够返回不同版本的**LocalDBVersionInfostruct**，从而有效地实现向前和向后兼容性。  
   
- 如果`struct`大小参数（*lpVersionInfoSize*）与已知版本的**LocalDBVersionInfostruct**的大小匹配，则返回该版本`struct`的。 否则，返回 LOCALDB_ERROR_INVALID_PARAMETER。  
+ 如果 `struct` 大小参数（*lpVersionInfoSize*）与已知版本的**LocalDBVersionInfostruct**的大小匹配，则返回该版本的 `struct` 。 否则，返回 LOCALDB_ERROR_INVALID_PARAMETER。  
   
  **LocalDBGetVersionInfo** API 用法的典型示例如下所示：  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 888c8448-933b-41e3-8aa1-c206bc0cdb78
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bf74ad2591fd7ed745648b29a60674431310ba0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74f82d621d7f0375a6a3ca604abba00f83fc6024
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787089"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935518"
 ---
 # <a name="configure-the-remote-query-timeout-server-configuration-option"></a>配置 remote query timeout 服务器配置选项
   本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] remote query timeout [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 **remote query timeout** 选项指定在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 超时之前远程操作可以持续的时间（秒）。此选项的默认值是 600，即允许等待 10 分钟。 此值将应用到由作为远程查询的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 发起的发送连接。 此值不会对 [!INCLUDE[ssDE](../../includes/ssde-md.md)]接收的查询产生任何影响。 若要禁用该超时，请将此值设置为 0。 查询将一直等待，直到完成。  

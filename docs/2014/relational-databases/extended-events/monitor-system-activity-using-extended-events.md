@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0a15a6e9a04c64e6e277d37a86d8e6f198b81906
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4890c043f64c359e5cc4ddd5b11d01dfb3756a52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706617"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027317"
 ---
 # <a name="monitor-system-activity-using-extended-events"></a>使用扩展事件监视系统活动
   此过程说明如何将扩展事件和 Windows 事件跟踪 (ETW) 配合使用来监视系统活动。 此过程还说明如何使用 CREATE EVENT SESSION、ALTER EVENT SESSION 和 DROP EVENT SESSION 语句。  

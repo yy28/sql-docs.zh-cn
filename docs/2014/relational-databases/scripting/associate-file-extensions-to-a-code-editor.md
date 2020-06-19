@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 193630f4-93de-4950-8f36-68702531f925
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2147ebbe269de97a43aa4366315daf2e0df8d4fa
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 603ef5f651ca95d3e45ec2e7229f8835a4bbeefb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704107"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063513"
 ---
 # <a name="associate-file-extensions-to-a-code-editor"></a>将文件扩展名与代码编辑器关联
   将文件扩展名与特定代码编辑器相关联使您可以通过在 Windows 资源管理器中双击文件，使用相应的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 代码编辑器打开文件。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的常用扩展名（例如 .sql 和 .mdx）是在安装过程中关联的。 新的文件扩展名也必须在文件系统中与 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 相关联。 使用此功能可以打开通过其他编辑器创建的文件，也可以打开重命名的文件，例如重命名为 .bak 的 .sql 文件的备份。  

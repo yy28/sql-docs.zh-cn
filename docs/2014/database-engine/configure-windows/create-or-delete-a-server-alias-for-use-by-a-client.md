@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b687e376-ee33-470d-b65a-87246bfefe6f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 20c8ef211fe32d1459704c963c525a6cc9235d4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42d4580d2ef0a819cb17647fd72e5ff516fb1aab
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62810657"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935422"
 ---
 # <a name="create-or-delete-a-server-alias-for-use-by-a-client-sql-server-configuration-manager"></a>创建或删除供客户端使用的服务器别名（SQL Server 配置管理器）
   本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中创建或删除服务器别名。 别名是可用于进行连接的备用名称。 别名封装了连接字符串所必需的元素，并使用用户所选择的名称显示这些元素。 可对任何客户端应用程序使用别名。 通过创建服务器别名，客户端计算机便可使用不同的网络协议连接到多个服务器，无需针对每台服务器指定协议和连接详细信息。 另外，还可以一直启用各种网络协议，即使只是偶尔会用到它们。 如果已将服务器配置为侦听非默认端口号或命名管道，并且禁用了 SQL Server Browser 服务，请创建一个别名来指定新端口号或命名管道。  

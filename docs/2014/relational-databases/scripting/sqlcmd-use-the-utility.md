@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 35f7bcf1c8e5ebcb225a9198944cf4144321bad3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1c2a07ae5d4248b4c37ab5fa8124582c99a1e6f7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703693"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063423"
 ---
 # <a name="use-the-sqlcmd-utility"></a>使用 sqlcmd 实用工具
   `sqlcmd` 实用工具是一个命令行实用工具，用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句和脚本的即席、交互执行以及自动执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本撰写任务。 若要以交互方式使用 `sqlcmd`，或要生成可使用 `sqlcmd` 运行的脚本文件，用户需要了解 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 `sqlcmd`实用程序通常按以下方式使用：  
@@ -69,7 +68,7 @@ ms.locfileid: "82703693"
     sqlcmd -S <ComputerName>\<InstanceName>  
     ```  
   
-     or  
+     或  
   
     ```  
     sqlcmd -S .\<InstanceName>  
@@ -563,7 +562,7 @@ SQLCMD -E -N -C
 ## <a name="see-also"></a>另请参阅  
  [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)   
  [将 sqlcmd 与脚本变量结合使用](sqlcmd-use-with-scripting-variables.md)   
- [在查询编辑器中编辑 SQLCMD 脚本](edit-sqlcmd-scripts-with-query-editor.md)   
+ [使用查询编辑器编辑 SQLCMD 脚本](edit-sqlcmd-scripts-with-query-editor.md)   
  [管理作业步骤](../../ssms/agent/manage-job-steps.md)   
  [创建 CmdExec 作业步骤](../../ssms/agent/create-a-cmdexec-job-step.md)  
   

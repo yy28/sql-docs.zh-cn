@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 532099a9d60a4fa5ccc3a206d2e7e86194423ace
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5b25ec92d1124b33de4c2cd6796dbe7c7eafb630
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82696121"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048112"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>使用大型 CLR UDT (OLE DB)
   此示例演示如何从结果集中提取具有大型用户定义类型的行。 有关详细信息，请参阅[大型 CLR 用户定义类型 &#40;OLE DB&#41;](../native-client/ole-db/large-clr-user-defined-types-ole-db.md)。 此示例适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本。  

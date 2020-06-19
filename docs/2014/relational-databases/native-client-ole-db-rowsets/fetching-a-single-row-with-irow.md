@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 07c803ca-299a-42c5-ba02-360b9631d15f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d47e668a2c31e9fb00a8f3582a3538fa9127ef65
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b5573fe1fef39f29329e373323f5f8aaf15f2c58
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82694655"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055957"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>使用 IRow 提取单行
   OLE DB 提供程序中的**IRow**接口实现进行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 了简化，以提高性能。 IRow 允许直接访问单行对象的列****。 如果预先知道命令执行的结果确实是生成单行，则 IRow 将检索该行的列****。 如果结果集包括多行，则 IRow 将只显示第一行****。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9b530b7d-8165-49d4-a978-5ced17c6705e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 50981c958e65dcb26f78980d91efae672ff6d39f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f4403ba79fada44d9eca47b533a718fe7167689d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82694810"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055997"
 ---
 # <a name="creating-rowsets-with-icommandexecute"></a>使用 ICommand::Execute 创建行集
   对于使用 ICommand::Execute 方法创建的行集，生成的行集中所需的属性可以限制命令的文本****。 这对于支持动态命令文本的使用者尤其重要。  

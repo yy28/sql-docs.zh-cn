@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6a4610a5f0963cbe94c82c33a63f08490cec36d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf4d31a05977cc34cf9aaee8fff38867aa302f37
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487007"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914797"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
   原始文件目标将原始数据写入文件。 因为数据的格式是目标的本机格式，所以数据无需转换，并且几乎不需要分析。 这意味着原始文件目标可以比其他目标（如平面文件和 OLE DB 目标）更快地写入数据。  
@@ -113,7 +112,7 @@ ms.locfileid: "81487007"
   
 1.  将 WriteOption 属性设置为 **CreateOnce** 或 **CreateAlways**并运行循环的一次迭代过程。 此时将创建文件。 这可确保追加数据的元数据与文件匹配。  
   
-2.  将 WriteOption 属性重置为**Append** ，并将 ValidateExternalMetadata 属性`False`设置为。  
+2.  将 WriteOption 属性重置为**Append** ，并将 ValidateExternalMetadata 属性设置为 `False` 。  
   
  如果使用 **TruncateAppend** 选项而不是 **“追加”** 选项，此操作将截断以前的任何迭代过程中所添加的行，然后追加新行。 使用 **TruncateAppend** 选项也要求数据与文件格式相匹配。  
   
@@ -134,6 +133,6 @@ ms.locfileid: "81487007"
   
 ## <a name="see-also"></a>另请参阅  
  [原始文件源](raw-file-source.md)   
- [数据流](data-flow.md)  
+ 数据流  
   
   

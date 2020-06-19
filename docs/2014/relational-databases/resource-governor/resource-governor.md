@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8d2cdad589ac9c669ae06672260bd99a1de72e8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72d392837da4abd28aaf48ed460113c561bd688d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704870"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063592"
 ---
 # <a name="resource-governor"></a>Resource Governor
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源调控器是一项可用于管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 工作负荷和系统资源使用情况的功能。 可以通过 Resource Governor 指定各种限制，对可供传入应用程序请求使用的 CPU、物理 IO 和内存量进行限制。  
@@ -58,7 +57,7 @@ ms.locfileid: "62704870"
   
 -   **工作负荷组。** 工作负荷组充当具有相似分类标准的会话请求的容器。 工作负荷允许对会话进行聚合监视，并定义会话的策略。 每个工作负荷组都处于一个资源池中。 当安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时，会创建两个工作负荷组（内部工作负荷组和默认工作负荷组）并将其映射到对应的资源池。 资源调控器还支持用户定义的工作负荷组。 有关详细信息，请参阅 [Resource Governor Workload Group](resource-governor-workload-group.md)。  
   
--   **分类.** 分类过程会根据传入会话的特征将其分配给工作负荷组。 您可以通过编写用户定义函数（称为分类器函数）来定制分类逻辑。 资源调控器还支持用于实现分类规则的分类器用户定义的函数。 有关详细信息，请参阅 [Resource Governor Classifier Function](resource-governor-classifier-function.md)。  
+-   **分类。** 分类过程会根据传入会话的特征将其分配给工作负荷组。 您可以通过编写用户定义函数（称为分类器函数）来定制分类逻辑。 资源调控器还支持用于实现分类规则的分类器用户定义的函数。 有关详细信息，请参阅 [Resource Governor Classifier Function](resource-governor-classifier-function.md)。  
   
 > [!NOTE]  
 >  资源调控器不向专用管理员连接 (DAC) 施加任何控制。 无需对在内部工作负荷组和资源池中运行的 DAC 查询进行分类。  
@@ -85,9 +84,9 @@ ms.locfileid: "62704870"
 |说明如何禁用资源调控器。|[禁用资源调控器](disable-resource-governor.md)|  
 |说明如何创建、更改和删除资源池。|[资源调控器资源池](resource-governor-resource-pool.md)|  
 |说明如何创建、更改、移动和删除工作负荷组。|[资源调控器工作负荷组](resource-governor-workload-group.md)|  
-|说明如何创建和测试分类器用户定义函数。|[Resource Governor Classifier Function](resource-governor-classifier-function.md)|  
-|说明如何使用模板配置资源调控器。|[使用模板配置 Resource Governor](configure-resource-governor-using-a-template.md)|  
-|说明如何查看资源调控器属性。|[查看 Resource Governor 属性](view-resource-governor-properties.md)|  
+|说明如何创建和测试分类器用户定义函数。|[资源调控器分类器函数](resource-governor-classifier-function.md)|  
+|说明如何使用模板配置资源调控器。|[使用模板配置资源调控器](configure-resource-governor-using-a-template.md)|  
+|说明如何查看资源调控器属性。|[查看资源调控器属性](view-resource-governor-properties.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [数据库引擎实例 (SQL Server)](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  

@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5d57a0783c8af0121169f09622b8e5bd8547d1ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29ddc30f89621e9b4875a57c191a81ef3f10784d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833076"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920230"
 ---
 # <a name="wmi-connection-manager"></a>WMI 连接管理器
   WMI 连接管理器使得包可以使用 Windows Management Instrumentation (WMI) 来管理企业环境中的信息。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的 Web 服务任务使用 WMI 连接管理器。  
   
- 将 WMI 连接管理器添加到包时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]将创建一个连接管理器，该连接管理器将在运行时解析为 WMI 连接，设置连接管理器属性，并将该`Connections`连接管理器添加到包上的集合。 该连接管理器的 `ConnectionManagerType` 属性设置为 `WMI`。  
+ 将 WMI 连接管理器添加到包时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将创建一个连接管理器，该连接管理器将在运行时解析为 WMI 连接，设置连接管理器属性，并将该连接管理器添加到 `Connections` 包上的集合。 该连接管理器的 `ConnectionManagerType` 属性设置为 `WMI`。  
   
 ## <a name="configuration-of-the-wmi-connection-manager"></a>配置 WMI 连接管理器  
  可按下列方式配置 WMI 连接管理器：  

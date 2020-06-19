@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e4359a546c350c666190331ab6a8484ca9a99a83
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b80f07393b9c66a5e2c7ec72840fc58fd096a022
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704095"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063488"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>语法对的自动匹配
   使用自动匹配语法对功能，可获得有关必须以成对方式进行编码的语法元素是否正确配对的即时反馈。 这种匹配在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中被称为分隔符匹配，在 Analysis Services XMLA 查询编辑器中被称为大括号匹配，而在 MDX 和 DMX 编辑器中则被称为圆括号匹配。  
@@ -56,7 +55,7 @@ ms.locfileid: "82704095"
   
 -   匹配的开始和结束标记。  
   
--   任何成对的“\<”和“>”尖括号。  
+-   任何 " \<" and "> " 尖括号对。  
   
 -   注释的开头和结尾。  
   

@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e55268f499069fb6714aa07944997e1e92e7fc23
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2af0cf426583ee328f0a484de1c3539836c0d8af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811551"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935638"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>配置 max text repl size 服务器配置选项
-  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] max text repl size [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 "**最大文本复制大小**" 选项指定可使用单个 INSERT、UPDATE `text`、 `ntext`WRITETEXT `varchar(max)`或`nvarchar(max)`UPDATETEXT `varbinary(max)`语句`xml`添加到`image`复制列或捕获列的、、、、、和数据的最大大小（以字节为单位）。 默认值为 65536 个字节。 值为 -1 表示除了数据类型指定的限制之外，没有大小限制。  
+  本主题说明如何使用 **或** 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] max text repl size [!INCLUDE[tsql](../../includes/tsql-md.md)]服务器配置选项。 "**最大文本复制大小**" 选项指定 `text` `ntext` 可使用 `varchar(max)` `nvarchar(max)` `varbinary(max)` `xml` `image` 单个 INSERT、UPDATE、WRITETEXT 或 UPDATETEXT 语句添加到复制列或捕获列的、、、、、和数据的最大大小（以字节为单位）。 默认值为 65536 个字节。 值为 -1 表示除了数据类型指定的限制之外，没有大小限制。  
   
  **本主题内容**  
   

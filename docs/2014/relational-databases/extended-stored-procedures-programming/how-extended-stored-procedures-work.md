@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9b52e8fd5cda7d0b05ebbddbb422f74bd81b1993
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75082fed6b70c214b4f55b85034ffa371824d24f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62512989"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027133"
 ---
 # <a name="how-extended-stored-procedures-work"></a>扩展存储过程的工作方式
     
@@ -26,7 +25,7 @@ ms.locfileid: "62512989"
   
  扩展存储过程的工作流程是：  
   
-1.  当客户端执行扩展存储过程时，请求将以表格格式数据流（TDS）或从客户端应用程序到[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的简单对象访问协议（SOAP）格式传输。  
+1.  当客户端执行扩展存储过程时，请求将以表格格式数据流（TDS）或从客户端应用程序到的简单对象访问协议（SOAP）格式传输 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 搜索与扩展存储过程关联的 DLL 并加载此 DLL（如果尚未加载）。  
   

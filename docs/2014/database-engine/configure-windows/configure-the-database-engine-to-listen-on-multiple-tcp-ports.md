@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c5f3c354a36f5a3a62120ecc40a815420393648c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab803bcaa5ab6b6187c1a994abef02f81ae105c6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811541"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935715"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>将数据库引擎配置为侦听多个 TCP 端口
   本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中将 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 配置为侦听多个 TCP 端口。 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]启用 TCP/IP 后， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将侦听连接点上是否有传入的连接（由 IP 地址和 TCP 端口号组成）。下列过程将创建一个表格格式数据流 (TDS) 端点，以便 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 侦听其他 TCP 端口。  
@@ -74,15 +73,15 @@ ms.locfileid: "62811541"
   
 #### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>将 SQL Server 数据库引擎配置为侦听其他 TCP 端口  
   
-1.  在 SQL Server 配置管理器中，展开“SQL Server 网络配置”  ，然后单击 **<instance_name>** 的“协议”  。  
+1.  在 SQL Server 配置管理器中，展开“SQL Server 网络配置”，然后单击 _<instance_name>_ 的“协议”。  
   
-2.  展开 **<instance_name>** 的“协议”  ，然后单击“TCP/IP”  。  
+2.  展开 _<instance_name>_ 的“协议”，然后单击“TCP/IP”。  
   
 3.  在右窗格中，右键单击要启用的每个禁用的 IP 地址，再单击“启用”  。  
   
 4.  右键单击“IPAll”  ，再单击“属性”  。  
   
-5.  在 **“TCP 端口”** 框中，键入要 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 侦听的端口（用逗号分隔）。 在本示例中，如果列出了默认端口1433，请`,1500`键入`1433,1500`，然后单击 **"确定**"。  
+5.  在 **“TCP 端口”** 框中，键入要 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 侦听的端口（用逗号分隔）。 在本示例中，如果列出了默认端口1433，请键入，然后 `,1500` `1433,1500` 单击 **"确定**"。  
   
     > [!NOTE]  
     >  如果不想对所有 IP 地址启用端口，则在属性框中只为所需地址配置其他端口。 然后，在控制台窗格中，右键单击“TCP/IP”  ，单击“属性”  ，然后在“全部侦听”  框中选择“否”  。  
