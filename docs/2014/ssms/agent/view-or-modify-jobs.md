@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 57f649b8-190c-4304-abd7-7ca5297deab7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 87e5644329742712e112fd3df97f601838f7faea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d0d731d25c20597be3ac84adfacd8973e4a51cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245514"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001713"
 ---
 # <a name="view-or-modify-jobs"></a>查看或修改作业
   您可以查看任何已创建的作业。 运行完一个作业后，还可以查看它的历史记录。 查看作业历史记录使您可以查看作业何时运行、整个作业的状态以及作业中每步作业的状态。 在作业成功完成后，您可以查看该作业过去是否曾失败，还可以查看作业每次运行时创建的输出内容。 **sysadmin** 固定服务器角色的成员可以查看或修改所有人的作业。  
@@ -61,12 +60,12 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
 |-|-|  
 |**说明**|**主题**|  
 |说明如何查看 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业。|[View a Job](view-a-job.md)|  
-|说明如何查看 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业历史记录日志。|[View the Job History](view-the-job-history.md)|  
+|说明如何查看 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业历史记录日志。|[查看作业历史记录](view-the-job-history.md)|  
 |说明如何删除 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业历史记录日志的内容。|[清除作业历史记录日志](clear-the-job-history-log.md)|  
 |说明如何设置 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业历史记录日志的大小限制。|[调整作业历史记录日志的大小](resize-the-job-history-log.md)|  
 |说明如何更改 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业的属性。|[修改作业](modify-a-job.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- [sysjobhistory &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)  
+ [dbo.sysjobhistory &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)  
   
   

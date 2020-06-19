@@ -13,15 +13,14 @@ helpviewer_keywords:
 ms.assetid: 7ea2d2af-086f-48dc-9636-38dc194c7090
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1b104eab4067f4eeb435c397708d0cad4d1e9cd4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f493c88d64e6ed22e44f33f1442ae581daa8ed4b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876054"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958305"
 ---
-# <a name="example-online-restore-of-a-read-only-file-full-recovery-model"></a>示例：联机还原只读文件（完整恢复模式）
+# <a name="example-online-restore-of-a-read-only-file-full-recovery-model"></a>示例：只读文件的联机还原（完整恢复模式）
   本主题与完整恢复模式下包含多个文件或文件组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关。  
   
  在此示例中，名为 `adb`的数据库（使用完整恢复模式）包含三个文件组。 文件组 `A` 为读/写文件组，文件组 `B` 和文件组 `C` 为只读文件组。 最初，所有文件组都处于联机状态。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 030b10c2-6b88-4c2c-bf67-22994be25a60
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: acb755f8cc1e425e38714013511948f7b5b4c580
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15db72d9faf2683b02a359b928266c5456e3c9aa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62836857"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923483"
 ---
 # <a name="connection-to-sql-server-for-delete"></a>删除与 SQL Server 的连接
   在不含对 MSXDBCDC 数据库具有写入权限的数据库角色（例如 **db_owner** 角色）的登录名尝试删除某一 Oracle CDC 实例时，“连接到 SQL Server”对话框将显示。  
@@ -32,7 +31,7 @@ ms.locfileid: "62836857"
   
 -   **Windows 身份验证**  
   
--   **SQL Server 身份验证**：如果选择此选项，则必须在连接到的  **中为用户键入“登录名”** **和“密码”** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+-   **SQL Server 身份验证**：如果选择此选项，则必须在连接到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中为用户键入“登录名”和“密码”。  
   
  **选项**  
  单击箭头可以查看要配置的可用选项。 您可以选择保留这些选项不变，使用其默认值。 可用选项是：  

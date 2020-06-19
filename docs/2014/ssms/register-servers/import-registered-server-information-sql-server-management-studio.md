@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cc497a14-1360-4887-b70c-002f042823b6
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 32ef669c238c52ec5e5e20804c896b4364c8bc85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ddf4a72fa81e12f49b8974881dd964473c863c28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75241354"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048713"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>导入已注册服务器信息 (SQL Server Management Studio)
   本主题说明如何导入 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中保存的已注册服务器信息。 通过导出再导入已注册服务器的相关文件，可以便捷地为多台计算机配置与“已注册的服务器”中相同服务器之间的连接。 当从不同位置的计算机管理大量服务器，或希望为不熟练的用户配置基本的连接设置时，这非常有用。  

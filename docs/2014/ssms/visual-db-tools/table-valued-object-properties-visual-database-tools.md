@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0c366cca32c8d441ff25f9688a841e2f0fac77a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e7db48f0ee7241bedcd7536133450a2a41cd8f9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204553"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048553"
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>表值对象属性 (Visual Database Tools)
   在 **查询设计器和视图设计器**中选择表值对象时，这些属性将显示在“属性”窗口中。 表值对象可以是视图、同义词、派生表和表值函数。 除非另行说明，否则这些属性在“属性”  窗口中为只读。  
@@ -26,7 +25,7 @@ ms.locfileid: "63204553"
 >  本主题中的属性按类别排序，而不是按字母顺序排序。  
   
 > [!NOTE]  
->  根据当前设置或版本的不同，所看到的对话框和菜单命令可能与帮助中描述的对话框和菜单命令有所不同。 若要更改设置，请在“工具”  菜单上选择“导入和导出设置”  。  
+>  根据当前设置或版本的不同，所看到的对话框和菜单命令可能与帮助中描述的对话框和菜单命令有所不同。 若要更改设置，请在“工具”菜单上选择“导入和导出设置”。  
   
  **标识类别**  
  展开此项可显示“名称”  和“TVO 类型”  属性。  

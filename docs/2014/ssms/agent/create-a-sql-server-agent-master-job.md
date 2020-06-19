@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: c12ab23f-d7ee-43a5-8cd2-0a9121292bcd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e80d5790f78c83a8a1ff3059e12e0946e206c060
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a6503caec3f153878e360ee29ce09a5c099ade5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211453"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064525"
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>创建 SQL Server 代理主作业
-  本主题说明如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]在中创建主代理作业。  
+  本主题说明如何 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用或在中创建主代理作业 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
  
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
@@ -35,7 +34,7 @@ ms.locfileid: "68211453"
 ####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  如果分布式作业的步骤与某个代理相关联，则该作业将在目标服务器上该代理帐户的上下文下运行。 请确保满足以下条件，否则与代理关联的作业步骤将不会从主服务器下载到目标服务器上：  
   
--   注册表子项**\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<*instance_name*> \sql 服务器 Agent\AllowDownloadedJobsToMatchProxyName** （REG_DWORD）设置为1（true）。 默认情况下，此子项设置为 0 (False)。  
+-   注册表子项**\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\ < *instance_name*> \sql 服务器 Agent\AllowDownloadedJobsToMatchProxyName** （REG_DWORD）设置为1（true）。 默认情况下，此子项设置为 0 (False)。  
   
 -   目标服务器上已存在与运行作业步骤的主服务器代理帐户同名的代理帐户。  
   
@@ -117,7 +116,7 @@ ms.locfileid: "68211453"
     GO  
     ```  
   
- 有关详细信息，请参见:  
+ 有关详细信息，请参阅：  
   
 -   [sp_add_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
   

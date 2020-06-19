@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d7c1592058776246ad3df657c3340303a60df296
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 987548418e78999e0c247c65aac5e67912b5385f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771743"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924788"
 ---
 # <a name="selecting-input-columns-programmatically"></a>以编程方式选择输入列
   以编程方式连接组件后，可从上游组件选择将要转换或传递到下游组件的列。 如果不为组件选择输入列，则组件将不会接收任何来自数据流任务的行。  

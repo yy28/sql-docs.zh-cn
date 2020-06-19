@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 01b6388dbec5ed563dd8e7fa4476335a3ace998d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cc4ec27de159735b43f88dd978e7070cb0f0983
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770313"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939255"
 ---
 # <a name="term-lookup-transformation"></a>字词查找转换
   字词查找转换将从转换输入列的文本中提取的字词与引用表中的字词进行匹配， 然后计算出查找表中的字词在输入数据集中出现的次数，并将计数与引用表中的此字词一并写入转换输出的列中。 此转换对于创建基于输入文本并带有词频统计信息的自定义词列表很有用。  
@@ -62,7 +61,7 @@ ms.locfileid: "62770313"
 |引用字词|Windows、Windows 7 Professional|  
 |输出|Windows|  
   
- 字词查找转换可以匹配包含特殊字符的名词和名词短语，而引用表中的数据可能包含这些字符。 特殊字符如下所示：%、@，&、$、#、\*:、;、。、  ！、？、\<>、+、=、^、~、|、\\/、（、）、[、]、{、}、" 和 '。  
+ 字词查找转换可以匹配包含特殊字符的名词和名词短语，而引用表中的数据可能包含这些字符。 特殊字符如下：%、@、&、$、#、 \* 、：、;、.、 **、** 、!,?, \<, > 、+、=、^、~、|、 \\ 、/、（、）、[、]、{、}、"和 '。  
   
 ## <a name="data-types"></a>数据类型  
  字词查找转换只能使用数据类型为 DT_WSTR 或 DT_NTEXT 的列。 如果列包含文本，但不具有这两种数据类型之一，则数据转换可以将数据类型为 DT_WSTR 或 DT_NTEXT 的列添加到数据流，并将列值复制到新列。 然后，数据转换的输出就可以用作字词查找转换的输入。 有关详细信息，请参阅 [Data Conversion Transformation](data-conversion-transformation.md)。  

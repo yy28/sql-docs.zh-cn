@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5bb582f9-68d3-4c1e-ab02-6fc16807f1a5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 09d597cb7776362c44ca53e8d544f66608d8d37c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a7389173f97f7d4bcfbbfed99e46beae0d3c89b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62836997"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923468"
 ---
 # <a name="connection-to-sql-server"></a>连接到 SQL Server
   在不含对 MSXDBCDC 数据库具有写入权限的数据库角色（例如 **db_owner** 角色）的登录名尝试创建某一 Oracle CDC 实例时，“连接到 SQL Server”对话框将显示。  
@@ -32,7 +31,7 @@ ms.locfileid: "62836997"
   
 -   Windows 身份验证  
   
--   **SQL Server 身份验证**：如果选择此选项，则必须在连接到的  **中为用户键入“登录名”** **和“密码”** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+-   **SQL Server 身份验证**：如果选择此选项，则必须在连接到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中为用户键入“登录名”和“密码”。  
   
 ### <a name="options"></a>选项  
  单击箭头可以查看要配置的可用选项。 您可以选择保留这些选项不变，使用其默认值。 可用选项是：  

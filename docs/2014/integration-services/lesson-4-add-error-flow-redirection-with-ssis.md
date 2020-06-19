@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 636c199e84eae9bd141bcb33fc5c06f35eac760b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a97a07c4854fc1e25913aff7b6e966be79032e86
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891322"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951555"
 ---
 # <a name="lesson-4-adding-error-flow-redirection"></a>第 4 课：添加错误流重定向
-  为了处理在转换过程中可能发生的错误， [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]使您能够根据每个组件和每个列来决定如何处理无法转换的数据。 可以选择忽略某些列中的失败、重定向整个失败的行或者只是使组件失败。 默认情况下， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的所有组件被配置为在发生错误时失败。 而使组件失败又会导致包失败，并使所有后续处理停止。  
+  为了处理在转换过程中可能发生的错误， [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 使您能够根据每个组件和每个列来决定如何处理无法转换的数据。 可以选择忽略某些列中的失败、重定向整个失败的行或者只是使组件失败。 默认情况下， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的所有组件被配置为在发生错误时失败。 而使组件失败又会导致包失败，并使所有后续处理停止。  
   
  如果不让失败导致包停止执行，一个好方法是通过配置使在转换中发生潜在处理错误时这些错误能够得到处理。 虽然可能选择忽略失败以确保包成功运行，但通常更好的做法是将失败的行重定向到另一个处理路径，在这里可以使数据和错误持久化、接受检查并在随后的某个时间对其进行重新处理。  
   

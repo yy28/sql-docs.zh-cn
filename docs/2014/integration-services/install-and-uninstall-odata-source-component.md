@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0a3ae788-e8c8-4a4d-bb15-34c673abcd17
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d7c7edea5701fe784f34375c2ff218fc93e610e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eeeea240761915fae8489072cc71d697b988ce7e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058042"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965457"
 ---
 # <a name="install-and-uninstall-odata-source-component"></a>安装和卸载 OData 源组件
   本主题提供有关在计算机上安装或删除 OData 源组件的说明。  

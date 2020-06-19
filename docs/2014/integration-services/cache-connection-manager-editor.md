@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0802ed589813a43ffac516c05a3a52de382d36c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 403210fd8a60cdfb7e92b18f9bb66ccb0a6f1f4c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061076"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924618"
 ---
 # <a name="cache-connection-manager-editor"></a>缓存连接管理器编辑器
   缓存连接管理器从缓存转换或缓存文件 (.caw) 中读取引用数据集，并且可以将数据保存到缓存文件中。 这些数据始终存储在内存中。  
@@ -57,7 +56,7 @@ ms.locfileid: "66061076"
   
 -   从缓存文件读取数据。  
   
- **文件名称**  
+ **文件名**  
  键入缓存文件的路径和文件名。  
   
  **浏览**  

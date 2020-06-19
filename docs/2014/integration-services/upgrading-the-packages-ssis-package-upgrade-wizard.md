@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cdb842e3-2e59-4ede-b127-be4fde46875c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 686354531b89a43cb2e9ddc669ff136ef7b87216
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95c4a27a6ef20ac52521c707ae4a83329a81716d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054739"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972657"
 ---
 # <a name="upgrading-the-packages-ssis-package-upgrade-wizard"></a>升级包（SSIS 包升级向导）
   可以使用 **“升级包”** 页查看包升级的进度以及中断升级过程。 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包升级向导会逐一升级所选包。  
@@ -40,13 +39,13 @@ ms.locfileid: "66054739"
  **状态**  
  查看每个操作的结果。  
   
- **消息**  
+ **Message**  
  查看每个操作生成的错误消息。  
   
- **停止**  
+ **Stop**  
  停止包升级。  
   
- **报告**  
+ **Report**  
  选择希望如何处理包含包升级结果的报告：  
   
 -   联机查看报告。  

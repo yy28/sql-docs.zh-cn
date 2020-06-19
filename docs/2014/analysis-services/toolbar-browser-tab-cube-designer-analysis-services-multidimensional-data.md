@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: a1c6272d-e514-456b-9995-b73fec0112a2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d1135be55065ab62e649d84c00cec4eebf60b58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cba90d60a9ec3b3651c4889be423a5c1311fc9c1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175576"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938478"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>工具栏（“浏览器”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   在设计或浏览多维数据集或其对象或在创建 MDX 查询期间，使用多维数据集设计器的 **“工具栏”** 中的功能可以执行常规操作。 在设计时和查询视图中均可执行的操作包括设置用户上下文、处理对象以及设置默认语言。
 
  下表列出了 **“工具栏”** 按钮及其功能。
 
-|Button|说明|
+|Button|描述|
 |------------|-----------------|
 |**编辑为文本**|不可用于此数据源类型。|
 |**导入**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。|
@@ -55,10 +54,10 @@ ms.locfileid: "78175576"
 
 |选项|说明|
 |------------|-----------------|
-|**进程**|单击此项可显示 **“处理”** 对话框，并处理多维数据集。 有关“处理”**** 对话框的详细信息，请参阅[处理对话框（Analysis Services - 多维数据）](process-dialog-box-analysis-services-multidimensional-data.md)。|
+|**处理**|单击此项可显示 **“处理”** 对话框，并处理多维数据集。 有关“处理”**** 对话框的详细信息，请参阅[处理对话框（Analysis Services - 多维数据）](process-dialog-box-analysis-services-multidimensional-data.md)。|
 |**更改用户**|单击此选项可显示 "**安全上下文**" 对话框，并更改 "**浏览器**" 选项卡上使用的用户和角色。有关 "**安全上下文**" 对话框的详细信息，请参阅 "[安全上下文" 对话框 &#40;Analysis Services 多维数据&#41;](security-context-dialog-box-analysis-services-multidimensional-data.md)。|
 |**重新连接**|如果 **“浏览器”** 选项卡会话由于连接丢失或超时而断开，单击此项可将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] “计算” **选项卡重新连接到包含多维数据集的** 实例和数据库。|
-|**全部**|单击此项可以刷新 **“元数据”** 和 **“报表”** 窗格。|
+|**刷新**|单击此项可以刷新 **“元数据”** 和 **“报表”** 窗格。|
 |**升序排序**|单击此项可以按 **“语言”** 中指定语言的升序顺序，对 **“报表”** 窗格中的所选行的同级成员进行排序。<br /><br /> **注意**仅当选择了 "**报表**" 窗格中的单元时，才会启用此选项。|
 |**降序排序**|单击此项可以按 **“语言”** 中指定语言的降序顺序，对 **“报表”** 窗格中的所选行的同级成员进行排序。<br /><br /> 注意：只有在“报表”窗格中选择了单元时，才会启用此选项。 ****|
 |**自动筛选**|单击此项可以自动筛选 **“结果”** 窗格中的结果。|

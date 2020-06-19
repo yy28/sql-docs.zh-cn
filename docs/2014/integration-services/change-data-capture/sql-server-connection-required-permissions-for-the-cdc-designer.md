@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 80334de2-17c1-43c9-951e-21a9f864e9cb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 567ee5d4c6f57d4b4eb08cbd4ecac7aef999aa55
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cad7720304d4be0a52d782595e466128aa0ae630
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835413"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922398"
 ---
 # <a name="sql-server-connection-required-permissions-for-the-cdc-designer"></a>针对 CDC 设计器的 SQL Server 连接所需权限
   CDC 设计器控制台需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接信息以便执行其任务。 本主题介绍可在 **“连接到 SQL Server”** 对话框中为设置与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的连接而提供的信息。  

@@ -13,21 +13,20 @@ helpviewer_keywords:
 ms.assetid: b3702811-3eb8-4b28-9190-5ae7a1a7bb6f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e7cb19e3ba2f58a39ffd87bdabc6eb1ad18a1d18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f9c37fc722613b8f30772fd825663b2dfcf9b54
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061193"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924648"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>大容量插入任务编辑器（“选项”页）
-  使用 **“大容量插入任务编辑器”** 对话框的 **“选项”** 页，可以设置大容量插入操作的属性。 大容量插入任务将大量数据复制到[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]表或视图中。  
+  使用 **“大容量插入任务编辑器”** 对话框的 **“选项”** 页，可以设置大容量插入操作的属性。 大容量插入任务将大量数据复制到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表或视图中。  
   
  若要了解如何使用大容量插入，请参阅[大容量插入任务](control-flow/bulk-insert-task.md)和 [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)。  
   
 ## <a name="options"></a>选项  
- **Ansi**  
+ **CodePage**  
  指定数据文件中数据的代码页。  
   
  **DataFileType**  
@@ -52,7 +51,7 @@ ms.locfileid: "66061193"
 |**激发触发器**|选择此项将激发对表上的触发器的任意插入、更新或删除操作。|  
   
  **SortedData**  
- 指定大容量插入语句中的 ORDER BY 子句。 所提供的列名必须是目标表中的有效列。 默认值为 `false`。 这意味着 ORDER BY 子句将不对数据进行排序。  
+ 指定大容量插入语句中的 ORDER BY 子句。 所提供的列名必须是目标表中的有效列。 默认为 `false`。 这意味着 ORDER BY 子句将不对数据进行排序。  
   
  **MaxErrors**  
  指定在取消大容量插入操作之前可以发生的最大错误数量。 如果值为 0，则指示对错误的数量没有限制。  

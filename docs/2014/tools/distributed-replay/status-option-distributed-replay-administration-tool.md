@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: ea89386e-1598-4412-8b37-680d14b2a5b6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e56a5229f0f26dfe701a425653b3d7f5a4ece842
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6ce3d07bc357c5f3788fb6f995a43399021b3553
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78171916"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048449"
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>Status 选项（分布式重播管理工具）
-  Distributed Replay 管理工具`DReplay.exe`是一个命令行工具，可用于与 Distributed Replay 控制器进行通信。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本主题介绍 **status** 命令行选项和相应的语法。
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具 `DReplay.exe` 是一个命令行工具，可用于与 Distributed Replay 控制器进行通信。 本主题介绍 **status** 命令行选项和相应的语法。
 
  **status** 选项查询该控制器并显示当前状态。
 
@@ -31,7 +30,7 @@ ms.locfileid: "78171916"
 dreplay status [-mcontroller] [-fstatus_interval]
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
  **-m** *控制器*指定控制器的计算机名称。 可以用“`localhost`”或“`.`”指代本地计算机。
 
  如果未指定 **-m** 参数，则使用本地计算机。

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 53deeb99-c088-4fde-844b-b2d91d6de1eb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4349c0b36d925adc105cf8024e280affe9d58b56
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a425ec6269040c72836571b8fa8b51bba4ed8c32
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704700"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055980"
 ---
 # <a name="using-the-output-clause-with-ole-db-in-sql-server-native-client"></a>在 SQL Server Native Client 中对 OLE DB 使用 OUTPUT 子句
   如果在 INSERT、UPDATE、DELETE 或 MERGE 命令中使用 OUTPUT 子句，则无法获得受影响的行数。 应用程序必须对 OUTPUT 子句所返回的行集中的行数进行计数。  

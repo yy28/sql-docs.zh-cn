@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7cccc230-3b20-4074-804f-3448d9616a83
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7b9da99cb8d88c3e01b034db50e67e02a2d125f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0e53d710c6c3310641a30144a42ea5f614dffd6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054679"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972577"
 ---
 # <a name="variable-grid-options"></a>变量网格选项
   使用 **“变量网格选项”** 对话框，可以选择将在 **“变量”** 窗口中显示的列并选择要应用于变量列表的筛选器。 有关相应变量属性的详细信息，请参阅 [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)。  
@@ -38,13 +37,13 @@ ms.locfileid: "66054679"
 ## <a name="options-for-columns"></a>列选项  
  选择希望在 **“变量”** 窗口中显示的列。  
   
--   **Scope**  
+-   **范围**  
   
--   **数据类型**  
+-   **Data type**  
   
 -   **值**  
   
--   **Namespace**  
+-   **命名空间**  
   
 -   **变量值更改时引发事件**  
   

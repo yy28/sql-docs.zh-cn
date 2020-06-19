@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0304d4ba3388874fbd2c19001b12094f1df4d351
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc20c579a4d08d11dc53f1d39b90c4888c652dc1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62836693"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924858"
 ---
 # <a name="saving-a-package-programmatically"></a>以编程方式保存包
   以编程方式生成新包或修改现有包后，通常要保存更改。  
   
- 本主题中使用的保存包的所有方法都需要引用 `Microsoft.SqlServer.ManagedDTS` 程序集。 在新项目中添加引用后，请使用<xref:Microsoft.SqlServer.Dts.Runtime> `using`或`Imports`语句导入该命名空间。  
+ 本主题中使用的保存包的所有方法都需要引用 `Microsoft.SqlServer.ManagedDTS` 程序集。 在新项目中添加引用后，请 <xref:Microsoft.SqlServer.Dts.Runtime> 使用或语句导入该命名空间 `using` `Imports` 。  
   
 ## <a name="saving-a-package-programmatically"></a>以编程方式保存包  
  若要以编程方式保存包，可调用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] <xref:Microsoft.SqlServer.Dts.Runtime.Application> 类的以下方法之一：  

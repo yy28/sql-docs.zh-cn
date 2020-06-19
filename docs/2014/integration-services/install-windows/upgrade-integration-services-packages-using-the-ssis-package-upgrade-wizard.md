@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e44b755748dcbda6af30e0570b667f9ba3ee75a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0f31c514b8fbb68be7a326f3fd94ac67f0805ad
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62767871"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965487"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>使用 SSIS 包升级向导升级 Integration Services 包
   您可以将在早期版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中创建的包升级为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 格式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包升级向导来帮助完成此过程。 由于可以将该向导配置为备份原始包，因此如果您遇到升级困难，可以继续使用这些原始包。  
@@ -50,7 +49,7 @@ ms.locfileid: "62767871"
   
 #### <a name="to-run-the-wizard-at-the-command-prompt"></a>在命令提示符下运行向导  
   
--   在命令提示符处，运行**C:\Program FILES\MICROSOFT SQL Server\120\DTS\Binn**文件夹中的 ssisupgrade.exe 文件。  
+-   在命令提示符处，运行**C:\Program FILES\MICROSOFT SQL Server\120\DTS\Binn**文件夹中的 SSISUpgrade.exe 文件。  
   
 ## <a name="backing-up-the-original-packages"></a>备份原始包  
  若要备份原始包，必须将原始包和已升级包存储在文件系统的同一文件夹中。 根据向导的运行方式，可以自动选择该存储位置。  
@@ -86,7 +85,7 @@ ms.locfileid: "62767871"
 2.  在向导的 **“选择包管理选项”** 页上，选择 **“备份原始包”** 选项。  
   
     > [!WARNING]  
-    >  当你在中[!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]打开或项目时，不会显示 "**备份原始包**" 选项，这会自动启动向导。  
+    >  当你在中打开或项目时，不会显示 "**备份原始包**" 选项 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ，这会自动启动向导。  
   
 3.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，运行 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包升级向导。  
   

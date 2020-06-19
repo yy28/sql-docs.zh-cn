@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7b4b7d9d9d153456ca471196c6480465d057e412
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a4092257bb593439ef4851eca8b554f0f5ae7ade
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483524"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971997"
 ---
 # <a name="change-tracking-master-data-services"></a>更改跟踪 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以使用更改跟踪组在属性值发生更改时执行操作。 如果不知道新值是什么，但想要知道是否发生了任何更改，则使用更改跟踪。  

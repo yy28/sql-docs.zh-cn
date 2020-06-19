@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 00d0311f-8b71-4ad6-824d-0e89119347a3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 10165ed57c12b06fc1317bb440dd1635849582f6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3c6e0323a38fb6af9d242cca9c4aa9135ee99f37
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82695250"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047957"
 ---
 # <a name="ibcpsession-ole-db"></a>IBCPSession (OLE DB)
   IBCPSession 接口公开了对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基于文件的大容量复制操作的支持****。 **IBCPSession**接口在与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会话相同的级别下，在 Native Client OLE DB 提供程序中公开。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序中，数据源对象是会话对象的工厂，而大容量复制操作是在连接属性 SSPROP_ENABLEBULKCOPY 中指定的。 此外，SSPROP_ENABLEFASTLOAD 属性应当设置为 True。  

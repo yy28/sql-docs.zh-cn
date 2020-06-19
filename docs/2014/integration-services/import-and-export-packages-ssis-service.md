@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9a1d50afde56843942c470017a8534ffa797eb69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce04befcb4c8558216cecded6cb1892c3106295f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058150"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965667"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>导入和导出包（SSIS 服务）
     
@@ -50,7 +49,7 @@ ms.locfileid: "66058150"
   
  您可以从以下位置导出 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包，或将包导入以下位置：  
   
--   您可以导入存储在实例[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、文件系统或[!INCLUDE[ssIS](../includes/ssis-md.md)]包存储区中的包。 导入的包将保存至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包存储区中的文件夹。  
+-   您可以导入存储在实例 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 、文件系统或 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包存储区中的包。 导入的包将保存至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包存储区中的文件夹。  
   
 -   可以将存储在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例、文件系统或 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包存储区中的包导出至不同的存储格式和位置。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "66058150"
   
     -   在 **“服务器类型”** 框中，选择 **“Integration Services”**。  
   
-    -   在 "**服务器名称**" 框中，提供服务器名称或单击 " ** \<浏览更多 ..." >** 并找到要使用的服务器。  
+    -   在 "**服务器名称**" 框中，提供服务器名称或单击 **\<Browse for more...>** 并找到要使用的服务器。  
   
 3.  如果对象资源管理器未打开，请在 **“视图”** 菜单上，单击 **“对象资源管理器”**。  
   
@@ -106,7 +105,7 @@ ms.locfileid: "66058150"
   
     -   在 **“服务器类型”** 框中，选择 **“Integration Services”**。  
   
-    -   在 "**服务器名称**" 框中，提供服务器名称或单击 " ** \<浏览更多 ..." >** 并找到要使用的服务器。  
+    -   在 "**服务器名称**" 框中，提供服务器名称或单击 **\<Browse for more...>** 并找到要使用的服务器。  
   
 3.  如果对象资源管理器未打开，请在 **“视图”** 菜单上，单击 **“对象资源管理器”**。  
   

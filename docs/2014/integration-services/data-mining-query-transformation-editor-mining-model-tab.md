@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 432bba6f-b218-403e-b92c-59ef9f39e4d5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 88dbc58a205a87f1b4c2e187537eef9d9c493cf1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a994ee7b9e01b310ba9d90c5acf35ba93877c0a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059772"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939101"
 ---
 # <a name="data-mining-query-transformation-editor-mining-model-tab"></a>数据挖掘查询转换编辑器（“挖掘模型”选项卡）
   可以使用 **“数据挖掘查询转换编辑器”** 对话框的 **“挖掘模型”** 选项卡选择数据挖掘结构及其挖掘模型。  
@@ -27,7 +26,7 @@ ms.locfileid: "66059772"
  若要了解有关数据挖掘查询转换的详细信息，请参阅 [Data Mining Query Transformation](data-flow/transformations/data-mining-query-transformation.md)。  
   
 ## <a name="options"></a>选项  
- **连接**  
+ **Connection**  
  使用列表框选择现有 Analysis Services 连接，或使用下面介绍的“新建”**** 按钮创建新的连接。  
   
  **新建**  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1eb30dbddac82db8fb0f6047985ce6fb743042cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3aad4cf16c39897bc0796f4fb161eaf39abdb5fd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874488"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938598"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>表格模型中的字符串存储和排序规则
   字符串（文本值）以高度压缩的格式存储于表格模型中；由于这一压缩，您在检索整个或部分字符串时可能会得到意外结果。 此外，因为字符串区域设置和排序规则在层次结构上继承自最接近的父对象，所以，如果未显式定义字符串语言，父对象的区域设置和排序规则可能会影响存储各字符串的方式以及字符串是唯一的还是与父排序规则定义的相似字符串合并。  
@@ -41,7 +40,7 @@ ms.locfileid: "70874488"
 |树|  
 |PlAnT|  
 |trEE|  
-|树|  
+|tree|  
 |PlAnT|  
 |trEE|  
   

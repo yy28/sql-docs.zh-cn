@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0354c73a14b249065b69f41d5f7534fd97de5081
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 86441b7ec5750ca4b7fce07fb7e0b5025e8a6eef
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890713"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939118"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>数据挖掘查询任务编辑器（“查询”选项卡）
   可以使用 **“数据挖掘查询任务”** 对话框的 **“查询”** 选项卡，基于挖掘模式创建预测查询。 在此对话框中还可以将参数和结果集绑定到变量。  

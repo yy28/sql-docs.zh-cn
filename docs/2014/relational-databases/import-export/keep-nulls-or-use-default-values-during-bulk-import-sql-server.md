@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5999a7f3a952cd0392136a96bf3bf166c8e6b155
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 856aa12f6ad5e5094324e0df65941bc63d611451
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011895"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026685"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>在批量导入期间保留 Null 或使用默认值 (SQL Server)
   默认情况下，将数据导入表中时， **bcp** 命令和 BULK INSERT 语句将使用为表中的列定义的所有默认值。 例如，如果数据文件中包含一个空字段，则会加载该列的默认值。 **bcp** 命令和 BULK INSERT 语句都允许指定保留 NULL 值。  
@@ -39,7 +38,7 @@ ms.locfileid: "66011895"
  若要运行本主题中的示例，需要创建示例表和数据文件。  
   
 ### <a name="sample-table"></a>示例表  
- 这些示例要求 **dbo** 架构下的 **AdventureWorks** 示例数据库中存在名为 **MyTestDefaultCol2** 的表。 若要创建此表， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]请在查询编辑器中执行：  
+ 这些示例要求 **dbo** 架构下的 **AdventureWorks** 示例数据库中存在名为 **MyTestDefaultCol2** 的表。 若要创建此表，请在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器中执行：  
   
 ```  
 USE AdventureWorks;  
@@ -99,7 +98,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |`1`|`Default value of Col2`|`DataField3`|  
 |`2`|`Default value of Col2`|`DataField3`|  
   
- 若要插入`NULL`"" 而不`Default value of Col2`是 ""，需要使用`-k` switch 或 KEEPNULL 选项，如以下**bcp**和 BULK INSERT 示例所示。  
+ 若要插入 " `NULL` " 而不是 " `Default value of Col2` "，需要使用 `-k` switch 或 KEEPNULL 选项，如以下**bcp**和 BULK INSERT 示例所示。  
   
 #### <a name="using-bcp-and-keeping-null-values"></a>使用 bcp 并保留空值  
  下列示例演示如何在 **bcp** 命令中保留 null 值。 **Bcp**命令包含以下开关：  

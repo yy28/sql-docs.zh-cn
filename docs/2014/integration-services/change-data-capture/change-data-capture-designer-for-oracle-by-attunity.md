@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 768a9c821c2c8f663bf65c58ed495993795b2eb9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a69ad7199892cf339f5bc3d6a59e54eadca4fad3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835943"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923666"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Change Data Capture Designer for Oracle by Attunity
   CDC 设计器控制台用于开发和维护 Oracle CDC 实例。 CDC 设计器控制台是一种 Microsoft 管理控制台管理单元，它包含以下元素：  

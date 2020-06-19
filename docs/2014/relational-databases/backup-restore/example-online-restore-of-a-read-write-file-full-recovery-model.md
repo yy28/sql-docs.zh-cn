@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0dbeda81-1464-44ba-9011-914900096368
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 45056586be543894c714f4005ba84826aa856674
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b99a3d97644c2a5f104173457f30fc5b3fd7188
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876064"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958277"
 ---
 # <a name="example-online-restore-of-a-read-write-file-full-recovery-model"></a>示例：读/写文件的联机还原（完整恢复模式）
   本主题与完整恢复模式下包含多个文件或文件组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关。  

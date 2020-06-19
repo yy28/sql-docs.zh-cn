@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0eb13d2997c9b2b29c85489f30a161a96f64c70c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 284dfdbd57dde61c92d4cb368371ebe3b1ae6913
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211100"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064104"
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>在 SQL Server Profiler 中使用 SHOWPLAN 结果来分析查询
   可以将导致 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 在跟踪中收集和显示查询计划信息的 Showplan 事件类添加到跟踪定义。 也可能从跟踪中收集的其他事件中提取显示计划事件，并将这些显示计划事件保存在单独的 XML 文件中。  

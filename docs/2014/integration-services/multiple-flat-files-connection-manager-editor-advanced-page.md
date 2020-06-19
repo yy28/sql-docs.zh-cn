@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fc883131-c03d-4ab3-8220-b51cbe243a82
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: de238c1012a255ceb59086e542d5529b8b907915
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5da68a6379c0d65c4d5a83af2b359f96784d4ae2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057551"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950907"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>多平面文件连接管理器编辑器（“高级”页）
   可以使用“多平面文件连接管理器编辑器”对话框的“高级”页，设置平面文件连接管理器连接到的文本文件中的属性（如每列的数据类型和分隔符）。********  
@@ -53,7 +52,7 @@ ms.locfileid: "66057551"
  **新建**  
  单击“新建”**** 添加一个新列。 默认情况下，单击 **“新建”** 按钮将会在列表末尾添加新列。 该按钮还包括以下选项，可以在下拉列表中选择。  
   
-|Value|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**添加列**|在列表末尾添加新列。|  
 |**在其前插入**|在所选列前面插入新列。|  

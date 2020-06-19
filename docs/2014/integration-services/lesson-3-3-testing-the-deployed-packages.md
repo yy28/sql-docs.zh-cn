@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 687a3c6e92dad953d39199afb446389bc11b9841
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 31f12cd8abde0262c499d8a889f28041a9e3974c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176126"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965225"
 ---
 # <a name="step-3-testing-the-deployed-packages"></a>步骤 3：测试已部署的包
   在此任务中，将测试已部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的实例的包。
 
- 在其他 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教程中，可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的开发环境中使用“调试”菜单上的“开始调试”选项运行 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中的包。   这一次，将以不同方式运行包。
+ 在其他 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 教程中，可以在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的开发环境中使用“调试”菜单上的“开始调试”选项运行 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的包。 这一次，将以不同方式运行包。
 
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了几个可用于在测试和生产环境中运行包的工具：命令提示实用工具 `dtexec` 和执行包实用工具。 执行包实用工具是基于 `dtexec` 构建的图形工具。 这两种工具均可直接执行包。 此外， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 还提供了一个 SQL Server 代理子系统，专门用于将包执行计划为 SQL Server 代理作业中的一个步骤。
 

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed13712678ab599e55b539d6226142b686106fe5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774965"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931939"
 ---
 # <a name="upgrade-database-engine"></a>升级数据库引擎
   本主题提供了为升级过程进行准备和了解升级过程所需的信息，其中包括：  
@@ -102,7 +101,7 @@ ms.locfileid: "62774965"
  可以使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 安装向导升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ### <a name="database-compatibility-level-after-upgrade"></a>升级后的数据库兼容级别  
- 升级后`tempdb`，、 `model` `msdb`和**资源**数据库的兼容级别将设置为120。 `master` 系统数据库保留它在升级之前的兼容级别。  
+ `tempdb` `model` `msdb` 升级后，、和**资源**数据库的兼容级别将设置为120。 `master` 系统数据库保留它在升级之前的兼容级别。  
   
  如果升级前用户数据库的兼容级别为 100 或更高，升级后将保持相应级别。 如果升级前兼容级别为 90，则在升级后的数据库中，兼容级别将设置为 100，该级别为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]支持的最低兼容级别。  
   
@@ -163,7 +162,7 @@ EXEC sp_fulltext_service 'pause_indexing', 0;
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [支持的版本和版本升级](supported-version-and-edition-upgrades.md)   
+ [支持的版本升级](supported-version-and-edition-upgrades.md)   
  [使用 SQL Server 的多个版本和实例](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
  [向后兼容性](../../getting-started/backward-compatibility.md)   
  [升级复制数据库](upgrade-replicated-databases.md)  

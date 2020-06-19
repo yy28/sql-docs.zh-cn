@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 89cdfa63bff88c4f4bb5954402034b31ad7f77ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c916be21b62e2e3b920f14da6fb88722e60e1501
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63060981"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002209"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>ErrorControl 属性（SqlService 类）
   获取或设置启动期间服务无法启动时的错误严重性。  
@@ -46,7 +45,7 @@ object
  忽略  
  不通知用户。  
   
- 一般  
+ 普通  
  通知用户。  
   
  Severe  
@@ -55,7 +54,7 @@ object
  严重  
  系统将尝试使用正确的配置重新启动。  
   
- Unknown  
+ 未知  
  严重性未知。  
   
 ## <a name="remarks"></a>备注  

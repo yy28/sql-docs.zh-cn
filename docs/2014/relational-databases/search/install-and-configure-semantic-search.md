@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 164ae15bdd93034ebcca109a01142b3106a78592
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d95e0bb2adf3bacf7057b881ab2e85afd50feef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637910"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063242"
 ---
 # <a name="install-and-configure-semantic-search"></a>安装和配置语义搜索
   说明统计语义搜索的必备组件以及如何安装或检查它们。  
@@ -61,7 +60,7 @@ GO
   
     -   在 **安装介质上找到名为** SemanticLanguageDatabase.msi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 Windows 安装程序包。 根据目标系统，找到 32 位或 64 位版本的安装程序包。 包含文件夹的名称标识 32 位或 64 位版本文件；文件名本身对于这两个版本是相同的。  
   
-    -   从[Microsoft？？下载安装程序包SQL Server？？2014语义语言统计信息](https://go.microsoft.com/fwlink/?LinkID=296743)页面[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。  
+    -   从[Microsoft？？下载安装程序包SQL Server？？2014语义语言统计信息](https://go.microsoft.com/fwlink/?LinkID=296743)页面 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。  
   
 2.  运行 **SemanticLanguageDatabase.msi** Windows 安装程序包，以提取数据库和日志文件。  
   

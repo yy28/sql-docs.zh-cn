@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bff8df8004c4553d5fa07ebb5ca46863a998bd85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4eb09433e2b2db77e6a2f40c1acf204513585a9f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176547"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924898"
 ---
 # <a name="enabling-logging-programmatically"></a>以编程方式启用日志记录
   运行时引擎提供 <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> 对象的集合，这些对象用于在包验证和执行过程中捕获特定于事件的信息。 <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> 对象可用于 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer> 对象，包括 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>、<xref:Microsoft.SqlServer.Dts.Runtime.Package>、<xref:Microsoft.SqlServer.Dts.Runtime.ForLoop> 和 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> 对象。 日志记录对个别容器或整个包启用。
@@ -46,7 +45,7 @@ ms.locfileid: "78176547"
 |提供程序|说明|ConfigString 属性|
 |--------------|-----------------|---------------------------|
 |SQL Server Profiler|生成可捕获并在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler 中查看的 SQL 跟踪。 这种提供程序的默认文件扩展名是 .trc。|不需要任何配置。|
-|SQL Server|将事件日志条目写入任意  **数据库的 sysssislog**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供程序要求指定与数据库的连接以及目标数据库的名称。|
+|SQL Server|将事件日志条目写入任意 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的 sysssislog 表中。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供程序要求指定与数据库的连接以及目标数据库的名称。|
 |文本文件|将事件日志条目以逗号分隔值 (CSV) 格式写入 ASCII 文本文件。 这种提供程序的默认文件扩展名是 .log。|文件连接管理器的名称。|
 |Windows 事件日志|记录到本地计算机的标准 Windows 事件日志的应用程序日志中。|不需要任何配置。|
 |XML 文件|将事件日志条目写入 XML 格式的文件中。 这种提供程序的默认文件扩展名是 .xml。|文件连接管理器的名称。|

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 6b4aa4358259492e1b49672b054eddb8713c7473
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0cad01eae45d534f0f74911ce8f57827858cc920
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211988"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063231"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>创建服务器审核规范和数据库审核规范
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建服务器审核和数据库审核规范。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 773426ed91039ee4c0c6fd224547e44102f9846b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80330d03853c984cfd26100b02918eb218705085
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175412"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931128"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>将日志传送升级到 SQL Server 2014 (Transact-SQL)
   从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]时，有可能保留日志传送配置。 本主题介绍升级日志传送配置的备用方案和最佳做法。
@@ -181,7 +180,7 @@ ms.locfileid: "78175412"
 5.  将客户端从原始主服务器（服务器 A）重定向到联机辅助服务器（服务器 B），以对数据库进行故障转移。
 
     > [!IMPORTANT]
-    >  故障转移到新的主数据库时，应确保其元数据与原始主数据库的元数据一致。 有关详细信息，请参阅在[使数据库在其他服务器实例上可用时管理元数据 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。
+    >  故障转移到新的主数据库时，应确保其元数据与原始主数据库的元数据一致。 有关详细信息，请参阅 [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。
 
 ##  <a name="upgrading-multiple-secondary-server-instances"></a><a name="MultipleSecondaries"></a>升级多个辅助服务器实例
  下图显示了此配置，其中 A 为主服务器实例，B 和 C 都是辅助服务器实例。

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6229bf3f-1182-4bc6-8451-cedc37f4b62e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3dd87c1e2bd08ce5bb1d05e9d51d92e3f62bcc7a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f95aab55d402ac72228dcc4326ad00ea15e7471f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110188"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048375"
 ---
 # <a name="tuning-a-workload"></a>优化工作负荷
   可以使用数据库引擎优化顾问，针对您选择进行优化的数据库和表来找到查询性能最佳的物理数据库设计。  
@@ -44,7 +43,7 @@ ms.locfileid: "66110188"
   
 8.  分析完成之后，在“操作”**** 菜单中，单击“保存建议”****，将建议保存为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 在“另存为”**** 对话框中，导航到要保存建议脚本的目录，然后键入文件名 **MyRecommendations**。  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>总结  
  您已完成对 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的简单 SELECT 语句工作负荷的优化。 数据库引擎优化顾问还可将 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 跟踪文件和表作为优化工作负荷。 下一个任务将向您展示如何查看和解释进行优化后所收到的优化建议。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  

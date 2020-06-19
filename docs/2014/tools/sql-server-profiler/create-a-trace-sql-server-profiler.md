@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1dad0f71b2978c25245a42cc33d4adec05dbeaf3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54677355520ee8c045a0c3fb78a25ead8ac4d885
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211082"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064058"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>创建跟踪 (SQL Server Profiler)
   本主题介绍如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 来创建跟踪。  
@@ -29,7 +28,7 @@ ms.locfileid: "68211082"
      此时，将显示 **“跟踪属性”** 对话框。  
   
     > [!NOTE]  
-    >  如果选中 **“建立连接后立即开始跟踪”** ，就不会显示 **“跟踪属性”** 对话框，而是直接开始跟踪。 若要关闭此设置，请在 "**工具**" 菜单上单击 "**选项**"，然后清除 "**建立连接后立即开始跟踪**" 复选框。  
+    >  如果选中 **“建立连接后立即开始跟踪”** ，就不会显示 **“跟踪属性”** 对话框，而是直接开始跟踪。 若要关闭此设置，请在“工具”菜单上，单击“选项”，然后清除“建立连接后立即开始跟踪”复选框。  
   
 2.  在 **“跟踪名称”** 框中，键入跟踪的名称。  
   

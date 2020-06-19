@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8330702d8c886cc9197dcd944878c3f794780205
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fac51c7916e6fda90d4f04d5e6f3603709e48dd0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775387"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931818"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>使用安装向导升级到 SQL Server 2014（安装程序）
    安装向导提供了一个用来升级  组件的功能树。 也可以将 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 与早期版本并行安装，或从早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移已有的数据库和配置设置，然后将它们应用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的实例。  
@@ -38,7 +37,7 @@ ms.locfileid: "62775387"
 > [!NOTE]  
 >  在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server Core SP1 的计算机上，不支持将早期版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升级到 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]。 有关服务器核心安装的详细信息，请参阅[在 Server core 上安装 SQL Server 2014](install-sql-server-on-server-core.md)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  您必须以管理员身份运行安装程序。 如果从远程共享位置安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，必须使用对该远程共享位置具有读取和执行权限的域帐户且是本地管理员。  
   
  升级[!INCLUDE[ssDE](../../includes/ssde-md.md)]之前，请先查看以下主题：  
@@ -54,7 +53,7 @@ ms.locfileid: "62775387"
 -   [SQL Server 数据库引擎的向后兼容性](../sql-server-database-engine-backward-compatibility.md)  
   
 > [!WARNING]  
->  请注意，您不能更改要升级的功能，并且不能在升级操作过程中添加功能。 有关如何在升级操作完成后向的[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]已升级实例添加功能的详细信息，请参阅[将功能添加到 SQL Server 2014 &#40;安装&#41;的实例](add-features-to-an-instance-of-sql-server-setup.md)。  
+>  请注意，您不能更改要升级的功能，并且不能在升级操作过程中添加功能。 有关如何在升级操作完成后向的已升级实例添加功能的详细信息 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，请参阅[将功能添加到 SQL Server 2014 &#40;安装&#41;的实例](add-features-to-an-instance-of-sql-server-setup.md)。  
   
 ## <a name="procedure"></a>过程  
   
@@ -62,7 +61,7 @@ ms.locfileid: "62775387"
   
 1.  插入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装介质，然后双击根文件夹中的 Setup.exe。 若要从网络共享进行安装，请移动到共享中的根文件夹，然后双击 Setup.exe。  
   
-2.  安装向导启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心。 若[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要升级的现有实例，请在左侧导航区域中单击 "**安装**"，然后单击 **"从[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或升级" **。  
+2.  安装向导启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装中心。 若要升级的现有实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请在左侧导航区域中单击 "**安装**"，然后单击 **"从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或升级" **。  
   
 3.  在“产品密钥”页上单击相应的选项，以指示您是升级到免费版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，还是您拥有该产品生产版本的 PID 密钥。 有关详细信息，请参阅[SQL Server 2014 的版本和组件](../../sql-server/editions-and-components-of-sql-server-2016.md)和[支持的版本和版本升级](supported-version-and-edition-upgrades.md)。  
   
@@ -85,7 +84,7 @@ ms.locfileid: "62775387"
      在右侧窗格中显示所选功能的必备组件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将在本过程后面所述的安装步骤中安装尚未安装的必备组件。  
   
     > [!NOTE]  
-    >  如果你已选择通过选择 "**选择实例**" 页上的 " ** \<仅升级共享功能">** 来升级共享功能，则在 "功能选择" 页上预先选择了所有共享功能。 所有共享组件将同时升级。  
+    >  如果你选择通过在 "选择实例" 页上进行选择来升级共享功能，则在 **\<Upgrade shared features only>** "功能选择" 页上预先选择了所有共享功能。 **Select Instance** 所有共享组件将同时升级。  
   
 12. 在“实例配置”页上，指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的实例 ID。  
   
@@ -126,7 +125,7 @@ ms.locfileid: "62775387"
   
 -   **更新统计信息** - 为了帮助优化查询性能，建议在升级之后更新所有数据库的统计信息。 使用 `sp_updatestats` 存储过程可以更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中用户定义的表中的统计信息。  
   
--   **配置新[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装**-为了减少系统的外围应用， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以有选择地安装和启用密钥服务和功能。 有关外围应用配置器工具的详细信息，请参阅此版本的自述文件。  
+-   **配置新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装**-为了减少系统的外围应用，可以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有选择地安装和启用密钥服务和功能。 有关外围应用配置器工具的详细信息，请参阅此版本的自述文件。  
   
 ## <a name="see-also"></a>另请参阅  
  [升级到 SQL Server 2014](upgrade-sql-server.md)   

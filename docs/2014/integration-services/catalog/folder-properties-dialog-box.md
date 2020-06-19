@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f7d04a071bd5d74ddff6c2dc682c0f6153a8f8b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc76f612f598144172ac81f8addbe0a25ec15e54
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771583"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924378"
 ---
 # <a name="folder-properties-dialog-box"></a>“文件夹属性”对话框
   文件夹包含 `SSISDB` 目录中的项目和环境。 每个文件夹都定义应用于该文件夹的内容的权限。 有关 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 权限的详细信息 ，请参阅 [catalog.grant_permission（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database)。  

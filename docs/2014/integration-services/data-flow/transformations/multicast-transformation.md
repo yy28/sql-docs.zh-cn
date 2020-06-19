@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a05605ca5c2b35b0a5e35c8228a2a144f20d7905
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1cfee8c4e569ca504fd5dbd5693dfe76be059bd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900173"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939408"
 ---
 # <a name="multicast-transformation"></a>多播转换
   多播转换将其输入分发到一个或多个输出。 此转换与有条件拆分转换类似。 这两种转换都将一个输入定向到多个输出。 这两者之间的区别在于多播转换将每行定向到每个输出，而有条件拆分则将一行定向到单个输出。 有关详细信息，请参阅 [Conditional Split Transformation](conditional-split-transformation.md)。  

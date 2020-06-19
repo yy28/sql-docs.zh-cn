@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd0ca68e-6f69-42dd-bcb5-ce511673769c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 773ceb4aedddd6a39df6487bd36b47b83f7fa9a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9dd7dff57d9413d5a06262a8c185b0cd61f0b2b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63227035"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064231"
 ---
 # <a name="visual-database-tool-designers"></a>Visual Database Tool 设计器
   Visual Database Tools 包含可用来处理数据源的多种设计工具。 您可以使用这些工具创建查询，设计或修改数据库结构，或者更新数据。 这些工具包括数据库关系图设计器、表设计器以及查询和视图设计器。  
