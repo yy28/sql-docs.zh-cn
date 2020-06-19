@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 832ea48478eb28b94caf292067344a3754040b2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 06746ae92c4e5d868cf5aff709ceccbbd200b68e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901789"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915441"
 ---
 # <a name="integration-services-paths"></a>Integration Services 路径
   路径将一个数据流组件的输出连接到另一个组件的输入，以此连接数据流中的两个组件。 路径具有源和目标。 例如，如果路径连接一个 OLE DB 源和一个排序转换，那么 OLE DB 源就是路径的源，而排序转换就是路径的目标。 源是路径开始处的组件，而目标是路径结束处的组件。  
@@ -56,6 +55,6 @@ ms.locfileid: "62901789"
 -   [连接数据流中的组件](connect-components-in-a-data-flow.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [数据流](data-flow.md)  
+ 数据流  
   
   

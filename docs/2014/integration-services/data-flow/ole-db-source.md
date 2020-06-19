@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1a89632ad5502cee9599d1eea6e1cd0a0bebe7d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d8c8943c837be852c11d65201d0a8b71de7bec4e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770983"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915017"
 ---
 # <a name="ole-db-source"></a>OLE DB 源
   OLE DB 源通过使用数据库表、视图或 SQL 命令，从各种兼容 OLE DB 的关系数据库中提取数据。 例如，OLE DB 源可以从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表中提取数据。  
@@ -118,6 +117,6 @@ ms.locfileid: "62770983"
 ## <a name="see-also"></a>另请参阅  
  [OLE DB 目标](ole-db-destination.md)   
  [Integration Services &#40;SSIS&#41; 变量](../integration-services-ssis-variables.md)   
- [数据流](data-flow.md)  
+ 数据流  
   
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 69aedf4a3712b79672a0630e953e399c08f23338
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4db4d5b5ce08c50646857099d82964bb944bc8af
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876178"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957827"
 ---
 # <a name="online-restore-sql-server"></a>联机还原 (SQL Server)
   只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 支持联机还原。 在此版本中，文件还原、页面还原或段落还原默认处于联机状态。 本主题与包含多个文件或文件组的数据库相关；在简单恢复模式下，仅与包含只读文件组的数据库相关。  
@@ -64,7 +63,7 @@ ms.locfileid: "62876178"
   
 -   在任何恢复模式下，您都可以使用以下 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 语句使数据库脱机：  
   
-     更改数据库*database_name*设置为脱机  
+     ALTER DATABASE *database_name* SET OFFLINE  
   
 -   或者，在完整恢复模式下，可以通过使用以下 [BACKUP LOG](/sql/t-sql/statements/backup-transact-sql) 语句将数据库置于还原状态，强制文件还原或页还原脱机：  
   
@@ -104,10 +103,10 @@ ms.locfileid: "62876178"
 -   [删除失效文件组 (SQL Server)](remove-defunct-filegroups-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [文件还原 &#40;完整恢复模式&#41;](file-restores-full-recovery-model.md)   
- [文件还原 &#40;简单恢复模式&#41;](file-restores-simple-recovery-model.md)   
- [&#40;SQL Server 还原页面&#41;](restore-pages-sql-server.md)   
- [逐段还原 &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
+ [文件还原（完整恢复模式）](file-restores-full-recovery-model.md)   
+ [文件还原（简单恢复模式）](file-restores-simple-recovery-model.md)   
+ [还原页 (SQL Server)](restore-pages-sql-server.md)   
+ [段落还原 (SQL Server)](piecemeal-restores-sql-server.md)   
  [还原和恢复概述 (SQL Server)](restore-and-recovery-overview-sql-server.md)  
   
   

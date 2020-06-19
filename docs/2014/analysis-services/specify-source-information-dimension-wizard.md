@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0538b490-5185-49e1-a783-4ce3539a0de5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30234275a724dddce95cdad66e5e37a382a25e62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5015589854780f334dfa3b82b4f4ab544a4b7145
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068182"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940341"
 ---
 # <a name="specify-source-information-dimension-wizard"></a>指定源信息（维度向导）
   可以使用 **“选择主维度表”** 页，为要创建的维度选择数据源视图、主维度表、键列和成员名列。  

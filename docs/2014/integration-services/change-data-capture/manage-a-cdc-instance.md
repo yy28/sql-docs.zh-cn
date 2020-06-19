@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7f29463784436918834fe94c3ac5e4a8c5420703
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c92cbb557484e3bd879e9712121b2bbc52d4732
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835591"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922908"
 ---
 # <a name="manage-a-cdc-instance"></a>管理 CDC 实例
   您可以使用 CDC 设计器控制台查看与您创建的实例有关的信息，以及管理实例操作。  
@@ -103,17 +102,17 @@ ms.locfileid: "62835591"
     -   **写入的更改数**：已写入 SQL Server 更改表的更改的数目。  
   
  **Oracle**  
- 显示与 CDC 实例及其与 Oracle 数据库的连接有关的信息。 此选项卡为只读。 若要编辑这些属性，请在左侧窗格中右键单击实例，然后选择“属性”  ；或者在右侧窗格中单击“属性”  以打开“\<实例> 属性”对话框。  
+ 显示与 CDC 实例及其与 Oracle 数据库的连接有关的信息。 此选项卡为只读。 若要编辑这些属性，请在左窗格中右键单击该实例，然后选择 "**属性**"，或在右窗格中单击 "**属性**" 以打开 " \<instance> 属性" 对话框。  
   
  有关这些属性以及如何编辑它们的信息，请参阅 [Edit the Oracle Database Properties](edit-the-oracle-database-properties.md)。  
   
  **表**  
- 显示有关 CDC 实例中包含的表的信息。 在此处也提供列信息。 此选项卡为只读。 若要编辑这些属性，请在左侧窗格中右键单击实例，然后选择“属性”  ；或者在右侧窗格中单击“属性”  以打开“\<实例> 属性”对话框。  
+ 显示有关 CDC 实例中包含的表的信息。 在此处也提供列信息。 此选项卡为只读。 若要编辑这些属性，请在左窗格中右键单击该实例，然后选择 "**属性**"，或在右窗格中单击 "**属性**" 以打开 " \<instance> 属性" 对话框。  
   
  有关这些属性以及如何编辑它们的信息，请参阅 [Edit Tables](edit-tables.md)。  
   
  **高级**  
- 显示 CDC 实例的高级属性和属性值。 此选项卡为只读。 若要编辑这些属性，请在左侧窗格中右键单击实例，然后选择“属性”  ；或者在右侧窗格中单击“属性”  以打开“\<实例> 属性”对话框。  
+ 显示 CDC 实例的高级属性和属性值。 此选项卡为只读。 若要编辑这些属性，请在左窗格中右键单击该实例，然后选择 "**属性**"，或在右窗格中单击 "**属性**" 以打开 " \<instance> 属性" 对话框。  
   
  有关这些属性以及如何编辑它们的信息，请参阅 [Edit the Advanced Properties](edit-the-advanced-properties.md)。  
   

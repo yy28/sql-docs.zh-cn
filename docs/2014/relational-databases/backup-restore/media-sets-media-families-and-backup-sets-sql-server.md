@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9d22511424ff9a7b72edba8c8e3987a8a3185217
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 853451ea5a7c43cd073fdf75703b3c4651b442d0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175968"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958017"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>介质集、介质簇和备份集 (SQL Server)
   本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原的基本备份介质术语，适用于对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不熟悉的读者。 本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于备份介质的格式、备份介质和备份设备之间的对应关系、备份介质上备份的组织结构，以及介质集和介质簇的若干注意事项。 本主题还介绍在第一次使用备份介质或在使用新介质集替代旧介质集之前对备份介质进行初始化和格式化的步骤，如何覆盖介质集中的旧备份集，以及如何将新备份集追加到介质集。
@@ -57,12 +56,12 @@ ms.locfileid: "78175968"
 
 
 ### <a name="media-families"></a>介质簇
- “介质簇” ** 由在介质集中的单个非镜像设备或一组镜像设备上创建的备份构成。 介质集所使用的备份设备的数量决定了介质集中的介质簇的数量。 例如，如果介质集使用两个非镜像备份设备，则该介质集包含两个介质簇。
+ “介质簇”  由在介质集中的单个非镜像设备或一组镜像设备上创建的备份构成。 介质集所使用的备份设备的数量决定了介质集中的介质簇的数量。 例如，如果介质集使用两个非镜像备份设备，则该介质集包含两个介质簇。
 
 > [!NOTE]
 >  在镜像介质集中，所有介质簇也是镜像的。 例如，如果使用六个备份设备来设置介质集的格式，其中使用了两个镜像，则有三个介质簇，每个介质簇包含两个相同的备份数据副本。 有关镜像媒体集的详细信息，请参阅[镜像备份媒体集 (SQL Server)](mirrored-backup-media-sets-sql-server.md)。
 
- 介质簇中的每个磁带或磁盘都分配了“介质序列号” **。 磁盘的介质序列号通常为 1。 在磁带介质簇中，起始磁带的序列号为 1，第二盘磁带的序列号为 2，依此类推。 有关详细信息，请参阅 [使用介质集和介质簇](#ConsiderationsForMediaSetFamilies)。
+ 介质簇中的每个磁带或磁盘都分配了“介质序列号”  。 磁盘的介质序列号通常为 1。 在磁带介质簇中，起始磁带的序列号为 1，第二盘磁带的序列号为 2，依此类推。 有关详细信息，请参阅 [使用介质集和介质簇](#ConsiderationsForMediaSetFamilies)。
 
 #### <a name="the-media-header"></a>介质标头
  备份介质（磁盘文件或磁带）的每个卷都包含介质标头，介质标头是在第一次使用磁带（或磁盘）执行备份操作时创建的。 标头在重新设置介质格式之前保持不变。
@@ -86,7 +85,7 @@ ms.locfileid: "78175968"
 -   介质说明中是包含 MTF 介质标签还是包含介质说明。
 
     > [!NOTE]
-    >  用于备份或还原操作的所有介质都使用一种标准备份格式，该[!INCLUDE[msCoName](../../includes/ssnoversion-md.md)]格式保留由其他应用程序写入的任何 mtf 介质标签，但不会写入 mtf 介质标签。
+    >  用于备份或还原操作的所有介质都使用一种标准备份格式，该格式 [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] 保留由其他应用程序写入的任何 mtf 介质标签，但不会写入 mtf 介质标签。
 
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 磁带格式介质标签或介质说明（自由格式文本）。
 
@@ -101,7 +100,7 @@ ms.locfileid: "78175968"
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 可以处理使用早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]设置格式的介质。
 
 ### <a name="backup-sets"></a>备份集
- 成功的备份操作将向介质集中添加一个“备份集” ** 。 从备份所属的介质集方面对备份集进行说明。 如果备份介质只包含一个介质簇，则该簇包含整个备份集。 如果备份介质包含多个介质簇，则备份集分布在各个介质簇之间。 在每个介质上，备份集都包含说明备份集的标头。
+ 成功的备份操作将向介质集中添加一个“备份集”  。 从备份所属的介质集方面对备份集进行说明。 如果备份介质只包含一个介质簇，则该簇包含整个备份集。 如果备份介质包含多个介质簇，则备份集分布在各个介质簇之间。 在每个介质上，备份集都包含说明备份集的标头。
 
  下例显示一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，该语句使用三个磁带机作为备份设备，为 `MyAdvWorks_MediaSet_1` 数据库创建一个名为 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 的介质集。
 
@@ -137,7 +136,7 @@ WITH
 
  ![第二个备份集分散在 3 个媒体集磁带上](../../database-engine/media/bnr-mediaset-appendedto.gif "第二个备份集分散在 3 个媒体集磁带上")
 
- 在还原备份时，您可以使用 FILE 选项来指定想要使用的备份。 下面的示例演示了如何在还原**=** _backup_set_file_number_ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]数据库的完整数据库备份时使用文件 backup_set_file_number 子句，并在同一介质集上还原差异数据库备份。 介质集使用了三个备份磁带，它们位于磁带机 `\\.\tape0`、 `tape1`和 `tape2`上。
+ 在还原备份时，您可以使用 FILE 选项来指定想要使用的备份。 下面的示例展示了 FILE **=** _backup_set_file_number_ 子句的使用方法，在还原 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的完整数据库备份并随后还原位于相同媒体集上的数据库差异备份时使用该子句。 介质集使用了三个备份磁带，它们位于磁带机 `\\.\tape0`、 `tape1`和 `tape2`上。
 
 ```
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'
@@ -244,7 +243,7 @@ GO
 
      介质序列号指示介质簇中的物理介质的顺序。 对于第一个备份介质，序列号是 1。 第一个备份介质的标记为 1，第二个介质（第一个延续磁带）的标记为 2，依此类推。 在还原备份集时，介质序列号可以确保负责还原备份的操作员按正确的顺序装入介质。
 
-###  <a name="multiple-devices"></a><a name="MultipleDevices"></a>多个设备
+###  <a name="multiple-devices"></a><a name="MultipleDevices"></a> 多个设备
  当您使用多个磁带机或磁盘文件时，请注意以下事项：
 
 -   备份时的注意事项：
@@ -258,7 +257,7 @@ GO
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务
  **创建新介质集**
 
--   [创建完整数据库备份 (SQL Server)](create-a-full-database-backup-sql-server.md)（“备份到新媒体集并清除所有现有备份集”**** 选项）
+-   [创建完整数据库备份 (SQL Server)](create-a-full-database-backup-sql-server.md)（“备份到新媒体集并清除所有现有备份集”  选项）
 
 -   [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql) （FORMAT 选项）
 
@@ -266,13 +265,13 @@ GO
 
  **在现有介质上追加新的备份**
 
--   [创建完整数据库备份 (SQL Server)](create-a-full-database-backup-sql-server.md)（“追加到现有备份集”**** 选项）
+-   [创建完整数据库备份 (SQL Server)](create-a-full-database-backup-sql-server.md)（“追加到现有备份集”  选项）
 
 -   [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql) （NOINIT 选项）
 
  **覆盖所有现有备份集**
 
--   [创建完整数据库备份 (SQL Server)](create-a-full-database-backup-sql-server.md)（“覆盖所有现有备份集”**** 选项）
+-   [创建完整数据库备份 (SQL Server)](create-a-full-database-backup-sql-server.md)（“覆盖所有现有备份集”  选项）
 
 -   [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql) （INIT 选项）
 

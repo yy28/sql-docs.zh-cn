@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 184018d0c0973f41e686f9111b9664e12f91cd20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e16adbad2106d623279edf9d443eae3755c7be5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754517"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934008"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>数据库镜像会话期间的角色切换 (SQL Server)
   在数据库镜像会话上下文中，通常可以使用一个称为“角色切换” ** 的过程来互换主体角色和镜像角色。 在角色切换中，镜像服务器充当主体服务器的“故障转移伙伴 ** ”，接管主体角色，恢复其数据库副本并使其联机以作为新的主体数据库。 以前的主体服务器将作为镜像角色（如果可用），并且其数据库将成为新的镜像数据库。 在可能的情况下，这些角色可以来回切换，以应对多次失败或满足管理的需要。  
@@ -292,7 +291,7 @@ ms.locfileid: "62754517"
  [数据库镜像期间可能出现的故障](possible-failures-during-database-mirroring.md)   
  [将客户端连接到数据库镜像会话 &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [数据库镜像见证服务器](database-mirroring-witness.md)   
- [完整数据库还原 &#40;完整恢复模式&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
+ [完整数据库还原（完整恢复模式）](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
  [数据库镜像运行模式](database-mirroring-operating-modes.md)   
  [镜像状态 (SQL Server)](mirroring-states-sql-server.md)  
   

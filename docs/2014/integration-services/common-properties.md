@@ -18,16 +18,15 @@ helpviewer_keywords:
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5b20a0d2f47e89070712a4063acba4da0225b85d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77bb61af021bb7499f6656d2fd604f4bdc06bfeb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060963"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922098"
 ---
 # <a name="common-properties"></a>通用属性
-  对象模型中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的数据流对象在组件、输入和输出以及输入列和输出列级具有通用属性和自定义属性。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 其中许多属性的值是只读的，由数据流引擎在运行时分配。  
+  对象模型中的数据流对象在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 组件、输入和输出以及输入列和输出列级具有通用属性和自定义属性。 其中许多属性的值是只读的，由数据流引擎在运行时分配。  
   
  本主题列出并描述了数据流对象的通用属性。  
   
@@ -37,7 +36,7 @@ ms.locfileid: "66060963"
   
 -   [输入列](#inputcolumns)  
   
--   [Outputs](#outputs)  
+-   [输出](#outputs)  
   
 -   [输出列](#outputcolumns)  
   
@@ -91,12 +90,12 @@ ms.locfileid: "66060963"
 |说明|字符串|对数据流组件的说明。 此属性的默认值是数据流组件的名称。|  
 |ID|Integer|唯一标识此组件实例的值。|  
 |IdentificationString|字符串|标识组件。|  
-|IsDefaultLocale|布尔|指示组件是否使用其所属的数据流任务的区域设置。|  
+|IsDefaultLocale|Boolean|指示组件是否使用其所属的数据流任务的区域设置。|  
 |LocaleID|Integer|包运行时数据流组件使用的区域设置。 数据流组件可以使用所有 Windows 区域设置。|  
 |名称|字符串|数据流组件的名称。|  
 |PipelineVersion|Integer|将某组件设计为要在其中执行的数据流任务的版本。|  
-|UsesDispositions|布尔|指示组件是否有错误输出。|  
-|ValidateExternalMetadata|布尔|指示外部列的元数据是否经过验证。 此属性的默认值为 `True`。|  
+|UsesDispositions|Boolean|指示组件是否有错误输出。|  
+|ValidateExternalMetadata|Boolean|指示外部列的元数据是否经过验证。 此属性的默认值为 `True`。|  
 |版本|Integer|组件的版本。|  
   
 ##  <a name="input-properties"></a><a name="inputs"></a>输入属性  
@@ -109,10 +108,10 @@ ms.locfileid: "66060963"
 |说明|字符串|输入的说明。|  
 |ErrorOrTruncationOperation|字符串|一个可选字符串，它指定处理行时可以发生的错误或截断的类型。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于指定错误的处理方式的值。 具体的值为 `Fail component`、`Ignore failure` 和 `Redirect row`。|  
-|HasSideEffects|布尔|指示当组件没有附加到下游组件且为`RunInOptimizedMode` `true`时，是否可以从数据流的执行计划中删除该组件。|  
+|HasSideEffects|Boolean|指示当组件没有附加到下游组件且为时，是否可以从数据流的执行计划中删除该组件 `RunInOptimizedMode` `true` 。|  
 |ID|Integer|用于唯一标识输入的值。|  
 |IdentificationString|字符串|用于标识输入的字符串。|  
-|IsSorted|布尔|指示输入中的数据是否已排序。|  
+|IsSorted|Boolean|指示输入中的数据是否已排序。|  
 |名称|字符串|输入的名称。|  
 |SourceLocale|Integer|输入数据的区域设置 ID (LCID)。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于确定组件如何处理在处理行时发生的截断的值。 . 具体的值为 `Fail component`、`Ignore failure` 和 `Redirect row`。|  
@@ -149,16 +148,16 @@ ms.locfileid: "66060963"
   
 |属性|数据类型|说明|  
 |--------------|---------------|-----------------|  
-|DeleteOutputOnPathDetached|布尔|用于确定当输出与路径分离时数据流引擎是否将其删除的值。|  
+|DeleteOutputOnPathDetached|Boolean|用于确定当输出与路径分离时数据流引擎是否将其删除的值。|  
 |说明|字符串|对输出的说明。|  
 |ErrorOrTruncationOperation|字符串|一个可选字符串，它指定处理行时可以发生的错误或截断的类型。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于指定错误的处理方式的值。 具体的值为 `Fail component`、`Ignore failure` 和 `Redirect row`。|  
 |ExclusionGroup|Integer|用于标识一组互斥输出的值。|  
-|HasSideEffects|布尔|用于指示当组件没有附加到上游组件并且 `RunInOptimizedMode` 为 `true` 时是否可以从数据流的执行计划中删除该组件的值。|  
+|HasSideEffects|Boolean|用于指示当组件没有附加到上游组件并且 `RunInOptimizedMode` 为 `true` 时是否可以从数据流的执行计划中删除该组件的值。|  
 |ID|Integer|用于唯一标识输出的值。|  
 |IdentificationString|字符串|用于标识输出的字符串。|  
-|IsErrorOut|布尔|指示输出是否为错误输出。|  
-|IsSorted|布尔|指示输出是否已排序。 默认值为 `False`。<br /><br /> ** \* \*重要\*提示**将`IsSorted`属性的值设置为`True`不会对数据进行排序。 此属性仅向下游组件提示数据之前已经过排序。 有关详细信息，请参阅 [为合并转换和合并联接转换排序数据](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
+|IsErrorOut|Boolean|指示输出是否为错误输出。|  
+|IsSorted|Boolean|指示输出是否已排序。 默认值为 `False`。<br /><br /> ** \* \* 重要 \* 提示 \* **如果将属性的值设置 `IsSorted` 为，则 `True` 不会对数据进行排序。 此属性仅向下游组件提示数据之前已经过排序。 有关详细信息，请参阅 [为合并转换和合并联接转换排序数据](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
 |名称|字符串|输出的名称。|  
 |SynchronousInputID|Integer|与输出同步的输入的 ID。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|用于确定组件如何处理在处理行时发生的截断的值。 具体的值为 `Fail component`、`Ignore failure` 和 `Redirect row`。|  
@@ -209,7 +208,7 @@ ms.locfileid: "66060963"
 |CodePage|Integer|指定非 Unicode 字符串数据的代码页。|  
 |数据类型|Integer（枚举）|列的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 数据类型。 有关详细信息，请参阅[Integration Services 数据类型](data-flow/integration-services-data-types.md)。|  
 |长度|Integer|以字符计的列的长度。|  
-|Precision|Integer|数字列的精度。|  
+|精度|Integer|数字列的精度。|  
 |缩放|Integer|数字列的小数位数。|  
   
 ## <a name="see-also"></a>另请参阅  

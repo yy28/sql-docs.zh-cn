@@ -1,5 +1,6 @@
 ---
 title: 处理返回代码和输出参数（ODBC） |Microsoft Docs
+description: 了解 SQLSTATE，它提供了有关 SQL Server Native Client ODBC 驱动程序中出现警告或错误的原因的详细信息。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a32310288b14ca49a53f68c6fd632f884fa78ec6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3c0f9fadf13ae32581e66b55a0f0ea13b48d47c1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281877"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967566"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>运行存储过程 - 处理返回代码和输出参数
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,11 +49,11 @@ ms.locfileid: "81281877"
   
  此示例连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 若要连接到命名实例，请更改 ODBC 数据源的定义以使用以下格式指定实例：server\namedinstance。 默认情况下，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 将安装在命名实例中。  
   
- 第一个（ [!INCLUDE[tsql](../../includes/tsql-md.md)]）代码列表创建此示例使用的存储过程。  
+ 第一个（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）代码列表创建此示例使用的存储过程。  
   
  使用 odbc32.lib 编译第二个 (C++) 代码列表。 然后，执行该程序。  
   
- 第三个[!INCLUDE[tsql](../../includes/tsql-md.md)]（）代码列表删除此示例使用的存储过程。  
+ 第三个（ [!INCLUDE[tsql](../../includes/tsql-md.md)] ）代码列表删除此示例使用的存储过程。  
   
 ```  
 use AdventureWorks  

@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 96041fa9b632be0162259d72cd4001e9d7defdd5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0fb6ccc97c2f0f5a3a69d2caa61ca67327015415
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768453"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967277"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>在脚本组件中连接数据源
   连接管理器是一个封装和存储连接特定类型数据源所需信息的便利单元。 有关详细信息，请参阅 [Integration Services (SSIS) 连接](../../connection-manager/integration-services-ssis-connections.md)。  
   
- 单击“脚本转换编辑器”的“连接管理器”页上的“添加”和“删除”按钮，可使现有连接管理器可供源或目标组件中的自定义脚本访问     。 但是，您必须编写自己的自定义代码才能加载或保存数据，并且才有可能打开和关闭与数据源的连接。 有关“脚本转换编辑器”的“连接管理器”页的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](configuring-the-script-component-in-the-script-component-editor.md)和[脚本转换编辑器（“连接管理器”页）](../../script-transformation-editor-connection-managers-page.md)   。  
+ 单击“脚本转换编辑器”的“连接管理器”页上的“添加”和“删除”按钮，可使现有连接管理器可供源或目标组件中的自定义脚本访问     。 但是，您必须编写自己的自定义代码才能加载或保存数据，并且才有可能打开和关闭与数据源的连接。 有关“脚本转换编辑器”的“连接管理器”页的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](configuring-the-script-component-in-the-script-component-editor.md)和[脚本转换编辑器（“连接管理器”页）](../../script-transformation-editor-connection-managers-page.md) 。  
   
  脚本组件在 `Connections` 项目项中创建一个 `ComponentWrapper` 集合类，该集合类为每个连接管理器包含一个强类型的取值函数，该取值函数与连接管理器本身同名。 此集合通过 `Connections` 类的 `ScriptMain` 属性公开。 该取值函数属性返回对作为 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100> 实例的连接管理器的引用。 例如，如果已在对话框的“连接管理器”页中添加名为 `MyADONETConnection` 的连接管理器，则可在脚本中添加以下代码来获取对该连接管理器的引用：  
   
@@ -50,7 +49,7 @@ ms.locfileid: "62768453"
 > [!IMPORTANT]  
 >  在脚本组件中编写托管代码时，不能调用返回非托管对象的连接管理器（如 OLE DB 连接管理器和 Excel 连接管理器）的 AcquireConnection 方法。 但是，可以读取这些连接管理器的 ConnectionString 属性，并使用 System.Data.OleDb 命名空间中 OLEDB 连接的连接字符串在代码中直接连接数据源   。  
 >   
->  如果需要调用返回非托管对象的连接管理器的 AcquireConnection 方法，可使用 ADO.NET 连接管理器。 配置 ADO.NET 连接管理器为使用 OLE DB 访问接口时，该连接管理器使用用于 OLE DB 的 .NET Framework 数据访问接口进行连接。 在这种情况下，AcquireConnection 方法将`System.Data.OleDb.OleDbConnection`返回而不是非托管对象。 要配置用于 Excel 数据源的 ADO.NET 连接管理器，请选择 Microsoft OLE DB Provider for Jet，再指定 Excel 工作簿，然后在“连接管理器”对话框的“全部”页上输入 `Excel 8.0`（对于 Excel 97 及更高版本）作为“扩展属性”的值    。  
+>  如果需要调用返回非托管对象的连接管理器的 AcquireConnection 方法，可使用 ADO.NET 连接管理器。 配置 ADO.NET 连接管理器为使用 OLE DB 访问接口时，该连接管理器使用用于 OLE DB 的 .NET Framework 数据访问接口进行连接。 在这种情况下，AcquireConnection 方法将返回 `System.Data.OleDb.OleDbConnection` 而不是非托管对象。 要配置用于 Excel 数据源的 ADO.NET 连接管理器，请选择 Microsoft OLE DB Provider for Jet，再指定 Excel 工作簿，然后在“连接管理器”对话框的“全部”页上输入 `Excel 8.0`（对于 Excel 97 及更高版本）作为“扩展属性”的值    。  
   
  有关如何在脚本组件中使用连接管理器的详细信息，请参阅[通过脚本组件创建源](../../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)和[通过脚本组件创建目标](../../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)。  
   

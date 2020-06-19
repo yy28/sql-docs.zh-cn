@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd7aea63ae85a16e23ff532c7e18ace3c376a707
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921950"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957927"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>管理 suspect_pages 表 (SQL Server)
   本主题介绍如何使用 **或** 来在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中管理 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] suspect_pages [!INCLUDE[tsql](../../includes/tsql-md.md)]表。 **suspect_pages** 表可用来维护有关可疑页的信息，并且还有助于确定有无必要进行还原。 [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 表位于 [msdb 数据库](../databases/msdb-database.md)中。  
   
  如果 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 在试图读取某个数据页时遇到下列错误之一，该页面将被视为“可疑”：  
   
--   由操作系统发出的循环冗余检查 (CRC) 导致的 [823 错误](../errors-events/mssqlserver-823-database-engine-error.md) ，如磁盘错误（某些硬件错误）  
+-   由操作系统发出的循环冗余检查（CRC）导致的[823 错误](../errors-events/mssqlserver-823-database-engine-error.md)，如磁盘错误（某些硬件错误）  
   
 -   [824 错误](../errors-events/mssqlserver-824-database-engine-error.md)，如页撕裂（任何逻辑错误）  
   

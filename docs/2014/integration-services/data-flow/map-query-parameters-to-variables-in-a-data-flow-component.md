@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 92caab2b0631c80403c7367aeb98ae001a5e11eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a1d86dce6be4ed342fe8d90fefe53649533b816
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901557"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915237"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>将查询参数映射到数据流组件中的变量
   当配置 OLE DB 源以使用参数化查询时，可以将参数映射到变量。  
@@ -43,7 +42,7 @@ ms.locfileid: "62901557"
   
 7.  单击 **“参数”** 。  
   
-8.  在“设置查询参数”  对话框中，将“参数”  列表中的每个参数映射到“变量”  列表中的某个变量，或通过单击“**新建变量>”\<** 创建新的变量。 单击“确定”。   
+8.  在 "**设置查询参数**" 对话框中，将 "**参数**" 列表中的每个参数映射到 "**变量**" 列表中的变量，或通过单击创建新变量 **\<New variable>** 。 单击“确定”。   
   
     > [!NOTE]  
     >  只有在包作用域内的系统变量和用户定义变量，诸如 Foreach 循环容器这样的父容器或者包含数据流组件的数据流任务，才用于映射。 变量的数据类型必须与参数所分配的 WHERE 子句的列兼容。  

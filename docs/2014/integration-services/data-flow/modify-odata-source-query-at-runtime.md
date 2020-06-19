@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f1fac598789c53f460ed5239f304de2a39acff81
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c355c95c5e6c686a063c4c32081aa0740f8e2fd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901184"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915207"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>在运行时修改 OData 源查询
   可以通过向数据流任务的“[OData 源].[查询]”**** 属性添加表达式，在运行时修改 OData 源查询。  
@@ -29,7 +28,7 @@ ms.locfileid: "62901184"
   
 1.  右键单击“数据流任务”并选择“参数化…”选项   。  
   
-2.  在“参数化”对话框中，针对“属性”选择“[**OData 源组件的名称>].[查询]”** **\<**  。  
+2.  在 "**参数**化" 对话框中，选择 **[ \<Name of the OData Source Component> ]. [查询]** 作为**属性**。  
   
 3.  选择是 **“创建新参数”** 还是 **“使用现有参数”** 。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62901184"
   
 6.  输入**表达式**。  
   
-7.  单击" **确定**"。  
+7.  单击“确定”。  
   
 > [!WARNING]  
 >  请注意，当使用此方法时，需要确保设置的值为正确编码的 URL。 从用户输入接收值时（例如，通过参数设置各个查询选项值），必须确保值已验证，以避免潜在的 SQL 注入类型攻击。  

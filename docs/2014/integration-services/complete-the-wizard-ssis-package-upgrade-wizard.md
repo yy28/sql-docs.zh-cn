@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e07bd68e-4dc8-41f0-acfe-059e77688cfa
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 57fbbf1702109546037fe91872a7a983bc5713bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b684a20563bf73a50b4df9f624b59047c768865c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060929"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922008"
 ---
 # <a name="complete-the-wizard-ssis-package-upgrade-wizard"></a>完成该向导（SSIS 包升级向导）
   可以使用 **“完成该向导”** 页查看并确认所选的包升级选项。 这是向导的最后一页，您可以返回并更改向导此会话的选项。  

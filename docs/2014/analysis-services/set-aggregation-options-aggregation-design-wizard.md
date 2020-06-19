@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4672d686-10c0-43f8-a53e-a16dfa840c81
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d82d19836147514a4a03296ebc40a047b80410b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: faca5e882a89d14fc18e29e3d4c87cc757d6512e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068808"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940548"
 ---
 # <a name="set-aggregation-options-aggregation-design-wizard"></a>设置聚合选项（聚合设计向导）
   可以使用 **“设置聚合选项”** 页启动聚合设计进程，为生成的聚合指定存储或性能限制。  
@@ -35,10 +34,10 @@ ms.locfileid: "66068808"
  **不设计聚合(0%)**  
  指定聚合设计不包含聚合。 使用此选项可以清除分区、度量值组或多维数据集的现有聚合设计。  
   
- **Start**  
+ **启动**  
  启动聚合设计进程。  
   
- **停止**  
+ **Stop**  
  结束聚合设计进程。  
   
  **重置**  

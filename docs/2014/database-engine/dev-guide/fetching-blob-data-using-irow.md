@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: badbd6ac-20aa-4891-a14f-48d38e7f30de
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 06ca087cdb1e2009faa19ff8fb86f9ab4982fddd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ad3536bacef0859fa2a3701bc6cd3f2bc2532c50
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62752964"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933588"
 ---
 # <a name="fetching-blob-data-using-irow"></a>使用 IRow 提取 BLOB 数据
   可以使用**IRow：： GetColumns**或**IRow：： Open**和**ISequentialStream**检索行对象中的 BLOB 列。  

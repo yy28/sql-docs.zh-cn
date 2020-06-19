@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f0031b874b2477bff53f8f0855b557a3188c3719
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ebdddaaef7c0b87ff25e639fff26a2b858ed6a1e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770890"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914358"
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>SAP BW 源编辑器（“列”页）
-  使用“SAP BW 源编辑器”  的“列”  页将输出列映射到每个外部（源）列。  
+  使用“SAP BW 源编辑器”的“列”页将输出列映射到每个外部（源）列。  
   
  若要了解 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的 SAP BW 源组件的详细信息，请参阅 [SAP BW 源](sap-bw-source.md)。  
   

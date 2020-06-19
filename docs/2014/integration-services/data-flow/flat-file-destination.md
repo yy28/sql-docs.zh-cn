@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 30f8f566dc04726076dd9eb7c4d91b56f687218d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50dfafd0d15dc64962ba7ee1fb4e171b2aaf71b6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62902441"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915507"
 ---
 # <a name="flat-file-destination"></a>平面文件目标
   平面文件目标将数据写入文本文件。 文本文件可以为带分隔符格式、固定宽度格式、固定宽度并使用行分隔符格式或右边未对齐格式。  
@@ -59,6 +58,6 @@ ms.locfileid: "62902441"
   
 ## <a name="see-also"></a>另请参阅  
  [平面文件源](flat-file-source.md)   
- [数据流](data-flow.md)  
+ 数据流  
   
   

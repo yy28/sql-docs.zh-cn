@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f6303ea4-fbbf-4cba-bc60-828df62be8c2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 01c30422e6f0a1beb65c5f72259fce2aa8f80806
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a41cdeec7730fe26e6902a77d3da07c52a0da42d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771153"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915357"
 ---
 # <a name="look-up-process-chain"></a>查找进程链
   使用 **“查找进程链”** 对话框查找在 SAP Netweaver BW 系统中定义的进程链。 当可用进程链列表显示时，选择您需要的进程链，然后源将使用需要的值填充关联的选项。  

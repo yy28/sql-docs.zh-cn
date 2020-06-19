@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f6f90417-86fb-4b8c-a790-0b215c344ef6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2cfee31b4167625b4f868d7312abd752a215652c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe81b8a54f92d32c71d84987f5841679580b4f77
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059549"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967507"
 ---
 # <a name="destination-database-files"></a>目标数据库文件
   可以使用 **“目标数据库文件”** 对话框查看或更改目标服务器上的数据库文件的名称和位置，或为传输数据库任务指定网络文件位置。 有关此任务的详细信息，请参阅 [传输数据库任务](control-flow/transfer-database-task.md)。  

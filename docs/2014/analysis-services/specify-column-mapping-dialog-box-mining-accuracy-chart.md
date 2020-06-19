@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 68e9e2d2-173f-4363-a515-fc60bfee3af0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4416a51ea32500d56c209d745065da20bf8010c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 625a3f2870590b77db84b3266ebf90f5081152d1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068423"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940406"
 ---
 # <a name="specify-column-mapping-dialog-box-mining-accuracy-chart"></a>“指定列映射”对话框（挖掘准确性图表）
   可以使用 **“指定列映射”** 选项卡，从外部数据源中选择表以及将列映射到数据挖掘模型。 随后即可使用外部数据测试挖掘模型的准确性并在准确性图表中显示结果。  

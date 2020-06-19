@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b19b2e960aa2383568d3977d19368576f4178949
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d94df6a59043bee136b0dc42ad8fb013c6c77456
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176437"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967477"
 ---
 # <a name="cast-ssis-expression"></a>Cast（SSIS 表达式）
   将表达式从一种数据类型显式转换为另一种数据类型。 转换运算符还可以用作截断运算符。
@@ -35,14 +34,14 @@ ms.locfileid: "78176437"
 ```
 
 ## <a name="arguments"></a>参数
- *type_spec*是有效[!INCLUDE[ssIS](../../includes/ssis-md.md)]的数据类型。
+ *type_spec*是有效的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 数据类型。
 
  *表达式*是有效的表达式。
 
 ## <a name="result-types"></a>结果类型
  *type_spec*数据类型。 有关详细信息，请参阅[Integration Services 数据类型](../data-flow/integration-services-data-types.md)。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
  以下关系图显示了合法的转换运算。
 
  ![数据类型之间的合法转换和非法转换](../media/data-conversion.gif "数据类型之间的合法转换和非法转换")

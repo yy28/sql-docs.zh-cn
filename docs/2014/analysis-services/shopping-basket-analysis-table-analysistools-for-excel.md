@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: ba40cf43-f286-49ad-8316-70f5b11f1dae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3dadc054a3f9927c09e9e236044dd5ddee7f3a9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f5d571d1a3f88f20600947d3093bf1e37feeee2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068679"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940518"
 ---
 # <a name="shopping-basket-analysis-table-analysistools-for-excel"></a>购物篮分析（Excel 表分析工具）
   ![购物篮工具](media/tat-shopbskt.gif "购物篮工具")  
   
- **购物篮分析**工具可帮助你查找`associations`数据。 关联可以指出哪些项经常被同时购买。 在数据挖掘中，此方法是一种称为*市场篮分析*的知名方法，用于分析非常大的数据集中客户的购买行为。 商家可以使用该信息向客户推荐相关产品，并通过将这些产品置于网页、目录或货架中的临近位置来进行促销。  
+ **购物篮分析**工具可帮助你查找 `associations` 数据。 关联可以指出哪些项经常被同时购买。 在数据挖掘中，此方法是一种称为*市场篮分析*的知名方法，用于分析非常大的数据集中客户的购买行为。 商家可以使用该信息向客户推荐相关产品，并通过将这些产品置于网页、目录或货架中的临近位置来进行促销。  
   
  若要使用购物篮分析，要分析的项必须通过交易 ID 进行关联。 例如，如果要分析通过某个网站接收的所有订单，则每个订单都会有一个订单 ID 或交易 ID，它与一个或多个购买项相关联。  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0e4f36dab5b953b1a631f4510e11bba47798bf62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c231876b11303992e0e3300c9cb73c0cf53b3af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754525"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934066"
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>暂停和恢复数据库镜像 (SQL Server)
   数据库所有者可以暂停并在以后随时恢复数据库镜像会话。 执行暂停操作将保留在挂起镜像时的会话状态。 当出现瓶颈时，暂停可能有利于提高主体服务器的性能。  

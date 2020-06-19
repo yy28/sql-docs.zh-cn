@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3f1dbcf9-9cca-4606-bdcc-7ea6ad48cdf3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 76f2c5e517ca81ae667df3efa6ccd2f49384f090
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d769112c95b88becfd1ec9bfbe7beabd0130cdd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060975"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922101"
 ---
 # <a name="character-map-transformation-editor"></a>字符映射表转换编辑器
   可以使用“字符映射表转换编辑器”**** 对话框，选择要应用到列数据的字符串函数，以及指定映射是就地更改还是添加为新列。  
@@ -36,7 +35,7 @@ ms.locfileid: "66060975"
  **目标**  
  指定是否就地保存字符串运算结果、使用现有列或将已修改的数据作为新列保存。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |新列|将数据保存在新列中。 在 **“输出别名”** 下分配列名。|  
 |就地更改|将已修改的数据保存在现有的列中。|  
@@ -44,7 +43,7 @@ ms.locfileid: "66060975"
  **操作**  
  从列表中选择要应用于列数据的字符串函数。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |小写|转换为小写字母。|  
 |大写|转换为大写字母。|  

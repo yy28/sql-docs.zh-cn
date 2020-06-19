@@ -94,13 +94,12 @@ helpviewer_keywords:
 ms.assetid: 06eb0d78-96c0-42ff-b759-f4c794597c8d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4b26323f99d0b31cdb31e12b64eabdd2a855d907
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 627aae71f32230ccbd78e7ee1c042ca78ba71985
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068873"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940604"
 ---
 # <a name="olap-properties"></a>OLAP 属性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的 OLAP 服务器属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)。  
@@ -196,7 +195,7 @@ ms.locfileid: "66068873"
  `PartitionLatencyAccuracy`  
  这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。  
   
-## <a name="process"></a>进程  
+## <a name="process"></a>过程  
  `AggregationMemoryLimitMax`  
  一个有符号 64 位双精度浮点数属性，它定义可用于聚合处理的最大内存量（以物理内存的百分比表示）。  
   

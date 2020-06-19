@@ -11,23 +11,22 @@ f1_keywords:
 ms.assetid: 305d9d79-d1ab-4704-a7b5-3283842b3996
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7d616997d3764aad42691d9ef3c213d553b5f311
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c66b972395f86746b2d08df234db8aa0c71d03fd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068306"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940318"
 ---
 # <a name="specify-object-counts-aggregation-design-wizard"></a>指定对象计数（聚合设计向导）
   可以使用 **“指定对象计数”** 页自动计算多维数据集中的对象计数，或者手动输入估计的计数。 聚合设计向导使用对象计数来估计存储要求。  
   
 ## <a name="options"></a>选项  
  **多维数据集对象**  
- 显示多维数据集中的维度和属性。 仅显示在向导的 "**查看聚合使用情况**" `None`页中不将其`AggregationUsage`属性设置为的特性，因为只有这些特性需要指定计数。  
+ 显示多维数据集中的维度和属性。 仅 `AggregationUsage` `None` 显示在向导的 "**查看聚合使用情况**" 页中不将其属性设置为的特性，因为只有这些特性需要指定计数。  
   
  **估计的计数**  
- 显示度量值组中估计的行数和数据库维度中估计的属性成员计数。 您可以键入一个值，以用作估计的计数，或可以计算估计的计数值。 若要计算计数值，请`0`在字段中键入，然后单击 "**计数**"。 已显示计数的字段不会更新。  
+ 显示度量值组中估计的行数和数据库维度中估计的属性成员计数。 您可以键入一个值，以用作估计的计数，或可以计算估计的计数值。 若要计算计数值，请 `0` 在字段中键入，然后单击 "**计数**"。 已显示计数的字段不会更新。  
   
  **分区计数**  
  （可选）键入度量值组中估计的行数和分区中估计的属性成员计数。  

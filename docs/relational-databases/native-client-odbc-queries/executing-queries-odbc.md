@@ -1,5 +1,6 @@
 ---
 title: 执行查询（ODBC） |Microsoft Docs
+description: ODBC 应用程序可以通过初始化连接句柄并连接到数据源，在 SQL Server 实例上运行语句。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ ms.assetid: d935bcba-8ce6-4159-8395-6c86431602ad
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 93984308c9b661af8e7263ed1c3c0a54e1b35eab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d704a1231ae61776ea2f99679517100932c26a27
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297989"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967552"
 ---
 # <a name="executing-queries-odbc"></a>执行查询 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  在 ODBC 应用程序初始化连接句柄并与数据源连接后，它为连接句柄分配一个或多个语句句柄。 然后，应用程序可以[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对语句句柄执行语句。 执行 SQL 语句时的一般事件顺序为：  
+  在 ODBC 应用程序初始化连接句柄并与数据源连接后，它为连接句柄分配一个或多个语句句柄。 然后，应用程序可以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对语句句柄执行语句。 执行 SQL 语句时的一般事件顺序为：  
   
 1.  设置所有所需的语句属性。  
   
@@ -49,7 +50,7 @@ INSERT INTO MyTable VALUES (?, ?, ?)
   
  执行所有 SQL 语句并处理它们的结果集之后，应用程序释放语句句柄。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序支持每个连接句柄多个语句句柄。 在连接级别管理事务，以便将针对单个连接句柄上的所有语句句柄执行的所有工作视为同一事务的一部分来管理。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序支持每个连接句柄多个语句句柄。 在连接级别管理事务，以便将针对单个连接句柄上的所有语句句柄执行的所有工作视为同一事务的一部分来管理。  
   
 ## <a name="in-this-section"></a>本节内容  
   

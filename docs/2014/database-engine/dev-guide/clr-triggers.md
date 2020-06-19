@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 87d822e97a75bbd08375980fe6a6f0341d8f9c60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91f12b0d97d2e2065c5bb08d175253c22dffb032
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755255"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933688"
 ---
 # <a name="clr-triggers"></a>CLR 触发器
   由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 集成，因此，您可以使用任何 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 语言来创建 CLR 触发器。 本部分包含通过 CLR 集成实现的触发器的特定信息。 有关触发器的完整讨论，请参阅[DDL 触发器](../../relational-databases/triggers/ddl-triggers.md)。  
@@ -49,7 +48,7 @@ ms.locfileid: "62755255"
   
 -   访问有关执行 DDL 语句所影响的数据库对象的信息。  
   
- 这些功能采用查询语言在内部提供，或者由 `SqlTriggerContext` 类提供。 有关 CLR 集成的优点以及如何在托管代码和[!INCLUDE[tsql](../../includes/tsql-md.md)]之间进行选择的信息，请参阅[clr 集成概述](../../relational-databases/clr-integration/clr-integration-overview.md)。  
+ 这些功能采用查询语言在内部提供，或者由 `SqlTriggerContext` 类提供。 有关 CLR 集成的优点以及如何在托管代码和之间进行选择的信息 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，请参阅[Clr 集成概述](../../relational-databases/clr-integration/clr-integration-overview.md)。  
   
 ## <a name="using-the-sqltriggercontext-class"></a>使用 SqlTriggerContext 类  
  `SqlTriggerContext` 类不能公开构造，只能通过访问 CLR 触发器主体中的 `SqlContext.TriggerContext` 属性获取。 通过调用 `SqlTriggerContext` 属性可以从活动的 `SqlContext` 中获取 `SqlContext.TriggerContext` 类：  
@@ -480,7 +479,7 @@ GO CREATE TABLE UserNameAudit
 )  
 ```  
   
- 在[!INCLUDE[tsql](../../includes/tsql-md.md)]中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]创建触发器的语句如下所示，并且假定已在**SQLCLRTest**当前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库中注册程序集 SQLCLRTest。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]在中创建触发器的语句如下所示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并且假定已在**SQLCLRTest**当前数据库中注册程序集 SQLCLRTest [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ```  
 CREATE TRIGGER EmailAudit  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b42115278e6866063639c7ce2fc596749ad2d39f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7e51592134e626647577bf69319e452a77359ff0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898082"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967397"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF（SSIS 表达式）
   返回两个指定日期之间所跨的日期和时间边界的数目。 *datepart* 参数标识要比较的日期和时间边界。  
@@ -81,7 +80,7 @@ DATEDIFF("dd", (DT_DBTIMESTAMP)"8/1/2003", (DT_DBTIMESTAMP)"8/8/2003")
 DATEDIFF("mm", (DT_DBTIMESTAMP)"8/1/2003",GETDATE())  
 ```  
   
- 此示例返回 **ModifiedDate** 列中的日期与 **YearEndDate** 变量之间的周数。 如果**YearEndDate**的`date`数据类型为，则不需要显式强制转换。  
+ 此示例返回 **ModifiedDate** 列中的日期与 **YearEndDate** 变量之间的周数。 如果**YearEndDate**的 `date` 数据类型为，则不需要显式强制转换。  
   
 ```  
 DATEDIFF("Week", ModifiedDate,@YearEndDate)  

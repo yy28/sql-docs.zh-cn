@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0af079eaa96fd7925ef361b398cd628641c55a3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56d267e6cc1e3343dc92dac6cc247b9308ba072d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770869"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914464"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>SAP BW 目标编辑器（“映射”页）
   使用 **“SAP BW目标编辑器”** 的 **“映射”** 页将输入列映射到目标列。  
@@ -71,7 +70,7 @@ ms.locfileid: "62770869"
  **输入列**  
  查看您所选的输入列。  
   
- 要将不同输入列映射到相同目标列，请在该列表中选择不同输入列。 要删除映射，请选择“**ignore>”以从输出中排除该输入列\<** 。  
+ 要将不同输入列映射到相同目标列，请在该列表中选择不同输入列。 若要删除映射，请选择 **\<ignore>** 从输出中排除该输入列。  
   
  **目标列**  
  查看每个可用目标列，而不管是否已对该列进行映射。  

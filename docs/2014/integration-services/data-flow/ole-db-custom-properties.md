@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 996acc5f8e9b47af683c8d8376515f7f59e63120
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e40db8f1441da112cd5e2bd1a77d10323b5891c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770987"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914947"
 ---
 # <a name="ole-db-custom-properties"></a>OLE DB 自定义属性
   **源自定义属性**  
@@ -26,7 +25,7 @@ ms.locfileid: "62770987"
   
 |属性名称|数据类型|说明|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer|用来访问数据库的模式。 可能的值为 "**打开行集**"、"**从变量打开行集**"、和`SQL Command`"来自变量的**SQL 命令**" 默认值为 **“打开行集”** 。|  
+|AccessMode|Integer|用来访问数据库的模式。 可能的值为 "**打开行集**"、"**从变量打开行集**"、 `SQL Command` 和 "来自变量的**SQL 命令**" 默认值为 **“打开行集”** 。|  
 |AlwaysUseDefaultCodePage|Boolean|一个值，指示是使用每列的 `DefaultCodePage` 属性的值，还是尝试从每列的区域设置中派生代码页。 此属性的默认值为 `False`。|  
 |CommandTimeout|Integer|命令超时之前的秒数。如果值为 0，则表示无限期超时。<br /><br /> 注意：此属性未在 OLE DB 源编辑器中提供，但可以使用“高级编辑器”进行设置   。|  
 |DefaultCodePage|Integer|当无法从数据源使用代码页信息时所使用的代码页。|  
@@ -55,13 +54,13 @@ ms.locfileid: "62770987"
 |AlwaysUseDefaultCodePage|Boolean|一个值，指示是使用每列的 `DefaultCodePage` 属性的值，还是尝试从每列的区域设置中派生代码页。 此属性的默认值为 `False`。|  
 |CommandTimeout|Integer|SQL 命令在超时前可以运行的最大秒数。如果值为 0，则表示不限制时间。 此属性的默认值为 0。<br /><br /> 注意：此属性未在 OLE DB 目标编辑器中提供，但可以使用“高级编辑器”进行设置   。|  
 |DefaultCodePage|Integer|与 OLE DB 目标关联的默认代码页。|  
-|FastLoadKeepIdentity|Boolean|该值指定加载数据时是否复制标识值。 此属性仅对其中一个快速加载选项可用。 此属性的默认值为 `False`。 此属性对应于 OLE DB 的[IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)属性`SSPROP_FASTLOADKEEPIDENTITY`。|  
-|FastLoadKeepNulls|Boolean|一个值，指定加载数据时是否复制 Null 值。 此属性仅对其中一个快速加载选项可用。 此属性的默认值为 `False`。 此属性对应于 OLE DB 的[IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)属性`SSPROP_FASTLOADKEEPNULLS`。|  
+|FastLoadKeepIdentity|Boolean|该值指定加载数据时是否复制标识值。 此属性仅对其中一个快速加载选项可用。 此属性的默认值为 `False`。 此属性对应于 OLE DB 的[IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)属性 `SSPROP_FASTLOADKEEPIDENTITY` 。|  
+|FastLoadKeepNulls|Boolean|一个值，指定加载数据时是否复制 Null 值。 此属性仅对其中一个快速加载选项可用。 此属性的默认值为 `False`。 此属性对应于 OLE DB 的[IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)属性 `SSPROP_FASTLOADKEEPNULLS` 。|  
 |FastLoadMaxInsertCommitSize|Integer|一个值，指定 OLE DB 目标在快速加载操作期间尝试提交的批大小。 默认值 **0**指示处理所有的行后的单个提交操作。|  
-|FastLoadOptions|String|快速加载选项的集合。 快速加载选项包括锁定表和检查约束。 可以指定其中的一个，或同时指定两个，或不指定其中的任何一个。 此属性对应于 OLE DB IRowsetFastLoad 属性`SSPROP_FASTLOADOPTIONS` ，并接受字符串选项，例如`CHECK_CONSTRAINTS`和`TABLOCK`。<br /><br /> 注意：此属性的某些选项未在 Excel 目标编辑器  中提供，但可以使用“高级编辑器”  进行设置。|  
-|OpenRowset|String|当 AccessMode 为`OpenRowset`时，OLE DB 目标访问的表或视图的名称。|  
-|OpenRowsetVariable|String|当 AccessMode 为`OpenRowset from Variable`时，为包含 OLE DB 目标访问的表或视图名称的变量的名称。|  
-|SqlCommand|String|当 AccessMode 为`SQL Command`时，OLE DB 目标用来指定数据的目标列的 transact-sql 语句。|  
+|FastLoadOptions|String|快速加载选项的集合。 快速加载选项包括锁定表和检查约束。 可以指定其中的一个，或同时指定两个，或不指定其中的任何一个。 此属性对应于 OLE DB IRowsetFastLoad 属性 `SSPROP_FASTLOADOPTIONS` ，并接受字符串选项，例如 `CHECK_CONSTRAINTS` 和 `TABLOCK` 。<br /><br /> 注意：此属性的某些选项未在 Excel 目标编辑器  中提供，但可以使用“高级编辑器”  进行设置。|  
+|OpenRowset|String|当 AccessMode 为时 `OpenRowset` ，OLE DB 目标访问的表或视图的名称。|  
+|OpenRowsetVariable|String|当 AccessMode 为时 `OpenRowset from Variable` ，为包含 OLE DB 目标访问的表或视图名称的变量的名称。|  
+|SqlCommand|String|当 AccessMode 为时 `SQL Command` ，OLE DB 目标用来指定数据的目标列的 transact-sql 语句。|  
   
  OLE DB 目标的输入和输入列没有自定义属性。  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bb389073-e1d0-4794-8d29-c8b293b6a5e3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fc66918159a880b68b76acd027f81458149cc351
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c40f1ae32040909f52a6a5a9b823fb53f9337221
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894996"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967257"
 ---
 # <a name="raising-events-in-the-script-component"></a>在脚本组件中引发事件
   事件提供向包含包报告错误、警告和其他信息（如任务进度或状态）的方式。 包为管理事件通知提供事件处理程序。 脚本组件可以通过对 `ScriptMain` 类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 属性调用方法来引发事件。 有关 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包如何处理事件的详细信息，请参阅 [Integration Services (SSIS) 事件处理程序](../../integration-services-ssis-event-handlers.md)。  

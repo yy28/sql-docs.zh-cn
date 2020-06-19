@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2c5509699945db857bd0b763192c7aea21ac90da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80126a2f1955356ae451e2f1092869e962674689
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771198"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922468"
 ---
 # <a name="specify-an-interval-of-change-data"></a>指定变更数据的间隔
   在用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流中，第一个任务是计算变更数据的端点。 这些端点是 `datetime` 值，将存储在包变量中以供以后在包中使用。  
@@ -73,7 +72,7 @@ ms.locfileid: "62771198"
   
 -   **计算起始日期和时间**。 将上一次加载的结束日期和时间作为当前的起始日期和时间。 如果对增量加载使用固定间隔，则可使用 Transact-SQL 或 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 表达式语言的 `datetime` 函数来计算此值。 否则，您可能需要保持两个执行之间的端点，并使用执行 SQL 任务或脚本任务来加载上一个端点。  
   
--   **计算结束日期和时间**。 如果对增量加载使用固定间隔，则可将当前的结束日期和时间作为起始日期和时间的偏移量来计算。 同样，可以使用 Transact-sql 或`datetime` [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]表达式语言的函数来计算此值。  
+-   **计算结束日期和时间**。 如果对增量加载使用固定间隔，则可将当前的结束日期和时间作为起始日期和时间的偏移量来计算。 同样，可以使用 `datetime` transact-sql 或表达式语言的函数来计算此值 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。  
   
  在下面的过程中，变更间隔使用固定间隔，并假定无例外的情况下增量加载包每天运行。 否则，缺失间隔的变更数据会丢失。 此间隔的起始点是前天午夜，即 24 小时和 48 小时之前。 此间隔的结束点是昨天午夜，即，昨天晚上，0 和 24 小时之前。  
   

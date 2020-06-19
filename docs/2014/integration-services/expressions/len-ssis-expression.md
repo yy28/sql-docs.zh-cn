@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d961398b-e4d0-4936-be17-8f4c5882a640
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a8bcaeb04bdc2ff8b37860ffc434d2e188436411
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 605b6cc30d0b711239c6005e6fc8474aff05b7d3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769073"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967307"
 ---
 # <a name="len-ssis-expression"></a>LEN（SSIS 表达式）
   返回字符表达式中的字符数。 如果字符串中包含前导空格和尾随空格，则函数会将它们包含在计数内。 LEN 对相同的单字节和双字节字符串返回相同的值。  
