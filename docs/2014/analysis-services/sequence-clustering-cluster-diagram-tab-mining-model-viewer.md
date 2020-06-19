@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4b705397-9af4-4678-9eda-149bc5d762fa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d8cff96e3ed2d36db93abb3583a08b5c9d8153d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a3e27ccc67858edd8e1f95bb910300a93a3e0db8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069105"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940748"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>顺序分析和聚类分析的“分类关系图”选项卡（挖掘模型查看器）
   **“Microsoft 顺序分析和聚类分析查看器”** 中的 **“分类关系图”** 选项卡提供顺序分析和聚类分析模型包含的所有分类的图形化视图。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 64479cdc-661a-4e32-a381-8f8b5a238337
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b5b2b43d899041d501039ade4d0493a7fdbf0164
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1e91b1b3af5c8531800f60478a4cb31d31ac3fbc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094629"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054745"
 ---
 # <a name="install-distributed-replay-setup"></a>安装 Distributed Replay（安装程序）
   使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Distributed Replay 功能。 在计划安装这些功能的位置时，请考虑以下方面：  
@@ -33,9 +32,9 @@ ms.locfileid: "66094629"
 -   在安装后，控制器服务（即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 控制器）必须首先运行，然后才能在客户端启动 Distributed Replay 客户端服务。  
   
 > [!NOTE]  
->  若要删除或更改 Distributed Replay 功能，请使用 **“控制面板”** 中的 Windows **“程序和功能”** 窗口。 在“卸载或更改程序” [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 窗口中选择 **** ，然后单击 **“删除”** 以便打开 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导。 在 **“选择功能”** 页上，选中要删除的 Distributed Replay 功能。  
+>  若要删除或更改 Distributed Replay 功能，请使用 **“控制面板”** 中的 Windows **“程序和功能”** 窗口。 在“卸载或更改程序” [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 窗口中选择  ，然后单击 **“删除”** 以便打开 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导。 在 **“选择功能”** 页上，选中要删除的 Distributed Replay 功能。  
   
- **先决条件**  
+ **先决条件：**  
   
 -   请确保您要使用的计算机满足在 [Distributed Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)主题中介绍的要求。  
   
@@ -54,15 +53,15 @@ ms.locfileid: "66094629"
   
      \- 或 -  
   
-     \<Share Feature Directory>\Tools\\（用户提供的替代共享功能目录）  
+     \<Share Feature Directory>\Tools \\ （用户提供的替代共享功能目录）  
   
 -   在 64 位系统上：  
   
-     C:\Program Files\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （x86） \120\Tools  
+     C:\Program Files \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （x86） \120\Tools  
   
      \- 或 -  
   
-     \<Share Feature Directory (x86)>\Tools\\（用户提供的替代共享功能 (x86) 目录）  
+     \<Share Feature Directory (x86)>\Tools \\ （用户提供的替代共享功能（x86）目录）  
   
 ### <a name="to-install-distributed-replay-features"></a>安装 Distributed Replay 功能  
   
@@ -72,27 +71,27 @@ ms.locfileid: "66094629"
   
 3.  在 **“产品密钥”** 页上，选择某一选项按钮，该按钮指示您是安装免费版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，还是安装具有 PID 密钥的产品的生产版本。 有关详细信息，请参阅[SQL Server 2014 的版本和组件](../editions-and-components-of-sql-server-2016.md)。  
   
-4.  在 "**许可条款**" 页上，阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 为了帮助改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您还可以启用功能使用情况选项并将报告发送给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。  
+4.  在 **“许可条款”** 页上阅读许可协议，然后选中相应的复选框以接受许可条款和条件。 为了帮助改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您还可以启用功能使用情况选项并将报告发送给 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。  
   
 5.  在 **“安装程序支持文件”** 页，单击 **“安装”** 以便安装或更新 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的安装程序支持文件。  
   
-6.  在 **“设置角色”** 页上，选择 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能安装”**，然后单击 **“下一步”** 以继续进入 **“功能选择”** 页。  
+6.  在 **“设置角色”** 页上，选择 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能安装”** ，然后单击 **“下一步”** 以继续进入 **“功能选择”** 页。  
   
 7.  在 **“功能选择”** 页上，配置要安装的功能。  
   
-    -   若要安装管理工具，请选择“管理工具 - 基本”****。  
+    -   若要安装管理工具，请选择“管理工具 - 基本”  。  
   
-    -   若要安装控制器服务，请选择 **“Distributed Replay 控制器”**。  
+    -   若要安装控制器服务，请选择 **“Distributed Replay 控制器”** 。  
   
-    -   若要安装客户端服务，请选择 **“Distributed Replay 客户端”**。  
+    -   若要安装客户端服务，请选择 **“Distributed Replay 客户端”** 。  
   
-     **重要提示**：配置 Distributed Replay 控制器时，可以指定一个或多个将用于运行 Distributed Replay 客户端服务的用户帐户。 下面是支持的帐户的列表：  
+     **重要说明**：在你配置 Distributed Replay 控制器时，可以指定将用于运行 Distributed Replay 客户端服务的一个或多个用户帐户。 下面是支持的帐户的列表：  
   
     -   域用户帐户  
   
     -   用户创建的本地用户帐户  
   
-    -   Administrator  
+    -   管理员  
   
     -   虚拟帐户和 MSA（托管服务帐户）  
   
@@ -102,21 +101,21 @@ ms.locfileid: "66094629"
   
 8.  （可选）单击省略号 (...) 按钮，以更改共享功能目录路径。  
   
-    1.  在32位计算机上，默认安装路径为**C:\Program Files\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **  
+    1.  在 32 位计算机上，默认安装路径为 **C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-    2.  在64位计算机上，默认安装路径为**C:\Program Files （\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] x86）**  
+    2.  在 64 位计算机上，默认安装路径为 C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\   
   
-9. 完成后，单击“下一步”****。  
+9. 完成后，单击“下一步”。   
   
-10. 在 **“安装规则”** 页上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将验证您的计算机配置。 在验证过程完成后，单击 **“下一步”**。  
+10. 在 **“安装规则”** 页上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将验证您的计算机配置。 在验证过程完成后，单击 **“下一步”** 。  
   
-11. "**磁盘空间要求**" 页计算指定的功能所需的磁盘空间。 然后将所需空间与可用磁盘空间进行比较。  
+11. **“磁盘空间要求”** 页计算指定的功能所需的磁盘空间， 然后将所需空间与可用磁盘空间进行比较。  
   
 12. 在 **“错误报告”** 页上，指定要发送到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 以帮助改进 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的信息。 默认情况下，将启用用于错误报告的选项。  
   
 13. 在 **“安装配置规则”** 页上，系统配置检查器将运行多组规则来针对您指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能对您的计算机配置进行验证。  
   
-14. 在 **“准备安装程序”** 页上，单击 **“安装”**。  
+14. 在 **“准备安装程序”** 页上，单击 **“安装”** 。  
   
     > [!IMPORTANT]  
     >  安装 Distributed Replay 之后，您必须在控制器和客户端计算机上创建防火墙规则，并授予每台客户端计算机对目标服务器的权限。 有关详细信息，请参阅 [完成安装后步骤](../../tools/distributed-replay/complete-the-post-installation-steps.md)。  
@@ -132,9 +131,9 @@ ms.locfileid: "66094629"
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 2014 的各个版本支持的功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay 要求](../../tools/sql-server-profiler/replay-requirements.md)   
- [管理工具命令行选项 &#40;Distributed Replay 实用工具&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [SQL Server 分布式重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [Distributed Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)   
+ [管理工具命令行选项（Distributed Replay 实用工具）](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [配置 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

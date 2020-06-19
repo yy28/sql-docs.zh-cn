@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 13c1acf24212a236eae5e377a7febfd398e579c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 251e4c6e2e2adc60c838c7875d5d7d99aee64b54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022018"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068520"
 ---
 # <a name="publication-information-all-subscriptions-merge-publication"></a>发布信息，所有订阅（合并发布）
   “所有订阅”**** 选项卡显示所选合并发布的所有订阅的相关信息。  
@@ -38,7 +37,7 @@ ms.locfileid: "63022018"
  **显示**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]仅限和更高版本。 为所选订阅类型选择要显示的订阅状态。 例如，可以选择仅显示包含错误的订阅。  
   
- **状态**  
+ **Status**  
  每个订阅的状态，这取决于合并代理的状态。  
   
  默认情况下，包含订阅信息的网格按 **“状态”** 列排序（对于具有相同状态的订阅，再按 **“性能”** 列排序）。 下面的列表显示了可能的状态值以及这些值的排序顺序（例如，错误项始终显示在该网格的顶部）：  
@@ -71,7 +70,7 @@ ms.locfileid: "63022018"
  **友好名称**  
  仅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。 每个订阅的说明。 此说明是在 **“订阅属性”** 对话框中输入的，或是用 **@description** 或 [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) 的 [@description](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)。 用户通常将说明用作订阅的“友好名称”或别名。  
   
- **性能**  
+ **“性能”**  
  仅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。 每个订阅的性能等级，这是基于复制监视器对传送速率的最新度量值来确定的。 对于具有相同连接类型（拨号或 LAN）的发布的订阅，通过将单独的订阅性能与其平均历史性能进行比较，可以确定性能等级。 如果通过同一类型的连接进行了五次同步，且每次同步都进行了 50 处或更多的更改，则复制监视器将在此列中显示一个值。 如果所做更改为 50 处或更多处的同步次数少于五次，或最近一次同步所做的更改少于 50 处，则此列为空白。  
   
 > [!NOTE]  
@@ -79,13 +78,13 @@ ms.locfileid: "63022018"
   
  性能等级可以为以下值之一：  
   
--   很好  
+-   优秀  
   
 -   好  
   
 -   一般  
   
--   较差  
+-   差  
   
  有关如何定义性能等级以及如何设置性能阈值的详细信息，请参阅[使用复制监视器监视性能](monitor/monitor-performance-with-replication-monitor.md)。  
   
@@ -98,7 +97,7 @@ ms.locfileid: "63022018"
  **持续时间**  
  上次同步过程中合并代理运行所用的时间。 如果合并代理当前正在同步，该时间表示已运行的时间；如果合并代理之前已经同步，该时间则表示上次同步所用的总时间。  
   
- **连接**  
+ **Connection**  
  仅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本。 订阅服务器与发布服务器之间的连接类型。 可能的值包括 **LAN**、 **“拨号”** 和 **Internet**。 如果订阅使用 Web 同步，则会显示 **Internet** 值。  
   
 ## <a name="see-also"></a>另请参阅  

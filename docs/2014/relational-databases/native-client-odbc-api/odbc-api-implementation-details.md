@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dae96ba17ee792b703e96ceff2200d1f8f629a01
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b8b27d39327a68a150fe42a0d6f152bd34c0dd4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706408"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022931"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API 实现细节
   本节介绍了与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序一起使用时呈现 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定行为的 ODBC 函数。 此处只介绍部分 ODBC 函数。 各个单独的主题只讨论 ODBC 函数的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定问题， 它们不提供 ODBC 函数的完整参考资料。  

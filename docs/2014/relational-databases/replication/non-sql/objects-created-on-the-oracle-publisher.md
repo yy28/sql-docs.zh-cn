@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 99e1d1f0692e5460e2c7003b0ab8dca860deca4f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50580bcb80e58b73931fd867a1be83cac58a9911
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022147"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068578"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Objects Created on the Oracle Publisher
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]复制会将数据库对象安装在 Oracle 发布服务器上以启用更改跟踪[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]和转发（不会在 Oracle 发布服务器上安装任何二进制文件）。 下表列出了在将 Oracle 发布服务器标识为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上的发布服务器时，在其上所创建的对象。 对象说明仅供参考。 不应对这些对象做任何修改。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]复制会将数据库对象安装在 Oracle 发布服务器上以启用更改跟踪和转发（不 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 会在 Oracle 发布服务器上安装任何二进制文件）。 下表列出了在将 Oracle 发布服务器标识为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上的发布服务器时，在其上所创建的对象。 对象说明仅供参考。 不应对这些对象做任何修改。  
   
 |对象名称|对象类型|说明|  
 |-----------------|-----------------|-----------------|  

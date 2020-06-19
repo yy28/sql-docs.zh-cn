@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ec30df18fd50118d8698490f24f6ee65621d3b12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f0c7a9c9b78455059550d4b75ad5f4da8c68d7a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176247"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968540"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>使用脚本组件创建异步转换
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中使用转换组件可以在数据从源传递到目标时修改和分析该数据。 具有同步输出的转换在每个输入行传递给该组件时对该行进行处理。 具有异步输出的转换可能要等收到所有输入行之后才完成其处理，也可能在收到所有输入行之前输出某些行。 本主题讨论异步转换。 如果你的处理需要同步转换，请参阅[使用脚本组件创建同步转换](../data-flow/transformations/script-component.md)。 有关同步组件和异步组件之间的差异的详细信息，请参阅[了解同步和异步转换](../understanding-synchronous-and-asynchronous-transformations.md)。
@@ -36,26 +35,26 @@ ms.locfileid: "78176247"
 ## <a name="configuring-an-asynchronous-transformation-component-in-metadata-design-mode"></a>在元数据设计模式下配置异步转换组件
  选择创建转换组件的选项后，可使用“脚本转换编辑器”  配置该组件。 有关详细信息，请参阅[在脚本组件编辑器中配置脚本组件](../extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。
 
- 若要选择脚本组件使用的脚本语言，请在“脚本转换编辑器”  对话框的“脚本”  页设置 **ScriptLanguage** 属性。
+ 若要选择脚本组件使用的脚本语言，请在“脚本转换编辑器”对话框的“脚本”页设置 **ScriptLanguage** 属性。
 
 > [!NOTE]
->  若要设置脚本组件的默认脚本语言，请使用“选项”  对话框的“常规”  页上的“脚本语言”  选项。 有关详细信息，请参阅 [General Page](../general-page-of-integration-services-designers-options.md)。
+>  若要设置脚本组件的默认脚本语言，请使用“选项”对话框的“常规”页上的“脚本语言”选项。 有关详细信息，请参阅 [General Page](../general-page-of-integration-services-designers-options.md)。
 
  数据流转换组件有一个输入并支持一个或多个输出。 在编写自定义脚本之前，必须在元数据设计模式下完成的一个步骤是使用“脚本转换编辑器”  配置组件的输入和输出。
 
 ### <a name="configuring-input-columns"></a>配置输入列
  使用脚本组件创建的转换组件只有一个输入。
 
- 在“脚本转换编辑器”  的“输入列”  页上，列列表显示数据流上游组件输出中的可用列。 选择要转换或传递的列。 将要就地转换的所有列标记为读/写。
+ 在“脚本转换编辑器”的“输入列”页上，列列表显示数据流上游组件输出中的可用列。 选择要转换或传递的列。 将要就地转换的所有列标记为读/写。
 
- 有关“脚本转换编辑器”  的“输入列”  页的详细信息，请参阅[脚本转换编辑器（“输入列”页）](../script-transformation-editor-input-columns-page.md)。
+ 有关“脚本转换编辑器”的“输入列”页的详细信息，请参阅[脚本转换编辑器（“输入列”页）](../script-transformation-editor-input-columns-page.md)。
 
 ### <a name="configuring-inputs-outputs-and-output-columns"></a>配置输入、输出和输出列
  转换组件支持一个或多个输出。
 
  通常，具有异步输出的转换有两个输出。 例如，在您对位于特定城市中的地址进行计数时，可以将地址数据传递给一个输出，同时将聚合结果发送给另一个输出。 聚合输出还需要一个新的输出列。
 
- 在“脚本转换编辑器”  的“输入和输出”  页中，可以看到已经默认创建了一个输出，但是还没有创建任何输出列。 可以在编辑器的这一页配置下列各项：
+ 在“脚本转换编辑器”的“输入和输出”页中，可以看到已经默认创建了一个输出，但是还没有创建任何输出列。 可以在编辑器的这一页配置下列各项：
 
 -   您可能希望创建一个或多个附加输出，如聚合结果的输出。 使用“添加输出”  和“删除输出”  按钮管理异步转换组件的输出。 将每个输出的 `SynchronousInputID` 属性设置为零可以指示该输出不只是传递来自上游组件的数据或在现有行和列中就地对该数据进行转换。 此设置使输出和输入异步。
 
@@ -65,28 +64,28 @@ ms.locfileid: "78176247"
 
 -   您可以添加更多列来包含其他信息。 您必须编写自己的代码来向这些附加列填充数据。 有关重现标准错误输出行为的信息，请参阅[模拟脚本组件的错误输出](../extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)。
 
- 有关“脚本转换编辑器”  的“输入和输出”  页上的详细信息，请参阅[脚本转换编辑器（“输入和输出”页）](../script-transformation-editor-inputs-and-outputs-page.md)。
+ 有关“脚本转换编辑器”的“输入和输出”页上的详细信息，请参阅[脚本转换编辑器（“输入和输出”页）](../script-transformation-editor-inputs-and-outputs-page.md)。
 
 ### <a name="adding-variables"></a>添加变量
- 如果要在脚本中使用任何现有变量的值，可以在“脚本转换编辑器”  的“脚本”  页上的 ReadOnlyVariables 和 ReadWriteVariables 属性字段中添加这些变量。
+ 如果要在脚本中使用任何现有变量的值，可以在“脚本转换编辑器”的“脚本”页上的 ReadOnlyVariables 和 ReadWriteVariables 属性字段中添加这些变量。
 
- 在属性字段中添加多个变量时，请用逗号将变量名隔开。 您还可以选择多个变量，方法是单击 **...** `ReadOnlyVariables`和`ReadWriteVariables`属性字段旁的省略号（...）按钮，然后在 "**选择变量**" 对话框中选择变量。
+ 在属性字段中添加多个变量时，请用逗号将变量名隔开。 您还可以选择多个变量，方法是单击和属性字段旁的省略号（**...**）按钮 `ReadOnlyVariables` `ReadWriteVariables` ，然后在 "**选择变量**" 对话框中选择变量。
 
  有关如何在脚本组件中使用变量的常规信息，请参阅[在脚本组件中使用变量](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。
 
- 有关“脚本转换编辑器”的“脚本”页的详细信息，请参阅[脚本转换编辑器（“脚本”页）](../script-transformation-editor-script-page.md)   。
+ 有关“脚本转换编辑器”的“脚本”页的详细信息，请参阅[脚本转换编辑器（“脚本”页）](../script-transformation-editor-script-page.md)。
 
 ## <a name="scripting-an-asynchronous-transformation-component-in-code-design-mode"></a>在代码设计模式下编写异步转换组件脚本
- 为组件配置完所有元数据后，可以编写自定义脚本。 在“脚本转换编辑器”的“脚本”页面中，单击“编辑脚本”打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，可在其中添加自定义脚本    。 编写脚本所使用的语言取决于为“脚本”  页上的 **ScriptLanguage** 属性选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 还是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 作为脚本语言。
+ 为组件配置完所有元数据后，可以编写自定义脚本。 在“脚本转换编辑器”的“脚本”页面中，单击“编辑脚本”打开 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，可在其中添加自定义脚本    。 编写脚本所使用的语言取决于为“脚本”页上的 **ScriptLanguage** 属性选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 还是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 作为脚本语言。
 
  有关适用于使用脚本组件创建的所有组件类型的重要信息，请参阅[脚本组件的编码和调试](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)。
 
 ### <a name="understanding-the-auto-generated-code"></a>了解自动生成的代码
- 创建并配置转换组件后打开 VSTA IDE 时，可编辑`ScriptMain`的类将显示在代码编辑器中，其中包含 ProcessInputRow 和 CreateNewOutputRows 方法的存根。 在 ScriptMain 类中可编写自定义代码，ProcessInputRow 是转换组件中最重要的方法。  方法通常在源组件中使用，该组件与异步转换相似，因为这两个组件都必须创建自己的输出行。
+ 创建并配置转换组件后打开 VSTA IDE 时，可编辑的 `ScriptMain` 类将显示在代码编辑器中，其中包含 ProcessInputRow 和 CreateNewOutputRows 方法的存根。 在 ScriptMain 类中可编写自定义代码，ProcessInputRow 是转换组件中最重要的方法。  方法通常在源组件中使用，该组件与异步转换相似，因为这两个组件都必须创建自己的输出行。
 
- 如果打开 VSTA 的 "**项目资源管理器**" 窗口，可以看到脚本组件还生成了只读`BufferWrapper`和`ComponentWrapper`项目项。 ScriptMain 类从`ComponentWrapper`项目项中的 UserComponent 类继承。
+ 如果打开 VSTA 的 "**项目资源管理器**" 窗口，可以看到脚本组件还生成了只读 `BufferWrapper` 和 `ComponentWrapper` 项目项。 ScriptMain 类从项目项中的 UserComponent 类继承 `ComponentWrapper` 。
 
- 在运行时，数据流引擎调用`UserComponent`类中的 PrimeOutput 方法，该方法重写<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>父类的方法。 PrimeOutput 方法又调用 CreateNewOutputRows 方法。
+ 在运行时，数据流引擎调用类中的 PrimeOutput 方法 `UserComponent` ，该方法重写父类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> 方法 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 。 PrimeOutput 方法又调用 CreateNewOutputRows 方法。
 
  随后，数据流引擎调用 UserComponent 类中的 ProcessInput 方法，该方法替代 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 父类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 方法。 而 ProcessInput 方法遍历输入缓冲区中的所有行并为每一行调用一次 ProcessInputRow 方法。
 
@@ -95,7 +94,7 @@ ms.locfileid: "78176247"
 
  在异步转换中，可以根据需要在 ProcessInputRow 或 ProcessInput 方法中使用 AddRow 方法向输出添加行。 不一定要使用 CreateNewOutputRows 方法。 如果要将单行结果（如聚合结果）写入特定输出，可以使用 CreateNewOutputRows 方法预先创建该输出行，然后在处理完所有输入行之后填充其值。 但是，在 CreateNewOutputRows 方法中创建多个行是没有任何用处的，因为脚本组件只允许使用输入或输出中的当前行。 CreateNewOutputRows 方法在源组件中更重要，源组件没有任何输入行要处理。
 
- 可能还需要重写 ProcessInput 方法本身，以便在遍历输入缓冲区并为每行调用 ProcessInputRow 之前或之后执行附加的预处理或最终处理。 例如，本主题中的其中一个代码示例重写 ProcessInput，以将特定城市中的地址数计算为 ProcessInputRow 循环通过行`.` ，示例在处理完所有行后，将汇总值写入到第二个输出。 该示例在 ProcessInput 中完成输出，原因是调用 PostExecute 时，输出缓冲区不再可用。
+ 可能还需要重写 ProcessInput 方法本身，以便在遍历输入缓冲区并为每行调用 ProcessInputRow 之前或之后执行附加的预处理或最终处理。 例如，本主题中的其中一个代码示例重写 ProcessInput，以将特定城市中的地址数计算为 ProcessInputRow 循环通过行 `.` ，示例在处理完所有行后，将汇总值写入到第二个输出。 该示例在 ProcessInput 中完成输出，原因是调用 PostExecute 时，输出缓冲区不再可用。
 
  根据用户的要求，可能还需要在 ScriptMain 类中可用的 PreExecute 和 PostExecute 方法中编写脚本来执行任何预处理或最终处理。
 

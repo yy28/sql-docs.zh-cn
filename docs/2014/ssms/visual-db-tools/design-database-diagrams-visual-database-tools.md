@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d2c14e1-3d73-4d10-ae5b-7f2b5d6c4ea8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e348ace954e19c3e213c7de1779cbfbcb1768887
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 78c8bb22ba6fdeb9e39b7173c4975af22d5124a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316085"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044432"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>设计数据库关系图 (Visual Database Tools)
   数据库设计器是一种可视化工具，它允许您对所连接的数据库进行设计和可视化处理。 设计数据库时，您可以使用数据库设计器创建、编辑或删除表、列、键、索引、关系和约束。 为使数据库可视化，您可创建一个或多个关系图，以显示数据库中的部分或全部表、列、键和关系。  

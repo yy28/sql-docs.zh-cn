@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b1f285243e2b925cca9d263a53c9b70087ea5d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022250"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068586"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers
   下列非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器可通过推送订阅来订阅快照发布和事务发布。 支持所列每个数据库的两个最新版本使用所列 OLE DB 访问接口的最新版本进行订阅。  
@@ -49,7 +48,7 @@ ms.locfileid: "63022250"
   
 -   复制支持将表和索引视图作为表发布到非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器（索引视图不能作为索引视图复制）。  
   
--   在新建发布向导中创建发布，然后使用 "发布属性" 对话框为非 SQL Server 订阅服务器启用该发布时，不会为非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]订阅服务器指定订阅数据库中所有对象的所有者，而对于[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]订阅服务器，则会将其设置为发布数据库中相应对象的所有者。  
+-   在新建发布向导中创建发布，然后使用 "发布属性" 对话框为非 SQL Server 订阅服务器启用该发布时，不会为非订阅服务器指定订阅数据库中所有对象的所有者， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 而对于 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器，则会将其设置为发布数据库中相应对象的所有者。  
   
 -   如果发布中将包括 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器和非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器，则必须在创建对[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器的任何订阅之前为非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器启用发布。  
   

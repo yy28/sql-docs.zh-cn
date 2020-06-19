@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 940b33cda3158e98c9fee519ea12f1193e615bca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fcc6ee3ddf9be072b51bd568fd3e72eb6c871785
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62642586"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054551"
 ---
 # <a name="lesson-2-configuring-permissions-on-database-objects"></a>第 2 课：配置数据库对象的权限
   授予用户访问数据库的权限涉及三个步骤。 首先，创建登录名。 使用登录名，用户可以连接到 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]。 然后将登录名配置为指定数据库中的用户。 最后，授予该用户访问数据库对象的权限。 本课介绍了这三个步骤，并介绍了如何将视图和存储过程创建为对象。  

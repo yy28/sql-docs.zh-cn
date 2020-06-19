@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 23f45c0a2e47381b60fe8f6852f24fd8f5f200fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48dcf9d22686aa87f267304fe844a1989fe4e24c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211014"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007037"
 ---
 # <a name="sqlservr-application"></a>sqlservr 应用程序
-  sqlservr  应用程序可以在命令提示符下启动、停止、暂停和继续 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例。  
+  sqlservr 应用程序可以在命令提示符下启动、停止、暂停和继续 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例。  
   
 ## <a name="syntax"></a>语法  
   
@@ -61,7 +60,7 @@ ms.locfileid: "68211014"
  以最小配置启动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 在配置值的设置（例如，过度分配内存）妨碍服务器启动时，这非常有用。  
   
  **-e** _error_log_path_  
- 指示错误日志文件的完全限定路径。 如果未指定，则默认位置为默认实例的* \<驱动器>*： \Program Files\Microsoft sql Server\MSSQL\Log\Errorlog; 对于命名实例，默认位置为* \<驱动器>*： \Program Files\Microsoft sql Server\MSSQL $*instance_name*\Log\Errorlog。 在 **-e** 和 *error_log_path*之间没有空格。  
+ 指示错误日志文件的完全限定路径。 如果未指定此值，则默认位置为 *\<Drive>* ： \Program FILES\MICROSOFT sql Server\MSSQL\Log\Errorlog （对于默认实例），对于 *\<Drive>* 命名实例为： \PROGRAM Files\Microsoft sql Server\MSSQL $*instance_name*\Log\Errorlog。 在 **-e** 和 *error_log_path*之间没有空格。  
   
  **-l** _master_log_path_  
  指示 **master** 数据库事务日志文件的完全限定路径。 **-l** 与 *master_log_path*之间没有空格。  
@@ -76,7 +75,7 @@ ms.locfileid: "68211014"
  指示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例启动时，指定的跟踪标志 (*trace#*) 应同时生效。 跟踪标记用于以非标准行为启动服务器。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)。  
   
 > [!IMPORTANT]  
->  指定跟踪标志时，请使用 **-T** 来传递跟踪标志号。 **接受小写的 t (**-t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])；但是 **-t** 通常用于设置 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持工程师所需的其他内部跟踪标志。  
+>  指定跟踪标志时，请使用 **-T** 来传递跟踪标志号。 **接受小写的 t (** -t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])；但是 **-t** 通常用于设置 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持工程师所需的其他内部跟踪标志。  
   
  **-v**  
  显示服务器的版本号。  
@@ -91,9 +90,9 @@ ms.locfileid: "68211014"
   
  除非你在 **错误日志中看到下列任何警告，否则请使用** -g [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 参数的默认值：  
   
--   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_RESERVE \<size>"  
+-   "虚拟分配字节失败： FAIL_VIRTUAL_RESERVE \<size> "  
   
--   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT \<size>"  
+-   "虚拟分配字节失败： FAIL_VIRTUAL_COMMIT \<size> "  
   
  这些消息可能指示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 尝试释放部分 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 内存池空间，以便为扩展存储过程 .dll 文件或自动化对象等项留出空间。 在这种情况下，可以考虑增加由 **-g**``开关保留的内存量。  
   

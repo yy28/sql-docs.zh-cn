@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a9b51e0fc192c94b32b4d496523dbf3c9216efd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b9385d9b801ee615a377a78a44e087589a581ac
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873816"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953471"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 集成编程模型限制
-  在生成托管存储过程或其他托管数据库对象时，通过[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]在数据库中首次注册、使用`CREATE ASSEMBLY`语句以及在运行时执行检查，可执行某些代码检查。 在运行时也将检查托管代码，这是因为在程序集中，也许存在在运行时实际上可能永远无法访问的代码路径。  这样一来，在注册第三方程序集时尤其灵活，因为，当存在专门在客户端环境下运行而从不在承载的 CLR 中执行的“不安全”代码时，不会阻塞程序集。 托管代码必须满足的要求取决于该程序集是注册`SAFE`为、 `EXTERNAL_ACCESS`还是， `UNSAFE` `SAFE`还是最严格的，如下所示。  
+  在生成托管存储过程或其他托管数据库对象时，通过在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中首次注册、使用 `CREATE ASSEMBLY` 语句以及在运行时执行检查，可执行某些代码检查。 在运行时也将检查托管代码，这是因为在程序集中，也许存在在运行时实际上可能永远无法访问的代码路径。  这样一来，在注册第三方程序集时尤其灵活，因为，当存在专门在客户端环境下运行而从不在承载的 CLR 中执行的“不安全”代码时，不会阻塞程序集。 托管代码必须满足的要求取决于该程序集是注册为 `SAFE` 、 `EXTERNAL_ACCESS` 还是 `UNSAFE` ，还是 `SAFE` 最严格的，如下所示。  
   
  除了对托管代码程序集进行了限制，还授予了一些代码安全权限。 公共语言运行时 (CLR) 支持称为代码访问安全性 (CAS) 的托管代码安全模式。 在这种模式下，根据代码的标识来对程序集授予权限。 `SAFE`、`EXTERNAL_ACCESS` 和 `UNSAFE` 程序集具有不同的 CAS 权限。 有关详细信息，请参阅[CLR 集成代码访问安全性](../security/clr-integration-code-access-security.md)。  
   
@@ -37,9 +36,9 @@ ms.locfileid: "62873816"
   
 -   程序集是受支持的程序集之一。 有关详细信息，请参阅[支持的 .NET Framework 库](supported-net-framework-libraries.md)。  
   
--   你使用`CREATE ASSEMBLY FROM` * \<的是位置>，* 并且所有引用的程序集及其依赖项在 " * \<位置">* 中可用。  
+-   你使用的是 `CREATE ASSEMBLY FROM` * \<location> ，* 并且所有引用的程序集及其依赖项都可以在中使用 *\<location>* 。  
   
--   `CREATE ASSEMBLY FROM`*使用\<的是 bytes ... >，* 所有引用都通过以空格分隔的字节来指定。  
+-   你使用的是 `CREATE ASSEMBLY FROM` * \<bytes ...> ，* 并且所有引用都是通过以空格分隔的字节来指定的。  
   
 ### <a name="external_access"></a>EXTERNAL_ACCESS  
  所有 `EXTERNAL_ACCESS` 程序集都必须满足以下条件：  
@@ -86,7 +85,7 @@ ms.locfileid: "62873816"
  在运行时，将针对下列条件检查代码程序集。 如果发现任何一个条件，则将不允许托管代码运行，且将会引发异常。  
   
 ### <a name="unsafe"></a>UNSAFE  
- 不允许通过从字节数组调用`System.Reflection.Assembly.Load()`方法或通过使用`Reflection.Emit`命名空间隐式加载程序集。  
+ `System.Reflection.Assembly.Load()`不允许通过从字节数组调用方法或通过使用命名空间隐式加载程序集 `Reflection.Emit` 。  
   
 ### <a name="external_access"></a>EXTERNAL_ACCESS  
  检查所有 `UNSAFE` 条件。  
@@ -97,7 +96,7 @@ ms.locfileid: "62873816"
   
 -   SelfAffectingThreading  
   
--   Synchronization  
+-   同步  
   
 -   SharedState  
   

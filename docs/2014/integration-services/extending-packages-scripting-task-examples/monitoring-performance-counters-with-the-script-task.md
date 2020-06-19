@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 86609bf1-cae6-435e-a58d-41bdfc521e94
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5de911200c7fbe91c912c7ac7a321f79226b6452
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cd8b10fb17288806234db923e2ed087f2bd27c8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768503"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968497"
 ---
 # <a name="monitoring-performance-counters-with-the-script-task"></a>使用脚本任务监视性能计数器
   管理员可能需要监视对大量数据执行复杂转换的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的性能。   的 System.Diagnostics 命名空间不但提供使用现有性能计数器的类，还提供用于创建自己性能计数器的类[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]。  
@@ -44,7 +43,7 @@ ms.locfileid: "62768503"
   
 #### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
   
--   使用代码`Imports`中的语句导入**系统诊断**命名空间。  
+-   使用 `Imports` 代码中的语句导入**系统诊断**命名空间。  
   
 ### <a name="example-code"></a>示例代码  
   

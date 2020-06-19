@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5f9a94c4-854b-4577-a8b1-7142f19904e3
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 02aaab5056d5e2b095d9440f696edcc77475323e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cba400e1030bb18b3370a023f88d069711a44c7f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78172506"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054842"
 ---
 # <a name="guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm"></a>在 SharePoint 2010 场中使用 SQL Server BI 功能的指南
   本主题总结了基于您所使用的软件版本的功能可用性。 它还介绍了使用特定 SQL Server 功能时对 SharePoint 2010 的安装要求。 有关与 SharePoint 2013 相关的信息，请参阅[sharepoint 中 SQL SERVER BI 功能的部署拓扑](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)。
@@ -45,7 +44,7 @@ ms.locfileid: "78172506"
 
 |支持的功能|SharePoint 产品|
 |------------------------|------------------------|
-|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]是适用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]于 Enterprise Edition 的外接程序的一项功能。<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据警报。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition。|
+|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]，是适用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Enterprise Edition 的外接程序的一项功能 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 。<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据警报。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition。|
 |与 SharePoint 集成的一般 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表查看和功能。|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Standard Edition 和 Enterprise Edition。<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)].|
 
  有关详细信息，请参阅[SQL Server 2012 的各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473)。
@@ -57,7 +56,7 @@ ms.locfileid: "78172506"
 
 -   您要使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具。
 
- 运行的[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SharePoint 安装需要 SP1 的一个主要原因是， [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]版本中不推荐使用的数据库引擎功能**sp_dboption**。 有关详细信息，请参阅[2014 中的废止数据库引擎功能 SQL Server](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)
+ 运行的 SharePoint 安装需要 SP1 的一个主要原因 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 是，版本中不推荐使用的数据库引擎功能**sp_dboption** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 。 有关详细信息，请参阅[2014 中的废止数据库引擎功能 SQL Server](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)
 
 ### <a name="sharepoint-2010-sp1-installation-guidance"></a>SharePoint 2010 SP1 安装指南
  [下载 SharePoint Server 2010 SP1](https://go.microsoft.com/fwlink/?LinkID=219697)并将其应用于场中的所有服务器。
@@ -67,7 +66,7 @@ ms.locfileid: "78172506"
 
 -   **SharePoint 产品配置向导：** 运行向导以完成 SP1 升级和配置。
 
--   **通过 Psconfig 完成升级：** 运行命令`psconfig -upgrade`完成 SP1 升级
+-   **通过 Psconfig 完成升级：** 运行命令 `psconfig -upgrade` 完成 SP1 升级
 
  有关详细信息，请参阅[（Sharepoint Server 2010）](https://technet.microsoft.com/library/cc263093.aspx)和[资源中心： Sharepoint 2010 产品更新](https://technet.microsoft.com/sharepoint/ff800847.aspx)中的 "升级" 部分
 

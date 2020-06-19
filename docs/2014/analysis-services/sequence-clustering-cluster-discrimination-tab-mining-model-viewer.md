@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7dd16479-2633-4f4b-83bf-cf55972a2241
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 914629fca09d4bcffb5ac931316331bbb7e7eebe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 705fb7bfd5fe8df27d39f81ed648f6406b6aa8dd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069138"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940738"
 ---
 # <a name="sequence-clustering-cluster-discrimination-tab-mining-model-viewer"></a>顺序分析和聚类分析的“分类对比”选项卡（挖掘模型查看器）
   **“Microsoft 顺序分析和聚类分析查看器”** 中的 **“分类对比”** 选项卡将比较顺序分析和聚类分析模型中的所选分类。  
@@ -44,16 +43,16 @@ ms.locfileid: "66069138"
   
  如果您不选择其他分类，则默认情况下，所选分类将会与其补数进行比较，这表示模型中不属于分类 1 的所有事例。  
   
- **分类 1> \<和\<分类2的对比分数>**  
+ **和的歧视分数 \<cluster 1>\<cluster 2>**  
  此图表提供所选分类的详细比较。 一般情况下，聚类分析模型很少以独占方式为单个分类分配状态或值。 因此，查看器仅指示特定属性或状态 *倾向于* 某个特定分类。  
   
  总体上而言，某个特定分类可能包含多个状态：例如，常见状态可能为依次购买 Water Bottle 和 Water Bottle Cage。 但是，相应的顺序可能存在于包含更重要的定义特征的其他分类中。 例如，另一个分类最主要的特点可能是事务时间非常短，并且分析表明，Water Bottle 和 Water Bottle Cage 项可能通常分组到此分类中，但并不总是这样。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**变量**|挖掘模型中的属性。|  
 |**值**|**“变量”** 中列出的属性的状态。|  
-|**优先\<分类 1>**|包含一个阴影条，指示 **“变量”** 和 **“值”** 中列出的属性和状态倾向于 **“分类 1”** 中的所选分类的程度。|  
+|**有利\<cluster 1>**|包含一个阴影条，指示 **“变量”** 和 **“值”** 中列出的属性和状态倾向于 **“分类 1”** 中的所选分类的程度。|  
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘算法 &#40;Analysis Services 数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

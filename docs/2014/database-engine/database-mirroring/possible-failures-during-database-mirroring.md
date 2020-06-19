@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a380b3c4f27df6ad9d60fc27f14a4f5072c676a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 25ba1ccc87c024fa3da370f2ff19251a1bee9f30
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874500"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934078"
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Possible Failures During Database Mirroring
   物理故障、操作系统故障或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障都可能导致数据库镜像会话失败。 数据库镜像不会定期检查 Sqlservr.exe 所依赖的组件来验证组件是在正常运行还是已出现故障。 但对于某些类型的故障，受影响的组件将向 Sqlservr.exe 报告错误。 由另一个组件报告的错误称为“硬错误  ”。 为了检测可能未被注意的其他故障，数据库镜像采用了自己的超时机制。 发生镜像超时时，数据库镜像假定已发生故障并声明一个“软错误”  。 然而，某些在 SQL Server 实例级别发生的故障不会导致镜像超时，并且检测不到。  
@@ -98,7 +97,7 @@ ms.locfileid: "70874500"
   
  **更改超时值（仅限于高安全性模式）**  
   
--   使用 [ALTER DATABASE \<database> SET PARTNER TIMEOUT \<integer>](/sql/t-sql/statements/alter-database-transact-sql) 语句。  
+-   使用[ALTER DATABASE \<database> SET PARTNER TIMEOUT \<integer> ](/sql/t-sql/statements/alter-database-transact-sql)语句。  
   
  **查看当前超时值**  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 14c2fff96c89ee696df1a437f958e4560bfab142
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d56f2fd8e72e0cb00555f18288180f674645056e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204541"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044148"
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>表值对象（列）属性 (Visual Database Tools)
   在查询设计器和视图设计器的“关系图”  窗格中选择表值对象中的列时，将显示这些属性。  
@@ -26,7 +25,7 @@ ms.locfileid: "63204541"
 >  本主题中的属性按类别排序，而不是按字母顺序排序。  
   
 > [!NOTE]  
->  根据当前设置或版本的不同，所看到的对话框和菜单命令可能与帮助中描述的对话框和菜单命令有所不同。 若要更改设置，请在“工具”  菜单上选择“导入和导出设置”  。  
+>  根据当前设置或版本的不同，所看到的对话框和菜单命令可能与帮助中描述的对话框和菜单命令有所不同。 若要更改设置，请在“工具”菜单上选择“导入和导出设置”。  
   
  **标识类别**  
  展开此项可显示“名称”  属性。  

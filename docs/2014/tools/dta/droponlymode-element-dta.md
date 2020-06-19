@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 80960676-7581-4074-889b-80ee665963dd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1d449defa98112c87a4b5789f1cff6f764252e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72c3ada0e524287073f1ecf0d5a2fa633566a6c3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62659571"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000309"
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode 元素 (DTA)
   指定数据库引擎优化顾问在优化会话过程中只应考虑删除现有的索引、索引视图或分区。 如果指定了此优化选项，则不考虑任何新物理设计结构。  
@@ -36,11 +35,11 @@ ms.locfileid: "62659571"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|描述|  
+|特征|说明|  
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  
-|**匹配项**|可选。 对于每个 `TuningOptions` 元素只能使用一次。 如果在 `TuningOptions` 元素中指定了下列元素，则不能使用此元素：<br /><br /> [FeatureSet 元素 (DTA)](featureset-element-dta.md)<br /><br /> [分区元素 (DTA)](partitioning-element-dta.md)<br /><br /> 将 [KeepExisting 元素 (DTA)](keepexisting-element-dta.md) 设置为 **ALL**|  
+|**出现次数**|可选。 对于每个 `TuningOptions` 元素只能使用一次。 如果在 `TuningOptions` 元素中指定了下列元素，则不能使用此元素：<br /><br /> [FeatureSet 元素 (DTA)](featureset-element-dta.md)<br /><br /> [分区元素 (DTA)](partitioning-element-dta.md)<br /><br /> 将 [KeepExisting 元素 (DTA)](keepexisting-element-dta.md) 设置为 **ALL**|  
   
 ## <a name="element-relationships"></a>元素关系  
   

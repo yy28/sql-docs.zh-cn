@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4add98b6c085d52238a528c313008bc688ae6e54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee713086be138a204ca5b79f3ec172f8e376ea86
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62829507"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917663"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI 事件观察器任务
   WMI 事件观察器任务以使用 Management Instrumentation 查询语言 (WQL) 事件查询指定所关注事件的方式来监视 Windows Management Instrumentation (WMI) 事件。 可以将 WMI 事件观察器任务用于下列目的：  
@@ -75,7 +74,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 -   定义任务对事件的响应方式。 可根据事件的不同将任务配置为成功或失败，或只是让任务重新监视事件。  
   
--   指定当 WMI 查询超时时任务所执行的操作。可以记录超时和超时后的状态，也可以引发自定义[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]事件，以指示 WMI 事件已超时并记录超时和超时状态。  
+-   指定当 WMI 查询超时时任务所执行的操作。可以记录超时和超时后的状态，也可以引发自定义 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 事件，以指示 WMI 事件已超时并记录超时和超时状态。  
   
 -   定义任务对超时的响应方式。可以将任务配置为成功或失败，或者任务可以立即监视事件。  
   

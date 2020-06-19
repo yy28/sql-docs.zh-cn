@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d8bac9ba8afafa6b5141d90c51f8029f596ba8f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f84048371eac930974ebbd3d0693e25761f9a784
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482622"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961118"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>用于 Microsoft Excel 的 Master Data Services 外接程序
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]利用[!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，可以将引用数据的主列表分发给你组织中使用 Excel 的所有人。 可通过安全权限来确定用户可以查看和更新的数据。  
+  利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] ，可以将引用数据的主列表分发给你组织中使用 Excel 的所有人。 可通过安全权限来确定用户可以查看和更新的数据。  
   
  可以将筛选过的数据列表从 MDS 加载到 Excel 中，从中按照处理任何其他数据的方式来处理加载的数据。 处理完成后，您可以将数据发布回 MDS，这是集中存储数据的位置。  
   

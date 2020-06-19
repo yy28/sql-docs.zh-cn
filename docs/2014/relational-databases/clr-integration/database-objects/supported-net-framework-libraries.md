@@ -12,22 +12,21 @@ helpviewer_keywords:
 ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c2518404830577839bce3e84c4eac9b76c850cd3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0db38e8bf21d56a0fcd35208920b9ee24b583062
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873771"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953467"
 ---
 # <a name="supported-net-framework-libraries"></a>支持的 .NET Framework 库
   借助驻留在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的公共语言运行时 (CLR)，您可以采用托管代码创作存储过程、触发器、用户定义函数、用户定义类型和用户定义聚合。 利用 .NET Framework 类库中的功能，您可以访问提供字符串操作、高级数学运算、文件访问和密码系统等功能的预建类。 可通过任何托管存储过程、用户定义类型、触发器、用户定义函数或用户定义聚合访问这些类。  
   
 > [!NOTE]  
->  如果你在全局程序集缓存（GAC）中服务或升级不受支持[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的程序集，你的。 如果程序集在 CLR 集成中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]同时存在，则为。 如果在 GAC 中提供服务或升级的任何程序集（包括不支持的 .NET Framework 程序集）同时已在数据库中注册，请确保使用 `ALTER ASSEMBLY` 语句对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中的程序集副本同时提供相应服务或升级。 有关详细信息，请参阅[知识库文章 949080](https://support.microsoft.com/kb/949080)。  
+>  如果你在全局程序集缓存（GAC）中服务或升级不受支持的程序集，你的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 如果程序集在 CLR 集成中同时存在，则为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 如果在 GAC 中提供服务或升级的任何程序集（包括不支持的 .NET Framework 程序集）同时已在数据库中注册，请确保使用 `ALTER ASSEMBLY` 语句对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中的程序集副本同时提供相应服务或升级。 有关详细信息，请参阅[知识库文章 949080](https://support.microsoft.com/kb/949080)。  
   
 ## <a name="supported-libraries"></a>支持的库  
- 从开始[!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] ，提供了受支持的 .NET Framework 库列表，已经过测试，可确保它们满足与[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]从全局程序集缓存（GAC）直接加载它们的可靠性和安全性标准。  
+ 从开始 [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] ，提供了受支持的 .NET Framework 库列表，已经过测试，可确保它们满足与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 从全局程序集缓存（GAC）直接加载它们的可靠性和安全性标准。  
   
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，CLR 集成支持的库/命名空间包括：  
   
@@ -39,7 +38,7 @@ ms.locfileid: "62873771"
   
 -   mscorlib  
   
--   System  
+-   系统  
   
 -   System.Configuration  
   

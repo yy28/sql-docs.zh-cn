@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 389bbe5ef10857fc5d2e05a70a4e07c69a847ef5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 40c6c48e79d3694532aaf3651945488360d5ed50
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718579"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068490"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>状态栏（数据库引擎查询编辑器）
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口的状态栏可进行颜色编码，以便指示每个窗口连接到的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。  

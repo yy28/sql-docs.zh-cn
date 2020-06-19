@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: 50a55014-e2c3-4ecd-84e1-3e877c55a260
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 956a73f76e113eb0a50f628150e47ed33791cc97
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fdb702c890097965b8058258f78c8572ad911a72
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176236"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968503"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>使用脚本任务查找已安装的打印机
-  由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包转换的数据的最终目的通常是打印成一份报表。 中`System.Drawing.Printing` [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]的命名空间提供了用于使用打印机的类。
+  由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包转换的数据的最终目的通常是打印成一份报表。 `System.Drawing.Printing`中的命名空间 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供了用于使用打印机的类。
 
 > [!NOTE]
 >  如果希望创建可更方便地重用于多个包的任务，请考虑以此脚本任务示例中的代码为基础，创建自定义任务。 有关详细信息，请参阅 [开发自定义任务](../extending-packages-custom-objects/task/developing-a-custom-task.md)。
@@ -41,11 +40,11 @@ ms.locfileid: "78176236"
 
 1.  创建名为 `PrinterList` 的 `Object` 类型变量。
 
-2.  在“脚本任务编辑器”  的“脚本”  页，将此变量添加到 ReadWriteVariables 属性。
+2.  在“脚本任务编辑器”的“脚本”页，将此变量添加到 ReadWriteVariables 属性。
 
 3.  在脚本项目中，添加对 System.Drawing  命名空间的引用。
 
-4.  在代码中，使用`Imports`语句导入**system.web**和`System.Drawing.Printing`命名空间。
+4.  在代码中，使用 `Imports` 语句导入**system.web**和 `System.Drawing.Printing` 命名空间。
 
 ### <a name="code"></a>代码
 

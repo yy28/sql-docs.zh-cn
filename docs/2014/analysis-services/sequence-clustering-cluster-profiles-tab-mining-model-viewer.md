@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 44230895-0a42-4032-8d6c-0cdb8a2dbb8c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f277abea585715f6a3656fffe7672f347233507
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b7aff4d6a7f4f685fe589e2fb141848296bb82b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069098"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940697"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>顺序分析和聚类分析的“分类配置文件”选项卡（挖掘模型查看器）
   “Microsoft 顺序分析和聚类分析查看器”**** 中的“分类剖面图”**** 提供每个分类中包含的序列的具有颜色编码的视图。  
@@ -49,9 +48,9 @@ ms.locfileid: "66069098"
   
  为模型中的每个分类显示两组直方图，每个组位于图形中不同的行上：  
   
--   **属性名称>。示例：此行中的直方图显示了每个分类的代表项的序列。 \<** 在 DMX 术语中，它们是每个分类的示例事例。  
+-   ** \<attribute name> 。示例**：此行中的直方图显示代表每个分类的项的序列。 在 DMX 术语中，它们是每个分类的示例事例。  
   
--   属性名称>：此行中的直方图描述群集包含的所有项及其总体分布。 ** \< ** 在 **“挖掘图例”** 可见时单击直方图，这将显示每个项的数值  
+-   **\<attribute name>**：此行中的直方图描述群集包含的所有项及其总体分布。 在 **“挖掘图例”** 可见时单击直方图，这将显示每个项的数值  
   
  **状态**  
  此列在图表中是可选的，并且可以选择“显示图例”**** 选项来显示或删除它。 **“状态”** 列就对应的分类直方图中的哪种颜色表示哪种状态提供了指导。  

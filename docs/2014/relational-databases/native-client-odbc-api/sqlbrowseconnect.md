@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fceed0b4bcfb8d5c41046cd4faf555ca2847899c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 72c119ab3188321be97b2c51ddc0a77f8a585aee
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706377"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023028"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
   **SQLBrowseConnect**使用可分类为三个级别的连接信息的关键字。 对于每个关键字，下表指示是否返回有效值列表以及该关键字是否可选。  
@@ -35,7 +34,7 @@ ms.locfileid: "82706377"
   
 |关键字|是否返回列表？|是否可选？|说明|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|是|否|数据源所驻留网络上的服务器名称。 可以输入术语 "(local)" 作为服务器，在此情况下，即使此为非联网版本，也可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地副本。|  
+|SERVER|是|No|数据源所驻留网络上的服务器名称。 可以输入术语 "(local)" 作为服务器，在此情况下，即使此为非联网版本，也可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地副本。|  
 |UID|否|是|用户登录 ID。|  
 |PWD|否|是（取决于用户）|用户指定的密码。|  
 |APP|否|是|调用**SQLBrowseConnect**的应用程序的名称。|  
@@ -52,7 +51,7 @@ ms.locfileid: "82706377"
   
  以下属性（通过调用[SQLSetConnectAttr](sqlsetconnectattr.md)设置）确定由**SQLBrowseConnect**返回的结果集。  
   
-|属性|说明|  
+|Attribute|说明|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|如果将其设置为 SQL_MORE_INFO_YES，则**SQLBrowseConnect**将返回服务器属性的扩展字符串。<br /><br /> 下面是**SQLBrowseConnect**返回的扩展字符串示例： ServerName\InstanceName;聚集： No;版本：8.00.131<br /><br /> 在此字符串中，分号用于分隔与服务器有关的各部分信息， 逗号用于分隔不同的服务器实例。|  
 |SQL_COPT_SS_BROWSE_SERVER|如果指定了服务器名称，则**SQLBrowseConnect**将返回指定服务器的信息。 如果 SQL_COPT_SS_BROWSE_SERVER 设置为 NULL，则**SQLBrowseConnect**将返回域中所有服务器的信息。<br /><br /> 由于网络问题， **SQLBrowseConnect**可能无法及时接收来自所有服务器的响应。 因此，每个请求所返回的服务器列表都可能不同。|  
