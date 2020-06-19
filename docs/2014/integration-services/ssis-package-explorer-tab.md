@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: fdcd93fc-fe9a-40ec-bac3-5f303cd83eaf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ab5c3112bfeddd41c9c877365e36780e32b4241e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c09a6f967b85d19a8d07563862537787d45f1b42
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055392"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962477"
 ---
 # <a name="ssis-package-explorer-tab"></a>“SSIS 包资源管理器”选项卡
   可以使用 **设计器的** “包资源管理器” [!INCLUDE[ssIS](../includes/ssis-md.md)] 选项卡查看包中的所有元素的层次结构视图，这些元素包括：配置、连接、事件处理程序、可执行对象（例如任务和容器）、日志提供程序、优先约束和变量。 如果包中包含数据流任务， **“包资源管理器”** 选项卡将包括一个包含数据流组件的层次结构视图的节点。  

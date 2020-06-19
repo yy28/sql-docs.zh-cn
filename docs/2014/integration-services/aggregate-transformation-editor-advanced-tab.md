@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 186a9736-2554-40a0-9cb2-877a8db5fde8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 419a63f9a98e51b9601d7d38f70528ff4ae05970
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a94ba92b44c00442f97f9e11bbd72d06556d8fe
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061585"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925608"
 ---
 # <a name="aggregate-transformation-editor-advanced-tab"></a>聚合转换编辑器（“高级”选项卡）
   可以使用 **“聚合转换编辑器”** 对话框的 **“高级”** 选项卡设置组件属性，指定聚合以及设置输入和输出列的属性。  
@@ -35,7 +34,7 @@ ms.locfileid: "66061585"
  **“键范围”**  
  根据需要，可以指定聚合所需的键的大致数目。 转换将使用此信息优化其初始缓存大小。 默认情况下，此选项的值为 **“未指定”**。 如果同时指定了 **“键范围”** 和 **“键数”** ，则 **“键数”** 优先。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |未指定|不使用 **“键范围”** 属性。|  
 |低|聚合可以写入大约 500,000 个键。|  
@@ -48,7 +47,7 @@ ms.locfileid: "66061585"
  **非重复计数**  
  根据需要，可以指定聚合能够写入的非重复值的大致数目。 默认情况下，此选项的值为 **“未指定”**。 如果同时指定了 **“非重复键数范围”** 和 **“非重复键计数”** ，则 **“非重复键计数”** 优先。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |未指定|不使用 CountDistinctScale 属性。|  
 |低|聚合可以写入大约 500,000 个非重复值。|  

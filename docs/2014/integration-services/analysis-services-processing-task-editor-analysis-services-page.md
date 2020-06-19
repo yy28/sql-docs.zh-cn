@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5612be78-57cf-4e4e-92cf-6bfa9f971040
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 59220dd32388eed75ed725e7a8b5956394ae575d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ae832263c3a025f53989761541e3278f5ea6a60
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890370"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925568"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Analysis Services 处理任务编辑器（Analysis Services 页）
   可以使用 **“Analysis Services 处理任务编辑器”** 对话框的 **Analysis Services** 页指定 Analysis Services 连接管理器，选择要处理的分析对象，以及设置处理选项和错误处理选项。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c9dcca4d-f1a0-45ec-b078-f4d372589baf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 910de9d388e60ae3664153e2f6cb3bb5203b289c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b81223d0ecfc27ce249e80bfde350336cae2f1f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055778"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963247"
 ---
 # <a name="set-parameter-values-after-the-project-is-deployed"></a>在部署项目后设置参数值
   通过部署向导，您可以在将项目部署到目录时设置服务器默认参数值。 在您的项目处于目录中后，您可以使用 SQL Server Management Studio (SSMS) 对象资源管理器或 Transact-SQL 来设置服务器默认值。  

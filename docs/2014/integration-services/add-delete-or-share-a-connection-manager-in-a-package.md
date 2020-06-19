@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6f2ba4ea-10be-4c40-9e80-7efcf6ee9655
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8b7d92800a2f5d55cf85ace3e7746d934b7474b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4c132bc1715292a1dbd88d84813cefb3ca8616a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062013"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926218"
 ---
 # <a name="add-delete-or-share-a-connection-manager-in-a-package"></a>在包中添加、删除或共享连接管理器
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括用于连接到不同数据源的多种连接管理器。这些数据源包括关系数据库、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库以及 CSV 和 XML 格式的文件。 可以在包级别或项目级别创建连接管理器。 在项目级别创建的连接管理器对项目中的所有包可用。 而在包级别创建的连接管理器对该特定包可用。  
@@ -129,7 +128,7 @@ ms.locfileid: "66062013"
 4.  或者，在“解决方案资源管理器”**** 窗口中的“连接管理器”**** 节点下或在“SSIS 设计器”**** 窗口的“连接管理器”**** 选项卡中，右键单击连接管理器，再单击“重命名”****，然后修改连接管理器的默认名称。  
   
     > [!NOTE]  
-    >  在“SSIS 设计器”窗口的“连接管理器”选项卡中，不能覆盖连接管理器名称中的 (project) 前缀************。 这是设计的结果。  
+    >  在“SSIS 设计器”窗口的“连接管理器”选项卡中，不能覆盖连接管理器名称中的 (project) 前缀************。 这是设计使然。  
   
 ##  <a name="to-create-a-parameter-for-a-connection-manager-property"></a><a name="parameter"></a>创建连接管理器属性的参数  
   

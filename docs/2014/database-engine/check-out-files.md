@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cc033727-51bb-4b58-a12b-8977ce61ff56
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bde4d7fa738bdc952abc936ea13caa7225887ad6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10c076f7bee35e0e466fc22aec9ad9f6984bac6a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786742"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936028"
 ---
 # <a name="check-out-files"></a>签出文件
   除非已经将 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 环境配置为允许编辑已签入的文件，否则，必须先签出该文件后才可以进行修改。 签出文件时，该文件版本的副本将复制到本地磁盘，并删除文件的只读属性。  
@@ -29,7 +28,7 @@ ms.locfileid: "62786742"
  使用 "**签出**" 命令签出源代码管理的项目和文件。 如果使用此命令签出解决方案或项目，则也将签出解决方案或项目中的所有文件。但是，签出单个源代码文件不会导致签出它所属的项目或解决方案。  
   
 > [!NOTE]  
->  如果你[!INCLUDE[msCoName](../includes/msconame-md.md)]的项目的 Visual SourceSafe 数据库配置为允许多次签出，并且你想要以独占方式签出文件，则必须先清除 "**高级签出选项**" 对话框中的 "**允许多个签**出" 选项，然后才能签出该文件。 必须重新启动 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，该设置才能生效。  
+>  如果 [!INCLUDE[msCoName](../includes/msconame-md.md)] 你的项目的 Visual SourceSafe 数据库配置为允许多次签出，并且你想要以独占方式签出文件，则必须先清除 "**高级签出选项**" 对话框中的 "**允许多个签**出" 选项，然后才能签出该文件。 必须重新启动 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，该设置才能生效。  
   
 ### <a name="to-check-out-a-file"></a>签出文件  
   
@@ -37,7 +36,7 @@ ms.locfileid: "62786742"
   
 2.  在 "**文件**" 菜单上，指向 "**源代码管理**"，然后单击 "**签出以进行编辑**"。  
   
-3.  如果显示 "**签出以进行编辑**" 对话框，请选择所需的项，然后单击 "**签出**"。如果已将[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]环境配置为不显示 "**签出**" 对话框，则会立即签出在解决方案资源管理器中选择的项以及它们可能具有的任何子项。  
+3.  如果显示 "**签出以进行编辑**" 对话框，请选择所需的项，然后单击 "**签出**"。如果已将环境配置 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 为不显示 "**签出**" 对话框，则会立即签出在解决方案资源管理器中选择的项以及它们可能具有的任何子项。  
   
      **退房**  
      签出所有选定项。  
@@ -45,7 +44,7 @@ ms.locfileid: "62786742"
      **“列”**  
      标识要显示的列及其显示顺序。  
   
-     **备注**  
+     **注释**  
      指定与该签出操作关联的注释。  
   
      **签出项时不显示“签出”对话框**  
@@ -55,7 +54,7 @@ ms.locfileid: "62786742"
      将签出的项在其源代码管理连接下显示为平面列表。  
   
      **编辑**  
-     修改项但不将其签出。仅**Edit**当你已[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]将配置为支持编辑签入文件时，才会显示 "编辑" 按钮。  
+     修改项但不将其签出。仅**Edit**当你已将 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 配置为支持编辑签入文件时，才会显示 "编辑" 按钮。  
   
      **名称**  
      显示可签出的项的名称。 选定的项旁边还会显示复选框。 如果不希望签出特定的项，请清除其复选框。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 182b115e-0fe2-4717-8dff-183f9eb6e397
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 31da686dbf25922205ea4d1b03ecaa3758457573
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 609189366cbce63b671c3c93538146ff647e4576
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055618"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962997"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>使用数字证书对包签名
   本主题介绍如何使用数字证书对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包进行签名。 可以使用数字签名以及其他设置来防止加载和运行无效的包。  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 70227f556ae268144549616dab0895e70ff39de8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c88bc60b4aeab12b3c55d23d1fe7b2b033a962f0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228744"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936284"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>使用可用性组向导 (SQL Server Management Studio)
   本主题说明如何使用新建可用性组向导（位于 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中）在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中创建和配置 AlwaysOn 可用性组。 “可用性组” ** 定义一组用户数据库，这些用户数据库将以支持故障转移的单个单元和一组故障转移伙伴（称作“可用性副本” **）的形式进行故障转移。  
@@ -116,13 +115,13 @@ ms.locfileid: "75228744"
     |选项卡|简要说明|  
     |---------|-----------------------|  
     |**副本**|使用此选项卡可以指定将承载辅助副本的每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 请注意，您当前连接的服务器实例必须承载主副本。|  
-    |**终结点**|使用此选项卡可以验证任何现有数据库镜像端点，此外，如果在其服务帐户使用 Windows 身份验证的服务器实例上缺少该端点，则会自动创建该端点。 **注意：** 如果任何服务器实例在非域用户帐户下运行，则需要先对服务器实例进行手动更改，然后才能在向导中继续操作。 有关详细信息，请参阅本主题前面的 [先决条件](#PrerequisitesRestrictions)。|  
+    |**端点**|使用此选项卡可以验证任何现有数据库镜像端点，此外，如果在其服务帐户使用 Windows 身份验证的服务器实例上缺少该端点，则会自动创建该端点。 **注意：** 如果任何服务器实例在非域用户帐户下运行，则需要先对服务器实例进行手动更改，然后才能在向导中继续操作。 有关详细信息，请参阅本主题前面的 [先决条件](#PrerequisitesRestrictions)。|  
     |**备份首选项**|使用此选项卡可以整体为可用性组指定您的备份首选项，并为各个可用性副本指定备份优先级。|  
     |**侦听器**|使用此选项卡可以创建可用性组侦听器。 默认情况下，该向导不创建侦听器。|  
   
-8.  在 **“选择初始数据同步”** 页上，选择如何创建新的辅助数据库并将其联接到可用性组。 选择以下选项之一：  
+8.  在 **“选择初始数据同步”** 页上，选择如何创建新的辅助数据库并将其联接到可用性组。 选择下列选项之一：  
   
-    -   **达到**  
+    -   **完整**  
   
          如果你的环境满足自动启动初始数据同步的要求，则选择此选项（有关详细信息，请参阅本主题前面的 [先决条件、限制和建议](#PrerequisitesRestrictions)）。  
   
@@ -202,7 +201,7 @@ ms.locfileid: "75228744"
   
      [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
   
--   **视频**  
+-   **视频：**  
   
      [Microsoft SQL Server Code-Named "Denali" AlwaysOn 系列，第一部分：介绍下一代高可用性解决方案](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   

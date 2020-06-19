@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ea923f72e0c9e505bc9e1f056d5ff4dbe36ad9a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: daca48b79b4bb0dd4655bb306c881c199ecfb0a7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901009"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84913838"
 ---
 # <a name="audit-transformation"></a>审核转换
   通过进行审核转换，包中的数据流可以包含有关运行包的环境的数据。 例如，包、计算机和操作员的名称可添加到数据流中。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中包含了提供这些信息的系统变量。  

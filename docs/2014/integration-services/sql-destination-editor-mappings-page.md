@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3ca00cf8-3460-43e9-9705-af4c530f7fbd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1c687b82433a8491fbdd1b54b9f92d9de62ad418
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2ad2ed1689494918080aaad85eb8f84efedc711
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055474"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962667"
 ---
 # <a name="sql-destination-editor-mappings-page"></a>SQL 目标编辑器（“映射”页）
   可以使用 **“SQL 目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到目标列。  

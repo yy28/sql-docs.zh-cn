@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d7b5bf6ff2324c8e63b030d03e36794faf0ec9d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf1a25aabde1e684407218da7365ae7a2b4265a7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67419035"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936136"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中数据库引擎功能的重大更改
-  本主题介绍[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)]和早期版本中的重大更改[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 这些更改可能导致基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的早期版本的应用程序、脚本或功能无法继续使用。 在进行升级时可能会遇到这些问题。 有关详细信息，请参阅 [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)。  
+  本主题介绍 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 和早期版本中的重大更改 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 这些更改可能导致基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的早期版本的应用程序、脚本或功能无法继续使用。 在进行升级时可能会遇到这些问题。 有关详细信息，请参阅 [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)。  
   
 ##  <a name="breaking-changes-in-sssql14"></a><a name="SQL14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中的重大更改  
  没有新问题。  
@@ -37,14 +36,14 @@ ms.locfileid: "67419035"
 |sp_setapprole 和 sp_unsetapprole|`OUTPUT` 的 cookie `sp_setapprole` 参数当前记载为 `varbinary(8000)`，这是正确的最大长度。 但是，当前实现返回 `varbinary(50)`。 应用程序应继续保留 `varbinary(8000)`，以便当 cookie 在将来的版本中返回大小增量时，应用程序可继续正确运行。 有关详细信息，请参阅 [sp_setapprole (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-setapprole-transact-sql)。|  
 |EXECUTE AS|EXECUTE AS 的 cookie OUTPUT 参数当前记载为 `varbinary(8000)`，这是正确的最大长度。 但是，当前实现返回 `varbinary(100)`。 应用程序应继续保留 `varbinary(8000)`，以便当 cookie 在将来的版本中返回大小增量时，应用程序可继续正确运行。 有关详细信息，请参阅 [EXECUTE AS (Transact SQL)](/sql/t-sql/statements/execute-as-transact-sql)。|  
 |sys.fn_get_audit_file 函数|添加了另外两个列（**user_defined_event_id**和**user_defined_information**）来支持用户定义的审核事件。 不按名称选择列的应用程序可能会返回比预期更多的列。 请按名称选择列，或调整应用程序以接受这些额外的列。|  
-|WITHIN 保留关键字|WITHIN 现在是保留关键字。 引用名为“within”的对象或列将失败。 重命名对象或列，或通过使用括号或引号来分隔名称。  例如，`SELECT * FROM [within]` 。|  
+|WITHIN 保留关键字|WITHIN 现在是保留关键字。 引用名为“within”的对象或列将失败。 重命名对象或列，或通过使用括号或引号来分隔名称。  例如，`SELECT * FROM [within]`。|  
 |对类型为 `time` 或 `datetime2` 的计算列的 CAST 和 CONVERT 操作|在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的早期版本中，对 `time` 或 `datetime2` 数据类型的 CAST 和 CONVERT 操作的默认样式为 121，当在计算列表达式中使用这些类型时除外。 对于计算列，默认样式为 0。 当创建用于涉及自动参数化的查询中或约束定义中的计算列时，此行为会影响计算列。<br /><br /> 兼容性级别为 110 时，对 `time` 和 `datetime2` 数据类型的 CAST 和 CONVERT 操作的默认样式始终为 121。 如果您的查询依赖旧行为，请使用低于 110 的兼容性级别或在受影响的查询中显式指定 0 样式。<br /><br /> 将数据库升级到兼容性级别 110 将不更改已存储到磁盘的用户数据。 您必须相应手动更正此数据。 例如，如果您使用了 SELECT INTO 来从包含上述计算列表达式的源创建表，将存储数据（使用样式 0）而非存储计算列定义本身。 您需要手动更新此数据，以匹配样式 121。|  
 |ALTER TABLE|ALTER TABLE 语句只允许两部分的表名称 (schema.object)。 使用以下格式指定表名现在会在编译时失败，并出现错误117：<br /><br /> server.database.schema.table<br /><br /> .database.schema.table<br /><br /> ..schema.table<br /><br /> 在早期版本中指定格式 server.database.schema.table 会返回错误 4902。 指定格式 .database.schema.table 或 ..schema.table 则会成功。 要解决此问题，请不要使用 4 部分的前缀。|  
 |浏览元数据|使用 FOR BROWSE 或 SET NO_BROWSETABLE ON 查询视图时，现在会返回视图的元数据而非基础对象的元数据。 此行为现在匹配浏览元数据的其他方法。|  
 |SOUNDEX|数据库兼容级别为 110 时，SOUNDEX 函数实现的新规则可能导致由该函数计算的值不同于更低兼容级别时计算的值。 在升级到兼容性级别 110 后，可能需要重新生成使用 SOUNDEX 函数的索引、堆或 CHECK 约束。 有关详细信息，请参阅 [SOUNDEX (Transact-SQL)](/sql/t-sql/functions/soundex-transact-sql)
 |失败的 DML 语句的行计数消息|在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中，DML 语句失败时，[!INCLUDE[ssDE](../includes/ssde-md.md)]将以一致方式将包含 RowCount: 0 的 TDS DONE 令牌发送到客户端。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的早期版本中，当 TRY-CATCH 块包含失败的 DML 语句并且该语句由[!INCLUDE[ssDE](../includes/ssde-md.md)]自动参数化或 TRY-CATCH 块所处的级别不同于失败语句的级别时，会向客户端发送不正确的值 -1。 例如，如果 TRY-CATCH 块调用存储过程且该过程中的 DML 语句失败，客户端将错误地收到 -1 值。<br /><br /> 依赖这种不正确行为的应用程序将失败。|  
-|SERVERPROPERTY （' Edition '）|所安装的 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 实例的产品版本。 使用该属性的值确定已安装的产品支持的功能和限制（如最大 CPU 数）。<br /><br /> 根据已安装的 Enterprise edition，此操作可以返回 "Enterprise Edition" 或 "Enterprise Edition：基于内核的许可"。 根据单个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的最大计算能力来区分 Enterprise 版本。 有关中[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]计算容量限制的详细信息，请参阅[按版本 SQL Server 计算容量限制](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。|  
-|CREATE LOGIN|`CREATE LOGIN WITH PASSWORD = '` *password* Password`' HASHED`选项不能用于[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7 或更早版本创建的哈希。|  
+|SERVERPROPERTY （' Edition '）|所安装的 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 实例的产品版本。 使用该属性的值确定已安装的产品支持的功能和限制（如最大 CPU 数）。<br /><br /> 根据已安装的 Enterprise edition，此操作可以返回 "Enterprise Edition" 或 "Enterprise Edition：基于内核的许可"。 根据单个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的最大计算能力来区分 Enterprise 版本。 有关中计算容量限制的详细信息 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ，请参阅[按版本 SQL Server 计算容量限制](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。|  
+|CREATE LOGIN|`CREATE LOGIN WITH PASSWORD = '` *Password* `' HASHED` 选项不能用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7 或更早版本创建的哈希。|  
 | 的 CAST 和 CONVERT 转换|在从日期和数据类型转换为 `datetimeoffset` 时，只支持样式 0 或 1。 所有其他转换样式均返回错误 9809。 例如，下面的代码将返回错误 9809。<br /><br /> `SELECT CONVERT(date, CAST('7070-11-25 16:25:01.00986 -02:07' as datetimeoffset(5)), 107);`|  
   
 ### <a name="dynamic-management-views"></a>动态管理视图  
@@ -67,9 +66,9 @@ ms.locfileid: "67419035"
 |sys.data_spaces<br /><br /> sys.partition_schemes<br /><br /> sys.filegroups<br /><br /> sys.partition_functions|已将新列 is_system 添加到 sys.data_spaces 和 sys.partition_functions。 （sys.partition_schemes 和 sys.filegroups 将继承 sys.data_spaces 的列。）<br /><br /> 此列中的值 1 指示该对象用于全文检索片段。<br /><br /> 在 sys.partition_functions、sys.partition_schemes 和 sys.filegroups 中，新列不是最后一列。 请修改依赖于从这些目录视图中返回的列顺序的现有查询。|  
   
 ### <a name="sql-clr-data-types-geometry-geography-and-hierarchyid"></a>SQL CLR 数据类型（geometry、geography 和 hierarchyid）  
- 包含空间数据类型和 hierarchyid 类型**的程序集**的程序集已从版本10.0 升级到11.0 版。 满足以下条件时，引用此程序集的自定义应用程序可能失败：  
+ 包含空间数据类型和 hierarchyid 类型的程序集**Microsoft.SqlServer.Types.dll**已从版本10.0 升级到11.0 版。 满足以下条件时，引用此程序集的自定义应用程序可能失败：  
   
--   将自定义应用程序从安装了的计算机[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]移到仅[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]安装了的计算机时，应用程序将失败，因为**SqlTypes**程序集的引用版本10.0 不存在。 您可能会看到此错误消息：`"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
+-   将自定义应用程序从安装了的计算机移 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 到仅安装了的计算机时 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ，应用程序将失败，因为**SqlTypes**程序集的引用版本10.0 不存在。 您可能会看到此错误消息：`"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
   
 -   当引用**SqlTypes**程序集版本11.0 时，还安装了版本10.0，你可能会看到以下错误消息：`"System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'."`  
   
@@ -153,10 +152,10 @@ ms.locfileid: "67419035"
   
 -   **fn： concat**。 但是，如果将部分代理项对作为值传递，则**concat**可能会产生不正确的代理项对或部分代理项对。  
   
--   比较运算符和**order by**子句。 比较运算符包括 +、 \<、>、 \<=、>=、 `eq`、 `lt` `gt` `le`、、和`ge`。  
+-   比较运算符和**order by**子句。 比较运算符包括 +、 \<, > 、 \<=, > =、 `eq` 、、、 `lt` `gt` `le` 和 `ge` 。  
   
 #### <a name="distributed-query-calls-to-a-system-procedure"></a>对系统过程的分布式查询调用  
- 在从一个 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 服务器对另一个服务器进行调用时，通过 `OPENQUERY` 对某些系统过程进行的分布式查询调用将失败。 在 [!INCLUDE[ssDE](../includes/ssde-md.md)] 无法发现某个过程的元数据时将出现此情况。 例如，`SELECT * FROM OPENQUERY(..., 'EXEC xp_loginfo')` 。  
+ 在从一个 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 服务器对另一个服务器进行调用时，通过 `OPENQUERY` 对某些系统过程进行的分布式查询调用将失败。 在 [!INCLUDE[ssDE](../includes/ssde-md.md)] 无法发现某个过程的元数据时将出现此情况。 例如，`SELECT * FROM OPENQUERY(..., 'EXEC xp_loginfo')`。  
   
 #### <a name="isolation-level-and-sp_reset_connection"></a>隔离级别和 sp_reset_connection  
  连接用隔离级别由客户端驱动程序按照如下方法处理：  
@@ -186,7 +185,7 @@ ms.locfileid: "67419035"
   
  **新行为取决于函数的默认命名空间 URI**  
   
- 仅当默认命名空间 URI 对应于最终建议中的命名空间（即） [http://www.w3.org/2005/xpath-functions](http://www.w3.org/2005/xpath-functions)时，以下函数才会演示上面所述的新行为。 数据库兼容性级别为 110 或更高时，默认情况下 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 将默认函数命名空间绑定到此命名空间。 但是，无论兼容性级别如何，使用此命名空间时，这些函数都将具有新行为。  
+ 仅当默认命名空间 URI 对应于最终建议中的命名空间（即）时，以下函数才会演示上面所述的新行为 [http://www.w3.org/2005/xpath-functions](http://www.w3.org/2005/xpath-functions) 。 数据库兼容性级别为 110 或更高时，默认情况下 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 将默认函数命名空间绑定到此命名空间。 但是，无论兼容性级别如何，使用此命名空间时，这些函数都将具有新行为。  
   
 -   **fn:string-length**  
   
@@ -207,7 +206,7 @@ ms.locfileid: "67419035"
 |-------------|-----------------|  
 |CLR 程序集|当数据库升级到 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 后，将自动安装 `Microsoft.SqlServer.Types` 程序集以支持新数据类型。 升级顾问规则将检测存在名称冲突的任何用户类型或程序集。 升级顾问将建议您重命名所有冲突的程序集，并重命名所有冲突的类型或在代码中使用由两部分组成的名称来引用该预先存在的用户类型。<br /><br /> 如果数据库升级检测到某个用户程序集具有冲突名称，它将自动重命名该程序集，并将数据库置于可疑模式下。<br /><br /> 如果在升级过程中存在具有冲突名称的用户类型，则不会采取特殊步骤。 升级后，旧的用户类型和新的系统类型将同时存在。 用户类型将只能通过由两部分组成的名称使用。|  
 |CLR 程序集|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 会安装 .NET Framework 3.5 SP1，以更新全局程序集缓存 (GAC) 中的库。 如果在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库中注册了不支持的库，则在升级到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 后，[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 应用程序可能会停止工作。 这是因为，在 GAC 中为库提供服务或升级库时并不会更新 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的程序集。 如果某一程序集存在于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库和 GAC 中，该程序集的两个副本必须完全匹配。 如果不一致，当 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] CLR 集成功能使用该程序集时，将发生错误。 有关详细信息，请参阅[支持的 .NET Framework 库](../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)。<br /><br /> 升级数据库之后，请使用 ALTER ASSEMBLY 语句对该程序集在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库中的副本提供服务或进行升级。 有关详细信息，请参阅[知识库文章 949080](https://go.microsoft.com/fwlink/?LinkId=154563)。<br /><br /> 若要检测是否在应用程序中使用了任何不支持的 .NET Framework 库，请在数据库中运行以下查询。<br /><br /> `SELECT name FROM sys.assemblies WHERE clr_name LIKE '%publickeytoken=b03f5f7f11d50a3a,%';`|  
-|CLR 例程|在 CLR 用户定义函数、用户定义聚合或用户定义类型 (UDT) 内使用模拟可导致应用程序在升级到 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 后因出现错误 6522 而失败。 下列情况在 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 中成功，而在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 中则失败。 针对每种情况提供了相应的解决方案。<br /><br /> 使用模拟`nvarchar(max)`的 CLR 用户定义函数、用户定义聚合或 UDT 方法具有类型为、 `varchar(max)`、 `varbinary(max)` `ntext` `text` `image`、、、或大型 udt 的参数，并且没有方法的**dataaccesskind.read**属性。 若要解决此问题，请在方法中添加**dataaccesskind.read**属性，重新编译该程序集，然后重新部署例程和程序集。<br /><br /> 具有执行模拟的**Init**方法的 CLR 表值函数。 若要解决此问题，请在方法中添加**dataaccesskind.read**属性，重新编译该程序集，然后重新部署例程和程序集。<br /><br /> 具有执行模拟的**FillRow**方法的 CLR 表值函数。 若要解决此问题，请从**FillRow**方法中删除模拟。 不要使用**FillRow**方法访问外部资源。 相反，从**Init**方法访问外部资源。|  
+|CLR 例程|在 CLR 用户定义函数、用户定义聚合或用户定义类型 (UDT) 内使用模拟可导致应用程序在升级到 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 后因出现错误 6522 而失败。 下列情况在 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 中成功，而在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 中则失败。 针对每种情况提供了相应的解决方案。<br /><br /> 使用模拟的 CLR 用户定义函数、用户定义聚合或 UDT 方法具有类型为、、、、、 `nvarchar(max)` `varchar(max)` `varbinary(max)` `ntext` `text` `image` 或大型 udt 的参数，并且没有方法的**dataaccesskind.read**属性。 若要解决此问题，请在方法中添加**dataaccesskind.read**属性，重新编译该程序集，然后重新部署例程和程序集。<br /><br /> 具有执行模拟的**Init**方法的 CLR 表值函数。 若要解决此问题，请在方法中添加**dataaccesskind.read**属性，重新编译该程序集，然后重新部署例程和程序集。<br /><br /> 具有执行模拟的**FillRow**方法的 CLR 表值函数。 若要解决此问题，请从**FillRow**方法中删除模拟。 不要使用**FillRow**方法访问外部资源。 相反，从**Init**方法访问外部资源。|  
   
 ### <a name="dynamic-management-views"></a>动态管理视图  
   
@@ -226,14 +225,14 @@ ms.locfileid: "67419035"
   
 |Feature|说明|  
 |-------------|-----------------|  
-|显示计划 XML 架构|新的**SeekPredicateNew**元素将添加到显示计划 XML 架构，并将封闭 xsd 序列（**SqlPredicatesType**）转换为** \<xsd： choice>** 项。 一个**或多个** **SeekPredicate**元素不能出现在显示计划 XML 中。 这两种元素是相互排斥的。 **SeekPredicate**在显示计划 XML 架构中进行维护，以便向后兼容;但是，在中[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]创建的查询计划可能包含**SeekPredicateNew**元素。 如果**QueryPlan**元素不存在，预计仅从节点 ShowPlanXML/BatchSequence/Batch//StmtSimple/RelOp/IndexScan/SeekPredicates 中检索**SeekPredicate**子元素的应用程序可能会失败。 重写应用程序以预期此节点中的**SeekPredicate**或**SeekPredicateNew**元素。 有关更多信息，请参见 。|  
+|显示计划 XML 架构|一个新的**SeekPredicateNew**元素将添加到显示计划 XML 架构，并将封闭 xsd 序列（**SqlPredicatesType**）转换为 **\<xsd:choice>** 项。 一个**或多个** **SeekPredicate**元素不能出现在显示计划 XML 中。 这两种元素是相互排斥的。 **SeekPredicate**在显示计划 XML 架构中进行维护，以便向后兼容;但是，在中创建的查询计划 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 可能包含**SeekPredicateNew**元素。 如果**QueryPlan**元素不存在，预计仅从节点 ShowPlanXML/BatchSequence/Batch//StmtSimple/RelOp/IndexScan/SeekPredicates 中检索**SeekPredicate**子元素的应用程序可能会失败。 重写应用程序以预期此节点中的**SeekPredicate**或**SeekPredicateNew**元素。 有关更多信息，请参见 。|  
 |显示计划 XML 架构|新的**indexkind.range**特性将添加到显示计划 XML 架构中的**ObjectType**复杂类型。 根据 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 架构严格验证 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 计划的应用程序将失败。|  
   
 ### <a name="transact-sql"></a>Transact-SQL  
   
 |Feature|说明|  
 |-------------|-----------------|  
-|ALTER_AUTHORIZATION_DATABASE DDL 事件|在[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]中，当 DDL 事件 ALTER_AUTHORIZATION_DATABASE 激发时，如果数据定义语言（DDL）操作中的安全对象的实体类型是一个对象，则在此事件的 EVENTDATA Xml 的**ObjectType**元素中返回值 "object"。 在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 中，则返回实际类型（例如，“table”或“function”）。|  
+|ALTER_AUTHORIZATION_DATABASE DDL 事件|在中 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] ，当 DDL 事件 ALTER_AUTHORIZATION_DATABASE 激发时，如果数据定义语言（DDL）操作中的安全对象的实体类型是一个对象，则在此事件的 EVENTDATA xml 的**ObjectType**元素中返回值 "object"。 在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 中，则返回实际类型（例如，“table”或“function”）。|  
 |CONVERT|如果传递到 CONVERT 函数的样式无效，则会在二进制转换为字符或字符转换为二进制时，返回一个错误。 在早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，该无效样式会设置为二进制与字符间相互转换时的默认样式。|  
 |对程序集 GRANT/DENY/REVOKE EXECUTE|不能对程序集授予、拒绝或撤消“EXECUTE”权限。 此权限不起任何作用，并且现在会导致一个错误。 可以对引用程序集方法的存储过程或函数授予、拒绝或撤消“EXECUTE”权限。|  
 |对系统类型 GRANT/DENY/REVOKE 权限|不能对系统类型授予、拒绝或撤消权限。 在早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，这些语句会成功，但是不起任何作用。 在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 中，则会返回错误。|  
@@ -249,8 +248,8 @@ ms.locfileid: "67419035"
   
 |Feature|说明|  
 |-------------|-----------------|  
-|Datetime 支持|在[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]中，数据类型`xs:time`、 `xs:date`和`xs:dateTime`不支持时区。 时区数据会映射到 UTC 时区。 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 提供了符合标准的行为，从而导致了以下变化：<br /><br /> 将验证没有时区的值。<br /><br /> 将保留提供的时区或缺少的时区。<br /><br /> 修改了内部存储表示形式。<br /><br /> 增加了存储值的分辨率。<br /><br /> 不允许使用负年份。<br /><br /> <br /><br /> 注意：修改应用程序和 XQuery 表达式，以考虑新的类型值。|  
-|XQuery 和 Xpath 表达式|在[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]中，允许使用以冒号（"："）开头的 XQuery 或 XPath 表达式中的步骤。 例如，下面的语句在路径表达式中包含以冒号开头的名称测试 (`CTR02)`。<br /><br /> `SELECT FileContext.query('for n$ in //CTR return <C>{data )(n$/:CTR02)} </C>) AS Files FROM dbo.MyTable;`<br /><br /> 在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 中，这种用法是不允许的，因为它不符合 XML 标准。 返回错误 9341。 请删除前导冒号或为名称测试指定一个前缀，例如 (n$/CTR02) 或 (n$/p1:CTR02)。|  
+|Datetime 支持|在中 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] ，数据类型 `xs:time` 、 `xs:date` 和 `xs:dateTime` 不支持时区。 时区数据会映射到 UTC 时区。 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 提供了符合标准的行为，从而导致了以下变化：<br /><br /> 将验证没有时区的值。<br /><br /> 将保留提供的时区或缺少的时区。<br /><br /> 修改了内部存储表示形式。<br /><br /> 增加了存储值的分辨率。<br /><br /> 不允许使用负年份。<br /><br /> <br /><br /> 注意：修改应用程序和 XQuery 表达式，以考虑新的类型值。|  
+|XQuery 和 Xpath 表达式|在中 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] ，允许使用以冒号（"："）开头的 XQuery 或 XPath 表达式中的步骤。 例如，下面的语句在路径表达式中包含以冒号开头的名称测试 (`CTR02)`。<br /><br /> `SELECT FileContext.query('for n$ in //CTR return <C>{data )(n$/:CTR02)} </C>) AS Files FROM dbo.MyTable;`<br /><br /> 在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 中，这种用法是不允许的，因为它不符合 XML 标准。 返回错误 9341。 请删除前导冒号或为名称测试指定一个前缀，例如 (n$/CTR02) 或 (n$/p1:CTR02)。|  
   
 ### <a name="connecting"></a>Connecting  
   

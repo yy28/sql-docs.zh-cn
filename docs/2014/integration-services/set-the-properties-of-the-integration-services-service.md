@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 3a8ad546-0f58-4b31-ab56-58d6313b1098
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c40ec2d7da7dc8f46644632d29b6fb8d1101ff9b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29e57da658b97d4ed3d9867dfee51644f0af9ddc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055641"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963138"
 ---
 # <a name="set-the-properties-of-the-integration-services-service"></a>设置 Integration Services 服务的属性
     
 > [!IMPORTANT]  
 >  本主题论述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务，该服务是用于管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的一种 Windows 服务。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 支持该服务以便与 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的早期版本向后兼容。 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]开始，您可以在 Integration Services 服务器上管理诸如包之类的对象。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务管理并监视 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的包。 首次安装[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]时， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服务将启动，并且服务的启动类型设置为 "自动"。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务管理并监视 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的包。 首次安装时 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务将启动，并且服务的启动类型设置为 "自动"。  
   
  安装 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务后，可以使用 SQL Server 配置管理器或 Services MMC 管理单元设置其属性。  
   
@@ -46,7 +45,7 @@ ms.locfileid: "66055641"
         > [!NOTE]  
         >  ****“高级”选项卡不包含 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务的信息。  
   
-4.  单击" **确定**"。  
+4.  单击“确定”。  
   
 5.  在“文件”菜单上，单击“退出”以关闭“SQL Server 配置管理器”管理单元。************  
   
@@ -70,7 +69,7 @@ ms.locfileid: "66055641"
   
     -   单击 **“依赖项”** 选项卡可查看依赖服务的列表。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务没有任何依赖项。  
   
-5.  单击" **确定**"。  
+5.  单击“确定”。  
   
 6.  另外，如果启动类型为“手动”或“自动”，还可以右键单击 **SQL Server Integration Services**，然后单击“启动”、“停止”或“重新启动”。****  
   

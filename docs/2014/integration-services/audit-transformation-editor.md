@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 32786a34-5870-4fde-83c7-ec74d62404b8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9d31f297b9544c75e416fe798facd6a1c328ff0d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a58d216b33f5fb8fd582050374d06463fd2c99e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061421"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925518"
 ---
 # <a name="audit-transformation-editor"></a>审核转换编辑器
   通过进行审核转换，包中的数据流可以包含有关运行包的环境的数据。 例如，包、计算机和操作员的名称可添加到数据流中。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中包含了提供这些信息的系统变量。  
@@ -33,14 +32,14 @@ ms.locfileid: "66061421"
  **审核类型**  
  选择用于提供审核信息的可用系统变量。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**执行实例 GUID**|插入唯一标识包的执行实例的 GUID。|  
 |**包 ID**|插入唯一标识包的 GUID。|  
 |**包名称**|插入包名称。|  
 |**版本 ID**|插入唯一标识包版本的 GUID。|  
 |**执行开始时间**|插入包执行的开始时间。|  
-|**计算机名**|插入启动包的计算机的名称。|  
+|**计算机名称**|插入启动包的计算机的名称。|  
 |**用户名**|插入启动包的用户的登录名。|  
 |**任务名称**|插入与审核转换相关联的数据流任务的名称。|  
 |**任务 ID**|插入唯一标识与审核转换相关联的数据流任务的 GUID。|  

@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 56aa708d39756932d28c8a94da534cb758916fcd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f141b220284e758a8c7b3038ccc6cc064bd527f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889360"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962517"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS 包升级向导的 F1 帮助
-  使用 SSIS 包升级向导将包和[!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)]包升级到的当前版本[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的包格式。  
+  使用 SSIS 包升级向导将 [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] 包和包升级 [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] 到的当前版本的包格式 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 。  
   
  **运行 SSIS 包升级向导**  
   

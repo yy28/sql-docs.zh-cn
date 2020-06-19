@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bc83e1b636aa03e37717ac62de1a44e9c6f1cfd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 679e61c37df7d31b80f47fff186589ce0081f838
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055743"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963117"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>设置优先约束的属性
   若要设置优先约束属性，您可以使用下列工具之一：  
@@ -43,14 +42,14 @@ ms.locfileid: "66055743"
   
 5.  在“求值运算”下拉列表中，选择求值运算。****  
   
-6.  在`Value`下拉列表中，选择优先可执行文件的执行结果。  
+6.  在 `Value` 下拉列表中，选择优先可执行文件的执行结果。  
   
-7.  如果求值运算使用表达式，请在`Expression`框中键入表达式，然后单击 "**测试**" 以计算表达式。  
+7.  如果求值运算使用表达式，请在 `Expression` 框中键入表达式，然后单击 "**测试**" 以计算表达式。  
   
     > [!NOTE]  
     >  变量名称区分大小写。  
   
-8.  如果多个任务或容器连接到受约束的可执行文件，请选择 "**逻辑与**" 以指定所有前面的可执行`true`文件的执行结果必须计算为。 选择 "**逻辑或**" 以指定只有一个执行结果的计算`true`结果为。  
+8.  如果多个任务或容器连接到受约束的可执行文件，请选择 "**逻辑与**" 以指定所有前面的可执行文件的执行结果必须计算为 `true` 。 选择 "**逻辑或**" 以指定只有一个执行结果的计算结果为 `true` 。  
   
 9. 单击 **“确定”** ，关闭 **“优先约束编辑器”**。  
   
@@ -69,12 +68,12 @@ ms.locfileid: "66055743"
     |读/写属性|配置操作|  
     |--------------------------|--------------------------|  
     |说明|提供说明。|  
-    |EvalOp|选择一个求值运算。 如果选择`Expression`了、 **ExpressionAndConstant**或**expressionorconstant 运算**操作，则可以指定一个表达式。|  
+    |EvalOp|选择一个求值运算。 如果 `Expression` 选择了、 **ExpressionAndConstant**或**expressionorconstant 运算**操作，则可以指定一个表达式。|  
     |表达式|如果求值运算包含 and 表达式，则请提供一个表达式。 表达式的计算结果必须为布尔值。 有关表达式语言的详细信息，请参阅 [Integration Services (SSIS) 表达式](expressions/integration-services-ssis-expressions.md)。|  
-    |LogicalAnd|设置`LogicalAnd`此项可指定在多个可执行文件位于或链接到受约束的可执行文件时，优先约束与其他优先约束一起计算|  
+    |LogicalAnd|设置 `LogicalAnd` 此项可指定在多个可执行文件位于或链接到受约束的可执行文件时，优先约束与其他优先约束一起计算|  
     |名称|更新优先约束的名称。|  
     |ShowAnnotation|指定要使用的批注类型。 选择 **Never** 可以禁用批注；选择 **AsNeeded** 可以启用按需批注；选择 **ConstraintName** 可以使用 Name 属性的值自动进行批注；选择 **ConstraintDescription** 可以使用 Description 属性的值自动进行批注；选择 **ConstraintOptions** 可以使用 Value 和 Expression 属性的值自动进行批注。|  
-    |Value|如果在 EvalOP 属性中指定的求值运算包含约束，请选择受约束的可执行文件的执行结果。|  
+    |值|如果在 EvalOP 属性中指定的求值运算包含约束，请选择受约束的可执行文件的执行结果。|  
   
 5.  关闭“属性”窗口。  
   

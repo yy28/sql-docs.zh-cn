@@ -16,26 +16,25 @@ helpviewer_keywords:
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e25c90b3baa4e718f40dc3a3f84b6dc221d54c33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b67e2308c95db109c89bd2c3ff61f311e83fb898
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62878279"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962577"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>SSIS 教程：创建简单的 ETL 包
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] （SSIS）是一个用于构建高性能数据集成解决方案的平台，其中包括数据仓库的提取、转换和加载（ETL） [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]包。 SSIS 包括生成并调试包的图形工具和向导；执行如 FTP 操作、执行 SQL 语句和发送电子邮件等工作流功能的任务；用于提取和加载数据的数据源和目标；用于清理、聚合、合并和复制数据的转换；管理服务，即用于管理包执行和存储的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务；以及用于对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象模型编程的应用程序编程接口 (API)。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] （SSIS）是一个用于构建高性能数据集成解决方案的平台，其中包括数据仓库的提取、转换和加载（ETL）包。 SSIS 包括生成并调试包的图形工具和向导；执行如 FTP 操作、执行 SQL 语句和发送电子邮件等工作流功能的任务；用于提取和加载数据的数据源和目标；用于清理、聚合、合并和复制数据的转换；管理服务，即用于管理包执行和存储的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务；以及用于对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象模型编程的应用程序编程接口 (API)。  
   
- 在本教程中，您将学习如何使用[!INCLUDE[ssIS](../includes/ssis-md.md)]设计器创建一个简单[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的包。 所创建的包将从平面文件提取数据，重新设置数据的格式，然后将已重新设置格式的数据插入到事实数据表中。 在下列课程中，将扩展包以阐释循环、包配置、日志记录和错误流。  
+ 在本教程中，您将学习如何使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器创建一个简单的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包。 所创建的包将从平面文件提取数据，重新设置数据的格式，然后将已重新设置格式的数据插入到事实数据表中。 在下列课程中，将扩展包以阐释循环、包配置、日志记录和错误流。  
   
  在安装教程所用的示例数据的同时，也会安装将在教程的每一课中创建的完整的包版本。 使用完整的包，您可以按需要跳过前面几课而从后面的课程开始学习教程。 如果您是第一次使用包或新的开发环境，我们建议从第 1 课开始学习。  
   
 ## <a name="what-you-will-learn"></a>学习内容  
- 熟悉中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]提供的新工具、控件和功能的最佳方式是使用它们。 本教程将引导您使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器创建一个简单的 ETL 包，其中包含循环、配置、错误流逻辑和日志记录。  
+ 熟悉中提供的新工具、控件和功能的最佳方式 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 是使用它们。 本教程将引导您使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器创建一个简单的 ETL 包，其中包含循环、配置、错误流逻辑和日志记录。  
   
 ## <a name="requirements"></a>要求  
- 本教程适用于熟悉基本数据库操作，但对中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]可用的新功能有限制的用户。  
+ 本教程适用于熟悉基本数据库操作，但对中可用的新功能有限制的用户 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 。  
   
  若要使用本教程，系统中必须安装下列组件：  
   

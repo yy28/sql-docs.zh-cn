@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c305b7d-a231-4d03-a09f-8e2d6564fa76
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 37d09aa75c3f6c5dd61b257056127ca76b410487
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ba82ed1dac3cf992ca181e5795b33721eca4d86
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055139"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962217"
 ---
 # <a name="term-extraction-transformation-editor-term-extraction-tab"></a>字词提取转换编辑器（“字词提取”选项卡）
   可以使用 **“字词提取转换编辑器”** 对话框的 **“字词提取”** 选项卡，指定包含要提取的文本的文本列。  
@@ -33,7 +32,7 @@ ms.locfileid: "66055139"
  **术语**  
  为将包含所提取的字词的输出列提供名称。  
   
- **分数**  
+ **Score**  
  为将包含每个所提取字词的分数的输出列提供名称。  
   
  **配置错误输出**  

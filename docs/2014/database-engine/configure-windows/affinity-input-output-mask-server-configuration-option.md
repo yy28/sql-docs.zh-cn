@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 65e412a3dfdfc71931e6af4d449c5be88ae351b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d0606e2a3f5480b27e27a4a585562f4b289b640
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813675"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935953"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>affinity I/O mask 服务器配置选项
   为了执行多任务， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 和 Windows Server 2003 有时会在不同的处理器之间移动进程线程。 虽然从操作系统方面而言，此活动是高效的，但是在高系统负荷的情况下，该活动会降低 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的性能，因为每个处理器缓存都会不断地重新加载数据。 如果将各个处理器分配给特定线程，则通过消除处理器的重新加载需要，可以提高在这些条件下的性能；线程与处理器之间的这种关联称为“处理器关联”。  
@@ -58,7 +57,7 @@ ms.locfileid: "62813675"
   
 -   在“关联 I/O 掩码”  选项中为 0，在“关联掩码”  选项中为 1。  
   
- “关联 I/O 掩码”  选项是一个高级选项。 如果使用`sp_configure`系统存储过程来更改该设置，则仅当**show advanced options**设置为1时才能更改**关联 i/o 掩码**。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，重新配置“关联 I/O 掩码”  选项要求重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
+ “关联 I/O 掩码”  选项是一个高级选项。 如果使用 `sp_configure` 系统存储过程来更改该设置，则仅当**show advanced options**设置为1时才能更改**关联 i/o 掩码**。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，重新配置“关联 I/O 掩码”  选项要求重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
 > [!CAUTION]  
 >  请不要在 Windows 操作系统中配置 CPU 关联后，还在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中配置关联掩码。 这些设置实现的效果相同，如果配置不一致，则可能会得到意外的结果。 最好使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 `sp_configure` 选项配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU 关联。  

@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 423e1654-54af-47c6-ab6f-98670534557d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d3bffc98a14c1a8bc672e9f15a4bad8b6f5a7dbe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44b7a2b45ca77af87457ae0f4e908ec0a667ff79
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055412"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962807"
 ---
 # <a name="sql-destination-editor-connection-manager-page"></a>SQL 目标编辑器（“连接管理器”页）
-  可以使用 **“SQL 目标编辑器”** 对话框的 **“连接管理器”** 页，指定数据源信息以及预览结果。 目标[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]将数据加载到[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据库中的表或视图中。  
+  可以使用 **“SQL 目标编辑器”** 对话框的 **“连接管理器”** 页，指定数据源信息以及预览结果。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]目标将数据加载到数据库中的表或视图中 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
  若要了解有关 SQL Server 目标的详细信息，请参阅 [SQL Server Destination](data-flow/sql-server-destination.md)。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66055412"
  通过使用“创建表”**** 对话框创建一个新表。  
   
 > [!NOTE]  
->  单击 "**新建**" 时[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ，将基于所连接的数据源生成默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
+>  单击 "**新建**" 时，将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 基于所连接的数据源生成默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
  **预览**  
  使用“预览查询结果”**** 对话框预览结果。 预览最多可以显示 200 行。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 090c6fb7e19099ed5ad2650a99aa12f9ae3d5033
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: c58c415bd7bb95221c523290a9a311d4dccb18b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82921976"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936308"
 ---
 # <a name="use-alwayson-policies-to-view-the-health-of-an-availability-group-sql-server"></a>使用 AlwaysOn 策略查看可用性组的运行状况 (SQL Server)
   本主题说明在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 通过 AlwaysOn 策略确定 AlwaysOn 可用性组的运行状况。 有关 AlwaysOn 基于策略的管理的信息，请参阅[AlwaysOn 可用性组的操作问题的 AlwaysOn 策略（SQL Server）](always-on-policies-for-operational-issues-always-on-availability.md)。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e6a5d83c-5809-4c56-907a-73d0c7ccdd7a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 939e3befd0cbec87dbba7046761637c4b7655e22
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a615e26ac966fcf0c2af580825019c344889a5d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812730"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936048"
 ---
 # <a name="change-source-control"></a>更改源代码管理
   创建和管理特定的连接和绑定（用于将本地保存的解决方案或项目链接到源代码管理数据库文件夹）。  
@@ -43,7 +42,7 @@ ms.locfileid: "62812730"
  **“连接”**  
  在选定项和源代码管理服务器之间创建连接。  
   
- **联机**  
+ **连续**  
  显示选定解决方案或项目的连接状态。  
   
  **取消**  
@@ -55,7 +54,7 @@ ms.locfileid: "62812730"
  **提供程序**  
  显示您的源代码管理插件的名称。  
   
- **全部**  
+ **刷新**  
  刷新在此对话框中列出的所有项目的连接信息。  
   
  **服务器绑定**  
@@ -77,10 +76,10 @@ ms.locfileid: "62812730"
 |----------------|---------------------|  
 |有效|项已正确绑定并连接到它所属的服务器文件夹。|  
 |无效|项没有正确绑定到它所属的文件夹或者与该文件夹断开了连接。 对于此项，请使用 "**添加到源代码管理**" 命令而不是 "**绑定**"。|  
-|Unknown|尚未确定源代码管理下项的状态。|  
+|未知|尚未确定源代码管理下项的状态。|  
 |不受控制|该项尚未置于源代码管理下。|  
   
- **首先**  
+ **取消绑定**  
  显示 "**源代码管理**" 对话框，允许您从源代码管理中删除所选项，并从其现有文件夹中永久取消项关联。  
   
 ## <a name="see-also"></a>另请参阅  

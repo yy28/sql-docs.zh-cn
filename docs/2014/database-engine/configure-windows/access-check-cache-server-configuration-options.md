@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0a992ea8-3ec6-4a4d-97b5-460ae7326247
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a82aa2872f5a1e1658ab3d736c2651253bb7cc74
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f05e2a9bfd2cacfcbeb6128411f7d10c531600e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812040"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935963"
 ---
 # <a name="access-check-cache-server-configuration-options"></a>“访问检查缓存”服务器配置选项
   通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]访问数据库对象时，访问检查缓存在一个名为 **访问检查结果缓存**的内部结构中。 **access check cache quota** 和 **access check cache bucket count** 选项控制用于 **访问检查结果缓存**的项数和哈希存储桶数。 在极少数情况下，可以通过更改这些选项来提高性能。  

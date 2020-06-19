@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ee729f9f2bdd0044f2897a06e93f00b7b37ca785
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d94a1eff298dd200275fec49519a51c4aeb96997
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783141"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936245"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>使用“新建可用性组”对话框 (SQL Server Management Studio)
   本主题包含有关如何使用 **的** “新建可用性组” [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 对话框在为 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 启用的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]实例上创建 AlwaysOn 可用性组的信息。 “可用性组” ** 定义一组用户数据库，这些用户数据库将以支持故障转移的单个单元和一组故障转移伙伴（称作“可用性副本” **）的形式进行故障转移。  
@@ -32,7 +31,7 @@ ms.locfileid: "72783141"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
  我们强烈建议您首先阅读此部分，再尝试创建您的第一个可用性组。  
   
-###  <a name="prerequisites"></a><a name="PrerequisitesRestrictions"></a>先决条件  
+###  <a name="prerequisites"></a><a name="PrerequisitesRestrictions"></a> 先决条件  
   
 -   创建可用性组之前，请先验证承载可用性副本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例位于同一 WSFC 故障转移群集内的不同 Windows Server 故障转移群集 (WSFC) 节点上。 此外，还要验证是否为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 启用了每个服务器实例以及是否满足其他 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 先决条件。 有关详细信息，我们强烈建议你参阅[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](prereqs-restrictions-recommendations-always-on-availability.md)。  
   
@@ -160,5 +159,5 @@ ms.locfileid: "72783141"
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [数据库镜像端点 &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [可用性组侦听器、客户端连接和应用程序故障转移 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [可用性组侦听程序、客户端连接和应用程序故障转移 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [AlwaysOn 可用性组 &#40;SQL Server 的先决条件、限制和建议&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  

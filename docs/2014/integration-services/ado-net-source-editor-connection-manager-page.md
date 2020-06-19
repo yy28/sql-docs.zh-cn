@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7de3f438-bdd6-49b5-937a-47369e754943
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f3d9d2270603c3f38189478ccaaf48510085907f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d6dc089acb1d15491817d8876dee82951e4495d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061692"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925858"
 ---
 # <a name="ado-net-source-editor-connection-manager-page"></a>ADO NET 源编辑器（“连接管理器”页）
   可以使用 **“ADO NET 源编辑器”** 对话框的 **“连接管理器”** 页，为源选择 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接管理器。 使用此页还可以选择数据库中的表或视图。  
@@ -51,7 +50,7 @@ ms.locfileid: "66061692"
  通过使用“数据视图”**** 对话框预览结果。 **预览版** 最多可以显示 200 行。  
   
 > [!NOTE]  
->  预览数据时，数据类型为 CLR 用户定义类型的列不包含数据。 而是显示值“\<数值太大，无法显示>”或 System.Byte[]。 使用 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 访问接口访问数据源时，显示前一个值；使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client 访问接口访问数据源时，显示后一个值。  
+>  预览数据时，数据类型为 CLR 用户定义类型的列不包含数据。 相反，将 \<value too big to display> 显示值或 system.string []。 使用 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 访问接口访问数据源时，显示前一个值；使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client 访问接口访问数据源时，显示后一个值。  
   
 ## <a name="data-access-mode-dynamic-options"></a>数据访问模式动态选项  
   

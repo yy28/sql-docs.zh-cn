@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5b982015-e196-44c3-83b8-275fb9d769b2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 04c2ea76808c2fa98e933021af93481c829baa21
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d07b3c038597916cdaf026e24e90aab9d6b61616
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813480"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935958"
 ---
 # <a name="ad-hoc-distributed-queries-server-configuration-option"></a>即席分布式查询服务器配置选项
   默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允许使用 OPENROWSET 和 OPENDATASOURCE 进行即席分布式查询。 此选项设置为 1 时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许进行即席访问。 如果此选项未设置或设置为 0，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允许进行即席访问。  

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 7f1323f9-9dc3-4378-9c70-bbc65bfeabfd
 author: yualan
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c835f42fdbcc43309a0235f8ad862bee9c230e33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db1db5b066e5540d64121993e6126edefa3b8124
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66462696"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925408"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 连接管理器
   **Azure Data Lake Store 连接管理器** 启用了 SSIS 包，该包通过以下两种身份验证类型连接到 Azure Data Lake Store 服务：Azure AD 用户标识和 Azure AD 服务标识。  
@@ -27,7 +26,7 @@ ms.locfileid: "66462696"
   
 1.  在“添加 SSIS 连接管理器” **** 对话框中，选择“AzureDataLake” ****，然后单击“添加” ****。   
   
-2.  在“Azure Data Lake Store 连接管理器编辑器”对话框的“ADLS 主机” **** 字段中，键入 Azure Data Lake Store 主机 URL。 例如： https：\//test.azuredatalakestore.net 或 test.azuredatalakestore.net。
+2.  在“Azure Data Lake Store 连接管理器编辑器”对话框的“ADLS 主机” **** 字段中，键入 Azure Data Lake Store 主机 URL。 例如： https： \/ /test.azuredatalakestore.net 或 test.azuredatalakestore.net。
   
 3.  选择相应的身份验证类型来访问 Azure Data Lake Store 数据。
 
@@ -49,7 +48,7 @@ ms.locfileid: "66462696"
     
         4. 单击“测试连接” **** 以测试连接。  
   
-4.  单击 **“确定”** 关闭对话框。  
+4.  单击“确定”  关闭对话框。  
   
     你可以看到你在“属性” **** 窗口中创建的连接管理器的属性。  
   

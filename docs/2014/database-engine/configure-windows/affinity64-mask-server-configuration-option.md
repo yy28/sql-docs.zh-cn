@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 75ed08c7-f85c-4e15-9ee1-e7bc545d3293
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 20e4cf3af48fa560293a9de05e768410d561a33b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2ea6d2e364feaa67d91de0055617aac9dc285ab
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786696"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935925"
 ---
 # <a name="affinity64-mask-server-configuration-option"></a>affinity64 mask 服务器配置选项
   affinity64 mask 将处理器绑定到特定的线程，这与 affinity mask 选项相似。 使用 affinity mask 可以绑定前 32 个处理器，而使用 affinity64 mask 可以绑定计算机上余下的处理器。 此选项仅出现在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 64 位版本中。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c4402cd9e7c02b598c47a851c8318e7c840bfbc3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c4ce0072bcd6642dcb4f3ac63e04c98786bd550e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62788724"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936269"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>使用 AlwaysOn 面板 (SQL Server Management Studio)
   数据库管理员使用 AlwaysOn 面板大致了解 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 AlwaysOn 可用性组及其可用性副本和数据库的运行状况。 AlwaysOn 面板的一些典型用法如下：  
@@ -123,7 +122,7 @@ ms.locfileid: "62788724"
  **名称**  
  承载可用性副本的服务器实例的名称。 默认情况下显示此列。  
   
- **Role**  
+ **角色**  
  指示可用性副本的当前角色，即“主”**** 或“辅助”****。 有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 角色的详细信息，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](overview-of-always-on-availability-groups-sql-server.md)。 默认情况下显示此列。  
   
  **故障转移模式**  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96eea051fbf4a34257d61ff8eaf4f796debf49a6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786732"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936008"
 ---
 # <a name="collations-and-code-pages"></a>排序规则和代码页
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] 对于内存优化表中的 (var)char 列的支持代码页，以及在索引和本机编译存储过程中使用的支持的排序规则方面存在限制。  
@@ -82,7 +81,7 @@ GO
   
 -   本机编译存储过程中的所有表达式和排序操作都必须使用 BIN2 排序规则。 也就是说，所有比较和排序操作都基于字符（二进制表）的 Unicode 码位。 例如，所有排序操作均区分大小写（“Z”位于“a”之前）。 如有必要，可使用解释的 [!INCLUDE[tsql](../includes/tsql-md.md)] 进行不区分大小写的排序和比较。  
   
--   本机编译的存储过程内部不支持 UTF-16 数据截断。 这 < *意味着，如果*排序规则有 _SC 属性 *，则 n*（var） char （*n*）值不能转换为类型 n （var） char （*i*）。 例如，不支持以下操作：  
+-   本机编译的存储过程内部不支持 UTF-16 数据截断。 这意味着，如果排序规则有 _SC 属性 *，则 n*（var） char （*n*）值不能转换为类型 n （var） char （*i*）  <  *n*。 例如，不支持以下操作：  
   
     ```sql  
     -- column definition using an _SC collation  

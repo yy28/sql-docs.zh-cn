@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 54793114-2198-4d80-8091-e241d5a5d13c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1e3d0780e761cb5b0cdd4fd267bdfb2662f55cf4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8581771394ed40f740ea83407b9acd47c6f4ddd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055839"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963230"
 ---
 # <a name="set-the-properties-of-a-connection-manager"></a>设置连接管理器的属性
   所有连接管理器都可以使用 **“属性”** 窗口进行配置。  
@@ -37,7 +36,7 @@ ms.locfileid: "66055839"
   
 5.  在 **“属性”** 窗口中，编辑属性值。 **“属性”** 窗口提供对在连接管理器的标准编辑器中无法配置的一些属性的访问。  
   
-6.  单击" **确定**"。  
+6.  单击“确定”。  
   
 7.  若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

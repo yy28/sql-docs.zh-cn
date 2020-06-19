@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f98ddbec-f668-4dba-a768-44ac3ae0536f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: aadfb7b53d22a00bf14699f611f20ce508a7ab5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53eeb46b5ce23a8976c9de1aaace7959bc708a84
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055644"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963077"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>设置用户定义变量的属性
   若要在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中设置用户定义的变量的属性，可以使用下列功能之一：  
@@ -34,21 +33,21 @@ ms.locfileid: "66055644"
   
  使用****“属性”窗口对用户定义变量设置表达式时：  
   
--   可通过 Value 属性或 Expression 属性来设置变量的值。 默认情况下，EvaluateAsExpression 属性设置为`False` ，变量的值由 value 属性设置。 若要使用表达式来设置值，必须首先将 EvaluateAsExpression 设置为`True`，然后在 expression 属性中提供一个表达式。 Value 属性自动设置为该表达式的计算结果。  
+-   可通过 Value 属性或 Expression 属性来设置变量的值。 默认情况下，EvaluateAsExpression 属性设置为 `False` ，变量的值由 value 属性设置。 若要使用表达式来设置值，必须首先将 EvaluateAsExpression 设置为 `True` ，然后在 expression 属性中提供一个表达式。 Value 属性自动设置为该表达式的计算结果。  
   
--   ValueType 属性包含 Value 属性中的值的数据类型。 通过表达式设置 Value 时，ValueType 将自动更新为与该表达式的计算结果兼容的数据类型。 例如，如果 Value 包含0，ValueType 属性包含**Int32** ，然后将 Expression 设置为 GETDATE （），则值包含当前日期和时间，ValueType 设置为`DateTime`。  
+-   ValueType 属性包含 Value 属性中的值的数据类型。 通过表达式设置 Value 时，ValueType 将自动更新为与该表达式的计算结果兼容的数据类型。 例如，如果 Value 包含0，ValueType 属性包含**Int32** ，然后将 Expression 设置为 GETDATE （），则值包含当前日期和时间，ValueType 设置为 `DateTime` 。  
   
 -   通过变量的 **“属性”** 窗口，可以访问 **“表达式生成器”** 对话框。 使用该工具可以生成、验证和计算表达式。 有关详细信息，请参阅[表达式生成器](expressions/expression-builder.md)和 [Integration Services (SSIS) 表达式](expressions/integration-services-ssis-expressions.md)。  
   
  使用****“变量”窗口对用户定义变量设置表达式时：  
   
--   若要使用表达式来设置变量值，首先请确认变量数据类型与表达式的计算结果兼容，然后在 " `Expression` **变量**" 窗口的列中提供一个表达式。 "**属性**" 窗口中的 EvaluateAsExpression 属性会自动设置`True`为。  
+-   若要使用表达式来设置变量值，首先请确认变量数据类型与表达式的计算结果兼容，然后在 "变量" 窗口的列中提供一个表达式 `Expression` 。 **Variables** "**属性**" 窗口中的 EvaluateAsExpression 属性会自动设置为 `True` 。  
   
 -   如果为变量指定了表达式，则该变量旁边将显示一个特殊图标标记。 这个特殊的图标标记还显示在设置有表达式的连接管理器和任务旁边。  
   
 -   通过变量的 **“变量”** 窗口，可以访问 **“表达式生成器”** 对话框。 使用该工具可以生成、验证和计算表达式。 有关详细信息，请参阅[表达式生成器](expressions/expression-builder.md)和 [Integration Services (SSIS) 表达式](expressions/integration-services-ssis-expressions.md)。  
   
- 在 "**变量**" 和 "**属性**" 窗口中，如果为变量指定了表达式， `EvaluateAsExpression`并且将设置`True`为，则无法更改变量数据类型。  
+ 在 "**变量**" 和 "**属性**" 窗口中，如果为变量指定了表达式，并且将 `EvaluateAsExpression` 设置为 `True` ，则无法更改变量数据类型。  
   
  **设置 Namespace 和 Name 属性**  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66055644"
   
 4.  或者，在 **“变量”** 窗口中单击 **“网格选项”**，然后选择要出现在 **“变量”** 窗口中的列，并选择要应用到变量列表的筛选器。  
   
-5.  在列表中选择变量，然后更新、"**数据类型** `Value`"、、 `Namespace`、"**引发更改事件**"、"**说明"** 和`Expression` "列" 中的`Name`值。  
+5.  在列表中选择变量，然后更新 `Name` 、"**数据类型**"、、、" `Value` `Namespace` **引发更改事件**"、"**说明" 和 "** 列 `Expression` " 中的值。  
   
 6.  在列表中选择变量，然后单击 **“移动变量”** 以更改作用域。  
   

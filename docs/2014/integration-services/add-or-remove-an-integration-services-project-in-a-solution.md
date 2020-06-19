@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: f01f6475-b63c-41dc-82ac-b62162b3adf7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9986384801788f907f42588ee298ba531fd13f95
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d338cac89b7b6c8f2588817cfd6718d4f415589
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061843"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925940"
 ---
 # <a name="add-or-remove-an-integration-services-project-in-a-solution"></a>在解决方案中添加或删除 Integration Services 项目
   下列过程介绍如何在解决方案中添加或删除 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。  
   
- 仅当解决方案在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中可见时，才能向现有解决方案中添加项目或从解决方案中删除项目。 如果在[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中选择了 "**始终显示解决方案**" 选项[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ，则即使该解决方案只包含一个项目，也会显示该解决方案。 否则， [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 将只显示包含多个项目的解决方案。 其他项目可以是 [!INCLUDE[ssIS](../includes/ssis-md.md)] 项目或其他类型的项目。  
+ 仅当解决方案在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中可见时，才能向现有解决方案中添加项目或从解决方案中删除项目。 如果在中选择了 "**始终显示解决方案**" 选项 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ， [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 则即使该解决方案只包含一个项目，也会显示该解决方案。 否则， [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 将只显示包含多个项目的解决方案。 其他项目可以是 [!INCLUDE[ssIS](../includes/ssis-md.md)] 项目或其他类型的项目。  
   
 ## <a name="adding-an-integration-services-project"></a>添加 Integration Services 项目  
  在添加项目时，可以让 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 创建新的空白项目，或者你可以添加已为其他解决方案创建的项目。 仅当现有解决方案在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中可见时，才能向该解决方案中添加项目。  
@@ -43,7 +42,7 @@ ms.locfileid: "66061843"
   
 3.  或者，编辑项目的名称和位置。  
   
-4.  单击" **确定**"。  
+4.  单击“确定”。  
   
 #### <a name="to-add-an-existing-integration-services-project-to-a-solution"></a>将现有 Integration Services 项目添加到解决方案中  
   

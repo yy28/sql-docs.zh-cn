@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 79397cf6-0611-450a-b0d8-e784a76e3091
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d8e7e02f844df026c597e93e43ebee7f8e786a72
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: e952ef1102ac67bd0ed9f72d0c201d54b320b5ca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849435"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935988"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>配置托管备份 (SQL Server Management Studio)
   "**托管备份**" 对话框允许您为 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 实例配置默认值。 本主题介绍如何使用此对话框来配置实例的 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 默认设置以及执行此操作时必须考虑的选项。 为实例配置 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 时，该设置将应用于任何此后创建的新数据库。  
@@ -59,7 +58,7 @@ ms.locfileid: "82849435"
  对 `smart_admin.sp_set_instance_backup` 和 `smart_admin.sp_backup_master_switch` 的`EXECUTE` 权限。  
   
 ## <a name="configure-ss_smartbackup-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 配置 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
- 从 "**对象资源管理器**" 中，展开 "**管理**" 节点，然后右键单击 "**托管备份**"。 选择“配置”  。 这将打开 **“托管备份”** 对话框。  
+ 从 "**对象资源管理器**" 中，展开 "**管理**" 节点，然后右键单击 "**托管备份**"。 选择“配置”。 这将打开 **“托管备份”** 对话框。  
   
  选中 "**启用托管备份**" 选项并指定配置值：  
   
@@ -69,7 +68,7 @@ ms.locfileid: "82849435"
   
  指定 Azure 存储帐户的**存储 URL** 、存储存储帐户的身份验证信息的 SQL 凭据以及备份文件的保留期。  
   
- 存储 URL 格式为： https:// \< StorageAccount>。 blob.core.windows.net/  
+ 存储 URL 格式为： https:// \<StorageAccount> 。 blob.core.windows.net/  
   
  若要在实例级别设置加密设置，请选中 "**加密备份**" 选项，并指定要用于加密的算法和证书或非对称密钥。  以实例级别设置的此值将用于应用此配置后创建的所有新数据库。  
   

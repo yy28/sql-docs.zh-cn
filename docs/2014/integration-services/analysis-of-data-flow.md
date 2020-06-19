@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 5654cb30-cad2-470c-97b3-59cb331033e5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e67c5448a6625b37c7fb17bc24ea6bdd7cb879ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5723ba6fcbcd8e5b2280fc977aa5f405d461b805
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061603"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925558"
 ---
 # <a name="analysis-of-data-flow"></a>数据流分析
-  可以使用[catalog. execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB`数据库视图分析包的数据流。 此视图在每当数据流组件将数据发送到下游组件时显示一行。 这些信息可用来进一步了解发送到每个组件的行。  
+  您可以使用[catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` 数据库视图来分析包的数据流。 此视图在每当数据流组件将数据发送到下游组件时显示一行。 这些信息可用来进一步了解发送到每个组件的行。  
   
 > [!NOTE]  
 >  日志记录级别必须设置为“详细”****，才能通过 catalog.execution_data_statistics 视图捕获信息。  
