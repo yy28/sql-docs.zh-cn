@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 135d317d74a720d51c966ed92f1c305f8c04b838
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e6a01bfc16041db89ea6160c36af1a7536290ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021950"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068547"
 ---
 # <a name="other-non-sql-server-subscribers"></a>其他非 SQL Server 订阅服务器
   有关[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持的非 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]订阅服务器列表，请参阅 [Non-SQL Server Subscribers](non-sql-server-subscribers.md)。 本主题包含有关 ODBC 驱动程序和 OLE DB 访问接口要求的信息。  
@@ -89,7 +88,7 @@ ms.locfileid: "63021950"
   
 -   **ICommandWithParameters**  
   
- **IAccessor** 是创建参数访问器所必需的。 如果访问接口支持**IColumnRowset**， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]则使用该接口来确定列是否为标识列。  
+ **IAccessor** 是创建参数访问器所必需的。 如果访问接口支持**IColumnRowset**，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用该接口来确定列是否为标识列。  
   
 ### <a name="rowset-object-interfaces"></a>Rowset 对象接口  
  下列接口是必需的：  

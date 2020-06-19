@@ -12,16 +12,15 @@ f1_keywords:
 ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4b65f5a5d337877010c4704b6ac067ced655e99f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2237c11e848d25a4b081f68a1969a2b496b3dd4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62662068"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062082"
 ---
 # <a name="options-environment-keyboard-page"></a>选项（"环境"-"键盘" 页）
-  使用“选项”  对话框，可以自定义 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的键盘方案。 使用此选项可以选择键盘方案。 若要访问此页，请单击“工具”  菜单上的“选项”  ，选择“环境”  文件夹，再单击“键盘”  。  
+  使用“选项”  对话框，可以自定义 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的键盘方案。 使用此选项可以选择键盘方案。 若要访问此页，请单击“工具”菜单上的“选项”，选择“环境”文件夹，再单击“键盘”。  
   
  “键盘方案”  下拉列表提供了可用快捷键的集合。 若要加载特定的方案，请从列表中选择该方案。 在准备离开“选项”  对话框时，单击“确定”  。 选定的方案将被加载到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中。  
   

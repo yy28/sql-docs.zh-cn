@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 8959b1ca4ea719ce571cb8609b817bba965185bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c69caf370d454c708484a61576716c213663f3d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798328"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054696"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>从命令提示符安装 PowerPivot
   您可以从命令行运行安装程序以便安装 SQL Server PowerPivot for SharePoint。 您必须在命令中包含 `/ROLE` 参数并排除 `/FEATURES` 参数。  
@@ -41,7 +40,7 @@ ms.locfileid: "72798328"
  与以往的版本相比，所有的服务器配置任务都作为安装后的任务来执行。 如果要自动执行安装和配置步骤，则可以使用 PowerShell 来配置服务器。 有关详细信息，请参阅[使用 Windows PowerShell 的 PowerPivot 配置](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell)。  
   
 ## <a name="example-commands"></a>示例命令  
- 下列示例说明了每个选项的用法。 示例1显示`SPI_AS_ExistingFarm`。  
+ 下列示例说明了每个选项的用法。 示例1显示 `SPI_AS_ExistingFarm` 。  
   
 ```cmd
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
@@ -80,9 +79,9 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
     /PID=<product key for an Enterprise installation>  
     ```  
   
-3.  将\<域 \ 用户名> 和\<StrongPassword>的占位符替换为有效的用户帐户和密码。  
+3.  将和的占位符替换为 \<domain\username> \<StrongPassword> 有效的用户帐户和密码。  
   
-     `/assvaccount`和 **/assvcpassword**参数用于在应用程序服务器上[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]配置实例。 请使用有效的帐户信息替换这些占位符。  
+     `/assvaccount`和 **/assvcpassword**参数用于在 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 应用程序服务器上配置实例。 请使用有效的帐户信息替换这些占位符。  
   
      **/Assysadminaccounts**参数必须设置为运行 SQL Server 安装程序的用户的标识。 您必须至少指定一个系统管理员。 请注意，SQL Server 安装程序不再自动将 sysadmin 权限授予内置 Administrators 组的成员。  
   

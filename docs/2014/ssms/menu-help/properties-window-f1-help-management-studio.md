@@ -22,16 +22,15 @@ helpviewer_keywords:
 ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a7fbfa9066f5531eead9b12a3f1ebc8c2f110a56
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73ac04e428a07cd607969a18ec88c68ea07df9ed
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62661754"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062058"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>“属性”窗口的 F1 帮助 (Management Studio)
-  使用“属性”  窗口可以查看所选元素的属性。 使用“属性”  窗口还可以查看文件、项目和解决方案的属性。 在“视图”  菜单上单击“属性窗口”  ，即可显示“属性”  窗口。  
+  使用“属性”  窗口可以查看所选元素的属性。 使用“属性”  窗口还可以查看文件、项目和解决方案的属性。 在“视图”菜单上单击“属性窗口”，即可显示“属性”窗口。  
   
  “属性”  窗口可根据特定属性的需要显示不同类型的编辑字段。 显示为灰色的属性为只读属性。  
   

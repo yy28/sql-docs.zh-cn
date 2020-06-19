@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e2fecf8a71854d7f8df160ba3ff63912086a34e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e60fdb986e24c2fa682caaf56ad7209ca555c966
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67131795"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927628"
 ---
 # <a name="view-event-session-data"></a>查看事件会话数据
   本主题介绍如何使用显示用户界面查看和分析扩展的事件数据：  
@@ -44,9 +43,9 @@ ms.locfileid: "67131795"
   
 -   对于 event_file 目标，请使用以下方法之一查看文件目标数据（.XEL 文件）：  
   
-    -   使用打开的[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]文件 >。
+    -   使用打开的文件 > [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 。
     
-    -   将文件拖放到中[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 
+    -   将文件拖放到中 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 。 
     
     -   双击 .XEL 文件。  
     
@@ -147,13 +146,13 @@ ms.locfileid: "67131795"
   
 -   sum  
   
--   min  
+-   分钟  
   
 -   max  
   
 -   average  
   
--   计数  
+-   count  
   
  sum、min、max 和 average 只能用于数值列。 count 是组中所选列存在的非 null 值的数量。  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9a90b1a2-aa69-43f6-bdeb-cc5f57a26c6f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1156a7272edc8ad1ecfb8e173f81bc678800c855
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e3665a695bd3f40407a8680872c9b0dc79fbc53
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089628"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927382"
 ---
 # <a name="view-the-events-for-registered-packages"></a>查看已注册包的事件
   创建 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 扩展事件会话之前，找到注册包中可用的事件非常有用。 有关详细信息，请参阅 [SQL Server Extended Events Packages](../relational-databases/extended-events/sql-server-extended-events-packages.md)。  

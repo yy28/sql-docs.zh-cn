@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: de36f636-cfe9-4ae6-a474-06e9c51f9f0c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1ff20051f5486fc8e9550c961f838ab5dc5c738
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a6afca189318d4c004c4d9bfeb1bf29b0a9b3284
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63028347"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054621"
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>在“结果”窗格中编辑行 (Visual Database Tools)
   在许多情况下，都可以在 [“结果”](visual-database-tools.md)窗格中编辑数据。 有关更改数据的详细信息，请参阅 [更新结果的规则 (Visual Database Tools)](rules-for-updating-results-visual-database-tools.md) 和 [使用“结果”窗格中的数据 (Visual Database Tools)](work-with-data-in-the-results-pane-visual-database-tools.md)窗格中编辑数据。  

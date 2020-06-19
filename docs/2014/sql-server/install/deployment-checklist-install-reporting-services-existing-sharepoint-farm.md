@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 436b4c3d-3f2f-464a-be7e-5c051d9ffb8f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e7a66be0d4e002643ffe1c72ce8c44aa50f61c0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d92406e6bffec0acc2db19b30c5a8ca83834b59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952624"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054864"
 ---
 # <a name="deployment-checklist-install-reporting-services-into-an-existing-sharepoint-farm"></a>部署核对清单：将 Reporting Services 安装到现有 SharePoint 场中
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 报表服务器可安装到新 SharePoint 场或现有 SharePoint 场。 本主题介绍将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装到现有 SharePoint 场的可能方案和最佳做法。  
@@ -28,12 +27,12 @@ ms.locfileid: "71952624"
 |创建或标识报表服务器部署中使用的帐户。 必须具有报表服务器服务的服务帐户以及用来连接到报表服务器数据库的凭据||  
 |确定用于承载报表服务器数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的本地或远程实例。 您选择的实例所在计算机的存储容量应能够容纳报表。||  
 |（可选）如果您要在订阅中使用报表服务器电子邮件，请查找为单位提供电子邮件服务的 SMTP 服务器或网关的名称|[配置报表服务器，以便 &#40;SSRS Configuration Manager 发送电子邮件&#41;](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)|  
-|注意：如果你要从早期 CTP 版本[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]升级计算机并且已对配置文件进行了自定义更改，则在升级到[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之后，你将需要对配置文件进行相同的更改。 受**影响的文件为 web.config 和** **app.config**。||  
+|注意：如果你要从早期 CTP 版本升级计算机并且已对 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 配置文件进行了自定义更改，则在升级到之后，你将需要对配置文件进行相同的更改 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。 受影响的文件**web.config**和**client.config**。||  
   
 ## <a name="installation-scenarios"></a>安装方案  
  下表介绍将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装到现有 SharePoint 场时的可能方案。 本地模式允许在本地从 SharePoint 文档库呈现报表，而无需与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器集成。 用于 SharePoint 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序是必需的，但 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器不是。 有关本地模式的详细信息，请参阅["报表查看器" 中的 "本地模式与连接模式报表" &#40;Reporting Services 在 Sharepoint 模式下&#41;](../../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) ，以及在[何处查找用于 sharepoint 产品的 Reporting Services 外接程序](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
-|启动配置|工作流|结束配置|说明|  
+|启动配置|工作流|结束配置|注释|  
 |----------------------------|--------------|--------------------------|--------------|  
 |本地模式下的 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|安装|连接模式 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。||  
 |连接模式 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|就地升级|连接模式 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。||  

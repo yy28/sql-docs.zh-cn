@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1954a997-7585-4713-81fd-76d429b8d095
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d7ed4098feb8bfd2d156e3de2f81fbf7329915aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ebf3f066dec03ba9e9f74dfdf551ccaababf032
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62842532"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927968"
 ---
 # <a name="troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes"></a>对内存优化哈希索引的常见性能问题进行故障排除
   本主题主要针对解决与哈希索引有关的常见问题。  
@@ -25,7 +24,7 @@ ms.locfileid: "62842532"
   
  相反，有序索引（例如基于磁盘的非聚集索引和内存优化的非聚集索引）支持在索引键列的子集上的索引查找，只要它们是索引中的首列。  
   
- **症状：** 这会导致性能下降，因为[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]需要执行全表扫描，而不是索引查找，这通常是更快的操作。  
+ **症状：** 这会导致性能下降，因为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 需要执行全表扫描，而不是索引查找，这通常是更快的操作。  
   
  **如何进行故障排除：** 除了性能下降之外，查询计划的检查将显示扫描而不是索引查找。 如果查询相对简单，则对查询文本和索引定义的检查还将显示搜索是否要求索引键列的子集。  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 050242e1-9b79-4ade-91a9-580707b9d2d9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9fa238a639321e9464ca3de2cc074b516f7df1e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8e19977300bc32bf832028b0d7e060fbaeb1665
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245997"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062129"
 ---
 # <a name="specify-job-responses"></a>指定作业响应
   作业响应指定完成作业后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务将执行的操作。 作业响应可确保数据库管理员知道作业完成的时间和作业运行频率。 典型的作业响应包括：  
@@ -41,7 +40,7 @@ ms.locfileid: "63245997"
   
 |||  
 |-|-|  
-|**说明**|**主题**|  
+|**说明**|**标题**|  
 |描述如何向操作员通知作业状态。|[向操作员通知作业状态](notify-an-operator-of-job-status.md)|  
 |介绍如何将作业状态写入 Windows 应用程序日志。|[Write the Job Status to the Windows Application Log](../../reporting-services/report-server/windows-application-log.md)|  
   

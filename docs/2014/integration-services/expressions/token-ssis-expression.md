@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af82c187fce638ddd1f28ab98a5109898f7cad25
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43381593b6a43f9e912088a67d5e10401ef3fc6c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768703"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968997"
 ---
 # <a name="token--ssis-expression"></a>TOKEN（SSIS 表达式）
   基于分隔字符串中的标记的指定分隔符以及表示要返回的标记的标记数目，从字符串返回标记（子字符串）。  
@@ -40,13 +39,13 @@ TOKEN(character_expression, delimiter_string, occurrence)
  DT_WSTR  
   
 ## <a name="remarks"></a>备注  
- 此函数将 <character_expression> 字符串拆分为一组由 <delimiter_string> 中指定的分隔符分隔的标记，然后返回第 N 个标记，其中 N 是 \<occurrence> 参数指定的标记出现的次数。 有关此函数的用法示例，请参阅“示例”部分。  
+ 此函数将 <character_expression> 字符串拆分为一组标记，这些标记以 <delimiter_string> 中指定的分隔符分隔，然后返回第 n 个令牌，其中 N 是参数所指定的令牌的出现次数 \<occurrence> 。 有关此函数的用法示例，请参阅“示例”部分。  
   
  下面的备注适用于 TOKEN 函数：  
   
 -   分隔符字符串可以包含一个或多个分隔符字符。  
   
--   如果 \<occurrence> 参数的值大于字符串中标记的总数，则该函数返回 NULL。  
+-   如果参数的值 \<occurrence> 高于字符串中标记的总数，则该函数返回 NULL。  
   
 -   前导分隔符将被跳过。  
   

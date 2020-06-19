@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e965579e-d006-41a3-89ec-cfd5398c67d2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0cd08ce16341022072c76fc1bf073d1a469d9273
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e263b0e38da7e5f5aa422f898f2118469b2ed4c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192901"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000372"
 ---
 # <a name="filter-events-based-on-the-event-start-time-sql-server-profiler"></a>基于事件开始时间筛选事件 (SQL Server Profiler)
   本主题介绍了如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]来基于事件开始时间筛选跟踪事件。  
@@ -42,7 +41,7 @@ ms.locfileid: "63192901"
   
 5.  在“事件选择”  选项卡上，单击“StartTime”  列标题。 也可以右键单击列标题，然后单击“编辑列筛选器”  打开“编辑筛选器”  对话框。  
   
-6.  展开 "**大于**" 或 "**小于**"，然后在`datetime`比较运算符下显示的字段中输入一个值。  
+6.  展开 "**大于**" 或 "**小于**"，然后 `datetime` 在比较运算符下显示的字段中输入一个值。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Profiler](sql-server-profiler.md)  

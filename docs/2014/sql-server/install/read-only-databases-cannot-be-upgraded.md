@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 27964211-ea30-4390-b791-dcf225fb9ae7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 414b26cf860ab32bb11beaa1ccbef3316c68f557
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba48ed2bd80961a4949dc13f04fed0637ecc27ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093373"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054680"
 ---
 # <a name="read-only-databases-cannot-be-upgraded"></a>无法升级只读数据库
   升级顾问已确定此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的某些数据库无法升级。  
@@ -29,7 +28,7 @@ ms.locfileid: "66093373"
  已检测到一个只读数据库。 若要升级此数据库，安装程序必须能写入此数据库。  
   
 ## <a name="corrective-action"></a>纠正措施  
- 如果没有人在使用数据库，请使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]企业管理器、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]或 ALTER database 语句将数据库更改为读写数据库。 下面的语句可将数据库更改为可读写状态。  
+ 如果没有人在使用数据库，请使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 企业管理器、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或 ALTER database 语句将数据库更改为读写数据库。 下面的语句可将数据库更改为可读写状态。  
   
 ```  
 USE master;  

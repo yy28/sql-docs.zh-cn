@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9b307c48da04e32691afa12ff1b05f6a4e8c33d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15cea1ab511324cad52ed197f9f612bbedb2b162
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62897461"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969167"
 ---
 # <a name="literals-ssis"></a>文字 (SSIS)
   表达式可以包含数值、字符串和布尔文字。 表达式计算器支持多种数值，例如整数、小数和浮点常量。 表达式计算器还支持数值中包含科学记数法和指定表达式计算器如何处理值的 long 和 float 后缀。  
@@ -100,10 +99,10 @@ ms.locfileid: "62897461"
 |转义序列|说明|  
 |---------------------|-----------------|  
 |\a|警报|  
-|\b|退格键|  
-|\f|换页符|  
+|\b|Backspace|  
+|\f|换页|  
 |\n|新建行|  
-|\r|回车符|  
+|\r|回车|  
 |\t|水平制表符|  
 |\v|垂直制表符|  
 |\\"|引号|  

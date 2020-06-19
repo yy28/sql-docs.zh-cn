@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a34d35b0-48eb-4ed1-9f19-ea14754650da
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: db55c753317f945a8156b671fa9cbcd72ce4c641
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: 9c7ed5dd25ed2b02445bfae5eb78ac03b2270552
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849595"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927948"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-azure"></a>排除针对 Azure 的 SQL Server 托管备份的故障
   本主题说明可以用来对[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]操作期间可能发生的错误进行故障排除的任务和工具。  
@@ -102,7 +101,7 @@ ms.locfileid: "82849595"
 ### <a name="troubleshooting-system-issues"></a>排除系统问题  
  以下是系统（SQL Server、SQL Server 代理）有问题的一些场景及其对[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]的影响：  
   
--   **当正在运行时，sqlservr.exe 停止响应或停止工作 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ：** 如果 SQL Server 停止工作，则 sql 代理将正常关闭， [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 同时也将停止，并在 SQL 代理中记录事件。  
+-   **Sqlservr.exe 在运行时停止响应或停止工作 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ：** 如果 SQL Server 停止工作，则 sql 代理将正常关闭， [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 同时停止，并在 SQL 代理中记录事件。  
   
      如果 SQL Server 停止响应，则在管理通道中记录事件。  事件日志的一个示例：  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 90cd6d3e-a271-4cb8-81f2-fc555b2d3cab
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c4079ea4213d7ecbec0165c32c82b3449bbb5aee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6d68237b2b46147b5e9e5180b7796b5cdb02cee0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952512"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054828"
 ---
 # <a name="domain-accounts-required-for-sharepoint-farm-upgrade-advisor"></a>SharePoint 场要求使用域帐户（升级顾问）
   为场环境配置的 SharePoint 产品要求您使用域帐户。  
@@ -35,7 +34,7 @@ ms.locfileid: "71952512"
  “报表服务器正在内置 NT AUTHORITY\NETWORK SERVICE 帐户下运行，而 SharePoint 场安装不支持它。 请将 Report Server 重新配置为在域帐户下运行。 "  
   
 ## <a name="corrective-action"></a>纠正措施  
- 对于[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和以前的版本，请使用 Reporting Services 配置管理器更改分配为 Report Server 服务帐户的帐户。  
+ 对于 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和以前的版本，请使用 Reporting Services 配置管理器更改分配为 Report Server 服务帐户的帐户。  
   
 #### <a name="to-change-the-service-account-from-configuration-manager"></a>从配置管理器中更改服务帐户  
   
@@ -47,7 +46,7 @@ ms.locfileid: "71952512"
   
 4.  选择 "**使用其他帐户**"，然后输入域帐户的凭据。  
   
-5.  单击“应用”  。  
+5.  单击“应用”。  
   
 ## <a name="see-also"></a>另请参阅  
  [配置报表服务器服务帐户（SSRS 配置管理器）](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  

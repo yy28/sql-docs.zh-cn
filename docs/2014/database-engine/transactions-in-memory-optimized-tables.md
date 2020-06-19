@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2cd07d26-a1f1-4034-8d6f-f196eed1b763
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c953060e082ade1e325589cc712f723dabb4909d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8806486631ca65f67fb197dceef9149d66f655df
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175389"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928088"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>内存优化表中的事务
   基于磁盘的表的行版本控制（使用 SNAPSHOT 隔离或 READ_COMMITTED_SNAPSHOT）提供了一种乐观并发控制形式。 读取器和编写器不会相互阻止。 对于内存优化表，编写器不会阻止编写器。 使用基于磁盘的表的行版本控制时，一个事务会锁定行，而尝试更新行的并发事务会被阻塞。 对于内存优化表则没有锁定。 如果两个事务尝试更新同一行，则会发生写/写冲突（错误 41302）。
@@ -60,7 +59,7 @@ ms.locfileid: "78175389"
 
 ### <a name="error-conditions-for-transactions-accessing-memory-optimized-tables"></a>访问内存优化表的事务的错误情况。
 
-|错误|方案|
+|错误|场景|
 |-----------|--------------|
 |写冲突。 尝试更新自该事务启动以来已更新的记录。|对由并发事务更新或删除的行执行 UPDATE 或 DELETE 操作。|
 |可重复读验证失败。|由事务读取的行自该事务启动以来已更改（更新或删除）。 可重复读验证通常在使用 REPEATABLE READ 和 SERIALIZABLE 事务隔离级别时进行。|
