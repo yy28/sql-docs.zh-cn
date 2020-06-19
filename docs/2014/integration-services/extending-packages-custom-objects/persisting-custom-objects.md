@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 29e265db3d0751f306fcd50125502c287cac8f62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb6d525235db93e10fcf14b73e80fc9c096d9c9f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768523"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968697"
 ---
 # <a name="persisting-custom-objects"></a>使自定义对象持久化
   如果您创建的自定义对象的属性仅使用诸如 `integer` 和 `string` 的简单数据类型，则不需要对这些对象实现自定义持久性。 持久性的默认实现可保存对象的元数据及其所有属性的值。  

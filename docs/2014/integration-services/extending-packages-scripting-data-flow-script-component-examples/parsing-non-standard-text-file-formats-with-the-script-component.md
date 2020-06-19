@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 381f616ec0732616a7c9c1a5d181e5d1ea002ce6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40139962f6c5fd77611ccd486785cd6afadeff69
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769003"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968597"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>使用脚本组件分析非标准文本文件格式
   当源数据以非标准格式排列时，您可能会发现在一个脚本中合并所有分析逻辑要比将多个 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 转换链接在一起以实现相同结果更方便。  
@@ -86,15 +85,15 @@ ms.locfileid: "62769003"
   
 7.  向包中添加数据流任务并单击 SSIS 设计器的“数据流”  选项卡。  
   
-8.  向数据流添加平面文件源，并将其配置为使用 RowDelimitedData 连接管理器。 在“平面文件源编辑器”  的“列”  页中，选择可用的单一外部列。  
+8.  向数据流添加平面文件源，并将其配置为使用 RowDelimitedData 连接管理器。 在“平面文件源编辑器”的“列”页中，选择可用的单一外部列。  
   
 9. 向数据流添加脚本组件并将其配置为转换。 将平面文件源的输出连接到脚本组件。  
   
 10. 双击脚本组件，显示“脚本转换编辑器”  。  
   
-11. 在“脚本转换编辑器”  的“输入列”  页中，选择可用的单一输入列。  
+11. 在“脚本转换编辑器”的“输入列”页中，选择可用的单一输入列。  
   
-12. 在 "**脚本转换编辑器**" 的 "**输入和输出**" 页中，选择 "输出`SynchronousInputID` 0" 并将其设置为 "无"。 创建 5 个输出列，所有 [DT_STR] 类型字符串的长度为 32：  
+12. 在 "**脚本转换编辑器**" 的 "**输入和输出**" 页中，选择 "输出 0" 并将其设置 `SynchronousInputID` 为 "无"。 创建 5 个输出列，所有 [DT_STR] 类型字符串的长度为 32：  
   
     -   FirstName  
   
@@ -106,7 +105,7 @@ ms.locfileid: "62769003"
   
     -   StateProvince  
   
-13. 在 "**脚本转换编辑器**" 的 "**脚本**" 页上，单击 "**编辑脚本**"，然后`ScriptMain`输入在示例的类中显示的代码。 关闭脚本开发环境和“脚本转换编辑器”  。  
+13. 在 "**脚本转换编辑器**" 的 "**脚本**" 页上，单击 "**编辑脚本**"，然后输入在示例的类中显示的代码 `ScriptMain` 。 关闭脚本开发环境和“脚本转换编辑器”  。  
   
 14. 向数据流添加 SQL Server 目标。 将该目标配置为使用 OLE DB 连接管理器和 RowDelimitedData 表。 将脚本组件的输出连接到此目标。  
   
@@ -245,15 +244,15 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 7.  向包中添加数据流任务并单击 SSIS 设计器的“数据流”  选项卡。  
   
-8.  向数据流添加平面文件源，并将其配置为使用 ParentChildData 连接管理器。 在“平面文件源编辑器”  的“列”  页中，选择可用的单一外部列。  
+8.  向数据流添加平面文件源，并将其配置为使用 ParentChildData 连接管理器。 在“平面文件源编辑器”的“列”页中，选择可用的单一外部列。  
   
 9. 向数据流添加脚本组件并将其配置为转换。 将平面文件源的输出连接到脚本组件。  
   
 10. 双击脚本组件，显示“脚本转换编辑器”  。  
   
-11. 在“脚本转换编辑器”  的“输入列”  页中，选择可用的单一输入列。  
+11. 在“脚本转换编辑器”的“输入列”页中，选择可用的单一输入列。  
   
-12. 在 "**脚本转换编辑器**" 的 "**输入和输出**" 页中，选择 "输出 0"，将其重`SynchronousInputID`命名为 ParentRecords，并将其设置为 None。 创建 2 个输出列：  
+12. 在 "**脚本转换编辑器**" 的 "**输入和输出**" 页中，选择 "输出 0"，将其重命名为 ParentRecords，并将其设置 `SynchronousInputID` 为 None。 创建 2 个输出列：  
   
     -   ParentID（主键），类型为四字节有符号整数 [DT_I4]  
   
@@ -267,7 +266,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
     -   ChildRecord，类型为长度为 50 的字符串 [DT_STR]  
   
-14. 在“脚本转换编辑器”  的“脚本”  页中，单击“编辑脚本”  。 在 `ScriptMain` 类中，输入在示例中显示的代码。 关闭脚本开发环境和“脚本转换编辑器”  。  
+14. 在“脚本转换编辑器”的“脚本”页中，单击“编辑脚本”。 在 `ScriptMain` 类中，输入在示例中显示的代码。 关闭脚本开发环境和“脚本转换编辑器”  。  
   
 15. 向数据流添加 SQL Server 目标。 将脚本组件的 ParentRecords 输出连接到此目标。将此目标配置为使用 OLE DB 连接管理器和 Parents 表。  
   

@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: f826ce7ff54bb28738f79fbf22c8c8435035008c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e4bbc4f0c371c927988e6b91fdbf47307ad9d3f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289445"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068382"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>使用 Azure Key Vault 的可扩展密钥管理 (SQL Server)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]连接器 for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault 允许[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]加密使用 Azure Key Vault 服务作为[可扩展密钥管理 &#40;EKM&#41;](extensible-key-management-ekm.md)提供程序，以保护其加密密钥。
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]连接器 for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault 允许 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密使用 Azure Key Vault 服务作为[可扩展密钥管理 &#40;EKM&#41;](extensible-key-management-ekm.md)提供程序，以保护其加密密钥。
 
  本主题内容：
 
@@ -79,7 +78,7 @@ ms.locfileid: "79289445"
 
     -   若要访问 **** 加密中使用的展开密钥的保管库， [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 将需要另一个服务主体 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。
 
-     有关如何注册应用程序和生成服务主体的详细信息，请参阅 **Azure Key Vault 入门** 中的 [向 Azure Active Directory 注册应用程序](https://go.microsoft.com/fwlink/?LinkId=521402)部分。 注册过程将针对每一个 Azure Active Directory **服务主体** 返回一个 **应用程序 ID**（也称为 **客户端 ID** ）和一个 **身份验证密钥**（也称为 **Secret**）。 当在`CREATE CREDENTIAL`语句中使用时，必须从**客户端 ID**中删除连字符。 记录这些密钥，以在下面的脚本中使用：
+     有关如何注册应用程序和生成服务主体的详细信息，请参阅 **Azure Key Vault 入门** 中的 [向 Azure Active Directory 注册应用程序](https://go.microsoft.com/fwlink/?LinkId=521402)部分。 注册过程将针对每一个 Azure Active Directory **服务主体** 返回一个 **应用程序 ID**（也称为 **客户端 ID** ）和一个 **身份验证密钥**（也称为 **Secret**）。 当在语句中使用时 `CREATE CREDENTIAL` ，必须从**客户端 ID**中删除连字符。 记录这些密钥，以在下面的脚本中使用：
 
     -   **** 登录的 **服务主体** ： **CLIENTID_服务主体_login** 和 **SECRET_服务主体_login**
 
@@ -94,7 +93,7 @@ ms.locfileid: "79289445"
 
      链接至 Azure Key Vault 文档
 
-    -   [什么是 Azure Key Vault？](https://go.microsoft.com/fwlink/?LinkId=521401)
+    -   [什么是 Azure 密钥保管库？](https://go.microsoft.com/fwlink/?LinkId=521401)
 
     -   [Azure Key Vault 入门](https://go.microsoft.com/fwlink/?LinkId=521402)
 
@@ -159,9 +158,9 @@ ms.locfileid: "79289445"
 2.  安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 凭据，使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理员可以登录使用 Key Vault，以便安装和管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密方案。
 
     > [!IMPORTANT]
-    >  `CREATE CREDENTIAL`的**标识**参数需要密钥保管库名称。 的**机密**参数`CREATE CREDENTIAL`需要将* \<客户端 ID>* （无连字符）和* \<机密>* 传递到一起，而不会在两者之间使用空格。
+    >  的**标识**参数 `CREATE CREDENTIAL` 需要密钥保管库名称。 的**机密**参数 `CREATE CREDENTIAL` 需要 *\<Client ID>* （无连字符）和 *\<Secret>* 一起传递，不带空格。
 
-     在下面的示例中，**客户端 ID** （`EF5C8E09-4D2A-4A76-9998-D93440D8115D`）去掉了连字符，并输入为字符串`EF5C8E094D2A4A769998D93440D8115D` ，并且**机密**由字符串*SECRET_sysadmin_login*表示。
+     在下面的示例中，**客户端 ID** （ `EF5C8E09-4D2A-4A76-9998-D93440D8115D` ）去掉了连字符，并输入为字符串 `EF5C8E094D2A4A769998D93440D8115D` ，并且**机密**由字符串*SECRET_sysadmin_login*表示。
 
     ```sql
     USE master;
@@ -175,7 +174,7 @@ ms.locfileid: "79289445"
     ADD CREDENTIAL sysadmin_ekm_cred;
     ```
 
-     有关使用`CREATE CREDENTIAL`参数的变量和以编程方式从客户端 ID 中删除连字符的示例，请参阅[CREATE CREDENTIAL &#40;transact-sql&#41;](/sql/t-sql/statements/create-credential-transact-sql)。
+     有关使用参数的变量 `CREATE CREDENTIAL` 和以编程方式从客户端 ID 中删除连字符的示例，请参阅[CREATE CREDENTIAL &#40;transact-sql&#41;](/sql/t-sql/statements/create-credential-transact-sql)。
 
 3.  如果按照上述章节 3 步骤 1 中所述导入了一个非对称密钥，请通过在下例中提供密钥名称来打开密钥。
 
@@ -224,9 +223,9 @@ ms.locfileid: "79289445"
 1.  创建 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 凭据，以供 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 在数据库加载期间访问 key vault EKM 时使用。
 
     > [!IMPORTANT]
-    >  `CREATE CREDENTIAL`的**标识**参数需要密钥保管库名称。 的**机密**参数`CREATE CREDENTIAL`需要将* \<客户端 ID>* （无连字符）和* \<机密>* 传递到一起，而不会在两者之间使用空格。
+    >  的**标识**参数 `CREATE CREDENTIAL` 需要密钥保管库名称。 的**机密**参数 `CREATE CREDENTIAL` 需要 *\<Client ID>* （无连字符）和 *\<Secret>* 一起传递，不带空格。
 
-     在下面的示例中，**客户端 ID** （`EF5C8E09-4D2A-4A76-9998-D93440D8115D`）去掉了连字符，并输入为字符串`EF5C8E094D2A4A769998D93440D8115D` ，并且**机密**由字符串*SECRET_DBEngine*表示。
+     在下面的示例中，**客户端 ID** （ `EF5C8E09-4D2A-4A76-9998-D93440D8115D` ）去掉了连字符，并输入为字符串 `EF5C8E094D2A4A769998D93440D8115D` ，并且**机密**由字符串*SECRET_DBEngine*表示。
 
     ```sql
     USE master;

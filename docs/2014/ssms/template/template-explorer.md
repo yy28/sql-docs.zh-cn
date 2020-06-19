@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b9ee55c5-bb44-4f76-90ac-792d8d83b4c8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 42e52d92d993627129f79f215fa536001f44538d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35e7ee1e6261c759580df3a836f9cc4b500a77ce
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63074053"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061938"
 ---
 # <a name="template-explorer"></a>Template Explorer
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了多种模板。 模板即包含 SQL 脚本的样板文件，可用于在数据库中创建对象。 首次打开模板资源管理器时，会在 C:\Users 的用户文件夹中的 "AppData\Roaming\Microsoft\SQL Server Management Studio\120\templates 下" 下放置模板的副本。  

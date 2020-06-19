@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: af3f08bcde8b2a325784ef7a99ba5ffad89ce617
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8c74a4c427e4fc89d32c0dcf961bf5f4b839fff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78288985"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061971"
 ---
 # <a name="start-sql-server-management-studio"></a>启动 SQL Server Management Studio
   开始本教程之前，让我们先来了解一下 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
@@ -24,12 +23,12 @@ ms.locfileid: "78288985"
   
 #### <a name="to-open-sql-server-management-studio"></a>打开 SQL Server Management Studio  
   
-1.  在 "**开始**" 菜单上，指向 "**所有程序**" [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，指向 ""，然后单击 " **SQL Server Management Studio**"。  
+1.  在 "**开始**" 菜单上，指向 "**所有程序**"，指向 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] ""，然后单击 " **SQL Server Management Studio**"。  
   
     > [!NOTE]  
     >  默认情况下不会安装 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 如果 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 不可用，则运行安装程序安装此程序。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 不可用于 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]可以从[Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=14630)免费下载 Express，但其用户界面不同于本教程中所述的用户界面。  
   
-2.  在“连接到服务器”对话框中，确认默认设置，再单击“连接”。******** 若要进行连接，"**服务器名称**" 框必须包含安装的计算机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的名称。 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]是命名实例，则 "**服务器名称**" 框还应包含格式\<为*computer_name*>\\<*instance_name*> 的实例名称。  
+2.  在“连接到服务器”对话框中，确认默认设置，再单击“连接”。******** 若要进行连接，"**服务器名称**" 框必须包含安装的计算机的名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是命名实例，则 "**服务器名称**" 框还应包含格式为 \<*computer_name*> \\ < *instance_name*> 的实例名称。  
   
 ## <a name="management-studio-components"></a>Management Studio 组件  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 在专用于特定信息类型的窗口中显示信息。 数据库信息显示在对象资源管理器和文档窗口中。  

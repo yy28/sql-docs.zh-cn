@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 31c05bbc1be8376144eb191ff28a9cdc6eebdd8a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b450d603ec1d7b8c930a0361d8070519b6a2a91
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068903"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940592"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>在 Analysis Services 中配置服务器属性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理员可以修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的默认服务器配置属性。 每个实例都有自己的配置属性，可以独立于同一服务器上的其他实例进行设置。  
@@ -82,8 +81,8 @@ ms.locfileid: "66068903"
 |[常规属性](general-properties.md)|常规属性既是基本属性，又是高级属性，包括定义数据目录、备份目录和其他服务器行为的属性。|  
 |[数据挖掘属性](data-mining-properties.md)|数据挖掘属性控制着启用和禁用哪些数据挖掘算法。 默认情况下，启用所有算法。|  
 |DSO|不再支持 DSO。 忽略 DSO 属性。|  
-|[功能属性](feature-properties.md)|功能属性与产品功能有关，大多数是高级属性，包括控制服务器实例之间的链接的属性。|  
-|[FileStore 属性](filestore-properties.md)|文件存储属性仅用于高级用途。 其中包括高级内存管理设置。|  
+|[Feature 属性](feature-properties.md)|功能属性与产品功能有关，大多数是高级属性，包括控制服务器实例之间的链接的属性。|  
+|[每个属性](filestore-properties.md)|文件存储属性仅用于高级用途。 其中包括高级内存管理设置。|  
 |[锁管理器属性](lock-manager-properties.md)|锁管理器属性定义与锁定和超时有关的服务器行为。 这些属性多数仅适用于高级用途。|  
 |[日志属性](log-properties.md)|日志属性控制是否在服务器上记录事件以及记录事件的位置和方式。 其中包括错误日志记录、异常日志记录、网络流量记录器、查询日志记录和跟踪。|  
 |[内存属性](memory-properties.md)|内存属性控制服务器如何使用内存。 这些属性主要用于高级用途。|  

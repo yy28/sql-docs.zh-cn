@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3a1022770526386640f0ad2aa114a2161ba16dc8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 926a410ce7b91c5c4683856729a01353b2d37d00
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63140395"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061875"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>在“条件”窗格中组合搜索条件的约定 (Visual Database Tools)
   您可以创建包含用任意多个 AND 和 OR 运算符链接的任意多个搜索条件的查询。 具有 AND 和 OR 子句组合的查询会变得非常复杂。因此，了解在执行此类查询时如何对其进行解释，以及在[“条件”窗格](visual-database-tools.md)和 [SQL 窗格](sql-pane-visual-database-tools.md)中如何表示此类查询，是非常有用的。  

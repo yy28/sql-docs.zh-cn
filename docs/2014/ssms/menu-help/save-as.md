@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 441ed50984ef6bbfcdaec47be0fb29aa37cf69c7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62510316"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062009"
 ---
 # <a name="save-as"></a>另存为
-  使用此对话框可以将当前项的实例以指定的文件格式保存到指定位置。 若要显示此对话框，请单击 "**文件** **" 菜单上的**"**保存** * \<文件>* （其中* \<，文件>* 是当前项的名称），或在代码编辑器中按 ALT + F。  
+  使用此对话框可以将当前项的实例以指定的文件格式保存到指定位置。 若要显示此对话框，请在 "文件" 菜单上单击 "**另存** *\<file>* **为**" （其中， **File** *\<file>* 是当前项的名称），或者在代码编辑器中按 ALT + F。  
   
 ## <a name="central-panel"></a>中央面板  
  **保存于**  

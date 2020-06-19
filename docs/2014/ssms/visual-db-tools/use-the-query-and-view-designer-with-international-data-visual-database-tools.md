@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 673ad13ff5688fb17eaa4b975644256f072a3aef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 905e4c6909c792b019c11ef95662a7ec1a113bb4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204618"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054577"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>对国际数据使用查询和视图设计器 (Visual Database Tools)
   在 [查询和视图设计器](visual-database-tools.md) 中，可以使用任何语言的数据，也可以在任何 Windows 操作系统版本中使用查询和视图设计器。 以下准则概括介绍了需要注意的一些差异，并提供有关管理国际应用程序中的数据的信息。  

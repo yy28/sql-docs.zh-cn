@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af3478e254f01f7cf53d5a09b6febab3b1e85e8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 257fec0f1d7ce59ce84cc3c54b9b5d105440a6f1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176291"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968710"
 ---
 # <a name="developing-a-custom-log-provider"></a>开发自定义日志提供程序
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所具有的广泛的日志记录功能使其可捕获在包执行过程中发生的事件。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含各种日志提供程序，可用于创建日志并以 XML、文本、数据库或 Windows 事件日志等格式存储这些日志。 如果提供的日志提供程序和输出格式不能完全满足您的需要，您可以创建自定义日志提供程序。
@@ -36,14 +35,14 @@ ms.locfileid: "78176291"
 
  [编写自定义日志提供程序代码](coding-a-custom-log-provider.md)介绍如何通过重写基类的方法和属性实现自定义日志提供程序。
 
- [为自定义日志提供程序开发用户界面](developing-a-user-interface-for-a-custom-log-provider.md)中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]不支持自定义日志提供程序的自定义用户界面。
+ [为自定义日志提供程序开发用户界面](developing-a-user-interface-for-a-custom-log-provider.md)中不支持自定义日志提供程序的自定义用户界面 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 。
 
-## <a name="related-topics"></a>“相关主题”
+## <a name="related-topics"></a>相关主题
 
 ### <a name="information-common-to-all-custom-objects"></a>所有自定义对象的通用信息
  有关可以在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中创建的所有类型自定义对象的通用信息，请参阅以下主题：
 
- [开发 Integration Services 的自定义对象](../developing-custom-objects-for-integration-services.md)介绍实现的所有类型自定义对象的基本步骤[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]。
+ [开发 Integration Services 的自定义对象](../developing-custom-objects-for-integration-services.md)介绍实现的所有类型自定义对象的基本步骤 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 。
 
  [持久保存自定义对象](../persisting-custom-objects.md)描述自定义持久性，并在必要时对其进行说明。
 

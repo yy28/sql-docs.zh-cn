@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 9e30eae0-776b-4a09-aac3-0c0249d92ca5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 277b5ff1e575f223b78f958e26801e7b209d05d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c864e95a075477b80bdbbe06912be37bba33fadf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478927"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961129"
 ---
 # <a name="filter-data-before-loading-mds-add-in-for-excel"></a>加载前筛选数据（用于 Excel 的 MDS 外接程序）
-  在[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，当您想要限制要加载到 Excel 中的数据的大小或范围时，可以筛选数据。  
+  在中 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] ，当您想要限制要加载到 Excel 中的数据的大小或范围时，可以筛选数据。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   **** 您必须有权访问“资源管理器”功能区域。  

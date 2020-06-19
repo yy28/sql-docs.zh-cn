@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f197eef6369281001359969bf1d92bd0390bedc8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d5da49fee774b7f70a0ab6108ee302d0ee28cec1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755059"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933930"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>指定服务器网络地址（数据库镜像）
   设置数据库镜像会话要求每个服务器实例都有一个服务器网络地址。 服务器实例的服务器网络地址必须通过提供系统地址和实例侦听的端口号来明确标识该实例。  
@@ -32,11 +31,11 @@ ms.locfileid: "62755059"
 ##  <a name="syntax-for-a-server-network-address"></a><a name="Syntax"></a>服务器网络地址的语法  
  服务器网络地址的语法格式如下：  
   
- TCP：/<strong>/</strong>*\<system-address>* <strong>：<strong>*\<port>* 
+ TCP：<strong>//</strong> *\<system-address>* <strong> ：<strong>*\<port>* 
   
- where  
+ 其中  
   
--   系统地址>是明确标识目标计算机系统的字符串。 * \<* 通常，服务器地址是系统名称（如果各系统都在同一个域中）、完全限定域名或 IP 地址：  
+-   *\<system-address>* 是明确标识目标计算机系统的字符串。 通常，服务器地址是系统名称（如果各系统都在同一个域中）、完全限定域名或 IP 地址：  
   
     -   如果各系统都在同一个域中，则可以使用计算机系统的名称；例如， `SYSTEM46`。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "62755059"
         > [!NOTE]  
         >  有关如何查找完全限定域名的信息，请参阅本主题后面的“查找完全限定域名”。  
   
--   端口>是伙伴服务器实例的镜像端点使用的端口号。 * \<* 有关指定终结点的信息，请参阅 [为 Windows 身份验证创建数据库镜像终结点 (Transact-SQL)](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  
+-   *\<port>* 是伙伴服务器实例的镜像端点使用的端口号。 有关指定终结点的信息，请参阅 [为 Windows 身份验证创建数据库镜像终结点 (Transact-SQL)](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  
   
      数据库镜像端点可以使用计算机系统上的任意可用端口。 计算机系统上的每个端口号只能与一个端点相关联，而每个端点与一个服务器实例相关联；这样，同一服务器上的不同服务器实例便可使用不同端口来侦听各个端点。 因此，设置数据库镜像会话时在服务器网络地址中指定的端口会始终将会话定向到其端点与该端口关联的服务器实例。  
   

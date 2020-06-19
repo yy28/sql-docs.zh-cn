@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 67e09713fdec72313bde6ba81e1cc169467fda0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac190d6099bca1a38ca2f286e6ce048fe5322e2a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211190"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054543"
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>教程：编写 Transact-SQL 语句
   欢迎学习“编写 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句”教程。 本教程适用于对编写 SQL 语句不熟悉的用户。 本教程通过回顾一些用于创建表和插入数据的基本语句，帮助新用户入门。 本教程使用 [!INCLUDE[tsql](../includes/tsql-md.md)]，后者是 SQL 标准的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 实现。 本教程旨在简介 [!INCLUDE[tsql](../includes/tsql-md.md)] 语言，但不是要取代 [!INCLUDE[tsql](../includes/tsql-md.md)] 课程。 本教程特意选用了简单的语句，因此它们不能代表标准生产数据库中存在的语句的复杂程度。  

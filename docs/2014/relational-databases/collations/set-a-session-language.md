@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: de7f2c90-8f4f-4cfc-94cc-4933a7fd2bde
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bf4eb1d7595d16369a0355562f090b746a4203ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da8d6adce66ac5b97e533b5afaefabda40e4b966
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918941"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953417"
 ---
 # <a name="set-a-session-language"></a>设置会话语言
   根据语言和区域性首选项，可用会话语言设置下列元素在服务器上显示的方式：  

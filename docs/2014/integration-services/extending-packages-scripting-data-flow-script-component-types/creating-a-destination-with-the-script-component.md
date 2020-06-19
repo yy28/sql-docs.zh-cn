@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4058a059f1f8690f636e00ac1c68957b68c85f76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4151c889e83555e81352f606bd1876961a933fe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176287"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968563"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>使用脚本组件创建目标
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中的目标组件用于将从上游源和转换接收的数据保存到数据源。 目标组件通常通过现有连接管理器连接数据源。
@@ -66,9 +65,9 @@ ms.locfileid: "78176287"
  有关“脚本转换编辑器”  的“输入和输出”  页上的详细信息，请参阅[脚本转换编辑器（“输入和输出”页）](../script-transformation-editor-inputs-and-outputs-page.md)。
 
 ### <a name="adding-variables"></a>添加变量
- 如果要在脚本中使用现有变量，可以在 "**脚本转换编辑器**" 的`ReadOnlyVariables` " `ReadWriteVariables` **脚本**" 页上的和属性字段中添加这些变量。
+ 如果要在脚本中使用现有变量，可以在 " `ReadOnlyVariables` `ReadWriteVariables` **脚本转换编辑器**" 的 "**脚本**" 页上的和属性字段中添加这些变量。
 
- 在属性字段中添加多个变量时，请用逗号将变量名隔开。 您还可以选择多个变量，方法是单击 **...** `ReadOnlyVariables`和`ReadWriteVariables`属性字段旁的省略号（...）按钮，然后在 "**选择变量**" 对话框中选择变量。
+ 在属性字段中添加多个变量时，请用逗号将变量名隔开。 您还可以选择多个变量，方法是单击和属性字段旁的省略号（**...**）按钮 `ReadOnlyVariables` `ReadWriteVariables` ，然后在 "**选择变量**" 对话框中选择变量。
 
  有关如何在脚本组件中使用变量的常规信息，请参阅[在脚本组件中使用变量](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。
 
@@ -82,7 +81,7 @@ ms.locfileid: "78176287"
 ### <a name="understanding-the-auto-generated-code"></a>了解自动生成的代码
  创建并配置目标组件后打开 VSTA IDE 时，可编辑的 `ScriptMain` 类将显示在代码编辑器中，其中有 `ProcessInputRow` 方法的存根。 在 `ScriptMain` 类中可编写自定义代码，`ProcessInputRow` 是目标组件中最重要的方法。
 
- 如果在 VSTA 中打开 "**项目资源管理器**" 窗口，可以看到脚本组件还生成了只读的`BufferWrapper`和`ComponentWrapper`项目项。 `ScriptMain` 类从 `UserComponent` 项目项中的 `ComponentWrapper` 类继承。
+ 如果在 VSTA 中打开 "**项目资源管理器**" 窗口，可以看到脚本组件还生成了只读的 `BufferWrapper` 和 `ComponentWrapper` 项目项。 `ScriptMain` 类从 `UserComponent` 项目项中的 `ComponentWrapper` 类继承。
 
  在运行时，数据流引擎调用 `ProcessInput` 类中的 `UserComponent` 方法，该方法重写 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 父类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 方法。 而 `ProcessInput` 方法遍历输入缓冲区中的所有行并为每一行调用一次 `ProcessInputRow` 方法。
 
@@ -101,7 +100,7 @@ ms.locfileid: "78176287"
  下面的示例演示在 `ScriptMain` 类中创建目标组件所需的代码。
 
 > [!NOTE]
->  `AdventureWorks`这些示例使用示例数据库中的**Person**表，并通过数据流传递其第一列和第四列： **int * AddressID*** 和**nvarchar （30） City**列。 在本节中，在源、转换和目标示例中使用相同的数据。 每个示例的其他前提条件和假设都记录在文档中。
+>  这些示例使用示例数据库中的**Person**表， `AdventureWorks` 并通过数据流传递其第一列和第四列： **int * AddressID*** 和**nvarchar （30） City**列。 在本节中，在源、转换和目标示例中使用相同的数据。 每个示例的其他前提条件和假设都记录在文档中。
 
 ### <a name="adonet-destination-example"></a>ADO.NET 目标示例
  本示例演示了使用现有 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器将数据流中的数据保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的目标组件。
@@ -119,7 +118,7 @@ ms.locfileid: "78176287"
 
 3.  向数据流设计器图面添加新的脚本组件并将其配置为目标。
 
-4.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中将上游源或转换的输出连接到目标组件。 （您可以直接将源连接到目标，而无需进行任何转换。）此`AdventureWorks`输出应提供示例数据库的**Person**表中的数据，其中至少包含**AddressID**和**City**列。
+4.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中将上游源或转换的输出连接到目标组件。 （您可以直接将源连接到目标，而无需进行任何转换。）此输出应提供示例数据库的**Person**表中的数据， `AdventureWorks` 其中至少包含**AddressID**和**City**列。
 
 5.  打开“脚本转换编辑器”  。 在“输入列”  页中，选择 **AddressID** 和 **City** 输入列。
 
@@ -236,7 +235,7 @@ public class ScriptMain:
 
 2.  向数据流设计器图面添加新的脚本组件并将其配置为目标。
 
-3.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中将上游源或转换的输出连接到目标组件。 （您可以直接将源连接到目标，而无需进行任何转换。）此`AdventureWorks`输出应提供示例数据库的**Person**表中的数据，并且应至少包含**AddressID**和**City**列。
+3.  在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中将上游源或转换的输出连接到目标组件。 （您可以直接将源连接到目标，而无需进行任何转换。）此输出应提供示例数据库的**Person**表中的数据 `AdventureWorks` ，并且应至少包含**AddressID**和**City**列。
 
 4.  打开“脚本转换编辑器”  。 在“输入列”  页中，选择 AddressID  和 City  列。
 

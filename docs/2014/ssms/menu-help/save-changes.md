@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: abe17944-c538-4106-a18b-ade5e2d8e20f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 78a7f93dc2d906f86a83f1cfd2518b39cd73c9e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7e5807e24430d8e837f08c4179fb764d227bae8f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62510019"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062002"
 ---
 # <a name="save-changes"></a>保存更改
   注意，只有单击“是”  之后才会保存对所列项的更改。  

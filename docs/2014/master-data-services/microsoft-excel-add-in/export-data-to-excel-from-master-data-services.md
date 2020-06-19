@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: dd29389b-928c-4e50-995c-c6af27f97805
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bbe1188773d0770ff345cd54ea47e03a3c05555f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: acfec7a6d86f55e35ef7b3e6f1fa1af481ef87d0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482717"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961119"
 ---
 # <a name="load-data-from-mds-into-excel"></a>将数据从 MDS 加载到 Excel
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]在中，必须从 MDS 存储库中加载数据，才能使用它。  
+  在中 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] ，必须从 MDS 存储库中加载数据，才能使用它。  
   
  如果你想要在加载前筛选数据集，请参阅[在加载前筛选数据 &#40;MDS Add-in for Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md) 。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   **** 您必须有权访问“资源管理器”功能区域。  
@@ -41,7 +40,7 @@ ms.locfileid: "65482717"
   
     > [!NOTE]  
     >  -   只有前一百万个成员才能加载到 Excel 中。 若要在加载前对列表进行筛选，请在 **“连接并加载”** 组中，单击 **“筛选器”**。  
-    > -   在作为约束列表（基于域的属性）的列中，只加载前 25,000 个值。 您可以在 excelusersettings.config 文件（位于安装 Excel 的计算机上）的 MaximumDbaEntitySize 属性中更改该数值。 此文件位于 C:\Users\\<USER\>\AppData\Local\Microsoft\Microsoft SQL Server\120\MasterDataServices\\中。  
+    > -   在作为约束列表（基于域的属性）的列中，只加载前 25,000 个值。 您可以在 excelusersettings.config 文件（位于安装 Excel 的计算机上）的 MaximumDbaEntitySize 属性中更改该数值。 此文件位于 C:\Users \\<user \> \AppData\Local\Microsoft\Microsoft SQL Server\120\MasterDataServices 中 \\ 。  
   
     > [!NOTE]  
     >  使用用于 32 位 Excel 的 Microsoft Excel 外接程序加载文本分隔数据时，如果“要加载的单元计数”**** 和“要发布的单元计数”**** 属性均设置为最大值 1000，则将出现内存不足错误。 必须使用 64 位 Excel，才能使用“要加载的单元计数”**** 和“要发布的单元计数”**** 的最大值设置。  

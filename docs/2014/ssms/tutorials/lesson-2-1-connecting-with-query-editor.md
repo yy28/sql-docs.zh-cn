@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48725f54-a7b6-4b79-948e-965c1fe4eef1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bcb2454d9f6b4a6df465c33ca218c4a960f8099b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0658c567cca7acc2f045c2246118e52b4e7ac004
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68187820"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994704"
 ---
 # <a name="connecting-with-query-editor"></a>连接查询编辑器
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 允许在与服务器断开连接时编写或编辑代码。 当服务器不可用或要节省短缺的服务器或网络资源时，这一点很有用。 您也可以更改查询编辑器与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新实例的连接，而无需打开新的查询编辑器窗口或重新键入代码。  

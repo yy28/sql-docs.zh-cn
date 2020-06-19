@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1d4ed20-ad3b-4e33-a26b-38d7517237b7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ede861a696ba7782f7cdce962578dc077f799b33
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ec5479d3b1e4ee1e828ba1c43cd86ce5e42b6497
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707429"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043893"
 ---
 # <a name="data-source-objects-ole-db"></a>数据源对象 (OLE DB)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 对用于建立到数据存储的链接的一组 OLE DB 接口使用术语 "数据源"，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 创建提供程序的数据源对象的实例是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机客户端使用者的第一个任务。  

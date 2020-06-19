@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7b3e30dc-8f41-4a5d-8009-ae5a4426a64b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 296ace8d97269d80179d437b1033b92196d6adc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93a22979296e397ebe9c28a014913ca9da592ee6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478987"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961317"
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>创建基于域的属性（用于 Excel 的 MDS 外接程序）
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，管理员在想要将列中的值限制为一组特定值时可以创建基于域的属性。  
@@ -25,7 +24,7 @@ ms.locfileid: "65478987"
 > [!NOTE]  
 >   如果用户在该约束列键入某个值，而不是从列表中进行选择，则错误在发布时将显示在 **$InputStatus$** 列中。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域和 **“资源管理器”** 功能区域。  
@@ -52,7 +51,7 @@ ms.locfileid: "65478987"
   
 6.  如果您在前一步骤中选择 **“所选列”** ，则在 **“新实体名称”** 框中键入新实体的名称。 该名称可与列（属性）名称相同。  
   
-7.  单击" **确定**"。 列中的每个单元现在都有一个可供用户从中选择的值列表。  
+7.  单击“确定”。 列中的每个单元现在都有一个可供用户从中选择的值列表。  
   
 ## <a name="next-steps"></a>后续步骤  
   

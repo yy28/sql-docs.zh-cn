@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3dd935387e8d6e4a95a25d21eb5d5d229f9599bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2846fed91174f0703e5d195b13a36c2207a03c1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62895486"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968582"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>使用脚本组件增强错误输出
   默认情况下，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 错误输出中的另外两列 ErrorCode 和 ErrorColumn 只包含表示错误号的数值代码以及出现错误的列的 ID。 如果没有相应的错误说明，这些数值没有多大用处。  
   
- 本主题介绍如何使用脚本组件向数据流中的现有错误输出数据中添加错误说明列。 示例使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 接口的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> 方法添加与特定预定义 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 错误代码对应的错误说明，该接口通过脚本组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 属性提供。  
+ 本主题介绍如何使用脚本组件向数据流中的现有错误输出数据中添加错误说明列。 示例使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> 接口的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 方法添加与特定预定义 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 错误代码对应的错误说明，该接口通过脚本组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 属性提供。  
   
 > [!NOTE]  
 >  如果希望创建可更方便地重用于多个数据流任务和多个包的组件，请考虑以此脚本组件示例中的代码为基础，创建自定义数据流组件。 有关详细信息，请参阅 [开发自定义数据流组件](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)。  
@@ -51,7 +50,7 @@ ms.locfileid: "62895486"
   
 7.  在 "脚本转换编辑器" 的 "**输入列**" 页中，选择 ErrorCode 列。  
   
-8.  在 "**输入和输出**" 页中，添加名为**ErrorDescription**的`String`类型的新输出列。 将新列的默认长度提高到 255 以支持长消息。  
+8.  在 "**输入和输出**" 页中，添加 `String` 名为**ErrorDescription**的类型的新输出列。 将新列的默认长度提高到 255 以支持长消息。  
   
 9. 关闭“脚本转换编辑器”****。  
   

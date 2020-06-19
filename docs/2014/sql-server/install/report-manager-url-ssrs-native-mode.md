@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 45768952-23a6-45a5-b541-e7bf192b4a78
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dd4ff661a10eca71781aee9d1886e80936f6246d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 53eaf828dd3fe6f5fa4056bda9dbc428dfa5d385
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952414"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054639"
 ---
 # <a name="report-manager-url-ssrs-native-mode"></a>报表管理器 URL（SSRS 本机模式）
   使用报表管理器 URL 页可配置或修改用于访问报表管理器的 URL。 默认情况下，报表管理器 URL 继承报表服务器 Web 服务 URL 的前缀、IP 地址和端口。 这是因为报表管理器提供了对于运行在相同报表服务器服务中的 Web 服务的前端访问。 如果您正在隔离服务应用程序并使用报表管理器访问其他计算机上的报表服务器 Web 服务，则必须编辑 RSReportServer.config 文件以将报表管理器指向不同的实例。 有关配置与远程 Report Server 报表管理器连接的详细信息，请参阅[Reporting Services 配置管理器 &#40;纯模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  

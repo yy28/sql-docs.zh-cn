@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: df516567-8689-45c2-b418-16473f8d43e4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 53faaae001e177f1d48d394e06961e89c563d124
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fb4a2b48343c6424007a590f7a54e40290c6a345
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637646"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933648"
 ---
 # <a name="currency-type-and-conversion-function"></a>Currency 类型和转换函数
   此示例使用 C# 定义 Currency 用户定义数据类型。 此用户定义数据类型封装了金额和区域，区域有助于确定一种正确的方式，以便将金额以该区域的货币值呈现。 此示例还提供了返回 Currency 用户定义数据类型实例的货币转换函数。 如果 AdventureWorks 数据库包含从美元 (USD) 到与指定区域关联的货币的换算比率，那么转换函数返回的 Currency 用户定义数据类型中包含换算的比率以及与请求的区域相匹配的区域。 否则，返回的 Currency 用户定义数据类型包含原始金额（应是 USD）及 `en-us` 区域。 该示例还说明如何使用 Transact-SQL 注册和注销公共语言运行时 (CLR) 方法和程序集。  
@@ -23,7 +22,7 @@ ms.locfileid: "73637646"
 > [!CAUTION]  
 >  此示例中使用的汇率是虚构的，不能用于实际金融交易。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要创建和运行此项目，必须安装下列软件：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](https://www.microsoft.com/sql-server/sql-server-editions-express)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
@@ -55,7 +54,7 @@ ms.locfileid: "73637646"
   
 -   必须在您使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上安装 AdventureWorks 数据库。  
   
--   如果您不是所使用的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的管理员，则必须让管理员授予您**CreateAssembly**权限，才能完成安装。  
+-   如果您不是所使用的实例的管理员 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须让管理员授予您**CreateAssembly**权限，才能完成安装。  
   
 ## <a name="building-the-sample"></a>生成示例  
   
@@ -79,7 +78,7 @@ ms.locfileid: "73637646"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-8.  将[!INCLUDE[tsql](../../includes/tsql-md.md)]测试命令脚本复制到文件中，并将`test.sql`其另存为示例目录中的。  
+8.  将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 测试命令脚本复制到文件中，并将其另存为 `test.sql` 示例目录中的。  
   
 9. 使用以下命令执行测试脚本：  
   

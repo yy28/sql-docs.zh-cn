@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6268fe16c31c931dc71ad1a62bd72e08b1ecb537
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e4246898e5b054af8cbbdc86aff41cb7ea087e2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768898"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968637"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>为自定义任务开发用户界面
   自定义任务开发人员使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 对象模型可以轻松地为任务创建自定义用户界面，该任务随后可以集成并显示在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中。 用户界面可在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中向用户提供有用的信息，并指导用户正确配置自定义任务的属性和设置。  

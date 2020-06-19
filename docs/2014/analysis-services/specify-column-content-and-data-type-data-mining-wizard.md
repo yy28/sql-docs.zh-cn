@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0634be64-4c38-4381-9b19-fe9a5889306c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d224a321ed78f89a798966bd28c0ff7f16d55134
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f23bc2e0f21f15c0af1a26d64e528c65632d75a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068471"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940418"
 ---
 # <a name="specify-column-content-and-data-type-data-mining-wizard"></a>指定列内容和数据类型（数据挖掘向导）
   可以使用 **“指定列的内容和数据类型”** 页，为在向导的上一页中选择的每一列指定用法和数据类型。 如果希望忽略列，请单击 **“上一步”** 返回到 **“指定定型数据”** 页，并清除所有复选框。  
@@ -38,7 +37,7 @@ ms.locfileid: "66068471"
   
 |选项|说明|  
 |------------|-----------------|  
-|键|指定该列包含事例序列的唯一标识符。|  
+|密钥|指定该列包含事例序列的唯一标识符。|  
 |键序列|指定该列包含序列标识符。|  
 |键时间|指定该列包含用于标识日期或时序的日期或其他唯一连续数值。|  
   
@@ -50,7 +49,7 @@ ms.locfileid: "66068471"
 |离散化|指定该列包含已离散化数值或可被视为离散值的数值。|  
 |离散|指定该列包含文本或其他非数值。|  
   
- **数据类型**  
+ **Data type**  
  指定列的数据类型。  
   
  可用值如下：  

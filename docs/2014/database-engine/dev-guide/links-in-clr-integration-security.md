@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 168efd01-d12e-4bdf-a1b3-0b5c76474eaf
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 37aa64129658128bd7297f147f317166917e05a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50f7a685a57bf07b812aefc2bd5406210b86054c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781066"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933504"
 ---
 # <a name="links-in-clr-integration-security"></a>CLR 集成安全性中的链接
   本节介绍使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或某种托管语言的用户代码片段怎样才能在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中相互调用。 对象之间的这些关系称为链接。  
@@ -32,7 +31,7 @@ ms.locfileid: "62781066"
  表访问链接对应于在表、视图或表值函数中检索或修改值。 它们类似于调用链接，但它们在 SELECT、INSERT、UPDATE 和 DELETE 权限方面有较粗粒度的访问控制权。  
   
 ## <a name="gated-links"></a>封闭链接  
- 门链接意味着，在执行期间，一旦已建立对象关系，则不跨越该对象关系检查权限。 如果两个对象（例如，对象**x**和对象**y**）之间有一个封闭链接，则仅在创建对象**x**时检查对象**y**上和从对象**y**访问的其他对象的权限。 在创建对象**x**时， `REFERENCE`将根据**x**的所有者对**y**检查权限。 执行时（例如，当某人调用 object **x**）时，不会针对其静态引用的**y**或其他对象检查权限。 执行时，将对照对象**x**本身来检查适当的权限。  
+ 门链接意味着，在执行期间，一旦已建立对象关系，则不跨越该对象关系检查权限。 如果两个对象（例如，对象**x**和对象**y**）之间有一个封闭链接，则仅在创建对象**x**时检查对象**y**上和从对象**y**访问的其他对象的权限。 在创建对象**x**时，将根据 `REFERENCE` **x**的所有者对**y**检查权限。 执行时（例如，当某人调用 object **x**）时，不会针对其静态引用的**y**或其他对象检查权限。 执行时，将对照对象**x**本身来检查适当的权限。  
   
  门链接始终与两个对象之间的元数据依赖性配合使用。 该元数据依赖性是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录中建立的关系，它使得只要另一个对象依赖于某个对象则无法删除该对象。  
   

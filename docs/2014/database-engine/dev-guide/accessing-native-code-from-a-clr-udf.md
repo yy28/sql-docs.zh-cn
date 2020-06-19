@@ -9,18 +9,17 @@ ms.topic: reference
 ms.assetid: 161afa9d-74a1-40f5-af17-162e355e7a46
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5ccbf276057e5fb67cea9a0520f39e8b002eb4cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5bb0555485927076a2f0b845d4fd06b194ea60ce
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753889"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933748"
 ---
 # <a name="accessing-native-code-from-a-clr-udf"></a>从 CLR UDF 访问本机代码
   本示例显示如何从用户定义函数（该函数位于您的数据库的程序集中）调用本机（非托管） C++ 代码中的函数。  
   
- 对于本示例，工作目录应该是`c:\test`。  
+ 对于本示例，工作目录应该是 `c:\test` 。  
   
  首先编译 C++ 代码：  
   

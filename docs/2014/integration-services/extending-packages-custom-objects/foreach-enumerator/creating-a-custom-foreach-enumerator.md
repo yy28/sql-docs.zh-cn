@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 050e8455-2ed0-4b6d-b3ea-4e80e6c28487
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 49455bf9a5138d539a13ed241a24ab5d720c7f43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9226cfd55b6851779564baced0c745e8a17686b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896077"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968759"
 ---
 # <a name="creating-a-custom-foreach-enumerator"></a>创建自定义 Foreach 枚举器
   创建自定义 foreach 枚举器的步骤与创建其他任何 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 自定义对象的步骤相似。  
@@ -45,7 +44,7 @@ ms.locfileid: "62896077"
  将这两个项目配置为使用强名称密钥文件对在生成时产生的程序集进行签名。  
   
 ### <a name="applying-the-dtsforeachenumerator-attribute"></a>应用 DtsForEachEnumerator 属性  
- 将 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> 属性应用于您创建的类以将其标识为 foreach 枚举器。 此属性提供设计时信息，如 foreach 枚举器的名称和说明。 该`Name`属性将显示在 " **Foreach 循环编辑器**" 对话框的 "**集合**" 选项卡上的可用枚举器下拉列表中。  
+ 将 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> 属性应用于您创建的类以将其标识为 foreach 枚举器。 此属性提供设计时信息，如 foreach 枚举器的名称和说明。 该 `Name` 属性将显示在 " **Foreach 循环编辑器**" 对话框的 "**集合**" 选项卡上的可用枚举器下拉列表中。  
   
  使用 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute.UITypeName%2A> 属性链接 foreach 枚举器与其自定义用户界面。 要获取此属性所需的公钥令牌，可使用 sn.exe -t 来显示要用于对用户界面程序集签名的密钥对 (.snk) 文件中的公钥令牌  。  
   

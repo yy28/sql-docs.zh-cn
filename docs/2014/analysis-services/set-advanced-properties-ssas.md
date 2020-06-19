@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 69928b3e-53c8-4e6c-83a5-3dd3cf7ece7c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c657b4670acaab008bafa24def05102938a99d0e
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: dd015873e8ca513e6a5a3b34b77a872b7fd8906b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858037"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940568"
 ---
 # <a name="set-advanced-properties-ssas"></a>设置高级属性 (SSAS)
   **“表导入向导”** 的这一页可用于为数据源连接指定其他属性设置。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  

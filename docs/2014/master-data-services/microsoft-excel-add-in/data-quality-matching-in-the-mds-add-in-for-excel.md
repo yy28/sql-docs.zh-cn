@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 696a114c74ecb6d4b8f4cfe6b2d16b33869e1602
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 660c3975310d690867f72fd723d89d706b7b61bf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478906"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961257"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>用于 Excel 的 MDS 外接程序中的数据质量匹配
   随着时间的推移，您将会想要向 MDS 存储库中添加更多的数据。 在添加数据前，将新数据与已在 MDS 中进行管理的数据进行比较可能会很有用，因为这样可以确保不会添加重复数据或不正确的数据。  

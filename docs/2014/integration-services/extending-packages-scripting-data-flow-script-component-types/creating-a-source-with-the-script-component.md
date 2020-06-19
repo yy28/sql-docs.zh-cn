@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e297bad605e839dc37f757906df2367926eb522e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b82b7776bf9a56e5c72b5ffabdf6d8398b5d183
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176267"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968564"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>使用脚本组件创建源
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中的源组件用于从数据源加载数据以传递到下游转换和目标。 通常通过现有连接管理器连接数据源。
@@ -60,7 +59,7 @@ ms.locfileid: "78176267"
 -   您可能希望创建一个或多个附加输出，如包含意外值的行的模拟错误输出。 使用“添加输出”和“删除输出”按钮可以管理源组件的输出   。 所有输入行都定向到所有可用输出，除非您还为以下一些输出的 `ExclusionGroup` 属性指定了相同的非零值，您要在这些输出中将每一行只定向到共享同一 `ExclusionGroup` 值的输出之一。 用于标识 `ExclusionGroup` 的所选特定整数值没有特殊要求。
 
     > [!NOTE]
-    >  当您不希望输出所有行时，还可以对单个输出使用非零 `ExclusionGroup` 属性值。 但是，在这种情况下，必须为希望发送给输出的每一行显式调用 DirectRowTo\<outputbuffer> 方法  。
+    >  当您不希望输出所有行时，还可以对单个输出使用非零 `ExclusionGroup` 属性值。 但在这种情况下，必须为要发送到输出的每一行显式调用**DirectRowTo \<outputbuffer> **方法。
 
 -   您可以为输出指定一个友好名称。 随后，将使用在自动生成的代码中创建的类型化取值函数属性，在脚本中通过输出的名称来引用输出。
 
@@ -69,9 +68,9 @@ ms.locfileid: "78176267"
  有关“脚本转换编辑器”  的“输入和输出”  页上的详细信息，请参阅[脚本转换编辑器（“输入和输出”页）](../script-transformation-editor-inputs-and-outputs-page.md)。
 
 ### <a name="adding-variables"></a>添加变量
- 如果要在脚本中使用任何现有变量的值，可以在 "**脚本转换编辑器**" 的 "**脚本**" `ReadWriteVariables`页上的`ReadOnlyVariables`和属性字段中添加这些变量。
+ 如果要在脚本中使用任何现有变量的值，可以在 " `ReadOnlyVariables` `ReadWriteVariables` **脚本转换编辑器**" 的 "**脚本**" 页上的和属性字段中添加这些变量。
 
- 在属性字段中输入多个变量时，请用逗号将变量名隔开。 您还可以输入多个变量，方法是单击 **...** `ReadOnlyVariables`和`ReadWriteVariables`属性字段旁的省略号（...）按钮，然后在 "**选择变量**" 对话框中选择变量。
+ 在属性字段中输入多个变量时，请用逗号将变量名隔开。 您还可以输入多个变量，方法是单击和属性字段旁的省略号（**...**）按钮 `ReadOnlyVariables` `ReadWriteVariables` ，然后在 "**选择变量**" 对话框中选择变量。
 
  有关如何在脚本组件中使用变量的常规信息，请参阅[在脚本组件中使用变量](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。
 
@@ -87,7 +86,7 @@ ms.locfileid: "78176267"
 
  `ScriptMain` 类包含 `CreateNewOutputRows` 方法的存根。  是源组件中最重要的方法。
 
- 如果在 VSTA 中打开 "**项目资源管理器**" 窗口，可以看到脚本组件还生成了只读的`BufferWrapper`和`ComponentWrapper`项目项。 `ScriptMain` 类从 `UserComponent` 项目项中的 `ComponentWrapper` 类继承。
+ 如果在 VSTA 中打开 "**项目资源管理器**" 窗口，可以看到脚本组件还生成了只读的 `BufferWrapper` 和 `ComponentWrapper` 项目项。 `ScriptMain` 类从 `UserComponent` 项目项中的 `ComponentWrapper` 类继承。
 
  在运行时，数据流引擎调用 `PrimeOutput` 类中的 `UserComponent` 方法，该方法重写 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> 父类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 方法。 `PrimeOutput` 方法又调用下列方法：
 
@@ -114,7 +113,7 @@ ms.locfileid: "78176267"
  下面的示例演示在 `ScriptMain` 类中创建源组件所需的自定义代码。
 
 > [!NOTE]
->  `AdventureWorks`这些示例使用示例数据库中的**Person**表，并通过数据流传递其第一列和第四列，即**即 intaddressid**和**nvarchar （30） City**列。 在本节中，在源、转换和目标示例中使用相同的数据。 每个示例的其他前提条件和假设都记录在文档中。
+>  这些示例使用示例数据库中的**Person**表， `AdventureWorks` 并通过数据流传递其第一列和第四列，即**即 intaddressid**和**nvarchar （30） City**列。 在本节中，在源、转换和目标示例中使用相同的数据。 每个示例的其他前提条件和假设都记录在文档中。
 
 ### <a name="adonet-source-example"></a>ADO.NET 源示例
  本示例演示了使用现有 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的数据加载到数据流中的源组件。
@@ -134,7 +133,7 @@ ms.locfileid: "78176267"
 
 5.  在“脚本”页中，单击“编辑脚本”并输入下面的脚本   。 然后关闭脚本开发环境和“脚本转换编辑器”  。
 
-6.  创建并配置目标组件，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，或者[使用脚本组件创建目标](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中演示的示例目标组件，该组件需要 AddressID 和 City 列   。 然后将源组件连接到目标。 （您可以直接将源连接到目标，而无需进行任何转换。）您可以通过在[!INCLUDE[tsql](../../includes/tsql-md.md)] `AdventureWorks`数据库中运行以下命令来创建目标表：
+6.  创建并配置目标组件，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，或者[使用脚本组件创建目标](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中演示的示例目标组件，该组件需要 AddressID 和 City 列   。 然后将源组件连接到目标。 （您可以直接将源连接到目标，而无需进行任何转换。）您可以通过在数据库中运行以下命令来创建目标表 [!INCLUDE[tsql](../../includes/tsql-md.md)] `AdventureWorks` ：
 
     ```
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,
@@ -255,7 +254,7 @@ ms.locfileid: "78176267"
 
  如果要运行此示例代码，必须按照如下方式配置包和组件：
 
-1.  使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]导入和导出向导将 " **Person** " 表从`AdventureWorks`示例数据库导出到以逗号分隔的平面文件。 此示例使用文件名 ExportedAddresses.txt。
+1.  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导将 " **Person** " 表从 `AdventureWorks` 示例数据库导出到以逗号分隔的平面文件。 此示例使用文件名 ExportedAddresses.txt。
 
 2.  创建连接导出的数据文件的平面文件连接管理器。
 
@@ -267,7 +266,7 @@ ms.locfileid: "78176267"
 
 6.  在“脚本”页中，单击“编辑脚本”并输入下面的脚本   。 然后关闭脚本开发环境和“脚本转换编辑器”  。
 
-7.  创建并配置目标组件，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，或者[使用脚本组件创建目标](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中演示的示例目标组件。 然后将源组件连接到目标。 （您可以直接将源连接到目标，而无需进行任何转换。）您可以通过在[!INCLUDE[tsql](../../includes/tsql-md.md)] `AdventureWorks`数据库中运行以下命令来创建目标表：
+7.  创建并配置目标组件，如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标，或者[使用脚本组件创建目标](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)中演示的示例目标组件。 然后将源组件连接到目标。 （您可以直接将源连接到目标，而无需进行任何转换。）您可以通过在数据库中运行以下命令来创建目标表 [!INCLUDE[tsql](../../includes/tsql-md.md)] `AdventureWorks` ：
 
     ```
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,

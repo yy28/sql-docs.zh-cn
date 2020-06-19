@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a0f7e10a39896efffa5159911ebd753b1d649e45
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d055769a8f854b58e455eec873c1c94a7f740393
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768574"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968727"
 ---
 # <a name="coding-a-custom-log-provider"></a>编写自定义日志提供程序代码
   创建继承自 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase> 基类的类并将 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 属性应用于该类后，必须重写基类的属性和方法的实现以提供自定义功能。  
@@ -132,7 +131,7 @@ End Sub
 ```  
   
 ### <a name="writing-log-entries"></a>写入日志条目  
- 每次包中的对象通过对某一事件接口调用 Fire<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>event> 方法来引发事件时，都会调用 \< 方法。 每次引发事件时，都会提供其上下文的相关信息，通常是说明性消息。 但是，并非所有对 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 方法的调用都包含每个方法参数的信息。 例如，一些具有自我说明性名称的标准事件不提供 MessageText，并且 DataCode 和 DataBytes 只提供可选的补充信息。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>每次当包中的对象通过对 \<event> 某个事件接口调用消防方法引发事件时，都会调用方法。 每次引发事件时，都会提供其上下文的相关信息，通常是说明性消息。 但是，并非所有对 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 方法的调用都包含每个方法参数的信息。 例如，一些具有自我说明性名称的标准事件不提供 MessageText，并且 DataCode 和 DataBytes 只提供可选的补充信息。  
   
  下面的代码示例实现了 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 方法，并将事件写入前述打开的流中。  
   
