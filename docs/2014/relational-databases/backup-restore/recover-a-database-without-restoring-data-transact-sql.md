@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2109346c60ca807dcc818941f9baff862a211247
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04e4f78e51adb803bb65530c0b3b903aa7f76419
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921790"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957597"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>恢复数据库但不还原数据 (Transact-SQL)
   通常，恢复数据库之前，将还原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的所有数据。 但是，还原操作可以恢复数据库而不实际还原备份；例如，恢复那些与数据库一致的只读文件时。 这称为仅恢复还原  。 当脱机数据已与数据库一致且只需变为可用时，仅恢复还原操作将完成恢复数据库并使数据联机。  
@@ -42,7 +41,7 @@ ms.locfileid: "62921790"
  RESTORE DATABASE *database_name* WITH RECOVERY  
   
 > [!NOTE]  
->  From **=** \< *backup_device>* 子句不用于仅恢复还原，因为不需要任何备份。  
+>  FROM **=** \<*backup_device> * 子句不用于仅恢复还原，因为不需要任何备份。  
   
  **示例**  
   
@@ -89,10 +88,10 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>  
   
 ## <a name="see-also"></a>另请参阅  
- [联机还原 &#40;SQL Server&#41;](online-restore-sql-server.md)   
- [逐段还原 &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
- [文件还原 &#40;简单恢复模式&#41;](file-restores-simple-recovery-model.md)   
- [文件还原 &#40;完整恢复模式&#41;](file-restores-full-recovery-model.md)   
+ [联机还原 (SQL Server)](online-restore-sql-server.md)   
+ [段落还原 (SQL Server)](piecemeal-restores-sql-server.md)   
+ [文件还原（简单恢复模式）](file-restores-simple-recovery-model.md)   
+ [文件还原（完整恢复模式）](file-restores-full-recovery-model.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

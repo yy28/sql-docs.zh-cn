@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f6d9c6c2-e4c4-468b-9e0d-af7b9609614d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 281bbda38a6711efd4e2ffae7afbfa17d689254b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57a45cb3e9eace357477c0c9f2adfc25384466a1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057209"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965047"
 ---
 # <a name="odbc-destination-editor-connection-manager-page"></a>ODBC 目标编辑器（“连接管理器”页）
   可以使用 **“ODBC 目标编辑器”** 对话框的 **“连接管理器”** 页，为目标选择 ODBC 连接管理器。 使用此页还可以选择数据库中的表或视图。  
@@ -39,7 +38,7 @@ ms.locfileid: "66057209"
 ### <a name="connection-manager"></a>“ODBC 源编辑器”  
  从列表中选择现有 ODBC 连接管理器，或单击“新建”创建新的连接。 该连接可以指向支持 ODBC 的任何数据库。  
   
-### <a name="new"></a>“新建”  
+### <a name="new"></a>新建  
  单击 **“新建”**。 **“配置 ODBC 连接管理器编辑器”** 对话框随即打开，供您在其中创建新的连接管理器。  
   
 ### <a name="data-access-mode"></a>数据访问模式  

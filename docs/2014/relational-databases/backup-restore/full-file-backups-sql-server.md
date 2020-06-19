@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 14ead76661b6818ac2daf6a3aa250dddb348745d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e2e45dc68afa4d464aa3931075a1c1b3be792e6f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876129"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957957"
 ---
 # <a name="full-file-backups-sql-server"></a>完整文件备份 (SQL Server)
   本主题适用于包含多个文件或文件组的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库。  
@@ -99,7 +98,7 @@ ms.locfileid: "62876129"
 ## <a name="see-also"></a>另请参阅  
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [备份概述 (SQL Server)](backup-overview-sql-server.md)   
- [备份和还原：互操作性和共存 (SQL Server)](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [备份和还原：互操作性和共存 &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [差异备份 (SQL Server)](differential-backups-sql-server.md)   
  [文件还原（简单恢复模式）](file-restores-simple-recovery-model.md)   
  [文件还原（完整恢复模式）](file-restores-full-recovery-model.md)   

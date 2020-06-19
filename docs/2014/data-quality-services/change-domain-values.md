@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 111b4dc0c1731b28da503794008be2b4d269094f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30cd75d1ca2716c8752a4b12cfe70f653994d0fd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481125"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938038"
 ---
 # <a name="change-domain-values"></a>更改域值
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中更改和增加知识库中的元数据。 通过知识发现生成知识，将知识导入到知识库或域中，或者使知识基于其他知识库之后，您可以通过交互方式更改数据值。 知识库生成不仅利用计算机辅助过程，而且向您提供了一种方法，供您使用您的知识来验证数据值和按以下方式更改数据值：  
@@ -94,7 +93,7 @@ ms.locfileid: "65481125"
   
 9. **从 Excel 导入域值**：若要从 Excel 电子表格添加新值，请单击 **“导入值”** 图标的向下箭头，然后选择 **“从 Excel 导入域值”**，。 输入文件名，根据需要选择 **“将第一行用作标头”** ，然后单击 **“确定”**。 有关详细信息，请参阅 [将值从 Excel 文件导入到域](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md)。  
   
-10. **从 Excel 导入项目值**：若要从数据质量项目添加新值，请单击 **“导入值”** 图标的向下箭头，然后选择 **“从 Excel 导入项目值”**。 输入文件名，根据需要选择 **“将第一行用作标头”** ，然后单击 **“确定”**。 选择您从中导入值的项目，然后单击 **“确定”**。 将显示导入的值。 单击“完成”  。 有关详细信息，请参阅“将项目值导入到域中”。  
+10. **从 Excel 导入项目值**：若要从数据质量项目添加新值，请单击 **“导入值”** 图标的向下箭头，然后选择 **“从 Excel 导入项目值”**。 输入文件名，根据需要选择 **“将第一行用作标头”** ，然后单击 **“确定”**。 选择您从中导入值的项目，然后单击 **“确定”**。 将显示导入的值。 单击“完成” 。 有关详细信息，请参阅“将项目值导入到域中”。  
   
 11. **删除所选域值**：若要从域中删除一个或多个现有值，请在“值”表中选择值，然后单击 **“删除所选域值”** 图标。 无法删除 DQS_NULL 的项，因此，如果您选择要删除的多个值，并且 DQS_NULL 的项是其中之一，则操作将失败。  
   

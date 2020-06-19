@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bdf81735-dba7-45ef-8794-0eb67c01475a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0f1656121328c2c2f9ac81420207cbdd53a3f585
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15d3e66e300e5e4acf2d852fc84abd35261b52cc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890648"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950967"
 ---
 # <a name="microsoft-connector-11-for-sap-bw-components"></a>Microsoft Connector 1.1 for SAP BW 组件
   此部分包含介绍 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW 的三个组件的主题：  

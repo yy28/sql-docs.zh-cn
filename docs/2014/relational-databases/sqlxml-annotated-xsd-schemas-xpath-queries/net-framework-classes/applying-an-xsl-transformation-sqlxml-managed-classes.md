@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bb86fc6020b6a9421861f6d946438aea326feb45
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 381d22e666fb8d490013004d00f5354b972e5215
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703075"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062912"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>应用 XSL 转换（SQLXML 托管类）
   在本例中，对 AdventureWorks 数据库执行一个 SQL 查询。 对查询结果应用 XSL 转换以生成包含雇员的姓和名这两个列的表。  

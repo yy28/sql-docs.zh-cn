@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8fbd84b4-69cb-4708-9f0f-bbdf69029bcc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 05c636b29b57e898aa3579fc104cc8b044489fc0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b88b8616ee822a3811afe993936edd8747961506
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707266"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047910"
 ---
 # <a name="performing-asynchronous-operations"></a>执行异步操作
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 允许应用程序执行异步数据库操作。 异步处理将使方法能够立即返回，而不会阻塞调用线程。 这使得多线程机制能提供更强大的功能和灵活性，而不需要开发人员显式创建线程或处理同步。 应用程序将在初始化数据库连接时或初始化由执行命令所生成的结果时请求异步处理。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 34e8f4a5b49c9e023c224e62c23326864ef26f65
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 520ce1b4eed8dc11d6d3fe038969257aea1e90fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011653"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026357"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>使用 Unicode 字符格式导入或导出数据 (SQL Server)
   使用包含扩展/DBCS 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间大容量传输数据时，建议使用 Unicode 字符格式。 从服务器导出数据时，Unicode 字符数据格式允许使用与执行该操作的客户端不同的代码页。 在这种情况下，使用 Unicode 字符格式有下列优点：  
@@ -37,7 +36,7 @@ ms.locfileid: "66011653"
  若要使用与 Unicode 字符格式提供的默认终止符不同的字段终止符或行终止符，请参阅[指定字段终止符和行终止符 (SQL Server)](specify-field-and-row-terminators-sql-server.md)。  
   
 ## <a name="command-options-for-unicode-character-format"></a>Unicode 字符格式的命令选项  
- 可以使用**bcp**、BULK INSERT 或 INSERT ... 将 Unicode 字符格式数据导入表中。选择\* "从 OPENROWSET （BULK ...）"。对于**bcp**命令或 BULK INSERT 语句，可以在命令行中指定数据格式。 对于 INSERT ...SELECT * FROM OPENROWSET(BULK...) 语句，必须在格式化文件中指定数据格式。  
+ 可以使用**bcp**、BULK INSERT 或 INSERT ... 将 Unicode 字符格式数据导入表中。选择 " \* 从 OPENROWSET （BULK ...）"。对于**bcp**命令或 BULK INSERT 语句，可以在命令行中指定数据格式。 对于 INSERT ...SELECT * FROM OPENROWSET(BULK...) 语句，必须在格式化文件中指定数据格式。  
   
  下列命令行选项支持 Unicode 字符格式：  
   

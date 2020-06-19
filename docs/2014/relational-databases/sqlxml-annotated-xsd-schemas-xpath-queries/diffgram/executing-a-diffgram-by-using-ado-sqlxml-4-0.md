@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 741fce82-de83-4923-86eb-30acb5b9a5e6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 30b46fba97e5608fa91a2b0a52bffc797982e923
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 304cba3b913e9eb16d25af58f303945ec882266c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703175"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062974"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>使用 ADO 执行 DiffGram (SQLXML 4.0)
   该 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 应用程序使用 ADO 建立与 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的连接，然后执行 DiffGram。 在该应用程序中，DiffGram 和 XSD 架构存储在文件中。 该应用程序从指定的文件加载 DiffGram。 可以使用[DiffGram 示例](diffgram-examples-sqlxml-4-0.md)中所述的任何 diffgram （和关联的 XSD 架构）。  
@@ -38,7 +37,7 @@ ms.locfileid: "82703175"
   
 -   该命令的输出流设置为**StrmOut**对象（adodb.recordset）**。流**）接收任何返回的数据。  
   
--   当使用 SQLOLEDB 访问接口时，默认情况下，您将获取 Sqlxmlx.dll 提供的 Microsoft SQLXML 功能。 若要将 Sqlxml4.dll 与 SQLOLEDB 提供程序一起使用，必须在 SQLOLEDB 提供程序**连接**对象上将**sqlxml 版本**属性设置为**sqlxml。**  
+-   当使用 SQLOLEDB 访问接口时，默认情况下，您将获取 Sqlxmlx.dll 提供的 Microsoft SQLXML 功能。 若要将 Sqlxml4.dll 与 SQLOLEDB 提供程序一起使用，必须在 SQLOLEDB 提供程序**连接**对象上将**sqlxml Version**属性设置为**sqlxml。**  
   
 -   执行该命令 (DiffGram)。  
   

@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a54a067ed9da68e25f9394a463fa352ccc165f21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: edf390d5f127065b23c6ae479af1145209774332
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781932"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063068"
 ---
-# <a name="scripting"></a>脚本编写
-  SMO 中的脚本撰写由 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 对象及其子对象控制，或由各个对象的 `Script` 方法控制。 <xref:Microsoft.SqlServer.Management.Smo.Scripter>对象控制对实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)]上对象的依赖关系的映射[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+# <a name="scripting"></a>脚本
+  SMO 中的脚本撰写由 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 对象及其子对象控制，或由各个对象的 `Script` 方法控制。 <xref:Microsoft.SqlServer.Management.Smo.Scripter>对象控制对实例上对象的依赖关系的映射 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  使用 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 对象及其子对象进行的高级脚本撰写是一个由三个阶段组成的过程：  
   

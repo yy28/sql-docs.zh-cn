@@ -9,16 +9,15 @@ ms.topic: reference
 ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7c2bd460346f94d7b0779774ebd426ac138f6cb9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5f4ec8a9538cead097402c046e2f9f91c95faa01
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704356"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047925"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>处理字符转换时 ODBC 驱动程序行为的变化
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]Native CLIENT ODBC 驱动程序（SQLNCLI11）已更改其执行方式的方式： SQL_WCHAR * （NCHAR/nvarchar/nvarchar （max））和 SQL_CHAR \* （CHAR/VARCHAR/NARCHAR （max））转换。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client ODBC 驱动程序时，ODBC 函数（如 SQLGetData、SQLBindCol、SQLBindParameter）返回 (-4) SQL_NO_TOTAL 作为长度/指示符参数。 以前版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序返回的长度值可能不正确。  
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]Native CLIENT ODBC 驱动程序（SQLNCLI11.dll）更改了它的执行方式，即 SQL_WCHAR * （NCHAR/nvarchar/nvarchar （max））和 SQL_CHAR \* （CHAR/VARCHAR/NARCHAR （max））转换。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client ODBC 驱动程序时，ODBC 函数（如 SQLGetData、SQLBindCol、SQLBindParameter）返回 (-4) SQL_NO_TOTAL 作为长度/指示符参数。 以前版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序返回的长度值可能不正确。  
   
 ## <a name="sqlgetdata-behavior"></a>SQLGetData 行为  
  许多 Windows 函数允许指定缓冲区大小为 0，且返回的长度为返回的数据大小。 以下模式对于 Windows 程序员很常见：  

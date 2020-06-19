@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 55520388424e110420ad96d329081ee7a61fe028
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ebc4ea11780908f847946a01338571211b57678a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876075"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957747"
 ---
 # <a name="piecemeal-restores-sql-server"></a>段落还原 (SQL Server)
   本主题仅与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 中包含多个文件或文件组的数据库相关；在简单恢复模式下，仅与包含只读文件组的数据库相关。  
@@ -173,9 +172,9 @@ ms.locfileid: "62876075"
 4.  后面跟有在原始段落还原顺序中还原的用于将数据还原到原始恢复点的任何其他备份的差异备份。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;SQL Server 应用事务日志备份&#41;](transaction-log-backups-sql-server.md)   
+ [应用事务日志备份 (SQL Server)](transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [&#40;完整恢复模式将 SQL Server 数据库还原到某个时间点&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
+ [将 SQL Server 数据库还原到某个时间点（完整恢复模式）](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [还原和恢复概述 (SQL Server)](restore-and-recovery-overview-sql-server.md)   
  [计划和执行还原顺序（完整恢复模式）](plan-and-perform-restore-sequences-full-recovery-model.md)  
   

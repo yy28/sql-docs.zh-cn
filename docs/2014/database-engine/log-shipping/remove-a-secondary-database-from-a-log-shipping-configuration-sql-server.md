@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ebe368a4-ca1c-45d0-9a71-3ddbd5b26a8e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0849d4e10df746dd98e271bb3eb35696cb20337b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 119f2762d41d0787b6b3279507e9671e89fddfca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774821"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931208"
 ---
 # <a name="remove-a-secondary-database-from-a-log-shipping-configuration-sql-server"></a>从日志传送配置中删除辅助数据库 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中删除日志传送辅助数据库。  
@@ -59,7 +58,7 @@ ms.locfileid: "62774821"
   
 4.  在 **“辅助服务器实例和数据库”** 下，单击要删除的数据库。  
   
-5.  单击 **“删除”**。  
+5.  单击“删除”。  
   
 6.  单击 **“确定”** 更新配置。  
   
@@ -93,7 +92,7 @@ ms.locfileid: "62774821"
 -   [故障转移到日志传送辅助服务器 (SQL Server)](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [关于 &#40;SQL Server 的日志传送&#41;](about-log-shipping-sql-server.md)   
+ [关于日志传送 (SQL Server)](about-log-shipping-sql-server.md)   
  [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
   
   

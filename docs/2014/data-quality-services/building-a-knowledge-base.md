@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 01d0b016f6b7e1ea3c83cd42f52facb56f825b77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 992eef347c9fec365afacd05b275cbe6c828b2c1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481160"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938028"
 ---
 # <a name="building-a-knowledge-base"></a>生成知识库
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的知识库是有关数据的知识的存储库，通过它您可以了解自己的数据并维护其完整性。 知识库由域构成，每个域都表示一个数据字段中的数据。 DQS 使用知识库来对数据库执行数据清理和消除重复。 若要为数据清理对知识库进行准备，您可以对数据示例运行计算机辅助分析，并且以交互方式管理域中的值。 通过 DQS，您可以导入知识、创建规则和关系、直接更改数据值以及利用默认数据库。  

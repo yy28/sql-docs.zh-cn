@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a3646aa6ef61c820ca5512203b0ff1e36894cab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1f3ad2a94ffe3e0f1db19a8e66f85497e7143dc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011822"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026493"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>使用 bcp 指定文件存储类型 (SQL Server)
   “文件存储类型”  说明数据在数据文件中的存储方式。 数据可以按其数据库表类型（本机格式）、字符表示形式（字符格式）或支持隐式转换的任何数据类型导出到数据文件中；例如，以 `smallint` 形式复制 `int`。 用户定义的数据类型将按其基类型导出。  
@@ -45,11 +44,11 @@ ms.locfileid: "66011822"
     |`varchar`|`c[har]`|  
     |`nchar`|`w`|  
     |`nvarchar`|`w`|  
-    |`text` <sup>2</sup>|`T`[`ext`]|  
+    |`text`<sup>2</sup>|`T`[`ext`]|  
     |`ntext2`|`W`|  
     |`binary`|`x`|  
     |`varbinary`|`x`|  
-    |`image` <sup>2</sup>|`I`[`mage`]|  
+    |`image`<sup>2</sup>|`I`[`mage`]|  
     |`datetime`|**d[ate]**|  
     |`smalldatetime`|`D`|  
     |`time`|`te`|  
@@ -73,9 +72,9 @@ ms.locfileid: "66011822"
     |`UDT`（用户定义的数据类型）|`U`|  
     |`XML`|`X`|  
   
-     <sup>1</sup>字段长度、前缀长度和终止符的交互确定在数据文件中为导出为`char`文件存储类型的非字符数据分配的存储空间量。  
+     <sup>1</sup>字段长度、前缀长度和终止符的交互确定在数据文件中为导出为文件存储类型的非字符数据分配的存储空间量 `char` 。  
   
-     <sup>2</sup>在`ntext`的`text` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]未来版本`image`中将删除、和数据类型。 在新的开发工作中，请避免使用这些数据类型，并修改当前使用它们的应用程序。 请`nvarchar(max)`改用`varchar(max)`、和`varbinary(max)` 。  
+     <sup>2</sup>在 `ntext` `text` `image` 的未来版本中将删除、和数据类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 在新的开发工作中，请避免使用这些数据类型，并修改当前使用它们的应用程序。 请改用 `nvarchar(max)` 、 `varchar(max)` 和 `varbinary(max)` 。  
   
 ## <a name="native-file-storage-types"></a>本机文件存储类型  
  在格式化文件中，每种本机文件存储类型都记录为相应的宿主文件数据类型。  
@@ -86,11 +85,11 @@ ms.locfileid: "66011822"
 |`varchar`|SQLCHAR|  
 |`nchar`|SQLNCHAR|  
 |`nvarchar`|SQLNCHAR|  
-|`text` <sup>2</sup>|SQLCHAR|  
-|`ntext` <sup>2</sup>|SQLNCHAR|  
+|`text`<sup>2</sup>|SQLCHAR|  
+|`ntext`<sup>2</sup>|SQLNCHAR|  
 |`binary`|SQLBINARY|  
 |`varbinary`|SQLBINARY|  
-|`image` <sup>2</sup>|SQLBINARY|  
+|`image`<sup>2</sup>|SQLBINARY|  
 |`datetime`|SQLDATETIME|  
 |`smalldatetime`|SQLDATETIM4|  
 |`decimal`|SQLDECIMAL|  
@@ -109,16 +108,16 @@ ms.locfileid: "66011822"
 |`timestamp`|SQLBINARY|  
 |UDT（用户定义的数据类型）|SQLUDT|  
   
- <sup>1</sup>以字符格式存储的数据文件使用`char`作为文件存储类型。 因此，对于字符数据文件，SQLCHAR 是唯一出现在格式化文件中的数据类型。  
+ <sup>1</sup>以字符格式存储的数据文件使用 `char` 作为文件存储类型。 因此，对于字符数据文件，SQLCHAR 是唯一出现在格式化文件中的数据类型。  
   
- <sup>2</sup>无法将数据大容量导`text`入`ntext`到、 `image`和具有默认值的列。  
+ <sup>2</sup>无法将数据大容量导入到 `text` 、 `ntext` 和 `image` 具有默认值的列。  
   
 ## <a name="additional-considerations-for-file-storage-types"></a>文件存储类型的其他注意事项  
  当您将数据从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例大容量导出到数据文件时：  
   
 -   您始终可以指定 `char` 作为文件存储类型。  
   
--   如果输入的文件存储类型表示无效的隐式转换， **bcp**将失败;`int`例如，你可以为`smallint`数据指定，但如果为`smallint` `int`数据指定，则会产生溢出错误。  
+-   如果输入的文件存储类型表示无效的隐式转换， **bcp**将失败;例如，你可以为数据指定，但 `int` `smallint` 如果 `smallint` 为数据指定，则会 `int` 产生溢出错误。  
   
 -   当非字符数据类型（如 `float`、`money`、`datetime` 或 `int`）存储为其数据库类型时，数据将写入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机格式的数据文件。  
   

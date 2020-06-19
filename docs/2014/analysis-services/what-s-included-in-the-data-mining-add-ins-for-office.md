@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98e87bb2243a8bb024fdcdc819fa5914f462eb66
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54128ccbeab2a40a8e9f65da138b52602f45a86c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065332"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938088"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>Office 数据挖掘外接程序中包含的&#39;
   安装 Office 2013 数据挖掘外接程序时，如果选择所有安装选项，将添加以下工具栏和模板：  
@@ -48,7 +47,7 @@ ms.locfileid: "66065332"
   
      如果你不熟悉数据挖掘，只是想要试验这些工具，则建议你使用随外接程序一起安装的示例数据的工作簿。通过查看此数据，您还可以查看有关如何为时序模型或关联模型准备数据的示例。  
   
-     **示例数据**  
+     **样本数据**  
   
      示例工作簿中的这些数据预先设置了格式，以使尝试每个向导和工具变得更加轻松。  
   
@@ -56,9 +55,9 @@ ms.locfileid: "66065332"
   
      示例工作簿的默认位置取决于安装哪个版本：  
   
-    -   \<驱动器>： \Program Files\Microsoft SQL Server 2014 DM 外接程序  
+    -   \<drive>： \Program Files\Microsoft SQL Server 2014 DM 外接程序  
   
-    -   \<驱动器>： \Program Files （x86） \Microsoft SQL Server 2014 DM 外接程序  
+    -   \<drive>： \Program Files （x86） \Microsoft SQL Server 2014 DM 外接程序  
   
 ## <a name="see-also"></a>另请参阅  
  [入门 Excel &#40;数据挖掘外接程序的数据挖掘&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6b631686e9daf716bb124ce5fadaf7575420a114
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7674e40a39ea4669fba4642ef16f910417bcf6b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483133"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971557"
 ---
 # <a name="deploying-models-master-data-services"></a>部署模型 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，包是包含可部署模型结构以及来自模型的数据（可选）的 XML 文件。 使用模型包可以将模型的副本从一个 MDS 环境移到另一个环境，或者在现有的 MDS 环境中创建新模型。  
@@ -45,7 +44,7 @@ ms.locfileid: "65483133"
   
 -   实体  
   
--   特性  
+-   属性  
   
 -   特性组  
   

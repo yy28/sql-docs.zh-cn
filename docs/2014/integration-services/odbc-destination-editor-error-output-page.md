@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0a743f8d-2a51-4296-9976-8104f5ca22d3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 972357372fe6d0281aedb57d49dd8d50682085b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 82853123767237314edac1e301723724628439d9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057202"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965037"
 ---
 # <a name="odbc-destination-editor-error-output-page"></a>ODBC 目标编辑器（“错误输出”页）
   可以使用 **“ODBC 目标编辑器”** 对话框的 **“错误输出”** 页选择错误处理选项。  
@@ -61,7 +60,7 @@ ms.locfileid: "66057202"
  使用下列选项来配置 ODBC 目标处理错误和截断的方式。  
   
 ### <a name="fail-component"></a>组件失败  
- 发生错误或截断时数据流任务失败。 此选项为默认行为。  
+ 发生错误或截断时数据流任务失败。 这是默认行为。  
   
 ### <a name="ignore-failure"></a>忽略失败  
  忽略错误或截断。  

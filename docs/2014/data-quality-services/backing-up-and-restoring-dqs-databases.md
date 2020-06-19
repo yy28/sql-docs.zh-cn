@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 50b051cf2780fc1a94830c461d9ae30674bb7dad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 327217aee7f3e7abf8e09de30542b488a2be5108
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481156"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938048"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>备份和还原 DQS 数据库
   本主题说明如何备份和还原 DQS 数据库。  
@@ -60,7 +59,7 @@ ms.locfileid: "65481156"
   
 10. 在“对象资源管理器”中，右键单击服务器，再单击 **“新建查询”**。  
   
-11. 在查询编辑器窗口中，复制以下 SQL 语句，并将* \<password>* 替换为在 DQS 安装过程中为数据库主密钥提供的密码：  
+11. 在查询编辑器窗口中，复制以下 SQL 语句，并将替换为在 *\<PASSWORD>* DQS 安装过程中为数据库主密钥提供的密码：  
   
     ```  
     USE [DQS_MAIN]  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7f5c0b26-9c68-4955-aa95-eb1a8fb7f87f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c7ff5b4488eaa4563a2415d754853bc8e33803bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5944ed5b2a5a0907b426ab3ce35516854652acb2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057680"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951067"
 ---
 # <a name="merge-transformation-editor"></a>合并转换编辑器
   可以使用 **合并转换编辑器** 指定两个已排序数据集中的要合并的列。  
@@ -30,7 +29,7 @@ ms.locfileid: "66057680"
  若要了解有关合并转换的详细信息，请参阅 [Merge Transformation](data-flow/transformations/merge-transformation.md)。  
   
 ## <a name="options"></a>选项  
- **输出列的名称**  
+ **输出列名称**  
  指定输出列的名称。  
   
  **合并输入 1**  

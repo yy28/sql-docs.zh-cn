@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: cbdf233af3c0c27d6b4e95d18dc2c438d5307e7d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48060c9b1bf3dfd670f96a9b8bcf68c2002fc7fc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479479"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971587"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>使用向导部署模型部署包
   使用 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 模型部署向导部署只包含模型对象的包。 如果需要部署包含数据的包，请参阅 [使用 MDSModelDeploy 部署模型部署包](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
@@ -26,7 +25,7 @@ ms.locfileid: "65479479"
 > [!IMPORTANT]  
 >  包只能部署到创建它们的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中。 这意味着在 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中创建的包不能部署到 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问目标 **环境中的** “系统管理” [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 功能区域。  
@@ -43,11 +42,11 @@ ms.locfileid: "65479479"
   
 3.  在 **“模型部署向导”** 上，单击 **“部署”**。  
   
-4.  单击“浏览”****。  
+4.  单击“浏览”。  
   
 5.  找到部署包（.pkg 文件），然后单击“打开”。****  
   
-6.  单击“下一步”  。  
+6.  单击“下一步”。  
   
 7.  在加载包后，单击 **“下一步”**。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "65479479"
      在更新模型时，如果该过程在前三个步骤的任意步骤中失败，则该过程将不会继续；但是，已进行的更改将不会回滚。 如果该过程在步骤 4 中失败，则会更新可更新的成员。  
   
 ## <a name="next-steps"></a>后续步骤  
- 在模型部署包中不包括用户定义元数据、文件属性以及用户和组权限。 在您部署模型后，必须手动更新这些内容。 有关详细信息，请参见:  
+ 在模型部署包中不包括用户定义元数据、文件属性以及用户和组权限。 在您部署模型后，必须手动更新这些内容。 有关详细信息，请参阅：  
   
 -   [Master Data Services&#41;添加元数据 &#40;](../../2014/master-data-services/add-metadata-master-data-services.md)  
   

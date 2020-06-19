@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7fc2b8f7-10a8-4adc-a5d3-a4ddf5db651c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8319699dd58039b918f0715e5b2293a7990108f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a202c97b858e234657340232cef22ea3f25ba432
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057374"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965097"
 ---
 # <a name="odata-connection-manager-editor"></a>“OData 连接管理器编辑器”
   使用 **“OData 连接管理器编辑器”** 对话框可以添加与 OData 源的连接或者编辑现有连接。  
@@ -27,7 +26,7 @@ ms.locfileid: "66057374"
  连接管理器的名称。  
   
  **服务文档位置**  
- OData 服务的 URL。 例如： http://services.odata.org/V3/Northwind/Northwind.svc/。  
+ OData 服务的 URL。 例如：http://services.odata.org/V3/Northwind/Northwind.svc/。  
   
  **身份验证**  
  为“身份验证”选择“Windows 身份验证”或使用“使用此用户名和密码”************。 如果选择第二个选项，请输入 **“用户名”** 和 **“密码”**。  

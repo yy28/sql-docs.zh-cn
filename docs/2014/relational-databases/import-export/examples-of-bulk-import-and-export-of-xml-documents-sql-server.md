@@ -17,17 +17,16 @@ helpviewer_keywords:
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d60518f64bd44b9b2498c9d27711d47753b04cf9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d72c84a7ed84503e0c88d2a46c808196903900b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011968"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026744"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>批量导入和导出 XML 文档的示例 (SQL Server)
     
-##  <a name="you-can-bulk-import-xml-documents-into-a-ssnoversion-database-or-bulk-export-them-from-a-ssnoversion-database-this-topic-provides-examples-of-both"></a><a name="top"></a>可以将 XML 文档大容量导入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到数据库中，也可以从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库中大容量导出 XML 文档。 本主题提供了这两种情况的示例。  
+##  <a name="you-can-bulk-import-xml-documents-into-a-ssnoversion-database-or-bulk-export-them-from-a-ssnoversion-database-this-topic-provides-examples-of-both"></a><a name="top"></a>可以将 XML 文档大容量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中，也可以从数据库中大容量导出 XML 文档 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 本主题提供了这两种情况的示例。  
   
  若要将数据从一个数据文件大容量导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表或未分区视图，可以使用以下工具或命令：  
   

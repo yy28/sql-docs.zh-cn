@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ff1ba97de1c7698a1f2fde73b8ba8d592d8fccab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ca013ca12af9ee215fa5c3e4eefe7712ba02d68
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62662078"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994817"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>选项对话框的 F1 帮助
-  本节包含可通过单击  **中“工具”** **菜单上“选项”** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]调用的对话框的 F1 帮助。  
+  本节包含可通过单击 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中“工具”菜单上“选项”调用的对话框的 F1 帮助。  
   
  [&#40;设计器的选项-Analysis Services 设计器-常规&#41;](options-designers-analysis-services-designers-general.md)  
   

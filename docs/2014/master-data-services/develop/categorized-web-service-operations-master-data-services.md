@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 84339eab432194327759fbdad505cdb1af60517b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 890a7da8d94c23ff65303eb2ce629774f20f70a4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479437"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971527"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>分类的 Web 服务操作 (Master Data Services)
    Web 服务包含一组完整的操作，可让您通过编写代码以控制  通过其用户界面所执行的所有功能。 Web 服务操作由 <xref:Microsoft.MasterDataServices.IService> 接口定义，并在 <xref:Microsoft.MasterDataServices.ServiceClient> 类中作为方法实现。 本主题将 Web 服务操作分组为概念性类别，以帮助您了解如何使用 Web 服务 API。  

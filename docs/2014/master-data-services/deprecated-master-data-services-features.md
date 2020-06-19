@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dd6342542da7528fef633ba02a430a8ba2ef5857
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d861d390989798ed9f33834cf42d6dcb8179ebe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483064"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971564"
 ---
 # <a name="deprecated-master-data-services-features-in-sql-server-2014"></a>SQL Server 2014 中不推荐使用的 Master Data Services 功能
   本主题介绍 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中仍然可用但不推荐使用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。 按照计划， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]未来版本将不再具有这些功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
@@ -23,7 +22,7 @@ ms.locfileid: "65483064"
 ## <a name="staging-process"></a>临时过程  
   中使用的临时过程在 Web 应用程序将不再可用，但是仍可在  中使用。  
   
- [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 临时过程的临时错误将不再显示在 UI 中。 在临时过程中填充的错误代码在临时表中仍然可用，可在此处找到： [https://msdn.microsoft.com/library/ff487022.aspx](https://msdn.microsoft.com/library/ff487022.aspx)。  
+ [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 临时过程的临时错误将不再显示在 UI 中。 在临时过程中填充的错误代码在临时表中仍然可用，可在此处找到： [https://msdn.microsoft.com/library/ff487022.aspx](https://msdn.microsoft.com/library/ff487022.aspx) 。  
   
  临时表（tblStgMember、tblStgMemberAttribute 和 tblStgRelationship）在数据库中仍然可用。 用于启动临时过程的存储过程 (mdm.udpStagingSweep) 在数据库中仍然可用。  
   

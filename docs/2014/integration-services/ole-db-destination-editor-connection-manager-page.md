@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: ae2200c6-8ba0-49b7-b01a-53425b84d2ed
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 436b758abdde0c05539bc17aabd2c11b240642df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b19c61cf736ad888cdcb2ecb1f36060eebf30812
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057139"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964987"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>OLE DB 目标编辑器（“连接管理器”页）
   使用 **“OLE DB 目标编辑器”** 对话框的 **“连接管理器”** 页可以为目标选择 OLE DB 连接。 使用此页还可以选择数据库中的表或视图。  
   
 > [!NOTE]  
->  OLE DB `CommandTimeout`目标的属性在**OLE DB 目标编辑器**中不可用，但可以使用**高级编辑器**进行设置。 此外，某些快速加载选项仅在**高级编辑器**中可用。 有关这些属性的详细信息，请参阅 [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md)的“OLE DB 目标”部分。  
+>  `CommandTimeout`OLE DB 目标的属性在**OLE DB 目标编辑器**中不可用，但可以使用**高级编辑器**进行设置。 此外，某些快速加载选项仅在**高级编辑器**中可用。 有关这些属性的详细信息，请参阅 [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md)的“OLE DB 目标”部分。  
   
  若要了解有关 OLE DB 目标的详细信息，请参阅 [OLE DB Destination](data-flow/ole-db-destination.md)。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66057139"
  通过使用“创建表”**** 对话框创建一个新表。  
   
 > [!NOTE]  
->  单击 "**新建**" 时[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ，将基于所连接的数据源生成默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
+>  单击 "**新建**" 时，将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 基于所连接的数据源生成默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
 ### <a name="data-access-mode--table-or-view---fast-load"></a>数据访问模式 = 表或视图 – 快速加载  
  **表或视图的名称**  
@@ -71,7 +70,7 @@ ms.locfileid: "66057139"
  通过使用“创建表”**** 对话框创建一个新表。  
   
 > [!NOTE]  
->  单击 "**新建**" 时[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ，将基于所连接的数据源生成默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
+>  单击 "**新建**" 时，将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 基于所连接的数据源生成默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
  **保留标识**  
  指定加载数据时是否复制标识值。 仅在选择快速加载选项时，此属性才可用。 此属性的默认值为 `false`。  
@@ -114,7 +113,7 @@ ms.locfileid: "66057139"
  通过使用“创建表”**** 对话框创建一个新表。  
   
 > [!NOTE]  
->  单击 "**新建**" 时[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ，将基于所连接的数据源生成默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
+>  单击 "**新建**" 时，将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 基于所连接的数据源生成默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
  **保留标识**  
  指定加载数据时是否复制标识值。 仅在选择快速加载选项时，此属性才可用。 此属性的默认值为 `false`。  

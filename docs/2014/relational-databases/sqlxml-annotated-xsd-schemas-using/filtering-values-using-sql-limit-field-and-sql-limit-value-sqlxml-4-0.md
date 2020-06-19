@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dd38d26195d10c097ad090ed756a7f5d62508456
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7886a9a6f51c76ed693576ca6f4659f4051d1f20
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703581"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063001"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>使用 sql:limit-field 和 sql:limit-value 筛选值 (SQLXML 4.0)
   可以基于某些限制值来限制从数据库查询返回的行。 `sql:limit-field` 和 `sql:limit-value` 批注用于标识包含限制值的数据库列和指定用于筛选返回的数据的特定限制值。  

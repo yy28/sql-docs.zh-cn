@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 65e057224a8456f893b38e106e6b7f75d03d237a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 41e3018953bd768abd3129628431aac24583c78d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483237"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971677"
 ---
 # <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>“创建 Web 应用程序”对话框（Master Data Services 配置管理器）
   使用“创建 Web 应用程序” **** 对话框可以创建 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序。 此 Web 应用程序在“Web 配置” **** 页上选择的网站中创建。  
@@ -28,7 +27,7 @@ ms.locfileid: "65483237"
 |控件名称|说明|  
 |------------------|-----------------|  
 |虚拟路径|选择要在其下创建 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序的虚拟路径。 虚拟路径是用来访问 Web 应用程序的 URL 的一部分。<br /><br /> 对此列表进行筛选以便只显示可在其下创建 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序的应用程序虚拟路径。 不能在其他 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序下创建 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序。|  
-|Alias|为 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序键入名称，或使用默认名称。 在 URL 中使用该名称从 Web 浏览器访问 Web 应用程序。|  
+|别名|为 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序键入名称，或使用默认名称。 在 URL 中使用该名称从 Web 浏览器访问 Web 应用程序。|  
   
 ## <a name="application-pool"></a>应用程序池  
   

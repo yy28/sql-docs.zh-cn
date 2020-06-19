@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 46b9fef97433609310169c98d8ffc623a21a10c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15691c513aad6027be1063ef566ebdf245ebcc8c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876104"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957697"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>在备份和还原期间可能的介质错误 (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 允许您在恢复数据库时不必顾及检测到的错误。 一个重要的新错误检测机制是创建备份校验和（可选），可以通过备份操作创建并通过还原操作验证。 您可以控制操作是否检查错误，以及遇到错误时是停止操作还是继续操作。 如果备份包含备份校验和，则 RESTORE 和 RESTORE VERIFYONLY 语句可以检查错误。  
