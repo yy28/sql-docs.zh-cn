@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 282f261e-cb00-4c31-af4b-faeee0445ee4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 321ff064a21728727f46c253f58a05bc5c5d8c1e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f04e990fddf3dde58f3217706846f965150b229
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093232"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065152"
 ---
 # <a name="ready-to-upgrade"></a>准备升级
   使用 **“准备升级”** 页可以查看为该升级指定的选项。  

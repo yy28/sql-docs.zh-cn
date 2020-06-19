@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8a4834e8a32f5cb2cb512061777715f314f84299
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637825"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916302"
 ---
 # <a name="data-flow-performance-features"></a>数据流性能特点
   本主题针对如何设计 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包提供建议，以避免出现常见性能问题。 本主题还提供有关可以用于对包的性能进行故障排除的功能和工具的信息。  
@@ -94,7 +93,7 @@ ms.locfileid: "73637825"
  无论采用何种数据流组件，为了改善性能您应该遵循下面两个通用指导原则：优化查询和避免不必要的字符串。  
   
 #### <a name="optimize-queries"></a>优化查询  
- 大量数据流组件都将在从源中提取数据时，或在查询操作中创建引用表时使用查询。 默认查询使用 SELECT * FROM \<表名> 语法。 这种类型的查询返回源表中的所有列。 在设计时使所有列可用，这意味着可以选择任意列作为查找列、传递列或源列。 但是，在选择了要使用的列后，您应该修改查询使其只包括那些所选择的列。 删除多余的列可以使包中的数据流更高效，因为列越少则创建的行越小。 因为行越小，可以置入一个缓冲区的行就越多，对数据集中所有行进行处理的工作量也就越少。  
+ 大量数据流组件都将在从源中提取数据时，或在查询操作中创建引用表时使用查询。 默认查询使用 SELECT * FROM \<tableName> 语法。 这种类型的查询返回源表中的所有列。 在设计时使所有列可用，这意味着可以选择任意列作为查找列、传递列或源列。 但是，在选择了要使用的列后，您应该修改查询使其只包括那些所选择的列。 删除多余的列可以使包中的数据流更高效，因为列越少则创建的行越小。 因为行越小，可以置入一个缓冲区的行就越多，对数据集中所有行进行处理的工作量也就越少。  
   
  您可以键入查询或使用查询生成器来构造查询。  
   
@@ -125,7 +124,7 @@ ms.locfileid: "73637825"
  使用本节中的建议可以改善聚合、模糊查找、模糊分组、查找、合并联接和渐变维度转换的性能。  
   
 #### <a name="aggregate-transformation"></a>聚合转换  
- 聚合转换包括 `Keys`、`KeysScale`、`CountDistinctKeys` 和 `CountDistinctScale` 属性。 通过使用这些属性，使转换能够为转换缓存的数据预先分配转换所需的内存量，从而提高了性能。 如果知道**组按**操作得出的准确或近似组数，请分别设置`Keys`和`KeysScale`属性。 如果知道预期从**非重复计数**运算产生的非重复值的准确或近似数量，请分别设置`CountDistinctKeys`和`CountDistinctScale`属性。  
+ 聚合转换包括 `Keys`、`KeysScale`、`CountDistinctKeys` 和 `CountDistinctScale` 属性。 通过使用这些属性，使转换能够为转换缓存的数据预先分配转换所需的内存量，从而提高了性能。 如果知道**组按**操作得出的准确或近似组数，请 `Keys` 分别设置和 `KeysScale` 属性。 如果知道预期从**非重复计数**运算产生的非重复值的准确或近似数量，请 `CountDistinctKeys` 分别设置和 `CountDistinctScale` 属性。  
   
  如果需要在数据流中创建多个聚合，应考虑使用一个聚合转换而不是创建多个转换来创建多个聚合。 如果聚合是其他聚合的子集，这种方法能够提高性能，因为转换可以优化内部存储，并且只需扫描传入的数据一次。 例如，如果聚合使用 GROUP BY 子句和 AVG 聚合，将它们组合成一个转换可以提高性能。 但是，在一个聚合转换内执行多个聚合会序列化聚合操作，因此，当必须独立计算多个聚合时，这种方法可能不会改善性能。  
   

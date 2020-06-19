@@ -14,22 +14,21 @@ helpviewer_keywords:
 ms.assetid: ca4aa11f-1048-411f-9c6c-3d0a8e319f2f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 62a6f9e016abf24f28660b04e7a6242fdd6606ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 357c729e6d53cc17f2e4c169dd66613b6cfd2f5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093689"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065257"
 ---
 # <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>在 90 或更高的兼容模式下不支持外部联接运算符 \*= 和 =\*
-  升级顾问检测到使用了外部联接运算符\*= 和 =\*。 在 90 或更高的兼容模式下不支持这两个运算符。 升级时，用户数据库将保持其兼容模式。 使用这些运算的语句将失败。  
+  升级顾问检测到使用了外部联接运算符 \* = 和 = \* 。 在 90 或更高的兼容模式下不支持这两个运算符。 升级时，用户数据库将保持其兼容模式。 使用这些运算的语句将失败。  
   
 ## <a name="component"></a>组件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="corrective-action"></a>纠正措施  
- 将数据库兼容模式更改为90或更高版本之前，请修改使用外部联接运算符\*= 和 =\*的语句以使用等效的外部联接关键字。 下面的示例显示了使用 `\*=` 运算符的查询和使用 `LEFT OUTER JOIN` 关键字的等效查询。  
+ 将数据库兼容模式更改为90或更高版本之前，请修改使用外部联接运算符 \* = 和 = 的语句 \* 以使用等效的外部联接关键字。 下面的示例显示了使用 `\*=` 运算符的查询和使用 `LEFT OUTER JOIN` 关键字的等效查询。  
   
 ```  
 -- This query uses an old-style outer join operator.  

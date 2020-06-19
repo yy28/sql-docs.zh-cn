@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 40aef457-d69f-4905-a2d3-924c37bd3d97
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8a236805ac047b351aa49c2486b8acac84818017
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31fa9942ccfe25c5c56cc0edbce98f6946afad98
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069082"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940684"
 ---
 # <a name="sequence-clustering-cluster-transition-tab-mining-model-viewer"></a>顺序分析和聚类分析的“分类转换”选项卡（挖掘模型查看器）
   可以使用“Microsoft 顺序分析和聚类分析查看器”**** 中的“状态转换”**** 选项卡，更仔细地查看选定分类中的各个属性-值对或状态之间的转换。  

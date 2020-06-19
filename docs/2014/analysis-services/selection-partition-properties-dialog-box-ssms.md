@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 29a7b556-2484-4f66-b74c-1c061b3ce25c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7cfc9890bda35f1574c83b339495b996782b79b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9884f29124984e605f5a72b9b712b0f076eda7d3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069214"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940768"
 ---
 # <a name="selection-partition-properties-dialog-box-ssms"></a>选择（“分区属性”对话框）(SSMS)
   在 SQL Server Management Studio 中，对于要在 **“常规”** 、 **“主动缓存”** 或 **“错误配置”** 窗格中查看或修改属性的度量值组，可以使用 **“分区属性”** 对话框的 **“选择”** 页选择分区。  
   
 ## <a name="options"></a>选项  
- **Grid**  
+ **网格**  
  显示包含所选分区的度量值组的分区。  
   
  选择要在 **“常规”**、 **“主动缓存”** 或 **“错误配置”** 页中查看其属性的分区。  
@@ -33,7 +32,7 @@ ms.locfileid: "66069214"
 |列|说明|  
 |------------|-----------------|  
 |**名称**|显示分区的名称。|  
-|**源**|显示用于为分区提供源数据的表或查询。|  
+|**Source**|显示用于为分区提供源数据的表或查询。|  
 |**聚合**|显示用于描述分区所使用的聚合设计的字符串。|  
   
 ## <a name="see-also"></a>另请参阅  

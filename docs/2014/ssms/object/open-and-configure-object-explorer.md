@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4424504ddbfd0dfa1b16169186988141bb7b4c41
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4793aa69a2d26d5375b10eb74026b3a53c96ca43
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62999558"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058567"
 ---
 # <a name="open-and-configure-object-explorer"></a>打开和配置对象资源管理器
-  使用  **中的“视图”** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]菜单打开对象资源管理器。 使用“工具”  菜单上的“选项”  配置对象资源管理器选项。  
+  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“视图”菜单打开对象资源管理器。 使用“工具”  菜单上的“选项”  配置对象资源管理器选项。  
   
 ## <a name="viewing-object-explorer"></a>查看对象资源管理器  
  默认情况下， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中对象资源管理器是可见的。 如果看不到对象资源管理器，请在“视图”  菜单上单击“对象资源管理器”  。  

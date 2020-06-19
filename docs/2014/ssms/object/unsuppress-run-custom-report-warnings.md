@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0deed900-c910-4d12-aac0-6ab9e39eb068
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ed653b16fe524f364ba89f13e00715b725080033
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae7f4d08ac613113d715728a5cb78ae37bd6f99b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62824387"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058527"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>启用运行自定义报表警告
   对于自定义报表，有两个警告对话框。 本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中取消显示这些对话框。  
@@ -28,21 +27,21 @@ ms.locfileid: "62824387"
   
 #### <a name="to-unsuppress-the-main-custom-report-warning-dialog-box"></a>启用主自定义报表警告对话框  
   
-1.  连接到\<*服务器*>\\\<*Drive* \\ \>共享驱动器> \documents 和 Settings<UserProfile \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml.*Share*<>|  
+1.  连接到 \<*Server*> \\ < *Share* >| \<*Drive*> \Documents and Settings \\<UserProfile \> \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml。  
   
-2.  右键单击`reports.xml`，然后单击 "**编辑**"。  
+2.  右键单击 `reports.xml` ，然后单击 "**编辑**"。  
   
-3.  Change**\<suppresswarning>>true\</SuppressWarning> \<suppresswarning>>false\</SuppressWarning>**。  
+3.  将** \<SuppressWarning> true \</SuppressWarning> 更改 \<SuppressWarning> 为 \</SuppressWarning> false**。  
   
 4.  重新启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
 #### <a name="to-unsuppress-the-drill-through-custom-report-warning-dialog-box"></a>启用钻取自定义报表警告对话框  
   
-1.  连接到\<*服务器*>\\\<*Drive* \\ \>共享驱动器> \documents 和 Settings<UserProfile \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml.*Share*<>|  
+1.  连接到 \<*Server*> \\ < *Share* >| \<*Drive*> \Documents and Settings \\<UserProfile \> \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml。  
   
-2.  右键单击`reports.xml`，然后单击 "**编辑**"。  
+2.  右键单击 `reports.xml` ，然后单击 "**编辑**"。  
   
-3.  Change ** \<suppressdrillthroughwarning>>true\</SuppressDrillthroughWarning>\<suppressdrillthroughwarning>>false\</SuppressDrillthroughWarning>**。  
+3.  将** \<SuppressDrillthroughWarning> true \</SuppressDrillthroughWarning> 更改 \<SuppressDrillthroughWarning> 为 \</SuppressDrillthroughWarning> false**。  
   
 4.  重新启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   

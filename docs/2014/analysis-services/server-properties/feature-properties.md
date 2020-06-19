@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a34d046a-6562-4d98-b827-37cebc6d77b4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1cc2d52bd942fe15eeabd72f1c37740637e692d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08001a172c1b39fb912ef042ed85effd4f8ededa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069053"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940706"
 ---
 # <a name="feature-properties"></a>功能属性
   功能属性与产品功能有关，大多数是高级属性，包括控制服务器实例之间的链接的属性。  
@@ -35,7 +34,7 @@ ms.locfileid: "66069053"
   
 ## <a name="properties"></a>属性  
   
-|properties|默认|说明|  
+|属性|默认|说明|  
 |--------------|-------------|-----------------|  
 |`ManagedCodeEnabled`|1|布尔值属性，指示是否启用 CLR 存储过程。|  
 |`LinkInsideInstanceEnabled`|1|布尔值属性，指示是否可在同一个服务器实例内创建链接对象。|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7ac1acb47c6345bb2b746b2e3a3e1817b63a3e75
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 8ee1d9205eeff0fd407cb8c2766d8fbceed47bf9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886374"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961627"
 ---
 # <a name="master-data-services-overview"></a>Master Data Services 概述
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，模型是你的主数据结构中的最高级别的容器。 创建一个模型来管理类似数据的组，例如管理联机产品数据。 模型包含一个或多个实体，而实体包含属于数据记录的成员。
@@ -54,7 +53,7 @@ ms.locfileid: "82886374"
 |创建实体|可以创建所需的任何数目的实体以便包含您的成员。|[实体 (Master Data Services)](../../2014/master-data-services/entities-master-data-services.md)<br /><br /> [创建实体 (Master Data Services)](../../2014/master-data-services/create-an-entity-master-data-services.md)|
 |创建要用作基于域的属性的实体|若要创建基于域的属性，请首先创建实体以便填充属性值列表。|[基于域的属性 (Master Data Services)](../../2014/master-data-services/domain-based-attributes-master-data-services.md)<br /><br /> [创建基于域的属性 (Master Data Services)](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|
 |为实体创建属性|创建用于描述成员的属性。 Name 和 Code 属性自动包括在每个实体中，并且不能被删除。 您可能要创建其他自由格式的属性以便包含文本、日期、数字或文件。|[属性 (Master Data Services)](../../2014/master-data-services/attributes-master-data-services.md)<br /><br /> [创建文本属性 (Master Data Services)](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)<br /><br /> [创建数字属性 (Master Data Services)](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)<br /><br /> [创建日期属性 (Master Data Services)](../../2014/master-data-services/create-a-date-attribute-master-data-services.md)<br /><br /> [创建链接属性 (Master Data Services)](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)<br /><br /> [创建文件属性 (Master Data Services)](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|
-|创建属性组|如果对于某一实体您具有超过四个或五个属性，则最好创建属性组。 这些组是在 **“资源管理器”** 中网格之上显示的选项卡，并且它们有助于通过在单独的选项卡上将某些属性组合在一起，简化导航行为。 \<插入图像>|[属性组 (Master Data Services)](../../2014/master-data-services/attribute-groups-master-data-services.md)<br /><br /> [创建属性组 (Master Data Services)](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)|
+|创建属性组|如果对于某一实体您具有超过四个或五个属性，则最好创建属性组。 这些组是在 **“资源管理器”** 中网格之上显示的选项卡，并且它们有助于通过在单独的选项卡上将某些属性组合在一起，简化导航行为。 \<INSERT IMAGE>|[属性组 (Master Data Services)](../../2014/master-data-services/attribute-groups-master-data-services.md)<br /><br /> [创建属性组 (Master Data Services)](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)|
 |为支持实体导入数据记录（成员）|通过使用临时过程为你的支持实体导入数据。<br /><br /> 对于 Product 模型，这可能意味着导入颜色或大小。<br /><br /> 也可以手动创建成员。<br /><br /> 注意：如果用户至少对实体的叶模型对象具有“更新” [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]**权限并且有权访问“资源管理器”****功能区域，就可以在** 中创建成员。|[数据导入 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)<br /><br /> [使用临时过程在 Master Data Services 中加载或更新成员](../../2014/master-data-services/add-update-and-delete-data-master-data-services.md)<br /><br /> [创建叶成员 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)|
 |创建业务规则以确保数据质量|创建和发布业务规则以便确保您的数据的精确性。 可以使用业务规则执行以下操作：<br /><br /> 设置默认属性值。<br /><br /> 更改属性值。<br /><br /> 在数据未通过业务规则验证时发送电子邮件通知。|[业务规则 (Master Data Services)](../../2014/master-data-services/business-rules-master-data-services.md)<br /><br /> [创建和发布业务规则 (Master Data Services)](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)<br /><br /> [通知 (Master Data Services)](../../2014/master-data-services/notifications-master-data-services.md)<br /><br /> [配置电子邮件通知 (Master Data Services)](../../2014/master-data-services/configure-email-notifications-master-data-services.md)<br /><br /> [配置业务规则以发送通知 (Master Data Services)](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|
 |为主实体导入数据记录（成员）。 应用业务规则|通过使用临时过程为你的主实体导入数据。 完成操作后，请验证该版本。 这会将业务规则应用于该模型版本中的所有成员。<br /><br /> 然后，您可以纠正任何业务规则验证问题。|[验证 (Master Data Services)](../../2014/master-data-services/validation-master-data-services.md)<br /><br /> [针对业务规则验证版本 (Master Data Services)](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)<br /><br /> [验证存储过程 (Master Data Services)](../../2014/master-data-services/validation-stored-procedure-master-data-services.md)|

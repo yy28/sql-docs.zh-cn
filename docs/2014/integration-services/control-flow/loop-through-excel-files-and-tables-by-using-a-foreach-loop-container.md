@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 979a0e0a1e8a05b676d4de7ccda0c5876943d587
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d93bb5d5d1625c4d558b865bdd28445e377abbfa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830578"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918568"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>使用 Foreach 循环容器，循环遍历 Excel 文件和表
   本主题中的过程介绍如何使用具有相应枚举器的 Foreach 循环容器循环访问文件夹中的 Excel 工作簿或 Excel 工作簿中的表。  
@@ -49,7 +48,7 @@ ms.locfileid: "62830578"
   
 8.  选择新的 Excel 连接管理器，并在“属性”窗口中单击 **“表达式”** 属性，然后单击省略号。  
   
-9. 在 "**属性表达式编辑器**" 中， `ConnectionString`选择属性，然后单击省略号。  
+9. 在 "**属性表达式编辑器**" 中，选择 `ConnectionString` 属性，然后单击省略号。  
   
 10. 在表达式生成器中，输入以下表达式：  
   

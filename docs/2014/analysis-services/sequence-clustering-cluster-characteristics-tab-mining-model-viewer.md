@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3a9e8a0c-7d03-47cc-8625-e68d73a8c947
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a3a9121129ab0f7e4e185e35418132a4f1aa663f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f82bab25b25c8d27e1aad2e2692d9ca519c9269b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069169"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940758"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>顺序分析和聚类分析的“分类特征”选项卡（挖掘模型查看器）
   **“Microsoft 顺序分析和聚类分析查看器”** 中的 **“分类特征”** 选项卡提供了定义序列分类的特征的详细列表。 这些特征可包括简单属性-值对以及状态间的转换。  
@@ -39,12 +38,12 @@ ms.locfileid: "66069169"
  **聚集**  
  选择要查看的分类。  
   
- **群集>\<的特征**  
+ **特性\<Cluster>**  
  此表提供已分配给当前分类的序列的列表（按概率排序）。 请记住，序列基本上是一个属性-值对，后跟一个或多个其他的属性-值对。 序列及其概率的组合定义了每个分类的特征。  
   
  例如，在基于市场篮分析的顺序分析和聚类分析模型中，一个分类可以让客户选择销售项，然后在不再购买其他项的情况下结束事务（这是此模型最主要的特点）。 在试图分析服务器失败的顺序分析和聚类分析模型中，分类的主要特征可能是一系列高频率错误事件。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**变量**|此列指示特征是一个值还是一个转换。<br /><br /> 如果特征是一个值，则 "**变量**" 列包含属性名称。<br /><br /> 如果特征表示状态转换，则 "**变量**" 列会包含文本 "转换"。|  
 |**值**|此列的值取决于特征是一个简单属性-值对，还是一个表示项或事件的常见序列的状态转换。<br /><br /> 如果特征是一个值，则 "**值**" 列会包含状态。<br /><br /> 如果特征表示状态转换，则 "**值**" 列包含状态转换的说明。|  

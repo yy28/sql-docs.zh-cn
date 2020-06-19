@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: ac1aabe3-d8d4-4d7a-8954-50ee3c185d81
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2bbb98653dbbaad577f9a48d7a778b41d19fbf37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f43034d81af8092a44c25db466fa8fa51b9eaa8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054039"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961537"
 ---
 # <a name="metadata-master-data-services"></a>元数据 (Master Data Services)
   在[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，用户定义元数据是您用于描述模型对象的信息。 例如，您可能要跟踪特定模型或实体的所有者，或者跟踪向实体提供数据的源系统。  
   
- 用户定义元数据由名为**元数据**的模型管理。 此模型在安装时[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]自动包含，并且与所有其他 MDS 模型相似，不同之处在于你不能创建它的版本。  
+ 用户定义元数据由名为**元数据**的模型管理。 此模型在安装时自动包含 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ，并且与所有其他 MDS 模型相似，不同之处在于你不能创建它的版本。  
   
  在使用用户定义元数据填充元数据模型之后，可以在订阅视图中包含该模型，以便它可由订阅系统使用。  
   
@@ -47,7 +46,7 @@ ms.locfileid: "66054039"
   
 -   名为 Last Review Date 的自由格式的属性，可用于跟踪所有者上次审核某一对象的日期。  
   
--   一个名为 "源" 的基于域的属性，可用于跟踪和管理与[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]实例交互的源系统。  
+-   一个名为 "源" 的基于域的属性，可用于跟踪和管理与实例交互的源系统 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

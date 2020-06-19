@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9700f663-53f2-49b6-b1ef-92c7b752d6a1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b63e508f87b9766507c541a7ed81e42466bbd1e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9713bbf35f3271dd0ae7168dac838d37621ec5c8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827366"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915957"
 ---
 # <a name="dimension-processing-destination-custom-properies"></a>维度处理目标自定义属性
   维度处理目标具有自定义属性和所有数据流组件通用的属性。  
@@ -25,14 +24,14 @@ ms.locfileid: "62827366"
 |properties|数据类型|说明|  
 |--------------|---------------|-----------------|  
 |ASConnectionString|String|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的实例或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的连接字符串。|  
-|KeyDuplicate|Integer（枚举）|当 UseDefaultConfiguration 为`False`时，指示如何处理重复键错误的值。 可能的值为 `IgnoreError` (0)、`ReportAndContinue` (1) 和 `ReportAndStop` (2)。 此属性的默认值为 `IgnoreError` (0)。|  
-|KeyErrorAction|Integer（枚举）|当 UseDefaultConfiguration 为`False`时，指示如何处理键错误的值。 可能的值为 `ConvertToUnknown` (0) 和 `DiscardRecord` (1)。 此属性的默认值为 `ConvertToUnknown` (0)。|  
-|KeyErrorLimit|Integer|当 UseDefaultConfiguration 为`False`时，启用的键错误的上限。|  
-|KeyErrorLimitAction|Integer（枚举）|当 UseDefaultConfiguration 为`False`时，指示达到时`KeyErrorLimit`要执行的操作的值。 可能的值为 `StopLogging` (1) 和 `StopProcessing` (0)。 此属性的默认值为 `StopProcessing` (0)。|  
-|KeyErrorLogFile|String|当 UseDefaultConfiguration 为`False`时，为错误日志文件的路径和文件名。|  
-|KeyNotFound|Integer（枚举）|当 UseDefaultConfiguration 为`False`时，指示如何处理缺少的键错误的值。 可能的值为 `IgnoreError` (0)、`ReportAndContinue` (1) 和 `ReportAndStop` (2)。 此属性的默认值为 `IgnoreError` (0)。|  
-|NullKeyConvertedToUnknown|Integer（枚举）|当 UseDefaultConfiguration 为`False`时，指示如何处理转换为未知值的 null 键的值。 可能的值为 `IgnoreError` (0)、`ReportAndContinue` (1) 和 `ReportAndStop` (2)。 此属性的默认值为 `IgnoreError` (0)。|  
-|NullKeyNotAllowed|Integer（枚举）|当 UseDefaultConfiguration 为`False`时，指示如何处理不允许的 null 值。 可能的值为 `IgnoreError` (0)、`ReportAndContinue` (1) 和 `ReportAndStop` (2)。 此属性的默认值为 `IgnoreError` (0)。|  
+|KeyDuplicate|Integer（枚举）|当 UseDefaultConfiguration 为时 `False` ，指示如何处理重复键错误的值。 可能的值为 `IgnoreError` (0)、`ReportAndContinue` (1) 和 `ReportAndStop` (2)。 此属性的默认值为 `IgnoreError` (0)。|  
+|KeyErrorAction|Integer（枚举）|当 UseDefaultConfiguration 为时 `False` ，指示如何处理键错误的值。 可能的值为 `ConvertToUnknown` (0) 和 `DiscardRecord` (1)。 此属性的默认值为 `ConvertToUnknown` (0)。|  
+|KeyErrorLimit|Integer|当 UseDefaultConfiguration 为时 `False` ，启用的键错误的上限。|  
+|KeyErrorLimitAction|Integer（枚举）|当 UseDefaultConfiguration 为时 `False` ，指示达到时要执行的操作的值 `KeyErrorLimit` 。 可能的值为 `StopLogging` (1) 和 `StopProcessing` (0)。 此属性的默认值为 `StopProcessing` (0)。|  
+|KeyErrorLogFile|String|当 UseDefaultConfiguration 为时 `False` ，为错误日志文件的路径和文件名。|  
+|KeyNotFound|Integer（枚举）|当 UseDefaultConfiguration 为时 `False` ，指示如何处理缺少的键错误的值。 可能的值为 `IgnoreError` (0)、`ReportAndContinue` (1) 和 `ReportAndStop` (2)。 此属性的默认值为 `IgnoreError` (0)。|  
+|NullKeyConvertedToUnknown|Integer（枚举）|当 UseDefaultConfiguration 为时 `False` ，指示如何处理转换为未知值的 null 键的值。 可能的值为 `IgnoreError` (0)、`ReportAndContinue` (1) 和 `ReportAndStop` (2)。 此属性的默认值为 `IgnoreError` (0)。|  
+|NullKeyNotAllowed|Integer（枚举）|当 UseDefaultConfiguration 为时 `False` ，指示如何处理不允许的 null 值。 可能的值为 `IgnoreError` (0)、`ReportAndContinue` (1) 和 `ReportAndStop` (2)。 此属性的默认值为 `IgnoreError` (0)。|  
 |ProcessType|Integer（枚举）|转换使用的维度处理类型。 值为 `ProcessAdd` (1)（增量）、`ProcessFull` (0) 和 `ProcessUpdate` (2)。|  
 |UseDefaultConfiguration|Boolean|一个指定转换是否使用默认错误配置的值。 如果此属性为 `False`，则转换包含有关错误处理的信息。|  
   

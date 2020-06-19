@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4580b41b9854b749f4ed6f66d2c7bea77647cef1
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: f6c4a3e51745ab0f2c67dcba88f71b79f031d7ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859209"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058586"
 ---
 # <a name="name-not-found-dialog-box"></a>“找不到名称”对话框
   找不到该对话框中的一个或多个对象名称。 请选择一个选项继续。  
@@ -37,7 +36,7 @@ ms.locfileid: "83859209"
  **输入对象名称**  
  包含未找到的对象的名称。 可以修改对象的名称，或者键入新的对象名称。  
   
- **从选择中****删除*** \< 对象名称>*      
+ **删除** *\<object name>***从选定内容**      
  选中该选项可以关闭“找不到名称”对话框  ，并从“选择对象”  对话框中删除该项。  
   
   

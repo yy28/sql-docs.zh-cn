@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6a6b2685c8cfda9217b554e161919c24344b34a2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: edcdea9d266cf0ef231b1e16be4da7009372dcd6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706477"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050116"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>内存优化表简介
   内存优化表是使用 [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql) 创建的表。  
@@ -52,7 +51,7 @@ ms.locfileid: "82706477"
   
  下表总结了对各种对象的本机和解释型 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 访问。  
   
-|功能|使用本机编译的存储过程访问|解释型 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 访问|CLR 访问|  
+|Feature|使用本机编译的存储过程访问|解释型 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 访问|CLR 访问|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
 |内存优化表|是|是|否 <sup>1</sup>|  
 |[内存优化表变量](../../database-engine/memory-optimized-table-variables.md)|是|是|否|  

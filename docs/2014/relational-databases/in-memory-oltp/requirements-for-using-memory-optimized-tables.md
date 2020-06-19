@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9b9e442fb97245d32c398602cdfd727de8239cb8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ecb9d388fd0e1362bb8844e874cd89162912e93e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62467885"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050048"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>使用内存优化表的要求
   除了[安装 SQL Server 2014 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)以外，还需要满足以下要求才能使用内存中 OLTP：  
@@ -36,7 +35,7 @@ ms.locfileid: "62467885"
   
 -   要安装内存中 OLTP，请在安装 **时选择** “数据库引擎服务” [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
   
-     若要安装报表生成（[确定表或存储过程是否应移植到内存中 oltp](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)）和[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] （若要通过[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]对象资源管理器管理内存中 Oltp），请选择 "**管理工具-基本**" 或 "**管理工具-高级**" [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
+     若要安装报表生成（[确定表或存储过程是否应移植到内存中 oltp](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)）和 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] （若要通过对象资源管理器管理内存中 oltp） [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，请选择 "**管理工具-基本**" 或 "**管理工具-高级**" [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 。  
   
 ## <a name="important-notes-on-using-hek_2"></a>有关使用 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]的重要说明  
   
@@ -53,7 +52,7 @@ ms.locfileid: "62467885"
 -   如果创建一个或多个包含内存优化表的数据库，应对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用即时文件初始化（授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动帐户 SE_MANAGE_VOLUME_NAME 用户权限）。 如果没有即时文件初始化，内存优化存储文件（数据和差异文件）将在创建时初始化，这会对工作负荷性能产生负面影响。 有关即时文件初始化的详细信息，请参阅 [数据库文件初始化](../databases/database-instant-file-initialization.md)。 有关如何启用即时文件初始化的信息，请参阅 [启用即时文件初始化的方法和原因](https://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx)。  
   
 ## <a name="did-this-article-help-you-were-listening"></a>本文是否对你有帮助？ 正在侦听  
- 你正在查找哪些信息，是否已经找到？ 我们正在倾听你的反馈来改进内容。 请将你的评论[sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page)提交到。  
+ 你正在查找哪些信息，是否已经找到？ 我们正在倾听你的反馈来改进内容。 请将你的评论提交到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page) 。  
   
 ## <a name="see-also"></a>另请参阅  
  [内存中 OLTP（内存中优化）](in-memory-oltp-in-memory-optimization.md)  

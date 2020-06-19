@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a9a300ce29141ed0a065b4186b737c4d8c294820
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0159c05b641cf234e2d8fdc6cd8c56bddb6a1054
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768886"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968867"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>执行计划和缓冲区分配
   在执行之前，数据流任务会先检查其组件，并为每一个组件序列生成一个执行计划。 本节提供有关执行计划、如何查看执行计划以及如何基于执行计划分配输入和输出缓冲区的详细信息。  

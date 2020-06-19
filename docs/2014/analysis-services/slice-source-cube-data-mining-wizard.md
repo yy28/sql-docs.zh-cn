@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bcb156d5c0a3c1332e748878ddebda1772b80696
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 762248d4c2a268ac36b0dfa3ffeba20123017017
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068599"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940498"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>对源多维数据集进行切片（数据挖掘向导）
   **** 可以使用“对源多维数据集进行切片”对话框限制用于为模型定型的数据。 通常一个多维数据集包含与很多不同维度和属性有关的数据，例如所有商店、所有区域和所有产品。 定型无限的属性组合的模型是不现实的，因此您使用此对话框选择要在定型模型中使用的特定集合。  
@@ -40,7 +39,7 @@ ms.locfileid: "66068599"
  **有关详细信息，请参阅** [数据挖掘向导（Analysis Services - 数据挖掘）](data-mining/data-mining-wizard-analysis-services-data-mining.md)[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>选项  
- **维度**  
+ **维数**  
  选择要进行切片的维度。  
   
  **层次结构**  
@@ -53,10 +52,10 @@ ms.locfileid: "66068599"
   
  例如，如果选择了 "地理" 作为层次结构，则可以选择运算符 =，然后键入 "欧洲" 作为筛选器，以仅获取欧洲的多维数据集数据。  
   
- **筛选表达式**  
+ **筛选器表达式**  
  键入要作为针对所选维度筛选多维数据集时的标准的表达式。  
   
- **Parameters**  
+ **参数**  
  此选项不用于数据挖掘模型。  
   
 ## <a name="see-also"></a>另请参阅  

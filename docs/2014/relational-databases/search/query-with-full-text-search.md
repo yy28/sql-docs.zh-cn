@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 280f4bc3c20fb65be24ace423f69982ad96bfbff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d78707925303d5e19d93b170f257d76fb7d1747d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011104"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004049"
 ---
 # <a name="query-with-full-text-search"></a>使用全文搜索查询
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文查询使用全文谓词（CONTAINS 和 FREETEXT）以及全文函数（CONTAINSTABLE 和 FREETEXTTABLE）来定义全文搜索。 它们支持复杂的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法，这种语法支持各种形式的查询词。 若要编写全文查询，必须了解何时以及如何使用这些谓词和函数。  
@@ -130,7 +129,7 @@ GO
 ```  
   
 #### <a name="b-using-freetexttable"></a>B. 使用 FREETEXTTABLE  
- 以下示例扩展了 FREETEXTTABLE 查询，以便首先返回排名最高的行，然后将每一行的排名添加到选择列表中。 若要指定查询，必须知道**ProductDescriptionID**是`ProductDescription`表的唯一键列。  
+ 以下示例扩展了 FREETEXTTABLE 查询，以便首先返回排名最高的行，然后将每一行的排名添加到选择列表中。 若要指定查询，必须知道**ProductDescriptionID**是表的唯一键列 `ProductDescription` 。  
   
 ```  
 USE AdventureWorks2012  
@@ -232,7 +231,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
 ### <a name="xml-data"></a>xml 数据  
  `xml` 数据类型列仅存储 XML 文档和片段，并且只有 XML 筛选器用于此类文档。 因此，无需类型列。 在 `xml` 列上，全文索引会为 XML 元素的内容创建索引，但会忽略 XML 标记。 不为数值的属性值都会进行全文索引。 元素标记用作标记边界。 支持包含多种语言的格式正确的 XML 或 HTML 文档和片段。  
   
- 有关对`xml`列进行查询的详细信息，请参阅对[XML 列使用全文搜索](../xml/use-full-text-search-with-xml-columns.md)。  
+ 有关对列进行查询的详细信息 `xml` ，请参阅对[XML 列使用全文搜索](../xml/use-full-text-search-with-xml-columns.md)。  
   
  
   
@@ -242,7 +241,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
 > [!NOTE]  
 >  有关给定查询词的语法，请单击下表“支持”**** 列中的相应链接。  
   
-|查询词形式|说明|支持的服务|  
+|查询词形式|说明|支持的语句|  
 |----------------------|-----------------|------------------|  
 |一个或多个特定的词或短语（“简单词”**）|在全文搜索中，词（或“标记”**）是其边界由相应的断字符标识、遵循指定语言的语言规则的字符串。 有效的短语由多个词组成，词之间可以有标点符号也可以没有标点符号。<br /><br /> 例如，"新月形面包" 是一个词，"caf？" au lait "是一个短语。 这样的词和短语称为“简单词”。<br /><br /> 有关详细信息，请参阅本主题后面的 [搜索特定的词或短语（简单词）](#Simple_Term)。|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) 和 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 查找短语的完全匹配项。<br /><br /> [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 和 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 将短语拆分为几个词。|  
 |以指定文本开头的词或短语（“前缀词”**）|前缀词指附加到一个词的前面以生成一个派生词或变形的字符串。<br /><br /> 对于单个前缀词，以指定词开头的任何词将是结果集的一部分。 例如，词“auto*”与“automatic”、“automobile”等匹配。<br /><br /> 如果是短语，则该短语内的每个词都被看作是一个前缀。 例如，词“auto tran\*”与“automatic transmission”和“automobile transducer”匹配，但与“automatic motor transmission”不匹配。<br /><br /> 有关详细信息，请参阅本主题后面的 [执行前缀搜索（前缀词）](#Prefix_Term)。|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) 和 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  

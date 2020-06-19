@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 857e18b1b956d3d8c9d2fc4c5692dbf022bf85fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a343e6b9e93aa1910c82f436f3a50daf00d57bc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754272"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933872"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>在升级服务器实例时最大限度地减少镜像数据库的停机时间
-  将服务器实例升级到[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]时，可以通过执行顺序升级（称为 "*滚动升级*"）将每个镜像数据库的停机时间减少为只进行一次手动故障转移。 滚动升级是一个多阶段过程，其最简单的形式如下：升级当前在镜像会话中充当镜像服务器的服务器实例，然后对镜像数据库进行手动故障转移，升级以前的主体服务器，恢复镜像。 实际上，确切过程将取决于运行模式以及在所升级的服务器实例上运行的镜像会话的编号和布局。  
+  将服务器实例升级到时 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，可以通过执行顺序升级（称为 "*滚动升级*"）将每个镜像数据库的停机时间减少为只进行一次手动故障转移。 滚动升级是一个多阶段过程，其最简单的形式如下：升级当前在镜像会话中充当镜像服务器的服务器实例，然后对镜像数据库进行手动故障转移，升级以前的主体服务器，恢复镜像。 实际上，确切过程将取决于运行模式以及在所升级的服务器实例上运行的镜像会话的编号和布局。  
   
 > [!NOTE]  
 >  有关执行滚动升级以安装 Service Pack 或修补程序的信息，请参阅[在系统上安装 Service pack，并且镜像数据库的停机时间最短](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)。  

@@ -12,27 +12,26 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9966db2e5b08cd16976e2c16434cec0adca8445f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63031931"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058557"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>选项（SQL Server 对象资源管理器脚本页）
   使用此页可设置脚本选项，以应用于**对象资源管理器**中对象上下文菜单上的以下命令：  
   
 -   用于用户表和视图的“编辑”  命令。  
   
--   为用户创建的对象 **> 脚本\<对象作为**命令。  
+-   用于用户创建对象的“生成 \<object> 脚本”命令。  
   
 -   用于用户创建对象的“修改”  命令。  
   
 -   本页也可用于设置“生成 SQL Server 脚本向导”  的脚本选项默认值。  
   
 ## <a name="remarks"></a>备注  
- 对于同一选项设置，"**编辑**" 和 "**修改**" 命令可能产生不同于 "**脚本\<对象> 为**" 命令的结果。 “编辑”  和“修改”  命令用于在查询编辑器会话期间修改当前数据库中的对象。 **Script \<对象> as**命令旨在生成脚本，以便以后可以使用它来创建对象。  
+ “编辑”和“修改”命令产生的结果可能与相同选项设置的“生成 \<object> 脚本”命令产生的结果不同。 “编辑”  和“修改”  命令用于在查询编辑器会话期间修改当前数据库中的对象。 “生成 \<object> 脚本”命令用于生成一个脚本，这样以后便可使用此脚本创建对象。  
   
 ## <a name="options"></a>选项  
  通过从每个选项右侧列表中的可用设置中进行选择，可以指定脚本选项。  
@@ -56,7 +55,7 @@ ms.locfileid: "63031931"
  **编写全文目录脚本**  
  包含用于全文目录的脚本。 默认值为 False。 有关详细信息，请参阅[创建全文目录 &#40;transact-sql&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)。  
   
- **脚本使用\<数据库>**  
+ **脚本使用\<database>**  
  将 USE DATABASE 语句添加到脚本，可在当前 **对象资源管理器** 数据库的上下文中创建数据库对象。 如果希望该脚本可在其他数据库中使用，请选择 False 以忽略该选项。 默认值为 True。 有关详细信息，请参阅 [USE (Transact-SQL)](/sql/t-sql/language-elements/use-transact-sql)。  
   
 ### <a name="object-scripting-options"></a>对象脚本选项  

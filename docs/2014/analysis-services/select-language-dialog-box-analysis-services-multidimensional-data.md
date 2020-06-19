@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a85a106f-ff47-4b9e-ac62-4942e214df3b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bbe0f137f029fb364adafd6f3959c7e22984b73f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 111f1a4fcabbc2078f18a325d1c6669eea10bb66
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069513"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940998"
 ---
 # <a name="select-language-dialog-box-analysis-services---multidimensional-data"></a>“选择语言”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “选择语言” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框为新翻译选择语言。 您可以通过执行以下操作之一显示 **“选择语言”** 对话框：  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce5af79f-a1f8-47f3-acb9-769022285a69
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 833410b6daa15924f0875cee77ad432aa9fac369
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a3420eb19321ff4ccc39c2b4bb615e636315996
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069492"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940938"
 ---
 # <a name="select-mining-structure-dialog-box-mining-accuracy-chart-view"></a>“选择挖掘结构”对话框（“挖掘准确性图表”视图）
   可以使用 **“选择挖掘结构”** 对话框，选择包含要比较或测试准确性的挖掘模型的挖掘结构。  

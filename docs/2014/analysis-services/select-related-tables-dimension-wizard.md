@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 82dbd97a-582c-4f60-8d44-fc52dba7b276
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a135df3d3850aebdb9ac6dda08561a7fae21793f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6557f27f0b4a71e6bdbbb7c733628d18e4b17886
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069293"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940868"
 ---
 # <a name="select-related-tables-dimension-wizard"></a>选择相关表（维度向导）
   可以使用“选择相关表”**** 页，将相关表（数据源视图中与主维度表相关的表）包含在维度中。  
