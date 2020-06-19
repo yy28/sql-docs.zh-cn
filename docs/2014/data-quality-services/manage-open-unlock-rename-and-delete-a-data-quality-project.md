@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d5e3ec1fc7c3c811b588aaf4145aa286d9aa078e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 062a02688a81235686635db4315754e16dc38d08
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484157"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937498"
 ---
 # <a name="manage-open-unlock-rename-and-delete-a-data-quality-project"></a>管理（打开、解锁、重命名和删除）数据质量项目
   本主题介绍如何使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 管理数据质量项目，如打开、解锁、重命名和删除数据质量项目。  
@@ -39,7 +38,7 @@ ms.locfileid: "65484157"
   
 -   您只能解锁您创建的数据质量项目。  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 先决条件  
  您必须至少具有一个数据质量项目才能进行管理。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  

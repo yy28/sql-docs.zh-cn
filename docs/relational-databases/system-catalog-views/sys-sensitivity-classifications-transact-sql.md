@@ -23,12 +23,12 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4ee73a840be6ec29e3ac34c4c43fe0c8e87185f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9b8f6bf20fa02981e3275299849d1cb04036dfa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77903895"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939038"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "77903895"
 |**rank_desc**|**sysname**|排名的文本表示形式：  <br><br>无、低、中、高、严重|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
 
 - 此视图提供数据库的分类状态的可见性。 它可用于管理数据库分类以及生成报告。
 - 目前仅支持对数据库列进行分类。
@@ -58,7 +58,7 @@ ms.locfileid: "77903895"
 
 ### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>A. 列出所有已分类的列及其相应的分类
 
-下面的示例返回一个表，该表列出了数据库中每个已分类列的表名称、列名称、标签、标签 ID、信息类型和信息类型 ID。
+下面的示例返回一个表，该表列出了数据库中每个已分类列的表名称、列名称、标签、标签 ID、信息类型、信息类型 ID、排名和排名说明。
 
 > [!NOTE]
 > 标签是适用于 Azure SQL 数据仓库的关键字。

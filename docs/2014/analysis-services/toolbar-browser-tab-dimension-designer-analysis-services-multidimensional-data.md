@@ -9,25 +9,24 @@ ms.topic: conceptual
 ms.assetid: d0abb2a7-e981-4b0a-a442-80c819aca2ae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f37c34b1b4857ca561b656a773c2cfa71ffb19c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d7f48728921b997fc408ce224bd7bf8c9959b34
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066159"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938434"
 ---
 # <a name="toolbar-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>工具栏（“浏览器”选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用 **“工具栏”** 窗格执行 **维度设计器** 的 **“浏览器”** 选项卡上的常规操作。  
   
 ## <a name="options"></a>选项  
- **进程**  
+ **处理**  
  单击此项可打开“处理”**** 对话框，并处理所选维度。  
   
  **重新连接**  
  如果“浏览器”**** 选项卡会话由于连接丢失或超时而断开，单击此项可将“浏览器”**** 选项卡重新连接到包含维度的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例和数据库。  
   
- **全部**  
+ **刷新**  
  单击此项可以使用维度的数据和元数据重新加载“浏览器”**** 选项卡。  
   
  **成员属性**  

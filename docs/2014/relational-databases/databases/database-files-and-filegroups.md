@@ -31,13 +31,12 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3d75dee637a5579ca3f189e14333fbf9356623d0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91e22e536a91878609feedf2977ffa7d78a54d61
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917274"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970197"
 ---
 # <a name="database-files-and-filegroups"></a>数据库文件和文件组
   每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库至少具有两个操作系统文件：一个数据文件和一个日志文件。 数据文件包含数据和对象，例如表、索引、存储过程和视图。 日志文件包含恢复数据库中的所有事务所需的信息。 为了便于分配和管理，可以将数据文件集合起来，放到文件组中。  
@@ -64,7 +63,7 @@ ms.locfileid: "62917274"
   
 |文件组|说明|  
 |---------------|-----------------|  
-|基本|包含主要文件的文件组。 所有系统表都被分配到主要文件组中。|  
+|主|包含主要文件的文件组。 所有系统表都被分配到主要文件组中。|  
 |用户定义|用户首次创建数据库或以后修改数据库时明确创建的任何文件组。|  
   
 ### <a name="default-filegroup"></a>默认文件组  

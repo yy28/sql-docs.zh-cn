@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bf57adb31330f5b0c0f18fbcccd4d71f47d3c933
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 44fce4aba87968a9b7e6acc3e18ae5d966f70d07
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176018"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936018"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>SQL Server 的云适配器
-  在 Azure VM 上进行[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]预配时，会创建云适配器服务。 云适配器服务在首次运行时生成自签名的 SSL 证书，然后作为“本地系统”**** 帐户运行。 它生成用于配置自身的配置文件。 云适配器还创建一项 Windows 防火墙规则，以允许其传入 TCP 连接在默认端口 11435 上通过。  
+  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AZURE VM 上进行预配时，会创建云适配器服务。 云适配器服务在首次运行时生成自签名的 SSL 证书，然后作为“本地系统”**** 帐户运行。 它生成用于配置自身的配置文件。 云适配器还创建一项 Windows 防火墙规则，以允许其传入 TCP 连接在默认端口 11435 上通过。  
   
  云适配器是无状态的同步服务，它从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的本地实例接收消息。 停止云适配器服务时，它停止远程访问云适配器、解除 SSL 证书的绑定并禁用 Windows 防火墙规则。  
   
@@ -51,19 +50,19 @@ ms.locfileid: "70176018"
   
         -   \<appSettings>  
   
-            -   \<add key = "WebServicePort" value = ""/>  
+            -   \<add key="WebServicePort" value="" />  
   
-            -   \<add key = "WebServiceCertificate" value = "GUID"/>  
+            -   \<add key="WebServiceCertificate" value="GUID" />  
   
-            -   \<add key = "ExposeExceptionDetails" value = "true"/>  
+            -   \<add key="ExposeExceptionDetails" value="true" />  
   
         -   \</appSettings>  
   
-    -   \</配置>  
+    -   \</configuration>  
   
 -   **证书详细信息**-证书具有以下值：  
   
-    -   Subject-"CN = CloudAdapter\<VMName>，DC = SQL SERVER，DC = Microsoft"  
+    -   Subject-"CN = CloudAdapter \<VMName> ，dc = SQL Server，DC = Microsoft"  
   
     -   证书应仅启用服务器身份验证 EKU。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "70176018"
   
  **配置文件值**：  
   
-|设置|值|默认|说明|  
+|设置|值|默认|注释|  
 |-------------|------------|-------------|--------------|  
 |WebServicePort|1-65535|11435|如果未指定，请使用 11435。|  
 |WebServiceCertificate|Thumbprint|空|如果为空，则生成新的自签名证书。|  
@@ -84,7 +83,7 @@ ms.locfileid: "70176018"
   
 -   **跟踪，事件**-将所有事件写入应用程序事件日志。  
   
--   **控制，配置**-使用位于以下位置的配置文件： C:\PROGRAM Files\Microsoft SQL\\Server\120\Tools\CloudAdapter。  
+-   **控制，配置**-使用位于以下位置的配置文件： C:\PROGRAM Files\Microsoft SQL Server\120\Tools\CloudAdapter \\ 。  
   
 |错误|错误 ID|原因|解决方法|  
 |-----------|--------------|-----------|----------------|  
@@ -93,7 +92,7 @@ ms.locfileid: "70176018"
 |在证书存储区中找不到 SSL 证书 [{指纹}]。|45564|证书指纹在配置文件中，但是服务的个人证书存储区不包含证书。<br /><br /> 权限不足。|确保证书在服务的个人证书存储区中。<br /><br /> 确保服务具有对存储区的正确权限。|  
 |无法启动 Web 服务。 {异常文本}。|45570|在异常中有描述。|启用 ExposeExceptionDetails 并使用异常中的更多信息。|  
 |证书 [{指纹}] 已过期。|45565|从配置文件引用了过期的证书。|添加有效证书并使用其指纹更新配置文件。|  
-|Web 服务错误： {0}。|45571|在异常中有描述。|启用 ExposeExceptionDetails 并使用异常中的更多信息。|  
+|Web 服务错误： {0} 。|45571|在异常中有描述。|启用 ExposeExceptionDetails 并使用异常中的更多信息。|  
   
 ## <a name="see-also"></a>另请参阅  
  [将 SQL Server 数据库部署到 Microsoft Azure 虚拟机](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfe3ca671dd333db50d232cd07dda86ffdd6d9fc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62791962"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936748"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>维护 AlwaysOn 发布数据库 (SQL Server)
   本主题讨论了在使用 AlwaysOn 可用性组时维护发布数据库的特殊注意事项。  
@@ -32,17 +31,17 @@ ms.locfileid: "62791962"
   
 -   复制监视器将始终在原始发布服务器下显示发布信息。 但是，通过将原始发布服务器添加为服务器，可以使用复制监视器从任意副本查看此信息。  
   
--   当使用存储过程或复制管理对象 (RMO) 在当前主副本上管理复制时，对于需要指定发布服务器名称的情况，您必须指定已经启用了数据库复制的实例（原始发布服务器）的名称。 若要确定相应的名称，请使用 `PUBLISHINGSERVERNAME` 函数。 当发布数据库联接一个可用性组时，存储在辅助数据库副本中的复制元数据将与主副本上的相同。 因此，对于主副本上已启用复制的发布数据库而言，辅助副本上的系统表中存储的发布服务器实例名称将是主副本的名称，而不是辅助副本的名称。 如果将发布数据库故障转移到辅助副本，则这种情况会影响复制的配置和维护。 例如，如果你要在故障转移后在辅助副本上使用存储过程配置复制，并且你希望对在不同副本上启用的发布数据库的请求订阅，则必须将原始发布服务器的名称（而非当前发布服务器的名称*@publisher* ）指定`sp_addpullsubscription`为`sp_addmergepulllsubscription`或的参数。 但是，如果您在故障转移之后启用一个发布数据库，则存储在系统表中的发布服务器实例名称将为当前主副本主机的名称。 在这种情况下，将使用*@publisher*参数的当前主副本的主机名。  
+-   当使用存储过程或复制管理对象 (RMO) 在当前主副本上管理复制时，对于需要指定发布服务器名称的情况，您必须指定已经启用了数据库复制的实例（原始发布服务器）的名称。 若要确定相应的名称，请使用 `PUBLISHINGSERVERNAME` 函数。 当发布数据库联接一个可用性组时，存储在辅助数据库副本中的复制元数据将与主副本上的相同。 因此，对于主副本上已启用复制的发布数据库而言，辅助副本上的系统表中存储的发布服务器实例名称将是主副本的名称，而不是辅助副本的名称。 如果将发布数据库故障转移到辅助副本，则这种情况会影响复制的配置和维护。 例如，如果你要在故障转移后在辅助副本上使用存储过程配置复制，并且你希望对在不同副本上启用的发布数据库的请求订阅，则必须将原始发布服务器的名称（而非当前发布服务器的名称）指定为 *@publisher* 或的参数 `sp_addpullsubscription` `sp_addmergepulllsubscription` 。 但是，如果您在故障转移之后启用一个发布数据库，则存储在系统表中的发布服务器实例名称将为当前主副本主机的名称。 在这种情况下，将使用参数的当前主副本的主机名 *@publisher* 。  
   
     > [!NOTE]  
-    >  对于某些过程（如`sp_addpublication`），只有*@publisher*不是的实例的发布服务器才支持参数[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)];在这些情况下，它与[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 无关。  
+    >  对于某些过程（如 `sp_addpublication` ）， *@publisher* 只有不是的实例的发布服务器才支持参数 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ; 在这种情况下，该参数与 AlwaysOn 无关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 -   若要在故障转移后在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 中同步订阅，应将来自订阅服务器的请求订阅与来自活动发布服务器的推送订阅进行同步。  
   
 ##  <a name="removing-a-published-database-from-an-availability-group"></a><a name="RemovePublDb"></a> 从可用性组中删除已发布的数据库  
  如果从可用性组中删除了已发布的数据库，或者删除了包含已发布的成员数据库的可用性组，则应考虑以下问题。  
   
--   如果从可用性组主要副本中删除原始发布服务器上的发布数据库，则必须在不`sp_redirect_publisher`指定*@redirected_publisher*参数值的情况下运行，以便删除发布服务器/数据库对的重定向。  
+-   如果从可用性组主要副本中删除原始发布服务器上的发布数据库，则必须 `sp_redirect_publisher` 在不指定参数值的情况下运行， *@redirected_publisher* 以便删除发布服务器/数据库对的重定向。  
   
     ```  
     EXEC sys.sp_redirect_publisher   
@@ -68,7 +67,7 @@ ms.locfileid: "62791962"
     > [!NOTE]  
     >  在删除包含已发布的成员数据库的可用性组时，或在删除可用性组中的已发布的数据库时，已发布的数据库的所有副本都将处于“正在恢复”状态。 这些副本在还原之后都将显示为已发布的数据库。 只应与发布元数据一起保留一份副本。 若要对已发布的数据库副本禁用复制，首先应删除该数据库中的所有订阅和发布。  
   
-     运行 `sp_dropsubscription` 以删除发布订阅。 请确保将参数*@ignore_distributributor*设置为1，以便为分发服务器上的活动发布数据库保留元数据。  
+     运行 `sp_dropsubscription` 以删除发布订阅。 请确保将参数设置 *@ignore_distributributor* 为1，以便为分发服务器上的活动发布数据库保留元数据。  
   
     ```  
     USE MyDBName;  
@@ -81,7 +80,7 @@ ms.locfileid: "62791962"
         @ignore_distributor = 1;  
     ```  
   
-     运行 `sp_droppublication` 以删除所有发布。 同样，将参数*@ignore_distributor*设置为1，以便为分发服务器上的活动发布数据库保留元数据。  
+     运行 `sp_droppublication` 以删除所有发布。 同样，将参数设置 *@ignore_distributor* 为1，以便为分发服务器上的活动发布数据库保留元数据。  
   
     ```  
     EXEC sys.sp_droppublication   

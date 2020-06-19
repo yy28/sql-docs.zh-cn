@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b6653f2340dfbcf6265c527f85d87d60a3680f30
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a15a914c243f1fafd3b913d98113e984bf533086
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66009990"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970867"
 ---
 # <a name="manage-filetables"></a>管理 FileTable
   说明用于管理 FileTable 的常见管理任务。  
@@ -62,7 +61,7 @@ GO
   
      如果 ALTER DATABASE 命令被取消或因超时而结束，则不更改事务性访问级别。  
   
--   如果调用带 WITH \<termination> 子句 (ROLLBACK AFTER integer [ SECONDS ] | ROLLBACK IMMEDIATE | NO_WAIT) 的 ALTER DATABASE 语句，则将终止所有打开的非事务性文件句柄。  
+-   如果使用 WITH 子句调用 ALTER DATABASE 语句 \<termination> （INTEGER 后的 ROLLBACK [秒] |立即回滚 |NO_WAIT），则将终止所有打开的非事务性文件句柄。  
   
 > [!WARNING]  
 >  终止打开的文件句柄可能会导致用户丢失未保存的数据。 此行为与文件系统自身的行为一致。  
@@ -192,7 +191,7 @@ GO
  FileTable 持有的大多数锁与应用程序打开的文件相对应。  
   
  **确定打开的文件和关联锁**  
- 将动态管理视图 **sys.dm_tran_locks (Transact SQL)** 中的 [request_owner_id](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql) 字段与 **sys.dm_filestream_non_transacted_handles (Transact SQL)** 中的 [fcb_id](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql) 字段进行联接。 在某些情况下，锁并不对应单个打开的文件句柄。  
+ 将动态管理视图 [sys.dm_tran_locks (Transact SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql) 中的 **request_owner_id** 字段与 [sys.dm_filestream_non_transacted_handles (Transact SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql)中的 **fcb_id** 字段进行联接。 在某些情况下，锁并不对应单个打开的文件句柄。  
   
 ```sql  
 SELECT opened_file_name  

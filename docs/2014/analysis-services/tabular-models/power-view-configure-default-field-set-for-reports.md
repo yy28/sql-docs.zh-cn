@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6836b42f-28b8-4a98-a86d-2c3c109f0189
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 37571e141395afe255329edc10edeaeaed121710
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7dd48fae06258370e4b93bcceb9eadc80554bbf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066893"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938768"
 ---
 # <a name="configure-default-field-set-for-power-view-reports-ssas-tabular"></a>配置 Power View 报表的默认字段集（SSAS 表格）
   默认字段集是一个列和度量值的预定义列表，当您选择报表字段列表中的表时，这些列和度量值会自动添加到 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 报表画布中。 表格模型作者可以创建默认字段集，使得将模型用于其报表的报表作者无需执行冗余步骤。 例如，如果您知道大多数使用客户联系信息的报表作者总是希望查看联系人姓名、主要电话号码、电子邮件地址和公司名称，您可以预先选择这些列，以便在作者单击客户联系表时，这些列总是会添加到报表画布中。  
@@ -42,7 +41,7 @@ ms.locfileid: "66066893"
   
 6.  对工作簿中的其他表重复这些步骤。  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
  创建默认字段集后，您可以通过指定默认标签、默认图像、默认组行为或是将包含相同值的各个行组合到一个行中还是分别列出这些行，来进一步影响报表设计体验。 有关详细信息，请参阅[为 Power View 报表配置表行为属性（SSAS 表格）](power-view-configure-table-behavior-properties-for-reports.md)。  
   
   

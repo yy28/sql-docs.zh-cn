@@ -22,19 +22,18 @@ helpviewer_keywords:
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 82ac3490f80cf8683a6aebcea75004503a4d5ad4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5f0642644632c40f7f95e731c61e0a968cd83b7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919646"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970738"
 ---
 # <a name="updating-udt-columns-with-dataadapters"></a>使用 DataAdapter 更新 UDT 列
   使用 `System.Data.DataSet` 和 `System.Data.SqlClient.SqlDataAdapter` 支持用户定义类型 (UDT) 以检索和修改数据。  
   
 ## <a name="populating-a-dataset"></a>填充数据集  
- 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句选择 UDT 列值，以便利用数据适配器填充数据集。 下面的示例假定您有一个使用以下结构定义的**点**表和一些示例数据。 以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句将创建**Points**表并插入一些行。  
+ 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句选择 UDT 列值，以便利用数据适配器填充数据集。 下面的示例假定您有一个使用以下结构定义的**点**表和一些示例数据。 以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将创建**Points**表并插入一些行。  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -46,7 +45,7 @@ INSERT INTO dbo.Points VALUES (4, CONVERT(Point, '4,6'));
 GO  
 ```  
   
- 以下 ADO.NET 代码片段检索有效的连接字符串，创建新`SqlDataAdapter`的，并`System.Data.DataTable`使用**Points**表中的数据行填充。  
+ 以下 ADO.NET 代码片段检索有效的连接字符串，创建新的 `SqlDataAdapter` ，并 `System.Data.DataTable` 使用**Points**表中的数据行填充。  
   
 ```vb  
 Dim da As New SqlDataAdapter( _  
@@ -85,9 +84,9 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  以下 ADO.NET 示例具有两个方法：  
   
--   `UserProvidedCommands`，它演示了如何提供`InsertCommand`、 `UpdateCommand`和`DeleteCommand`对象以更新**Points**表`Point`中的 UDT （不包含`timestamp`列）。  
+-   `UserProvidedCommands`，它演示了如何提供 `InsertCommand` 、 `UpdateCommand` 和 `DeleteCommand` 对象以更新 `Point` **Points**表中的 UDT （不包含 `timestamp` 列）。  
   
--   `CommandBuilder`，它演示如何`SqlCommandBuilder`在包含`timestamp`列的**Points_ts**表中使用。  
+-   `CommandBuilder`，它演示如何 `SqlCommandBuilder` 在包含列的**Points_ts**表中使用 `timestamp` 。  
   
 ```vb  
 Imports System  

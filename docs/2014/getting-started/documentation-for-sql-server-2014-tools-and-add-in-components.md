@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 91c34cb4-dc14-4a2b-86a1-9c950642fb23
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ddc24d5204a6b047540fdeff4a5ddff92acc00f7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 184473773e520f2ea0cd0c9d01a9c3738d1d5c78
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706945"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926938"
 ---
 # <a name="documentation-for-sql-server-2014-tools-and-add-in-components"></a>针对 SQL Server 2014 工具和外接程序组件的文档
     
@@ -33,7 +32,7 @@ ms.locfileid: "82706945"
 |[Microsoft Connector 1.1 for SAP BW](https://go.microsoft.com/fwlink/?LinkId=299181)|Microsoft Connector 1.1 for SAP BW 由一组三个组件构成，可用于从 SAP Netweaver BW 版本 7 系统中提取数据以及向该系统中加载数据。|  
 |[Playback Capture for Upgrade Assistant](https://go.microsoft.com/fwlink/?LinkId=299182)|升级助手中的捕获播放工作流自动化要用于在以后重播的工作负荷跟踪捕获流程。|  
 |[Microsoft ODBC Driver 11 for SQL Server（Windows 平台）](https://go.microsoft.com/fwlink/?LinkId=299183)|Microsoft ODBC Driver 11 for Windows 是一个独立的驱动程序，它提供一个应用程序编程接口 (API)，可实现针对 Microsoft Windows 的标准 ODBC 接口。|  
-|[Power Pivot for SharePoint](https://go.microsoft.com/fwlink/?LinkId=299184)|Power Pivot for SharePoint 是一个在 SharePoint 模式下运行的 Analysis Services 服务器。|  
+|[SharePoint Power Pivot](https://go.microsoft.com/fwlink/?LinkId=299184)|Power Pivot for SharePoint 是一个在 SharePoint 模式下运行的 Analysis Services 服务器。|  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 2014 文档](../2014-toc/index.yml)  

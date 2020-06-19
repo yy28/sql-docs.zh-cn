@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3b83ce9b00ead21d2f067f95ece0234d92682991
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 70a7b7c959283f934ed94f654293d1de2ef8cd9d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175967"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970487"
 ---
 # <a name="data-collection"></a>数据收集
   数据收集器是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的一个组件，用于收集不同的数据集。 数据收集连续运行或按照用户定义的计划运行。 数据收集器将收集的数据存储在称为管理数据仓库的关系数据库中。
@@ -59,7 +58,7 @@ ms.locfileid: "78175967"
  有关详细信息，请参阅 [Integration Services (SSIS) 包](../../integration-services/integration-services-ssis-packages.md)。
 
 ## <a name="data-collector-terminology"></a>数据收集器术语
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]以支持数据收集的版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的实例为目标。 有关支持的版本的详细信息，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)的 "可管理性" 部分。
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]以支持数据收集的版本中的实例为目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关支持的版本的详细信息，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)的 "可管理性" 部分。
 
  “目标根目录 ** ”定义目标层次结构中的子树。 “目标集 ** ”是通过将筛选器应用到目标根目录定义的子树上而得到的目标组。 目标根目录可以是数据库、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，或计算机实例。
 
@@ -67,7 +66,7 @@ ms.locfileid: "78175967"
 
  数据访问接口一个特定于目标类型的已知数据源，用于为收集器类型提供数据。
 
- 收集器在[!INCLUDE[ssIS](../../includes/ssis-md.md)]包的周围键入逻辑包装，这些包提供用于收集数据并将数据上载到管理数据仓库的实际机制。
+ 收集器在包的周围键入逻辑包装 [!INCLUDE[ssIS](../../includes/ssis-md.md)] ，这些包提供用于收集数据并将数据上载到管理数据仓库的实际机制。
 
  收集器项收集器类型的实例。 收集项是通过一组特定的输入属性并以特定的收集频率创建的。
 

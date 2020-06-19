@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 543f972f5c5805bb1508b6a256f7a7ed3a2aaa3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a7d88923bc41939541bedeed2d40908e454e9c5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918569"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970447"
 ---
 # <a name="manage-data-collection"></a>管理数据收集
   可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程和功能来管理数据收集的各个方面，例如启用或禁用数据收集、更改收集组配置或查看管理数据仓库中的数据。  
@@ -164,7 +163,7 @@ ms.locfileid: "62918569"
 ### <a name="functions"></a>函数  
  下表介绍了可用于获取执行和跟踪信息的函数。  
   
-|函数名称|说明|  
+|功能名称|说明|  
 |-------------------|-----------------|  
 |[fn_syscollector_get_execution_details (Transact-SQL)](/sql/relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql)|为特定包获取 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 执行日志数据。|  
 |[fn_syscollector_get_execution_stats (Transact-SQL)](/sql/relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql)|为收集组或包获取执行统计信息。 此信息包含所记录的错误。|  

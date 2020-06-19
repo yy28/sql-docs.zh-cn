@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ba59fd0b-e2c5-4d42-ba99-eaf784b45975
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8905a7fbb075826f37b9d362fe82def3e9664109
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d90d246cb54b54dea0ed4f84f1b96142a5f56803
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065861"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938300"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>翻译详细信息（“翻译”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“事务”** 选项卡上的 **“事务详细信息”** ，定义和管理当前选择的多维数据集的翻译。  
@@ -61,7 +60,7 @@ ms.locfileid: "66065861"
   
      `Caption` 属性  
   
- **\<语言>**  
+ **\<Language>**  
  以所选语言键入多维数据集对象的属性值。  
   
 ## <a name="context-menu"></a>上下文菜单  

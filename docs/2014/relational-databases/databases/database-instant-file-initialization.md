@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 491c8a63c7ee3ed06c90356c58820f34ed3c0bf9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dedd2c5b8d075dee8aeeb438904137558c664d95
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872086"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970207"
 ---
 # <a name="database-instant-file-initialization"></a>数据库实例文件初始化
   初始化数据和日志文件以覆盖之前删除的文件遗留在磁盘上的任何现有数据。 执行以下其中一项操作时，应首先通过用零填充数据和日志文件来初始化这些文件：  
@@ -55,7 +54,7 @@ ms.locfileid: "62872086"
   
 4.  单击“添加用户或组” **** ，添加用于备份的任何用户帐户。  
   
-5.  单击 "**应用**"，然后关闭`Local Security Policy`所有对话框。  
+5.  单击 "**应用**"，然后关闭所有 `Local Security Policy` 对话框。  
   
 ### <a name="security-considerations"></a>安全注意事项  
  因为只有在新数据写入文件中时才覆盖删除的磁盘内容，因此，未授权的主体可能会访问删除的内容。 当数据库文件连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例之后，可以通过文件中的随机访问控制列表 (DACL) 来降低此信息泄露的风险。 此 DACL 仅允许 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户和本地管理员访问文件。 但是，当文件分离以后，可以由不具有 SE_MANAGE_VOLUME_NAME 的用户或服务访问。 在备份数据库时，也存在类似风险。 如果未使用适当的 DACL 对备份文件进行保护，则未授权的用户或服务将可以使用删除的内容。  

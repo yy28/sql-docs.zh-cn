@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 51d130a1-2b48-439e-9447-783e1fc3f4fb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 75be591f1910f5a55f6b7a019dad366a49ea921a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 14a2ddb95c3e36076b02901e5fb6f431c1dfb12e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707041"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927286"
 ---
 # <a name="about-the-sql-server-license-terms"></a>关于 SQL Server 许可条款
   安装 [!INCLUDE[msCoName](../includes/msconame-md.md)] 时，会将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 软件许可条款复制到本地计算机。 当在同一台计算机上安装具有相同版本类别和语言的多个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例时，许可条款的单个副本将适用于该版本类别和语言的所有实例。 文件写入：% ProgramFiles% \\ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] \120\License 字词 \ 或% ProgramFiles （x86）% \ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License 条款 \\ 。  
   
  在同一台计算机上安装相同 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本和语言的多个实例时，许可条款的单个副本将应用于该版本和语言的所有实例。  
   
- 许可条款文件名指示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的版本以及安装的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 语言版本。 许可条款文件名的格式为： SQLServer2014_License_Edition_ \< 键入>_ \< LCID> .rtf。 例如：  
+ 许可条款文件名指示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的版本以及安装的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 语言版本。 许可条款文件名的格式为： SQLServer2014_License_Edition_ \<TYPE> _ \<LCID> .rtf。 例如：  
   
 -   SQLServer2014_License_DEV_1033.rtf 适用于 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Developer，英语版本。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "82707041"
 |西班牙语|ESN|3082|  
 |简体中文|CHS|2052|  
 |繁体中文|CHT|1028|  
-|葡萄牙语(巴西)|PTB|1046|  
+|葡萄牙语（巴西）|PTB|1046|  
 |俄语|RUS|1049|  
   
 ## <a name="ssnoversion-licensing-options"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 许可选项  

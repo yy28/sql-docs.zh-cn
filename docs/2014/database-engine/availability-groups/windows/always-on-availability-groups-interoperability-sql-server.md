@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3f6123f66d687327ba56601419328e44fd920a2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55e19c050d0dd5d0a07c12f88076c423ade3281a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815743"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937199"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>AlwaysOn 可用性组：互操作性 (SQL Server)
   本主题说明 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中其他 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]功能的互操作性。  
@@ -28,10 +27,10 @@ ms.locfileid: "62815743"
 ##  <a name="features-that-interoperate-with-alwayson-availability-groups"></a><a name="Interop"></a>与 AlwaysOn 可用性组互操作的功能  
  下表列出了在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中可与 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 互操作的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]功能。 **** “详细信息”列中的链接表示给定功能的互操作性注意事项。  
   
-|功能|更多信息|  
+|Feature|更多信息|  
 |-------------|----------------------|  
 |更改数据捕获|[复制、更改跟踪、更改数据捕获和 AlwaysOn 可用性组 &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)|  
-|更改跟踪|[复制、更改跟踪、更改数据捕获和 AlwaysOn 可用性组 &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)|  
+|Change tracking|[复制、更改跟踪、更改数据捕获和 AlwaysOn 可用性组 &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)|  
 |包含的数据库|[包含的数据库与 AlwaysOn 可用性组 (SQL Server)](always-on-availability-groups-sql-server.md)|  
 |数据库加密|[SQL Server AlwaysOn 可用性组 &#40;加密数据库&#41;](encrypted-databases-with-always-on-availability-groups-sql-server.md)|  
 |数据库快照|[具有 AlwaysOn 可用性组 &#40;SQL Server 的数据库快照&#41;](database-snapshots-with-always-on-availability-groups-sql-server.md)|  
@@ -42,7 +41,7 @@ ms.locfileid: "62815743"
 |[为 AlwaysOn 可用性组（SQL Server）配置](configure-replication-for-always-on-availability-groups-sql-server.md)复制<br /><br /> [维护 AlwaysOn 发布数据库 &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)<br /><br /> [复制、更改跟踪、更改数据捕获和 AlwaysOn 可用性组 &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)<br /><br /> [复制订阅服务器和 AlwaysOn 可用性组 &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)|  
 |Analysis Services|[Analysis Services 与 AlwaysOn 可用性组](analysis-services-with-always-on-availability-groups.md)|  
 |Reporting Services|使用只读辅助副本作为报告数据源，减少您的读写主副本上的负载。<br /><br /> [Reporting Services AlwaysOn 可用性组 &#40;SQL Server&#41;](reporting-services-with-always-on-availability-groups-sql-server.md)|  
-|服务中转站|[Service Broker AlwaysOn 可用性组 &#40;SQL Server&#41;](service-broker-with-always-on-availability-groups-sql-server.md)|  
+|Service Broker|[Service Broker AlwaysOn 可用性组 &#40;SQL Server&#41;](service-broker-with-always-on-availability-groups-sql-server.md)|  
 |SQL Server 代理||  
   
 ##  <a name="features-that-do-not-interoperate-with-alwayson-availability-groups"></a><a name="NoInterop"></a>不能与 AlwaysOn 可用性组进行互操作的功能  

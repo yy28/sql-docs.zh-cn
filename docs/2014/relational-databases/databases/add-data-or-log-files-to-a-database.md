@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4519ed412e3148d8e0c70a77c00db969be73a9c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f72e00f9dab422652237b4b85579c544d0cda9fb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917697"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952347"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>向数据库中添加数据文件或日志文件
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中向数据库添加数据文件或日志文件。  
@@ -71,11 +70,11 @@ ms.locfileid: "62917697"
   
 6.  选择文件类型：数据或日志。  
   
-7.  对于数据文件，从列表中选择应包含该文件的文件组，或选择“**新文件组>”\<** 来创建新的文件组。 事务日志不能放在文件组中。  
+7.  对于数据文件，请从列表中选择应包含该文件的文件组，或选择 **\<new filegroup>** 创建新的文件组。 事务日志不能放在文件组中。  
   
 8.  指定文件的初始大小。 根据数据库中您希望的最大数据量，使数据文件尽可能大。  
   
-9. 若要指定文件的增长方式，请在“自动增长”列中单击 (…)   。 从下列选项中进行选择：  
+9. 若要指定文件的增长方式，请在“自动增长”列中单击 (…)。 从下列选项中进行选择：  
   
     1.  若要允许当前选中的文件根据数据空间量的需求增加而增长，请选中 **“启用自动增长”** 复选框，然后从下列选项中进行选择：  
   

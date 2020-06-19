@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7b43cc124ff6f5147a3255cbdf164679bae55d18
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 955a17857ce0d847fb712473dddd581a072ab83d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858535"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970167"
 ---
 # <a name="database-properties-files-page"></a>数据库属性（“文件”页）
   使用此页可以创建新的数据库，也可以查看或修改所选数据库的属性。 对于现有数据库，本主题适用于 **数据库属性（“文件”页）** ；另外，本主题还适用于 **新建数据库（“常规”页）** 。  
@@ -46,7 +45,7 @@ ms.locfileid: "83858535"
  要将文件（容器）添加到 Filestream 数据文件组，必须启用 FILESTREAM。 可以通过 [服务器属性（“高级”页）](../../database-engine/configure-windows/server-properties-advanced-page.md) 对话框启用 FILESTREAM。  
   
  **文件组**  
- 从列表中为文件选择文件组。 默认情况下，文件组为 PRIMARY。 通过选择 **\<<新文件组>** ，然后在“新建文件组”  对话框中输入有关文件组的信息，可以创建新的文件组。 您也可以在 **“文件组”** 页上创建新的文件组。 您无法修改现有文件的文件组。  
+ 从列表中为文件选择文件组。 默认情况下，文件组为 PRIMARY。 您可以通过在 **\<new filegroup>** "**新建文件组**" 对话框中选择并输入有关文件组的信息来创建新的文件组。 您也可以在 **“文件组”** 页上创建新的文件组。 您无法修改现有文件的文件组。  
   
  将文件（容器）添加到内存优化文件组时，“文件组”  字段将填充数据库的内存优化文件组的名称。  
   

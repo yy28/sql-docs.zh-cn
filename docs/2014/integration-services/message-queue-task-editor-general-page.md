@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 09368b18-37a5-4321-a173-7cfe5d42d2a2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2cdd3c2e8e903de90871b096d24cda17fe490d1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25053ac966629c1265d735df8502eccad1d8a290
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057633"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950927"
 ---
 # <a name="message-queue-task-editor-general-page"></a>消息队列任务编辑器（“常规”页）
   可以使用 **“消息队列任务编辑器”** 对话框的 **“常规”** 页，对消息队列任务进行命名和说明，指定消息格式，以及指示任务是发送还是接收消息。  
@@ -37,14 +36,14 @@ ms.locfileid: "66057633"
  键入对消息队列任务的说明。  
   
  **Use2000Format**  
- 指示是否使用消息队列（也称为 MSMQ）的 2000 格式。 默认值为 `False`。  
+ 指示是否使用消息队列（也称为 MSMQ）的 2000 格式。 默认为 `False`。  
   
  **MSMQConnection**  
- 选择现有 MSMQ 连接管理器，或\<单击 "**新建连接 ...** "> 创建新的连接管理器。  
+ 选择现有 MSMQ 连接管理器，或单击 \<**New connection...**> 以创建新的连接管理器。  
   
  **相关主题**： [MSMQ 连接管理器](connection-manager/msmq-connection-manager.md)、 [MSMQ 连接管理器编辑器](../../2014/integration-services/msmq-connection-manager-editor.md)  
   
- **消息**  
+ **Message**  
  指定消息队列任务是发送消息还是接收消息。 如果选择了 **“发送消息”**，则该对话框的左窗格将列出“发送”页；如果选择了 **“接收消息”**，则将列出“接收”页。 默认情况下，此值设置为 **“发送消息”**。  
   
 ## <a name="see-also"></a>另请参阅  

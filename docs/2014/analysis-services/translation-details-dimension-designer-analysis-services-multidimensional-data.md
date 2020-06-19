@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0aa61df3-f2b0-4703-a63b-124da672dcc3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9f8debb50a798ba46457942e0e79a9d45ab392c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a3d7934cb3bff570a2060becde6715bec88f02f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065844"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938298"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>翻译详细信息（“翻译”选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用维度设计器中的 **“翻译”** 选项卡上的 **“翻译详细信息”** 窗格，定义和管理当前所选维度的翻译。  
@@ -39,7 +38,7 @@ ms.locfileid: "66065844"
   
      `Caption` 和 `AttributeAllMember` 属性  
   
--   属性  
+-   Attribute  
   
      `Caption`、`AttributeHierarchyDisplayFolder` 和 `NamingTemplate` 属性  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66065844"
   
      `Caption` 属性  
   
- **\<语言>**  
+ **\<Language>**  
  在所选语言中键入或选择维度对象的属性值。 单击省略号按钮 (**...**) 可打开其他对话框，具体取决于所编辑的属性：  
   
 -   `NamingTemplate` 属性  

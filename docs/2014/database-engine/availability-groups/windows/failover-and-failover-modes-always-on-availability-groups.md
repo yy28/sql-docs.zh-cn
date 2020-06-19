@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cab3797092b4f87c9831dcfe5fd26d77b5ec2884
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb904cd0f0649c43553b5d6c8b031c5f284901f4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814480"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936808"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>故障转移和故障转移模式（AlwaysOn 可用性组）
   在可用性组的上下文中，可用性副本的主角色和辅助角色在称为“故障转移” ** 的过程中通常是可互换的。 存在三种故障转移形式：自动故障转移（无数据丢失）、计划的手动故障转移（无数据丢失）和强制手动故障转移（可能丢失数据）。最后一种形式通常称为“强制故障转移”**。 自动故障转移和计划的手动故障转移会保留您的所有数据。 可用性组在可用性副本级别进行故障转移。 也就是说，可用性组故障转移到其次要副本之一（当前故障转移目标**）。  
@@ -78,11 +77,11 @@ ms.locfileid: "62814480"
 ### <a name="failover-sets"></a>故障转移集  
  就故障转移集而言，可理解为某一给定可用性组的可能的各种故障转移形式。 一个故障转移集由主副本和支持某一给定故障转移形式的辅助副本构成，如下所示：  
   
--   （可选）： ** [!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] ** 在给定的可用性组中，为带有自动故障转移的同步提交模式配置的一对可用性副本（包括当前主副本）（如果有）。 仅当辅助副本当前已与主副本同步时，自动故障转移集才会生效。  
+-   ** [!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] （可选）：** 在给定的可用性组中，为带有自动故障转移的同步提交模式配置的一对可用性副本（包括当前主副本）（如果有）。 仅当辅助副本当前已与主副本同步时，自动故障转移集才会生效。  
   
--   （可选）： ** [!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] ** 在给定的可用性组中，为同步提交模式（如果有）配置的一组2或3个可用性副本（包括当前主副本）。 仅当辅助副本配置为使用手动故障转移模式，并且至少一个辅助副本当前已与主副本同步时，同步提交故障转移集才会生效。  
+-   ** [!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] （可选）：** 在给定的可用性组中，为同步提交模式（如果有）配置了两个或三个可用性副本（包括当前主副本）。 仅当辅助副本配置为使用手动故障转移模式，并且至少一个辅助副本当前已与主副本同步时，同步提交故障转移集才会生效。  
   
--   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :** 在给定的可用性组中，其操作状态当前处于联机状态的所有可用性副本的集合，而不考虑可用性模式和故障转移模式。 仅当当前没有辅助副本已与主副本同步时，整个故障转移集才会变为相关的。  
+-   ** [!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] ：** 在给定的可用性组中，其操作状态当前处于联机状态的所有可用性副本的集合，而不考虑可用性模式和故障转移模式。 仅当当前没有辅助副本已与主副本同步时，整个故障转移集才会变为相关的。  
   
  当您将可用性副本配置为同步提交以及自动故障转移时，此可用性副本将成为 [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]的一部分。 但是，该集是否生效则取决于当前主副本。 在某一给定时间实际可用的故障转移形式取决于当前有效的故障转移集。  
   
@@ -235,7 +234,7 @@ ms.locfileid: "62814480"
   
 1.  连接到主副本。  
   
-2.  查询`last_commit_lsn` [sys.databases dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)动态管理视图的（上次提交的`last_commit_time`事务的 LSN）和（最后一次提交的时间）列。  
+2.  查询 `last_commit_lsn` sys.databases dm_hadr_database_replica_states 动态管理视图的（上次提交的事务的 LSN）和 `last_commit_time` （最后一次提交[sys.dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)的时间）列。  
   
 3.  比较为每个主数据库和它的每个辅助数据库返回的值。 它们的上次提交 LSN 的差值指示滞后的程度。  
   

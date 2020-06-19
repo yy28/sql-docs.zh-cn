@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 13a863603353ee47639cd327c8c5eebd6df8e12a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc978cd0280c9885fe7d4d4b499d01adc8f540cb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789839"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937268"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>关于对可用性副本的客户端连接访问 (SQL Server)
   在 AlwaysOn 可用性组中，您可以配置一个或多个可用性副本，以便在辅助角色下运行时（即作为辅助副本运行时）允许只读连接。 还可以将每个可用性副本配置为在主角色下运行时（即作为主副本运行时）允许或排除只读连接。  
@@ -53,7 +52,7 @@ ms.locfileid: "62789839"
  不允许任何用户连接。 辅助数据库不可用于读访问。 这是辅助角色中的默认行为。  
   
  仅读意向连接  
- 辅助数据库仅适用于`Application Intent`连接属性设置为`ReadOnly`的连接（*读意向连接*）。  
+ 辅助数据库仅适用于 `Application Intent` 连接属性设置为的连接 `ReadOnly` （*读意向连接*）。  
   
  有关此连接属性的信息，请参阅 [对高可用性、灾难恢复的 SQL Server Native Client 支持](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。  
   
@@ -69,7 +68,7 @@ ms.locfileid: "62789839"
  主数据库同时允许读写连接和只读连接。 这是主角色的默认行为。  
   
  仅允许读/写连接  
- 如果`Application Intent`连接属性设置为**ReadWrite**或未设置，则允许连接。 不允许`Application Intent`连接字符串关键字设置为`ReadOnly`的连接。 仅允许读写连接可帮助防止您的客户错误地将读意向工作负荷连接到主副本。  
+ 如果 `Application Intent` 连接属性设置为**ReadWrite**或未设置，则允许连接。 `Application Intent`不允许连接字符串关键字设置为的连接 `ReadOnly` 。 仅允许读写连接可帮助防止您的客户错误地将读意向工作负荷连接到主副本。  
   
  有关此连接属性的信息，请参阅 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
@@ -80,13 +79,13 @@ ms.locfileid: "62789839"
   
 |副本角色|副本上支持的连接访问|连接意向|连接尝试结果|  
 |------------------|--------------------------------------------|-----------------------|--------------------------------|  
-|辅助副本|全部|指定了读意向、读写意向或未指定连接意向|成功|  
-|辅助副本|无（这是默认辅助行为。）|指定了读意向、读写意向或未指定连接意向|失败|  
-|辅助副本|仅限读意向|读意向|成功|  
-|辅助副本|仅限读意向|指定了读写意向或未指定连接意向|失败|  
-|基本|所有（这是默认主要行为。）|指定了只读意向、读写意向或未指定连接意向|成功|  
-|基本|读写|仅限读意向|失败|  
-|基本|读写|指定了读写意向或未指定连接意向|成功|  
+|辅助|全部|指定了读意向、读写意向或未指定连接意向|成功|  
+|辅助|无（这是默认辅助行为。）|指定了读意向、读写意向或未指定连接意向|失败|  
+|辅助|仅限读意向|读意向|成功|  
+|辅助|仅限读意向|指定了读写意向或未指定连接意向|失败|  
+|主要|所有（这是默认主要行为。）|指定了只读意向、读写意向或未指定连接意向|成功|  
+|主要|读写|仅限读意向|失败|  
+|主要|读写|指定了读写意向或未指定连接意向|成功|  
   
  有关配置可用性组接受到其副本的客户端连接的信息，请参阅， [可用性组侦听程序、客户端连接和应用程序故障转移 (SQL Server)](../../listeners-client-connectivity-application-failover.md)。  
   
@@ -97,10 +96,10 @@ ms.locfileid: "62789839"
   
 |副本|提交模式|初始角色|辅助角色的连接访问|主角色的连接访问|  
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
-|Replica1|同步|基本|无|读写|  
+|Replica1|同步|主要|无|读写|  
 |Replica2|同步|辅助副本|无|读写|  
 |Replica3|异步|辅助副本|仅读意向|读写|  
-|Replica4|异步|辅助副本|仅限读意向|读写|  
+|Replica4|异步|辅助|仅限读意向|读写|  
   
  通常，在此示例方案中，仅在同步提交副本之间发生故障转移，但在故障转移之后，读意向应用程序立即可以重新连接到其中一个异步提交辅助副本。 然而，当主计算中心发生灾难时，两个同步提交副本都将丢失。 附属站点的数据库管理员通过强制手动故障转移到异步提交辅助副本来进行响应。 其余辅助副本上的辅助数据库已由于强制故障转移而被挂起，而使它们不可用于只读工作负载。 新的主副本（配置为读写连接）可防止读意向工作负荷与读写工作负荷发生争用。 这意味着，除非数据库管理员对于其他异步提交辅助副本恢复辅助数据库，否则读意向客户端无法连接到任何可用性副本。  
   
@@ -124,7 +123,7 @@ ms.locfileid: "62789839"
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [可用性组侦听器、客户端连接和应用程序故障转移 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [可用性组侦听程序、客户端连接和应用程序故障转移 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [统计信息](../../../relational-databases/statistics/statistics.md)  
   
   

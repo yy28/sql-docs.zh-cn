@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 28658862-dce2-459f-8868-29ee31c879bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 433dc3dcde3a0cee2652baa5f1a59997ec7bf55b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be10a321ba511953bc16f893bf37035ec66d495d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066451"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938538"
 ---
 # <a name="tabular-model-roles-ssas-tabular"></a>表格模型角色（SSAS 表格）
   本主题中的信息和相关任务面向的是表格模型数据库管理员，这些管理员将使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]为已部署的表格模型创建并管理角色。 若要了解有关表格模型中的角色的信息，请参阅[角色（SSAS 表格）](roles-ssas-tabular.md)。 若要了解有关在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中使用角色管理器创建并管理表格模型项目中的角色的信息，请参阅[创建和管理角色（SSAS 表格）](create-and-manage-roles-ssas-tabular.md)。  

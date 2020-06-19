@@ -1,5 +1,6 @@
 ---
 title: 创建分布式事务 |Microsoft Docs
+description: 应用程序可以使用 MSDTC 跨多个 SQL Server 实例扩展或分发事务。 .NET 类还可以分发事务。
 ms.custom: ''
 ms.date: 05/13/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f21ea9b7146b2907a09688f5189d6d9ae4f3f26a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2f7a98b35483103059600086c37294c5acb56ad0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303678"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950369"
 ---
 # <a name="create-a-distributed-transaction"></a>创建分布式事务
 
@@ -38,7 +39,7 @@ The following includes .md file is Empty, as of long before 2019/May/13.
 
 ## <a name="odbc-driver-calls-the-msdtc-for-sql-server-on-premises"></a>ODBC 驱动程序调用 MSDTC 用于本地 SQL Server
 
-Microsoft 分布式事务处理协调器（MSDTC）允许应用程序跨两个或更多实例扩展或_分发_事务[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 即使两个实例托管在不同的计算机上，分布式事务也能正常工作。
+Microsoft 分布式事务处理协调器（MSDTC）允许应用程序跨两个或更多实例扩展或_分发_事务 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 即使两个实例托管在不同的计算机上，分布式事务也能正常工作。
 
 为本地 Microsoft SQL Server 安装了 MSDTC，但不适用于 Microsoft 的 Azure SQL 数据库云服务。
 
@@ -57,7 +58,7 @@ _（1）_ 无需 ODBC 即可调用 MSDTC。 在这种情况下，MSDTC 成为事
 
 ### <a name="only-one-distributed-transaction"></a>仅一个分布式事务
 
-假设你的 c + + Native Client ODBC 应用程序已登记到分布式事务中。 接下来，应用程序在另一个分布式事务中登记。 在这种情况下[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，NATIVE Client ODBC 驱动程序将离开原始分布式事务，并登记到新的分布式事务中。
+假设你的 c + + Native Client ODBC 应用程序已登记到分布式事务中。 接下来，应用程序在另一个分布式事务中登记。 在这种情况下， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驱动程序将离开原始分布式事务，并登记到新的分布式事务中。
 
 有关详细信息，请参阅[DTC 程序员参考](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108\(v=vs.85\))。
 

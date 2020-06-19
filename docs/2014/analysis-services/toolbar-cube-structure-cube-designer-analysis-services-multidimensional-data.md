@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7bb13932-350d-4c6c-96f7-893d6cbdf449
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7d44311bc2622bbf93a8bb42afbc05f740ac36e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b925452094fc283e871c2998c7068b60d635c7dd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066032"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938418"
 ---
 # <a name="toolbar-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>工具栏（“多维数据集结构”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用 **“工具栏”** 窗格执行多维数据集设计器的 **“多维数据集结构”** 选项卡上的常规操作，例如处理度量值组或创建新度量值组。  
@@ -25,7 +24,7 @@ ms.locfileid: "66066032"
 |术语|定义|  
 |----------|----------------|  
 |**添加商业智能**|单击此项可显示 **“商业智能向导”** ，并向多维数据集添加商业智能功能。|  
-|**进程**|单击此项可显示 **“处理”** 对话框，并处理多维数据集。|  
+|**处理**|单击此项可显示 **“处理”** 对话框，并处理多维数据集。|  
 |**新建度量值**|单击此项可显示 **“新建度量值”** 对话框，并向 **“度量值”** 窗格中当前所选的的度量值组添加新度量值。|  
 |**新建度量值组**|单击此项可显示 **“新建度量值组”** 对话框，并向 **“度量值”** 窗格中添加新度量值组。|  
 |**显示度量值**|单击此项可循环显示以下选项，或选择其中任一个选项以更改 **“度量值”** 窗格的视图：<br /><br /> **树**：在树视图中显示度量值组和度量值。<br /><br /> **网格**：在网格中显示度量值组和度量值。|  

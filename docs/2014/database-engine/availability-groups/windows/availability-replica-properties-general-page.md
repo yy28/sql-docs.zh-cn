@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3c1455e4330ef4d9c8c0c6e3e07e285cf548c7b4
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: fb7e75fd1e25d8f4089d14688096afd0aa4dea8d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858896"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937029"
 ---
 # <a name="availability-replica-properties-general-page"></a>可用性副本属性（“常规”页）
   使用此对话框可以查看可用性副本的属性。  
@@ -78,7 +77,7 @@ ms.locfileid: "83858896"
  **可读辅助**  
  正在履行辅助角色的可用性副本（也就是辅助副本）是否可以接受来自客户端的连接，可为下列值之一：  
   
- **否**  
+ **是**  
  不允许与此副本的辅助数据库的直接连接。 它们不可用于读访问。 这是默认设置。  
   
  **仅限读意向**  

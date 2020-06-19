@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8572feb3e9eb3ac5ba7ba8a3d61abb2ad2dc1b5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88ad528bfe581639dfa7e5dde35a7b53278b44b7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059723"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951831"
 ---
 # <a name="data-profile-viewer-f1-help"></a>数据配置文件查看器 F1 帮助
   可以使用数据配置文件查看器查看数据事件探查任务的输出。  
@@ -46,7 +45,7 @@ ms.locfileid: "66059723"
   
 ### <a name="profile-type--column-length-distribution-profile"></a>配置文件类型 = 列长度分布配置文件  
   
-#### <a name="column-length-distribution-profile---column-pane"></a>列长度分布配置文件 - \<列> 窗格  
+#### <a name="column-length-distribution-profile---column-pane"></a>列长度分布配置文件- \<column> 窗格  
  **最小长度**  
  显示此列中值的最小长度。  
   
@@ -69,12 +68,12 @@ ms.locfileid: "66059723"
  **Count**  
  显示进行事件探查的列的值为“长度”列中显示的长度的行数。****  
   
- **一定**  
+ **百分比**  
  显示进行事件探查的列的值为“长度”列中显示的长度的行数百分比。****  
   
 ### <a name="profile-type--column-null-ratio-profile"></a>配置文件类型 = 列 Null 比率配置文件  
   
-#### <a name="column-null-ratio-profile---column-pane"></a>列 Null 比率配置文件 - <列\< 窗格  
+#### <a name="column-null-ratio-profile---column-pane"></a>列 Null 比率配置文件- \<column> 窗格  
  **Null 计数**  
  显示进行事件探查的列为 Null 值的行数。  
   
@@ -86,7 +85,7 @@ ms.locfileid: "66059723"
   
 ### <a name="profile-type--column-pattern-profile"></a>配置文件类型 = 列模式配置文件  
   
-#### <a name="column-pattern-profile---column-pane"></a>列模式配置文件 - \<列> 窗格  
+#### <a name="column-pattern-profile---column-pane"></a>列模式配置文件 \<column> 窗格  
  **行计数**  
  显示表或视图中的行数。  
   
@@ -94,16 +93,16 @@ ms.locfileid: "66059723"
  **模式**  
  显示为进行事件探查的列计算的模式。  
   
- **一定**  
+ **百分比**  
  显示行值与“模式”列中显示的模式匹配的行数百分比。****  
   
 ### <a name="profile-type--column-statistics-profile"></a>配置文件类型 = 列统计信息配置文件  
   
-#### <a name="column-statistics-profile---column-pane"></a>列统计信息配置文件 - \<列> 窗格  
- **短**  
+#### <a name="column-statistics-profile---column-pane"></a>列统计信息配置文件- \<column> 窗格  
+ **最小值**  
  显示在进行事件探查的列中发现的最小值。  
   
- **最佳**  
+ **最大值**  
  显示在进行事件探查的列中发现的最大值。  
   
  **平均值**  
@@ -114,7 +113,7 @@ ms.locfileid: "66059723"
   
 ### <a name="profile-type--column-value-distribution-profile"></a>配置文件类型 = 列值分布配置文件  
   
-#### <a name="column-value-distribution-profile---column-pane"></a>列值分布配置文件 - \<列> 窗格  
+#### <a name="column-value-distribution-profile---column-pane"></a>列值分布配置文件- \<column> 窗格  
  **非重复值数目**  
  显示在进行事件探查的列中发现的非重复值的计数。  
   
@@ -128,12 +127,12 @@ ms.locfileid: "66059723"
  **Count**  
  显示进行事件探查的列具有“值”列中显示的值的行数。****  
   
- **一定**  
+ **百分比**  
  显示进行事件探查的列具有“值”列中显示的值的行数的百分比。****  
   
 ### <a name="profile-type--candidate-key-profile"></a>配置文件类型 = 候选键配置文件  
   
-#### <a name="candidate-key-profile---table-pane"></a>候选键配置文件 - \<表> 窗格  
+#### <a name="candidate-key-profile---table-pane"></a>候选键配置文件- \<table> 窗格  
  **键列**  
  显示为作为候选键进行事件探查所选择的列。  
   
@@ -164,17 +163,17 @@ ms.locfileid: "66059723"
 > [!NOTE]  
 >  数据中的错误值的高百分比可能导致函数依赖关系配置文件产生意外结果。 例如，在 90% 的行中，与邮政编码值“98052”对应的州值为“WI”。 配置文件将包含正确州值“WA”的行报告为冲突。  
   
- **\<决定列名称>**  
+ **\<determinant column name>**  
  显示在此函数依赖关系冲突实例中决定列或决定列组合的值。  
   
- **\<依赖列名称>**  
+ **\<dependent column name>**  
  显示在此函数依赖关系冲突实例中依赖列的值。  
   
  **支持计数**  
  显示决定列值决定依赖列的行数。  
   
  **冲突计数**  
- 显示决定列值不能决定依赖列的行数。 （这些行中，依赖值是** \<相关列名称**中显示的值>列。）  
+ 显示决定列值不能决定依赖列的行数。 （这些行中的依赖值是列中显示的值 **\<dependent column name>** 。）  
   
  **支持百分比**  
  显示决定列决定依赖列的行数的百分比。  

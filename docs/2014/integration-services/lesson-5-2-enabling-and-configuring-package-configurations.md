@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa75b3a71832eaba4064de5a9dd90e73236e8177
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 06d31a4244da2a751bc501080cdf501d540fbc92
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891053"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951527"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>步骤 2：启用和配置包配置
   在此任务中，您将项目转换为包部署模型并使用包配置向导配置包。 您将使用该向导生成 XML 配置文件，该文件包含 Foreach 循环容器的 `Directory` 属性的配置设置。 Directory 属性的值由新的包级别变量在运行时提供，您可以更新该变量。 另外，将填充要在测试期间使用的新的示例数据文件夹。  
@@ -41,7 +40,7 @@ ms.locfileid: "62891053"
   
 8.  在 " **Foreach 循环编辑器**" 的 "**集合**" 页上，单击 "**表达式**"，然后单击省略号按钮 **（...）**。  
   
-9. 在 "**属性表达式编辑器**" 中，单击**属性**列表，然后选择`Directory`。  
+9. 在 "**属性表达式编辑器**" 中，单击**属性**列表，然后选择 `Directory` 。  
   
 10. 在 "**表达式**" 框中，单击省略号按钮 **（...）**。  
   
@@ -83,26 +82,26 @@ ms.locfileid: "62891053"
   
 14. 在“完成向导”**** 页上，键入该配置的配置名称，例如 **SSIS Tutorial Directory configuration**。 这是显示在“包配置组织程序”**** 对话框中的配置名称。  
   
-15. 单击“完成”  。  
+15. 单击“完成” 。  
   
-16. 单击“**关闭**”。  
+16. 单击“关闭” 。  
   
-17. 向导将创建一个名为 Ssistutorial.dtsconfig. Datatransferconfig.dtsconfig 的配置文件，该配置文件包含变量`value`的配置设置，后者又设置了`Directory`枚举器的属性。  
+17. 向导将创建一个名为 Ssistutorial.dtsconfig. Datatransferconfig.dtsconfig 的配置文件，该配置文件包含变量的配置设置，后者 `value` 又设置了 `Directory` 枚举器的属性。  
   
     > [!NOTE]  
     >  配置文件通常包含有关包属性的复杂信息，但对于本教程，唯一的配置信息应当是  
     > <Configuration ConfiguredType="Property"  
     > Path = "\Package.Variables [User：： varFolderName]。Properties [值] "ValueType =" String "\>  
     >  \<ConfiguredValue>\</ConfiguredValue>  
-    > \</配置>。  
+    > \</Configuration>.  
   
 ### <a name="to-create-and-populate-a-new-sample-data-folder"></a>创建并填充新的示例数据文件夹  
   
-1.  在 Windows 资源管理器中，在驱动器的根级别（例如，C：\\）创建一个名为`New Sample Data`的新文件夹。  
+1.  在 Windows 资源管理器中，在驱动器的根级别（例如，C： \\ ）创建一个名为的新文件夹 `New Sample Data` 。  
   
 2.  找到计算机上的示例文件并从文件夹复制其中的三个文件。  
   
-3.  在该`New Sample Data`文件夹中，粘贴复制的文件。  
+3.  在该 `New Sample Data` 文件夹中，粘贴复制的文件。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [步骤 3：修改目录属性配置值](lesson-5-3-modifying-the-directory-property-configuration-value.md)  

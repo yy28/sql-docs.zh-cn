@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 118fe59e76f23089ce56371ea4ba981bb4ab1f7f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 93555bbbc6c7a10955e8fc869f6ddadc38572830
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706965"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927115"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>SQL Server 2014 各个版本支持的功能
 
@@ -34,7 +33,7 @@ ms.locfileid: "82706965"
   
  [可伸缩性和性能](#Scalability)  
   
- [安全](#Enterprise_security)  
+ [安全性](#Enterprise_security)  
   
  [复制](#Replication)  
   
@@ -44,7 +43,7 @@ ms.locfileid: "82706965"
   
  [开发工具](#Dev_tools)  
   
- [实现](#Programmability)  
+ [可编程性](#Programmability)  
   
  [Integration Services](#SSIS)  
   
@@ -83,8 +82,8 @@ ms.locfileid: "82706965"
 |单个实例使用的最大计算能力（ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库引擎）<sup>1</sup>|操作系统支持的最大值|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|  
 |单个实例使用的最大计算能力（Analysis Services，Reporting Services） <sup>1</sup>|操作系统支持的最大值|操作系统支持的最大值|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|  
 |利用的最大内存（每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库引擎实例）|操作系统支持的最大值|128 GB|128 GB|64 GB|1 GB|1 GB|1 GB|  
-|利用的最大内存（每个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例）|操作系统支持的最大值|操作系统支持的最大值|64 GB|不可用|不可用|不可用|不可用|  
-|利用的最大内存（每个 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]实例）|操作系统支持的最大值|操作系统支持的最大值|64 GB|64 GB|4 GB|不可用|不可用|  
+|利用的最大内存（每个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例）|操作系统支持的最大值|操作系统支持的最大值|64 GB|空值|空值|空值|空值|  
+|利用的最大内存（每个 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]实例）|操作系统支持的最大值|操作系统支持的最大值|64 GB|64 GB|4 GB|空值|空值|  
 |最大关系数据库大小|524 PB|524 PB|524 PB|524 PB|10GB|10GB|10GB|  
   
  <sup>1</sup>使用基于服务器 + 客户端访问许可证（CAL）的许可（对新协议不可用）的 Enterprise Edition 最多只能为每个实例20个核心 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 基于内核的服务器许可模型没有限制。 有关详细信息，请参阅 [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
@@ -277,7 +276,7 @@ ms.locfileid: "82706965"
 > [!NOTE]  
 >  -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 仅适用于 Business Intelligence 版和 Enterprise 版的 64 位版本。  
   
-|Feature|企业|商业智能|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
+|Feature|Enterprise|商业智能|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库|是|是||||||  
 |[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序|是|是||||||  
@@ -426,9 +425,9 @@ ms.locfileid: "82706965"
   
 |对于此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services 版本|使用此版本的数据库引擎实例来承载数据库|  
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  
-|企业|Standard Edition、Business Intelligence Enterprise Edition（本地或远程）|  
+|Enterprise|Standard Edition、Business Intelligence Enterprise Edition（本地或远程）|  
 |商业智能|Standard Edition、Business Intelligence Enterprise Edition（本地或远程）|  
-|Standard|Standard Edition、Enterprise Edition（本地或远程）|  
+|标准|Standard Edition、Enterprise Edition（本地或远程）|  
 |Web|Web Edition（仅用于本地）|  
 |Express with Advanced Services|Express with Advanced Services（仅用于本地）。|  
 |评估|评估|  

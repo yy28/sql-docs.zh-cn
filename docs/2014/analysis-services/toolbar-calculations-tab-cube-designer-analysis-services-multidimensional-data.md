@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74b1d8b1-6bf4-490a-a181-03cc52348952
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 658d47908929720e51f7c87418f6892ce8148df0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac81f846f3f85f2ed8ea91592aea28942d557857
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066075"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938428"
 ---
 # <a name="toolbar-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>工具栏（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用 **“工具栏”** 窗格执行多维数据集设计器中的 **“计算”** 选项卡上的常规操作。  
@@ -25,7 +24,7 @@ ms.locfileid: "66066075"
 |选项|说明|  
 |------------|-----------------|  
 |**添加商业智能**|单击此项可显示 **“商业智能向导”** ，并向多维数据集添加商业智能功能。|  
-|**进程**|单击此项可显示 **“处理”** 对话框，并处理多维数据集。|  
+|**处理**|单击此项可显示 **“处理”** 对话框，并处理多维数据集。|  
 |**重新连接**|如果 **“计算”** 选项卡会话由于连接丢失或超时而断开，单击此项可将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] “计算” **选项卡重新连接到包含多维数据集的** 实例和数据库。|  
 |**新建计算成员**|单击此项可显示 **计算成员窗体编辑器** 并创建新的计算成员。 只有在窗体视图中才会启用此选项。|  
 |**新建命名集**|单击此项可显示 **命名集窗体编辑器** 并创建新的命名集。 只有在窗体视图中才会启用此选项。|  

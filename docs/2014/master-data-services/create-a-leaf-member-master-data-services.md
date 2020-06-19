@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a113803c9d6e5c688ea6eddca9446d96d79e82be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9d85f5704a3a091f2f4b652812a66977eb11c93f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483412"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971837"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>创建叶成员 (Master Data Services)
-  在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]中，当你想要向系统中添加主数据并且未使用临时表或[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]以导入数据时，创建叶成员。  
+  在中 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ，当你想要向系统中添加主数据并且未使用临时表或 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 以导入数据时，创建叶成员。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   **** 您必须有权访问“资源管理器”功能区域。  
@@ -47,7 +46,7 @@ ms.locfileid: "65483412"
   
 7.  可选。 **** 在“批注”框中，键入有关添加成员原因的注释。 有权访问成员的所有用户都可以查看批注。  
   
-8.  单击" **确定**"。  
+8.  单击“确定”。   
   
 ## <a name="see-also"></a>另请参阅  
  [通过使用临时过程在 Master Data Services 中加载或更新成员](add-update-and-delete-data-master-data-services.md)   

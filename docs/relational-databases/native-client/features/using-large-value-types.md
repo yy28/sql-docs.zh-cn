@@ -1,5 +1,6 @@
 ---
 title: 使用大值类型 | Microsoft Docs
+description: 了解 SQL Server Native Client 如何处理以前需要特殊处理的大值数据类型。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,41 +18,41 @@ ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa7dc9aa82ac11f727ce8e19a0e8930bcab61175
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 70a4d9e7b429d7f77ffbf1439bf5bb6027345e3a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303174"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950464"
 ---
 # <a name="using-large-value-types"></a>使用大值类型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，若要使用大值数据类型，必须进行特殊的处理。 大值数据类型是那些超出了 8 KB 的最大行大小的数据类型。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]为**varchar**、 **nvarchar**和**varbinary**数据类型引入了一个 max 说明符，以允许存储**最**大为 2 ^ 31-1 个字节的值。 [!INCLUDE[tsql](../../../includes/tsql-md.md)]表列和变量可以指定**varchar （max）**、 **nvarchar （max）** 或**varbinary （max）** 数据类型。  
+  在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，若要使用大值数据类型，必须进行特殊的处理。 大值数据类型是那些超出了 8 KB 的最大行大小的数据类型。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]为**varchar**、 **nvarchar**和**varbinary**数据类型引入了一个 max 说明符，以允许存储**最**大为 2 ^ 31-1 个字节的值。 表列和 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 变量可以指定**varchar （max）**、 **nvarchar （max）** 或**varbinary （max）** 数据类型。  
   
 > [!NOTE]  
 >  大值数据类型的最大大小可以介于 1 到 8 KB 之间，也可以指定为不限制其大小。  
   
- 以前，只有诸如 text、ntext 和 image 之类的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型可以达到这样的长度************。 **Varchar**、 **nvarchar**和**varbinary**的**max**说明符使这些数据类型成为冗余的。 但是，由于仍然提供长数据类型，因而大多数 OLE DB 和 ODBC 数据访问组件的接口将保持不变。 为了实现与先前版本的向后兼容，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口中的 DBCOLUMNFLAGS_ISLONG 标志和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序中的 SQL_LONGVARCHAR 仍然可以继续使用。 针对 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更高版本编写的访问接口和驱动程序可以继续使用这些字词将新类型设置为最大长度不受限制。  
+ 以前，只有诸如 text、ntext 和 image 之类的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型可以达到这样的长度    。 **Varchar**、 **nvarchar**和**varbinary**的**max**说明符使这些数据类型成为冗余的。 但是，由于仍然提供长数据类型，因而大多数 OLE DB 和 ODBC 数据访问组件的接口将保持不变。 为了实现与先前版本的向后兼容，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口中的 DBCOLUMNFLAGS_ISLONG 标志和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序中的 SQL_LONGVARCHAR 仍然可以继续使用。 针对 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和更高版本编写的访问接口和驱动程序可以继续使用这些字词将新类型设置为最大长度不受限制。  
   
 > [!NOTE]  
->  还可以将 varchar(max)、nvarchar(max) 和 varbinary(max) 数据类型指定为存储过程的输入和输出参数类型、函数返回类型或者用在 [CAST 和 CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md) 函数中************。  
+>  还可以将 varchar(max)、nvarchar(max) 和 varbinary(max) 数据类型指定为存储过程的输入和输出参数类型、函数返回类型或者用在 [CAST 和 CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md) 函数中  。  
   
 > [!NOTE]  
 >  如果复制数据，则可能需要将 "[最大文本复制大小" 服务器配置选项](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)配置为-1。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 访问接口  
- Native Client OLE DB 提供程序将**varchar （max）**、 **varbinary （max）** 和**nvarchar （max）** 类型分别公开为 DBTYPE_STR、DBTYPE_BYTES 和 DBTYPE_WSTR。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序将**varchar （max）**、 **varbinary （max）** 和**nvarchar （max）** 类型分别公开为 DBTYPE_STR、DBTYPE_BYTES 和 DBTYPE_WSTR。  
   
- 如果列中的 varchar(max)、varbinary(max) 和 nvarchar(max) 数据类型的 max 大小设置为不受限制，则这些数据类型会通过返回列数据类型的核心 OLE DB 架构行集和接口表示为 ISLONG****************。  
+ 如果列中的 varchar(max)、varbinary(max) 和 nvarchar(max) 数据类型的 max 大小设置为不受限制，则这些数据类型会通过返回列数据类型的核心 OLE DB 架构行集和接口表示为 ISLONG     。  
   
- 命令对象的**IAccessor**实现已更改为允许作为 DBTYPE_IUNKNOWN 绑定。 如果使用者指定 DBTYPE_IUNKNOWN 并将 pObject 设置为 Null，则提供程序将向使用者返回 ISequentialStream 接口，以便使用者可以对输出变量之外的 varchar(max)、nvarchar(max) 或 varbinary(max) 数据进行流式处理******************。  
+ 命令对象的 IAccessor  实现已更改为允许绑定为 DBTYPE_IUNKNOWN。 如果使用者指定 DBTYPE_IUNKNOWN 并将 pObject 设置为 Null，则提供程序将向使用者返回 ISequentialStream 接口，以便使用者可以对输出变量之外的 varchar(max)、nvarchar(max) 或 varbinary(max) 数据进行流式处理      。  
   
- 将在所有结果行之后返回经过流式处理的输出参数值。 如果应用程序尝试通过调用 IMultipleResults::GetResult 移动到下一个结果集并且没有使用返回的所有输出参数值，则将返回 DB_E_OBJECTOPEN****。  
+ 将在所有结果行之后返回经过流式处理的输出参数值。 如果应用程序尝试通过调用 IMultipleResults::GetResult 移动到下一个结果集并且没有使用返回的所有输出参数值，则将返回 DB_E_OBJECTOPEN  。  
   
- 为了支持流式处理， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序要求按顺序访问变量长度参数。 也就是说，只要 varchar(max)、nvarchchar(max) 或 varbinary(max) 列或输出参数绑定到 DBTYPE_IUNKNOWN，DBPROP_ACCESSORDER 就必须设置为 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 或 DBPROPVAL_AO_SEQUENTIAL************。 如果不遵守此访问顺序限制，对 IRowset::GetData 的调用将失败，并出现 DBSTATUS_E_UNAVAILABLE****。 如果不存在使用 DBTYPE_IUNKNOWN 的任何输出绑定，则不会应用此限制。  
+ 为了支持流式处理， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序要求按顺序访问变量长度参数。 也就是说，只要 varchar(max)、nvarchchar(max) 或 varbinary(max) 列或输出参数绑定到 DBTYPE_IUNKNOWN，DBPROP_ACCESSORDER 就必须设置为 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 或 DBPROPVAL_AO_SEQUENTIAL    。 如果不遵守此访问顺序限制，对 IRowset::GetData 的调用将失败，并出现 DBSTATUS_E_UNAVAILABLE  。 如果不存在使用 DBTYPE_IUNKNOWN 的任何输出绑定，则不会应用此限制。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序还支持将输出参数绑定为大值数据类型的 DBTYPE_IUNKNOWN，以促进存储过程返回大值类型作为向客户端 DBTYPE_IUNKNOWN 公开的返回值的方案。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序还支持将输出参数绑定为大值数据类型的 DBTYPE_IUNKNOWN，以促进存储过程返回大值类型作为向客户端 DBTYPE_IUNKNOWN 公开的返回值的方案。  
   
  若要使用这些类型，应用程序可以使用以下选项：  
   
@@ -65,9 +66,9 @@ ms.locfileid: "81303174"
   
 -   定义的最大大小，例如，对于**varchar （** 2000 **）** 列为2000，或  
   
--   “unlimited”值，如果 varchar(max) 列等于 ~0****。 此值是为 DBCOLUMN_COLUMNSIZE 元数据属性设置的。  
+-   “unlimited”值，如果 varchar(max) 列等于 ~0  。 此值是为 DBCOLUMN_COLUMNSIZE 元数据属性设置的。  
   
- 将向 varchar(max) 列应用的标准转换规则，也就是说，对于 varchar(2000) 列有效的任何转换对于 varchar(max) 列也有效****************。 这也适用于 nvarchar(max) 和 varbinary(max) 列********。  
+ 将向 varchar(max) 列应用的标准转换规则，也就是说，对于 varchar(2000) 列有效的任何转换对于 varchar(max) 列也有效     。 这也适用于 nvarchar(max) 和 varbinary(max) 列   。  
   
  在检索大值类型时，最有效的方法是绑定为 DBTYPE_IUNKNOWN 并将行集属性 DBPROP_ACCESSORDER 设置为 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS。 这会导致该值直接从网络上进行流式处理，而不进行中间缓冲处理，如下例所示：  
   
@@ -689,10 +690,10 @@ _ExitProcessResultSet:
 }  
 ```  
   
- 有关[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序如何公开大值数据类型的详细信息，请参阅[Blob 和 OLE 对象](../../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)。  
+ 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序如何公开大值数据类型的详细信息，请参阅[BLOB 和 OLE 对象](../../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 驱动程序  
- Native Client ODBC 驱动程序将**varchar （max）**、 **varbinary （max）** 和**nvarchar （max）** 类型公开为在接受或返回 ODBC SQL 数据类型的 odbc API 函数中 SQL_VARCHAR、SQL_VARBINARY 和 SQL_WVARCHAR。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序将**varchar （max）**、 **varbinary （max）** 和**nvarchar （max）** 类型公开为在接受或返回 odbc SQL 数据类型的 odbc API 函数中 SQL_VARCHAR、SQL_VARBINARY 和 SQL_WVARCHAR。  
   
  在报告列的最大大小时，该驱动程序将报告以下两个值之一：  
   

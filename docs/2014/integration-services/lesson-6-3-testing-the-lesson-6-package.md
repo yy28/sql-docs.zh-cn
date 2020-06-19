@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c69c75c9dff4bf8d0542dae71cddcf1a431ab063
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c78ccd21b39cd882c037f44c0b37c5deb3bc06d8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890836"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951477"
 ---
 # <a name="step-3-testing-the-lesson-6-package"></a>步骤 3：测试 Lesson 6 包
   在运行时，包从 VarFolderName 参数获取 Directory 属性的值。  
@@ -29,9 +28,9 @@ ms.locfileid: "62890836"
   
  ![控制流](../../2014/tutorials/media/task3lesson6control.jpg "控制流")  
   
- **数据流**  
+ 数据流  
   
- ![数据流](../../2014/tutorials/media/task3lesson6data.jpg "数据流")  
+ 数据流  
   
 ### <a name="to-test-the-lesson-6-tutorial-package"></a>测试第 6 课教程包  
   

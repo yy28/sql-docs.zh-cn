@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 626ab7363a264b47d7c907c56c0e6c6d4d208dba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d5847025770882851de21f20d331af5ce6c975a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873008"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970310"
 ---
 # <a name="row-compression-implementation"></a>Row Compression Implementation
   本主题概述了 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是如何实现行压缩的。 此摘要提供了有助于您规划数据所需存储空间的基本信息。  
