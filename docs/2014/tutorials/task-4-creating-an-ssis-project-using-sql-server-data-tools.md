@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8603ea91-2ec4-40b6-8070-4f824332f5d3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bcf16dc7d63e6a4acca6c30871666d1ffe996192
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 935409eeb7724f4c9807aecc8ec69c4cba0735a1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78171716"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006497"
 ---
 # <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>任务 4：使用 SQL Server Data Tools 创建 SSIS 项目
   在此任务中，你将通过使用**SQL Server Data Tools**来创建 SSIS 项目，以自动执行清理和匹配的供应商数据。
@@ -38,7 +37,7 @@ ms.locfileid: "78171716"
 
 7.  键入**cleanseandcurate.cleanse supplier data.guid** ，然后按**enter**。 请确保该**扩展**保持为 " **.dtsx**"。
 
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a>后续步骤
  [任务 5：添加数据流任务](task-5-adding-data-flow-task.md)
 
 

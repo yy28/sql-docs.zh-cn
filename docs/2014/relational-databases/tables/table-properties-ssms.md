@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 037e56649d3473e3fe09b9533bcc96b4729870d9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196710"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055057"
 ---
 # <a name="table-properties"></a>表属性
   本主题介绍在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的“表属性”对话框中显示的表属性。 有关如何显示这些属性的详细信息，请参阅 [查看表定义](view-the-table-definition.md)。  
@@ -81,11 +80,11 @@ ms.locfileid: "68196710"
  在大多数情况下禁止锁升级。 表级别的锁未完全禁止。 例如，当扫描在可序列化隔离级别下没有聚集索引的表时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 必须使用表锁来保证数据的完整性。  
   
  **对表进行复制**  
- 指示是否使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制将表复制到其他数据库。 可能的值为 `True` 或 `False`。  
+ 指示是否使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制将表复制到其他数据库。 可能的值包括 `True` 或 `False`。  
   
 ##  <a name="change-tracking-page"></a><a name="ChangeTracking"></a>更改跟踪页面  
  **更改跟踪**  
- 指示是否对相应的表启用了更改跟踪。 默认值为 `False`。  
+ 指示是否对相应的表启用了更改跟踪。 默认值是 `False`。  
   
  只有对数据库启用了更改跟踪，此选项才可用。  
   
@@ -128,7 +127,7 @@ ms.locfileid: "68196710"
  **文本文件组**  
  包含该表文本数据的文件组的名称。  
   
- **文件**  
+ **文件组**  
  包含该表的文件组的名称。  
   
  **已对表进行分区**  
@@ -141,7 +140,7 @@ ms.locfileid: "68196710"
   
 ### <a name="general"></a>常规  
  **Vardecimal 存储格式已启用**  
- 如果`True`为，则此只读值表示使用`decimal` vardecimal `numeric`存储格式存储和数据类型。 若要更改此选项，请`vardecimal storage format`使用[sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)的选项。 不推荐使用 Vardecimal 存储格式。 请改用 ROW 压缩。  
+ 如果 `True` 为，则此只读值表示 `decimal` `numeric` 使用 vardecimal 存储格式存储和数据类型。 若要更改此选项，请使用 `vardecimal storage format` [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)的选项。 不推荐使用 Vardecimal 存储格式。 请改用 ROW 压缩。  
   
  **索引空间**  
  索引在表中所占的空间大小 (MB)。 此值不包括表的 XML 索引空间使用量。 如果 XML 索引属于表，则使用 [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) 。  

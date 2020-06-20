@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e476880103a69ae016c6720f36e26ef884db6f5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012020"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055397"
 ---
 # <a name="create-a-login"></a>创建一个登录名
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建登录名。 登录名是连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的个人或进程的标识。  
@@ -81,7 +80,7 @@ ms.locfileid: "63012020"
   
     4.  单击“高级…”以显示更多高级搜索选项****。 有关详细信息，请参阅 [选择“用户”、“计算机”或“组”对话框 - 高级页面](https://technet.microsoft.com/library/cc733110.aspx)。  
   
-    5.  单击" **确定**"。  
+    5.  单击“确定”。  
   
 4.  若要基于 Windows 主体创建一个登录名，请选择 **“Windows 身份验证”**。 这是默认选项。  
   
@@ -113,7 +112,7 @@ ms.locfileid: "63012020"
  "**登录名-新建**" 对话框还提供了其他四个页面的选项： "**服务器角色**"、"**用户映射**"、"**安全对象**" 和 "**状态**"。  
   
 ### <a name="server-roles"></a>“服务器角色”  
- **“服务器角色”** 页将列出可分配给新登录名的所有可能的角色。 提供了以下选项：  
+ **“服务器角色”** 页将列出可分配给新登录名的所有可能的角色。 可用选项如下：  
   
  “bulkadmin”**** 复选框  
  **Bulkadmin**固定服务器角色的成员可以运行 BULK INSERT 语句。  
@@ -148,7 +147,7 @@ ms.locfileid: "63012020"
  **映射到此登录名的用户**  
  选择此登录名可以访问的数据库。 选择数据库时，其有效的数据库角色会显示在 "**数据库角色成员身份：** _database_name_ " 窗格中。  
   
- **将**  
+ **Map**  
  允许登录名访问下面列出的数据库。  
   
  **Database**  
@@ -198,7 +197,7 @@ ms.locfileid: "63012020"
  **名称**  
  添加到网格中的每个主体或安全对象的名称。  
   
- **类型**  
+ 类型  
  描述每个项目的类型。  
   
  **“显式”选项卡**  
@@ -216,7 +215,7 @@ ms.locfileid: "63012020"
  **具有授予权限**  
  反映所列权限的 WITH GRANT 选项的状态。 此框是只读的。 若要应用此权限，请使用 [GRANT](/sql/t-sql/statements/grant-transact-sql) 语句。  
   
- **注销**  
+ **拒绝**  
  选中该选项可以拒绝该登录名具有该权限。 清除该选项将撤消此权限。  
   
 ### <a name="status"></a>状态  
@@ -237,7 +236,7 @@ ms.locfileid: "63012020"
  选择此选项以启用或禁用此登录名。 此选项将 ALTER LOGIN 语句与 ENABLE 或者 DISABLE 选项配合使用。  
   
  **SQL Server 身份验证**  
- 仅当所选的登录名使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]身份验证进行连接并且登录名已锁定时，复选框 "**登录名已锁定**" 才可用。此设置是只读的。 若要解除对已锁定登录名的锁定，请执行带 UNLOCK 选项的 ALTER LOGIN。  
+ 仅当所选的登录名使用身份验证进行连接并且登录名已锁定时，复选框 "**登录名已锁定**" 才可用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。此设置是只读的。 若要解除对已锁定登录名的锁定，请执行带 UNLOCK 选项的 ALTER LOGIN。  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

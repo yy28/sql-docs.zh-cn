@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d4ebe420-a4a9-4076-89d3-41abe726fc5c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d5a55f0694094e6fe88a42946bcff34f420210f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57e8738edf77dae56454baba9ffc1b193146b110
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489674"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006338"
 ---
 # <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>任务 8：添加有条件拆分转换以拆分清理输出
   在此转换中，您向数据流添加有条件拆分转换。 有条件拆分转换可以根据数据内容将行路由到不同的输出。 对于本教程，请使用 DQS 清理转换中的 "**记录状态**" 输出列。 在本教程中，您将只向 MDS 服务器上载正确或已更正的记录。 因此，您需要检查**记录状态**是否**正确**，**并**在将记录上载到 MDS 之前合并记录。  
@@ -44,7 +43,7 @@ ms.locfileid: "65489674"
   
 10. 单击 **"确定"** 以关闭 "有**条件拆分转换编辑器**" 对话框。  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
  [任务 9：添加 Union All 转换以合并正确和已更正的记录](../../2014/tutorials/task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md)  
   
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fcda1522fdb8be83ec61df04898d19600ad04a3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b6e7b88de880348fabb00cb46d3028716441bc2b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176809"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055127"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主键和外键约束
   主键和外键是两种类型的约束，可用于强制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的数据完整性。 这些是重要的数据库对象。
@@ -74,7 +73,7 @@ ms.locfileid: "78176809"
 #### <a name="cascading-referential-integrity"></a>级联引用完整性
  通过使用级联引用完整性约束，您可以定义当用户试图删除或更新现有外键指向的键时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 执行的操作。 可以定义以下级联操作。
 
- 无操作将[!INCLUDE[ssDE](../../includes/ssde-md.md)]引发错误，并回滚对父表中行的删除或更新操作。
+ 无操作将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 引发错误，并回滚对父表中行的删除或更新操作。
 
  在父表中更新或删除行时，将在引用表中更新或删除层叠对应行。 如果 `timestamp` 列是外键或被引用键的一部分，则不能指定 CASCADE。 不能为带有 INSTEAD OF DELETE 触发器的表指定 ON DELETE CASCADE。 对于带有 INSTEAD OF UPDATE 触发器的表，不能指定 ON UPDATE CASCADE。
 

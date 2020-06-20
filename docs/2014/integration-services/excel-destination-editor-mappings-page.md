@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ad44268b-d705-422c-a0c2-d532812502e1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a79316eedb95a026d4869442a06ca1916b40ff3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b10711f9c1940bc4cc307cb64a78227746863287
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059176"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966830"
 ---
 # <a name="excel-destination-editor-mappings-page"></a>Excel 目标编辑器（“映射”页）
   可以使用 **“Excel 目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到目标列。  

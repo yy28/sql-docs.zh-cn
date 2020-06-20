@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 81df03de-219b-4ec1-b3c6-fb861150346e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d6f06cea141c2812e97459b0427d1ceb248688a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69c6dfdf1657e7ddf93905b4f9e880eba23ec1b3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095781"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054910"
 ---
 # <a name="database-engine-upgrade-issues"></a>数据库引擎升级问题
   本节中的主题介绍可能会影响您升级到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]问题。 这些主题介绍了为减轻这些更改对您环境的影响可以采取的措施。  
