@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8efb049292caecf21f38ef5bc5a7392138bdcf5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 535ab473d8fe6cf9a89fafa1fc0c9f45b0096f7e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056432"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964567"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>执行 SQL 任务中的结果集
   在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包中，结果集是否返回到执行 SQL 任务取决于该任务使用的 SQL 命令的类型。 例如，SELECT 语句通常返回结果集，而 INSERT 语句通常不返回结果集。  
@@ -51,15 +50,15 @@ ms.locfileid: "66056432"
   
  如果结果集类型为“单行” ****，则可以使用列名作为结果集名称，将返回结果中的列绑定到一个变量，也可以使用列列表中列的序号位置作为结果集名称。 例如，查询 `SELECT Color FROM Production.Product WHERE ProductID = ?` 的结果集名称可以是 **Color** 或 **0**。 如果查询返回多个列，而您要访问所有列中的值，则必须将每列绑定到一个不同的变量。 如果使用数字作为结果集名称，将列映射到变量，则数字将反映列在查询的列列表中显示的顺序。 例如，在查询 `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`中，对 **Color** 列使用 0，对 **ListPrice** 列使用 1。 使用列名作为结果集名称的功能将依赖于所配置任务要使用的访问接口。 并非所有访问接口都使列名可用。  
   
- 某些返回单个值的查询可能不包括列名称。 例如，语句 `SELECT COUNT (*) FROM Production.Product` 不返回列名称。 可以使用序数位置 0 作为结果名称来访问返回结果。 要按列名称访问返回结果，则查询必须包括 AS \<别名> 子句来提供列名称。 语句 `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`提供 **CountOfProduct** 列。 然后可以使用 **CountOfProduct** 列名称或序数位置 0 来访问返回结果列。  
+ 某些返回单个值的查询可能不包括列名称。 例如，语句 `SELECT COUNT (*) FROM Production.Product` 不返回列名称。 可以使用序数位置 0 作为结果名称来访问返回结果。 若要按列名称访问返回结果，则查询必须包括 AS \<alias name> 子句来提供列名称。 语句 `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`提供 **CountOfProduct** 列。 然后可以使用 **CountOfProduct** 列名称或序数位置 0 来访问返回结果列。  
   
  如果结果集类型为“完整结果集” **** 或 **XML**，则必须使用 0 作为结果集名称。  
   
- 当您将一个变量映射到结果集类型为“单行” **** 的结果集时，该变量的数据类型必须与该结果集包含的列的数据类型兼容。 例如，如果结果集包含 `String` 数据类型的列，则它不能映射到 numeric 数据类型的变量。 将**TypeConversionMode**属性设置为`Allowed`时，"执行 SQL 任务" 将尝试将输出参数和查询结果转换为结果赋值给的变量的数据类型。  
+ 当您将一个变量映射到结果集类型为“单行” **** 的结果集时，该变量的数据类型必须与该结果集包含的列的数据类型兼容。 例如，如果结果集包含 `String` 数据类型的列，则它不能映射到 numeric 数据类型的变量。 将**TypeConversionMode**属性设置为时 `Allowed` ，"执行 SQL 任务" 将尝试将输出参数和查询结果转换为结果赋值给的变量的数据类型。  
   
  XML 结果集只能映射到数据类型为 `String` 或 `Object` 的变量。 如果该变量的数据类型为 `String`，则“执行 SQL 任务”返回一个字符串，并且 XML 源可以使用 XML 数据。 如果该变量的数据类型为 `Object`，则执行 SQL 任务返回一个文档对象模型 (DOM) 对象。  
   
- **完整结果集**必须映射到`Object`数据类型的变量。 返回结果是一个行集对象。 可以使用 Foreach 循环容器将存储在对象变量中的表行值提取到包变量中，然后使用脚本任务将存储在包变量中的数据写入文件。 有关如何使用 Foreach 循环容器和脚本任务执行该操作的演示，请参阅 msftisprodsamples.codeplex.com 上的 CodePlex 示例： [执行 SQL 参数和结果集](https://go.microsoft.com/fwlink/?LinkId=157863)。  
+ **完整结果集**必须映射到 `Object` 数据类型的变量。 返回结果是一个行集对象。 可以使用 Foreach 循环容器将存储在对象变量中的表行值提取到包变量中，然后使用脚本任务将存储在包变量中的数据写入文件。 有关如何使用 Foreach 循环容器和脚本任务执行该操作的演示，请参阅 msftisprodsamples.codeplex.com 上的 CodePlex 示例： [执行 SQL 参数和结果集](https://go.microsoft.com/fwlink/?LinkId=157863)。  
   
  下表总结了可以映射到结果集的变量数据类型。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66056432"
 |“单行”|与结果集中的类型列兼容的任意类型。|不适用|  
 |“完整结果集”|`Object`|如果任务使用本机连接管理器（包括 ADO、OLE DB、Excel 和 ODBC 连接管理器），则返回的对象为 ADO `Recordset`。<br /><br /> 如果任务使用托管连接管理器（如 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接管理器），则返回的对象为 `System.Data.DataSet`。<br /><br /> 您可以使用脚本任务访问 `System.Data.DataSet` 对象，如下面的示例中所示。<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
 |XML|`String`|`String`|  
-|XML|`Object`|如果任务使用本机连接管理器（包括 ADO、OLE DB、Excel 和 ODBC 连接管理器），则返回的对象为 `MSXML6.IXMLDOMDocument`。<br /><br /> 如果任务使用托管连接管理器（如[!INCLUDE[vstecado](../includes/vstecado-md.md)]连接管理器），则返回的对象是。 `System.Xml.XmlDocument`|  
+|XML|`Object`|如果任务使用本机连接管理器（包括 ADO、OLE DB、Excel 和 ODBC 连接管理器），则返回的对象为 `MSXML6.IXMLDOMDocument`。<br /><br /> 如果任务使用托管连接管理器（如连接管理器），则 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 返回的对象是 `System.Xml.XmlDocument` 。|  
   
  您可在执行 SQL 任务作用域或包作用域内定义变量。 如果变量的作用域为包，则结果集可用于包中的其他任务和容器，并可用于执行包或执行 DTS 2000 包任务所运行的所有包。  
   

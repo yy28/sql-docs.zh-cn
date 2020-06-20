@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ea689f96911af35176d6467e73d496b59f35e3c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6b6c86aa3f76088ff3cb0e36a1a111b325944ea
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833555"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921088"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure 存储连接管理器
   Azure 存储连接管理器使一个 SSIS 包可使用你指定的属性值连接到 Azure 存储帐户：存储帐户名称和帐户密钥。  
@@ -33,7 +32,7 @@ ms.locfileid: "62833555"
   
     2.  如果你想要使用 HTTPS 而不是 HTTP 来连接到 Azure 存储服务，请选择“使用 HTTPS” **** 。  
   
-4.  单击 **“确定”** 关闭对话框。  
+4.  单击“确定”  关闭对话框。  
   
 5.  你可以看到你在“属性” **** 窗口中创建的连接管理器的属性。  
   

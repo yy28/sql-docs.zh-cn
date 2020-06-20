@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2e232566-1c3d-4134-adfc-bfd9db210e6d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bd32f9e2bfdac3655acb9d12c8fd0c070aa599fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8eb0d9c2b5f051a4ef4c420c91e565a9712af944
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060733"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921788"
 ---
 # <a name="configure-data-viewer-column-chart-tab"></a>配置数据查看器（“柱形图”选项卡）
   可以使用 **“配置数据查看器”** 对话框中的 **“柱形图”** 选项卡，指定要在图表中显示为图条的列。 图条数显示了列中离散数据值的个数，图条的高度显示了每个值的实例数。 该图表只反应一个缓冲区的内容。  

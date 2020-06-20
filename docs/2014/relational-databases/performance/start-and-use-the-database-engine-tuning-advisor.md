@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2421ceaff8b2f54c1371f44e80b4a1774b64f829
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150652"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066802"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>启动并使用数据库引擎优化顾问
   本主题介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中启动和使用数据库引擎优化顾问。 有关如何查看和使用数据库优化结果，请参阅 [查看和使用数据库引擎优化顾问的输出](database-engine-tuning-advisor.md)。  
@@ -110,9 +109,9 @@ ms.locfileid: "63150652"
   
  如果要使用自己的模板，请确保捕获了以下跟踪事件：  
   
--   **RPC：已完成**  
+-   **RPC:Completed**  
   
--   **SQL： BatchCompleted**  
+-   **SQL:BatchCompleted**  
   
 -   **SP:StmtCompleted**  
   
@@ -175,7 +174,7 @@ ms.locfileid: "63150652"
   
 2.  创建工作负荷。 有关详细信息，请参阅本主题前面的 [创建工作负荷](#Create) 。  
   
-3.  启动数据库引擎优化顾问，并登录到实例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关详细信息，请参阅本主题前面的 [启动数据库引擎优化顾问](#Start) 。  
+3.  启动数据库引擎优化顾问，并登录到实例 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关详细信息，请参阅本主题前面的 [启动数据库引擎优化顾问](#Start) 。  
   
 4.  在 **“常规”** 选项卡上，在 **“会话名称”** 中键入一个名称以创建新的优化会话。  
   
@@ -298,7 +297,7 @@ ms.locfileid: "63150652"
 ##  <a name="create-an-xml-input-file"></a><a name="XMLInput"></a>创建 XML 输入文件  
  如果是有经验的 XML 开发人员，您可以创建一些 XML 格式的文件， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问可使用这些文件来优化工作负荷。 若要创建这些 XML 文件，请使用您最喜爱的 XML 工具编辑示例文件，或者通过 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问 XML 架构生成实例。  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问 XML 架构[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]位于安装的以下位置：  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问 XML 架构位于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装的以下位置：  
   
  C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
@@ -353,7 +352,7 @@ ms.locfileid: "63150652"
  **File**  
  为工作负荷指定 .sql 脚本或跟踪文件。 在关联的文本框中指定路径和文件名。 数据库引擎优化顾问假定工作负荷跟踪文件是滚动更新文件。 有关滚动更新文件的详细信息，请参阅 [Limit Trace File and Table Sizes](../sql-trace/limit-trace-file-and-table-sizes.md)。  
   
- **表**  
+ **表格**  
  为工作负荷指定跟踪表。 在关联的文本框中指定跟踪表的完全限定名称，如下所示：  
   
 ```  
@@ -454,7 +453,7 @@ database_name.owner_name.table_name
  **仅计算现有 PDS 的使用率**  
  评估当前索引的效用，但不会为其他索引或索引视图提供建议。  
   
- **不分区**  
+ **无分区**  
  不提供分区建议。  
   
  **完全分区**  
@@ -493,20 +492,20 @@ database_name.owner_name.table_name
  **详细信息**  
  包含指示状态的图标。  
   
- **操作**  
+ **Action**  
  显示正在执行的步骤。  
   
- **状态**  
+ **Status**  
  显示操作步骤的状态。  
   
- **消息**  
+ **Message**  
  包含操作步骤返回的所有消息。  
   
  **优化日志**  
  包含与此优化会话有关的信息。 若要打印此日志，请右键单击此日志，再单击****“打印”。  
   
 ## <a name="see-also"></a>另请参阅  
- [查看并使用数据库引擎优化顾问的输出](database-engine-tuning-advisor.md)   
+ [查看和使用数据库引擎优化顾问的输出](database-engine-tuning-advisor.md)   
  [dta 实用工具](../../tools/dta/dta-utility.md)  
   
   

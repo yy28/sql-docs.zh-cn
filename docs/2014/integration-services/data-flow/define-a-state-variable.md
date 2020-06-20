@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4b0dcc3c1709943207834aab6ef4b39453b2d89d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6bdb65c464e63f8e7ab248c49f6dca729add3004
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827557"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915987"
 ---
 # <a name="define-a-state-variable"></a>定义状态变量
   本过程介绍如何定义用于存储 CDC 状态的包变量。  
@@ -45,7 +44,7 @@ ms.locfileid: "62827557"
   
  下表对可能的CDC 状态值进行了说明：  
   
-|State|说明|  
+|状态|说明|  
 |-----------|-----------------|  
 |(INITIAL)|这是在当前 CDC 组上运行任何包之前的初始状态。 这也是 CDC 状态为空时的状态。|  
 |ILSTART（初始加载已开始）|这是初始加载包已开始、`MarkInitialLoadStart` 操作调用 CDC 控制任务后时的状态。|  
@@ -54,7 +53,7 @@ ms.locfileid: "62827557"
 |TFEND（滴送更新已结束）|这是常规 CDC 运行应该出现的状态。 它指示前一次运行已成功完成，可以开始具有新的处理范围的新一轮运行。|  
 |TFSTART|这是在非初始运行滴送更新包时、`GetProcessingRange` 操作调用 CDC 控制任务后的状态。<br /><br /> 这指示已启动常规 CDC 运行，但运行未完成或未完全结束 (`MarkProcessedRange`)。|  
 |TFREDO（重新处理滴送更新）|这是在 TFSTART 之后执行 `GetProcessingRange` 时的状态。 这指示上次运行未成功完成。<br /><br /> 如果使用 _$reprocessing 列，该列设置为 1，指示该包可能在重新处理目标上已存在的行。|  
-|ERROR|CDC 组处于 ERROR 状态。|  
+|错误|CDC 组处于 ERROR 状态。|  
   
  下面是 CDC 状态变量值的示例。  
   

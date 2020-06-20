@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3d1ad35a40e4218bfef44daeec01ee03fc0c7c78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3122ddb64d9f86bd70e5b444bd7bd7fce44956de
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175979"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971167"
 ---
 # <a name="data-import-master-data-services"></a>数据导入 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中为数据创建模型后，你可以开始添加数据并在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中对数据进行更改。   你使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 临时表、存储过程和主数据管理器。
 
- 你还[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]可以使用来向 MDS 存储库（[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]数据库）添加数据。 有关详细信息，请参阅[发布数据 &#40;MDS Add-in for Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)。
+ 你还可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 来向 MDS 存储库（数据库）添加数据 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 。 有关详细信息，请参阅[发布数据 &#40;MDS Add-in for Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)。
 
  在添加和更新数据时，你可以执行以下操作。
 
@@ -83,11 +82,11 @@ ms.locfileid: "78175979"
 
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 包括以下类型的临时存储过程。
 
--   stg.udp_\<name>_Leaf
+-   stg.<name _Leaf udp_ \<name>
 
--   stg.udp_\<name>_Consolidated
+-   stg.<name _Consolidated udp_ \<name>
 
--   stg.udp_\<name>_Relationship
+-   stg.<name _Relationship udp_ \<name>
 
  对于模型中的每个实体，有三个对应于叶成员、合并成员和关系临时表的存储过程。  下图显示货币、客户和产品实体的临时存储过程。
 

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 635c2845-93c5-4c7f-8f33-ea848ca48b7c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54a598ab383773a3ada43f0cc44892f42ac3ba2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45719efb24e2af38230badf96961621e1e99ee55
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63222517"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040993"
 ---
 # <a name="maximizing-query-editor"></a>最大化查询编辑器
   程序员通常会问：“我如何才能获得更多的代码编写空间？” 有两种简单的方式可以解决此问题：一种是最大化查询编辑器窗口，另一种是隐藏不使用的工具窗口。  

@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2478f1605b7fb67d8328be905956cbaae8e3c243
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b563160c9cd41a449b4669bb6b17ca43d427ff6e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889780"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964707"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 日志记录
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含可用来在包、容器和任务中执行日志记录的日志提供程序。 通过日志记录可以捕获有关包的运行时信息，从而帮助您在每次运行包时对其进行审核和故障排除。 例如，日志可以捕获运行包的操作员的姓名以及包开始和完成的时间。  
@@ -52,7 +51,7 @@ ms.locfileid: "62889780"
     > [!NOTE]  
     >  无法在以 64 位模式运行的包中使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 日志提供程序。  
   
--   日志提供程序，它将日志项写入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库`sysssislog`中的表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日志提供程序，它将日志项写入 `sysssislog` 数据库中的表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 -   Windows 事件日志提供程序，将日志项写入本地计算机上 Windows 事件日志中的应用程序日志。  
   
@@ -168,7 +167,7 @@ ms.locfileid: "62889780"
   
 |步骤|说明|  
 |----------|-----------------|  
-|验证|该组件查看有效的属性值和配置设置。|  
+|Validate|该组件查看有效的属性值和配置设置。|  
 |PreExecute|该组件在开始处理数据行之前执行一次性处理。|  
 |PostExecute|该组件在处理所有数据行之后执行一次性处理。|  
 |ProcessInput|转换或目标组件处理由上游源或转换传递的传入数据行。|  

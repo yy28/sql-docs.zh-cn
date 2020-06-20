@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 97cc4c9955b64583571a63fa72df4663c1acd812
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03ceaab6fad6b5c1ff09000046e347ef537645c5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479155"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971254"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>使属性组对用户可见 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您想要用户在 **“资源管理器”** 功能区域中将选项卡置于网格上方时，使属性组对于用户或组是可见的。  
   
  创建属性组时，对除创建者之外的所有用户自动隐藏它。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
@@ -51,7 +50,7 @@ ms.locfileid: "65479155"
   
 9. 单击 "**可用**" 框中的 "用户或组"，然后单击 "**添加**" 箭头。 若要全部添加，请单击 **“全部添加”** 箭头。  
   
-10. 单击“保存”  。  
+10. 单击“ **保存**”。  
   
 ## <a name="see-also"></a>另请参阅  
  [属性组 &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f7a64d8fe198b5660715488b6e1b15d5e4831a99
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: b1b79ada7ce4b2f2b256cfc7e7d20b0e7d5f9bc5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000714"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929874"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>选项（“文本编辑器”:“编辑器”选项卡和“状态栏”页）
   在 **“编辑器选项卡和状态栏”** 页上，您可以自定义 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 查询编辑器显示的信息。 您可以指定在“查询编辑器”窗口的选项卡和状态栏中显示的信息级别，以及状态栏是显示在编辑器窗口的顶部还是底部。  
@@ -67,10 +66,10 @@ ms.locfileid: "83000714"
  **状态栏位置**  
  指定状态栏的位置。 其设置包括：  
   
- **返回页首**  
+ **顶部**  
  状态栏显示在查询编辑器窗口的顶部。  
   
- **底部**  
+ **最终**  
  状态栏显示在查询编辑器窗口的底部。  
   
 ## <a name="tab-text"></a>选项卡文本  

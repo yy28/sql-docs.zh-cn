@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 318e6beb-5540-4101-82a5-18c9d47f0570
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9fdbc707a26c9cebae33c0dd432572cde3157c2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae5924e5fc1cad91b5e1511c61556ece70138dcb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056415"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964543"
 ---
 # <a name="run-a-package-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中运行包
   在开发、调试和测试包的过程中，通常在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中运行包。 在从 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器运行包时，包始终可以立即运行。  
   
- 当包运行时， [!INCLUDE[ssIS](../includes/ssis-md.md)]设计器将在 "**进度**" 选项卡上显示包执行的进度。除了有关包中失败的所有任务或容器的信息外，还可以查看包及其任务和容器的开始时间和结束时间。 包运行完毕后，"**执行结果**" 选项卡上的运行时信息仍然可用。有关详细信息，请参阅主题 "[调试控制流](control-flow/control-flow.md)" 中的 "进度报告" 一节。  
+ 当包运行时， [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器将在 "**进度**" 选项卡上显示包执行的进度。除了有关包中失败的所有任务或容器的信息外，还可以查看包及其任务和容器的开始时间和结束时间。 包运行完毕后，"**执行结果**" 选项卡上的运行时信息仍然可用。有关详细信息，请参阅主题 "[调试控制流](control-flow/control-flow.md)" 中的 "进度报告" 一节。  
   
  **设计时部署**。 在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中运行包时，包被生成，然后部署到文件夹。 在运行包前，可以指定要包将部署到其中的文件夹。 如果未指定文件夹，默认将使用 **bin** 文件夹。 这种部署称为设计时部署。  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66056415"
   
 1.  在“解决方案资源管理器”中，右键单击包含要运行的包的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目文件夹，然后单击“属性”****。  
   
-2.  在** \<项目名称> 属性页**"对话框中，单击"**生成**"。  
+2.  在 " ** \<project name> 属性页**" 对话框中，单击 "**生成**"。  
   
 3.  更新 OutputPath 属性中的值以指定要用于设计时部署的文件夹，然后单击“确定”****。  
   

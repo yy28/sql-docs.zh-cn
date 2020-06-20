@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6637bf3f-03c8-4552-ae63-d4896307cf4c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7588f75c1b2f3f282026821d5bf9a77bd8e09886
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: d60582929f71b89f7a3de17af62419367ebc7d93
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000707"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929848"
 ---
 # <a name="options-text-editor---file-extension-page"></a>选项（“文本编辑器”-“文件扩展名”页）
   使用“选项”**** 对话框可以指定 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 如何处理具有某些文件扩展名的所有文件。 对于所输入的每一个扩展名，可以选择一个编辑器。 因此，可以选择将在其中打开某种类型文档的 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 编辑器。 若要打开文件扩展名选项，请在“工具”**** 菜单上单击“选项”****，展开“文本编辑器”****，再单击“文件扩展名”****。  
@@ -32,7 +31,7 @@ ms.locfileid: "83000707"
  **添加**  
  向“扩展名列表”**** 中添加一个包括指定“扩展名”**** 和“编辑体验”**** 值的项。  
   
- **移除**  
+ **删除**  
  从“扩展名列表”**** 中删除所选项。  
   
  **扩展名**  

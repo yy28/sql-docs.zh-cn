@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8a4c2cb8-fd2f-4c45-824f-b93473a8981e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d3bf33d52b380e1ac05864c6e7402567b42df54a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54d61b7696f00aeacdd92a3803630838f6f3ad1a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061043"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923978"
 ---
 # <a name="cdc-source-editor-error-output-page"></a>CDC 源编辑器（“错误输出”页）
   可以使用 **“CDC 源编辑器”** 对话框的 **“错误输出”** 页选择错误处理选项。  
@@ -59,7 +58,7 @@ ms.locfileid: "66061043"
  使用下列选项来配置 CDC 源处理错误和截断的方式。  
   
  **组件失败**  
- 发生错误或截断时数据流任务失败。 此选项为默认行为。  
+ 发生错误或截断时数据流任务失败。 这是默认行为。  
   
  **忽略失败**  
  忽略错误或截断，并且将数据行定向到 CDC 源输出。  

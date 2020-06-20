@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f5d0ddc957cfca8e122920321acc7ccebb70ef72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66168258fb795f8d35b7aa7ac4dcadcf33fed46c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270773"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060026"
 ---
 # <a name="securitycertificate-class"></a>SecurityCertificate 类
-  [SecurityCertificate Class] SecurityCertificate-class.md）表示安全证书。 证书是一个数字签名语句[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，它将公钥的值绑定到的实例，该语句保存相应的私钥。 证书是由证书颁发机构颁发的。  
+  [SecurityCertificate Class] SecurityCertificate-class.md）表示安全证书。 证书是一个数字签名语句，它将公钥的值绑定到的实例 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，该语句保存相应的私钥。 证书是由证书颁发机构颁发的。  
   
  利用 [SecurityCertificate Class] SecurityCertificate-class.md），您可以执行以下任务：  
   

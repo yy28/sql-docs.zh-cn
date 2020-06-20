@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ac34c95e7ee4dc6f57ef7d8806a7db1bb981a944
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d46820f3542e562f43fc4ae4c4d4ee1f91fcdf3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175964"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956407"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server 备份到 URL 最佳实践和故障排除
   本主题介绍 SQL Server 备份和还原到 Azure Blob 服务的最佳做法和故障排除提示。  
@@ -77,7 +76,7 @@ ms.locfileid: "70175964"
   
     -   设置跟踪标志 3051 以启用记录到具有以下格式的特定错误日志：  
   
-         BackupToUrl-\<instname>-\<dbname>-action-\<PID>.log 其中 \<action> 是以下值之一：  
+         BackupToUrl- \<instname> - \<dbname> -action- \<PID> .log 其中 \<action> 是以下其中之一：  
   
         -   `DB`  
   
@@ -94,11 +93,11 @@ ms.locfileid: "70175964"
 -   从压缩备份中还原时，您可能看到以下错误：  
   
     -   **出现 SqlException 3284。严重性：16状态：5**  
-        **设备 "https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak" 上的消息标记未对齐。使用用于创建 backupset 的相同块大小重新发出 Restore 语句： ' 65536 ' 看起来像一个可能值。**  
+        **设备 "" 上的消息标记 https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak 未对齐。使用用于创建 backupset 的相同块大小重新发出 Restore 语句： ' 65536 ' 看起来像一个可能值。**  
   
          要修复此错误，请重新发布指定了 `BACKUP` 的 `BLOCKSIZE = 65536` 语句。  
   
--   由于具有活动租约的 blob 导致的备份错误：失败的备份活动可能源自具有活动租约的 blob。  
+-   由于 blob 具有活动租约，备份期间出错：失败的备份活动可能导致 blob 产生活动租约。  
   
      如果重新尝试执行备份语句，备份操作可能失败，出现类似于以下的错误：  
   
@@ -117,7 +116,7 @@ ms.locfileid: "70175964"
   
  代理服务器可能具有限制每分钟连接次数的设置。 “备份到 URL”进程是一个多线程进程，因此可能超过此限制。 如果出现此情况，代理服务器将终止连接。 若要解决此问题，请更改代理设置，使 SQL Server 不使用该代理。   下面是一些您可能在错误日志中看到的类型或错误消息的示例：  
   
--   在 ""http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak上写入失败： "备份到 URL" 收到来自远程终结点的异常。 异常消息: 无法从传输连接中读取数据: 连接已关闭。  
+-   在 "" 上写入 http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak 失败： "备份到 URL" 收到来自远程终结点的异常。 异常消息: 无法从传输连接中读取数据: 连接已关闭。  
   
 -   文件“http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:”上发生不可恢复的 I/O 错误。无法从远程终结点收集错误。  
   
@@ -125,7 +124,7 @@ ms.locfileid: "70175964"
   
      备份数据库异常终止。  
   
--   BackupIoRequest：： ReportIoError：备份设备 "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" 上的写入失败。 操作系统错误，“备份到 URL”收到来自远程端点的异常。 异常消息: 无法从传输连接中读取数据: 连接已关闭。  
+-   BackupIoRequest：： ReportIoError：备份设备 "" 上的写入失败 http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak 。 操作系统错误，“备份到 URL”收到来自远程端点的异常。 异常消息: 无法从传输连接中读取数据: 连接已关闭。  
   
  如果使用跟踪标志 3051 打开详细日志记录，您还可能在日志中看到以下消息：  
   
@@ -133,7 +132,7 @@ ms.locfileid: "70175964"
   
  **未选择默认代理设置：**  
   
- 有时不会选取默认设置，导致出现如下代理身份验证错误：在*文件 "" 上发生不可恢复的 i/o 错误： "备份http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:到 URL" 收到来自远程终结点的异常。异常消息：远程服务器返回了一个错误：（407）* **需要代理身份验证**。  
+ 有时不会选取默认设置，导致出现如下代理身份验证错误：在*文件 "" 上发生不可恢复的 i/o 错误： " http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: 备份到 URL" 收到来自远程终结点的异常。异常消息：远程服务器返回了一个错误：（407）* **需要代理身份验证**。  
   
  若要解决此问题，请使用以下步骤创建一个配置文件，以允许“备份到 URL”进程使用默认代理设置：  
   
@@ -151,9 +150,9 @@ ms.locfileid: "70175964"
   
     ```  
   
-2.  将该配置文件置于 SQL Server 实例的 Binn 文件夹中。 例如，如果我的 SQL Server 安装在计算机的 C 驱动器上，请将配置文件放在此处： *C:\Program FILES\MICROSOFT SQL Server\MSSQL12.\<InstanceName> \MSSQL\Binn*。  
+2.  将该配置文件置于 SQL Server 实例的 Binn 文件夹中。 例如，如果我的 SQL Server 安装在计算机的 C 驱动器上，请将配置文件放在此处： *C:\Program FILES\MICROSOFT SQL Server\MSSQL12. \<InstanceName>\MSSQL\Binn*。  
   
-## <a name="troubleshooting-sql-server-managed-backup-to-azure"></a>排查 SQL Server 将托管备份到 Azure 的问题  
+## <a name="troubleshooting-sql-server-managed-backup-to-azure"></a>排除针对 Azure 的 SQL Server 托管备份的故障  
  由于 SQL Server 托管备份构建在“备份到 URL”上，因此上面各节中介绍的故障排除提示适用于使用 SQL Server 托管备份的数据库或实例。  有关解决 SQL Server 将托管备份到 Azure 的问题的详细信息，请参阅[SQL Server 托管备份到 azure 的故障排除](sql-server-managed-backup-to-microsoft-azure.md)。  
   
 ## <a name="see-also"></a>另请参阅  

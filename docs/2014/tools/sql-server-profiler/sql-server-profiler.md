@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c9b0bb789dc7571a988c434f526070546d8db454
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: abc9560ae39f94380a6adde48ceb4ae10788db5b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211045"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040242"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是一个功能丰富的界面，用于创建和管理跟踪并分析和重播跟踪结果。 这些事件保存在一个跟踪文件中，稍后试图诊断问题时，可以对该文件进行分析或用它来重播特定的一系列步骤。  
@@ -67,7 +66,7 @@ ms.locfileid: "68211045"
 > [!NOTE]  
 >  使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]时，有必要了解 SQL 跟踪。 有关详细信息，请参阅 [SQL Trace](../../relational-databases/sql-trace/sql-trace.md)。  
   
- **引发**  
+ **事件**  
  事件是在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例中生成的操作。 示例包括：  
   
 -   登录连接、失败和断开。  

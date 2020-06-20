@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6da8f9de22f1b3191d6fba1918e8c05a64d062f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd7c505701a4edb1f66ca516d06179b2eb1a222d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920673"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956237"
 ---
 # <a name="tail-log-backups-sql-server"></a>结尾日志备份 (SQL Server)
   本主题仅与备份和还原使用完整恢复模式或大容量日志恢复模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关。  
@@ -37,7 +36,7 @@ ms.locfileid: "62920673"
 ##  <a name="scenarios-that-require-a-tail-log-backup"></a><a name="TailLogScenarios"></a> 需要结尾日志备份的方案  
  建议您在以下方案中执行结尾日志备份：  
   
--   如果数据库处于联机状态并且您计划对数据库执行还原操作，则从备份日志结尾开始。 若要避免联机数据库错误，必须使用 .。。[BACKUP](/sql/t-sql/statements/backup-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)]语句的 WITH NORECOVERY 选项。  
+-   如果数据库处于联机状态并且您计划对数据库执行还原操作，则从备份日志结尾开始。 若要避免联机数据库错误，必须使用 .。。[BACKUP](/sql/t-sql/statements/backup-transact-sql)语句的 WITH NORECOVERY 选项 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
 -   如果数据库处于脱机状态而无法启动，则需要还原数据库，从备份日志结尾开始。 由于此时不会发生任何事务，因此 WITH NORECOVERY 是可选的。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "62920673"
   
 |BACKUP LOG 选项|注释|  
 |-----------------------|--------------|  
-|NORECOVERY|每当您准备对数据库继续执行还原操作时，请使用 NORECOVERY。 NORECOVERY 使数据库进入还原状态。 这确保了数据库在结尾日志备份后不会更改。  除非还指定了 NO_TRUNCATE 选项或 COPY_ONLY 选项，否则日志将被截断。<br /><br /> ** \* \*重要\*提示**建议你避免使用 NO_TRUNCATE，除非数据库已损坏。|  
+|NORECOVERY|每当您准备对数据库继续执行还原操作时，请使用 NORECOVERY。 NORECOVERY 使数据库进入还原状态。 这确保了数据库在结尾日志备份后不会更改。  除非还指定了 NO_TRUNCATE 选项或 COPY_ONLY 选项，否则日志将被截断。<br /><br /> ** \* \* 重要 \* 提示 \* ** ：建议避免使用 NO_TRUNCATE，除非数据库已损坏。|  
 |CONTINUE_AFTER_ERROR|仅当您要备份受损数据库的尾部时，才使用 CONTINUE_AFTER_ERROR。<br /><br /> 注意：当你对损坏的数据库使用备份日志尾部时，某些通常在日志备份中捕获的元数据可能不可用。 有关详细信息，请参阅本主题后面的[包含不完整备份元数据的结尾日志备份](#IncompleteMetadata)。|  
   
 ##  <a name="tail-log-backups-that-have-incomplete-backup-metadata"></a><a name="IncompleteMetadata"></a>包含不完整备份元数据的结尾日志备份  
@@ -63,7 +62,7 @@ ms.locfileid: "62920673"
   
 -   **filegroup_id**  
   
--   **type**  
+-   type   
   
 -   **type_desc**  
   
@@ -77,9 +76,9 @@ ms.locfileid: "62920673"
 ## <a name="see-also"></a>另请参阅  
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [备份和还原 SQL Server 数据库](back-up-and-restore-of-sql-server-databases.md)   
- [仅复制备份 &#40;SQL Server&#41;](copy-only-backups-sql-server.md)   
- [事务日志备份 &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [SQL Server 数据库的备份和还原](back-up-and-restore-of-sql-server-databases.md)   
+ [仅复制备份 (SQL Server)](copy-only-backups-sql-server.md)   
+ [事务日志备份 (SQL Server)](transaction-log-backups-sql-server.md)   
  [应用事务日志备份 (SQL Server)](apply-transaction-log-backups-sql-server.md)  
   
   
