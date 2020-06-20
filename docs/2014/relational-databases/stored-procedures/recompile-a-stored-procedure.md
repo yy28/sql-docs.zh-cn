@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 43ae01b9173693370d5e422d4f26b6175101ff12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a9bc0e1d4baecb7f4c66b83b57081ed3131123d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721045"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062782"
 ---
 # <a name="recompile-a-stored-procedure"></a>重新编译存储过程
-  本主题介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]重新编译存储过程。 有三种方法可以执行此操作`WITH RECOMPILE` ：过程定义中的选项或过程的调用时间、单个`RECOMPILE`语句的查询提示或使用`sp_recompile`系统存储过程。 本主题介绍在创建过程定义或执行现有过程时使用 WITH RECOMPILE 选项。 它还描述如何使用 sp_recompile 系统存储过程重新编译现有过程。  
+  本主题介绍如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]重新编译存储过程。 有三种方法可以执行此操作： `WITH RECOMPILE` 过程定义中的选项或过程的调用时间、 `RECOMPILE` 单个语句的查询提示或使用 `sp_recompile` 系统存储过程。 本主题介绍在创建过程定义或执行现有过程时使用 WITH RECOMPILE 选项。 它还描述如何使用 sp_recompile 系统存储过程重新编译现有过程。  
   
  **本主题内容**  
   
@@ -73,7 +72,7 @@ ms.locfileid: "62721045"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例将创建过程定义。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例将创建过程定义。  
   
 ```  
 USE AdventureWorks2012;  
@@ -101,7 +100,7 @@ AS
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例将创建一个简单过程，该过程将从视图中返回所有雇员（提供姓和名）、职务以及部门名称。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例将创建一个简单过程，该过程将从视图中返回所有雇员（提供姓和名）、职务以及部门名称。  
   
      然后，将第二个代码示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此操作将执行该过程，并重新编译过程的查询计划。  
   
@@ -119,7 +118,7 @@ GO
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 该示例将创建一个简单过程，该过程将从视图中返回所有雇员（提供姓和名）、职务以及部门名称。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 该示例将创建一个简单过程，该过程将从视图中返回所有雇员（提供姓和名）、职务以及部门名称。  
   
      然后，将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 这将不执行过程，但将该过程标记为重新编译，以便在下次执行该过程时更新其查询计划。  
   

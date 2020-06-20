@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 440419f1fb4670ff5bdfc2e49cd9cfe6fa5df65e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67724c0816ceb77e61bc6e4a0cf8650a9228f39d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62999567"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049379"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>在合并同步期间执行业务逻辑
   通过使用业务逻辑处理程序框架，您可以编写合并同步过程中调用的托管代码程序集。 程序集包括可以响应同步过程中的许多状况的业务逻辑：数据更改、冲突和错误。 业务逻辑处理程序框架提供了一个简单的编程模型，且合并进程提供给程序集的数据的形式是 ADO.NET 数据集，因此可以充分利用了解的 ADO.NET 知识，而不必学习专有接口。 有关如何对业务逻辑处理程序进行编程的详细信息，请参阅：  

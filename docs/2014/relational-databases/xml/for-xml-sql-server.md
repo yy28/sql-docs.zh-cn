@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 669bf07101a05f2646a0928405b1807dadf0b2ea
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c13c1d4cdf7b1bbc72c956652bb89c2014103d76
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716642"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059462"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
   SELECT 查询将结果作为行集返回。 （可选操作）您可以通过在 SQL 查询中指定 FOR XML 子句，从而将该查询的正式结果作为 XML 来检索。 FOR XML 子句可以用在顶级查询和子查询中。 顶级 FOR XML 子句只能用在 SELECT 语句中。 而在子查询中，FOR XML 可以用在 INSERT、UPDATE 和 DELETE 语句中。 它还可以用在赋值语句中。  
@@ -39,7 +38,7 @@ ms.locfileid: "82716642"
   
 -   PATH  
   
- RAW 模式将为 SELECT 语句所返回行集中的每行生成一个 \<row> 元素。 可以通过编写嵌套 FOR XML 查询来生成 XML 层次结构。  
+ RAW 模式将 \<row> 为 SELECT 语句返回的行集中的每行生成一个元素。 可以通过编写嵌套 FOR XML 查询来生成 XML 层次结构。  
   
  AUTO 模式将基于指定 SELECT 语句的方式来使用试探性方法在 XML 结果中生成嵌套。 您对生成的 XML 的形状具有最低限度的控制能力。 除了 AUTO 模式的试探性方法生成的 XML 形状之外，还可以编写 FOR XML 查询来生成 XML 层次结构。  
   

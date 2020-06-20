@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6220d6650d2be81cad3f38862ba74213219a28a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80a29b8e8cc5b53c09369156a5cf5f717e9447a0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175915"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050028"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *内存中*列存储索引通过使用基于列的数据存储和基于列的查询处理来存储和管理数据。 列存储索引适合于主要执行大容量加载和只读查询的数据仓库工作负荷。 与传统面向行的存储方式相比，使用列存储索引存档可最多提高 **10 倍查询性能** ，与使用非压缩数据大小相比，可提供多达 **7 倍数据压缩率** 。
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]*内存中*列存储索引通过使用基于列的数据存储和基于列的查询处理来存储和管理数据。 列存储索引适合于主要执行大容量加载和只读查询的数据仓库工作负荷。 与传统面向行的存储方式相比，使用列存储索引存档可最多提高 **10 倍查询性能** ，与使用非压缩数据大小相比，可提供多达 **7 倍数据压缩率** 。
 
 > [!NOTE]
 >  我们将聚集列存储索引视为存储大型数据仓库事实表的标准，希望它可在大多数数据仓库方案中使用。 由于聚集列存储索引是可更新的，因此工作负荷可执行大量插入、更新和删除操作。
@@ -33,16 +32,16 @@ ms.locfileid: "78175915"
 
 -   [基础知识](#basics)
 
--   [加载数据](#dataload)
+-   [正在加载数据](#dataload)
 
 -   [性能提示](#performance)
 
 -   [相关任务和主题](#related)
 
 ##  <a name="basics"></a><a name="basics"></a>传授
- *列存储索引*是使用列式数据格式（称为列存储）存储、检索和管理数据的一种技术。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持聚集列存储索引和非聚集列存储索引。 这两种索引都使用相同的内存中列存储技术，但它们在用途和支持的功能上存在差异。
+ *columnstore index* 是使用列式数据格式（称为列存储）存储、检索和管理数据的技术。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持聚集列存储索引和非聚集列存储索引。 这两种索引都使用相同的内存中列存储技术，但它们在用途和支持的功能上存在差异。
 
-###  <a name="benefits"></a><a name="benefits"></a>便利
+###  <a name="benefits"></a><a name="benefits"></a> 优势
  列存储索引适合于对大型数据集执行分析的大多数只读查询。 通常，列存储索引是针对数据仓库工作负荷的查询。 列存储索引为使用全表扫描的查询带来很大的性能好处，但不适合于查找数据并且搜索特定值的查询。
 
  列存储索引的优点：

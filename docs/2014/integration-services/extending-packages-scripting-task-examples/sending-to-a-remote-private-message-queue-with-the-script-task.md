@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 636314fd-d099-45cd-8bb4-f730d0a06739
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e4791e826adccb925241b02312900ea524f228e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39ccf68bcd7a16c95fd5247c7b7a9fa7b5e63fce
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768463"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966457"
 ---
 # <a name="sending-to-a-remote-private-message-queue-with-the-script-task"></a>使用脚本任务向远程私有消息队列发送消息
   消息队列（又称为 MSMQ）使开发人员可以通过发送和接收消息，轻松实现与应用程序之间的快速可靠通信。 消息队列既可位于本地计算机，也可位于远程计算机；既可以是公共的，也可以是私有的。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中，MSMQ 连接管理器和消息队列任务不支持向远程计算机上的私有队列发送消息。 但通过使用脚本任务，可轻松地向远程私有队列发送消息。  
@@ -30,7 +29,7 @@ ms.locfileid: "62768463"
 >  如果希望创建可更方便地重用于多个包的任务，请考虑以此脚本任务示例中的代码为基础，创建自定义任务。 有关详细信息，请参阅 [开发自定义任务](../extending-packages-custom-objects/task/developing-a-custom-task.md)。  
   
 ## <a name="description"></a>说明  
- 下面的示例使用一个现有 MSMQ 连接管理器以及 System.Messaging 命名空间的对象和方法，向远程私有消息队列发送包含在包变量中的文本。 对 MSMQ 连接管理器的 M:Microsoft.SqlServer.Dts.ManagedConnections.MSMQConn.AcquireConnection （system.string）方法的调用将返回一个**MessageQueue**对象，其`Send`方法完成此任务。  
+ 下面的示例使用一个现有 MSMQ 连接管理器以及 System.Messaging 命名空间的对象和方法，向远程私有消息队列发送包含在包变量中的文本。 对 MSMQ 连接管理器的 M:Microsoft.SqlServer.Dts.ManagedConnections.MSMQConn.AcquireConnection （system.string）方法的调用将返回一个**MessageQueue**对象，其 `Send` 方法完成此任务。  
   
 #### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
   
@@ -40,9 +39,9 @@ ms.locfileid: "62768463"
     FORMATNAME:DIRECT=OS:<computername>\private$\<queuename>  
     ```  
   
-2.  创建一个[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]名为**MessageText**的变量`String` ，以将消息文本传递到脚本。 输入默认消息作为该变量的值。  
+2.  创建一个 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 名为**MessageText**的变量 `String` ，以将消息文本传递到脚本。 输入默认消息作为该变量的值。  
   
-3.  向设计图面添加一个脚本任务，并对其进行编辑。 在“脚本任务编辑器”的“脚本”选项卡中，将  **变量添加到 ReadOnlyVariables 属性中，使该变量在脚本内可用**  `MessageText`  。  
+3.  向设计图面添加一个脚本任务，并对其进行编辑。 在“脚本任务编辑器”的“脚本”选项卡中，将 `MessageText` 变量添加到 ReadOnlyVariables 属性中，使该变量在脚本内可用。  
   
 4.  单击“编辑脚本”，打开   Tools for Applications (VSTA) 脚本编辑器[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]。  
   
@@ -105,6 +104,6 @@ public class ScriptMain
 ![Integration Services 图标（小）](../media/dts-16.gif "集成服务图标（小）")**保持与 Integration Services 最**新  <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>另请参阅  
- [Message Queue Task](../control-flow/message-queue-task.md)  
+ [消息队列任务](../control-flow/message-queue-task.md)  
   
   

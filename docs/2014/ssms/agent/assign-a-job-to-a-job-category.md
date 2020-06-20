@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: a9ea65a2-1d73-4582-a335-63adeb450cb6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ab7695b6a80772ddcd01996e783fffd806447c59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 208ff6722a9c18fd4dd0d061575f0d496af27810
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62473198"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995743"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>将作业分配到作业类别
-  本主题说明如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]或 SQL Server 管理对象将代理作业分配到中的作业类别。  
+  本主题说明如何 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 SQL Server 管理对象将代理作业分配到中的作业类别 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
  作业类别有助于您组织作业，从而更容易筛选和分组。 例如，可以将所有数据库备份作业组织到“数据库维护”类别中。 可以将作业分配到内置作业类别，也可以创建用户定义的作业类别，然后将作业分配至其中。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "62473198"
   
 5.  在“作业属性 - job_name”****__ 对话框的“类别”**** 列表中，选择要分配给作业的作业类别。  
   
-6.  单击" **确定**"。  
+6.  单击“确定”。   
   
   
 ##  <a name="using-transact-sql"></a><a name="TSQL"></a> 使用 Transact-SQL  

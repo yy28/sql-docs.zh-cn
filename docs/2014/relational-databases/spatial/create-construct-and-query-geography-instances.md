@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 5dde7575a3f657b89d29fefa0da52002bcd6af28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d744457cc517a6172cca96b27eae1f456deca24e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014299"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016071"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>创建、构造和查询地理实例
   地理空间数据类型 `geography` 表示圆形地球坐标系中的数据。 此类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中作为 .NET 公共语言运行时 (CLR) 数据类型实现。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography` 数据类型存储诸如 GPS 纬度和经度坐标之类的椭球体（圆形地球）数据。  
@@ -103,7 +102,7 @@ ms.locfileid: "66014299"
  [STGeomCollFromWKB（geography 数据类型）](/sql/t-sql/spatial-geography/stgeomcollfromwkb-geography-data-type) STGeomCollFromWKB（geography 数据类型）  
   
 ###  <a name="constructing-a-geography-instance-from-gml-text-input"></a><a name="gml"></a> 用 GML 文本输入构造地域实例  
- `geography`数据类型提供了一个方法，该方法`geography`可从 GML （ `geography`实例的 XML 表示形式）生成实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持部分 GML。  
+ `geography`数据类型提供了一个方法，该方法可 `geography` 从 GML （实例的 XML 表示形式）生成实例 `geography` 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持部分 GML。  
   
  有关地域标记语言的详细信息，请参阅 OGC 规范： [OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)（OGC 规范，地域标记语言）。  
   
@@ -128,10 +127,10 @@ ms.locfileid: "66014299"
  [AsGml（geography 数据类型）](/sql/t-sql/spatial-geography/asgml-geography-data-type)  
   
 ##  <a name="querying-the-properties-and-behaviors-of-geography-instances"></a><a name="query"></a> 查询地域实例的属性和行为  
- 所有`geography`实例都具有多个可通过[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供的方法进行检索的属性。 下列主题定义了地域类型的属性和行为，并为查询每种图形定义了方法。  
+ 所有 `geography` 实例都具有多个可通过提供的方法进行检索的属性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 下列主题定义了地域类型的属性和行为，并为查询每种图形定义了方法。  
   
 ###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> 有效性、实例类型和 GeometryCollection 信息  
- 构造`geography`实例后，可以使用以下方法返回实例类型，或者，如果它是`GeometryCollection`实例，则返回特定`geography`的实例。  
+ `geography`构造实例后，可以使用以下方法返回实例类型，或者，如果它是 `GeometryCollection` 实例，则返回特定的 `geography` 实例。  
   
  **返回地域的实例类型**  
  [STGeometryType（geography 数据类型）](/sql/t-sql/spatial-geography/stgeometrytype-geography-data-type)  
@@ -146,7 +145,7 @@ ms.locfileid: "66014299"
  [STGeometryN（geography 数据类型）](/sql/t-sql/spatial-geography/stgeometryn-geography-data-type)STGeometryN（geography 数据类型）  
   
 ###  <a name="number-of-points"></a><a name="number"></a> 点数  
- 所有非`geography`空实例都由*点*组成。 这些点表示球体的纬度和经度坐标，在其上可绘制 `geography` 实例。 数据类型 `geography` 提供了许多用于查询实例点的内置方法。  
+ 所有非空 `geography` 实例都由*点*组成。 这些点表示球体的纬度和经度坐标，在其上可绘制 `geography` 实例。 数据类型 `geography` 提供了许多用于查询实例点的内置方法。  
   
  **返回构成实例的点数。**  
  [STNumPoints（geography 数据类型）](/sql/t-sql/spatial-geography/stnumpoints-geography-data-type)  
@@ -161,7 +160,7 @@ ms.locfileid: "66014299"
  [STEndpoint（geography 数据类型）](/sql/t-sql/spatial-geography/stendpoint-geography-data-type)  
   
 ###  <a name="dimension"></a><a name="dimension"></a> 维度  
- 非空 `geography` 实例可以为零维、一维或二维。 零维`geography`实例（例如`Point`和`MultiPoint`）没有长度或面积。 一维对象（例如 `LineString, CircularString`、`CompoundCurve` 和 `MultiLineString`）具有长度。 二维实例（如`Polygon, CurvePolygon`、和`MultiPolygon`）具有面积和长度。 空实例将报告 -1 维，并且 `GeometryCollection` 报告其内容的最大维度。  
+ 非空 `geography` 实例可以为零维、一维或二维。 零维 `geography` 实例（例如 `Point` 和）没有 `MultiPoint` 长度或面积。 一维对象（例如 `LineString, CircularString`、`CompoundCurve` 和 `MultiLineString`）具有长度。 二维实例（如 `Polygon, CurvePolygon` 、和 `MultiPolygon` ）具有面积和长度。 空实例将报告 -1 维，并且 `GeometryCollection` 报告其内容的最大维度。  
   
  **返回实例的维度**  
  [STDimension（geography 数据类型）](/sql/t-sql/spatial-geography/stdimension-geography-data-type)  
@@ -173,13 +172,13 @@ ms.locfileid: "66014299"
  [STArea（geography 数据类型）](/sql/t-sql/spatial-geography/starea-geography-data-type)  
   
 ###  <a name="empty"></a><a name="empty"></a> Empty  
- *空*`geography`实例不包含任何点。 空的 `LineString, CircularString`、`CompoundCurve` 和 `MultiLineString` 实例的长度为 0。 空的 `Polygon, CurvePolygon` 和 `MultiPolygon` 实例的面积为 0。  
+ *空* `geography` 实例不包含任何点。 空的 `LineString, CircularString`、`CompoundCurve` 和 `MultiLineString` 实例的长度为 0。 空的 `Polygon, CurvePolygon` 和 `MultiPolygon` 实例的面积为 0。  
   
  **确定实例是否为空**  
  [STIsEmpty（geography 数据类型）](/sql/t-sql/spatial-geography/stisempty-geography-data-type)  
   
 ###  <a name="closure"></a><a name="closure"></a> 闭合  
- *闭合*`geography`的实例是一个图形，其起点和终点是相同的。 `Polygon` 实例被视为闭合的。 `Point` 实例不是闭合的。  
+ *闭合*的 `geography` 实例是一个图形，其起点和终点是相同的。 `Polygon` 实例被视为闭合的。 `Point` 实例不是闭合的。  
   
  环是一个简单、闭合的 `LineString` 实例。  
   

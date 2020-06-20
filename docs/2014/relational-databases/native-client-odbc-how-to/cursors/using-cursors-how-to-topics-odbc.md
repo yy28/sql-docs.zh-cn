@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4e07d2a6-f389-4685-841c-71e34f948816
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 52704a6c1a89f0ee1f0e6174ecb5580720d917ee
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bb8c9a16f1c7d8762c640e229a44e8e37208312a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701531"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018827"
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>使用游标操作指南主题 (ODBC)
   若要使用游标，必须首先设置控制 ODBC 游标行为的连接和语句属性。 游标允许应用程序在每次提取时检索多行，并在游标的当前位置执行 UPDATE、INSERT 或 DELETE 语句。  

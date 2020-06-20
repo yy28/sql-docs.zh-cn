@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bde57da2-dd47-412f-9df7-9224968b2448
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9093ac313f0b72671e647461318793c21f476c75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: af77616211b98ce64bc8adbe9c85bae98641febc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032021"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049524"
 ---
 # <a name="article-issues"></a>项目问题
   **“项目问题”** 页列出了已发现的项目情况以及这些情况导致的所有必需更改。 下表列出了可能出现的问题以及确保复制和现有应用程序正常运行所必需的操作：  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ebe020a-7921-46b2-8823-398748f379b2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7508324be0bef23ba0590bb181135512d75701e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93881c4e9b91e7ace4c250fbf90b8913484f2ce2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059043"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966757"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>执行 SQL 任务编辑器（“参数映射”页）
   可以使用 **“执行 SQL 任务编辑器”** 对话框的 **“参数映射”** 页，将变量映射到 SQL 语句中的参数。  
@@ -28,7 +27,7 @@ ms.locfileid: "66059043"
   
 ## <a name="options"></a>选项  
  **变量名称**  
- 通过单击“添加”添加了参数映射之后，请从列表中选择系统变量或用户定义的变量，或单击“\<新建变量...>”以使用“添加变量”对话框添加新变量************。  
+ 在添加了参数映射之后，单击 "**添加**"，从列表中选择系统变量或用户定义的变量，或单击 \<**New variable...**> "**添加变量**" 对话框以添加新变量。  
   
  **相关主题：** [Integration Services (SSIS) 变量](integration-services-ssis-variables.md)  
   

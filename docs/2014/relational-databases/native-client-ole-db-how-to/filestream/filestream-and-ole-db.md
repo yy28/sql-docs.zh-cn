@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 8801f091-2241-4085-87b7-33e031328c9c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d2815db225d75e724ee579bd1e1eaf858577d283
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bade51f683c6ec76049e56e3a921f572eefd7acd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704876"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039199"
 ---
 # <a name="filestream-and-ole-db"></a>Filestream 和 OLE DB
   本节包含四个示例，这些示例说明如何将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 与文件流功能配合使用：  

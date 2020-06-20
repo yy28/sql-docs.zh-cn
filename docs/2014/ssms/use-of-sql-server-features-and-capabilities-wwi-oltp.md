@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2365ec137329675e2cd88e7f5bf7e1781aa3308f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f1de3d4dd18d1c838b9445cbaa335ae42323c6b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63280484"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064967"
 ---
 # <a name="arguments-for-external-tools"></a>外部工具的参数
-  参数是在从“工具”  菜单中启动外部工具时，由 Studio 环境提供值的变量。 可以使用“外部工具”  对话框将外部工具（如记事本）添加到“工具”  菜单。  
+  参数是在从“工具”  菜单中启动外部工具时，由 Studio 环境提供值的变量。 可以使用“外部工具”对话框将外部工具（如记事本）添加到“工具”菜单。  
   
  下表列出了外部工具的参数。  
   

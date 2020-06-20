@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 92d0b5adcdb6b5c482b2a0abcf4ca00f83674df9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 170a6a85c0d4b3e969bd87356b562e4b96ded47f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63240133"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048729"
 ---
 # <a name="open-with-new-file"></a>打开方式（新建文件）
-  通过在“文件”  菜单上单击“打开”  再单击“文件”  ，可以在一个或多个编辑器中打开文档。 在“打开文件”  对话框中，选择文件，单击“打开”  箭头，再单击“打开方式”  。 在“打开方式”  对话框中的“选择要打开的程序”  列表中，单击要使用的程序，再单击“打开”  。  
+  通过在“文件”菜单上单击“打开”再单击“文件”，可以在一个或多个编辑器中打开文档。 在“打开文件”  对话框中，选择文件，单击“打开”  箭头，再单击“打开方式”  。 在“打开方式”  对话框中的“选择要打开的程序”  列表中，单击要使用的程序，再单击“打开”  。  
   
 ## <a name="options"></a>选项  
  **选择要打开的程序**  

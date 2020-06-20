@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 682f015215218f362f0ca57557b9d6afb6edee08
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8843dac310d1e023fe7ce63eded02c9e1bed3731
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882375"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010877"
 ---
 # <a name="disable-publishing-and-distribution"></a>禁用发布和分发
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中禁用发布和分发。  
@@ -87,7 +86,7 @@ ms.locfileid: "73882375"
 7.  在分发服务器上，执行 [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql) 以从该服务器删除分发服务器指定。  
   
     > [!NOTE]  
-    >  如果在您执行 [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) 和 [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql)之前并未删除所有复制发布和分发对象，这些过程将返回错误。 若要在删除发布服务器或分发服务器时删除所有与复制相关的对象，必须将** \@no_checks**参数设置为**1**。 如果发布服务器或分发服务器脱机或无法访问， ** \@** 则可以将 ignore_distributor 参数设置为**1** ，以便可以将其删除;不过，必须手动删除任何保留的发布和分发对象。  
+    >  如果在您执行 [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) 和 [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql)之前并未删除所有复制发布和分发对象，这些过程将返回错误。 若要在删除发布服务器或分发服务器时删除所有与复制相关的对象，必须将** \@ no_checks**参数设置为**1**。 如果发布服务器或分发服务器脱机或无法访问，则可以将** \@ ignore_distributor**参数设置为**1** ，以便能够删除它们; 不过，必须手动删除任何保留的发布和分发对象。  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
  此示例脚本从订阅数据库删除复制对象。  
@@ -112,11 +111,11 @@ ms.locfileid: "73882375"
   
 5.  （可选）调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以获取对象的属性，并验证发布服务器是否存在。 如果此方法返回 `false`，则步骤 4 中设置的发布服务器名称不正确，或者此分发服务器未使用该发布服务器。  
   
-6.  调用 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> 方法。 如果发布服务器和`true`分发服务器位于不同的服务器上，并且应在分发服务器上卸载发布服务器，而不首先验证发布服务器上是否不再存在发布，请为 "*强制*" 传递值。  
+6.  调用 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> 方法。 `true`如果发布服务器和分发服务器位于不同的服务器上，并且应在分发服务器上卸载发布服务器，而不首先验证发布服务器上是否不再存在发布，请为 "*强制*" 传递值。  
   
 7.  创建的 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递步骤 3 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
   
-8.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> 方法。 将的值`true` "*强制*" 传递到分发服务器上的所有复制对象，而不首先验证所有本地发布数据库是否已禁用以及分发数据库是否已卸载。  
+8.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> 方法。 将的值 " `true` *强制*" 传递到分发服务器上的所有复制对象，而不首先验证所有本地发布数据库是否已禁用以及分发数据库是否已卸载。  
   
 ###  <a name="examples-rmo"></a><a name="PShellExample"></a> 示例 (RMO)  
  此示例将删除分发服务器上的发布服务器注册，删除分发数据库并卸载分发服务器。  

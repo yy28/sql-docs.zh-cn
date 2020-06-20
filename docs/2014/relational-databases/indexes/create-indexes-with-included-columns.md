@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5c0c6449082f1c5ca016cfdb0a0f18430cf74731
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e5a464f9791ea635236069555647229bf1f0d79e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63156811"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049975"
 ---
 # <a name="create-indexes-with-included-columns"></a>创建带有包含列的索引
   本主题说明如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，添加包含列（或非键列）以便在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中扩展非聚集索引的功能。 通过包含非键列，可以创建覆盖更多查询的非聚集索引。 这是因为非键列具有下列优点：  
@@ -57,7 +56,7 @@ ms.locfileid: "63156811"
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
   
-###  <a name="design-recommendations"></a><a name="DesignRecs"></a> 设计建议  
+###  <a name="design-recommendations"></a><a name="DesignRecs"></a>设计建议  
   
 -   重新设计索引键大小较大的非聚集索引，以便只有用于搜索和查找的列为键列。 使覆盖查询的所有其他列成为非键列。 这样，将具有覆盖查询所需的所有列，但索引键本身较小，而且效率高。  
   
@@ -104,13 +103,13 @@ ms.locfileid: "63156811"
   
 7.  在“从 _table_name_ 中选择列”**** 对话框中，选中要添加到索引的一个或多个表列的复选框。  
   
-8.  单击" **确定**"。  
+8.  单击“确定”。  
   
 9. 在“包含性列”选项卡下，单击“添加…”********。  
   
 10. 在“从 _table_name_ 中选择列”**** 对话框中，选中要作为非键列添加到索引的一个或多个表列的复选框。  
   
-11. 单击" **确定**"。  
+11. 单击“确定”。  
   
 12. 在 **“新建索引”** 对话框中，单击 **“确定”**。  
   

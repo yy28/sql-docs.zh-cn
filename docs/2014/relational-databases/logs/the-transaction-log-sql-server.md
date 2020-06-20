@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 025ef22e6dee1fcfaa1225a4709fa01b6c326b12
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289405"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049745"
 ---
 # <a name="the-transaction-log-sql-server"></a>事务日志 (SQL Server)
   每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库都具有事务日志，用于记录所有事务以及每个事务对数据库所做的修改。 必须定期截断事务日志以避免它被填满。 但是，一些因素可能延迟日志截断，因此监视日志大小很重要。 某些操作可以最小日志量进行记录以减少其对事务日志大小的影响。  
@@ -118,7 +117,7 @@ ms.locfileid: "79289405"
   
 -   插入或追加新数据时，使用 [UPDATE](/sql/t-sql/queries/update-transact-sql) 语句中的 .WRITE 子句部分更新到大型值数据类型。 注意，在更新现有值时没有使用最小日志记录。 有关大型值数据类型的详细信息，请参阅[数据类型 (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)。  
   
--   在`text`、 `ntext`和`image`数据类型列中插入或追加新数据时， [WRITETEXT](/sql/t-sql/queries/writetext-transact-sql)和[UPDATETEXT](/sql/t-sql/queries/updatetext-transact-sql)语句。 注意，在更新现有值时没有使用最小日志记录。  
+-   [WRITETEXT](/sql/t-sql/queries/writetext-transact-sql)在[UPDATETEXT](/sql/t-sql/queries/updatetext-transact-sql) `text` 、 `ntext` 和数据类型列中插入或追加新数据时，WRITETEXT 和 UPDATETEXT 语句 `image` 。 注意，在更新现有值时没有使用最小日志记录。  
   
     > [!NOTE]  
     >  不推荐使用 WRITETEXT 语句和 UPDATETEXT 语句，因此应该避免在新的应用程序中使用这些语句。  
@@ -155,7 +154,7 @@ ms.locfileid: "79289405"
 ## <a name="see-also"></a>另请参阅  
  [控制事务持续性](control-transaction-durability.md)   
  [大容量导入中最小日志记录的先决条件](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
- [备份和还原 SQL Server 数据库](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [SQL Server 数据库的备份和还原](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [数据库检查点 SQL Server &#40;&#41;](database-checkpoints-sql-server.md)   
  [查看或更改数据库的属性](../databases/view-or-change-the-properties-of-a-database.md)   
  [恢复模式 (SQL Server)](../backup-restore/recovery-models-sql-server.md)  

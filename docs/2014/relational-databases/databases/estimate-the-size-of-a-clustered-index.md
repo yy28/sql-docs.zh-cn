@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fe7b988590de54a3cb02aa540b244e1f56f3ba24
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 275a38b70a8215d3ffb9d35530cd0bd5df4ffb70
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054127"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966007"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>估计聚集索引的大小
   您可以使用下列步骤估计存储聚集索引中的数据所需的空间大小：  
@@ -174,7 +173,7 @@ ms.locfileid: "66054127"
   
 7.  计算索引中的级别数：  
   
-     ***非 leaf_Levels*** = 1 + log Index_Rows_Per_Page （***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***）  
+     ***非 leaf_Levels*** = 1 + log Index_Rows_Per_Page （***Num_Leaf_Pages***  /  ***Index_Rows_Per_Page***）  
   
      将此值向上舍入到最接近的整数。 此值不包括聚集索引的叶级别。  
   

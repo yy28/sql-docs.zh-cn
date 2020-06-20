@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a793c6ee6e1f6e168ca2a957b84b1ba4a1d2a453
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6a28d2991fcf3a49431e31083ae909f367f408e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68195835"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048846"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>示例：使用 WMI Provider for Server Events 创建 SQL Server 代理警报
   WMI 事件提供程序的一个常见用法是创建响应特定事件的 SQL Server 代理警报。 以下示例提供一个在表中保存 XML 死锁图形事件以供以后分析的简单警报。 SQL Server 代理提交 WQL 请求、接收 WMI 事件并运行作业以响应该事件。 请注意，尽管在处理通知消息中涉及几个 Service Broker 对象，WMI 事件提供程序将处理创建和管理这些对象的详细信息。  
@@ -34,7 +33,7 @@ ms.locfileid: "68195835"
  每当记录死锁图形跟踪事件时，警报都将运行该作业。 对于 WMI 警报，SQL Server 代理使用指定的命名空间和 WQL 语句创建一个通知查询。 对于此警报，SQL Server 代理监视本地计算机上的默认实例。 WQL 语句请求默认实例中的任何 `DEADLOCK_GRAPH` 事件。 若要更改警报监视的实例，请替换该警报的 `MSSQLSERVER` 中 `@wmi_namespace` 的实例名称。  
   
 > [!NOTE]  
->  对于接收 WMI 事件的 SQL Server 代理， [!INCLUDE[ssSB](../../includes/sssb-md.md)]必须在**msdb**和[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]中启用。  
+>  对于接收 WMI 事件的 SQL Server 代理， [!INCLUDE[ssSB](../../includes/sssb-md.md)] 必须在**msdb**和中启用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 。  
   
 ```  
 USE AdventureWorks ;  
@@ -89,7 +88,7 @@ GO
 ```  
   
 ## <a name="testing-the-sample"></a>测试示例  
- 若要查看作业运行情况，请造成死锁。 在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，打开两个**SQL 查询**选项卡，并将两个查询连接到同一个实例。 在其中一个查询选项卡中运行以下脚本。 此脚本生成一个结果集，然后结束。  
+ 若要查看作业运行情况，请造成死锁。 在中 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，打开两个**SQL 查询**选项卡，并将两个查询连接到同一个实例。 在其中一个查询选项卡中运行以下脚本。 此脚本生成一个结果集，然后结束。  
   
 ```  
 USE AdventureWorks ;  
@@ -102,7 +101,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- 在第二个 "查询" 选项卡中运行以下脚本。此脚本生成一个结果集，然后阻止等待获取锁定`Production.Product`。  
+ 在第二个 "查询" 选项卡中运行以下脚本。此脚本生成一个结果集，然后阻止等待获取锁定 `Production.Product` 。  
   
 ```  
 USE AdventureWorks ;  
@@ -118,7 +117,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- 在第一个 "查询" 选项卡中运行以下脚本。此脚本会阻止等待获取锁定`Production.Location`。 在很短的超时值过后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将选择此脚本或示例中的脚本作为死锁牺牲品，然后结束事务。  
+ 在第一个 "查询" 选项卡中运行以下脚本。此脚本会阻止等待获取锁定 `Production.Location` 。 在很短的超时值过后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将选择此脚本或示例中的脚本作为死锁牺牲品，然后结束事务。  
   
 ```  
 SELECT TOP(1) Name FROM Production.Location WITH (XLOCK) ;  

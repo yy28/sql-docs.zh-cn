@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5f14850b-b85c-41e2-8116-6f5b3f5e0856
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 37356c3a73a120a44adc67aad9439d313d562f61
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: af434713946f5c568ee71644a7403f9496a8c16f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82709586"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049711"
 ---
 # <a name="cross-version-compatibility"></a>跨版本兼容性
   如果期望让早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 客户端或服务器实例处理表值参数，则会发生跨版本冲突。  

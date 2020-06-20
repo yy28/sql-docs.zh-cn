@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 746aed7f49b0db51f46a32fdf040eb5b9e968dd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50c9419911f83c98fba5baf0f995ffbeafb916ad
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768021"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965647"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>选择目标（SQL Server 导入和导出向导）
   使用 "**选择目标**" 页可以指定要复制的数据的目标。  
@@ -28,7 +27,7 @@ ms.locfileid: "62768021"
   
 ## <a name="static-options"></a>静态选项  
  **目标**  
- 选择与目标的数据存储格式相匹配的数据访问接口。 可用于数据源的访问接口可能不止一个。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client、用于 SQL Server 的 .NET Framework 数据提供程序或用于 SQL Server 的 Microsoft OLE DB 提供程序。  
+ 选择与目标的数据存储格式相匹配的数据访问接口。 可用于数据源的访问接口可能不止一个。 例如，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client、用于 SQL Server 的 .NET Framework 数据提供程序或用于 SQL Server 的 Microsoft OLE DB 提供程序。  
   
 > [!NOTE]  
 >  若要将数据保存到 ODBC 目标，请选择用于 ODBC 的 .NET Framework 数据访问接口。  
@@ -42,7 +41,7 @@ ms.locfileid: "62768021"
  **服务器名称**  
  键入接收数据的服务器的名称，或者从列表中选择服务器。  
   
- **使用 Windows 身份验证**  
+ **Use Windows Authentication**  
  指定包是否应使用 Microsoft Windows 身份验证登录数据库。 为了实现更好的安全性，建议使用 Windows 身份验证。  
   
  **使用 SQL Server 身份验证**  
@@ -55,16 +54,16 @@ ms.locfileid: "62768021"
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证时，提供数据库连接的密码。  
   
  **Database**  
- 从的指定实例上的数据库列表中进行选择[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，或单击 "**新建**" 创建新的数据库。  
+ 从的指定实例上的数据库列表中进行选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，或单击 "**新建**" 创建新的数据库。  
   
- **全部**  
+ **刷新**  
  通过单击“刷新”****，还原可用数据库的列表。  
   
  **新建**  
  使用 "**创建数据库**" 对话框创建新的目标数据库。  
   
 ### <a name="destination--flat-file-destination"></a>目标 = 平面文件目标  
- **文件名称**  
+ **文件名**  
  指定要存储数据的文件的路径和文件名。 或者，单击 **“浏览”** 定位文件。  
   
  **浏览**  
@@ -82,7 +81,7 @@ ms.locfileid: "62768021"
  **格式**  
  指示是否使用带分隔符、固定宽度或右边未对齐的格式。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |带分隔符|各列之间由在 **“列”** 页上指定的分隔符隔开。|  
 |固定宽度|列的宽度固定。|  
@@ -97,10 +96,10 @@ ms.locfileid: "62768021"
 ### <a name="destination--microsoft-excel"></a>目标 = Microsoft Excel  
   
 > [!NOTE]  
->  仅当要连接到使用 Excel 2003 或更早版本的数据源时，才选择 " **Microsoft Excel** "。 若要连接到使用 Excel 2007 的数据源，请选择**Microsoft Office 12.0 Access 数据库引擎 OLE DB 提供程序**，单击 "**属性**"，然后在 "**数据链接属性**" 对话框的 "**全部**" 选项卡上，对于 "**扩展属性**"，输入`Excel 12.0`。  
+>  仅当要连接到使用 Excel 2003 或更早版本的数据源时，才选择 " **Microsoft Excel** "。 若要连接到使用 Excel 2007 的数据源，请选择**Microsoft Office 12.0 Access 数据库引擎 OLE DB 提供程序**，单击 "**属性**"，然后在 "**数据链接属性**" 对话框的 "**全部**" 选项卡上，对于 "**扩展属性**"，输入 `Excel 12.0` 。  
   
  **Excel 文件路径**  
- 指定要在其中存储数据的工作簿的路径和文件名（例如，C:\MyData.xls、 \\\Sales\Database\Northwind.xls）。 或者，单击 **“浏览”** 定位工作簿。  
+ 指定要在其中存储数据的工作簿的路径和文件名（例如 C:\MyData.xls、 \\\Sales\Database\Northwind.xls）。 或者，单击 **“浏览”** 定位工作簿。  
   
  **浏览**  
  使用 "**打开**" 对话框定位到 Excel 工作簿。  
@@ -116,8 +115,8 @@ ms.locfileid: "62768021"
 > [!NOTE]  
 >  仅当要连接到使用 Access 2003 或更早版本的数据库时，才选择 " **Microsoft Access** "。 若要连接到使用 Access 2007 的数据库，请选择 " **Microsoft Office 12.0 访问数据库引擎 OLE DB 提供程序**"。  
   
- **文件名称**  
- 指定要在其中存储数据的数据库文件的路径和文件名（例如，C:\MyData.mdb、 \\\Sales\Database\Northwind.mdb）。 或者，单击 **“浏览”** 定位数据库文件。  
+ **文件名**  
+ 指定要在其中存储数据的数据库文件的路径和文件名（例如，C:\MyData.mdb、 \\ \Sales\Database\Northwind.mdb）。 或者，单击 **“浏览”** 定位数据库文件。  
   
  **浏览**  
  使用 "**打开**" 对话框浏览到数据库文件。  

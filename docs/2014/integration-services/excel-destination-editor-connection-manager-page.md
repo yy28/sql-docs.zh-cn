@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: fc13f725-963c-488e-91e2-20627133e842
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c55b9daba7e8e1823e1ced43fc9958d4fe5892ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a969ad04f8ba5bc86167beecfab5fec85e87caa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059243"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966877"
 ---
 # <a name="excel-destination-editor-connection-manager-page"></a>Excel 目标编辑器（“连接管理器”页）
   使用 **“Excel 目标编辑器”** 对话框的 **“连接管理器”** 页可以指定数据源信息和预览结果。 Excel 目标将数据加载到 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 工作簿中的工作表或指定范围。  
   
 > [!NOTE]  
->  Excel `CommandTimeout`目标的属性在**excel 目标编辑器**中不可用，但可以使用**高级编辑器**进行设置。 另外，某些快速加载选项仅在 **“高级编辑器”** 中提供。 有关这些属性的详细信息，请参阅 [Excel Custom Properties](data-flow/excel-custom-properties.md)的“Excel 目标”部分。  
+>  `CommandTimeout`Excel 目标的属性在**Excel 目标编辑器**中不可用，但可以使用**高级编辑器**进行设置。 另外，某些快速加载选项仅在 **“高级编辑器”** 中提供。 有关这些属性的详细信息，请参阅 [Excel Custom Properties](data-flow/excel-custom-properties.md)的“Excel 目标”部分。  
   
  若要了解有关 Excel 目标的详细信息，请参阅 [Excel Destination](data-flow/excel-destination.md)。  
   

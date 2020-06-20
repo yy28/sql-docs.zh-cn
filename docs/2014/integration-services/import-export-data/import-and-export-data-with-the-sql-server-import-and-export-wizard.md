@@ -22,16 +22,15 @@ helpviewer_keywords:
 ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2f3ce90e2670357d0842b0a6ac7838f396465bab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55c621f9f345f0863e6656b66a77a8ccc439b0bc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768159"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965607"
 ---
 # <a name="sql-server-import-and-export-wizard"></a>SQL Server 导入和导出向导
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]导入和导出向导提供了最简单的方法， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]可用于创建将数据从源复制到目标的包。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]导入和导出向导提供了最简单的方法，可用于创建 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将数据从源复制到目标的包。  
   
 > [!NOTE]  
 >  在 64 位计算机上，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会安装 64 位版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导 (DTSWizard.exe)。 但是，有些数据源（如 Access 或 Excel）只提供 32 位提供程序。 若要使用这些数据源，您可能需要安装并运行 32 位版本的向导。 若要安装 32 位版本的向导，必须在安装过程中选择“客户端工具”或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
@@ -50,7 +49,7 @@ ms.locfileid: "62768159"
   
  启动向导的环境不同，某些向导功能的工作方式也会有所不同：  
   
--   如果在中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]启动[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]导入和导出向导，则可以通过选中 "**立即执行**" 复选框来立即运行包。 默认情况下，此复选框处于选中状态，包会立即运行。  
+-   如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在中启动导入和导出向导 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，则可以通过选中 "**立即执行**" 复选框来立即运行包。 默认情况下，此复选框处于选中状态，包会立即运行。  
   
      还可以决定是将包保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还是保存到文件系统。 如果选择保存包，还必须指定包保护级别。 有关包保护级别的详细信息，请参阅[对包中敏感数据的访问控制](../security/access-control-for-sensitive-data-in-packages.md)。  
   
@@ -74,12 +73,12 @@ ms.locfileid: "62768159"
   
 -   如果希望创建新的目标数据库、表或文件，则需要具有创建新的数据库、表或文件的足够权限。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，这需要具有 CREATE DATABASE 或 CREATE TABLE 权限。  
   
--   如果希望保存向导创建的包，则需要具有向 msdb 数据库或文件系统进行写入操作的足够权限。 在[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，这需要对 msdb 数据库具有 INSERT 权限。  
+-   如果希望保存向导创建的包，则需要具有向 msdb 数据库或文件系统进行写入操作的足够权限。 在中 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ，这需要对 msdb 数据库具有 INSERT 权限。  
   
 ## <a name="mapping-data-types-in-the-import-and-export-wizard"></a>在导入和导出向导中映射数据类型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导提供了最低限度的转换功能。 除了支持在新的目标表和目标文件中设置列的名称、数据类型和数据类型属性之外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导不支持任何列级转换。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的映射文件来将数据类型从一个数据库版本或系统映射到另一个数据库版本或系统。 例如，它可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 映射到 Oracle。 默认情况下，XML 格式的映射文件安装在 C:\Program Files\Microsoft SQL Server\100\DTS\MappingFiles 中。 如果业务需要在数据类型之间进行不同的映射，则可以更新映射以影响向导所执行的映射。 例如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，如果想要在将数据从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]传输到 db2 时将**nchar**数据类型映射到 db2**图形**数据类型而不是 db2 **VARGRAPHIC**数据类型，则可以更改 sqlclienttoibmdb2.xml 映射文件中的**nchar**映射，以使用**图形**而不是**VARGRAPHIC。**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的映射文件来将数据类型从一个数据库版本或系统映射到另一个数据库版本或系统。 例如，它可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 映射到 Oracle。 默认情况下，XML 格式的映射文件安装在 C:\Program Files\Microsoft SQL Server\100\DTS\MappingFiles 中。 如果业务需要在数据类型之间进行不同的映射，则可以更新映射以影响向导所执行的映射。 例如，如果想要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将数据从传输到 db2 时将**nchar**数据类型映射到 db2**图形**数据类型而不是 db2 **VARGRAPHIC**数据类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则可以将 SqlClientToIBMDB2.xml 映射文件中的**Nchar**映射更改为使用**图形**而不是**VARGRAPHIC。**  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括很多常用源和目标组合之间的映射，您可以在映射文件目录中添加新的映射文件，以支持其他源和目标。 新的映射文件必须遵守所发布的 XSD 架构，并在源和目标的唯一组合之间进行映射。  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4752685d9590056cb47e88ee2ec4fea5128cc86b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f4587524468a2ebd42fb207a888b8691890c7f11
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896510"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966557"
 ---
 # <a name="-unequal-ssis-expression"></a>!=（不等于）（SSIS 表达式）
   执行比较操作以确定具有兼容数据类型的两个表达式是否不相等。 在执行比较前表达式计算器会自动转换多种数据类型。  

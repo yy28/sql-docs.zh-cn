@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 484ef7dead58a6e8ae35639cdc6218d5c8223bd9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35970f3a78cad4a17fcfdcfb2d7b9aa91c9dd6e7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990192"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062432"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>卸载现有 SQL Server 实例（安装程序）
   本文介绍如何卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的独立实例。 使用本主题中提供的步骤，您还可以准备系统以便重新安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -42,7 +41,7 @@ ms.locfileid: "62990192"
   
 ### <a name="before-you-uninstall"></a>卸载之前  
   
-1.  **备份您的数据。** 尽管这不是必需的步骤，但您可能希望按照当前的状态保存数据库。 可能还希望保存对系统数据库所做的更改。 无论哪种情况，请确保先备份数据，再卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 或者，将所有数据和日志文件的副本保存在 MSSQL 文件夹以外的文件夹中。 卸载期间 MSSQL 文件夹将被删除。  
+1.  **备份数据。** 尽管这不是必需的步骤，但您可能希望按照当前的状态保存数据库。 可能还希望保存对系统数据库所做的更改。 无论哪种情况，请确保先备份数据，再卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 或者，将所有数据和日志文件的副本保存在 MSSQL 文件夹以外的文件夹中。 卸载期间 MSSQL 文件夹将被删除。  
   
      必须保存的文件包括以下数据库文件：  
   
@@ -66,7 +65,7 @@ ms.locfileid: "62990192"
   
     -   Templog.ldf  
   
-    -   `ReportServer[$InstanceName]`（Thisis [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]默认数据库。）  
+    -   `ReportServer[$InstanceName]`（Thisis [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 默认数据库。）  
   
     -   ReportServer[$InstanceName]TempDB（这是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的默认临时数据库。）  
   
@@ -80,11 +79,11 @@ ms.locfileid: "62990192"
   
 1.  若要开始卸载过程，请转到 **“控制面板”** ，然后选择 **“程序和功能”**。  
   
-2.  右键单击** [!INCLUDE[msCoName](../../includes/msconame-md.md)] **并选择 "**卸载**"。 然后单击 **“删除”**。 此时将启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导。  
+2.  右键单击 **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 并选择 "**卸载**"。 然后单击 **“删除”**。 此时将启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导。  
   
-     将运行安装程序支持规则以验证您的计算机配置。 要继续，请单击“下一步”****。  
+     将运行安装程序支持规则以验证您的计算机配置。 若要继续，请单击 **“下一步”** 。  
   
-3.  在“选择实例”页上，使用下拉框指定要删除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，或者指定与仅删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享功能和管理工具相对应的选项。 要继续，请单击“下一步”****。  
+3.  在“选择实例”页上，使用下拉框指定要删除的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，或者指定与仅删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共享功能和管理工具相对应的选项。 若要继续，请单击 **“下一步”** 。  
   
 4.  在“选择功能”页上指定要从指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例中删除的功能。  
   

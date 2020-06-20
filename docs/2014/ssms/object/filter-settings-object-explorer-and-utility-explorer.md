@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fd040bbf0f6e3f5e150d45df41ea676a71c6e03a
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 4fbb47d9ec31d5c912c23e5afa6e04e4ea2e6f43
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859219"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067302"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>筛选设置（对象资源管理器和实用工具资源管理器）
   使用此对话框可以指定筛选器。 使用筛选器，可以将对象资源管理器和实用工具资源管理器配置为仅显示符合特定条件的项。 例如，可以使用筛选器仅显示名称中包含词语“维护”的作业。 “筛选设置”  对话框的标题包含服务器的名称，还可能包含数据库的名称。  

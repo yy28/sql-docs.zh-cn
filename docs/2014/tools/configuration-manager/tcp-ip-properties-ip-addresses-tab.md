@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: afb62458cb76a1187dce06efadeca00fc8a382f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6379ddae6d14424d8705441e5a174fc7cb513b28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151445"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064125"
 ---
 # <a name="tcp-ip-properties-ip-addresses-tab"></a>TCP-IP 属性（"IP 地址" 选项卡）
   使用 **“TCP/IP 属性（‘IP 地址’选项卡）”** 对话框，可以配置特定 IP 地址的 TCP/IP 协议选项。 只有选中 **“IP All”** ，才能一次配置所有地址的 **“TCP 动态端口”** 和 **“TCP 端口”** 。  
   
- 当重新启动时[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，更改将生效。 有关启动和停止 SQL Server Browser 服务的信息，请参阅联机丛书中的“如何：启动和停止 SQL Server Browser 服务”。  
+ 当 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新启动时，更改将生效。 有关启动和停止 SQL Server Browser 服务的信息，请参阅联机丛书中的“如何：启动和停止 SQL Server Browser 服务”。  
   
 ## <a name="static-vs-dynamic-ports"></a>静态端口与动态端口  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实例侦听端口 1433 上传入的连接。 可以出于安全原因或客户端应用程序要求更改此端口。 默认情况下，命名实例（包含 SQL Server Express）被配置为侦听动态端口。 若要配置静态端口，请将 **“TCP 动态端口”** 框保留为空，并在 **“TCP 端口”** 框中提供一个可用的端口号。 有关打开防火墙中的端口的详细信息，请参阅联机丛书中的“配置 Windows 防火墙以允许 SQL Server 访问”。  

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 8ee433b6-3931-47e8-b1cf-332806f71161
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5c97c07d34de2b17b6966ab269004612c966b961
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 135ba193e2249d0028a4ed04e703187fd9bd127d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62856446"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047442"
 ---
 # <a name="stored-procedure-properties-general-page"></a>存储过程属性（“常规”页）
   显示有关存储过程的信息。 所有信息均为只读。  

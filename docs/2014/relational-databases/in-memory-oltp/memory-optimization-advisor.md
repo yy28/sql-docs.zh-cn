@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f4dcc5a7658ee3549d774989ae95a027a5787fc2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 581ce3a1b13d94814904876f61637dcad3dd76de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719080"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050083"
 ---
 # <a name="memory-optimization-advisor"></a>内存优化顾问
   事务性能报告工具（请参阅 [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)）在移植到使用内存中 OLTP 时通知您的数据库中的哪些表会给您带来好处。 找到要移植以使用内存中 OLTP 的表之后，可使用内存优化顾问帮助您将基于磁盘的数据库表迁移到内存中 OLTP。  

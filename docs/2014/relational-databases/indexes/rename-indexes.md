@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d3d612a1-ea1b-4d99-85d2-0a2ad54f4b0e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 744e7a10c9c4dcd776d58b6234749f2be5aa1479
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 184d6e20f7857c5ea3535e77e21a0630ffc7b678
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63036203"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049853"
 ---
 # <a name="rename-indexes"></a>重命名索引
   本主题将说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重命名索引。 重命名索引将用提供的新名称替换当前的索引名称。 指定的名称在表或视图中必须是唯一的。 例如，两个表可以有一个名为 **XPK_1**的索引，但同一表中不能有两个名为 **XPK_1**的索引。 无法创建与现有禁用索引同名的索引。 重命名索引不会导致重新生成索引。  

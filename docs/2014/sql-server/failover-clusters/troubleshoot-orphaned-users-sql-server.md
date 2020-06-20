@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 38a33b34b64cf285e94f66c547b2309b8daf1ae8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5df714d818949b921ff2236e50d58913eab0e0db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035648"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062557"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>孤立用户故障排除 (SQL Server)
-  要登录到 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，主体必须有一个有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 在身份验证过程中会使用此登录名，以验证是否允许主体连接到该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 服务器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上的登录名**server_principals**在 syslogins 目录视图和**sys.syslogins**兼容性视图中可见。  
+  要登录到 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，主体必须有一个有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 在身份验证过程中会使用此登录名，以验证是否允许主体连接到该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务器实例上的登录名在**server_principals**目录视图和**sys.sys登录**兼容性视图中可见。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名使用映射到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的数据库用户访问各个数据库。 此规则有两种例外情况：  
   
@@ -43,7 +42,7 @@ ms.locfileid: "63035648"
  在服务器实例上未定义或错误定义了其相应 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的数据库用户无法登录到实例。 这样的用户被称为此服务器实例上的数据库的“孤立用户” ** 。 如果删除了对应的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名，则数据库用户可能会变为孤立用户。 另外，在数据库还原或附加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的其他实例之后，数据库用户也可能变为孤立用户。 如果未在新服务器实例中提供数据库用户映射到的 SID，则该用户可能变为孤立用户。  
   
 > [!NOTE]  
->  除非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在数据库中启用了**guest** ，否则登录名无法访问其缺少相应的数据库用户的数据库。 有关创建数据库用户帐户的信息，请参阅[CREATE user &#40;transact-sql&#41;](/sql/t-sql/statements/create-user-transact-sql)。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]除非在数据库中启用了**guest** ，否则登录名无法访问其缺少相应的数据库用户的数据库。 有关创建数据库用户帐户的信息，请参阅[CREATE user &#40;transact-sql&#41;](/sql/t-sql/statements/create-user-transact-sql)。  
   
 ## <a name="to-detect-orphaned-users"></a>检测孤立用户  
  若要检测孤立用户，请执行下列 Transact-SQL 语句：  
@@ -58,7 +57,7 @@ GO;
  输出中列出了当前数据库中未链接到任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名的用户以及对应的安全标识符 (SID)。 有关详细信息，请参阅[&#40;transact-sql&#41;sp_change_users_login ](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql)。  
   
 > [!NOTE]  
->  **sp_change_users_login**不能与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通过 Windows 创建的登录名一起使用。  
+>  **sp_change_users_login**不能与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过 Windows 创建的登录名一起使用。  
   
 ## <a name="to-resolve-an-orphaned-user"></a>解决孤立用户问题  
  若要解决孤立用户问题，请执行以下过程：  
@@ -88,7 +87,7 @@ GO;
     >  只有具有 ALTER ANY LOGIN 权限的登录帐户才能更改其他用户的登录密码。 但是，只有 **sysadmin** 角色的成员才能修改 **sysadmin** 角色成员的密码。  
   
     > [!NOTE]  
-    >  不能将**sp_password**用于[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户。 通过 Windows 网络帐户连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的用户是由 Windows 进行身份验证的，因此其密码只能在 Windows 中更改。  
+    >  不能将**sp_password**用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户。 通过 Windows 网络帐户连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的用户是由 Windows 进行身份验证的，因此其密码只能在 Windows 中更改。  
   
      有关详细信息，请参阅[&#40;transact-sql&#41;sp_password ](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql)。  
   
@@ -99,7 +98,7 @@ GO;
  [sp_addlogin &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql)   
  [sp_grantlogin &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-grantlogin-transact-sql)   
  [sp_password &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql)   
- [sysusers &#40;Transact-sql&#41;](/sql/relational-databases/system-compatibility-views/sys-sysusers-transact-sql)   
- [syslogins &#40;Transact-sql&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)  
+ [sys.sys用户 &#40;Transact-sql&#41;](/sql/relational-databases/system-compatibility-views/sys-sysusers-transact-sql)   
+ [Transact-sql&#41;sys.sys登录名 &#40;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)  
   
   

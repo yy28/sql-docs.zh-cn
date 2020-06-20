@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b40a24eb-f528-4e70-b26e-5eaf6e0ed1ed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0c6711b736f0313508f74b6c30253e7b2e2a3f93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd0a8a89686c62b4d4d00aea5479bb956fe3011f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63154708"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061148"
 ---
 # <a name="move-items-in-a-solution"></a>在解决方案中移动项
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 项目中的项目项为查询、连接和杂项文件。 在解决方案资源管理器中，可以在项目之间移动查询和杂项文件，但无法移动连接。  

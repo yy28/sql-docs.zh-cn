@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b2ecd6ec8584eb4031e7d2c8a0af95204a930498
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 490b922cc76b6443317dbe7368db734f23e002fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721836"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016584"
 ---
 # <a name="ltagentprofilenamegt-properties"></a>&lt;AgentProfileName&gt; 属性
   可以使用 **“代理配置文件属性”** 对话框查看为配置文件中的每个代理参数指定的值，以及修改用户定义的配置文件的值。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d755833a-d7eb-4973-9352-67a2fba2442a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 312cda4fd588336d8be42c82a20392c8d0b80664
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dbb165b157fda7d2bd978a91f479d6c1f2a09272
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023503"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052905"
 ---
 # <a name="locktimeout-timeout-gt-0-event-class"></a>Lock:Timeout (timeout &gt; 0) 事件类
   **Lock:Timeout (timeout > 0)** 事件类指示由于其他事务持有所需资源的阻塞锁而使对资源（例如页）锁的请求超时。 此事件类除了不包括超时值为 0 的任何事件外，其行为与 **Lock:Timeout** 事件类相同。  
@@ -45,7 +44,7 @@ ms.locfileid: "63023503"
 |IsSystem|`int`|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  
 |LoginName|`nvarchar`|用户的登录名（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录凭据，格式为“DOMAIN\username”）。|11|是|  
 |LoginSid|`image`|登录用户的安全标识号 (SID)。 您可以在 sys.server_principals 目录视图中找到此信息。 服务器中的每个登录名都具有唯一的 SID。|41|是|  
-|“模式”|`int`|事件已接收的或正在请求的状态。<br /><br /> 0 = NULL<br /><br /> 1 = Sch-S<br /><br /> 2 = Sch-M<br /><br /> 3 = S<br /><br /> 4 = U<br /><br /> 5 = X<br /><br /> 6 = IS<br /><br /> 7 = IU<br /><br /> 8 = IX<br /><br /> 9 = SIU<br /><br /> 10 = SIX<br /><br /> 11 = UIX<br /><br /> 12 = BU<br /><br /> 13 = RangeS-S<br /><br /> 14 = RangeS-U<br /><br /> 15 = RangeI-N<br /><br /> 16 = RangeI-S<br /><br /> 17 = RangeI-U<br /><br /> 18 = RangeI-X<br /><br /> 19 = RangeX-S<br /><br /> 20 = RangeX-U<br /><br /> 21 = RangeX-X|32|是|  
+|Mode|`int`|事件已接收的或正在请求的状态。<br /><br /> 0 = NULL<br /><br /> 1 = Sch-S<br /><br /> 2 = Sch-M<br /><br /> 3 = S<br /><br /> 4 = U<br /><br /> 5 = X<br /><br /> 6 = IS<br /><br /> 7 = IU<br /><br /> 8 = IX<br /><br /> 9 = SIU<br /><br /> 10 = SIX<br /><br /> 11 = UIX<br /><br /> 12 = BU<br /><br /> 13 = RangeS-S<br /><br /> 14 = RangeS-U<br /><br /> 15 = RangeI-N<br /><br /> 16 = RangeI-S<br /><br /> 17 = RangeI-U<br /><br /> 18 = RangeI-X<br /><br /> 19 = RangeX-S<br /><br /> 20 = RangeX-U<br /><br /> 21 = RangeX-X|32|是|  
 |NTDomainName|`nvarchar`|用户所属的 Windows 域。|7|是|  
 |NTUserName|`nvarchar`|Windows 用户名。|6|是|  
 |ObjectID|`int`|对象的 ID（如果可用且适用）。|22|是|  

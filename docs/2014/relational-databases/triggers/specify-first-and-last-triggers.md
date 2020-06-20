@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e6c7684-3dd3-46bb-b7be-523b33fae4d5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a851a19a7f00afd055bb2ee8f00eaf4621a1e98f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8ddb352b00dc759362c8f6ef1e861e55b6f184f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524133"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014306"
 ---
 # <a name="specify-first-and-last-triggers"></a>指定第一个和最后一个触发器
   可将与表关联的 AFTER 触发器之一指定为执行每个 INSERT、DELETE 和 UPDATE 触发操作时激发的第一个或最后一个 AFTER 触发器。 在第一个和最后一个触发器之间激发的 AFTER 触发器将按未定义的顺序执行。  

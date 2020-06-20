@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 06e5403a9e490677e1cb5f88eb20ed8ffb967e15
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e54cf82c9413b97599e6e06ad9a51be46cd822a9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76939604"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965704"
 ---
 # <a name="sql-server-data-files-in-azure"></a>Azure 中的 SQL Server 数据文件
   SQL Server Azure 中的数据文件，可以对作为 Azure Blob 存储的 SQL Server 数据库文件提供本机支持。 通过此功能，你可以在本地或 Azure 中的虚拟机上运行的 SQL Server 中创建数据库，并在 Azure Blob 存储中为数据创建专用存储位置。 此增强功能使用分离和附加操作，简化了计算机之间的数据库移动。 此外，它还允许从或向 Azure 存储还原，为数据库备份文件提供备用存储位置。 因此，它在数据虚拟化、数据移动、安全性和可用性、轻松降低成本以及维护方面都具备优势，可实现高可用性和弹性扩展，支持几种混合解决方案。  
@@ -96,9 +95,9 @@ ON
   
 ###  <a name="limitations"></a><a name="bkmk_Limitations"></a> 限制  
   
--   在此功能的当前版本中，不`FileStream`支持在 Azure 存储中存储数据。 你可以在`Filestream` azure 存储集成的本地数据库中存储数据，但不能使用 azure 存储在计算机之间移动 Filestream 数据。 对于 `FileStream` 数据，建议继续使用传统方法在不同计算机之间移动与 Filestream 关联的文件（.mdf，.ldf）。  
+-   在此功能的当前版本中， `FileStream` 不支持在 Azure 存储中存储数据。 你可以 `Filestream` 在 Azure 存储集成的本地数据库中存储数据，但不能使用 Azure 存储在计算机之间移动 Filestream 数据。 对于 `FileStream` 数据，建议继续使用传统方法在不同计算机之间移动与 Filestream 关联的文件（.mdf，.ldf）。  
   
--   目前，此新增强功能不支持多个 SQL Server 实例同时访问 Azure 存储中的相同数据库文件。 如果 ServerA 处于联机状态并且有一个活动数据库文件，并且意外启动了 ServerB，并且它还具有指向相同数据文件的数据库，则第二个服务器将无法启动该数据库，错误代码**5120 无法打开物理文件 "%.\*ls "。操作系统错误% d： "% ls"**。  
+-   目前，此新增强功能不支持多个 SQL Server 实例同时访问 Azure 存储中的相同数据库文件。 如果 ServerA 处于联机状态并且有一个活动数据库文件，并且意外启动了 ServerB，并且它还具有指向相同数据文件的数据库，则第二个服务器将无法启动该数据库，错误代码**5120 无法打开物理文件 "%. \*ls "。操作系统错误% d： "% ls"**。  
   
 -   只有 .mdf、.ldf 和 .ndf 文件才可以通过使用 Azure 功能中的 SQL Server 数据文件存储在 Azure 存储中。  
   
@@ -106,9 +105,9 @@ ON
   
 -   每个 Blob 最大可为 1 TB。 这就对可存储在 Azure 存储中的单个数据库的数据和日志文件设定了一个上限。  
   
--   无法使用“Azure 存储中的 SQL Server 数据文件”功能在 Azure Blob 中存储内存 OLTP 数据。 这是因为内存中 OLTP 依赖于`FileStream`和，在此功能的当前版本中，不支持在 Azure `FileStream`存储中存储数据。  
+-   无法使用“Azure 存储中的 SQL Server 数据文件”功能在 Azure Blob 中存储内存 OLTP 数据。 这是因为内存中 OLTP 依赖于 `FileStream` 和，在此功能的当前版本中， `FileStream` 不支持在 Azure 存储中存储数据。  
   
--   使用 Azure 功能中的 SQL Server 数据文件时，SQL Server 使用`master`数据库中的排序规则集执行所有 URL 或文件路径比较。  
+-   使用 Azure 功能中的 SQL Server 数据文件时，SQL Server 使用数据库中的排序规则集执行所有 URL 或文件路径比较 `master` 。  
   
 -   只要不在主数据库中添加新数据库文件，就支持 `AlwaysOn Availability Groups`。 如果某个数据库操作需要在主数据库中创建新文件，请首先在辅助节点上禁用 AlwaysOn 可用性组。 然后对主数据库执行该数据库操作，并在主节点中备份该数据库。 接下来，将数据库还原到辅助节点，并在辅助节点上启用 AlwaysOn 可用性组。 请注意，使用 Azure 功能中的 SQL Server 数据文件时，不支持 AlwaysOn 故障转移群集实例。  
   
@@ -141,7 +140,7 @@ ON
   
  **身份验证错误**  
   
--   *无法删除凭据 "%。\*ls '，因为它被活动数据库文件使用。*   
+-   *无法删除凭据 "%. \*ls '，因为它被活动数据库文件使用。*   
     解决方法：尝试删除 Azure 存储中活动数据库文件仍在使用的凭据时，会看到此错误。 要删除凭据，必须先删除拥有此数据库文件的关联 Blob。 要删除具有活动租约的 Blob，必须先中断租约。  
   
 -   *未在容器上正确创建共享访问签名。*   
@@ -162,10 +161,10 @@ ON
 2.  *运行 Alter 语句时出错*   
     解决方法：确保在数据库联机时执行 Alter Database 语句。 将数据文件复制到 Azure 存储时，始终创建页 Blob 而不是块 Blob。 否则，ALTER Database 将失败。 查看[教程：在 Azure 存储服务中 SQL Server 数据文件](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)中第7课中提供的说明。  
   
-3.  *错误代码5120无法打开物理文件 "%。\*ls "。操作系统错误% d： "% ls"*   
-    解决方法：目前，此新增强功能不支持多个 SQL Server 实例同时访问 Azure 存储中的相同数据库文件。 如果 ServerA 处于联机状态并且有一个活动数据库文件，并且意外启动了 ServerB，并且它还具有指向相同数据文件的数据库，则第二个服务器将无法启动该数据库，错误*代码5120无法打开物理文件 "%.\*ls "。操作系统错误% d： "% ls"*。  
+3.  *错误代码5120无法打开物理文件 "%. \*ls "。操作系统错误% d： "% ls"*   
+    解决方法：目前，此新增强功能不支持多个 SQL Server 实例同时访问 Azure 存储中的相同数据库文件。 如果 ServerA 处于联机状态并且有一个活动数据库文件，并且意外启动了 ServerB，并且它还具有指向相同数据文件的数据库，则第二个服务器将无法启动该数据库，错误*代码5120无法打开物理文件 "%. \*ls "。操作系统错误% d： "% ls"*。  
   
-     要解决此问题，首先需要确定是否需要 ServerA 访问 Azure 存储中的数据库文件。 如果不需要，只需删除 ServerA 与 Azure 存储中数据库文件之间的任何连接。 要实现这一点，请执行下列操作：  
+     要解决此问题，首先需要确定是否需要 ServerA 访问 Azure 存储中的数据库文件。 如果不需要，只需删除 ServerA 与 Azure 存储中数据库文件之间的任何连接。 为此，请按照下列步骤进行操作：  
   
     1.  使用 ALTER Database 语句将 ServerA 的文件路径设置为本地文件夹。  
   

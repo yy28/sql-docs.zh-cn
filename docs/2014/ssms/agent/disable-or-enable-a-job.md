@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5041261f-0c32-4d4a-8bee-59a6c16200dd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1fa9a2700bd2f6a9ce2b074b1633182fc30c9aa7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42fe7cbeed1e2ff3f93b1afef52b165a7d660ddd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211419"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064512"
 ---
 # <a name="disable-or-enable-a-job"></a>Disable or Enable a Job
   本主题说明如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中禁用 [!INCLUDE[tsql](../../includes/tsql-md.md)]代理作业。 禁用作业不会将其删除，必要时可以再次启用该作业。  
@@ -46,7 +45,7 @@ ms.locfileid: "68211419"
   
 #### <a name="to-disable-or-enable-a-job"></a>禁用或启用作业  
   
-1.  在**对象资源管理器**中，连接到的[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例，然后展开该实例。  
+1.  在**对象资源管理器**中，连接到的实例 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，然后展开该实例。  
   
 2.  展开 **“SQL Server 代理”**。  
   

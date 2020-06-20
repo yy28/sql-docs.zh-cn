@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a85363b4971055b020314492db429b72447b6490
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 36b0f97ab4c6f36f5fc3f95e3eed3418ee0d88b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718609"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049013"
 ---
 # <a name="specify-a-breakpoint-action"></a>指定断点操作
   断点 **“命中条件”** 操作指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器针对某个断点执行的自定义任务。 如果达到指定的命中计数并满足所有指定的断点条件，则调试器将执行为断点指定的操作。  
@@ -28,13 +27,13 @@ ms.locfileid: "82718609"
   
  打印消息在 **“打印消息”** 选项中指定并被指定为一个文本字符串，其中包含的表达式包括正在调试的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的信息。 表达式包括：  
   
--   包含在大括号 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 中的 {} 表达式。 该表达式可以包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 变量、参数和内置函数。 示例包括 {@MyVariable}、{@NameParameter}、{@@SPID} 或 {SERVERPROPERTY(‘ProcessID’)}。  
+-   包含在大括号 ({}) 中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表达式。 该表达式可以包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 变量、参数和内置函数。 示例包括 {@MyVariable}、{@NameParameter}、{@@SPID} 或 {SERVERPROPERTY(‘ProcessID’)}。  
   
 -   以下关键字之一：  
   
     1.  $ADDRESS 返回在其中设置断点的存储过程或用户定义函数的名称。 如果在编辑器窗口中设置断点，$ADDRESS 将返回正在编辑的脚本文件的名称。 $ADDRESS 和 $FUNCTION 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器中返回相同的信息。  
   
-    2.  $CALLER 返回调用存储过程或函数的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码单元的名称。 如果在编辑器窗口中设置断点，则 $CALLER 返回 \<无可用调用方>。 如果断点位于从编辑器窗口中的代码调用的存储过程或用户定义函数中，$CALLER 将返回正在编辑的文件的名称。 如果断点位于从其他存储过程或函数中调用的存储过程或用户定义函数中，$CALLER 将返回此调用过程或函数的名称。  
+    2.  $CALLER 返回调用存储过程或函数的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码单元的名称。 如果断点在编辑器窗口中，$CALLER 返回 \<No caller available> 。 如果断点位于从编辑器窗口中的代码调用的存储过程或用户定义函数中，$CALLER 将返回正在编辑的文件的名称。 如果断点位于从其他存储过程或函数中调用的存储过程或用户定义函数中，$CALLER 将返回此调用过程或函数的名称。  
   
     3.  $CALLSTACK 返回链中调用当前存储过程或用户定义函数的函数的调用堆栈。 如果在编辑器窗口中设置断点，$CALLSTACK 将返回正在编辑的脚本文件的名称。  
   

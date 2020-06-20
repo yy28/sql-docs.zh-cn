@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 90d1fc5d6dd4eb972e15ae942822418aba30573e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 99f07b66fd937fda395af4d72025c0d82c8bec46
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721497"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010865"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>调试业务逻辑处理程序（复制编程）
   在同步合并订阅时，可以使用业务逻辑处理程序调用自定义业务逻辑。 有关详细信息，请参阅[合并同步期间执行业务逻辑](merge/execute-business-logic-during-merge-synchronization.md)。  

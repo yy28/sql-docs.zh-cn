@@ -25,16 +25,15 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4e767348fb5bc01bcdb2aaaa3fad1dd4f461eb6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dd2e8af6e1768ef1872f2888d2a74850edbde23c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811018"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85069059"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>查看和使用数据库引擎优化顾问的输出
-  数据库引擎优化顾问在优化数据库时，会创建摘要、建议、报告和优化日志。 可以使用优化日志输出来对数据库引擎优化顾问优化会话进行故障排除。 你可以使用摘要、建议和报告来确定是要实施优化建议还是继续优化，直到你完成[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装所需的查询性能改进。 有关如何使用数据库优化引擎来创建工作负荷和优化数据库的信息，请参阅 [启动并使用数据库引擎优化顾问](database-engine-tuning-advisor.md)。  
+  数据库引擎优化顾问在优化数据库时，会创建摘要、建议、报告和优化日志。 可以使用优化日志输出来对数据库引擎优化顾问优化会话进行故障排除。 你可以使用摘要、建议和报告来确定是要实施优化建议还是继续优化，直到你完成安装所需的查询性能改进 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关如何使用数据库优化引擎来创建工作负荷和优化数据库的信息，请参阅 [启动并使用数据库引擎优化顾问](database-engine-tuning-advisor.md)。  
   
 ##  <a name="view-tuning-output"></a><a name="View"></a> 查看优化输出  
  下列过程描述了如何使用数据库引擎优化顾问 GUI 来查看优化建议、摘要、报告和优化日志。 有关用户界面选项的信息，请参阅本主题后面的 [用户界面说明](#UI) 。  
@@ -163,17 +162,17 @@ ms.locfileid: "68811018"
   
 2.  将 [XML 输入文件示例用户指定配置 (DTA)](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md) 复制并粘贴到你的 XML 编辑器或文本编辑器。 使用此示例为您的优化会话创建 XML 输入文件。 有关执行此任务的信息，请参阅 [启动并使用数据库引擎优化顾问](database-engine-tuning-advisor.md)中的“创建 XML 输入文件”部分。  
   
-3.  编辑示例 XML 输入文件中的 `TuningOptions` 和 `Configuration` 元素。 在 `TuningOptions` 元素中，指定希望数据库引擎优化顾问在优化会话期间考虑的物理设计结构。 在 `Configuration` 元素中，指定与希望数据库引擎优化顾问分析的物理数据库设计结构的假设配置相匹配的物理设计结构。 有关可与`TuningOptions`和`Configuration`父元素一起使用的属性和子元素的信息，请参阅[XML 输入文件引用 &#40;数据库引擎优化顾问&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)。  
+3.  编辑示例 XML 输入文件中的 `TuningOptions` 和 `Configuration` 元素。 在 `TuningOptions` 元素中，指定希望数据库引擎优化顾问在优化会话期间考虑的物理设计结构。 在 `Configuration` 元素中，指定与希望数据库引擎优化顾问分析的物理数据库设计结构的假设配置相匹配的物理设计结构。 有关可与和父元素一起使用的属性和子元素的信息 `TuningOptions` `Configuration` ，请参阅[XML 输入文件引用 &#40;数据库引擎优化顾问&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)。  
   
 4.  保存该输入文件，以 **.xml** 为扩展名。  
   
-5.  根据数据库引擎优化顾问 XML 架构验证在步骤 4 中保存的 XML 输入文件。 此架构是在安装[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时安装在以下位置的：  
+5.  根据数据库引擎优化顾问 XML 架构验证在步骤 4 中保存的 XML 输入文件。 此架构是在安装时安装在以下位置的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：  
   
     ```  
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
     ```  
   
-     数据库引擎优化顾问的 XML 架构也可以在上[https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta)联机访问。  
+     数据库引擎优化顾问的 XML 架构也可以在上联机访问 [https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta) 。  
   
 6.  创建工作负荷和 XML 输入文件后，你就可以将该输入文件提交到 **dta** 命令行实用工具进行分析。 请确保为 **-ox** 实用工具参数指定 XML 输出文件名。 这样将创建一个具有 `Configuration` 元素中指定的建议配置的 XML 输出文件。 如果要再次运行数据库引擎优化顾问以检查基于该输出的另一个假设配置，您可以从输出文件中复制 `Configuration` 元素内容，然后将其粘贴到一个新的或原始 XML 输入文件中。 有关将 XML 输入文件与 **dta** 实用工具结合使用的信息，请参阅 [启动并使用数据库引擎优化顾问](database-engine-tuning-advisor.md)中的“使用 dta 实用工具优化数据库”部分。  
   
@@ -250,10 +249,10 @@ ms.locfileid: "68811018"
  **“定义”** 列以超链接形式包含所建议分区或索引的定义。 此列通常很窄，无法看到整个定义。 单击超链接可以显示一个对话框，其中包含完整定义及 **“复制到剪贴板”** 按钮。  
   
 #### <a name="partition-recommendations"></a>“分区建议”  
- **数据库名称**  
+ **Database Name**  
  包含建议修改的对象的数据库。  
   
- **建议**  
+ 建议  
  为提高性能而建议执行的操作。 可能的值为 Create 和 Drop。  
   
  **建议目标**  
@@ -269,13 +268,13 @@ ms.locfileid: "68811018"
  “建议目标”**** 的定义。 单击此列以打开“SQL 脚本预览”对话框，该对话框中包含建议操作的脚本。  
   
 ##### <a name="index-recommendations"></a>“索引建议”  
- **数据库名称**  
+ **Database Name**  
  包含建议修改的对象的数据库。  
   
  **Object Name**  
  与建议相关的表。  
   
- **建议**  
+ 建议  
  为提高性能而建议执行的操作。 可能的值为 Create 和 Drop。  
   
  **建议目标**  
@@ -308,10 +307,10 @@ ms.locfileid: "68811018"
  **“安排以后执行”**  
  为该建议生成脚本，并将操作另存为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。  
   
- **日期**  
+ **Date**  
  指定要运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业以应用建议的日期。  
   
- **阶段**  
+ **时间**  
  指定要运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业以应用建议的时间。  
   
 ### <a name="reports-tab-options"></a>“报告”选项卡选项  
@@ -320,13 +319,13 @@ ms.locfileid: "68811018"
  **“优化摘要”**  
  显示数据库引擎优化顾问建议的摘要。  
   
- **日期**  
+ **Date**  
  数据库引擎优化顾问创建报告的日期。  
   
- **阶段**  
+ **时间**  
  数据库引擎优化顾问创建报告的时间。  
   
- **服务器**  
+ **Server**  
  作为数据库引擎优化顾问工作负荷的目标的服务器。  
   
  **要优化的数据库**  

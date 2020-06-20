@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4355245af62817b7ab675241f5df9db77500daa3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a39b00bdb22cce3a15c06366c504f62305ded1f9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62705146"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047796"
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>定期评估基于策略的管理策略
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中按计划评估基于策略的管理策略。  

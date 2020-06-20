@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 50d8456b-e6a1-4b25-bc7e-56946ed654a7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: aaaf53a546ccef646c9c53a30c09196d113b738f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d5f7679031dd6ab724a0e4f109a920f3218bb0c7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704343"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049602"
 ---
 # <a name="performing-bulk-copy-operations"></a>执行大容量复制操作
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大容量复制功能支持将大量数据传输到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表或视图中，或从其中传出。 也可以通过指定 SELECT 语句将数据传出。 可以在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和操作系统的数据文件（比如 ASCII 文件）之间移动数据。 数据文件可以有不同格式；定义格式是为了对格式文件中的数据进行大容量复制。 也可以选择将数据加载到程序变量中，然后使用大容量复制函数和方法将数据传输到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  

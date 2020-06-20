@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9203e58-40ba-4712-a918-2c34a5d396d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 909db99964faaf2fc3aec8196db929bf61fc7c09
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96a6f55c5006eb050eed1c7cf296e3a96747348b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023487"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052927"
 ---
 # <a name="lockcancel-event-class"></a>Lock:Cancel 事件类
   **Lock:Cancel** 事件类指示已取消获取某个资源的锁；例如，由于查询被取消。  
@@ -56,7 +55,7 @@ ms.locfileid: "63023487"
 |**StartTime**|`datetime`|事件开始的时间（如果可用）。|14|是|  
 |**TextData**|`ntext`|文本值取决于获取的锁类型。 该值与 **sys.dm_tran_locks** 中 **resource_description**列的值相同。|1|是|  
 |**TransactionID**|`bigint`|系统分配的事务 ID。|4|是|  
-|**类型**|`int`|1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = AUTONAMEDB<br /><br /> 13 = HOBT<br /><br /> 14 = ALLOCATION_UNIT|57|是|  
+|类型|`int`|1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = AUTONAMEDB<br /><br /> 13 = HOBT<br /><br /> 14 = ALLOCATION_UNIT|57|是|  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_trace_setevent &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   

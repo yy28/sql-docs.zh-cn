@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bda0b29e-57f5-4879-b04d-1396dc56daa8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fee544578a24f47e662645a0d5cd576a74fb0496
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e98fd75976a7862909f3d4f03f78649073da32d8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768883"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966488"
 ---
 # <a name="developing-a-custom-connection-manager"></a>开发自定义连接管理器
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 使用连接管理器封装连接到外部数据源所需的信息。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包括可支持与常用数据源（从企业数据库到文本文件和 Excel 工作表）的连接的各种连接管理器。 如果 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 支持的连接管理器和外部数据源不能完全满足您的需要，则可以创建自定义连接管理器。  

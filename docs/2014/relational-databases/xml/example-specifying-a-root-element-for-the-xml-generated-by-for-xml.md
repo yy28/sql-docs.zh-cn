@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bcc54b11-0713-4e43-8dbe-d6f3ad1993b5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8b711477522f000af52129f6f3d981fa24c38790
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ab9253727389e29973ee1f4b5ce38ce94ca86670
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716793"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067851"
 ---
 # <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>示例：为 FOR XML 生成的 XML 指定根元素
   通过在 `ROOT` 查询中指定 `FOR XML` 选项，您可以为生成的 XML 请求一个顶级元素，如该查询中所示。 为 `ROOT` 指令指定的参数提供了根元素名称。  

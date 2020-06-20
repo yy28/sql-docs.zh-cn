@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b2f99e33-2303-427c-94b9-9d55f8e2a6ab
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 649731c1dbbe3f52dec899cc47366cfeb15c9c56
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7c9bdc4d51d989db2d4d676b29e0824c0e5b59a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63195238"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062809"
 ---
 # <a name="ole-automation-result-sets"></a>OLE 自动化结果集
   如果 OLE 自动化属性或方法返回的数据是一维或二维数组，则该数组将作为结果集返回到客户端：  

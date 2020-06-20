@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cf786e48e6e76ca6a16a0a50a954a2a07d3f7a66
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c96c4e17a8ce0863452db171302d650f6114919
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162350"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049932"
 ---
 # <a name="create-unique-indexes"></a>创建唯一索引
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建表的唯一索引。 唯一索引能够保证索引键中不包含重复的值，从而使表中的每一行从某种方式上具有唯一性。 创建 UNIQUE 约束和创建与约束无关的唯一索引并没有明显的区别。 进行数据验证的方式相同，而且对于唯一索引是由约束创建的还是手动创建的，查询优化器并不加以区分。 但是，创建列的 UNIQUE 约束会使索引目标更清晰。 有关 UNIQUE 约束的详细信息，请参阅 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  

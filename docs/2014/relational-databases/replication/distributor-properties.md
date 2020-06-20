@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ae7c7197fffcad7f64a82cf7c060e2e35e9bf460
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 501c7931d651498fea49749be38af374c02424ab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721404"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010784"
 ---
 # <a name="sql-server-replication-distributor-properties"></a>SQL Server 复制分发服务器属性
 本主题讨论 "**分发服务器属性**" 窗口中的 "**常规**"、"**发布服务器**" 和 "**分发数据库**" 页上的属性。 
@@ -53,7 +52,7 @@ ms.locfileid: "62721404"
  **发布服务器**  
  选择允许使用此分发服务器的服务器。 单击发布服务器旁边的属性按钮 **(...)** 可以查看和设置其他属性。  
   
- **添加**  
+ **Add**  
  如果希望允许的服务器没有列出，请单击“添加”向可用发布服务器列表中添加 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器或 Oracle 发布服务器****。 如果添加的服务器是使用此分发服务器作为远程分发服务器的第一个服务器，则系统将会提示您提供管理链接密码。  
   
  **管理链接密码**  
@@ -90,7 +89,7 @@ ms.locfileid: "62721404"
 -   使用 **“发布服务器属性”** 对话框中指定的凭据，该代理可以连接到发布服务器。该对话框可以在 **“分发服务器属性”** 对话框的 **“发布服务器”** 页中找到。    
 -   使用在新建订阅向导中为分发代理指定的凭据，该代理可以连接到订阅服务器。  
   
- 有关详细信息，请\\参阅[复制代理安全模式](security/replication-agent-security-model.md)。 
+ 有关详细信息，请参阅 \\ [复制代理安全模式](security/replication-agent-security-model.md)。 
 
   
 ## <a name="see-also"></a>另请参阅  

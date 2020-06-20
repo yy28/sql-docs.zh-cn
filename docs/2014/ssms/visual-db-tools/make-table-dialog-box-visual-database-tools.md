@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5eb28dc3-828e-486c-9348-596bb5a04c85
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b9873268608072ed7f2d6cdb4d0026ba62e5d090
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29fabc5de86c41dd00e85dfb4fe23b76d7a524dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63459981"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066134"
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>“生成表”对话框 (Visual Database Tools)
   使用此对话框可以命名通过复制行而创建的表。 当您将查询类型更改为“生成表”查询时，将显示此对话框。 若要更改查询类型，请在“查询设计器”  菜单中指向“更改类型”  ，再单击“生成表”  。  

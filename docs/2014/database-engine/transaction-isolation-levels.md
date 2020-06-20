@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8a6a82bf-273c-40ab-a101-46bd3615db8a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eea34b8ad278447d9e9085d99acb8500d14d5e7a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ee0ba17dc999c9076ca4622d47db28b8200b851
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637786"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928158"
 ---
 # <a name="transaction-isolation-levels-in-memory-optimized-tables"></a>内存优化表中的事务隔离级别
 
@@ -39,7 +38,7 @@ ms.locfileid: "73637786"
   
 -   显式使用更高的隔离级别来访问内存优化表（例如，WITH (SNAPSHOT)）。  
   
--   指定 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` 设置选项，它将内存优化表的隔离级别设置为 SNAPSHOT（如同向每个内存优化表加入 WITH(SNAPSHOT) 提示）。 有关`MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`的详细信息，请参阅[ALTER DATABASE SET Options &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
+-   指定 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` 设置选项，它将内存优化表的隔离级别设置为 SNAPSHOT（如同向每个内存优化表加入 WITH(SNAPSHOT) 提示）。 有关的详细信息 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` ，请参阅[ALTER DATABASE SET Options &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
   
  或者，如果会话的隔离级别为 READ COMMITTED，则可以使用自动提交事务。  
   
