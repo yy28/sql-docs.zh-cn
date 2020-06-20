@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e8be13e95cbf47a0769be20d6b0e55b39e9b7a57
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 09fc6ad073b12df2f9fbd8ebc6a59149f6154ced
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702749"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054943"
 ---
 # <a name="examples-using-openxml"></a>示例：使用 OPENXML
   本主题中的示例说明如何使用 OPENXML 创建 XML 文档的行集视图。 有关 OPENXML 语法的信息，请参阅 [OPENXML (Transact-SQL)](/sql/t-sql/functions/openxml-transact-sql)。 这些示例说明了 OPENXML 的各个方面，但不包括在 OPENXML 中指定元属性。 有关如何在 OPENXML 中指定元属性的详细信息，请参阅 [在 OPENXML 中指定元属性](specify-metaproperties-in-openxml.md)。  
@@ -476,7 +475,7 @@ EXEC sp_xml_removedocument @docHandle
   
 -   在行集中为**ProdID**列指定为 *ColPattern* 的 XPath 模式 ( **.** ) 将标识上下文节点（当前节点）。 按照指定的 *rowpattern*，它是 < **> 元素的** ProductID`OrderDetail` 属性。  
   
--   为行集中的 Qty  列指定的 ColPattern **\@（即 ../** Quantity  ）标识上下文节点 **ProductID> 的父节点 <** > 的 Quantity`OrderDetail`\< 属性。  
+-   *ColPattern*， **.。。/ \@ 数量**，为行集中的 "**数量**" 列指定，将标识上下文节点的父级、<>、节点的**数量**特性 `OrderDetail` \<ProductID> 。  
   
 -   同样，为行集中的 OID  列指定的 ColPattern **\@（即 ../../** OrderID  ）标识上下文节点的父节点的父级 < **> 的 OrderID**`Order` 属性。 该父节点是 <`OrderDetail`>，上下文节点是 <`ProductID`>。  
   
@@ -604,7 +603,7 @@ id  lname   xmlname                   OverFlow
 -   如果 WITH 子句中的列是类型化的 XML 列并且 XML 实例不符合架构，将返回错误。  
   
 ### <a name="j-retrieving-individual-values-from-multivalued-attributes"></a>J. 从多值属性中检索单值  
- XML 文档会含有多值属性。 例如， **IDREFS** 属性可以是多值属性。 在 XML 文档内，多值属性值被指定为一个字符串，并用空格分隔值。 在以下 XML 文档中，**Student> 元素的** attends\< 属性与 **Class> 的** attendedBy\< 属性都是多值属性。 从多值 XML 属性中检索单值并将每个值存储到数据库中的不同行中，这要求额外的工作。 下例显示了此过程。  
+ XML 文档会含有多值属性。 例如， **IDREFS** 属性可以是多值属性。 在 XML 文档内，多值属性值被指定为一个字符串，并用空格分隔值。 在下面的 XML 文档中，元素的 "**出席**" 属性 \<Student> 和的**attendedBy**属性的 \<Class> 值为多值。 从多值 XML 属性中检索单值并将每个值存储到数据库中的不同行中，这要求额外的工作。 下例显示了此过程。  
   
  此示例 XML 文档由以下元素组成：  
   
@@ -616,13 +615,13 @@ id  lname   xmlname                   OverFlow
   
      **id** （班级 ID）、 **name**和 **attendedBy** 属性。 **attendedBy** 属性是多值属性。  
   
- **Student> 中的** attends\< 属性和 **Class> 中的** attendedBy\< 属性表示 Student 表与 Class 表之间的 **m:n** 关系。 一个学生可在很多班上课，而一个班也可有很多学生。  
+ 中的**出席**特性 \<Student> 和中的**attendedBy**属性 \<Class> 表示学生和类表之间的**m:n**关系。 一个学生可在很多班上课，而一个班也可有很多学生。  
   
  假设希望拆分此文档，并将它保存到下列数据库中：  
   
--   将 \<Student> 数据保存到 Students 表中。  
+-   将 \<Student> 数据保存在 "学生" 表中。  
   
--   将 \<Class> 数据保存到 Courses 表中。  
+-   将 \<Class> 数据保存在课程表中。  
   
 -   将 Student 与 Class 之间的 **m:n** 关系数据保存到 CourseAttendence 表中。 提取这些值需要做额外的工作。 若要检索该信息并将其存储到表中，请使用下列存储过程：  
   
@@ -632,9 +631,9 @@ id  lname   xmlname                   OverFlow
   
     -   **Extract_idrefs_values**  
   
-         从每个 \<Course> 元素中提取单个学生 ID。 用边缘表检索这些值。  
+         从每个元素中提取单个学生 Id \<Course> 。 用边缘表检索这些值。  
   
- 以下是具体步骤：  
+ 下面是相关步骤：  
   
 ```  
 -- Create these tables:  
@@ -801,9 +800,9 @@ Col1        BinaryCol
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_xml_preparedocument (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
- [sp_xml_removedocument (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
- [OPENXML (Transact-SQL)](/sql/t-sql/functions/openxml-transact-sql)   
+ [sp_xml_preparedocument &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
+ [sp_xml_removedocument &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
+ [OPENXML &#40;Transact-sql&#41;](/sql/t-sql/functions/openxml-transact-sql)   
  [OPENXML (SQL Server)](openxml-sql-server.md)  
   
   

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bf284ffce044e0efa1f855e0e504a1f92dc7e3da
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 60fbd0341c4e29c6f98cc4d5fe5a2cfabc9b703f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175984"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959048"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份组件。 备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对于保护您的数据至关重要。 本讨论涵盖了备份类型和备份限制。 该主题还介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份设备和备份介质。  
@@ -67,7 +66,7 @@ ms.locfileid: "70175984"
  数据库的备份。 完整数据库备份表示备份完成时的整个数据库。 差异数据库备份只包含自最近完整备份以来对数据库所做的更改。  
   
  [差异备份 (differential backup)](full-database-backups-sql-server.md)  
- 基于完整数据库或部分数据库以及一组数据文件或文件组的最新完整备份的数据备份（** 差异基准），仅包含自差异基准以来发生了更改的数据区。  
+ 基于完整数据库或部分数据库以及一组数据文件或文件组的最新完整备份的数据备份（  差异基准），仅包含自差异基准以来发生了更改的数据区。  
   
  部分差异备份仅记录自上一次部分备份（称为“差异基准”）以来文件组中发生更改的数据区。  
   
@@ -85,7 +84,7 @@ ms.locfileid: "70175984"
   
  **备份媒体术语和定义**  
   
- [备份设备](backup-devices-sql-server.md)  
+ [备份设备 (backup device)](backup-devices-sql-server.md)  
  要将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份写入其中以及可从其中还原的磁盘或磁带设备。 SQL Server 备份也可以写入 Azure Blob 存储服务，并且使用 URL  格式来指定备份文件的目标和名称。 有关详细信息，请参阅[使用 Azure Blob 存储服务执行 SQL Server 备份和还原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
  [备份介质](media-sets-media-families-and-backup-sets-sql-server.md)  
@@ -97,7 +96,7 @@ ms.locfileid: "70175984"
  [介质簇 (media family)](media-sets-media-families-and-backup-sets-sql-server.md)  
  在介质集中的单个非镜像设备或一组镜像设备上创建的备份。  
   
- [介质集](media-sets-media-families-and-backup-sets-sql-server.md)  
+ [介质集 (media set)](media-sets-media-families-and-backup-sets-sql-server.md)  
  备份介质（磁带或磁盘文件）的有序集合，使用固定类型和数量的备份设备向其写入了一个或多个备份操作。  
   
  [镜像介质集 (mirrored media set)](mirrored-backup-media-sets-sql-server.md)  
@@ -133,7 +132,7 @@ ms.locfileid: "70175984"
   
 -   如果在进行备份操作时尝试创建或删除数据库文件，则创建或删除操作将失败。  
   
- 如果备份操作与文件管理操作或收缩操作重叠，则产生冲突。 无论哪个冲突操作首先开始，第二个操作都将等待第一个操作设置的锁超时。（超时期限由会话超时设置控制。）如果在超时期限内释放锁，第二个操作将继续。 如果锁超时，则第二个操作失败。  
+ 如果备份操作与文件管理操作或收缩操作重叠，则产生冲突。 无论哪个冲突操作首先开始，第二个操作总会等待第一个操作设置的锁超时。（超时期限由会话超时设置控制。）如果在超时期限内释放锁，第二个操作将继续执行。 如果锁超时，则第二个操作失败。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
  **使用备份设备和备份介质**  
@@ -182,7 +181,7 @@ ms.locfileid: "70175984"
 -   [教程：将 SQL Server 备份和还原到 Azure Blob 存储服务](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [备份和还原 SQL Server 数据库](back-up-and-restore-of-sql-server-databases.md)   
+ [SQL Server 数据库的备份和还原](back-up-and-restore-of-sql-server-databases.md)   
  [还原和恢复概述 (SQL Server)](restore-and-recovery-overview-sql-server.md)   
  [维护计划](../maintenance-plans/maintenance-plans.md)   
  [事务日志 (SQL Server)](../logs/the-transaction-log-sql-server.md)   

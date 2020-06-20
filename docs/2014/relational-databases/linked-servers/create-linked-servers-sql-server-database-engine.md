@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b28468db1024a9789364e5b6e5c115cba71fa9f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62743483"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024967"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>创建链接服务器（SQL Server 数据库引擎）
   本主题说明如何通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建链接服务器和访问来自其他 [!INCLUDE[tsql](../../includes/tsql-md.md)]的数据。 通过创建链接服务器，您可以使用来自多个数据源的数据。 该链接服务器不必是其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，尽管这种情况很常见。  
@@ -35,7 +34,7 @@ ms.locfileid: "62743483"
 ##  <a name="security"></a><a name="Security"></a> Security  
   
 ### <a name="permissions"></a>权限  
- 使用[!INCLUDE[tsql](../../includes/tsql-md.md)]语句时，需要`ALTER ANY LINKED SERVER`对服务器的权限或**setupadmin**固定服务器角色的成员身份。 当使用[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]需要`CONTROL SERVER`权限或**sysadmin**固定服务器角色的成员身份时。  
+ 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时，需要 `ALTER ANY LINKED SERVER` 对服务器的权限或**setupadmin**固定服务器角色的成员身份。 当使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 需要 `CONTROL SERVER` 权限或**sysadmin**固定服务器角色的成员身份时。  
   
 ##  <a name="how-to-create-a-linked-server"></a><a name="Procedures"></a> 如何创建链接服务器  
  您可以使用以下任意一项：  
@@ -99,7 +98,7 @@ ms.locfileid: "62743483"
      **远程密码**  
      指定远程用户的密码。  
   
-     **添加**  
+     **Add**  
      添加新的本地登录。  
   
      **删除**  
@@ -152,7 +151,7 @@ ms.locfileid: "62743483"
   
      如果为 0，则使用 **sp_configure** 默认 [远程登录超时](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md) 选项值。  
   
-     **查询超时值**  
+     **查询超时**  
      链接服务器上执行的查询的超时值（秒）。  
   
      如果为 0，则使用 **sp_configure** 默认 [远程查询超时](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md) 选项值。  
@@ -160,7 +159,7 @@ ms.locfileid: "62743483"
      **启用分布式事务处理的升级**  
      使用该选项可通过 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分布式事务处理协调器 (MS DTC) 事务保护服务器到服务器的操作过程。 如果该选项是 TRUE，则调用远程存储过程将启动分布式事务，并用 MS DTC 登记该事务。 有关详细信息，请参阅 [sp_serveroption (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql)的数据。  
   
-6.  单击" **确定**"。  
+6.  单击“确定”。  
   
 ##### <a name="to-view-the-provider-options"></a>查看提供程序选项  
   

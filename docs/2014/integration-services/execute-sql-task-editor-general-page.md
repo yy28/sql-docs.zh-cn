@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 96d211defa789888a3fd7b513b4dff60fa795cb6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 294836625075a70b8e101afef2bb9221a177ca47
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058992"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966774"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>执行 SQL 任务编辑器（“常规”页）
   可以使用 **“执行 SQL 任务编辑器”** 对话框的 **“常规”** 页，配置执行 SQL 任务以及提供任务运行的 SQL 语句。  
@@ -39,7 +38,7 @@ ms.locfileid: "66058992"
 > [!NOTE]  
 >  如果存储过程通过为要建立的连接和要完成的事务提供比 **TimeOut**指定秒数更长的时间来模拟睡眠功能，则将不会超时。 但是，执行查询的存储过程始终受 **TimeOut**指定时间的限制。  
   
- **Ansi**  
+ **CodePage**  
  指定在转换变量中的 Unicode 值时要使用的代码页。 默认值为本地计算机的代码页。  
   
 > [!NOTE]  
@@ -56,8 +55,8 @@ ms.locfileid: "66058992"
   
  **相关主题：** [OLE DB 连接管理器](connection-manager/ole-db-connection-manager.md)、[ODBC 连接管理器](connection-manager/odbc-connection-manager.md)、[ADO 连接管理器](connection-manager/ado-connection-manager.md)、[ADO.NET 连接管理器](connection-manager/ado-net-connection-manager.md)、[SQL Server Compact Edition 连接管理器](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
- **连接**  
- 从已定义的连接管理器的列表中选择连接。 若要创建新连接，请\<选择 "**新建连接 ...** ">。  
+ **Connection**  
+ 从已定义的连接管理器的列表中选择连接。 若要创建新连接，请选择 \<**New connection...**> 。  
   
  **SQLSourceType**  
  选择任务运行的 SQL 语句的源类型。  
@@ -68,7 +67,7 @@ ms.locfileid: "66058992"
   
  此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**直接输入**|将源设置为某个 Transact-SQL 语句。 选择此值将显示动态选项 **SQLStatement**。|  
 |**文件连接**|选择包含 Transact-SQL 语句的文件。 设置此选项将显示动态选项 **FileConnection**。|  
@@ -101,13 +100,13 @@ ms.locfileid: "66058992"
   
 ### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = 文件连接  
  **文件连接**  
- 选择现有文件连接管理器，或单击\<"**新建连接 ...** "> 创建新的连接管理器。  
+ 选择现有文件连接管理器，或单击 \<**New connection...**> 以创建新的连接管理器。  
   
  **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = 变量  
  **SourceVariable**  
- 选择现有变量，或单击 " \<**新建变量 ...** "> 创建新变量。  
+ 选择现有变量，或单击 \<**New variable...**> 创建新变量。  
   
  **相关主题：** [Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
   

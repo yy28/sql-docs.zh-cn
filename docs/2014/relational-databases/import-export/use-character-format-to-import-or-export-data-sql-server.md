@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ab658be26dc8ccbdd4e760d0b1bc835ace3b2c38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88e16e3ea97b0a2348d3fd41ff7b980055c8c206
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011670"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026277"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>使用字符格式导入或导出数据 (SQL Server)
   将数据批量导出到要在其他程序中使用的文本文件时，或从其他程序生成的文本文件批量导入数据时，建议使用字符格式。  
@@ -44,10 +43,10 @@ ms.locfileid: "66011670"
   
 -   存储在字符格式文件中的所有 `sql_variant` 数据都是在不包括元数据的情况下进行存储的。 每个数据值都将按照隐式数据转换规则转换为 `char` 格式。 当数据导入到 `sql_variant` 列中时，该数据是以 `char` 格式导入的。 而导入到数据类型不是 `sql_variant` 的列中时，数据将通过隐式转换从 `char` 格式转换为其他格式。 有关数据转换的详细信息，请参阅[数据类型转换（数据库引擎）](/sql/t-sql/data-types/data-type-conversion-database-engine)。  
   
--   **Bcp**实用工具将值`money`作为字符格式数据文件导出，小数点后有四位数字，不包含任何数字分组符号（如逗号分隔符）。 例如，包含值 1,234,567.123456 的 `money` 列将以字符串 1234567.1235 的形式大容量导出到数据文件中。  
+-   **Bcp**实用工具将 `money` 值作为字符格式数据文件导出，小数点后有四位数字，不包含任何数字分组符号（如逗号分隔符）。 例如，包含值 1,234,567.123456 的 `money` 列将以字符串 1234567.1235 的形式大容量导出到数据文件中。  
   
 ## <a name="command-options-for-character-format"></a>字符格式的命令选项  
- 可以使用**bcp**、BULK INSERT 或 INSERT ... 将字符格式数据导入表中。选择\* "从 OPENROWSET （BULK ...）"。对于**bcp**命令或 BULK INSERT 语句，可以在命令行中指定数据格式。 对于 INSERT ...SELECT * FROM OPENROWSET(BULK...) 语句，必须在格式化文件中指定数据格式。  
+ 可以使用**bcp**、BULK INSERT 或 INSERT ... 将字符格式数据导入表中。选择 " \* 从 OPENROWSET （BULK ...）"。对于**bcp**命令或 BULK INSERT 语句，可以在命令行中指定数据格式。 对于 INSERT ...SELECT * FROM OPENROWSET(BULK...) 语句，必须在格式化文件中指定数据格式。  
   
  下列命令行选项支持字符格式：  
   
@@ -56,7 +55,7 @@ ms.locfileid: "66011670"
 |**bcp**|**-c**|使**bcp**实用工具使用字符数据。<sup>1</sup>|  
 |BULK INSERT|DATAFILETYPE **='char'**|在批量导入数据时使用字符格式。|  
   
- <sup>1</sup>若要将字符（**-c**）数据加载到与早期版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端兼容的格式，请使用 **-V**开关。 有关详细信息，请参阅 [导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
+ <sup>1</sup>若要将字符（**-c**）数据加载到与早期版本的客户端兼容的格式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请使用 **-V**开关。 有关详细信息，请参阅 [导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
   
  有关详细信息，请参阅 [bcp 实用工具](../../tools/bcp-utility.md)、[BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql) 或 [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)。  
   

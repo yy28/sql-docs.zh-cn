@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a0df84bb0a4ee7e933666705a9d1a1d8fb31edf2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e47843558b485bca12f2e15d406f5a7a47db24cf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698170"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999058"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>所有值位于内存中时将数据作为表值参数发送 (ODBC)
   本主题描述当所有值都在内存中时，如何将数据作为表值参数发送到存储过程。 有关演示表值参数的另一个示例，请参阅[将表值参数用于 ODBC&#41;&#40;](table-valued-parameters-odbc.md)。  

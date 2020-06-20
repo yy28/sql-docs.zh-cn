@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 89d1e2fd7c4f0e414424ad678c7ea9f3936b02f0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 044d4bcb17144b4fcb6e233b1aadec84e20f2876
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176377"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966617"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>生成、部署和调试自定义对象
   在为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的自定义对象编写代码后，必须生成和部署程序集，将该程序集集成到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，使其可在包中使用，然后对其进行测试和调试。
@@ -70,7 +69,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ```
 
 ##  <a name="deploying-the-assembly"></a><a name="deploying"></a> 部署程序集
- [!INCLUDE[ssIS](../../includes/ssis-md.md)]设计器通过枚举在安装时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]创建的一系列文件夹中的文件，找到可供包使用的自定义对象。 当使用默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的安装设置时，这组文件夹位于**C:\Program Files\Microsoft SQL Server\120\DTS**下。 但是，如果为自定义对象创建安装程序，应检查**HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\120\SSIS\Setup\DtsPath**注册表项的值，以验证此文件夹的位置。
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)]设计器通过枚举在安装时创建的一系列文件夹中的文件，找到可供包使用的自定义对象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。 当使用默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装设置时，这组文件夹位于**C:\PROGRAM Files\Microsoft SQL Server\120\DTS**下。 但是，如果为自定义对象创建安装程序，应检查**HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\120\SSIS\Setup\DtsPath**注册表项的值，以验证此文件夹的位置。
 
  可以通过下面两种方式将程序集放入文件夹中：
 
@@ -115,7 +114,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ##  <a name="testing-and-debugging-your-code"></a><a name="testing"></a> 测试并调试代码
  若要调试自定义对象的运行时方法，最简单的方法是在生成自定义对象后从 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 启动 dtexec.exe****，然后运行使用该组件的包。
 
- 如果要调试组件的设计时方法（如`Validate`方法），请在的第二个实例[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]中打开使用该组件的包，并附加到其**devenv**进程。
+ 如果要调试组件的设计时方法（如方法），请在的 `Validate` 第二个实例中打开使用该组件的包 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ，并附加到其**devenv.exe**进程。
 
  如果还希望在包已打开并在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中运行时调试组件的运行时方法，必须在包的执行过程中强制暂停，以便还能够附加到 DtsDebugHost.exe**** 进程。
 
@@ -123,9 +122,9 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 
 1.  在调试配置中，按照本主题中的说明签名和生成项目，进行部署，然后安装到全局程序集缓存中。
 
-2.  在**项目属性**的 "**调试**" 选项卡上，选择 "**启动外部程序**" 作为 "**启动操作**"，然后找到在 C:\Program Files\Microsoft SQL server\120\dts\binn。中默认安装的**dtexec。**
+2.  在**项目属性**的 "**调试**" 选项卡上，选择 "**启动外部程序**" 作为 "**启动" 操作**，并查找**dtexec.exe**，默认情况下安装在 C:\Program Files\Microsoft SQL server\120\dts\binn。中。
 
-3.  在“启动选项”**** 下的“命令行选项”**** 文本框中，输入运行使用了组件的包所需的命令行参数。 通常，命令行参数包含 /F[ILE] 开关，后跟 .dtsx 文件的路径和文件名。 有关详细信息，请参阅 [dtexec Utility](../packages/dtexec-utility.md)。
+3.  在“启动选项”**** 下的“命令行选项”**** 文本框中，输入运行使用了组件的包所需的命令行参数。 通常，命令行参数包含 /F[ILE] 开关，后跟 .dtsx 文件的路径和文件名。 有关详细信息，请参阅 [dtexec 实用工具](../packages/dtexec-utility.md)。
 
 4.  在组件的运行时方法源代码中根据需要设置断点。
 

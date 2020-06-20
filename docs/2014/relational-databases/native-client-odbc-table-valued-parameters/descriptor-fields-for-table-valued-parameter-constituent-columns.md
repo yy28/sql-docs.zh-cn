@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 944b3968-fd47-4847-98d6-b87e8ef2acdc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ddbc29c1895ad57ad191604fec228109c8c7c55e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3e4c45cf608c78715abd7c5075d4cd7fb2e162a5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698802"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018391"
 ---
 # <a name="descriptor-fields-for-table-valued-parameter-constituent-columns"></a>表值参数构成列的描述符字段
   本部分中描述的表值参数描述符字段是通过将[SQLSetDescField](../native-client-odbc-api/sqlsetdescfield.md)和[SQLSetDescField](../native-client-odbc-api/sqlsetdescfield.md)与实现参数描述符（IPD）的句柄结合使用来进行操作的。  
@@ -41,7 +40,7 @@ ms.locfileid: "82698802"
   
  这些属性仅对表值参数列有效。 对于其他参数，将忽略它们。  
   
- 如果为表值参数列设置了 SQL_CA_SS_COL_HAS_DEFAULT_VALUE，则该列的 SQL_DESC_DATA_PTR 必须为 Null 指针。 否则，SQLExecute 或 SQLExecDirect 将返回 SQL_ERROR。 将使用 SQLSTATE = 07S01 生成诊断记录，并使用消息 "参数 \< p>，列 c>" 的默认参数使用无效， \< 其中 \< p> 是参数序号， \< c> 为列序号。  
+ 如果为表值参数列设置了 SQL_CA_SS_COL_HAS_DEFAULT_VALUE，则该列的 SQL_DESC_DATA_PTR 必须为 Null 指针。 否则，SQLExecute 或 SQLExecDirect 将返回 SQL_ERROR。 将使用 SQLSTATE = 07S01 和消息 "参数，列的默认参数的无效用法" 生成诊断记录 \<p> \<c> ，其中 \<p> 是参数序数， \<c> 是列序号。  
   
 ## <a name="see-also"></a>另请参阅  
  [ODBC&#41;&#40;表值参数](table-valued-parameters-odbc.md)  

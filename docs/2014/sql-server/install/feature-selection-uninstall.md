@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 33fa3b75-3257-44e1-919e-3d2ff12accbc
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8c5159e9a29da96ca1364658c8dcc3290cb799c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7760bb7c0f45fa9b92303141b78963f5f975e5e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095243"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062423"
 ---
 # <a name="feature-selection-uninstall"></a>功能选择（卸载）
-  使用 "功能选择-卸载" 页可以选择要从指定的实例中删除[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的功能。  
+  使用 "功能选择-卸载" 页可以选择要从指定的实例中删除的功能 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="options"></a>选项  
  可以选择功能的任意组合。  

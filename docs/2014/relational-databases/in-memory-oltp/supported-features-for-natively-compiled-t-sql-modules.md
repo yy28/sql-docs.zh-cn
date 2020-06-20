@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6b875808a5a9379f917b246cb871420a339519f7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 65e6e794c5858a68c4b2a9b298513911b487cf52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718807"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025726"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>本机编译的存储过程中支持的构造
   本主题包含对本机编译存储过程支持的功能的列表（[CREATE PROCEDURE &#40;transact-sql&#41;](/sql/t-sql/statements/create-procedure-transact-sql)）：  
@@ -66,7 +65,7 @@ ms.locfileid: "82718807"
 ##  <a name="supported-operators"></a><a name="so"></a>支持的运算符  
  支持下列运算符。  
   
--   [&#40;transact-sql&#41;](/sql/t-sql/language-elements/comparison-operators-transact-sql) （例如，>、 \< 、>= 和 <=）的比较运算符在条件（如果）中受支持。  
+-   条件中支持[比较运算符](/sql/t-sql/language-elements/comparison-operators-transact-sql)（例如，>、 \<, > = 和 <=）&#41;&#40;（如果为）。  
   
 -   一元运算符（+、-）。  
   
@@ -112,7 +111,7 @@ ms.locfileid: "82718807"
   
 -   筛选器谓词 IS [NOT] NULL  
   
--   从 \< 内存优化表>  
+-   FROM \<memory optimized table>  
   
 -   支持[GROUP BY &#40;transact-sql&#41;](/sql/t-sql/queries/select-group-by-transact-sql) ，以及聚合函数 AVG、COUNT、COUNT_BIG、MIN、MAX 和 SUM。 类型 nvarchar、char、varchar、varchar、varbinary 和 Binary 不支持 MIN 和 MAX。 如果 ORDER by 列表中的表达式在 "分组依据" 列表中按原义显示，则[order By 子句 &#40;transact-sql&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)受[Group by &#40;transact-sql&#41;](/sql/t-sql/queries/select-group-by-transact-sql) 。 例如，支持 GROUP BY a + b ORDER BY a + b，但不支持 GROUP BY a、b ORDER BY a + b。  
   
@@ -172,7 +171,7 @@ ms.locfileid: "82718807"
 ##  <a name="limitations-on-sorting"></a><a name="los"></a>排序限制  
  可以在使用 [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) 和 [ORDER BY 子句 (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql) 的查询中对 8,000 多行进行排序。 但是，如果没有 [ORDER BY 子句 (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql)，[TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) 最多可对 8,000 行进行排序（如果存在联接，则更少）。  
   
- 如果查询同时使用 [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) 运算符和 [ORDER BY 子句 (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql)，则可以对 TOP 运算符指定多达 8192 行。 如果指定的行数超过8192，则会收到错误消息：**消息41398，级别16，状态1，过程* \< procedureName>*，行* \< lineNumber>* TOP 运算符最多可返回8192行;请求的* \<>数*。**  
+ 如果查询同时使用 [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) 运算符和 [ORDER BY 子句 (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql)，则可以对 TOP 运算符指定多达 8192 行。 如果指定的行数超过8192，则会收到错误消息：**消息41398，级别16，状态1，过程 *\<procedureName>* ，行 *\<lineNumber>* TOP 运算符最多可返回8192行; *\<number>* 已请求。**  
   
  如果您没有 TOP 子句，则可以使用 ORDER BY 对任何数目的行进行排序。  
   

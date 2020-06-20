@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fa36e1af-ed98-4abc-97c1-c4cc5d227b29
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: de740430601e3b596a1d4d9717a8e23ef1e528cf
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 29153f3e4e9265e87feb0e23ba9ae97118691e95
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82710386"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018492"
 ---
 # <a name="direct-execution"></a>直接执行
   直接执行是最基本的语句执行方式。 应用程序将生成一个包含语句的字符串 [!INCLUDE[tsql](../../../includes/tsql-md.md)] ，然后使用**SQLExecDirect**函数提交它以执行执行。 当该语句到达服务器时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将其编译为执行计划，然后立即运行该执行计划。  

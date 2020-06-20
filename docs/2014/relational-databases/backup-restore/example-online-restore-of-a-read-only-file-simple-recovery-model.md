@@ -13,15 +13,14 @@ helpviewer_keywords:
 ms.assetid: 0c691fc6-9865-46a7-b055-8097424492d6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ccbb89a7af71545c3b410356b6ab6b101983798d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d84c920a2cb40866ba106b4d30d8e24c4caea611
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876147"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958287"
 ---
-# <a name="example-online-restore-of-a-read-only-file-simple-recovery-model"></a>示例：联机还原只读文件（简单恢复模式）
+# <a name="example-online-restore-of-a-read-only-file-simple-recovery-model"></a>示例：只读文件的联机还原（简单恢复模式）
   本主题针对采用简单恢复模式并包含只读文件组的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。 在简单恢复模式下，如果某个文件在最后一次变为只读时进行了备份，则可以联机还原该只读文件。  
   
  在此示例中，名为 `adb` 的数据库包含三个文件组。 文件组 `A` 为读/写文件组，而文件组 `B` 和 `C` 是只读的。 最初，所有文件组都处于联机状态。 现在必须还原文件组 `B`中的只读文件 `b1`。 数据库管理员可以使用在该文件变为只读状态之后获取的备份对其进行还原。 在还原过程中，文件组 `B` 将处于脱机状态，但是数据库的其余文件组仍处于联机状态。  

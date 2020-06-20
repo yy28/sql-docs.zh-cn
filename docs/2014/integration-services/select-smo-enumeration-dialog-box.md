@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 64ada1fe-21a2-4675-98fc-d5c803aa32f0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3b9166e26129710a342411ab1da71b1c44c76239
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b112669457f9e9f675e00466896e4da91abd53d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055952"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963670"
 ---
 # <a name="select-smo-enumeration-dialog-box"></a>“选择 SMO 枚举”对话框
   可以使用“选择 SMO 枚举”**** 对话框，指定要在指定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上枚举的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理对象 (SMO) 并选择枚举类型。  

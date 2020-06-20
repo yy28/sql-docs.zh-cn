@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: c0b3f4c2-b77c-4485-be77-cec5fd382c86
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 64b1945ba990278241d38cebb029feab86d6d7bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ab35cd849d020a265fac097f2a0314a81c20dd8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058032"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965437"
 ---
 # <a name="integration-services-features-and-tasks"></a>Integration Services 功能和任务
-  查找任何人员（设计人员、开发人员、分析人员或管理员）创建和开发[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]包所需的信息。 然后，了解如何将这些包合并到您的应用程序和网站中。  
+  查找任何人员（设计人员、开发人员、分析人员或管理员）创建和开发包所需的信息 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 。 然后，了解如何将这些包合并到您的应用程序和网站中。  
   
 ## <a name="in-this-section"></a>本节内容  
  [Integration Services &#40;SSIS&#41; 和工作室环境](integration-services-ssis-development-and-management-tools.md)  

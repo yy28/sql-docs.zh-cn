@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 39651a0a-3a83-40f4-b8eb-b8b869607a94
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 743f8d8930652deadf3698ea16440b3361ae1789
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f742ac646b51a7eed6d5a1cab2877fb4802be59
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059066"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966797"
 ---
 # <a name="execute-process-task-editor-general-page"></a>执行进程任务编辑器（“常规”页）
   可以使用“执行进程任务编辑器”对话框的“常规”页，对执行进程任务进行命名和说明。********  

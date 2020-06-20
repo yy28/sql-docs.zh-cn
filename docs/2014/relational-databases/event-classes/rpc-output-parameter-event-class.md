@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c830d11-7e88-4c3e-98e9-ba72c8c99b02
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 205b0a7cfeab4d512eac86c39be78bdfd42abe90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be8bdf89171f95662afc29508e2fe0785d613a3e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044233"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028877"
 ---
 # <a name="rpc-output-parameter-event-class"></a>RPC Output Parameter 事件类
   RPC Output Parameter 事件类跟踪远程过程调用 (RPC) 在执行之后的输出参数值。  

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 402e9e0d787d6f60e069625e908faee4fbecaeca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e65863314943e07150aed8fc45494e7059fea21
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63049433"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062491"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>故障转移群集实例管理和维护
   诸如从现有 AlwaysOn 故障转移群集实例 (FCI) 中添加或删除节点等此类维护任务均使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序来完成。 其他管理任务（如更改 IP 地址资源、从某些 FCI 情形中恢复）则使用故障转移群集管理器管理单元来完成，该管理单元专用于 Windows Server 故障转移群集 (WSFC) 服务。  

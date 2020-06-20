@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 118a7cac-4c0d-44fd-b63e-3d542932d239
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ea1d9d70e8b470277af5641faaaa1767b4f1a6c0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a740856a041bb662e8605db9c2b2e06a78808fef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704377"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017380"
 ---
 # <a name="using-ado-with-sql-server-native-client"></a>将 ADO 用于 SQL Server Native Client
   为了充分利用中引入的新功能，例如 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 多个活动的结果集（MARS）、查询通知、用户定义类型（udt）或新的**xml**数据类型，使用 ActiveX 数据对象（ADO）的现有应用程序应将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序用作其数据访问接口。  

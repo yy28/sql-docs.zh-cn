@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 127044042eed7f082b6f1f7ba7ae6918232ba9ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c035446034c5f9f8dfdeeed6a9b6b4be2ea77d72
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891762"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966047"
 ---
 # <a name="step-2-verifying-the-deployment-bundle"></a>步骤 2：验证部署捆绑
   在第 1 课中，创建了 Deployment Tutorial 项目，并向该项目添加了包和辅助文件；在上一任务中，您为项目生成了部署实用工具。  
@@ -50,7 +49,7 @@ ms.locfileid: "62891762"
   
      `<?xml version="1.0"?><DTSDeploymentManifest GeneratedBy="Domain\UserName" GeneratedFromProjectName="Deployment Tutorial" GeneratedDate="2006-02-24T13:29:02.6537669-08:00" AllowConfigurationChanges="true"><Package>DataTransfer.dtsx</Package><Package>LoadXMLData.dtsx</Package><ConfigurationFile>datatransferconfig.dtsconfig</ConfigurationFile><ConfigurationFile>loadxmldataconfig.dtsconfig</ConfigurationFile><MiscellaneousFile>Readme.txt</MiscellaneousFile><MiscellaneousFile>orders.xml</MiscellaneousFile><MiscellaneousFile>NewCustomers.txt</MiscellaneousFile><MiscellaneousFile>orders.xsd</MiscellaneousFile></DTSDeploymentManifest>`  
   
-4.  验证`AllowConfigurationChanges`特性的值是否为**TRUE** ，并且 XML 是否包含两个`Package`包中的每个包的元素、 `MiscellaneousFile`四个非包文件中每个文件的元素以及两`ConfigurationFile`个 XML 配置文件中每个文件的元素。  
+4.  验证特性的值是否为 `AllowConfigurationChanges` **true** ，并且 XML 是否包含两个 `Package` 包中的每个包的元素、 `MiscellaneousFile` 四个非包文件中每个文件的元素以及 `ConfigurationFile` 两个 XML 配置文件中每个文件的元素。  
   
 5.  退出 Internet Explorer 或文本编辑器。  
   

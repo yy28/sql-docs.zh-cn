@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: f56c0736-dccc-41d2-afcf-71344aff143a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c2371109c8fa28c579cd90735a51a4ad3a790385
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f54f2a3520a0d34290cb81b411a5ce41a59d7c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255065"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062175"
 ---
 # <a name="manage-schedules"></a>管理计划
-  允许您查看和更改代理作业计划[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的属性。  
+  允许您查看和更改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业计划的属性。  
   
 ## <a name="options"></a>选项  
  **可用计划**  
@@ -29,10 +28,10 @@ ms.locfileid: "63255065"
  **名称**  
  显示计划的名称。  
   
- **Enabled**  
+ **已启用**  
  选择此选项可以启用该计划。  
   
- **描述**  
+ **说明**  
  描述计划运行作业的条件。  
   
  **计划中的作业**  

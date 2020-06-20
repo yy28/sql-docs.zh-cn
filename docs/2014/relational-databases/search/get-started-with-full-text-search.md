@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fd5ced641ee8fc17f0be7d7b6e19aff17dcb69bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eec806bffba330ac3ab995c1b3bfd3504589ecfd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011289"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063292"
 ---
 # <a name="get-started-with-full-text-search"></a>全文搜索入门
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的数据库在默认情况下支持全文索引。 不过，若要对表使用全文索引，必须对要使用全文引擎访问的表列设置全文索引功能。  
@@ -34,7 +33,7 @@ ms.locfileid: "66011289"
   
     1.  标识要包含在全文索引中的各个文本列。  
   
-    2.  如果给定列包含存储为二进制数据（`varbinary(max)`或`image`数据）的文档，则必须指定一个表列（"类型"*列*），用于标识要编制索引的列中各文档的类型。  
+    2.  如果给定列包含存储为二进制数据（ `varbinary(max)` 或 `image` 数据）的文档，则必须指定一个表列（"类型"*列*），用于标识要编制索引的列中各文档的类型。  
   
     3.  指定对列中文档进行全文搜索时所使用的语言。  
   
@@ -91,7 +90,7 @@ ms.locfileid: "66011289"
   
  将表分配到全文目录时，应考虑下列准则：  
   
--   始终选择可用于全文唯一键的最小唯一索引。 （4字节、基于整数的索引是最佳的。）这会显著减少文件系统[!INCLUDE[msCoName](../../includes/msconame-md.md)]中 Search 服务所需的资源。 如果主键较大（超过 100 个字节），可以考虑选择表中的另一个唯一索引（或创建另一个唯一索引）来作为全文唯一键。 否则，如果全文唯一键的大小超过所允许的最大值（900 个字节），全文填充将无法继续进行。  
+-   始终选择可用于全文唯一键的最小唯一索引。 （4字节、基于整数的索引是最佳的。）这会 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 显著减少文件系统中 Search 服务所需的资源。 如果主键较大（超过 100 个字节），可以考虑选择表中的另一个唯一索引（或创建另一个唯一索引）来作为全文唯一键。 否则，如果全文唯一键的大小超过所允许的最大值（900 个字节），全文填充将无法继续进行。  
   
 -   如果创建索引的表有数百万行，请将该表分配到其自身的全文目录。  
   
@@ -101,14 +100,14 @@ ms.locfileid: "66011289"
 ### <a name="associating-a-stoplist-with-the-full-text-index"></a>将非索引字表与全文索引关联  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 引入了非索引字表。 “非索引字表”  是非索引字（也称为“干扰词”）的列表。 非索引字表与每个全文索引相关联，因而该非索引字表中的词会应用于对该索引的全文查询。 默认情况下，系统非索引字表与新的全文索引相关联。 不过，您也可以创建和使用您自己的非索引字表。 有关详细信息，请参阅 [为全文搜索配置和管理非索引字和非索引字表](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
   
- 例如，以下[CREATE 全文非索引字表](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]语句通过从系统非索引字表进行复制来创建一个名为 myStoplist3 的新的全文非索引字表：  
+ 例如，以下[CREATE 全文非索引字表](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句通过从系统非索引字表进行复制来创建一个名为 myStoplist3 的新的全文非索引字表：  
   
 ```  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
- 下面的[ALTER 全文非索引字表](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]语句将更改名为 myStoplist 的非索引字表，并为西班牙语添加单词 "en"，然后为法语添加单词 "en"：  
+ 下面的[ALTER 全文非索引字表](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句将更改名为 myStoplist 的非索引字表，并为西班牙语添加单词 "en"，然后为法语添加单词 "en"：  
   
 ```  
 ALTER FULLTEXT STOPLIST MyStoplist ADD 'en' LANGUAGE 'Spanish';  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 644ba0cfdbe2f0043364c633676bbc536c641efa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62468186"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025785"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>对内存中 OLTP 的 SQL Server Management Studio 支持
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是用于管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基础结构的集成环境。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供用于配置、监视和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的工具。 有关详细信息，请参阅 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)  
@@ -136,7 +135,7 @@ ms.locfileid: "62468186"
   
         -   复制数据库。 对于具有内存优化的对象的数据库，将不在事务内执行在目标服务器上创建数据库以及传输数据。  
   
-        -   导入和导出数据。 使用 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“** 从一个或多个表或视图中导入和导出向导复制数据”选项。 如果目标表是目标数据库中不存在的内存优化表：  
+        -   导入和导出数据。 使用“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从一个或多个表或视图中导入和导出向导复制数据”选项。 如果目标表是目标数据库中不存在的内存优化表：  
   
             1.  在 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入与导出向导”** 中的 **“指定表复制或查询”** 屏幕上，选择 **“复制一个或多个表或视图的数据”** 。 然后单击“下一步”  。  
   
@@ -153,7 +152,7 @@ ms.locfileid: "62468186"
 ## <a name="unsupported-features-in-ssmanstudiofull"></a>中不支持的功能 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  对于内存中 OLTP 对象，数据库引擎不支持的功能和操作， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 同样不支持。  
   
- 有关不支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的功能的详细信息，请参阅[支持的 SQL Server 功能](unsupported-sql-server-features-for-in-memory-oltp.md)。  
+ 有关不支持的功能的详细信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅[支持的 SQL Server 功能](unsupported-sql-server-features-for-in-memory-oltp.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 对内存中 OLTP 的支持](sql-server-support-for-in-memory-oltp.md)  

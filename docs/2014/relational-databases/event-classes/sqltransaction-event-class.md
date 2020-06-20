@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4e175aa3-4f3d-4b23-a423-4a7a1bd4e84e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: de5a49853f08541cd617afb20273820f956ee660
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8884d417a2609eb8537582e22ae8339db5d05890
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061287"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028133"
 ---
 # <a name="sqltransaction-event-class"></a>SQLTransaction 事件类
   使用 SQLTransaction 事件类可以监视事务开始和完成的时间，尤其是当您测试应用程序、触发器或存储过程时。  

@@ -13,18 +13,17 @@ f1_keywords:
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 23dee8cac6046223bf22ea52d1ceb4013a408050
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9e114802c6e69467ba9438ee4c525ef85e73024
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059059"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966827"
 ---
 # <a name="execute-package-task-editor"></a>执行包任务编辑器
   可以使用执行包任务编辑器来配置执行包任务。 执行包任务通过允许包将其他包作为工作流的组成部分运行来扩展 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的企业功能。  
   
- **您希望做什么？**  
+ **要执行什么操作？**  
   
 -   [打开执行包任务编辑器](#open)  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66059059"
  如果子包受密码保护，请提供子包的密码，或单击省略号按钮 (…)，为子包创建新的密码。  
   
  `ExecuteOutOfProcess`  
- 指定子包是在父包的进程中运行还是在单独的进程中运行。 默认情况下，"执行包" 任务的 ExecuteOutOfProcess 属性设置为`False`，子包与父包运行在同一进程中。 如果将此属性设置为 `true`，则在单独的进程中运行子包。  这可能减慢子包的启动。 此外，如果将该属性设置为 `true`，则不能在仅工具安装中调试包；必须安装 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 产品。 有关详细信息，请参阅 [安装 Integration Services](install-windows/install-integration-services.md)。  
+ 指定子包是在父包的进程中运行还是在单独的进程中运行。 默认情况下，"执行包" 任务的 ExecuteOutOfProcess 属性设置为 `False` ，子包与父包运行在同一进程中。 如果将此属性设置为 `true`，则在单独的进程中运行子包。  这可能减慢子包的启动。 此外，如果将该属性设置为 `true`，则不能在仅工具安装中调试包；必须安装 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 产品。 有关详细信息，请参阅 [安装 Integration Services](install-windows/install-integration-services.md)。  
   
 ### <a name="referencetype-dynamic-options"></a>ReferenceType 动态选项  
   
@@ -69,12 +68,12 @@ ms.locfileid: "66059059"
  **位置**  
  选择子包的位置。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**SQL Server**|将位置设置为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例。|  
 |**文件系统**|将位置设置为文件系统。|  
   
- **连接**  
+ **Connection**  
  选择子包的存储位置的类型。  
   
  **PackageNameReadOnly**  
@@ -87,8 +86,8 @@ ms.locfileid: "66059059"
 ### <a name="location-dynamic-options"></a>位置动态选项  
   
 #### <a name="location--sql-server"></a>位置 = SQL Server  
- **连接**  
- 在列表中选择一个 OLE DB 连接管理器，或\<单击 "**新建连接 ...** "> 创建新的连接管理器。  
+ **Connection**  
+ 在列表中选择一个 OLE DB 连接管理器，或单击 " \<**New connection...**> 新建连接管理器"。  
   
  **相关主题：** [OLE DB 连接管理器](connection-manager/ole-db-connection-manager.md)、[配置 OLE DB 连接管理器](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
@@ -96,8 +95,8 @@ ms.locfileid: "66059059"
  键入子包的名称，或单击省略号 (…) 再定位到包。  
   
 #### <a name="location--file-system"></a>位置 = 文件系统  
- **连接**  
- 在列表中选择一个文件连接管理器，或\<单击 "**新建连接 ...** "> 创建新的连接管理器。  
+ **Connection**  
+ 在列表中选择一个文件连接管理器，或单击 " \<**New connection...**> 新建连接管理器"。  
   
  **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   

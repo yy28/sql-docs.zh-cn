@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9c077fdb85612c5e3f574d9d0236b07f149b9c3a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f82e5eb63122f6a965e3a001b8124445cbe91675
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057979"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965413"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Integration Services 项目转换向导
   **“Integration Services 项目转换向导”** 可以将项目转换为项目部署模型。  
@@ -25,7 +24,7 @@ ms.locfileid: "66057979"
 > [!NOTE]  
 >  如果项目包含一个或多个数据源，则在项目转换完成时删除数据源。 若要创建到可由项目中的包共享的数据源的连接，请在项目级别添加连接管理器。 有关详细信息，请参阅 [在包中添加、删除或共享连接管理器](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)。  
   
- **您希望做什么？**  
+ **要执行什么操作？**  
   
 -   [打开“Integration Services 项目转换向导”](#open_dialog)  
   
@@ -65,20 +64,20 @@ ms.locfileid: "66057979"
   
  在“源”下拉列表中选择“文件系统”时，该页显示以下选项********。 当包驻留在文件系统中时选择此选项。  
   
- **Folder**  
+ **文件夹**  
  键入包路径，或通过单击“浏览”**** 导航到该包。  
   
  在“源”下拉列表中选择“SSIS 包存储区”时，该页显示以下选项********。 有关包存储区的详细信息，请参阅[包管理（SSIS 服务）](service/package-management-ssis-service.md)。  
   
- **服务器**  
+ **Server**  
  键入服务器名称或选择该服务器。  
   
- **Folder**  
+ **文件夹**  
  键入包路径，或通过单击“浏览”**** 导航到该包。  
   
  在“源”下拉列表中选择“Microsoft SQL Server”时，该页显示以下选项********。 当包驻留在 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中时选择此选项。  
   
- **服务器**  
+ **Server**  
  键入服务器名称或选择该服务器。  
   
  **使用 Windows 身份验证**  
@@ -93,7 +92,7 @@ ms.locfileid: "66057979"
  **密码**  
  使用 SQL Server 身份验证时，提供密码。  
   
- **Folder**  
+ **文件夹**  
  键入包路径，或通过单击“浏览”**** 导航到该包。  
   
 ##  <a name="set-options-on-the-select-packages-page"></a><a name="selectPackages"></a>设置 "选择包" 页上的选项  
@@ -103,7 +102,7 @@ ms.locfileid: "66057979"
  **状态**  
  指示包是否已准备好转换为项目部署模型。  
   
- **消息**  
+ **Message**  
  显示与包关联的消息。  
   
  **密码**  
@@ -112,7 +111,7 @@ ms.locfileid: "66057979"
  **应用于所选内容**  
  单击以将“密码”**** 文本框中的密码应用于一个或多个所选包。  
   
- **全部**  
+ **刷新**  
  刷新包的列表。  
   
 ##  <a name="set-options-on-the-select-destination-page"></a><a name="destination"></a>设置 "选择目标" 页上的选项  
@@ -121,7 +120,7 @@ ms.locfileid: "66057979"
 > [!NOTE]  
 >   只有在您从 **运行该向导时，** “选择目标” [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]页才可用。  
   
- **输出路径**  
+ “输出路径”   
  键入部署文件的路径，或通过单击“浏览”**** 导航到该文件。  
   
  **项目名称**  
@@ -180,7 +179,7 @@ ms.locfileid: "66057979"
  **添加配置**  
  将在其他项目中包含的包配置添加到要用参数替换的可用配置的列表中。 您可以选择存储在文件系统或 SQL Server 中的配置。  
   
- **全部**  
+ **刷新**  
  单击以刷新配置列表。  
   
  **在转换后删除所有包的配置**  
@@ -197,14 +196,14 @@ ms.locfileid: "66057979"
  **参数名称**  
  列出参数名称。  
   
- **Scope**  
+ **范围**  
  选择参数的作用域（包或项目）。  
   
 ##  <a name="set-options-on-the-configure-parameters-page"></a><a name="configureParameters"></a>设置 "配置参数" 页上的选项  
  **名称**  
  列出参数名称。  
   
- **Scope**  
+ **范围**  
  列出参数的作用域。  
   
  **值**  

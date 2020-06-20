@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f36c73b2-a1d1-4513-9594-78818f3fcb0d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6108a35d3f1c51f4d3dedbcf673be1d837091b71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da0c24aa83c965c948365eddb9f8bd9820468579
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62692076"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028639"
 ---
 # <a name="showplan-text-event-class"></a>Showplan Text 事件类
   Showplan Text 事件类在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SQL 语句时发生。 所包含的信息是 Showplan All、Showplan XML Statistics Profile 或 Showplan XML 事件类中可用信息的子集。  

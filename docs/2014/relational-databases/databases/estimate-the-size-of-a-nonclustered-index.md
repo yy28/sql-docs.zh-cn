@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aa4b0d73d1cba3d612da9f666bb548dfbc54102f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 097c0e5568ba17b12f83d09e347eb3bf8b0bd7da
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054122"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965964"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>估计非聚集索引的大小
   按照下列步骤估计存储非聚集索引所需的空间大小：  
@@ -181,7 +180,7 @@ ms.locfileid: "66054122"
   
 5.  计算索引行大小：  
   
-     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size***Fixed_Leaf_Size + ***Variable_Leaf_Size***Variable_Leaf_Size + ***Leaf_Null_Bitmap*** + 1 （用于索引行的行标题开销） + 6 （对应于子页 ID 指针）  
+     ***Leaf_Row_Size***   = ***Fixed_Leaf_Size***  + ***Variable_Leaf_Size***  + ***Leaf_Null_Bitmap*** + 1 （用于索引行的行标题开销） + 6 （对应于子页 ID 指针）  
   
 6.  下一步，计算每页的索引行数（每页有 8096 个可用字节）：  
   
@@ -210,7 +209,7 @@ ms.locfileid: "66054122"
   
 1.  计算索引中的非叶级数：  
   
-     ***非叶级别***= 1 + 日志 Index_Rows_Per_Page （***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***）  
+     ***非叶级别***= 1 + 日志 Index_Rows_Per_Page （***Num_Leaf_Pages***  /  ***Index_Rows_Per_Page***）  
   
      将此值向上舍入到最接近的整数。 此值不包括非聚集索引的叶级别。  
   

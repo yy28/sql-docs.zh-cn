@@ -12,20 +12,19 @@ f1_keywords:
 ms.assetid: 4f7a806d-4867-4d1f-bc65-b00c1caee7b6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b4b920b17e960059e1212be7dd15c176c0b25a47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12a6666357bf4e8a6dc68f395a1e2e8e1fd8fcaf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059188"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966867"
 ---
 # <a name="execute-package-dialog-box"></a>Execute Package Dialog Box
   使用 **“执行包”** 对话框可以运行在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器上存储的包。  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包可以包含在环境变量中存储的值的参数。 在执行此类包之前，您必须指定将使用哪一环境来提供环境变量值。 一个项目可以包含多个环境，但只能使用一个环境在执行时绑定环境变量值。 如果在包中未使用任何环境变量，则不要求环境。  
   
- 您希望做什么？  
+ 你希望做什么？  
   
 -   [打开“执行包”对话框](#open_dialog)  
   

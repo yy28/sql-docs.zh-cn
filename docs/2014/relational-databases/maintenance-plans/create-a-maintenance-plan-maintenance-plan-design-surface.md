@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c5a78fc65ee96439c6b6a4d7726e9a40522e5be4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86380b0e6940a4b4cf9a5103d44860f68258ef59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144338"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024591"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>创建维护计划（维护计划设计图面）
   本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中使用维护计划设计图面创建单个服务器或多服务器维护计划。 尽管 **“维护计划向导”** 是创建基本维护计划的最佳方法，但使用设计图面创建计划允许您使用增强的工作流。  
@@ -144,7 +143,7 @@ ms.locfileid: "63144338"
   
     2.  选择想要显示在 **“工具箱”** 中的工具，然后单击 **“确定”** 。  
   
-     向 **“工具箱”** 中添加维护计划任务也会使这些任务可用于 **“维护计划向导”** 中。 有关上述各个任务的详细信息，请参阅“启动维护计划向导”下的  [使用维护计划向导](use-the-maintenance-plan-wizard.md#SSMSProcedure)。  
+     向 **“工具箱”** 中添加维护计划任务也会使这些任务可用于 **“维护计划向导”** 中。 有关上述各个任务的详细信息，请参阅“启动维护计划向导”下的 [使用维护计划向导](use-the-maintenance-plan-wizard.md#SSMSProcedure)。  
   
 8.  定义各任务之间的工作流：  
   
@@ -251,7 +250,7 @@ ms.locfileid: "63144338"
      停止加载日志文件条目。 例如，如果远程或脱机日志文件需要较长时间才能加载，并且您只想查看最新的条目，则可以使用此选项。  
   
      **日志文件摘要**  
-     此信息窗格显示日志文件筛选摘要。 如果未对文件进行筛选，您将看到以下文本： **“未应用任何筛选器”** 。 如果对日志应用了筛选器，你将看到以下文本：“基于以下条件筛选日志条目: \<筛选条件>”  。  
+     此信息窗格显示日志文件筛选摘要。 如果未对文件进行筛选，您将看到以下文本： **“未应用任何筛选器”** 。 如果对日志应用了筛选器，将看到以下文本：基于以下条件筛选日志项：**** \<filter criteria>。  
   
      **Date**  
      显示事件的日期。  
@@ -272,6 +271,6 @@ ms.locfileid: "63144338"
      选择一行可以在页面底部显示有关所选事件行的其他详细信息。 在网格中，通过将列拖动到的新位置可以重新排列各列的顺序。 通过将网格标题中的列分隔条向左或向右拖动，可以调列的大小。 双击网格标题中的列分隔条，可以按内容宽度自动调整列的大小。  
   
      **实例**  
-     发生事件的实例的名称。 这显示为：计算机名称\\实例名称   。  
+     发生事件的实例的名称。 这显示为：计算机名称\\实例名称。  
   
   
