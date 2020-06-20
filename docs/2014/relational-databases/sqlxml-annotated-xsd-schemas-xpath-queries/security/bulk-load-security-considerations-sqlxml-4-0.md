@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b87b81acef728129c38debe56f24859671117d1f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7e19b845d5a4ebddb7b859afced7d93c75d4b56d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717727"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048980"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>大容量加载安全性注意事项 (SQLXML 4.0)
   下面是使用 XML 大容量加载的安全准则：  

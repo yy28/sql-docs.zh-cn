@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 0e6d7aed-28d2-419e-be6a-f60d3729bfd0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3f5900b087081150b78bb0c335cf0ac1634d5f83
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d27547862138b511a4defaa3cae80f48f69fdc4f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705213"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048167"
 ---
 # <a name="profiling-odbc-driver-performance-how-to-topics-odbc"></a>对 ODBC 驱动程序性能进行事件探查的操作指南主题 (ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序有两个特定于驱动程序的选项，用于对驱动程序的性能进行事件探查。  

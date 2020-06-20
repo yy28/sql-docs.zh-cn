@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1111cb5d-2bd9-4bdb-8de2-dc0e47452dd6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d2153e92f87e87ef152542a1934b9cdfd596fef9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 07e2e67c1c30302c6d3e758f76805e92e509f6c4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717761"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002868"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定显式转换函数 (SQLXML 4.0)
   以下示例显示如何在 XPath 查询中指定显式转换函数。 这些示例中的 XPath 查询是针对 SampleSchema1.xml 中包含的映射架构指定的。 有关此示例架构的信息，请参阅[&#40;SQLXML 4.0&#41;的 XPath 批注的 XSD 架构示例](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
@@ -30,7 +29,7 @@ ms.locfileid: "82717761"
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. 使用 number() 显式转换函数  
  `number()` 函数将参数转换为数字。  
   
- 假设**ContactID**的值是非数字的，则以下查询会将**ContactID**转换为数字，并将其与值4进行比较。 然后，该查询将返回上下文节点的所有** \< Employee>** 元素子级，其中**ContactID**属性的数值为4：  
+ 假设**ContactID**的值是非数字的，则以下查询会将**ContactID**转换为数字，并将其与值4进行比较。 然后，该查询将返回 **\<Employee>** 上下文节点的所有子元素，该属性的**ContactID**属性的数值为4：  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -79,7 +78,7 @@ ms.locfileid: "82717761"
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. 使用 string() 显式转换函数  
  `string()` 函数将参数转换为字符串。  
   
- 以下查询将**ContactID**转换为字符串，并将其与字符串值 "4" 进行比较。 该查询将返回上下文节点的所有** \< 雇员>** 元素子级，其中**ContactID**的字符串值为 "4"：  
+ 以下查询将**ContactID**转换为字符串，并将其与字符串值 "4" 进行比较。 查询返回 **\<Employee>** 上下文节点的所有子元素，其**ContactID**的字符串值为 "4"：  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  

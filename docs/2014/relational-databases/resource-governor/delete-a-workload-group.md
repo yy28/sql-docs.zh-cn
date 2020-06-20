@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2daf8fe7e12cec5317335a0dcce273b16d428bcc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 801a731db6c5b31bc479d1a3f6079c45ad9a7c04
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63215789"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063611"
 ---
 # <a name="delete-a-workload-group"></a>删除工作负荷组
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 删除工作负荷组或资源池。  
@@ -79,7 +78,7 @@ ms.locfileid: "63215789"
   
     -   在已发出 `DROP WORKLOAD GROUP` 语句但决定不打算显式停止会话以应用更改的情况下，您可以使用在发出 DROP 语句之前组的名称来重新创建组，然后将该组移动到原始资源池。  
   
-3.  运行`ALTER RESOURCE GOVERNOR RECONFIGURE`语句。  
+3.  运行 `ALTER RESOURCE GOVERNOR RECONFIGURE` 语句。  
   
 ### <a name="example-transact-sql"></a>示例 (Transact-SQL)  
  下面的示例删除名为 `groupAdhoc`的工作负荷组。  

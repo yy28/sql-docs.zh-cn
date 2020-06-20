@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 351a5a4aa6bc1655b8da5fced3e51385dd498bdf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289185"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027104"
 ---
 # <a name="hierarchical-data-sql-server"></a>层次结构数据 (SQL Server)
-  内置`hierarchyid`数据类型使存储和查询层次结构数据变得更加容易。 `hierarchyid`针对表示树（这是最常见的分层数据类型）进行了优化。  
+  内置 `hierarchyid` 数据类型使存储和查询层次结构数据变得更加容易。 `hierarchyid`针对表示树（这是最常见的分层数据类型）进行了优化。  
   
  层次结构数据定义为一组通过层次结构关系互相关联的数据项。 在层次结构关系中，一个数据项是另一个项的父级。 通常存储在数据库中的层次结构数据示例包括以下内容：  
   
@@ -50,7 +49,7 @@ ms.locfileid: "79289185"
   
 -   按深度优先顺序进行比较  
   
-     假设有`hierarchyid`两个值**a**和**b**， **a<b**表示在树的深度优先遍历中，a 位于 b 之前。 `hierarchyid` 数据类型的索引按深度优先顺序排序，在深度优先遍历中相邻的节点的存储位置也相邻。 例如，一条记录的子级的存储位置与该记录的存储位置是相邻的。  
+     假设有两个 `hierarchyid` 值**a**和**b**， **a<b**表示在树的深度优先遍历中，a 位于 b 之前。 `hierarchyid` 数据类型的索引按深度优先顺序排序，在深度优先遍历中相邻的节点的存储位置也相邻。 例如，一条记录的子级的存储位置与该记录的存储位置是相邻的。  
   
 -   支持任意插入和删除  
   
@@ -108,7 +107,7 @@ GO
   
 -   很少跨层次结构的不同部分执行查询。 也就是说，通常仅对层次结构中的单个点进行查询。 在这些情况下，存储在一起并不重要。 例如，如果组织表仅用于为各个雇员处理工资单，则使用父/子更好。  
   
--   非叶子树移动频繁并且性能非常重要。 在父/子表示形式中，更改层次结构中行的位置将影响单个行。 更改`hierarchyid`使用中某行的位置将影响*n*行，其中*n*是要移动的子树中的节点数。  
+-   非叶子树移动频繁并且性能非常重要。 在父/子表示形式中，更改层次结构中行的位置将影响单个行。 更改使用中某行的位置将 `hierarchyid` 影响*n*行，其中*n*是要移动的子树中的节点数。  
   
      如果非叶子树移动频繁并且性能非常重要，但多数移动操作都是在比较明确的层次结构级别上进行的，请考虑将较高和较低的级别拆分成两个层次结构。 这样，所有的移动操作都是移到较高层次结构的叶级。 例如，假设有一个由服务承载的网站的层次结构。 各网站包含许多以分层方式排列的页面。 承载的网站可能移动到网站层次结构中的其他位置，但是从属的页面很少会重新排列。 这种情况可表示如下：  
   
@@ -122,7 +121,7 @@ GO
   
   
 ### <a name="xml"></a>XML  
- XML 文档是一个树，因此单个 XML 数据类型实例可以表示一个完整的层次结构。 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]创建 XML 索引时， `hierarchyid`在内部使用值来表示层次结构中的位置。  
+ XML 文档是一个树，因此单个 XML 数据类型实例可以表示一个完整的层次结构。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 创建 XML 索引时，在 `hierarchyid` 内部使用值来表示层次结构中的位置。  
   
  当满足以下所有条件时，使用 XML 数据类型会更好：  
   
@@ -265,7 +264,7 @@ VALUES ('/', 'Earth', 'Planet');
 ##  <a name="related-tasks"></a><a name="tasks"></a> 相关任务  
   
 ###  <a name="migrating-from-parentchild-to-hierarchyid"></a><a name="migrating"></a> 从父/子迁移到 hierarchyid  
- 大多数树都使用父/子结构来表示。 从父/子结构迁移到使用`hierarchyid`的表的最简单方法是使用临时列或临时表来跟踪层次结构中每个级别的节点数。 有关迁移父/子表的示例，请参阅 [教程：使用 hierarchyid 数据类型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)的第 1 课。  
+ 大多数树都使用父/子结构来表示。 从父/子结构迁移到使用的表的最简单方法 `hierarchyid` 是使用临时列或临时表来跟踪层次结构中每个级别的节点数。 有关迁移父/子表的示例，请参阅 [教程：使用 hierarchyid 数据类型](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)的第 1 课。  
   
   
 ###  <a name="managing-a-tree-using-hierarchyid"></a><a name="BKMK_ManagingTrees"></a> 使用 hierarchyid 管理树  
@@ -319,7 +318,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>使用可序列化事务的示例  
- 该 **Org_BreadthFirst** 索引可确保确定 **@last_child** 使用范围查找。 除了应用程序可能需要检查的其他错误情况之外，插入后出现重复键冲突表示试图添加具有同一 id 的多个雇员，因此**@last_child**必须重新计算。 下面的代码使用可序列化事务和广度优先索引来计算新节点的值：  
+ 该 **Org_BreadthFirst** 索引可确保确定 **@last_child** 使用范围查找。 除了应用程序可能需要检查的其他错误情况之外，插入后出现重复键冲突表示试图添加具有同一 id 的多个雇员，因此 **@last_child** 必须重新计算。 下面的代码使用可序列化事务和广度优先索引来计算新节点的值：  
   
 ```  
 CREATE TABLE Org_T2  
@@ -389,7 +388,7 @@ GO
   
   
 ###  <a name="finding-ancestors-by-using-the-clr"></a><a name="findclr"></a> 使用 CLR 查找祖先  
- 查找级别最低的共同祖先就是一项涉及层次结构中两个节点的常用操作。 这可以用[!INCLUDE[tsql](../includes/tsql-md.md)]或 CLR 编写，因为这两种`hierarchyid`类型都可用。 建议用 CLR，因为用它时查找速度会更快。  
+ 查找级别最低的共同祖先就是一项涉及层次结构中两个节点的常用操作。 这可以用 [!INCLUDE[tsql](../includes/tsql-md.md)] 或 CLR 编写，因为这两种 `hierarchyid` 类型都可用。 建议用 CLR，因为用它时查找速度会更快。  
   
  使用下面的 CLR 代码来列出祖先，并查找级别最低的共同祖先：  
   
@@ -497,7 +496,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="moving-subtrees"></a><a name="BKMK_MovingSubtrees"></a> 移动子树  
- 另一项常用操作是移动子树。 下面的过程将获取的子**@oldMgr**树，并使其**@oldMgr**（包括）的**@newMgr**子树。  
+ 另一项常用操作是移动子树。 下面的过程将获取的子树 **@oldMgr** ，并使其（包括 **@oldMgr** ）的子树 **@newMgr** 。  
   
 ```  
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  

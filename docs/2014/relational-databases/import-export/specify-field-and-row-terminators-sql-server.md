@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5f00a8330673dc15eed57f770635a251d5aa97e4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 548beeae68f5585c5cf2ba56b67027532ab43b71
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011846"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026588"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>指定字段终止符和行终止符 (SQL Server)
   对于字符数据字段，可选的终止字符允许在数据文件中使用“字段终止符”  标记每个字段的结尾，以及使用“行终止符”  标记每行的结尾。 终止字符是为读取数据文件的程序指明一个字段或行的结束位置和另一个字段或行的开始位置的一种方式。  
@@ -56,7 +55,7 @@ ms.locfileid: "66011846"
 >  交互使用 **bcp** 并指定 \n（换行符）作为行终止符时， **bcp** 将自动以 \r（回车符）作为前缀，从而形成行终止符 \r\n。  
   
 ## <a name="specifying-terminators-for-bulk-export"></a>指定大容量导出的终止符  
- 大容量导出`char`或`nchar`数据，并且希望使用非默认终止符时，必须为**bcp**命令指定终止符。 可以用下列任一方式指定终止符：  
+ 大容量导出 `char` 或 `nchar` 数据，并且希望使用非默认终止符时，必须为**bcp**命令指定终止符。 可以用下列任一方式指定终止符：  
   
 -   使用格式化文件逐个字段指定终止符。  
   
@@ -127,8 +126,8 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
     |Qualifier|说明|  
     |---------------|-----------------|  
-    |FIELDTERMINATOR **= '*`field_terminator`*'**|指定用于字符和 Unicode 字符数据文件的字段终止符。<br /><br /> 默认的字段终止符是 \t（制表符）。|  
-    |ROWTERMINATOR **= '*`row_terminator`*'**|指定用于字符和 Unicode 字符数据文件的行终止符。<br /><br /> 默认的行终止符是 \n（换行符）。|  
+    |FIELDTERMINATOR **= ' *`field_terminator`* '**|指定用于字符和 Unicode 字符数据文件的字段终止符。<br /><br /> 默认的字段终止符是 \t（制表符）。|  
+    |ROWTERMINATOR **= ' *`row_terminator`* '**|指定用于字符和 Unicode 字符数据文件的行终止符。<br /><br /> 默认的行终止符是 \n（换行符）。|  
   
      有关详细信息，请参阅 [BULK INSERT (Transact SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)。  
   
@@ -169,7 +168,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
   
 |选项|Attribute|  
 |------------|---------------|  
-|DATAFILETYPE **= '`char`'**|指定将数据字段作为字符数据加载。|  
+|DATAFILETYPE **= ' `char` '**|指定将数据字段作为字符数据加载。|  
 |FIELDTERMINATOR **='** `,` **'**|将逗号 (`,`) 指定为字段终止符。|  
 |ROWTERMINATOR **='** `\n` **'**|指定行终止符作为换行符。|  
   

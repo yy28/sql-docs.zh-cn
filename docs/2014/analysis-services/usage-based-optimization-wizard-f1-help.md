@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: e5f5a938-ae7c-4f4e-9416-a7f94ac82763
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e5e94818245ba1e87d90f87539ae07e9531e5450
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea3aedff3f7bfa931b900bdeab59495a35853ae1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065573"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938238"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>基于使用情况的优化向导的 F1 帮助
-  基于使用情况的优化向导用于为分区设计聚合，它在输出方面与聚合设计向导相似。 但是，基于使用情况的优化向导设计聚合时所基于的是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例查询日志中所记录的特定使用模式的查询。 聚合通过允许[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]直接从多维数据集存储中检索预先计算的总计，而不必为每个查询重新计算基础数据源中的数据，从而提高了性能。  
+  基于使用情况的优化向导用于为分区设计聚合，它在输出方面与聚合设计向导相似。 但是，基于使用情况的优化向导设计聚合时所基于的是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例查询日志中所记录的特定使用模式的查询。 聚合通过允许 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 直接从多维数据集存储中检索预先计算的总计，而不必为每个查询重新计算基础数据源中的数据，从而提高了性能。  
   
- 若要从[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]内打开基于使用情况的优化向导，请为[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]项目打开多维数据集设计器，然后单击 "**聚合**" 选项卡。单击工具栏中的 "**基于使用情况的优化**" 按钮。  
+ 若要从内打开基于使用情况的优化向导 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ，请为项目打开多维数据集设计器， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 然后单击 "**聚合**" 选项卡。单击工具栏中的 "**基于使用情况的优化**" 按钮。  
   
  要从 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 内打开基于使用情况的优化向导，请连接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库，然后打开“多维数据集”**** 文件夹。 选择多维数据集，然后打开 **“度量组”** 文件夹，然后展开要修改的度量组。 右键单击“分区”**** 文件夹，然后选择“基于使用情况的优化”****。  
   

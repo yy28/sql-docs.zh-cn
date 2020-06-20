@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7225064a-4f6c-40d3-a026-34e757a966da
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7c64e45800b168a45a674dc74a5f192e5e9f8389
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f0d49f9fe2ca7fa54e4314cd2e412b8d9e31f126
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066086"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938378"
 ---
 # <a name="toolbar-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>工具栏（“分区”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用 **“工具栏”** 窗格执行多维数据集设计器的 **“分区”** 选项卡上的常规操作。  
@@ -25,7 +24,7 @@ ms.locfileid: "66066086"
 |选项|说明|  
 |------------|-----------------|  
 |**添加商业智能**|单击此项可显示 **“商业智能向导”** ，并向多维数据集添加商业智能功能。|  
-|**进程**|单击此项可以显示 **“处理”** 对话框，以便处理所选度量值组或分区。|  
+|**处理**|单击此项可以显示 **“处理”** 对话框，以便处理所选度量值组或分区。|  
 |**新建分区**|单击此项可显示 **“分区向导”** ，并在所选度量值组中创建新的分区。|  
 |**重命名**|单击此项可以重命名所选分区。<br /><br /> 注意：只有在“度量值组” **** 窗格中，在度量值组的“分区” **** 网格中选择分区的任意单元时，才会启用此选项。|  
 |**删除**|单击此项可显示 **“删除对象”** 对话框，并删除所选操作。<br /><br /> 注意：只有在“度量值组” **** 窗格中，在度量值组的“分区” **** 网格中选择分区的整行时，才会启用此选项。<br /><br /> 注意：如果选择了写回分区，则将禁用此选项。|  

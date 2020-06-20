@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 4aea3e17-cd0f-48dd-8f22-b54a6c716426
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 19a30107af159c1cd87324290844172371f02752
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f394e54252c382bb2f70dccc531f306f7264d87f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175566"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938358"
 ---
 # <a name="trace-data-mining-client-for-excel"></a>跟踪（Excel 数据挖掘客户端）
   ![“跟踪”按钮](media/misc-trace.gif "“跟踪”按钮")
 
- "**跟踪**器" 对话框可帮助您监视发送到用于数据挖掘的实例[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的语句。 在您创建了与实例的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]连接后，客户端和服务器之间的所有交互都记录在 "**跟踪**器" 窗格中，其中包括创建结构、添加挖掘模型和进行预测的语句以及从服务器返回的某些消息。
+ "**跟踪**器" 对话框可帮助您监视发送到用于数据挖掘的实例的语句 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 。 在您创建了与实例的连接后 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，客户端和服务器之间的所有交互都记录在 "**跟踪**器" 窗格中，其中包括创建结构、添加挖掘模型和进行预测的语句以及从服务器返回的某些消息。
 
  根据所请求的操作，该语句可能是数据挖掘扩展插件 (DMX) 数据定义查询或数据操作查询、Analysis Services 脚本语言 (ASSL) 包或者是对 Analysis Services 储存过程的调用。 但不会显示实际的数值结果和数据值。
 

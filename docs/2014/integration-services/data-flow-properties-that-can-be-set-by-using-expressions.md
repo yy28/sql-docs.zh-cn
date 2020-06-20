@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f70a956834108c21dd7b17bb9f3e04db38f29bfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d23037bc09b735fc28e52eabb1852d1af303d15
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059934"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916947"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>可以使用表达式设置的数据流属性
   可以使用数据流任务容器上的可用属性表达式来指定数据流对象的某些属性的值。  
@@ -35,7 +34,7 @@ ms.locfileid: "66059934"
   
  若要为本主题中列出的数据流对象的其中一个属性指定属性表达式，请在设计器的 **“控制流”** 图面上选择该数据流任务，或选择设计器的 **“数据流”** 选项卡但不选择任何单个组件或路径，以此方式显示数据流任务的 **“属性”** 窗口。 选择“表达式”**** 属性，然后单击省略号 (...) 以显示“属性表达式编辑器”**** 对话框。 下拉“属性”**** 列表以选择某个属性，然后在“表达式”**** 文本框中键入一个表达式，或者单击省略号 (...) 以显示“表达式生成器”**** 对话框。  
   
- **“属性”** 列表仅显示那些已位于设计器的 **“数据流”** 图面上的数据流对象的可用属性。 因此，不能使用 **“属性”** 列表来查看那些支持属性表达式的数据流对象的所有可能的属性。 例如，如果您将 ADO NET 源放置在设计器图面上，则**属性**列表将包含`[ADO NET Source].[SqlCommand]`属性的项。 该列表还显示了数据流任务自身的许多属性。  
+ **“属性”** 列表仅显示那些已位于设计器的 **“数据流”** 图面上的数据流对象的可用属性。 因此，不能使用 **“属性”** 列表来查看那些支持属性表达式的数据流对象的所有可能的属性。 例如，如果您将 ADO NET 源放置在设计器图面上，则**属性**列表将包含属性的项 `[ADO NET Source].[SqlCommand]` 。 该列表还显示了数据流任务自身的许多属性。  
   
 ## <a name="properties-of-data-flow-objects-that-support-property-expressions"></a>支持属性表达式的数据流对象的属性  
  下面的列表中的属性值可以使用属性表达式来指定。  

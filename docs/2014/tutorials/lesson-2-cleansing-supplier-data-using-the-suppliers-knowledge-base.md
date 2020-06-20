@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 215c14de-fc3f-46de-a022-bf69b9ea2a96
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b99676a9f51bf76dc9db294365a5a628dd25fa2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3186cbac127244131f45e2cbe7e3131b2e6d4895
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65488476"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063979"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>第 2 课：使用 Suppliers 知识库清理供应商数据
   在本课中，您将使用在第一课中创建的**供应商**知识库来清理 Excel 文件中的供应商数据。 DQS 中的数据清理包括一个**计算机辅助过程**，该过程分析数据与知识库中知识的符合程度，并提供一个**交互式过程**，使您可以查看和修改计算机辅助过程的结果。 数据清理功能可以识别数据源中不正确的数据，然后对这些数据进行更正或提出更正建议。 它还通过使用域值、同义词的前导值、域规则、基于字词的关系和参考数据来使客户数据标准化和更加丰富。 您可以通过交互方式批准或拒绝计算机辅助过程建议的更改。 有关更多详细信息，请参阅[数据清理](https://msdn.microsoft.com/library/gg524800.aspx)。  

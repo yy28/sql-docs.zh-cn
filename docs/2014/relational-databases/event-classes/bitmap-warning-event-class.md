@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5bf9b4e3-0eba-4e67-8ba9-30ca4b48e1d4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 812ba207d699cbbdb2156a4c5f3799cbfa8a74db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a59a1ecfc740cc7c3a07d8a41acfa51fb1623716
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023442"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030733"
 ---
 # <a name="bitmap-warning-event-class"></a>Bitmap Warning 事件类
   **Bitmap Warning** 事件类可用于监视查询中位图筛选器的使用情况。 该事件子类可用于报告何时禁用了查询中的位图筛选器。  
@@ -37,7 +36,7 @@ ms.locfileid: "63023442"
 |**EventSubClass**|`int`|事件子类的类型。 0 = 禁用位图筛选器。|21|是|  
 |**HostName**|`nvarchar`|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |**IsSystem**|`int`|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  
-|**LoginName**|`nvarchar`|用户的登录名（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安全登录名或 Windows 登录凭据，格式为 "*域 \ 用户名*"）。|11|是|  
+|**LoginName**|`nvarchar`|用户的登录名（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 Windows 登录凭据，格式为 "*域 \ 用户名*"）。|11|是|  
 |**LoginSid**|`image`|登录用户的安全标识号 (SID)。 你可以在 **sys.server_principals** 目录视图中找到此信息。 服务器中的每个登录名都具有唯一的 SID。|41|是|  
 |**NTDomainName**|`nvarchar`|用户所属的 Windows 域。|7|是|  
 |**NTUserName**|`nvarchar`|Windows 用户名。|6|是|  

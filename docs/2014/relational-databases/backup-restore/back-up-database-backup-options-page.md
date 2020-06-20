@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c8030a0005f0f5b949a3eecd12d73f3a3aa709c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ffd527ba4334244c7fd4c5d4a73099093cb8520b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876860"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959637"
 ---
 # <a name="back-up-database-backup-options-page"></a>备份数据库（“备份选项”页）
   使用  **“备份数据库”** 对话框的 **“备份选项”** 页可以查看或修改数据库备份选项。  
@@ -33,7 +32,7 @@ ms.locfileid: "62876860"
 >  可以定义用于创建数据库备份的数据库维护计划。 有关详细信息，请参阅[维护计划](../maintenance-plans/maintenance-plans.md)和[使用维护计划向导](../maintenance-plans/use-the-maintenance-plan-wizard.md)。  
   
 > [!NOTE]  
->  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定备份任务时，可以通过单击“脚本”[!INCLUDE[tsql](../../includes/tsql-md.md)][按钮，再为脚本选择一个目标，生成对应的 ](/sql/t-sql/statements/backup-transact-sql)**BACKUP** 脚本。  
+>  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定备份任务时，可以通过单击“脚本”  按钮，再为脚本选择一个目标，生成对应的 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) 脚本。  
   
 ## <a name="options"></a>选项  
   

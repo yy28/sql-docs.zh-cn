@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9eebc2c66143d4728a05fc3df0f9ac02af9a5288
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a7c378345848edf8c3a4de8c6d8d6c50ce101389
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703733"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009361"
 ---
 # <a name="search-an-active-document-incrementally"></a>增量搜索活动文档
   您可以通过输入文字来对单个文档或窗口执行渐进式搜索。 搜索操作会突出显示与在文档或窗口的渐进式搜索过程中输入的字符相匹配的第一个字符集。 渐进式搜索会自动搜索文档或窗口内的所有文字，但隐藏文字除外。  

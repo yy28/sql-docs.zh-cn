@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 37ffad63-d6db-4609-8deb-786200659554
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 29513ec37a946b9ec613ccc483048396149dd15a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9bbd1ffb75402e475e5d55a9661967be2fcd57c0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63042612"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063955"
 ---
 # <a name="lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis"></a>第 2 课：定期评估最佳做法策略
   您可以对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一个或多个实例配置最佳实践策略的定期评估。 若要配置定义运行的最佳实践策略，您必须将这些策略导入到目标实例中。  

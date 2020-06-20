@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 13f58b4d-f345-4fbc-ae2d-b3c8290a797d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 90eeca203c672c21551b8aff2e24feb164d8fda5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 113f644d9f1da48790e7c8d59d34e6b143a1175a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065430"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938118"
 ---
 # <a name="warnings-database-designer-analysis-services---multidimensional-data"></a>警告（数据库设计器）（Analysis Services - 多维数据）
   使用“警告”**** 选项卡可以全局查看和解除规则，并可以查看和重新启用已解除的警告的特定实例。 **“警告”** 选项卡显示两个网格： **“设计警告规则”** 和 **“解除的警告”**。  
@@ -36,10 +35,10 @@ ms.locfileid: "66065430"
  **说明**  
  显示规则的名称。 规则会按类别分组。  
   
- **仅次于**  
+ **重要性**  
  显示分配给规则的重要性。  
   
- **备注**  
+ **注释**  
  （可选）允许用户键入注释，对解除警告的原因进行解释。  
   
 ## <a name="dismissed-warnings-grid"></a>“解除的警告”网格  
@@ -47,7 +46,7 @@ ms.locfileid: "66065430"
   
  **“解除的警告”** 网格包含以下内容：  
   
- **对象**  
+ **Object**  
  显示代表对象类型和对象名称的图标。  
   
  **类型**  
@@ -56,10 +55,10 @@ ms.locfileid: "66065430"
  **说明**  
  显示规则的名称。  
   
- **仅次于**  
+ **重要性**  
  显示分配给规则的重要性。  
   
- **备注**  
+ **注释**  
  显示解除该警告时输入的注释。 可在此添加或修改注释。  
   
  **重新启用**  

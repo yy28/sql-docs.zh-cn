@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 77296024-5c1a-4f6a-9665-0b50d45d744c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b378d7257ddd57e97407d82feb817aa70965f598
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f4387b3311c4b2157ba202890c2a190e83e7ad5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058745"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967097"
 ---
 # <a name="flat-file-connection-manager-editor-general-page"></a>平面文件连接管理器编辑器（“常规”页）
   可以使用 **“平面文件连接管理器编辑器”** 对话框的 **“常规”** 页选择文件和数据格式。 使用平面文件连接可以将包连接到文本文件。  
@@ -33,7 +32,7 @@ ms.locfileid: "66058745"
  **说明**  
  描述此连接。 最好按照连接的用途对其进行说明，使包的说明一目了然，且更便于维护。  
   
- **文件名称**  
+ **文件名**  
  键入要在平面文件连接中使用的路径和文件名。  
   
  **浏览**  
@@ -51,7 +50,7 @@ ms.locfileid: "66058745"
  **格式**  
  指示文件是否使用带分隔符、固定宽度或右边未对齐的格式。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |带分隔符|各列之间由在 **“列”** 页上指定的分隔符隔开。|  
 |固定宽度|列的宽度固定。|  
@@ -66,7 +65,7 @@ ms.locfileid: "66058745"
  **标题行分隔符**  
  从标题行的分隔符列表中选择，或输入分隔符文本。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**回车换行符**|标题行由回车符和换行符的组合分隔。|  
 |**回车**|标题行由回车符分隔。|  

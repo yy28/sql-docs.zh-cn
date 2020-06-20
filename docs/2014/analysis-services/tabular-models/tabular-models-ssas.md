@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 80027288-c203-4667-a3e1-40fa572b4975
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 38ebc261b8d1c5a2a134de7085c2e6f34a704b34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44f358f0f36e84ad903a0a4fcb0203291019e7aa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066291"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938492"
 ---
 # <a name="tabular-modeling-ssas-tabular"></a>表格建模（SSAS 表格）
   表格模型是 Analysis Services 中的内存中数据库。 使用最先进的压缩算法和多线程查询处理器，xVelocity 内存中分析引擎 (VertiPaq) 可通过报表客户端应用程序（如 Microsoft Excel 和 Microsoft [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]）来快速访问表格模型对象和数据。  

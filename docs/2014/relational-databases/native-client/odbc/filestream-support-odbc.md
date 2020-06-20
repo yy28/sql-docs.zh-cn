@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 87982955-1542-4551-9c06-447ffe8193b9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ec85083e634123497c707f3028285ec1300ff2d4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e815007bc48260f95a573f9459ede09d3e585927
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707092"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055882"
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM 支持 (ODBC)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中的 ODBC 支持增强的 FILESTREAM 功能。 有关此功能的详细信息，请参阅[FILESTREAM 支持](../features/filestream-support.md)。 有关演示对 FILESTREAM 的 ODB 支持的示例，请参阅[使用 Filestream 以增量方式发送和接收数据 &#40;ODBC&#41;](../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)。  

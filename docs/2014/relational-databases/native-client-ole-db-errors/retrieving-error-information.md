@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 687b3c27-1a00-4122-8276-ea0f8fed895a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 42733a9ebd5d6b6610140d76afb68ca2a3ab7dda
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e99842237bee512d3489e83be07612715a5a6e1d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704972"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048066"
 ---
 # <a name="retrieving-error-information"></a>检索错误信息
   此示例从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序公开的各种错误接口中获取信息。  

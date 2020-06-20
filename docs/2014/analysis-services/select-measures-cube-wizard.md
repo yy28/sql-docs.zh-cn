@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 4f94de4e-b222-4bf9-95af-7aefd3f8dcee
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8c8ea7af0102e9525eac15420a960ec357f9062e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10c216f07d092f98b861eaedaa62dd58a69f920a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069451"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940968"
 ---
 # <a name="select-measures-cube-wizard"></a>选择度量值（多维数据集向导）
   可以使用 **“选择度量值”** 页选择要创建的度量值组和度量值。  
   
 ## <a name="options"></a>选项  
- **度量值组**  
+ **措施**  
  显示可用的度量值组及其度量值。  
   
  对于某个度量值组或度量值，若要指示将要创建它，则请选中其复选框。 默认情况下，所有度量值组和度量值都是选中的。  

@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bae68c2d507e1dd3809e76a9d842b765d72234e9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62762345"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952083"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>创建数据库快照 (Transact-SQL)
   创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库快照的唯一方式是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 不支持创建数据库快照。  
   
 -   **开始之前：**  
   
-     [必备条件](#Prerequisites)  
+     [先决条件](#Prerequisites)  
   
      [安全性](#Security)  
   
@@ -37,7 +36,7 @@ ms.locfileid: "62762345"
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  可以使用任何恢复模式的源数据库必须满足以下先决条件：  
   
--   服务器实例必须运行支持数据库快照的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 有关中[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的数据库快照支持的信息，请参阅[SQL Server 2014 的各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+-   服务器实例必须运行支持数据库快照的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 有关中的数据库快照支持的信息 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，请参阅[SQL Server 2014 的各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 -   源数据库必须处于联机状态，除非该数据库是数据库镜像会话中的镜像数据库。  
   
