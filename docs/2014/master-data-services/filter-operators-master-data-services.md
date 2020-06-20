@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5d94a453e9eb5794bdd534f7aaf37ca2e1cc3177
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: decd9f7ecac15f897eeada6b8943bdd194aca30c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483868"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971467"
 ---
 # <a name="filter-operators-master-data-services"></a>Filter 运算符 (Master Data Services)
   筛选成员列表时，可以使用下列运算符。  

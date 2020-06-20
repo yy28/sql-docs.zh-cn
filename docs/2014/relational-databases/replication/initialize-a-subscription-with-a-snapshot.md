@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 23ad4cd92d186f43fb1a9dd81e1dbb0727170367
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df9cfb95144bbc7db16ff0bb72f96ff3e4465f89
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721135"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043224"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>使用快照初始化订阅
   在创建发布后，通常会创建一个初始快照，并将其复制到快照文件夹中（默认情况下，使用新建发布向导创建的合并发布将会执行此操作）。 此快照然后将在订阅的初始同步期间由分发代理（对于事务发布和快照发布）或合并代理（对于合并发布）应用于订阅服务器。 快照过程取决于发布的类型：  
@@ -37,7 +36,7 @@ ms.locfileid: "62721135"
  如果快照传输在任一点中断，它将自动恢复并且不再重新发送已经全部传输的任何文件。 对于每个发布项目，快照代理的传递单位是 bcp 文件，因此已部分传递的文件必须全部重新传递。 不过，恢复快照可以大幅度减少传输的数据量，即便在连接不可靠的情况下也可以确保及时进行快照传递。  
   
 ## <a name="snapshot-options"></a>快照选项  
- 使用快照初始化订阅时有许多可用选项。 你可以：  
+ 使用快照初始化订阅时有许多可用选项。 可以：  
   
 -   指定一个备用快照文件夹位置，以替代默认的快照文件夹位置或者与之并存。 有关详细信息，请参阅 [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md)。  
   

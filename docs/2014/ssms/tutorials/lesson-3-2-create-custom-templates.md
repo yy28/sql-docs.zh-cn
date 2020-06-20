@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d44d8d8bdda5f8c15fffe8f3aaf0eaf2d099e81
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62805575"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040893"
 ---
 # <a name="create-custom-templates"></a>创建自定义模板
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 附带用于许多常见任务的模板，但模板的真正作用在于它能为必须频繁创建的复杂脚本创建自定义模板。 在本练习中，您将创建带有较少参数的简单脚本，但是模板也适用于较长的重复脚本。  
@@ -67,7 +66,7 @@ ms.locfileid: "62805575"
   
 10. 在查询编辑器中，键入 **EXECUTE dbo.WorkOrdersForBlade**，然后按 F5 执行查询。 确认“结果”**** 窗格返回 Blade 的工作订单列表。  
   
-11. 编辑模板脚本（步骤7中的脚本），用参数<strong> *<* product_name</strong>， `nvarchar(50)`，<strong>名称*>*</strong>，将 "产品名称" 边栏选项卡替换为四个位置。  
+11. 编辑模板脚本（步骤7中的脚本），用参数<strong> *<* product_name</strong>，，名称 `nvarchar(50)` <strong> *>* </strong>，将 "产品名称" 边栏选项卡替换为四个位置。  
   
     > [!NOTE]  
     >  参数需要三个元素：要替换的参数的名称、该参数的数据类型以及该参数的默认值。  
@@ -103,7 +102,7 @@ ms.locfileid: "62805575"
   
 3.  在 **“查询”** 菜单上，单击 **“指定模板参数的值”**。  
   
-4.  在 "**替换模板参数**" 对话框中，为`product_name` "值" 键入**FreeWheel** （覆盖默认内容），然后单击 **"确定"** 以关闭 "**替换模板参数**" 对话框，并在查询编辑器中修改脚本。  
+4.  在 "**替换模板参数**" 对话框中，为 " `product_name` 值" 键入**FreeWheel** （覆盖默认内容），然后单击 **"确定"** 以关闭 "**替换模板参数**" 对话框，并在查询编辑器中修改脚本。  
   
 5.  按 F5 键执行查询，并创建过程。  
   

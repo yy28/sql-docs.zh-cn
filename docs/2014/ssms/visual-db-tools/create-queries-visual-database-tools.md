@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a7140e3b4511417952246093e5ed82da9f2c099b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec730fdd8f5dd8e00a3493b5ec96a80a3397fad9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184319"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058117"
 ---
 # <a name="create-queries-visual-database-tools"></a>创建查询 (Visual Database Tools)
   使用查询，您可以从数据库的表和视图中检索数据。 在“查询和视图设计器”  中创建和使用查询，该窗口由四个窗格组成：[“关系图”窗格](visual-database-tools.md)、[“SQL”窗格](sql-pane-visual-database-tools.md)、[“条件”窗格](criteria-pane-visual-database-tools.md)和[“结果”窗格](results-pane-visual-database-tools.md)。  

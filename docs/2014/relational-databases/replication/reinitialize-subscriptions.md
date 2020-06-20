@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb13712b-e7ad-4f1f-b605-4554bad0cb60
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c0ccfb05b7b9eb6244e6d403c8975c3af1358a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 189667ecd2756ebf0026a22d981f9bb0ddd347c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250661"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056980"
 ---
 # <a name="reinitialize-subscriptions"></a>重新初始化订阅
   重新初始化订阅包括对一个或多个订阅服务器应用一个或多个项目的新快照：事务复制和快照复制允许对各个项目单独重新初始化；而合并复制需要对所有项目重新初始化。 无法重新初始化对等事务复制拓扑中的节点。 如果需要确保节点有新的数据副本，请在该节点上还原备份。 对于下列一种或两种情况，将进行重新初始化：  

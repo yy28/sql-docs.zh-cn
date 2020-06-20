@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 472a2d0b-64ae-4877-8f11-a5620aa698b7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: df384324ba16aac03a4c889cf4f3959c23374510
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7eae3d290a70bedee0ed9badf9e6d0503caa2bc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874694"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955007"
 ---
 # <a name="sqltriggercontext-object"></a>SqlTriggerContext 对象
-  `SqlTriggerContext` 类提供有关触发器的上下文信息。 该上下文信息包括导致触发器被激发的操作的类型，以及在 UPDATE 操作中进行了修改的列，如果是数据定义语言 (DDL) 触发器，则还包括描述触发操作的 XML `EventData` 结构。 有关如何使用`SqlTriggerContext`类的详细信息和示例，请参阅[CLR 触发器](../../database-engine/dev-guide/clr-triggers.md)。  
+  `SqlTriggerContext` 类提供有关触发器的上下文信息。 该上下文信息包括导致触发器被激发的操作的类型，以及在 UPDATE 操作中进行了修改的列，如果是数据定义语言 (DDL) 触发器，则还包括描述触发操作的 XML `EventData` 结构。 有关如何使用类的详细信息和示例 `SqlTriggerContext` ，请参阅[CLR 触发器](../../database-engine/dev-guide/clr-triggers.md)。  
   
- 有关详细信息，请参阅`Microsoft.SqlServer.Server.SqlTriggerContext` .NET Framework SDK 文档中的类参考文档。  
+ 有关详细信息，请参阅 `Microsoft.SqlServer.Server.SqlTriggerContext` .NET FRAMEWORK SDK 文档中的类参考文档。  
   
 ## <a name="see-also"></a>另请参阅  
  [CLR 触发器](../../database-engine/dev-guide/clr-triggers.md)   

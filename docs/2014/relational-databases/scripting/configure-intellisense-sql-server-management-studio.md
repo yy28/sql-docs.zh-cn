@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e5d123cad9cbc67930786a54fd257ab82e29af39
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 305796d2c3293f64874e77d14592fd7b67554a2c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704014"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056847"
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>配置 IntelliSense (SQL Server Management Studio)
   默认情况下，大多数 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 选项处于启用状态。 您可以禁用 IntelliSense 选项，转而通过菜单命令或基键组合来调用该选项。  
   
 ### <a name="to-turn-statement-completion-options-off-by-default"></a>默认关闭语句结束选项  
   
-1.  在 **“工具”** 菜单上，单击 **“选项”** 。  
+1.  在“工具”  菜单上，单击“选项” 。  
   
 2.  展开“文本编辑器”****，展开“所有语言”****、“Transact-SQL”**** 或“XML”****，然后单击“常规”****。  
   
@@ -34,7 +33,7 @@ ms.locfileid: "82704014"
   
 ### <a name="to-modify-transact-sql-intellisense-options"></a>修改 Transact-SQL IntelliSense 选项  
   
-1.  在 **“工具”** 菜单上，单击 **“选项”** 。  
+1.  在“工具”  菜单上，单击“选项” 。  
   
 2.  展开“文本编辑器”****，展开“Transact-SQL”****，然后单击“IntelliSense”****。  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 459f5640-8058-4c24-97e7-7bbd6168bc39
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 30a2fca3dd0f2fcc6f22f2330c37fb8e333d9994
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa97ae157e55ab3925155a03ed52ac90642b5c1e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63049144"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058089"
 ---
 # <a name="sort-with-order-by-visual-database-tools"></a>使用 ORDER BY 排序 (Visual Database Tools)
   可以使用 ORDER BY 子句按返回行中的一个或多个列对查询结果进行排序。 通过选择“条件详细信息”窗格中的选项可以定义 ORDER BY 子句。  

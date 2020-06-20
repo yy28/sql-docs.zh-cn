@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d5f3dffc7661fc5843dcd220f27beb1117a85729
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: beb3492409f24acb881f5461e554fd8a392dc361
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63313764"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040480"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>使用“结果”窗格中的数据 (Visual Database Tools)
   在运行查询或视图之后，将在“结果”窗格中显示结果。 然后您就可以对这些结果进行处理。 例如，您可以添加和删除行、输入或更改数据以及在大型结果集中轻松导航。  
@@ -115,9 +114,9 @@ ms.locfileid: "63313764"
 ### <a name="what-can-not-be-represented-fully"></a>不能完全呈现的内容  
  从数据库返回“结果”窗格的内容很大程度上受您所使用的数据源的提供程序控制。 “结果”窗格并不总是能转换所有数据库管理系统中的数据。 在以下情况下便是如此。  
   
--   Binary 数据类型对于在“结果”窗格中执行操作的人来说通常没什么用处，并且可能需要很长时间才能下载。 因此它们由* \<二进制数据表示>* 或*Null*。  
+-   Binary 数据类型对于在“结果”窗格中执行操作的人来说通常没什么用处，并且可能需要很长时间才能下载。 因此它们由 \<Binary data> 或 Null 表示。  
   
--   并不能始终保留精度和小数位数。 例如，结果窗格支持的精度为 27。 如果数据的数据类型精度较高，则数据可能会被截断，或者可能由* \<无法读取数据>来*表示。  
+-   并不能始终保留精度和小数位数。 例如，结果窗格支持的精度为 27。 如果数据的数据类型的精度比这个值大，数据可能会截断或可能由 *\<Unable to read data>* 表示。  
   
 ## <a name="see-also"></a>另请参阅  
  [在 Visual Database Tools &#40;执行基本的查询操作&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   

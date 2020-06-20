@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 938bb035-e07a-4082-9f93-229d9feb6b06
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9d57657d47f28dc0502b83375f563fa9df737831
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fffac67b3d789c6fcd230d4ff894696167935260
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63206811"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056656"
 ---
 # <a name="administer-servers-with-sql-server-management-studio"></a>使用 SQL Server Management Studio 管理服务器
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]是一个丰富的集成管理客户端，旨在满足[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]管理员的服务器管理要求。 在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中，管理任务是使用对象资源管理器来完成的，使用对象资源管理器，您可以连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 系列中的任何服务器，并以图形方式浏览其内容。 服务器可以是[!INCLUDE[ssDE](../includes/ssde-md.md)]、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 或 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的实例。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]是一个丰富的集成管理客户端，旨在满足 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理员的服务器管理要求。 在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中，管理任务是使用对象资源管理器来完成的，使用对象资源管理器，您可以连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 系列中的任何服务器，并以图形方式浏览其内容。 服务器可以是[!INCLUDE[ssDE](../includes/ssde-md.md)]、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 或 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的实例。  
   
  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 的工具组件包括已注册的服务器、对象资源管理器、解决方案资源管理器、模板资源管理器、对象资源管理器详细信息页和文档窗口。 若要显示某个工具，请在“视图”  菜单上单击该工具的名称。 若要显示查询编辑器工具，请单击工具栏上的“新建查询”  按钮。  
   

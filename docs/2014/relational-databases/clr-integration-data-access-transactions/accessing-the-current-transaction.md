@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ad369e49298c4d39a7e936ce8acf47ca2035c8f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f9b8ecedf6a1736fa287d082d8d446c5052078d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920021"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955049"
 ---
 # <a name="accessing-the-current-transaction"></a>访问当前事务
   如果在输入运行于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上的公共语言运行时 (CLR) 代码时某事务是活动的，则该事务通过 `System.Transactions.Transaction` 类公开。 `Transaction.Current` 属性用于访问当前事务。 在大多数情况下，不必显式访问事务。 对于数据库连接，ADO.NET 将在调用 `Transaction.Current` 方法时自动检查 `Connection.Open`，并在该事务中以透明方式登记连接（除非在连接字符串中将 `Enlist` 关键字设置为 false）。  
@@ -43,7 +42,7 @@ ms.locfileid: "62920021"
   
 -   通过使用输出参数，托管过程或函数可以返回值。 调用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 过程可以检查返回的值，如果适合，则执行 `ROLLBACK TRANSACTION`。  
   
--   托管过程或函数可以引发自定义异常。 调用[!INCLUDE[tsql](../../includes/tsql-md.md)]过程可以捕获由 try/catch 块中的托管过程或函数引发的异常并执行`ROLLBACK TRANSACTION`。  
+-   托管过程或函数可以引发自定义异常。 调用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 过程可以捕获由 try/catch 块中的托管过程或函数引发的异常并执行 `ROLLBACK TRANSACTION` 。  
   
 -   如果满足某个条件，则托管过程或函数可以通过调用 `Transaction.Rollback` 方法取消当前事务。  
   
@@ -64,7 +63,7 @@ The context transaction which was active before entering user defined routine, t
  也应出现该异常，并且为了让执行得以继续，在执行激发触发器的操作的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句周围必须有 try/catch 块。 尽管引发了两个异常，但事务将回滚，并且不提交更改。  
   
 ### <a name="example"></a>示例  
- 下面是通过使用 `Transaction.Rollback` 方法从托管过程回滚事务的示例。 请注意在托管代码中 `Transaction.Rollback` 方法周围的 try/catch 块。 此 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本创建了一个程序集和托管存储过程。 请注意，该`EXEC uspRollbackFromProc`语句包装在 try/catch 块中，以便捕获托管过程完成执行时引发的异常。  
+ 下面是通过使用 `Transaction.Rollback` 方法从托管过程回滚事务的示例。 请注意在托管代码中 `Transaction.Rollback` 方法周围的 try/catch 块。 此 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本创建了一个程序集和托管存储过程。 请注意，该 `EXEC uspRollbackFromProc` 语句包装在 try/catch 块中，以便捕获托管过程完成执行时引发的异常。  
   
 ```csharp  
 using System;  

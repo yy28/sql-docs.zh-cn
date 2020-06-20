@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5ed0a510a6b74e3c33e9cb7ed9d789ad8242a499
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdb8205a789894caf8c8e2d3c3f491751757bab6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270227"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047100"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>使用更改跟踪 (SQL Server)
   使用更改跟踪的应用程序必须能够获取跟踪的更改，将这些更改应用到其他数据存储区并更新源数据库。 本主题介绍了如何执行这些任务，以及在发生故障转移且必须从备份还原数据库时，角色更改跟踪如何进行。  

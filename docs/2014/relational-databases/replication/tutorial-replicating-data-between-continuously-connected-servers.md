@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 32b97d456c42eab89511d8f5a9d1924914ea81ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c63e48d4c5f5bfad6fe50155cd7fd7a088c2178
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655387"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047619"
 ---
 # <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>教程：在连续连接的服务器之间复制数据
   复制是在连续连接的服务器之间实现数据移动的好方法。 使用复制向导可以轻松地配置和管理复制拓扑。 本教程演示如何为连续连接的服务器配置复制拓扑。  
@@ -46,7 +45,7 @@ ms.locfileid: "62655387"
     >  默认情况下，不在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 上安装复制。  
   
 > [!NOTE]  
->  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，你必须使用作为**sysadmin**固定服务器角色成员的登录名连接到发布服务器和订阅服务器。  
+>  在中 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，你必须使用作为**sysadmin**固定服务器角色成员的登录名连接到发布服务器和订阅服务器。  
   
  **本教程的估计完成时间：30分钟。**  
   

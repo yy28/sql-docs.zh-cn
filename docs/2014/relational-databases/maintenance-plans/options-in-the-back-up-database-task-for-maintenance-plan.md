@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4a31052bb0633d370098e328741432f6b854d65e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 952730f09deeede360dff5e2bd83f8cdc8a20a67
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68205945"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024055"
 ---
 # <a name="back-up-database-task-maintenance-plan"></a>“备份数据库”任务（维护计划）
   使用 **“‘备份数据库’任务”** 对话框可以将备份任务添加到维护计划。 备份数据库非常重要，因为当发生系统或硬件故障（或用户错误）对数据库造成某种破坏时，就需要用备份副本来还原数据。 此任务可用于执行完整备份、差异备份、文件和文件组备份以及事务日志备份。  

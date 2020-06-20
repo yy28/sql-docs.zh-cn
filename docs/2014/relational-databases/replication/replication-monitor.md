@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fcb3a7ccfc5e0b5da01d3976f3c9f13e06df7ee7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 538082f8d757579b7b2bbf57d82fc6cc5944f9ab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250380"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057009"
 ---
 # <a name="replication-monitor"></a>复制监视器
   此部分文档包含有关复制监视器的信息。 根据复制类型和所监视的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的不同，监视器中显示的页面和对话框也会有所不同。  

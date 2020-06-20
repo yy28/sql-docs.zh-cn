@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 85d152274847abb46ee14a9a878be8bdef5b80b3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 33655f1a5cc704907753ac1ab7ce43020c22fb3e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705065"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043869"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>在客户端和服务器之间执行的转换
   本主题说明在使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 编写的客户端应用程序与 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] （或更高版本）之间执行的日期/时间转换。  
@@ -36,19 +35,19 @@ ms.locfileid: "82705065"
 |DBTIMESTAMP|1,2|1,3,4|1,4,10|1,10,14|1,10,15|1,10|1,5,10|1,10,11|1,10,11|1,10<br /><br /> datetime2(7)|  
 |DBTIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10,14|1,8,10,15|1,8,10|1,10|1,10,11|1,10,11|1,10<br /><br /> datetimeoffset(7)|  
 |FILETIME|1,2|1,3,4|1,4,13|1,13|1,13|1,13|1,5,13|1,13|1,10|1,13<br /><br /> datetime2(3)|  
-|BYTES|-|-|-|-|-|-|-|不可用|空值|空值|  
-|VARIANT|1|1|1|1,10|1,10|1,10|1,10|不可用|空值|1,10|  
-|SSVARIANT|1,16|1,16|1,16|1,10,16|1,10,16|1,10,16|1,10,16|不可用|空值|1,16|  
-|BSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|不可用|空值|空值|  
-|STR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|不可用|空值|空值|  
-|WSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|不可用|空值|空值|  
+|BYTES|-|-|-|-|-|-|-|空值|空值|空值|  
+|VARIANT|1|1|1|1,10|1,10|1,10|1,10|空值|空值|1,10|  
+|SSVARIANT|1,16|1,16|1,16|1,10,16|1,10,16|1,10,16|1,10,16|空值|空值|1,16|  
+|BSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|空值|空值|空值|  
+|STR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|空值|空值|空值|  
+|WSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|空值|空值|空值|  
   
 ## <a name="key-to-symbols"></a>符号含义  
   
 |符号|含义|  
 |------------|-------------|  
 |-|不支持任何转换。 如果在调用 IAccessor::CreateAccessor 时验证绑定，则在 rgStatus** 中返回 DBBINDSTATUS_UPSUPPORTEDCONVERSION。 当延迟取值函数验证时，则设置 DBSTATUS_E_BADACCESSOR。|  
-|不可用|不适用。|  
+|空值|不适用。|  
 |1|如果提供的数据无效，则设置 DBSTATUS_E_CANTCONVERTVALUE。 在应用转换前验证输入数据，因此即使后续转换忽略某一部分，该部分仍然有效，以使转换成功完成。|  
 |2|忽略时间字段。|  
 |3|秒的小数部分必须为零，或者设置 DBSTATUS_E_DATAOVERFLOW。|  

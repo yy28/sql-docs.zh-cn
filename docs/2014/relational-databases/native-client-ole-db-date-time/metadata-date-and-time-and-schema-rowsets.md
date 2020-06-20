@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9238898efd324fae1e4990405c90e31fb7876ca4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ab953952de1c288bcac31548c9562e9ae570bee6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705033"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043583"
 ---
 # <a name="date-and-time-and-schema-rowsets"></a>日期和时间以及架构行集
   本主题提供有关 COLUMNS 行集和 PROCEDURE_PARAMETERS 行集的信息。 该信息与 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中引入的 OLE DB 日期和时间增强功能相关。  
@@ -25,7 +24,7 @@ ms.locfileid: "82705033"
 ## <a name="columns-rowset"></a>COLUMNS 行集  
  对于日期/时间类型将返回以下列值：  
   
-|列类型|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
+|列名称|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
 |date|DBTYPE_DBDATE|Clear|0|  
 |time|DBTYPE_DBTIME2|设置|0..7|  

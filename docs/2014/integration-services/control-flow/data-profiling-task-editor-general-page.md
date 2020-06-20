@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8462f85dc6c804020f12b9bc989d683c5a4ad0ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72e81e6d34a386c04d18f050fb8010a3bcf6b7a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832210"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919256"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>数据事件探查任务编辑器（常规页）
   可以使用 **“数据事件探查任务编辑器”** 的 **“常规”** 页配置以下选项：  
@@ -58,9 +57,9 @@ ms.locfileid: "62832210"
  **目标**  
  指定哪个文件连接管理器或包变量包含数据配置文件输出：  
   
--   如果将 **“目标类型”** 选项设置为 **“文件连接”** ，则 **“目标”** 选项显示可用文件连接服务器。 选择这些连接管理器中的一个，或选择“\<新建文件连接>”创建新的文件连接管理器。  
+-   如果将 **“目标类型”** 选项设置为 **“文件连接”** ，则 **“目标”** 选项显示可用文件连接服务器。 选择其中一个连接管理器，或选择 " \<New File connection> 创建新的文件连接管理器"。  
   
--   如果将 **“目标类型”** 选项设置为 **“变量”** ，则 **“目标”** 选项显示 **“目标”** 列表中可用的包变量。 选择这些变量中的一个，或选择“\<新建变量>”创建新变量。  
+-   如果将 **“目标类型”** 选项设置为 **“变量”** ，则 **“目标”** 选项显示 **“目标”** 列表中可用的包变量。 选择其中一个变量，或选择 \<New Variable> 创建新变量。  
   
  **OverwriteDestination**  
  如果输出文件已经存在，则指定是否将其覆盖。 默认值为 **False**。 只有在“目标类型”选项设置为“文件连接”时才使用此属性的值。 当“目标类型”选项设置为变量时，任务将始终覆盖该变量以前的值。  
@@ -76,7 +75,7 @@ ms.locfileid: "62832210"
  打开数据配置文件查看器。 独立数据配置文件查看器显示数据事件探查任务的数据配置文件输出。 可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包内运行数据事件探查任务并计算数据配置文件之后，查看这些数据配置文件输出。  
   
 > [!NOTE]  
->  还可以通过在文件夹 *drive>:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 中运行 DataProfileViewer.exe 来打开数据配置文件查看器\<* 。  
+>  还可以通过在文件夹中运行 DataProfileViewer.exe 来打开数据配置文件查看器 *\<drive>* ： \Program Files （x86） |Program Files\Microsoft SQL Server\110\dts\binn  
   
 ## <a name="see-also"></a>另请参阅  
  [单个表快速配置文件窗体（数据事件探查任务）](single-table-quick-profile-form-data-profiling-task.md)   

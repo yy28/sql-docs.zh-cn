@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7e5dbafa-a634-4617-9622-510514fce0ce
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d98cff84b93a13daec7be86dbc24b5fe9556f76c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b876cd75778d1da9c9a46f65f39b915ebee0552
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62720927"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061345"
 ---
 # <a name="removecertificate-method-sinstance-class"></a>RemoveCertificate 方法（SInstance 类）
   从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例中删除当前安全证书。  

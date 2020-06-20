@@ -9,16 +9,15 @@ ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b66a0c9efc94d648eba2f4d4f8cff779def413fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22b22251188f4b175c24610833aa1b74bdb0badb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63131804"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055244"
 ---
 # <a name="overview-smo"></a>概述 (SMO)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理对象（SMO）是设计用于的编程管理的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象。 可以使用 SMO 生成自定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理应用程序。 尽管 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是用于管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的使用广泛的强大应用程序，但有时 SMO 应用程序可能对您更为适用。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理对象（SMO）是设计用于的编程管理的对象 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 可以使用 SMO 生成自定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理应用程序。 尽管 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是用于管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的使用广泛的强大应用程序，但有时 SMO 应用程序可能对您更为适用。  
   
  例如，可能需要简化控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理任务的用户应用程序，以满足新用户的需要并且降低培训成本。 您可能需要创建自定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，或创建用于创建和监控索引效率的应用程序。 还可以使用 SMO 应用程序将第三方硬件或软件无缝纳入数据库管理应用程序。  
   
@@ -134,7 +133,7 @@ ms.locfileid: "63131804"
 /Server/Database[@Name='Adventureworks2012']  
 ```  
   
- 可以通过引用对象的 URN 属性来检索该对象的 URN。 Scripter 对象也将 URN 用作参数，用于将对象引用传递给 `Scripter` 对象的方法。 此外，可以为`Server`对象的**GETSMOOBJECT**方法指定 URN。 用于创建 SMO 对象的实例。  
+ 可以通过引用对象的 URN 属性来检索该对象的 URN。 Scripter 对象也将 URN 用作参数，用于将对象引用传递给 `Scripter` 对象的方法。 此外，可以为对象的**GetSmoObject**方法指定 URN `Server` 。 用于创建 SMO 对象的实例。  
   
 ## <a name="new-sql-server-features-represented-in-smo"></a>用 SMO 表示的 SQL Server 新增功能  
  **表和索引分区**  

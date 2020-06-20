@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 75bd453d4540a675809973f711bd778ab8639d10
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 183b94f487414fff8df823fed38f8ea71736eb30
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479317"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971367"
 ---
 # <a name="database-requirements-master-data-services"></a>数据库要求 (Master Data Services)
-  所有主数据都存储于 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库中。 承载此数据库的计算机必须运行的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+  所有主数据都存储于 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库中。 承载此数据库的计算机必须运行的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
   
  使用 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 在本地或远程计算机上创建和配置 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库。 如果您将数据库从一个环境移到另一个环境，则可以通过将 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 服务和 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 与其新位置中的数据库相关联，在新环境中维护这些信息。  
   
@@ -47,10 +46,10 @@ ms.locfileid: "65479317"
   
 -   Microsoft SQL Server 2008 R2 Developer (64-bit) x64  
   
- 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 有关各个版本支持的功能列表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ### <a name="operating-system"></a>操作系统  
- 有关支持的 Windows 操作系统和其他要求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]的信息，请参阅[安装 SQL Server 2014 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
+ 有关支持的 Windows 操作系统和其他要求的信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，请参阅[安装 SQL Server 2014 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
   
 ### <a name="accounts-and-permissions"></a>帐户和权限  
   

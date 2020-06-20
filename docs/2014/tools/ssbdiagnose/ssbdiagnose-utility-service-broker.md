@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 323ccf41b5285f4bc395223025ea164a330c28a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8efc581eebd7d8fa7fa265abb54168af78b57ca2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211008"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057645"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 实用工具 (Service Broker)
   **ssbdiagnose** 实用工具可报告 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会话或 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务配置中的问题。 可为两个服务或单个服务执行配置检查。 检查出的问题在命令提示符窗口以人工读取文本的形式报告，或输出为可重定向到文件或其他程序的格式化 XML。  
@@ -183,21 +182,21 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  标识应用程序中某个会话端点的唯一标识符。 每个会话端点的会话句柄都是唯一的，发起方端点和目标端点具有不同的会话句柄。  
   
- 会话句柄由**BEGIN DIALOG**语句`conversation_handle`的*@dialog_handle*参数以及**RECEIVE**语句结果集中的列返回到应用程序。  
+ 会话句柄由 *@dialog_handle* **BEGIN DIALOG**语句的参数以及 `conversation_handle` **RECEIVE**语句结果集中的列返回到应用程序。  
   
- 会话句柄在`conversation_handle` **sys. transmission_queue**和 **.sys conversation_endpoints**目录视图的列中进行报告。  
+ 会话句柄在 `conversation_handle` **sys. transmission_queue**和 **.sys conversation_endpoints**目录视图的列中进行报告。  
   
  *conversation_group_id*  
  标识会话组的唯一标识符。  
   
- 会话组 Id 由**GET 会话组**语句`conversation_group_id`的*@conversation_group_id*参数以及**RECEIVE**语句结果集中的列返回到应用程序。  
+ 会话组 Id 由 *@conversation_group_id* **GET 会话组**语句的参数以及 `conversation_group_id` **RECEIVE**语句结果集中的列返回到应用程序。  
   
- 会话组 Id 在**sys.databases conversation_groups**和`conversation_group_id` **sys.databases conversation_endpoints**目录视图的列中报告。  
+ 会话组 Id 在 `conversation_group_id` **sys.databases conversation_groups**和**sys.databases conversation_endpoints**目录视图的列中报告。  
   
  *conversation_id*  
  标识会话的唯一标识符。 会话的发起方端点和目标端点的会话 ID 是相同的。  
   
- 在**conversation_endpoints sys.databases**目录视图的`conversation_id`列中报告会话 id。  
+ 在 `conversation_id` **conversation_endpoints sys.databases**目录视图的列中报告会话 id。  
   
  **-TIMEOUT** *timeout_interval*  
  指定运行 **RUNTIME** 报告的秒数。 如果未指定 **-TIMEOUT** ，则运行时报告的运行时间不限。 **-TIMEOUT** 仅用于 **RUNTIME** 报告，而不用于 **CONFIGURATION** 报告。 如果未指定 -TIMEOUT 或要在超时间隔到期之前结束运行时报告，请按 Ctrl + C 退出 ssbdiagnose   **-** 。 *timeout_interval* 必须是介于 1 和 2,147,483,647 之间的数字。  
@@ -243,7 +242,7 @@ WHERE database_id = DB_ID();
  **-S** *server_name*[\\*instance_name*]  
  指定承载要分析的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 实例。  
   
- 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 指定要连接到该服务器上 *命名实例的***\\***server_name* instance_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 如果未指定 **-S** ，则 **ssbdiagnose** 将使用 SQLCMDSERVER 环境变量的值。 如果 SQLCMDSERVER 也未设置，则 **ssbdiagnose** 将连接到本地计算机上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的默认实例。  
+ 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 指定*server_name ***\\*** instance_name*连接到该服务器上的命名实例 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 如果未指定 **-S** ，则 **ssbdiagnose** 将使用 SQLCMDSERVER 环境变量的值。 如果 SQLCMDSERVER 也未设置，则 **ssbdiagnose** 将连接到本地计算机上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的默认实例。  
   
  **-d** *database_name*  
  指定承载要分析的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务的数据库。 如果该数据库不存在，将生成错误消息。 如果未指定 **-d** ，则默认为登录帐户的默认数据库属性中指定的数据库。  

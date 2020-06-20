@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9dce05c1-c52f-455d-8b8d-6f303e242760
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 009f61563548e0c060350a75e9627804e18a7c54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fe1685bf1f56b2b2e7a0feac31ba3a601b0e51b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63222949"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041038"
 ---
 # <a name="adding-indentation"></a>添加缩进
   查询编辑器允许您通过一个步骤缩进大段代码，并允许您更改缩进量。  
@@ -46,13 +45,13 @@ ms.locfileid: "63222949"
   
 #### <a name="to-change-the-default-indentation"></a>更改默认缩进  
   
-1.  在“工具” **** 菜单上，单击“选项” ****。  
+1.  在“工具”  菜单上，单击“选项” 。  
   
 2.  依次展开“文本编辑器”****、“所有语言”****，再单击“制表符”**** 并设置适当的缩进值。 请注意，您可以更改缩进的大小和制表符的大小，还可更改是否将制表符转换为空格。  
   
      ![“选项卡”对话框的外观](media/tabsdialog.gif "“选项卡”对话框的外观")  
   
-3.  单击" **确定**"。  
+3.  单击“确定”。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [最大化查询编辑器](lesson-2-3-maximizing-query-editor.md)  

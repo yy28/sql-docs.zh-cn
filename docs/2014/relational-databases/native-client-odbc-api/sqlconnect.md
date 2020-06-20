@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6da74e3a-4388-4907-81cb-987389bae467
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ea6c92a75d09164fdb8cd8dd6398ca20fd722027
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 43b37ae16638e461e37edaead83cd9ceedc1c86d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706310"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022658"
 ---
 # <a name="sqlconnect"></a>SQLConnect
   当打开连接时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 将 SQL_COPT_SS_MUTUALLY_AUTHENTICATED 和 SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD 设置为用于打开此连接的身份验证方法。 有关 Spn 的详细信息，请参阅[&#40;ODBC&#41;的客户端连接中的服务主体名称 &#40;spn&#41; ](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)。  

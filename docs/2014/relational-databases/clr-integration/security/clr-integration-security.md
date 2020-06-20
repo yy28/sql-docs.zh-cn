@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 12ca3fcb00122313c1d1e4aae8b64733be9140c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aeec8c832061756a818c9d2438df3046a29c1160
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918992"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970575"
 ---
 # <a name="clr-integration-security"></a>CLR 集成安全性
-  [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)]公共语言运行时（CLR）的安全模型管理并保护在[!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)]语句或在服务器中运行的其他 CLR 对象之间运行的不同类型 clr 和非 CLR 对象之间的访问。 对象之间的调用称为链接。 对这些对象执行的安全检查类型取决于相关的链接类型。  
+  [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)]公共语言运行时（CLR）的安全模型管理并保护在 [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] 语句或在服务器中运行的其他 CLR 对象之间运行的不同类型 clr 和非 CLR 对象之间的访问。 对象之间的调用称为链接。 对这些对象执行的安全检查类型取决于相关的链接类型。  
   
  CLR 集成安全模式可实现以下目的：  
   
--   默认情况下，在上运行托管[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的用户代码。 如果执行有可能损害 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可靠性的操作，则应当受到适当的高级权限的保护。  
+-   默认情况下，在上运行托管的用户代码 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 如果执行有可能损害 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可靠性的操作，则应当受到适当的高级权限的保护。  
   
 -   托管用户代码不应当获得对数据库中用户数据或其他用户代码的未经授权访问。 用户定义代码应当在调用该代码的用户会话的安全上下文中运行，且拥有该安全上下文的正确特权。  
   

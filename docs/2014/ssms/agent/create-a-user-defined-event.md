@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 03d71a35-97fa-4bba-aa9a-23ac9c9cf879
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5625e65b1da45e05002b540774f441f2deabd3f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2323dc4da3d1a8a67dad41ea189877ade25eff0e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63260949"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041333"
 ---
 # <a name="create-a-user-defined-event"></a>创建用户定义事件
   如果需要监视非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 预定义的事件，可以创建用户定义事件。 还可以为每个用户定义事件指定严重级别。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4b24139f-788b-45a6-86dc-ae835435d737
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0657a4b1ab266a1721cf889095ff17f30782f8e7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: abb598df3d6048acb45fbfdee17d1671bd7ead43
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705773"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021298"
 ---
 # <a name="managing-bulk-copy-batch-sizes"></a>管理大容量复制的批大小
   在大容量复制操作中，批的主要目的在于定义事务的范围。 如果没有设置批大小，则大容量复制函数会将整个大容量复制视为一个事务。 如果设置了批大小，则每个批构成一个事务，当批运行完成时，该事务也就被提交。  

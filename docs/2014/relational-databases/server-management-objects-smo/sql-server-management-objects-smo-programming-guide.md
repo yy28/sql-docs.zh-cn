@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4cde2b85-2a31-4cac-8d16-7a4196066193
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4dfa741f79b0a6dec95250edd9f7eb8cee4afb1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 863e3fc90f750f91611a6fa75655783c7802ec23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655297"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055180"
 ---
 # <a name="sql-server-management-objects-smo-programming-guide"></a>SQL Server 管理对象 (SMO) 编程指南
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理对象（SMO）是一个对象的集合，这些对象旨在对管理[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有方面进行编程。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制管理对象 (RMO) 是一个用于封装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的复制管理功能的对象集合。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理对象（SMO）是一个对象的集合，这些对象旨在对管理的所有方面进行编程 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制管理对象 (RMO) 是一个用于封装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的复制管理功能的对象集合。  
   
 |主题|说明|  
 |-----------|-----------------|  

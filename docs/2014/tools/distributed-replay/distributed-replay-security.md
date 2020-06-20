@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0c040bde90a54b9327023d1e1889efdd2930d81b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdc220e658cf7ad2153114510ab714ccec9c5572
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150352"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054448"
 ---
 # <a name="distributed-replay-security"></a>分布式重播安全性
   在安装和使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能之前，应查看本主题中的重要安全信息。 本主题介绍了您使用分布式重播之前所需的安装后安全配置步骤。 本主题还介绍了与数据保护相关的重要注意事项和重要删除步骤。  
@@ -29,7 +28,7 @@ ms.locfileid: "63150352"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播客户端服务帐户|可以是域用户帐户或本地用户帐户。 如果使用本地用户帐户，则控制器、客户端和目标 SQL Server 都必须在同一台计算机上运行。<br /><br /> **\*\* 安全说明 \*\*** 建议不要将该帐户设置为 Windows 本地管理员组的成员。|  
 |用于运行分布式重播管理工具的交互式用户帐户|可以是本地用户帐户或域用户帐户。 若要使用本地用户帐户，管理工具和控制器必须在同一台计算机上运行。|  
   
- **重要**：在您配置 Distributed Replay 控制器时，可以指定将用于运行 Distributed Replay 客户端服务的一个或多个帐户。 下面是支持的帐户的列表：  
+ **重要说明**：在你配置 Distributed Replay 控制器时，可以指定将用于运行 Distributed Replay 客户端服务的一个或多个用户帐户。 下面是支持的帐户的列表：  
   
 -   域用户帐户  
   
@@ -47,11 +46,11 @@ ms.locfileid: "63150352"
   
 1.  请根据所用操作系统执行以下两项操作之一：  
   
-    -   单击 "**开始**" `services.msc` ，在**搜索**框中键入，然后按 enter。  
+    -   单击 "**开始**"， `services.msc` 在**搜索**框中键入，然后按 enter。  
   
-    -   依次单击 "**开始**"、" `services.msc`**运行**"，键入，然后按 enter。  
+    -   依次单击 "**开始**"、"**运行**"，键入 `services.msc` ，然后按 enter。  
   
-2.  在“服务”  对话框中，右键单击要配置的服务，然后单击“属性”  。  
+2.  在“服务”对话框中，右键单击要配置的服务，然后单击“属性”。  
   
 3.  在 **“登录”** 选项卡上，单击 **“本帐户”** 。  
   
@@ -70,17 +69,17 @@ ms.locfileid: "63150352"
   
  若要配置控制器 DCOM 权限，请按以下步骤执行操作：  
   
-1.  **打开 dcomcnfg.exe（组件服务管理单元）** ：这是用于配置 DCOM 权限的工具。  
+1.  **打开 dcomcnfg.exe、组件服务管理单元**：这是用于配置 DCOM 权限的工具。  
   
     1.  在控制器计算机上，单击 **“开始”** 。  
   
-    2.  在`dcomcnfg.exe` **搜索**框中键入。  
+    2.  `dcomcnfg.exe`在**搜索**框中键入。  
   
     3.  按 Enter。  
   
-2.  **配置计算机范围的 DCOM 权限**：为下表中列出的每个帐户授予相应的计算机范围的 DCOM 权限。 有关如何设置计算机范围的权限的详细信息，请参阅 [清单：管理 DCOM 应用程序](https://go.microsoft.com/fwlink/?LinkId=185842)。  
+2.  **配置计算机范围内的 DCOM 权限**：为下表中列出的每个帐户授予相应的计算机范围的 DCOM 权限。 有关如何设置计算机范围的权限的详细信息，请参阅[清单：管理 DCOM 应用程序](https://go.microsoft.com/fwlink/?LinkId=185842)。  
   
-3.  **配置应用程序特定的 DCOM 权限**：为下表中列出的每个帐户授予相应的应用程序特定的 DCOM 权限。 控制器服务的 DCOM 应用程序名称为 **DReplayController**。 有关如何设置应用程序特定的权限的详细信息，请参阅 [清单：管理 DCOM 应用程序](https://go.microsoft.com/fwlink/?LinkId=185842)。  
+3.  **配置应用程序特定的 DCOM 权限**：为下表中列出的每个帐户授予相应的应用程序特定的 DCOM 权限。 控制器服务的 DCOM 应用程序名称为 **DReplayController**。 有关如何设置应用程序特定的权限的详细信息，请参阅[清单：管理 DCOM 应用程序](https://go.microsoft.com/fwlink/?LinkId=185842)。  
   
  下表介绍了管理工具交互式用户帐户和客户端服务帐户所需的 DCOM 权限：  
   

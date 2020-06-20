@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 64b2a53d-4416-4a19-acc0-664a61b45348
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 04f4dbeee8c160e968ee4b9df29e96d21d857e58
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23391fe48037d4cd7f69aef7df6649949301a0f0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184398"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055322"
 ---
 # <a name="trustworthy-database-property"></a>TRUSTWORTHY 数据库属性
   TRUSTWORTHY 数据库属性用于指明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例是否信任该数据库以及其中的内容。 默认情况下，此设置为 OFF，但是可以使用 ALTER DATABASE 语句将其设置为 ON。 例如，`ALTER DATABASE AdventureWorks2012 SET TRUSTWORTHY ON;` 。  

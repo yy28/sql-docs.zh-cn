@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1707de1934ff6265268e40a3ab2a805629134e3d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02d888d3cccabca8618df361e458c7bc706536ab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482946"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971328"
 ---
 # <a name="create-a-master-data-services-database"></a>创建 Master Data Services 数据库
   在需要新数据库来支持 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 应用程序和 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 服务时，创建 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
   
 -   有关承载该数据库的计算机的要求信息，请参阅[数据库要求 (Master Data Services)](database-requirements-master-data-services.md)。  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1478e56f-57c4-4441-bac9-1ac91453839b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 934acda419b734f577de4c8127184d3dd18ea650
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 611417e3b88a174e1be2e838f7a323959a53d595
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150150"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057802"
 ---
 # <a name="configuration-element-dta"></a>配置元素 (DTA)
   指定一个用户指定的配置（由现有和假想的物理设计结构组成），以便数据库引擎优化顾问在优化工作负荷时进行分析。  
@@ -42,7 +41,7 @@ ms.locfileid: "63150150"
   
 |配置属性|说明|  
 |-----------------------------|-----------------|  
-|`SpecificationMode`|可选。 指定数据库引擎优化顾问是依据当前的现有配置分析指定的配置，还是将指定的配置作为一个全新的独立配置进行分析。 使用 string 数据类型将此属性指定为以下允许 **** 值之一：<br /><br /> `Relative`: <br />                  依据被优化的数据库中的物理设计结构（索引、索引视图和分区）的当前现有配置来评估指定的配置。 例如： <br />`<Configuration SpecificationMode="Relative">`<br /><br /> `Absolute`: <br />                  将指定配置作为独立配置进行评估。 如果指定 Absolute，则数据库引擎优化顾问将不考虑现有配置。 例如：<br />`<Configuration SpecificationMode="Absolute">`|  
+|`SpecificationMode`|可选。 指定数据库引擎优化顾问是依据当前的现有配置分析指定的配置，还是将指定的配置作为一个全新的独立配置进行分析。 使用 string 数据类型将此属性指定为以下允许  值之一：<br /><br /> `Relative`: <br />                  依据被优化的数据库中的物理设计结构（索引、索引视图和分区）的当前现有配置来评估指定的配置。 例如： <br />`<Configuration SpecificationMode="Relative">`<br /><br /> `Absolute`: <br />                  将指定配置作为独立配置进行评估。 如果指定 Absolute，则数据库引擎优化顾问将不考虑现有配置。 例如：<br />`<Configuration SpecificationMode="Absolute">`|  
   
 ## <a name="element-characteristics"></a>元素特征  
   
@@ -50,7 +49,7 @@ ms.locfileid: "63150150"
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  
-|**匹配项**|可选。 对于每个 `DTAInput` 元素可以使用一次。|  
+|**出现次数**|可选。 对于每个 `DTAInput` 元素可以使用一次。|  
   
 ## <a name="element-relationships"></a>元素关系  
   

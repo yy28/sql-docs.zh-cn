@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 37a148393d66a7434fda4461b704ee81b7e05223
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d276c4d879aeca6c019b00b9f57251db6b2bcb0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798079"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023548"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>注册 SQL Server 的实例（SQL Server 实用工具）
   将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例注册到现有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具中，以便将其性能和配置作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的托管实例进行监视。 实用工具控制点 (UCP) 每隔 15 分钟从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的托管实例收集配置和性能信息。 此信息存储在 UCP 上的实用工具管理数据仓库 (UMDW) 中；该 UMDW 文件名是 sysutility_mdw。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能数据与策略进行比较，以便帮助标识资源使用瓶颈和整合机会。  
@@ -44,7 +43,7 @@ ms.locfileid: "72798079"
   
  在此版本中，UCP 必须满足以下要求：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例必须是受支持版本。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例必须是受支持版本。 有关各个版本支持的功能列表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 -   我们建议 UCP 由 SQL Server 的区分大小写的实例承载。  
   
@@ -119,7 +118,7 @@ ms.locfileid: "72798079"
 |条件|纠正措施|  
 |---------------|-----------------------|  
 |对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定实例和 UCP，您必须具有管理员权限。|对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定实例和 UCP，以具有管理员权限的帐户登录。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本必须支持实例注册。|有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本必须支持实例注册。|有关各个版本支持的功能列表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 应启用 TCP/IP。|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 上启用 TCP/IP。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例已不能向任何其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 注册。|如果您指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例已作为现有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具的一部分进行管理，则您无法向其他 UCP 注册它。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例不能已经是 UCP。|如果您指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例已经是与您连接到的 UCP 不同的其他 UCP，则不能在此 UCP 中注册它。|  
@@ -169,7 +168,7 @@ ms.locfileid: "72798079"
 >   
 >  执行 Transact-SQL 语句或批处理时发生了异常。 (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  其他信息：无法获取有关 Windows NT 组/用户“\<DomainName\AccountName>”的信息，错误代码 0x5。 （Microsoft SQL Server，错误：15404）  
+>  其他信息：无法获取有关 Windows NT 组/用户 " \<DomainName\AccountName> " 的信息，错误代码0x5。 （Microsoft SQL Server，错误：15404）  
 >   
 >  有关排除此故障的详细信息，请参阅 [SQL Server 实用工具故障排除](../../database-engine/troubleshoot-the-sql-server-utility.md)。  
   
