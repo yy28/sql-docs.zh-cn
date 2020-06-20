@@ -13,13 +13,12 @@ dev_langs:
 ms.assetid: a4499784-67f7-46ef-9f7c-2d0fdd117a52
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 761c84612c207397e33ae96dfcfb088b05bc24b8
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 5a713b3c3f98d2510fa63ddd6a58e2f48f3b3495
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000656"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929696"
 ---
 # <a name="options-text-editor---transact-sql---tabs-page"></a>选项（"文本编辑器-Transact-sql-选项卡" 页）
   使用此对话框可以更改用于对 [!INCLUDE[ssDE](../includes/ssde-md.md)] 脚本进行编程的[!INCLUDE[tsql](../includes/tsql-md.md)]查询编辑器的跳格行为。 若要显示这些设置，请在“工具”**** 菜单上单击“选项”****，依次展开“文本编辑器”**** 文件夹和“Transact-SQL”**** 子文件夹，然后单击“制表符”****。  

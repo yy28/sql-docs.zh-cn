@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b6834a2a4cd75e70de253419cc42ec5904ce0793
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 045c2b6ced6326b0667b798027cfe4c87ca7a362
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061223"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924638"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>大容量插入任务编辑器（“连接”页）
   可以使用 **“大容量插入任务编辑器”** 对话框的 **“连接”** 页，指定大容量插入操作的源和目标以及使用的格式。  
@@ -27,8 +26,8 @@ ms.locfileid: "66061223"
  若要了解大容量插入，请参阅[大容量插入任务](control-flow/bulk-insert-task.md)和[用来导入或导出数据的格式化文件 (SQL Server)](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。  
   
 ## <a name="options"></a>选项  
- **连接**  
- 在列表中选择一个 OLE DB 连接管理器，或\<单击 "**新建连接 ...** "> 创建新连接。  
+ **Connection**  
+ 在列表中选择一个 OLE DB 连接管理器，或单击 " \<**New connection...**> 新建连接"。  
   
  **相关主题：** [OLE DB 连接管理器](connection-manager/ole-db-connection-manager.md)、[配置 OLE DB 连接管理器](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
@@ -38,13 +37,13 @@ ms.locfileid: "66061223"
  **格式**  
  选择大容量插入任务的格式源。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**使用文件**|选择包含格式规范的文件。 选择此选项将显示动态选项 **FormatFile**。|  
-|**指定**|指定格式。 选择此选项将显示动态选项`RowDelimiter`和。 `ColumnDelimiter`|  
+|**指定**|指定格式。 选择此选项将显示动态选项 `RowDelimiter` 和 `ColumnDelimiter` 。|  
   
  **File**  
- 在列表中选择文件或平面文件连接管理器，或单击\<"**新建连接 ...** "> 创建新连接。  
+ 在列表中选择文件或平面文件连接管理器，或单击 " \<**New connection...**> 新建连接"。  
   
  文件位置与在此任务的连接管理器中指定的 SQL Server 数据库引擎有关。 该文本文件必须可被服务器本地硬盘上的 SQL Server 数据库引擎访问，或可通过 SQL Server 的共享驱动器或映射的驱动器访问。 SSIS 运行时不访问该文件。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8f99e6a65a699bae09df61f1de8a1a7c1ee88c52
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289265"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922318"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 数据库
   一个 Oracle CDC 实例与在目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上具有相同名称的一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关联。 此数据库称为 Oracle CDC 数据库（或 CDC 数据库）。  
@@ -45,7 +44,7 @@ ms.locfileid: "79289265"
  在创建 CDC 数据库和设置 CDC 源 Oracle 表时，CDC 数据库所有者可授予镜像表的 SELECT 权限并且定义 SQL Server CDC 访问控制角色以便控制谁可以访问更改数据。  
   
 ## <a name="mirror-tables"></a>镜像表  
- 对于 Oracle 源数据库中的每个捕获表 \<架构名称>.\<表名称>，都将在 CDC 数据库中使用相同的架构和表名称创建一个类似的空表。 具有架构名称 `cdc` （不区分大小写）的 Oracle 源表无法捕获，因为 `cdc` 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 架构是为 SQL Server CDC 保留的。  
+ 对于每个捕获的表， \<schema-name> \<table-name> 在 Oracle 源数据库中，将在 CDC 数据库中使用相同的架构和表名称创建一个类似的空表。 具有架构名称 `cdc` （不区分大小写）的 Oracle 源表无法捕获，因为 `cdc` 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 架构是为 SQL Server CDC 保留的。  
   
  镜像表是空的；在其中不存储任何数据。 它们用于启用 Oracle CDC 实例使用的标准 SQL Server CDC 基础结构。 为了防止数据插入或更新到镜像表中，对于 PUBLIC 将拒绝所有 UPDATE、DELETE 和 INSERT 操作。 这将确保不能修改镜像表。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "79289265"
 ###  <a name="change-tables-_ct"></a><a name="bkmk_change_tables_ct"></a> 更改表 (_CT)  
  更改表是从镜像表创建的。 它们包含从 Oracle 数据库捕获的更改数据。 根据以下约定命名这些表：  
   
- [cdc].[**capture-instance>_CT]\<**  
+ **[cdc]。[ \<capture-instance> _CT]**  
   
  在最初为表 `<schema-name>.<table-name>`启用捕获时，默认捕获实例名称为 `<schema-name>_<table-name>`。 例如，Oracle HR.EMPLOYEES 表的默认捕获实例名称为 HR_EMPLOYEES，而关联的更改表为 [cdc]。 [HR_EMPLOYEES_CT]。  
   

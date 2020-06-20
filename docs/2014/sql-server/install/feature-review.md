@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1e2b22b8-5811-4f50-875b-685f3ddbd1ee
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5453bb0f67f670d20f239957ebc1e7bc799d0170
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 8e258ac763d8c5e057f8dcdb6f740aacb4fef1c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859573"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042640"
 ---
 # <a name="feature-review"></a>查看功能
   “查看功能”页是已准备好并且将在完成映像步骤结束时配置并完成的功能的只读列表。 该功能列表在准备映像步骤中选择，并且在完成映像步骤中无法修改。 除了显示的功能外，已准备实例还包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Writer 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client。  

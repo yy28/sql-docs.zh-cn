@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 003e75b1-54e5-4b36-a6f7-11e1f14cf98f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 44c6036de909ed8c18a120ec3de1108fb92cfb6e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 599480f9ee9f4d07dcdae30861aa0784e5f7203b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706313"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022738"
 ---
 # <a name="sqlconfigdatasource"></a>SQLConfigDataSource
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源配置属性字符串的各种特定关键字/值对。  

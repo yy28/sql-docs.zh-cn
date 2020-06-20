@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d920fef68adaa63059970a49c9473d75eeabfd30
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 140be806cfb79996c68b7c413c7998fcc0c20ebe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705048"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043879"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>绑定和转换 (OLE DB)
   本节介绍如何在 `datetime` 值和 `datetimeoffset` 值之间进行转换。 本节中描述的这些转换或者已由 OLE DB 提供，或者是 OLE DB 的一致扩展。  

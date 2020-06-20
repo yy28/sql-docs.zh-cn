@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ebcb8171ef63411fface757d2e6000e95eec6822
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95782afe0de8567781316e3478d04a090f968ed5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63017192"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007547"
 ---
 # <a name="osql-utility"></a>osql 实用工具
   使用 **osql** 实用工具可以输入 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句、系统过程和脚本文件。 此实用工具通过 ODBC 与服务器通信。  
@@ -93,8 +92,8 @@ C:\>osql
  **-E**  
  使用可信连接而不请求密码。  
   
- **-S** _server_name_[ **\\**_instance_name_]  
- 指定要连接到的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 指定要连接到该服务器上的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]命名实例_server_name_**\\**_instance_name_ 。 如果未指定服务器， **osql** 将连接到本地计算机上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 默认实例。 从网络上的远程计算机执行 **osql** 时，此选项是必需的。  
+ **-S** _server_name_[ **\\** _instance_name_]  
+ 指定要连接到的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 指定_server_name_ **\\** 要连接到该服务器上的命名实例 server_name_instance_name_ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 如果未指定服务器， **osql** 将连接到本地计算机上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 默认实例。 从网络上的远程计算机执行 **osql** 时，此选项是必需的。  
   
  **-H** _wksta_name_  
  工作站的名称。 工作站名称存储在 **sysprocesses.hostname** 中，并由 **sp_who**显示。 如果不指定此选项，则采用当前计算机名称。  
@@ -109,10 +108,10 @@ C:\>osql
  指定命令超时之前的秒数。如果未指定 *time_out* 值，则命令将不会超时。  
   
  **-h** _headers_  
- 指定要在列标题之间打印的行数。 默认为每一组查询结果输出一次标题。 使用 -1 可指定不打印标题。 如果使用的是 -1，参数和设置之间就不得有空格（可以是 -h-1  ，但不能是 -h -1  ）。  
+ 指定要在列标题之间打印的行数。 默认为每一组查询结果输出一次标题。 使用 -1 可指定不打印标题。 如果使用的是 -1，参数和设置之间就不得有空格（可以是 -h-1，但不能是 -h -1）。  
   
  **-s** _col_separator_  
- 指定列分隔符字符，默认值为空格。 若要使用对操作系统有特殊含义的字符（例如 |; & \< >），请将该字符用双引号（"）引起来。  
+ 指定列分隔符字符，默认值为空格。 若要使用对操作系统有特殊含义的字符（例如 |; & \< > ），请将该字符用双引号（"）引起来。  
   
  **-w** _column_width_  
  允许用户设置屏幕输出的宽度。 默认为 80 个字符。 当输出行达到其最大屏幕宽度时，会拆分为多行。  
@@ -194,7 +193,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="remarks"></a>备注  
  **osql** 实用工具从操作系统直接启动，并且使用本文中列出的区分大小写的选项。 **osql**启动后将接受 SQL 语句，然后以交互方式将这些语句发送到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 结果被格式化并在屏幕 (**stdout**) 上显示。 可使用 QUIT 或 EXIT 退出 **osql**。  
   
- 如果在启动**osql**时未指定用户名， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]则将检查环境变量并使用这些变量，例如**osqluser = （*`user`*）** 或**osqlserver = （*`server`*）**。 如果未设置环境变量，则使用工作站用户名。 如果未指定服务器，则使用工作站名称。  
+ 如果在启动**osql**时未指定用户名，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将检查环境变量并使用这些变量，例如**osqluser = （ *`user`* ）** 或**osqlserver = （ *`server`* ）**。 如果未设置环境变量，则使用工作站用户名。 如果未指定服务器，则使用工作站名称。  
   
  如果 **-U** 或 **-P** 选项都没有使用，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将尝试使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 身份验证模式进行连接。 身份验证根据运行 [!INCLUDE[msCoName](../includes/msconame-md.md)] osql **的用户的**Windows 帐户进行。  
   
@@ -294,7 +293,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 > [!NOTE]  
 >  执行批处理后退出，不返回值。  
   
--   EXIT **（*`query`*）**  
+-   EXIT **（ *`query`* ）**  
   
 > [!NOTE]  
 >  执行包括查询的批处理，返回查询的结果后退出。  
@@ -325,7 +324,7 @@ RAISERROR(50001, 10, 127)
      选择返回值时发生转换错误。  
   
 ## <a name="displaying-money-and-smallmoney-data-types"></a>显示 Money 和 Smallmoney 数据类型  
- **osql**显示具有`money`两`smallmoney`个小数位的和数据类型[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，但在内部存储值四个小数位。 请看下例：  
+ **osql**显示 `money` `smallmoney` 具有两个小数位的和数据类型，但 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在内部存储值四个小数位。 请看下例：  
   
 ```  
 SELECT CAST(CAST(10.3496 AS money) AS decimal(6, 4))  

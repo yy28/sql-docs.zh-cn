@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4ef65300-abce-43a6-8119-cb3f962dd564
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7e65fce75803445e233ee40890cdefefe8cdd96d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1121ca9cdc1c81bfc0e7be9d53041d1aa9144f34
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066210"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938488"
 ---
 # <a name="toolbar-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>工具栏（“操作”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用 **“工具栏”** 窗格执行多维数据集设计器的 **“操作”** 选项卡上的常规操作。  
@@ -25,7 +24,7 @@ ms.locfileid: "66066210"
 |选项|说明|  
 |------------|-----------------|  
 |**添加商业智能**|单击此项可显示 **“商业智能向导”** ，并向多维数据集添加商业智能功能。|  
-|**进程**|单击此项可显示 **“处理”** 对话框，并处理多维数据集。|  
+|**处理**|单击此项可显示 **“处理”** 对话框，并处理多维数据集。|  
 |**重新连接**|如果“操作”选项卡的会话由于连接丢失或超时而断开连接，则单击此项以将“操作”选项卡重新连接到包含多维数据集的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例和数据库********。|  
 |**新建操作**|单击此项可显示 **“操作窗体编辑器”** 窗格并创建新操作。|  
 |**新建钻取操作**|单击此项可显示 **钻取操作窗体编辑器** 并创建新的钻取操作。|  

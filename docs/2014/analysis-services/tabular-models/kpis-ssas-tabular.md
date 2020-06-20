@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2bcb160a3468d2d135d63c5184b7e07d097d5050
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdfbc4825908f409392f7dcca67749cbe08a407c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066995"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938830"
 ---
 # <a name="kpis-ssas-tabular"></a>KPI（SSAS 表格）
   在表格模型中，KPI（关键绩效指标）用于根据目标值（由度量值或绝对值定义）度量某一值（由基础度量值定义）的性能******。 本主题帮助表格模型作者对表格模型中的 KPI 有一个基本的了解。  
@@ -30,7 +29,7 @@ ms.locfileid: "66066995"
   
 -   [相关任务](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>便利  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> 优势  
  在业务术语中，关键绩效指标 (KPI) 是一个用于度量业务目标的可计量度量值。 经常会在一段时间内评估 KPI。 例如，组织的销售部门可以使用 KPI 来根据预计的毛利润来度量每月毛利润。 会计部门可以度量每月的支出与收入之比以便评估成本，而人力资源部门可以度量每季度员工流失情况。 这两个都是 KPI 的示例。 业务专业人员经常使用以业务计分卡形式分组在一起的 KPI 获取迅速且精确的业务绩效历史摘要或标识趋势。  
   
  表格模型中的 KPI 包括：  
@@ -44,7 +43,7 @@ ms.locfileid: "66066995"
  **状态阈值**  
  状态阈值按下限和上限之间的范围或按固定值定义。 状态阈值在显示时含一个图形，可帮助用户轻松地确定与目标值相比基础值的状态。  
   
-##  <a name="example"></a><a name="bkmk_example"></a>实例  
+##  <a name="example"></a><a name="bkmk_example"></a> 示例  
  Adventure Works 的销售经理想要创建一个数据透视表，她可以使用该数据透视表快速显示销售人员是否满足针对给定期间（年）的销售定额。 对于每个销售雇员，她希望该数据透视表显示以美元表示的实际销售额、以美元表示的销售配额量，以及显示每个销售员工是低于、等于还是高于其销售定额的状态的简单图形显示。 她希望能够按年对数据进行切片。  
   
  为实现此目的，销售经理会登记其组织的 BI 解决方案开发人员的帮助，以便将销售 KPI 添加到 AdventureWorks 表格模型中。 该销售经理然后使用 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 连接到作为数据源的 Adventure Works 表格模型，并且创建了一个数据透视表，其中包含字段（度量值和 KPI）和切片器以便分析销售人员是否满足其定额。  

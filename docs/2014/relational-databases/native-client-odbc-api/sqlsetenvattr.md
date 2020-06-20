@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d4114571-feca-4330-b2e4-7bfd1050b812
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 113c4508489e0f1dad8d134db7f86fc42371b456
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f0dbd4d01de9ca769c46a93f810f0149f5b86981
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702151"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021599"
 ---
 # <a name="sqlsetenvattr"></a>SQLSetEnvAttr
   [Odbc 程序员参考](https://go.microsoft.com/fwlink/?LinkId=45250)定义了 odbc 驱动程序应如何从写入 odbc 2 的应用程序解释**SQLSetEnvAttr**属性规范。*x*或 ODBC 3。*x* API。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序符合这些规则。  

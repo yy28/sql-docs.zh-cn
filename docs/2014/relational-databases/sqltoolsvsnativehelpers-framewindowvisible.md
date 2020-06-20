@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 9091d714-98bc-43ec-b8d1-9c892cb57f19
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: fd09d5d20b2a84050390c3e131265feddc09a409
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 414f1a03ea87f6cc6b0916a0122ca2a66d5855a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63285597"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060191"
 ---
 # <a name="framewindowvisible"></a>FrameWindowVisible
   指定特定窗口框架是否可见的属性。 帮助器方法是从托管代码使用的。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b402fd9e-0bea-4c38-a371-6ed7fea12e96
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b4518884b3fe17ea3a638ed21210775af7c4921c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 668fc8f9478c66ea7564d99c455ac43dc905de4b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62640340"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023427"
 ---
 # <a name="move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility"></a>将 UCP 从 SQL Server 的一个实例移到另一个实例（SQL Server 实用工具）
   本主题说明如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中将实用工具控制点 (UCP) 从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的一个实例移到另一个实例。  
@@ -30,7 +29,7 @@ ms.locfileid: "62640340"
   
 3.  从旧的 UCP 中删除所有托管实例。 有关详细信息，请参阅 [从 SQL Server 实用工具中删除 SQL Server 的实例](remove-an-instance-of-sql-server-from-the-sql-server-utility.md)。  
   
-4.  从旧的 UCP 备份实用工具管理数据仓库 (UMDW)。 文件名是 Sysutility_mdw_\<GUID>_DATA，数据库默认位置是 \<System drive>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\，其中，\<System drive> 通常为 C:\ 驱动器。 有关详细信息，请参阅 [通过备份和还原来复制数据库](../databases/copy-databases-with-backup-and-restore.md)。  
+4.  从旧的 UCP 备份实用工具管理数据仓库 (UMDW)。 文件名是 Sysutility_mdw_ \<GUID> _DATA，数据库默认位置是 \<System drive> ： \Program Files\Microsoft SQL Server \ MSSQL10_50。 <UCP_Name> \mssql\data \\ ，其中 \<System drive> 通常为 C：\光驱. 有关详细信息，请参阅 [通过备份和还原来复制数据库](../databases/copy-databases-with-backup-and-restore.md)。  
   
 5.  将 UMDW 的备份还原到新 UCP。 有关详细信息，请参阅 [通过备份和还原来复制数据库](../databases/copy-databases-with-backup-and-restore.md)。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "62640340"
   
 8.  等待大约 1 小时，以便数据收集和聚合操作完成。  
   
-9. 若要刷新数据，请在“实用工具资源管理器”  中右键单击“托管实例”  节点，然后选择“刷新”  。 列表视图数据将显示在 **“实用工具资源管理器”** 内容窗格中。 有关详细信息，请参阅[查看资源运行状况策略结果（SQL Server 实用工具）](view-resource-health-policy-results-sql-server-utility.md)。  
+9. 若要刷新数据，请在“实用工具资源管理器”中右键单击“托管实例”节点，然后选择“刷新”。 列表视图数据将显示在 **“实用工具资源管理器”** 内容窗格中。 有关详细信息，请参阅[查看资源运行状况策略结果（SQL Server 实用工具）](view-resource-health-policy-results-sql-server-utility.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 实用工具的功能和任务](sql-server-utility-features-and-tasks.md)   

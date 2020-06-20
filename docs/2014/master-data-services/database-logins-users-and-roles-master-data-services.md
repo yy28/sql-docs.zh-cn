@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e9352910554e5f946f21eae3b51a7d87ff1106bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 416ae500d940eb31eee3294edd07c289b124b6c4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479756"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971647"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>数据库登录名、用户和角色 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 包括在承载 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 数据库的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 实例上自动安装的登录名、用户和角色。 不应对这些登录名、用户和角色做任何修改。  
@@ -36,14 +35,14 @@ ms.locfileid: "65479756"
   
 ## <a name="msdb-users"></a>msdb 用户  
   
-|User|说明|  
+|用户|说明|  
 |----------|-----------------|  
 |`mds_clr_user`|未使用。<br /><br /> 映射到 mds_dlp_login。|  
 |`mds_email_user`|用于通知。<br /><br /> 映射到 mds_email_login。<br /><br /> 是角色 DatabaseMailUserRole 的成员。|  
   
 ## <a name="master-data-services-database-users"></a>Master Data Services 数据库用户  
   
-|User|说明|  
+|用户|说明|  
 |----------|-----------------|  
 |`mds_email_user`|用于通知。<br /><br /> 具有针对 mdm 架构的 SELECT 权限。<br /><br /> 具有针对 mdm.MemberGetCriteria 用户定义的表类型的 EXECUTE 权限。<br /><br /> 具有针对 mdm.udpNotificationQueueActivate 存储过程的 EXECUTE 权限。|  
 |**mds_schema_user**|拥有 mdm 和 mdq 架构。 默认架构为 mdm。<br /><br /> 不具有映射到它的登录名。|  
@@ -51,13 +50,13 @@ ms.locfileid: "65479756"
   
 ## <a name="master-data-services-database-role"></a>Master Data Services 数据库角色  
   
-|Role|说明|  
+|角色|说明|  
 |----------|-----------------|  
 |`mds_exec`|此角色包含创建 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] Web 应用程序并且为应用程序池指定帐户时在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中指定的帐户。 mds_exec 角色具有：<br /><br /> 所有架构的**EXECUTE**权限。<br /><br /> 对这些表的**ALTER**、 **INSERT**和**SELECT**权限：<br />mdm.tblStgMember<br />mdm.tblStgMemberAttribute<br />mdm.tbleStgRelationship<br /><br /> 对这些表的**SELECT**权限：<br />mdm.tblUser<br />mdm.tblUserGroup<br />mdm.tblUserPreference<br /><br /> 针对以下视图的**SELECT**权限：<br />mdm.viw_SYSTEM_SECURITY_NAVIGATION<br />mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL<br />mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL_MEMBER<br />mdm.viw_SYSTEM_SECURITY_USER_MODEL|  
   
 ## <a name="schemas"></a>架构  
   
-|Role|说明|  
+|角色|说明|  
 |----------|-----------------|  
 |`mdm`|包含除了在 mdq 架构中包含的函数之外的所有 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库和 Service Broker 对象。|  
 |`mdq`|包含与基于正则表达式或相似性筛选成员结果相关的以及用于设置通知电子邮件格式的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库函数。|  

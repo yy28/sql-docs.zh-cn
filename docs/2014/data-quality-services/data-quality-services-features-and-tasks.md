@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1c3caf606e8cbf551d7b865b30996ae0f16450a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b2e02de3cb4a4c7be9615b328b8ec0703cab690
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480709"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937778"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Data Quality Services 功能和任务
   查找任何人（数据管理人员、Data Quality Services 管理员或 SQL Server 管理员）为准备和执行数据质量项目所需的信息。  

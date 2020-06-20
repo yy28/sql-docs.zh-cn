@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e11eea40558a8e44232eed22f08d9a60bcd7742b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df6ab109451fbe7cf8df1b7c615f68a6cbad02f0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771083"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922188"
 ---
 # <a name="user-roles-for-change-data-capture-service-for-oracle-by-attunity"></a>使用 Change Data Capture Service for Oracle by Attunity 的角色
   本节介绍 Change Data Capture Service for Oracle by Attunity 的用户角色。 介绍的角色包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库角色、Windows 角色或 Oracle 数据库角色。  
@@ -139,7 +138,7 @@ ms.locfileid: "62771083"
   
  下表描述应向日志挖掘用户授予的所需权限：  
   
--   SELECT on \<any-captured-table>  
+-   选择启用\<any-captured-table>  
   
 -   SELECT ANY TRANSACTION  
   

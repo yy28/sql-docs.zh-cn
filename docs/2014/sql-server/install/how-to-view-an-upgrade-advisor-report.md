@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d13b38af-0ac3-4030-83cd-e7d7825dd09f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c0ae231e380530f11d4c97a917927ed62e99fb47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0cbe8746faeba10fa023aa51e7d91a6fb074776e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094797"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042443"
 ---
 # <a name="how-to-view-an-upgrade-advisor-report"></a>如何查看升级顾问报表
   升级顾问会为选择分析的每个组件创建报表。 本主题说明如何从升级顾问起始页中查看升级顾问报表。  
@@ -31,7 +30,7 @@ ms.locfileid: "66094797"
   
 ### <a name="to-view-a-report"></a>查看报表  
   
-1.  依次单击 "**开始**"、"**所有程序**"、 **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**，然后单击** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] "升级顾问**"。  
+1.  依次单击 "**开始**"、"**所有程序**"、 **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** ，然后单击 " ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升级顾问**"。  
   
 2.  在升级顾问起始页上，单击 "**启动升级顾问报表查看器**"。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66094797"
   
     -   **重要性**，指示修复问题的重要程度。  
   
-    -   **解决时间**，它指示在升级到之前或之后（或必须）升级到[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、迁移应用程序或数据之前或之后，或在任何时间迁移之后。  
+    -   **解决时间**，它指示在升级到之前或之后（或必须）升级到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 、迁移应用程序或数据之前或之后，或在任何时间迁移之后。  
   
     -   对问题的简短说明。  
   

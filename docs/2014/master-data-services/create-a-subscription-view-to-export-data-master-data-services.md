@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c4a2f747192b1cddefeac256d4470a2b345305de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: de6ee4b3ba52dec87d71bb97707a8cd8f748d854
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479939"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971767"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>创建订阅视图 (Master Data Services)
-  如果要在[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]数据库中创建供订阅系统使用的数据视图，请创建订阅视图。  
+  如果要在数据库中创建 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 供订阅系统使用的数据视图，请创建订阅视图。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“集成管理”** 功能区域。  
@@ -53,7 +52,7 @@ ms.locfileid: "65479939"
   
 9. 如果您从 **“格式”** 列表中选择 **“显式级别”** 或 **“派生级别”** ，则键入要包括在视图中的层次结构中的级别数。  
   
-10. 单击“保存”  。  
+10. 单击“ **保存**”。  
   
 ## <a name="see-also"></a>另请参阅  
  [将数据导出 &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)   

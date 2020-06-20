@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 484aafea03bb1b053239e9948ac498403b5ac25d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e05d920b21a2e99f5daed06f00183ce8bed85754
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667415"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060819"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>从复制监视器中添加和删除发布服务器
   如果从中启动复制监视器的服务器是发布服务器，则会自动将其添加到监视器中。 其他发布服务器可以通过 **“添加发布服务器”** 对话框来添加。 添加发布服务器后，该服务器便会显示在监视器左窗格中的某个组中。 默认情况下，包括 **“我的发布服务器”** 组，但还可以创建新组来管理一个或多个复制拓扑。 有关启动复制监视器的信息，请参阅[启动复制监视器](start-the-replication-monitor.md)。  
@@ -30,7 +29,7 @@ ms.locfileid: "62667415"
   
 3.  在 **“连接到服务器”** 对话框中输入该发布服务器的名称，然后选择身份验证类型。 如果选择 **“SQL Server 身份验证”**，请输入登录名和密码。 您所指定的凭据由复制监视器进行保存，以便将来连接到此服务器时使用。 指定的 Windows 帐户或 SQL Server 登录名必须为 **sysadmin** 固定服务器角色的成员或分发数据库中 **replmonitor** 固定数据库角色的成员。  
   
-4.  单击“连接”  。 如果发布服务器使用远程分发服务器，系统将在 **“连接到服务器”** 对话框中提示您连接到分发服务器。 您所指定的凭据由复制监视器进行保存，以便将来连接到此服务器时使用。 指定的 Windows 帐户或 SQL Server 登录名必须为 **sysadmin** 固定服务器角色的成员或分发数据库中 **replmonitor** 固定数据库角色的成员。  
+4.  单击“连接”。 如果发布服务器使用远程分发服务器，系统将在 **“连接到服务器”** 对话框中提示您连接到分发服务器。 您所指定的凭据由复制监视器进行保存，以便将来连接到此服务器时使用。 指定的 Windows 帐户或 SQL Server 登录名必须为 **sysadmin** 固定服务器角色的成员或分发数据库中 **replmonitor** 固定数据库角色的成员。  
   
 5.  发布服务器和分发服务器的名称显示在 **“开始监视下列发布服务器”** 网格中。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "62667415"
   
 3.  在“连接到服务器”对话框中，输入与 Oracle 发布服务器关联的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器的名称，然后选择身份验证类型****。 如果选择 **“SQL Server 身份验证”**，请输入登录名和密码。 您所指定的凭据由复制监视器进行保存，以便将来连接到此服务器时使用。 指定的 Windows 帐户或 SQL Server 登录名必须为 **sysadmin** 固定服务器角色的成员或分发数据库中 **replmonitor** 固定数据库角色的成员。  
   
-4.  单击“连接”  。  
+4.  单击“连接”。  
   
 5.  发布服务器和分发服务器的名称显示在 **“开始监视下列发布服务器”** 网格中。  
   
@@ -66,7 +65,7 @@ ms.locfileid: "62667415"
   
 3.  在 **“连接到服务器”** 对话框中，输入该分发服务器的名称，然后选择身份验证类型。 如果选择 **“SQL Server 身份验证”**，请输入登录名和密码。 您所指定的凭据由复制监视器进行保存，以便将来连接到此服务器时使用。 指定的 Windows 帐户或 SQL Server 登录名必须为 **sysadmin** 固定服务器角色的成员或分发数据库中 **replmonitor** 固定数据库角色的成员。  
   
-4.  单击“连接”  。  
+4.  单击“连接”。  
   
 5.  分发服务器和每个发布服务器的名称显示在 **“开始监视下列发布服务器”** 网格中。 如果一个发布服务器已经添加到复制监视器中，则该网格中不显示其名称。  
   
@@ -92,7 +91,7 @@ ms.locfileid: "62667415"
   
 1.  右键单击左窗格中的某发布服务器。  
   
-2.  单击 **“删除”**。  
+2.  单击“删除”。  
   
 ### <a name="to-add-a-publisher-group-to-replication-monitor"></a>向复制监视器添加发布服务器组  
   

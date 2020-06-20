@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: af4ede43-2225-45b5-ae7e-9202411551ba
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b331015abd90fbff4c3810118666dbc9b356369b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c04b5cc4dd75d2f9f8305b7af00e389317a92537
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952672"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045777"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>高级多网站配置（SSRS 本机模式）
   使用此对话框可创建和管理用于访问报表服务器或报表管理器的 URL。 **“高级多网站配置”** 对话框用于创建附加 URL 和包含主机标头名称的自定义 URL，或者用于指定 IPv4 或 IPv6 格式的 IP 地址。  
@@ -28,7 +27,7 @@ ms.locfileid: "71952672"
   
  若要打开 **“高级多网站配置”** 对话框，请单击 **配置管理器中的** “Web 服务 URL” **页或** “报表管理器 URL” **页上的** “高级” [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 **“高级多网站配置”** 对话框打开后，可以单击 **“添加”** 或 **“编辑”** 来定义新的 URL，或者修改或删除现有的 URL。  
   
- 单击 **“确定”** 以保存你的更改。 如果添加或删除 URL 后，没有先单击 **“确定”** 就关闭了对话框，所做的更改将丢失。  
+  单击“确定”以保存你的更改。 如果添加或删除 URL 后，没有先单击 **“确定”** 就关闭了对话框，所做的更改将丢失。  
   
 ## <a name="options"></a>选项  
  **IP 地址**  
@@ -40,12 +39,12 @@ ms.locfileid: "71952672"
   
 -   **127.0.0.1** 用于访问本地主机。 它支持对报表服务器计算机进行本地管理。 如果仅选择此值，则只有在本地登录到报表服务器计算机的用户可以访问应用程序。  
   
--   *Nnn.nnn.nnn.nnn* 是计算机网络适配器的 IPv4 地址。 如果你的网络使用 IPv6 寻址，IP 地址将为 8 4 字节字段的128位值，其格式类似于以下格式： \<标头>：*nnnn： nnnn： nnnn： nnnn*。  
+-   *Nnn.nnn.nnn.nnn* 是计算机网络适配器的 IPv4 地址。 如果你的网络使用 IPv6 寻址，则 IP 地址将是 8 4 字节字段的128位值，类似于以下格式： \<header> ：*nnnn： nnnn： nnnn： nnnn*。  
   
      如果有多个网络适配器，您将看到每个网络适配器都有一个 IP 地址。 如果仅选择此值，它将限制对该 IP 地址（以及域名服务器映射到该地址的任何主机名）的应用程序访问。 您不能使用 localhost 访问报表服务器，也不能使用安装在报表服务器计算机上的其他网络适配器的 IP 地址。  
   
- 端口   
- 指定报表服务器监视请求的端口。 端口 80 为默认端口。 如果使用端口 80，则不必将其包含在 URL 中。 如果使用其他任何端口号，则必须始终将其包含在 URL 中（例如，） http://localhost:8181/reports)。  
+ 端口  
+ 指定报表服务器监视请求的端口。 端口 80 为默认端口。 如果使用端口 80，则不必将其包含在 URL 中。 如果使用其他任何端口号，则必须始终将其包含在 URL 中（例如，） http://localhost:8181/reports) 。  
   
  **主机标头**  
  如果已有一个在域名服务器上定义的主机标头解析为您的计算机，则可以在为报表服务器访问配置的 URL 中指定该主机标头。  
@@ -65,7 +64,7 @@ ms.locfileid: "71952672"
  **发布到**  
  显示为其创建证书的计算机的名称。  
   
- **添加**  
+ **Add**  
  定义附加 URL。  
   
  **编辑**  

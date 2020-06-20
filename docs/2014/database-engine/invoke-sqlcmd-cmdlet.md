@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0c74d21b-84a5-4fa4-be51-90f0f7230044
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: beee2fa576387eadb75ee5ab1bfefcb66453acc0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9703628ff6fb6255bc73151bb9a39cb3ce8e43d7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76928025"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931463"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd cmdlet
   **Invoke-Sqlcmd** 是一个运行脚本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet，其所运行的脚本中包含 [!INCLUDE[tsql](../includes/tsql-md.md)]sqlcmd **实用工具**所支持的语言（和XQuery）和命令中的语句。  
@@ -109,7 +108,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |要使用的初始数据库|-d|-Database|  
 |运行指定的查询并退出|-S|-Query|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证登录 ID|-U|-Username|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证密码|-P|-Password|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证密码|-p|-Password|  
 |变量定义|-v|-Variable|  
 |查询超时间隔|-t|-QueryTimeout|  
 |在遇到错误时停止运行|-b|-AbortOnError|  
@@ -117,18 +116,18 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |禁用交互式命令、启动脚本和环境变量|-X|-DisableCommands|  
 |禁用变量替换|-X|-DisableVariables|  
 |要报告的最小严重级别|-v|-SeverityLevel|  
-|要报告的最小错误级别|-M|-ErrorLevel|  
+|要报告的最小错误级别|-m|-ErrorLevel|  
 |登录超时间隔|-l|-ConnectionTimeout|  
 |主机名|-H|-HostName|  
 |更改密码并退出|-Z|-NewPassword|  
-|包含查询的输入文件|-o|-InputFile|  
+|包含查询的输入文件|-i|-InputFile|  
 |字符输出的最大长度|-w|-MaxCharLength|  
 |二进制输出的最大长度|-w|-MaxBinaryLength|  
 |使用 SSL 加密机制进行连接|无参数|-EncryptConnection|  
 |显示错误|无参数|-OutputSqlErrors|  
 |将消息输出到 stderr|-r|无参数|  
 |使用客户端的区域设置|-R|无参数|  
-|运行指定的查询并保持运行状态|-S|无参数|  
+|运行指定的查询并保持运行状态|-q|无参数|  
 |要用于输出数据的代码页|-f|无参数|  
 |更改密码并保持运行状态|-Z|无参数|  
 |数据包大小|-a|无参数|  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f3389ff2-f3be-4035-9fb5-c9ebc2f15025
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f3a2bbebc947d0c245e00c39fca2d4e69fbb5666
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 432dfc5f41d5333bf9e6cb9111464e1dcb01f579
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706037"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022314"
 ---
 # <a name="sqlgetdescrec"></a>SQLGetDescRec
   本主题讨论特定于 Native Client 的 SQLGetDescRec 功能 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -31,7 +30,7 @@ ms.locfileid: "82706037"
   
 |参数|表值参数|表值参数列和其他参数|  
 |---------------|-----------------------------|----------------------------------------------------------|  
-|*Name*|存储过程调用的正式参数名称；否则是长度为 0 的字符串。|表值参数列名称。|  
+|*名称*|存储过程调用的正式参数名称；否则是长度为 0 的字符串。|表值参数列名称。|  
 |*TypePtr*|SQL_DESC_TYPE。 对于表值参数，这是 SQL_SS_TABLE。|SQL_DESC_TYPE|  
 |*SubTypePtr*|未定义|SQL_DESC_DATETIME_INTERVAL_CODE（对于 SQL_DATETIME 或 SQL_INTERVAL 类型的记录。）|  
 |*LengthPtr*|0|SQL_DESC_OCTET_LENGTH|  

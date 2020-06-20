@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1f41ed858bedd18ec68794d5e7d1c13100af5254
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ea97a56ad10fd0545e9a550defcf673f05542c8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767029"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964777"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>通过使用检查点重新启动包
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可以从失败点重新启动失败的包，而不是重新运行整个包。 如果包配置为使用检查点，则关于包执行的信息会写入检查点文件中。 当重新运行失败的包时，可以使用检查点文件从失败点重新启动该包。 如果包成功运行，则会删除该检查点文件，然后在下次运行包时会重新创建相应的检查点文件。  
@@ -59,7 +58,7 @@ ms.locfileid: "62767029"
 |CheckpointUsage|指定是否使用检查点。|  
 |SaveCheckpoints|指示包是否保存检查点。 此属性必须设置为 True，才能从失败点重新启动包。|  
   
- 此外，对于包中要标识为重新`true`启动点的所有容器，必须将 FailPackageOnFailure 属性设置为。  
+ 此外， `true` 对于包中要标识为重新启动点的所有容器，必须将 FailPackageOnFailure 属性设置为。  
   
  可以使用 ForceExecutionResult 属性测试包中检查点的使用情况。 通过将容器或任务的 ForceExecutionResult 设置为 Failure，可以模拟实时的失败。 当重新运行包时，将重新运行失败的任务和容器。  
   
@@ -73,7 +72,7 @@ ms.locfileid: "62767029"
 |`IfExists`|指定如果存在检查点文件则使用该文件。 如果检查点文件存在，则包从上一次执行失败的点重新启动；如果检查点文件不存在，则包从包工作流的起点开始运行。|  
   
 > [!NOTE]  
->  Dtexec 的 **/checkpointing on on**选项等效于将包的`SaveCheckpoints`属性设置为`True`，并将属性设置为`CheckpointUsage` "始终"。 有关详细信息，请参阅 [dtexec Utility](dtexec-utility.md)。  
+>  Dtexec 的 **/checkpointing on on**选项等效于将 `SaveCheckpoints` 包的属性设置为 `True` ，并将 `CheckpointUsage` 属性设置为 "始终"。 有关详细信息，请参阅 [dtexec 实用工具](dtexec-utility.md)。  
   
 ## <a name="securing-checkpoint-files"></a>保护检查点文件  
  包级别的保护不包括保护检查点文件，必须单独保护这些文件。 检查点数据只能存储在文件系统中，应当使用操作系统访问控制列表 (ACL) 来保护用于存储该文件的位置或文件夹。 重要的是务必保护检查点文件，因为它们包含了有关包状态的信息，包括变量的当前值。 例如，变量可能包含由很多行私人数据（如电话号码）组成的记录集。 有关详细信息，请参阅[访问包使用的文件](../access-to-files-used-by-packages.md)。  

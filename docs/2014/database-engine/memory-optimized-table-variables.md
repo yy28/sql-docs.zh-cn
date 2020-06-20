@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48f78615e20ac194f6d11d4aa2f31610ff6bb963
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774405"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930818"
 ---
 # <a name="memory-optimized-table-variables"></a>内存优化表变量
   除了内存优化表（用于高效的数据访问）和本机编译的存储过程（用于高效的查询处理和业务逻辑执行）之外，[!INCLUDE[hek_2](../includes/hek-2-md.md)] 还引入了第三种对象：内存优化表类型。 使用内存优化表类型创建的表变量是内存优化表变量。  
