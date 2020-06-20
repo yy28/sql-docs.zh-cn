@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9c1a3234-4675-40d3-b473-8df06208f880
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f89e074e8431d9d421b9168e43522412c152e55f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f8685b5180d4c8dc91d0199030ecd04fdcbec994
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704634"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039023"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>向表值参数中插入数据
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序支持使用两种模型来指定表值参数行的数据：推送模型和请求模型。 提供演示请求模型的示例；请参阅 [SQL Server 数据编程示例](https://msftdpprodsamples.codeplex.com/)。  

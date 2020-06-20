@@ -13,25 +13,24 @@ helpviewer_keywords:
 ms.assetid: df393f13-d538-4d94-8155-9c2fdf5f755d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 79f3f41d4224baacd485c7d2151db0f3f2059f86
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23cc38bbec77b01a1e8a7d09dddfe70b46844920
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150620"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047865"
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>分别保存 Showplan XML Statistics Profile 事件 (SQL Server Profiler)
   本主题说明如何使用 **将在跟踪中捕获的** Showplan XML Statistics Profile [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]事件保存到单独的 .SQLPlan 文件中。 可以在 **中打开** Showplan XML Statistics Profile [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]事件文件，这样您就可以查看每个事件的图形执行计划。  
   
 ### <a name="to-save-showplan-xml-statistics-events-separately"></a>分别保存 Showplan XML Statistics 事件  
   
-1.  在 **“文件”** 菜单上，单击 **“新建跟踪”**，再连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。  
+1.  在 **“文件”** 菜单上，单击 **“新建跟踪”** ，再连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。  
   
      此时，将显示 **“跟踪属性”** 对话框。  
   
     > [!NOTE]  
-    >  如果你选中了“建立连接后立即开始跟踪”****，那么系统不会显示“跟踪属性”**** 对话框，而是会开始进行跟踪。 若要关闭此设置，请在 "**工具**" 菜单上单击 "**选项**"，然后清除 "**建立连接后立即开始跟踪**" 复选框。  
+    >  如果你选中了“建立连接后立即开始跟踪”****，那么系统不会显示“跟踪属性”**** 对话框，而是会开始进行跟踪。 若要关闭此设置，请在“工具”菜单上，单击“选项”，然后清除“建立连接后立即开始跟踪”复选框。  
   
 2.  在 **“跟踪属性”** 对话框内的 **“跟踪名称”** 框中键入跟踪的名称。  
   

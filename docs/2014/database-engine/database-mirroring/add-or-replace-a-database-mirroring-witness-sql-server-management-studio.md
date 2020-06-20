@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4bc9f0865ed5ff00099f121f254d17aafc298f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a97732878a8cf0f5113f22eec0289af20184e19d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807442"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934418"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>添加或替换数据库镜像见证服务器 (SQL Server Management Studio)
   如果数据库镜像端点使用 Windows 身份验证，则可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 添加或替换见证服务器。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中添加见证服务器还会将运行模式更改为具有自动故障转移功能的高安全性模式。  
@@ -40,15 +39,15 @@ ms.locfileid: "62807442"
   
 6.  在 **“包括见证服务器”** 对话框中，单击 **“是”**，再单击 **“下一步”**。  
   
-7.  在 **“选择要配置的服务器”** 对话框中，将自动选中 **“见证服务器实例”** 复选框。 单击“下一步”  。  
+7.  在 **“选择要配置的服务器”** 对话框中，将自动选中 **“见证服务器实例”** 复选框。 单击“下一步”。  
   
-8.  在 **“主体服务器实例”** 对话框中，保留现有的端口和端点。 单击“下一步”  。  
+8.  在 **“主体服务器实例”** 对话框中，保留现有的端口和端点。 单击“下一步”。  
   
 9. 在 **“见证服务器实例”** 对话框中，单击 **“连接”**。  
   
-10. 在****“连接到服务器”对话框的****“服务器名称”字段中，指定见证服务器实例，并使用 Windows 身份验证（默认设置）。 单击“连接”  。  
+10. 在****“连接到服务器”对话框的****“服务器名称”字段中，指定见证服务器实例，并使用 Windows 身份验证（默认设置）。 单击“连接”。  
   
-11. 建立连接之后，便会在 **“见证服务器实例”** 对话框中显示见证服务器实例的侦听器端口和数据库镜像端点。 单击“下一步”  。  
+11. 建立连接之后，便会在 **“见证服务器实例”** 对话框中显示见证服务器实例的侦听器端口和数据库镜像端点。 单击“下一步”。  
   
 12. **“服务帐户”** 对话框包含主体服务器实例、镜像服务器实例和见证服务器实例的域服务帐户字段。  
   
@@ -56,11 +55,11 @@ ms.locfileid: "62807442"
   
     -   如果见证服务器实例所用的服务帐户不同于两个伙伴所用的服务帐户，则请使用以下帐户名填充 **“主体”**、 **“镜像”** 和 **“见证服务器”** 字段：  
   
-         *DOMAINNAME* **\\** *用户名*  
+         *DOMAINNAME* **\\***用户名*  
   
          域名必须大写。  
   
-     单击“下一步”  。  
+     单击“下一步”。  
   
 13. 在 **“完成该向导”** 摘要屏幕中，检查见证服务器配置（可选），再单击 **“完成”**。  
   

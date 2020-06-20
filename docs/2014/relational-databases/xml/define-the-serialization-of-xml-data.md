@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eec4a1b93be27ca49122e576107f2856dda9f7ca
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: df87dddd9fd4cf067125314c9d798eaa42523576
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717031"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046759"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>定义 XML 数据的序列化
   将 xml 数据类型显式或隐式转换为 SQL 字符串或二进制类型时，将根据本主题中所述的规则对 xml 数据类型的内容进行序列化。  
@@ -75,7 +74,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
 ## <a name="entitization-of-xml-characters-during-serialization"></a>序列化期间 XML 字符的实体化  
  应该能够对每个序列化的 XML 结构进行重新分析。 因此，必须以实体化方式对某些字符进行序列化，从而在整个 XML 分析器的规范化阶段保留这些字符的往返能力。 不过，还必须对某些字符进行实体化，以便文档的格式正确并能够被分析。 下面是序列化期间应用的实体化规则：  
   
--   如果字符 &、\< 和 > 出现在属性值或元素内容中，始终将它们分别实体化为 &amp;、&lt; 和 &gt;。  
+-   \<, and > &amp; &lt; 如果字符 &gt; 出现在属性值或元素内容中，则这些字符 & 始终分别实体化、和。  
   
 -   因为 SQL Server 使用引号 (U+0022) 来闭合属性值，所以将属性值中的引号实体化为 &quot;。  
   

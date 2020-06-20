@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 95ffdd52ff4c71039a87f177e67d51cb81830c68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e8f2e75eb5272f30153814e923048b4f5c4f8b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011927"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016205"
 ---
 # <a name="server-level-roles"></a>服务器级别角色
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供服务器级角色以帮助你管理服务器上的权限。 这些角色是可组合其他主体的安全主体。 服务器级角色的权限作用域为服务器范围。 （“角色”  类似于 Windows 操作系统中的“组”  。）  
@@ -45,7 +44,7 @@ ms.locfileid: "63011927"
 |------------------------------|-----------------|  
 |sysadmin|sysadmin 固定服务器角色的成员可以在服务器上执行任何活动。|  
 |serveradmin|serveradmin 固定服务器角色的成员可以更改服务器范围的配置选项和关闭服务器。|  
-|securityadmin|securityadmin 固定服务器角色的成员可以管理登录名及其属性。 他们可以 GRANT、DENY 和 REVOKE 服务器级别的权限。 他们还可以 GRANT、DENY 和 REVOKE 数据库级权限（如果他们具有数据库的访问权限）。 此外，他们还可以重置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名的密码。<br /><br /> ** \* \*安全\*说明**授予访问权限[!INCLUDE[ssDE](../../../includes/ssde-md.md)]和配置用户权限的功能允许安全管理员分配大多数服务器权限。 应`securityadmin`将该角色视为等效于`sysadmin`角色。|  
+|securityadmin|securityadmin 固定服务器角色的成员可以管理登录名及其属性。 他们可以 GRANT、DENY 和 REVOKE 服务器级别的权限。 他们还可以 GRANT、DENY 和 REVOKE 数据库级权限（如果他们具有数据库的访问权限）。 此外，他们还可以重置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名的密码。<br /><br /> ** \* \* 安全 \* 说明 \* **向授予访问权限 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 和配置用户权限的能力允许安全管理员分配大多数服务器权限。 `securityadmin`应将该角色视为等效于 `sysadmin` 角色。|  
 |processadmin|processadmin 固定服务器角色的成员可以终止在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例中运行的进程。|  
 |setupadmin|固定服务器角色的成员可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句添加和删除链接服务器。 （在使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]时需要 sysadmin 成员资格。）|  
 |bulkadmin|bulkadmin 固定服务器角色的成员可以运行 BULK INSERT 语句。|  
@@ -57,7 +56,7 @@ ms.locfileid: "63011927"
  每个固定服务器角色都被分配了特定的权限。 有关分配给服务器角色的权限的图表，请参阅 [数据库引擎固定服务器和固定数据库角色](https://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx)。  
   
 > [!IMPORTANT]  
->  `CONTROL SERVER` 权限与 `sysadmin` 固定服务器角色类似，但并不完全相同。 权限并不表示角色成员身份，并且角色成员身份不会授予权限。 （例如， `CONTROL SERVER`不表示固定服务器角色的`sysadmin`成员身份。）但是，有时可在角色和等效权限之间模拟。 大多数 `DBCC` 命令和许多系统过程要求 `sysadmin` 固定服务器角色的成员身份。 有关需要`sysadmin`成员身份的171系统存储过程的列表，请参阅以下博客文章： Andreas WOLTER CONTROL [CONTROL SERVER 和 sysadmin/sa：权限、系统过程、DBCC、自动架构创建和特权升级-注意事项](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)。  
+>  `CONTROL SERVER` 权限与 `sysadmin` 固定服务器角色类似，但并不完全相同。 权限并不表示角色成员身份，并且角色成员身份不会授予权限。 （例如， `CONTROL SERVER`不表示 `sysadmin` 固定服务器角色的成员身份。）但是，有时可在角色和等效权限之间模拟。 大多数 `DBCC` 命令和许多系统过程要求 `sysadmin` 固定服务器角色的成员身份。 有关需要成员身份的171系统存储过程的列表 `sysadmin` ，请参阅以下博客文章： Andreas Wolter control [CONTROL SERVER 和 sysadmin/sa：权限、系统过程、DBCC、自动架构创建和特权升级-注意事项](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)。  
   
 ## <a name="server-level-permissions"></a>服务器级权限  
  只能向用户定义的服务器角色中添加服务器级权限。 若要列出服务器级权限，请执行下面的语句。 服务器级权限如下：  
@@ -78,11 +77,11 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 |[sp_srvrolepermission (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql)|元数据|显示服务器级角色的权限。|  
 |[IS_SRVROLEMEMBER (Transact-SQL)](/sql/t-sql/functions/is-srvrolemember-transact-sql)|元数据|指示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名是否为指定服务器级角色的成员。|  
 |[sys.server_role_members (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-server-role-members-transact-sql)|元数据|为每个服务器级角色的每个成员返回一行。|  
-|[sp_addsrvrolemember (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql)|命令|将登录名添加为某个服务器级角色的成员。 已弃用。 应改用 [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) 。|  
-|[sp_dropsrvrolemember (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql)|命令|从服务器级角色中删除 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名或 Windows 用户或组。 已弃用。 应改用 [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) 。|  
-|[CREATE SERVER ROLE (Transact-SQL)](/sql/t-sql/statements/create-server-role-transact-sql)|命令|创建用户定义的服务器角色。|  
-|[ALTER SERVER ROLE (Transact-SQL)](/sql/t-sql/statements/alter-server-role-transact-sql)|命令|更改服务器角色的成员关系或更改用户定义的服务器角色的名称。|  
-|[DROP SERVER ROLE (Transact-SQL)](/sql/t-sql/statements/drop-server-role-transact-sql)|命令|删除用户定义的服务器角色。|  
+|[sp_addsrvrolemember (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql)|Command|将登录名添加为某个服务器级角色的成员。 已弃用。 应改用 [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) 。|  
+|[sp_dropsrvrolemember (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql)|Command|从服务器级角色中删除 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名或 Windows 用户或组。 已弃用。 应改用 [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) 。|  
+|[CREATE SERVER ROLE (Transact-SQL)](/sql/t-sql/statements/create-server-role-transact-sql)|Command|创建用户定义的服务器角色。|  
+|[ALTER SERVER ROLE (Transact-SQL)](/sql/t-sql/statements/alter-server-role-transact-sql)|Command|更改服务器角色的成员关系或更改用户定义的服务器角色的名称。|  
+|[DROP SERVER ROLE (Transact-SQL)](/sql/t-sql/statements/drop-server-role-transact-sql)|Command|删除用户定义的服务器角色。|  
 |[IS_SRVROLEMEMBER (Transact-SQL)](/sql/t-sql/functions/is-srvrolemember-transact-sql)|函数|确定服务器角色的成员关系。|  
   
 ## <a name="see-also"></a>另请参阅  

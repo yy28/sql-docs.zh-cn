@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 876e61b7-875c-43f4-bbce-d7eeb90f6730
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0c2c543343bd602be75d600a489edfd84663790b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 911e40506891894213040a02cb439daa6997701a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62911399"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059682"
 ---
 # <a name="set-breakpoints"></a>“设置断点”
   可以使用 **“设置断点”** 对话框，指定要启用断点和控制断点行为的事件。  
   
 ## <a name="options"></a>选项  
- **Enabled**  
+ **已启用**  
  选择此选项可以对事件启用断点。  
   
  **Break Condition**  
@@ -34,7 +33,7 @@ ms.locfileid: "62911399"
  **命中计数类型**  
  指定断点生效的时间。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**始终**|断点命中时始终挂起执行。|  
 |**命中计数等于**|断点发生的次数等于命中计数时挂起执行。|  

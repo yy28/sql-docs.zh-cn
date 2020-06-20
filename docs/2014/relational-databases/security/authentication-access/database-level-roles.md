@@ -36,13 +36,12 @@ helpviewer_keywords:
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 3df05bddf37970ce0ff0d796bc2b5d93d309b4dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0354f0e55111e078f1682e38c3fb51aea8c365b3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011724"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055346"
 ---
 # <a name="database-level-roles"></a>数据库级别的角色
   为便于管理数据库中的权限， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了若干“角色”  ，这些角色是用于对其他主体进行分组的安全主体。 它们类似于 ***Windows 操作系统中的*** 组 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。 数据库级角色的权限作用域为数据库范围。  
@@ -79,7 +78,7 @@ ms.locfileid: "63011724"
 |`dc_admin`<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|这些数据库角色的成员可以管理和使用数据收集器。 有关详细信息，请参阅 [Data Collection](../../data-collection/data-collection.md)。|  
 |**PolicyAdministratorRole**|**db_ PolicyAdministratorRole** 数据库角色的成员可以对基于策略的管理策略和条件执行所有配置和维护活动。 有关详细信息，请参阅 [使用基于策略的管理来管理服务器](../../policy-based-management/administer-servers-by-using-policy-based-management.md)。|  
 |**ServerGroupAdministratorRole**<br /><br /> **ServerGroupReaderRole**|这些数据库角色的成员可以管理和使用注册的服务器组。|  
-|**dbm_monitor**|在数据库镜像监视器中`msdb`注册第一个数据库时在数据库中创建。 在系统管理员为 **dbm_monitor** 角色分配用户之前，该角色没有任何成员。|  
+|**dbm_monitor**|在数据库镜像监视器中 `msdb` 注册第一个数据库时在数据库中创建。 在系统管理员为 **dbm_monitor** 角色分配用户之前，该角色没有任何成员。|  
   
 > [!IMPORTANT]  
 >  db_ssisadmin 角色和 dc_admin 角色的成员可以将其特权提升为 sysadmin。 因为这些角色可以修改 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包，而 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理的 sysadmin 安全上下文可以执行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包，所以可以实现特权提升。 若要在运行维护计划、数据收集组和其他 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包时防止此权限提升，请将运行包的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业配置为使用具有有限权限的代理帐户，或只将 sysadmin 成员添加到 db_ssisadmin 和 dc_admin 角色。  
@@ -95,12 +94,12 @@ ms.locfileid: "63011724"
 |[sp_helprolemember (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql)|元数据|返回有关当前数据库中某个角色的成员的信息。|  
 |[sys.database_role_members (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)|元数据|为每个数据库角色的每个成员返回一行。|  
 |[IS_MEMBER (Transact-SQL)](/sql/t-sql/functions/is-member-transact-sql)|元数据|指示当前用户是否为指定 Microsoft Windows 组或 Microsoft SQL Server 数据库角色的成员。|  
-|[CREATE ROLE (Transact-SQL)](/sql/t-sql/statements/create-role-transact-sql)|命令|在当前数据库中创建新的数据库角色。|  
-|[ALTER ROLE (Transact-SQL)](/sql/t-sql/statements/alter-role-transact-sql)|命令|更改数据库角色的名称。|  
-|[DROP ROLE (Transact-SQL)](/sql/t-sql/statements/drop-role-transact-sql)|命令|从数据库中删除角色。|  
-|[sp_addrole (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addrole-transact-sql)|命令|在当前数据库中创建新的数据库角色。|  
-|[sp_droprole (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-droprole-transact-sql)|命令|从当前数据库中删除数据库角色。|  
-|[sp_addrolemember (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)|命令|为当前数据库中的数据库角色添加数据库用户、数据库角色、Windows 登录名或 Windows 组。|  
+|[CREATE ROLE (Transact-SQL)](/sql/t-sql/statements/create-role-transact-sql)|Command|在当前数据库中创建新的数据库角色。|  
+|[ALTER ROLE (Transact-SQL)](/sql/t-sql/statements/alter-role-transact-sql)|Command|更改数据库角色的名称。|  
+|[DROP ROLE (Transact-SQL)](/sql/t-sql/statements/drop-role-transact-sql)|Command|从数据库中删除角色。|  
+|[sp_addrole (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addrole-transact-sql)|Command|在当前数据库中创建新的数据库角色。|  
+|[sp_droprole (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-droprole-transact-sql)|Command|从当前数据库中删除数据库角色。|  
+|[sp_addrolemember (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)|Command|为当前数据库中的数据库角色添加数据库用户、数据库角色、Windows 登录名或 Windows 组。|  
 |[sp_droprolemember (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)|Command|从当前数据库的 SQL Server 角色中删除安全帐户。|  
   
 ## <a name="public-database-role"></a>public 数据库角色  

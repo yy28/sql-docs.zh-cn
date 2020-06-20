@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: edde17b3339a6a78f81ddf92da95afb2f8ba851c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5094900a0efdbd25973ccf0763facd1de18d5233
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782351"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037673"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>创建、更改和删除用户定义函数
-  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>对象提供允许用户以编程方式管理中[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用户定义的函数的功能。 用户定义函数支持输入和输出参数，还支持对表列的直接引用。  
+  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>对象提供允许用户以编程方式管理中用户定义的函数的功能 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 用户定义函数支持输入和输出参数，还支持对表列的直接引用。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 要求先在数据库中注册程序集，然后才能在存储过程、用户定义函数、触发器和用户定义数据类型中使用这些程序集。 SMO 使用 <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> 对象支持此项功能。  
   

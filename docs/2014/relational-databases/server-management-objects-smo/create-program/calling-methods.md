@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: c88d5c5f-9ff0-4f84-b2b6-24c6b90fa15e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5c3a004d30a5edb20da77e6f93bf51a94472419b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fb29b1514ca415003aaac483c089b292adf78a0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192167"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055270"
 ---
 # <a name="calling-methods"></a>调用方法
-  方法执行与对象相关的特定任务，如`Checkpoint`在数据库上发出或请求实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的已枚举登录列表。  
+  方法执行与对象相关的特定任务，如 `Checkpoint` 在数据库上发出或请求实例的已枚举登录列表 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  方法针对对象执行操作。 方法可以使用参数并通常具有返回值。 返回值可以是简单数据类型、复杂对象或包含很多成员的结构。  
   

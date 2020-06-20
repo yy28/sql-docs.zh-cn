@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 365a20848416e73e96731722abecfd6d94ebbfc5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: afcf38e662b152a5039043017624a46b214e263f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703948"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065759"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>使用查询编辑器编辑 SQLCMD 脚本
   使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器，可以将查询作为 SQLCMD 脚本来进行编写和编辑。 当必须处理同一脚本中的 Windows 系统命令和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时，使用的是 SQLCMD 脚本。  
@@ -76,7 +75,7 @@ ms.locfileid: "82703948"
   
     -   （6 行受影响）  
   
-    -   \<目录信息>  
+    -   \<The directory information>  
   
     -   (4 row(s) affected)  
   
@@ -86,10 +85,10 @@ ms.locfileid: "82703948"
  有关如何运行 SQLCMD 的详细信息，请参阅 [sqlcmd Utility](../../tools/sqlcmd-utility.md)或学习 SQLCMD 教程。  
   
 ## <a name="enable-sqlcmd-scripting-by-default"></a>默认启用 SQLCMD 脚本撰写  
- 若要默认启用 SQLCMD 脚本撰写，请在 **“工具”** 菜单中选择 **“选项”** ，展开 **“查询执行”** 和 **SQL Server**，单击 **“常规”** 页面，然后选中 **“默认情况下，在 SQLCMD 模式下打开新查询”** 框。  
+ 若要默认启用 SQLCMD 脚本撰写，请在 **“工具”** 菜单中选择 **“选项”**，展开 **“查询执行”** 和 **SQL Server**，单击 **“常规”** 页面，然后选中 **“默认情况下，在 SQLCMD 模式下打开新查询”** 框。  
   
 ## <a name="writing-and-editing-sqlcmd-scripts"></a>编写和编辑 SQLCMD 脚本  
- 启用脚本撰写模式后，可以编写 SQLCMD 命令和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 下列规则适用：  
+ 启用脚本撰写模式后，可以编写 SQLCMD 命令和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 适用以下规则：  
   
 -   SQLCMD 命令必须是一行中的第一个语句。  
   
@@ -138,7 +137,7 @@ ms.locfileid: "82703948"
 > [!NOTE]  
 >  对于 `:error` 和 `:out`， `stderr` 和 `stdout` 将向消息选项卡发送输出。  
   
- 查询编辑器不支持上面未列出的 SQLCMD 命令。 执行包含不支持的 SQLCMD 关键字的脚本时，查询编辑器会为每个不支持的关键字向目标发送一条“忽略命令 *\<ignored command>* ”消息。 脚本将成功执行，但同时忽略不支持的命令。  
+ 查询编辑器不支持上面未列出的 SQLCMD 命令。 当执行包含不支持的 SQLCMD 关键字的脚本时，查询编辑器会 \<ignored command*> 为每个不支持的关键字向目标发送一条 "忽略命令 *" 消息。 脚本将成功执行，但同时忽略不支持的命令。  
   
 > [!CAUTION]  
 >  因为不是从命令行启动 SQLCMD，所以在 SQLCMD 模式下运行查询编辑器时会有一些限制。 不能传入命令行参数（如变量），而且，由于查询编辑器无法响应操作系统提示，因此必须注意不要执行交互语句。  

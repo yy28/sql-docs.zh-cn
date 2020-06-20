@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2066eeb7d9b86228ed86aed290e69f2a0e981b95
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3494f4f5b13c422efb8e2a39597e131c10d81ed1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736237"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047217"
 ---
 # <a name="synonyms-database-engine"></a>同义词（数据库引擎）
   同义词是用来实现下列用途的数据库对象：  
@@ -112,7 +111,7 @@ EXEC ('ALTER TABLE dbo.MyProduct
  有关绑定到架构的函数的详细信息，请参阅[创建用户定义的函数（数据库引擎）](../user-defined-functions/create-user-defined-functions-database-engine.md)。  
   
 ## <a name="getting-information-about-synonyms"></a>获取有关同义词的信息  
- sys.synonyms 目录视图包含给定的数据库中的所有同义词项。 该目录视图将显示同义词元数据，例如同义词的名称和基对象的名称。 有关目录视图的`sys.synonyms`详细信息，请参阅[sys.databases &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql)。  
+ sys.synonyms 目录视图包含给定的数据库中的所有同义词项。 该目录视图将显示同义词元数据，例如同义词的名称和基对象的名称。 有关目录视图的详细信息 `sys.synonyms` ，请参阅[Sys.databases &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql)。  
   
  使用扩展属性，您可以将描述性或说明性文本、输入掩码以及格式化规则添加为同义词的属性。 因为属性存储在数据库中，因此所有读取属性的应用程序都能以相同的方式评估对象。 有关详细信息，请参阅 [sp_addextendedproperty (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql)。  
   

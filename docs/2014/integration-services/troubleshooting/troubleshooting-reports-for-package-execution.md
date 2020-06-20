@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8fc476ac-bd69-434e-9636-70776e0b3b6c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1c1a59d9e77806666c487b0778edd574bcaa5e42
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb1afb4c29eb1ac0ef6384e6ac8fffdb041b31da
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62926302"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972695"
 ---
 # <a name="troubleshooting-reports-for-package-execution"></a>对包执行进行故障排除的报告
   在当前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了标准报告，可帮助您监视部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包并排除其问题。 这些包报告中有两个报告尤其有助您查看包的执行状态，并确定执行失败的原因。  

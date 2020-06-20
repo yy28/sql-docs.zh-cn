@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cd7773177f6ec9d02df9d3d669abf561919ffe0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a9d3a934e7b08e863c4ca5241c6bfc20600a539
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250613"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047881"
 ---
 # <a name="sql-server-locks-object"></a>SQL Server Locks 对象
   Microsoft **中的** SQLServer:Locks [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象提供了有关各种资源类型的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁的信息。 锁加在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源上（如在一个事务中读取或修改的行），以防止各种事务并发使用资源。 例如，如果一个排它 (X) 锁被一个事务加在某一表的某一行上，在这个锁被释放前，其他事务都不可以修改这一行。 尽可能少使用锁可提高并发性，从而改善性能。 可以同时监视 **Locks** 对象的多个实例，每个实例代表一个资源类型上的一个锁。  
@@ -33,11 +32,11 @@ ms.locfileid: "63250613"
 |**Lock Timeouts/sec**|每秒超时的锁请求数，包括对 NOWAIT 锁的请求。|  
 |**Lock Wait Time (ms)**|锁在最后一秒内的总等待时间（毫秒）。|  
 |**Lock Waits/sec**|每秒要求调用者等待的锁请求数。|  
-|**Number of Deadlocks/sec**|每秒导致死锁的锁请求数。|  
+|**每秒死锁数**|每秒导致死锁的锁请求数。|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以锁定下列这些资源。  
   
-|项|说明|  
+|Item|说明|  
 |----------|-----------------|  
 |**_Total**|所有锁的信息。|  
 |**分配单元**|分配单元的锁。|  
@@ -48,8 +47,8 @@ ms.locfileid: "63250613"
 |**堆/B 树**|堆或 B 树 (HOBT)。 锁定数据页堆，或索引的 B 树结构。|  
 |**密钥**|锁定索引中的某行。|  
 |**元数据**|锁定一些目录信息（又称为元数据）。|  
-|**对象**|锁定表、存储过程、视图等（包括所有数据和索引）。 该对象可以是包含 **sys.all_objects**中某项的任何一个对象。|  
-|**分页**|锁定数据库中 8 KB 页。|  
+|**Object**|锁定表、存储过程、视图等（包括所有数据和索引）。 该对象可以是包含 **sys.all_objects**中某项的任何一个对象。|  
+|**第**|锁定数据库中 8 KB 页。|  
 |**去掉**|行 ID。 锁定一个堆中的一行。|  
   
 ## <a name="see-also"></a>另请参阅  

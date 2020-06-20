@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4d7db8b6-611f-4fe4-be85-2a407059de45
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ac50a5abd1f7e87017c6f0c559887b1796032328
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 514436c65ef103cafae2189a03b560255b447eda
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706127"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022529"
 ---
 # <a name="sqlexecute"></a>SQLExecute
   如果语句属性 SQL_SOPT_SS_PARAM_FOCUS 未设置为0，则 SQLExecute 将返回 SQL_ERROR 并生成包含 SQLSTATE = HY024 的诊断记录和消息 "属性值无效，SQL_SOPT_SS_PARAM_FOCUS （在执行时必须为零）"。 有关 SQL_SOPT_SS_PARAM_FOCUS 的详细信息，请参阅[SQLSetStmtAttr](sqlsetstmtattr.md)。  

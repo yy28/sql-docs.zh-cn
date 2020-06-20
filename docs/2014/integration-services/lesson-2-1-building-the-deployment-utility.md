@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8c0cc7df39c8b5bac3ff216aa3d61975c707207
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767579"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966087"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>步骤 1：生成部署实用工具
   在此任务中，将为 Deployment Tutorial 项目配置和生成部署实用工具。  
@@ -34,7 +33,7 @@ ms.locfileid: "62767579"
   
 4.  在“Deployment Tutorial 属性页”  对话框中，展开“配置属性”，再单击“部署实用工具”。  
   
-5.  在 "**部署教程属性页**" 对话框的右窗格中，验证`AllowConfigurationChanges`是否将设置为`true`，将`CreateDeploymentUtility`设置`true`为，并选择性地更新的默认`DeploymentOutputPath`值。  
+5.  在 "**部署教程属性页**" 对话框的右窗格中，验证 `AllowConfigurationChanges` 是否将设置为 `true` ，将设置 `CreateDeploymentUtility` 为 `true` ，并选择性地更新的默认值 `DeploymentOutputPath` 。  
   
 6.  单击“确定”。   
   

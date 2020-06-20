@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 5eb28044-8437-466e-9c55-60941c237fbb
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 79b262bc97cf674c98361d72b0ceedcaef90bb91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54b382d3e5623c6fdc43f0b8f4825fc5535b5606
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244520"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055261"
 ---
 # <a name="link-to-programming-samples"></a>链接到编程示例
-  下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Programmability\SMO 目录中的 [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)] 管理对象 (SMO) 编程示例。 [!INCLUDE[csprcs](../../includes/csprcs-md.md)]和[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .net 中都提供了这些示例。  
+  下表列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Programmability\SMO 目录中的 [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)] 管理对象 (SMO) 编程示例。 和 .Net 中都提供了这些示例 [!INCLUDE[csprcs](../../includes/csprcs-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 。  
   
  有关如何安装示例的详细信息，请参阅[AdventureWorks for SQL Server 2012](https://msftdbprodsamples.codeplex.com/releases/view/55330)。  
   
-|Title|说明|  
+|标题|说明|  
 |-----------|-----------------|  
 |BackRest|说明如何备份和还原数据库。|  
 |ChangeTableOwner|说明如何将所有权不是 dbo 的所有表的所有权更改为 dbo。|  
@@ -34,7 +33,7 @@ ms.locfileid: "75244520"
 |DatabaseSearch|显示数据库中的所有对象。|  
 |DependencyExplorer|实现依赖关系树和属性显示窗口。|  
 |IndexSizes|显示所选数据库的索引名称和大小。|  
-|LoadRegAssembly|演示如何将[!INCLUDE[msCoName](../../includes/msconame-md.md)] .Net 程序集加载和注册到[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中。 使用 UtilityConversion 程序集。|  
+|LoadRegAssembly|演示如何将 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .Net 程序集加载和注册到中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 使用 UtilityConversion 程序集。|  
 |ManageDatabases|说明如何创建、更改和删除数据库。 包括添加新的文件组和日志文件。|  
 |ManageDatabaseUsers|说明如何添加、修改和删除用户。|  
 |ManageTables|说明如何创建、更改和删除表。|  

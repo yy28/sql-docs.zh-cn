@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 97fd1ef113ec76a00394da298f1def188168a37d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e1528d81faa352fdcdf37abe9ad93fda190445c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62955840"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004850"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>复制加密列中的数据 (SQL Server Management Studio)
   通过使用复制，您可以发布加密的列数据。 若要在订阅服务器上解密并使用此数据，则订阅服务器上也必须有用于在发布服务器上加密该数据的密钥。 复制并不提供安全机制来传输加密密钥。 您必须在订阅服务器上手动重新创建加密密钥。 本主题说明如何在发布服务器上加密列并确保订阅服务器上提供有加密密钥。  
   
- 基本步骤如下所述：  
+ 基本步骤如下所示：  
   
 1.  在发布服务器上创建对称密钥。  
   

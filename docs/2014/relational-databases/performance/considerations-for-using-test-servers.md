@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c1ed99e6ee3ef6385e6041044e9b2cb829b1b3ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fedf315703e64ea162f668494bd9929a06d6085
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151144"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066057"
 ---
 # <a name="considerations-for-using-test-servers"></a>使用测试服务器的注意事项
   使用测试服务器优化生产服务器中的数据库是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问的显著优势。 使用此功能，可以将优化开销转移到测试服务器，而无需将实际数据从生产服务器复制到测试服务器。  

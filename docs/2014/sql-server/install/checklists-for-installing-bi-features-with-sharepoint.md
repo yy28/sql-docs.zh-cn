@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c220dcc-4014-4bfd-b997-6685902e6f67
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1d0b1d2ef6eed113061cd0f79508a637ec078495
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 549bab6484613bbd313d0938dd1e744047b26257
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952608"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037140"
 ---
 # <a name="checklists-for-installing-bi-features-with-sharepoint"></a>将 BI 功能随 SharePoint 一起安装的核对清单
   本节提供按不同组合或扩展拓扑安装 SQL Server BI 功能的核对清单。 如果您已经知道如何运行安装程序来安装 BI 功能，接下来就应该是使用核对清单了解建议的安装顺序，以及是否需要进行其他的配置更改以启用功能集成方案。  

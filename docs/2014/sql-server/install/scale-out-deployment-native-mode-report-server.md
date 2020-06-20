@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a9fe82102df73ddfa77b4636dd29793ac2694949
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a04a0d0e08804724def9e586c05bb4b6e72cdbd9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952418"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058937"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>扩展部署（本机模式报表服务器）
   使用 **配置管理器中的** “扩展部署” [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 页可以查看扩展部署的初始化状态或将报表服务器联接到扩展部署。 “扩展部署” ** 是指共享单个报表服务器数据库的两个或多个报表服务器实例。  
@@ -38,21 +37,21 @@ ms.locfileid: "71952418"
   
 ## <a name="options"></a>选项  
  **SQL Server 名称**  
- 指定承载 Report Server 数据库的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的名称。  
+ 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 承载 Report Server 数据库的实例的名称。  
   
- **数据库名称**  
+ **Database Name**  
  指定报表服务器实例当前连接到的数据库的名称。  
   
  **服务器模式**  
  显示服务器和数据库的模式。 服务器模式为“本机”或“SharePoint 集成”。 这两种模式均支持扩展部署。  
   
- **服务器**  
+ **Server**  
  显示报表服务器名称。 在大多数情况下，此为安装报表服务器的计算机的名称。  
   
  **实例**  
  显示报表服务器实例名称。 报表服务器实例基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
   
- **状态**  
+ **Status**  
  指示报表服务器是已初始化还是正在等待联接扩展部署：  
   
 -   对于不属于扩展部署的独立报表服务器，此页说明此报表服务器实例已根据其专用报表服务器数据库进行初始化。 “状态”设置为 **“已联接”**。  

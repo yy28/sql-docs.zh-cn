@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 69e06724-25c7-4fb3-8a5b-3d4596f21756
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cef657960da876b25003a6fc1017a372abe410a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c2e85b77997e0bba765a1c877311e1336364eaa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63074002"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044984"
 ---
 # <a name="implement-jobs"></a>执行作业
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业来自动执行日常管理任务并反复运行它们，从而提高管理效率。  
@@ -33,7 +32,7 @@ ms.locfileid: "63074002"
   
 |||  
 |-|-|  
-|**说明**|**主题**|  
+|**说明**|**标题**|  
 |包含有关创建作业和分配所有权的信息。|[创建作业](create-jobs.md)|  
 |包含有关将作业组织到目录的信息。|[组织作业](organize-jobs.md)|  
 |说明可以创建的各种作业步骤以及如何管理它们。|[管理作业步骤](manage-job-steps.md)|  

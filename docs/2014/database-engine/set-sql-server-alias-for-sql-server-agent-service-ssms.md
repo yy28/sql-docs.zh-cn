@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 02d6295d-ab52-44f0-8f1b-f3910a507d8f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 752796caafa86ece1b471beb25a77ea381497409
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9f91ec957665975fd956e36a5af3c4261fb47af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774386"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929152"
 ---
 # <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)
-  本主题介绍如何通过使用[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]设置用于连接到的代理的别名。 默认情况下， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理服务将通过命名管道，使用无需额外客户端配置的动态服务器名称连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例。 如果当前使用的不是默认网络传输或连接的是侦听备用命名管道的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，则需要配置服务器连接别名。  
+  本主题介绍如何 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 通过使用设置用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 连接到的代理的别名 [!INCLUDE[ssDE](../includes/ssde-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 。 默认情况下， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理服务将通过命名管道，使用无需额外客户端配置的动态服务器名称连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例。 如果当前使用的不是默认网络传输或连接的是侦听备用命名管道的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，则需要配置服务器连接别名。  
   
  **本主题内容**  
   
@@ -54,7 +53,7 @@ ms.locfileid: "62774386"
   
 -   调整进程的内存配额 (SeIncreaseQuotaPrivilege)  
   
- 有关[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]代理服务帐户所需的 Windows 权限的详细信息，请参阅为[SQL Server 代理服务选择帐户](../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)和[配置 Windows 服务帐户和权限](configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+ 有关代理服务帐户所需的 Windows 权限的详细信息 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，请参阅为[SQL Server 代理服务选择帐户](../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)和[配置 Windows 服务帐户和权限](configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -68,6 +67,6 @@ ms.locfileid: "62774386"
   
 4.  在 **“本地主机服务器别名”** 框中，键入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理应连接到的服务器别名的类型。  
   
-5.  单击" **确定**"。  
+5.  单击 **“确定”** 。  
   
   

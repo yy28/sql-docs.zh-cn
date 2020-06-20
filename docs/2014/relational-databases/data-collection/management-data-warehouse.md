@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96eb26c3e273832aead4aa0421304df17dc5b8ff
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918335"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970437"
 ---
 # <a name="management-data-warehouse"></a>管理数据仓库
   管理数据仓库是一种关系数据库，其中包含从身为数据收集目标的服务器收集来的数据。 此数据用于生成系统数据收集组的报表，而且还可用于创建自定义报表。  
@@ -109,7 +108,7 @@ ms.locfileid: "62918335"
   
  通过阅读有关各表相应的数据收集器存储过程的文档，您可获得有关数据库表列的数据类型和内容的详细信息。  
   
-### <a name="best-practices"></a>最佳方案  
+### <a name="best-practices"></a>最佳实践  
  使用管理数据仓库时，建议遵循以下最佳做法：  
   
 -   除非添加新的收集器类型，否则不要更改管理数据仓库表的元数据。  

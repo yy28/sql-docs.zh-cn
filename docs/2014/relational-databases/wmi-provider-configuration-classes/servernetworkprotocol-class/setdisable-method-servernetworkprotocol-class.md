@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0ebbe0c5-07ad-4a76-a918-e379930adf71
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 37a68a1dbc3a35ba4e72b173b1785efd1108241b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3176227aba4de1e5aca1be35ec1f071a15caa49e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63143430"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059858"
 ---
 # <a name="setdisable-method-servernetworkprotocol-class"></a>SetDisable 方法（ServerNetworkProtocol 类）
   禁用服务器网络协议。  
@@ -39,7 +38,7 @@ object
   
 ## <a name="parts"></a>组成部分  
  *object*  
- 一个表示实例使用的网络协议的 [ServerNetworkProtocol Class] ServerNetworkProtocol-class.md）对象[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ 一个表示实例使用的网络协议的 [ServerNetworkProtocol Class] ServerNetworkProtocol-class.md）对象 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个 uint32 值，如果服务已成功修改，则为 0；如果不支持请求，则为 1；其他任何数字表示出现错误。  

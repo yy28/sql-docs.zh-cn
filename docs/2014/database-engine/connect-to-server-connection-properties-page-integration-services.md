@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: c2513dab-8415-4e0c-9475-6d4ab97fea7c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6eb81944ae4c3abab1d20fb203ee400cb8c01245
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f46eb5206e666caeb928c3718c75f093beb6bf4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755239"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934658"
 ---
 # <a name="connect-to-server-connection-properties-page-integration-services"></a>连接到服务器（“连接属性”页）(Integration Services)
   当连接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 或在“已注册的服务器”**** 中注册 [!INCLUDE[ssIS](../includes/ssis-md.md)] 时，使用此选项卡可以查看或指定选项。 进行连接时，此对话框中仅显示“连接”**** 和“选项”****。 注册 [!INCLUDE[ssIS](../includes/ssis-md.md)] 时，此对话框中仅显示“测试”**** 和“保存”****。  

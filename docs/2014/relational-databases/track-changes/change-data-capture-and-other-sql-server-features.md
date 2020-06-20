@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 87fcd7656ff1e86522e4ea398fc49d91acde9a34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: acafd5ba49bec92fd4c6b93c4163affaa42ab7f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62672076"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037361"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>变更数据捕获和其他 SQL Server 功能
   本主题说明下列功能如何与变更数据捕获交互：  
@@ -33,7 +32,7 @@ ms.locfileid: "62672076"
 ##  <a name="change-tracking"></a><a name="ChangeTracking"></a>更改跟踪  
  可以对同一数据库启用变更数据捕获和 [更改跟踪](about-change-tracking-sql-server.md) 。 没有特殊的注意事项。 有关详细信息，请参阅[处理更改跟踪 (SQL Server)](work-with-change-tracking-sql-server.md)。  
   
-##  <a name="database-mirroring"></a><a name="DatabaseMirroring"></a>数据库镜像  
+##  <a name="database-mirroring"></a><a name="DatabaseMirroring"></a> 数据库镜像  
  可以对启用变更数据捕获的数据库进行镜像。 为确保捕获和清除操作可在故障转移之后自动发生，请执行以下步骤：  
   
 1.  确保在新的主体服务器实例上运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理。  
@@ -47,9 +46,9 @@ ms.locfileid: "62672076"
  有关数据库镜像的信息，请参阅[数据库镜像 (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
 ##  <a name="transactional-replication"></a><a name="TransReplication"></a>事务复制  
- 变更数据捕获和事务复制可以共存于同一数据库中，但在启用这两项功能后，更改表的填充处理方式将发生变化。 变更数据捕获和事务复制始终使用相同的过程 [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql)从事务日志读取更改。 当单独启用变更数据捕获时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理作业会调用。 `sp_replcmds` 在同一数据库上同时启用这两个功能时，日志读取器代理`sp_replcmds`调用。 此代理将填充更改表和分发数据库表。 有关详细信息，请参阅 [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md)。  
+ 变更数据捕获和事务复制可以共存于同一数据库中，但在启用这两项功能后，更改表的填充处理方式将发生变化。 变更数据捕获和事务复制始终使用相同的过程 [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql)从事务日志读取更改。 当单独启用变更数据捕获时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业会调用 `sp_replcmds` 。 在同一数据库上同时启用这两个功能时，日志读取器代理调用 `sp_replcmds` 。 此代理将填充更改表和分发数据库表。 有关详细信息，请参阅 [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md)。  
   
- 假设为 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库启用了变更数据捕获，并为捕获启用了两个表。 为了填充更改表，捕获作业将调用`sp_replcmds`。 此外，还为该数据库启用了事务复制，并会创建发布。 此时，将为该数据库创建日志读取器代理，并删除捕获作业。 日志读取器代理继续从提交到更改表的最后一个日志序列号开始扫描日志。 这样将确保更改表中的数据一致性。 如果在此数据库中禁用事务复制，则会删除日志读取器代理，并重新创建捕获作业。  
+ 假设为 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库启用了变更数据捕获，并为捕获启用了两个表。 为了填充更改表，捕获作业将调用 `sp_replcmds` 。 此外，还为该数据库启用了事务复制，并会创建发布。 此时，将为该数据库创建日志读取器代理，并删除捕获作业。 日志读取器代理继续从提交到更改表的最后一个日志序列号开始扫描日志。 这样将确保更改表中的数据一致性。 如果在此数据库中禁用事务复制，则会删除日志读取器代理，并重新创建捕获作业。  
   
 > [!NOTE]  
 >  当日志读取器代理同时用于变更数据捕获和事务复制时，复制的更改将首先写入分发数据库。 然后，捕获的更改会写入更改表。 两项操作会一起提交。 如果在写入分发数据库时有任何滞后时间，则在更改显示在更改表中之前，将有对应的滞后时间。  
@@ -67,7 +66,7 @@ ms.locfileid: "62672076"
   
 -   如果数据库在分离后附加到同一服务器或其他服务器，变更数据捕获将保持启用状态。  
   
--   如果使用`KEEP_CDC`选项将数据库附加或还原到 enterprise 以外的任何版本，操作将被阻止，因为变更数据捕获需要[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enterprise。 将显示错误消息 934：  
+-   如果使用选项将数据库附加或还原 `KEEP_CDC` 到 enterprise 以外的任何版本，操作将被阻止，因为变更数据捕获需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enterprise。 将显示错误消息 934：  
   
      `SQL Server cannot load database '%.*ls' because change data capture is enabled. The currently installed edition of SQL Server does not support change data capture. Either disable change data capture in the database by using a supported edition of SQL Server, or upgrade the instance to one that supports change data capture.`  
   
