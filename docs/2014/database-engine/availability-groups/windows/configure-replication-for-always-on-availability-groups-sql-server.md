@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2b70684a74677437d0491e1fc724c832bb7e0a67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 916458d2d6b8fbba81940257ee85ffe014d1f12e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797700"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936938"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>为 AlwaysOn 可用性组配置复制 (SQL Server)
   配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制和 AlwaysOn 可用性组涉及七个步骤。 在下面的各节中将详细说明每个步骤。  
@@ -29,7 +28,7 @@ ms.locfileid: "72797700"
   
  分发服务器不应是发布数据库当前（或将来）所在的可用性组的任何当前（或目标）副本的主机。  
   
-1.  在分发服务器上配置分发。 如果要使用存储过程来进行配置，则运行 `sp_adddistributor`。 使用*@password*参数来标识在远程发布服务器连接到分发服务器时将使用的密码。 在设置远程分发服务器时，每台远程发布服务器上也将需要密码。  
+1.  在分发服务器上配置分发。 如果要使用存储过程来进行配置，则运行 `sp_adddistributor`。 使用 *@password* 参数来标识在远程发布服务器连接到分发服务器时将使用的密码。 在设置远程分发服务器时，每台远程发布服务器上也将需要密码。  
   
     ```sql
     USE master;  
@@ -49,7 +48,7 @@ ms.locfileid: "72797700"
         @security_mode = 1;  
     ```  
   
-3.  配置远程发布服务器。 如果要使用存储过程来配置分发服务器，则运行 `sp_adddistpublisher`。 *@security_mode*参数用于确定如何将从复制代理运行的发布服务器验证存储过程连接到当前的主副本。 如果设置为 1，则使用 Windows 身份验证来连接到当前主副本。 如果设置为0， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]则将身份验证与指定*@login*的*@password*和值一起使用。 指定的登录名和密码必须在每个辅助副本上均有效才能让验证存储过程成功地连接到相应的副本。  
+3.  配置远程发布服务器。 如果要使用存储过程来配置分发服务器，则运行 `sp_adddistpublisher`。 *@security_mode*参数用于确定如何将从复制代理运行的发布服务器验证存储过程连接到当前的主副本。 如果设置为 1，则使用 Windows 身份验证来连接到当前主副本。 如果设置为0，则将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证与指定的 *@login* 和值一起使用 *@password* 。 指定的登录名和密码必须在每个辅助副本上均有效才能让验证存储过程成功地连接到相应的副本。  
   
     > [!NOTE]  
     >  如果任何已修改的复制代理在分发服务器之外的计算机上运行，则使用 Windows 身份验证连接到主副本的方法将要求为副本主机之间的通信配置 Kerberos 身份验证。 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名连接到当前主副本的方法无需 Kerberos 身份验证。  
@@ -69,7 +68,7 @@ ms.locfileid: "72797700"
   
 ### <a name="configure-the-publisher-at-the-original-publisher"></a>在原始发布服务器上配置发布服务器
   
-1.  配置远程分发。 如果要使用存储过程来配置发布服务器，则运行 `sp_adddistributor`。 指定与在分发服务器*@password*上运行时`sp_adddistrbutor`使用的相同的值，以设置分发。  
+1.  配置远程分发。 如果要使用存储过程来配置发布服务器，则运行 `sp_adddistributor`。 指定与在 *@password* 分发服务器上运行时使用的相同的值， `sp_adddistrbutor` 以设置分发。  
   
     ```sql
     exec sys.sp_adddistributor  
@@ -118,10 +117,10 @@ EXEC @installed = sys.sp_MS_replication_installed;
 SELECT @installed;  
 ```  
   
- 如果*@installed*为0，则必须将复制添加到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安装中。  
+ 如果 *@installed* 为0，则必须将复制添加到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装中。  
   
 ##  <a name="4-configure-the-secondary-replica-hosts-as-replication-publishers"></a><a name="step4"></a>4. 将辅助副本主机配置为复制发布服务器  
- 辅助副本不能充当复制发布服务器或重新发布服务器，但必须配置复制以便在故障转移之后辅助副本可以接管。 在分发服务器上，为每个辅助副本主机配置分发。 指定在向分发服务器添加原始发布服务器时所指定的相同的分发数据库和工作目录。 如果您使用存储过程来配置分发，则使用 `sp_adddistpublisher` 以将远程发布服务器与分发服务器相关联。 如果*@login*对*@password*原始发布服务器使用了和，则在将辅助副本主机作为发布服务器添加时，为每个指定相同的值。  
+ 辅助副本不能充当复制发布服务器或重新发布服务器，但必须配置复制以便在故障转移之后辅助副本可以接管。 在分发服务器上，为每个辅助副本主机配置分发。 指定在向分发服务器添加原始发布服务器时所指定的相同的分发数据库和工作目录。 如果您使用存储过程来配置分发，则使用 `sp_adddistpublisher` 以将远程发布服务器与分发服务器相关联。 如果 *@login* 对 *@password* 原始发布服务器使用了和，则在将辅助副本主机作为发布服务器添加时，为每个指定相同的值。  
   
 ```sql
 EXEC sys.sp_adddistpublisher  
@@ -132,7 +131,7 @@ EXEC sys.sp_adddistpublisher
     @password = '**Strong password for publisher**';  
 ```  
   
- 在每个辅助副本主机上配置分发。 将原始发布服务器的分发服务器标识为远程分发服务器。 使用最初在分发服务器上运行 `sp_adddistributor` 时所使用的相同密码。 如果要使用存储过程来配置分发，则使用*@password*的参数`sp_adddistributor`来指定密码。  
+ 在每个辅助副本主机上配置分发。 将原始发布服务器的分发服务器标识为远程分发服务器。 使用最初在分发服务器上运行 `sp_adddistributor` 时所使用的相同密码。 如果要使用存储过程来配置分发，则 *@password* 使用的参数 `sp_adddistributor` 来指定密码。  
   
 ```sql
 EXEC sp_adddistributor   
@@ -172,7 +171,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
     @redirected_publisher = @redirected_publisher output;  
 ```  
   
- 应在每个可用性组副本主机上使用具有足够授权的登录名来运行存储过程 `sp_validate_replica_hosts_as_publishers`，以查询有关可用性组的信息。 与`sp_validate_redirected_publisher`不同，它使用调用方的凭据，而不使用保存在 MSdistpublishers 中的登录名来连接到可用性组副本。  
+ 应在每个可用性组副本主机上使用具有足够授权的登录名来运行存储过程 `sp_validate_replica_hosts_as_publishers`，以查询有关可用性组的信息。 与不同 `sp_validate_redirected_publisher` ，它使用调用方的凭据，而不使用保存在 MSdistpublishers 中的登录名来连接到可用性组副本。  
   
 > [!NOTE]  
 >  在验证不允许读取访问或要求指定读取意图的辅助副本主机时，`sp_validate_replica_hosts_as_publishers` 将失败，并显示以下错误。  
@@ -183,7 +182,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 >   
 >  副本主机“MyReplicaHostName”遇到了一个或多个发布服务器验证错误。  
   
- 这是预期的行为。 必须通过在主机上直接查询 sysserver 条目来验证这些次要副本主机上是否存在订阅服务器条目。  
+ 这是预期行为。 必须通过在主机上直接查询 sysserver 条目来验证这些次要副本主机上是否存在订阅服务器条目。  
   
 ##  <a name="7-add-the-original-publisher-to-replication-monitor"></a><a name="step7"></a>7. 将原始发布服务器添加到复制监视器  
  在每个可用性组副本上，向复制监视器添加原始发布服务器。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0707d07e-fc95-42ed-9280-b7e508ac8c62
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 812419f7ebf9501ab2409876c4cc5c0a775492b9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9d3e94cf4983fb6ee05beff3a495ef6ccbd5c54b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705626"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020788"
 ---
 # <a name="fast-forward-only-cursors-odbc"></a>快速只进游标 (ODBC)
   当连接到实例时 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序支持只进、只读游标的性能优化。 快速只进游标由驱动程序和服务器采用近似于默认结果集的方式在内部实现。 除高性能之外，快速只进游标还具有以下特征：  

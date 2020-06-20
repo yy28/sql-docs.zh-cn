@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b27a3cc8a768f60a5e2d430fe04ca514aafe1f37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6dfb386be680f79adb304a557cf48bd6997f9261
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771645"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924284"
 ---
 # <a name="project-properties-dialog-box"></a>“项目属性”对话框
   一个 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目就是一个部署单元。 每个项目都可以包含包、参数和环境引用。 项目是安全对象并且可为数据库主体定义权限。 在重新部署某一项目时，该项目的之前版本可以存储在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录中。  
@@ -69,7 +68,7 @@ ms.locfileid: "62771645"
  使用 **“权限”** 页可以查看和设置项目的显式权限。  
   
  浏览  
- 使用“浏览所有主体”  对话框，单击“浏览”  选择要为其设置权限的用户和角色。  
+ 使用“浏览所有主体”对话框，单击“浏览”选择要为其设置权限的用户和角色。  
   
  **名称**  
  列出用户或角色的名称。  

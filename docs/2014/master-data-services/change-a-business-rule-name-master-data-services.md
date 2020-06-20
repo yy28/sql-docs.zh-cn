@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e8e2d7ca2f6ad28e7e1bd072bdeb238199471ad9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cf1a52f1a5b71c33e2df5221fc61d279d014c6a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480112"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972107"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>更改业务规则名称 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当分配的业务规则名称不能满足您的业务需要时，可以更改此名称。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“系统管理”** 功能区域。  

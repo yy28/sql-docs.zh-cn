@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2402a69f428fe0c9ba2359f100e2baf16e1a1d04
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12da6306d7d67cee75fd8aec2397bc6b568ef3a5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480999"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937898"
 ---
 # <a name="create-a-knowledge-base"></a>创建知识库
   本主题描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中创建知识库，以及如何准备知识库以用于域管理、知识发现或添加匹配策略。  
@@ -57,7 +56,7 @@ ms.locfileid: "65480999"
   
     -   选择 **“匹配策略”** 可以创建匹配策略，并将其添加到知识库。  
   
-6.  单击“创建”。   
+6.  单击“创建”。  
   
 ##  <a name="follow-up-after-creating-a-knowledge-base"></a><a name="FollowUp"></a>跟进：在创建知识库后  
  在创建一个知识库后，系统将会向您提供可用于执行知识发现的向导、可用于创建匹配策略的向导或者可用于执行域管理的若干页。 有关知识发现、域管理或匹配策略的详细信息，请参阅[执行知识发现](../../2014/data-quality-services/perform-knowledge-discovery.md)[管理域](../../2014/data-quality-services/managing-a-domain.md)或[创建匹配策略](../../2014/data-quality-services/create-a-matching-policy.md)。  

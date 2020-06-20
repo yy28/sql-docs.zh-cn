@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5df56444fd5a7835a6ac4f13493a4aa33e4b42ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33384f1e764cbc60bbd8e836aceffe6db3610c57
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480101"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972227"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>分配功能区域权限 (Master Data Services)
   分配功能区域权限以便授予用户或组对 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]的功能区域的访问权限。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“用户和组权限”** 功能区域。  
@@ -38,7 +37,7 @@ ms.locfileid: "65480101"
   
 4.  单击 **“功能”** 选项卡。  
   
-5.  单击 **“编辑”**。  
+5.  单击 **“编辑”** 。  
   
 6.  单击某一功能区域，然后单击 **“添加”** 箭头。  
   

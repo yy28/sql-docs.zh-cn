@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3f8d59bc-3f97-4e5d-8b86-5ac670d20780
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6d14371c1db5273d66fee327cc03d2b2e2de3edb
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 97fe66f317db25ab36f3e55cf2396f1252f66571
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000786"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930176"
 ---
 # <a name="options-query-execution-sql-server-general-page"></a>选项（"查询执行-SQL Server-常规" 页）
   使用此页可指定用于运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询的选项。 对这些选项所做的更改仅应用于新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询。 若要更改当前查询的选项，请在“查询”**** 菜单上单击“查询选项”****，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询窗口中单击右键，再选择“查询选项”****。  

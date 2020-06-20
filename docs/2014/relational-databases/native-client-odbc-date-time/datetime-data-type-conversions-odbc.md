@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 66b9d282-c88d-40e5-93c2-fd5499a74458
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4042827c3f4b96344845fea72d479a8de343d133
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4d01d64bd6fe320fcb482fb49a0aff8432800c47
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705466"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020296"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>datetime 数据类型转换 (ODBC)
   以下转换或者已由 ODBC 定义，或者是 ODBC 的一致扩展。 每个访问接口提供的转换由该访问接口所服务的社区决定，因此，各个访问接口之间通常不一致。 方括号中的值是可选的。  

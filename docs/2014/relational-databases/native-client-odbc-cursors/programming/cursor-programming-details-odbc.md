@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6bae29c4-7f49-419c-8712-90db734f992e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: baf606baa029024369a00e44293873ecc7b33d1b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4108e195c16d321578a70852dd990f4f8d658832
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705634"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020815"
 ---
 # <a name="cursor-programming-details-odbc"></a>游标编程详细信息 (ODBC)
   选择正确的游标类型可提高应用程序的性能。 在某些条件下，当请求的游标类型不支持执行的 SQL 语句时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以隐式转换游标类型。  

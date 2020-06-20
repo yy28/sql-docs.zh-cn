@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6f6bc24d0224e31f008be0ffaf77266446c15527
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aec23d32216a0c9dcdd4189c662f9da4cd5ddf57
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481106"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937378"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>在复合域中使用值关系
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 知识发现过程中查看为复合域找到的值组合。 此页显示值组合的出现次数。 复合域不支持值管理，因此，您无法对这些值执行任何操作。  

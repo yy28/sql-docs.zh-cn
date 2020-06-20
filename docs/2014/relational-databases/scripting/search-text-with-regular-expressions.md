@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34d97e58469469b929e0b7a2e25d52a9c7c3e3fe
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7a63035355cafdbb08c469a093407b7ce2c12e6c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718681"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060323"
 ---
 # <a name="search-text-with-regular-expressions"></a>使用正则表达式搜索文本
   正则表达式是简明而灵活的表示法，用于查找和替换各种模式的文本。 在 **“查找和替换”对话框的“查找内容”字段中，可以使用一组特定的正则表达式**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  。  
@@ -106,7 +105,7 @@ ms.locfileid: "82718681"
 |不占位标记|:Mn|匹配不占位标记。|  
 |合并标记|:Mc|匹配合并标记。|  
 |封闭标记|:Me|匹配封闭标记。|  
-|数学符号|:Sm|匹配 +、=、~、&#124;、\< 和 >。|  
+|数学符号|:Sm|匹配 +、=、~、&#124; \<, and > 。|  
 |货币符号|:Sc|匹配 $ 和其他货币符号。|  
 |修饰符号|:Sk|匹配修饰符号，如抑扬符、重音符和长音符。|  
 |其他符号|:So|匹配其他符号，如版权符号、段落标记和度数符号。|  

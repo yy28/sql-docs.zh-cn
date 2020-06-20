@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9421d20f-0c8b-48e2-8e97-31f3047b8177
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4438dc445a9e1fc72fdb48b0863b75f041e2253f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b15f5100bbd04556295d76b02772bbbd8c56e02
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753024"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067281"
 ---
 # <a name="summary-solutions-and-script-projects"></a>摘要：解决方案和脚本项目
    利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 的各种开发人员功能，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可提供开发人员进行企业级代码管理所需的功能。 您可以创建自定义模板来支持重复执行的任务，保存和管理协作集中环境中的复杂脚本项目。  

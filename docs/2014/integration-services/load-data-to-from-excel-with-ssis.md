@@ -10,13 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e2092ef7f755b9980ee29ee3d7080774d78a0094
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1611f35e4004383c4da9949d4162051caf7b61e5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767309"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951247"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 从 Excel 导入数据或将数据导出到 Excel
 
@@ -81,7 +80,7 @@ ms.locfileid: "62767309"
 
 -   针对本地计算机上的文件，指定 C:\\TestData.xlsx****。
 
--   对于网络共享上的文件， ** \\ \\\\销售数据\\TestData**。
+-   对于网络共享上的文件， ** \\ \\ 销售 \\ 数据 \\TestData.xlsx**。
 
 或者，通过使用“打开”对话框，单击“浏览”定位电子表格********。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 93b5666bd2d57fb0a8ffae435818a02ba152217c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: adf45ee211d61c38bad4c3d86d746866d0a15177
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484120"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937468"
 ---
 # <a name="managing-a-domain"></a>管理域
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中使用域。 域包含要分析的数据源的特定字段中数据的语义表示。 域是您为数据源创建的知识库的一部分，并且，通过分析样本数据源或导入数据而逐步建立的知识将添加到在该知识库中定义的域。 这些域中的知识随后用于在数据质量项目中执行清除和匹配。 域是 Data Quality Services 中所有活动的核心。  

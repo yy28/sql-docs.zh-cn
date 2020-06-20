@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4efb0f74-edd5-4b14-bca6-bee94fb48bcc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1df89b0c8f9ee694fcb2a77b21c82c3d7839287d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d9ce9899d53a5831cadfc64f30779c499d5035c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151529"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041128"
 ---
 # <a name="restore-the-default-sql-server-management-studio-configuration"></a>还原默认的 SQL Server Management Studio 配置
   不熟悉 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的用户可能会因疏忽而关闭或隐藏窗口，并且无法将 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 还原为原始布局。 下列步骤可将 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 还原为默认环境布局。  

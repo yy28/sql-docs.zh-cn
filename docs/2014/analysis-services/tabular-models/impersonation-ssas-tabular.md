@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81e8f9ae90db3c7613ccb99039d70d9a28c5a113
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e04c7af85592d71d70abf8ea5f61518690599342
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067061"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938878"
 ---
 # <a name="impersonation-ssas-tabular"></a>模拟（SSAS 表格）
   本主题帮助表格模型作者了解在连接到数据源以便导入和处理（刷新）数据时 Analysis Services 如何使用登录凭据。  
@@ -32,7 +31,7 @@ ms.locfileid: "66067061"
   
 -   [配置模拟](#bkmk_conf_imp_info)  
   
-##  <a name="benefits"></a><a name="bkmk_how_imper"></a>便利  
+##  <a name="benefits"></a><a name="bkmk_how_imper"></a> 优势  
  ** “模拟”是服务器应用程序（例如 Analysis Services）模拟某一客户端应用程序的身份的能力。 但在服务器建立与数据源的连接时，Analysis Services 使用服务帐户运行，它使用模拟以便可以执行针对数据导入和处理的访问检查。  
   
  用于模拟的凭据不同于当前登录的用户所采用的凭据。 在创作模型时，将登录的用户凭据用于特定的客户端操作。  
@@ -67,7 +66,7 @@ ms.locfileid: "66067061"
   
 |选项|ImpersonationMode<sup>1</sup>|说明|  
 |------------|-----------------------------------|-----------------|  
-|**特定的 Windows 用户名和密码** <sup>2</sup>|ImpersonateWindowsUserAccount|此选项指定模型使用 Windows 用户帐户从数据源导入或处理数据。 用户帐户的域和名称使用以下格式：**\<域名>\\<用户帐户名称\>**。 在使用“表导入向导”创建新模型时，此为默认选项。|  
+|**特定的 Windows 用户名和密码** <sup>2</sup>|ImpersonateWindowsUserAccount|此选项指定模型使用 Windows 用户帐户从数据源导入或处理数据。 用户帐户的域和名称使用以下格式：** \<Domain name> \\<用户帐户名称 \> **。 在使用“表导入向导”创建新模型时，此为默认选项。|  
 |**服务帐户**|ImpersonateServiceAccount|此选项指定模型使用与管理该模型的 Analysis Services 服务实例相关联的安全凭据。|  
   
  <sup>1</sup>ImpersonationMode 为数据源上的[ASSL&#41;属性指定 DataSourceImpersonationInfo &#40;元素](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl)的值。  
@@ -90,7 +89,7 @@ ms.locfileid: "66067061"
 ##  <a name="configuring-impersonation"></a><a name="bkmk_conf_imp_info"></a>配置模拟  
  模型所处的环境将确定配置模拟信息的方式。 对于在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中创作的模型，您可以在“表导入向导”的 **“模拟信息”** 页中配置模拟信息，也可以通过在 **“现有连接”** 对话框上编辑数据源连接来配置模拟信息。 若要查看现有连接，请在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 **“模型”** 菜单中单击 **“现有连接”**。  
   
- 对于部署到 Analysis Services 服务器的模型，可以通过单击的 "**数据库属性**" 对话框中 " [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**数据源模拟信息**" 属性的省略号（...）来配置模拟信息。  
+ 对于部署到 Analysis Services 服务器的模型，可以通过单击的 "**数据库属性**" 对话框中 "**数据源模拟信息**" 属性的省略号（...）来配置模拟信息 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
 ## <a name="see-also"></a>另请参阅  
  [DirectQuery 模式 &#40;SSAS 表格&#41;](directquery-mode-ssas-tabular.md)   

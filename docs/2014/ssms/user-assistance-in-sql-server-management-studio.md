@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3d58ac84e394d7b8dfe342430991f2ddefa678be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b1bd7492ada156584b05ebaf2a8afc6dd294f49
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74684460"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067287"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio 中的用户帮助
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 通过“帮助”菜单和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书提供用户帮助。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中的“帮助”菜单以几种不同的途径提供有关 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的信息。 它还提供了对以前无法在“帮助”环境中使用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 社区和 MSDN 在线资源的访问。 此外，现在可以将“帮助”环境配置为在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 环境中启动或在其自身的关联外部窗口中启动。  
@@ -44,10 +43,10 @@ ms.locfileid: "74684460"
   
      存储用户主题书签，以便于以后访问。  
   
- 对“帮助”的帮助（[!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer 帮助）可将用户链接到有关帮助查看器的文档，但这些主题位于一个独立于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书的集合中。 有关帮助查看器的信息，请从  **联机丛书的“帮助”菜单上选择“帮助之帮助”** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 有关将帮助主题帮助集合添加到联机丛书集的信息，请参阅[添加或删除 SQL Server 的产品文档](../2014-toc/index.yml)。  
+ 对“帮助”的帮助（[!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer 帮助）可将用户链接到有关帮助查看器的文档，但这些主题位于一个独立于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书的集合中。 有关帮助查看器的信息，请从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书的“帮助”菜单上选择“帮助之帮助”。 有关将帮助主题帮助集合添加到联机丛书集的信息，请参阅[添加或删除 SQL Server 的产品文档](../2014-toc/index.yml)。  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN Online 和 SQL Server 社区  
- [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中的“帮助”还允许用户通过访问网站上的 MSDN Online 和专门针对于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的社区两种途径来获取信息。 你可以：  
+ [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中的“帮助”还允许用户通过访问网站上的 MSDN Online 和专门针对于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的社区两种途径来获取信息。 可以：  
   
 -   从“如何实现”页访问 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 社区。  
   
@@ -66,7 +65,7 @@ ms.locfileid: "74684460"
   
 #### <a name="to-enable-online-search"></a>启用联机搜索  
   
-1.  在“工具” **** 菜单上，单击“选项” ****。 在“选项”**** 对话框中，展开“环境”**** 和“帮助”**** 节点（如有必要），然后单击“联机”****。  
+1.  在“工具”  菜单上，单击“选项” 。 在“选项”**** 对话框中，展开“环境”**** 和“帮助”**** 节点（如有必要），然后单击“联机”****。  
   
 2.  在“当载入帮助内容时”**** 区域中，选择一个联机选项。  
   
@@ -74,7 +73,7 @@ ms.locfileid: "74684460"
   
 4.  如果 **Codezone 社区**是你选定的搜索提供程序之一，则可根据需要在“Codezone 社区”**** 列表中选择和清除项。  
   
-5.  单击“确定”。   
+5.  单击“确定”。  
   
 #### <a name="to-search-msdn-online-and-sql-server-focused-communities-from-the-search-page"></a>从“搜索”页搜索 MSDN Online 和专门针对于 SQL Server 的社区  
   

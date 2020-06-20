@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c09007f0-9374-4f60-956b-8a87670cd043
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 84918dd3f50d129485911fc880e67c0152fa905c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bec2f363cd8c4f7dea45935568a88722b19323fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882247"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060414"
 ---
 # <a name="replicate-schema-changes"></a>复制架构更改
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中复制架构更改。  
@@ -54,11 +53,11 @@ ms.locfileid: "73882247"
 -   ALTER TABLE …DROP COLUMN 语句将始终复制到所有其订阅包含要被删除的列的订阅服务器，即使禁用对架构更改的复制也是如此。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 如果不想复制发布的架构更改，请在“发布属性 - \<发布>”对话框中禁用对架构更改的复制。  有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](view-and-modify-publication-properties.md)。  
+ 如果不想复制发布的架构更改，请在 "**发布属性- \<Publication> ** " 对话框中禁用对架构更改的复制。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](view-and-modify-publication-properties.md)。  
   
 #### <a name="to-disable-replication-of-schema-changes"></a>禁用对架构更改的复制  
   
-1.  在“发布属性 - \<发布>”对话框的“订阅选项”页上，将“复制架构更改”属性值设置为“False”。      
+1.  在 "**发布属性- \<Publication> ** " 对话框的 "**订阅选项**" 页上，将 "**复制架构更改**" 属性的值设置为 " **False**"。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -69,27 +68,27 @@ ms.locfileid: "73882247"
   
 #### <a name="to-create-a-snapshot-or-transactional-publication-that-does-not-replicate-schema-changes"></a>创建不复制架构更改的快照发布或事务发布  
   
-1.  在发布服务器上，对发布数据库执行[sp_addpublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)，并为** \@replicate_ddl**指定值**0** 。 有关详细信息，请参阅 [Create a Publication](create-a-publication.md)。  
+1.  在发布服务器上，对发布数据库执行[sp_addpublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)，并为** \@ replicate_ddl**指定值**0** 。 有关详细信息，请参阅 [Create a Publication](create-a-publication.md)。  
   
 #### <a name="to-create-a-merge-publication-that-does-not-replicate-schema-changes"></a>创建不复制架构更改的合并发布  
   
-1.  在发布服务器上，对发布数据库执行[sp_addmergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)，并为** \@replicate_ddl**指定值**0** 。 有关详细信息，请参阅 [Create a Publication](create-a-publication.md)。  
+1.  在发布服务器上，对发布数据库执行[sp_addmergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)，并为** \@ replicate_ddl**指定值**0** 。 有关详细信息，请参阅 [Create a Publication](create-a-publication.md)。  
   
 #### <a name="to-temporarily-disable-replicating-schema-changes-for-a-snapshot-or-transactional-publication"></a>为快照发布或事务发布暂时禁用复制架构更改  
   
-1.  对于包含架构更改复制的发布，请执行[sp_changepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，并为 " ** \@属性**" 指定值 " **replicate_ddl** "，将** \@"值"** 的值指定为 " **0** "。  
+1.  对于包含架构更改复制的发布，请执行[sp_changepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，并为 " ** \@ 属性**" 指定值 " **replicate_ddl** "，将 "值" 的值指定为 " **0** ** \@ "。**  
   
 2.  对已发布对象执行 DDL 命令。  
   
-3.  可有可无通过执行[sp_changepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，为** \@**" ** \@属性**" 指定 " **replicate_ddl** " 值，并为 "值" 指定值 " **1** "，重新启用复制架构更改。  
+3.  可有可无通过执行[sp_changepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，为 " ** \@ 属性**" 指定 " **replicate_ddl** " 值，并为 " ** \@ 值**" 指定值 " **1** "，重新启用复制架构更改。  
   
 #### <a name="to-temporarily-disable-replicating-schema-changes-for-a-merge-publication"></a>为合并发布暂时禁用复制架构更改  
   
-1.  对于包含架构更改复制的发布，请执行[sp_changemergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)，并为 " ** \@属性**" 指定值 " **replicate_ddl** "，将** \@"值"** 的值指定为 " **0** "。  
+1.  对于包含架构更改复制的发布，请执行[sp_changemergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)，并为 " ** \@ 属性**" 指定值 " **replicate_ddl** "，将 "值" 的值指定为 " **0** ** \@ "。**  
   
 2.  对已发布对象执行 DDL 命令。  
   
-3.  可有可无通过执行[sp_changemergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)，为** \@**" ** \@属性**" 指定 " **replicate_ddl** " 值，并为 "值" 指定值 " **1** "，重新启用复制架构更改。  
+3.  可有可无通过执行[sp_changemergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)，为 " ** \@ 属性**" 指定 " **replicate_ddl** " 值，并为 " ** \@ 值**" 指定值 " **1** "，重新启用复制架构更改。  
   
 ## <a name="see-also"></a>另请参阅  
  [对发布数据库进行架构更改](make-schema-changes-on-publication-databases.md)   

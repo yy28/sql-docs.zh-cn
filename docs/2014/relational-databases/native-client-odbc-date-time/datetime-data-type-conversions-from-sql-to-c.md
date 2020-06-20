@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8ef4d3f57f70641b738b21f86d55021e14606d57
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 425699cfc57b9240909414d6515c74dab580b4e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705484"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020280"
 ---
 # <a name="conversions-from-sql-to-c"></a>由 SQL 转换为 C
   下表列出了从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期/时间类型转换为 C 类型时要注意的问题。  

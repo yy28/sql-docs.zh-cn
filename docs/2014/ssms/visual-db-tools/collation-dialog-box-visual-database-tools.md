@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: e4020f79-7abf-4839-b9b2-984ef7049817
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 28c32be0bfb42b923041169c542e21b21074cf70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13306f74ab0d49fddd271878a2af2337c2299861
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62936961"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067255"
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>“排序规则”对话框 (Visual Database Tools)
   使用此对话框可为列指定排序规则顺序。 列的排序规则顺序可用在将列值与其他列的值或常量值进行比较的各项操作中。 它还会影响一些字符串函数（如 SUBSTRING 和 CHARINDEX）的行为。 有关列排序规则设置的效果的完整列表，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文档。  

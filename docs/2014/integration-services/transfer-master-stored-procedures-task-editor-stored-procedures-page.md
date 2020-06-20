@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5fcf171e-cc0b-4c24-8eb5-3a4b4775e64a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f233f0730286a1623ee54c38084d07a2aba903e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09a9ad4645f430418c39f76178bfe7a6757018dd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054862"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972777"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>传输主存储过程任务编辑器（“存储过程”页）
   可以使用“传输主存储过程任务编辑器”对话框的“存储过程”页，指定用于将一个或多个用户定义存储过程从一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中的 **master** 数据库复制到另一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中的 **master** 数据库的属性。******** 有关此任务的详细信息，请参阅 [Transfer Master Stored Procedures Task](control-flow/transfer-master-stored-procedures-task.md)。  
@@ -29,26 +28,26 @@ ms.locfileid: "66054862"
   
 ## <a name="options"></a>选项  
  **SourceConnection**  
- 在列表中选择一个 SMO 连接管理器，或单击** \<"新建连接 ..." >** 以创建与源服务器的新连接。  
+ 在列表中选择一个 SMO 连接管理器，或单击 "新建与 **\<New connection...>** 源服务器的连接"。  
   
  **DestinationConnection**  
- 在列表中选择一个 SMO 连接管理器，或单击** \<"新建连接 ..." >** 以创建与目标服务器的新连接。  
+ 在列表中选择一个 SMO 连接管理器，或单击 "新建与 **\<New connection...>** 目标服务器的连接"。  
   
  **IfObjectExists**  
  选择该任务应如何处理目标服务器上的 **master** 数据库中已经存在的同名用户定义存储过程。  
   
  此属性具有下表所列的选项：  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**FailTask**|如果目标服务器上的 **master** 数据库中已存在同名的存储过程，则任务失败。|  
 |**Overwrite**|任务将覆盖目标服务器上的 **master** 数据库中的同名存储过程。|  
-|**略**|任务将跳过目标服务器上的 **master** 数据库中存在的同名存储过程。|  
+|**Skip**|任务将跳过目标服务器上的 **master** 数据库中存在的同名存储过程。|  
   
  **TransferAllStoredProcedures**  
  选择是否应将源服务器上 **master** 数据库中的所有用户定义存储过程复制到目标服务器。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**True**|复制 **master** 数据库中的所有用户定义存储过程。|  
 |**False**|仅复制指定的存储过程。|  

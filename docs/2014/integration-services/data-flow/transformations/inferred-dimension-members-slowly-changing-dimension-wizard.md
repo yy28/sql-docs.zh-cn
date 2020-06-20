@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 809e395f-2e10-48ff-8860-56403f130628
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2c505bf78acc4293e68f0f2222dd9fbf7f9e01e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35df99f7870130fb32d1cd7bf63b2bbc775b9381
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900133"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939458"
 ---
 # <a name="inferred-dimension-members-slowly-changing-dimension-wizard"></a>推断维度成员（渐变维度向导）
   可以使用 **“推断维度成员”** 对话框指定使用推断成员的选项。 当事实数据表引用尚未加载的维度成员时，存在推断成员。 当加载推断成员的数据后，可以更新现有记录，而不必创建一个新记录。  

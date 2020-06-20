@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: fea376de-307a-4b45-b7e2-37df88f3681a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ce29f56d7877712dd99553968b364b1c33471c2b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d132fbf5ce541a2bdab82e44dc55e6fc92df536d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177319"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007749"
 ---
 # <a name="cancel-option-distributed-replay-administration-tool"></a>Cancel 选项（分布式重播管理工具）
-  Distributed Replay 管理工具`DReplay.exe`是一个命令行工具，可用于与 Distributed Replay 控制器进行通信。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本主题介绍 **cancel** 命令行选项和相应的语法。
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具 `DReplay.exe` 是一个命令行工具，可用于与 Distributed Replay 控制器进行通信。 本主题介绍 **cancel** 命令行选项和相应的语法。
 
  **cancel** 选项取消控制器上运行的当前操作。
 
@@ -31,7 +30,7 @@ ms.locfileid: "78177319"
 dreplay cancel [-mcontroller] [-q] 
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
  **-m** *控制器*控制器的计算机名称。 可以用“`localhost`”或“`.`”指代本地计算机。
 
  如果未指定 **-m** 参数，则使用本地计算机。

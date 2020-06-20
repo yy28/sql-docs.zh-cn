@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 286b37195b200761ce8cd8e941076c8a27e61011
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 982588ab34c00559b5fc8b45a2e76a38a7884a37
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62836790"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925139"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>以编程方式添加数据流组件
   若要生成数据流，则可以先添加组件。 然后配置这些组件并将它们连接在一起，以便在运行时建立数据流。 本节将介绍如何向数据流任务添加组件、如何创建组件的设计时实例以及配置该组件。 有关如何连接组件的详细信息，请参阅[以编程方式连接数据流组件](../building-packages-programmatically/connecting-data-flow-components-programmatically.md)。  

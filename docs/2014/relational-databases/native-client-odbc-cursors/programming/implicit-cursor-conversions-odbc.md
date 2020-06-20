@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fe29a58d-8448-4512-9ffd-b414784ba338
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 99395f9a8dbcb812f5a7764634d42489526875af
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ff8350c71a853e39ff1d35a1f3fba6e8e1944934
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705615"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020658"
 ---
 # <a name="implicit-cursor-conversions-odbc"></a>隐式游标转换 (ODBC)
   应用程序可以通过[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)请求游标类型，然后执行所请求类型的服务器游标不支持的 SQL 语句。 对**SQLExecute**或**SQLExecDirect**的调用将返回 SQL_SUCCESS_WITH_INFO 和**SQLGetDiagRec**返回：  

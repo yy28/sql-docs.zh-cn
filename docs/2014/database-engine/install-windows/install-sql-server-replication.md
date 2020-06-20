@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3fd70d208960af1f121795bfdf8a657ceaf59f21
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba941fda1d463e7bb4a26bd2fbb45d2a82ca27b3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775290"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932464"
 ---
 # <a name="install-sql-server-replication"></a>安装 SQL Server 复制
   可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导或通过命令提示符安装复制组件。 请在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或修改现有实例时安装复制组件。  
@@ -34,7 +33,7 @@ ms.locfileid: "62775290"
 ## <a name="installing-replication-by-using-setup"></a>使用安装程序安装复制  
  **在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  
   
--   若要安装包括复制管理对象 (RMO) 在内的复制组件，请在安装向导的  “功能选择”页上选择  “SQL Server 复制”。  
+-   若要安装包括复制管理对象 (RMO) 在内的复制组件，请在安装向导的“功能选择”页上选择“SQL Server 复制”。  
   
 ## <a name="installing-replication-from-the-command-prompt"></a>从命令提示符安装复制  
  **在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  

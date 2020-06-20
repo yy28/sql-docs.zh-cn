@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a9a7bdca770bccaac50da1ac6a7688eabd335e20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fcbff0c10d6e58e12474ce3c514a38e74c7119f9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62791861"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937128"
 ---
 # <a name="availability-group-is-not-ready-for-automatic-failover"></a>可用性组未准备好进行自动故障转移
     
-## <a name="introduction"></a>介绍  
+## <a name="introduction"></a>简介  
   
 |||  
 |-|-|  

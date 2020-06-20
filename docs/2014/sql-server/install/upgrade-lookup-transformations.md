@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9b2c281-91ee-4e20-bdf0-0cd77d4a4241
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: eae7433569972c217161f1681b2f7089c7604335
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74430ab1bed232b8d510a8c28a8a690d88d1f6ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091511"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041646"
 ---
 # <a name="upgrade-lookup-transformations"></a>升级查找转换
   当您从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 时，请考虑将该包修改为利用查找转换中的新功能。 该转换支持 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 中的缓存类型和数据输出选项。 有关其他缓存和数据输出的详细信息，请参阅[查找转换](../../integration-services/data-flow/transformations/lookup-transformation.md)。  

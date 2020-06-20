@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 88061a39-c5aa-403d-a52b-7fdb365fc235
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d9d9f11b8713ea26cd79e95b9edc3f36c0bf3564
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7d0fa1fde56ab4293e7733a974ec57d77c55151
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066687"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938678"
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>重命名表或列（SSAS 表格）
   在导入过程中，您可以通过在 **“表导入向导”** 的 **“选择表和视图”** 页中键入 **“友好名称”**，更改表的名称。 如果您通过在 **“表导入向导”** 的 **“指定 SQL 查询”** 页上指定查询来导入数据，也可以更改表和列名。  
@@ -46,7 +45,7 @@ ms.locfileid: "66066687"
   
 -   控制字符  
   
--   以下字符（在 Analysis Services 对象的名称中无效）：.，; '：/\\*|?&% $！ + = （） []{}<>  
+-   以下字符（在 Analysis Services 对象的名称中无效）：.，; '：/ \\*|?&% $！ + = （） [] {}<>  
   
 -   Analysis Services 保留关键字，包括多维表达式 (MDX) 和数据挖掘扩展插件 (DMX) 函数名称和运算符。  
   

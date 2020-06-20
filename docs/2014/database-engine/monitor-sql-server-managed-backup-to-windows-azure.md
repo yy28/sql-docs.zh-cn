@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cfb9e431-7d4c-457c-b090-6f2528b2f315
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4ed32927e38f67c718031930023bd246048e2db5
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: baec99e63c70befde0cfce76e42dd6202ebc0bad
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849605"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930638"
 ---
 # <a name="monitor-sql-server-managed-backup-to-azure"></a>监视针对 Azure 的 SQL Server 托管备份
   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]内置多种措施，可在备份过程中找出问题和错误，如有可能，再通过纠正措施纠正这些问题。  但是，有一些需要用户干预的情况。 本主题介绍可用于确定备份的整体运行状况和标识需解决的任何错误的工具。  

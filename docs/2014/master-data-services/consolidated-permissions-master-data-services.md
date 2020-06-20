@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 084055a3-5fd3-43f3-b620-ac6afab42a3d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 66224262c88176fe0d0ddd1f4291b12213aed928
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b40598eaa81ce0a1d890ef8ec37a12fada0fa458
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054113"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971897"
 ---
 # <a name="consolidated-permissions-master-data-services"></a>合并的权限（主数据服务）
   合并权限应用到实体的所有合并成员的属性值。  
@@ -37,7 +36,7 @@ ms.locfileid: "66054113"
 |----------------|-----------------|  
 |**只读**|显示合并成员，但是用户不能添加、删除或更改它们。|  
 |**Update**|显示合并成员，用户可以添加、删除和更改它们。|  
-|**注销**|不显示实体的合并成员。|  
+|**拒绝**|不显示实体的合并成员。|  
   
 ## <a name="attribute-permissions"></a>属性权限  
  属性权限应用到该属性用于特定实体的值。 仅具有属性权限的用户不能添加或删除成员。  
@@ -46,7 +45,7 @@ ms.locfileid: "66054113"
 |----------------|-----------------|  
 |**只读**|显示属性，但是用户不能更改属性值。|  
 |**Update**|显示属性，用户可以更改属性值。|  
-|**注销**|不显示属性。<br /><br /> 注意：不能明确拒绝对 Name 和 Code 属性的访问权限。|  
+|**拒绝**|不显示属性。<br /><br /> 注意：不能明确拒绝对 Name 和 Code 属性的访问权限。|  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;Master Data Services 分配模型对象权限&#41;](assign-model-object-permissions-master-data-services.md)   

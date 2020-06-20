@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 530cca00459ed1ae170272dfd20a54928f039b38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ddd2342f766edd30af99f6e01d47c4086360ff61
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900310"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939308"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>为合并转换和合并联接转换排序数据
   在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]中，合并转换和合并联接转换要求其输入为已排序的数据。 输入数据必须已经过物理排序，且必须对源或上游转换中的输出和输出列设置排序选项。 如果排序选项指示数据是已排序的，而数据实际上不是已排序的，则合并或合并联接操作的结果将是不可预知的。  
@@ -71,7 +70,7 @@ ms.locfileid: "62900310"
   
 5.  单击 **“输入属性和输出属性”** 选项卡。  
   
-6.  单击** \<"组件名称> 输出**"，并`IsSorted`将属性`True`设置为。  
+6.  单击 " ** \<component name> 输出**"，并将 `IsSorted` 属性设置为 `True` 。  
   
     > [!NOTE]  
     >  如果手动将输出的 `IsSorted` 属性设置为 `True`且没有对数据进行排序，则当你运行该包时，可能会在下游合并或合并联接转换中产生缺失数据或错误数据比较。  

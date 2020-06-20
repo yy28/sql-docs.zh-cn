@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 652faac0-1cfc-438b-8119-2f4b090a2381
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 098d9b589396ebd6a9c622f921efd97d0b000929
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d8efab57dd195993ab9ab12c0cb9b3f167bd796
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067039"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938828"
 ---
 # <a name="manage-roles-by-using-ssms-ssas-tabular"></a>使用 SSMS 管理角色（SSAS 表格）
   对于部署的表格模型，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]创建、编辑和管理角色。  
@@ -50,20 +49,20 @@ ms.locfileid: "66067039"
   
     |权限|说明|  
     |----------------|-----------------|  
-    |**完全控制(管理员)**|成员可以对模型架构进行修改并可以查看所有数据。|  
-    |**Process Database**|成员可以运行“处理”和“全部处理”操作。 不能修改模型架构且不能查看数据。|  
+    |**完全控制（管理员）**|成员可以对模型架构进行修改并可以查看所有数据。|  
+    |**处理数据库**|成员可以运行“处理”和“全部处理”操作。 不能修改模型架构且不能查看数据。|  
     |**读取**|允许成员查看数据（基于行筛选器），但不能对模型架构进行任何更改。|  
   
 5.  在 **“创建角色”** 对话框的“选择页”窗口中，单击 **“成员身份”**。  
   
 6.  在“成员身份设置”窗口中单击 **“添加”**，然后在 **“选择用户或组”** 对话框中，添加要作为成员添加的 Windows 用户或组。  
   
-7.  如果您创建的角色已具有“读取”权限，则可以使用 DAX 公式为任意表添加行筛选器。 若要添加行筛选器，请在 "**角色属性- \<角色角色>** " 对话框的 "**选择页**" 中，单击 "**行筛选器**"。  
+7.  如果您创建的角色已具有“读取”权限，则可以使用 DAX 公式为任意表添加行筛选器。 若要添加行筛选器，请在 "**角色属性- \<rolename> ** " 对话框的 "**选择页**" 中，单击 "**行筛选器**"。  
   
-8.  在 "行筛选器" 窗口中，选择一个表，然后单击 " **Dax 筛选器**" 字段，然后在 " ** \<dax 筛选器-tablename>** " 字段中键入 DAX 公式。  
+8.  在 "行筛选器" 窗口中，选择一个表，然后单击 " **Dax 筛选器**" 字段，然后在 " ** \<tablename> dax 筛选器**" 字段中键入 dax 公式。  
   
     > [!NOTE]  
-    >  DAX 筛选器- \<tablename> 字段不包含自动完成查询编辑器或插入函数功能。 若要在写入 DAX 公式时使用自动完成功能，必须在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中使用 DAX 公式编辑器。  
+    >  DAX 筛选器 \<tablename> 字段不包含自动完成查询编辑器或插入函数功能。 若要在写入 DAX 公式时使用自动完成功能，必须在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中使用 DAX 公式编辑器。  
   
 9. 单击 **“确定”** 保存角色。  
   
@@ -75,7 +74,7 @@ ms.locfileid: "66067039"
   
 -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展开包含要编辑的角色的表格模型数据库，展开 **“角色”**，右键单击该角色，然后单击 **“属性”**。  
   
-     在 "**角色属性** \<角色>" 对话框中，可以更改权限、添加或删除成员，以及添加/编辑行筛选器。  
+     在 "**角色属性**" \<rolename> 对话框中，您可以更改权限、添加或删除成员，以及添加/编辑行筛选器。  
   
 ###  <a name="to-delete-a-role"></a><a name="bkmk_deletet_role"></a>删除角色  
   

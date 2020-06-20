@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ff404e02-630f-474d-b5d4-06442b756991
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bb6ed6d38d4294884092ae5c038b5e83d23c6b97
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c9f21d5679e3bc926fc9a824ba11d8283dc9dad6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702009"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020753"
 ---
 # <a name="positioned-updates-odbc"></a>定位更新 (ODBC)
   ODBC 支持通过两种方法在游标中执行定位更新：  

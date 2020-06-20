@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 823a6455616b412a41179d831b565e10b3286fb7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7c9cb078b7af60fc5e060bcb144fc9cbaee8ecf7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875144"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956679"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>还原 master 数据库 (Transact-SQL)
   本主题介绍如何从完整数据库备份还原 **master** 数据库。  
@@ -43,7 +42,7 @@ ms.locfileid: "62875144"
  下面的示例将在默认服务器实例上还原 `master` 数据库。 该示例假定服务器实例是在单用户模式下运行。 该示例启动 `sqlcmd` 并执行 `RESTORE DATABASE` 语句，以便从磁盘设备 `master` 还原 `Z:\SQLServerBackups\master.bak`的完整数据库备份。  
   
 > [!NOTE]
->  对于命名实例，**sqlcmd** 命令必须指定 **-S** _\<ComputerName>_ \\ *\<InstanceName>* 选项。  
+>  对于命名实例， **sqlcmd**命令必须指定 **-S** _\<ComputerName>_ \\ *\<InstanceName>* 选项。  
   
 ```  
   

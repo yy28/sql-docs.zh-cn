@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 029abf7d-6414-47ca-a3a7-b3a057efb6c2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 973ad34d5d24eecd0c3af0e0451b0d2ba9058222
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf3d69608e8508fcc314fe67315de86da98ed53f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63194914"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000770"
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL 编辑器 (Visual Database Tools)
   使用 SQL 编辑器可以编辑现有的存储过程、函数、触发器和 SQL 脚本。 当您打开上述任何对象时，此窗口将打开。 若要创建要对数据源运行的新 SQL 语句，请使用查询设计器的 [SQL 窗格](visual-database-tools.md) 。  
@@ -38,7 +37,7 @@ ms.locfileid: "63194914"
   
 -   提供有用的编辑功能，包括剪切、复制、粘贴和拖动操作。  
   
--   更改编辑器的行为（在“工具”  菜单中选择“选项”  ）以修改虚空格、自动换行、行号和制表符大小。  
+-   更改编辑器的行为（在“工具”菜单中选择“选项”）以修改虚空格、自动换行、行号和制表符大小。  
   
 -   帮助管理调试断点。  
   
