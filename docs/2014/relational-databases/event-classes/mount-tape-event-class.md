@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c595e0a-d968-47d3-a84f-9b6857342671
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 513792c12833a14b8d1d3fc78f4b3bb6be173627
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8298df4bfd0eaa91cf788fedbffe4e9b2a1389de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023447"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052876"
 ---
 # <a name="mount-tape-event-class"></a>Mount Tape 事件类
   当收到磁带装入请求时，将发生 Mount Tape 事件类。 使用此事件类可以监视磁带装入请求及其成功与否。  
@@ -40,7 +39,7 @@ ms.locfileid: "63023447"
 |GroupID|`int`|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|是|  
 |HostName|`nvarchar`|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |IsSystem|`int`|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  
-|LoginName|`nvarchar`|用户的登录名[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （安全登录名或[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录凭据，格式为 "域\\*用户名*"）。|11|是|  
+|LoginName|`nvarchar`|用户的登录名（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录凭据，格式为 "域 \\ *用户名*"）。|11|是|  
 |NTDomainName|`nvarchar`|用户所属的 Windows 域。|7|是|  
 |NTUserName|`nvarchar`|Windows 用户名。|6|是|  
 |ServerName|`nvarchar`|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  

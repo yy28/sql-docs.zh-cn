@@ -20,29 +20,29 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16939894f9e43e4538a8d56e76632af891d9714a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8e1cf6bdf4270759a94761e67b94009576ef6ad
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77429011"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84941074"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-返回有关在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]执行的每个请求的信息。 有关请求的详细信息，请参阅[线程和任务体系结构指南](../../relational-databases/thread-and-task-architecture-guide.md)。
+返回有关在中执行的每个请求的信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关请求的详细信息，请参阅[线程和任务体系结构指南](../../relational-databases/thread-and-task-architecture-guide.md)。
    
 |列名称|数据类型|说明|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|与此请求相关的会话的 ID。 不可为 null。|  
 |request_id|**int**|请求的 ID。 在会话的上下文中是唯一的。 不可为 null。|  
 |start_time|**datetime**|请求到达时的时间戳。 不可为 null。|  
-|status|**nvarchar(30)**|请求的状态。 可以是下列选项之一：<br /><br /> 背景<br />运行<br />可运行<br />Sleeping<br />Suspended<br /><br /> 不可为 null。|  
-|command|**nvarchar(32)**|标识正在处理的命令的当前类型。 常用命令类型包括：<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 可通过结合使用 sys.dm_exec_sql_text 和与请求对应的 sql_handle 检索请求的文本。 内部系统进程将基于它们所执行任务的类型来设置该命令。 这些任务可以包括：<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> 不可为 null。|  
+|status|**nvarchar(30)**|请求的状态。 可以是以下位置之一：<br /><br /> 背景<br />正在运行<br />可运行<br />Sleeping<br />Suspended<br /><br /> 不可为 null。|  
+|命令|**nvarchar(32)**|标识正在处理的命令的当前类型。 常用命令类型包括：<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 可通过结合使用 sys.dm_exec_sql_text 和与请求对应的 sql_handle 检索请求的文本。 内部系统进程将基于它们所执行任务的类型来设置该命令。 这些任务可以包括：<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> 不可为 null。|  
 |sql_handle|**varbinary(64)**|是唯一标识查询所属的批处理或存储过程的标记。 可以为 Null。| 
-|statement_start_offset|**int**|指示当前正在执行的批处理或持久化对象当前正在执行的语句的开始位置（以字节为单位），从0开始。 可以与`sql_handle`、 `statement_end_offset`和`sys.dm_exec_sql_text`动态管理函数一起使用，以检索请求的当前正在执行的语句。 可以为 Null。|  
-|statement_end_offset|**int**|指示当前正在执行的批处理或持久化对象当前正在执行的语句的结束位置（以字节为单位，从0开始）。 可以与`sql_handle`、 `statement_start_offset`和`sys.dm_exec_sql_text`动态管理函数一起使用，以检索请求的当前正在执行的语句。 可以为 Null。|  
+|statement_start_offset|**int**|指示当前正在执行的批处理或持久化对象当前正在执行的语句的开始位置（以字节为单位），从0开始。 可以与 `sql_handle` 、 `statement_end_offset` 和 `sys.dm_exec_sql_text` 动态管理函数一起使用，以检索请求的当前正在执行的语句。 可以为 Null。|  
+|statement_end_offset|**int**|指示当前正在执行的批处理或持久化对象当前正在执行的语句的结束位置（以字节为单位，从0开始）。 可以与 `sql_handle` 、 `statement_start_offset` 和 `sys.dm_exec_sql_text` 动态管理函数一起使用，以检索请求的当前正在执行的语句。 可以为 Null。|  
 |plan_handle|**varbinary(64)**|是一个标记，用于为当前正在执行的批处理唯一标识查询执行计划。 可以为 Null。|  
 |database_id|**smallint**|对其执行请求的数据库的 ID。 不可为 null。|  
 |user_id|**int**|提交请求的用户的 ID。 不可为 null。|  
@@ -94,17 +94,20 @@ ms.locfileid: "77429011"
 |parallel_worker_count |**int** |**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。<br /><br /> 如果这是并行查询，则为保留的并行工作线程数。  |  
 |external_script_request_id |**uniqueidentifier** |**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。<br /><br /> 与当前请求关联的外部脚本请求 ID。 |  
 |is_resumable |**bit** |**适用于**：[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 及更高版本。<br /><br /> 指示请求是否为可恢复索引操作。 |  
-|page_resource |**binary （8）** |适用于  ：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 如果`wait_resource`列包含页，则为页资源的8字节的十六进制表示形式。 有关详细信息，请参阅[sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)。 |  
+|page_resource |**binary （8）** |适用于  ：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 如果列包含页，则为页资源的8字节的十六进制表示形式 `wait_resource` 。 有关详细信息，请参阅[sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)。 |  
 |page_server_reads|**bigint**|**适用**于： Azure SQL 数据库超大规模<br /><br /> 此请求执行的页服务器读取次数。 不可为 null。|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>备注 
+## <a name="remarks"></a>注解 
 若要执行在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外的代码（例如，扩展存储过程和分布式查询），则必须在非抢先计划程序的控制范围以外执行该线程。 若要这样做，工作线程将切换到抢先模式。 由此动态管理视图返回的时间值不包括在抢先模式下花费的时间。
 
-在[行模式下](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)执行并行请求时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，会分配一个工作线程来协调负责完成分配给它们的任务的工作线程。 在此 DMV 中，只有协调器线程对该请求可见。 **不**会为协调器线程更新列**读取**、**写入**、 **logical_reads**和**row_count** 。 **仅**为协调器线程更新列**wait_type**、 **wait_time**、 **last_wait_type**、 **wait_resource**和**granted_query_memory** 。 有关详细信息，请参阅[线程和任务体系结构指南](../../relational-databases/thread-and-task-architecture-guide.md)。
+在[行模式下](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)执行并行请求时，会 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分配一个工作线程来协调负责完成分配给它们的任务的工作线程。 在此 DMV 中，只有协调器线程对该请求可见。 **不**会为协调器线程更新列**读取**、**写入**、 **logical_reads**和**row_count** 。 **仅**为协调器线程更新列**wait_type**、 **wait_time**、 **last_wait_type**、 **wait_resource**和**granted_query_memory** 。 有关详细信息，请参阅[线程和任务体系结构指南](../../relational-databases/thread-and-task-architecture-guide.md)。
 
 ## <a name="permissions"></a>权限
-如果用户具有`VIEW SERVER STATE`对服务器的权限，则该用户将看到该实例上的所有正在执行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的会话;否则，用户将只看到当前会话。 `VIEW SERVER STATE`无法在 Azure SQL 数据库中授予， `sys.dm_exec_requests`因此始终限制为当前连接。
+如果用户对 `VIEW SERVER STATE` 服务器具有权限，则用户将看到该实例上的所有正在执行的会话 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; 否则，用户将只看到当前会话。 `VIEW SERVER STATE`无法在 Azure SQL 数据库中授予，因此 `sys.dm_exec_requests` 始终限制为当前连接。
+
+在始终启用的方案中，如果将辅助副本设置为**仅读意向**，则与辅助副本的连接必须通过添加在连接字符串参数中指定其应用程序意向 `applicationintent=readonly` 。 否则，访问检查 `sys.dm_exec_requests` 不会传递到可用性组中的数据库，即使 `VIEW SERVER STATE` 权限存在也是如此。
+
   
 ## <a name="examples"></a>示例  
   
@@ -126,14 +129,14 @@ GO
 
 ### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. 查找运行的批处理持有的所有锁
 
-下面的示例查询**dm_exec_requests sys.databases**以查找感兴趣的批，并从`transaction_id`输出复制其。
+下面的示例查询**dm_exec_requests sys.databases**以查找感兴趣的批，并 `transaction_id` 从输出复制其。
 
 ```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO
 ```
 
-然后，若要查找锁定信息，请使用`transaction_id`与系统函数 sys.databases 一起复制的**dm_tran_locks**。  
+然后，若要查找锁定信息，请使用 `transaction_id` 与系统函数**sys.databases**一起复制的 dm_tran_locks。  
 
 ```sql
 SELECT * FROM sys.dm_tran_locks

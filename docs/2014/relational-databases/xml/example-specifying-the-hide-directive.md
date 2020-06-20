@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 17fd92b523b5956069299a678139e222c303572b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 423ee36f679467c07a604b9754172f6e261971b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702802"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067768"
 ---
 # <a name="example-specifying-the-hide-directive"></a>示例：指定 HIDE 指令
   此示例说明如何使用 **HIDE** 指令。 当希望查询返回一个属性以对该查询所返回的通用表中的行进行排序，但是不希望该属性出现在最终所得到的 XML 文档中时，该指令很有用。  

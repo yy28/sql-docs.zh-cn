@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 645aee1374f7dbf3c290500bb35ca47115983670
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fde3029cb170a45852e08b8073f9a66bb6179658
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809565"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934998"
 ---
 # <a name="server-configuration-options-sql-server"></a>服务器配置选项 (SQL Server)
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 sp_configure 系统存储过程通过配置选项来管理和优化 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 资源。 大多数常用的服务器配置选项可以通过 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]来使用；而所有配置选项都可通过 sp_configure 来访问。 在设置这些选项之前应该认真考虑这些选项对系统的影响。 有关详细信息，请参阅[查看或更改服务器属性 (SQL Server)](view-or-change-server-properties-sql-server.md)。  
@@ -105,7 +104,7 @@ ms.locfileid: "62809565"
     |[max full-text crawl range](max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](server-memory-server-configuration-options.md) （A，SC）|16|2147483647|2147483647|  
     |[max text repl size](configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> （对于 32 位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，建议最大为 1024；对于 64 位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，建议最大为 2048。）|0<br /><br /> 零自动配置最大工作线程数，具体取决于处理器数，使用公式（256 + （*\<处理器>* -4） * 8）表示32位[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，两次用于64位[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+    |[max worker threads](configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> （对于 32 位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，建议最大为 1024；对于 64 位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，建议最大为 2048。）|0<br /><br /> 零自动配置最大工作线程数，具体取决于处理器数，使用公式（256 + （ *\<processors>* -4） * 8）表示32位， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 两次用于64位 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
     |[media retention](configure-the-media-retention-server-configuration-option.md) （A，RR）|0|365|0|  
     |[min memory per query](configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](server-memory-server-configuration-options.md) （A，SC）|0|2147483647|0|  

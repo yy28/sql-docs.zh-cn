@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5dcbf0aae9c96e788fdbf9544114d226fa8f0bfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1a0bc32040fc90e5f73faa708f314722bc8f3b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637858"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036997"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
   防火墙系统有助于阻止对计算机资源进行未经授权的访问。 如果防火墙已打开但却未正确配置，则可能会阻止连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -91,7 +90,7 @@ ms.locfileid: "73637858"
   
     -   设置一些范围限制  
   
-     “控制面板”中的 **“Windows 防火墙”** 项最适合于防火墙配置经验不足的用户以及要为非移动的计算机配置基本防火墙选项的用户。 还可以通过使用以下过程，从`run`命令打开 "控制面板" 中的 " **Windows 防火墙**" 项：  
+     “控制面板”中的 **“Windows 防火墙”** 项最适合于防火墙配置经验不足的用户以及要为非移动的计算机配置基本防火墙选项的用户。 还可以通过使用以下过程，从命令打开 "控制面板" 中的 " **Windows 防火墙**" 项 `run` ：  
   
     #### <a name="to-open-the-windows-firewall-item"></a>打开“Windows 防火墙”项  
   
@@ -159,7 +158,7 @@ ms.locfileid: "73637858"
   
 1.  在“控制面板”中的 **“Windows 防火墙”** 项的 **“例外”** 选项卡上，单击 **“添加程序”**。  
   
-2.  浏览到要允许通过防火墙的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的位置，例如**C:\Program Files\Microsoft SQL Server\MSSQL12. <instance_name> \mssql\binn**，选择 " **sqlservr.exe**"，然后单击 "**打开**"。  
+2.  浏览到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 要允许通过防火墙的实例的位置，例如**C:\PROGRAM Files\Microsoft SQL Server\MSSQL12. <instance_name> \mssql\binn**，选择**sqlservr.exe**，然后单击 "**打开**"。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

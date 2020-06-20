@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3ca0ef50d40b1c4d4f481bef4de89b43ff4a275c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d50fb125fb9e1399691938eb423d412f9556a563
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62650410"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052622"
 ---
 # <a name="qntemplate-event-class"></a>QN:Template 事件类
   QN:Template 事件报告有关查询模板的内部使用情况的信息。 查询模板是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 用于针对通知共享查询定义的机制。 这些模板是与参数表一起创建的。 当创建、使用或销毁查询模板时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 会创建此类型的事件。  
@@ -38,7 +37,7 @@ ms.locfileid: "62650410"
 |GroupID|`int`|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|是|  
 |HostName|`nvarchar`|正在运行客户端程序的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |IsSystem|`int`|指示事件是发生在系统进程中还是发生在用户进程中。<br /><br /> 0 = 用户<br /><br /> 1 = 系统|60|否|  
-|LoginName|`nvarchar`|用户的登录名（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安全登录名或 Windows 登录凭据，格式为 "*域 \ 用户名*"）。|11|否|  
+|LoginName|`nvarchar`|用户的登录名（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 Windows 登录凭据，格式为 "*域 \ 用户名*"）。|11|否|  
 |LoginSID|`image`|已登录用户的安全标识号 (SID)。 您可以在 sys.server_principals 目录视图中找到此信息。 服务器中的每个登录名都具有唯一的 SID。|41|是|  
 |NTDomainName|`nvarchar`|用户所属的 Windows 域。|7|是|  
 |NTUserName|`nvarchar`|拥有生成此事件的连接的用户的名称。|6|是|  

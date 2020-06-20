@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7814d099-81ec-4fb8-894a-729cdbb5015a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3700c706aff2a84eaedb89022c1384ce19f9ea68
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 80d82513b22d2a50aedb37955a210dd33746db86
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702972"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014885"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>在 SQLXML 4.0 中使用 XPath 查询
   通过 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对带批注的 XSD 架构的支持，您可以对数据库中存储的关系数据创建 XML 视图。 您可以使用 XPath 语言的子集查询由带批注的 XSD 架构创建的 XML 视图。  

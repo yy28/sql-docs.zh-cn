@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3b1ec9fe-f6c5-46f7-aa63-6e671be1572d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8abad1f3dbeb8a8667999e90de63d80c2328d90c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3cc1f87917c78f34ec7722fa21a1a67fda40a8c6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62866834"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068967"
 ---
 # <a name="check-integrity-of-database-with-suspect-pages"></a>检查包含可疑页的数据库的完整性
   此规则检查数据库状态设置为可疑的用户数据库。 当 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 读取包含 824 错误的数据库页时，该页将被视为可疑，其页 ID 将记录在 msdb 的 suspect_pages 表中，并且包含该页的数据库将设置为可疑。  

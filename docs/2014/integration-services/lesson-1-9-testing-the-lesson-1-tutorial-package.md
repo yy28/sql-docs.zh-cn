@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 566284668ac8ea27aded665da7028375d97623e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fb4558d092daffc4a043d05b53a2d669f9cd66f1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767601"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966097"
 ---
 # <a name="step-9-testing-the-lesson-1-tutorial-package"></a>步骤 9：测试 Lesson 1 教程包
   在本课中，已经完成了下列任务：  
@@ -35,13 +34,13 @@ ms.locfileid: "62767601"
   
  ![包中的控制流](../../2014/tutorials/media/task9lesson1control.gif "包中的控制流")  
   
- **数据流**  
+ 数据流  
   
  ![包中的数据流](../../2014/tutorials/media/task9lesson1data.gif "包中的数据流")  
   
 ### <a name="to-run-the-lesson-1-tutorial-package"></a>运行 Lesson 1 教程包  
   
-1.  在 "**调试**" 菜单上单击 "**启动调试**"。  
+1.  在“调试”菜单上，单击“启动调试”。  
   
      包将开始运行，结果有 1097 个行被成功添加到 **AdventureWorksDW2012** 中的 **FactCurrency**事实数据表中。  
   

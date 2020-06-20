@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: 9247ad6c-4bd1-43ab-b347-583181cb9917
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f1399b14ec9345b9ca312db463ba5e508d9b9bbe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec71ccf6434cd892be7c44fd4957099965dff6de
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058048"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965477"
 ---
 # <a name="import-project-wizard"></a>导入项目向导
   使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 导入项目向导可以基于现有的项目创建一个新的 Integration Services 项目。 导入已部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 目录的项目，或从项目部署文件（扩展名为 .ispac）导入项目。  
   
 ### <a name="to-create-a-project-based-on-a-project-in-ispac-file-or-in-catalog"></a>基于 .ispac 文件或目录中的项目创建项目  
   
-1.  单击 **“文件”**，指向 **“新建”**，然后单击“项目”。  
+1.  单击 "**文件**"，指向 "**新建**"，然后单击 "项目"。  
   
 2.  展开 **“商业智能”**，然后单击 **Integration Services**。  
   
@@ -46,6 +45,6 @@ ms.locfileid: "66058048"
   
 8.  **“结果”** 页应该显示向导执行的导入操作的结果。 单击 **“保存报表”** 可以将报表保存到某一 XML 文件。  
   
-9. 单击 **“关闭”** 关闭向导。  
+9. 单击“**关闭**”以关闭向导。  
   
   

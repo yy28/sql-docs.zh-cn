@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 266687488dbd12b504b079314cc9d07b801b4f28
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 4ff27a1258d5164e3e93d34b6ff757993d6f6363
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000857"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932938"
 ---
 # <a name="full-text-stoplist-properties"></a>全文非索引字表属性
   使用该对话框可以添加或删除单个非索引字、删除特定语言的所有非索引字或者清除当前的非索引字表。 非索引字是指包括在非索引字表中的常用字。 非索引字表中的非索引字将从使用非索引字表的表的全文索引中省略。 有关详细信息，请参阅 [为全文搜索配置和管理非索引字和非索引字表](../relational-databases/search/full-text-search.md)。  

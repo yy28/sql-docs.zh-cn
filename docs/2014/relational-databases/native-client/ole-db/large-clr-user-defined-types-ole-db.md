@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8fb6c943e237e791ff4febed0ab3273eb9324662
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 78ae9021de1b2e9af3ab9017827c6ea64bc608e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704262"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998607"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 用户定义类型 (OLE DB)
   本主题讨论 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中为支持大型公共语言运行时 (CLR) 用户定义类型 (UDT) 而对 OLE DB 进行的更改。  
@@ -53,8 +52,8 @@ ms.locfileid: "82704262"
   
 |参数类型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|dwFlags** DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
-|DBTYPE_UDT<br /><br /> （长度小于或等于 8,000 个字节）|"DBTYPE_UDT"|*n*|未定义|未定义|clear|  
-|DBTYPE_UDT<br /><br /> （长度大于 8000 个字节）|"DBTYPE_UDT"|~0|未定义|未定义|set|  
+|DBTYPE_UDT<br /><br /> （长度小于或等于 8,000 个字节）|"DBTYPE_UDT"|*n*|undefined|未定义|clear|  
+|DBTYPE_UDT<br /><br /> （长度大于 8000 个字节）|"DBTYPE_UDT"|~0|undefined|未定义|set|  
   
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  在 DBPARAMBINDINFO 结构中提供的信息必须符合以下规定：  
@@ -118,13 +117,13 @@ ms.locfileid: "82704262"
 |绑定数据类型|UDT 到服务器|非 UDT 到服务器|UDT 来自服务器|非 UDT 来自服务器|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|支持 (5)|错误 (1)|支持 (5)|错误 (4)|  
-|DBTYPE_BYTES|支持 (5)|不可用|支持 (5)|不可用|  
-|DBTYPE_WSTR|支持 (2)、(5)|不可用|支持 (3)、(5)、(6)|不可用|  
-|DBTYPE_BSTR|支持 (2)、(5)|不可用|支持 (3)、(5)|不可用|  
-|DBTYPE_STR|支持 (2)、(5)|不可用|支持 (3)、(5)|不可用|  
-|DBTYPE_IUNKNOWN|支持 (6)|不可用|支持 (6)|不可用|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支持 (5)|不可用|支持 (3)、(5)|不可用|  
-|DBTYPE_VARIANT (VT_BSTR)|支持 (2)、(5)|不可用|空值|空值|  
+|DBTYPE_BYTES|支持 (5)|空值|支持 (5)|空值|  
+|DBTYPE_WSTR|支持 (2)、(5)|空值|支持 (3)、(5)、(6)|空值|  
+|DBTYPE_BSTR|支持 (2)、(5)|空值|支持 (3)、(5)|空值|  
+|DBTYPE_STR|支持 (2)、(5)|空值|支持 (3)、(5)|空值|  
+|DBTYPE_IUNKNOWN|支持 (6)|空值|支持 (6)|空值|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支持 (5)|空值|支持 (3)、(5)|空值|  
+|DBTYPE_VARIANT (VT_BSTR)|支持 (2)、(5)|空值|空值|空值|  
   
 ### <a name="key-to-symbols"></a>符号含义  
   

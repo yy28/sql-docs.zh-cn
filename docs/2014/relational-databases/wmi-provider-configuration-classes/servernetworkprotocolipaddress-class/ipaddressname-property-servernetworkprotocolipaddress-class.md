@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1df24fe2-0873-4cd1-9151-2306d08418bc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8ca6b4b0c4449880a407e27df9becf340c84a2eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e57f77430152ec5c549436d0deade821a48e93db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62643073"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059802"
 ---
 # <a name="ipaddressname-property-servernetworkprotocolipaddress-class"></a>IpAddressName 属性（ServerNetworkProtocolIPAddress 类）
   获取 IP 地址的名称。  
@@ -38,7 +37,7 @@ object
   
 ## <a name="parts"></a>组成部分  
  *object*  
- 一个表示实例上的网络协议 IP 地址的[ServerNetworkProtocolIPAdress 类](servernetworkprotocolipaddress-class.md)对象[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ 一个表示实例上的网络协议 IP 地址的[ServerNetworkProtocolIPAdress 类](servernetworkprotocolipaddress-class.md)对象 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定 IP 地址名称的字符串值。  

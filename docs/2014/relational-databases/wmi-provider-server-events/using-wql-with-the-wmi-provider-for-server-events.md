@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 18c4b6448438ebb8c95f999569d51edfecf04206
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df2bbf5c6031781494695f95116441fde34bf4f5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211589"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013673"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>将 WQL 与 WMI Provider for Server Events 结合使用
   管理应用程序通过发出 WMI 查询语言 (WQL) 语句来访问使用 WMI Provider for Server Events 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。 WQL 是结构化查询语言 (SQL) 的简化子集，它还包含一些特定于 WMI 的扩展。 当使用 WQL 时，应用程序将针对特定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例、数据库或数据库对象（当前唯一支持的对象为队列）来检索事件类型。 用于服务器事件的 WMI 提供程序将查询转换为在数据库范围内或对象范围的事件通知的目标数据库中创建的事件通知，或在用于服务器范围内的事件通知的**master**数据库中创建的事件通知。  
@@ -72,7 +71,7 @@ WHERE where_condition
  指定对与事件关联的所有属性进行查询。  
   
  event_type   
- 可针对其创建事件通知的任何事件。 有关可用事件的列表，请参阅[WMI Provider For Server Events 类和属性](https://technet.microsoft.com/library/ms186449.aspx)。 请注意，*事件类型*名称对应于通过使用 create event notification 手动创建事件通知时可以指定的相同*event_type* | *event_group* 。 *事件类型*的示例包括 CREATE_TABLE、LOCK_DEADLOCK、DDL_USER_EVENTS 和 TRC_DATABASE。  
+ 可针对其创建事件通知的任何事件。 有关可用事件的列表，请参阅[WMI Provider For Server Events 类和属性](https://technet.microsoft.com/library/ms186449.aspx)。 请注意，*事件类型*名称对应于*event_type*  |  通过使用 create event notification 手动创建事件通知时可以指定的相同 event_type*event_group* 。 *事件类型*的示例包括 CREATE_TABLE、LOCK_DEADLOCK、DDL_USER_EVENTS 和 TRC_DATABASE。  
   
 > [!NOTE]  
 >  执行 DDL 式操作的某些系统存储过程也可以激发事件通知。 测试您的事件通知以确定它们是否响应运行的系统存储过程。 例如，CREATE TYPE 语句和**sp_addtype**存储过程都将激发在 CREATE_TYPE 事件上创建的事件通知。 但**sp_rename**存储过程不会激发任何事件通知。 有关详细信息，请参阅[DDL 事件](../triggers/ddl-events.md)。  
@@ -91,7 +90,7 @@ WHERE where_condition
   
  WMI Provider for Server Events 使用从下到上的最先适应算法为基础 EVENT NOTIFICATION 生成尽可能小的范围。 该算法试图将服务器上的内部活动和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例与 WMI 主机进程之间的网络通信流量降至最低。 提供程序检查 FROM 子句中指定的*event_type*和 WHERE 子句中的条件，并尝试向最小的可能范围注册基础事件通知。 如果提供程序无法在最小的范围内注册，则它会依次尝试在更大的范围内注册，直到注册最终成功为止。 如果它达到服务器级别的最大范围且失败，则它将向使用者返回一个错误。  
   
- 例如，如果在 WHERE 子句中指定 DatabaseName =**'** AdventureWorks **'**，则提供程序将尝试在[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]数据库中注册事件通知。 如果 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库存在且调用客户端拥有在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 中创建事件通知所需的权限，则注册成功。 否则，将尝试在服务器级别注册事件通知。 如果 WMI 客户端拥有所需的权限，则注册成功。 但是，在这种情况下，在创建完 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库之前不会将事件返回给客户端。  
+ 例如，如果在 WHERE 子句中指定 DatabaseName =**'** AdventureWorks **'**，则提供程序将尝试在数据库中注册事件通知 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 。 如果 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库存在且调用客户端拥有在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 中创建事件通知所需的权限，则注册成功。 否则，将尝试在服务器级别注册事件通知。 如果 WMI 客户端拥有所需的权限，则注册成功。 但是，在这种情况下，在创建完 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库之前不会将事件返回给客户端。  
   
  *Where_condition*还可以充当筛选器，以进一步限制特定数据库、架构或对象的查询。 例如，请考虑下列 WQL 查询：  
   
@@ -105,7 +104,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
   
  如果指定复合表达式，例如 `DatabaseName='AW1'` OR `DatabaseName='AW2'`，则会尝试在服务器范围注册单个事件通知，而不是两个独立的事件通知。 如果调用客户端拥有权限，则注册成功。  
   
- 如果`SchemaName='X' AND ObjectType='Y' AND ObjectName='Z'`在`WHERE`子句中指定 all，则尝试直接在架构`Z` `X`中的对象上注册事件通知。 如果客户端拥有权限，则注册成功。 请注意，当前仅在队列上支持对象级事件，并且仅针对 QUEUE_ACTIVATION *event_type*。  
+ 如果在 `SchemaName='X' AND ObjectType='Y' AND ObjectName='Z'` 子句中指定 all `WHERE` ，则尝试直接在架构中的对象上注册事件通知 `Z` `X` 。 如果客户端拥有权限，则注册成功。 请注意，当前仅在队列上支持对象级事件，并且仅针对 QUEUE_ACTIVATION *event_type*。  
   
  请注意，并非所有事件均可在任何特定的范围内进行查询。 例如，针对跟踪事件（例如 Lock_Deadlock）或跟踪事件组（例如 TRC_LOCKS）的 WQL 查询仅可在服务器级别进行注册。 与此类似，CREATE_ENDPOINT 事件和 DDL_ENDPOINT_EVENTS 事件组也只能在服务器级别进行注册。 有关用于注册事件的适当范围的详细信息，请参阅[设计事件通知](https://technet.microsoft.com/library/ms175854\(v=sql.105\).aspx)。 尝试注册 WQL 查询（其*event_type*只能在服务器级别注册）始终在服务器级别进行。 如果 WMI 客户端拥有权限，则注册成功。 否则，将向客户端返回一个错误。 不过，在某些情况下，仍可根据与服务器级别事件对应的属性将 WHERE 子句用作服务器级别事件的筛选器。 例如，许多跟踪事件具有可在 WHERE 子句中用作筛选器的 `DatabaseName` 属性。  
   

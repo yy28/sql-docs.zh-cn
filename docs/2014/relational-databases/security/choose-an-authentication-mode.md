@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5e06e33048548baad245bee78b9989e9c4cc700b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6156d149cdd49b8dc80c6c349d5ce923696a835f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011334"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997522"
 ---
 # <a name="choose-an-authentication-mode"></a>选择身份验证模式
   在安装过程中，必须为 [!INCLUDE[ssDE](../../includes/ssde-md.md)]选择身份验证模式。 可供选择的模式有两种：Windows 身份验证模式和混合模式。 Windows 身份验证模式会启用 Windows 身份验证并禁用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 混合模式会同时启用 Windows 身份验证和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 Windows 身份验证始终可用，并且无法禁用。  
@@ -67,7 +66,7 @@ ms.locfileid: "63011334"
   
 1.  在 **“开始”** 菜单上，单击 **“运行”** 。  
   
-2.  在 "**运行**" 对话框中， `secpol.msc`键入，然后单击 **"确定"**。  
+2.  在 "**运行**" 对话框中，键入 `secpol.msc` ，然后单击 **"确定"**。  
   
 3.  在 **“本地安全设置”** 应用程序中，依次展开 **“安全设置”** 、 **“帐户策略”** ，然后单击 **“密码策略”** 。  
   

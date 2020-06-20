@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 55b09057927fa9c5102b8d816c42e1741bc0883a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c2c9dfab3a728bc3d5c2a5179a9bb63fb9845b5c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767669"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965365"
 ---
 # <a name="integration-services-user-interface"></a>Integration Services 用户界面
   除了 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器选项卡上的设计图面外，还可通过用户界面访问下面的窗口和对话框，以便向包添加功能以及配置包对象的属性。  
@@ -47,7 +46,7 @@ ms.locfileid: "62767669"
 |**数字签名**|为包签名或从包中删除签名。|在 **SSIS** 菜单上，单击 **“数字签名”** 。<br /><br /> -或-<br /><br /> 右键单击“控制流”  选项卡的设计图面上任意位置，再单击“数字签名”  。|  
 |**设置断点**|对任务启用断点，并设置断点属性。|在“控制流”  选项卡的设计图面上，右键单击任务或容器，再单击“编辑断点”  。 若要对包设置断点，请右键单击“控制流”  选项卡的设计图面上的任意位置，再单击“编辑断点”  。|  
   
- **“入门”** 窗口提供指向示例、教程和视频内容的链接。 若要添加指向更多内容的链接，请修改 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]当前版本附带的 SamplesSites.xml 文件。 建议不要修改指定 RSS 源 URL 的 \<GettingStartedSamples> 元素值。 该文件位于 *drive>:\Program Files\Microsoft SQL Server\110\DTS\Binn 文件夹中\<* 。 在 64 位计算机上，该文件位于 *drive>:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn 文件夹中\<* 。  
+ **“入门”** 窗口提供指向示例、教程和视频内容的链接。 若要添加指向更多内容的链接，请修改 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]当前版本附带的 SamplesSites.xml 文件。 建议您不要修改 \<GettingStartedSamples> 指定 RSS 源 URL 的元素值。 该文件位于 *\<drive>* ： \Program FILES\MICROSOFT SQL Server\110\DTS\Binn 文件夹中。 在64位计算机上，该文件位于 *\<drive>* ： \Program Files （x86） \MICROSOFT SQL Server\110\DTS\Binn 文件夹中  
   
  如果 SamplesSites.xml 文件确已损坏，请用下面的默认 xml 替换该文件中的 xml。  
   
@@ -88,7 +87,7 @@ ms.locfileid: "62767669"
 ## <a name="advanced-editor"></a>“高级编辑器”  
  **“高级编辑器”** 对话框是用于配置数据流组件的用户界面。 它使用通用的布局反映组件的属性。 **“高级编辑器”** 对话框对具有多个输入的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 转换不可用。  
   
- 若要打开此编辑器，请单击“属性”  窗口中的“显示高级编辑器”  ，或右键单击数据流组件，再单击“显示高级编辑器”  。  
+ 若要打开此编辑器，请单击“属性”窗口中的“显示高级编辑器”，或右键单击数据流组件，再单击“显示高级编辑器”。  
   
  如果创建自定义源、转换或目标，但不想编写自定义用户界面，则可以使用 **“高级编辑器”** 。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b59dccc9-f40d-4c82-aa35-ac40acea86ff
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ffcd52ff5db3d6f04f0af1d3119aabbc4f5229c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 82c5b7580c04fa3771595c91ef1f76ffc7f751cf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663031"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053097"
 ---
 # <a name="database-mirroring-connection-event-class"></a>数据库镜像连接事件类
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成 **数据库镜像连接** 事件以便报告数据库镜像管理的传输连接的状态。  
@@ -30,7 +29,7 @@ ms.locfileid: "62663031"
 |**错误**|`int`|事件中的文本的消息 ID 号 **。** 如果此事件报告错误，即是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误号。|31|否|  
 |**EventClass**|`int`|捕获的事件类的类型。 对于 **数据库镜像连接** 始终为 **151**。|27|否|  
 |**EventSequence**|`int`|此事件的序列号。|51|否|  
-|**EventSubClass**|`nvarchar`|此连接的连接状态。 对于此事件，子类是以下值之一。<br /><br /> **Connecting**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在启动传输连接。<br /><br /> **已连接**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已建立传输连接。<br /><br /> **Connect Failed**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 建立传输连接失败。<br /><br /> **Closing**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在关闭传输连接。<br /><br /> **已关闭**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已关闭传输连接。<br /><br /> **接受**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已接受来自另一个实例的传输连接。<br /><br /> **Send IO Error**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在发送消息时遇到了传输错误。<br /><br /> **Receive IO Error**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在接收消息时遇到了传输错误。|21|是|  
+|**EventSubClass**|`nvarchar`|此连接的连接状态。 对于此事件，子类是以下值之一。<br /><br /> **正在连接**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在启动传输连接。<br /><br /> **已连接**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已建立传输连接。<br /><br /> **Connect Failed**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 建立传输连接失败。<br /><br /> **Closing**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在关闭传输连接。<br /><br /> **已关闭**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已关闭传输连接。<br /><br /> **接受**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已接受来自另一个实例的传输连接。<br /><br /> **Send IO Error**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在发送消息时遇到了传输错误。<br /><br /> **Receive IO Error**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在接收消息时遇到了传输错误。|21|是|  
 |**GUID**|`uniqueidentifier`|此连接的端点 ID。|54|否|  
 |**HostName**|`nvarchar`|正在运行客户端程序的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用**HOST_NAME**函数。|8|是|  
 |**IntegerData**|`int`|已关闭此连接的次数。|25|是|  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 75e52edb-0d07-4393-9345-8b5af4561e35
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5eac064dbcb727542969095906260ee962bb44af
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 2d626ca1a162881be28401dd698ceb7db4e59e64
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858657"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932988"
 ---
 # <a name="full-text-index-properties-columns-page"></a>全文索引属性（“列”页）
   **查看或更改全文索引的属性**  
@@ -38,7 +37,7 @@ ms.locfileid: "83858657"
 |-|-|  
 |**可用列**|列名称。|  
 |**断字符语言**|其断字符和词干分析器对所有全文索引数据执行语言分析的语言。<br /><br /> 有关详细信息，请参阅为[搜索配置和管理断字符和词干分析器](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)和在[创建全文索引时选择语言](../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)。|  
-|类型|保留所选列的文档类型的表列的名称。 这是只读属性。|  
+|**类型**|保留所选列的文档类型的表列的名称。 这是只读属性。|  
 |**统计语义**|选择是否为所选列启用语义索引。 有关详细信息，请参阅[语义搜索 (SQL Server)](../relational-databases/search/semantic-search-sql-server.md)。<br /><br /> 如果您在选择 **“统计语义”** 前选择某一 **“语言”**，并且所选语言没有关联的语义语言模型，则 **“统计语义”** 复选框将被禁用。 如果你在选择****“语言”前选择****“统计语义”，则下拉组合框中提供的语言将限制为存在语义语言模型支持的那些语言。|  
   
 ## <a name="see-also"></a>另请参阅  

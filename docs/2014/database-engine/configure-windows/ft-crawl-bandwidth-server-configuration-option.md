@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e5864ad9-92f5-43b5-95de-46d68ded8694
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f603987608a4c6456e01efc171bc93301069f046
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33821ff1fdbc4248c71906d8307a8164a7f64d24
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782173"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935285"
 ---
 # <a name="ft-crawl-bandwidth-server-configuration-option"></a>ft crawl bandwidth 服务器配置选项
   使用 **ft crawl bandwidth** 选项可指定较大内存缓冲池可增长到多大。 较大内存缓冲区的大小为 4 MB。 **max** 参数值可指定全文内存管理器应在较大缓冲池中保持的最大缓冲区数。 如果 **max** 的值为零，则较大缓冲池中可以保持的缓冲区数没有上限。  

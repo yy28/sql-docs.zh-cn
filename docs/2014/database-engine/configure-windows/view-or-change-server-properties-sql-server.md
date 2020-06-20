@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5c5ff985b62e39287b696e96f10142daf90ae0a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 415d4e2d1aaa3166ae4df2dea53b34e064544e06
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783128"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934738"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>查看或更改服务器属性 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 SQL Server 配置管理器查看或更改 [!INCLUDE[tsql](../../includes/tsql-md.md)]实例的属性。  
@@ -59,7 +58,7 @@ ms.locfileid: "72783128"
 ####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  有关详细信息，请参阅 [服务器级别角色](../../relational-databases/security/authentication-access/server-level-roles.md)。  
   
- 默认情况下`sp_configure` ，不带参数的执行权限或仅将第一个参数授予所有用户。 若要`sp_configure`使用这两个参数来更改配置选项或运行重新配置语句，必须向用户授予 ALTER SETTINGS 服务器级别权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
+ `sp_configure`默认情况下，不带参数的执行权限或仅将第一个参数授予所有用户。 若要 `sp_configure` 使用这两个参数来更改配置选项或运行重新配置语句，必须向用户授予 ALTER SETTINGS 服务器级别权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -148,9 +147,9 @@ GO
   
 2.  在 **“SQL Server 配置管理器”** 中，单击 **“SQL Server 服务”** 。  
   
-3.  在详细信息窗格中，右键单击**SQL Server （\<***instancename***>）**，然后单击 "**属性**"。  
+3.  在详细信息窗格中，右键单击**SQL Server （ \<***instancename***> ）**，然后单击 "**属性**"。  
   
-4.  在 " **SQL Server （\<***instancename***>）属性**" 对话框中，更改 "**服务**" 选项卡或 "**高级**" 选项卡上的服务器属性，然后单击 **"确定"**。  
+4.  在 " **SQL Server （ \<***instancename***> ）属性**" 对话框中，更改 "**服务**" 选项卡或 "**高级**" 选项卡上的服务器属性，然后单击 **"确定"**。  
   
 ##  <a name="follow-up-after-you-change-server-properties"></a><a name="FollowUp"></a> 跟进：更改服务器属性之后  
  对于某些属性，可能必须重新启动服务器，才能使更改生效。  

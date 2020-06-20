@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ac47cb74-5578-417d-bcef-f970d9527705
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 58449d2d7d685eaceb3b3015121cb4f59271a46d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a4d38041ce4daa12911dc706d382460324931c90
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706867"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926578"
 ---
 # <a name="sql-server-backward-compatibility"></a>SQL Server 的向后兼容性
   向后兼容性部分中的主题介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 了各版本之间的行为变化 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5157fcfeb54e22c404dcba29655771a1c2034e2c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ed48f48f531e727de5d6e1403ef47f5399f874d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921801"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958030"
 ---
 # <a name="file-restores-simple-recovery-model"></a>文件还原（简单恢复模式）
   本主题仅适用于至少包含一个只读辅助文件组的简单模式数据库。  
@@ -46,11 +45,11 @@ ms.locfileid: "62921801"
      有关联机页和文件还原支持的信息，请参阅 [SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 有关联机还原的详细信息，请参阅[联机还原 (SQL Server)](online-restore-sql-server.md)。  
   
     > [!TIP]  
-    >  如果你希望数据库脱机以进行文件还原，请在开始还原序列之前执行下列 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) 语句以使数据库脱机：ALTER DATABASE *database_name* SET OFFLINE。  
+    >  如果希望数据库脱机以进行文件还原，请在开始还原顺序之前执行下列 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) 语句以使数据库脱机：ALTER DATABASE database_name SET OFFLINE  。  
   
 
   
-##  <a name="overview-of-file-and-filegroup-restore-under-the-simple-recovery-model"></a><a name="Overview"></a>简单恢复模式下的文件和文件组还原概述  
+##  <a name="overview-of-file-and-filegroup-restore-under-the-simple-recovery-model"></a><a name="Overview"></a> 在简单恢复模式下还原文件和文件组的概述  
  文件还原方案由复制、前滚和恢复相应数据的单一还原顺序组成，如下所示：  
   
 1.  从各个损坏文件的最新文件备份还原每个文件。  
@@ -62,13 +61,13 @@ ms.locfileid: "62921801"
   
  该还原序列仅包含两个 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句。 第一个语句还原辅助文件（即文件 `A`），这是使用 WITH NORECOVERY 还原的。 第二项操作是还原其他两个文件（ `B` 和 `C` ），这两个文件是使用 WITH RECOVERY 从不同的备份设备还原的：  
   
-1.  还原数据库*数据库*文件**=** _name_of_file_A_  
+1.  RESTORE DATABASE *database* FILE **=** _name_of_file_A_  
   
      FROM *file_backup_of_file_A*  
   
      WITH NORECOVERY **;**  
   
-2.  RESTORE DATABASE *database* FILE **=**_name_of_file_B_**,**_name_of_file_C_  
+2.  RESTORE DATABASE *database* FILE **=** _name_of_file_B_ **,** _name_of_file_C_  
   
      FROM *file_backup_of_files_B_and_C*  
   
@@ -97,12 +96,12 @@ ms.locfileid: "62921801"
   
 ## <a name="see-also"></a>另请参阅  
  [备份和还原：互操作性和共存 &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
- [差异备份 &#40;SQL Server&#41;](differential-backups-sql-server.md)   
- [完整文件备份 &#40;SQL Server&#41;](full-file-backups-sql-server.md)   
+ [差异备份 (SQL Server)](differential-backups-sql-server.md)   
+ [完整文件备份 (SQL Server)](full-file-backups-sql-server.md)   
  [备份概述 (SQL Server)](backup-overview-sql-server.md)   
  [还原和恢复概述 (SQL Server)](restore-and-recovery-overview-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [完整数据库还原 &#40;简单恢复模式&#41;](complete-database-restores-simple-recovery-model.md)   
+ [完整数据库还原（简单恢复模式）](complete-database-restores-simple-recovery-model.md)   
  [段落还原 (SQL Server)](piecemeal-restores-sql-server.md)  
   
   

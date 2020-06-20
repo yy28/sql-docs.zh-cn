@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d592b2b4-bc36-4eb9-9385-8fe4dff0dced
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4595fbd7be23414f55a51c2333eee7ebe4f39899
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cca2f9e1ff6069a608beb1df1880b37e15f4e869
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871104"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965787"
 ---
 # <a name="resource-database"></a>Resource 数据库
   Resource 数据库为只读数据库，它包含了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的所有系统对象。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统对象（如 sys.objects）在物理上保留在 Resource 数据库中，但在逻辑上却显示在每个数据库的 sys 架构中。 Resource 数据库不包含用户数据或用户元数据。  
@@ -28,7 +27,7 @@ ms.locfileid: "62871104"
  Resource 数据库可比较轻松快捷地升级到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 在早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，进行升级需要删除和创建系统对象。 由于 Resource 数据库文件包含所有系统对象，因此，现在仅通过将单个 Resource 数据库文件复制到本地服务器便可完成升级。  
   
 ## <a name="physical-properties-of-resource"></a>Resource 的物理属性  
- Resource 数据库的物理文件名为 mssqlsystemresource.mdf 和 mssqlsystemresource.ldf。 这些文件位于 \<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\，不应移动。 每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例都具有一个（也是唯一的一个）关联的 mssqlsystemresource.mdf 文件，并且实例间不共享此文件。  
+ Resource 数据库的物理文件名为 mssqlsystemresource.mdf 和 mssqlsystemresource.ldf。 这些文件位于 \<*drive*> ： \Program FILES\MICROSOFT SQL Server\MSSQL 中 \<version> 。 \<*instance_name*>\MSSQL\Binn\ 和不应移动。 每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例都具有一个（也是唯一的一个）关联的 mssqlsystemresource.mdf 文件，并且实例间不共享此文件。  
   
 > [!WARNING]  
 >  有时，升级和服务包会提供安装到 BINN 文件夹的新资源数据库。 不支持或建议更改资源数据库的位置。  

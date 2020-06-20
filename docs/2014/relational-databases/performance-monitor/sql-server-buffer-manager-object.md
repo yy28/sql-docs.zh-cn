@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ed9c8ff90798205f9db02ae4b4b47eb4310d4b06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc473447934b6274e0d202f6240634fb00d90491
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250763"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998175"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server Buffer Manager 对象
   **Buffer Manager** 对象提供了计数器，用于监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何使用以下项：  
@@ -57,8 +56,8 @@ ms.locfileid: "63250763"
 |**Lazy writes/sec**|指示缓冲区管理器惰性编写器每秒写入的缓冲区数。 “惰性编写器”** 是一个系统进程，用于成批刷新过期的脏缓冲区（包含更改的缓冲区，必须将这些更改写回磁盘，才能将缓冲区重用于其他页），并使它们可用于用户进程。 惰性编写器不需要为创建可用缓冲区而频繁执行检查点。|  
 |**Page life expectancy**|指示页面在没有引用的情况下，在此节点的缓冲池中停留的时间（以秒计）。|  
 |**Page lookups/sec**|指示每秒要求在缓冲池中查找页的请求数。|  
-|**Page reads/sec**|指示每秒发生的物理数据库页读取数。 此统计信息显示的是所有数据库间的物理页读取总数。 由于物理 I/O 的开销大，可以通过使用更大的数据缓存、智能索引、更有效的查询或更改数据库设计等方法，将开销降到最低。|  
-|**Page writes/sec**|指示每秒发出的物理数据库页写入数。|  
+|**每秒页读取数**|指示每秒发生的物理数据库页读取数。 此统计信息显示的是所有数据库间的物理页读取总数。 由于物理 I/O 的开销大，可以通过使用更大的数据缓存、智能索引、更有效的查询或更改数据库设计等方法，将开销降到最低。|  
+|**每秒页写入数**|指示每秒发出的物理数据库页写入数。|  
 |**Readahead pages/sec**|指示每秒为预期使用读取的页数。|  
   
 ## <a name="see-also"></a>另请参阅  

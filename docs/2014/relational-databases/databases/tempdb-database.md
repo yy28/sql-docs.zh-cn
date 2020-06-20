@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7150ca05e536214d43d4992ed1e7f79138ac2be9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916869"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965687"
 ---
 # <a name="tempdb-database"></a>tempdb 数据库
   **tempdb** 系统数据库是一个全局资源，可供连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的所有用户使用，并可用于保存下列各项：  
@@ -33,7 +32,7 @@ ms.locfileid: "62916869"
   
 -   由数据修改事务为实现联机索引操作、多个活动的结果集 (MARS) 以及 AFTER 触发器等功能而生成的行版本。  
   
- **tempdb** 中的操作是最小日志记录操作。 这将使事务产生回滚。 **tempdb**每次启动时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]都会重新创建 tempdb，以便系统始终以干净的数据库副本开头。 在断开联接时会自动删除临时表和存储过程，并且在系统关闭后没有活动连接。 因此， **tempdb**中永远不会有任何内容从一个会话保存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到另一个会话。 不允许对**tempdb**进行备份和还原操作。  
+ **tempdb** 中的操作是最小日志记录操作。 这将使事务产生回滚。 每次启动时都会重新创建**tempdb** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以便系统始终以干净的数据库副本开头。 在断开联接时会自动删除临时表和存储过程，并且在系统关闭后没有活动连接。 因此， **tempdb**中永远不会有任何内容从一个会话保存 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 到另一个会话。 不允许对**tempdb**进行备份和还原操作。  
   
 ## <a name="physical-properties-of-tempdb"></a>tempdb 的物理属性  
  下表列出了 **tempdb** 数据和日志文件的初始配置值。 对于不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，这些文件的大小可能略有不同。  
@@ -43,7 +42,7 @@ ms.locfileid: "62916869"
 |主数据|tempdev|tempdb.mdf|按 10% 自动增长，直到磁盘已满|  
 |日志|templog|templog.ldf|以 10% 的速度自动增长到最大 2 TB|  
   
- **Tempdb**的大小会影响系统的性能。 例如，如果**tempdb**的大小太小，则在每次启动[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，系统处理自动增长数据库，以支持工作负荷需求。 可以通过增加**tempdb**的大小来避免此开销。  
+ **Tempdb**的大小会影响系统的性能。 例如，如果**tempdb**的大小太小，则在每次启动时，系统处理自动增长数据库，以支持工作负荷需求 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 可以通过增加**tempdb**的大小来避免此开销。  
   
 ## <a name="performance-improvements-in-tempdb"></a>tempdb 的性能提高  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中， **tempdb** 性能以下列方式进行提高：  

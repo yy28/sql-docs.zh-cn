@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7b8064c7-62c6-488d-84d2-57a5828fb907
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5f289257d64a691a93d44d63d2a30991227802e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac6c93f359a81a80af81182120f213564680de0d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110113"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068029"
 ---
 # <a name="reordering-data-in-a-hierarchical-table-using-hierarchical-methods"></a>使用分层方法对层次结构表中的数据重新排序
   重新组织层次结构是一项常见的维护任务。 在此任务中，使用包含 [GetReparentedValue](/sql/t-sql/data-types/getreparentedvalue-database-engine) 方法的 UPDATE 语句首先将一行移到层次结构的新位置。 然后，我们会将整个子树移到一个新位置。  

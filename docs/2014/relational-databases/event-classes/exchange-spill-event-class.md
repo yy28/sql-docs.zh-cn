@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0220e81325345e84524ec0218dbaff7d6143bdd8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a59679fc2c48e2c5eabc4be73b186d5267897e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62663653"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052978"
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill 事件类
   **Exchange Spill** 事件类指示并行查询计划中的通信缓冲区已暂时写入 **tempdb** 数据库。 这种情况发生的几率很小，仅当查询计划具有多次范围扫描时才会发生。  
   
- 一般情况下，生成此类范围扫描的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询包含许多 BETWEEN 运算符，其中每个运算符会从表或索引中选择某一范围的行。 或者，可以使用表达式（如（> 10 和 T. a \< 20）或（t. a > 100 和\< 120）获取多个范围。 此外，查询计划必须要求按顺序扫描这些范围，原因是对 T.a 应用了 ORDER BY 子句，或者计划中的迭代器要求它按排序顺序处理元组。  
+ 一般情况下，生成此类范围扫描的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询包含许多 BETWEEN 运算符，其中每个运算符会从表或索引中选择某一范围的行。 或者，您可以使用表达式（如（> 10 和 T）获取多个范围。 \< 20) OR (T.a > 100 和 \< 120）。 此外，查询计划必须要求按顺序扫描这些范围，原因是对 T.a 应用了 ORDER BY 子句，或者计划中的迭代器要求它按排序顺序处理元组。  
   
  如果此类查询的计划中有多个 **Parallelism** 运算符，则 **Parallelism** 运算符所使用的内存通信缓冲区将变满，这可能使查询的执行进度由此停止。 在此情况下，其中一个 **Parallelism** 运算符会将其输出缓冲区写入 **tempdb**（此操作称为“交换溢出”  ），以便它可以处理某些输出缓冲区中的行。 最终，当使用者准备使用溢出行时，溢出行将返回给使用者。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "62663653"
 |**GroupID**|**int**|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|是|  
 |**HostName**|**nvarchar**|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |**IsSystem**|**int**|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  
-|**LoginName**|**nvarchar**|用户的登录名（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 Windows 登录凭据，格式为“ *\<域>\\<用户名\>* ”）。|11|是|  
+|**LoginName**|**nvarchar**|用户的登录名（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 Windows 登录凭据，格式为 " * \<DOMAIN> \\<用户名 \> *"）。|11|是|  
 |**LoginSid**|**图像**|登录用户的安全标识号 (SID)。 您可以在 **master** 数据库的 **syslogins** 表中找到此信息。 服务器中的每个登录名都具有唯一的 SID。|41|是|  
 |**NTDomainName**|**nvarchar**|用户所属的 Windows 域。|7|是|  
 |**NTUserName**|**nvarchar**|Windows 用户名。|6|是|  

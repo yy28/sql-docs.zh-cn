@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d3575964-f287-4bcf-8d2e-f81a33141b25
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9e0520c28d78b8036072b70de2d8f83a1a8c72da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b0b2e21176a050f98a284d3fb0627d6ce19e67b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62628772"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998057"
 ---
 # <a name="subscription-distributor-to-subscriber-history-snapshot-subscription"></a>订阅，分发服务器到订阅服务器的历史记录（快照订阅）
   **“分发服务器到订阅服务器的历史记录”** 选项卡显示有关分发代理的详细信息，包括状态、历史记录、信息性消息和所有错误消息。  
@@ -25,7 +24,7 @@ ms.locfileid: "62628772"
 ## <a name="options"></a>选项  
  从 **“视图”** 菜单中选择要查看哪些分发代理会话，然后在标记为 **“分发代理的会话”** 的网格中选择特定的会话。 有关此会话的详细信息显示在标记为 **“所选会话中的操作”** 的网格中。 如果所选会话由于出错而结束，则还将显示一个标记为 **“所选会话的错误详细信息或消息”** 的文本区域。  
   
- **查看**  
+ **视图**  
  选择要查看哪些分发代理会话。  
   
  **状态**  
@@ -39,7 +38,7 @@ ms.locfileid: "62628772"
   
 -   正在运行  
   
- **Start Time**  
+ **开始时间**  
  会话的开始时间。  
   
  **结束时间**  

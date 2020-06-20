@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 15fe9ead-825b-4ac3-9191-7a07caa2861b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 607654924a9f7e2d071bbce1ee4797792cb760c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d10927f1c549f00625b8affb801ec7b0831827c7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068942"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940655"
 ---
 # <a name="lock-manager-properties"></a>锁管理器属性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的锁管理器服务器属性。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)。  
   
  **适用于：** 多维和表格服务器模式  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>“属性”  
  `DefaultLockTimeoutMS`  
  有符号 32 位整数属性，用于定义内部锁请求的默认锁超时值（毫秒）。  
   

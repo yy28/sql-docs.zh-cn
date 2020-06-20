@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 59e23ff3-d7ee-4e32-9629-0b54d3a258f7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 24e31e60f29970ca1d3a73d3a215447e9dd325bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 635c8f6bda7c21b915e2b50228eba5255ed001ba
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807233"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934388"
 ---
 # <a name="choose-servers-to-configure-configure-database-mirroring-security-wizard"></a>选择要配置的服务器（配置数据库镜像安全向导）
   使用此页可以指定当前要配置的服务器实例。 必须至少选择一个服务器实例，才能继续本向导。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 28c8fec5-5feb-4c84-8d72-f2bd1ae3b40d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e40a1eead54fe9d00eaf099410260023229796d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d1d8786d128ef2cc99fe571e33f89c4c4e7699c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228568"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934450"
 ---
 # <a name="allow-network-access-to-a-database-mirroring-endpoint-using-windows-authentication-sql-server"></a>允许使用 Windows 身份验证对数据库镜像端点进行网络访问 (SQL Server)
   将 Windows 身份验证用于连接两个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的数据库镜像端点在以下条件下要求手动配置登录帐户：  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ffb9c242b30c3b0ddfc1cadae20ea261c616475b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 948588ef8cfec8e3b3a5d689068bdff5d4396cc6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62767899"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965565"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>正在执行操作（SQL Server 导入和导出向导）
   使用 "**执行操作**" 页可以查看导入/导出操作的进度和结果，并在必要时中断操作。  
@@ -33,16 +32,16 @@ ms.locfileid: "62767899"
  **状态**  
  显示操作是成功还是失败。  
   
- **消息**  
+ **Message**  
  显示操作可能生成的信息性消息和错误消息。  
   
  **筛选器**  
  选择是否只希望显示错误、警告或成功的操作。 可以通过选择 "**显示所有操作**" 来恢复为默认显示。  
   
- **停止**  
+ **Stop**  
  如果需要，使用 "**停止**" 按钮中断操作。  
   
- **报告**  
+ **Report**  
  查看结果报表，将报表保存到文件，将报表复制到剪贴板或通过电子邮件发送报表。  
   
   

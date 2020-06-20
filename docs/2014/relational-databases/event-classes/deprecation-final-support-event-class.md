@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2b4d88d0-62be-45c0-bea8-c5900d553d31
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f2833f1f342aa212b73611d257b8e29606a14cce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09910ec1da0b6d157a3a0a53953f2650a924c314
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662978"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053014"
 ---
 # <a name="deprecation-final-support-event-class"></a>Deprecation Final Support 事件类
   当使用将从 **的下一个主版本中删除的功能时，将发生** Deprecation Final Support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件类。 为了使您的应用程序能够尽可能地长久使用，请不要使用会导致 **Deprecation Final Support** 事件类或 **Deprecation Announcement** 事件类的功能。 请尽快修改使用最终不推荐使用的功能的应用程序。  
@@ -42,7 +41,7 @@ ms.locfileid: "62662978"
 |LoginSid|`image`|登录用户的安全标识号 (SID)。 你可以在 **sys.server_principals** 目录视图中找到此信息。 服务器中的每个登录名都具有唯一的 SID。|41|是|  
 |NTDomainName|`nvarchar`|用户所属的 Windows 域。|7|是|  
 |NTUserName|`nvarchar`|Windows 用户名。|6|是|  
-|偏移量|`int`|存储过程或批查询中的语句的起始偏移量。|61|是|  
+|Offset|`int`|存储过程或批查询中的语句的起始偏移量。|61|是|  
 |ObjectID|`int`|不推荐使用的功能的 ID 号。|22|是|  
 |ObjectName|`nvarchar`|不推荐使用的功能的名称。|34|是|  
 |RequestID|`int`|包含该语句的请求的 ID。|49|是|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 106ffe8d-da60-4b1f-8866-6cef6a5931ad
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e998245ecb72f889af3fb2c699d6f1e961d8874e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95967c205b255a9f5accb979f1cb9e5c1eeebeed
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012455"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053117"
 ---
 # <a name="audit-server-object-management-event-class"></a>Audit Server Object Management 事件类
   在对服务器对象执行 CREATE、ALTER 或 DROP 的情况下，会发生 **Audit Server Object Management** 事件类。  

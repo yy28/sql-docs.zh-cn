@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b6e399cf6c145f36febd9b32ae7a84c54741bb43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4298cfec7478560c2cef01e7d3c6df577a2a8f16
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62893592"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966259"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>选择数据源（SQL Server 导入和导出向导）
   使用 "**选择数据源**" 页可以指定要复制的数据的源。  
@@ -28,7 +27,7 @@ ms.locfileid: "62893592"
   
 ## <a name="options"></a>选项  
  **数据源**  
- 选择与源的数据存储格式相匹配的数据访问接口。 可用于数据源的访问接口可能不止一个。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client、用于 SQL Server 的 .NET Framework 数据提供程序或用于 SQL Server 的 Microsoft OLE DB 提供程序。  
+ 选择与源的数据存储格式相匹配的数据访问接口。 可用于数据源的访问接口可能不止一个。 例如，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client、用于 SQL Server 的 .NET Framework 数据提供程序或用于 SQL Server 的 Microsoft OLE DB 提供程序。  
   
  根据计算机上安装的访问接口的不同， **“数据源”** 属性的选项数也会不同。 下表列出了一些常用目标的选项。 有关其他访问接口的信息，请参阅访问接口特定的文档。  
   
@@ -39,7 +38,7 @@ ms.locfileid: "62893592"
  **服务器名称**  
  键入包含相应数据的服务器的名称，或者从列表中选择服务器。  
   
- **使用 Windows 身份验证**  
+ **Use Windows Authentication**  
  指定包是否应使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 身份验证登录数据库。 为了实现更好的安全性，建议使用 Windows 身份验证。  
   
  **使用 SQL Server 身份验证**  
@@ -54,7 +53,7 @@ ms.locfileid: "62893592"
  **Database**  
  从指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的数据库列表中选择。  
   
- **全部**  
+ **刷新**  
  通过单击“刷新”****，还原可用数据库的列表。  
   
 ### <a name="data-source--net-framework-data-provider-for-sql-server"></a>数据源 = .NET Framework Data Provider for SQL Server  
@@ -80,10 +79,10 @@ ms.locfileid: "62893592"
 ### <a name="data-source--microsoft-excel"></a>数据源 = Microsoft Excel  
   
 > [!NOTE]  
->  仅当要连接到使用 Excel 2003 或更早版本的数据源时，才选择 " **Microsoft Excel** "。 若要连接到使用 Excel 2007 的数据源，请选择**Microsoft Office 12.0 Access 数据库引擎 OLE DB 提供程序**，单击 "**属性**"，然后在 "**数据链接属性**" 对话框的`Excel 12.0` "**全部**" 选项卡上，输入作为 "**扩展属性**" 的值。  
+>  仅当要连接到使用 Excel 2003 或更早版本的数据源时，才选择 " **Microsoft Excel** "。 若要连接到使用 Excel 2007 的数据源，请选择**Microsoft Office 12.0 Access 数据库引擎 OLE DB 提供程序**，单击 "**属性**"，然后在 "**数据链接属性**" 对话框的 "**全部**" 选项卡上，输入 `Excel 12.0` 作为 "**扩展属性**" 的值。  
   
  **Excel 文件路径**  
- 指定要从其中导入数据的电子表格的路径和文件名。 例如， **C:\MyData.xls、 \\\Sales\Database\Northwind.xls**。 或单击 **“浏览”**。  
+ 指定要从其中导入数据的电子表格的路径和文件名。 例如， **C:\MyData.xls \\\Sales\Database\Northwind.xls**。 或单击 **“浏览”**。  
   
  **浏览**  
  通过使用“打开”**** 对话框定位电子表格。  
@@ -99,7 +98,7 @@ ms.locfileid: "62893592"
 > [!NOTE]  
 >  仅当要连接到使用 Access 2003 或更早版本的数据库时，才选择 " **Microsoft Access** "。 若要连接到使用 Access 2007 的数据库，请改为选择**Microsoft Office 12.0 访问数据库引擎 OLE DB 提供程序**。  
   
- **文件名称**  
+ **文件名**  
  指定要从其中导入数据的数据库文件的路径和文件名。 例如，**C:\MyData.mdb、\\\Sales\Database\Northwind.mdb**。 或单击 **“浏览”**。  
   
  **浏览**  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c398f396-f630-4a2d-a264-f243c5346de1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 69823aad9e045f978badd8f682d4ffa8a2bea081
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bf4123a46cc13359c936e6f9cfc0db3dcfdaa175
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717140"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013455"
 ---
 # <a name="create-alter-and-drop-selective-xml-indexes"></a>创建、更改和删除选择性 XML 索引
   说明如何创建新的选择性 XML 索引或者更改或删除现有的选择性 XML 索引。  

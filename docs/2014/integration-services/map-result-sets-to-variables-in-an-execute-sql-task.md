@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f76738b6-dc75-4ff9-a3dd-8b083d8e410e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 995afe55c1cd1b7d925c9267ba5dfa3aed038358
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6bf36f47e84b5e4965946c2109cce7d852fc88e2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057761"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951147"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>在执行 SQL 任务中将结果集映射到变量
   本主题介绍如何在执行 SQL 任务中创建结果集和变量之间的映射。 将结果集映射到变量以便使结果集对包中其他元素可用。 例如，脚本任务中的脚本可以读取该变量，然后使用结果集中的值，或者 XML 源可以使用集存储在变量中的结果。 如果结果集是由父包生成的，那么通过将结果集映射到父包中的变量，然后在子包中创建父包变量配置以存储父变量值，就可以使结果集对执行包任务所调用的子包可用。  
@@ -57,7 +56,7 @@ ms.locfileid: "66057761"
   
      通常，可以将列名用作结果集名称，也可以将列列表中的列的序号位置用作结果集名称。 使用列名作为结果集名称的功能将依赖于配置任务要使用的访问接口。 并非所有访问接口都使列名可用。  
   
-11. 单击" **确定**"。  
+11. 单击“确定”。   
   
 ## <a name="see-also"></a>另请参阅  
  [执行 SQL 任务](control-flow/execute-sql-task.md)   

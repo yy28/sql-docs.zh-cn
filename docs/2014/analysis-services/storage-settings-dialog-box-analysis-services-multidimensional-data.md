@@ -12,18 +12,17 @@ f1_keywords:
 ms.assetid: 80c41c71-226c-45fe-b9cf-af824b592fe1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ecd796d2fb2bc37c4c2ad6d9fac00ef4258ec038
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc3e6d627bf7e3072d8b6ff40a644773474ba4cb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068028"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940220"
 ---
 # <a name="storage-settings-dialog-box-analysis-services---multidimensional-data"></a>“存储设置”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “存储设置” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，为维度、多维数据集、度量值组或分区设置主动缓存、存储和通知设置。 在 **中可以通过执行以下操作之一显示** “存储设置” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框：  
   
--   在的 "**属性**" 窗口中，单击维度、 `ProactiveCaching`多维数据集、度量值组或分区的属性值的省略号按钮（**...**） [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
+-   **...** `ProactiveCaching` 在的 "**属性**" 窗口中，单击维度、多维数据集、度量值组或分区的属性值的省略号按钮（...） [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 。  
   
 -   在 **多维数据集设计器** 的 **“分区”** 选项卡中展开某个度量值组，再单击 **“存储设置”**。  
   

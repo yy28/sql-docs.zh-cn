@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 814cb31e-6fd1-4eb7-afe3-25b520638815
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1095be0ab421f535b3a72ec2b2208ce70c3bdb02
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: df244c0ab4e75d4e82abc3f9604e9c54aaea85a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82697602"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998722"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>使用 ISequentialStream 从 FILESTREAM 列检索数据 (OLE DB)
   此示例显示如何使用 ICommandText 接口中的 ISequentialStream 接口从 Filestream 列检索单个记录。  

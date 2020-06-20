@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2e013259-0022-4897-a08d-5f8deb880fa8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 558ee09eeb4419bc354ff3ade9d6586877246b33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b59b12dfcba1472cb6f9d6ecfc51a7df8104fb0b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022260"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068566"
 ---
 # <a name="oracle-publishing-overview"></a>Oracle Publishing Overview
   从 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 开始，可以在复制拓扑中加入 Oracle 发布服务器（自 Oracle 9i 版起）。 可在支持 Oracle 的任何硬件和操作系统上部署发布服务器。 该功能建立在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 快照复制和事务性复制的坚实基础上，提供了相似的性能和可用性。  

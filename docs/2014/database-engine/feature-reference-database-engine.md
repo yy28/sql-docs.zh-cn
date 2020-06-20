@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2ed7a37f-4640-4379-84a1-e4e97335ef33
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 844795b57c69fa003140fb42453cb59b138ffcc7
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 54cc9e8a704dbeab670d5e9fc7eaad4d599ef7cd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001004"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933028"
 ---
 # <a name="feature-reference-database-engine"></a>功能参考（数据库引擎）
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 包括可用于创建、管理和查看数据库对象和数据的若干工具和应用程序。 此外，还有一些工具可用于监视服务器和数据库的性能及排除故障，并可用于启用及禁用功能、服务和网络协议。 本节包含介绍这些工具和应用程序的对话框的一些特定主题。  

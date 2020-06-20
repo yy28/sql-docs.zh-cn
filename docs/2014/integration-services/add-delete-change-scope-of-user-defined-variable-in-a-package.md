@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 583e0f92f96c153fdeb0ade57fcdfa1d27578350
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eadb27485ac92aa10b22ad3f59cf9ac6029a851e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061988"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926138"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>添加、删除、更改包中用户定义变量的作用域
   这些过程介绍如何使用“变量”窗口来添加、删除和更改包中用户定义变量的作用域。****  
