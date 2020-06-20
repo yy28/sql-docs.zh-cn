@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66f36e1d-0287-4fac-8a51-71f9f0d7ad5b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 14a96a44967c41b185d3196c9d6577f67547e77a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8728df2cc0b5907e51da84ed9e77d897a1718d36
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62877895"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958727"
 ---
 # <a name="define-a-logical-backup-device-for-a-tape-drive-sql-server"></a>为磁带机定义逻辑备份设备 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中为磁带机定义逻辑备份设备。 逻辑设备是指向特定物理备份设备（磁盘文件或磁带机）的用户定义名称。  将备份写入备份设备后，便会初始化物理设备。  

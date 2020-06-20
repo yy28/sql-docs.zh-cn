@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 86db5da1-afe4-4fbb-8bf8-33cedc7e4361
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1d66ba3298b2346e2ec139f27ec53d6104ad0ac9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 01b500cbe65107767d73bc2901b6d5e028b94ee9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62625806"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016672"
 ---
 # <a name="network-packet-size-should-not-exceed-8060-bytes"></a>网络数据包大小不应超过 8060 字节
   如果为 sp_configure 'network packet size' 指定的值或者任何登录用户的网络数据包大小大于 8060 字节， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将执行不同的内存分配操作。 这可能会增加不是为缓冲池保留的进程虚拟地址空间。  

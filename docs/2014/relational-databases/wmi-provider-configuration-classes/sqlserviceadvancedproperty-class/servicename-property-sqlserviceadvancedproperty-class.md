@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d857b8d-77ed-4014-b1b0-e0e3d5e943c8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cf4a413fe9b45a253e25b55267f4b65d6008c4b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51ddac806ae768f37ec80624eef5068fdf93041f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62911455"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059693"
 ---
 # <a name="servicename-property-sqlserviceadvancedproperty-class"></a>ServiceName 属性（SqlServiceAdvancedProperty 类）
   获取与高级属性关联的托管服务的名称。  

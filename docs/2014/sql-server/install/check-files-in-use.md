@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e3610ad08d34942dd7dbc1af1371a6c5d86e7890
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 17c77a69804cd290ab1b7f5e21372b6c4a79975a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856595"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037178"
 ---
 # <a name="check-files-in-use"></a>检查正在使用的文件
   若要避免在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新后重新启动 Windows，请使用“检查正在使用的文件”页来识别锁定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新安装程序所需文件的进程。  

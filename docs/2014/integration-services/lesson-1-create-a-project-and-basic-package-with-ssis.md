@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 652cf44f70e890b3203ed27890d06f98d70b7f1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 076c76c9232dcba910c3810d2632f799b2960142
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767499"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966077"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>第 1 课：创建项目和基本包
   在本课中，将创建一个简单 ETL 包，该包可以从单个平面文件源中提取数据，使用两个查找转换组件转换该数据，然后将该数据写入 **AdventureWorksDW2012** 的 **FactCurrency**事实数据表中。 在本课中，您还将学习如何创建新包、添加和配置数据源和目标连接以及使用新的控制流和数据流组件。  
@@ -64,7 +63,7 @@ ms.locfileid: "62767499"
 |-----------------|---------------|------------------|-------------------|  
 |AverageRate|FLOAT|无|无|  
 |CurrencyKey|int (FK)|DimCurrency|CurrencyKey (PK)|  
-|日期键|int (FK)|DimDate|DateKey (PK)|  
+|DateKey|int (FK)|DimDate|DateKey (PK)|  
 |EndOfDayRate|FLOAT|无|无|  
   
 ### <a name="mapping-source-data-to-be-compatible-with-the-destination"></a>将源数据映射为与目标兼容  
@@ -74,7 +73,7 @@ ms.locfileid: "62767499"
 |----------------------|----------------|-----------------|---------------|  
 |0|AdventureWorksDW2012|AverageRate|FLOAT|  
 |1|DimCurrency|CurrencyAlternateKey|nchar(3)|  
-|2|DimDate|FullDateAlternateKey|日期|  
+|2|DimDate|FullDateAlternateKey|date|  
 |3|AdventureWorksDW2012|EndOfDayRate|FLOAT|  
   
 ## <a name="lesson-tasks"></a>课程任务  

@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: d546a820-105a-417d-ac35-44a6d1d70ac6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b88c78a1a7f4244afe220585919a50ed06cd0ad9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5561d0f2398a0a1adc12ae30a7cd7527fdd5d45
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110142"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068102"
 ---
 # <a name="examining-the-current-structure-of-the-employee-table"></a>检查 Employee 表的当前结构
-  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库包含基于 HumanResources**** 架构的 Employee**** 表。 为了避免更改原始表，此步骤将对名为 **EmployeeDemo** 的 **Employee**表创建一个副本。 若要简化此示例，你只需从原始表中复制五列数据。 然后，查询**HumanResources**表以查看表中数据的结构，而无需使用`hierarchyid`数据类型。  
+  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库包含基于 HumanResources**** 架构的 Employee**** 表。 为了避免更改原始表，此步骤将对名为 **EmployeeDemo** 的 **Employee**表创建一个副本。 若要简化此示例，你只需从原始表中复制五列数据。 然后，查询**HumanResources**表以查看表中数据的结构，而无需使用 `hierarchyid` 数据类型。  
   
 ### <a name="to-copy-the-employee-table"></a>复制 Employee 表  
   

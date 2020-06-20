@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0e72b48a-fc5a-4656-8cf5-39f57d8c1565
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 14d1836483373c82c17f1d4db34bb01769f376aa
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 915f449a11278f3ef7503caf0a588cc48d6cf23e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82700918"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018719"
 ---
 # <a name="set-cursor-options-odbc"></a>设置游标选项 (ODBC)
   若要设置游标选项，请调用[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)设置或[SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md)以获取控制游标行为的语句选项。  

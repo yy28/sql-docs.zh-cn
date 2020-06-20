@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 69b24c96e4833a45038bfcae20f0a5fecd0d2340
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4363a526ada3694e92d18cac0d7abe8a26f6a92f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151128"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016943"
 ---
 # <a name="xtp-in-memory-oltp-performance-counters"></a>XTP（内存中 OLTP）性能计数器
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了对象和计数器，性能监视器可以使用它们来监视内存中 OLTP 活动。  

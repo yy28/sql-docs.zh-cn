@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6472ff165894937d31366e47651ada64af38ae1b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 108256e1d8a3638da5cd676a0ee57894b3ee874c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62767939"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966198"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>查看数据类型映射（SQL Server 导入和导出向导）
   使用 "**查看数据类型映射**" 页可以查看有关数据类型转换的详细信息，向导必须执行该转换才能使源数据与目标兼容。 此信息包括可视提示，用于区分应成功的转换与可能导致错误或截断的转换。 对于每个转换，您都可以决定是否接受向导建议的转换，也可以指定如何处理发生的错误。  
@@ -35,7 +34,7 @@ ms.locfileid: "62767939"
 |列|说明|  
 |------------|-----------------|  
 |源图标|指示数据类型转换成功的可能性：<br /><br /> 绿色的选中标记图标指示向导认为此表的所有数据类型转换都将成功。<br /><br /> 黄色的警告图标指示您应检查向导将执行的单个转换。 若要检查这些转换，可以选择表，然后在 **“数据类型映射”** 列表中检查单个列的转换。<br /><br /> 红色错误图标指示向导不能可靠地执行对此表的某些转换。|  
-|**源**|显示源表的名称。|  
+|**Source**|显示源表的名称。|  
 |目标图标|指示目标是已经存在还是将由向导创建：<br /><br /> 表图标指示目标是一个现有表。<br /><br /> 阳光四射的表图标指示目标是一张新表，需要由向导创建。|  
 |**目标**|显示目标表的名称。|  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 54ec4cc92383d0b8e423aabd19c0aeee9226d71f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ddcad6f0968dc8b9321257e0ea2a95d8c65cf2e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896038"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966492"
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>为自定义连接管理器开发用户界面
   重写基类的属性和方法的实现以提供自定义功能后，您可能需要为连接管理器创建自定义用户界面。 如果未创建自定义用户界面，用户只能使用“属性”窗口配置连接管理器。  
@@ -26,7 +25,7 @@ ms.locfileid: "62896038"
  在自定义用户界面项目或程序集中，通常有两个类，实现 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> 的类以及为收集用户信息而显示的 Windows 窗体。  
   
 > [!IMPORTANT]  
->  在按照[编写自定义连接管理器代码](../building-deploying-and-debugging-custom-objects.md)中的说明生成自定义用户界面并签名而且在全局程序集缓存中安装后，还要在 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> 的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 属性中提供此类的完全限定名称。  
+>  在按照[编写自定义连接管理器代码](../building-deploying-and-debugging-custom-objects.md)中的说明生成自定义用户界面并签名而且在全局程序集缓存中安装后，还要在 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 的 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> 属性中提供此类的完全限定名称。  
   
 > [!NOTE]  
 >  内置于 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 的大多数任务、源和目标都只能与特定类型的内置连接管理器一起工作。 因此，不能使用内置任务和组件测试这些示例。  

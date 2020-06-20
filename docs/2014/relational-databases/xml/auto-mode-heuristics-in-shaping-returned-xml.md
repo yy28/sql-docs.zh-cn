@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6c5cb6c1-2921-4ba1-8100-0bf8074f9103
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a831468c51243aa8cb5f8676823712e9e4b6e621
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 54e556ae83db6b59410ae56a5d65e06e0bbac807
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717342"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059569"
 ---
 # <a name="auto-mode-heuristics-in-shaping-returned-xml"></a>返回的 XML 成形过程中的 AUTO 模式试探方法
   AUTO 模式根据查询决定返回的 XML 的形式。 在决定嵌套元素的方式时，AUTO 模式试探方法会比较相邻行中的列值。 **ntext**、 **text**、 **image**和 **xml**类型以外的所有类型的列都会进行比较。 **(n)varchar(max)** 和 **varbinary(max)** 类型的列会进行比较。  
@@ -42,7 +41,7 @@ T1.Id  T1.Name  T2.Id
 1       Nancy     4  
 ```  
   
- AUTO 模式试探方法将比较表 T1 的所有值（Id 列和 Name 列）。 因为前两行的 Id 列和 Name 列具有相同的值，所以向结果中添加了一个具有两个 \<T2> 子元素的 \<T1> 元素。  
+ AUTO 模式试探方法将比较表 T1 的所有值（Id 列和 Name 列）。 由于前两行的 Id 列和名称列的值相同， \<T1> \<T2> 因此结果中将添加一个包含两个子元素的元素。  
   
  下面是返回的 XML：  
   

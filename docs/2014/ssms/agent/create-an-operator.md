@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1359d790-5905-4927-a208-e7155e7768a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3a5414e845d8e625c852d628bf0d965432bc72a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dfe07042f9a4b8ac595ada8b86e7bad131032700
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136421"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067792"
 ---
 # <a name="create-an-operator"></a>创建操作员
-  本主题介绍如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]在中配置用户以接收有关代理作业的通知。  
+  本主题介绍如何 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用或在中配置用户以接收有关代理作业的通知 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
  **本主题内容**  
   
@@ -45,7 +44,7 @@ ms.locfileid: "63136421"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
--   在未来版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，将从代理中删除寻呼程序和**net send**选项。 请避免在新的开发工作中使用这些功能，并考虑修改当前使用这些功能的应用程序。  
+-   在未来版本的中，将从代理中删除寻呼程序和**net send**选项 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 请避免在新的开发工作中使用这些功能，并考虑修改当前使用这些功能的应用程序。  
   
 -   请注意，若要向操作员发送电子邮件和寻呼通知，必须将 SQL Server 代理配置为使用数据库邮件。 有关详细信息，请参阅 [向操作员分配警报](assign-alerts-to-an-operator.md)。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "63136421"
      **名称**  
      更改操作员的名称。  
   
-     **Enabled**  
+     **已启用**  
      启用操作员。 在未启用时，不会向操作员发送通知。  
   
      **电子邮件名称**  
@@ -112,7 +111,7 @@ ms.locfileid: "63136421"
      **电子邮件**  
      使用电子邮件通知此操作员。  
   
-     **寻呼程序**  
+     **接收**  
      通过将电子邮件发送到寻呼地址来通知此操作员。  
   
      **Net send**  

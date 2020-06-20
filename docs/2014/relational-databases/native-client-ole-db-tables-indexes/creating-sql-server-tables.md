@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a7b8d142-d76a-44d9-a583-86ac5109fbe8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 67a0dd1c4ab55b1417e30271a841aecb450c63db
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7b3d11a26c2f5d27f28a60effdb26978edd07409
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704552"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017976"
 ---
 # <a name="creating-sql-server-tables"></a>创建 SQL Server 表
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序公开**ITableDefinition：： CreateTable**函数，允许使用者创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表。 使用者使用**CreateTable**来创建使用者命名的永久表，并使用由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序生成的唯一名称的永久或临时表。  

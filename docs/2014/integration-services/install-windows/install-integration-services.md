@@ -17,23 +17,22 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 678b14b224f994c834630a398767fee1ea360870
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd3c15610065c4c26da0476d50cac9bd4bd1dacc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768193"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966258"
 ---
 # <a name="install-integration-services"></a>安装集成服务
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了单个安装程序来安装其包括 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]在内的任一组件或所有组件。 通过安装程序，可在单台计算机上将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件一起安装，也可以单独安装。  
   
  本主题重点介绍在安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]之前应了解的重要注意事项。 本主题中的信息将帮助您评估安装选项，以便您可以选择使安装成功。  
   
- 本主题不包括有关启动安装程序、使用安装向导或从命令行运行安装程序的说明。 有关如何启动安装程序并选择要安装的组件的分步说明，请参阅[SQL Server 2014 的快速入门安装](../../getting-started/quick-start-installation-of-sql-server-2014.md)。 有关用于安装[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的命令行选项的信息，请参阅[从命令提示符安装 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
+ 本主题不包括有关启动安装程序、使用安装向导或从命令行运行安装程序的说明。 有关如何启动安装程序并选择要安装的组件的分步说明，请参阅[SQL Server 2014 的快速入门安装](../../getting-started/quick-start-installation-of-sql-server-2014.md)。 有关用于安装的命令行选项的信息 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ，请参阅[从命令提示符安装 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
 ## <a name="preparing-to-install-integration-services"></a>正在准备安装 Integration Services  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]之前，请查看以下要求：  
+ 安装之前 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ，请查看以下要求：  
   
 -   [安装 SQL Server 2014 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
@@ -56,11 +55,11 @@ ms.locfileid: "62768193"
  在查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安装要求并确保计算机满足这些要求之后，就可以安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]了。  
   
 > [!NOTE]  
->  在以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，在您安装了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 后，默认情况下 Users 组中的所有用户都已对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务具有访问权限。 在您安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]时，用户无权访问 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务。 该服务默认是安全的。 安装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理员必须运行 DCOM 配置工具（dcomcnfg.exe）来向特定用户授予**SQL Server Integration Services 12.0**的访问权限。  
+>  在以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，在您安装了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 后，默认情况下 Users 组中的所有用户都已对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务具有访问权限。 在您安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]时，用户无权访问 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务。 该服务默认是安全的。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员必须运行 DCOM 配置工具（Dcomcnfg.exe）来向特定用户授予**SQL Server Integration Services 12.0**的访问权限。  
 >   
 >  有关如何授予权限的说明，请参阅 [Grant Permissions to Integration Services Service](../grant-permissions-to-integration-services-service.md)。  
   
- 如果使用安装向导安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，则将使用一系列页面来指定组件和选项。 以下是安装向导中的页面，你选择的选项会影响你安装[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的选择建议：  
+ 如果使用安装向导安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，则将使用一系列页面来指定组件和选项。 以下是安装向导中的页面，你选择的选项会影响你安装的选择 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 建议：  
   
 -   **功能选择**  
   
@@ -74,16 +73,16 @@ ms.locfileid: "62768193"
   
     -   **客户端工具 SDK** ，以便安装用于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 编程的托管程序集。  
   
-     许多数据仓库解决方案还要求安装其他[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]组件，如[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]和。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
+     许多数据仓库解决方案还要求安装其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，如 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。  
   
     > [!NOTE]  
-    >  如果选择了可在安装向导的“功能选择”页上选择进行安装的某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，则会安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件的部分子集****。 这些组件对特定任务是有用的，但 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 功能将受到限制。 例如， **“数据库引擎服务”** 选项将安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 导入和导出向导所需的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件。 **“SQL Server Data Tools”** 选项将安装在设计包时所需的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件，但不会安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务，并且不能在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]之外运行包。 为确保完整安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，必须在 **“功能选择”** 页上选择“ **集成服务** ”。  
+    >  如果选择了可在安装向导的“功能选择”页上选择进行安装的某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，则会安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件的部分子集  。 这些组件对特定任务是有用的，但 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 功能将受到限制。 例如， **“数据库引擎服务”** 选项将安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 导入和导出向导所需的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件。 **“SQL Server Data Tools”** 选项将安装在设计包时所需的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 组件，但不会安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务，并且不能在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]之外运行包。 为确保完整安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，必须在 **“功能选择”** 页上选择“ **集成服务** ”。  
   
      **在 64 位计算机上安装** 在 64 位计算机上安装，选择 **集成服务** ，则只安装 64 位运行时和工具。 如果必须以 32 位模式来运行包，还必须选择其他选项以安装 32 位运行时和工具：  
   
     -   如果64位计算机运行的是 x86 操作系统，请选择 " **SQL Server Data Tools** " 或 "**管理工具-完整**"。  
   
-    -   如果64位计算机运行的[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]是操作系统，请选择 "**管理工具-完整**"。  
+    -   如果64位计算机运行的是 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 操作系统，请选择 "**管理工具-完整**"。  
   
      **为 ETL 安装专用服务器** 若要对提取、转换和加载 (ETL) 过程使用专用服务器，建议你在安装 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 时安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的本地实例。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 通常将包存储在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例中，并使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理对这些包进行计划。 如果 ETL 服务器上没有 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例，则必须通过具有 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的服务器计划或运行包。 这表示这些包不会在 ETL 服务器上运行，而是在其启动时所在的服务器上运行。 因此，专用 ETL 服务器的资源不会按预期方式使用。 而且，其他服务器的资源可能会受到 ETL 进程运行的影响  
   
@@ -99,7 +98,7 @@ ms.locfileid: "62768193"
   
      在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] “服务器配置” **页的** “服务帐户” **选项卡上查看** 服务的设置。  
   
-     如果安装了 Windows 7 或 Windows Server 2008 R2，则[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服务将注册为在 NT Services\MsDtsServer120 虚拟帐户下运行，并且**启动类型**为 "**自动**"。  您不必输入内置虚拟帐户的密码。 如果安装了 Microsoft Vista 或 Windows Server 2008，则 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务将注册为在内置网络服务帐户下运行，并且 **启动类型** 为 **自动**。 您不必输入内置 Network Service 帐户的密码。  
+     如果安装了 Windows 7 或 Windows Server 2008 R2，则 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务将注册为在 NT Services\MsDtsServer120 虚拟帐户下运行，并且**启动类型**为 "**自动**"。  您不必输入内置虚拟帐户的密码。 如果安装了 Microsoft Vista 或 Windows Server 2008，则 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务将注册为在内置网络服务帐户下运行，并且 **启动类型** 为 **自动**。 您不必输入内置 Network Service 帐户的密码。  
   
  默认情况下，在全新安装中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 配置为不将与运行包相关的事件记录到应用程序事件日志中。 使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的数据收集器功能时，此设置可防止生成太多事件日志项。 未记录的事件是，EventID 12288“包已启动”和 EventID 12289“包已成功完成”。 若要将这些事件记录到应用程序事件日志中，请打开注册表以进行编辑。 然后在注册表中，找到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS 节点，并将 LogPackageExecutionToEventLog 设置的 DWORD 值从 0 更改为 1。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0c6cd41be722d80baf442db907d6fdab9f334859
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79967f4244749f5e0e14d823b4e04832e8ccb3e0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891786"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965327"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>步骤 2：添加和配置平面文件连接管理器
   在本任务中，将在刚创建的包中添加一个平面文件连接管理器。 通过平面文件连接管理器，包可从平面文件中提取数据。 使用平面文件连接管理器，可以指定包从平面文件中提取数据时要应用的文件的名称与位置、区域设置与代码页以及文件格式，其中包括列分隔符。 另外，还可以为各个列手动指定数据类型；也可以使用“提供列类型建议”对话框，自动将提取出来的数据列映射到 **数据类型。** [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  
@@ -36,7 +35,7 @@ ms.locfileid: "62891786"
   
 2.  在“平面文件连接管理器编辑器”对话框的“连接管理器名称”字段中，键入“Sample Flat File Source Data”。************  
   
-3.  单击“浏览”****。  
+3.  单击“浏览”。  
   
 4.  在“打开”对话框中，找到计算机上的 SampleCurrencyData.txt 文件。 ****  
   
@@ -62,13 +61,13 @@ ms.locfileid: "62891786"
   
 2.  在属性窗格中，进行如下更改：  
   
-    -   将**列 0**名称属性更改为`AverageRate`。  
+    -   将**列 0**名称属性更改为 `AverageRate` 。  
   
-    -   将 "**列 1**名称" 属性`CurrencyID`更改为。  
+    -   将 "**列 1**名称" 属性更改为 `CurrencyID` 。  
   
-    -   将**第2列**的 name 属性`CurrencyDate`更改为。  
+    -   将**第2列**的 name 属性更改为 `CurrencyDate` 。  
   
-    -   将**Column 3**名称属性更改为`EndOfDayRate`。  
+    -   将**Column 3**名称属性更改为 `EndOfDayRate` 。  
   
     > [!NOTE]  
     >  默认情况下，所有四个列最初都设置为字符串数据类型 [DT_STR]，其 `OutputColumnWidth` 为 50。  
@@ -85,18 +84,18 @@ ms.locfileid: "62891786"
   
     |平面文件列|建议的类型|目标列|目标类型|  
     |----------------------|--------------------|------------------------|----------------------|  
-    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|float|  
+    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|FLOAT|  
     |CurrencyID|string [DT_STR]|DimCurrency.CurrencyAlternateKey|nchar(3)|  
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
-    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|float|  
+    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
-     建议用于`CurrencyID`列的数据类型与目标表中字段的数据类型不兼容。 由于的数据类型`DimCurrency.CurrencyAlternateKey`为 nchar （3）， `CurrencyID`因此必须从 string [DT_STR] 改为 string [DT_WSTR]。 此外，该字段`DimDate.FullDateAlternateKey`定义为 date 数据类型;因此， `CurrencyDate`需要将日期 [DT_Date] 改为数据库日期 [DT_DBDATE]。  
+     建议用于列的数据类型 `CurrencyID` 与目标表中字段的数据类型不兼容。 由于的数据类型 `DimCurrency.CurrencyAlternateKey` 为 nchar （3），因此 `CurrencyID` 必须从 string [DT_STR] 改为 string [DT_WSTR]。 此外，该字段 `DimDate.FullDateAlternateKey` 定义为 date 数据类型; 因此， `CurrencyDate` 需要从日期 [DT_Date] 改为数据库日期 [DT_DBDATE]。  
   
-2.  在列表中，选择 "CurrencyID" 列，然后在 "属性" 窗格中，将列`CurrencyID`的数据类型从 string [DT_STR] 改为 Unicode string [DT_WSTR]。  
+2.  在列表中，选择 "CurrencyID" 列，然后在 "属性" 窗格中，将列的数据类型 `CurrencyID` 从 string [DT_STR] 改为 Unicode string [DT_WSTR]。  
   
-3.  在 "属性" 窗格中，将列`CurrencyDate`的数据类型从日期 [DT_DATE] 改为数据库日期 [DT_DBDATE]。  
+3.  在 "属性" 窗格中，将列的数据类型 `CurrencyDate` 从日期 [DT_DATE] 改为数据库日期 [DT_DBDATE]。  
   
-4.  单击" **确定**"。  
+4.  单击“确定”。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [步骤 3：添加并配置 OLE DB 连接管理器](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  

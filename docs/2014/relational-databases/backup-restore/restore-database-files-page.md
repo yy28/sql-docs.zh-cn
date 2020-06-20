@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ef7f15fc1b54d18c71d7fccfd379454911cb8961
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: edffd9454b51ea80a18311f735d29407f97f6eb6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875000"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957017"
 ---
 # <a name="restore-database-files-page"></a>还原数据库（“文件”页）
   使用 **“还原数据库”** 对话框的 **“文件”** 页可以管理数据库中您选择要还原的特定文件。  

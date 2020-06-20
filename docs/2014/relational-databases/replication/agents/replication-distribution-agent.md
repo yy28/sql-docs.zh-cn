@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0a1bdbe715aa970f87596060a774ac2b1ed8df15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5bd0b61626f4af268f93043114d5945d00a37b5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210748"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061586"
 ---
 # <a name="replication-distribution-agent"></a>复制分发代理
   复制分发代理是一个可执行文件，它能将快照（对于快照复制和事务复制）和保存在分发数据库表中的事务（对于事务复制）移动到订阅服务器上的目标表中。  
@@ -90,7 +89,7 @@ ms.locfileid: "68210748"
  输出所有可用的参数。  
   
  **-Publisher** _server_name_[ **\\** _instance_name_]  
- 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name  。 为该服务器上的 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
+ 发布服务器的名称。 为该服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。 为该服务器上的 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认实例指定 server_name。  
   
  **-PublisherDB** _publisher_database_  
  发布服务器数据库的名称。  
@@ -167,7 +166,7 @@ ms.locfileid: "68210748"
  用于连接到 FTP 服务的用户名。  如果不指定，则使用 anonymous。  
   
  **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
- 指定分发操作期间记录的历史信息量。  选择 1 可将历史日志记录对性能的影响减小到最低限度。  
+ 指定分发操作期间记录的历史信息量。 选择 1 可将历史日志记录对性能的影响减小到最低限度。  
   
 |HistoryVerboseLevel 值|说明|  
 |-------------------------------|-----------------|  
@@ -183,7 +182,7 @@ ms.locfileid: "68210748"
  在历史记录线程检查目前是否有连接在等待服务器响应之前等待的秒数。 在执行长时间运行的批处理时，减小该值可避免检查代理将分发代理标记为可疑。 默认值为 **300** 秒。  
   
  **-LoginTimeOut** _login_time_out_seconds_  
- 登录超时前等待的秒数。  默认值为 15 秒。  
+ 登录超时前等待的秒数。 默认值为 15 秒。  
   
  **-MaxBcpThreads** _number_of_threads_  
  指定可以并行执行的大容量复制操作的数量。 同时存在的线程和 ODBC 连接的最大数量为 **MaxBcpThreads** 或显示在分发数据库中同步事务中的大容量复制请求数中较小的那一个。 **MaxBcpThreads** 的值必须大于 **0** ，并且不存在任何硬编码的上限。  默认值是处理器数目的 **2**倍，最大值为 8。 应用于使用并发快照选项在发布服务器上生成的快照时，不管为 **MaxBcpThreads**指定了什么数值，都将使用一个线程。  
@@ -204,13 +203,13 @@ ms.locfileid: "68210748"
  如果源上没有可用的已复制事务，代理将向分发服务器报告无事务消息。 此选项可指定代理在报告另一条无事务消息前将等待多长时间。 在上次处理已复制事务后，如果代理在源上没有检测到任何可用的事务，则总是会报告一条无事务消息。 默认值为 60 秒。  
   
  **-OledbStreamThreshold** _oledb_stream_threshold_  
- 指定二进制大型对象数据的最小大小（按字节计），如果超过此大小，数据将作为流进行绑定。 必须将 -UseOledbStreaming 指定为使用此参数  。 值可以介于 400 个字节到 1048576 个字节之间，默认值为 16384 个字节。  
+ 指定二进制大型对象数据的最小大小（按字节计），如果超过此大小，数据将作为流进行绑定。 必须将 -UseOledbStreaming 指定为使用此参数。 值可以介于 400 个字节到 1048576 个字节之间，默认值为 16384 个字节。  
   
  **-Output** _output_path_and_file_name_  
  代理输出文件的路径。 如果未提供文件名，则向控制台发送该输出。 如果指定的文件名已存在，会将输出追加到该文件。  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
- 指定输出是否应提供详细内容。  如果详细级别为 0，则只输出错误消息。  如果详细级别为 1，则输出所有进度报告消息。  如果详细级别为 2（默认），则输出所有错误消息和进度消息，这对调试很有帮助。  
+ 指定输出是否应提供详细内容。 如果详细级别为 0，则只输出错误消息。 如果详细级别为 1，则输出所有进度报告消息。  如果详细级别为 2（默认），则输出所有错误消息和进度消息，这对调试很有帮助。  
   
  **-PacketSize** _packet_size_  
  数据包大小（按字节计）。 默认值为 4096（字节）。  

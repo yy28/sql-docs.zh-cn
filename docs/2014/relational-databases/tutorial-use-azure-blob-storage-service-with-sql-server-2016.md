@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a15f6735ef0ef79b7eb953445c926f60f6bfb12e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b80b6af9b198db61f8cd34360ddbb3e00bc13d7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176083"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037196"
 ---
 # <a name="tutorial-sql-server-data-files-in-azure-storage-service"></a>教程：Azure 存储服务中的 SQL Server 数据文件
   欢迎使用 Azure 存储服务中的 SQL Server 数据文件教程。 本教程有助于了解如何将 SQL Server 数据文件直接存储在 Azure Blob 存储服务中。  
@@ -55,6 +54,6 @@ ms.locfileid: "70176083"
  在本课中，您将使用 RESTORE Database MOVE 选项从 Azure 存储还原数据库。  
   
 ## <a name="see-also"></a>另请参阅  
- [Azure 中的 SQL Server 数据文件](databases/sql-server-data-files-in-microsoft-azure.md)  
+ [SQL Server Azure 中的数据文件](databases/sql-server-data-files-in-microsoft-azure.md)  
   
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9d2b72df-cb21-414a-abef-917f13d4de62
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 31477a012135aba643e1d89b0890df242f568e16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fbd340710b563180ad88c935eeb6425e2b5c57ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136531"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037353"
 ---
 # <a name="getcurrentcertificate-method-sinstance-class"></a>GetCurrentCertificate 方法（SInstance 类）
   获取当前安全证书。  

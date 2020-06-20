@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 54aab33e754331482ef154d9172f0e41cd251db0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 808c8516b3ed9e95ea4c724736461cb00923a7fb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011914"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016238"
 ---
 # <a name="principals-database-engine"></a>主体（数据库引擎）
   “主体”  是可以请求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源的实体。 与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 授权模型的其他组件一样，主体也可以按层次结构排列。 主体的影响范围取决于主体定义的范围（Windows、服务器或数据库）以及主体是否不可分或是一个集合。 例如，Windows 登录名就是一个不可分主体，而 Windows 组则是一个集合主体。 每个主体都具有一个安全标识符 (SID)。  
@@ -44,7 +43,7 @@ ms.locfileid: "63011914"
   
 -   Windows 本地登录名  
   
- **SQL Server**-**级别****主体**  
+ **SQL Server** -**级别****主体**  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Id  
   
@@ -85,7 +84,7 @@ ms.locfileid: "63011914"
 -   \##MS_PolicyTsqlExecutionLogin##  
   
 ## <a name="the-guest-user"></a>guest 用户  
- 每个数据库包括一个 **guest**。 授予 **guest** 用户的权限由对数据库具有访问权限，但在数据库中没有用户帐户的用户继承。 不能删除**guest**用户，但可通过撤消该用户的`CONNECT`权限将其禁用。 可以`CONNECT`通过在 master 或 tempdb 以外`REVOKE CONNECT FROM GUEST`的任何数据库中执行来撤消权限。  
+ 每个数据库包括一个 **guest**。 授予 **guest** 用户的权限由对数据库具有访问权限，但在数据库中没有用户帐户的用户继承。 不能删除**guest**用户，但可通过撤消该用户的权限将其禁用 `CONNECT` 。 `CONNECT`可以通过 `REVOKE CONNECT FROM GUEST` 在 master 或 tempdb 以外的任何数据库中执行来撤消权限。  
   
 ## <a name="client-and-database-server"></a>客户端和数据库服务器  
  根据定义，客户端和数据库服务器是安全主体，可以得到保护。 在建立安全的网络连接前，这些实体之间可以互相进行身份验证。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支持[Kerberos](https://go.microsoft.com/fwlink/?LinkId=100758)身份验证协议，该协议定义客户端与网络身份验证服务交互的方式。  

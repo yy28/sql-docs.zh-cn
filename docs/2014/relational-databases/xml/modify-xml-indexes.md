@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ea282f462ab33454f262ae4de57df3c48abfb600
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c5c67470fc9aaaeefe49e5ccb1a8602e082c4054
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702597"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013169"
 ---
 # <a name="modify-xml-indexes"></a>修改 XML 索引
   [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 语句可用于修改现有的 XML 和非 XML 索引。 但是，并非所有的 ALTER INDEX 选项都适用于 XML 索引。 修改 XML 索引时以下选项不可用：  

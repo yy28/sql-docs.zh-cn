@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3cd2e8af1630fed8dd996a951e904bef0266b300
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 07fe58cee4046b78bdca0a748ea4d0c6a82dfebf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702986"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014924"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 数据类型 (SQLXML 4.0)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、XPath 和 XML 架构（XSD）的数据类型非常不同。 例如，XPath 没有整数或日期数据类型，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 XSD 则具有许多此类数据类型。 XSD 可将纳秒精度用于时间值，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最高只能使用 1/300 秒的精度。 因此，将一种数据类型映射到另一种数据类型并不是始终可行的。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将数据类型映射到 XSD 数据类型的详细信息，请参阅[数据类型强制转换和 sql： datatype 批注 &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)。  
@@ -46,7 +45,7 @@ ms.locfileid: "82702986"
   
 -   布尔运算符（and、or）  
   
--   关系运算符（ \< 、>、 \< =、>=）  
+-   关系运算符（ \<, > ， \<=, > =）  
   
 -   相等运算符（=、!=）  
   
@@ -71,7 +70,7 @@ ms.locfileid: "82702986"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不执行针对节点集的位置选择：例如，XPath 查询 `Customer[3]` 意味着第三个客户；但在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不支持此类型的位置选择。 因此，无法实现 XPath 规范所述的节点集到 `string` 转换或者节点集到 `number` 转换。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用“任何”语义，而 XPath 规范指定“第一个”语义。 例如，根据 W3C XPath 规范，XPath 查询 `Order[OrderDetail/@UnitPrice > 10.0]` 会选择包含**单价**大于10.0 的第一个**OrderDetail**的订单。 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，此 XPath 查询选择具有**单价**大于10.0 的所有**OrderDetail**的订单。  
   
- 转换为 `boolean` 将产生存在测试；因此，XPath 查询 `Products[@Discontinued=true()]` 等效于 SQL 表达式“Products.Discontinued is not null”，而非 SQL 表达式“Products.Discontinued = 1”。 若要使该查询等效于后一个 SQL 表达式，请首先将节点集转换为非 `boolean` 类型，如 `number`。 例如，`Products[number(@Discontinued) = true()]` 。  
+ 转换为 `boolean` 将产生存在测试；因此，XPath 查询 `Products[@Discontinued=true()]` 等效于 SQL 表达式“Products.Discontinued is not null”，而非 SQL 表达式“Products.Discontinued = 1”。 若要使该查询等效于后一个 SQL 表达式，请首先将节点集转换为非 `boolean` 类型，如 `number`。 例如，`Products[number(@Discontinued) = true()]`。  
   
  因为如果运算符对于节点集中任一节点为 TRUE，则大多数运算符均定义为 TRUE；所以，在节点集为空时，这些运算的计算结果始终为 FALSE。 因此，如果 A 为空，则 `A = B` 和 `A != B` 均为 FALSE，并且 `not(A=B)` 和 `not(A!=B)` 均为 TRUE。  
   
@@ -87,9 +86,9 @@ ms.locfileid: "82702986"
   
 |XDR 数据类型|等效<br /><br /> XPath 数据类型|使用的 SQL Server 转换|  
 |-------------------|------------------------------------|--------------------------------|  
-|Nonebin.base64bin.hex|不可用|NoneEmployeeID|  
+|Nonebin.base64bin.hex|空值|NoneEmployeeID|  
 |boolean|boolean|CONVERT(bit, EmployeeID)|  
-|number、int、float、i1、i2、i4、i8、r4、r8、ui1、ui2、ui4、ui8|number|CONVERT(float(53), EmployeeID)|  
+|number、int、float、i1、i2、i4、i8、r4、r8、ui1、ui2、ui4、ui8|数字|CONVERT(float(53), EmployeeID)|  
 |id、idref、idrefsentity、entities、enumerationnotation、nmtoken、nmtokens、chardate、Timedate、Time.tz、string、uri、uuid|字符串|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|无（在 XPath 中没有等效于 fixed14.4 XDR 数据类型的数据类型）|CONVERT(money, EmployeeID)|  
 |date|字符串|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
@@ -150,7 +149,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 ### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B. 在 XPath 查询中执行若干数据类型转换  
  考虑以下根据带批注的 XSD 架构指定的 XPath 查询：`OrderDetail[@UnitPrice * @OrderQty > 98]`  
   
- 此 XPath 查询返回满足该谓词的所有** \< OrderDetail>** 元素 `@UnitPrice * @OrderQty > 98` 。 如果使用**UnitPrice** `fixed14.4` 带批注的架构中的数据类型对单价进行批注，则此谓词等效于 SQL 表达式：  
+ 此 XPath 查询返回 **\<OrderDetail>** 满足该谓词的所有元素 `@UnitPrice * @OrderQty > 98` 。 如果使用**UnitPrice** `fixed14.4` 带批注的架构中的数据类型对单价进行批注，则此谓词等效于 SQL 表达式：  
   
  `CONVERT(float(53), CONVERT(money, OrderDetail.UnitPrice)) * CONVERT(float(53), OrderDetail.OrderQty) > CONVERT(float(53), 98)`  
   

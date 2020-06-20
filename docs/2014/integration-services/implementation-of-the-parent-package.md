@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d8f94830-fa27-4151-88df-cbdc6bf0fc80
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2cec1f30ba728f1cf3b808acb2fb362e21d259a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 47d030435515cc621fe223f461e3da645e9dbebf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058159"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965673"
 ---
 # <a name="implementation-of-the-parent-package"></a>父包的实现
   负载平衡跨越多个服务器的 SSIS 包时，如果子包已经创建并部署且用来运行子包的远程 SQL Server 代理作业也创建之后，其下一个步骤是创建父包。 父包将包含很多执行 SQL Server 代理作业任务，每个任务负责调用用于运行其中一个子包的不同的 SQL Server 代理作业。 父包中的执行 SQL Server 代理作业任务又会运行各个 SQL Server 代理作业。 父包中的每个任务都包含诸如信息，例如，如何连接到远程服务器以及服务器上运行什么作业等。 有关详细信息，请参阅 [Execute SQL Server Agent Job Task](control-flow/execute-sql-server-agent-job-task.md)。  
@@ -42,6 +41,6 @@ ms.locfileid: "66058159"
 >  可以使用包含 **sp_start_job N'package_name'** 的 Transact-SQL 语句的执行 SQL 任务。 有关详细信息，请参阅 [sp_start_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql)。  
   
 ## <a name="debugging-environment"></a>调试环境  
- 测试父包时，请在设计器的调试环境中通过使用“调试”/“启动调试”(F5) 来运行父包。 另外，还可以使用命令提示符实用工具 **dtexec**。 有关详细信息，请参阅 [dtexec Utility](packages/dtexec-utility.md)。  
+ 测试父包时，请在设计器的调试环境中通过使用“调试”/“启动调试”(F5) 来运行父包。 另外，还可以使用命令提示符实用工具 **dtexec**。 有关详细信息，请参阅 [dtexec 实用工具](packages/dtexec-utility.md)。  
   
   

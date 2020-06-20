@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 0e5fb127-c7ff-4dfa-b90e-d9bcf0ce763b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3e36fae15f6f4220565bcc3d14c0e125ca6818f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da790644cbd29bc38a89899e02d50aac58228a0e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058080"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965510"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>“导入包”对话框 UI 参考
   可以使用 **中的** “导入包” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]对话框，导入 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包以及设置或修改包的保护级别。  
   
 ## <a name="options"></a>选项  
  **包位置**  
- 选择要向其中导入包的存储位置的类型。 提供了以下选项：  
+ 选择要向其中导入包的存储位置的类型。 可用选项如下：  
   
  **SQL Server**  
   
@@ -34,7 +33,7 @@ ms.locfileid: "66058080"
   
  **SSIS 包存储区**  
   
- **服务器**  
+ **Server**  
  键入服务器名称或从列表中选择一个服务器。  
   
  **身份验证**  

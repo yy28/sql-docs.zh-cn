@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 66f39d9b-9ec2-48a7-8a9e-1b42931299c9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1f87c3c612be25660b5949f57d3ba0745f23587
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e4de7d9af6a9936a85842c6de6289e958272dadc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012536"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053150"
 ---
 # <a name="audit-schema-object-take-ownership-event-class"></a>Audit Schema Object Take Ownership 事件类
   检查更改架构对象（例如表、过程或函数）的所有者的权限时会发生 **Audit Schema Object Take Ownership** 事件类。 使用 ALTER AUTHORIZATION 语句指定对象所有者时会出现这种情况。  

@@ -19,18 +19,17 @@ helpviewer_keywords:
 ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 084e73bad33cfa52877ef5e0d46a543d68394cc9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4594940cd2db9eabaf5011d10e56dcab1ac39159
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703031"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015040"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>在 updategram 中指定带批注的映射架构 (SQLXML 4.0)
   本主题说明如何使用在 updategram 中指定的映射架构（XSD 或 XDR）来处理更新。 在 updategram 中，你可以提供要在将 updategram 中的元素和属性映射到中的表和列时使用的已注释映射架构的名称 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 在 updategram 中指定映射架构时，updategram 中指定的元素和属性名称必须映射为该映射架构的元素和属性。  
   
- 若要指定映射架构，请使用 `mapping-schema` ** \< sync>** 元素的特性。 以下示例显示两个 updategram：其中一个使用简单映射架构，而另一个使用较复杂的架构。  
+ 若要指定映射架构，请使用 `mapping-schema` 元素的属性 **\<sync>** 。 以下示例显示两个 updategram：其中一个使用简单映射架构，而另一个使用较复杂的架构。  
   
 > [!NOTE]  
 >  本文档假定您熟悉 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的模板和映射架构支持。 有关详细信息，请参阅[&#40;SQLXML 4.0&#41;中带批注的 XSD 架构简介](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)。 对于使用 XDR 的旧版应用程序，请参阅[SQLXML 4.0&#41;中 &#40;弃用的带批注 XDR 架构](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
@@ -46,7 +45,7 @@ ms.locfileid: "82703031"
  若要创建使用以下示例的工作示例，必须满足[运行 SQLXML 示例的要求](../../sqlxml/requirements-for-running-sqlxml-examples.md)中指定的要求。  
   
 ### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>A. 创建采用简单映射架构的 Updategram  
- 以下 XSD 架构（Sampleschema.xml）是将** \< Customer>** 元素映射到 customer 表的映射架构：  
+ 以下 XSD 架构（SampleSchema.xml）是将 **\<Customer>** 元素映射到 Customer 表的映射架构：  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -64,7 +63,7 @@ ms.locfileid: "82703031"
 </xsd:schema>  
 ```  
   
- 以下 updategram 在 Sales.Customer 表中插入一条记录，并使用前面的映射架构将此数据正确映射到表。 请注意，updategram 使用架构中定义的相同元素名称和** \< Customer>**。 这是强制性的，因为 updategram 会指定特定的架构。  
+ 以下 updategram 在 Sales.Customer 表中插入一条记录，并使用前面的映射架构将此数据正确映射到表。 请注意，updategram 使用架构中定义的相同元素名称 **\<Customer>** 。 这是强制性的，因为 updategram 会指定特定的架构。  
   
 ##### <a name="to-test-the-updategram"></a>测试 updategram  
   
@@ -113,9 +112,9 @@ ms.locfileid: "82703031"
 ```  
   
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. 使用在映射架构中指定的父子关系插入记录  
- 架构元素可以相互关联。 ** \< Sql： relationship>** 元素指定架构元素之间的父子关系。 此信息用于更新具有主键/外键关系的相应表。  
+ 架构元素可以相互关联。 **\<sql:relationship>** 元素指定架构元素之间的父子关系。 此信息用于更新具有主键/外键关系的相应表。  
   
- 以下映射架构（Sampleschema.xml）包含两个元素： ** \< Order>** 和** \< OD>**：  
+ 以下映射架构（SampleSchema.xml）包含两个元素 **\<Order>** **\<OD>** ：  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -154,7 +153,7 @@ ms.locfileid: "82703031"
 </xsd:schema>  
 ```  
   
- 以下 updategram 使用此 XSD 架构为订单43860添加新的订单详细记录（在** \< 后>** 块中为** \< OD>** 元素）。 `mapping-schema` 属性用于指定 updategram 中的映射架构。  
+ 以下 updategram 使用此 XSD 架构为订单43860添加新的订单详细记录（ **\<OD>** 块中的元素 **\<after>** ）。 `mapping-schema` 属性用于指定 updategram 中的映射架构。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -273,11 +272,11 @@ ms.locfileid: "82703031"
 </xsd:schema>  
 ```  
   
- 此示例中的 XSD 架构包含** \< Customer>** 和** \< Order>** 元素，并且它指定了两个元素之间的父子关系。 它标识** \< 顺序>** 作为父元素， ** \< 客户>** 作为子元素。  
+ 此示例中的 XSD 架构包含 **\<Customer>** 和 **\<Order>** 元素，它指定两个元素之间的父子关系。 它将标识 **\<Order>** 为父元素和 **\<Customer>** 子元素。  
   
- updategram 处理逻辑使用父子关系相关信息来确定将记录插入到表中的顺序。 在此示例中，updategram 逻辑首先尝试在 Ord 表中插入一条记录（因为** \< Order>** 为父级），然后尝试将记录插入到 Customer 表中（因为** \< 客户>** 是子节点）。 但是，鉴于数据库表架构中包含的主键/外键信息，此插入操作将导致在数据库中的外键冲突，继而导致插入失败。  
+ updategram 处理逻辑使用父子关系相关信息来确定将记录插入到表中的顺序。 在此示例中，updategram 逻辑首先尝试在 Ord 表中插入一条记录（因为 **\<Order>** 是父级），然后尝试将记录插入到 "加入" 表中（因为 **\<Customer>** 是子级）。 但是，鉴于数据库表架构中包含的主键/外键信息，此插入操作将导致在数据库中的外键冲突，继而导致插入失败。  
   
- 若要指示 updategram 逻辑在更新操作过程中反转父子关系，请 `inverse` 在** \< 关系>** 元素上指定批注。 这会导致首先向 Cust 表添加记录，然后再向 Ord 表添加记录，并且该操作将成功。  
+ 若要指示 updategram 逻辑在更新操作过程中反转父子关系，请 `inverse` 在元素上指定批注 **\<relationship>** 。 这会导致首先向 Cust 表添加记录，然后再向 Ord 表添加记录，并且该操作将成功。  
   
  以下 updategram 使用指定的 XSD 架构向 Ord 表插入订单 (OrderID=2)，并向 Cust 表插入客户 (CustomerID='AAAAA')：  
   
