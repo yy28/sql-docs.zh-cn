@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f20ae6cb-9e6a-4d24-88ff-d7a903a4e8d3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d5313118f7949818d341a47744a69cf13c43dbc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b880e23bdc191da1f34f2261d7c87a32f03fb42
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056968"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964897"
 ---
 # <a name="package-configurations-organizer"></a>“包配置组织程序”
   可以使用 **“包配置组织程序”** 对话框启用包配置，查看当前包的配置列表以及指定加载这些配置的首选顺序。  
@@ -50,7 +49,7 @@ ms.locfileid: "66056968"
  **目标对象**  
  查看配置更新的对象的名称。 如果配置是 XML 配置文件或 SQL Server 表，则列为空，因为配置可以包含多个对象。  
   
- **目标属性**  
+ **Target 属性**  
  查看配置修改的属性的名称。 如果配置类型支持多个配置，则此列为空白。  
   
  **添加**  

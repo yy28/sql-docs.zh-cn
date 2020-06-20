@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 14c10afd53e219b847625e50f8fc88714cad1111
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bf9a33bc18790bf8821d778746a708f78bbb3d8f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702278"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046364"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 索引 (SQL Server)
   可以对 `xml` 数据类型列创建 XML 索引。 它们对列中 XML 实例的所有标记、值和路径进行索引，从而提高查询性能。 在下列情况下，您的应用程序可以从 XML 索引中获益：  
@@ -132,7 +131,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   如果工作负荷通过使用路径表达式从单个 XML 实例中检索多个值，则在 PROPERTY 索引中聚集各个 XML 实例中的路径可能会很有用。 这种情况通常出现在属性包方案中，此时提取对象的属性并且已知其主键值。  
   
--   如果工作负荷涉及查询 XML 实例中的值，但不知道包含那些值的元素名称或属性名称，则您可能希望创建 VALUE 索引。 这通常出现在 descendant 轴查找中，例如 //author[last-name="Howard"]，其中 \<author> 元素可以出现在层次结构的任何级别上。 这种情况也出现在通配符查询中，例如 /book [@* = "novel"]，其中查询将查找具有某个值为“novel”的属性的 \<book> 元素。  
+-   如果工作负荷涉及查询 XML 实例中的值，但不知道包含那些值的元素名称或属性名称，则您可能希望创建 VALUE 索引。 这通常发生在子代轴查找中，如//author [姓 = "Howard"]，其中 \<author> 元素可以出现在层次结构的任何级别。 它也出现在通配符查询中，例如/book [@ * = "novel"]，其中查询将查找 \<book> 具有值为 "novel" 的属性的元素。  
   
 ### <a name="path-secondary-xml-index"></a>PATH 辅助 XML 索引  
  如果查询通常对 `xml` 类型列指定路径表达式，则 PATH 辅助索引可以提高搜索的速度。 如本主题前面所述，当查询在 WHERE 子句中指定 **exist()** 方法时主索引非常有用。 如果添加 PATH 辅助索引，则您还可以改善此类查询的搜索性能。  

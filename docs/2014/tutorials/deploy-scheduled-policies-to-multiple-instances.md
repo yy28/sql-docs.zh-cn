@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f551b8e8-3668-4ed4-852f-bae826254f4f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8d37dafd5501a289e45a119323eed61242707184
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d3f2412114e50292c91908b3a20c433d022b239
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68185797"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057613"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>将计划的策略部署到多个实例
   通过使用已注册的服务器，可以从一个集中位置将计划的策略部署到多个托管服务器。 您可以从本地服务器组或中央管理服务器部署计划的策略。  
@@ -89,13 +88,13 @@ ms.locfileid: "68185797"
     > [!NOTE]  
     >  若要在运行计划的策略之后查看评估结果，请打开目标实例上的“策略历史记录”日志。 若要打开日志，请右键单击 "**策略管理**"，然后单击 "**查看历史记录**"。  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>总结  
  本教程介绍了如何针对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一个或多个实例执行最佳实践策略的按需和计划评估。  
   
-## <a name="next"></a>Next  
+## <a name="next"></a>下一步  
  现已学完了本教程。 若要返回到开始，请参阅[教程：使用基于策略的管理来评估最佳实践](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)。  
   
- 若要查看教程的[!INCLUDE[ssDE](../includes/ssde-md.md)]列表，请单击[数据库引擎教程](../relational-databases/database-engine-tutorials.md)。  
+ 若要查看教程的列表 [!INCLUDE[ssDE](../includes/ssde-md.md)] ，请单击[数据库引擎教程](../relational-databases/database-engine-tutorials.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用基于策略的管理来管理服务器](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

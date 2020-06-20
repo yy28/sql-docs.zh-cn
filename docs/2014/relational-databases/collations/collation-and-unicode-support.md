@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c63b7c0d1acad34bb273e4a49921d55818965e80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a9a7c6c48229aa827aaed178e5ed4448c20431b9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72688727"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970567"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的排序规则可为您的数据提供排序规则、区分大小写属性和区分重音属性。 与诸如 `char` 和 `varchar` 等字符数据类型一起使用的排序规则规定可表示该数据类型的代码页和对应字符。 无论您是要安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的新实例，还原数据库备份，还是将服务器连接到客户端数据库，都必须了解您要处理的数据的区域设置要求、排序顺序以及是否区分大小写和重音。 若要列出在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例上可用的排序规则，请参阅 [sys。fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)。  
@@ -135,7 +134,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
  下表提供有关以 Unicode 和非 Unicode 服务器的各种组合使用多语言数据的信息。  
   
-|Server (服务器)|客户端|优点或局限性|  
+|服务器|客户端|优点或局限性|  
 |------------|------------|-----------------------------|  
 |Unicode|Unicode|因为 Unicode 数据将在整个系统中使用，所以此方案可提供最佳的性能并可保护检索到的数据免受破坏。 ActiveX 数据对象 (ADO)、OLE DB 和 ODBC 3.7 版或更高版本都采用这样的配置。|  
 |Unicode|非 Unicode|在这种情况下，尤其对于正在运行新操作系统的服务器与正在运行旧版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或基于旧操作系统的客户端之间的连接，当您向客户端计算机移动数据时，会受到限制或出现错误。 服务器上的 Unicode 数据会尝试映射到非 Unicode 客户端的对应代码页，以转换数据。|  
@@ -144,7 +143,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ##  <a name="supplementary-characters"></a><a name="Supplementary_Characters"></a> 增补字符  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供数据类型（例如`nchar`和`nvarchar` ）来存储 Unicode 数据。 这些数据类型使用名为 *UTF-16*的格式对文本进行编码。 Unicode 协会为每个字符分配一个唯一码位，码位是一个介于 0x0000 和 0x10FFFF 之间的值。 最常用字符的码位值在内存和磁盘上的 16 位字的范围内，但码位值大于 0xFFFF 的字符需要使用两个连续的 16 位字。 这些字符称为“增补字符” **，两个连续的 16 位字称为“代理项对” **。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供数据类型（例如 `nchar` 和） `nvarchar` 来存储 Unicode 数据。 这些数据类型使用名为 *UTF-16*的格式对文本进行编码。 Unicode 协会为每个字符分配一个唯一码位，码位是一个介于 0x0000 和 0x10FFFF 之间的值。 最常用字符的码位值在内存和磁盘上的 16 位字的范围内，但码位值大于 0xFFFF 的字符需要使用两个连续的 16 位字。 这些字符称为“增补字符” **，两个连续的 16 位字称为“代理项对” **。  
   
  如果使用增补字符：  
   

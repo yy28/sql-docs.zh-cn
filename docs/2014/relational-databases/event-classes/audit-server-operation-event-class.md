@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6cc3dbb9-817e-4329-9f45-c3adcff3b511
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 99f3b353231da86af00bc4531e2645fe0a5b1994
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a3359de449dcce4a976dec2debd9b5be99addd2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012430"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85031084"
 ---
 # <a name="audit-server-operation-event-class"></a>Audit Server Operation 事件类
   当执行更改设置、资源、外部访问或授权等安全审核操作时，会发生 **Audit Server Operation** 事件类。  

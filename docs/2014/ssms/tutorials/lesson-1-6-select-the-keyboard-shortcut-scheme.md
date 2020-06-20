@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1dfc6b5c-0a93-450f-b5b3-34ae0ca79717
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0aada3a83a29a921584a204f51695e6598131e0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d088740fc6f1f72213c04866713a8579eb126d2a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63312564"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058291"
 ---
 # <a name="select-the-keyboard-shortcut-scheme"></a>选择键盘快捷键方案
   如果不使用标准 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 键盘方案，您可以配置 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 以使用与 [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)]兼容的键盘方案。  
@@ -24,7 +23,7 @@ ms.locfileid: "63312564"
   
 #### <a name="to-apply-vs_dev10_long-compatible-keyboard-scheme"></a>应用与 [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] 兼容的键盘方案  
   
-1.  在“工具” **** 菜单上，单击“选项” ****。  
+1.  在“工具”  菜单上，单击“选项” 。  
   
 2.  展开“环境”****，再单击“键盘”****。  
   

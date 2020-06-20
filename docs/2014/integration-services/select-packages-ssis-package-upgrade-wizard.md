@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 224100f1-51f6-4f1f-91a2-054819c76ae8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ccf14ace0a160be4ca9ecc5287ca45f077ba7e16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f67103eedf14bb405ad1655d21803ec84e6ff0ca
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056023"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963737"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>选择包（SSIS 包升级向导）
   可以使用 **“选择包”** 页选择要升级的包。 此页列出了在向导的 **“选择源位置”** 页上指定的位置中存储的包。  

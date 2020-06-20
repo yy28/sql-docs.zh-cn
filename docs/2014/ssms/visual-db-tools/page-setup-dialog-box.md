@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf05de13f0aada12da055f2e9c1e5a3a0db1d1df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35484da616b4a6fc06d9d112471f87051330f583
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63195016"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001223"
 ---
 # <a name="page-setup-dialog-box"></a>“页面设置”对话框
   可通过选择“页面设置”  对话框中的选项来自定义页面设计。 某些选项的可用性取决于安装的语言和为进行编辑所启用的语言。  

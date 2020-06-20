@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 787f0e9c-09dd-438a-bc04-5b8f99c127b8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6c0a98aa13b4453244c8ed565a950660a20e5a3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39b44f45f9fb1799fdd604ce796f8b804ea498e7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721301"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010749"
 ---
 # <a name="distributor"></a>分发服务器
   **“分发服务器”** 页出现在配置分发向导和新建发布向导中。 分发服务器是包含分发数据库并为所有类型的复制存储元数据和历史记录数据的服务器。 分发服务器还为事务复制存储事务。 分发服务器与发布服务器可以是同一服务器（本地分发服务器），也可以是不同的服务器（远程分发服务器）。 分发服务器的角色根据所实现的复制类型的不同而不同。 通常，对于事务复制，分发服务器角色要远比合并复制和快照复制重要。 合并和快照复制通常使用本地分发服务器，而对于繁忙的系统来说，为事务复制使用远程分发服务器可以提高性能。  
@@ -33,7 +32,7 @@ ms.locfileid: "62721301"
  选作分发服务器的服务器应有足够的磁盘空间和处理器运算能力，以支持该服务器上的复制和任何其他活动。  
   
 ## <a name="options"></a>选项  
- **“\<服务器名>”将充当自己的分发服务器；SQL Server 将创建分发数据库和日志**  
+ **" \<ServerName> " 将充当自己的分发服务器;SQL Server 将创建分发数据库和日志**  
  选择此选项可将所连接的服务器配置为分发服务器。  
   
  **使用以下服务器作为分发服务器(注意: 您选择的服务器必须已配置为分发服务器)**  

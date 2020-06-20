@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48299e2cf318071624c8a7649c52dd9b2f932a77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b76d4df23f5d8bb25664ba0f1d294deca9be0418
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62668983"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057164"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>复制监视器界面概述
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器提供一个以发布服务器为主的视图或一个以分发服务器为主的视图，以两个窗格的形式显示所有复制活动。 在监视器的左窗格中添加发布服务器后，监视器的右窗格中即显示发布服务器、其发布、对这些发布的订阅和各种复制代理的相关信息。 除了显示有关复制拓扑的信息以外，复制监视器还可用于执行多种任务，如启动和停止代理以及验证数据。  
@@ -225,7 +224,7 @@ ms.locfileid: "62668983"
   
      使用此对话框可以：更改配置文件的属性、创建和删除配置文件、指定默认配置文件，以及指定某特定类型的所有代理（如快照代理）应使用给定配置文件。  
   
--   **\<AgentProfileName> 属性**  
+-   **\<AgentProfileName>属性**  
   
      使用此对话框可以查看和编辑配置文件中的参数设置。  
   

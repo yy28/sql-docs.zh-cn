@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 01383ffade91cde641018b90be30dc92e644b151
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 03abb1dc601c7b329742f290b9ce62aefd08e7bf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704072"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056884"
 ---
 # <a name="code-outlining"></a>代码大纲显示
   使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 查询编辑器中的大纲显示功能可在编辑查询时有选择地隐藏代码， 从而可以更加方便地查看您正在处理的代码，尤其是大型查询文件中的代码。
@@ -36,7 +35,7 @@ ms.locfileid: "82704072"
 
  ![显示大纲的 XML 代码](../../database-engine/media/editoutlinexmlfull.gif "显示大纲的 XML 代码")
 
- 单击 \<InnerTag> 行上的减号时，只有 InnerTag 会折叠起来，如下图所示。
+ 当单击行上的减号时 \<InnerTag> ，只会折叠 InnerTag，如下图所示。
 
  ![隐藏内部节点的 XML 代码](../../database-engine/media/editoutlinexmlinnercol.gif "隐藏内部节点的 XML 代码")
 
@@ -44,11 +43,11 @@ ms.locfileid: "82704072"
 
  ![带有显示隐藏代码的工具提示的 XML 代码](../../database-engine/media/editoutlinexmlmouse.gif "带有显示隐藏代码的工具提示的 XML 代码")
 
- 单击 \<MiddleTag> 行上的减号时，MiddleTag 和 InnerTag 都会折叠起来，如下图所示。
+ 当单击行上的减号时 \<MiddleTag> ，MiddleTag 和 InnerTag 都是折叠的，如下图所示。
 
  ![隐藏内部和中间标记的 XML 代码](../../database-engine/media/editoutlinexmlmiddlecol.gif "隐藏内部和中间标记的 XML 代码")
 
- 单击 \<OuterTag> 行上的减号时，所有三行均折叠起来，如下图所示。
+ 当单击行上的减号时 \<OuterTag> ，所有三行均折叠起来，如下图所示。
 
  ![显示所有三个隐藏标记的 XML 代码](../../database-engine/media/editoutlinexmloutercol.gif "显示所有三个隐藏标记的 XML 代码")
 

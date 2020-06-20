@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 428e04e0-ad98-45d0-8345-12ec1b67b2eb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c3132bd65bb6f3092cc950758d4f346b5c4cd8fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c154b22d6469df034f4ec7cc6be77b2e7192913
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059171"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966817"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Excel 源编辑器（“连接管理器”页）
   使用 **“Excel 源编辑器”** 对话框的 **“连接管理器”** 节点可以为源选择要使用的 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 工作簿。 Excel 源从现有工作簿中的工作表或指定范围中读取数据。  
   
 > [!NOTE]  
->  Excel `CommandTimeout`源的属性在**excel 源编辑器**中不可用，但可以使用**高级编辑器**进行设置。 有关此属性的详细信息，请参阅 [Excel Custom Properties](data-flow/excel-custom-properties.md)的“Excel 源”部分。  
+>  `CommandTimeout`Excel 源的属性在**Excel 源编辑器**中不可用，但可以使用**高级编辑器**进行设置。 有关此属性的详细信息，请参阅 [Excel Custom Properties](data-flow/excel-custom-properties.md)的“Excel 源”部分。  
   
  若要了解有关 Excel 源的详细信息，请参阅 [Excel Source](data-flow/excel-source.md)。  
   
@@ -39,7 +38,7 @@ ms.locfileid: "66059171"
  **数据访问模式**  
  指定从源选择数据的方法。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |表或视图|从 Excel 文件的工作表或指定范围中检索数据。|  
 |表名变量或视图名变量|在变量中指定工作表名称或范围名称。<br /><br /> **相关信息：** [在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)|  
@@ -63,7 +62,7 @@ ms.locfileid: "66059171"
  **SQL 命令文本**  
  输入 SQL 查询的文本，通过单击“生成查询”**** 来生成查询，或通过单击“浏览”**** 浏览至包含查询文本的文件。  
   
- **Parameters**  
+ **参数**  
  如果已经在参数化查询文本中使用 ? 作为参数占位符输入了参数化查询，请使用 **“设置查询参数”** 对话框将查询输入参数映射到包变量。  
   
  **生成查询**  

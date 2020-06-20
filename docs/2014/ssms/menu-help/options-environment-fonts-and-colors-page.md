@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 21c4f3a480b039b4853c112831341b6448a7d6a7
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 56529e3f70bc8234a8676883db6ac28a040ca86a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859376"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062093"
 ---
 # <a name="options-environment-fonts-and-colors-page"></a>选项（“环境”:“字体和颜色”页）
   使用“选项”对话框可以为   中的各种用户界面元素建立自定义的字体和配色方案[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 在“工具”  菜单上，单击“选项”  ，展开“环境”  文件夹，然后选择“字体和颜色”  。  

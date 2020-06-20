@@ -1,5 +1,5 @@
 ---
-title: '&lt;别名&gt;属性（"别名" 选项卡） |Microsoft Docs'
+title: '&lt;别名 &gt; 属性（"别名" 选项卡） |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 2d1498e2-129c-4ce7-88e5-408e4037243c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2ee874caeaa8be9e7b050336f74bab9487f15884
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 559cc01b1fb2de42c061e21762495019e1896670
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035296"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008352"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>&lt;Alias&gt; 属性（“别名”选项卡）
-  别名是可用于进行连接的备用名称。 别名封装了连接字符串所必需的元素，并使用用户所选择的名称显示这些元素。 使用“**别名>属性”** **\<** 对话框中的“别名”  页查看或指定别名连接字符串的元素。  
+  别名是可用于进行连接的备用名称。 别名封装了连接字符串所必需的元素，并使用用户所选择的名称显示这些元素。 使用 " ** \<**Alias name**> 属性**" 对话框中的 "**别名**" 页可以查看或指定别名连接字符串的元素。  
   
 ## <a name="options"></a>选项  
  **别名**  

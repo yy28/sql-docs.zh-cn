@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 410aa819e2d4af056c53fc30a971625001b1186e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d847c7df84c1d00ed357a40a72839ff52f5737c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702204"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021763"
 ---
 # <a name="sqlputdata"></a>SQLPutData
   当使用 SQLPutData 向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_LONGVARCHAR （ `text` ）、SQL_WLONGVARCHAR （ `ntext` ）或 SQL_LONGVARBINARY （）列发送超过65535个字节的数据（对于版本 4.21 a）或 400 KB 的数据（对于 SQL Server 版本6.0 及更高版本）时，以下限制将适用 `image` ：  

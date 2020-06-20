@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b58a0877-4e43-4fab-a281-24e6022d3fb1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2565eb2be68c1e964b82d46d9aa8fc9f39a01f70
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4bc217ad160a0238cc4247600d65eb32f156071f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165022"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010703"
 ---
 # <a name="execute-scripts-during-synchronization-replication-transact-sql-programming"></a>在同步期间执行脚本（复制 Transact-SQL 编程）
   复制支持事务发布和合并发布的订阅服务器的按需脚本执行。 此功能可将脚本复制到复制工作目录，然后使用 **sqlcmd** 将脚本应用到订阅服务器。 默认情况下，如果在对事务发布的订阅应用脚本时发生故障，分发代理将停止。 您可以使用复制存储过程以编程的方式指定要执行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。  
@@ -32,7 +31,7 @@ ms.locfileid: "74165022"
   
 2.  将此脚本文件保存到此发布的快照代理能访问的位置。  
   
-3.  在发布服务器上，对发布数据库执行 [sp_addscriptexec (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql)。 指定** \@发布**、在步骤2中为** \@scriptfile**创建的具有完整 UNC 路径的脚本文件的名称，并为** \@skiperror**指定以下值之一：  
+3.  在发布服务器上，对发布数据库执行 [sp_addscriptexec (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql)。 指定** \@ 发布**、在步骤2中为** \@ SCRIPTFILE**创建的具有完整 UNC 路径的脚本文件的名称，并为** \@ skiperror**指定以下值之一：  
   
     -   **0** - 如果遇到错误，代理将停止执行脚本。  
   

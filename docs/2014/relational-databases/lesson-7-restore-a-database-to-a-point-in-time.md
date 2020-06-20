@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5b30a9f60f52b8b19875f5fb3c15242ce2c632fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b500c2c9a2e725577ac542b738f2ea6a536cfe34
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175426"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024942"
 ---
 # <a name="lesson-8-restore-a-database-to-azure-storage"></a>第 8 课. 将数据库还原到 Azure 存储
   在本课中，您将学习如何在本地创建备份文件，然后将其还原到 Azure 存储。 请注意，你可以在本地或 Azure 中的虚拟机上使用数据库。 不需要学完第 4、5、6 和 7 课即可听懂本课。  
@@ -73,23 +72,23 @@ ms.locfileid: "70175426"
   
 2.  展开 "**数据库**"，然后选择数据库。  
   
-3.  右键单击数据库，指向“任务”****，再单击“还原”****。  
+3.  右键单击数据库，指向“任务”  ，再单击“还原”  。  
   
 4.  在 "**常规**" 页上的 "**还原**源" 部分中，单击 "**源**设备"。  
   
 5.  单击 "**源**设备" 文本框的浏览按钮，这将打开 "**选择备份设备**" 对话框。  
   
-6.  在 "备份介质" 文本框中，选择 "**文件**"，然后单击 "**添加**" 按钮以找到备份（.bak）文件。 单击“确定”。   
+6.  在 "备份介质" 文本框中，选择 "**文件**"，然后单击 "**添加**" 按钮以找到备份（.bak）文件。 单击“确定”。  
   
 7.  在第一页上单击 "**文件**"。  
   
 8.  在 "将**数据库文件还原**为" 部分中的 "**还原为**" 字段下，键入以下内容：  
   
-     对于数据文件，键入： `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`。 对于日志文件，键入： `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`。  
+     对于数据文件，键入： `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf` 。 对于日志文件，键入： `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf` 。  
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-8-8.gif "SQL 14 CTP2")  
   
-9. 单击“确定”。   
+9. 单击“确定”。  
   
  还原完后，登录到管理门户。 应该能在容器中看到 .mdf 和 .ldf 文件，如下所示：  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ddfb1b83ccb225122edc19860c45480ec1c0c00a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873304"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970410"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>使用 SQL Server Profiler 创建 SQL 跟踪收集组 (SQL Server Management Studio)
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，可以利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的服务器端跟踪功能导出跟踪定义，可使用跟踪定义创建一个使用一般 SQL 跟踪收集器类型的收集组。 此过程分为两个部分：  
@@ -72,7 +71,7 @@ ms.locfileid: "62873304"
   
     1.  在筛选器列表中，单击 **“持续时间”** 。  
   
-    2.  在布尔运算符窗口中，展开 "**大于或等于**" 节点，键入`80`作为值，然后单击 **"确定"**。  
+    2.  在布尔运算符窗口中，展开 "**大于或等于**" 节点，键入 `80` 作为值，然后单击 **"确定"**。  
   
 9. 单击 **“运行”** 以启动跟踪。  
   
@@ -96,7 +95,7 @@ ms.locfileid: "62873304"
   
     -   将 **SQLTrace Collection Set Name Here** 替换为要为收集组使用的名称。 在本示例中，将收集组命名为 `SPROC_CollectionSet`。  
   
-    -   将 **SQLTrace Collection Item Name Here** 替换为要为收集项使用的名称。 对于本示例，请将收集项`SPROC_Collection_Item`命名为。  
+    -   将 **SQLTrace Collection Item Name Here** 替换为要为收集项使用的名称。 对于本示例，请将收集项命名为 `SPROC_Collection_Item` 。  
   
 4.  单击 **“执行”** 运行查询并创建收集组。  
   

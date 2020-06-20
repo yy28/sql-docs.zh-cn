@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 440b5a09-5fd4-4c3a-b510-f3c33cbf1c82
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0eff6dca788744b93d2d6d4a0a7175764e263f71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6cb210be7856566c16f615d90cf879dcae5d6306
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952537"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042715"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>执行帐户（SSRS 本机模式）
   使用此页可以配置用于无人参与处理的帐户。 只有在其他凭据源不可用的以下特殊情况时，才使用此帐户：  
@@ -44,7 +43,7 @@ ms.locfileid: "71952537"
  选择此选项可指定一个帐户。  
   
  **帐户**  
- 输入一个 Windows 域用户帐户。 使用以下格式： * \<域>\\<用户帐户\>*。  
+ 输入一个 Windows 域用户帐户。 使用以下格式： * \<domain> \\<用户帐户 \> *。  
   
  **密码**  
  键入密码。  

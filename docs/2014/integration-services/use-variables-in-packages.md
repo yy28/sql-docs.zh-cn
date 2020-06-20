@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7742e92d-46c5-4cc4-b9a3-45b688ddb787
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 96bfbf87789aa1d683b6368f210539a191f7ee95
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ddf6086306d24c4f92dfef2b9f4522dc2002733f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054693"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972587"
 ---
 # <a name="use-variables-in-packages"></a>在包中使用变量
   变量是对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的有效补充，而且使用非常灵活。它们可以在包中的对象之间以及父包和子包之间提供通信。 变量还可以用在表达式和脚本中。  

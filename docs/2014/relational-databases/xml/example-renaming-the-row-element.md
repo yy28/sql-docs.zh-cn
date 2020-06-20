@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b042292a-0b6e-40a3-b254-71c06e626706
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3780bb0f35c65003f7a5bdb126ca7597786758a9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 867fafaa85e1113a60517311b789bd7cc47d19f0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716906"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048744"
 ---
 # <a name="example-renaming-the-ltrowgt-element"></a>示例：重命名 &lt;row&gt; 元素
   对于结果集中的每一行，RAW 模式都生成一个元素 `<row>`。 您可以通过向 RAW 模式指定一个可选参数为该元素指定另一个名称，如该查询中所示。 该查询为行集中的每一行返回一个 <`ProductModel`> 元素。  

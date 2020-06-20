@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4567668d-35fd-4162-b61f-f7536862cdcb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 29ce1e2c701db485d8251bc9c017a9b192576a7c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8d78b0144e112ca868f990ab87d5c58a798b0c55
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707836"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056417"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>生成多个行集结果的命令
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序可以从语句返回多个行集 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句在以下条件下返回具有多个行集的结果：  

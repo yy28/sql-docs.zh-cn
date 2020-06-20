@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5e60ebbf-8f2d-4d77-a859-e47e0f605cb2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 50a054bbe83c7873d1da93909bc57331fcf4a635
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: daaad6f1c340d92f7bdc6f0b4faf46598cdae31c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055860"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963515"
 ---
 # <a name="send-mail-task-editor-general-page"></a>发送邮件任务编辑器（“常规”页）
   可以使用 **“发送邮件任务编辑器”** 对话框的 **“常规”** 页，对发送邮件任务进行命名和说明。  

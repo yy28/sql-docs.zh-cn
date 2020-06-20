@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0b36a61e-b542-400d-a3d2-e6f643caf2c6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 87027481170d8f72f91b1923ae6703b9796d5541
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b7336a8076a8e6550e3b36d7ba43545f19f61921
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704775"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056048"
 ---
 # <a name="about-ole-db-properties"></a>关于 OLE DB 属性
   使用者设置属性值以请求特定的对象行为。 例如，使用者使用属性以指定要由行集公开的接口。 使用者获得属性值，以确定对象（比如行集、会话或数据源对象）的功能。  

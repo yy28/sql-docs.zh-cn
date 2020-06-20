@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 76e4cfab-4b15-4da4-bb2f-8aac6f927f79
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: daa5635fc64e46dd8b6ccf6b9ab4cf38dc5d492d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d57d1859e12cb86ba18779b104402cc09c979946
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62735890"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056713"
 ---
 # <a name="setdefaults-method-serversettings-class"></a>SetDefaults 方法（ServerSettings 类）
-  设置实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的所有默认值，并提供覆盖现有数据的选项。  
+  设置实例的所有默认值， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 并提供覆盖现有数据的选项。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,7 +40,7 @@ OverwriteAll
   
 ## <a name="parts"></a>组成部分  
  *object*  
- 一个表示[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端实例的[ServerSettings 类](serversettings-class.md)对象。  
+ 一个表示客户端实例的[ServerSettings 类](serversettings-class.md)对象 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="parameters"></a>参数  
   

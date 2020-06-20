@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: df9e157431a8330aed8357231c3b28d12cb4fbc1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 39f22fe37138fab22d79acc5bd667257f392737a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705014"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056301"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>SQL Server 早期版本的新日期和时间功能 (OLE DB)
   本主题介绍当使用增强的日期和时间功能的客户端应用程序与早于的版本通信时的预期行为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ，以及当使用早于的 Native client 版本编译的客户端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 向支持日期和时间增强功能的服务器发送命令时的预期行为。  
@@ -31,19 +30,19 @@ ms.locfileid: "82705014"
   
 |OLE DB 客户端类型|SQL Server 2005 类型|SQL Server 2008 （或更高版本）类型|结果转换（服务器到客户端）|参数转换（客户端到服务器）|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|datetime|日期|确定|确定|  
+|DBTYPE_DBDATE|Datetime|Date|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||时间字段设置为零。|如果时间字段非零，则 IRowsetChange 将因字符串截断而失败。|  
-|DBTYPE_DBTIME||Time(0)|确定|确定|  
+|DBTYPE_DBTIME||Time(0)|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||日期字段设置为当前日期。|如果秒的小数部分为非零，IRowsetChange 将失败，原因是字符串截断。<br /><br /> 日期将被忽略。|  
-|DBTYPE_DBTIME||Time(7)|失败-时间文本无效。|确定|  
-|DBTYPE_DBTIMESTAMP|||失败-时间文本无效。|确定|  
-|DBTYPE_DBTIMESTAMP||Datetime2 （3）|确定|确定|  
-|DBTYPE_DBTIMESTAMP||Datetime2 （7）|确定|确定|  
-|DBTYPE_DBDATE|Smalldatetime|日期|确定|确定|  
+|DBTYPE_DBTIME||Time(7)|失败-时间文本无效。|OK|  
+|DBTYPE_DBTIMESTAMP|||失败-时间文本无效。|OK|  
+|DBTYPE_DBTIMESTAMP||Datetime2 （3）|OK|OK|  
+|DBTYPE_DBTIMESTAMP||Datetime2 （7）|OK|OK|  
+|DBTYPE_DBDATE|Smalldatetime|Date|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||时间字段设置为零。|如果时间字段非零，则 IRowsetChange 将因字符串截断而失败。|  
-|DBTYPE_DBTIME||Time(0)|确定|确定|  
+|DBTYPE_DBTIME||Time(0)|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||日期字段设置为当前日期。|如果秒的小数部分为非零，IRowsetChange 将失败，原因是字符串截断。<br /><br /> 日期将被忽略。|  
-|DBTYPE_DBTIMESTAMP||Datetime2(0)|确定|确定|  
+|DBTYPE_DBTIMESTAMP||Datetime2(0)|OK|OK|  
   
  “可以”表示如果已适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，应继续适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本）。  
   

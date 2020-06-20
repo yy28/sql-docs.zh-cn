@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c5aa2bd118d99afea6a1ee6ea8f41c646146c32f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ecbca9e7838c4c9395a8bcb6e11351c40f7037f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162445"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049887"
 ---
 # <a name="indexes-on-computed-columns"></a>计算列上的索引
   只要满足下列要求就可以为计算列定义索引：  
@@ -88,7 +87,7 @@ ms.locfileid: "63162445"
   
  **Data Type Requirements**  
   
--   为计算列定义的*computed_column_expression*的计算结果不能`text`为`ntext`、或`image`数据类型。  
+-   为计算列定义的*computed_column_expression*的计算结果不能为 `text` 、 `ntext` 或 `image` 数据类型。  
   
 -   只要计算列的数据类型可以作为索引键列，从 `image`、`ntext`、`text`、`varchar(max)`、`nvarchar(max)`、`varbinary(max)` 和 `xml` 数据类型派生的计算列上就可以创建索引。  
   
@@ -117,7 +116,7 @@ ms.locfileid: "63162445"
      当数据库兼容级别设置为 90 或更高时，如果将 ANSI_WARNINGS 设置为 ON，则将使 ARITHABORT 隐式设置为 ON。  
   
 ##  <a name="creating-indexes-on-persisted-computed-columns"></a><a name="BKMK_persisted"></a> 对持久化计算列创建索引  
- 如果计算列使用确定性但不精确的表达式定义，但在 CREATE TABLE 或 ALTER TABLE 语句中标记为 PERSISTED，则可以在该列上创建索引。 这意味着，在[!INCLUDE[ssDE](../../../includes/ssde-md.md)]对列创建索引时，以及在查询中引用该索引时，将使用这些持久值。 使用此选项可以在时[!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)]对计算列创建索引，但这既是确定性的，也是精确的。  
+ 如果计算列使用确定性但不精确的表达式定义，但在 CREATE TABLE 或 ALTER TABLE 语句中标记为 PERSISTED，则可以在该列上创建索引。 这意味着，在对 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 列创建索引时，以及在查询中引用该索引时，将使用这些持久值。 使用此选项可以在时对计算列创建索引，但这 [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)] 既是确定性的，也是精确的。  
   
 ## <a name="related-content"></a>相关内容  
  [COLUMNPROPERTY (Transact-SQL)](/sql/t-sql/functions/columnproperty-transact-sql)  

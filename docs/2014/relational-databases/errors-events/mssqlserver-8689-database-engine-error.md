@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 99467a32-6576-4272-a076-b16c06933f2a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9f0853d7db0664e75140c0e5478af19c233a2517
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2cdca0a3cd9ce47ccb39ebeaf8fd1cd260aafbd9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761713"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85031653"
 ---
 # <a name="mssqlserver_8689"></a>MSSQLSERVER_8689
     
@@ -39,7 +38,7 @@ ms.locfileid: "62761713"
  请确保在 USE PLAN 提示中指定的所有数据库均存在。  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;的查询提示 &#40;](/sql/t-sql/queries/hints-transact-sql-query)   
+ [查询提示 (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query)   
  [计划指南](../performance/plan-guides.md)  
   
   

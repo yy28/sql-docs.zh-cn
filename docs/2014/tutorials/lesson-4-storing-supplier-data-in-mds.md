@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bacd9eaf-4d12-4f25-aec7-d785dec1b623
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 678a7d6ce075e6a1082856aa7962bb3f6eec522d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15f15ff1fd48321ed4f13826fb239b6cede46242
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489711"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006672"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>第 4 课：在 MDS 中存储供应商数据
   Master Data Services (MDS) 是用于主数据管理的 SQL Server 解决方案。 主数据管理 (MDM) 描述组织为发现和定义数据的非事务性列表而付出的努力。  
@@ -34,7 +33,7 @@ ms.locfileid: "65489711"
   
 1.  使用**主数据管理器 Web 应用程序**在**MDS**中创建**供应商**模型。  
   
-2.  在 Excel 中打开**清理和匹配的供应商数据**，并使用**MDS Add-in for Excel**创建一个名为 "**供应商**" 的实体，然后将数据上载到 MDS。  
+2.  在 Excel 中打开**清理和匹配的供应 Data.xls** ，并使用**MDS Add-in for Excel**创建一个名为 "**供应商**" 的实体，然后将数据上载到 MDS。  
   
 3.  使用**主数据管理器**验证是否在 MDS 中创建了数据。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "65489711"
   
 8.  通过使用 "**供应商**" 实体与 "**状态**" 实体（供应商实体的 "状态" 属性为 "状态" 实体类型**主数据管理器**）之间的基于域的属性关系创建和使用派生层次结构。  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
  [任务 1：使用主数据管理器创建供应商模型](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
   
   

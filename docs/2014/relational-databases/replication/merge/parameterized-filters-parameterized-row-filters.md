@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 905a0a4189a97b6cd8ef3cc461f805adf0afd727
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a293d5dfc6bfbdf66afb680f0604117e2cc02b2d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "68210703"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010532"
 ---
 # <a name="parameterized-row-filters"></a>Parameterized Row Filters
   参数化行筛选器允许将不同分区的数据发送到不同的订阅服务器，而无需创建多个发布（在早期版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，参数化筛选器称为“动态筛选器”）。 分区是表中行的子集；根据创建参数化行筛选器时选择的设置，已发布表中的每一行可以仅属于一个分区（生成不重叠的分区），也可以属于两个或多个分区（生成重叠分区）。  
@@ -47,7 +46,7 @@ ms.locfileid: "68210703"
   
      也可以使用非订阅服务器名称或分发服务器名称的值来覆盖此函数。 应用程序通常会用更有意义的值来覆盖此函数，如销售人员姓名或销售人员 ID。 有关详细信息，请参阅本主题中的“覆盖 HOST_NAME() 值”部分。  
   
- 将系统函数返回的值与在要筛选的表中指定的列进行比较，并将相应的数据下载到订阅服务器。 此比较是在初始化订阅时（因此初始快照中仅包含相应的数据）和每次同步订阅时进行的。 默认情况下，如果发布服务器上的更改导致行移出分区，则该行将从订阅服务器上删除（此行为是使用[&#40;transact-sql&#41;sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)的**@allow_partition_realignment**参数控制的。  
+ 将系统函数返回的值与在要筛选的表中指定的列进行比较，并将相应的数据下载到订阅服务器。 此比较是在初始化订阅时（因此初始快照中仅包含相应的数据）和每次同步订阅时进行的。 默认情况下，如果发布服务器上的更改导致行移出分区，则该行将从订阅服务器上删除（此行为是使用 **@allow_partition_realignment** [&#40;transact-sql&#41;sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)的参数控制的。  
   
 > [!NOTE]  
 >  对参数化筛选器进行比较时，将始终使用数据库排序规则。 例如，如果数据库排序规则不区分大小写，而表或列排序规则区分大小写，那么该比较将不区分大小写。  
@@ -94,15 +93,15 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  例如，为雇员 Pamela Ansman-Wolfe 分配的雇员 ID 为 280。 为此雇员创建订阅时，为 HOST_NAME() 值指定雇员 ID 值（在此例中为 280）。 合并代理连接到发布服务器时，会将 HOST_NAME() 返回的值与表中的值进行比较，并仅下载 **EmployeeID** 列中值为 280 的行。  
   
 > [!IMPORTANT]
->  HOST_NAME() 函数会返回 `nchar` 值，因此如果筛选子句中的列为数值数据类型（如前面示例所示），则必须使用 CONVERT。 出于性能方面的考虑，建议您不要对参数化行筛选器子句（如 `CONVERT(nchar,EmployeeID) = HOST_NAME()`）中的列名应用函数。 建议改为使用示例中所示的方法： `EmployeeID = CONVERT(int,HOST_NAME())`。 此子句可用于**@subset_filterclause** [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)的参数，但通常不能在新建发布向导中使用（该向导会执行筛选子句以对其进行验证，因为计算机名称无法转换为`int`）。 如果使用的是新建发布向导，建议在向导中指定 `CONVERT(nchar,EmployeeID) = HOST_NAME()` ，然后在为发布创建快照之前，使用 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 将子句更改为 `EmployeeID = CONVERT(int,HOST_NAME())` 。  
+>  HOST_NAME() 函数会返回 `nchar` 值，因此如果筛选子句中的列为数值数据类型（如前面示例所示），则必须使用 CONVERT。 出于性能方面的考虑，建议您不要对参数化行筛选器子句（如 `CONVERT(nchar,EmployeeID) = HOST_NAME()`）中的列名应用函数。 建议改为使用示例中所示的方法： `EmployeeID = CONVERT(int,HOST_NAME())`。 此子句可用于 **@subset_filterclause** [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)的参数，但通常不能在新建发布向导中使用（该向导会执行筛选子句以对其进行验证，因为计算机名称无法转换为 `int` ）。 如果使用的是新建发布向导，建议在向导中指定 `CONVERT(nchar,EmployeeID) = HOST_NAME()` ，然后在为发布创建快照之前，使用 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 将子句更改为 `EmployeeID = CONVERT(int,HOST_NAME())` 。  
   
  **覆盖 HOST_NAME() 值**  
   
  使用下列方法之一覆盖 HOST_NAME() 值：  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：在新建订阅向导的“HOST**NAME\_\( 值”\)** 页中，指定一个值。 有关创建订阅的详细信息，请参阅[订阅发布](../subscribe-to-publications.md)。  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：在新建订阅向导的“HOST\_NAME\(\) 值”页中，指定一个值。 有关创建订阅的详细信息，请参阅[订阅发布](../subscribe-to-publications.md)。  
   
--   复制[!INCLUDE[tsql](../../../includes/tsql-md.md)]编程：指定**@hostname** [sp_addmergesubscription &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)的参数的值（适用于推送订阅）或[sp_addmergepullsubscription_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) （对于请求订阅）。  
+-   复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 编程：指定 **@hostname** [sp_addmergesubscription &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)的参数的值（适用于推送订阅）或[sp_addmergepullsubscription_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) （对于请求订阅）。  
   
 -   合并代理：在命令行中或通过代理配置文件指定 **-Hostname** 参数的值。 有关合并代理的详细信息，请参阅 [Replication Merge Agent](../agents/replication-merge-agent.md)。 有关代理配置文件的详细信息，请参阅 [Replication Agent Profiles](../agents/replication-agent-profiles.md)。  
   
@@ -119,7 +118,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  若要设置筛选选项，请参阅 [Optimize Parameterized Row Filters](../publish/optimize-parameterized-row-filters.md)。  
   
 ### <a name="setting-use-partition-groups-and-keep-partition-changes"></a>设置“use partition groups”和“keep partition changes”  
- **use partition groups** 选项和 **keep partition changes** 选项通过在发布数据库中存储其他元数据提高具有筛选项目的发布的同步性能。 **use partition groups** 选项通过使用预计算分区功能进一步提高性能。 如果发布中的项目符合一组要求，则此选项在默认情况下将设置为 `true`。 有关这些要求的详细信息，请参阅[使用预计算分区优化参数化筛选器性能](parameterized-filters-optimize-for-precomputed-partitions.md)。 如果项目不符合使用预计算分区的要求，则 "将**分区更改**" 选项设置为`true`。  
+ **use partition groups** 选项和 **keep partition changes** 选项通过在发布数据库中存储其他元数据提高具有筛选项目的发布的同步性能。 **use partition groups** 选项通过使用预计算分区功能进一步提高性能。 如果发布中的项目符合一组要求，则此选项在默认情况下将设置为 `true`。 有关这些要求的详细信息，请参阅[使用预计算分区优化参数化筛选器性能](parameterized-filters-optimize-for-precomputed-partitions.md)。 如果项目不符合使用预计算分区的要求，则 "将**分区更改**" 选项设置为 `true` 。  
   
 ### <a name="setting-partition-options"></a>设置“partition options”  
  创建项目时，根据订阅服务器共享已筛选表中的数据的方式，指定 **partition options** 属性的值。 可以使用 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)和 **“项目属性”** 对话框，将该属性设置为四个值中的一个。 可以使用 **“添加筛选器”** 或 **“编辑筛选器”** 对话框（可以通过新建发布向导和 **“发布属性”** 对话框访问），将该属性设置为两个值中的一个。 下表总结了可用的值：  

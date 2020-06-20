@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5f85df61f612cb91d39b15e6c91e2fb8495c2347
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fe1d4e6989984ef96d525adafc6518cb55b8576b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701932"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019126"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>从程序变量大容量复制数据 (ODBC)
   此示例演示如何通过 `bcp_bind` 和 `bcp_sendrow` 使用大容量复制函数将数据从程序变量大容量复制到 SQL Server。 （为简化此示例，已删除错误检查代码。）  
