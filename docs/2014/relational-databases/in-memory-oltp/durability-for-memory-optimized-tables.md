@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: fb0f2dec6ac7ad68a6a1aa1de8d4734f99559b54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1d48d671b23d7b7b17557e7829d6f2522c375acd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175941"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050221"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>内存优化表的持续性
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 为内存优化表提供完整持续性。 提交更改内存优化表的事务时，假设基础存储可用， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] （就像对基于磁盘的表一样）会保证更改是永久的（数据库重新启动时仍然有效）。 持续性有两个重要方面：事务日志记录和在磁盘存储上持久保存数据更改。
@@ -52,7 +51,7 @@ ms.locfileid: "78175941"
 
  合并操作该操作合并一个或多个数据和差异文件对，并创建新的数据和差异文件对。
 
- 当重新启动或[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据库重新联机时，在崩溃恢复期间，将使用数据和差异文件对来填充内存优化数据。 从对应的数据文件读取行时，差异文件充当用于已删除行的筛选器。 由于每个数据和差异文件对均独立，因此并行加载这些文件以缩短将数据填充到内存中所用的时间。 将数据载入内存后，内存中 OLTP 引擎即应用检查点文件尚未涵盖的活动事务日志记录，以使内存优化的数据完整。
+ 当 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 重新启动或数据库重新联机时，在崩溃恢复期间，将使用数据和差异文件对来填充内存优化数据。 从对应的数据文件读取行时，差异文件充当用于已删除行的筛选器。 由于每个数据和差异文件对均独立，因此并行加载这些文件以缩短将数据填充到内存中所用的时间。 将数据载入内存后，内存中 OLTP 引擎即应用检查点文件尚未涵盖的活动事务日志记录，以使内存优化的数据完整。
 
  在还原操作过程中，将从数据库备份创建内存中 OLTP 检查点文件，然后应用一个或多个事务日志备份。 与崩溃恢复一样，内存中 OLTP 引擎将数据并行加载到内存中，以最大程度减小对恢复时间的影响。
 

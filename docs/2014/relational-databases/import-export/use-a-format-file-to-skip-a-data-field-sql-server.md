@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6a76517e-983b-47a1-8f02-661b99859a8b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f880dcacbd4571c188d0368a0378a89c45787af2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d3f78c3c97c5bbe862867d5f51ff35f57d147df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011716"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026345"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>使用格式化文件跳过数据字段 (SQL Server)
   数据文件所包含的字段数可能大于表中的列数。 本主题说明了通过修改非 XML 和 XML 格式化文件，将表中的列映射到相应的数据字段并忽略额外字段，从而能够使用具有较多字段的数据文件。  
@@ -30,7 +29,7 @@ ms.locfileid: "66011716"
  本主题中修改的格式化文件示例基于下面的表和数据文件。  
   
 ### <a name="sample-table"></a>示例表  
- 这些示例要求在 `myTestSkipField` 示例数据库中的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 架构下创建名为 `dbo` 的表。 若要创建此表， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]请在查询编辑器中运行以下代码：  
+ 这些示例要求在 `myTestSkipField` 示例数据库中的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 架构下创建名为 `dbo` 的表。 若要创建此表，请在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查询编辑器中运行以下代码：  
   
 ```  
 USE AdventureWorks2012;  

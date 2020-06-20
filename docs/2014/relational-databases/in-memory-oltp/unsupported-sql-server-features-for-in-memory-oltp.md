@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4a5ec9cefd0106a8e6eb4d796921efe147bea446
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e7eb4324d56c3ab45486063cb8097603ac3a416b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702217"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050012"
 ---
 # <a name="supported-sql-server-features"></a>支持的 SQL Server 功能
   本主题讨论内存优化表支持或不支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。  
@@ -33,7 +32,7 @@ ms.locfileid: "82702217"
   
 -   多版本控制和积极并发控制。 有关详细信息，请参阅 [Transaction Isolation Levels](../../database-engine/transaction-isolation-levels.md)。  
   
--   备份和还原包含内存优化数据文件组的数据库。 有关详细信息，请参阅 [SQL Server 数据库的备份和还原](../backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
+-   备份和还原包含内存优化数据文件组的数据库。 有关详细信息，请参阅[SQL Server 数据库的备份和还原](../backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
   
 -   目录视图、动态管理视图和可支持性扩展事件。 有关详细信息，请参阅[系统视图、存储过程、内存中 OLTP 的 DMV 和等待类型](../../database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md)。  
   
@@ -88,12 +87,12 @@ ms.locfileid: "82702217"
 |链接服务器|有关详细信息，请参阅 [链接服务器（数据库引擎）](../linked-servers/linked-servers-database-engine.md)。|  
 |大容量日志记录|无论数据库处于什么恢复模式，都将始终完整记录针对持久内存优化表的所有操作的日志。|  
 |最小日志记录|内存优化表不支持最小日志记录。 有关最小日志记录的详细信息，请参阅[事务日志 (SQL Server)](../logs/the-transaction-log-sql-server.md) 和[在批量导入中按最小方式记录日志的前提条件](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。|  
-|更改跟踪|可在包含内存中 OLTP 对象的数据库上启用更改跟踪。 但是，在内存优化表上的更改不会被跟踪。|  
+|Change tracking|可在包含内存中 OLTP 对象的数据库上启用更改跟踪。 但是，在内存优化表上的更改不会被跟踪。|  
 |DDL 触发器|内存中 OLTP 表和本机编译的存储过程不支持数据库级别和服务器级别的 DDL 触发器。|  
 |变更数据捕获 (CDC)|不应在包含内存中 OLTP 对象的数据库上启用 CDC，因为它会阻止某些操作，如 DROP。|  
 |数据库包含|包含本机编译存储过程和内存优化表的数据库不支持数据库包含。 有关详细信息，请参阅 [Contained Databases](../databases/contained-databases.md)|  
 |上下文连接|不支持使用上下文连接从 CLR 存储过程内部访问内存优化表。|  
-|游标|访问内存优化表的查询上的键集和动态游标。 这些查询将降级为静态（变成只读）。|  
+|光标|访问内存优化表的查询上的键集和动态游标。 这些查询将降级为静态（变成只读）。|  
 |TABLESTAMP|不支持 TABLESTAMP。 有关详细信息，请参阅 [FROM (Transact-SQL)](/sql/t-sql/queries/from-transact-sql)。|  
 |AUTO_CLOSE|不支持 AUTO_CLOSE。 有关详细信息，请参阅 [Set the AUTO_CLOSE Database Option to OFF](../policy-based-management/set-the-auto-close-database-option-to-off.md)。|  
 |数据库快照|不支持数据库快照。 有关详细信息，请参阅[数据库快照 (SQL Server)](../databases/database-snapshots-sql-server.md)。|  

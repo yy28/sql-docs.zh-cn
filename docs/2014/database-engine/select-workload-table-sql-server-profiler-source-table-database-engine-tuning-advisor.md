@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 51185be7-7092-480a-a52c-cf7786c4a0a0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 973680d07c3bd6a304e63f4b3fde0e228f0f7bff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c706613c828ce579af27a8c5a6890936a31814ca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088883"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929251"
 ---
 # <a name="sql-server-profiler---source-table-database-engine-tuning-advisor---select-workload-table"></a>SQL Server Profiler 源表-数据库引擎优化顾问-选择工作负荷表
   Microsoft [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]和 [!INCLUDE[ssDE](../includes/ssde-md.md)]优化顾问使用此对话框来选择表。  
@@ -39,11 +38,11 @@ ms.locfileid: "66088883"
  **所有者**  
  Specifies the owner of the trace table. 此字段将自动填充为 **dbo**。  
   
- **表**  
+ **表格**  
  指定将从中读取跟踪的跟踪表的名称。  
   
 ## <a name="see-also"></a>另请参阅  
- [将跟踪结果保存到表 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
+ [将跟踪结果保存到表 (SQL Server Profiler)](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
  [SQL Server Profiler 模板和权限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Database Engine Tuning Advisor](../relational-databases/performance/database-engine-tuning-advisor.md)  
   

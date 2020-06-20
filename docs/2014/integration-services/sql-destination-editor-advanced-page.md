@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9b46bcf8-ddaf-4d7d-90a6-80bc19517e9b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 087f32510b65d7ea505bc4bf816a5ca9edcfe82d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7a3cdc57f48c61894a51386c5671c98e00ba711
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055461"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962708"
 ---
 # <a name="sql-destination-editor-advanced-page"></a>SQL 目标编辑器（“高级”页）
   可以使用 **“SQL 目标编辑器”** 对话框的 **“高级”** 页指定大容量插入高级选项。  

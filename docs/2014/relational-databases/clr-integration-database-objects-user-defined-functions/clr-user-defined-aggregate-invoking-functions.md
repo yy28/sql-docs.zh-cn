@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8f70a2df2fd824d8a0021a0985d6f75e79efce48
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81ddf552e71bdd0b83c8082c2bd84450f6088e5f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919606"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954663"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>调用 CLR 用户定义聚合函数
   在 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句中，您可以根据适用于系统聚合函数的所有规则调用公共语言运行时 (CLR) 用户定义聚合。  
@@ -34,9 +33,9 @@ ms.locfileid: "62919606"
   
 -   用户定义聚合必须使用由两部分组成的名称来调用，格式为*schema_name. udagg_name*。  
   
--   用户定义聚合的参数类型必须匹配或可隐式转换为聚合的*input_type* ，如语句中所`CREATE AGGREGATE`定义。  
+-   用户定义聚合的参数类型必须匹配或可隐式转换为聚合的*input_type* ，如语句中所定义 `CREATE AGGREGATE` 。  
   
--   用户定义聚合的返回类型必须与`CREATE AGGREGATE`语句中的*return_type*匹配。  
+-   用户定义聚合的返回类型必须与语句中的*return_type*匹配 `CREATE AGGREGATE` 。  
   
 ## <a name="example-1"></a>示例 1  
  以下是一个用户定义聚合函数的示例，该函数从某个表的一列中获取一组字符串值，然后将这些值连接起来：  
@@ -196,7 +195,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- 将代码编译到**MyAgg**中后，可以按如下所示在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]注册聚合：  
+ 将代码编译到**MyAgg.dll**后，可以按如下所示在中注册聚合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  

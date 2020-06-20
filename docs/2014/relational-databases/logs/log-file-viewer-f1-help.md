@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3ce118fb3234d45ae0606fb4bcc99777a945acda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6eadb4baa4a47202b40a9cde1eca896022f31d7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63143823"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049788"
 ---
 # <a name="log-file-viewer-f1-help"></a>日志文件查看器 F1 帮助
   日志文件查看器显示来自许多不同组件的日志信息。 打开日志文件查看器后，请使用 **“选择日志”** 窗格选择要显示的日志。 每个日志显示适合于该类别日志的列。  
@@ -48,13 +47,13 @@ ms.locfileid: "63143823"
  停止加载日志文件条目。 例如，如果远程或脱机日志文件需要较长时间才能加载，并且您只想查看最新的条目，则可以使用此选项。  
   
  **日志文件摘要**  
- 此信息窗格显示日志文件筛选摘要。 如果未对文件进行筛选，您将看到以下文本： **“未应用任何筛选器”** 。 如果对日志应用了筛选器，你将看到以下文本：“基于以下条件筛选日志条目: **筛选条件>”** \<。  
+ 此信息窗格显示日志文件筛选摘要。 如果未对文件进行筛选，您将看到以下文本： **“未应用任何筛选器”** 。 如果对日志应用了筛选器，将看到以下文本：基于以下条件筛选日志项：**** \<filter criteria>。  
   
  **所选行详细信息**  
  选择一行可以在页面底部显示有关所选事件行的其他详细信息。 在网格中，通过将列拖动到的新位置可以重新排列各列的顺序。 通过将网格标题中的列分隔条向左或向右拖动，可以调列的大小。 双击网格标题中的列分隔条，可以按内容宽度自动调整列的大小。  
   
  **实例**  
- 发生事件的实例的名称。 这显示为：计算机名称*实例名称*\\  。  
+ 发生事件的实例的名称。 这显示为：计算机名称\\实例名称。  
   
 ## <a name="frequently-displayed-columns"></a>经常显示的列  
  **Date**  

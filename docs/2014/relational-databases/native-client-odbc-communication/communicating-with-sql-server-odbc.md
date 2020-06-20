@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cca3dcf0-2a7e-465a-84de-7ce055360eb6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 015cec73c97a3a02179bb65735aaed4dd4f0da6c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c41ac2dcce9c5bdbdd351148d16bcaa8f067d22f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702064"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021202"
 ---
 # <a name="communicating-with-sql-server-odbc"></a>与 SQL Server 通信 (ODBC)
   对于要与实例通信的 ODBC 应用程序 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，它必须分配环境和连接句柄并连接到数据源。 在建立连接后，应用程序可以向服务器发送查询并处理任意结果集。 应用程序使用完数据源后，它断开与数据源的连接并释放连接句柄。 应用程序释放所有连接句柄后，将释放环境句柄。  

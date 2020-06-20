@@ -34,13 +34,12 @@ helpviewer_keywords:
 ms.assetid: 4a3cb94a-a7ac-4cec-94c7-db26fcf6d161
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fc3a08e707f6b51059145c69fdee15f78c933135
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f52afcfdaa7de33d83d64a049f9a350f0463b4c6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091231"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062347"
 ---
 # <a name="using-reports"></a>使用报表
   系统会针对每个组件生成单独的报表，并且必要时会为升级顾问分析向导在服务器上分析的每个实例生成单独的报表。 报表用于提供有关影响升级的已知问题的详细信息。 它还提供指向信息的链接，并提供用于解决确定的问题的建议操作。  
@@ -77,7 +76,7 @@ ms.locfileid: "66091231"
  展开某一问题后，可显示相应的附加信息、指向有关如何解决该问题的详细信息的链接以及指向显示问题详细信息的链接。 在单击用以获取该问题的详细信息的链接后，将会显示一个帮助主题，其中显示有关该问题的信息以及有关如何解决该问题的信息。 解决问题或管理操作项后，可以通过选中 "**此问题已解决**" 复选框，将问题标记为完成。 如果要从升级问题列表中删除已解决的问题，请单击 "**刷新**"。 在对同一组件运行升级顾问分析向导或从 "**筛选依据**" 选项应用 "**已解决的问题**" 筛选器之前，不会再次显示此问题。  
   
 ## <a name="report-files"></a>报表文件  
- 升级顾问分析向导会在 My Documents\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor\110\Reports 目录中创建报告，并为您分析的每个服务器创建一个子目录。 报表文件为遵循特定的命名约定的 XML 文件。 启动升级顾问报表查看器后，将显示默认目录中的报表文件。 如果要将报表文件复制到此文件夹，则报表文件必须遵循相应的命名约定，否则报表查看器不会自动显示这些报表文件。  
+ 升级顾问分析向导会在 My Documents \\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor\110\Reports 目录中创建报告，并为您分析的每个服务器创建一个子目录。 报表文件为遵循特定的命名约定的 XML 文件。 启动升级顾问报表查看器后，将显示默认目录中的报表文件。 如果要将报表文件复制到此文件夹，则报表文件必须遵循相应的命名约定，否则报表查看器不会自动显示这些报表文件。  
   
  如果您希望与他人共享信息，可向他们发送 XML 报表。 或者，如果您希望使用其他应用程序，可将报表导出为可用于创建电子表格、文本文件或电子邮件的逗号分隔值文件。  
   

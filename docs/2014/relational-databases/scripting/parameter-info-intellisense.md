@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 56c2aac9-c65c-4679-b62c-d9f689876dde
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b50c09f27b458fcb2d940a639bee9cb76c1c0044
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b44033b0af52372e6da8efc68a8916164c2f862e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703782"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009633"
 ---
 # <a name="parameter-info-intellisense"></a>参数信息 (IntelliSense)
   使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 的 **“参数信息”** 选项可打开一个参数列表，其中提供了有关函数或存储过程所需的参数数目、参数名称和参数类型的信息。 以粗体显示的参数指示键入某个函数或存储过程时所需的下一个参数。  

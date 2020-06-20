@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 9244f32b2ee9921d1caaa63b5d6aae9c324049ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fdd093d99d055df8e15fc22e3e570e6805e35d6e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014211"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003307"
 ---
 # <a name="multilinestring"></a>MultiLineString
-  `MultiLineString`是零个或多个`geometry`实例或**geographyLineString**实例的集合。  
+  `MultiLineString`是零个或多个 `geometry` 实例或**geographyLineString**实例的集合。  
   
 ## <a name="multilinestring-instances"></a>MultiLineString 实例  
  下图显示了 `MultiLineString` 实例的示例。  
@@ -29,7 +28,7 @@ ms.locfileid: "66014211"
   
  如图中所示：  
   
--   图1是一个简单`MultiLineString`的实例，其边界是其两个`LineString`元素的四个终结点。  
+-   图1是一个简单的 `MultiLineString` 实例，其边界是其两个元素的四个终结点 `LineString` 。  
   
 -   图 2 显示的是一个简单的 `MultiLineString` 实例，因为只有 `LineString` 元素的端点相交。 边界是两个不重叠的端点。  
   
@@ -37,12 +36,12 @@ ms.locfileid: "66014211"
   
 -   图 4 显示的是一个不简单、非闭合的 `MultiLineString` 实例。  
   
--   图 5 显示的是一个简单、非闭合的 `MultiLineString`。 它不会关闭，因为`LineStrings`它的元素未关闭。 而其简单的原因在于，其任何 `LineStrings` 实例的内部都没有出现相交。  
+-   图 5 显示的是一个简单、非闭合的 `MultiLineString`。 它不会关闭，因为它的 `LineStrings` 元素未关闭。 而其简单的原因在于，其任何 `LineStrings` 实例的内部都没有出现相交。  
   
 -   图 6 显示的是一个简单、闭合的 `MultiLineString` 实例。 它为闭合的是因为它的所有元素都是闭合的。 而其简单的原因在于，其所有元素都没有出现内部相交现象。  
   
 ### <a name="accepted-instances"></a>接受的实例  
- 为使 `MultiLineString` 实例可接受，它必须或者为空，或者仅由接受的 `LineString` 实例组成。 有关接受`LineString`的实例的详细信息，请参阅[LineString](../spatial/linestring.md)。 下面的示例显示接受的 `MultiLineString` 实例。  
+ 为使 `MultiLineString` 实例可接受，它必须或者为空，或者仅由接受的 `LineString` 实例组成。 有关接受的实例的详细信息 `LineString` ，请参阅[LineString](../spatial/linestring.md)。 下面的示例显示接受的 `MultiLineString` 实例。  
   
 ```  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  

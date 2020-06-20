@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a7c0cd60-3bec-42be-ad5e-473bd26a06d9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 101badf320f72887d6eb9669224d24fff5b9a299
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a98bdf472c86a3e608da768d884897600efa476
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663642"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030314"
 ---
 # <a name="clr-event-category"></a>CLR 事件类别
   **CLR** 事件类别包括由于在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 内执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]公共语言运行时 (CLR) 对象而生成的事件类。  

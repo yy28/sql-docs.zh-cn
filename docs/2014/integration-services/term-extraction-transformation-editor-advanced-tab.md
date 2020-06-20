@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 87118281-6e3c-499e-bac4-fa4c24bb12c6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bc333bae08cd9ec658b6e8050b869d1232dbe629
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c783a06d5d5518639e6368f5c1eb572e60206b5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055271"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962257"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>字词提取转换编辑器（“高级”选项卡）
   可以使用 **“字词提取转换编辑器”** 对话框的 **“高级”** 选项卡，指定频率、长度等提取属性以及指定是提取字词还是提取短语。  
@@ -49,7 +48,7 @@ ms.locfileid: "66055271"
  指定短语的最大长度（字）。 此选项仅影响名词短语。 默认值为 12。  
   
  **使用区分大小写的字词提取**  
- 指定是否将提取设置为区分大小写。 默认值为 `False`。  
+ 指定是否将提取设置为区分大小写。 默认为 `False`。  
   
  **配置错误输出**  
  使用[“配置错误输出” ](../../2014/integration-services/configure-error-output.md) 对话框可以为导致错误的行指定错误处理方式。  

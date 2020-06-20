@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ffd3442e-d880-46e9-b848-2365a09a2406
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 306abff20146ec5004b515578f5c71b8cb574bba
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 20a91d26ac8c2d1201386cb19bde13b49a3dbada
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718864"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999007"
 ---
 # <a name="bound-vs-unbound-text-and-image-columns"></a>绑定与未绑定的 Text 和 Image 列
   使用服务器游标时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驱动程序会经过优化，以便在执行**SQLFetch**时不传输未绑定的**text**、 **ntext**或**image**列的数据。 在应用程序为列发出[SQLGetData](../native-client-odbc-api/sqlgetdata.md)之前，不会实际从服务器中检索**text**、 **ntext**或**image**数据。  

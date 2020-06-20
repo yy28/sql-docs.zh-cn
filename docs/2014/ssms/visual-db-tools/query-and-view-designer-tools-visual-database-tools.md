@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 12e4b5a5-b793-4b6c-a0e5-c450c49bf26f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 639e6b7640f3463bfe100345d044437d619a5546
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29bd3fa9e171551197927aae0d1bc00446df6e7f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63460013"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064936"
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>查询和视图设计器工具 (Visual Database Tools)
   在设计查询、视图、内嵌函数或单语句存储过程时，所使用的设计器由四个窗格组成：“关系图”窗格、“条件”窗格、SQL 窗格和“结果”窗格。  

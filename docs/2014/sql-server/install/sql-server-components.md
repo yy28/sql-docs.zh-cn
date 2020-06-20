@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 514524f063bf78ceb4862612dd8c78ce8cf78fc4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 809705e50e9337a63bf33c2883a1e5d43197be09
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811086"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036278"
 ---
 # <a name="sql-server-components"></a>SQL Server 组件
-  您可以对安装[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]了、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]的本地或远程计算机运行升级顾问分析向导。 升级前分析的第一步是确定要分析的计算机和组件。  
+  您可以对 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 安装了、、或的本地或远程计算机运行升级顾问分析 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 向导 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 。 升级前分析的第一步是确定要分析的计算机和组件。  
   
 ## <a name="options"></a>选项  
  **计算机名称**  

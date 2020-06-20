@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: e15d8169-3517-4323-9c9e-0f5c34aff7df
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: aa78cc2d4d27fdfb1db6333f21685263d22dd97e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 02beb2a4201cc4823ce84b95d9ee0b262ec16723
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707177"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011116"
 ---
 # <a name="using-user-defined-types"></a>使用用户定义类型
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 介绍了用户定义类型 (UDT)。 UDT 可将对象和自定义数据结构存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中，从而扩展了 SQL 类型系统。 UDT 可以包含多种数据类型并且可具有行为，这使它们不同于由单一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 系统数据类型构成的传统别名数据类型。 使用生成可验证代码的 .NET 公共语言运行时 (CLR) 所支持的任何语言都可以定义 UDT， 这包括 Microsoft Visual c #<sup>？</sup> 并 Visual Basic<sup>？</sup> NET. 数据公开为 .NET 类或结构的字段和属性，行为则由类或结构的方法来定义。  
@@ -51,7 +50,7 @@ ms.locfileid: "82707177"
 |DBTYPE_STR|支持<sup>3,6</sup>|N/A<sup>2</sup>|支持<sup>4,6</sup>|N/A<sup>2</sup>|  
 |DBTYPE_IUNKNOWN|不支持|N/A<sup>2</sup>|不支持|N/A<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支持<sup>6</sup>|N/A<sup>2</sup>|支持<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|支持<sup>3,6</sup>|N/A<sup>2</sup>|不可用|N/A<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|支持<sup>3,6</sup>|N/A<sup>2</sup>|空值|N/A<sup>2</sup>|  
   
  <sup>1</sup>如果使用 ICommandWithParameters::SetParameterInfo 指定 DBTYPE_UDT 之外的服务器类型，而取值函数类型为 DBTYPE_UDT，则执行该语句时将出错（DB_E_ERRORSOCCURRED；参数状态为 DBSTATUS_E_BADACCESSOR）****。 否则，数据发送到服务器，但服务器会返回错误，指明不存在将 UDT 转换为参数的数据类型的隐式转换。  
   
@@ -148,7 +147,7 @@ ms.locfileid: "82707177"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 属性集  
  为了支持在**ITableDefinition**接口中创建表， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将以下三个新列添加到 DBPROPSET_SQLSERVERCOLUMN 属性集。  
   
-|“属性”|说明|类型|说明|  
+|名称|说明|类型|说明|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|对于 DBTYPE_UDT 类型的列，此属性是一个字符串，它指定定义 UDT 的目录的名称。|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|对于 DBTYPE_UDT 类型的列，此属性是一个字符串，它指定定义 UDT 的架构的名称。|  

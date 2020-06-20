@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d7b554dc39832a834ebe1bc2ac2d4bfefa21721a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9d871e2cfb6eb0d4e095a19ba9893b26418230e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721307"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010729"
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>在分发服务器上启用远程发布服务器 (SQL Server Management Studio)
-  可以在 **“发布服务器”** 页上允许发布服务器使用远程分发服务器。 可以在配置分发向导中通过“分发服务器属性 - \<分发服务器>”对话框访问此页****。 有关使用该向导和访问该对话框的详细信息，请参阅[配置发布和分发](configure-publishing-and-distribution.md)和[查看和修改分发服务器和发布服务器属性](view-and-modify-distributor-and-publisher-properties.md)。  
+  可以在 **“发布服务器”** 页上允许发布服务器使用远程分发服务器。 此页面在配置分发向导和 "**分发服务器属性- \<Distributor> ** " 对话框中提供。 有关使用该向导和访问该对话框的详细信息，请参阅[配置发布和分发](configure-publishing-and-distribution.md)和[查看和修改分发服务器和发布服务器属性](view-and-modify-distributor-and-publisher-properties.md)。  
   
 ### <a name="to-enable-a-publisher-in-the-configure-distribution-wizard"></a>在配置分发向导中启用发布服务器  
   
@@ -39,7 +38,7 @@ ms.locfileid: "62721307"
   
 ### <a name="to-enable-a-publisher-in-the-distributor-properties-dialog-box"></a>在“分发服务器属性”对话框中启用发布服务器  
   
-1.  在“分发服务器属性 - \<分发服务器>”**** 对话框的“发布服务器”**** 页上，单击“添加”****。  
+1.  在 "**分发服务器属性- \<Distributor> ** " 对话框的 "**发布服务器**" 页上，单击 "**添加**"。  
   
 2.  单击 **“添加 SQL Server 发布服务器”**。 有关启用 Oracle 发布服务器以使用分发服务器的信息，请参阅 [Create a Publication from an Oracle Database](publish/create-a-publication-from-an-oracle-database.md)。  
   

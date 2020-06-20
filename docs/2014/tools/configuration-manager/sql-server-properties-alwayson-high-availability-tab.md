@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4e15cc28354d8dc77b579008feabbc6d13efb63d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: cc145da0b6296d3f6e048905e4ab4e649294d38a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939088"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048492"
 ---
 # <a name="sql-server-properties-alwayson-high-availability-tab"></a>SQL Server 属性（“AlwaysOn 高可用性”选项卡）
   使用 **** 配置管理器的 **“SQL Server 属性”** 对话框中的“AlwaysOn 高可用性” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 选项卡，可以在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中启用或禁用“AlwaysOn 可用性组”功能。 启用 AlwaysOn 可用性组是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将可用性组用作高可用性和灾难恢复解决方案的一个先决条件。  
   
-##  <a name="prerequisites"></a><a name="Prerequisites"></a> 先决条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
  若要启用 AlwaysOn 可用性组，服务器实例必须满足以下先决条件：  
   
 -   该服务器实例必须驻留在 Windows Server 故障转移群集 (WSFC) 节点上。  

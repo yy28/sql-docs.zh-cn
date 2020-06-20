@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c7e9db15-89f2-4d4d-8860-1e64c5821c4d
 author: heidisteen
 ms.author: heidist
-manager: craigg
-ms.openlocfilehash: b1cf8c6f8442fc69669c10106f671040733e48ef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 555c6946a9732d478d9e7dca76b84ce17d0e90e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092225"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036273"
 ---
 # <a name="setup-role"></a>安装角色
   使用此页可以指定是使用“功能选择”页来分别选择各项功能，还是使用安装角色来进行安装。  

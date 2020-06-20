@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2beb1a7890786e31fb525b61963c235033882247
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 107ba245f19ae77eec2be82d63c62e5c3d45d092
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161792"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025249"
 ---
 # <a name="index-disk-space-example"></a>索引磁盘空间示例
   无论什么时候创建、重新生成或删除索引，在相应的文件和文件组中都需要用于存储旧（源）结构和新（目标）结构的磁盘空间。 旧的结构只有在提交索引创建事务后才会释放。 还可能需要附加临时磁盘空间以进行排序操作。 有关详细信息，请参阅 [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md)。  
@@ -96,7 +95,7 @@ ms.locfileid: "63161792"
   
 -   确定临时映射索引的空间。  
   
-     在此示例中，旧书签是堆的行 ID （RID）（8字节），新书签是聚集键（包括的`uniqueifier`24 个字节）。 在新旧书签之间没有重叠的列。  
+     在此示例中，旧书签是堆的行 ID （RID）（8字节），新书签是聚集键（包括的24个字节） `uniqueifier` 。 在新旧书签之间没有重叠的列。  
   
      临时映射索引大小 = 1 百万 * (8 字节 + 24 字节) / 80% ~ 40 MB。  
   

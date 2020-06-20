@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 50f98cab-8c80-43c5-bc9a-5d2f95f67f17
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 70477e5fc741949a42aa5eebfd7a1d0a2b3568b6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 19fcfb169eeeb5e877cf70f1ea675e07be9f37d0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82696225"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049658"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>使用日期和时间增强功能 (OLE DB)
   此示例显示如何使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中引入的日期/时间功能。 该示例使用四个新日期和时间类型（ `date` 、**时间**、 `datetime2` 和 `datetimeoffset` ）来执行带参数的命令并检索行集结果。  

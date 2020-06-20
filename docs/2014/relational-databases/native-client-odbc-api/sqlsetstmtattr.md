@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 507ef6e5c5ebb566cdfbce028933b9faffad1de3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0932c3e78cf92501b38f80e779f25f93238e2419
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702141"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021593"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序不支持混合（键集/动态）游标模型。 如果将该值设置为非 0 值，尝试使用 SQL_ATTR_KEYSET_SIZE 设置键集大小将失败。  

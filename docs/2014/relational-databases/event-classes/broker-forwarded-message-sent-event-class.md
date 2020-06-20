@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d0ef74d9-a4ef-4918-aa21-6b267e85569f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 51784663fdfec66f851bed479184ae21170a3681
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3996850833efdc8737febec4691353d1c0a835f5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62664003"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030492"
 ---
 # <a name="brokerforwarded-message-sent-event-class"></a>Broker:Forwarded Message Sent 事件类
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 当 Service Broker 转发消息时，会生成 Broker:Forwarded Message Sent 事件。  
@@ -47,11 +46,11 @@ ms.locfileid: "62664003"
 |ObjectId|`int`|转发消息后转发的消息的生存时间值。|22|否|  
 |ObjectName|`nvarchar`|所转发消息的消息 ID。|34|否|  
 |OwnerName|`nvarchar`|消息要定向到的 Broker 标识符。|37|否|  
-|RoleName|`nvarchar`|会话句柄的角色。 即以下函数之一：<br /><br /> Initiator。 此 Broker 发起了该会话。<br /><br /> Target。 此 Broker 是会话的目标。|38|否|  
+|RoleName|`nvarchar`|会话句柄的角色。 下列其中一项：<br /><br /> Initiator。 此 Broker 发起了该会话。<br /><br /> Target。 此 Broker 是会话的目标。|38|否|  
 |ServerName|`nvarchar`|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
 |SPID|`int`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端所关联的进程分配的服务器进程 ID。|12|是|  
 |StartTime|`datetime`|事件（如果有）的开始时间。|14|是|  
-|成功|`int`|转发过程所用的时间。|23|否|  
+|Success|`int`|转发过程所用的时间。|23|否|  
 |TargetLoginName|`nvarchar`|此实例将消息发送到的网络地址。 注意，这可能与消息的最终目的地不同。|42|否|  
 |TargetUserName|`nvarchar`|启动消息的服务的名称。|39|否|  
 |TransactionID|`bigint`|系统为事务分配的 ID。|4|否|  

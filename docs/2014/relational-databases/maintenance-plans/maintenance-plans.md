@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0643c6fbf8e9a6aa649d4d335117bcb4f5b35208
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5678208e8b7aebdeae98959bb50631e801c6c865
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206849"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024236"
 ---
 # <a name="maintenance-plans"></a>维护计划
   维护计划可创建所需的任务工作流，以确保优化数据库、定期进行备份并确保数据库一致。 维护计划向导还可创建核心维护计划，但手动创建计划具有更大的灵活性。  

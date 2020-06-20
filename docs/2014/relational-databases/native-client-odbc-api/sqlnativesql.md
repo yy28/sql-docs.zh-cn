@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2d999fec-9e22-4514-ad5f-22a64b82f95b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8329eac48b395467c8c9c7354f28649d44149248
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 433b086dc36a79cb82868edebac9f0a4814c21fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705969"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021984"
 ---
 # <a name="sqlnativesql"></a>SQLNativeSql
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序在不访问服务器的情况下满足**SQLNativeSql**请求。 该函数有效地测试 SQL 语句的语法。 语法检查无法确定 SQL 语句中表达式的标识符或结果是否有效，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQLNativeSql**返回的本机 SQL 可能无法运行。  

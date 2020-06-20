@@ -17,13 +17,12 @@ f1_keywords:
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 390a63d21dc72e052017f2d30b061d71de863bc1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161899"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049899"
 ---
 # <a name="index-properties-f1-help"></a>“索引属性”对话框的 F1 帮助
   本主题中的这部分引用了使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对话框提供的各种索引属性。  
@@ -93,7 +92,7 @@ ms.locfileid: "63161899"
  显示组成索引键的列是否允许在表或视图列中存储 Null 值。  
   
  **添加**  
- 向索引键添加列。 从单击“添加”时出现的“从 <表名称 **选择列”对话框中选择表列** *\<*  。 对于空间索引，在选择一列后，该按钮将呈灰色。  
+ 向索引键添加列。 在单击 "添加" 时出现的 "**从选择列**" 对话框中选择表列 *\<table name>* **Add**。 对于空间索引，在选择一列后，该按钮将呈灰色。  
   
  **删除**  
  从组成索引键的列中删除所选列。  
@@ -134,7 +133,7 @@ ms.locfileid: "63161899"
 ##  <a name="storage-page-options"></a><a name="Storage"></a> 存储页选项  
  使用此页可查看或修改所选索引的文件组或分区方案属性。 仅显示与索引类型相关的选项。  
   
- **文件**  
+ **文件组**  
  在指定的文件组中存储索引。 该列表仅显示标准 (row) 文件组。 默认情况下，将在该列表中选择相应数据库的 PRIMARY 文件组。 有关详细信息，请参阅 [数据库文件和文件组](../databases/database-files-and-filegroups.md)。  
   
  **Filestream 文件组**  
@@ -180,7 +179,7 @@ ms.locfileid: "63161899"
 ### <a name="bounding-box"></a>边界框  
  “边界框” ** 为几何平面的顶级网格的周界。 边界框参数仅存在于几何图形网格分割中。 如果 **“分割方案”** 为 **“地理网格”**，这些参数将不可用。  
   
- 面板将显示边界**框*`X-min`* 的*`Y-min`*（，）** 和***`X-max`*（，*`Y-max`*）** 坐标。 没有任何默认坐标值。 因此，在对 `geometry` 类型列创建新的空间索引时，必须指定坐标值。  
+ 面板将显示边界框的 **（ *`X-min`* ， *`Y-min`* ）** 和 **（ *`X-max`* ， *`Y-max`* ）** 坐标。 没有任何默认坐标值。 因此，在对 `geometry` 类型列创建新的空间索引时，必须指定坐标值。  
   
  `X-min`  
  边界框左下角的 X 坐标。  
@@ -226,7 +225,7 @@ ms.locfileid: "63161899"
  **级别2**  
  第二级网格的密度。  
   
- **级别3**  
+ **Level 3**  
  第三级网格的密度。  
   
  **级别 4**  
@@ -235,8 +234,8 @@ ms.locfileid: "63161899"
 ##  <a name="filter-page"></a><a name="Filter"></a> 筛选器页  
  使用此页可以输入用于筛选索引的筛选器谓词。 有关详细信息，请参阅 [Create Filtered Indexes](create-filtered-indexes.md)。  
   
- **筛选表达式**  
- 定义要将哪些数据行包含在筛选索引中。 例如 `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
+ **筛选器表达式**  
+ 定义要将哪些数据行包含在筛选索引中。 例如： `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
 ## <a name="see-also"></a>另请参阅  
  [设置索引选项](set-index-options.md)   

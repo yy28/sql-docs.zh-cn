@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 88d025c4-07c2-4e4d-8634-204249a8c82c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 037eb57f53bf583195efdf1f91fcd55f94ebaddc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a356550796cc682b2292defffd6565b7fea0783
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676906"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049532"
 ---
 # <a name="working-with-policy-based-management-facets"></a>使用基于策略的管理方面
   基于策略的管理方面是一组与管理领域相关的逻辑属性。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括几个预定义的方面。 例如，将默认关闭的功能定义为属性的外围应用配置器方面。  

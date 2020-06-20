@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bed52d80-ed2a-4bf4-bf7c-481b6e228ca4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dff18b4aac5a97e7bfa12daed107662790fa854a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd7d4696015110fc2df11bea87f045580424c361
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055598"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962947"
 ---
 # <a name="smo-connection-manager-editor"></a>SMO 连接管理器编辑器
   可以使用 **“SMO 连接管理器编辑器”** 配置各种传输 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象的任务使用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 连接。  
@@ -30,10 +29,10 @@ ms.locfileid: "66055598"
  **服务器名称**  
  键入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的名称，或者从列表中选择服务器名称。  
   
- **全部**  
+ **刷新**  
  刷新网络可检测到的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可用实例的列表。  
   
- **使用 Windows 身份验证**  
+ **Use Windows Authentication**  
  使用 Windows 身份验证连接所选的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。  
   
  **使用 SQL Server 身份验证**  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: af4043db-bc9f-4cd8-8d07-ef3efae85148
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 105c5da23d5d827271c5c94c70b293acf051d1aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 389c4b76a3b52895a796a5fddef90e37f617fcdb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061320"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028042"
 ---
 # <a name="tm-rollback-tran-completed-event-class"></a>TM: Rollback Tran Completed 事件类
   TM: Rollback Tran Completed 事件类指示 ROLLBACK TRANSACTION 请求已完成。 该请求是通过事务管理界面从客户端发送的。 EventSubClass 列指示在当前事务回滚后是否启动新事务。  
@@ -48,7 +47,7 @@ ms.locfileid: "63061320"
 |SessionLoginName|`nvarchar`|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |SPID|`int`|发生该事件的会话的 ID。|12|是|  
 |StartTime|`datetime`|该事件（如果存在）的启动时间。|14|是|  
-|成功|`int`|1 = 成功。 0 = 失败。例如，值为 1 时表示权限检查成功；值为 0 时表示权限检查失败。|23|是|  
+|Success|`int`|1 = 成功。 0 = 失败。例如，值为 1 时表示权限检查成功；值为 0 时表示权限检查失败。|23|是|  
 |TextData|`ntext`|依赖于跟踪中捕获的事件类的文本值。|1|是|  
 |TransactionID|`bigint`|系统分配的事务 ID。|4|是|  
 |XactSequence|`bigint`|用于说明当前事务的标记。|50|是|  

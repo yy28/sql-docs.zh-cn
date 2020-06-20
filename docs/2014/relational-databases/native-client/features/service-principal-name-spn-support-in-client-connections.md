@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 419be334c31aa5c4a0f65f9d9f881dbffc4aef94
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 10a64baa17bd070d9354beaf6ff8c2e460682318
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707253"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049581"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>客户端连接中的服务主体名称 (SPN) 支持
   从 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 开始，扩展了对服务主体名称 (SPN) 的支持，从而能够在所有协议中相互进行身份验证。 在先前版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，如果已使用 Active Directory 注册 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的默认 SPN，则仅对使用 TCP 的 Kerberos 支持 SPN。  
@@ -47,7 +46,7 @@ ms.locfileid: "82707253"
 ## <a name="usage"></a>使用情况  
  下表介绍了客户端应用程序可启用安全身份验证的最常见应用场景。  
   
-|方案|说明|  
+|场景|说明|  
 |--------------|-----------------|  
 |早期应用程序不指定 SPN。|该兼容应用场景可确保不会对针对先前版本 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]开发的应用程序的行为进行任何更改。 如果未指定 SPN，则应用程序使用已生成的 SPN，但不能识别使用哪个身份验证方法。|  
 |使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 当前版本的客户端应用程序将连接字符串中的 SPN 指定为域用户或计算机帐户、特定于实例的 SPN 或用户定义的字符串。|在访问接口、初始化或连接字符串中可使用 `ServerSPN` 关键字进行以下操作：<br /><br /> -指定实例用于连接的帐户 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 这可简化对 Kerberos 身份验证的访问。 如果 Kerberos 密钥发行中心 (KDC) 存在且指定了正确的帐户，则使用 Kerberos 身份验证的可能性大于 NTLM。 KDC 通常与域控制器在同一台计算机上。<br />-指定用于查找实例的服务帐户的 SPN [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 对于每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，会生成两个可用于此目的的默认 SPN。 但是，不能保证 Active Directory 中存在这些密钥，因此这种情况下无法保证 Kerberos 身份验证。<br />-指定将用于查找实例的服务帐户的 SPN [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 此 SPN 可以是任何映射到服务帐户的用户定义字符串。 这种情况下，必须手动在 KDC 中注册密钥，且密钥必须满足用户定义的 SPN 的规则。<br /><br /> `FailoverPartnerSPN` 关键字可用于为故障转移伙伴服务器指定 SPN。 帐户和 Active Directory 键值的范围与您可为主体服务器指定的值相同。|  

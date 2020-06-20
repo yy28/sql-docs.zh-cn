@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dc1bfce77a089b24e68613c94af6e2886e6b5952
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3cb3818ed644eede3cf4f2c256a0dcb94ec58c3a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874472"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954077"
 ---
 # <a name="implementing-assemblies"></a>实现程序集
   本主题提供有关以下方面的信息以帮助您在数据库中实现和使用程序集：  
@@ -31,7 +30,7 @@ ms.locfileid: "62874472"
 -   管理程序集版本  
   
 ## <a name="creating-assemblies"></a>创建程序集  
- 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CREATE ASSEMBLY 语句在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中创建程序集或者使用程序集辅助编辑器在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中创建程序集。 此外，在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]部署 SQL Server 项目将在为该项目指定的数据库中注册一个程序集。 有关详细信息，请参阅 [Deploying CLR Database Objects](deploying-clr-database-objects.md)。  
+ 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CREATE ASSEMBLY 语句在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中创建程序集或者使用程序集辅助编辑器在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中创建程序集。 此外，在中部署 SQL Server 项目将在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 为该项目指定的数据库中注册一个程序集。 有关详细信息，请参阅 [Deploying CLR Database Objects](deploying-clr-database-objects.md)。  
   
  **使用 Transact-SQL 创建程序集**  
   
@@ -71,14 +70,14 @@ ms.locfileid: "62874472"
   
 -   [删除对象](../../ssms/object/delete-objects.md)  
   
- 默认情况下，不执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建的所有程序集。 您可以使用**sp_configure**系统存储过程的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **clr enabled**选项来禁用或启用上传的所有程序集的执行。 禁用程序集执行防止公共语言运行时 (CLR) 函数、存储过程、触发器、聚合和用户定义类型执行并使当前正在执行的那些停止执行。 禁用程序集执行并不禁用创建、更改或删除程序集的功能。 有关详细信息，请参阅[clr Enabled 服务器配置选项](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)。  
+ 默认情况下，不执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建的所有程序集。 您可以使用**sp_configure**系统存储过程的**clr enabled**选项来禁用或启用上传的所有程序集的执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 禁用程序集执行防止公共语言运行时 (CLR) 函数、存储过程、触发器、聚合和用户定义类型执行并使当前正在执行的那些停止执行。 禁用程序集执行并不禁用创建、更改或删除程序集的功能。 有关详细信息，请参阅[clr Enabled 服务器配置选项](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)。  
   
  **禁用和启用程序集执行**  
   
 -   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
 ##  <a name="managing-assembly-versions"></a><a name="_managing"></a>管理程序集版本  
- 将程序集上载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例后，将在数据库系统目录中存储并管理该程序集。 对中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]的程序集定义所做的任何更改都应传播到数据库目录中存储的程序集。  
+ 将程序集上载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例后，将在数据库系统目录中存储并管理该程序集。 对中的程序集定义所做的任何更改都 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 应传播到数据库目录中存储的程序集。  
   
  当必须修改程序集时，您必须发出 ALTER ASSEMBLY 语句以更新数据库中的程序集。 这将使该程序集更新为控制其实现的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 模块的最新副本。  
   

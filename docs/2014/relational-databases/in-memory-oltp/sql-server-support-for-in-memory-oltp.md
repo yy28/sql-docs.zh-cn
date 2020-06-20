@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f4525df0-a186-44e5-bba6-5d8123a0f965
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 470b3edf0435099b2a9fd17b14ac299299274a71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bbefa22294623cb5539f8c2146478e5c23c462ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63181241"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049935"
 ---
 # <a name="sql-server-support-for-in-memory-oltp"></a>SQL Server 对内存中 OLTP 的支持
   本节讨论支持内存优化表的新增和更新语法及功能。  

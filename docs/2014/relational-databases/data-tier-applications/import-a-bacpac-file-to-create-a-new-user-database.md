@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c60edd0423dbba712d6185a1bfe417b2067378bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 59ab03f1c869f37ea92b3be1fe0fc30d86284a03
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232228"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953172"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>导入 BACPAC 文件以创建新的用户数据库
   导入数据层应用程序 (DAC) 文件 - .bacpac 文件 - 以在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的新实例上创建一个带数据的原始数据库的副本，或者对 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 创建一个此数据库的副本。 可以将导出-导入操作结合起来在各实例之间迁移 DAC 或数据库，或者创建一个逻辑备份，例如创建部署在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中的数据库的本地副本。  
@@ -124,29 +123,29 @@ ms.locfileid: "75232228"
   
 -   **新数据库名称**-提供导入的数据库的名称。  
   
--   **版本的[!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** -指定[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business 或[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web。 有关 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]版本的详细信息，请参阅此 [SQL Database](https://www.windowsazure.com/home/tour/database/) 网站。  
+-   **版本的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] **-指定 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web。 有关 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]版本的详细信息，请参阅此 [SQL Database](https://www.windowsazure.com/home/tour/database/) 网站。  
   
 -   **最大数据库大小（GB）** -使用下拉菜单指定数据库的最大大小。  
   
- 要继续，请单击“下一步”****。  
+ 若要继续，请单击 **“下一步”** 。  
   
 ### <a name="validation-page"></a>“验证”页  
  使用此页可查看阻止操作的任何问题。 若要继续，请解决阻止问题，然后单击“重新运行验证”**** 确保验证成功。  
   
- 要继续，请单击“下一步”****。  
+ 若要继续，请单击 **“下一步”** 。  
   
 ###  <a name="summary-page"></a><a name="Summary"></a> 摘要页  
  使用此页可查看操作的指定的源和目标设置。 若要使用指定设置完成导入操作，请单击 **“完成”**。 若要取消导入操作并退出向导，请单击“取消” ****。  
   
-###  <a name="progress-page"></a><a name="Progress"></a>进度页面  
+###  <a name="progress-page"></a><a name="Progress"></a> “进度”页  
  此页将显示一个指示操作状态的进度栏。 若要查看详细状态，请单击 **“查看详细信息”** 选项。  
   
- 要继续，请单击“下一步”****。  
+ 若要继续，请单击 **“下一步”** 。  
   
 ###  <a name="results-page"></a><a name="Results"></a>结果页  
  此页将报告导入和创建数据库操作是成功还是失败，并显示各个操作的成功或失败。 遇到了错误的任何操作都将在 **“结果”** 列中具有一个链接。 单击该链接可以查看针对该操作的错误报告。  
   
- 单击 **“关闭”** 关闭向导。  
+ 单击“**关闭**”以关闭向导。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据层应用程序](data-tier-applications.md)   

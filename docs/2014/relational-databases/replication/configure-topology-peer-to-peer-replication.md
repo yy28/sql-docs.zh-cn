@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5c41bc845e7b02959f25aa8282452db64f819558
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2dfc09f5ae7f488afd46f29c301d11b7687e0a4b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176567"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010981"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>配置拓扑（对等复制）
   可以使用 **“配置拓扑”** 页执行常见的配置任务，如添加新节点、删除节点，以及在现有节点之间添加新连接。 在此向导的 **“发布”** 页上选定的节点会显示在设计图面上。 若要指定配置选项，请右键单击某个节点、连接或者设计图面。
@@ -43,7 +42,7 @@ ms.locfileid: "78176567"
 
  如果向导请求拓扑信息，而您未等到所有节点都响应此请求就关闭并重新打开了向导，则页面可能不会显示拓扑中的所有节点。
 
- **添加新的对等节点**将的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例添加到对等拓扑。 如果将某实例添加为节点，在向导完成后会在该实例上创建一个发布。 添加该节点后，右键单击该节点可在此新节点和现有节点之间添加连接。
+ **添加新的对等节点**将的实例添加 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 到对等拓扑。 如果将某实例添加为节点，在向导完成后会在该实例上创建一个发布。 添加该节点后，右键单击该节点可在此新节点和现有节点之间添加连接。
 
  若要加入对等拓扑，实例必须满足以下要求：
 

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: def6bf26-c640-4caf-ad30-05d1e649541d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 78d8baed7783459db79bb9facb0141cc570c4127
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b95cb43b9321a33be520ee480e3baf203aa4432
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721378"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010818"
 ---
 # <a name="distribution-agent-security-peer-to-peer-replication"></a>分发代理的安全性（对等复制）
   使用 **“分发代理安全性”** 页，可以指定运行分发代理以及与对等拓扑中的计算机建立连接时所使用的帐户。 有关代理要求的权限及复制安全的最佳做法的信息，请参阅[复制代理安全模型](security/replication-agent-security-model.md)和[复制安全最佳做法](security/replication-security-best-practices.md)。  
@@ -37,10 +36,10 @@ ms.locfileid: "62721378"
  对等方上同时用作发布数据库和订阅数据库的数据库。  
   
  **与分发服务器的连接**  
- 连接到分发服务器时所处的上下文。 始终使用运行代理的 Windows 帐户的上下文建立本地连接： 此向导将创建推送订阅（本地连接是与分发服务器的连接），因此，此字段将始终显示：“模拟‘\<域>\\<登录名\>’”**** 或“模拟‘\<计算机>\\<登录名\>’”****。  
+ 连接到分发服务器时所处的上下文。 始终使用运行代理的 Windows 帐户的上下文建立本地连接： 此向导将创建推送订阅（本地连接是与分发服务器的连接），因此此字段将始终显示：**模拟 " \<Domain> \\<登录名 \> "** 或**模拟 " \<Computer> \\<登录名 \> "**。  
   
  **与订阅服务器的连接**  
- 与订阅服务器建立连接时所处的上下文。 可以使用运行代理的 Windows 帐户的上下文或使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录的上下文建立连接。 此字段显示以下内容之一：“使用登录名‘\<登录名>’”、“模拟‘\<域>\\<登录名\>’”或“模拟‘\<计算机>\\<登录名\>’”。************ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议使用 Windows 帐户的上下文建立所有连接。  
+ 与订阅服务器建立连接时所处的上下文。 可以使用运行代理的 Windows 帐户的上下文或使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录的上下文建立连接。 此字段显示以下内容之一： "**使用登录名 ' \<Login> "**、 **"模拟 ' \<Domain> \\<登录名 \> "** 或 **"模拟 ' \<Computer> \\<登录名 \> '**"。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议使用 Windows 帐户的上下文建立所有连接。  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;复制 Transact-sql 编程来管理对等拓扑&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   

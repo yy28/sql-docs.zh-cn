@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d3aecc41-4d79-49b2-a11c-7b2203fa79bc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0e357d8767178e2fb95c484d78248a08b51c2ebf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3753014d3a30b92b77bfd2b836224a7edf1d2dbf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63281987"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058254"
 ---
 # <a name="display-the-query-window"></a>显示查询窗口
   打开多个查询窗口时，它们显示为选项卡式文档窗口。  

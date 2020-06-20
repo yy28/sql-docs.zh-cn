@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 77e303ff-febd-4103-ae5d-6e5b85bc8009
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 598a317bdecb2ed3808a7b5af35316d95d3b87c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac234a757510af5ebfac261ea6d3e7e57d2f426f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092012"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036239"
 ---
 # <a name="sql-server-agent-upgrade-issues"></a>SQL Server 代理升级问题
   下面的主题介绍了可能会对升级产生影响的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理问题。 这些主题介绍了您可以为减小这些更改对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境的影响而采取的措施。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 34055a2f-7d0f-4e13-a62e-7ee5b6c23b86
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aac3a20511012e0a058fff6988c793c4f51d594d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3c872738f35d4c99032d14feff6f3890ddeebca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663391"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030058"
 ---
 # <a name="cursorunprepare-event-class"></a>CursorUnprepare 事件类
   **CursorUnprepare** 事件类提供了与应用程序编程接口 (API) 游标中发生的游标撤消事件相关的信息。 游标撤消事件在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 放弃执行计划时发生。  

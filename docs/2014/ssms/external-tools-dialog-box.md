@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dc8f54bc4f6e7aaffa5d912fc9bc8f03fad71d03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4c22f2ed4e6150b8d8f712f87d87a91f9715a5eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245635"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058630"
 ---
 # <a name="external-tools-dialog-box"></a>外部工具对话框
-  使用“外部工具”  对话框可以将外部工具（如 SQLCMD 或记事本）添加到“工具”  菜单中。 通过添加外部工具，在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 环境中工作时可以轻松启动其他应用程序。 启动此工具时，可以指定参数及工作目录。 此外，“输出”  窗口中可以显示某些工具的输出。 通过“工具”  菜单可以打开“外部工具”  对话框。  
+  使用“外部工具”  对话框可以将外部工具（如 SQLCMD 或记事本）添加到“工具”  菜单中。 通过添加外部工具，在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 环境中工作时可以轻松启动其他应用程序。 启动此工具时，可以指定参数及工作目录。 此外，“输出”  窗口中可以显示某些工具的输出。 通过“工具”菜单可以打开“外部工具”对话框。  
   
 ## <a name="options"></a>选项  
  **菜单内容**  
@@ -41,7 +40,7 @@ ms.locfileid: "63245635"
  从“菜单内容”  列表以及“工具”  菜单中删除相应的工具或命令。  
   
  **标题**  
- 输入的工具或命令的名称将显示在“工具”  菜单的“外部工具”  子菜单上。 在工具名称中的一个字母前放置“与”符号 (&)，可以将该字母指定为工具的快捷键。 例如，“&SQLCMD”会在“工具”  菜单上显示“SQLCMD”。  
+ 输入的工具或命令的名称将显示在“工具”菜单的“外部工具”子菜单上。 在工具名称中的一个字母前放置“与”符号 (&)，可以将该字母指定为工具的快捷键。 例如，“&SQLCMD”会在“工具”  菜单上显示“SQLCMD”。  
   
  **命令**  
  指定要启动的文件路径。  

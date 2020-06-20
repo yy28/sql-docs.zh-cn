@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 467cb4dab267b04965058f118d798bdd5a7b0909
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d97929ead145d1b0de1a1f83becb15ade397683
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929185"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048931"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>管理和监视变更数据捕获 (SQL Server)
   本主题介绍如何管理和监视变更数据捕获。  
@@ -37,10 +36,10 @@ ms.locfileid: "76929185"
  *maxscans* 参数用于指定在返回 (continuous = 0) 或执行 waitfor (continuous = 1) 之前为完成日志扫描可以尝试的最大扫描循环次数。  
   
 #### <a name="continuous-parameter"></a>continuous 参数  
- *连续*参数用于控制是`sp_cdc_scan`在排出日志后还是在执行扫描循环的最大数目（一种 "拍摄" 模式）后在中进行让给控制。 它还控制在显式停止 `sp_cdc_scan` 之前此存储过程是否继续运行（继续模式）。  
+ *连续*参数用于控制是 `sp_cdc_scan` 在排出日志后还是在执行扫描循环的最大数目（一种 "拍摄" 模式）后在中进行让给控制。 它还控制在显式停止 `sp_cdc_scan` 之前此存储过程是否继续运行（继续模式）。  
   
 ##### <a name="one-shot-mode"></a>单次触发模式  
- 在一个拍摄模式下，捕获作业请求`sp_cdc_scan`执行最多*maxtrans*扫描，尝试排出日志并返回。 日志中存在的超出 *maxtrans* 数量的任何事务将在稍后的扫描中处理。  
+ 在一个拍摄模式下，捕获作业请求 `sp_cdc_scan` 执行最多*maxtrans*扫描，尝试排出日志并返回。 日志中存在的超出 *maxtrans* 数量的任何事务将在稍后的扫描中处理。  
   
  单次触发模式用于待处理事务量已知的受控测试中，优点是作业完成后将自动关闭。 建议不要将单次触发模式用于生产。 这是因为它依赖于作业计划来管理扫描循环的运行频率。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "76929185"
 ### <a name="structure-of-the-cleanup-job"></a>清除作业的结构  
  变更数据捕获使用基于保持期的清理策略来管理更改表的大小。 清除机制包含一个在启用第一个数据库表时所创建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业。 单个清除作业可处理所有数据库更改表的清除工作并将相同的保持值应用到所有定义的捕获实例。  
   
- 清除作业可通过运行无参数存储过程 `sp_MScdc_cleanup_job` 来启动。 此存储过程开始时，将从 `msdb.dbo.cdc_jobs` 中提取为清除作业配置的保持期和阈值。 保持值用于计算更改表的新低水印。 从`cdc.lsn_time_mapping`表中的最大*tran_end_time*值减去指定的分钟数，以获取表示为日期时间值的新低水印。 然后，使用 CDC.lsn_time_mapping 表将该日期时间值转换为相应的 `lsn` 值。 如果表中多个项共享相同的提交时间，则会选择与具有最小 `lsn` 的项相对应的 `lsn` 作为新低水印。 该 `lsn` 值将传递到 `sp_cdc_cleanup_change_tables` 以从数据库更改表中删除更改表项。  
+ 清除作业可通过运行无参数存储过程 `sp_MScdc_cleanup_job` 来启动。 此存储过程开始时，将从 `msdb.dbo.cdc_jobs` 中提取为清除作业配置的保持期和阈值。 保持值用于计算更改表的新低水印。 从表中的最大*tran_end_time*值减去指定的分钟数 `cdc.lsn_time_mapping` ，以获取表示为日期时间值的新低水印。 然后，使用 CDC.lsn_time_mapping 表将该日期时间值转换为相应的 `lsn` 值。 如果表中多个项共享相同的提交时间，则会选择与具有最小 `lsn` 的项相对应的 `lsn` 作为新低水印。 该 `lsn` 值将传递到 `sp_cdc_cleanup_change_tables` 以从数据库更改表中删除更改表项。  
   
 > [!NOTE]  
 >  使用最近事务的提交时间作为计算新低水印的基准的优点在于：它可使更改在更改表中保留指定的时间。 即使在捕获进程运行落后时也会出现这种情况。 通过为实际低水印选择具有共享提交时间的最小 `lsn`，与当前低水印具有相同提交时间的所有项会继续保留在更改表中。  
@@ -105,7 +104,7 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
 ### <a name="use-data-collector-to-collect-sampling-data"></a>使用数据收集器收集抽样数据  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据收集器用于从任何表或动态管理视图中收集数据的快照，并生成性能数据仓库。 对数据库启用变更数据捕获时，最好按固定时间间隔取得 sys.dm_cdc_log_scan_sessions 视图和 sys.dm_cdc_errors 视图的快照，以便随后进行分析。 以下过程设置一个数据收集器，用于从 sys.dm_cdc_log_scan_sessions 管理视图收集示例数据。  
   
- **配置数据集合**  
+ **配置数据收集**  
   
 1.  启用数据收集器，并配置管理数据仓库。 有关详细信息，请参阅 [管理数据收集](../data-collection/data-collection.md)。  
   
