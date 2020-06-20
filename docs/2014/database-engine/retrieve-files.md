@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37b74426-e262-43b2-a81f-79b1fd1a36ec
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 548fac7dbc7d1f2750a130da9847be406361d8bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4176ee1dff35a0f9eaeaddf1b35155f76de526ef
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843653"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929468"
 ---
 # <a name="retrieve-files"></a>检索文件
   打开源代码管理的项目后，可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 将项目文件的本地副本从源代码管理存储区检索到项目所在的本地目录中。  
@@ -36,7 +35,7 @@ ms.locfileid: "62843653"
   
 ### <a name="to-retrieve-the-latest-version-of-all-the-files-in-a-project"></a>检索项目中所有文件的最新版本  
   
-1.  在解决方案资源管理器中选择项目。  
+1.  在“解决方案资源管理器”中，选择项目。  
   
 2.  在 "**文件**" 菜单上，指向 "**源代码管理**"，然后单击 "**获取最新版本（递归）**"。  
   

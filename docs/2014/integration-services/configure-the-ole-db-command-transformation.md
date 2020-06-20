@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c800f167-3d2e-4c10-8ba3-a02f1872ccea
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8c9536e14f20e62b944df44ff943b05edb92e5fb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f6f14d93e840b9a206e0b5261eb9efade0f0e28
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060558"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921503"
 ---
 # <a name="configure-the-ole-db-command-transformation"></a>配置 OLE DB 命令转换
   若要添加和配置 OLE DB 命令转换，包必须已包含至少一个数据流任务和一个源（如平面文件源或 OLE DB 源）。 这种转换通常用于运行参数化查询。  
@@ -41,7 +40,7 @@ ms.locfileid: "66060558"
   
 8.  在“字符串值编辑器”中，键入参数化 SQL 语句，并且使用问号 (?) 作为每个参数的参数标记。****  
   
-9. 单击“刷新”。**** 单击“刷新”时，转换将为 External Columns 集合中的每一个参数都创建一列，并设置 DBParamInfoFlags 属性。****  
+9. 单击“刷新”。 单击“刷新”时，转换将为 External Columns 集合中的每一个参数都创建一列，并设置 DBParamInfoFlags 属性。****  
   
 10. 单击 **“输入属性和输出属性”** 选项卡。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66060558"
   
     -   单击 **“列映射”** ，并将 **“可用输入列”** 列表中的列映射到 **“可用目标列”** 列表中的参数。  
   
-14. 单击" **确定**"。  
+14. 单击“确定”。  
   
 15. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存”** 。  
   

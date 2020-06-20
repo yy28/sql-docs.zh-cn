@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a411290435a10e351c05e9dd1350bde597dbe449
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8c2ac713aaf490575447d9816cfc238b0399555
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289245"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971037"
 ---
 # <a name="system-settings-master-data-services"></a>系统设置 (Master Data Services)
   对于与 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库相关联的所有 Web 应用程序和 Web 服务，您都可以配置系统设置。  
@@ -50,7 +49,7 @@ ms.locfileid: "79289245"
 |配置管理器设置|系统设置|说明|  
 |-----------------------------------|--------------------|-----------------|  
 |**数据库连接超时**|**DatabaseConnectionTimeOut**|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库允许连接完成所花的秒数。 如果连接未在该时间内完成，则会取消连接并返回错误。 默认值为 **60** 秒（1 分钟）。|  
-|**数据库命令超时**|**DatabaseCommandTimeOut**|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库允许命令完成所花的秒数。 如果命令未在该时间内完成，则会取消命令并返回错误。 默认值为 **3600** 秒（60 分钟）。|  
+|**数据库命令超时**|**DatabaseCommandTimeOut**|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库允许命令完成所花的秒数。 如果命令未在该时间内完成，则会取消命令并返回错误。 默认值为**3600**秒（60分钟）。|  
 |**Web 服务超时**|**ServerTimeOut**|ASP.NET 允许用在完成 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 页请求上的秒数。 如果请求未在该时间内完成，则会取消请求并返回错误。 默认值为 **120000** 秒（2000 分钟）。|  
 |**客户端超时**|**ClientTimeOut**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 返回主页前处于非活动状态的秒数。 默认值为 **300** 秒（5 分钟）。|  
 |**每批的行数**|**RowsPerBatch**|Web 服务要在每批中检索的记录数。 默认值为**50**。|  
@@ -121,7 +120,7 @@ ms.locfileid: "79289245"
   
 |配置管理器设置|系统设置|说明|  
 |-----------------------------------|--------------------|-----------------|  
-||**SecurityMemberProcessInterval**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **“用户和组权限”** 功能区域，应用 **“层次结构成员”** 选项卡上设置的用户和组权限的频率（以秒为单位）。 默认值为 **3600** 秒（60 分钟）。|  
+||**SecurityMemberProcessInterval**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **“用户和组权限”** 功能区域，应用 **“层次结构成员”** 选项卡上设置的用户和组权限的频率（以秒为单位）。 默认值为**3600**秒（60分钟）。|  
   
  有关详细信息，请参阅[立即应用成员权限 (Master Data Services)](../../2014/master-data-services/immediately-apply-member-permissions-master-data-services.md)。  
   

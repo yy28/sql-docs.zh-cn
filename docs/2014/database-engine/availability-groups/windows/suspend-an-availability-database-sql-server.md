@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c428d9141acfaca3e8ec7876e62b733c30ec161
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49afe868a509f84160fc1ad154135e8e67f6900a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797959"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936388"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>挂起可用性数据库 (SQL Server)
   您可以通过使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的 PowerShell，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中挂起可用性数据库。 请注意，挂起命令需要对承载要挂起或恢复的数据库的服务器实例发出。  
@@ -31,7 +30,7 @@ ms.locfileid: "72797959"
   
 |挂起的数据库|挂起命令的效果|  
 |------------------------|-------------------------------|  
-|辅助数据库|仅挂起本地辅助数据库，并且其同步状态变为 NOT SYNCHRONIZING。 其他辅助数据库不受影响。 挂起的数据库将停止接收和应用数据（日志记录），并且开始落在主数据库的后面。 可读辅助副本上的现有连接会保持可用状态。 可读辅助副本上挂起数据库的新连接在数据移动恢复之前一直处于禁用状态。<br /><br /> 主数据库仍然可用。 如果您挂起相应的每个辅助数据库，则主数据库将公开运行。<br /><br /> ** \* \*重要\*提示**当辅助数据库挂起时，对应主数据库的发送队列将累积未发送的事务日志记录。 与辅助副本的连接将返回在数据移动挂起时可用的数据。|  
+|辅助数据库|仅挂起本地辅助数据库，并且其同步状态变为 NOT SYNCHRONIZING。 其他辅助数据库不受影响。 挂起的数据库将停止接收和应用数据（日志记录），并且开始落在主数据库的后面。 可读辅助副本上的现有连接会保持可用状态。 可读辅助副本上挂起数据库的新连接在数据移动恢复之前一直处于禁用状态。<br /><br /> 主数据库仍然可用。 如果您挂起相应的每个辅助数据库，则主数据库将公开运行。<br /><br /> ** \* \* 重要 \* 提示 \* **当辅助数据库挂起时，对应主数据库的发送队列将累积未发送的事务日志记录。 与辅助副本的连接将返回在数据移动挂起时可用的数据。|  
 |主数据库|主数据库将停止数据移动到每个连接的辅助数据库。 主数据库将继续在公开模式下运行。 主数据库仍然保持对客户端可用，可读取辅助数据库上的现有连接保持可用并且可以建立新连接。|  
   
 > [!NOTE]  
@@ -64,7 +63,7 @@ ms.locfileid: "72797959"
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
  SUSPEND 命令只要被承载目标数据库的副本接受后就返回，但是实际上挂起数据库以异步方式发生。  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 先决条件  
  您必须连接到承载要挂起的数据库的服务器实例。 若要挂起主数据库和相应的辅助数据库，请连接到承载主副本的服务器实例。 若要挂起辅助数据库但保持主数据库可用，请连接到辅助副本。  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 建议  

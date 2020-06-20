@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c6d1901-ef21-4aa7-9d0a-6bbeb7fadf1c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1628acc984433b1def07c63387b1630c902885aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f172aa778cbaa959671da870521641147186f571
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056054"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964037"
 ---
 # <a name="script-transformation-editor-script-page"></a>脚本转换编辑器（“脚本”页）
   可以使用 **“脚本转换编辑器”** 对话框的 **“脚本”** 选项卡指定脚本及相关属性。  
@@ -30,7 +29,7 @@ ms.locfileid: "66056054"
  **属性**  
  查看和修改脚本转换的属性。 显示的许多属性是只读的。 您可以修改以下属性：  
   
-|Value|说明|  
+|值|描述|  
 |-----------|-----------------|  
 |**说明**|说明脚本转换的用途。|  
 |**LocaleID**|指定区域设置，以便为排序以及日期和时间转换提供区域特定的信息。|  
@@ -42,7 +41,7 @@ ms.locfileid: "66056054"
 |**UserComponentTypeName**|指定 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> 类和支持 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 基础结构的 `Microsoft.SqlServer.TxScript` 程序集。|  
   
  **编辑脚本**  
- 使用[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications （VSTA）创建或修改脚本。  
+ 使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for APPLICATIONS （VSTA）创建或修改脚本。  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   

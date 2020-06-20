@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 46777707354b1379d50b6379e21aabd02ffb5097
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812924"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936314"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>在停机时间和数据丢失最少的情况下升级和更新可用性组服务器
   将服务器实例从 SQL Server 2012 更新或升级到 Service Pack 或更高版本时，您可以通过执行顺序更新或升级将可用性组的停机时间降低到一个手动故障转移所需的时间。 对于升级 SQL Server 版本，它称为“滚动升级”；对于使用修复程序或 Service Pack 更新当前 SQL Server 版本，它称为“滚动更新”。  
@@ -115,9 +114,9 @@ ms.locfileid: "62812924"
   
 |可用性组|Node1|Node2|Node3|  
 |------------------------|-----------|-----------|-----------|  
-|AG1|基本|||  
-|AG2||基本||  
-|AG3|||基本|  
+|AG1|主要|||  
+|AG2||主要||  
+|AG3|||主要|  
   
  按以下顺序执行负载平衡的滚动升级/更新可能在您的情况下是合适的：  
   
@@ -139,9 +138,9 @@ ms.locfileid: "62812924"
   
 |可用性组|Node1|Node2|Node3|  
 |------------------------|-----------|-----------|-----------|  
-|AG1||基本||  
-|AG2|基本|||  
-|AG3|||基本|  
+|AG1||主要||  
+|AG2|主要|||  
+|AG3|||主要|  
   
  根据您的特定实现，您的升级/更新路径可能不同，客户端应用程序经历的停机时间也可能不同。  
   

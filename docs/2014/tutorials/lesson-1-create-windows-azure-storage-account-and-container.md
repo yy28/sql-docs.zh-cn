@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: fbe773b8b8115cafc20bb60e962bfb42c9821636
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4c0f364b15053e589d87b715d124bae48a87461e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75253501"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039874"
 ---
 # <a name="lesson-1-create-azure-storage-account-and-container"></a>第 1 课：创建 Azure 存储帐户和容器
   必须先创建 Azure 存储帐户和 blob 容器以及共享访问签名，然后才能开始将 SQL Server 数据文件存储在 Azure 存储中。 第1课逐步讲解登录到 Azure 管理门户、创建存储帐户、blob 容器和共享访问签名的步骤。  
@@ -42,7 +41,7 @@ ms.locfileid: "75253501"
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-2.gif "SQL 14 CTP2")  
   
 ## <a name="create-a-blob-container"></a>创建 Blob 容器  
- 在 Azure 中，容器提供一组 blob 的分组。 所有 Blob 必须都在一个容器中。 一个存储帐户可含有无限数量的容器，但必须至少有一个容器。 一个容器可以存储无限数量的 Blob。 有关存储大小限制的最新信息，请参阅[如何在 .net 中使用 Azure Blob 存储服务](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)。  
+ 在 Azure 中，容器提供一组 blob 的分组。 所有 Blob 必须都在一个容器中。 一个存储帐户可含有无限数量的容器，但必须至少有一个容器。 一个容器可以存储无数个 Blob。 有关存储大小限制的最新信息，请参阅[如何在 .net 中使用 Azure Blob 存储服务](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)。  
   
  若要在 Azure 中创建容器，请执行以下步骤：  
   

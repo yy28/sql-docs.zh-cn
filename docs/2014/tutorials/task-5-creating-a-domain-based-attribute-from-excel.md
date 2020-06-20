@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 07cbc624-2c6b-4568-96e4-f18663a05d80
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f7e88065ff66ea953d0a91ed080fc3d7159ab794
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f7287091ddd64ef9df1c63706a2f562feed4a5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489109"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999673"
 ---
 # <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>任务 5：从 Excel 中创建基于域的属性
   在此任务中，您将**供应商**实体的**State**属性转换为**基于域的属性**。 将状态属性配置为基于域的属性并将其发布到 MDS 后，将在 MDS 服务器上创建一个名为 "**状态**" 的新实体，其中包含列中的所有值，并使用 "**状态**" 实体中的值填充 "**供应商**" 实体的 "**状态**" 属性。 现在，**供应**商模型应具有两个实体 **：供应商和****州**，其中**供应商**实体的**state**属性是依赖于**州**实体的基于域的属性。  
   
-1.  切换到**清理和匹配的供应商 .xlsx**的**Excel**窗口。  
+1.  切换到**清理并匹配 Suppliers.xlsx**打开的**Excel**窗口。  
   
 2.  单击功能区上的 "**刷新**" 按钮可从 MDS 获取最新更新。 如果执行了可选**任务 4**，则应该会看到另外两个记录。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "65489109"
   
      ![Excel - 带州/省的下拉列表](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-03.jpg "Excel - 带州/省的下拉列表")  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
  [任务 6：验证基于域的属性是否使用主数据管理器进行创建](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
   
   

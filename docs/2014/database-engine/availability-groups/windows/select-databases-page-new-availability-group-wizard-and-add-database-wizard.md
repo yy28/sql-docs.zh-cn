@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 929c5e15-d087-438d-b1f2-aa97c5f8bff8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a2c6cdeb27dfd1768c9a494497f5b2b1e0b7350a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab395a55e0734fcdf33bdf736dc2920584a8dab1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62788483"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936478"
 ---
 # <a name="select-databases-page-new-availability-group-wizard-add-database-wizard"></a>"选择数据库" 页（新建可用性组向导-添加数据库向导）
   本帮助主题介绍“指定数据库”页的选项****。 本主题适用于 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 的 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
@@ -37,7 +36,7 @@ ms.locfileid: "62788483"
   
  在对数据库采取操作以满足先决条件的过程中，您可以在 **“选择数据库”** 页上离开该向导。 当您返回 **“选择数据库”** 页时，请单击 **“刷新”** 更新该网格。  
   
- **全部**  
+ **刷新**  
  单击以刷新该网格。 对数据库采取操作以满足先决条件后，这样做非常有用。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  

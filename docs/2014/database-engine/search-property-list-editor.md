@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0f3ced6e-0dfd-49fc-b175-82378c3d668e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 97061590525a7e644319d7c8ff407d4905e59418
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 6c68ec986e2c6f4f53dfec7f188ba2a120532ae4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000547"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929298"
 ---
 # <a name="search-property-list-editor"></a>搜索属性列表编辑器
   使用此对话框可以在搜索属性列表中添加或删除搜索属性。  
@@ -43,7 +42,7 @@ ms.locfileid: "83000547"
  **属性说明**  
  指定属性的说明（可选）。 这是一个最多 512 个字符的字符串。 例如，说明可能包含有关属性的属性集的信息，或者包含有关从名称上不能直接看出其含义的属性的信息。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  若要向搜索属性列表添加搜索属性，必须为此属性所属的属性集指定全局唯一标识符 (GUID)，并指定此属性的属性整型标识符。 这些标识符的给定组合在给定的搜索属性列表中必须是唯一的。 如果试图添加一个现有组合，则此操作将失败并且会发出错误。 这意味着，您只能为给定属性配置一个名称。  
   
  属性说明是可选的。  

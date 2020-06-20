@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0be8ed6cf2a163b3c195cfb5e4e18440549b501c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02cd05baa6da57de6f90099d788d582821492d55
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815722"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937148"
 ---
 # <a name="use-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a>使用“将数据库添加到可用性组向导”(SQL Server Management Studio)
   使用“将数据库添加到可用性组向导”可帮助您将一个或多个数据库添加到现有的 AlwaysOn 可用性组。  
@@ -85,9 +84,9 @@ ms.locfileid: "62815722"
   
 4.  在 **“选择数据库”** 页上，选择一个或多个数据库。 有关详细信息，请参阅[&#40;新建可用性组向导中的 "选择数据库" 页-添加数据库向导&#41;](select-databases-page-new-availability-group-wizard-and-add-database-wizard.md)。  
   
-5.  在 **“选择初始数据同步”** 页上，选择如何创建新的辅助数据库并将其联接到可用性组。 选择以下选项之一：  
+5.  在 **“选择初始数据同步”** 页上，选择如何创建新的辅助数据库并将其联接到可用性组。 选择下列选项之一：  
   
-    -   **达到**  
+    -   **完整**  
   
          如果你的环境满足自动启动初始数据同步的要求，则选择此选项（有关详细信息，请参阅本主题前面的 [先决条件、限制和建议](#Prerequisites)）。  
   

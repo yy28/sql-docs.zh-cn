@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ff921952-b935-4bb0-b587-bba6cd15a090
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9d349a21fdd522b5af299c3ad130cdce984f569c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00348bae82ed089dfd23a17b5f5f9594ea9df66e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63253172"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066629"
 ---
 # <a name="storage-system-input-output-time-out"></a>存储系统输入输出超时
   此规则检查系统事件日志中是否存在 EventId 9。 此消息指示存储系统中出现 I/O 超时。  

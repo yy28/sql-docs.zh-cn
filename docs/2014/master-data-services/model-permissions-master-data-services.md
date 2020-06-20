@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 733827ecace64ef86b54831f63fd8c2889203919
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2846918b515bba16d12d48cd7058cf25863bf569
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478967"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971177"
 ---
 # <a name="model-permissions-master-data-services"></a>模型权限 (Master Data Services)
   模型权限应用到模型中存在的所有实体、派生层次结构、显式层次结构和集合。 对于任何单个对象，可以覆盖分配给模型的权限。  
@@ -30,7 +29,7 @@ ms.locfileid: "65478967"
 |----------------|-----------------|  
 |**只读**|在**资源管理器**中，将显示模型，但用户无法添加或删除成员，也无法更新属性值、层次结构成员身份或集合成员身份。|  
 |**Update**|在**资源管理器**中，将显示模型，并且用户可以添加和删除成员，可以更新属性值、层次结构成员身份和集合成员身份。|  
-|**注销**|不显示该模型。|  
+|**拒绝**|不显示该模型。|  
   
  将权限分配给模型时，用户将获得对模型的所有版本的访问权限。 无法将权限分配给单独的版本。  
   

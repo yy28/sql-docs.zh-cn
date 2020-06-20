@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 287ac1a5631cf2e3925e5895db7f04bb7b89bf5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5552d40cf2f899ca6b95658ac2aa50d5cc25f62f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060169"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917297"
 ---
 # <a name="create-package-configurations"></a>创建包配置
   使用 **“包配置组织程序”** 对话框和包配置向导，可以创建包配置。 若要访问这些工具，请在 **中单击** “SSIS” **菜单上的** “包配置” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
@@ -79,7 +78,7 @@ ms.locfileid: "66060169"
 |**配置类型**|配置类型。|  
 |**配置字符串**|配置的位置。 位置可以是路径、环境变量、注册表项、父包变量名或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库中的表。|  
 |**目标对象**|其属性具有配置的对象的名称。 如果配置是 XML 配置文件，则该列为空，因为该配置可以更新多个对象。|  
-|**目标属性**|属性的名称。 如果配置写入 XML 配置文件或 SQL Server 表，则列为空，因为配置可以更新多个对象。|  
+|**Target 属性**|属性的名称。 如果配置写入 XML 配置文件或 SQL Server 表，则列为空，因为配置可以更新多个对象。|  
   
 ### <a name="to-create-a-package-configuration"></a>创建包配置  
   
@@ -106,7 +105,7 @@ ms.locfileid: "66060169"
   
 10. 查看 **“包配置组织程序”** 对话框中的配置。  
   
-11. 单击“**关闭**”。  
+11. 单击“关闭” 。  
   
 ## <a name="external-resources"></a>外部资源  
   

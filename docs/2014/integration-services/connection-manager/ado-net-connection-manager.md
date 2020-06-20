@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 97a0690775b7b6d95a257bc5f5ed0a6483e1c24a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 850c8f0f54339594b19debd48ebf4ac7021873d3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833859"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921223"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 连接管理器
-  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器使包能够使用 .NET 访问接口访问数据源。 此连接管理器通常用于访问等数据源[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，也用于访问通过使用 c # 等语言以托管代码编写的自定义任务中的 OLE DB 和 XML 公开的数据源。  
+  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器使包能够使用 .NET 访问接口访问数据源。 此连接管理器通常用于访问等数据源 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，也用于访问通过使用 c # 等语言以托管代码编写的自定义任务中的 OLE DB 和 XML 公开的数据源。  
   
- 将[!INCLUDE[vstecado](../../includes/vstecado-md.md)]连接管理器添加到包时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ，将创建一个连接管理器，该管理器[!INCLUDE[vstecado](../../includes/vstecado-md.md)]在运行时作为连接进行解析，设置连接管理器属性，并将该连接`Connections`管理器添加到包上的集合。  
+ 将 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器添加到包时，将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 创建一个连接管理器，该管理器 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 在运行时作为连接进行解析，设置连接管理器属性，并将该连接管理器添加到 `Connections` 包上的集合。  
   
  该连接管理器的 `ConnectionManagerType` 属性设置为 `ADO.NET`。 `ConnectionManagerType` 的值受到限定，以包含连接管理器所使用的 .NET 访问接口的名称。  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a7b09bb2f08095af33f80fe4161032036482f835
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 57a494af168a8f5572bafe93f8fb47b22a954a19
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228793"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936898"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>创建可用性组 (Transact-SQL)
   本主题介绍如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在启用了 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 功能的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 实例上创建和配置可用性组。 “可用性组” ** 定义一组用户数据库，这些用户数据库将以支持故障转移的单个单元和一组故障转移伙伴（称作“可用性副本” **）的形式进行故障转移。  
@@ -46,7 +45,7 @@ ms.locfileid: "75228793"
 |任务|Transact-SQL 语句|执行任务的位置**<sup>*</sup>**|  
 |----------|----------------------------------|-------------------------------------------|  
 |创建数据库镜像端点（每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例一次）|[创建终结点终结点](/sql/t-sql/statements/create-endpoint-transact-sql) *...* 对于 DATABASE_MIRRORING|在缺少数据库镜像端点的每个服务器实例上执行。|  
-|创建可用性组|[创建可用性组](/sql/t-sql/statements/create-availability-group-transact-sql)|在要承载初始主副本的服务器实例上执行。|  
+|创建可用性组|[CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql)|在要承载初始主副本的服务器实例上执行。|  
 |将辅助副本联接到可用性组|[ALTER AVAILABILITY GROUP](join-a-secondary-replica-to-an-availability-group-sql-server.md) *group_name* JOIN|在承载辅助副本的各服务器实例上执行。|  
 |准备辅助数据库|[备份](/sql/t-sql/statements/backup-transact-sql)和[还原](/sql/t-sql/statements/restore-statements-transact-sql)。|在承载主副本的服务器实例上创建备份。<br /><br /> 使用 RESTORE WITH NORECOVERY 在承载辅助副本的各服务器实例上还原备份。|  
 |通过将各辅助数据库联接到可用性组，开始数据同步|[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-hadr) *database_name* SET HADR AVAILABILITY GROUP = *group_name*|在承载辅助副本的各服务器实例上执行。|  
@@ -60,7 +59,7 @@ ms.locfileid: "75228793"
   
 1.  连接到要承载主副本的服务器实例。  
   
-2.  使用[create availability group](/sql/t-sql/statements/create-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]语句创建可用性组。  
+2.  使用[CREATE AVAILABILITY group](/sql/t-sql/statements/create-availability-group-transact-sql)语句创建可用性组 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 。  
   
 3.  将新的辅助副本联接到可用性组。 有关详细信息，请参阅 [将辅助副本联接到可用性组 (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md)或 PowerShell 将辅助数据库联接到 Always On 可用性组。  
   
@@ -101,7 +100,7 @@ ms.locfileid: "75228793"
         GO  
         ```  
   
-    2.  下面的代码示例创建 *MyDb1* 和 *MyDb2*的完整数据库备份。 此\\ \\代码示例使用*虚构的备份*\\共享*SQLbackups*。  
+    2.  下面的代码示例创建 *MyDb1* 和 *MyDb2*的完整数据库备份。 此代码示例使用虚构的备份共享 \\ \\ *FILESERVER* \\ *SQLbackups*。  
   
         ```sql
         -- Backup sample databases:  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec4261d1-2799-4af8-9706-06b8c62d2fdf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 774cba19a7762a41d60fe7cf90d63de275e59b71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ebdb6750c61373041653d7c65df01fa866b9b68
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060656"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921684"
 ---
 # <a name="configure-data-viewer-grid-tab"></a>配置数据查看器（“网格”选项卡）
   可以使用 **“配置数据查看器”** 对话框的 **“网格”** 选项卡指定要显示的列。 网格图表将数据记录显示为网格中的行。 该图表只反应一个缓冲区的内容。  

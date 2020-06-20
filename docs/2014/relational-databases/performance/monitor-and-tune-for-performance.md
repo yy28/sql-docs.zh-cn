@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 683e8044b235828741fe429f133af82d1977031a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a96a7a7fcf6e4642ee9bd2d577e35dcbfb705fe4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150707"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066812"
 ---
 # <a name="monitor-and-tune-for-performance"></a>监视和优化性能
   监视数据库的目的是评估服务器的性能。 有效监视包括定期拍摄当前性能的快照来隔离导致问题的进程，以及连续收集数据来跟踪性能趋势。  
@@ -41,7 +40,7 @@ ms.locfileid: "63150707"
  日常数据库性能评估有助于使响应时间最小化并使吞吐量最大化，从而实现最佳性能。 有效网络流量、磁盘 I/O 和 CPU 使用率是实现最佳性能的关键。 您需要透彻地分析应用程序要求，了解数据的逻辑结构和物理结构，评估数据库使用情况，并协商使用 [如联机事务处理 (OLTP) 与决策支持] 冲突之间的平衡措施。  
   
 ## <a name="benefits-of-monitoring-and-tuning-databases-for-performance"></a>监视和优化数据库性能的好处  
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Microsoft Windows 操作系统提供实用工具，允许您查看数据库的当前状态并跟踪条件变化时的性能。 可以使用多种工具和技术来监视[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 了解如何监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有助于：  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Microsoft Windows 操作系统提供实用工具，允许您查看数据库的当前状态并跟踪条件变化时的性能。 可以使用多种工具和技术来监视 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 了解如何监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 有助于：  
   
 -   确定是否可以提高性能。 例如，通过监视常用查询的响应时间，可以确定是否需要更改表的查询或索引。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2effee7d-16bc-46e1-913c-28470faea345
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f355527002ed6d3637a3d1d895eb776c620c971d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77c9d58a08e234840c4ee2a7afe2ae5e22e8ae0f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060372"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921234"
 ---
 # <a name="connect-to-integration-services"></a>连接到 Integration Services
   在您连接到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务之前，管理员必须授予您该服务的访问权限。 有关详细信息，请参阅 [Grant Permissions to Integration Services Service](../../2014/integration-services/grant-permissions-to-integration-services-service.md)。  
@@ -30,6 +29,6 @@ ms.locfileid: "66060372"
   
 4.  在 **“连接到服务器”** 对话框中，提供服务器名。 可以使用句点 (.)、(local) 或 `localhost` 来指示本地服务器。  
   
-5.  单击“连接”  。  
+5.  单击“连接”。  
   
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e5f7959496cfa2b473fbf5c500f424647df0a1c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25effc199b1f8e525ceec78216e935e13afe2be2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060232"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917357"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   部署包的第一步是为 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目创建一个部署实用工具。 部署实用工具是一个文件夹，其中包含在不同服务器上部署 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中的包所需的文件。 部署实用工具是在存储 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目的计算机上创建的。  
@@ -35,7 +34,7 @@ ms.locfileid: "66060232"
 |CreateDeploymentUtility|一个指定在生成项目时是否创建包部署实用工具的值。 此属性必须为 `True` 才能创建部署实用工具。|  
 |DeploymentOutputPath|部署实用工具的位置，相对于 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。|  
   
- 在生成 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目时，除了创建项目包的副本和包依赖项外，还会创建一个清单文件 \<project name>.SSISDeploymentManifest.xml，并将它们都添加到项目的 bin\Deployment 文件夹中，或添加到 DeploymentOutputPath 属性中所指定的位置。 该清单文件列出了项目中的包、包配置和所有杂项文件。  
+ 生成项目时， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 会创建一个清单文件 \<project name>.SSISDeploymentManifest.xml，并将其与项目包和包依赖项的副本一起添加到项目中的 bin\Deployment 文件夹，或者添加到 DeploymentOutputPath 属性中指定的位置。 该清单文件列出了项目中的包、包配置和所有杂项文件。  
   
  每次生成项目时将刷新部署文件夹的内容。 这意味着系统将删除所有已保存到此文件夹中但未由生成进程再次复制到该文件夹中的文件。 例如，将删除保存到部署文件夹中的包配置文件。  
   
@@ -45,15 +44,15 @@ ms.locfileid: "66060232"
   
 2.  右键单击该项目，再单击“属性”****。  
   
-3.  在** \<项目名称> 属性页**"对话框中，单击"**部署实用工具**"。  
+3.  在 " ** \<project name> 属性页**" 对话框中，单击 "**部署实用工具**"。  
   
-4.  若要在部署包时更新包配置，请**AllowConfigurationChanges**将 AllowConfigurationChanges `True`设置为。  
+4.  若要在部署包时更新包配置，请将**AllowConfigurationChanges**设置为 `True` 。  
   
 5.  将 `CreateDeploymentUtility` 设置为 `True`。  
   
 6.  还可以通过修改 `DeploymentOutputPath` 属性来更新部署实用工具的位置。  
   
-7.  单击" **确定**"。  
+7.  单击“确定”。  
   
 8.  在解决方案资源管理器中，右键单击该项目，再单击****“生成”。  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 08b0b5fe-298a-483f-b50a-73919a2513ce
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fa4a76f8452034175bd4033d8213372f2793e162
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8cf54a5391b2aa404808963097f7b331584a9ed
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62913249"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053420"
 ---
 # <a name="audit-backup-and-restore-event-class"></a>审核备份和还原事件类
   每当发出备份或还原命令时，都会发生 **Audit Backup/Restore** 事件类。  

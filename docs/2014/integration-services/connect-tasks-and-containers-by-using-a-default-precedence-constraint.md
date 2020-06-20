@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8f31f15f-98ff-4c35-b41f-8b8cfd148d75
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4e5c0ad2405c0d62b703dcb7fa668837e7e47386
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b41330bcb2fe007b1f666382719f98d39ec67438
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060431"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921351"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>使用默认优先约束来连接任务和容器
   优先约束连接两个可执行文件。 可执行文件可以是任何任务，也可以是 For 循环容器、Foreach 循环容器或序列容器。 此过程介绍如何设置优先约束的默认行为，以及如何用默认优先约束来连接可执行文件。  
@@ -32,7 +31,7 @@ ms.locfileid: "66060431"
   
 1.  打开 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   
-2.  在“工具” **** 菜单上，单击“选项” ****。  
+2.  在“工具”  菜单上，单击“选项” 。  
   
 3.  在 **“选项”** 对话框中，展开 **“商业智能设计器”** ，再展开 **“Integration Services 设计器”**。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66060431"
   
 5.  在下拉列表中，选择“对新形状使用‘失败’约束”或“对新形状使用‘完成’约束”。********  
   
-6.  单击" **确定**"。  
+6.  单击“确定”。  
   
 #### <a name="to-create-a-default-precedence-constraint"></a>创建默认优先约束  
   

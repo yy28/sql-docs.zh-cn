@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 452d3ac4dae2164fa0fa172528ae398ea91fed31
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c938624a3ed39fe2d41f21a21af5231aa76a8c17
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797749"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936974"
 ---
 # <a name="configure-the-flexible-failover-policy-to-control-conditions-for-automatic-failover-always-on-availability-groups"></a>配置灵活的故障转移策略以控制自动故障转移的条件（Always On 可用性组）
   本主题介绍如何在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 为 AlwaysOn 可用性组配置灵活故障转移策略。 灵活的故障转移策略提供了对导致可用性组自动执行故障转移的条件的精确控制。 通过更改触发自动故障转移的失败条件和运行状况检查的频率，可增大或减小自动进行故障转移来支持高可用性 SLA 的可能性。  
@@ -37,7 +36,7 @@ ms.locfileid: "72797749"
   
 -   如果某个可用性组超过其 WSFC 故障阈值，则该 WSFC 群集不会尝试为该可用性组执行自动故障转移。 此外，该可用性组的 WSFC 资源组始终保持失败状态，直到群集管理员手动将该失败的资源组联机，或是数据库管理员对该可用性组执行手动故障转移。 WSFC 故障阈值 ** 定义为给定时间段中可用性组所支持的最大故障数。 默认时间段为六个小时，此时间段中最大故障数的默认值为 *n*-1，其中 *n* 是 WSFC 节点的数目。 若要更改给定的可用性组的故障阈值，请使用 WSFC 故障转移管理器控制台。  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 先决条件  
   
 -   您必须连接到承载主副本的服务器实例。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "72797749"
   
 1.  连接到承载主副本的服务器实例。  
   
-2.  对于新的可用性组，请使用[CREATE availability group](/sql/t-sql/statements/create-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]语句。 如果要修改现有的可用性组，请使用[ALTER availability group](/sql/t-sql/statements/alter-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]语句。  
+2.  对于新的可用性组，请使用[CREATE AVAILABILITY group](/sql/t-sql/statements/create-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句。 如果要修改现有的可用性组，请使用[ALTER AVAILABILITY group](/sql/t-sql/statements/alter-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句。  
   
     -   若要设置故障转移条件级别，请使用 FAILURE_CONDITION_LEVEL = *n* 选项，其中， *n* 是 1 到 5 的整数。  
   
@@ -69,8 +68,8 @@ ms.locfileid: "72797749"
   
         |[!INCLUDE[tsql](../../../includes/tsql-md.md)] 值|级别|当出现以下情况时，自动启动故障转移…|  
         |------------------------------|-----------|-------------------------------------------|  
-        |1|一个|当服务器关闭时。 SQL Server 服务因故障转移或重新启动而停止。|  
-        |2|两种|当服务器无响应时。 满足任何下限值条件，SQL Server 服务连接到群集，超过运行状况检查超时阈值，或当前主副本处于失败状态。|  
+        |1|One|当服务器关闭时。 SQL Server 服务因故障转移或重新启动而停止。|  
+        |2|Two|当服务器无响应时。 满足任何下限值条件，SQL Server 服务连接到群集，超过运行状况检查超时阈值，或当前主副本处于失败状态。|  
         |3|三级|出现严重服务器错误时。 满足任何下限值条件或发生严重的内部服务器错误。<br /><br /> 这是默认级别。|  
         |4|四级|出现严重服务器错误时。 满足任何下限值条件或发生中度的服务器错误。|  
         |5|五级|在出现任何限定的失败条件时。 满足任何下限值条件或出现限定的失败条件。|  
@@ -93,12 +92,12 @@ ms.locfileid: "72797749"
   
 2.  在将可用性副本添加到可用性组中时，请使用 `New-SqlAvailabilityGroup` cmdlet。 在修改现有可用性副本时，请使用 `Set-SqlAvailabilityGroup` cmdlet。  
   
-    -   若要设置故障转移条件级别，请`FailureConditionLevel`使用*level*参数，其中， *level*是下列值之一：  
+    -   若要设置故障转移条件级别，请使用 `FailureConditionLevel` *level*参数，其中， *level*是下列值之一：  
   
         |值|级别|当出现以下情况时，自动启动故障转移…|  
         |-----------|-----------|-------------------------------------------|  
-        |`OnServerDown`|一个|当服务器关闭时。 SQL Server 服务因故障转移或重新启动而停止。|  
-        |`OnServerUnresponsive`|两种|当服务器无响应时。 满足任何下限值条件，SQL Server 服务连接到群集，超过运行状况检查超时阈值，或当前主副本处于失败状态。|  
+        |`OnServerDown`|One|当服务器关闭时。 SQL Server 服务因故障转移或重新启动而停止。|  
+        |`OnServerUnresponsive`|Two|当服务器无响应时。 满足任何下限值条件，SQL Server 服务连接到群集，超过运行状况检查超时阈值，或当前主副本处于失败状态。|  
         |`OnCriticalServerError`|三级|出现严重服务器错误时。 满足任何下限值条件或发生严重的内部服务器错误。<br /><br /> 这是默认级别。|  
         |`OnModerateServerError`|四级|出现严重服务器错误时。 满足任何下限值条件或发生中度的服务器错误。|  
         |`OnAnyQualifiedFailureConditions`|五级|在出现任何限定的失败条件时。 满足任何下限值条件或出现限定的失败条件。|  
@@ -113,7 +112,7 @@ ms.locfileid: "72797749"
          -FailureConditionLevel OnServerDown  
         ```  
   
-    -   若要设置运行状况检查超时阈值，请`HealthCheckTimeout`使用*n*参数，其中*n*是15000毫秒（15秒）到4294967295毫秒的整数。 默认值为 30000 毫秒（30 秒）。  
+    -   若要设置运行状况检查超时阈值，请使用 `HealthCheckTimeout` *n*参数，其中*n*是15000毫秒（15秒）到4294967295毫秒的整数。 默认值为 30000 毫秒（30 秒）。  
   
          例如，以下命令会将现有可用性组 `AG1`的运行状况检查超时阈值更改为 120,000 毫秒（2 分钟）。  
   

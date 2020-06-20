@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 29ed5816a3a5fc0af6c5a4ac144557933e3e1a5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 479a5c26ae8ed6322c030459c2432c49834b3683
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487716"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006704"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>综合使用 SSIS、MDS 和 DQS 来执行企业信息管理 [教程]
   在企业中管理信息通常涉及集成来自企业和企业之外的信息、清理数据、对数据进行匹配以便删除重复项、标准化数据、丰富数据、使数据符合法律和遵从性要求，以及将数据存储于具有所有必需的安全设置的集中位置。  
@@ -54,7 +53,7 @@ ms.locfileid: "81487716"
   
 2.  [使用 Master Data Services 配置管理器配置 MDS](https://msdn.microsoft.com/library/ee633884.aspx)  
   
-     使用配置管理器创建和配置 Master Data Services 数据库。 创建 MDS 数据库后，在网站中为 MDS 创建一个 web 应用程序（例如： `http://localhost/MDS`），并将 mds 数据库与 mds web 应用程序相关联。 请注意，若要创建 MDS Web 应用程序，您应该在您的计算机上安装有 IIS。 有关配置 MDS 数据库和 Web 应用程序的先决条件的详细信息，请参阅[Web 应用程序要求（Master Data Services）](https://msdn.microsoft.com/library/ee633744.aspx)和[数据库要求（Master Data Services）](https://msdn.microsoft.com/library/ee633767.aspx) 。  
+     使用配置管理器创建和配置 Master Data Services 数据库。 创建 MDS 数据库后，在网站中为 MDS 创建一个 web 应用程序（例如： `http://localhost/MDS` ），并将 mds 数据库与 mds web 应用程序相关联。 请注意，若要创建 MDS Web 应用程序，您应该在您的计算机上安装有 IIS。 有关配置 MDS 数据库和 Web 应用程序的先决条件的详细信息，请参阅[Web 应用程序要求（Master Data Services）](https://msdn.microsoft.com/library/ee633744.aspx)和[数据库要求（Master Data Services）](https://msdn.microsoft.com/library/ee633767.aspx) 。  
   
 3.  [使用数据质量服务器安装程序安装和配置 DQS](https://msdn.microsoft.com/library/hh231682.aspx)。 依次单击 "**开始**"、"**所有程序**"、 **Microsoft SQL Server 2014**、" **data Quality Services**"，然后单击 "**数据质量服务器安装程序**"。  
   
@@ -64,11 +63,11 @@ ms.locfileid: "81487716"
   
 6.  可有可无使用[Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/)创建帐户。 本教程中的任务之一要求你具有**Azure Marketplace** （最初称为 "**数据市场**"）帐户。 如果需要您可以跳过此任务，继续执行下一任务。  
   
-7.  从[Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=50426)下载供应商 .xls 文件。  
+7.  从[Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=50426)下载 Suppliers.xls 文件。  
   
 8.  如果你使用**的是64位版本的 excel**，则 DQS 不允许你将清理或匹配结果导出到 excel 文件中。 此问题是一个已知问题。 若要解决此问题，请执行以下操作：  
   
-    1.  运行**DQLInstaller-upgrade**。 如果您安装了 SQL Server 的默认实例，则 DQSInstaller.exe 文件将出现在 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn 下。 双击 DQSInstaller.exe 文件。  
+    1.  运行**DQLInstaller.exe 升级**。 如果您安装了 SQL Server 的默认实例，则 DQSInstaller.exe 文件将出现在 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn 下。 双击 DQSInstaller.exe 文件。  
   
     2.  在**Master Data Services 配置管理器**中，单击 "**选择数据库**"，选择 "现有**MDS**数据库"，然后单击 "**升级**"。  
   

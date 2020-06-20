@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 9c0d10b1-9e12-430c-83b9-ca2bd0a3afc4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c1143efc4d5a695dd00766d1f78132f7e69adc46
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab8f136a021d973b7c9653ea0ba9c4b1875c1402
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815284"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937032"
 ---
 # <a name="availability-replica-is-not-joined"></a>可用性副本未联接
     
-## <a name="introduction"></a>介绍  
+## <a name="introduction"></a>简介  
   
 |||  
 |-|-|  

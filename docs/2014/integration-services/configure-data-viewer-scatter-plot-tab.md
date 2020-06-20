@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 960c351a-ccb9-4e52-acd4-442246a3a328
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9b1c002a7fcf0027f5169c4365c4ee1cd82f1a83
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1111b0d8f2903de9b690f269498a93d01c2afa0c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060680"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921654"
 ---
 # <a name="configure-data-viewer-scatter-plot-tab"></a>配置数据查看器（“散点图”选项卡）
   可以使用“配置数据查看器”**** 对话框的“散点图 (x,y)”**** 选项卡指定要进行正交绘图的两个列。 散点图可以对两个数值列中的数据值进行正交绘图。 每条数据记录都成为绘图区中的一个点。 该图表只反应一个缓冲区的内容。  

@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 01a70258-d4fd-40bc-bc44-c490b5d6c420
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 32b2ab48c3406c9820ca264a1cef236a041a5924
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bcc51e3fc8269ef0035e52b040ca38eef0f23e84
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814548"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936608"
 ---
 # <a name="remote-blob-store-rbs-and-alwayson-availability-groups-sql-server"></a>远程 Blob 存储区 (RBS) 和 AlwaysOn 可用性组 (SQL Server)
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]可为[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][远程 blob 存储区（RBS）](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md) Blob 对象（blob）提供高可用性和灾难恢复解决方案。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 通过将存储到可用性数据库中的所有 RBS 元数据和架构复制到辅助副本的方式来保护它们。 这是 SharePoint 内容数据库。 一般来说， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不通过 Blob 单独存储此 RBS 元数据。  
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]可为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [远程 Blob 存储区（RBS）](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md) Blob 对象（blob）提供高可用性和灾难恢复解决方案。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 通过将存储到可用性数据库中的所有 RBS 元数据和架构复制到辅助副本的方式来保护它们。 这是 SharePoint 内容数据库。 一般来说， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不通过 Blob 单独存储此 RBS 元数据。  
   
  RBD BLOB 数据保护取决于 BLOB 存储位置，如下所示：  
   

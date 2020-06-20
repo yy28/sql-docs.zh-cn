@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 31a24acb49abf4965e18443ef4c46ffd9a16f15c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c311f79f8495288f918ac57cda009d2a64f12b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176514"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921068"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure 订阅连接管理器
   通过使用你为以下属性指定的值，Azure HDInsight 连接管理器使 SSIS 包能够连接到 Azure 订阅：Azure 订阅 ID 和管理证书。
@@ -39,6 +38,6 @@ ms.locfileid: "78176514"
 
 5.  单击 "**测试连接**" 以测试连接。
 
-6.  单击 **“确定”** 关闭对话框。
+6.  单击“确定”  关闭对话框。
 
 
