@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 57e89016641469cbb3215429ff0f2b9053f758c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1baf7d4b4d8c232bfd350cc942d90a4b8631d6f9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63138877"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001290"
 ---
 # <a name="open-file-dialog-box"></a>“打开文件”对话框
   使用“打开文件”  对话框打开磁盘中的现有文件。 还可以使用此对话框打开已通过其他语言编码选项打开的文件。  
   
- 若要访问此对话框，请在“文件”  菜单中，选择“打开”  ，然后选择“文件”  。 从诸如“外部工具”  对话框等其他元素中打开文件时，也将显示此对话框。 在“文件”  菜单中，选择“打开”  ，然后选择“项目/解决方案”  以打开类似的“打开项目”  对话框。  
+ 若要访问此对话框，请在“文件”菜单中，选择“打开”，然后选择“文件”。 从诸如“外部工具”  对话框等其他元素中打开文件时，也将显示此对话框。 在“文件”  菜单中，选择“打开”  ，然后选择“项目/解决方案”  以打开类似的“打开项目”  对话框。  
   
 > [!NOTE]  
 >  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中打开项目或组件之前，请确定其代码的可信度。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中打开项目或组件的操作可能会在本地计算机上的可信进程中执行其代码。  

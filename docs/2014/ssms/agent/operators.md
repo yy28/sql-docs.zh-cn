@@ -1,5 +1,5 @@
 ---
-title: 操作员 | Microsoft Docs
+title: 运算符 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 03deab738f374716002c4d78e07078e90fb41822
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d141a2db9a69603701200bc50dcac57ef402968a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68189021"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064432"
 ---
 # <a name="operators"></a>运算符
   操作员是在完成作业或出现警报时可以接收电子通知的人员或组的别名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务支持通过操作员通知管理员的功能。 运算员可以通知和监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的功能。  
@@ -47,7 +46,7 @@ ms.locfileid: "68189021"
  操作员的联系信息决定了通知该操作员的方式。 可以通过电子邮件、寻呼程序或 **net send** ：  
   
 > [!IMPORTANT]  
->  在未来版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，将从代理中删除寻呼程序和**net send**选项。 请避免在新的开发工作中使用这些功能，并考虑修改当前使用这些功能的应用程序。  
+>  在未来版本的中，将从代理中删除寻呼程序和**net send**选项 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 请避免在新的开发工作中使用这些功能，并考虑修改当前使用这些功能的应用程序。  
   
 -   **电子邮件通知**  
   
@@ -117,7 +116,7 @@ ms.locfileid: "68189021"
   
 |||  
 |-|-|  
-|**任务**|**主题**|  
+|**任务**|**标题**|  
 |与创建操作员相关的任务|[创建操作员](create-an-operator.md)<br /><br /> [指定防故障操作员](designate-a-fail-safe-operator.md)|  
 |与分配警报相关的任务|[向操作员分配警报](assign-alerts-to-an-operator.md)<br /><br /> [定义对警报的响应 (SQL Server Management Studio)](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [向操作员分配警报](assign-alerts-to-an-operator.md)|  
   

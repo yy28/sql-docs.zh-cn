@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1dd5391e-dcd5-4ac2-b8dd-0e40922758a8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b87822c99f9c3398f5a2dcda1725025895979d15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 899d7e1a00a18f320bfecd508e8d0c65be85a57c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63228391"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999846"
 ---
 # <a name="import-a-trace-template-sql-server-profiler"></a>导入跟踪模板 (SQL Server Profiler)
   本主题说明如何通过 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]导入跟踪模板文件 (.tdf)。  
@@ -28,7 +27,7 @@ ms.locfileid: "63228391"
   
 1.  请在 **“文件”** 菜单上，单击 **“模板”** ，再单击 **“导入模板”** 。  
   
-2.  在“打开文件”  对话框中，选择要导入的跟踪模板文件（.tdf 文件）并单击“打开”  。  
+2.  在“打开文件”对话框中，选择要导入的跟踪模板文件（.tdf 文件）并单击“打开”。  
   
      跟踪模板文件就添加为 **“跟踪属性”** 对话框的 **“使用模板”** 列表中的可用模板。 用户定义的模板将在模板名称后追加 **(user)** 。  
   

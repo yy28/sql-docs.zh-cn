@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 195dda61-308a-4c94-8f57-1fd01ab1e521
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e4ce89c0a1333a0a9a7a4ee9a801a2969c32a2e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b33b83338f1886a464d1831146db683008779799
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033469"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001069"
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>“保存后的通知”对话框 (Visual Database Tools)
   如果在尝试保存对表的更改遇到错误，则会显示此对话框。 此对话框将列出已成功保存在数据库中的对象、未保存的对象以及遇到的错误。  

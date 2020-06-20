@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 37b267c22458442e3c1c1572c2740b6595918fca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e9072a68dd3179e5900fda06d4fea58b484a37e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487726"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002595"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
   本教程使用一个应用场景说明 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安全性概念，其中包括所有权链和用户上下文切换。  
@@ -48,7 +47,7 @@ ms.locfileid: "81487726"
  本示例中的每个代码块都将逐一加以说明。 若要复制完整的示例，请参阅本教程结尾部分的 [完整示例](#CompleteExample) 。  
   
 ## <a name="1-configure-the-environment"></a>1.配置环境  
- 使用[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]和以下代码打开`AdventureWorks2012`数据库，然后使用`CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)]语句检查 dbo 用户是否显示为上下文。  
+ 使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 和以下代码打开 `AdventureWorks2012` 数据库，然后使用 `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] 语句检查 dbo 用户是否显示为上下文。  
   
 ```  
 USE AdventureWorks2012;  
@@ -95,7 +94,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
- 有关 GRANT 语句的详细信息，请参阅 [GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql)。 有关存储过程的详细信息，请参阅[存储过程（数据库引擎）](stored-procedures/stored-procedures-database-engine.md)。 有关所有[!INCLUDE[ssDE](../includes/ssde-md.md)]权限的海报，请参阅[https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)。  
+ 有关 GRANT 语句的详细信息，请参阅 [GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql)。 有关存储过程的详细信息，请参阅[存储过程（数据库引擎）](stored-procedures/stored-procedures-database-engine.md)。 有关所有权限的海报 [!INCLUDE[ssDE](../includes/ssde-md.md)] ，请参阅 [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf) 。  
   
 ## <a name="2-create-a-stored-procedure-to-access-data"></a>2.创建存储过程以访问数据  
  若要切换数据库内的上下文，请使用 EXECUTE AS 语句。 EXECUTE AS 需要 IMPERSONATE 权限。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 112fca2a-37e5-4162-b2e7-b56eb8ab0c6f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9f5b5c233a482672a0cc225364dbf1e4f3b4b645
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48f9202483bcb2cf8e06b6e0d14834753cc666b8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63185404"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000389"
 ---
 # <a name="database-element-for-workload-dta"></a>工作负荷的数据库元素 (DTA)
   指定工作负荷跟踪表所在的数据库。  
@@ -53,7 +52,7 @@ ms.locfileid: "63185404"
  在数据库引擎优化顾问 XML 架构中，此元素的名称为 **DatabaseDetailsTypecomplexType** 。 请不要将此 `Database` 元素与根级父元素为 `Configuration` 元素的元素相混淆。 （请参阅[用于配置的数据库元素 (DTA)](database-element-for-configuration-dta.md)。）  
   
 ## <a name="example"></a>示例  
- 有关此`Database`元素的用法示例，请参阅工作负荷元素中的代码示例[&#40;DTA&#41;](workload-element-dta.md)。  
+ 有关此元素的用法示例 `Database` ，请参阅[工作负荷元素](workload-element-dta.md)中的代码示例 &#40;DTA&#41;。  
   
 ## <a name="see-also"></a>另请参阅  
  [XML 输入文件引用（数据库引擎优化顾问）](xml-input-file-reference-database-engine-tuning-advisor.md)  

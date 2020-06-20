@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cc7b94b52a51fdae8d205dd177bc3d4bac6f721d
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: cb46be347590d3fb61d05476616e6c0a52e1ed41
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849525"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929088"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>为可用性组设置针对 Azure 的 SQL Server 托管备份
   本主题是有关为参与 AlwaysOn 可用性组的数据库配置 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 的教程。  
@@ -29,7 +28,7 @@ ms.locfileid: "82849525"
 -   网络带宽：这适用于副本位于不同物理位置的实现，例如在混合云中，或在仅限云的配置中跨不同的 Azure 区域。 如果副本设置为同步复制，网络带宽会影响副本的滞后时间，这又可能导致主副本的日志增长。 如果副本设置为同步复制，由于网络滞后时间，副本可能无法保持同步，这在故障转移到辅助副本时可能导致数据丢失。  
   
 ### <a name="configuring-ss_smartbackup-for-availability-databases"></a>为可用性数据库配置 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
- **访问**  
+ **权限：**  
   
 -   要求具有**db_backupoperator**数据库角色的成员身份、具有**ALTER ANY CREDENTIAL**权限以及 `EXECUTE` 对**sp_delete_backuphistory**存储过程的权限。  
   

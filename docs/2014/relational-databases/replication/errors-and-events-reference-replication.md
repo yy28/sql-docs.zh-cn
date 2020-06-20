@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f9323b5d28c0b41b56f4b6fb78c39d8bfacf0ba8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d40f4f16c3ab8997ddee5c565a5ff3131e70a0f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721316"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010711"
 ---
 # <a name="errors-and-events-reference-replication"></a>错误和事件参考（复制）
   本部分文档包含与复制相关的多个错误的原因和解决方法的信息。  
