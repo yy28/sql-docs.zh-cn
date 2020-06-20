@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5d663cf6a4a2c7edfc7ae206f5a703b10db63106
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e87089d05ec00993900bc8a081ebe43ae3adf448
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703532"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003176"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>使用 sql:overflow-field 检索未用完的数据 (SQLXML 4.0)
-  使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 函数将 XML 文档中的记录插入数据库时，源 XML 文档中所有未用完的数据可以存储在列中。 使用带批注的架构从数据库检索数据时，可指定 `sql:overflow-field` 属性以标识表中存储溢出数据的列。 `sql:overflow-field`可在** \< 元素>** 上指定属性。  
+  使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 函数将 XML 文档中的记录插入数据库时，源 XML 文档中所有未用完的数据可以存储在列中。 使用带批注的架构从数据库检索数据时，可指定 `sql:overflow-field` 属性以标识表中存储溢出数据的列。 `sql:overflow-field`可以在上指定属性 **\<element>** 。  
   
  然后，可以通过以下方式检索此数据：  
   

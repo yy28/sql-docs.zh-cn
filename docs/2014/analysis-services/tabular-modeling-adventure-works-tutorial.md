@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 27ac17469a96213bdd39cbf2bee5a343d117e6f0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d914595c5c62016efca26dece908ee28b7010706
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487626"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940008"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>表格建模（Adventure Works 教程）
   本教程提供的课程介绍如何通过使用 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 创建 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Analysis Services 表格模型。  
@@ -51,14 +50,14 @@ ms.locfileid: "81487626"
 > [!NOTE]  
 >  本教程并未提供有关以下内容的课程或信息：通过使用 SQL Server Management Studio 管理已部署的表格模型数据库，或者使用报表客户端应用程序连接到已部署的模型以浏览模型数据。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  为了完成本教程，您必须安装了以下必备组件：  
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services 实例（在表格模式下运行）。  
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
--   AdventureWorksDW 示例数据库。 此示例数据库包括完成本教程所需的数据。 若要下载示例数据库，请[https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)参阅。  
+-   AdventureWorksDW 示例数据库。 此示例数据库包括完成本教程所需的数据。 若要下载示例数据库，请参阅 [https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks) 。  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 或更高版本（与课程 11 中的“在 Excel 中分析”功能结合使用）  
   
@@ -92,7 +91,7 @@ ms.locfileid: "81487626"
 |[通过使用行筛选器实现动态安全性](../tutorials/implement-dynamic-security-by-using-row-filters.md)|30 分钟|  
 |[为 Power View 报表配置报表属性](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)为 Power View 报表配置报表属性|30 分钟|  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
  若要开始学习本教程，请继续第一课： [第 1 课：创建新的表格模型项目](lesson-1-create-a-new-tabular-model-project.md)。  
   
   

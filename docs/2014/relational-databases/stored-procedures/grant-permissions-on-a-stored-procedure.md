@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a7d15816-a788-4099-ad91-dc4b26618299
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47b8e4b87ab3150ae7bf67d3c3a2f9c5e0732294
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23ea130b9d2033128adc99413c053d66936e3ccc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63015569"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064559"
 ---
 # <a name="grant-permissions-on-a-stored-procedure"></a>授予对存储过程的权限
   本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]授予对存储过程的权限。 可以为数据库中的现有用户、数据库角色或应用程序角色授予权限。  

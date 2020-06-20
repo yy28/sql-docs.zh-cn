@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c147c9e1-b81d-49c8-b800-3019f4d86a13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9f4ab373c9827adff6e0138a81b5eaa57d1c4414
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7feec1765cf6ffaa3e46a300a5155ae73fb13db
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755169"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934688"
 ---
 # <a name="xp_cmdshell-server-configuration-option"></a>xp_cmdshell 服务器配置选项
   **xp_cmdshell** 选项是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务器配置选项，该选项使系统管理员能够控制是否可以在系统上执行 **xp_cmdshell** 扩展存储过程。 默认情况下， **xp_cmdshell** 选项在新安装的软件上处于禁用状态，但是可以通过使用基于策略的管理或运行 **sp_configure** 系统存储过程来启用它，如下面的代码示例所示：  

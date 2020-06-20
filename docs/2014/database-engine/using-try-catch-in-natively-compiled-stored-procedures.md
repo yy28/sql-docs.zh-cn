@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f730e70c-4f92-411d-9984-289e241e43ee
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fa7115be43361e25f5ad2b082a92929298ce8bef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4146d59be120b850e1e92e5e43ae73b2928c52cf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62842475"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927646"
 ---
 # <a name="using-trycatch-in-natively-compiled-stored-procedures"></a>在本机编译的存储过程中使用 Try..Catch
   您可以在本机编译的存储过程内使用 try..catch 块。 支持以下构造：  

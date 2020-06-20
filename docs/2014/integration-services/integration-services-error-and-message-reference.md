@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a809aa628b90d73bed6eecd2d23cdec4dff6aea
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892655"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968277"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 错误和消息引用
   下表按编号的升序列出了每个类别中的预定义 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误、警告和信息性消息及其数值代码和符号名称。 其中每个错误都定义为 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类中的一个字段。  
@@ -230,7 +229,7 @@ ms.locfileid: "62892655"
 |0xC0015005|-1073655803|DTS_E_NOROWSETRETURNED|没有与执行此查询相关联的结果行集。 未正确指定结果。|  
 |0xC0015105|-1073655547|DTS_E_DUMP_FAILED|没有正确生成调试转储文件。 hresult 为 0x%1!8.8X!。|  
 |0xC0016001|-1073651711|DTS_E_INVALIDURL|指定的 URL 无效。 如果服务器或代理 URL 为空或格式不正确，会发生这种情况。 有效的 URL 格式的形式为 http://ServerName:Port/ResourcePath 或 https://ServerName:Port/ResourcePath 。|  
-|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|URL %1 无效。 如果指定了 http 和 https 之外的其他方案，或者该 URL 的格式不正确，会发生这种情况。 有效的 URL 格式的形式为 http://ServerName:Port/ResourcePath 或 https://ServerName:Port/ResourcePath。|  
+|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|URL %1 无效。 如果指定了 http 和 https 之外的其他方案，或者该 URL 的格式不正确，会发生这种情况。 有效的 URL 格式的形式为 http://ServerName:Port/ResourcePath 或 https://ServerName:Port/ResourcePath 。|  
 |0xC0016003|-1073651709|DTS_E_WINHTTPCANNOTCONNECT|无法建立与服务器 %1 的连接。 如果该服务器不存在，或代理设置不正确，会出现此错误。|  
 |0xC0016004|-1073651708|DTS_E_CONNECTIONTERMINATED|与服务器的连接已重置或终止。 请稍后再试。|  
 |0xC0016005|-1073651707|DTS_E_LOGINFAILURE|对“%1”的登录尝试失败。 如果提供的登录凭据不正确，会出现此错误。 请验证登录凭据。|  
@@ -1413,7 +1412,7 @@ ms.locfileid: "62892655"
 |0xC02020D6|-1071636266|DTS_E_TXSAMPLINGINVALIDROWS|行数 %2!ld! 对于“%1”属性无效。 此值必须大于 0。|  
 |0xC02020D7|-1071636265|DTS_E_RAWSTRINGINPUTTOOLONG|要求适配器写入的字符串长度为 %1!I64d! 个字节，而所有数据的长度必须小于 4294967295 个字节。|  
 |0xC02020D9|-1071636263|DTS_E_ATLEASTONEINPUTMUSTBEMAPPEDTOOUTPUT|没有输入映射到输出。 “%1”必须至少有一个输入列映射到输出列。|  
-|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|不支持从“%1”(代码页为 %2!d!) 到“%3”(代码页为 %4!d!) 分层。|  
+|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|不支持从“%1”(代码页为 %2!d!) 到“%3”(代码页为 %4!d!)  分层。|  
 |0xC02020DC|-1071636260|DTS_E_COLUMNNOTMAPPEDTOEXTERNALMETADATACOLUMN|%1 的外部元数据列映射无效。  外部元数据列 ID 不能为零。|  
 |0xC02020DD|-1071636259|DTS_E_COLUMNMAPPEDTONONEXISTENTEXTERNALMETADATACOLUMN|“%1”被映射到不存在的外部元数据列。|  
 |0xC02020E5|-1071636251|DTS_E_UNABLETOWRITELOBDATATOBUFFER|无法为列“%1”将类型为 DT_TEXT、DT_NTEXT 或 DT_IMAGE 的长对象数据写入数据流任务缓冲区。|  
@@ -1992,7 +1991,7 @@ ms.locfileid: "62892655"
 |0xC02092B6|-1071607114|DTS_E_USEBINARYFORMATREQUIRESANSIFILE|%2 的自定义属性“%1”只能用于 ansi 文件。|  
 |0xC02092B7|-1071607113|DTS_E_USEBINARYFORMATREQUIRESBYTES|%2 的自定义属性“%1”只能用于 DT_BYTES。|  
 |0xC0209302|-1071607038|DTS_E_OLEDB_NOPROVIDER_ERROR|SSIS 错误代码 DTS_E_OLEDB_NOPROVIDER_ERROR。  所请求的 OLE DB 访问接口 %2 尚未注册。 错误代码:0x%1!8.8X!。|  
-|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|SSIS 错误代码 DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR。  所请求的 OLE DB 访问接口 %2 尚未注册 -- 可能是由于没有可用的 64 位访问接口。  错误代码: 0x%1!8.8X!。|  
+|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|SSIS 错误代码 DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR。  所请求的 OLE DB 访问接口 %2 尚未注册 -- 可能是由于没有可用的 64 位访问接口。  错误代码:0x%1!8.8X!。|  
 |0xC0209306|-1071607034|DTS_E_MULTICACHECOLMAPPINGS|缓存列“%1”映射至多个列。 请删除重复的列映射。|  
 |0xC0209307|-1071607033|DTS_E_COLNOTMAPPEDTOCACHECOL|%1 未映射到有效的缓存列。|  
 |0xC0209308|-1071607032|DTS_E_CACHECOLDATATYPEINCOMPAT|由于数据类型不匹配，无法映射输入列“%1”和缓存列“%2”。|  

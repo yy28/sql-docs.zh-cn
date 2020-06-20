@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: b1cbb697-713f-48e4-b234-b23724d87451
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 15f45af03125ebd797de0e36cb67516b4f01408d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4043075208fb4435fb777214733dad1d93113452
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060151"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917278"
 ---
 # <a name="create-and-map-a-server-environment"></a>创建和映射服务器环境
   创建服务器环境来指定已部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器的项目中所含包的运行时值。 您可以随后针对特定包、入口点包或给定项目中的所有包，将环境变量映射到参数。 入口点包通常是执行子包的父包。  
@@ -32,7 +31,7 @@ ms.locfileid: "66060151"
   
 ### <a name="to-create-and-use-a-server-environment"></a>创建和使用服务器环境  
   
-1.  在[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中，展开[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]对象资源管理器中的 "目录> **SSISDB** " 节点，然后找到要为其创建环境的项目的 "**环境**" 文件夹。  
+1.  在中 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ，展开 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象资源管理器中的 "目录> **SSISDB** " 节点，然后找到要为其创建环境的项目的 "**环境**" 文件夹。  
   
 2.  右键单击“环境”**** 文件夹，然后单击“创建环境”****。  
   

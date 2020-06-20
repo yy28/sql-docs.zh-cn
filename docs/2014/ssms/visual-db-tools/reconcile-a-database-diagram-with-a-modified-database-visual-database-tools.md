@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: eda8dea2-eedd-43a7-85aa-92bd97783b5f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d779e6362cc3e2842003b82a092ce48ce4933e8e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3d124a72caadc2d802765aa80d80baf5c6a3697
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011372"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048586"
 ---
 # <a name="reconcile-a-database-diagram-with-a-modified-database-visual-database-tools"></a>协调数据库关系图与已修改的数据库 (Visual Database Tools)
   当您准备好对数据库进行更新以与您的关系图匹配时，即可保存数据库关系图。 但是，如果其他用户在您打开关系图后更新了相应的数据库，他们的更改可能会影响您的关系图，同样如果您在其他用户打开关系图后更新数据库，那么您的更改也会影响他们的关系图。  

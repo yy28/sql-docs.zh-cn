@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0209055e-cb6b-4a07-909e-836596727a2c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: eff79fb144c2bbc4d31a21b2dc263c4ccb087104
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0bbb134106fde9607bd51bc84bcd49969aec19ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177235"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064724"
 ---
 # <a name="task-6-adding-excel-source-to-the-data-flow"></a>任务 6：将 Excel 源添加到数据流
   在本任务中，您向数据流添加 Excel 源，以便从源 Excel 文件读取供应商数据。 Excel 源从 Microsoft Excel 工作簿的工作表或范围中提取数据。 有关更多详细信息，请参阅[Excel 源](../integration-services/data-flow/excel-source.md)主题。
@@ -30,7 +29,7 @@ ms.locfileid: "78177235"
 
 5.  在 " **Excel 源编辑器**" 对话框中，单击 "**新建**" 以创建 Excel 连接。
 
-6.  在 " **Excel 连接管理器**" 对话框中，单击 "**浏览**"，然后选择**EIM 教程**文件夹中的 "**供应商 .xls** " 文件。 确认在 " **Excel 版本**" 框中选择了 " **Microsoft Excel 97-2003** "，然后单击 **"确定"**。
+6.  在 " **Excel 连接管理器**" 对话框中，单击 "**浏览**"，然后选择**EIM 教程**文件夹中的**Suppliers.xls**文件。 确认在 " **Excel 版本**" 框中选择了 " **Microsoft Excel 97-2003** "，然后单击 **"确定"**。
 
      ![“Excel 连接管理器”对话框](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-01.jpg "“Excel 连接管理器”对话框")
 
@@ -40,7 +39,7 @@ ms.locfileid: "78177235"
 
 8.  单击 "**预览**" 以预览 Excel 文件中的数据。
 
-9. 单击 **“确定”** 关闭对话框。
+9. 单击“确定”  关闭对话框。
 
 10. 将 " **SSIS 工具箱**" 中 "**其他转换**" 中的 " **DQS 清理**转换" 拖放到 "**从 Excel 文件读取供应商数据**" 下的 "**数据流**" 选项卡。 DQS 清理转换将通过 Data Quality Services (DQS) 应用知识库中已批准的规则来更正数据。 此转换在运行时会在 DQS 服务器上创建一个 DQS 清理项目。 有关更多详细信息，请参阅[DQS 清理转换](https://msdn.microsoft.com/library/ee677619.aspx)主题。
 
@@ -50,4 +49,4 @@ ms.locfileid: "78177235"
 
 ### <a name="see-also"></a>另请参阅
 
-[数据流](../integration-services/data-flow/data-flow.md)
+数据流

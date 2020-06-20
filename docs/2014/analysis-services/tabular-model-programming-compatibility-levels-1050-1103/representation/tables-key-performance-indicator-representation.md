@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d0981b473ef29ac709213c1e9eee1cea01f47e2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7cc9ec7e6ccae664a6f608c350483ae9744fb49d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62795437"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940018"
 ---
 # <a name="key-performance-indicator-representation-tabular"></a>关键绩效指标表示形式（表格）
   KPI 用于根据目标值度量由基础度量值定义的值的性能。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 19898578-7b2f-401c-bb8f-9f2a017efdf7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f84f4fcc8a6dde7dcf9f556a72c2599356e231f7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 412ec93cbfedc87e92da9e86c7e4c7455919722a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067533"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058065"
 ---
 # <a name="select-rows-that-do-not-match-a-value-visual-database-tools"></a>选择与值不匹配的行 (Visual Database Tools)
   若要查找与某值不匹配的行，可以使用 NOT 运算符。  

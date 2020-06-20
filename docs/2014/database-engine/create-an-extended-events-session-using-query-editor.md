@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cba0e02b-b201-4863-bf1b-9164e68e5fa8
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4a541c86029be9a438492a851c0eb16d18120f75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 648370ecdd2938b6fb425955dc02da8960f884c2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065031"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934528"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>使用查询编辑器创建扩展事件会话
   您可以使用查询编辑器创建扩展事件会话，也可以在对象资源管理器中创建会话。 在对象资源管理器中，扩展事件提供了两个用户界面，你可以使用它们来创建、修改和查看事件会话数据，向导将引导你完成事件会话创建过程，以及提供更高级配置选项的新会话 UI。 您可以创建扩展事件会话来诊断 SQL Server 跟踪，这样您便能解决如下问题：  

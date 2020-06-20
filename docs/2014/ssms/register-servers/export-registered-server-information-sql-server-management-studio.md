@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b65e168f-b6bf-489c-b8ad-3b8644acf0b6
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 2d5dcbaf6f478d3cb637c72ada8bee2bb2a088d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c753a997b1d65c5691eb33e7d3fe61f720b29c20
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244600"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048665"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>导出已注册服务器信息 (SQL Server Management Studio)
   本主题说明如何保存和导出 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的已注册服务器信息并将其分发到其他雇员或服务器。 您可以使用此导出功能在多台计算机上显示一致的用户界面。  

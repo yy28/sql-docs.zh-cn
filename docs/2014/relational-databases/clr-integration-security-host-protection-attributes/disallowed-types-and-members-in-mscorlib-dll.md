@@ -1,5 +1,5 @@
 ---
-title: Mscorlib.dll 中禁用的类型和成员 |Microsoft Docs
+title: mscorlib.dll 中不允许的类型和成员 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: daf82d4b-2f6d-44ca-9148-75193321b6d5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 43f71d7dc73239b240b841e14a11f3f28f755b61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc4e42a0f900231bdd28417420cdab19b7345e66
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874357"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954285"
 ---
 # <a name="disallowed-types-and-members-in-mscorlibdll"></a>mscorlib.dll 中禁用的类型和成员
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]公共`HostProtectionAttribute`语言集成（CLR）编程不允许使用具有`System.Security.Permissions.HostProtectionResource` `ExternalProcessMgmt`、 `ExternalThreading` `MayLeakOnAbort` `SecurityInfrastructure` `SelfAffectingProcessMgmnt` `SelfAffectingThreading`、、、、、、 **SharedState**、 `Synchronization`或`UI`的值的类型或成员。 下表列出了宿主保护属性 (HPA) 值被禁用的 mscorlib.dll 程序集的成员和类型。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]公共语言集成（CLR）编程不允许使用具有、、、、、、、 `HostProtectionAttribute` `System.Security.Permissions.HostProtectionResource` `ExternalProcessMgmt` `ExternalThreading` `MayLeakOnAbort` `SecurityInfrastructure` `SelfAffectingProcessMgmnt` `SelfAffectingThreading` **SharedState**、 `Synchronization` 或 `UI` 的值的类型或成员。 下表列出了宿主保护属性 (HPA) 值被禁用的 mscorlib.dll 程序集的成员和类型。  
   
 > [!NOTE]  
 >  此列表是通过支持的程序集生成的。 有关详细信息，请参阅[支持的 .NET Framework 库](../clr-integration/database-objects/supported-net-framework-libraries.md)。  
@@ -30,11 +29,11 @@ ms.locfileid: "62874357"
 |--------------------|--------------------|  
 |SyncStream.BeginRead()|ExternalThreading|  
 |SyncStream.BeginWrite()|ExternalThreading|  
-|System.Collections.ArrayList.Synchronized()|Synchronization|  
-|System.Collections.Hashtable.Synchronized()|Synchronization|  
-|System.Collections.Queue.Synchronized()|Synchronization|  
-|System.Collections.SortedList.Synchronized()|Synchronization|  
-|System.Collections.Stack.Synchronized()|Synchronization|  
+|System.Collections.ArrayList.Synchronized()|同步|  
+|System.Collections.Hashtable.Synchronized()|同步|  
+|System.Collections.Queue.Synchronized()|同步|  
+|System.Collections.SortedList.Synchronized()|同步|  
+|System.Collections.Stack.Synchronized()|同步|  
 |System.Console.Beep()|UI|  
 |System.Console.get_Error()|UI|  
 |System.Console.get_In()|UI|  
@@ -54,9 +53,9 @@ ms.locfileid: "62874357"
 |System.Diagnostics.LogMessageEventHandler|ExternalThreading，Synchronization|  
 |System.IO.FileStream.BeginRead()|ExternalThreading|  
 |System.IO.FileStream.BeginWrite()|ExternalThreading|  
-|System.IO.Stream.Synchronized()|Synchronization|  
-|System.IO.TextReader.Synchronized()|Synchronization|  
-|System.IO.TextWriter.Synchronized()|Synchronization|  
+|System.IO.Stream.Synchronized()|同步|  
+|System.IO.TextReader.Synchronized()|同步|  
+|System.IO.TextWriter.Synchronized()|同步|  
 |System.Reflection.Emit.AssemblyBuilder|MayLeakOnAbort|  
 |System.Reflection.Emit.ConstructorBuilder|MayLeakOnAbort|  
 |System.Reflection.Emit.CustomAttributeBuilder|MayLeakOnAbort|  
@@ -100,9 +99,9 @@ ms.locfileid: "62874357"
   
 ## <a name="see-also"></a>另请参阅  
  [宿主保护属性和 CLR 集成编程](host-protection-attributes-and-clr-integration-programming.md)   
- [不允许的类型和成员在](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
- [系统中不允许的类型和成员](disallowed-types-and-members-in-system-dll.md)   
- [系统中不允许的类型和成员](disallowed-types-and-members-in-system-data-dll.md)   
+ [Microsoft.VisualBasic.dll中不允许的类型和成员](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
+ [System.dll中不允许的类型和成员](disallowed-types-and-members-in-system-dll.md)   
+ [System.Data.dll中不允许的类型和成员](disallowed-types-and-members-in-system-data-dll.md)   
  [System.Core.dll 中禁用的类型和成员](disallowed-types-and-members-in-system-core-dll.md)  
   
   

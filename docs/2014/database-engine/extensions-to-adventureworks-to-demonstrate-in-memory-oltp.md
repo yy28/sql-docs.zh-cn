@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e8f1b28766eab6ecd5035dd8a58e88abaccc97c5
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 966174c359675a06565b57fe4acb02b43ff39892
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82921735"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933053"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>演示内存中 OLTP 的 AdventureWorks 扩展
     
@@ -568,7 +567,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|type |**name**|**pages_MB**|  
+|type|name|**pages_MB**|  
 |MEMORYCLERK_XTP|默认|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
 |MEMORYCLERK_XTP|默认|0|  
@@ -617,7 +616,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|type |**name**|**pages_MB**|  
+|type|name|**pages_MB**|  
 |MEMORYCLERK_XTP|默认|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
 |MEMORYCLERK_XTP|默认|0|  
@@ -663,7 +662,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|type |**name**|**pages_MB**|  
+|type|name|**pages_MB**|  
 |MEMORYCLERK_XTP|默认|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
 |MEMORYCLERK_XTP|默认|0|  
@@ -682,7 +681,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|type |**name**|**pages_MB**|  
+|type|name|**pages_MB**|  
 |MEMORYCLERK_XTP|默认|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
 |MEMORYCLERK_XTP|默认|0|  
@@ -739,7 +738,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**count**|**磁盘上大小 (MB)**|  
+|**state_desc**|**file_type_desc**|**计数**|**磁盘上大小 (MB)**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
@@ -785,7 +784,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**count**|**磁盘上大小 (MB)**|  
+|**state_desc**|**file_type_desc**|**计数**|**磁盘上大小 (MB)**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
@@ -831,7 +830,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**count**|**磁盘上大小 (MB)**|  
+|**state_desc**|**file_type_desc**|**计数**|**磁盘上大小 (MB)**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |ACTIVE|DATA|38|5152|  
@@ -864,7 +863,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**count**|**磁盘上大小 (MB)**|  
+|**state_desc**|**file_type_desc**|**计数**|**磁盘上大小 (MB)**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|2|268|  

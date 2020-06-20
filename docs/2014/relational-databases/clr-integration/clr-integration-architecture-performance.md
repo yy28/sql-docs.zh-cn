@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eced622903a0d68369f28d19ff521d99bcedbdc3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e7bc073e65e5e21d2d3fb199103cc2be4cc2913
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874497"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953825"
 ---
 # <a name="performance-of-clr-integration"></a>CLR 集成的性能
-  本主题讨论一些可提高与[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 公共语言运行时（CLR）集成性能的设计选择。  
+  本主题讨论一些可提高 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 与 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 公共语言运行时（CLR）集成性能的设计选择。  
   
 ## <a name="the-compilation-process"></a>编译过程  
  在编译 SQL 表达式时，如果遇到对托管例程的引用，则生成 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 中间语言 (MSIL) 存根。 该存根包含的代码用于将例程参数从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 封送到 CLR、调用函数并返回结果。 该“粘附”代码基于参数类型和参数方向（向内、向外或引用）。  

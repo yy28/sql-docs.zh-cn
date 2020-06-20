@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea87e2de984107c5a0fda6eb2629ee5cfd197841
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806748"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934181"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>示例：使用证书设置数据库镜像 (Transact-SQL)
   此示例演示了使用基于证书的身份验证创建数据库镜像会话所需的所有阶段。 本主题中的示例使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 建议您对数据库镜像连接进行加密，除非您能够保证网络的安全。  
   
  将证书复制到其他系统时，请使用安全的复制方法。 必须格外小心地保证所有证书的安全。  
   
-##  <a name="example"></a><a name="ExampleH2"></a>实例  
+##  <a name="example"></a><a name="ExampleH2"></a> 示例  
  下面的示例演示必须对驻留在 HOST_A 上的一个伙伴执行哪些操作。 在此示例中，两个伙伴是三个计算机系统上的默认服务器实例。 两个服务器实例在非信任的 Windows 域中运行，因此需要基于证书的身份验证。  
   
  HOST_A 担当初始主体角色，HOST_B 担当镜像角色。  
@@ -257,7 +256,7 @@ ms.locfileid: "62806748"
     ```  
   
     > [!NOTE]  
-    >  如果打算在具有自动故障转移功能的高安全性模式下运行，请将事务安全性设置为 FULL （默认设置），并在执行第二个 set PARTNER **'*`partner_server`*'** 语句后尽快添加见证服务器。 注意，必须首先为出站连接和入站连接配置见证服务器。  
+    >  如果打算在具有自动故障转移功能的高安全性模式下运行，请将事务安全性设置为 FULL （默认设置），并在执行第二个 set PARTNER **' *`partner_server`* '** 语句后尽快添加见证服务器。 注意，必须首先为出站连接和入站连接配置见证服务器。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   

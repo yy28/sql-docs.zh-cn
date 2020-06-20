@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 78f318a4-7a36-473b-9852-a4bae6940ce5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 56a8d0daaa7eb64600c7e3a06f4121c45ce25a23
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5237c5c24b302e0ce1996e03e89b3e01ba6d8f51
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703502"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003013"
 ---
 # <a name="using-annotations-in-xsd-schemas-sqlxml-40"></a>在 XSD 架构中使用批注 (SQLXML 4.0)
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 中，XSD 架构语言对批注的支持方式与在 XML 数据简化 (XDR) 架构语言中引入的批注支持方式相似。 XSD 中还引入了 XDR 不支持的其他批注。  

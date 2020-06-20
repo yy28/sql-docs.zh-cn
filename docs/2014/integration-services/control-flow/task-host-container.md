@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7394a2c2-1b07-427d-b94a-9792e7783d35
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9d5c965f4012244a3ccc2eb80470205e8d55e887
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c5a389a39320ef37e3dc2b2a5fcef015d664fce6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830054"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917960"
 ---
 # <a name="task-host-container"></a>任务宿主容器
   任务宿主容器封装单个任务。 在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中，无需对任务宿主进行单独配置；设置其要封装任务的属性时即可对其进行配置。 有关任务宿主容器所封装任务的详细信息，请参阅 [Integration Services Tasks](integration-services-tasks.md)。  

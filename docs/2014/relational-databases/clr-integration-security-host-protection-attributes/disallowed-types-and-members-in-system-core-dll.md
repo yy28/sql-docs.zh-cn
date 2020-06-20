@@ -1,5 +1,5 @@
 ---
-title: 不允许的类型和成员Microsoft Docs
+title: System.Core.dll 中不允许的类型和成员 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,16 +9,15 @@ ms.topic: reference
 ms.assetid: dcd24cd6-f4ab-42cc-9786-a1604e8a4b4e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f078caae791e4009a309e7cc70d7af333ca4c90f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 724b9010ecd185054b5c0c173d0bf933a37aed2e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919563"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954250"
 ---
 # <a name="disallowed-types-and-members-in-systemcoredll"></a>System.Core.dll 中禁用的类型和成员
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]公共`HostProtectionAttribute`语言集成（CLR）编程不允许使用具有`System.Security.Permissions.HostProtectionResource` `ExternalProcessMgmt`、 `ExternalThreading` `MayLeakOnAbort` `SecurityInfrastructure` `SelfAffectingProcessMgmnt` `SelfAffectingThreading`、、、、、、 **SharedState**、 `Synchronization`或`UI`的值的类型或成员。 下表列出了宿主保护属性 (HPA) 值被禁用的 System.Core.dll 程序集的成员和类型。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]公共语言集成（CLR）编程不允许使用具有、、、、、、、 `HostProtectionAttribute` `System.Security.Permissions.HostProtectionResource` `ExternalProcessMgmt` `ExternalThreading` `MayLeakOnAbort` `SecurityInfrastructure` `SelfAffectingProcessMgmnt` `SelfAffectingThreading` **SharedState**、 `Synchronization` 或 `UI` 的值的类型或成员。 下表列出了宿主保护属性 (HPA) 值被禁用的 System.Core.dll 程序集的成员和类型。  
   
 > [!NOTE]  
 >  此列表是通过支持的程序集生成的。 有关详细信息，请参阅[支持的 .NET Framework 库](../clr-integration/database-objects/supported-net-framework-libraries.md)。  
@@ -129,9 +128,9 @@ ms.locfileid: "62919563"
   
 ## <a name="see-also"></a>另请参阅  
  [宿主保护属性和 CLR 集成编程](host-protection-attributes-and-clr-integration-programming.md)   
- [不允许的类型和成员在](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
- [Mscorlib.dll 中禁用的类型和成员](disallowed-types-and-members-in-mscorlib-dll.md)   
- [系统中不允许的类型和成员](disallowed-types-and-members-in-system-dll.md)   
+ [Microsoft.VisualBasic.dll中不允许的类型和成员](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
+ [mscorlib.dll中不允许的类型和成员](disallowed-types-and-members-in-mscorlib-dll.md)   
+ [System.dll中不允许的类型和成员](disallowed-types-and-members-in-system-dll.md)   
  [System.Data.dll 中禁用的类型和成员](disallowed-types-and-members-in-system-data-dll.md)  
   
   

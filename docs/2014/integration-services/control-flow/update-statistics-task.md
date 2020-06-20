@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: be80af34bc2dc8b5d069406bc13a8f8f9b25c42c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5153ddd4363ce752933d425d3155c5733ec8fcef
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62829458"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917797"
 ---
 # <a name="update-statistics-task"></a>“更新统计信息”任务
   “更新统计信息”任务为指定的表或索引视图中的一个或多个统计信息组（集合）更新键值分布信息。 有关详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。  

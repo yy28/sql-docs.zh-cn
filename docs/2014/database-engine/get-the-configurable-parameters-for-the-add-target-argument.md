@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 08454543-c5c8-4ca3-9af9-f1d82264471c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a66a4e77b3858b769aef287e68cac18b8b8514ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30644bc30c0bd8c4ccbc17c616c6f24bf9455dc8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064795"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932905"
 ---
 # <a name="get-the-configurable-parameters-for-the-add-target-argument"></a>获取 ADD TARGET 实参的可配置形参
   完成此任务涉及在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中使用查询编辑器。  
@@ -33,7 +32,7 @@ ms.locfileid: "66064795"
   
 -   parameter_type  
   
--   必需的  
+-   必填  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
  创建 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 扩展事件会话之前，找到在 CREATE EVENT SESSION 或 ALTER EVENT SESSION 中使用 ADD TARGET 参数时可设置的参数将非常有用。  

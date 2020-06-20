@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 18de47b1-f936-427d-b852-fe6d20334f71
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cd5c9a9cb2e40c7b0a235ff848c1f9a0025773a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bf9d2d4332721f8c0e61e9838f11a40cbfe2850
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184307"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058137"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>创建外部联接 (Visual Database Tools)
   默认情况下， [查询和视图设计器](visual-database-tools.md) 在表之间创建内部联接。 内部联接消除了与其他表中的行不匹配的行。 但是，外部联接可以从 FROM 子句中提到的至少一个表或视图中返回所有行，只要这些行符合任何 WHERE 或 HAVING 搜索条件。 若要在结果集中包含在联接表无匹配项的数据行，可以创建外部联接。  
@@ -29,7 +28,7 @@ ms.locfileid: "63184307"
   
 1.  自动或手动创建外部联接。 有关详细信息，请参阅[自动联接表 (Visual Database Tools)](join-tables-automatically-visual-database-tools.md) 或[手动联接表 (Visual Database Tools)](join-tables-manually-visual-database-tools.md)。  
   
-2.  在 "关系图" 窗格中选择联接线，然后在 "**查询设计器**" 菜单中，选择 "**从 Tablename 中\<选择所有行">**，并选择包含要包含其额外行的表的命令。  
+2.  在“关系图”窗格中选择联接线，然后在“查询设计器”菜单中选择“选择 \<tablename> 中的全部行”，选择包含要包含其中更多行的表的命令。  
   
     -   选择第一个表可以创建左外部联接。  
   

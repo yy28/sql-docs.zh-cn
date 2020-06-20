@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f10ba1f9ff6837d1ca308872ef166e04c417981c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0af9736d247fb823c13d614a081aef43e3d8d9b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067506"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048561"
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>保存关系图中所选的表 (Visual Database Tools)
   如果不希望保存在数据库关系图中所做的全部更改，则可以保存特定表或一组表。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7d74a60b-8933-4038-bcbb-4e9dcc4f70e9
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 79edd8566f2b3c9b586bc8c8815e1d9bc586fb05
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7ad3b085178c0d0cfe3ece010a571992e7fdb99
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481246"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064857"
 ---
 # <a name="task-1-creating-a-knowledge-base-and-domains"></a>任务 1：创建知识库和域
   在此任务中，您将创建**供应商**知识库并创建用于清理数据和匹配数据的域以删除重复项。  
@@ -56,7 +55,7 @@ ms.locfileid: "65481246"
   
     -   城市  
   
-    -   State  
+    -   状态  
   
     -   国家/地区  
   

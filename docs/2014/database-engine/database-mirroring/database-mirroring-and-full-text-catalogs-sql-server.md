@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e34072ae-fe8a-462d-bb03-02fa0987f793
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e90e2386fcd6c6d2f71e1cea31f253f8baac9195
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39929f4bed6edbd1e8ec5c1b72dbe8f7aefeec68
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807291"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934346"
 ---
 # <a name="database-mirroring-and-full-text-catalogs-sql-server"></a>数据库镜像和全文目录 (SQL Server)
   若要对带有全文目录的数据库进行镜像，请使用常规备份创建主体数据库的完整数据库备份，然后还原备份，以便将数据库复制到镜像服务器。 有关详细信息，请参阅 [为镜像准备镜像数据库 (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md)的各版本中均未提供见证服务器实例。  

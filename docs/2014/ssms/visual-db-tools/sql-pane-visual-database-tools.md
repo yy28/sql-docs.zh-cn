@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dbabab18-0614-415b-a2ef-9bcd0d320d5c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fd223c0a66b533cb2b405dd0e766f7053b7a4e89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c2d7d92f389b595f149951de6af1dac7fddd6df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63275970"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057987"
 ---
 # <a name="sql-pane-visual-database-tools"></a>SQL 窗格 (Visual Database Tools)
   您可以使用 SQL 窗格创建自己的 SQL 语句，也可以使用“条件”窗格和“关系图”窗格创建语句，在后面这种情况下将在 SQL 窗格中相应地创建 SQL 语句。 生成查询时，SQL 窗格将自动更新并重新设置格式以便于阅读。  

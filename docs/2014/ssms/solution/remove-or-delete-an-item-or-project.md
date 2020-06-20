@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3fd92434-70f5-466e-bef0-7e0fd73ddb1c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dd6d04b186c68b128ad35ec5e5bd8b92ad1541c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d132a2d1618e7a37f9f07a0cc735c73a49c246c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035650"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058350"
 ---
 # <a name="remove-or-delete-an-item-or-project"></a>移除或删除项或项目
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 项目中的项目项为查询、连接和杂项文件。 您可以从解决方案中移除项目查询文件和杂项文件，而并不清除存储区中的文件。 如果项目或项在当前解决方案中不再有用，但是您希望将其包含到其他解决方案中，此时可以将其移除。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8b6ffe77-35f3-4e2a-a658-8a38a8e1c794
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ef1a7101a0bd16c3ee2868f47a8dc15f29092621
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b909f3602a78f3244ab3cf4479b8745956a7bd62
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806709"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934168"
 ---
 # <a name="force-service-in-a-database-mirroring-session-transact-sql"></a>在数据库镜像会话中强制服务 (Transact-SQL)
   在高性能模式和不带自动故障转移功能的高安全性模式下，如果主体服务器失败而镜像服务器可用，则数据库所有者可以强制将服务故障转移到镜像数据库（可能造成数据丢失），从而使数据库可用。 此选项仅在以下情况中可用：  

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a51393748d47159cfc4cf6bf8bd25e50307cfb7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 16c6597171eef10da67ad497e4303b3716298e6a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79525438"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940118"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI 概念
   带 BI 注释的概念性架构定义语言 (CSDLBI) 基于实体数据框架。实体数据框架是一个抽象概念，用于以某种方式表示不同类型的数据，以便能够以编程方式访问、查询或导出不同的数据集。 CSDLBI 用于表示使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 创建的数据模型，因为它支持丰富的数据驱动的报告和应用程序。  
@@ -123,7 +122,7 @@ ms.locfileid: "79525438"
 ## <a name="additions-to-support-multidimensional-models"></a>所增加的用于支持多维模型的内容  
  CSDLBI 注释 1.0 版仅支持表格模型。 在版本 1.1 中，添加了对使用传统 BI 开发工具创建的多维模型（OLAP 多维数据集）的支持。 因此，您现在可以向多维模型发出 XML 请求并接收模型的 CSDLBI 定义，以用于报告。  
   
- **多维数据集：** SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]表格数据库只能包含一种模式。 相比较而言，每个多维数据库可以包含多个多维数据集，每个数据库与一个默认的多维数据集关联。 因此，当针对多维服务器发出 XML 请求时，需要指定多维数据集；否则，将返回默认多维数据集的 XML。  
+ **多维数据集：** SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格数据库只能包含一种模式。 相比较而言，每个多维数据库可以包含多个多维数据集，每个数据库与一个默认的多维数据集关联。 因此，当针对多维服务器发出 XML 请求时，需要指定多维数据集；否则，将返回默认多维数据集的 XML。  
   
  多维数据集的表示形式与表格模型数据库的表示形式非常相似。 多维数据集名称和多维数据集分别对应于表格数据库名称和数据库标识符。  
   

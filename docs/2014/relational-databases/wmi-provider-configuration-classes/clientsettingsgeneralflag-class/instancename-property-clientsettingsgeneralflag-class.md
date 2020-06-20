@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7de3c043-6c5a-4663-b960-a80492444a99
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5e742e30ed90bf4415aa4fba8db6c4c92e62389d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ac7f4b96ac54eee847abc440c6b259aadfac401
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63242522"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065586"
 ---
 # <a name="instancename-property-clientsettingsgeneralflag-class"></a>InstanceName 属性（ClientSettingsGeneralFlag 类）
-  获取[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端实例的名称。  
+  获取客户端实例的名称 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="syntax"></a>语法  
   

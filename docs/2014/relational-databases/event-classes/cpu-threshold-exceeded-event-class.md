@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eb106f7d-baa3-4a2b-96b2-f9fe0844057d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cc8252d0049953f0958ea331015aae51fd737709
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07b51e1a6f08f48c601b00d2dcb67bc6d09006f6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663480"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030173"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>CPU Threshold Exceeded 事件类
   CPU Threshold Exceeded 事件类指示资源调控器检测到超出为 REQUEST_MAX_CPU_TIME_SEC 指定的 CPU 阈值的查询。  

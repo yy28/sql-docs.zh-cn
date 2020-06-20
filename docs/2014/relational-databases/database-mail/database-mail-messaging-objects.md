@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3657e45d18ac84ad737a016150692730f736b55f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d284d3ef1d0ac349dea95b1a6a134cb2429e6e4c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917699"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952430"
 ---
 # <a name="database-mail-messaging-objects"></a>数据库邮件消息处理对象
   **msdb** 数据库是数据库邮件主机数据库。 此数据库包含数据库邮件的存储过程和消息处理对象。 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中带有数据库邮件配置向导，可用来启用数据库邮件、创建和管理配置文件和帐户以及配置数据库邮件选项。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c2d7be5fa95e92b97e76e28647f4406ee356c5f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891399"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968245"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>步骤 3：添加错误流重定向
   如上一个任务中所示，当 Lookup Currency Key 转换尝试对产生错误的已损坏示例平面文件进行处理时，该转换无法生成匹配。 由于转换针对错误输出使用了默认设置，因此，任何错误都将导致该转换失败。 当转换失败时，该包的其余部分也将失败。  
@@ -24,7 +23,7 @@ ms.locfileid: "62891399"
   
  在本任务中，您将 Lookup Currency Key 转换配置为将所有失败的行重定向到错误输出。 在数据流的错误分支中，这些行将被写入文件中。  
   
- 默认情况下， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]错误输出中的另外两列**ErrorCode**和**ErrorColumn**只包含表示错误号的数值代码以及出现错误的列的 ID。 如果没有相应的错误说明，这些数值没有多大用处。  
+ 默认情况下，错误输出中的另外两列 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] **ErrorCode**和**ErrorColumn**只包含表示错误号的数值代码以及出现错误的列的 ID。 如果没有相应的错误说明，这些数值没有多大用处。  
   
  若要更有效地使用错误输出，请在包将失败的行写入文件之前，使用脚本组件来访问 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] API，然后获取错误说明。  
   
@@ -48,9 +47,9 @@ ms.locfileid: "62891399"
   
 8.  在“输入和输出”**** 页中，展开“输出 0”****，单击“输出列”****，再单击“添加列”****。  
   
-9. 在`Name`属性中，键入**ErrorDescription**并将`DataType`属性设置为**Unicode string [DT_WSTR]**。  
+9. 在 `Name` 属性中，键入**ErrorDescription**并将 `DataType` 属性设置为**Unicode string [DT_WSTR]**。  
   
-10. 在 "**脚本**" 页上，验证`LocaleID`属性是否设置为 "**英语（美国。**  
+10. 在 "**脚本**" 页上，验证 `LocaleID` 属性是否设置为 "**英语（美国。**  
   
 11. 单击“编辑脚本”打开 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA)****。 在 `Input0_ProcessInputRow` 方法中，键入或粘贴以下代码。  
   

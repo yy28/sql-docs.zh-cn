@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: be894aa43636cc81c9dbd462cb8b5aff55dbcd84
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e28b5ca2203e48fe86494d65229ef58e55022b6e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769263"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969377"
 ---
 # <a name="-equal-ssis-expression"></a>==（等于）（SSIS 表达式）
   执行比较来确定两个表达式是否相等。 在执行比较前表达式计算器会自动转换多种数据类型。 有关详细信息，请参阅 [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md)。  

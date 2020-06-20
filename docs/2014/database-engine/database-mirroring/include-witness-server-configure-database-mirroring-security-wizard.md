@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f04b38a4-f4e2-4d4c-bdac-7cc70e5a5684
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9f588b8a4305f44eceb8a8f6ab351bc940fbfef5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57d476216b34053f6bb61deef719d082240ca0c8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754943"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934148"
 ---
 # <a name="include-witness-server-configure-database-mirroring-security-wizard"></a>包括见证服务器（配置数据库镜像安全向导）
   使用此页可以指定是否要将见证服务器包括在数据库镜像的安全配置中。  
@@ -32,7 +31,7 @@ ms.locfileid: "62754943"
  **是**  
  单击此项可将见证服务器实例包括在安全配置中。 对于具有自动故障转移的高安全性模式，见证服务器是必需的，因为如果主体服务器实例失败，见证服务器将提供到镜像服务器实例的自动故障转移。  
   
- **否**  
+ **是**  
  单击此项可在不包括见证服务器的情况下配置安全性。  
   
 ## <a name="see-also"></a>另请参阅  

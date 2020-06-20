@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 354c2e39716dc0cfa215e4392945bf9aa5899da0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e34f46200f12861183c4da27863f47f19974dbf1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012365"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030744"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats 事件类
   **Auto Stats** 事件类指示索引和列统计信息自动更新事件的发生。  
@@ -54,10 +53,10 @@ ms.locfileid: "63012365"
 |**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果你使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2********。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |**SPID**|**int**|发生该事件的会话的 ID。|12|是|  
 |**StartTime**|**datetime**|该事件（如果存在）的启动时间。|14|是|  
-|**成功**|**int**|0 = 错误。<br /><br /> 1 = 成功。<br /><br /> 2 = 因服务器中止而跳过 (MSDE)。|23|是|  
+|**Success**|**int**|0 = 错误。<br /><br /> 1 = 成功。<br /><br /> 2 = 因服务器中止而跳过 (MSDE)。|23|是|  
 |**TextData**|**ntext**|此列的内容取决于统计信息是同步更新的 (**EventSubClass** 1) 还是异步更新的（**EventSubClass** 2、3 或 4）：<br /><br /> 1: 列出更新/创建的统计信息<br /><br /> 2、3 或 4：NULL；用已更新的统计信息的索引/统计信息 ID 填充 **IndexID** 列。|1|是|  
 |**TransactionID**|**bigint**|系统分配的事务 ID。|4|是|  
-|**类型**|**int**|作业类型。|57|是|  
+|类型|**int**|作业类型。|57|是|  
   
 ## <a name="see-also"></a>另请参阅  
  [扩展事件](../extended-events/extended-events.md)   

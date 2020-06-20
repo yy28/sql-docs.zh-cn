@@ -8,21 +8,20 @@ ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: ddd07c68d5549ed4cfc7cc3f421168ad968dadda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b90fdbd9a0bc80dfc6a82416d0193b2951fe13ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014253"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996403"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
    是由一个外部边界环以及零个或多个内环界定的在拓扑结构上闭合的图面。  
   
 > [!IMPORTANT]  
->  有关中[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]引入的空间功能的详细说明和示例（包括`CurvePolygon`子类型），请下载白皮书[SQL Server 2012 中的新的空间功能](https://go.microsoft.com/fwlink/?LinkId=226407)。  
+>  有关中引入的空间功能的详细说明和示例 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] （包括 `CurvePolygon` 子类型），请下载白皮书[SQL Server 2012 中的新的空间功能](https://go.microsoft.com/fwlink/?LinkId=226407)。  
   
- 以下条件定义`CurvePolygon`实例的属性：  
+ 以下条件定义实例的属性 `CurvePolygon` ：  
   
 -   该 `CurvePolygon` 实例的边界由外环和所有内环界定。  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3068ac7a3094605bb809ac84c63766b64fda486
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196661"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002898"
 ---
 # <a name="use-sparse-columns"></a>使用稀疏列
   稀疏列是对 Null 值采用优化的存储方式的普通列。 稀疏列减少了 Null 值的空间需求，但代价是检索非 Null 值的开销增加。 当至少能够节省 20% 到 40% 的空间时，才应考虑使用稀疏列。 稀疏列和列集是通过使用 [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) 或 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) 语句定义的。  
@@ -166,7 +165,7 @@ ms.locfileid: "68196661"
   
      合并复制不支持稀疏列或列集。  
   
--   更改跟踪  
+-   Change tracking  
   
      更改跟踪支持稀疏列和列集。 当在表中更新列集时，更改跟踪将此视为整个行的更新。 由于不提供详细的更改跟踪，因此不能获取通过列集更新操作更新的稀疏列的准确集合。 如果通过 DML 语句显式更新稀疏列，则这些稀疏列上的更改跟踪将像平常一样工作，并且可以准确地识别出已更改的列的集合。  
   

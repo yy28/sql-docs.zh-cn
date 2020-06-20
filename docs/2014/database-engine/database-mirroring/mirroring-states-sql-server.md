@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9e3e3756f65baa7e1b62e3a84ff709a60b9c887b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d458939ba233bdfe7a99edd38afc74b5433ae061
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754555"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934098"
 ---
 # <a name="mirroring-states-sql-server"></a>镜像状态 (SQL Server)
   数据库镜像会话期间，镜像数据库一直处于一种特定状态（镜像状态  ）。 数据库的状态反映了通信状态、数据流和伙伴之间数据的差异。 数据库镜像会话采用的状态与主体数据库相同。  

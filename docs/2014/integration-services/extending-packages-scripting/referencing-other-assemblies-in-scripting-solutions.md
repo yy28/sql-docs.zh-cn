@@ -23,19 +23,18 @@ helpviewer_keywords:
 ms.assetid: 9b655bcd-19f6-43d8-9f89-1b4d299c6380
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7981bc5ca49ccba465340790789e4a22ce355b51
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 39aceaeadd6941ef74069449f6c95854effc3967
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176156"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968387"
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>引用脚本解决方案中的其他程序集
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 类库为脚本开发人员提供了一组强大的工具，用于在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中实现自定义功能。 脚本任务和脚本组件还可以使用自定义托管程序集。
 
 > [!NOTE]
->  若要使包能够使用 Web 服务中的对象和方法，可使用  Tools for Applications (VSTA) 中提供的“添加 Web 引用”[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]命令。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的早期版本中，必须生成代理类才能使用 Web 服务。
+>  若要使包能够使用 Web 服务中的对象和方法，可使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 中提供的“添加 Web 引用”命令。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的早期版本中，必须生成代理类才能使用 Web 服务。
 
 ## <a name="using-a-managed-assembly"></a>使用托管程序集
  对于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，若要在设计时查找托管程序集，必须执行以下步骤：

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 178b7b75-8078-4e61-b2a8-4719b9d8033d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47951e101a5f8f480496c8570a22cd1a950b3309
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84a0fb2152a7e05b853abd28b94e82bffa32273b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270575"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058043"
 ---
 # <a name="create-update-queries-visual-database-tools"></a>创建更新查询 (Visual Database Tools)
   可以使用“更新”查询在一次操作中更改多个行中的内容。 例如，在 `titles` 表中，可以使用“更新”查询将特定出版商出版的所有书籍都加价 10%。  

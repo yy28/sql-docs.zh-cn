@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 76362bedfd982fe0fb513873c6822fdcf56af6de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69e7c14ae42586b801b2956c224cc8350ac611c3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62999941"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058594"
 ---
 # <a name="object-explorer-details-pane"></a>对象资源管理器详细信息窗格
   对象资源管理器详细信息是 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的一个组件，它提供服务器中所有对象的表格视图，并显示一个用于管理这些对象的用户界面。 对象资源管理器的功能根据服务器的类型稍有不同，但一般都包括用于数据库的开发功能和用于所有服务器类型的管理功能。  

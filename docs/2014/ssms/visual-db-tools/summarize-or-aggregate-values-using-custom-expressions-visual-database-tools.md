@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 34130ac1-0106-4766-b324-acb0b7bb6f6e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b679eac51bf6fd51d10a88816017f2b767a69041
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1bf8964099bf9b1f60560d2330f35a829d8eec62
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204638"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057943"
 ---
 # <a name="summarize-or-aggregate-values-using-custom-expressions-visual-database-tools"></a>使用自定义表达式汇总或聚合值 (Visual Database Tools)
   除了使用聚合函数来聚合数据之外，还可以创建自定义表达式来生成聚合值。 可在聚合查询中的任何位置使用自定义表达式来替代聚合函数。  

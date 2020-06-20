@@ -12,16 +12,15 @@ f1_keywords:
 ms.assetid: 402c2de4-f4ea-40b0-909f-3ddf3bd59950
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 53a9793fc2a8770c8d926c945ba31a335bdfed3f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f6ead7090e0ffc3efaa3fbf979d4012d2a43388
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808724"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934618"
 ---
 # <a name="connect-to-server-login-page-integration-services"></a>连接到服务器（“登录”页）(Integration Services)
-  在连接到[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]时，使用此选项卡可以查看或指定以下选项。  
+  在连接到时，使用此选项卡可以查看或指定以下选项 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 。  
   
 ## <a name="options"></a>选项  
  **服务器类型**  
@@ -31,7 +30,7 @@ ms.locfileid: "62808724"
  选择要连接到的服务器。 默认情况下，显示上次连接到的服务器实例。  
   
 > [!NOTE]  
->  不要使用* \<servername>* \\ * \<instancename>*，因为[!INCLUDE[ssIS](../includes/ssis-md.md)]不支持计算机上的多个实例。  
+>  不要使用 *\<servername>* \\ *\<instancename>* ，因为不 [!INCLUDE[ssIS](../includes/ssis-md.md)] 支持计算机上的多个实例。  
   
  **身份验证**  
  只有 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 身份验证可用于 [!INCLUDE[ssIS](../includes/ssis-md.md)]。 Windows 身份验证模式允许用户通过 Windows 用户帐户进行连接。  

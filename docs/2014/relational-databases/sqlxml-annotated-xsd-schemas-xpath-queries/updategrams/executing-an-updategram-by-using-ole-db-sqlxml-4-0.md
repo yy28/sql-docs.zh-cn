@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e58db16e14c0e959ca83dcdd687159f80bbeaf77
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c8f3f5c10a4b9f78ed77d643b34297336581f43f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717510"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996221"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>使用 OLE DB 执行 Updategram (SQLXML 4.0)
   本主题提供了 usingOLE DB 的工作示例，以执行 updategram。  
@@ -58,7 +57,7 @@ ms.locfileid: "82717510"
 </Schema>  
 ```  
   
- 查询返回所有雇员元素。 在默认映射中， ** \< person>** 元素将映射到 AdventureWorks 数据库中的 contact 表。  
+ 查询返回所有雇员元素。 在默认映射中， **\<Person.Contact>** 元素映射到 AdventureWorks 数据库中的 Person 表。  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>将 XML 设置为命令并以 XML 文档形式检索结果  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bae6a0354fc7d24471aa7cb7877fe066421d8b5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755355"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934408"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>将客户端连接到数据库镜像会话 (SQL Server)
   若要连接到数据库镜像会话，客户端可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 .NET Framework 数据访问接口。 针对 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库进行配置时，这些数据访问接口完全支持数据库镜像。 有关使用镜像数据库的编程注意事项的信息，请参阅 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)。 此外，当前主体服务器实例必须可用，并且必须已在服务器实例上创建客户端登录。 有关详细信息，请参阅 [孤立用户故障排除 (SQL Server)](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。 客户端与数据库镜像会话的连接不涉及见证服务器实例（如果存在）。  
@@ -85,7 +84,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Server 属性  
  连接字符串必须包含 `Server` 属性以提供初始伙伴名称，该名称应标识当前主体服务器实例。  
   
- 标识服务器实例的最简单方法是指定其名称， *<server_name>*[**\\** _<SQL_Server_instance_name>_]。 例如：  
+ 标识服务器实例的最简单方法是指定其名称， *<server_name>*[ **\\** _<SQL_Server_instance_name>_]。 例如：  
   
  `Server=Partner_A;`  
   
@@ -98,7 +97,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  如果连接字符串指定命名实例的名称而不是端口，则 SQL Server Browser 查询是必需的。  
   
- 若要指定 IP 地址和`Server`端口，属性采用以下格式`Server=` ： *<ip_address>* `,` * \<端口>*，例如：  
+ 若要指定 IP 地址和端口， `Server` 属性采用以下格式， `Server=` *<ip_address>* `,` *\<port>* ，例如：  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -118,7 +117,7 @@ Server=123.34.45.56,4724;
 >  此字符串未包含身份验证信息。  
   
 > [!IMPORTANT]  
->  `Server`将协议前缀与属性（`Server=tcp:`*\<servername>*）捆绑在一起与**Network**属性不兼容，同时在这两个位置指定协议可能会导致错误。 因此，我们建议连接字符串使用**Network**属性指定协议， `Server`并且仅在属性（`"Network=dbmssocn; Server=`*\<servername>* `"`）中指定服务器名称。  
+>  将协议前缀与 `Server` 特性（）捆绑在 `Server=tcp:` *\<servername>* 一起与**Network**属性不兼容，同时在这两个位置指定协议可能会导致错误。 因此，我们建议连接字符串使用**Network**属性指定协议，并且仅在属性中指定服务器名称 `Server` （ `"Network=dbmssocn; Server=` *\<servername>* `"` ）。  
   
 #### <a name="failover-partner-attribute"></a>Failover Partner 属性  
  除了初始伙伴名称以外，客户端还可以指定应标识当前镜像服务器实例的故障转移伙伴名称。 故障转移伙伴是由 failover partner 属性的某个关键字指定的。 具体由该属性的哪个关键字指定取决于您所使用的 API。 下表列出了这些关键字：  
@@ -129,7 +128,7 @@ Server=123.34.45.56,4724;
 |ODBC 驱动程序|`Failover_Partner`|  
 |ActiveX 数据对象 (ADO)|`Failover Partner`|  
   
- 标识服务器实例的最简单方法是通过其系统名称， *<server_name>*[**\\** _<SQL_Server_instance_name>_]。  
+ 标识服务器实例的最简单方法是通过其系统名称， *<server_name>*[ **\\** _<SQL_Server_instance_name>_]。  
   
  另外，还可以在 `Failover Partner` 属性中提供 IP 地址和端口号。 如果首次连接到数据库时初始连接尝试失败，则到故障转移伙伴的连接尝试将不会依赖于 DNS 和 SQL Server Browser。 建立连接后，便会使用故障转移伙伴名称覆盖故障转移伙伴名称，因此，如果发生故障转移，则重定向的连接将需要 DNS 和 SQL Server Browser。  
   
@@ -166,7 +165,7 @@ Server=123.34.45.56,4724;
   
  重试时间使用以下公式进行计算：  
   
- _RetryTime_ **=** _previousretrytime 初始值_ **+ （** 0.08 **&#42;** _LoginTimeout_**）**  
+ _RetryTime_ **=**_Previousretrytime 初始值_ **+ （** 0.08 **&#42;** _LoginTimeout_**）**  
   
  其中， *PreviousRetryTime* 初始值为 0。  
   
@@ -237,7 +236,7 @@ Server=123.34.45.56,4724;
 |配置|主体服务器|镜像服务器|尝试与指定的 Partner_A 和 Partner_B 进行连接时的行为|  
 |-------------------|----------------------|-------------------|------------------------------------------------------------------------------|  
 |原始镜像配置。|Db_1|Partner_B|Partner_A 作为初始伙伴名称保存在缓存中。 客户端成功连接到 Partner_A。 客户端下载镜像服务器的名称 Partner_B 并将其保存在缓存中，同时忽略客户端提供的故障转移伙伴名称。|  
-|Partner_A 出现硬件故障，并进行了故障转移（从客户端断开连接）。|Partner_B|none|Partner_A 仍作为初始伙伴名称保存在缓存中，但却使用客户端提供的故障转移伙伴名称 Partner_B 使客户端连接到当前的主体服务器。|  
+|Partner_A 出现硬件故障，并进行了故障转移（从客户端断开连接）。|Partner_B|无|Partner_A 仍作为初始伙伴名称保存在缓存中，但却使用客户端提供的故障转移伙伴名称 Partner_B 使客户端连接到当前的主体服务器。|  
 |数据库管理员停止镜像（从客户端断开连接），用 Partner_C 替换 Partner_A，然后重新启动镜像。|Partner_B|Partner_C|客户端尝试连接到 Partner_A 并且连接失败，然后客户端尝试连接到 Partner_B（当前的主体服务器）并成功连接。 数据访问接口下载当前镜像服务器 Partner_C 的名称，并将其缓存为当前故障转移伙伴名称。|  
 |手动将服务故障转移到 Partner_C（从客户端断开连接）。|Partner_C|Partner_B|客户端最初尝试连接到 Partner_A，然后又尝试连接到 Partner_B，但均未成功。 最后，连接请求超时，无法成功连接。|  
   

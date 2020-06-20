@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dd5046c9a307f498ffb585c99cba8044c7b18b3f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4126398cb90d488bd663b87ffcc31c1c53ba4d8a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479035"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960957"
 ---
 # <a name="publishing-data-mds-add-in-for-excel"></a>发布数据（用于 Excel 的 MDS 外接程序）
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，要想与其他用户共享数据，可将数据发布到 MDS 存储库。 数据一经发布，即可供该外接程序的其他用户下载。  
