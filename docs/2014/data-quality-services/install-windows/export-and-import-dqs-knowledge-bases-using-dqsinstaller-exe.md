@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: cf8a8310abf9173f613549ef7f2776fc33ea690c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0fea7ae5abbd6aa2824d5a53244a8dc3c2cb5ea6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481268"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937608"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Export and Import DQS Knowledge Bases Using DQSInstaller.exe
   对于现有的 DQS 安装，您可以从命令提示符运行 DQSInstaller.exe 文件，以便一次性将 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 中的所有知识库导出到 DQS 备份文件 (.dqsb)，并在稍后使用 .dqsb 文件一次性将所有知识库导入其他 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 。 有关从命令提示符运行 DQSInstaller.exe 的详细信息，请参阅 [从命令提示符运行 DQSInstaller.exe](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#CommandPrompt) 中的 [运行 DQSInstaller.exe 以便完成数据质量服务器安装](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)。  
@@ -55,7 +54,7 @@ dqsinstaller.exe -importkbs c:\DQSBackup.dqsb
  如果 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 中存在使用要导入的知识库的名称的知识库，则导入的知识库名称将追加一条下划线 (_)，后跟从 1 开始的整数值。 例如，如果“CompanyName”域重复，则导入的域名称将为“CompanyName_1”。  
   
 ## <a name="see-also"></a>另请参阅  
- [运行 Dqsinstaller.exe 以完成数据质量服务器安装](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
+ [运行 DQSInstaller.exe 以完成数据质量服务器安装](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
  [安装 Data Quality Services](install-data-quality-services.md)   
  [将知识库导出到 dqs 文件](../export-a-knowledge-base-to-a-dqs-file.md)   
  [从 .dqs 文件导入知识库](../import-a-knowledge-base-from-a-dqs-file.md)  

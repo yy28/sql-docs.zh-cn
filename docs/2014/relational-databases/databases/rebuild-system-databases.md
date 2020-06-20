@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b58378e8ba2193a186fb58e3e784bf9bc3cb4d4c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a273f23d0b5f9bf21f20bc17427c7a2dc3f82ae8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871264"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965812"
 ---
 # <a name="rebuild-system-databases"></a>重新生成系统数据库
   必须重新生成系统数据库才能修复 [master](master-database.md)、 [mode](model-database.md)l、 [msdb](msdb-database.md)或 [resource](resource-database.md) 系统数据库中的损坏问题或者修改默认的服务器级排序规则。 本主题提供如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中重新生成系统数据库的分步说明。  
@@ -105,8 +104,8 @@ ms.locfileid: "62871264"
     |/ACTION=REBUILDDATABASE|指定安装程序将重新创建系统数据库。|  
     |/INSTANCENAME=*InstanceName*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的名称。 对于默认实例，请输入 MSSQLSERVER。|  
     |/SQLSYSADMINACCOUNTS=*accounts*|指定要添加到 `sysadmin` 固定服务器角色中的 Windows 组或单个帐户。 指定多个帐户时，请用空格将帐户隔开。 例如，输入 **BUILTIN\Administrators MyDomain\MyUser**。 当您在帐户名称内指定包含空格的帐户时，用双引号将该帐户引起来。 例如，输入 `NT AUTHORITY\SYSTEM`。|  
-    |[ /SAPWD=*StrongPassword* ]|指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa`帐户的密码。 如果实例使用混合身份验证（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 身份验证）模式，则此参数是必需的。<br /><br /> ** \* \*安全\*说明**该`sa`帐户是一个众所周知的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]帐户，并经常以恶意用户为目标。 因此，为 `sa` 登录名使用强密码非常重要。<br /><br /> 不要为 Windows 身份验证模式指定此参数。|  
-    |[ /SQLCOLLATION=*CollationName* ]|指定新的服务器级排序规则。 此参数是可选的。 如果没有指定，则使用服务器的当前排序规则。<br /><br /> ** \* \*重要\*提示**更改服务器级排序规则不会更改现有用户数据库的排序规则。 默认情况下，所有新创建的用户数据库都将使用新排序规则。<br /><br /> 有关详细信息，请参阅 [设置或更改服务器排序规则](../collations/set-or-change-the-server-collation.md)。|  
+    |[ /SAPWD=*StrongPassword* ]|指定帐户的密码 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` 。 如果实例使用混合身份验证（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 身份验证）模式，则此参数是必需的。<br /><br /> ** \* \* 安全 \* 说明 \* **该 `sa` 帐户是一个众所周知的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户，并经常以恶意用户为目标。 因此，为 `sa` 登录名使用强密码非常重要。<br /><br /> 不要为 Windows 身份验证模式指定此参数。|  
+    |[ /SQLCOLLATION=*CollationName* ]|指定新的服务器级排序规则。 此参数是可选的。 如果没有指定，则使用服务器的当前排序规则。<br /><br /> ** \* \* 重要 \* 提示 \* **更改服务器级排序规则不会更改现有用户数据库的排序规则。 默认情况下，所有新创建的用户数据库都将使用新排序规则。<br /><br /> 有关详细信息，请参阅 [设置或更改服务器排序规则](../collations/set-or-change-the-server-collation.md)。|  
   
 3.  在安装程序完成系统数据库重新生成后，它将返回到命令提示符，而且不显示任何消息。 请检查 Summary.txt 日志文件以验证重新生成过程是否成功完成。 此文件位于 C:\Program Files\Microsoft SQL Server\120\Setup Bootstrap\Logs。  
   
@@ -125,7 +124,7 @@ ms.locfileid: "62871264"
   
 -   如果将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例配置为复制分发服务器，则必须还原分发数据库。 有关详细信息，请参阅 [备份和还原复制的数据库](../replication/administration/back-up-and-restore-replicated-databases.md)。  
   
--   将系统数据库移到您以前记录的位置。 有关详细信息，请参阅 [移动系统数据库](system-databases.md)。  
+-   将系统数据库移到您以前记录的位置。 有关详细信息，请参阅 [Move System Databases](system-databases.md)（移动系统数据库）。  
   
 -   验证服务器范围的配置值是否与您以前记录的值相符。  
   
@@ -142,15 +141,15 @@ ms.locfileid: "62871264"
   
 4.  在“选择实例”页上，选择要修复的实例，然后单击 **“下一步”**。  
   
-5.  将运行修复规则以验证修复操作。 要继续，请单击“下一步”****。  
+5.  将运行修复规则以验证修复操作。 若要继续，请单击 **“下一步”** 。  
   
 6.  在 **“准备修复”** 页上，单击 **“修复”**。 “完成”页指示修复操作已完成。  
   
 ##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a> 创建新的 msdb 数据库  
- 如果`msdb`数据库已损坏，并且没有`msdb`数据库的备份，则可以使用`msdb` **instmsdb**脚本创建新的。  
+ 如果 `msdb` 数据库已损坏，并且没有数据库的备份 `msdb` ，则可以 `msdb` 使用**instmsdb**脚本创建新的。  
   
 > [!WARNING]  
->  使用 instmsdb `msdb`脚本重新生成**instmsdb**数据库将消除中`msdb`存储的所有信息，例如作业、警报、运算符、维护计划、备份历史记录、基于策略的管理设置、数据库邮件、性能数据仓库等。  
+>  `msdb`使用**instmsdb**脚本重新生成数据库将消除中存储的所有信息 `msdb` ，例如作业、警报、运算符、维护计划、备份历史记录、基于策略的管理设置、数据库邮件、性能数据仓库等。  
   
 1.  停止与 [!INCLUDE[ssDE](../../includes/ssde-md.md)]连接的所有服务，包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理、 [!INCLUDE[ssRS](../../includes/ssrs.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)]以及将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用作数据存储区的所有应用程序。  
   
@@ -158,21 +157,21 @@ ms.locfileid: "62871264"
   
      有关详细信息，请参阅 [启动、停止、暂停、继续、重启 SQL Server 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
-3.  在另一个命令行窗口中， `msdb`通过执行以下命令分离数据库，并将* \<servername>* 替换为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以下实例：`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
+3.  在另一个命令行窗口中， `msdb` 通过执行以下命令分离数据库， *\<servername>* 并将替换为的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
-4.  使用 Windows 资源管理器，重`msdb`命名数据库文件。 默认情况下，这些文件位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 DATA 子文件夹中。  
+4.  使用 Windows 资源管理器，重命名 `msdb` 数据库文件。 默认情况下，这些文件位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 DATA 子文件夹中。  
   
 5.  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，停止然后正常重新启动 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务。  
   
 6.  在命令行窗口中，连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并执行以下命令： `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o" C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
   
-     将* \<servername>* 替换为的[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的文件系统路径。  
+     替换 *\<servername>* 为的实例 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的文件系统路径。  
   
 7.  使用 Windows 记事本，打开 **instmsdb.out** 文件，然后检查输出中是否存在任何错误。  
   
 8.  重新应用在该实例上安装的任何 service pack 或修补程序。  
   
-9. 重新创建存储在`msdb`数据库中的用户内容，例如作业、警报等。  
+9. 重新创建存储在数据库中的用户内容 `msdb` ，例如作业、警报等。  
   
 10. 备份 `msdb` 数据库。  
   

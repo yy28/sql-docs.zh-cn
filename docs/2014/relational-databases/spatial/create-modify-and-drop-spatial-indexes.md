@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 7e5dcd71dec0a2189e9f3b51bb7a68b50b070416
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88de17e8c487d9a965f2e236edac064dc2fe4c7c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014271"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996517"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>创建、修改和删除空间索引
-  空间索引可以更高效地对`geometry`或`geography`数据类型的列（*空间列*）执行特定操作。 可对空间数据列指定多个空间索引。 这非常有用，例如，对单一列中的不同分割参数建立索引时，就是如此。  
+  空间索引可以更高效地对 `geometry` 或 `geography` 数据类型的列（*空间列*）执行特定操作。 可对空间数据列指定多个空间索引。 这非常有用，例如，对单一列中的不同分割参数建立索引时，就是如此。  
   
  创建空间索引时有许多限制。 有关详细信息，请参阅本主题中的 [对空间索引的限制](#restrictions) 。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66014271"
   
 7.  若要指定想为其创建索引的空间数据列，请单击 **“添加”** 。  
   
-8.  在 "**从** * \<表名>* 中选择列" 对话框中，通过选中相应`geometry`的`geography`复选框来选择类型为或的列。 然后，任何其他空间数据列将变为不可编辑状态。 如果要选择其他空间数据列，必须首先清除当前选定的列。 完成后，单击 **“确定”** 。  
+8.  在 "**从中选择列**" 对话框中 *\<table name>* ， `geometry` 通过选中相应的 `geography` 复选框来选择类型为或的列。 然后，任何其他空间数据列将变为不可编辑状态。 如果要选择其他空间数据列，必须首先清除当前选定的列。 完成后，单击 **“确定”** 。  
   
 9. 请在 **“索引键列”** 网格中验证您的列选择。  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66014271"
   
 11. 在 **“空间”** 页上，指定要用于索引的空间属性的值。  
   
-     在对`geometry`类型列创建索引时，必须指定边界框的 **（*`X-min`*，*`Y-min`*）** 和 **（*`X-max`*，*`Y-max`*）** 坐标。 对于`geography`类型列上的索引，指定 "**地理网格**" 分割方案后，边界框字段变为只读，因为地理网格分割不使用边界框。  
+     在对类型列创建索引时 `geometry` ，必须指定边界框的 **（ *`X-min`* ， *`Y-min`* ）** 和 **（ *`X-max`* ， *`Y-max`* ）** 坐标。 对于类型列上的索引 `geography` ，指定 "**地理网格**" 分割方案后，边界框字段变为只读，因为地理网格分割不使用边界框。  
   
      您还可以指定任意级别的分割方案的 **“每个对象的单元数”** 字段和网格密度的非默认值。 对于 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ，每个对象的默认单元数为 16；对于 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 或更高版本，则为 8。对于 **，默认网格密度为** “中” [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]。  
   

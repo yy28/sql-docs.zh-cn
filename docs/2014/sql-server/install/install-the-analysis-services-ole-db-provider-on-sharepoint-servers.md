@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2c62daf9-1f2d-4508-a497-af62360ee859
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1146c612225c2f58dd501ce9cba658ca7ca6ba69
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e49b6d36830abcbab720554231a682a98eaca5b8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112176"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042477"
 ---
 # <a name="install-the-analysis-services-ole-db-provider-on-sharepoint-servers"></a>在 SharePoint 服务器上安装 Analysis Services OLE DB 访问接口
   Microsoft OLE DB Provider for Analysis Services (MSOLAP) 是客户端应用程序用来与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据进行交互的接口。 在包含 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]的 SharePoint 环境中，此访问接口用于处理对 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的连接请求。  
@@ -99,14 +98,14 @@ ms.locfileid: "79112176"
   
 2.  右键单击 msolap110.dll，然后选择“ **属性**”。  
   
-3.  单击 **“详细信息”**。  
+3.  单击“详细信息”。  
   
-4.  查看文件版本信息。 版本应包含11.00。\<buildnumber>。  
+4.  查看文件版本信息。 版本应包含 \<buildnumber> 11.00。  
   
 5.  在 Windows\assembly 文件夹中，验证 Microsoft.AnalysisServices.Xmla.dll 版本 11.0.0.0 已列出。  
   
   
-##  <a name="use-the-powerpivot-for-sharepoint-installation-package-sppowerpivotmsi-to-install-the-sql-server-2012-ole-db-provider"></a><a name="bkmk_install2012_from_sppowerpivot_msi"></a>使用 PowerPivot for SharePoint 安装包（Sppowerpivot.msi）安装 SQL Server 2012 OLE DB 提供程序  
+##  <a name="use-the-powerpivot-for-sharepoint-installation-package-sppowerpivotmsi-to-install-the-sql-server-2012-ole-db-provider"></a><a name="bkmk_install2012_from_sppowerpivot_msi"></a>使用 PowerPivot for SharePoint 安装包（spPowerPivot.msi）安装 SQL Server 2012 OLE DB 提供程序  
  使用 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 安装包 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] (spPowerPivot.msi) **在 Excel Services 服务器上安装**OLE DB 访问接口。  
   
 #### <a name="download-the-msolap5-provider-from-the-sssql11sp1-feature-pack"></a>从 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 功能包下载 MSOLAP.5 访问接口。  
@@ -117,7 +116,7 @@ ms.locfileid: "79112176"
   
 3.  请参阅 "Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1" 一节。 下载该文件并开始安装。  
   
-4.  在 **“功能选择”** 页，选择 **“用于 SQL Server 的 Analysis Services OLE DB 访问接口”**。 取消选择其他组件并完成安装。 有关 Sppowerpivot.msi 的详细信息，请参阅[&#40;SharePoint 2013&#41;中安装或卸载 PowerPivot for SharePoint 外接程序](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)。  
+4.  在 **“功能选择”** 页，选择 **“用于 SQL Server 的 Analysis Services OLE DB 访问接口”**。 取消选择其他组件并完成安装。 有关 spPowerPivot.msi 的详细信息，请参阅[安装或卸载 PowerPivot for SharePoint 加载项 &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)。  
   
 5.  将 MSOLAP.5 注册为 SharePoint Excel Services 中的受信任数据访问接口。 有关详细信息，请参阅 [将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口](https://technet.microsoft.com/library/hh758436.aspx)。  
   
@@ -137,13 +136,13 @@ ms.locfileid: "79112176"
   
 #### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>步骤 2：注册 Microsoft.AnalysisServices.ChannelTransport.dll 文件  
   
-1.  使用 regasm.exe 实用工具注册该文件。 如果之前未运行 regasm，请将其父文件夹 C:\Windows\Microsoft.NET\Framework64\v4.0.30319\\添加到系统路径变量。  
+1.  使用 regasm.exe 实用工具注册该文件。 如果之前未运行 regasm.exe，请将其父文件夹 C:\Windows\Microsoft.NET\Framework64\v4.0.30319 添加 \\ 到系统路径变量。  
   
 2.  使用管理员权限打开命令提示符。  
   
 3.  转至此文件夹 C:\Windows\assembly\GAC_MSIL\Microsoft.AnalysisServices.ChannelTransport\10.0.0.0__89845dcd8080cc91  
   
-4.  输入以下命令： `regasm microsoft.analysisservices.channeltransport.dll`  
+4.  输入以下命令：`regasm microsoft.analysisservices.channeltransport.dll`  
   
 5.  在手动安装 2008 R2 版本的访问接口的所有计算机上重复以前的步骤。  
   
@@ -153,9 +152,9 @@ ms.locfileid: "79112176"
   
 2.  此外，您可以检查文件版本。  
   
-     转到  `C:\Program files\Microsoft Analysis Services\AS OLEDB\10` 。 右键单击 **msolap100.dll** 并选择 **“属性”**。 单击 **“详细信息”**。  
+     转到  `C:\Program files\Microsoft Analysis Services\AS OLEDB\10` 。 右键单击 **msolap100.dll** 并选择 **“属性”**。 单击“详细信息”。  
   
-     查看文件版本信息。 版本应包含10.50。\<buildnumber>。  
+     查看文件版本信息。 版本应包含 \<buildnumber> 10.50。  
   
   
 ## <a name="see-also"></a>另请参阅  

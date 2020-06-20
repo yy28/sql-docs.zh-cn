@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: aac86ed6438197bc788f08cf9bc618608a65475f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: faeb664a99b0d47406b7fb3a42f5834acd135323
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480372"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937448"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>在数据质量客户端中打开 Integration Services 项目
   通过 [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] ，您可以在批处理模式下运行清理项目。 但是，有时您可能想要查看 Integration Services 包中的清理结果，这类似于您在 DQS 的数据质量项目中，在清理活动的 **“管理和查看结果”** 选项卡中查看清理结果。 通过 DQS，您可以在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 中打开 Integration Services 项目，就像从 **“打开项目”** 屏幕打开任何其他数据质量项目一样，并且您将具有在 Integration Services 项目中清理结果的交互式清理体验。  
@@ -30,7 +29,7 @@ ms.locfileid: "65480372"
   
 -   您无法从 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]中删除锁定的 Integration Services 项目。 您必须先对其解锁后才能删除。  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 先决条件  
  您必须成功完成运行包含某个包以及 DQS 清理组件的 Integration Services 项目，然后才能在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]中查看并打开该项目。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  
@@ -42,11 +41,11 @@ ms.locfileid: "65480372"
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
   
-2.  在[!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]主屏幕中，单击 "**打开数据质量项目**"。 将出现 **“打开项目”** 屏幕。  
+2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中，单击 "**打开数据质量项目**"。 将出现 **“打开项目”** 屏幕。  
   
 3.  在 **“打开项目”** 屏幕上，可以通过以下方式之一标识 Integration Services 项目：  
   
-    1.  **项目名称**：Integration Services 项目使用以下命名术语列出：“Package.DQS Cleansing_\<DATE>\<TIME>_{GUID}”**。 每次成功地在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中运行同一个包，就会在“打开项目”屏幕中列出一个新项目。 ****  
+    1.  **项目名称**：使用以下命名术语列出 Integration Services 项目： "PACKAGE. DQS Cleansing_ *\<DATE>**\<TIME>* _ {GUID}"。 每次成功地在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中运行同一个包，就会在“打开项目”屏幕中列出一个新项目。 ****  
   
     2.  **“项目类型”**：在 **“打开项目”** 屏幕中，Integration Services 项目具有 **SSIS** 作为项目类型。  
   

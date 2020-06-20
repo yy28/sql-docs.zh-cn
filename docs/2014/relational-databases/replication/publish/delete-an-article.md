@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4be2287a1c0d43ccfdfaeaca3378f6d10f100134
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 082f90d33c2b8dedfae34dcada9b3935bed134ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882273"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060563"
 ---
 # <a name="delete-an-article"></a>删除项目
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中删除项目。 有关删除项目时使用的条件以及删除项目是否需要新的快照或重新初始化订阅的信息，请参阅[向现有发布添加项目和从中删除项目](add-articles-to-and-drop-articles-from-existing-publications.md)。  
@@ -35,22 +34,22 @@ ms.locfileid: "73882273"
   
 #### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>从快照或事务发布中删除项目  
   
-1.  执行 [sp_droparticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql) 以从由 \@publication 指定的发布中删除由 \@article 指定的项目********。 将** \@force_invalidate_snapshot**的值指定为**1** 。  
+1.  执行 [sp_droparticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql) 以从由 \@publication 指定的发布中删除由 \@article 指定的项目********。 将** \@ force_invalidate_snapshot**的值指定为**1** 。  
   
 2.  （可选）若要从数据库完全删除已发布的对象，请在发布服务器上对发布数据库执行 `DROP <objectname>` 命令。  
   
 #### <a name="to-delete-an-article-from-a-merge-publication"></a>从合并发布删除项目  
   
-1.  执行 [sp_dropmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) 以从由 \@publication 指定的发布中删除由 \@article 指定的项目********。 如有必要，请将** \@force_invalidate_snapshot**的值指定为**1** ，并将** \@force_reinit_subscription**的值指定为**1** 。  
+1.  执行 [sp_dropmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) 以从由 \@publication 指定的发布中删除由 \@article 指定的项目********。 如有必要，请将** \@ force_invalidate_snapshot**的值指定为**1** ，并将** \@ force_reinit_subscription**的值指定为**1** 。  
   
 2.  （可选）若要从数据库完全删除已发布的对象，请在发布服务器上对发布数据库执行 `DROP <objectname>` 命令。  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 示例 (Transact-SQL)  
- 下面的示例将从事务发布中删除项目。 因为此更改使现有快照失效，所以为** \@force_invalidate_snapshot**参数指定了值**1** 。  
+ 下面的示例将从事务发布中删除项目。 因为此更改使现有快照失效，所以为** \@ force_invalidate_snapshot**参数指定了值**1** 。  
   
  [!code-sql[HowTo#sp_droparticle](../../../snippets/tsql/SQL15/replication/howto/tsql/droptranpub.sql#sp_droparticle)]  
   
- 下面的示例将从合并发布中删除两个项目。 由于这些更改使现有快照失效，因此为** \@force_invalidate_snapshot**参数指定了值**1** 。  
+ 下面的示例将从合并发布中删除两个项目。 由于这些更改使现有快照失效，因此为** \@ force_invalidate_snapshot**参数指定了值**1** 。  
   
  [!code-sql[HowTo#sp_dropmergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergepub.sql#sp_dropmergearticle)]
  [!code-sql[HowTo#sp_dropmergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergearticles.sql#sp_dropmergearticle)]  
@@ -62,7 +61,7 @@ ms.locfileid: "73882273"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  创建的 <xref:Microsoft.SqlServer.Replication.TransArticle> 类的实例。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.TransArticle> 类的一个实例。  
   
 3.  设置 <xref:Microsoft.SqlServer.Replication.Article.Name%2A>、 <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>和 <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> 属性。  
   
@@ -78,7 +77,7 @@ ms.locfileid: "73882273"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  创建的 <xref:Microsoft.SqlServer.Replication.MergeArticle> 类的实例。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.MergeArticle> 类的一个实例。  
   
 3.  设置 <xref:Microsoft.SqlServer.Replication.Article.Name%2A>、 <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>和 <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> 属性。  
   

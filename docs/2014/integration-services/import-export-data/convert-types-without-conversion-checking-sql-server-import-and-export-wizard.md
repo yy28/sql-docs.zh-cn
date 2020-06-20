@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ea8b678731a10b483c233cdb17b394a22f647060
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f06e60f052dad10b0e69ef0aa6a879e3d29d1f86
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768049"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965627"
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>转换类型时不进行转换检查（SQL Server 导入和导出向导）
-  如果向导找不到一个或多个[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]数据类型转换和映射文件，则使用 "**转换类型而不进行转换检查**" 页可以查看向导执行的映射。 此页包含的信息可帮助您识别缺少的文件。  
+  如果向导找不到一个或多个数据类型转换和映射文件，则使用 "**转换类型而不进行转换检查**" 页可以查看向导执行的映射 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。 此页包含的信息可帮助您识别缺少的文件。  
   
  若要了解有关此向导的详细信息，请参阅[SQL Server 导入和导出向导](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要了解启动向导的选项以及成功运行向导所需的权限，请参阅[运行 SQL Server 导入和导出向导](start-the-sql-server-import-and-export-wizard.md)。  
   

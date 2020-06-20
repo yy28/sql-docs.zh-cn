@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 47534b08e32f9e8fe585e4ad7fe2e36f6c6e8c8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a47c6937ace51d20986ccf04bb7d1f39fed9954c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484008"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971982"
 ---
 # <a name="collection-permissions-master-data-services"></a>集合权限（主数据服务）
   集合权限应用到实体的所有集合。 不能将权限授予特定集合，权限应用到所有集合。  
@@ -30,7 +29,7 @@ ms.locfileid: "65484008"
 |----------------|-----------------|  
 |**只读**|显示所有集合和集合成员。<br /><br /> 用户不能添加或删除集合，不能将成员添加到集合或从中删除成员。|  
 |**Update**|显示所有集合，用户可以添加和删除集合。<br /><br /> 用户还可以在集合中添加和删除成员。|  
-|**注销**|不显示实体的所有集合。|  
+|**拒绝**|不显示实体的所有集合。|  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;Master Data Services 分配模型对象权限&#41;](assign-model-object-permissions-master-data-services.md)   
