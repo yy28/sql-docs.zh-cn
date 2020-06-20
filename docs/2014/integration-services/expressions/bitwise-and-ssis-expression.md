@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 06d2958e-66a5-44d8-8bc4-56209ebe1ff2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f4785967ceafd105e8d7b56e24223edd40d08850
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 016144ec2df56d7c620b3e16f275e97882eb6137
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898432"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966677"
 ---
 # <a name="amp-bitwise-and-ssis-expression"></a>&amp;（位算符 AND）（SSIS 表达式）
   对两个整数值执行“位与”运算。 它会将第一个操作数的每一位与第二个操作数中对应的每一位进行比较。 如果两位都是 1，则相应的结果位设置为 1。 否则，相应的结果位设置为 0。  

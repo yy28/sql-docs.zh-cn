@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eee3452c109bcd519cb24ba96b621ec25c0110df
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a4ebbf6e83524988822b6158b3524d7fff4bb40e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704587"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018212"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>创建表值参数行集
   尽管使用者可以为表值参数提供任意行集对象，但是典型的行集对象要针对后端数据存储来实现，因此提供有限的性能。 有鉴于此，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口支持使用者在内存中的数据之上创建专用行集对象。 此特殊的内存中行集对象是一个名为表值参数行集的新 COM 对象。 它提供与参数集相似的功能。  

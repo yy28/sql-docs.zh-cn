@@ -2,7 +2,6 @@
 title: 新增功能
 description: 查看 Microsoft Analytics Platform System 中的新增功能，这是托管 MPP SQL Server 并行数据仓库的扩展本地设备。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -10,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: faf3bd1f487fb5c850759fdde3ddecd32bdd3b1f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e609beb77b92a6dbaf95f39bf5a2a6971a7ae5c4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80625543"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039830"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>分析平台系统中的新增功能-横向扩展 MPP 数据仓库
 请参阅最新的设备更新 Microsoft Analytics Platform System （AP）的新增功能。 AP 是托管 MPP SQL Server 并行数据仓库的扩展本地设备。 
@@ -131,7 +130,7 @@ from cte;
 发布日期-2018 年7月
 
 ### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>DBCC 命令不使用并发槽（行为更改）
-AP 支持 T-sql [dbcc 命令](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql)（如[DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql)）的子集。 以前，这些命令会占用[并发插槽](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots)，从而减少了可以执行的用户加载/查询数。 现在`DBCC` ，命令运行在不使用用户并发槽的本地队列中，从而提高了总体查询执行性能。
+AP 支持 T-sql [dbcc 命令](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql)（如[DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql)）的子集。 以前，这些命令会占用[并发插槽](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots)，从而减少了可以执行的用户加载/查询数。 `DBCC`现在，命令运行在不使用用户并发槽的本地队列中，从而提高了总体查询执行性能。
 
 ### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>用目录对象替换某些元数据调用
 使用目录对象进行元数据调用，而不是使用 SMO 在 AP 中显示了性能改进。 从 CU 7.1 开始，某些元数据调用现在默认使用目录对象。 如果使用元数据查询的客户遇到任何问题，则可以通过[功能开关](appliance-feature-switch.md)禁用此行为。
@@ -139,7 +138,7 @@ AP 支持 T-sql [dbcc 命令](https://docs.microsoft.com/sql/t-sql/database-cons
 ### <a name="bug-fixes"></a>Bug 修复
 我们已升级到 SQL Server 2016 SP2 CU2 与 AP CU 7.1。 升级修复了下面所述的一些问题。
 
-| Title | 说明 |
+| 标题 | 说明 |
 |:---|:---|
 | **潜在元组移动器死锁** |升级修复了分布式事务和元组移动器后台线程中可能出现的死锁。 安装 CU 7.1 后，使用 TF634 停止元组移动器 SQL Server 启动参数或全局跟踪标志的客户可以安全地将其删除。 | 
 | **某些滞后/线索查询失败** |对于包含嵌套延迟/潜在顾客函数（将出错）的 CCI 表的某些查询，此升级现已修复。 | 
@@ -155,7 +154,7 @@ AP 2016 是升级到 AU7 的先决条件。 下面是 AP AU7 中的新功能：
 默认情况下，AP AU7 自动创建和更新统计信息。 若要更新统计信息设置，管理员可以在[Configuration Manager](appliance-configuration.md#CMTasks)中使用新功能切换菜单项。 [功能开关](appliance-feature-switch.md)控制统计信息的自动创建、自动更新和异步更新行为。 还可以通过[ALTER DATABASE （并行数据仓库）](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)语句来更新统计信息设置。
 
 ### <a name="t-sql"></a>T-SQL
-选择@var "现在支持"。 有关详细信息，请参阅[select 局部变量](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
+选择 " @var 现在支持"。 有关详细信息，请参阅[select 局部变量](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
 
 现在支持查询提示哈希和订单组。 有关详细信息，请参阅[提示（transact-sql）-查询](/sql/t-sql/queries/hints-transact-sql-query)
 
@@ -185,7 +184,7 @@ AP AU6 支持这些 T-sql 兼容性改进。  这些附加的语言元素使您�
 
 - 除了 Windows 排序规则外，现在还支持[列级 SQL 排序规则][]。
 - [聚集列存储索引的非聚集索引][]可提高在聚集列存储索引中搜索特定值的查询的性能。 
-- [SELECT...INTO][] 
+- [选择 .。。为][] 
 - [sp_spaceused （）][]显示在表或数据库中使用或保留的磁盘空间。
 - [宽表][]支持与 SQL Server 2016 相同。 对于行大小，先前的限制 32 K 已不再存在。 
 
@@ -257,13 +256,13 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [NVARCHAR （MAX）]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
 [VARBINARY （MAX）]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
 [SYSNAME]:/sql/relational-databases/system-catalog-views/sys-types-transact-sql
-[SELECT...INTO]:/sql/t-sql/queries/select-into-clause-transact-sql
+[选择 .。。为]:/sql/t-sql/queries/select-into-clause-transact-sql
 [sp_spaceused （）]:/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql
 [宽表]:/sql/sql-server/maximum-capacity-specifications-for-sql-server
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
 [bcp 实用工具]:/sql/tools/bcp-utility
 [UNIQUEIDENTIFIER]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
-[NUMERIC]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
+[加法]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
 [行或范围]:/sql/t-sql/queries/select-over-clause-transact-sql
 [FIRST_VALUE]:/sql/t-sql/functions/first-value-transact-sql
 [LAST_VALUE]:/sql/t-sql/functions/last-value-transact-sql

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3bd2ec05-933f-4947-b1fe-c9226961eb7d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7cb2f12115e3fe743c49c2f7e69f765da4501ba2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56e3d832fccbab849d0646c761964aee9266181e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489541"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006211"
 ---
 # <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>任务 9：使用主数据管理器创建派生层次结构
   在本任务中，您将使用主数据管理器创建一个派生层次结构。 此派生层次结构从**供应商**和**状态**实体之间的基于域的属性关系中派生。  
@@ -60,7 +59,7 @@ ms.locfileid: "65489541"
   
      ![资源管理器中的派生层次结构](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-07.jpg "资源管理器中的派生层次结构")  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
  [第 5 课：使用 SSIS 自动执行清理和匹配](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)  
   
   

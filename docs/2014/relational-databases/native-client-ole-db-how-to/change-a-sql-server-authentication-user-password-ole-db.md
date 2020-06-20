@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 1ed37ded-5671-46a4-b609-eea886dfae20
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4c88949dd81ccfd438c9403a1b640bc9c78b03a1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4691cb0a700137ec9571717031639f4ebb8f3cdf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704922"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039360"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>更改 SQL Server 身份验证用户密码 (OLE DB)
   此示例显示如何使用 OLE DB 更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证下的用户帐户密码。  

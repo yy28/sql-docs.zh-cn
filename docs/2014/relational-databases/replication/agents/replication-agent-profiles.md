@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 95692fd0ecf365f1fb54c8c1c3a090227b0d9a38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfa1c9265af255c3dc901bf931e7b70528f2ec64
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721749"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038292"
 ---
 # <a name="replication-agent-profiles"></a>复制代理配置文件
   在配置复制时，将在分发服务器上安装一组代理配置文件。 代理配置文件包含一组在代理每次运行时都要使用的参数：在代理启动过程中，每个代理都会登录到分发服务器，并查询其配置文件中的参数。 对于使用 Web 同步的合并订阅，配置文件会下载并存储在订阅服务器中。 如果配置文件发生了更改，订阅服务器中的配置文件将在合并代理下次运行时更新。 有关 Web 同步的详细信息，请参阅 [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md)。  

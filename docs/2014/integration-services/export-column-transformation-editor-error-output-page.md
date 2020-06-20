@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 260be463-01a9-460c-9c98-e5265cb2b1e9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 43eeb6984a0e7ef15b52fd349bccdf3c1bf78f15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ae69c24138749fa1f3718c94147cd1db12abd1d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058936"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966717"
 ---
 # <a name="export-column-transformation-editor-error-output-page"></a>导出列转换编辑器（“错误输出”页）
   可以使用 **“导出列转换编辑器”** 对话框的 **“错误输出”** 页指定错误的处理方式。  

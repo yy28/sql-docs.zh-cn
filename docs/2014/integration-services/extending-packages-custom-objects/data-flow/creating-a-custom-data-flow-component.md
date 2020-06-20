@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d96bcf5-eba8-44bd-b113-ed51ad0d0521
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1703d70b7760cad2198b3565ce3fc47d44cac409
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 181e9d2d812dbf6ff4e3d232b5e48cdc1e63e0b3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768933"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966547"
 ---
 # <a name="creating-a-custom-data-flow-component"></a>创建自定义数据流组件
   在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中，数据流任务会公开一个对象模型，该对象模型允许开发人员使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 和托管代码创建自定义数据流组件：源、转换和目标。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ff097e4-cafb-4885-a898-05b2a46628c1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0881624f421cba5bda5d2b0ba8f9d3732efd2497
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08dc39cb21eec03a7cbdc5bd56c68212044dd211
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059271"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966887"
 ---
 # <a name="excel-connection-manager-editor"></a>Excel 连接管理器编辑器
   使用 **“Excel 连接管理器编辑器”** 对话框可以将连接添加到现有或新的 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 工作簿文件。  

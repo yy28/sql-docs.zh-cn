@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: e23e2b64-2a74-474f-a425-39ca439ac37a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 79637e9f891c70a79e5388a4932957cbff8377f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4de61dbbdb123930365a0a5d62974a9e84738386
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62643386"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059831"
 ---
 # <a name="instancename-property-servernetworkprotocolipaddress-class"></a>InstanceName 属性（ServerNetworkProtocolIPAddress 类）
-  获取在其[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上安装了服务器网络协议的实例的名称。  
+  获取在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 其上安装了服务器网络协议的实例的名称。  
   
 ## <a name="syntax"></a>语法  
   

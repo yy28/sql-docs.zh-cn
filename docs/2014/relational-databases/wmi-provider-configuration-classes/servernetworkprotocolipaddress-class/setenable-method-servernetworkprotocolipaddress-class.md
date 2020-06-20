@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: baa86deb-95dd-416f-b2c7-cec1dfb91ab4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d4c542aa1491710d49ec4c24c027e69f2eef24a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5be9c30acacaedba320fd68363e531b178918271
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62643121"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059775"
 ---
 # <a name="setenable-method-servernetworkprotocolipaddress-class"></a>SetEnable 方法（ServerNetworkProtocolIPAddress 类）
   启用 IP 地址。  
@@ -39,7 +38,7 @@ object
   
 ## <a name="parts"></a>组成部分  
  *object*  
- 一个表示实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上的网络协议 IP 地址的[ServerNetworkProtocolIPAdress 类](servernetworkprotocolipaddress-class.md)对象。  
+ 一个表示实例上的网络协议 IP 地址的[ServerNetworkProtocolIPAdress 类](servernetworkprotocolipaddress-class.md)对象 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个 `uint32` 值，如果服务已成功修改，则为 0；如果不支持请求，则为 1；其他任何数字表示出现错误。  

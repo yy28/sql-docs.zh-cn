@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f5223e9e98d07d3a50d3bcda37ae422bbdd6d802
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 33ab9f35cd9d3eaf04e688a89390b5eb3f00ae58
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82700460"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018414"
 ---
 # <a name="prepared-execution"></a>准备好的执行
   ODBC API 会定义准备好的执行，以此来减少反复执行 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句时所需的分析和编译开销。 该应用程序生成一个包含 SQL 语句的字符串，然后分两个阶段执行该语句。 它将调用[SQLPrepare 函数](https://go.microsoft.com/fwlink/?LinkId=59360)一次，以将语句分析并编译为执行计划 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 。 然后，它会在每次执行准备好的执行计划时调用**SQLExecute** 。 这节省了每次执行的分析和编译开销。 应用程序通常使用准备好的执行来重复执行相同的参数化 SQL 语句。  
@@ -33,7 +32,7 @@ ms.locfileid: "82700460"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 还提供针对准备好的执行的本机支持。 执行计划建立在**SQLPrepare**上，并在调用**SQLExecute**时执行。 由于在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **SQLPrepare**上生成临时存储过程不是必需的，因此**tempdb**中的系统表不会产生额外的开销。  
   
- 出于性能方面的原因，语句准备将延迟，直到调用**SQLExecute**或执行元属性操作（如 ODBC 中的[SQLDescribeCol](../../native-client-odbc-api/sqldescribecol.md)或[SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md) ）。 此选项为默认行为。 正在准备的语句如有任何错误，需等到执行该语句或执行元属性操作后才会发现。 将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序特定的语句属性 SQL_SOPT_SS_DEFER_PREPARE 设置为 SQL_DP_OFF 可以关闭此默认行为。  
+ 出于性能方面的原因，语句准备将延迟，直到调用**SQLExecute**或执行元属性操作（如 ODBC 中的[SQLDescribeCol](../../native-client-odbc-api/sqldescribecol.md)或[SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md) ）。 这是默认行为。 正在准备的语句如有任何错误，需等到执行该语句或执行元属性操作后才会发现。 将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序特定的语句属性 SQL_SOPT_SS_DEFER_PREPARE 设置为 SQL_DP_OFF 可以关闭此默认行为。  
   
  在延迟准备的情况下，在调用**SQLExecute**之前调用**SQLDescribeCol**或**SQLDescribeParam**会生成到服务器的额外往返。 在**SQLDescribeCol**上，驱动程序从查询中删除 WHERE 子句，并将其发送到服务器，并将 FMTONLY 设置为 ON，以获取查询返回的第一个结果集中的列的说明。 在**SQLDescribeParam**上，驱动程序调用服务器来获取查询中任何参数标记所引用的表达式或列的说明。 此方法也存在一些限制，如无法解析子查询中的参数。  
   

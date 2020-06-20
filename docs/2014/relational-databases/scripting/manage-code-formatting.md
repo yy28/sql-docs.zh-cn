@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7ad7eed88b831a74eaf4ae83d1949df25744159d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6c4c1402b37de750fae26cbc811235efa6b32ea3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703846"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009700"
 ---
 # <a name="manage-code-formatting"></a>管理代码格式
   使用编辑器可以用缩进、隐藏文本、URL 等来设置代码的格式。 还可以使用智能缩进在键入时自动格式化代码。  
@@ -122,9 +121,9 @@ ms.locfileid: "82703846"
   
 1.  选择要转换的文本。  
   
-2.  若要将文本转换为大写，请按 Ctrl+Shift+U，或单击“编辑”  菜单的“高级”  子菜单上的“转换为大写”  。  
+2.  若要将文本转换为大写，请按 Ctrl+Shift+U，或单击“编辑”菜单的“高级”子菜单上的“转换为大写”。  
   
-3.  若要将文本转换为小写，请按 Ctrl+Shift+L，或单击“编辑”  菜单的“高级”  子菜单上的“转换为小写”  。  
+3.  若要将文本转换为小写，请按 Ctrl+Shift+L，或单击“编辑”菜单的“高级”子菜单上的“转换为小写”。  
   
 > [!NOTE]  
 >  有关键盘快捷键的完整列表，请参阅 [SQL Server Management Studio 键盘快捷键](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)。  

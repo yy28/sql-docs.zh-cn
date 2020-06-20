@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43ef487dc2049d3ca95f4cddff72a005c98a5d19
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2bdf0bdee452101bbafb8108426faf6604e7626
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010963"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016506"
 ---
 # <a name="upgrade-full-text-search"></a>升级全文搜索
   将全文搜索升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 是在安装期间以及在附加、还原或使用复制数据库向导复制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本的数据库文件和全文目录期间执行的。  
@@ -70,10 +69,10 @@ ms.locfileid: "66010963"
   
  有关导入全文检索的影响的信息，请参阅本主题后面的“有关选择全文升级选项的注意事项”。  
   
- “重新生成”  
+ 重新生成  
  使用新的和增强的断字符重新生成全文目录。 重新生成索引可能需要一些时间，且升级后可能需要占用大量的 CPU 和内存。  
   
- 重置  
+ Reset  
  重置全文目录。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]升级时，将删除全文目录文件，但会保留全文目录和全文检索的元数据。 在进行升级后，所有全文检索将禁用更改跟踪，并且不会自动启动爬网。 在升级完成后，目录将保留为空，直至手动执行完全填充。  
   
 ##  <a name="considerations-for-choosing-a-full-text-upgrade-option"></a><a name="Choosing_Upgade_Option"></a>选择全文升级选项的注意事项  
@@ -150,7 +149,7 @@ ms.locfileid: "66010963"
   
  有关备份和还原 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文目录的详细信息，请参阅 联机丛书中的 [备份和还原全文目录](https://go.microsoft.com/fwlink/?LinkId=121052) 和 [文件备份和还原和全文目录](https://go.microsoft.com/fwlink/?LinkId=121053)[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
   
- 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]上还原数据库时，将为全文目录创建新的数据库文件。 该文件的默认名称是 ftrow_*catalog-name*.ndf。 例如，如果 *catalog-name* 是 `cat1`， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库文件的默认名称则为 `ftrow_cat1.ndf`。 但是，如果目标目录中已使用了默认名称，则新的数据库文件将命名为`ftrow_`*目录名称*`{`*guid*`}.ndf`，其中*GUID*是新文件的全局唯一标识符。  
+ 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]上还原数据库时，将为全文目录创建新的数据库文件。 该文件的默认名称是 ftrow_*catalog-name*.ndf。 例如，如果 *catalog-name* 是 `cat1`， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库文件的默认名称则为 `ftrow_cat1.ndf`。 但是，如果目标目录中已使用了默认名称，则新的数据库文件将命名为 `ftrow_` *目录名称* `{` *guid* `}.ndf` ，其中*GUID*是新文件的全局唯一标识符。  
   
  导入目录后， **sys.database_files** 和 **sys.master_files**经过更新以删除目录项且 **sys.fulltext_catalogs** 中的 **path** 列设置为 NULL。  
   
@@ -171,7 +170,7 @@ ms.locfileid: "66010963"
   
 -   数据库文件 `ftdb1.mdf`移动到 `C:\Program Files\Microsoft SQL Server\MSSQL.1MSSQL12.MSSQLSERVER\MSSQL\DATA\ftdb1.mdf`。  
   
--   `ftdb1_log.ldf`日志文件移动到日志磁盘驱动器上的日志目录中， *log_drive*`:\`*log_directory*`\ftdb1_log.ldf`。  
+-   日志文件 `ftdb1_log.ldf` 移动到日志磁盘驱动器上的日志目录中， *log_drive* `:\` *log_directory* `\ftdb1_log.ldf` 。  
   
 -   与 `sysft_cat90` 目录对应的目录文件移动到 `C:\temp`。 导入全文索引后，它们将自动放置在数据库文件 C:\ftrow_sysft_cat90.ndf 中，并删除 C:\temp。  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e64bf4d4642d8091cd0892283a996e7dccc56e26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67eee8d7d6f44c9ff83795bf2a8bd612309bf0a5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62877116"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958980"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>完整数据库还原（简单恢复模式）
   数据库完整还原的目的是还原整个数据库。 整个数据库在还原期间处于脱机状态。 在数据库的任何部分变为联机之前，必须将所有数据恢复到同一点，即数据库的所有部分都处于同一时间点并且不存在未提交的事务。  
@@ -116,9 +115,9 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
- [sp_addumpdevice &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
- [完全数据库备份 &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
- [差异备份 &#40;SQL Server&#41;](differential-backups-sql-server.md)   
+ [sp_addumpdevice (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
+ [完整数据库备份 (SQL Server)](full-database-backups-sql-server.md)   
+ [差异备份 (SQL Server)](differential-backups-sql-server.md)   
  [备份概述 (SQL Server)](backup-overview-sql-server.md)   
  [还原和恢复概述 (SQL Server)](restore-and-recovery-overview-sql-server.md)  
   

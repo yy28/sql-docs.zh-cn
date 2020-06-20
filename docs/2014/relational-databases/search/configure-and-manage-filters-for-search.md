@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 7ccf2ee0-9854-4253-8cca-1faed43b7095
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: df228060a5b714d92c9ae200d91851e4b579839d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e9a57c95226a9b277cfb718b40b5d0525b1f8eb3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011583"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997749"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>配置和管理搜索筛选器
   为 `varbinary`、`varbinary(max)`、`image` 或 `xml` 数据类型的文档建立索引需要进行额外处理。 该处理必须由筛选器执行。 筛选器从文档中提取文本信息（去除格式）。 然后，筛选器将这些文本发送至与表列相关联的语言的断字器组件。  
   
  给定筛选器特定于给定文档类型（.doc、.pdf、.xls、.xml 等等）。 这些筛选器实现 IFilter 接口。 有关这些文档类型的详细信息，请查询 [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) 目录视图。  
   
- 二进制文档可以存储在单个 `varbinary(max)` 或 `image` 列中。 对于每个文档， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 根据文件扩展名来选择正确的筛选器。 由于文件存储在`varbinary(max)`或`image`列中时，文件扩展名不可见，因此文件扩展名（.doc、.xls、.pdf 等）必须存储在表中单独的列中，称为类型列。 此类型列可以是任意基于字符的数据类型，并且包含文档文件扩展名，例如 .doc 表示 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word 文档。 在的**document**表中[!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]， **document**列的类型`varbinary(max)`为，类型列**FileExtension**的类型为`nvarchar(8)`。  
+ 二进制文档可以存储在单个 `varbinary(max)` 或 `image` 列中。 对于每个文档， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 根据文件扩展名来选择正确的筛选器。 由于文件存储在或列中时，文件扩展名不可见 `varbinary(max)` ，因此 `image` 文件扩展名（.doc、.xls、.pdf 等）必须存储在表中单独的列中，称为类型列。 此类型列可以是任意基于字符的数据类型，并且包含文档文件扩展名，例如 .doc 表示 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word 文档。 在的**document**表中 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] ， **document**列的类型为 `varbinary(max)` ，类型列**FileExtension**的类型为 `nvarchar(8)` 。  
   
 > [!NOTE]  
 >  筛选器有可能能够处理嵌入到父对象中的对象，具体取决于筛选器的实现方式。 不过， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会将筛选器配置为跟踪指向其他对象的链接。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23863340-d8e0-48d6-928b-462745885d37
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5cdcc410cc83d7f7fa53d937f6011ad2624655fb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 627e48ef015a4b31d7fe7b514da330d68c6f72c4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157335"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068997"
 ---
 # <a name="check-disk-input-and-output-subsystem-for-io-delay-problems"></a>检查磁盘输入和输出子系统是否存在 IO 延迟问题
   此规则检查计算机事件日志中是否存在错误消息 833。 该消息指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已从磁盘发出读取或写入请求，并且表明该请求返回所用的时间已超过 15 秒。 此错误由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 报告，表示磁盘 I/O 子系统有问题。 延迟此长度的时间可能会严重损坏 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境的性能。  

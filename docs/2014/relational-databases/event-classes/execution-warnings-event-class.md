@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c69e321-dc9a-4483-886d-81350adae2be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 947866923053c025d125d36bda5eb514ae6c2005
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 155fb8e9dca4f95496196ad167f7976115cef1f6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662410"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052970"
 ---
 # <a name="execution-warnings-event-class"></a>Execution Warnings 事件类
   Execution Warnings 事件类指示在执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 语句或存储过程期间出现的内存授予警告。 监视此事件类可确定查询在继续进行之前是否必须等待一秒或几秒再获取内存，或确定获取内存的初始尝试是否失败。 查询等待时间的信息有助于揭示影响性能的系统争用问题。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0f691b3d-a8fd-4459-ad21-2cfc8574a8c0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 14c34bb0d7520b914d8dbfc1cfc8174341722ece
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14158b7097427b6704cf5e747fa998a11217ecd6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150979"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016788"
 ---
 # <a name="xtp-phantom-processor"></a>XTP 虚拟处理器
   XTP 虚拟处理器性能对象包含与 XTP 引擎的虚拟处理子系统相关的计数器。 此组件用于检测在 SERIALIZABLE 隔离级别运行的事务中的虚拟行。  

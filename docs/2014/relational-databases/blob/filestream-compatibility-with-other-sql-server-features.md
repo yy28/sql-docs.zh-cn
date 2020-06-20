@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: aba8bdc3182cd0e3784908a8af32b6f2fbebd6e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53bb99ea094261fd96f2a821dfaa5203e9796d8c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010186"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955477"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM 与其他 SQL Server 功能的兼容性
   由于 FILESTREAM 数据存在于文件系统中，因此本主题提供了将 FILESTREAM 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的以下功能一起使用时的一些注意事项、指南和限制：  
@@ -50,14 +49,14 @@ ms.locfileid: "66010186"
   
  您可以使用“导入列”转换将文件从文件系统加载到 FILESTREAM 列， 还可以使用“导出列”转换将文件从 FILESTREAM 列提取到文件系统中的另一个位置。  
   
-##  <a name="distributed-queries-and-linked-servers"></a><a name="distqueries"></a>分布式查询和链接服务器  
- 您可以通过将 FILESTREAM 数据视为`varbinary(max)`数据，通过分布式查询和链接服务器来处理这些数据。 不能在使用由四部分构成的名称的分布式查询中使用 FILESTREAM **PathName()** 函数，甚至在该名称表示本地服务器时也不能使用。 但是，你可以在使用 **OPENQUERY()** 的传递查询的内部查询中使用 **PathName()**。  
+##  <a name="distributed-queries-and-linked-servers"></a><a name="distqueries"></a> 分布式查询和链接服务器  
+ 您可以通过将 FILESTREAM 数据视为数据，通过分布式查询和链接服务器来处理这些数据 `varbinary(max)` 。 不能在使用由四部分构成的名称的分布式查询中使用 FILESTREAM **PathName()** 函数，甚至在该名称表示本地服务器时也不能使用。 但是，你可以在使用 **OPENQUERY()** 的传递查询的内部查询中使用 **PathName()** 。  
   
-##  <a name="encryption"></a><a name="encryption"></a>密匙  
+##  <a name="encryption"></a><a name="encryption"></a> 加密  
  即使启用了透明数据加密，也不会加密 FILESTREAM 数据。  
   
-##  <a name="database-snapshots"></a><a name="DatabaseSnapshot"></a>数据库快照  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不支持 FILESTREAM 文件组的[数据库快照](../databases/database-snapshots-sql-server.md)。 如果 CREATE DATABASE ON 子句中包含 FILESTREAM 文件组，则相应语句将会失败并会引发错误。  
+##  <a name="database-snapshots"></a><a name="DatabaseSnapshot"></a> 数据库快照  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持对 FILESTREAM 文件组使用 [数据库快照](../databases/database-snapshots-sql-server.md) 功能。 如果 CREATE DATABASE ON 子句中包含 FILESTREAM 文件组，则相应语句将会失败并会引发错误。  
   
  当您使用 FILESTREAM 时，您可以创建标准（非 FILESTREAM）文件组的数据库快照。 这些数据库快照的 FILESTREAM 文件组被标记为脱机。  
   
@@ -66,7 +65,7 @@ ms.locfileid: "66010186"
  `Could not continue scan with NOLOCK due to data movement.`  
   
 ##  <a name="replication"></a><a name="Replication"></a> Replication  
- 可以将发布服务器上启用了 FILESTREAM 属性的 `varbinary(max)` 列复制到订阅服务器，复制时可以带 FILESTREAM 属性，也可以不带。 若要指定复制列的方式，请使用“项目属性 - \<项目>”**** 对话框，或使用 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 或 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 的 @schema_option 参数。 复制到不具有 FILESTREAM 属性的 `varbinary(max)` 列的数据不能超过该数据类型的 2 GB 大小限制；否则，将产生运行时错误。 建议你复制 FILESTREAM 属性，除非你将数据复制到[!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)]订阅服务器，而不考虑指定的架构选项。  
+ 可以将发布服务器上启用了 FILESTREAM 属性的 `varbinary(max)` 列复制到订阅服务器，复制时可以带 FILESTREAM 属性，也可以不带。 若要指定复制列的方式，请使用 "**项目属性- \<Article> **对话框" 或 @schema_option [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)或[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)的参数。 复制到不具有 FILESTREAM 属性的 `varbinary(max)` 列的数据不能超过该数据类型的 2 GB 大小限制；否则，将产生运行时错误。 建议你复制 FILESTREAM 属性，除非你将数据复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)] 订阅服务器，而不考虑指定的架构选项。  
   
 > [!NOTE]  
 >  从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 复制到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 订阅服务器的大数据值最多不得超过 256 MB。 有关详细信息，请参阅 [最大容量规范](https://go.microsoft.com/fwlink/?LinkId=103810)。  
@@ -100,26 +99,26 @@ ms.locfileid: "66010186"
 ##  <a name="log-shipping"></a><a name="LogShipping"></a> 日志传送  
  [日志传送](../../database-engine/log-shipping/about-log-shipping-sql-server.md) 支持 FILESTREAM。 主服务器和辅助服务器运行的都必须是 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或更高版本，并且必须启用 FILESTREAM。  
   
-##  <a name="database-mirroring"></a><a name="DatabaseMirroring"></a>数据库镜像  
+##  <a name="database-mirroring"></a><a name="DatabaseMirroring"></a> 数据库镜像  
  数据库镜像不支持 FILESTREAM。 不能在主体服务器上创建 FILESTREAM 文件组。 不能为包含 FILESTREAM 文件组的数据库配置数据库镜像。  
   
-##  <a name="full-text-indexing"></a><a name="FullText"></a>全文索引  
- [全文索引](../indexes/indexes.md)处理 FILESTREAM 列的方式与处理`varbinary(max)`列的方式相同。 FILESTREAM 表必须有一列包含每个 FILESTREAM BLOB 的文件扩展名。 有关详细信息，请参阅[使用全文搜索查询](../search/query-with-full-text-search.md)、[配置和管理搜索筛选器](../search/configure-and-manage-filters-for-search.md)和[sys.fulltext_document_types (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql)。  
+##  <a name="full-text-indexing"></a><a name="FullText"></a> 全文索引  
+ [全文索引](../indexes/indexes.md)处理 FILESTREAM 列的方式与处理列的方式相同 `varbinary(max)` 。 FILESTREAM 表必须有一列包含每个 FILESTREAM BLOB 的文件扩展名。 有关详细信息，请参阅[使用全文搜索查询](../search/query-with-full-text-search.md)、[配置和管理搜索筛选器](../search/configure-and-manage-filters-for-search.md)和[sys.fulltext_document_types (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql)。  
   
  全文引擎会对 FILESTREAM BLOB 的内容进行索引。 对诸如图像之类的文件进行索引可能没有用。 更新 FILESTREAM BLOB 时，会重新对其进行索引。  
   
-##  <a name="failover-clustering"></a><a name="FailoverClustering"></a>故障转移群集  
+##  <a name="failover-clustering"></a><a name="FailoverClustering"></a> 故障转移群集  
  对于故障转移群集，必须将 FILESTREAM 文件组放在共享磁盘上。 必须在群集中将承载 FILESTREAM 实例的每个节点上启用 FILESTREAM。 有关详细信息，请参阅 [在故障转移群集中设置 FILESTREAM](set-up-filestream-on-a-failover-cluster.md)。  
   
-##  <a name="sql-server-express"></a><a name="SQLServerExpress"></a>SQL Server Express  
+##  <a name="sql-server-express"></a><a name="SQLServerExpress"></a> SQL Server Express  
  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 支持 FILESTREAM。 10 GB 的数据库大小限制不包括 FILESTREAM 数据容器。  
   
-##  <a name="contained-databases"></a><a name="contained"></a>包含的数据库  
+##  <a name="contained-databases"></a><a name="contained"></a> 包含的数据库  
  FILESTREAM 功能需要数据库以外的一些配置。 因此，使用 FILESTREAM 或 FileTable 的数据库并未被完全包含。  
   
  如果您想要使用包含的数据库的某些功能（例如包含的用户），则可以将数据库包含设置为 PARTIAL。 但在此情况下，您必须知道某些数据库设置未包含在数据库中，并且在数据库移动时不自动移动。  
   
 ## <a name="see-also"></a>另请参阅  
- [二进制大型对象 &#40;Blob&#41; 数据 &#40;SQL Server&#41;](binary-large-object-blob-data-sql-server.md)  
+ [二进制大型对象 (Blob) 数据 (SQL Server)](binary-large-object-blob-data-sql-server.md)  
   
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d28ec166f8954b874f98b7f9f441280ab9064f1f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fd06ad0921dbb113a89af77e46733a28c2226c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62826753"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061407"
 ---
 # <a name="supportalias-property-clientnetworkprotocol-class"></a>SupportAlias 属性（ClientNetworkProtocol Class）
   获取一个布尔属性，该属性指定由[SetOrderValue 方法（ClientNetworkProtocol 类）](clientnetworkprotocol-class.md)指定的当前网络协议是否支持别名。  

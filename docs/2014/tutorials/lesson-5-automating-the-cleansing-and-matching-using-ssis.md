@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f068d4db-2d56-41b1-bed2-0cffa3ca411d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ec6f347cdbc6d14e8f621466a1708b8ee9fe7d36
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90f967b2446e11a27f5a87803bb71d6e1ec53557
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489755"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039842"
 ---
 # <a name="lesson-5-automating-the-cleansing-and-matching-using-ssis"></a>第 5 课：使用 SSIS 自动执行清理和匹配
   在第1课中，您构建了供应商知识库，并使用它来清理第2课中的数据，并使用工具**DQS 客户端**在第3课中匹配数据。 在实际方案中，可能需要从 DQS 不支持的源中提取数据，或者需要自动执行清理和匹配过程，而无需使用**DQS 客户端**工具。 SQL Server Integration Services （SSIS）具有可用于集成来自各种异类源的数据和**[Dqs 清理转换](https://msdn.microsoft.com/library/ee677619.aspx)** 组件的组件，以调用 dqs 公开的清理功能。 当前，DQS 不会公开用于 SSIS 的匹配功能，但您可以使用**[模糊分组转换](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** 来标识数据中的重复项。  

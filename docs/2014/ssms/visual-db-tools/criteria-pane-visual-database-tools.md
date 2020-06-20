@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1bbfd7e02b11a9f2a5cc0213c31b453eaa28e446
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51d9f20436bb7009c8439d1b53b9757e044002a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270594"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061827"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>“条件”窗格 (Visual Database Tools)
   “条件”窗格用于指定查询选项（例如要显示哪些数据列、如何对结果进行排序以及选择哪些行等），可以通过将选择输入到一个类似电子表格的网格中来进行指定。 在“条件”窗格中，可以指定：  

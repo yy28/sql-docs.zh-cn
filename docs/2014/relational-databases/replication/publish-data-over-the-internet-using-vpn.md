@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9ffb6546-9973-4574-aaa0-8fe0017e3601
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f090e48f97f4756f6c87b7cac2a6db64105ef265
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a477e70031053a9563c2f3ed3740091d632febe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021064"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038237"
 ---
 # <a name="publish-data-over-the-internet-using-vpn"></a>使用 VPN 通过 Internet 发布数据
   通过使用虚拟专用网络 (VPN) 技术，用户可以在家中、分支机构、远程客户端和其他公司通过 Internet 连接到企业网络进行工作，同时保持通信安全。 用户可以像在局域网 (LAN) 上那样使用 Windows 身份验证。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制的所有类型都可以通过 VPN 复制数据，但如果使用的是合并复制，则应该考虑使用 Web 同步，因为 Web 同步不需要使用 VPN。 有关详细信息，请参阅 [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)。  

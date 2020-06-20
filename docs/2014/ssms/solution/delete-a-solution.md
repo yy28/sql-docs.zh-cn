@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 750bb2ac-4f69-4c8d-9db5-3f33837b6dff
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9a16d7565bb36eb7895db94da088927be7595f5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28bbed5e92bf6301ad50486c5679e468c626e572
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63043942"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062017"
 ---
 # <a name="delete-a-solution"></a>删除解决方案
   如果删除解决方案，便会永久清除物理存储区中的文件以及该解决方案中的文件项。  

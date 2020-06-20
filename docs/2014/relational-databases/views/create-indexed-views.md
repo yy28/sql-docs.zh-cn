@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d33ff37caca04f46edd6ad92d0686713829bb270
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196436"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061522"
 ---
 # <a name="create-indexed-views"></a>创建索引视图
   本主题将说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建索引视图。 对视图创建的第一个索引必须是唯一聚集索引。 创建唯一聚集索引后，可以创建更多非聚集索引。 为视图创建唯一聚集索引可以提高查询性能，因为视图在数据库中的存储方式与具有聚集索引的表的存储方式相同。 查询优化器可使用索引视图加快执行查询的速度。 要使优化器考虑将该视图作为替换，并不需要在查询中引用该视图。  
@@ -55,7 +54,7 @@ ms.locfileid: "68196436"
   
 -   查询优化器使用该索引视图生成查询计划。  
   
-    |SET 选项|所需的值|默认服务器值|默认<br /><br /> OLE DB 和 ODBC 值|默认<br /><br /> DB-Library 值|  
+    |SET 选项|必需的值|默认服务器值|默认<br /><br /> OLE DB 和 ODBC 值|默认<br /><br /> DB-Library 值|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -98,7 +97,7 @@ ms.locfileid: "68196436"
   
 -   在视图定义中使用的 CLR 函数和 CLR 用户定义类型方法必须具有下表所示的属性设置。  
   
-    |属性|注意|  
+    |properties|注意|  
     |--------------|----------|  
     |DETERMINISTIC = TRUE|必须显式声明为 Microsoft .NET Framework 方法的属性。|  
     |PRECISE = TRUE|必须显式声明为 .NET Framework 方法的属性。|  
@@ -116,7 +115,7 @@ ms.locfileid: "68196436"
     |COUNT|ROWSET 函数（OPENDATASOURCE、OPENQUERY、OPENROWSET 和 OPENXML）|OUTER 联接（LEFT、RIGHT 或 FULL）|  
     |派生表（通过在 FROM 子句中指定 SELECT 语句来定义）|自联接|通过使用 SELECT \* 或 SELECT *table_name*来指定列。*|  
     |DISTINCT|STDEV、STDEVP、VAR、VARP 或 AVG|公用表表达式 (CTE)|  
-    |`float`\*、 `text`、 `ntext`、 `image` `XML`、或`filestream`列|子查询|包括排名或聚合开窗函数的 OVER 子句|  
+    |`float`\*、 `text` 、 `ntext` 、 `image` 、 `XML` 或 `filestream` 列|子查询|包括排名或聚合开窗函数的 OVER 子句|  
     |全文谓词（CONTAIN、FREETEXT）|引用可为 Null 的表达式的 SUM 函数|ORDER BY|  
     |CLR 用户定义聚合函数|TOP|CUBE、ROLLUP 或 GROUPING SETS 运算符|  
     |MIN、MAX|UNION、EXCEPT 或 INTERSECT 运算符|TABLESAMPLE|  
@@ -124,7 +123,7 @@ ms.locfileid: "68196436"
     |稀疏列集|内联或多语句表值函数|OFFSET|  
     |CHECKSUM_AGG|||  
   
-     \*索引视图可以包含`float`列;但聚集索引键中不能包含此类列。  
+     \*索引视图可以包含 `float` 列，但聚集索引键中不能包含此类列。  
   
 -   如果存在 GROUP BY，则 VIEW 定义必须包含 COUNT_BIG(*)，并且不得包含 HAVING。 这些 GROUP BY 限制仅适用于索引视图定义。 即使一个索引视图不满足这些 GROUP BY 限制，查询也可以在其执行计划中使用该视图。  
   

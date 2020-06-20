@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7d604ab1-6dd6-4f8e-a79c-eba99ab106fd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3cae39c440c86348763b20ae04c70b3ce2ecc181
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1daea321a8d81b3476b6abb7eb328f5d59c9df41
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62667342"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068961"
 ---
 # <a name="copy-a-policy-based-management-facet-state-to-an-xml-file"></a>将基于策略的管理方面状态复制到 XML 文件中
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中将基于策略的管理方面的状态复制到 XML 文件中。  

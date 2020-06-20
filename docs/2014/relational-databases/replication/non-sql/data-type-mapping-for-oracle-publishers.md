@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 463dd08cfa9434396a1afea1e4851549f16496cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b143b0a96045bd9d442beb225047d674c569c92
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022646"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005368"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 发布服务器的数据类型映射
   Oracle 数据类型并非始终与 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型完全匹配。 如果可能，在发布 Oracle 表时会自动选择匹配的数据类型。 在单一数据类型映射不清晰的情况下，提供备用的数据类型映射。 有关如何选择备用映射的信息，请参阅本主题后面的“指定备用数据类型映射”部分。  

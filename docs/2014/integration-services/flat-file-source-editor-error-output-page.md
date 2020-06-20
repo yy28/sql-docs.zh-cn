@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c50500e7-0c74-42a0-865f-301f03feffab
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2008ec0db5612b7ceb95fe9a8bbf970e19a31a91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6df7faa3dbb88ba8df836b59c47cad6a391e0d8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058629"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966407"
 ---
 # <a name="flat-file-source-editor-error-output-page"></a>平面文件源编辑器（“错误输出”页）
   可以使用“平面文件源编辑器”对话框的“错误输出”页选择错误处理选项，以及设置错误输出列的属性。********  

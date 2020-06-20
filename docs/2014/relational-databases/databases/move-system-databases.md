@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 748d781d6bbefb0dc710427a34ebd71ec7037fdb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871534"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965832"
 ---
 # <a name="move-system-databases"></a>移动系统数据库
   本主题说明如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中移动系统数据库。 移动系统数据库在下列情况下可能很有用：  
@@ -194,7 +193,7 @@ ms.locfileid: "62871534"
     ```  
   
 ##  <a name="moving-the-resource-database"></a><a name="Resource"></a>移动资源数据库  
- 资源数据库的位置是\<*驱动器*>： \Program Files\Microsoft SQL Server\MSSQL\<version>。\< *instance_name*> \mssql\binn\\instance_name。 无法移动该数据库。  
+ 资源数据库的位置为 \<*drive*> ： \Program FILES\MICROSOFT SQL Server\MSSQL \<version> 。 \<*instance_name*>\MSSQL\Binn \\ 。 无法移动该数据库。  
   
 ##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a> 后续操作：移动所有系统数据库后  
  如果已将所有系统数据库都移到新的驱动器/卷或移到使用不同驱动器盘符的另一个服务器，请进行下列更新。  
@@ -209,7 +208,7 @@ ms.locfileid: "62871534"
   
 2.  右键单击 **“错误日志”** ，然后单击 **“配置”**。  
   
-3.  在 **“配置 SQL Server 代理错误日志”** 对话框中，指定 SQLAGENT.OUT 文件的新位置。 默认位置为 C:\Program Files\Microsoft SQL Server\MSSQL12. <instance_name> \MSSQL\Log\\。  
+3.  在 **“配置 SQL Server 代理错误日志”** 对话框中，指定 SQLAGENT.OUT 文件的新位置。 默认位置为 C:\Program Files\Microsoft SQL Server\MSSQL12. <instance_name> \MSSQL\Log \\ 。  
   
 #### <a name="change-the-database-default-location"></a>更改数据库默认位置  
   
@@ -264,11 +263,11 @@ ms.locfileid: "62871534"
 5.  将 `tempdb.mdf` 和 `templog.ldf` 文件从其原始位置删除。  
   
 ## <a name="see-also"></a>另请参阅  
- [资源数据库](resource-database.md)   
+ [Resource 数据库](resource-database.md)   
  [tempdb 数据库](tempdb-database.md)   
  [master 数据库](master-database.md)   
  [msdb 数据库](msdb-database.md)   
- [模型数据库](model-database.md)   
+ [model 数据库](model-database.md)   
  [移动用户数据库](move-user-databases.md)   
  [移动数据库文件](move-database-files.md)   
  [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   

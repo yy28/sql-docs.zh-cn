@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 4ef45498efdd86f5abe885108e4b140ba930cc58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e15832efb29258c451036397f8224e71990b8faa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78172218"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062379"
 ---
 # <a name="uninstall-reporting-services"></a>卸载 Reporting Services
   卸载 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不会删除您已创建的内容或已修改的配置。 但是，如果存在在卸载完成后您需要的内容，建议您首先生成内容的副本，再开始卸载过程。
@@ -40,7 +39,7 @@ ms.locfileid: "78172218"
 -   **报表服务器警报数据库：** ReportingService_7f616e2d253040e8ab5653b3c09a065e_Alerting
 
 ### <a name="uninstall-the-add-in-for-sharepoint-products"></a>卸载用于 SharePoint 产品的外接程序。
- 从计算机卸载外接程序时，可以选择仅卸载这些文件或同时从场中删除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 有关卸载用于 SharePoint 产品[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的外接程序的信息，请参阅[安装或卸载用于 Sharepoint 的 Reporting Services 外接程序 &#40;SharePoint 2010 和 sharepoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。
+ 从计算机卸载外接程序时，可以选择仅卸载这些文件或同时从场中删除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 有关卸载 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 用于 sharepoint 产品的外接程序的信息，请参阅[安装或卸载用于 sharepoint 的 Reporting Services 外接程序 &#40;sharepoint 2010 和 sharepoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。
 
 ## <a name="uninstall-native-mode"></a>卸载本机模式
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在您卸载  本机模式时，在安装后创建  或修改的所有内容都将在原地保留。 例如，数据库文件、日志文件、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置文件以及一些内容项（如报表和数据源文件）。

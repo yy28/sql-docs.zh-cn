@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 5435b9056d98a5b2dc0835bfcd0e60865c1686b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9a66d28fea8289719d3efb2351409e0f14379ec9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957261"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037818"
 ---
 # <a name="back-up-a-database-master-key"></a>备份数据库主密钥
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中备份数据库主密钥。 数据库主密钥用于加密数据库里面的其他密钥和证书。 如果主密钥被删除或损坏，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可能无法解密数据库里面的其他密钥，并且使用这些密钥加密的数据就如同丢失一样。 出于这个原因，您应备份数据库主密钥，并将备份存储在另外一个安全的位置。  

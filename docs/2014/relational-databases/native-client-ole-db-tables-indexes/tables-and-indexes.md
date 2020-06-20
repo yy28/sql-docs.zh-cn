@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4217c6d8-8cd2-43dc-b36f-3cfd8a58fabc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 72cd2aa4afab66a91351013f9c9141f2d94bff79
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: abc7c314e433eb9f107bd191738d951706f1b50d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704505"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017800"
 ---
 # <a name="tables-and-indexes"></a>表和索引
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序公开**IIndexDefinition**和**ITableDefinition**接口，以便使用者可以创建、更改和删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表和索引。 表和索引定义是否有效取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本。  

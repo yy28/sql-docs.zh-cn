@@ -33,13 +33,12 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b87c66eab08243a6339f1eb2bc1912e469f2b80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5087a925ac163281f4326a5f952c11ce2953c6dd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929907"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965940"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>当数据库在其他服务器实例上可用时管理元数据 (SQL Server)
   本主题与下列情况有关：  
@@ -124,7 +123,7 @@ ms.locfileid: "76929907"
 ##  <a name="database-ownership"></a><a name="database_ownership"></a>数据库所有权  
  在其他计算机上还原数据库时，启动还原操作的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录用户或 Windows 用户将自动成为新数据库的所有者。 还原数据库时，系统管理员或新数据库所有者可以更改数据库所有权。  
   
-##  <a name="distributed-queries-and-linked-servers"></a><a name="distributed_queries_and_linked_servers"></a>分布式查询和链接服务器  
+##  <a name="distributed-queries-and-linked-servers"></a><a name="distributed_queries_and_linked_servers"></a> 分布式查询和链接服务器  
  OLE DB 应用程序支持分布式查询和链接服务器。 分布式查询访问相同或不同计算机上多个异类数据源中的数据。 链接服务器配置使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以对远程服务器上的 OLE DB 数据源执行命令。 有关这些功能的详细信息，请参阅[链接服务器（数据库引擎）](../linked-servers/linked-servers-database-engine.md)。  
   
  [[返回页首]](#information_entities_and_objects)  
@@ -355,7 +354,7 @@ ms.locfileid: "76929907"
 ## <a name="see-also"></a>另请参阅  
  [包含的数据库](contained-databases.md)   
  [将数据库复制到其他服务器](copy-databases-to-other-servers.md)   
- [数据库分离和附加 &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
+ [数据库分离和附加 (SQL Server)](database-detach-and-attach-sql-server.md)   
  [故障转移到日志传送辅助 &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)   
  [数据库镜像会话期间的角色切换 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [设置加密的镜像数据库](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   

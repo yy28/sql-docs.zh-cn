@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa799404777f8f0ef0a8a07a81c8c7961c636004
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6f072f8d748b24489ab68f971abd4872edffdf6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059033"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966787"
 ---
 # <a name="execute-process-task-editor-process-page"></a>执行进程任务编辑器（“进程”页）
   可以使用 **“执行进程任务编辑器”** 对话框的 **“进程”** 页配置执行进程的选项。 这些选项包括要运行的可执行文件、该可执行文件的位置、命令提示符参数以及提供输入及捕获输出的变量。  
@@ -40,15 +39,15 @@ ms.locfileid: "66059033"
  键入包含可执行文件的文件夹的路径，或单击浏览 (…) 按钮定位到该文件夹****。  
   
  **StandardInputVariable**  
- 选择一个变量来提供进程的输入，或者单击 " \<**新建变量 ...** "> 创建新的变量：  
+ 选择一个变量来提供进程的输入，或单击 \<**New variable...**> 以创建新的变量：  
   
  **相关主题：**  [添加变量](../../2014/integration-services/add-variable.md)  
   
  **StandardOutputVariable**  
- 选择要捕获进程输出的变量，或单击 " \<**新建变量 ...** "> 创建新变量。  
+ 选择要捕获进程输出的变量，或单击 \<**New variable...**> 创建新变量。  
   
  **StandardErrorVariable**  
- 选择要捕获处理器的错误输出的变量，或单击 " \<**新建变量 ...** "> 创建新变量。  
+ 选择要捕获处理器的错误输出的变量，或单击 \<**New variable...**> 创建新变量。  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  指示在进程退出代码与 **SuccessValue**中指定的值不同时任务是否失败。  

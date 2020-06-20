@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: f347cc92-950f-4021-b7af-393640dfe821
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 29d45e06dcd3e67af3abbc6b356d44877e40f46b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 646204e2c40c09ac0fac9259f5acc43c7f422894
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484706"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006647"
 ---
 # <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>任务 2：将 Excel 列映射到 DQS 域
     
 1.  在“映射” **** 页中，为“数据源” **** 选择“Excel 文件” ****。  
   
-2.  单击 "**浏览**"，选择 "**供应商 .xlsx**"，并单击 "**打开**"。  
+2.  单击 "**浏览**"，选择**Suppliers.xlsx**，并单击 "**打开**"。  
   
 3.  选择**工作表**的**IncomingSuppliers $** 。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "65484706"
     |ContactEmailAddress|联系人电子邮件|  
     |Address Line|Address Line|  
     |城市|城市|  
-    |State|State|  
+    |状态|状态|  
     |国家/地区（单击 " **+" （添加列映射）** 工具栏以添加行）|国家/地区|  
     |Zip Code|Zip|  
   
@@ -48,7 +47,7 @@ ms.locfileid: "65484706"
   
 6.  单击 "**下一步**" 切换到 "**清理**" 页。  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
  [任务 3：对照 Suppliers 知识库清理数据](../../2014/tutorials/task-3-cleansing-data-against-the-suppliers-knowledge-base.md)  
   
   

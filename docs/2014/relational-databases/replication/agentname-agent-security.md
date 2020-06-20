@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: d34c7ef8-cf77-4ffd-887f-3c4214dfd71e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d77f8d6acb449bc9aa2298dbcba9782fd7bc07e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75d4cccdb867716cf16490b4662edec4d5856fe6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62722049"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016775"
 ---
 # <a name="ltagentnamegt-agent-security"></a>&lt;代理名称&gt; 代理安全性
-  使用“**代理名称> 代理安全性”页，你可以指定用来运行分发代理（对于事务复制和快照复制）或合并代理（对于合并复制）的帐户，并与复制拓扑中的计算机建立连接。\<** 有关代理要求的权限及复制安全的最佳做法的信息，请参阅[复制代理安全模型](security/replication-agent-security-model.md)和[复制安全最佳做法](security/replication-security-best-practices.md)。  
+  使用 " ** \<AgentName> 代理安全性**" 页，您可以指定分发代理（用于事务复制和快照复制）或合并代理（用于合并复制）的帐户，并与复制拓扑中的计算机建立连接。 有关代理要求的权限及复制安全的最佳做法的信息，请参阅[复制代理安全模型](security/replication-agent-security-model.md)和[复制安全最佳做法](security/replication-security-best-practices.md)。  
   
 ## <a name="options"></a>选项  
  单击每个订阅服务器的行中的属性按钮 ( **...** )，可以访问 **“分发代理安全性”** 或 **“合并代理安全性”** 对话框。 对于代理使用的帐户，有关其所需权限的详细信息，请在启动的对话框中单击 **“帮助”** 。  
@@ -33,23 +32,23 @@ ms.locfileid: "62722049"
  **与分发服务器的连接**  
  为事务复制和快照复制显示。 连接到分发服务器时所处的上下文。 本地连接始终使用运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的上下文进行建立：  
   
--   对于推送订阅，本地连接是与分发服务器的连接。所以，对于推送订阅，此字段将始终显示：“模拟‘**域>\<<登录名\\’”或“模拟‘\>计算机>** <登录名 **’”。\<\\\>**  
+-   对于推送订阅，本地连接是与分发服务器的连接，因此此字段将始终显示：**模拟 " \<Domain> \\<登录 \> "** 或模拟推送订阅的 **" \<Computer> \\<登录名 \> "** 。  
   
--   对于请求订阅，还可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录的上下文建立连接。 此字段显示以下内容之一：“使用登录名‘**登录名>’”、“模拟‘\<域>** <登录名 **’”或“模拟‘\<计算机>\\<登录名\>’”。** **\<\\\>** [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议使用 Windows 帐户的上下文建立所有连接。  
+-   对于请求订阅，还可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录的上下文建立连接。 此字段显示以下内容之一： "**使用登录名 ' \<Login> "**、 **"模拟 ' \<Domain> \\<登录名 \> "** 或 **"模拟 ' \<Computer> \\<登录名 \> '**"。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议使用 Windows 帐户的上下文建立所有连接。  
   
  **与发布服务器和分发服务器的连接**  
  为合并复制显示。 与发布服务器和分发服务器建立连接时所处的上下文。 始终使用运行代理的 Windows 帐户的上下文建立本地连接：  
   
--   对于推送订阅，本地连接是与发布服务器和分发服务器的连接。所以，对于推送订阅，此字段将始终显示：“模拟‘**域>\<<登录名\\’”或“模拟‘\>计算机>** <登录名 **’”。\<\\\>**  
+-   对于推送订阅，本地连接是与发布服务器和分发服务器的连接，因此此字段将始终显示：**模拟 " \<Domain> \\<登录名 \> "** 或模拟推送订阅的 **" \<Computer> \\<登录名 \> "** 。  
   
--   对于请求订阅，还可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录的上下文建立连接。 此字段显示以下内容之一：“使用登录名‘**登录名>’”、“模拟‘\<域>** <登录名 **’”或“模拟‘\<计算机>\\<登录名\>’”。** **\<\\\>** [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议使用 Windows 帐户的上下文建立所有连接。  
+-   对于请求订阅，还可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录的上下文建立连接。 此字段显示以下内容之一： "**使用登录名 ' \<Login> "**、 **"模拟 ' \<Domain> \\<登录名 \> "** 或 **"模拟 ' \<Computer> \\<登录名 \> '**"。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议使用 Windows 帐户的上下文建立所有连接。  
   
  **与订阅服务器的连接**  
  与订阅服务器建立连接时所处的上下文。 始终使用运行代理的 Windows 帐户的上下文建立本地连接：  
   
--   对于请求订阅，本地连接是与订阅服务器的连接。所以，对于推送订阅，此字段将始终显示：“模拟‘**域>\<<登录名\\’”或“模拟‘\>计算机>** <登录名 **’”。\<\\\>**  
+-   对于请求订阅，本地连接是与订阅服务器的连接，因此此字段将始终显示：**模拟 " \<Domain> \\<登录名 \> "** 或模拟推送订阅的 **" \<Computer> \\<登录名 \> "** 。  
   
--   对于推送订阅，还可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录的上下文建立连接。 此字段显示以下内容之一：“使用登录名‘**登录名>’”、“模拟‘\<域>** <登录名 **’”或“模拟‘\<计算机>\\<登录名\>’”。** **\<\\\>** [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议使用 Windows 帐户的上下文建立所有连接。  
+-   对于推送订阅，还可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录的上下文建立连接。 此字段显示以下内容之一： "**使用登录名 ' \<Login> "**、 **"模拟 ' \<Domain> \\<登录名 \> "** 或 **"模拟 ' \<Computer> \\<登录名 \> '**"。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议使用 Windows 帐户的上下文建立所有连接。  
   
 ## <a name="see-also"></a>另请参阅  
  [查看和修改请求订阅属性](view-and-modify-pull-subscription-properties.md)   

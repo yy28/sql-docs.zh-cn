@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 523891f2f0005c7f6e6752e5d16d3680f680fdfa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f72f15886e7105dde8d0e15dd0598a7474ed7e39
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882338"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038132"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>向现有发布添加项目和从中删除项目
   在创建发布后，可以添加和删除项目。 可以随时添加项目，但删除项目所需的操作取决于复制的类型和删除项目的时间。  
@@ -33,7 +32,7 @@ ms.locfileid: "73882338"
  添加项目涉及的操作有：将项目添加到发布、为发布创建新的快照、同步订阅以应用新项目的架构和数据。  
   
 > [!NOTE]
->  如果向合并发布中添加项目，而现有项目依赖于新项目，必须使用[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)和[sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)的** \@processing_order**参数指定两个项目的处理顺序。 请考虑以下情况：您要发布一个表，但不发布该表引用的函数。 如果不发布该函数，则无法在订阅服务器中创建相应的表。 将此函数添加到发布时：为 sp_addmergearticle**** 的 \@processing_order**** 参数指定值 1****；为 sp_changemergearticle**** 的 \@processing_order**** 参数指定值 2****，为参数 \@article**** 指定表名称。 此处理顺序可确保在创建依赖于某函数的表之前在订阅服务器上创建该函数。 每个项目可以使用不同的数字，只要函数的数字小于表的数字即可。  
+>  如果向合并发布中添加项目，而现有项目依赖于新项目，必须使用[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)和[sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)的** \@ processing_order**参数指定两个项目的处理顺序。 请考虑以下情况：您要发布一个表，但不发布该表引用的函数。 如果不发布该函数，则无法在订阅服务器中创建相应的表。 将此函数添加到发布时：为 sp_addmergearticle**** 的 \@processing_order**** 参数指定值 1****；为 sp_changemergearticle**** 的 \@processing_order**** 参数指定值 2****，为参数 \@article**** 指定表名称。 此处理顺序可确保在创建依赖于某函数的表之前在订阅服务器上创建该函数。 每个项目可以使用不同的数字，只要函数的数字小于表的数字即可。  
   
 1.  用以下方法之一添加一个或多个项目：  
   
@@ -56,7 +55,7 @@ ms.locfileid: "73882338"
 ## <a name="dropping-articles"></a>删除项目  
  可以随时从发布中删除项目，但必须考虑以下行为：  
   
--   从发布中删除项目并不会将对象从发布数据库中删除，也不会将相应对象从订阅数据库中删除。 必要时，使用 DROP \<Object> 删除这些对象。 在删除通过外键约束与其他已发布项目相关的项目时，建议手动或使用按需脚本执行在订阅服务器上删除表：指定包含相应 DROP \<Object> 语句的脚本。 有关详细信息，请参阅[在同步期间执行脚本（复制 Transact-SQL 编程）](../execute-scripts-during-synchronization-replication-transact-sql-programming.md)。  
+-   从发布中删除项目并不会将对象从发布数据库中删除，也不会将相应对象从订阅数据库中删除。 \<Object>如有必要，请使用 DROP 删除这些对象。 当您通过 foreign key 约束删除与其他已发布项目相关的项目时，我们建议您手动删除订阅服务器上的表，或使用按需脚本执行：指定包含相应 DROP 语句的脚本 \<Object> 。 有关详细信息，请参阅[在同步期间执行脚本（复制 Transact-SQL 编程）](../execute-scripts-during-synchronization-replication-transact-sql-programming.md)。  
   
 -   对于兼容级别为 90RTM 或更高的合并发布，可以随时删除项目，但需要创建一个新的快照。 此外：  
   

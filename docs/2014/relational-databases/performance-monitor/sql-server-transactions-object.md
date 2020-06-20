@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c7dffaac161a61496c296ec99ec1f9ad2e1951a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 921f8cde043bab21a0ef2d2a54440b07a826a52c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63183002"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038655"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server Transactions 对象
   Microsoft **中的** Transactions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象提供的计数器用于监视 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中处于活动状态的事务的数量，以及这些事务对资源（如 **tempdb**中的快照隔离行版本存储区）的影响。 事务是工作的逻辑单位，是一组要么必须全部成功要么必须全部从数据库中清除（以便保持数据的逻辑完整性）的操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中，对数据的所有修改都在事务中进行。  

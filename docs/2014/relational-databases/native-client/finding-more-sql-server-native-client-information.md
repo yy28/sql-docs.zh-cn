@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5eadf89cb6516dcc437b727843cb861b7c04a9c1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 667189cc614f04dca0b5a5043bfbac9512779d94
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707146"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038883"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>查找更多 SQL Server Native Client 信息
   有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 和其他类型的数据访问编程的详细信息，请参阅以下联机资源：  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: dbb94fdf-c85b-477b-8e84-f830d259bade
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a23d307cc33e5b8e59111819b245bc9df1df67df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6bd69935dbfac020c4c75bb391e7932009fd4197
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63063110"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054562"
 ---
 # <a name="deleting-database-objects"></a>删除数据库对象
   若要删除在本教程中创建的所有对象，您只需删除数据库即可。 但是，在本主题中，您将完成下列步骤执行与教程中每项操作相反的操作。  
@@ -109,7 +108,7 @@ ms.locfileid: "63063110"
  [DROP PROCEDURE &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)   
  [DROP VIEW &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-view-transact-sql)   
  [DELETE (Transact-SQL)](/sql/t-sql/statements/delete-transact-sql)   
- [DROP TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-table-transact-sql)   
+ [DROP TABLE (Transact-SQL)](/sql/t-sql/statements/drop-table-transact-sql)   
  [DROP DATABASE (Transact SQL)](/sql/t-sql/statements/drop-database-audit-specification-transact-sql)  
   
   

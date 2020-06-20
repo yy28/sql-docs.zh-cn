@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa6898db-f54b-4e98-84e4-ac64e48c3561
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 459d0160e9977ed58ebafe5feb9e58eaa5939f72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11d5ab92a0f974e58b48734fc739ba63660a4e5a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65488388"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006663"
 ---
 # <a name="task-2-adding-domain-values-manually"></a>任务 2：手动添加域值
   在此任务中，您将手动为**Country**域添加值。 有关此页上的字段的详细信息，请参阅[更改域值](https://msdn.microsoft.com/library/hh510408.aspx)主题。  
@@ -32,7 +31,7 @@ ms.locfileid: "65488388"
   
      ![用于域值的美国](../../2014/tutorials/media/et-addingdomainvaluesmanually-02.jpg "用于域值的美国")  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
  [任务 3：从 Excel 文件导入域值](../../2014/tutorials/task-3-importing-domain-values-from-an-excel-file.md)  
   
   

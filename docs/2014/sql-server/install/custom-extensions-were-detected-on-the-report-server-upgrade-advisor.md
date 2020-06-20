@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f985f41104dd194d851760c3d1c3e5479a65b7e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2149e0434c13ccc9e284385999cf94c98fb937fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952587"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059376"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>在报表服务器上检测到自定义扩展插件（升级顾问）
   升级顾问在配置文件中检测到自定义扩展插件设置，这说明您的安装包括一个或多个用于进行数据处理、传递、呈现、安全或身份验证的自定义扩展插件。 升级操作将移动被升级的报表服务器上的扩展插件配置设置。 但是，如果在现有报表服务器安装文件夹中安装了自定义扩展插件，则这些自定义扩展插件的程序集文件不会在升级过程期间移动到新安装文件夹。 在升级完成之后，必须将程序集文件移动到新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装文件夹。  
@@ -71,7 +70,7 @@ ms.locfileid: "71952587"
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>自定义数据处理或传递扩展插件的升级后步骤  
   
-1.  将扩展插件文件移动到报表服务器的新程序文件夹。 默认情况下，Report Server 程序文件夹位于 \Program Files\Microsoft SQL Server \ MSRS10_50 中。\< *instance_name*> \report 服务器。  
+1.  将扩展插件文件移动到报表服务器的新程序文件夹。 默认情况下，Report Server 程序文件夹位于 \Program Files\Microsoft SQL Server \ MSRS10_50 中。 \<*instance_name*>\report 服务器。  
   
  有关详细信息，请参阅 SQL Server 联机丛书中的“部署数据处理扩展插件”和“实现传递扩展插件”。  
   

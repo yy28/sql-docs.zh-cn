@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 451f4e7d-1c8e-4784-b540-df0806509bf1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4c9fb11308ae60cf061f184ade467d814d6a10fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3efdb863b0a067d3d52405c5caa5a78e85555c62
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058309"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966267"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>模糊查找转换编辑器（“引用表”选项卡）
   使用 **“模糊查找转换编辑器”** 对话框的 **“引用表”** 选项卡可以指定用于查找的源表和索引。 引用数据源必须是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库中的表。  
@@ -28,7 +27,7 @@ ms.locfileid: "66058309"
 >  模糊查找转换将创建引用表的工作副本。 下面描述的索引是通过使用特殊的表对此工作表创建的，它们不是普通的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 索引。 除非选择了 **“维护存储的索引”**，否则转换不会修改现有的源表。 在这种情况下，转换将对引用表创建一个触发器，此触发器将基于对引用表所做的更改来更新工作表和查找索引表。  
   
 > [!NOTE]  
->  模糊`Exhaustive`查找转换`MaxMemoryUsage`的和属性在 "**模糊查找转换编辑器**" 中不可用，但可以使用 "**高级编辑器**" 进行设置。 此外，只能在**高级编辑器**中指定大于 100 `MaxOutputMatchesPerInput`的值。 有关这些属性的详细信息，请参阅 [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)的“模糊查找转换”部分。  
+>  `Exhaustive`模糊查找转换的和 `MaxMemoryUsage` 属性在 "**模糊查找转换编辑器**" 中不可用，但可以使用 "**高级编辑器**" 进行设置。 此外，只能 `MaxOutputMatchesPerInput` 在**高级编辑器**中指定大于100的值。 有关这些属性的详细信息，请参阅 [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)的“模糊查找转换”部分。  
   
  若要了解有关模糊查找转换的详细信息，请参阅 [Fuzzy Lookup Transformation](data-flow/transformations/lookup-transformation.md)。  
   
