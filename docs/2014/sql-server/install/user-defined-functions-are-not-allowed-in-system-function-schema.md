@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 10813b7bc0a97f0ba8a81f3f48447142659cd596
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7242f9fda74288a2b7354ac0550ff4966e05c555
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091324"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058777"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-system_function_schema"></a>system_function_schema 中不允许使用用户定义函数
   升级顾问检测到由未记录的用户**system_function_schema**拥有的用户定义函数。 不能通过指定此用户创建用户定义的系统功能。 **System_function_schema**用户名不存在，而与此名称关联的用户 ID （UID = 4）将保留用于**sys**架构，且仅限内部使用。  
@@ -39,9 +38,9 @@ ms.locfileid: "66091324"
   
  这些更改将对用户定义系统函数具有下列影响：  
   
--   引用**system_function_schema**的数据定义语言（DDL）语句将失败。 例如，\_ `schema.fn`语句`CREATE FUNCTION system`_`function` \_ `MySystemFunction`不会成功。  
+-   引用**system_function_schema**的数据定义语言（DDL）语句将失败。 例如，语句 `CREATE FUNCTION system` _ `function` \_ `schema.fn` \_ `MySystemFunction` .。。不会成功。  
   
--   升级[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]到后， **system_function_schema**拥有的现有对象仅包含在**master**数据库的**sys**架构中。 由于无法修改系统对象，因此永远无法更改这些函数或将其从**master**数据库中删除。 另外，不能通过仅指定由单个部分组成的函数名称来从其他数据库中调用这些函数。  
+-   升级到后 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ， **system_function_schema**拥有的现有对象仅包含在**master**数据库的**sys**架构中。 由于无法修改系统对象，因此永远无法更改这些函数或将其从**master**数据库中删除。 另外，不能通过仅指定由单个部分组成的函数名称来从其他数据库中调用这些函数。  
   
 ## <a name="corrective-action"></a>纠正措施  
  在升级之前，请完成以下任务：  

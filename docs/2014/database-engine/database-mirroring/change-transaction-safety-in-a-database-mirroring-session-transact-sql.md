@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b03bb82-8589-4558-8545-9942fe008391
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a79010a4fa59eaebfc743543799a1e83cc5e687d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d8bc9d0fb639770d33507c29a6ec67f60bd0434a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754927"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934391"
 ---
 # <a name="change-transaction-safety-in-a-database-mirroring-session-transact-sql"></a>更改数据库镜像会话中的事务安全 (Transact-SQL)
   事务安全是控制会话运行模式的属性。 但是，数据库所有者可以随时更改事务安全。 默认情况下，事务安全级别的设置为 FULL（同步运行模式）。  
@@ -34,7 +33,7 @@ ms.locfileid: "62754927"
     ALTER DATABASE <database> SET PARTNER SAFETY FULL  
     ```  
   
-     其中， * \<database>* 是镜像数据库的名称。  
+     其中 *\<database>* ，是镜像数据库的名称。  
   
 ### <a name="to-turn-off-transaction-safety"></a>关闭事务安全  
   
@@ -46,7 +45,7 @@ ms.locfileid: "62754927"
     ALTER DATABASE <database> SET PARTNER SAFETY OFF  
     ```  
   
-     其中* \<，数据库>* 是镜像数据库。  
+     其中 *\<database>* ，是镜像数据库。  
   
 ## <a name="see-also"></a>另请参阅  
  [更改数据库数据库镜像 &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   

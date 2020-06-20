@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cb04deeb-0f89-4bba-b3f1-efccada16825
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c3bbeb708cdb0c2882b85d55081446b3dc12b56b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c17dd78c42427027ebbac181b4f42edff082439e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068069"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940258"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>指定定型数据（数据挖掘向导）
   可以使用 **“指定定型数据”** 页，确定要在挖掘结构中包括哪些列。 即使在所有模型中都不使用某些列，也可以选择将其包括在结构中。 例如，如果希望从挖掘模型中钻取到列，则您可以将其包括在结构中但不包括在模型中。  
@@ -33,7 +32,7 @@ ms.locfileid: "66068069"
  **表/列**  
  显示在向导上一页中选择的表和列。  
   
- **\<复选框>**  
+ **\<check box>**  
  选择挖掘结构中要包括的列。  
   
  如果数据源包括嵌套表或多个视图，请展开列列表以查看嵌套的表。  

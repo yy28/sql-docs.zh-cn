@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 373b2b9d90512293e1776d06ab5797faaf47a210
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5663ff72d643cb1488bbf2b2866e2cdd94a0f56f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797772"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960527"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>对 SQL Server 标识符进行编码和解码
   SQL Server 分隔标识符有时候包含 Windows PowerShell 路径名称中不支持的字符。 可以通过对其十六进制值进行编码来指定这些字符。  
@@ -25,7 +24,7 @@ ms.locfileid: "72797772"
 2.  **处理特殊字符：**  [对标识符进行编码](#EncodeIdent)、 [对标识符进行解码](#DecodeIdent)  
   
 ## <a name="before-you-begin"></a>开始之前  
- 对于 Windows PowerShell 路径名称中不支持的字符，可以表示或编码为 "%" 字符，后跟代表该字符的位模式的十六进制值，如 "**%** xx" 中所示。 对于 Windows PowerShell 路径中不支持的字符，始终可以使用编码来处理字符。  
+ 对于 Windows PowerShell 路径名称中不支持的字符，可以表示或编码为 "%" 字符，后跟代表该字符的位模式的十六进制值，如 "xx" 中所示 **%** 。 对于 Windows PowerShell 路径中不支持的字符，始终可以使用编码来处理字符。  
   
  **Encode-SqlName** cmdlet 将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 标识符作为输入。 它输出一个字符串，其中包含所有不受 Windows PowerShell 语言支持且已经用“%xx”编码的字符。 **Decode-SqlName** cmdlet 将经过编码的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 标识符作为输入并返回初始标识符。  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 40f354f190093c0c689e708301bed9fcba8c87c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2544c0249567e05eb3a3e3d7a297ec45fdedc8d8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176206"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967297"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>在脚本组件编辑器中配置脚本组件
   在脚本组件中编写自定义代码之前，必须选择要创建的数据流组件的类型：源、转换或目标，然后在“脚本转换编辑器”中配置组件的元数据和属性  。
@@ -49,7 +48,7 @@ ms.locfileid: "78176206"
 ### <a name="inputs-columns-page-of-the-script-transformation-editor"></a>脚本转换编辑器的“输入列”页
  对于转换组件和目标组件，将显示“脚本转换编辑器”的“输入列”页；对于源组件则不显示该页   。 在此页中，可以选择希望用于自定义脚本的可用输入列，然后指定可对这些列进行只读还是读/写访问。
 
- 在将要基于此元数据生成的代码项目中，BufferWrapper 项目项包含每个输入的一个类，并且此类包含每个所选输入列的类型化取值函数属性。 `CustomerInput`例如，如果从名为的输入中选择一个整数**CustomerID**列和一个字符串**CustomerName**列，则 BufferWrapper 项目项将包含一个`CustomerInput`派生<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>自的类，并且`CustomerInput`该类将公开一个名为**CustomerID**的整型属性和一个名为**CustomerName**的字符串属性。 使用此约定可编写能够进行类型检查的代码，如下所示：
+ 在将要基于此元数据生成的代码项目中，BufferWrapper 项目项包含每个输入的一个类，并且此类包含每个所选输入列的类型化取值函数属性。 例如，如果从名为的输入中选择一个整数**CustomerID**列和一个字符串**CustomerName**列 `CustomerInput` ，则 BufferWrapper 项目项将包含一个 `CustomerInput` 派生自的类 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> ，并且 `CustomerInput` 该类将公开一个名为**CustomerID**的整型属性和一个名为**CustomerName**的字符串属性。 使用此约定可编写能够进行类型检查的代码，如下所示：
 
 ```vb
 Dim currentCustomerID as Integer = CustomerInput.CustomerID
@@ -67,7 +66,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 
 -   用作目标时，脚本组件支持一个输入，没有输出。
 
- 在将要基于此元数据生成的代码项目中，BufferWrapper 项目项包含每个输入和输出的一个类。 例如，如果创建`CustomerOutput`一个名为的输出，BufferWrapper 项目项将包含一个`CustomerOutput`派生自<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>的类，并且`CustomerOutput`类将包含所创建的每个输出列的类型化取值函数属性。
+ 在将要基于此元数据生成的代码项目中，BufferWrapper 项目项包含每个输入和输出的一个类。 例如，如果创建一个名为的输出 `CustomerOutput` ，BufferWrapper 项目项将包含一个 `CustomerOutput` 派生自的类 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> ，并且 `CustomerOutput` 类将包含所创建的每个输出列的类型化取值函数属性。
 
  只能在“输入和输出”页中配置输出列  。 可在“输入列”页中选择转换和目标的输入列  。 在 BufferWrapper 项目项中创建的类型化取值函数属性对于输出列来说是只写的。 输入列的取值函数属性将为只读还是读/写取决于在“输入列”页中为每列所选的使用类型  。
 
@@ -82,11 +81,11 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  `SynchronousInputID` 属性仅在具有同步输出的转换中具有非零值。 如果此属性的值为零，则意味着输出是异步的。 对于同步输出，行将传递给所选一个或多个输出而不添加任何新行，此属性应包含组件的输入 `ID`。
 
 > [!NOTE]
->  当 "**脚本转换编辑器**" 创建第一个输出时，该编辑器`SynchronousInputID`会将输出的属性设置`ID`为组件的输入的。 但是，当编辑器创建后续输出时，它会将那些输出的 `SynchronousInputID` 属性设置为零。
+>  当 "**脚本转换编辑器**" 创建第一个输出时，该编辑器会将 `SynchronousInputID` 输出的属性设置为 `ID` 组件的输入的。 但是，当编辑器创建后续输出时，它会将那些输出的 `SynchronousInputID` 属性设置为零。
 > 
->  如果要创建具有同步输出的组件，则每个输出的`SynchronousInputID`属性必须设置为`ID`组件的输入的。 因此，编辑器在第一个输出之后创建的每个输出的 `SynchronousInputID` 值必须从零更改为组件的输入 `ID`。
+>  如果要创建具有同步输出的组件，则每个输出的 `SynchronousInputID` 属性必须设置为 `ID` 组件的输入的。 因此，编辑器在第一个输出之后创建的每个输出的 `SynchronousInputID` 值必须从零更改为组件的输入 `ID`。
 > 
->  如果您创建的是具有异步输出的组件，则每个输出的 `SynchronousInputID` 属性必须设置为零。 因此，第一个输出必须将其`SynchronousInputID`值从`ID`组件输入的更改为零。
+>  如果您创建的是具有异步输出的组件，则每个输出的 `SynchronousInputID` 属性必须设置为零。 因此，第一个输出必须将其 `SynchronousInputID` 值从 `ID` 组件输入的更改为零。
 
  有关将行定向到脚本组件中两个同步输出之一的示例，请参阅[使用脚本组件创建同步转换](../../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)。
 

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 11db1efb-8f5b-4284-b17c-04b4bfcef9ed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 607ca94af07916fc76ddb02d2c81bf299efc39c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fb9a0b20947892510f09790b0592bee58b350d87
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62473046"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067666"
 ---
 # <a name="post-download-instructions"></a>发布下载指令
   使用此页可以指定目标服务器的下载指令。  
@@ -26,7 +25,7 @@ ms.locfileid: "62473046"
  **指令类型**  
  指定要发布的下载指令的类型。  
   
- **描述**  
+ **说明**  
  查看下载指令的说明。  
   
  **轮询间隔**  

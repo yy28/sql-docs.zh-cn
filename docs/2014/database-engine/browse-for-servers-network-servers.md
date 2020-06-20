@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a59ffcd6-4b69-4c5c-9740-699ccb2183fb
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ffa52839c20a34574423e3b123da79f734fb69ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ba5e4e5dd6d9a6541a98e0cb30229d7335bac24
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786681"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936074"
 ---
 # <a name="browse-for-servers-network-servers"></a>查找服务器（网络服务器）
   如果要连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件但不知道 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的确切名称，请在“服务器名称”**** 框中单击“浏览更多”****，以打开“查找服务器”**** 对话框。  
@@ -34,6 +33,6 @@ ms.locfileid: "62786681"
   
 ## <a name="options"></a>选项  
  **在网络中选择要连接的 SQL Server 实例**  
- 单击树中显示的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，指定要连接的服务器。 您可以通过单击标有**+** 或**-** 符号的节点来显示或隐藏部分树视图。  
+ 单击树中显示的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，指定要连接的服务器。 您可以通过单击标有或符号的节点来显示或隐藏部分树视图 **+** **-** 。  
   
   

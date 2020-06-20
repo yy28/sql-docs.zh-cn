@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 086790cbd654a101d4bced989848d9aaac80d7ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20be558522d0f5df2aa4f5bcd0557626cff0e64c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833610"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920608"
 ---
 # <a name="multiple-files-connection-manager"></a>多文件连接管理器
   多文件连接管理器使包可以在运行时引用现有的文件和文件夹，或者创建文件和文件夹。  
@@ -57,9 +56,9 @@ ms.locfileid: "62833610"
   
  如果多文件连接管理器引用了多个文件和文件夹，那么文件和文件夹的路径应由竖线 (|) 分开。 连接管理器的 `ConnectionString` 属性的格式如下：  
   
- \<路径  路径>|\<  >  
+ \<*path*>|\<*path*>  
   
- 也可以用通配符指定多个文件或文件夹。 例如，若要引用 C 驱动器上的所有文本文件，可以将`ConnectionString`属性的值设置为 c：\\* .txt。  
+ 也可以用通配符指定多个文件或文件夹。 例如，若要引用 C 驱动器上的所有文本文件， `ConnectionString` 可以将属性的值设置为 c： \\ * .txt。  
   
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   

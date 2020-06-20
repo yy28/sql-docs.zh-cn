@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6682bdb7443ae9ee41bd1a7f77d7b5d5ae4d7359
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 17d2e52175022afd9be34c4200158bfb2ed1ec12
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702306"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013043"
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>&lt;xsd:simpleType&gt; 声明的值
   下表根据所有已知的 XSD 简单类型枚举概述了已应用的限制。  
   
- 此外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持在 **\<xsd:simpleType>** 声明中使用 NaN 值。 服务器拒绝包含 NaN 值的架构。  
+ 此外，不 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持声明中的 NaN 值 **\<xsd:simpleType>** 。 服务器拒绝包含 NaN 值的架构。  
   
 |简单类型|限制|  
 |-----------------|----------------|  

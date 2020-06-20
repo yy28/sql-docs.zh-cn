@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fe48b26960db591ce803b1f110e9293fd22d6554
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 103b5024368c5ca239856580e9b45473aabf6a92
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011517"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997648"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>为全文搜索配置和管理非索引字和非索引字表
   为了精简全文检索， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一种机制，用于去掉那些经常出现但对搜索无益的字符串。 这些去掉的字符串称为“非索引字”  。 在索引创建期间，全文引擎将忽略全文检索中的非索引字。 也就是说全文查询将不搜索非索引字。  
@@ -34,14 +33,14 @@ ms.locfileid: "66011517"
   
 |Word|位置|  
 |----------|--------------|  
-|说明|1|  
+|Instructions|1|  
 |are|2|  
 |applicable|3|  
 |to|4|  
 |these|5|  
 |Adventure|6|  
 |Works|7|  
-|Cycles|8|  
+|周期|8|  
 |模型|9|  
   
  分别在第 2、第 4 和第 5 个位置的非索引字“are”、“to”和“these”将被排除在全文检索之外。 但是会保留它们的位置信息，从而使短语中其他词的位置不受影响。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ff73923e-d245-43d8-bf24-af3bdc942e51
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4fc2701ad53cd0071be40100d168d5d5571d2958
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3983e75bdde3379fac48a74a595959af2568a3ab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059572"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951647"
 ---
 # <a name="derived-column-transformation-editor"></a>派生列转换编辑器
   可以使用 **“派生列转换编辑器”** 对话框，创建填充新列或替换列的表达式。  

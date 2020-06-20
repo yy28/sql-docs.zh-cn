@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3a0ef44b57e092c13b4046b250c99fca5eaea101
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 922ae033b30894d62d5e356b0ee3d395cf552180
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211574"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013602"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>WMI Provider for Server Events 的概念
   利用 WMI Provider for Server Events，可以使用 Windows Management Instrumentation (WMI) 监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的事件。  

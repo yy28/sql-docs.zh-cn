@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 28a76c12-e997-48bb-bb0e-9624237a188e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3c715711953f8913630a96aae7697adb00bfc0e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac9633cdde5aa42f360249861abf711c1e81c8ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62867160"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053427"
 ---
 # <a name="audit-app-role-change-password-event-class"></a>Audit App Role Change Password 事件类
   每当更改了应用程序角色的密码时，都会发生 **Audit App Role Change Password** 事件类。  

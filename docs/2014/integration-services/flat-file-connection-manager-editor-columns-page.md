@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 40ce7537-abd0-4973-97fd-6ccb90fddfa0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6dad0ca9855cfad8811b1598356ab624ea3fc5ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc4c008445837341dca21211e2c5e943afe50dc7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058727"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967107"
 ---
 # <a name="flat-file-connection-manager-editor-columns-page"></a>平面文件连接管理器编辑器（“列”页）
   可以使用 **“平面文件连接管理器编辑器”** 对话框的 **“列”** 页，指定行和列的信息以及预览相应的文件。  
@@ -39,7 +38,7 @@ ms.locfileid: "66058727"
  **行分隔符**  
  从可用行分隔符的列表中选择，或输入分隔符文本。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**回车换行符**|行由回车符和换行符的组合分隔。|  
 |**回车**|行由回车符分隔。|  
@@ -53,7 +52,7 @@ ms.locfileid: "66058727"
  **列分隔符**  
  从可用列分隔符的列表中选择，或输入分隔符文本。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**回车换行符**|列由回车符和换行符的组合分隔。|  
 |**回车**|列由回车符分隔。|  
@@ -64,7 +63,7 @@ ms.locfileid: "66058727"
 |**选项卡 {t}**|列由制表符分隔。|  
 |**竖线 {&#124;}**。|列由竖线分隔。|  
   
- **全部**  
+ **刷新**  
  通过单击“刷新”**** 查看更改要跳过的分隔符后的效果。 只有在更改其他连接选项之后，此按钮才可见。  
   
  **预览行**  
@@ -100,7 +99,7 @@ ms.locfileid: "66058727"
  **行分隔符**  
  从可用行分隔符的列表中选择，或输入分隔符文本。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**回车换行符**|行由回车符和换行符的组合分隔。|  
 |**回车**|行由回车符分隔。|  

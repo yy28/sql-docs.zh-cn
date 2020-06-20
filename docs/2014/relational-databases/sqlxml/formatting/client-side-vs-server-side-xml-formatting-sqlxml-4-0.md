@@ -17,19 +17,18 @@ helpviewer_keywords:
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4b721a2abeaf941cd7169b731b5d1a74e15c4396
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bec00de11d0873577cbb71f9c830b7df2be9e2a6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702885"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996117"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>客户端与服务器端 XML 格式 (SQLXML 4.0)
   本主题说明在 SQLXML 中客户端与服务器端 XML 格式的一般差异。  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>客户端格式中不支持多行集查询  
- 使用客户端 XML 格式时不支持生成多个行集的查询。 例如，假定您有一个虚拟目录，在其中指定了客户端格式。 请考虑此示例模板，该模板在** \< sql： query>** 块中包含两个 SELECT 语句：  
+ 使用客户端 XML 格式时不支持生成多个行集的查询。 例如，假定您有一个虚拟目录，在其中指定了客户端格式。 请考虑此示例模板，该模板在块中包含两个 SELECT 语句 **\<sql:query>** ：  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -40,7 +39,7 @@ ms.locfileid: "82702885"
 </ROOT>  
 ```  
   
- 您可以在应用程序代码中执行此模板，但会返回错误，因为客户端 XML 格式不支持多个行集的格式。 如果在两个单独的** \< sql： query>** 块中指定查询，您将获得所需的结果。  
+ 您可以在应用程序代码中执行此模板，但会返回错误，因为客户端 XML 格式不支持多个行集的格式。 如果在两个单独的块中指定查询 **\<sql:query>** ，则会获得所需的结果。  
   
 ## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>timestamp 在客户端与服务器端格式中的映射方式不同  
  在服务器端 XML 格式中，`timestamp` 类型的数据库列映射为 i8 XDR 类型（如果在查询中指定了 XMLDATA 选项）。  

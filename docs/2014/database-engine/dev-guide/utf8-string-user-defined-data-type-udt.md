@@ -9,18 +9,17 @@ ms.topic: reference
 ms.assetid: 41b84606-1fa8-4e4b-8f4c-bdc66537c613
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6a983d8c4488cf9830a3dd7b63a6ad8d3fe1e5fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9676f321604516dd369cfffbdf449acc55c25f2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637624"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933178"
 ---
 # <a name="utf8-string-user-defined-data-type-udt"></a>UTF8 字符串用户定义数据类型 (UDT)
   SQL Server 的 UTF8String 示例说明了用户定义数据类型的实现。 该示例显示了 UTF8 用户定义数据类型的实现，UTF8 用户定义数据类型扩展了数据库的类型系统，允许其存储 UTF8 编码值。 此类型还实现了 Unicode 字符串与 UTF8 字符串之间互相转换的代码。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要创建和运行此项目，必须安装下列软件：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](https://www.microsoft.com/sql-server/sql-server-editions-express)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
@@ -78,7 +77,7 @@ ms.locfileid: "73637624"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-10. 将[!INCLUDE[tsql](../../includes/tsql-md.md)]测试命令脚本复制到文件中，并将`test.sql`其另存为示例目录中的。  
+10. 将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 测试命令脚本复制到文件中，并将其另存为 `test.sql` 示例目录中的。  
   
 11. 使用以下命令执行测试脚本：  
   
