@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f47529726445cf52d280df78a6a96f18889fcd2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0fb5c40db46772cabcb5d1df19e03aced749e1c6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63272816"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997848"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>在事务复制中发布存储过程执行
   如果在发布服务器上执行一个或多个存储过程并影响已发布的表，请考虑将这些存储过程作为存储过程执行项目包括在发布中。 初始化订阅时，过程定义（CREATE PROCEDURE 语句）将被复制到订阅服务器上；当在发布服务器上执行过程时，复制将在订阅服务器上执行相应的过程。 在执行大量批处理操作的情况下，这可以显著提高性能，因为这仅复制此过程执行而不需要为每一行复制各种更改。 例如，假设在发布数据库中创建下面的存储过程：  
@@ -52,7 +51,7 @@ EXEC give_raise
   
 -   SQL Server Management Studio：[在事务发布中发布存储过程的执行 (SQL Server Management Studio)](../publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   复制 Transact-sql 编程：执行[sp_addarticle &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) ，并为参数**@type**指定 "serializable proc exec" （推荐）或 "proc exec" 的值。 有关如何定义项目的详细信息，请参阅[定义项目](../publish/define-an-article.md)。  
+-   复制 Transact-sql 编程：执行[sp_addarticle &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) ，并为参数指定 "serializable proc exec" （推荐）或 "proc exec" 的值 **@type** 。 有关如何定义项目的详细信息，请参阅[定义项目](../publish/define-an-article.md)。  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>在订阅服务器上修改过程  
  默认情况下，发布服务器上的存储过程定义会传播到每个订阅服务器。 但是，还可以在订阅服务器上修改存储过程。 这有助于在发布服务器和订阅服务器上执行不同的逻辑。 例如，假设发布服务器上的存储过程 **sp_big_delete**有两个作用：从复制的表 **big_table1** 中删除 1,000,000 行；更新未复制的表 **big_table2**。 为了减少对网络资源的需求，应通过发布 **sp_big_delete**将 1 百万行删除作为一个存储过程进行传播。 在订阅服务器上，您可以修改 **sp_big_delete** 只删除 1 百万行且不对 **big_table2**执行后续更新。  

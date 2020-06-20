@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0a9f440f32b0bbcc314893b8abe6a183ac8b0738
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b93a38614800e1298894caa9c6d97c3f9353ac73
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704420"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017362"
 ---
 # <a name="installing-sql-server-native-client"></a>安装 SQL Server Native Client
   在安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]时，将同时安装 Microsoft [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client 11.0。 没有 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client。 有关详细信息，请参阅[SQL Server Native Client 中的新增功能](../sql-server-native-client.md)。 你还可以从 SQL Server 2012 功能包网页获取 sqlncli.msi。 若要下载最新版本的 SQL Server Native Client，请访问[Microsoft？？SQL Server？？2012 SP2 功能包](https://www.microsoft.com/download/details.aspx?id=43339)。 如果计算机上还安装了早于 SQL Server 2012 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的以前版本，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 将与早期版本并行安装。  

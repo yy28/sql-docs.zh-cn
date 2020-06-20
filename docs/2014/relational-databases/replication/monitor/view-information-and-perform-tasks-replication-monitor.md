@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 400db44d053caf131ef13947adbd0154875995cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60586083e8bdfe7f0227db605d9f36d50a59ef0d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667123"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049360"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>使用复制监视器查看信息和执行任务
 复制监视器提供大量选项卡和选项，用于查看信息和执行各种任务。 本文介绍使用复制监视器时可以查看和完成的各种事项。
@@ -64,7 +63,7 @@ ms.locfileid: "62667123"
   
 -   **发布**-此选项卡显示有关所选发布服务器上的所有发布的信息。  
   
--   **订阅监视列表**-此选项卡用于显示所选发布服务器上所有可用发布的订阅的相关信息，这些发布具有错误、警告或性能最差性能。 对于运行之前[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]版本的分发服务器，不显示此选项卡。  
+-   **订阅监视列表**-此选项卡用于显示所选发布服务器上所有可用发布的订阅的相关信息，这些发布具有错误、警告或性能最差性能。 对于运行之前版本的分发服务器，不显示此选项卡 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 。  
   
 -   "**代理**" 选项卡-此选项卡显示有关所有复制类型使用的代理和作业的详细信息。 使用该选项卡，还可以启动和停止每个代理和作业。  
   
@@ -106,7 +105,7 @@ ms.locfileid: "62667123"
   
 1.  在左窗格中，展开发布服务器组，然后单击一个发布服务器。   
 2.  若要查看有关订阅的信息，请单击 **“订阅监视列表”** 选项卡。  
-3.  从“显示 \<订阅类型> 订阅”  下拉列表中选择要显示的订阅类型。 若要只查看处于给定状态（如同步）的订阅，请从 **“显示”** 下拉列表中选择一个选项。    
+3.  从 "**显示 \<SubscriptionType> 订阅**" 下拉列表中选择要显示的订阅类型。 若要只查看处于给定状态（如同步）的订阅，请从 **“显示”** 下拉列表中选择一个选项。    
 4.  若要查看和修改订阅属性，请右键单击该订阅，然后单击 **“属性”** 。 你还可以在此选项卡上访问更详细的信息和执行任务。有关详细信息，请参阅[使用复制监视器查看信息和执行任务](view-information-and-perform-tasks-replication-monitor.md)。  
 
 ## <a name="for-publication-agents"></a>针对发布代理

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3cea4731ee665e401429679d764832247b2a2242
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 567ff9a01bd93323149168b9e3aa0f34d78aee39
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155378"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049988"
 ---
 # <a name="create-clustered-indexes"></a>创建聚集索引
   可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建表的聚集索引。 除了个别表之外，每个表都应该有聚集索引。 聚集索引除了可以提高查询性能之外，还可以按需重新生成或重新组织来控制表碎片。 也可以对视图创建聚集索引。 （ [描述的聚集索引和非聚集索引](clustered-and-nonclustered-indexes-described.md)主题中定义了聚集索引。）  

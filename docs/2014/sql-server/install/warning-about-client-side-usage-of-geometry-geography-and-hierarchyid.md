@@ -9,24 +9,23 @@ ms.topic: conceptual
 ms.assetid: 500ee6b3-2154-45d2-a3cf-8760166d9413
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 524400e9c9420fb54447220215d4660874ec6d69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66898aa056800c0a7573b5afa73762785706ff7a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091092"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044618"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>关于客户端对 GEOMETRY、GEOGRAPHY 和 HIERARCHYID 的使用的警告
-  包含空间数据类型**的程序集（）** 已从版本10.0 升级到11.0 版。 满足某些条件时，引用此程序集的自定义应用程序可能会失败。  
+  包含空间数据类型的程序集**Microsoft.SqlServer.Types.dll**已从版本10.0 升级到11.0 版。 满足某些条件时，引用此程序集的自定义应用程序可能会失败。  
   
 ## <a name="component"></a>组件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>说明  
- 包含空间数据类型**的程序集（）** 已从版本10.0 升级到11.0 版。 满足以下条件时，引用此程序集的自定义应用程序可能失败：  
+ 包含空间数据类型的程序集**Microsoft.SqlServer.Types.dll**已从版本10.0 升级到11.0 版。 满足以下条件时，引用此程序集的自定义应用程序可能失败：  
   
--   将自定义应用程序从安装了的计算机[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]移到仅[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安装了的计算机时，应用程序将失败，因为**SqlTypes**程序集的引用版本10.0 不存在。 您可能会看到此错误消息：`"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
+-   将自定义应用程序从安装了的计算机移 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 到仅安装了的计算机时 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，应用程序将失败，因为**SqlTypes**程序集的引用版本10.0 不存在。 您可能会看到此错误消息：`"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
   
 -   当引用**SqlTypes**程序集版本11.0 时，还安装了版本10.0，你可能会看到以下错误消息：`"System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'."`  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: df06fb9ccbf4f3683877605e321207f0ca6d997e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7fb2e5e85c9479726fe38e02721186a0723a2ec8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196505"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014598"
 ---
 # <a name="dml-triggers"></a>DML 触发器
   DML 触发器为特殊类型的存储过程，可在发生数据操作语言 (DML) 事件时自动生效，以便影响触发器中定义的表或视图。 DML 事件包括 INSERT、UPDATE 或 DELETE 语句。 DML 触发器可用于强制业务规则和数据完整性、查询其他表并包括复杂的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 将触发器和触发它的语句作为可在触发器内回滚的单个事务对待。 如果检测到错误（例如，磁盘空间不足），则整个事务即自动回滚。  
@@ -61,8 +60,8 @@ ms.locfileid: "68196505"
 |级联引用|无任何限制条件|不允许在作为级联引用完整性约束目标的表上使用 INSTEAD OF UPDATE 和 DELETE 触发器。|  
 |执行|晚于：<br /><br /> 约束处理<br />声明性引用操作<br />创建**插入的** 和 **删除的** 表<br />触发操作|之前：约束处理<br /><br /> 代替：触发操作<br /><br /> 之后：创建  **插入的** 和 **删除的** 表|  
 |执行顺序|可指定第一个和最后一个执行|不适用|  
-|`varchar(max)``nvarchar(max)`**插入**和**删除**的表中的、和`varbinary(max)`列引用|允许|允许|  
-|`text``ntext`**插入**和**删除**的表中的、和`image`列引用|不允许|允许|  
+|`varchar(max)``nvarchar(max)` `varbinary(max)` **插入**和**删除**的表中的、和列引用|允许|允许|  
+|`text``ntext` `image` **插入**和**删除**的表中的、和列引用|不允许|允许|  
   
  CLR 触发器  
  CLR 触发器可以是 AFTER 触发器或 INSTEAD OF 触发器。 CLR 触发器还可以是 DDL 触发器。 CLR 触发器将执行在托管代码（在 .NET Framework 中创建并在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中上载的程序集的成员）中编写的方法，而不用执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储过程。  

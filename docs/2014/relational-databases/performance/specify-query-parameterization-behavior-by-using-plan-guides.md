@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: da60ceee93802b14b7d09392740a1f6b471e4ab1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f595b9f0e0a6d7bceffc5cb283c60b6f40e025b3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150607"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047820"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>使用计划指南指定查询参数化行为
   当 PARAMETERIZATION 数据库选项设置为 SIMPLE 时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询优化器可以选择参数化查询。 这意味着查询中包含的任何文字值都用参数来替换。 此过程称为简单参数化。 SIMPLE 参数化生效后，将无法控制参数化哪些查询，不参数化哪些查询。 不过，您可以通过将 PARAMETERIZATION 数据库选项设置为 FORCED 来指定参数化数据库中的所有查询。 此过程称为强制参数化。  
@@ -53,7 +52,7 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
 2.  请指定 PARAMETERIZATION FORCED 查询提示以对查询的参数化表单创建计划指南。  
   
     > [!IMPORTANT]  
-    >  作为参数化查询的一部分， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根据文字的值和大小，将数据类型分配给替换文字值的参数。 对于传递给**@stmt** **sp_get_query_template**的 output 参数的常量文本值，将发生相同的过程。 由于在**@params** **sp_create_plan_guide**的参数中指定的数据类型必须与参数的参数化查询的数据类型匹配[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，因此您可能需要创建多个计划指南以涵盖查询的可能参数值的完整范围。  
+    >  作为参数化查询的一部分， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 根据文字的值和大小，将数据类型分配给替换文字值的参数。 对于传递给 sp_get_query_template 的 output 参数的常量文本值，将发生相同的过程 **@stmt** 。 **sp_get_query_template** 由于在 sp_create_plan_guide 的参数中指定的数据类型 **@params** 必须与参数的参数化查询的数据类型**sp_create_plan_guide**匹配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，因此您可能需要创建多个计划指南以涵盖查询的可能参数值的完整范围。  
   
  以下脚本既可用于获取参数化查询也可用于之后对其创建计划指南：  
   

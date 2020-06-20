@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: e14aafe004ffd94f0711161fac73ce59c57cd810
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c701cdc2e8538a5b91093e17714fd9f6508d1c4c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176717"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016018"
 ---
 # <a name="circularstring"></a>CircularString
   `CircularString` 是零个或多个连续圆弧线段的集合。 圆弧线段是二维平面中由三个点定义的曲线段；第一个点不能与第三个点相同。 如果圆弧线段的所有三个点共线，则将该圆弧线段视为一条直线段。
 
 > [!IMPORTANT]
->  有关中[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]引入的新空间功能的详细说明和示例（包括`CircularString`子类型），请下载白皮书[SQL Server 2012 中的新的空间功能](https://go.microsoft.com/fwlink/?LinkId=226407)。
+>  有关中引入的新空间功能的详细说明和示例 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] （包括 `CircularString` 子类型），请下载白皮书[SQL Server 2012 中的新的空间功能](https://go.microsoft.com/fwlink/?LinkId=226407)。
 
 ## <a name="circularstring-instances"></a>CircularString 实例
  下面的图形显示了有效的 `CircularString` 实例：
@@ -29,7 +28,7 @@ ms.locfileid: "78176717"
  ![](../../database-engine/media/5ff17e34-b578-4873-9d33-79500940d0bc.png "5ff17e34-b578-4873-9d33-79500940d0bc")
 
 ### <a name="accepted-instances"></a>接受的实例
- 如果`CircularString`实例为空或包含奇数个点 n，其中 n > 1，则接受该实例。 下面的 `CircularString` 实例均为已接受实例。
+ `CircularString`如果实例为空或包含奇数个点 n，其中 n > 1，则接受该实例。 下面的 `CircularString` 实例均为已接受实例。
 
 ```sql
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';
@@ -133,7 +132,7 @@ SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));
 Perimeter = 5.65685
 ```
 
- 请注意，该`CircularString`示例的值接近 2&#x03c0; （2 * pi），这是圆的实际周长。
+ 请注意，该示例的值 `CircularString` 接近 2&#x03c0; （2 * pi），这是圆的实际周长。
 
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D. 在同一语句中使用 CircularString 声明和实例化一个几何图形实例
  此代码段说明了如何在同一语句中使用 `geometry` 声明和实例化 `CircularString` 实例：

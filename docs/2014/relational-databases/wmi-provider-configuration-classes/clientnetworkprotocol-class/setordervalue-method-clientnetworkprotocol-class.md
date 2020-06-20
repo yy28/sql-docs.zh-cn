@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b06773049204b126a37e21ce8c070f11666f19df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6a1003ab57fd3a75d351ed6f752f15dc51a1f8d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62826645"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061419"
 ---
 # <a name="setordervalue-method-clientnetworkprotocol-class"></a>SetOrderValue 方法（ClientNetworkProtocol 类）
   从客户端协议列表中选择具有指定顺序值的协议。  

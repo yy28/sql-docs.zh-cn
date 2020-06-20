@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bdda481ae84a15132dd960fe6766c28d82c4f50c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b7d4621cf2182b4587b12665a1cfe10ddbe0db3a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716979"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048811"
 ---
 # <a name="drop-xml-indexes"></a>删除 XML 索引
   [DROP INDEX (Transact-SQL)](/sql/t-sql/statements/drop-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可用于删除现有的主（或辅助）XML 索引和非 XML 索引。 但是，任何 DROP INDEX 选项都不会应用于 XML 索引。 如果删除主 XML 索引，则会删除任何现有的辅助索引。  

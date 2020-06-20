@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 598deb57-e0cc-4e0a-aeb1-94432c094c67
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4e3cd4cecd88bcad83c6e9f2a59ecd5f225fb02a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5e825829eb70b695a619df8caaa59788d0ad413f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487691"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064772"
 ---
 # <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>任务 2：使用用于 Excel 的 MDS 外接程序将供应商数据上传到 MDS
   在此任务中，将使用**MDS Add-in for Excel**将清理和供应商数据发布到**MDS** 。 您在上一课中创建的**供应商**模型中创建一个名为 "**供应商**" 的实体。 该实体对于 Excel 文件中的每一列具有一个属性。 供应商实体的代码和名称属性与 Excel 中的 "**供应商**名称" 和 "**供应商名称**" 列相对应。  
   
-1.  在**Excel**中打开**清理并匹配的 "供应商"。**  
+1.  在**Excel**中打开**清理并匹配 Suppliers.xls** 。  
   
 2.  按**CTRL + A**以选择整个数据。 在电子表格中选择整个数据很**重要**。  
   
@@ -34,9 +33,9 @@ ms.locfileid: "81487691"
   
     1.  选择 "**创建新连接**"，然后单击 "**新建**按钮"。  
   
-    2.  在 "**添加新连接**" 对话框中，**为 "****说明**" 键入 "**本地 MDS 服务器**" **，并\/单击** **"确定"** 以关闭对话框。  
+    2.  在 "**添加新连接**" 对话框中，**为 "****说明**" 键入 "**本地 MDS 服务器**" **，并单击 \/ ** **"确定"** 以关闭对话框。  
   
-6.  在 "**管理连接**" 对话框中，选择 "**本地 MDS 服务器**（`http://localhost/MDS`）"，然后单击 "**测试**" 以测试连接。 在消息框中单击 **"确定"** 。  
+6.  在 "**管理连接**" 对话框中，选择 "**本地 MDS 服务器**（ `http://localhost/MDS` ）"，然后单击 "**测试**" 以测试连接。 在消息框中单击 **"确定"** 。  
   
 7.  单击 "**连接**" 以连接到 MDS 服务器。  
   

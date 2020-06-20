@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b1d115dacc53cb074080931c2ebad88dcaf1c68d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: beae2f836de16dedf3be6d8c196910c53be02266
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011569"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026293"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>使用 Unicode 本机格式导入或导出数据 (SQL Server)
   当必须将信息从一个 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装复制到另一个时，Unicode 本机格式非常有用。 为非字符数据使用本机格式可以节省时间，并消除与字符格式之间不必要的数据类型转换。 在使用不同代码页的服务器之间大容量传输数据时，为所有字符数据使用 Unicode 字符格式可以防止丢失任何扩展字符。 可以通过任何批量导入方法读取 Unicode 本机格式的数据文件。  
@@ -28,13 +27,13 @@ ms.locfileid: "66011569"
  在 Unicode 本机格式数据文件中存储为 SQLVARIANT 的 `sql_variant` 数据的运算方式与在本机格式数据文件中的运算方式相同，只是 `char` 和 `varchar` 值需转换为 `nchar` 和 `nvarchar`，这使得受影响列的存储量加倍。 这些值的原始元数据被保留，当大容量导入到表列时，这些值将转换回其原始的 `char` 和 `varchar` 数据类型。  
   
 ## <a name="command-options-for-unicode-native-format"></a>Unicode 本机格式的命令选项  
- 可以使用**bcp**、BULK INSERT 或 INSERT ... 将 Unicode 本机格式数据导入表中选择\* "从 OPENROWSET （BULK ...）"。对于**bcp**命令或 BULK INSERT 语句，可以在命令行中指定数据格式。 对于 INSERT ...SELECT * FROM OPENROWSET(BULK...) 语句，必须在格式化文件中指定数据格式。  
+ 可以使用**bcp**、BULK INSERT 或 INSERT ... 将 Unicode 本机格式数据导入表中选择 " \* 从 OPENROWSET （BULK ...）"。对于**bcp**命令或 BULK INSERT 语句，可以在命令行中指定数据格式。 对于 INSERT ...SELECT * FROM OPENROWSET(BULK...) 语句，必须在格式化文件中指定数据格式。  
   
  下列选项支持 Unicode 本机格式：  
   
 |Command|选项|描述|  
 |-------------|------------|-----------------|  
-|**bcp**|**-N**|使**bcp**实用工具使用 Unicode 本机格式，该格式对所有非字符数据使用本机（数据库）数据类型，为`char`所有字符（、 `nchar`、 `varchar`、 `nvarchar` `text`、和`ntext`）数据使用 unicode 字符数据格式。|  
+|**bcp**|**-N**|使**bcp**实用工具使用 Unicode 本机格式，该格式对所有非字符数据使用本机（数据库）数据类型，为所有字符（ `char` 、 `nchar` 、 `varchar` 、、 `nvarchar` `text` 和 `ntext` ）数据使用 unicode 字符数据格式。|  
 |BULK INSERT|DATAFILETYPE **= '** widenative **'**|大容量导入数据时使用 Unicode 本机格式。|  
   
  有关详细信息，请参阅 [bcp 实用工具](../../tools/bcp-utility.md)、[BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql) 或 [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)。  

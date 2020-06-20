@@ -13,23 +13,22 @@ helpviewer_keywords:
 ms.assetid: cb2226a0-3037-4fdf-966f-81eabc0da9cf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f753aaddbd2647b1d8874b0d34db415f75aa99b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b21476bb6b696b51cc1932c171bdd8dfa1d0e6d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055041"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972831"
 ---
 # <a name="transfer-error-messages-task-editor-messages-page"></a>传输错误消息任务编辑器（“消息”页）
   可以使用“传输错误消息任务编辑器”**** 对话框的“消息”**** 页指定属性，以将一个或多个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用户定义错误消息从一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例复制到另一个实例。 有关此任务的详细信息，请参阅 [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md)。  
   
 ## <a name="options"></a>选项  
  **SourceConnection**  
- 在列表中选择一个 SMO 连接管理器，或单击** \<"新建连接 ..." >** 以创建与源服务器的新连接。  
+ 在列表中选择一个 SMO 连接管理器，或单击 "新建与 **\<New connection...>** 源服务器的连接"。  
   
  **DestinationConnection**  
- 在列表中选择一个 SMO 连接管理器，或单击** \<"新建连接 ..." >** 以创建与目标服务器的新连接。  
+ 在列表中选择一个 SMO 连接管理器，或单击 "新建与 **\<New connection...>** 目标服务器的连接"。  
   
  **IfObjectExists**  
  选择在目标服务器上已存在同名的错误消息时，该任务是应该覆盖现有的用户定义错误消息还是跳过现有消息，或是失败。  
@@ -39,7 +38,7 @@ ms.locfileid: "66055041"
   
  此属性具有下表所列的选项：  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**True**|复制所有用户定义消息。|  
 |**False**|仅复制指定的用户定义消息。|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e31f36624e8923722612810836df5d2a57b6b686
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11f0ba7a901a3e55644b3129ebbd9d9e2d3e2944
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67624410"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025828"
 ---
 # <a name="resolve-out-of-memory-issues"></a>解决内存不足问题
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 相比， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 随着需求的不断增加，为 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 安装和分配的内存量可能会不足。 这时内存就会不足。 本主题介绍如何从 OOM 情况恢复。 有关可帮助你避免很多 OOM 情况的指南，请参阅 [内存使用情况的监视和故障排除](monitor-and-troubleshoot-memory-usage.md) 。  
@@ -24,12 +23,12 @@ ms.locfileid: "67624410"
   
 |主题|概述|  
 |-----------|--------------|  
-| [解决 OOM 导致的数据库还原故障](#resolve-database-restore-failures-due-to-oom) |收到错误消息“由于资源池 '\<resourcePoolName>' 内存不足，数据库 '  \<databaseName>  ' 的还原操作失败”时应采取的操作。|  
+| [解决 OOM 导致的数据库还原故障](#resolve-database-restore-failures-due-to-oom) |如果收到错误消息 " *\<databaseName>* 由于资源池 ' ' 中内存不足，数据库 ' ' 的还原操作失败"，该怎么办 *\<resourcePoolName>* 。|  
 | [消除工作负荷的低内存或 OOM 情况的影响](#resolve-impact-of-low-memory-or-oom-conditions-on-the-workload)|发现内存不足问题对性能产生负面影响时应采取的操作。|  
-| [在提供足够内存时，解决由于内存不足导致的页分配失败问题](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |收到错误消息“由于资源池 '\<resourcePoolName>  ' 内存不足，不允许对数据库 '\<databaseName>  ' 进行页分配”时应采取的操作。 ……”当可用内存足以进行操作时。|  
+| [在提供足够内存时，解决由于内存不足导致的页分配失败问题](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |如果收到错误消息 " *\<databaseName>* 由于资源池 ' ' 中内存不足，则不允许对数据库进行页分配" *\<resourcePoolName>* 。 ……”当可用内存足以进行操作时。|  
   
 ## <a name="resolve-database-restore-failures-due-to-oom"></a>解决 OOM 导致的数据库还原故障  
- 尝试还原数据库时，可能会收到错误消息： "由于资源池 '*\<resourcepoolname>>*' 中的内存不足，数据库 '*\<databaseName>* 还原操作失败"。你必须通过使更多内存可用来解决内存不足问题，然后才能成功还原数据库。  
+ 尝试还原数据库时，可能会收到以下错误消息： " *\<databaseName>* 由于资源池" "中的内存不足，数据库" "的还原操作失败 *\<resourcePoolName>* 。"你必须通过使更多内存可用来解决内存不足问题，然后才能成功还原数据库。  
   
  若要解决 OOM 导致的还原故障，请使用以下任何或所有方法以便增加可用内存，来暂时增加可用于恢复操作的内存。  
   
@@ -135,7 +134,7 @@ GO
 > 有关详细信息，请参阅主题[最佳做法：在虚拟机环境中使用内存中 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) 。  
   
 ## <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a>在提供足够内存时，解决由于内存不足导致的页分配失败问题  
- 如果收到错误消息 "由于资源池 '*\<resourcepoolname>>*' 中的内存不足，不允许数据库 '*\<databaseName>* 的页分配。 有关详细<https://go.microsoft.com/fwlink/?LinkId=330673>信息，请参阅 ""。 ，这可能是因为禁用了资源调控器。 在资源调控器被禁用时，MEMORYBROKER_FOR_RESERVE 导致虚假内存压力。  
+ 如果收到错误消息 " *\<databaseName>* 由于资源池" "中的内存不足，不允许数据库" "的页分配 *\<resourcePoolName>* 。 有关详细信息，请参阅 " <https://go.microsoft.com/fwlink/?LinkId=330673> "。 ，这可能是因为禁用了资源调控器。 在资源调控器被禁用时，MEMORYBROKER_FOR_RESERVE 导致虚假内存压力。  
   
  若要解决此问题，您需要启用资源调控器。  
   

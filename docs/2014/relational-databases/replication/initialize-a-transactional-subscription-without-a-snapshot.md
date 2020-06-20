@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c0cef8a7e8a64935cca6b378e14c00eb0d80f6b8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 59bb28e8afbee86a901e69ea745b13352ff0f438
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721150"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068688"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Initialize a Transactional Subscription Without a Snapshot
   默认情况下，使用快照初始化对事务发布的订阅，此快照由快照代理生成并由分发代理应用。 在某些方案中，例如涉及大型初始数据集的方案中，最好用其他方法初始化订阅。 初始化订阅服务器的其他方法包括：  

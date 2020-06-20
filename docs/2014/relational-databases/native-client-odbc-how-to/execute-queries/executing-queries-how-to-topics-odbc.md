@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3594c908-192e-41ea-9db0-7045da8812b5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 543c11c1e2048abbdeda8aaf6053d151f1a9e14e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8c6a1963045e74c888fbcc1ef851869493f39048
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701417"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018767"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>执行查询操作指南主题 (ODBC)
   在 ODBC 应用程序中执行 SQL 语句要求分配语句句柄、设置语句属性和准备并执行 SQL 语句。  

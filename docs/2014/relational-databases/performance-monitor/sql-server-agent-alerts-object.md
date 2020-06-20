@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d88041f61c2f84e510c637b71f0ebb1bbb2a97cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9aa6fa871730af8cf129b3ea6b0aa4f1853d7e4d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250928"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017109"
 ---
 # <a name="sql-server-agent-alerts-object"></a>SQL Server 代理中的 Alerts 对象
   SQL Server 代理中的 **Alerts** 性能对象包含性能计数器，可报告有关 SQL Server 代理警报的信息。 下表列出了此对象包含的计数器。  

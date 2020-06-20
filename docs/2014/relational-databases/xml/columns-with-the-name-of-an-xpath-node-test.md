@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0c283f1c08e4c30066359c91656c29f2adaa513f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5ebb8d863403d547a1aa45a996db3922c1ecd390
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717191"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046849"
 ---
 # <a name="columns-with-the-name-of-an-xpath-node-test"></a>列名为 XPath 节点测试的列
   如果列名是某个 XPath 节点测试，将如下表所示映射该列的内容。 如果列名是某个 XPath 节点测试，则该列的内容将映射到相应的节点。 如果该列的 SQL 类型是 `xml`，将返回一个错误。  

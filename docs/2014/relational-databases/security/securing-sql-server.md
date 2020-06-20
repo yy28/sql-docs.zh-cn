@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c1a701f1e63877c807964a8d81a829afdc9f7b81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8cb69c88d1f8eee98093c8fc8227db8e67ed7fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68891617"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997394"
 ---
 # <a name="securing-sql-server"></a>保护 SQL Server
   可将保护 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 视为一系列步骤，它涉及四个方面：平台、身份验证、对象（包括数据）以及访问系统的应用程序。 下列主题将指导您完成创建和实现有效安全计划的过程。  

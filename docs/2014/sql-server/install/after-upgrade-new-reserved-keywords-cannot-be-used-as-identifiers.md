@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb242081-54f8-4273-a8ef-52f3751c25ef
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d187fbe95a75091b0cbcf4bf09225c5f60a9af01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36f7f8cadcba5e114feee4a3c42de6f40070ce72
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096893"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045675"
 ---
 # <a name="after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers"></a>升级后，新的保留关键字不能用作标识符
   升级顾问检测到所使用的某些词为保留关键字。 保留关键字不能用作标识符或对象名称，除非该名称用分隔符分割。  
@@ -49,7 +48,7 @@ ms.locfileid: "66096893"
   
 -   将数据库兼容级别设置保留为 90 或更低。  
   
--   使用分隔标识符引用对象。 例如，语句`CREATE TABLE [MERGE] ([MERGE] int);`使用方括号分隔对象名称合并。  
+-   使用分隔标识符引用对象。 例如，语句 `CREATE TABLE [MERGE] ([MERGE] int);` 使用方括号分隔对象名称合并。  
   
 ## <a name="external-resources"></a>外部资源  
  [保留关键字 (Transact-SQL)](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  

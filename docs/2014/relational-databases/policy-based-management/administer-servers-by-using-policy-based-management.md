@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0f415ffbc10b93cee2037da78daef3b7ee5aba9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157110"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85069031"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>使用基于策略的管理来管理服务器
   基于策略的管理是一种用于管理一个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的系统。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 策略管理员使用基于策略的管理时，他们使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建策略以管理服务器上的实体，例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例、数据库或其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象。  

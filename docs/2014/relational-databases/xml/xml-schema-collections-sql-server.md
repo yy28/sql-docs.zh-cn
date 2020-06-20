@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 939f0d85233f5efe7ddc010169fd0922000083f7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3ee4757f1353278447ee55e97c8d4ba23aa2d649
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702262"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046503"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 架构集合 (SQL Server)
   如主题[xml &#40;transact-sql&#41;](/sql/t-sql/xml/xml-transact-sql)中所述，SQL Server 通过数据类型提供 xml 数据的本机存储 `xml` 。 您可以选择 `xml` 通过 XML 架构集合将 XSD 架构与类型的变量或列关联。 XML 架构集合存储导入的 XML 架构，然后用于执行以下操作：  
@@ -119,7 +118,7 @@ ms.locfileid: "82702262"
   
 -   **Customer** 是 ELEMENT 组件。  
   
- 将架构导入数据库时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会存储架构本身。 相反， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会存储各种不同的组件。 也就是说，不存储 \<Schema> 标记，仅保存在其中定义的组件。 不存储所有的架构元素。 如果 \<Schema> 标记包含指定其组件默认行为的属性，则在导入过程中，将把这些属性移动到其中的架构组件，如下表所示。  
+ 将架构导入数据库时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会存储架构本身。 相反， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会存储各种不同的组件。 也就是说，不会 \<Schema> 存储标记，仅保留在其中定义的组件。 不存储所有的架构元素。 如果 \<Schema> 标记包含指定其组件默认行为的属性，则在导入过程中，这些属性将移到其中的架构组件，如下表所示。  
   
 |属性名称|行为|  
 |--------------------|--------------|  

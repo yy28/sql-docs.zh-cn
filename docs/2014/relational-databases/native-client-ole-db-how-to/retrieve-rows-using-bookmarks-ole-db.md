@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5e14d5c8-e7c6-498f-8041-7e006a1c2d81
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5d20cd5deb0e94fa120d42f33d4b995ffd22620d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f6d2f72dd135a92c0eb03f61c1f88698116e117e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82696581"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043500"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>使用书签检索行 (OLE DB)
   使用者将绑定结构的 `dwFlag` 字段值设置为 DBCOLUMNSINFO_ISBOOKMARK，以指示将该列用作书签。 使用者还可将行集属性 DBPROP_BOOKMARKS 设置为 VARIANT_TRUE。 这允许在行集中出现第 0 列。 然后，使用 `IRowsetLocate::GetRowsAt` 方法提取行（起始行的位置为书签加上一个偏移量得到的位置）。  

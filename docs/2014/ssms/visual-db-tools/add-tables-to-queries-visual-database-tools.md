@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6551aa7e-31a1-4636-852a-819bc53d658b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ba3957eb5b0c88396376d615033107b13d0621ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db979203f45897644fa22f011000b6d4d7e3b712
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63297856"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044518"
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>向查询中添加表 (Visual Database Tools)
   创建查询时，实际是在从表或其他表结构对象（视图和某些用户定义的函数）中检索数据。 若要在查询中使用这些对象中的任何对象，可将其添加到“关系图”  窗格中。  

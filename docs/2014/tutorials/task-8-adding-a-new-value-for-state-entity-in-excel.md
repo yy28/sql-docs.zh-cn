@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a763d76b-06a3-4d51-9614-01fc9fb1c158
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 831d0b504a65d485413772ee3711e689e29ee2a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f12a387a7c7b5ed60ca87159628aab989d37c953
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489700"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006431"
 ---
 # <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>任务 8：在 Excel 中为 State 实体添加新值
   在本任务中，您将在 Excel 中为 State 实体添加值，并且将更改发布到 MDS 服务器。  
@@ -52,7 +51,7 @@ ms.locfileid: "65489700"
   
 12. 在 Excel 中，右键单击底部的**状态**工作表，然后单击 "**删除**" 以删除该工作表。 删除该工作表不会从 MDS 服务器中删除任何数据。  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
  [任务 9：使用主数据管理器创建派生层次结构](../../2014/tutorials/task-9-creating-a-derived-hierarchy-using-master-data-manager.md)  
   
   

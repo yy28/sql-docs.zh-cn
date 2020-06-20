@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: affb6da7-c9ba-401c-ab7f-0d2f4ab93e2d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2ea195f2316e888882fdfad693a39b1b29bb031d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95c5c33536ce33824cc80bb452dafcf17719fbac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095584"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012629"
 ---
 # <a name="deprecated-dbcc-commands-have-now-been-removed"></a>现在，不推荐使用的 DBCC 命令已删除
   下表列出了曾宣布为 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 中不推荐使用的 DBCC 命令。 已从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本中删除这些命令。 您应更新应用程序和脚本以删除对这些不推荐使用的命令的引用。  

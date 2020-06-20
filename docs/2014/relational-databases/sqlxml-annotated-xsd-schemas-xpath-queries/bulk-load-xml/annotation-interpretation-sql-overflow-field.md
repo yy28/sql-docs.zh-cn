@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3b91e3dcca3277a9ef1953065d3331682d1a9af7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 45f29994242d40bd91a05b68f7afc3dcc2a38384
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703412"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068208"
 ---
 # <a name="sqloverflow-field-sqlxml-40"></a>sql:overflow-field (SQLXML 4.0)
   在架构中，可以将某列标识为溢出列，以接收 XML 文档中所有未用完的数据。 通过使用 `sql:overflow-field` 批注在架构中指定此列。 可能有多个溢出列。  
@@ -29,7 +28,7 @@ ms.locfileid: "82703412"
   
  在将数据存储在溢出列中的过程中，XML 大容量加载还会存储定义了 `sql:overflow-field` 的父元素的开始标记和结束标记。  
   
- 例如，下面的架构描述>和** \< CustOrder>** 元素的** \< 客户**。 上述每个元素都标识一个溢出列：  
+ 例如，下面的架构描述了 **\<Customers>** 和 **\<CustOrder>** 元素。 上述每个元素都标识一个溢出列：  
   
 ```  
 <?xml version="1.0" ?>  
@@ -73,9 +72,9 @@ ms.locfileid: "82703412"
 </xsd:schema>  
 ```  
   
- 在架构中， ** \< Customer>** 元素映射到 Customer 表， ** \< Order>** 元素映射到 CustOrder 表。  
+ 在架构中， **\<Customer>** 元素映射到 "参与表" 表， **\<Order>** 元素映射到 CustOrder 表。  
   
- ** \< Customer>** 和** \< Order>** 元素都标识溢出列。 因此，XML 大容量加载将 Customer 表的 "溢出" 列中的** \< Customer>** 元素的所有未用子元素和属性，以及 CustOrder 表的溢出列中** \< Order>** 元素的所有未用子元素和属性。  
+ **\<Customer>** 和元素都 **\<Order>** 标识溢出列。 因此，XML 大容量加载会将元素的所有未用完的子元素和属性保存 **\<Customer>** 在 "参与表" 的 "溢出" 列中，并将元素的所有未用完的子元素和属性保存 **\<Order>** 在 CustOrder 表的溢出列中。  
   
 ### <a name="to-test-a-working-sample"></a>测试工作示例  
   

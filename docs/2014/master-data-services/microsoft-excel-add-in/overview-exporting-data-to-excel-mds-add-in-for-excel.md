@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3bbd3ac1bf97530d64760d1434b9e7e8f6a81d34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40c16c0afd90bd7042f387fd40f48dbb0237027e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482804"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961007"
 ---
 # <a name="loading-data-mds-add-in-for-excel"></a>加载数据（用于 Excel 的 MDS 外接程序）
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]在中，必须先将数据从 MDS 存储库加载到活动 Excel 工作表中，然后才能使用该工作表。 完成数据处理后，将其发布到 MDS 存储库以便其他用户可以共享这些数据。  
+  在中 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] ，必须先将数据从 MDS 存储库加载到活动 Excel 工作表中，然后才能使用该工作表。 完成数据处理后，将其发布到 MDS 存储库以便其他用户可以共享这些数据。  
   
  您可以加载的数据仅限于您具有访问权限的数据。 访问数据的权限是在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序中或以编程方式设置的。  
   

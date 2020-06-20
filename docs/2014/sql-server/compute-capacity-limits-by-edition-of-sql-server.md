@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f457c901c4226b9a0ead23de57c2455c619f406e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a32b00ec6ad34095a17816406eb5516207fafa1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62714756"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013015"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Compute Capacity Limits by Edition of SQL Server
   本主题讨论不同 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本的计算能力限制，以及在具有超线程处理器的物理和虚拟化环境中计算能力限制有何不同。  
@@ -86,13 +85,13 @@ ms.locfileid: "62714756"
 |开发人员|操作系统支持的最大值|操作系统支持的最大值|  
 |评估|操作系统支持的最大值|操作系统支持的最大值|  
 |商业智能|限制为 4 个插槽或 16 核，取二者中的较小值|操作系统支持的最大值|  
-|标准|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 4 个插槽或 16 核，取二者中的较小值|  
+|Standard|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 4 个插槽或 16 核，取二者中的较小值|  
 |Web|限制为 4 个插槽或 16 核，取二者中的较小值|限制为 4 个插槽或 16 核，取二者中的较小值|  
 |Express|限制为 1 个插槽或 4 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|  
 |Express with Tools|限制为 1 个插槽或 4 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|  
 |Express with Advanced Services|限制为 1 个插槽或 4 核，取二者中的较小值|限制为 1 个插槽或 4 核，取二者中的较小值|  
   
- <sup>1</sup>使用基于服务器 + 客户端访问许可证（CAL）的许可（对新协议不可用）的 Enterprise Edition 最多只能为每个[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例20个核心。 基于内核的服务器许可模型没有限制。  
+ <sup>1</sup>使用基于服务器 + 客户端访问许可证（CAL）的许可（对新协议不可用）的 Enterprise Edition 最多只能为每个实例20个核心 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 基于内核的服务器许可模型没有限制。  
   
  在虚拟化环境中，计算能力限制基于逻辑处理器的数目，而不是内核数目，这是因为处理器体系结构对来宾应用程序不可见。  例如，如果服务器的四个插槽中插入了四核处理器，同时该服务器每个内核可支持两个超线程，这样在启用超线程时就有 32 个逻辑处理器，在禁用超线程时只有 16 个逻辑处理器。 这些逻辑处理器可映射到服务器上的虚拟机，该逻辑处理器上的虚拟机的计算负载映射到主机服务器中物理处理器上的执行线程。  
   

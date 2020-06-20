@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bc9c8e8a-4a40-4c69-bfca-39975c844298
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2f09d633ccd8dfc8bdfdda27c75ac3a710475d93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7427c05643a8619a5913f568ec50fb7ecf4ae34
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011501"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016245"
 ---
 # <a name="managing-logins-users-and-schemas-how-to-topics"></a>管理登录名、用户和架构操作指南主题
   本页提供了一些链接，这些链接指向的主题说明了如何管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录名、数据库用户和数据库架构，以及如何加入角色和向主体授予权限。  

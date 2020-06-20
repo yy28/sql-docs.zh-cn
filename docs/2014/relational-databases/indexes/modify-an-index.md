@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 97e3110d-fde7-4f5d-9309-dc1697960aeb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1da4462f3ba23d263cd30d222f7b9026285b1159
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2af9293966afce8372f5b83a579418c546c82816
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162377"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049857"
 ---
 # <a name="modify-an-index"></a>修改索引
   本主题将说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改索引。  
@@ -61,7 +60,7 @@ ms.locfileid: "63162377"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例使用 `ProductID` 选项在 `Production.WorkOrder` 表的 `DROP_EXISTING` 列上删除并重新创建现有索引。 还设置了 `FILLFACTOR` 和 `PAD_INDEX` 选项。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例使用 `ProductID` 选项在 `Production.WorkOrder` 表的 `DROP_EXISTING` 列上删除并重新创建现有索引。 还设置了 `FILLFACTOR` 和 `PAD_INDEX` 选项。  
   
      [!code-sql[IndexDDL#CreateIndex4](../../snippets/tsql/SQL14/tsql/indexddl/transact-sql/createindex.sql#createindex4)]  
   
@@ -75,7 +74,7 @@ ms.locfileid: "63162377"
   
 ## <a name="see-also"></a>另请参阅  
  [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)   
- [Transact-sql&#41;&#40;ALTER INDEX](/sql/t-sql/statements/alter-index-transact-sql)   
+ [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)   
  [INDEXPROPERTY &#40;Transact-sql&#41;](/sql/t-sql/functions/indexproperty-transact-sql)   
  [sys. 索引 &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)   
  [sys. index_columns &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql)   

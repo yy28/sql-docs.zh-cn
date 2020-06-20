@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c02123c3-67fc-4370-ad14-91ed259f1873
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ed348a4525024052946ac30bfe6ec780ca86a4b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2eeacf8b8e722898485871c9f2c469e780e15c78
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054631"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972534"
 ---
 # <a name="view-log-entries-in-the-log-events-window"></a>在“日志事件”窗口中查看日志项
   此过程描述如何运行包并查看它写入的日志项。 您可以实时查看日志项。 此外，还可以将写入 **“日志事件”** 窗口的日志项复制并保存，以便进行进一步分析。  
@@ -32,11 +31,11 @@ ms.locfileid: "66054631"
   
 2.  在**SSIS**菜单上，单击 "**日志事件**"。 通过将 View.LogEvents 命令映射为在 **“选项”** 对话框的 **“键盘”** 页中所选的组合键，您可以选择显示 **“日志事件”** 窗口。  
   
-3.  在 "**调试**" 菜单上单击 "**启动调试**"。  
+3.  在“调试”菜单上，单击“启动调试”。  
   
      当运行时遇到为日志记录启用的事件和自定义消息时，每个事件或消息的日志项将写入 **“日志事件”** 窗口。  
   
-4.  在 **“调试”** 菜单中，单击 **“停止调试”**。  
+4.  在“调试”菜单上，单击“停止调试” 。  
   
      日志项在 **“日志事件”** 窗口中保留可用状态，直到重新运行包、运行其他包或关闭 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]。  
   
