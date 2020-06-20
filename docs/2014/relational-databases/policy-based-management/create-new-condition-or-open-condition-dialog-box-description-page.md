@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 2ef0a556-9566-4af8-849e-ab038b9279cc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 80198964075bc6de2bdd816c54ccf2ca1e3710f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42c403674d9ea8b34035631409a274bcce0b55bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62705374"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005862"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-description-page"></a>“创建新条件”或“打开条件”对话框，“说明”页
   此对话框用于为基于策略的管理条件添加说明。  

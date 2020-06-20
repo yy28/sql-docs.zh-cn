@@ -16,19 +16,18 @@ helpviewer_keywords:
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cf5c0b6c7004f458e424e58d738cce22e97afa2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cd2a71e6acd52ba92f44c26f184bbd3141de6f4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919593"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954670"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR 标量值函数
-  标量值函数 (SVF) 返回单个值，例如字符串、整数或位值。您可以使用任何 .NET Framework 编程语言以托管代码形式创建标量值用户定义函数。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他托管代码可访问这些函数。 有关 CLR 集成的优点以及如何在托管代码和[!INCLUDE[tsql](../../includes/tsql-md.md)]之间进行选择的信息，请参阅[clr 集成概述](../clr-integration/clr-integration-overview.md)。  
+  标量值函数 (SVF) 返回单个值，例如字符串、整数或位值。您可以使用任何 .NET Framework 编程语言以托管代码形式创建标量值用户定义函数。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他托管代码可访问这些函数。 有关 CLR 集成的优点以及如何在托管代码和之间进行选择的信息 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，请参阅[Clr 集成概述](../clr-integration/clr-integration-overview.md)。  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>CLR 标量值函数的要求  
- 在 .NET Framework 程序集中 .NET Framework  SVF 将实现为类的方法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]输入参数和从 SVF 返回的类型可以是支持的任何标量数据类型，但、、、、 `varchar`、 `char`、 `rowversion`、 `text`或`ntext` `table` `cursor`除外`image` `timestamp`。 SVF 必须确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型和实现方法的返回数据类型相匹配。 有关类型转换的详细信息，请参阅[映射 CLR 参数数据](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。  
+ 在 .NET Framework 程序集中 .NET Framework  SVF 将实现为类的方法。 输入参数和从 SVF 返回的类型可以是支持的任何标量数据类型，但、、、、、、、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `varchar` `char` 或除外 `rowversion` `text` `ntext` `image` `timestamp` `table` `cursor` 。 SVF 必须确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型和实现方法的返回数据类型相匹配。 有关类型转换的详细信息，请参阅[映射 CLR 参数数据](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。  
   
  使用 .NET Framework 语言实现 .NET Framework SVF 时，可以指定 `SqlFunction` 自定义属性以包括有关此函数的其他信息。 `SqlFunction` 属性可以指示该函数是否访问或修改数据、是否为确定性函数以及是否涉及浮点运算。  
   

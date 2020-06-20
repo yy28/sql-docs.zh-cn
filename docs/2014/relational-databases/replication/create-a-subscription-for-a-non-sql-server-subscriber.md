@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31a7d1e52c53cb858039f1fd0ed403f255ad5ca2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721669"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010922"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>为非 SQL Server 订阅服务器创建订阅
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中为非 SQL Server 订阅服务器创建订阅。 事务复制和快照复制支持向非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器发布数据。 有关支持的订阅服务器平台的信息，请参阅 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)中为非 SQL Server 订阅服务器创建订阅。  
@@ -45,7 +44,7 @@ ms.locfileid: "62721669"
   
          在为非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器启用发布之后，再创建快照，这样可以确保快照代理生成适合非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器的快照和初始化脚本。  
   
-3.  通过“发布属性 - \<PublicationName>”对话框为非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器启用发布。**** 有关此步骤的详细信息，请参阅 [Publication Properties, Subscription Options](publication-properties-subscription-options.md) 。  
+3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 "**发布属性- \<PublicationName> ** " 对话框为非订阅服务器启用发布。 有关此步骤的详细信息，请参阅 [Publication Properties, Subscription Options](publication-properties-subscription-options.md) 。  
   
 4.  使用新建订阅向导创建订阅。 本主题提供了有关此步骤的详细信息。  
   
@@ -137,7 +136,7 @@ ms.locfileid: "62721669"
   
 2.  右键单击发布，再单击 **“查看快照代理状态”**。  
   
-3.  在“查看快照代理状态 - \<发布>”对话框中，单击“启动”。********  
+3.  在 "**查看快照代理状态 \<Publication> ** " 对话框中，单击 "**启动**"。  
   
  快照代理生成快照后，将显示一条消息，如“[100%] 已生成 17 个项目的快照”。  
   
@@ -155,27 +154,27 @@ ms.locfileid: "62721669"
   
     -   如果 `enabled_for_het_sub` 的值为 1，则支持非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器。  
   
-    -   如果的`enabled_for_het_sub`值为0，则执行[sp_changepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)， `enabled_for_het_sub` **@property**并`true`为**@value**指定。  
+    -   如果的值 `enabled_for_het_sub` 为0，则执行[Sp_changepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)， `enabled_for_het_sub` **@property** 并 `true` 为指定 **@value** 。  
   
         > [!NOTE]  
         >  在将 `enabled_for_het_sub` 更改为 `true` 之前，必须删除发布的任何现有订阅。 当发布还支持更新订阅时，无法将 `enabled_for_het_sub` 设置为 `true`。 更改 `enabled_for_het_sub` 将影响其他发布属性。 有关详细信息，请参阅 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)。  
   
-3.  在发布服务器的发布数据库中，执行 [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定**@publication**、 **@subscriber**、的值 **（默认目标）** **@destination_db**、的值为**push** **@subscription_type**，并将值3指定为**@subscriber_type** （指定 OLE DB 提供程序）。  
+3.  在发布服务器的发布数据库中，执行 [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定 **@publication** 、 **@subscriber** 、的值 **（默认目标）** 、的 **@destination_db** 值为**push** **@subscription_type** ，并将值3指定为 **@subscriber_type** （指定 OLE DB 提供程序）。  
   
 4.  在发布服务器的发布数据库中，执行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)。 指定下列各项：  
   
-    -   **@subscriber**和**@publication**参数。  
+    -   **@subscriber**和 **@publication** 参数。  
   
     -   的值 **（默认目标）** **@subscriber_db**  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **@subscriber_datasrc**、 **@subscriber_location**、、和**@subscriber_catalog**的非数据源的属性。 **@subscriber_provider_string** **@subscriber_provider**  
+    -   、、、和的非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源的 **@subscriber_provider** 属性 **@subscriber_datasrc** **@subscriber_location** **@subscriber_provider_string** **@subscriber_catalog** 。  
   
-    -   分发[!INCLUDE[msCoName](../../includes/msconame-md.md)]服务器上的分发代理针对**@job_login**和**@job_password**运行时所用的 Windows 凭据。  
+    -   [!INCLUDE[msCoName](../../includes/msconame-md.md)]分发服务器上的分发代理针对和运行时所用的 Windows 凭据 **@job_login** **@job_password** 。  
   
         > [!NOTE]  
-        >  使用 Windows 集成身份验证进行的连接始终使用**@job_login**和**@job_password**指定的 Windows 凭据。 分发代理始终使用 Windows 集成身份验证与分发服务器建立本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。  
+        >  使用 Windows 集成身份验证进行的连接始终使用和指定的 Windows 凭据 **@job_login** **@job_password** 。 分发代理始终使用 Windows 集成身份验证与分发服务器建立本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。  
   
-    -   的值为**0** **@subscriber_security_mode** ，并为**@subscriber_login**和**@subscriber_password**的 OLE DB 提供程序登录信息。  
+    -   的值为**0** **@subscriber_security_mode** ，并为和的 OLE DB 提供程序登录信息 **@subscriber_login** **@subscriber_password** 。  
   
     -   该订阅的分发代理作业计划。 有关详细信息，请参阅 [Specify Synchronization Schedules](specify-synchronization-schedules.md)。  
   

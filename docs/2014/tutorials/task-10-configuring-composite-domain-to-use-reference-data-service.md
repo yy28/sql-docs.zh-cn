@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 752eefde-8b87-4f54-878e-9963ccbadc8e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 525e0286d8d82f501981c9e936caca581886b9b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd1727ffaa24edf12ed7ad8a5fb4f55f4910855e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481230"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064817"
 ---
 # <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>任务 10：配置复合域以使用引用数据服务
   在此任务中，将 "**地址验证**" 复合域配置为使用**Melissa 数据地址检查**服务。 在运行时，在清理活动期间，DQS 将“地址验证”域中各域的值传递给此服务以进行清理。 有关更多详细信息，请参阅[将域/复合域映射到引用数据](https://msdn.microsoft.com/library/hh213030.aspx)。  
@@ -46,7 +45,7 @@ ms.locfileid: "65481230"
   
      ![将 RDS 架构项映射到域](../../2014/tutorials/media/et-configuringcdtouserds-05.jpg "将 RDS 架构项映射到域")  
   
-9. 单击 **“确定”** 关闭对话框。  
+9. 单击“确定”  关闭对话框。  
   
 ## <a name="next-step"></a>下一步  
  [任务 11：发布知识库](../../2014/tutorials/task-11-publishing-the-knowledge-base.md)  

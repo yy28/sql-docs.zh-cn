@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e153f619-0049-4162-9076-c24a454f3278
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 29da37c82339798df3ec47b4b611da948f974c53
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6f3460c892c182996a753c2a16076418a6b2008f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718332"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063331"
 ---
 # <a name="threads-window"></a>“线程”窗口
   “线程”  窗口显示有关正在调试的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器会话使用的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 线程的信息。 只有在调试模式下才可以显示此线程信息。  

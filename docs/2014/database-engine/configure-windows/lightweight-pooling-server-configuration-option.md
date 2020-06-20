@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2dc11b61-d065-4126-8e00-acf40390f9fb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 552a86ba168ab121210b42cc0e462f8fdcbea84b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 549ff7451a31b48459b5a290b94ad406c3768a91
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782150"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935233"
 ---
 # <a name="lightweight-pooling-server-configuration-option"></a>lightweight pooling 服务器配置选项
   使用“轻型池”  选项可以减少有时在对称多处理 (SMP) 环境下遇到的、与过多的上下文切换有关的系统开销。 如果出现过多的上下文切换，轻型池可以通过上下文切换内联化，从而降低用户/内核环的转换频率，达到提高吞吐量的目的。  
@@ -34,7 +33,7 @@ ms.locfileid: "62782150"
   
  将 **lightweight pooling** 设置为 1 将使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 切换到纤程模式计划。 该选项的默认值为 0。  
   
- **lightweight pooling** 选项是一个高级选项。 如果使用 **sp_configure** 系统存储过程来更改该设置，则仅当“显示高级选项”  设置为 1 时才可以更改“轻型池”  。 该设置在服务器重新启动后生效。  
+ **lightweight pooling** 选项是一个高级选项。 如果使用 **sp_configure** 系统存储过程来更改该设置，则仅当“显示高级选项”设置为 1 时才可以更改“轻型池”。 该设置在服务器重新启动后生效。  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows XP 不支持轻型池。 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 完全支持轻型池。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: d3462266279ed80e94871db4831918ad70b444be
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 19e9ba9013d592d752189adadfb761f1741fd91a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922138"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055463"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit Records
   使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核功能，可以对服务器级别和数据库级别事件组和事件进行审核。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](sql-server-audit-database-engine.md)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 列中的一个值匹配。  
@@ -50,13 +49,13 @@ ms.locfileid: "82922138"
 |**database_name**|发生此操作的数据库上下文。|`sysname`|否|  
 |**schema_name**|发生此操作的架构上下文。|`sysname`|否|  
 |**object_name**|发生审核的实体的名称。 这包括：<br /><br /> 服务器对象<br /><br /> 数据库<br /><br /> 数据库对象<br /><br /> 架构对象<br /><br /> TSQL 语句（如果有）|`sysname`|否|  
-|**损益**|TSQL 语句（如果有）|`nvarchar(4000)`|否|  
+|**语句**|TSQL 语句（如果有）|`nvarchar(4000)`|否|  
 |**additional_information**|有关此事件的其他任何信息，存储为 XML。|`nvarchar(4000)`|否|  
   
 ## <a name="remarks"></a>备注  
  某些操作不填充列的值，这是因为它可能不适用于此操作。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核可以为审核记录中的字符字段存储 4000 个数据字符。 当可审核操作返回的 **additional_information** 和 **statement** 值返回的字符超过 4000 个时， **sequence_no** 列用于将多个记录写入到单个审核操作的审核报表中以记录此数据。 过程如下：  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核可以为审核记录中的字符字段存储 4000 个数据字符。 当可审核操作返回的 **additional_information** 和 **statement** 值返回的字符超过 4000 个时， **sequence_no** 列用于将多个记录写入到单个审核操作的审核报表中以记录此数据。 流程如下：  
   
 -   **statement** 列分为 4000 个字符。  
   

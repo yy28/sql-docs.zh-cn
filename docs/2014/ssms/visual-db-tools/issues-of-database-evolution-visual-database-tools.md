@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1ed6ae10-d212-4ec2-8569-1b94ab1cba6d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3a1f10ae77061983a5cf64ddd5a3462bb4be49b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80daa694cd015a83657368902b07da254e6196ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035586"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048612"
 ---
 # <a name="issues-of-database-evolution-visual-database-tools"></a>数据库演化问题 (Visual Database Tools)
   如果更改已部署的数据库的结构，则必须特别留意更改应与现有的数据和数据库结构兼容。 当进行以下修改时，可能需要采取特殊步骤：  

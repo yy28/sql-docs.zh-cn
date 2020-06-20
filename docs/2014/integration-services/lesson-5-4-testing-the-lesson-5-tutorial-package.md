@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 30f395ed065df5974adf6146a4ee12d0c7b472f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3bb87bbf5e3e17f5468fabe50c158b30239777d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890939"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951487"
 ---
 # <a name="step-4-testing-the-lesson-5-tutorial-package"></a>步骤 4：测试第 5 课教程包
   在运行时，包从运行时更新的变量中获取 `Directory` 属性的值，而不是使用在创建包时指定的原始目录名。 该变量的值由 SSISTutorial.dtsConfig 文件填充。  
@@ -29,13 +28,13 @@ ms.locfileid: "62890939"
   
  ![包中的控制流](../../2014/tutorials/media/task4lesson2control.gif "包中的控制流")  
   
- **数据流**  
+ 数据流  
   
  ![包中的数据流](../../2014/tutorials/media/task9lesson1data.gif "包中的数据流")  
   
 ### <a name="to-test-the-lesson-5-tutorial-package"></a>测试 Lesson 5 教程包  
   
-1.  在 "**调试**" 菜单上单击 "**启动调试**"。  
+1.  在“调试”菜单上，单击“启动调试”。  
   
 2.  包完成运行后，在 "**调试**" 菜单上，然后单击 "**停止调试**"。  
   

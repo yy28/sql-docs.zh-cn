@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
 author: heidisteen
 ms.author: heidist
-manager: craigg
-ms.openlocfilehash: 002a4ce66108622ce5efcf33231edaed9cd1c99b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: afb5c9d4d6272608249e095c694e0a9c48b37feb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78280834"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054782"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>在多维和数据挖掘模式下安装 Analysis Services
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为商业智能应用程序提供联机分析处理 (OLAP) 和数据挖掘功能。 在此版本中，在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] *多维模式下*安装时，支持 OLAP 数据库和数据挖掘模型。 多维模式是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 运行时所采用的三种服务器模式之一。 它是默认模式。 如果使用默认值安装 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，则将获得运行多维数据库和数据挖掘模型的实例。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为商业智能应用程序提供联机分析处理 (OLAP) 和数据挖掘功能。 在此版本中，在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] *多维模式下*安装时，支持 OLAP 数据库和数据挖掘模型。 多维模式是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 运行时所采用的三种服务器模式之一。 它是默认模式。 如果使用默认值安装 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，则将获得运行多维数据库和数据挖掘模型的实例。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 是一种多实例功能，这意味着您可以在单个计算机上安装 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的多个实例，或者与早期版本并行运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的新实例。 服务器模式特定于实例。 使用其他模式要求安装服务器的其他实例。  
   
- 您可以单独安装 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或将其与其他组件一起安装。 如果只[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]安装了，则在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装向导的 "功能选择" 页上选择 " **Analysis Services** " 时，将安装以下功能：  
+ 您可以单独安装 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或将其与其他组件一起安装。 如果只安装了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，则在安装向导的 "功能选择" 页上选择 " **Analysis Services** " 时，将安装以下功能 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：  
   
 -   用于运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库和数据挖掘模型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器  
   

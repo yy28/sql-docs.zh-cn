@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8bd4676eed22cea99808d87016231dbd2ebaf4cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2d0bbd52159caf117df1b463a8d913a9fe1c79e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032093"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038854"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>监视资源使用情况（系统监视器）
   如果您运行的是 Microsoft Windows 服务器操作系统，则可以使用系统监视器图形工具来测量 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的性能。 可以查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象、性能计数器以及其他对象的行为，这些对象包括处理器、内存、缓存、线程和进程。 每个对象都有一个相关的计数器集，用于测量设备使用情况、队列长度、延时情况，另外还有吞吐量及内部拥塞指示器。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e91a501a899a6ba2b18790ac2da6e7c45b270b07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 068a6aaeba1af8c456c77fd45ecdc2a52719b0f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63025736"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063991"
 ---
 # <a name="replay-options-sql-server-profiler"></a>重播选项 (SQL Server Profiler)
   使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]重播捕获的跟踪之前，请在 **“重播配置”** 对话框中指定重播选项。 若要启动此对话框，请在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中打开重播跟踪文件或表，然后在 **“重播”** 菜单上单击 **“开始”** 。 有关重播跟踪需要哪些权限的信息，请参阅 [Permissions Required to Run SQL Server Profiler](sql-server-profiler.md)。  
@@ -75,7 +74,7 @@ ms.locfileid: "63025736"
  设置阻塞进程监视器搜索已阻塞的进程或正在阻塞的进程的频率。  
   
 ## <a name="about-the-health-monitor"></a>关于 Health Monitor  
- Health Monitor 是一个应用程序线程，用于监视重播跟踪过程中涉及的模拟进程，并结束在重播过程中阻塞的那些进程。 在“重播配置”  对话框的“高级重播选项”  选项卡中，可以指定 Health Monitor 在结束阻塞进程之前应等待的秒数（**Health Monitor 等待间隔**）。 如果将此间隔设置为 0，则在重播跟踪过程中，Health Monitor 永远不会结束模拟阻塞进程。  
+ Health Monitor 是一个应用程序线程，用于监视重播跟踪过程中涉及的模拟进程，并结束在重播过程中阻塞的那些进程。 在“重播配置”对话框的“高级重播选项”选项卡中，可以指定 Health Monitor 在结束阻塞进程之前应等待的秒数（**Health Monitor 等待间隔**）。 如果将此间隔设置为 0，则在重播跟踪过程中，Health Monitor 永远不会结束模拟阻塞进程。  
   
 ## <a name="see-also"></a>另请参阅  
  [重播跟踪](replay-traces.md)   

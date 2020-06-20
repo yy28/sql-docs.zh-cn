@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 268078df-63ca-4c03-a8e7-7108bcea9697
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 68f1f114002ab0ef38c7565a523723a06958048d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 94b46ac1c923695abf4a8bbbb4f074f14593ddcd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874345"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954157"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>宿主保护属性和 CLR 集成编程
   公共语言运行时 (CLR) 提供一种机制，用于使用 CLR 宿主（例如从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 开始的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]）可能需要的特定属性对属于 .NET Framework 的托管应用程序编程接口 (API) 进行批注。 这种宿主保护属性 (HPA) 的示例包括：  
@@ -46,7 +45,7 @@ ms.locfileid: "62874345"
   
 -   可能会导致反序列化服务器进程本身。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不允许`HostProtectionAttribute`使用指定了值为`System.Security.Permissions.HostProtectionResource` `ExternalProcessMgmt`、 `ExternalThreading` `MayLeakOnAbort`、、 `SecurityInfrastructure`、 `SelfAffectingProcessMgmnt` `SelfAffectingThreading` `SharedState` `Synchronization`、、、或`UI`的枚举的类型或成员。 这会阻止程序集调用启用共享状态、执行同步、可能导致终止时资源泄漏或影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的完整性的成员。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不允许使用指定了值为、、、、、、、或的枚举的类型或成员 `HostProtectionAttribute` `System.Security.Permissions.HostProtectionResource` `ExternalProcessMgmt` `ExternalThreading` `MayLeakOnAbort` `SecurityInfrastructure` `SelfAffectingProcessMgmnt` `SelfAffectingThreading` `SharedState` `Synchronization` `UI` 。 这会阻止程序集调用启用共享状态、执行同步、可能导致终止时资源泄漏或影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的完整性的成员。  
   
 ### <a name="disallowed-types-and-members"></a>不允许的类型和成员  
  下面的主题标识了其 `HostProtectionResource` 值被 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 禁用的类型和成员。  

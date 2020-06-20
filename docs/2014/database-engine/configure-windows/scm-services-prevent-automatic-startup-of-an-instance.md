@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6af4597a4ddf802c80bc98cb38363d59348fa0bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f93f5abc749f589ab4208b3a4c9434ca63b8769
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62810043"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935030"
 ---
 # <a name="prevent-automatic-startup-of-an-instance-of-sql-server-sql-server-configuration-manager"></a>防止 SQL Server 实例自动启动（SQL Server 配置管理器）
   本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中禁止 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例自动启动。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通常配置为自动启动。 您可以通过将实例的启动模式设置为手动来更改此默认设置。  
@@ -37,9 +36,9 @@ ms.locfileid: "62810043"
   
 3.  在“详细信息”窗格中，右键单击“” ****，再单击“属性” ****  
   
-4.  在“属性”框的“SQL Server \<实例名> 属性”对话框中，将“启动模式”的值设置为“手动”****__****************。  
+4.  在 " **SQL Server \<**_instancename_**> 属性**" 对话框的 "**属性**" 框中，将 "**启动模式**" 的值设置为 "**手动**"。  
   
-5.  单击“确定”关闭“SQL Server \<实例名> 属性”对话框，然后再关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器********__****。  
+5.  单击 **"确定"** 以关闭 " **SQL Server \<**_instancename_**> 属性**" 对话框，然后关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager。  
   
 ## <a name="see-also"></a>另请参阅  
  [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](start-stop-pause-resume-restart-sql-server-services.md)  

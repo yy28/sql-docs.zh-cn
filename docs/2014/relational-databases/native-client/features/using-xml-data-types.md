@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 86230cd0de145f7f1ccb9f9b2709a5fd29ae78fa
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 24a4f5750af22e8fd588c9c70c1c0399de948907
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707163"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039013"
 ---
 # <a name="using-xml-data-types"></a>使用 XML 数据类型
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入了 xml 数据类型，它可用于在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中存储 XML 文档和片段****。 xml 数据类型是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的内置数据类型，在某些方面类似于其他内置类型（如 int 和 varchar）    。 与使用其他内置类型一样，可以在创建表时将 xml 数据类型用作列类型，也可以将其用作变量类型、参数类型或函数返回类型，还可以将其用在 CAST 和 CONVERT 函数中****。  
@@ -87,7 +86,7 @@ ms.locfileid: "82707163"
 |DBTYPE_BSTR|传递<sup>6，10</sup>|N/A <sup>2</sup>|成功 <sup>3</sup>|N/A <sup>2</sup>|  
 |DBTYPE_STR|成功<sup>6，9，10</sup>|N/A <sup>2</sup>|成功<sup>5，6，12</sup>|N/A <sup>2</sup>|  
 |DBTYPE_IUNKNOWN|通过 ISequentialStream 的字节流<sup>7</sup>****|N/A <sup>2</sup>|通过 ISequentialStream 的字节流<sup>11</sup>****|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|传递<sup>6，7</sup>|N/A <sup>2</sup>|不可用|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|传递<sup>6，7</sup>|N/A <sup>2</sup>|空值|N/A <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|传递<sup>6，10</sup>|N/A <sup>2</sup>|成功<sup>3</sup>|N/A <sup>2</sup>|  
   
  <sup>1</sup>如果使用**ICommandWithParameters：： SetParameterInfo**指定了除 DBTYPE_XML 之外的服务器类型，且访问器类型为 DBTYPE_XML，则在执行该语句时将出错（DB_E_ERRORSOCCURRED，参数状态为 DBSTATUS_E_BADACCESSOR）;否则，会将数据发送到服务器，但服务器将返回一个错误，指示不存在从 XML 到参数的数据类型的隐式转换。  

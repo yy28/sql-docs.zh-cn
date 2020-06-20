@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 66be53c7b4c145f361c49c0e1611fa2942005ae5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9074ab3ac56f3457f4ab5ffb877e63a66a1c783
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192463"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068712"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>启动和停止复制代理 (SQL Server Management Studio)
   可以从 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的“作业”和“复制”文件夹以及复制监视器启动和停止代理********。 可启动和停止以下代理和作业：  
@@ -55,7 +54,7 @@ ms.locfileid: "63192463"
   
 2.  展开 **“SQL Server 代理”** 文件夹，再展开 **“作业”** 文件夹。  
   
-3.  右键单击代理的作业，再单击 **“启动作业”** 或 **“停止作业”**。 队列读取器代理的作业名称的格式为 **[\<分发服务器>]。\<整数>**。  
+3.  右键单击代理的作业，再单击 **“启动作业”** 或 **“停止作业”**。 队列读取器代理的作业名称的格式为 **[ \<Distributor> ]. \<integer> **。  
   
 ### <a name="to-start-and-stop-a-snapshot-agent-log-reader-agent-or-queue-reader-agent-from-replication-monitor"></a>从复制监视器启动和停止快照代理、日志读取器代理或队列读取器代理  
   

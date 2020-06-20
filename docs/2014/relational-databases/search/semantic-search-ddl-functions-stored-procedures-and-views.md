@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 182f395f-3168-48a4-b723-ef4403544f9f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ee5cf7136739b012615121e00d8b8d3ed7c7c6ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce6c23f9a8ff1d0dac8986bf6b44c7725d4badc4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011037"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004008"
 ---
 # <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>语义搜索 DDL、函数、存储过程和视图
   列出用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中支持统计语义搜索的 Transact-SQL 语句和数据库对象。  
   
  有关支持全文搜索的语句和数据库对象的列表，请参阅 [全文搜索 DDL、函数、存储过程和视图](../views/views.md)。  
   
-##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a>Transact-sql 数据定义语言（DDL）语句  
+##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Transact-SQL 数据定义语言 (DDL) 语句  
   
 |Object|更多信息|  
 |------------|----------------------|  

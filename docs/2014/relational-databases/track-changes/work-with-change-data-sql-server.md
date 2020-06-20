@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eaafa011f1b99ea90afce2902c877d0a25b9e6e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 018d5add95e5d0936f6055e1c6710b6a8ddabdab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63269892"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061473"
 ---
 # <a name="work-with-change-data-sql-server"></a>处理变更数据 (SQL Server)
   可通过表值函数 (TVF) 为变更数据捕获使用者提供更改数据。 这些函数的所有查询均需要使用两个参数来定义日志序列号 (LSN) 范围，在开发返回的结果集时需要考虑这些序列号。 限定这一间隔的较高和较低 LSN 值均包含在间隔中。  
@@ -67,7 +66,7 @@ ms.locfileid: "63269892"
   
 -   函数 [cdc.fn_cdc_get_all_changes_<capture_instance>](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql) 返回在指定间隔内发生的所有更改。 将始终生成此函数。 返回的项将始终进行排序：先按更改的事务提交 LSN 进行排序，然后按事务内的更改顺序值进行排序。 根据所选的行筛选器选项，在更新时将返回最终行（行筛选器选项为“all”），或者在更新时返回新值和旧值（行筛选器选项为“all update old”）。  
   
--   当启用源表时，如果将参数 [ 设置为 1，将生成函数 ](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql)cdc.fn_cdc_get_net_changes_<capture_instance>@supports_net_changes。  
+-   当启用源表时，如果将参数 @supports_net_changes 设置为 1，将生成函数 [cdc.fn_cdc_get_net_changes_<capture_instance>](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql)。  
   
     > [!NOTE]  
     >  仅当源表具有定义的主键或已使用 @index_name 参数标识了唯一索引时，才支持此选项。  

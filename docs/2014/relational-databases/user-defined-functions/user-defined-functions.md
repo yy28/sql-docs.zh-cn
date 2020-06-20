@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1ce64f821edd68dceaa1809a62a6b894ded6a868
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c7e4b1a77f2fe5a13e21d8b3fe59e37931669b30
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211694"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054989"
 ---
 # <a name="user-defined-functions"></a>用户定义函数
   与编程语言中的函数类似，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户定义函数是接受参数、执行操作（例如复杂计算）并将操作结果以值的形式返回的例程。 返回值可以是单个标量值或结果集。  
@@ -69,7 +68,7 @@ ms.locfileid: "68211694"
  系统函数  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了许多系统函数，可用于执行各种操作。 这些函数不能修改。 有关详细信息，请参阅[内置函数 (Transact-SQL)](/sql/t-sql/functions/functions)、[系统存储函数 (Transact-SQL)](/sql/relational-databases/system-functions/system-functions-for-transact-sql) 和[动态管理视图和函数 (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views)。  
   
-##  <a name="guidelines"></a><a name="Guidelines"></a>规定  
+##  <a name="guidelines"></a><a name="Guidelines"></a> 准则  
  在函数中，将会区别处理导致语句被取消并继续执行模块（如触发器或存储过程）中的下一个语句的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 错误。 在函数中，上述错误会导致停止执行函数。 接下来该操作导致取消调用该函数的语句。  
   
  BEGIN...END 块中的语句不能有任何副作用。 函数副作用是指对具有函数外作用域（例如数据库表的修改）的资源状态的任何永久性更改。 函数中的语句唯一能做的更改是对函数上的局部对象（如局部游标或局部变量）的更改。 不能在函数中执行的操作包括：对数据库表的修改，对不在函数上的局部游标进行操作，发送电子邮件，尝试修改目录，以及生成返回至用户的结果集。  
@@ -140,7 +139,7 @@ ms.locfileid: "68211694"
   
 |||  
 |-|-|  
-|**任务说明**|**主题**|  
+|**任务说明**|**标题**|  
 |介绍如何创建 Transact-SQL 用户定义函数。|[创建用户定义函数（数据库引擎）](../user-defined-functions/create-user-defined-functions-database-engine.md)|  
 |介绍如何创建 CLR 函数。|[创建 CLR 函数](../user-defined-functions/create-clr-functions.md)|  
 |介绍如何创建用户定义聚合函数。|[创建用户定义聚合](../user-defined-functions/create-user-defined-aggregates.md)|  

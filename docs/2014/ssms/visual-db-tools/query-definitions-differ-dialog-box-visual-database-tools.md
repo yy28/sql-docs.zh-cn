@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 90383473-2922-40e5-9682-3850849aa856
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 781963ddd2011c9e16cf67fdcd878039527546cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9cf5e7ba15416be16b494b36859838e52aff7ce1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63294463"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064904"
 ---
 # <a name="query-definitions-differ-dialog-box-visual-database-tools"></a>“查询定义不同”对话框 (Visual Database Tools)
   此对话框可通知您查询无法以图形形式显示在“关系图”窗格和“条件”窗格中，因此您只能在 SQL 窗格中编辑查询。  
@@ -33,7 +32,7 @@ ms.locfileid: "63294463"
 -   SQL 语句有效但包含特定于所使用数据连接的语法。  
   
 > [!TIP]  
->  可以使用“查询”  工具栏上的“验证 SQL 语句”  按钮来检查语句是否有效。  
+>  可以使用“查询”工具栏上的“验证 SQL 语句”按钮来检查语句是否有效。  
   
  该对话框将显示一条消息，指示不能显示 SQL 语句的原因，并询问如何继续。  
   

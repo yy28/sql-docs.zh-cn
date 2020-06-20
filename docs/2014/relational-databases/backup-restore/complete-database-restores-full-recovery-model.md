@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cb523d8e9b1dbbb136475d0aa739491935f755ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea6ec9f196acd0a64a0b785024bd6426cd6a5381
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922150"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959059"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>完整数据库还原（完整恢复模式）
   数据库完整还原的目的是还原整个数据库。 整个数据库在还原期间处于脱机状态。 在数据库的任何部分变为联机之前，必须将所有数据恢复到同一点，即数据库的所有部分都处于同一时间点并且不存在未提交的事务。  
@@ -73,7 +72,7 @@ ms.locfileid: "62922150"
 >  计划将数据库备份还原到其它服务器实例时，请参阅 [通过备份和还原来复制数据库](../databases/copy-databases-with-backup-and-restore.md)。  
   
 ###  <a name="basic-transact-sql-restore-syntax"></a><a name="TsqlSyntax"></a> 基本 TRANSACT-SQL RESTORE 语法  
- 上图中还原顺序的基本[restore](/sql/t-sql/statements/restore-statements-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)]语法如下：  
+ 上图中还原顺序的基本 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语法如下：  
   
 1.  RESTORE DATABASE *database* FROM *full database backup* WITH NORECOVERY;  
   
@@ -171,17 +170,17 @@ GO
   
 -   [将 SQL Server 数据库还原到某个时间点（完整恢复模式）](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
--   [包含标记事务的相关数据库恢复](recovery-of-related-databases-that-contain-marked-transaction.md)  
+-   [包含标记的事务的相关数据库的恢复](recovery-of-related-databases-that-contain-marked-transaction.md)  
   
 -   [恢复到日志序列号 (SQL Server)](recover-to-a-log-sequence-number-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
- [&#40;SQL Server 应用事务日志备份&#41;](transaction-log-backups-sql-server.md)   
- [sp_addumpdevice &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
- [完全数据库备份 &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
- [差异备份 &#40;SQL Server&#41;](differential-backups-sql-server.md)   
+ [应用事务日志备份 (SQL Server)](transaction-log-backups-sql-server.md)   
+ [sp_addumpdevice (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
+ [完整数据库备份 (SQL Server)](full-database-backups-sql-server.md)   
+ [差异备份 (SQL Server)](differential-backups-sql-server.md)   
  [备份概述 (SQL Server)](backup-overview-sql-server.md)   
  [还原和恢复概述 (SQL Server)](restore-and-recovery-overview-sql-server.md)  
   

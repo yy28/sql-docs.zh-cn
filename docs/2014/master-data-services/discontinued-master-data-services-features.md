@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3f1eb85cb05c8284990d46241ed752515ef5504b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba09ba6110f5da2082f13d8277a00bfb9d590d2e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479444"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961917"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>SQL Server 2014 中不再支持的 Master Data Services 功能
   此主题介绍 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中不再可用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能。  
@@ -58,9 +57,9 @@ ms.locfileid: "65479444"
  如果具有包含此类规则的 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 模型部署包，当您将数据库升级到 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 时，将排除该业务规则。  
   
 ### <a name="bulk-updates-and-exporting"></a>大容量更新和导出  
- 在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序中，不能再大容量更新多个成员的属性值。 若要进行批量更新，请使用临时过程或[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]。  
+ 在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序中，不能再大容量更新多个成员的属性值。 若要进行批量更新，请使用临时过程或 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 。  
   
- 在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序中，不能再将成员导出到 Excel。 若要使用 Excel 中的成员，请[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]使用。  
+ 在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序中，不能再将成员导出到 Excel。 若要使用 Excel 中的成员，请使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 。  
   
 ### <a name="transactions"></a>事务  
  在 "**资源管理器**" 功能区域中，用户不能再恢复其自己的事务。 之前，用户可以还原他们对**资源管理器**中的数据所做的更改。 管理员仍可以为 "**版本管理**" 功能区域中的所有用户恢复事务。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cff3b662-7876-4445-9bdd-96be35b3ca0c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7e40ec982a9b2c43c3d55ec60179ac9a0b80e8a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4766a1206eb09e98bb20d3712a63762126b682b7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489632"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006240"
 ---
 # <a name="task-8-creating-a-composite-domain-rule"></a>任务 8：创建复合域规则
   在此任务中，您将为 "**地址验证**" 复合域创建规则。 定义跨域规则：如果**city**为**洛杉矶，则** **state**必须为**CA** ，其中**City**和**state**是两个域。  
@@ -34,7 +33,7 @@ ms.locfileid: "65489632"
   
 6.  单击页面底部的 "**关闭**" 按钮可切换到 DQS 客户端的主页。 在下一课将发布知识库。 注意，知识库处于锁定状态（锁定图标）。  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
  [任务 9：配置引用数据服务](../../2014/tutorials/task-9-configuring-a-reference-data-service.md)  
   
   

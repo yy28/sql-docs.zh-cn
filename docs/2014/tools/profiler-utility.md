@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 572644cf673c70000cee7de77f2bca9199f19675
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6bb4d4fc19471ce2bacc8b84f60a7e7082ad1ace
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211097"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064098"
 ---
 # <a name="profiler-utility"></a>Profiler 实用工具
   **Profiler** 实用工具可以启动 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 工具。 利用此主题后面列出的可选参数，可以控制应用程序的启动方式。  
@@ -60,7 +59,7 @@ ms.locfileid: "68211097"
  用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证的用户登录 ID。 登录 ID 区分大小写。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)] 列中的一个值匹配。  
+>  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)].  
   
  **/P** *password*  
  指定用户指定的用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证的密码。  
@@ -109,7 +108,7 @@ ms.locfileid: "68211097"
 |ss|两位数秒数|  
   
 > [!NOTE]  
->  仅当在  **中启用了“使用区域设置来显示日期和时间值”** [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]选项时，才能使用“YY-MM-DD- hh:mm:ss”格式。 如果未启用此选项，则必须使用“YYYY-MM-DD hh:mm:ss”日期和时间格式。  
+>  仅当在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 中启用了“使用区域设置来显示日期和时间值”选项时，才能使用“YY-MM-DD- hh:mm:ss”格式。 如果未启用此选项，则必须使用“YYYY-MM-DD hh:mm:ss”日期和时间格式。  
   
  **/R**  
  启用跟踪文件滚动。  

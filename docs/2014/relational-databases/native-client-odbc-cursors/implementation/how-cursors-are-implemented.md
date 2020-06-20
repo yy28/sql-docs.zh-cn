@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2b1d7dd4-08a4-43fc-b3eb-70c183d0941f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 400e35752855d23db324054a0caed944d74b715d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 542c8b85bcc287a6d6fcc6b227ba46436666c20c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702022"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020942"
 ---
 # <a name="how-cursors-are-implemented"></a>如何实现游标
   ODBC 应用程序通过在执行 SQL 语句之前设置一个或多个语句属性来控制游标的行为。 ODBC 采用以下两种不同方式来指定游标的特征：  

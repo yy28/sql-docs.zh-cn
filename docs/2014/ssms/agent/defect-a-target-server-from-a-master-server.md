@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6da262b-7b38-4ce4-bfd6-6a557c6e8a84
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f51e8f62a6be442c123c5a1309293e204caf08f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b17703fa87f5c0d3e7146a1660ac1ca7c7c1d81
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783222"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008934"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>将目标服务器从主服务器脱离
   本主题说明如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 SQL Server 管理对象 (SMO) 从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的主服务器脱离目标服务器。 从目标服务器运行此过程。  
@@ -65,7 +64,7 @@ ms.locfileid: "72783222"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。  
   
 ```sql
 sp_msx_defect ;  
@@ -79,4 +78,4 @@ sp_msx_defect ;
 ## <a name="see-also"></a>另请参阅  
  [创建多服务器环境](create-a-multiserver-environment.md)   
  [跨企业的自动化管理](automated-administration-across-an-enterprise.md)   
- [Defect Multiple Target Servers from a Master Server](defect-multiple-target-servers-from-a-master-server.md)  
+ [将多台目标服务器从主服务器脱离](defect-multiple-target-servers-from-a-master-server.md)  

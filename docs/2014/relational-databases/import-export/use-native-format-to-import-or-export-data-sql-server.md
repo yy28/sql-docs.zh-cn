@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a2e91899172dfc6d640df0c33c77e32de3c1c21c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab42ba3eb6468aac3da2fa780d371818c8776690
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011661"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026302"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>使用本机格式导入或导出数据 (SQL Server)
   当使用不包含任何扩展/双字节字符集 (DBCS) 字符的数据文件在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间大容量传输数据时，建议使用本机格式。  
@@ -57,10 +56,10 @@ ms.locfileid: "66011661"
   
 -   `char` 数据或 `varchar` 数据  
   
-     在每个或`char` `varchar`字段的开头， **bcp**都添加前缀长度。  
+     在每个 `char` 或字段的开头 `varchar` ， **bcp**都添加前缀长度。  
   
     > [!IMPORTANT]  
-    >  使用本机模式时，默认情况下， **bcp**实用工具将字符从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]转换为 OEM 字符，然后将这些字符复制到数据文件。 **Bcp**实用工具将数据文件中的字符转换为 ANSI 字符，然后将这些字符大容量[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]导入到表中。 在执行这些转换过程中，可能丢失扩展字符数据。 对于扩展字符，请使用 Unicode 本机格式或指定代码页。  
+    >  使用本机模式时，默认情况下， **bcp**实用工具将字符从转换 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为 OEM 字符，然后将这些字符复制到数据文件。 **Bcp**实用工具将数据文件中的字符转换为 ANSI 字符，然后将这些字符大容量导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。 在执行这些转换过程中，可能丢失扩展字符数据。 对于扩展字符，请使用 Unicode 本机格式或指定代码页。  
   
 -   `sql_variant` 数据  
   
@@ -71,7 +70,7 @@ ms.locfileid: "66011661"
      有关数据转换的详细信息，请参阅[数据类型转换（数据库引擎）](/sql/t-sql/data-types/data-type-conversion-database-engine)。  
   
 ## <a name="command-options-for-native-format"></a>本机格式的命令选项  
- 可以使用**bcp**、BULK INSERT 或 INSERT ... 将本机格式数据导入表中。选择\* "从 OPENROWSET （BULK ...）"。对于**bcp**命令或 BULK INSERT 语句，可以在命令行中指定数据格式。 对于 INSERT ...SELECT * FROM OPENROWSET(BULK...) 语句，必须在格式化文件中指定数据格式。  
+ 可以使用**bcp**、BULK INSERT 或 INSERT ... 将本机格式数据导入表中。选择 " \* 从 OPENROWSET （BULK ...）"。对于**bcp**命令或 BULK INSERT 语句，可以在命令行中指定数据格式。 对于 INSERT ...SELECT * FROM OPENROWSET(BULK...) 语句，必须在格式化文件中指定数据格式。  
   
  下列命令行选项支持本机格式：  
   
@@ -80,7 +79,7 @@ ms.locfileid: "66011661"
 |**bcp**|**-n**|使**bcp**实用工具使用数据的本机数据类型。<sup>1</sup>|  
 |BULK INSERT|DATAFILETYPE **= '** native **'**|使用本机数据类型或宽本机数据类型的数据。 注意，如果格式化文件指定了数据类型，则不需要 DATAFILETYPE。|  
   
- <sup>1</sup>若要将本机（**-n**）数据加载到与早期版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端兼容的格式，请使用 **-V**开关。 有关详细信息，请参阅 [导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
+ <sup>1</sup>若要将本机（**-n**）数据加载到与早期版本的客户端兼容的格式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请使用 **-V**开关。 有关详细信息，请参阅 [导入来自早期版本的 SQL Server 的本机格式数据和字符格式数据](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
   
  有关详细信息，请参阅 [bcp 实用工具](../../tools/bcp-utility.md)、[BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql) 或 [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)。  
   

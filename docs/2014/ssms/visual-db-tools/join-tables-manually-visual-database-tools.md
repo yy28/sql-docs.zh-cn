@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9c785356-646b-4c87-82d4-25efd6051d9d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0299be9a1cb480a567e0b166c990d25588598aba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe3dcd7f2affdbeb2e2fa5769f1aa6d02d27d5ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62711054"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064952"
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>手动联接表 (Visual Database Tools)
   向查询中添加两个或多个表时， [查询和视图设计器](visual-database-tools.md) 将尝试根据公共数据或数据库中存储的关于这些表如何相关的信息来联接这些表。 有关详细信息，请参阅[自动联接表 (Visual Database Tools)](join-tables-automatically-visual-database-tools.md)。 但是，如果查询和视图设计器未自动联接这些表，或者您希望在这些表之间创建其他联接条件，则可手动联接这些表。  

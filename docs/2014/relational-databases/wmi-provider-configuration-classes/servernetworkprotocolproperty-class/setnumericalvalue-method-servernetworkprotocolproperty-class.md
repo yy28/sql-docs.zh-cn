@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b3b4bce8-9d9e-4ccb-a223-0454281353b0
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e2b3318b9aae0412e827875af35cbdf0477e059f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5fe5915240130336bc1f16100a693e4b81e8d163
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736277"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056774"
 ---
 # <a name="setnumericalvalue-method-servernetworkprotocolproperty-class"></a>SetNumericalValue 方法（ServerNetworkProtocolProperty 类）
   设置引用的属性的数值。  
@@ -41,7 +40,7 @@ NumValue
   
 ## <a name="parts"></a>组成部分  
  *object*  
- 一个表示实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上的网络协议属性的 [ServerNetworkProtocolProperty Class] ServerNetworkProtocolProperty-class.md）对象。  
+ 一个表示实例上的网络协议属性的 [ServerNetworkProtocolProperty Class] ServerNetworkProtocolProperty-class.md）对象 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="parameters"></a>参数  
   

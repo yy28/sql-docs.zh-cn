@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e11eebb-d94e-4ce6-a6d0-870225706bc1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d21c1a215b05896838c4127c9a35f8add334f713
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 430643e8a6c9bd3dd00b2763990645c6a162ee40
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703044"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047493"
 ---
 # <a name="null-handling-sqlxml-40"></a>NULL 处理 (SQLXML 4.0)
   XML 语法将 NULL 视为不存在。 （例如，如果属性或元素值为 NULL，则 XML 文档中不存在该属性或元素。）在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 中， `updg:nullvalue` 特性允许为元素或属性值指定 NULL。  
