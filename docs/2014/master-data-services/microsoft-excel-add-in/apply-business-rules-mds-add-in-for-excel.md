@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cd106345-f561-4966-88d3-a69139b2bd78
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 32819a694769092c255c4b2ed918dd8fde99362e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc9b648b3713141f5250d268a2cec555de686183
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482607"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961547"
 ---
 # <a name="apply-business-rules-mds-add-in-for-excel"></a>应用业务规则（用于 Excel 的 MDS 外接程序）
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 中，如果需要验证数据并确认其有效，可应用业务规则。 您可以更正验证结果并重新发布数据。  
@@ -23,7 +22,7 @@ ms.locfileid: "65482607"
 > [!NOTE]  
 >  发布数据时会自动验证数据。 有关详细信息，请参阅 [验证存储过程 (Master Data Services)](../validation-stored-procedure-master-data-services.md)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“资源管理器”** 功能区域。  

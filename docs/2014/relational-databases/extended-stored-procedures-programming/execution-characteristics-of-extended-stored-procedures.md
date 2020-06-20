@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d21f002ca6b7ea185df2e01f66abf0e1ef5cfd1b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 62c95f0cb6c8239fee86b27b231e3e1830fb5009
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62512210"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050899"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>扩展存储过程的执行特征
     
@@ -27,7 +26,7 @@ ms.locfileid: "62512210"
   
  执行扩展存储过程具有以下特征：  
   
--   扩展存储过程函数在的安全上下文[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中执行。  
+-   扩展存储过程函数在的安全上下文中执行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 -   扩展存储过程函数在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的进程空间中运行。  
   
@@ -38,7 +37,7 @@ ms.locfileid: "62512210"
   
 -  
   
- 加载扩展存储过程 DLL 后，DLL 将在服务器的地址空间中保持加载状态，直到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]停止或管理员使用 DBCC *DLL_name* （免费）显式卸载 DLL。  
+ 加载扩展存储过程 DLL 后，DLL 将在服务器的地址空间中保持加载状态，直到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 停止或管理员使用 DBCC *DLL_name* （免费）显式卸载 DLL。  
   
  使用 EXECUTE 语句，可以通过 [!INCLUDE[tsql](../../includes/tsql-md.md)] 将扩展存储过程作为存储过程来执行：  
   

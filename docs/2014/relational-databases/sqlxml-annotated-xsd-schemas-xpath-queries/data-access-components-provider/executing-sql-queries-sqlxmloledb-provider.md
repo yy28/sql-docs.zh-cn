@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 50334cf5-9c87-4c00-9beb-e08577c4fa82
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 41c00bcec67d7e04738e4684ed7883074e1a2012
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f8410a4a0ecc8d522a38e22315746cb45295e6bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703286"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015821"
 ---
 # <a name="executing-sql-queries-sqlxmloledb-provider"></a>执行 SQL 查询（SQLXMLOLEDB 访问接口）
   该示例说明以下特定于 SQLXMLOLEDB 访问接口的属性的用法：  

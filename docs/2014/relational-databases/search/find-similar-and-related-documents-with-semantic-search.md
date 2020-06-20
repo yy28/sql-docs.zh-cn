@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1b2e30534fb5e0232ff2046e30e2e14075dfb807
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b11493b5b04fa9308e3afbe56176251225248338
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011322"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004177"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>使用语义搜索来查找相似和相关文档
   说明在为统计语义索引配置的列上如何查找相似或相关的文档或文本值，以及如何查找其相似或相关程度的信息。  
@@ -37,7 +36,7 @@ ms.locfileid: "66011322"
 >  针对的列必须启用了全文索引和语义索引。  
   
 ###  <a name="example-find-the-top-documents-that-are-similar-to-another-document"></a><a name="HowToIdentifySimilar"></a>示例：查找与另一个文档类似的顶级文档  
- 下面的示例*@CandidateID*从 AdventureWorks2012 示例数据库的 humanresources.jobcandidate 表中检索与指定的候选项类似的前10个候选项。  
+ 下面的示例 *@CandidateID* 从 AdventureWorks2012 示例数据库的 humanresources.jobcandidate 表中检索与指定的候选项类似的前10个候选项。  
   
 ```scr  
 SELECT TOP(10) KEY_TBL.matched_document_key AS Candidate_ID  

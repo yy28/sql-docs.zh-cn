@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: b0345303-6e9a-4078-8148-6e1bce207b8c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ced1e07b5423dcdc7c13d24e8528a2b6ac240aaa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 108a9b981debc95e182b16847c39a03d4b242088
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093961"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012208"
 ---
 # <a name="modify-applications-to-expect-bigint-values-from-sysperfinfocntr_value"></a>修改应用程序以期望从 sysperfinfo.cntr_value 获取 bigint 值
-  sysperfinfo 为 cntr_value `bigint`列返回值。  
+  sysperfinfo `bigint` 为 cntr_value 列返回值。  
   
 ## <a name="component"></a>组件  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  

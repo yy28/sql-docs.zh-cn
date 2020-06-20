@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff5c519fbe9bf8096807962a939677b3a5d58cc5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832447"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919536"
 ---
 # <a name="data-flow-task"></a>数据流任务
   数据流任务封装数据流引擎，该引擎在源和目标之间移动数据，使用户可以在移动数据时转换、清除和修改数据。 将数据流任务添加到包控制流使得包可以提取、转换和加载数据。  
@@ -92,7 +91,7 @@ ms.locfileid: "62832447"
 |------------|-----------------|-----------|  
 |**PathID**|OLE DB 源和排序转换之间的路径中的 `ID` 属性值。|1185|  
 |**PathName**|路径的 `Name` 属性值。|OLE DB 源输出|  
-|**ComponentID**|排序转换的`ID`属性的值。|1180|  
+|**Id**|`ID`排序转换的属性的值。|1180|  
 |**ComponentName**|排序转换的 `Name` 属性值。|排序|  
 |**InputID**|排序转换的输入的 `ID` 属性值。|1181|  
 |**InputName**|排序转换的输入的 `Name` 属性值。|对输入进行排序|  

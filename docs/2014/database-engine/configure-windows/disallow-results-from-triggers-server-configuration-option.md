@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47149073-307d-47a5-b7d2-66a737d3231d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0606379484fe14b0dfa1d93b604b8ee2b6eb7981
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f162a6e06706561d861bfc54a1ae4027f2c3466e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782530"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935348"
 ---
 # <a name="disallow-results-from-triggers-server-configuration-option"></a>disallow results from triggers 服务器配置选项
   使用 **disallow results from triggers** 选项可控制是否让触发器返回结果集。 返回结果集的触发器可能会导致应用程序出现意外的行为，而这些行为并不符合它们的设计意图。  
@@ -29,7 +28,7 @@ ms.locfileid: "62782530"
   
  当设置为 1 时， **disallow results from triggers** 选项将设置为打开。 该选项的默认值为 0（关闭）。 如果将该选项设置为 1 (打开)，则触发器进行的任何返回结果集的尝试都将失败，用户将接收到下列错误消息：  
   
- “消息 524，级别 16，状态 1，过程 \<Procedure Name>，第 \<> 行  
+ "消息524，级别16，状态1，过程 \<Procedure Name> ，行\<Line#>  
   
  “触发器返回了结果集且服务器选项 "disallow_results_from_triggers" 为 TRUE。”  
   

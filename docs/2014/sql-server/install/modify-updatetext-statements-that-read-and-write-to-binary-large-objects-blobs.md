@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b85da6a7-42f6-4707-a25e-3ded8958b94f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f2f3c8af333cc20398e7951bd6fd53433da0288c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 061e7bad0bae5a74d103406265ad79195f79f7db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093764"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059212"
 ---
 # <a name="modify-updatetext-statements-that-read-and-write-to-binary-large-objects-blobs"></a>修改读写到二进制大型对象(BLOB)的 UPDATETEXT 语句
   升级顾问检测到 UPDATETEXT 语句使用同一文本指针读写相同的二进制大型对象 (BLOB)。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不支持以这种方式使用文本指针。  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3d8fd063-266d-49f1-bbf3-b3d53917c471
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e99cbf0f0154a7cda5f237256a8d60cf1ebb085d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c0b625ac90e968cd68911a6527b82da6a988f7d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094902"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059297"
 ---
 # <a name="how-to-export-reports"></a>如何导出报表
   升级顾问报表查看器使您能够导出平面文件版本的报表。 这样便可处理电子表格或文字处理文档中的信息，或者将这些信息用电子邮件发送给其他人。  

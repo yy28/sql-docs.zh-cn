@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 0a372643-15cb-45a7-8665-04f1215df8ed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 13fc00425a12737000a6400c5b9368288de80aa3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a05a318f0db624c2423d43759d4b47913179574b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797244"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996977"
 ---
 # <a name="configuring-sql-server-in-smo"></a>在 SMO 中配置 SQL Server
-  在 SMO 中， <xref:Microsoft.SqlServer.Management.Smo.Information>对象<xref:Microsoft.SqlServer.Management.Smo.Settings> 、对象、 <xref:Microsoft.SqlServer.Management.Smo.UserOptions>对象<xref:Microsoft.SqlServer.Management.Smo.Configuration>和对象都包含实例的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]设置和信息。  
+  在 SMO 中， <xref:Microsoft.SqlServer.Management.Smo.Information> 对象、 <xref:Microsoft.SqlServer.Management.Smo.Settings> 对象、对象 <xref:Microsoft.SqlServer.Management.Smo.UserOptions> 和对象都 <xref:Microsoft.SqlServer.Management.Smo.Configuration> 包含实例的设置和信息 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 具有许多描述已安装的实例的行为的属性。 这些属性描述了启动选项、服务器默认值、文件和目录、系统和处理器信息、产品和版本、连接信息、内存选项、语言和排序规则选择以及身份验证模式。  
   
@@ -32,9 +31,9 @@ ms.locfileid: "72797244"
   
  <xref:Microsoft.SqlServer.Management.Smo.UserOptions> 对象属性包含与算术、ANSI 标准和事务相关的当前连接行为的相关信息。  
   
- 还存在由 <xref:Microsoft.SqlServer.Management.Smo.Configuration> 对象表示的一组配置选项。 它包含表示可通过 `sp_configure` 存储过程进行修改的选项的一组属性。 "**优先级提升**"、"**恢复间隔**" 和 "**网络数据包大小**" 等选项控制实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的性能。 其中的许多选项可以进行动态更改，但在某些情况下，其值需要先配置，在重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例后才发生更改。  
+ 还存在由 <xref:Microsoft.SqlServer.Management.Smo.Configuration> 对象表示的一组配置选项。 它包含表示可通过 `sp_configure` 存储过程进行修改的选项的一组属性。 "**优先级提升**"、"**恢复间隔**" 和 "**网络数据包大小**" 等选项控制实例的性能 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 其中的许多选项可以进行动态更改，但在某些情况下，其值需要先配置，在重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例后才发生更改。  
   
- 每个配置选项都对应一个 <xref:Microsoft.SqlServer.Management.Smo.Configuration> 对象属性。 使用 <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> 对象，可以修改全局配置设置。 许多属性都有最大值和最小值，这些值也存储为 <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> 属性。 这些属性要求<xref:Microsoft.SqlServer.Management.Smo.ConfigurationBase.Alter%2A>方法将更改提交到的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ 每个配置选项都对应一个 <xref:Microsoft.SqlServer.Management.Smo.Configuration> 对象属性。 使用 <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> 对象，可以修改全局配置设置。 许多属性都有最大值和最小值，这些值也存储为 <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> 属性。 这些属性要求 <xref:Microsoft.SqlServer.Management.Smo.ConfigurationBase.Alter%2A> 方法将更改提交到的实例 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Configuration> 对象中的所有配置选项都必须由系统管理员进行更改。  
   
@@ -47,14 +46,14 @@ ms.locfileid: "72797244"
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBConfigure2](SMO How to#SMO_VBConfigure2)]  -->  
   
 ## <a name="modifying-sql-server-settings-in-visual-basic"></a>在 Visual Basic 中修改 SQL Server 设置  
- 此代码示例显示有关[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]和<xref:Microsoft.SqlServer.Management.Smo.Information> <xref:Microsoft.SqlServer.Management.Smo.Settings>中的实例的信息，并修改和<xref:Microsoft.SqlServer.Management.Smo.Settings> <xref:Microsoft.SqlServer.Management.Smo.UserOptions>对象属性中的设置。  
+ 此代码示例显示有关和中的实例的信息 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] <xref:Microsoft.SqlServer.Management.Smo.Information> ，并 <xref:Microsoft.SqlServer.Management.Smo.Settings> 修改 <xref:Microsoft.SqlServer.Management.Smo.Settings> 和对象属性中的设置 <xref:Microsoft.SqlServer.Management.Smo.UserOptions> 。  
   
  在此示例中，<xref:Microsoft.SqlServer.Management.Smo.UserOptions> 对象和 <xref:Microsoft.SqlServer.Management.Smo.Settings> 对象都有一个 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 方法。 您可以分别运行这两个对象的 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 方法。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBConfigure1](SMO How to#SMO_VBConfigure1)]  -->  
   
 ## <a name="modifying-sql-server-settings-in-visual-c"></a>在 Visual C# 中修改 SQL Server 设置  
- 此代码示例显示有关[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]和<xref:Microsoft.SqlServer.Management.Smo.Information> <xref:Microsoft.SqlServer.Management.Smo.Settings>中的实例的信息，并修改和<xref:Microsoft.SqlServer.Management.Smo.Settings> <xref:Microsoft.SqlServer.Management.Smo.UserOptions>对象属性中的设置。  
+ 此代码示例显示有关和中的实例的信息 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] <xref:Microsoft.SqlServer.Management.Smo.Information> ，并 <xref:Microsoft.SqlServer.Management.Smo.Settings> 修改 <xref:Microsoft.SqlServer.Management.Smo.Settings> 和对象属性中的设置 <xref:Microsoft.SqlServer.Management.Smo.UserOptions> 。  
   
  在此示例中，<xref:Microsoft.SqlServer.Management.Smo.UserOptions> 对象和 <xref:Microsoft.SqlServer.Management.Smo.Settings> 对象都有一个 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 方法。 您可以分别运行这两个对象的 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 方法。  
   
@@ -92,7 +91,7 @@ ms.locfileid: "72797244"
 ```  
   
 ## <a name="modifying-sql-server-settings-in-powershell"></a>在 PowerShell 中修改 SQL Server 设置  
- 此代码示例显示有关[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]和<xref:Microsoft.SqlServer.Management.Smo.Information> <xref:Microsoft.SqlServer.Management.Smo.Settings>中的实例的信息，并修改和<xref:Microsoft.SqlServer.Management.Smo.Settings> <xref:Microsoft.SqlServer.Management.Smo.UserOptions>对象属性中的设置。  
+ 此代码示例显示有关和中的实例的信息 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] <xref:Microsoft.SqlServer.Management.Smo.Information> ，并 <xref:Microsoft.SqlServer.Management.Smo.Settings> 修改 <xref:Microsoft.SqlServer.Management.Smo.Settings> 和对象属性中的设置 <xref:Microsoft.SqlServer.Management.Smo.UserOptions> 。  
   
  在此示例中，<xref:Microsoft.SqlServer.Management.Smo.UserOptions> 对象和 <xref:Microsoft.SqlServer.Management.Smo.Settings> 对象都有一个 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 方法。 您可以分别运行这两个对象的 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 方法。  
   

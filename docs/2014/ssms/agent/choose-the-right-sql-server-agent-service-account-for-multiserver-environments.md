@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a07e2f38-281c-495b-965b-13fad03ba548
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e3a981690efb0139d8878cab4e13794fdcf44ed7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 94ef890f5d2ef2b85d2f4d1023a93747e903a7f3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63199904"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995575"
 ---
 # <a name="choose-the-right-sql-server-agent-service-account-for-multiserver-environments"></a>为多服务器环境选择正确的 SQL Server 代理服务帐户
   为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务选择的 Windows 帐户可影响多服务器环境的行为，如下所示：  

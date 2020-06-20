@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0f6e938e3212e519ab51be1faf3f18e28957ef3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf6fd1f328366333e5464cb226a8a8ab8e275395
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782275"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935298"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>启用“锁定内存页”选项 (Windows)
   此 Windows 策略将确定哪些帐户可以使用进程将数据保留在物理内存中，从而阻止系统将数据分页到磁盘的虚拟内存中。  
@@ -29,7 +28,7 @@ ms.locfileid: "62782275"
   
 ### <a name="to-enable-the-lock-pages-in-memory-option"></a>启用“锁定内存页”选项  
   
-1.  在 **“开始”** 菜单上，单击 **“运行”** 。 在 "**打开**" 框中`gpedit.msc`，键入。  
+1.  在 **“开始”** 菜单上，单击 **“运行”** 。 在 "**打开**" 框中，键入 `gpedit.msc` 。  
   
 2.  在 **“本地组策略编辑器”** 控制台上，展开 **“计算机配置”** ，再展开 **“Windows 设置”** 。  
   

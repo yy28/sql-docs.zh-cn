@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f6473409-121a-414d-8fe9-ea9aea6cb7eb
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f5a99d7890a470a2026bfc0e972f8b5ae396d893
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9223d3d42a4b103aa1f90fa7a540ba6bc06ba1a5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095011"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036779"
 ---
 # <a name="after-upgrade-full-text-search-will-not-allow-predicates-in-output-into-expression"></a>升级后，全文搜索将不再允许 OUTPUT INTO 表达式中使用谓词
   当数据库兼容级别设置为 100 或更高时，不允许在 OUTPUT 子句中使用全文谓词。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a19342a0-cd90-4825-aec5-d7c54275cc98
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a276850e7d570f16217e31eabaed17f6d4b6a45
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 231772904acf4c2d7e2a4b2c2a3e04d8102827b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093349"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065249"
 ---
 # <a name="ready-to-prepare-image"></a>已可以准备映像
   **“已可以准备映像”** 页提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序准备的功能的摘要。  

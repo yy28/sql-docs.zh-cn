@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 49bfc29d-f76a-4963-b0e6-b8532dfda850
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7fadcfbc6249ca15ecd9581cc50d58d0e3a09a5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 890d87b22e4d91fd50793b5f3cf5ac697fdf8b89
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127207"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050746"
 ---
 # <a name="srv_parammaxlen-extended-stored-procedure-api"></a>srv_parammaxlen（扩展存储过程 API）
     
@@ -58,7 +57,7 @@ n
 ## <a name="returns"></a>返回  
  参数数据的最大长度（以字节为单位）。 如果没有第 n 个参数或没有任何远程存储过程，则返回 -1**。  
   
- 如果参数为以下[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型之一，则此函数返回以下值。  
+ 如果参数为以下数据类型之一，则此函数返回以下值 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 |新数据类型|输入数据长度|  
 |--------------------|-----------------------|  
@@ -69,7 +68,7 @@ n
 |`BIGVARBINARY`|**NULL：** 255<br /><br /> **ZERO：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255：** 255|  
 |`NCHAR`|**NULL：** 255<br /><br /> **ZERO：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255：** 255|  
 |`NVARCHAR`|**NULL：** 255<br /><br /> **ZERO：** 255<br /><br /> **>= 255：** 255<br /><br /> **<255：** 255|  
-|`NTEXT`|**NULL：** -1<br /><br /> **ZERO：**-1<br /><br /> **>= 255：** -1<br /><br /> 255：-1 ** \<**|  
+|`NTEXT`|**NULL：** -1<br /><br /> **ZERO：**-1<br /><br /> **>= 255：** -1<br /><br /> ** \< 255：** -1|  
   
 ## <a name="remarks"></a>备注  
  每个远程存储过程参数都具有实际数据长度和最大数据长度。 对于不允许使用 Null 值的标准固定长度数据类型，实际长度和最大长度相同。 对于可变长度数据类型，长度可以变化。 例如，声明为 varchar(30) 的参数可以具有长度仅为 10 个字节的数据****。 该参数的实际长度为 10，最大长度为 30。 srv_parammaxlen 函数获取远程存储过程的最大数据长度****。 若要获取参数的实际长度，请使用 srv_paramlen****。  

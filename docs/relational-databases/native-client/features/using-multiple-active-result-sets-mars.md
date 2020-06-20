@@ -1,5 +1,6 @@
 ---
 title: 使用多重活动结果集 (MARS) | Microsoft Docs
+description: SQL Server 支持多个活动的结果集。 每个连接的应用程序可以有多个挂起的请求和活动的默认结果集。
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdf953bd5cb1835b2d2f6cc0e868a3687e53e852
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b83a79a92680c6499a4f2270ad3707082b324938
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303181"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950429"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>使用多个活动的结果集 (MARS)
 
@@ -50,7 +51,7 @@ ms.locfileid: "81303181"
 -   在 MARS 中，有多个批处理并发运行时禁止会话范围内的模拟。  
 
 > [!NOTE]
-> 默认情况下，驱动程序不启用 MARS 功能。 若要在通过[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 连接到时使用 mars，必须在连接字符串中专门启用 mars。 但是，如果应用程序检测到驱动程序支持 MARS，某些应用程序可能会默认启用 MARS。 对于这些应用程序，可以根据需要在连接字符串中禁用 MARS。 有关详细信息，请参阅本主题下文中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序等章节。
+> 默认情况下，驱动程序不启用 MARS 功能。 若要在通过 Native Client 连接到时使用 MARS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，必须在连接字符串中专门启用 mars。 但是，如果应用程序检测到驱动程序支持 MARS，某些应用程序可能会默认启用 MARS。 对于这些应用程序，可以根据需要在连接字符串中禁用 MARS。 有关详细信息，请参阅本主题下文中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序等章节。
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 不限制某个连接上的活动语句的数量。  
   
@@ -113,14 +114,14 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
  SQL Server（自 2016 起）支持结合使用 MARS 和列存储索引。 SQL Server 2014 将 MARS 用于具有列存储索引的表的只读连接。    但是，SQL Server 2014 不支持将 MARS 用于具有列存储索引的表中的并发数据操作语言 (DML) 操作。 发生这种情况时，SQL Server 会终止连接并中止事务。   SQL Server 2012 包含的是只读列存储索引，MARS 不适用于它们。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 访问接口  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序通过添加 SSPROP_INIT_MARSCONNECTION 数据源初始化属性（在 DBPROPSET_SQLSERVERDBINIT 属性集中实现）来支持 MARS。 此外，还添加了新的连接字符串关键字 MarsConn  。 它接受值 true  或 false  ；默认值为 false  。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序通过添加 SSPROP_INIT_MARSCONNECTION 数据源初始化属性（在 DBPROPSET_SQLSERVERDBINIT 属性集中实现）来支持 MARS。 此外，还添加了新的连接字符串关键字 MarsConn****。 它接受值 true**** 或 false****；默认值为 false****。  
   
  数据源属性 DBPROP_MULTIPLECONNECTIONS 默认为 VARIANT_TRUE。 这意味着访问接口将生成多个连接以支持多个并发命令和行集对象。 启用 MARS 后， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 可以在单个连接上支持多个命令和行集对象，因此默认情况下 MULTIPLE_CONNECTIONS 设置为 VARIANT_FALSE。  
   
  若要详细了解 DBPROPSET_SQLSERVERDBINIT 属性集的增强，请参阅[初始化和授权属性](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)。  
   
 ### <a name="sql-server-native-client-ole-db-provider-example"></a>SQL Server Native Client OLE DB 访问接口示例  
- 在此示例中，数据源对象是使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机 OLE DB 提供程序创建的，并且在创建 session 对象之前使用 DBPROPSET_SQLSERVERDBINIT 属性集启用了 MARS。  
+ 在此示例中，数据源对象是使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本机 OLE DB 提供程序创建的，并且在创建 session 对象之前使用 DBPROPSET_SQLSERVERDBINIT 属性集启用了 MARS。  
   
 ```cpp
 #include <sqlncli.h>  
@@ -206,7 +207,7 @@ hr = pIOpenRowset->OpenRowset (NULL,
 ```  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 驱动程序  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序通过向[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)和[SQLGETCONNECTATTR](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)函数添加内容支持 MARS。 添加了 SQL_COPT_SS_MARS_ENABLED 以接受 SQL_MARS_ENABLED_YES 或 SQL_MARS_ENABLED_NO，默认值为 SQL_MARS_ENABLED_NO。 此外，还添加了一个新的连接字符串关键字**Mars_Connection**。 它接受值 "yes" 或 "no"；默认值为 "no"。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序通过向[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)和[SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)函数添加内容支持 MARS。 添加了 SQL_COPT_SS_MARS_ENABLED 以接受 SQL_MARS_ENABLED_YES 或 SQL_MARS_ENABLED_NO，默认值为 SQL_MARS_ENABLED_NO。 此外，还添加了一个新的连接字符串关键字**Mars_Connection**。 它接受值 "yes" 或 "no"；默认值为 "no"。  
   
 ### <a name="sql-server-native-client-odbc-driver-example"></a>SQL Server Native Client ODBC 驱动程序示例  
  在此示例中， **SQLSetConnectAttr**函数用于在调用**SQLDriverConnect**函数连接数据库之前启用 MARS。 建立连接后，将调用两个**SQLExecDirect**函数，以便在同一连接上创建两个单独的结果集。  

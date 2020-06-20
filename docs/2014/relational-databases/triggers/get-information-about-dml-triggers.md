@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dc207c4c1bc7ddc2c7c4f590622e04a0f7739375
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f65976d2f517137e23bd9e5e1c98cc76324bc49
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62698759"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014527"
 ---
 # <a name="get-information-about-dml-triggers"></a>获取有关 DML 触发器的信息
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中获取有关 DML 触发器的信息。 此信息可包含针对某个表的触发器的类型、触发器的名称、其所有者以及创建或修改日期。 如果在创建触发器时未加密，您可获取该触发器的定义。 通过该定义，可以帮助您了解该触发器如何影响对其定义该触发器的表。 此外，您可以找出特定触发器使用的对象。 通过该信息，可在数据库中影响触发器的对象发生更改或删除它们时确定这些对象。  
@@ -71,9 +70,9 @@ ms.locfileid: "62698759"
   
 3.  展开“触发器”  ，右键单击需要的触发器，然后单击“查看依赖关系”  。  
   
-4.  在“对象依赖关系”  窗口中，若要查看依赖于 DML 触发器的对象，请选择“依赖于 **DML 触发器名称> 的对象”\<** 。 将在 **“依赖关系”** 区域显示这些对象。  
+4.  在 "**对象依赖关系**" 窗口中，若要查看依赖于 DML 触发器的对象，请选择 **" \<DML trigger name> 依赖于的对象**"。 将在 **“依赖关系”** 区域显示这些对象。  
   
-     若要查看 DML 所依赖的对象，请选择“**DML 触发器名称> 所依赖的对象”\<** 。 将在 **“依赖关系”** 区域显示这些对象。 展开每个节点以查看所有对象。  
+     若要查看 DML 所依赖的对象，请选择 " ** \<DML trigger name> 依赖于的对象**"。 将在 **“依赖关系”** 区域显示这些对象。 展开每个节点以查看所有对象。  
   
 5.  若要获取有关 **“依赖关系”** 区域中显示的对象的信息，请单击该对象。 在 **“所选对象”** 字段中，在 **“名称”** 、 **“类型”** 和 **“依赖关系类型”** 框中提供信息。  
   

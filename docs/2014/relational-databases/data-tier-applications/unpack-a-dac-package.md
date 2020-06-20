@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 14e699be884ff24136b8bae1a744593be86c42ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 537aae36c3e108731d143c848c45ba94a967fa43
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917987"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953034"
 ---
 # <a name="unpack-a-dac-package"></a>解压缩 DAC 包
   使用“解压缩数据层应用程序”对话框可以从数据层应用程序 (DAC) 包解压缩脚本和文件。 这些脚本和文件放置在一个文件夹中，您可以在使用该 DAC 包将 DAC 部署到生产系统中之前查看该文件夹。 一个 DAC 的内容也可与解压缩到其他文件夹中的其他包的内容进行比较。  

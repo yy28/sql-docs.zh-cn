@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 7d4fb415f9fbb556240d626aa48453d6d69d8072
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4fc9b002b57f8118494709f8fe27a8b19ce28d8e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957178"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068407"
 ---
 # <a name="extensible-key-management-ekm"></a>可扩展的密钥管理 (EKM)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供数据加密功能以及*可扩展的密钥管理* (EKM)，同时使用  “Microsoft 加密 API”(MSCAPI) 提供程序进行加密和生成密钥。 在临时密钥容器中可创建用于数据和密钥加密的加密密钥，并且必须先将它们从访问接口中导出，然后才能存储在数据库中。 这种方法使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]能够对密钥进行管理，其中包括加密密钥层次结构和密钥备份。  
@@ -35,7 +34,7 @@ ms.locfileid: "74957178"
  当在 Azure VM 中运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以使用存储在 [Azure 密钥保管库](https://go.microsoft.com/fwlink/?LinkId=521401)中的密钥。 有关详细信息，请参阅 [使用 Azure Key Vault 的可扩展密钥管理 (SQL Server)](extensible-key-management-using-azure-key-vault-sql-server.md)能够对密钥进行管理，其中包括加密密钥层次结构和密钥备份。  
   
 ## <a name="ekm-configuration"></a>EKM 配置  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的所有版本中都未提供可扩展密钥管理。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2014 的各个[版本支持的功能](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的所有版本中都未提供可扩展密钥管理。 有关各个版本支持的功能列表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，请参阅 SQL Server 2014 的各个[版本支持的功能](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  默认情况下，可扩展的密钥管理是关闭的。 若要启用此功能，请使用包含以下选项和值的 sp_configure 命令，如下面的示例所示：  
   

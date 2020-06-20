@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 63a94ef98eeb1b460672e50657b5ece6ef491764
-ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
+ms.openlocfilehash: 6aab8f1203c34ab65b394ee2355b340f17ba8198
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83868338"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050875"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 扩展事件会话是在用于承载 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 扩展事件引擎的进程中创建的。 扩展事件会话的以下各方面信息可为您理解扩展事件基础结构和所发生的常规处理提供有关背景知识：  

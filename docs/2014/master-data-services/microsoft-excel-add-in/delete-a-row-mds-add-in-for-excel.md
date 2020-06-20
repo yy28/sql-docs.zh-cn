@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7791fbdd-7fed-44be-b0bd-20c1eba7239e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3d5465ab5157af0c0a6f1bd4a0566d49e45cd55c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7fbe69600b337130e7fb3b309535f880904e356
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482683"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961181"
 ---
 # <a name="delete-a-row-mds-add-in-for-excel"></a>删除行（用于 Excel 的 MDS 外接程序）
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，如果你不希望用户再使用某个数据行（成员），则可以将其从 MDS 存储库中删除。  
@@ -23,7 +22,7 @@ ms.locfileid: "65482683"
 > [!NOTE]  
 >  管理员可以重新激活已删除的成员。 有关详细信息，请参阅[重新激活成员或集合 (Master Data Services)](../reactivate-a-member-or-collection-master-data-services.md)。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“资源管理器”** 功能区域。  

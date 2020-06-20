@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 834b26bc-49de-4033-88d5-6aa7b1609720
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 300e3dd81ae7a3de2361c79864130c1361c19588
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd3e075f187118c6c2ab7f6898b911be44d2cf31
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095865"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012893"
 ---
 # <a name="database-engine-configuration---account-provisioning"></a>数据库引擎配置 - 帐户设置
   使用此页可以设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全模式，并添加 Windows 用户或组作为 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的管理员。  
@@ -49,7 +48,7 @@ ms.locfileid: "66095865"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]切勿设置空密码或弱 sa 密码。  
   
- **混合模式（Windows 身份验证[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或身份验证）**  
+ **混合模式（Windows 身份验证或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证）**  
  允许用户使用 Windows 身份验证或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证进行连接。 通过 Windows 用户帐户进行连接的用户可以使用经过 Windows 验证的信任连接。  
   
  如果必须选择“混合模式身份验证”并且要求使用 SQL 登录名以适应早期应用程序，则必须为所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帐户设置强密码。  

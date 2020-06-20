@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 29b9d839-aaaf-48fb-be17-840c751f36f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b5c82509505cb0497ffd67aa490e9b7d5f9b2a25
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8443207bbbdff5db7e54d61fcebabe70e34cc540
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702607"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013288"
 ---
 # <a name="large-xml-schema-collections-and-out-of-memory-conditions"></a>大型 XML 架构集合和内存不足的情况
   当对大型 XML 架构集合调用内置 XML_SCHEMA_NAMESPACE() 函数时或当您试图删除大型 XML 架构集合时，可能会出现内存不足的情况。 可以使用以下解决方法来处理这种情况：  

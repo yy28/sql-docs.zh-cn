@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9b929640-bc62-449b-9b06-b5a77b8cf372
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 926f6227d5a3a2e11dffbf4b9f080b1fc5ec35a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4107f81ef4cdf19df60d4a70d8e79007f2c9270c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871850"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970157"
 ---
 # <a name="database-properties-changetracking-page"></a>数据库属性（“更改跟踪”页）
   使用此页可查看或修改所选数据库的更改跟踪设置。 有关在此页上可用选项的详细信息，请参阅[启用和禁用更改跟踪 (SQL Server)](../track-changes/enable-and-disable-change-tracking-sql-server.md)。  

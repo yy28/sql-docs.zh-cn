@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4985aa5f-ac99-49f6-852c-9d25916549e9
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ae927a281db54697bbda49e28a58ea4c6e60326a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e796d141ef943399fc2469c232b34b1956cef3b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088732"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927301"
 ---
 # <a name="view-the-extended-events-targets-for-registered-packages"></a>查看已注册包的扩展事件目标
   在创建 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 扩展事件会话之前，确定可用的扩展事件目标将非常有用。 若要完成此任务，需使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的查询编辑器执行以下过程。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bd879db30b3f787f513c1d657ebf6509cf59b37d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 498407598f691649024a027c5a441cd8ca74754d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702539"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065501"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>引用内置 XML 架构集合 (sys)
   创建的每个数据库在 **sys** 关系架构中都有一个预定义的 **sys** XML 架构集合。 数据库将保留这些预定义架构，这些架构可以从任何其他用户创建的 XML 架构集合进行访问。 这些预定义架构中使用的前缀在 XQuery 中是有意义的。 只有 **xml** 是保留前缀。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 156a8e765812c14da0888148505311d52c267916
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 300e1b133691d91bf3955fbdd1fd6fbe24274177
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782380"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935454"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>在系统管理员被锁定时连接到 SQL Server
   本主题介绍如何以系统管理员身份重新获得对 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的访问权限。 系统管理员可能会由于下列原因之一失去对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的访问权限：  
@@ -58,12 +57,12 @@ ms.locfileid: "62782380"
   
 4.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器的左窗格中，选择“SQL Server 服务”  。 在右窗格中，查找 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 （[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实例包括在计算机名称后的 **(MSSQLSERVER)** 。 命名实例显示为大写，名称与在“已注册的服务器”中的名称相同。）右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，然后单击“属性”  。  
   
-5.  在 "**启动参数**" 选项卡上的 "**指定启动参数**" 框`-m`中，键入`Add`，然后单击。 （这是短划线后跟小写字母 m。）  
+5.  在 "**启动参数**" 选项卡上的 "**指定启动参数**" 框中，键入， `-m` 然后单击 `Add` 。 （这是短划线后跟小写字母 m。）  
   
     > [!NOTE]  
     >  对于某些早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，没有“启动参数”  选项卡。在这种情况下，在“高级”选项卡上，双击“启动参数”   。 参数在非常小的窗口中打开。 请注意不要更改任何现有参数。 在最后，添加新参数 `;-m`，然后单击 `OK`。 （这是一个分号，后跟短划线和小写字母 m。）  
   
-6.  单击`OK`，然后在要重新启动的消息之后，右键单击您的服务器名称，然后单击 "**重新启动**"。  
+6.  单击 `OK` ，然后在要重新启动的消息之后，右键单击您的服务器名称，然后单击 "**重新启动**"。  
   
 7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重启之后，你的服务器将处于单用户模式。 请确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理未在运行。 如果启动，它将占用您唯一的连接。  
   
@@ -74,16 +73,16 @@ ms.locfileid: "62782380"
   
      在某些配置中，SSMS 将尝试进行多个连接。 多个连接将失败，因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 处于单用户模式。 可以选择执行以下操作之一。 执行下列操作之一：  
   
-    1.  使用 Windows 身份验证（包括您的管理员凭据）与对象资源管理器连接。 依次展开“安全性”和“登录名”，然后双击你自己的登录名   。 在 "**服务器角色**" 页上`sysadmin`，选择，然后`OK`单击。  
+    1.  使用 Windows 身份验证（包括您的管理员凭据）与对象资源管理器连接。 依次展开“安全性”和“登录名”，然后双击你自己的登录名   。 在 "**服务器角色**" 页上，选择 `sysadmin` ，然后单击 `OK` 。  
   
-    2.  使用 Windows 身份验证（包括您的管理员凭据）与“查询窗口”连接，而非与对象资源管理器连接。 （如果未与对象资源管理器连接，则只能通过这种方式进行连接。）执行以下代码，以添加作为`sysadmin`固定服务器角色成员的新 Windows 身份验证登录名。 以下示例添加名为 `CONTOSO\PatK`的域用户。  
+    2.  使用 Windows 身份验证（包括您的管理员凭据）与“查询窗口”连接，而非与对象资源管理器连接。 （如果未与对象资源管理器连接，则只能通过这种方式进行连接。）执行以下代码，以添加作为固定服务器角色成员的新 Windows 身份验证登录名 `sysadmin` 。 以下示例添加名为 `CONTOSO\PatK`的域用户。  
   
         ```  
         CREATE LOGIN [CONTOSO\PatK] FROM WINDOWS;  
         ALTER SERVER ROLE sysadmin ADD MEMBER [CONTOSO\PatK];  
         ```  
   
-    3.  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在混合身份验证模式下运行，请使用 Windows 身份验证（包括您的管理员凭据）与“查询窗口”连接。 执行以下代码，以创建作为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sysadmin`固定服务器角色成员的新身份验证登录名。  
+    3.  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在混合身份验证模式下运行，请使用 Windows 身份验证（包括您的管理员凭据）与“查询窗口”连接。 执行以下代码，以创建作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定服务器角色成员的新身份验证登录名 `sysadmin` 。  
   
         ```  
         CREATE LOGIN TempLogin WITH PASSWORD = '************';  
@@ -93,7 +92,7 @@ ms.locfileid: "62782380"
         > [!WARNING]  
         >  使用强密码替换 ************。  
   
-    4.  如果你[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在混合身份验证模式下运行，并且你希望重置该`sa`帐户的密码，请使用 Windows 身份验证（包括你的管理员凭据）连接到查询窗口。 用以下语法更改`sa`帐户的密码。  
+    4.  如果你正在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 混合身份验证模式下运行，并且你希望重置该帐户的密码 `sa` ，请使用 Windows 身份验证（包括你的管理员凭据）连接到查询窗口。 `sa`用以下语法更改帐户的密码。  
   
         ```  
         ALTER LOGIN sa WITH PASSWORD = '************';  
@@ -106,14 +105,14 @@ ms.locfileid: "62782380"
   
 10. 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器的左窗格中，选择“SQL Server 服务”  。 在右侧窗格中，右键单击 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，然后单击“属性”  。  
   
-11. 在 "**启动参数**" 选项卡上的 "**现有参数**" `-m`框中， `Remove`选择，然后单击。  
+11. 在 "**启动参数**" 选项卡上的 "**现有参数**" 框中，选择， `-m` 然后单击 `Remove` 。  
   
     > [!NOTE]  
-    >  对于某些早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，没有“启动参数”  选项卡。在这种情况下，在“高级”选项卡上，双击“启动参数”   。 参数在非常小的窗口中打开。 删除之前`;-m`添加的，然后单击`OK`"删除"。  
+    >  对于某些早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，没有“启动参数”  选项卡。在这种情况下，在“高级”选项卡上，双击“启动参数”   。 参数在非常小的窗口中打开。 删除 `;-m` 之前添加的，然后单击 "删除" `OK` 。  
   
 12. 右键单击你的服务器名称，然后单击“重启”  。  
   
- 现在，你应该能够使用现在为`sysadmin`固定服务器角色的成员的某个帐户进行连接。  
+ 现在，你应该能够使用现在为固定服务器角色的成员的某个帐户进行连接 `sysadmin` 。  
   
 ## <a name="see-also"></a>另请参阅  
  [在单用户模式下启动 SQL Server](start-sql-server-in-single-user-mode.md)   

@@ -1,7 +1,7 @@
 ---
 title: sys. dm_resource_governor_workload_groups （Transact-sql） |Microsoft Docs
 ms.custom: ''
-ms.date: 04/24/2018
+ms.date: 06/15/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5dcd93a0c74d8fc12af14809c8ca66bf59275dee
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 32858f6e508ef0a7de2b981dc17379d7be7fa4c7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821044"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84941020"
 ---
 # <a name="sysdm_resource_governor_workload_groups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "82821044"
 |group_id|**int**|工作负荷组的 ID。 不可为 null。|  
 |name|**sysname**|工作负荷组的名称。 不可为 null。|  
 |pool_id|**int**|资源池的 ID。 不可为 null。|  
-|external_pool_id|**int**|**适用于**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更高版本。<br /><br /> 外部资源池的 ID。 不可为 null。|  
+|external_pool_id|**int**|**适用**于：从开始 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 。<br /><br /> 外部资源池的 ID。 不可为 null。|  
 |statistics_start_time|**datetime**|为工作负荷组重置统计信息集合的时间。 不可为 null。|  
 |total_request_count|**bigint**|工作负荷组中已完成请求的累计计数。 不可为 null。|  
 |total_queued_request_count|**bigint**|达到 GROUP_MAX_REQUESTS 限制之后排队请求的累计计数。 不可为 null。|  
@@ -62,16 +62,19 @@ ms.locfileid: "82821044"
 |request_max_cpu_time_sec|**int**|单个请求的最大 CPU 使用限制的当前设置，以秒为单位。 不可为 null。|  
 |request_memory_grant_timeout_sec|**int**|单个请求的内存授予超时的当前设置，以秒为单位。 不可为 null。|  
 |group_max_requests|**int**|并发请求最大数的当前设置。 不可为 null。|  
-|max_dop|**int**|工作负荷组的最大并行度。 默认值为 0，表示使用全局设置。 不可为 null。|  
+|max_dop|**int**|已配置工作负荷组的最大并行度。 默认值为 0，表示使用全局设置。 不可为 null。| 
+|effective_max_dop|**int**|**适用**于：从开始 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 。<br /><br />工作负荷组的有效最大并行度。 不可为 null。| 
+|total_cpu_usage_preemptive_ms|**bigint**|**适用**于：从开始 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 。<br /><br />在工作负荷组的抢先模式计划期间使用的总 CPU 时间（以毫秒为单位）。 不可为 null。<br /><br />若要执行在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外的代码（例如，扩展存储过程和分布式查询），则必须在非抢先计划程序的控制范围以外执行该线程。 若要这样做，工作线程将切换到抢先模式。| 
+|request_max_memory_grant_percent_numeric|**float**|**适用**于：从开始 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 。<br /><br />单个请求的最大内存授予的当前设置，以百分比表示。 不可为 null。| 
 |pdw_node_id|**int**|**适用**于： [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分发所在的节点的标识符。|  
   
-## <a name="remarks"></a>备注  
- 此动态管理视图显示了内存中配置。 若要查看存储的配置元数据，请使用 sys.resource_governor_workload_groups 目录视图。  
+## <a name="remarks"></a>注解  
+ 此动态管理视图显示了内存中配置。 若要查看存储的配置元数据，请使用[sys. resource_governor_workload_groups &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)目录视图。  
   
- 成功执行 ALTER RESOURCE GOVERNOR RESET STATISTICS 后，将重置以下计数器： statistics_start_time、total_request_count、total_queued_request_count、total_cpu_limit_violation_count、total_cpu_usage_ms、max_request_cpu_time_ms、total_lock_wait_count、total_lock_wait_time_ms、total_query_optimization_count、total_suboptimal_plan_generation_count、total_reduced_memgrant_count 和 max_request_grant_memory_kb。 statistics_start_time 设置为当前系统日期和时间，其他计数器设置为零（0）。  
+ `ALTER RESOURCE GOVERNOR RESET STATISTICS`成功执行时，将重置以下计数器： `statistics_start_time` 、 `total_request_count` 、、、、、、、、、 `total_queued_request_count` `total_cpu_limit_violation_count` `total_cpu_usage_ms` `max_request_cpu_time_ms` `total_lock_wait_count` `total_lock_wait_time_ms` `total_query_optimization_count` `total_suboptimal_plan_generation_count` `total_reduced_memgrant_count` 和 `max_request_grant_memory_kb` 。 计数器 `statistics_start_time` 设置为当前系统日期和时间，其他计数器设置为零（0）。  
   
 ## <a name="permissions"></a>权限  
- 需要 VIEW SERVER STATE 权限。  
+ 需要 `VIEW SERVER STATE` 权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [动态管理视图和函数 &#40;Transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
@@ -79,7 +82,3 @@ ms.locfileid: "82821044"
  [sys. resource_governor_workload_groups &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR (Transact-SQL)](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
-  
-
-
-

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ad5135eb8141cc84bc6e5bddc8bd8477f4699b9e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 785ab80a529140a52ec18ef96ccaaeafd03698cd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874931"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954216"
 ---
 # <a name="designing-assemblies"></a>设计程序集
   本主题说明了设计程序集时应考虑的下列因素：  
@@ -83,7 +82,7 @@ System.Security.UnverifiableCodeAttribute
 ```  
   
 ### <a name="disallowed-net-framework-apis"></a>禁止的 .NET Framework API  
- 不[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]能从安全的和 EXTERNAL_ACCESS 的程序集调用任何用某个不允许的**HostProtectionAttributes**批注的 API。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 不能从安全的和 EXTERNAL_ACCESS 的程序集调用任何用某个不允许的**HostProtectionAttributes**批注的 API。  
   
 ```  
 eSelfAffectingProcessMgmt  

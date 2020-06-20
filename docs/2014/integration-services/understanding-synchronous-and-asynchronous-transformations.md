@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 33037538a773d27c32522238b14e6ebfc2557eaf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5e2c771dc186fb520c1b59961c523b16a9efa83f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176096"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972667"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>了解同步和异步转换
   若要了解 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中同步转换与异步转换之间的区别，最好先了解同步转换。 如果同步转换无法满足您的需要，您的设计可能需要异步转换。
@@ -30,7 +29,7 @@ ms.locfileid: "78176096"
 
  “数据转换”这种转换是同步转换的一个示例。 对于每个传入行，它都转换指定列中的值，然后将其向下游发送。 每个单独的转换操作都与数据集中的其他所有行无关。
 
- 在[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]脚本和编程中，通过查找组件的输入的 ID 并将其分配给组件的输出的`SynchronousInputID`属性来指定同步转换。 这可以使数据流引擎处理输入中的每一行，然后自动将每行发送给指定输出。 如果希望每一行都产生一个输出，则不必再编写任何其他代码来输出数据。 如果使用 `ExclusionGroup` 属性指定各行的输出只应归为一个或另一个输出组，就像有条件拆分转换中那样，则必须调用 `DirectRow` 方法来为每一行选择相应的目标。 如果存在错误输出，必须调用 `DirectErrorRow` 将存在错误的行发送到错误输出，而不是默认输出。
+ 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 脚本和编程中，通过查找组件的输入的 ID 并将其分配给组件的输出的属性来指定同步转换 `SynchronousInputID` 。 这可以使数据流引擎处理输入中的每一行，然后自动将每行发送给指定输出。 如果希望每一行都产生一个输出，则不必再编写任何其他代码来输出数据。 如果使用 `ExclusionGroup` 属性指定各行的输出只应归为一个或另一个输出组，就像有条件拆分转换中那样，则必须调用 `DirectRow` 方法来为每一行选择相应的目标。 如果存在错误输出，必须调用 `DirectErrorRow` 将存在错误的行发送到错误输出，而不是默认输出。
 
 ## <a name="asynchronous-transformations"></a>异步转换
  如果处理每一行时无法独立于其他所有行，则您的设计可能需要异步转换。 换言之，您不能在处理每一行时在数据流中传递该行，而必须使输出数据与输入异步，即两者不同时发生。 例如，以下情况需要异步转换：

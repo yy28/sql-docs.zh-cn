@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b8aeb87f-9cce-40e2-a47c-2dc1460548af
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 69fc5b2dcf16ec48b1613dc1e46dcc13bc272d94
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 51c4ccf47f19eaf5b24ae83fc3791ace7648413c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702707"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013306"
 ---
 # <a name="for-xml-support-for-various-sql-server-data-types"></a>各种 SQL Server 数据类型的 FOR XML 支持
   本节中的主题介绍了对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中数据类型的 FOR XML 支持。  

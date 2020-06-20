@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5e8022dd9a7bd4f301ca55f60614e1b13369b804
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d452ca155a5187136c910e81e8bd073e34cad56
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62810418"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935368"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>用于数据库管理员的诊断连接
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为管理员提供了一种特殊的诊断连接，以供在无法与服务器建立标准连接时使用。 即使在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不响应标准连接请求时，管理员也可以使用此诊断连接访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以便执行诊断查询并解决问题。  
@@ -36,14 +35,14 @@ ms.locfileid: "62810418"
   
 ||  
 |-|  
-|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|  
+|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 。|  
   
 ## <a name="connecting-with-dac"></a>使用 DAC 连接  
  默认情况下，只能从服务器上运行的客户端建立连接。 不允许进行网络连接，除非它们是使用带 [remote admin connections 选项](remote-admin-connections-server-configuration-option.md)的 sp_configure 存储过程配置的。  
   
  只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin 角色的成员可以使用 DAC 进行连接。  
   
- 通过使用专用的管理员开关 ( **-A** ) 的**sqlcmd**命令提示实用工具，可以支持和使用 DAC。 有关使用 **sqlcmd** 的详细信息，请参阅[将 sqlcmd 与脚本变量结合使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。 还可以将前缀`admin:`连接到实例名称，格式为**sqlcmd-Sadmin：** _<instance_name>。_ 还可以通过连接到[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] `admin:` \< *instance_name*>，从查询编辑器启动 DAC。  
+ 通过使用专用的管理员开关 ( **-A** ) 的**sqlcmd**命令提示实用工具，可以支持和使用 DAC。 有关使用 **sqlcmd** 的详细信息，请参阅[将 sqlcmd 与脚本变量结合使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。 还可以将前缀连接 `admin:` 到实例名称，格式为**Sqlcmd-Sadmin：** _<instance_name>。_ 您还可以 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 通过连接到从查询编辑器启动 DAC `admin:` \<*instance_name*> 。  
   
 ## <a name="restrictions"></a>限制  
  由于 DAC 仅用于在极少数情况下诊断服务器问题，因此对连接有一些限制：  
@@ -62,7 +61,7 @@ ms.locfileid: "62810418"
   
     -   RESTORE  
   
-    -   备份  
+    -   BACKUP  
   
 -   DAC 只能使用有限的资源。 请勿使用 DAC 运行需要消耗大量资源的查询（例如， 对大型表执行复杂的联接）或可能造成阻塞的查询。 这有助于防止将 DAC 与任何现有的服务器问题混淆。 为了避免发生潜在的阻塞情况，如果必须执行可能会发生阻塞的查询，则尽可能在基于快照的隔离级别下运行查询；或者，将事务隔离级别设置为 READ UNCOMMITTED，将 LOCK_TIMEOUT 值设置为较短的值（如 2000 毫秒），或者同时执行这两种操作。 这可以防止 DAC 会话被阻塞。 但是，根据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所处的状态，DAC 会话可能会在闩锁上被阻塞。 可以使用 CNTRL-C 终止 DAC 会话，但不能保证一定成功。 如果失败，唯一的选择是重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
@@ -74,9 +73,9 @@ ms.locfileid: "62810418"
   
 -   查询目录视图。  
   
--   基本 DBCC 命令，例如 DBCC FREEPROCCACHE、DBCC FREESYSTEMCACHE、DBCC DROPCLEANBUFFERS`,` 和 DBCC SQLPERF。 请勿运行需要消耗大量资源的命令，如 **DBCC** CHECKDB、DBCC DBREINDEX 或 DBCC SHRINKDATABASE。  
+-   基本 DBCC 命令，例如 DBCC FREEPROCCACHE、DBCC FREESYSTEMCACHE、DBCC DROPCLEANBUFFERS`,` 和 DBCC SQLPERF。 不要运行大量占用大量资源的命令，如**dbcc** CHECKDB、dbcc DBREINDEX 或 dbcc SHRINKDATABASE。  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL*spid>\<* 命令。 根据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的状态，KILL 命令并非一定会成功；如果失败，则唯一的选择是重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 下面是一般的指导原则：  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]KILL *\<spid>* 命令。 根据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的状态，KILL 命令并非一定会成功；如果失败，则唯一的选择是重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 下面是一般的指导原则：  
   
     -   请通过查询 `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`来验证 SPID 是否已被实际终止。 如果没有返回任何行，则表明会话已被终止。  
   
@@ -93,7 +92,7 @@ ms.locfileid: "62810418"
   
  DAC 端口由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在启动时动态分配。 当连接到默认实例时，DAC 会避免在连接时对 SQL Server Browser 服务使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 解决协议 (SSRP) 请求。 它先通过 TCP 端口 1434 进行连接。 如果失败，则通过 SSRP 调用来获取端口。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器没有侦听 SSRP 请求，则连接请求将返回错误。 若要了解 DAC 所侦听的端口号，请参阅错误日志。 如果将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为接受远程管理连接，则必须使用显式端口号启动 DAC：  
   
- **sqlcmd-Stcp：** _ \<server>，\<端口>_  
+ **sqlcmd-Stcp：** _ \<server> ， \<port> _  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志列出了 DAC 的端口号，默认情况下为 1434。 如果将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为只接受本地 DAC 连接，请使用以下命令和环回适配器进行连接：  
   

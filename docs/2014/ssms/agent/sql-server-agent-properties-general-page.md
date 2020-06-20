@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: b51601e9-5454-43c6-bb5e-24eb2ff043c8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 66a7b7cd9328f70e5b5ca374a04ad5e9dd6e079a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 667a07744acf4b6d8b0dfa1e83adca738add0b4f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245783"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058707"
 ---
 # <a name="sql-server-agent-properties-general-page"></a>SQL Server 代理属性（“常规”页）
-  使用此页可以查看和修改[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务的常规属性。  
+  使用此页可以查看和修改代理服务的常规属性 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="options"></a>选项  
  **服务状态**  

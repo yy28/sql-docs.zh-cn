@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 71e563fc-f5d7-4c2e-a42f-f0695a831f32
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8225039ece914c461af34f5344350227d6a39cdc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2fe2264aed4eb2f292a6bd1e4e565cebe2a833f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761146"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066440"
 ---
 # <a name="delete-unique-constraints"></a>删除唯一约束
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 删除 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的唯一约束。 删除唯一约束将删除对在约束表达式所包含的列或列组合中输入的值的唯一性要求，并且会删除相应的唯一索引。  

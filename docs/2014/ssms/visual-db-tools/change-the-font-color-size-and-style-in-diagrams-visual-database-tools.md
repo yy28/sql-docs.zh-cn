@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 14de9c19-8bbf-4347-bef5-156499640052
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0945dd4bd2897cd0dba7425f98700b05237c6b96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8a50e450e009a9d584adc54b4c52cd8b7da457e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63298301"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066254"
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>在关系图中更改字体颜色、大小和样式（可视化数据库工具）
   您可以通过更改字体颜色、大小和样式，自定义文本在数据库关系图中的显示方式。 当修改新关系图和现有关系图时，可对这些关系图应用上述更改。  

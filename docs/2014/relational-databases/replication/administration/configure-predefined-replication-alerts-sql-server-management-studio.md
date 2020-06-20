@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 103f461c29e2bd7534ad5cb96836f06c972a6c5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 191ffcfe0fb5ac041956a42500da650f6d8cc453
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63187261"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066028"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>配置预定义的复制警报 (SQL Server Management Studio)
   复制提供了下列预定义警报，可以配置这些警报以响应复制事件：  
@@ -59,7 +58,7 @@ ms.locfileid: "63187261"
          如果警报为 "**复制：订阅服务器未通过数据验证**"，您可以指定复制为此警报提供的响应作业：选择 "**执行作业**"，然后单击浏览按钮（**...**）。在 "**定位作业**" 对话框中，单击 "**浏览**"。 在 **“查找对象”** 对话框中，选择 **“重新初始化未通过数据验证的订阅”**。 在两个打开的对话框中，单击 **“确定”** 。 作业执行时，它将把远程过程调用 (RPC) 用于重新初始化订阅的存储过程。 如果发布服务器使用远程分发服务器，您必须在发布服务器上定义远程服务器登录名，以便可以从分发服务器到发布服务器进行 RPC。   
     -   在 **“选项”** 页上，自定义响应文本。    
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]    
-5.  单击“**关闭**”。  
+5.  单击“关闭” 。  
   
 ## <a name="see-also"></a>另请参阅  
  [对复制代理事件使用警报](../agents/use-alerts-for-replication-agent-events.md)  

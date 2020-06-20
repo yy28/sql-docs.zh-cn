@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 588295d0705ec9c556c85eb5bef1d96d8128b580
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c41673f6f3bf1f4de2a831ecd659321b273b6af9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176066"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971887"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>创建合并成员 (Master Data Services)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]在中，在您想要显式层次结构的父节点时创建合并成员。 合并成员可以具有其自己的属性。 它们用于分组。 如以下示例中所示，合并成员可用于其下具有帐户的帐户组。
 
  ![MDS 合并成员](../../2014/master-data-services/media/mds-consolidated-members.png "MDS 合并成员")
 
-## <a name="prerequisites"></a>先决条件
+## <a name="prerequisites"></a>必备条件
  若要执行此过程：
 
 -   **** 您必须有权访问“资源管理器”功能区域。
@@ -45,13 +44,13 @@ ms.locfileid: "78176066"
 
 5.  **** 在网格上方，选择 **“合并成员”** 或“层次结构中的所有合并成员”选项。
 
-6.  单击 **“添加”** 。
+6.  单击“添加”。
 
 7.  在右侧窗格中，填写字段。
 
 8.  可选。 **** 在“批注”框中，键入有关添加成员原因的注释。 有权访问成员的所有用户都可以查看批注。
 
-9. 单击“确定”。 
+9. 单击“确定”。
 
 ## <a name="next-steps"></a>后续步骤
 

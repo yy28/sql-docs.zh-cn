@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ae9ea068-0857-4505-a3b2-f53d256b644c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 13e20c9c4b415ad5dabc53baad813126a81afcae
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 707c1389f1a1a97d904617ebb54cbf5c5495a9d1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702874"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065695"
 ---
 # <a name="server-side-xml-formatting-sqlxml-40"></a>服务器端 XML 格式 (SQLXML 4.0)
   本主题提供有关在服务器端从对 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中数据库执行的查询生成的行集设置 XML 文档格式的信息。  

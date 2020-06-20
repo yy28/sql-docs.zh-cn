@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9ca284c5-f3e0-4a67-a132-fff376ff0ffe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 375e7c8a1bb520f5a3004c5279682d5b3f145b13
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc5839f699d55edf86c5e3e3f0eb001089a0a5dd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782492"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935273"
 ---
 # <a name="ft-notify-bandwidth-server-configuration-option"></a>ft notify bandwidth 服务器配置选项
-  使用 **ft notify bandwidth** 选项可以指定小内存缓冲区的池可以增长到的大小。 小内存缓冲区的大小为 64 千字节 (KB)。 *max* 参数值指定全文内存管理器在小缓冲池中应该维护的最大缓冲区数。 如果`max`值为零，则较小缓冲池中的缓冲区数没有上限值。  
+  使用 **ft notify bandwidth** 选项可以指定小内存缓冲区的池可以增长到的大小。 小内存缓冲区的大小为 64 千字节 (KB)。 *max* 参数值指定全文内存管理器在小缓冲池中应该维护的最大缓冲区数。 如果 `max` 值为零，则较小缓冲池中的缓冲区数没有上限值。  
   
  **min** 参数指定在小内存缓冲区的池中必须维护的最小内存缓冲区数。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存管理器发出请求后，将释放所有额外的缓冲池，但将保留该最低数量的缓冲区。 不过，如果指定的 **min** 值为零，则释放所有内存缓冲区。  
   

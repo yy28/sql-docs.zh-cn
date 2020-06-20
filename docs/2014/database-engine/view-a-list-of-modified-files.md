@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1b053719-8500-4300-a169-fffca5801dd0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f500eb460cab8734a062ddf6561cbdf01d0f773
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62773423"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927568"
 ---
 # <a name="view-a-list-of-modified-files"></a>查看已修改的文件列表
   您可以使用 "**挂起签入**" 窗口显示当前解决方案中的已签出文件的列表，并通过单击一次按钮签入这些文件。  
@@ -30,12 +29,12 @@ ms.locfileid: "62773423"
   
 1.  在 "**视图**" 菜单上，单击 "**挂起签入**"。  
   
-2.  若要签入选定的文件，请单击 "**签入**"。 或者，您可以将**挂起的签入**窗口停靠在[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]环境的右侧，以便您可以在完成工作时签入文件。  
+2.  若要签入选定的文件，请单击 "**签入**"。 或者，您可以将**挂起的签入**窗口停靠在环境的右侧， [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 以便您可以在完成工作时签入文件。  
   
      **登记**  
      签入解决方案。  
   
-     **备注**  
+     **注释**  
      将纯文本注释与挂起的签入相关联。 对于项目的每一个版本，都会创建一个与之关联的注释，该注释存储在源代码管理数据库中。  
   
      **选项**  

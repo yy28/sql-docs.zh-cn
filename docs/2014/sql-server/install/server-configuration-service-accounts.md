@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: c283702d-ab20-4bfa-9272-f0c53c31cb9f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 405e1f8509e67518711eb2330c5f58961a3be77b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a894475f9dbdc95396f27b32f25f56bc409f0348
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76921137"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036722"
 ---
 # <a name="server-configuration---service-accounts"></a>服务器配置 - 服务帐户
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导的“服务器配置”页可以为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务分配登录帐户。 此页上配置的实际服务取决于您选择安装的功能。  
   
-用于启动和运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的启动帐户可以是域用户帐户、本地用户帐户、托管服务帐户、虚拟帐户或内置系统帐户。  
+用于启动和运行的启动帐户 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以是域用户帐户、本地用户帐户、托管服务帐户、虚拟帐户或内置系统帐户。  
   
 ## <a name="options"></a>选项  
  您可以为所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务分配相同的登录帐户，也可以单独配置各个服务帐户。 您还可以指定是自动启动、手动启动还是禁用服务。 对于大多数安装建议采用默认帐户。  
@@ -31,7 +30,7 @@ ms.locfileid: "76921137"
   
  如果将服务配置为使用域帐户， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议对各服务帐户进行单独配置，以便为每项服务提供最低特权，即向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务授予它们完成各自任务所需的最低权限。 有关包含帐户类型的说明的详细信息，请参阅 [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
- **单独[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置服务帐户（推荐）**  
+ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]单独配置服务帐户（推荐）**  
  使用网格为每项 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务设置一个登录用户名和密码并设置相应服务的启动类型。 您可以对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务使用内置系统帐户、本地帐户、本地组、域组或域用户帐户。  
   
  选择下列任一服务以自定义其设置。  

@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 52e486dc6cb6c3da45d590d4ba2e557c87c1a556
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4641159e894b764cbee4d7f02085f3ceb8e6d87d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66009875"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970824"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>在 FileTable 中使用目录和路径
   说明 FileTable 中用于存储文件的目录结构。  
   
-##  <a name="how-to-work-with-directories-and-paths-in-filetables"></a><a name="HowToDirectories"></a> 如何在 FileTable 中使用目录和路径  
+##  <a name="how-to-work-with-directories-and-paths-in-filetables"></a><a name="HowToDirectories"></a> 如何：在 FileTable 中使用目录和路径  
  您可以使用以下 3 个函数以便在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中使用 FileTable 目录：  
   
 |为得到这一结果|使用此函数|  
@@ -31,7 +30,7 @@ ms.locfileid: "66009875"
 |获取 FileTable 中文件或目录的绝对或相对 UNC 路径。|[GetFileNamespacePath (Transact-SQL)](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)|  
 |通过提供路径，获取 FileTable 中指定文件或目录的路径定位器 ID 值。|[GetPathLocator (Transact-SQL)](/sql/relational-databases/system-functions/getpathlocator-transact-sql)|  
   
-##  <a name="how-to-use-relative-paths-for-portable-code"></a><a name="BestPracticeRelativePaths"></a> 如何使用相对路径编写可移植代码  
+##  <a name="how-to-use-relative-paths-for-portable-code"></a><a name="BestPracticeRelativePaths"></a> 如何：使用相对路径编写可移植代码  
  若要使代码和应用程序独立于当前的计算机和数据库，应避免编写依赖于绝对文件路径的代码。 可通过使用 [FileTableRootPath (Transact-SQL)](/sql/relational-databases/system-functions/filetablerootpath-transact-sql) 和 [GetFileNamespacePath (Transact-SQL)](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)函数组合在运行时获取文件的完整路径，如下例所示。 默认情况下，`GetFileNamespacePath` 函数返回数据库根路径下的文件的相对路径。  
   
 ```sql  
@@ -55,12 +54,12 @@ GO
 > [!IMPORTANT]  
 >  您不能在 FileTable 目录中存储超过 15 个级别的子目录。 在您存储 15 个级别的子目录时，最下面的一级不能包含文件，因为这些文件将代表另外一个级别。  
   
-###  <a name="length-of-full-path-name"></a><a name="fqnlength"></a>完整路径名称的长度  
+###  <a name="length-of-full-path-name"></a><a name="fqnlength"></a> 完整路径名的长度  
   
 > [!IMPORTANT]  
 >  NTFS 文件系统支持远远超过 Windows 外壳程序和大多数 Windows API 的 260 个字符限制的路径名。 因此，使用 Transact-SQL 在 FileTable 的文件层次结构中创建的文件有可能无法使用 Windows 资源管理器或很多其他 Windows 应用程序查看或打开，原因是这些文件的完整路径名称超过了 260 个字符。 但是，您可使用 Transact-SQL 继续访问这些文件。  
   
-##  <a name="the-full-path-to-an-item-stored-in-a-filetable"></a><a name="fullpath"></a>FileTable 中存储的项的完整路径  
+##  <a name="the-full-path-to-an-item-stored-in-a-filetable"></a><a name="fullpath"></a> FileTable 中存储的项的完整路径  
  FileTable 中存储的文件或目录的完整路径用以下元素开头：  
   
 1.  为在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例级别进行 FILESTREAM 文件 I/O 访问启用的共享区。  
@@ -77,7 +76,7 @@ GO
   
  请务必记住，在此实例级别 FILESTREAM 共享区下创建的目录层次结构是虚拟目录层次结构。 该层次结构存储于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中，并且在物理上不在 NTFS 文件系统中表示。 访问 FILESTREAM 共享区之下和其包含的 FileTable 中的文件和目录的所有操作都将被文件系统中嵌入的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件拦截和处理。  
   
-##  <a name="the-semantics-of-the-root-directories-at-the-instance-database-and-filetable-levels"></a><a name="roots"></a>实例级、数据库级和 FileTable 级根目录的语义  
+##  <a name="the-semantics-of-the-root-directories-at-the-instance-database-and-filetable-levels"></a><a name="roots"></a> 实例级、数据库级和 FileTable 级根目录的语义  
  此目录层次结构遵循下面的语义：  
   
 -   实例级别 FILESTREAM 共享区由管理员配置并且存储为服务器的属性。 您可以通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，重命名该存储区。 在重新启动服务器之前，重命名操作将不会生效。  
@@ -90,7 +89,7 @@ GO
   
 -   不能使用独占式文件句柄打开这些根目录。  
   
-##  <a name="the-is_directory-column-in-the-filetable-schema"></a><a name="is_directory"></a>FileTable 架构中的 is_directory 列  
+##  <a name="the-is_directory-column-in-the-filetable-schema"></a><a name="is_directory"></a> FileTable 架构中的 is_directory 列  
  下表说明 **is_directory** 列与包含 FileTable 中 FILESTREAM 数据的 **file_stream** 列之间的相互影响：  
   
 ||||  
@@ -110,8 +109,8 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [启用 FileTable 的先决条件](enable-the-prerequisites-for-filetable.md)   
- [Create、Alter 和 Drop Filetable](create-alter-and-drop-filetables.md)   
- [使用 Transact-sql 访问 Filetable](access-filetables-with-transact-sql.md)   
+ [创建、更改和删除 FileTable](create-alter-and-drop-filetables.md)   
+ [使用 Transact-SQL 访问 FileTable](access-filetables-with-transact-sql.md)   
  [使用文件输入输出 API 访问 FileTable](access-filetables-with-file-input-output-apis.md)  
   
   

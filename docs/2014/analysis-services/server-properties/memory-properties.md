@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a88e2c1508ec849437d90b3de7c66705299dafc1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f1ffd3bd5a41b141e81fcb37b064e5cc4f35f84
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068885"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940633"
 ---
 # <a name="memory-properties"></a>内存属性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的服务器内存属性。 有关设置这些属性的指南，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](https://go.microsoft.com/fwlink/?LinkID=225539)。  
@@ -37,7 +36,7 @@ ms.locfileid: "66068885"
   
  **适用于：** 多维和表格服务器模式，除非另外说明。  
   
-## <a name="properties"></a>属性  
+## <a name="properties"></a>“属性”  
  `LowMemoryLimit`  
  一个有符号的 64 位双精度浮点数属性，可定义服务器内存不足所在的点，以总物理内存的百分比表示。 达到此限制时，实例将通过关闭过期会话以及卸载未使用的计算从缓存中缓慢清除内存。 服务器不会在未超过此限制的情况下释放内存。 默认值为 65；这指示最低内存限制为物理内存或虚拟地址空间的 65%（以二者中少者计）。  
   

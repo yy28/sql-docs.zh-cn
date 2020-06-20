@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2cd0ea9764007784fb6f999c3115e0a2997d8e2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f11ba654f7cc34f521990e8c420d41885d3c55b9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011381"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004424"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>对表和列启用语义搜索
   介绍如何启用或禁用包含文档或文本的选定列上的统计语义索引。  
@@ -113,7 +112,7 @@ GO
 ```  
   
  **使用 SQL Server Management Studio 创建新的语义索引**  
- 运行全文索引向导并在“选择表列”  页为每个要创建语义索引的列启用“统计语义”  。 有关详细信息，包括有关如何启动全文索引向导的信息，请参阅 [使用全文索引向导](use-the-full-text-indexing-wizard.md)。  
+ 运行全文索引向导并在“选择表列” 页为每个要创建语义索引的列启用“统计语义” 。 有关详细信息，包括有关如何启动全文索引向导的信息，请参阅 [使用全文索引向导](use-the-full-text-indexing-wizard.md)。  
   
 ###  <a name="how-to-create-a-semantic-index-when-there-is-an-existing-full-text-index"></a><a name="HowToEnableAlter"></a>如何：在存在现有全文索引时创建语义索引  
  在使用 **ALTER FULLTEXT INDEX** 语句更改现有全文索引时，可以添加语义索引。 您还可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用各种对话框添加语义索引。  
@@ -142,7 +141,7 @@ GO
 ```  
   
  **使用 SQL Server Management Studio 添加语义索引**  
- 可以在“全文索引属性”  对话框的“全文索引列”  页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](../../database-engine/manage-full-text-indexes.md)。  
+ 可以在“全文索引属性”对话框的“全文索引列”页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](../../database-engine/manage-full-text-indexes.md)。  
   
 ###  <a name="requirements-and-restrictions-for-altering-an-existing-index"></a><a name="addreq"></a>更改现有索引的要求和限制  
   
@@ -181,7 +180,7 @@ GO
     ```  
   
  **使用 SQL Server Management Studio 删除语义索引**  
- 可以在“全文索引属性”  对话框的“全文索引列”  页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](../../database-engine/manage-full-text-indexes.md)。  
+ 可以在“全文索引属性”对话框的“全文索引列”页上更改启用语义索引和全文索引的列。 有关详细信息，请参阅 [管理全文索引](../../database-engine/manage-full-text-indexes.md)。  
   
 ###  <a name="requirements-and-restrictions-for-dropping-a-semantic-index"></a><a name="dropreq"></a>删除语义索引的要求和限制  
   
@@ -259,7 +258,7 @@ GO
 |英语(美国)|2052|  
 |法语|1036|  
 |意大利语|1040|  
-|葡萄牙语（巴西）|1046|  
+|葡萄牙语(巴西)|1046|  
 |俄语|1049|  
 |瑞典语|1053|  
 |英语(英国)|2057|  

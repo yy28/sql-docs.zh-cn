@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0a1b0b28afbb83028af8d71644af08ca660a0b36
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f1a7286f15af28f97e488b8b40fd745a0d320108
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753409"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997140"
 ---
 # <a name="files-and-version-numbers"></a>文件和版本号
-  所有必需[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的管理对象（SMO）组件都作为[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端或服务器实例的一部分进行安装。 SMO 实现于几个托管程序集中。 您可以在客户端或服务器上开发 SMO 应用程序。  
+  所有必需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的管理对象（SMO）组件都作为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端或服务器实例的一部分进行安装。 SMO 实现于几个托管程序集中。 您可以在客户端或服务器上开发 SMO 应用程序。  
   
-|目录|文件|说明|  
+|Directory|文件|说明|  
 |---------------|----------|-----------------|  
 |[!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]|Microsoft.SqlServer.ConnectionInfo.dll|包含对连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的支持。|  
 |[!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]|Microsoft.SqlServer.ServiceBrokerEnum.dll|包含对编写 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Service Broker 的支持。 这仅在访问 Service Broker 的程序中是必需的。|  

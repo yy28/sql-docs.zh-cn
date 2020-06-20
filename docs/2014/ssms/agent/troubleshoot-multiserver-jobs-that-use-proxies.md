@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: fc579bd3-010c-4f72-8b5c-d0cc18a1f280
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47e3c3991bd4732d542bf1ce79e83000e738ff77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19de975ef5e1f22c93cec72a5014a01da5b03dd8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245414"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067468"
 ---
 # <a name="troubleshoot-multiserver-jobs-that-use-proxies"></a>排除使用代理的多服务器作业的故障
   如果分布式作业的步骤与某个代理关联，则该作业将在目标服务器上该代理帐户的上下文中运行。 如果从主服务器下载使用代理帐户的作业步骤时失败，则请检查 **msdb** 数据库中 **sysdownloadlist** 表的 **error_message** 列是否存在下列错误消息：  
   
 -   “该作业步骤需要代理帐户，但是目标服务器上禁用了代理匹配功能。”  
   
-     若要解决此错误，请设置**\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\MSSQL.**>**\SQLServerAgent\AllowDownloadedJobsToMatchProxyName** _ \<n_\SQLServerAgent\AllowDownloadedJobsToMatchProxyName 注册表子项**设置为1（true）**。 默认情况下，此子项设置为**0** （`false`）。 MSSQL 的值 **。**\< *n*> 是实例名称;例如， **mssql. 1**或**mssql. 3**。  
+     若要解决此错误，请设置**\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\MSSQL.**_ \<n_> **\SQLServerAgent\AllowDownloadedJobsToMatchProxyName**注册表子项**设置为1（true）**。 默认情况下，此子项设置为**0** （ `false` ）。 MSSQL 的值 **。**\<*n*> 是实例名称;例如， **mssql. 1**或**mssql. 3**。  
   
 -   “找不到代理。”  
   
