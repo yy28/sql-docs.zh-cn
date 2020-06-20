@@ -22,12 +22,12 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d4e624323c2794afc38a9d8dcf948db69282af0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 55e5892b9183ab2455cee7aa39a34de0d7bb28bf
+ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827909"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107041"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "82827909"
 |**physical_memory_kb**|**bigint**|**适用于：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和更高版本。<br /><br /> 指定计算机上的物理内存总量。 不可为 Null。|  
 |**virtual_memory_in_bytes**|**bigint**|**适用于：** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]到 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 。<br /><br /> 对用户模式进程可用的虚拟内存的数量。 通过使用 3 GB 开关，可以用它来确定是否 SQL Server 已启动。|  
 |**virtual_memory_kb**|**bigint**|**适用于：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和更高版本。<br /><br /> 指定对用户模式进程可用的虚拟地址空间的总量。 不可为 Null。|  
-|**bpool_commited**|**int**|**适用于：** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]到 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 。<br /><br /> 表示内存管理器中的已提交内存 (KB)。 不包括内存管理器中的保留内存。 不可为 Null。|  
+|**bpool_committed**|**int**|**适用于：** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]到 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 。<br /><br /> 表示内存管理器中的已提交内存 (KB)。 不包括内存管理器中的保留内存。 不可为 Null。|  
 |**committed_kb**|**int**|**适用于：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和更高版本。<br /><br /> 表示内存管理器中的已提交内存 (KB)。 不包括内存管理器中的保留内存。 不可为 Null。|  
 |**bpool_commit_target**|**int**|**适用于：** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]到 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 。<br /><br /> 表示 SQL Server 内存管理器可以占用的内存量 (KB)。|  
 |**committed_target_kb**|**int**|**适用于：** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和更高版本。<br /><br /> 表示 SQL Server 内存管理器可以占用的内存量 (KB)。 使用类似如下的不同输入计算目标量：<br /><br /> -包括其负载的系统的当前状态<br /><br /> -当前进程请求的内存<br /><br /> -计算机上安装的内存量<br /><br /> -配置参数<br /><br /> 如果**committed_target_kb**大于**committed_kb**，则内存管理器将尝试获得额外内存。 如果**committed_target_kb**小于**committed_kb**，则内存管理器将尝试减少提交的内存量。 **Committed_target_kb**始终包括盗用内存和保留内存。 不可为 Null。|  
