@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 37a22721-546c-453d-bc6f-238c13d7505d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dd25cd3ba339ebd27430bfeea2e634a6ad8f2ff4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c869f6d8b83a1210a9d7e88ca3c665bf6a24f982
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63130723"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055189"
 ---
 # <a name="getting-started-in-visual-c-net"></a>Visual C# .NET 入门
-  [!INCLUDE[csprcs](../../includes/csprcs-md.md)].NET 是 .Net 中[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]的公共语言运行时（CLR）所支持的一种托管编程语言。 许多有关 c # 语言的详细信息，请参阅[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .net 文档。 您可以使用 [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] 和 [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] 来开发 SMO 应用程序。  
+  [!INCLUDE[csprcs](../../includes/csprcs-md.md)].NET 是 .Net 中的公共语言运行时（CLR）所支持的一种托管编程语言 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 。 许多有关 c # 语言的详细信息，请参阅 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .net 文档。 您可以使用 [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] 和 [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] 来开发 SMO 应用程序。  
   
 ## <a name="references-and-imports"></a>引用和导入  
  在启动 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 项目后，必须添加对 SMO 程序集的引用。 然后，导入所需命名空间，以便程序能够识别 SMO 类型。  

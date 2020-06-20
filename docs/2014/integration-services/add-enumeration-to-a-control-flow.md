@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f212b5fb-3cc4-422e-9b7c-89eb769a812a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cad9c6a3537fb523a13f0206eed6c8eee837ed06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bff127798f7c36340a85fa72cebfdc9a012c0676
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061910"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926098"
 ---
 # <a name="add-enumeration-to-a-control-flow"></a>将枚举添加到控制流
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含 Foreach 循环容器，此容器是一个控制流元素，利用它可以轻松地将枚举文件和对象的循环构造包括到包的控制流中。 有关详细信息，请参阅 [Foreach 循环容器](control-flow/foreach-loop-container.md)。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2a2e1dbf-02b9-4893-aaf0-c0e4a2c9b4f9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ef0f55049e5ae9c96eed10fb1f39d7f3d95a19f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 06e8d38be6f1e8e1ef816f5fa38c66d74a69987a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62506771"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054507"
 ---
 # <a name="report-server-properties-service-tab"></a>报表服务器属性（“服务”选项卡）
   此服务为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 报表服务器服务。 如果属性值呈浅灰色，则不能使用此应用程序更改。  

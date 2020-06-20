@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3ca62d8d45ab5a116ab657646abf2393c69e73c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22e4df8d67b61e50383ffd8e33f982990ff3f2ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211807"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055091"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>指定表中的计算列
-  计算列是虚拟列，并非实际存储在表中，除非此列标记为 PERSISTED。 计算列的表达式可以使用其他列中的数据来计算其所属列的值。 可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中为计算列指定一个表达式。  
+  计算列是虚拟列，并非实际存储在表中，除非此列标记为 PERSISTED。 计算列的表达式可以使用其他列中的数据来计算其所属列的值。 可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中为计算列指定一个表达式。  
   
  **本主题内容**  
   
@@ -64,7 +63,7 @@ ms.locfileid: "68211807"
     > [!IMPORTANT]  
     >  当两个不同数据类型的表达式用公式组合后，数据类型优先级规则指定将优先级较低的数据类型转换为优先级较高的数据类型。 如果此转换不是所支持的隐式转换，则返回错误“`Error validating the formula for column column_name.`”。 使用 CAST 或 CONVERT 函数解决数据类型冲突。 例如，如果类型为 `nvarchar` 的列与类型为 `int` 的列相结合，则整数类型必须转换为 `nvarchar`，如公式 `('Prod'+CONVERT(nvarchar(23),ProductID))` 中所示。 有关详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](/sql/t-sql/functions/cast-and-convert-transact-sql)。  
   
-5.  从“持久化”  子属性的下拉菜单上选择“是”  或“否”  ，以指示该数据是否持久。  
+5.  从“持久化”子属性的下拉菜单上选择“是”或“否”，以指示该数据是否持久。  
   
 6.  在“文件”菜单上，单击“保存表名称”********__。  
   
@@ -84,7 +83,7 @@ ms.locfileid: "68211807"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 此示例创建了一个表，其中具有一个计算列，该列将 `QtyAvailable` 列的值乘以 `UnitPrice` 列的值。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。 此示例创建了一个表，其中具有一个计算列，该列将 `QtyAvailable` 列的值乘以 `UnitPrice` 列的值。  
   
     ```  
     CREATE TABLE dbo.Products   
@@ -111,7 +110,7 @@ ms.locfileid: "68211807"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 以下示例向在前一个示例中创建的表添加一个新列。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。 以下示例向在前一个示例中创建的表添加一个新列。  
   
     ```  
     ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.35);  
@@ -124,7 +123,7 @@ ms.locfileid: "68211807"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  若要将现有列更改为计算列，您必须删除后重新创建该计算列。 将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”**。 以下示例修改在前一个示例中添加的列。  
+3.  若要将现有列更改为计算列，您必须删除后重新创建该计算列。 将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。 以下示例修改在前一个示例中添加的列。  
   
     ```  
     ALTER TABLE dbo.Products DROP COLUMN RetailValue;  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 016ea0dd6e5352a0b45147a5ea4cea3764abb305
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fd5686299751d6ae10b9407deee36b8aeea31468
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703274"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015766"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>应用 XSL 转换（SQLXMLOLEDB 访问接口）
   在此示例 ADO 应用程序中，将执行 SQL 查询并将 XSL 转换应用到结果。 如果将 ClientSideXML 属性设置为 True，则会强制在客户端上处理行集。 将命令方言设置为 {5d531cb2-e6ed-11d2-b252-00c04f681b71}，因为在模板中指定 SQL 查询且在执行模板时必须指定此方言。 Xsl 属性指定用于应用转换的 XSL 文件。 "基路径" 属性的值用于搜索 XSL 文件。 如果指定 xsl 属性的值中的路径，则该路径相对于在 "基路径" 属性中指定的路径。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2f67c88be66be069a48d008ba6889a81dfda8ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489274"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061109"
 ---
 # <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>任务 4（可选）：组合、匹配和发布新数据集
   随着时间的推移，您将会想要向 MDS 存储库中添加更多的数据。 在添加数据前，将新数据与已在 MDS 中进行管理的数据进行比较可能会很有用，以确保不会添加重复数据或不准确的数据。 在用于 Excel 的 Master Data Services 外接程序中，您可以合并两个工作表的数据并比较数据以在将数据发布到 MDS 前识别并删除重复项。 MDS Excel 外接程序的匹配功能使用 DQS 匹配功能来识别数据中的匹配项。 在本任务中，您将两个工作表中的数据合并到一个工作表中，然后执行匹配活动以在发布到 MDS 前识别并删除重复项。 有关更多详细信息，请参阅[MDS Add-in for Excel 中的数据质量匹配](https://msdn.microsoft.com/library/hh548681.aspx)和[组合数据](https://msdn.microsoft.com/library/hh548680.aspx)主题。  
@@ -38,7 +37,7 @@ ms.locfileid: "65489274"
   
 7.  单击底部的 " **Sheet2** " 切换到 " **sheet2** " 选项卡。如果看不到**Sheet2**，请添加一个新的工作表。  
   
-8.  打开 "**供应商 .xls** " 文件（包含在教程文件中的原始输入文件），并将**CombineAndCleanse**工作表中的所有（三个）行复制到**Sheet2**。  
+8.  打开**Suppliers.xls**文件（教程文件中包含的原始输入文件），并将**CombineAndCleanse**工作表中的所有（三个）行复制到**Sheet2**。  
   
 9. 切换回连接到**MDS**的**Microsoft Excel** （不是**清理和匹配的供应商列表**Excel）中的**供应商**工作表。  
   
@@ -78,7 +77,7 @@ ms.locfileid: "65489274"
   
 22. 将工作表列映射到域，如下表中所示。  
   
-    |工作表列|Domain|  
+    |工作表列|域|  
     |----------------------|------------|  
     |Code（您上载了 Supplier ID 作为 MDS 中 Supplier 实体的代码）|Supplier ID|  
     |Name（您上载了 Supplier Name 作为 MDS 中 Supplier 实体的名称）|Supplier Name|  
@@ -88,7 +87,7 @@ ms.locfileid: "65489274"
   
 24. 输入**70%** 作为**供应商名称**的**权重**，输入**30%** 作为**联系电子邮件****的权重**，如图所示。  
   
-25. 单击" **确定**"。  
+25. 单击“确定”。  
   
 26. 匹配过程应为供应商标识一个重复项，**代码为： S1**。  
   
@@ -110,7 +109,7 @@ ms.locfileid: "65489274"
   
 34. 现在，关闭**Book1-Microsoft Excel**窗口而不保存该文件。  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
  [任务 5：从 Excel 中创建基于域的属性](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
   
   

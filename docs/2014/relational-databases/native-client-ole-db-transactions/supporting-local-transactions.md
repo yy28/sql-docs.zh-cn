@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 78f2e5fc-b6fb-4eda-9f71-991a4d6c4902
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2f16ebe4df94be0d3c9135de508f9743e0336799
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c20dc0af07c43dca1c2441a87e7c0ff427f236cc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704486"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017705"
 ---
 # <a name="supporting-local-transactions"></a>支持本地事务
   会话分隔 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本机客户端 OLE DB 提供程序本地事务的事务范围。 当使用者的方向时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB 提供程序将请求提交给已连接的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，该请求构成了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB 提供程序的工作单元。 本地事务始终 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB 提供程序会话中包装一个或多个工作单元。  

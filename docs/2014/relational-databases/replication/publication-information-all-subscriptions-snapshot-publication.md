@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7ce656c2-6e60-4625-8955-1daff641070c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3665647e89c03b75230acf58d2f5193fceefe878
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec5fe2edd16b3ffca4ec6e94850d96e828a7ed71
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021824"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016663"
 ---
 # <a name="publication-information-all-subscriptions-snapshot-publication"></a>发布信息，所有订阅（快照发布）
   **“所有订阅”** 选项卡显示针对所选快照发布的所有订阅的相关信息。  
@@ -38,7 +37,7 @@ ms.locfileid: "63021824"
  **显示**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]仅限和更高版本。 为所选订阅类型选择要显示的订阅状态。 例如，可以选择仅显示包含错误的订阅。  
   
- **状态**  
+ **Status**  
  每一个订阅的状态，该状态由快照代理或分发代理的状态决定（显示优先级较高的状态）。  
   
  默认情况下，包含订阅信息的网格按 **“状态”** 列排序。 下面的列表显示了可能的状态值以及这些值的排序顺序（例如，错误项始终显示在该网格的顶部）：  

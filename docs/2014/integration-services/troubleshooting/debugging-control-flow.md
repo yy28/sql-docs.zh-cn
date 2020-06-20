@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3a7417a3f5792be0838d421ca0115935ae190f49
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e1795af295d8a7d77a71fbdfdfc9a433ed39b58f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176597"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972742"
 ---
 # <a name="debugging-control-flow"></a>调试控制流
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含一些功能和工具，你可以使用这些功能和工具对 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包中的控制流进行故障排除。
@@ -50,7 +49,7 @@ ms.locfileid: "78176597"
 |当任务或容器收到 `OnTaskFailed` 事件时。|任务宿主失败时由其调用。|
 |当任务或容器收到 `OnProgress` 事件时。|要更新任务执行的进度时调用。|
 |当任务或容器收到 `OnQueryCancel` 事件时。|在可以取消执行的任务处理中，随时可以调用。|
-|当任务或容器收到 `OnVariableValueChanged` 事件时。|变量值更改时，由 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时调用。 必须将该变量的 RaiseChangeEvent 设置为`true`才能引发此事件。<br /><br /> &#42;&#42; 警告 &#42;&#42; 必须在容器范围定义与此断点关联的变量   。 如果在包作用域定义变量，则不会命中断点。|
+|当任务或容器收到 `OnVariableValueChanged` 事件时。|变量值更改时，由 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时调用。 必须将该变量的 RaiseChangeEvent 设置为 `true` 才能引发此事件。<br /><br /> &#42;&#42; 警告 &#42;&#42; 必须在容器范围定义与此断点关联的变量   。 如果在包作用域定义变量，则不会命中断点。|
 |当任务或容器收到 `OnCustomEvent` 事件时。|由任务调用，用于引发自定义的任务定义事件。|
 
  除了对所有任务和容器可用的中断条件外，有些任务和容器还包含用来设置断点的特殊中断条件。 例如，可以在 For 循环容器上启用中断条件，设置一个在循环的每个迭代开始时挂起执行的断点。

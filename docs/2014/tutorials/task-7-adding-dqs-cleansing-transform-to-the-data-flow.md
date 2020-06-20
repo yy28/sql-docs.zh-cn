@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0b749c71-dfb6-493a-804f-600290d46eef
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 209659609c2cf19196cc35050fb32e39e079d1c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0978452104eb9a55d49dfa9f851ef7578489db26
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65488946"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006483"
 ---
 # <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>任务 7：将 DQS 清理转换添加到数据流
   在本任务中，您将向数据流添加 DQS 清理转换以使用 DQS 清理输入的供应商数据。 有关转换的详细信息，请参阅**[DQS 清理转换](https://msdn.microsoft.com/library/ee677619.aspx)**。  
@@ -34,7 +33,7 @@ ms.locfileid: "65488946"
   
 6.  单击 "**测试连接**" 以测试与 DQS 服务器的连接。  
   
-7.  单击 **“确定”** 关闭对话框。  
+7.  单击“确定”  关闭对话框。  
   
 8.  选择**数据质量知识库**的 "**供应商**"。  
   
@@ -48,19 +47,19 @@ ms.locfileid: "65488946"
   
 11. 在底部窗格中，使用 "**域**" 列中的下拉列表映射这些列：  
   
-    |列|Domain|  
+    |列|域|  
     |------------|------------|  
     |Supplier Name|Supplier Name|  
     |ContactEmailAddress|联系人电子邮件|  
     |Address Line|Address Line|  
     |城市|城市|  
-    |State|State|  
+    |状态|状态|  
     |国家/地区|国家/地区|  
     |Zip Code|Zip|  
   
 12. 单击 **"确定"** 关闭 " **DQS 清理转换编辑器**" 对话框。  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
  [任务 8：添加有条件拆分转换以拆分清理输出](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
   
   

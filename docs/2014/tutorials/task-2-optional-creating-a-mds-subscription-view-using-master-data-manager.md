@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: f3da8219-e0cb-4848-95ca-285a76ec1ba9
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: cc923792adc3fefb5ebaab9e225169648394c71f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 598b7bab60cad5d0c391e5e8aeec9fa3b7b9b97f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81484707"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006529"
 ---
 # <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>任务 2（可选）：使用主数据管理器创建 MDS 订阅视图
   在此任务中，您将创建一个订阅视图，以便向其他应用程序公开**供应商**模型中的**供应商**实体。 在当前版本的教程中，您将不使用此视图。  
   
-1.  单击顶部**SQL Server 2012 Master Data Services** ， **Master Data Manager**切换到`http://localhost/MDS`主数据管理器（）的主页。  
+1.  **Master Data Manager** `http://localhost/MDS` 单击顶部**SQL Server 2012 Master Data Services** ，切换到主数据管理器（）的主页。  
   
 2.  单击 "**集成管理**"。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "81484707"
   
 10. 单击工具栏上的 "**保存**" 以保存订阅视图。 此操作在 SQL Server 名为 "**供应商**" 中创建视图。 您可以使用 SQL Server Management Studio (SSMS) 确认这一点。  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
  [任务 3 &#40;可选&#41;：查看订阅视图](task-3-optional-reviewing-the-subscription-views.md)  
   
   

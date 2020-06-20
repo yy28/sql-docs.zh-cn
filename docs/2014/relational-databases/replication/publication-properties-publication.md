@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 19fee33c63b1287e43077640f381d4b57f489535
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fdac65caf3f4fcbb4d62146c0b0fc0441c5150df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80380718"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038435"
 ---
 # <a name="sql-server-replication-publication-properties"></a>SQL Server 复制发布属性 
   本部分提供有关 "**发布属性**" 对话框的所有页面的信息。 
@@ -107,7 +106,7 @@ ms.locfileid: "80380718"
  **查找表**  
  仅限合并发布。 单击 **“查找表”** 可以在复杂的筛选器树中查找表。 在关系复杂的数据库中，一个表可以联接到多个表，因此可能出现在筛选器树中的多个位置。  
   
- 实际的表只显示在树中的一个位置，该表在其他位置使用快捷方式来表示。 表的快捷方式只是对该表的引用；它不显示该表的子节点。 快捷方式节点标记有快捷方式箭头，展开该节点将会显示文本“单击‘查找表’可查看 \<表名> 表”  。  
+ 实际的表只显示在树中的一个位置，该表在其他位置使用快捷方式来表示。 表的快捷方式只是对该表的引用；它不显示该表的子节点。 快捷方式节点标记有快捷方式箭头，展开该节点将显示文本单击 "**查找表" 以查看表 \<tablename> **。  
   
  在窗格中选择快捷方式节点并单击 **“查找表”** 。窗格将展开并突出显示该表。 如果单击 **“查找表”** 而没有选定快捷方式节点，将会启动 **“查找表”** 对话框。  
   

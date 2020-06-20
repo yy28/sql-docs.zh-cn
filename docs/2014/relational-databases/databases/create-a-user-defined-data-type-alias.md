@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b073e6025bc1483db2482a03d525b758d39efea4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35db332c23e2df5a8e67c3677cd2411768816765
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917441"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970227"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>创建用户定义的数据类型别名
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建新的用户定义数据类型别名。  
@@ -71,7 +70,7 @@ ms.locfileid: "62917441"
      不为 `nvarchar(max)`、`varchar(max)` 或 `varbinary(max)` 数据类型显示长度。  
   
      **名称**  
-     如果创建新的用户定义数据类型别名，请键入用于在整个数据库中表示用户定义数据类型的唯一名称。 最大字符数必须与系统`sysname`数据类型匹配。 不能编辑现有的用户定义数据类型别名的名称。  
+     如果创建新的用户定义数据类型别名，请键入用于在整个数据库中表示用户定义数据类型的唯一名称。 最大字符数必须与系统 `sysname` 数据类型匹配。 不能编辑现有的用户定义数据类型别名的名称。  
   
      **规则**  
      （可选）选择要绑定到用户定义数据类型别名的规则。  
@@ -92,7 +91,7 @@ ms.locfileid: "62917441"
     |20 - 28|13|  
     |29 - 38|17|  
   
-     对于`nchar`和`nvarchar`数据类型，存储值始终是**值的两倍。**  
+     对于 `nchar` 和 `nvarchar` 数据类型，存储值始终是值**的**两倍。  
   
      不为 `nvarchar(max)`、`varchar(max)` 或 `varbinary(max)` 数据类型显示存储。  
   

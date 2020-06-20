@@ -11,21 +11,20 @@ helpviewer_keywords:
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 464e82ea23aa724d84af25c69a7168f95d09afe1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d4a9e07006444cf85a6d453e6dc8e2956d55e78
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78964372"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971817"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>创建模型管理员 (Master Data Services)
-  在[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当你希望某个组或用户对一个或多个模型中的所有对象具有 "**更新**" 权限时，可以创建模型管理员。  
+  在中 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ，当你希望某个组或用户对一个或多个模型中的所有对象具有 "**更新**" 权限时，可以创建模型管理员。  
   
 > [!TIP]  
 >  为了简化管理，请创建一个 Windows 组或本地组并将其配置为模型管理员。 然后，您可以从该组中添加和删除用户，而无需访问 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“用户和组权限”** 功能区域。  
@@ -44,7 +43,7 @@ ms.locfileid: "78964372"
   
 5.  也可以从 **“模型”** 列表中选择某一模型。  
   
-6.  单击 **“编辑”**。  
+6.  单击 **“编辑”** 。  
   
 7.  单击要授予对其权限的模型。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "78964372"
   
 10. 单击“ **保存**”。  
   
-## <a name="remarks"></a>备注  
+## <a name="remarks"></a>注解  
  不要分配对模型对象或层次结构成员的任何其他权限。 如果执行此操作，用户将不再是管理员，并且不能在**资源管理器**之外的任何功能区域中查看模型。  
   
  有一个例外：如果用户对**层次结构 "成员**" 选项卡上的层次结构**根**分配了 "**更新**" 权限，则该用户仍被视为模型管理员。  

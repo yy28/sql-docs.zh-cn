@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c95fa60-5b8e-4a05-ac09-cffe2b05900a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0ec81ae3a078846ad9288fe75eab9fe30d547a4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef99d711a772a075f568a83f5d56fcecaaa598f0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110062"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068046"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>使用分层方法填充层次结构表
   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 有 8 名在市场营销部门工作的雇员。 雇员的层次结构如下所示：  
@@ -64,7 +63,7 @@ ms.locfileid: "66110062"
   
 ### <a name="to-insert-a-subordinate-employee"></a>插入下属雇员  
   
-1.  **Sariya** 是 **David**的下属。 若要插入**Sariya 的**节点，必须创建相应的**OrgNode**数据类型`hierarchyid`的 OrgNode 值。 下面的代码创建一个数据类型为 `hierarchyid` 的变量，并用表的根 OrgNode 值填充此变量。 然后使用该变量和 [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) 方法插入从属节点行。 `GetDescendant` 采用两个参数。 检查以下选项的参数值：  
+1.  **Sariya** 是 **David**的下属。 若要插入**Sariya 的**节点，必须创建相应的数据类型的**OrgNode**值 `hierarchyid` 。 下面的代码创建一个数据类型为 `hierarchyid` 的变量，并用表的根 OrgNode 值填充此变量。 然后使用该变量和 [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) 方法插入从属节点行。 `GetDescendant` 采用两个参数。 检查以下选项的参数值：  
   
     -   如果父级为 NULL， `GetDescendant` 返回 NULL。  
   

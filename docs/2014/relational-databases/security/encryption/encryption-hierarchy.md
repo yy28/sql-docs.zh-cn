@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 0c34eafe153c5361df1945b55094737fa529f617
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d38bb83c2f6a2487e547c4686be5c65bc012e33e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957205"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016202"
 ---
 # <a name="encryption-hierarchy"></a>加密层次结构
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用分层加密和密钥管理基础结构来加密数据。 每一层都使用证书、非对称密钥和对称密钥的组合对它下面的一层进行加密。 非对称密钥和对称密钥可以存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之外的可扩展密钥管理 (EKM) 模块中。  

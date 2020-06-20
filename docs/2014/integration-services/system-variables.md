@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d13feb3a13cb96ec3cf0a3006b807740944434b8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62927220"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962367"
 ---
 # <a name="system-variables"></a>系统变量
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了一组系统变量，其中存储有关正在运行的包及其对象的信息。 可以在表达式和属性表达式中使用这些变量自定义包、容器、任务和事件处理程序。  
@@ -40,11 +39,11 @@ ms.locfileid: "62927220"
 |**CreatorName**|字符串|包生成者的名称。|  
 |`ExecutionInstanceGUID`|String|正在执行的包实例的唯一标识符。|  
 |`FailedConfigurations`|字符串|失败的包配置的名称。|  
-|`IgnoreConfigurationsOnLoad`|布尔|指示在加载包时是否忽略包配置。|  
-|**InteractiveMode**|布尔|指示是否在交互模式中运行包。 如果包正在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中运行，则此属性将设置为 `True`。 如果包正在使用**DTExec**命令提示实用工具运行，则将属性设置为`False`。|  
+|`IgnoreConfigurationsOnLoad`|Boolean|指示在加载包时是否忽略包配置。|  
+|**InteractiveMode**|Boolean|指示是否在交互模式中运行包。 如果包正在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中运行，则此属性将设置为 `True`。 如果包正在使用**DTExec**命令提示实用工具运行，则将属性设置为 `False` 。|  
 |`LocaleId`|Int32|包所使用的区域设置。|  
 |**MachineName**|字符串|正在运行包的计算机的名称。|  
-|**OfflineMode**|布尔|指示该包是否处于脱机模式下。 脱机模式不获取与数据源的连接。|  
+|**OfflineMode**|Boolean|指示该包是否处于脱机模式下。 脱机模式不获取与数据源的连接。|  
 |**PackageID**|字符串|包的唯一标识符。|  
 |**PackageName**|字符串|包的名称。|  
 |**StartTime**|DateTime|包开始运行的时间。|  
@@ -79,17 +78,17 @@ ms.locfileid: "62927220"
   
 |系统变量|数据类型|说明|事件处理程序|  
 |---------------------|---------------|-----------------|-------------------|  
-|**取消**|布尔|指示在出现错误、警告或查询取消时事件处理程序是否停止运行。|OnError 事件处理程序<br /><br /> OnWarning 事件处理程序<br /><br /> OnQueryCancel 事件处理程序|  
-|**错误**|Int32|错误标识符。|OnError 事件处理程序<br /><br /> OnInformation 事件处理程序<br /><br /> OnWarning 事件处理程序|  
+|**取消**|Boolean|指示在出现错误、警告或查询取消时事件处理程序是否停止运行。|OnError 事件处理程序<br /><br /> OnWarning 事件处理程序<br /><br /> OnQueryCancel 事件处理程序|  
+|**ErrorCode**|Int32|错误标识符。|OnError 事件处理程序<br /><br /> OnInformation 事件处理程序<br /><br /> OnWarning 事件处理程序|  
 |**ErrorDescription**|字符串|对错误的说明。|OnError 事件处理程序<br /><br /> OnInformation 事件处理程序<br /><br /> OnWarning 事件处理程序|  
-|**ExecutionStatus**|布尔|当前的执行状态。|OnExecStatusChanged 事件处理程序|  
+|**ExecutionStatus**|Boolean|当前的执行状态。|OnExecStatusChanged 事件处理程序|  
 |`ExecutionValue`|DBNull|执行值。|OnTaskFailed 事件处理程序|  
 |`LocaleId`|Int32|事件处理程序所使用的区域设置。|所有事件处理程序|  
 |**完成**|Int32|已完成工作的百分比。|OnProgress 事件处理程序|  
 |**ProgressCountHigh**|Int32|64 位值的高位部分，指示由 OnProgress 事件处理的操作的总数。|OnProgress 事件处理程序|  
 |`ProgressCountLow`|Int32|64 位值的低位部分，指示由 OnProgress 事件处理的操作的总数。|OnProgress 事件处理程序|  
 |**ProgressDescription**|字符串|进度说明。|OnProgress 事件处理程序|  
-|`Propagate`|布尔|指示是否将该事件传播到较高等级的事件处理程序。<br /><br /> 注意：在包的验证过程中将忽略 `Propagate` 变量的值。<br /><br /> 如果在子包中将 `Propagate` 设置为 `False`，这并不会防止事件向上传播至父包。|所有事件处理程序|  
+|`Propagate`|Boolean|指示是否将该事件传播到较高等级的事件处理程序。<br /><br /> 注意：在包的验证过程中将忽略 `Propagate` 变量的值。<br /><br /> 如果在子包中将 `Propagate` 设置为 `False`，这并不会防止事件向上传播至父包。|所有事件处理程序|  
 |`SourceDescription`|字符串|事件处理程序中引发事件的可执行文件的说明。|所有事件处理程序|  
 |`SourceID`|字符串|引发事件的事件处理程序中可执行文件的唯一标识符。|所有事件处理程序|  
 |**SourceName**|字符串|引发事件的事件处理程序中可执行文件的名称。|所有事件处理程序|  

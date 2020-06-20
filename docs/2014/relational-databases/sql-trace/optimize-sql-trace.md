@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 50944218-925f-4576-aec8-4379846d7681
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3b29965c33270bbf8d9173c55e96af48b9c4f749
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 831875218423bdb9106d7d84995af1e788da44db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63135526"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068256"
 ---
 # <a name="optimize-sql-trace"></a>优化 SQL 跟踪
   尽管运行 SQL 跟踪会导致性能损失（因为它使用系统资源收集数据），但是您可以通过多种方法将性能损失降到最低。 若要将跟踪引起的性能损失降到最低，可以尝试下列解决方法：  

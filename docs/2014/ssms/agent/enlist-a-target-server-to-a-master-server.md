@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7633adb5-d140-4e58-a8f2-5b4b50c2f95b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f3d0d91de95e82fcd174aa9290e208afda5bef91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 256f1a78d298d89a36412ee5689695f3ab3fde8e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211392"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062306"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>将目标服务器登记到主服务器
   本主题介绍了如何将目标服务器添加到多服务器管理配置中。 从主服务器运行此过程。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]，或使用 SQL Server 管理对象 (SMO)。  
@@ -44,9 +43,9 @@ ms.locfileid: "68211392"
   
 #### <a name="to-enlist-a-target-server"></a>登记目标服务器  
   
-1.  在对象资源管理器中，展开配置为主服务器的服务器。 ****  
+1.  在对象资源管理器中，展开配置为主服务器的服务器。   
   
-2.  右键单击“SQL Server 代理”****，指向“多服务器管理”****，然后单击“添加目标服务器”****。  
+2.  右键单击“SQL Server 代理”  ，指向“多服务器管理”  ，然后单击“添加目标服务器”  。  
   
 3.  完成目标服务器向导，它将指导您完成该进程。  
   

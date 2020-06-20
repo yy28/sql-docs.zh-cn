@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 52e7febf-d5e0-4674-945b-aacc40a9ad6e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 80f6fbec56a086ad150620dac1179da9018370b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3126310ad31dcc153fc79508dbfaccf86f5da78
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250753"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016999"
 ---
 # <a name="sql-server-backup-device-object"></a>SQL Server Backup Device 对象
   **Backup Device** 对象提供的计数器可监视用于备份和还原操作的 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份设备。 在希望基于每个设备确定吞吐量或备份和还原操作的进度及性能时，可以监视备份设备。 若要监视整个数据库备份或还原操作的吞吐量，请使用  **Databases 对象的 Backup/Restore Throughput/sec 计数器**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  。 有关详细信息，请参阅 [SQL Server, Databases Object](sql-server-databases-object.md)。  

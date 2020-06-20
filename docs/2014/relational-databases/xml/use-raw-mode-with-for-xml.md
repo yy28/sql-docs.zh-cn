@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 06054f9a107e2aaf9fea83cb3879ef672a8520b6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b2908a98336ec8a6e12029ad471f22a33d7a4dcf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702356"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061188"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>将 RAW 模式与 FOR XML 一起使用
-  RAW 模式可将查询结果集中的每一行转换为带有通用标识符 \<row> 或可能提供元素名称的 XML 元素。 默认情况下，非 NULL 行集中的每列值都将映射到 \<row> 元素的一个属性。 如果将 ELEMENTS 指令添加到 FOR XML 子句，则每列值都将映射到 \<row> 元素的子元素。 指定 ELEMENTS 指令之后，您还可以选择性地指定 XSINIL 选项以将结果集中的 NULL 列值映射到具有 xsi:nil=`"`true`"`属性的元素。  
+  RAW 模式将查询结果集中的每一行转换为一个 XML 元素，该元素具有泛型标识符 \<row> 或（可选）提供的元素名称。 默认情况下，行集中非 NULL 的每个列值将映射到该元素的属性 \<row> 。 如果将元素指令添加到 FOR XML 子句，则每个列值都将映射到元素的子 \<row> 元素。 指定 ELEMENTS 指令之后，您还可以选择性地指定 XSINIL 选项以将结果集中的 NULL 列值映射到具有 xsi:nil=`"`true`"`属性的元素。  
   
  您可以请求返回所产生的 XML 的架构。 指定 XMLDATA 选项将返回内联 XDR 架构。 指定 XMLSCHEMA 选项将返回内联 XSD 架构。 该架构显示在数据的开头。 在结果中，每个顶级元素都引用架构命名空间。  
   

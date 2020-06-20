@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 69fe35ef-58df-4138-b0a5-9b1fb8c862d7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b6e66a3465c543879b2ff6115e9ea45a53f97312
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1cd70c38c03e0a60cfe5060f15e2ecc6655e72a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055282"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962357"
 ---
 # <a name="technical-reference-integration-services"></a>技术参考 (Integration Services)
-  查找[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]的工具、语言和编程参考文档。  
+  查找中的工具、语言和编程参考文档 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 。  
   
  ![小文件文件夹图标](media/filefolder-small.gif "小文件文件夹图标")**变更数据捕获服务和设计器**  
  [Change Data Capture Service for Oracle by Attunity](change-data-capture/change-data-capture-service-for-oracle-by-attunity.md)  

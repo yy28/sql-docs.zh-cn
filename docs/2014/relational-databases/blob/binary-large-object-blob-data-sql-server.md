@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 97509274-c3f8-43e5-a37c-52f1ffe0961a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7f549f1c851ff09b165dae055b8bb18f01a66fcb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a663dedf34d75a21ee8df6b97979548c04abf7ff
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010342"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955787"
 ---
 # <a name="binary-large-object-blob-data-sql-server"></a>二进制大型对象 (Blob) 数据 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供用于在数据库中或远程存储设备上存储文件和文档的解决方案。  
   
-##  <a name="in-this-section"></a><a name="section"></a>本节内容  
+##  <a name="in-this-section"></a><a name="section"></a> 本节内容  
  [比较用于存储 Blob 的选项 (SQL Server)](compare-options-for-storing-blobs-sql-server.md)  
  比较 FILESTREAM、FileTable 和远程 Blob 存储区的优劣  
   

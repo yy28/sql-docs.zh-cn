@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: efc2431c-588b-42e7-b23b-c875145a33f6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e9bac4dba698af6e7f3dc57904da66a7fb15a08b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 433de21538c4ece694118516d777c48ec7834cea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62989041"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062436"
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>卸载和删除 Master Data Services
-  若要从 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 的实例中卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能，请按照[卸载现有 SQL Server 实例（安装程序）](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)中的步骤执行，并且在“选择功能”[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]**页上将**  指定为要删除的功能。 卸载过程将从本地计算机删除 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 文件夹和文件，然后卸载 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 。  
+  若要从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中卸载 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 功能，请按照[卸载现有 SQL Server 实例（安装程序）](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)中的步骤执行，并且在“选择功能”页上将 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 指定为要删除的功能。 卸载过程将从本地计算机删除 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 文件夹和文件，然后卸载 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 。  
   
  为了防止数据丢失或避免影响系统中的其他计算机，卸载过程将不删除或更改某些项。 请查看下表确定是保留还是删除项。  
   

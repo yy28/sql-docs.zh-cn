@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f96d90f620f563877e554c282d9443313bad1b14
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5596a8d4d4bad18c1adc03a5280e199d0fe91e0a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702246"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046331"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 数据类型和列 (SQL Server)
   本主题讨论中数据类型的优点和局限性 `xml` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并帮助您选择如何存储 XML 数据。  
@@ -114,7 +113,7 @@ ms.locfileid: "82702246"
  如果您的 XML 文档具有多种结构，或您的 XML 文档符合不同的或复杂的架构，而这些架构很难映射到关系结构，本机 XML 存储很有用。  
   
 #### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>示例：使用 xml 数据类型对 XML 数据进行建模  
- 例如有一个 XML 格式的产品手册，其中每个主题对应单独的一章，而每章中又包含多节。 一节可以包含多个小节。 因此，\<section> 是一个递归元素。 产品手册包含大量混合内容、关系图和技术材料；数据是半结构化的。 用户可能希望对感兴趣的主题执行上下文搜索，例如，在有关“索引”的章中搜索有关“聚集索引”的节，并查询技术数量。  
+ 例如有一个 XML 格式的产品手册，其中每个主题对应单独的一章，而每章中又包含多节。 一节可以包含多个小节。 因此， \<section> 是一个递归元素。 产品手册包含大量混合内容、关系图和技术材料；数据是半结构化的。 用户可能希望对感兴趣的主题执行上下文搜索，例如，在有关“索引”的章中搜索有关“聚集索引”的节，并查询技术数量。  
   
  适合 XML 文档的存储模型为 `xml` 数据类型列。 这可保留 XML 数据的 InfoSet 内容。 对 XML 列创建索引有利于提高查询性能。  
   

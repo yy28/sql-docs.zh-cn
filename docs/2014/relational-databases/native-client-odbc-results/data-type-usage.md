@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4f19b0d6-94ac-4a98-a121-57d38787864c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c95beaa10331e916f7eae54a9e8c78e796d77f59
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8333f45fd9e3b742b3765efaee5ae7a865161bc2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699540"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039577"
 ---
 # <a name="data-type-usage"></a>数据类型用法
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序并 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 强制使用以下数据类型。  

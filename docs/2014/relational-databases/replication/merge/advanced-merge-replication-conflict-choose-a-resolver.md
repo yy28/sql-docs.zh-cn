@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 17c751898aee25fa98bfeb6c2a7e1f1143bc61ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 252c9748dff3ea1c2f8763b46f0fa818eea0003a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62931629"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005690"
 ---
 # <a name="choose-a-resolver"></a>选择冲突解决程序
   在选择冲突解决程序时，请考虑冲突解决在您的应用程序中的重要性，以及是否可以使用基于优先级的默认冲突解决程序或是否需要使用项目冲突解决程序。  
