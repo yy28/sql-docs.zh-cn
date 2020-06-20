@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2e19205a-25ca-4d4a-916b-d591cf2c892b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fd84bacfd389651abaf00486cd9940d95a26b0b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87592be4ea5698f9a7a6cb5c45bdb8cfe4fbd484
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745568"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050508"
 ---
 # <a name="srv_setcoldata-extended-stored-procedure-api"></a>srv_setcoldata（扩展存储过程 API）
     
@@ -55,7 +54,7 @@ data
  srvproc**  
  指向作为特定客户端连接句柄的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 库用于管理应用程序和客户端之间的通信和数据的信息。  
   
- *该列*  
+ *column*  
  指示指定其地址的列的编号。 列的编号从 1 开始。  
   
  *数据*  

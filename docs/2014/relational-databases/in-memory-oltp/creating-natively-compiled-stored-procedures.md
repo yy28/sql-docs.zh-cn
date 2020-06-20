@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9525ef65973baa38ae19ba4681e4a93f949c004a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e8e8139427c7f2ad92eea856be8da542f65e344
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63071802"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050269"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>创建本机编译的存储过程
   本机编译的存储过程未实现完整 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可编程性和查询外围应用。 某些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 构造不能在本机编译的存储过程内使用。 有关详细信息，请参阅[本机编译的存储过程中支持的构造](../in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。  
@@ -55,8 +54,8 @@ go
   
 |选项|说明|  
 |------------|-----------------|  
-|`SCHEMABINDING`|本机编译存储过程必须绑定到其引用的对象的架构。 这意味着不能删除该过程引用的表。 在该过程中引用的表必须包括其架构名称，并且\*在查询中不允许使用通配符（）。 此版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的本机编译存储过程仅支持 `SCHEMABINDING`。|  
-|`EXECUTE AS`|本机编译的存储过程不支持 `EXECUTE AS CALLER`，这是默认执行上下文。 因此，需要指定执行上下文。 支持选项`EXECUTE AS OWNER`、 `EXECUTE AS`*用户*和`EXECUTE AS SELF` 。|  
+|`SCHEMABINDING`|本机编译存储过程必须绑定到其引用的对象的架构。 这意味着不能删除该过程引用的表。 在该过程中引用的表必须包括其架构名称，并且 \* 在查询中不允许使用通配符（）。 此版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的本机编译存储过程仅支持 `SCHEMABINDING`。|  
+|`EXECUTE AS`|本机编译的存储过程不支持 `EXECUTE AS CALLER`，这是默认执行上下文。 因此，需要指定执行上下文。 支持选项 `EXECUTE AS OWNER` 、 `EXECUTE AS` *用户*和 `EXECUTE AS SELF` 。|  
 |`BEGIN ATOMIC`|本机编译的存储过程正文必须由恰好一个原子块构成。 原子块确保存储过程的原子执行。 如果在活动事务的上下文外调用该过程，它将开始一个新事务，这个新事务在原子块的末尾提交。 本机编译存储过程中的原子块具有两个必需的选项：<br /><br /> `TRANSACTION ISOLATION LEVEL`. 请参阅支持的隔离级别的[事务隔离级别](../../database-engine/transaction-isolation-levels.md)。<br /><br /> `LANGUAGE`. 存储过程的语言必须设置为可用语言或语言别名之一。|  
   
  通过 `EXECUTE AS` 进行模拟可能会导致 `EXECUTE AS` 和 Windows 登录名出错。 如果用户帐户使用 Windows 身份验证，则用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务帐户与 Windows 登录名所在的域之间必须存在完全信任。 如果没有完全信任，则在创建本机编译的存储过程时返回以下错误消息：消息15404、无法获取有关 Windows NT 组/用户 "username" 的信息，错误代码0x5。  

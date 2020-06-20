@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 25227268-143b-477e-aac9-8268bcaf2078
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 573c8d13b9a7431c33d8c3b104712a2bf31b3fbf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84a80b4690597f9274bb7ff334b5879ef465c6e6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089525"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928268"
 ---
 # <a name="trace-properties-general-tab"></a>跟踪属性（“常规”选项卡）
   使用 **“跟踪属性”** 对话框中的 **“常规”** 选项卡可以查看或指定跟踪属性。  
@@ -46,7 +45,7 @@ ms.locfileid: "66089525"
  **设置最大文件大小(MB)**  
  如果选择将跟踪数据保存到文件，则必须指定跟踪文件的最大大小。 默认值为 5 MB。 最大大小仅受保存该文件的文件系统（NTFS、FAT）的限制。  
   
- \<图形>**另存为**  
+ \<Graphic>**另存为**  
  在选择进行保存后，可以选择此图标来更改文件名。  
   
  **启用文件滚动更新**  
@@ -58,7 +57,7 @@ ms.locfileid: "66089525"
  **保存到表**  
  将跟踪数据捕获到数据库表。 保存跟踪数据有助于以后进行查看和分析。 但是，将跟踪数据保存到表会导致在保存跟踪的服务器上产生很大的开销。 如果可能，请不要将跟踪表保存到正在跟踪的同一服务器上。  
   
- \<图形>**目标表**  
+ \<Graphic>**目标表**  
  在选择将跟踪数据保存到数据库表后，可以选择此图标来更改表名称。  
   
  **设置最大行数(千行)**  

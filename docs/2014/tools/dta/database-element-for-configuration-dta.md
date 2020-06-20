@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e91ba243-6cc9-457a-8f5a-134f3c71ae69
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fbca62a5d32ed6b7ec30eb5d6dba6a82a2b80c64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 045671cc386f91bb9f24caaa95cd6934fc50f5b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63298344"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011553"
 ---
 # <a name="database-element-for-configuration-dta"></a>用于配置的数据库元素 (DTA)
   指定要用数据库引擎优化顾问进行假设配置（由 `Configuration` 元素指定）评估的数据库。  
@@ -52,7 +51,7 @@ ms.locfileid: "63298344"
  在数据库引擎优化顾问 XML 架构中，此元素的名称为 **DatabaseTypecomplexType** 。 不要将此 `Database` 元素与其根父为 `Server` 元素的元素（出现在 XML 输入文件的顶部）混淆。 有关详细信息，请参阅[服务器的数据库元素 (DTA)](database-element-for-server-dta.md)。  
   
 ## <a name="example"></a>示例  
- 有关此`Database`元素的用法示例，请参阅[使用用户指定的配置 &#40;DTA&#41;的 XML 输入文件示例](xml-input-file-sample-with-user-specified-configuration-dta.md)。  
+ 有关此元素的用法示例 `Database` ，请参阅[使用用户指定的配置 &#40;DTA&#41;的 XML 输入文件示例](xml-input-file-sample-with-user-specified-configuration-dta.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [XML 输入文件引用（数据库引擎优化顾问）](xml-input-file-reference-database-engine-tuning-advisor.md)  

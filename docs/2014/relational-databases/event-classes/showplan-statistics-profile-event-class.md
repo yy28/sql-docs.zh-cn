@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa9e1330-a217-491c-ad7c-2c1c4015d1bb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0dc08151d47bee9190f199e187db25a3b5dd6de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 393f30252d2689deb63d1bd540d6db3673f84f73
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662059"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052415"
 ---
 # <a name="showplan-statistics-profile-event-class"></a>Showplan Statistics Profile 事件类
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行 SQL 语句时，会发生 Showplan Statistics Profile 事件类。 所包括的信息是 Showplan XML Statistics Profile 事件类中所含信息的一部分。  

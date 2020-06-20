@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 65fcebc3bbe12061e699106fb23eed15a5498414
-ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
+ms.openlocfilehash: 784ef2ec305629756e0c43e1726b70c04c6194b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84716704"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011650"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>使用 Named Pipes 创建有效的连接字符串
   除非用户进行了更改，否则当的默认实例 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 侦听 named pipes 协议时，它将使用 `\\.\pipe\sql\query` 作为管道名称。 句点指示该计算机是本地计算机， `pipe` 指示该连接是命名管道， `sql\query` 是管道的名称。 若要连接到默认管道，别名必须使用 `\\<computer_name>\pipe\sql\query` 作为管道名称。 如果已将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为侦听其他管道，则管道名称必须使用该管道。 例如，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 `\\.\pipe\unit\app` 作为管道，则别名必须使用 `\\<computer_name>\pipe\unit\app` 作为管道名称。  

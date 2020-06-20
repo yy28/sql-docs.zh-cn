@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 64910ce8bab155639a16cb065768c43fd86ac737
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 264781f21e328c4740ee31b53fe3812bbe392305
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127334"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050783"
 ---
 # <a name="srv_describe-extended-stored-procedure-api"></a>srv_describe（扩展存储过程 API）
     
@@ -76,7 +75,7 @@ srcdata
  colnumber**  
  当前不受支持。 必须按顺序描述列。 必须在调用 srv_sendrow 之前对所有列进行描述****。  
   
- column_name   
+ column_name  
  指定数据所属列的名称。 该参数可以为 NULL，因为列不是必须要有名称。  
   
  namelen**  

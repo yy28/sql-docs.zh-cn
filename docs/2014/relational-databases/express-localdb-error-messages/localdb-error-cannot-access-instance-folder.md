@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: c4288265-43f7-44fd-acab-ba64d04264d9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ec8fa09f34b27d9638f505981f11de960cb4d5b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f592958e5feecfaeba0279a428b012038de4514e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62520157"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051279"
 ---
 # <a name="localdb_error_cannot_access_instance_folder"></a>LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_FOLDER
     
@@ -27,7 +26,7 @@ ms.locfileid: "62520157"
 |事件 ID|261|  
 |事件源|SQL Server 本地数据库运行时 12.0|  
 |组件|本地数据库运行时 API|  
-|消息正文|无法访问本地数据库实例文件夹：%% LOCALAPPDATA%% \ Microsoft\Microsoft SQL Server 本地 DB\Instances\\<实例名称\>。|  
+|消息正文|无法访问本地数据库实例文件夹：%% LOCALAPPDATA%% \ Microsoft\Microsoft SQL Server 本地 DB\Instances \\<实例名称 \> 。|  
   
 ## <a name="explanation"></a>说明  
  无法访问实例文件夹。  

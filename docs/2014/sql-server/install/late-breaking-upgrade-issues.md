@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 64205466-6d37-49d2-bac2-d3368c1210a1
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 22cd26b7e389cb71408c1b3df87d48aa62244f9b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 786b78ce90e276d8bdb1c0641b507257416935b6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094052"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036598"
 ---
 # <a name="late-breaking-upgrade-issues"></a>最新的升级问题
   文档完成后，可能会添加或更改检测逻辑。 如果从升级顾问报表查看器访问此主题，或者要了解任何最新的项，请查看随升级顾问一起安装的自述文件中的其他信息。  

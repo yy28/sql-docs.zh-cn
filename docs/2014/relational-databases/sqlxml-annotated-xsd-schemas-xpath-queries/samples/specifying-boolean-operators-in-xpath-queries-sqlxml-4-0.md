@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9928cff5-62ac-42aa-96bf-2e09a1df0bc3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 45db8a3111173257cad45bea2961b9bb4c72bffc
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f4373229d6e612a7de401dbd94bc0da1766db45b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717785"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065689"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定布尔运算符 (SQLXML 4.0)
   以下示例说明如何在 XPath 查询中指定布尔运算符。 本示例中的 XPath 查询针对 SampleSchema1.xml 中包含的映射架构指定。 有关此示例架构的信息，请参阅[&#40;SQLXML 4.0&#41;的 XPath 批注的 XSD 架构示例](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
@@ -29,7 +28,7 @@ ms.locfileid: "82717785"
 ## <a name="examples"></a>示例  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>A. 指定 OR 布尔运算符  
- 此 XPath 查询将返回**CustomerID**属性值为13或31的上下文节点的** \< Customer>** 元素子级：  
+ 此 XPath 查询将返回 **\<Customer>** **CustomerID**属性值为13或31的上下文节点的子元素：  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -41,7 +40,7 @@ ms.locfileid: "82717785"
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- 在谓词中， `attribute` 是轴， `CustomerID` 是节点测试（如果**CustomerID**是>节点的** \< 属性**，则为 TRUE，因为** \<>** 节点的属性是轴的主节点 `attribute` ）。 谓词筛选** \< Customer>** 元素，并仅返回满足谓词中指定的条件的元素。  
+ 在谓词中， `attribute` 是轴， `CustomerID` 是节点测试（如果**CustomerID**是节点，则为 TRUE **\<attribute>** ，因为 **\<attribute>** 节点是轴的主节点 `attribute` ）。 谓词筛选 **\<Customer>** 元素并仅返回满足谓词中指定的条件的元素。  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>针对映射架构测试 XPath 查询  
   

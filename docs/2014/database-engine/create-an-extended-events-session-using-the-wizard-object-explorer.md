@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: 80c0456f-17c0-41d8-b2aa-502a2f3bb6de
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cdc50e81bcc58722a3c04fc8516b9158072533cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1102657a4921fd5ab48bfe10c0a05ed67126df47
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065061"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934502"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>使用向导创建扩展事件会话（对象资源管理器）
   为了帮助您选择和捕获服务器上的事件，扩展事件包括一个“新建会话”向导，引导您完成创建扩展事件会话所需的步骤。 “新建会话”向导公开大多数扩展事件功能。 通过[“新建会话”对话框](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)，还可以定义捕获、显示和分析数据的扩展事件会话。 “新建会话”对话框公开所有扩展事件功能。  

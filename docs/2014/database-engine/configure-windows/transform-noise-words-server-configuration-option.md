@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 69bd388e-a86c-4de4-b5d5-d093424d9c57
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6c5ddad15af74e45313d3e71b059fae36d166560
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49de4a381de3e998073a73c284e3e3e5960f4921
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808688"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934723"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>transform noise words 服务器配置选项
-  使用`transform noise words`服务器配置选项来取消干扰词（即[非索引字](../../relational-databases/search/full-text-search.md)）导致全文查询的布尔操作返回零行时出现的错误消息。 此选项对于使用其布尔操作或 NEAR 操作包括干扰词的 CONTAINS 谓词的全文查询非常有用。 下表中列出了该选项的可能值。  
+  使用 `transform noise words` 服务器配置选项来取消干扰词（即[非索引字](../../relational-databases/search/full-text-search.md)）导致全文查询的布尔操作返回零行时出现的错误消息。 此选项对于使用其布尔操作或 NEAR 操作包括干扰词的 CONTAINS 谓词的全文查询非常有用。 下表中列出了该选项的可能值。  
   
 |值|说明|  
 |-----------|-----------------|  

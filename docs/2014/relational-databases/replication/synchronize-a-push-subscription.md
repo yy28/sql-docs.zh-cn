@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 60fdfbecf617f0a4aa92b40b72b1b5e969f69388
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7c3ee58ebc7cd579b04d317b44e823779ae987e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745877"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004552"
 ---
 # <a name="synchronize-a-push-subscription"></a>同步推送订阅
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]复制代理 [或复制管理对象 (RMO) 在](agents/replication-agents-overview.md)中同步推送订阅。  
@@ -40,7 +39,7 @@ ms.locfileid: "62745877"
   
 4.  右键单击要同步的订阅，然后单击 **“查看同步状态”** 。  
   
-5.  在“查看同步状态 - **订阅服务器>:\<订阅数据库>”对话框中，单击“启动”。\<**  完成同步后，将显示消息 **“同步完成”** 。  
+5.  在 "**查看同步状态- \<Subscriber> ： \<SubscriptionDatabase> ** " 对话框中，单击 "**启动**"。 完成同步后，将显示消息 **“同步完成”** 。  
   
 6.  单击“关闭”  。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "62745877"
   
 4.  将显示一条消息，指示建立与分发服务器的连接。 单击“确定”。   
   
-5.  在“查看同步状态 - **订阅服务器>:\<订阅数据库>”对话框中，单击“启动”。\<**  完成同步后，将显示消息 **“同步完成”** 。  
+5.  在 "**查看同步状态- \<Subscriber> ： \<SubscriptionDatabase> ** " 对话框中，单击 "**启动**"。 完成同步后，将显示消息 **“同步完成”** 。  
   
 6.  单击“关闭”  。  
   

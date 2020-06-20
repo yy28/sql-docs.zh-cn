@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e5d91c82d892888d2e6edde5615ba05a2a9ebf3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff16491ed9c021424d3d6371ccb7ba2941c61129
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011758"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050414"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>使用 bcp 指定数据文件中的前缀长度 (SQL Server)
   当将本机格式的数据批量导出到数据文件中时，为了使文件存储空间最为紧凑， **bcp** 命令会在每个字段前面使用一个或多个字符来指明字段长度。 这些字符称为“长度前缀字符”  。  
@@ -56,11 +55,11 @@ ms.locfileid: "66011758"
 |`varchar`|2|2|2|2|  
 |`nchar`|2|2|2|2|  
 |`nvarchar`|2|2|2|2|  
-|`text`<sup>1</sup>|4|4|4|4|  
-|`ntext`<sup>1</sup>|4|4|4|4|  
+|`text` <sup>1</sup>|4|4|4|4|  
+|`ntext` <sup>1</sup>|4|4|4|4|  
 |`binary`|2|2|2|2|  
 |`varbinary`|2|2|2|2|  
-|`image`<sup>1</sup>|4|4|4|4|  
+|`image` <sup>1</sup>|4|4|4|4|  
 |`datetime`|0|1|0|1|  
 |`smalldatetime`|0|1|0|1|  
 |`decimal`|1|1|1|1|  
@@ -81,7 +80,7 @@ ms.locfileid: "66011758"
 |UDT（用户定义的数据类型）|8|8|8|8|  
 |XML|8|8|8|8|  
   
- <sup>1</sup>在`ntext`的`text` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]未来版本`image`中将删除、和数据类型。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请`nvarchar(max)`改用`varchar(max)`、和`varbinary(max)` 。  
+ <sup>1</sup> `ntext` `text` `image` 在的未来版本中将删除、和数据类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请改用 `nvarchar(max)` 、 `varchar(max)` 和 `varbinary(max)` 。  
   
 ##  <a name="prefix-lengths-for-bulk-import"></a><a name="PrefixLengthsImport"></a> 大容量导入时的前缀长度  
  大容量导入数据时，前缀长度为最初创建数据文件时指定的值。 如果数据文件不是由 **bcp** 命令创建，那么可能没有长度前缀字符。 在这种情况下，将前缀长度指定为 0。  

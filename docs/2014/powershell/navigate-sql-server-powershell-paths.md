@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4e5b716847c33623968077aca33932ad005953af
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797810"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960287"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>导航 SQL ServerPowerShell 路径
   [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell 提供程序在与文件路径相似的结构中公开 SQL Server 实例中的对象集。 您可以使用 Windows PowerShell cmdlet 导航提供程序路径，并且创建自定义驱动器以便缩短需键入的路径。  
@@ -31,7 +30,7 @@ ms.locfileid: "72797810"
 |`Set-Location`|**sl**|**cd、chdir**|**cd、chdir**|更改当前节点。|  
 |**Get-ChildItem**|**gci**|**dir**|**'**|列出存储在当前节点中的对象。|  
 |**Get-Item**|**gi**|||返回当前项的属性。|  
-|**重命名项**|**rni**|**rn**|**ren**|重命名对象。|  
+|**Rename-Item**|**rni**|**rn**|**ren**|重命名对象。|  
 |**Remove-Item**|**ri**|**del、rd**|**rm、rmdir**|删除对象。|  
   
 > [!IMPORTANT]  
@@ -44,7 +43,7 @@ ms.locfileid: "72797810"
 |-------------------|----------------------------|  
 |SQLSERVER:\SQL|返回本地计算机的名称。 如果在连接到其他计算机上的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例时使用的是 SMO 或 WMI，则还将列出这些计算机。|  
 |SQLSERVER:\SQL\\*ComputerName*|计算机上 [!INCLUDE[ssDE](../includes/ssde-md.md)] 实例的列表。|  
-|SQLSERVER： \ SQL\\*ComputerName*\\*实例*名称|实例中顶层对象类型（如 Endpoints、Certificates 和 Databases）的列表。|  
+|SQLSERVER： \ SQL \\ *ComputerName* \\ *实例*名称|实例中顶层对象类型（如 Endpoints、Certificates 和 Databases）的列表。|  
 |对象类节点，如 Databases|该类型的对象列表，如数据库列表：master、model、AdventureWorks20008R2。|  
 |对象名称节点，如 AdventureWorks2012|包含在该对象中的对象类型的列表。 例如，数据库将列出表和视图之类的对象类型。|  
   

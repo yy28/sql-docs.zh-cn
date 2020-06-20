@@ -12,20 +12,19 @@ f1_keywords:
 ms.assetid: 5bb0fcd6-0ce9-488a-85b8-25dddaa03cda
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f930a2e6f3ce84c330a4b7292ebaaba3b2ab871e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c6cd168a852eca294e85de696a611b460423c5a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062223"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926538"
 ---
 # <a name="active-operations-dialog-box"></a>“活动操作”对话框
   使用 **“活动操作”** 对话框可以查看 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器上当前运行的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 操作的状态，例如部署、验证和包执行。 此数据存储在 SSISDB 目录中。  
   
  有关相关 [!INCLUDE[tsql](../includes/tsql-md.md)] 视图的详细信息，请参阅 [catalog.operations（SSISDB 数据库）](/sql/integration-services/system-views/catalog-operations-ssisdb-database)、[catalog.validations（SSISDB 数据库）](/sql/integration-services/system-views/catalog-validations-ssisdb-database)和 [catalog.executions（SSISDB 数据库）](/sql/integration-services/system-views/catalog-executions-ssisdb-database)  
   
- **您希望做什么？**  
+ **要执行什么操作？**  
   
 1.  [打开“活动操作”对话框](#open_dialog)  
   
@@ -43,7 +42,7 @@ ms.locfileid: "66062223"
   
 ### <a name="options"></a>选项  
  **类型**  
- 指定操作的类型。 下面是 "**类型**" 字段的可能值以及 transact-sql `catalog.operations`视图的 "operations_type" 列中的相应值。  
+ 指定操作的类型。 下面是 "**类型**" 字段的可能值以及 transact-sql 视图的 "operations_type" 列中的相应值 `catalog.operations` 。  
   
 |||  
 |-|-|  
@@ -58,7 +57,7 @@ ms.locfileid: "66062223"
 |验证包|301|  
 |配置目录|1000|  
   
- **停止**  
+ **Stop**  
  单击以停止当前正在运行的操作。  
   
   

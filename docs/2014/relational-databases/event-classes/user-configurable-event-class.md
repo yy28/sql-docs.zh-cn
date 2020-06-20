@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 06fe5f07-a0dd-4968-b123-56b124a86020
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 975da6bc447ed3a29f39dd9a8e877a5b556098c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a166889694e6d4348587ca65f238f9a817f36f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62724826"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051387"
 ---
 # <a name="user-configurable-event-class"></a>User-Configurable 事件类
   User-Configurable 事件类别可用于监视用户定义事件。 创建用户定义事件类来监视不能由其他事件类别中系统提供的事件类监视的事件。 例如，可以创建用户定义事件来监视测试应用程序的进度。 应用程序运行时，用户定义事件可以在预定义点生成事件，使您能够确定应用程序的当前执行点。  

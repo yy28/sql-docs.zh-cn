@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 371da8231138fb43e9b001808b9fb88ad09543b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bfc8e5cf35a7f03f485bc3ff9e94ee70eab2cea2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63131640"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997078"
 ---
 # <a name="create-a-visual-c-smo-project-in-visual-studio-net"></a>在 Visual Studio .NET 中创建 Visual C# SMO 项目
   本节介绍了如何生成简单的 SMO 控制台应用程序。  
@@ -28,9 +27,9 @@ ms.locfileid: "63131640"
   
 1.  启动 [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]（或 [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)]）。  
   
-2.  在“文件”菜单中，单击“新建项目”。******** 此时将出现“新建项目”  对话框。  
+2.  在“文件”菜单中，单击“新建项目”。******** 将显示“新建项目”对话框。  
   
-3.  在 "**项目类型**" 对话框中，选择 " **Visual c #**"，然后选择 " **Windows**"。 在 " [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]已安装的模板" 窗格中，选择 " **Windows 应用程序**"。  
+3.  在 "**项目类型**" 对话框中，选择 " **Visual c #**"，然后选择 " **Windows**"。 在 " [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 已安装的模板" 窗格中，选择 " **Windows 应用程序**"。  
   
 4.  可有可无在 "**名称**" 字段中，键入新应用程序的名称  
   
@@ -38,7 +37,7 @@ ms.locfileid: "63131640"
   
 6.  在“项目”菜单中，选择“添加引用”。******** 此时将显示“添加引用”对话框。****  
   
-7.  单击 "**浏览**"，找到[!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]文件夹中的 SMO 程序集，然后选择以下文件。 这些文件是构建一个 SMO 应用程序至少需要的文件：  
+7.  单击 "**浏览**"，找到文件夹中的 SMO 程序集 [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] ，然后选择以下文件。 这些文件是构建一个 SMO 应用程序至少需要的文件：  
   
      Microsoft.SqlServer.ConnectionInfo.dll  
   
@@ -55,7 +54,7 @@ ms.locfileid: "63131640"
   
      Microsoft.SqlServer.ServiceBrokerEmum.dll  
   
-9. 单击“打开”  。  
+9. 单击“打开” 。  
   
 10. 在 "**视图**" 菜单上，单击 "**代码**"，或选择 "Program1.cs [Design]" 窗口，然后双击 windows 窗体以显示代码窗口。  
   

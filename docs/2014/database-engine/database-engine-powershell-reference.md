@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3c379a43-c497-47dd-8e7d-2b015c068bb7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ed2e407b724f57d6ded518b864e3b1d78b4c489e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5412b8a96f79f0c33206c794090916732ef016a8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064968"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934460"
 ---
 # <a name="database-engine-powershell-reference"></a>数据库引擎 PowerShell 参考
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 包含一组 Windows PowerShell 2.0 cmdlet，用于在[!INCLUDE[ssDE](../includes/ssde-md.md)]中执行常见操作。 此外，查询表达式和统一资源名称 (URN) 可以转换为 SQL Server PowerShell 路径，或用于指定 [!INCLUDE[ssDE](../includes/ssde-md.md)]中的一个或多个对象。  

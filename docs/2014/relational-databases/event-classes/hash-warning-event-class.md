@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cc2b6d2ba25ee487053a7f9f711c499356a5ec59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c26b06e61a6f9fcad52dab0d042b299f993342e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662341"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052944"
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning 事件类
   Hash Warning 事件类可用于监视在哈希操作过程中何时发生哈希递归或哈希终止（哈希释放）。  
@@ -61,7 +60,7 @@ ms.locfileid: "62662341"
 |HostName|`nvarchar`|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |IntegerData|`int`|递归级数（仅限于哈希递归）。|25|是|  
 |IsSystem|`int`|指示事件是发生在系统进程中还是发生在用户进程中。 1 = 系统，0 = 用户。|60|是|  
-|LoginName|`nvarchar`|用户的登录[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]名（安全登录名或 Windows 登录凭据，格式为* \<"域>\\<用户名\>*"）。|11|是|  
+|LoginName|`nvarchar`|用户的登录名（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 Windows 登录凭据，格式为 " * \<DOMAIN> \\<用户名 \> *"）。|11|是|  
 |LoginSid|`image`|登录用户的安全标识号 (SID)。 您可以在 sys.server_principals 目录视图中找到此信息。 服务器中的每个登录名都具有唯一的 SID。|41|是|  
 |NTDomainName|`nvarchar`|用户所属的 Windows 域。|7|是|  
 |NTUserName|`nvarchar`|Windows 用户名。|6|是|  

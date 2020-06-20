@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ae97386c-9dbf-456d-bcbc-391931775fa3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 95a2e4a2bc7caeaae04ac8aab245ccf7edbb6af7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce4f4f60801ccbf2e2718efabef5e19e47a944d3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061279"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051701"
 ---
 # <a name="sqlstmtstarting-event-class"></a>SQL:StmtStarting 事件类
   SQL:StmtStarting 事件类指示 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句已启动。  
@@ -44,13 +43,13 @@ ms.locfileid: "63061279"
 |NestLevel|`int`|如果曾在存储过程中运行 SQL 语句，则为存储过程的嵌套级别。|29|是|  
 |NTDomainName|`nvarchar`|用户所属的 Windows 域。|7|是|  
 |NTUserName|`nvarchar`|Windows 用户名。|6|是|  
-|偏移量|`int`|存储过程或批查询中的语句的起始偏移量。|61|是|  
+|Offset|`int`|存储过程或批查询中的语句的起始偏移量。|61|是|  
 |RequestID|`int`|包含该语句的请求的 ID。|49|是|  
 |ServerName|`nvarchar`|所跟踪的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|26|否|  
 |SessionLoginName|`nvarchar`|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |SPID|`int`|发生该事件的会话的 ID。|12|是|  
 |StartTime|`datetime`|该事件（如果存在）的启动时间。|14|是|  
-|State|`int`|指示在重新编译后是否执行语句。<br /><br /> 1 = 已重新编译|30|是|  
+|状态|`int`|指示在重新编译后是否执行语句。<br /><br /> 1 = 已重新编译|30|是|  
 |TextData|`ntext`|将要执行的语句文本。|1|是|  
 |TransactionID|`bigint`|该语句在事务中运行时的事务 ID。|4|是|  
 |XactSequence|`bigint`|用于说明当前事务的标记。|50|是|  

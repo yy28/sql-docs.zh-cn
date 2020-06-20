@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2b780dfd75d998a9e3f6e382890b8318b958688d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d76345044192ad6d3e3754ca990b29fffa17c707
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781819"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996692"
 ---
 # <a name="using-user-defined-tables"></a>使用用户定义表
   用户定义表表示表格信息。 将表格数据传递到存储过程或用户定义函数中时，用户定义表可作为参数使用。 用户定义表不能用于表示数据库表中的列。  
   
-  对象具有  属性，该属性引用  对象。 该<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>集合中的每个对象都有一个**Columns**属性，该属性<xref:Microsoft.SqlServer.Management.Smo.Column>引用列出了用户定义的表中的列的对象集合。 使用 Add 方法可向用户定义表添加列。  
+  对象具有  属性，该属性引用  对象。 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>该集合中的每个对象都有一个**Columns**属性，该属性引用 <xref:Microsoft.SqlServer.Management.Smo.Column> 列出了用户定义的表中的列的对象集合。 使用 Add 方法可向用户定义表添加列。  
   
  使用 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 对象定义新的用户定义表时，必须提供列和基于其中一列的主键。  
   

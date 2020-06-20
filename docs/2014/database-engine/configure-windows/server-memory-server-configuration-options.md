@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4f7302da7be80038478c887a01bb32037503fc0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 38129f2f502f3a3f2ec1be02d718a642e2a52c23
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69028692"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934986"
 ---
 # <a name="server-memory-configuration-options"></a>“服务器内存”配置选项
   使用“min server memory”  和“max server memory”  这两个服务器内存选项可以重新配置由 SQL Server 内存管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例使用的 SQL Server 进程所管理的内存量 (MB)。  
@@ -34,7 +33,7 @@ ms.locfileid: "69028692"
  **min server memory** 的默认设置为 0， **max server memory** 的默认设置为 2147483647 MB。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的内存要求会根据可用系统资源的情况动态变化。  
   
 > [!NOTE]  
-> 将 **max server memory** 设置为最小值可能会严重降低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能，甚至导致无法启动。 如果在更改此[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选项之后无法启动，请使用 **-f**启动选项启动它，并将**max server memory**重置为以前的值。 有关详细信息，请参阅 [Database Engine Service Startup Options](database-engine-service-startup-options.md)。  
+> 将 **max server memory** 设置为最小值可能会严重降低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能，甚至导致无法启动。 如果在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更改此选项之后无法启动，请使用 **-f**启动选项启动它，并将**max server memory**重置为以前的值。 有关详细信息，请参阅 [Database Engine Service Startup Options](database-engine-service-startup-options.md)。  
   
  当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 动态使用内存时，它会定期查询系统以确定可用内存量。 保持此可用内存可避免操作系统 (OS) 进行分页。 如果可用内存较少， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将会释放内存以供操作系统使用。 如果有更多的内存可用， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能会分配更多的内存。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅在其工作负荷需要更多内存时才增加内存；空闲的服务器不会增加其虚拟地址空间的大小。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "69028692"
 <a name="min_server_memory"></a> 使用 min_server_memory 可以保证可供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存管理器使用的最小内存量****。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不会在启动时立即分配**min server memory**中指定的内存量。 不过，除非降低 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] min server memory **的值，否则当内存使用量由于客户端负荷而达到该值后，** 不能释放内存。 例如，同一个主机中可同时存在多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时，为了给实例保留内存，请设置 min_server_memory 参数而不是 max_server_memory。 此外，为了确保来自基础主机的内存压力不会尝试从来宾 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 虚拟机 (VM) 上的缓冲池释放超过可接受性能所需的内存，在虚拟环境中设置 min_server_memory 值非常必要。
  
 > [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不保证分配**min server memory**中指定的内存量。 如果服务器上的负荷从不需要分配**min server memory**中指定的内存量， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]则将以较少的内存运行。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不保证分配**min server memory**中指定的内存量。 如果服务器上的负荷从不需要分配**min server memory**中指定的内存量， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 则将以较少的内存运行。  
   
 <a name="max_server_memory"></a> 使用 max_server_memory 来保证 OS 不会遇到不利的内存压力****。 若要设置 max server memory 配置，请监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的总体消耗，以确定内存要求。 使单个实例的这些计算更准确：
  -  从 OS 总内存中，为 OS 自身保留 1GB - 4GB。
@@ -65,7 +64,7 @@ ms.locfileid: "69028692"
 
 <sup>3</sup> 有关 -g 启动参数的信息，请参阅介绍[数据库引擎服务启动选项](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014)的文档页**。 仅适用于 32 位的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]）。
 
-|操作系统类型|**最大服务器内存**允许的最小内存量|  
+|OS 类型|**最大服务器内存**允许的最小内存量|  
 |-------------|----------------------------------------------------------------|  
 |32 位|64 MB|  
 |64 位|128 MB| 
@@ -96,14 +95,14 @@ ms.locfileid: "69028692"
 3.  如果选中了 **“最大化网络应用程序数据吞吐量”** ，请任选一个相应的其他选项，单击 **“确定”**，再关闭其余对话框。  
   
 ## <a name="lock-pages-in-memory"></a>锁定内存页  
- 此 Windows 策略将确定哪些帐户可以使用进程将数据保留在物理内存中，从而阻止系统将数据分页到磁盘的虚拟内存中。 锁定内存中的页可以在发生将内存分页到磁盘时保持服务器的响应能力。 如果已向有权运行 sqlservr.exe 的帐户授予 Windows "锁定内存页" （LPIM）用户权限[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，则在32位和64位的 Standard edition 和更高版本中，"SQL Server**锁定内存页**" 选项设置为 ON。 在 SQL Server 的早期版本中，为 32 位的 SQL Server 实例设置“锁定页”选项时，需要有权运行 sqlservr.exe 的帐户具有 LPIM 用户权限并且将“awe_enabled”配置选项设置为 ON。  
+ 此 Windows 策略将确定哪些帐户可以使用进程将数据保留在物理内存中，从而阻止系统将数据分页到磁盘的虚拟内存中。 锁定内存中的页可以在发生将内存分页到磁盘时保持服务器的响应能力。 **Lock Pages in Memory** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 如果已向有权运行 sqlservr.exe 的帐户授予 Windows "锁定内存页" （LPIM）用户权限，则在32位和64位的 Standard edition 和更高版本中，"SQL Server 锁定内存页" 选项设置为 ON。 在 SQL Server 的早期版本中，为 32 位的 SQL Server 实例设置“锁定页”选项时，需要有权运行 sqlservr.exe 的帐户具有 LPIM 用户权限并且将“awe_enabled”配置选项设置为 ON。  
   
- 若要禁用 "**锁定内存页**" 选项[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请删除 SQL Server 启动帐户的 "锁定内存页" 用户权限。  
+ 若要禁用 "**锁定内存页**" 选项 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请删除 SQL Server 启动帐户的 "锁定内存页" 用户权限。  
   
 ### <a name="to-disable-lock-pages-in-memory"></a>禁用“锁定内存页”  
  **禁用 "锁定内存页" 选项：**  
   
-1.  在 **“开始”** 菜单上，单击 **“运行”**。 在 "**打开**" 框中`gpedit.msc`，键入。  
+1.  在 **“开始”** 菜单上，单击 **“运行”**。 在 "**打开**" 框中，键入 `gpedit.msc` 。  
   
      此时将打开“**组策略**”对话框。  
   
@@ -149,7 +148,7 @@ ms.locfileid: "69028692"
   
  ***/3gb**是一个操作系统启动参数。 有关详细信息，请访问 [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)。  
   
- * * WOW64 （windows on Windows 64 上的 Windows）是一个32在 64 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]位操作系统上运行的一种模式。 有关详细信息，请访问 [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)。  
+ * * WOW64 （windows on Windows 64 上的 Windows）是一个32在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64 位操作系统上运行的一种模式。 有关详细信息，请访问 [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)。  
   
 ## <a name="examples"></a>示例  
   

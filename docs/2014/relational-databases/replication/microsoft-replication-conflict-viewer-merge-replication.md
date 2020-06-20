@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e28a5077057c9a02a3b45de6a88180eab5c87b2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8da8743840c604e08cd8c17666e03f2de76c11cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62938579"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065846"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Microsoft 复制冲突查看器（合并复制）
   使用复制冲突查看器，可以查看在复制同步过程中发生的所有冲突。 在两个不同的服务器上（例如，在发布服务器和订阅服务器上，或在两个不同的订阅服务器上）同时修改相同的数据时会发生冲突。 使用在创建时选择的冲突解决程序，复制可以自动解决冲突。 不过，使用复制冲突查看器可以在必要时选择不同的冲突解决方法。 可能会发生下列冲突：  
@@ -46,7 +45,7 @@ ms.locfileid: "62938579"
  **发布**  
  选择包含具有冲突的表的发布。  
   
- **数据表**  
+ **表格**  
  选择包含冲突的表。  
   
  **定义筛选器**  
@@ -58,7 +57,7 @@ ms.locfileid: "62938579"
  **全选**  
  单击此项可选择网格中列出的所有冲突。  
   
- **全部不选**  
+ **选择无**  
  单击此项可取消选择网格中列出的所有冲突。  
   
  **删除**  

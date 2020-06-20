@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 358a595ef326f86db9ab81294bc3a9c88fc8ef0d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8e517cff394bc0c813e34763469f75147a0a16c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706538"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050235"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>确定表或存储过程是否应移植到内存中 OLTP
   中的事务性能收集器 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 可帮助您评估内存中 OLTP 是否将改进数据库应用程序的性能。 事务性能分析报告还指示在应用程序中启用内存中 OLTP 所必须完成的工作量。 在你标识了要移植到内存中 OLTP 的基于磁盘的表之后，可以使用 [内存优化顾问](memory-optimization-advisor.md)帮助你迁移表。 同样， [Native Compilation Advisor](native-compilation-advisor.md) 帮助您将存储过程移植到本机编译的存储过程。  
@@ -93,7 +92,7 @@ ms.locfileid: "82706538"
   
 4.  单击 "**新建**" 以创建一个新数据库来保存配置文件数据。 数据库创建完成后，在向导中单击 "**下一步**"。  
   
-5.  在向导中的下一步，可以添加用户并登录。 可以将登录映射到 MDW 实例的角色成员身份。 从本地实例收集数据时无需执行该操作。 如果不是从本地实例收集数据，则可将数据库角色成员身份 `mdw_admin` 授予将运行待探查事务的帐户。 完成后，单击 "**下一步**"。  
+5.  在向导中的下一步，可以添加用户并登录。 可以将登录映射到 MDW 实例的角色成员身份。 从本地实例收集数据时无需执行该操作。 如果不是从本地实例收集数据，则可将数据库角色成员身份 `mdw_admin` 授予将运行待探查事务的帐户。 完成后单击“下一步”。  
   
 6.  请确保 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理正在运行。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5af6b91c-724f-45ac-aff1-7555014914f4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 04cb8ea2505340cb90221b328c04efc390296c19
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d7086db16eab9935624546965652834313a467db
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175356"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927818"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>使用聚集列存储索引
   用于在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中使用聚集列存储索引的任务。
@@ -68,7 +67,7 @@ GO
  对于已分区数据， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 首先将每一行分配给一个分区，然后对该分区内的数据执行列存储操作。 每个分区都具有自己的行组以及至少一个增量存储。
 
 ### <a name="deltastore-loading-scenarios"></a>增量存储加载方案
- 行在增量存储中累积，直到行数达到行组允许的最大行数。 如果增量存储包含每个行组的最大行数[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，则将行组标记为 "已关闭"。 称为 "元组-移动器" 的后台进程将查找关闭的行组，并将其移到列存储中，其中，行组压缩为列段，列段存储在列存储中。
+ 行在增量存储中累积，直到行数达到行组允许的最大行数。 如果增量存储包含每个行组的最大行数， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 则将行组标记为 "已关闭"。 称为 "元组-移动器" 的后台进程将查找关闭的行组，并将其移到列存储中，其中，行组压缩为列段，列段存储在列存储中。
 
  每个聚集列存储索引可以有多个增量存储。
 

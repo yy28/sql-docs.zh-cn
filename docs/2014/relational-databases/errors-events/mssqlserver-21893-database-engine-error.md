@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1ab1195a-fe2a-4e06-b871-b177b6bea1fe
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6258f36990efccf83b43e8d8ac8bd4c2397477aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1de5347082ba632af7ef2685a46ed6418904183
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62914942"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034621"
 ---
 # <a name="mssqlserver_21893"></a>MSSQLSERVER_21893
     
@@ -30,7 +29,7 @@ ms.locfileid: "62914942"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|SQLErrorNum21893|  
-|消息正文|订阅服务器 (%s)（属于原始发布服务器“%s”）在重定向的发布服务器“%s”中不显示为远程服务器。 在`sp_addlinkedserver`重定向的发布服务器上运行，以将这些订阅服务器添加为远程服务器。|  
+|消息正文|订阅服务器 (%s)（属于原始发布服务器“%s”）在重定向的发布服务器“%s”中不显示为远程服务器。 `sp_addlinkedserver`在重定向的发布服务器上运行，以将这些订阅服务器添加为远程服务器。|  
   
 ## <a name="explanation"></a>说明  
  `sp_validate_redirected_publisher`在远程服务器上， 使用发布服务器数据库的订阅元数据表来确定其关联的订阅服务器，并验证在订阅服务器的 master.dbo.sysservers 中具有关联的条目。 如果任何标识的订阅服务器不存在，则会返回此错误。  

@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: ecc62702-c0d5-4180-b3c2-16ec5030caa7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 52365cbe64a50b9622ded5587f0baf2ed46cce98
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d90911932b5f9bfc91368e70e66d2b227a3964f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753154"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997125"
 ---
 # <a name="getting-started-in-smo"></a>SMO 入门
-  本主题包含有关使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理对象（SMO）的入门信息。 SMO 一节面向开发人员。 下面的列表将帮助您找到以下相关信息：SMO 对象层次结构、如何使用 SMO 准备编写程序、如何使用不同的编程语言开始编写 SMO 程序，以及常规和特定的编程任务。  
+  本主题包含有关使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象（SMO）的入门信息。 SMO 一节面向开发人员。 下面的列表将帮助您找到以下相关信息：SMO 对象层次结构、如何使用 SMO 准备编写程序、如何使用不同的编程语言开始编写 SMO 程序，以及常规和特定的编程任务。  
   
 |||  
 |-|-|  
