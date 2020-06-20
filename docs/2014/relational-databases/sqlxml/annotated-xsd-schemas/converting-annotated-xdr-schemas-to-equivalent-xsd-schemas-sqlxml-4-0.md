@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 151c94a8-66d3-4c46-a5ff-a22df456940a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2b3364775d65e3bb831d6f0dbb443c0cf23dc2ed
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c73ae49abd0d432772ea3c0f76efa4fc971e3d61
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702951"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043129"
 ---
 # <a name="converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-40"></a>将带批注的 XDR 架构转换为等效的 XSD 架构 (SQLXML 4.0)
   XML 架构定义 (XSD) 语言是精简 XML 数据 (XDR) 架构定义语言的后继版本。 随着在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 中引入对 XSD 的支持，它假定新的带批注的架构是使用 XSD 创建的。 SQLXML 4.0 包括一个 XDR 到 XSD 转换器工具，此工具旨在帮助您将现有带批注的 XDR 架构转换为等效的 XSD 架构。  

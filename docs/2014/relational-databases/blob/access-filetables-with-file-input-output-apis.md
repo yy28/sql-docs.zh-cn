@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cd43f430f43f31435df6fff71687136f4bd5f9e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56118ef2db319abd270ff51259e3537864fdd57e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010358"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955903"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>使用文件输入输出 API 访问 FileTable
   说明如何在 FileTable 上执行文件系统 I/O。  

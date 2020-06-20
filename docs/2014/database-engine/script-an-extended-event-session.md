@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 80f9fdde-1f13-4292-a4fc-55da826be3b4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 072a3220ba5c6997c463031733bbbe0ce2587fe1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63b06c9d0564d4e78acf4742e49814c2d39ae6f9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088909"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929338"
 ---
 # <a name="script-an-extended-event-session"></a>编写扩展事件会话的脚本
   本主题介绍如何编写事件会话的脚本。 您可以导出、更改或删除事件会话，或者将事件会话删除并创建到以下位置：  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 46c0c22e-d105-4d5b-bb9d-5694472e8651
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bbf73940b92ef158e4e93b10c2142c9053703f5f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d004ba320b50896b6f57c5de335d7f7b3d33e87a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705408"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020042"
 ---
 # <a name="error-messages"></a>错误消息
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序返回的消息文本将放在**SQLGetDiagRec**的*MessageText*参数中。 错误源由消息标头指示：  

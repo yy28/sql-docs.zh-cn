@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bc5bcd87-663f-41d9-bb7b-b3e083cd63df
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 410f3a317a9d3ad2f8cab52d9f57fd4a63c1c36c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83d688a72efaaf75305e5077634f70b016bad818
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62865096"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039979"
 ---
 # <a name="import-the-policies-to-a-single-instance"></a>将策略导入到单个实例
   在此任务中，您将要计划的最佳实践策略导入到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的单个实例上的基于策略的管理中。  

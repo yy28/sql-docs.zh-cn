@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6fb96a845f7d5bf97b14fe10f1e19849f0344984
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 874f59097a7f8b9bb575eb50318b60804e388f39
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703622"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060117"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>使用 sql:prefix 创建有效的 ID、IDREF 和 IDREFS 类型属性 (SQLXML 4.0)
   可以将属性指定为 ID 类型属性。 然后，可以用指定为 IDREF 或 IDREFS 的属性引用 ID 类型属性，从而启用文档之间的链接。  
@@ -52,9 +51,9 @@ ms.locfileid: "82703622"
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. 指定 ID 和 IDREFS 类型  
- 在下面的架构中， ** \< Customer>** 元素由** \< Order>** 子元素组成。 ** \< Order>** 元素还具有一个子元素，即** \< OrderDetail>** 元素。  
+ 在下面的架构中， **\<Customer>** 元素由 **\<Order>** 子元素组成。 **\<Order>** 元素还有一个子元素，即 **\<OrderDetail>** 元素。  
   
- ** \< Customer>** 的**ORDERIDLIST**属性是一个 IDREFS 类型属性，该属性引用** \< Order>** 元素的 "订单**id** " 属性。  
+ 的**OrderIDList**属性 **\<Customer>** 是一个 IDREFS 类型属性，该属性引用元素的 "**订单 id** " 属性 **\<Order>** 。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

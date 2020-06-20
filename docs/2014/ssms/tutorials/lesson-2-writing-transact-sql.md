@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 439cfab5-c049-43a8-8617-59eaa8d24873
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bd776a778f56831fc63fef1ea040e3f69883eff3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7a9f116ccd65e4763e382d1125ca0a8424ecd97
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62470024"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040958"
 ---
 # <a name="lesson-2-writing-transact-sql"></a>第 2 课：编写 Transact-SQL
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是一个集成开发环境，用于编写 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 和 XML 查询以及 SQLCMD 命令。 本教程说明如何使用数据库引擎查询编辑器编写 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。  
@@ -37,7 +36,7 @@ ms.locfileid: "62470024"
   
 -   编写表脚本  
   
--   摘要  
+-   总结  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  
  [连接查询编辑器](lesson-2-1-connecting-with-query-editor.md)  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1d190d55c45530adde1b41658c975bbfc19c0b91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f056b5b8c29f90589568785e94426fa271ff8cb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482629"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971137"
 ---
 # <a name="navigational-access-master-data-services"></a>导航访问权限 (Master Data Services)
   导航访问权限适用于在 **“模型”** 选项卡上分配的模型对象安全性。  
@@ -33,7 +32,7 @@ ms.locfileid: "65482629"
   
  在您向某一实体、其叶成员或其合并成员分配权限时，导航访问权限意味着您可以读取或更新所有成员的名称和代码。 您还可以读取模型名称。  
   
- **特性**  
+ **属性**  
   
  在您向某一属性分配权限时，导航访问权限意味着您可以读取或更新实体中所有成员的名称和代码。 您还可以读取模型名称。  
   

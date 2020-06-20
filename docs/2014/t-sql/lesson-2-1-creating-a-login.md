@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a2512310-bdb6-41dc-858a-e866b2b58afc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7ceed5f82af858f6a2dc3a88df7276d5ba2fda3f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 400a57693fbea10270a51f5735a19b9639112ce9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211207"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000742"
 ---
 # <a name="creating-a-login"></a>创建登录名
   若要访问 [!INCLUDE[ssDE](../includes/ssde-md.md)]，用户需要有登录名。 登录名可以将用户身份表示为 Windows 帐户或 Windows 组成员，登录名也可以是仅存在于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]登录名。 应该尽可能使用 Windows 身份验证。  
@@ -26,7 +25,7 @@ ms.locfileid: "68211207"
   
 ### <a name="to-create-a-new-windows-account"></a>创建新的 Windows 帐户  
   
-1.  单击 **"开始**"，再单击 "**运行**"，在`%SystemRoot%\system32\compmgmt.msc /s`"**打开**" 框中键入，然后单击 **"确定"** 以打开 "计算机管理" 程序。  
+1.  单击 "**开始**"，再单击 "**运行**"，在 "**打开**" 框中键入 `%SystemRoot%\system32\compmgmt.msc /s` ，然后单击 **"确定"** 以打开 "计算机管理" 程序。  
   
 2.  在“系统工具”下，展开“本地用户和组”，右键单击“用户”，再单击“新建用户”。****************  
   

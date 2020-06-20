@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b83963b-b685-429d-92ba-5173f6f0000d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2860e10ef74676fb013b43e1740c9cf82223baa9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72734a0d8fa24cc69fd0f29b34fba4f6b2f61b6b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63000360"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053223"
 ---
 # <a name="audit-login-failed-event-class"></a>Audit Login Failed 事件类
   Audit Login Failed 事件类表示用户尝试登录到   并失败[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此类中的事件由新连接或从连接池中重用的连接触发。  

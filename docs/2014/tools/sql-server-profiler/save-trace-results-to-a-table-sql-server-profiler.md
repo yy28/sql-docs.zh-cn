@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: edbecf74-683b-4e43-a1ef-7a3d5f5e27f6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8571f7273cc2667040ffffc8ffbfb0df4e2a6ef6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc588fad85c94f1d04295156a0c6d4de34269ab4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67792691"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040223"
 ---
 # <a name="save-trace-results-to-a-table-sql-server-profiler"></a>将跟踪结果保存到表 (SQL Server Profiler)
   本主题说明如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]将跟踪结果保存到数据库表。  

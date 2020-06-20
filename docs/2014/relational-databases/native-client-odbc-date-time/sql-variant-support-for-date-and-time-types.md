@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 12ff1ea6-e2cc-40e6-910c-3126974a90b3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4dcca38ab5b7b67ca92cf35b49852bcd88437328
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 73a8745f393b76dfadf574a1029b6687c406a748
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705420"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020061"
 ---
 # <a name="sql_variant-support-for-date-and-time-types"></a>sql_variant 对日期和时间类型的支持
   本主题描述 `sql_variant` 数据类型如何支持增强的日期和时间功能。  
@@ -44,7 +43,7 @@ ms.locfileid: "82705420"
 |SQL_C_ULONG|bigint|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
 |SQL_C_SBIGINT|bigint|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
 |SQL_C_FLOAT|real|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
-|SQL_C_DOUBLE|float|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
+|SQL_C_DOUBLE|FLOAT|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
 |SQL_C_BIT|bit|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
 |SQL_C_UTINYINT|tinyint|忽略 SQL_CA_SS_VARIANT_SQL_TYPE。|  
 |SQL_C_BINARY|varbinary|SQL_CA_SS_VARIANT_SQL_TYPE 未设置。|  

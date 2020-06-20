@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 686edfe2-3650-48a6-a2da-9d46fa211ad8
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 12e678b8cd5210ba6db0cd326c0cd803ed210735
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e9a67ddf9ff079c4ff5075b8601aec4c0922e89
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63460043"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000595"
 ---
 # <a name="granting-access-to-a-database"></a>授予访问数据库的权限
   现在 Mary 具有访问此 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例的权限，但是不具有访问数据库的权限。 在授权她作为数据库用户之前，她甚至无权访问其默认数据库 **TestData** 。  

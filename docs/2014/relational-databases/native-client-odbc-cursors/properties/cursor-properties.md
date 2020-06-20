@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e70960e1-2085-46ed-9d55-aeb8c3532c84
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 66a4fe9d231ea4d2a2231bdde65267a9cd47e4af
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9a33b3f99ff143b4c81de46a068bf088337ba204
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705584"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020573"
 ---
 # <a name="cursor-properties"></a>游标属性
   通过设置 ODBC 样式的游标类型或 SQL-92/ISO 游标行为来确定游标的大致特征。 下列主题介绍影响游标行为的其他语句和连接属性。  

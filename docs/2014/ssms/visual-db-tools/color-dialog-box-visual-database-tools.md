@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 29d748f6ff75fc46bef3f667e50aa9cbd92bff5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d93a9f9a75bd869fd8ecc9bc17ec42750c4a94f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62936692"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067226"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>“颜色”对话框（可视化数据库工具）
   “颜色对话框”  返回用户选定的颜色的 RGB 值。 用户可以从显示器驱动程序确定的一组基本颜色或者从一组自定义颜色中进行选择。 从基本颜色中进行选择，或创建自定义颜色。 单击颜色矩阵或在“色调”  、“饱和度”  、“亮度”  、“红色”  、“绿色”  以及“蓝色”  框中执行键入操作可定义颜色。  

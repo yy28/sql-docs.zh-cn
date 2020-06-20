@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: d6768bd8-9cb5-4606-a726-a33a1df9e1bb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c52b48ffdfc0e837525447eff3813b3d91b57700
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 8273ad5edc65dd7351533209e9fa670c49f75f7a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856521"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929978"
 ---
 # <a name="options-query-results-sql-server-multi-server"></a>选项（“查询结果”-“SQL Server”-“多服务器”）
   在同时查询多个服务器时，可使用此页指定显示结果集的选项。 “合并结果”可将所有服务器中的结果集合并为单个结果集。 合并结果时，响应的第一个服务器将设置结果集的架构。 若要合并结果集，查询必须从每个服务器中返回具有相同列名的相同列数。 在合并结果时，如果某个服务器与第一个服务器在返回结果时返回的架构（列计数和列名称）不匹配，则会为该服务器显示一条消息。  

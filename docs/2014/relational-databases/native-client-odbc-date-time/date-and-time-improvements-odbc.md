@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e31d5ca5-2103-498f-954c-1ee93e217186
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 521017e07cf2304186ee0238e72f3274bb3f95c9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6ce8f906fc1949a80bfa8e5a541ecf1e83878775
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705508"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020409"
 ---
 # <a name="date-and-time-improvements-odbc"></a>日期和时间改进 (ODBC)
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]引入了新的日期和时间数据类型。 本部分介绍如何将这些新类型作为本机客户端中的扩展公开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 有关对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新日期和时间数据类型的 Native Client 支持的概述，请参阅[日期和时间改进](../native-client/features/date-and-time-improvements.md)。 有关演示 ODBC 日期/时间支持的示例，请参阅[使用日期和时间类型](../native-client-odbc-how-to/use-date-and-time-types.md)。  

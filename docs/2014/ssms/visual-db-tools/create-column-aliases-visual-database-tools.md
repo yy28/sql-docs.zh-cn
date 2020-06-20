@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e2e1c166-8ea7-47a2-b6a7-e419bf0fa3bb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6a6be65da2da5da5c025520314c069258aeb7bfb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: febe7ed27ed10a283cab549bc65299577d69761c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184360"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067168"
 ---
 # <a name="create-column-aliases-visual-database-tools"></a>创建列别名 (Visual Database Tools)
   您可为列名创建别名，以更方便地使用列名、计算和汇总值。 例如，您可以创建列别名以实现以下目的：  

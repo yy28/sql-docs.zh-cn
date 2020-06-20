@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 682d5d8cfe8a3c5e1e5de5286e5079d2e9856a11
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a8bd75854cc81c661d6e8ac60cab88e23d6efffc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705296"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019243"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
   **Bcp_setcolfmt**函数取代了[bcp_colfmt](bcp-colfmt.md)。 在指定列排序规则时，必须使用**bcp_setcolfmt**函数。 [bcp_setbulkmode](bcp-setbulkmode.md)可用于指定多个列格式。  
@@ -65,7 +64,7 @@ cbValue
  *property*  
  属性常量之一。 在下表中定义属性常量。  
   
-|Property|值|说明|  
+|properties|值|说明|  
 |--------------|-----------|-----------------|  
 |BCP_FMT_TYPE|BYTE|用户文件中此列的数据类型。 如果不同于数据库表中相应列的数据类型，则大容量复制将根据情况转换数据。<br /><br /> BCP_FMT_TYPE 参数由 sqlncli.h 中的 SQL Server 数据类型标记枚举，而非采用 ODBC C 数据类型枚举器。 例如，您可以使用特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 SQLCHARACTER 类型指定一个字符串：ODBC 类型 SQL_C_CHAR。<br /><br /> 若要为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型指定默认的数据表示形式，则将此参数设置为 0。<br /><br /> 对于从 SQL Server 大容量复制到某一文件，在 BCP_FMT_TYPE 为 SQLDECIMAL 或 SQLNUMERIC 时：<br /><br /> -如果源列不是**decimal**或**numeric**，则使用默认的精度和小数位数。<br />-如果源列为**decimal**或**numeric**，则使用源列的精度和小数位数。|  
 |BCP_FMT_INDICATOR_LEN|INT|以字节表示的指示器（前缀）的长度。<br /><br /> 它是列数据中以字节表示的长度/空指示器的长度。 有效的指示器长度值是 0（在未使用指示器时）、1、2 或 4。<br /><br /> 若要指定默认的大容量复制指示器用法，请将此参数设置为 SQL_VARLEN_DATA。<br /><br /> 指示器在内存中出现在任何数据的紧前面，在数据文件中出现在它们适用于的数据的紧前面。<br /><br /> 如果使用多种方法来指定数据文件列长度（例如指示器和最大列长度，或者指示器和终止符序列），则大容量复制将选择导致数据复制量最少的方法。<br /><br /> 如果列数据可能在长度上发生变化或列可能接受 NULL 作为值，则在没有调整数据格式的用户干预时，大容量复制生成的数据文件将包含指示器。|  

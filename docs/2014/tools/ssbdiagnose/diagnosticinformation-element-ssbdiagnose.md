@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0cfda544-542c-4cf4-86d2-8031c91b10f6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 55da8efd6ee5b330e259ed78bdd152720403f310
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d0ba141e3f04eaf1b6edfc1a2427ed75793bceb3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63186896"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006780"
 ---
 # <a name="diagnosticinformation-element-ssbdiagnose"></a>DiagnosticInformation 元素 (ssbdiagnose)
   **DiagnosticInformation** 元素包含报告实用工具发现的诊断信息的所有元素。 **DiagnosticInformation** 是 **ssbdiagnostic** XML 输出文件的根元素。  
@@ -37,15 +36,15 @@ ms.locfileid: "63186896"
   
 |Attribute|说明|  
 |---------------|-----------------|  
-|`None`|不适用|  
+|`None`|空值|  
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|描述|  
+|特征|说明|  
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  
-|**匹配项**|每个 **ssbdiagnose** XML 输出文件一次。|  
+|**出现次数**|每个 **ssbdiagnose** XML 输出文件一次。|  
   
 ## <a name="element-relationships"></a>元素关系  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ba5b5edf57bf877827fefe4f8764b8b71124a550
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0016fc3cdd93ea78ceed56efa076a01bd85be50
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196540"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042841"
 ---
 # <a name="create-nested-triggers"></a>创建嵌套触发器
   当触发器执行启动其他触发器的操作时，DML 和 DDL 触发器都是嵌套触发器。 这些操作都可以启动其他触发器等。 DML 触发器和 DDL 触发器最多可以嵌套 32 层。 可以通过 **nested triggers** 服务器配置选项来控制是否可以嵌套 AFTER 触发器。 但不管此设置是什么，都可以嵌套 INSTEAD OF 触发器（只有 DML 触发器可以为 INSTEAD OF 触发器）。  

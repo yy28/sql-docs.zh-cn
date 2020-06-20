@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 02399d6e-ab5e-4f30-8a3e-2bb1e8c135b5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 661d7ab65afca258424af300debde328b8f01fee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b6ba95771aafffa5a322ffa1b7443419936addd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761700"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053437"
 ---
 # <a name="mssqlserver_9692"></a>MSSQLSERVER_9692
     
@@ -36,6 +35,6 @@ ms.locfileid: "62761700"
  计算机上的其他程序正在使用指示的 TCP 端口。  
   
 ## <a name="user-action"></a>用户操作  
- 运行`netstat -aon`以确定哪个程序正在使用该端口。 禁用该应用程序，或者为 Service Broker 指定其他端口。  
+ 运行 `netstat -aon` 以确定哪个程序正在使用该端口。 禁用该应用程序，或者为 Service Broker 指定其他端口。  
   
   

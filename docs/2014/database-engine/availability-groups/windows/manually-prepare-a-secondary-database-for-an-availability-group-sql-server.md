@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 927d0fd7b108718daffe86a6534ca40492429d34
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3da3f7332bdabce65785b2844157dd4639389254
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797649"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936738"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>为可用性组手动准备辅助数据库 (SQL Server)
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 PowerShell 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中为 AlwaysOn 可用性组准备辅助数据库。 准备辅助数据库需要两个步骤：(1) 使用 RESTORE WITH NORECOVERY 将主数据库的最近数据库备份和后续的日志备份还原到承载辅助副本的每个服务器实例；(2) 将还原的数据库联接到可用性组。  
@@ -195,7 +194,7 @@ ms.locfileid: "72797649"
         > [!IMPORTANT]  
         >  如果主数据库与辅助数据库的路径名称不同，则无法添加文件。 原因是在接收添加文件操作所需的日志时，承载辅助副本的服务器实例会尝试将新文件放在主数据库所用的路径中。  
   
-         例如，下面的命令可还原主数据库的备份，主数据库位于 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]默认实例的数据目录 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA 中。 还原数据库操作必须将该数据库移到一个[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]名为（*AlwaysOn1*）的远程实例的数据目录中，该实例承载另一个群集节点上的辅助副本。 在该处，数据和日志文件还原到*C:\Program FILES\MICROSOFT SQL Server\MSSQL12。ALWAYSON1\MSSQL\DATA*目录。 该还原操作使用 WITH NORECOVERY 令辅助数据库保持还原状态。  
+         例如，下面的命令可还原主数据库的备份，主数据库位于 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]默认实例的数据目录 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA 中。 还原数据库操作必须将该数据库移到 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 一个名为（*AlwaysOn1*）的远程实例的数据目录中，该实例承载另一个群集节点上的辅助副本。 在该处，数据和日志文件还原到*C:\Program FILES\MICROSOFT SQL Server\MSSQL12。ALWAYSON1\MSSQL\DATA*目录。 该还原操作使用 WITH NORECOVERY 令辅助数据库保持还原状态。  
   
         ```sql
         RESTORE DATABASE MyDB1  
@@ -282,6 +281,6 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组 &#40;SQL Server 概述&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
- [Transact-sql&#41;&#40;RESTORE 参数](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
+ [RESTORE 参数 (Transact-SQL)](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [排除失败的添加文件操作 &#40;AlwaysOn 可用性组&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  

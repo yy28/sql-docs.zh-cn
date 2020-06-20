@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2d59a42fa7b77e6800218f1eeca4986320c1dcef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b47690162b2418469dcb3f866a7c002981b80a75
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766771"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964097"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>对包中敏感数据的访问控制
   为了保护 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中的数据，可以设置保护级别，以帮助仅保护包中的敏感数据或包中的所有数据。 另外，可以采用密码或用户密钥对数据加密，或依靠数据库对数据进行加密。 另外，您对包所采用的保护级别不一定是静态的，而是在包的整个生命周期内可能变化。 通常，您可以在包开发阶段设置一个保护级别，在包部署阶段设置另一个保护级别。  
@@ -64,7 +63,7 @@ ms.locfileid: "62766771"
 ## <a name="protection-level-setting-and-the-ssisdb-catalog"></a>保护级别设置和 SSISDB 目录  
  SSISDB 目录使用 `ServerStorage` 保护级别。 在向 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器部署 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目时，该目录会自动对包数据和敏感值加密。 该目录还会在检索数据时自动解密数据。  
   
- 若将项目（.ispac 文件）从 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器导出到文件系统，该系统会将保护级别自动更改为 `EncryptSensitiveWithUserKey`。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]如果使用中的 " **Integration Services 导入项目向导**" 导入项目，"**属性**" 窗口中的**ProtectionLevel**属性将显示`EncryptSensitiveWithUserKey`值。  
+ 若将项目（.ispac 文件）从 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器导出到文件系统，该系统会将保护级别自动更改为 `EncryptSensitiveWithUserKey`。 如果使用中的 " **Integration Services 导入项目向导**" 导入项目 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ，"**属性**" 窗口中的**ProtectionLevel**属性将显示值 `EncryptSensitiveWithUserKey` 。  
   
 ## <a name="protection-level-setting-based-on-package-life-cycle"></a>基于包的生命周期设置保护级别  
  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中初次开发 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包时，可以设置该包的保护级别。 以后当部署包时，在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中将包导入 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或从中导出包时，或者在将包从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区或文件系统时，都可以更新包的保护级别。 例如，如果在计算机上使用某个用户密钥保护级别选项创建并保存包，则在将包提供给其他用户时，很可能需要更改保护级别，否则，他们将无法打开该包。  

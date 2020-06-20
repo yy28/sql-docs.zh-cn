@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e38a4c75ad6cf8c65d7120e0eb98163f7ee0fccc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3048a3845e3e65c305abdde3f75a30f777ed1ed
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482874"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971277"
 ---
 # <a name="lock-a-version-master-data-services"></a>锁定版本 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，锁定某一模型的版本以便防止对该模型的成员及其属性的更改。  
@@ -26,7 +25,7 @@ ms.locfileid: "65482874"
 > [!NOTE]  
 >  在锁定某一版本后，模型管理员可以继续添加、编辑和删除成员。 对模型具有权限的其他用户只能查看成员。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“版本管理”** 功能区域。  

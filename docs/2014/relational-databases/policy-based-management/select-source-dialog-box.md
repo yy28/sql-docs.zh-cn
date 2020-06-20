@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 49c96ead9463f49ce81133f8d29127aebb211d85
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc666567edb0c09896953de58a5f98bef166fbd4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62691786"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066730"
 ---
 # <a name="select-source-dialog-box"></a>“选择源”对话框
   此对话框用于选择要运行的策略的来源。 若要选择一个或多个包含策略的 XML 文件，请选择 **“文件”** 。 若要运行位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上的策略，请选择 **“服务器”** 。  
@@ -26,11 +25,11 @@ ms.locfileid: "62691786"
   
  **打开此对话框**  
   
--   在“已注册的服务器”中，右键单击“本地服务器组”  或“本地服务器组”  下面的任一服务器，或右键单击“中央管理服务器”  下面的任一服务器，然后选择“评估策略”  。 在“评估策略”  对话框的“策略选择”  页上单击“浏览”( **...** ) 按钮。  
+-   在“已注册的服务器”中，右键单击“本地服务器组”  或“本地服务器组”  下面的任一服务器，或右键单击“中央管理服务器”  下面的任一服务器，然后选择“评估策略”  。 在“评估策略”对话框的“策略选择”页上单击“浏览”( **...** ) 按钮。  
   
 -   在对象资源管理器中，依次展开“管理”  和“策略管理”  ，右键单击“策略”  ，然后选择“导入策略”  。 在“导入”  对话框中，单击“浏览”( **...** ) 按钮。  
   
--   在对象资源管理器中，右键单击某个服务器、数据库或数据库对象，然后依次选择“策略”  和“评估”  。 在“评估策略”  对话框的“策略选择”  页上单击“浏览”( **...** ) 按钮。  
+-   在对象资源管理器中，右键单击某个服务器、数据库或数据库对象，然后依次选择“策略”  和“评估”  。 在“评估策略”对话框的“策略选择”页上单击“浏览”( **...** ) 按钮。  
   
 ## <a name="options"></a>选项  
  **文件**  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 519c6f96-5e1f-47d2-b96a-d49946948c25
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 461a652999e97907962486cfc05e5b6668f5590d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 840011d1797c7ef9482af31ffc8b3ec3a6419b8a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060878"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921968"
 ---
 # <a name="configure-a-foreach-loop-container"></a>配置 Foreach 循环容器
   此过程介绍如何配置 Foreach 循环容器，包括如何在枚举器级和容器级上配置属性表达式。  
@@ -72,7 +71,7 @@ ms.locfileid: "66060878"
   
 7.  也可以单击 **“变量映射”** ，将对象属性映射到集合值，然后进行下列操作：  
   
-    1.  在 "**变量**" 列表中，选择变量，或单击 " ** \<新建变量">** 创建新变量。  
+    1.  在 "**变量**" 列表中，选择变量或单击 **\<New Variable>** 以创建新变量。  
   
     2.  如果要添加新变量，那么请在 **“添加变量”** 对话框中设置该变量的属性，然后单击 **“确定”**。  
   
@@ -83,7 +82,7 @@ ms.locfileid: "66060878"
   
 8.  也可以单击 **“表达式”** ，然后在 **“表达式”** 页上，为 Foreach 循环容器的属性创建属性表达式。 有关详细信息，请参阅 [添加或更改属性表达式](expressions/add-or-change-a-property-expression.md)。  
   
-9. 单击" **确定**"。  
+9. 单击“确定”。   
   
 ## <a name="see-also"></a>另请参阅  
  [Foreach 循环容器](control-flow/foreach-loop-container.md)  

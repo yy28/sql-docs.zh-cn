@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2ccbdf17-e14f-42f1-a836-ca999a3432c9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f5cdfc761b3b8c19e07b1818c2732414b03258cc
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: b7d785a7b8c2ce424f2f88b23024b0d22f399149
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856559"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929988"
 ---
 # <a name="options-query-results-sql-server-results-to-text-page"></a>选项（查询结果-SQL Server-结果到文本页）
   使用此页可以指定以文本格式显示查询结果集的选项。 对这些选项所做的更改只应用于新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询。 若要更改当前查询的选项，请在 "**查询**" 菜单上单击 "**查询选项**"，或在查询窗口中单击右键， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 然后选择 "**查询选项**"。 在 **“查询选项”** 对话框中的 **“结果”** 下，单击 **“文本”**。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cfca52be-e092-4fb7-994f-a44948bce510
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 24599cad44366b0a0af6d3328f64b07b248f2e7c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e4a4565a3b9734219afd6e62cd08aec463ee7168
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62698860"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053296"
 ---
 # <a name="audit-database-operation-event-class"></a>Audit Database Operation 事件类
   当数据库中发生各种操作（如检查点操作或订阅查询通知）时，会发生 **Audit Database Operation** 事件类。  

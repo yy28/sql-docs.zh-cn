@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 742ddcd2-232b-4aa1-9212-027df120ad35
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7d6b41e72d3421d24a160dbcc226ce285e37981c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 89c7c4e9a8dcffe03dd12f8013d5ed43810547f3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702046"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021069"
 ---
 # <a name="cursor-behaviors"></a>游标行为
   ODBC 支持通过指定游标的可滚动性和敏感性来指定其行为的 ISO 选项。 这些行为是通过在对[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)的调用上设置 SQL_ATTR_CURSOR_SCROLLABLE 和 SQL_ATTR_CURSOR_SENSITIVITY 选项来指定的。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序通过请求具有以下特征的服务器游标来实现这些选项。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4996a1026b4c85b105efc09b8381913f7a47942a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eecbdf1bd3d3859e272ce2216bde660910795c97
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789454"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936686"
 ---
 # <a name="overview-of-powershell-cmdlets-for-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性组的 PowerShell Cmdlet 概述 (SQL Server)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell 是专门设计用于系统管理的基于任务的命令行 Shell 和脚本语言。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中提供一组 PowerShell cmdlet，支持您部署、管理和监视可用性组、可用性副本和可用性数据库。  
@@ -44,14 +43,14 @@ ms.locfileid: "62789454"
 -   [监视可用性组的运行状况](#MonitorTblshtAGs)  
   
 > [!NOTE]  
->  有关描述如何使用 cmdlet 来[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]执行[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]任务的联机丛书中的主题的列表，请参阅[AlwaysOn 可用性组 &#40;&#41;SQL Server 概述的](overview-of-always-on-availability-groups-sql-server.md)"相关任务" 一节。  
+>  有关 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 描述如何使用 cmdlet 来执行任务的联机丛书中的主题的列表 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ，请参阅[AlwaysOn 可用性组 &#40;&#41;SQL Server 概述的](overview-of-always-on-availability-groups-sql-server.md)"相关任务" 一节。  
   
 ##  <a name="configuring-a-server-instance-for-alwayson-availability-groups"></a><a name="ConfiguringServerInstance"></a>为 AlwaysOn 可用性组配置服务器实例  
   
 |Cmdlet|说明|支持平台|  
 |-------------|-----------------|------------------|  
 |`Disable-SqlAlwaysOn`|禁用服务器实例上的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。|由 `Path`、`InputObject` 或 `Name` 参数指定的服务器实例。 （必须为支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]版本。)|  
-|`Enable-SqlAlwaysOn`|在支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 实例上启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 。 有关支持的[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]信息，请参阅[AlwaysOn 可用性组 &#40;SQL Server&#41;的先决条件、限制和建议](prereqs-restrictions-recommendations-always-on-availability.md)。|任何支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]版本。|  
+|`Enable-SqlAlwaysOn`|在支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 实例上启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 。 有关支持的信息 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ，请参阅[AlwaysOn 可用性组 &#40;SQL Server&#41;的先决条件、限制和建议](prereqs-restrictions-recommendations-always-on-availability.md)。|任何支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]版本。|  
 |`New-SqlHadrEndPoint`|在服务器实例上创建新的数据库镜像端点。 在主数据库和辅数据库之间移动数据时需要此端点。|任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |`Set-SqlHadrEndpoint`|更改现有数据库镜像端点的属性，如名称、状态或身份验证属性。|支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 并缺少数据库镜像端点的服务器实例|  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62789454"
 |Cmdlet|说明|支持平台|  
 |-------------|-----------------|------------------|  
 |`Backup-SqlDatabase`|创建数据或日志备份。|任何联机数据库（对于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，则为承载主副本的服务器实例上的数据库）|  
-|`Restore-SqlDatabase`|还原备份。|任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例（对于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，则为承载辅助副本的服务器实例）<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 准备辅助数据库时，必须在每个`-NoRecovery` `Restore-SqlDatabase`命令中都使用参数。|  
+|`Restore-SqlDatabase`|还原备份。|任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例（对于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，则为承载辅助副本的服务器实例）<br /><br /> **&#42;&#42; 重要 &#42;&#42;** 准备辅助数据库时，必须 `-NoRecovery` 在每个命令中都使用参数 `Restore-SqlDatabase` 。|  
   
  有关使用这些 cmdlet 来准备辅助数据库的信息，请参阅[为可用性组手动准备辅助数据库 (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)。  
   

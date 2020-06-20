@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f2201be33df4346ab2afa812828ab9655b0ed2be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 616707bfb11b48b170fc8f0e8872076d2cd09d1c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67793286"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060357"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>复制已分区表和索引
   由于使用分区可以快速而有效地管理和访问数据子集，并同时保持数据集合的完整性，因而使大型表或索引更易于管理。 有关详细信息，请参阅 [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)。 复制支持分区，提供了一组属性来指定如何处理已分区表和索引。  
@@ -37,7 +36,7 @@ ms.locfileid: "67793286"
   
  与分区相关的第一组属性是项目架构选项，用于决定是否应将分区对象复制到订阅服务器。 可以按下列方式设置这些架构选项：  
   
--   在新建发布向导的 **“项目属性”** 页或者“发布属性”对话框中。 若要复制上一个表中列出的对象，请`true`为属性 "**复制表分区方案**" 和 "**复制索引分区方案**" 指定值。 有关如何访问“项目属性”  页的信息，请参阅[查看和修改发布属性](view-and-modify-publication-properties.md)。  
+-   在新建发布向导的 **“项目属性”** 页或者“发布属性”对话框中。 若要复制上一个表中列出的对象，请 `true` 为属性 "**复制表分区方案**" 和 "**复制索引分区方案**" 指定值。 有关如何访问“项目属性”  页的信息，请参阅[查看和修改发布属性](view-and-modify-publication-properties.md)。  
   
 -   通过使用以下其中一个存储过程的 *schema_option* 参数：  
   
@@ -70,9 +69,9 @@ ms.locfileid: "67793286"
 ### <a name="enabling-partition-switching"></a>启用分区切换  
  使用事务发布的下列属性，用户可以控制已复制环境中分区切换的行为。  
   
--   allow_partition_switch，当设置为`true`时，可以对发布数据库执行切换分区。 ** \@**  
+-   ** \@ allow_partition_switch**，当设置为时 `true` ，可以对发布数据库执行切换分区。  
   
--   replicate_partition_switch 确定 switch partition DDL 语句是否应复制到订阅服务器。 ** \@** 仅当** \@allow_partition_switch**设置为`true`时，此选项才有效。  
+-   ** \@ REPLICATE_PARTITION_SWITCH**确定 switch partition DDL 语句是否应复制到订阅服务器。 仅当** \@ allow_partition_switch**设置为时，此选项才有效 `true` 。  
   
  创建发布时可以使用 [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) 设置这些属性，或在创建发布后使用 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) 设置这些属性。 如上所述，合并复制不支持分区切换。 若要对已启用合并复制的表执行 SWITCH PARTITION，请从发布中删除该表。  
   

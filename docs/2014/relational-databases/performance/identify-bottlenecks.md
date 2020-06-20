@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: db079e65-ee80-4105-aec9-f8230d0d6635
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: be8b05a3dc706d23f0e1328f4e8bdd38ed368ede
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8cf0299f4ba1eeb3f60ad2f24737b136a482a6b6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150902"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066842"
 ---
 # <a name="identify-bottlenecks"></a>识别瓶颈
   对共享资源同时访问会导致瓶颈。 通常，每一软件系统都不可避免地存在瓶颈。 然而，对共享资源的过多需求将导致响应时间过长，因此必须进行识别和优化。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8647a1a4529f7c7d4a8258eac5b726da203c7df9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9259352350a099db5d9b18411ad4da06dfb19819
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482726"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971067"
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>临时存储过程 (Master Data Services)
   从 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]启动临时过程时，您使用三个存储过程之一。  
@@ -33,8 +32,8 @@ ms.locfileid: "65482726"
   
 |参数|说明|  
 |---------------|-----------------|  
-|**VersionName**<br /><br /> 必须|版本的名称。 这可能区分大小写，也可能不区分，具体取决于您的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 排序规则设置。|  
-|**LogFlag**<br /><br /> 必须|确定在临时过程中是否记录事务。 可能的值为：<br /><br /> **0**：不记录事务。<br />**1**：记录事务。<br /><br /> <br /><br /> 有关事务的详细信息，请参阅[事务 (Master Data Services)](transactions-master-data-services.md)。|  
+|**VersionName**<br /><br /> 必需|版本的名称。 这可能区分大小写，也可能不区分，具体取决于您的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 排序规则设置。|  
+|**LogFlag**<br /><br /> 必需|确定在临时过程中是否记录事务。 可能的值包括：<br /><br /> **0**：不记录事务。<br />**1**：记录事务。<br /><br /> <br /><br /> 有关事务的详细信息，请参阅[事务 (Master Data Services)](transactions-master-data-services.md)。|  
 |**BatchTag**<br /><br /> 必需，但是 Web 服务除外|在临时表中指定 **BatchTag** 值。|  
 |**Batch_ID**<br /><br /> 仅对 Web 服务为必需的|在临时表中指定的 **Batch_ID** 值。|  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c14608a34c2df5a0e93fea985d8135a37d5ffa53
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c105b6084badabe52b2c92fcbde27e67d63852b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63273279"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040548"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>在聚合查询中使用列 (Visual Database Tools)
   创建聚合查询时， [查询和视图设计器](visual-database-tools.md) 将进行某些假设以便可以构造有效的查询。 例如，如果创建聚合查询并将某个数据列标记为输出，则查询和视图设计器将自动将该列包含在 GROUP BY 子句中，以避免无意中试图在汇总中显示个别行的内容。  
@@ -38,7 +37,7 @@ ms.locfileid: "63273279"
   
 -   如果没有显示网格的“分组依据”  列（因为尚未指定聚合查询），则搜索条件将放入 WHERE 子句中。  
   
--   如果已在聚合查询中，并在“分组依据”  列中选择了 **Where** 选项，则搜索条件被放入 WHERE 子句中。  
+-   如果已在聚合查询中，并在“分组依据”列中选择了 **Where** 选项，则搜索条件被放入 WHERE 子句中。  
   
 -   如果“分组依据”  列包含 **Where** 以外的任何值，则搜索条件将放入 HAVING 子句中。  
   
