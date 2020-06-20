@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 94fc8916-8032-490c-b9d5-ded8b6217e49
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d4d614f3479dac0abcf5b1d6c5ae69dff3dfedf5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4bd7e159a148b134d744481a76ac910af572c0c2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059285"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969407"
 ---
 # <a name="event-handlers-tab"></a>“事件处理程序”选项卡
   可以使用 **设计器的** “事件处理程序” [!INCLUDE[ssIS](../includes/ssis-md.md)] 选项卡在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包中生成控制流。 事件处理程序可因响应由包、包中的任务或容器所引发的事件而运行。  
@@ -32,7 +31,7 @@ ms.locfileid: "66059285"
  **删除**  
  选择一个事件处理程序，再通过单击“删除”**** 将其从包中删除。  
   
- **单击此处为可执行\< \<文件名称创建事件处理程序名称>>**  
+ **单击此处为 \<event handler name> 可执行文件创建\<executable name>**  
  单击此项可创建事件处理程序。  
   
  通过将代表 [!INCLUDE[ssIS](../includes/ssis-md.md)] 任务和容器的图形对象从 **“工具箱”** 拖至 **“事件处理程序”** 选项卡的设计图面，再通过使用优先约束定义其运行顺序来连接这些对象，即可创建控制流。  

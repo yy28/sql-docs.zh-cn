@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 262a6404ced039e629aa7e507c211949dab7bad2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e3a1f1b8b30a6da6c224d73a126840205c68695
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892293"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968297"
 ---
 # <a name="integration-services-backward-compatibility"></a>Integration Services 的向后兼容性
-  本部分介绍各版本之间的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]更改。 它包括不再可用或计划在将来的版本中删除的功能。 本部分还介绍对产品所做的更改，已知这些更改会使包含 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 功能的现有应用程序无法继续工作，或会使其行为发生变化。  
+  本部分介绍各版本之间的更改 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 。 它包括不再可用或计划在将来的版本中删除的功能。 本部分还介绍对产品所做的更改，已知这些更改会使包含 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 功能的现有应用程序无法继续工作，或会使其行为发生变化。  
   
 ## <a name="in-this-section"></a>本节内容  
   

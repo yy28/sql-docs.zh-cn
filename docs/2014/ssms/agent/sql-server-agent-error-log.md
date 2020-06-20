@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 0b2d6e6e-cd2d-4b8b-9fa2-2bbd2fc0da41
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1dfa6926d86fce5006e458b3738a28a8b5f467d0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29bc8faa8fbd897a9bbb3a51c1042d48e84ff977
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63267393"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058772"
 ---
 # <a name="sql-server-agent-error-log"></a>SQL Server 代理错误日志
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 默认情况下，代理创建错误日志来记录警告和错误。 日志中显示下列警告和错误：  
   
--   警告消息，提供有关潜在问题的信息，例如 "作业\< *job_name*> 在运行时被删除"。  
+-   警告消息，提供有关潜在问题的信息，例如 "作业 \<*job_name*> 在运行时被删除"。  
   
 -   错误消息，通常需要系统管理员干预，例如“无法启动邮件会话”。 可以通过 **net send**将错误消息发送给特定用户或计算机。  
   

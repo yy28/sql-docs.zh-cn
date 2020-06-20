@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d253bb05-9166-4b50-bd4a-27b818f514e0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 59591056d107e8cc53863ca537dc57aaba7f6d26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 217e8326b0c847b1348464d5c87021b6f8d7f6fb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095147"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012426"
 ---
 # <a name="full-text-search-has-changed-since-sql-server-2008"></a>全文搜索自 SQL Server 2008 以后已发生更改
   升级顾问检测到将升级全文搜索。 许多全文搜索选项和设置已发生更改。 因此，当您升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 全文搜索时，可能需要修改某些设置。  

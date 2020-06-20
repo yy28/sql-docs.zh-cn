@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3c643ad9a84c6afe5b6ff08fd6716753ef42f79e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1e807db72a84e210d8781aa53a3dcc50a1d2f194
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807238"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934358"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>数据库镜像和数据库快照 (SQL Server)
   可以利用为了实现可用性目标而维护的镜像数据库来减轻报表的负载。 若要将镜像数据库用于报表，可以在镜像数据库中创建数据库快照，并将客户端连接请求定向到最新的快照。 由于数据库快照只在创建快照时存在，因此，它是一个静态的、只读的并与其源数据库保持事务一致的快照。 若要在镜像数据库中创建数据库快照，数据库必须处于同步镜像状态。  

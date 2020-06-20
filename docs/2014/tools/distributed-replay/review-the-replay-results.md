@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 384234072c312fca2c91da8ab4e6ac09eb0f79fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149710"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011592"
 ---
 # <a name="review-the-replay-results"></a>查看重播结果
-  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 功能完成一个分布式重播之后，可以在每个客户端上的结果跟踪文件中捕获和保存每个客户端的重播活动。 为了捕获此活动，使用“重播”  选项运行管理工具时，必须使用 **-o** 参数。 有关“重播”选项的详细信息，请参阅[“重播”选项（Distributed Replay 管理工具）](replay-option-distributed-replay-administration-tool.md)。  
+  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 功能完成一个分布式重播之后，可以在每个客户端上的结果跟踪文件中捕获和保存每个客户端的重播活动。 为了捕获此活动，使用“重播”选项运行管理工具时，必须使用 **-o** 参数。 有关“重播”选项的详细信息，请参阅[“重播”选项（Distributed Replay 管理工具）](replay-option-distributed-replay-administration-tool.md)。  
   
  存储结果跟踪文件的位置由位于每个客户端上的客户端配置文件 `<ResultDirectory>` 中的 XML 元素 `DReplayClient.xml`指定。 每次重播时，都将覆盖客户端结果目录中的跟踪文件。  
   
@@ -71,15 +70,15 @@ ms.locfileid: "63149710"
 |ConnectionID|`int`|此事件的捕获连接的 ID。|11|  
 |ReplaySPID|`int`|此事件的重播会话的 ID。|12|  
 |DatabaseName|`nvarchar`|正在运行用户语句的数据库的名称。|13|  
-|LoginName|`nvarchar`|用户的登录名。 这可能是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安全登录名或 Microsoft Windows 登录凭据，格式*domain_name*\\*user_name*。|14|  
+|LoginName|`nvarchar`|用户的登录名。 这可能是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全登录名或 Microsoft Windows 登录凭据，格式为： *domain_name*\\*user_name*。|14|  
 |CaptureHostName|`nvarchar`|在捕获期间运行此客户端服务的计算机的名称。|15|  
 |ReplayHostName|`nvarchar`|在重播期间运行客户端的计算机的名称。|16|  
 |ApplicationName|`nvarchar`|在捕获期间创建了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接的客户端应用程序的名称。|17|  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
- [Distributed Replay 要求](distributed-replay-requirements.md)   
- [管理工具命令行选项 &#40;Distributed Replay 实用工具&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [SQL Server 分布式重播](sql-server-distributed-replay.md)   
+ [Distributed Replay Requirements](distributed-replay-requirements.md)   
+ [管理工具命令行选项（Distributed Replay 实用工具）](administration-tool-command-line-options-distributed-replay-utility.md)   
  [配置 Distributed Replay](configure-distributed-replay.md)  
   
   

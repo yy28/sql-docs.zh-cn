@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b532ae16-66e7-4641-9bc8-b0d805853477
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 58202b7246acf2a958523cfb874b8ce25bd13bdc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 565610826f704274724ea05d821205a5b3391060
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150966"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066017"
 ---
 # <a name="create-a-plan-guide-for-parameterized-queries"></a>为参数化查询创建计划指南
   TEMPLATE 计划指南与参数化为指定形式的独立查询匹配。  

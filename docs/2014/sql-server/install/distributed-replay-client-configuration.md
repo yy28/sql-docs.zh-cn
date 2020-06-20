@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ccf03e32-6bd9-43c0-b9b6-9fe0d9163339
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3eb00922b4f6e21dd4cfc8a46d8c0c27ed9a5be1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72336f2f012ad6f2da03440f431d2fe5be294b07
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095479"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012705"
 ---
 # <a name="distributed-replay-client-configuration"></a>Distributed Replay 客户端配置
   使用 **安装向导的** “Distributed Replay 客户端配置” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 页可以指定您希望向其授予针对 Distributed Replay 客户端服务的管理权限的用户。  
@@ -24,7 +23,7 @@ ms.locfileid: "66095479"
   
 ## <a name="options"></a>选项  
  **控制器名称**  
- 这是一个可选参数，默认值为\<*空白*>。  
+ 这是一个可选参数，默认值为 \<*blank*> 。  
   
  输入客户端计算机将与 Distributed Replay 客户端服务进行通信的控制器的名称。 注意以下事项：  
   
@@ -37,11 +36,11 @@ ms.locfileid: "66095479"
  **工作目录**  
  为 Distributed Replay 客户端服务指定工作目录。  
   
- 默认工作目录为\<*驱动器号*>：\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Program Files \DReplayClient\WorkingDir\\。  
+ 默认工作目录为 \<*drive letter*> ： \Program Files \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \DReplayClient\WorkingDir \\ 。  
   
  **默认目录**  
  为 Distributed Replay 客户端服务指定结果目录。  
   
- 默认结果目录为\<*驱动器号*>：\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Program Files \DReplayClient\ResultDir\\。  
+ 默认结果目录为 \<*drive letter*> ： \Program Files \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \DReplayClient\ResultDir \\ 。  
   
   

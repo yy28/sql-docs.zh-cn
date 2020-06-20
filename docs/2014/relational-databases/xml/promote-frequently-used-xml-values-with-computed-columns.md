@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d9c86eef119ce121dfb5ff964e64f1970eda16db
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fd8bf917bd293cd4aab3d5c8c7fe526a557fec8a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702548"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065504"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>使用计算列提升常用的 XML 值
   如果主要是对少数元素和属性值进行查询，您可能希望将这些数量提升到关系列。 检索整个 XML 实例，但只对一小部分 XML 数据进行查询时，这很有用。 不必对 XML 列创建 XML 索引。 但可以对提升的列进行索引。 必须编写查询才能使用提升的列。 也就是说，查询优化器不会将对 XML 列的查询再定向到提升的列。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e5f25a42b54e0ae310c7033a81f75cad75582416
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: a3114d7c2a2a7908e4e010fbf5d80c7d332d264c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925061"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011619"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>重播选项（分布式重播管理工具）
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 管理工具 `DReplay.exe` 是一个命令行工具，可用于与 Distributed Replay 控制器进行通信。 本主题介绍 **replay** 命令行选项和相应的语法。
@@ -33,7 +32,7 @@ ms.locfileid: "82925061"
     [-fstatus_interval]
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
  **-m** *控制器*指定控制器的计算机名称。 可以用“`localhost`”或“`.`”指代本地计算机。
 
  如果未指定 **-m** 参数，则使用本地计算机。
@@ -52,7 +51,7 @@ ms.locfileid: "82925061"
 
  **-o**捕获客户端的重播活动，并将其保存到由 `<ResultDirectory>` 客户端配置文件中的元素指定的路径中的结果跟踪文件中 `DReplayClient.xml` 。
 
- 如果 -o**** 参数未指定，结果跟踪文件就不会生成。 在重播结束时，控制台输出将返回摘要信息，但不提供其他重播统计信息。
+ 如果 -o 参数未指定，结果跟踪文件就不会生成。 在重播结束时，控制台输出将返回摘要信息，但不提供其他重播统计信息。
 
  **-s** *target_server*指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 应对其重播分布式工作负荷的目标实例。 必须以 **server_name[\instance name]** 格式指定此参数。
 

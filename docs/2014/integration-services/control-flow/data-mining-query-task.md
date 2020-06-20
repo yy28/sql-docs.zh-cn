@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f11f2eac6d1d44ed361324f2b5e25cea80df8768
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 93021fb7000bd7adccd467e04fb7cf3430db5efe
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890411"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919438"
 ---
 # <a name="data-mining-query-task"></a>数据挖掘查询任务
   数据挖掘查询任务根据 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]内置的数据挖掘模型运行预测查询。 预测查询通过使用挖掘模型来创建对新数据的预测。 例如，预测查询可以预测夏季可能销售多少帆板，或生成可能购买帆板的预期客户列表。  

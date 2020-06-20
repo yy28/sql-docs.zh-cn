@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5995b7d2-7c06-46f5-b96c-2bee879bcda2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9dc9824efb3f962d97f786835fa2367be18b55f7
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: ce4035bd0f953058a1e868709275e2f5d0b025a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000408"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065921"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>第 2 课：创建事务发布的订阅
   在本课程中，将使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]创建一个订阅。 本课程要求已完成上一课， [第 1 课：使用事务复制发布数据](lesson-1-publishing-data-using-transactional-replication.md)。  
@@ -36,11 +35,11 @@ ms.locfileid: "83000408"
   
 5.  在“订阅服务器”页上，如果未显示订阅服务器实例名称，请单击“添加订阅服务器”****，然后单击“添加 SQL Server 订阅服务器”****，在“连接到服务器”**** 对话框中输入订阅服务器实例名称，然后单击“连接”****。  
   
-6.  在 "订阅服务器" 页上，选择订阅服务器的实例名称，并在 "**订阅数据库**" 下选择 " ** \< 新建数据库">** 。  
+6.  在 "订阅服务器" 页上，选择订阅服务器的实例名称，然后 **\<New Database>** 在 "**订阅数据库**" 下选择。  
   
 7.  在“新建数据库”**** 对话框的“数据库名称”**** 框中输入“ProductReplica”****，然后依次单击“确定”**** 和“下一步”****。  
   
-8.  在 "**分发代理安全性**" 对话框中，单击省略号（**...**）按钮， \< 在 "**进程帐户**" 框中输入_Machine_Name>_ **\ Repl_distribution** ，输入此帐户的密码，单击 **"确定**"，然后单击 "**下一步**"。  
+8.  在 "**分发代理安全性**" 对话框中，单击省略号（**...**）按钮， \<_Machine_Name> 在 "**进程帐户**" 框中输入 _**\ repl_distribution** ，输入此帐户的密码，单击 **"确定**"，然后单击 "**下一步**"。  
   
 9. 单击“完成”**** 以接受其余页中的默认值并完成向导。  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 946c5630-dccf-4dae-9cfd-6ea823641ab2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 543c9580067ca94acf8c88156884d3be5c647481
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a4b4c3cebb104dd57ad95945d2c790e657be0075
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62897603"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969307"
 ---
 # <a name="lt-less-than-or-equal-to-ssis-expression"></a>&lt;=（小于或等于）（SSIS 表达式）
   通过比较确定第一个表达式是否小于或等于第二个表达式。 在执行比较前表达式计算器会自动转换多种数据类型。  

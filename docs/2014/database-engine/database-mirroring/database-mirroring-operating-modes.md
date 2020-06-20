@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5975008849ec4ef8a4d50aa559bb69554b65132a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c944b402b8b1ba9b78036d667ec728ccaf561a91
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807647"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934274"
 ---
 # <a name="database-mirroring-operating-modes"></a>数据库镜像运行模式
   本主题说明数据库镜像会话的同步和异步运行模式。  
@@ -227,7 +226,7 @@ ms.locfileid: "62807647"
 ###  <a name="viewing-the-safety-setting-and-state-of-the-witness"></a><a name="ViewWitness"></a>查看见证服务器的安全设置和状态  
  若要针对数据库查看安全设置和见证服务器的状态，请使用 **sys.database_mirroring** 目录视图。 相关列如下所示：  
   
-|因素|列|说明|  
+|因子|列|说明|  
 |------------|-------------|-----------------|  
 |事务安全|**mirroring_safety_level** 或 **mirroring_safety_level_desc**|镜像数据库上用于更新的事务安全设置，如下所示：<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL= 数据库没有在线。|  
 |是否存在见证服务器？|**mirroring_witness_name**|数据库镜像见证服务器的名称或 NULL（指示不存在见证服务器）。|  

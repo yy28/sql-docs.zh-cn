@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7a08e0130e8ab45842d9cc0dc91fdba64a0b06c6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 48ddec1de8492c86aecfd80ea960c4a01673c24f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702274"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012870"
 ---
 # <a name="xml-data-sql-server"></a>XML 数据 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一个强大的平台，以针对半结构化数据管理开发功能丰富的应用程序。 对 XML 的支持已集成到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有组件中，包括下面几项：  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 293048b191fff03b11b7e28d7778a34793b4c7f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60d6ba6ab84615e43e872c4e8d4238a263a0b767
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62714864"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065841"
 ---
 # <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Microsoft 复制冲突查看器（事务复制）
   利用复制冲突查看器，您可以查看同步期间对等事务复制和具有排队更新订阅的事务复制发生的冲突。 有关详细信息，请参阅[查看事务发布的数据冲突 (SQL Server Management Studio)](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)。  
@@ -36,7 +35,7 @@ ms.locfileid: "62714864"
  **发布**  
  选择包含具有冲突的表的发布。  
   
- **数据表**  
+ **表格**  
  选择包含冲突的表。  
   
  **定义筛选器**  
@@ -48,7 +47,7 @@ ms.locfileid: "62714864"
  **全选**  
  单击此项可选择网格中列出的所有冲突。  
   
- **全部不选**  
+ **选择无**  
  单击此项可取消选择网格中列出的所有冲突。  
   
  **删除**  

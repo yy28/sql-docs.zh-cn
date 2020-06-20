@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: d312c740-19d7-4931-84a2-88b805ec8439
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7369e9d37e5f706786410f8e171c89c6c38287d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a87b6a0ebd2293ad219ce43108c4f42487a8e0f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808719"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934600"
 ---
 # <a name="connect-to-server-login-page-reporting-services"></a>连接到服务器（“登录”页）(Reporting Services)
-  在连接到[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]时，使用此选项卡可以查看或指定以下选项。  
+  在连接到时，使用此选项卡可以查看或指定以下选项 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 。  
   
 ## <a name="options"></a>选项  
  **服务器类型**  
@@ -31,7 +30,7 @@ ms.locfileid: "62808719"
  **服务器名称**  
  您要连接到的报表服务器实例的服务器模式决定了必须输入的值。  
   
- 对于在本机模式下运行的报表服务器，指定要连接到的报表服务器实例。 如果使用默认实例，服务器名通常是计算机的名称。 如果安装了命名实例，请按以下格式将实例名称附加到服务器名称： \<servername>\\<InstanceName。\> Reporting Services 使用反斜杠字符分隔实例名。  
+ 对于在本机模式下运行的报表服务器，指定要连接到的报表服务器实例。 如果使用默认实例，服务器名通常是计算机的名称。 如果安装了命名实例，请按以下格式将实例名称附加到服务器名称： \<servername> \\<InstanceName \> 。 Reporting Services 使用反斜杠字符分隔实例名。  
   
  对于在 SharePoint 集成模式下运行的报表服务器，必须指定 SharePoint 站点。 可以指定与 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]集成的站点集合中的任意站点。 您提供的 URL 必须包含 HTTP 或 HTTPS 前缀。 您必须有权访问 SharePoint 站点，才能在 Management Studio 中连接到该站点。 分配给您的权限级别将决定您可以查看和管理的项目。 有关详细信息，请参阅[连接到 Management Studio 中的报表服务器](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)。  
   

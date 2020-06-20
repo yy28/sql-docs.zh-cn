@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a39b3395a26fdbe3c235f429f312f4d6b3aff512
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: ffa99b2271697302e9cfa284bd814ccc923e46d1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000437"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065930"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>第 2 课：创建合并发布订阅
   在本课中，将使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]创建订阅。 然后，为订阅数据库设置权限，并手动生成新订阅的筛选数据快照。 本课程要求已完成上一课， [第 1 课：使用合并复制发布数据](lesson-1-publishing-data-using-merge-replication.md)。  
@@ -36,11 +35,11 @@ ms.locfileid: "83000437"
   
 5.  在“合并代理位置”页上，单击“在其订阅服务器上运行每个代理”****，然后单击“下一步”****。  
   
-6.  在 "订阅服务器" 页上，选择订阅服务器的实例名称，然后在 "**订阅数据库**" 下，从列表中选择 " ** \< 新建数据库">** 。  
+6.  在“订阅服务器”页上，选择订阅服务器的实例名称，然后在“订阅数据库”**** 下，从列表中选择“\<New Database>”****。  
   
 7.  在“新建数据库”**** 对话框的“数据库名称”**** 框中输入 **SalesOrdersReplica**，然后依次单击“确定”**** 和“下一步”****。  
   
-8.  在 "合并代理安全" 页上，单击省略号 **（...**）按钮， \< 在 "**进程帐户**" 框中输入_Machine_Name>_ **\ repl_merge** ，为此帐户提供密码，单击 **"确定**"，单击 "**下一**步"，然后再次单击 "**下一步**"。  
+8.  在 "合并代理安全" 页上，单击省略号 **（...**）按钮， \<_Machine_Name> 在 "**进程帐户**" 框中输入 _**\ repl_merge** ，为此帐户提供密码，单击 **"确定**"，单击 "**下一**步"，然后再次单击 "**下一步**"。  
   
 9. 在“初始化订阅”页上，从“初始化时间”**** 列表中选择“首次同步时”****，单击“下一步”****，然后再次单击“下一步”****。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "83000437"
   
 1.  连接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的订阅服务器，依次展开“数据库”****、“SalesOrdersReplica”**** 和“安全性”****，右键单击“用户”****，然后选择“新建用户”****。  
   
-2.  在 "**常规**" 页上 \< 的 "**用户名**" 框中，输入_Machine_Name>_ **\ repl_merge** ，单击省略号（**...**）按钮，单击 "**浏览**"，选择 \< _Machine_Name>_ **\ Repl_merge**，单击 **"确定**"，再单击 "**检查名称**"，然后单击 **"确定"**。  
+2.  在 "**常规**" 页上 \<_Machine_Name> _的 "**用户名**" 框中，输入**\ repl_merge** ，单击省略号（**...**）按钮，单击 "**浏览**" \<_Machine_Name> ，选择_ **\ repl_merge**，单击 **"确定**"，再单击 "**检查名称**"，然后单击 **"确定"**。  
   
 3.  在“数据库角色成员资格”**** 中，选择“db_owner”****，然后单击“确定”**** 以创建用户。  
   

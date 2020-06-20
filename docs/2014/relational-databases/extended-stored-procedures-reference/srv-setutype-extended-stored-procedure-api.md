@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6160f15d-1b68-411e-ab6d-491ec288f264
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2439b19c4550d07b8d50a0bed6d72b603b1601a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1302f8bcd6a427d5225f6936b0adf158d0ed6ee0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745786"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050552"
 ---
 # <a name="srv_setutype-extended-stored-procedure-api"></a>srv_setutype（扩展存储过程 API）
     
@@ -55,7 +54,7 @@ user_type
  srvproc**  
  指向作为特定客户端连接句柄的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 库用于管理应用程序和客户端之间的通信和数据的信息。  
   
- *该列*  
+ *column*  
  指示要设置的列。 列的编号从 1 开始。  
   
  *user_type*  
@@ -65,7 +64,7 @@ user_type
  SUCCEED 或 FAIL。 如果相应列不存在，则返回 FAIL。  
   
 ## <a name="remarks"></a>备注  
- 列具有两种数据类型：其实际数据类型及其用户定义数据类型。 用户定义数据类型由[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用于存储列的实际用户定义数据类型（如果有）和列说明信息（如为空性和可更新性）。  
+ 列具有两种数据类型：其实际数据类型及其用户定义数据类型。 用户定义数据类型由用于存储列的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实际用户定义数据类型（如果有）和列说明信息（如为空性和可更新性）。  
   
  在使用 srv_describe 定义列后，并且在发送最后一行前，随时都可以调用 srv_setutype 函数**********。  
   

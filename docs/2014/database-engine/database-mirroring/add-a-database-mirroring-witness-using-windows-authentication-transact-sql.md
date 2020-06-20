@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c7020cacbb8466b1113e514162337befae358549
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88684c3a1ca12ea579859759ed804ca281647fa5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67792613"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934420"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>使用 Windows 身份验证添加数据库镜像见证服务器 (Transact-SQL)
   为了给数据库设置见证服务器，数据库所有者为见证服务器的角色分配数据库引擎实例。 见证服务器实例可以与主体服务器实例或镜像服务器实例运行于同一台计算机上，但这样会明显降低自动故障转移的可靠性。  
@@ -33,7 +32,7 @@ ms.locfileid: "67792613"
   
 ### <a name="to-establish-a-witness"></a>建立见证服务器  
   
-1.  在见证服务器实例上，请确保存在用于数据库镜像的端点。 无论支持的镜像会话数是多少，服务器实例都只能有一个数据库镜像端点。 如果打算在数据库镜像会话中以独占方式将此服务器实例用作见证服务器，请将见证服务器的角色分配给终结**=** 点（角色见证）。 如果要将该服务器实例用于其他数据库镜像会话中的伙伴，请将端点的角色分配为 ALL。  
+1.  在见证服务器实例上，请确保存在用于数据库镜像的端点。 无论支持的镜像会话数是多少，服务器实例都只能有一个数据库镜像端点。 如果打算在数据库镜像会话中以独占方式将此服务器实例用作见证服务器，请将见证服务器的角色分配给终结点（角色 **=** 见证）。 如果要将该服务器实例用于其他数据库镜像会话中的伙伴，请将端点的角色分配为 ALL。  
   
      若要执行 SET WITNESS 语句，数据库镜像会话必须已启动（在伙伴之间），并且见证服务器端点的 STATE 必须设置为 STARTED。  
   
@@ -58,11 +57,11 @@ ms.locfileid: "67792613"
   
      服务器网络地址的语法如下：  
   
-     TCP：/**/**\<_system-address>_ **：**\<*port>*  
+     TCP：**//** \<_system-address> _**：**\<*port>*  
   
-     其中，\<system-address>** 是明确标识目标计算机系统的字符串，\<port>** 是伙伴服务器实例的镜像终结点使用的端口号。 有关详细信息，请参阅 [指定服务器网络地址（数据库镜像）](specify-a-server-network-address-database-mirroring.md)。  
+     其中 \<*system-address> * 是明确标识目标计算机系统的字符串，而 \<*port> * 是伙伴服务器实例的镜像端点使用的端口号。 有关详细信息，请参阅 [指定服务器网络地址（数据库镜像）](specify-a-server-network-address-database-mirroring.md)。  
   
-     例如，在主体服务器实例上，下面的 ALTER DATABASE 语句设置见证服务器。 数据库名称为**AdventureWorks**，系统地址为 DBSERVER3-见证系统的名称，见证服务器的数据库镜像端点使用的端口为`7022`：  
+     例如，在主体服务器实例上，下面的 ALTER DATABASE 语句设置见证服务器。 数据库名称为**AdventureWorks**，系统地址为 DBSERVER3-见证系统的名称，见证服务器的数据库镜像端点使用的端口为 `7022` ：  
   
     ```  
     ALTER DATABASE AdventureWorks   

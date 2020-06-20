@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 927a89c36019ebc7232a110f5a10fcbf2cfa74af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7de45ced2f4f39fff54c5beff6228c6f8a5c0476
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157983"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050293"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>创建内存优化表和本机编译的存储过程
   本主题包含一个示例，该示例介绍内存中 OLTP 的语法。  

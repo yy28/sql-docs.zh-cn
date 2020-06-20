@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 0ceb461e-12c1-44ea-97ac-b99bf308676b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1c9b04245e14be67242d5cd1ea6d257ac4fc6038
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2565ed28a882750ab9b37beadbce698d3a0abb19
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79525428"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939958"
 ---
 # <a name="tabular-model-programming"></a>表格模型编程
   表格模型使用关系构造对分析和报表应用程序使用的 Analysis Services 数据建模。 这些模型运行在配置用于表格模式的 Analysis Service 实例上，使用内存中分析引擎执行存储和快速表扫描（支持在请求数据时对其进行聚合和计算）。  

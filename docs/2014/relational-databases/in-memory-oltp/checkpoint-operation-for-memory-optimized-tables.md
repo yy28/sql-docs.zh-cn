@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47975bd5-373f-43cd-946a-da8e8088b610
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ddcdec0f624c1d6f70c57e593eaf9da66cbe0419
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07560ea0bf147198fb759f6769ae1c6d5c68a71e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63065525"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050305"
 ---
 # <a name="checkpoint-operation-for-memory-optimized-tables"></a>内存优化表的检查点操作
   数据和差异文件中内存优化的数据需要定期出现检查点以前移事务日志的活动部分。 通过检查点，内存优化表可还原或恢复到上一个成功的检查点，然后应用事务日志的活动部分以更新内存优化表从而完成恢复。 针对基于磁盘的表和内存优化表的检查点操作是完全不同的操作。 下面介绍不同的场景以及基于磁盘的表和内存优化表的检查点行为：  

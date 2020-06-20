@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 92dbb6da-5919-4bde-9354-d454e9ea3da0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7c5e165380c0f920ebf1366855e7801b6bb9089a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42538ac6566b70105fd183da1cadd00f7fd0c13b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62472985"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011793"
 ---
 # <a name="automatically-delete-a-job"></a>Automatically Delete a Job
-  本主题介绍如何在中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将代理[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]配置为在作业成功、失败或完成时通过使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 SQL Server 管理对象自动删除作业。  
+  本主题介绍如何 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在中将代理配置 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 为在作业成功、失败或完成时通过使用或 SQL Server 管理对象自动删除作业 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
  作业响应可确保数据库管理员知道作业完成的时间和作业运行频率。 典型的作业响应包括：  
   

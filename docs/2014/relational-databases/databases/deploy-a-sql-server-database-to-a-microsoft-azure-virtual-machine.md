@@ -41,16 +41,15 @@ helpviewer_keywords:
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c7d84fbe56d36bd91f2b7f8b49a3df73fb383c6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 085f8ae1699e6a7bc1ceecb31075dff83d2b79ea
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175736"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970039"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>将 SQL Server 数据库部署到 Microsoft Azure 虚拟机
-  使用 "将**SQL Server 数据库部署到 AZURE VM** " 向导，将数据库从的[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例部署到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] azure 虚拟机（VM）中的。 此向导利用完整数据库备份操作，因此可始终复制 SQL Server 用户数据库中的完整数据架构和数据。 此向导还为您进行所有 Azure VM 配置，因此不需要预先配置 VM。  
+  使用 "将**SQL Server 数据库部署到 AZURE VM** " 向导，将数据库从的实例部署 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AZURE 虚拟机（VM）中的。 此向导利用完整数据库备份操作，因此可始终复制 SQL Server 用户数据库中的完整数据架构和数据。 此向导还为您进行所有 Azure VM 配置，因此不需要预先配置 VM。  
   
  您无法使用此向导进行差异备份，因为此向导将不会覆盖具有相同的数据库名称的现有数据库。 若要替换 VM 上的现有数据库，必须先删除现有数据库或更改数据库名称。 如果在未提交的部署操作的数据库名称与 VM 上的现有数据库之间存在命名冲突，此向导将建议为未提交的数据库追加数据库名称以便您能完成操作。  
   
@@ -148,19 +147,19 @@ ms.locfileid: "70175736"
   
         -   <OtherSettings  
   
-            -   TraceLevel="Debug" \<!-- 日志记录级别 -->  
+            -   TraceLevel = "Debug"\<!-- Logging level -->  
   
-            -   BackupPath="\\\\[server name]\\[volume]\\" \<!-- 最后使用的备份路径。 Used as default in the wizard. -->  
+            -   BackupPath = " \\ \\ [server name] \\ [volume] \\ "\<!-- The last used path for backup. Used as default in the wizard. -->  
   
-            -   CleanupDisabled = False/> \<!--向导将不会删除中间文件和 Azure 对象（VM、CS、SA）。 -->  
+            -   CleanupDisabled = False/>\<!-- Wizard will not delete intermediate files and Azure objects (VM, CS, SA). -->  
   
-        -   <PublishProfile \<!-- 最后使用的发布配置文件信息。 -->  
+        -   <PublishProfile\<!-- The last used publish profile information. -->  
   
-            -   Certificate="12A34B567890123ABCD4EF567A8" \<!-- 在向导中使用的证书。 -->  
+            -   Certificate = "12A34B567890123ABCD4EF567A8"\<!-- The certificate for use in the wizard. -->  
   
-            -   Subscription="1a2b34c5-67d8-90ef-ab12-xxxxxxxxxxxxx" \<!-- 在向导中使用的订阅。 -->  
+            -   订阅 = "1a2b34c5-67d8-90ef-ab12-xxxxxxxxxxxxx-67d8-90ef-ab12-xxxxxxxxxxxxx"\<!-- The subscription for use in the wizard. -->  
   
-            -   Name="My Subscription" \<!-- 订阅名称。 -->  
+            -   Name = "My 订阅"\<!-- The name of the subscription. -->  
   
             -   Publisher="" />  
   
@@ -196,11 +195,11 @@ ms.locfileid: "70175736"
 -   **Help** -启动向导的 MSDN 帮助主题。  
   
 ##  <a name="source-settings"></a><a name="Source_settings"></a>源设置  
- 使用此页可连接到承载要部署[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到 Azure VM 的数据库的实例。 还将指定一个临时位置，以便在将文件传输到 Azure 之前从本地计算机保存文件。 这可以是共享网络位置。  
+ 使用此页可连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 承载要部署到 AZURE VM 的数据库的实例。 还将指定一个临时位置，以便在将文件传输到 Azure 之前从本地计算机保存文件。 这可以是共享网络位置。  
   
  **选项**  
   
--   单击 "**连接 ...** "，然后为承载要部署的数据库的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例指定连接详细信息。  
+-   单击 "**连接 ...** "，然后为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 承载要部署的数据库的实例指定连接详细信息。  
   
 -   使用 **“选择数据库”** 下拉列表来指定要部署的数据库。  
   

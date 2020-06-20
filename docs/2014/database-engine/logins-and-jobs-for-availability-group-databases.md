@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a19d5d39a3133ffc664f5ea7050645e2a28a8a20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 457f3ef946b5cfaf86a4a19774af63c5d7635882
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774279"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930963"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>管理可用性组中数据库的登录名和作业 (SQL Server)
   您应当定期维护 AlwaysOn 可用性组的每个主数据库及其相应的辅助数据库上的同一组用户登录名和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理作业。 在为可用性组承载可用性副本的每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上，必须重新生成这些登录名和作业。  
@@ -43,7 +42,7 @@ ms.locfileid: "62774279"
   
 -   **其他元数据**  
   
-     在承载某一给定可用性组的辅助副本的各服务器实例上，登录名和作业不是需要重新创建的唯一信息。 例如，您可能需要重新创建服务器配置设置、凭据、加密的数据、权限、复制设置、Service Broker 应用程序、触发器（在服务器级别）等。 有关详细信息，请参阅在[使数据库在其他服务器实例上可用时管理元数据 &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
+     在承载某一给定可用性组的辅助副本的各服务器实例上，登录名和作业不是需要重新创建的唯一信息。 例如，您可能需要重新创建服务器配置设置、凭据、加密的数据、权限、复制设置、Service Broker 应用程序、触发器（在服务器级别）等。 有关详细信息，请参阅 [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
 ##  <a name="logins-of-applications-that-use-sql-server-authentication-or-a-local-windows-login"></a><a name="SSauthentication"></a> 使用 SQL Server 身份验证或本地 Windows 登录名的应用程序的登录名  
  如果某一应用程序使用 SQL Server 身份验证或本地 Windows 登录名，则不匹配的 SID 可能会阻止该应用程序的登录名在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的远程实例上解析。 不匹配的 SID 将导致该登录名成为远程服务器实例上的孤立用户。 当应用程序连接到发生故障转移后的镜像数据库或日志传送数据库，或是连接到从备份初始化的复制订阅服务器数据库时，就可能会发生此问题。  

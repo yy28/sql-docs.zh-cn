@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 774778a0-ece6-4971-b93f-b121d8fc1fc1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 197a2668beb60acf2473a1f53786d7b553e08cf6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3694eeb93e9edbc053a8534841a1edf438489ca9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058246"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968327"
 ---
 # <a name="http-connection-manager-editor-server-page"></a>HTTP 连接管理器编辑器（“服务器”页）
   使用 **“HTTP 连接管理器编辑器”** 对话框的 **“服务器”** 选项卡，可以通过指定 URL 和安全凭据等属性来配置 HTTP 连接管理器。 利用 HTTP 连接，包可以使用 HTTP 访问 Web 服务器以发送或接收文件。 配置 HTTP 连接管理器后，还可以测试该连接。  
@@ -44,13 +43,13 @@ ms.locfileid: "66058246"
  **密码**  
  如果 HTTP 连接管理器使用凭据，则必须指定用户名、密码和域。  
   
- **Domain**  
+ **域**  
  如果 HTTP 连接管理器使用凭据，则必须指定用户名、密码和域。  
   
  **使用客户端证书**  
  指定是否希望 HTTP 连接管理器使用客户端证书进行身份验证。  
   
- **Certificate**  
+ **证书**  
  使用“选择证书”对话框从列表中选择证书。**** 文本框显示与此证书关联的名称。  
   
  **超时值(秒)**  

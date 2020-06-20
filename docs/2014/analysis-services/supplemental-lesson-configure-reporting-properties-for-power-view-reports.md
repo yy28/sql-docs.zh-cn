@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 812c205c1e612604c0c39a5effb3b9da50308d7a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03afd5bdafe30a8684165fef5febae49f210f042
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067962"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940208"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>为 Power View 报表配置报表属性
   在这一补充课程中，您将为 Adventure Works Internet Sales Model 项目设置报表属性。 通过报表属性，最终用户可以更轻松地在 Power View 中选择和显示模型数据。 您还可以设置属性以隐藏特定的列和表，并创建新数据以在图表中使用。  
@@ -26,7 +25,7 @@ ms.locfileid: "66067962"
   
  学完本课的估计时间： **30 分钟**  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  本补充课程是表格建模教程的一部分，该教程应按顺序学习。 在执行本补充课程中的任务之前，应已完成前面的课程。  
   
  为了完成这一特定的补充课程，您还必须具备以下各项：  
@@ -70,7 +69,7 @@ ms.locfileid: "66067962"
   
 2.  在公式栏中使用以下公式添加两个新的计算列：  
   
-    |列名|公式|  
+    |列名|Formula|  
     |-----------------|-------------|  
     |Year Quarter|=[Calendar Year] & " Q" & [Calendar Quarter]|  
     |Year Month|=[Calendar Year] & FORMAT([Month],"#00")|  
@@ -152,7 +151,7 @@ ms.locfileid: "66067962"
   
      **客户**  
   
-    |列|Property|“值”|  
+    |列|属性|值|  
     |------------|--------------|-----------|  
     |Geography Id|Hidden|True|  
     |Birth Date|数据格式|短日期|  
@@ -162,7 +161,7 @@ ms.locfileid: "66067962"
     > [!NOTE]  
     >  因为我们在第 7 课“标记为日期表”中已经使用“标记为日期表”设置选择 Date 表作为模型日期表，并且选择 Date 表中的 Date 列作为要用作唯一标识符的列，所以，Date 列的“行标识符”属性将自动设置为 True 且无法更改。 在 DAX 公式中使用时间智能函数时，必须指定一个日期表。 在此模型中，您使用时间智能函数创建了许多度量值，以计算不同时期（如上一季度和当前季度）的销售数据，同时也用于 KPI 中。 有关指定日期表的详细信息，请参阅 SQL Server 联机丛书中的[指定“标记为日期表”以便用于时间智能（SSAS 表格）](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)。  
   
-    |列|Property|“值”|  
+    |列|属性|“值”|  
     |------------|--------------|-----------|  
     |日期|数据格式|短日期|  
     |Day Number of Week|Hidden|True|  
@@ -170,8 +169,8 @@ ms.locfileid: "66067962"
     |Day of Week|Hidden|True|  
     |Day of Month|Hidden|True|  
     |Day of Year|Hidden|True|  
-    |Month Name|按列排序|月份|  
-    |月份|Hidden|True|  
+    |Month Name|按列排序|月|  
+    |月|Hidden|True|  
     |Month Calendar|Hidden|True|  
     |Fiscal Quarter|Hidden|True|  
     |Fiscal Year|Hidden|True|  
@@ -179,14 +178,14 @@ ms.locfileid: "66067962"
   
      **地域**  
   
-    |列|Property|“值”|  
+    |列|属性|值|  
     |------------|--------------|-----------|  
     |Geography Id|Hidden|True|  
     |Sales Territory Id|Hidden|True|  
   
      **产品**  
   
-    |列|Property|“值”|  
+    |列|属性|值|  
     |------------|--------------|-----------|  
     |Product Id|Hidden|True|  
     |Product Alternate Id|默认标签|True|  
@@ -197,7 +196,7 @@ ms.locfileid: "66067962"
   
      **Internet Sales**  
   
-    |列|Property|“值”|  
+    |列|属性|值|  
     |------------|--------------|-----------|  
     |Product Id|Hidden|True|  
     |Customer Id|Hidden|True|  

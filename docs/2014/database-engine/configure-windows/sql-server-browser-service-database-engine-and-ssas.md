@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 258ec0640a5281152fcce6faa771272c3f94de64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a3f35ce0c8d8bc2891d5233ae4fd4c1d3e97dcd3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809323"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934839"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>SQL Server Browser 服务（数据库引擎和 SSAS）
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]浏览器程序以 Windows 服务的形式运行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器侦听对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源的传入请求，并提供计算机上安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的相关信息。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器可用于执行下列操作：  
@@ -78,7 +77,7 @@ ms.locfileid: "62809323"
   
 -   如果服务器上的其他服务或应用程序可以使用您为每个实例选择的端口，则会导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例不可用。  
   
-## <a name="clustering"></a>聚类分析  
+## <a name="clustering"></a>群集  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器不是群集资源，不支持从一个群集节点到其他群集节点的故障转移。 因此，在使用群集的情况下，应安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器，并为群集的每个节点启用该浏览器。 在群集中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器侦听 IP_ANY。  
   
 > [!NOTE]  

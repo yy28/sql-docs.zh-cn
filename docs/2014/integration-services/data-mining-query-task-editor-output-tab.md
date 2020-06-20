@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 62f9e015-6fe0-4396-ad90-3ad51bf00025
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7b381ec722125bfa6ad8a4b8102e2fa3b7a5c309
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dca81c082f936913a5844a7920a561325e87ceb5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890471"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939128"
 ---
 # <a name="data-mining-query-task-editor-output-tab"></a>数据挖掘查询任务编辑器（“输出”选项卡）
   可以使用 **“数据挖掘查询任务编辑器”** 对话框的 **“输出”** 选项卡指定预测查询的目标。  
@@ -37,7 +36,7 @@ ms.locfileid: "68890471"
  键入数据挖掘查询任务的说明。  
   
 ## <a name="output-tab-options"></a>“输出”选项卡选项  
- **连接**  
+ **Connection**  
  从列表中选择连接管理器，或单击“新建”**** 以创建新的连接管理器。  
   
  **新建**  

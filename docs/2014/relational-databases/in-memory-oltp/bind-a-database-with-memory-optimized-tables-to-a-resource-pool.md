@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d64b5bf6b60f37bf386840031c304dd5b13faaeb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd163c5d3bc7a2cd9051b8d37b8127a1cc88c30b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63158809"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050354"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>将具有内存优化表的数据库绑定至资源池
   资源池表示可以管理的物理资源的子集。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库绑定到默认资源池并使用其中的资源。 为保护 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，防止一个或多个内存优化表使用其资源，以及防止其他内存使用者使用内存优化表需要的内存，建议对具有内存优化表的数据库创建单独的资源池来管理内存使用情况。  
@@ -31,7 +30,7 @@ ms.locfileid: "63158809"
  您可以按任意顺序创建数据库和资源池。 要注意的是，在将数据库绑定至资源池前，它们必须都已存在。  
   
 ### <a name="create-the-database"></a>创建数据库  
- 以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 创建一个名为 IMOLTP_DB 的数据库，它将包含一个或多个内存优化表。 路径 \<driveAndPath> 必须在运行此命令前就存在。  
+ 以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 创建一个名为 IMOLTP_DB 的数据库，它将包含一个或多个内存优化表。 在 \<driveAndPath> 运行此命令之前，路径必须已存在。  
   
 ```sql  
 CREATE DATABASE IMOLTP_DB  
@@ -142,7 +141,7 @@ GO
 ## <a name="percent-of-memory-available-for-memory-optimized-tables-and-indexes"></a>可用于内存优化表和索引的内存百分比  
  如果将包含内存优化表的数据库和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作负荷映射到同一资源池，资源调控器会为 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 设置一个内部使用阈值，使资源池用户不产生资源使用冲突。 一般来说， [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 使用阈值约为资源池的 80%。 下表列出了不同内存大小的实际阈值。  
   
- 在为 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 数据库创建专用资源池时，您需要在考虑行版本和数据增长后估计内存中表所需的物理内存量。 估算所需的内存后，可以创建一个资源池，该资源池的存储百分比为 SQL 实例，由 DMV `sys.dm_os_sys_info`中的列 "committed_target_kb" 反射（请参阅[dm_os_sys_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql)）。 例如，您可以将可供实例使用的总内存的 40% 用来创建资源池 P1。 在此 40% 之外， [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎将获取一个较小的百分比来存储 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 数据。  这样做是为了确保 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 不会占用来自该池的所有内存。  这个较小的百分比值依赖于目标提交内存。 下表描述在引发 OOM 错误之前在资源池（命名资源池或默认资源池）中可用于 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 数据库的内存。  
+ 在为 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 数据库创建专用资源池时，您需要在考虑行版本和数据增长后估计内存中表所需的物理内存量。 估算所需的内存后，可以创建一个资源池，该资源池的存储百分比为 SQL 实例，由 DMV 中的列 "committed_target_kb" 反射 `sys.dm_os_sys_info` （请参阅[dm_os_sys_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql)）。 例如，您可以将可供实例使用的总内存的 40% 用来创建资源池 P1。 在此 40% 之外， [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎将获取一个较小的百分比来存储 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 数据。  这样做是为了确保 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 不会占用来自该池的所有内存。  这个较小的百分比值依赖于目标提交内存。 下表描述在引发 OOM 错误之前在资源池（命名资源池或默认资源池）中可用于 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 数据库的内存。  
   
 |目标提交内存|可用于内存中表的百分比|  
 |-----------------------------|---------------------------------------------|  
@@ -187,8 +186,8 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
 ## <a name="see-also"></a>另请参阅  
  [sys. sp_xtp_bind_db_resource_pool &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)   
  [sys. sp_xtp_unbind_db_resource_pool &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)   
- [Resource Governor](../resource-governor/resource-governor.md)   
- [Resource Governor 资源池](../resource-governor/resource-governor-resource-pool.md)   
+ [资源调控器](../resource-governor/resource-governor.md)   
+ [资源调控器资源池](../resource-governor/resource-governor-resource-pool.md)   
  [创建资源池](../resource-governor/create-a-resource-pool.md)   
  [更改资源池设置](../resource-governor/change-resource-pool-settings.md)   
  [删除资源池](../resource-governor/delete-a-resource-pool.md)  

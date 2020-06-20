@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ee9d1c22a216024f388d30978dbb62be933425cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3efd231a1aa4d2b348bcfe887bd05825fcd40c90
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917566"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952134"
 ---
 # <a name="contained-databases"></a>包含的数据库
   “包含数据库”** 是独立于其他数据库以及承载数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的一种数据库。  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以 4 种方法帮助用户使其数据库独立于实例。  
@@ -163,7 +162,7 @@ ms.locfileid: "62917566"
   
  [包含数据库的排序规则](contained-database-collations.md)  
   
- [针对包含数据库的安全性最佳方法](security-best-practices-with-contained-databases.md)  
+ [针对包含的数据库的安全最佳做法](security-best-practices-with-contained-databases.md)  
   
  [迁移到部分包含的数据库](migrate-to-a-partially-contained-database.md)  
   

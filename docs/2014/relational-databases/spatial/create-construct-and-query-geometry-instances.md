@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: cb99c2ff07f30d268980c5c1c4d43a34904cdec9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 539f3f8bb1d9a1c277d6317cc571cf8bcb281833
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014311"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996577"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>创建、构造和查询几何图形实例
   平面空间数据类型 `geometry` 表示欧几里得（平面）坐标系中的数据。 此类型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中作为公共语言运行时 (CLR) 数据类型实现。  
@@ -129,7 +128,7 @@ ms.locfileid: "66014311"
   
   
 ###  <a name="constructing-a-geometry-instance-from-gml-text-input"></a><a name="gml"></a> 用 GML 文本输入构造几何图形实例  
- `geometry`数据类型提供了一个方法，该方法`geometry`从 GML （几何对象的 XML 表示形式）生成实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持部分 GML。  
+ `geometry`数据类型提供了一个方法，该方法 `geometry` 从 GML （几何对象的 XML 表示形式）生成实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持部分 GML。  
   
  **用 GML 输入构造任意类型的几何图形实例**  
  [GeomFromGml（geometry 数据类型）](/sql/t-sql/spatial-geometry/geomfromgml-geometry-data-type)  
@@ -156,7 +155,7 @@ ms.locfileid: "66014311"
   
   
 ##  <a name="querying-the-properties-and-behaviors-of-geometry-instances"></a><a name="querying"></a> 查询几何图形实例的属性和行为  
- 所有`geometry`实例都具有多个可通过[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供的方法进行检索的属性。 下列主题定义了几何图形类型的属性和行为，并为查询每种图形定义了方法。  
+ 所有 `geometry` 实例都具有多个可通过提供的方法进行检索的属性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 下列主题定义了几何图形类型的属性和行为，并为查询每种图形定义了方法。  
   
 ###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> 有效性、实例类型和 GeometryCollection 信息  
  构造 `geometry` 实例后，就可以使用以下方法确定其格式是否正确、返回实例类型，或者，如果它是集合实例，则返回特定的 `geometry` 实例。  
@@ -182,7 +181,7 @@ ms.locfileid: "66014311"
   
   
 ###  <a name="number-of-points"></a><a name="number"></a> 点数  
- 所有非`geometry`空实例都由*点*组成。 这些点表示在其上绘制几何图形的面的 X 和 Y 坐标。 `geometry` 提供许多用于查询实例的点的内置方法。  
+ 所有非空 `geometry` 实例都由*点*组成。 这些点表示在其上绘制几何图形的面的 X 和 Y 坐标。 `geometry` 提供许多用于查询实例的点的内置方法。  
   
  **返回构成实例的点数。**  
  [STNumPoints（geometry 数据类型）](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type)  
@@ -225,7 +224,7 @@ ms.locfileid: "66014311"
   
   
 ###  <a name="empty"></a><a name="empty"></a> Empty  
- *空*`geometry`实例不包含任何点。 空的 `LineString, CircularString`、`CompoundCurve` 和 `MultiLineString` 实例的长度为零。 空的 `Polygon`、`CurvePolygon` 和 `MultiPolygon` 实例的面积为 0。  
+ *空* `geometry` 实例不包含任何点。 空的 `LineString, CircularString`、`CompoundCurve` 和 `MultiLineString` 实例的长度为零。 空的 `Polygon`、`CurvePolygon` 和 `MultiPolygon` 实例的面积为 0。  
   
  **确定实例是否为空**  
  [STIsEmpty](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type)。  
@@ -233,7 +232,7 @@ ms.locfileid: "66014311"
   
   
 ###  <a name="simple"></a><a name="simple"></a> Simple  
- `geometry`为了使实例的*简单*，它必须满足这两个要求：  
+ 为了使 `geometry` 实例的*简单*，它必须满足这两个要求：  
   
 -   实例的每个图形不能与自身相交，但其终点除外。  
   
@@ -248,7 +247,7 @@ ms.locfileid: "66014311"
   
   
 ###  <a name="boundary-interior-and-exterior"></a><a name="boundary"></a> 边界、内部和外部  
- 实例的内部是实例占用的空间，而*外部*是指未占用的空间。 *interior* `geometry`  
+ 实例的*内部* `geometry` 是实例占用的空间，而*外部*是指未占用的空间。  
   
  “边界”  由 OGC 定义，如下所示：  
   
@@ -276,7 +275,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="envelope"></a><a name="envelope"></a> 包络线  
- 实例的信封也称为 "*边界框*"，它是由实例的最小和最大坐标（X，Y）组成的轴对齐矩形。 *envelope* `geometry`  
+ 实例的*信封* `geometry` 也称为 "*边界框*"，它是由实例的最小和最大坐标（X，Y）组成的轴对齐矩形。  
   
  **返回实例的包络线**  
  [STEnvelope](/sql/t-sql/spatial-geometry/stenvelope-geometry-data-type)  
@@ -284,7 +283,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="closure"></a><a name="closure"></a> 闭合  
- *闭合*`geometry`的实例是一个图形，其起点和终点是相同的。 `Polygon` 实例被视为闭合的。 `Point` 实例不是闭合的。  
+ *闭合*的 `geometry` 实例是一个图形，其起点和终点是相同的。 `Polygon` 实例被视为闭合的。 `Point` 实例不是闭合的。  
   
  环是一个简单、闭合的 `LineString` 实例。  
   

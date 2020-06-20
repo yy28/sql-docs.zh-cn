@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f566db3e-0a3b-4a61-9c84-49f8d42f5760
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6554691ce8debb96d4b0ee350ef98d2bfc57f02c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bea7572d8281a525c8c3a3f874ff3b55071b717d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011879"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050504"
 ---
 # <a name="non-xml-format-files-sql-server"></a>非 XML 格式化文件 (SQL Server)
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，大容量导出和导入支持两种类型的格式化文件：非 XML 格式化文件  和 XML 格式化文件  。  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 66761a14-d646-44bb-9dff-be5ab2c40e88
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dcf8984e678a9aba926be1fdc50dff073f82b6ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c24027a73cc36ea0cae4915b93d9968adf3e70b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808658"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934638"
 ---
 # <a name="connect-to-server-connection-properties-page-reporting-services"></a>连接到服务器（“连接属性”页）(Reporting Services)
   当连接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 或在“已注册的服务器”**** 中注册 [!INCLUDE[ssRS](../includes/ssrs.md)] 时，使用此选项卡可以查看或指定选项。 进行连接时，此对话框中仅显示“连接”**** 和“选项”****。 注册 [!INCLUDE[ssRS](../includes/ssrs.md)] 时，此对话框中仅显示“测试”**** 和“保存”****。  

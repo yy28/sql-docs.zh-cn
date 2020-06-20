@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 07373f17838fa387fe6ee22e31312a3933307fa3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b2fe6e1d06f7c996d5221b591c872d651a375033
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890330"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919309"
 ---
 # <a name="data-mining-query"></a>数据挖掘查询
   设计窗格包含数据挖掘预测查询生成器，可用于生成数据挖掘预测查询。 您可以基于输入表设计预测查询，也可以设计单独预测查询。 切换到结果视图可运行查询并查看结果。 查询视图将显示由预测查询生成器创建的数据挖掘扩展插件 (DMX) 查询。  
@@ -45,7 +44,7 @@ ms.locfileid: "68890330"
  可以将列从包含挖掘模型的表和输入列中拖动到单元。  
   
  **字段**  
- 从派生自源表的列的列表中选择列。 如果在“源”  中选择了“预测函数”  ，则此单元将包含对所选挖掘模型可用的预测函数的下拉列表。  
+ 从派生自源表的列的列表中选择列。 如果在“源”中选择了“预测函数”，则此单元将包含对所选挖掘模型可用的预测函数的下拉列表。  
   
  **Alias**  
  服务器返回的列的名称。  

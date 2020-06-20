@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8b72841d03023efacf4f8217aea8f6cdd383fbdd
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 9fb3d2b9e590e12b0a902a630b4c55a3baa9108f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82921551"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939618"
 ---
 # <a name="data-conversion-transformation"></a>数据转换
   数据转换将输入列中的数据转换为其他数据类型，然后将其复制到新的输出列。 例如，包可从多个源中提取数据，然后用此转换将列转换为目标数据存储所需的数据类型。 可以对单个输入列应用多个转换。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c1ea3cd62c97cecd9af0b8b696156b9f2622f5b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3088333fbfd4babd209df07f8880c838ce626d2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755512"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934319"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>使用 Windows 身份验证建立数据库镜像会话 (Transact-SQL)
     
@@ -31,7 +30,7 @@ ms.locfileid: "62755512"
 >  我们建议您在非高峰时段配置数据库镜像，因为配置镜像会影响性能。  
   
 > [!NOTE]  
->  给定的服务器实例可以参与到多个具有相同或不同伙伴的并发数据库镜像会话中。 某个服务器实例可能在某些会话中是伙伴，而在其他会话中则是见证服务器。 镜像服务器实例必须与主体服务器实例运行相同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 并非 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].的每个版本都提供数据库镜像。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 此外，极力建议这些服务器实例在可以处理相同工作负荷的类似系统上运行。  
+>  给定的服务器实例可以参与到多个具有相同或不同伙伴的并发数据库镜像会话中。 某个服务器实例可能在某些会话中是伙伴，而在其他会话中则是见证服务器。 镜像服务器实例必须与主体服务器实例运行相同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 并非 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].的每个版本都提供数据库镜像。 有关各个版本支持的功能列表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 此外，极力建议这些服务器实例在可以处理相同工作负荷的类似系统上运行。  
   
 ### <a name="to-establish-a-database-mirroring-session"></a>建立数据库镜像会话  
   
@@ -44,7 +43,7 @@ ms.locfileid: "62755512"
     > [!NOTE]  
     >  服务器实例对数据库镜像使用的验证形式是其数据库镜像端点的一种属性。 数据库镜像可以使用两种类型的传输安全功能：Windows 身份验证或基于证书的身份验证。 有关详细信息，请参阅[数据库镜像的传输安全性和 AlwaysOn 可用性组 &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)。  
   
-     在每台主体服务器和镜像服务器上，请确保存在用于数据库镜像的端点。 无论支持的镜像会话数是多少，服务器实例都只能有一个数据库镜像端点。 如果打算将此服务器实例专门用于数据库镜像会话中的合作伙伴，则可以将伙伴的角色分配给终结点（角色**=** 伙伴）。 如果还要将该服务器用于其他数据库镜像会话中的见证服务器，则请将端点的角色分配为 ALL。  
+     在每台主体服务器和镜像服务器上，请确保存在用于数据库镜像的端点。 无论支持的镜像会话数是多少，服务器实例都只能有一个数据库镜像端点。 如果打算将此服务器实例专门用于数据库镜像会话中的合作伙伴，则可以将伙伴的角色分配给终结点（角色 **=** 伙伴）。 如果还要将该服务器用于其他数据库镜像会话中的见证服务器，则请将端点的角色分配为 ALL。  
   
      若要执行 SET PARTNER 语句，必须将两个合作伙伴的端点的 STATE 都设置为 STARTED。  
   
@@ -69,9 +68,9 @@ ms.locfileid: "62755512"
   
      服务器网络地址的语法如下：  
   
-     TCP：/<strong>/</strong>\<*system-address>* <strong>：</strong>\<*port>*  
+     TCP：<strong>//</strong> \<*system-address> *<strong>：</strong> \<*port> *  
   
-     其中，\<system-address>** 是明确标识目标计算机系统的字符串，\<port>** 是伙伴服务器实例的镜像终结点使用的端口号。 有关详细信息，请参阅 [指定服务器网络地址（数据库镜像）](specify-a-server-network-address-database-mirroring.md)。  
+     其中 \<*system-address> * 是明确标识目标计算机系统的字符串，而 \<*port> * 是伙伴服务器实例的镜像端点使用的端口号。 有关详细信息，请参阅 [指定服务器网络地址（数据库镜像）](specify-a-server-network-address-database-mirroring.md)。  
   
      例如，在镜像服务器实例中，下面的 ALTER DATABASE 语句将伙伴设置为原始主体服务器实例。 数据库名称为“AdventureWorks”，系统地址为 DBSERVER1（伙伴系统的名称），伙伴数据库镜像终结点使用的端口为 7022****：  
   

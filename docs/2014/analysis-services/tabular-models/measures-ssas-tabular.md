@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c1ca545e081826f1b81117e377f370136a7b4998
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c42809ab5057d4234b992ec81db0b6571c3e68c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067013"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938818"
 ---
 # <a name="measures-ssas-tabular"></a>度量值（SSAS 表格）
   在表格模型中，度量值是使用 DAX 公式创建的计算，以便用于报表客户端中。 系统根据用户在报告客户端应用程序中选择的字段、筛选器和切片器来计算度量值。  
@@ -32,7 +31,7 @@ ms.locfileid: "66067013"
   
 -   [相关任务](#bkmk_rel_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_understanding"></a>便利  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a> 优势  
  度量值可以基于标准聚合函数，如 AVERAGE、COUNT 或 SUM；或者，您可以使用 DAX 定义自己的公式。 除了公式之外，每个度量值都具有属性（由度量值数据类型定义），如“名称”、“表详细信息”、“格式”和“小数位数”。  
   
  在模型中定义度量值后，用户可以将它们添加到报表或数据透视表。 根据透视和角色，度量值将与其关联表一起显示在字段列表中，可供模型的所有用户使用。 度量值通常在事实表中创建，但是可以独立于与之关联的表。  
@@ -82,11 +81,11 @@ Sum of TotalProfit: =SUM([TotalProfit])
 ##  <a name="measure-properties"></a><a name="bkmk_properties"></a>度量值属性  
  每个度量值具有定义它的属性。 可以在“属性”窗口中编辑度量值属性以及关联的列属性。 度量值具有以下属性：  
   
-|属性|默认设置|说明|  
+|属性|默认设置|描述|  
 |--------------|---------------------|-----------------|  
-|**说明**|空白|度量值的说明。 该说明将不与度量值一起显示在报告客户端中。|  
+|**说明**|空|度量值的说明。 该说明将不与度量值一起显示在报告客户端中。|  
 |**格式**|从公式表达式中引用的列的数据类型自动确定。|度量值的格式。 例如，货币或百分比。|  
-|**公式**|创建度量值时在编辑栏中输入的公式。|度量值的公式。|  
+|**Formula**|创建度量值时在编辑栏中输入的公式。|度量值的公式。|  
 |**“度量值名称”**|使用“自动求和”时，度量值名称将位于后跟冒号的列名之前。 如果输入自定义公式，请键入名称并且后跟冒号，然后键入该公式。|显示在报告客户端的字段列表中的度量值名称。|  
   
 ##  <a name="using-a-measure-in-a-kpi"></a><a name="bkmk_KPI"></a>在 KPI 中使用度量值  
