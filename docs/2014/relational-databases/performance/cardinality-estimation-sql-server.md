@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa56127f649d71bfcc8825322f8bf729175d41df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151047"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066036"
 ---
 # <a name="cardinality-estimation-sql-server"></a>基数估计 (SQL Server)
   称作基数估计器的基数估计逻辑已在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中重新设计，以便改进查询计划的质量，并因此改进查询性能。 新的基数估计器纳入在新型 OLTP 和数据仓库工作负荷中表现优异的假设和算法。 它基于针对新型工作负荷的深入基数估计研究，以及我们在过去 15 年在改进 SQL Server 基数估计器方面的学习。 客户反馈表明，尽管大多数查询将会从更改或保持不更改中受益，但与以前的基数估计器相比，少数查询可能会显得退步。  
@@ -75,7 +74,7 @@ SELECT year, purchase_price FROM dbo.Cars WHERE Make = 'Honda' AND Model = 'Civi
   
  此行为已更改。 现在，新基数估计假定 Make 和 Model 列具有“某种” ** 关联。 查询优化器通过向估计公式添加指数成分，估计更高的基数。 查询优化器现在估计，22.36 行（.05 * SQRT （20） \* 1000 rows = 22.36 行）与谓词匹配。 对于此方案以及特定的数据分布，22.36 行更接近于该查询将返回的实际 50 行。  
   
- 请注意，新的基数估计器逻辑将对谓词选择性进行排序并且增加该指数。 例如，如果谓词选择性为 .05、.20 和 .25，则基数估计值为（05 * SQRT （20） \* SQRT （sqrt （25））。  
+ 请注意，新的基数估计器逻辑将对谓词选择性进行排序并且增加该指数。 例如，如果谓词选择性为 .05、.20 和 .25，则基数估计值为（05 * SQRT （20） \* sqrt （sqrt （25））。  
   
 ### <a name="example-c-new-cardinality-estimates-assume-filtered-predicates-on-different-tables-are-independent"></a>示例 C. 新的基数估计假定对不同表的筛选的谓词是独立的  
  对于此示例，以前的基数估计器谓词筛选器 filters s.type 和 r.date 是关联的。 但是，针对新型工作负荷的测试结果表明，针对不同表中列上的谓词筛选器通常是彼此不相关的。  

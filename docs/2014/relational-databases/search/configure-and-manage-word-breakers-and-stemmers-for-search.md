@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: eaa80c71dcc58cbd780a664d2466a3bf3cec2a4c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22cb7371a0215989d2759ddfb2c84f51ba5c3c31
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011534"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997582"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>配置和管理断字符和词干分析器以便搜索
   断字符和词干分析器用于对所有全文索引数据执行语言分析。 语言分析将涉及到查找词边界（断字）和组合动词（词干分析）。 断字符和词干分析器是特定于语言的，并且各语言的语言分析规则也各不相同。 对于给定语言，“断字符” ** 通过根据语言的词法规则确定词的边界位置来标识各个词。 每个词（也称为标记  ）使用压缩表示形式插入全文索引以减少其大小。 词干分析器** 根据该语言的规则生成特定词的变形形式（例如，“running”、“ran”和“runner”是单词“run”的不同形式）。  
@@ -40,7 +39,7 @@ ms.locfileid: "66011534"
  如果您添加、删除或更改了断字符，则需要刷新为全文索引和查询而支持的 Microsoft Windows 区域设置标识符 (LCID) 列表。 有关详细信息，请参阅 [查看或更改注册的筛选器和断字符](view-or-change-registered-filters-and-word-breakers.md)。  
   
 ##  <a name="setting-the-default-full-text-language-option"></a><a name="default"></a>设置默认全文语言选项  
- 对于的本地化版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，安装[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]程序会将`default full-text language`选项设置为服务器的语言（如果存在合适的匹配项）。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的非本地化版本，`default full-text language` 选项为“英语”。  
+ 对于的本地化版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序会将 `default full-text language` 选项设置为服务器的语言（如果存在合适的匹配项）。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的非本地化版本，`default full-text language` 选项为“英语”。  
   
  创建或修改全文索引时，可以为每个全文索引列指定不同的语言。 如果未指定列的语言，默认值是配置选项 `default full-text language` 的值。  
   

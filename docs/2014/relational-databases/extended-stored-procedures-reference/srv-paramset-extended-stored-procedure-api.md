@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 00645f619a89010bb4e2b112d50e00cbc6f40dce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76b651b3d9e5274c199b4c3aec43d90abcb8edbc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127150"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050670"
 ---
 # <a name="srv_paramset-extended-stored-procedure-api"></a>srv_paramset（扩展存储过程 API）
     
@@ -72,7 +71,7 @@ len
   
  如果 len 为 0，则返回 NULL**。 将 len 设置为 0 是将 NULL 返回给客户端的唯一方法**。  
   
- 如果参数是[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]数据类型之一，则此函数返回以下值。  
+ 如果参数是数据类型之一，则此函数返回以下值 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
   
 |新数据类型|返回数据长度|  
 |--------------------|------------------------|  
@@ -83,7 +82,7 @@ len
 |`BIGVARBINARY`|**NULL：** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO：** *len* = IG, data = IG, RET = 0<br /><br /> **>=255：** *len* = max8k, data = valid, RET = 0<br /><br /> **<255：** *len* = <8k, data = valid, RET = 1|  
 |NCHAR|**NULL：** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO：** *len* = IG, data = IG, RET = 0<br /><br /> **>=255：** *len* = max8k, data = valid, RET = 0<br /><br /> **<255：** *len* = <8k, data = valid, RET = 1|  
 |NVARCHAR|**NULL：** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO：** *len* = IG, data = IG, RET = 0<br /><br /> **>=255：** *len* = max8k, data = valid, RET = 0<br /><br /> **<255：** *len* = <8k, data = valid, RET = 1|  
-|`NTEXT`|**NULL：** *len* = IG, data = IG, RET = 0<br /><br /> **ZERO：** *len* = IG, data = IG, RET = 0<br /><br /> **>=255：** *len* = IG, data = IG, RET = 0<br /><br /> 255： *len* = IG，data = IG，RET = 0 ** \<**|  
+|`NTEXT`|**NULL：** *len* = IG, data = IG, RET = 0<br /><br /> **ZERO：** *len* = IG, data = IG, RET = 0<br /><br /> **>=255：** *len* = IG, data = IG, RET = 0<br /><br /> ** \< 255：** *len* = IG，data = IG，RET = 0|  
 |RET = srv_paramset 的返回值||  
 |IG = 将忽略值||  
 |valid = 任何有效的数据指针||  

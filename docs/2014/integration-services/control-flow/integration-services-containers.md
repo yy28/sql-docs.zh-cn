@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 172aa2a77293dd7e9a9ee50bfe0002a71c59cbb9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0afb0e4307b4bc2205e92700f6fc0ca580caa801
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831255"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918697"
 ---
 # <a name="integration-services-containers"></a>Integration Services 容器
   容器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中为包提供结构和为任务提供服务的对象。 它们支持包中的重复控制流，并且将任务和容器分组为有意义的工作单元。 除了任务，容器还可以包含其他容器。  

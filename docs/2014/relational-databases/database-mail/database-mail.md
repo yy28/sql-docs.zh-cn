@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8c763c6db472f52df320d0c89dc47483636bf9f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97a5a459fafd80956a2b8d31c27b86169c6fa850
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917959"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952427"
 ---
 # <a name="database-mail"></a>数据库邮件
   数据库邮件是从 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]中发送电子邮件的企业解决方案。 通过使用数据库邮件，数据库应用程序可以向用户发送电子邮件。 邮件中可以包含查询结果，还可以包含来自网络中任何资源的文件。  

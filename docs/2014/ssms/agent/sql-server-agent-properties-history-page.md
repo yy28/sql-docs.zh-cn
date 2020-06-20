@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: dc73734c-b3c3-407f-bbd1-8714b4fa47b0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 10796dde3513e5c4b7970d1e4f6c4eedcad3c6c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4008df15ded37398ef8565bac759364699561fad
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245594"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058687"
 ---
 # <a name="sql-server-agent-properties-history-page"></a>SQL Server 代理属性（“历史记录”页）
-  使用此页可以查看和修改用于管理[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务历史记录日志的设置。  
+  使用此页可以查看和修改用于管理 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务历史记录日志的设置。  
   
 ## <a name="options"></a>选项  
  **限制作业历史记录日志的大小**  

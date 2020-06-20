@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 51205c2d-b6ce-4b92-afd2-58e399a81691
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4b5ec7fcb999c6c81de199aaf3676677edbdd41d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e85d91578e5c3f4b47f56eeb86aa738e37e8f59b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066819"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938758"
 ---
 # <a name="power-view-reporting-properties-ssas-tabular"></a>Power View 报表属性（SSAS 表格）
   [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 为数据分析员、业务决策者和信息工作者之类的业务用户提供直观的即席生成报表功能。 用户可轻松地从基于 PowerPivot 库中发布的 PowerPivot 工作簿的表格模型或使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 创建然后部署到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services 实例的表格模型中创建数据视图，并与之交互。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 是一种从 SharePoint Server 2010 或更高版本启动的基于浏览器的 Silverlight 应用程序。  

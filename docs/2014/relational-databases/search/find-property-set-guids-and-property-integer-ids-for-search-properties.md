@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f7a18a44a0f71254342f8fc29c38f0993fc05bfb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 53c08d3a2f86c7e412fbdb1caa6d55d7d23bf407
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637896"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004328"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>查找搜索属性的属性集 GUID 和属性整数 ID
   本主题讨论在将属性添加到搜索属性列表且使其可由全文搜索进行搜索之前，如何获取所需的值。 这些值包括文档属性的属性集 GUID 和属性整数标识符。  
   
- Ifilter 从二进制数据（即，存储`varbinary`在、 `varbinary(max)` （包括`FILESTREAM`）或`image`数据类型列中的数据）中提取的文档属性可用于全文搜索。 若要使提取的属性可供搜索，必须手动将该属性添加到搜索属性列表。 搜索属性列表还必须与一个或多个全文索引相关联。 有关详细信息，请参阅 [使用搜索属性列表搜索文档属性](search-document-properties-with-search-property-lists.md)。  
+ Ifilter 从二进制数据（即，存储在 `varbinary` 、 `varbinary(max)` （包括）或数据类型列中的数据）中提取的文档属性 `FILESTREAM` `image` 可用于全文搜索。 若要使提取的属性可供搜索，必须手动将该属性添加到搜索属性列表。 搜索属性列表还必须与一个或多个全文索引相关联。 有关详细信息，请参阅 [使用搜索属性列表搜索文档属性](search-document-properties-with-search-property-lists.md)。  
   
  在向属性列表添加可用属性之前，必须找到有关该属性的 2 段信息：  
   
@@ -41,9 +40,9 @@ ms.locfileid: "73637896"
 |已知名称|Windows 规范名称|属性集 GUID|整数标识符|说明|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Authors|`System.Author`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|给定项的一个或多个创作者。|  
-|Tags|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|分配给该项的一组关键字（也称为标记）。|  
+|标记|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|分配给该项的一组关键字（也称为标记）。|  
 |类型|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|假设的文件类型，基于其规范类型。|  
-|Title|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|项的标题。 例如，文档的标题、邮件的主题、照片的题注或音乐曲目的名称。|  
+|标题|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|项的标题。 例如，文档的标题、邮件的主题、照片的题注或音乐曲目的名称。|  
   
  为了提倡在文件格式之间保持一致性，Microsoft 为几类文档确定了部分常用的高优先级文档属性。 其中包括通信、联系人、文档、音乐文件、图片和视频。 有关每个类别排名靠前的属性的详细信息，请参阅 Windows 搜索文档中的 [system-defined properties for custom file formats](https://go.microsoft.com/fwlink/?LinkId=144336) （自定义文件格式的系统定义属性）。  
   

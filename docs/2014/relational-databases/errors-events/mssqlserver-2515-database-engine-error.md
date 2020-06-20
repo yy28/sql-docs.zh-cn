@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: af93aa29-70c9-4923-90af-aafadb20c1c6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7e531a2d916cfc464c18aab931c268197fbf5982
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33aebb89b831d414d06954bf15f245e851f1abdf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62915024"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034517"
 ---
 # <a name="mssqlserver_2515"></a>MSSQLSERVER_2515
     
@@ -61,7 +60,7 @@ ms.locfileid: "62915024"
  运行 REPAIR 将使差异位图无效。 在执行完整数据库备份之前，不能执行差异备份。 完整数据库备份为要重新生成的差异位图提供了基准。  
   
 ## <a name="see-also"></a>另请参阅  
- [&#40;SQL Server 创建完整数据库备份&#41;](../backup-restore/create-a-full-database-backup-sql-server.md)   
+ [创建完整数据库备份 (SQL Server)](../backup-restore/create-a-full-database-backup-sql-server.md)   
  [MSSQLSERVER_2516](mssqlserver-2516-database-engine-error.md)  
   
   

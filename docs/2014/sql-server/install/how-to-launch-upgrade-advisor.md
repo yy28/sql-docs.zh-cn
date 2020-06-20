@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 0a067cb0-ed83-4a29-bb14-06b24254f3dd
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 59936989a63e702eba78bca834498f530efdae17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42fc062ce36687b15cc649b1527fdb7710644ac2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094907"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059256"
 ---
 # <a name="how-to-launch-upgrade-advisor"></a>如何启动升级顾问
   升级顾问提供了可用于启动升级顾问分析向导和升级顾问报表查看器的中央控制台。 本主题介绍了如何启动升级顾问。  
   
 ### <a name="to-launch-upgrade-advisor"></a>启动升级顾问  
   
--   若要启动升级顾问，请依次单击 "**开始**"、 **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**"**所有程序**"、，然后单击** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] "升级顾问**"。  
+-   若要启动升级顾问，请依次单击 "**开始**"、"**所有程序**"、 **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** ，然后单击 " ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升级顾问**"。  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;用户界面运行升级顾问&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b7c992f8b33e2eb96b0e6ea7eec1f58beaf8aefd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 027f46cc60aa065a98fc5b7736ff1707248d69bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62511822"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050852"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Unicode 数据和服务器代码页
     
@@ -39,7 +38,7 @@ ms.locfileid: "62511822"
   
 -   列名元数据将作为多字节数据传递到**srv_describe** 。  
   
-     扩展存储过程调用**srv_pfield** ，并将字段参数设置为 SRV_SPROC_CODEPAGE 以获取的多字节代码页[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+     扩展存储过程调用**srv_pfield** ，并将字段参数设置为 SRV_SPROC_CODEPAGE 以获取的多字节代码页 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 -   错误消息将作为多字节数据传递到**srv_sendmsg** 。  
   

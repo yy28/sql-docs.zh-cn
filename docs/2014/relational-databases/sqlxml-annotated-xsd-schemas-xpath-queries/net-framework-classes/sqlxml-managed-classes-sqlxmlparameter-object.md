@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 40b938bf-7b09-48b3-9771-4421a673e17b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a9c167c4aa94802c7ae80d405c286460015186fb
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cfd262e03666618ed7afd03e86d5d75bd08c8a8e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717941"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015149"
 ---
 # <a name="sqlxmlparameter-object-sqlxml-managed-classes"></a>SqlXmlParameter 对象（SQLXML 托管类）
   SqlXmlParameter 对象支持以下属性：  
   
- “属性”  
+ 名称  
  参数的名称。 命令可以是传递的参数。 调用 SqlXmlCommand 对象的 CreateParameter 方法会创建参数对象。  
   
  值  

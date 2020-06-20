@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f03266a5460e9e34a404256e5df415f799b29d98
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7efbc045fc5f152f98ba7dbf2dfc686ff5e86a7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918933"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970587"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>托管数据库对象监视和故障排除
   本主题提供的信息介绍用于对正在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中运行的托管数据库对象和程序集进行监视和故障排除的工具。  
@@ -27,7 +26,7 @@ ms.locfileid: "62918933"
 ## <a name="profiler-trace-events"></a>事件探查器跟踪事件  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供 SQL 跟踪和事件通知来监视数据库引擎中发生的事件。 通过记录指定事件，SQL 跟踪可以帮助您解决性能问题、审核数据库活动、收集用于测试环境的示例数据、调试 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句和存储过程以及为性能分析工具收集数据。 有关详细信息，请参阅[SQL 跟踪](../sql-trace/sql-trace.md)和[扩展事件](../extended-events/extended-events.md)。  
   
-|事件|描述|  
+|事件|说明|  
 |-----------|-----------------|  
 |[Assembly Load 事件类](../../database-engine/assembly-load-event-class.md)|用于监视程序集加载请求（成功和失败）。|  
 |[Sql： BatchStarting 事件类](../event-classes/sql-batchstarting-event-class.md)， [Sql： BatchCompleted 事件类](../event-classes/sql-batchcompleted-event-class.md)|提供有关已开始或完成的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 批处理的信息。|  

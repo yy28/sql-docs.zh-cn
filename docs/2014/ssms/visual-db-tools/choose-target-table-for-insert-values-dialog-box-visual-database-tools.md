@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 580ed86a-be86-419b-9dc7-e3b17f19905f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7dc613dd6dcb7e639fff247a84a73812d023fb5c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e4635a4d4cee0afa5b9b10d091ef14f7de60ef87
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255753"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066197"
 ---
 # <a name="choose-target-table-for-insert-values-dialog-box-visual-database-tools"></a>“选择插入值的目标表”对话框 (Visual Database Tools)
   使用此对话框可以指定要使用“插入值”查询更新的表。 将查询的类型更改为“插入值”查询时，如果“关系图”  窗格中显示了多个表，则将显示此对话框。  

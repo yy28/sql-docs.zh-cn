@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 59cca562-e3f5-4257-b868-adcbcc0142cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8e8b5a8765523c91c00aae362ae311deff3179eb
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c962d22b600eadc665fca31d274b423a25ea274b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718164"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997704"
 ---
 # <a name="view-spatial-data-in-object-explorer"></a>在对象资源管理器中查看空间数据
   查询编辑器中的 **“空间结果”** 窗口中提供了一些可视化工具，可用来查看空间数据结果以及在 **“结果”** 窗口中以网格格式显示的数据。 若要在 **“空间结果”** 窗口中显示空间数据，则查询结果中必须至少包括一个包含几何图形或地域数据的空间数据列。  

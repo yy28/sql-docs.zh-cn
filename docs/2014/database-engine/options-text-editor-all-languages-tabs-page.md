@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd715d6b-f873-41d4-aa10-57b7098b61cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 56dee0d04c713163f74c391fe5a482092c6c30e7
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: e383b5a33cc27b1f2e8a6cf7ec02938a7c5f8902
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000727"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929961"
 ---
 # <a name="options-text-editor---all-languages--tabs-page"></a>选项（“文本编辑器”-“所有语言”-“选项卡”页）
   使用此对话框可以设置 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的所有五个编辑器的跳格行为。 若要显示这些选项，请在 **“工具”** 菜单上单击 **“选项”** 。 选择“文本编辑器”**** 文件夹，展开“所有语言”**** 文件夹，再单击“制表符”****。  

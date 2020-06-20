@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 52440d9e-89fd-4c15-a008-a1ea99f41387
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: caebd8ecad5fe9a48745d10adff28cf2a68d6a1d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ae1a9c60a7a7966f4eff2a08b4557487f5aec58c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702917"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065713"
 ---
 # <a name="architecture-of-client-side-and-server-side-xml-formatting-sqlxml-40"></a>客户端和服务器端 XML 格式的体系结构 (SQLXML 4.0)
   下图显示服务器端的 XML 格式的体系结构。  

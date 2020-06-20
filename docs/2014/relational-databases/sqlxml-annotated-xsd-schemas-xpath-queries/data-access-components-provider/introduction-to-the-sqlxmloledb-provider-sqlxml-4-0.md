@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34f98fabf4bc5fe5fe5a5f465d43576370ecae5b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 75be01ca2358a3ab04cee64ab19a6f9023d38170
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703225"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015668"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB 访问接口简介 (SQLXML 4.0)
   SQLXMLOLEDB 访问接口是通过 ActiveX 数据对象 (ADO) 公开 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 功能的 OLE DB 访问接口。 但是，访问接口只能在 ADO 的“写入输出流”模式下执行命令。 SQLXMLOLEDB 访问接口不是行集访问接口。 执行命令时，必须指定 adExecuteStream 标志，该标志指示 ADO 使用您指定的输出流。  
@@ -43,7 +42,7 @@ oTestCommand.Execute , , adExecuteStream
   
  SQLXMLOLEDB 访问接口公开下列特定于访问接口的命令属性。  
   
-|命令<br /><br /> property|默认<br /><br /> （如果有）|说明|  
+|Command<br /><br /> property|默认<br /><br /> （如果有）|说明|  
 |--------------------------|----------------------------|-----------------|  
 |基路径|""|指定基本文件路径。 基本文件路径用于指定 XML 样式表语言 (XSL) 或映射架构文件的位置。 基文件路径还用于解析 xsl 或映射架构文件的相对路径，该路径已在 XSL 或 Mapping 架构属性中指定。<br /><br /> 有关使用此属性的示例，请参阅[&#40;SQLXMLOLEDB Provider&#41;执行 XPath 查询](executing-xpath-queries-sqlxmloledb-provider.md)。|  
 |ClientSideXML|False|如果希望在客户端上执行行集到 XML 的转换过程，而不是在服务器上执行，请将此属性设置为 True。 在希望将性能负载移到中间层时，此操作很有用。<br /><br /> 有关使用此属性的示例，请参阅[&#40;SQLXMLOLEDB 提供程序中执行 Sql 查询&#41;](executing-sql-queries-sqlxmloledb-provider.md)或[执行包含 &#40;SQLXMLOLEDB PROVIDER&#41;的 Sql 查询的模板](executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md)。|  

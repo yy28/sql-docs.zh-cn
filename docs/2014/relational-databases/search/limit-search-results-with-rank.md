@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ebb1f67a981396f1f7bb2026f66a528052b0e4df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab1b930b3238cb541965e1984d1561f1a1c22d87
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011149"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004214"
 ---
 # <a name="limit-search-results-with-rank"></a>使用 RANK 限制搜索结果
   [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 和 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 函数返回名为 RANK 的列，该列包含从 0 到 1000 的序数值（排名值）。 这些值用来根据返回的行与选择条件的匹配程度对这些行进行排名。 排名值仅表示结果集中各行相关性的相对顺序，值越小，表示相关性越低。 实际的值并不重要，并且每次运行查询时实际值通常都不同。  

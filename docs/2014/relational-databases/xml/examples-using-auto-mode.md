@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7d2b40ae9c5eda9288f86527c2cbf973a4106e09
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bb6567924747d9325610c23d1f11de8ced1bc017
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716699"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059492"
 ---
 # <a name="examples-using-auto-mode"></a>示例：使用 AUTO 模式
   下列示例说明了 AUTO 模式的使用。 这些查询中有许多都针对 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 示例数据库的 ProductModel 表的 Instructions 列中存储的自行车生产说明 XML 文档指定的。  
@@ -265,7 +264,7 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
   
 -   通过使用相应的 Unicode 字符的十六进制值，对查询结果中返回的元素名及属性名中的特殊 XML 和 URL 字符进行编码。 在上面的结果中，元素名 <`Special Chars`> 作为 <`Special_x0020_Chars`> 返回。 属性名称 <`Col#&2`> 作为 <`Col_x0023__x0026_2`> 返回。 XML 和 URL 特殊字符都进行了编码。  
   
--   如果元素值或属性值包含 5 个标准 XML 字符实体（'、""、\<、> 和 &）中的任何一个，将始终使用 XML 字符编码对这些特殊 XML 字符进行编码。 在上面的结果中，属性 <`&`> 的值中的 `Col1` 值被编码为 `&`。 但是，# 字符仍保留为 #，因为它是有效的 XML 字符，而不是特殊的 XML 字符。  
+-   如果元素或属性的值包含5个标准 XML 字符实体（'、""、 \<, > 和 &）中的任何一个，则将始终使用 XML 字符编码对这些特殊 xml 字符进行编码。 在上面的结果中，属性 <`&`> 的值中的 `Col1` 值被编码为 `&`。 但是，# 字符仍保留为 #，因为它是有效的 XML 字符，而不是特殊的 XML 字符。  
   
 -   如果元素值或属性值包含 URL 中有特殊意义的任何特殊 URL 字符，则只能在 DBOBJECT URL 值中对它们进行编码，而且只有当该特殊字符是表名或列名的一部分时，才会对它们进行编码。 在结果中，作为表名 `#` 的一部分的字符 `Col#&2` 被编码为 `_x0023_ in the DBOJBECT URL`。  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a1255a810c5d41dfe7c69dee781c670965f0756c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2408399c0c04338312f2076e42d3ac7de167f7aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703666"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037803"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>将 sqlcmd 与脚本变量结合使用
   脚本中使用的变量称为脚本变量。 使用脚本变量，一个脚本可以应用于多个方案中。 例如，如果需要对多台服务器运行单个脚本，则可以用脚本变量来表示服务器名称，而不必为每台服务器修改脚本。 通过更改脚本变量表示的服务器名称，可以在不同的服务器上运行同一脚本。  
@@ -105,17 +104,17 @@ ms.locfileid: "82703666"
 |变量|相关选项|R/W|默认|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER*|-U|R|""|  
-|SQLCMDPASSWORD*|-p|--|""|  
+|SQLCMDPASSWORD*|-P|--|""|  
 |SQLCMDSERVER*|sqlcmd|R|"DefaultLocalInstance"|  
 |SQLCMDWORKSTATION|-H|R|"ComputerName"|  
 |SQLCMDDBNAME|-d|R|""|  
 |SQLCMDLOGINTIMEOUT|-l|R/W|"8"（秒）|  
 |SQLCMDSTATTIMEOUT|-t|R/W|"0" = 无限期等待|  
-|SQLCMDHEADERS|-H|R/W|“0”|  
+|SQLCMDHEADERS|-H|R/W|"0"|  
 |SQLCMDCOLSEP|-S|R/W|" "|  
-|SQLCMDCOLWIDTH|-w|R/W|“0”|  
+|SQLCMDCOLWIDTH|-w|R/W|"0"|  
 |SQLCMDPACKETSIZE|-a|R|"4096"|  
-|SQLCMDERRORLEVEL|-M|R/W|“0”|  
+|SQLCMDERRORLEVEL|-M|R/W|"0"|  
 |SQLCMDMAXVARTYPEWIDTH|-y|R/W|"256"|  
 |SQLCMDMAXFIXEDTYPEWIDTH|-y|R/W|"0" = 无限制|  
 |SQLCMDEDITOR||R/W|"edit.com"|  

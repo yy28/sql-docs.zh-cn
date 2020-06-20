@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: bf77e36824c05a0f07bc789c380cffbc1518669d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1986e21af8d9c6334d8ff9b5a374d46d6c25dda5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63187819"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013675"
 ---
 # <a name="startmode-property-sqlservice-class"></a>StartMode 属性（SqlService 类）
   获取服务的启动模式。  
@@ -48,16 +47,16 @@ object
  启动  
  值 = 0。 服务由操作系统加载程序启动。 此选项只对驱动程序服务有效。  
   
- System  
+ 系统  
  值 = 1。 服务由 `IoInitSystem` 方法启动。 此选项只对驱动程序服务有效。  
   
  自动  
  值 = 2。 服务将在系统启动期间由服务控制管理器自动启动。  
   
- Manual  
+ 手动  
  值 = 3。 服务将在进程调用 `StartService` 方法时由计算机管理器启动。  
   
- 禁用  
+ 已禁用  
  值 = 4。 无法启动服务。  
   
 ## <a name="remarks"></a>备注  

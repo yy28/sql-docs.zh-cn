@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 32e57b44b759ba36ea92cd7d08a600738ff2b4dd
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 64684c7b87119aa2763ddc4f48f200de20dde0cc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859229"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067370"
 ---
 # <a name="customize-toolbars-page"></a>自定义（“工具栏”页）
   使用“工具栏”  选项卡可以创建、重命名、删除和重置工具栏。 通过在“工具”菜单上单击“自定义”，再单击“工具栏”，可以访问此选项卡。  

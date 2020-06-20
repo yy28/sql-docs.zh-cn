@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44a18bfe-e593-47a5-995f-382c01d3f618
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e528b94e51238a06a9776e58693c3093f4bfb831
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96d06ac85b37ef5d91a49381f97f81ee7a2d87e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091880"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011833"
 ---
 # <a name="sql-server-parameters"></a>SQL Server 参数
   在该页上，设置分析器将用于[!INCLUDE[ssDE](../../includes/ssde-md.md)]分析的参数。 您可以分析一个、多个或所有数据库，分析通过使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]创建的跟踪文件，以及 SQL 批处理文件。  
@@ -40,10 +39,10 @@ ms.locfileid: "66091880"
   
  如果启用 "**分析跟踪文件**"，则在输入路径名称和文件名之前，将禁用 "**下一步**"。  
   
- **分析[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]批处理文件**  
+ **分析 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 批处理文件**  
  选中此复选框可分析文件系统中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理文件。  
   
- **批处理文件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的路径**  
+ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]批处理文件的路径**  
  可分析一个或多个批处理文件。 可先浏览到某个位置然后选择多个文件，或者可提供多个文件名。 请使用每个文件的完整路径名，将文件名包括在内，并用竖线字符 (|) 分隔各项。  
   
  如果启用 "**分析 SQL 批处理文件**"，则在输入路径名称和文件名之前，"**下一步**" 按钮处于禁用状态。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f21e1e4a-24c9-422f-a4be-84615a68095e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7db4849a71644772f055059d18faa9f964603913
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2be57c8f3ca02e2e182f13240a32ac4255f367d1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066008"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938398"
 ---
 # <a name="toolbar-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>工具栏（KPI 选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用 **“工具栏”** 窗格执行多维数据集设计器的 **KPI** 选项卡上的常规操作。  
@@ -24,7 +23,7 @@ ms.locfileid: "66066008"
  **添加商业智能**  
  单击此项可显示 **“商业智能向导”** ，并向多维数据集添加商业智能功能。  
   
- **进程**  
+ **处理**  
  单击此项可显示 **“处理”** 对话框，并处理多维数据集。  
   
  **重新连接**  

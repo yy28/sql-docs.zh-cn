@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a35afb1c1bd38aa123211ae1801d914494aec91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49ae9c1a0e9eac4c5fd8a47106a2d72dc880a856
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79525468"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938578"
 ---
 # <a name="tabular-model-data-access"></a>表格模型数据访问
   Analysis Services 中的表格模型数据库可由用于检索多维模型中的数据或元数据的大多数相同的客户端、接口和语言访问。 有关详细信息，请参阅[多维模型数据访问（Analysis Services - 多维数据）](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)。  
@@ -87,7 +86,7 @@ ms.locfileid: "79525468"
   
  可以在非托管客户端应用程序中使用 Analysis Services 9.0 OLE DB 访问接口以支持对表格模型的 OLE DB 访问。 启用表格模型访问需要更新版本的 Analysis Services OLE DB 访问接口。 有关用于表格模型的提供程序的详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 。  
   
- 还可以直接从 Analysis Services 实例以基于 XML 的格式检索数据。 可以使用 DISCOVER_CSDL_METADATA 行集来检索表格模型的架构，也可以将 EXECUTE 或 DISCOVER 命令与现有 ASSL 元素、对象或属性一起使用。 有关更多信息，请参见以下资源：  
+ 还可以直接从 Analysis Services 实例以基于 XML 的格式检索数据。 可以使用 DISCOVER_CSDL_METADATA 行集来检索表格模型的架构，也可以将 EXECUTE 或 DISCOVER 命令与现有 ASSL 元素、对象或属性一起使用。 有关详细信息，请参阅以下资源：  
   
 -   [用于商业智能的 CSDL 批注 (CSDLBI)](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   

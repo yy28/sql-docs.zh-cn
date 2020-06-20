@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 284d19b4-4979-4cbe-a9be-ac1104433c69
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: aa6bce659e20fb80f013539049cc1b99e3e0b4c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: edc6abf192a3341f9b84c99e99071343cc882c3d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62870640"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968107"
 ---
 # <a name="mssqlserver_10538"></a>MSSQLSERVER_10538
     
@@ -39,7 +38,7 @@ ms.locfileid: "62870640"
  请确保计划指南 ID 有效，当前会话设置为正确的数据库上下文，并且你对计划指南所引用的对象具有 ALTER DATABASE 权限或 ALTER 权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_create_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [计划指南](../performance/plan-guides.md)   
  [sp_create_plan_guide_from_handle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   

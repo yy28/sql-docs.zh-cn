@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6260e911-ea8b-4c69-a39d-d1bccd565a32
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c6953214bd5e5353643cb16b75ed51ac18783256
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8de716da5a7f845f68bd50fa09b04594bf883ad6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78171766"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035414"
 ---
 # <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>任务 3：创建并运行数据质量项目以进行匹配
   在本任务中，您将创建匹配活动的数据质量项目并对已清理的供应商数据运行匹配过程以删除数据中的所有重复项。
@@ -30,11 +29,11 @@ ms.locfileid: "78171766"
 
      ![新建数据质量项目 - 已选择匹配](../../2014/tutorials/media/et-creatingandrunningadqpformatching.jpg "新建数据质量项目 - 已选择匹配")
 
-5.  单击“下一步”。 
+5.  单击“下一步”。
 
 6.  在“映射” **** 页中，为“数据源” **** 选择“Excel 文件” ****。
 
-7.  单击 "**浏览**" 并选择 "**清理供应商列表 .xls**"，这是清理活动的输出文件。
+7.  单击 "**浏览**" 并选择 "**清理供应商 List.xls**，这是清理活动的输出文件。
 
 8.  将**供应商的源列**映射到供应商**ID**域、**供应商名称**列到**供应商名称**域，并将**ContactEmailAddress**列映射到**联系人电子邮件**域。
 

@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ed991d65858d40b96013659caa2d83c479ca1d3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e647ed8d563bb922ee083d7a10a57429148e954a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782723"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953083"
 ---
 # <a name="register-a-database-as-a-dac"></a>将数据库注册为 DAC
-  使用 "**注册数据层应用程序向导**" 或 Windows PowerShell 脚本可以生成描述现有数据库中对象的数据层应用程序（DAC）定义，并在`msdb`系统数据库（中[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]的**master** ）中注册 DAC 定义。  
+  使用 "**注册数据层应用程序向导**" 或 Windows PowerShell 脚本可以生成描述现有数据库中对象的数据层应用程序（DAC）定义，并在 `msdb` 系统数据库（中的**MASTER** ）中注册 DAC 定义 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 。  
   
 -   **开始之前：** [限制和局限](#LimitationsRestrictions)、[权限](#Permissions)  
   
@@ -78,11 +77,11 @@ ms.locfileid: "72782723"
   
  **应用程序名称。** - 指定用于标识 DAC 定义的名称的字符串，该字段用数据库名称进行填充。  
   
- **版本。** - 标识 DAC 版本的数值。 该 DAC 版本用于 Visual Studio 中，以便标识开发人员正在处理的 DAC 的版本。 部署 DAC 时，该版本存储在`msdb`数据库中，并且以后可以在中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 "**数据层应用程序**" 节点下查看。  
+ **版本。** - 标识 DAC 版本的数值。 该 DAC 版本用于 Visual Studio 中，以便标识开发人员正在处理的 DAC 的版本。 部署 DAC 时，该版本存储在数据库中， `msdb` 并且以后可以在中的 "**数据层应用程序**" 节点下查看 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
- **2008.** - 可选。 用来说明 DAC 用途的文本。 部署 DAC 时，说明存储在`msdb`数据库中，并且以后可以在中[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的 "**数据层应用程序**" 节点下查看。  
+ **2008.** - 可选。 用来说明 DAC 用途的文本。 部署 DAC 时，说明存储在数据库中， `msdb` 并且以后可以在中的 "**数据层应用程序**" 节点下查看 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 。  
   
- "上**Introduction** **一步"-返回到 "简介" \< **页。  
+ " ** \< 上一步**"-返回到 "**简介**" 页。  
   
  ****“下一步>”- 验证 DAC 是否可从数据库中的对象生成，并在“验证和摘要”**** 页中显示结果。  
   
@@ -94,7 +93,7 @@ ms.locfileid: "72782723"
 ### <a name="retrieving-objects"></a>检索对象  
  **检索数据库和服务器对象。** - 当该向导从数据库和数据库引擎实例中检索所有所需对象时，将显示一个进度栏。  
   
- "上一步"-返回到 "**设置属性**" 页以更改你的条目。 ** \< **  
+ " ** \< 上一步**"-返回到 "**设置属性**" 页以更改你的条目。  
   
  ****“下一步>”- 注册 DAC 并在“注册 DAC”**** 页中显示结果。  
   
@@ -103,7 +102,7 @@ ms.locfileid: "72782723"
 ### <a name="validating-objects"></a>验证对象  
  检查 SchemaName.****  __ **** _ObjectName_ **。** - 当该向导验证所检索对象的依赖项并验证这些对象都是用于 DAC 的有效对象时，将显示一个进度栏。 _SchemaName_**.**_ObjectName_ 确定当前正在验证的对象。  
   
- "上一步"-返回到 "**设置属性**" 页以更改你的条目。 ** \< **  
+ " ** \< 上一步**"-返回到 "**设置属性**" 页以更改你的条目。  
   
  ****“下一步>”- 注册 DAC 并在“注册 DAC”**** 页中显示结果。  
   
@@ -114,7 +113,7 @@ ms.locfileid: "72782723"
   
  **** “保存报表”- 选择此按钮可以将验证报表的副本保存到某一 HTML 文件。 默认文件夹为 Windows 帐户的 Documents 文件夹中的**SQL Server 管理 Studio\dac packages 包**"文件夹。  
   
- "上一步"-返回到 "**设置属性**" 页以更改你的条目。 ** \< **  
+ " ** \< 上一步**"-返回到 "**设置属性**" 页以更改你的条目。  
   
  ****“下一步>”- 注册 DAC 并在“注册 DAC”**** 页中显示结果。  
   
@@ -125,7 +124,7 @@ ms.locfileid: "72782723"
   
  **** “注册 DAC”- 报告为注册 DAC 而执行的每个操作成功与否。 查看信息以便确定每个操作是成功还是失败。 遇到了错误的任何操作都将在 **“结果”** 列中具有一个链接。 选择该链接可以查看针对该操作的错误报告。  
   
- **** “保存报表”- 选择此按钮可以将注册报表保存到某一 HTML 文件。 该文件报告每个操作的状态，并且包括任何操作生成的所有错误。 默认文件夹为 Windows 帐户的 Documents 文件夹中的**SQL Server 管理 Studio\dac packages 包**"文件夹。 文件名的\<格式为 dacpackagename&gt>_RegisterDACReport_yyyymmdd .html，其中\< *dacpackagename&gt*> 是正在部署的包的名称， *yyyy* = 当前年份， *mm* = 当前月份， *dd* = 当天。  
+ **** “保存报表”- 选择此按钮可以将注册报表保存到某一 HTML 文件。 该文件报告每个操作的状态，并且包括任何操作生成的所有错误。 默认文件夹为 Windows 帐户的 Documents 文件夹中的**SQL Server 管理 Studio\dac packages 包**"文件夹。 文件名采用 \<DACPackageName>_RegisterDACReport_yyyymmdd.html 格式，其中 \<*DACPackageName*> 是要部署的包的名称， *yyyy* = 当前年份， *mm* = 当前月份， *dd* = 当天。  
   
  “完成”**** - 终止向导。  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0825b86cabf57df552063335a0870461cb8a5658
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36246adc49870e9418765e37511e6d94cafe5c67
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127414"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050755"
 ---
 # <a name="srv_paramdata-extended-stored-procedure-api"></a>srv_paramdata（扩展存储过程 API）
     
@@ -58,7 +57,7 @@ n
 ## <a name="returns"></a>返回  
  一个指向参数值的指针。 如果第 n 个参数为 NULL，则没有第 n 个参数，或者没有任何远程存储过程，并返回 NULL****。 如果参数值为字符串，则不能以 Null 值结束。 使用 srv_paramlen 确定字符串的长度****。  
   
- 如果参数是[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型之一，则此函数返回以下值。 指针数据包括数据类型的指针是否为有效 (VP)、NULL 或不适用 (N/A)，以及指向的数据内容。  
+ 如果参数是数据类型之一，则此函数返回以下值 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 指针数据包括数据类型的指针是否为有效 (VP)、NULL 或不适用 (N/A)，以及指向的数据内容。  
   
 |新数据类型|输入数据长度|  
 |--------------------|-----------------------|  
@@ -69,7 +68,7 @@ n
 |BIGVARBINARY|**NULL：NULL、N/A**<br /><br /> **ZERO：VP、0x00**<br /><br /> **>=255：VP、255 个字节**<br /><br /> <255：VP、实际数据****|  
 |NCHAR|**NULL：NULL、N/A**<br /><br /> **ZERO：VP、255 个空格**<br /><br /> **>=255：VP、255 个字符**<br /><br /> <255：VP、实际数据加填充字符（最多 255 个）****|  
 |NVARCHAR|**NULL：NULL、N/A**<br /><br /> **ZERO：VP、NULL**<br /><br /> **>=255：VP、255 个字符**<br /><br /> <255：VP、实际数据****|  
-|NTEXT|**NULL：N/A**<br /><br /> **ZERO：** N/A<br /><br /> **>= 255：** 不适用<br /><br /> ** \<255：** 不适用|  
+|NTEXT|**NULL：N/A**<br /><br /> **ZERO：** N/A<br /><br /> **>= 255：** 不适用<br /><br /> ** \< 255：** 暂缺|  
   
  \*   数据不能以 Null 值结束；截断 255 个字符以外的字符时不会发出警告。  
   

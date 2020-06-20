@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f3f3967b31331471d1ad0a886cc9eda853a25931
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50ee8e81623fb4358cc9768d79a1f8b559a24685
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771073"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922258"
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC 服务
   Oracle CDC 服务是运行 xdbcdcsvc.exe 程序的一种 Windows 服务。 Oracle CDC 服务可配置为在同一台计算机上运行多个 Windows 服务，每个服务都使用不同的 Windows 服务名称。 在单个计算机上创建多个 Oracle CDC Windows 服务通常是为了在它们之间或在每个服务需要使用不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时实现更好的隔离。  
   
- Oracle CDC 服务是使用 Oracle CDC 服务配置控制台创建的，或者是通过内置于 xdbcdcsvc.exe 程序中的命令行接口定义的。 在这两种情况下，创建的每个 Oracle CDC 服务[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]都与单个实例相关联（可能使用**AlwaysOn**安装程序进行群集或镜像），并且连接信息（连接字符串和访问凭据）是服务配置的一部分。  
+ Oracle CDC 服务是使用 Oracle CDC 服务配置控制台创建的，或者是通过内置于 xdbcdcsvc.exe 程序中的命令行接口定义的。 在这两种情况下，创建的每个 Oracle CDC 服务都与单个实例相关联 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （可能使用**AlwaysOn**安装程序进行群集或镜像），并且连接信息（连接字符串和访问凭据）是服务配置的一部分。  
   
  在某一 Oracle CDC 服务启动时，它将尝试连接到其关联的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，获取它需要处理的 Oracle CDC 实例的列表，并且执行初始环境验证。 服务启动期间出现的错误以及任何开始/停止信息始终写入 Windows 应用程序事件日志。 在建立与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接时，所有错误和信息消息都写入 **实例的 MSXDBCDC 数据库的** dbo.xdbcdc_trace [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。 在启动期间执行的检查之一是验证没有具有相同名称的其他 Oracle CDC 服务当前正在工作。 如果具有相同名称的某一服务当前与其他计算机连接，则 Oracle CDC 服务将进入一个等待循环，并且等待其他服务断开连接，之后继续处理 Oracle CDC 工作。  
   

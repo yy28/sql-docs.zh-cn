@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3e8fc0f770d8763ccb330b3c7588a97604d876e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04d332e2c71e69b9a3e7d1d1b0c60eb9aabaf2e5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62762839"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960129"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell Provider
   用于 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序用类似于文件系统路径的路径公开 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象的层次结构。 可以使用路径来查找对象，然后使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理对象 (SMO) 模型中的方法来针对对象执行操作。  
@@ -35,7 +34,7 @@ ms.locfileid: "62762839"
   
  每个 Windows PowerShell 提供程序都实现一个或多个驱动器。 每个驱动器都是相关对象的层次结构的根节点。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序实现一个 SQLSERVER: 驱动器。 该提供程序还为 SQLSERVER: 驱动器定义了一组主文件夹。 每个文件夹及其子文件夹表示一组可通过使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理对象模型访问的对象。 当关注某个以这些主文件夹之一开始的路径中的子文件夹时，可以使用相关对象模型中的方法对该节点所表示的对象执行操作。 下表列出了由 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 提供程序实现的 Windows PowerShell 文件夹。  
   
-|Folder|SQL Server 对象模型命名空间|对象|  
+|文件夹|SQL Server 对象模型命名空间|对象|  
 |------------|---------------------------------------|-------------|  
 |SQLSERVER:\SQL|<xref:Microsoft.SqlServer.Management.Smo><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Agent><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Broker><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Mail>|数据库对象，如表、视图和存储过程。|  
 |SQLSERVER:\SQLPolicy|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|基于策略的管理对象，如策略和方面。|  
@@ -46,7 +45,7 @@ ms.locfileid: "62762839"
 |SQLSERVER:\IntegrationServices|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象，如项目、包和环境。|  
 |SQLSERVER:\SQLAS|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象，例如多维数据集、聚合和维度。|  
   
- 例如，可以使用 SQLSERVER:\SQL 文件夹作为路径的开头，该路径可以表示 SMO 对象模型支持的任何对象。 Sqlserver： \ sql 路径的主要部分是 sqlserver： \ sql\\*ComputerName*\\*InstanceName*。 实例名称后面的节点在对象集合（如 *数据库* 或 *视图*）和对象名称（如 AdventureWorks2012）之间交替变化。 架构不用对象类表示。 在为架构中的顶层对象（如表或视图）指定节点时，必须以 *SchemaName.ObjectName*格式指定对象名称。  
+ 例如，可以使用 SQLSERVER:\SQL 文件夹作为路径的开头，该路径可以表示 SMO 对象模型支持的任何对象。 Sqlserver： \ sql 路径的主要部分是 sqlserver： \ sql \\ *ComputerName* \\ *InstanceName*。 实例名称后面的节点在对象集合（如 *数据库* 或 *视图*）和对象名称（如 AdventureWorks2012）之间交替变化。 架构不用对象类表示。 在为架构中的顶层对象（如表或视图）指定节点时，必须以 *SchemaName.ObjectName*格式指定对象名称。  
   
  这是 AdventureWorks2012 数据库的 Purchasing 架构中的 Vendor 表的路径，该数据库位于本地计算机上的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 默认实例中：  
   

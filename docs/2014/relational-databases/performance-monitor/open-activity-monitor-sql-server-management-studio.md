@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0d1c0312acfcd2e5dbb17d740fe2659cb8c91bbe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdff4dcefb1fb6113869fa01e41f3c8690cfaf2c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032001"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998227"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>打开活动监视器 (SQL Server Management Studio)
   本主题介绍如何打开活动监视器以便获取有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的信息，并了解这些进程如何影响当前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 本主题还介绍如何设置活动监视器的刷新间隔。  
@@ -63,7 +62,7 @@ ms.locfileid: "63032001"
   
 #### <a name="to-open-activity-monitor-when-opening-sql-server-management-studio"></a>在打开 SQL Server Management Studio 时打开活动监视器  
   
-1.  在“工具” **** 菜单上，单击“选项” ****。  
+1.  在“工具”  菜单上，单击“选项” 。  
   
 2.  在 **“选项”** 对话框中，展开 **“环境”**，再选择 **“常规”**。  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 21bda8729c30df9493c4f969c5af05b6dd80386f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 776a8319750721f3b489df1a3a4466c7dc36f15e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058220"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968317"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>通过设置注册表值实现签名策略
   使用可选的注册表值可以管理组织用于加载签名包和未签名包的策略。 如果使用此注册表值，则必须在将运行 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包以及将强制实施该策略的每台计算机上创建此注册表值。 设置该注册表值后， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 将在加载包之前检查或验证签名。  
@@ -34,7 +33,7 @@ ms.locfileid: "66058220"
   
  下表列出了 DWORD 数据的有效值及其相关策略。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |0|无管理限制。|  
 |1|阻止无效签名。<br /><br /> 该设置不阻止未签名的包。|  
@@ -48,7 +47,7 @@ ms.locfileid: "66058220"
   
 1.  在 **“开始”** 菜单上，单击 **“运行”**。  
   
-2.  在 "运行" 对话框中， `Regedit`键入，然后单击 **"确定"**。  
+2.  在 "运行" 对话框中，键入 `Regedit` ，然后单击 **"确定"**。  
   
 3.  找到注册表项 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS。  
   
@@ -56,11 +55,11 @@ ms.locfileid: "66058220"
   
 5.  将新值的名称更新为 `BlockedSignatureStates`。  
   
-6.  右键单击`BlockedSignatureStates` ，然后单击 "**修改**"。  
+6.  右键单击 `BlockedSignatureStates` ，然后单击 "**修改**"。  
   
 7.  在 **“编辑 DWORD 值”** 对话框中，键入值 0、1、2 或 3。  
   
-8.  单击" **确定**"。  
+8.  单击“确定”。  
   
 9. 在 **“文件”** 菜单中，单击 **“退出”**。  
   

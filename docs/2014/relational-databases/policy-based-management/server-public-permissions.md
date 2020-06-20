@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9a276caa-ea38-473d-92bc-26302bfcf660
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6f240973def97dea739c21381f38dc366deb8920
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7913c4715f47b8105b72b1c817dbe77e52d40539
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62691475"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066706"
 ---
 # <a name="server-public-permissions"></a>服务器 public 权限
   此规则确定 public 服务器角色是否具有服务器权限。 在服务器上创建的每个登录名都是 public 服务器角色的成员。 如果满足此条件，则服务器上的每个登录名都将具有服务器权限。  
@@ -26,7 +25,7 @@ ms.locfileid: "62691475"
  请勿为服务器 public 角色授予服务器权限。  
   
 > [!IMPORTANT]  
->  安装完成后，**公共**角色对`CONNECT`所有终结点都有权限，**专用管理员连接**除外。 这很正常，通常不应更改。 （通过使用 `CONNECT SQL` 权限来控制访问，该权限是在创建新登录名时自动授予的。）  
+>  安装完成后，**公共**角色对 `CONNECT` 所有终结点都有权限，**专用管理员连接**除外。 这很正常，通常不应更改。 （通过使用 `CONNECT SQL` 权限来控制访问，该权限是在创建新登录名时自动授予的。）  
   
 ### <a name="for-more-information"></a>更多信息  
  [保护 SQL Server](../security/securing-sql-server.md)  

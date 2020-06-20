@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1e4cafd4d9f9ec1579eacc2eca2f1381cec13ae6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: efa6c05db03bdfe17d5b1a68b04403e5649ccee0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716866"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013355"
 ---
 # <a name="example-retrieving-employee-information"></a>示例：检索雇员信息
   此示例检索每个雇员的雇员 ID 和雇员姓名。 在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中，可从 Employee 表的 BusinessEntityID 列获得 employeeID。 可从 Person 表中获得雇员姓名。 可使用 BusinessEntityID 列来联接表。  

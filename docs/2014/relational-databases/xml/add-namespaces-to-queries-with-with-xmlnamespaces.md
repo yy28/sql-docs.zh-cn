@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 005b75381cbe3725e9b500240f97bca02713780f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ed5d719a845996215fffc18af64401779f848cd0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717370"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059589"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>使用 WITH XMLNAMESPACES 将命名空间添加到查询
   [WITH XMLNAMESPACES (Transact-SQL)](/sql/t-sql/xml/with-xmlnamespaces) 按以下方式提供对命名空间 URI 支持：  

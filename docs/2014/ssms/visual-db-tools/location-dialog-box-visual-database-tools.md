@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0d3ee86b85a2eadf990caddc6c92499cf0e706d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c07f0fa1937887f2f685d235232385dd216eb393
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63306219"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040779"
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>“位置”对话框（可视化数据库工具）
   使用此对话框可以找到并选择包含所需文件的文件夹。 此对话框将选定文件夹的路径返回到调用对话框。 可通过以下方式访问此对话框：  
   
--   在“文件”  菜单中选择“新建”  ，再选择“项目”  。 显示“新建项目”  对话框时，选择“浏览”  。 将打开“位置”  对话框，其标题为“项目位置”  。  
+-   在“文件”菜单中选择“新建”，再选择“项目”。 显示“新建项目”  对话框时，选择“浏览”  。 将打开“位置”  对话框，其标题为“项目位置”  。  
   
  **Look in**  
  从此列表中找到所需文件夹。 选定文件夹的子文件夹将显示出来。  

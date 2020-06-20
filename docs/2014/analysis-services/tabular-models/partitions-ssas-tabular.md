@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f5dd80a1f6645e7d1c766e88de653fa1e8f1f4cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c40ce510c86ab72ab0c35d60c8080dcf2f250f91
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066894"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938808"
 ---
 # <a name="partitions-ssas-tabular"></a>分区（SSAS 表格）
   分区将表分成多个逻辑部分。 然后，每个分区可独立于其他分区进行处理（刷新）。 在模型创建期间使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的“分区”对话框创建的分区应用于模型工作区数据库。 部署模型时，在已部署的模型数据库中将复制为模型工作区数据库定义的分区。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的“分区”对话框进一步为已部署的模型数据库创建和管理分区。  本主题中提供的信息描述在模型创建期间使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的“分区管理器”创建的分区。 有关为已部署的模型创建和管理分区的信息，请参阅[创建和管理表格模型分区（SSAS 表格）](create-and-manage-tabular-model-partitions-ssas-tabular.md)。  
@@ -26,7 +25,7 @@ ms.locfileid: "66066894"
   
 -   [相关任务](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>便利  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> 优势  
  表格模型中的分区将一个表划分为各个逻辑分区对象。 然后，每个分区可独立于其他分区进行处理。 例如，表可能包含某些行集，这些行集的数据很少更改；但是也包含另一些行集，这些行集的数据则经常更改。 在这些情况中，如果您只想处理某一部分数据，没有必要处理所有数据。 通过分区，您可以将需要经常处理的那部分数据与很少处理的那部分数据分开。  
   
  有效的模型设计利用分区来消除 Analysis Services 服务器上不必要的处理和后续处理器负载，而同时可确保以足够的频率处理和刷新数据，以反映数据源中最新的数据。 在模型创建期间如何实现和利用分区可能与如何为已部署的模型实现和利用分区有很大不同。 请记住在模型创建阶段，您可能只使用将最终包含在已部署的模型中的数据的一个子集。  

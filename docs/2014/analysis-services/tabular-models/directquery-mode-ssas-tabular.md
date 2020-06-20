@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a9c1510030f61896f686b49f4bc134a7dfcb42b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ceb58c211b52c1fbd184aafe316e5ea77d364529
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284876"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938928"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>DirectQuery 模式（SSAS 表格）
   Analysis Services 允许使用*DirectQuery 模式*，通过直接从关系数据库系统检索数据和聚合来检索数据并从表格模型创建报表。 本主题介绍仅驻留在内存中的标准表格模型和可查询关系数据源的表格模型之间的差异，并且说明如何创建和部署要在 DirectQuery 模式下使用的模型。  
@@ -82,7 +81,7 @@ ms.locfileid: "67284876"
   
 -   **客户端限制：** 当模型处于 DirectQuery 模式下时，只能使用 DAX 对其进行查询。 不能使用 MDX 来创建查询。 这意味着您不能使用 Excel 数据透视客户端，因为 Excel 使用 MDX。  
   
-     但是，如果将 DAX 表查询用作 XMLA Execute 语句[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的一部分，则可以在中针对 DirectQuery 模型创建查询。有关详细信息，请参阅 [DAX 查询语法参考] （/dax/dax-syntax-reference
+     但是， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 如果将 DAX 表查询用作 XMLA Execute 语句的一部分，则可以在中针对 DirectQuery 模型创建查询。有关详细信息，请参阅 [DAX 查询语法参考] （/dax/dax-syntax-reference
   
  在您解决了所有设计问题并且对您的模型进行了测试后，就可以进行部署了。 此时，您可以设置用于响应针对模型的查询的首选方法。 您是希望用户有权访问缓存，还是始终仅使用关系数据源？  
   
@@ -144,7 +143,7 @@ ms.locfileid: "67284876"
   
  模拟设置属性指定使用 DirectQuery 连接到模型时使用的凭据，要么用于仅限 DirectQuery 模型，要么用于使用 DirectQuery 响应查询的混合模型。 该属性具有以下值：  
   
- **缺省值**  
+ **默认**  
  使用在导入向导中指定的凭据连接到数据源。 这可能是特定的 Windows 用户或服务帐户。  
   
  `ImpersonateCurrentUser`  
@@ -155,7 +154,7 @@ ms.locfileid: "67284876"
 ##  <a name="directquery-properties"></a><a name="bkmk_PropertyList"></a>DirectQuery 属性  
  下表列出了可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中设置的一些属性，这些属性用于启用 DirectQuery 和控制用于针对模型的查询的数据源。  
   
-|属性名称|描述|  
+|属性名称|说明|  
 |-------------------|-----------------|  
 |**DirectQueryMode 属性**|此属性在模型设计器中启用 DirectQuery 模式。 您必须将此属性设置为 `On`，才能更改任何其他 DirectQuery 属性。<br /><br /> 有关详细信息，请参阅[启用 DirectQuery 设计模式 &#40;SSAS 表格&#41;](enable-directquery-mode-in-ssdt.md)。|  
 |**QueryMode 属性**|此属性指定针对 DirectQuery 模型的默认查询方法。当您部署模型时，在模型设计器中设置此属性；不过，您可以在以后覆盖它。 该属性具有以下值：<br /><br /> **DirectQuery** -此设置指定模型的所有查询仅应使用关系数据源。<br /><br /> **DirectQuery 以及内存中** - 此设置指定默认情况下应通过使用关系数据源响应查询，除非在客户端的连接字符串中指定了其他项。<br /><br /> **内存中** - 此设置指定应仅通过使用缓存响应查询。<br /><br /> **内存中以及 DirectQuery** - 此设置指定默认情况下 应该通过使用缓存来响应查询，除非在客户端的连接字符串中指定了其他项。<br /><br /> <br /><br /> 有关详细信息，请参阅 [设置或更改 DirectQuery 的首选连接方法](../set-or-change-the-preferred-connection-method-for-directquery.md)。|  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dc815c0f53db54371d24078f13089246976e63ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 168bc25871ee61b545498be940ec91198d956e7f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480645"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937758"
 ---
 # <a name="domain-management-domain-list"></a>域管理：域列表
   本主题介绍 **(DQS) 中** “域管理” [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 页的域列表中的控件。 使用此窗格可以选择要对其执行管理操作的域。 将对 **“域管理”** 页中的所有选项卡式页使用此同一窗格。  
@@ -25,7 +24,7 @@ ms.locfileid: "65480645"
 ## <a name="options"></a>选项  
   
 ### <a name="domains-list"></a>域列表  
- **Domain**  
+ **域**  
  此列表显示了知识库中的所有域。 将针对在该列表中选择的域执行您在右侧窗格的选项卡式页中执行的操作。 有关详细信息，请参阅  
   
  **创建复合域**  

@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5bb2fbd3129475c5d712cd4d1fce8bbe29ea096f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07f6714f27f60afda91134034509ff439d92f071
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011906"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050475"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>批量导入数据时保留标识值 (SQL Server)
-  包含标识值的数据文件可以大容量导入到的实例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中。 默认情况下，将忽略导入的数据文件中标识列的值， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动分配唯一值。 这些唯一值基于在表创建期间指定的种子和增量值。  
+  包含标识值的数据文件可以大容量导入到的实例中 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 默认情况下，将忽略导入的数据文件中标识列的值， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动分配唯一值。 这些唯一值基于在表创建期间指定的种子和增量值。  
   
  如果该数据文件表中的标识符列不包含值，则使用格式化文件来指定导入数据时应跳过表中的标识符列。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动为此列分配唯一值。  
   
@@ -79,7 +78,7 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
 |限定符|说明|  
 |----------------|-----------------|  
 |**-E**|指定标识列使用数据文件中的标识值。|  
-|**-T**|指定`bcp`实用工具使用可信连接连接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到。|  
+|**-T**|指定 `bcp` 实用工具 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用可信连接连接到。|  
   
  在 Windows 命令提示符下输入。  
   

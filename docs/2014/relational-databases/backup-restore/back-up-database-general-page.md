@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fc6680702fd32c670d2f3c3861c47bab96c52c47
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c315c827e1c8b206b2098009510bf6468bd7d74
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155074"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959627"
 ---
 # <a name="back-up-database-general-page"></a>备份数据库（“常规”页）
   使用 **“备份数据库”** 对话框中的 **“常规”** 页可以查看或修改数据库备份操作的设置。  
@@ -25,7 +24,7 @@ ms.locfileid: "70155074"
  有关基本备份概念的详细信息，请参阅 [备份概述 (SQL Server)](backup-overview-sql-server.md)。  
   
 > [!NOTE]  
->  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定备份任务时，可以通过单击“脚本”按钮，再为脚本选择一个目标，生成对应的 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) 脚本****。  
+>  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定备份任务时，可以通过单击“脚本”  按钮，再为脚本选择一个目标，生成对应的 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) 脚本。  
   
  **使用 SQL Server Management Studio 创建备份**  
   
@@ -117,13 +116,13 @@ ms.locfileid: "70155074"
  指定 Azure 存储容器的名称  
   
  **URL 前缀：**  
- 这是基于在 SQL 凭据中存储的存储帐户信息以及您指定的 Azure 存储容器名称自动生成的。 建议你不要编辑此字段中的信息，除非你使用的域使用** \<存储帐户**之外的其他格式> blob.core.windows.net。  
+ 这是基于在 SQL 凭据中存储的存储帐户信息以及您指定的 Azure 存储容器名称自动生成的。 建议你不要编辑此字段中的信息，除非你使用的域使用的是** \<storage account> blob.core.windows.net**以外的格式。  
   
 ## <a name="see-also"></a>另请参阅  
- [备份事务日志 &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
- [备份文件和文件组 &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
- [为磁盘文件定义逻辑备份设备 &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
- [定义磁带驱动器 &#40;SQL Server 的逻辑备份设备&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
+ [备份事务日志 (SQL Server)](back-up-a-transaction-log-sql-server.md)   
+ [备份文件和文件组 (SQL Server)](back-up-files-and-filegroups-sql-server.md)   
+ [为磁盘文件定义逻辑备份设备 (SQL Server)](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
+ [为磁带驱动器定义逻辑备份设备 (SQL Server)](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [恢复模式 (SQL Server)](recovery-models-sql-server.md)  
   
   
