@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ef05ce53-c6ce-42ec-9df8-46c951626424
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7145d846657613b50706ebe75c9832f40f49383e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f5947e8fc8d459388fe35d86c75666e25b5d907
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092043"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036132"
 ---
 # <a name="sql-server-agent-log-shipping-job-category-causes-upgrade-to-fail"></a>SQL Server 代理的日志传送作业类别导致升级失败
   如果存在名为“日志传送”的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业类别，升级过程将失败。  

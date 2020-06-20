@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ab9c51ba125a7489d693a1af6b16e432e8fb7099
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5fa2fce50d7f62f134ef96175ed359c86ea84080
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632738"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058845"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>使用升级顾问来准备升级
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级顾问可以帮助您做好升级至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的准备。 升级顾问分析早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中已安装的组件，然后生成报告，指出在升级之前或之后应解决的问题。  
@@ -66,21 +65,21 @@ ms.locfileid: "73632738"
   
 -   Windows Installer（最低为 4.5 版）。 你可以从[Windows Installer](https://www.microsoft.com/download/details.aspx?id=8483)网站安装 Windows Installer。  
   
--   Microsoft .NET Framework 4。 在[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]产品媒体上提供 .NET Framework 4，并从[.NET Framework 4 下载页](https://go.microsoft.com/fwlink/?LinkId=209895)获取。  
+-   Microsoft .NET Framework 4。 在产品媒体上提供 .NET Framework 4 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，并从[.NET Framework 4 下载页](https://go.microsoft.com/fwlink/?LinkId=209895)获取。  
   
     -   若要从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 介质安装 .NET Framework 4，请找到磁盘驱动器的根目录。 然后双击 \redist 文件夹，再双击 DotNetFrameworks 文件夹，然后运行 dotNetFx40_Full_x86_x64.exe（对于 32 位操作系统或 64 位操作系统）。  
   
- 若要通过 Web 安装升级顾问，请单击下载页上的下载按钮。 随后可以立即运行安装程序，也可以保存 SQLUA.msi 文件并稍后运行它。 如果要从产品光盘进行安装，请直接从产品磁盘中运行 SQLUA.MSI。  
+ 若要通过 Web 安装升级顾问，请单击下载页上的下载按钮。 随后可以立即运行安装程序，也可以保存 SQLUA.msi 文件并稍后运行它。 如果要从产品光盘进行安装，请直接从产品磁盘运行 SQLUA.msi。  
   
  安装升级顾问之后，您可以从 "**开始**" 菜单中打开它：  
   
--   单击 "**开始**"，指向[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]"**所有程序**"，指向 ""，然后单击** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] "升级顾问**"。  
+-   单击 "**开始**"，指向 "**所有程序**"，指向 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] ""，然后单击 " ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升级顾问**"。  
   
  有关详细信息，请参阅升级顾问下载和 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 发行说明中包括的 Upgrade Advisor 文档。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用 SQL Server 的多个版本和实例](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
- [支持的版本和版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
+ [支持的版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [向后兼容性](../../../2014/getting-started/backward-compatibility.md)  
   
   

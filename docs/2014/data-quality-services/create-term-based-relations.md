@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 54a899036513854d8a091165646b6fb4a955c962
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b6175aa4be5e40c7e15f5d3cea8a03c09194039
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480820"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937858"
 ---
 # <a name="create-term-based-relations"></a>创建基于字词的关系
   本主题描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中为域创建基于字词的关系。 通过基于字词的关系 (TBR)，您可以对域中作为值的一部分的字词进行更正。 基于字词的关系使完全相同的多个值（只有其公共部分的拼写除外）可被视为相同的同义词。 例如，可以设置一个基于字词的关系，该关系可将字词“Inc.” 更改为“Incorporated”。 字词“Inc.” 将在其每次出现在域中时发生更改。 “Contoso, Inc.”的实例 将更改为“Contoso, Incorporated”，并且这两个值将被视为精确同义词。  

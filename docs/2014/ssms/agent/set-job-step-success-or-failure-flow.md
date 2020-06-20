@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 23041ccf-8a07-41d3-85b9-c449a54b7e1e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7e9412ee0bd2be7b44dff2a06bd674abee0da34a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fddc5820676cb231b6f0cd5f7151e24d8eceaefa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798165"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067544"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>Set Job Step Success or Failure Flow
-  创建[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理作业时，可以指定在作业执行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]期间发生故障时应采取的操作。 根据每个作业步骤的成功或失败确定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应执行的操作。 然后通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使用以下过程配置作业步骤的操作流逻辑。  
+  创建 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业时，可以指定在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作业执行期间发生故障时应采取的操作。 根据每个作业步骤的成功或失败确定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应执行的操作。 然后通过 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使用以下过程配置作业步骤的操作流逻辑。  
   
 -   **开始之前：**  
   

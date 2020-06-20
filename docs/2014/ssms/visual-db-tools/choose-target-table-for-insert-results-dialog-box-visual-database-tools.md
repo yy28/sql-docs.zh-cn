@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 4ffd62c1-da72-4daf-832b-cc1268abf351
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8d69745b3316222f9ebabbad29fbc12e023351d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: caa9be1a61ed579aa8bfaaf1bc6c83282f52c42c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067523"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066205"
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>“选择插入结果的目标表”对话框 (Visual Database Tools)
   使用此对话框可以指定作为“插入结果”查询结果的数据行要添加到其中的表。 当您启动“插入结果”查询时，将显示此对话框。  

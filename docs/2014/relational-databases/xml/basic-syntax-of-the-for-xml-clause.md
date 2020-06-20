@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e09323a96a5a2fc282c1595c2606ea7e9b9a6bee
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: dc0410e7a54674673f64442d8a3cf9476d250033
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717356"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059558"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>FOR XML 子句的基本语法
   FOR XML 模式可以是 RAW、AUTO、EXPLICIT 或 PATH。 它确定产生的 XML 的形状。  
@@ -62,7 +61,7 @@ XML
   
 ## <a name="arguments"></a>参数  
  RAW[('*ElementName*')]  
- 采用查询结果并将结果集中的每一行转换为将通用标识符 \<row /> 作为元素标记的 XML 元素。 使用此指令时，可以选择指定行元素的名称。 产生的 XML 将把指定的 *ElementName* 用作为每行生成的行元素。 有关详细信息，请参阅 [将 RAW 模式与 FOR XML 一起使用](use-raw-mode-with-for-xml.md)。  
+ 采用查询结果并将结果集中的每一行转换为一个 XML 元素，该元素具有一个通用标识符， \<row /> 作为元素标记。 使用此指令时，可以选择指定行元素的名称。 产生的 XML 将把指定的 *ElementName* 用作为每行生成的行元素。 有关详细信息，请参阅 [将 RAW 模式与 FOR XML 一起使用](use-raw-mode-with-for-xml.md)。  
   
  AUTO  
  以简单的嵌套 XML 树返回查询结果。 FROM 子句中的每个表（在 SELECT 子句中至少为其列出了一列）都表示为一个 XML 元素。 SELECT 子句中列出的列映射到适当的元素属性。 有关详细信息，请参阅 [将 AUTO 模式与 FOR XML 一起使用](use-auto-mode-with-for-xml.md)。  
@@ -71,7 +70,7 @@ XML
  指定显式定义产生的 XML 树的形状。 使用此模式时，必须以一种特定的方式编写查询，以便显式指定所需嵌套的其他信息。 有关详细信息，请参阅 [将 EXPLICIT 模式与 FOR XML 一起使用](use-explicit-mode-with-for-xml.md)。  
   
  PATH  
- 提供一种更简单的方式来混合元素和属性，并引入表示复杂属性的其他嵌套。 可以使用 FOR XML EXPLICIT 模式查询从行集中构造这种 XML，但 PATH 模式针对可能很烦琐的 EXPLICIT 模式查询提供了一种更简单的替代方式。 通过 PATH 模式，以及用于编写嵌套 FOR XML 查询的功能和返回 **xml** 类型实例的 TYPE 指令，您可以编写简单的查询。 它为编写大多数 EXPLICIT 模式查询提供了一个替代方式。 默认情况下，PATH 模式为结果集中的每一行生成一个 \<row> 元素包装。 您还可以选择指定元素名称。 如果这样，则指定的名称用作包装元素名称。 如果提供空字符串 (FOR XML PATH (''))，则不会生成任何包装元素。 有关详细信息，请参阅 [将 PATH 模式与 FOR XML 一起使用](use-path-mode-with-for-xml.md)。  
+ 提供一种更简单的方式来混合元素和属性，并引入表示复杂属性的其他嵌套。 可以使用 FOR XML EXPLICIT 模式查询从行集中构造这种 XML，但 PATH 模式针对可能很烦琐的 EXPLICIT 模式查询提供了一种更简单的替代方式。 通过 PATH 模式，以及用于编写嵌套 FOR XML 查询的功能和返回 **xml** 类型实例的 TYPE 指令，您可以编写简单的查询。 它为编写大多数 EXPLICIT 模式查询提供了一个替代方式。 默认情况下，PATH 模式 \<row> 为结果集中的每一行生成一个元素包装。 您还可以选择指定元素名称。 如果这样，则指定的名称用作包装元素名称。 如果提供空字符串 (FOR XML PATH (''))，则不会生成任何包装元素。 有关详细信息，请参阅 [将 PATH 模式与 FOR XML 一起使用](use-path-mode-with-for-xml.md)。  
   
  XMLDATA  
  指定应返回内联 XML 数据简化 (XDR) 架构。 文档的架构被预置为内联架构。 有关工作示例，请参阅 [将 RAW 模式与 FOR XML 一起使用](use-raw-mode-with-for-xml.md)。  

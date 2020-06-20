@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b4c0c7a5626f3eb48509d7a4cfbf239f7cb931da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f4f46bd388476934226e41d371c85fa13b94d23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250651"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066092"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server，Databases 对象
   SQL Server 中的 **SQLServer:Databases** 对象提供了计数器，来监视大容量复制操作、备份和还原吞吐量以及事务日志活动。 监视事务及事务日志确定数据库中进行的用户活动数量及事务日志的饱满程度。 用户活动数量可以确定数据库的性能并影响日志大小、锁和复制。 监视低级日志活动以测量用户活动和资源使用情况，有助于查明性能瓶颈。  
@@ -42,7 +41,7 @@ ms.locfileid: "63250651"
 |**Log Cache Reads/sec**|每秒通过日志管理器缓存执行的读取数。|  
 |**Log File(s) Size (KB)**|数据库中所有事务日志文件的累计大小 (KB)。|  
 |**Log File(s) Used Size (KB)**|数据库中所有日志文件的累计已用大小。|  
-|**Log Flush Wait Time**|刷新日志的总等待时间（毫秒）。 在 AlwaysOn 辅助数据库上，此值表示日志记录强制写入磁盘的等待时间。|  
+|**日志刷新等待时间**|刷新日志的总等待时间（毫秒）。 在 AlwaysOn 辅助数据库上，此值表示日志记录强制写入磁盘的等待时间。|  
 |**Log Flush Waits/sec**|每秒等待日志刷新的提交数目。|  
 |**Log Flush Write Time (ms)**|执行在最后一秒完成的写入日志刷新信息的时间（毫秒）。|  
 |**Log Flushes/sec**|每秒日志刷新数目。|  
@@ -52,13 +51,13 @@ ms.locfileid: "63250651"
 |**Log Pool Disk Reads/sec**|日志池发出的提取日志块的磁盘读取数。|  
 |**Log Pool Requests/sec**|日志池处理的日志块请求数。|  
 |**Log Truncations**|已收缩事务日志的次数。|  
-|**Percent Log Used**|日志中已用空间所占的百分比。|  
+|**使用的日志百分比**|日志中已用空间所占的百分比。|  
 |**正在等待个事务**|发布数据库事务日志中已做复制标记但尚未传递到分发数据库的事务数。|  
 |**Repl. Trans. Rate**|每秒从发布数据库事务日志中读出并传递到分发数据库的事务数。|  
 |**Shrink Data Movement Bytes/sec**|每秒由自动收缩操作或者 DBCC SHRINKDATABASE 或 DBCC SHRINKFILE 语句移动的数据量。|  
 |**Tracked transactions/sec**|数据库提交表中记录的已提交的事务数。|  
 |**Transactions/sec**|每秒为数据库启动的事务数。<br /><br /> **Transactions/sec** 不对仅限 XTP 的事务（本机编译存储过程启动的事务）进行计数。|  
-|**Write Transactions/sec**|在上一秒钟内写入数据库并提交的事务数。|  
+|**写入事务数/秒**|在上一秒钟内写入数据库并提交的事务数。|  
   
 ## <a name="see-also"></a>另请参阅  
  [监视资源使用情况 &#40;系统监视器&#41;](monitor-resource-usage-system-monitor.md)   

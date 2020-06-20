@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c8f75360bb3eb4b304c2a56a150218e8f8c8eff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f03b9a202c3c49f147368460518a579f28dc850
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62960807"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004675"
 ---
 # <a name="secure-the-subscriber"></a>保护订阅服务器的安全
   合并代理和分发代理连接到订阅服务器。 这些连接可在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录或 Windows 登录上下文环境中建立。 在遵循授予必要的最小权限并且保护所有密码的存储的原则下，为这些代理提供合适的登录名十分重要。 有关每个代理所需权限的信息，请参阅 [Replication Agent Security Model](replication-agent-security-model.md)。  
@@ -53,7 +52,7 @@ ms.locfileid: "62960807"
  有关详细信息，请参阅[创建事务发布的可更新订阅](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)和[查看和修改复制安全性设置](view-and-modify-replication-security-settings.md)。  
   
 > [!IMPORTANT]  
->  对于指定的连接帐户，只能授予对复制功能在发布数据库中创建的视图插入、更新和删除数据的权限，而不应授予任何其他权限。 对于发布数据库中的视图（名称格式为 **syncobj_** _\<HexadecimalNumber>_ ），请将其权限授予在每个订阅服务器上配置的帐户。  
+>  对于指定的连接帐户，只能授予对复制功能在发布数据库中创建的视图插入、更新和删除数据的权限，而不应授予任何其他权限。 向发布数据库中名为的数据库中的视图授予对在**syncobj_** _\<HexadecimalNumber>_ 每个订阅服务器上配置的帐户 syncobj_ 的权限。  
   
 ## <a name="queued-updating-subscriptions"></a>排队更新订阅  
  当配置排队更新订阅时，请谨记以下两个与安全性相关的方面：  

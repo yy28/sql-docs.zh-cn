@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1d7c74ee9963d93d289f589115712614a745dad1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2d5d7114515179cda973b9685c57b26fa930521
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68197768"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996672"
 ---
 # <a name="event-notifications"></a>事件通知
   事件通知将有关事件的信息发送给 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务。 执行事件通知可对各种 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据定义语言 (DDL) 语句和 SQL 跟踪事件做出响应，其方法是将这些事件的相关信息发送到 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务。  
@@ -59,7 +58,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |触发器|事件通知|  
 |--------------|-------------------------|  
 |DML 触发器响应数据操作语言 (DML) 事件。 DDL 触发器响应数据定义语言 (DDL) 事件。|事件通知响应 DDL 事件和部分 SQL 跟踪事件。|  
-|触发器可以运行 Transact-SQL 或公共语言运行时 (CLR) 托管代码。|事件通知不运行代码， 而是会将`xml`消息发送到 Service Broker 服务。|  
+|触发器可以运行 Transact-SQL 或公共语言运行时 (CLR) 托管代码。|事件通知不运行代码， 而是会将 `xml` 消息发送到 Service Broker 服务。|  
 |触发器在导致其激发的事务的作用域内同步处理。|事件通知可以异步处理，并且不在导致其激发的事务的作用域内运行。|  
 |触发器的使用者与导致触发器激发的事件紧密结合。|事件通知的使用者与导致事件通知激发的事件相分离。|  
 |触发器必须在本地服务器上处理。|事件通知可以在远程服务器上处理。|  
@@ -67,7 +66,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |DML 触发器名称的架构范围。 DDL 触发器名称是数据库范围或服务器范围的。|事件通知的名称由服务器或数据库限定范围。 QUEUE_ACTIVATION 事件的事件通知限定于一个特定的队列。|  
 |DML 触发器与其应用的表属于相同的所有者。|队列上的事件通知的所有者可以与所应用对象的所有者不同。|  
 |触发器支持 EXECUTE AS 子句。|事件通知不支持 EXECUTE AS 子句。|  
-|可以使用 EVENTDATA 函数（该函数返回一个`xml`数据类型）捕获 DDL 触发器事件信息。|事件通知将`xml`事件信息发送到 Service Broker 服务。 该信息被格式化为与 EVENTDATA 函数的架构相同的架构。|  
+|可以使用 EVENTDATA 函数（该函数返回一个数据类型）捕获 DDL 触发器事件信息 `xml` 。|事件通知将 `xml` 事件信息发送到 Service Broker 服务。 该信息被格式化为与 EVENTDATA 函数的架构相同的架构。|  
 |有关触发器的元数据可在 **sys.triggers** 和 **sys.server_triggers** 目录视图中找到。|有关事件通知的元数据可在 **sys.event_notifications** 和 **sys.server_event_notifications** 目录视图中找到。|  
   
 ### <a name="event-notifications-vs-sql-trace"></a>事件通知与SQL 跟踪  

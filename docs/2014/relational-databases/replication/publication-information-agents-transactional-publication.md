@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 38ef2f54-53bb-4053-876d-86f8f06a4519
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7a4542370eff5ad631701f0bf988929ad56e8799
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f753d4735994fc6ac5bd356edef59df1e133bb9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021802"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065718"
 ---
 # <a name="publication-information-agents-transactional-publication"></a>发布信息，代理（事务发布）
   **“代理”** 选项卡显示所选发布的代理的摘要信息。 为所有事务发布显示有关快照代理和日志读取器代理的信息。 对于那些为排队更新订阅启用的事务发布，将显示有关队列读取器代理的信息。  
@@ -35,7 +34,7 @@ ms.locfileid: "63021802"
   
  筛选设置是特定于每个网格的。 列的选择和排序应用于同一类型的所有网格，如每个发布服务器的发布网格。  
   
- **状态**  
+ **Status**  
  与该发布关联的各个复制代理的状态。 下面列出了可能的状态值：  
   
 -   错误  

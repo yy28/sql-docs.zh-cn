@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fba97c2e348b238702206ebf194c2390f155ad16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a2ab8f20002188684b09fbd574b1cfe5e26feba
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62834639"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922298"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC 设计器控制台简介
   本节介绍用于 Change Data Capture Designer for Oracle by Attunity 的安装过程。  
   
 ## <a name="installation"></a>安装  
- 本节介绍用于 Change Data Capture Designer for Oracle by Attunity 的安装过程。 若要安装 CDC 设计器控制台，请从 SQL Server 安装媒体中手动运行**attunityoraclecdcdesigner.msi。**  适用于 x86 和 x64 的安装包位于 SQL Server 安装媒体上的 **.\Tools\AttunityCDCOracle\\ **中。  
+ 本节介绍用于 Change Data Capture Designer for Oracle by Attunity 的安装过程。 若要安装 CDC 设计器控制台，请从 SQL Server 安装媒体中手动运行**AttunityOracleCdcDesigner.msi** 。  适用于 x86 和 x64 的安装包位于 SQL Server 安装媒体上的 **.\Tools\AttunityCDCOracle \\ **中。  
   
 ## <a name="supported-windows-environments"></a>支持的 Windows 环境  
  CDC 设计器控制台可在以下 Windows 环境中运行：  

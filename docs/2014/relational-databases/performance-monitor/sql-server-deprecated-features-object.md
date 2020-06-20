@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96abc6def3f4ab8cdb76b548e7717ae6c030c00f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206964"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067021"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server，Deprecated Features 对象
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 SQLServer:Deprecated Features 对象提供一个计数器来监视指定为不推荐使用的功能。 在每个事例中计数器都提供一个使用计数，列出自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上次启动以来遇到不推荐使用的功能的次数。  
@@ -30,9 +29,9 @@ ms.locfileid: "68206964"
 |SQL Server Deprecated Features 计数器实例|说明|  
 |------------------------------------------------------|-----------------|  
 |“#”和“##”作为临时表和存储过程的名称|遇到不包含 # 以外的任何字符的标识符。 请至少使用一个其他字符。 每次编译时发生。|  
-|“::”函数调用语法|表值函数遇到 :: 函数调用语法。 替换为`SELECT column_list FROM` * \< function_name>* `()`。 例如，将 `SELECT * FROM ::fn_virtualfilestats(2,1)`替换为 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次编译时发生。|  
+|“::”函数调用语法|表值函数遇到 :: 函数调用语法。 替换为 `SELECT column_list FROM` *\< function_name>* `()` 。 例如，将 `SELECT * FROM ::fn_virtualfilestats(2,1)`替换为 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次编译时发生。|  
 |“\@”和以“\@\@”开头的名称作为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 标识符|遇到以 \@ 或 \@\@ 开头的标识符。 请勿使用 \@ 或 \@\@ 或以 \@\@ 开头的名称作为标识符。 每次编译时发生。|  
-|ADDING TAPE DEVICE|遇到不推荐使用的`tape`功能 sp_addumpdevice ""。 请改用 sp_addumpdevice`disk`""。 每次使用时发生。|  
+|ADDING TAPE DEVICE|遇到不推荐使用的功能 sp_addumpdevice " `tape` "。 请改用 sp_addumpdevice " `disk` "。 每次使用时发生。|  
 |ALL 权限|遇到 GRANT ALL、DENY ALL 或 REVOKE ALL 语法的总次数。 请修改语法以拒绝特定权限。 每次查询时发生。|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|自服务器实例启动以来，ALTER DATABASE 的不推荐使用的功能 TORN_PAGE_DETECTION 选项的使用总次数。 请改用 PAGE_VERIFY 语法。 每次在 DDL 语句中使用时发生。|  
 |ALTER LOGIN WITH SET CREDENTIAL|遇到不推荐使用的功能语法 ALTER LOGIN WITH SET CREDENTIAL 或 ALTER LOGIN WITH NO CREDENTIAL。 请改用 ADD 或 DROP CREDENTIAL 语法。 每次编译时发生。|  

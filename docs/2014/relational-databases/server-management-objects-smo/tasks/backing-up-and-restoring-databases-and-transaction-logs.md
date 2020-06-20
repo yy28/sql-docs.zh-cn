@@ -18,16 +18,15 @@ helpviewer_keywords:
 ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a1d50f31078389cad9fc1e687e67b515c61c89b1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4cacffbae4f2b31349b04d159c9756609d2d9c1c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783053"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996999"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>备份和还原数据库和事务日志
-  在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Backup> 类和 <xref:Microsoft.SqlServer.Management.Smo.Restore> 类是为实现特定备份和还原任务提供工具的实用工具类。 <xref:Microsoft.SqlServer.Management.Smo.Backup>对象表示所需的特定备份任务，而不[!INCLUDE[msCoName](../../../includes/msconame-md.md)]是服务器实例上的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]对象。  
+  在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Backup> 类和 <xref:Microsoft.SqlServer.Management.Smo.Restore> 类是为实现特定备份和还原任务提供工具的实用工具类。 <xref:Microsoft.SqlServer.Management.Smo.Backup>对象表示所需的特定备份任务，而不是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务器实例上的对象。  
   
  如果发生数据丢失或损坏，则必须完全或部分还原备份。 部分还原使用 <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> 集合将要进行还原的数据分成段。 如果要对事务日志进行备份，则可以使用 <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Restore> 属性将数据还原到特定时间点。 还可以采用 <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> 方法来验证数据。 建议采用的备份过程是，通过定期进行还原操作并检查数据库中的数据来检查备份的完整性。  
   

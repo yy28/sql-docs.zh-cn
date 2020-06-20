@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 7f5dfdc1-6693-4b0d-8691-2d6f06913ed9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: febf8ce34e93f4efffaea1d9a9925ab5c8206652
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e07e054209065ae1e466b0b3f50f21f7af9c97a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62625893"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066738"
 ---
 # <a name="policy-management-node-object-explorer"></a>“策略管理”节点（对象资源管理器）
-  本部分包含  **中对象资源管理器的“策略管理”** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]节点的以下 F1 帮助主题。  
+  本部分包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中对象资源管理器的“策略管理”节点的以下 F1 帮助主题。  
   
 -   [“创建新条件”或“打开条件”对话框 -“常规”页](../../integration-services/general-page-of-integration-services-designers-options.md)  
   

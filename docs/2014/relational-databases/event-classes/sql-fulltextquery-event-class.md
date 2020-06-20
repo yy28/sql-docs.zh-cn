@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 654fb295-f0a5-4d66-93e0-5d43e4d7d535
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5452b53bf6171b7e516f246972aa0d9d56e321a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 699f06460d2cf78aa502fde925d9475035c979ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050693"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051666"
 ---
 # <a name="sqlfulltextquery-event-class"></a>SQL:FullTextQuery 事件类
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行全文查询时，会发生 SQL:FullTextQuery 事件类。 请将此事件类包括在监视与全文目录相关的问题的跟踪中。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 481b0704-ce79-4543-b141-67306128aa2b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0de86b9690f0647803938218ce566508662da20e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac1488cd9a42a8f7e212fe533615dbb131fe7290
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094922"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059307"
 ---
 # <a name="how-to-install-upgrade-advisor"></a>如何安装升级顾问
   升级顾问支持对除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 之外的所有受支持组件进行远程分析。 如果不打算扫描 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例，则可在能够连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的任何计算机上安装升级顾问。 计算机还必须满足升级顾问的前提条件。 如果要扫描 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]实例，则必须在报表服务器上安装升级顾问。  
@@ -31,22 +30,22 @@ ms.locfileid: "66094922"
   
 1.  使用以下方法之一开始安装：  
   
-    -   如果要从[!INCLUDE[msCoName](../../includes/msconame-md.md)]网站安装，请单击 "**下载**" 链接，然后单击 "**运行**" 按钮开始安装。  
+    -   如果要从网站安装 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ，请单击 "**下载**" 链接，然后单击 "**运行**" 按钮开始安装。  
   
-    -   如果要从产品媒体进行安装，请打开 "再**发行**" 文件夹，打开 "**升级顾问**" 文件夹，然后双击 " **sqlua.msi**"。  
+    -   如果要从产品媒体进行安装，请打开 "已再**发行**" 文件夹，打开 "**升级顾问**" 文件夹，然后双击 " **SQLUA.msi**"。  
   
     > [!NOTE]  
     >  升级顾问要求 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 4。 如果该软件未安装，或者如果安装的是预发行版本，则将出现一条错误消息。 请卸载 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的所有早期版本，然后安装最新版本的 .NET Framework 4。  
     >   
-    >  ScriptDom 是安装[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]升级顾问的必备组件，并且不是由升级顾问安装程序安装的。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 安装程序[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]需要从[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]功能包下载和安装 ScriptDom。  
+    >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom 是安装升级顾问的必备组件 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，并且不是由升级顾问安装程序安装的。 安装程序需要 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能包下载和安装 ScriptDom。  
   
-2.  在 "**欢迎使用升级[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]顾问安装程序**" 页上，单击 "**下一步**"。  
+2.  在 "**欢迎使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升级顾问安装程序**" 页上，单击 "**下一步**"。  
   
 3.  在 "**许可协议**" 页上，阅读许可协议。 如果同意，请选择 **"我接受许可协议"** ，然后单击 "**下一步**"。  
   
 4.  在 "**注册信息**" 页上，输入您的姓名和公司。  
   
-5.  在 "**功能选择**" 页上，查看 "**安装路径**" 值。 如有必要，请使用 "**浏览**" 按钮更改位置。 单击“下一步”  。  
+5.  在 "**功能选择**" 页上，查看 "**安装路径**" 值。 如有必要，请使用 "**浏览**" 按钮更改位置。 单击“下一步”。  
   
 6.  在 "**准备安装程序"** 页上，单击 "**安装**" 以安装升级顾问。  
   

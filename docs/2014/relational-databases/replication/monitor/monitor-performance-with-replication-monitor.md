@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e69b1d6ca838334c36ff94037473e5fda45cce43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e43b11618827367e4ab8cea0d1b1b3e2598a2e6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667213"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005783"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>用复制监视器监视性能
   使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器，可以通过以下列方式监视事务复制和合并复制性能：  

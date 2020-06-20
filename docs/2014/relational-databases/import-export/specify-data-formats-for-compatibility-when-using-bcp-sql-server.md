@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f2fb27a109ec361b0287adfff4ba3e7abcaac062
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d12456760f32ddbd8cc434d474aebb0e0ecf141
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011829"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050440"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>在使用 bcp 时指定数据格式以获得兼容性 (SQL Server)
-  本主题介绍数据格式属性、特定于字段的提示，以及在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `bcp`命令的非 xml 格式化文件中存储字段中的数据。 在您大容量导出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据以便大容量导入到其他程序（例如其他数据库程序）时，理解上述概念可能会对您很有帮助。 源表中的默认数据格式（本机、字符或 Unicode）可能与其他程序所需的数据布局不兼容。如果存在不兼容，则导出数据时，必须说明数据布局。  
+  本主题介绍数据格式属性、特定于字段的提示，以及在命令的非 xml 格式化文件中存储字段中的数据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `bcp` 。 在您大容量导出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据以便大容量导入到其他程序（例如其他数据库程序）时，理解上述概念可能会对您很有帮助。 源表中的默认数据格式（本机、字符或 Unicode）可能与其他程序所需的数据布局不兼容。如果存在不兼容，则导出数据时，必须说明数据布局。  
   
 > [!NOTE]  
 >  如果不熟悉导入或导出数据的数据格式，请参阅 [用于批量导入或导出的数据格式 (SQL Server)](data-formats-for-bulk-import-or-bulk-export-sql-server.md)。  
@@ -59,7 +58,7 @@ ms.locfileid: "66011829"
      对于字符数据字段，可以选择使用终止字符标记数据文件中每个字段的结尾（使用“字段终止符”  ）以及每行的结尾（使用“行终止符”  ）。 终止符是为读取数据文件的程序提供的一种方法，用于指出一个字段或行的结束位置和另一个字段或行的开始位置。 有关详细信息，请参阅 [指定字段终止符和行终止符 (SQL Server)](specify-field-and-row-terminators-sql-server.md)。  
   
 ##  <a name="overview-of-the-field-specific-prompts"></a><a name="FieldSpecificPrompts"></a> 字段特定的提示概述  
- 如果`bcp`交互式命令包含**in**或**out**选项，但并不包含格式化文件开关（**-f**）或数据格式开关（**-n**、 **-c**、 **-w**或 **-n**），则在源表或目标表中的每一列都依次为上述每个属性提示。 在每个提示中，`bcp` 命令都根据表列的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型提供一个默认值。 接受所有提示的默认值生成的结果与在命令行指定本机格式 ( **-n**) 生成的结果相同。 每个提示都会显示一个用方括号括起来的默认值：[*default*]。 按 Enter 即接受显示的默认值。 若要指定与默认值不同的值，请在提示符下输入新值。  
+ 如果交互式 `bcp` 命令包含**in**或**out**选项，但并不包含格式化文件开关（**-f**）或数据格式开关（**-n**、 **-c**、 **-w**或 **-n**），则在源表或目标表中的每一列都依次为上述每个属性提示。 在每个提示中，`bcp` 命令都根据表列的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型提供一个默认值。 接受所有提示的默认值生成的结果与在命令行指定本机格式 ( **-n**) 生成的结果相同。 每个提示都会显示一个用方括号括起来的默认值：[*default*]。 按 Enter 即接受显示的默认值。 若要指定与默认值不同的值，请在提示符下输入新值。  
   
 ### <a name="example"></a>示例  
  以下示例使用 `bcp` 命令以交互方式将 `HumanResources.myTeam` 表中的数据大容量导出到 `myTeam.txt` 文件中。 在运行该示例之前，必须创建此表。 有关该表和如何创建该表的信息，请参阅 [HumanResources.myTeam 示例表 (SQL Server)](humanresources-myteam-sample-table-sql-server.md)。  

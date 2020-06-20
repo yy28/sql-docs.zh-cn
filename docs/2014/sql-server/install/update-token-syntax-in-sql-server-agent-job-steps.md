@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c801e6da-0159-4bb0-9144-eb28b5127ff7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6b69d3e84938f93828a908141a4a05365bd0f07a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73e38c305b9aba5413b41fa27fa13ac4dc73cbe9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091669"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011820"
 ---
 # <a name="update-token-syntax-in-sql-server-agent-job-steps"></a>更新 SQL Server 代理作业步骤中的标记语法
   已更改在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤中使用标记的语法。  
@@ -27,7 +26,7 @@ ms.locfileid: "66091669"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理  
   
 ## <a name="description"></a>说明  
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，代理使用括号（如 $ （date））而不是括号（如 [date]）。  
+ 在中 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使用括号（如 $ （date））而不是括号（如 [date]）。  
   
  有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“在作业步骤中使用标记”。  
   

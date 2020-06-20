@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f104f7a6395442484be15f1e72c849edbf11e74f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9a70b6c8093b48ce2f258fdfbfaf7f1d4c466561
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70152681"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066950"
 ---
 # <a name="sql-server-http_storage_object"></a>SQL Server，HTTP_STORAGE_OBJECT
   **SQLServer： HTTP_STORAGE_OBJECT**性能对象由监视 Azure 存储帐户的性能计数器组成。 使用[azure 功能中的 SQL Server 数据文件](../databases/sql-server-data-files-in-microsoft-azure.md)，你可以在 Azure 存储 blob 中存储数据库文件。 此性能对象将每一个 Azure 存储帐户都视为不同的驱动器。  

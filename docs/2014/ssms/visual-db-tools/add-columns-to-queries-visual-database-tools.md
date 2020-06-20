@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 82f3ba72-3d72-4fb1-8179-2a953a782787
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aef64ed8031664dcbefa7d0e30bf9f63435b292c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9082377f1599b719f490222d3ddacba4a6622699
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63015698"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067247"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>向查询中添加列 (Visual Database Tools)
   若要在查询中使用列，必须将其添加到查询中。 您可以添加某个列，以在查询输出中显示该列，使用该列进行排序，搜索该列的内容或对其内容进行汇总。 您可以决定在运行查询时，“结果”窗格中将包括查询中使用的哪些列。 有关详细信息，请参阅[从查询结果中删除列 (Visual Database Tools)](visual-database-tools.md)  
@@ -40,7 +39,7 @@ ms.locfileid: "63015698"
   
 ### <a name="to-add-all-columns-for-one-table-or-table-valued-object"></a>添加一个表或表值对象的所有列  
   
--   在 "**关系图" 窗格**中，选择 " ** \*（所有列）**" 旁边的复选框。  
+-   在 "**关系图" 窗格**中，选择 " ** \* （所有列）**" 旁边的复选框。  
   
 ### <a name="to-add-all-columns-for-all-tables-and-table-structured-objects"></a>添加所有表和表结构对象的所有列  
   

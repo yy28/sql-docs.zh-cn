@@ -13,23 +13,22 @@ helpviewer_keywords:
 ms.assetid: ccdb74d0-4bea-420c-a726-2e0eb8957e0a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8d93d2e95f6a18174a6d9b2f05e434a5443701ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 398e3f3d8496d26c2672ad6d11557c0058a594ee
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055113"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962065"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>传输数据库任务编辑器（“数据库”页）
   使用 **“传输数据库任务编辑器”** 对话框的 **“数据库”** 页可为传输数据库任务涉及的源数据库和目标数据库指定属性。 传输数据库任务将在两个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例之间复制或移动 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]数据库。 此任务还可以用来复制同一个服务器上的数据库。 有关此任务的详细信息，请参阅 [传输数据库任务](control-flow/transfer-database-task.md)。  
   
 ## <a name="options"></a>选项  
  **SourceConnection**  
- 在列表中选择一个 SMO 连接管理器，或单击** \<"新建连接 ..." >** 以创建与源服务器的新连接。  
+ 在列表中选择一个 SMO 连接管理器，或单击 "新建与 **\<New connection...>** 源服务器的连接"。  
   
  **DestinationConnection**  
- 在列表中选择一个 SMO 连接管理器，或单击** \<"新建连接 ..." >** 以创建与目标服务器的新连接。  
+ 在列表中选择一个 SMO 连接管理器，或单击 "新建与 **\<New connection...>** 目标服务器的连接"。  
   
  **DestinationDatabaseName**  
  指定目标服务器上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的名称。  
@@ -53,7 +52,7 @@ ms.locfileid: "66055113"
   
  此属性具有下表所列的选项：  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**True**|覆盖目标服务器数据库。|  
 |**False**|不覆盖目标服务器数据库。|  
@@ -82,7 +81,7 @@ ms.locfileid: "66055113"
   
  此属性具有下表所列的选项：  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**True**|重新附加源数据库。|  
 |**False**|不重新附加源数据库。|  

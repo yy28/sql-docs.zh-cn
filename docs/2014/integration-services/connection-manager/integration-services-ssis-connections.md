@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 18575c95602f73baa959d35b176cf16220fc8e64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: db78d2aef82e04846e7dff823c3448005beb1b22
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112169"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920778"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 连接
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包使用连接来执行不同的任务以及实现 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 功能：  
@@ -64,7 +63,7 @@ ms.locfileid: "79112169"
 -   如果现有的连接管理器没有满足您的需求，可以创建自己的自定义连接管理器。  
   
 ### <a name="built-in-connection-managers"></a>内置连接管理器  
- 下表列出[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]了提供的连接管理器类型。  
+ 下表列出了提供的连接管理器类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。  
   
 |类型|说明|主题|  
 |----------|-----------------|-----------|  
@@ -73,12 +72,12 @@ ms.locfileid: "79112169"
 |CACHE|从数据流或从缓存文件 (.caw) 中读取数据，并可将数据保存到缓存文件。|[缓存连接管理器](cache-connection-manager.md)|  
 |DQS|连接到某一 Data Quality Services 服务器以及该服务器上的 Data Quality Services 数据库。|[DQS 清理连接管理器](dqs-cleansing-connection-manager.md)|  
 |EXCEL|连接到 Excel 工作簿文件。|[Excel 连接管理器](excel-connection-manager.md)|  
-|FILE|连接到文件或文件夹。|[文件连接管理器](file-connection-manager.md)|  
+|文件|连接到文件或文件夹。|[文件连接管理器](file-connection-manager.md)|  
 |FLATFILE|连接到单个平面文件中的数据。|[平面文件连接管理器](flat-file-connection-manager.md)|  
 |FTP|连接到 FTP 服务器。|[FTP 连接管理器](ftp-connection-manager.md)|  
 |HTTP|连接到 Web 服务器。|[HTTP 连接管理器](http-connection-manager.md)|  
 |MSMQ|连接到消息队列。|[MSMQ 连接管理器](msmq-connection-manager.md)|  
-|MSOLAP100|连接到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]或[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目。|[Analysis Services 连接管理器](analysis-services-connection-manager.md)|  
+|MSOLAP100|连接到的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目。|[Analysis Services 连接管理器](analysis-services-connection-manager.md)|  
 |MULTIFILE|连接到多个文件和文件夹。|[多文件连接管理器](multiple-files-connection-manager.md)|  
 |MULTIFLATFILE|连接到多个数据文件和文件夹。|[多平面文件连接管理器](multiple-flat-files-connection-manager.md)|  
 |OLEDB|使用 OLE DB 访问接口连接到数据源。|[OLE DB 连接管理器](ole-db-connection-manager.md)|  
@@ -96,9 +95,9 @@ ms.locfileid: "79112169"
   
 |类型|说明|主题|  
 |----------|-----------------|-----------|  
-|ORACLE|> server 连接到\<Oracle 版本信息。|Oracle 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
+|ORACLE|连接到 Oracle \<version info> 服务器。|Oracle 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
 |SAPBI|连接到 SAP NetWeaver BI 7 版系统。|SAP BI 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft SQL Server 2008 功能包](https://www.microsoft.com/download/details.aspx?id=30440)。|  
-|TERADATA|> server 连接到\<Teradata 版本信息。|Teradata 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
+|TERADATA|连接到 Teradata \<version info> 服务器。|Teradata 连接管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 的连接管理器组件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity 还包括源和目标。 有关详细信息，请访问下载页 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)。|  
   
 ### <a name="custom-connection-managers"></a>自定义连接管理器  
  您还可以编写自定义连接管理器。 有关详细信息，请参阅 [Developing a Custom Connection Manager](../extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)。  

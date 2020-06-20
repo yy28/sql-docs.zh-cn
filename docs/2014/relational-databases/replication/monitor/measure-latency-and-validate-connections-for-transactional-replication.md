@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3ba1e5eddfdcffa5fbefdea323f110ba9d15ca8c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667812"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005815"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>为事务复制测量滞后时间和验证连接
   本主题说明如何使用复制监视器、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中为事务复制测量滞后时间和验证连接。 事务复制提供了跟踪令牌功能，可以方便地测量事务复制拓扑中的滞后时间和验证发布服务器、分发服务器及订阅服务器之间的连接。 将令牌（少量数据）写入发布数据库的事务日志中，就像标记典型的复制事务一样对其进行标记，使用令牌可以执行以下计算：  
@@ -55,15 +54,15 @@ ms.locfileid: "62667812"
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
  停止系统时跟踪令牌也很有用，停止系统的过程涉及停止所有活动并验证所有节点均已收到所有尚未完成的更改。 有关详细信息，请参阅[停止复制拓扑（复制 Transact-SQL 编程）](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)。  
   
- 若要使用跟踪令牌，必须使用特定版本的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]：  
+ 若要使用跟踪令牌，必须使用特定版本的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ：  
   
--   分发服务器必须是[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]或更高版本。  
+-   分发服务器必须是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本。  
   
 -   发布服务器必须是 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本，或者是 Oracle 发布服务器。  
   
--   对于推送订阅，如果订阅服务器为[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 或更高版本，则从发布服务器、分发服务器和订阅服务器收集跟踪令牌统计信息。  
+-   对于推送订阅，如果订阅服务器为 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 或更高版本，则从发布服务器、分发服务器和订阅服务器收集跟踪令牌统计信息。  
   
--   对于请求订阅，仅当订阅服务器为 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本时才从订阅服务器收集跟踪令牌统计信息。 如果订阅服务器为[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 或[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]，将仅从发布服务器和分发服务器收集统计信息。  
+-   对于请求订阅，仅当订阅服务器为 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本时才从订阅服务器收集跟踪令牌统计信息。 如果订阅服务器为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] ，将仅从发布服务器和分发服务器收集统计信息。  
   
  还有一些需要注意的问题和限制：  
   
@@ -111,7 +110,7 @@ ms.locfileid: "62667812"
   
 2.  （可选）在发布服务器上，对发布数据库执行 [sp_helpsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql)。 请验证订阅是否存在且状态是否处于活动状态。  
   
-3.  在发布服务器的发布数据库中，执行 [sp_posttracertoken &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql)，指定 **@publication**。 请注意**@tracer_token_id** output 参数的值。  
+3.  在发布服务器的发布数据库中，执行 [sp_posttracertoken &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql)，指定 **@publication**。 请注意 **@tracer_token_id** output 参数的值。  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>确定事务发布的滞后时间并验证连接  
   
@@ -138,7 +137,7 @@ ms.locfileid: "62667812"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  创建的 <xref:Microsoft.SqlServer.Replication.TransPublication> 类的实例。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.TransPublication> 类的一个实例。  
   
 3.  设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
   
@@ -150,7 +149,7 @@ ms.locfileid: "62667812"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与分发服务器的连接。  
   
-2.  创建的 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 类的实例。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 类的一个实例。  
   
 3.  设置 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
   
@@ -164,7 +163,7 @@ ms.locfileid: "62667812"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与分发服务器的连接。  
   
-2.  创建的 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 类的实例。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 类的一个实例。  
   
 3.  设置 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>、 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>和 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
   

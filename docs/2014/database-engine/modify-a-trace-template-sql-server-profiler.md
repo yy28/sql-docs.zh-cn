@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b81df2a1-e202-43d8-92b0-0beb145f0116
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 64c13b9fed062b73de7ab35ef5048ae4b68e5618
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d953bdeeae8ca6701bd0b30d2f59eec55f81e80d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089998"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930678"
 ---
 # <a name="modify-a-trace-template-sql-server-profiler"></a>修改跟踪模板 (SQL Server Profiler)
   本主题介绍了如何使用 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]修改跟踪模板。  
@@ -42,8 +41,8 @@ ms.locfileid: "66089998"
   
 ## <a name="see-also"></a>另请参阅  
  [指定跟踪文件的事件和数据列 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
- [从正在运行的跟踪派生模板 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
- [从跟踪文件或跟踪表派生模板 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
+ [从正在运行的跟踪中派生模板 (SQL Server Profiler)](../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
+ [从跟踪文件或跟踪表派生模板 (SQL Server Profiler)](../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [SQL Server Profiler 模板和权限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   

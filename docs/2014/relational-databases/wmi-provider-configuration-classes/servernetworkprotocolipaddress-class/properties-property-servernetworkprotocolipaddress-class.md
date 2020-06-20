@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7de217be-50fe-463e-af44-fdd6b79a7045
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 815158ddcdb93b1e779f9a12ef06f034741de590
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7e940c73295561002d3a1fc352568a0325e1e19b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62643411"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059812"
 ---
 # <a name="properties-property-servernetworkprotocolipaddress-class"></a>Properties 属性（ServerNetworkProtocolIPAddress 类）
   获取与 IP 地址关联的属性。  

@@ -13,21 +13,20 @@ f1_keywords:
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6cd3599ff68fadf6a55af1c57379e9cdd8cc4b5d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c183bebe34e37455fbefa214ed0fcfeb55f3aa8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154487"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937978"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>将 DQS 配置为使用引用数据
   本主题介绍如何将 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 配置为使用引用数据来清理您的数据。 你可以使用来自 Azure Marketplace 的引用数据，也可以使用来自直接联机第三方引用数据提供程序的引用数据。  
   
 ## <a name="before-you-begin"></a>开始之前  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
- 若要使用来自市场的引用数据，您必须具有有效的市场帐户密钥。 有关创建 Marketplace 帐户密钥的详细信息，请参阅[创建帐户](https://go.microsoft.com/fwlink/?LinkId=212936)（https://go.microsoft.com/fwlink/?LinkId=212936)。 还可以通过单击 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中 **“管理”** 下的 **“配置”** ，然后单击 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] “引用数据” **选项卡下的** “创建 DataMarket 帐户 ID” **，在** 中创建市场帐户密钥。  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 先决条件  
+ 若要使用来自市场的引用数据，您必须具有有效的市场帐户密钥。 有关创建 Marketplace 帐户密钥的详细信息，请参阅[创建帐户](https://go.microsoft.com/fwlink/?LinkId=212936)（ https://go.microsoft.com/fwlink/?LinkId=212936) 。 还可以通过单击 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 主屏幕中 **“管理”** 下的 **“配置”** ，然后单击 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] “引用数据” **选项卡下的** “创建 DataMarket 帐户 ID” **，在** 中创建市场帐户密钥。  
   
 ###  <a name="security"></a><a name="Security"></a> Security  
   

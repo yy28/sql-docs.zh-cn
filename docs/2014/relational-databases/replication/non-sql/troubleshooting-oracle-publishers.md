@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c84bf2d98440ff9425cd26a4a71667abea2904e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4097b2c185b6dde307cd9b295d3b5b32f5797649
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021910"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065827"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>对 Oracle 发布服务器进行故障排除
   本主题列出配置和使用 Oracle 发布服务器时可能会引发的一系列问题。  
@@ -61,14 +60,14 @@ ms.locfileid: "63021910"
   
 -   已使用正确的 Oracle 主目录和路径。 即使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上只安装了一组 Oracle 二进制文件，也要确保正确设置与 Oracle 主目录相关的环境变量。 如果更改了环境变量值，必须停止并重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 才能使更改生效。  
   
- 有关配置和测试连接的详细信息，请参阅[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]配置 Oracle 发布服务器[中的“在 ](configure-an-oracle-publisher.md) 分发服务器上安装和配置 Oracle 客户端网络软件”。  
+ 有关配置和测试连接的详细信息，请参阅[配置 Oracle 发布服务器](configure-an-oracle-publisher.md)中的“在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器上安装和配置 Oracle 客户端网络软件”。  
   
 ## <a name="the-oracle-publisher-is-associated-with-another-distributor"></a>Oracle 发布服务器与另一分发服务器相关联  
  一个 Oracle 发布服务器只能与一个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器相关联。 如果有不同的分发服务器与 Oracle 发布服务器相关联，则必须先删除它才能使用另一分发服务器。 如果未先删除该分发服务器，就会收到以下错误消息之一：  
   
--   “Oracle 服务器实例‘\<*OraclePublisherName*>'’以前配置为将‘\<*SQLServerDistributorName*>’作为其分发服务器。 若要开始使用‘\<*NewSQLServerDistributorName*>’作为其分发服务器，必须删除 Oracle 服务器实例上的当前复制配置，而这将删除该服务器实例上的所有发布。”  
+-   之前已将 "" Oracle 服务器实例 "" \<*OraclePublisherName*> 配置为使用 " \<*SQLServerDistributorName*> " 作为其分发服务器。 若要开始使用 " \<*NewSQLServerDistributorName*> " 作为其分发服务器，必须删除 Oracle 服务器实例上的当前复制配置，这将删除该服务器实例上的所有发布。 "  
   
--   “Oracle 服务器‘\<*OracleServerName*>’已被定义为分发服务器‘\<*SQLServerDistributorName*>.\<*DistributionDatabaseName>* ’上的发布服务器‘ *\<OraclePublisherName*>’。 请删除此发布服务器或删除公共同义词‘ *\<SynonymName>* ’，以便重新创建。”  
+-   "Oracle 服务器 ' \<*OracleServerName*> ' 已定义为 \<*OraclePublisherName*> 分发服务器 ' \<*SQLServerDistributorName*> . ' 上的发布服务器 '。 *\<DistributionDatabaseName>* 请删除此发布服务器或删除公共同义词 ' *\<SynonymName>* '，以便重新创建。 "  
   
  删除 Oracle 发布服务器时，会自动清除 Oracle 数据库中的复制对象。 但是，在某些情况下需要手动清除 Oracle 复制对象。 手动清除复制创建的 Oracle 复制对象：  
   
@@ -81,14 +80,14 @@ ms.locfileid: "63021910"
 ## <a name="sql-server-error-21663-is-raised-regarding-the-lack-of-a-primary-key"></a>引发关于缺少主键的 SQL Server 错误 21663  
  事务发布中的项目必须具备有效的主键。 如果它们不具备有效的主键，则在尝试添加项目时会收到以下错误消息：  
   
- “找不到源表 [\<*TableOwner*>].[\<*TableName*>] 的有效主键。”  
+ "找不到源表 [ \<*TableOwner*> ]. [] 的有效主键 \<*TableName*> "  
   
  有关主键要求的信息，请参阅主题 [Design Considerations and Limitations for Oracle Publishers](design-considerations-and-limitations-for-oracle-publishers.md)中的“唯一索引和约束”部分。  
   
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>引发关于重复链接服务器登录名的 SQL Server 错误 21642  
  在初始配置 Oracle 发布服务器时，会为发布服务器和分发服务器之间的连接创建一个链接服务器项。 该链接服务器的名称与 Oracle TNS 服务名称相同。 如果尝试创建具有相同名称的链接服务器，则会显示以下错误消息：  
   
- “异类发布服务器需要链接服务器。 名为‘ *\<LinkedServerName>* ’的链接服务器已存在。 请删除链接服务器或另选一个发布服务器名称。”  
+ “异类发布服务器需要链接服务器。 已存在名为 "" 的链接服务器 *\<LinkedServerName>* 。 请删除链接服务器或另选一个发布服务器名称。”  
   
  如果尝试直接创建链接服务器，或者预先删除了 Oracle 发布服务器和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器之间的关系，而当前在尝试重新配置它，就会出现此错误。 如果尝试重新配置发布服务器时收到此错误，请用 [sp_dropserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql) 删除链接服务器。  
   
@@ -155,7 +154,7 @@ ms.locfileid: "63021910"
   
 2.  在 **“运行”** 对话框中，键入 **regedit**，然后单击 **“确定”** 。  
   
-3.  导航到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\ *\<InstanceName>* \Providers。  
+3.  导航到 HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Microsoft SQL Server \\ *\<InstanceName>* \providers。  
   
      Providers 下应该包含一个名为 OraOLEDB.Oracle 的文件夹。 在此文件夹中应该有一个名为 **AllowInProcess**的 DWORD 值，它的值为 **1**。  
   

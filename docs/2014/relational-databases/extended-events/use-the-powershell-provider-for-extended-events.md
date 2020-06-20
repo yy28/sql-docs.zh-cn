@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 69de90bb43e35b559def569bfe1f60433d7c14de
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4cdb785a5a053e0b839386c5fbb57e9393f5b9dc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706592"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050917"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>对扩展事件使用 PowerShell 提供程序
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供程序管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件。 XEvent 子文件夹位于 SQLSERVER 驱动器下。 您可以使用以下任意一种方法访问该文件夹：  

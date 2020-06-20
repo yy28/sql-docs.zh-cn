@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: efcb50b9-f8ff-4121-bf67-05830171b928
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 12a7ae2db2d0e1c91e85eeb4a2c2691579c2da70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73b82f154e206d59b92c84c7b8f72df572774430
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745548"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050538"
 ---
 # <a name="srv_sendmsg-extended-stored-procedure-api"></a>srv_sendmsg（扩展存储过程 API）
     
@@ -85,7 +84,7 @@ msglen
  *class*  
  指定错误严重性。 严重性小于或等于 10 将被视为信息性消息。  
   
- *state*  
+ State   
  提供当前消息的错误状态编号。 错误状态编号提供有关错误上下文的信息。 有效的状态编号介于 0 到 255 之间。  
   
  rpcname**  

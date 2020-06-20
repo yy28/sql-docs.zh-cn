@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 128b7bac-cb64-43e7-ae9b-87b7d2ebb4ef
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dc317474384c59d396d5a0f1d5ee4f71883509d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 34075f9c3a664198999873f2dc95f02b19799712
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061187"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051396"
 ---
 # <a name="trace-file-close-event-class"></a>Trace File Close 事件类
   **Trace File Close** 事件类用于指示在跟踪文件滚动期间关闭了跟踪文件。  

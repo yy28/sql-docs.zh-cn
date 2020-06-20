@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7a4dbc20442181ce97b060118094dfa0667803db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16ab59a9fcdab29c927cb624dabcdfa71eaae1e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011081"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003954"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>使用搜索属性列表搜索文档属性
   文档属性的内容先前无法与文档正文的内容区分。 此局限性将全文查询限制为针对整个文档进行一般搜索。 但现在，对于 `varbinary`、`varbinary(max)`（包括 `FILESTREAM`）或 `image` 二进制数据列中支持的文档类型，您可以配置全文索引以支持对特定属性（如 Author 和 Title）进行属性范围内的搜索。 这种形式的搜索称为“属性搜索”  。  
@@ -211,7 +210,7 @@ GO
   
     1.  若要删除某个文档属性，请单击该属性左侧的行标题，然后按 Del。  
   
-    2.  若要添加文档属性，请单击列表底部的空行，然后在右侧单击**\***，然后输入新属性的值。  
+    2.  若要添加文档属性，请单击列表底部的空行，然后在右侧单击 **\*** ，然后输入新属性的值。  
   
          有关这些值的信息，请参阅 [搜索属性列表编辑器](../../database-engine/search-property-list-editor.md)。 有关如何获取由 Microsoft 定义的属性的这些值的信息，请参阅 [查找搜索属性的属性集 GUID 和属性整数 ID](find-property-set-guids-and-property-integer-ids-for-search-properties.md)。 有关由独立软件供应商 (ISV) 定义的属性的信息，请参阅该供应商提供的文档。  
   

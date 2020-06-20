@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1d1b2e20347cafb4717880de8fd224950f76b036
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3795721eea41c5abe308e6250b4c2eb8132dd5d2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480736"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937688"
 ---
 # <a name="export-a-knowledge-base-to-a-dqs-file"></a>将知识库导出到 .dqs 文件
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中将整个知识库导出到 .dqs 数据文件。 您可以将域或整个知识库导出到数据文件。 有关导出域的信息，请参阅[将域导出到 .dqs 文件](../../2014/data-quality-services/export-a-domain-to-a-dqs-file.md)。  
@@ -44,7 +43,7 @@ ms.locfileid: "65480736"
   
 4.  在“导出到数据文件”对话框中，转到要保存该文件的文件夹，命名该文件或保留知识库名称，将“DQS 数据文件 (\*.dqs)”保留为“另存为”类型，然后单击“保存”****************。  
   
-5.  在 **“导出知识库”** 对话框中，验证状态行是否指示导出已完成。 单击" **确定**"。  
+5.  在 **“导出知识库”** 对话框中，验证状态行是否指示导出已完成。 单击“确定”。  
   
 ##  <a name="follow-up-after-exporting-a-domain-to-a-dqs-file"></a><a name="FollowUp"></a>跟进：在将域导出到 dqs 文件后  
  将知识库导出到 .dqs 文件后，您可以将知识库导入到同一个 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] （使用新名称）或导入到另一个 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]中。  

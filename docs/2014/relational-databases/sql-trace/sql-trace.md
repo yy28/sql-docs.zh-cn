@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a1dd2e117207f3737f54e2cd0269c51918a199f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 82ed0e5dd67738b705b4991b90669198495d497a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63286533"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060259"
 ---
 # <a name="sql-trace"></a>SQL 跟踪
   在 SQL 跟踪中，如果事件是在跟踪定义中列出的事件类的实例，则收集这些事件。 可以将这些事件从跟踪中筛选出来或为其目标进行排队。 目标可以是文件或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理对象 (SMO)，它可以使用管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的应用程序中的跟踪信息。  
@@ -34,8 +33,8 @@ ms.locfileid: "63286533"
 ## <a name="sql-trace-terminology"></a>SQL 跟踪的术语  
  下列词汇介绍了 SQL 跟踪的重要概念。  
   
- **引发**  
- 某个操作在的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]实例中的匹配项。  
+ **事件**  
+ 某个操作在的实例中的匹配项 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 。  
   
  **数据列**  
  事件的属性。  
@@ -75,22 +74,22 @@ ms.locfileid: "63286533"
 |**ApplicationName** <sup>1</sup>|10|客户端应用程序的名称，该客户端应用程序创建了指向 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的连接。 此列由该应用程序传递的值填充，而不是由程序名填充的。|  
 |**BigintData1**|52|值 (`bigint` 数据类型)，取决于跟踪中指定的事件类。|  
 |**BigintData2**|53|值 (`bigint` 数据类型)，取决于跟踪中指定的事件类。|  
-|**Binary Data**|2|依赖于跟踪中捕获的事件类的二进制值。|  
+|**二进制数据**|2|依赖于跟踪中捕获的事件类的二进制值。|  
 |**ClientProcessID** <sup>1</sup>|9|由主机分配给正在运行客户端应用程序的进程的 ID。 如果客户端提供了客户端进程 ID，则填充此数据列。|  
 |**ColumnPermissions**|44|表示是否已设置了列权限。 可以分析语句文本来确定各列所应用权限的情况。|  
-|CPU****|18|事件使用的 CPU 时间（毫秒）。|  
+|CPU|18|事件使用的 CPU 时间（毫秒）。|  
 |**数据库 ID** <sup>1</sup>|3|由 USE *database_name* 语句指定的数据库的 ID；如果未对给定实例发出 USE *database_name*语句，则为默认数据库的 ID。 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 数据列而且服务器可用，则 **ServerName** 将显示数据库名。 可使用 DB_ID 函数来确定数据库的值。|  
 |**DatabaseName**|35|正在运行用户语句的数据库的名称。|  
 |**DBUserName** <sup>1</sup>|40|客户端的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用户名。|  
 |**持续时间**|13|事件的持续时间（微秒）。<br /><br /> 服务器以微秒（百万分之一秒或 10<sup>-6</sup> 秒）为单位报告事件的持续时间，以毫秒（千分之一秒或 10<sup>-3</sup> 秒）为单位报告事件使用的 CPU 时间。 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 图形用户界面默认以毫秒为单位显示 **“持续时间”** 列，但是当跟踪保存到文件或数据库表中时，将以微秒为单位写入“持续时间” **** 列值。|  
-|**结束**|15|事件的结束时间。 对指示事件开始的事件类（例如 **SQL:BatchStarting** 或 **SP:Starting**）将不填充此列。|  
+|**EndTime**|15|事件的结束时间。 对指示事件开始的事件类（例如 **SQL:BatchStarting** 或 **SP:Starting**）将不填充此列。|  
 |**错误**|31|给定事件的错误号。 通常是 **sysmessages**中存储的错误号。|  
 |**EventClass** <sup>1</sup>|27|捕获的事件类的类型。|  
 |**EventSequence**|51|此事件的序列号。|  
 |**EventSubClass** <sup>1</sup>|21|事件子类的类型，提供有关每个事件类的详细信息。 例如， **Execution Warning** 事件类的事件子类值代表执行警告的类型：<br /><br /> **1** = 查询等候。 查询执行之前必须等待资源；例如，内存。<br /><br /> **2** = 查询超时。查询在等待执行所需资源时超时。 所有事件类都不填充此数据列。|  
 |**GUID**|54|依赖于跟踪中指定的事件类的 GUID 值。|  
 |**FileName**|36|所修改的文件的逻辑名称。|  
-|**Handle**|33|一个整数，ODBC、OLE DB 或 DB-Library 使用它来协调服务器的执行情况。|  
+|**柄**|33|一个整数，ODBC、OLE DB 或 DB-Library 使用它来协调服务器的执行情况。|  
 |**主机名** <sup>1</sup>|8|正在运行客户端程序的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|  
 |**IndexID**|24|受事件影响的对象的索引 ID。 若要确定对象的索引的 ID，请使用 **sysindexes** 系统表的 **indid** 列。|  
 |**IntegerData**|25|跟踪中捕获的与事件类对应的整数值。|  
@@ -109,13 +108,13 @@ ms.locfileid: "63286533"
 |**ObjectID2**|56|相关对象或实体（如果存在）的 ID。|  
 |**ObjectName**|34|被引用对象的名称。|  
 |**ObjectType** <sup>2</sup>|28|表示事件中涉及的对象类型的值。 此值对应于**sysobjects**中的**类型**列。|  
-|**偏移量**|61|语句在存储过程或批处理中的起始偏移量。|  
+|**Offset**|61|语句在存储过程或批处理中的起始偏移量。|  
 |**OwnerID**|58|仅限于锁事件。 拥有锁的对象的类型。|  
 |**OwnerName**|37|对象所有者的数据库用户名。|  
 |**ParentName**|59|该对象所在的架构的名称。|  
 |**权限**|19|表示所检查的权限类型的整型值。 值为：<br /><br /> **1** = 全选<br /><br /> **2** = 全部更新<br /><br /> **4** = 引用全部<br /><br /> **8** = 插入<br /><br /> **16** = 删除<br /><br /> **32** = EXECUTE （仅限于过程）<br /><br /> **4096** = SELECT ANY （至少一列）<br /><br /> **8192** = 更新任何<br /><br /> **16384** = REFERENCES ANY|  
 |**ProviderName**|46|OLEDB 访问接口的名称。|  
-|**内容**|16|由服务器代表事件读取逻辑磁盘的次数。 这些读取操作数包含在语句执行期间读取表和缓冲区的次数。|  
+|**读取**|16|由服务器代表事件读取逻辑磁盘的次数。 这些读取操作数包含在语句执行期间读取表和缓冲区的次数。|  
 |**Id**|49|包含该语句的请求的 ID。|  
 |**RoleName**|38|正在启用的应用程序角色名。|  
 |**RowCounts**|48|批处理中的行数。|  
@@ -127,14 +126,14 @@ ms.locfileid: "63286533"
 |**： Sqlhandle**|63|基于即席查询文本或 SQL 对象的数据库和对象 ID 的 64 位哈希运算。 此值可传递给**sys.databases dm_exec_sql_text （）** 以检索关联的 sql 文本。|  
 |**StartTime** <sup>1</sup>|14|事件（如果有）的开始时间。|  
 |**状态**|30|错误状态代码。|  
-|**成功**|23|表示事件是否成功。 值包括：<br /><br /> **1** = 成功。<br /><br /> **0** = 失败<br /><br /> 例如， **1** 表示权限检查成功，而 **0** 表示权限检查失败。|  
+|**Success**|23|表示事件是否成功。 值包括：<br /><br /> **1** = 成功。<br /><br /> **0** = 失败<br /><br /> 例如， **1** 表示权限检查成功，而 **0** 表示权限检查失败。|  
 |**TargetLoginName**|42|如果是针对登录的操作（例如，添加新的登录），这是所针对登录的名称。|  
 |**TargetLoginSid**|43|如果是针对登录的操作（例如，添加新的登录），这是所针对登录的 SID。|  
 |**TargetUserName**|39|如果是针对某个数据库用户的操作（例如，授予用户权限），这是该用户的名称。|  
 |**TextData**|1|依赖于跟踪中捕获的事件类的文本值。 但是，如果跟踪参数化查询，则不以 **TextData** 列中的数据值显示变量。|  
 |**事务 ID**|4|系统为事务分配的 ID。|  
-|**类型**|57|跟踪中捕获的与事件类对应的整数值。|  
-|**写**|17|由服务器代表事件写入物理磁盘的次数。|  
+|类型|57|跟踪中捕获的与事件类对应的整数值。|  
+|**写入**|17|由服务器代表事件写入物理磁盘的次数。|  
 |**XactSequence**|50|用于说明当前事务的标记。|  
   
  <sup>1</sup>默认情况下，为所有事件填充这些数据列。  

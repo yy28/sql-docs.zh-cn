@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 954e8b2a2f36ccab1cff97174089560913291074
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 38ad000eee18256ef5a6dda6b64e0e5afc7054ac
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770388"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939348"
 ---
 # <a name="row-sampling-transformation"></a>行抽样转换
   行抽样转换用于获取输入数据集的随机选择子集。 您可以指定输出样本的准确大小，并指定随机数生成器的种子。  

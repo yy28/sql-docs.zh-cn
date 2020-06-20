@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: e0a1a1e4-0062-4872-93c3-cd91b7a43c23
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2494ab96cc3b4964c26a1ce17593e9b5aece2e7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f1622e87d971a32dcf478dfb036a504e0959fd76
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774927"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930728"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>迁移检查约束和外键约束
-  [!INCLUDE[hek_2](../includes/hek-2-md.md)]中[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]不支持 Check 和 foreign key 约束。 这些构造通常用于在架构中强制实施逻辑数据完整性，并且对于维护应用程序的功能正确性非常重要。  
+  中不支持 Check 和 foreign key 约束 [!INCLUDE[hek_2](../includes/hek-2-md.md)] [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 。 这些构造通常用于在架构中强制实施逻辑数据完整性，并且对于维护应用程序的功能正确性非常重要。  
   
  对表进行逻辑完整性检查（如 check 和 foreign key 约束）需要对事务进行额外处理，通常应避免对性能敏感的应用程序进行其他处理。 但是，如果此类检查对你的应用程序至关重要，则有两种解决方法。  
   
@@ -28,7 +27,7 @@ ms.locfileid: "62774927"
  此解决方法的优点是，对性能的影响最小，因为数据修改未被约束检查阻止。 但是，如果发生违反一个或多个约束的更改，则回滚该更改的过程可能需要很长时间。  
   
 ## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>在插入、更新或删除操作之前强制约束  
- 此解决方法模拟[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]约束的行为。 在数据修改发生之前检查约束，并在检查失败时终止事务。 此方法会对数据修改产生性能损失，但确保表中的数据始终满足约束。  
+ 此解决方法模拟约束的行为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 在数据修改发生之前检查约束，并在检查失败时终止事务。 此方法会对数据修改产生性能损失，但确保表中的数据始终满足约束。  
   
  如果逻辑数据完整性对于正确性和违反约束的修改很有必要，请使用此解决方法。 但是，为了保证完整性，所有数据修改都必须通过包含这些操作的存储过程进行。 通过即席查询和其他存储过程进行的修改不会强制实施这些约束，因此可能会违反这些约束，而不发出警告。  
   
@@ -99,7 +98,7 @@ GO
   
  转换为内存优化表后，[Sales] 的定义。[SalesOrderDetail] 如下所示：  
   
- 请注意，rowguid 不再是 ROWGUIDCOL，因为在中[!INCLUDE[hek_2](../includes/hek-2-md.md)]不受支持。 列已删除。 此外，LineTotal 是计算列并超出本文的范围，因此它也已删除。  
+ 请注意，rowguid 不再是 ROWGUIDCOL，因为在中不受支持 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 。 列已删除。 此外，LineTotal 是计算列并超出本文的范围，因此它也已删除。  
   
 ```sql  
 USE [AdventureWorks2012]  

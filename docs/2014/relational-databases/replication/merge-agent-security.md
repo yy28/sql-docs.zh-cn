@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9b86171a-4381-4b39-869a-cdc161e7cd15
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: af3d3490957114d6ba7731b49435dc7e90122f90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c228ea5db963919d39fcf564eea11b7f63ae76b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62932497"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005854"
 ---
 # <a name="merge-agent-security"></a>合并代理安全性
   可以使用 **“合并代理安全性”** 对话框指定用于运行合并代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户。 对于推送订阅，合并代理在分发服务器上运行；对于请求订阅，合并代理在订阅服务器上运行。 Windows 帐户也称为“进程帐户  ”，因为代理进程是在此帐户下运行。 该对话框中可用的其他选项取决于访问对话框的方式：  

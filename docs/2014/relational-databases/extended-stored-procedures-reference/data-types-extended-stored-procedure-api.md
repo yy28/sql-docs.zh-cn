@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 715cdc343e3a73781c06977fdb3d3d829d6bf533
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57b9c5b8929f6af33546a55e848a75e4243b4973
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62511638"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050814"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>数据类型（扩展存储过程 API）
     
@@ -38,19 +37,19 @@ ms.locfileid: "62511638"
 |SRVBITN|`bit null`|`bit` 数据类型，允许为 Null 值。|  
 |SRVCHAR|`char`|`character`数据类型。|  
 |SRVDATETIME|`datetime`|8 个字节的 `datetime` 数据类型。|  
-|SRVDATETIM4|`smalldatetime`|4个字节`smalldatetime`的数据类型。|  
+|SRVDATETIM4|`smalldatetime`|4个字节的 `smalldatetime` 数据类型。|  
 |SRVDATETIMN|**datetime null**|`smalldatetime` 或 `datetime` 数据类型，允许为 Null 值。|  
 |SRVDECIMAL|`decimal`|`decimal`数据类型。|  
 |SRVDECIMALN|`decimal null`|`decimal` 数据类型，允许为 Null 值。|  
-|SRVFLT4|`real`|4个字节`real`的数据类型。|  
+|SRVFLT4|`real`|4个字节的 `real` 数据类型。|  
 |SRVFLT8|`float`|8 个字节的 `float` 数据类型。|  
 |SRVFLTN|`real` &#124; `float null`|`real` 或 `float` 数据类型，允许为 Null 值。|  
 |SRVIMAGE|`image`|`image`数据类型。|  
-|SRVINT1|`tinyint`|1个字节`tinyint`的数据类型。|  
+|SRVINT1|`tinyint`|1个字节的 `tinyint` 数据类型。|  
 |SRVINT2|`smallint`|两个字节的 `smallint` 数据类型。|  
-|SRVINT4|`int`|4个字节`int`的数据类型。|  
+|SRVINT4|`int`|4个字节的 `int` 数据类型。|  
 |SRVINTN|`tinyint` &#124; `smallint` &#124; `int null`|`tinyint`、`smallint` 或 `int` 数据类型，允许为 Null 值。|  
-|SRVMONEY4|`smallmoney`|4个字节`smallmoney`的数据类型。|  
+|SRVMONEY4|`smallmoney`|4个字节的 `smallmoney` 数据类型。|  
 |SRVMONEY|`money`|8 个字节的 `money` 数据类型。|  
 |SRVMONEYN|`money` &#124; `smallmoney null`|`smallmoney` 或 `money` 数据类型，允许为 Null 值。|  
 |SRVNCHAR|**nchar**|Unicode `character` 数据类型。|  

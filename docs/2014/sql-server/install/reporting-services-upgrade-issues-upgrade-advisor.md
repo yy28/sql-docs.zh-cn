@@ -14,22 +14,21 @@ helpviewer_keywords:
 ms.assetid: d9663f25-98d7-4508-ae3c-55a7277211bd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 75c3bda5d15e3930fcdeba9ca73d70128fd90336
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e2f39ea7b911f2ca83767dcfbfd82947acd4f52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952062"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059011"
 ---
 # <a name="reporting-services-upgrade-issues-upgrade-advisor"></a>Reporting Services 升级问题（升级顾问）
-  以下主题介绍[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]可能会影响升级到[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的问题。 这些主题介绍你可以采取哪些措施来缓解这些更改对环境的影响。  
+  以下主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可能会影响升级到的问题 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。 这些主题介绍你可以采取哪些措施来缓解这些更改对环境的影响。  
   
  升级顾问可分析报表服务器安装。 如果仅安装了客户端组件（例如，如果报表设计器是安装在计算机中的唯一 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件），则不会报告任何问题。  
   
  根据安装的配置方式，您可能会遇到升级顾问未报告的其他问题。 这些问题不会阻止 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 升级成功，但是它们可能影响升级完成后报表和应用程序的运行方式。 若要了解这些问题，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“Reporting Services 的向后兼容性”。  
   
- 如果无法使用安装程序升级[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]安装，你可以安装新[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的实例并将现有安装迁移到新的实例。 有关详细信息，请参阅联机丛书中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 "升级和迁移 Reporting Services"，[然后 Reporting Services 升级和迁移](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)。  
+ 如果无法使用安装程序升级 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装，你可以安装新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例并将现有安装迁移到新的实例。 有关详细信息，请参阅联机丛书中的 "升级和迁移 Reporting Services" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，[然后 Reporting Services 升级和迁移](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)。  
   
  以下主题介绍升级顾问报告的已知问题，并解释可以如何修改现有安装以顺利进行升级。  
   

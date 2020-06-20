@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fab91a2df7d0401e8301589b1dd0d21027e579c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd3166072daa1b252b703b01f1623ccc041a17be
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891282"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968167"
 ---
 # <a name="step-5-testing-the-lesson-4-tutorial-package"></a>步骤 5：测试第 4 课教程包
   在运行时，损坏的文件 Currency_BAD.txt 将无法在 Currency Key 查找转换中生成匹配。 由于 Currency Key 查找的错误输出现在已配置为将失败的行重定向到新的失败的行目标，因此该组件不会失败，并且包会成功地运行。 所有失败的错误行都将写入 ErrorOutput.txt。  
@@ -32,13 +31,13 @@ ms.locfileid: "62891282"
   
  ![包中的控制流](../../2014/tutorials/media/task4lesson2control.gif "包中的控制流")  
   
- **数据流**  
+ 数据流  
   
  ![包中的数据流](../../2014/tutorials/media/task5lesson5data.gif "包中的数据流")  
   
 ### <a name="to-run-the-lesson-4-tutorial-package"></a>运行第 4 课教程包  
   
-1.  在 "**调试**" 菜单上单击 "**启动调试**"。  
+1.  在“调试”菜单上，单击“启动调试”。  
   
 2.  当包运行完毕后，在 **“调试”** 菜单中，单击 **“停止调试”**。  
   

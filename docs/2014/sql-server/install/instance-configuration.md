@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 66329d4c25a23a6b3dbc3570723bab8aecfa3d4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86a9538e81881a3b42b95447f4264200e2fe9d4c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68190973"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065308"
 ---
 # <a name="instance-configuration"></a>Instance Configuration
   使用 **安装向导的** “实例配置” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 页面可指定是创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的默认实例还是其命名实例。 如果尚未安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，则除非您指定命名实例，否则将创建默认实例。  
@@ -71,7 +70,7 @@ ms.locfileid: "68190973"
   
 -   实例名称中不允许含有空格或其他特殊字符， 也不允许存在反斜杠 (\\)、逗号 (,)、冒号 (:)、分号 (;)、单引号 (')、& 号 (&)、连字号 (-) 和 at 符 (@)。  
   
--   **只有在当前 Windows 代码页中有效的字符才能用在实例名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中。如果使用不受支持的 Unicode 字符，将会发生安装错误。**  
+-   **只有在当前 Windows 代码页中有效的字符才能用在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称中。如果使用不受支持的 Unicode 字符，将会发生安装错误。**  
   
  **检测到的实例和功能**  
  查看正在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的计算机中安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例和组件的列表。  

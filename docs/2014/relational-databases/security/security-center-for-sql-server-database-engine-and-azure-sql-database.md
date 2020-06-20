@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: fc99b725f4c5895306d544df14bf2a9390189066
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3eeea022cff74d2ca8ddb636d9f83e4d369529bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244527"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004111"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server 数据库引擎和 Azure SQL Database 的安全中心
   本页提供的链接可帮助你找到有关 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]和 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]中的安全性和保护的必要信息。  
@@ -36,7 +35,7 @@ ms.locfileid: "75244527"
   
 ## <a name="links-to-specific-related-topics"></a>指向特定相关主题的链接  
  ![小文件文件夹图标](../../integration-services/media/filefolder-small.gif "小文件文件夹图标")**身份验证：你是谁？**  
- **谁进行身份验证？（Windows 或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）**  
+ **谁进行身份验证？（Windows 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ）**  
   
 -   [选择身份验证模式](choose-an-authentication-mode.md)  
   
@@ -106,9 +105,9 @@ ms.locfileid: "75244527"
   
 -   使用 [视图](../views/views.md) 和 [过程](../stored-procedures/stored-procedures-database-engine.md)限制数据访问  
   
--   [行级安全性](https://msdn.microsoft.com/library/azure/dn765131.aspx)  
+-   [行级别安全性](https://msdn.microsoft.com/library/azure/dn765131.aspx)  
   
--   [动态数据屏蔽](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
+-   [动态数据掩码](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
   
 -   [签名的对象](/sql/t-sql/statements/add-signature-transact-sql)  
   

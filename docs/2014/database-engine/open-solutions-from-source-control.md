@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a96a1f0d-0183-4587-a3b0-4598309cbdd2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9f8405c9fcb04559b6f25d2244bc36dde760a182
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6d998956497eb0fb15f3b99de8e543636266e32
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62844761"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930338"
 ---
 # <a name="open-solutions-from-source-control"></a>从源代码管理打开解决方案
   可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 直接从源代码管理打开解决方案。 如果执行此操作，Studio 环境将在指定的位置创建最新版本解决方案文件的副本。  
