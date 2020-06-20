@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 18898388-5158-407b-9774-639af99e8f07
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 619cd537b5ecb45afe2dce3467caa64fc1e9a499
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95e77fe1743406d7206b05470b4559fcfb0a6d59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092751"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011845"
 ---
 # <a name="replication-upgrade-issues"></a>复制升级问题
   下面的主题介绍可能会影响您升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的复制问题。 这些主题介绍了您可以为减小这些更改对环境的影响而采取的措施。  

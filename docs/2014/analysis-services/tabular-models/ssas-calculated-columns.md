@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e9a93fffba5c34d26cdb0305b0f6a97369e51b3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c1e0a9435fd974044b71ac64c1e7762fc709ca9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284894"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938608"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>计算列（SSAS 表格）
   在表格模型中，通过计算列可以将新数据添加到您的模型。 您可以创建定义列的行级值的 DAX 公式，而不是在列中粘贴或导入值。 然后，计算列可用于报表、数据透视表或数据透视图中，您可以像使用任何其他数据列一样使用计算列。  
@@ -33,7 +32,7 @@ ms.locfileid: "67284894"
   
 -   [相关任务](#bkmk_rel_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_understanding"></a>便利  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a> 优势  
  计算列中的公式非常类似于 Excel 中的公式。 但与 Excel 不同，您不能为表中的不同行创建不同的公式；而是 DAX 公式自动应用于整个列。  
   
  在某个列包含公式时，将为每一行都计算值。 在您输入有效公式时，将立即为列计算结果。 在需要时（例如，在刷新基础数据时），将重新计算列值。  

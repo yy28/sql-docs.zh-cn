@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: da78f21c6346281dc23332f40e8e6f46ff07aa06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69a6e3ca5dccb1fe429b0baf3d6d027ec7850b4f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774651"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931912"
 ---
 # <a name="upgrade-master-data-services"></a>升级 Master Data Services
   有四种升级到 Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 的方案。 请选择适用于您情况的方案。  
@@ -32,15 +31,15 @@ ms.locfileid: "62774651"
 >  -   不支持从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP1 版升级到 CTP2 版。  
 > -   在执行任何升级之前备份您的数据库。  
 > -   升级过程将重新创建存储过程并对 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]所使用的表进行升级。 您对这些组件中的任何一个所做的任何自定义内容可能会丢失。  
-> -   模型部署包只能在创建它们的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中使用。 不能将在中创建的模型[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]部署[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]包部署到中。  
+> -   模型部署包只能在创建它们的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中使用。 不能将在中创建的模型部署包部署 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到中 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。  
 > -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 在将 Master Data Services 和 Data Quality Services 升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 后，您可以使用用于 Excel 的 Master Data Services 外接程序的  SP1 版本继续进行。 但是，在升级到 SQL Server 2014 CTP2 后，用于 Excel 的 Master Data Services 外接程序的任何早期版本都无法使用。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 您可以从 [此处](https://go.microsoft.com/fwlink/?LinkId=328664)下载用于 Excel 的 Master Data Services 外接程序的  SP1 版本。  
   
 ##  <a name="upgrade-without-database-engine-upgrade"></a><a name="noengine"></a>升级但不数据库引擎升级  
- 此方案可被视为[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]并行安装，因为和[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]均并行安装在同一台计算机或不同的计算机上。  
+ 此方案可被视为并行安装，因为 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 均并行安装在同一台计算机或不同的计算机上。  
   
  在此方案中，您继续使用 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 承载 MDS 数据库。 但是，必须升级 MDS 数据库的架构，然后创建 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web 应用程序来访问 MDS 数据库。 MDS 数据库不再可以由 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Web 应用程序访问。  
   
- 如果选择在同一台[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]计算机上安装和早期版本的[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]/[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SQL Server （），则可以这样做，因为文件安装在不同的位置。  
+ 如果选择在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 同一台计算机上安装和早期版本的 SQL Server （ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ），则可以这样做，因为文件安装在不同的位置。  
   
 -   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，默认情况下这些文件安装在驱动器**:\Program Files\Microsoft SQL Server\120\Master Data Services 中。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "62774651"
   
     2.  在左窗格中单击 **“数据库配置”** 。  
   
-    3.  在右侧窗格中，单击 "**选择数据库**" 并指定[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]数据库实例的信息。  
+    3.  在右侧窗格中，单击 "**选择数据库**" 并指定 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 数据库实例的信息。  
   
     4.  单击 **“升级数据库”** 以启动 **“升级数据库向导”** 。 有关详细信息，请参阅[升级数据库向导（Master Data Services 配置管理器）](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md)。  
   
@@ -105,7 +104,7 @@ ms.locfileid: "62774651"
   
  若要执行此任务，请完成以下步骤：  
   
-1.  **仅适用于 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]** ：打开“控制面板” **“程序和功能”，然后卸载 Microsoft**  >   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。  
+1.  **仅适用于 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]**：打开“控制面板” > “程序和功能”，然后卸载 Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。  
   
 2.  将数据引擎升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
@@ -117,7 +116,7 @@ ms.locfileid: "62774651"
   
     4.  完成向导。  
   
-3.  **仅[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]适用于**：升级完成时，添加**[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** 功能。  
+3.  ** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 仅适用于**：升级完成时，添加 **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** 功能。  
   
     1.  打开 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导。  
   
@@ -127,7 +126,7 @@ ms.locfileid: "62774651"
   
     4.  在向导的 "**安装类型**" 页上，选择 "向**现有实例中添加功能**" 选项，然后选择安装 MDS 数据库的实例。  
   
-    5.  在 "**功能选择**" 页上的 "**共享功能**" 下，选择**[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]**。  
+    5.  在 "**功能选择**" 页上的 "**共享功能**" 下，选择 **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** 。  
   
     6.  完成向导。  
   
@@ -144,7 +143,7 @@ ms.locfileid: "62774651"
   
     4.  单击 **“升级数据库”** 以启动 **“升级数据库向导”**。 有关详细信息，请参阅[升级数据库向导（Master Data Services 配置管理器）](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md)。  
   
-    5.  单击“应用”  。  
+    5.  单击“应用” 。  
   
 5.  升级完成时，创建一个 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web 应用程序。  
   
@@ -169,7 +168,7 @@ ms.locfileid: "62774651"
   
     2.  选择 MDS 数据库。  
   
-    3.  单击“应用”  。  
+    3.  单击“应用” 。  
   
 ##  <a name="upgrade-in-two-computer-scenario"></a><a name="twocomputer"></a> 在两台计算机上执行升级的方案  
  此方案涉及升级在两台计算机上安装 SQL Server 的系统：一台计算机安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，另一台计算机安装 SQL Server 2008 R2 或 SQL Server 2012。  
@@ -205,7 +204,7 @@ ms.locfileid: "62774651"
   
     2.  在左窗格中单击 **“数据库配置”**。  
   
-    3.  在右侧窗格中，单击 **"选择数据库**"，然后在另[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]一[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]台计算机上安装或数据库实例的[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]信息[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] （如果在其他计算机上安装了或）。  
+    3.  在右侧窗格中，单击 "**选择数据库**"，然后在另 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 一 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 台计算机上安装或数据库实例的信息（如果在 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 其他计算机上安装了或） [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 。  
   
     4.  单击 **“升级数据库”** 以启动 **“升级数据库向导”**。 有关详细信息，请参阅[升级数据库向导（Master Data Services 配置管理器）](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md)。  
   
@@ -232,7 +231,7 @@ ms.locfileid: "62774651"
   
     2.  选择 MDS 数据库。  
   
-    3.  单击“应用”  。  
+    3.  单击“应用” 。  
   
 ##  <a name="upgrade-with-restoring-a-database-from-backup"></a><a name="restore"></a> 通过从备份还原数据库升级  
  在此方案中，[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 与 SQL Server 2008 R2 或 SQL Server 2012 安装在同一台或两台不同的计算机上。 另外，在升级前，在低于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 的版本上备份数据库，必须还原该数据库。  
@@ -268,7 +267,7 @@ ms.locfileid: "62774651"
   
     2.  在左窗格中单击 **“数据库配置”**。  
   
-    3.  在右侧窗格中，单击 "**选择数据库**" 并指定[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]数据库实例的信息。  
+    3.  在右侧窗格中，单击 "**选择数据库**" 并指定 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 数据库实例的信息。  
   
     4.  单击 **“升级数据库”** 以启动 **“升级数据库向导”**。 有关详细信息，请参阅[升级数据库向导（Master Data Services 配置管理器）](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md)。  
   
@@ -295,12 +294,12 @@ ms.locfileid: "62774651"
   
     2.  选择 MDS 数据库。  
   
-    3.  单击“应用”  。  
+    3.  单击“应用” 。  
   
-## <a name="troubleshooting"></a>故障排除  
- **问题：** 打开[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web 应用程序时，将显示 "客户端版本与数据库版本不兼容" 错误消息。  
+## <a name="troubleshooting"></a>疑难解答  
+ **问题：** 打开 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web 应用程序时，将显示 "客户端版本与数据库版本不兼容" 错误消息。  
   
- **解决方案：** 当[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]主数据管理器 web 应用程序尝试访问已升级到[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Master Data Services 的数据库时，会出现此问题。 您必须改用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web 应用程序。  
+ **解决方案：** 当 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 主数据管理器 web 应用程序尝试访问已升级到 Master Data Services 的数据库时，会出现此问题 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。 您必须改用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Web 应用程序。  
   
  如果您在升级 MDS 数据库架构时没有在 IIS 中停止并重新启动 **“MDS 应用程序池”** ，则也可能出现此问题。 重新启动 **“MDS 应用程序池”** 可解决此问题。  
   

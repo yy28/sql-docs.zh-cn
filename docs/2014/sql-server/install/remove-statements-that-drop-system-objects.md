@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cdfc3c50-c801-4039-a4bf-b35f876f1c61
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1d420e2dba1dfdb284b0002eca6d8408c4e019e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9e8fbfd4a436e87cee413d95468ccf5dd36b9dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093079"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059182"
 ---
 # <a name="remove-statements-that-drop-system-objects"></a>删除用于去除系统对象的语句
   升级顾问检测到用于删除系统对象的语句。 系统对象（包括扩展存储过程）部署在只读**资源**数据库（mssqlsystemresource.mdf）中，不能删除。 请修改您的应用程序以撤消或拒绝针对系统对象的 EXECUTE 权限。  

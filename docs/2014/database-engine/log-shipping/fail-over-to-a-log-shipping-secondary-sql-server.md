@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 64fa315457361e8d160735f38156e79ea667a4da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 472cff50c247d0dfc47c39cf6b6f3c2ca6c13d08
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774182"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931232"
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>故障转移到日志传送辅助服务器 (SQL Server)
   如果主服务器实例失败或需要维护，则在出现故障时转移到日志传送辅助服务器将十分有用。  
@@ -46,7 +45,7 @@ ms.locfileid: "62774182"
 4.  同步辅助服务器之后，可以根据您的首选，通过恢复任一辅助数据库并将客户端重定向到该服务器实例来故障转移该辅助服务器。 恢复操作将使数据库处于一致的状态并使其联机。  
   
     > [!NOTE]  
-    >  辅助数据库可用时，应确保其元数据与原始主数据库的元数据一致。 有关详细信息，请参阅在[使数据库在其他服务器实例上可用时管理元数据 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
+    >  辅助数据库可用时，应确保其元数据与原始主数据库的元数据一致。 有关详细信息，请参阅 [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
 5.  恢复辅助数据库之后，可以将其重新配置为其他辅助数据库的主数据库。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62774182"
   
 ## <a name="see-also"></a>另请参阅  
  [日志传送表和存储过程](log-shipping-tables-and-stored-procedures.md)   
- [关于 &#40;SQL Server 的日志传送&#41;](about-log-shipping-sql-server.md)   
+ [关于日志传送 (SQL Server)](about-log-shipping-sql-server.md)   
  [结尾日志备份 (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)  
   
   

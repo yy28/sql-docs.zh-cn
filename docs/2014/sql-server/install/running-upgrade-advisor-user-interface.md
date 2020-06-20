@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7f47c9b3-88d3-43d6-837e-f157b49a55ac
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5aecaea9bef359ad24aebbd20dd5e9547497043b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 653e3d0565d0b32c67ccf77772a9b89f611dd082
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092444"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058950"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>运行升级顾问（用户界面）
   在升级计划期间，可运行升级顾问来分析本地或远程组件。 升级顾问为分析的每个组件和实例生成一个报表。  
@@ -30,7 +29,7 @@ ms.locfileid: "66092444"
 > [!IMPORTANT]  
 >  升级顾问不分析 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的远程实例。 若要分析 [!INCLUDE[ssRS](../../includes/ssrs.md)] 实例，升级顾问必须安装在安装 [!INCLUDE[ssRS](../../includes/ssrs.md)] 的计算机上。  
 >   
->  若要[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]分析 Integration Services，必须[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]在同一台计算机[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]上安装并安装。  
+>  若要分析 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 同一台计算机上安装并安装。  
   
 ## <a name="running-the-upgrade-advisor-analysis-wizard"></a>运行升级顾问分析向导  
  运行升级顾问分析向导的过程包含以下六个步骤：  

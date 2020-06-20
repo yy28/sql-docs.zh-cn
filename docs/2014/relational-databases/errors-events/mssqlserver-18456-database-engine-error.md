@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14b233839901167ca92a1d2aed5a8c1441fefe0e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62869592"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034968"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
     
@@ -88,10 +87,10 @@ ms.locfileid: "62869592"
 ## <a name="examples"></a>示例  
  在此示例中，身份验证错误状态为 8。 这表示密码不正确。  
   
-|日期|源|消息|  
+|Date|源|消息|  
 |----------|------------|-------------|  
 |2007-12-05 20:12:56.34|登录|错误: 18456，严重性: 14，状态: 8。|  
-|2007-12-05 20:12:56.34|登录|用户‘<user_name>’登录失败。 [客户端\<： ip 地址>]|  
+|2007-12-05 20:12:56.34|登录|用户‘<user_name>’登录失败。 [客户端: \<ip address>]|  
   
 > [!NOTE]  
 >  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是使用 Windows 身份验证模式安装的，并随后更改为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 身份验证模式，则最初会禁用 **sa** 登录名。 这将导致状态7错误： "用户 ' sa ' 登录失败"。若要启用**sa**登录名，请参阅[更改服务器身份验证模式](../../database-engine/configure-windows/change-server-authentication-mode.md)。  

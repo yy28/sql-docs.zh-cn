@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a5d439a9-5be1-4145-90e8-90777d80e98b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 55a1a296e6a7b2a2155dea590be9321b22e73451
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 145d5a0d32384a0bcea1d60d00dcf3988642229c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067187"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938908"
 ---
 # <a name="configure-in-memory-or-directquery-access-for-a-tabular-model-database"></a>为表格模型数据库配置内存中或 DirectQuery 访问
   本主题介绍如何更改已部署的表格模型的连接属性，以便能在直接查询模式下使用模型。  
@@ -23,7 +22,7 @@ ms.locfileid: "66067187"
  有关这些属性以及最常见方案的配置的详细信息，请参阅[DirectQuery 部署方案 &#40;SSAS 表格&#41;](../directquery-deployment-scenarios-ssas-tabular.md)。  
   
 ## <a name="requirements"></a>要求  
- 允许在表格模型中使用直接查询模式是一个多步骤过程。 必须：  
+ 允许在表格模型中使用直接查询模式是一个多步骤过程。 必须具备以下条件：  
   
 1.  确保该模型具有的功能不会导致直接查询模式中出现验证错误。  
   

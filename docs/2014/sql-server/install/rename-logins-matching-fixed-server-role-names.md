@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 10a1d77c-3153-474f-a6a0-969556794467
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: df9d9e51846e286c67a4773823207524755d15dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 296ae4d4051e79e3c5d3bc158ef3e87c9164ecd3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278213"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059087"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>重命名与固定服务器角色名称匹配的登录名
   升级顾问检测到有一个或多个用户定义的登录名与固定服务器角色的名称匹配。 固定服务器角色名称是保留名称。 请在升级前重命名相应登录名。  
@@ -60,7 +59,7 @@ ms.locfileid: "72278213"
   
 2.  删除登录名。  
   
-3.  使用**sp_addlogin**系统过程创建新登录名。 为每个相应的登录名指定** \@sid**参数的步骤1中返回的 sid。  
+3.  使用**sp_addlogin**系统过程创建新登录名。 为每个相应的登录名指定** \@ sid**参数的步骤1中返回的 sid。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

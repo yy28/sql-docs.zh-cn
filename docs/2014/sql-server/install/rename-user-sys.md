@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d622d646-83e4-4b6f-9a21-77b301af04b5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ce8656df63c9d415ca09b54ecb86b87aba8bd83a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3af9d31a54adc5645cab6fcc7104ae7ff27a61b6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092863"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059098"
 ---
 # <a name="rename-user-sys"></a>重命名 sys 用户
   升级顾问检测到数据库中的用户名为**sys** 。 该名称为保留名称。 在升级之前，请重命名该用户。 如果未重命名该用户，则数据库在升级过程结束之后将处于可疑状态并且将不可用，直至将数据库联机为止。  
@@ -55,11 +54,11 @@ ms.locfileid: "66092863"
 ### <a name="after-upgrade-procedure"></a>升级后的步骤  
  如果在升级之前未重命名用户**sys** ，请执行以下操作：  
   
-1.  执行语句`ALTER DATABASE db_name SET ONLINE`。 数据库将处于 SINGLE_USER 模式。  
+1.  执行语句 `ALTER DATABASE db_name SET ONLINE` 。 数据库将处于 SINGLE_USER 模式。  
   
 2.  执行“升级前的步骤”部分中的所有步骤。  
   
-3.  执行语句`ALTER DATABASE db_name SET MULTI_USER`。  
+3.  执行语句 `ALTER DATABASE db_name SET MULTI_USER` 。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据库引擎升级问题](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

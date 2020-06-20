@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ede9b86-be27-471e-b012-22a65adce579
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e31e64226d826db1ac41d3411a542d4eac281ad1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 41a5d4530be6250795e083726df59acbd2f7f7aa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890777"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939138"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>数据挖掘查询任务编辑器（“挖掘模型”选项卡）
   可以使用 **“数据挖掘查询任务”** 对话框的 **“挖掘模型”** 选项卡指定要使用的挖掘结构和挖掘模型。  
@@ -37,7 +36,7 @@ ms.locfileid: "68890777"
  键入数据挖掘查询任务的说明。  
   
 ## <a name="mining-model-tab-options"></a>挖掘模型选项卡选项  
- **连接**  
+ **Connection**  
  从列表中选择 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 连接管理器，或单击****“新建”创建新的连接管理器。  
   
  **相关主题：**  [Analysis Services 连接管理器](connection-manager/analysis-services-connection-manager.md)  

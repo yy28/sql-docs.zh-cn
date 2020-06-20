@@ -8,16 +8,15 @@ f1_keywords:
 ms.assetid: 661595ce-99b9-4316-ad80-ed04002d04d5
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
-ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b6ab8cc3c788e27946ddb68a3c926e8f926ebd7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71199323"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034918"
 ---
 # <a name="query-options-execution-advanced-page"></a>“查询选项”中的“执行”（“高级”页）
 
@@ -29,9 +28,9 @@ ms.locfileid: "71199323"
 
 **设置 PARSEONLY**检查每个查询的语法，但不运行查询。 默认情况下，此选项处于未选中状态。  
 
-**设置 CONCAT_NULL_YIELDS_NULL**选中此复选框时，将现有值与`NULL`连接的查询将始终返回`NULL`作为结果。 清除此复选框时，对于现有值与 `NULL` 相串联的查询，将返回该现有值。 默认情况下选择此选项。
+**设置 CONCAT_NULL_YIELDS_NULL**选中此复选框时，将现有值与连接的查询将 `NULL` 始终返回 `NULL` 作为结果。 清除此复选框时，对于现有值与 `NULL` 相串联的查询，将返回该现有值。 默认情况下选择此选项。
 
-**设置 ARITHABORT**选中此复选框后，当`INSERT`、 `DELETE`或`UPDATE`语句在表达式计算过程中遇到算术错误（溢出、被零除或域错误）时，将终止查询或批处理。 清除此复选框时，会在可能的情况下为该值提供 `NULL`，查询将继续进行，而结果中还会包含一条消息。 有关此行为的详细说明，请参阅联机丛书。 默认情况下选择此选项。
+**设置 ARITHABORT**选中此复选框后，当 `INSERT` 、 `DELETE` 或语句在 `UPDATE` 表达式计算过程中遇到算术错误（溢出、被零除或域错误）时，将终止查询或批处理。 清除此复选框时，会在可能的情况下为该值提供 `NULL`，查询将继续进行，而结果中还会包含一条消息。 有关此行为的详细说明，请参阅联机丛书。 默认情况下选择此选项。
   
 **设置 SHOWPLAN_TEXT**选中此复选框时，将以文本形式返回每个查询的查询计划。 默认情况下，此选项处于未选中状态。
   

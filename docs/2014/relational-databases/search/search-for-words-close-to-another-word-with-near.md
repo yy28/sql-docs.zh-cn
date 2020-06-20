@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fadff7e68404ffae528cb4630e1f6c4b8156ccc0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c2d187ea3ed951ac6f17eb4babc5f4f77451d4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011069"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003995"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>使用 NEAR 搜索与另一个词邻近的词
-  可以在 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 谓词或 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 函数中使用邻近词 (NEAR) 来搜索相互邻近的字词或短语。 还可以指定在第一个搜索词与最后一个搜索之间最多可以有几个非搜索词。 此外，可以按任意顺序或您指定的顺序搜索词或短语。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]同时支持以前的[通用邻近词](#Generic_NEAR)（现已不推荐使用）和[自定义邻近词](#Custom_NEAR)，这是中[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]的新术语。  
+  可以在 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 谓词或 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 函数中使用邻近词 (NEAR) 来搜索相互邻近的字词或短语。 还可以指定在第一个搜索词与最后一个搜索之间最多可以有几个非搜索词。 此外，可以按任意顺序或您指定的顺序搜索词或短语。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]同时支持以前的[通用邻近词](#Generic_NEAR)（现已不推荐使用）和[自定义邻近词](#Custom_NEAR)，这是中的新术语 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 。  
   
 ##  <a name="the-custom-proximity-term"></a><a name="Custom_NEAR"></a>自定义邻近词  
  自定义邻近词引入了下列新功能：  
@@ -184,7 +183,7 @@ CONTAINSTABLE (Production.ProductDescription,
 )  
 ```  
   
- 不能将通用邻近词与自定义邻近词（如`NEAR((term1,term2),5)`加权术语（ISABOUT）或代词（FORMSOF ...））组合。  
+ 不能将通用邻近词与自定义邻近词（如 `NEAR((term1,term2),5)` 加权术语（ISABOUT）或代词（FORMSOF ...））组合。  
   
 ### <a name="example-using-the-generic-proximity-term"></a>示例： 使用通用邻近词  
  下面的示例使用通用邻近词在一个有字词“bracket”的文档中搜索字词“reflector”。  

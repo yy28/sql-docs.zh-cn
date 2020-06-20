@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5a0a1527ed97570c715ff383837ebd5a9d5a3354
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7f6e8bda35964b03bf171ac62db7ff3119aa6e1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066702"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938688"
 ---
 # <a name="relationships-ssas-tabular"></a>关系（SSAS 表格）
   在表格模型中，关系是两个数据表之间的连接。 该关系确立两个表中的数据应该如何相关。 例如，Customers 表和 Orders 表可以彼此相关，以便显示与每个订单关联的客户名称。  
@@ -43,7 +42,7 @@ ms.locfileid: "66066702"
   
 -   [相关任务](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="what"></a>便利  
+##  <a name="benefits"></a><a name="what"></a> 优势  
  关系是两个数据表之间的连接，它基于每个表中的一列或多列。 要理解关系为何有用，可以想像一下在业务中跟踪客户订单数据。 可以在具有以下结构的一个表中跟踪所有数据：  
   
 |CustomerID|名称|EMail|DiscountRate|OrderID|OrderDate|Products|数量|  
@@ -112,7 +111,7 @@ ms.locfileid: "66066702"
 ### <a name="single-active-relationship-between-tables"></a>表之间的单个活动关系  
  多个关系会导致表之间存在不明确的依赖关系。 若要创建准确的计算，需要从一个表到下一个表的单一路径。 因此，每对表之间只能存在一个活动关系。 例如，在 AdventureWorks DW 2012 中，表 DimDate 包含一个列 DateKey，该列与表 FactInternetSales 中的以下三个不同列相关：OrderDate、DueDate 和 ShipDate。 如果您试图导入这些表，则会成功创建第一个关系，但是在创建涉及相同列的后续关系时会接收到下面的错误：  
   
- \*关系：表 [列 1]-> 表 [列 2]-状态：错误-原因：无法在表\<表 1> 与\<表 2> 之间创建关系。 在两个表之间只能存在一个直接或间接关系。  
+ \*关系：表 [列 1]-> 表 [列 2]-状态：错误-原因：在表和之间无法创建关系 \<table 1> \<table 2> 。 在两个表之间只能存在一个直接或间接关系。  
   
  如果您有两个表并且这两个表之间存在多个关系，则需要导入包含查找列的表的多个副本，并在每对表之间创建一个关系。  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 53d7eeea-927d-4b45-8ea9-084e65ad5390
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa9df7d84a793c6825ba82b22c3b0cf567f42c3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc318c3278f7f86aa4946380daffa0652882c0fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060819"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921878"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>在数据流组件中配置错误输出
   很多数据流组件支持错误输出，根据组件的不同， [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器提供几种不同的错误输出配置方法。 除了配置错误输出外，您还可以配置错误输出的列。 其中包括配置由该组件添加的 **ErrorCode** 和 **ErrorColumn** 列。  
@@ -65,7 +64,7 @@ ms.locfileid: "66060819"
   
 6.  为每列设置 **“截断”** 选项。  
   
-7.  单击" **确定**"。  
+7.  单击“确定”。  
   
 8.  若要保存已更新的包，请在 **“文件”** 菜单中单击 **“保存选定项”**。  
   
@@ -82,14 +81,14 @@ ms.locfileid: "66060819"
   
 4.  右键单击要配置其错误输出列的组件，再单击“显示高级编辑器”****。  
   
-5.  单击 "**输入和输出属性**" 选项卡，展开** \<"组件名称> 错误输出**"，然后展开 "**输出列**"。  
+5.  单击 "**输入和输出属性**" 选项卡，展开 " ** \<component name> 错误输出**"，然后展开 "**输出列**"。  
   
 6.  单击某列，然后更新其属性。  
   
     > [!NOTE]  
     >   列的列表中包括组件输入中的列、由以前的错误输出添加的 **ErrorCode** 和 **ErrorColumn** 列，以及由此组件添加的 **ErrorCode** 和 **ErrorColumn** 列。  
   
-7.  单击“确定”****。  
+7.  单击“确定”   
   
 8.  若要保存已更新的包，请在 **“文件”** 菜单中单击 **“保存选定项”**。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 55f4bd55-aa61-4d5c-98fd-f85824206ea0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a8be48dd3895f669aad8d1ed5af7be578ba23b9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a9b09cf787d2d1519ef5b46a22d7424e12869909
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245704"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058759"
 ---
 # <a name="sql-server-agent-f1-help"></a>SQL Server 代理的 F1 帮助
   本节包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的 F1 帮助。 按 F1 键或在对话框中单击“帮助”即可从用户界面中查看这些主题。  
