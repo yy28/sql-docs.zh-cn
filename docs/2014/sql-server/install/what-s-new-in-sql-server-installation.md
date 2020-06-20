@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c8642a96-3a09-4ec7-a9c3-c539147e6330
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c48c3aac77d845fba9df72819bc0503eca337ce9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d34085e320cd8ca0b82d382d6d49eaa303086114
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68190047"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065068"
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>SQL Server 安装中的新增功能
   Windows Vista 不是 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的支持的操作系统。 Service Pack 1 仍将作为针对 [!INCLUDE[win7](../../includes/win7-md.md)] 和 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 操作系统的最低要求。 有关操作系统要求的详细信息，请参阅[安装 SQL Server 2014 的硬件和软件要求](hardware-and-software-requirements-for-installing-sql-server.md)。  
@@ -30,7 +29,7 @@ ms.locfileid: "68190047"
   
  支持从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 升级，但是不支持并行升级。 有关 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]支持的详细信息，请参阅 [支持的版本升级](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。  
   
- 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始，Standard 版本中的数据库引擎具有 128 GB 内存容量。 在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中，标准版中的数据库引擎的内存容量为 64 GB。  
+ 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始，Standard 版本中的数据库引擎具有 128 GB 内存容量。 在中 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ，标准版中的数据库引擎的内存容量为 64 GB。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 2014 的新增功能](../what-s-new-in-sql-server-2016.md)   
