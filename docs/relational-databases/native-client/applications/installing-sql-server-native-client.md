@@ -1,5 +1,6 @@
 ---
 title: 安装
+description: SQL Server Native Client 11.0 随 SQL Server 2016 一起安装。 了解组件的安装位置。 还有一个可再发行的安装程序。
 ms.custom: ''
 ms.date: 07/15/2016
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - removing SQL Server Native Client
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77d5bcf0d1000b0ceee182ba043f81b4c1221ae8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6ecaaa2abcc65c24519a1d078bb5792b4cd8173
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388227"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965168"
 ---
 # <a name="installing-sql-server-native-client"></a>安装 SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "81388227"
  
  没有 SQL Server 2016 Native Client。 有关详细信息，请参阅 [SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client.md)。 
  
-你还可以从 SQL Server 2012 功能包网页获取 sqlncli.msi。 若要下载最新版本的 SQL Server Native Client，请参阅[Microsoft® SQL Server®2012功能包](https://www.microsoft.com/download/confirmation.aspx?id=29065)。 如果计算机上还安装[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]了早于 SQL Server 2012 以前版本的 native client， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]则 native client 11.0 将与早期版本并行安装。  
+你还可以从 SQL Server 2012 功能包网页获取 sqlncli.msi。 若要下载最新版本的 SQL Server Native Client，请参阅[Microsoft® SQL Server®2012功能包](https://www.microsoft.com/download/confirmation.aspx?id=29065)。 如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 计算机上还安装了早于 SQL Server 2012 以前版本的 Native client，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client 11.0 将与早期版本并行安装。  
   
   Native Client 文件（sqlncli11.dll、sqlnclir11.rll 和 s11ch_sqlncli.chm）将安装到以下位置：  
   
@@ -55,7 +56,7 @@ ms.locfileid: "81388227"
   
  sqlncli.msi 的 x64 和 Itanium 版本也会安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的 32 位版。 如果您的应用程序所针对的目标平台并非其开发时所使用的平台，则可以从 Microsoft 下载中心下载针对 x64、Itanium 和 x86 的 sqlncli.msi 版本。  
   
- 在调用 sqlncli.msi 时，默认情况下只会安装客户端组件。 客户端组件是支持运行使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native client 开发的应用程序的文件。 若还要安装 SDK 组件，请在命令行中指定 `ADDLOCAL=All`。 例如：  
+ 在调用 sqlncli.msi 时，默认情况下只会安装客户端组件。 客户端组件是支持运行使用 Native Client 开发的应用程序的文件 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。 若还要安装 SDK 组件，请在命令行中指定 `ADDLOCAL=All`。 例如：  
   
  `msiexec /i sqlncli.msi ADDLOCAL=ALL APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
   
@@ -63,7 +64,7 @@ ms.locfileid: "81388227"
  如果您将 /passive、/qn、/qb 或 /qr 选项与 msiexec 一起使用，则必须还指定 IACCEPTSQLNCLILICENSETERMS=YES，以便显式指示您接受最终用户许可协议条款。 必须以全大写字母指定此选项。  
   
 ## <a name="uninstalling-sql-server-native-client"></a>卸载 SQL Server Native Client  
- 由于[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服务器和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]工具等应用程序依赖于[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native client，因此在卸载所有从属应用程序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]之前，不要卸载 Native client。 若要向用户提供应用程序依赖于[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的警告，请使用 MSI 中的 APPGUID 安装选项，如下所示：  
+ 由于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务器和工具等应用程序 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 依赖于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native client，因此在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 卸载所有从属应用程序之前，不要卸载 Native client。 若要向用户提供应用程序依赖于 Native Client 的警告， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 请使用 MSI 中的 APPGUID 安装选项，如下所示：  
   
  `msiexec /i sqlncli.msi APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
   

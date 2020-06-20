@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b614422d3670dc30e0714b18bbf42ed87f1886af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 309cd3f67cb6fd4d41e3513aa6d3876af53bbc1b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483270"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971737"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box-master-data-services-configuration-manager"></a>“创建数据库邮件配置文件和帐户”对话框（主数据服务配置管理器）
   使用 **“创建数据库邮件配置文件和帐户”** 对话框可为 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库创建数据库邮件配置文件和数据库邮件帐户。 此配置文件将用于在业务规则验证失败时通过电子邮件通知用户和组。  
   
 ## <a name="database-mail-profile-and-account"></a>数据库邮件配置文件和帐户  
- *数据库邮件配置文件*是数据库邮件帐户的集合。 *数据库邮件帐户*包含用于将电子邮件[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]发送到 SMTP 服务器的信息。 当您在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中创建配置文件和帐户时，帐户将自动添加到配置文件，并且帐户信息将用于发送电子邮件。  
+ *数据库邮件配置文件*是数据库邮件帐户的集合。 *数据库邮件帐户*包含用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将电子邮件发送到 SMTP 服务器的信息。 当您在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中创建配置文件和帐户时，帐户将自动添加到配置文件，并且帐户信息将用于发送电子邮件。  
   
 > [!NOTE]  
 >  您不能使用 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 更新现有的数据库邮件配置文件或帐户，也不能为某一配置文件配置多个帐户。 若要使用数据库邮件执行更高级的任务，可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 脚本。 有关详细信息，请参阅 SQL Server 联机丛书中的 [Database Mail Configuration Objects](../relational-databases/database-mail/database-mail-configuration-objects.md) 部分。  
@@ -37,10 +36,10 @@ ms.locfileid: "65483270"
   
 |控件名称|说明|  
 |------------------|-----------------|  
-|**电子邮件地址**|键入帐户电子邮件地址的名称。 这是从其发送电子邮件的电子邮件地址，必须采用*email_name*@*domain_name*格式。 电子邮件地址示例为 sales@contoso.com。|  
+|**电子邮件地址**|键入帐户电子邮件地址的名称。 这是从其发送电子邮件的电子邮件地址，必须采用*email_name* @ *domain_name*格式。 电子邮件地址示例为 sales@contoso.com。|  
 |**显示名称**|可选设置。 键入由此帐户发送的电子邮件上显示的名称。 显示名称的一个例子是 Contoso Sales Group。|  
 |**答复电子邮件地址**|可选设置。 键入用于答复由此帐户发送的电子邮件的电子邮件地址。 一个示例答复电子邮件地址为 admin@contoso.com。|  
-|**SMTP 服务器**|键入此帐户发送电子邮件所用的 SMTP 服务器的名称或 IP 地址。 SMTP 服务器格式`smtp.`的示例 *<company_name>* `.com`。 如需相关帮助，请询问您的邮件管理员。|  
+|**SMTP 服务器**|键入此帐户发送电子邮件所用的 SMTP 服务器的名称或 IP 地址。 SMTP 服务器格式的示例 `smtp.` *<company_name>* `.com` 。 如需相关帮助，请询问您的邮件管理员。|  
 |**端口号**|键入此帐户的 SMTP 服务器的端口号。 默认 SMTP 端口为 25。|  
 |**此服务器要求安全连接(SSL)**|使用安全套接字层 (SSL) 加密通信。|  
   
@@ -49,7 +48,7 @@ ms.locfileid: "65483270"
   
 |控件名称|说明|  
 |------------------|-----------------|  
-|**使用数据库引擎服务凭据的 Windows 身份验证**|指定数据库邮件应该使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] Windows 服务帐户的凭据在 SMTP 服务器上进行身份验证。|  
+|**使用数据库引擎服务凭据的 Windows 身份验证**|指定数据库邮件应该使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] Windows 服务帐户的凭据在 SMTP 服务器上进行身份验证。|  
 |**基本身份验证**|指定数据库邮件应使用特定的用户名和密码在 SMTP 服务器上进行身份验证。 此信息仅用于针对电子邮件服务器的身份验证，并且帐户不需要与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用户或者运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的计算机上的用户相对应。|  
 |**用户名**|键入数据库邮件登录到 SMTP 服务器所用的用户帐户的名称。 如果 SMTP 服务器要求基本身份验证，则需要提供用户名。|  
 |**密码**|键入数据库邮件登录到 SMTP 服务器所用的密码。 如果 SMTP 服务器要求基本身份验证，则需要提供密码。|  

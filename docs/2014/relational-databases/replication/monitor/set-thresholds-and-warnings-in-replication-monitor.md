@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ff3e97a3a784bc61a20de9c65a4381c81078480
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667180"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060809"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>在复制监视器中设置阈值和警告
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]复制监视器显示发布和订阅的状态信息。 默认情况下，复制监视器只为未初始化的订阅显示警告，但是，您可以为其他情况启用警告。 建议您对拓扑启用警告，以便及时获悉有关状态和性能的信息。  
@@ -85,7 +84,7 @@ ms.locfileid: "62667180"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  单击 **“关闭”** 。  
+5.  单击“关闭” 。  
   
 ##  <a name="set-thresholds-and-warnings-for-a-merge-publication"></a><a name="Merge"></a>为合并发布设置阈值和警告  
   
@@ -127,7 +126,7 @@ ms.locfileid: "62667180"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  单击 **“关闭”** 。  
+5.  单击“关闭” 。  
   
 ##  <a name="set-thresholds-and-warnings-for-a-snapshot-publication"></a><a name="Snapshot"></a> 为快照发布设置阈值和警告  
   
@@ -159,7 +158,7 @@ ms.locfileid: "62667180"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  单击 **“关闭”** 。  
+5.  单击“关闭” 。  
   
 ## <a name="see-also"></a>另请参阅  
  [监视复制](../monitoring-replication.md)  

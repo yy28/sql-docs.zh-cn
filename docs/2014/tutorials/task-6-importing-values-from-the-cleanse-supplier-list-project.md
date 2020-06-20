@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fec0deef-a729-4ff1-b709-72d2b3f407ac
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f6b90a36238cd4a02e86d49125ee662f07d32882
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb3e7a85254cac96b8b8541de57b494e96b8928f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489093"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061065"
 ---
 # <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>任务 6：从 Cleanse Supplier List 项目导入值
   在该任务中，您将导入在清理过程中收集的数据质量知识。 有关更多详细信息，请参阅[将清理项目值导入到域](https://msdn.microsoft.com/library/hh479581.aspx)主题。 您还可以在发布更新的**供应商**知识库之前，将知识库导出到 DQS 文件中。  
@@ -32,14 +31,14 @@ ms.locfileid: "65489093"
   
 5.  注意，此时将导入所有电子邮件以及您在交互式清理过程中所做的两处更正内容。 滚动以查看这两处更正内容。  
   
-    |Value|更正为|  
+    |值|更正为|  
     |-----------|----------------|  
     |bobby0@adventure-work.com|bobby0@adventure-works.com|  
     |tad0@adventure-work.com|tad0@adventure-works.com|  
   
 6.  重复前面的步骤，为**Country**域导入项目值，并注意添加了一个新条目，以将**美国**更正为**美国**（包含 ""）。  
   
-    |Value|更正为|  
+    |值|更正为|  
     |-----------|----------------|  
     |United State|United States|  
   
@@ -60,11 +59,11 @@ ms.locfileid: "65489093"
   
 12. 单击 "**完成**" 完成活动。  
   
-13. 单击“发布”****。  
+13. 单击“发布” 。  
   
 14. 在消息框中单击 **"确定"** 。  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
  [第 3 课：匹配数据以便从供应商列表中删除重复项](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)  
   
   

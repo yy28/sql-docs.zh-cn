@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f9c04c03c08f118314dc96c8b491e61be317f40c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e784216116bdb9ab308dff5fa998740b0fa459b0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62691597"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060581"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-management-studio"></a>创建事务发布的可更新订阅 (Management Studio)
 
@@ -116,7 +115,7 @@ ms.locfileid: "62691597"
     * `1` - 在连接到发布服务器时，使用在订阅服务器上执行更改的用户的安全上下文。 请参阅 [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) ，了解与此安全模式相关的限制。
     * `2`-使用通过[sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)创建的、用户定义的现有链接服务器登录名。
 
-6. 在发布服务器上， [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)执行 sp_addsubscription `@publication`将`@subscriber`、 `@destination_db`、、的值指定为`@subscription_type`，并为在步骤3中指定相同的`@update_mode`值。
+6. 在发布服务器上， [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)执行 sp_addsubscription `@publication` 将、、、的值指定为 `@subscriber` `@destination_db` `@subscription_type` ，并为在步骤3中指定相同的值 `@update_mode` 。
 
 这会在发布服务器上注册请求订阅。 
 
@@ -190,7 +189,7 @@ ms.locfileid: "62691597"
     * （可选） `0` 的值 `@distributor_security_mode` ，以及 SQL Server 登录信息 `@distributor_login` 和 `@distributor_password`（如果在连接到分发服务器时需要使用 SQL Server 身份验证）。 
     * 该订阅的分发代理作业计划。
 
-5. 在发布服务器上，执行[sp_addsubscriber](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql)以在发布服务器上注册订阅服务器`@publication`， `@subscriber`并`@destination_db`将、、、的值`@subscription_type`请求指定给，并为指定在步骤 3 `@update_mode`中指定的相同值。
+5. 在发布服务器上，执行[sp_addsubscriber](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql)以在发布服务器上注册订阅服务器， `@publication` 并将、、、的值请求指定给 `@subscriber` `@destination_db` `@subscription_type` ，并为指定在步骤3中指定的相同值 `@update_mode` 。
 
 这会在发布服务器上注册请求订阅。 
 
@@ -299,11 +298,11 @@ GO
 ```
 
 ## <a name="set-queued-updating-conflict-resolution-options-sql-server-management-studio"></a>设置排队更新冲突解决选项 (SQL Server Management Studio)
-  在“发布属性 - \<发布>”**** 对话框的“订阅选项”**** 页上，为支持排队更新订阅的发布设置冲突解决选项。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](view-and-modify-publication-properties.md)。  
+  在 "**发布属性- \<Publication> ** " 对话框的 "**订阅选项**" 页上，为支持排队更新订阅的发布设置冲突解决选项。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](view-and-modify-publication-properties.md)。  
   
 ### <a name="to-set-queued-updating-conflict-resolution-options"></a>设置排队更新冲突解决选项  
   
-1.  在“发布属性 - \<发布>”**** 对话框的“订阅选项”**** 页上，为“冲突解决策略”**** 选项选择以下值之一：    
+1.  在 "**发布属性- \<Publication> ** " 对话框的 "**订阅选项**" 页上，为 "**冲突解决策略**" 选项选择以下值之一：    
     -   **保留发布服务器更改**    
     -   **保留订阅服务器更改**    
     -   **重新初始化订阅**    

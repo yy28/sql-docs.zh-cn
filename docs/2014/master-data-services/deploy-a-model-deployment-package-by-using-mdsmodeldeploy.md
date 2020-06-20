@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 81c87a7990c6c7125cbccbe99050cd5ee477e6d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e6229b3edebb8800de642272c9aa2adc0ea907f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483075"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971590"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 部署模型部署包
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，使用 MDSModelDeploy 工具来部署包含以下任一信息的包：  
@@ -29,7 +28,7 @@ ms.locfileid: "65483075"
 > [!IMPORTANT]  
 >  包只能部署到创建它们的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中。 这意味着在 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中创建的包不能部署到 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 或更高版本。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问目标 **环境中的** “系统管理” [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 功能区域。  
@@ -46,7 +45,7 @@ ms.locfileid: "65483075"
   
 2.  打开命令提示符，然后导航到 MDSModelDeploy.exe。  
   
-    -   如果 MDS 安装在默认位置，则该工具位于*驱动器*： \PROGRAM Files\Microsoft SQL Server\120\Master Data services\configuration\mdsmodeldeploy.exe。  
+    -   如果 MDS 安装在默认位置，则该工具位于*驱动器*： \PROGRAM Files\Microsoft SQL Server\120\Master Data Services\Configuration\MDSModelDeploy.exe  
   
     -   如果 MDS 未安装在默认位置，请在本地计算机上搜索 MDSModelDeploy.exe。  
   
@@ -110,7 +109,7 @@ ms.locfileid: "65483075"
      在更新某一模型时，如果该过程在前三个步骤中失败，则该过程将不会继续；但是，已进行的更改将不会回滚。 如果该过程在步骤 4 中失败，则会更新可更新的成员。  
   
 ## <a name="next-steps"></a>后续步骤  
- 在模型部署包中不包括用户定义元数据、文件属性以及用户和组权限。 在您部署模型后，必须手动更新这些内容。 有关详细信息，请参见:  
+ 在模型部署包中不包括用户定义元数据、文件属性以及用户和组权限。 在您部署模型后，必须手动更新这些内容。 有关详细信息，请参阅：  
   
 -   [Master Data Services&#41;添加元数据 &#40;](../../2014/master-data-services/add-metadata-master-data-services.md)  
   

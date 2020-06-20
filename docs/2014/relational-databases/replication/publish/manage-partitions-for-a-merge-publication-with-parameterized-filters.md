@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a71ac4d6bcc887257ea5bfbc1523e327fc03b16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 983b02865c0564919259f896bf09d8bdb0cd969f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74479308"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060504"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>通过参数化筛选器为合并发布管理分区
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中通过参数化筛选器为合并发布管理分区。 参数化行筛选器可用于生成不重叠的分区。 可以限制这些分区，以便只有一个订阅接收到给定分区。 在这类情况下，大量订阅服务器将导致大量的分区，从而需要同等数量的分区快照。 有关详细信息，请参阅 [参数化行筛选器](../merge/parameterized-filters-parameterized-row-filters.md)。  
@@ -47,11 +46,11 @@ ms.locfileid: "74479308"
 -   如果发布具有的参数化筛选器可生成带有非重叠分区的订阅，并且如果特定订阅丢失并需要重新创建，则您必须执行以下操作：删除曾订阅的分区，重新创建订阅，然后重新创建该分区。 有关详细信息，请参阅 [参数化行筛选器](../merge/parameterized-filters-parameterized-row-filters.md)。 生成发布创建脚本时，复制会为现有订阅服务器分区生成创建脚本。 有关详细信息，请参阅 [Scripting Replication](../scripting-replication.md)。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 可在“发布属性 - \<发布>”对话框的“数据分区”页上管理分区。******** 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](view-and-modify-publication-properties.md)。 在此页上，可以执行下列操作：创建和删除分区、允许订阅服务器启动快照的生成和传递、生成一个或多个分区的快照和清除快照。  
+ 在 "**发布属性- \<Publication> ** " 对话框的 "**数据分区**" 页上管理分区。 有关访问此对话框的详细信息，请参阅 [View and Modify Publication Properties](view-and-modify-publication-properties.md)。 在此页上，可以执行下列操作：创建和删除分区、允许订阅服务器启动快照的生成和传递、生成一个或多个分区的快照和清除快照。  
   
 #### <a name="to-create-a-partition"></a>创建分区  
   
-1.  在“发布属性 - \<发布>”对话框的“数据分区”页上，单击“添加”。************  
+1.  在 "**发布属性- \<Publication> ** " 对话框的 "**数据分区**" 页上，单击 "**添加**"。  
   
 2.  在 **“添加数据分区”** 对话框中，输入与要创建的分区相关联的 **HOST_NAME()** 和/或 **SUSER_SNAME()** 的值。  
   
@@ -100,25 +99,25 @@ ms.locfileid: "74479308"
   
 #### <a name="to-view-information-on-existing-partitions"></a>查看有关现有分区的信息  
   
-1.  在发布服务器上，对发布数据库执行 [sp_helpmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql)。 指定** \@发布的名称。** 可有可无指定** \@suser_sname**或** \@host_name**以仅基于单个筛选条件返回信息。  
+1.  在发布服务器上，对发布数据库执行 [sp_helpmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql)。 指定** \@ 发布的名称。** 可有可无指定** \@ suser_sname**或** \@ host_name**以仅基于单个筛选条件返回信息。  
   
 #### <a name="to-define-a-new-partition-and-generate-a-new-partitioned-snapshot"></a>定义新分区并生成新分区快照  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql)。 指定发布的** \@发布名称，并**为以下各项之一指定用于定义分区的参数化值：  
+1.  在发布服务器上，对发布数据库执行 [sp_addmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql)。 指定发布的发布名称，并为以下各项之一** \@ 指定用于定义**分区的参数化值：  
   
-    -   suser_sname-参数化筛选器由[SUSER_SNAME &#40;transact-sql&#41;](/sql/t-sql/functions/suser-sname-transact-sql)返回的值定义时。 ** \@**  
+    -   ** \@ suser_sname** -参数化筛选器由[SUSER_SNAME &#40;transact-sql&#41;](/sql/t-sql/functions/suser-sname-transact-sql)返回的值定义时。  
   
-    -   host_name-参数化筛选器由[HOST_NAME &#40;transact-sql&#41;](/sql/t-sql/functions/host-name-transact-sql)返回的值定义时。 ** \@**  
+    -   ** \@ host_name** -参数化筛选器由[HOST_NAME &#40;transact-sql&#41;](/sql/t-sql/functions/host-name-transact-sql)返回的值定义时。  
   
 2.  创建并初始化此新分区的参数化快照。 有关详细信息，请参阅 [为包含参数化筛选器的合并发布创建快照](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
 #### <a name="to-delete-a-partition"></a>删除分区  
   
-1.  在发布服务器上，对发布数据库执行 [sp_dropmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql)。 指定发布** \@的发布名称，并为**以下各项之一指定用于定义分区的参数化值：  
+1.  在发布服务器上，对发布数据库执行 [sp_dropmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql)。 指定发布** \@ 的发布名称，并为**以下各项之一指定用于定义分区的参数化值：  
   
-    -   suser_sname-参数化筛选器由[SUSER_SNAME &#40;transact-sql&#41;](/sql/t-sql/functions/suser-sname-transact-sql)返回的值定义时。 ** \@**  
+    -   ** \@ suser_sname** -参数化筛选器由[SUSER_SNAME &#40;transact-sql&#41;](/sql/t-sql/functions/suser-sname-transact-sql)返回的值定义时。  
   
-    -   host_name-参数化筛选器由[HOST_NAME &#40;transact-sql&#41;](/sql/t-sql/functions/host-name-transact-sql)返回的值定义时。 ** \@**  
+    -   ** \@ host_name** -参数化筛选器由[HOST_NAME &#40;transact-sql&#41;](/sql/t-sql/functions/host-name-transact-sql)返回的值定义时。  
   
      此操作还将删除快照作业以及该分区的任何快照文件。  
   
@@ -135,7 +134,7 @@ ms.locfileid: "74479308"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  创建的 <xref:Microsoft.SqlServer.Replication.MergePublication> 类的实例。 设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.MergePublication> 类的一个实例。 设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回 `false`，则说明步骤 2 中的发布属性定义不正确，或者此发布不存在。  
   
@@ -147,7 +146,7 @@ ms.locfileid: "74479308"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  创建的 <xref:Microsoft.SqlServer.Replication.MergePublication> 类的实例。 设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.MergePublication> 类的一个实例。 设置发布的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 属性，并将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该对象的属性。 如果此方法返回 `false`，则说明步骤 2 中的发布属性定义不正确，或者此发布不存在。  
   

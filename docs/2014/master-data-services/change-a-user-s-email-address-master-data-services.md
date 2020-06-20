@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1d540c414b1190a045fdb18b4b971e73f348459f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6438291ca0d84bfd88c80f490022ebd4dd96ede9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483584"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972077"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>更改用户的电子邮件地址 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以更改通知将发送到的电子邮件地址以及通知电子邮件的默认格式。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“用户和组”** 功能区域。  
@@ -39,7 +38,7 @@ ms.locfileid: "65483584"
   
 5.  更新电子邮件地址或电子邮件格式。  
   
-6.  单击“保存”  。  
+6.  单击“ **保存**”。  
   
 ## <a name="next-steps"></a>后续步骤  
   

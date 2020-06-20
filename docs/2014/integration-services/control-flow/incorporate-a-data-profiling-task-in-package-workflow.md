@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5d8096ee89a9c0b63c89849a02317dc23b2b130e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 969f7d7fb40f4fc40c3735f73699effe9803bbf5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831608"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918827"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>合并包工作流中的数据事件探查任务
   数据事件探查和清除在其早期阶段不适合作为自动过程。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中，通常需要对数据事件探查任务的输出进行直观的分析和人为判断，以确定报告的冲突是有意义还是过多。 即使在确认了数据质量问题之后，仍然需要通过周详的计划来确定执行清除的最佳方法。  
@@ -85,7 +84,7 @@ ms.locfileid: "62831608"
   
 2.  向该包添加一个 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器。 对此连接管理器进行配置，以使用 NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) 并连接到 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的可用实例。  
   
-     默认情况下，该连接管理器的名称为：\<服务器名称>.AdventureWorks1。  
+     默认情况下，该连接管理器具有以下名称： \<server name> 。AdventureWorks1.  
   
 3.  向该包添加一个文件连接管理器。 对此连接管理器进行配置，以便为数据事件探查任务创建输出文件。  
   
@@ -102,9 +101,9 @@ ms.locfileid: "62831608"
   
 -   在 **“变量”** 窗口中，添加并配置以下两个包变量：  
   
-    -   为其中一个变量`ProfileConnectionName`输入名称，并将此变量的类型设置为**String**。  
+    -   `ProfileConnectionName`为其中一个变量输入名称，并将此变量的类型设置为**String**。  
   
-    -   为另一个变量`AddressLine2NullRatio`输入名称，并将此变量的类型设置为**Double**。  
+    -   为另一个变量输入名称， `AddressLine2NullRatio` 并将此变量的类型设置为**Double**。  
   
 ### <a name="configure-the-data-profiling-task"></a>配置数据事件探查任务  
  在以下情况下，必须对数据事件探查任务进行配置：  
@@ -142,9 +141,9 @@ ms.locfileid: "62831608"
   
 4.  在 **“脚本”** 页上，选择首选编程语言。 然后，使两个包变量对该脚本可用：  
   
-    1.  对于`ReadOnlyVariables`，请`ProfileConnectionName`选择。  
+    1.  对于 `ReadOnlyVariables` ，请选择 `ProfileConnectionName` 。  
   
-    2.  对于**ReadWriteVariables**，请`AddressLine2NullRatio`选择。  
+    2.  对于**ReadWriteVariables**，请选择 `AddressLine2NullRatio` 。  
   
 5.  选择 **“编辑脚本”** 以打开脚本开发环境。  
   

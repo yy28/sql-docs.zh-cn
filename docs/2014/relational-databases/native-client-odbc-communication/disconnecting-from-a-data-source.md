@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 65b0267d-b2ab-4a59-83f2-436d90cfbf79
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a9dc6aadde75d1d4df797f85c0343bb11083b80f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5db3b83ab65d854f3a4d2182d9a4a1314e097681
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702054"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021062"
 ---
 # <a name="disconnecting-from-a-data-source"></a>与数据源断开连接
   当应用程序使用完数据源后，它将调用**SQLDisconnect**。 **SQLDisconnect**释放在连接上分配的所有语句，并断开驱动程序与数据源的连接。 断开连接后，应用程序可以调用[SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md)来释放连接句柄。 在退出之前，应用程序还会调用**SQLFreeHandle**来释放环境句柄。  

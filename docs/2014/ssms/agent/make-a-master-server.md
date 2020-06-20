@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ca0e79c617db6cc2906ac9225efd92e156699951
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce8e7428aaf8ba459bcf6831988c61da3f192bac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68189139"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008763"
 ---
 # <a name="make-a-master-server"></a>Make a Master Server
   本主题描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 设置主服务器 [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
@@ -48,7 +47,7 @@ ms.locfileid: "68189139"
 ###  <a name="security"></a><a name="Security"></a> Security  
  如果分布式作业的步骤与某个代理相关联，则该作业将在目标服务器上该代理帐户的上下文下运行。 请确保满足以下条件，否则与代理关联的作业步骤将不会从主服务器下载到目标服务器上：  
   
--   主服务器注册表子项**\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<*instance_name*> \sql 服务器 Agent\AllowDownloadedJobsToMatchProxyName** （REG_DWORD）设置为1（true）。 默认情况下，此子项设置为 0 (False)。  
+-   主服务器注册表子项**\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\ < *instance_name*> \sql 服务器 Agent\AllowDownloadedJobsToMatchProxyName** （REG_DWORD）设置为1（true）。 默认情况下，此子项设置为 0 (False)。  
   
 -   目标服务器上已存在与运行作业步骤的主服务器代理帐户同名的代理帐户。  
   
@@ -107,7 +106,7 @@ ms.locfileid: "68189139"
      **添加连接**  
      向目标服务器列表中添加服务器，但不注册该服务器。  
   
-     **连接**  
+     **Connection**  
      更改所选服务器的连接属性。  
   
 5.  从 **“主服务器登录凭据”** 页中，指定是否要在必要时为目标服务器创建新的登录名，并为其分配针对主服务器的权限。  
@@ -123,7 +122,7 @@ ms.locfileid: "68189139"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 本示例将当前服务器登记到 AdventureWorks1 主服务器中。 当前服务器的位置是 Building 21、Room 309、Rack 5。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 本示例将当前服务器登记到 AdventureWorks1 主服务器中。 当前服务器的位置是 Building 21、Room 309、Rack 5。  
   
 ```  
 USE msdb ;  

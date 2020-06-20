@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a8b2131e4c3c2070bb03018c48294543b9baef02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9eb59f03b1526153bec88039a0d619bac8ad6368
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250642"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066977"
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server General Statistics 对象
   **中的** SQLServer:General Statistics [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象提供计数器，用于监视服务器范围内的常规活动，例如，当前的连接数和每秒与运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的计算机连接和断开的用户数。 这在大型联机事务处理 (OLTP) 类型系统（这种系统中有很多客户端与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例连接和断开连接）上工作时会非常有用。  
@@ -46,7 +45,7 @@ ms.locfileid: "63250642"
 |**Temp Tables Creation Rate**|每秒创建的临时表/表变量的数目。|  
 |**Temp Tables For Destruction**|等待被清除系统线程破坏的临时表/表变量数。|  
 |**Trace Event Notifications Queue**|在内部队列中等待通过 Service Broker 发送的跟踪事件通知实例数。|  
-|**事务**|事务登记（本地、DTC 和绑定的事务）的数目。|  
+|**中的**|事务登记（本地、DTC 和绑定的事务）的数目。|  
 |**用户连接**|当前与 SQL Server 连接的用户数。|  
   
 ## <a name="see-also"></a>另请参阅  

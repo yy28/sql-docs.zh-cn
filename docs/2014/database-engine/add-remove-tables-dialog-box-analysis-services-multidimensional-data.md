@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b2760517-b0cb-4268-905d-bb1e1f9d902a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c0c0ad4d5c375b537f4bc0fd4efb820395a8d6e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 04192a5990126d06c4b3f7b6a77cc218f3a631de
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889217"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937331"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>"添加/删除表" 对话框（Analysis Services 多维数据）
   可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的“添加/删除表”**** 对话框，在数据源视图中添加或删除数据源中的表。 可以通过执行以下操作之一显示“添加/删除表”**** 对话框：  
@@ -35,7 +34,7 @@ ms.locfileid: "68889217"
  **Available objects**  
  Displays the objects and their types in the data source that are not already included in the data source view.  
   
- 单击**>>** 以将 "**可用对象**" 中列出的所有对象传输到 "**包含的对象**"，或**>** 选择一个或多个对象，然后单击 "将所选对象传输到**包含的对象**"。  
+ 单击 **>>** 以将 "**可用对象**" 中列出的所有对象传输到 "**包含的对象**"，或选择一个或多个对象，然后单击 **>** "将所选对象传输到**包含的对象**"。  
   
  **筛选器**  
  键入用于限制“可用对象”**** 中所列对象的筛选器，然后单击此按钮筛选列出的对象。  
@@ -46,7 +45,7 @@ ms.locfileid: "68889217"
  **Included objects**  
  Displays the objects and their types that have already been added to the data source view.  
   
- 单击**<<** 以将 "**包含的对象**" 中列出的所有对象传输到 "**可用对象**"，或**<** 选择一个或多个对象，然后单击将所选对象传输到**可用对象**。  
+ 单击 **<<** 以将 "**包含的对象**" 中列出的所有对象传输到 "**可用对象**"，或选择一个或多个对象，然后单击 **<** 将所选对象传输到**可用对象**。  
   
  **Add related tables**  
  单击此项将添加所有与“包含的对象”**** 中所选表相关的表。  

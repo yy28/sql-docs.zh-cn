@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dff5f6464a14b520a35493b96b47b4a1c5a82481
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6cdd6219bf9fb807f1d347d3ee6ed7330b704103
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175506"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937998"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>使用引用数据（外部）知识清理数据
   本主题说明如何使用引用数据提供程序中的知识清理数据。 尽管运行清理活动的所有步骤与使用来自引用数据提供程序的知识清理数据（请参阅[使用 DQS（内部）知识清理数据[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)]中的说明）的步骤相同，但本主题提供的信息特定于使用 ](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md) (DQS) 中的引用数据服务清理数据。
@@ -41,7 +40,7 @@ ms.locfileid: "78175506"
 
 ## <a name="before-you-begin"></a>开始之前
 
-###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 先决条件
  您必须将 DQS 知识库中的所需域映射到适当的引用数据服务。 此外，知识库必须包含有关您要清理的数据类型的知识。 例如，如果要清理包含美国地址的源数据，则必须将自己的域映射到为美国地址提供高质量数据的引用数据服务提供程序。 有关详细信息，请参阅[将域或复合域附加到引用数据](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)。
 
 ###  <a name="security"></a><a name="Security"></a> Security
@@ -54,7 +53,7 @@ ms.locfileid: "78175506"
 
 1.  创建一个数据质量项目，并且选择 **“清理”** 活动。 请参阅 [Create a Data Quality Project](../../2014/data-quality-services/create-a-data-quality-project.md)。
 
-2.  在 **“映射”** 页上，将以下 4 个域与您的源数据中的相应列进行映射： **Address Line**、 **City**、 **State**和 **Zip**。 单击“下一步”。 
+2.  在 **“映射”** 页上，将以下 4 个域与您的源数据中的相应列进行映射： **Address Line**、 **City**、 **State**和 **Zip**。 单击“下一步”。
 
     > [!NOTE]
     >  当您在 **“地址验证”** 复合域中映射了所有 4 个域后，数据清理现在将在复合域级别完成，而非在单独的域级别完成。
@@ -64,7 +63,7 @@ ms.locfileid: "78175506"
     > [!NOTE]
     >  在 **“清理”** 页上，DQS 通过以下两种方式显示与附加到引用数据服务的域有关的信息：
     > 
-    >  -   "**开始**" 按钮下将显示一条消息： \<"域 Domain1 \<>，2>,.。。\<N n> 是使用引用数据服务提供程序清理的。 " 在此示例中，将显示以下消息：“使用引用数据服务提供程序清理域地址验证。”
+    >  -   "**开始**" 按钮下会显示一条消息： "域 \<Domain1> ， \<Domain2> ,... \<DomainN>使用引用数据服务提供程序清理。 " 在此示例中，将显示以下消息：“使用引用数据服务提供程序清理域地址验证。”
     > -   与附加到引用数据服务提供程序的域一起显示在 "**探查器**" 区域中的图标 "![域附加到 RDS](../../2014/data-quality-services/media/dqs-rdsindicator.JPG "将域附加到 RDS")"。 在此示例中，将针对 **“地址验证”** 复合域显示该图标。
 
 4.  在 **“管理和查看结果”** 页上，查看您的域值。 根据在将域映射到引用数据服务的过程中在 **“建议的候选项”** 框中指定的建议的最大数目，引用数据服务可为一个值显示多个建议（如果可用）。 例如，为下面的美国地址显示两项建议：

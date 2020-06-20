@@ -1,5 +1,6 @@
 ---
-title: 组件
+title: 组件数
+description: 了解 SQL Server Native Client 的组件，如 sqlncli11.dll、msmdsrv.rll、sqlncli.msi 和 sqlncli11。
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 65f932d5-daa1-4eff-b6df-ee633fcf2a7c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c824d145b6353f96a3756f28b7446799b303889
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f298c7e3c453da1a20826d91509ca61778ad65b0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388218"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965169"
 ---
 # <a name="components-of-sql-server-native-client"></a>SQL Server Native Client 的组件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "81388218"
 |sqlncli11.dll|包含所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 功能的动态链接库 (DLL) 文件。 它包括 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序。|  
 |sqlnclir11.rll|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 库附带的资源文件。|   
 |sqlncli.h|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件，其中包含使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 时所需的所有新定义。 该头文件取代了 odbcss.h 和 sqloledb.h 头文件。<br /><br /> 注意：不能在同一程序中引用 sqlncli.msi 和 odbcss.h，但只要先定义 sqloledb，就可以在同一程序中引用 sqlncli.msi 和 sqloledb。|  
-|sqlncli11.lib|直接调用作为[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序的一部分的**bcp**实用工具函数所需的库文件。<br /><br /> 注意：如果您在编程代码中引用 sqlncli11 文件，则需要确保 sqlncli11 文件位于您的系统路径中，并且在使用您的应用程序的用户的系统路径中。|  
+|sqlncli11.lib|直接调用作为**bcp** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序的一部分的 bcp 实用工具函数所需的库文件。<br /><br /> 注意：如果确实要在编程代码中引用 sqlncli11 文件，则需要确保 sqlncli11.dll 文件位于您的系统路径中，并且在使用您的应用程序的用户的系统路径中。|  
   
 ## <a name="see-also"></a>另请参阅  
  [使用 SQL Server Native Client 生成应用程序](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  

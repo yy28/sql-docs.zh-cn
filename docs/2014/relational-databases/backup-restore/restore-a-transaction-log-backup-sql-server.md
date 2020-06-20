@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a0cfc68f78ae9ca4022abfb59a33d756e82a6f2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68fe4bbc199d6555bd490d25f92491100b8bbfcf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875674"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957148"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>还原事务日志备份 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中还原事务日志备份。  
@@ -100,7 +99,7 @@ ms.locfileid: "62875674"
     |------------|-----------|  
     |**还原**|如果复选框处于选中状态，则指示要还原相应的备份集。|  
     |**名称**|备份集的名称。|  
-    |组件 |备份组件：“数据库”、“文件”或 \<空白>（对于事务日志）   。|  
+    |组件 |备份组件：**数据库**、**文件**或 \<blank> （对于事务日志）。|  
     |**Database**|备份操作中涉及的数据库的名称。|  
     |**开始日期**|备份操作开始的日期和时间（按客户端的区域设置显示）。|  
     |**完成日期**|备份操作完成的日期和时间（按客户端的区域设置显示）。|  
@@ -146,9 +145,9 @@ ms.locfileid: "62875674"
   
          将已发布的数据库还原到创建该数据库的服务器之外的服务器时，保留复制设置。  
   
-         此选项仅在以下情况下可用 **： "回滚未提交的事务，使数据库保持**可用状态 ..." 选项（稍后将对此进行介绍），这等效于使用`RECOVERY`选项还原备份。  
+         此选项仅在以下情况下可用 **： "回滚未提交的事务，使数据库保持**可用状态 ..." 选项（稍后将对此进行介绍），这等效于使用 `RECOVERY` 选项还原备份。  
   
-         选中此选项等效于在`KEEP_REPLICATION` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`语句中使用选项。  
+         选中此选项等效于 `KEEP_REPLICATION` 在语句中使用选项 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 。  
   
     -   **还原每个备份之前进行提示**  
   
@@ -162,19 +161,19 @@ ms.locfileid: "62875674"
   
          使还原的数据库仅供 **db_owner**、 **dbcreator**或 **sysadmin**的成员使用。  
   
-         选中此选项是在`RESTRICTED_USER` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`语句中使用选项的同义词。  
+         选中此选项是 `RESTRICTED_USER` 在语句中使用选项的同义词 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 。  
   
 10. 对于 **“恢复状态”** 选项，请指定还原操作之后的数据库状态。  
   
     -   **回退未提交的事务，使数据库处于可以使用的状态。无法还原其他事务日志。(RESTORE WITH RECOVERY)**  
   
-         恢复数据库。 此选项等效于`RECOVERY` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`语句中的选项。  
+         恢复数据库。 此选项等效于 `RECOVERY` 语句中的选项 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 。  
   
          请仅在没有要还原的日志文件时选择此选项。  
   
     -   **不对数据库执行任何操作，不回退未提交的事务。可以还原其他事务日志。(RESTORE WITH NORECOVERY)**  
   
-         使数据库处于未恢复的 `RESTORING` 状态。 此选项等效于在`NORECOVERY` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`语句中使用选项。  
+         使数据库处于未恢复的 `RESTORING` 状态。 此选项等效于 `NORECOVERY` 在语句中使用选项 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 。  
   
          如果选择此选项， **“保留复制设置”** 选项将不可用。  
   
@@ -183,7 +182,7 @@ ms.locfileid: "62875674"
   
     -   **使数据库处于只读模式。撤消未提交的事务，但将撤消操作保存在文件中，以便可使恢复效果逆转。(RESTORE WITH STANDBY)**  
   
-         使数据库处于备用状态。 此选项等效于在`STANDBY` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE`语句中使用选项。  
+         使数据库处于备用状态。 此选项等效于 `STANDBY` 在语句中使用选项 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 。  
   
          选择此选项需要您指定一个备用文件。  
   

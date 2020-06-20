@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8209a707-faef-4ffc-8991-6c13bb350753
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6c5b38fdc684cce71e0910a8a576180ece3e48f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b854c683cdbc3ff503751efbaf564dfa9e3110f7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068141"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940288"
 ---
 # <a name="specify-table-types-data-mining-wizard"></a>指定表类型(数据挖掘向导)
   可以使用 **“指定表类型”** 页指定用于定义挖掘结构的表。 如果未选择某个表，则将不能使用该表来定义挖掘结构。  

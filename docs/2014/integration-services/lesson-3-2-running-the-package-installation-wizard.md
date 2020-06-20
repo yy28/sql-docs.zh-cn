@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0fe0862438943fec36728a3c4e6c796061c86593
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9cab0c8a25f4dd95c205c63db1ae056468ebe61c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891575"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965236"
 ---
 # <a name="step-2-running-the-package-installation-wizard"></a>步骤 2：运行包安装向导
   在此任务中，将运行包安装向导，将包从 Deployment Tutorial 项目部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的实例。 只能将包安装在 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的 sysssispackages 表中，而部署捆绑包括的支持文件将被部署到文件系统。  
@@ -36,7 +35,7 @@ ms.locfileid: "62891575"
   
 4.  在“部署 SSIS 包”页上，选择“SQL Server 部署”  选项，选中“安装后验证包”  复选框，再单击“下一步”  。  
   
-5.  在“指定目标 SQL Server”页上，在“服务器名称”  框中指定 **(local)** 。  
+5.  在“指定目标 SQL Server”页上，在“服务器名称”框中指定 **(local)** 。  
   
 6.  如果 SQL Server 的实例支持 Windows 身份验证，请选择“使用 Windows 身份验证”  ；否则，选择“使用 SQL Server 身份验证”  ，并提供用户名和密码。  
   
@@ -63,14 +62,14 @@ ms.locfileid: "62891575"
   
 15. 在“配置包”页上，验证“配置文件”  框是否列出了 datatransferconfig.dtsconfig 和 loadxmldataconfig.dtsconfig。  
   
-16. 在“配置文件”  列表中，单击 **datatransferconfig.dtsconfig**，展开“配置”  框的“路径”  列中的“属性”，再用下列值更新“值”  列：  
+16. 在“配置文件”列表中，单击 **datatransferconfig.dtsconfig**，展开“配置”框的“路径”列中的“属性”，再用下列值更新“值”列：  
   
     |properties|值|更新后的值|  
     |--------------|-----------|-------------------|  
     |\Package.Connections[Deployment Tutorial Log].Properties[ConnectionString]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Completed Packages\Deployment Tutorial Log|C:\DeploymentTutorialInstall\Deployment Tutorial Log|  
     |\Package.Connections[NewCustomers].Properties[ConnectionString]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\NewCustomers.txt|C:\DeploymentTutorialInstall\NewCustomers.txt|  
   
-17. 在“配置文件”  列表中，单击 loadxmldataconfig.dtsconfig，展开“配置”  框的“路径”  列中的“属性”，再用下列值更新“值”  列：  
+17. 在“配置文件”列表中，单击 loadxmldataconfig.dtsconfig，展开“配置”框的“路径”列中的“属性”，再用下列值更新“值”列：  
   
     |properties|值|更新后的值|  
     |--------------|-----------|-------------------|  

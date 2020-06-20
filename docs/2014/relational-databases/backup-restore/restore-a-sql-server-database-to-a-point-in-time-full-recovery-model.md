@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 66393f8b48c9075c3200b1c56b8447410e143c57
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c71ff6e75cbbf27042c1eac70b1f97076290865
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921058"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957177"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>将 SQL Server 数据库还原到某个时点（完整恢复模式）
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 将数据库还原到 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的某个时间点。 本主题仅与使用完整恢复模式或大容量日志恢复模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库有关。  
@@ -132,9 +131,9 @@ ms.locfileid: "62921058"
   
  **基本 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法**  
   
- 还原日志*database_name*的 <backup_device> 与 STOPAT ** = *`time`*、** RECOVERY .。。  
+ 还原日志*database_name*的 <backup_device> 与 STOPAT ** = *`time`* 、** RECOVERY .。。  
   
- 恢复点是在`datetime` *time*指定的值或之前发生的最新的事务提交。  
+ 恢复点是在 time 指定的值或之前发生的最新的事务提交 `datetime` 。 *time*  
   
  要只还原在特定时间点之前所做的修改，请为还原的每个备份指定 WITH STOPAT  **time=**  。 这样确保了不会超出目标时间。  
   
@@ -152,7 +151,7 @@ ms.locfileid: "62921058"
   
 3.  还原上次差异数据库备份（如果有），而不恢复数据库 (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY)。  
   
-4.  以创建事务日志备份的相同顺序应用每个事务日志备份，同时指定要停止还原日志的时间（RESTORE DATABASE *database_name*从 <backup_device> 使用 STOPAT**=*`time`*、** RECOVERY）。  
+4.  以创建事务日志备份的相同顺序应用每个事务日志备份，同时指定要停止还原日志的时间（RESTORE DATABASE *database_name*从 <backup_device> 使用 STOPAT** = *`time`* 、** RECOVERY）。  
   
     > [!NOTE]  
     >  RECOVERY 和 STOPAT 选项。 如果事务日志备份不包含要求的时间（例如，如果指定的时间超出了事务日志所包含的时间范围），则会生成警告，并且不会恢复数据库。  
@@ -193,7 +192,7 @@ GO
 -   [恢复到日志序列号 (SQL Server)](recover-to-a-log-sequence-number-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [backupset &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)   
+ [backupset (Transact-SQL)](/sql/relational-databases/system-tables/backupset-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [RESTORE HEADERONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   

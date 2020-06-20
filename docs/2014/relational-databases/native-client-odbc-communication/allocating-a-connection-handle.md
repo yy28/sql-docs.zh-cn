@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 471d8a31-199c-4f92-bb10-004fc7733b35
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cfda8d23f3be8b37f9eb3876496394fc32660769
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d3cf84e541f114d527d9a00cd19bce705a09af30
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702069"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021218"
 ---
 # <a name="allocating-a-connection-handle"></a>分配连接句柄
   应用程序可以连接到数据源或驱动程序之前，必须分配连接句柄。 这是通过调用**SQLAllocHandle**并将*HandleType*参数设置为 SQL_HANDLE_DBC，并将*将 inputhandle*指向已初始化的环境句柄来完成的。  

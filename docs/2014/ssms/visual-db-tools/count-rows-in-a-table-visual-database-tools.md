@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 04b836a53b4b9928118221053d1fbc2c3a89dfdd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b839fe4359e083df9c6b4643111b61f5b681914
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63217815"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067202"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>计算表中的行数 (Visual Database Tools)
   您可对表中的行进行计数以确定以下信息：  
@@ -43,9 +42,9 @@ ms.locfileid: "63217815"
   
 2.  右键单击“关系图”窗格的背景，再从快捷菜单中选择“添加分组依据”  。 [查询和视图设计器](visual-database-tools.md)会在“条件”窗格的网格中添加一个“分组依据”  列。  
   
-3.  在表示表或表值对象的矩形中，选择** \* "（所有列）** "。  
+3.  在表示表或表值对象的矩形中，选择 " ** \* （所有列）** "。  
   
-     查询和视图设计器会自动在“条件”窗格的“分组依据”  列中填充 **Count** 一词，并为要汇总的列分配列别名。 您可以用更有意义的名称替换这一自动生成的别名。 有关详细信息，请参阅[创建列别名 (Visual Database Tools)](create-column-aliases-visual-database-tools.md)。  
+     查询和视图设计器会自动在“条件”窗格的“分组依据”列中填充 **Count** 一词，并为要汇总的列分配列别名。 您可以用更有意义的名称替换这一自动生成的别名。 有关详细信息，请参阅[创建列别名 (Visual Database Tools)](create-column-aliases-visual-database-tools.md)。  
   
 4.  运行查询。  
   
@@ -55,15 +54,15 @@ ms.locfileid: "63217815"
   
 2.  右键单击“关系图”窗格的背景，再从快捷菜单中选择“添加分组依据”  。 查询和视图设计器会在“条件”窗格的网格中添加一个“分组依据”  列。  
   
-3.  在表示表或表结构对象的矩形中，选择** \*"（所有列）** "。  
+3.  在表示表或表结构对象的矩形中，选择 " ** \* （所有列）** "。  
   
-     查询和视图设计器会自动在“条件”窗格的“分组依据”  列中填充 **Count** 一词，并为要汇总的列分配列别名。 若要在查询输出中创建更实用的列标题，请参阅[创建列别名 (Visual Database Tools)](create-column-aliases-visual-database-tools.md)。  
+     查询和视图设计器会自动在“条件”窗格的“分组依据”列中填充 **Count** 一词，并为要汇总的列分配列别名。 若要在查询输出中创建更实用的列标题，请参阅[创建列别名 (Visual Database Tools)](create-column-aliases-visual-database-tools.md)。  
   
 4.  添加要搜索的数据列，再清除“输出”  列中的复选框。  
   
-     查询和视图设计器会自动在网格的“分组依据”  列中填充 **Group By** 一词。  
+     查询和视图设计器会自动在网格的“分组依据”列中填充 **Group By** 一词。  
   
-5.  将“分组依据”  列中的 **Group By** 改为 **Where**。  
+5.  将“分组依据”列中的 **Group By** 改为 **Where**。  
   
 6.  在要搜索的数据列的“筛选器”  列中，输入搜索条件。  
   
@@ -77,9 +76,9 @@ ms.locfileid: "63217815"
   
 3.  将要计数的列添加到“条件”窗格中。  
   
-     查询和视图设计器会自动在网格的“分组依据”  列中填充 **Group By** 一词。  
+     查询和视图设计器会自动在网格的“分组依据”列中填充 **Group By** 一词。  
   
-4.  将“分组依据”  列中的 **Group By** 改为 **Count**。  
+4.  将“分组依据”列中的 **Group By** 改为 **Count**。  
   
     > [!NOTE]  
     >  若要只计算唯一值的数目，请选择 **Count Distinct**。  

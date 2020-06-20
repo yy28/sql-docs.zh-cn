@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8fa05dd4-316c-44ed-8383-e6e9ea1d3994
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6f5deb525654007248fbc5c97c07e3c368654ad5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca1ac00668e6a4383b022ae5e1ed108da6ef603d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057228"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965017"
 ---
 # <a name="odbc-destination-editor-mappings-page"></a>ODBC 目标编辑器（“映射”页）
   可以使用 **“ODBC 目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到目标列。  
@@ -33,7 +32,7 @@ ms.locfileid: "66057228"
  可用目标列的列表。 将目标列拖放到某一可用输入列以映射这些列。  
   
 ### <a name="input-column"></a>输入列  
- 查看选定的输入列。 您可以通过选择** \<"忽略>** 从输出中排除列来移除映射。  
+ 查看选定的输入列。 您可以通过选择 **\<ignore>** 从输出中排除列来移除映射。  
   
 ### <a name="destination-column"></a>目标列  
  查看所有可用目标列（包括映射和未映射的列）。  

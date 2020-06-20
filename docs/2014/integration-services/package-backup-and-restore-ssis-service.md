@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: c67d3b83-a6c8-40de-920f-9236de4ac87f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b5c775393f7815084e8a79aae4be7f0974886f3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16ffb226202bb4ed52fd01e5e6376accfe6b6558
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056924"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964911"
 ---
 # <a name="package-backup-and-restore-ssis-service"></a>包备份和还原（SSIS 服务）
     
 > [!IMPORTANT]  
 >  本主题论述 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务，该服务是用于管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的一种 Windows 服务。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 支持该服务以便与 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的早期版本向后兼容。 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]开始，您可以在 Integration Services 服务器上管理诸如包之类的对象。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]可以将包保存到文件系统或 msdb （一种[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]系统数据库）中。 可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 备份和还原功能来备份和还原保存到 msdb 中的包。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]可以将包保存到文件系统或 msdb （一种 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 系统数据库）中。 可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 备份和还原功能来备份和还原保存到 msdb 中的包。  
   
  有关备份和还原 msdb 数据库的详细信息，请单击下列某个主题：  
   

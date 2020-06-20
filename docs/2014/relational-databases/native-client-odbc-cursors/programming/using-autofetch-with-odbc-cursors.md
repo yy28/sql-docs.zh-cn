@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 57bd55f4-8945-4d8d-9f58-d30c81d2a514
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a15cc12787f5a7d05699737772e7478d57b6f6e8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e3d9374cf9ceab4a7e73cc0059783486f2bf9c41
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705602"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020763"
 ---
 # <a name="using-autofetch-with-odbc-cursors"></a>通过 ODBC 游标使用自动提取
   当连接到实例时 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序支持使用任何服务器游标类型时的自动提取选项。 使用自动提取，打开游标的**SQLExecute**或**SQLExecDirect**函数也具有隐式[SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md)（SQL_FIRST）函数。 组成第一个行集的行将作为语句执行的一部分返回给绑定应用程序变量，并通过网络将另一个往返保存到服务器。 启用自动提取选项后，不支持[SQLGetData](../../native-client-odbc-api/sqlgetdata.md) ;结果集列必须绑定到程序变量。  

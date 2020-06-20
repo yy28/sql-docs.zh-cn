@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 98bfedce41d05a613fe47941b86cfa3fa176ee5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bda15bcb4d96cc126aa87a986fa667a56730637
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62869174"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054232"
 ---
 # <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
     
@@ -52,10 +51,10 @@ ms.locfileid: "62869174"
   
  如果由非分发服务器的其他节点上运行的复制代理（如在订阅服务器上运行的合并代理）启动的 `sp_get_redirected_publisher` 调用返回了错误 21879，则应注意一些特殊事项。 如果使用 Windows 身份验证连接到重定向发布服务器，则必须将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为使用 Kerberos 身份验证以便成功建立连接。 当使用 Windows 身份验证且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未配置为使用 Kerberos 身份验证时，在订阅服务器上运行的合并代理将收到错误 18456，指示“NT AUTHORITY\ANONYMOUS LOGON”登录名失败。 可以通过三种方式解决此问题：  
   
--   将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为使用 Kerberos 身份验证。 请参阅 **联机丛书中的**Kerberos 身份验证和 SQL Server[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+-   将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为使用 Kerberos 身份验证。 请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的 **Kerberos 身份验证和 SQL Server**。  
   
--   使用`sp_changedistpublisher`更改与 MSdistpublishers 中的原始发布服务器相关联的安全模式，以及指定用于连接的登录名和密码。  
+-   使用 `sp_changedistpublisher` 更改与 MSdistpublishers 中的原始发布服务器相关联的安全模式，以及指定用于连接的登录名和密码。  
   
--   指定在合并代理命令行上的命令行参数*BypassPublisherValidation*在分发服务器上`sp_get_redirected_publisher`调用时绕过验证。  
+-   指定在合并代理命令行上的命令行参数*BypassPublisherValidation*在分发服务器上调用时绕过验证 `sp_get_redirected_publisher` 。  
   
   

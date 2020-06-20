@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 5057a6ee-3ca8-4734-9e96-592b24624c55
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b91bff77f3df9e1416837dead0c0261bf6473e34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c577b06866db12ecd4ccc4b28fbf36e3314f76d1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63070898"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000926"
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>对查询中的多个列进行排序 (Visual Database Tools)
-  通过使用[“条件”窗格](visual-database-tools.md)中的“排序顺序”  列，可以指定使用各列对数据进行排序时所依据的顺序。  
+  通过使用[“条件”窗格](visual-database-tools.md)中的“排序顺序”列，可以指定使用各列对数据进行排序时所依据的顺序。  
   
 ### <a name="to-sort-query-results-by-more-than-one-column"></a>依据多个列对查询结果进行排序  
   

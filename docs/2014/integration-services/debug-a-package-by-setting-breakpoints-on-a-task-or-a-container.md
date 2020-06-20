@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 907caaa37c429dd2f788d0123f7f8ee0bbf8a27a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ef85c2744475a2f55af2abc3514aa3167473ff7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059661"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951845"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>通过在任务或容器上设置断点调试包
   本过程介绍如何在包、任务、For 循环容器、Foreach 循环容器或序列容器中设置断点。  
@@ -38,7 +37,7 @@ ms.locfileid: "66059661"
   
     -   若要在事件处理程序中设置断点，请单击“事件处理程序”选项卡，右键单击任务、For 循环容器、Foreach 循环容器或序列容器，再单击“编辑断点”********。  
   
-4.  在 "**设置断点\<容器名称>** " 对话框中，选择要启用的断点。  
+4.  在 "**设置断点 \<container name> ** " 对话框中，选择要启用的断点。  
   
 5.  还可以修改每个断点的命中计数类型和命中计数数量。  
   

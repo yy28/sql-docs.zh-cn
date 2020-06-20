@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 023af8d3-aea0-45a9-ac32-554634bf4b9a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 53c909caebfd6502b021a9a1abb4e1ecb29e3bb7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6075d5156a9cc3662ac62e884787b8a650788be9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056949"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964887"
 ---
 # <a name="package-and-project-protection-level-dialog-box"></a>“包和项目保护级别”对话框
   可以使用 **“包保护级别”** 对话框更新包的保护级别。 保护级别决定保护包时所使用的方法、密码或用户密钥以及作用域。 可以保护所有数据，也可以只保护敏感数据。  

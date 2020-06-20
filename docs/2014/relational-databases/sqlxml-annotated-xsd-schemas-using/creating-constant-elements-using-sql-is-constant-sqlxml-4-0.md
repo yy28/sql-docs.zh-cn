@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 37270dbed7a457a9e0adf5816ce02c502c8601f8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6a0b31c68f7ebbb956c2d539dee4bc4dca2eb5ce
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703644"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060127"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>使用 sql:is-constant 创建常量元素 (SQLXML 4.0)
   若要指定常量元素，即 XSD 架构中未映射到任何数据库表或列的元素-可以使用 `sql:is-constant` 批注。 该批注取布尔值（0 = false，1 = true）。 可接受的值为 0、1、true 和 false。 可以在不具有任何属性的元素中指定 `sql:is-constant` 批注。 如果使用值 true（或 1）在元素中指定该批注，则该元素不会被映射到数据库，但仍出现在 XML 文档中。  
@@ -32,17 +31,17 @@ ms.locfileid: "82703644"
   
 -   将顶级元素添加到 XML 文档。 XML 要求为文档提供一个顶级元素（根元素）。  
   
--   创建容器元素，例如** \<>** 包装所有订单的元素。  
+-   创建容器元素，例如 **\<Orders>** 包装所有订单的元素。  
   
- `sql:is-constant`可以向** \< complexType>** 元素添加批注。  
+ `sql:is-constant`批注可以添加到 **\<complexType>** 元素。  
   
 ## <a name="examples"></a>示例  
  若要创建使用以下示例的工作示例，必须满足某些要求。 有关详细信息，请参阅[运行 SQLXML 示例的要求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. 指定 sql:is-constant 以添加容器元素  
- 在此带批注的 XSD 架构中，通过指定值为1的属性，将** \< CustomerOrders>** 定义为常量元素 `sql:is-constant` 。 因此， ** \< CustomerOrders>** 不会映射到任何数据库表或列。 此常量元素由** \< Order>** 子元素组成。  
+ 在此带批注的 XSD 架构中， **\<CustomerOrders>** 通过指定值为1的属性，将定义为常量元素 `sql:is-constant` 。 因此， **\<CustomerOrders>** 不会映射到任何数据库表或列。 此常量元素由 **\<Order>** 子元素组成。  
   
- 尽管** \< CustomerOrders>** 未映射到任何数据库表或列，但它仍显示在生成的 XML 中，该元素包含>子元素的** \< 顺序**。  
+ 尽管不 **\<CustomerOrders>** 会映射到任何数据库表或列，但它仍将作为包含子元素的容器元素出现在生成的 XML 中 **\<Order>** 。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

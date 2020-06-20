@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 025497d1-54a0-402c-81d8-b8b597a0de11
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a768b1e05bc123aecec4175ed6f66f6d920e1806
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e08d00725918a7a3463777f6fc5585ecf0831b1c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63295259"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001037"
 ---
 # <a name="print-query-results-visual-database-tools"></a>打印查询结果 (Visual Database Tools)
   若要打印查询结果，可以将 [“结果”窗格](visual-database-tools.md) 中的内容复制到另一 Windows 程序中，例如字处理程序，然后在其中设置格式并进行打印。  

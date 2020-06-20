@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 190bfa92-2445-404d-86df-7cc94d283add
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a671f33fa26829e96cb53e1a040eb042406bc4eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f7a56c01a1c4af7a2e618c6b6a6cb586424e639
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62757714"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940048"
 ---
 # <a name="calculated-column-representation-tabular"></a>计算列表示形式（表格）
   计算列是在表中创建新列并且获取的值存储于该表中的 DAX 表达式。 每次处理表时，都会对计算列表达式进行计算。  

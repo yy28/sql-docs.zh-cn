@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c1d98187fbe76e726dadfe163d75a27c51fd60e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 719b0b357767fcc4412663449a6a7bd929b34cd3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767639"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965287"
 ---
 # <a name="step-4-adding-package-configurations"></a>步骤 4：添加包配置
   在此任务中，将配置添加到每个包。 在运行时，配置更新包属性和包对象的值。  
@@ -42,12 +41,12 @@ ms.locfileid: "62767639"
   
 5.  在包配置向导的欢迎页中，单击“下一步”****。  
   
-6.  在 "选择配置类型" 页上，选择 "**配置类型**" 列表中的 " **XML 配置文件**"，选择 "**配置位置存储在一个环境变量**中" 选项，然后键入`DataTransfer,`或选择列表中的**DataTransfer**环境变量。  
+6.  在 "选择配置类型" 页上，选择 "**配置类型**" 列表中的 " **XML 配置文件**"，选择 "**配置位置存储在一个环境变量**中" 选项，然后键入 `DataTransfer,` 或选择列表中的**DataTransfer**环境变量。  
   
     > [!NOTE]  
     >  为了使该环境变量在列表中可用，您最好在添加该变量后重新启动计算机。 如果不希望重新启动计算机，则可以键入该环境变量的名称。  
   
-7.  单击 **下一步**。  
+7.  单击“下一步”。  
   
 8.  在“完成向导”页上，在“配置名称”框中键入“DataTransfer EV Configuration”，在“预览”窗格中查看配置内容，然后单击“完成”。****************  
   
@@ -75,7 +74,7 @@ ms.locfileid: "62767639"
   
 10. 在“连接管理器”内，展开“NewCustomers”后，选中“连接字符串”复选框。****  
   
-11. 单击 **下一步**。  
+11. 单击“下一步”。  
   
 12. 在“完成向导”页上，在“配置名称”框中键入“DataTransfer 配置”，查看配置的内容，然后单击“完成”。************  
   
@@ -93,12 +92,12 @@ ms.locfileid: "62767639"
   
 5.  在包配置向导的欢迎页中，单击“下一步”****。  
   
-6.  在 "选择配置类型" 页上，选择 "**配置类型**" 列表中的 " **XML 配置文件**"，选择 "**配置位置存储在环境变量**中" 选项，键入`LoadXMLData`或选择列表中的`LoadXMLData`环境变量。  
+6.  在 "选择配置类型" 页上，选择 "**配置类型**" 列表中的 " **XML 配置文件**"，选择 "**配置位置存储在环境变量**中" 选项，键入 `LoadXMLData` 或选择 `LoadXMLData` 列表中的环境变量。  
   
     > [!NOTE]  
     >  为了使该环境变量在列表中可用，您最好在添加该变量后重新启动计算机。  
   
-7.  单击 **下一步**。  
+7.  单击“下一步”。  
   
 8.  在“完成向导”页上，在“配置名称”框中键入“LoadXMLData EV 配置”，查看配置的内容，然后单击“完成”。************  
   
@@ -122,7 +121,7 @@ ms.locfileid: "62767639"
   
 9. 在“选择要导出的属性”页上，依次展开“LoadXMLData”、“可执行文件”、“加载 XML 数据”和“属性”，然后选中“[XMLSource].[XMLData]”和“[XMLSource].[XMLSchemaDefinition]”复选框。********  
   
-10. 单击 **下一步**。  
+10. 单击“下一步”。  
   
 11. 在“完成向导”页上，在“配置名称”框中键入“LoadXMLData 配置”，查看配置的内容，然后单击“完成”。************  
   

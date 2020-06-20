@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 85bc34af971db386862528ac36ea04fef33f2daa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc19d059d411f6d07ae48b8a4b8e1d851a17ca67
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035657"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067338"
 ---
 # <a name="projects-sql-server-management-studio"></a>项目 (SQL Server Management Studio)
   一个 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 项目是一些在逻辑上相关并可保存在一起用于数据库管理和开发的脚本和文件的集合。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5d70b89f20beed9c4bd13aa30ab0bdddda2b97a9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 716f9d2d27c7e13d754d1cd31f7c7294af3f3f90
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702187"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021736"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序忽略 SQL_ATTR_CONNECTION_TIMEOUT 的设置。  
@@ -63,12 +62,12 @@ ms.locfileid: "82702187"
 |SQL_COPT_SS_PERF_QUERY_INTERVAL|完成|  
 |SQL_COPT_SS_PERF_QUERY_LOG|完成|  
 |SQL_COPT_SS_PRESERVE_CURSORS|以前|  
-|SQL_COPT_SS_QUOTED_IDENT|之前或之后|  
-|SQL_COPT_SS_TRANSLATE|之前或之后|  
+|SQL_COPT_SS_QUOTED_IDENT|任一个|  
+|SQL_COPT_SS_TRANSLATE|任一个|  
 |SQL_COPT_SS_TRUST_SERVER_CERTIFICATE|以前|  
-|SQL_COPT_SS_TXN_ISOLATION|之前或之后|  
-|SQL_COPT_SS_USE_PROC_FOR_PREP|之前或之后|  
-|SQL_COPT_SS_USER_DATA|之前或之后|  
+|SQL_COPT_SS_TXN_ISOLATION|任一个|  
+|SQL_COPT_SS_USE_PROC_FOR_PREP|任一个|  
+|SQL_COPT_SS_USER_DATA|任一个|  
 |SQL_COPT_SS_WARN_ON_CP_ERROR|以前|  
   
  对同一个会话、数据库或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 状态使用一个预连接属性和等同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命令可能会产生意外行为。 例如，  
@@ -97,7 +96,7 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, ...) // restores to pre-connect attr
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
 ```  
   
- 默认值为 `ReadWrite`。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 对 ag 的支持的详细信息 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ，请参阅[高可用性和灾难恢复的 SQL Server Native Client 支持](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。  
+ 默认为 `ReadWrite`。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 对 ag 的支持的详细信息 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ，请参阅[高可用性和灾难恢复的 SQL Server Native Client 支持](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。  
   
 ## <a name="sql_copt_ss_attachdbfilename"></a>SQL_COPT_SS_ATTACHDBFILENAME  
  SQL_COPT_SS_ATTACHDBFILENAME 指定可附加的数据库的主文件名称。 附加此数据库并使其成为连接的默认数据库。 若要使用 SQL_COPT_SS_ATTACHDBFILENAME 必须将数据库名称指定为连接属性 SQL_ATTR_CURRENT_CATALOG 或[SQLDriverConnect](sqldriverconnect.md)的 database = 参数的值。 如果数据库以前附加过，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将不会重新附加它。  

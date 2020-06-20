@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 941155a5e434457cdf9c79bd25c653c7207937a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1530f609d958b75a584f506dbfa6ab6409a74d0f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067017"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938848"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>从 PowerPivot 导入（SSAS 表格）
-  本主题介绍如何通过使用中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 "从 Powerpivot 导入" 项目模板从 powerpivot 工作簿导入元数据和数据，从而创建新的表格模型项目。  
+  本主题介绍如何通过使用中的 "从 PowerPivot 导入" 项目模板从 PowerPivot 工作簿导入元数据和数据，从而创建新的表格模型项目 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 。  
   
 ## <a name="create-a-new-tabular-model-from-a-powerpivot-for-excel-file"></a>从 PowerPivot for Excel 文件创建新的表格模型  
  在通过从 PowerPivot 工作簿中导入来创建新的表格模型项目时，将使用定义工作簿结构的元数据来创建和定义 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中的表格模型项目的结构。 表、列、度量值和关系之类的对象将与它们处于 PowerPivot 工作簿中一样保留并出现在表格模型项目中。 不对 .xlsx 工作簿文件进行任何更改。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9a5d1b52-d505-4e6f-8a89-569329c094e2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8c926f2ea3d9ef9973f75764e254c5e0884836e3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 151db2640e9038ad574775fa5374bddb9ed4aad0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177287"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061121"
 ---
 # <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>任务 14：将执行 SQL 任务添加到控制流以运行 MDS 的存储过程
   在将数据加载到 MDS 的临时表后，您运行与该表相关联的存储过程以便将数据从临时表加载到 MDS 数据库的相应表中。 此存储过程有两个需要传递的必需参数：LogFlag 和 VersionName。 LogFlag 指定在临时过程中是否将事务记入日志，而 VersionName 表示模型版本。 有关更多详细信息，请参阅[分步存储过程](https://msdn.microsoft.com/library/hh231028.aspx)主题。
@@ -70,7 +69,7 @@ ms.locfileid: "78177287"
 
 15. 单击 **"确定"** 以关闭 "**执行 SQL 编辑器**" 对话框。
 
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a>后续步骤
  [任务 15：生成和运行 SSIS 项目](../../2014/tutorials/task-15-building-and-running-the-ssis-project.md)
 
 
