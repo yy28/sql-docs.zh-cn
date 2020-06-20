@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cec4f3d8-a767-41cb-af67-166d5cdde783
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4828d1d3f509dc40e6a8f818f24ba5a7881783e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc44af33e79f1c419a13444cca021da59f4917ba
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061073"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924566"
 ---
 # <a name="cache-transformation-editor-connection-manager-page"></a>缓存转换编辑器（“连接管理器”页）
   可以使用 **“缓存转换编辑器”** 对话框的 **“连接管理器”** 页，选择现有缓存连接管理器或创建新的缓存连接管理器。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28437f0903459616a574e713c0f138e8bb459870
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807421"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934478"
 ---
 # <a name="cross-container-transactions"></a>交叉容器事务
   交叉容器事务是隐式或显式用户事务，这些事务包含对本机编译存储过程的调用或对内存优化表的操作。  
@@ -65,7 +64,7 @@ commit
 ### <a name="isolation-semantics-for-individual-operations"></a>单个操作的隔离语义  
  可序列化事务 T 在完全隔离下执行。 此事务执行时，就好像其他每个事务要么都在 T 启动之前提交，要么都在 T 提交之后启动。 当一个事务中的不同操作具有不同隔离级别时，情况会变得更加复杂。  
   
- 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [&#40;transact-sql&#41;的 "设置事务隔离级别](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)" 中说明了中的事务隔离级别的一般语义以及锁定的含义。  
+ 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [&#40;transact-sql&#41;的 "设置事务隔离级别](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)" 中说明了中的事务隔离级别的一般语义以及锁定的含义。  
   
  对于不同操作可能具有不同隔离级别的交叉容器事务，您需要理解各个读取操作的隔离语义。 将始终对写操作进行隔离。 不同事务中的写操作不能相互影响。  
   
@@ -135,7 +134,7 @@ commit
   
  给定事务 T 的基于磁盘的方面在满足以下条件之一的情况下达到特定隔离级别 X：  
   
--   它以 X 开始。也就是说，会话默认值为 X，原因是执行`SET TRANSACTION ISOLATION LEVEL`了，或者它是[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]默认值。  
+-   它以 X 开始。也就是说，会话默认值为 X，原因是执行了 `SET TRANSACTION ISOLATION LEVEL` ，或者它是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 默认值。  
   
 -   在该事务执行期间，默认隔离级别通过 `SET TRANSACTION ISOLATION LEVEL` 更改为 X。  
   

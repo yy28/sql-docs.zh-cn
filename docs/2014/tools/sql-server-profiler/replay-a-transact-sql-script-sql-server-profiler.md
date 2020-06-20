@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9c0eb222-e6e3-4bc1-a25f-a41e962d361b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6570eeacfe7da346cc0d41352888f5acc57baf2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5abf22a1201ac927f12ef9e4cfdd1f6d3026d00a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211069"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011418"
 ---
 # <a name="replay-a-transact-sql-script-sql-server-profiler"></a>重播 Transact-SQL 脚本 (SQL Server Profiler)
   当测试性能问题的可能解决方案时，请使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 重播 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本，然后比较更改前后的性能。  

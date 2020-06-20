@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67b21f48-4795-4128-81dc-743f7a95ef74
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c901c3f10198a1516279b9e93d9c5ddb6a9c49ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a89818eac194ff6d980fcfc801014584ee1f724
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055075"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972847"
 ---
 # <a name="transfer-error-messages-task-editor-general-page"></a>传输错误消息任务编辑器（“常规”页）
   可以使用 **“传输错误消息任务编辑器”** 对话框的 **“常规”** 页，对传输错误消息任务进行命名和说明。 传输错误消息任务可以在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例之间传输一个或多个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]用户定义错误消息。 有关此任务的详细信息，请参阅 [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md)。  

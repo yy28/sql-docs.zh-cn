@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 37a6846d8c185549bd6c54f32cb5ab02eb564d1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 790fa1b969f933890e050311173fcde3f12c37ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211711"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066395"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>创建用户定义函数（数据库引擎）
   本主题介绍了如何通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中创建用户定义函数。  
@@ -50,7 +49,7 @@ ms.locfileid: "68211711"
   
 -   用户定义函数不能返回多个结果集。 如果您需要返回多个结果集，请使用存储过程。  
   
--   在用户定义函数中，错误处理受限制。 UDF 不支持 TRY .。。CATCH @ERROR或 RAISERROR。  
+-   在用户定义函数中，错误处理受限制。 UDF 不支持 TRY .。。CATCH @ERROR 或 RAISERROR。  
   
 -   用户定义函数不能调用存储过程，但是可调用扩展存储过程。  
   

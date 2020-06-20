@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4b0d876c-8066-490e-8e18-327c0e942b19
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 893b2c69a20974bb379cc032f442e5fcb3525ec5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a94e333ad743ed07dff6b973ebfe227312a1cab2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919687"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970757"
 ---
 # <a name="accessing-user-defined-types-in-adonet"></a>在 ADO.NET 中访问用户定义类型
-  用户定义的类型（Udt）是使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 公共语言运行时（CLR）所支持的任何一种语言编写的，生成可验证代码。 这包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic。 使用 UDT 可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中存储对象和自定义数据结构。 数据公开为 .NET Framework 类或结构的公共成员，行为则由类或结构的方法来定义。 UDT 可用作表的列定义、[!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理中的变量，还可用作 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数或存储过程的参数。  
+  用户定义的类型（Udt）是使用 .NET Framework 公共语言运行时（CLR）所支持的任何一种语言编写的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ，生成可验证代码。 这包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic。 使用 UDT 可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中存储对象和自定义数据结构。 数据公开为 .NET Framework 类或结构的公共成员，行为则由类或结构的方法来定义。 UDT 可用作表的列定义、[!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理中的变量，还可用作 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数或存储过程的参数。  
   
  在 ADO.NET 中，`System.Data.SqlClient` 访问接口以如下方式公开 UDT：  
   

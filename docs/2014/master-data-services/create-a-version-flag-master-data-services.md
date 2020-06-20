@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 3067e1e3-05b7-4f11-9206-c612ef4e7e42
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5d6c941283f02fd83e873d51e300add886ba5d73
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d5e30a0161202613ca4cab361733c1786c4ae90
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479925"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971744"
 ---
 # <a name="create-a-version-flag-master-data-services"></a>创建版本标志 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，创建要分配给某一版本的标志。 该标志可以指示用户或订阅系统应使用的版本。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要执行此过程：  
   
 -   您必须有权访问 **“版本管理”** 功能区域。  
@@ -39,7 +38,7 @@ ms.locfileid: "65479925"
   
 3.  在 **“管理版本标志”** 页上，从 **“模型”** 字段中，选择要为其创建标志的模型。  
   
-4.  单击 **“添加”** 。  
+4.  单击“添加”。  
   
 5.  在 **“名称”** 框中，键入名称。  
   
@@ -47,7 +46,7 @@ ms.locfileid: "65479925"
   
 7.  在 **“仅提交的版本”** 字段中，选择 **True** 以便指示只能将标志分配给状态为 **“已提交”** 的版本。 选择 **False** 以便指示可以将标志分配给具有任何状态的版本。  
   
-8.  单击“保存”  。  
+8.  单击“ **保存**”。  
   
 ## <a name="next-steps"></a>后续步骤  
   

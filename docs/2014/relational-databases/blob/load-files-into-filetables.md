@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43e5a9a6adcca7504aa90825ecd10e53e669c7e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43ea31523da2dfa8b387f68ce4f7c7f07868dd6f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010013"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970872"
 ---
 # <a name="load-files-into-filetables"></a>将文件加载到 FileTable 中
   说明如何将文件加载或迁移到 FileTable 中。  
@@ -44,7 +43,7 @@ ms.locfileid: "66010013"
 ###  <a name="example-migrating-files-from-the-file-system-into-a-filetable"></a><a name="HowToMigrateFiles"></a> 示例：将文件从文件系统迁移到 FileTable  
  在这种情况下，您的文件存储在文件系统中，并且您具有包含指向这些文件的指针的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的元数据表。 您要将文件移入 FileTable，然后用 FileTable UNC 路径替换元数据中每个文件的原始 UNC 路径。 [GetPathLocator (Transact-SQL)](/sql/relational-databases/system-functions/getpathlocator-transact-sql) 函数帮助你实现这一目标。  
   
- 在此示例中，假设存在一个包含有关照片的数据`PhotoMetadata`的现有数据库表。 该表具有 `varchar`(512) 类型的 `UNCPath` 列，其中包含指向 .jpg 文件的实际 UNC 路径。  
+ 在此示例中，假设存在一个 `PhotoMetadata` 包含有关照片的数据的现有数据库表。 该表具有 `varchar`(512) 类型的 `UNCPath` 列，其中包含指向 .jpg 文件的实际 UNC 路径。  
   
  要将图像文件从文件系统迁移到 FileTable，必须执行以下操作：  
   
@@ -124,7 +123,7 @@ UPDATE PhotoMetadata
  若要在没有强制系统定义约束的开销的情况下将文件大容量加载到 FileTable 中，可以暂时禁用约束。 有关详细信息，请参阅 [管理 FileTables](manage-filetables.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [使用 Transact-sql 访问 Filetable](access-filetables-with-transact-sql.md)   
+ [使用 Transact-SQL 访问 FileTable](access-filetables-with-transact-sql.md)   
  [使用文件输入输出 API 访问 FileTable](access-filetables-with-file-input-output-apis.md)  
   
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 83a92633a4c466e72c8cc2de0cc1c220e88e01bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 889e62af592d8d23f2aca0d752f1c7f535df883a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755166"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934128"
 ---
 # <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>镜像服务器实例（配置数据库镜像安全向导）
   使用此页可以指定有关具有镜像数据库的服务器实例的信息。  

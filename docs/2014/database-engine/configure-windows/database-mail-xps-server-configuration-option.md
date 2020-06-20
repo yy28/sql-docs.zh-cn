@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e22c4e63-1792-473b-af11-14a7931ca9ed
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e916fe3b76abfa8773a757cf2779e7d5cbf26b86
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83e91bf5070362b1db56907a1c5b016cf816b968
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62810539"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935358"
 ---
 # <a name="database-mail-xps-server-configuration-option"></a>Database Mail XPs 服务器配置选项
   使用 **DatabaseMail XPs** 选项可以在此服务器上启用数据库邮件。 可能的值包括：  

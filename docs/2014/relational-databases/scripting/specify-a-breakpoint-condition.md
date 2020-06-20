@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 58258ab6c364cbe7137e8a5157cb4f335e049c42
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 659b6ca1149eb8f0412efbe2adbaf4c1ffce59d8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718586"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997868"
 ---
 # <a name="specify-a-breakpoint-condition"></a>指定断点条件
   断点条件是当到达断点时，由调试器计算的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表达式。 如果满足条件，并且达到任何指定的命中计数，则调试器或者中断，或者执行为断点指定的操作。  

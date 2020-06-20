@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 05f5390323efcf38c4f0d91f71613b5a2c3161a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dd3c642df28beec3f242d7f92664ecc2122470ef
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176602"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960647"
 ---
 # <a name="security-master-data-services"></a>安全性 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]在  中，使用安全设置可以确保用户可以访问完成自己工作所需的特定主数据，并防止他们访问自己不应查看的数据。

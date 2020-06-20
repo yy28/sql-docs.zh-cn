@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6575e2a8-16bb-449c-bdca-4a4202d0972f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d6bcf7d78fd550404f81f9cc303414303ad82504
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae5c8d56c1d51290c35a04c22474fcc04ddff61d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63000350"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065911"
 ---
 # <a name="log-reader-agent-security-peer-to-peer-replication"></a>日志读取器代理的安全性（对等复制）
   可以使用“日志读取器代理安全性”**** 页，指定日志读取器代理在各对等方运行和建立连接时使用的帐户。 有关代理要求的权限及复制安全的最佳做法的信息，请参阅[复制代理安全模型](security/replication-agent-security-model.md)和[复制安全最佳做法](security/replication-security-best-practices.md)。  
@@ -37,10 +36,10 @@ ms.locfileid: "63000350"
  各对等方上用作发布数据库和订阅数据库的数据库。  
   
  **与分发服务器的连接**  
- 连接到分发服务器时所处的上下文。 与分发服务器的本地连接始终是使用运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的上下文建立的，因此，此字段将始终显示“模拟‘\<域>\\<登录名\>’”**** 或“模拟‘\<计算机>\\<登录名\>’”****。  
+ 连接到分发服务器时所处的上下文。 与分发服务器的本地连接始终使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 运行代理的 Windows 帐户的上下文建立，因此，此字段将始终显示 "**模拟" \<Domain> \\<登录名 \> ** "或 **" 模拟 " \<Computer> \\<登录名 \> "**。  
   
  **与发布服务器的连接**  
- 与发布服务器建立连接时所处的上下文。 可以使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或使用运行代理的 Windows 帐户的上下文来建立与发布服务器的连接。 此字段显示以下内容之一：“使用登录名‘\<登录名>’”、“模拟‘\<域>\\<登录名\>’”或“模拟‘\<计算机>\\<登录名\>’”。************ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议使用 Windows 帐户的上下文建立所有连接。  
+ 与发布服务器建立连接时所处的上下文。 可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名或使用运行代理的 Windows 帐户的上下文来建立与发布服务器的连接。 此字段显示以下内容之一： "**使用登录名 ' \<Login> "**、 **"模拟 ' \<Domain> \\<登录名 \> "** 或 **"模拟 ' \<Computer> \\<登录名 \> '**"。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议使用 Windows 帐户的上下文建立所有连接。  
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;复制 Transact-sql 编程来管理对等拓扑&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   

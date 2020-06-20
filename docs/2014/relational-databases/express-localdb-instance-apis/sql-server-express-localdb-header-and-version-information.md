@@ -11,13 +11,12 @@ api_location:
 ms.assetid: 506b5161-b902-4894-b87b-9192d7b1664a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6e390430115daf394c5e94267dad30a87851375d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10468ccd96cd4b68d01e0ef1dae35284b388cd49
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128698"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050949"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>SQL Server Express LocalDB 标头信息和版本信息
   没有用于 SQL Server Express LocalDB 实例 API 的单独头文件；LocalDB 函数签名和错误代码在 SQL Server Native Client 头文件 (sqlncli.h) 中定义。 若要使用 LocalDB 实例 API，必须在项目中包含 sqlncli.h 头文件。  
@@ -44,7 +43,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12E.LOCALDB\ MSS
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions]  
 ```  
   
- 在此注册表项之下有一个项列表，每个项对应于计算机上安装的每个 LocalDB。 其中每个键都用格式* \<为 "主要-版本">* 的 LocalDB 版本号来命名。次要版本>（例如，名为12.0 的密钥[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ）。 * \<* 在每个版本项之下都有一个 `InstanceAPIPath` 名称-值对，用于定义指向随该版本一起安装的 SQLUserInstance.dll 文件的完全路径。 下面的示例显示一个安装了 LocalDB 版本 11.0 和 12.0 的计算机的注册表项：  
+ 在此注册表项之下有一个项列表，每个项对应于计算机上安装的每个 LocalDB。 其中每个键都命名为带有格式的 LocalDB 版本号 *\<major-version>* 。*\<minor-version>* （例如，的键名为 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 12.0）。 在每个版本项之下都有一个 `InstanceAPIPath` 名称-值对，用于定义指向随该版本一起安装的 SQLUserInstance.dll 文件的完全路径。 下面的示例显示一个安装了 LocalDB 版本 11.0 和 12.0 的计算机的注册表项：  
   
 ```  
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions\12.0]  
@@ -53,7 +52,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12E.LOCALDB\ MSS
 "InstanceAPIPath"="C:\\Program Files\\Microsoft SQL Server\\120\\LocalDB\\Binn\\SqlUserInstance.dll"]  
 ```  
   
- 客户端提供程序必须在所有已安装的版本中找到最新**SQLUserInstance**版本，并从关联`InstanceAPIPath`的值加载 sqluserinstance.dll DLL 文件。  
+ 客户端提供程序必须在所有已安装的版本中找到最新版本，并从关联的值加载**Sqluserinstance.dll** DLL 文件 `InstanceAPIPath` 。  
   
 ### <a name="wow64-mode-on-64-bit-windows"></a>64 位 Windows 上的 WOW64 模式  
  64 位 LocalDB 安装将有一组附加注册表项，以允许在 Windows 64 位上的 Windows 32 位 (WOW64) 模式下运行的 32 位应用程序使用 LocalDB。 具体而言，在 64 位 Windows 上，LocalDB MSI 将创建以下注册表项：  
@@ -66,7 +65,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12E.LOCALDB\ MSS
   
 ```  
   
- 64位程序`Installed Versions`读取密钥将显示指向**sqluserinstance.dll** DLL 的64位版本的值，而32位程序（在 WOW64 模式下在64位 Windows 上运行）将自动重定向到`Installed Versions` `Wow6432Node` hive 下的某个注册表项。 此项包含指向**Sqluserinstance.dll** DLL 32 位版本的值。  
+ 64位程序读取 `Installed Versions` 密钥将显示指向**sqluserinstance.dll** DLL 的64位版本的值，而32位程序（在 WOW64 模式下在64位 Windows 上运行）将自动重定向到 `Installed Versions` hive 下的某个注册表项 `Wow6432Node` 。 此项包含指向**Sqluserinstance.dll** DLL 32 位版本的值。  
   
 ## <a name="using-localdb_define_proxy_functions"></a>使用 LOCALDB_DEFINE_PROXY_FUNCTIONS  
  LocalDB 实例 API 定义了一个名为 LOCALDB_DEFINE_PROXY_FUNCTIONS 的常量，该常量可自动发现和加载**Sqluserinstance.dll** DLL。  

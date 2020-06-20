@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 682a3692414f89beb0c5e0f0204bc1a69b532e64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1144d186ca38a32dc5fe5db3f487ea7507953cba
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807616"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934248"
 ---
 # <a name="database-mirroring-witness"></a>Database Mirroring Witness
   若要支持自动故障转移，必须在高安全性模式下配置数据库镜像会话，并且还要具有第三个服务器实例（也称为“见证服务器”  ）。 见证服务器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的可选实例，它能使高安全性模式会话中的镜像服务器识别出是否要启动自动故障转移。 与这两个伙伴不同的是，见证服务器并不能用于数据库。 见证服务器的唯一角色是支持自动故障转移。  

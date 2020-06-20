@@ -1,5 +1,6 @@
 ---
 title: 关于
+description: 了解 SQL Server Native Client 的功能（SNAC）。 SQL Server Native Client 指 ODBC，SQL Server 的 OLE DB 驱动程序。
 ms.date: 04/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d175942c9d636221868ca12743e6dac79bb2ddcb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eb9d7878f4edc9f81b7b17b5fdf44da5c9dcec48
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388716"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84948638"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ SNAC 或 SQL Server Native Client 是一种可互换使用的术语，用于引�
 > 有关详细信息和下载 SNAC 或 ODBC 驱动程序的详细信息，请参阅[博客文章 SNAC 的生命周期](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/)。
 > 有关 SQL Server 的 ODBC 驱动程序的详细信息，请参阅[Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)。  
 
- 随一起[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]发布[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的 native client 功能的信息，SQL Server native client 的最新可用版本：
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]随一起发布的 Native client 功能的信息 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ，SQL Server native client 的最新可用版本：
 
 -   [SQL Server Native Client 对 LocalDB 的支持](../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)  
 
@@ -41,13 +42,13 @@ SNAC 或 SQL Server Native Client 是一种可互换使用的术语，用于引�
 
 -   [访问扩展事件日志中的诊断信息](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
 
-Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的 ODBC 支持在 WINDOWS 7 SDK 中添加到标准 ODBC 的三个功能：  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client 中的 ODBC 支持在 Windows 7 SDK 中添加到标准 ODBC 的三个功能：  
 
 -   异步执行与连接相关的操作。 有关详细信息，请参阅[异步执行](https://go.microsoft.com/fwlink/?LinkID=191493)。  
 
 -   C 数据类型扩展能力。 有关详细信息，请参阅[ODBC 中的 C 数据类型](https://go.microsoft.com/fwlink/?LinkID=191495)。  
 
-     若要在 Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中支持此功能，如果应用程序使用 ODBC 3.8，SQLGetDescField 可以返回**SQL_C_SS_TIME2** （对于**时间**类型）或**SQL_C_SS_TIMESTAMPOFFSET** （对于**datetimeoffset**），而不是**SQL_C_BINARY**。 有关详细信息，请参阅[对 ODBC 日期和时间改进的数据类型支持](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)。  
+     若要在 Native Client 中支持此功能 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，如果应用程序使用 ODBC 3.8，SQLGetDescField 可以返回**SQL_C_SS_TIME2** （对于**时间**类型）或**SQL_C_SS_TIMESTAMPOFFSET** （对于**datetimeoffset**），而不是**SQL_C_BINARY**。 有关详细信息，请参阅[对 ODBC 日期和时间改进的数据类型支持](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)。  
 
 -   多次使用小型缓冲区调用**SQLGetData** ，以检索大型参数值。 有关详细信息，请参阅[使用 SQLGetData 检索输出参数](https://go.microsoft.com/fwlink/?LinkID=191494)。  
 

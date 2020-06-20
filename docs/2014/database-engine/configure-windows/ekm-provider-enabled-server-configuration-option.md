@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: da58ed50-3a13-4172-9065-960559d8f383
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 136056f848c85c2fbe8c572a5866c4e23b3a85b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b44e7f5e0801bb370a98abe79a6ea449c6f7409
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782203"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935329"
 ---
 # <a name="ekm-provider-enabled-server-configuration-option"></a>EKM provider enabled 服务器配置选项
   `EKM provider enabled` 选项控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的可扩展密钥管理设备支持。 默认情况下，此选项处于关闭状态。  
@@ -34,7 +33,7 @@ sp_configure 'EKM provider enabled', 0
 ```  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本均未启用此选项。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本均未启用此选项。 有关各个版本支持的功能列表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [可扩展密钥管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   

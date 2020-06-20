@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bcfa139cb854954d920a1148f3d5cebb907c61e4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e6e28e6d1bb923fb226e7df7964853685f23178b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706559"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050375"
 ---
 # <a name="altering-memory-optimized-tables"></a>更改内存优化表
   不支持对内存优化表执行 ALTER 操作。 其中包括更改 bucket_count、添加或删除索引、添加或删除列等操作。 本主题指导如何更新内存优化表。  
@@ -223,7 +222,7 @@ Write-Host ""
   
  以下 PowerShell 脚本执行在上一示例中脚本化的架构更改。 此脚本提取作为变量的表，并执行为该表和相关存储过程生成的架构更改脚本。  
   
- 用法： execute_schema_change ps1 *server_name * * db_name `schema_name` table_name*  
+ 用法： execute_schema_change.ps1 *server_name * * db_name `schema_name` table_name*  
   
 ```powershell
 # stop execution once an error occurs  

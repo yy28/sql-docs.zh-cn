@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bb50b4000397ca3dd51be58867e45135d1d587f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be0fcbb238dfc73664569fec6753de49e4f0270d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831570"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918937"
 ---
 # <a name="foreach-loop-container"></a>Foreach 循环容器
   Foreach 循环容器定义包中的重复控制流。 循环的实现与编程语言中的 **Foreach** 循环结构类似。 在包中，通过使用 Foreach 枚举器启用循环。  Foreach 循环容器将重复指定枚举器的每个成员的控制流。  
@@ -53,7 +52,7 @@ ms.locfileid: "62831570"
   
  ![枚举文件夹的 Foreach 循环容器](../media/ssis-foreachloop.gif "枚举文件夹的 Foreach 循环容器")  
   
- 可以使用变量和属性表达式的组合，用枚举器集合值更新包对象的属性。 首先，将集合值映射到用户定义变量；然后，对使用该变量的属性执行一个属性表达式。 例如，Foreach 文件枚举器的集合值映射到名`MyFile`为的变量，然后在发送邮件任务的 Subject 属性的属性表达式中使用该变量。 如果运行该包，则每次重复循环时，都会用一个文件名更新 Subject 属性。 有关详细信息，请参阅 [在包中使用属性表达式](../expressions/use-property-expressions-in-packages.md)。  
+ 可以使用变量和属性表达式的组合，用枚举器集合值更新包对象的属性。 首先，将集合值映射到用户定义变量；然后，对使用该变量的属性执行一个属性表达式。 例如，Foreach 文件枚举器的集合值映射到名为的变量 `MyFile` ，然后在发送邮件任务的 Subject 属性的属性表达式中使用该变量。 如果运行该包，则每次重复循环时，都会用一个文件名更新 Subject 属性。 有关详细信息，请参阅 [在包中使用属性表达式](../expressions/use-property-expressions-in-packages.md)。  
   
  映射到枚举器集合值的变量也可用于表达式和脚本。  
   

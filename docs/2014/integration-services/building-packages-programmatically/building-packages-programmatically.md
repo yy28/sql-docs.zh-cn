@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f4227560fbaf3e618a25e3dd214a214ac68a736e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d69416b36969e564b611d1b1274367b6ce5cb86
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176552"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924968"
 ---
 # <a name="building-packages-programmatically"></a>以编程方式生成包
   如果您需要动态创建包，或需要在开发环境之外管理和执行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，则可以采用编程方式对包进行操作。 如果采用这种方法，则有一系列选择：
@@ -62,8 +61,8 @@ ms.locfileid: "78176552"
 
  [以编程方式保存包](../building-packages-programmatically/saving-a-package-programmatically.md)描述如何以编程方式保存包。
 
-## <a name="reference"></a>参考
- [Integration Services 错误和消息引用](../integration-services-error-and-message-reference.md)列出预定义[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的错误代码及其符号名称和说明。
+## <a name="reference"></a>引用
+ [Integration Services 错误和消息引用](../integration-services-error-and-message-reference.md)列出预定义的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 错误代码及其符号名称和说明。
 
 ## <a name="related-sections"></a>相关章节
  [用脚本扩展包](../extending-packages-scripting/extending-packages-with-scripting.md)讨论如何使用脚本任务扩展控制流，以及如何使用脚本组件扩展数据流。

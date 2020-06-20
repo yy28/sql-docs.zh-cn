@@ -9,17 +9,16 @@ ms.topic: conceptual
 ms.assetid: ed91877d-4f74-4266-a932-b824b4810c99
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 56ddfce4fc1812e99870c22eeb0e15be64c5decb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1f95544de8f0362b8981a175f1c65de1798a1eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245626"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059322"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>SharePoint 模式下的 Reporting Services 的硬件和软件要求
 
-  本主题介绍在 SharePoint 模式下运行的[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]先决条件、硬件要求和安装注意事项。 因为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式需要 SharePoint 服务器，大多数要求均基于 SharePoint 环境。 对于本机模式的报表服务器，您的硬件应满足运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的最低硬件和软件要求。 有关详细信息，请参阅 [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)。  
+  本主题介绍 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在 SharePoint 模式下运行的先决条件、硬件要求和安装注意事项。 因为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式需要 SharePoint 服务器，大多数要求均基于 SharePoint 环境。 对于本机模式的报表服务器，您的硬件应满足运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的最低硬件和软件要求。 有关详细信息，请参阅 [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)。  
   
 -   [先决条件](#bkmk_prereq)  
   
@@ -67,7 +66,7 @@ ms.locfileid: "75245626"
   
 ##  <a name="more-information"></a><a name="bkmk_more_information"></a> 详细信息
 
- 有关 SharePoint 更改的信息，请参阅[从 sharepoint 2010 到 sharepoint 2013 的更改](https://technet.microsoft.com/library/ff607742\(office.15\).aspx)（https://technet.microsoft.com/library/ff607742(office.15).aspx)。  
+ 有关 SharePoint 更改的信息，请参阅[从 sharepoint 2010 到 sharepoint 2013 的更改](https://technet.microsoft.com/library/ff607742\(office.15\).aspx)（ https://technet.microsoft.com/library/ff607742(office.15).aspx) 。  
   
  [SQL Server 2014 发行说明](https://go.microsoft.com/fwlink/?LinkID=296445)。  
   

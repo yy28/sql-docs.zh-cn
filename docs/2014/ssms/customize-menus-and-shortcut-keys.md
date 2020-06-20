@@ -19,18 +19,17 @@ helpviewer_keywords:
 ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1e0f635cc6eb6d985bb75f87583397d6f4c2baa4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e9900def3d9e464888e43f608b939a343c7a955
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245785"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058650"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>自定义菜单和快捷键
-  借助于键盘快捷键，可以通过按 ALT+*single letter> 来选择菜单命令或按钮\<* 。 例如，若要打开“编辑”  菜单，请按 Alt+E。 使用“自定义”  对话框可以重排和修改工具栏按钮、菜单和菜单命令。 本文还针对使用鼠标和仅使用键盘更改设置提供了相关说明。  
+   借助于键盘快捷键，可以通过按 Alt+\<single letter> 来选择菜单命令或按钮**。 例如，若要打开“编辑”  菜单，请按 Alt+E。 使用“自定义”  对话框可以重排和修改工具栏按钮、菜单和菜单命令。 本文还针对使用鼠标和仅使用键盘更改设置提供了相关说明。  
   
- 用于存储过程的键盘快捷键（使用 Ctrl 键）可以从“工具” **“选项”**  /对话框的“键盘”  页中创建。  
+ 用于存储过程的键盘快捷键（使用 Ctrl 键）可以从“工具”/“选项”对话框的“键盘”页中创建。  
   
 > [!NOTE]  
 >  单击此页顶部的“全部折叠”  将仅显示标题。  

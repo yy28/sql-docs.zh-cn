@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9181b998-d24a-41fb-bb3c-14eee34f910d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bc9f6c28e775cdbd21806172d7074e655fdd1545
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d08d256946fbeb2f5b70057fc0d6992758b3a211
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054822"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972627"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>在数据流组件中使用表达式
   本过程介绍如何将表达式添加到有条件拆分转换或派生列转换中。 有条件拆分转换使用表达式定义将数据行定向到转换输出的条件，而派生列转换使用表达式定义分配给列的值。  
@@ -69,6 +68,6 @@ ms.locfileid: "66054822"
  [有条件拆分转换](data-flow/transformations/conditional-split-transformation.md)   
  [派生列转换](data-flow/transformations/derived-column-transformation.md)   
  [数据流任务](control-flow/data-flow-task.md)   
- [数据流](data-flow/data-flow.md)  
+ 数据流  
   
   

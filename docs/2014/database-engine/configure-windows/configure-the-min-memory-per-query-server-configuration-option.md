@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: dfee7265529419aecf2b05831503ed134b93f525
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56d85f36840f0900c8b5e986334a99ba610d3930
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787029"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935626"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>配置每次查询占用的最小内存服务器配置选项
-  `min memory per query`本主题说明如何使用[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]在中配置服务器配置选项。 `min memory per query`选项指定将为查询执行分配的最小内存量（以 kb 为单位）。 例如，如果`min memory per query`设置为 2048 KB，则保证查询至少获得这么多内存。 默认值为 1,024 KB。 最小值为 512 KB，最大值为 2,147,483,647 KB (2 GB)。  
+  本主题说明如何 `min memory per query` 使用或在中配置服务器配置选项 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 `min memory per query`选项指定将为查询执行分配的最小内存量（以 kb 为单位）。 例如，如果 `min memory per query` 设置为 2048 KB，则保证查询至少获得这么多内存。 默认值为 1,024 KB。 最小值为 512 KB，最大值为 2,147,483,647 KB (2 GB)。  
   
  **本主题内容**  
   
@@ -78,7 +77,7 @@ ms.locfileid: "62787029"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 本示例演示如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 将 `min memory per query` 选项的值设置为 `3500` KB。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 本示例演示如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 将 `min memory per query` 选项的值设置为 `3500` KB。  
   
 ```sql  
 USE AdventureWorks2012 ;  

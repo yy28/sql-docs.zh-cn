@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 79d5989f-2fb1-424b-be50-d89c8e39c51b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e5e74eba3479bdc722fdd45c99eb78592d6e8007
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bcebff1c8621e2699137163e89bef87c22c67865
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092344"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036671"
 ---
 # <a name="select-instance"></a>选择实例
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导的“选择实例”页可以指定要升级到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]实例。  

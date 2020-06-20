@@ -18,18 +18,17 @@ helpviewer_keywords:
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1b788c94a1f27cced3e57b8f7941eb92edd61a2f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9caf64a88652323e710385f177852ee8e2b25146
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702564"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065517"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>预处理架构以便合并包括的架构
   W3C XSD **include** 元素支持架构模块性，通过功能可以将 XML 架构分区到多个物理文件中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 当前尚不支持此元素。 服务器将拒绝包含此元素的 XML 架构。  
   
- 一种解决方法是，可以预处理包括 \<xsd:include> 指令的 XML 架构，来复制所有包含的架构的内容并将其合并为单个架构，以上载到服务器。 以下 C# 代码可用于预处理。 代码前面部分的注释提供了有关如何使用代码的信息。  
+ 作为解决方案，可对包含指令的 XML 架构进行 \<xsd:include> 预处理，以将任何包含的架构的内容复制并合并到单个架构中以上载到服务器。 以下 C# 代码可用于预处理。 代码前面部分的注释提供了有关如何使用代码的信息。  
   
 ```  
 // XSD Schema Include Normalizer  

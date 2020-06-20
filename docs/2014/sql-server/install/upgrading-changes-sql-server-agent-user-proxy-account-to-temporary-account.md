@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cd2d08c3-4e56-4034-8b68-0c78df8b5471
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a82cbcc9ef1ab57279b44cc83509cb1efad855ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bca80580a50f2acebed1b6fbea2dec1f6458dbc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091403"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058867"
 ---
 # <a name="upgrading-will-change-the-sql-server-agent-user-proxy-account-to-the-temporary-upgradedproxyaccount"></a>升级会将 SQL Server 代理用户的代理帐户更改为临时的 UpgradedProxyAccount
   启用了日志传送的数据库维护计划在升级后将不会启用。  

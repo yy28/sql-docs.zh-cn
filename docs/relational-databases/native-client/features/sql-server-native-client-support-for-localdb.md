@@ -1,5 +1,6 @@
 ---
 title: 支持 LocalDB
+description: 了解如何连接到 LocalDB 实例中的数据库，它是 SQL Server Native Client 支持 SQL Server 的轻型版本。
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: 127569d1-a9f7-49bf-a561-c084986a8871
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6b3bda8e934e67371c48611383a45cbdc5cb993
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6e4f305bd92ea8b5c003b4793e0443effaeeb9ef
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388415"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84948793"
 ---
 # <a name="sql-server-native-client-support-for-localdb"></a>SQL Server Native Client 对 LocalDB 的支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,9 +32,9 @@ ms.locfileid: "81388415"
   
  总之，通过 LocalDB，您可以：  
   
--   使用 sqllocaldb.exe**** 发现默认实例的名称。  
+-   使用 sqllocaldb.exe  发现默认实例的名称。  
   
--   使用 AttachDBFilename 连接字符串关键字指定服务器应附加的数据库文件****。 使用 AttachDBFilename 时，如果没有使用 Database 连接字符串关键字指定数据库的名称，则在应用程序关闭时，该数据库将从 LocalDB 实例中删除********。  
+-   使用 AttachDBFilename 连接字符串关键字指定服务器应附加的数据库文件  。 使用 AttachDBFilename 时，如果没有使用 Database 连接字符串关键字指定数据库的名称，则在应用程序关闭时，该数据库将从 LocalDB 实例中删除   。  
   
 -   在您的连接字符串中指定 LocalDB 实例：  
   

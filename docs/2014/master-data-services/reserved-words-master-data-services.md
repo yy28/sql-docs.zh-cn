@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5435c2a48417156abd6d4f831bf61c9ba6440fab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd1e5bcee01992607cf9bffca1a72dd99bd75fbe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482575"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960577"
 ---
 # <a name="reserved-words-master-data-services"></a>保留字 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，当您创建模型对象或成员时，不能使用某些字词。 使用这些字词可能导致错误。  
@@ -32,7 +31,7 @@ ms.locfileid: "65482575"
   
 -   [显式层次结构](#exhierarchies)  
   
--   [特性](#attributes)  
+-   [属性](#attributes)  
   
 -   [成员](#members)  
   
@@ -49,7 +48,7 @@ ms.locfileid: "65482575"
   
 -   **ID**  
   
--   **编写**  
+-   **代码**  
   
 -   **名称**  
   

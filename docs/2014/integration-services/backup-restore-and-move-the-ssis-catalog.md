@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 66cbc5b8b54ec2507bb4fbe96443afa25386de96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 314dfaee23854524884edd0fe67fe1f45ec89b2e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68670500"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925268"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>备份、还原和移动 SSIS 目录
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 包含 SSISDB 数据库。 查询 SSISDB 数据库中的视图可以检查 **SSISDB** 目录中存储的对象、设置和操作数据。 本主题说明如何备份和还原该数据库。  
@@ -48,7 +47,7 @@ ms.locfileid: "68670500"
   
 5.  如果要将 SSISDB 数据库还原到从未创建 SSISDB 目录的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，请执行以下操作生成 sp_ssis_startup 的 CREATE PROCEDURE 脚本。 有关详细信息，请参阅 [CREATE PROCEDURE (Transact-SQL)](/sql/t-sql/statements/create-procedure-transact-sql)。  
   
-    1.  在对象资源管理器中，展开 "**数据库**" 节点，然后展开 "**系统数据库** > " "**主** > **可编程性** > " "**存储过程**" 节点。  
+    1.  在对象资源管理器中，展开 "**数据库**" 节点，然后展开 "**系统数据库**" "  >  **主**  >  **可编程性**" "  >  **存储过程**" 节点。  
   
     2.  右键单击 **dbo.sp_ssis_startup**，然后依次单击“编写存储过程脚本为” > “CREATE 到” > “新查询编辑器窗口”。************  
   
@@ -58,7 +57,7 @@ ms.locfileid: "68670500"
   
     1.  在对象资源管理器中，展开 **“SQL Server 代理”** 节点，然后展开 **“作业”** 节点。  
   
-    2.  右键单击 "SSIS 服务器维护作业"，然后单击 "**创建到** > **新查询编辑器窗口**的**脚本作业** > "。  
+    2.  右键单击 "SSIS 服务器维护作业"，然后**Script Job as**单击 "  >  **创建到**  >  **新查询编辑器窗口**的脚本作业"。  
   
 ### <a name="to-restore-the-ssis-database"></a>还原 SSIS 数据库  
   

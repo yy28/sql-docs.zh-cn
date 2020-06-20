@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 39e444077c3dbe27ae243e4292b7a047e21de2b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a1a6beb1c6996e6e12f16c4555fd9dfcab97617d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064851"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933042"
 ---
 # <a name="event-pairing-target"></a>事件配对目标
   事件配对目标使用两个事件中存在的一列或多列数据来对这两个事件进行匹配。 许多事件是成对的，例如，锁获取和锁释放。 对某个事件序列配对完毕，便会放弃这两个事件。 放弃匹配完毕的事件便于检测哪些获取的锁尚未释放。  
@@ -43,7 +42,7 @@ ms.locfileid: "66064851"
   
  系统将捕获并存储与某个事件相关联的所有数据，以供将来配对之用。 此外，还将收集由操作添加的数据。 收集的事件数据存储在内存中，因此会有一定的限制。 此限制基于系统容量和活动。 所用内存量将根据可用系统资源来决定，而不是以最大内存量作为限定因素。 内存不足时，将删除已经保留的不成对事件。 如果某事件尚未成对便被删除，则与之匹配的事件将作为不成对事件出现。  
   
- 配对目标会将不成对事件序列化为 XML 格式。 此格式不遵从任何架构， 只包含两种元素类型。 不** \<成对的>** 元素是根，后跟一个。 当前正在跟踪的每个不成对事件>元素。 ** \<** 事件>元素包含一个属性，其中包含不成对事件的名称。 ** \<**  
+ 配对目标会将不成对事件序列化为 XML 格式。 此格式不遵从任何架构， 只包含两种元素类型。 **\<unpaired>** 元素为根，后跟一个。 **\<event>** 元素，用于当前正在跟踪的每个不成对事件。 **\<event>** 元素包含一个属性，其中包含不成对事件的名称。  
   
 ## <a name="adding-the-target-to-a-session"></a>将目标添加到会话  
  若要将配对目标添加到扩展事件会话，您必须在创建或更改事件会话时包括下面的语句：  

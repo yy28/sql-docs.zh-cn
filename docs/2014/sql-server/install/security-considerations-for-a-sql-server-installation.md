@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: eec38b5ecc524f0d3decd02c0832efd1909e8f00
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a5e45d7dd1dda907d15d7d825abda5f3c59cd87
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127894"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058981"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>安装 SQL Server 的安全注意事项
   安全对于每个产品和每家企业都很重要。 遵循简单的最佳做法，可以避免很多安全漏洞。 本主题讨论安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 前和安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之后应考虑采用的一些最佳安全做法。 功能的参考主题中包括了特定功能的安全指南。  

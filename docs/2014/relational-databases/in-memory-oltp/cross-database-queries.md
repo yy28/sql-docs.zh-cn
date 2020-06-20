@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6e829bc3bc7216532bd76f083335f126166347f4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5b86fb120d8263ae48bb9a4e874e4cf0d012bf7a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706521"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050208"
 ---
 # <a name="cross-database-queries"></a>跨数据库查询
   在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，内存优化表不支持跨数据库事务。 不能从也访问某一内存优化表的相同事务或相同查询访问其他数据库。 可以轻松地将来自一个数据库的某个表中的数据复制到其他数据库的内存优化表中。  

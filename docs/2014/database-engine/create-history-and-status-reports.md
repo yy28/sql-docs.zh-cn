@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3017f5d0-ef53-4522-b42f-bdf637e7d75e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bd2040199aa2f24f0ae794bda9d13255a4e1d583
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ebcc6da18ebe6c1930888bb0d2bd36610a19e7e7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807501"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934498"
 ---
 # <a name="create-history-and-status-reports"></a>创建历史记录和状态报表
   可以在当前加载的解决方案中创建一个关于文件的历史记录或当前状态的报表。 您还可以预览报表，然后将报表发送到打印机、文件或剪贴板。 这些报表并非由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 生成， 而是由 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 生成。  
@@ -29,7 +28,7 @@ ms.locfileid: "62807501"
   
 2.  在 "**文件**" 菜单上，指向 "**源代码管理**"，然后单击 "**历史记录**"。  
   
-3.  在 " \<文件或项目> 的**历史记录**" 对话框中，单击 "**报表**"。  
+3.  在 "**历史记录**" \<File or Project> 对话框中，单击 "**报表**"。  
   
 4.  在 "**历史记录报表**" 对话框中，选择相应的选项，然后单击 **"确定"**。  
   

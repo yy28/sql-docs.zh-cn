@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5ba02a877d06d6ee3b7f57f6a42c588f4c1019a9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 93489e5dea295964826005e081bcffe889cb7586
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706580"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050451"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>内存优化表查询处理指南
   内存中 OLTP 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中引入内存优化的表和本机编译的存储过程。 本文简单介绍针对内存优化表和本机编译存储过程的查询处理。  
@@ -255,7 +254,7 @@ GO
 ### <a name="query-operators-in-natively-compiled-stored-procedures"></a>本机编译存储过程中的查询运算符  
  下表对本机编译存储过程中支持的查询运算符进行了总结：  
   
-|运算符|示例查询|  
+|操作员|示例查询|  
 |--------------|------------------|  
 |SELECT|`SELECT OrderID FROM dbo.[Order]`|  
 |INSERT|`INSERT dbo.Customer VALUES ('abc', 'def')`|  
