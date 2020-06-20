@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: ebf59330-a421-45a5-9020-0484a96852bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 12fc3e7e7b67b9f02f2a9744d4af2af175ce0812
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0fcdca4d57b21855a959a876c0c9c9344487046b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022668"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060671"
 ---
 # <a name="new-agent-profile"></a>新建代理配置文件
-  使用 **“新建代理配置文件”** 对话框可以创建新的配置文件。 新的配置文件始终基于现有配置文件，但可以进行修改以满足应用程序的要求。 创建配置文件之后，可以在 **“代理配置文件”** 对话框中将其应用于现有的和将来的代理作业。 可以在“\<代理配置文件名> 属性”  对话框中编辑代理参数值。  
+  使用 **“新建代理配置文件”** 对话框可以创建新的配置文件。 新的配置文件始终基于现有配置文件，但可以进行修改以满足应用程序的要求。 创建配置文件之后，可以在 **“代理配置文件”** 对话框中将其应用于现有的和将来的代理作业。 可以在 "属性" 对话框中编辑代理参数值 \<**AgentProfileName> 。  
   
 ## <a name="options"></a>选项  
  **名称**  

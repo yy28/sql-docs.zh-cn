@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: da9ff870-9cfd-42fe-994b-7b9292681f7d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2bc763d621d15f982a2670483683d3862e678c98
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d569373f80a2f5488e8612cc30da264d283cd7f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63283679"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007648"
 ---
 # <a name="server-element-for-configuration-dta"></a>配置的服务器元素 (DTA)
   包含需要数据库引擎优化顾问评估其假设配置（由 `Configuration` 元素指定）的服务器的标识信息。  
@@ -50,7 +49,7 @@ ms.locfileid: "63283679"
 |**子元素**|[服务器的名称元素 (DTA)](name-element-for-server-dta.md)<br /><br /> [配置的数据库元素 (DTA)](database-element-for-configuration-dta.md)|  
   
 ## <a name="remarks"></a>备注  
- 只能为`Configuration`元素指定一个`Server`元素。 在 **数据库引擎优化顾问 XML 架构** 中，此元素的名称为 [ServerTypecomplexType](https://go.microsoft.com/fwlink/?linkid=43100)。 请不要将此 `Server` 元素与 `DTAInput` 元素的子元素混淆。 有关详细信息，请参阅[服务器元素 (DTA)](server-element-dta.md)。  
+ 只能为元素指定一个 `Server` 元素 `Configuration` 。 在 **数据库引擎优化顾问 XML 架构** 中，此元素的名称为 [ServerTypecomplexType](https://go.microsoft.com/fwlink/?linkid=43100)。 请不要将此 `Server` 元素与 `DTAInput` 元素的子元素混淆。 有关详细信息，请参阅[服务器元素 (DTA)](server-element-dta.md)。  
   
 ## <a name="example"></a>示例  
  有关用法示例，请参阅[具有用户指定配置 (DTA) 的 XML 输入文件示例](xml-input-file-sample-with-user-specified-configuration-dta.md)。  

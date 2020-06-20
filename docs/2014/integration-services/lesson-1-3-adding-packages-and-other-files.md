@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7db3e293c95b358d78e445e6b7534f90ea7b9310
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3fb68a0d0cc21eb707a25865acf636842d0bc4f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892074"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965317"
 ---
 # <a name="step-3-adding-packages-and-other-files"></a>步骤 3：添加包和其他文件
   在此任务中，将现有的包、支持单个包的辅助文件以及自述文件添加到您在上一任务中创建的 Deployment Tutorial 项目。 例如，您将添加一个包含包数据的 XML 数据文件和一个提供有关项目中所有包的自述文件信息的文本文件。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a8c0a59-71c4-4280-824c-2dc17999532e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 57eb424087ccef14f4b1ff1aea4216b5dd0a205b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3850cbd99eca927983731ad941f611901d26e6ca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774180"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930193"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>打开表设计器 (Visual Database Tools)
   表设计器是一种可视化工具，允许您对所连接的数据库表进行设计和可视化处理。 您可以使用表设计器来创建、编辑或删除表、列、键、索引、关系和约束。  

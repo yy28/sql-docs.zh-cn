@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 56148cca72ca9561219a9ea14025b0bd0f2204b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d57984228e23143d2061df6bf447f978f9bd3c46
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206573"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060911"
 ---
 # <a name="modify-a-partition-scheme"></a>修改分区方案
   通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定用于保存添加到已分区表的下一个分区的文件组，可以修改 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的分区方案。 可通过将 NEXT USED 属性分配给文件组来执行此操作。 您可以将 NEXT USED 属性分配给空文件组或已存有分区的文件组。 也就是说，一个文件组可以保存多个分区。  

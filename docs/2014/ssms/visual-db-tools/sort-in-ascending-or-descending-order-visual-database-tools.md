@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d61cc55b-9ee8-4ecf-a32f-6459ae43910b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cdf37ab5b61e74ab04b9b58162325b580675c493
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b5cb3170ed8447627d8eb14675b8527442045aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63070777"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000970"
 ---
 # <a name="sort-in-ascending-or-descending-order-visual-database-tools"></a>按升序或降序进行排序 (Visual Database Tools)
   通过在 `ASC` 子句中使用 `DESC` 或 `ORDER BY` 关键字，可以按结果集中的一列或多列以升序或降序对查询结果进行排序。  

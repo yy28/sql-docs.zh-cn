@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 00d213bf8ca554b60edc8dc3de3f1290cd00f538
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08a644f9de2f406ecb0abfaa30bf1c9e646213f0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766889"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964497"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>以编程方式加载和运行本地包
-  可以使用[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]运行包[中介绍的方法，根据需要或在预定时间运行 ](../packages/run-integration-services-ssis-packages.md) 包。 但是，也可以只用几行代码，从自定义应用程序（如 Windows 窗体应用程序、控制台应用程序、ASP.NET Web 窗体或 Web 服务、Windows 服务）运行包。  
+  可以使用[运行包](../packages/run-integration-services-ssis-packages.md)中介绍的方法，根据需要或在预定时间运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 但是，也可以只用几行代码，从自定义应用程序（如 Windows 窗体应用程序、控制台应用程序、ASP.NET Web 窗体或 Web 服务、Windows 服务）运行包。  
   
  本主题讨论：  
   
@@ -59,12 +58,12 @@ ms.locfileid: "62766889"
   
 2.  在“项目”  菜单上，单击“添加引用”  ，向 Microsoft.SqlServer.ManagedDTS.dll  添加一个引用。 单击“确定”。   
   
-3.  使用 Visual Basic `Imports`语句或 c # `using`语句来导入**Microsoft SqlServer**命名空间。  
+3.  使用 Visual Basic `Imports` 语句或 c # `using` 语句来导入**Microsoft SqlServer**命名空间。  
   
 4.  在主例程中添加以下代码。 完成的控制台应用程序应类似于下面的示例。  
   
     > [!NOTE]  
-    >  该示例代码演示如何使用 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadPackage%2A> 方法从文件系统加载包。 但您也可以通过调用 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromSqlServer%2A> 方法，从 MSDB 数据库加载包，或者通过调用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 方法，从 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> 包存储区加载包。  
+    >  该示例代码演示如何使用 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadPackage%2A> 方法从文件系统加载包。 但您也可以通过调用 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromSqlServer%2A> 方法，从 MSDB 数据库加载包，或者通过调用 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> 方法，从 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包存储区加载包。  
   
 5.  运行该项目。 示例代码执行随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 示例安装的 CalculatedColumns 示例包。 包执行的结果显示在控制台窗口中。  
   

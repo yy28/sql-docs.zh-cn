@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 49ac4661e533b4c4e56a750f208c3ded09f72d27
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e9009bfb7b44f6690d123697059e105d76688ce0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056791"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964767"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>执行 SQL 任务中的参数和返回代码
   SQL 语句和存储过程常常使用 `input` 参数、`output` 参数和返回代码。 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中，执行 SQL 任务支持 `Input`、`Output` 和 `ReturnValue` 参数类型。 应当将 `Input` 类型用于输入参数，将 `Output` 用于输出参数并将 `ReturnValue` 用于返回代码。  
@@ -45,7 +44,7 @@ ms.locfileid: "66056791"
 -   [在执行 SQL 任务编辑器中配置参数和返回代码](#Configure_parameters_and_return_codes)  
   
 ##  <a name="using-parameter-names-and-markers"></a><a name="Parameter_names_and_markers"></a>使用参数名称和标记  
- 执行 SQL 任务使用不同的连接类型时，SQL 命令的语法使用不同的参数标记。 例如， [!INCLUDE[vstecado](../includes/vstecado-md.md)]连接管理器类型要求 SQL 命令使用格式** \@为 varParameter**的参数标记，而 OLE DB 连接类型需要问号（？）参数标记。  
+ 执行 SQL 任务使用不同的连接类型时，SQL 命令的语法使用不同的参数标记。 例如， [!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接管理器类型要求 SQL 命令使用格式为** \@ varParameter**的参数标记，而 OLE DB 连接类型需要问号（？）参数标记。  
   
  在变量与参数之间的映射中可以用作参数名的名称也因连接管理器类型而异。 例如，[!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接管理器类型使用前缀为 \@ 的用户定义的名称，而 OLE DB 连接管理器类型则要求使用从 0 开始的序数数值作为参数名。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66056791"
 |连接类型|参数标记|参数名称|示例 SQL 命令|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<参数名称>|\@\<参数名称>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<parameter name>|\@\<parameter name>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
 |ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL 和 OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -84,7 +83,7 @@ ms.locfileid: "66056791"
 ### <a name="using-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>在 ADO.NET 和 ADO 连接管理器中使用日期和时间参数  
  读取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 类型 `time` 和 `datetimeoffset` 的数据时，使用 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 或 ADO 连接管理器的执行 SQL 任务有以下附加要求：  
   
--   对于`time`数据， [!INCLUDE[vstecado](../includes/vstecado-md.md)]连接管理器要求此数据存储在参数类型为`Input`或`Output`且数据类型为`string`的参数中。  
+-   对于 `time` 数据， [!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接管理器要求此数据存储在参数类型为 `Input` 或 `Output` 且数据类型为的参数中 `string` 。  
   
 -   对于 `datetimeoffset` 数据，[!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接管理器要求此数据存储在下列参数之一中：  
   
@@ -152,14 +151,14 @@ ms.locfileid: "66056791"
 ##  <a name="using-parameters-with-stored-procedures"></a><a name="Stored_procedures"></a>对存储过程使用参数  
  运行存储过程的 SQL 命令也可以使用参数映射。 与参数化查询的规则一样，参数标记和参数名称的使用规则取决于执行 SQL 所使用的连接管理器的类型。  
   
- 下表按连接管理器类型列出了 EXEC 命令的示例。 示例运行 **中的** uspGetBillOfMaterials [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)]存储过程。 该存储过程使用`@StartProductID`和`@CheckDate` `input`参数。  
+ 下表按连接管理器类型列出了 EXEC 命令的示例。 示例运行 **中的** uspGetBillOfMaterials [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)]存储过程。 该存储过程使用 `@StartProductID` 和 `@CheckDate` `input` 参数。  
   
 |连接类型|EXEC 语法|  
 |---------------------|-----------------|  
 |EXCEL 和 OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
 |ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> 有关 ODBC 调用语法的详细信息，请参阅 MSDN Library 中的 ODBC 程序员参考的 [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462)（过程参数）主题。|  
-|ADO|如果 IsQueryStoredProcedure 设置为`False`，`EXEC uspGetBillOfMaterials ?, ?`<br /><br /> 如果 IsQueryStoredProcedure 设置为`True`，`uspGetBillOfMaterials`|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|如果 IsQueryStoredProcedure 设置为`False`，`EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> 如果 IsQueryStoredProcedure 设置为`True`，`uspGetBillOfMaterials`|  
+|ADO|如果 IsQueryStoredProcedure 设置为 `False` ，`EXEC uspGetBillOfMaterials ?, ?`<br /><br /> 如果 IsQueryStoredProcedure 设置为 `True` ，`uspGetBillOfMaterials`|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|如果 IsQueryStoredProcedure 设置为 `False` ，`EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> 如果 IsQueryStoredProcedure 设置为 `True` ，`uspGetBillOfMaterials`|  
   
  若要使用输出参数，则语法要求在每个参数标记后跟 OUTPUT 关键字。 例如，以下 output 参数语法是正确的： `EXEC myStoredProcedure ? OUTPUT`。  
   
@@ -168,7 +167,7 @@ ms.locfileid: "66056791"
 ##  <a name="getting-values-of-return-codes"></a><a name="Return_codes"></a>获取返回代码的值  
  存储过程可以返回一个整数值（称为“返回代码”），以指示过程的执行状态。 若要在执行 SQL 任务中实现返回代码，需要使用 `ReturnValue` 类型的参数。  
   
- 下表按连接类型列出了实现返回代码的某些 EXEC 命令示例。 所有示例均使用 `input` 参数。 对于所有参数类型（`Input`、 `Output`和`ReturnValue`），使用参数标记和参数名称的规则是相同的。  
+ 下表按连接类型列出了实现返回代码的某些 EXEC 命令示例。 所有示例均使用 `input` 参数。 对于所有参数类型（ `Input` 、和），使用参数标记和参数名称的规则是相同的 `Output` `ReturnValue` 。  
   
  某些语法不支持参数文字。 在此情况下，必须通过使用变量来提供参数值。  
   
@@ -176,10 +175,10 @@ ms.locfileid: "66056791"
 |---------------------|-----------------|  
 |EXCEL 和 OLEDB|`EXEC ? = myStoredProcedure 1`|  
 |ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> 有关 ODBC 调用语法的详细信息，请参阅 MSDN Library 中的 ODBC 程序员参考的 [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462)（过程参数）主题。|  
-|ADO|如果 IsQueryStoreProcedure 设置为`False`，`EXEC ? = myStoredProcedure 1`<br /><br /> 如果 IsQueryStoreProcedure 设置为`True`，`myStoredProcedure`|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Set IsQueryStoreProcedure 设置为`True`。<br /><br /> `myStoredProcedure`|  
+|ADO|如果 IsQueryStoreProcedure 设置为 `False` ，`EXEC ? = myStoredProcedure 1`<br /><br /> 如果 IsQueryStoreProcedure 设置为 `True` ，`myStoredProcedure`|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Set IsQueryStoreProcedure 设置为 `True` 。<br /><br /> `myStoredProcedure`|  
   
- 如上表中语法所示，执行 SQL 任务使用 **“直接输入”** 源类型来运行存储过程。 执行 SQL 任务还可以使用 **“文件连接”** 源类型来运行存储过程。 无论执行 SQL 任务是使用**直接输入**还是**文件连接**源类型，都可以使用`ReturnValue`类型的参数来实现返回代码。 有关如何配置执行 SQL 任务运行的 SQL 语句的源类型的详细信息，请参阅[执行 SQL 任务编辑器（“常规”页）](general-page-of-integration-services-designers-options.md)。  
+ 如上表中语法所示，执行 SQL 任务使用 **“直接输入”** 源类型来运行存储过程。 执行 SQL 任务还可以使用 **“文件连接”** 源类型来运行存储过程。 无论执行 SQL 任务是使用**直接输入**还是**文件连接**源类型，都可以使用类型的参数 `ReturnValue` 来实现返回代码。 有关如何配置执行 SQL 任务运行的 SQL 语句的源类型的详细信息，请参阅[执行 SQL 任务编辑器（“常规”页）](general-page-of-integration-services-designers-options.md)。  
   
  有关在 Transact-SQL 存储过程中使用返回代码的详细信息，请参阅 [RETURN (Transact-SQL)](/sql/t-sql/language-elements/return-transact-sql)。  
   

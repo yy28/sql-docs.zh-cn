@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 001bed84-f50f-4961-bc25-9906728d99ec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ccb53d47b44ce70b8a84baa784decef74c8367fb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c8f449eb21e53a22a1a8d8f2eaa1aa39cf58c99
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067633"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939848"
 ---
 # <a name="create-a-newtabular-model-project-ssas-tabular"></a>创建新的表格模型项目（SSAS 表格）
   本主题介绍如何在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创建新的空白表格模型项目。 在创建新模型项目后，您可以通过从数据源导入数据来开始创作模型项目。  

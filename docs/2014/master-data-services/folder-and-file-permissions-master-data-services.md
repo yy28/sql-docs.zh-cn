@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 06ae01a097b164abb1b55267853ee99f7e5bf445
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b8aa5b83756df36b133a339ba99b13406251947
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483834"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971457"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>文件夹和文件权限 (Master Data Services)
-  在您安装 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]时，文件夹和文件将安装在您为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 共享功能指定的安装路径处的文件系统中。 如果你使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]共享功能的默认安装路径，则的安装路径[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]为*驱动器*： \Program Files\Microsoft SQL Server\120\Master Data Services。 尽管您可以更改共享功能安装路径，但要注意从父文件夹继承的权限以及为 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]显式设置的权限。  
+  在您安装 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]时，文件夹和文件将安装在您为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 共享功能指定的安装路径处的文件系统中。 如果你使用共享功能的默认安装路径，则的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装路径 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 为*驱动器*： \Program Files\Microsoft SQL Server\120\Master Data Services。 尽管您可以更改共享功能安装路径，但要注意从父文件夹继承的权限以及为 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]显式设置的权限。  
   
 ## <a name="inherited-permissions"></a>继承的权限  
  **Microsoft SQL Server** 文件夹、 **Master Data Services** 文件夹以及大多数子文件夹和文件从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装程序中指定的父文件夹继承权限。 如果选择默认安装位置，则继承其权限的父文件夹是驱动器**:\Program Files。 下表描述针对 **“程序文件”** 的默认权限。  
@@ -37,7 +36,7 @@ ms.locfileid: "65483834"
 |---------------------------|-----------------|  
 |CREATOR OWNER|特殊权限|  
 |SYSTEM|特殊权限|  
-|Administrators|特殊权限|  
+|管理员|特殊权限|  
 |用户|读取和执行、列出文件夹内容、读取|  
 |TrustedInstaller|列出文件夹内容、特殊权限|  
   
@@ -49,7 +48,7 @@ ms.locfileid: "65483834"
 |组或帐户名称|权限|  
 |---------------------------|-----------------|  
 |SYSTEM|修改、读取和执行、列出文件夹内容、读取、写入|  
-|Administrators|修改、读取和执行、列出文件夹内容、读取、写入|  
+|管理员|修改、读取和执行、列出文件夹内容、读取、写入|  
 |MDS_ServiceAccounts|修改、读取和执行、列出文件夹内容、读取、写入|  
   
 ###### <a name="webconfig-permissions"></a>Web.config 权限  
@@ -57,7 +56,7 @@ ms.locfileid: "65483834"
 |组或帐户名称|权限|  
 |---------------------------|-----------------|  
 |SYSTEM|完全控制、修改、读取和执行、读取、写入|  
-|Administrators|完全控制、修改、读取和执行、读取、写入|  
+|管理员|完全控制、修改、读取和执行、读取、写入|  
 |MDS_ServiceAccounts|读取和执行、读取|  
   
  有关 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web.config 文件内容的详细信息，请参阅 [Web 配置参考 (Master Data Services)](web-configuration-reference-master-data-services.md)。  

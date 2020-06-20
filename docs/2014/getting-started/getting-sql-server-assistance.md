@@ -40,13 +40,12 @@ helpviewer_keywords:
 ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 22eeb621cb9c4ccdf0d853ff9d6d528c156c15a0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5acc2081212b0b732305949234e5f5d5ae73fa63
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706934"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926858"
 ---
 # <a name="getting-sql-server-assistance"></a>获取 SQL Server 帮助
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 有以下三个关于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的主要信息来源：  
@@ -77,7 +76,7 @@ ms.locfileid: "82706934"
   
  下表介绍了这些资源及其目标用户。  
   
-|资源|读者|  
+|资源|目标受众|  
 |--------------|--------------|  
 |[SQL Server 开发中心](https://msdn.microsoft.com/sqlserver/)|生成 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库、报告系统和商业智能解决方案以及启用其应用程序和网站以使用这些系统的开发人员。|  
 |[XML 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=42458)|其站点和应用程序使用 XML 进行数据存储和操作的网站制作者和应用程序开发人员。|  

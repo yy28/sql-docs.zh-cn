@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 83e65825f098dbcabe9fa6cbb67513e1c9654f9f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 188551ec988bfd71a54f0a56b6180cb92defc2bb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483626"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972137"
 ---
 # <a name="business-rule-actions-master-data-services"></a>业务规则操作 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，业务规则操作是业务规则条件计算的结果。 如果条件为 true，则将启动操作。  
@@ -37,7 +36,7 @@ ms.locfileid: "65483626"
   
 |值名称|说明|  
 |----------------|-----------------|  
-|**对应**|所选属性更改为已定义属性值、另一个属性或者为空。<br /><br /> 此操作对文本、数字、日期和链接值有效。|  
+|**等于**|所选属性更改为已定义属性值、另一个属性或者为空。<br /><br /> 此操作对文本、数字、日期和链接值有效。|  
 |**等于串联的值**|所选属性更改为串联的值，后者是通过指定多个属性来确定的。<br /><br /> 此操作对文本和链接值有效。|  
   
 ## <a name="validation-actions"></a>验证操作  
@@ -47,7 +46,7 @@ ms.locfileid: "65483626"
   
 |验证名称|说明|  
 |---------------------|-----------------|  
-|**必需**|所选属性是 **“必需”** 的，这意味着它不能为 Null 或为空。<br /><br /> 此操作对文本、数字、日期和链接值有效。|  
+|**是必需的**|所选属性是 **“必需”** 的，这意味着它不能为 Null 或为空。<br /><br /> 此操作对文本、数字、日期和链接值有效。|  
 |**无效**|所选属性 **“无效”**。<br /><br /> 此操作对文本、数字、日期和链接值有效。|  
 |**必须包含模式**|所选属性 **必须包含指定的模式** 。 使用 .NET Framework 正则表达式可以指定模式。<br /><br /> 有关正则表达式的详细信息，请参阅 MSDN Library 中的[正则表达式语言元素](https://go.microsoft.com/fwlink/?LinkId=164401)。<br /><br /> 此操作对文本和链接值有效。|  
 |**必须是唯一的**|所选属性 **“必须是唯一的”** ，无论它们是独立的，还是与其他定义属性组合。<br /><br /> **最佳实践：** 将此操作与必需条件相结合，以确保订阅系统中索引字段的有效性。<br /><br /> 此操作对文本、数字、日期和链接值有效。|  

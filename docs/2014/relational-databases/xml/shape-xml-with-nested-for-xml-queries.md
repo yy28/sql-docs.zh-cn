@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8dc42c05-16e8-4b7b-a5d3-550b55acae26
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3b60b0cfdf37758f8250e3de1840a2fa950ae28d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 16614a3ab0cc3b60bc53e594d5461eebeb403be3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702486"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046593"
 ---
 # <a name="shape-xml-with-nested-for-xml-queries"></a>使用嵌套的 FOR XML 查询形成 XML
   下面的示例查询 `Production.Product` 表以检索特定产品的 `ListPrice` 值和 `StandardCost` 值。 为使查询具有趣味性，这两个价格都在 <`Price`> 元素中返回，每个 <`Price`> 元素都有 `PriceType` 属性。  

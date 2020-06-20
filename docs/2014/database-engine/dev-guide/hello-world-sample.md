@@ -9,20 +9,19 @@ ms.topic: reference
 ms.assetid: fed6c358-f5ee-4d4c-9ad6-089778383ba7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ac48f47b7455fd68245cec23c68132e4070835f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b6b8c303f056686efb5ba13b2924c9697fbd6e4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637767"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933554"
 ---
 # <a name="hello-world-sample"></a>Hello World 示例
   Hello World 示例说明了创建、部署和测试基于公共语言运行时 (CLR) 集成的简单存储过程所涉及的基本操作。 此示例还说明了如何通过记录返回由存储过程动态构建并返回到调用方的数据。  
   
- 该`HelloWorld`存储过程返回字符串 "Hello world！" 在包含一行的结果集中。 此示例演示了[SqlMetaData](https://go.microsoft.com/fwlink/?LinkID=193572)、 [SqlDataRecord 和](https://go.microsoft.com/fwlink/?LinkID=193573)类的一些[用途。）](https://go.microsoft.com/fwlink/?LinkID=193571)的一些用途是使用类。  
+ 该 `HelloWorld` 存储过程返回字符串 "Hello world！" 在包含一行的结果集中。 此示例演示了[SqlMetaData](https://go.microsoft.com/fwlink/?LinkID=193572)、 [SqlDataRecord 和](https://go.microsoft.com/fwlink/?LinkID=193573)类的一些[用途。）](https://go.microsoft.com/fwlink/?LinkID=193571)的一些用途是使用类。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要创建和运行此项目，必须安装下列软件：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](https://www.microsoft.com/sql-server/sql-server-editions-express)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
@@ -54,7 +53,7 @@ ms.locfileid: "73637767"
   
 -   必须在您使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上安装 AdventureWorks 数据库。  
   
--   如果您不是所使用的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的管理员，则必须让管理员授予您**CreateAssembly**权限，才能完成安装。  
+-   如果您不是所使用的实例的管理员 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须让管理员授予您**CreateAssembly**权限，才能完成安装。  
   
 ## <a name="building-the-sample"></a>生成示例  
   
@@ -78,7 +77,7 @@ ms.locfileid: "73637767"
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  将[!INCLUDE[tsql](../../includes/tsql-md.md)]测试命令脚本复制到文件中，并将`test.sql`其另存为示例目录中的。  
+7.  将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 测试命令脚本复制到文件中，并将其另存为 `test.sql` 示例目录中的。  
   
 8.  使用以下命令执行测试脚本：  
   

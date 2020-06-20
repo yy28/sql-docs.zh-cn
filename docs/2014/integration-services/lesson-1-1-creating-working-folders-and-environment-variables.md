@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b58da11d973d169a0372e59c7e8d7e174e3cf789
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25700bfb9e2cd28fd18efe59a2df4e68f468d39b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767649"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965348"
 ---
 # <a name="step-1-creating-working-folders-and-environment-variables"></a>步骤 1：创建工作文件夹和环境变量
   在此任务中，您将创建工作文件夹 (C:\DeploymentTutorial) 和新的系统环境变量（`DataTransfer` 和 `LoadXMLData`），在后面的教程任务中您将使用它们。  
@@ -36,7 +35,7 @@ ms.locfileid: "62767649"
   
 3.  在“文件”  菜单上，指向“新建”  ，再单击“文件夹”  。  
   
-4.  将新文件夹重`DeploymentTutorial`命名为。  
+4.  将新文件夹重命名为 `DeploymentTutorial` 。  
   
 ### <a name="to-create-local-environment-variables"></a>创建本地环境变量  
   
@@ -48,11 +47,11 @@ ms.locfileid: "62767649"
   
 4.  在“环境变量”  对话框的“系统变量”  框架中，单击“新建”  。  
   
-5.  在 "**新建系统变量**" 对话框中， `DataTransfer`在 "变量**名**" 框中`C:\DeploymentTutorial\datatransferconfig.dtsconfig`键入，然后在 "**变量值**" 框中键入。  
+5.  在 "**新建系统变量**" 对话框中，在 "变量 `DataTransfer` **名**" 框中键入，然后 `C:\DeploymentTutorial\datatransferconfig.dtsconfig` 在 "**变量值**" 框中键入。  
   
 6.  单击“确定”。   
   
-7.  再次单击 "**新建**"， `LoadXMLData`然后在 "变量**名称**" 框`C:\DeploymentTutorial\loadxmldataconfig.dtsconfig`和 "**变量值**" 框中键入。  
+7.  再次单击 "**新建**"，然后在 "变量 `LoadXMLData` **名称**" 框和 `C:\DeploymentTutorial\loadxmldataconfig.dtsconfig` "**变量值**" 框中键入。  
   
 8.  单击“确定”  退出“环境变量”  对话框。  
   
@@ -70,11 +69,11 @@ ms.locfileid: "62767649"
   
 4.  在“环境变量”  对话框的“系统变量”  框架中，单击“新建”  。  
   
-5.  在 "**新建系统变量**" 对话框中， `DataTransfer`在 "变量**名称**" 框中`C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig`键入，然后在 "**变量值**" 框中键入。  
+5.  在 "**新建系统变量**" 对话框中，在 "变量 `DataTransfer` **名称**" 框中键入，然后 `C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig` 在 "**变量值**" 框中键入。  
   
 6.  单击“确定”。   
   
-7.  再次单击 "**新建**"， `LoadXMLData`然后在 "变量**名称**" 框`C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig`和 "**变量值**" 框中键入。  
+7.  再次单击 "**新建**"，然后在 "变量 `LoadXMLData` **名称**" 框和 `C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig` "**变量值**" 框中键入。  
   
 8.  单击“确定”  退出“环境变量”  对话框。  
   

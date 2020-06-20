@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 967ed3d4-3d31-4485-ac92-027076ebc829
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: adc8dbc8083ec1de98951db618dabad8a145d7d6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 410023d960bad6dde1060a509cc1bf46f67d77cc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702185"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021706"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
   当参数值的数组绑定到语句执行时， `SQLRowCount` 如果参数值的任意行在语句执行中生成错误条件，则将返回 SQL_ERROR。 不通过函数的*RowCountPtr*参数返回值。  

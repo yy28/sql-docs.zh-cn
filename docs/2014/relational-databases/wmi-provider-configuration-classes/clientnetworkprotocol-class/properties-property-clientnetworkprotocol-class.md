@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7e0a4e38-4555-4750-8fd3-4425b29e6aa1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d6c2dbfb1254260f5c92df5f1da33ba26e368aa7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09836db1f510ac77635924c51e5341686627d54d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192048"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995958"
 ---
 # <a name="properties-property-clientnetworkprotocol-class"></a>Properties 属性（ClientNetworkProtocol 类）
   获取与[配置客户端协议](https://technet.microsoft.com/library/ms181035.aspx)指定的当前客户端网络协议关联的属性。  
@@ -41,7 +40,7 @@ object
  一个表示 [客户端使用的网络协议的](clientnetworkprotocol-class.md) ClientNetworkProtocol 类 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
- 一个[ClientNetworkProtocolProperty 类](../clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)对象的数组，这些对象表示`OrderValue`属性引用的当前客户端网络协议支持的属性。  
+ 一个[ClientNetworkProtocolProperty 类](../clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)对象的数组，这些对象表示属性引用的当前客户端网络协议支持的属性 `OrderValue` 。  
   
 ## <a name="remarks"></a>备注  
   

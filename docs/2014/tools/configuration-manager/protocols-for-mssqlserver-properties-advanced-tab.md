@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9000dd2b7456036f4828640694aaf697036b71d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef16a5a125883e5ce33e04d9899d0bb882d56541
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62645800"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007905"
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>MSSQLSERVER 属性的协议（“高级”选项卡）
   使用“MSSQLSERVER 属性的协议”  对话框上的“高级”  选项卡为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 配置“针对验证的扩展保护”  。 **扩展保护** 是操作系统实现的一项网络组件功能。 Windows 7 和 Windows Server 2008 R2 提供**扩展保护** ，旧操作系统的 Service Pack 中也包括此功能。 使用**扩展保护**进行连接时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会更安全。 **扩展保护** 功能的一些好处需要选定 **“标志”** 选项卡上的 **“强行加密”** 后才能获得。  

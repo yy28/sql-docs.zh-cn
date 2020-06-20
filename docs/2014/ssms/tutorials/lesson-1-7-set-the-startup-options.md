@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47dc2b5b-7803-4202-ad53-a431a821ad69
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 271be9656aa7fabc1edbece16f18ae7a60ba3978
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e2b44b84df73df4e6e17b67a9f671eef9a790cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63312618"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061155"
 ---
 # <a name="set-the-startup-options"></a>设置启动选项
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可配置为在启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 时打开首选配置的设计图面。 通过将 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 配置为打开首选配置，您可以节省时间。  
@@ -24,7 +23,7 @@ ms.locfileid: "63312618"
   
 #### <a name="to-configure-startup-options"></a>配置启动选项  
   
-1.  在“工具” **** 菜单上，单击“选项” ****。  
+1.  在“工具”  菜单上，单击“选项” 。  
   
 2.  展开“环境”****，然后单击“启动”****。 在“启动时”**** 列表中，检查以下选项：  
   

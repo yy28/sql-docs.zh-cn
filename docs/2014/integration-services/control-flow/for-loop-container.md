@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 991223c373113b465c3182f552e5f5d157efef9f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9544f7ae00d3a0eda732b43e9485cafa23536ed
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831598"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918954"
 ---
 # <a name="for-loop-container"></a>For 循环容器
   For 循环容器定义包中的重复控制流。 此循环实现类似于编程语言中的 **For** 循环结构。 循环每次重复时，For 循环容器都计算一个表达式并重复运行其工作流，直到表达式计算结果为 `False`。  
@@ -40,7 +39,7 @@ ms.locfileid: "62831598"
   
  表达式必须是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 表达式。  
   
- 若要创建初始化和赋值表达式，可以使用赋值运算符 (=)。 此运算符在其他方面不为 Integration Services 表达式语法所支持，只能供 For 循环容器中的初始化和赋值表达式类型使用。 使用赋值运算符的任何表达式都必须使用语法 `@Var = <expression>`，其中 Var  是运行时变量，\<expression> 是遵循 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 表达式语法规则的表达式。 表达式可以包含 SSIS 表达式语法支持的变量、文字以及任何运算符和函数。 表达式的计算结果的数据类型必须能够转换为变量的数据类型。  
+ 若要创建初始化和赋值表达式，可以使用赋值运算符 (=)。 此运算符在其他方面不为 Integration Services 表达式语法所支持，只能供 For 循环容器中的初始化和赋值表达式类型使用。 使用赋值运算符的任何表达式都必须具有语法 `@Var = <expression>` ，其中**Var**是运行时变量， \<expression> 是遵循表达式语法规则的表达式 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 。 表达式可以包含 SSIS 表达式语法支持的变量、文字以及任何运算符和函数。 表达式的计算结果的数据类型必须能够转换为变量的数据类型。  
   
  一个 For 循环容器只能有一个求值表达式。 这意味着 For 循环容器对所有其控制流元素运行相同次数。 因为 For 循环容器可以包含其他 For 循环容器，所以可以在包中构建嵌套循环和实现复杂循环。  
   

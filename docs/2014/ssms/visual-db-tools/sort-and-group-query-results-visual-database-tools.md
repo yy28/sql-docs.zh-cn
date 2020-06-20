@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: b004e1c0-cacc-4241-9426-9fd426978918
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2bf1b08abe58c8f46cc8f48d87115281d3d72bad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33ea59dfce0dc29080d08792b662c5fd8293f56f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63070877"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000976"
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>对查询结果进行排序和分组 (Visual Database Tools)
   您可以创建这样的一个查询结果，其中每个结果行都与来自原始数据的一整组行相对应。  

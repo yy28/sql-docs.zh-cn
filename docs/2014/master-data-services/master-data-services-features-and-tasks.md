@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c648a1f48396a40db0451de14facd342a8bfa797
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ca1c22abff9c86d53d1c502d776709df80b49fc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482894"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971227"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Master Data Services 功能和任务
   了解如何使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 来管理组织的主数据。 了解如何创建和操作模型对象（数据的容器）。 了解如何组织和维护主数据本身。 了解如何导入和导出主数据，以及在测试环境和生产环境之间共享模型。 最后，了解如何开发用于访问 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 服务的自定义应用程序。  

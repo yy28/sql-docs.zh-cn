@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 56df884317c13b860ba19d66d9680c79356c9080
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: e95604c907e16d5173d1f523cf31693416f0e119
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859239"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067377"
 ---
 # <a name="customize-commands-page"></a>自定义（“命令”页）
   使用此对话框，您可以在工具栏和菜单上添加和删除命令，以及更改用于工具栏按钮或菜单命令的图像。 可以通过在“工具”  菜单上单击“自定义  ”，再单击“命令”  ，来访问“命令”  页。  

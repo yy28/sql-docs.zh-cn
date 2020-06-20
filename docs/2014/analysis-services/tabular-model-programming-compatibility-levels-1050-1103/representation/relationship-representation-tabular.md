@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7311fda8b3d4b8054d406ee97749c81f7d588e97
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0b0a9ef87aa696292a1011a9b8d829a595eaeec2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929512"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940058"
 ---
 # <a name="relationship-representation-tabular"></a>关系表示形式（表格）
   关系是两个数据表之间的联系。 该关系确立两个表中的数据应该如何相关。  

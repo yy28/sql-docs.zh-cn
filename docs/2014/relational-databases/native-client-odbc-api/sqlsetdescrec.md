@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 203d02a2-aa09-462b-a489-a2cdd6f6023b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 967e2db04a4cf03aa826d5b9f8c3cb1d07417689
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2bbbbcec3f5e5df5bb5d8629329aae6d43599eb9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702168"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021648"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
   本主题讨论特定于 Native Client 的 SQLSetDescRec 功能 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -29,7 +28,7 @@ ms.locfileid: "82702168"
   
 |参数|非表值参数类型的相关属性，包括表值参数列|表值参数的相关属性|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
-|*Type*|SQL_DESC_TYPE|SQL_SS_TABLE|  
+|类型|SQL_DESC_TYPE|SQL_SS_TABLE|  
 |*类型*|忽略|对于 SQL_DATETIME 或 SQL_INTERVAL 类型的记录，请将它设置为 SQL_DESC_DATETIME_INTERVAL_CODE。|  
 |*长度*|SQL_DESC_OCTET_LENGTH|表值参数类型名称的长度。 如果类型名称是以 null 结束，则它可为 SQL_NTS；如果不需要表值参数类型名称，则为零。|  
 |*精度*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
@@ -43,7 +42,7 @@ ms.locfileid: "82702168"
 ## <a name="sqlsetdescrec-support-for-enhanced-date-and-time-features"></a>SQLSetDescRec 对日期和时间增强功能的支持  
  日期/时间类型所允许的值如下所示：  
   
-||*Type*|*类型*|*长度*|*精度*|*缩放*|  
+||类型|*类型*|*长度*|*精度*|*缩放*|  
 |-|------------|---------------|--------------|-----------------|-------------|  
 |datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  

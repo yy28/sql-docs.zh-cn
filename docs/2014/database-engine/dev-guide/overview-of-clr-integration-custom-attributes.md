@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: ecf5c097-0972-48e2-a9c0-b695b7dd2820
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8df7881dd5f38935628cb6653d57763a8846e60f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43db9f034a759e9c041f5cc6ab95baa5af4d7353
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781102"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933452"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>CLR 集成自定义属性的概览
   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的公共语言运行时 (CLR) 允许使用称为属性的描述性关键字。 这些属性为许多元素（如方法和类）提供附加信息。 这些属性与对象的元数据一同保存在程序集中，并且可用于向其他开发工具描述您的代码，或者可用于影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内的运行时行为。  
   
- 向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 注册 CLR 例程时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将派生有关该例程的一组属性。 这些例程属性确定该例程的功能，包括是否可以对该例程编制索引。 例如，如果将 `DataAccess` 属性设置为 `DataAccessKind.Read`，您将能够访问 CLR 函数内的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户表中的数据。 下面的示例演示一个简单的情况，在`DataAccess`此情况下，属性设置为便于从用户表**table1**进行数据访问。  
+ 向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 注册 CLR 例程时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将派生有关该例程的一组属性。 这些例程属性确定该例程的功能，包括是否可以对该例程编制索引。 例如，如果将 `DataAccess` 属性设置为 `DataAccessKind.Read`，您将能够访问 CLR 函数内的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用户表中的数据。 下面的示例演示一个简单的情况，在此情况下， `DataAccess` 属性设置为便于从用户表**table1**进行数据访问。  
   
 ```csharp  
 using System;  

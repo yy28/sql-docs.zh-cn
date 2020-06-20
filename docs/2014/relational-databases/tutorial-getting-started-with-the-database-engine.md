@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 07f8ecc0e6550fcec63a0b1ebb906cd5ffd3aaf1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aaa1fb21c026d064c2b14db73aadc2b82e9c15d3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524325"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996058"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>教程：数据库引擎入门
   欢迎使用 [!INCLUDE[ssDE](../includes/ssde-md.md)] 教程入门。 本教程适用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的新手且已安装 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]的用户。 本简明教程有助于您了解如何使用 [!INCLUDE[ssDE](../includes/ssde-md.md)]。  
@@ -42,7 +41,7 @@ ms.locfileid: "62524325"
   
  若要使用本教程，您的系统必须安装以下组件：  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 列中的一个值匹配。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]可以通过运行[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]安装程序或者通过从[Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkId=144346)下载和安装来安装。  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 列中的一个值匹配。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]可以通过运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装程序或者通过从[Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkId=144346)下载和安装来安装。  
   
 ## <a name="see-also"></a>另请参阅  
  [教程：SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d10a381e-b567-4701-aa2d-2db09f62ad81
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a04465712667205674ddd8ea8bab7d82c3250261
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 976597ccb9130220ca6fac7fd422c0daf3122845
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62630694"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067694"
 ---
 # <a name="operator-properties-new-operator-notifications-page"></a>操作员属性：新建操作员（“通知”页）
   使用此页可设置向操作员通知的警报和作业。  
@@ -40,7 +39,7 @@ ms.locfileid: "62630694"
  **电子邮件**  
  使用电子邮件通知此操作员。  
   
- **寻呼程序**  
+ **接收**  
  通过将电子邮件发送到寻呼地址来通知此操作员。  
   
  **Net send**  

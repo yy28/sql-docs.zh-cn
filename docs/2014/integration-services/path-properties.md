@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 89b1e347-9579-4f6b-af74-c6519ea08eea
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fc13943df93acf2227b089b177cdca6c86ee1831
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdd4c6f134af120b70546f6d27f0f8fc8aac672d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056655"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964731"
 ---
 # <a name="path-properties"></a>路径属性
-  对象模型中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的数据流对象在组件、输入和输出以及输入列和输出列的级别上具有通用属性和自定义属性。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 其中许多属性的值是只读的，由数据流引擎在运行时分配。  
+  对象模型中的数据流对象在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 组件、输入和输出以及输入列和输出列的级别上具有通用属性和自定义属性。 其中许多属性的值是只读的，由数据流引擎在运行时分配。  
   
  本主题列出并描述了连接数据流对象的路径的自定义属性。  
   

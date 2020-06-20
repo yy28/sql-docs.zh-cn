@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 51efa12bcb308c64c8c63a425cdc615dab237e04
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a70eed8c362411a3b1b87c66b9277da8aeac1ed4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705805"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021277"
 ---
 # <a name="using-data-files-and-format-files"></a>使用数据文件和格式化文件
   最简单的大容量复制程序执行以下操作：  

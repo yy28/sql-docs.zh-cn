@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a59cc952-fb73-4bd3-b5d2-f8397701e5d2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3e1c4e5ac4bf399a2c839c7e8cc71b2d378e268a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27da51dc89038493d24447c402e2d4e2b79c4679
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056629"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964657"
 ---
 # <a name="progress-tab"></a>“进度”选项卡
   在 **中运行** 包时，可以使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] “进度” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]选项卡查看该包的执行进度。 **“进度”** 选项卡将列出以下内容：验证和执行该包及其可执行文件的开始时间、完成时间和已用时间；包的所有信息和警告；进度通知；包是否成功或失败以及在执行包的过程中生成的所有错误信息。  

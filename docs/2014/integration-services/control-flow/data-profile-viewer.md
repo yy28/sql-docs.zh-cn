@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0f6bcad3636178fb4aebbcdbeee29ba2542f092e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3bcd42d1ca3c502f8dd04475356ce0f13d0b7c5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832356"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919318"
 ---
 # <a name="data-profile-viewer"></a>数据配置文件查看器 (Data Profile Viewer)
   数据事件探查过程的下一步是查看和分析数据配置文件。 可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包内运行数据事件探查任务并计算数据配置文件之后，查看这些配置文件。 有关如何设置和运行数据事件探查任务的详细信息，请参阅 [设置数据事件探查任务](data-profiling-task.md)。  
@@ -29,9 +28,9 @@ ms.locfileid: "62832356"
 ## <a name="data-profiles"></a>数据配置文件  
  若要查看数据配置文件，请将数据事件探查任务配置为将其输出发送到文件，然后使用独立的数据配置文件查看器。 若要打开数据配置文件查看器，请执行以下操作之一。  
   
--   在“ **设计器”中右键单击“数据事件探查”** [!INCLUDE[ssIS](../../includes/ssis-md.md)]任务，然后单击“编辑”  。 在 **“数据事件探查任务编辑器”** 的 **“常规”** 页上，单击 **“打开配置文件查看器”** 。  
+-   在“[!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器”中右键单击“数据事件探查”任务，然后单击“编辑”。 在 **“数据事件探查任务编辑器”** 的 **“常规”** 页上，单击 **“打开配置文件查看器”** 。  
   
--   在文件夹 *drive>:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 中，运行 DataProfileViewer.exe\<* 。  
+-   在文件夹中 *\<drive>* ： \Program Files （x86） |Program Files\Microsoft SQL Server\110\DTS\Binn，运行 DataProfileViewer.exe。  
   
  该查看器使用多个窗格来显示请求的配置文件和计算所得的结果，包含可选详细信息和明细功能：  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e75b766c-85ba-453e-9576-4a1a34f91ecc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 16f08d9b10bd0f29593695b8d7ea44c329b6a3a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42663cf447b2fe974e7cbe655f726f741fa0dab8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056703"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964715"
 ---
 # <a name="partition-processing-destination-editor-mappings-page"></a>分区处理目标编辑器（“映射”页）
   可以使用 **“分区处理目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到分区列。  

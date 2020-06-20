@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8019f762d6d80ced2688f0e93f7ad0e0a29bd3f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c55300150e64060cc06594fc4b8847fdb5132151
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63313023"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001076"
 ---
 # <a name="print-dialog-box"></a>“打印”对话框
   可通过选择“打印”  对话框中的选项来指定打印文档的方式。  
@@ -39,7 +38,7 @@ ms.locfileid: "63313023"
  包括有关所选打印机的任何其他信息。  
   
  **属性**  
- 单击此项可打开 \<*打印机名称属性*> 对话框。  
+ 单击打开 "" \<*printer name properties*> 对话框。  
   
  **打印到文件**  
  将文档打印到文件而不是打印到打印机。  

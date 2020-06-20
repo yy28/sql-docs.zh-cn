@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2645ae5b16ffa4738f06e1439abac977c8e18894
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3fe5382fae26d01478b33c7b54c3d6f5170d34eb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479335"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971311"
 ---
 # <a name="install-master-data-services"></a>安装 Master Data Services
   下面的流程图概要说明了如何安装并配置 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 安装过程包括三个部分：  
@@ -28,23 +27,23 @@ ms.locfileid: "65479335"
   
 ##  <a name="pre-installation-tasks"></a><a name="preinstall"></a>预安装任务  
   
-|操作|详细信息|“相关主题”|  
+|操作|详细信息|相关主题|  
 |------------|-------------|--------------------|  
-|验证安装要求|运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的计算机必须满足以下方面的最低要求：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序。<br /><br /> [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序和 Web 服务。<br /><br /> [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库（如果数据库所在的计算机与 Web 应用程序所在的计算机相同）。<br /><br /> 请注意，您可以通过在 web 服务器计算机上运行安装程序并在运行支持的版本的[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]远程计算机上创建数据库，来隔离 web 服务器计算机和数据库服务器计算机。|[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)<br /><br /> [安装 SQL Server 2014 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)<br /><br /> [Web 应用程序要求 (Master Data Services)](web-application-requirements-master-data-services.md)<br /><br /> [数据库要求 (Master Data Services)](database-requirements-master-data-services.md)|  
+|验证安装要求|运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的计算机必须满足以下方面的最低要求：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序。<br /><br /> [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序和 Web 服务。<br /><br /> [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库（如果数据库所在的计算机与 Web 应用程序所在的计算机相同）。<br /><br /> 请注意，您可以通过在 web 服务器计算机上运行安装程序并在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 运行支持的版本的远程计算机上创建数据库，来隔离 web 服务器计算机和数据库服务器计算机 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)<br /><br /> [安装 SQL Server 2014 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)<br /><br /> [Web 应用程序要求 (Master Data Services)](web-application-requirements-master-data-services.md)<br /><br /> [数据库要求 (Master Data Services)](database-requirements-master-data-services.md)|  
 |配置所需的角色、角色服务和功能|运行安装程序前，请使用所需的 Windows 角色、角色服务和功能配置计算机。<br /><br /> 注意：尽管你可以在工作流的后面部分执行此步骤，但是在运行安装程序前进行配置很有用，因为这样你可以执行紧挨安装后面的 Web 配置任务。|[Web 应用程序要求 (Master Data Services)](web-application-requirements-master-data-services.md)|  
 |查看语言支持注意事项|确定要安装和运行 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 所用的语言。|[多语言和全球部署 (Master Data Services)](multi-lingual-and-global-deployments-master-data-services.md)|  
   
 ##  <a name="installation-operations"></a><a name="install"></a> 安装操作  
   
-|操作|详细信息|“相关主题”|  
+|操作|详细信息|相关主题|  
 |------------|-------------|--------------------|  
 |运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序|在将承载 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序和 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 服务的计算机上，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序或命令提示符安装 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序时， [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 将显示在 **“功能选择”** 页上的 **“共享功能”** 下。 使用命令提示符时， [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 作为功能参数提供。 请注意，命令行安装过程将安装 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]，但不会对它进行配置。 您必须使用 Master Data Services 配置管理器对其进行配置。 安装过程：<br /><br /> 在您为共享功能指定的位置安装 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 文件夹和文件，并为这些对象分配权限。<br /><br /> 在全局程序集缓存 (GAC) 中注册 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 程序集。<br /><br /> 安装 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。|[从安装向导安装 SQL Server 2014 &#40;安装程序&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)<br /><br /> [文件夹和文件权限 (Master Data Services)](../folder-and-file-permissions-master-data-services.md)|  
   
 ##  <a name="post-installation-tasks"></a><a name="postinstall"></a> 安装后任务  
   
-|操作|详细信息|“相关主题”|  
+|操作|详细信息|相关主题|  
 |------------|-------------|--------------------|  
-|打开 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 以便完成安装后操作|安装完成之后，打开 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 在本地计算机上执行以下安装后操作：<br /><br /> 创建一个 Windows 组 **MDS_ServiceAccounts**，以便包含应用程序池的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 服务帐户。<br /><br /> 在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 安装路径下，创建 MDSTempDir 文件夹并为 **MDS_ServiceAccounts**分配权限。 此文件夹是为 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序编译的临时编译文件所在的位置。<br /><br /> [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]在 web.config 文件中，将** \<编译>** 元素`tempDirectory`的属性配置为 MDSTempDir 文件夹的路径。<br /><br /> <br /><br /> 如果您在编写安装进程的脚本，则可以打开 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 来注册 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 管理单元，但是必须手动执行其他步骤来完成配置。 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 为您提供向导驱动的配置过程。 没有用于配置 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 的命令行过程。|[文件夹和文件权限 (Master Data Services)](../folder-and-file-permissions-master-data-services.md)<br /><br /> [Web 配置参考 (Master Data Services)](../web-configuration-reference-master-data-services.md)|  
+|打开 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 以便完成安装后操作|安装完成之后，打开 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]。 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 在本地计算机上执行以下安装后操作：<br /><br /> 创建一个 Windows 组 **MDS_ServiceAccounts**，以便包含应用程序池的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 服务帐户。<br /><br /> 在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 安装路径下，创建 MDSTempDir 文件夹并为 **MDS_ServiceAccounts**分配权限。 此文件夹是为 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序编译的临时编译文件所在的位置。<br /><br /> 在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web.config 文件中，将 `tempDirectory` 元素的属性配置 **\<compilation>** 为 MDSTempDir 文件夹的路径。<br /><br /> <br /><br /> 如果您在编写安装进程的脚本，则可以打开 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 来注册 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 管理单元，但是必须手动执行其他步骤来完成配置。 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 为您提供向导驱动的配置过程。 没有用于配置 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 的命令行过程。|[文件夹和文件权限 (Master Data Services)](../folder-and-file-permissions-master-data-services.md)<br /><br /> [Web 配置参考 (Master Data Services)](../web-configuration-reference-master-data-services.md)|  
 |创建 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库|使用 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 为您的主数据创建 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库。|[创建 Master Data Services 数据库](create-a-master-data-services-database.md)|  
 |创建 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序|使用 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 创建和配置 Web 应用程序以承载 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]。|[创建主数据管理器 Web 应用程序 &#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md)|  
 |将 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库与 Web 应用程序关联|使用 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 将 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序与您的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库关联。|[将 Master Data Services 数据库与 Web 应用程序关联](associate-a-master-data-services-database-and-web-application.md)|  

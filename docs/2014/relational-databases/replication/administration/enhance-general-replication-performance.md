@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a85519a947e7d5d03f324b71984d2ffb40bcefe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63187102"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043345"
 ---
 # <a name="enhance-general-replication-performance"></a>增强常规复制性能
   按照本主题介绍的指导原则，可以提高应用程序和网络上的所有复制类型的常规性能。  

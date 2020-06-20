@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9b2fd7a22c202b1210b17f86903fce32ec8d4b5b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c54dd8b57dc0b1e13b622110d3f4cf9f796610a6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811080"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067633"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>为 SQL Server 代理服务选择帐户
   服务启动帐户可以定义运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 代理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 帐户及其网络权限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在指定的用户帐户下运行。 可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务选择一个帐户，可选帐户如下：  

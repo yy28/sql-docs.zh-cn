@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5562b7424e4a104204becaed10378ffc999c4e98
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1d17451c8706722b0dac21d777f35a17fe319799
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68891107"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972467"
 ---
 # <a name="what39s-new-integration-services"></a>新增功能&#39;（Integration Services）
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]与上一版本保持不变。  
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]与 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 上一版本保持不变。  
   
- 有关其他[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]产品和技术的信息，请参阅[SQL Server 2014 中的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)。  
+ 有关其他 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 产品和技术的信息，请参阅[SQL Server 2014 中的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)。  
   
- 有关与[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]商业智能相关的更改的详细信息，请参阅[Analysis Services 和商业智能中的新增功能](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)。  
+ 有关与商业智能相关的更改的详细信息 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，请参阅[Analysis Services 和商业智能中的新增功能](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)。  
   
 ##  <a name="rich-xml-validation-output-in-the-xml-task"></a><a name="ValidateXML"></a> XML 任务中丰富的 XML 验证输出  
  通过启用 XML 任务的 `ValidationDetails` 属性，验证 XML 文档并获取丰富的错误输出。 在可以使用 `ValidationDetails` 属性之前，XML 任务的 XML 验证仅返回 true 或 false 结果，而不包含关于错误或其位置的详细信息。 现在，当你将 `ValidationDetails` 设置为 true 时，输出文件将包含关于每个错误的详细信息，包括行号和位置。 此信息可用于了解、查找和修复 XML 文档中的错误。 有关详细信息，请参阅 [Validate XML with the XML Task](control-flow/xml-task.md)。  

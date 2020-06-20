@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ec6d819d48ba5307e4c5c9e61ef8f7c375d6d96c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8ab1a510ec348ca30ffd1b8946b71ab935c0057c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176086"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972517"
 ---
 # <a name="view-package-objects"></a>查看包对象
   在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中， **“包资源管理器”** 选项卡提供包的资源管理器视图。 该视图反映了 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 体系结构的容器层次结构。 包容器位于层次结构的顶层，您可以展开包来查看连接、可执行文件、事件处理程序、日志提供程序、优先约束和包中的变量。

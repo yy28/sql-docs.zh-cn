@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: abeb8d52-d562-4e29-9e1e-2923ae874859
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eed258c78e76c5ec3f6aeeeb6bdd647166592613
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7e9294de10be0df9ef470c75d0934e9f8787b55
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62856136"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047248"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>向表中添加列（数据库引擎）
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中向表添加新列。  
@@ -78,7 +77,7 @@ ms.locfileid: "62856136"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  下面的示例将两列添加到表 `dbo.doc_exa`中。 将以下示例复制并粘贴到查询窗口中，然后单击 "**执行**"  
+3.  下面的示例将两列添加到表 `dbo.doc_exa`中。 将以下示例复制并粘贴到查询窗口中，然后单击 **“执行”** 。  
   
 ```  
 ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL, column_c INT NULL ;  

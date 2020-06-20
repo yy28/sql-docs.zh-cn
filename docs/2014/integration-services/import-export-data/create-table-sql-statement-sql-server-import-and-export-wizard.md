@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7f541ad24e87bf5bdea9ed8b8c2523a73c81daa9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9348dd5394aa3ff9bd3d2672b64fcd2327445d5d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62767999"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965587"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>Create Table SQL 语句（SQL Server 导入和导出向导）
   使用 "**创建表 SQL 语句**" 对话框可以查看自动生成的语句，或根据需要修改该语句。 如果修改此语句，可能还必须对列映射做相关联的更改，而且此后必须手动维护编辑过的 SQL 语句。  

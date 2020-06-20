@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 630733cc001e905497ee9145e2879b579ac1b2cf
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 55422fa7201213477426c7bc25c45ff05acf8945
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718749"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009345"
 ---
 # <a name="search-and-replace"></a>搜索和替换
   您可以采用几种不同的方法来查找和替换文本。 在 **“编辑”** 菜单上， **“查找和替换”** 提供了四个选项： **“快速查找”** 、 **“快速替换”** 、 **“在文件中查找”** 或 **“在文件中替换”** 。 每个选项均可以打开不同版本的 **“查找和替换”** 对话框。 您还可以通过使用渐进式搜索键盘快捷键在没有对话框的情况下进行搜索。 通过这些技术，您可以控制查找和替换的范围，并选择查看搜索匹配项和替换项的方法。  

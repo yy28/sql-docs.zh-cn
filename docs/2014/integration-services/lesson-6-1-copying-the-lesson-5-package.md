@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96f7f6ca45483fcfeb4e403659399972d81cda54
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890753"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951437"
 ---
 # <a name="step-1-copying-the-lesson-5-package"></a>步骤 1：复制第 5 课包
   在本任务中，您将为第 5 课中创建的 Lesson 5.dtsx 包创建一个副本。 或者将本教程中附带的已完成的 Lesson 5 包添加到项目中，然后再对其进行复制。 您将使用这一新副本来完成第 6 课剩余部分。  
@@ -38,7 +37,7 @@ ms.locfileid: "62890753"
   
 7.  在“属性”窗口中，将 Name 属性更新为 Lesson 6。  
   
-8.  单击 "ID" 属性的框，然后单击下拉箭头，然后单击\<"生成新 ID>。  
+8.  依次单击“ID”属性框和下拉箭头，然后单击“ \<Generate New ID>”。  
   
 ### <a name="to-add-the-completed-lesson-5-package"></a>添加已完成的 Lesson 5 包  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 61a3713b-403a-4806-bfc4-66db72ca1156
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0123027ac9aa87d616b52ac5cc26f36a20f7e1e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b31a8bc38968733de0a23f67a71772721c8baedd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524011"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008995"
 ---
 # <a name="defect-multiple-target-servers-from-a-master-server"></a>Defect Multiple Target Servers from a Master Server
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使多台目标服务器脱离多服务器管理配置。 从主服务器运行此过程。  
@@ -31,7 +30,7 @@ ms.locfileid: "62524011"
   
 #### <a name="to-defect-multiple-target-servers-from-a-master-server"></a>使多台目标服务器脱离主服务器  
   
-1.  在对象资源管理器中，展开配置为主服务器的服务器。 ****  
+1.  在对象资源管理器中，展开配置为主服务器的服务器。   
   
 2.  右键单击“SQL Server 代理”****，指向“多服务器管理”****，再单击“管理目标服务器”****。  
   

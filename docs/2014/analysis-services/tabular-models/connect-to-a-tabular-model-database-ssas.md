@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6f73a8e9e79a08c3f4a1f1e2b40ff5f83a0e39b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4685dc65c860776143f25f4299a62427adfcb31f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067658"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939878"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>连接到表格模型数据库 (SSAS)
   在您生成表格模型并且将其部署到某一 Analysis Services 表格模式服务器后，需要设置权限以使其可供客户端应用程序使用。 本主题介绍了如何设置权限以及如何从客户端应用程序连接到数据库。  
@@ -31,7 +30,7 @@ ms.locfileid: "66067658"
   
  [从 Excel 或 SharePoint 进行连接](#bkmk_excelconn)  
   
- [解决连接问题](#bkmk_Tshoot)  
+ [排查连接问题](#bkmk_Tshoot)  
   
 ##  <a name="user-permissions-on-the-database"></a><a name="bkmk_userpermissions"></a>用户对数据库的权限  
  连接到表格数据库的用户必须在指定读取访问权限的数据库角色中具有成员身份。  
@@ -81,11 +80,11 @@ ms.locfileid: "66067658"
   
 2.  选择 **“从 Analysis Services”**。  
   
-3.  在 **“服务器名称”** 中，指定将承载数据库的 Analysis Services 实例。 服务器名称通常是运行服务器软件的计算机的名称。 如果服务器作为命名实例安装，则必须按以下格式指定名称： \<servername>\\<instancename。\>  
+3.  在 **“服务器名称”** 中，指定将承载数据库的 Analysis Services 实例。 服务器名称通常是运行服务器软件的计算机的名称。 如果服务器作为命名实例安装，则必须按以下格式指定名称： \<servername> \\<instancename \> 。  
   
      必须为独立的表格部署配置服务器实例，并且该服务器实例必须具有允许访问的入站规则。 有关详细信息，请参阅 [确定 Analysis Services 实例的服务器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md) 和 [将 Windows 防火墙配置为允许 Analysis Services 访问](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
-4.  对于登录凭据，如果您对数据库具有读取权限，则选择 **“使用 Windows 身份验证”** 。 否则，请选择 **“使用以下用户名和密码”**，然后输入具有数据库权限的 Windows 帐户的用户名和密码。 单击 **下一步**。  
+4.  对于登录凭据，如果您对数据库具有读取权限，则选择 **“使用 Windows 身份验证”** 。 否则，请选择 **“使用以下用户名和密码”**，然后输入具有数据库权限的 Windows 帐户的用户名和密码。 单击“下一步”。  
   
 5.  选择数据库。 有效选择将为该数据库显示单个 **“模型”** 多维数据集。 单击“下一步”，然后单击“完成”****。  
   
@@ -101,7 +100,7 @@ ms.locfileid: "66067658"
   
  在导入数据时，如果您尝试使用该向导连接到远程 Analysis Services 服务器上的表格模型数据库，而您不具有足够的权限，则会发生此 Microsoft Excel 错误。 若要纠正此错误，您必须对数据库具有用户访问权限。 请参考在本文前面部分中提供的说明，授予用户对数据的访问权限。  
   
- **尝试建立与外部数据源的连接时出错。以下连接刷新失败： \<模型名称> 沙盒**  
+ **尝试建立与外部数据源的连接时出错。以下连接无法刷新： \<model name> 沙盒**  
   
  在 SharePoint 上，当您尝试在使用模型数据的数据透视表中进行数据交互（例如筛选数据）时，将会发生此 Microsoft Excel 错误。 发生此错误的原因是您对远程 Analysis Services 服务器没有足够的权限。 若要纠正此错误，您必须对数据库具有用户访问权限。 请参考在本文前面部分中提供的说明，授予用户对数据的访问权限。  
   

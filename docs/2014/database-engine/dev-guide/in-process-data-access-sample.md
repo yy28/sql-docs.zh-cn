@@ -9,18 +9,17 @@ ms.topic: reference
 ms.assetid: 155be272-4f9a-4d86-9f4f-714c4f45b49a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5d44c980c7535b05d462d55e6f2aa1e87bf68c98
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14b729156409fcf57b39c4bdefce95d3aa3eafcc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637745"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933538"
 ---
 # <a name="in-process-data-access-sample"></a>进程内数据访问示例
   `InProcessDataAccess` 示例包含一些简单的函数，用于演示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR 进程内数据访问提供程序的各种功能。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必备条件  
  若要创建和运行此项目，必须安装下列软件：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文档和示例[网站](https://www.microsoft.com/sql-server/sql-server-editions-express)免费获取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
@@ -52,7 +51,7 @@ ms.locfileid: "73637745"
   
 -   必须在您使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上安装 AdventureWorks 数据库。  
   
--   如果您不是所使用的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的管理员，则必须让管理员授予您**CreateAssembly**权限，才能完成安装。  
+-   如果您不是所使用的实例的管理员 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须让管理员授予您**CreateAssembly**权限，才能完成安装。  
   
 ## <a name="building-the-sample"></a>生成示例  
   
@@ -355,7 +354,7 @@ EXTERNAL NAME [InProcDA].[DataAccessDemo].[SendReaderToClient];
 GO  
 ```  
   
- 以下[!INCLUDE[tsql](../../includes/tsql-md.md)] （`test.sql`）通过执行本示例中定义的存储过程和函数来测试该示例。  
+ 以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] （ `test.sql` ）通过执行本示例中定义的存储过程和函数来测试该示例。  
   
 ```  
 USE AdventureWorks;  

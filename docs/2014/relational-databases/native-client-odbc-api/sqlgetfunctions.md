@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d42349c4-0a3c-4bd1-9d10-0fe53f699924
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6aca17d997632312164c7b308b09009c0f037875
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 452f6920c8945097424e8387b5a8c356837b3160
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706014"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022159"
 ---
 # <a name="sqlgetfunctions"></a>SQLGetFunctions
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序接口符合为 ODBC 定义的三个符合性级别（ISO、开放式组和 odbc 级别2）。 **SQLGetFunctions**报告 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client odbc 驱动程序支持所有 ODBC 函数。  

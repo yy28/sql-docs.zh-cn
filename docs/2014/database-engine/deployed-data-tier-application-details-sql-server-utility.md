@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 79c41dd9-abcb-434e-9326-00a341d5c867
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c66359dde77a8dcaceca26304df9ac5b32d5339b
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 40d0ad53de3589f5dc23e587427f001dbdb808b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858682"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933818"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>已部署的数据层应用程序详细信息（SQL Server 实用工具）
   实用工具资源管理器的“已部署的数据层应用程序”视图中的信息为单独的数据层应用程序提供使用率数据、CPU 使用率历史数据、文件级别的存储使用率详细信息，并且提供查看和更新策略阈值的能力。 可以在数据层应用程序级别为 CPU 使用率以及数据库数据文件和日志文件控制策略阈值。 您还可以查看各数据层应用程序的属性详细信息。  

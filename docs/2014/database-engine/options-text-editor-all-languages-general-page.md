@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bf18907c-94e2-4c09-9b2b-0925ac04c627
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 55e89850c3b3f19c30a4943f5d787407da7e3c88
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 721ebe6d235e1a8001403d4fb9bb993dba86dd13
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000731"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929959"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>选项（“文本编辑器”-“所有语言”-“常规”页）
   使用此对话框可以设置 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的所有五个编辑器的常规编辑选项。 若要显示这些选项，请在 **“工具”** 菜单上单击 **“选项”** 。 选择 **“文本编辑器”** 文件夹，展开 **“所有语言”** 文件夹，再单击 **“常规”**。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 08dd739d-5817-4418-bcff-74ab7f8bbd33
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 99418b11eecdb3077e3def746eae56e43bab2d60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d41879b84d98f72e570b00a61341a53d2e6187a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096841"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046446"
 ---
 # <a name="accept-license-terms"></a>接受许可条款
   使用 **安装向导的** “接受许可条款” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 页可以接受该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本的许可条款。  
@@ -46,13 +45,13 @@ ms.locfileid: "66096841"
   
  有关功能使用情况的信息将发送到 [!INCLUDE[msCoName](../../includes/msconame-md.md)]，在那里保存这些信息，且其访问将受到限制。  
   
- 若要在安装程序完成后禁用 CEIP 报告，请使用 "**配置工具**" 菜单[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上的 " ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]错误和使用情况报告**" 工具。  
+ 若要在安装程序完成后禁用 CEIP 报告，请使用 "配置工具" 菜单上的 " ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误和使用情况报告**" 工具 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Configuration Tools** 。  
   
  对于诸如安装、升级、修复等此类安装程序操作，仅在执行安装程序期间才收集和上载信息。  
   
  对于所有其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件，将每天针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有已启用实例收集一次信息。 收集时间默认为在午夜，以便最大程度上减小服务器的负载。 如果要更改收集时间，可以手动编辑控制收集时间的注册表项。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各个实例有自己的注册表项：  
   
- \\[!INCLUDE[msCoName](../../includes/msconame-md.md)]HKLM\Software\\\MSSQL12.[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\<INSTANCEID> \cpe\timeofreporting  
+ HKLM\Software \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \MSSQL12. \<INSTANCEID>\CPE\TimeofReporting  
   
  该注册表项的值包含运行收集的时间，以从 00:00（午夜）起的分钟数计。 例如，值为 60 会在凌晨 1:00 运行收集，而值为 1200 会在晚上 8:00 运行收集，等等。  
   
@@ -99,7 +98,7 @@ ms.locfileid: "66096841"
   
  如果启用了错误报告功能并出现错误，则 Windows 事件日志中可能会包含来自 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的一条响应，该响应指向与特定错误有关的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知识库文章。  
   
- 若要在安装程序完成后禁用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 及其组件的所有实例的错误或功能使用情况报告，请转到 **“错误和使用情况报告设置”** 对话框并清除 **“功能使用情况”** 的复选框。 如果为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的多个[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]组件（、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和共享组件）启用了**错误报告**，则可以对单个组件的每个实例以及共享组件（作为**其他**组件列出）禁用错误报告。  
+ 若要在安装程序完成后禁用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 及其组件的所有实例的错误或功能使用情况报告，请转到 **“错误和使用情况报告设置”** 对话框并清除 **“功能使用情况”** 的复选框。 如果**Error Reporting**为的多个组件 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、和共享组件）启用了错误报告， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 则可以对单个组件的每个实例以及共享组件（作为**其他**组件列出）禁用错误报告。  
   
 ## <a name="see-also"></a>另请参阅  
  [关于 SQL Server 许可条款](../../../2014/getting-started/about-the-sql-server-license-terms.md)  

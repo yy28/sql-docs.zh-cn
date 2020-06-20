@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 330bd48c-9427-4967-b58e-b7c492d5ee36
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 382aca19452d5cf21a4b1112d872b12afe38782d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e219ecda25f477aa459de674a43d9c2360376ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63306001"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044395"
 ---
 # <a name="multiuser-environments-visual-database-tools"></a>多用户环境 (Visual Database Tools)
   多用户环境是指如下环境：在该环境中，其他用户可以连接到您正在使用的同一数据库，并对其进行修改。 因此，多个用户可能同时对同一数据库对象进行操作。 这样，在多用户环境中，在您进行更改时，数据库可能会受到其他用户所做更改的影响；反之亦然。  

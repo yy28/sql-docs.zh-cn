@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa1abd4c-e2be-427f-be53-860e49c97227
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cab36a851c5ef50f0690e9bc0a1a18676d335e50
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0b667b72bbb24a2c44a8eb89b84302c64c06745
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054920"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972787"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-general-page"></a>传输主存储过程任务编辑器（“常规”页）
   可以使用 **“传输主存储过程任务编辑器”** 对话框的 **“常规”** 页，对传输主存储过程任务进行命名和说明。 有关此任务的详细信息，请参阅 [Transfer Master Stored Procedures Task](control-flow/transfer-master-stored-procedures-task.md)。  

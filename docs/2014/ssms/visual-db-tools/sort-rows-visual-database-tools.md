@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3235c9a9305e4476214add63f8710ba9de7b4c19
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c689a30eb9357d940a547af503d8ff4edd7c087
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63049142"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000909"
 ---
 # <a name="sort-rows-visual-database-tools"></a>对行进行排序 (Visual Database Tools)
   您可以对查询结果中的行进行排序。 也就是说，可以对特定的列或一组列进行命名，该列或这些列的值决定结果集中行的顺序。  

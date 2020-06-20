@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b2c9c8cf-9194-45e0-be6b-2d5ec52e8153
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c35c7c65bc312cd20c057b5e2603e7a8f77ce8c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4594c1cca0fc183100d927842cc2b533694bf90e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096922"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046155"
 ---
 # <a name="0xffff-character-is-not-valid-as-an-object-identifier"></a>0xFFFF 字符不能用作对象标识符
   升级顾问在对象标识符中检测到 0xFFFF 字符。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更高版本中，当数据库兼容模式设置为 90 或更高时，不能引用或重命名标识符中包含该字符的对象（如数据库、表和列）。 升级到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 时，用户数据库将保持其兼容模式。 在将数据库兼容模式更改为 90 或更高之前，请重命名包含 0xFFFF 字符的对象。  

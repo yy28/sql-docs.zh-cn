@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c5661d490f4669968b6d8198a7565fb5e5c8c218
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f0b964c1b509e1a54f3dd202ba922c81a59ef4b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484298"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937658"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>将清理项目值导入到域中
   在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中，您可以将在清理过程中从数据质量清理项目或包含 DQS 清理组件的集成服务包中收集的数据质量知识，导入到域中。 这样可确保可信知识不丢失，而且可以不断地改进知识库。  
@@ -56,7 +55,7 @@ ms.locfileid: "65484298"
   
     -   如果选择 **“从‘新建’选项卡中添加值”** ，则除了 **“正确”** 和 **“已更正”** 选项卡中的值之外，还将导入新建选项卡中的值。  
   
-    -   单击" **确定**"。  
+    -   单击“确定”。  
   
 6.  您将返回到 **“域值”** 选项卡；在值成功导入后，将显示一条消息。 **“值”** 表中将显示已导入的值，因此也是首次进入域中的值。  
   
@@ -66,7 +65,7 @@ ms.locfileid: "65484298"
   
 9. 若要搜索特定字符串，在 **“查找”** 文本框中输入该字符串。 单击向上或向下箭头可以逐一查看满足搜索条件的值。 这些值将突出显示为黄色。  
   
-10. 单击“完成”  。  
+10. 单击“完成” 。  
   
     > [!NOTE]  
     >   有关使用 **“域值”** 选项卡上的值的详细信息，请参阅 [Change Domain Values](../../2014/data-quality-services/change-domain-values.md)。  
@@ -112,6 +111,6 @@ ms.locfileid: "65484298"
   
 ## <a name="see-also"></a>另请参阅  
  [数据清理](../../2014/data-quality-services/data-cleansing.md)   
- [DQS 清除转换](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
+ [DQS 清理转换](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   
   

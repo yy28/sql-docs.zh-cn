@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6e51b7bb-a733-4852-8c33-7f4dbdf931c2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 89f962ead45c4c0670cd5adfb5da0be9373c4097
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: edd9853a68fd86481e32cfa9dee69b0be8b577a7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858932"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930909"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>托管实例详细信息（SQL Server 实用工具）
   实用工具资源管理器的“托管实例”视图中的信息为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的单独实例提供使用率数据、CPU 使用率历史记录、文件级别的存储使用率详细信息，并且提供查看和更新策略阈值的能力。 对于计算机，可以在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例级别控制策略阈值；对于数据库文件和日志文件，可以在存储卷的级别控制策略阈值。 您还可以查看 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的各个托管实例的属性详细信息。  

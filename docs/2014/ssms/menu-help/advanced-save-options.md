@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 175c1f5b1f507078f461a07e30c62fb68f7cfb02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48790cae2251bdad7d958f1adee38235edb20abb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62678991"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067458"
 ---
 # <a name="advanced-save-options"></a>高级保存选项
-  使用此对话框可以选择语言编码方案，并指定要在每一行的末尾插入的字符。 若要访问 **"高级保存选项**" 对话框，请在 "**文件**" 菜单上，单击 "将查询名称**保存** \<>**.sql** " 以打开 "**将文件另**存为" 对话框，单击 "**保存**" 按钮上的向下箭头，然后单击 "**使用编码保存**"。  
+  使用此对话框可以选择语言编码方案，并指定要在每一行的末尾插入的字符。 若要访问“高级存储选项”  对话框，请在“文件”  菜单上，单击“ **.sql 另存为”** \<query name>  ，打开“文件另存为”  对话框，再单击“保存”  按钮上的向下箭头，然后单击“编码保存”  。  
   
 ## <a name="options"></a>选项  
  **编码**  

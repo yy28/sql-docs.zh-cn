@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fb5254eb-b635-4b39-8361-136fd36f2b1f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ea6e37603ae997c218db196c14fe7831bef95e81
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16281b5fa7d4f6698bb6c498915bfa84779b3e14
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871226"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965748"
 ---
 # <a name="set-a-database-to-single-user-mode"></a>将数据库设置为单用户模式
   本主题说明了如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中将用户定义数据库设置为单用户模式。 单用户模式指定一次只有一个用户可访问数据库，该模式通常用于维护操作。  

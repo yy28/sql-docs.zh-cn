@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 41ac7c11824457bd6d93a062344eb3b411c95b3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 989e4b1b538144a1ead50cc3e28c64e0ae6e32c0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900556"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939558"
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊分组转换
   模糊分组转换执行数据清理任务，它首先查找可能重复的数据行，然后选择要在对数据进行标准化的过程中使用的规范数据行。  
@@ -69,7 +68,7 @@ ms.locfileid: "62900556"
  此转换有一个输入和一个输出。 它不支持错误输出。  
   
 ## <a name="row-comparison"></a>行比较  
- 在配置模糊分组转换时，可以指定该转换比较转换输入中的行所用的算法。 如果将 "穷举" 属性设置`true`为，则转换会将输入中的每一行与输入中的每个其他行进行比较。 这种比较算法可以生成更准确的结果，但是除非输入中的行数很少，否则很有可能使转换的执行速度变得很慢。 若要避免性能问题，最好将详尽的属性设置为仅`true`在包开发期间进行设置。  
+ 在配置模糊分组转换时，可以指定该转换比较转换输入中的行所用的算法。 如果将 "穷举" 属性设置为 `true` ，则转换会将输入中的每一行与输入中的每个其他行进行比较。 这种比较算法可以生成更准确的结果，但是除非输入中的行数很少，否则很有可能使转换的执行速度变得很慢。 若要避免性能问题，最好将详尽的属性设置为 `true` 仅在包开发期间进行设置。  
   
 ## <a name="temporary-tables-and-indexes"></a>临时表和索引  
  在运行时，模糊分组转换会在该转换所连接到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中创建临时对象，例如表和索引，这些表和索引可能会非常大。 表和索引的大小与转换输入中的行数和模糊分组转换所创建的标记数成比例。  

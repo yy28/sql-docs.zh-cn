@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d97a3132099a6007f99f6a0119fc3df63a58b9b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe1221b1ff86b96490fb09a5785978dcc16ac40b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807887"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934288"
 ---
 # <a name="database-mirroring-sql-server"></a>数据库镜像 (SQL Server)
     
@@ -211,7 +210,7 @@ ms.locfileid: "62807887"
 > [!NOTE]  
 >  由于镜像数据库相互独立，因此这些数据库不能作为一个组来进行故障转移。  
   
-###  <a name="client-connections"></a><a name="ClientConnections"></a>客户端连接  
+###  <a name="client-connections"></a><a name="ClientConnections"></a> 客户端连接  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供了对数据库镜像会话的客户端连接支持。 有关详细信息，请参阅 [将客户端连接到数据库镜像会话 (SQL Server)](connect-clients-to-a-database-mirroring-session-sql-server.md)。  
   
 ###  <a name="impact-of-pausing-a-session-on-the-principal-transaction-log"></a><a name="ImpactOfPausing"></a> 暂停会话对主体事务日志的影响  
@@ -233,7 +232,7 @@ ms.locfileid: "62807887"
   
 -   [复制](database-mirroring-and-replication-sql-server.md)  
   
-##  <a name="in-this-section"></a><a name="InThisSection"></a>本节内容  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> 本节内容  
  [数据库镜像的前提条件、限制和建议](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)  
  说明了设置数据库镜像的前提条件和建议。  
   

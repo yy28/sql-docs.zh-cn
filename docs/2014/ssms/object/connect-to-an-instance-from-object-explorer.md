@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 92e3b7b2099aabaa763fb6f6642bcc6267ebe6f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a25a9c376b7443bb23520c26be545c027da0bde6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63277429"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067362"
 ---
 # <a name="connect-to-an-instance-from-object-explorer"></a>从对象资源管理器连接到实例
   若要使用对象资源管理器管理对象，必须首先将对象资源管理器连接到包含对象的实例。 可以同时将对象资源管理器连接到多个实例。  
@@ -28,11 +27,11 @@ ms.locfileid: "63277429"
   
  若要指定可选的连接设置，请遵循以下步骤：  
   
-1.  单击对象资源管理器工具栏上的“连接”****，并单击要连接到的服务器类型。 此时会显示“连接到服务器”**** 对话框。  
+1.  单击对象资源管理器工具栏上的“连接”****，并单击要连接到的服务器类型。 此时会显示“连接到服务器”对话框。  
   
 2.  在“服务器名称”**** 框中，键入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。  
   
-3.  单击“选项”****。 “连接到服务器”**** 对话框将显示其他选项。  
+3.  单击“选项”。 “连接到服务器”**** 对话框将显示其他选项。  
   
 4.  单击“连接属性”**** 选项卡以配置其他设置。 可用的设置因服务器类型而异。 下面是可用于 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的设置。  
   
@@ -41,7 +40,7 @@ ms.locfileid: "63277429"
     |**连接到数据库**|从服务器上的可用数据库中选择。 此列表只显示您具有查看权限的数据库。|  
     |**网络协议**|从 Shared Memory、TCP/IP 或 Named Pipes 中选择。|  
     |**网络数据包大小**|以字节为单位进行配置。 默认设置是 4096 字节。|  
-    |**连接超时值**|以秒为单位进行配置。 默认值是 15 秒。|  
+    |**连接超时**|以秒为单位进行配置。 默认值是 15 秒。|  
     |**执行超时**|以秒为单位进行配置。 默认设置 (0) 表示执行永远不会超时。|  
     |**加密连接**|强制加密。|  
   

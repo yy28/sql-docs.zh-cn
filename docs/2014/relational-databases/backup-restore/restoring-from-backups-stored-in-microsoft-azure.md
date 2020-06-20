@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 54fc088cd867e9ed250835ca821e5cac8e598e85
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 68b270f18cb4dbc2724c5a062afae54fa711acec
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922022"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956547"
 ---
 # <a name="restoring-from-backups-stored-in-azure"></a>从 Azure 中存储的备份还原
   本主题概述在使用存储在 Azure Blob 存储服务中的备份还原数据库时的注意事项。 这适用于使用“SQL Server 备份到 URL”备份或由 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]创建的备份。  
@@ -40,7 +39,7 @@ ms.locfileid: "82922022"
   
  要减少还原次数，建议使用压缩的备份。  对于大小超过 25 GB 的备份，请使用 [AzCopy 实用工具](https://docs.microsoft.com/archive/blogs/windowsazurestorage/azcopy-uploadingdownloading-files-for-windows-azure-blobs) 下载到本地驱动器，然后执行还原。 有关其他备份最佳实践和建议，请参阅 [SQL Server Backup to URL Best Practices and Troubleshooting](sql-server-backup-to-url-best-practices-and-troubleshooting.md)。  
   
- 在执行还原操作时，也可开启跟踪标志 3051，以生成详细日志。 此日志文件放置在日志目录中，以下面的格式命名：BackupToUrl-\<instancename>-\<dbname>-action-\<PID>.log。 日志文件包含每次往返 Azure 存储的相关信息（包括计时），这在诊断问题时可能非常有用。  
+ 在执行还原操作时，也可开启跟踪标志 3051，以生成详细日志。 此日志文件放置在日志目录中，并使用以下格式命名： BackupToUrl- \<instancename> - \<dbname> - \<PID> .log。 日志文件包含每次往返 Azure 存储的相关信息（包括计时），这在诊断问题时可能非常有用。  
   
 ### <a name="topics-on-performing-restore-operations"></a>关于执行还原操作的主题  
   

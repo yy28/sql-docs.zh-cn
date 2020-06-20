@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 342e08d1-dcca-4a71-ae64-cb61b55b85bc
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ddf153da7af2906fe7167c8cb2b77d9100d1154f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f540f39176ec638cdc9236b315e306ecebfdcb1b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064921"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933068"
 ---
 # <a name="event-counter-target"></a>事件计数器目标
   事件计数器目标将计算在扩展事件会话过程中发生的所有事件数目。 通过使用事件计数器目标，您可以获得有关工作负荷特征的信息，而不必因进行完整的事件收集而增加系统开销。 此目标不包含任何可自定义的参数。  
