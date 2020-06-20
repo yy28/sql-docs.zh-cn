@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e0290e656105ebb33a7f73fc043beed64f1c25bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0e4fe1f3c7920f034103a4fca6df3460ff4aea7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62520318"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915777"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>使用 CDC 源提取更改数据
   若要添加并配置 CDC 源，则包必须已包含至少一个数据流任务和一个 CDC 控制任务。  
@@ -40,7 +39,7 @@ ms.locfileid: "62520318"
   
 7.  选择或键入具有要读取的 CDC 表的 **“CDC 捕获实例”** 的名称。  
   
-     一个捕获源表可具有一个或两个捕获实例，以便通过架构更改处理表定义的无缝转换。 如果为要捕获的源表定义了一个捕获实例，则选择要在此处使用的捕获实例。 表 [schema].[table] 的默认捕获实例名称为 \<schema>_\<table>，但使用的实际捕获实例名称可能会不同。 读取的实际表是 CDC 表 cdc .**capture-instance>_CT\<** 。  
+     一个捕获源表可具有一个或两个捕获实例，以便通过架构更改处理表定义的无缝转换。 如果为要捕获的源表定义了一个捕获实例，则选择要在此处使用的捕获实例。 表 [schema] 的默认捕获实例名称。[表] 为 \<schema> _ \<table> ，但使用的实际捕获实例名称可能不同。 从中读取的实际表是 CDC 表**cdc。 \<capture-instance>_CT**。  
   
 8.  选择可以最好地满足您的处理需要的处理模式。 可能的选项包括：  
   
@@ -50,7 +49,7 @@ ms.locfileid: "62520318"
   
     -   **净值**：对于当前 CDC 处理范围中修改的每个源行，仅返回一个更改行。 如果某一源行更新了多次，将生成合并的更改（例如，插入+更新作为单个更新生成，更新+删除作为单个删除生成）。 在净更改处理模式下工作时，可以拆分对删除、插入和更新输出的更改并且并行处理它们，因为单个源行出现多次。  
   
-    -   **具有更新掩码的净值**：此模式类似于一般的净值模式，但它还添加了命名模式为 __$**column-name>\<_Changed 的布尔值列（指示当前更改行中已更改的列）\_** 。  
+    -   **Net with 更新掩码**：此模式类似于常规 Net 模式，但它还添加了命名模式为 **__ $ \<column-name> \_ _Changed**的布尔值列，用于指示当前更改行中已更改的列。  
   
     -   **净值且具有合并**：此模式类似于一般的净值模式，但具有合并到单个合并操作中的插入和更新操作 (UPSERT)。  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ec21ff98d49cff26bde48452a30fd347c23782fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b3d74dcc6be62ae8a01d911a8404c7bc32fd651
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63216003"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066618"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   复制合并代理是一个将数据库表中保存的初始快照应用于订阅服务器的实用工具可执行文件。 它还合并自初始快照创建后发布服务器上发生的增量数据更改，并根据配置的规则或通过使用创建的自定义冲突解决程序来协调冲突。  
@@ -317,7 +316,7 @@ ms.locfileid: "63216003"
  指定合并代理用于枚举来自源的更改的源线程数。 在上载过程中，源是订阅服务器；在下载过程中，源是发布服务器。 默认值为 **3**。  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- 当运行的并发合并进程数达到**@max_concurrent_merge** **sp_addmergepublication**的属性设置的限制时，合并代理等待的最大秒数。 如果在达到最大秒数之后合并代理仍在等待，则合并代理将退出。 值 0 表示代理将无限期地等待，但是可以将其取消。  
+ 当运行的并发合并进程数达到 sp_addmergepublication 的属性设置的限制时，合并代理等待的最大秒数 **@max_concurrent_merge** 。 **sp_addmergepublication** 如果在达到最大秒数之后合并代理仍在等待，则合并代理将退出。 值 0 表示代理将无限期地等待，但是可以将其取消。  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
  如果 **SubscriberType** 为 **2** （允许建立到 Jet 数据库的连接，而无需 ODBC 数据源名称 (DSN)），则为 Jet 数据库（.mdb 文件）的路径。  

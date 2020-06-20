@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 90418193ac869641a20f8b0f684fc43dd46712f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 95cb279c939298256a623d67e3db8f979f65c40f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175992"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936258"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>使用“添加 Azure 副本向导”(SQL Server)
   使用 "添加 Azure 副本" 向导来帮助你在混合 IT 中创建新的 Azure VM，并将其配置为新的或现有 AlwaysOn 可用性组的辅助副本。  
@@ -33,7 +32,7 @@ ms.locfileid: "70175992"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 开始之前  
  如果你从未向可用性组添加过任何可用性副本，请参阅[针对 AlwaysOn 可用性组 &#40;SQL Server&#41;的先决条件、限制和建议](prereqs-restrictions-recommendations-always-on-availability.md)中的 "服务器实例" 和 "可用性组和副本" 部分。  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 先决条件  
   
 -   您必须连接到承载当前主副本的服务器实例。  
   
@@ -69,7 +68,7 @@ ms.locfileid: "70175992"
   
 4.  为将承载新辅助副本的 Azure 虚拟机指定设置：  
   
-     图像  
+     映像  
      要用于 Azure 虚拟机的 SQL Server 映像的名称  
   
      VM 大小  
@@ -90,7 +89,7 @@ ms.locfileid: "70175992"
      虚拟网络子网  
      要放置 Azure 虚拟机的虚拟网络子网  
   
-     Domain  
+     域  
      要联接 Azure 虚拟机的 Active Directory (AD) 域  
   
      域用户名  

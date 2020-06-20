@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9487aff1-44d8-42c1-8176-bb9891d4632d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e0e7e62510338b9dd47d59ce50626ecffebfcf85
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b9fa3f54b7b16b1fd397bfe80c95d08e39289eb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060415"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921348"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>连接到远程 Integration Services 服务器（SSIS 服务）
     
@@ -47,7 +46,7 @@ ms.locfileid: "66060415"
     > [!NOTE]  
     >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务是不特定于实例的。 通过使用正运行 Integration Services 服务的计算机的名称连接到该服务。  
   
-5.  单击“连接”  。  
+5.  单击“连接”。  
   
 > [!NOTE]  
 >  **“查找服务器”** 对话框中不显示 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的远程实例。 此外， **“连接到服务器”** 对话框中的 **“连接选项”** 选项卡上的选项不适用于 **连接（该选项卡在单击** “选项” [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 按钮后显示）。  
@@ -99,7 +98,7 @@ ms.locfileid: "66060415"
  如果您是在客户端计算机上使用本地 Windows 帐户工作，则只有远程计算机上存在与客户端计算机上的本地帐户的帐户名和密码相同并且具有相应权限的本地帐户时，才可以连接到远程计算机上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务。  
   
 ## <a name="by-default-the-ssis-service-does-not-support-delegation"></a>默认情况下，SSIS 服务不支持委派  
-默认情况下[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ，该服务不支持委托凭据，或有时称为双跃点。 在此方案中，你在客户端计算机上工作， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务在第二台计算机上运行和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在第三台计算机上运行。 首先， [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 成功地将你的凭据从客户端计算机传递到第二台计算机上， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务正在这台计算机上运行。 但是， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务不能将你的凭据从第二台计算机委派到正在运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的第三台计算机上。
+默认情况下，该 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务不支持委托凭据，或有时称为双跃点。 在此方案中，你在客户端计算机上工作， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务在第二台计算机上运行和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在第三台计算机上运行。 首先， [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 成功地将你的凭据从客户端计算机传递到第二台计算机上， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务正在这台计算机上运行。 但是， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务不能将你的凭据从第二台计算机委派到正在运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的第三台计算机上。
 
 可通过将“信任此用户对任何服务的委派(仅 Kerberos)”**** 的权限授予 SQL Server 服务帐户（它将 Integration Services 服务 (ISServerExec.exe) 作为子进程启动），从而启用凭据委派。 在授予此权限之前，请考虑它是否符合组织的安全要求。
 

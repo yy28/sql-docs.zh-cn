@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ff96b99ee7982be89126e79687dbc8a2215f42f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bcce5bcbab747e9febb1ab3ac8de662a8d3974a4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798143"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006924"
 ---
 # <a name="sqlps-utility"></a>sqlps 实用工具
   `sqlps` 实用工具会启动一个 Windows PowerShell 2.0 会话，并加载和注册 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 提供程序和 cmdlet。 您可以输入 PowerShell 命令或脚本，它们使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 组件来处理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例及其对象。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]请改用 `sqlps` PowerShell 模块。 有关`sqlps`模块的详细信息，请参阅[导入 SQLPS 模块](../database-engine/import-the-sqlps-module.md)。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]请改用 `sqlps` PowerShell 模块。 有关模块的详细信息 `sqlps` ，请参阅[导入 SQLPS 模块](../database-engine/import-the-sqlps-module.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -54,28 +53,28 @@ ms.locfileid: "72798143"
  指定 `sqlps` 实用工具不加载用户配置文件。 用户配置文件记录 PowerShell 会话期间常用的别名、函数和变量。  
   
  **-OutPutFormat** { **Text** | **XML** }  
- 指定将实用工具`sqlps`输出的格式设置为文本字符串（**text**）或序列化的 export-clixml 格式（**XML**）。  
+ 指定将 `sqlps` 实用工具输出的格式设置为文本字符串（**text**）或序列化的 Export-clixml 格式（**XML**）。  
   
  **-InPutFormat** { **Text** | **XML** }  
- 指定对`sqlps`实用工具的输入设置为文本字符串格式（**text**）或序列化的 export-clixml 格式（**XML**）。  
+ 指定对实用工具的输入 `sqlps` 设置为文本字符串格式（**text**）或序列化的 Export-clixml 格式（**XML**）。  
   
  **-Command**  
  指定要使 `sqlps` 实用工具运行的命令。 `sqlps`实用工具运行命令，然后退出，除非也指定了 **-NoExit** 。 请不要在 **-Command**后指定任何其他开关，如果指定，它们将被读作命令参数。  
   
  **-**  
- **-Command-** 指定`sqlps`实用工具从标准输入读取输入。  
+ **-Command-** 指定 `sqlps` 实用工具从标准输入读取输入。  
   
  *script_block* [ **-args**_argument_array_ ]  
- 指定要运行的 PowerShell 命令块，块必须用大括号 {} 括起来。 仅当从**PowerShell**或其他`sqlps`实用工具`sqlps`会话调用实用工具时，才能指定*Script_block* 。 *Argument_array* 是 PowerShell 变量的数组，包含 *script_block*中 PowerShell 命令的参数。  
+ 指定要运行的 PowerShell 命令块，块必须用大括号 {} 括起来。 *Script_block*仅当 `sqlps` 从**PowerShell**或其他实用工具会话调用实用工具时，才能指定 Script_block `sqlps` 。 *Argument_array* 是 PowerShell 变量的数组，包含 *script_block*中 PowerShell 命令的参数。  
   
  *字符串* [ *command_parameters* ]  
- 指定包含要运行的 PowerShell 命令的字符串。 使用 **"& {*`command`*}"** 格式。 引号指示一个字符串，调用运算符（&）导致`sqlps`实用工具运行该命令。  
+ 指定包含要运行的 PowerShell 命令的字符串。 使用 **"& { *`command`* }"** 格式。 引号指示一个字符串，调用运算符（&）导致 `sqlps` 实用工具运行该命令。  
   
  [ **-?** |  **-Help** ]  
  显示 `sqlps` 实用工具选项的语法摘要。  
   
 ## <a name="remarks"></a>备注  
- `sqlps`实用工具启动 powershell 环境（ngen.exe）并加载[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] powershell 模块。 该模块（也称为`sqlps`）将加载并注册[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]以下 PowerShell 管理单元：  
+ `sqlps`实用工具启动 powershell 环境（PowerShell.exe）并加载 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] powershell 模块。 该模块（也称为 `sqlps` ）将加载并注册以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 管理单元：  
   
 -   Microsoft.SqlServer.Management.PSProvider.dll  
   
@@ -95,7 +94,7 @@ ms.locfileid: "72798143"
   
 -   使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序路径可以浏览 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象的层次结构。  
   
- 默认情况下， `sqlps`实用工具运行时将脚本执行策略设置为 "**受限**"。 这样可以防止运行任何 PowerShell 脚本。 可以使用 **Set-ExecutionPolicy** cmdlet 来启用运行签名的脚本或任意脚本。 请仅运行来自受信任源的脚本，并通过使用适当的 NTFS 权限来保证所有输入和输出文件的安全。 有关启用 PowerShell 脚本的详细信息，请参阅 [Running Windows PowerShell Scripts](https://www.tech-recipes.com/rx/2513/powershell_enable_script_support/)（运行 Windows PowerShell 脚本）。  
+ 默认情况下， `sqlps` 实用工具运行时将脚本执行策略设置为 "**受限**"。 这样可以防止运行任何 PowerShell 脚本。 可以使用 **Set-ExecutionPolicy** cmdlet 来启用运行签名的脚本或任意脚本。 请仅运行来自受信任源的脚本，并通过使用适当的 NTFS 权限来保证所有输入和输出文件的安全。 有关启用 PowerShell 脚本的详细信息，请参阅 [Running Windows PowerShell Scripts](https://www.tech-recipes.com/rx/2513/powershell_enable_script_support/)（运行 Windows PowerShell 脚本）。  
   
  在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中，此 `sqlps` 实用工具版本已作为 Windows PowerShell 1.0 微型 shell 实现。 微型外壳程序具有某些限制，例如不允许用户加载不是由微型外壳程序所加载的管理单元。 这些限制并不适用于 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 版本及更高的版本的实用工具，这些版本已更改为使用 `sqlps` 模块。  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 53a89baa1fc13759bd24d6c12190bce509f6dfce
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a71f4e646f91636c42e4bbe7b72e5050e4d87c04
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705273"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019328"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
   bcp_setbulkmode 允许您在大容量复制操作中指定列格式，并在单个函数调用中设置所有列特性。  
@@ -77,12 +76,12 @@ cbRow
   
  下表列出了 property 参数的常量**。  
   
-|Property|说明|  
+|properties|说明|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|指定字符输出模式。<br /><br /> 对应于 BCP 中的-c 选项。EXE，并将 `BCP_FMT_TYPE` 属性设置为 bcp_setcolfmt `SQLCHARACTER` 。|  
-|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 输出模式。<br /><br /> 对应于 BCP 中的-w 选项。EXE 和 bcp_setcolfmt `BCP_FMT_TYPE` 属性设置为的 `SQLNCHAR` 。|  
-|BCP_OUT_NATIVE_TEXT_MODE|指定对非字符类型使用本机类型，对字符类型使用 Unicode。<br /><br /> 对应于 BCP 中的-N 选项。使用属性设置为的 EXE 和 bcp_setcolfmt `BCP_FMT_TYPE` `SQLNCHAR` （如果列类型是字符串，则默认值为; 如果不是字符串，则为默认值）。|  
-|BCP_OUT_NATIVE_MODE|指定本机数据库类型。<br /><br /> 对应于 BCP 中的-n 选项。EXE 和 bcp_setcolfmt，其 `BCP_FMT_TYPE` 属性设置为默认值。|  
+|BCP_OUT_CHARACTER_MODE|指定字符输出模式。<br /><br /> 对应于 BCP.EXE 中的-c 选项，并对应于 `BCP_FMT_TYPE` 属性设置为的 bcp_setcolfmt `SQLCHARACTER` 。|  
+|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 输出模式。<br /><br /> 与 BCP.EXE 和属性设置为的 bcp_setcolfmt 中的-w 选项相对应 `BCP_FMT_TYPE` `SQLNCHAR` 。|  
+|BCP_OUT_NATIVE_TEXT_MODE|指定对非字符类型使用本机类型，对字符类型使用 Unicode。<br /><br /> 对应于 BCP.EXE 中的-N 选项，并且 `BCP_FMT_TYPE` 如果列类型是字符串，则为属性设置为的 bcp_setcolfmt `SQLNCHAR` （默认值）。|  
+|BCP_OUT_NATIVE_MODE|指定本机数据库类型。<br /><br /> 对应于 BCP.EXE 和 `BCP_FMT_TYPE` 属性设置为默认值的 bcp_setcolfmt 中的-n 选项。|  
   
  不应将 bcp_setbulkmode 与包含 bcp_setcolfmt、bcp_control 和 bcp_readfmt 的函数调用序列一起使用。 例如，不应调用 bcp_control （BCPTEXTFILE）和 bcp_setbulkmode。  
   

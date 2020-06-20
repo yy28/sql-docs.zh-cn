@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 538062f3-4629-4675-8568-5dcf2fff098b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4f51cd7f77d938f806934ffd48ef9c1af9d6e478
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 701a118cc97ba58ba1ddb4e8cb062cc9e985474f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63065555"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040558"
 ---
 # <a name="client-protocols-sql-server-configuration-manager"></a>客户端协议（SQL Server 配置管理器）
   若要配置此计算机上的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端所使用的协议顺序，请在控制台窗格中右键单击“客户端协议”，再单击“属性”，或者在详细信息窗格中右键单击某个协议，再单击“顺序”。     

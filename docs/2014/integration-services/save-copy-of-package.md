@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 7b44c0d7-d8fa-4491-8836-0899f621d3a8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 649c972b001a0627a568f0bd9e1ac2b42d5175ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29e6b0cfe7d7646b317073298410c479c2cd5665
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056322"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964314"
 ---
 # <a name="save-copy-of-package"></a>保存包的副本
   可以使用 **中的** “保存包的副本” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]对话框，将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的副本从 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 保存到其他位置，并根据需要修改包的保护级别。  
   
 ## <a name="options"></a>选项  
  **包位置**  
- 选择要在其中保存包副本的存储位置的类型。 提供了以下选项：  
+ 选择要在其中保存包副本的存储位置的类型。 可用选项如下：  
   
  **SQL Server**  
   
@@ -34,7 +33,7 @@ ms.locfileid: "66056322"
   
  **SSIS 包存储区**  
   
- **服务器**  
+ **Server**  
  键入服务器名称或从列表中选择一个服务器。 只有当存储位置为 **SQL Server** 或 **“SSIS 包存储区”** 时，此选项才可用。  
   
  **身份验证**  

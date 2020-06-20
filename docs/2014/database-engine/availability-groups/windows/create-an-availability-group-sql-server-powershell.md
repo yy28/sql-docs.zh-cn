@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8085fa23357c5901ed350e81410ae4d38a3005dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: be84fd9d747ac2b6699c2e1008836c49ead1b059
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228800"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936928"
 ---
 # <a name="create-an-availability-group-sql-server-powershell"></a>创建可用性组 (SQL Server PowerShell)
   本主题说明如何使用 PowerShell cmdlet 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中通过 PowerShell 创建和配置 AlwaysOn 可用性组。 “可用性组” ** 定义一组用户数据库，这些用户数据库将以支持故障转移的单个单元和一组故障转移伙伴（称作“可用性副本” **）的形式进行故障转移。  
@@ -51,7 +50,7 @@ ms.locfileid: "75228800"
 |准备辅助数据库|`Backup-SqlDatabase` 和 `Restore-SqlDatabase`|在承载主副本的服务器实例上创建备份。<br /><br /> 使用 `NoRecovery` 还原参数在承载辅助副本的各服务器实例上还原备份。 如果文件路径在承载主副本和目标辅助副本的计算机之间存在差异，还要使用 `RelocateFile` 还原参数。|  
 |通过将各辅助数据库联接到可用性组，开始数据同步|`Add-SqlAvailabilityDatabase`|在承载辅助副本的各服务器实例上执行。|  
   
- **<sup>*</sup>** 若要执行给定任务，请将目录`cd`（）更改为指示的服务器实例。  
+ **<sup>*</sup>** 若要执行给定任务，请将目录（ `cd` ）更改为指示的服务器实例。  
   
 ###  <a name="to-set-up-and-use-the-sql-server-powershell-provider"></a><a name="PsProviderLinks"></a>设置并使用 SQL Server PowerShell 提供程序  
   
@@ -225,7 +224,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
      [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
   
--   **视频**  
+-   **视频：**  
   
      [Microsoft SQL Server Code-Named "Denali" AlwaysOn 系列，第一部分：介绍下一代高可用性解决方案](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   

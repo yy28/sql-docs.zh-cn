@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b0626ce7dee34ed21aad3e902e3c3f555f27ab97
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b1ab796d9e48292dfa3426cd102faadecdabb2f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813551"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936368"
 ---
 # <a name="start-data-movement-on-an-alwayson-secondary-database-sql-server"></a>启动 AlwaysOn 辅助数据库的数据移动 (SQL Server)
   本主题包含有关如何在将数据库添加到 AlwaysOn 可用性组后启动数据同步的信息。 对于每个新的主副本，必须在承载辅助副本的服务器实例上准备辅助数据库。 然后，必须将这些辅助数据库手动添加到可用性组。  
@@ -31,7 +30,7 @@ ms.locfileid: "62813551"
   
     -   使用 RESTORE WITH NORECOVERY 手动还原主数据库的最新数据库备份，然后使用 RESTORE WITH NORECOVERY 还原各个后续日志备份。 在每个承载可用性组的辅助副本的服务器实例上执行此还原序列。  
   
-         **参考信息：**  
+         **更多相关信息：**  
   
          [为可用性组手动准备辅助数据库 (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
@@ -40,7 +39,7 @@ ms.locfileid: "62813551"
         > [!NOTE]  
         >  在您为可用性组创建了所有辅助数据库后，如果您想要在辅助副本上执行备份，将需要重新配置该可用性组的自动备份首选项。  
   
-         **参考信息：**  
+         **更多相关信息：**  
   
          [从日志传送迁移到 AlwaysOn 可用性组 &#40;SQL Server 的先决条件&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
@@ -48,7 +47,7 @@ ms.locfileid: "62813551"
   
 2.  尽快将每个新准备的辅助数据库加入可用性组。  
   
-     **参考信息：**  
+     **更多相关信息：**  
   
      [将辅助数据库联接到可用性组 (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   

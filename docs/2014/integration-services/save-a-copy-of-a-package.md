@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 21482a20-e420-4452-b7eb-8f9fa1929f31
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bdd8754ac3d4a63e038218c054d064f20485344b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4725d05e41ae6335ceae19c46c2c36af14dbcf8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056269"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964387"
 ---
 # <a name="save-a-copy-of-a-package"></a>保存一个包副本 
   此过程介绍如何将包的副本保存到文件系统、包存储区或 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 **msdb** 数据库。 指定保存包副本的位置时，也能够更新包的名称。  
@@ -37,7 +36,7 @@ ms.locfileid: "66056269"
   
 1.  在解决方案资源管理器中，双击要保存其副本的包。  
   
-2.  在“文件”菜单上，单击“包文件\<的副本 > 另存为”********。  
+2.  在 "**文件**" 菜单上，单击 "**将副本另存 \<package file> 为**"。  
   
 3.  在 **“保存包的副本”** 对话框，在 **“包位置”** 列表中选择包的位置。  
   
@@ -59,9 +58,9 @@ ms.locfileid: "66056269"
   
     -   在 **“包保护级别”** 对话框中，选择不同的保护级别。  
   
-    -   单击" **确定**"。  
+    -   单击“确定”。  
   
-9. 单击" **确定**"。  
+9. 单击“确定”。   
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services &#40;SSIS&#41; 包](../../2014/integration-services/integration-services-ssis-packages.md)   

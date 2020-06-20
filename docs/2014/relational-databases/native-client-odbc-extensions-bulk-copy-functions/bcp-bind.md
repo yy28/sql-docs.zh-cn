@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 07a7bb9026984ed830d0b146438d958739463109
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 87f06021e5a2f9e10f6b60836fe3889aab3e9f65
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705328"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019809"
 ---
 # <a name="bcp_bind"></a>bcp_bind
   将程序变量中的数据绑定到表列，以便大容量复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -168,7 +167,7 @@ bcp_bind(hdbc, szName, 0,
   
 -   0xFFFFFFFFFFFFFFFE 被视为特殊前缀值，用于有效地向服务器成块发送数据。 带有此特殊前缀的数据的格式为：  
   
--   <SPECIAL_PREFIX> \< 0 个或多个数据块> <ZERO_CHUNK> 位置：  
+-   <SPECIAL_PREFIX> \<0 or more  DATA CHUNKS> <ZERO_CHUNK> 位置：  
   
 -   SPECIAL_PREFIX 为 0xFFFFFFFFFFFFFFFE  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0da11d8f49c1de88297a9bf8876588c8b5aeb81b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf7788e58b24d45966b67e417d35f4b58927a39b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056283"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964390"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>SAP BW 连接管理器编辑器
   使用 **“SAP BW 连接管理器编辑器”** 指定用于连接 SAP Netweaver BW 版本 7 系统的属性。  
@@ -59,7 +58,7 @@ ms.locfileid: "66056283"
   
  若要连接到一组负载平衡的服务器，请改用“使用负载平衡”**** 选项。  
   
- **Host**  
+ **主机**  
  如果连接到单一应用程序服务器，请指定主机名。  
   
 > [!NOTE]  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cfb0b69d-4ce0-4067-a3df-d82775e57886
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 17a2c847e906616c4555d37e641f76eeb73391ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1a628035fa7469441c670e20dbbf98cdbf8f8a7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065261"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937308"
 ---
 # <a name="assembly-load-event-class"></a>Assembly Load 事件类
   执行加载程序集的请求时，会发生 **Assembly Load** 事件类。  
@@ -48,7 +47,7 @@ ms.locfileid: "66065261"
 |**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果你使用 Login1 连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2********。 此列将同时显示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|是|  
 |**SPID**|**int**|发生该事件的会话的 ID。|12|是|  
 |**StartTime**|**datetime**|该事件（如果存在）的启动时间。|14|是|  
-|**成功**|**int**|指示程序集加载是成功 (1) 还是失败 (0)。|23|是|  
+|**辉煌**|**int**|指示程序集加载是成功 (1) 还是失败 (0)。|23|是|  
 |**TextData**|**ntext**|如果加载成功，将显示“程序集加载成功”；否则，将显示“程序集加载失败”。|1|是|  
   
 ## <a name="see-also"></a>另请参阅  

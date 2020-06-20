@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1f881435de01c7c21b80bff00b43c2399d0f7d75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fab2f2e8fad2cd77e5bc27a78e66940fc40544b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060601"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921605"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>“配置 SSIS 日志”对话框
   使用 **“配置 SSIS 日志”** 对话框可以定义包的日志记录选项。  
   
- **您希望做什么？**  
+ **要执行什么操作？**  
   
 1.  [打开“配置 SSIS 日志”对话框](#open_dialog)  
   
@@ -73,7 +72,7 @@ ms.locfileid: "66060601"
  说明字段是可编辑的。 可以单击该字段，然后修改日志的默认说明。  
   
  **配置**  
- 在列表中选择现有连接管理器，或单击\<"**新建连接 ...** "> 创建新的连接管理器。 根据日志提供程序的类型，您可以配置 OLE DB 连接管理器或文件连接管理器。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 事件日志的日志提供程序不需要任何连接。  
+ 在列表中选择现有连接管理器，或单击 " \<**New connection...**> 新建连接管理器"。 根据日志提供程序的类型，您可以配置 OLE DB 连接管理器或文件连接管理器。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 事件日志的日志提供程序不需要任何连接。  
   
  相关主题： [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md) 、 [File Connection Manager](connection-manager/file-connection-manager.md)  
   
@@ -93,9 +92,9 @@ ms.locfileid: "66060601"
  **高级**  
  选中或清除要记录的事件，以及选中或清除要为每个事件记录的信息。 单击 **“基本”** 可以隐藏除事件列表之外的所有日志记录详细信息。 日志记录可以包含以下信息：  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
-|**计算机**|发生所记录事件的计算机的名称。|  
+|**Computer**|发生所记录事件的计算机的名称。|  
 |**操作员**|启动包的人员的用户名。|  
 |**SourceName**|发生所记录事件的包、容器或任务的名称。|  
 |**源**|发生所记录事件的包、容器或任务的全局唯一标识符 (GUID)。|  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7a9074c49b3e8c9d80666d3bb586ffeba225e88b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e4d75372cd2388e88fcb3d3ce95975bdefa54c5c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813270"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936270"
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>使用“将副本添加到可用性组向导”(SQL Server Management Studio)
   使用“将副本添加到可用性组向导”可帮助您将新的辅助副本添加到现有 AlwaysOn 可用性组。  
@@ -85,9 +84,9 @@ ms.locfileid: "62813270"
     |**端点**|使用此选项卡可验证每个新的辅助副本的现有数据库镜像端点（如果有）。 如果在其服务帐户使用 Windows 身份验证的服务器实例上缺少该端点，则该向导会自动创建该端点。 **注意：** 如果任何服务器实例在非域用户帐户下运行，则需要先对服务器实例进行手动更改，然后才能在向导中继续操作。 有关详细信息，请参阅本主题前面的 [先决条件](#Prerequisites)。|  
     |**备份首选项**|使用此选项卡可以整体为可用性组指定您的备份首选项；如果您想要修改当前设置，还可为各个可用性副本指定备份优先级。|  
   
-6.  在 **“选择初始数据同步”** 页上，选择如何创建新的辅助数据库并将其联接到可用性组。 选择以下选项之一：  
+6.  在 **“选择初始数据同步”** 页上，选择如何创建新的辅助数据库并将其联接到可用性组。 选择下列选项之一：  
   
-    -   **达到**  
+    -   **完整**  
   
          如果你的环境满足自动启动初始数据同步的要求，则选择此选项（有关详细信息，请参阅本主题前面的 [先决条件、限制和建议](#Prerequisites)）。  
   

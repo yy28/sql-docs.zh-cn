@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 31976f23109e7e8e64684618b88dfcc4177e2860
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 2159f5eaecd88425fa856e760af412f869186588
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858902"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937098"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>可用性组属性和新建可用性组（“常规”页）
   本主题同时适用于“新建可用性组”对话框和“可用性组属性”对话框的“常规”选项卡************。  **“新建可用性组”** 对话框支持您无需使用 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]即创建新的可用性组。 **“可用性组属性”** 对话框支持您查看和修改现有的可用性组的配置。  
@@ -39,7 +38,7 @@ ms.locfileid: "83858902"
  **添加**  
  单击此选项可将数据库添加到可用性组。  
   
- **移除**  
+ **删除**  
  单击此选项可从可用性组中删除所选数据库。  
   
 ## <a name="availability-replicas"></a>可用性副本  
@@ -88,7 +87,7 @@ ms.locfileid: "83858902"
  **可读辅助**  
  正在履行辅助角色的可用性副本（也就是辅助副本）是否可以接受来自客户端的连接，可为下列值之一：  
   
- **否**  
+ **是**  
  不允许与此副本的辅助数据库的直接连接。 它们不可用于读访问。 这是默认设置。  
   
  **仅限读意向**  
@@ -106,7 +105,7 @@ ms.locfileid: "83858902"
  **添加**  
  单击此选项可将辅助副本添加到可用性组。  
   
- **移除**  
+ **删除**  
  单击此选项可从可用性组中删除辅助副本。  
   
 ## <a name="see-also"></a>另请参阅  

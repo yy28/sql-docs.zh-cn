@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a024e2fc4cb7afaecdc6e84ae6dba4f3a2700d8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1bea9948691adc57ab6498f88687946400cb6548
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035416"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007160"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag 实用工具
   **SQLdiag** 实用工具是一般用途的诊断信息收集实用工具，可作为控制台应用程序或服务运行。 可以使用 **SQLdiag** 从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和其他类型的服务器中收集日志和数据文件，同时还可将其用于一直监视服务器或对服务器的特定问题进行故障排除。 **SQLdiag** 旨在加快和简化为 [!INCLUDE[msCoName](../includes/msconame-md.md)] 客户支持服务部门收集诊断信息的过程。  
@@ -114,7 +113,7 @@ ms.locfileid: "63035416"
  **/M** _machine1_ [ *machine2 * * machineN*] |*@machinelistfile*  
  覆盖在配置文件中指定的计算机。 默认情况下，配置文件为 SQLDiag.Xml，也可以使用 **/I** 参数进行设置。 如果指定多台计算机，请用空格分隔各个计算机名称。  
   
- 使用*@machinelistfile*指定要存储在配置文件中的计算机列表文件名。  
+ 使用 *@machinelistfile* 指定要存储在配置文件中的计算机列表文件名。  
   
  **/C** _file_compression_type_  
  设置 **SQLdiag** 输出文件夹文件所用的文件压缩类型。 可用选项：  
@@ -230,7 +229,7 @@ ms.locfileid: "63035416"
  **SQLDIAG START /A** _SQLdiag_application_name_  
   
 ## <a name="security-requirements"></a>安全要求  
- 除非以通用模式（通过指定 /G  命令行参数）运行 SQLdiag  ，否则运行 SQLdiag  的用户必须为 Windows“管理员”  组的成员和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sysadmin  固定服务器角色的成员。 默认情况下， **SQLdiag** 使用 Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，但是它也支持 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证。  
+ 除非以通用模式（通过指定 /G 命令行参数）运行 SQLdiag，否则运行 SQLdiag 的用户必须为 Windows“管理员”组的成员和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sysadmin 固定服务器角色的成员。 默认情况下， **SQLdiag** 使用 Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，但是它也支持 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证。  
   
 ## <a name="performance-considerations"></a>性能注意事项  
  运行 **SQLdiag** 的性能效果取决于其配置收集的诊断数据的类型。 例如，如果已配置 **SQLdiag** 来收集 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 跟踪信息，则选择跟踪的事件类越多，服务器性能所受的影响就越大。  
@@ -259,7 +258,7 @@ ms.locfileid: "63035416"
   
  如果要使用 **SQLdiag** 诊断可以再现的问题，则请等到收到此消息后再在服务器中再现问题。  
   
- **SQLdiag** 以并行方式收集大多数诊断数据。 除了通过 Windows 性能日志和事件日志收集的信息之外，所有诊断信息都是通过连接到工具（如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sqlcmd  实用工具或 Windows 命令处理器）来收集的。 **SQLdiag** 在每台计算机上使用一个工作线程来监视其他工具的诊断数据收集，经常会同时等待几个工具完成操作。 在收集过程中， **SQLdiag** 会将每个诊断信息的输出内容传送到输出文件夹。  
+ **SQLdiag** 以并行方式收集大多数诊断数据。 除了通过 Windows 性能日志和事件日志收集的信息之外，所有诊断信息都是通过连接到工具（如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sqlcmd 实用工具或 Windows 命令处理器）来收集的。 **SQLdiag** 在每台计算机上使用一个工作线程来监视其他工具的诊断数据收集，经常会同时等待几个工具完成操作。 在收集过程中， **SQLdiag** 会将每个诊断信息的输出内容传送到输出文件夹。  
   
 ## <a name="stopping-data-collection"></a>停止数据收集  
  **SQLdiag** 在开始收集诊断数据后会持续进行收集，直至收集被停止或在配置好的指定时间停止。 可以使用 **/E** 参数或 **/X** 参数将 **SQLdiag** 配置为在指定时间停止，第一个参数允许指定一个停止时间，第二个参数则使 **SQLdiag** 以快照模式运行。  
@@ -358,9 +357,9 @@ SQLDIAG START /A Instance1
  通过在命令行上指定 **/a**_SQLdiag_application_name_ ，在同一台计算机上运行多个**SQLdiag**实例。 这对于同时从同一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例收集不同诊断信息集的操作会很有用。 例如，可以将 **SQLdiag** 命名实例配置为连续执行轻型数据收集。 然后，如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中出现特定问题，则可以运行默认 **SQLdiag** 实例以收集该问题的诊断信息，也可以收集 [!INCLUDE[msCoName](../includes/msconame-md.md)] 客户支持服务部门要求你收集用以诊断问题的诊断信息集。  
   
 ## <a name="collecting-diagnostic-data-from-clustered-sql-server-instances"></a>从群集 SQL Server 实例中收集诊断数据  
- **SQLdiag** 支持从群集 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中收集诊断数据。 要从群集 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中收集诊断信息，请确保已在配置文件 SQLDiag.Xml 中为 **Machine> 元素的 name 属性指定了 "."，并且命令行中未指定 /G 参数**  **\<**  。 默认情况下，将在配置文件中为 **name** 属性指定 **"."** ，并禁用 **/G** 参数。 通常，在从群集 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中收集诊断信息时，无需编辑配置文件或更改命令行参数。  
+ **SQLdiag** 支持从群集 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中收集诊断数据。 若要从群集实例中收集诊断信息 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，请确保为配置文件中的元素的**name**属性指定了 **"."** **\<Machine>** SQLDiag.Xml，并不要在命令行上指定 **/g**参数。 默认情况下，将在配置文件中为 **name** 属性指定 **"."** ，并禁用 **/G** 参数。 通常，在从群集 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中收集诊断信息时，无需编辑配置文件或更改命令行参数。  
   
- 如果将 **"."** 指定为计算机名称，则 **SQLdiag** 会检测到它正在群集中运行，同时从该群集中安装的所有虚拟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中检索诊断信息。 如果只希望从计算机上运行的其中一个虚拟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中收集诊断信息，请在 SQLDiag.Xml 中为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Machine> 元素的 name 属性指定该虚拟  **\<** 。  
+ 如果将 **"."** 指定为计算机名称，则 **SQLdiag** 会检测到它正在群集中运行，同时从该群集中安装的所有虚拟 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例中检索诊断信息。 如果只希望从计算机上运行的的一个虚拟实例中收集诊断信息 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，请 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 SQLDiag.Xml 中为元素的**name**属性指定该虚拟 **\<Machine>** 。  
   
 > [!NOTE]  
 >  若要从群集 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 实例中收集 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 跟踪信息，必须在群集中启用管理共享 (ADMIN$)。  

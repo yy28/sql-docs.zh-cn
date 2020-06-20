@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 432d48bbe848d6f66e9f3dae5365abe10d8deb62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68e44e7047f80584eca399d58b3b85cffcfc7104
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833835"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920919"
 ---
 # <a name="excel-connection-manager"></a>Excel 连接管理器
-  Excel 连接管理器使包可以连接到现有的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 工作簿文件。 包含的 excel 源和 excel 目标[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 excel 连接管理器。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
+  Excel 连接管理器使包可以连接到现有的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 工作簿文件。 包含的 excel 源和 excel 目标 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用 excel 连接管理器。  
   
  将 Excel 连接管理器添加到包时，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建将在运行时决定 Excel 连接的连接管理器，设置该连接管理器的属性，并将该连接管理器添加到包上的 `Connections` 集合。  
   
@@ -43,7 +42,7 @@ ms.locfileid: "62833835"
   
  如果 Excel 源使用 Excel 连接管理器，则被提取的数据将附带列名称。 如果 Excel 目标使用它，则列名称包括在被写入的数据中。  
   
- Excel 连接管理器使用 Jet [!INCLUDE[msCoName](../../includes/msconame-md.md)] 4.0 的 OLE DB 提供程序及其支持的 excel ISAM （索引顺序访问方法）驱动程序来连接 excel 数据源并对其进行读取和写入。 有关与 Excel 源和 Excel 目标结合使用时，此提供程序和驱动程序的行为的详细信息，请参阅[Excel 源](../data-flow/excel-source.md)和[excel 目标](../data-flow/excel-destination.md)。  
+ Excel 连接管理器使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet 4.0 的 OLE DB 提供程序及其支持的 EXCEL ISAM （索引顺序访问方法）驱动程序来连接 excel 数据源并对其进行读取和写入。 有关与 Excel 源和 Excel 目标结合使用时，此提供程序和驱动程序的行为的详细信息，请参阅[Excel 源](../data-flow/excel-source.md)和[excel 目标](../data-flow/excel-destination.md)。  
   
  可以通过 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
   

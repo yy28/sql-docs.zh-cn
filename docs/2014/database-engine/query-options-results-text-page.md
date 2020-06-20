@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: fd2fb409-58f9-4ede-8349-ce007126b68d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c8b41a624335026c3c20bd0d7b1d037d1ec55d06
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: fc3737a8d992ab05fe96cf6c7d61dc1b01b3f2ca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000567"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929458"
 ---
 # <a name="query-options-results-text-page"></a>“查询选项”中的“结果”（“文本”页）
   使用此页可以指定以文本格式显示查询结果集的选项。 在选择 **“将结果保存到文件”** 时也会应用此页上的设置。  

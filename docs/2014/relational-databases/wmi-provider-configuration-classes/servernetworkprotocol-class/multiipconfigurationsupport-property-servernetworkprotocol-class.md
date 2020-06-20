@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 442c6133-4038-42db-a67d-2631285ac76b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3a6813371e7641af1369f94f875ca0d9f96ad3a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80401a607c9155451a869082162affcca401ebca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62470054"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059909"
 ---
 # <a name="multiipconfigurationsupport-property-servernetworkprotocol-class"></a>MultiIpConfigurationSupport 属性（ServerNetworkProtocol 类）
   获取用于指定服务器网络协议是否支持多个 IP 地址的布尔值属性。  
@@ -38,7 +37,7 @@ object
   
 ## <a name="parts"></a>组成部分  
  *object*  
- 表示实例使用的网络协议的[ProtocolName 属性（ServerNetworkProtocol 类）](servernetworkprotocol-class.md)对象[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ 表示实例使用的网络协议的[ProtocolName 属性（ServerNetworkProtocol 类）](servernetworkprotocol-class.md)对象 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定服务器网络协议是否支持多个 IP 地址的布尔值：如果服务器网络协议支持多个 IP 地址，则为 `true`；如果服务器网络协议不支持多个 IP 地址，则为 `false`。  

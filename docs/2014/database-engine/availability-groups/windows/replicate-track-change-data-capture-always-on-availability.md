@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8ea6257cb906177b9eb224d718eecf54fb94119
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814053"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936548"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>复制、更改跟踪、更改数据捕获和 AlwaysOn 可用性组 (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]上支持复制、更改数据捕获 (CDC) 和更改跟踪 (CT)。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 有助于提供高可用性和附加数据库恢复功能。  
@@ -109,7 +108,7 @@ ms.locfileid: "62814053"
     ```  
   
     > [!NOTE]  
-    >  在故障转移之前，您应在所有可能的故障转移目标上创建作业，并将其标记为禁用，直到主机上的可用性副本成为新的主副本。 当本地数据库变为辅助数据库时，还应禁用旧的主数据库上运行的 CDC 作业。 若要禁用和启用作业，请*@enabled*使用[sp_update_job &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)的选项。 有关创建 CDC 作业的详细信息，请参阅 [sys.sp_cdc_add_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)上支持复制、更改数据捕获 (CDC) 和更改跟踪 (CT)。  
+    >  在故障转移之前，您应在所有可能的故障转移目标上创建作业，并将其标记为禁用，直到主机上的可用性副本成为新的主副本。 当本地数据库变为辅助数据库时，还应禁用旧的主数据库上运行的 CDC 作业。 若要禁用和启用作业，请使用 *@enabled* [Sp_update_job &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)的选项。 有关创建 CDC 作业的详细信息，请参阅 [sys.sp_cdc_add_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)上支持复制、更改数据捕获 (CDC) 和更改跟踪 (CT)。  
   
 -   **向 AlwaysOn 主数据库副本中添加 CDC 角色**  
   
@@ -156,7 +155,7 @@ ms.locfileid: "62814053"
   
      可用性组侦听器名称或显式节点名称都可用来查找辅助副本。 如果使用可用性组侦听器名称，则会将访问定向到任何合适的辅助副本。  
   
-     当`sp_addlinkedserver`用于创建链接服务器以访问辅助副本时，该*@datasrc*参数将用于可用性组侦听器名称或显式服务器名称， *@provstr*参数用于指定只读意向。  
+     当 `sp_addlinkedserver` 用于创建链接服务器以访问辅助副本时，该 *@datasrc* 参数将用于可用性组侦听器名称或显式服务器名称， *@provstr* 参数用于指定只读意向。  
   
     ```  
     EXEC sp_addlinkedserver   
@@ -185,7 +184,7 @@ ms.locfileid: "62814053"
 ##  <a name="prerequisites-restrictions-and-considerations-for-using-replication"></a><a name="Prereqs"></a> 有关使用复制的先决条件、限制和注意事项  
  本节介绍使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]部署复制时的注意事项，包括先决条件、限制和建议。  
   
-### <a name="prerequisites"></a>先决条件  
+### <a name="prerequisites"></a>必备条件  
   
 -   在使用事务复制并且发布数据库位于可用性组中时，发布服务器和分发服务器都必须至少运行 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。 订阅服务器可以使用较低级别的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
@@ -204,17 +203,17 @@ ms.locfileid: "62814053"
   
 |||||  
 |-|-|-|-|  
-||**发布者**|**分发服务器** <sup>3</sup>|**订阅者**|  
+||**发布者**|**分发服务器** <sup>3</sup>|**订阅服务器**|  
 |**事务性**|是<sup>1</sup>|否|Yes<sup>2</sup>|  
 |**P2P**|否|否|否|  
-|**Merge**|是|否|Yes<sup>2</sup>|  
-|**快照**|是|否|Yes<sup>2</sup>|  
+|**合并**|是|No|Yes<sup>2</sup>|  
+|**快照**|是|No|Yes<sup>2</sup>|  
   
  <sup>1</sup>不包括对双向和相互事务复制的支持。  
   
  <sup>2</sup>故障转移到副本数据库是一个手动过程。 不提供自动故障转移。  
   
- <sup>3</sup>不支持将分发服务器数据库用于[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]或数据库镜像。  
+ <sup>3</sup>不支持将分发服务器数据库用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 或数据库镜像。  
   
 ### <a name="considerations"></a>注意事项  
   
@@ -241,7 +240,7 @@ ms.locfileid: "62814053"
   
 -   [处理变更数据 (SQL Server)](../../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
   
- **更改跟踪**  
+ **Change tracking**  
   
 -   [启用和禁用更改跟踪 (SQL Server)](../../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)  
   

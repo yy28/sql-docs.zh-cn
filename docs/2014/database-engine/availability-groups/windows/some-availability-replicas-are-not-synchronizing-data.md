@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 3db6a569-e942-4321-a0dd-c4ab002087c8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0fb7d422687d0bc956937b30bae261b28edb3931
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ad89a668a36afa10bbf7b0e35a01226141b0c316
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62788250"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936448"
 ---
 # <a name="some-availability-replicas-are-not-synchronizing-data"></a>一些可用性副本未同步数据
     
-## <a name="introduction"></a>介绍  
+## <a name="introduction"></a>简介  
   
 |||  
 |-|-|  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fd9b95821ee673e259273f880aefe8606fe81d71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3e848fe9a07d838631eef1737c2a7679b67e649
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211028"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040020"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>使用 SQL Server Profiler 查看和分析跟踪
   可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 查看跟踪中捕获的事件数据。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 显示基于定义的跟踪属性的数据。 分析 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据的一种方式是将数据复制到其他程序中，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]如果跟踪中包括“文本”数据列，则优化顾问可以使用包含 SQL 批处理和远程过程调用 (RPC) 事件的跟踪文件  。 为了确保捕获正确的事件和列以便与 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问一起使用，请使用随 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]一起提供的预定义优化模板。  
@@ -71,7 +70,7 @@ AND     CPU < (Duration * 1000)
   
     -   打开跟踪文件或表，并展开所需事件类的节点，例如， **Deadlock Chain**。 有关详细信息，请参阅 [打开跟踪文件 (SQL Server Profiler)](open-a-trace-file-sql-server-profiler.md) 或 [打开跟踪表 (SQL Server Profiler)](open-a-trace-table-sql-server-profiler.md)一起提供的预定义优化模板。  
   
-    -   在跟踪数据中搜索直到找到所需的事件（使用  **的“编辑”** **菜单上的“查找”** [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]命令帮助查找跟踪中的值）。 记录所跟踪事件的“ClientProcessID”  和“开始时间”  数据列中的值。  
+    -   在跟踪数据中搜索直到找到所需的事件（使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的“编辑”菜单上的“查找”命令帮助查找跟踪中的值）。 记录所跟踪事件的“ClientProcessID”  和“开始时间”  数据列中的值。  
   
 3.  在上下文中显示事件。  
   

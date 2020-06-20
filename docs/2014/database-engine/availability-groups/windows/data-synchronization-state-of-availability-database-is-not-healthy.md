@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 4fd003e7-808e-4b0e-b28a-47d9f2616f06
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 895e65f9538b588299520e9e22192935535b7931
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ed541e86bf531dd9681e9926e4acb6d1bdc6042
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815114"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936859"
 ---
 # <a name="data-synchronization-state-of-availability-database-is-not-healthy"></a>可用性数据库的数据同步状态不正常
     
-## <a name="introduction"></a>介绍  
+## <a name="introduction"></a>简介  
   
 |||  
 |-|-|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74edd1fd-ab00-46f7-9e29-7ba3f1a446c5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 53fcba3401a6798fb865613470ba78aa05e9b6dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9f580b1b7c6cb1127ac9feecf5e767c467e710bd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176107"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039973"
 ---
 # <a name="lesson-1-create-azure-storage-objects"></a>第 1 课：创建 Azure 存储对象
   在云存储中创建 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 备份之前，必须先创建存储帐户，然后再创建 Blob 容器。 第1课将指导你完成登录 Azure 管理门户、创建存储帐户和 blob 容器的步骤。  
@@ -37,7 +36,7 @@ ms.locfileid: "70176107"
     >  还可以使用 REST API 以编程方式创建存储帐户。 有关详细信息，请参阅[创建存储帐户](https://go.microsoft.com/fwlink/?LinkId=271928)。  
   
 ### <a name="create-a-blob-container"></a>创建 Blob 容器  
- 容器对 Blob 集进行分组。 所有 Blob 必须都在一个容器中。 一个帐户可以包含无限数量的容器，但必须至少具有一个容器。 一个容器可以存储无限数量的 Blob。  
+ 容器对 Blob 集进行分组。 所有 Blob 必须都在一个容器中。 一个帐户可以包含无限数量的容器，但必须至少具有一个容器。 一个容器可以存储无数个 Blob。  
   
  若要创建容器，请使用以下步骤：  
   

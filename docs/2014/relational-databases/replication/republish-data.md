@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 976520f5000d3a0f96ee3bdea25bcc9802939d36
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 816d6ad75e2c331a7269d66b0d238141557b4b88
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250416"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066552"
 ---
 # <a name="republish-data"></a>重新发布数据
   在重新发布模式中，发布服务器将数据发送到订阅服务器，后者将数据重新发布到任意数目的其他订阅服务器。 当发布服务器必须通过低速或昂贵的通信链接向订阅服务器发送数据时，这很有用。 如果在链接的远端有许多订阅服务器，那么使用重新发布服务器可将大量分发负荷转移到链接的远端。  
@@ -64,7 +63,7 @@ ms.locfileid: "63250416"
 |合并发布|合并订阅/合并发布|合并订阅|  
 |合并发布|合并订阅/事务发布|事务订阅|  
   
- <sup>1</sup>应在合并发布`@published_in_tran_pub`上设置属性。 默认情况下，事务复制将订阅服务器上的表视为只读。 如果合并复制对事务订阅中的表进行了数据更改，则可能发生数据无法收敛的情况。 为避免这种风险，建议您在合并发布中将所有此类表都指定为仅供下载。 这样可以防止合并订阅服务器向表中上载数据更改。 有关详细信息，请参阅[使用仅下载项目优化合并复制性能](merge/optimize-merge-replication-performance-with-download-only-articles.md)。  
+ <sup>1</sup>应在 `@published_in_tran_pub` 合并发布上设置属性。 默认情况下，事务复制将订阅服务器上的表视为只读。 如果合并复制对事务订阅中的表进行了数据更改，则可能发生数据无法收敛的情况。 为避免这种风险，建议您在合并发布中将所有此类表都指定为仅供下载。 这样可以防止合并订阅服务器向表中上载数据更改。 有关详细信息，请参阅[使用仅下载项目优化合并复制性能](merge/optimize-merge-replication-performance-with-download-only-articles.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [“配置分发”](configure-distribution.md)   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5376f6fe-9508-439a-8c66-778d77f19ac3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c0c48fa00e8bf3eadfa955876840bebf5b6816f5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d634f393b18124e6ae0db753def2c31860f91a74
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701993"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019641"
 ---
 # <a name="bcp_columns"></a>bcp_columns
   用于设置在以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为源或目标执行大容量复制时所用的用户文件中找到的列的总数。 可以使用[bcp_setbulkmode](bcp-setbulkmode.md) ，而不是 bcp_columns 和[bcp_colfmt](bcp-colfmt.md)。  

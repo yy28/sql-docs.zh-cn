@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a514822a-91f1-4aca-9175-2b96cff29700
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 563cea2a47ce5b68defdf6018b2386f7643dc0fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4fc9ec3079847c231e331063fda6d78bb0255983
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62654867"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059954"
 ---
 # <a name="enabled-property-servernetworkprotocol-class"></a>Enabled 属性（ServerNetworkProtocol 类）
   获取指定是否启用服务器网络协议的布尔值。  
@@ -38,7 +37,7 @@ object
   
 ## <a name="parts"></a>组成部分  
  *object*  
- 一个表示实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用的网络协议的[ServerNetworkProtocol 类](servernetworkprotocol-class.md)对象。  
+ 一个表示实例使用的网络协议的[ServerNetworkProtocol 类](servernetworkprotocol-class.md)对象 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定是否启用服务器网络协议的布尔值：如果启用服务器网络协议，则为 `true`；如果禁用服务器网络协议，则为 `false`。  
