@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0e7a87ad14dbe1b12abb4ca4fe0af6b0a439c57b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 860de6d29557b6594c9ec149f09e915b837fa95e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149771"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048505"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay 要求
   使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能之前，请考虑本主题中列出的产品要求。  
@@ -103,11 +102,11 @@ ms.locfileid: "63149771"
   
 -   HostName  
   
--   Binary Data  
+-   二进制数据  
   
 -   SPID  
   
--   Start Time  
+-   开始时间  
   
 -   EndTime  
   
@@ -125,7 +124,7 @@ ms.locfileid: "63149771"
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
   
 ## <a name="operating-system-requirements"></a>操作系统要求  
- 支持运行管理工具、控制器和客户端服务的操作系统与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例所要求的操作系统相同。 有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例支持的操作系统的详细信息，请参阅[安装 SQL Server 2014 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
+ 支持运行管理工具、控制器和客户端服务的操作系统与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例所要求的操作系统相同。 有关实例支持的操作系统的详细信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅[安装 SQL Server 2014 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
   
  Distributed Replay 功能在基于 x86 和基于 x64 的操作系统上均受支持。 对于基于 x64 的操作系统，仅支持 Windows on Windows (WOW) 模式。  
   
@@ -158,7 +157,7 @@ ms.locfileid: "63149771"
  重播与不存在的或不正确的登录名相关的事件会导致重播错误，但重播操作会继续。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
+ [SQL Server 分布式重播](sql-server-distributed-replay.md)   
  [Distributed Replay 安全性](distributed-replay-security.md)   
  [安装 Distributed Replay](install-distributed-replay-overview.md)  
   

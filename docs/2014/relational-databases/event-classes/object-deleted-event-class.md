@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d4db32bc-972d-4429-809a-a62047c33e79
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3145385db6239df128ead6070ebede48bc96e64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90bcc20e16d775e6497958fc1adc58269fb24296
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63025835"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029384"
 ---
 # <a name="objectdeleted-event-class"></a>Object:Deleted 事件类
   Object:Deleted 事件类指示对象已删除，例如由 DROP INDEX 和 DROP TABLE 语句删除。 此事件类可用于确定是否正在删除对象，例如由通常创建临时存储过程的 ODBC 应用程序删除。  

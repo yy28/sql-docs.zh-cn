@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 51fe6614-3418-4eff-a28d-02ea31cc9aa9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 594b87b3e2d58ffe60bd3c31324811a66038c82b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf0c153168c513c98f8b9ac58984cb88ae1811da
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058805"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967127"
 ---
 # <a name="file-system-task-editor-general-page"></a>文件系统任务编辑器（“常规”页）
   可以使用 **“文件系统任务编辑器”** 对话框的 **“常规”** 页，配置任务执行的文件系统操作。  
@@ -29,7 +28,7 @@ ms.locfileid: "66058805"
  必须通过设置 SourceConnection 和 DestinationConnection 属性来指定源和目标连接管理器。 您可以提供指向任务将其用作源或目标的文件的文件连接管理器的名称，如果文件路径存储在变量中，则可以提供变量的名称。 若要使用变量来存储文件路径，必须先将源连接的 IsSourcePathVariable 选项和目标连接的 IsDestinationPatheVariable 选项设置为 **True**。 然后，您可以选择使用现有的系统或用户定义变量，也可以创建新变量。 在 **“添加变量”** 对话框中，可以配置和指定变量的作用域。 该作用域必须是文件系统任务或父容器。 有关详细信息，请参阅[Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)和[在包中使用变量](../../2014/integration-services/use-variables-in-packages.md)。  
   
 > [!NOTE]  
->  若要覆盖`SourceConnection`为和`DestinationConnection`属性选择的变量，请为 "**源**" 和 "**目标**" 属性输入表达式。 在 **“文件系统任务编辑器”** 的 **“表达式”** 页上输入表达式。 例如，若要设置任务作为目标的文件路径，您可能要在某些情况下使用变量 A 并在另一些情况下使用变量 B。  
+>  若要覆盖为和属性选择的 `SourceConnection` 变量 `DestinationConnection` ，请为 "**源**" 和 "**目标**" 属性输入表达式。 在 **“文件系统任务编辑器”** 的 **“表达式”** 页上输入表达式。 例如，若要设置任务作为目标的文件路径，您可能要在某些情况下使用变量 A 并在另一些情况下使用变量 B。  
   
 > [!NOTE]  
 >  文件系统任务对单个文件或目录进行操作。 因此，该任务不支持使用通配符对多个文件或目录执行同一操作。 若要使此文件系统任务对多个文件或目录重复执行某个操作，请将此文件系统任务放置于一个 Foreach 循环容器中。 有关详细信息，请参阅 [File System Task](control-flow/file-system-task.md)。  
@@ -40,10 +39,10 @@ ms.locfileid: "66058805"
  **IsDestinationPathVariable**  
  指示目标路径是否存储在变量中。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**True**|目标路径存储在变量中。 选择此值将显示动态选项 **DestinationVariable**。|  
-|**False**|目标路径在文件连接管理器中指定。 选择此值将显示动态选项`DestinationConnection`。|  
+|**False**|目标路径在文件连接管理器中指定。 选择此值将显示动态选项 `DestinationConnection` 。|  
   
  **OverwriteDestination**  
  指定操作是否可以覆盖目标目录中的文件。  
@@ -60,7 +59,7 @@ ms.locfileid: "66058805"
  **操作**  
  选择要执行的文件系统操作。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**复制目录**|复制目录。 选择此值将显示源和目标的动态选项。|  
 |**复制文件**|复制文件。 选择此值将显示源和目标的动态选项。|  
@@ -76,7 +75,7 @@ ms.locfileid: "66058805"
  `IsSourcePathVariable`  
  指示目标路径是否存储在变量中。 此属性具有下表所列的选项。  
   
-|Value||  
+|值||  
 |-----------|-|  
 |**True**|目标路径存储在变量中。 选择此值将显示动态选项 **SourceVariable**。|  
 |**False**|目标路径在文件连接管理器中指定。 选择此值将显示动态选项 **DestinationVariable**。|  
@@ -85,13 +84,13 @@ ms.locfileid: "66058805"
   
 ### <a name="isdestinationpathvariable--true"></a>IsDestinationPathVariable = True  
  **DestinationVariable**  
- 在列表中选择变量名称，或单击“\<新建变量...>”，创建一个新变量****。  
+ 在列表中选择变量名称，或单击 \<**New variable...**> 创建新变量。  
   
  **相关主题：** [Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
   
 ### <a name="isdestinationpathvariable--false"></a>IsDestinationPathVariable = False  
  `DestinationConnection`  
- 在列表中选择一个文件连接管理器，或\<单击 "**新建连接 ...** "> 创建新的连接管理器。  
+ 在列表中选择一个文件连接管理器，或单击 " \<**New connection...**> 新建连接管理器"。  
   
  **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
@@ -99,26 +98,26 @@ ms.locfileid: "66058805"
   
 ### <a name="issourcepathvariable--true"></a>IsSourcePathVariable = True  
  **SourceVariable**  
- 在列表中选择变量名称，或单击“\<新建变量...>”，创建一个新变量****。  
+ 在列表中选择变量名称，或单击 \<**New variable...**> 创建新变量。  
   
  **相关主题：** [Integration Services &#40;SSIS&#41; 变量](integration-services-ssis-variables.md)、[添加变量](../../2014/integration-services/add-variable.md)  
   
 ### <a name="issourcepathvariable--false"></a>IsSourcePathVariable = False  
  `SourceConnection`  
- 在列表中选择一个文件连接管理器，或\<单击 "**新建连接 ...** "> 创建新的连接管理器。  
+ 在列表中选择一个文件连接管理器，或单击 " \<**New connection...**> 新建连接管理器"。  
   
  **相关主题：** [File Connection Manager](connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="operation-dynamic-options"></a>Operation 动态选项  
   
 ### <a name="operation--set-attributes"></a>Operation = 设置属性  
- **Hidden**  
+ **消隐**  
  指示文件或目录是否可见。  
   
  **只读**  
  指示文件是否是只读的。  
   
- **Archive**  
+ **存档**  
  指示文件或目录可以用于存档。  
   
  **系统**  

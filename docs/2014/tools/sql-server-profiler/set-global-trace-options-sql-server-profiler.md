@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c09927de3c10ab3b937101edc6b9da37503abb11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d580b5ebef26ce91fee23b3b920715d354cb4046
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63267406"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048283"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>设置全局跟踪选项 (SQL Server Profiler)
   本主题介绍了如何设置应用于随特定的 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]实例创建的所有跟踪的选项。  

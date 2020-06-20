@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 948ebbc696048915662caaa24b791e6258c459be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e5691ad8c769621bc9f16e4447d0926d69e02b96
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827612"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915962"
 ---
 # <a name="datareader-destination-custom-properties"></a>DataReader 目标自定义属性
   DataReader 目标具有自定义属性和所有数据流组件通用的属性。  

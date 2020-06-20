@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3f736d03a573f61ed31e0cb95c1768907f8a9560
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea3e294bf2cdda912b82455d926fffc5438add2d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82087155"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915798"
 ---
 # <a name="excel-destination"></a>Excel 目标
   Excel 目标将数据加载到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 工作簿中的工作表或范围中。  
@@ -58,7 +57,7 @@ ms.locfileid: "82087155"
   
     -   布尔     布尔 (DT_BOOL)  
   
-    -   日期/时间`datetime` （DT_DATE）  
+    -   日期/时间 `datetime` （DT_DATE）  
   
     -   字符串     Unicode 字符串，长度为 255 (DT_WSTR)  
   

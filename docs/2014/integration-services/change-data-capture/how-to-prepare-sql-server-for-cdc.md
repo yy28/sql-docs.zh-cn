@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a327fa18-58f4-4e69-bb87-44faf47e20ef
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7d0b936b0d48696491e71aa6ad4ea573b898f33c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10ef71a7e5bd285ecdd9e47787e55d27a3615fc8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62836036"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923013"
 ---
 # <a name="how-to-prepare-sql-server-for-cdc"></a>如何为 CDC 准备 SQL Server
   Oracle CDC 服务要求所有目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例都包含 MSXDBCDC 数据库。 您可以在 CDC 服务配置控制台中使用“准备 SQL Server”操作创建此数据库。只能为每个目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例执行一次此任务。  

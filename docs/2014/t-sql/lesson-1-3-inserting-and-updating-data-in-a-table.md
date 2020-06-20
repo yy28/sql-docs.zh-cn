@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 514dc87a-b829-43b5-8fc8-1a400a260284
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 19e6683baeb0a82c77a858b04f18695ba7120b15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0646019f166e1c2cc126a4cc7d2ed8f27a7bd2f3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250127"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048458"
 ---
 # <a name="inserting-and-updating-data-in-a-table-tutorial"></a>插入和更新表中的数据（教程）
   现在已经创建了 **Products** 表，可以通过使用 INSERT 语句将数据插入到表中。 插入数据后，将通过使用 UPDATE 语句更改行的内容。 您将使用 UPDATE 语句的 WHERE 子句，以限制对单个行的更新。 这四条语句将输入以下数据。  

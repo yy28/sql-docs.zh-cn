@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4c015844fd0b0a3ed219adabaf95f4b2af98d663
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5171de39727578028ed4cf01c090b98e3d70e0d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486973"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914747"
 ---
 # <a name="raw-file-source"></a>原始文件源
   原始文件源从文件中读取原始数据。 因为数据的表示方式是源所固有的，所以数据无需转换，并且几乎不需要分析。 这意味着原始文件源可以比其他源（如平面文件和 OLE DB 源）更快地读取数据。  
@@ -55,6 +54,6 @@ ms.locfileid: "81486973"
   
 ## <a name="see-also"></a>另请参阅  
  [原始文件目标](raw-file-destination.md)   
- [数据流](data-flow.md)  
+ 数据流  
   
   

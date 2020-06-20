@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f7533eb253ba32dd8ef2d57c3182096b36a6e47b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 269b0ae2980435e507128cc87606f7eb702c2b7f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774581"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931336"
 ---
 # <a name="configure-log-shipping-sql-server"></a>配置日志传送 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中配置日志传送。  
@@ -107,7 +106,7 @@ ms.locfileid: "62774581"
   
 21. 请注意 **“还原作业”** 下 **“计划”** 框中列出的还原计划。 如果要自定义安装计划，请单击 **“计划”** ，然后根据需要调整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理计划。 此计划应为大致的备份计划。  
   
-22. 单击" **确定**"。  
+22. 单击“确定”。  
   
 23. 在 **“监视服务器实例”** 下，选中 **“使用监视服务器实例”** 复选框，然后单击 **“设置”**。  
   
@@ -120,7 +119,7 @@ ms.locfileid: "62774581"
   
 26. 在 **“历史记录保持期”** 下，选择想要保留日志传送历史记录的时间长度。  
   
-27. 单击" **确定**"。  
+27. 单击“确定”。  
   
 28. 在 **“数据库属性”** 对话框中，单击 **“确定”** 开始配置进程。  
   
@@ -165,7 +164,7 @@ ms.locfileid: "62774581"
 -   [故障转移到日志传送辅助服务器 (SQL Server)](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [关于 &#40;SQL Server 的日志传送&#41;](about-log-shipping-sql-server.md)   
+ [关于日志传送 (SQL Server)](about-log-shipping-sql-server.md)   
  [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
   
   

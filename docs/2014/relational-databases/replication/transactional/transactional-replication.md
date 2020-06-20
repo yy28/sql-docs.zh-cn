@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 65f498318c29f6e3dc7189bd8f1c5d852cc1a2d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f8d96c9d599987d75dd02085b2ea3343a9414d6e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176705"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063726"
 ---
 # <a name="transactional-replication"></a>事务复制
   事务复制通常从发布数据库对象和数据的快照开始。 创建了初始快照后，接着在发布服务器上所做的数据更改和架构修改通常在修改发生时（几乎实时）便传递给订阅服务器。 数据更改将按照其在发布服务器上发生的顺序和事务边界应用于订阅服务器，因此，在发布内部可以保证事务的一致性。

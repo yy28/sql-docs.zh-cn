@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b69a8593-5bb0-4f04-87d2-f8e7bd7eb4fc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8ef64ee84a90a74d2206fa8cc766e45b1a691566
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73a4c6fc0795fde7a9b8e7378fd0a88447ff5cd2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059281"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966931"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中启用包日志记录
   本过程介绍如何将日志添加到包中，如何配置包级日志记录，以及如何将日志记录配置保存为 XML 文件。 您只能在包级添加日志，但包不必执行日志记录，就可以在包所包括的容器中启用日志记录。  
@@ -35,7 +34,7 @@ ms.locfileid: "66059281"
   
 3.  在 **“提供程序类型”** 列表中，选择一个日志提供程序，然后单击 **“添加”**。  
   
-4.  在 "**配置**" 列中，选择连接管理器或单击** \<"新建连接>** ，为日志提供程序创建适当类型的新连接管理器。 根据所选提供程序的不同，可以使用下列某个连接管理器：  
+4.  在 "**配置**" 列中，选择一个连接管理器，或单击 **\<New connection>** "新建连接管理器" 作为日志提供程序的适当类型。 根据所选提供程序的不同，可以使用下列某个连接管理器：  
   
     -   对于文本文件，请使用文件连接管理器。 有关详细信息，请参阅 [File Connection Manager](connection-manager/file-connection-manager.md)  
   
@@ -63,7 +62,7 @@ ms.locfileid: "66059281"
   
 9. 在“详细信息”**** 选项卡上，单击“保存”****。 “另存为”**** 对话框将出现。 找到要将日志记录配置保存到的文件夹，为新的日志配置键入文件名，然后单击 **“保存”**。  
   
-10. 单击" **确定**"。  
+10. 单击“确定”。  
   
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   

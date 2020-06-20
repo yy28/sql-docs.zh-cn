@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 30e46515fda5bf03a96e9f1168b470f635698d07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9fe8a7c8ad24c472eb41448f1303ad240a5232c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211117"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048429"
 ---
 # <a name="eventstring-element-dta"></a>EventString 元素 (DTA)
   直接在 XML 输入文件中指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本工作负荷。  
@@ -43,11 +42,11 @@ ms.locfileid: "68211117"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|描述|  
+|特征|说明|  
 |--------------------|-----------------|  
 |**数据类型和长度**|，无限长。|  
 |**默认值**|无。|  
-|**匹配项**|如果未指定其他类型的工作负荷，则必须使用一次。 必须为父元素 `EventString` 指定子元素 `File`、`Database` 或 `Workload`，但只能使用一种类型。 例如，如果指定了具有 `EventString` 元素的工作负荷，则不能在相同的 XML 输入文件中指定具有 `File` 元素的工作负荷。|  
+|**出现次数**|如果未指定其他类型的工作负荷，则必须使用一次。 必须为父元素 `EventString` 指定子元素 `File`、`Database` 或 `Workload`，但只能使用一种类型。 例如，如果指定了具有 `EventString` 元素的工作负荷，则不能在相同的 XML 输入文件中指定具有 `File` 元素的工作负荷。|  
   
 ## <a name="element-relationships"></a>元素关系  
   

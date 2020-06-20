@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a6920920aa603c615cdc5f84a34a93204842052d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192969"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995374"
 ---
 # <a name="create-a-multiserver-environment"></a>创建多服务器环境
   多服务器管理需要设置一个主服务器 (MSX) 以及一个或多个目标服务器 (TSX)。 首先在主服务器上定义将在所有目标服务器上处理的作业，然后将这些作业下载到目标服务器。  
@@ -37,8 +36,8 @@ ms.locfileid: "63192969"
   
 ||**TSX = 7.0**|**TSX = 8.0 < SP3**|**TSX = 8.0 SP3 或更高版本**|**TSX = 9.0**|**TSX= 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
-|**MSX = 7.0**|是|是|否|否|否|否|否|  
-|**MSX = 8.0 < SP3**|是|是|否|否|否|否|否|  
+|**MSX = 7.0**|是|是|No|否|否|否|否|  
+|**MSX = 8.0 < SP3**|是|是|No|否|否|否|否|  
 |**MSX = 8.0 SP3 或更高版本**|否|否|是|是|是|是|是|  
 |**MSX = 9.0**|否|否|否|是|是|是|是|  
 |**MSX = 10.0**|否|否|否|否|是|是|是|  
@@ -64,7 +63,7 @@ ms.locfileid: "63192969"
 |描述如何创建目标服务器。|[设置目标服务器](make-a-target-server.md)|  
 |描述如何将目标服务器登记到主服务器。|[将目标服务器登记到主服务器](enlist-a-target-server-to-a-master-server.md)|  
 |描述如何使目标服务器从主服务器脱离。|[将目标服务器从主服务器脱离](defect-a-target-server-from-a-master-server.md)|  
-|描述如何使多台目标服务器脱离主服务器。|[Defect Multiple Target Servers from a Master Server](defect-multiple-target-servers-from-a-master-server.md)|  
+|描述如何使多台目标服务器脱离主服务器。|[将多台目标服务器从主服务器脱离](defect-multiple-target-servers-from-a-master-server.md)|  
 |描述如何检查目标服务器的状态。|[sp_help_targetserver &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
   
 ## <a name="see-also"></a>另请参阅  

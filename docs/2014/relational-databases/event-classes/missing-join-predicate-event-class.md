@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0668cb4d-5682-4140-aab5-7b0da5cd3479
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cb2cd178440a2d0ea0cd9842616a52058a63f7b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3c02ce70ace777c171aa981ae6e2f53d235aaa4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662181"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029460"
 ---
 # <a name="missing-join-predicate-event-class"></a>Missing Join Predicate 事件类
   Missing Join Predicate 事件类表示正在执行无联接谓词的查询。 这可能导致长时间运行查询。 有关联接谓词的详细信息，请参阅[谓词 (Transact-SQL)](/sql/t-sql/queries/predicates)。  

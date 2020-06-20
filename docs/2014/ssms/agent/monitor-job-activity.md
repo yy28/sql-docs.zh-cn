@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6310453e1257aaee1a02f035c7213ef4fe6131af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5088e029e90b4556c1559f8c948e8a8734762749
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704774"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001884"
 ---
 # <a name="monitor-job-activity"></a>监视作业活动
   可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业活动监视器监视在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中定义的所有作业的当前活动。  
@@ -57,13 +56,13 @@ ms.locfileid: "62704774"
   
 |||  
 |-|-|  
-|**描述**|**主题**|  
+|**说明**|**主题**|  
 |介绍如何查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的运行时状态。|[View Job Activity](view-job-activity.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [查看作业活动](view-job-activity.md)   
- [sysjobactivity &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobactivity-transact-sql)   
- [syssessions &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-syssessions-transact-sql)   
+ [dbo.sysjobactivity &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobactivity-transact-sql)   
+ [&#40;Transact-sql 的dbo.sys会话&#41;](/sql/relational-databases/system-tables/dbo-syssessions-transact-sql)   
  [sp_help_jobactivity &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobactivity-transact-sql)  
   
   

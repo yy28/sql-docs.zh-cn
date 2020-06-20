@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d12dbcdf49fc34bdd37fca21635cbcd416efc36b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c200e69d0e80232a558c4fa030864fe864d237c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176222"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967337"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>脚本组件的编码和调试
   在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中，脚本组件具有两种模式：元数据设计模式和代码设计模式。 打开“脚本转换编辑器”后，组件将进入元数据设计模式，你可以在该模式下配置元数据并设置组件属性  。 在元数据设计模式下，设置脚本组件的属性并配置输入和输出后，可以切换到代码设计模式，以编写自定义脚本。 有关元数据设计模式和代码设计模式的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](configuring-the-script-component-in-the-script-component-editor.md)。
@@ -59,9 +58,9 @@ ms.locfileid: "78176222"
 
     -   `Connections` 集合类，包含对在“脚本转换编辑器”的“连接管理器”页上选择的连接的引用。
 
-    -   一个`Variables`集合类，包含对在 "**脚本转换编辑器**" `ReadOnlyVariable`的`ReadWriteVariables` "**脚本**" 页上的和属性中输入的变量的引用。
+    -   一个 `Variables` 集合类，包含对在 " `ReadOnlyVariable` `ReadWriteVariables` **脚本转换编辑器**" 的 "**脚本**" 页上的和属性中输入的变量的引用。
 
--   对于`BufferWrapper`在 "**脚本转换编辑器**" 的 " <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> **输入和输出**" 页上配置的每个输入和输出，项目项都包含从继承的类。 其中每个类都包含与已配置的输入和输出列对应的类型化取值函数属性以及包含这些列的数据流缓冲区。
+-   `BufferWrapper` <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 对于在 "**脚本转换编辑器**" 的 "**输入和输出**" 页上配置的每个输入和输出，项目项都包含从继承的类。 其中每个类都包含与已配置的输入和输出列对应的类型化取值函数属性以及包含这些列的数据流缓冲区。
 
  有关如何使用这些对象、方法和属性的信息，请参阅[了解脚本组件对象模型](understanding-the-script-component-object-model.md)。 有关如何在特定类型的脚本组件中使用这些类的方法和属性的信息，请参阅[其他脚本组件示例](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)一节。 该示例主题还包含完整的代码示例。
 
@@ -170,7 +169,7 @@ public class ScriptMain : UserComponent
 |---------------------|-------------------|
 |变量|使用 `Variables` 项目项的 `ComponentWrapper` 集合类中的命名取值函数属性和类型化取值函数属性，这些属性通过 `Variables` 类的 `ScriptMain` 属性公开。<br /><br /> `PreExecute` 方法仅可访问只读变量。 `PostExecute` 方法既可以访问只读变量，又可以访问读/写变量。|
 |连接|使用 `Connections` 项目项的 `ComponentWrapper` 集合类中的命名取值函数属性和类型化取值函数属性，这些属性通过 `Connections` 类的 `ScriptMain` 属性公开。|
-|事件|<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A>通过使用`ScriptMain`类的属性和<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>接口的**\<灭火器 X>** 方法来引发事件。|
+|事件|使用 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 类的属性 `ScriptMain` 和接口的**灭火器 \<X> **方法引发事件 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 。|
 |日志记录|使用 `ScriptMain` 类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> 方法执行日志记录。|
 
 ## <a name="debugging-the-script-component"></a>调试脚本组件
@@ -184,9 +183,9 @@ public class ScriptMain : UserComponent
 
  还可以使用以下方法监视脚本组件的执行：
 
--   中断执行，并使用**system.web**命名空间中的`MessageBox.Show`方法显示模式消息。 （调试过程结束后，请删除此代码。）
+-   中断执行，并使用 `MessageBox.Show` **system.web**命名空间中的方法显示模式消息。 （调试过程结束后，请删除此代码。）
 
--   引发信息性消息、警告和错误的事件。 FireInformation、FireWarning 和 FireError 方法可在 Visual Studio“输出”窗口中显示事件说明  。 但是，FireProgress、Console.Write 和 Console.WriteLine 方法在“输出”窗口中不显示任何信息  。 FireProgress 事件的消息显示在  **设计器的“进度”选项卡中**[!INCLUDE[ssIS](../../../includes/ssis-md.md)]。 有关详细信息，请参阅[在脚本组件中引发事件](../../data-flow/transformations/script-component.md)。
+-   引发信息性消息、警告和错误的事件。 FireInformation、FireWarning 和 FireError 方法可在 Visual Studio“输出”窗口中显示事件说明  。 但是，FireProgress、Console.Write 和 Console.WriteLine 方法在“输出”窗口中不显示任何信息  。 FireProgress 事件的消息显示在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器的“进度”选项卡中。 有关详细信息，请参阅[在脚本组件中引发事件](../../data-flow/transformations/script-component.md)。
 
 -   将事件或用户定义的消息记录到已启用的日志记录提供程序中。 有关详细信息，请参阅[脚本组件中的日志记录](logging-in-the-script-component.md)。
 
@@ -197,7 +196,7 @@ public class ScriptMain : UserComponent
 
  [了解脚本组件对象模型](understanding-the-script-component-object-model.md)介绍如何使用脚本组件中提供的对象、方法和属性。
 
- [引用脚本解决方案中的其他程序集](../referencing-other-assemblies-in-scripting-solutions.md)说明如何在脚本组件中从[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]类库引用对象。
+ [引用脚本解决方案中的其他程序集](../referencing-other-assemblies-in-scripting-solutions.md)说明如何 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 在脚本组件中从类库引用对象。
 
  [模拟脚本组件的错误输出](../../extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md)说明如何模拟脚本组件在处理过程中引发错误的行的错误输出。
 

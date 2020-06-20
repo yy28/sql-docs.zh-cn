@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d770d35c-c8de-4e00-9a85-7d03f45a0f0d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 52537ac126115fbde3d7d0fb1a13f61f1d25cf15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b70449ace66d4e33a547eca1c0b19eafabde5a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137519"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002002"
 ---
 # <a name="implement-sql-server-agent-security"></a>实现 SQL Server 代理安全性
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使数据库管理员能够在一个安全上下文中运行每个作业步骤，这个安全上下文只具有执行该作业步骤所需的权限，这是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理决定的。 若要为某个特定的作业步骤设置权限，可以创建一个具有所需权限的代理，然后将该代理分配给该作业步骤。 一个代理可以指定给多个作业步骤。 对于需要相同权限的作业步骤，可以使用同一个代理。  
@@ -42,7 +41,7 @@ ms.locfileid: "63137519"
   
  **sysadmin** 固定服务器角色的成员具有创建、修改和删除代理帐户的权限。 **sysadmin** 角色的成员可以创建作业步骤，无需指定代理，但需作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户运行，该帐户是用于启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的帐户。  
   
-## <a name="guidelines"></a>指南  
+## <a name="guidelines"></a>准则  
  遵循下列指导原则可以提高 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理实现的安全性：  
   
 -   专门为代理创建专用的用户帐户，并且只使用这些代理用户帐户来运行作业步骤。  

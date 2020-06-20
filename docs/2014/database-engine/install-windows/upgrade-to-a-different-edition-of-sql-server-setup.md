@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5801916d34e45b5d70c9953d8dff0becbf6207cd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774571"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931608"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>升级到 SQL Server 2014 的另一版本（安装）
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序支持在各种版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 间进行版本升级。 有关支持的版本升级路径的信息，请参阅 [支持的版本升级](supported-version-and-edition-upgrades.md)。 在开始对 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]实例执行版本升级前，请查看以下主题：  
@@ -29,7 +28,7 @@ ms.locfileid: "62774571"
 -   [安装 SQL Server 2014 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
->  **在群集环境中： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]群集的一个节点上运行版本升级就足够了。 此节点可以是活动节点或被动节点，并且在版本升级过程中引擎不使资源脱机。 版本升级后需要重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或故障转移到其他节点。  
+>  ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在群集环境中：** 在群集的一个节点上运行版本升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就足够了。 此节点可以是活动节点或被动节点，并且在版本升级过程中引擎不使资源脱机。 版本升级后需要重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或故障转移到其他节点。  
   
 ## <a name="prerequisites"></a>先决条件  
  对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须使用对远程共享具有读取权限的域帐户。  

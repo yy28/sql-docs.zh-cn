@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d0c8f942-4c96-456f-ad10-577577c0f74e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bef06da3e6e1702a713aa2b4ca2e448e7ee461af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d130a25fc3c3ec13a57451e89de4d362043a5962
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771256"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922704"
 ---
 # <a name="prepare-sql-server-for-oracle-cdc-view-script"></a>为 Oracle CDC 视图脚本准备 SQL Server
   此对话框显示用于创建 MSXDBCDC 数据库的“准备 SQL”脚本。 此数据库必须位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上，以便它可以用于针对 SQL Server 的 Oracle CDC。  

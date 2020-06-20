@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: eaf4b56e-2023-4d17-971c-703031da758c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 73b71e83f3b0f0f895b2cc5b8fd3495fb4893a32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 371a2ba0b88266e076cf4e3e438fbe5b0216cf1f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059615"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951707"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>使用部署实用工具部署包
   如果要使用所生成的部署实用工具将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中的包安装到与生成该工具的计算机不同的其他计算机上，则必须首先将部署文件夹复制到目标计算机上。  
   
  部署文件夹的路径是在为其创建部署实用工具的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目的 DeploymentOutputPath 属性中指定的。 默认路径为 bin\Deployment，它相对于 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象。 有关详细信息，请参阅 [Create a Deployment Utility](../../2014/integration-services/create-a-deployment-utility.md)。  
   
- 可以使用包安装向导安装包。 若要启动向导，在将部署文件夹复制到服务器之后，请双击部署实用工具文件。 此文件名为 \<项目名称>.SSISDeploymentManifest，可以在目标计算机上的部署文件夹找到它。  
+ 可以使用包安装向导安装包。 若要启动向导，在将部署文件夹复制到服务器之后，请双击部署实用工具文件。 此文件的名称为 \<project name> 。Tutorial.ssisdeploymentmanifest，可以在目标计算机上的部署文件夹中找到。  
   
 > [!NOTE]  
 >  如果并行安装了不同版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，根据你部署的包的版本，可能会遇到错误。 因为 .SSISDeploymentManifest 文件扩展名对于 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的所有版本是相同的，因此可能出现此错误。 针对最近安装的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]版本双击该文件调用安装程序 (dtsinstall.exe)，它的版本可能与部署实用工具文件的版本不同。 若要解决这个问题，请从命令行运行正确的 dtsinstall.exe 版本，并且提供部署实用工具文件的路径。  
@@ -50,7 +49,7 @@ ms.locfileid: "66059615"
   
 1.  在目标计算机上打开部署文件夹。  
   
-2.  双击清单文件（\<项目名称>.SSISDeploymentManifest），以启动包安装向导。  
+2.  双击清单文件 \<project name> 。Tutorial.ssisdeploymentmanifest，用于启动包安装向导。  
   
 3.  在 **“部署 SSIS 包”** 页上，选择 **“SQL Server 部署”** 选项。  
   

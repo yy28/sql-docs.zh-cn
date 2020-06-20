@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 866b6dd3-2acd-4dfb-aeca-a0352b2d4c6a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fb03809fb465c4b23131d2133931028d7bec118d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ff3ecab047d06336051a7d9a3b332241ef8b4cc1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82709460"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048123"
 ---
 # <a name="running-stored-procedures"></a>运行存储过程
   存储过程是存储在数据库中的可执行对象。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持：  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f2070c53-4a5c-4c11-ac38-96ee200c84f0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a4bf6fac03eab1e096c0ac5dc63285c11bd3f114
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79cb42654619ea3802d513fcf63df879833e48f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62735750"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048412"
 ---
 # <a name="featureset-element-dta"></a>FeatureSet 元素 (DTA)
   包含数据库引擎优化顾问在分析中使用的物理设计结构（索引或索引视图）。  

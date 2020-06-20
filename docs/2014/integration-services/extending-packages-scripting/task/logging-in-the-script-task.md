@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e6d870ec12a896ff9046aa2e05df1e1f6220dc17
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dd7ead14af420eff25331c732b9d249b2a4b94f5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82087077"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967183"
 ---
 # <a name="logging-in-the-script-task"></a>脚本任务中的日志记录
   使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包中的日志记录可以记录预定义的事件或用户定义的消息，从而记录有关执行进度、结果和问题的详细信息，供随后分析时使用。 脚本任务可以使用 `Dts` 对象的 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> 方法记录用户定义的数据。 如果启用了日志记录，并且在“配置 SSIS 日志”对话框的“详细信息”选项卡中为日志记录选择了 ScriptTaskLogEntry 事件，则调用一次 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> 方法即可将事件信息存储在为该任务配置的所有日志提供程序中    。  

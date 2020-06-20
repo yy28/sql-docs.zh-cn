@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e1e2c83f-dfad-4bb8-aa7a-09d3f69517ae
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c0353c89dbfc14032d33dfa49fa0c08e698cb5c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 99d5439c289b5d4e71786d4c6734f158f6bba371
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211213"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048528"
 ---
 # <a name="creating-a-database-tutorial"></a>创建数据库（教程）
   与许多 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句一样，CREATE DATABASE 语句具有一个必需参数：数据库的名称。 CREATE DATABASE 还具有许多可选参数，如希望放置数据库文件的磁盘位置。 在您执行不带可选参数的 CREATE DATABASE 时， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用其中许多参数的默认值。 本教程使用的可选语法参数非常少。  

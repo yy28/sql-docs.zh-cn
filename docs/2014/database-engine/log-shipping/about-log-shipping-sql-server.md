@@ -24,16 +24,15 @@ helpviewer_keywords:
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a66125c6e241c75d473fa170d3de5ef9755b28e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 01abcbe81304d2bbc9a09c29f304a55945aae5ff
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774543"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931458"
 ---
 # <a name="about-log-shipping-sql-server"></a>关于日志传送 (SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用日志传送，可以自动将“主服务器”  实例上“主数据库”  内的事务日志备份发送到单独“辅助服务器”  实例上的一个或多个“辅助数据库”  。 事务日志备份分别应用于每个辅助数据库。 可选的第三个服务器实例（称为“监视服务器  ”）记录备份和还原操作的历史记录及状态，还可以在无法按计划执行这些操作时引发警报。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用日志传送，可以自动将“主服务器”实例上“主数据库”内的事务日志备份发送到单独“辅助服务器”实例上的一个或多个“辅助数据库”。 事务日志备份分别应用于每个辅助数据库。 可选的第三个服务器实例（称为“监视服务器  ”）记录备份和还原操作的历史记录及状态，还可以在无法按计划执行这些操作时引发警报。  
   
  **本主题内容：**  
   

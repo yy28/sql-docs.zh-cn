@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c442e3e264e36f9d6ffef35947f4f96180c4b799
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e7518ef7933d864da5b8e9827f772e6599b79d95
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712274"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048175"
 ---
 # <a name="support-for-large-udts"></a>支持大型 UDT
   此示例解决方案包含两个项目。 其中一个项目基于 C# 源代码创建一个程序集 (DLL)。 该程序集包含 CLR 类型。 数据库中将添加一个表。 该表中的一个列将属于该程序集中定义的一个类型。默认情况下，此示例将使用 master 数据库。 第二个项目是一个本机 C 应用程序，用来读取表中的数据。  

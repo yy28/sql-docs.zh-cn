@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: ddee1ce8-9d1b-4017-9894-bf7256aed95d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1a8c9ab517d1f6a122144604d6b147e6f5eeaf6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d34c78589a853c2b73167dbad555ab9da3e0d9fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62650881"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995055"
 ---
 # <a name="resize-the-job-history-log"></a>Resize the Job History Log
-  本主题说明如何使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]在中设置代理作业历史记录日志的大小限制。  
+  本主题说明如何 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用在中设置代理作业历史记录日志的大小限制 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
 -   **开始之前：**  
   
@@ -56,7 +55,7 @@ ms.locfileid: "62650881"
   
 #### <a name="to-resize-the-job-history-log-based-on-time"></a>基于时间调整作业历史记录日志的大小  
   
-1.  在**对象资源管理器**中，连接到的[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例，然后展开该实例。  
+1.  在**对象资源管理器**中，连接到的实例 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，然后展开该实例。  
   
 2.  右键单击“SQL Server 代理”****，然后单击“属性”****。  
   

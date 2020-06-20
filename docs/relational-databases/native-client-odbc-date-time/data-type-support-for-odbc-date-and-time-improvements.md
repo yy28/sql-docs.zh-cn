@@ -1,5 +1,6 @@
 ---
 title: 类型支持，ODBC 日期和时间
+description: 了解支持 SQL Server 日期和时间数据类型的 ODBC 类型，包括字符串、文本和数据结构的数据类型映射和格式。
 ms.custom: ''
 ms.date: 12/18/2019
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b34d6864bf6b6c36404770f0ab795634dd746dc8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cdab7196199b28835d5f21c0c51f3ad787fdc7ac
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301747"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967662"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>针对 ODBC 日期/时间改进的数据类型支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,9 +38,9 @@ ms.locfileid: "81301747"
   
 |SQL Server 数据类型|SQL 数据类型|值|  
 |--------------------------|-------------------|-----------|  
-|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
+|datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
-|日期|SQL_TYPE_DATE<br /><br /> SQL_DATE|91（sql .h）<br /><br /> 9（sqltypes.h）|  
+|Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|91（sql .h）<br /><br /> 9（sqltypes.h）|  
 |时间|SQL_SS_TIME2|-154 （SQLNCLI.MSI）|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|-155 (SQLNCLI.h)|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
@@ -62,9 +63,9 @@ ms.locfileid: "81301747"
   
 |SQL Server 数据类型|ODBC 数据类型|客户端转换的字符串格式|  
 |--------------------------|--------------------|------------------------------------------|  
-|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对于 Datetime 最多支持三位数字的秒小数部分。|  
+|datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对于 Datetime 最多支持三位数字的秒小数部分。|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> 此数据类型精确到 1 分钟。 秒部分在输出中将为零，在输入中由服务器进行四舍五入。|  
-|日期|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
+|Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
 |时间|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> 可以选择指定最多达到七位数字的秒小数部分。|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|"yyyy-mm-dd hh： mm： ss [. 维]"<br /><br /> 可以选择指定最多达到七位数字的秒小数部分。|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> 可以选择指定最多达到七位数字的秒小数部分。|  

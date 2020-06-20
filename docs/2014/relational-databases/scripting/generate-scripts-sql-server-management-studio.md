@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 91d00367c0ae8cc0541c4bd9dbec2c508010bb90
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8207e899c98d788ea0cbd618231597b22a6c0793
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703906"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063456"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>生成脚本 (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了两种机制，用于生成 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 您可以使用 "**生成和发布脚本向导**" 为多个对象创建脚本。 还可以通过使用 **“对象资源管理器”** 中的 **“编写脚本为”** 菜单为单个对象或多个对象生成脚本。  
@@ -42,7 +41,7 @@ ms.locfileid: "82703906"
   
 3.  展开该对象的类别。 例如，展开 **“表”** 或 **“视图”** 节点。  
   
-4.  右键单击该对象，指向“编写 \<对象类型> 脚本为”  ，例如，指向“编写表脚本为”  。  
+4.  右键单击该对象，指向 "**脚本 \<object type> 为**"，例如，指向 "**编写表脚本为**"。  
   
 5.  指向脚本类型，如 **“创建到”** 或 **“更改到”** 。  
   
@@ -57,11 +56,11 @@ ms.locfileid: "82703906"
   
 2.  展开 **“数据库”** ，然后展开包含要对其编写脚本的对象的数据库。  
   
-3.  右键单击要为其编写脚本的第一个对象，指向“编写 \<对象类型> 脚本为”****，然后在“另存为”**** 选项中选择“新查询编辑器窗口”**** 作为输出目标。  
+3.  右键单击要编写脚本的第一个对象，指向 "**脚本 \<object type> 为**"，然后在 "**另存为**" 选择中选择 "**新建查询编辑器窗口**" 作为输出目标。  
   
 4.  导航到第二个要编写脚本的对象。  
   
-5.  右键单击该对象，指向“编写 \<对象类型> 脚本为”****，然后在“另存为”**** 选项中选择“剪贴板”**** 作为输出目标。  
+5.  右键单击该对象，指向 "**脚本 \<object type> 为**"，然后在 "**另存为**" 选项中选择 "**剪贴板**" 作为输出目标。  
   
 6.  在“查询编辑器”窗口中打开第一个对象，然后从剪贴板中粘贴第二个对象的脚本。  
   
@@ -82,6 +81,6 @@ ms.locfileid: "82703906"
   
 6.  然后，按住 Ctrl 并左键单击第二个要编写脚本的对象。  
   
-7.  右键单击所选对象之一，然后选择“编写 \<对象类型> 脚本为”  。  
+7.  右键单击所选对象之一，然后选择 "**脚本 \<object type> 为**"。  
   
   

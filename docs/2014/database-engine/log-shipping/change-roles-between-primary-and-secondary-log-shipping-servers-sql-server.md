@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 08467118608db6b222bea2a41351eac951449a16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86c29f696c93789cb3815cf14587690c2edb5f6b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774556"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931318"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>交换主日志传送服务器和辅助日志传送服务器的角色 (SQL Server)
   在将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志传送配置故障转移到辅助服务器后，可以将辅助数据库配置为主数据库。 然后，就可以根据需要交换主数据库和辅助数据库。  
@@ -78,7 +77,7 @@ ms.locfileid: "62774556"
 3.  在辅助服务器（新的主服务器）上启用日志传送备份作业，在主服务器（新的辅助服务器）上启用复制和还原作业。  
   
 > [!IMPORTANT]  
->  将辅助数据库更改为主数据库时，为了给用户和应用程序提供一致的体验，您可能需要在新的主服务器实例中为数据库重新创建部分或全部元数据（例如登录和作业）。 有关详细信息，请参阅在[使数据库在其他服务器实例上可用时管理元数据 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
+>  将辅助数据库更改为主数据库时，为了给用户和应用程序提供一致的体验，您可能需要在新的主服务器实例中为数据库重新创建部分或全部元数据（例如登录和作业）。 有关详细信息，请参阅 [当数据库在其他服务器实例上可用时管理元数据 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 相关任务  
   

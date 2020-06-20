@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 86d72275-45c7-459f-98cf-f5a366ed279c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b5f5c2385b4c58447db008544124ae9048566958
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7b461ed26b3e234f083add3312e256e164efc9b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63199940"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063647"
 ---
 # <a name="web-server-information"></a>Web 服务器信息
   若要使用合并复制的 Web 同步选项，必须提供 Web 服务器信息。 有关配置 Web 同步的信息，请参阅[配置 Web 同步](configure-web-synchronization.md)。  

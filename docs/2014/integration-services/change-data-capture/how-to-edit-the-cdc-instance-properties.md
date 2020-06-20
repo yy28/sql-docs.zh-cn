@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 96604a09811626a304502dc05ef4f7e9edcd0359
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e635be21bd93b5ed08426cf38b86dc69d024ef6b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771225"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923058"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>如何编辑 CDC 实例属性
   本过程介绍如何使用 CDC 设计器控制台编辑 CDC 实例的配置属性。  

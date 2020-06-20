@@ -1,5 +1,6 @@
 ---
 title: 与 SQL Server 通信（ODBC） |Microsoft Docs
+description: 了解 ODBC 应用程序如何使用连接和连接资源与 SQL Server 的实例进行通信。
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,21 +16,21 @@ ms.assetid: cca3dcf0-2a7e-465a-84de-7ce055360eb6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2a7d903dfdc0e25d3dc305b78f716a7146ce25c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07c56e5f6367459cc054a9882432c5bfd04f1c5b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307754"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967695"
 ---
 # <a name="communicating-with-sql-server-odbc"></a>与 SQL Server 通信 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  对于要与实例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通信的 ODBC 应用程序，它必须分配环境和连接句柄并连接到数据源。 在建立连接后，应用程序可以向服务器发送查询并处理任意结果集。 应用程序使用完数据源后，它断开与数据源的连接并释放连接句柄。 应用程序释放所有连接句柄后，将释放环境句柄。  
+  对于要与实例通信的 ODBC 应用程序 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，它必须分配环境和连接句柄并连接到数据源。 在建立连接后，应用程序可以向服务器发送查询并处理任意结果集。 应用程序使用完数据源后，它断开与数据源的连接并释放连接句柄。 应用程序释放所有连接句柄后，将释放环境句柄。  
   
  一个应用程序可以与任意数目的数据源连接。 该应用程序可以使用多个驱动程序和多个数据源的组合、同一驱动程序和多个数据源的组合，甚至可以使用同一驱动程序和指向同一数据源的多个连接。  
   
- 你可以从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] MSDN 上的[SQL Server 下载](https://go.microsoft.com/fwlink/?LinkId=62796)"页下载 Native Client ODBC 示例。  
+ 你可以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从 MSDN 上的[SQL Server 下载](https://go.microsoft.com/fwlink/?LinkId=62796)"页下载 Native Client ODBC 示例。  
   
 ## <a name="in-this-section"></a>本节内容  
   

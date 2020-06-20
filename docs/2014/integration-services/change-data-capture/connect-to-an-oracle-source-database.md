@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f32462ef33af50a08cd933ed5c1a04c4efaa17de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf25496a36a1c5864ee4101226b6432663af111f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835759"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923458"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>连接到 Oracle 源数据库
   使用“Oracle 源”页可提供连接到 Oracle 源数据库所需的信息。 CDC 实例将读取您连接到的 Oracle 数据库的重做日志。  
@@ -41,7 +40,7 @@ ms.locfileid: "62835759"
 > [!NOTE]
 >  用户必须在 Oracle 数据库中被授予以下权限才能成为日志挖掘用户。  
 > 
->  -   SELECT on \<any-captured-table>  
+>  -   选择启用\<any-captured-table>  
 > -   SELECT ANY TRANSACTION  
 > -   EXECUTE on DBMS LOGMNR  
 > -   SELECT on V$LOGMNR CONTENTS  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5ee2879bc0ef94d8abee20032c83a74d00696ef2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 241087f5da3c7baa09a34fab8ab1886809ce0d36
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289305"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931428"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>可用性组侦听器、客户端连接和应用程序故障转移 (SQL Server)
   本主题包含有关 [!INCLUDE[ssHADR](../includes/sshadr-md.md)] 客户端连接和应用程序故障转移功能的注意事项的信息。  
@@ -118,7 +117,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- 在此连接字符串示例中，客户端尝试连接到端口 1433 上名为 `AGListener` 的可用性组侦听器（如果可用性组侦听器正在侦听 1433，您也可以忽略端口）。  连接字符串的`ApplicationIntent`属性设置为`ReadOnly`，这使其成为*读意向连接字符串*。  如果没有此设置，服务器将不会尝试该连接的只读路由。  
+ 在此连接字符串示例中，客户端尝试连接到端口 1433 上名为 `AGListener` 的可用性组侦听器（如果可用性组侦听器正在侦听 1433，您也可以忽略端口）。  连接字符串的 `ApplicationIntent` 属性设置为 `ReadOnly` ，这使其成为*读意向连接字符串*。  如果没有此设置，服务器将不会尝试该连接的只读路由。  
   
  可用性组的主数据库处理传入的只读路由请求，并尝试找到联接到主副本并配置为进行只读路由的只读副本。  客户端收回来自主副本服务器的连接信息，并连接到确定的只读副本。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5c76fda112acae7b8a9314d217f5c32d197e87f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90a5bb55a7ebe460177369d20de8bda9dd23d959
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775627"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931875"
 ---
 # <a name="upgrade-data-quality-services"></a>升级 Data Quality Services
   本主题的信息介绍如何将现有 Data Quality Services (DQS) 安装升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2。 在将 DQS 中的数据质量服务器升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]时，您还必须升级 DQS 数据库架构。  
@@ -25,7 +24,7 @@ ms.locfileid: "62775627"
 > -   通过使用当前或早期版本的数据质量客户端或 Integration Services 中的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] DQS 清除转换 [，你可以连接](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) 版数据质量服务器，执行你的数据质量任务。  
 > -   在将 Data Quality Services 和 Master Data Services 升级到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2 后，您可以使用用于 Excel 的 Master Data Services 外接程序的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 版本继续进行。 但是，在升级到 SQL Server 2014 CTP2 后，用于 Excel 的 Master Data Services 外接程序的任何早期版本都无法使用。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 您可以从 [此处](https://go.microsoft.com/fwlink/?LinkId=328664)下载用于 Excel 的 Master Data Services 外接程序的  SP1 版本。  
   
-##  <a name="prerequisites"></a><a name="Prerequisites"></a>先决条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 先决条件  
   
 -   您必须作为 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 计算机上 Administrators 组的成员登录。  
   
@@ -83,7 +82,7 @@ ms.locfileid: "62775627"
   
 3.  输出将为每个升级显示一条信息，并显示升级的日期。 最新日期的最大 VERSION_ID 和 ASSEMBLY_VERSION 是当前版本。 STATUS 列中的值为 2 时指示成功。 如果发生错误，错误将在 ERROR 列中列出。 示例输出：  
   
-    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|状态|ERROR|  
+    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|状态|错误|  
     |--------|-------------------|-----------------|-----------------------|----------------|------------|-----------|  
     |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMAIN\UserName>|2||  
     |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMAIN\UserName>|2||  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e97c9ba15aab664e9f0c77f9eb84152f75c3e3d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7417efef16ae16ef11b955af12ba8dbbd549939c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065881"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938318"
 ---
 # <a name="translations-analysis-services"></a>翻译 (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** 仅多维  
@@ -45,7 +44,7 @@ ms.locfileid: "66065881"
   
 1.  在设计器中打开 Adventure Works 多维模型。  
   
-2.  在解决方案资源管理器中，打开 "数据源视图"，然后双击 "\<艾德作品 DW 版本">。  
+2.  在解决方案资源管理器中，打开 "数据源视图"，然后双击 "艾德作品 \<version> "。  
   
 3.  找到 dimDate、dimProduct、dimProductCategory 或 dimProductSubcateogry。 所有这些维度均包含月份、每周天数、产品名称、类别名称等已翻译成员的属性。  
   

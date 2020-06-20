@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 72785cffa01da7bf00248d442b1d3ce4103c45a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b4b7fb5d79d24a3333e21a9b0e6f4c115e967ffa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771363"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923428"
 ---
 # <a name="create-the-sql-server-change-database"></a>创建 SQL Server 更改数据库
   当您启动新建实例向导时，“创建 CDC 数据库”页将打开。 使用“创建 CDC 数据库”页可提供与新的 CDC 实例有关的信息并且创建新的更改数据库。  

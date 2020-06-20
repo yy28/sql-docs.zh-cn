@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4bf82a13-9985-4f20-9ef8-0083f104d124
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eab2902600f26abfc0f714b231fcf1bb684f513b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 59bcc5bda489edcd337bba78bd07d55ff0a28806
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662211"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029267"
 ---
 # <a name="log-file-auto-shrink-event-class"></a>Log File Auto Shrink 事件类
   **Log File Auto Shrink** 事件类指示日志文件自动收缩。 如果由于显式 ALTER DATABASE 语句而使日志文件收缩，则不会触发此事件。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1280bb44d11ce4f8234d544bf113e796a9c3c85c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 245cf55b5cff4cb203b20557d6944e0d05375a99
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62915414"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967797"
 ---
 # <a name="mssqlserver_17832"></a>MSSQLSERVER_17832
     
@@ -55,7 +54,7 @@ ms.locfileid: "62915414"
   
 1.  在 **“开始”** 菜单上，单击 **“运行”** 。  
   
-2.  键入`regedit`，然后单击 **"确定"**。 （如果此时出现“用户帐户控制”对话框，请单击“继续”。）    
+2.  键入 `regedit` ，然后单击 **"确定"**。 （如果此时出现“用户帐户控制”对话框，请单击“继续”。）    
   
 3.  导航到 **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters**。  
   
@@ -63,7 +62,7 @@ ms.locfileid: "62915414"
   
 5.  右键单击 **MaxTokenSize**，然后单击“修改”。   
   
-6.  在“数值数据”框中键入所需的 **MaxTokenSize** 值。   
+6.  在“数值数据”框中键入所需的 **MaxTokenSize** 值。  
   
     > [!NOTE]  
     >  建议使用的最大标记长度为十六进制值 ffff（十进制值 65535）。 提供此值后很可能会解决问题，但可能会对计算机的性能产生负面影响。 建议您建立可包含单位中任一用户最长标记的最小 **MaxTokenSize** 值并输入该值。  

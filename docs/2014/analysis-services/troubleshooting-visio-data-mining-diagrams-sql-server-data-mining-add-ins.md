@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c60120c6-0af1-45c5-90d1-0a99b878ff18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 067d3c3a324922a8c8ef19239771c8a8c2305541
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f787b4d3bfae12d65897e807f43b76b9b8a7520
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065720"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938248"
 ---
 # <a name="troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins"></a>解决 Visio 数据挖掘关系图问题（SQL Server 数据挖掘外接程序）
   本主题包含在您解决 Visio 数据挖掘关系图问题时可以使用的一些附加信息。  
