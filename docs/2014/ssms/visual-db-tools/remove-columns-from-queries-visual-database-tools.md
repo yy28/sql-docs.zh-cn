@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d9819b8-ee2f-4838-9713-c5e3ad37ab46
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 08230f1937d42247f8eeff09014f7727c6ebfe43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8532f5240729a2516a0c07ae943dd42dc01d9c1c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62659632"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035558"
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>从查询中删除列 (Visual Database Tools)
   如果不希望再在查询中使用某列，则可以可移除该列。 如果执行此操作，“查询和视图设计器”将从选择列表、排序规范、搜索条件、“SQL”窗格  以及所有分组规范中删除对该列的引用。  

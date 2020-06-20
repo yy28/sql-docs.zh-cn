@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 89f73de6a8474b6e2842de7b1caf0b882ff2b5c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 581e6c5604af3f5dfea54cdec3abd1c25052c0b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831431"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918737"
 ---
 # <a name="integration-services-tasks"></a>Integration Services 任务
   任务是一些控制流元素，它定义包控制流中执行的工作单元。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包由一个或多个任务组成。 如果包中包含多个任务，则它们将按照优先约束在控制流中进行连接和排序。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6a08c37ae8fbd1b190e3a3cd4f846109d7e8fca2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 46a95265228c006e61448d16352a529f8232dd95
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716780"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067835"
 ---
 # <a name="example-specifying-the-cdata-directive"></a>示例：指定 CDATA 指令
   如果指令设置为 **CDATA**，则不对包含的数据进行实体编码，而是将其放入 CDATA 部分。 **CDATA** 属性必须没有名称。  

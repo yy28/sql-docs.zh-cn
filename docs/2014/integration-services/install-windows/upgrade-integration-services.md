@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d1e40954a5a5eb7a69ba4f70b798356f38175fed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab63f0d12b4cd5d76fcb6e3419f5d1f1ed7232d6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768063"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968347"
 ---
 # <a name="upgrade-integration-services"></a>升级 Integration Services
   如果计算机中当前安装了 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 或 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]，则可以升级到 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]。  
   
  当您在已安装了这些 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 早期版本之一的计算机上升级到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 时， [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 将与该早期版本并行安装。  
   
- 通过采用这一并行安装，将安装 dtexec 实用工具的多个版本。 若要确保运行正确的实用工具版本，请在命令提示符处，通过输入完整路径 (\<驱动器>:\Program Files\Microsoft SQL Server\\<version\>\DTS\Binn) 来运行此实用工具。 有关 dtexec 的详细信息，请参阅 [dtexec Utility](../packages/dtexec-utility.md)。  
+ 通过采用这一并行安装，将安装 dtexec 实用工具的多个版本。 若要确保运行正确的实用工具版本，请在命令提示符处，通过输入完整路径（ \<drive> ： \Program Files\Microsoft SQL Server \\<版本 \DTS\Binn）来运行此实用工具 \> 。 有关 dtexec 的详细信息，请参阅 [dtexec Utility](../packages/dtexec-utility.md)。  
   
 > [!NOTE]  
 >  在以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，在您安装了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 后，默认情况下 Users 组中的所有用户都已对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务具有访问权限。 在您安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]时，用户无权访问 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务。 该服务默认是安全的。 在安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员必须运行 DCOM 配置工具 (Dcomcnfg.exe) 以便授予特定用户对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的访问权限。 有关详细信息，请参阅 [Grant Permissions to Integration Services Service](../grant-permissions-to-integration-services-service.md)。  
@@ -36,7 +35,7 @@ ms.locfileid: "62768063"
  建议您在升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之前先运行升级顾问。 如果将现有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包迁移到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所采用的新的包格式，则可能会遇到升级顾问报表问题。 有关详细信息，请参阅 [Use Upgrade Advisor to Prepare for Upgrades](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)。  
   
 > [!NOTE]
->  当前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中不再支持迁移或运行数据转换服务（DTS）包。 不再提供以下 DTS 功能：  
+>  当前版本的中不再支持迁移或运行数据转换服务（DTS）包 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。 不再提供以下 DTS 功能：  
 > 
 >  -   DTS 运行时  
 > -   DTS API  
@@ -50,9 +49,9 @@ ms.locfileid: "62768063"
 ## <a name="upgrading-integration-services"></a>升级 Integration Services  
  可以通过使用下列方法之一来进行升级：  
   
--   运行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安装程序，并选择**从 SQL Server 2005、SQL Server 2008 或 SQL Server 2008 R2 升级**或**[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]** 升级的选项。  
+-   运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序，并选择**从 SQL Server 2005、SQL Server 2008 或 SQL Server 2008 R2 升级或升级**的选项 **[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]** 。  
   
--   在命令提示符处运行**setup.exe**并指定`/ACTION=upgrade`选项。 有关详细信息，请参阅在[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)][命令提示符下安装 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)中的 "安装脚本" 部分。  
+-   在命令提示符下运行**setup.exe**并指定 `/ACTION=upgrade` 选项。 有关详细信息，请参阅 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 在[命令提示符下安装 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)中的 "安装脚本" 部分。  
   
  不能通过升级执行下列操作：  
   
@@ -76,9 +75,9 @@ ms.locfileid: "62768063"
   
 -   安装 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 文件、服务和工具（[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]）。 当同一台计算机上存在多个 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 实例时，在首次将任何实例升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 时，将安装 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 文件、服务和工具。  
   
--   将[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或的[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例升级到[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本。  
+-   将或的实例升级 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本。  
   
--   将[!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]或[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]系统表中的数据移到[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]系统表中，如下所示：  
+-   将或系统表中的数据移 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 到 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 系统表中，如下所示：  
   
     -   移动包而无需将 msdb.dbo.sysdtspackages90 系统表更改为 msdb.dbo.sysssispackages 系统表。  
   
@@ -93,14 +92,14 @@ ms.locfileid: "62768063"
   
 -   为了控制对包的访问，将新建三个固定的数据库级角色：db_ssisadmin、db_ssisltduser 和 db_ssisoperator。 系统不会删除 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 角色 db_dtsadmin、db_dtsltduser 和 db_dtsoperator，而是将其作为对应的新角色的成员。  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)]如果包存储区（即由[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服务管理的文件系统位置）为**\SQL Server\90**、 **\SQL Server\100**或**\SQL Server\110**下的默认位置，则将这些包移到**\SQL Server\120**下的新默认位置。  
+-   如果 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区（即由服务管理的文件系统位置 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ）为**\SQL Server\90**、 **\SQL Server\100**或**\SQL Server\110**下的默认位置，则将这些包移到**\SQL Server\120**下的新默认位置。  
   
 -   更新 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务配置文件以指向升级后的 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
   
 ### <a name="what-the-upgrade-process-does-not-do"></a>升级过程不执行的操作  
  升级过程不执行以下任务：  
   
--   **不删除** [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]或[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]服务。  
+-   **不删除** [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 或 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 服务。  
   
 -   不会将现有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包迁移到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所采用的新的包格式。 有关如何迁移包的信息，请参阅 [升级 Integration Services 包](upgrade-integration-services-packages.md)。  
   
@@ -113,14 +112,14 @@ ms.locfileid: "62768063"
   
 -   运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业来运行包。  
   
--   使用[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]管理[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]存储在[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的实例中的包。 您需要修改服务配置文件，以便将 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 实例添加到由服务管理的位置列表中。  
+-   使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 存储在或的实例中的包 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。 您需要修改服务配置文件，以便将 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 实例添加到由服务管理的位置列表中。  
   
     > [!NOTE]  
     >  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的早期版本无法连接到 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 服务。  
   
 -   通过检查 PackageFormat 列中的值，确定 msdb.dbo.sysssispackages 系统表中包的版本。 表中包含一个标识每个包的版本的 PackageFormat 列。 PackageFormat 列中的值为 2 表示 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 包；值为 3 表示 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 包。 在将包迁移到新的包格式之前，packageformat 列中的值将不更改。  
   
--   不能使用[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]工具来设计、运行或管理[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 工具包括 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的相应版本、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导以及包执行实用工具 (dtexecui.exe)。 升级过程不会删除[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]工具。 但是，您将无法在已升级的服务器上使用这些工具继续处理 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 或 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 包。  
+-   不能使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 工具来设计、运行或管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 工具包括 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的相应版本、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导以及包执行实用工具 (dtexecui.exe)。 升级过程不会删除 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 工具。 但是，您将无法在已升级的服务器上使用这些工具继续处理 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 或 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 包。  
   
 -   默认情况下，在升级安装中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 被配置为将与运行包相关的事件记录到应用程序事件日志中。 使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的数据收集器功能时，此设置可能生成太多事件日志条目。 记录的事件包括 EventID 12288“包已启动”和 EventID 12289“包已成功完成”。 若要停止将这两个事件记录到应用程序事件日志，请打开注册表进行编辑。 然后在注册表中，找到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS 节点，并将 LogPackageExecutionToEventLog 设置的 DWORD 值从 1 更改为 0。  
   
@@ -132,14 +131,14 @@ ms.locfileid: "62768063"
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例位于一台计算机上，而 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和客户端工具位于另一台计算机上。  
   
 ### <a name="what-you-can-do-after-upgrading"></a>升级后可执行的操作  
- 将包保存在已升级的[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中的系统表不同于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中使用的系统表。 因此， [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]版本的[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]和[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]无法发现已升级的实例的系统表中的包。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 由于无法发现这些包，因此在使用这些包时会受到一些限制：  
+ 将包保存在已升级的[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中的系统表不同于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中使用的系统表。 因此， [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和版本的 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 无法发现已升级的实例的系统表中的包 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。 由于无法发现这些包，因此在使用这些包时会受到一些限制：  
   
 -   不能使用位于其他计算机上的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 工具 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 和 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 来加载或管理升级后的[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中的包。  
   
     > [!NOTE]  
     >  尽管升级后的[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中的包尚未迁移到新的包格式，但 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 工具仍然无法发现它们。 因此，[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 工具无法使用这些包。  
   
--   你无法在[!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]其他[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]计算机上使用或来运行存储在升级后的实例上的 msdb 中的[!INCLUDE[ssDE](../../includes/ssde-md.md)]包。  
+-   你无法 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 在其他计算机上使用或来运行存储在升级后的实例上的 msdb 中的包 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 。  
   
 -   不能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 计算机上的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 代理作业来运行存储在升级后的[!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]实例中的 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 或 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 包。  
   

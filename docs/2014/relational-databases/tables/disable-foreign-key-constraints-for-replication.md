@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4211f2fd-d16a-4081-995c-43f1f0827f0b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2cd2e4f3e5ee16c02ba48c6cd8ced98c06133dfb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ee7f2fb7b0a27870a09a9d99b723b7faf739aeb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761070"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068161"
 ---
 # <a name="disable-foreign-key-constraints-for-replication"></a>对复制禁用外键约束
   可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中对复制禁用外键约束。 如果正在从以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布数据，这很有用。  

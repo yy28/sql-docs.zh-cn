@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: bc4da6702716e845121d2081a166254d4be9449f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 176448aa9d4bab4101ab2db12ffc9a8a7fd1a5b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62468323"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050318"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>使用内存优化表备份数据库
   内存优化表在定期数据库备份过程中进行备份。 对于基于磁盘的表，数据和差异文件对的 CHECKSUM 在数据库备份过程中进行验证，以检测存储损坏。  

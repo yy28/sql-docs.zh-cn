@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b27b5bbc77d1d48e3697893e2e21dcf7d8a6c570
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 413d0d42ce629076488b5971408df25ca0ce9d1e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768443"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968437"
 ---
 # <a name="working-with-images-with-the-script-task"></a>使用脚本任务处理图像
   除文本和数值数据外，产品数据库或用户数据库还经常包含图像。 Microsoft .NET Framework 中的 `System.Drawing` 命名空间提供用于操作图像的类。  
@@ -47,7 +46,7 @@ ms.locfileid: "62768443"
   
 1.  创建一个名为 `CurrentImageFile` 的字符串变量，并将其值设置为一个现有图像文件的路径和名称。  
   
-2.  在 "**脚本任务编辑器**" 的 "**脚本**" 页中`CurrentImageFile` ，将变量`ReadOnlyVariables`添加到属性中。  
+2.  在 "**脚本任务编辑器**" 的 "**脚本**" 页中，将 `CurrentImageFile` 变量添加到属性中 `ReadOnlyVariables` 。  
   
 3.  在脚本项目中，设置一个对 `System.Drawing` 命名空间的引用。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "62768443"
   
 2.  在“Foreach 循环编辑器”的“集合”页中，选择“Foreach 文件枚举器”作为枚举器，并指定源文件的路径和文件掩码，如“*.bmp”    。  
   
-3.  在“变量映射”页中，将  **变量映射到索引 0**`CurrentImageFile`。 此变量在枚举器的每次迭代中将当前文件名传递给脚本任务。  
+3.  在“变量映射”页中，将 `CurrentImageFile` 变量映射到索引 0。 此变量在枚举器的每次迭代中将当前文件名传递给脚本任务。  
   
     > [!NOTE]  
     >  这些步骤是在执行用于单个图像文件配置过程中列出的步骤之外还要执行的步骤。  
@@ -158,7 +157,7 @@ End Function
   
 2.  再创建整数变量 `MaxThumbSize`，并赋值（单位为像素），例如 100。  
   
-3.  在 "**脚本任务编辑器**" 的 "**脚本**" 页上，将两`ReadOnlyVariables`个变量添加到属性中。  
+3.  在 "**脚本任务编辑器**" 的 "**脚本**" 页上，将两个变量添加到 `ReadOnlyVariables` 属性中。  
   
 4.  在脚本项目中，设置一个对 `System.Drawing` 命名空间的引用。  
   
@@ -170,7 +169,7 @@ End Function
   
 2.  在“Foreach 循环编辑器”的“集合”页中，选择“Foreach 文件枚举器”作为“枚举器”，并指定源文件的路径和文件掩码，如“*.jpg”     。  
   
-3.  在“变量映射”页中，将  **变量映射到索引 0**`CurrentImageFile`。 此变量在枚举器的每次迭代中将当前文件名传递给脚本任务。  
+3.  在“变量映射”页中，将 `CurrentImageFile` 变量映射到索引 0。 此变量在枚举器的每次迭代中将当前文件名传递给脚本任务。  
   
     > [!NOTE]  
     >  这些步骤是在执行用于单个图像文件配置过程中列出的步骤之外还要执行的步骤。  

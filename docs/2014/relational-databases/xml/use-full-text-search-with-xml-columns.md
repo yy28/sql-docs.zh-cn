@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2b546ea99aac7d645cc41746bc0bae757f852050
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c71d2350b472c47f1d48b0b9279f457cd97d58af
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702395"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059366"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>对 XML 列使用全文搜索
   您可以对 XML 列创建全文索引，这种索引对 XML 值的内容进行索引，但忽略 XML 标记。 元素标记用作标记边界。 将对以下项进行索引：  

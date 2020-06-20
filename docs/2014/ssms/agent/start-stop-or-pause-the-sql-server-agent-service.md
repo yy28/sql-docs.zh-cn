@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c95a9759-dd30-4ab6-9ab0-087bb3bfb97c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f21d13149ffa90a2383e8f090b205b50efa54641
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f11ef36d72a029a906da29467fd9e4fe3a0cf8ee
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63246140"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067535"
 ---
 # <a name="start-stop-or-pause-the-sql-server-agent-service"></a>Start, Stop, or Pause the SQL Server Agent Service
   本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]启动、停止或重新启动 SQL Server 代理服务。  
@@ -57,7 +56,7 @@ ms.locfileid: "63246140"
   
 -   调整进程的内存配额 (SeIncreaseQuotaPrivilege)  
   
- 有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务帐户所需的 Windows 权限的详细信息，请参阅为[SQL Server 代理服务选择帐户](select-an-account-for-the-sql-server-agent-service.md)和[配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+ 有关代理服务帐户所需的 Windows 权限的详细信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅为[SQL Server 代理服务选择帐户](select-an-account-for-the-sql-server-agent-service.md)和[配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
@@ -71,7 +70,7 @@ ms.locfileid: "63246140"
   
 4.  系统提示是否要执行该操作时，请单击 **“是”**。  
   
- 有关详细信息，请参见:  
+ 有关详细信息，请参阅：  
   
 -   [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   

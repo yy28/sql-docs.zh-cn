@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7636cc85-5155-44db-baf6-df807761adb8
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ff2fee26c6f71cc398f8dbacf91f3ad8dbdb3358
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ecd13475395cef4257d97eb7480f32420932e22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092160"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036303"
 ---
 # <a name="specify-the-with-keyword-when-using-table-hints-in-90-compatibility-mode"></a>在 90 兼容模式下使用表提示时指定 WITH 关键字
   除了一些例外情况之外，仅当使用 WITH 关键字指定了表提示时，查询的 FROM 子句中才支持这些提示。 有关详细信息，请参阅 [!INCLUDE[tsql](../../includes/tsql-md.md)] 联机丛书中的“FROM ([!INCLUDE[tsql](../../includes/tsql-md.md)])”和“表提示 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])”。  

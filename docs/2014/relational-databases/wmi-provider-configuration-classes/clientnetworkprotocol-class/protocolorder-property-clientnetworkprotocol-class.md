@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: aa09b8ab-37db-4406-8973-acf503855fd2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0a0043e5a894e3f3f1b778a6f42fe6e3bacbbc78
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8bccb7109972dea4697e9e289081cbf47d2f9492
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192886"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065594"
 ---
 # <a name="protocolorder-property-clientnetworkprotocol-class"></a>ProtocolOrder 属性（ClientNetworkProtocol 类）
   获取[SetOrderValue 方法（ClientNetworkProtocol 类）](clientnetworkprotocol-class.md)方法指定的当前引用的客户端网络协议的序号。  
@@ -38,7 +37,7 @@ object
   
 ## <a name="parts"></a>组成部分  
  *object*  
- 一个表示[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端使用的网络协议的[ClientNetworkProtocol 类](clientnetworkprotocol-class.md)对象。  
+ 一个表示客户端使用的网络协议的[ClientNetworkProtocol 类](clientnetworkprotocol-class.md)对象 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个 `uint32` 值，用于指定按照 `OrderValue` 方法设置的当前所引用的客户端网络协议的序号。 如果客户端网络协议为禁用状态，则此值将为零。  

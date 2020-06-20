@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6c513c643ebae58c0670abd18e3da1736eabfdd3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 50fea140fec2b59e1869d8aaf15e37220ac28bd1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702855"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065650"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>使用 ADO 执行 SQLXML 4.0 查询
   在 SQLXML 的早期版本中，使用 SQLXML IIS 虚拟目录和 SQLXML ISAPI 筛选器支持基于 HTTP 的查询执行。 在 SQLXML 4.0 中，由于从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，本机 XML Web 服务提供了类似的重叠功能，因此已删除上述组件。  
@@ -123,7 +122,7 @@ ms.locfileid: "82702855"
   
 2.  验证客户端计算机上安装的 MDAC 版本是否为 2.6 版或更高版本。 如果需要验证 MDAC 版本信息，你可以使用从 Microsoft 网站免费下载提供的 MDAC 组件检查器工具 [https://www.microsoft.com/](https://www.microsoft.com/) 。 有关详细信息，请在 Microsoft 网站上的 "MDAC 组件检查器" 中进行搜索。  
   
-3.  执行脚本。  
+3.  执行该脚本。  
   
      您可以在命令行使用 Cscript.exe 来执行 VBScript 文件，也可以通过双击 Sqlxml4test.vbs 文件调用 Windows 脚本宿主 (WScript.exe) 来执行该文件。  
   

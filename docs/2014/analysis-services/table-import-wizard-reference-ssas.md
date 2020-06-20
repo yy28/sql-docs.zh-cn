@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 2ac05e89-c002-4adc-86c7-438df70e9ed5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef0cb7dfe9b3fbbca1cda3833506e56cc6bb9681
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7cdcf36f26ce7dbba0e6a9de77faf286d2ccb00b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067911"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940138"
 ---
 # <a name="table-import-wizard-reference-ssas"></a>表导入向导参考 (SSAS)
   本节提供有关 **“表导入向导”** 的帮助。 此向导可用于从各种数据源导入数据。 若要从模型设计器中访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  
   
-## <a name="pages"></a>页  
+## <a name="pages"></a>页数  
   
 -   [&#40;SSAS&#41;的高级设置](advanced-settings-ssas.md)  
   

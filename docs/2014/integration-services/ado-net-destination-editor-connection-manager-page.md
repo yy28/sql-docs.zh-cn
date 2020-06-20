@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a3b11286-32c8-40e1-8ae7-090e2590345a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: faeb72f875fd5427536ddd72db03ca71a25b293e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36c06fda23fc11c76df4d278a18095659d433567
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154021"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925938"
 ---
 # <a name="ado-net-destination-editor-connection-manager-page"></a>ADO NET 目标编辑器（“连接管理器”页）
   可以使用 **“ADO NET 目标编辑器”** 对话框的 **“连接管理器”** 页，为目标选择 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 连接。 使用此页还可以选择数据库中的表或视图。  
@@ -46,7 +45,7 @@ ms.locfileid: "70154021"
  使用****“创建表”对话框创建新表或视图。  
   
 > [!NOTE]  
->  单击 "**新建**" 时[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ，将基于所连接的数据源生成默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
+>  单击 "**新建**" 时，将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 基于所连接的数据源生成默认的 CREATE TABLE 语句。 即使源表包含一个已声明了 FILESTREAM 属性的列，此默认 CREATE TABLE 语句也不会包含 FILESTREAM 属性。 若要运行具有 FILESTREAM 属性的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 组件，首先要在目标数据库上实现 FILESTREAM 存储。 然后在 **“创建表”** 对话框中将 FILESTREAM 属性添加到 CREATE TABLE 语句中。 有关详细信息，请参阅[二进制大型对象 (Blob) 数据 (SQL Server)](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
  **预览**  
  使用“预览查询结果”**** 对话框预览结果。 预览最多可以显示 200 行。  

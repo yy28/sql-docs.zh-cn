@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b35af2b6-6594-40d1-9861-4d5dd906048c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7126b01fcaee1a0ab3f7776cc54e6eb0dbe2774d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: de74f032924fbb0b6643bd8f3d482481ffb1f983
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798306"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067818"
 ---
 # <a name="create-a-job"></a>创建作业
   本主题说明如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 SQL Server 管理对象 (SMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中创建 SQL Server 代理作业。  
@@ -124,7 +123,7 @@ ms.locfileid: "72798306"
     GO  
     ```  
   
- 有关详细信息，请参见:  
+ 有关详细信息，请参阅：  
   
 -   [sp_add_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
   

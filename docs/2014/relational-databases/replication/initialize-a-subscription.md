@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d6013845-cb7a-4203-8e21-edce32f1d330
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 66ba96a96f95f91974f0a948db34c34ca0391f1b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f024d360fdeab477ace09970b4f140a97696c2c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721118"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068682"
 ---
 # <a name="initialize-a-subscription"></a>初始化订阅
   必须初始化复制拓扑中的订阅服务器，以使其具有来自它们所订阅的发布中各项目的架构副本以及全部所需复制对象（如存储过程、触发器和元数据表）。 另外，订阅服务器通常接收初始数据集。 默认的初始化方法使用完整的快照，其中包含架构、复制对象和数据；但没有完整的快照也可以初始化发布。  

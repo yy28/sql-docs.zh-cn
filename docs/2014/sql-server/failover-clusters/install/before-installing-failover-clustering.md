@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cc959fa8406453230ee133bf6183fa3dc1ba51f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b74de0c0ac044f3bdcadf3381976dcecc777e36c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63190361"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037189"
 ---
 # <a name="before-installing-failover-clustering"></a>安装故障转移群集前的准备工作
   安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集之前，必须选择运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的硬件和操作系统。 还必须配置 Windows Server 故障转移群集 (WSFC)，检查网络和安全性，并了解将在故障转移群集上运行的其他软件的注意事项。  
@@ -45,9 +44,9 @@ ms.locfileid: "63190361"
   
     -   Windows PowerShell 不再由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序安装。 Windows PowerShell 2.0 是安装 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] 组件和 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的先决条件。 如果您的计算机上没有 Windows PowerShell 2.0，您可以按照 [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) （Windows 管理框架）页上的说明启用它。  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序不再安装 .NET Framework 3.5 SP1，但是在较旧版本的 Windows 操作系统上安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时可能需要该软件。 有关详细信息，请[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]参阅[发行说明](https://go.microsoft.com/fwlink/?LinkId=296445)。  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装程序不再安装 .NET Framework 3.5 SP1，但是在较旧版本的 Windows 操作系统上安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时可能需要该软件。 有关详细信息，请参阅 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [发行说明](https://go.microsoft.com/fwlink/?LinkId=296445)。  
   
-    -   ** [!INCLUDE[msCoName](../../../includes/msconame-md.md)]更新包：** 为了避免在安装过程中安装 .NET Framework 4 的计算机重新[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]启动，安装[!INCLUDE[msCoName](../../../includes/msconame-md.md)]程序要求在计算机上安装更新。  如果您正在 Windows 7 SP1 或 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP2 上安装 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ，则包括此更新。 如果您在早期的 Windows 操作系统上安装，则从 [Windows Vista 和 Windows Server 2008 上的 Microsoft Update for .NET Framework 4.0](https://go.microsoft.com/fwlink/?LinkId=198093)上下载它。  
+    -   ** [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新包：** 若要避免在安装过程中安装 .NET Framework 4 的情况下重新启动计算机， [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 安装程序要求在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 计算机上安装更新。  如果您正在 Windows 7 SP1 或 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] SP2 上安装 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] ，则包括此更新。 如果您在早期的 Windows 操作系统上安装，则从 [Windows Vista 和 Windows Server 2008 上的 Microsoft Update for .NET Framework 4.0](https://go.microsoft.com/fwlink/?LinkId=198093)上下载它。  
   
     -   .NET Framework 4：安装程序在群集化的操作系统上安装 .NET Framework 4。 为了缩短安装时间，您可以考虑在您运行安装程序之前安装 .NET Framework 4。  
   
@@ -197,9 +196,9 @@ ms.locfileid: "63190361"
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard（64 位）|是|是|是|是|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard（32 位）|是|是|||  
   
- <sup>1</sup> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]在 WOW 模式下不支持群集。 这包括从最初安装在 WOW 中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集的早期版本进行升级。 对于这种情况，只能选择通过并行安装新版本并迁移进行升级。  
+ <sup>1</sup> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在 WOW 模式下不支持群集。 这包括从最初安装在 WOW 中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集的早期版本进行升级。 对于这种情况，只能选择通过并行安装新版本并迁移进行升级。  
   
- <sup>2</sup>支持[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]多子网故障转移群集。  
+ <sup>2</sup>支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多子网故障转移群集。  
   
   
   
@@ -220,7 +219,7 @@ ms.locfileid: "63190361"
   
 1.  在多子网配置中，IP 地址资源依赖关系设置为 OR。 有关详细信息，请参阅[创建新的 SQL Server 故障转移群集 &#40;安装程序&#41;](create-a-new-sql-server-failover-cluster-setup.md)  
   
-2.  不支持混合的 AND-OR IP 地址依赖关系。 例如，\<IP1> AND \<IP2> OR \<IP3> 不受支持。  
+2.  不支持混合的 AND-OR IP 地址依赖关系。 例如， \<IP1> 和 \<IP2> 或 \<IP3> 不受支持。  
   
 3.  不支持每个子网多个 IP 地址。  
   
@@ -241,7 +240,7 @@ ms.locfileid: "63190361"
   
   
   
-##  <a name="install-msconame-distributed-transaction-coordinator"></a><a name="MSDTC"></a>安装[!INCLUDE[msCoName](../../../includes/msconame-md.md)]分布式事务处理协调器  
+##  <a name="install-msconame-distributed-transaction-coordinator"></a><a name="MSDTC"></a>安装 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分布式事务处理协调器  
  在故障转移群集上安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之前，请确定是否必须创建 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分布式事务处理协调器 (MSDTC) 群集资源。 如果只安装 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]，则 MSDTC 群集资源不是必需的。 如果要安装 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 和 SSIS、工作站组件或者要使用分布式事务处理，则必须安装 MSDTC。 请注意，MSDTC 对于仅 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例不是必需的。  
   
  在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]中，您可以在单个故障转移群集上安装 MSDTC 的多个实例。 安装的第一个 MSDTC 实例将是 MSDTC 的群集默认实例。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将通过自动使用安装到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本地群集资源组的 MSDTC 实例，利用该 MSDTC 实例。 但是，单个应用程序可以映射到群集上的任何 MSDTC 实例。  

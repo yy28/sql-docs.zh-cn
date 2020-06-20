@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 599ff80b-392c-43aa-9db2-dc4ed33d4f6e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7d8b89024d27626516f99a5237c0efcd593bad0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02b112a93cb6098ab873ac2a698303b8a717afd3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021788"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065726"
 ---
 # <a name="publication-information-agents-snapshot-publication"></a>发布信息，代理（快照发布）
   **“代理”** 选项卡显示所选发布的快照代理的摘要信息。  
@@ -35,7 +34,7 @@ ms.locfileid: "63021788"
   
  筛选设置是特定于每个网格的。 列的选择和排序应用于同一类型的所有网格，如每个发布服务器的发布网格。  
   
- **状态**  
+ **Status**  
  快照代理的状态。 下面列出了可能的状态值：  
   
 -   错误  

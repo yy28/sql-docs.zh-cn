@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e7c3a3094309d2d1d32a840d4eee933555daa66a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d317e04251b3dedfc587d98898a366cf6a360bb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755581"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934320"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>数据库镜像和 SQL Server 故障转移群集实例
   故障转移群集是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集服务 (MSCS) 群集组（称为资源组）中的一个或多个物理磁盘的组合，这些磁盘是群集的节点。 资源组配置为承载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的故障转移群集实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例就好像是网络上的一台计算机，但是它可以提供故障转移服务，当一个节点不可用时，可以从该节点故障转移到另一个节点。 有关详细信息，请参阅 [AlwaysOn 故障转移群集实例 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
- 故障转移群集为整个[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例提供高可用性支持，这与数据库镜像相反，后者为单一数据库提供高可用性支持。 数据库镜像可以在故障转移群集之间进行，也可以在故障转移群集与非群集计算机之间进行。  
+ 故障转移群集为整个实例提供高可用性支持 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，这与数据库镜像相反，后者为单一数据库提供高可用性支持。 数据库镜像可以在故障转移群集之间进行，也可以在故障转移群集与非群集计算机之间进行。  
   
 > [!NOTE]  
 >  有关数据库镜像的介绍，请参阅 [数据库镜像 (SQL Server)](database-mirroring-sql-server.md)。  

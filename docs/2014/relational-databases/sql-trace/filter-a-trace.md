@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 381007cb26f74cdf945900436d8a9fcea5a4ef39
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: deb1a9825b2079e4836f654605097667d8edb05a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62714714"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068322"
 ---
 # <a name="filter-a-trace"></a>筛选跟踪
   筛选器将限制跟踪内收集的事件。 如果没有设置筛选器，则跟踪输出中将返回选定事件类的所有事件。 例如，如果将跟踪中的 Windows 用户名限定为特定用户，将仅输出与那些用户相关的数据。  
@@ -137,7 +136,7 @@ ms.locfileid: "62714714"
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- <sup>1</sup>如果从**osql**实用工具或**sqlcmd**实用工具跟踪事件，则始终将追加**%** 到**TextData**数据列上的筛选器。  
+ <sup>1</sup>如果从**osql**实用工具或**sqlcmd**实用工具跟踪事件，则始终将追加 **%** 到**TextData**数据列上的筛选器。  
   
  SQL 跟踪作为一种安全预防措施，会自动从跟踪中省略任何影响密码的、与安全相关的存储过程。 此安全机制不可配置，并且始终有效。 此机制阻止有权跟踪 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上的所有活动的用户捕获密码。  
   

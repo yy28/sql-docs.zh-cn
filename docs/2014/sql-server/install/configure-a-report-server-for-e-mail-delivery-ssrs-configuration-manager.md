@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c2e34258f10033c61f9966e62fa7c14025423613
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5f7d99c3459d7bf41a4b9b6552ad6dbb6fe2213c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952336"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036983"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>针对电子邮件传递配置报表服务器（SSRS 配置管理器）
 
@@ -67,7 +66,7 @@ ms.locfileid: "71952336"
   
 -   如果要仅指定一个 SMTP 服务器和一个具有发送电子邮件权限的用户帐户，则使用 Reporting Services 配置管理器。 以下是配置报表服务器电子邮件传递扩展插件所需的最低设置。 有关详细信息，请参阅[电子邮件设置-Configuration Manager &#40;SSRS 本机模式&#41;](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)和[Reporting Services 中的电子邮件传递](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)。  
   
--   （可选）使用文本编辑器在 RSreportserver.config 文件中指定其他设置。 此文件包含报表服务器电子邮件传递的所有配置设置。 如果要使用本地 SMTP 服务器或将电子邮件限定传递到特定主机，则需要在这些文件中指定其他设置。 有关查找和修改配置文件的详细信息，请参阅 SQL Server 联机丛书中[的 &#40;rsreportserver.config&#41;修改 Reporting Services 配置文件](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
+-   （可选）使用文本编辑器在 RSreportserver.config 文件中指定其他设置。 此文件包含报表服务器电子邮件传递的所有配置设置。 如果要使用本地 SMTP 服务器或将电子邮件限定传递到特定主机，则需要在这些文件中指定其他设置。 有关查找和修改配置文件的详细信息，请参阅 SQL Server 联机丛书中[的 &#40;RSreportserver.config&#41;修改 Reporting Services 配置文件](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
   
 > [!NOTE]  
 >  报表服务器电子邮件设置都是基于 CDO。 若要了解有关特定设置的更多详细信息，可以参考 CDO 产品文档。  
@@ -120,7 +119,7 @@ ms.locfileid: "71952336"
   
 3.  将 `DefaultHostName` 设置为 SMTP 服务器或转发器的域名系统 (DNS) 名称或 IP 地址。  
   
-4.  保存该文件。  
+4.  保存文件。  
   
   
   
@@ -148,12 +147,12 @@ ms.locfileid: "71952336"
   
  报表服务器与本地 SMTP 服务器或转发器之间的连接是由下列配置设置决定的：  
   
--   `SendUsing`设置为**1**。  
+-   `SendUsing` 设置为 1。  
   
 -   将**SMTPServerPickupDirectory** 设置为本地驱动器中的文件夹。  
   
     > [!NOTE]  
-    >  如果使用的是本地 SMTP 服务器`SMTPServer` ，请确保不设置。  
+    >  `SMTPServer`如果使用的是本地 SMTP 服务器，请确保不设置。  
   
 -   `From`设置显示在电子邮件的 "**发件人：** " 行中的值。 此值是必需的。  
   
@@ -169,7 +168,7 @@ ms.locfileid: "71952336"
   
 4.  在 **“发件人地址”** 中，输入有权从 SMTP 服务器发送电子邮件的帐户的名称。  
   
-5.  单击“应用”  。  
+5.  单击“应用”。  
   
 
   
@@ -179,9 +178,9 @@ ms.locfileid: "71952336"
   
 2.  在文本编辑器中打开 RSReportServer.config 文件。  
   
-3.  验证 <`UrlRoot`> 设置为 Report Server URL 地址。 此值是在您配置报表服务器时设置的，应该已经填写。 如果未设置此值，则请键入报表服务器 URL 地址。  
+3.  验证 <`UrlRoot`> 设置为 REPORT SERVER URL 地址。 此值是在您配置报表服务器时设置的，应该已经填写。 如果未设置此值，则请键入报表服务器 URL 地址。  
   
-4.  在 "传递" 部分中， `ReportServerEmail`查找 <>。  
+4.  在 "传递" 部分中，查找 <`ReportServerEmail`>。  
   
 5.  在 <`SMTPServer`> 中，键入 SMTP 服务器的名称。 此值可以是 IP 地址、企业 Intranet 上计算机的 UNC 名称或者完全限定域名。  
   
@@ -189,7 +188,7 @@ ms.locfileid: "71952336"
   
 7.  在 <`From`> 中，键入有权从 SMTP 服务器发送电子邮件的帐户的名称。  
   
-8.  保存该文件。  
+8.  保存文件。  
   
      报表服务器将自动使用新的设置；不需要重新启动该服务。 您可以指定其他 SMTP 设置，以进一步配置如何将 SMTP 服务器用于报表服务器电子邮件传递。 有关详细信息，请参阅 [ssNoVersion](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) 和 [ssNoVersion](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 联机丛书中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onl联机丛书中的e.  
   
@@ -207,11 +206,11 @@ ms.locfileid: "71952336"
   
 5.  选中 **“SMTP 服务”** 复选框，然后单击 **“确定”**。  
   
-6.  在 Windows 组件向导中，单击 **“下一步”**。 单击 **“完成”** 。  
+6.  在 Windows 组件向导中，单击 **“下一步”**。 单击“完成”。  
   
 7.  验证服务是否正在 **“服务”** 控制台上运行。  
   
-8.  在文本编辑器中打开**rsreportserver.config**文件。  
+8.  在文本编辑器中打开**RSReportServer.config**文件。  
   
 9. 请验证是否将 `<UrlRoot>` 设置为报表服务器 URL 地址。 此值是在您配置报表服务器时设置的，应该已经填写。 如果未设置此值，则请键入报表服务器 URL 地址。  
   
@@ -225,7 +224,7 @@ ms.locfileid: "71952336"
   
 14. 将 `<From>` 设置为有权从 SMTP 服务器发送电子邮件的帐户。  
   
-15. 保存该文件。  
+15. 保存文件。  
   
  
   

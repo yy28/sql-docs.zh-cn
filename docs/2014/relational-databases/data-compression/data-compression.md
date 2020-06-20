@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48c4b11963d8e05ff7787ce9200329daf2e899ba
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873556"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970367"
 ---
 # <a name="data-compression"></a>Data Compression
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持针对行存储表和索引的行和页压缩，并且支持针对列存储表和索引的列存储和列存储存档压缩。  
@@ -63,7 +62,7 @@ ms.locfileid: "62873556"
   
 -   通过压缩可在一页上存储更多的行，但不会更改表或索引的最大行大小。  
   
--   当最大行大小加上压缩开销超过最大行大小 8060 个字节时，不能对表启用压缩功能。 例如，不能压缩具有 c1`char(8000)`和 c2`char(53)`列的表，因为存在额外的压缩开销。 当使用 vardecimal 存储格式时，会在启用此格式时执行行大小检查。 对于行压缩和页压缩，在最初压缩对象时会执行行大小检查，以后在每插入或修改一行时也都会执行这一检查。 压缩功能要求遵循下面两条规则：  
+-   当最大行大小加上压缩开销超过最大行大小 8060 个字节时，不能对表启用压缩功能。 例如，不能压缩具有 c1 和 c2 列的表， `char(8000)` `char(53)` 因为存在额外的压缩开销。 当使用 vardecimal 存储格式时，会在启用此格式时执行行大小检查。 对于行压缩和页压缩，在最初压缩对象时会执行行大小检查，以后在每插入或修改一行时也都会执行这一检查。 压缩功能要求遵循下面两条规则：  
   
     -   固定长度类型的更新必须始终成功。  
   
@@ -108,7 +107,7 @@ ms.locfileid: "62873556"
   
 ||  
 |-|  
-|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|  
+|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到[当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。|  
   
 ### <a name="basics"></a>基础知识  
  列存储表和索引始终使用列存储压缩进行存储。 您可以通过配置称作存档压缩的附加压缩，进一步减少列存储数据的大小。  为了执行存档压缩， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将对数据运行 Microsoft XPRESS 压缩算法。 通过使用以下数据压缩类型添加或删除存档压缩：  
@@ -119,7 +118,7 @@ ms.locfileid: "62873556"
   
  若要添加存档压缩，请使用具有 REBUILD 选项且 DATA COMPRESSION = COLUMNSTORE 的 [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql) 或者 [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql) 。  
   
- 示例：  
+ 示例:  
   
 ```  
 ALTER TABLE ColumnstoreTable1   
@@ -135,7 +134,7 @@ REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE ON PARTITI
   
  若要删除存档压缩并且将数据还原为列存储压缩，请使用带有 REBUILD 选项并且 DATA COMPRESSION = COLUMNSTORE 的 [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql) 或者 [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql) 。  
   
- 示例：  
+ 示例:  
   
 ```  
 ALTER TABLE ColumnstoreTable1   
@@ -167,9 +166,9 @@ REBUILD PARTITION = ALL WITH (
 ### <a name="metadata"></a>元数据  
  下面的系统视图包含有关聚集索引的数据压缩的信息：  
   
--   [sys. 索引 &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) - `type`和`type_desc`列包含聚集列存储和非聚集列存储。  
+-   [sys. 索引 &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) - `type` 和 `type_desc` 列包含聚集列存储和非聚集列存储。  
   
--   [sys.databases &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) - `data_compression`和`data_compression_desc`列包含列存储和 COLUMNSTORE_ARCHIVE。  
+-   [sys.databases &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) - `data_compression` 和 `data_compression_desc` 列包含列存储和 COLUMNSTORE_ARCHIVE。  
   
  [sp_estimate_data_compression_savings (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) 过程不会应用在列存储索引中。  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 651b13121653f5627f59bc6a8a11f1e2e49c43b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b8a43f06a0c100725607dfc903bfd045a0d387b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211846"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067988"
 ---
 # <a name="modify-check-constraints"></a>修改 CHECK 约束
   当您希望更改约束表达式或更改对特定条件启用或禁用约束的选项时，可通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中修改 CHECK 约束。  

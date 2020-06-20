@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 952043d5d001fe4fe65e6dd1aa7bb2001290429e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39c09a3a73051e7a61f3a62a125232d83d1570c0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110064"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068082"
 ---
 # <a name="optimizing-the-neworg-table"></a>优化 NewOrg 表
-  在使用[现有层次结构数据填充表](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md)任务中创建的`hierarchyid` **NewOrd**表包含所有雇员信息，并使用数据类型表示层次结构。 此任务添加了新的索引，以便支持对 `hierarchyid` 列的搜索。  
+  在使用[现有层次结构数据填充表](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md)任务中创建的**NewOrd**表包含所有雇员信息，并使用数据类型表示层次结构 `hierarchyid` 。 此任务添加了新的索引，以便支持对 `hierarchyid` 列的搜索。  
   
 ## <a name="clustered-index"></a>聚集索引  
- 列（**OrgNode**）是 NewOrg 表的主键。 **NewOrg** `hierarchyid` 此表创建时，其内包含了一个名为 **PK_NewOrg_OrgNode** 的聚集索引，用于强制实现“OrgNode”**** 列的唯一性。 此聚集索引还支持对表进行深度优先搜索。  
+ `hierarchyid`列（**OrgNode**）是**NewOrg**表的主键。 此表创建时，其内包含了一个名为 **PK_NewOrg_OrgNode** 的聚集索引，用于强制实现“OrgNode”**** 列的唯一性。 此聚集索引还支持对表进行深度优先搜索。  
   
 ## <a name="nonclustered-index"></a>非聚集索引  
  此步骤将创建两个非聚集索引，用于支持典型搜索。  

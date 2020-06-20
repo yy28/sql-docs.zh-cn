@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8b1acd069ebbb64c090cd167b2f6feb2903af3b6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 232cc046667c6d31cb9657a7abdc862204507d23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702421"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059404"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>将 AUTO 模式与 FOR XML 一起使用
   如 [FOR XML (SQL Server)](for-xml-sql-server.md)中所述，AUTO 模式将查询结果以嵌套 XML 元素的方式返回。 这不能较好地控制从查询结果生成的 XML 的形式。 如果要生成简单的层次结构，AUTO 模式查询很有用。 但是， [将 EXPLICIT 模式与 FOR XML 一起使用](use-explicit-mode-with-for-xml.md) 和 [将 PATH 模式与 FOR XML 一起使用](use-path-mode-with-for-xml.md) 在确定从查询结果生成的 XML 的形式方面可提供更好的控制和更大的灵活性。  
@@ -121,7 +120,7 @@ FOR XML AUTO, ELEMENTS
 ...  
 ```  
   
- 在此查询中，因为 CustomerID 是表的主键，所以在创建 \<Cust> 元素的过程中会逐行比较 CustomerID 值。 如果未将 CustomerID 标识为表的主键，将逐行比较所有列值（此查询中的 CustomerID 和 CustomerType）。 如果值不同，将向 XML 添加新的 \<Cust> 元素。  
+ 在此查询中，CustomerID 值在创建元素的第二个行之间比较 \<Cust> ，因为 customerid 是表的主键。 如果未将 CustomerID 标识为表的主键，将逐行比较所有列值（此查询中的 CustomerID 和 CustomerType）。 如果这些值不同，将向 \<Cust> XML 中添加一个新元素。  
   
  在比较这些列值时，如果要比较的任何列是 **text**、 **ntext**、 **image**或 **xml**类型，即使它们的值可能相同，FOR XML 也将认为它们是不同的，并且不对其进行比较。 这是因为不支持大型对象的比较。 这些元素将被添加到每个选定行的结果中。 请注意，会比较 **(n)varchar(max)** 和 **varbinary(max)** 类型的列。  
   

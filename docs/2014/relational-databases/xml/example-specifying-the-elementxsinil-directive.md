@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5fff115ff60ef5343c317794578d6facdee928c8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 381f93f5c8bd5df0dc37a1f0b511aff0c830f013
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716702"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067794"
 ---
 # <a name="example-specifying-the-elementxsinil-directive"></a>示例：指定 ELEMENTXSINIL 指令
   当指定 ELEMENT 指令检索以元素为中心的 XML 时，如果列具有 NULL 值，则 EXPLICIT 模式将不生成相应的元素。 另外，也可以指定 ELEMENTXSINIL 指令以请求为 `xsi:nil` 属性设置为 TRUE 值的 NULL 值生成元素。  

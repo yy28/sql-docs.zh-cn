@@ -12,19 +12,18 @@ f1_keywords:
 ms.assetid: 579482ef-a023-45b2-9176-b4a4188adf9d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48dca8e9ce522f2520521441b2e7eea349ff099b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04b0d412cd577fb0869f2188d99c1ea6a5646d2b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096439"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037173"
 ---
 # <a name="cluster-network-configuration"></a>群集网络配置
   使用 **“群集网络选择”** 页可为故障转移群集实例指定网络资源。  
   
 ## <a name="options"></a>选项  
- **故障转移群集网络名称-这是用于在网络上标识故障转移群集实例的名称。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **  
+ ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集网络名称**-这是用于在网络上标识故障转移群集实例的名称。  
   
  **网络设置** - 指定故障转移群集实例的 IP 类型和 IP 地址。  
   

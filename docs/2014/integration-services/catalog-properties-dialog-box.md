@@ -12,22 +12,21 @@ f1_keywords:
 ms.assetid: 3e2fcf11-e010-41c6-bc26-e4b281c0bfbc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8d3492cce19906322ef9b420718aae0ae9e0e62d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f5bf6ecd9b78e4e7c35c63a1b84316d59da7a10
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061104"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924548"
 ---
 # <a name="catalog-properties-dialog-box"></a>“目录属性”对话框
-  使用“目录属性”对话框可以配置 SSISDB 目录。 目录属性定义如何对敏感数据进行加密、如何保留操作和项目版本控制数据以及验证操作何时超时。SSISDB 目录是用于[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]项目、包、参数和环境的中心存储和管理点。  
+  使用“目录属性”对话框可以配置 SSISDB 目录。 目录属性定义如何对敏感数据进行加密、如何保留操作和项目版本控制数据以及验证操作何时超时。SSISDB 目录是用于 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目、包、参数和环境的中心存储和管理点。  
   
  您还可以在 catalog.catalog_property 视图中查看目录属性，并且通过使用 catalog.configure_catalog 存储过程设置属性。 有关详细信息，请参阅 [catalog.catalog_properties（SSISDB 数据库）](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database)和 [catalog.configure_catalog（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database)。  
   
  有关如何创建 SSISDB 目录的信息，请参阅 [创建 SSIS 目录](catalog/ssis-catalog.md)。  
   
- **您希望做什么？**  
+ **要执行什么操作？**  
   
 -   [打开“目录属性”对话框](#open_dialog)  
   

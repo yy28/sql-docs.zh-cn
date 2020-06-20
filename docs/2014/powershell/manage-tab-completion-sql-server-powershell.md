@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6296848a-890f-4ad3-8d9f-92ed6a79aa00
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8e759e521d62def1f253ab5ef6423c29fb7fa2b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 15643a1f3980f6ccf66539fe447aa195b3d7012a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797786"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960379"
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>管理 Tab 填写功能 (SQL Server PowerShell)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 管理单元引入了三个变量（`$SqlServerMaximumTabCompletion`、`$SqlServerMaximumChildItems` 和 `$SqlServerIncludeSystemObjects`）来控制 Windows PowerShell 的 Tab 填写功能。 Tab 填写功能通过返回名称以您正在键入的字符串开头的项目的表，而减少了必须键入的内容量。  

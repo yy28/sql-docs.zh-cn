@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 593e51e34be3b607af121bfcba92497e019eba3f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1b39f5347a7ace6dc449be804144b105957b33e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703382"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068198"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>XML 大容量加载的指导原则和限制 (SQLXML 4.0)
   在使用 XML 大容量加载时，您应该熟悉以下指导原则和限制：  
@@ -35,9 +34,9 @@ ms.locfileid: "82703382"
   
 -   忽视所有 XML prolog 信息。  
   
-     XML 大容量加载将忽略 \< xml 文档中根> 元素之前和之后的所有信息。 例如，XML 大容量加载将忽视所有 XML 声明、内部 DTD 定义、外部 DTD 引用和注释等。  
+     XML 大容量加载将忽略 XML 文档中的元素之前和之后的所有信息 \<root> 。 例如，XML 大容量加载将忽视所有 XML 声明、内部 DTD 定义、外部 DTD 引用和注释等。  
   
--   如果您具有定义两个表之间（例如 Customer 和 CustOrder 之间）的主键/外键关系的映射架构，则必须在该架构中首先描述具有主键的表。 具有外键列的表必须出现在该架构中的后面。 这样做的原因是，架构中的表标识顺序是用于将它们加载到数据库中的顺序。例如，下面的 XDR 架构将在 XML 大容量加载中使用时产生错误，因为在** \< Customer>** 元素之前介绍了** \< Order>** 元素。 CustOrder 中的 CustomerID 列是引用 Cust 表中 CustomerID 主键列的外键列。  
+-   如果您具有定义两个表之间（例如 Customer 和 CustOrder 之间）的主键/外键关系的映射架构，则必须在该架构中首先描述具有主键的表。 具有外键列的表必须出现在该架构中的后面。 这样做的原因是，架构中的表标识顺序是用于将它们加载到数据库中的顺序。例如，下面的 XDR 架构将在 XML 大容量加载中使用时产生错误，因为在 **\<Order>** 元素前面介绍了元素 **\<Customer>** 。 CustOrder 中的 CustomerID 列是引用 Cust 表中 CustomerID 主键列的外键列。  
   
     ```  
     <?xml version="1.0" ?>  
@@ -77,7 +76,7 @@ ms.locfileid: "82703382"
   
 -   如果该架构未通过使用 `sql:overflow-field` 批注指定溢出列，则 XML 大容量加载将忽略在 XML 文档中提供、但未在该映射架构中描述的所有数据。  
   
-     XML 大容量加载只要在 XML 数据流中遇到已知标记，就会应用您指定的映射架构。 它将忽略在 XML 文档中提供、但未在该架构中描述的数据。 例如，假设您有一个映射架构，该架构描述了一个** \< Customer>** 元素。 XML 数据文件具有包含所有** \< 客户>** 元素的** \< AllCustomers>** 根标记（在架构中未介绍）：  
+     XML 大容量加载只要在 XML 数据流中遇到已知标记，就会应用您指定的映射架构。 它将忽略在 XML 文档中提供、但未在该架构中描述的数据。 例如，假设您有一个描述元素的映射架构 **\<Customer>** 。 XML 数据文件具有包含 **\<AllCustomers>** 所有元素的根标记（架构中未介绍） **\<Customer>** ：  
   
     ```  
     <AllCustomers>  
@@ -87,9 +86,9 @@ ms.locfileid: "82703382"
     </AllCustomers>  
     ```  
   
-     在这种情况下，XML 大容量加载将忽略** \< AllCustomers>** 元素，并在** \< Customer>** 元素处开始映射。 XML 大容量将加载忽略在该架构中未描述、但在 XML 文档中出现的元素。  
+     在这种情况下，XML 大容量加载将忽略 **\<AllCustomers>** 元素，并在元素处开始映射 **\<Customer>** 。 XML 大容量将加载忽略在该架构中未描述、但在 XML 文档中出现的元素。  
   
-     请考虑另一个 XML 源数据文件，其中包含** \< Order>** 元素。 以下元素在映射架构中未描述：  
+     请考虑包含元素的另一个 XML 源数据文件 **\<Order>** 。 以下元素在映射架构中未描述：  
   
     ```  
     <AllCustomers>  
@@ -105,11 +104,11 @@ ms.locfileid: "82703382"
     </AllCustomers>  
     ```  
   
-     XML 大容量加载将忽略这些** \< 顺序>** 元素。 但是，如果在 `sql:overflow-field` 架构中使用批注将列标识为溢出列，则 XML 大容量加载会将所有未用完的数据存储在此列中。  
+     XML 大容量加载将忽略这些 **\<Order>** 元素。 但是，如果在 `sql:overflow-field` 架构中使用批注将列标识为溢出列，则 XML 大容量加载会将所有未用完的数据存储在此列中。  
   
 -   CDATA 部分和实体引用在存储到数据库中之前将转换为等效的字符串。  
   
-     在此示例中，CDATA 节包装** \< City>** 元素的值。 XML 大容量加载在将** \< City>** 元素插入到数据库中之前提取字符串值（"NY"）。  
+     在此示例中，CDATA 节包装元素的值 **\<City>** 。 XML 大容量加载在将元素插入到数据库之前提取字符串值（"NY"） **\<City>** 。  
   
     ```  
     <City><![CDATA[NY]]> </City>  
@@ -142,7 +141,7 @@ ms.locfileid: "82703382"
     </Schema>  
     ```  
   
-     在此 XML 数据中，第二个** \< 客户>** 元素中缺少 "**雇佣**日期" 属性。 当 XML 大容量加载将第二个** \< 客户>** 元素插入到数据库中时，它将使用在该架构中指定的默认值。  
+     在此 XML 数据中，第二个元素缺少 "**雇佣**日期" 属性 **\<Customers>** 。 当 XML 大容量加载向数据库中插入第二个 **\<Customers>** 元素时，它将使用在该架构中指定的默认值。  
   
     ```  
     <ROOT>  

@@ -1,5 +1,6 @@
 ---
 title: OLE DB
+description: SQL Server Native Client OLE DB 提供程序是用于访问数据的 COM API，适用于需要高性能的工具、实用工具或低级别组件。
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,24 +20,24 @@ ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6df931b1d79d930aa7900e8fbc6980aec58b9171
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5f945ca5abaa515823ea81ad30ca4292cc42690
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387744"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84948651"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序（sqlncli.msi）是用于访问数据的低级别 COM API。 建议将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口用于开发需要高性能的工具、实用工具或底层组件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口是直接访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表格格式数据流 (TDS) 协议的本机高性能访问接口。  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序（sqlncli.msi）是用于访问数据的低级别 COM API。 建议将 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口用于开发需要高性能的工具、实用工具或底层组件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口是直接访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表格格式数据流 (TDS) 协议的本机高性能访问接口。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 对连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的应用程序提供 OLE DB 支持。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序是一个 OLE DB 版本2.0 兼容的提供程序。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序是一个 OLE DB 版本2.0 兼容的提供程序。  
  
 > [!IMPORTANT]
-> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB （sqlncli.msi）将保持不推荐使用，不建议用于新的开发工作。 相反，请使用新的 [Microsoft OLE DB Driver for SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL)，其将使用最新的服务器功能进行更新。
+> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB （sqlncli.msi）将保持不推荐使用，不建议用于新的开发工作。 相反，请使用新的 [Microsoft OLE DB Driver for SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL)，其将使用最新的服务器功能进行更新。
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -66,7 +67,7 @@ ms.locfileid: "81387744"
   
 -   [FILESTREAM 支持 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
   
--   [事务](../../../relational-databases/native-client-ole-db-transactions/transactions.md)  
+-   [中的](../../../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
 -   [错误](../../../relational-databases/native-client-ole-db-errors/errors.md)  
   

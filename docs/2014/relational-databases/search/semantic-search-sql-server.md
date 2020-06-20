@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 651705426b52b822c3eb8c7cf9d341968bbc088f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91062864b77ba3c62a87d66b8ff93068f9c10c8c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010985"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003867"
 ---
 # <a name="semantic-search-sql-server"></a>语义搜索 (SQL Server)
   统计语义搜索通过提取统计上相关的“关键短语” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*并对其进行索引，提供对*中存储的非结构化文档的更深层次剖析。 然后，它还使用这些关键短语标识“相似或相关文档” ** 并对其进行索引。  

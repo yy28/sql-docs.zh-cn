@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5b202457-ab42-4902-8012-7f3f40aa09f5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8d86515646236916a9c651c7fa02923b88b995cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f70460e68d1161fa8aa718a5e5264a8e6f0782df
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089549"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928162"
 ---
 # <a name="trace-template-properties-events-selection-tab"></a>跟踪模板属性（“事件选择”选项卡）
   使用 **“跟踪模板属性”** 对话框的 **“事件选择”** 选项卡，可以查看、编辑或指定要包含在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 跟踪模板中的事件类和数据列。  

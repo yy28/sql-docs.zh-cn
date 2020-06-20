@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4cdadcb1301a5755b57485ac8e622cd66e850c57
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ec3677976a82cfb9237c4bcab267ae67f8f6cc5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717319"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059545"
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>将现有列更改为 XML 列
   ALTER TABLE 语句支持 `xml` 数据类型。 例如，可以将任意字符串类型列更改为 `xml` 数据类型。 注意，在这些情况下，列中包含的文档必须格式正确。 此外，如果将列的类型从字符串更改为类型化的 xml，则列中的文档将根据指定的 XSD 架构进行验证。  

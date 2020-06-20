@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f597aa6c9ba9759b606501b0bd72a2166b1805e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd2452a969f290f4d33529eee44d36611c8d7525
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127409"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050735"
 ---
 # <a name="srv_message_handler-extended-stored-procedure-api"></a>srv_message_handler（扩展存储过程 API）
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]请改用 CLR 集成。  
   
- 调用安装的扩展存储过程 API 消息处理程序。 此函数通常用于从扩展存储[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]过程调用，以在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]错误日志文件或[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 应用程序日志中记录错误（由扩展存储过程定义）。  
+ 调用安装的扩展存储过程 API 消息处理程序。 此函数通常用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 从扩展存储过程调用，以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志文件或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 应用程序日志中记录错误（由扩展存储过程定义）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -79,7 +78,7 @@ oserrtextlen
  severity   
  错误的标准 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 严重性值。 该数字必须介于 0 和 24 之间。  
   
- *state*  
+ State   
  错误的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 状态值。  
   
  oserrnum**  

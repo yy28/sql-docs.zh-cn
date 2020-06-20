@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d4501bc77a28746de3b0ce97b7b619889093650d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c1a941494de632ff286b0ad7007d851a1db5454
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918573"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970532"
 ---
 # <a name="set-or-change-the-server-collation"></a>设置或更改服务器排序规则
   服务器排序规则用作与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例一起安装的所有系统数据库以及任何新创建的用户数据库的默认排序规则。 服务器排序规则是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装期间指定的。 有关详细信息，请参阅 [排序规则和 Unicode 支持](collation-and-unicode-support.md)。  

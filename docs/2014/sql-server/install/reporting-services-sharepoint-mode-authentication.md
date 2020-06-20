@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c19794a-dd55-4fe5-b901-6dd93e9f6beb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ff0a4f38bf9ee7d9c27fbc07308084ed3272f95d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b1316a1a49726ab0754f39160125425fec116d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952104"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059017"
 ---
 # <a name="reporting-services-sharepoint-mode-authentication"></a>Reporting Services SharePoint 模式身份验证
   使用 ****[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 页可以指定在当前 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装中使用的服务帐户的凭据。 这些凭据将用来创建新的 SharePoint 应用程序池。 此外，还将创建一个新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 服务应用程序。 客户端应用程序名称将包含前一个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例的名称。  
@@ -30,7 +29,7 @@ ms.locfileid: "71952104"
   
 -   如果应用程序池帐户不需要密码，则将禁用 **“SSRS 应用程序池帐户密码:”** 选项。 例如，"NT Authority\NetworkService"。 如果应用程序池帐户的确需要密码，仅当您键入正确的密码，才能继续进行升级。  
   
- 有关详细信息，请参阅[升级和迁移 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628) （https://go.microsoft.com/fwlink/?LinkID=245628)。  
+ 有关详细信息，请参阅[升级和迁移 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628) （ https://go.microsoft.com/fwlink/?LinkID=245628) 。  
   
 ## <a name="see-also"></a>另请参阅  
  [升级和迁移 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628)  

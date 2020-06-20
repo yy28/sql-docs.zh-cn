@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 72c5bfde-b0b2-4372-bf36-97ba930dea06
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 00aade3025f83d485d57d9e4975760c05c8064b4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 176cdb15a2b6930582fb5ffee96ab264542dad9d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702466"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013158"
 ---
 # <a name="the-xsqname-type"></a>The xs:QName Type
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持通过使用 XML 架构限制元素从 **xs:QName** 派生的类型。 当前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也不支持将 **QName** 作为成员类型的联合类型。  

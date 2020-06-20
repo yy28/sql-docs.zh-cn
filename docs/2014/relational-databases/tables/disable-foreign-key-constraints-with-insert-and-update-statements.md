@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 029168d7-085e-4b13-9b86-5644b67c6e24
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 548e894f64aba590475472d843337d8de1fe5e0e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e91328f4f12f2a0a27f397c7bd95390a505f3998
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761001"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068122"
 ---
 # <a name="disable-foreign-key-constraints-with-insert-and-update-statements"></a>使用 INSERT 和 UPDATE 语句禁用外键约束
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，您可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 INSERT 和 UPDATE 事务期间禁用外键约束。 如果您知道新数据将与现有约束冲突或者如果约束仅适用于数据库中已有的数据，则可选择此选项。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 27ec7eb3-3a24-41db-aa65-2f206514c6f9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e7f7f04b04792167fe9c4733f3e066c362f3cae4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 213051d56869159545428505e7cb0a7b9fd33226
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843052"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927788"
 ---
 # <a name="using-in-memory-oltp-in-a-vm-environment"></a>在虚拟机环境下使用内存中 OLTP
   服务器虚拟化可以帮助你改进应用程序配置、维护、可用性和备份/恢复流程，进而降低 IT 资本和运营成本并提高 IT 效率。 由于近年来的技术进步，可以更轻松地使用虚拟化来合并复杂的数据库工作负载。 本主题说明了在虚拟化环境中使用 [!INCLUDE[hek_1](../includes/hek-1-md.md)] 的最佳做法。  
@@ -31,7 +30,7 @@ ms.locfileid: "62843052"
   
  如果在数据库带有内存优化表时遵循上述做法，尝试还原和恢复数据库可能会导致数据库处于“恢复挂起”状态，即使你拥有可恢复数据库的足够内存时也是如此。 原因在于，与动态内存分配功能将内存分配至数据库相比， [!INCLUDE[hek_2](../includes/hek-2-md.md)] 在启动时以更主动的方式将数据存入内存。  
   
- **解决方法**  
+ **分辨率**  
   
  要缓解此问题，请将足够内存预先分配至数据库以恢复或重新启动数据库，而不要分配最小值，依靠动态内存在需要时分配更多内存。  
   

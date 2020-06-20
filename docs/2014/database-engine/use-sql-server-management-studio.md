@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: f289e978-14ca-46ef-9e61-e1fe5fd593be
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 709707caa9087ceadaa11cfd4b415eadd6c3702c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773868"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927928"
 ---
 # <a name="use-sql-server-management-studio"></a>使用 SQL Server Management Studio
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]（SSMS）是一个集成环境，用于访问、配置、管理和开发的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]所有组件。 SSMS 将大量图形工具与丰富的脚本编辑器相结合，使各种技术水平的开发人员和管理员都能访问 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]（SSMS）是一个集成环境，用于访问、配置、管理和开发的所有组件 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 SSMS 将大量图形工具与丰富的脚本编辑器相结合，使各种技术水平的开发人员和管理员都能访问 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
  SSMS 将早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中所包含的企业管理器、查询分析器和 Analysis Manager 结合到单一的环境中。 此外，SSMS 还可以与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的所有组件（例如 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]）协同工作。 开发人员可以获得熟悉的体验，而数据库管理员可获得功能齐全的单一实用工具，其中包含易于使用的图形工具和丰富的脚本撰写功能。  
   

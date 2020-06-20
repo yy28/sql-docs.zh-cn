@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 084b3879-e96b-45a7-b421-6a4b0db2b92b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 58d94afea9c6801d75a67f6f9136441d536eb696
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81ceb839aa789985bd9de2d43c28c9f01c99af3f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62956142"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066378"
 ---
 # <a name="add-existing-items-to-a-project"></a>向项目中添加现有项
   向项目中添加新项，以扩展应用程序功能。 现有项可以是查询，也可以是杂项文件。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 有两个项目类型： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本项目和 Analysis Services 脚本项目。 至于哪些查询文件可以添加到项目中，则取决于项目类型。 例如，可以将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询（扩展名为 .sql 的文件）添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本项目，但是不能将其添加到 Analysis Services 脚本项目。 若要将其他文件扩展名关联到项目类型，请参阅[将文件扩展名与代码编辑器关联](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)。  
@@ -45,7 +44,7 @@ ms.locfileid: "62956142"
      使用此选项可以筛选所显示的文件和文件夹。 输入要用来筛选的完整或部分文件名，使用星号 (`*`) 作为通配符。  
   
     > [!NOTE]  
-    >  通过在“文件名”  框中输入 URL 或网络路径，导航到 Web 和网络位置。 例如，输入  **可显示 mywebsite Web 位置中可用的文件，输入 http://mywebsite\myserver\myshare 可显示 myserver 上的 myshare 位置中可用的文件** **\\** 。  
+    >  通过在“文件名”  框中输入 URL 或网络路径，导航到 Web 和网络位置。 例如，输入 http://mywebsite 可显示 mywebsite Web 位置中可用的文件，输入 \\\myserver\myshare 可显示 myserver 上的 myshare 位置中可用的文件。  
   
      **文件类型**  
      使用此选项基于文件扩展名筛选文件。 每个产品列出最常用文件类型的默认筛选器。  

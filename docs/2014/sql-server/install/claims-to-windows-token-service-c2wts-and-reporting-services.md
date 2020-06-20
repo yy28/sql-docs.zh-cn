@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dc6636946f7c94992fc831f814df57baf6397a1f
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 72b88bd1bd2a033683f83dd53cca8404eccb613f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922152"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059347"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) 和 Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]如果要对 sharepoint 场之外的数据源使用 windows 身份验证，则需要使用 sharepoint 模式下的 Sharepoint 声明到 Windows 令牌服务（c2WTS）。 即使用户使用 Windows 身份验证访问数据源，上述要求也是成立的。其原因在于，Web 前端 (WFE) 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共享服务之间的通信将始终是 Claims 身份验证。  
@@ -69,7 +68,7 @@ ms.locfileid: "82922152"
   
 2.  配置 c2WTS "AllowedCallers"  
   
-     c2WTS 要求在配置文件**c2wtshost.exe.config**中显式列出的 "调用方" 标识。c2WTS 不接受系统中所有经过身份验证的用户的请求，除非已将其配置为执行此操作。 在此情况下，“调用方”是 WSS_WPG Windows 组。 该 c2wtshost.exe.confi 文件保存在以下位置：  
+     c2WTS 要求在配置文件中显式列出的 "调用方" 标识**c2wtshost.exe.config**。c2WTS 不接受系统中所有经过身份验证的用户的请求，除非已将其配置为执行此操作。 在此情况下，“调用方”是 WSS_WPG Windows 组。 该 c2wtshost.exe.confi 文件保存在以下位置：  
   
      **\Program Files\Windows 标识 Foundation\v3.5\c2wtshost.exe.config**  
   
