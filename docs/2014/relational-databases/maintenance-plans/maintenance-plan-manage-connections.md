@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 95ad9375-6584-423e-b9de-0e86782f8017
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f56f084186e84ad4844dcae3f1b896f28f93bfac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6b9f0c1652ead2f21567634b758ce81485b47b7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63183725"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024378"
 ---
 # <a name="maintenance-plan-manage-connections"></a>维护计划（管理连接）
   使用 **“管理连接”** 对话框可以指定由维护计划使用的连接的属性。 在创建某个维护计划时，将会与创建该计划所在的服务器建立本地连接。 使用此连接，可以创建在此本地连接上执行工作的任务。 如果需要的话，请使用 **“管理连接”** 对话框添加任务。 配置其他连接后，它们将出现在每个任务的连接框中。  

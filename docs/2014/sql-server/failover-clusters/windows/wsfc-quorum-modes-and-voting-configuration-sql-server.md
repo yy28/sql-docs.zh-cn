@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7febab9f8ecf6cae4df08f110a16c0bdc512a948
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b1d5ad992c59f252f485f2d65451a72f150bef8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62711432"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046238"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC 仲裁模式和投票配置 (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 AlwaysOn 故障转移群集实例 (FCI) 都利用 Windows Server 故障转移群集 (WSFC) 来作为平台技术。  WSFC 使用一种基于仲裁的方法来监视群集的整体运行状况，并且最大限度地提高节点级别的容错能力。 理解 WSFC 仲裁模式和节点投票配置对于 AlwaysOn 高可用性和灾难恢复解决方案的设计、操作和故障排除十分重要。  
@@ -55,7 +54,7 @@ ms.locfileid: "62711432"
   
  以下仲裁模式可用于确定构成投票仲裁的元素：  
   
--   **节点的大多数。** 群集中超过一半的投票节点必须投票赞成群集处于正常状态。  
+-   **节点多数。** 群集中超过一半的投票节点必须投票赞成群集处于正常状态。  
   
 -   **节点和文件共享的大多数。** 与节点的大多数仲裁模式相似，只有远程文件共享也配置为投票见证除外，并且从任何节点到该共享的连接也作为赞成投票计数。  超过一半的可能投票必须赞成群集处于正常状态。  
   
@@ -87,7 +86,7 @@ ms.locfileid: "62711432"
 > [!IMPORTANT]  
 >  为了使用 NodeWeight 设置，必须将以下修补程序应用到 WSFC 群集中的所有服务器：  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036)：提供了一个修补程序，可让你配置在[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)]和中没有仲裁投票的群集节点[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036)：提供了一个修补程序，可让你配置在和中没有仲裁投票的群集节点 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)][!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 ##  <a name="recommended-adjustments-to-quorum-voting"></a><a name="RecommendedAdjustmentstoQuorumVoting"></a> 建议的仲裁投票调整  
  在启用或禁用某一给定 WSFC 节点的投票时，应遵循以下准则：  

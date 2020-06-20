@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7e6b6c48860495603ca73842e5617986d5829966
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c6fa704e45e4e85b479ae8a40a3e567bea1ec5e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82709598"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049723"
 ---
 # <a name="calling-a-stored-procedure"></a>调用存储过程
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序同时支持 ODBC 调用转义序列和执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程的[EXECUTE](/sql/t-sql/language-elements/execute-transact-sql)语句; odbc call 转义序列是首选方法。 使用 ODBC 语法使应用程序能检索存储过程的返回代码，还可以对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序进行优化以使用最初为在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的两台计算机间发送远程过程调用 (RPC) 开发的协议。 此 RPC 协议通过避免在服务器上进行大量参数处理和语句分析来提高性能。  

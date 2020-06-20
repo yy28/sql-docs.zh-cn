@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2c0dc1566693ad8d8c86d7efe47403248788b076
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d03e259bd0aff8fce02558dbe08efb56748493c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144725"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024672"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>解决事务日志已满的问题（SQL Server 错误 9002）
   本主题讨论对已满事务日志可以采取的几种应对措施，并就以后如何避免出现已满事务日志给出建议。 如果事务日志已满，则 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 会发出 9002 错误。 当数据库联机或恢复时，日志可能会满。 如果日志在数据库处于联机状态时已满，则该数据库仍会保持联机状态，但只能读取，不能更新。 如果恢复过程中日志已满，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将数据库标记为 RESOURCE PENDING。 不管哪种情况，都需要用户执行操作才能使日志空间可用。  
@@ -99,7 +98,7 @@ ms.locfileid: "63144725"
 ## <a name="see-also"></a>另请参阅  
  [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
  [管理事务日志文件的大小](manage-the-size-of-the-transaction-log-file.md)   
- [事务日志备份 &#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md)   
+ [事务日志备份 (SQL Server)](../backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql)  
   
   

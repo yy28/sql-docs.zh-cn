@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 641a10a1-ae52-4d26-8f1c-a032a4aeff02
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 53eb4eb049bfe700a83d58e05a3af1ee4f6f41a6
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: ab12b507246a3e13ac59be213813604d531d9a28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859695"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012734"
 ---
 # <a name="database-engine-configuration---filestream"></a>数据库引擎配置 - 文件流
   使用此页可针对此 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安装启用 FILESTREAM。 FILESTREAM 通过将 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] `varbinary(max)` 二进制大型对象（BLOB）数据作为文件存储在文件系统中，将二进制大型对象（BLOB）数据与 NTFS 文件系统集成。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可插入、更新、查询、搜索和备份 FILESTREAM 数据。 Win32 文件系统接口提供对数据的流访问权限。  

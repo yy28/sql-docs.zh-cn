@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 596f5092-75ab-4a19-8582-588687c7b089
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 51cf4acc8ed270c8302137fe5050c06cb35e91ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 327b4a373c28376701ea12400215ab00367df66a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023534"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057137"
 ---
 # <a name="mssql_eng021798"></a>MSSQL_ENG021798
     
@@ -39,12 +38,12 @@ ms.locfileid: "63023534"
   
 -   存储过程 **sp_addpublication** 在执行 [sp_addlogreader_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql) 之前执行。 这适用于所有的事务发布。  
   
--   存储过程 **sp_addpublication** 在执行 [sp_addqreader_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql) 之前执行。 这适用于为排队更新订阅启用的事务发布（ **@allow_queued_tran** **sp_addpublication**的参数值为 TRUE）。  
+-   存储过程 **sp_addpublication** 在执行 [sp_addqreader_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql) 之前执行。 这适用于为排队更新订阅启用的事务发布（sp_addpublication 的参数值为 TRUE **@allow_queued_tran** ）。 **sp_addpublication**  
   
  存储过程 **sp_addlogreader_agent** 和 **sp_addqreader_agent** 各创建一个代理作业并允许您指定运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户。 对于 **sysadmin** 角色中的用户，如果未执行 **sp_addlogreader_agent** 和 **sp_addqreader_agent** ，则将隐式创建代理作业；代理在分发服务器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户的上下文中运行。 尽管 **sp_addlogreader_agent** 和 **sp_addqreader_agent** 对于 **sysadmin** 角色中的用户不是必须的，但是为了安全起见，最好为代理指定单独的帐户。 有关详细信息，请参阅 [复制代理安全模式](security/replication-agent-security-model.md)。  
   
 ## <a name="user-action"></a>用户操作  
- 请确保按正确的顺序执行过程。 有关详细信息，请参阅[创建发布](publish/create-a-publication.md)，更新这些脚本以包含[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更高版本所需的存储过程和参数。 有关详细信息，请参阅[升级复制脚本（复制 Transact-SQL 编程）](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)。  
+ 请确保按正确的顺序执行过程。 有关详细信息，请参阅[创建发布](publish/create-a-publication.md)，更新这些脚本以包含 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本所需的存储过程和参数。 有关详细信息，请参阅[升级复制脚本（复制 Transact-SQL 编程）](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [错误和事件参考（复制）](errors-and-events-reference-replication.md)  

@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 503cc731ede59b4cc3cf70e9cf2daafec436243c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cadbc9e06530706f0b1e1406af7b38b72246303f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716739"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067832"
 ---
 # <a name="example-specifying-the-element-directive-and-entity-encoding"></a>示例：指定 ELEMENT 指令和实体编码
-  下面的这个示例说明了 **ELEMENT** 和 **XML** 指令之间的差异。 **ELEMENT** 指令会实体化数据，但 **XML** 指令则不会。 在查询中向 \<Summary> 元素分配了 XML `<Summary>This is summary description</Summary>`。  
+  下面的这个示例说明了 **ELEMENT** 和 **XML** 指令之间的差异。 **ELEMENT** 指令会实体化数据，但 **XML** 指令则不会。 \<Summary>在查询中向元素分配了 XML `<Summary>This is summary description</Summary>` 。  
   
  请看下面的查询：  
   

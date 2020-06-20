@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 13afe8de4806b76328288c0d910a244e293109c5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3b8d1de2ad5e95ea83d323c6e5e772f31f59c549
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704395"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049637"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>将连接字符串关键字用于 SQL Server Native Client
   某些 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client API 使用连接字符串来指定连接属性。 连接字符串是关键字和关联的值的列表；每个关键字标识特定的连接属性。  
@@ -53,8 +52,8 @@ ms.locfileid: "82704395"
 |`Addr`|“Address”的同义词。|  
 |`Address`|运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的服务器的网络地址。 `Address` 通常是服务器的网络名称，也可以是诸如管道、IP 地址或 TCP/IP 端口和套接字地址之类的其他名称。<br /><br /> 如果指定了 IP 地址，请确保在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置管理器中启用了 TCP/IP 或 named pipes 协议。<br /><br /> 在使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 时，`Address` 的值优先于传递到 ODBC 连接字符串中的 `Server` 的值。 还请注意，`Address=;` 将连接到在 `Server` 关键字中指定的服务器，而 `Address= ;, Address=.;`、`Address=localhost;` 和 `Address=(local);` 都会导致连接到本地服务器。<br /><br /> `Address` 关键字的完整语法如下所示：<br /><br /> [*protocol* `:` ]*Address*[ `,` *port &#124;\pipe\pipename*]<br /><br /> *协议*可以是 `tcp` （tcp/ip）、 `lpc` （共享内存）或 `np` （命名管道）。 有关协议的详细信息，请参阅[配置客户端协议](../../../database-engine/configure-windows/configure-client-protocols.md)。<br /><br /> 如果既*protocol*没有指定协议 `Network` ，也未指定关键字，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将使用 Configuration Manager 中指定的协议顺序 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。<br /><br /> “port”是指定服务器上所要连接到的端口  。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用端口 1433。|  
 |`AnsiNPW`|如果是“yes”，则驱动程序使用 ANSI 定义的行为来处理 NULL 比较、字符数据填充、警告和 NULL 串联。 如果是“no”，则不公开 ANSI 定义的行为。 有关 ANSI NPW 行为的详细信息，请参阅[ISO 选项的影响](../../native-client-odbc-queries/executing-statements/effects-of-iso-options.md)。|  
-|`APP`|调用[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)的应用程序的名称（可选）。 如果指定此值，此值将存储在**sysprocesses**列**program_name**中，并由[sp_who](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)和[APP_NAME](/sql/t-sql/functions/app-name-transact-sql)函数返回。|  
-|`ApplicationIntent`|连接到服务器时声明应用程序工作负荷类型。 可能值为 `ReadOnly` 和 `ReadWrite`。 例如： ApplicationIntent = ReadOnly<br /><br /> 默认值为 `ReadWrite`。 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 对的支持的详细信息 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ，请参阅[对高可用性和灾难恢复的 SQL Server Native Client 支持](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
+|`APP`|调用[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)的应用程序的名称（可选）。 如果指定此值，此值将存储在**master.dbo.sys处理**"列中**program_name**并由[sp_who](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)和[APP_NAME](/sql/t-sql/functions/app-name-transact-sql)函数返回。|  
+|`ApplicationIntent`|连接到服务器时声明应用程序工作负荷类型。 可能值为 `ReadOnly` 和 `ReadWrite`。 例如： ApplicationIntent = ReadOnly<br /><br /> 默认为 `ReadWrite`。 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 对的支持的详细信息 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ，请参阅[对高可用性和灾难恢复的 SQL Server Native Client 支持](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
 |`AttachDBFileName`|可附加数据库的主文件的名称。 如果使用 C 字符串变量，请包括完整路径，并将所有 \ 字符转义：<br /><br /> `AttachDBFileName=c:\\MyFolder\\MyDB.mdf`<br /><br /> 附加此数据库并使其成为连接的默认数据库。 若要使用 `AttachDBFileName` ，还必须在[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)数据库参数或 SQL_COPT_CURRENT_CATALOG 连接属性中指定数据库名称。 如果该数据库以前已经附加，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不重新附加它；而是使用已附加的数据库作为连接的默认数据库。|  
 |`AutoTranslate`|如果是“yes”，则客户端和服务器之间发送的 ANSI 字符串将通过 Unicode 进行转换，以使在客户端与服务器的代码页之间匹配扩展字符的问题最小化。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用客户端 ANSI 代码页（ACP）将发送到**CHAR**、 **varchar**或**text**变量、参数或列的客户端 SQL_C_CHAR 数据从字符转换为 unicode，然后使用服务器的 ACP 将其从 Unicode 转换为字符。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用服务器 ACP 将发送到客户端 SQL_C_CHAR 变量的**char**、 **varchar**或**text**数据从字符转换为 UNICODE，然后使用客户端 ACP 将 unicode 转换为字符。<br /><br /> 这些转换由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序在客户端上执行。 这要求在服务器上使用的相同 ANSI 代码页 (ACP) 在客户端上可用。<br /><br /> 这些设置对于为下面这些传输而发生的转换无效：<br /><br /> -Unicode SQL_C_WCHAR 发送到服务器上的**char**、 **varchar**或**text**的客户端数据。<br />-   发送到客户端上的 Unicode SQL_C_WCHAR 变量的**char**、 **varchar**或**text**服务器数据。<br />-ANSI SQL_C_CHAR 发送到服务器上的 Unicode **nchar**、 **nvarchar**或**ntext**的客户端数据。<br />-发送到客户端上的 ANSI SQL_C_CHAR 变量的 Unicode **nchar**、 **nvarchar**或**ntext**服务器数据。<br /><br /> 如果是“no”，则不执行字符转换。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 驱动程序不会将客户端 ANSI 字符转换 SQL_C_CHAR 发送到服务器上的**CHAR**、 **varchar**或**text**变量、参数或列的数据。 不会对从服务器发送到客户端上的 SQL_C_CHAR 变量的**char**、 **varchar**或**text**数据执行转换。<br /><br /> 如果客户端和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 正在使用不同的 ACP，则扩展字符可能被错误解释。|  
 |`Database`|连接的默认 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的名称。 如果不指定 `Database`，则使用为登录定义的默认数据库。 来自 ODBC 数据源的默认数据库将覆盖为登录定义的默认数据库。 除非还指定了 `AttachDBFileName`，否则数据库必须是现有数据库。 如果还指定了 `AttachDBFileName`，则会附加它指向的主文件，并将该文件设为由 `Database` 指定的数据库名称。|  
@@ -67,7 +66,7 @@ ms.locfileid: "82704395"
 |`FileDSN`|现有 ODBC 文件数据源的名称。|  
 |`Language`|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 语言名称（可选）。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]可以在**sysmessages**中存储多种语言的消息。 如果连接到使用多种语言的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，则 `Language` 指定将哪组消息用于此连接。|  
 |`MARS_Connection`|启用或禁用连接上的多个活动结果集 (MARS)。 可识别的值为“yes”和“no”。 默认值为 "no"。|  
-|`MultiSubnetFailover`|在连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可用性组侦听器或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的可用性组侦听器时，应始终指定 `multiSubnetFailover=Yes`。 `multiSubnetFailover=Yes` 将配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 以便更快地检测和连接到（当前）活动服务器。 可能的值为 `Yes` 和 `No`。 例如：<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> 默认值为 `No`。 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 对的支持的详细信息 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ，请参阅[对高可用性和灾难恢复的 SQL Server Native Client 支持](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
+|`MultiSubnetFailover`|在连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可用性组侦听器或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的可用性组侦听器时，应始终指定 `multiSubnetFailover=Yes`。 `multiSubnetFailover=Yes` 将配置 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 以便更快地检测和连接到（当前）活动服务器。 可能值为 `Yes` 和 `No`。 例如：<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> 默认为 `No`。 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 对的支持的详细信息 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ，请参阅[对高可用性和灾难恢复的 SQL Server Native Client 支持](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
 |`Net`|“Network”的同义词。|  
 |`Network`|有效值为**dbnmpntw** （named pipes）和**dbmssocn** （tcp/ip）。<br /><br /> 如果为 `Network` 关键字指定了一个值，同时在 `Server` 关键字中指定了一个协议前缀，则会出现错误。|  
 |`PWD`|在 UID 参数中指定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录帐户的密码。 如果登录有 NULL 密码，或使用 Windows 身份验证 (`Trusted_Connection = yes`)，则不需要指定 `PWD`。|  
@@ -85,7 +84,7 @@ ms.locfileid: "82704395"
 |`TrustServerCertificate`|与 `Encrypt` 一起使用时，使用自签名的服务器证书启用加密。|  
 |`UID`|有效的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录帐户。 使用 Windows 身份验证时，不需要指定 UID。|  
 |`UseProcForPrepare`|此关键字已弃用，并且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驱动程序将忽略其设置。|  
-|`WSID`|工作站 ID。 通常，这是应用程序驻留于其上的计算机的网络名称（可选）。 如果指定此值，则该值将存储在**sysprocesses**列**主机名**中，并由[sp_who](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)和[HOST_NAME](/sql/t-sql/functions/host-name-transact-sql)函数返回。|  
+|`WSID`|工作站 ID。 通常，这是应用程序驻留于其上的计算机的网络名称（可选）。 如果指定此值，则会将此值存储在**master.dbo.sys处理**列**主机名**，并由[sp_who](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)和[HOST_NAME](/sql/t-sql/functions/host-name-transact-sql)函数返回。|  
   
  **区域转换设置适用于货币、数字、日期和时间数据类型。转换设置仅适用于输出转换，并且仅在将货币、数字、日期或时间值转换为字符串时可见**。  
   

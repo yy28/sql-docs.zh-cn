@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 32e31469-36e4-42d9-a57a-12388bfd229d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b33cfe47cebba4c24c90ad41ce1b218192d128f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27a7a4f5e5c3c303d5a1cbe257c0a0e9b531e824
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255326"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047570"
 ---
 # <a name="validate-all-subscriptions"></a>验证所有订阅
   可以使用 **“验证所有订阅”** 对话框，指定下次运行各个订阅的合并代理时应验证对合并发布的所有订阅。 验证的结果显示在复制监视器中。 有关详细信息，请参阅 [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)。  

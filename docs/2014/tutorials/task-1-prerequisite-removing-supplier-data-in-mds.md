@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 6f0a4287-7fd4-4f18-b7e4-a5191a9d4a3c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0290f033be47bec61e9ccce8465892d8cc98608c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec3d7aa164cc75485ba7d7d7b5a6533e7d4f30cf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81484627"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064829"
 ---
 # <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>任务 1（先决条件）：删除 MDS 中的供应商数据
   在本任务中，您将删除在 MDS 中存储的供应商数据。 您在上一课中使用**MDS Excel 外接程序**手动上传了数据。 您在本课中创建的 SSIS 包将自动为您将数据上载到 MDS。 因此，在测试该 SSIS 包之前，您需要从 MDS 删除供应商数据，删除派生的层次结构，删除供应商和状态实体，并且创建不含数据的供应商实体。  
   
-1.  通过**Master Data Manager**导航到或在`http://localhost/MDS`配置 MDS 时指定的网站和应用程序来启动主数据管理器。 如果保持**主数据管理器**打开状态，请单击顶部的 " **SQL Server 2012 Master Data Services** " 以切换到 "**主页**"。  
+1.  通过**Master Data Manager**导航到或在 `http://localhost/MDS` 配置 MDS 时指定的网站和应用程序来启动主数据管理器。 如果保持**主数据管理器**打开状态，请单击顶部的 " **SQL Server 2012 Master Data Services** " 以切换到 "**主页**"。  
   
 2.  单击 "**管理任务**" 部分中的 "**系统管理**"。  
   
@@ -38,7 +37,7 @@ ms.locfileid: "81484627"
   
 9. 不要关闭**主数据管理器**。  
   
-10. 切换到已打开**清理和匹配的供应商 .xls**文件的 Excel 窗口。 切换到底部的 " **Sheet1** " 选项卡。  
+10. 切换到包含**清理并 Suppliers.xls**文件打开的 Excel 窗口。 切换到底部的 " **Sheet1** " 选项卡。  
   
 11. 仅选择**带有标题的第一行**。 不要选择任何其他行。 您希望基于 Excel 列创建实体，但不希望上载任何数据。 因此，您仅选择第一行和标题。  
   
@@ -50,9 +49,9 @@ ms.locfileid: "81484627"
   
     1.  选择 "**创建新连接**"，然后单击 "**新建**按钮"。  
   
-    2.  在 "添加新连接" 对话框中，**为 "****说明**" 键入 "**本地 MDS 服务器**" **，并\/单击** **"确定"** 以关闭对话框。  
+    2.  在 "添加新连接" 对话框中，**为 "****说明**" 键入 "**本地 MDS 服务器**" **，并单击 \/ ** **"确定"** 以关闭对话框。  
   
-15. 在 "**管理连接**" 对话框中，选择 "**本地 MDS 服务器**（`http://localhost/MDS`）"，然后单击 "**测试**" 以测试连接。 在消息框中单击 **"确定"** 。  
+15. 在 "**管理连接**" 对话框中，选择 "**本地 MDS 服务器**（ `http://localhost/MDS` ）"，然后单击 "**测试**" 以测试连接。 在消息框中单击 **"确定"** 。  
   
 16. 单击 "**连接**" 以连接到 MDS 服务器。  
   

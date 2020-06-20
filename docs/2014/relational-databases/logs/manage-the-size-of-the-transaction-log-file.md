@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b2ebcd653adebed5541b1d2cdf814f638d0af683
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 219ba0605d60bab0b13675f7f9f7ff01cace5755
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144328"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049739"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>管理事务日志文件的大小
   在某些情况下，物理收缩或扩展 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的事务日志的物理日志文件非常有用。 本主题包含与下列各项有关的信息：如何监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事务日志大小、收缩事务日志、添加或扩大事务日志文件、优化 **tempdb** 事务日志增长率以及控制事务日志文件的增长。  
@@ -55,7 +54,7 @@ ms.locfileid: "63144328"
 -   [sys.database_files (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)（请参阅日志文件或文件的 **size**、**max_size** 和 **growth** 列。）  
   
 > [!NOTE]  
->  收缩数据库和日志文件可以设置为自动发生。 但是，我们建议不使用自动收缩，且 `autoshrink` 数据库属性默认情况下设置为 FALSE。 如果 `autoshrink` 设置为 TRUE，则仅当其空间的 25% 以上未使用时，自动收缩才会减少文件的大小。 文件将收缩至未使用空间占文件 25% 的大小，或者收缩至文件的原始大小，以两者中较大者为准。 `autoshrink`有关更改属性设置的信息，请参阅[查看或更改数据库的属性](../databases/view-or-change-the-properties-of-a-database.md)-使用 "**选项**" 页上的 "**自动收缩**" 属性或 "[更改数据库集选项" &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)-使用 AUTO_SHRINK 选项。  
+>  收缩数据库和日志文件可以设置为自动发生。 但是，我们建议不使用自动收缩，且 `autoshrink` 数据库属性默认情况下设置为 FALSE。 如果 `autoshrink` 设置为 TRUE，则仅当其空间的 25% 以上未使用时，自动收缩才会减少文件的大小。 文件将收缩至未使用空间占文件 25% 的大小，或者收缩至文件的原始大小，以两者中较大者为准。 有关更改属性设置的信息 `autoshrink` ，请参阅[查看或更改数据库的属性](../databases/view-or-change-the-properties-of-a-database.md)-使用 "**选项**" 页上的 "**自动收缩**" 属性或 "[更改数据库集选项" &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)-使用 AUTO_SHRINK 选项。  
   
   
 ##  <a name="add-or-enlarge-a-log-file"></a><a name="AddOrEnlarge"></a>添加或扩大日志文件  

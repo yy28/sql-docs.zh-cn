@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bfc7cc16c9751ebdf64a8e9cd110547255c944ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68e02c4933f559bff62b8e352016a911990049a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62626044"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049572"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>使用基于策略的管理来监视和强制执行最佳实践
-  通过基于策略的管理，可以监视的[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]最佳实践。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供一组可以作为最佳实践策略导入的策略文件，然后针对包含实例、实例对象、数据库或数据库对象的目标集评估策略。 您可以手动评估策略，将策略设置为根据计划评估目标集，或者将策略设置为根据事件评估目标集。 有关基于策略的管理的详细信息，请参阅 [使用基于策略的管理来管理服务器](administer-servers-by-using-policy-based-management.md)。  
+  通过基于策略的管理，可以监视的最佳实践 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供一组可以作为最佳实践策略导入的策略文件，然后针对包含实例、实例对象、数据库或数据库对象的目标集评估策略。 您可以手动评估策略，将策略设置为根据计划评估目标集，或者将策略设置为根据事件评估目标集。 有关基于策略的管理的详细信息，请参阅 [使用基于策略的管理来管理服务器](administer-servers-by-using-policy-based-management.md)。  
   
 ## <a name="policy-and-rules-for-database-engine"></a>用于数据库引擎的策略和规则  
- 下表列出了安装时随附的策略[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并包括有关每个策略评估的最佳实践规则的信息。 策略存储为 XML 文件并且必须导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中。 有关如何导入策略的详细信息，请参阅 [导入基于策略的管理策略](import-a-policy-based-management-policy.md)。  
+ 下表列出了安装时随附的策略 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，并包括有关每个策略评估的最佳实践规则的信息。 策略存储为 XML 文件并且必须导入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中。 有关如何导入策略的详细信息，请参阅 [导入基于策略的管理策略](import-a-policy-based-management-policy.md)。  
   
 |策略名称|最佳实践规则|  
 |-----------------|------------------------|  

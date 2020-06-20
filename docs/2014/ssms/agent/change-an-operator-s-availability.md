@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 10d58b92-b67b-47e2-af9c-9f9fd6968bba
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 11e5b26a9e2a953aff319b41749d2c12be1a880e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fb369ea6a2d1edf1ed8f4377b627fb1ba7339a03
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63017097"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064994"
 ---
 # <a name="change-an-operator39s-availability"></a>更改操作员的可用性
   本主题介绍了如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中更改操作员接收警报通知的计划。  
@@ -65,7 +64,7 @@ ms.locfileid: "63017097"
   
 5.  在“operator_name 属性”__**** 对话框中，选中或清除“启用”**** 复选框。  
   
-6.  单击" **确定**"。  
+6.  单击“确定”。   
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6aeb4d01cae7c09c27cafa8284638bf0a7de9691
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990196"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058223"
 ---
 # <a name="column-properties-visual-database-tools"></a>列属性 (Visual Database Tools)
   有两种列属性集：可在表设计器的“列属性”  选项卡中看到的完整集（仅适用于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库）以及可使用服务器资源管理器在“属性”窗口中看到的子集。  
@@ -30,7 +29,7 @@ ms.locfileid: "62990196"
 >  本主题中的属性按类别排序，而不是按字母顺序排序。  
   
 > [!NOTE]  
->  根据当前设置或版本的不同，所看到的对话框和菜单命令可能与帮助中描述的对话框和菜单命令有所不同。 若要更改设置，请在“工具”  菜单上选择“导入和导出设置”  。  
+>  根据当前设置或版本的不同，所看到的对话框和菜单命令可能与帮助中描述的对话框和菜单命令有所不同。 若要更改设置，请在“工具”菜单上选择“导入和导出设置”。  
   
 ## <a name="properties-window"></a>“属性”窗口  
  在服务器资源管理器中选择列后，“属性”窗口中将显示以下属性：  
@@ -179,12 +178,12 @@ ms.locfileid: "62990196"
  显示是否在其他位置复制此列。  
   
  **是 RowGuid**  
- 指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否将该列用作 ROWGUID。 对于数据类型为的`uniqueidentifier`列，只能将此值设置为 **"是"** 。 若要编辑此属性，请单击该属性的值，展开下拉列表，然后选择其他值。  
+ 指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否将该列用作 ROWGUID。 对于数据类型为的列，只能将此值设置为 **"是"** `uniqueidentifier` 。 若要编辑此属性，请单击该属性的值，展开下拉列表，然后选择其他值。  
   
  **大小**  
  显示该列的数据类型所允许的大小（字节）。 例如，某个 `nchar` 数据类型的长度为 10（字符数），但在 Unicode 字符集中，该数据类型的大小为 20。  
   
 > [!NOTE]  
->  `varchar(max)`  数据类型的长度对于每一行都会有所不同。 sp_help 返回（-1）作为`varchar(max)`列的长度。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 显示 -1 作为列大小。  
+>  `varchar(max)`  数据类型的长度对于每一行都会有所不同。 sp_help 返回（-1）作为列的长度 `varchar(max)` 。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 显示 -1 作为列大小。  
   
   

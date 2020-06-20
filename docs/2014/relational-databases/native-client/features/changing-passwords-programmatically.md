@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: edee56c6d162f92234e235f9369a0ab91457639e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8ced6d387dd6ba14ab997aefbe7f2b43426c868e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707322"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049590"
 ---
 # <a name="changing-passwords-programmatically"></a>以编程方式更改密码
   在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，如果用户的密码过期，则只有管理员能对其进行重置。 从开始 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client 支持通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client OLE DB 访问接口和 native client ODBC 驱动程序以编程方式处理密码过期 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，并通过对**SQL Server 登录**对话框进行更改。  

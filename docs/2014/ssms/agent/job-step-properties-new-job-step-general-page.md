@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c8f8bc17b6a4c4792858c64144788aa12b858a3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62510951"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062253"
 ---
 # <a name="job-step-properties-new-job-step-general-page"></a>作业步骤属性：新建作业步骤（“常规”页）
-  使用此页可以查看和更改[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理作业步骤的属性或定义新的作业步骤。  
+  使用此页可以查看和更改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤的属性或定义新的作业步骤。  
   
  若要导航到此页，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器中展开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理，右键单击“作业”****，单击“新建作业”****，选择“步骤”**** 页，再单击“新建”****。 也可以通过以下方法导航到此页：在对象资源管理器中右键单击某项作业，单击“属性”****，选择“步骤”**** 页，再依次单击“新建”****、“插入”**** 或“编辑”****。  
   
@@ -28,7 +27,7 @@ ms.locfileid: "62510951"
  **步骤名称**  
  设置作业步骤的名称。  
   
- **Type**  
+ 类型  
  设置作业步骤使用的子系统。 显示的用于定义作业步骤的选项会根据所选子系统的不同而变化。  
   
  **运行身份**  
@@ -53,7 +52,7 @@ ms.locfileid: "62510951"
  **粘贴**  
  粘贴剪贴板的内容。  
   
- **Parse**  
+ **分析**  
  检查命令的语法。  
   
 ## <a name="options-for-activex-script-job-steps"></a>ActiveX 脚本作业步骤的选项  
@@ -216,7 +215,7 @@ ms.locfileid: "62510951"
  **Server**  
  键入存储 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包的服务器名。 仅当为“包源”**** 指定了 **SQL Server** 或“SSIS 包存储区”**** 时，此选项才可用。  
   
- **使用 Windows 身份验证**  
+ **Use Windows Authentication**  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 身份验证登录到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
  **使用 SQL Server 身份验证**  
@@ -237,7 +236,7 @@ ms.locfileid: "62510951"
  **配置文件**  
  列出包的配置文件。  
   
- **添加**  
+ **Add**  
  添加包的配置文件。  
   
  **删除**  
@@ -255,7 +254,7 @@ ms.locfileid: "62510951"
  **命令文件**  
  列出包的命令文件。  
   
- **添加**  
+ **Add**  
  添加命令文件。  
   
  **删除**  
@@ -273,7 +272,7 @@ ms.locfileid: "62510951"
  **连接管理器**  
  查看数据源的名称。  
   
- **描述**  
+ **说明**  
  查看数据源的说明。  
   
  **连接字符串**  

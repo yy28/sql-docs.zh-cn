@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dd80a8e6-1e41-4c49-9898-02b1d2505a10
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6dd54475ee63b2f6ef5e1b56b94c11aafd5996ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0bad2760a5dc9b16b24d75bb35617759543205f3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484685"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064777"
 ---
 # <a name="task-12-discovering-knowledge-knowledge-discovery"></a>任务 12：发现知识（知识发现）
   在此任务中，您将对**供应商 ID**和**供应商名称**域执行**知识发现**活动。 在此方案中，知识发现过程主要导入这两个域的值。  
@@ -28,7 +27,7 @@ ms.locfileid: "65484685"
   
 2.  为 "**数据源**" 选择 " **Excel 文件**"。  
   
-3.  单击 "**浏览**"，导航**并选择 ""，然后**单击 "**打开**"。  
+3.  单击 "**浏览**"，导航并选择 " **Suppliers.xls**"，然后单击 "**打开**"。  
   
 4.  选择**工作表****的发现的供应商**。  
   
@@ -38,7 +37,7 @@ ms.locfileid: "65484685"
   
 6.  单击 "**下一步**" 切换到 "**发现**" 页。  
   
-7.  在 "**发现**" 页上，单击 "**启动**" 以启动发现进程。 对**供应商 .xls**文件中的 "供应**商**名称" 和 "**供应商名称**" 列执行发现。 **供应商 ID**和**供应商名称**域应填充从发现中提取的知识。  
+7.  在 "**发现**" 页上，单击 "**启动**" 以启动发现进程。 将对**Suppliers.xls**文件中的**供应商**和**供应商名称**的列执行发现。 **供应商 ID**和**供应商名称**域应填充从发现中提取的知识。  
   
      ![发现过程的“发现”页](../../2014/tutorials/media/et-discoveringknowledge-03.jpg "发现过程的“发现”页")  
   
@@ -58,7 +57,7 @@ ms.locfileid: "65484685"
   
      ![域值和更正为值](../../2014/tutorials/media/et-discoveringknowledge-06.jpg "域值和更正为值")  
   
-13. 单击“完成”  。  
+13. 单击“完成”。  
   
 14. 在**SQL Server Data Quality Services** "对话框中，单击"**发布**"。  
   

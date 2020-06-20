@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 65631795-3389-40cf-90ea-85e9438956c5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 05891576872818e0d15d7bcae728dd3f19cdc252
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 651b7899e104fe5a7dbc6d584ceba6e5cf8de570
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703096"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055118"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>指定轴 (SQLXML 4.0)
     
@@ -33,7 +32,7 @@ ms.locfileid: "82703096"
   
      包含上下文节点的子级。  
   
-     以下 XPath 表达式（位置路径）从当前上下文节点中选择所有** \< 客户>** 子女：  
+     以下 XPath 表达式（位置路径）从当前上下文节点选择所有 **\<Customer>** 子级：  
   
     ```  
     child::Customer  
@@ -45,7 +44,7 @@ ms.locfileid: "82703096"
   
      包含上下文节点的父级。  
   
-     下面的 XPath 表达式选择** \< 订单>** 子项的所有** \< 客户>** 父级：  
+     下面的 XPath 表达式选择子级的所有 **\<Customer>** 父级 **\<Order>** ：  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
@@ -67,7 +66,7 @@ ms.locfileid: "82703096"
   
      包含上下文节点本身。  
   
-     下面的 XPath 表达式选择当前节点（如果它是** \< Order>** 节点）：  
+     下面的 XPath 表达式选择当前节点（如果它是 **\<Order>** 节点）：  
   
     ```  
     self::Order  

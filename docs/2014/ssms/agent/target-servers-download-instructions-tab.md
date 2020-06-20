@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e4043087-816c-4b66-8cd5-f0eba13a7649
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 289faf0f637e5e4d4d84e7e7150189a37c5f59f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39acaf350a4d63fc8896b3a55ca88fe4ed91461f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245335"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067488"
 ---
 # <a name="target-servers-download-instructions-tab"></a>目标服务器（“下载指令”选项卡）
   使用此页可以显示和更新一个或多个目标服务器的下载指令。  

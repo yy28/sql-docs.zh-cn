@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 10e1546b-9edb-400c-8676-2ea1192d6134
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 04b21c85454fc992aac7e2d18b580d440171e93c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 93491830c28a32c16aad6bef3456b864870a2e22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244626"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058447"
 ---
 # <a name="change-the-name-of-a-registered-server-or-registered-server-group-sql-server-management-studio"></a>更改已注册的服务器或已注册的服务器组的名称 (SQL Server Management Studio)
   本主题说明如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中更改已注册服务器或服务器组的名称。 该名称可以随时更改。 在已注册的服务器中更改某个服务器的名称只会更改该名称的显示方式。 若要连接到其他服务器，必须编辑已注册的服务器的连接属性。  

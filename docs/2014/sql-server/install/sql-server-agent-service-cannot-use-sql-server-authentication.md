@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c39f3ec3-fc2c-4c12-940f-60d8d3d17660
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e16882247a123b32ba07fbbae0d1f3573fd2d678
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32188b1c47168aefbca914fa15f71850df716153
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092070"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036253"
 ---
 # <a name="sql-server-agent-service-cannot-use-sql-server-authentication"></a>SQL Server Agent 服务不能使用 SQL Server 身份验证
   当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理仅支持 Windows 身份验证。  

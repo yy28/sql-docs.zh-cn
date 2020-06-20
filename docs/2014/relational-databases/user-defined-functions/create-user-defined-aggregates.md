@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c278b746-6323-4b32-b460-239915acc067
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 23d5180928f4f3335aa17dff61b50e6fdd19549f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c91179cb194bbfb79e8e7a8476e9725877b88afa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196471"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067977"
 ---
 # <a name="create-user-defined-aggregates"></a>创建用户定义聚合
   您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建在 CLR 程序集中进行编程的数据库对象。 能够利用由 CLR 提供的众多编程模型的数据库对象包括触发器、存储过程、函数、聚合函数和类型。  

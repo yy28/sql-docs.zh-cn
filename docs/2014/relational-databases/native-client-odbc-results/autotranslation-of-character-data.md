@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 134c37bf2e509c44bfe459638e24ad24f4128aa0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cbced1bb62dcacb896a7ff30fdbd6b5aa28f20e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699681"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039591"
 ---
 # <a name="autotranslation-of-character-data"></a>字符数据的自动转换
   字符数据（如使用 SQL_C_CHAR 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用**CHAR**、 **varchar**或**text**数据类型存储在中的数据）声明的字符数据只能表示有限数量的字符。 对于每个字符使用一个字节进行存储的字符数据，它只能表示 256 个字符。 使用客户端计算机的 ANSI 代码页 (ACP) 解释存储在 SQL_C_CHAR 变量中的值。 使用服务器上的**char**、 **varchar**或**text**数据类型存储的值将使用服务器的 ACP 进行计算。  

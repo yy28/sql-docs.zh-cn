@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2d4b2f6d-cc09-434b-8a0e-ccce40628064
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 019c2fe96be00c6e86e0c94286770d30e7a54a9c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b16937a6502d227b077a1db67179b778be9cbfa6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676340"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058155"
 ---
 # <a name="create-insert-values-queries-visual-database-tools"></a>创建“插入值”查询 (Visual Database Tools)
   可以使用“插入值”查询在当前表中创建新行。 在创建“插入值”查询时，需要指定：  

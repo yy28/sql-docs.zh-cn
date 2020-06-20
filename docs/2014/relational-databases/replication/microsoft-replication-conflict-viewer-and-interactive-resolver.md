@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e0cce16636e8f3be542b926170c905353602d95e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10ebbcdfb136126911b95c0148a2c8671584170b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63250341"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010343"
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Microsoft 复制冲突查看器和交互式冲突解决程序
   本节包含有关复制冲突查看器（用于合并复制及事务复制）以及交互式冲突解决程序（用于合并复制）的信息：  

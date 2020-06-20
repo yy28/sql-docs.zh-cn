@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ca1882faa9c61536d1ef025058322f141beedafd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3414cda74d75dbacf10ed98b6fc6d50da2feaa18
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316331"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064082"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>使用 SQL Server Profiler 分析死锁
   使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 确定死锁的原因。 当 SQL Server 中某组资源的两个或多个线程或进程之间存在循环的依赖关系时，将会发生死锁。 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，可以创建记录、重播和显示死锁事件的跟踪以进行分析。  

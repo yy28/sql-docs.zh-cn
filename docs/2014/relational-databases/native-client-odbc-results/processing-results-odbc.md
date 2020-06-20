@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 61a8db19-6571-47dd-84e8-fcc97cb60b45
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 761f74a56fd846361ca98dd8f2746a01b53106ec
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0888832e22e98d2478b5a9c9995b77db47e51647
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699316"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039522"
 ---
 # <a name="processing-results-odbc"></a>处理结果 (ODBC)
   应用程序提交 SQL 语句之后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将得到的任何数据作为一个或多个结果集返回。 结果集是一组与查询条件匹配的行和列。 SELECT 语句、目录函数和某些存储过程可产生以表格格式供应用程序使用的结果集。 如果执行的 SQL 语句为存储过程、包含多个命令的批处理或包含关键字的 SELECT 语句，则会有多个要处理的结果集。  

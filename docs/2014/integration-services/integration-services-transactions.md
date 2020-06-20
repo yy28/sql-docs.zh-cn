@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b0359ca10e7279f4a80bec082a8e049f4641c9b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf9e435156d452a83b50adcf34771c7dd45b7bfd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767621"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965349"
 ---
 # <a name="integration-services-transactions"></a>Integration Services 事务
   包使用事务将任务执行的数据库操作绑定到原子单元中，这样做可以维护数据的完整性。 所有 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 容器类型（包、For 循环、Foreach 循环和序列容器以及封装每个任务的任务宿主）都可以配置为使用事务。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了三个用于配置事务的选项： **NotSupported**、 **Supported**和 **Required**。  
@@ -34,7 +33,7 @@ ms.locfileid: "62767621"
  通过设置容器的 TransactionOption 属性，你可以配置事务。 您可以使用 **中的** “属性” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]窗口设置此属性，也可以通过编程方式设置此属性。  
   
 > [!NOTE]  
->  `TransactionOption` 属性影响是否应用由容器请求的 `IsolationLevel` 属性的值。 有关详细信息，请参阅主题中的`IsolationLevel`属性说明，[设置包属性](set-package-properties.md)。  
+>  `TransactionOption` 属性影响是否应用由容器请求的 `IsolationLevel` 属性的值。 有关详细信息，请参阅 `IsolationLevel` 主题中的属性说明，[设置包属性](set-package-properties.md)。  
   
 ### <a name="to-configure-a-package-to-use-transactions"></a>将包配置为使用事务  
   

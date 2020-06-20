@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 172c60c7-f605-4eb5-b185-54ae9e9d3c60
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 43347190c53331d0a30ba0f29d795cce981eec34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57d0de17c4d958a1b842748810ba24717e6866e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63245121"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049463"
 ---
 # <a name="interactive-conflict-resolution"></a>Interactive Conflict Resolution
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制提供交互式冲突解决程序，可用于 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 同步管理器中在按需同步过程期间手动解决冲突。 该交互式冲突解决程序为图形界面，在运行时激活后，显示每个冲突行的数据，并提供用于查看和编辑冲突数据以及逐个解决冲突的选项。  

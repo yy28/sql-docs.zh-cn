@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d4190f096efaf80989d397f26a314454fe2171b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d617095f190c89131ec81326279c16ec1a927125
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175836"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049445"
 ---
 # <a name="detecting-and-resolving-conflicts-in-logical-records"></a>Detecting and Resolving Conflicts in Logical Records
   本主题介绍使用逻辑记录时冲突检测和冲突解决方法的各种可能组合。 多个节点更改同一数据，或者合并复制遇到某些类型的错误（如复制更改时违反了约束）时，合并复制中会出现冲突。 有关冲突检测和解决的详细信息，请参阅 [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)。

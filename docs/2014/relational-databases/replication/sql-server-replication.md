@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e51f45e06939971ada6166fb977c787ad0354926
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62626144"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047667"
 ---
 # <a name="sql-server-replication"></a>SQL Server 复制
   复制是一组技术，它将数据和数据库对象从一个数据库复制和分发到另一个数据库，然后在数据库之间进行同步以保持一致性。 使用复制，可以在局域网和广域网、拨号连接、无线连接和 Internet 上将数据分发到不同位置以及分发给远程或移动用户。  
@@ -28,7 +27,7 @@ ms.locfileid: "62626144"
  除了复制以外，还可以使用 Microsoft Sync Framework 来同步数据库。 Sync Framework 提供了相关的组件和一个直观且灵活的 API，使得在 SQL Server、SQL Server Express、SQL Server Compact 和 SQL Azure 数据库之间进行同步变得非常轻松。 Sync Framework 还包括一些类，它们可改写为在 SQL Server 数据库和任何其他与 ADO.NET 兼容的数据库之间进行同步。 有关 Sync Framework 数据库同步组件的详细文档，请参阅 [同步数据库](https://go.microsoft.com/fwlink/?LinkId=209079)。 有关 Sync Framework 的概述，请参阅 [Microsoft Sync Framework 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=209078)。 有关 Sync Framework 与合并复制的比较，请参阅 [同步数据库概述](https://msdn.microsoft.com/library/bb902818\(SQL.110\).aspx)  
   
 
-## <a name="whats-new"></a>新增功能 
+## <a name="whats-new"></a>新变化 
 - SQL Server 2017 未向 SQL Server 复制引入重要的新功能。 
 - SQL Server 2016 未向 SQL Server 复制引入重要的新功能。 
 
@@ -48,7 +47,7 @@ ms.locfileid: "62626144"
   
 ## <a name="publications-and-articles"></a>发布和项目 
   
--   [Create a Publication](publish/create-a-publication.md)    
+-   [创建发布](publish/create-a-publication.md)    
 -   [定义项目](publish/define-an-article.md)   
 -   [查看和修改发布属性](publish/view-and-modify-publication-properties.md)   
 -   [查看和修改项目属性](publish/view-and-modify-article-properties.md)    

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c2996a8ca8471ef59d4781e21239a72262daa759
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721201"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068703"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>实现合并项目的业务逻辑处理程序
   本主题说明如何使用复制编程方式或复制管理对象 (RMO) 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中实现合并项目的业务逻辑处理程序。  
@@ -99,10 +98,10 @@ ms.locfileid: "62721201"
   
 1.  在发布服务器中，执行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) 以验证该程序集是否尚未注册为业务逻辑处理程序。  
   
-2.  在分发服务器上，执行[sp_registercustomresolver &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql) **@article_resolver**，为指定业务逻辑处理程序的友好名称，将的值指定`true`为**@is_dotnet_assembly**，为指定程序集**@dotnet_assembly_name**的名称，并为重写<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>的**@dotnet_class_name**类的完全限定名称。  
+2.  在分发服务器上，执行[sp_registercustomresolver &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)，为指定业务逻辑处理程序的友好名称，将的值指定为，为指定 **@article_resolver** `true` **@is_dotnet_assembly** 程序集的名称， **@dotnet_assembly_name** 并为重写的类的完全限定名称 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> **@dotnet_class_name** 。  
   
     > [!NOTE]  
-    >  如果该程序集未部署在与合并代理可执行文件相同的目录中、与同步启动合并代理的应用程序相同的目录中，或在全局程序集缓存（GAC）中，则需要指定包含程序集名称的完整路径**@dotnet_assembly_name**。 使用 Web 同步时，必须指定程序集在 Web 服务器中的位置。  
+    >  如果该程序集未部署在与合并代理可执行文件相同的目录中、与同步启动合并代理的应用程序相同的目录中，或在全局程序集缓存（GAC）中，则需要指定包含程序集名称的完整路径 **@dotnet_assembly_name** 。 使用 Web 同步时，必须指定程序集在 Web 服务器中的位置。  
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>将业务逻辑处理程序与新的表项目一起使用  
   
@@ -110,7 +109,7 @@ ms.locfileid: "62721201"
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>将业务逻辑处理程序用于现有的表项目  
   
-1.  执行[sp_changemergearticle &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)，指定， **@publication** **@article**，将的值指定为**article_resolver** **@property**article_resolver，并为**@value**指定业务逻辑处理程序的友好名称。  
+1.  执行[sp_changemergearticle &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)，指定 **@publication** ， **@article** ，将的值指定为**article_resolver** **@property** ，并为指定业务逻辑处理程序的友好名称 **@value** 。  
   
 ###  <a name="examples-replication-programming"></a><a name="TsqlExample"></a> 示例（复制编程方式）  
  该示例演示了可创建审核日志的业务逻辑处理程序。  
@@ -170,11 +169,11 @@ ms.locfileid: "62721201"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与分发服务器的连接。  
   
-2.  创建的 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的一个实例。 传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumBusinessLogicHandlers%2A> 并检查返回的 <xref:System.Collections.ArrayList> 对象，以确保还未将该程序集注册为业务逻辑处理程序。  
   
-4.  创建的 <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler> 类的实例。 指定以下属性：  
+4.  创建 <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler> 类的一个实例。 指定以下属性：  
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetAssemblyName%2A> - .NET 程序集的名称。 如果该程序集未部署到与合并代理可执行文件相同的目录中、与同步启动合并代理的应用程序相同的目录中或 GAC 中，则必须随程序集名称提供完整的路径。 将业务逻辑处理程序与 Web 同步一起使用时，必须随程序集名称提供完整的路径。  
   
@@ -192,7 +191,7 @@ ms.locfileid: "62721201"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  创建的 <xref:Microsoft.SqlServer.Replication.MergeArticle> 类的实例。 设置以下属性：  
+2.  创建 <xref:Microsoft.SqlServer.Replication.MergeArticle> 类的一个实例。 设置以下属性：  
   
     -   将 <xref:Microsoft.SqlServer.Replication.Article.Name%2A>设置为项目的名称。  
   
@@ -208,7 +207,7 @@ ms.locfileid: "62721201"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  创建的 <xref:Microsoft.SqlServer.Replication.MergeArticle> 类的实例。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.MergeArticle> 类的一个实例。  
   
 3.  设置 <xref:Microsoft.SqlServer.Replication.Article.Name%2A>、 <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>和 <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> 属性。  
   

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e212010e-a5b6-4ad1-a3c0-575327d3ffd3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d5a85d5ddf0478551838fb963a57ad26dd746656
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 61af3a1cdb64ce7e243d911475768eb2e969704b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704206"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998360"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>客户端连接中的服务主体名称 (SPN) (OLE DB)
   本主题说明支持客户端应用程序中的服务主体名称 (SPN) 的 OLE DB 属性和成员函数。 有关客户端应用程序中 SPN 的详细信息，请参阅[客户端连接中的服务主体名称 &#40;SPN&#41; 支持](../features/service-principal-name-spn-support-in-client-connections.md)。 有关示例，请参阅[集成的 Kerberos 身份验证 (OLE DB)](../../native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md)。  

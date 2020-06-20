@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2c231793-3878-4a5e-a425-1fa0d787ba84
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2b6e08a384e20d64a7002171059db0d35dfd94a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 031fedc4af4b058704cef1da8df846397b235305
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091464"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065142"
 ---
 # <a name="upgrade-all-target-servers-before-upgrading-the-master-server"></a>升级主服务器前先升级所有目标服务器
   在升级主服务器前，升级正在运行配置为目标服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有计算机。  

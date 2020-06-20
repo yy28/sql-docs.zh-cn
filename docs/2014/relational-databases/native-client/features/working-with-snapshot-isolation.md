@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 39e87eb1-677e-45dd-bc61-83a4025a7756
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7662639dabd687160db6efe108ea36b9814f1721
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4b488730ba7535f4646d293e7bfba7ae4292f7ca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707129"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038943"
 ---
 # <a name="working-with-snapshot-isolation"></a>使用快照隔离
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入了旨在增强联机事务处理 (OLTP) 应用程序的并发处理能力的新“快照”隔离级别。 在早期版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，并发仅基于锁定，对于某些应用程序，这可能导致阻塞和死锁问题。 快照隔离依赖于行版本控制的增强功能，旨在通过避免读取器-编写器阻塞情况来提高性能。  

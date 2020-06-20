@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 60b20a1ee5a90b2b51abbe71a189add066e1b7e4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 227c8a5b3222bdddab9632ec2e80f0bb4dd54250
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703252"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015603"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>执行包含 XPath 查询的模板（SQLXMLOLEDB 访问接口）
   此示例显示如何使用以下 SQLXMLOLEDB 访问接口特定的属性：  
@@ -34,7 +33,7 @@ ms.locfileid: "82703252"
   
 -   映射架构  
   
- 在此示例 ADO 应用程序中，将根据[执行 Xpath 查询 &#40;SQLXMLOLEDB 提供程序&#41;](executing-xpath-queries-sqlxmloledb-provider.md)中介绍的 XSD 映射架构（myschema.xml）指定一个由 xpath 查询（根）组成的 XML 模板。  
+ 在此示例 ADO 应用程序中，将根据[执行 Xpath 查询 &#40;SQLXMLOLEDB 提供程序&#41;](executing-xpath-queries-sqlxmloledb-provider.md)中所述的 XSD 映射架构（MySchema.xml）来指定由 xpath 查询（根）组成的 XML 模板。  
   
  "映射架构" 属性提供了用于执行 XPath 查询的 XSD 映射架构。 "基路径" 属性提供映射架构的文件路径。  
   

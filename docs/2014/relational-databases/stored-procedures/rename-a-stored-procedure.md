@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5d2e4c68-7e0b-4405-8919-f5b203e46770
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b85a6a5e79c004eb3ed2c7c40c6e3b62d526e95a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02e1acb528a32ef242e160e0ce5dd0267237c876
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721011"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061535"
 ---
 # <a name="rename-a-stored-procedure"></a>重命名存储过程
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重命名存储过程。  
@@ -51,7 +50,7 @@ ms.locfileid: "62721011"
   
 ####  <a name="permissions"></a><a name="Permissions"></a> 权限  
  CREATE PROCEDURE  
- 要求数据库中的 CREATE PROCEDURE 权限以及对要在其中创建过程的架构的 ALTER 权限，或者要求 **db_ddladmin** 固定数据库角色中的成员身份。  
+ 要求在数据库中具有 CREATE PROCEDURE 权限，对在其中创建过程的架构具有 ALTER 权限，或者要求**db_ddladmin**固定数据库角色的成员身份。  
   
  ALTER PROCEDURE  
  要求对过程具有 ALTER 权限，或者要求 db_ddladmin 固定数据库角色中的成员身份****。  
@@ -80,7 +79,7 @@ ms.locfileid: "62721011"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此示例说明如何通过删除过程并使用新名称重新创建该过程来重命名过程。 第一个示例将创建 `'HumanResources.uspGetAllEmployeesTest`存储过程。 第二个示例将存储过程重命名为 `HumanResources.uspEveryEmployeeTest`。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例说明如何通过删除过程并使用新名称重新创建该过程来重命名过程。 第一个示例将创建 `'HumanResources.uspGetAllEmployeesTest`存储过程。 第二个示例将存储过程重命名为 `HumanResources.uspEveryEmployeeTest`。  
   
 ```sql  
 --Create the stored procedure.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: eb02d4be-0363-4ad1-9e7e-553601f09349
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e7016b056c404d1e60f53bd0d0afd1270fdbb73a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cacaae123da110fdec189fed36f699a1303a624
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191092"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062690"
 ---
 # <a name="version-property-clientnetlibinfo-class"></a>Version 属性（ClientNetLibInfo 类）
   获取客户端网络库文件的版本。  

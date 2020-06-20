@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4fe7f6c6-f89b-4430-979c-4994a5dcf7a6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f051b3de9ba88354f5fded8cd1f429e3b277747
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 385435302b2e987c86afb17eaebf90e91bc93e56
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188171"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062201"
 ---
 # <a name="manage-jobs-across-an-enterprise"></a>管理整个企业内的作业
-  如果在外部[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对多服务器作业定义进行更改，则必须将更改发布到下载列表，以便目标服务器可以再次下载更新后的作业。 为了确保目标服务器具有当前的作业定义，在更新多服务器作业后，请发布一条 INSERT 指令，如下所示：  
+  如果在外部对多服务器作业定义进行更改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，则必须将更改发布到下载列表，以便目标服务器可以再次下载更新后的作业。 为了确保目标服务器具有当前的作业定义，在更新多服务器作业后，请发布一条 INSERT 指令，如下所示：  
   
 ```  
 EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'  

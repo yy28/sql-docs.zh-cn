@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 042bc1cfe2ccf09580d052b1a4bc045d03fc81ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 47f655423e4eee6b239299ed7d78c83963eadeb4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72796835"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037618"
 ---
 # <a name="implementing-endpoints"></a>实现端点
   端点是一种可以本机方式侦听请求的服务。 SMO 通过使用 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 对象支持各种类型的端点。 您可以创建用于处理特定类型负载且使用特定协议的端点服务，方法是创建一个 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 对象的实例并设置其属性。  

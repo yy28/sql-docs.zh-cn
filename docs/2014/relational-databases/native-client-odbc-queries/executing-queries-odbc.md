@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d935bcba-8ce6-4159-8395-6c86431602ad
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 597d138832ab5234d0059c25e91fd4d830be255c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6370b5c7d70346ccd801d1800c8411f93d897e9f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82711083"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018615"
 ---
 # <a name="executing-queries-odbc"></a>执行查询 (ODBC)
   在 ODBC 应用程序初始化连接句柄并与数据源连接后，它为连接句柄分配一个或多个语句句柄。 然后，应用程序可以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对语句句柄执行语句。 执行 SQL 语句时的一般事件顺序为：  

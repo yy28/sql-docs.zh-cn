@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b385e6b02807ed79e2becb127a16e76d04329764
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 946bfd0c05e7739af4bfebf799980a0dc27de245
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62473128"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065017"
 ---
 # <a name="alerts"></a>警报
   事件由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成并被输入到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 应用程序日志中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理读取应用程序日志，并将写入的事件与定义的警报比较。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理找到匹配项时，它将发出自动响应事件的警报。 除了监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件以外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理还监视性能条件和 Windows Management Instrumentation (WMI) 事件。  
@@ -76,11 +75,11 @@ ms.locfileid: "62473128"
 ## <a name="selecting-a-performance-condition"></a>选择性能条件  
  可以指定警报来响应特定的性能条件。 在这种情况下，需要指定要监视的性能计数器、警报的阈值以及警报发生时计数器必须执行的操作。 若要设置性能条件，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的“新建警报”**** 或“警报属性”**** 对话框中的“常规”**** 页上定义下列项：  
   
--   **对象**  
+-   **Object**  
   
      对象是要监视的性能区域。  
   
--   **对抗**  
+-   **计数器**  
   
      计数器是要监视的区域的属性。  
   
@@ -100,11 +99,11 @@ ms.locfileid: "62473128"
 ## <a name="selecting-a-wmi-event"></a>选择 WMI 事件  
  可以指定发出警报来响应特定的 WMI 事件。 若要选择 WMI 事件，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的“新建警报”**** 或“警报属性”**** 对话框中的“常规”**** 页上定义下列内容：  
   
--   **Namespace**  
+-   **命名空间**  
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作为 WMI 客户端在 WMI 命名空间（使用该命名空间查询事件）进行注册。  
   
--   **查询**  
+-   **Query**  
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使用所提供的 Windows Management Instrumentation 查询语言 (WQL) 语句来标识特定事件。  
   

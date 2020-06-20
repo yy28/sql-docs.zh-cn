@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dda7c4c0e2ae187f96883a32cac2528eceb90c74
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 04b19644e8f9c1a80cdb5f661e42c20d9849244a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706301"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022679"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
   对于已执行的语句， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 驱动程序不需要查询服务器来描述结果集中的列。 在这种情况下，不 `SQLDescribeCol` 会导致服务器往返。 与[SQLColAttribute](sqlnumresultcols.md)一样， `SQLDescribeCol` 对已准备但未执行的语句调用会生成服务器往返。  

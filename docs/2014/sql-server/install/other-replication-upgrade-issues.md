@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a5e74be-4992-4f17-b20c-c3dce8f49329
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dd8ae8bb1080d92bb6a4ad1ba982f1dffc6d51f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef4bc1d64ac74fa8a1c51e706e5ce6c16abb8156
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093636"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012202"
 ---
 # <a name="other-replication-upgrade-issues"></a>其他复制升级问题
   本主题涵盖了许多未由升级顾问报告的升级问题。  
@@ -30,7 +29,7 @@ ms.locfileid: "66093636"
 ## <a name="versions-supported"></a>支持的版本  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支持从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本升级复制的数据库。 在升级某个节点时，不必停止其他节点的活动。 请务必遵守有关拓扑中支持哪些版本的规则。  
   
- 当在不同版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之间进行复制时，通常仅限于所使用的最早版本的功能。  
+ 当在不同版本的之间进行复制时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，通常仅限于所使用的最早版本的功能。  
   
 > [!NOTE]  
 >  由于 64 位和 32 位环境中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 磁盘存储格式相同，因此复制拓扑可以将运行于 32 位环境中的服务器实例与运行于 64 位环境中的服务器实例结合起来。  

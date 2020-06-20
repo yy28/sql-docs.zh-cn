@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 92c67289441ab0b6baed4509bdce8dcc0b082395
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97ba04b8d41c3e5ca4927abb53cf27cfa3013fcd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211504"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036994"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>将多宿主计算机配置为允许 SQL Server 访问
   当服务器必须提供与两个或更多个网络或网络子网的连接时，典型的方案是使用多宿主计算机。 此计算机通常位于外围网络（也称为 DMZ、外围安全区域或屏蔽子网）中。 本主题介绍如何在多宿主环境中对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和高级安全 Windows 防火墙进行配置，以便为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例提供多个网络连接。  
@@ -55,7 +54,7 @@ ms.locfileid: "68211504"
   
 #### <a name="to-determine-the-ip-addresses-available-on-the-computer"></a>确定计算机上可用的 IP 地址  
   
-1.  在安装了的计算机[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上，依次单击 "**开始**" **Run**、"运行`cmd` "， [!INCLUDE[clickOK](../../includes/clickok-md.md)]然后键入。  
+1.  在安装了的计算机上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，依次单击 "**开始**"、"**运行**"， `cmd` 然后键入 [!INCLUDE[clickOK](../../includes/clickok-md.md)] 。  
   
 2.  在“命令提示符”窗口中，键入 `ipconfig,`，然后按 Enter 列出此计算机上可用的 IP 地址。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "68211504"
   
 1.  单击 **“开始”** ，依次指向 **“所有程序”** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]和 **“配置工具”** ，然后单击 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器”** 。  
   
-2.  在“ **配置管理器”[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 的控制台窗格中，依次展开“ **网络配置”[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 、“**实例名称> 的协议”\<** ，然后双击“TCP/IP”  。  
+2.  在** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**的控制台窗格中，展开 " ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 网络配置**"，展开 "**的 \<instance name> 协议**"，然后双击 " **tcp/ip**"。  
   
 3.  在“TCP/IP 属性”  对话框的“IP 地址”  选项卡上，将显示若干个 IP 地址，格式为：**IP1**、**IP2**...，一直到 **IPAll**。 这些 IP 地址中有一个是环回适配器的 IP 地址 (127.0.0.1)。 其他 IP 地址是计算机上配置的各个 IP 地址。  
   
@@ -85,7 +84,7 @@ ms.locfileid: "68211504"
   
 1.  在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机上，以管理员身份登录。  
   
-2.  单击 **"开始**"，再单击`wf.msc`"**运行**"，键入，然后单击 **"确定"**。  
+2.  单击 "**开始**"，再单击 "**运行**"，键入 `wf.msc` ，然后单击 **"确定"**。  
   
 3.  在“用户帐户控制”对话框中，单击“继续”使用管理员凭据打开高级安全 Windows 防火墙管理单元   。  
   

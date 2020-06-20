@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8b97b0129a7cc4ffa21b4a82ad0208a2c1890b27
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ef2599ea202fad2b85881951692f1f04898e94e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313653"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006565"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>任务 4：管理和查看报表
   在该任务中，您查看计算机辅助清理的结果，还对供应商数据执行交互式清理。 有关更多详细信息，请参阅[交互式清理阶段](https://msdn.microsoft.com/library/hh213061.aspx#Interactive)。  
   
 1.  从域列表中选择 "**联系人电子邮件**域"。  
   
-2.  切换到右窗格中的 "**无效**" 选项卡。 请注意，末尾缺少字符 "" 的两个电子邮件地址。 通过域规则发现的这两封电子邮件都无效，要求所有电子邮件地址以** \@adventure-works.com**结尾（带有 "s"）。 在清理时，DQS 使用此域规则来确定电子邮件是否有效。 此选项卡显示在知识库中被标记为无效的域值或不符合域规则要求的值。 在这种情况下，这些值不符合域规则的要求（电子邮件验证）。  
+2.  切换到右窗格中的 "**无效**" 选项卡。 请注意，末尾缺少字符 "" 的两个电子邮件地址。 通过域规则发现的这两封电子邮件都无效，要求所有电子邮件地址以** \@ adventure-works.com**结尾（带有 "s"）。 在清理时，DQS 使用此域规则来确定电子邮件是否有效。 此选项卡显示在知识库中被标记为无效的域值或不符合域规则要求的值。 在这种情况下，这些值不符合域规则的要求（电子邮件验证）。  
   
-3.  在 "**更正为**" 列中，键入以** \@adventure-works.com**结尾的正确电子邮件地址（包含 "s"）。  
+3.  在 "**更正为**" 列中，键入以** \@ adventure-works.com**结尾的正确电子邮件地址（包含 "s"）。  
   
      ![基于电子邮件验证规则的更正](../../2014/tutorials/media/et-managingandviewingresults-01.jpg "基于电子邮件验证规则的更正")  
   
@@ -32,7 +31,7 @@ ms.locfileid: "72313653"
   
 5.  切换到右窗格中的 "**新建**" 选项卡。 此选项卡上的值是 DQS 在知识库中尚未具有足够的信息来确定其是否正确的值。 因此，它无法更改域值，也无法建议对域值所做的更改。  
   
-6.  查看值以确认所有电子邮件都以** \@adventure-works.com**结尾，并单击工具栏上的 "**批准所有字词**"。 此选项卡中的已批准值将移到 "**正确**" 选项卡。  
+6.  查看值以确认所有电子邮件都以** \@ adventure-works.com**结尾，并单击工具栏上的 "**批准所有字词**"。 此选项卡中的已批准值将移到 "**正确**" 选项卡。  
   
 7.  从域列表中选择 "**国家/地区**" 域。  
   
@@ -86,7 +85,7 @@ ms.locfileid: "72313653"
   
 25. 单击 "**下一步**" 切换到 "**导出**" 页。  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
  [任务 5：将清理结果导出到 Excel 文件](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
   
   

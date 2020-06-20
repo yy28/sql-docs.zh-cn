@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5252b439-fce5-446a-8e57-99e3054bee69
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 302ac36150d21dfecca1e6c6edfbcf6fd86c42f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c87985702147fe064c64d060450aa7c9fcb6c3f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63226144"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068252"
 ---
 # <a name="setboolvalue-method-sqlserviceadvancedproperty-class"></a>SetBoolValue 方法（SqlServiceAdvancedProperty 类）
   设置属性的布尔值。  

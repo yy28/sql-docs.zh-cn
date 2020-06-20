@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b2cabbd38f05ffd45976eac6d18c8ea5f6615816
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 5eee59aae7ca1b448b448b4e8f69fca55c664772
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859819"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048678"
 ---
 # <a name="options-designers-table-and-database-designers-page"></a>选项（设计器-"表和数据库设计器" 页）
   使用此页可确定设计器的默认行为。 若要访问这些设置，请在“工具”  菜单上，单击“选项  ”，展开“设计器”  文件夹，再单击“表设计器”  。  

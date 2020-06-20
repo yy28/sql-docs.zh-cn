@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f9abe48d-d6e9-4c38-a355-fc5eb5a95a25
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7289c18fac421bbdb5ccc0e00a3bea60b7a22d9e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29f18956ef1cdaa85b186e610c1c915d45602126
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150619"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047853"
 ---
 # <a name="server-performance-and-activity-monitoring"></a>服务器性能和活动监视
   监视数据库的目的是评估服务器的性能。 有效监视包括定期拍摄当前性能的快照来隔离导致问题的进程，以及连续收集数据来跟踪性能趋势。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 操作系统提供可以查看数据库当前状态并跟踪性能状态变化的实用工具。  
@@ -45,7 +44,7 @@ ms.locfileid: "63150619"
   
  **使用 SQL Server Management Studio 执行监视任务**  
   
--   [查看 SQL Server 错误日志 &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
+-   [查看 SQL Server 错误日志 (SQL Server Management Studio)](../../ssms/sql-server-management-studio-ssms.md)  
   
 -   [打开活动监视器 (SQL Server Management Studio)](../performance-monitor/open-activity-monitor-sql-server-management-studio.md)  
   

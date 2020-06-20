@@ -12,22 +12,21 @@ helpviewer_keywords:
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fa9d36a446645b289f2c182e90782d6932cf20ef
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 07cff70d32d7d39619ecf3ee4ce36e37f2dee924
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702249"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012883"
 ---
 # <a name="wildcard-components-and-content-validation"></a>通配符组成部分和内容验证
   通配符组成部分用于更加灵活地在内容模型中显示内容。 在 XSD 语言中按照以下方式支持这些组成部分：  
   
--   元素通配符组成部分。 这些组成部分通过 **\<xsd:any>** 元素表示。  
+-   元素通配符组成部分。 它们由 **\<xsd:any>** 元素表示。  
   
--   属性通配符组成部分。 这些组成部分通过 **\<xsd:anyAttribute>** 元素表示。  
+-   属性通配符组成部分。 它们由 **\<xsd:anyAttribute>** 元素表示。  
   
- 这两个通配符元素（ **\<xsd:any>** 和 **\<xsd:anyAttribute>** ）都支持 **processContents** 属性的使用。 这将允许您指定特定的值，该值指示 XML 应用程序如何处理与这些通配符元素关联的文档内容的验证。 以下是不同的值及其作用：  
+ 这两个通配符元素 **\<xsd:any>** 和都 **\<xsd:anyAttribute>** 支持使用**processContents**属性。 这将允许您指定特定的值，该值指示 XML 应用程序如何处理与这些通配符元素关联的文档内容的验证。 以下是不同的值及其作用：  
   
 -   **strict** 值指定对内容进行完整的验证。  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6485dbee31573fdbd328e41ba74b552df50fcee0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 48198318ec2febe4e79a501ef27d1bb56905f1f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703702"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047538"
 ---
 # <a name="specify-a-hit-count"></a>指定命中计数
   断点命中计数是每次到达断点时由 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器递增的计数器。 如果达到指定的命中计数并满足所有指定的断点条件，则调试器将执行为断点指定的操作。  

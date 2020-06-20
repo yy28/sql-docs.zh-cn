@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c260c000-fd53-4831-993f-df6894f3228b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 540a0bd9430a182ef3eda43fd816b4a495dc36b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5870798e66f5145c43224e58958057a08e5c6c43
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62714614"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068286"
 ---
 # <a name="improve-access-to-trace-data"></a>改进对跟踪数据的访问
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 使用 **temp** 目录中的空间来改进对跟踪数据的访问。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 需要至少 10 兆字节 (MB) 的可用空间。 如果在使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]时可用空间低于 10 MB，则所有 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 功能都将会停止。  
