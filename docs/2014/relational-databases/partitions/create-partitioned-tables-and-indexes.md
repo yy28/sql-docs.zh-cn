@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: be83b941e5b8000a0a802fbe9fe7254a364d69c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 76ccd8b784902f8542f06f3823e5f8dcb78e9201
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289375"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057182"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>创建已分区表和已分区索引
   可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建已分区表或索引。 已分区表和索引中的数据水平划分到可分散到数据库的多个文件组的单元中。 分区可以使大型表和索引更易于管理并且更灵活。  
@@ -153,7 +152,7 @@ ms.locfileid: "79289375"
      选择分区范围值的开始日期。  
   
      **结束日期**  
-     选择分区范围值的结束日期。 如果在“映射分区”  页上选择了“左边界”  ，此日期将是每个文件组/分区的最后一个值。 如果在“映射分区”  页上选择了“右边界”  ，此日期将是倒数第二个文件组中的第一个值。  
+     选择分区范围值的结束日期。 如果在“映射分区”页上选择了“左边界”，此日期将是每个文件组/分区的最后一个值。 如果在“映射分区”页上选择了“右边界”，此日期将是倒数第二个文件组中的第一个值。  
   
      **日期范围**  
      为每个分区选择所需的日期粒度或范围值增量。  

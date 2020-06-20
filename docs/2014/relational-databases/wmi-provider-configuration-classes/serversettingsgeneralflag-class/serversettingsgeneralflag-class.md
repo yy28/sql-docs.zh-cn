@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5676030b-bb84-4ac0-b68b-edb345a3a152
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 59bfe26d20ed244c6011a6f4d1f37deccf8607c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3dcae2101d49c2500e26a3ed2c45ef185fe0e30a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137279"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056686"
 ---
 # <a name="serversettingsgeneralflag-class"></a>ServerSettingsGeneralFlag 类
-  [ServerSettingsGeneralFlag 类](serversettingsgeneralflag-class.md)表示实例的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]常规标志设置。  
+  [ServerSettingsGeneralFlag 类](serversettingsgeneralflag-class.md)表示实例的常规标志设置 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
  此类可以用于执行以下操作：  
   

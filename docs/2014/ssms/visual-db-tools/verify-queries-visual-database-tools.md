@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1382c0c0-46dc-45f9-ab38-9bba1d347eea
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a9f959d3c4b61a6231a0d4b3806b57cfa935445e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bf24de9bdc0e8b7b7ceb33bb881812b180ce112
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204580"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064252"
 ---
 # <a name="verify-queries-visual-database-tools"></a>验证查询 (Visual Database Tools)
   为了避免问题，可以对所生成的查询进行检查以确保其语法正确。 在 [SQL 窗格](visual-database-tools.md)中输入语句时，此选项尤其有用。  

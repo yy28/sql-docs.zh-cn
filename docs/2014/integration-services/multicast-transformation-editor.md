@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 96155ed9-6597-4fe1-8f9f-b741b18ba2c1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c4013483838f81e9147eb45c84598c9cc73016fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1bbc845ac8ccf2d60a218f34770cf8f2483ff57b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057621"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967027"
 ---
 # <a name="multicast-transformation-editor"></a>多播转换编辑器
   可以使用 **“多播转换编辑器”** 对话框查看和设置每个转换输出的属性。  
@@ -27,7 +26,7 @@ ms.locfileid: "66057621"
  若要了解有关多播转换的详细信息，请参阅 [Multicast Transformation](data-flow/transformations/multicast-transformation.md)。  
   
 ## <a name="options"></a>选项  
- **Outputs**  
+ **输出**  
  在左侧选择输出可以在右侧的表中查看其属性。  
   
  **属性**  

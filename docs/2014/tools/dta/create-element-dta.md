@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d076c90-f933-45f4-b6d9-447793f6528b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7ec9ad9569326e4a9b3e890af4b5f909e36e5c5b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5cbe1d99a8e38ddc31ebac1ce66d1e549781dd5e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149492"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057786"
 ---
 # <a name="create-element-dta"></a>创建元素 (DTA)
   包含有关用户指定配置中的索引、统计信息或堆结构的信息。  
@@ -51,7 +50,7 @@ ms.locfileid: "63149492"
 |**子元素**|[索引元素 (DTA)](index-element-dta.md)<br /><br /> `Statistics`元素（有关信息，请参阅[数据库引擎优化顾问 XML 架构](https://schemas.microsoft.com/sqlserver/)）<br /><br /> `Heap`元素（有关信息，请参阅[数据库引擎优化顾问 XML 架构](https://schemas.microsoft.com/sqlserver/)）|  
   
 ## <a name="remarks"></a>备注  
- 在数据库引擎优化顾问 XML 架构中，此元素的名称为 **CreateTypecomplexType** 。 此元素用于为用户指定的配置创建索引、统计信息和堆结构。 请勿将此 `Create` 元素和其他可用于创建视图 (`CreateViewType`) 或分区 (`CreatePType`) 的其他类型混淆。 有关这些其他`Create`元素类型的信息，请参阅[数据库引擎优化顾问 XML 架构](https://schemas.microsoft.com/sqlserver/)。  
+ 在数据库引擎优化顾问 XML 架构中，此元素的名称为 **CreateTypecomplexType** 。 此元素用于为用户指定的配置创建索引、统计信息和堆结构。 请勿将此 `Create` 元素和其他可用于创建视图 (`CreateViewType`) 或分区 (`CreatePType`) 的其他类型混淆。 有关这些其他元素类型的信息，请参阅[数据库引擎优化顾问 XML 架构](https://schemas.microsoft.com/sqlserver/) `Create` 。  
   
 ## <a name="example"></a>示例  
  有关此元素的用法示例，请参阅[用户指定配置 (DTA) 的 XML 输入文件示例](xml-input-file-sample-with-user-specified-configuration-dta.md)。  

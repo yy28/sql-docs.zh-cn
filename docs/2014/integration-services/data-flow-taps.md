@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a1938f2389f64d7a869ae924690b8b22fa209f82
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 212688d5dddaa84b1b7c6aee3fe4ebbb6415e8a9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059909"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916861"
 ---
 # <a name="data-flow-taps"></a>数据分流
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 引入了一个新功能，可用来在运行时在包数据流路径上添加数据分流点，并将数据分流点的输出定向到外部文件。 若要使用此功能，您必须使用项目部署工具将 SSIS 项目部署到 SSIS 服务器。 将包部署到服务器之后，需要对 SSISDB 数据库执行 T-SQL 脚本，以便在执行该包之前添加数据分流点。 下面是一个示例方案：  
@@ -51,7 +50,7 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  add_data_tap 存储过程的 dataflow_path_id_string 参数对应于您要添加数据分流点的数据流路径的 IdentificationString 属性。 若要获取 dataflow_path_id_string，请单击数据流路径（数据流中任务间的箭头），并记下“属性”窗口中 **IdentificationString** 属性的值。  
   
- 执行脚本时，输出文件存储在 \<程序文件>\Microsoft SQL Server\110\DTS\DataDumps 中。 如果已存在同名文件，则将创建带有后缀的新文件（例如：output[1].txt）。  
+ 执行脚本时，输出文件存储在 \<Program Files> \MICROSOFT SQL server\110\dts\datadumps 中。中。 如果已存在同名文件，则将创建带有后缀的新文件（例如：output[1].txt）。  
   
  如前所述，也可使用 [catalog.add_data_tap_by_guid](/sql/integration-services/system-stored-procedures/catalog-add-data-tap-by-guid)存储过程代替使用 add_data_tap 存储过程。 此存储过程将数据流任务的 ID 用作参数，而不使用 task_package_path。 您可以从 Visual Studio 中的属性窗口获取数据流任务的 ID。  
   

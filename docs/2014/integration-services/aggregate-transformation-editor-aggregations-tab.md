@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 698e3757a32d9a2a9db95df495e33903dbdfed1f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4799df229e96ce8488614d8ec7b0755332360fbc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061580"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925588"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>聚合转换编辑器（“聚合”选项卡）
   可以使用 **“聚合转换编辑器”** 对话框的 **“聚合”** 选项卡指定聚合的列以及聚合属性。 可以应用多个聚合。 此转换不生成错误输出。  
@@ -44,7 +43,7 @@ ms.locfileid: "66061580"
  **键范围**  
  在“高级”显示中，根据需要指定聚合可写入的键的大致数目。 默认情况下，此选项的值为 **“未指定”**。 如果同时设置了 **“键范围”** 和 **“键”** 属性，则 **“键”** 的值优先。  
   
-|Value|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |未指定|不使用“键范围”属性。|  
 |低|聚合可以写入大约 500,000 个键。|  
@@ -70,19 +69,19 @@ ms.locfileid: "66061580"
 |---------------|-----------------|  
 |**GroupBy**|将数据集划分为组。 可以将任何数据类型的列用于分组。 有关详细信息，请参阅 GROUP BY。|  
 |**长度**|对列中的值求和。 只能对数值数据类型的列求和。 有关详细信息，请参阅 SUM。|  
-|**平均值**|返回列中值的平均值。 只能对数值数据类型的列求平均值。 有关详细信息，请参阅 AVG。|  
+|**平均**|返回列中值的平均值。 只能对数值数据类型的列求平均值。 有关详细信息，请参阅 AVG。|  
 |**Count**|返回组中的项数。 有关详细信息，请参阅 COUNT。|  
 |**CountDistinct**|返回组中的唯一非空值的数量。 有关详细信息，请参阅 COUNT 和 DISTINCT。|  
-|**短**|返回组中的最小值。 只限于数值数据类型。|  
-|**最佳**|返回组中的最大值。 只限于数值数据类型。|  
+|**最小值**|返回组中的最小值。 只限于数值数据类型。|  
+|**最大值**|返回组中的最大值。 只限于数值数据类型。|  
   
  **比较标志**  
  如果选择“分组依据”****，请使用复选框来控制转换如何执行比较。 有关字符串比较选项的信息，请参阅 [Comparing String Data](data-flow/comparing-string-data.md)。  
   
  **Count Distinct Scale**  
- 根据需要，可以指定聚合能够写入的非重复值的大致数目。 默认情况下，此选项的值为 **“未指定”**。 如果同时`CountDistinctScale`指定了和**CountDistinctKeys** ，则**CountDistinctKeys**优先。  
+ 根据需要，可以指定聚合能够写入的非重复值的大致数目。 默认情况下，此选项的值为 **“未指定”**。 如果同时 `CountDistinctScale` 指定了和**CountDistinctKeys** ，则**CountDistinctKeys**优先。  
   
-|Value|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |未指定|不使用 `CountDistinctScale` 属性。|  
 |低|聚合可以写入大约 500,000 个非重复值。|  
@@ -90,7 +89,7 @@ ms.locfileid: "66061580"
 |高|聚合可以写入 25,000,000 个以上的非重复值。|  
   
  **Count Distinct Keys**  
- 根据需要，可以指定聚合能够写入的非重复值的精确数目。 如果同时`CountDistinctScale`指定了和**CountDistinctKeys** ，则**CountDistinctKeys**优先。  
+ 根据需要，可以指定聚合能够写入的非重复值的精确数目。 如果同时 `CountDistinctScale` 指定了和**CountDistinctKeys** ，则**CountDistinctKeys**优先。  
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services 错误和消息引用](../../2014/integration-services/integration-services-error-and-message-reference.md)   

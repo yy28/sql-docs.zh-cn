@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 605c63af-f91e-410d-8d60-5cf6f899d756
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8116f8a80a1fd614974d79516be2d4cd33eb660a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b5ce13bc7456f337b1910779e0c7caa575de483
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204977"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056531"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>显示查询和视图设计器窗格 (Visual Database Tools)
   查询和视图设计器由四个独立的窗格组成：“关系图”窗格、“条件”窗格、SQL 窗格和“结果”窗格。 通常，当您打开一个视图或者创建一个新查询时，将会打开所有四个窗口，但是如果您需要打开其中的任何窗口，只要查询和视图设计器处于打开状态，您就可以打开特定的窗口。  

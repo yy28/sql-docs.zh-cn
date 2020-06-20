@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e3e50e89-f85d-485b-a271-1e0550520212
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8ed315372dce4b6de69da389e88bbcb95166e6e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 823d35b71fca52b2f1892d6e7dbfc940688f0ae6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067083"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938868"
 ---
 # <a name="hierarchies-ssas-tabular"></a>层次结构（SSAS 表格）
   在表格模型中，层次结构是定义表中两个或更多列之间的关系的元数据。 层次结构可与报表客户端字段列表中的其他列单独出现，使客户端用户可以更方便地在报表中导航和包含数据。  
@@ -28,7 +27,7 @@ ms.locfileid: "66067083"
   
 -   [相关任务](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>便利  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> 优势  
  表可以包括几十甚至数百个其名称不寻常并且没有明显顺序的列。 这可能导致报表客户端字段列表显得未排序，从而使用户很难找到报表中的数据和在报表中包含数据。 层次结构可以提供复杂数据结构的简单、直观的视图。  
   
  例如，在日期表中，您可以创建日历层次结构。 日历年用作最顶层的父级，月、周和日作为子级包括（日历年->月->周->日）。 此层次结构显示了从日历年到日的逻辑关系。 然后，客户端用户可以从字段列表中选择“日历年”，以便包含某一数据透视表中的所有级别；或者展开层次结构，并且仅选择要在该数据透视表中包含的特定级别。  

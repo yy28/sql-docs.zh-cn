@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2baaa43fdf638dcd1f6794eaa9f5cf76df424c06
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9ec23fd1883749e35e67f888e26bdf031ccf7fb8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707078"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055866"
 ---
 # <a name="performing-distributed-transactions"></a>执行分布式事务
   Microsoft 分布式事务处理协调器 (MS DTC) 允许应用程序跨两个或多个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例扩展事务。 此外，该协调器还允许应用程序参与由符合 Open Group DTP XA 标准的事务管理器管理的事务。  

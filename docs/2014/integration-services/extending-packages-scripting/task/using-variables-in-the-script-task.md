@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a15edc663d5f855a5aa217400e1c38376e292f4c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55122ec1323c0e95816af4e6129f324041ab2eda
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894588"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967157"
 ---
 # <a name="using-variables-in-the-script-task"></a>在脚本任务中使用变量
   通过变量，脚本任务可以与包中的其他对象交换数据。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services-ssis-variables.md)。  
@@ -46,10 +45,10 @@ ms.locfileid: "62894588"
   
  Foreach 循环容器与脚本任务之间的这种通信可以通过变量实现。 在“Foreach 循环编辑器”的“变量映射”页中，可以向单个枚举项返回的每个数据项分配变量   。 例如，Foreach 文件枚举器仅返回索引 0 处的一个文件名，因此只需要一个变量映射，而在每行中返回多个数据列的枚举器需要将不同的变量映射到要在脚本任务中使用的每一列。  
   
- 在将枚举项映射到变量后，必须将映射的变量添加到`ReadOnlyVariables` **脚本任务编辑器**的 "**脚本**" 页上的属性，以使其可供脚本使用。 有关在 Foreach 循环容器中处理文件夹中的图像文件的脚本任务示例，请参阅[使用脚本任务处理图像](../../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md)。  
+ 在将枚举项映射到变量后，必须将映射的变量添加到 `ReadOnlyVariables` **脚本任务编辑器**的 "**脚本**" 页上的属性，以使其可供脚本使用。 有关在 Foreach 循环容器中处理文件夹中的图像文件的脚本任务示例，请参阅[使用脚本任务处理图像](../../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md)。  
   
 ## <a name="variables-example"></a>变量示例  
- 下面的示例演示如何在脚本任务中访问并使用变量，以确定包工作流的路径。 该示例假设您已经创建了名`CustomerCount`为和`MaxRecordCount`的整数变量，并将`ReadOnlyVariables`其添加到了 "**脚本任务编辑器**" 中的集合。 `CustomerCount` 变量包含要导入的客户记录的数目。 如果其值大于 `MaxRecordCount` 的值，则脚本任务将报告失败。 如果因超过 `MaxRecordCount` 阈值而导致失败，则工作流的错误路径可实现任何所需的清除操作。  
+ 下面的示例演示如何在脚本任务中访问并使用变量，以确定包工作流的路径。 该示例假设您已经创建了名为和的整数变量 `CustomerCount` `MaxRecordCount` ，并将其添加到了 `ReadOnlyVariables` "**脚本任务编辑器**" 中的集合。 `CustomerCount` 变量包含要导入的客户记录的数目。 如果其值大于 `MaxRecordCount` 的值，则脚本任务将报告失败。 如果因超过 `MaxRecordCount` 阈值而导致失败，则工作流的错误路径可实现任何所需的清除操作。  
   
  若要成功编译该示例，需要添加对 Microsoft.SqlServer.ScriptTask 程序集的引用。  
   

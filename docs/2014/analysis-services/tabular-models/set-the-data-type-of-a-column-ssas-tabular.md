@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9240218b05af2c642ff374cb7e14d2a6c5dd616
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a5fc58d837a6dd0ca508dbaba8da18578fac6b6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066613"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938658"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>设置列的数据类型（SSAS 表格）
   导入数据或将数据粘贴到模型时，模型设计器将自动检测并应用数据类型。 在将数据添加到模型后，您可以手动修改列的数据类型以便更改数据的存储方式。 如果只想更改显示数据的格式而不更改其存储方式，可以采用其他方法。  
@@ -50,7 +49,7 @@ ms.locfileid: "66066613"
   
 |模型数据类型|  
 |----------------------|  
-|Text<br /><br /> 小数<br /><br /> 整数<br /><br /> 货币<br /><br /> TRUE/FALSE<br /><br /> 日期|  
+|文本<br /><br /> 小数<br /><br /> 整数<br /><br /> 货币<br /><br /> TRUE/FALSE<br /><br /> Date|  
   
  如果发现数据的数据类型错误或至少与期望的数据类型不同，可以选择以下处理方法：  
   

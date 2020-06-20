@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a11983c6fc9e1ca2e8917fd2efdaa5c90b4d3c30
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22722605b266f28981457ce0c6839ad14279a434
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62828592"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916767"
 ---
 # <a name="cdc-flow-components"></a>CDC 流组件
   用于 Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] 的 Change Data Capture 组件（由 Attunity 提供）可帮助 SSIS 开发人员处理 CDC，并降低 CDC 包的复杂性。  
@@ -69,7 +68,7 @@ ms.locfileid: "62828592"
   
  如果你要使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 进行包开发，请务必在运行卸载向导前关闭 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 。  
   
-## <a name="benefits"></a>好处  
+## <a name="benefits"></a>优势  
  借助用于 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 组件的 CDC 组件，SSIS 开发者可以轻松生成 SSIS 包来处理变更数据。 这些组件增强了 SSIS 开发人员处理 CDC 的能力并降低了 CDC 包的复杂性。  
   
  使用 SSIS CDC 提供的更改数据更易于进一步处理，从而便于复制、加载数据仓库、更新 OLAP 的渐变维度、审核更改，或方便应用于其他可能的用途。 所使用的进一步处理的类型由 SSIS 开发人员确定。  
@@ -171,7 +170,7 @@ ms.locfileid: "62828592"
 ## <a name="cdc-state"></a>CDC 状态  
  每个 CDC 组都关联有某种状态，该状态表示为具有特定格式的字符串。 有关详细信息，请参阅 [CDC Control Task](../control-flow/cdc-control-task.md)。 下表列出了可能的 CDC 状态值。  
   
-|State|说明|  
+|状态|说明|  
 |-----------|-----------------|  
 |0-(INITIAL)|对当前 CDC 组运行任何包之前存在的状态。 这也是 CDC 状态为空时的状态。<br /><br /> 有关 CDC 控制任务操作的详细信息，请参阅 [CDC Control Task](../control-flow/cdc-control-task.md)。|  
 |1-ILSTART（初始-加载-已启动）|这是在初始加载包启动时存在的状态。 在 **MarkInitialLoadStart** 操作调用 CDC 控制任务后就会出现该状态。<br /><br /> 有关 CDC 控制任务操作的详细信息，请参阅 [CDC Control Task](../control-flow/cdc-control-task.md)。|  

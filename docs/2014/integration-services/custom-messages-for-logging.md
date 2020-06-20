@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a557d3dfddf5989c580b0ba78f9b5d930c548617
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7fe7d714d93915814b6658409a9f892c28e03b7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67316668"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917147"
 ---
 # <a name="custom-messages-for-logging"></a>日志记录的自定义消息
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了一组丰富的自定义事件，可以用来写入包和很多任务的日志项。 使用这些项可以记录预定义的事件或用户定义的消息，供随后分析时使用，从而将有关执行进度、结果和问题的详细信息保存下来。 例如，可以记录大容量插入的开始和结束时间，从而找出包运行时的性能问题。  
@@ -47,7 +46,7 @@ ms.locfileid: "67316668"
   
  [FTP 任务](#FTP)  
   
- [Message Queue Task](#MessageQueue)  
+ [消息队列任务](#MessageQueue)  
   
  [脚本任务](#Script)  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b87d71f8299c55e033adc21e25e29e8fb3d5e9d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e61e8c122b284dfe448f415cd05b20feab699ef
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62899951"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939208"
 ---
 # <a name="use-a-recordset-destination"></a>使用记录集目标
   记录集目标不会将数据保存到外部数据源中， 而是将数据保存在內存中的一个记录集中，该记录集存储在数据类型为 `Object` 的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包变量中。 在记录集目标保存数据之后，通常使用具有 Foreach ADO 枚举器的 Foreach 循环容器来每次处理记录集的一行。 Foreach ADO 枚举器将当前行中每列的值保存到单独的包变量中。 然后，您在 Foreach 循环容器中配置的任务会从变量中读取这些值，并对它们执行某些操作。  
@@ -121,7 +120,7 @@ ms.locfileid: "62899951"
   
 5.  打开 **“记录集目标编辑器”** ，并使用以下设置来配置目标：  
   
-    1.  在 "**组件属性**" 选项卡`VariableName`上，为`User::BonusRecordset`"属性" 选择。  
+    1.  在 "**组件属性**" 选项卡上，为 `VariableName` "属性" 选择 `User::BonusRecordset` 。  
   
     2.  在 **“输入列”** 选项卡上，选择所有三个可用列。  
   
@@ -131,9 +130,9 @@ ms.locfileid: "62899951"
   
 2.  打开 **“Foreach 循环编辑器”** ，并使用以下设置来配置容器：  
   
-    1.  在 "**集合**" 页上，为 "**枚举器**" 选择 " **Foreach ADO 枚举器**"，对于`User::BonusRecordset`" **ADO 对象源变量**"，选择。  
+    1.  在 "**集合**" 页上，为 "**枚举器**" 选择 " **Foreach ADO 枚举器**"，对于 " **ADO 对象源变量**"，选择 `User::BonusRecordset` 。  
   
-    2.  在 "**变量映射**" 页上`User::EmailAddress` ，将索引 0 `User::FirstName`映射到索引1， `User::Bonus`并映射到索引2。  
+    2.  在 "**变量映射**" 页上，将索引0映射到索引 `User::EmailAddress` `User::FirstName` 1，并映射到 `User::Bonus` 索引2。  
   
 3.  在 **“控制流”** 选项卡的 Foreach 循环容器中，添加发送邮件任务。  
   
@@ -153,7 +152,7 @@ ms.locfileid: "62899951"
   
     5.  对于 **MessageSourceType**，选择 **“直接输入”** 。  
   
-5.  在“发送邮件任务编辑器”的“表达式”页上，单击省略号按钮 ( **...** )，以打开“属性表达式编辑器”。     
+5.  在“发送邮件任务编辑器”的“表达式”页上，单击省略号按钮 ( **...** )，以打开“属性表达式编辑器”。    
   
 6.  在 **“属性表达式编辑器”** 中，输入以下信息：  
   

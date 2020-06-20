@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a2b1e6b5b366a6c4132be78ff089dbe0001efd41
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 93711e90fcc924d53747e5ec47e33fc0f6eb4946
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698610"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056465"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>使用执行时数据将数据作为表值参数发送 (ODBC)
   这类似于 "[全部在内存中](sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)" 过程，但对表值参数使用执行时数据。  
@@ -184,7 +183,7 @@ from @Items
 ## <a name="example"></a>示例  
   
 ### <a name="description"></a>说明  
- 此示例显示，可以使用行流式处理，每次调用 SQLPutData，使用 ODBC TVP，这与使用 BCP 将数据加载到数据库的方式类似。  
+ 此示例演示可以使用行流式处理，每次调用 SQLPutData 时使用 ODBC TVP，这与使用 BCP.exe 将数据加载到数据库的方式类似。  
   
  在构建此示例之前，请更改连接字符串中的服务器名称。  
   
@@ -372,7 +371,7 @@ EXIT:
 ## <a name="example"></a>示例  
   
 ### <a name="description"></a>说明  
- 此示例演示你可以使用 ODBC TVP，对每次调用 SQLPutData 使用多行流，这类似于你可能使用 .BCP 将数据加载到数据库的方式。  
+ 此示例演示你可以使用 ODBC TVP，对每次调用 SQLPutData 使用多行流，这类似于你可能使用 BCP.exe 将数据加载到数据库中的方式。  
   
  在构建此示例之前，请更改连接字符串中的服务器名称。  
   

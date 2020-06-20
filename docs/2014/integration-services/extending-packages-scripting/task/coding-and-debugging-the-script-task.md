@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 318f4404467814c95e778d19aa793107a3ad0945
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24e264ad0f30a8cf3ec454405f5d40a301ce2f49
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176168"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967227"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>脚本任务的编码和调试
   在“脚本任务编辑器”  中配置完脚本任务后，即可在脚本任务开发环境中编写自己的自定义代码。
@@ -34,7 +33,7 @@ ms.locfileid: "78176168"
 ## <a name="script-task-development-environment"></a>脚本任务开发环境
  脚本任务将 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 用作脚本自身的开发环境。
 
- 脚本代码以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写。 在“脚本任务编辑器”  中设置 **ScriptLanguage** 属性可指定脚本语言。 如果您倾向于使用其他编程语言，您可以用您选择的语言开发自定义程序集，然后通过脚本任务中的代码调用其功能。
+ 脚本代码以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写。 在“脚本任务编辑器”中设置 **ScriptLanguage** 属性可指定脚本语言。 如果您倾向于使用其他编程语言，您可以用您选择的语言开发自定义程序集，然后通过脚本任务中的代码调用其功能。
 
  您在脚本任务中创建的脚本存储在包定义中。 由于没有单独的脚本文件， 因此，使用脚本任务不会影响包部署。
 
@@ -49,9 +48,9 @@ ms.locfileid: "78176168"
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>脚本任务项目中的项目项和类
  默认情况下，显示在 VSTA 项目资源管理器窗口中的脚本任务项目包含单个项：`ScriptMain`。 `ScriptMain` 项又包含单个类，名称也为 `ScriptMain`。 该类中的代码元素根据您选择的脚本任务编程语言而有所不同：
 
--   如果脚本任务配置为[!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)]编程语言，则`ScriptMain`类有一个公共子例程。 `Main` `ScriptMain.Main` 子例程是运行脚本任务时运行库所调用的方法。
+-   如果脚本任务配置为 [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] 编程语言，则 `ScriptMain` 类有一个公共子例程 `Main` 。 `ScriptMain.Main` 子例程是运行脚本任务时运行库所调用的方法。
 
-     默认情况下，新脚本的 `Main` 子例程中只有一行代码：`Dts.TaskResult = ScriptResults.Success`。 此代码行通知运行库任务运行成功。 `Dts.TaskResult` [从脚本任务返回结果](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)中对属性进行了讨论。
+     默认情况下，新脚本的 `Main` 子例程中只有一行代码：`Dts.TaskResult = ScriptResults.Success`。 此代码行通知运行库任务运行成功。 `Dts.TaskResult`[从脚本任务返回结果](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)中对属性进行了讨论。
 
 -   如果脚本任务配置为 Visual C# 编程语言，则 `ScriptMain` 类有一个公共方法：`Main`。 此方法在脚本任务运行时调用。
 

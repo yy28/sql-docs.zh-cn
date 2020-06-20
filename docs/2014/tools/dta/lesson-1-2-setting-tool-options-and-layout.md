@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 43e97ce0-97bc-4a27-9485-5bbeb7190b85
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: de7918c382187fe4af361146bd182eecd7e30b80
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36139b916442b2c0f616d52d2b06efdbda2cfe03
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110203"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048342"
 ---
 # <a name="setting-tool-options-and-layout"></a>设置工具选项和布局
   您可以设置用于配置数据库引擎优化顾问图形用户界面 (GUI) 在启动时的显示内容、使用的字体以及其他工具功能的选项，从而为您的使用方式提供最佳支持。 通过本页的练习将让您熟悉可设置的各选项及其设置方式。  
@@ -26,7 +25,7 @@ ms.locfileid: "66110203"
   
 1.  启动数据库引擎优化顾问。 在 Windows“开始”**** 菜单中，依次指向“所有程序”****、[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] 和“性能工具”****，然后单击“数据库引擎优化顾问”****。  
   
-2.  在“工具” **** 菜单上，单击“选项” ****。  
+2.  在“工具”  菜单上，单击“选项” 。  
   
 3.  在“选项”**** 对话框中，查看下列选项：  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 89e2e5d774abf2a6bee712ec7a1479107d3d1c36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80d61a4b4742163d999aa2f5d70e70336e680e27
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176196"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967242"
 ---
 # <a name="understanding-the-script-component-object-model"></a>了解脚本组件对象模型
   如 [编写和调试脚本组件] （.）中所述。/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md，脚本组件项目包含三个项目项：
@@ -115,27 +114,27 @@ public override void PreExecute()
 
 -   每个所选输入列的已命名类型化取值函数属性。 这些属性是只读或读/写的，取决于在“脚本转换编辑器”的“输入列”页中为该列指定的“使用类型”    。
 
--   每个所选输入列的 \<column>_IsNull 属性  。 此属性也是只读或读/写的，取决于为该列指定的“使用类型”  。
+-   每个所选输入列的** \<column> _IsNull**属性。 此属性也是只读或读/写的，取决于为该列指定的“使用类型”  。
 
--   为每个已配置的输出使用 DirectRowTo\<outputbuffer> 方法  。 在将行筛选到位于同一 `ExclusionGroup` 中的多个输出之一时，将使用这些方法。
+-   每个已配置输出的**DirectRowTo \<outputbuffer> **方法。 在将行筛选到位于同一 `ExclusionGroup` 中的多个输出之一时，将使用这些方法。
 
 -   一个 `NextRow` 函数，用于获取下一个输入行，以及一个 `EndOfRowset` 函数，用于确定最后一个数据缓冲区是否已经处理。 使用在 `UserComponent` 基类中实现的输入处理方法时，通常不需要这些函数。 下一节提供有关 `UserComponent` 基类的详细信息。
 
 #### <a name="what-the-componentwrapper-project-item-provides"></a>ComponentWrapper 项目项提供的内容
  ComponentWrapper 项目项包含从 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 派生的名为 `UserComponent` 的类。 您要用来编写自定义代码的 `ScriptMain` 类又派生自 `UserComponent`。 `UserComponent` 类包含以下方法：
 
--   `ProcessInput` 方法的重写实现。 这是数据流引擎在运行时继调用 `PreExecute` 方法后调用的下一个方法，该方法可被调用多次。 `ProcessInput`将处理移交给** \<inputbuffer>_ProcessInput**方法。 然后 `ProcessInput` 方法检查是否已到达输入缓冲区的末尾，如果已到达缓冲区末尾，则调用可重写的 `FinishOutputs` 方法和私有 `MarkOutputsAsFinished` 方法。 然后 `MarkOutputsAsFinished` 方法对最后一个输出缓冲区调用 `SetEndOfRowset`。
+-   `ProcessInput` 方法的重写实现。 这是数据流引擎在运行时继调用 `PreExecute` 方法后调用的下一个方法，该方法可被调用多次。 `ProcessInput`将处理移交给** \<inputbuffer> _ProcessInput**方法。 然后 `ProcessInput` 方法检查是否已到达输入缓冲区的末尾，如果已到达缓冲区末尾，则调用可重写的 `FinishOutputs` 方法和私有 `MarkOutputsAsFinished` 方法。 然后 `MarkOutputsAsFinished` 方法对最后一个输出缓冲区调用 `SetEndOfRowset`。
 
--   \<inputbuffer>_ProcessInput 方法的可重写实现  。 此默认实现只是遍历每个输入行并调用 \<inputbuffer>_ProcessInputRow  。
+-   ** \<inputbuffer> _ProcessInput**方法的可重写实现。 此默认实现只循环遍历每个输入行并调用** \<inputbuffer> _ProcessInputRow**。
 
--   \<inputbuffer>_ProcessInputRow 方法的可重写实现  。 默认实现为空。 通常会重写此方法以编写自定义数据处理代码。
+-   ** \<inputbuffer> _ProcessInputRow**方法的可重写实现。 默认实现为空。 通常会重写此方法以编写自定义数据处理代码。
 
 #### <a name="what-your-custom-code-should-do"></a>自定义代码应执行的操作
  可以使用以下方法在 `ScriptMain` 类中处理输入：
 
--   重写 \<inputbuffer>_ProcessInputRow 以便在每个输入行通过时处理其中的数据  。
+-   重写** \<inputbuffer> _ProcessInputRow** ，以在每个输入行通过时处理数据。
 
--   仅当你在遍历输入行时必须执行附加操作时，才重写 \<inputbuffer>_ProcessInput  。 （例如，在处理完所有行之后`EndOfRowset` ，必须测试以执行其他一些操作。）调用** \<inputbuffer>_ProcessInputRow**执行行处理。
+-   仅当在遍历输入行时需要执行其他操作时，才重写** \<inputbuffer> _ProcessInput** 。 （例如，在 `EndOfRowset` 处理完所有行之后，必须测试以执行其他一些操作。）调用** \<inputbuffer> _ProcessInputRow**以执行行处理。
 
 -   如果必须在关闭输出之前对输出进行一些操作，请重写 `FinishOutputs`。
 
@@ -149,11 +148,11 @@ public override void PreExecute()
 
 -   每个输出列的已命名类型化只写取值函数属性。
 
--   对于每个所选输出列** \<>_IsNull**属性，可用于将列值设置为`null`的唯一列。
+-   每个所选输出列的只写** \<column> _IsNull**属性，可用于将列值设置为 `null` 。
 
 -   一个 `AddRow` 方法，用于将空的新行添加到输出缓冲区。
 
--   一个 `SetEndOfRowset` 方法，用于通知数据流引擎没有数据缓冲区了。 还有一个 `EndOfRowset` 函数，用于确定当前缓冲区是否是最后一个数据缓冲区。 当使用`UserComponent`基类中实现的输入处理方法时，通常不需要这些函数。
+-   一个 `SetEndOfRowset` 方法，用于通知数据流引擎没有数据缓冲区了。 还有一个 `EndOfRowset` 函数，用于确定当前缓冲区是否是最后一个数据缓冲区。 当使用基类中实现的输入处理方法时，通常不需要这些函数 `UserComponent` 。
 
 #### <a name="what-the-componentwrapper-project-item-provides"></a>ComponentWrapper 项目项提供的内容
  ComponentWrapper 项目项包含从 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 派生的名为 `UserComponent` 的类。 您要用来编写自定义代码的 `ScriptMain` 类又派生自 `UserComponent`。 `UserComponent` 类包含以下方法：
@@ -175,7 +174,7 @@ public override void PreExecute()
  如果您有必须仅在处理完数据行之后执行一次的处理，请重写 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PostExecute%2A> 基类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 方法。 例如，在源中，您可能希望关闭曾用来将数据加载到数据流中的 `System.Data.SqlClient.SqlDataReader`。
 
 > [!IMPORTANT]
->  `ReadWriteVariables` 集合仅在 `PostExecute` 方法中可用。 因此不能在处理每行数据时直接递增包变量的值， 相反，增加局部变量的值，并在处理完所有数据后将包变量的值设置为`PostExecute`方法中的局部变量的值。
+>  `ReadWriteVariables` 集合仅在 `PostExecute` 方法中可用。 因此不能在处理每行数据时直接递增包变量的值， 相反，增加局部变量的值，并在 `PostExecute` 处理完所有数据后将包变量的值设置为方法中的局部变量的值。
 
 ## <a name="releaseconnections-method"></a>ReleaseConnections 方法
  源和目标通常必须连接到外部数据源。 请重写 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReleaseConnections%2A> 基类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 方法，以关闭和释放先前在 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.AcquireConnections%2A> 方法中打开的连接。

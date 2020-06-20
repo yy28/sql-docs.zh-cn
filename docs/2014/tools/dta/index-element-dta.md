@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 59650edbef55b7bb433c6003c9ddc0f203ca7c5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 110dcd8ef5f554bdf1c59ab9a15984ec8ca97c65
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63229008"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048396"
 ---
 # <a name="index-element-dta"></a>索引元素 (DTA)
   包含为用户指定的配置创建或删除的索引的信息。  
@@ -45,7 +44,7 @@ ms.locfileid: "63229008"
 |`Online`|`boolean`|可选。 指定可在服务器联机时执行操作的索引，执行这些操作需要临时磁盘空间。 设置为“true”或“false”，例如：<br /><br /> `<Index Online="true">`<br /><br /> 默认情况下，此属性设置为“false”。<br /><br /> 有关详细信息，请参阅 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。|  
 |`IndexSizeInMB`|`double`|可选。 以兆字节为单位指定索引的最大大小，例如：<br /><br /> `<Index IndexSizeInMB="873.75">`<br /><br /> 无默认设置。|  
 |`NumberOfRows`|`integer`|可选。 模拟不同的索引大小，这可有效地模拟不同的表大小，例如：<br /><br /> `<Index NumberOfRows="3000">`<br /><br /> 无默认设置。|  
-|`QUOTED_IDENTIFIER`|`boolean`|可选。 导致[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]遵循有关引号分隔标识符和文字字符串的 ISO 规则。 如果是对计算列或视图建立的索引，则必须打开此属性。 例如，下面的语法可以打开此属性：<br /><br /> `<Index QUOTED_IDENTIFIER [...]>`<br /><br /> 默认情况下，关闭此属性。<br /><br /> 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](/sql/t-sql/statements/set-quoted-identifier-transact-sql)。|  
+|`QUOTED_IDENTIFIER`|`boolean`|可选。 使 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 遵从关于引号分隔标识符和文字字符串的 ISO 规则。 如果是对计算列或视图建立的索引，则必须打开此属性。 例如，下面的语法可以打开此属性：<br /><br /> `<Index QUOTED_IDENTIFIER [...]>`<br /><br /> 默认情况下，关闭此属性。<br /><br /> 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](/sql/t-sql/statements/set-quoted-identifier-transact-sql)。|  
 |`ARITHABORT`|`boolean`|可选。 在查询执行过程中发生溢出或被零除错误时终止查询。 如果是对计算列或视图建立的索引，则必须打开此属性。 例如，下面的语法可以打开此属性：<br /><br /> `<Index ARITHABORT [...]>`<br /><br /> 默认情况下，关闭此属性。<br /><br /> 有关详细信息，请参阅 [SET ARITHABORT (Transact-SQL)](/sql/t-sql/statements/set-arithabort-transact-sql)。|  
 |`CONCAT_NULL_YIELDS_`<br /><br /> `NULL`|`boolean`|可选。 控制是将串联结果视为空值还是空字符串值。 如果是对计算列或视图建立的索引，则必须打开此属性。 例如，下面的语法可以打开此属性：<br /><br /> `<Index CONCAT_NULL_YIELDS_NULL [...]>`<br /><br /> 默认情况下，关闭此属性。<br /><br /> 有关详细信息，请参阅 [SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)。|  
 |`ANSI_NULLS`|`boolean`|可选。 指定在与空值一起使用等于 (=) 和不等于 (<>) 比较运算符时，这些运算符遵从 ISO 标准的行为。 如果是对计算列或视图建立的索引，则必须打开此属性。 例如，下面的语法可以打开此属性：<br /><br /> `<Index ANSI_NULLS [...]>`<br /><br /> 默认情况下，关闭此属性。<br /><br /> 有关详细信息，请参阅 [SET ANSI_NULLS (Transact-SQL)](/sql/t-sql/statements/set-ansi-nulls-transact-sql)。|  
@@ -55,11 +54,11 @@ ms.locfileid: "63229008"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|描述|  
+|特征|说明|  
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  
-|**匹配项**|如果未使用 `Create` 或 `Drop` 元素指定其他物理设计结构，则每个 `Statistics` 或 `Heap` 元素均需出现一次。|  
+|**出现次数**|如果未使用 `Create` 或 `Drop` 元素指定其他物理设计结构，则每个 `Statistics` 或 `Heap` 元素均需出现一次。|  
   
 ## <a name="element-relationships"></a>元素关系  
   

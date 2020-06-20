@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2b30835a-2680-4d98-89a4-4f17e29e3818
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 07a04fe26bbd47463d0564f7799698ab282a9979
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5bef21b424c401d77b9d8f3477de4061c3ff0f3d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059489"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966954"
 ---
 # <a name="dimension-processing-destination-editor-advanced-page"></a>维度处理目标编辑器（“高级”页）
   可以使用 **“维度处理目标编辑器”** 对话框中的 **“高级”** 页配置错误处理方式。  
@@ -28,12 +27,12 @@ ms.locfileid: "66059489"
   
 ## <a name="options"></a>选项  
  **使用默认错误配置**  
- 指定是否使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的默认错误处理方式。 此值默认为 `True`。  
+ 指定是否使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的默认错误处理方式。 默认情况下，此值为 `True`。  
   
  **键错误操作**  
  指定如何处理包含不可接受的键值的记录。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|将不适用的键值转换为 `UnknownMember` 值。|  
 |**DiscardRecord**|放弃记录。|  
@@ -50,7 +49,7 @@ ms.locfileid: "66059489"
  **出错时要执行的操作**  
  指定在达到错误阈值时执行的操作（如果选择了“出错时停止”****）。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**StopProcessing**|停止处理。|  
 |**StopLogging**|停止记录错误。|  
@@ -58,7 +57,7 @@ ms.locfileid: "66059489"
  **找不到键**  
  指定在出现“找不到键”错误时执行的操作。 默认情况下，此值为 **ReportAndContinue**。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  
@@ -67,7 +66,7 @@ ms.locfileid: "66059489"
  **重复键**  
  指定在出现“重复键”错误时执行的操作。 默认情况下，此值为 **IgnoreError**。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  
@@ -76,7 +75,7 @@ ms.locfileid: "66059489"
  **空键转换为未知键**  
  指定在将空键转换为 `UnknownMember` 值后所采取的操作。 默认情况下，此值为 **IgnoreError**。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  
@@ -85,7 +84,7 @@ ms.locfileid: "66059489"
  **不允许空键**  
  指定在不允许空键而又遇到空键时执行的操作。 默认情况下，此值为 **ReportAndContinue**。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**IgnoreError**|忽略错误并继续处理。|  
 |**ReportAndContinue**|报告错误并继续处理。|  

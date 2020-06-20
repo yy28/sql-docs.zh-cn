@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a605417c-4ba7-4f3f-baa9-14166f97c478
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 00deba3bb21a36f478fc2994f621cbe8fe9396c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d13e95d8512f1c82625b0a891cd0694f436b52a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63049589"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064194"
 ---
 # <a name="nsltservice-namegt-properties-advanced-tab"></a>NS$&lt;服务名称&gt; 属性（“高级”选项卡）
   [!INCLUDE[ssNS](../../includes/ssns-md.md)] 以名称格式为 **NS$** _<user_configured name>_ 的服务的形式实现。 如果定义了自定义属性，定义的属性及其属性值将显示在此选项卡上。 此选项卡有可能不列出任何属性。  

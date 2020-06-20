@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 57adcc55cf7b699e5092671fc61eb83278858cb4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e7f168d45b03473d958e202bd75116f4519d2fc4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177337"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064118"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>preprocess 选项（分布式重播管理工具）
-  Distributed Replay 管理工具`DReplay.exe`是一个命令行工具，可用于与 Distributed Replay 控制器进行通信。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本主题介绍 **preprocess** 命令行选项和相应的语法。
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理工具 `DReplay.exe` 是一个命令行工具，可用于与 Distributed Replay 控制器进行通信。 本主题介绍 **preprocess** 命令行选项和相应的语法。
 
  **preprocess** 选项用于启动预处理阶段。 在此阶段，控制器会准备对针对目标服务器进行重播的输入跟踪数据。
 
@@ -32,12 +31,12 @@ ms.locfileid: "78177337"
     -dcontroller_working_dir [-cconfig_file] [-fstatus_interval]
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
  **-m** *控制器*指定控制器的计算机名称。 可以用“`localhost`”或“`.`”指代本地计算机。
 
  如果未指定 **-m** 参数，则使用本地计算机。
 
- **-i** *input_trace_file*指定控制器上输入跟踪文件的完整路径，例如`D:\Mytrace.trc`。 **-i** 参数是必需的。
+ **-i** *input_trace_file*指定控制器上输入跟踪文件的完整路径，例如 `D:\Mytrace.trc` 。 **-i** 参数是必需的。
 
  如果同一目录中存在滚动更新文件，则会自动加载并使用这些文件。 文件必须遵循文件滚动更新命名约定，例如：`Mytrace.trc`、`Mytrace_1.trc`、`Mytrace_2.trc`、`Mytrace_3.trc`…`Mytrace_n.trc`。
 

@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: f16db803-d8dc-45a5-8050-e8f4f41c04a8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 650e4a8efac5ce39e3fdfb476099ea648ca8ae62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 565e42d1b3ba6391aaf61c3c44f60a9a05867902
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736946"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995886"
 ---
 # <a name="instancename-property-serversettings-class"></a>InstanceName 属性（ServerSettings 类）
-  获取[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]要应用服务器设置的实例的名称。  
+  获取 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 要应用服务器设置的实例的名称。  
   
 ## <a name="syntax"></a>语法  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cb8b8bec38b428ca7b2eea5166867141b34a2405
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b48bf3c0f0984c3f13acde23515c931aed5f467
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68185978"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057628"
 ---
 # <a name="tablediff-utility"></a>tablediff 实用工具
   **tablediff** 实用工具用于比较两个非收敛表中的数据，它对于排除复制拓扑中的非收敛故障非常有用。 可以从命令提示符或在批处理文件中使用该实用工具执行以下任务：  
@@ -76,8 +75,8 @@ ms.locfileid: "68185978"
  [ **-?** ]  
  返回支持参数的列表。  
   
- **-sourceserver** *source_server_name*[**\\**_instance_name_]  
- 源服务器的名称。 为的默认实例指定_\_源服务器\_名称。_ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 为[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的命名实例指定_源\_服务器\_名称__\__ **\\**实例名称。  
+ **-sourceserver** *source_server_name*[ **\\** _instance_name_]  
+ 源服务器的名称。 为的默认实例指定_源 \_ 服务器 \_ 名称_ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 为的命名实例指定_源 \_ 服务器 \_ 名称_ **\\** _实例 \_ 名称_ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
  **-sourcedatabase** *source_database*  
  源数据库的名称。  
@@ -100,8 +99,8 @@ ms.locfileid: "68185978"
  **-sourcelocked**  
  在使用 TABLOCK 和 HOLDLOCK 表提示的比较过程中锁定源表。  
   
- **-destinationserver** *destination_server_name*[**\\**_实例\_名称_]  
- 目标服务器的名称。 指定 *destination_server_name* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 为的命名实例指定_\_目标\_服务器名称_**\\**_\_实例名称。_ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+ **-destinationserver** *destination_server_name*[ **\\** _实例 \_ 名称_]  
+ 目标服务器的名称。 指定 *destination_server_name* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 为的命名实例指定_目标 \_ 服务器 \_ 名称_ **\\** _实例 \_ 名称_ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
  **-destinationdatabase** *subscription_database*  
  目标数据库的名称。  
@@ -169,7 +168,7 @@ ms.locfileid: "68185978"
 |**2**|存在表差异|  
   
 ## <a name="remarks"></a>备注  
- **Tablediff**实用工具不能用于非[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]服务器。  
+ **Tablediff**实用工具不能用于非 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务器。  
   
  不支持包含 `sql_variant` 数据类型列的表。  
   

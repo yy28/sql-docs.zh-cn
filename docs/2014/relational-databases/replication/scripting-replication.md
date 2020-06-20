@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 55407c52c5fb7bf0c9537eaf8fb7a7d31d2675e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52c0129c18f3248813c663026797b86ea23d5b13
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250524"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056894"
 ---
 # <a name="scripting-replication"></a>编写复制脚本
   制订灾难恢复计划时，应要求对拓扑中的所有复制组件编写脚本，另外，脚本还可以用来自动处理重复性的任务。 脚本包含为实现要为其编写脚本的复制组件所需的 Transact-SQL 系统存储过程，如发布或订阅。 创建完组件后，可以在向导（如新建发布向导）或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中创建脚本。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 **sqlcmd**查看、修改和运行脚本。 脚本可以与备份文件存储在一起，以便在必须重新配置复制拓扑时使用。  
@@ -82,7 +81,7 @@ ms.locfileid: "63250524"
   
 3.  右键单击某个发布或订阅，然后单击 **“生成脚本”** 。  
   
-4.  在“生成 SQL 脚本 - **复制对象>”\<** 对话框中指定选项。  
+4.  在 "**生成 SQL 脚本- \<ReplicationObject> ** " 对话框中指定选项。  
   
 5.  单击 **“将脚本保存到文件”** 。  
   

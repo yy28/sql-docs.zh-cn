@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf98aa4b-10ba-4978-9fae-a5873ff88613
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6eaf39005e6c5d1d5cf401738fe82f3c97cdf693
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86ce196fa2f7fc90d1ed3f5786881cd30ab316ad
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059410"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966919"
 ---
 # <a name="dimension-processing-destination-editor-mappings-page"></a>维度处理目标编辑器（“映射”页）
   可以使用 **“维度处理目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到维度列。  
