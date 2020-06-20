@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f38b504943dafd97c39ef66cd1ab903cafe18dd6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bc9d7c85a72c34cee1ef7af8cb4b4f25f918a3fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706425"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024018"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>“重新生成索引”任务（维护计划）
   使用“重新生成索引任务”  对话框可用利用新的填充因子对数据库中的表重新创建索引。 填充因子确定索引中每页上的空白空间量，以容纳将来的扩展内容。 随着向表中添加数据，由于没有维持填充因子，可用空间将逐渐填满。 重新组织数据页和索引页可以重新建立可用空间。  
@@ -28,7 +27,7 @@ ms.locfileid: "82706425"
  **“‘重新生成索引’任务”** 使用 ALTER INDEX 语句。  
   
 ## <a name="options"></a>选项  
- **连接**  
+ **Connection**  
  选择执行此任务时使用的服务器连接。  
   
  **新建**  
@@ -56,7 +55,7 @@ ms.locfileid: "82706425"
     > [!NOTE]  
     >  只能对兼容级别被设置为 80 或更高的数据库运行维护计划。 不显示兼容级别设置为 70 或更低的数据库。  
   
- **对象**  
+ **Object**  
  将“选择”**** 网格限制为显示表、显示视图或同时显示两者。  
   
  **选择**  
@@ -90,7 +89,7 @@ ms.locfileid: "82706425"
  **选择或输入服务器名称**  
  选择执行此任务时所要连接的服务器。  
   
- **全部**  
+ **刷新**  
  刷新可用服务器的列表。  
   
  **输入登录服务器所需的信息**  
@@ -109,7 +108,7 @@ ms.locfileid: "82706425"
  提供一个在进行身份验证时要使用的密码。 此选项不可用。  
   
 ## <a name="see-also"></a>另请参阅  
- [Transact-sql&#41;&#40;ALTER INDEX](/sql/t-sql/statements/alter-index-transact-sql)   
+ [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)   
  [DBCC DBREINDEX &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-dbreindex-transact-sql)   
  [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)   
  [用于索引的 SORT_IN_TEMPDB 选项](../indexes/indexes.md)   

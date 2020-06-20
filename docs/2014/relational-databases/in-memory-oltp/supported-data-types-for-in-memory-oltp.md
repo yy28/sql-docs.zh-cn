@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b7ba8c40979873cc2c3f2358b57dc0e491a1795e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a7dda500486c39a66f871d5934f957028fc51e9d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718834"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025737"
 ---
 # <a name="supported-data-types"></a>支持的数据类型
   内存优化表和本机编译存储过程中 **支持** 以下数据类型：  
@@ -30,7 +29,7 @@ ms.locfileid: "82718834"
 |tinyint|[int、bigint、smallint 和 tinyint (Transact-SQL)](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
 |Decimal|[decimal 和 numeric (Transact-SQL)](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)|  
 |numeric|[decimal 和 numeric (Transact-SQL)](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)|  
-|float|[float 和 real (Transact-SQL)](/sql/t-sql/data-types/float-and-real-transact-sql)|  
+|FLOAT|[float 和 real (Transact-SQL)](/sql/t-sql/data-types/float-and-real-transact-sql)|  
 |real|[float 和 real (Transact-SQL)](/sql/t-sql/data-types/float-and-real-transact-sql)|  
 |money|[money 和 smallmoney (Transact-SQL)](/sql/t-sql/data-types/money-and-smallmoney-transact-sql)|  
 |smallmoney|[money 和 smallmoney (Transact-SQL)](/sql/t-sql/data-types/money-and-smallmoney-transact-sql)|  

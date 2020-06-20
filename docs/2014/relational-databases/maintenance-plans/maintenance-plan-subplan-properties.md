@@ -12,16 +12,15 @@ f1_keywords:
 ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c9dbc755d5ee95b74991b249bc037fb6fc5a9f11
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c58cea8755a7f1d859c1730d79567797547ccaf9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806699"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024138"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>维护计划（子计划属性）
-  使用“维护计划(子计划属性)”  对话框可以为维护计划的子计划指定名称、说明和计划。 在维护计划的“设计”  选项卡上单击“子计划属性”  ，或者在设计器网格中双击某子计划可显示此对话框。  
+  使用“维护计划(子计划属性)”  对话框可以为维护计划的子计划指定名称、说明和计划。 在维护计划的“设计”选项卡上单击“子计划属性”，或者在设计器网格中双击某子计划可显示此对话框。  
   
 ## <a name="options"></a>选项  
  **名称**  
