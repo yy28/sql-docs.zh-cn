@@ -11,25 +11,24 @@ f1_keywords:
 ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6266dd29c3486b6ae4163b15cffbc455eee31c5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b163f9e984a3fa9933cdc57150357596f4face8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62705126"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061753"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>“评估策略”对话框，“策略选择”页
   此对话框用于评估基于策略的管理策略。 选择 **“评估结果”** 页后，可以将策略应用于目标集中不符合这些策略的项。  
   
 ## <a name="options"></a>选项  
- **源**  
+ **Source**  
  指定策略的来源。 若要更改来源，请单击“浏览”按钮 (**...**) 以打开“选择源”**** 对话框。  
   
- **文件**  
+ **附件**  
  键入包含基于策略的管理策略的文件的路径，或者使用“浏览”按钮 (**...**) 选择文件。  
   
- **服务器**  
+ **Server**  
  选择此选项可连接到包含所需策略的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例。  
   
  **策略: 策略**  

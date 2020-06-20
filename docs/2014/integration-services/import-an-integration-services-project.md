@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 3301c328-b0f5-4517-915c-93713413e453
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ac28a67051299b0dbdfc7010d9abe20d0d2d2493
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5191da78fc32d72c54fa6da925bd419685b90152
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058165"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965657"
 ---
 # <a name="import-an-integration-services-project"></a>导入 Integration Services 项目
   使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的“导入项目向导”**** 可以根据现有的部署文件 (.ispac) 或部署到 Integration Services 目录的项目创建一个项目。 如果您没有项目的原始副本，但又想根据 .ispac 文件或 SSISDB 目录创建一个项目，此时该功能特别有用。  
   
 ### <a name="to-import-a-project"></a>导入项目  
   
-1.  在[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]中，单击 "**文件**" 菜单上的 "**新建** > **项目**"。  
+1.  在中 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ， **New**单击  >  "**文件**" 菜单上的 "新建**项目**"。  
   
 2.  在 **“新建项目”** 窗口的 **“已安装的模板”** 区域中，展开 **“商业智能”**，然后单击 **“Integration Services”**。  
   

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: db192105-e8aa-4392-b812-9d727918c005
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: aa2b5830ab0579fe0429357fea3275d4e14d1c47
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 61da7fafe60ef31246a436e21a5110c121d094e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703632"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996413"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>数据类型强制和 sql:datatype 批注 (SQLXML 4.0)
   在 XSD 架构中，`xsd:type` 属性指定元素或属性的 XSD 数据类型。 在 XSD 架构用于从数据库中提取数据时，指定的数据类型用于将数据格式化。  
@@ -41,7 +40,7 @@ ms.locfileid: "82703632"
 |XSD 数据类型|SQL Server 转换|  
 |-------------------|---------------------------|  
 |Boolean|CONVERT(bit, COLUMN)|  
-|日期|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
+|Date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
 |Decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  

@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 4380040a-1368-4a47-8930-47c65a192e59
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ed0cd8bad3a99c7f1f59b5121aafb06ccdee63b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 20d32f3a050e79aef90eb8df302bd7a590cead3e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952243"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045148"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>部署核对清单：PowerPivot for SharePoint 2010 的多服务器安装
-  此核对清单将指导你完成将 for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] SharePoint 添加到从头开始生成的三层 sharepoint 2010 场的步骤。 一个三层场包括数据库层、应用程序层和 Web 层。 若[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]要添加到此拓扑中，需要运行 SQL Server 安装[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]程序以在应用程序层上安装。 PowerPivot 程序文件将添加到 web 层中，但仅在部署 web 应用程序解决方案时作为安装后任务。 尽管这些是部署步骤，但对于 Web 层或数据层而言，并没有需要执行的单独的安装步骤。 你需要执行的唯一安装步骤是在应用程序[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]服务器上安装。  
+  此核对清单将指导你完成将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] For SharePoint 添加到从头开始生成的三层 sharepoint 2010 场的步骤。 一个三层场包括数据库层、应用程序层和 Web 层。 若要添加 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 到此拓扑中，需要运行 SQL Server 安装程序以 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 在应用程序层上安装。 PowerPivot 程序文件将添加到 web 层中，但仅在部署 web 应用程序解决方案时作为安装后任务。 尽管这些是部署步骤，但对于 Web 层或数据层而言，并没有需要执行的单独的安装步骤。 你需要执行的唯一安装步骤是 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 在应用程序服务器上安装。  
   
 ||  
 |-|  
@@ -102,7 +101,7 @@ ms.locfileid: "71952243"
   
     4.  在 "规则类型" 中，单击 "**自定义**"。  
   
-    5.  单击“下一步”。   
+    5.  单击“下一步”。  
   
     6.  在程序的 "服务" 部分中，单击 "**自定义**"。  
   
@@ -110,7 +109,7 @@ ms.locfileid: "71952243"
   
     8.  如果已将 SQL Server 作为默认实例安装，请选择 " **SQL Server （MSSQLSERVER）** "，然后单击 **"确定"**。  
   
-    9. 单击“下一步”。   
+    9. 单击“下一步”。  
   
     10. 在 "协议和端口" 中，接受默认设置，然后单击 "**下一步**"。  
   
@@ -122,7 +121,7 @@ ms.locfileid: "71952243"
   
     14. 在 "名称" 中，为入站规则键入说明性名称（例如**SQL Server**）。  
   
-    15. 单击 **“完成”** 。  
+    15. 单击“完成”。  
   
 ##  <a name="install-and-configure-a-three-tier-sharepoint-2010-farm"></a><a name="installsp"></a>安装和配置三层 SharePoint 2010 场  
  在用作 SharePoint 服务器的每台计算机上，运行 SharePoint Prerequisite Installer 程序，然后运行 SharePoint Server 安装程序。  
@@ -189,7 +188,7 @@ ms.locfileid: "71952243"
   
  若要验证 PowerPivot 与 SharePoint 网站的集成，请执行以下操作：  
   
-1.  在浏览器中，打开您创建的 Web 应用程序。 如果使用了默认值，则可以在 URL\<地址中指定 http://计算机名>。  
+1.  在浏览器中，打开您创建的 Web 应用程序。 如果使用了默认值，则可以 \<your computer name> 在 URL 地址中指定 http://。  
   
 2.  验证 PowerPivot 数据访问和处理功能在应用程序中可用。 您可以通过验证 PowerPivot 提供的库模板是否存在来验证此可用性：  
   
@@ -209,11 +208,11 @@ ms.locfileid: "71952243"
   
 5.  从“开始”菜单中的 Microsoft SQL Server 2008 R2 程序组启动 SQL Server Management Studio。 如果未在您的服务器上安装此工具，则可以跳到最后一步以便确认缓存文件是否存在。  
   
-6.  在“服务器类型”中，选择 **“Analysis Services”**。  
+6.  在 "服务器类型" 中选择**Analysis Services**。  
   
-7.  在 "服务器名称" 中，输入** \<服务器名称> \powerpivot**，其中** \<，服务器名称>** 是安装了 PowerPivot for SharePoint 的计算机的名称。  
+7.  在 "服务器名称" 中，输入** \<server-name> \powerpivot**，其中 **\<server-name>** 是安装了 PowerPivot for SharePoint 的计算机的名称。  
   
-8.  单击“连接”  。  
+8.  单击“连接”。  
   
 9. 在对象资源管理器中，单击 "**数据库**" 查看加载的 PowerPivot 数据文件的列表。  
   
@@ -241,7 +240,7 @@ ms.locfileid: "71952243"
   
 5.  输入应有权添加或删除文档的 Windows 域用户或组帐户。  
   
-6.  单击“确定”。   
+6.  单击“确定”。  
   
 7.  选中 "网站集**访问者**" 组的复选框。  
   
@@ -249,7 +248,7 @@ ms.locfileid: "71952243"
   
 9. 输入应有权查看文档的 Windows 域用户或组帐户。 与前面一样，如果将应用程序配置为采用经典身份验证，则不要使用电子邮件地址或分发组。  
   
-10. 单击“确定”。   
+10. 单击“确定”。  
   
 #### <a name="install-adonet-data-services-35-sp1"></a>安装 ADO.NET Data Services 3.5 SP1  
  ADO.NET Data Services 是 SharePoint 列表的数据馈送导出所必需的。 SharePoint 2010 在 PrerequisiteInstaller 程序中不包括此组件，因此您必须手动安装它。 有关如何安装 ADO.NET 数据服务的详细信息，请参阅[安装 ADO.NET Data services 以支持 SharePoint 列表的数据馈送导出](../../../2014/sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)。  

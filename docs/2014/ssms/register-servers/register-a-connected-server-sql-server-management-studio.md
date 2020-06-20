@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 77deb5f5-0f80-484f-8b8b-29afa67ec18f
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: adb411df9f1a67b3c8963382f0c907e04c395b5b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 93fcd53b0abbbae6855d32cd215327ebfafe9889
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75241335"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994767"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>注册连接的服务器 (SQL Server Management Studio)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中注册服务器。 通过注册服务器，您可以保存经常访问的服务器的连接信息。 可以在连接前注册服务器，也可以在通过对象资源管理器进行连接时注册服务器。  

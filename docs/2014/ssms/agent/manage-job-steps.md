@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 27dfa9f596d63021eb5f22b2e0b25a306e7fa2b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7362df13956e44b73d6984691e882bec2f39a1e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798217"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062233"
 ---
 # <a name="manage-job-steps"></a>管理作业步骤
   作业步骤是作业对数据库或服务器执行的操作。 每个作业必须至少有一个作业步骤。 作业步骤可以为：  
@@ -101,7 +100,7 @@ ms.locfileid: "72798217"
   
 -   要打开的现有 PowerShell 脚本文件。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理 powershell 子系统打开一个 powershell 会话，并加载[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] powershell 管理单元。用作作业步骤命令的 PowerShell 脚本可以引用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供程序和 cmdlet。 有关使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 管理单元编写 PowerShell 脚本的详细信息，请参阅 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理 powershell 子系统打开一个 powershell 会话，并加载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] powershell 管理单元。用作作业步骤命令的 PowerShell 脚本可以引用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供程序和 cmdlet。 有关使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 管理单元编写 PowerShell 脚本的详细信息，请参阅 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)。  
   
 ## <a name="activex-scripting-job-steps"></a>ActiveX 脚本作业步骤  
   
@@ -210,6 +209,6 @@ Set oServer = nothing
 |说明如何删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤日志。|[Delete a Job Step Log](delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- [sysjobstepslogs &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
+ [dbo.sysjobstepslogs &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
  [创建作业](create-jobs.md)   
  [sp_add_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  

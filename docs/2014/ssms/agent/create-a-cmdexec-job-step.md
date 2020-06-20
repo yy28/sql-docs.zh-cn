@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: b48da5b4-6fe7-4eb7-bade-dc7d697c6d5c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7ba283ef2ff426521c881f733bc29465eebc0c76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 48c557b8ea4228d27b73d361c50aac62232d1e00
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798158"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062327"
 ---
 # <a name="create-a-cmdexec-job-step"></a>创建 CmdExec 作业步骤
-  本主题介绍如何通过使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]或 SQL Server 管理对象，在中创建和定义使用可执行程序或操作系统命令的代理作业步骤。  
+  本主题介绍如何 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过使用或 SQL Server 管理对象，在中创建和定义 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 使用可执行程序或操作系统命令的代理作业 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 步骤 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。  
   
  **本主题内容**  
   

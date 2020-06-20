@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 21f58cd6991b760edeefb81c37e02c617f8e09cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 246036bfea6dc8431f878165330f7f0571949897
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916941"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965737"
 ---
 # <a name="shrink-a-database"></a>收缩数据库
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中使用对象收缩数据库。  
@@ -65,7 +64,7 @@ ms.locfileid: "62916941"
   
 #### <a name="to-shrink-a-database"></a>收缩数据库  
   
-1.  在**对象资源管理器**中，连接到的[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例，然后展开该实例。  
+1.  在**对象资源管理器**中，连接到的实例 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，然后展开该实例。  
   
 2.  展开 "**数据库**"，然后右键单击要收缩的数据库。  
   
@@ -86,7 +85,7 @@ ms.locfileid: "62916941"
      **收缩后文件中的最大可用空间**  
      输入在数据库收缩后数据库文件中剩余可用空间的最大百分比。 值可以介于 0 和 99 之间。  
   
-4.  单击" **确定**"。  
+4.  单击“确定”。   
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -96,7 +95,7 @@ ms.locfileid: "62916941"
   
 2.  在标准菜单栏上，单击 **“新建查询”** 。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行”  。 此实例使用 [DBCC SHRINKDATABASE](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql) 减少 `UserDB` 数据库中数据文件和日志文件的大小并允许数据库中有 `10` ％ 的可用空间。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此实例使用 [DBCC SHRINKDATABASE](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql) 减少 `UserDB` 数据库中数据文件和日志文件的大小并允许数据库中有 `10` ％ 的可用空间。  
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkdb1)]  
   
@@ -107,7 +106,7 @@ ms.locfileid: "62916941"
  [收缩文件](shrink-a-file.md)   
  [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
  [sys. database_files &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
- [DBCC &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
+ [DBCC (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
  [DBCC SHRINKFILE &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)   
  [数据库文件和文件组](database-files-and-filegroups.md)  
   

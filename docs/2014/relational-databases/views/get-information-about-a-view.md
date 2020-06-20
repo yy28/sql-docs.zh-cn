@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f439a52c1f2d13ed3d3d7fc96030df9c6e020b2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4277aad4c1de0140606575c7ba437408518b3c8a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211641"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061499"
 ---
 # <a name="get-information-about-a-view"></a>获取有关视图的信息
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可以获取有关视图的定义或属性的信息。 您可能需要查看视图定义以了解数据从源表中的提取方式，或查看视图所定义的数据。  

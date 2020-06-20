@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8cc09118-70ac-4013-8308-d87f8411ca0c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3ae231e933e30613d45fe00eaa99d6a2d5c9c772
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9115b2a41111d65c4855cffcdc44e7fcd755285b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054869"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972737"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>传输 SQL Server 对象任务编辑器（“对象”页）
   可以使用 **“传输 SQL Server 对象任务编辑器”** 对话框的 **“对象”** 页，指定用于将一个或多个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象从一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例复制到另一个实例的属性。 可复制的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象的几个示例包括表、视图、存储过程和用户定义函数。 有关此任务的详细信息，请参阅 [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md)。  
@@ -29,13 +28,13 @@ ms.locfileid: "66054869"
   
 ## <a name="static-options"></a>静态选项  
  **SourceConnection**  
- 在列表中选择一个 SMO 连接管理器，或单击** \<"新建连接 ..." >** 以创建与源服务器的新连接。  
+ 在列表中选择一个 SMO 连接管理器，或单击 "新建与 **\<New connection...>** 源服务器的连接"。  
   
  **SourceDatabase**  
  选择要从源服务器上的哪个数据库复制对象。  
   
  **DestinationConnection**  
- 在列表中选择一个 SMO 连接管理器，或单击** \<"新建连接 ..." >** 以创建与目标服务器的新连接。  
+ 在列表中选择一个 SMO 连接管理器，或单击 "新建与 **\<New connection...>** 目标服务器的连接"。  
   
  **DestinationDatabase**  
  选择对象要复制到目标服务器上的哪个数据库。  
@@ -52,9 +51,9 @@ ms.locfileid: "66054869"
  **ExistingData**  
  指定将数据复制到目标服务器的方式。 此属性具有下表所列的选项：  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
-|**全部**|将覆盖目标服务器上的数据。|  
+|**将**|将覆盖目标服务器上的数据。|  
 |**附加**|从源服务器复制的数据将追加到目标服务器上的现有数据中。|  
   
 > [!NOTE]  

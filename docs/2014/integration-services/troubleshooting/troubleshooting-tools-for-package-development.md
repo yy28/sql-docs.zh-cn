@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 43eed16aa9cd69d70f308c3ce397720020446fdd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e29d088b8ea61c0d7fc58b45097f703a67bd1df
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62885568"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972707"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>包开发的故障排除工具
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中开发包的过程中可用于对包进行故障排除的功能和工具。  
@@ -41,7 +40,7 @@ ms.locfileid: "62885568"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括以下附加功能，可帮助您避免验证错误：  
   
--   **在数据源不可用时，将所有包和所有连接设置为脱机工作**。 您可以从 **“SSIS”** 菜单启用 **“脱机工作”** 。 与`DelayValidation`属性不同，"**脱机工作**" 选项即使在打开包之前也可用。 您还可以启用 **“脱机工作”** 以加快设计器中操作的速度，而仅在需要验证包的时候再禁用此选项。  
+-   **在数据源不可用时，将所有包和所有连接设置为脱机工作**。 您可以从 **“SSIS”** 菜单启用 **“脱机工作”** 。 与 `DelayValidation` 属性不同，"**脱机工作**" 选项即使在打开包之前也可用。 您还可以启用 **“脱机工作”** 以加快设计器中操作的速度，而仅在需要验证包的时候再禁用此选项。  
   
 -   **针对在运行时之前无效的包元素配置 DelayValidation 属性**。 对于其配置在设计时无效的包元素，您可以将 `DelayValidation` 设置为 `True` 以防止出现验证错误。 例如，可以使用只有在运行时通过执行 SQL 任务创建才存在的目标表来执行数据流任务。 可以在包级或包中的各个任务和容器级启用 `DelayValidation` 属性。 在部署包时，对于相同的包元素，通常必须将此属性设置为 `True`，以防止运行时出现相同的验证错误。  
   

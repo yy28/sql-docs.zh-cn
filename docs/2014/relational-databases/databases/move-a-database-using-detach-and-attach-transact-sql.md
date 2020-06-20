@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 768a70dfe94af6f8d65f7c76fa08d3dff650fe7d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917078"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965887"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>通过分离和附加来移动数据库 (Transact-SQL)
   本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中将分离的数据库移至其他位置，并将其重新附加到相同或不同的服务器实例。 但是，我们建议您使用 ALTER DATABASE 计划重定位过程（而不使用分离和附加操作）移动数据库。 有关详细信息，请参阅 [Move User Databases](move-user-databases.md)。  
@@ -49,9 +48,9 @@ ms.locfileid: "62917078"
 3.  附加复制的文件。 有关详细信息，请参阅 [Attach a Database](attach-a-database.md)。  
   
 ## <a name="example"></a>示例  
- 下面的示例创建了[!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)]语句的副本，这些语句在连接到附加到的服务器实例的查询编辑器窗口中执行。  
+ 下面的示例创建了语句的副本，这些 [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] 语句在连接到附加到的服务器实例的查询编辑器窗口中执行。  
   
-1.  分离[!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)]语句：  
+1.  分离 [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] 语句：  
   
     ```  
     USE master;  

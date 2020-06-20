@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5f6e7219-6911-4bca-a54b-56b95e0b43dd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f2ddbcecdc42033ad9ae54732eee9eb3d2205cee
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6eef537f60e6e2bccfe5fea77aeb2afe2c1468ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717774"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996250"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定布尔值谓词 (SQLXML 4.0)
   以下示例显示如何在 XPath 查询中指定布尔值谓词。 这些示例中的 XPath 查询是针对 SampleSchema1.xml 中包含的映射架构指定的。 有关此示例架构的信息，请参阅[&#40;SQLXML 4.0&#41;的 XPath 批注的 XSD 架构示例](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
@@ -89,13 +88,13 @@ ms.locfileid: "82717774"
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>B. 指定连续和嵌套的谓词  
- 以下查询使用连续谓词显示。 查询返回上下文节点的所有** \< 客户>** 子元素，该节点的**SalesPersonID**属性的值为277， **TerritoryID**属性值为3：  
+ 以下查询使用连续谓词显示。 查询返回 **\<Customer>** 上下文节点的所有子元素，该节点的**SalesPersonID**属性的值为277， **TerritoryID**属性值为3：  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- 查询将返回满足谓词中指定条件的** \< Customer>** 元素。  
+ 查询返回 **\<Customer>** 满足谓词中指定的条件的元素。  
   
  可以指定 `attribute` 轴 (@) 的快捷方式，由于 `child` 轴是默认值，因此可以在查询中省略它：  
   
@@ -103,7 +102,7 @@ ms.locfileid: "82717774"
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- 以下 XPath 查询说明嵌套谓词的用法。 查询返回上下文节点的所有** \< 客户>** 子元素，其中包含至少一个 order ** \<>** 子元素，该元素具有至少一个**SalesPersonID**属性值为2的** \<>** 元素。  
+ 以下 XPath 查询说明嵌套谓词的用法。 查询返回 **\<Customer>** 上下文节点的所有子元素，其中包含 **\<Order>** 至少一个 **\<Order>** 元素具有**SalesPersonID**属性值2的子元素。  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -166,7 +165,7 @@ ms.locfileid: "82717774"
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. 指定顶级谓词  
- 下面的查询将返回具有** \< Order>** 元素子级的上下文节点的** \< Customer>** 子元素节点。 该查询将位置路径作为顶级谓词进行测试：  
+ 下面的查询返回 **\<Customer>** 具有元素子级的上下文节点的子元素节点 **\<Order>** 。 该查询将位置路径作为顶级谓词进行测试：  
   
 ```  
 /child::Customer[child::Order]  

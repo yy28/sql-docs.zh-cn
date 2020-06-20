@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 62dd9af9ea66678c2cc69a016b83e907025a4294
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 258fdee44c2ab67babfa366f627b7b297c5f1535
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62877872"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972557"
 ---
 # <a name="variables-window"></a>“变量”窗口
   可以使用“变量”窗口创建和修改用户定义变量，以及查看系统变量。   
@@ -49,7 +48,7 @@ ms.locfileid: "62877872"
  `Name`  
  查看变量名称。 您可以更新用户定义变量的名称。  
   
- **Scope**  
+ **范围**  
  查看变量的作用域。 变量的作用域可以是整个程序包，也可以是容器或任务。 变量的作用域必须足够大，以便变量对任何需要读取或设置其值的其他任务或组件都是可见的。  
   
  您可以更改作用域，方法是单击该变量，然后单击 **“变量”** 窗口中的 **“移动变量”** 。  
@@ -64,7 +63,7 @@ ms.locfileid: "62877872"
  查看变量值。 您可以更新用户定义变量的值。 此值可以是文字或表达式，还可以是多线串。 若要为变量指定表达式，请单击 **“变量”** 窗口中的 **“表达式”** 列旁边的省略号按钮。  
   
  `Namespace`  
- 查看命名空间名称。 用户定义变量最初在**user**命名空间中创建，但您可以在`Namespace`字段中更改命名空间名称。 若要显示此列，请单击 **“网格选项”**。  
+ 查看命名空间名称。 用户定义变量最初在**user**命名空间中创建，但您可以在字段中更改命名空间名称 `Namespace` 。 若要显示此列，请单击 **“网格选项”**。  
   
  **引发更改事件**  
  指示在值发生更改时是否引发 `OnVariableValueChanged` 事件。 您可以更新用户定义变量和系统变量的值。 默认情况下， **“变量”** 窗口不列出此列。 若要显示此列，请单击 **“网格选项”**。  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6504e4f5eee83d670b4843fb8d956b23a84d4aad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2584cb4a6867d4af3b3f6bc1feff167c900a166d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62893028"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965610"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>配置平面文件目标（SQL Server 导入和导出向导）
   使用 "**配置平面文件目标**" 页可以为目标平面文件指定格式设置选项，并在继续操作前预览结果。  
@@ -33,7 +32,7 @@ ms.locfileid: "62893028"
  **行分隔符**  
  从行分隔符的列表中进行选择。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**回车换行符**|行由回车符和换行符的组合分隔。|  
 |**回车**|行由回车符分隔。|  
@@ -47,7 +46,7 @@ ms.locfileid: "62893028"
  **列分隔符**  
  从列分隔符的列表中进行选择。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**回车换行符**|列由回车符和换行符的组合分隔。|  
 |**回车**|列由回车符分隔。|  

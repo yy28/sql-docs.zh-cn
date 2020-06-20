@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2036dd0624e8c2c6479c8ba039aa5646f374902d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef8f72c282c540d695b799f0c4a884734db2c491
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211315"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062118"
 ---
 # <a name="use-tokens-in-job-steps"></a>在作业步骤中使用标记
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过代理，你可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤脚本中使用标记。 如果在编写作业步骤时使用标记，则可以为您提供编写软件程序时使用变量所提供的灵活性。 在作业步骤脚本中插入令牌之后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理便会在运行时 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子系统执行作业步骤之前替换此不标记。  
@@ -34,7 +33,7 @@ ms.locfileid: "68211315"
 ## <a name="understanding-using-tokens"></a>了解标记用法  
   
 > [!IMPORTANT]  
->  对 Windows 事件日志拥有写入权限的任何 Windows 用户都可以访问由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报或 WMI 警报激活的作业步骤。 为了防范此安全隐患，默认情况下，可以在由警报激活的作业中使用的特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理标记已被禁用。 这些标记包括： **DBN**、 **SVR**、 **a-ERR**、**严重性**、 **a-MSG**和**WMI （*`property`*）**。 请注意，在此版本中，对标记的使用扩展至所有警报。  
+>  对 Windows 事件日志拥有写入权限的任何 Windows 用户都可以访问由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报或 WMI 警报激活的作业步骤。 为了防范此安全隐患，默认情况下，可以在由警报激活的作业中使用的特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理标记已被禁用。 这些标记包括： **DBN**、 **SVR**、 **a-ERR**、**严重性**、 **a-MSG**和**WMI （ *`property`* ）**。 请注意，在此版本中，对标记的使用扩展至所有警报。  
 >   
 >  如果您需要使用这些标记，请首先确保只有可信任的 Windows 安全组（如 Administrators 组）成员才对安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机的事件日志拥有写入权限。 然后在对象资源管理器中右键单击“SQL Server 代理”****，选择“属性”****，并在“警报系统”**** 页上选择“为警报的所有作业响应替换标记”**** 以启用这些标记。  
   
@@ -100,7 +99,7 @@ ms.locfileid: "68211315"
   
 |标记语法|启用警报标记替换|禁用警报标记替换|  
 |------------------|--------------------------------|---------------------------------|  
-|使用转义宏|成功替换作业中的所有标记。|不替换由警报激活的标记。 这些标记是 **-DBN**、 **SVR**、 **a-ERR**、**严重性**、 **a-MSG**和**WMI*`property`*（）**。 成功替换其他静态标记。|  
+|使用转义宏|成功替换作业中的所有标记。|不替换由警报激活的标记。 这些标记是 **-DBN**、 **SVR**、 **a-ERR**、**严重性**、 **a-MSG**和**WMI （ *`property`* ）**。 成功替换其他静态标记。|  
 |不使用转义宏|任何包含标记的作业均失败。|任何包含标记的作业均失败。|  
   
 ## <a name="token-syntax-update-examples"></a>标记语法更新示例  

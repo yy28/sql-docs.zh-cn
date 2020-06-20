@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 28b46fdd-b04a-4f97-a99f-883f5735a6d9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ad2605902cb523c0147888e4aedee0df3c9f936e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02ffd6309ae31f538fecdf6af2cb8475608d6cf5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058424"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966334"
 ---
 # <a name="ftp-task-editor-general-page"></a>FTP 任务编辑器（“常规”页）
   使用 **“FTP 任务编辑器”** 对话框的 **“常规”** 页可以指定连接到与任务通信的 FTP 服务器的 FTP 连接管理器。 您还可以命名和描述 FTP 任务。  
@@ -28,7 +27,7 @@ ms.locfileid: "66058424"
   
 ## <a name="options"></a>选项  
  **FtpConnection**  
- 选择现有的 FTP 连接管理器，或\<单击 "**新建连接 ...** "> 创建连接管理器。  
+ 选择现有的 FTP 连接管理器，或单击 \<**New connection...**> 以创建连接管理器。  
   
 > [!IMPORTANT]  
 >  FTP 连接管理器仅支持匿名身份验证和基本身份验证， 而不支持 Windows 身份验证。  

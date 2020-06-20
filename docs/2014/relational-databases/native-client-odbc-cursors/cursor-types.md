@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a916cc7-f352-42cb-8b83-f78e06cef991
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a5b073ee58c0e29b1d7e6d02d079141838cef237
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6937dbb9ce42cd5631201e0c97be42b211742ada
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705668"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020960"
 ---
 # <a name="cursor-types"></a>游标类型
   ODBC 定义 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 驱动程序支持的四种游标类型。 这些游标的功能不同于检测对结果集及其消耗的资源（如**tempdb**中的内存和空间）的更改。 游标仅当尝试重新提取行时才会检测到对这些行的更改；数据源无法通知游标对当前提取行的更改。 游标检测并非由游标执行的更改的功能也受事务隔离级别的影响。  

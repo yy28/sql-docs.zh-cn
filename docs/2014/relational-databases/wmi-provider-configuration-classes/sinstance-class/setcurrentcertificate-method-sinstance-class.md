@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7349fb87-b973-4160-a2be-cab73abf5b31
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 66e150656b3d1d71579e04417adbefb3a3fa0025
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81d686f22eaafceca708b1f0423c050549d95ac2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62720950"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061357"
 ---
 # <a name="setcurrentcertificate-method-sinstance-class"></a>SetCurrentCertificate 方法（SInstance 类）
   设置当前安全证书。  
@@ -41,7 +40,7 @@ SHA
   
 ## <a name="parts"></a>组成部分  
  *object*  
- 一个表示实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]上的服务器设置的[SInstance 类](sinstance-class.md)对象。  
+ 一个表示实例上的服务器设置的[SInstance 类](sinstance-class.md)对象 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
 #### <a name="parameters"></a>参数  
   

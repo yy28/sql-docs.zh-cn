@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 814175fa78176d14167355bfe188179552c545c6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916741"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965977"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>估计堆的大小
   可以使用以下步骤估计在堆中存储数据所需的空间量：  
@@ -57,13 +56,13 @@ ms.locfileid: "62916741"
      添加到 ***Max_Var_Size*** 中的字节用于跟踪每个可变长度列。 此公式假设所有可变长度列均百分之百充满。 如果预计可变长度列占用的存储空间比例较低，则可以按照该比例调整 ***Max_Var_Size*** 值，从而对整个表大小得出一个更准确的估计。  
   
     > [!NOTE]  
-    >  您可以组合 `varchar`、`nvarchar`、`varbinary` 或 `sql_variant` 列，使得定义的表的总宽度超过 8,060 字节。 对于`varchar`、或`nvarchar,``varbinary` `sql_variant`列，这些列中每一列的长度仍必须在8000字节以内。 但是，表中这些列的组合宽度可超过 8,060 字节的限制。  
+    >  您可以组合 `varchar`、`nvarchar`、`varbinary` 或 `sql_variant` 列，使得定义的表的总宽度超过 8,060 字节。 对于 `varchar` 、或列，这些列中每一列的长度仍必须在8000字节以内 `nvarchar,``varbinary` `sql_variant` 。 但是，表中这些列的组合宽度可超过 8,060 字节的限制。  
   
      如果没有可变长度列，请将 ***Variable_Data_Size*** 设置为 0。  
   
 5.  计算总的行大小：  
   
-     ***Row_Size***  = ***Fixed_Data_Size***Fixed_Data_Size + ***Variable_Data_Size***Variable_Data_Size + ***Null_Bitmap*** + 4  
+     ***Row_Size***   = ***Fixed_Data_Size***  + ***Variable_Data_Size***  + ***Null_Bitmap*** + 4  
   
      公式中的值 4 是数据行的行标题开销。  
   
@@ -75,7 +74,7 @@ ms.locfileid: "62916741"
   
 7.  计算存储所有行所需的页数：  
   
-     ***Num_Pages***  = ***Num_Rows***Num_Rows / ***Rows_Per_Page***  
+     ***Num_Pages***   = ***Num_Rows***  / ***Rows_Per_Page***  
   
      估计的页数应向上舍入到最接近的整数。  
   
@@ -95,7 +94,7 @@ ms.locfileid: "62916741"
   
 -   大型对象 (LOB) 值  
   
-     确定用于存储 LOB 数据类型`varchar(max)`、 `varbinary(max)`、 `nvarchar(max)`、 `text`、 **ntextxml**和`image`值的确切空间量的算法非常复杂。 只添加所期望的 LOB 值的平均大小就足够了，然后将其添加至总的堆大小中。  
+     确定用于存储 LOB 数据类型 `varchar(max)` 、、 `varbinary(max)` `nvarchar(max)` 、 `text` 、 **ntextxml**和值的确切空间量的算法 `image` 非常复杂。 只添加所期望的 LOB 值的平均大小就足够了，然后将其添加至总的堆大小中。  
   
 -   压缩  
   

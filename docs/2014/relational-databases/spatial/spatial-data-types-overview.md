@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 340e250fde61f8c246099eadafc148278288dee0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c0548d974e83bfe2b1e103d4458b17078fba8014
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176647"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996465"
 ---
 # <a name="spatial-data-types-overview"></a>空间数据类型概述
   有两种类型的空间数据。  数据类型支持平面或欧几里得（平面球）数据。 `geometry` 数据类型符合开放地理空间联盟 (OGC) 的 SQL 简单特征规范 1.1.0 版 并符合 SQL MM（ISO 标准）。
@@ -30,19 +29,19 @@ ms.locfileid: "78176647"
 >  有关 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入的空间功能的详细说明和示例（包括对空间数据类型的改进），请下载白皮书 [SQL Server Code-Named "Denali" 中的新空间功能](https://go.microsoft.com/fwlink/?LinkId=226407)。
 
 ##  <a name="spatial-data-objects"></a><a name="objects"></a> 空间数据对象
- `geometry` 和 `geography` 数据类型支持十六种空间数据对象或实例类型。 但是，这些实例类型中只有十一种**“可实例化”；可以在数据库中创建并使用这些实例（或可对其进行实例化）。 这些实例从其父数据类型派生某些属性，这些属性将`Points` `geography` `GeometryCollection`它们作为、 **linestring、circularstring**、 `CompoundCurves`、 `Polygons` `CurvePolygons`或作为`geometry`中的多个或实例加以区分。  类型具有附加实例类型 。
+ `geometry` 和 `geography` 数据类型支持十六种空间数据对象或实例类型。 但是，这些实例类型中只有十一种  “可实例化”；可以在数据库中创建并使用这些实例（或可对其进行实例化）。 这些实例从其父数据类型派生某些属性，这些属性将它们作为 `Points` 、 **linestring、circularstring**、 `CompoundCurves` 、 `Polygons` `CurvePolygons` 或作为中的多个 `geometry` 或 `geography` 实例 `GeometryCollection` 加以区分。  类型具有附加实例类型 。
 
- 下图描述了 `geometry` 和 `geometry` 数据类型所基于的 `geography` 层次结构。 `geometry`和`geography`的可实例化类型以蓝色表示。
+ 下图描述了 `geometry` 和 `geometry` 数据类型所基于的 `geography` 层次结构。 和的可实例化类型 `geometry` `geography` 以蓝色表示。
 
  ![几何类型的层次结构](../../database-engine/media/geom-hierarchy.gif "几何类型的层次结构")
 
- 如图`geometry`所示，和`geography`数据类型的十种可实例化类型`Point`为`MultiPoint`、 `LineString`、 `CircularString`、 `MultiLineString`、 `CompoundCurve`、 `Polygon` `CurvePolygon` `MultiPolygon`、、、和`GeometryCollection`。 geography 数据类型有一个附加可实例化类型：`FullGlobe`。 `geometry`和`geography`类型可以识别特定的实例，只要它是格式正确的实例，即使未显式定义该实例也是如此。 例如，如果使用 STPointFromText （） `Point`方法显式定义了一个实例， `geometry`只要方法输入`geography`的格式正确`Point`，就会将该实例识别为。 如果您使用 `STGeomFromText()` 方法定义了相同的实例，则 `geometry` 和 `geography` 数据类型都将该实例识别为 `Point`。
+ 如图所示， `geometry` 和数据类型的十种可实例化类型 `geography` 为 `Point` 、、、、、、、、 `MultiPoint` `LineString` `CircularString` `MultiLineString` `CompoundCurve` `Polygon` `CurvePolygon` `MultiPolygon` 和 `GeometryCollection` 。 geography 数据类型有一个附加可实例化类型：`FullGlobe`。 `geometry`和 `geography` 类型可以识别特定的实例，只要它是格式正确的实例，即使未显式定义该实例也是如此。 例如，如果 `Point` 使用 STPointFromText （）方法显式定义了一个实例， `geometry` `geography` `Point` 只要方法输入的格式正确，就会将该实例识别为。 如果您使用 `STGeomFromText()` 方法定义了相同的实例，则 `geometry` 和 `geography` 数据类型都将该实例识别为 `Point`。
 
  geometry 和 geography 类型的子类型分为简单类型和集合类型。  类似 `STNumCurves()` 的一些方法仅适用于简单类型。
 
  简单类型包括：
 
--   [点](../spatial/point.md)
+-   [Point](../spatial/point.md)
 
 -   [LineString](../spatial/linestring.md)
 
@@ -50,7 +49,7 @@ ms.locfileid: "78176647"
 
 -   [CompoundCurve](../spatial/compoundcurve.md)
 
--   [Polygon](../spatial/polygon.md)
+-   [多边形](../spatial/polygon.md)
 
 -   [CurvePolygon](../spatial/curvepolygon.md)
 
@@ -84,22 +83,22 @@ ms.locfileid: "78176647"
 
  在椭圆体系统中，多边形无意义，或者模糊不清，没有方向。 例如，赤道周围的环是否描述了北半球或南半球？ 如果我们使用 `geography` 数据类型存储空间实例，必须指定环的方向并准确地描述实例的位置。 椭圆体系统中多边形的内部由左侧规则定义。
 
- 如果兼容级别为100或更低， [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]则`geography`数据类型具有以下限制：
+ 如果兼容级别为100或更低， [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 则 `geography` 数据类型具有以下限制：
 
 -   每个 `geography` 实例必须能够容纳在单个半球的内部。 任何大于半球的对象都无法存储。
 
 -   使用开放地理空间联盟 (OGC) 熟知文本 (Well-Known Text, WKT) 或熟知二进制 (Well-Known Binary, WKB) 表示形式并且会产生大于一个半球的对象的任何 `geography` 实例都会引发一个 `ArgumentException` 异常。
 
--   如果`geography`方法的结果不能容纳于单个半球`geography`内部，则需要输入两个实例的数据类型方法（如 STIntersection （）、STUnion （）、STDifference （）和 STSymDifference （））将返回 null。 如果输出超过单个半球，STBuffer() 也将返回 Null。
+-   `geography` `geography` 如果方法的结果不能容纳于单个半球内部，则需要输入两个实例的数据类型方法（如 STIntersection （）、STUnion （）、STDifference （）和 STSymDifference （））将返回 null。 如果输出超过单个半球，STBuffer() 也将返回 Null。
 
  在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中，`FullGlobe` 是一种特殊类型的多边形，涵盖了整个球体。 `FullGlobe` 有面积，但是没有边框或顶点。
 
 ### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>在 geography 数据类型中外环和内环并不重要
- SQL 规范的 OGC 简单功能讨论了外环和内环，但此差别对[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `geography`数据类型来说几乎毫无意义;多边形的任何环都可以作为外环。
+ SQL 规范的 OGC 简单功能讨论了外环和内环，但此差别对数据类型来说几乎毫无意义 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `geography` ; 多边形的任何环都可以作为外环。
 
  有关 OGC 规范的详细信息，请参阅以下内容：
 
--   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)（OGC 规范：简单特征访问第 1 部分 - 公共体系结构）
+-   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture（OGC 规范：简单特征访问第 1 部分 - 公共体系结构）](https://go.microsoft.com/fwlink/?LinkId=93627)
 
 -   [OGC Specifications, Simple Feature Access Part 2 - SQL Options（OGC 规范：简单特征访问第 2 部分 - SQL 选项）](https://go.microsoft.com/fwlink/?LinkId=93628)
 
@@ -111,7 +110,7 @@ ms.locfileid: "78176647"
 
  图 C 和 D 显示直线线段如何定义为圆弧线段。  请注意仍需要三个点定义圆弧线段，不像普通直线线段只需要两个点来定义。
 
- 操作圆弧线段类型的方法使用直线线段来近似圆弧。用于近似弧的线段数将取决于弧的长度和曲率。可以为每个圆弧线段类型存储 Z 值;但是，方法不会在计算中使用 Z 值。
+ 针对圆弧线段类型的方法使用直线线段来近似圆弧。用于近似圆弧的直线线段数量将取决于弧的长度和曲率。可以为每个圆弧线段类型存储 Z 值；但是，方法将不在计算中使用 Z 值。
 
 > [!NOTE]
 >  如果为圆弧线段指定 Z 值，则这些值对于圆弧线段中的所有点必须相同，才接受输入。 例如，接受 `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` ，但是不接受 `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` 。
@@ -152,7 +151,7 @@ LS LengthCS Length
 5.65685...6.28318...
 ```
 
- 下图显示了每种类型是如何存储的（红`LineString``@g1`线显示，蓝`CircularString``@g2`线显示）：
+ 下图显示了每种类型是如何存储的（红线显示 `LineString``@g1` ，蓝线显示 `CircularString``@g2` ）：
 
  ![](../../database-engine/media/e52157b5-5160-4a4b-8560-50cdcf905b76.png "e52157b5-5160-4a4b-8560-50cdcf905b76")
 

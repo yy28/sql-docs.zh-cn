@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 65af4c1bce3e09f33771b2729c01c02b9512688b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bbd9f3693fa8f84015efb061dda5e1a9267af960
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718060"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996393"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>使用 CommandText 属性执行模板文件
   此示例演示如何使用 CommandTextproperty 指定由 SQL 或 XPath 查询组成的模板文件。 可以指定文件名作为值，而不是将 SQL 或 XPath 查询指定为 CommandText 值。 在下面的示例中，CommandType 属性指定为 SqlXmlCommandType. TemplateFile。  

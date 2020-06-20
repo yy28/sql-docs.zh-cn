@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9cd3f00b89de1d2bad683e7ce7005605d3c61f18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa7013fddc6b2ce12ad9ad0f9fcb511d93915e05
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211765"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002857"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>使用表值参数（数据库引擎）
   表值参数是使用用户定义的表类型来声明的。 使用表值参数，可以不必创建临时表或许多参数，即可向 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句或例程（如存储过程或函数）发送多行数据。  
@@ -79,7 +78,7 @@ ms.locfileid: "68211765"
   
  表值参数在执行性能上与对等的参数阵列实现相当甚至更好。  
   
-##  <a name="example"></a><a name="Example"></a>实例  
+##  <a name="example"></a><a name="Example"></a> 示例  
  下面的示例使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 并演示如何执行以下操作：创建表值参数类型，声明变量来引用它，填充参数列表，然后将值传递到存储过程。  
   
 ```  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9a2575c8-06fc-4ef4-9f24-c19e52b1bbcf
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f1eb0f6892192e5ed328386e6730ec3b1c41f05b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b61c6c1fce58210950e1ccb3d76ea69cb4c8c6ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952554"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044898"
 ---
 # <a name="deployment-checklist-reporting-services-power-view-and-powerpivot-for-sharepoint"></a>部署核对清单：Reporting Services、Power View 和 PowerPivot for SharePoint
   使用下面的清单将这些 BI 功能安装到同一个 SharePoint 场中：PowerPivot for SharePoint、报表生成器和 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]。 虽然此清单建议按照特定的安装顺序进行，但实际上您几乎可以按照任意顺序来安装这些功能。 此清单假定安装以下产品或功能：  
@@ -66,10 +65,10 @@ ms.locfileid: "71952554"
 |步骤|链接|  
 |----------|----------|  
 |运行 SharePoint 2010 产品准备工具|您必须拥有 SharePoint 2010 安装介质。 准备工具是安装介质中的 PrerequisiteInstaller.exe。|  
-|安装 SharePoint Server 2010 企业版或企业评估版。|安装 SharePoint 时，可以通过以下方式选择以后再配置场：完成安装后不运行 SharePoint 2010 产品配置向导。 如果等待配置场，则可以使用在稍后的[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]步骤中作为场的数据库服务器安装的数据库引擎实例。 若要配置场，则将使用 PowerPivot 配置工具。 其中包括在尚未配置场时用于设置场的操作。|  
-|安装 SharePoint Server 2010 SP1。|从[https://support.microsoft.com/kb/2460045](https://go.microsoft.com/fwlink/p/?linkID=219697)下载 SP1。|  
+|安装 SharePoint Server 2010 企业版或企业评估版。|安装 SharePoint 时，可以通过以下方式选择以后再配置场：完成安装后不运行 SharePoint 2010 产品配置向导。 如果等待配置场，则可以使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 在稍后的步骤中作为场的数据库服务器安装的数据库引擎实例。 若要配置场，则将使用 PowerPivot 配置工具。 其中包括在尚未配置场时用于设置场的操作。|  
+|安装 SharePoint Server 2010 SP1。|从下载 SP1 [https://support.microsoft.com/kb/2460045](https://go.microsoft.com/fwlink/p/?linkID=219697) 。|  
 |运行 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 安装程序，以便安装数据库引擎和 PowerPivot for SharePoint。|[安装 PowerPivot for SharePoint](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)<br /><br /> 步骤 1 说明了如何安装 PowerPivot for SharePoint。 在此步骤中，请务必单击“设置角色”页上向角色添加数据库引擎的复选框。 这样做会将数据库引擎添加到安装中，以便在下一步中配置场时，可以将其用作场的数据库服务器。 但是，如果已配置场，则可以跳过此步骤。<br /><br /> 步骤 2 要求您配置服务器。 对于此步骤，请选择 PowerPivot 配置工具。 虽然有多种方法可以使用，但对于独立安装来说，使用配置工具是最有效的方法。<br /><br /> 如果已经安装了 SharePoint 2010 但未进行配置，则该工具将预先选择将创建场、默认 Web 应用程序和根网站集的操作。 请务必使这些选项保留选中状态，以便创建场。 如果您已经配置了场，则该工具将忽略这些操作，而将仅提供配置 PowerPivot for SharePoint 所必需的操作。<br /><br /> 步骤 3 指示您安装 Analysis Services OLE DB 访问接口的 Server SQL 2008 R2 版本。 此步骤对在 2008 R2 版的 PowerPivot for Excel 中创建的工作簿的支持版本很重要。|  
-|验证场是否正常运行。|首先，请启动管理中心并确认它可用。 接下来，通过输入http://localhost打开团队网站。  您应该会看到一个 SharePoint 工作组网站。|  
+|验证场是否正常运行。|首先，请启动管理中心并确认它可用。 接下来，通过输入打开团队网站 http://localhost 。  您应该会看到一个 SharePoint 工作组网站。|  
 |验证 PowerPivot for SharePoint 是否正常运行。|[验证 PowerPivot for SharePoint 安装](https://docs.microsoft.com/analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation)<br /><br /> 此任务确认使用您所上载的示例工作簿进行 PowerPivot 数据访问。|  
 |运行 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 安装程序，以便安装和配置 Reporting Services 和 Reporting Services 外接程序。|[安装 SharePoint 2010 Reporting Services SharePoint 模式](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)<br /><br /> （可选）安装 Reporting Services 时，如果您想让第二个资源来承载表格数据，则可将另外一个 Analysis Services 实例添加到安装功能树中。 另外这个 Analysis Services 实例将用于承载您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中创建的表格模型数据库。 表格数据库是 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 报表的有效数据源。<br /><br /> [在表格模式下安装 Analysis Services](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services)|  
 |验证 Reporting Services 是否正常运行。|[验证 Reporting Services 安装](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)|  

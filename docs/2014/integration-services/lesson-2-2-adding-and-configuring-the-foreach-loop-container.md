@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 07c5118c654faccea2d9bab01040ce17b1d5699a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 761407023130b2bc18c8e1b64d09d9b30155c3b3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232473"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966063"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>步骤 2：添加和配置 Foreach 循环容器
   在本任务中，将添加循环访问平面文件的文件夹的功能，并将第 1 课中使用的同一数据流转换应用于其中的每个平面文件。 实现方法是将 Foreach 循环容器添加到控制流中并进行配置。  
@@ -26,7 +25,7 @@ ms.locfileid: "75232473"
   
 -   **Foreach 循环容器** ：将该容器的枚举值映射为用户定义的包变量。 然后，该容器将使用此用户定义变量来动态修改平面文件连接管理器的 `ConnectionString` 属性，并循环连接该文件夹中的每个平面文件。  
   
--   **平面文件连接管理器：** 您将修改在第1课中创建的连接管理器，方法是使用用户定义的变量填充连接管理器`ConnectionString`的属性。  
+-   **平面文件连接管理器：** 您将修改在第1课中创建的连接管理器，方法是使用用户定义的变量填充连接管理器的 `ConnectionString` 属性。  
   
  本任务中的过程向您显示如何创建和修改 Foreach 循环容器以使用用户定义的包变量，以及如何将数据流任务添加到该循环中。 您将了解改平面文件连接管理器，以便在下一任务中使用用户定义的变量。  
   
@@ -43,9 +42,9 @@ ms.locfileid: "75232473"
   
 3.  右键单击新添加的“Foreach 循环容器”****，然后选择“编辑”****。  
   
-4.  在 " **Foreach 循环编辑器**" 对话框的 "**常规**" 页上， **Name**对于 "名称`Foreach File in Folder`"，输入。 单击“确定”。   
+4.  在 " **Foreach 循环编辑器**" 对话框的 "**常规**" 页上，对于 "**名称**"，输入 `Foreach File in Folder` 。 单击“确定”。  
   
-5.  右键单击 "Foreach 循环容器"，单击 "**属性**"，然后在 "属性窗口中， `LocaleID`验证属性是否设置为"**英语（美国）**"。  
+5.  右键单击 "Foreach 循环容器"，单击 "**属性**"，然后在 "属性窗口中，验证 `LocaleID` 属性是否设置为"**英语（美国）**"。  
   
 ### <a name="to-configure-the-enumerator-for-the-foreach-loop-container"></a>为 Foreach 循环容器配置枚举器  
   
@@ -65,7 +64,7 @@ ms.locfileid: "75232473"
   
     2.  单击 "**下载**" 选项卡。  
   
-    3.  单击超链接 "https://msftisprodsamples.codeplex.com/downloads/get/578097" SQL2012。Integration_Services. Create_Simple_ETL_Tutorial .zip 文件。  
+    3.  单击超链接 " https://msftisprodsamples.codeplex.com/downloads/get/578097 " SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip 文件。  
   
 6.  在“文件”**** 框中，键入 **Currency_\*.txt**。  
   
@@ -73,20 +72,20 @@ ms.locfileid: "75232473"
   
 1.  单击“变量映射”****。  
   
-2.  在 "**变量映射**" 页上的 "**变量**" 列中，单击空单元格，然后选择** \<"新建变量 ..." >**。  
+2.  在 "**变量映射**" 页上的 "**变量**" 列中，单击空单元格，然后选择 **\<New Variable...>** 。  
   
-3.  在 "**添加变量**" 对话框中， **Name**为 "名称`varFileName`" 键入。  
+3.  在 "**添加变量**" 对话框中，为 "**名称**" 键入 `varFileName` 。  
   
     > [!IMPORTANT]  
     >  变量名称区分大小写。  
   
-4.  单击“确定”。   
+4.  单击“确定”。  
   
 5.  再次单击“确定”****，退出“Foreach 循环编辑器”**** 对话框。  
   
 ### <a name="to-add-the-data-flow-task-to-the-loop"></a>将数据流任务添加到循环中  
   
--   将**提取示例货币数据**数据流任务拖到现在已重命名`Foreach File in Folder`的 Foreach 循环容器上。  
+-   将**提取示例货币数据**数据流任务拖到现在已重命名的 Foreach 循环容器上 `Foreach File in Folder` 。  
   
 ## <a name="next-lesson-task"></a>下一课程任务  
  [步骤 3：修改平面文件连接管理器](lesson-2-3-modifying-the-flat-file-connection-manager.md)  

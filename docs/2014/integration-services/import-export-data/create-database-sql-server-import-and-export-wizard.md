@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a80526b0f4a1b9f122ff79bbbb5a5a8ac08a2d07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a2776d0288ef66214c9bdfd4218b924cb83c02b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62893103"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965597"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>创建数据库（SQL Server 导入和导出向导）
   使用 "**创建数据库**" 页可以为目标文件定义一个新数据库。  
   
- 此页提供了一部分可用于创建新数据库的选项。 若要查看所有选项，请[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]使用。  
+ 此页提供了一部分可用于创建新数据库的选项。 若要查看所有选项，请使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
  若要了解有关此向导的详细信息，请参阅[SQL Server 导入和导出向导](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要了解启动向导的选项以及成功运行向导所需的权限，请参阅[运行 SQL Server 导入和导出向导](start-the-sql-server-import-and-export-wizard.md)。  
   

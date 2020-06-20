@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: eb8c82be-323b-4d86-ab10-c1bf69a4abe3
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a0b2c2e597ef7069bcc51fb885a2e810871bfbb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8524cdc2c4efb03e2a285c815ca58391045062f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952651"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045508"
 ---
 # <a name="backup-encryption-key-ssrs-native-mode"></a>备份加密密钥（SSRS 本机模式）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用加密密钥来保护存储在报表服务器数据库中的敏感数据。 备份该密钥对于确保可继续访问连接字符串和凭据至关重要。 如果将报表服务器数据库移动到其他计算机，或者更改报表服务器服务帐户的用户名或密码，则必须备份该密钥。 这两个操作均要求您从先前创建的备份副本还原密钥。  
   
  [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]本机模式。  
   
- 若要打开“备份加密密钥”对话框，请单击 **配置管理器导航窗格中的** “加密密钥” [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，然后单击 **“备份”**。 当使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器中的“服务帐户”页更新服务帐户时，也会显示此对话框。 有关[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager 的详细信息，请参阅[Reporting Services 配置管理器 &#40;本机模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
+ 若要打开“备份加密密钥”对话框，请单击 **配置管理器导航窗格中的** “加密密钥” [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，然后单击 **“备份”**。 当使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器中的“服务帐户”页更新服务帐户时，也会显示此对话框。 有关 Configuration Manager 的详细信息 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，请参阅[Reporting Services 配置管理器 &#40;本机模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
 ## <a name="options"></a>选项  
  **文件位置**  

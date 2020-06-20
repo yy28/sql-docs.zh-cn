@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 77d4bea058b9fc4cf63436ec055c597393d5496f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2cf936e5e57e64c13b93ba27cd0f78aa1234eca0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82700827"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044033"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>如何：在 Geography 列中插入行 (ODBC)
   此示例使用两个不同的绑定（SQLCCHAR 和 SQLCBINARY）从 WellKnownBinary (WKB) 中向具有地理位置列的表中插入两行。 然后从该表中选择一行并使用 ::STAsText() 显示它。WKB 是 0x01010000000700ECFAD03A4C4001008000B5DF07C0，应用程序将以下内容显示到控制台：POINT(56.4595 -2.9842)。  
