@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 49008384-2c55-4080-a890-9bceb40e4d6d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 63d8f82d207a985bac34b5c9a9be3273bb84ef7d
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 393462c56169e7070601a98cc9144e1996a19847
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000386"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065890"
 ---
 # <a name="lesson-3-synchronizing-the-subscription-to-the-merge-publication"></a>第 3 课：使订阅与合并发布同步
   在本课中，您将使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]启动合并代理以初始化订阅。 您还将使用此过程与发布服务器同步。 本课程要求已完成上一课， [第 2 课：创建合并发布订阅](lesson-2-creating-a-subscription-to-the-merge-publication.md)。  

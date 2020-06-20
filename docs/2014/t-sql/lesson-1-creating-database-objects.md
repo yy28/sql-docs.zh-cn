@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a1c05ed678fd0c23fc00466396f306763dfbc54b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea211927bd9325bbbd39415fcb30e191570bf469
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78280918"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011685"
 ---
 # <a name="lesson-1-creating-database-objects"></a>第 1 课：创建数据库对象
   本课将介绍如何创建数据库，在数据库中创建表，然后访问表中的数据并对其进行更改。 由于本课是对使用 [!INCLUDE[tsql](../includes/tsql-md.md)]的简介，因此它未使用或说明为这些语句提供的许多选项。  

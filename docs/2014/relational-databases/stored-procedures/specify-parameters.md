@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f936853c284196b05b6da6369f4410bed2297d4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d93a04281839c4db26cbab16ac166af3cdb7c9a5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736360"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065654"
 ---
 # <a name="specify-parameters"></a>指定参数
   通过指定过程参数，调用程序可以将值传递给过程的主体。 在执行过程期间，这些值可以用于各种目的。 如果将参数标记为 OUTPUT 参数，则过程参数还可以将值返回给调用程序。  
@@ -60,7 +59,7 @@ GO
 ## <a name="specifying-parameter-names"></a>指定参数名称  
  创建过程并声明参数名时，参数名必须以一个 \@ 字符开头，并且必须在过程范围内是唯一的。  
   
- 显式命名参数并将相应的值赋给过程调用中的每个参数允许按任意顺序提供参数。 例如，如果过程 my_proc  需要使用三个参数，分别名为 **first\@** 、**second\@** 和 **third\@** ，可以将传递到此过程的值赋给参数名，如：`EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
+ 显式命名参数并将相应的值赋给过程调用中的每个参数允许按任意顺序提供参数。 例如，如果过程 my_proc 需要使用三个参数，分别名为 \@first、\@second和 \@third，可以将传递到此过程的值赋给参数名，如：`EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]
 >  如果以 **\@parameter =** _value_ 格式提供参数值，必须按此格式提供所有后续参数。 如果未按格式 **\@parameter =** _value_ 传递参数值，必须按 CREATE PROCEDURE 语句中所列参数顺序（从左到右）提供值。  
@@ -126,7 +125,7 @@ EXEC Sales.usp_GetSalesYTD N'Blythe';
 GO  
 ```  
   
- 虽然可以省略已提供默认值的参数，但只能截断参数列表。 例如，如果过程有 5 个参数，可以省略第 4 个和第 5 个参数。 但是，只要包含第五个参数，就不能跳过第四个参数，除非以** \@参数 =**_值_的形式提供参数。  
+ 虽然可以省略已提供默认值的参数，但只能截断参数列表。 例如，如果过程有 5 个参数，可以省略第 4 个和第 5 个参数。 但是，只要包含第五个参数，就不能跳过第四个参数，除非以** \@ 参数 =**_值_的形式提供参数。  
   
 ## <a name="specifying-parameter-direction"></a>指定参数方向  
  参数的方向可以为输入（表明将值传递给过程的主体），也可以为输出（表明过程将值返回给调用程序）。 默认为输入参数。  
@@ -164,10 +163,10 @@ GO
   
 ```  
   
- 执行 `usp_GetList` 以返回价格低于 $700 的 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 产品（自行车）的列表。 OUTPUT 参数** \@cost**和** \@compareprices**用于流控制语言，以便在 "**消息**" 窗口中返回消息。  
+ 执行 `usp_GetList` 以返回价格低于 $700 的 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 产品（自行车）的列表。 OUTPUT 参数** \@ cost**和** \@ compareprices**用于流控制语言，以便在 "**消息**" 窗口中返回消息。  
   
 > [!NOTE]  
->  OUTPUT 变量必须在过程创建和变量使用期间进行定义。 参数名称和变量名称不一定要匹配。 但是，数据类型和参数定位必须匹配（除非** \@使用 listprice =** _variable_ ）。  
+>  OUTPUT 变量必须在过程创建和变量使用期间进行定义。 参数名称和变量名称不一定要匹配。 但是，数据类型和参数定位必须匹配（除非使用** \@ listprice =** _variable_ ）。  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  

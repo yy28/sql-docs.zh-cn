@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9b9786fe-9e80-429a-afcb-dc3b3dd6f0b0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f31f93ba468e6ffc91313e7ca653d122c1664ad2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a52039402c087a131e50878dc69ce6e16e4a54ca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480667"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937678"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>从 .dqs 文件导入知识库
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中从 .dqs 数据文件导入整个知识库。 您可以通过从 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序内导出现有知识库来创建数据文件（请参阅 [将知识库导出到.dqs 文件](../../2014/data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)）。  
@@ -48,13 +47,13 @@ ms.locfileid: "65480667"
   
 5.  对于 **“选择数据文件”**，单击 **“浏览”**。  
   
-6.  在 **“从数据文件导入”** 对话框中，转到包含要导入的 .dqs 文件的文件夹，然后单击该文件的名称。 单击“打开”  。  
+6.  在 **“从数据文件导入”** 对话框中，转到包含要导入的 .dqs 文件的文件夹，然后单击该文件的名称。 单击“打开” 。  
   
 7.  验证 **“域”** 列表中显示正确的知识库和域。  
   
 8.  选择要执行的活动，然后单击 **“创建”**。  
   
-9. 在 **“导入知识库”** 对话框中，验证状态行是否指示导入已完成。 单击" **确定**"。  
+9. 在 **“导入知识库”** 对话框中，验证状态行是否指示导入已完成。 单击“确定”。  
   
 10. 完成知识发现、域管理或需要执行的匹配策略任务，然后单击 **“完成”**。  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 019b7c49-dcca-445d-8969-5982a8ccbc1a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b38b397c0a2128aed5ebaba0b1367ca14ebdcd09
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f98bc050a45f831d9b1d4dacb773363e4aa9a7fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022031"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065774"
 ---
 # <a name="oracle-publisher"></a>Oracle 发布服务器
   从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许使用快照和事务复制从 Oracle 数据库发布数据。 有关详细信息，请参阅 [Oracle 发布概述](non-sql/oracle-publishing-overview.md)。  

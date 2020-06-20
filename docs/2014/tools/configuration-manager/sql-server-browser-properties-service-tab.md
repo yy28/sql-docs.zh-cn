@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 98ace9b0-72d5-4b72-9b7b-11fbc490981a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6421b0a7d6703e2a5d126aa83b227166492558a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 437d61b8dfb5c7874f844c6269d4ac264a7983e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211151"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011643"
 ---
 # <a name="sql-server-browser-properties-service-tab"></a>SQL Server 浏览器属性（“服务”选项卡）
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器程序以服务的形式在服务器上运行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器侦听对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源的传入请求，并提供计算机上安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的相关信息。  

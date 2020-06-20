@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: dbcce5d1-d5a1-4379-9597-04e43af5923d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0c97262ab6b3ee42b070511a813fcb4498b78d60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 861c27e94d3717a4dbeba1fe5f2633c2604ee7c4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745816"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050609"
 ---
 # <a name="srv_rpcoptions-extended-stored-procedure-api"></a>srv_rpcoptions（扩展存储过程 API）
     
@@ -56,7 +55,7 @@ srvproc
   
 |运行时标志|说明|  
 |--------------------|-----------------|  
-|SRV_NOMETADATA|客户端已请求不带元数据信息的结果。 仅当客户端与实例[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通信时才使用此标志。 扩展存储过程 API 应用程序不能省略元数据信息。|  
+|SRV_NOMETADATA|客户端已请求不带元数据信息的结果。 仅当客户端与实例通信时才使用此标志 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 扩展存储过程 API 应用程序不能省略元数据信息。|  
 |SRV_RECOMPILE|客户端已请求在执行远程存储过程前重新编译它。 此标志可能不适用于扩展存储过程 API 应用程序。|  
   
 > [!IMPORTANT]  

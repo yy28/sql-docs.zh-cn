@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d1995ca52507a3027438cac21677517059d3d219
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cd09eb091a7f488f891bc2e69d19ad039b65e065
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154830"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959602"
 ---
 # <a name="back-up-database-media-options-page"></a>备份数据库（“介质选项”页）
   使用  **“备份数据库”** 对话框的 **“介质选项”** 页可以查看或修改数据库介质选项。  
@@ -79,7 +78,7 @@ ms.locfileid: "70154830"
  **完成后验证备份**  
  验证备份集是否完整以及所有卷是否都可读。  
   
- **写入介质前检查校验和**  
+ **写入介质前执行校验和**  
  在写入备份介质前验证校验和。 选择此选项等效于在 [!INCLUDE[tsql](../../includes/tsql-md.md)]的 BACKUP 语句中指定 CHECKSUM 选项。 选择此选项可能会增大工作负荷，并降低备份操作的备份吞吐量。 有关校验和的详细信息，请参阅[在备份和还原期间可能的媒体错误 (SQL Server)](possible-media-errors-during-backup-and-restore-sql-server.md)。  
   
  **出错时继续**  
@@ -113,8 +112,8 @@ ms.locfileid: "70154830"
   
 ## <a name="see-also"></a>另请参阅  
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
- [备份事务日志 &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
- [备份文件和文件组 &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
+ [备份事务日志 (SQL Server)](back-up-a-transaction-log-sql-server.md)   
+ [备份文件和文件组 (SQL Server)](back-up-files-and-filegroups-sql-server.md)   
  [在数据库损坏时备份事务日志 (SQL Server)](back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
   
   

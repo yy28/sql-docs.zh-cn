@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a29a8b9adda07015a7f6fec953db42748a1e752e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1ef4ddd518343a3076c72ecc41f9b15ddf092dc0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918817"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970503"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>配置管理数据仓库 (SQL Server Management Studio)
   本主题介绍如何配置管理数据仓库以支持使用数据收集器的单个或多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的数据存储。 这些实例可能位于相同或不同的服务器上。 本主题还提供针对 [配置管理数据仓库向导](#Wizard) 对话框的用户界面的说明。 有关配置数据收集器的信息，请参阅 [Configure Properties of a Data Collector](configure-properties-of-a-data-collector.md)。  
@@ -93,7 +92,7 @@ ms.locfileid: "62918817"
   
  可通过为某个登录名选中 **“映射”** 复选框来指定该登录名。  
   
- **数据库角色成员身份：** *\<data warehouse name>*  
+ **数据库角色成员身份：**  *\<data warehouse name>*  
  通过单击以下一个或多个选项旁边的复选框，选择登录名映射到的管理数据仓库角色：  
   
 -   **mdw_admin**  

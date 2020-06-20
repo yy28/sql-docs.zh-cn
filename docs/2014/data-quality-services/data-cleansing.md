@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 465d20f425a479f173ed5a9c2b5f5ec96ec7f707
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1d5a938c64ee01a70a34e54c6599880ba2f22e8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480810"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937868"
 ---
 # <a name="data-cleansing"></a>数据清理
   数据清理是在数据源中分析数据质量的过程，在其中手动批准/拒绝系统的建议并将对数据进行更改。 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的数据清理包括计算机辅助的过程和交互式过程，前者分析数据与知识库中知识的符合程度，后者允许数据专员查看和修改计算机辅助过程的结果，确保数据清理符合自己的要求。  

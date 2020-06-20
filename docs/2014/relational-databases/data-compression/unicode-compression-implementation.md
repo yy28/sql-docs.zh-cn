@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a43a437b277c0fcc090a4ebd52d9deb14bec9fd0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4c928062169ed7feb03f1031362530474109976a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872965"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970307"
 ---
 # <a name="unicode-compression-implementation"></a>Unicode 压缩的实现
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 Unicode 标准压缩方案 (SCSU) 算法实现来压缩在行或页压缩对象中存储的 Unicode 值。 对于这些压缩对象，Unicode 压缩对于 `nchar(n)` 和 `nvarchar(n)` 列而言是自动的。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将 Unicode 数据存储为 2 个字节，无论区域设置如何。 这称为 UCS-2 编码。 对于某些区域设置而言，在 SQL Server 中实现 SCSU 压缩可节省高达 50% 的存储空间。  

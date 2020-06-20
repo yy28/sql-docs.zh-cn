@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6b46b7d020e7a9ebd8bd0ac96d0971b63230c2b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d4900eaddf5287824a386e885db9fc66d44a3c6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480766"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937828"
 ---
 # <a name="data-quality-client-application"></a>数据质量客户端应用程序
   [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序允许您使用独立工具执行数据质量操作。 此应用程序使您能够创建知识库、创建和运行数据质量项目以及执行管理任务。  

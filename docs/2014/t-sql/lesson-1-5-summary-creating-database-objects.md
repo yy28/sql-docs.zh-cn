@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5db8aebc-cc54-48d1-8cba-b2e2d21fa333
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 11cd1134a770d62afeb50dd5da53c375b482b723
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db179a75ee3c575465ea40476d8a52b6dacbdd8b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704497"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011703"
 ---
 # <a name="summary-creating-database-objects"></a>摘要：创建数据库对象
   在本教程中，您已创建了一个数据库，在数据库中创建了表，将数据插入到表中，更改了数据，然后又读取了表中的数据。 所用语句的语法仅仅是基本语法，许多语法选项并未在本教程中涉及。 若要了解有关这些语句的详细信息，请阅读 SQL Server 联机丛书中这些语句的完整语法，并查看这些主题中提供的许多示例。  

@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 5fc43a5d-dfd6-4c53-a4ef-3c8da23ccc81
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 88ea15fabe8e8fd6630d3430417879c7104dff67
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 255a3c190139c029f5211dcab9780b6d07d975a4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876919"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959487"
 ---
 # <a name="back-up-to-a-mirrored-media-set-transact-sql"></a>备份镜像媒体集 (Transact-SQL)
-  本主题介绍在备份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库时如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) 语句指定镜像媒体集。 在 BACKUP 语句中的 TO 子句中指定第一个镜像。 然后，在它自己的 MIRROR TO 子句中指定每个镜像。 TO 和 MIRROR TO 子句必须指定相同数量和类型的备份设备。  
+  本主题介绍 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在备份数据库时如何使用[BACKUP](/sql/t-sql/statements/backup-transact-sql)语句指定镜像介质集 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 在 BACKUP 语句中的 TO 子句中指定第一个镜像。 然后，在它自己的 MIRROR TO 子句中指定每个镜像。 TO 和 MIRROR TO 子句必须指定相同数量和类型的备份设备。  
   
 ## <a name="example"></a>示例  
  下例创建上一图中所述的镜像介质集并将 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库同时备份到两个镜像。  

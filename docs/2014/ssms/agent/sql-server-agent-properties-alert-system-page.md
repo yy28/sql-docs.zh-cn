@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 3e6d3bfd-20ee-4593-86cc-f65b1c08c69d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 00e3643a1beb3f69f8b370715001317e536c42e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e5e87f5a13c8f156cd7d2788bb9004ec20fcd3eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245744"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058730"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>SQL Server 代理属性（“警报系统”页）
-  使用此页可以查看和修改由[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理警报发送的消息的设置。  
+  使用此页可以查看和修改由代理警报发送的消息的设置 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="options"></a>选项  
  **邮件会话**  
@@ -36,7 +35,7 @@ ms.locfileid: "63245744"
 >  更改电子邮件系统后，必须重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务才能使更改生效。  
   
  **邮件配置文件**  
- 设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理要使用的配置文件。 你还可以选择** \<"新建数据库邮件配置文件 ..." >** 创建新的配置文件。  
+ 设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理要使用的配置文件。 你还可以选择 **\<new Database Mail profile...>** 创建新的配置文件。  
   
  **寻呼电子邮件**  
  使用此部分中的选项，可以配置发送给寻呼地址的电子邮件，以便与您的寻呼系统协同工作。  
@@ -47,10 +46,10 @@ ms.locfileid: "63245744"
  **“收件人”行**  
  指定邮件的“收件人”**** 行的选项  
   
- **前缀**  
+ **作为**  
  对于要发送给寻呼程序的邮件，键入系统要求在“收件人”**** 行开头显示的任何固定文本。  
   
- **寻呼程序**  
+ **接收**  
  在前缀和后缀之间包括邮件的电子邮件地址。  
   
  **后缀**  
@@ -59,10 +58,10 @@ ms.locfileid: "63245744"
  **“抄送”行**  
  指定邮件的“抄送”**** 行的选项。  
   
- **前缀**  
+ **作为**  
  对于要发送给寻呼程序的邮件，键入系统要求在“抄送”**** 行开头显示的任何固定文本。  
   
- **寻呼程序**  
+ **接收**  
  在前缀和后缀之间包括邮件的电子邮件地址。  
   
  **后缀**  
@@ -71,7 +70,7 @@ ms.locfileid: "63245744"
  **主题**  
  指定邮件主题的选项。  
   
- **前缀**  
+ **作为**  
  对于要发送给寻呼程序的邮件，键入寻呼系统要求在“主题”**** 行开头显示的任何固定文本。  
   
  **后缀**  

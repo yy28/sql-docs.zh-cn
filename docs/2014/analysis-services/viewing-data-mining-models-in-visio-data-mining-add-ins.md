@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5841adea-6650-4fae-8526-26af33edbede
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c287e840c07d11a527e980f9f07fb39fb3852739
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe6baff391f108e14a401a0d3b9dcacefa6da406
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065522"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938137"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>在 Visio 中查看数据挖掘模型（数据挖掘外接程序）
   通过 Visio 数据挖掘形状，您可以连接服务器并创建一个表示现有数据挖掘模型的关系图。 然后，可以使用 Visio 控件对关系图进行自定义，也可以深化到数据来公开一些基础统计信息并利用基础模型。  

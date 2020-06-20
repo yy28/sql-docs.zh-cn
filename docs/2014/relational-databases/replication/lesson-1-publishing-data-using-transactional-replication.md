@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 18236ec3ca5a62cd45a2cf7cdd3d56b5cea79063
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: ff715b51a7fa84a462d1439e78627d648e20472d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000453"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065954"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>第 1 课：使用事务复制发布数据
   在本课中，使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建一个事务发布，以便在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库中发布“Product”表的筛选子集****。 您还要将分发代理使用的 SQL Server 登录名添加到发布访问列表 (PAL)。 开始本教程之前，应已完成上一个教程 [准备用于复制的服务器](tutorial-preparing-the-server-for-replication.md)。  
@@ -34,7 +33,7 @@ ms.locfileid: "83000453"
   
 4.  在“发布类型”页上，选择“事务发布”****，然后单击“下一步”****。  
   
-5.  在“项目”页上，展开“表”**** 节点，选中“Product”**** 复选框，然后展开“Product”**** 并取消选中“ListPrice”**** 和“StandardCost”**** 复选框。 单击 **“下一步”** 。  
+5.  在“项目”页上，展开“表”**** 节点，选中“Product”**** 复选框，然后展开“Product”**** 并取消选中“ListPrice”**** 和“StandardCost”**** 复选框。 单击“下一步”。  
   
 6.  在“筛选表行”页上，单击“添加”。****  
   
@@ -50,7 +49,7 @@ ms.locfileid: "83000453"
   
 10. 在“代理安全性”页上，清除“使用快照代理的安全设置”**** 复选框。  
   
-11. 单击快照代理的“安全设置”****，在“进程帐户”**** 框中输入 \<_Machine_Name>_**\repl_snapshot**，为此帐户提供密码，然后单击“确定”****。  
+11. 单击 "快照代理的"**安全设置**"， \<_Machine_Name> 在"**进程帐户**"框中输入 _**\ repl_snapshot** ，为此帐户提供密码，然后单击 **" 确定 "**。  
   
 12. 重复上一步，将 repl_logreader 设置为日志读取器代理的进程帐户，然后单击“完成”。****  
   
@@ -76,7 +75,7 @@ ms.locfileid: "83000453"
   
 3.  选择“发布访问列表”**** 页，单击“添加”****。  
   
-4.  \在“添加发布访问项”**** 对话框中，选择 _<Machine_Name>_**\repl_distribution**，再单击“确定”****。 单击 **“确定”** 。  
+4.  \在“添加发布访问项”**** 对话框中，选择 _<Machine_Name>_**\repl_distribution**，再单击“确定”****。 单击“确定”。  
   
 ## <a name="next-steps"></a>后续步骤  
  您已成功创建了事务发布。 接下来，您将订阅此发布。 请参阅 [第 2 课：创建事务发布的订阅](lesson-2-creating-a-subscription-to-the-transactional-publication.md)。  

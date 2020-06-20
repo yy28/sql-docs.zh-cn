@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c3f06127c2e86060c90518bc24dde512e4259668
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 298ba469c565765b524b17a58f464b5a3ee909c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706545"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050388"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>用于对内存优化表进行分区的应用程序模式
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 支持将有限数量的活动数据保存在内存优化表中而将不常访问的数据在磁盘上进行处理的模式。 通常，这是基于 `datetime` 键存储数据的方案。  

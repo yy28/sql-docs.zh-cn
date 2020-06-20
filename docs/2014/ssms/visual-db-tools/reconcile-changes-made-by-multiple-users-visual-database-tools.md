@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f13b7f6a2e34d7819b930d919e9fd773e2c993d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fdd7d2be3ceefa4bcc90d2907c9bc2dfac0061c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63010696"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035609"
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>协调多个用户所做的更改 (Visual Database Tools)
   在多用户环境中，多个用户可以同时对同一个对象进行更改。 当您在表或数据库关系图设计器中处理对象的结构时，可能会出现这种情况；对于查询和视图设计器的“结果”窗格内所返回结果中的值，也会出现这种情况。 这可能导致您需要解决的冲突。  

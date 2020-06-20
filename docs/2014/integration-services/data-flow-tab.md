@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ffd7ab42-d7ae-4e7c-86a1-a4364a37c91e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 403100ddfbd78609ac0d98dd3ee387d2ecdeec61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a84f6acf89490bf12b09db6017d305e15b45abd3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059901"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916893"
 ---
 # <a name="data-flow-tab"></a>“数据流”选项卡
   可以使用 **设计器的** “数据流” [!INCLUDE[ssIS](../includes/ssis-md.md)] 选项卡在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包中创建数据流。  
@@ -38,6 +37,6 @@ ms.locfileid: "66059901"
  [Integration Services 路径](data-flow/integration-services-paths.md)   
  [数据流任务](control-flow/data-flow-task.md)   
  [SSIS 设计器](ssis-designer.md)   
- [数据流](data-flow/data-flow.md)  
+ 数据流  
   
   

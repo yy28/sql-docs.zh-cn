@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 01fc6329-5d6b-4186-9565-395f375477bb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6b31cb3bc05f9785154b89033cde2e158f204b3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e5b6f27b93ca0dc46e657338a10987496c0688e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753054"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011631"
 ---
 # <a name="sql-server-agent-properties-log-on-tab"></a>SQL Server 代理属性（“登录”选项卡）
   使用 **“SQL Server 代理属性”** 对话框中的 **“登录”** 选项卡，可以指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务使用的帐户，还可以启动和停止该服务。 对帐户密码的更改立即生效，无需重新启动服务。  

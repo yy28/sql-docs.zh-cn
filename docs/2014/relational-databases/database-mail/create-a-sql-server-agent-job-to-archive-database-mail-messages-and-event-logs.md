@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a1fa03dbb8803c27ba917e662db1958361900b15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ffbfaa1bda561240d64c7548752f0ae18ddddf3c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917589"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952567"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>创建 SQL Server 代理作业以存档数据库邮件和事件日志
   数据库邮件及其附件的副本与数据库邮件事件日志一起保存在 **msdb** 表中。 您可能希望定期减小这些表的大小并对不再需要的邮件和事件进行存档。 下列过程将创建一个 SQL Server 代理作业，以自动完成上述过程。  
@@ -208,7 +207,7 @@ ms.locfileid: "62917589"
   
 5.  在 **“频率”** 区域中，选择相应的选项以便定期运行该作业，比如每月一次。  
   
-6.  在 "**每天频率**" 区域中，选择 "每** \<次出现>**。  
+6.  在 "**每天频率**" 区域中，选择 "**发生 \<time> 一次**"。  
   
 7.  验证其他选项已按您希望的那样进行了配置，然后单击 **“确定”** 保存计划。  
   

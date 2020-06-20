@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c049ced5-55df-47dd-b855-b2da4b7ce17d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9bf5f9fae501c019a7db3c9d78d578729cf1df42
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40bf92b2a7ca45e7f4033ec6d6aa44c5d99e852a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066003"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938348"
 ---
 # <a name="toolbar-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>工具栏（“翻译”选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用工具栏按钮执行 **维度设计器** 的 **“翻译”** 视图中的常规操作。  
@@ -24,7 +23,7 @@ ms.locfileid: "66066003"
  **添加商业智能**  
  显示“商业智能向导”**** 以添加商业智能功能。  
   
- **进程**  
+ **处理**  
  显示“处理”**** 对话框以处理对象。  
   
  **新建翻译**  

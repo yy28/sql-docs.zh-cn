@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5dac84fe42185806ae468593876a6bd439c1c689
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 86fd70a516bfa6a449bfd9146e439b60dcbbbbf1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890646"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916137"
 ---
 # <a name="data-mining-model-training-destination"></a>数据挖掘模型定型目标
   数据挖掘模型定型目标将该目标接收到的数据通过数据挖掘模型算法传递，从而为数据挖掘模型定型。 如果模型是在同一数据结构上生成的，则一个目标可为多个数据挖掘模型定型。 有关详细信息，请参阅 [Mining Structure Columns](https://docs.microsoft.com/analysis-services/data-mining/mining-structure-columns) 和 [Mining Model Columns](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: acfa87245449566c1f91b447910f5194eda192b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92183382aa8832f3c381ce864df34c0744095da3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922581"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960027"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 支持 Windows PowerShell，Windows PowerShell 是一个功能强大的脚本 shell，管理员和开发人员可以通过它自动执行服务器管理和应用程序部署。 与 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本相比，Windows PowerShell 语言能够支持更复杂的逻辑，这使得 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理员能够生成强大的管理脚本。 Windows PowerShell 脚本还可用来管理其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] 服务器产品， 这为管理员提供一个跨服务器的公用脚本语言。  

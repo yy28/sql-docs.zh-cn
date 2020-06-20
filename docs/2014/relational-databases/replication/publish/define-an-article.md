@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 65512a212290db4cc9a470402e2ae75175c23cb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d7ff1f5f516d438ed07a203223acf32970a7961
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882320"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065768"
 ---
 # <a name="define-an-article"></a>定义项目
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定义项目。  
@@ -48,13 +47,13 @@ ms.locfileid: "73882320"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 限制和局限  
   
--   项目名称不能包含以下任何字符：%、*、[、]、|、:、"、? 、'、\、/、 \< 、>。 如果数据库中的对象包括任意上述字符，并且您希望复制它们，那么必须指定一个不同于相应对象名称的项目名称。  
+-   项目名称不能包含以下任何字符：%、*、[、]、|、:、"、? , ' , \ , / , \< , >. 如果数据库中的对象包括任意上述字符，并且您希望复制它们，那么必须指定一个不同于相应对象名称的项目名称。  
   
 ##  <a name="security"></a><a name="Security"></a> Security  
  如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) Cryptographic Services [!INCLUDE[msCoName](../../../includes/msconame-md.md)] （加密服务）。  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 可以使用新建发布向导创建发布和定义项目。 创建发布之后，可在“发布属性 - **发布>”\<** 对话框中查看和修改发布属性。 有关从 Oracle 数据库创建发布的信息，请参阅[从 Oracle 数据库创建发布](create-a-publication-from-an-oracle-database.md)。  
+ 可以使用新建发布向导创建发布和定义项目。 创建发布后，在 "**发布属性- \<Publication> ** " 对话框中查看和修改发布属性。 有关从 Oracle 数据库创建发布的信息，请参阅[从 Oracle 数据库创建发布](create-a-publication-from-an-oracle-database.md)。  
   
 #### <a name="to-create-a-publication-and-define-articles"></a>创建发布和定义项目  
   
@@ -103,7 +102,7 @@ ms.locfileid: "73882320"
   
 #### <a name="to-define-an-article-for-a-snapshot-or-transactional-publication"></a>为快照发布或事务发布定义项目  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)。 指定项目所属的** \@发布的名称、项目** ** \@的名称、要**为** \@source_object**发布的数据库对象以及任何其他可选参数。 使用** \@source_owner**指定对象的架构所有权（如果不是**dbo**）。 如果项目不是基于日志的表项目，则指定** \@类型**的项目类型;有关详细信息，请参阅[指定项目类型 &#40;复制 Transact-sql 编程&#41;](specify-article-types-replication-transact-sql-programming.md)。  
+1.  在发布服务器上，对发布数据库执行 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)。 指定项目所属的**发布的名称、项目 \@ **的名称、要为** \@ source_object**发布的数据库对象以及** \@ **任何其他可选参数。 使用** \@ source_owner**指定对象的架构所有权（如果不是**dbo**）。 如果项目不是基于日志的表项目，则指定** \@ 类型**的项目类型; 有关详细信息，请参阅[指定项目类型 &#40;复制 transact-sql 编程&#41;](specify-article-types-replication-transact-sql-programming.md)。  
   
 2.  若要水平筛选表中的行或查看项目，请使用 [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) 来定义筛选子句。 有关详细信息，请参阅 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)。  
   
@@ -120,7 +119,7 @@ ms.locfileid: "73882320"
   
 #### <a name="to-define-an-article-for-a-merge-publication"></a>为合并发布定义项目  
   
-1.  在发布服务器上，对发布数据库执行 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 指定** \@发布的名称、** ** \@项目**名称和项目名称，以及要为** \@source_object**发布的对象的名称。 若要水平筛选表行，请指定** \@subset_filterclause**的值。 有关详细信息，请参阅 [定义和修改合并项目的参数化行筛选器](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) 和 [定义和修改静态行筛选器](define-and-modify-a-static-row-filter.md)。 如果项目不是表项目，请指定** \@类型**的项目类型。 有关详细信息，请参阅[指定项目类型（复制 Transact-SQL 编程）](specify-article-types-replication-transact-sql-programming.md)。  
+1.  在发布服务器上，对发布数据库执行 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 指定发布的名称、项目名称** \@ **和** \@ 项目**名称，以及要为** \@ source_object**发布的对象的名称。 若要水平筛选表行，请指定** \@ subset_filterclause**的值。 有关详细信息，请参阅 [定义和修改合并项目的参数化行筛选器](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) 和 [定义和修改静态行筛选器](define-and-modify-a-static-row-filter.md)。 如果项目不是表项目，请指定** \@ 类型**的项目类型。 有关详细信息，请参阅[指定项目类型（复制 Transact-SQL 编程）](specify-article-types-replication-transact-sql-programming.md)。  
   
 2.  （可选）在发布服务器上，对发布数据库执行 [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) 以在两个项目之间定义一个联接筛选器。 有关详细信息，请参阅 [定义和修改合并项目间的联接筛选器](define-and-modify-a-join-filter-between-merge-articles.md)。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0fe85fbf-8e8d-4983-96fd-d04b3c7d6d65
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ecf171c8c50e1f7ce1e7cdc9e86cd27ac6fe558b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: caae904bc1e25288e81d3baba21719be28c05d31
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161999"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050231"
 ---
 # <a name="defining-durability-for-memory-optimized-objects"></a>为内存优化对象定义持续性
   内存中 OLTP 可保证完整原子性、一致性、隔离和完整持久性 (ACID) 属性。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和内存优化表上下文中的持续性提供了以下保证：  

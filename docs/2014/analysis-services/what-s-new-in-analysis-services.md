@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1458dcf473ffbf7fc9bab13c2c688a4e01954c56
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9d66589dd4094614d195757a8dcc7c59175c9540
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175536"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938128"
 ---
 # <a name="what39s-new-in-sql-server-2014-analysis-services"></a>SQL Server 2014 中的新增功能&#39;Analysis Services
-  除了添加支持多维模型的 Power View 报表的功能之外， [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]与以前的版本相比，没有任何变化。
+  除了添加支持多维模型的 Power View 报表的功能之外，与 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 以前的版本相比，没有任何变化。
 
- 有关此版本中[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]其他产品和技术的详细信息，请参阅[SQL Server 2014 中的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)。
+ 有关 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 此版本中其他产品和技术的详细信息，请参阅[SQL Server 2014 中的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)。
 
 ## <a name="updates-to-design-tool-installation"></a>设计工具安装更新
  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] for Business Intelligence (SSDT-BI)（以前称为 Business Intelligence Development Studio (BIDS)）用于创建 Analysis Services 模型、Reporting Services 报表和 Integration Services 包。 您可以从以下位置下载 SSDT-BI：

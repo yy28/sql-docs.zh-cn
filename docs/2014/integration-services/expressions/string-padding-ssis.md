@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d3fed73d-e0d4-4c67-9355-fb7083a72dd6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 50ad5f637d6e13d31af02698488d6eec8e734ddb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a572fd3fc238faabfb80e6b85d42fd887237dc27
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768713"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969037"
 ---
 # <a name="string-padding-ssis"></a>字符串填充 (SSIS)
   表达式计算器不检查字符串是否包含前导空格和尾随空格，并且比较前不填充字符串来使其具有相同长度。 如果表达式需要字符串填充，可使用 + 运算符连接列值和空字符串。 有关详细信息，请参阅 [+（连接）（SSIS 表达式）](concatenate-ssis-expression.md)。  

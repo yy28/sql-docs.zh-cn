@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dc29f3b9acf52172aa3d9fedecac752d419b2e55
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81bb8b079142b2b6c4597fa2fdfeddd034841f93
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176407"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968977"
 ---
 # <a name="developing-a-custom-destination-component"></a>开发自定义目标组件
   开发人员可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 编写可连接到任意自定义数据源并在其中存储数据的自定义目标组件。 自定义目标组件在您需要连接到无法通过使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中包含的现有源组件来访问的数据源时非常有用。
@@ -38,7 +37,7 @@ ms.locfileid: "78176407"
  实现目标组件的设计时功能包括指定与外部数据源的连接以及验证该组件已经正确配置。 根据定义，目标组件有一个输入，可能有一个错误输出。
 
 ### <a name="creating-the-component"></a>创建组件
- 目标组件使用包中定义的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象连接到外部数据源。 目标组件通过将元素添加到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 集合，向 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 设计器和组件用户指明自己需要连接管理器。 此集合有两个用途：首先，告知 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器它需要连接管理器；然后，在用户选择或创建完连接管理器后，保存对组件正在使用的包中的连接管理器的引用。 将 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 添加到该集合后，“高级编辑器”  将显示“连接属性”  选项卡，以提示用户在包中选择或创建连接以供组件使用。
+ 目标组件使用包中定义的 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 对象连接到外部数据源。 目标组件通过将元素添加到 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 集合，向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器和组件用户指明自己需要连接管理器。 此集合有两个用途：首先，告知 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器它需要连接管理器；然后，在用户选择或创建完连接管理器后，保存对组件正在使用的包中的连接管理器的引用。 将 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 添加到该集合后，“高级编辑器”  将显示“连接属性”  选项卡，以提示用户在包中选择或创建连接以供组件使用。
 
  下面的代码示例演示 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> 的实现，该实现添加一个输入，然后将 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 对象添加到 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>。
 

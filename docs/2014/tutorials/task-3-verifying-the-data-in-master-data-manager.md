@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: d88953d2-2258-40ac-b3bf-2ef502f9b5fd
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8e5d87a9d98e4804dd9f2687b5125e55882606c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aed5a76cff9d90b81f02f6af11b6fc437efee14e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487678"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035307"
 ---
 # <a name="task-3-verifying-the-data-in-master-data-manager"></a>任务 3：在主数据管理器中验证数据
   在此任务中，将使用**主数据管理器 Web 应用程序**验证是否在**MDS**上创建了**供应商**实体。
 
-1.  如果**主数据管理器**已经打开，请单击顶部**SQL Server 2012 Master Data Services** ，导航到主页。 否则，请导航`http://localhost/MDS`到以启动**主数据管理器**。
+1.  如果**主数据管理器**已经打开，请单击顶部**SQL Server 2012 Master Data Services** ，导航到主页。 否则，请导航到 `http://localhost/MDS` 以启动**主数据管理器**。
 
 2.  选择 "**型号**的**供应商**"，然后单击 "**资源管理器**"。
 

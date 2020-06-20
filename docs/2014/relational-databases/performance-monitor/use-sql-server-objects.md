@@ -29,18 +29,17 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 67edebf9b4adcf40c12190446997dbd7c4b6e57b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c073b0f438ec022e1b05f481652d6f08ef34cc53
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151174"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066112"
 ---
 # <a name="use-sql-server-objects"></a>使用 SQL Server 对象
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了对象和计数器，系统监视器可以使用它们监视运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的计算机中的活动。 对象可以是任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 锁或 Windows 进程。 每个对象有一个或多个计数器，用于确定所要监视对象的各方面信息。 例如， **SQL Server Locks** 对象包含名为 **Number of Deadlocks/sec** 和 **Lock Timeouts/sec**的计数器。  
   
- 如果计算机上有某一个给定资源类型的多个资源，则一些对象会有几个实例。 例如，如果一个系统有多个处理器，则 **Processor** 对象类型会有多个实例。 对于 **上的每个数据库，** Databases [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象类型都有一个实例。 某些对象类型（例如， **Memory Manager** 对象）只有一个实例。 如果一个对象类型有多个实例，则可以增加计数器以跟踪每个实例的统计信息，另外在许多情况下，同时跟踪所有实例的统计信息。 默认实例的计数器以 **SQLServer:** _\<对象名称>_ 格式显示。 命名实例计数器以 **MSSQL$** _\<实例名称>_ **:** _\<计数器名称>_ 或 **SQLAgent$** _\<实例名称>_ **:** _\<计数器名称>_ 格式显示。  
+ 如果计算机上有某一个给定资源类型的多个资源，则一些对象会有几个实例。 例如，如果一个系统有多个处理器，则 **Processor** 对象类型会有多个实例。 对于 **上的每个数据库，** Databases [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象类型都有一个实例。 某些对象类型（例如， **Memory Manager** 对象）只有一个实例。 如果一个对象类型有多个实例，则可以增加计数器以跟踪每个实例的统计信息，另外在许多情况下，同时跟踪所有实例的统计信息。 默认实例的计数器以**SQLServer：** 格式显示 _\<object name>_ 。 命名实例的计数器以**MSSQL $** _\<instance name>_ **：** _\<counter name>_ 或**SQLAgent $** _\<instance name>_ **：** 格式显示 _\<counter name>_ 。  
   
  通过在图表中添加或删除计数器并保存图表设置，可以指定系统监视器启动后监视的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象和计数器。  
   
@@ -61,9 +60,9 @@ ms.locfileid: "63151174"
   
 -   [SSIS 管道计数器](#SsisPipelineCounters)  
   
--   [必需的权限](#RequiredPermissions)  
+-   [所需的权限](#RequiredPermissions)  
   
-##  <a name="sql-server-agent-performance-objects"></a><a name="SQLServerAgentPOs"></a>SQL Server 代理性能对象  
+##  <a name="sql-server-agent-performance-objects"></a><a name="SQLServerAgentPOs"></a> SQL Server 代理性能对象  
  下表列出了为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理提供的性能对象：  
   
 |性能对象|说明|  
@@ -73,7 +72,7 @@ ms.locfileid: "63151174"
 |[SQLAgent:JobSteps](sql-server-agent-jobsteps-object.md)|提供有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤的信息。|  
 |[SQLAgent:Statistics](sql-server-agent-statistics-object.md)|提供有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的常规信息。|  
   
-##  <a name="service-broker-performance-objects"></a><a name="ServiceBrokerPOs"></a>Service Broker 性能对象  
+##  <a name="service-broker-performance-objects"></a><a name="ServiceBrokerPOs"></a> Service Broker 性能对象  
  下表列出了为 [!INCLUDE[ssSB](../../includes/sssb-md.md)]代理提供的性能对象：  
   
 |性能对象|说明|  
@@ -82,7 +81,7 @@ ms.locfileid: "63151174"
 |[SQLServer:Broker Statistics](sql-server-broker-statistics-object.md)|提供 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 的常规信息。|  
 |[SQLServer:Broker Transport](sql-server-broker-dbm-transport-object.md)|提供有关 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 网络的信息。|  
   
-##  <a name="sql-server-performance-objects"></a><a name="SQLServerPOs"></a>SQL Server 性能对象  
+##  <a name="sql-server-performance-objects"></a><a name="SQLServerPOs"></a> SQL Server 性能对象  
  下表介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象：  
   
 |性能对象|说明|  
@@ -105,25 +104,25 @@ ms.locfileid: "63151174"
 |[SQLServer:Locks](sql-server-locks-object.md)|提供有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]执行的单个锁请求的信息，如锁超时和死锁。 这个对象可有多个实例。|  
 |[SQLServer:Memory Manager](sql-server-memory-manager-object.md)|提供有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内存使用量的信息，如当前分配的锁结构总数。|  
 |[SQLServer:Plan Cache](sql-server-plan-cache-object.md)|提供有关用于存储对象（如存储过程、触发器和查询计划）的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 缓存的信息。|  
-|[SQLServer: Resource Pool Stats](sql-server-resource-pool-stats-object.md)|提供了有关资源调控器资源池统计的信息。|  
+|[SQLServer：资源池统计信息](sql-server-resource-pool-stats-object.md)|提供了有关资源调控器资源池统计的信息。|  
 |[SQLServer:SQL Errors](sql-server-sql-errors-object.md)|提供有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误的信息。|  
 |[SQLServer:SQL Statistics](sql-server-sql-statistics-object.md)|提供有关 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询各个方面的信息，如 [!INCLUDE[tsql](../../includes/tsql-md.md)] 收到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语句的批数。|  
 |[SQLServer:Transactions](sql-server-transactions-object.md)|提供了有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中活动事务的信息，如事务总数和快照事务数。|  
 |[SQLServer:User Settable](sql-server-user-settable-object.md)|执行自定义监视。 每个计数器可以是一个自定义的存储过程，也可以是任何返回一个被监视值的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。|  
-|[SQLServer: Wait Statistics](sql-server-wait-statistics-object.md)|提供有关等待的信息。|  
-|[SQLServer: Workload Group Stats](sql-server-workload-group-stats-object.md)|提供了有关资源调控器工作负荷组统计的信息。|  
+|[SQLServer：等待统计信息](sql-server-wait-statistics-object.md)|提供有关等待的信息。|  
+|[SQLServer：工作负载组统计信息](sql-server-workload-group-stats-object.md)|提供了有关资源调控器工作负荷组统计的信息。|  
   
-##  <a name="sql-server-replication-performance-objects"></a><a name="SQLServerReplicationPOs"></a>SQL Server 复制性能对象  
+##  <a name="sql-server-replication-performance-objects"></a><a name="SQLServerReplicationPOs"></a> SQL Server 复制性能对象  
  下表列出了为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制提供的性能对象：  
   
 |性能对象|说明|  
 |------------------------|-----------------|  
 |**SQLServer:Replication Agents**<br /><br /> **SQLServer:Replication Snapshot**<br /><br /> **SQLServer:Replication Logreader**<br /><br /> **SQLServer:Replication Dist.**<br /><br /> **SQLServer:Replication Merge**<br /><br /> 有关详细信息，请参阅 [Monitoring Replication with System Monitor](../replication/monitor/monitoring-replication-with-system-monitor.md)。|提供有关复制代理活动的信息。|  
   
-##  <a name="ssis-pipeline-counters"></a><a name="SsisPipelineCounters"></a>SSIS 管道计数器  
+##  <a name="ssis-pipeline-counters"></a><a name="SsisPipelineCounters"></a> SSIS 管道计数器  
  有关 **SSIS 管道** 计数器的信息，请参阅 [性能计数器](../../integration-services/performance/performance-counters.md)。  
   
-##  <a name="required-permissions"></a><a name="RequiredPermissions"></a>必需的权限  
+##  <a name="required-permissions"></a><a name="RequiredPermissions"></a> 所需的权限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象的使用取决于 Windows 权限（ **SQLAgent:Alerts**除外）。 只有 **sysadmin** 固定服务器角色的成员可以使用 **SQLAgent:Alerts**。  
   
 ## <a name="see-also"></a>另请参阅  

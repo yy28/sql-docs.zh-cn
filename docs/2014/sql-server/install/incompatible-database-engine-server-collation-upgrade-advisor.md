@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 80f499d6-2c90-49eb-a5b3-0bb5b7faaa3b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: fbd4c1e55bb49c6ae8f75d3d12cc243df963018a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c7a9df15948ddea5fe76efa1cce688f704cbe5c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952233"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065364"
 ---
 # <a name="incompatible-database-engine-server-collation-upgrade-advisor"></a>不兼容的数据库引擎服务器排序规则（升级顾问）
-  升级顾问检测[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]到使用的实例[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]配置为使用不兼容的服务器排序规则。  
+  升级顾问检测到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用的实例 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 配置为使用不兼容的服务器排序规则。  
   
 ||  
 |-|  
@@ -28,9 +27,9 @@ ms.locfileid: "71952233"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>说明  
- 升级顾问检测[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]到使用的实例[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]配置为使用不兼容的服务器排序规则。  
+ 升级顾问检测到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用的实例 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 配置为使用不兼容的服务器排序规则。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Sharepoint 模式利用 sharepoint 共享服务体系结构。 SharePoint 不支持为区分大小写的服务器排序规则或二进制排序规则配置的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 不兼容的排序规则包括默认区分大小写或为二进制的排序规则，以及默认兼容但使用任何以下排序规则指示符配置的基本排序规则：  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Sharepoint 模式利用 sharepoint 共享服务体系结构。 SharePoint 不支持为区分大小写的服务器排序规则或二进制排序规则配置的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 不兼容的排序规则包括默认区分大小写或为二进制的排序规则，以及默认兼容但使用任何以下排序规则指示符配置的基本排序规则：  
   
 -   **二进制**  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1b6298020c1aa39f2c5c319efa492f6832c301f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4f9e7bcd1f36387e4a1102b4ec63c8acd92fa52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289655"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065418"
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>在 SQL Server 故障转移群集中添加或删除节点（安装程序）
   使用此过程可以管理现有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例的节点。  
@@ -49,7 +48,7 @@ ms.locfileid: "79289655"
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装介质，然后双击根文件夹中的 Setup.exe。 若要从网络共享进行安装，请导航到共享中的根文件夹，然后双击 Setup.exe。  
   
-2.  安装向导将启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装中心。 若要向现有故障转移群集实例中添加节点，请单击左窗格中的“安装”  。 然后，选择“向  **故障转移群集添加节点”[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** 。  
+2.  安装向导将启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装中心。 若要向现有故障转移群集实例中添加节点，请单击左窗格中的“安装”  。 然后，选择“向 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集添加节点”。  
   
 3.  系统配置检查器将在您的计算机上运行发现操作。 若要继续， [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。  
   
@@ -89,7 +88,7 @@ ms.locfileid: "79289655"
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装介质， 然后双击根文件夹中的 setup.exe。 若要从网络共享进行安装，请导航到共享中的根文件夹，然后双击 Setup.exe。  
   
-2.  安装向导将启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装中心。 若要从现有的故障转移群集实例中删除节点，请单击左窗格中的“维护”  ，然后选择“从  **故障转移群集中删除节点”[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** 。  
+2.  安装向导将启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安装中心。 若要从现有的故障转移群集实例中删除节点，请单击左窗格中的“维护”，然后选择“从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集中删除节点”。  
   
 3.  系统配置检查器将在您的计算机上运行发现操作。 若要继续， [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。  
   

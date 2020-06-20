@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 55eab0bbfacdde17ff69dd36a0641561695bc14d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0453d495c90c1e599bfc7777b4899f30e6659c52
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872203"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952610"
 ---
 # <a name="create-a-database-mail-profile"></a>创建数据库邮件配置文件
   使用 **数据库邮件配置向导** 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可创建数据库邮件的公共和专用配置文件。  
@@ -96,7 +95,7 @@ ms.locfileid: "62872203"
   
      *@description*= '*说明 '*  
   
-     其中*@profile_name* ，是配置文件的名称， *@description*是配置文件的说明。 此参数是可选的。  
+     其中 *@profile_name* ，是配置文件的名称， *@description* 是配置文件的说明。 此参数是可选的。  
   
 -   对于每个帐户，运行存储过程 [sysmail_add_profileaccount_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql)，如下所示：  
   
@@ -108,7 +107,7 @@ ms.locfileid: "62872203"
   
      *@sequence_number*= '*配置文件中帐户的序列号。* '  
   
-     其中*@profile_name* ，是配置文件的名称， *@account_name*是要添加到配置文件的帐户的名称， *@sequence_number*用于确定在配置文件中使用帐户的顺序。  
+     其中 *@profile_name* ，是配置文件的名称， *@account_name* 是要添加到配置文件的帐户的名称， *@sequence_number* 用于确定在配置文件中使用帐户的顺序。  
   
 -   对于将使用此配置文件发送邮件的每个数据库角色或用户，请向他们授予对此配置文件的访问权限。 对于每个帐户，运行存储过程 [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql)，如下所示：  
   
@@ -120,7 +119,7 @@ ms.locfileid: "62872203"
   
      *@is_default*= '*默认配置文件状态*'  
   
-     其中*@profile_name* ，是配置文件的名称， *@principal_name*是数据库用户或角色的名称， *@is_default*确定此配置文件是否为数据库用户或角色的默认值。  
+     其中 *@profile_name* ，是配置文件的名称， *@principal_name* 是数据库用户或角色的名称， *@is_default* 确定此配置文件是否为数据库用户或角色的默认值。  
   
  以下示例创建了一个数据库邮件帐户和一个数据库邮件专用配置文件，然后将帐户添加到该配置文件中，并向 **msdb** 数据库中的 **DBMailUsers** 数据库角色授予对该配置文件的访问权限。  
   
@@ -166,7 +165,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@description*= '*说明 '*  
   
-     其中*@profile_name* ，是配置文件的名称， *@description*是配置文件的说明。 此参数是可选的。  
+     其中 *@profile_name* ，是配置文件的名称， *@description* 是配置文件的说明。 此参数是可选的。  
   
 -   对于每个帐户，运行存储过程 [sysmail_add_profileaccount_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql)，如下所示：  
   
@@ -178,7 +177,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@sequence_number*= '*配置文件中帐户的序列号。* '  
   
-     其中*@profile_name* ，是配置文件的名称， *@account_name*是要添加到配置文件的帐户的名称， *@sequence_number*用于确定在配置文件中使用帐户的顺序。  
+     其中 *@profile_name* ，是配置文件的名称， *@account_name* 是要添加到配置文件的帐户的名称， *@sequence_number* 用于确定在配置文件中使用帐户的顺序。  
   
 -   若要授予公共访问权限，请运行存储过程 [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql)，如下所示：  
   
@@ -190,7 +189,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@is_default*= '*默认配置文件状态*'  
   
-     其中*@profile_name* ，是配置文件的名称， *@principal_name*指示此配置文件是公共配置文件， *@is_default*确定此配置文件是否为数据库用户或角色的默认值。  
+     其中， *@profile_name* 是配置文件的名称，指示此配置文件是 *@principal_name* 公共配置文件， *@is_default* 确定此配置文件是否为数据库用户或角色的默认值。  
   
  以下示例创建了一个数据库邮件帐户和一个数据库邮件专用配置文件，然后将帐户添加到该配置文件中并授予对该配置文件的公共访问权限。  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: badc6d36-8a87-42b5-b28c-9c4f5ded8552
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f2b6c03506139ded1fd4452bb19f23c931ea0c76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc5e8b1636d26349bb3938d4b3bcbdf0fbf43e1a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127107"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050643"
 ---
 # <a name="srv_paramtype-extended-stored-procedure-api"></a>srv_paramtype（扩展存储过程 API）
     
@@ -58,7 +57,7 @@ n
 ## <a name="returns"></a>返回  
  参数的数据类型的标记值。 有关数据类型的信息，请参阅[数据类型（扩展存储过程 API）](data-types-extended-stored-procedure-api.md)。 如果没有第 n 个参数或没有任何远程存储过程，则返回 -1**。  
   
- 如果参数是[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]数据类型之一，则此函数返回以下值。  
+ 如果参数是数据类型之一，则此函数返回以下值 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 。  
   
 |新数据类型|返回值|  
 |--------------------|------------------|  

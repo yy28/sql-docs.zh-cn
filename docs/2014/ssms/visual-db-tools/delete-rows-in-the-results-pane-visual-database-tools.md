@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a1147905-fe4a-4fac-b576-a17622477e66
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8afa4b2dfb2b140d67644289e93aa2d96eb1697c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a82a7232559cd8761ae3af66a9accc0bc307552
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63460018"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066176"
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>在“结果”窗格中删除行 (Visual Database Tools)
   如果希望删除数据库中的记录，请在“结果”窗格中删除相应的行。 如果希望删除所有行，则可以使用“删除”查询。 有关详细信息，请参阅 [创建“删除”查询 (Visual Database Tools)](visual-database-tools.md)。 如果只希望将行从“结果”窗格中移除，请更改查询的条件。 有关详细信息，请参阅 [指定搜索条件 (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)。  

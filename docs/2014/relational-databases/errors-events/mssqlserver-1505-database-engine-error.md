@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6ada58ff37b3fb7dd2760427483b0935d9bc47cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74c152404cf2d3710bbe98b29da7a96d86f58859
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67727738"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969521"
 ---
 # <a name="mssqlserver_1505"></a>MSSQLSERVER_1505
     
@@ -50,7 +49,7 @@ ms.locfileid: "67727738"
   
  错误消息 1505 返回第一个违反唯一性约束的行。 该表中可能存在其他重复行。 若要查找所有的重复行，请查询指定的表，然后使用 GROUP BY 和 HAVING 子句报告重复行。 例如，下面的查询返回 **Employee** 表中具有重复名字和姓氏的行：  
   
- 从 dbo 选择 LastName、FirstName、\*count （）。员工组，LastName，FirstName，其中 count\*（） > 1;  
+ 从 dbo 选择 LastName、FirstName、count （ \* ）。员工组，LastName，FirstName，其中 count （ \* ） > 1;  
   
 ## <a name="user-action"></a>用户操作  
  请考虑以下解决方案。  

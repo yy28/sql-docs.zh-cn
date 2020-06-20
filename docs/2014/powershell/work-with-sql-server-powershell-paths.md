@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5ca7d915b940296e6de6689e666401b0c3534c9d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b93ffb3ff99a973a4d44e6f190aef26b8c46940
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782731"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959893"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>使用 SQL ServerPowerShell 路径
   在您导航到 [!INCLUDE[ssDE](../includes/ssde-md.md)] 提供程序路径中的某一节点后，可通过使用与该节点相关联的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 管理对象中的方法和属性，执行工作或检索信息。  
@@ -74,7 +73,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Table
 Get-ChildItem | Where {$_.Schema -eq "Sales"}  
 ```  
   
- 此示例使用 SMO **script**方法生成一个包含`CREATE VIEW`语句的脚本，您必须在 AdventureWorks2012 中重新创建视图：  
+ 此示例使用 SMO **script**方法生成一个包含语句的脚本， `CREATE VIEW` 您必须在 AdventureWorks2012 中重新创建视图：  
   
 ```powershell
 Remove-Item C:\PowerShell\CreateViews.sql  

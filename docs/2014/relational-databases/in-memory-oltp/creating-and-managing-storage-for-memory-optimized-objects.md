@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 622aabe6-95c7-42cc-8768-ac2e679c5089
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 1d6bb42e4b35a74ef2bd6eefb85ea81b0ed18e40
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 048cd415ec16ef668bbf61a393f9103b522694eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63073842"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050283"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>创建和管理用于内存优化的对象的存储
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎集成到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之中，这可让你在同一数据库中同时拥有内存优化表和（传统的）基于磁盘的表。 但是，内存优化表的存储结构不同于基于磁盘的表。  

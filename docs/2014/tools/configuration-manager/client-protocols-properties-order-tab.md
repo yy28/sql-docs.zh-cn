@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cb3055780186c34f6ead494f702874fbc6329f5b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f4a2a7e56dc0f5b0b2c71361a4b47fb58c64c782
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044173"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011682"
 ---
 # <a name="client-protocols-properties-order-tab"></a>客户端协议属性（“顺序”选项卡）
   使用“客户端协议属性”**** 对话框中的“顺序”**** 页，可以查看和启用客户端协议。  
@@ -34,7 +33,7 @@ ms.locfileid: "63044173"
  列出已安装但当前未使用的协议。  
   
  **“禁用的协议”**  
- 列出此计算机上的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]客户端可以使用的协议。  
+ 列出 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 此计算机上的客户端可以使用的协议。  
   
  **>**  
  启用“禁用的协议”  框中当前突出显示的协议，会将其移到“启用的协议”  框中。  

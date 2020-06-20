@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 860a80dc-bac0-4ef0-bf7f-7a9b430d7aa3
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 780772f7703e4499c13eb9373ccad4252097b536
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c5aa031804d2c5f4ad3a3679a6fe1cac96c63b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089440"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930648"
 ---
 # <a name="modify-the-trace-results-view"></a>修改跟踪结果视图
   本主题介绍如何通过执行以下任务修改 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中扩展事件会话的跟踪结果视图。  
@@ -54,7 +53,7 @@ ms.locfileid: "66089440"
   
 4.  在 **“所选列”** 部分，若要更改列排序显示，请分别单击 **“上移”** 或 **“下移”** 。 不能移动多个行。  
   
-5.  单击" **确定**"。  
+5.  单击“确定”。  
   
 ##  <a name="create-edit-or-delete-merged-columns"></a><a name="ChangeColumns"></a>创建、编辑或删除合并列  
   
@@ -76,7 +75,7 @@ ms.locfileid: "66089440"
     > [!NOTE]  
     >  扩展事件仅只支持合并最多 5 个列。  
   
-6.  单击" **确定**"。  
+6.  单击“确定”。  
   
 #### <a name="to-edit-merged-columns"></a>编辑合并列  
   
@@ -143,7 +142,7 @@ ms.locfileid: "66089440"
   
      若要从分组中删除列，请在 **“列分组依据”** 框中，选择要删除的列，然后单击向左箭头。  
   
-4.  单击" **确定**"。  
+4.  单击“确定”。  
   
 ##  <a name="aggregate-results"></a><a name="AggregateResults"></a>聚合结果  
  扩展事件支持五个聚合函数：  
@@ -182,7 +181,7 @@ ms.locfileid: "66089440"
   
 6.  选择 **“降序”** 选项以按降序对聚合结果进行排序。  
   
-7.  单击" **确定**"。  
+7.  单击“确定”。  
   
 ##  <a name="filter-results"></a><a name="Filter"></a>筛选结果  
  您可以应用筛选器以缩小跟踪窗口中显示的跟踪结果的范围。 显示筛选器包括时间筛选器和高级筛选器。 您可以使用时间筛选器按事件时间戳筛选跟踪结果，也可以使用高级筛选器通过事件字段和操作构造筛选条件。 时间筛选器和高级筛选器之间存在逻辑与关系。  
@@ -229,7 +228,7 @@ ms.locfileid: "66089440"
   
     -   **详细信息**。 使用此选项可搜索在打开 "**在扩展事件中查找**" 对话框之前已选择的跟踪窗口中的所有列（提升和非提升）。  
   
-    -   事件列名称>。 ** \< ** 使用此选项可在下拉列表的特定事件列中进行搜索。  
+    -   **\<Event column name>**. 使用此选项可在下拉列表的特定事件列中进行搜索。  
   
 5.  使用以下选项可指定所需的定义搜索的方式：  
   

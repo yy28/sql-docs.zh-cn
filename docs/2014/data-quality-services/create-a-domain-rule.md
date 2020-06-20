@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0e9f04742bbfabcfa0e351f25e9475a8022689e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14dce43963b0a531c3c71a1bf0c956fc4f10d5af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481035"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937918"
 ---
 # <a name="create-a-domain-rule"></a>创建域规则
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中创建域规则。 域规则是用于验证、更正和标准化域值的条件。 域规则必须在域中保持正确，这样才能认为域值是准确的并且符合业务要求。 域规则可以包含用于验证域值、但不用于更正数据质量项目中的数据的验证规则。 规则还包含应用于有效数据并用于数据更正的标准化规则。  

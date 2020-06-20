@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4a16794bb2cd61829058d9fac7be11438f563d44
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 05b8211569b6ce83faaec043e5eb527a60f0ddab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918973"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970551"
 ---
 # <a name="set-or-change-the-column-collation"></a>设置或更改列排序规则
   可以覆盖 `char`、`varchar`、`text`、`nchar`、`nvarchar` 和 `ntext` 数据的数据库排序规则，方法是为表的特定列指定不同的排序规则并使用以下方式之一：  
@@ -38,7 +37,7 @@ ms.locfileid: "62918973"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 有关详细信息，请参阅 [排序规则和 Unicode 支持](collation-and-unicode-support.md)。  
   
--   使用管理`Column.Collation`对象（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMO）中的属性。  
+-   使用 `Column.Collation` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象（SMO）中的属性。  
   
  如果下列其中之一当前正在引用一个列，则无法更改该列的排序规则。  
   

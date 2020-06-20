@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cbd8a79bf9d881d2d4c9055531bac2e290f202a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 12fdb1a41ec764a0fee0817940f95a3d303777e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811006"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050203"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>估算内存优化表的内存需求
-  无论是创建新[!INCLUDE[hek_2](../../includes/hek-2-md.md)]的内存优化表，还是将现有的基于磁盘的表迁移到内存优化表，都一定要合理估计每个表的内存需求，以便能够将服务器设置为具有足够的内存。 本节介绍如何估算使用内存优化表存放数据时所需的内存大小。  
+  无论是创建新的 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 内存优化表，还是将现有的基于磁盘的表迁移到内存优化表，都一定要合理估计每个表的内存需求，以便能够将服务器设置为具有足够的内存。 本节介绍如何估算使用内存优化表存放数据时所需的内存大小。  
   
  如果考虑从基于磁盘的表迁移至内存优化表，在继续阅读本主题前，请先阅读主题 [确定表或存储过程是否应移植到内存中 OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) ，了解哪类表适合迁移。 [迁移到内存中 OLTP](migrating-to-in-memory-oltp.md) 下的所有主题均提供了有关从基于磁盘的表迁移至内存优化表的指导。  
   
@@ -119,7 +118,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  **设置哈希索引数组的大小**  
   
- 哈希数组大小由`(bucket_count= <value>)` \<值> 的值设置为大于零的整数值。 如果\<value> 不是2的幂，则实际 bucket_count 会向上舍入为下一个最近的2次幂。  在我们的示例表中，（bucket_count = 5000000），因为5000000不是2的幂，所以实际 bucket 计数向上舍入为8388608（2<sup>23</sup>）。  在计算此哈希数组所需的内存时，必须使用该值，而非 5,000,000。  
+ 哈希数组大小由 `(bucket_count= <value>)` 设置，其中 \<value> 为大于零的整数值。 如果 \<value> 不为 2 的幂，实际的 bucket_count 将舍入为下一个最近的 2 的幂。  在我们的示例表中，（bucket_count = 5000000），因为5000000不是2的幂，所以实际 bucket 计数向上舍入为8388608（2<sup>23</sup>）。  在计算此哈希数组所需的内存时，必须使用该值，而非 5,000,000。  
   
  因此，在本示例中，每个哈希数组所需的内存为：  
   

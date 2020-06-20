@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 653b15db-a984-4b4b-b224-81b0285b099b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3399c6e8c73916e613197aec2ee0499098a8fa86
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9dcb23e58e52ab9c1b2ebf812f7a9540359e3d3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095391"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065376"
 ---
 # <a name="feature-rules-upgrade"></a>功能规则（升级）
   在安装操作完成之前，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序会验证您的计算机配置。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装期间，系统会扫描将安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机，并检查是否有妨碍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 成功安装的任何情况。 在安装程序启动升级向导之前，系统会检索每一项的状态。 然后，将检索结果与所需条件进行比较并提供如何排除妨碍性问题的指导。  
   
- 系统配置检查将会生成一个报告，该报告包含有关每个执行规则的简短说明以及执行状态。 系统配置检查报告位于%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]programfiles% \120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>。 \\  
+ 系统配置检查将会生成一个报告，该报告包含有关每个执行规则的简短说明以及执行状态。 系统配置检查报告位于% programfiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\Log \\<YYYYMMDD_HHMM>\\ 。  
   
  在执行安装操作之前，请查看以下主题：  
   
