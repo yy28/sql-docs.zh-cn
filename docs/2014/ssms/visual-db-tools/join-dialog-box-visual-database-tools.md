@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 0d9516bb-4ad3-4fcf-bb77-93474dea698f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e266d398debd65a8a03f73d7f8726899c97b7e13
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4228b249a49d2efc54fdd6cbda983ef8651b6d2f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62711129"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048600"
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>“联接”对话框 (Visual Database Tools)
   使用此对话框可以指定用于对表进行联接的选项。 若要访问此对话框，请在“设计”  窗格中选择联接线。 然后，在“属性”窗口中单击“联接条件和类型”，再单击属性右侧显示的省略号 (…)    。  
@@ -34,10 +33,10 @@ ms.locfileid: "62711129"
 |**表**|联接中涉及的表或表值对象的名称。 不能在此处更改表名（此信息仅作为信息显示）。|  
 |**列**|用于联接表的列的名称。 运算符列表中的运算符指定了这些列中数据之间的关系。 不能在此处更改列名（此信息仅作为信息显示）。|  
 |**“运算符”**|指定用于使联接列相关的运算符。 若要指定等号 (=) 以外的运算符，请从列表中进行选择。 关闭该属性页后，您选择的运算符将显示在联接线的菱形图中，如下所示：<br /><br /> ![Visual Database Tools 图标](../../database-engine/media//dv3wbii.gif "Visual Database Tools 图标")|  
-|**Table1 中的\<所有行>**|指定即使右表中没有相应的匹配行，左表中的所有行也都显示在输出中。 右表中不包含匹配数据的列显示为空。 选择此选项等效于在 SQL 语句中指定 LEFT OUTER JOIN。|  
-|**Table2 中的\<所有行>**|指定即使左表中没有相应的匹配行，右表中的所有行也都显示在输出中。 左表中不包含匹配数据的列显示为空。 选择此选项等效于在 SQL 语句中指定 RIGHT OUTER JOIN。|  
+|**所有行 \<table1>**|指定即使右表中没有相应的匹配行，左表中的所有行也都显示在输出中。 右表中不包含匹配数据的列显示为空。 选择此选项等效于在 SQL 语句中指定 LEFT OUTER JOIN。|  
+|**所有行 \<table2>**|指定即使左表中没有相应的匹配行，右表中的所有行也都显示在输出中。 左表中不包含匹配数据的列显示为空。 选择此选项等效于在 SQL 语句中指定 RIGHT OUTER JOIN。|  
   
- 同时选择表 1**中\<的所有行>** 和**table2 \<>中的所有行**等效于在 SQL 语句中指定 FULL OUTER JOIN。  
+ 同时选择“\<table1> 中的所有行”和“\<table2> 中的所有行”等效于在 SQL 语句中指定 FULL OUTER JOIN。  
   
  当选择创建外部联接的选项时，联接线中的菱形图会随之改变，以指示联接是左外部联接、右外部联接还是完全外部联接。  
   

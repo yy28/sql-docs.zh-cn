@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 83399fd8-cc25-4d3c-8985-7a824ef08e08
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f9cc17fb916bad5879c4f55737b72f9a1013de51
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb8fb3ffafc001ed6bd63a10f8f1620521cc0435
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663503"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030226"
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute 事件类
   **CursorExecute** 事件类描述发生在应用程序编程接口 (API) 游标中的游标执行事件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在由游标准备事件创建的执行计划中创建并填充游标时，发生游标执行事件。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d0d309103880a369a88952e19b252fc15693fdd4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bcca4bfbf68bb74b8d0c61c0f434e1b0958d58da
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191917"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063129"
 ---
 # <a name="handling-smo-events"></a>处理 SMO 事件
   某些服务器事件类型可以通过使用事件处理程序和 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象来进行订阅。  
@@ -37,7 +36,7 @@ ms.locfileid: "63191917"
   
  必须编写事件处理程序类才能处理事件。 事件处理程序类可以包含多个事件处理程序函数，且只有在安装事件处理程序类后才能处理事件。 事件处理程序函数从*ServerEventNotificatificationArgs*参数接收有关事件的信息，该事件可用于报告有关事件的信息。  
   
- <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet>类和<xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>类中列出了可以处理的数据库和服务器事件的类型。  
+ 类和类中列出了可以处理的数据库和服务器事件的类型 <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet> 。  
   
 ## <a name="example"></a>示例  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

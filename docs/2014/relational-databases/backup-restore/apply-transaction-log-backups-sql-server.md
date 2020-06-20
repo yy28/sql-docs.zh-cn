@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7532f2a6f2c50f53e5af01c2cec979170b493147
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7c0806d84a4d5665397fb8bde0add09938480f2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922929"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959877"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>应用事务日志备份 (SQL Server)
   本主题只与完整恢复模式或大容量日志恢复模式相关。  
@@ -41,11 +40,11 @@ ms.locfileid: "62922929"
 ##  <a name="requirements-for-restoring-transaction-log-backups"></a><a name="Requirements"></a>还原事务日志备份的要求  
  若要应用事务日志备份，必须满足下列要求：  
   
--   **为还原顺序准备足够的日志备份：** 您必须备份足够的日志记录才能完成还原顺序。 必要的日志备份（需要时包含 [结尾日志备份](tail-log-backups-sql-server.md) ）必须在还原顺序开始之前可用。  
+-   **为还原顺序准备足够的日志备份：** 必须备份足够的日志记录，才能完成还原顺序。 必要的日志备份（需要时包含 [结尾日志备份](tail-log-backups-sql-server.md) ）必须在还原顺序开始之前可用。  
   
--   **正确的还原顺序：**  必须先还原紧位于前面的完整数据库备份或差异数据库备份。 然后，在完整数据库备份或差异数据库备份后创建的所有事务日志必须按时间顺序还原。 如果此事务日志链中的事务日志备份丢失或损坏，则您只能还原丢失的事务日志之前的事务日志。  
+-   **正确的还原顺序：** 必须先还原上一个完整数据库备份或差异数据库备份。 然后，在完整数据库备份或差异数据库备份后创建的所有事务日志必须按时间顺序还原。 如果此事务日志链中的事务日志备份丢失或损坏，则您只能还原丢失的事务日志之前的事务日志。  
   
--   **数据库尚未恢复：**  直到应用完最后一个的事务日志之后，才能恢复数据库。 如果要在还原其中一个中间事务日志备份之后恢复数据库，则在日志链结束之前，除非从完整数据库备份开始重新启动整个还原顺序，否则，将无法还原该点之前的数据库。  
+-   **数据库尚未恢复：** 除非已应用最后的事务日志，否则无法恢复数据库。 如果要在还原其中一个中间事务日志备份之后恢复数据库，则在日志链结束之前，除非从完整数据库备份开始重新启动整个还原顺序，否则，将无法还原该点之前的数据库。  
   
     > [!TIP]  
     >  最佳方法是还原所有日志备份 (RESTORE LOG *database_name* WITH NORECOVERY)。 还原上一次日志备份后，用单独的操作恢复数据库 (RESTORE DATABASE *database_name* WITH RECOVERY)。  
@@ -75,13 +74,13 @@ ms.locfileid: "62922929"
   
  若要将数据库还原到晚上 9:45（故障点）时的状态， 可以使用以下两种备选过程：  
   
- **备选过程 1：使用最新的完整数据库备份还原数据库**  
+ **替换选项 1：使用最新的完整数据库备份还原数据库**  
   
 1.  失败时创建当前活动事务日志的结尾日志备份。  
   
 2.  不要还原上午 8:00 的 所需的时间长。 相反，应还原下午 6:00 的 这一时间更近的完整数据库备份，然后应用晚上 8:00 的 日志备份和结尾日志备份。  
   
- **备选过程 2：使用较早的完整数据库备份还原数据库**  
+ **替换选项 2：使用较早的完整数据库备份还原数据库**  
   
 > [!NOTE]  
 >  如果出现问题，使您无法使用下午 6:00 的完整数据库备份， 所需的时间长。 此过程比从下午 6:00 的完整数据库备份还原 所需的时间长。  
@@ -108,7 +107,7 @@ ms.locfileid: "62922929"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A> (SMO)  
   
--   [包含标记事务的相关数据库恢复](recovery-of-related-databases-that-contain-marked-transaction.md)  
+-   [包含标记的事务的相关数据库的恢复](recovery-of-related-databases-that-contain-marked-transaction.md)  
   
 -   [恢复到日志序列号 (SQL Server)](recover-to-a-log-sequence-number-sql-server.md)  
   

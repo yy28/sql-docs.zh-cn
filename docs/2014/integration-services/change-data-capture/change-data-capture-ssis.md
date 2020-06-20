@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7ad456034902c2d3793100e93e370453348a1451
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9e6b2080053231f9a5326f35d47ab598c2c5f35d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176527"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923608"
 ---
 # <a name="change-data-capture-ssis"></a>变更数据捕获 (SSIS)
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，变更数据捕获为有效地执行从源表到数据市场和数据仓库的增量加载提供了一种颇有成效的解决方案。
@@ -29,7 +28,7 @@ ms.locfileid: "78176527"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的变更数据捕获功能捕获应用到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表的插入、更新和删除活动，并以易于使用的关系格式提供这些变更的详细信息。 变更数据捕获所使用的变更表中包含镜像所跟踪源表列结构的列，同时还包含了解逐行发生的变更所需的元数据。
 
 > [!NOTE]
->  并非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的每个版本中均提供变更数据捕获功能。 有关各个版本支持的功能列表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。
+>  并非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的每个版本中均提供变更数据捕获功能。 有关各个版本支持的功能列表 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，请参阅 SQL Server 2014 的各个[版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。
 
 ## <a name="how-change-data-capture-works-in-integration-services"></a>变更数据捕获在集成服务中的工作原理
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包很容易捕获 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中的更改数据，以便向数据仓库执行有效的增量加载。 但是，在可以使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 加载更改数据之前，管理员必须在要从中捕获更改的数据库和表上启用变更数据捕获。 有关如何在数据库上配置变更数据捕获的详细信息，请参阅[启用和禁用变更数据捕获 (SQL Server)](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)。

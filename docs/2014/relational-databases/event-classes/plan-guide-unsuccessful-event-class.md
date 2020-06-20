@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef9759f8-5613-4884-9257-86b609313f69
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f6ce753ceaa0cc0ee16b395918390a4402cf5f39
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb950f7cb35e6986396da4d80ee10f03e090ae76
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827376"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029032"
 ---
 # <a name="plan-guide-unsuccessful-event-class"></a>Plan Guide Unsuccessful 事件类
   Plan Guide Unsuccessful 事件类指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法为包含计划指南的查询或批处理生成执行计划。 相反，计划将在不使用计划指南的情况下进行编译。 当满足下列条件时，事件将激发：  
@@ -46,7 +45,7 @@ ms.locfileid: "62827376"
 |EventSequence|`int`|特定事件在请求中的顺序。|51|否|  
 |HostName|`nvarchar`|正在运行客户端的计算机的名称。 如果客户端提供了主机名，则填充此数据列。 若要确定主机名，请使用 HOST_NAME 函数。|8|是|  
 |IsSystem|`int`|指示事件是发生在系统进程还是发生在用户进程：1 = 系统，0 = 用户。|60|是|  
-|LoginName|`nvarchar`|用户的登录名[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （安全登录名或[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录凭据，格式为 "域\\*用户名*"）。|11|是|  
+|LoginName|`nvarchar`|用户的登录名（ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全登录名或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录凭据，格式为 "域 \\ *用户名*"）。|11|是|  
 |LoginSid|`image`|登录用户的安全标识号 (SID)。 你可以在 [sys.server_principals](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql) 或 [sys.sql_logins](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql) 目录视图中找到此信息。 服务器中的每个登录名都具有唯一的 SID。|41|是|  
 |NTDomainName|`nvarchar`|用户所属的 Windows 域。|7|是|  
 |NTUserName|`nvarchar`|Windows 用户名。|6|是|  
@@ -65,7 +64,7 @@ ms.locfileid: "62827376"
  [扩展事件](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [sys. fn_validate_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)   
- [sp_create_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   
   

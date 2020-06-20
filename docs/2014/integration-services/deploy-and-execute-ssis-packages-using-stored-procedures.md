@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 60914b0c-1f65-45f8-8132-0ca331749fcc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8cc6c9a2961696512c69f9c3e9de6d229eabb509
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af4efe24c58d22738e0e7b38ca68f37ce29603f2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251312"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951787"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>使用存储过程部署和执行 SSIS 包
   在您配置一个 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目以便使用项目部署模型时，可以使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 目录中的存储过程部署该项目并且执行包。 有关项目部署模型的信息，请参阅 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)。  
@@ -36,9 +35,9 @@ ms.locfileid: "72251312"
   
 1.  调用 [catalog.deploy_project（SSISDB 数据库）](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database) 将包含包的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器。  
   
-     若要检索[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]项目部署文件的二进制内容，请对* \@project_stream*参数使用带有 OPENROWSET 函数和 BULK 行集提供程序的 SELECT 语句。 通过 BULK 行集提供程序，您可以从文件读取数据。 BULK 行集提供程序的 SINGLE_BLOB 参数将该数据文件的内容以 varbinary(max) 类型的单行、单列行集的形式返回。 有关详细信息，请参阅 [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)。  
+     若要检索 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目部署文件的二进制内容，请对* \@ project_stream*参数使用带有 OPENROWSET 函数和 BULK 行集提供程序的 SELECT 语句。 通过 BULK 行集提供程序，您可以从文件读取数据。 BULK 行集提供程序的 SINGLE_BLOB 参数将该数据文件的内容以 varbinary(max) 类型的单行、单列行集的形式返回。 有关详细信息，请参阅 [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)。  
   
-     在下面的示例中，SSISPackages_ProjectDeployment 项目将部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器上的“SSIS 包”文件夹。 将从项目文件 SSISPackage_ProjectDeployment （.ispac）中读取二进制数据，并将其存储在类型为 varbinary （max）的* \@ProjectBinary*参数中。 ProjectBinary 参数值将分配给* \@project_stream*参数。 * \@*  
+     在下面的示例中，SSISPackages_ProjectDeployment 项目将部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器上的“SSIS 包”文件夹。 将从项目文件 SSISPackage_ProjectDeployment （.ispac）中读取二进制数据，并将其存储在类型为 varbinary （max）的* \@ ProjectBinary*参数中。 * \@ ProjectBinary*参数值将分配给* \@ project_stream*参数。  
   
     ```  
     DECLARE @ProjectBinary as varbinary(max)  

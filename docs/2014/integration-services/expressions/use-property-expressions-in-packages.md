@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2a926405f2c35ff62b3589003ebe015fe920b743
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 157f45cd6d6fd7f201998cb3798440573654be58
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176417"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968987"
 ---
 # <a name="use-property-expressions-in-packages"></a>在包中使用属性表达式
   属性表达式是分配给属性以便能够在运行时对该属性进行动态更新的表达式。 例如，属性表达式可以通过插入存储在变量中的电子邮件地址来更新发送邮件任务所使用的“收件人”行。
@@ -92,7 +91,7 @@ ms.locfileid: "78176417"
  属性表达式将在加载包配置之后加载。 例如，变量首先由它们的配置进行更新，然后计算并加载使用这些变量的属性表达式。 这意味着属性表达式始终使用由配置所设置的变量的值。
 
 > [!NOTE]
->  不能使用`Set` **dtexec**实用工具的选项填充属性表达式。
+>  不能使用 `Set` **dtexec**实用工具的选项填充属性表达式。
 
  下表总结了何时计算并加载 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 的属性表达式。
 
@@ -114,7 +113,7 @@ ms.locfileid: "78176417"
  下列示例表达式说明如何在属性表达式中使用系统变量、运算符、函数和字符串文字。
 
 ### <a name="property-expression-for-the-loggingmode-property-of-a-package"></a>包的 LoggingMode 属性的属性表达式
- 下面的属性表达式可用于设置包的 LoggingMode 属性。 表达式使用 DAY 和 GETDATE 函数来获得日期中表示“日”日期部分的整数。 如果日是 1 号或 15 号，则启用日志记录；否则，禁用日志记录。 值1是 LoggingMode 枚举器成员`Enabled`的整数等效项，值2是成员`Disabled`的整数等效项。 在表达式中，必须使用数值而不是枚举器成员名称。
+ 下面的属性表达式可用于设置包的 LoggingMode 属性。 表达式使用 DAY 和 GETDATE 函数来获得日期中表示“日”日期部分的整数。 如果日是 1 号或 15 号，则启用日志记录；否则，禁用日志记录。 值1是 LoggingMode 枚举器成员的整数等效项 `Enabled` ，值2是成员的整数等效项 `Disabled` 。 在表达式中，必须使用数值而不是枚举器成员名称。
 
  `DAY((DT_DBTIMESTAMP)GETDATE())==1||DAY((DT_DBTIMESTAMP)GETDATE())==15?1:2`
 
@@ -155,7 +154,7 @@ ms.locfileid: "78176417"
  `@[User::myfilenamefull]`
 
 > [!NOTE]
->  连接管理器的属性表达式只能使用“属性”窗口进行访问。 若要查看连接管理器的属性，必须在“属性”窗口打开时在  **设计器的“连接管理器”区域中选择连接管理器，或右键单击连接管理器并选择“属性”。** [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 
+>  连接管理器的属性表达式只能使用“属性”窗口进行访问。 若要查看连接管理器的属性，必须在“属性”窗口打开时在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器的“连接管理器”区域中选择连接管理器，或右键单击连接管理器并选择“属性”。
 
 ### <a name="property-expression-for-the-configstring-property-of-a-text-file-log-provider"></a>文本文件日志提供程序的 ConfigString 属性的属性表达式
  下面的属性表达式可以用于设置文本文件日志提供程序的 ConfigString 属性。 该表达式使用一个用户定义变量 `varConfigString`，该变量包含要使用的文件连接管理器的名称。 文件连接管理器指定将在其中写入日志项的文本文件的路径。
@@ -163,7 +162,7 @@ ms.locfileid: "78176417"
  `@[User::varConfigString]`
 
 > [!NOTE]
->  日志提供程序的属性表达式只能通过“属性”窗口访问。 若要查看某日志提供程序的属性，必须在“属性”窗口打开的情况下在  **设计器的“包资源管理器”选项卡中选择相应的日志提供程序；或者在包资源管理器中右键单击该日志提供程序，再单击“属性”。** [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 
+>  日志提供程序的属性表达式只能通过“属性”窗口访问。 若要查看某日志提供程序的属性，必须在“属性”窗口打开的情况下在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器的“包资源管理器”选项卡中选择相应的日志提供程序；或者在包资源管理器中右键单击该日志提供程序，再单击“属性”。
 
 ## <a name="external-resources"></a>外部资源
 

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 481d5b13-657e-4b51-8783-ccac3595bd45
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f2562f3931f98c040bb3dc475e3863bb6396dbbf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13577bfbdd8d4d5044e0a9c19f771b44e1302364
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62664343"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030648"
 ---
 # <a name="brokeractivation-event-class"></a>Broker:Activation 事件类
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 当队列监视器启动激活存储过程或发送 QUEUE_ACTIVATION 通知时，或者当队列监视器所启动的激活存储过程退出时，生成 **Broker:Activation** 事件。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: efc615e9aa873a322ef9a31b2c293e6c5c4793da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 410ce293d126190971f3c463d5611761033f6c3c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663523"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030175"
 ---
 # <a name="cursorimplicitconversion-event-class"></a>CursorImplicitConversion 事件类
   **CursorImplicitConversion** 事件类描述了应用程序编程接口 (API) 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 游标中发生的游标隐式转换事件。 当 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 执行所请求类型的服务器游标不支持的 Transact-SQL 语句时，就会发生游标隐式转换事件。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 返回一个指示游标类型已更改的错误。  

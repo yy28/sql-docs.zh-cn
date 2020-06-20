@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a218855202eec9109718d5090acf16e80da42b6a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c65fe8a302afd15bc406e0785407865c928797fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284921"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938518"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>了解表格模型中的 DAX（SSAS 表格）
   数据分析表达式 (DAX) 是一种公式语言，用于在针对 Microsoft Excel 工作簿的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格模型项目中创建自定义计算。 DAX 公式包括一些函数、运算符和值，用于对表和列中的数据执行高级计算。  
@@ -70,7 +69,7 @@ ms.locfileid: "67284921"
   
  有关详细信息，请参阅 [计算列（SSAS 表格）](ssas-calculated-columns.md)中创建的表格模型项目。  
   
-### <a name="measures"></a>度量值组  
+### <a name="measures"></a>度量值  
  度量值是结果随上下文而变化的动态公式。 度量值用在支持使用多个属性合并和筛选模型数据的报表格式中，如 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 报表、Excel 数据透视表或数据透视图。 在表格模型项目中，度量值是模型作者使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的表格模型设计器中的度量值网格（和公式栏）定义的。  
   
  度量值中的公式可以使用标准聚合函数（通过使用 COUNT 或 SUM 之类的自动求和功能自动创建），您也可以通过使用 DAX 定义自己的公式。 在公式栏中为某一度量值定义公式时，工具提示功能会显示当前上下文中的总结果预览，但除此之外，在任何位置都不会立即输出结果。 其他度量值详细信息也会显示在 **“属性”** 窗格中。  
@@ -88,7 +87,7 @@ ms.locfileid: "67284921"
   
  使用 DAX 公式定义行筛选器时，您将创建一个允许的行集。 这并不影响访问其他行；其他行只是不会作为允许的行集的一部分返回。 其他角色可允许访问 DAX 公式所排除的行。 如果用户是其他角色的成员，并且该角色的行筛选器允许访问该特定行集，则该用户可以查看该行的数据。  
   
- 行筛选器应用于指定的行以及相关行。 如果表具有多个关系，则筛选器将安全性应用于处于活动状态的关系。 行筛选器将与为相关表定义的其他行筛选器相交。  
+ 行筛选器应用于指定的行以及相关行。 如果表具有多个关系，筛选器将对处于活动状态的关系应用安全性。 行筛选器将与为相关表定义的其他行筛选器相交。  
   
  有关详细信息，请参阅 [角色（SSAS 表格）](roles-ssas-tabular.md)中创建的表格模型项目。  
   
@@ -102,10 +101,10 @@ ms.locfileid: "67284921"
 |整数|一个 64 位（八字节）整数值 <sup>1、2</sup>|没有小数位的数字。 整数可以是正数或负数，但必须是介于 -9,223,372,036,854,775,808 (-2^63) 和 9,223,372,036,854,775,807 (2^63-1) 之间的整数。|  
 |小数|一个 64 位（八字节）实数 <sup>1、2</sup>|实数是可具有小数位的数字。 实数涵盖很广范围的值：<br /><br /> 从 -1.79E +308 到 -2.23E -308 的负值<br /><br /> 零<br /><br /> 从 2.23E -308 到 1.79E + 308 的正值<br /><br /> 但是，有效位数限制为 17 个小数位。|  
 |布尔|布尔|True 或 False 值。|  
-|Text|字符串|一个 Unicode 字符数据字符串。 可以是字符串，或以文本格式表示的数字或日期。|  
-|日期|日期/时间|采用接受的日期-时间表示形式的日期和时间。<br /><br /> 有效值是 1900 年 3 月 1 日后的所有日期。|  
+|文本|String|一个 Unicode 字符数据字符串。 可以是字符串，或以文本格式表示的数字或日期。|  
+|Date|日期/时间|采用接受的日期-时间表示形式的日期和时间。<br /><br /> 有效值是 1900 年 3 月 1 日后的所有日期。|  
 |货币|货币|货币数据类型允许值介于 -922,337,203,685,477.5808 到 922,337,203,685,477.5807 之间，并且具有四个小数位的固定精度。|  
-|不适用|空白|空白是 DAX 中的一种数据类型，表示并替代 SQL 中的 Null。 您可以通过使用 BLANK 函数创建空白，并通过使用逻辑函数 ISBLANK 测试是否存在空白。|  
+|空值|空|空白是 DAX 中的一种数据类型，表示并替代 SQL 中的 Null。 您可以通过使用 BLANK 函数创建空白，并通过使用逻辑函数 ISBLANK 测试是否存在空白。|  
   
  表格模型还包括 Table 数据类型，作为许多 DAX 函数的输入或输出。 例如，FILTER 函数采用表作为输入，并输出仅包含满足筛选条件的行的另一个表。 通过组合表函数与聚合函数，您可以对动态定义的数据集执行复杂计算。  
   
@@ -113,7 +112,7 @@ ms.locfileid: "67284921"
   
  有关表格模型的数据类型以及 DAX 中数据类型的显式和隐式转换的详细信息，请参阅[支持的数据类型（SSAS 表格）](data-types-supported-ssas-tabular.md)。  
   
-##  <a name="dax-operators"></a><a name="bkmk_DAX_opertors"></a> DAX 运算符  
+##  <a name="dax-operators"></a><a name="bkmk_DAX_opertors"></a>DAX 运算符  
  DAX 语言在公式中使用四种不同类型的运算符：  
   
 -   对值进行比较，并返回一个逻辑 TRUE\FALSE 值的比较运算符。  
@@ -136,7 +135,7 @@ ms.locfileid: "67284921"
   
 |||  
 |-|-|  
-|公式|说明|  
+|Formula|说明|  
 |`=TODAY()`|将今天的日期插入列中的每一行。|  
 |`=3`|将值 3 插入列中的每一行。|  
 |`=[Column1] + [Column2]`|将 [Column1] 和 [Column2] 的同一行中的值相加，并且将结果放置于同一行的计算列中。|  
@@ -227,7 +226,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  信息函数查找作为参数提供的单元格或行，并且指示值是否与预期的类型匹配。 例如，如果您引用的值包含错误，则 ISERROR 函数将返回 TRUE。 有关详细信息，请参阅[&#40;DAX&#41;的信息函数](/dax/information-functions-dax)。  
   
 ### <a name="logical-functions"></a>逻辑函数  
- 逻辑函数对表达式执行操作，以返回表达式中有关值的信息。 例如，通过 TRUE 函数您可以了解您正在计算的表达式是否返回 TRUE 值。 有关详细信息，请参阅[&#40;DAX&#41;的逻辑函数](/dax/logical-functions-dax)。  
+ 逻辑函数对表达式执行操作，以返回表达式中有关值的信息。 例如，TRUE 函数可以让你了解正在计算的表达式是否返回 TRUE 值。 有关详细信息，请参阅[&#40;DAX&#41;的逻辑函数](/dax/logical-functions-dax)。  
   
 ### <a name="mathematical-and-trigonometric-functions"></a>数学和三角函数  
  DAX 中的数学函数与 Excel 中的数学和三角函数非常相似。 DAX 函数使用的数值数据类型存在一些细微的差别。 有关详细信息，请参阅[&#40;DAX&#41;的数学和三角函数](/dax/math-and-trig-functions-dax)。  
@@ -239,7 +238,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  DAX 中的文本函数与 Excel 中的同等函数非常相似。 可以返回部分字符串、搜索字符串中的文本或连接字符串。 DAX 还提供了用于控制日期、时间和数字格式的函数。 有关详细信息，请参阅[&#40;DAX&#41;的文本函数](/dax/text-functions-dax)。  
   
 ### <a name="time-intelligence-functions"></a>时间智能函数  
- DAX 中提供的时间智能函数允许您创建使用日历和日期的相关内置信息的计算。 通过将时间和日期范围与聚合或计算结合使用，您可以为销售、库存等生成可比较时间段内的有意义比较。 有关详细信息，请参阅[&#40;DAX&#41;的时间智能函数](/dax/time-intelligence-functions-dax)。  
+ DAX 中提供的时间智能函数允许您创建使用日历和日期的相关内置信息的计算。 通过将时间和日期范围与聚合或计算结合使用，你可以跨可比时间段为销售、库存等生成有意义的比较。 有关详细信息，请参阅[&#40;DAX&#41;的时间智能函数](/dax/time-intelligence-functions-dax)。  
   
 ###  <a name="table-valued-functions"></a><a name="bkmk_TableFunc"></a>表值函数  
  有许多 DAX 函数可输出表并且/或者将表作为输入。 因为表可以包含单个列，所以表值函数还可以将单个列作为输入。 了解如何使用这些表值函数对于充分利用 DAX 公式很重要。 DAX 包括以下类型的表值函数：  
@@ -416,7 +415,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 ##  <a name="additional-resources"></a><a name="bkmk_addional_resources"></a> 其他资源  
  [表格建模（Adventure Works 教程）](../tabular-modeling-adventure-works-tutorial.md)提供关于如何创建在计算列、度量值和行筛选器中包含许多计算的表格模型的分步说明。 对于大多数公式，都提供关于该公式的用途的说明。  
   
- [Analysis Services 和 Powerpivot 团队博客](https://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409)提供有关[!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]和 powerpivot 的信息、提示、新闻和公告。  
+ [Analysis Services 和 Powerpivot 团队博客](https://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409)提供有关 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 和 powerpivot 的信息、提示、新闻和公告。  
   
  [DAX 资源中心](https://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) 同时提供关于 DAX 的内部和外部信息，包括由主要商业智能专业人员提交的大量 DAX 解决方案。  
   

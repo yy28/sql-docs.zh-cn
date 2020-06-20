@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4e677a4a0c36f52ae62dfc06cd597ad5401fc8e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9f0f3737465a48f7353fcb9bff6567a82f27b9d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768693"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968924"
 ---
 # <a name="year-ssis-expression"></a>YEAR（SSIS 表达式）
   返回一个表示日期中的“年份”日期部分的整数。  

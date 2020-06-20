@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 922454c7bc04a211d6f54754d48331fdfdffeb07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5dd1ad533b6327786195908452701161a94f9592
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894966"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967201"
 ---
 # <a name="using-variables-in-the-script-component"></a>在脚本组件中使用变量
   变量存储包及其容器、任务和事件处理程序在运行时可以使用的值。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services-ssis-variables.md)。  
   
- 您可以`ReadOnlyVariables`通过在 "**脚本转换编辑器**" 的 "**脚本**" 页上的 "和" 字段中输入逗号分隔的变量列表， `ReadWriteVariables`使现有变量可用于只读或读/写访问。 请注意，变量名称区分大小写。 使用 `Value` 属性可以从单个变量读取数据或向其中写入数据。 当脚本在运行时操作变量时，脚本组件将在后台处理任何所需的锁定。  
+ 您可以通过在 " `ReadOnlyVariables` `ReadWriteVariables` **脚本转换编辑器**" 的 "**脚本**" 页上的 "和" 字段中输入逗号分隔的变量列表，使现有变量可用于只读或读/写访问。 请注意，变量名称区分大小写。 使用 `Value` 属性可以从单个变量读取数据或向其中写入数据。 当脚本在运行时操作变量时，脚本组件将在后台处理任何所需的锁定。  
   
 > [!IMPORTANT]  
 >  `ReadWriteVariables` 集合仅供在 `PostExecute` 方法中尽可能优化性能并降低锁定冲突的风险。 因此不能在处理每行数据时直接递增包变量的值， 而应递增本地变量的值，并在所有数据处理完毕后，在 `PostExecute` 方法中将包变量的值设置为本地变量的值。 还可以使用 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> 属性解决此限制问题，本主题稍后会进行介绍。 但是，在处理每一行时直接写包变量将会对性能产生负面影响，并增加锁定冲突的风险。  
   
- 有关“脚本转换编辑器”的“脚本”页的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](configuring-the-script-component-in-the-script-component-editor.md)和[脚本转换编辑器（“脚本”页）](../../script-transformation-editor-script-page.md)   。  
+ 有关“脚本转换编辑器”的“脚本”页的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](configuring-the-script-component-in-the-script-component-editor.md)和[脚本转换编辑器（“脚本”页）](../../script-transformation-editor-script-page.md) 。  
   
  脚本组件在 `Variables` 项目项中创建一个 `ComponentWrapper` 集合类，该集合类为每个预配置变量值包含一个强类型的取值函数属性，该属性与变量本身同名。 此集合通过 `Variables` 类的 `ScriptMain` 属性公开。 取值函数属性根据需要提供对变量值的只读或读/写权限。 例如，如果将名为 `MyIntegerVariable` 的整数变量添加到 `ReadOnlyVariables` 列表中，则可在脚本中使用以下代码检索该变量的值：  
   

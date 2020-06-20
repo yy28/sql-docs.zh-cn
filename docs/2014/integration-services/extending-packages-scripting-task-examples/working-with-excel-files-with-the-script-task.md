@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 10fcf850a770296a81c99bc9b8168857b443df41
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a0f52b9bd12a91d546e33787853dd8883d77b48
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894781"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968447"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>使用脚本任务处理 Excel 文件
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了 Excel 连接管理器、Excel 源和 Excel 目标，用于处理以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 文件格式存储在电子表格中的数据。 本主题中介绍的技术使用脚本任务获取有关可用的 Excel 数据库（工作簿文件）和表（工作表和指定范围）的信息。 可以轻松修改这些示例以处理 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB 访问接口支持的所有其他基于文件的数据源。  
@@ -79,7 +78,7 @@ ms.locfileid: "62894781"
   
 #### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
   
-1.  向包中添加新的脚本任务，并将其名称`ExcelFileExists`更改为。  
+1.  向包中添加新的脚本任务，并将其名称更改为 `ExcelFileExists` 。  
   
 2.  在“脚本任务编辑器”**** 的“脚本”**** 选项卡上，单击“ReadOnlyVariables”****，然后使用下列任一方法输入属性值：  
   
@@ -87,7 +86,7 @@ ms.locfileid: "62894781"
   
          \- 或 -  
   
-    -   单击属性字段旁的**省略号（"..."**）按钮，然后在 "**选择变量**" 对话框中选择`ExcelFile`变量。  
+    -   单击属性字段旁的**省略号（"..."**）按钮，然后在 "**选择变量**" 对话框中选择 `ExcelFile` 变量。  
   
 3.  单击“ReadWriteVariables”****，然后使用下列任一方法输入属性值：  
   
@@ -95,7 +94,7 @@ ms.locfileid: "62894781"
   
          \- 或 -  
   
-    -   单击属性字段旁的**省略号（"..."**）按钮，然后在 "**选择变量**" 对话框中选择`ExcelFileExists`变量。  
+    -   单击属性字段旁的**省略号（"..."**）按钮，然后在 "**选择变量**" 对话框中选择 `ExcelFileExists` 变量。  
   
 4.  单击“编辑脚本”**** 以打开脚本编辑器。  
   
@@ -149,15 +148,15 @@ public class ScriptMain
   
 #### <a name="to-configure-this-script-task-example"></a>配置此脚本任务示例  
   
-1.  向包中添加新的脚本任务，并将其名称`ExcelTableExists`更改为。  
+1.  向包中添加新的脚本任务，并将其名称更改为 `ExcelTableExists` 。  
   
 2.  在“脚本任务编辑器”**** 的“脚本”**** 选项卡上，单击“ReadOnlyVariables”****，然后使用下列任一方法输入属性值：  
   
-    -   键入`ExcelTable`并`ExcelFile`以逗号分隔`.`  
+    -   键入 `ExcelTable` 并 `ExcelFile` 以逗号分隔`.`  
   
          \- 或 -  
   
-    -   单击属性字段旁的省略号（**"..."）按钮**，然后在 "**选择变量**" 对话框中选择`ExcelTable`和`ExcelFile`变量。  
+    -   单击属性字段旁的省略号（**"..."）按钮**，然后在 "**选择变量**" 对话框中选择 `ExcelTable` 和 `ExcelFile` 变量。  
   
 3.  单击“ReadWriteVariables”****，然后使用下列任一方法输入属性值：  
   
@@ -165,7 +164,7 @@ public class ScriptMain
   
          \- 或 -  
   
-    -   单击属性字段旁的**省略号（"..."**）按钮，然后在 "**选择变量**" 对话框中选择`ExcelTableExists`变量。  
+    -   单击属性字段旁的**省略号（"..."**）按钮，然后在 "**选择变量**" 对话框中选择 `ExcelTableExists` 变量。  
   
 4.  单击“编辑脚本”**** 以打开脚本编辑器。  
   
@@ -351,7 +350,7 @@ public class ScriptMain
   
 4.  单击“编辑脚本”**** 以打开脚本编辑器。  
   
-5.  在脚本项目中添加`System.Xml`对命名空间的引用。  
+5.  `System.Xml`在脚本项目中添加对命名空间的引用。  
   
 6.  在脚本文件的开头处添加针对 `Imports` 命名空间的 `System.Data.OleDb` 语句。  
   

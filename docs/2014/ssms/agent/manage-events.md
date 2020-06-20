@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8f4ee7f5-80df-49fd-b2b8-d020e04b6e1b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ed78d5ff91d09f9d8370eef31fd3a6651b301a38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ca6d56440b06d285cbb90f8d92325d59a452c16
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188219"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008565"
 ---
 # <a name="manage-events"></a>管理事件
   可以将达到或超过特定错误严重级别的所有事件消息转发到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 这称为“事件转发”**。 转发服务器是一台专用服务器，同时也可以是一台主服务器。 可以利用事件转发对一组服务器进行集中警报管理，从而减少负荷较重的服务器的工作负荷。  
@@ -46,7 +45,7 @@ ms.locfileid: "63188219"
   
 -   **单个故障点**。 如果警报管理服务器离线，则不会为管理的一组服务器中的任何事件发出警报。  
   
--   **服务器负荷**。 处理转发事件的警报会导致警报管理服务器上的处理负荷增加。  
+-   **服务器负载**。 处理转发事件的警报会导致警报管理服务器上的处理负荷增加。  
   
 ## <a name="guidelines-for-using-an-alerts-management-server"></a>警报管理服务器使用准则  
  配置警报管理服务器时，请遵循以下准则：  
@@ -88,6 +87,6 @@ ms.locfileid: "63188219"
 >  由于作业会导致发生事件，应注意不要创建递归的警报作业循环。  
   
 ## <a name="see-also"></a>另请参阅  
- [sysmessages &#40;Transact-sql&#41;](/sql/relational-databases/system-compatibility-views/sys-sysmessages-transact-sql)  
+ [sys.sys消息 &#40;Transact-sql&#41;](/sql/relational-databases/system-compatibility-views/sys-sysmessages-transact-sql)  
   
   

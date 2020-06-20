@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d39262c0-0035-42fc-b989-7a16ae0c7345
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a9cdb7fbddd53eb9e2dfbc36d7a86b6bac2619bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1dc2522aef82913bcc2e93f2f8fcde4f2311e958
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663450"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030203"
 ---
 # <a name="cursoropen-event-class"></a>CursorOpen 事件类
   **CursorOpen** 事件类说明在应用程序编程接口 (API) 游标中发生的游标打开事件。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 定义与游标和游标选项相关联的 SQL 语句时发生游标打开事件，然后填充游标。  

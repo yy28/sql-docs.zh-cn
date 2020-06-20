@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9c0415a8-b780-40dd-a6dd-6ee0e30a24cb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 580641db4007f5a7e414f641a8a0495030405b38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bff0c172301b1c11a500258e67f4e8f5c69bd3ae
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066227"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938458"
 ---
 # <a name="toolbar-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>工具栏（“属性关系”设计器选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用维度设计器的 **“属性关系”** 选项卡上的工具栏执行以下操作：  
@@ -38,7 +37,7 @@ ms.locfileid: "66066227"
  **添加商业智能**  
  打开“商业智能向导”****，并添加商业智能功能。 有关详细情况，请参阅[使用商业智能向导增强维度](use-the-business-intelligence-wizard-to-enhance-dimensions.md)。  
   
- **进程**  
+ **处理**  
  处理对象。  
   
  **新建属性关系**  
