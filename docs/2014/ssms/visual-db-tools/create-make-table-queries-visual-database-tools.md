@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f53a0cdb7ccc30afb425197d12dad2b9ca5fa345
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f44097ef41a4dc1a115dbdad9f9ff7940a1c2880
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676309"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058151"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>创建“生成表”查询 (Visual Database Tools)
   可以使用“生成表”查询将行复制到一个新表中，“生成表”查询对创建要使用的数据子集或在数据库之间复制表的内容非常有用。 “生成表”查询与“插入结果”查询类似，但它会创建要向其中复制行的新表。  
@@ -65,7 +64,7 @@ WHERE country = 'UK'
   
      若要在另一个数据库中创建目标表，请指定完全限定表名，包括目标数据库的名称、所有者（如果需要）以及表名。  
   
-4.  通过将其添加到查询中来指定要复制的列。 有关详细信息，请参阅[向查询中添加列 (Visual Database Tools)](visual-database-tools.md)。 列只有在添加到查询后才能复制。 若要复制整行，请选择** \* "（所有列）**"。  
+4.  通过将其添加到查询中来指定要复制的列。 有关详细信息，请参阅[向查询中添加列 (Visual Database Tools)](visual-database-tools.md)。 列只有在添加到查询后才能复制。 若要复制整行，请选择 " ** \* （所有列）**"。  
   
      “查询和视图设计器”会将选择的列添加到“条件”窗格的“列”  列中。  
   

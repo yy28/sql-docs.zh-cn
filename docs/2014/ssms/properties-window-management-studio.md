@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 98b337c235363035d5cc5324257f51862f3f9a64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33a48ef65a29823abb2e9757575ed006c309969b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62823784"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058464"
 ---
 # <a name="properties-window-management-studio"></a>属性窗口 (Management Studio)
   使用此窗口可查看选定元素的属性。 还可以使用“属性”窗口查看文件、项目和解决方案的属性。 在“视图”  菜单上单击“属性窗口”  ，即可显示“属性”窗口。  

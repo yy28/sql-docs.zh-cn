@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c130d3e9ef5be0d60ab19aa4fb16c33ad9426a4f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 807c3e955f4772b5263cfee95b3bc5ebbff2a146
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486986"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011019"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>配置 IIS 7 以实现 Web 同步
   本主题针对如何将 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 版本 7 及更高版本用于合并复制的 Web 同步，介绍手动配置 IIS 的完整过程。 
@@ -48,13 +47,13 @@ ms.locfileid: "81486986"
   
 1. 在 IIS 计算机上安装 SQL Server 复制。
 
-2.  在正在运行 IIS 的计算机上为 replisapi.dll 创建一个新的文件目录。 可在任意所需位置创建该目录，但建议将该目录创建在 \<*驱动器*>:\Inetpub 目录下。 例如，可以创建目录 \<*驱动器*>:\Inetpub\SQLReplication\\。  
+2.  在正在运行 IIS 的计算机上为 replisapi.dll 创建一个新的文件目录。 你可以在任何位置创建目录，但建议你在 \<*drive*> ： \Inetpub 目录下创建目录。 例如，创建目录 \<*drive*> ： \Inetpub\SQLReplication \\ 。  
   
 3.  将 replisapi.dll 从目录 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]com\ 复制到在步骤 1 中创建的文件目录。  
   
 4.  注册 replisapi.dll：  
   
-    1.  单击 **“启动”** ，再单击 **“运行”** 。 在 "**打开**" 框中`cmd`，输入，然后单击 **"确定"**。  
+    1.  单击 **“启动”** ，再单击 **“运行”** 。 在 "**打开**" 框中，输入 `cmd` ，然后单击 **"确定"**。  
   
     2.  在步骤 1 所创建的目录中，执行以下命令：  
   
@@ -66,9 +65,9 @@ ms.locfileid: "81486986"
   
     1.  在 **“Internet 信息服务(IIS)管理器”** 的 **“连接”** 窗格中，右键单击 **“默认网站”** ，然后选择 **“添加虚拟目录”** 。  
   
-    2.  对于 "**别名**" `SQLReplication`，请输入。  
+    2.  对于 "**别名**"，请输入 `SQLReplication` 。  
   
-    3.  对于“物理路径”，输入 **\<驱动器>:\Inetpub\SQLReplication\\** ，然后单击“确定”。    
+    3.  对于 "**物理路径**"，输入** \<drive> ： \Inetpub\SQLReplication \\ **，然后单击 **"确定"**。  
   
 7.  配置 IIS 以允许执行 replisapi.dll。  
   
@@ -78,11 +77,11 @@ ms.locfileid: "81486986"
   
     3.  在 **“操作”** 窗格中，单击 **“添加模块映射”** 。  
   
-    4.  对于 "**请求**路径" `replisapi.dll`，请输入。  
+    4.  对于 "**请求**路径"，请输入 `replisapi.dll` 。  
   
     5.  从 **“模块”** 下拉列表中，选择 **“IsapiModule”** 。  
   
-    6.  对于“可执行文件”，输入 **\<驱动器>:\Inetpub\SQLReplication\replisapi.dll**。   
+    6.  对于 "**可执行文件**"，输入** \<drive>:\Inetpub\SQLReplication\replisapi.dll**。  
   
     7.  对于“名称”  ，请输入 `Replisapi`。  
   
@@ -218,7 +217,7 @@ ms.locfileid: "81486986"
   
     2.  在 **“安全性”** 选项卡上，单击 **“编辑”** 。  
   
-    3.  在“\<文件夹名> 的权限”对话框中，单击“添加”以添加在步骤 1 中创建的帐户。    
+    3.  在 "**权限 \<foldername> ** " 对话框中，单击 "**添加**" 以添加在步骤1中创建的帐户。  
   
     4.  确保 **“从此位置”** 显示的是本地计算机（而不是域）的名称。 如果此字段不显示本地计算机名称，请单击 **“位置”** 。 在 **“位置”** 对话框中，选择本地计算机，然后单击 **“确定”** 。  
   
@@ -307,7 +306,7 @@ ms.locfileid: "81486986"
     > [!NOTE]  
     >  为用户安装证书。 必须为要与 IIS 同步的每个用户执行该过程。  
   
-4.  在“连接到 \<服务器名>”对话框框中，指定合并代理将用于连接到 IIS 的登录名和密码。  在新建订阅向导中也要指定这些凭据。  
+4.  在 "**连接到 \<ServerName> ** " 对话框中，指定合并代理将用于连接到 IIS 的登录名和密码。 在新建订阅向导中也要指定这些凭据。  
   
 5.  在名为 **“SQL Websync 诊断信息”** 的 Internet Explorer 窗口中，验证该页中每个 **“状态”** 列的值是否都为 **SUCCESS**。  
   

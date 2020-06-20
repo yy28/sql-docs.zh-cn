@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9bef3565-5f13-42ac-8723-ebe55b0c11e6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f849394a4a77091f92ee66857b4d5263875fdea3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7e0748208c7378c02af382403061e4ba0770d7a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021688"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064600"
 ---
 # <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>发布信息，警告（合并发布，SQL Server 2005 及更高版本）
   **“警告”** 选项卡适用于运行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本的分发服务器。 使用 **“警告”** 选项卡可以为所选发布执行下列任务：  
@@ -52,7 +51,7 @@ ms.locfileid: "63021688"
  除了在复制监视器中显示警告之外，达到阈值也可以触发警报。 通过单击 **“配置警报”** 并在 **“配置复制警报”** 对话框中提供信息，可以定义警报。  
   
 ## <a name="options"></a>选项  
- **Enabled**  
+ **已启用**  
  选择此项可以启用警告并指定阈值。  
   
  **警报**  
@@ -61,7 +60,7 @@ ms.locfileid: "63021688"
  **警告**  
  与阈值关联的警告的说明。  
   
- **阀**  
+ **阈值**  
  指定阈值的值。  
   
  **配置警报**  

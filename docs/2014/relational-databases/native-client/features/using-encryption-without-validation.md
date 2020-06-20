@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f4c63206-80bb-4d31-84ae-ccfcd563effa
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e1fbea13b0ad9744e1cbe6240c9084f8fda6dc2e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 396cf66a3aa4650f60f818d5a9b6a783cf1a8349
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704307"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011142"
 ---
 # <a name="using-encryption-without-validation"></a>使用不带验证的加密
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 始终对与登录相关的网络数据包进行加密。 如果在服务器启动时未为其提供任何证书，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将生成可用于对登录数据包进行加密的自签名证书。  
