@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4ec956bf-5cef-4377-a1d1-8c7f0107a6cb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2fcff4e55ca4a2935f90b360965a1bc5fefe5656
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd38540533e3e663fa23eee2c651f0beb9463546
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63261803"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005079"
 ---
 # <a name="publisher-information-subscription-watch-list-merge-publication-sql-server-2005-and-later"></a>发布服务器信息，订阅监视列表（合并发布，SQL Server 2005 和更高版本）
   在运行 **及更高版本的分发服务器上，可以使用** “订阅监视列表” [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 选项卡；此选项卡用于显示所选发布服务器上的所有可用发布中的订阅的相关信息。 可以筛选订阅列表，以查看有错误的订阅、出现警告的订阅以及所有性能较差的订阅。 此选项卡为管理员提供了监视发布服务器上所有复制活动的单一位置：复制监视器根据所选复制类型和在 **“显示”** 下拉列表框中选择的选项，显示所有需要注意的订阅。 由于此选项卡上显示的项基于当前状态和性能，因此只有与 **“显示”** 列表框中的当前选项相匹配的订阅才会显示在此页上。  
@@ -77,7 +76,7 @@ ms.locfileid: "63261803"
  **发布**  
  与订阅同步的发布的名称，格式为： *PublicationDatabaseName: PublicationName*。  
   
- **性能**  
+ **“性能”**  
  每个订阅的性能等级，这是基于复制监视器对传送速率的最新度量值来确定的。 对于具有相同连接类型（拨号或 LAN）的发布的订阅，通过将单独的订阅性能与其平均历史性能进行比较，可以确定性能等级。 如果通过同一类型的连接进行了五次同步，且每次同步都进行了 50 处或更多的更改，则复制监视器将在此列中显示一个值。 如果所做更改为 50 处或更多处的同步次数少于五次，或最近一次同步所做的更改少于 50 处，则此列为空白。  
   
 > [!NOTE]  
@@ -85,13 +84,13 @@ ms.locfileid: "63261803"
   
  性能等级可以为以下值之一：  
   
--   很好  
+-   优秀  
   
 -   好  
   
 -   一般  
   
--   较差  
+-   差  
   
  有关如何定义性能等级以及如何设置性能阈值的详细信息，请参阅[使用复制监视器监视性能](monitor/monitor-performance-with-replication-monitor.md)。  
   
@@ -104,7 +103,7 @@ ms.locfileid: "63261803"
  **持续时间**  
  上次同步过程中合并代理运行所用的时间。 如果合并代理当前正在同步，该时间表示已运行的时间；如果合并代理之前已经同步，该时间则表示上次同步所用的总时间。  
   
- **连接**  
+ **Connection**  
  订阅服务器与发布服务器之间的连接类型。 可能的值包括 **LAN**、 **“拨号”** 和 **Internet**。 如果订阅使用 Web 同步，则会显示 **Internet** 值。  
   
 ## <a name="see-also"></a>另请参阅  

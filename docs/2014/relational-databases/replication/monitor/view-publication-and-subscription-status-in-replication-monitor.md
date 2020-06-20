@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b8d48b9a21d810f60b071c17dd89ad51c9e489a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62666922"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049390"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>在复制监视器中查看发布和订阅状态
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]复制监视器显示发布和订阅的状态信息：  
@@ -64,7 +63,7 @@ ms.locfileid: "62666922"
 |错误|![UI 图标：错误](../media/repl-icon-error.gif "UI 图标：错误")|  
 |“严重”状态下的性能|![UI 图标：警告](../media/repl-icon-warn.gif "UI 图标：警告")|  
 |正在重试失败的命令|![UI 图标：复制代理重试](../media/repl-icon-retry.gif "UI 图标：复制代理重试")|  
-|OK|none|  
+|OK|无|  
   
 ## <a name="subscription-status-values"></a>订阅状态值  
  下列表按优先级顺序显示了订阅状态值及其对应的图标。 一个订阅可以同时处于两种状态，如“即将过期/已过期” **** 和“正在重试失败的命令” ****；将显示最高优先级状态。  
@@ -81,7 +80,7 @@ ms.locfileid: "62666922"
 |未初始化的订阅|![UI 图标：警告](../media/repl-icon-warn.gif "UI 图标：警告")|  
 |正在重试失败的命令|![UI 图标：复制代理重试](../media/repl-icon-retry.gif "UI 图标：复制代理重试")|  
 |未运行|![UI 图标：复制代理已停止](../media/repl-icon-stopped.gif "UI 图标：复制代理已停止")|  
-|运行|![UI 图标：复制代理正在运行](../media/repl-icon-running.gif "UI 图标：复制代理正在运行")|  
+|正在运行|![UI 图标：复制代理正在运行](../media/repl-icon-running.gif "UI 图标：复制代理正在运行")|  
   
 ### <a name="merge-subscriptions"></a>合并订阅  
   

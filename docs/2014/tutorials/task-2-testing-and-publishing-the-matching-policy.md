@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e1ffb6d7-fbc5-4695-b538-cc2302d1a17d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a9957625e09bde8bb733eca6e564dfdcfbb0bd98
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 434052f26f8cddcb818decdae42e573a10edc678
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484731"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006549"
 ---
 # <a name="task-2-testing-and-publishing-the-matching-policy"></a>任务 2：测试和发布匹配策略
   在此任务中，您将测试并发布**删除重复的供应商**匹配策略。  
@@ -49,7 +48,7 @@ ms.locfileid: "65484731"
   
 7.  在 "SQL Server Data Quality Services" 对话框中，单击 "**发布**"，然后在消息框中单击 **"确定"** 。 现在，您定义的匹配策略发布到**供应商**知识库中。 您可以使用此知识库来针对输入文件运行匹配过程，以确定和解决重复项。  
   
-## <a name="next-step"></a>下一步  
+## <a name="next-step"></a>后续步骤  
  [任务 3：创建并运行数据质量项目以进行匹配](../../2014/tutorials/task-3-creating-and-running-a-data-quality-project-for-matching.md)  
   
   

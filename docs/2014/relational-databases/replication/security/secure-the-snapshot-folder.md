@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f3612a8b2006978a8098a406a6557d6c9f0f1f7f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f6aa9e676ae61644b270f9644a5c9ef56972e93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62960471"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004735"
 ---
 # <a name="secure-the-snapshot-folder"></a>保护快照文件夹的安全
   快照文件夹是存储快照文件的目录；建议将该目录专门用于存储快照。 请授予快照代理对该文件夹的写入权限，并确保仅为合并代理或分发代理访问文件夹时所用的 Windows 帐户授予读取权限。 与该代理相关联的 Windows 帐户必须是访问远程计算机上快照文件夹的域帐户。  
@@ -25,7 +24,7 @@ ms.locfileid: "62960471"
 > [!NOTE]  
 >  用户帐户控制 (UAC) 可帮助管理员管理其提升的用户权限（有时称为“特权”）  。 在启用 UAC 的操作系统上运行时，管理员并不使用其管理权限。 相反，他们以标准（非管理）用户的身份执行大多数操作，仅在必要时临时采用其管理权限。 UAC 可以防止对快照共享的管理访问。 因此，必须对快照代理、分发代理和合并代理使用的 Windows 帐户显式授予快照共享权限。 即使 Windows 帐户是管理员组的成员，也必须执行此操作。  
   
- 当通过配置分发向导或新建发布向导来配置分发服务器时，快照文件夹默认为指向本地路径：X:\Program Files\Microsoft SQL Server\\ *\<实例*\MSSQL\ReplData。 如果使用远程分发服务器或请求订阅，则必须指定 UNC 网络共享路径（如 \\\\<*computername>* \snapshot），而非本地路径。  
+ 当通过配置分发向导或新建发布向导来配置分发服务器时，快照文件夹默认为本地路径： X:\Program Files\Microsoft SQL Server \\ *\<instance>* \mssql\repldata。 如果使用远程分发服务器或请求订阅，则必须指定 UNC 网络共享路径（如 \\\\<*computername>* \snapshot），而非本地路径。  
   
  授予对快照文件夹的访问权限时，必须根据对文件夹的访问方式来进行授权。 下面列出了在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 2003 中使用的对话框选项卡：  
   

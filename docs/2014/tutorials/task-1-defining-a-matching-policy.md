@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bcc2ddcb8c8fbf33c51fb82d1b1c2fd8308bd28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481317"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064834"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>任务 1：定义匹配策略
   在本任务中，您将创建含有一个规则的匹配策略。 该规则具有一个先决条件：**供应商 id**，这意味着在使用该规则中的其他域之前，供应商 id 必须匹配。 此规则使用其他两个域： "**相似性**" 值设置为**70%** 的 "**供应商名称** **" 和 "** **相似性**" 值设置为**30%**。  
@@ -26,7 +25,7 @@ ms.locfileid: "65481317"
   
 2.  在 "**映射**" 页上，为 "**数据源**" 选择 " **Excel 文件**"。  
   
-3.  单击 "**浏览**"，确保 "筛选器" 设置为 " **Excel 工作簿**"，并选择在执行清理活动后导出的**清理供应商列表 .xls**文件。  
+3.  单击 "**浏览**"，确保 "筛选器" 设置为 " **Excel 工作簿**"，并选择在执行清理活动后导出的**清理供应商 List.xls**文件。  
   
     > [!NOTE]  
     >  在此活动结束时，您不能导出结果，因为此活动的主要目的是定义匹配策略。 您将为匹配活动创建一个数据质量项目，然后，您将在下一课中运行此项目以便使用此匹配策略从供应商列表中删除重复项。  

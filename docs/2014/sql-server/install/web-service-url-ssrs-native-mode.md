@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d210b5d-2a08-4e56-a4f5-c16715b00d79
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 01e5393ae638ddcecd04211a0a7e01e8116346a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f72b7f40c6733c48bb2d7fa2867799d7ad99d4f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952362"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065083"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>Web 服务 URL（SSRS 本机模式）
   使用“Web 服务 URL”页可配置或修改用于访问报表服务器的 URL。 将基于指定的 URL 创建“URL 预留”**。 URL 预留定义适用于所有 URL 的语法和规则，随后可使用这些 URL 来访问报表服务器 Web 服务。 它指定报表服务器 Web 服务的前缀、主机、端口和虚拟目录。 根据指定主机的方式不同，一个预留可能会对应多个 URL。 主机的默认值指定强通配符。 使用强通配符，可在 URL 中指定可解析为承载报表服务器的计算机的任何主机名。 有关 URL 配置和保留的详细信息，请参阅[&#40;ssrs Configuration Manager 中配置 url&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)和[将报表服务器 URL 配置 &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)。  
@@ -47,7 +46,7 @@ ms.locfileid: "71952362"
   
 -   **127.0.0.1** 用于访问本地主机。 它支持对报表服务器计算机进行本地管理。 如果仅选择此值，则只有在本地登录到报表服务器计算机的用户可以访问应用程序。  
   
--   *Nnn.nnn.nnn.nnn* 是计算机网络适配器的 IPv4 地址。 如果你的网络使用 IPv6 寻址，则 IP 地址将是 8 4 字节字段的128位值，类似于以下格式： \<标头>：*nnnn： nnnn： nnnn： nnnn*  
+-   *Nnn.nnn.nnn.nnn* 是计算机网络适配器的 IPv4 地址。 如果你的网络使用 IPv6 寻址，则 IP 地址将是 8 4 字节字段的128位值，类似于以下格式： \<header> ：*nnnn： nnnn： nnnn： nnnn*  
   
      如果有多个网络适配器，您将看到每个网络适配器都有一个 IP 地址。 如果仅选择此值，它将限制对该 IP 地址（以及域名服务器映射到该地址的任何主机名）的应用程序访问。 您不能使用 localhost 访问报表服务器，也不能使用安装在报表服务器计算机上的其他网络适配器的 IP 地址。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "71952362"
  指定报表服务器为包含报表服务器虚拟目录名称的 URL 监视 HTTP 请求的端口。  
   
  **SSL 证书**  
- 将证书绑定到指定的 IP 地址。 必须在计算机上安装和配置此证书。 Reporting Services 不提供管理证书的功能。 证书必须颁发给解析为 IP 地址的主机名或计算机名。 例如，若要使用颁发给http://salesreports的证书，则指定的 IP 地址必须解析为名为 "salesreports" 的服务器。  
+ 将证书绑定到指定的 IP 地址。 必须在计算机上安装和配置此证书。 Reporting Services 不提供管理证书的功能。 证书必须颁发给解析为 IP 地址的主机名或计算机名。 例如，若要使用颁发给的证书 http://salesreports ，则指定的 IP 地址必须解析为名为 "salesreports" 的服务器。  
   
  如果使用证书，则必须修改 RSReportServer.config 文件中的 `UrlRoot` 配置设置，以便指定要为其注册证书的计算机的完全限定名称。 有关详细信息，请参阅 [联机丛书中的](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) 配置本机模式报表服务器上的 SSL 连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   

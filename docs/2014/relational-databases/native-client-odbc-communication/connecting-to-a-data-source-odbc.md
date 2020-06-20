@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fe7f86c2ca53ef4534abd1024d317eee0c1b3c99
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 42d38247cdf688c9d0445b9dd12b7423b646adef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705790"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021163"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>连接数据源 (ODBC)
   在分配环境和连接句柄并设置连接属性后，应用程序将连接到数据源或驱动程序。 有三种可用于连接的函数：  
