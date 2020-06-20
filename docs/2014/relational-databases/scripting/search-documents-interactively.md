@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 05fac94c8673aed046455fc57eac223bd7853d40
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f93fd39957a2fc6f0c22e1bcfdddd06e3b441440
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718737"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009298"
 ---
 # <a name="search-documents-interactively"></a>交互式搜索文档
   使用 **“查找和替换”** 对话框，可以搜索一个或多个打开的文件或窗口，并逐个移动到每个搜索匹配项。 该技术允许您在匹配项周围的文本上下文中检查每个单独的搜索匹配项。 **“查找和替换”** 对话框还提供了执行大容量查找操作和在报表格式中检查搜索匹配项的选项。  

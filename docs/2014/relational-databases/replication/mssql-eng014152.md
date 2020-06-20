@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4215e2b1-cd30-441f-9671-9afc742adf6e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e14c0d724ba4832dfc0f67deec25308804b82f84
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 615b9cf2996653d86c44d6e43a83e01e8287b110
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63191421"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049198"
 ---
 # <a name="mssql_eng014152"></a>MSSQL_ENG014152
     
@@ -46,7 +45,7 @@ ms.locfileid: "63191421"
 ## <a name="user-action"></a>用户操作  
  如果重试消息很少出现，则不需要用户操作。  
   
- 使用 [sp_help_jobstep](/sql/relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql) 查看指定复制代理将要重试的“运行代理”  步骤的当前最大尝试次数设置。 您可以使用**@retry_attempts** [sp_update_jobstep](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql)存储过程的参数来调整作业步骤重试的次数。  
+ 使用 [sp_help_jobstep](/sql/relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql) 查看指定复制代理将要重试的“运行代理”  步骤的当前最大尝试次数设置。 您可以使用 **@retry_attempts** [sp_update_jobstep](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql)存储过程的参数来调整作业步骤重试的次数。  
   
  如果重试消息频繁重复出现，则应根据错误消息排除导致重试的问题。 对于指示为何必须计划重试的消息，检查代理的历史记录。 某些情况下，您可能需要对复制代理启用更详细的日志记录。 有关如何配置复制日志记录的详细信息，请参阅 Microsoft 知识库文章 [312292](https://support.microsoft.com/kb/312292)。  
   

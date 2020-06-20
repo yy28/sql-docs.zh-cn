@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e26f6cf1a61e4df9db79bc5fd90429f86d70a99f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210770"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055739"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>快照复制和事务复制的备份和还原策略
   在设计快照和事务复制的备份和还原策略时，需要考虑三个方面：  
@@ -205,19 +204,19 @@ ms.locfileid: "68210770"
   
     1.  在数据库 **B** 上重新创建发布。转到步骤 b。  
   
-    2.  在数据库**B**上重新创建对数据库**A**上的发布的订阅，同时指定该订阅应使用备份进行初始化（ [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)的**@sync_type**参数的值为**initialize with backup** ）。 转到步骤 c。  
+    2.  在数据库**B**上重新创建对数据库**A**上的发布的订阅，同时指定该订阅应使用备份进行初始化（sp_addsubscription 的参数的值为**initialize with backup** **@sync_type** ）。 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) 转到步骤 c。  
   
-    3.  在数据库**a**上重新创建对数据库**B**上的发布的订阅，同时指定订阅服务器已包含数据（**仅限** **@sync_type** [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)的参数的复制支持的值）。 转到步骤 8。  
+    3.  在数据库**a**上重新创建对数据库**B**上的发布的订阅，同时指定订阅服务器已包含数据（仅限 sp_addsubscription 的参数的**复制支持**的值 **@sync_type** ） [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 转到步骤 8。  
   
 8.  运行分发代理以同步数据库 **A** 和 **B** 上的订阅。如果发布的表中有标识列，则转到步骤 9。 否则，转到步骤 10。  
   
 9. 还原后，在数据库 **A** 中为每个表分配的标识范围也将在数据库 **B** 中使用。确保还原的数据库 **B** 已收到发生故障的数据库 **B** 中传播到数据库 **A** 和数据库 **C** 的所有更改；然后重设每个表的标识范围种子。  
   
-    1.  在数据库**B**上执行[sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql)并检索 output 参数**@request_id**。 转到步骤 b。  
+    1.  在数据库**B**上执行[sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql)并检索 output 参数 **@request_id** 。 转到步骤 b。  
   
     2.  默认情况下，分发代理设置为连续运行；因此，令牌应该自动发送到所有节点。 如果分发代理未以连续模式运行，请运行该代理。 有关详细信息，请参阅[复制代理可执行文件概念](../concepts/replication-agent-executables-concepts.md)或[启动和停止复制代理 (SQL Server Management Studio)](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)。 转到步骤 c。  
   
-    3.  执行[sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)，并提供**@request_id**在步骤 b 中检索到的值。 请等到所有节点都指示它们已接收到对等请求。 转到步骤 d。  
+    3.  执行[sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)，并提供 **@request_id** 在步骤 b 中检索到的值。 请等到所有节点都指示它们已接收到对等请求。 转到步骤 d。  
   
     4.  使用 [DBCC CHECKIDENT](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql) 在数据库 **B** 中对每个表重设种子以确保使用适当的范围。 转到步骤 10。  
   
@@ -229,11 +228,11 @@ ms.locfileid: "68210770"
   
     1.  停止对等拓扑中已发布表上的所有活动。 转到步骤 b。  
   
-    2.  在数据库**B**上执行[sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql)并检索 output 参数**@request_id**。 转到步骤 c。  
+    2.  在数据库**B**上执行[sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql)并检索 output 参数 **@request_id** 。 转到步骤 c。  
   
     3.  默认情况下，分发代理设置为连续运行；因此，令牌应该自动发送到所有节点。 如果分发代理未以连续模式运行，请运行该代理。 转到步骤 d。  
   
-    4.  执行[sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)，并提供**@request_id**在步骤 b 中检索到的值。 请等到所有节点都指示它们已接收到对等请求。 转到步骤 e。  
+    4.  执行[sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)，并提供 **@request_id** 在步骤 b 中检索到的值。 请等到所有节点都指示它们已接收到对等请求。 转到步骤 e。  
   
     5.  在数据库 **B** 上重新创建对数据库 **C**上的发布的订阅，同时指定订阅服务器已包含数据。 转到步骤 b。  
   
@@ -243,7 +242,7 @@ ms.locfileid: "68210770"
   
     1.  在数据库 **B**上，查询 [MSpeer_lsns](/sql/relational-databases/system-tables/mspeer-lsns-transact-sql) 表，以检索数据库 **B** 从 **C**收到的最近事务的日志序列号 (LSN)。  
   
-    2.  在数据库**B**上重新创建对数据库**C**上的发布的订阅，同时指定该订阅应基于 LSN 进行初始化（ [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)的**@sync_type**参数的值为**initialize from lsn** ）。 转到步骤 b。  
+    2.  在数据库**B**上重新创建对数据库**C**上的发布的订阅，同时指定该订阅应基于 LSN 进行初始化（sp_addsubscription 的参数的值为**initialize from lsn** **@sync_type** ）。 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) 转到步骤 b。  
   
     3.  在数据库 **C** 上重新创建对数据库 **B**上的发布的订阅，同时指定订阅服务器已包含数据。 转到步骤 13。  
   

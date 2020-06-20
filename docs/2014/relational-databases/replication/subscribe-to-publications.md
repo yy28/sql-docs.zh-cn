@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3aa122e19d890b0b994e4403dcc59b3131571d7c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b97dda18082c38f25362142b8a570863c51940bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62629685"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047644"
 ---
 # <a name="subscribe-to-publications"></a>订阅发布
   订阅是对发布中的数据和数据库对象的副本的请求。 订阅定义将接收哪个发布以及接收的时间和位置。 在计划订阅时，请考虑代理处理发生的位置。 所选择的订阅类型将控制代理运行的位置。 对于推送订阅，合并代理或分发代理在分发服务器上运行；对于请求订阅，代理在订阅服务器上运行。 创建订阅后，将无法更改其类型。  

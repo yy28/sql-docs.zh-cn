@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ba4e1202-31a2-444d-8365-c68a530ef223
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3785a777571ef7659b1ae21a693e6754659a80e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3efab23eae71b68d1234cfc8db49110fd7a10f6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63298593"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048629"
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>包含或排除行 (Visual Database Tools)
   若要限制 SELECT 查询应返回的行数，请创建搜索条件或筛选条件。 在 SQL 中，搜索条件出现在语句的 WHERE 子句中，或者如果创建的是聚合查询，则搜索条件将出现在 HAVING 子句中。  

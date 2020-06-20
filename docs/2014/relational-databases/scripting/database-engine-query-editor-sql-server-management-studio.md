@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9c7737cf46d3e82eb6aef0e915d1e572ae0fca94
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d6e70da414127936fa87ad5b410620f266a15a70
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703992"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056835"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>数据库引擎查询编辑器 (SQL Server Management Studio)
   使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器可以创建和运行包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的脚本。 此编辑器还支持包含 **sqlcmd** 命令的正在运行的脚本。  
@@ -56,7 +55,7 @@ ms.locfileid: "82703992"
  **“连接”**  
  打开“连接到服务器”  对话框。 此对话框用于建立与服务器的连接。  
   
- **取消**  
+ **断开连接**  
  断开当前查询编辑器与服务器之间的连接。  
   
  **更改连接**  

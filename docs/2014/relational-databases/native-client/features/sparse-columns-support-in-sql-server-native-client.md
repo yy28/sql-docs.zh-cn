@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c8d0377bab3abddebe6d2869744dd51def5b5008
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9e9396663ad8abab6b75cf5cb0f0f9bb7ff79d9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704336"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011201"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>SQL Server Native Client 中的稀疏列支持
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 支持稀疏列。 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的稀疏列的详细信息，请参阅[使用稀疏列](../../tables/use-sparse-columns.md)和[使用列集](../../tables/use-column-sets.md)。  
@@ -31,7 +30,7 @@ ms.locfileid: "82704336"
 ## <a name="user-scenarios-for-sparse-columns-and-sql-server-native-client"></a>稀疏列和 SQL Server Native Client 的用户应用场景  
  下表为具有稀疏列的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 用户总结了常见用户应用场景：  
   
-|方案|行为|  
+|场景|行为|  
 |--------------|--------------|  
 |select \* from table**** 或 IOpenRowset::OpenRowset。|返回不是稀疏 `column_set` 的成员的所有列，以及包含是稀疏 `column_set` 的成员的所有非空列值的 XML 列。|  
 |按名称引用列。|可以不考虑其稀疏列状态或 `column_set` 成员身份如何而引用列。|  

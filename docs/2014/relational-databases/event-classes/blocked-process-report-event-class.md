@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8acb408-938d-4b36-81dd-04f087410cc5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5c3061794a565c4397bbf949211774306c9acebf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd2d0b9c81e99e1e0d1c39fb773b1e6c286ecdd1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62664263"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030780"
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report 事件类
   **Blocked Process Report** 事件类指明某个任务已被阻塞，导致超过指定的时间。 此事件类不包括系统任务和正在等待未发现死锁的资源的任务。  

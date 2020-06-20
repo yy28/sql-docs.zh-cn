@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8f80afa10c1dbd067648db26c2bed0f423f371b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ad0a33f0a5951256ff94bc78e7f09a88c05f227
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63250551"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010422"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>使用预计算分区优化参数化筛选器的性能
   预计算分区是一种性能优化方法，可用于已筛选的合并发布。 预计算分区也是在已筛选的发布上使用逻辑记录的一项要求。 有关逻辑记录的详细信息，请参阅[通过逻辑记录对相关行的更改进行分组](group-changes-to-related-rows-with-logical-records.md)。  
   
  订阅服务器与发布服务器同步时，发布服务器必须计算订阅服务器的筛选器，以确定哪些行属于该订阅服务器的分区或数据集。 我们将为接收已筛选数据集的每个订阅服务器确定发布服务器上的更改的分区成员身份这一过程称为“分区计算” **。 如果没有预计算分区，那么，自上次为特定订阅服务器运行合并代理之后，对发布服务器上已筛选列每进行一次更改都必须执行分区计算，而且对与该发布服务器同步的每个订阅服务器都要重复这一过程。  
   
- 但是，如果发布服务器和订阅服务器在或[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]更高版本上运行，并且您使用的是预计算分区，则在发布服务器上进行的所有更改的分区成员身份在进行更改时将预计算并持久保存。 因此，当订阅服务器与发布服务器同步时，它可以立即开始下载与其分区相关的更改，而不必执行分区计算过程。 当发布中有大量更改、订阅服务器或项目时，这样可以显著提高性能。  
+ 但是，如果发布服务器和订阅服务器在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更高版本上运行，并且您使用的是预计算分区，则在发布服务器上进行的所有更改的分区成员身份在进行更改时将预计算并持久保存。 因此，当订阅服务器与发布服务器同步时，它可以立即开始下载与其分区相关的更改，而不必执行分区计算过程。 当发布中有大量更改、订阅服务器或项目时，这样可以显著提高性能。  
   
  除了使用预计算分区外，预先生成快照和/或允许订阅服务器在第一次同步时还请求生成快照和应用快照。 使用以上选项中的一个或两个可以为使用参数化筛选器的发布提供快照。 如果未指定任一选项，将使用一系列的 SELECT 和 INSERT 语句初始化订阅，而不是使用 **bcp** 实用工具；此过程的速度将更慢。 有关详细信息，请参阅 [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md)。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "63250551"
   
 ### <a name="database-collation"></a>数据库排序规则  
   
--   如果使用了预计算分区，进行比较时始终使用数据库的排序规则，而不使用表或列的排序规则。 请考虑下列方案：  
+-   如果使用了预计算分区，进行比较时始终使用数据库的排序规则，而不使用表或列的排序规则。 请参考以下方案：  
   
     -   具有区分大小写排序规则的数据库包含一个具有不区分大小写排序规则的表。  
   

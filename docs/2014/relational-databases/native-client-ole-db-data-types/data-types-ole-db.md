@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5b29121aa91dc6d237c0d5809d04e557fb766084
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 860d188f7a934e707766b157d4c089a88207ce02
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705108"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056325"
 ---
 # <a name="data-types-ole-db"></a>数据类型 (OLE DB)
   若要 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用 Native client OLE DB 提供程序来执行语句并处理结果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，您必须知道在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 行集内绑定参数或列时，Native Client OLE DB 提供程序如何将数据类型映射到 OLE DB 数据类型，以及何时使用**ITableDefinition**接口在中创建表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  

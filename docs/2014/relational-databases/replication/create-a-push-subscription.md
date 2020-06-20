@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b571bec94c873b830654126e39d75d554599e5fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2195d96f4337cc60ba213deb5e3cc2831d27da76
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721729"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010913"
 ---
 # <a name="create-a-push-subscription"></a>创建推送订阅
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建推送订阅。 有关为非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器创建推送订阅的信息，请参阅[创建非 SQL Server 订阅服务器的订阅](create-a-subscription-for-a-non-sql-server-subscriber.md)。  
+  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建推送订阅。 有关为非订阅服务器创建推送订阅的信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅[创建非 SQL Server 订阅服务器的订阅](create-a-subscription-for-a-non-sql-server-subscriber.md)。  
   
   
   
@@ -55,7 +54,7 @@ ms.locfileid: "62721729"
   
 #### <a name="to-create-a-push-subscription-from-the-publisher"></a>从发布服务器创建推送订阅  
   
-1.  连接到中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的发布服务器，然后展开服务器节点。  
+1.  连接到中的发布服务器 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，然后展开服务器节点。  
   
 2.  展开 **“复制”** 文件夹，再展开 **“本地发布”** 文件夹。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "62721729"
   
 3.  右键单击 **“本地订阅”** 文件夹，再单击 **“新建订阅”**。  
   
-4.  在新建订阅向导的“发布”页上，从“发布服务器”下拉列表中选择“\<查找 SQL Server 发布服务器>”或“\<查找 Oracle 发布服务器>”。****************  
+4.  在新建订阅向导的 "**发布**" 页上， **\<Find SQL Server Publisher>** **\<Find Oracle Publisher>** 从 "**发布服务器**" 下拉列表中选择或。  
   
 5.  在 **“连接到服务器”** 对话框中连接到发布服务器。  
   
@@ -91,18 +90,18 @@ ms.locfileid: "62721729"
   
     -   如果 **allow_push** 的值为 **1**，则支持推送订阅。  
   
-    -   如果**allow_push**的值为**0**，则执行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，为**allow_push**指定 allow_push **@property** ， `true`并**@value**为指定。  
+    -   如果**allow_push**的值为**0**，则执行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，为指定**allow_push** ， **@property** 并为指定 `true` **@value** 。  
   
-2.  在发布服务器的发布数据库中，执行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定**@publication**、 **@subscriber**和**@destination_db**。 将 **@subscription_type** 指定为 **@subscription_type**。 有关如何更新订阅的信息，请参阅[创建事务发布的可更新订阅](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
+2.  在发布服务器的发布数据库中，执行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定 **@publication** 、 **@subscriber** 和 **@destination_db** 。 将 **@subscription_type** 指定为 **@subscription_type**。 有关如何更新订阅的信息，请参阅[创建事务发布的可更新订阅](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
 3.  在发布服务器的发布数据库中，执行 [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)。 指定下列各项：  
   
-    -   **@subscriber**、 **@subscriber_db**和**@publication**参数。  
+    -   **@subscriber**、 **@subscriber_db** 和 **@publication** 参数。  
   
-    -   分发[!INCLUDE[msCoName](../../includes/msconame-md.md)]服务器上的分发代理针对**@job_login**和**@job_password**运行时所用的 Windows 凭据。  
+    -   [!INCLUDE[msCoName](../../includes/msconame-md.md)]分发服务器上的分发代理针对和运行时所用的 Windows 凭据 **@job_login** **@job_password** 。  
   
         > [!NOTE]  
-        >  使用 Windows 集成身份验证进行的连接始终使用**@job_login**和**@job_password**指定的 Windows 凭据。 分发代理始终使用 Windows 集成身份验证与分发服务器建立本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。  
+        >  使用 Windows 集成身份验证进行的连接始终使用和指定的 Windows 凭据 **@job_login** **@job_password** 。 分发代理始终使用 Windows 集成身份验证与分发服务器建立本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。  
   
     -   （可选） **0** 指定为 **@subscriber_security_mode** 值以及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@subscriber_login** ，将 **@subscriber_password**。 如果您需要在连接到订阅服务器时使用 SQL Server 身份验证，则指定这些参数。  
   
@@ -117,7 +116,7 @@ ms.locfileid: "62721729"
   
     -   如果 **allow_push** 的值为 **1**，则发布支持推送订阅。  
   
-    -   如果**allow_push**的值不为**1**，则执行[sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)，为指定**allow_push** ， **@property**并**@value** `true`为指定。  
+    -   如果**allow_push**的值不为**1**，则执行[sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)，为指定**allow_push** ， **@property** 并为指定 `true` **@value** 。  
   
 2.  在发布服务器的发布数据库中，执行 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)，并指定以下参数：  
   
@@ -131,12 +130,12 @@ ms.locfileid: "62721729"
   
 3.  在发布服务器的发布数据库中，执行 [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)。 指定下列各项：  
   
-    -   **@subscriber**、 **@subscriber_db**和**@publication**参数。  
+    -   **@subscriber**、 **@subscriber_db** 和 **@publication** 参数。  
   
-    -   分发服务器上的合并代理针对**@job_login**和**@job_password**运行时所用的 Windows 凭据。  
+    -   分发服务器上的合并代理针对和运行时所用的 Windows 凭据 **@job_login** **@job_password** 。  
   
         > [!NOTE]  
-        >  使用 Windows 集成身份验证进行的连接始终使用**@job_login**和**@job_password**指定的 Windows 凭据。 合并代理始终使用 Windows 集成身份验证与分发服务器进行本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。  
+        >  使用 Windows 集成身份验证进行的连接始终使用和指定的 Windows 凭据 **@job_login** **@job_password** 。 合并代理始终使用 Windows 集成身份验证与分发服务器进行本地连接。 默认情况下，该代理将使用 Windows 集成身份验证连接到订阅服务器。  
   
     -   （可选） **0** 指定为 **@subscriber_security_mode** 值以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@subscriber_login** ，将 **@subscriber_password**。 如果您需要在连接到订阅服务器时使用 SQL Server 身份验证，则指定这些参数。  
   
@@ -160,7 +159,7 @@ ms.locfileid: "62721729"
  可以使用复制管理对象 (RMO) 以编程方式创建推送订阅。 用于创建推送订阅的 RMO 类取决于对其创建订阅的发布的类型。  
   
 > [!IMPORTANT]  
->  如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework 提供的[加密服务](https://go.microsoft.com/fwlink/?LinkId=34733)。  
+>  如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 Windows .NET Framework 提供的[加密服务](https://go.microsoft.com/fwlink/?LinkId=34733) [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
 #### <a name="to-create-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>创建快照或事务发布的推送订阅  
   
@@ -168,13 +167,13 @@ ms.locfileid: "62721729"
   
 2.  使用步骤 1 中的发布服务器连接，创建 <xref:Microsoft.SqlServer.Replication.TransPublication> 类的实例。 指定 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>、 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>和 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
   
-3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法返回`false`，则说明步骤2中指定的属性不正确，或者服务器上不存在该发布。  
+3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法返回 `false` ，则说明步骤2中指定的属性不正确，或者服务器上不存在该发布。  
   
 4.  在 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 属性和 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 之间执行逻辑位与（在 Visual C# 中为 `&`，在 Visual Basic 中为 `And`）运算。 如果结果为 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>，则将 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 设置为 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 和 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 之间的逻辑位或（在 Visual C# 中为 `|`，在 Visual Basic 为 `Or`）的结果。 然后，调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 以启用推送订阅。  
   
 5.  如果订阅数据库不存在，则使用 <xref:Microsoft.SqlServer.Management.Smo.Database> 类创建该数据库。 有关详细信息，请参阅[创建、更改和删除数据库](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)。  
   
-6.  创建的 <xref:Microsoft.SqlServer.Replication.TransSubscription> 类的实例。  
+6.  创建 <xref:Microsoft.SqlServer.Replication.TransSubscription> 类的一个实例。  
   
 7.  设置下列订阅属性：  
   
@@ -208,13 +207,13 @@ ms.locfileid: "62721729"
   
 2.  使用步骤 1 中的发布服务器连接，创建 <xref:Microsoft.SqlServer.Replication.MergePublication> 类的实例。 指定 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>、 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>和 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>。  
   
-3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法返回`false`，则说明步骤2中指定的属性不正确，或者服务器上不存在该发布。  
+3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法返回 `false` ，则说明步骤2中指定的属性不正确，或者服务器上不存在该发布。  
   
 4.  在 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 属性和 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 之间执行逻辑位与（在 Visual C# 中为 `&`，在 Visual Basic 中为 `And`）运算。 如果结果为 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>，则将 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 设置为 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 和 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 之间的逻辑位或（在 Visual C# 中为 `|`，在 Visual Basic 为 `Or`）的结果。 然后，调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 以启用推送订阅。  
   
 5.  如果订阅数据库不存在，则使用 <xref:Microsoft.SqlServer.Management.Smo.Database> 类创建该数据库。 有关详细信息，请参阅[创建、更改和删除数据库](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)。  
   
-6.  创建的 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 类的实例。  
+6.  创建 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 类的一个实例。  
   
 7.  设置下列订阅属性：  
   

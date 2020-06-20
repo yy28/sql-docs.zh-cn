@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3534494a-5dfe-4738-b49a-e7fabd731c47
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 42fa69e6456b23f95d6a203062b580bd04f443fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f786755a3b7ed5d991b4cf0e32c067e355c111ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144672"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024748"
 ---
 # <a name="check-database-integrity-task-maintenance-plan"></a>“检查数据库完整性”任务（维护计划）
-  通过运行  语句，使用`DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)]“检查数据库完整性任务”对话框可以检查数据库中的用户和系统表以及索引的分配和结构完整性。 运行 `DBCC` 确保数据库中的任何完整性问题均能得到报告，以便系统管理员或数据库所有者在以后加以解决。  
+  通过运行 `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，使用“检查数据库完整性任务”对话框可以检查数据库中的用户和系统表以及索引的分配和结构完整性。 运行 `DBCC` 确保数据库中的任何完整性问题均能得到报告，以便系统管理员或数据库所有者在以后加以解决。  
   
 ## <a name="options"></a>选项  
  **Connection**  
@@ -70,17 +69,17 @@ ms.locfileid: "63144672"
  **选择或输入服务器名称**  
  选择执行此任务时所要连接的服务器。  
   
- **全部**  
+ **刷新**  
  刷新可用服务器的列表。  
   
  **输入登录服务器所需的信息**  
  指定如何对服务器进行身份验证。  
   
  **使用 Windows 集成安全性**  
- 使用 Windows 身份验证连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用 Windows 身份验证连接到的实例。  
   
  **使用特定用户名和密码**  
- 使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证连接到的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。 此选项不可用。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用身份验证连接到的实例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 此选项不可用。  
   
  **用户名**  
  提供一个在进行身份验证时要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 此选项不可用。  

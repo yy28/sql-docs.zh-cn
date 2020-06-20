@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7f7457e9-fce4-400c-82e5-ee02e9e811c6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d4f66d2ddfcb18dcdde4125e33971e6cc583dc9b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: dd033d16b1e95773d2cab1c4e1fca733dc491b96
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704963"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048059"
 ---
 # <a name="return-codes"></a>返回代码
   在最基本的级别上，成员函数要么成功，要么失败。 在稍微精确一些的级别上，函数可能会成功，但是它的成功可能并不是应用程序开发人员想要的成功。  

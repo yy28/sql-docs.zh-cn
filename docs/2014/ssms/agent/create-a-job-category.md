@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 07b942ad64043f93f014a54246b42ef5375ade97
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1f6daeeca6253861e8a9dcbb72faa2bd55eb2761
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798284"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056635"
 ---
 # <a name="create-a-job-category"></a>创建作业类别
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 管理对象在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建作业类别。  
@@ -52,7 +51,7 @@ ms.locfileid: "72798284"
   
 6.  选中 **“显示所有作业”** 复选框。 通过选中作业对应的框来为新类别选择一个或多个作业。  
   
-7.  单击“确定”。   
+7.  单击“确定”。  
   
 8.  在“管理作业类别” ****_server_name_ 对话框中，单击“刷新” **** 以确保新的作业类别处于活动状态。 如果一切都与预期情况相同，则关闭此对话框。  
   

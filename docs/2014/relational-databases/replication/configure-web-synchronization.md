@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 406175533b92d13dce8c14b91b654fbb6099dc22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721649"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010985"
 ---
 # <a name="configure-web-synchronization"></a>Configure Web Synchronization
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 合并复制的 Web 同步选项支持使用 HTTPS 协议跨 Internet 复制数据。 若要使用 Web 同步，首先需要执行以下配置操作：  
@@ -124,7 +123,7 @@ ms.locfileid: "62721649"
   
 -   如果要复制大量数据，则可能必须调整合并代理的批大小。  
   
- 合并复制的批大小是用“  代”度量的，代是指每个项目的变更集。 批处理中的代数通过使用合并代理的-`DownloadGenerationsPerBatch`和`UploadGenerationsPerBatch`参数来指定。 有关详细信息，请参阅 [Replication Merge Agent](agents/replication-merge-agent.md)。  
+ 合并复制的批大小是用“  代”度量的，代是指每个项目的变更集。 批处理中的代数通过使用合并代理的- `DownloadGenerationsPerBatch` 和参数来指定 `UploadGenerationsPerBatch` 。 有关详细信息，请参阅 [Replication Merge Agent](agents/replication-merge-agent.md)。  
   
  对于大量数据，请为每个批次参数指定一个较小的数字。 我们建议您从值 10 开始，然后基于应用程序需要和性能进行调整。 通常，这些参数在代理配置文件中指定。 有关配置文件的详细信息，请参阅 [Replication Agent Profiles](agents/replication-agent-profiles.md)。  
   
@@ -144,7 +143,7 @@ ms.locfileid: "62721649"
   
      有关代理所需权限的详细信息，请参阅 [Replication Agent Security Model](security/replication-agent-security-model.md)。  
   
--   指定与在新建订阅向导的 " **Web 服务器信息**" 页中指定帐户和密码时使用的域帐户相同的域帐户，或者指定**@internet_url** **@internet_login** [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)的和参数的值时所使用的域合并代理帐户。 此帐户必须具有对快照共享的读取权限。  
+-   指定与在新建订阅向导的 " **Web 服务器信息**" 页中指定帐户和密码时使用的域帐户相同的域帐户，或者指定 sp_addpullsubscription_agent 的和参数的值时所使用的域合并代理帐户 **@internet_url** **@internet_login** 。 [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) 此帐户必须具有对快照共享的读取权限。  
   
 -   每个发布都应对 IIS 使用一个单独的虚拟目录。  
   

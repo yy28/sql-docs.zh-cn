@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e4049cfa36020431e9cae8cbe2431c1c270d5deb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 571f6f3a0d44f0fc87c67885249fca441776946d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68212020"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055572"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>查看和修改分发服务器和发布服务器属性
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看和修改分发服务器和发布服务器属性。  
@@ -58,7 +57,7 @@ ms.locfileid: "68212020"
   
 2.  右键单击 **“复制”** 文件夹，然后单击 **“分发服务器属性”**。  
   
-3.  在“分发服务器属性 - \<分发服务器>”对话框中查看和修改属性。****  
+3.  在 "**分发服务器属性- \<Distributor> ** " 对话框中查看和修改属性。  
   
     -   若要查看和修改分发数据库的属性，请在该对话框的“常规”页上单击该数据库的属性按钮 (**...**)。****  
   
@@ -76,7 +75,7 @@ ms.locfileid: "68212020"
   
 2.  右键单击 **“复制”** 文件夹，然后单击 **“发布服务器属性”**。  
   
-3.  查看和修改 "**发布服务器属性- \<发布服务器 >** " 对话框中的属性。  
+3.  查看和修改 "**发布服务器属性- \< Publisher > ** " 对话框中的属性。  
   
     -   **sysadmin** 固定服务器角色中的用户可以在 **“发布数据库”** 页上为复制启用数据库。 启用数据库并不会发布该数据库，而是允许该数据库的 **db_owner** 固定数据库角色中的任何用户在该数据库中创建一个或多个发布。  
   
@@ -128,7 +127,7 @@ ms.locfileid: "68212020"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与分发服务器的连接。  
   
-2.  创建的 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。 传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的一个实例。 传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
   
 3.  （可选）检查 <xref:Microsoft.SqlServer.Replication.ReplicationServer.IsDistributor%2A> 属性以验证当前连接到的服务器是否为分发服务器。  
   
@@ -142,7 +141,7 @@ ms.locfileid: "68212020"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与分发服务器的连接。  
   
-2.  创建的 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 类的实例。 指定名称属性并传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 类的一个实例。 指定名称属性并传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
   
 3.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法获取该服务器的属性。 如果此方法返回 `false`，则该服务器上不存在指定名称的数据库。  
   
@@ -154,7 +153,7 @@ ms.locfileid: "68212020"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-2.  创建的 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 类的实例。 指定 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> 属性并传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 类的一个实例。 指定 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> 属性并传递步骤 1 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象。  
   
 3.  （可选）若要更改属性，请为可以设置的 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 属性中的一个设置新值。  
   
@@ -164,7 +163,7 @@ ms.locfileid: "68212020"
   
 1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与分发服务器的连接。  
   
-2.  创建的 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。  
+2.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的一个实例。  
   
 3.  将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 1 中创建的连接。  
   
@@ -173,13 +172,13 @@ ms.locfileid: "68212020"
 5.  调用 <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> 方法。 为 *password* 参数传递新的密码值。  
   
     > [!IMPORTANT]  
-    >  如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework 提供的[加密服务](https://go.microsoft.com/fwlink/?LinkId=34733)。  
+    >  如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 Windows .NET Framework 提供的[加密服务](https://go.microsoft.com/fwlink/?LinkId=34733) [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
 6.  （可选）执行下列步骤以更改每个使用该分发服务器的远程发布服务器上的密码：  
   
     1.  使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类创建与发布服务器的连接。  
   
-    2.  创建的 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的实例。  
+    2.  创建 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 类的一个实例。  
   
     3.  将 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性设置为步骤 6a 中创建的连接。  
   

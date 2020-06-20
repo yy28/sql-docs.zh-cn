@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9659d2d2-5d73-4470-9768-e07b77142fc9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 33ad9ddda5b40abaafddbd6e31272ece1f8edaee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45eff63fe3f5cf3bf4e764cb741b19656cf7f254
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056067"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963947"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>脚本转换编辑器（“输入和输出”页）
   可以使用 **“脚本转换编辑器”** 对话框的 **“输入和输出”** 页，添加、删除和配置脚本转换的输入和输出。  

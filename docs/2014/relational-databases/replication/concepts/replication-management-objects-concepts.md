@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2cbc3571aa26728fa94957bb0c2f207ff769f4c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: edb36bbf0f1a637551a7316748f58f9ed1c7f912
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721789"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047726"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
   复制管理对象 (RMO) 是一个封装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制功能的托管代码程序集。 RMO 是由 <xref:Microsoft.SqlServer.Replication> 命名空间实现的。  
@@ -84,7 +83,7 @@ ms.locfileid: "62721789"
     > [!NOTE]  
     >  使用 CTRL 键可选择多个文件。  
   
-8.  （可选）重复步骤 6。 单击“浏览”选项卡，导航到 **COM，选择“Microsoft.SqlServer.Replication.BusinessLogicSupport.dll”，然后单击“确定”。** [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]   
+8.  （可选）重复步骤 6。 单击“浏览”选项卡，导航到 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM，选择“Microsoft.SqlServer.Replication.BusinessLogicSupport.dll”，然后单击“确定”。  
   
 9. 在 **“视图”** 菜单上，单击 **“代码”** 。  
   
@@ -124,7 +123,7 @@ ms.locfileid: "62721789"
     > [!NOTE]  
     >  使用 CTRL 键可选择多个文件。  
   
-8.  （可选）重复步骤 6。 单击“浏览”选项卡，导航到 **COM，选择“Microsoft.SqlServer.Replication.BusinessLogicSupport.dll”，然后单击“确定”。** [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]   
+8.  （可选）重复步骤 6。 单击“浏览”选项卡，导航到 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM，选择“Microsoft.SqlServer.Replication.BusinessLogicSupport.dll”，然后单击“确定”。  
   
 9. 在 **“视图”** 菜单上，单击 **“代码”** 。  
   
@@ -140,7 +139,7 @@ ms.locfileid: "62721789"
     ```  
   
 ## <a name="connecting-to-a-replication-server"></a>连接复制服务器  
- RMO 编程对象要求使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 类的实例连接 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 实例。 与该服务器的连接是独立于任何 RMO 编程对象的。 然后，在创建实例的过程中或在给 RMO 对象的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性赋值的过程中，该编程对象会传递给 RMO 对象。 采用这种方式，RMO 编程对象实例和连接对象实例可以分别创建和管理，而多个 RMO 编程对象可以重用一个连接对象。 连接复制服务器时适用下列规则：  
+ RMO 编程对象要求使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类的实例连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 与该服务器的连接是独立于任何 RMO 编程对象的。 然后，在创建实例的过程中或在给 RMO 对象的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 属性赋值的过程中，该编程对象会传递给 RMO 对象。 采用这种方式，RMO 编程对象实例和连接对象实例可以分别创建和管理，而多个 RMO 编程对象可以重用一个连接对象。 连接复制服务器时适用下列规则：  
   
 -   该连接的所有属性都对给定的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 对象定义。  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4bc3c47ea6d356279c5502eaf45abc09c307e7cd
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9e34985a637247a7897fedb3abde66e9d2e664bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704130"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057214"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>SQL Server Native Client 的系统要求
   若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的数据访问功能（如 MARS），必须安装以下软件：  
@@ -67,11 +66,11 @@ ms.locfileid: "82704130"
 |数据类型|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows 数据访问组件、MDAC 及<br /><br /> SQL Server Native Client OLE DB 应用程序（其中 DataTypeCompatibility=80）|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8Kb)|udt|Udt|Varbinary|  
-|varbinary(max)|varbinary|varbinary|图像|  
+|varbinary(max)|varbinary|varbinary|映像|  
 |varchar(max)|varchar|varchar|文本|  
 |nvarchar(max)|nvarchar|nvarchar|Ntext|  
 |xml|xml|xml|Ntext|  
-|CLR UDT （> 8Kb）|udt|varbinary|图像|  
+|CLR UDT （> 8Kb）|udt|varbinary|映像|  
 |date|date|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  

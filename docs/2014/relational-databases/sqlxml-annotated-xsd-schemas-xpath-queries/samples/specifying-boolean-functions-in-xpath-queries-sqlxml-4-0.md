@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d43cf4449bfb4acbad32d297bc81be48f38244ca
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2318694767ceedfc3deffa925c90d235d115f1ca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717811"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062836"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>在 XPath 查询中指定布尔函数 (SQLXML 4.0)
   以下示例说明如何在 XPath 查询中指定布尔函数。 这些示例中的 XPath 查询是针对 SampleSchema1.xml 中包含的映射架构指定的。 有关此示例架构的信息，请参阅[&#40;SQLXML 4.0&#41;的 XPath 批注的 XSD 架构示例](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
@@ -29,7 +28,7 @@ ms.locfileid: "82717811"
 ## <a name="examples"></a>示例  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. 指定 not() 布尔函数  
- 此查询将返回上下文节点的所有** \< 客户>** 子元素，这些子元素没有** \< Order>** 子元素：  
+ 此查询返回 **\<Customer>** 不具有子元素的上下文节点的所有子元素 **\<Order>** ：  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -77,7 +76,7 @@ ms.locfileid: "82717811"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. 指定 true() 和 false() 布尔函数  
- 此查询将返回上下文节点的所有不具有** \< Order>** 子元素的** \< Customer>** 元素子级。 就关系而言，此查询返回未下订单的所有客户。  
+ 此查询返回 **\<Customer>** 不具有子元素的上下文节点的所有子元素 **\<Order>** 。 就关系而言，此查询返回未下订单的所有客户。  
   
 ```  
 /child::Customer[child::Order=false()]  

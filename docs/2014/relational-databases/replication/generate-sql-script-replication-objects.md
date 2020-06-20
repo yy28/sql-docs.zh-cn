@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: b7ccc34e-1c22-44b8-8eb5-f6423af3164e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2585452ee31c911ea6e288effc3e5e91fff88a64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c4f324133249484c0cd9bba667a821065913372f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721266"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010678"
 ---
 # <a name="generate-sql-script-replication-objects"></a>生成 SQL 脚本（复制对象）
   复制脚本包含实现已编写脚本的复制组件（如发布或订阅）所需的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 系统存储过程。 制订灾难恢复计划时，应要求对拓扑中的所有复制组件编写脚本，另外，脚本还可以用来自动处理重复性的任务。 复制提供了两个对话框用以编写复制对象的脚本：  
   
 -   “生成 SQL 脚本”对话框，可以在   中的“复制”文件夹和所有子文件夹的上下文菜单中找到  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 使用此对话框，可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上编写所有复制对象的脚本。  
   
--   **生成 SQL 脚本 \<对象名称>** ，可以在发布和订阅的上下文菜单中找到。 使用此对话框，可以编写单个对象的脚本。  
+-   **生成 SQL 脚本 \<ObjectName> **，该脚本可从发布和订阅的上下文菜单中获取。 使用此对话框，可以编写单个对象的脚本。  
   
  这些对话框在单个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上编写对象脚本；并不连接到其他实例编写相关对象的脚本。  
   
@@ -48,7 +47,7 @@ ms.locfileid: "62721266"
   
  在执行复制存储过程时将创建必需的作业，因此不需要选择此选项。 不过，在必须重新创建单个作业时，创建作业记录还是有用的。  
   
-## <a name="generate-sql-script-objectname-options"></a>“生成 SQL 脚本 \<对象名称>”选项  
+## <a name="generate-sql-script-objectname-options"></a>生成 SQL 脚本 \<ObjectName> 选项  
  **“用于创建或启用组件”** 和 **“用于删除或禁用组件”**  
  指定脚本是否应包含用于创建或删除复制对象的命令。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议使用此对话框来创建一组用于启用和禁用组件的脚本。  
   

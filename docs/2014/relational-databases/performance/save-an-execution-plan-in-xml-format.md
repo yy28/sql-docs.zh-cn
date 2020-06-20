@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b2e058eba4e21e5e9060e2315dad3c865c46bb78
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84ed341d186993ed77260e8361156b324c597839
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150865"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047889"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>以 XML 格式保存执行计划
   使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以将执行计划保存为 XML 文件，也可以打开这些执行计划进行查看。  
@@ -65,9 +64,9 @@ ms.locfileid: "63150865"
   
 4.  在“结果”**** 窗格中，右键单击包含查询计划的“Microsoft SQL Server XML 显示计划”****，然后单击“将结果另存为”****。  
   
-5.  在 "**保存** \<网格或文本>**结果**" 对话框的 "**保存类型**" 框中，单击 "**所有文件\*（\*.）**"。  
+5.  在 "**保存** \<Grid or Text> **结果**" 对话框的 "**保存类型**" 框中，单击 "**所有文件（ \* . \* ）**"。  
   
-6.  在 "**文件名" 框中**，提供名称，> 格式\<为 "** .sqlplan**"，然后单击 "**保存**"。  
+6.  在 "**文件名" 框中**，提供一个名称，格式为 \<name**> . .sqlplan * *，然后单击 "**保存**"。  
   
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>使用 SQL Server Management Studio 选项保存执行计划  
   
@@ -79,7 +78,7 @@ ms.locfileid: "63150865"
   
 3.  在“另存为”**** 对话框中，确保将“保存类型”**** 设置为“执行计划文件(\*.sqlplan)”****。  
   
-4.  在 "**文件名" 框中**，提供名称，> 格式\<为 "** .sqlplan**"，然后单击 "**保存**"。  
+4.  在 "**文件名" 框中**，提供一个名称，格式为 \<name**> . .sqlplan * *，然后单击 "**保存**"。  
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中打开保存的 XML 查询计划  
   

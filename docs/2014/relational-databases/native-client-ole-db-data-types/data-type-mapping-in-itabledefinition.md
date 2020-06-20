@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 13292d1f-c17e-4d11-bf98-3460a10cbb18
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 55c84e62326b7b1aa8619bf57ffccf16c43aec67
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 08574f42905831c4a194313b7d7d58ebeeffeee2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705133"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056322"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>ITableDefinition 中的数据类型映射
   使用**ITableDefinition：： CreateTable**函数创建表时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者可以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在传递的 DBCOLUMNDESC 数组的*pwszTypeName*成员中指定数据类型。 如果使用者按照名称指定列的数据类型，则忽略由 DBCOLUMNDESC 结构的 wType 成员表示的 OLE DB 数据类型映射**。  

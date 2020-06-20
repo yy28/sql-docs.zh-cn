@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9308f9208d75287f3c93112f7f810c8ece3bc18b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6cac35e658343f606c1953f265c752335c70d81f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704269"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011073"
 ---
 # <a name="using-catalog-functions"></a>使用目录函数
   所有数据库都具有一个包含该数据中存储的数据的结构。 此结构的定义以及权限等其他信息存储在目录（作为一组系统表实现）中，也称为数据字典。  

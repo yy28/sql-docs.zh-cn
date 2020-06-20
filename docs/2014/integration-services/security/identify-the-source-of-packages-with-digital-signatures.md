@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 714ede33a89a3ab4e44dae682887ee0c21c9f363
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 269aef896c485f0a383a35eae6d750e939868c29
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766649"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963821"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>使用数字签名标识包的源
   可以使用数字证书对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 进行签名以标识其来源。 使用数字证书对包进行签名后，可以让 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 在加载包之前先检查数字签名。 若要让 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 能够检查签名，请在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 **dtexec** 实用工具 (dtexec.exe) 中设置一个选项，或设置一个可选的注册表值。  
@@ -34,7 +33,7 @@ ms.locfileid: "62766649"
   
 -   若要在设计时加载包之前检查所有包的数字签名，请在 **中设置** “加载包时检查数字签名” [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]选项。 此选项是针对 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中所有包的全局设置。 有关详细信息，请参阅 [General Page](../general-page-of-integration-services-designers-options.md)。  
   
--   若要检查个别包的数字签名，请在使用`/VerifyS[igned]` **dtexec**实用工具运行包时指定选项。 有关详细信息，请参阅 [dtexec Utility](../packages/dtexec-utility.md)。  
+-   若要检查个别包的数字签名，请在 `/VerifyS[igned]` 使用**dtexec**实用工具运行包时指定选项。 有关详细信息，请参阅 [dtexec 实用工具](../packages/dtexec-utility.md)。  
   
 ## <a name="setting-a-registry-value-to-check-the-package-signature"></a>设置注册表值以检查包的签名  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]还支持可选的注册表值**BlockedSignatureStates**，可以使用它来管理组织用于加载签名包和未签名包的策略。 如果包未签名、签名无效或不可信，使用该注册表值将不允许加载该包。 有关如何设置此注册表值的详细信息，请参阅 [通过设置注册表值实现签名策略](../implement-a-signing-policy-by-setting-a-registry-value.md)。  

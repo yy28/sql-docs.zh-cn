@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6fee1a15-325a-4f09-a95d-deecf8af1b9f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: decf18a42bc2f3f80d5c6099adc58a42869eec64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19d7e332605f2b2f0f746d5d149451dd2646627d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012765"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030943"
 ---
 # <a name="audit-server-principal-impersonation-event-class"></a>Audit Server Principal Impersonation 事件类
-  当服务器范围内存在模拟情况（如 EXECUTE AS  登录名\<>）时会发生 *Audit Server Principal Impersonation* 事件类。  
+  如果服务器范围内有模拟（如 EXECUTE AS），则会发生**Audit Server Principal 模拟**事件类 \<*login*> 。  
   
 ## <a name="audit-server-principal-impersonation-event-class-data-columns"></a>Audit Server Principal Impersonation 事件类的数据列  
   

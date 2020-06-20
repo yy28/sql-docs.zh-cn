@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f0d46200df3881d7b24cf582b5c252f4e66e255b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 362699ca4aec82315d86b99a440e8714fe6e0e72
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82709747"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048100"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>其他表值参数的元数据
   若要检索表值参数的元数据，应用程序将调用 SQLProcedureColumns。 对于表值参数，SQLProcedureColumns 将返回单个行。 添加了两个额外 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定的列 SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME，以提供与表值参数关联的表类型的架构和目录信息。 为了符合 ODBC 规范，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 的显示位置位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本中添加的所有驱动程序特定列之前，并位于 ODBC 自身委托的所有列之后。  

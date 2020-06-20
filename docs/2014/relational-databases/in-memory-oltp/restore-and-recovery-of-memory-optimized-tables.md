@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8ce2cc85f936f49e6769bf3a855f903e5064b4be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2a45b8618fd275a8aca20be35083257b8f8d0707
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78259483"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025936"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>内存优化表的还原和恢复
   检索或还原具有内存优化表的数据库的基本机制类似于仅具有基于磁盘的表的数据库。 但与基于磁盘的表不同，必须首先将内存优化表加载到内存中，然后数据库才可用于用户访问。 这会在数据库恢复中添加一个新步骤。 按如下所示更改数据库恢复中修改的步骤：

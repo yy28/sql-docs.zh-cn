@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2f8cd93b-c636-462b-8291-167197233ee0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cab7101480099ce462585b658cb1acb023399b4c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4cd1de7eb6e2512af4966001feb58be6120a3085
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703544"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003270"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>使用 sql:encode 请求 BLOB 数据的 URL 引用 (SQLXML 4.0)
   在带批注的 XSD 架构中，将属性（或元素）映射为 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 BLOB 列时，将在 XML 中以 Base 64 编码格式返回数据。  

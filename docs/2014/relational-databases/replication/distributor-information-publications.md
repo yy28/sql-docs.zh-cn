@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2d738066e4832c029743d53f7ec99dbb1b6fe5cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8ca0717a63c9660c225ec238e1e4d2423f7d01ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721358"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010793"
 ---
 # <a name="distributor-information-dialog-box"></a>"分发服务器信息" 对话框 
 本主题提供有关 "**分发服务器**" 对话框的信息 
@@ -60,7 +59,7 @@ ms.locfileid: "62721358"
   
 -   错误    
 -   重试    
--   运行    
+-   正在运行    
 -   未运行    
 -   从未启动  
   
@@ -73,7 +72,7 @@ ms.locfileid: "62721358"
  **订阅**  
  订阅的名称，格式为：[*SubscriberName*].[*Database*]。  
   
- **Type**  
+ 类型  
  复制的类型：推送、请求或匿名。  
   
  **上次启动时间**  
@@ -106,7 +105,7 @@ ms.locfileid: "62721358"
   
 -   错误    
 -   重试    
--   运行    
+-   正在运行    
 -   未运行    
 -   从未启动  
   
@@ -119,7 +118,7 @@ ms.locfileid: "62721358"
  **订阅**  
  订阅的名称，格式为：[*SubscriberName*].[*Database*]。  
   
- **Type**  
+ 类型  
  复制的类型：推送、请求或匿名。  
   
  **上次启动时间**  

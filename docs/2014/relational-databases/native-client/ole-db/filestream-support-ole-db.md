@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c2bd3dfd-6103-43d1-859e-8ed8d19c58d3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f50f002514977f60fb07358293ecbdd524884e58
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cde3c2cd1b72773cfcf17eacedeb3276dd2f63da
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704254"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011061"
 ---
 # <a name="filestream-support-ole-db"></a>FILESTREAM 支持 (OLE DB)
   从 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 开始，OLE DB 支持增强的 FILESTREAM 功能。 有关此功能的详细信息，请参阅[FILESTREAM 支持](../features/filestream-support.md)。 有关示例，请参阅 [Filestream 和 OLE DB](../../native-client-ole-db-how-to/filestream/filestream-and-ole-db.md)。  

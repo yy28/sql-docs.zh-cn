@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a45dfa7-51fc-420c-96f6-ce2a1f61b684
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8cd7aec26338516d397c2b125e586ba1f94601a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f1c235493b801af8032c6e6e32488175dc9d2259
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662431"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029877"
 ---
 # <a name="exception-event-class"></a>Exception 事件类
   Exception 事件类用于指明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中发生了异常。  
@@ -48,7 +47,7 @@ ms.locfileid: "62662431"
 |严重性|`int`|异常的严重级别。|20|是|  
 |SPID|`int`|发生该事件的会话的 ID。|12|是|  
 |StartTime|`datetime`|该事件（如果存在）的启动时间。|14|是|  
-|State|`int`|服务器的状态。|30|是|  
+|状态|`int`|服务器的状态。|30|是|  
 |TextData|`ntext`|依赖于跟踪中捕获的事件类的文本值。|1|是|  
 |TransactionID|`bigint`|系统分配的事务 ID。|4|是|  
 |XactSequence|`bigint`|用于说明当前事务的标记。|50|是|  

@@ -15,26 +15,25 @@ helpviewer_keywords:
 ms.assetid: b2c6ca00-46f0-4f86-b067-07bae779c147
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ab6d134177c7861c3a8f92cf767c71c0b56e233
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843702"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929108"
 ---
 # <a name="set-source-control-options"></a>设置源代码管理选项
   在利用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中内置的源代码管理功能之前，应针对您工作中所处的各种环境对源代码管理选项进行配置。  
   
  您可以通过使用 "**选项**" 对话框配置一个或多个源代码管理角色来配置源代码管理选项。 组成角色的内容包括：对使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 时所采用设置的常规说明，以及与该设置关联的源代码管理选项。  
   
- 例如，如果您是独立的数据库开发人员，则在将文件签入后使其继续保持签出状态，通常不会产生与其他用户的冲突。 因此，[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 定义了“独立开发人员”角色。 对于此角色， [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]会自动选择 "**签入时使项保持签出状态**" 选项。  
+ 例如，如果您是独立的数据库开发人员，则在将文件签入后使其继续保持签出状态，通常不会产生与其他用户的冲突。 因此，[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 定义了“独立开发人员”角色。 对于此角色， [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 会自动选择 "**签入时使项保持签出状态**" 选项。  
   
  因为可以定义和自定义角色，因此您不必在每次从一个设置移动到另一个设置时全部重新配置源代码管理选项，即可采用不同的开发设置进行工作。  
   
 ### <a name="to-set-source-control-options"></a>设置源代码管理选项  
   
-1.  在“工具” **** 菜单上，单击“选项” ****。  
+1.  在“工具”  菜单上，单击“选项” 。  
   
 2.  在 "**选项**" 对话框中，展开 "**源代码管理**"，然后单击 "**插件选择**" 页。  
   
@@ -50,9 +49,9 @@ ms.locfileid: "62843702"
      **角色描述**  
      选择这些角色之一，将自动选择相应的源代码管理选项。  
   
-    |Role|说明|  
+    |角色|说明|  
     |----------|-----------------|  
-    |**Visual SourceSafe**|指定您要使用[!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 用户最常使用的设置。|  
+    |**Visual SourceSafe**|指定您要使用 Visual SourceSafe 用户最常使用的设置 [!INCLUDE[msCoName](../includes/msconame-md.md)] 。|  
     |**独立开发人员**|指定您是在独立工作。|  
     |**自定义**|指定您已为特定角色修改了设置。|  
   
@@ -74,9 +73,9 @@ ms.locfileid: "62843702"
      **源代码管理环境设置**  
      指定要使用的角色。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 定义了以下角色。  
   
-    |Role|说明|  
+    |角色|说明|  
     |----------|-----------------|  
-    |**Visual SourceSafe**|指定您要使用[!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 用户最常使用的设置。|  
+    |**Visual SourceSafe**|指定您要使用 Visual SourceSafe 用户最常使用的设置 [!INCLUDE[msCoName](../includes/msconame-md.md)] 。|  
     |**独立开发人员**|指定您是在独立工作。|  
     |**自定义**|指定您已为特定角色修改了设置。|  
   
@@ -86,7 +85,7 @@ ms.locfileid: "62843702"
      指定在签入项以更新源代码管理存储区时，这些项将对您保持签出状态。 如果要为特定签入更改此选项，请单击 "**签入**" 对话框中的 "**选项**" 箭头，然后清除 "**保持签出状态**" 复选框。  
   
      **签入的项**  
-     显示一个选项列表，该列表指定[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]在您尝试编辑未签出的项时应如何工作。下表描述了可用的选项。  
+     显示一个选项列表，该列表指定在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 您尝试编辑未签出的项时应如何工作。下表描述了可用的选项。  
   
      **保存**  
   
@@ -96,7 +95,7 @@ ms.locfileid: "62843702"
     |**自动签出**|签出项而不显示 "**签出**" 对话框。 这是默认选项。|  
     |**另存为**|另存为新文件。|  
   
-     **编辑**  
+     **正在编辑**  
   
     |操作|说明|  
     |------------|-----------------|  

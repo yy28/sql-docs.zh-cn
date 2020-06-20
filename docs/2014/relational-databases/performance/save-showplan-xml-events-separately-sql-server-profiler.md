@@ -13,25 +13,24 @@ helpviewer_keywords:
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c92c08349a473aa4a83205cc539eec3577619109
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 858e74ce3b39a24d4faeecd889a35b56952c993c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150432"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047844"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>分别保存 Showplan XML 事件 (SQL Server Profiler)
   本主题介绍了如何使用 **将在跟踪中捕获到的** Showplan XML [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]事件分别保存到单独的 .SQLPlan 文件中。 您可以在 **中打开** Showplan XML [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]事件文件，从中可以查看每个事件的以图形表示的执行计划。  
   
 ### <a name="to-save-showplan-xml-events-separately"></a>分别保存 Showplan XML 事件  
   
-1.  在 **“文件”** 菜单上，单击 **“新建跟踪”**，再连接到 SQL Server 实例。  
+1.  在 **“文件”** 菜单上，单击 **“新建跟踪”** ，再连接到 SQL Server 实例。  
   
      将出现“跟踪属性”对话框。 **“跟踪属性”** 对话框。  
   
     > [!NOTE]  
-    >  如果选择了 "**建立连接后立即开始跟踪**"，则不会显示 "**跟踪属性**" 对话框，而是开始跟踪。 若要关闭此设置，请在 "**工具**" 菜单上单击 "**选项**"，然后清除 "**建立连接后立即开始跟踪**" 复选框。  
+    >  如果选择“建立连接后立即开始跟踪”，则不会显示“跟踪属性”对话框，而是开始跟踪。 若要关闭此设置，请在“工具”菜单上，单击“选项”，然后清除“建立连接后立即开始跟踪”复选框。  
   
 2.  在 **“跟踪属性”** 对话框内的 **“跟踪名称”** 框中键入跟踪的名称。  
   

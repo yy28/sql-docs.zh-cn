@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bd0612f4-96ef-4919-b0f9-b5447210fe93
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e3979390a58235dbb8ec7c76e7b16478e7d9deb9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: dac2fff4492af56253a8c95074afa1b1f48d5a1d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705003"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056291"
 ---
 # <a name="errors"></a>错误
   OLE/COM 对象通过对象成员函数的 HRESULT 返回代码报告错误。 OLE/COM HRESULT 是一种位压缩结构。 OLE 提供取消对结构成员的引用的宏。  

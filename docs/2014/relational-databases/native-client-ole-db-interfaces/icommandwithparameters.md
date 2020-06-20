@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 66644c70-def7-46d8-8c47-b883292a0288
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 281abeeb0a29ba697fe8c8b42027280377315e86
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: df3103181b3cad772e7d1c73068b8864bf591b73
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704862"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056214"
 ---
 # <a name="icommandwithparameters"></a>ICommandWithParameters
   从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，数据库引擎中的改进功能允许 ICommandWithParameters::GetParameterInfo 获取关于预期结果的更准确描述。 这些更准确的结果可能与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以前版本中的 CommandWithParameters::GetParameterInfo 所返回的值有所不同。 有关详细信息，请参阅[元数据发现](../native-client/features/metadata-discovery.md)。  

@@ -13,25 +13,24 @@ helpviewer_keywords:
 ms.assetid: bf1fc906-abd6-4a89-842e-da0d66b2defe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 33757ad1f8085ce141b8e206f2c3fd99c7dcba90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4cff9c60e466418f7aeff19a9ee23649042d844d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150706"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047857"
 ---
 # <a name="save-deadlock-graphs-sql-server-profiler"></a>保存死锁图形（SQL Server 事件探查器）
   本主题介绍了如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]保存 Deadlock Graph 事件。 Deadlock Graph 事件以 XML 文件形式保存。  
   
 ### <a name="to-save-deadlock-graph-events-separately"></a>分别保存 Deadlock Graph 事件  
   
-1.  在 **“文件”** 菜单上，单击 **“新建跟踪”**，再连接到 SQL Server 实例。  
+1.  在 **“文件”** 菜单上，单击 **“新建跟踪”** ，再连接到 SQL Server 实例。  
   
      将出现“跟踪属性”对话框。 **“跟踪属性”** 对话框。  
   
     > [!NOTE]  
-    >  如果选择“建立连接后立即开始跟踪”****，则不会显示“跟踪属性”**** 对话框，而是开始跟踪。 若要关闭此设置，请在 "**工具**" 菜单上单击 "**选项**"，然后清除 "**建立连接后立即开始跟踪**" 复选框。  
+    >  如果选择“建立连接后立即开始跟踪”****，则不会显示“跟踪属性”**** 对话框，而是开始跟踪。 若要关闭此设置，请在“工具”菜单上，单击“选项”，然后清除“建立连接后立即开始跟踪”复选框。  
   
 2.  在“跟踪属性”对话框内的“跟踪名称”**** 框中键入跟踪的名称。  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5f128ea2-0ceb-4b23-bce7-c8b3fd615466
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 39fd399838ac2e94672f3f416a2c83e4233060d3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: abd6cd1f5590bffcd841b07897c9685faed4726f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702582"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013135"
 ---
 # <a name="namespace-support-in-path-mode"></a>PATH 模式中的命名空间支持
   PATH 模式中的命名空间支持是通过使用 WITH NAMESPACES 提供的。 例如，下面的查询演示了如何使用 WITH NAMESPACES 语法声明一个命名空间 (a:)，随后即可在后续的 SELECT 语句中使用此命名空间：  

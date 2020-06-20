@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e890882fe600ed774da2c852bd15c83f1b9f16f3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 986a34628f73b2698e4c299d0a2d6182d31415a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712927"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048232"
 ---
 # <a name="log-long-running-queries-odbc"></a>记录长时间运行的查询 (ODBC)
   此示例显示用于记录长时间运行查询的特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驱动程序的选项。 此示例在运行时将创建 Odbcqry.log，其中包含执行时间超过应用程序所设定间隔的查询的列表。 IA64 平台不支持此示例。 此示例是面向 ODBC 3.0 版或更高版本开发的。  

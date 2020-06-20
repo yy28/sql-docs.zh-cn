@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 754d3f30-7d94-4b67-8dac-baf2699ce9c6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e4c2ee0f7a96ad30f3b13c36625077a74deca9fd
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0e601939efb1a1e1650df8c9c951e84649953709
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707519"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011248"
 ---
 # <a name="using-imultipleresults-to-process-multiple-result-sets"></a>使用 IMultipleResults 处理多个结果集
   使用者使用**IMultipleResults**接口处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序命令执行返回的结果。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序提交要执行的命令时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将执行语句并返回任何结果。  
