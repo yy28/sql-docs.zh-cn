@@ -12,20 +12,19 @@ f1_keywords:
 ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cbb5ca8c048b42313b4776b4a2e4b99e44eec406
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eaff1c5ac8ae5a804f546fc5e551dcb62e2fda7a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059418"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966903"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>“DQS 清除转换编辑器”对话框
   可使用 Data Quality Services (DQS) 通过“DQS 清除转换编辑器”**** 对话框来更正数据。 有关详细信息，请参阅 [Data Quality Services Concepts](../../2014/data-quality-services/data-quality-services-concepts.md)。  
   
  若要了解有关转换的详细信息，请参阅 [DQS Cleansing Transformation](data-flow/transformations/dqs-cleansing-transformation.md)。  
   
- **您希望做什么？**  
+ **要执行什么操作？**  
   
 -   [打开 DQS 清除转换编辑器](#open)  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66059418"
  为所连接的数据源选择现有的 DQS 知识库。 有关 DQS 知识库的详细信息，请参阅 [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)。  
   
  **加密连接**  
- 指定是否加密连接，以加密 DQS 服务器和[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]之间的数据传输。  
+ 指定是否加密连接，以加密 DQS 服务器和之间的数据传输 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 。  
   
  **可用域**  
  列出可用于选定知识库的域。 存在两种类型的域：单一域和包含两个或两个以上的单一域的复合域。  
@@ -81,7 +80,7 @@ ms.locfileid: "66059418"
  **输入列**  
  列出你在“可用输入列”**** 区域中选定的输入列。  
   
- **Domain**  
+ **域**  
  选择要映射到输入列的域。  
   
  **源别名**  
@@ -104,7 +103,7 @@ ms.locfileid: "66059418"
  **—**  
  指示是否包括已更正数据的置信度。 置信度指示 DQS 对更正或建议的确信程度。 有关置信度的详细信息，请参阅 [数据清理](../../2014/data-quality-services/data-cleansing.md)。  
   
- **原因**  
+ **在于**  
  指示是否包括数据更正的原因。  
   
  **追加的数据**  
@@ -126,7 +125,7 @@ ms.locfileid: "66059418"
   
 2.  在连接区域中单击右键，依次单击“新建连接”**** 和“DQS”****。  
   
-3.  单击 **“添加”** 。  
+3.  单击“添加”。  
   
 ## <a name="see-also"></a>另请参阅  
  [将数据质量规则应用于数据源](data-flow/transformations/apply-data-quality-rules-to-data-source.md)  

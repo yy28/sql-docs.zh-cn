@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: edd45234-59dc-4338-94fc-330e820cc248
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a82c6f5e76693ac03ddfd0c442249d7935927848
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 45b9ba7f91b54548e096bbe47da6e01ba562f59d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698297"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999069"
 ---
 # <a name="table-valued-parameter-data-conversion-and-other-errors-and-warnings"></a>表值参数数据转换及其他错误和警告
   表值参数列值可按照与其他列和参数值相同的方式在客户端和服务器数据类型之间转换。 但是由于表值参数可以包含多个列和多个行，所以必须能够标识出现错误的实际值，这一点很重要。  

@@ -13,22 +13,21 @@ helpviewer_keywords:
 ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8810377a7e676d4376fca3cc52e73d6c507dbd21
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77aa9ece0073149c017f6eca35a756b22751a74b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255430"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063669"
 ---
 # <a name="view-and-resolve-data-conflicts-for-merge-publications-sql-server-management-studio"></a>查看和解决合并发布的数据冲突 (SQL Server Management Studio)
   可以根据为每个项目指定的冲突解决程序来解决合并发布中的冲突。 默认情况下，解决冲突无需用户干预。 但是，可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 复制冲突查看器中查看冲突，并更改解决的结果。  
   
  在冲突保持期的指定时间（默认值为 14 天）内，可以在复制冲突查看器中查看冲突数据。 若要设置冲突保持期，请执行以下任一操作：  
   
--   为[&#40;transact-sql&#41;sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)的**@conflict_retention**参数指定保持值。  
+-   为 **@conflict_retention** [&#40;transact-sql&#41;sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)的参数指定保持值。  
   
--   将**@property**参数的值指定为**@value** **conflict_retention** ，并为[sp_changemergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)的参数指定保持值。  
+-   将参数的值**conflict_retention**指定为 conflict_retention **@property** ，并为 **@value** [sp_changemergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)的参数指定保持值。  
   
  默认情况下，冲突信息存储在下列位置：  
   
@@ -44,7 +43,7 @@ ms.locfileid: "63255430"
   
 ### <a name="to-view-and-resolve-conflicts-for-merge-publications"></a>查看和解决合并发布的冲突  
   
-1.  连接到中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的发布服务器（或订阅服务器，如果适用），然后展开服务器节点。  
+1.  连接到中的发布服务器（或订阅服务器，如果适用） [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，然后展开服务器节点。  
   
 2.  展开 **“复制”** 文件夹，再展开 **“本地发布”** 文件夹。  
   

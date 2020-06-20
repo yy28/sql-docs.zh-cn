@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96bd1cc82f73fd78bd16d0d3fe2f2015fabe4995
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63125994"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062598"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>重命名 SQL Server 故障转移群集实例
   如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例包括在故障转移群集中，则重命名虚拟服务器的过程不同于重命名独立实例的过程。 有关详细信息，请参阅 [重命名承载 SQL Server 独立实例的计算机](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)。  
@@ -63,15 +62,15 @@ ms.locfileid: "63125994"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>在重命名操作之后的其他注意事项  
  在重命名故障转移群集的网络名称后，需要按照下面的说明进行验证和操作，使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理和 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]在所有情况下都正常工作。  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** 使用 Windows 群集管理器工具更改[!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)]故障转移群集实例的网络名称后，将来的升级或卸载操作可能会失败。 若要解决此问题，请按照[此](https://go.microsoft.com/fwlink/?LinkId=244002)（https://go.microsoft.com/fwlink/?LinkId=244002)的解决方法部分中的说明更新**ClusterName**注册表项。  
+ ** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ：** [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] 使用 Windows 群集管理器工具更改故障转移群集实例的网络名称后，将来的升级或卸载操作可能会失败。 若要解决此问题，请按照[此](https://go.microsoft.com/fwlink/?LinkId=244002)（的解决方法部分中的说明更新**ClusterName**注册表项 https://go.microsoft.com/fwlink/?LinkId=244002) 。  
   
- ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理服务：** 验证并执行以下针对[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理服务的附加操作：  
+ ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理服务：** 验证和执行以下其他操作 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理服务：  
   
 -   如果 SQL 代理配置为事件转发，请修复注册表设置。 有关详细信息，请参阅[指定事件转发服务器 (SQL Server Management Studio)](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md)。  
   
 -   在重命名计算机/群集网络名称后修复主服务器 (MSX) 和目标服务器 (TSX) 实例名称。 有关详细信息，请参阅下列主题：  
   
-    -   [Defect Multiple Target Servers from a Master Server](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
+    -   [将多台目标服务器从主服务器脱离](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
     -   [创建多服务器环境](../../../ssms/agent/create-a-multiserver-environment.md)  
   

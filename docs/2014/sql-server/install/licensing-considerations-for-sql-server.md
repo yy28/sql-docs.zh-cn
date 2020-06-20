@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 20f624c2-0036-4f44-a2a8-a041af0a0966
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 714dcdef73a48d80166b1888bc67e13e66303a44
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f5e8717db0cad9ee6465b0b92ab44e308536b062
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093956"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045075"
 ---
 # <a name="licensing-considerations-for-sql-server"></a>SQL Server 的许可注意事项
-  有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]许可选项的详细信息，请参阅[此 Microsoft SQL Server Web 站点](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)。  
+  有关许可选项的详细信息 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，请参阅[此 Microsoft SQL Server Web 站点](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)。  
   
 ## <a name="see-also"></a>另请参阅  
  [关于 SQL Server 许可条款](../../../2014/getting-started/about-the-sql-server-license-terms.md)   

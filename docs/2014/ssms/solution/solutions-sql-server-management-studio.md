@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1ef3c378b963168e3c4724033e390803812c5a27
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5954a96ce62e74643087ee4723b1977b140bbf96
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63064887"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058315"
 ---
 # <a name="solutions-sql-server-management-studio"></a>解决方案 (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 解决方案是一个或多个相关项目的集合。 项目是开发人员用来组织相关文件（例如常用管理脚本集）的容器。  

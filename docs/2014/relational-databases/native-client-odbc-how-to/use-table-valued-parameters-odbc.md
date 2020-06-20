@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 6f8da6ab-9de6-4d0a-9b7e-acb76a50a2e7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 81f2ba1ab23449738c31b154646ac63d00cc4850
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d5fedabc24e6fc8530beee268e2d28684f466b33
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82711927"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018650"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>使用表值参数 (ODBC)
   此示例演示了如何使用表值参数通过调用一次服务器插入多个行和多个列。  

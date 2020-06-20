@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d6b3911f-68b4-4483-831b-df89d6400add
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 374d75c18adc091eaf6a01ae1164a529a34accee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3854950962caf61de0edc7c5a910675fdd7ef37e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62636421"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061927"
 ---
 # <a name="connect-with-registered-servers-and-object-explorer"></a>与已注册的服务器和对象资源管理器连接
   本教程演示如何使用已注册的服务器和对象资源管理器。  
@@ -37,7 +36,7 @@ ms.locfileid: "62636421"
   
 5.  在“已注册的服务器名称”**** 框中，键入 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]。  
   
-6.  在 "**连接属性**" 选项卡上的 "**连接到数据库**" 列表中，选择** \<"浏览服务器 ..." >**。  
+6.  在 "**连接属性**" 选项卡上的 "**连接到数据库**" 列表中，选择 **\<Browse server...>** 。  
   
 7.  在“查找数据库”**** 对话框中，单击“是”****。  
   

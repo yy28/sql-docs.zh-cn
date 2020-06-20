@@ -33,13 +33,12 @@ helpviewer_keywords:
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 105e8022775642d915cbcedf180ed9e07f8bc958
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac134bbd4c65da4700990b69b09134230e98903f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289165"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023827"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>使用维护计划向导
   本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中使用维护计划向导创建单个服务器或多服务器维护计划。 维护计划向导可创建 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可定期运行的维护计划。 它使您可以执行各种数据库管理任务，包括备份、数据库完整性检查或以指定的间隔更新数据库统计信息。  
@@ -136,9 +135,9 @@ ms.locfileid: "79289165"
   
         6.  在 **“摘要”** 下的 **“说明”** 中，验证所有作业计划设置均正确。  
   
-        7.  单击“确定”。   
+        7.  单击“确定”。  
   
-    6.  单击“下一步”。   
+    6.  单击“下一步”。  
   
 6.  在 **“选择目标服务器”** 页上，选择要运行维护计划的服务器。 此页仅在配置为主服务器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上可见。  
   
@@ -373,7 +372,7 @@ ms.locfileid: "79289165"
      指定 Azure 存储容器的名称  
   
      **URL 前缀：**  
-     这是基于在 SQL 凭据中存储的存储帐户信息以及您指定的 Azure 存储容器名称自动生成的。 建议你不要编辑此字段中的信息，除非你使用的域使用** \<存储帐户**之外的其他格式> blob.core.windows.net。  
+     这是基于在 SQL 凭据中存储的存储帐户信息以及您指定的 Azure 存储容器名称自动生成的。 建议你不要编辑此字段中的信息，除非你使用的域使用的是** \<storage account> blob.core.windows.net**以外的格式。  
   
      “备份文件扩展名”**** 框  
      指定备份文件要使用的扩展名。 默认为 .bak。  
@@ -403,8 +402,8 @@ ms.locfileid: "79289165"
   
     |||  
     |-|-|  
-    |**使用默认服务器设置**|单击此选项可使用服务器级别默认值。 此默认值可通过 **backup compression default** 服务器配置选项进行设置。 有关如何查看此选项的当前设置的信息，请参阅[查看或配置备份压缩默认服务器配置选项](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。|  
-    |**压缩备份**|单击此选项可压缩备份，而不考虑服务器级别默认值。<br /><br /> ** \* \*重要\*提示**默认情况下，压缩会显著增加 CPU 使用率，并且压缩进程占用的额外 CPU 可能会对并发操作造成不利影响。 因此，您可能需要在会话中创建低优先级的压缩备份，其 CPU 使用率受资源调控器限制。 有关详细信息，请参阅本主题后面的 [使用资源调控器限制备份压缩的 CPU 使用量 (Transact-SQL)](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)限制。|  
+    |**使用默认服务器设置**|单击此选项可使用服务器级别默认值。 此默认值可通过 **backup compression default** 服务器配置选项进行设置。 有关如何查看此选项当前设置的信息，请参阅 [查看或配置 backup compression default 服务器配置选项](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。|  
+    |**压缩备份**|单击此选项可压缩备份，而不考虑服务器级别默认值。<br /><br /> ** \* \* 重要 \* 说明 \* **默认情况下，压缩会显著增加 CPU 使用率，并且压缩进程占用的额外 CPU 可能会对并发操作造成不利影响。 因此，您可能需要在会话中创建低优先级的压缩备份，其 CPU 使用率受资源调控器限制。 有关详细信息，请参阅本主题后面的 [使用资源调控器限制备份压缩的 CPU 使用量 (Transact-SQL)](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)限制。|  
     |**不压缩备份**|单击此选项可创建未压缩的备份，而不考虑服务器级别默认值。|  
   
 2.  在“定义备份数据库（差异）任务”**** 页上，选择要对其运行部分备份的数据库。 有关此页上可用选项的详细信息，请参阅上述步骤 16 中列出的定义。 此任务使用 `BACKUP DATABASE ... WITH DIFFERENTIAL` 语句。 有关详细信息，请参阅 [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)。  完成后单击“下一步”****。  
@@ -485,16 +484,16 @@ ms.locfileid: "79289165"
      **详细信息**  
      提供向导执行的操作所返回的操作、状态和所有消息。  
   
-     **操作**  
+     **Action**  
      指定每个操作的类型和名称。  
   
-     **状态**  
-     指示向导操作作为一个整体返回的值是“成功”**** 还是“失败”****。  
+     **Status**  
+     指示向导操作作为一个整体返回的值是“成功”  还是“失败”  。  
   
      **消息**  
      提供从该进程中返回的任何错误或警告消息。  
   
-     **报告**  
+     **Report**  
      创建包含创建分区向导结果的报告。 这些选项是 **“查看报告”**、 **“将报告保存到文件”**、 **“将报告复制到剪贴板”** 和 **“将报告作为电子邮件发送”**。  
   
      **查看报告**  
@@ -503,10 +502,10 @@ ms.locfileid: "79289165"
      **将报告保存到文件**  
      打开“将报告另存为”**** 对话框。  
   
-     **“将报告复制到剪贴板”**  
+     **将报告复制到剪贴板**  
      将向导的进度报告结果复制到剪贴板。  
   
-     **将报告作为电子邮件发送**  
+     **“将报告作为电子邮件发送”**  
      将向导的进度报告结果复制到电子邮件。  
   
   

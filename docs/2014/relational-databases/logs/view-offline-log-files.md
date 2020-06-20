@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac0f613a023261c79b3a5ee11458ecdbda86998d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144593"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024735"
 ---
 # <a name="view-offline-log-files"></a>查看脱机日志文件
   从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]开始，您可以在目标实例处于脱机状态或无法启动时，从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地或远程实例查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志文件。  
@@ -50,9 +49,9 @@ ms.locfileid: "63144593"
   
 -   针对 **Root\Microsoft\SqlServer\ComputerManagement12** WMI 命名空间的读取访问权限。 默认情况下，每个人都可以通过“启用帐户”权限获得读取权限。 有关详细信息，请参阅本节后面的“验证 WMI 权限”过程。  
   
--   对包含错误日志文件的文件夹的读取权限。 默认情况下，错误日志文件位于下面的路径中（其中 \<*Drive>* 表示安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的驱动器，\<*InstanceName*> 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称）：  
+-   对包含错误日志文件的文件夹的读取权限。 默认情况下，错误日志文件位于下面的路径中（其中 \<*Drive> * 表示安装了的驱动器 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ， \<*InstanceName*> 是实例的名称 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ）：  
   
-     **\<驱动器>： \Program Files\Microsoft SQL Server\MSSQL12。\<InstanceName> \mssql\log**  
+     **\<Drive>： \Program Files\Microsoft SQL Server\MSSQL12. \<InstanceName>\MSSQL\Log**  
   
  若要验证 WMI 命名空间安全设置，您可以使用 WMI 控制管理单元。  
   
@@ -60,9 +59,9 @@ ms.locfileid: "63144593"
   
 1.  打开 WMI 控制管理单元。 为此，请根据所用操作系统执行以下操作之一：  
   
-    -   单击 "**开始**" `wmimgmt.msc` ，在 "**开始搜索**" 框中键入，然后按 enter。  
+    -   单击 "**开始**"， `wmimgmt.msc` 在 "**开始搜索**" 框中键入，然后按 enter。  
   
-    -   依次单击 "**开始**"、" `wmimgmt.msc`**运行**"，键入，然后按 enter。  
+    -   依次单击 "**开始**"、"**运行**"，键入 `wmimgmt.msc` ，然后按 enter。  
   
 2.  默认情况下，WMI 控制管理单元管理本地计算机。  
   

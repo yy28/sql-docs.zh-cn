@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9f00eb93492ca150278800c4bbdfa3565550fdef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50536e5b6816c84dff26c9c9f99c46d02272b7de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721939"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064658"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，对复制拓扑中所有用户可配置的功能的编程访问是由系统存储过程提供的。 虽然可使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 sqlcmd 命令行实用工具来单独执行存储过程，但编写可执行具有一定逻辑顺序的复制任务的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本文件也有诸多好处。  
@@ -127,7 +126,7 @@ GO
  创建完复制脚本后，可以通过下列方式之一执行所创建的复制脚本：  
   
 ### <a name="creating-a-sql-query-file-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中创建一个 SQL 查询文件  
- 可以将复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本文件创建为 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 项目中的 SQL 查询文件。 编写完脚本后，可以为此查询文件创建一个与数据库的连接，然后即可执行该脚本。 有关如何使用[!INCLUDE[tsql](../../../includes/tsql-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]创建脚本的详细信息，请参阅[查询和文本编辑器 &#40;SQL Server Management Studio&#41;](../../scripting/query-and-text-editors-sql-server-management-studio.md)）。  
+ 可以将复制 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本文件创建为 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 项目中的 SQL 查询文件。 编写完脚本后，可以为此查询文件创建一个与数据库的连接，然后即可执行该脚本。 有关如何使用创建脚本的详细信息 [!INCLUDE[tsql](../../../includes/tsql-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，请参阅[查询和文本编辑器 &#40;SQL Server Management Studio&#41;](../../scripting/query-and-text-editors-sql-server-management-studio.md)）。  
   
  若要使用包含脚本变量的脚本，[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 必须在 **sqlcmd** 模式下运行。 在 **sqlcmd** 模式下，查询编辑器可接受特定于 **sqlcmd** 的附加语法，如可用于变量值的 `:setvar`。 有关 **sqlcmd** 模式的详细信息，请参阅[使用查询编辑器编辑 SQLCMD 脚本](../../scripting/edit-sqlcmd-scripts-with-query-editor.md)。 在下面的脚本中，`:setvar` 用于为 `$(DistPubServer)` 变量提供值。  
   
@@ -153,13 +152,13 @@ SET @publisher = $(DistPubServer);
 ```  
   
 ### <a name="using-the-sqlcmd-utility-from-the-command-line"></a>从命令行使用 sqlcmd 实用工具  
- 下面的示例说明如何在命令行中使用 `instdistpub.sql`sqlcmd 实用工具[来执行 ](../../../tools/sqlcmd-utility.md) 脚本文件：  
+ 下面的示例说明如何在命令行中使用 [sqlcmd 实用工具](../../../tools/sqlcmd-utility.md)来执行 `instdistpub.sql` 脚本文件：  
   
 ```  
 sqlcmd.exe -E -S sqlserverinstance -i C:\instdistpub.sql -o C:\output.log -v DistPubServer="N'MyDistributorAndPublisher'"  
 ```  
   
- 在此示例中，`-E` 开关指示连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时使用 Windows 身份验证。 使用 Windows 身份验证时，不需要在脚本文件中存储用户名和密码。 脚本文件的名称和路径是通过 `-i` 开关指定的，输出文件的名称是通过 `-o` 开关指定的（使用此开关时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的输出将写入此文件，而不是控制台）。 在 `sqlcmd` 实用工具中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 开关，可以在运行时向 `-v` 脚本传递脚本变量。 在此示例中，`sqlcmd` 在执行前将脚本中的每个 `$(DistPubServer)` 实例替换为值 `N'MyDistributorAndPublisher'`。  
+ 在此示例中，`-E` 开关指示连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时使用 Windows 身份验证。 使用 Windows 身份验证时，不需要在脚本文件中存储用户名和密码。 脚本文件的名称和路径是通过 `-i` 开关指定的，输出文件的名称是通过 `-o` 开关指定的（使用此开关时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的输出将写入此文件，而不是控制台）。 在 `sqlcmd` 实用工具中使用 `-v` 开关，可以在运行时向 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本传递脚本变量。 在此示例中，`sqlcmd` 在执行前将脚本中的每个 `$(DistPubServer)` 实例替换为值 `N'MyDistributorAndPublisher'`。  
   
 > [!NOTE]  
 >  `-X` 开关可禁用脚本变量。  

@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 30382bcb0c70fb985c88866602cb997988b88569
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 733066f73b7adab950defcb2552364eda2bde7e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70153754"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062105"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>连接到服务器（“连接属性”页）（数据库引擎）
   使用此选项卡可在连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例或在“已注册的服务器”  中注册 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 时查看或指定选项。 只有在连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例时，此对话框中才显示“连接”  和“选项”  。 注册 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 时，此对话框中仅显示“测试”  和“保存”  。  
   
 ## <a name="options"></a>选项  
  **连接到数据库**  
- 从列表中选择要连接到的数据库。 如果选择** \<默认>**，将连接到服务器的默认数据库。 如果选择** \<"浏览服务器>**，则可以浏览服务器以查找要连接到的数据库。  
+ 从列表中选择要连接到的数据库。 如果选择 **\<default>** ，则将连接到服务器的默认数据库。 如果选择 **\<Browse server>** ，则可以浏览服务器以查找要连接到的数据库。  
   
  在通过 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库引擎的一个实例时，必须使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，并且必须在“连接到服务器”  对话框的“连接属性”  选项卡上指定一个数据库。请确保选中“加密连接”  复选框。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "70153754"
  **网络数据包大小**  
  输入要发送的网络数据包的大小。 默认值为 4096 字节。  
   
- **连接超时值**  
+ **连接超时**  
  输入在超时之前等待建立连接的秒数。默认值为15秒。  
   
  **执行超时**  

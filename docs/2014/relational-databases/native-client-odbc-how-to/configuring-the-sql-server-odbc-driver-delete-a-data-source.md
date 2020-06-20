@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c87d0123c5174461e4e3470b4e77ccb4bc5b10a1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ddb4cacd31b08346d64b3d9caa4868c53a90050d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701895"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018959"
 ---
 # <a name="delete-a-data-source-odbc"></a>删除数据源 (ODBC)
   您可以使用 ODBC 管理器、以编程方式（通过使用[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)）或通过删除文件（如果是文件数据源名称）来删除数据源。  

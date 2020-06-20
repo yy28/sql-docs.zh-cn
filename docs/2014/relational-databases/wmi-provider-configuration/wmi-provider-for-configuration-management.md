@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 7e41db24-b915-4eb8-a1d6-e6948ee915b7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ac064258da9ae55039c350f50d153d0c60323621
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9391c3d3bea04abb4d664a9a5af5ed95596adf2c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211625"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054960"
 ---
 # <a name="wmi-provider-for-configuration-management-concepts"></a>用于配置管理的 WMI 提供程序的概念
-  WMI 提供程序是一个已发布[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]层，与[!INCLUDE[msCoName](../../includes/msconame-md.md)]管理控制台（MMC）和[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager 的 Configuration Manager 管理单元一起使用。 它提供了一种统一的方式，用于与管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器所请求注册表操作的 API 调用进行连接，并可对选定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务提供增强的控制和操作。  
+  WMI 提供程序是一个已发布层，与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台（MMC）和 Configuration Manager 的 Configuration Manager 管理单元一起使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 它提供了一种统一的方式，用于与管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器所请求注册表操作的 API 调用进行连接，并可对选定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务提供增强的控制和操作。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] WMI 提供程序是一个 DLL 和一个 MOF 文件，这些文件由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序自动编译。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] WMI 提供程序包含一组对象类，这些类用于通过[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以下方法控制服务：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]WMI 提供程序包含一组对象类，这些类用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过以下方法控制服务：  
   
 -   可以在其中嵌入 Windows 查询语言 (WQL) 的脚本语言，如 VBScript、[!INCLUDE[jsprjscript](../../includes/jsprjscript-md.md)] 或 Perl。  
   

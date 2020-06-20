@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3094bd57-5cf4-4860-bf51-fadd1b309f94
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 71b050e49440764d355d4658607600c135741f50
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ad925c543cefaf7aed5a0ef355029312b3de7140
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65476754"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064802"
 ---
 # <a name="task-11-adding-conditional-split-transform-to-filter-duplicates"></a>任务 11：添加有条件拆分转换以筛选重复项
   在本任务中，您将向数据流添加有条件拆分转换。 此转换帮助您从传入的记录集筛选重复项。 模糊分组转换将它找到的记录分组为匹配项并选择其中一个记录作为透视记录。 组中的所有记录都具有相同的 _key_out 值。 组中的透视记录具有与 _key_out 值相同的 _key_in。 组中的其他记录的 _key_in 和 _key_out 值不同。 因此，当使用条件 _key_in==_key_out 筛选时，只能得到组中的透视行。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 464961600f69f14a2b66515a75906c0fd4af3f82
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 37d8344323add8b9b6f520d59862cdd978823e4f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175354"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049774"
 ---
 # <a name="lesson-9-restore-a-database-from-azure-storage"></a>第 9 课。 从 Azure 存储还原数据库
   在本课中，您将学习如何将数据库备份文件从 Azure 存储还原到数据库（驻留在本地或 Azure 中的虚拟机上）。 不需要学完第 4、5、6、7 和 8 课即可听懂本课。  
@@ -42,7 +41,7 @@ ms.locfileid: "70175354"
   
 3.  复制以下完整脚本并将其粘贴到查询窗口。 根据需要修改脚本。  
   
-     **注意：** 运行`RESTORE`语句，将 Azure 存储中的数据库备份（.bak）还原到其他计算机中的数据库实例。  
+     **注意：** 运行 `RESTORE` 语句，将 Azure 存储中的数据库备份（.bak）还原到其他计算机中的数据库实例。  
   
     ```sql  
   

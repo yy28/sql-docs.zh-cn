@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a91d050e489aa782ab10490d294a7fba8c806fe4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d91ae9fc1bbb404e63abaa2b5037164460d01a25
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62688901"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063810"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>合并复制的备份和还原策略
   对于合并复制，请定期备份下列数据库：  
@@ -56,7 +55,7 @@ ms.locfileid: "62688901"
 > [!IMPORTANT]  
 >  使发布数据库与订阅数据库同步可使已发布的表还原到一个时间点，该时间点比从备份还原的其他未发布表的时间点更近。  
   
- 如果[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]与运行之前[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]的版本的订阅服务器同步，则订阅不能是匿名的;它必须是客户端订阅或服务器订阅（在早期版本中称为本地订阅和全局订阅）。  
+ 如果与运行之前的版本的订阅服务器同步，则 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 订阅无法匿名; 它必须是客户端订阅或服务器订阅（在早期版本中称为本地订阅和全局订阅）。  
   
  若要同步订阅，请参阅 [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) 和 [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md)。  
   
@@ -89,7 +88,7 @@ ms.locfileid: "62688901"
  如果某个数据库从发布服务器订阅数据，并依次将同样的数据发布给其他订阅数据库，则称该数据库为重新发布数据库。 还原重新发布数据库时，请遵从此主题中“备份和还原发布数据库”和“备份和还原订阅数据库”两节所介绍的准则。  
   
 ## <a name="see-also"></a>另请参阅  
- [备份和还原 SQL Server 数据库](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [SQL Server 数据库的备份和还原](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [备份和还原复制的数据库](back-up-and-restore-replicated-databases.md)  
   
   

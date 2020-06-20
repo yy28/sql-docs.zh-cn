@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8e0965ef-cc3a-43d5-82ad-01f525654b2f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a2771cd508c2bc2f3be0de1c9d0502e8ab5ce062
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff847756d8717184654d8d08c84222dc9e99b9ca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63282030"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058299"
 ---
 # <a name="show-the-object-explorer-details-page"></a>显示“对象资源管理器详细信息”页
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以为对象资源管理器中选定的每个对象显示一个报表。 该报表称为“对象资源管理器详细信息”页，它由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]创建，并可在文档窗口中打开。  

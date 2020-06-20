@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 66323ccdb91076496f9796245c368697d9ebc8c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ed0d210668b64ff6f6fcc8c94a713743e2f9bfa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057603"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951047"
 ---
 # <a name="message-queue-task-editor-send-page"></a>消息队列任务编辑器（“发送”页）
   使用“消息队列任务编辑器”对话框的“发送”页面，能配置消息队列任务以便从 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包发送消息********。  
@@ -28,7 +27,7 @@ ms.locfileid: "66057603"
   
 ## <a name="options"></a>选项  
  **UseEncryption**  
- 指示是否对消息进行加密。 默认值为 `False`。  
+ 指示是否对消息进行加密。 默认为 `False`。  
   
  **EncryptionAlgorithm**  
  如果选择使用加密，请指定要使用的加密算法的名称。 消息队列任务可以使用 RC2 和 RC4 算法。 默认值为 **RC2**。  
@@ -42,7 +41,7 @@ ms.locfileid: "66057603"
  **MessageType**  
  选择消息类型。 此属性具有下表所列的选项。  
   
-|Value|说明|  
+|值|说明|  
 |-----------|-----------------|  
 |**数据文件消息**|消息存储在文件中。 选择该值将显示动态选项 **DataFileMessage**。|  
 |**变量消息**|消息存储在变量中。 选择该值将显示动态选项 **VariableMessage**。|  

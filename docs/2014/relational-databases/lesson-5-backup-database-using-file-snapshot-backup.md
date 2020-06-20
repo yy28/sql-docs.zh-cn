@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 689c3a734a5b4eb424511da52032dc348b5757ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7686f6ee0a5cbce01fb69d36d645ff9787276ef8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75231796"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024925"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>第 6 课：将数据库从本地源计算机迁移至 Azure 中的目标计算机
   本课程假定你已有另一个 SQL Server，该可能驻留在其他本地计算机或 Azure 中的虚拟机中。 有关如何在 Azure 中创建 SQL Server 虚拟机的信息，请参阅在[azure 上预配 SQL Server 虚拟机](https://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/)。 在 Azure 中预配 SQL Server 虚拟机后，请确保可以通过其他计算机中的 SQL Server Management Studio 连接到此虚拟机中 SQL Server 的实例。  
@@ -128,7 +127,7 @@ ms.locfileid: "75231796"
   
 1.  在“对象资源管理器”  中，连接到一个 SQL Server 数据库引擎实例，然后展开该实例。  
   
-2.  右键单击 "**数据库**"，然后单击 "**新建数据库**"。 然后，右键单击“TestDB1”。 单击“任务”，然后单击“分离”。 在“分离”对话框窗口中，选中“删除连接”。 单击“确定”。   
+2.  右键单击 "**数据库**"，然后单击 "**新建数据库**"。 然后，右键单击“TestDB1”。 单击“任务”，然后单击“分离”。 在“分离”对话框窗口中，选中“删除连接”。 单击“确定”。  
   
 3.  连接到目标计算机，该计算机具有 SQL Server 2014 CTP2 或更高版本。 若要准备目标计算机，需要在目标计算机中创建一个 SQL Server 凭据，使其指向将 TestDB1 放入的同一容器。 如果要在同一个计算机上重新附加，则不需要创建另一个凭据。  
   
@@ -136,11 +135,11 @@ ms.locfileid: "75231796"
   
 5.  在 "**附加数据库**" 对话框中，若要指定要附加的数据库，请单击 "**添加**"。 在 "**定位数据库文件**" 对话框窗口中：  
   
-     对于 "数据库数据文件位置"， `https://teststorageaccnt.blob.core.windows.net/testcontainer/`键入：。  
+     对于 "数据库数据文件位置"，键入： `https://teststorageaccnt.blob.core.windows.net/testcontainer/` 。  
   
-     对于 "文件名"，请`TestDB1Data.mdf`键入：。  
+     对于 "文件名"，请键入： `TestDB1Data.mdf` 。  
   
-6.  单击“确定”。   
+6.  单击“确定”。  
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-6-7.gif "SQL 14 CTP2")  
   

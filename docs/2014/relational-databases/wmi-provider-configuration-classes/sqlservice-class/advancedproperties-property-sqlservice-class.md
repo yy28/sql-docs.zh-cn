@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: abe9d977dfcde5523e875881b1a5b80be7b1b887
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52cad45846eb1eb4ab716a3ab8d399eacbbc0414
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63223220"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062631"
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>AdvancedProperties 属性（SqlService 类）
   获取一组包含 `SqlService` 对象的高级属性的对象引用。  
@@ -41,7 +40,7 @@ object
  一个表示服务的 [SqlService 类](sqlservice-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
- 包含`SqlService`对象的高级属性的[SqlServiceAdvancedProperty 类](../sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md)对象的数组。  
+ 包含对象的高级属性的[SqlServiceAdvancedProperty 类](../sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md)对象的数组 `SqlService` 。  
   
 ## <a name="remarks"></a>备注  
   

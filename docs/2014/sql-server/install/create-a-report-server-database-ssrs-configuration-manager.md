@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8a3a6ffe-4001-46be-8548-94532550f6a5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 638f96285f4dab2bb109353d7d648b9de8b6bb67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d899d0585eda7c9cd2b12147732b23c01872128b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952304"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042815"
 ---
 # <a name="create-a-report-server-database--ssrs-configuration-manager"></a>创建报表服务器数据库（SSRS 配置管理器）
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**本机模式**使用两[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]个关系数据库来存储 Report Server 元数据和对象。 一个数据库用于主存储，另一个数据库用于存储临时数据。 这两个数据库一起创建，并按名称绑定。 通过默认 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，将这两个数据库命名为 `reportserver` 和 `reportservertempdb`。 这两个数据库统称为“报表服务器数据库”或“报表服务器目录”。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**本机模式**使用两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库来存储 Report Server 元数据和对象。 一个数据库用于主存储，另一个数据库用于存储临时数据。 这两个数据库一起创建，并按名称绑定。 通过默认 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，将这两个数据库命名为 `reportserver` 和 `reportservertempdb`。 这两个数据库统称为“报表服务器数据库”或“报表服务器目录”。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **SharePoint 模式** 包含用于数据警报元数据的第三个数据库。 为每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序创建三个数据库，默认情况下，这些数据库名称包含表示服务应用程序的 guid。 以下是三个 SharePoint 模式数据库的示例名称：  
   

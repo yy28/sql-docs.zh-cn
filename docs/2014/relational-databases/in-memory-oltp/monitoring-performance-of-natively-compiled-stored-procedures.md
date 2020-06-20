@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9b8d6f35f8dedeb4539dc8299ca32f6566beb03f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d14d27cdc20c0f090c7a030efe05cfce4842f437
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161952"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026081"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>监视本机编译的存储过程的执行
   本主题论述如何监视本机编译的存储过程的性能  
@@ -29,7 +28,7 @@ ms.locfileid: "63161952"
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
- 有关`sp_statement_completed`扩展事件的详细信息，请参阅[如何检索导致了事件的语句](https://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)。  
+ 有关扩展事件的详细信息 `sp_statement_completed` ，请参阅[如何检索导致了事件的语句](https://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)。  
   
 ## <a name="using-data-management-views"></a>使用数据管理视图  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持在过程级别和查询级别收集本机编译的存储过程的执行统计信息。 由于对性能的影响，默认不启用收集执行统计信息。  

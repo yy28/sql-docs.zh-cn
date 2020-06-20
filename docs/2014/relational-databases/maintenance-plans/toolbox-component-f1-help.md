@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b3a6620b3cfdc5a450f54754b1260abe543e122d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f3b4c94ef1c4690af2a333fcdbdef88b475219e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806821"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023764"
 ---
 # <a name="toolbox-component-f1-help"></a>工具箱组件的 F1 帮助
 
 “工具箱”中显示有许多可以在   项目中使用的项[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 您可以从 **“视图”** 菜单打开 **“工具箱”** ，并根据需要停靠此窗口。 在停靠时， **“工具箱”** 可以始终是打开的并保持在固定位置，或设置为在未使用时 **“自动隐藏”** 。  
   
-可以将**工具箱**图标拖放或复制并粘贴到代码编辑器中，或拖放到中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的设计视图图面上。  
+可以将**工具箱**图标拖放或复制并粘贴到代码编辑器中，或拖放到中的设计视图图面上 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
 ## <a name="using-the-toolbox"></a>使用工具箱  
  工具箱是一个滑动树控件，其行为与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 资源管理器非常类似，但是没有网格线或连接线。 可以同时展开“工具箱”  的多个片段（称为“选项卡”），并且可以在“工具箱”  窗口内滚动查看整个树的内容。 若要展开“工具箱”  的任何选项卡，请单击其名称旁边的加号 ( **+** )。 若要折叠展开的选项卡，请单击其名称旁边的减号 ( **-** )。  

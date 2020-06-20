@@ -17,24 +17,23 @@ helpviewer_keywords:
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0ffbf733db8cbd672f171773e7b44560686e7d1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 46994409cc6a5119c9144eb7a3a4b9a8a9a22c44
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63223550"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002453"
 ---
 # <a name="sqlserveralias-class"></a>SqlServerAlias 类
   [SqlServerAlias 类](sqlserveralias-class.md)表示服务器连接别名。  
   
  出现以下两种情况时需要服务器连接别名：  
   
--   客户端[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]通过网络传输连接到不是默认网络传输的实例。  
+-   客户端 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 通过网络传输连接到不是默认网络传输的实例。  
   
 -   客户端连接到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例侦听备用命名管道。  
   
- **注意：**[SqlServerAlias 类](sqlserveralias-class.md)从 Provider 类`Put`继承方法。 但是，与 `Provider::Put` 方法不同，它不会返回任何结果。 有关详细信息，请参阅 WMI 文档。  
+ **注意：**[SqlServerAlias 类](sqlserveralias-class.md) `Put` 从 Provider 类继承方法。 但是，与 `Provider::Put` 方法不同，它不会返回任何结果。 有关详细信息，请参阅 WMI 文档。  
   
 ## <a name="see-also"></a>另请参阅  
  [配置客户端协议](https://technet.microsoft.com/library/ms181035.aspx)  

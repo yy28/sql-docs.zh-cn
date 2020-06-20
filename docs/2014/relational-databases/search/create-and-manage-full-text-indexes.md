@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a41f11b200ffe5dfc91479ea54095fd24c90699a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 603b5e6b929259dc8b1408c0c2a1afab383446e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011549"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055521"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>创建和管理全文索引
   全文引擎使用全文索引中的信息来编译可快速搜索表中的特定词或词组的全文查询。 全文索引将有关重要的词及其位置的信息存储在数据库表的一列或多列中。 全文索引是一种特殊类型的基于标记的功能性索引，它是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]全文引擎生成和维护的。 生成全文索引的过程不同于生成其他类型的索引。 全文引擎并非基于特定行中存储的值来构造 B 树结构，而是基于要编制索引的文本中的各个标记来生成倒排、堆积且压缩的索引结构。  全文索引大小仅受运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的可用内存资源限制。  
@@ -51,7 +50,7 @@ ms.locfileid: "66011549"
   
  对于本示例，我们假定已对“标题”**** 列创建全文索引。  
   
-|DocumentID|Title|  
+|DocumentID|标题|  
 |----------------|-----------|  
 |1|Crank Arm and Tire Maintenance|  
 |2|Front Reflector Bracket and Reflector Assembly 3|  
@@ -78,7 +77,7 @@ ms.locfileid: "66011549"
 |Reflector|1|3|2|  
 |Bracket|1|2|3|  
 |Bracket|1|3|3|  
-|Assembly|1|2|6|  
+|程序集|1|2|6|  
 |3|1|2|7|  
 |安装|1|3|4|  
   
@@ -86,7 +85,7 @@ ms.locfileid: "66011549"
   
  “ColId”**** 列包含的值对应于已建立全文索引的特定列。  
   
- `DocId`列包含八字节整数的值，该值映射到全文索引表中的特定全文键值。 如果全文键不是整数数据类型，则需要此映射。 在这种情况下，全文键值和`DocId`值之间的映射将保留在一个名为 DocId 映射表的单独表中。 若要查询这些映射，请使用 [sp_fulltext_keymappings](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) 系统存储过程。 若要满足搜索条件，则上述表中的 DocId 值需要与 DocId Mapping 表联接，以便从所查询的基表中检索行。 如果基表的全文键值是整数类型，则该值直接充当 DocId，而不需要映射。 因此，使用整数全文键值有助于优化全文查询。  
+ `DocId`列包含八字节整数的值，该值映射到全文索引表中的特定全文键值。 如果全文键不是整数数据类型，则需要此映射。 在这种情况下，全文键值和值之间的映射 `DocId` 将保留在一个名为 DocId 映射表的单独表中。 若要查询这些映射，请使用 [sp_fulltext_keymappings](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) 系统存储过程。 若要满足搜索条件，则上述表中的 DocId 值需要与 DocId Mapping 表联接，以便从所查询的基表中检索行。 如果基表的全文键值是整数类型，则该值直接充当 DocId，而不需要映射。 因此，使用整数全文键值有助于优化全文查询。  
   
  **Occurrence** 列包含整数值。 对于每个 DocId 值，均有一个 Occurrence 值的列表对应于该 DocId 值中特定关键字的相对字偏移量。 位置值用于确定短语或邻近匹配项，例如具有相邻位置值的短语。 它们还用于计算相关性分数，例如记分时可能会用某个关键字在 DocId 中的出现次数。  
   
@@ -95,7 +94,7 @@ ms.locfileid: "66011549"
 ##  <a name="full-text-index-fragments"></a><a name="fragments"></a>全文索引片段  
  逻辑全文索引通常拆分到多个内部表中。 每个内部表称为一个全文索引碎片。 这些碎片中的某一些可能包含比其他碎片更新的数据。 例如，如果用户更新其 DocId 是 3 的以下行，并且该表可自动跟踪更改，则会创建新的碎片。  
   
-|DocumentID|Title|  
+|DocumentID|标题|  
 |----------------|-----------|  
 |3|Rear Reflector|  
   
@@ -108,7 +107,7 @@ ms.locfileid: "66011549"
 |Rear|1|3|1|  
 |Reflector|1|3|2|  
   
- 从 Fragment 2 可以看到，全文查询需要在内部查询每个碎片，并放弃更旧的条目。 因此，全文索引中太多的全文索引碎片会导致查询性能大幅下降。 若要减少碎片数，请使用[ALTER 全文目录](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)]语句的 "重新组织" 选项重新组织全文目录。 此语句将执行一次 *主合并*，主合并将碎片合并成一个更大的碎片，并从全文索引中删除所有过时的条目。  
+ 从 Fragment 2 可以看到，全文查询需要在内部查询每个碎片，并放弃更旧的条目。 因此，全文索引中太多的全文索引碎片会导致查询性能大幅下降。 若要减少碎片数，请使用[ALTER 全文目录](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)语句的 "重新组织" 选项重新组织全文目录 [!INCLUDE[tsql](../../includes/tsql-md.md)] 。 此语句将执行一次 *主合并*，主合并将碎片合并成一个更大的碎片，并从全文索引中删除所有过时的条目。  
   
  经过重新组织后，示例索引会包含以下行：  
   
@@ -124,7 +123,7 @@ ms.locfileid: "66011549"
 |Reflector|1|2|5|  
 |Reflector|1|3|2|  
 |Bracket|1|2|3|  
-|Assembly|1|2|6|  
+|程序集|1|2|6|  
 |3|1|2|7|  
   
  [本主题内容](#top)  

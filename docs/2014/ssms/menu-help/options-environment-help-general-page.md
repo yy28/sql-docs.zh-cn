@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9e9f8e5d5f196452a8cd0f56e26aac40895bcd9d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 155d3d70144c28a050c6d309c1dd3a484d6b3201
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68188543"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048722"
 ---
 # <a name="options-environment-help-general-page"></a>选项（"环境"-"帮助"-"常规" 页）
-  使用“选项”对话框可以选择文档集，并确定是在   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 中以内部方式显示主题还是在单独窗口中以外部方式显示主题[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 若要访问此对话框，请单击“工具”  菜单上的“选项”  ，展开“环境”  节点中的“帮助”  ，再单击“常规”  。  
+  使用“选项”对话框可以选择文档集，并确定是在   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 中以内部方式显示主题还是在单独窗口中以外部方式显示主题[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 若要访问此对话框，请单击“工具”菜单上的“选项”，展开“环境”节点中的“帮助”，再单击“常规”。  
   
 > [!NOTE]  
 >  重新启动环境之后，在此页上对选项进行的更改才会生效。  

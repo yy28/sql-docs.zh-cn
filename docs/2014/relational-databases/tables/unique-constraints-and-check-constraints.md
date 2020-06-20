@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 205e4ae3d6f89f10a933bf357d1eeda458852584
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196678"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055033"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>唯一约束和 CHECK 约束
   UNIQUE 约束和 CHECK 约束是可用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中强制数据完整性的两种类型的约束。 这些是重要的数据库对象。  
@@ -51,7 +50,7 @@ ms.locfileid: "68196678"
 >  包括隐式或显式数据类型转换的约束可能会导致某些操作失败。 例如，为表定义的作为分区切换的源的此类约束可能会导致 ALTER TABLE...SWITCH 操作失败。 在约束定义中避免数据类型转换。  
   
 ### <a name="limitations-of-check-constraints"></a>CHECK 约束的限制  
- CHECK 约束不接受计算结果为 FALSE 的值。 因为空值的计算结果为 UNKNOWN，所以表达式中存在这些值可能会覆盖约束。 `int`例如，假设您对列设置了约束， **MyColumn**指定**MyColumn**只能包含值10（**MyColumn = 10**）。 如果将值 NULL 插入到 **MyColumn**， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将插入 NULL 且不返回错误。  
+ CHECK 约束不接受计算结果为 FALSE 的值。 因为空值的计算结果为 UNKNOWN，所以表达式中存在这些值可能会覆盖约束。 例如，假设您对列设置了约束， `int` **MyColumn**指定**MyColumn**只能包含值10（**MyColumn = 10**）。 如果将值 NULL 插入到 **MyColumn**， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将插入 NULL 且不返回错误。  
   
  如果 CHECK 约束检查的条件对于表中的任何行都不是 FALSE，它将返回 TRUE。 CHECK 约束在行级执行。 如果刚创建的表没有任何行，则此表的任何 CHECK 约束都视为有效。 这种情况可能会产生意外结果，如下面的示例所示。  
   

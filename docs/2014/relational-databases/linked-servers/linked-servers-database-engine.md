@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e50cd7bc491109c1aa7a1941d04330141e907941
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4a1de70882cdeb87ccc0ae42aa23a9b6c8b3248e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175896"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049833"
 ---
 # <a name="linked-servers-database-engine"></a>链接服务器（数据库引擎）
   配置链接服务器以支持 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]之外对 OLE DB 数据源执行命令。 通常，配置链接服务器是为了支持 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 实例或诸如 Oracle 等其他数据库产品上执行包含表的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]语句。 许多类型的 OLE DB 数据源都可配置为链接服务器，包括 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Access 和 Excel。 链接服务器具有以下优点：
@@ -46,7 +45,7 @@ ms.locfileid: "78175896"
 
  “OLE DB 访问接口” ** 是管理特定数据源并与其交互的 DLL。 “OLE DB 数据源” ** 标识可通过 OLE DB 访问的特定数据库。 虽然通过链接服务器定义查询的数据源通常是数据库，但 OLE DB 访问接口对各种文件和文件格式仍可用。 这些文件和文件格式包括文本文件、电子表格数据和全文内容搜索的结果。
 
- Native Client OLE DB 提供程序（PROGID： SQLNCLI11）是的正式 OLE DB 提供程序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序（PROGID： SQLNCLI11）是的正式 OLE DB 提供程序 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。
 
 > [!NOTE]
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式查询旨在与任何实现所需 OLE DB 接口的 OLE DB 访问接口一起使用。 但是， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 仅针对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口和特定访问接口进行过测试。
@@ -78,7 +77,7 @@ ms.locfileid: "78175896"
 
  还可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]来定义链接服务器。 在对象资源管理器中，右键单击“服务器对象”****，选择“新建”****，再选择“链接服务器”****。 通过右键单击链接服务器名称并选择“删除”****，可以删除链接服务器定义。
 
- 对链接服务器执行分布式查询时，请对每个要查询的数据源指定由四个部分组成的完全限定的表名。 此由四部分组成的名称的格式应为_linked_server_name。_**_`schema`_**_object_name_。
+ 对链接服务器执行分布式查询时，请对每个要查询的数据源指定由四个部分组成的完全限定的表名。 此由四部分组成的名称的格式应为_linked_server_name。_** _`schema`_ **_object_name_。
 
 > [!NOTE]
 >  可以定义链接服务器指回（环回）到在其上定义它们的服务器。 当在单服务器网络中测试使用分布式查询的应用程序时，环回服务器是很有用的。 环回链接服务器专用于测试，许多操作（如分布式事务）不支持该服务器。

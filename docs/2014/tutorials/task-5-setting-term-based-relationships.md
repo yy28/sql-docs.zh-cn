@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6569d512-637d-4f7b-82e1-1e8582278b37
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0e9a6a1a96d208077e70c0cf1835cff6e34650dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f10c82ef5e0b63e0b81b630ed0340545c876661
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489110"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064739"
 ---
 # <a name="task-5-setting-term-based-relationships"></a>任务 5：设置基于字词的关系
   在此任务中，将为**供应商名称**域的值定义一些基于字词的关系。 通过基于字词的关系，您可以对属于域中某个值的字词进行更正。 基于字词的关系使完全相同的多个值（只有其公共部分的拼写除外）可被视为相同的同义词。 例如， **inc.** 可以更正为 "**合并**"。 DQS 在知识发现、清理或匹配过程中使用这些关系。 有关更多详细信息，请参阅[创建基于字词的关系](https://msdn.microsoft.com/library/hh510404.aspx)。  
@@ -30,7 +29,7 @@ ms.locfileid: "65489110"
   
 5.  对以下值重复前两个步骤：  
   
-    |Value|更正为|  
+    |值|更正为|  
     |-----------|----------------|  
     |Corp.|Corporation|  
     |Inc.|Incorporated|  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 824642cf50923aa7ec879bfedbbb8f4ceaa6d9f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93ecd0b99ad355e38194afc338201790fba97684
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768020"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965577"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>运行 SQL Server 导入和导出向导
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导为在数据源之间复制数据和构造基本包提供了一种最为简单的方法。 有关该向导的详细信息，请参阅[SQL Server 导入和导出向导](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。  
@@ -33,15 +32,15 @@ ms.locfileid: "62768020"
   
      \- 或 -  
   
-     在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，右键单击 " **SSIS 包**" 文件夹，然后单击 " **SSISImport" 和 "导出向导**"。  
+     在中 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ，右键单击 " **SSIS 包**" 文件夹，然后单击 " **SSISImport" 和 "导出向导**"。  
   
      \- 或 -  
   
-     在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 "**项目**" 菜单上，单击 " **SSISImport" 和 "导出向导**"。  
+     在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 "**项目**" 菜单上，单击 " **SSISImport" 和 "导出向导**"。  
   
      \- 或 -  
   
-     在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]服务器类型，展开 "数据库"，右键单击某个数据库，指向 "**任务**"，然后单击 "**导入数据**" 或 "**导出数据**"。  
+     在中 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务器类型，展开 "数据库"，右键单击某个数据库，指向 "**任务**"，然后单击 "**导入数据**" 或 "**导出数据**"。  
   
      \- 或 -  
   
@@ -69,7 +68,7 @@ ms.locfileid: "62768020"
   
     -   指示是否创建新的数据库并设置数据库属性。 下列属性无法配置，因此向导使用指定的默认值：  
   
-        |属性|Value|  
+        |属性|值|  
         |--------------|-----------|  
         |排序规则|Latin1_General_CS_AS_KS_WS|  
         |恢复模式|完全|  
@@ -117,7 +116,7 @@ ms.locfileid: "62768020"
   
 6.  保存并运行包。  
   
-     如果向导从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或命令提示符启动，则包可以立即运行。 您可以选择将包保存到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb**数据库或文件系统。 有关**msdb**数据库的详细信息，请参阅[&#40;SSIS 服务&#41;包管理](../service/package-management-ssis-service.md)。  
+     如果向导从 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或命令提示符启动，则包可以立即运行。 您可以选择将包保存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb**数据库或文件系统。 有关**msdb**数据库的详细信息，请参阅[&#40;SSIS 服务&#41;包管理](../service/package-management-ssis-service.md)。  
   
      保存包时，可以设置包保护级别，如果该保护级别使用密码，请提供密码。 有关包保护级别的详细信息，请参阅[对包中敏感数据的访问控制](../security/access-control-for-sensitive-data-in-packages.md)。  
   

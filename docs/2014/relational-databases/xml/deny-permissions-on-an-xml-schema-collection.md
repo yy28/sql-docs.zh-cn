@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ba89efce86c3996298cc00276cd206811146a988
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0791a9bd9c7f6b323886a38bed27bea84940770d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717020"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046707"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>拒绝对 XML 架构集合的权限
   可以拒绝创建新 XML 架构集合或使用现有 XML 架构集合的权限。  
