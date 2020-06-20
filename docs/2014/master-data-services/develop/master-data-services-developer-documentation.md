@@ -9,16 +9,15 @@ ms.topic: reference
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2f87f812ad9f4f12f5f78828e88c220e3dcf494d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d6d2a99894dcfd0ef78a50b2bc7af441acc76cbe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483029"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961907"
 ---
 # <a name="developer39s-guide-master-data-services"></a>开发人员&#39;指南（Master Data Services）
-  查找有关如何编写用于自定义您和您的用户如何与 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 交互的代码的信息。 了解如何操作：  
+  查找有关如何编写用于自定义您和您的用户如何与 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 交互的代码的信息。 了解如何：  
   
 -   编写访问 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 服务的程序。 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 服务是一项 Windows Communication Foundation (WCF) 服务，开发人员使用此服务可通过代码控制 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 功能。  
   

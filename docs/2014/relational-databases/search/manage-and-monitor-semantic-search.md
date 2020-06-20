@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 94f8edc0fe8b2505adc36705200e299f36b2dbf9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16e3af1d37f177dfe6d4e0cb090e7b8b0a4988d9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011133"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003934"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>管理和监视语义搜索
   说明语义索引编制过程以及与管理和监视索引相关的任务。  
@@ -65,7 +64,7 @@ GO
 ```  
   
  **全文目录的全文索引和语义索引的总大小是多少？**  
- 查询 **FULLTEXTCATALOGPROPERTY (Transact SQL)** 元数据函数的 [IndexSize](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql) 属性 。  
+ 查询 [FULLTEXTCATALOGPROPERTY (Transact SQL)](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql) 元数据函数的 **IndexSize** 属性 。  
   
 ```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')  
@@ -73,7 +72,7 @@ GO
 ```  
   
  **有多少项编入全文目录的全文索引和语义索引？**  
- 查询 **FULLTEXTCATALOGPROPERTY (Transact SQL)** 元数据函数的 [ItemCount](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql) 属性 。  
+ 查询 [FULLTEXTCATALOGPROPERTY (Transact SQL)](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql) 元数据函数的 **ItemCount** 属性 。  
   
 ```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb403330-8cbe-41c6-bd23-bc432d50f173
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 13ec879395358536485fb0d80e7ab1a2a19d4823
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 98ac88aec42b53012e0f57233a089bddbd3c8cae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316468"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035708"
 ---
 # <a name="development-test-and-production-databases-visual-database-tools"></a>开发、测试和生产数据库 (Visual Database Tools)
   如果您有结构相同的两个数据库，则可以在一个数据库中进行更改，再将更改传播到另一个数据库。 例如，如果您有一个个人开发数据库和一个工作组范围的测试数据库，则可以修改开发数据库，再将更改传播到测试数据库。  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 262fd4ec636b147db0cb9de9e8b520f064e710af
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d0e1da6b7506e81cad50237cd54e8c67d39942c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717287"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059519"
 ---
 # <a name="columns-with-a-name-specified-as-a-wildcard-character"></a>名称指定为通配符的列
   如果指定的列名是一个通配符 (\*)，则插入此列的内容时就像没有指定列名那样插入。 如果此列不是 `xml` 类型的列，则此列的内容将作为文本节点插入，如下例所示：  

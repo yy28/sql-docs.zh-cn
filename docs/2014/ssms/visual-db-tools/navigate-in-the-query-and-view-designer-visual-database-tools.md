@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9a9c21d6bff4b30ad73d9653d51f2a49629985fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e48c8eb11d62686da74643e891e854da30497366
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63066255"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011721"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>在查询和视图设计器中导航 (Visual Database Tools)
   可以使用键盘或鼠标在查询和视图设计器中工作。 具体使用方法，请参考以下各表：  
@@ -77,7 +76,7 @@ ms.locfileid: "63066255"
  有关详细信息，请参阅[“条件”窗格 (Visual Database Tools)](criteria-pane-visual-database-tools.md)。  
   
 ## <a name="sql-pane"></a>SQL 窗格  
- 在 SQL 窗格中工作时，可以使用标准 Windows 编辑键（例如 Ctrl + 箭头键）在字词之间移动游标，也可使用“编辑”  菜单上的“剪切”  、“复制”  和“粘贴”  命令。  
+ 在 SQL 窗格中工作时，可以使用标准 Windows 编辑键（例如 Ctrl + 箭头键）在字词之间移动游标，也可使用“编辑”菜单上的“剪切”、“复制”和“粘贴”命令。  
   
 > [!NOTE]  
 >  只能插入文本；没有替换模式。  

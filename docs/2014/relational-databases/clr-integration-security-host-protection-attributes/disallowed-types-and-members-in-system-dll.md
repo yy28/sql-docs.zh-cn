@@ -1,5 +1,5 @@
 ---
-title: System .dll 中禁止的类型和成员 |Microsoft Docs
+title: System.dll 中不允许的类型和成员 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 27b550cd-dd3d-4263-bd97-0f0dec1215fd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1780f4236c70d8685c1ce2050a08bc305a3f0853
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ccf5df16e2343e68f3d7084bfa0b47120e152c4e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919668"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954197"
 ---
 # <a name="disallowed-types-and-members-in-systemdll"></a>System.dll 中禁用的类型和成员
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]公共`HostProtectionAttribute`语言集成（CLR）编程不允许使用具有`System.Security.Permissions.HostProtectionResource` `ExternalProcessMgmt`、 `ExternalThreading` `MayLeakOnAbort` `SecurityInfrastructure` `SelfAffectingProcessMgmnt` `SelfAffectingThreading`、、、、、、 **SharedState**、 `Synchronization`或`UI`的值的类型或成员。 下表列出了不允许其宿主保护属性 (HPA) 值的 System.dll 程序集的成员和类型。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]公共语言集成（CLR）编程不允许使用具有、、、、、、、 `HostProtectionAttribute` `System.Security.Permissions.HostProtectionResource` `ExternalProcessMgmt` `ExternalThreading` `MayLeakOnAbort` `SecurityInfrastructure` `SelfAffectingProcessMgmnt` `SelfAffectingThreading` **SharedState**、 `Synchronization` 或 `UI` 的值的类型或成员。 下表列出了不允许其宿主保护属性 (HPA) 值的 System.dll 程序集的成员和类型。  
   
 > [!NOTE]  
 >  此列表是通过支持的程序集生成的。 有关详细信息，请参阅[支持的 .NET Framework 库](../clr-integration/database-objects/supported-net-framework-libraries.md)。  
@@ -64,7 +63,7 @@ ms.locfileid: "62919668"
 |System.ComponentModel.AsyncCompletedEventHandler|SharedState|  
 |System.ComponentModel.AsyncOperation|SharedState|  
 |System.ComponentModel.AsyncOperationManager|SharedState|  
-|System.ComponentModel.AttributeCollection|Synchronization|  
+|System.ComponentModel.AttributeCollection|同步|  
 |System.ComponentModel.BackgroundWorker|SharedState|  
 |System.ComponentModel.BaseNumberConverter|SharedState|  
 |System.ComponentModel.BindingList|SharedState|  
@@ -77,7 +76,7 @@ ms.locfileid: "62919668"
 |System.ComponentModel.CollectionChangeEventHandler|SharedState|  
 |System.ComponentModel.CollectionConverter|SharedState|  
 |System.ComponentModel.CompModSwitches|SharedState|  
-|System.ComponentModel.ComponentCollection|Synchronization|  
+|System.ComponentModel.ComponentCollection|同步|  
 |System.ComponentModel.ComponentConverter|SharedState|  
 |System.ComponentModel.ComponentEditor|SharedState|  
 |System.ComponentModel.ComponentResourceManager|SharedState|  
@@ -130,7 +129,7 @@ ms.locfileid: "62919668"
 |System.ComponentModel.DoWorkEventHandler|SharedState|  
 |System.ComponentModel.EnumConverter|SharedState|  
 |System.ComponentModel.EventDescriptor|SharedState|  
-|System.ComponentModel.EventDescriptorCollection|Synchronization|  
+|System.ComponentModel.EventDescriptorCollection|同步|  
 |System.ComponentModel.EventHandlerList|SharedState|  
 |System.ComponentModel.ExpandableObjectConverter|SharedState|  
 |System.ComponentModel.ExtendedPropertyDescriptor|SharedState|  
@@ -165,7 +164,7 @@ ms.locfileid: "62919668"
 |System.ComponentModel.PropertyChangedEventArgs|SharedState|  
 |System.ComponentModel.PropertyChangedEventHandler|SharedState|  
 |System.ComponentModel.PropertyDescriptor|SharedState|  
-|System.ComponentModel.PropertyDescriptorCollection|Synchronization|  
+|System.ComponentModel.PropertyDescriptorCollection|同步|  
 |System.ComponentModel.ReferenceConverter|SharedState|  
 |System.ComponentModel.ReflectEventDescriptor|SharedState|  
 |System.ComponentModel.ReflectPropertyDescriptor|SharedState|  
@@ -189,22 +188,22 @@ ms.locfileid: "62919668"
 |System.ComponentModel.WarningException|SharedState|  
 |System.ComponentModel.WeakHashtable|SharedState|  
 |System.ComponentModel.Win32Exception|SharedState|  
-|System.Diagnostics.ConsoleTraceListener|Synchronization|  
+|System.Diagnostics.ConsoleTraceListener|同步|  
 |System.Diagnostics.Debug.get_Listeners ()|SharedState|  
-|System.Diagnostics.DefaultTraceListener|Synchronization|  
-|System.Diagnostics.DelimitedListTraceListener|Synchronization|  
-|System.Diagnostics.EventLog.get_SynchronizingObject ()|Synchronization|  
-|System.Diagnostics.EventLogTraceListener|Synchronization|  
+|System.Diagnostics.DefaultTraceListener|同步|  
+|System.Diagnostics.DelimitedListTraceListener|同步|  
+|System.Diagnostics.EventLog.get_SynchronizingObject ()|同步|  
+|System.Diagnostics.EventLogTraceListener|同步|  
 |System.Diagnostics.PerformanceCounter|SharedState, Synchronization|  
 |System.Diagnostics.PerformanceCounterCategory|SharedState, Synchronization|  
 |System.Diagnostics.Process|SelfAffectingProcessMgmt、ExternalProcessMgmt、SharedState、Synchronization|  
 |System.Diagnostics.ProcessStartInfo|SelfAffectingProcessMgmt、SharedState|  
 |System.Diagnostics.ProcessThread|SelfAffectingThreading、SelfAffectingProcessMgmt|  
 |System.Diagnostics.SharedPerformanceCounter|SharedState, Synchronization|  
-|System.Diagnostics.TextWriterTraceListener|Synchronization|  
+|System.Diagnostics.TextWriterTraceListener|同步|  
 |System.Diagnostics.Trace.get_Listeners()|SharedState|  
-|System.Diagnostics.TraceListener|Synchronization|  
-|System.Diagnostics.XmlWriterTraceListener|Synchronization|  
+|System.Diagnostics.TraceListener|同步|  
+|System.Diagnostics.XmlWriterTraceListener|同步|  
 |System.IO.Compression.DeflateStream.BeginRead()|ExternalThreading|  
 |System.IO.Compression.DeflateStream.BeginWrite()|ExternalThreading|  
 |System.IO.Compression.GZipStream.BeginRead()|ExternalThreading|  
@@ -260,7 +259,7 @@ ms.locfileid: "62919668"
 |System.Net.Sockets.TcpListener.BeginAcceptTcpClient()|ExternalThreading|  
 |System.Net.Sockets.UdpClient.BeginReceive()|ExternalThreading|  
 |System.Net.Sockets.UdpClient.BeginSend()|ExternalThreading|  
-|System.Net.SpnDictionary.get_SyncRoot()|Synchronization|  
+|System.Net.SpnDictionary.get_SyncRoot()|同步|  
 |System.Net.WebClient.DownloadDataAsync()|ExternalThreading|  
 |System.Net.WebClient.DownloadFileAsync()|ExternalThreading|  
 |System.Net.WebClient.DownloadStringAsync()|ExternalThreading|  
@@ -271,9 +270,9 @@ ms.locfileid: "62919668"
 |System.Net.WebClient.UploadStringAsync()|ExternalThreading|  
 |System.Net.WebClient.UploadValuesAsync()|ExternalThreading|  
 |System.Net.WebRequest.BeginGetRequestStream()|ExternalThreading|  
-|System.Net.WebRequest.BeginGetResponse()|Synchronization|  
-|System.Text.RegularExpressions.Group.Synchronized()|Synchronization|  
-|System.Text.RegularExpressions.Match.Synchronized()|Synchronization|  
+|System.Net.WebRequest.BeginGetResponse()|同步|  
+|System.Text.RegularExpressions.Group.Synchronized()|同步|  
+|System.Text.RegularExpressions.Match.Synchronized()|同步|  
 |System.Text.RegularExpressions.Regex.CompileToAssembly()|MayLeakOnAbort|  
 |System.Threading.Semaphore|ExternalThreading，Synchronization|  
 |System.Timers.Timer|ExternalThreading，Synchronization|  
@@ -282,9 +281,9 @@ ms.locfileid: "62919668"
   
 ## <a name="see-also"></a>另请参阅  
  [宿主保护属性和 CLR 集成编程](host-protection-attributes-and-clr-integration-programming.md)   
- [不允许的类型和成员在](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
- [Mscorlib.dll 中禁用的类型和成员](disallowed-types-and-members-in-mscorlib-dll.md)   
- [系统中不允许的类型和成员](disallowed-types-and-members-in-system-data-dll.md)   
+ [Microsoft.VisualBasic.dll中不允许的类型和成员](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
+ [mscorlib.dll中不允许的类型和成员](disallowed-types-and-members-in-mscorlib-dll.md)   
+ [System.Data.dll中不允许的类型和成员](disallowed-types-and-members-in-system-data-dll.md)   
  [System.Core.dll 中禁用的类型和成员](disallowed-types-and-members-in-system-core-dll.md)  
   
   

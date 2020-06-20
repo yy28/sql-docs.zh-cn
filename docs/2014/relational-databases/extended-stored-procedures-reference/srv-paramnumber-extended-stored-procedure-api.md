@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d7a6dbff-71d9-4297-8a4f-bfd2876fe204
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e957b4c775554869b04805f009d4daed4f1055a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1706732f48adadc000ac9a894068bd775ce27bae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127167"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050691"
 ---
 # <a name="srv_paramnumber-extended-stored-procedure-api"></a>srv_paramnumber（扩展存储过程 API）
     
@@ -55,7 +54,7 @@ namelen
  srvproc**  
  指向作为特定客户端连接句柄（在这里为接收远程存储过程调用的句柄）的 SRV_PROC 结构的指针。 该结构包含扩展存储过程 API 库用于管理应用程序和客户端之间的通信和数据的信息。  
   
- *name*  
+ name  
  指向参数 name 的指针**。  
   
  namelen**  

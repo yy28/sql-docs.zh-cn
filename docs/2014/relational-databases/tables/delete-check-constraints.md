@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f86c1a6-f5fa-4e77-a892-f6ae96fc0ab3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b4110d6a03e9e0b4d7aeca01c62a74a64b26c3ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28a7f72993cbf2ed0a8cc76534380090ef0d0a55
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761692"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066488"
 ---
 # <a name="delete-check-constraints"></a>删除 CHECK 约束
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 删除 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的 CHECK 约束。 删除 CHECK 约束将取消对在约束表达式中包含的一列或多列中可接受的数据值的限制。  

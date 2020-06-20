@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d6f871fabba547268736dca990215b89ae84e9eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ab93a3514fa260c8c3836da85c767da3c3051a1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011181"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004060"
 ---
 # <a name="populate-full-text-indexes"></a>填充全文索引
   创建和维护全文索引涉及使用称为“填充”  （也称为“爬网”  ）的过程填充索引。  
@@ -211,7 +210,7 @@ GO
 ##  <a name="troubleshooting-errors-in-a-full-text-population-crawl"></a><a name="crawl"></a>排除全文填充（爬网）中的错误  
  如果在爬网期间发生了错误，全文搜索的爬网日志功能会创建并维护一个爬网日志，该日志是一个纯文本文件。 每个爬网日志都对应于某一个全文目录。 默认情况下，给定实例（此处为第一个实例）的爬网日志位于 %ProgramFiles%\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\LOG 文件夹中。 爬网日志文件遵循以下命名方案：  
   
- SQLFT0000500008.2\<DatabaseID>\<FullTextCatalogID>。日志 [\<n>]  
+ SQLFT0000500008.2 \<DatabaseID> \<FullTextCatalogID> 。日志 [ \<n> ]  
   
  <`DatabaseID`>  
  数据库的 ID。 <`dbid`> 是一个带有前导零的五位数字。  

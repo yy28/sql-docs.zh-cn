@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 936f037852f39f24690e1cb9af3f63a2cfa2a613
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 92af079a25e1ec6797f4fa49b4ce73b643e7806d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781833"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996703"
 ---
 # <a name="using-table-and-index-partitioning"></a>使用表和索引分区
   可以使用 [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)所提供的存储算法来存储数据。 分区可以使大型表和索引更易于管理并且更灵活。  
@@ -135,4 +134,4 @@ $ps.Create()
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [已分区表和索引](../../partitions/partitioned-tables-and-indexes.md)  
+ [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)  

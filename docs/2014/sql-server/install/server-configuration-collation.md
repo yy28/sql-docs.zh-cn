@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e3986870-5be4-458b-b671-5ff12a27b022
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 521129056d4513af2f86fb7b70b26621cb881b80
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d06735590d23da6e91151202dd421639ea433b97
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092292"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036593"
 ---
 # <a name="server-configuration---collation"></a>服务器配置 - 排序规则
   可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导的“服务器配置 – 排序规则”页上修改 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 排序时所用的排序规则设置。 选择相应选项以匹配其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装或者其他计算机的排序规则设置。  
@@ -36,7 +35,7 @@ ms.locfileid: "66092292"
   
  有关详细信息，请参阅 [Collation Settings in Setup](https://go.microsoft.com/fwlink/?LinkId=190977)（安装程序中的排序规则设置）。  
   
-## <a name="best-practices"></a>最佳方案  
+## <a name="best-practices"></a>最佳实践  
  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序使用的 Windows 系统区域设置以及相应的默认排序规则的表的详细信息，请参阅 [Collation Settings in Setup](https://go.microsoft.com/fwlink/?LinkId=190977)（安装程序中的排序规则设置）。  
   
  如果可能，请为您的组织使用一个排序规则。 这样就不必为每个数据库、列、表达式或标识符显式指定排序规则。 如果必须使用多个排序规则和代码页设置，请对查询进行编码，以考虑排序规则优先顺序规则。 有关详细信息，请参阅联机丛书主题中的[排序规则优先级 (Transact-SQL)](/sql/t-sql/statements/collation-precedence-transact-sql)。  

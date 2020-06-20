@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0592a7635b0208624ab511af4ef68382548090c8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7e3db80333c74166301fcff7bb25edea4aca38a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702414"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059398"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>将 EXPLICIT 模式与 FOR XML 一起使用
   如主题 [使用 FOR XML 构造 XML](../xml/for-xml-sql-server.md)中所述，使用 RAW 和 AUTO 模式不能很好地控制从查询结果生成的 XML 的形状。 但是，对于要从查询结果生成 XML，EXPLICIT 模式会提供非常好的灵活性。  
@@ -111,7 +110,7 @@ ElementName!TagNumber!AttributeName!Directive
  下面是对格式各部分的说明。  
   
  *ElementName*  
- 是所生成元素的通用标识符。 例如，如果将 **Customers** 指定为 *ElementName*，将生成 \<Customers> 元素。  
+ 是所生成元素的通用标识符。 例如，如果将**Customers**指定为*ElementName*，则 \<Customers> 会生成元素。  
   
  *TagNumber*  
  是分配给元素的唯一标记值。 在两个元数据列（ **Tag** 和 **Parent**）的帮助下，此值将确定所得到的 XML 中的元素的嵌套。  

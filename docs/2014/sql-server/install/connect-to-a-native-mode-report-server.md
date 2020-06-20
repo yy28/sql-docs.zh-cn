@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b9ea8d3-827c-4011-9e02-be2eac3bb364
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5bf32c8427679b342bee89d6541b051beed2e8ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da332b609a42c5e03e9463333cf04956e690887e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952291"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036964"
 ---
 # <a name="connect-to-a-native-mode-report-server"></a>连接到本机模式的报表服务器
   使用此对话框连接到本地或远程 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器实例。 不能使用此工具连接到早期版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 一次仅能连接到一个实例。  
@@ -30,7 +29,7 @@ ms.locfileid: "71952291"
 >  不使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器来配置和管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式。 使用 SharePoint 管理中心和 PowerShell 脚本在 SharePoint 模式中配置报表服务器。 有关详细信息，请参阅[Install Reporting Services Sharepoint Mode For sharepoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)  
   
 > [!TIP]  
->  使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] "highestAvailable" 权限级别安装 Configuration Manager （rsconfigtool.exe）。 这是设计的行为。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器要求与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI API 进行通信。 一些 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 通信要求更高级别的权限或管理权限。  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration Manager （RSConfigTool.exe）的权限级别为 "highestAvailable"。 这是设计的行为。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器要求与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI API 进行通信。 一些 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 通信要求更高级别的权限或管理权限。  
   
 -   若要连接到本地报表服务器实例，请使用默认值并单击 **“连接”**。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器提供了本地服务器名称并可检测到默认实例。 在大多数情况下，您可以单击 **“连接”** 而不必更改值。 如果安装了多个实例，则必须选择要使用的实例。  
   

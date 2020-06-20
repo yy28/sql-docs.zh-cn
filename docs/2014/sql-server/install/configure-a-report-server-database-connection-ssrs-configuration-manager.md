@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 8b6f1fa1697898432479b524659383d81fc8836a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8224b3d38d3a4fdcaf4eaa70e9a87a87d2e2258c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952633"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036965"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>配置报表服务器数据库连接（SSRS 配置管理器）
   每个报表服务器实例都需要连接到存储由服务器管理的报表、报表模型、共享数据源、资源和元数据的报表服务器数据库。 如果要安装默认配置，则可以在报表服务器安装过程中创建初始连接。 多数情况下，可以在安装程序完成之后使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具配置连接。 您可以随时修改连接，以更改帐户类型或重置凭据。 有关如何创建数据库并配置连接的分步说明，请参阅[创建本机模式报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)。  
@@ -64,7 +63,7 @@ ms.locfileid: "71952633"
 ### <a name="storing-database-connection-information"></a>存储数据库连接信息  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在下列 RSreportserver.config 设置中存储和加密连接信息。 必须使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具或 rsconfig 实用工具为这些设置创建加密值。  
   
- 并非所有的值都针对每一种连接类型进行了设置。 如果使用默认值配置连接（即使用服务帐户进行连接），则 <`LogonUser`>、<`LogonDomain`> 和 <`LogonCred`> 将为空，如下所示：  
+ 并非所有的值都针对每一种连接类型进行了设置。 如果使用默认值配置连接（即使用服务帐户进行连接），则 <`LogonUser`>、<`LogonDomain`> 和 <> `LogonCred` 将为空，如下所示：  
   
 ```  
 <Dsn></Dsn>  

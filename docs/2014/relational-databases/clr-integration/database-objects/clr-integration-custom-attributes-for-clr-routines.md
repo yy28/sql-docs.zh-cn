@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: 95069d22-b05d-4670-b053-15ee2a664e33
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 817591cec64a4210c4cc573588be1b8ac6dfb8a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 241d0ce9695ba230585c55b16b5bc818f97f7318
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873810"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970612"
 ---
 # <a name="custom-attributes-for-clr-routines"></a>CLR 例程的自定义属性
-  列出的属性可应用于公共语言运行时（CLR）例程、用户定义的类型以及在中[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]注册的用户定义聚合。 如果未应用此属性，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将采用默认值。 列出的属性在 `Microsoft.SqlServer.Server` 命名空间中定义。  
+  列出的属性可应用于公共语言运行时（CLR）例程、用户定义的类型以及在中注册的用户定义聚合 [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] 。 如果未应用此属性，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将采用默认值。 列出的属性在 `Microsoft.SqlServer.Server` 命名空间中定义。  
   
 ## <a name="the-sqluserdefinedaggregate-attribute"></a>SqlUserDefinedAggregate 特性  
  `SqlUserDefinedAggregate` 属性指示方法应注册为用户定义聚合。 必须使用此属性注释每个用户定义聚合。  

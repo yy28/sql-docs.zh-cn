@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f754d038-637a-4d8e-85b0-b242e6499d26
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ca5d6ed8f1e8a92d22bd32e39c8afe946a0fcfee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27eb69dfd2c41710a47861e0992486267f692a3a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095979"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036931"
 ---
 # <a name="connection-parameters"></a>连接参数
   若要分析某些服务器类型（比如 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]），则必须选择具体的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 会自动选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实例。 您可以更改此选择，但一次只能选择一个实例供升级顾问分析。 如果包括了要求身份验证的服务器类型，则必须输入身份验证模式和凭据。  
@@ -32,7 +31,7 @@ ms.locfileid: "66095979"
  **服务器名称**  
  使用您在“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件”窗格中输入的计算机名进行预填充。  
   
- **实例名称**  
+ **实例名**  
  从计算机中可用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中进行选择。 如果看不到实例列表，请使用 MSSQLSERVER 扫描默认实例。 这对于远程计算机来说尤其重要。 也可以使用单词“default”来扫描默认实例。  
   
  **身份验证**  

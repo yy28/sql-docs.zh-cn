@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8123179285b94377fff758121f535175705f29af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 055482a8cf64527f58ed983b449121a99960f566
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918688"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970527"
 ---
 # <a name="cursors"></a>游标
   关系数据库中的操作会对整个行集起作用。 例如，由 SELECT 语句返回的行集包括满足该语句的 WHERE 子句中条件的所有行。 这种由语句返回的完整行集称为结果集。 应用程序，特别是交互式联机应用程序，并不总能将整个结果集作为一个单元来有效地处理。 这些应用程序需要一种机制以便每次处理一行或一部分行。 游标就是提供这种机制的对结果集的一种扩展。  
@@ -61,7 +60,7 @@ ms.locfileid: "62918688"
   
  尽管数据库 API 游标模型将只进游标视为一种游标类型，但是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不这样。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将只进和滚动视为可应用于静态游标、键集驱动游标和动态游标的选项。 [!INCLUDE[tsql](../includes/tsql-md.md)] 游标支持只进静态游标、键集驱动游标和动态游标。 数据库 API 游标模型则假定静态游标、键集驱动游标和动态游标都是可滚动的。 当数据库 API 游标属性设置为只进时， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将此游标作为只进动态游标实现。  
   
- Static  
+ 静态  
  静态游标的完整结果集是打开游标时在 **tempdb** 中生成的。 静态游标总是按照打开游标时的原样显示结果集。 静态游标在滚动期间很少或根本检测不到变化，但消耗的资源相对很少。  
   
  游标不反映在数据库中所做的任何影响结果集成员身份的更改，也不反映对组成结果集的行的列值所做的更改。 静态游标不会显示打开游标以后在数据库中新插入的行，即使这些行符合游标 SELECT 语句的搜索条件。 如果组成结果集的行被其他用户更新，则新的数据值不会显示在静态游标中。 静态游标会显示打开游标以后从数据库中删除的行。 静态游标中不反映 UPDATE、INSERT 或者 DELETE 操作（除非关闭游标然后重新打开），甚至不反映使用打开游标的同一连接所做的修改。  
@@ -117,7 +116,7 @@ ms.locfileid: "62918688"
   
 ## <a name="see-also"></a>另请参阅  
  [&#40;Transact-sql 声明游标&#41;](/sql/t-sql/language-elements/declare-cursor-transact-sql)   
- [游标 &#40;Transact-sql&#41;](/sql/t-sql/language-elements/cursors-transact-sql)   
+ [游标 (Transact-SQL)](/sql/t-sql/language-elements/cursors-transact-sql)   
  [Cursor 函数 &#40;Transact-sql&#41;](/sql/t-sql/functions/cursor-functions-transact-sql)   
  [游标存储过程 (Transact-SQL)](/sql/relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql)  
   

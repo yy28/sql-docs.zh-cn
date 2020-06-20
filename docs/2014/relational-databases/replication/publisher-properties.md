@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2ea467b00223e31ec7672d4d54a49150cf05368c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3e14f82e855cc29f83859d85dfdaaf85a1bda37
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63261979"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005103"
 ---
 # <a name="sql-server-replication-publisher-properties"></a>SQL Server 复制发布服务器属性
   本部分包含有关分发服务器和发布服务器上可用的发布服务器属性的信息。 
@@ -50,7 +49,7 @@ ms.locfileid: "63261979"
   
 -   快照代理和日志读取器代理的 **“发布属性”** 对话框。  
   
- **杂项**  
+ **其他**  
  **“发布服务器类型”** 和 **“分发数据库名称”** 都是只读属性。 可以更改 **“默认快照文件夹”** 属性。 有关快照文件夹的详细信息，请参阅[保护快照文件夹](security/secure-the-snapshot-folder.md)。  
   
 
@@ -72,7 +71,7 @@ ms.locfileid: "63261979"
  **订阅服务器**  
  **“订阅服务器”** 属性网格显示了已启用的从此发布服务器上发布接收数据的订阅服务器。 单击订阅服务器旁边的属性按钮 (**...**) 可以查看和设置其他属性。  
   
- **添加**  
+ **Add**  
  单击 **“添加”** 以添加订阅服务器，然后可单击 **“添加 SQL Server 订阅服务器”** 或 **“添加非 SQL Server 订阅服务器”**。  
 
 ## <a name="see-also"></a>另请参阅  

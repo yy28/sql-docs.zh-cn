@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f66cb56380f0e027d08e53154c05b7ad1e3be89f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df0a2fd4a2c6ffb2de58d6b52360d1730d0fa7df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62670573"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037277"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>启用和禁用变更数据捕获 (SQL Server)
   本主题说明如何对数据库和表启用和禁用变更数据捕获。  
@@ -48,7 +47,7 @@ GO
 ```  
   
 ## <a name="disable-change-data-capture-for-a-database"></a>对数据库禁用变更数据捕获  
- `sysadmin`固定服务器角色的成员可以在数据库上下文中运行存储过程[Sys.databases sp_cdc_disable_db &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) ，以对数据库禁用变更数据捕获。 在禁用数据库之前不必禁用各个表。 禁用数据库会删除所有关联的变更数据捕获元数据，包括 `cdc` 用户、架构和变更数据捕获作业。 但是，任何由变更数据捕获创建的访问控制角色不会被自动删除，而是必须将其显式删除。 若要确定数据库是否启用了此项功能，请在 sys.databases 目录视图中查询 `is_cdc_enabled` 列。  
+ `sysadmin`固定服务器角色的成员可以在数据库上下文中运行存储过程[sys.databases Sp_cdc_disable_db &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) ，以对数据库禁用变更数据捕获。 在禁用数据库之前不必禁用各个表。 禁用数据库会删除所有关联的变更数据捕获元数据，包括 `cdc` 用户、架构和变更数据捕获作业。 但是，任何由变更数据捕获创建的访问控制角色不会被自动删除，而是必须将其显式删除。 若要确定数据库是否启用了此项功能，请在 sys.databases 目录视图中查询 `is_cdc_enabled` 列。  
   
  当删除启用了变更数据捕获的数据库时会自动删除变更数据捕获作业。  
   
@@ -74,11 +73,11 @@ GO
   
  `Columns in the source table to be captured`.  
   
- 默认情况下，源表中的所有列都将标识为已捕获列。 如果只需跟踪部分列（如出于隐私或性能方面的原因），请使用*@captured_column_list*参数指定列的子集。  
+ 默认情况下，源表中的所有列都将标识为已捕获列。 如果只需跟踪部分列（如出于隐私或性能方面的原因），请使用 *@captured_column_list* 参数指定列的子集。  
   
  `A filegroup to contain the change table.`  
   
- 默认情况下，更改表位于数据库的默认文件组中。 要控制各个更改表的位置的数据库所有者可以使用*@filegroup_name*参数为与捕获实例关联的更改表指定特定的文件组。 指定的文件组必须已存在。 通常建议将更改表置于独立于源表的文件组中。 有关演示`Enable a Table Specifying Filegroup Option`如何使用*@filegroup_name*参数的示例，请参阅模板。  
+ 默认情况下，更改表位于数据库的默认文件组中。 要控制各个更改表的位置的数据库所有者可以使用 *@filegroup_name* 参数为与捕获实例关联的更改表指定特定的文件组。 指定的文件组必须已存在。 通常建议将更改表置于独立于源表的文件组中。 `Enable a Table Specifying Filegroup Option`有关演示如何使用参数的示例，请参阅模板 *@filegroup_name* 。  
   
 ```sql  
 -- =========  
@@ -100,7 +99,7 @@ GO
   
  指定角色的目的是控制对更改数据的访问。 指定的角色可以为现有的固定服务器角色或数据库角色。 如果指定的角色还不存在，则会自动创建具有该名称的数据库角色。 `sysadmin` 或 `db_owner` 角色的成员对于更改表中的数据拥有完全访问权限。 所有其他用户必须对源表中的所有捕获列拥有 SELECT 权限。 此外，当指定角色时，不是 `sysadmin` 或 `db_owner` 角色成员的用户还必须是指定角色的成员。  
   
- 如果不想使用 "门控" 角色，请将*@role_name*参数显式设置为 NULL。 有关如何在没有访问控制角色的情况下启用表的示例，请参阅`Enable a Table Without Using a Gating Role`模板。  
+ 如果不想使用 "门控" 角色，请将参数显式设置 *@role_name* 为 NULL。 有关如何在没有访问控制角色的情况下启用表的示例，请参阅`Enable a Table Without Using a Gating Role`模板。  
   
 ```sql  
 -- =========  
@@ -121,9 +120,9 @@ GO
   
  捕获实例将始终包含一个表值函数以返回在指定的时间间隔内出现的所有更改表项。 此函数通过在“cdc.fn_cdc_get_all_changes_”后追加捕获实例名称来命名。 有关详细信息，请参阅 [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  (Transact-SQL)](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql)。  
   
- 如果将参数*@supports_net_changes*设置为1，则还将为捕获实例生成一个净更改函数。 对于在调用中指定的时间间隔内发生更改的每个非重复行，此函数仅返回一项更改。 有关详细信息，请参阅[cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; (Transact-SQL)](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql)。  
+ 如果将参数 *@supports_net_changes* 设置为1，则还将为捕获实例生成一个净更改函数。 对于在调用中指定的时间间隔内发生更改的每个非重复行，此函数仅返回一项更改。 有关详细信息，请参阅[cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; (Transact-SQL)](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql)。  
   
- 若要支持净更改查询，源表必须具有用于唯一标识行的主键或唯一索引。 如果使用了唯一索引，则必须使用*@index_name*参数指定索引的名称。 在主键或唯一索引中定义的列必须包含在要捕获的源列列表中。  
+ 若要支持净更改查询，源表必须具有用于唯一标识行的主键或唯一索引。 如果使用了唯一索引，则必须使用参数指定索引的名称 *@index_name* 。 在主键或唯一索引中定义的列必须包含在要捕获的源列列表中。  
   
  有关演示如何创建同时具有这两个查询函数的捕获实例的示例，请参阅`Enable a Table for All and Net Changes Queries`模板。  
   
@@ -142,7 +141,7 @@ GO
 ```  
   
 > [!NOTE]
->  如果对具有现有主键的表启用变更数据捕获，且未使用*@index_name*参数来标识备用唯一索引，则变更数据捕获功能将使用主键。 只有先对表禁用变更数据捕获，才能对主键进行后续更改。 无论配置变更数据捕获时是否要求支持净更改查询均是如此。 如果对表启用变更数据捕获时该表中没有主键，则变更数据捕获将忽略后来添加的主键。 由于变更数据捕获不会使用在启用表之后创建的主键，因此可以不受限制地将该键及键列删除。  
+>  如果对具有现有主键的表启用变更数据捕获，且 *@index_name* 未使用参数来标识备用唯一索引，则变更数据捕获功能将使用主键。 只有先对表禁用变更数据捕获，才能对主键进行后续更改。 无论配置变更数据捕获时是否要求支持净更改查询均是如此。 如果对表启用变更数据捕获时该表中没有主键，则变更数据捕获将忽略后来添加的主键。 由于变更数据捕获不会使用在启用表之后创建的主键，因此可以不受限制地将该键及键列删除。  
   
 ## <a name="disable-change-data-capture-for-a-table"></a>对表禁用变更数据捕获  
  `db_owner` 固定数据库角色的成员可以通过使用存储过程 `sys.sp_cdc_disable_table` 为各个源表删除捕获实例。 若要确定当前是否已对某个源表启用了变更数据捕获，请在 `is_tracked_by_cdc` 目录视图中检查 `sys.tables` 列。 如果在禁用发生后没有对数据库启用任何表，则还会删除变更数据捕获作业。  

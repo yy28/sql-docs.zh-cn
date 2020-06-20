@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b964300c-b220-4244-9fa6-c0c6a57760f6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: bb5dd5968930319532a29ff7c3909c36af99b3a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8800951a2edfa3a71643ba3af65bae2b7cfdc29f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952112"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011844"
 ---
 # <a name="report-server-database-is-not-configured-upgrade-advisor"></a>未配置报表服务器数据库（升级顾问）
   升级因报表服务器配置不完整而受阻。 未配置报表服务器数据库。  
@@ -30,12 +29,12 @@ ms.locfileid: "71952112"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>说明  
- 安装程序只能升级完全配置的报表服务器实例。 若要继续，必须配置 Report Server 数据库，或使用 Microsoft Windows **"控制面板**" 从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装中删除 Report Server 功能。 删除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 后，便可升级其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件。  
+ 安装程序只能升级完全配置的报表服务器实例。 若要继续，必须配置 Report Server 数据库，或使用 Microsoft Windows **"控制面板**" 从安装中删除 Report Server 功能 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 删除 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 后，便可升级其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件。  
   
 ## <a name="corrective-action"></a>纠正措施  
  如果尚未配置报表服务器数据库，报表服务器将无法运行，应在升级前将其删除。  
   
- 有关卸载[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的其他信息，请参阅[卸载 Reporting Services 2012](https://technet.microsoft.com/library/hh479745.aspx\(v=sql.11\))。 此主题说明如何卸载特定版本，它涉及的步骤与以前版本所用的步骤相似。  
+ 有关卸载的其他信息 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，请参阅[卸载 Reporting Services 2012](https://technet.microsoft.com/library/hh479745.aspx\(v=sql.11\))。 此主题说明如何卸载特定版本，它涉及的步骤与以前版本所用的步骤相似。  
   
 ## <a name="see-also"></a>另请参阅  
  [升级顾问 &#40;Reporting Services 升级问题&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  

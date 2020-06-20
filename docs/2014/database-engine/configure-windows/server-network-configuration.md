@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3545732db24865e47853b023233a127695ada894
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e71992a5bacfe895dd5f7a038e210d21c35c2884
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809472"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934978"
 ---
 # <a name="server-network-configuration"></a>服务器网络配置
   服务器网络配置任务包括启用协议、修改协议使用的端口或管道、配置加密、配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务、在网络上显示或隐藏 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 以及注册服务器主体名称。 大多数情况下，无须更改服务器网络配置。 只在有特殊的网络要求时才需要重新配置服务器网络协议。  
@@ -39,7 +38,7 @@ ms.locfileid: "62809472"
  配置为使用动态端口后，在每次启动时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的端口可能都会发生变化。 如果通过防火墙连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的端口。 将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为使用特定端口，这样就可以将防火墙配置为允许与服务器通信。 有关详细信息，请参阅[将服务器配置为侦听特定 TCP 端口（SQL Sever 配置管理器）](configure-a-server-to-listen-on-a-specific-tcp-port.md)。  
   
 ### <a name="changing-a-named-pipe"></a>更改命名管道  
- 您可以配置命名管道协议以侦听指定的命名管道。 默认情况下，对于默认实例，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的默认实例将侦听管道 \\\\.\pipe\sql\query，而对于命名实例，将侦听管道 \\\\.\pipe\MSSQL$*实例名>\sql\query\<* 。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 只能侦听一个命名管道，但您可以根据需要将该管道更改为其他名称。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务可帮助客户端在连接时识别管道。 有关详细信息，请参阅[将服务器配置为侦听更改管道（SQL Sever 配置管理器）](configure-a-server-to-listen-on-an-alternate-pipe.md)。  
+ 您可以配置命名管道协议以侦听指定的命名管道。 默认情况下，的默认实例 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 侦听 \\ \\ 默认实例的管道 .\pipe\sql\query，并侦听 \\ \\ 命名实例的 .\pipe\MSSQL $ *\<instancename>* \sql\query。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 只能侦听一个命名管道，但您可以根据需要将该管道更改为其他名称。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务可帮助客户端在连接时识别管道。 有关详细信息，请参阅[将服务器配置为侦听更改管道（SQL Sever 配置管理器）](configure-a-server-to-listen-on-an-alternate-pipe.md)。  
   
 ## <a name="force-encryption"></a>强行加密  
  可以将[!INCLUDE[ssDE](../../includes/ssde-md.md)]配置为在与客户端应用程序通信时要求加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](enable-encrypted-connections-to-the-database-engine.md)。  

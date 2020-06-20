@@ -21,19 +21,18 @@ helpviewer_keywords:
 ms.assetid: aea495f4-ce26-4952-b019-38f012625f3f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1b87e497c6610a2d75daa9432246e4f4b4690bab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa9596629ed8b4877b1793fa0c56956c52989499
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874449"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954537"
 ---
 # <a name="defining-udt-tables-and-columns"></a>定义 UDT 表和列
-  一旦包含用户定义类型（UDT）定义的程序集已在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库中注册，它就可以在列定义中使用。  
+  一旦包含用户定义类型（UDT）定义的程序集已在数据库中注册 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，它就可以在列定义中使用。  
   
 ## <a name="creating-tables-with-udts"></a>使用 UDT 创建表  
- 没有用于在表中创建 UDT 列的特殊语法。 您可以在某一列定义中使用 UDT 的名称，就像它是某一内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型一样。 下面的 CREATE TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)]语句将创建一个名为**Points**的表，其中包含一个名为 **"ID"** 的列，该列定义为`int`标识列和表的主键。 第二列的名称为**PointValue**，数据类型为**Point**。 本示例中使用的架构名称为**dbo**。 请注意，您必须具有指定架构名称所需的权限。 如果省略架构名称，将使用数据库用户的默认架构。  
+ 没有用于在表中创建 UDT 列的特殊语法。 您可以在某一列定义中使用 UDT 的名称，就像它是某一内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型一样。 下面的 CREATE TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将创建一个名为**Points**的表，其中包含一个名为 **"ID"** 的列，该列定义为 `int` 标识列和表的主键。 第二列的名称为**PointValue**，数据类型为**Point**。 本示例中使用的架构名称为**dbo**。 请注意，您必须具有指定架构名称所需的权限。 如果省略架构名称，将使用数据库用户的默认架构。  
   
 ```  
 CREATE TABLE dbo.Points   

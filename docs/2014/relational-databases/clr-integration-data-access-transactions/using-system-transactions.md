@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e39106ea1c4077d1aee90cedc17c5af07503a136
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40bdbcd98e70ae8ea318ba8ca0243f11107bd61b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919538"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954927"
 ---
 # <a name="using-systemtransactions"></a>使用 System.Transactions
   `System.Transactions` 命名空间提供与 ADO.NET 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公共语言运行时 (CLR) 集成完全集成的新事务框架。 `System.Transactions.TransactionScope` 类通过在分布式事务中隐式登记连接，使代码块成为事务代码。 您必须在 `Complete` 标记的代码块的末尾调用 `TransactionScope` 方法。 如果未调用 `Dispose` 方法，将在程序执行离开代码块时调用 `Complete` 方法，从而导致停止使用该事务。 如果已引发导致代码离开范围的异常，则将该事务视为停止使用。  

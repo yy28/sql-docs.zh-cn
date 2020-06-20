@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ecb9f384634d1c2f3991ad0c07a9b98217314499
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cddce90718ef5edfcf161ddc6cc52b617825a2e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702437"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059435"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>FOR XML 查询中的 TYPE 指令
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持[xml &#40;transact-sql&#41;](/sql/t-sql/xml/xml-transact-sql)可通过指定 type 指令请求将 for xml 查询的结果作为 `xml` 数据类型返回。 这样您便可以在服务器上处理 FOR XML 查询的结果。 例如，可以对其指定 XQuery，将结果分配给 `xml` 类型变量，或编写[嵌套的 FOR XML 查询](use-nested-for-xml-queries.md)。  

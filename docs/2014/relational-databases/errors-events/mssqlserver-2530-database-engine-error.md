@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5d4be07a-38a5-4b25-819c-4dcb4636cc15
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8058c7c31c49935d244726bf9e8ea0ac6cfbe750
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30b57aae907d6f0acc4d1c0e6021bf936621c69e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62914568"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034252"
 ---
 # <a name="mssqlserver_2530"></a>MSSQLSERVER_2530
     
@@ -47,7 +46,7 @@ ms.locfileid: "62914568"
   
 ## <a name="see-also"></a>另请参阅  
  [启用索引和约束](../indexes/enable-indexes-and-constraints.md)   
- [Transact-sql&#41;&#40;ALTER INDEX](/sql/t-sql/statements/alter-index-transact-sql)   
+ [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)   
  [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)   
  [DBCC DBREINDEX (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-dbreindex-transact-sql)  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9fa024e9e744fd955e4ccc323919cb22a97b7dd3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60ba31e2a63575a316db5befb397bea59c0ad1e6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151189"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066052"
 ---
 # <a name="create-a-new-plan-guide"></a>创建新的计划指南
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建计划指南。 计划指南通过将查询提示或现有查询计划附加到查询来影响查询优化。 在计划指南中，您需要指定要优化的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以及包含要使用的查询提示的 OPTION 子句或要用于优化查询的特定查询计划。 当查询执行时，查询优化器会将相应 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句与计划指南进行匹配，然后在运行时将此 OPTION 子句附加到查询，或使用指定的查询计划。  
@@ -86,7 +85,7 @@ ms.locfileid: "63151189"
   
 10. 在 **“提示”** 框中，输入要应用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的查询提示或查询计划。 若要指定一个或多个查询提示，请输入一个有效的 OPTION 子句。  
   
-11. 单击" **确定**"。  
+11. 单击“确定”。   
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
